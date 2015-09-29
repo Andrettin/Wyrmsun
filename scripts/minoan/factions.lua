@@ -33,6 +33,20 @@ DefineFaction("Minoan Tribe", {
 	DevelopsTo = {"Crete"}
 })
 
+DefineFaction("Impressedware Tribe", {
+	Civilization = "minoan", -- were they really culturally related to the Minoans? At least Minoan culture is a better fit for this pre-Indo-European culture than Basque, since they lived on the Aegean
+	Type = "tribe",
+	Color = "brown",
+	SecondaryColor = "brown"
+})
+
+DefineFaction("Paintedware Tribe", {
+	Civilization = "minoan", -- were they really culturally related to the Minoans? At least Minoan culture is a better fit for this pre-Indo-European culture than Basque, since they lived in the Balkans (closer to Crete than to the European Atlantic shores)
+	Type = "tribe",
+	Color = "orange",
+	SecondaryColor = "orange"
+})
+
 -- polities
 
 DefineFaction("Crete", { -- Minoans

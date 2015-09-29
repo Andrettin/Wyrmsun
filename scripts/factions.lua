@@ -25,66 +25,94 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineCivilizationFactions("basque",
-	"faction", {
-		"name", "Ertebolle Tribe", -- based on the Ertebolle culture of Zealand - not actually a tribe, but an archaeological culture, but this is still the most appropriate way to represent it in-game
-		"type", "tribe",
-		"color", "red",
-		"secondary_color", "white"
-	},
-	"faction", {
-		"name", "Funnelbeaker Tribe", -- based on the Funnel Beaker culture of Zealand - not actually a tribe, but an archaeological culture, but this is still the most appropriate way to represent it in-game
-		"type", "tribe",
-		"color", "red",
-		"secondary_color", "white"
-	},
-	"faction", {
-		"name", "Gylfing Tribe", -- Scandinavian pre-Indo-Europeans are very unlikely to have spoken a Vasconic language, but this fits better than making them Germanic (as the Vasconic languages are pre-Indo-European)
-		"type", "tribe",
-		"color", "green",
-		"secondary_color", "teal"
-	},
-	"faction", {
-		"name", "Kongemose Tribe", -- based on the Kongemose culture of Zealand - not actually a tribe, but an archaeological culture, but this is still the most appropriate way to represent it in-game
-		"type", "tribe",
-		"color", "red",
-		"secondary_color", "white"
-	},
-	"faction", {
-		"name", "Maglemose Tribe", -- Scandinavian pre-Indo-Europeans are very unlikely to have spoken a Vasconic language, but this fits better than making them Germanic (as the Vasconic languages are pre-Indo-European); based on the Maglemose culture of Zealand - not actually a tribe, but an archaeological culture, but this is still the most appropriate way to represent it in-game
-		"type", "tribe",
-		"color", "red",
-		"secondary_color", "white"
-	}
-)
+-- Basque factions
+DefineFaction("Ertebolle Tribe", { -- based on the Ertebolle culture of Zealand - not actually a tribe, but an archaeological culture, but this is still the most appropriate way to represent it in-game
+	Civilization = "basque",
+	Type = "tribe",
+	Color = "red",
+	SecondaryColor = "white"
+})
 
-DefineCivilizationFactions("germanic",
-	"faction", {
-		"name", "Asa Tribe",
-		"type", "tribe",
-		"color", "orange",
-		"secondary_color", "red"
-	},
-	"faction", {
-		"name", "Jastorf Tribe", -- just to give some alternative Germanic tribes
-		"type", "tribe",
-		"color", "blue",
-		"secondary_color", "blue"
-	},
-	"faction", {
-		"name", "Ripdorf Tribe",
-		"type", "tribe",
-		"color", "yellow",
-		"secondary_color", "yellow"
-	},
-	"faction", {
-		"name", "Seedorf Tribe",
-		"type", "tribe",
-		"color", "cyan",
-		"secondary_color", "cyan"
-	}
-)
+DefineFaction("Funnelbeaker Tribe", { -- based on the Funnel Beaker culture of Zealand - not actually a tribe, but an archaeological culture, but this is still the most appropriate way to represent it in-game
+	Civilization = "basque",
+	Type = "tribe",
+	Color = "red",
+	SecondaryColor = "white"
+})
 
+DefineFaction("Gylfing Tribe", { -- Scandinavian pre-Indo-Europeans are very unlikely to have spoken a Vasconic language, but this fits better than making them Germanic (as the Vasconic languages are pre-Indo-European)
+	Civilization = "basque",
+	Type = "tribe",
+	Color = "green",
+	SecondaryColor = "teal"
+})
+
+DefineFaction("Kongemose Tribe", { -- based on the Kongemose culture of Zealand - not actually a tribe, but an archaeological culture, but this is still the most appropriate way to represent it in-game
+	Civilization = "basque",
+	Type = "tribe",
+	Color = "red",
+	SecondaryColor = "white"
+})
+
+DefineFaction("Maglemose Tribe", { -- Scandinavian pre-Indo-Europeans are very unlikely to have spoken a Vasconic language, but this fits better than making them Germanic (as the Vasconic languages are pre-Indo-European); based on the Maglemose culture of Zealand - not actually a tribe, but an archaeological culture, but this is still the most appropriate way to represent it in-game
+	Civilization = "basque",
+	Type = "tribe",
+	Color = "red",
+	SecondaryColor = "white"
+})
+
+DefineFaction("Cardialware Tribe", {
+	Civilization = "basque",
+	Type = "tribe",
+	Color = "yellow",
+	SecondaryColor = "yellow"
+})
+
+DefineFaction("Bellbeaker Tribe", {
+	Civilization = "basque",
+	Type = "tribe",
+	Color = "green",
+	SecondaryColor = "green"
+})
+
+DefineFaction("Linearware Tribe", {
+	Civilization = "basque",
+	Type = "tribe",
+	Color = "yellow",
+	SecondaryColor = "yellow"
+})
+
+-- Germanic factions
+DefineFaction("Asa Tribe", {
+	Civilization = "germanic",
+	Type = "tribe",
+	Color = "orange",
+	SecondaryColor = "red"
+})
+
+-- just to give some alternative Germanic tribes
+DefineFaction("Jastorf Tribe", {
+	Civilization = "germanic",
+	Type = "tribe",
+	Color = "blue",
+	SecondaryColor = "blue"
+})
+
+DefineFaction("Ripdorf Tribe", {
+	Civilization = "germanic",
+	Type = "tribe",
+	Color = "yellow",
+	SecondaryColor = "yellow"
+})
+
+DefineFaction("Seedorf Tribe", {
+	Civilization = "germanic",
+	Type = "tribe",
+	Color = "cyan",
+	SecondaryColor = "cyan"
+})
+
+-- Etruscan factions
 DefineFaction("Etruscan Tribe", {
 	Civilization = "etruscan",
 	Type = "tribe",

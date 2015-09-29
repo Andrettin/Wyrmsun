@@ -10587,6 +10587,35 @@ if (GrandStrategyYear >= -7000) then
 	SetRegionPopulation("Northwest Europe", 100000) -- At the height of the Mesolithic the population in northwestern Europe was no larger than 100,000; since the Mesolithic in Northwestern Europe began around 10,000 BC and ended about 4000 BC, its height would have been in the middle, or 7000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, pp. 144, 148.
 	
 	-- In the Mediterranean coasts of northwestern Europe, material aspects of the Neolithic (like grinding stones and pottery) begin to appear around the 7th millenium BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 150.
+
+	-- Cardial Pottery culture existed in the eastern Iberian coast between 7000 and 2000 BC; Source: "Atlas de História Mundial", 2001, pp. 40-41.
+	SetProvinceOwner("Aragon", "basque", "Cardialware Tribe")
+	SetProvinceCivilization("Aragon", "basque")
+	SetProvinceSettlementBuilding("Aragon", "unit-germanic-town-hall", true)
+
+	-- Bell Beaker culture existed in Normandy and the western parts of Great Britain between 7000 and 2000 BC; Source: "Atlas de História Mundial", 2001, pp. 40-41.
+	SetProvinceOwner("Normandy", "basque", "Bellbeaker Tribe")
+	SetProvinceCivilization("Normandy", "basque")
+	SetProvinceSettlementBuilding("Normandy", "unit-germanic-town-hall", true)
+	SetProvinceOwner("England", "basque", "Bellbeaker Tribe")
+	SetProvinceCivilization("England", "basque")
+	SetProvinceSettlementBuilding("England", "unit-germanic-town-hall", true)
+
+	-- Impressed Cardial Pottery culture existed in parts of the Aegean between 7000 and 2000 BC; Source: "Atlas de História Mundial", 2001, pp. 40-41.
+	SetProvinceOwner("Thessaly", "minoan", "Impressedware Tribe")
+	SetProvinceCivilization("Thessaly", "minoan")
+	SetProvinceSettlementBuilding("Thessaly", "unit-teuton-town-hall", true)
+	SetProvinceOwner("Euboea", "minoan", "Impressedware Tribe")
+	SetProvinceCivilization("Euboea", "minoan")
+	SetProvinceSettlementBuilding("Euboea", "unit-teuton-town-hall", true)
+
+	-- Balkan Painted Pottery / Impressed Cardial Pottery culture existed in Transylvania and Wallachia between 7000 and 2000 BC; Source: "Atlas de História Mundial", 2001, pp. 40-41.
+	SetProvinceOwner("Wallachia", "minoan", "Paintedware Tribe")
+	SetProvinceCivilization("Wallachia", "minoan")
+	SetProvinceSettlementBuilding("Wallachia", "unit-teuton-town-hall", true)
+	SetProvinceOwner("Transylvania", "minoan", "Paintedware Tribe")
+	SetProvinceCivilization("Transylvania", "minoan")
+	SetProvinceSettlementBuilding("Transylvania", "unit-teuton-town-hall", true)
 end
 
 if (GrandStrategyYear >= -6800) then
@@ -10627,6 +10656,20 @@ if (GrandStrategyYear >= -5500) then
 	
 	-- The people of the Linear Pottery culture arrived in northern Poland and Germany about 5500 BC, possessing knowledge of agriculture; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 139.
 	
+	-- Linear Pottery culture existed in parts of Central Europe between 7000 and 2000 BC; since the other source gives them as arriving in northern Poland and Germany c. 5500 BC, let's place their beginnings at that date; Source: "Atlas de História Mundial", 2001, pp. 40-41.
+	SetProvinceOwner("Franconia", "basque", "Linearware Tribe")
+	SetProvinceCivilization("Franconia", "basque")
+	SetProvinceSettlementBuilding("Franconia", "unit-germanic-town-hall", true)
+	SetProvinceOwner("Bohemia", "basque", "Linearware Tribe")
+	SetProvinceCivilization("Bohemia", "basque")
+	SetProvinceSettlementBuilding("Bohemia", "unit-germanic-town-hall", true)
+	SetProvinceOwner("Austria", "basque", "Linearware Tribe") -- map indicates only Lower Austria
+	SetProvinceCivilization("Austria", "basque")
+	SetProvinceSettlementBuilding("Austria", "unit-germanic-town-hall", true)
+	SetProvinceOwner("Pannonia", "basque", "Linearware Tribe")
+	SetProvinceCivilization("Pannonia", "basque")
+	SetProvinceSettlementBuilding("Pannonia", "unit-germanic-town-hall", true)
+		
 	-- Tybrind Vig (in the coast of the Danish island of Fyn) begins being occupied around 5500 BC (it pertained to the Ertebolle culture); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 142.
 	
 	-- The Polderweg site (Netherlands) was occupied in the late 6th millenium BC; main economic activity was pike fishing, although fishing for roach, bream, tench, eels, catfish and salmon was conducted as well; beavers and otters were the most significant animals hunted (likely for their fur), although pine marten, wild cat and polecat were also trapped for that purpose; remains of wild boar and red and roe deer were found as well; remains of ducks were found (the most important fowl food source); regarding plants acorns, hazelnut, water nut, wild apple and diverse berries were too found there; arrowheads (likely from Linearbandkeramik) were also found there, as well as bag-shaped pottery (from Linearbandkeramik areas or made in this form due to their influence); the people of the Polderweg site led a semi-nomadic life, and occupied the site only in January and February of each year; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 147.
@@ -10712,6 +10755,33 @@ if (GrandStrategyYear >= -3950) then
 	-- Funnel Beaker culture begins in Zealand in 3950 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 37.
 	SetProvinceOwner("Zealand", "basque", "Funnelbeaker Tribe")
 	AcquireFactionTechnologies("basque", "Ertebolle Tribe", "basque", "Funnelbeaker Tribe")
+	
+	-- Funnel Beaker culture existed in parts of Northern Europe between 7000 and 2000 BC; since the other source gives them as being present in Zealand in 3950 BC, let's place their beginnings at that date; Source: "Atlas de História Mundial", 2001, pp. 40-41.
+	SetProvinceOwner("Friesland", "basque", "Funnelbeaker Tribe")
+	SetProvinceCivilization("Friesland", "basque")
+	SetProvinceSettlementBuilding("Friesland", "unit-germanic-town-hall", true)
+	SetProvinceOwner("East Friesland", "basque", "Funnelbeaker Tribe")
+	SetProvinceCivilization("East Friesland", "basque")
+	SetProvinceSettlementBuilding("East Friesland", "unit-germanic-town-hall", true)
+	SetProvinceOwner("Oldenburg", "basque", "Funnelbeaker Tribe")
+	SetProvinceCivilization("Oldenburg", "basque")
+	SetProvinceSettlementBuilding("Oldenburg", "unit-germanic-town-hall", true)
+	SetProvinceOwner("Bremen", "basque", "Funnelbeaker Tribe")
+	SetProvinceCivilization("Bremen", "basque")
+	SetProvinceSettlementBuilding("Bremen", "unit-germanic-town-hall", true)
+	SetProvinceOwner("Holstein", "basque", "Funnelbeaker Tribe")
+	SetProvinceCivilization("Holstein", "basque")
+	SetProvinceSettlementBuilding("Holstein", "unit-germanic-town-hall", true)
+	SetProvinceOwner("Lauenburg", "basque", "Funnelbeaker Tribe")
+	SetProvinceCivilization("Lauenburg", "basque")
+	SetProvinceSettlementBuilding("Lauenburg", "unit-germanic-town-hall", true)
+	SetProvinceOwner("Mecklenburg", "basque", "Funnelbeaker Tribe")
+	SetProvinceCivilization("Mecklenburg", "basque")
+	SetProvinceSettlementBuilding("Mecklenburg", "unit-germanic-town-hall", true)
+	SetProvinceOwner("Hither Pomerania", "basque", "Funnelbeaker Tribe")
+	SetProvinceCivilization("Hither Pomerania", "basque")
+	SetProvinceSettlementBuilding("Hither Pomerania", "unit-germanic-town-hall", true)
+	
 	-- Beginnings of agriculture in southern Scandinavia in 3950 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 36.
 	-- Domesticated animals begin to appear in Zealand (or perhaps even southern Scandinavia in general?) in 3950 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 37.
 end
@@ -10980,7 +11050,6 @@ if (GrandStrategyYear >= -1450) then
 	SetProvinceSettlementBuilding("Crete", "unit-teuton-town-hall", true)
 	SetProvinceOwner("Euboea", "greek", "Mycenae")
 	SetProvinceCivilization("Euboea", "greek")
-	SetProvinceSettlementBuilding("Euboea", "unit-teuton-town-hall", true)
 	SetProvinceOwner("Lacedaemonia", "greek", "Mycenae")
 	SetProvinceCivilization("Lacedaemonia", "greek")
 	SetProvinceSettlementBuilding("Lacedaemonia", "unit-teuton-town-hall", true)
@@ -11007,7 +11076,6 @@ if (GrandStrategyYear >= -1300) then
 	-- Mycenaean territory included most of Thessaly in 1300 BC; Source: "Atlas de História Mundial", 2001, p. 66.
 	SetProvinceOwner("Thessaly", "greek", "Mycenae")
 	SetProvinceCivilization("Thessaly", "greek")
-	SetProvinceSettlementBuilding("Thessaly", "unit-teuton-town-hall", true)
 end
 
 if (GrandStrategyYear >= -1250) then
@@ -11052,7 +11120,6 @@ end
 if (GrandStrategyYear >= -800) then -- Hallstatt culture in southern Germany and adjacent areas c. 800-400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 87.
 	SetProvinceOwner("Austria", "celt", "Norici Tribe")
 	SetProvinceCivilization("Austria", "celt")
-	SetProvinceSettlementBuilding("Austria", "unit-germanic-town-hall", true)
 	SetProvinceUnitQuantity("Austria", "unit-germanic-warrior", 0)
 	SetProvinceOwner("Bavaria", "celt", "Norici Tribe")
 	SetProvinceCivilization("Bavaria", "celt")
@@ -11237,7 +11304,6 @@ end
 if (GrandStrategyYear >= -400) then -- Boii attested c. 400 BC; Source: John T. Koch, "Celtic Culture: Aberdeen breviary-celticism", 2006, pp. 223-224.
 	SetProvinceOwner("Bohemia", "celt", "Boii Tribe")
 	SetProvinceCivilization("Bohemia", "celt")
-	SetProvinceSettlementBuilding("Bohemia", "unit-germanic-town-hall", true)
 	SetProvinceUnitQuantity("Bohemia", "unit-germanic-warrior", 0)
 end
 
@@ -11273,7 +11339,6 @@ if (GrandStrategyYear >= -336) then
 	
 	SetProvinceOwner("Wallachia", "thracian", "Getae Tribe")
 	SetProvinceCivilization("Wallachia", "thracian")
-	SetProvinceSettlementBuilding("Wallachia", "unit-teuton-town-hall", true)
 	SetProvinceOwner("Dobruja", "thracian", "Getae Tribe")
 	SetProvinceCivilization("Dobruja", "thracian")
 	SetProvinceSettlementBuilding("Dobruja", "unit-teuton-town-hall", true)
@@ -11360,10 +11425,8 @@ if (GrandStrategyYear >= -264) then
 	-- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	SetProvinceOwner("Bremen", "teuton", "Chauci Tribe")	
 	SetProvinceCivilization("Bremen", "teuton")
-	SetProvinceSettlementBuilding("Bremen", "unit-teuton-town-hall", true)
 	SetProvinceOwner("Oldenburg", "teuton", "Chauci Tribe")
 	SetProvinceCivilization("Oldenburg", "teuton")
-	SetProvinceSettlementBuilding("Oldenburg", "unit-teuton-town-hall", true)
 	AcquireFactionTechnologies("germanic", "Asa Tribe", "teuton", "Chauci Tribe")
 
 	SetProvinceOwner("Brunswick", "teuton", "Cherusci Tribe")	
@@ -11383,15 +11446,12 @@ if (GrandStrategyYear >= -264) then
 	
 	SetProvinceOwner("Friesland", "teuton", "Frisian Tribe")	
 	SetProvinceCivilization("Friesland", "teuton")
-	SetProvinceSettlementBuilding("Friesland", "unit-teuton-town-hall", true)
 	SetProvinceOwner("East Friesland", "teuton", "Frisian Tribe")	
 	SetProvinceCivilization("East Friesland", "teuton")
-	SetProvinceSettlementBuilding("East Friesland", "unit-teuton-town-hall", true)
 	AcquireFactionTechnologies("germanic", "Asa Tribe", "teuton", "Frisian Tribe")
 
 	SetProvinceOwner("Holstein", "teuton", "Saxon Tribe") -- also inhabited by the Teutones
 	SetProvinceCivilization("Holstein", "teuton")
-	SetProvinceSettlementBuilding("Holstein", "unit-teuton-town-hall", true)
 	AcquireFactionTechnologies("germanic", "Asa Tribe", "teuton", "Saxon Tribe")
 	
 	SetProvinceOwner("Schleswig", "teuton", "Angle Tribe")	
@@ -11401,7 +11461,6 @@ if (GrandStrategyYear >= -264) then
 	
 	SetProvinceOwner("Mecklenburg", "teuton", "Varini Tribe")
 	SetProvinceCivilization("Mecklenburg", "teuton")
-	SetProvinceSettlementBuilding("Mecklenburg", "unit-teuton-town-hall", true)
 	AcquireFactionTechnologies("germanic", "Asa Tribe", "teuton", "Varini Tribe")
 	
 	SetProvinceOwner("Sweden", "norse", "Swede Tribe")
@@ -11417,7 +11476,6 @@ if (GrandStrategyYear >= -264) then
 	
 	SetProvinceOwner("Hither Pomerania", "goth", "Rugian Tribe")
 	SetProvinceCivilization("Hither Pomerania", "goth")
-	SetProvinceSettlementBuilding("Hither Pomerania", "unit-teuton-town-hall", true)
 	AcquireFactionTechnologies("goth", "Goth Tribe", "goth", "Rugian Tribe")
 	
 	SetProvinceOwner("Farther Pomerania", "goth", "Turcilingian Tribe")
@@ -11461,7 +11519,6 @@ end
 
 if (GrandStrategyYear >= -201) then -- Hither Baetica acquired by Rome in 201 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	SetProvinceOwner("Aragon", "latin", "Rome")
-	SetProvinceSettlementBuilding("Aragon", "unit-teuton-town-hall", true)
 end
 
 if (GrandStrategyYear >= -200) then
@@ -11627,7 +11684,6 @@ if (GrandStrategyYear >= -50) then -- Gaul conquered by Rome in 50 BC; Source: W
 	SetProvinceOwner("Moselle", "latin", "Rome")
 	SetProvinceSettlementBuilding("Moselle", "unit-teuton-town-hall", true)
 	SetProvinceOwner("Normandy", "latin", "Rome")
-	SetProvinceSettlementBuilding("Normandy", "unit-teuton-town-hall", true)
 	SetProvinceOwner("Palatinate", "latin", "Rome")
 	SetProvinceSettlementBuilding("Palatinate", "unit-teuton-town-hall", true)
 	SetProvinceOwner("Belgium", "latin", "Rome")
@@ -11681,7 +11737,6 @@ if (GrandStrategyYear >= -27) then
 	
 	SetProvinceOwner("Franconia", "celt", "Turone Tribe")
 	SetProvinceCivilization("Franconia", "celt")
-	SetProvinceSettlementBuilding("Franconia", "unit-germanic-town-hall", true)
 	AcquireFactionTechnologies("celt", "Boii Tribe", "celt", "Turone Tribe")
 end
 
@@ -11749,7 +11804,6 @@ end
 
 if (GrandStrategyYear >= 43) then
 	SetProvinceOwner("England", "latin", "Rome")  -- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-	SetProvinceSettlementBuilding("England", "unit-teuton-town-hall", true)
 	SetProvinceOwner("Rhodes", "latin", "Rome")  -- Rhodes acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 end
 
@@ -11787,9 +11841,7 @@ end
 
 if (GrandStrategyYear >= 107) then -- Dacia acquired by Rome in 107 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	SetProvinceOwner("Moldavia", "latin", "Rome")
-	SetProvinceSettlementBuilding("Moldavia", "unit-teuton-town-hall", true)
 	SetProvinceOwner("Transylvania", "latin", "Rome")
-	SetProvinceSettlementBuilding("Transylvania", "unit-teuton-town-hall", true)
 	SetProvinceOwner("Wallachia", "latin", "Rome")
 	SetProvinceOwner("Vojvodina", "latin", "Rome")
 	SetProvinceSettlementBuilding("Vojvodina", "unit-teuton-town-hall", true)
