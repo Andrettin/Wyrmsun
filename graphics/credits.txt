@@ -861,12 +861,16 @@ João Victor G. Costa (Jinn):
 /graphics/tilesets/world/terrain/scrub_forest_4.png
 /graphics/tilesets/fogofwar.png
 /graphics/ui/backgrounds/gnashorn.png (modified from Tanja Nov.'s drawing)
+/graphics/ui/backgrounds/gnashorn_profile.png (modified from Tanja Nov.'s drawing)
 /graphics/ui/backgrounds/gnashorn_small.png (modified from Tanja Nov.'s drawing)
 /graphics/ui/backgrounds/gryphon.png (modified from Tanja Nov.'s drawing)
+/graphics/ui/backgrounds/gryphon_profile.png (modified from Tanja Nov.'s drawing)
 /graphics/ui/backgrounds/gryphon_small.png (modified from Tanja Nov.'s drawing)
 /graphics/ui/backgrounds/wyrm.png (modified from Tanja Nov.'s drawing)
+/graphics/ui/backgrounds/wyrm_profile.png (modified from Tanja Nov.'s drawing)
 /graphics/ui/backgrounds/wyrm_small.png (modified from Tanja Nov.'s drawing)
 /graphics/ui/backgrounds/yale.png (modified from Tanja Nov.'s drawing)
+/graphics/ui/backgrounds/yale_profile.png (modified from Tanja Nov.'s drawing)
 /graphics/ui/backgrounds/yale_small.png (modified from Tanja Nov.'s drawing)
 /graphics/ui/cursors/magnifying_glass.png
 /graphics/ui/fonts/small.png
