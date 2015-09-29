@@ -68,6 +68,18 @@ DefineFaction("Athens", {
 	}
 })
 
+DefineFaction("Corinth", {
+	Civilization = "greek",
+	Type = "polity",
+	Color = "black",
+	SecondaryColor = "black",
+	DefaultTier = "county",
+	Titles = {
+		"monarchy", "county", "City-State",
+		"republic", "county", "City-State"
+	}
+})
+
 DefineFaction("Epirus", {
 	Civilization = "greek",
 	Type = "polity",

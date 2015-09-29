@@ -3936,6 +3936,40 @@ DefineUnitType("unit-template-guard-tower", { Name = _("Guard Tower"),
 	}
 } )
 
+DefineUnitType("unit-template-dock", { Name = _("Dock"),
+	Class = "dock",
+	Animations = "animations-building",
+	Costs = {"time", 200, "gold", 800, "lumber", 450},
+	RepairHp = 4,
+	RepairCosts = {"gold", 1, "lumber", 1},
+	Construction = "construction-land",
+	Speed = 0,
+	HitPoints = 917, -- 1100 with masonry
+	DrawLevel = 40,
+	TileSize = {3, 3}, BoxSize = {95, 95},
+	SightRange = 1,
+	Armor = 5, BasicDamage = 0, Missile = "missile-none",
+	Accuracy = 0,
+	Evasion = 0,
+	Priority = 30, AnnoyComputerFactor = 20,
+	Points = 170,
+	Corpse = "unit-destroyed-3x3-place",
+	ExplodeWhenKilled = "missile-explosion",
+	Type = "land",
+	Building = true, VisibleUnderFog = true,
+	BuilderOutside = true,
+	ShoreBuilding = true,
+	Drops = {"unit-wood-pile"},
+	SelectableByRectangle = true,
+	Sounds = {
+--		"selected", "lumber-mill-selected",
+--		"acknowledge", "dwarven-lumber-mill-acknowledge",
+--		"ready", "storehouse-ready",
+--		"help", "basic-dwarf-voices-help",
+		"dead", "building-destroyed"
+	}
+} )
+
 -- Other civilizations' units
 
 DefineUnitType("unit-elven-swordsman", { Name = _("Swordsman"),

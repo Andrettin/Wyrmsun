@@ -53,6 +53,13 @@ DefineFaction("Helvetii Tribe", {
 	SecondaryColor = "violet"
 })
 
+DefineFaction("Ligurian Tribe", {
+	Civilization = "celt", -- were they really Celts?
+	Type = "tribe",
+	Color = "green",
+	SecondaryColor = "green"
+})
+
 DefineFaction("Menapii Tribe", {
 	Civilization = "celt",
 	Type = "tribe",

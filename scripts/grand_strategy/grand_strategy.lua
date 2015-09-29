@@ -145,14 +145,6 @@ function RunGrandStrategyGameSetupMenu()
 					table.insert(GetFactionFromName(GetProvinceOwner(WorldMapProvinces[key].Name)).OwnedProvinces, key)
 				end
 
-				if (WorldMapProvinces[key].SettlementName ~= nil) then
-					SetProvinceSettlementName(WorldMapProvinces[key].Name, WorldMapProvinces[key].SettlementName)
-				end
-				
-				if (WorldMapProvinces[key].SettlementLocation ~= nil) then
-					SetProvinceSettlementLocation(WorldMapProvinces[key].Name, WorldMapProvinces[key].SettlementLocation[1], WorldMapProvinces[key].SettlementLocation[2])
-				end
-				
 				if (WorldMapProvinces[key].Coastal == nil) then
 					WorldMapProvinces[key]["Coastal"] = false
 				end

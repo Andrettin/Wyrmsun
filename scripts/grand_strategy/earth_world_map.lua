@@ -6155,7 +6155,7 @@ SetWorldMapTileTerrain(521, 149, hills_id)
 SetWorldMapTileTerrain(521, 150, hills_id)
 SetWorldMapTileTerrain(521, 151, water_id)
 SetWorldMapTileTerrain(521, 152, water_id)
-SetWorldMapTileTerrain(521, 153, water_id)
+SetWorldMapTileTerrain(521, 153, plains_id) -- Malta
 SetWorldMapTileTerrain(521, 154, water_id)
 SetWorldMapTileTerrain(521, 155, water_id)
 SetWorldMapTileTerrain(521, 156, water_id)
@@ -8050,8 +8050,8 @@ SetWorldMapTileTerrain(545, 144, water_id)
 SetWorldMapTileTerrain(545, 145, water_id)
 SetWorldMapTileTerrain(545, 146, plains_id)
 SetWorldMapTileTerrain(545, 147, plains_id)
+AddWorldMapResource("grain", 545, 147, true) -- Citrus fruit; should be in (545, 148) but there is a settlement there; Source: "Philip's International School Atlas", 2006, p. 59.
 SetWorldMapTileTerrain(545, 148, plains_id)
-AddWorldMapResource("grain", 545, 148, true) -- Citrus fruit; Source: "Philip's International School Atlas", 2006, p. 59.
 SetWorldMapTileTerrain(545, 149, water_id)
 SetWorldMapTileTerrain(545, 150, plains_id)
 SetWorldMapTileTerrain(545, 151, plains_id)
@@ -10824,7 +10824,19 @@ if (GrandStrategyYear >= -2000) then
 	
 	SetRegionPopulation("West and Central Europe", 10300000) -- Non-CIS Europe had a population of around 10.3 millions in 2000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
 	
-	SetRegionPopulation("Eurasia", 4100000) -- CIS had a population of around 4.1 millions in 2000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html	
+	SetRegionPopulation("Eurasia", 4100000) -- CIS had a population of around 4.1 millions in 2000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+	
+	-- Ports in Crete between 2000 and 1400 BC; Source: "Atlas de História Mundial", 2001, p. 67.
+	SetWorldMapTilePort(548, 155, true) -- Khania (Le Canée)
+	SetWorldMapTilePort(550, 156, true) -- Aghia Triada; Kommos
+	SetWorldMapTilePort(551, 155, true) -- Amnissos; Katsambas
+	SetWorldMapTilePort(552, 155, true) -- Nirou Khani
+	SetWorldMapTilePort(553, 156, true) -- Mokhlos; Pseira; Pyrgos
+	SetWorldMapTilePort(554, 156, true) -- Palaikastro
+	
+	-- Temples and palaces existent in Crete between 2000 and 1400 BC; Source: "Atlas de História Mundial", 2001, p. 67.
+	
+	SetFactionTechnology("minoan", "Crete", "upgrade-teuton-writing", true) -- Linear A and Linear B tablets found in Crete belonging to the period between 2000 and 1400 BC; Source: "Atlas de História Mundial", 2001, p. 67.
 end
 
 if (GrandStrategyYear >= -1900) then
@@ -10840,7 +10852,8 @@ if (GrandStrategyYear >= -1700) then
 	-- Late Bronze Age begins around 1700 BC, and during this period cremation became the burial tradition in almost all of Europe; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 112.
 	
 	SetProvinceSettlementBuilding("Aetolia", "unit-teuton-stronghold", true) -- Mycenaean fortifications present in Krisa (in Locris Ozolis) between 1700 and 1200 BC; Source: "Atlas de História Mundial", 2001, p. 67.
-	SetProvinceSettlementBuilding("Argolis", "unit-teuton-stronghold", true) -- Mycenaean fortifications present in Argos, Tirinto, Dendra and Kastro between 1700 and 1200 BC, as well as in Araxos (in the Achaean coast), in Korakou and Perdikaria (both in the isthmus of Corinth) and in Kolonna (in the isle of Aegina); Source: "Atlas de História Mundial", 2001, p. 67.
+	SetProvinceSettlementBuilding("Argolis", "unit-teuton-stronghold", true) -- Mycenaean fortifications present in Argos, Tirinto, Dendra and Kastro between 1700 and 1200 BC, as well as in Araxos (in the Achaean coast) and in Kolonna (in the isle of Aegina); Source: "Atlas de História Mundial", 2001, p. 67.
+	SetProvinceSettlementBuilding("Corinth", "unit-teuton-stronghold", true) -- Mycenaean fortifications present in Korakou and Perdikaria (both in the isthmus of Corinth); Source: "Atlas de História Mundial", 2001, p. 67.
 	SetProvinceSettlementBuilding("Attica", "unit-teuton-stronghold", true) -- Mycenaean fortifications present in Athens between 1700 and 1200 BC, as well as in Aghia Irini (in the island of Ceos); Source: "Atlas de História Mundial", 2001, p. 67.
 	SetProvinceSettlementBuilding("Boeotia", "unit-teuton-stronghold", true) -- Mycenaean fortifications present in Eutresis, Kastri, Aghia Marina, Gla, Aghios Ioannis, Chantsa, Stroviki, Pyrgos and Panopeus between 1700 and 1200 BC, as well as in Aghia Irini (in the island of Ceos); Source: "Atlas de História Mundial", 2001, p. 67.
 	SetProvinceSettlementBuilding("Lacedaemonia", "unit-teuton-stronghold", true) -- Mycenaean fortifications present in Elliniko and Peristeria (both in the western coast of Messenia) between 1700 and 1200 BC, as well as in Phylakopi (in the island of Melos); Source: "Atlas de História Mundial", 2001, p. 67.
@@ -10857,7 +10870,6 @@ if (GrandStrategyYear >= -1700) then
 	SetWorldMapTilePathway(540, 148, "southeast", "trail")
 	SetWorldMapTilePathway(541, 145, "southwest", "trail")
 	SetWorldMapTilePathway(541, 145, "east", "trail")
-	SetWorldMapTilePathway(541, 145, "west", "trail")
 	SetWorldMapTilePathway(541, 148, "west", "trail")
 	SetWorldMapTilePathway(541, 148, "northeast", "trail")
 	SetWorldMapTilePathway(541, 149, "northwest", "trail")
@@ -10932,6 +10944,14 @@ end
 if (GrandStrategyYear >= -1600) then
 	GrandStrategyEvents.TheCurvedSwords = nil  -- Source: http://natmus.dk/en/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-roerby-swords/
 	SetProvinceSettlementBuilding("Jutland", "unit-germanic-smithy", true) -- bronzesmithing capabilities existed in Jutland, so that these swords were crafted
+	
+	-- Endpoints of sea trade routes (which in the game would mean those tiles having docks/ports) between 1600 and 1300 BC (date range could also be larger); Source: "Atlas de História Mundial", 2001, p. 66.
+	SetWorldMapTilePort(506, 143, true)
+	SetWorldMapTilePort(516, 125, true)
+	SetWorldMapTilePort(521, 153, true)
+	SetWorldMapTilePort(522, 150, true)
+	SetWorldMapTilePort(527, 141, true)
+	SetWorldMapTilePort(544, 142, true)
 end
 
 if (GrandStrategyYear >= -1450) then
@@ -10939,7 +10959,7 @@ if (GrandStrategyYear >= -1450) then
 	SetProvinceOwner("Crete", "", "")
 	SetProvinceSettlementBuilding("Crete", "unit-teuton-town-hall", false)
 	
-	-- Mycenaean Greece included Argolis, Aetolia, Attica, Boeotia, Crete, Euboea, Lacedaemonia and Rhodes about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+	-- Mycenaean Greece included Argolis, Aetolia, Attica, Boeotia, Corinth, Crete, Euboea, Lacedaemonia and Rhodes about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	SetProvinceOwner("Aetolia", "greek", "Mycenae")
 	SetProvinceCivilization("Aetolia", "greek")
 	SetProvinceSettlementBuilding("Aetolia", "unit-teuton-town-hall", true)
@@ -10952,6 +10972,9 @@ if (GrandStrategyYear >= -1450) then
 	SetProvinceOwner("Boeotia", "greek", "Mycenae")
 	SetProvinceCivilization("Boeotia", "greek")
 	SetProvinceSettlementBuilding("Boeotia", "unit-teuton-town-hall", true)
+	SetProvinceOwner("Corinth", "greek", "Mycenae")
+	SetProvinceCivilization("Corinth", "greek")
+	SetProvinceSettlementBuilding("Corinth", "unit-teuton-town-hall", true)
 	SetProvinceOwner("Crete", "greek", "Mycenae")
 	SetProvinceCivilization("Crete", "greek")
 	SetProvinceSettlementBuilding("Crete", "unit-teuton-town-hall", true)
@@ -11001,6 +11024,8 @@ if (GrandStrategyYear >= -1190) then
 	SetProvinceSettlementBuilding("Attica", "unit-teuton-stronghold", false)
 	SetProvinceOwner("Boeotia", "", "")
 	SetProvinceSettlementBuilding("Boeotia", "unit-teuton-stronghold", false)
+	SetProvinceOwner("Corinth", "", "")
+	SetProvinceSettlementBuilding("Corinth", "unit-teuton-stronghold", false)
 	SetProvinceOwner("Crete", "", "")
 	SetProvinceOwner("Euboea", "", "")
 	SetProvinceOwner("Rhodes", "", "")
@@ -11078,6 +11103,9 @@ if (GrandStrategyYear >= -700) then -- Greece in 700-600 BC; Source: William R. 
 
 	SetProvinceOwner("Argolis", "greek", "Argos")
 	AcquireFactionTechnologies("greek", "Mycenae", "greek", "Argos")
+
+	SetProvinceOwner("Corinth", "greek", "Corinth")
+	AcquireFactionTechnologies("greek", "Mycenae", "greek", "Corinth")
 end
 
 if (GrandStrategyYear >= -600) then -- Jastorf culture dates from 600 BC, and encompassed Jutland, southern Sweden, northwestern Germany, and eastern Germany; Source: J. P. Mallory and Douglas Q. Adams, "Encyclopedia of Indo-European Culture", 1997, pp. 321-322
@@ -11095,6 +11123,10 @@ if (GrandStrategyYear >= -550) then
 	SetProvinceCivilization("Macedonia", "greek")
 	SetProvinceCivilization("Rhodope", "greek")
 	SetProvinceCivilization("Thrace", "greek")
+
+	SetProvinceOwner("Liguria", "celt", "Ligurian Tribe")
+	SetProvinceCivilization("Liguria", "celt")
+	SetProvinceSettlementBuilding("Liguria", "unit-germanic-town-hall", true)
 	
 	-- Celts first mentioned by classical authors around 550 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 113.
 end
@@ -11112,6 +11144,7 @@ if (GrandStrategyYear >= -500) then
 	-- Greece at the time of the War with Persia (500-479 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 13.
 	SetFactionDiplomacyState("greek", "Athens", "persian", "Persia", "war")
 	SetFactionDiplomacyState("greek", "Sparta", "persian", "Persia", "war")
+	SetFactionDiplomacyState("greek", "Corinth", "persian", "Persia", "war")
 	SetProvinceCivilization("Thrace", "thracian") -- Apsinthii
 	
 	-- Roman territory in 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
@@ -11165,6 +11198,7 @@ if (GrandStrategyYear >= -479) then
 	-- End of the war between the Greek states and Persia in 479 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 13.
 	SetFactionDiplomacyState("greek", "Athens", "persian", "Persia", "peace")
 	SetFactionDiplomacyState("greek", "Sparta", "persian", "Persia", "peace")
+	SetFactionDiplomacyState("greek", "Corinth", "persian", "Persia", "peace")
 end
 
 if (GrandStrategyYear >= -450) then
@@ -11192,8 +11226,10 @@ if (GrandStrategyYear >= -431) then
 	SetProvinceSettlementBuilding("Skopje", "unit-teuton-town-hall", true)
 
 	SetFactionDiplomacyState("greek", "Athens", "greek", "Sparta", "war")
+	SetFactionDiplomacyState("greek", "Athens", "greek", "Corinth", "war")
 	SetFactionDiplomacyState("greek", "Athens", "greek", "Thebes", "war")
 	SetFactionDiplomacyState("greek", "Athens", "greek", "Macedon", "war")
+	SetFactionDiplomacyState("greek", "Sparta", "greek", "Corinth", "alliance")
 	SetFactionDiplomacyState("greek", "Sparta", "greek", "Thebes", "alliance")
 	SetFactionDiplomacyState("greek", "Sparta", "greek", "Macedon", "alliance")
 end
@@ -11213,8 +11249,13 @@ end
 if (GrandStrategyYear >= -362) then
 	-- Greece in 362 BC (Theban headship); Source: William R. Shepherd, "Historical Atlas", 1911, p. 17.	
 	SetFactionDiplomacyState("greek", "Athens", "greek", "Sparta", "peace")
+	SetFactionDiplomacyState("greek", "Athens", "greek", "Corinth", "peace")
 	SetFactionDiplomacyState("greek", "Athens", "greek", "Thebes", "peace")
 	SetFactionDiplomacyState("greek", "Athens", "greek", "Macedon", "peace")
+	
+	SetFactionDiplomacyState("greek", "Sparta", "greek", "Corinth", "peace") -- end of anti-Athenian alliances with Sparta
+	SetFactionDiplomacyState("greek", "Sparta", "greek", "Thebes", "peace")
+	SetFactionDiplomacyState("greek", "Sparta", "greek", "Macedon", "peace")
 
 	SetFactionDiplomacyState("greek", "Thebes", "greek", "Argos", "alliance")
 end
@@ -11464,11 +11505,12 @@ if (GrandStrategyYear >= -154) then -- Liguria acquired by Rome in 154 BC; Sourc
 	SetProvinceSettlementBuilding("Liguria", "unit-teuton-town-hall", true)
 end
 
-if (GrandStrategyYear >= -146) then -- Aetolia, Attica, Boeotia, Epirus, Euboea, Macedonia, the Peloponnese and Thessaly acquired by Rome in 146 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+if (GrandStrategyYear >= -146) then -- Aetolia, Attica, Boeotia, Corinth, Epirus, Euboea, Macedonia, the Peloponnese and Thessaly acquired by Rome in 146 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	SetProvinceOwner("Aetolia", "latin", "Rome")
 	SetProvinceOwner("Argolis", "latin", "Rome")
 	SetProvinceOwner("Attica", "latin", "Rome")
 	SetProvinceOwner("Boeotia", "latin", "Rome")
+	SetProvinceOwner("Corinth", "latin", "Rome")
 	SetProvinceOwner("Epirus", "latin", "Rome")
 	SetProvinceOwner("Euboea", "latin", "Rome")
 	SetProvinceOwner("Lacedaemonia", "latin", "Rome")
