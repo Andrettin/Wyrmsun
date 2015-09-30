@@ -222,6 +222,7 @@ https://github.com/Andrettin/Wyrmsun
 - Reworking of the shadows of the Gnomish and Goblin buildings (by Jinn).
 - Reworking of the shadows of the Mercenary Camp (by Jinn).
 - The Teuton Smithy now changes its graphics after Masonry is researched (new graphics by Jinn).
+- Town hall type buildings now grant 5 food instead of 1.
 
 * Grand Strategy
 - The minimap no longer stops functioning if toggling full screen while playing a grand strategy game.
