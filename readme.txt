@@ -262,6 +262,12 @@ https://github.com/Andrettin/Wyrmsun
 - Encyclopedia, tech tree and quest tooltips are now drawn as popups.
 - Added new Gnashorn and Yale backgrounds (used for Wyrmsun with permission).
 
+* Modding
+- Added possibility to make units have a bonus against buildings.
+
+* Units
+- A unit type's bonus against mounted units, bonus against buildings and backstab bonus now appear in its popup.
+
 -----------------------------------------------------------------------
 - 1.3.3
 -----------------------------------------------------------------------

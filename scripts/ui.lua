@@ -709,7 +709,7 @@ if not (ui_loaded_first_time) then
 				{ 	Margin = {1, 1},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
-				{ 	HighlightColor = "yellow",
+				{ 	Condition = {Mercenary = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Class: "), TypeClass("Type")), Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {HitPoints = "only"}, HighlightColor = "yellow",
@@ -735,6 +735,15 @@ if not (ui_loaded_first_time) then
 				},
 				{ 	Condition = {Evasion = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Evasion: "), Variable = "Evasion", Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {Backstab = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Backstab +%: "), Variable = "Backstab", Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {BonusAgainstMounted = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("+% vs. Mounted: "), Variable = "BonusAgainstMounted", Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {BonusAgainstBuildings = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("+% vs. Buildings: "), Variable = "BonusAgainstBuildings", Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				
 				-- Description

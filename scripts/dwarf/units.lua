@@ -41,6 +41,7 @@ DefineUnitType("unit-dwarven-miner", { Name = _("Miner"),
 	Image = {"file", "dwarf/units/miner.png", "size", {72, 72}},
 	Animations = "animations-dwarven-miner", Icon = "icon-dwarven-miner",
 	Corpse = "unit-dwarven-dead-body",
+	BluntDamage = true,
 	CanGatherResources = {
 		{
 			"file-when-loaded", "dwarf/units/miner_with_gold.png",
@@ -133,6 +134,7 @@ DefineUnitType("unit-dwarven-militia", { Name = _("Militia"),
 	organic = true,
 	Flesh = true,
 	SelectableByRectangle = true,
+	HackDamage = true,
 	Sounds = {
 		"selected", "basic-dwarf-voices-selected-group",
 		"acknowledge", "dwarven-miner-acknowledge",
@@ -159,6 +161,7 @@ DefineUnitType("unit-dwarven-axefighter", { Name = _("Axefighter"),
 	Animations = "animations-dwarven-axefighter", Icon = "icon-dwarven-axefighter",
 	Costs = {"time", 60, "gold", 495, "lumber", 22},
 	Corpse = "unit-dwarven-dead-body",
+	HackDamage = true,
 	Variations = {
 		{
 			"variation-id", "red-hair",
@@ -214,6 +217,7 @@ DefineUnitType("unit-dwarven-steelclad", { Name = _("Steelclad"),
 	Animations = "animations-dwarven-axefighter", Icon = "icon-dwarven-steelclad",
 	Costs = {"time", 90, "gold", 825, "lumber", 75},
 	Armor = 4,
+	HackDamage = true,
 	Variations = {
 		{
 			"variation-id", "red-hair",
@@ -319,6 +323,7 @@ DefineUnitType("unit-dwarven-thane", { Name = _("Stonelord"),
 	Armor = 6,
 	Corpse = "unit-dwarven-dead-body",
 	CanCastSpell = {"spell-axe-twirl"},
+	HackDamage = true,
 	Variations = {
 		{
 			"variation-id", "red-hair",
@@ -380,6 +385,7 @@ DefineUnitType("unit-dwarven-scout", { Name = _("Scout"),
 	Speed = 11,
 	Corpse = "unit-dwarven-dead-body",
 	TechnologyPointCost = 1,
+	HackDamage = true,
 	Variations = {
 		{
 			"variation-id", "orange-hair-short-beard",
@@ -432,6 +438,7 @@ DefineUnitType("unit-dwarven-yale-rider", { Name = _("Yale Rider"),
 	Image = {"file", "dwarf/units/yale_rider_red_hair_gray_fur.png", "size", {72, 72}},
 	Animations = "animations-melee-unit", Icon = "icon-dwarven-yale-rider",
 	Corpse = "unit-dwarven-dead-body",
+	HackDamage = true,
 	Variations = {
 		{
 			"variation-id", "black-hair-brown-fur",
@@ -510,6 +517,7 @@ DefineUnitType("unit-dwarven-ballista", { Name = _("Ballista"),
 	Image = {"file", "dwarf/units/dwarven_ballista.png", "size", {64, 64}},
 	Animations = "animations-dwarven-ballista", Icon = "icon-dwarven-ballista",
 	Missile = "missile-dwarven-ballista-bolt",
+	PierceDamage = true,
 	Sounds = {
 		"selected", "click",
 --		"acknowledge", "ballista-acknowledge",
@@ -551,6 +559,7 @@ DefineUnitType("unit-dwarven-gryphon-rider", { Name = _("Gryphon Rider"),
 	Flesh = true,
 	Mounted = true,
 	SelectableByRectangle = true,
+	HackDamage = true,
 	Variations = {
 		{
 			"variation-id", "black-hair-brown-feathers",

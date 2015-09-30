@@ -44,6 +44,7 @@ DefineUnitType("unit-germanic-worker", { Name = _("Bura"), -- Bûra = "Bauer" in
 	Corpse = "unit-human-dead-body",
 	DaySightRangeBonus = 1,
 	NightSightRangeBonus = -1,
+	BluntDamage = true,
 	CanGatherResources = {
 		{
 			"file-when-loaded", "germanic/units/worker_with_gold.png",
@@ -131,6 +132,7 @@ DefineUnitType("unit-germanic-builder", { Name = _("Builder"),
 	organic = true,
 	Flesh = true,
 	SelectableByRectangle = true,
+	BluntDamage = true,
 	Sounds = {
 		"selected", "basic-germanic-voices-selected-group",
 		"acknowledge", "basic-germanic-voices-acknowledge",
@@ -167,6 +169,7 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 	Corpse = "unit-human-dead-body",
 	DaySightRangeBonus = 1,
 	NightSightRangeBonus = -1,
+	HackDamage = true,
 	Variations = {
 		{
 			"variation-id", "blond-hair",
@@ -254,6 +257,7 @@ DefineUnitType("unit-germanic-archer", { Name = _("Skutan"),
 	TechnologyPointCost = 1,
 	DaySightRangeBonus = 1,
 	NightSightRangeBonus = -1,
+	PierceDamage = true,
 	Variations = {
 		{
 			"variation-id", "red-hair",
@@ -295,6 +299,7 @@ DefineUnitType("unit-germanic-old-man", { Name = _("Old Man"),
 	Variations = {},
 	DaySightRangeBonus = 1,
 	NightSightRangeBonus = -1,
+	HackDamage = true,
 	Sounds = {
 		"selected", "basic-germanic-voices-selected-group",
 		"acknowledge", "basic-germanic-voices-acknowledge",

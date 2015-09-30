@@ -98,7 +98,7 @@ DefineSpell("spell-war-machine-spear-attack",
 	"range", 1,
 	"target", "unit",
 	"action", {
-		{"demolish", "range", 1, "basic-damage", 9, "damage-self", false, "damage-friendly", false, "damage-terrain", false},
+		{"demolish", "range", 1, "basic-damage", 9, "damage-self", false, "damage-friendly", false, "damage-terrain", false, "pierce-damage", true},
 	},
 	"condition", {
 		"alliance", "false",

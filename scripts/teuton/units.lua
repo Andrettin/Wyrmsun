@@ -44,6 +44,7 @@ DefineUnitType("unit-teuton-worker", { Name = _("Bura"),
 	Corpse = "unit-human-dead-body",
 	DaySightRangeBonus = 1,
 	NightSightRangeBonus = -1,
+	BluntDamage = true,
 	CanGatherResources = {
 		{
 			"file-when-loaded", "germanic/units/worker_with_gold.png",
@@ -123,6 +124,7 @@ DefineUnitType("unit-teuton-swordsman", { Name = _("Krieger"),
 	Corpse = "unit-human-dead-body",
 	DaySightRangeBonus = 1,
 	NightSightRangeBonus = -1,
+	HackDamage = true,
 	Variations = {
 		{
 			"variation-id", "red-hair", -- no shield, bronze sword
@@ -196,6 +198,7 @@ DefineUnitType("unit-teuton-archer", { Name = _("Skutan"),
 	Corpse = "unit-human-dead-body",
 	DaySightRangeBonus = 1,
 	NightSightRangeBonus = -1,
+	PierceDamage = true,
 	Variations = {
 		{
 			"variation-id", "red-hair",
@@ -232,6 +235,7 @@ DefineUnitType("unit-teuton-catapult", { Name = _("Catapult"),
 	Image = {"file", "teuton/units/catapult.png", "size", {72, 72}},
 	Animations = "animations-teuton-catapult", Icon = "icon-teuton-catapult",
 	Missile = "missile-catapult-flaming-rock",
+	BluntDamage = true,
 	Sounds = {
 		"selected", "click",
 --		"acknowledge", "ballista-acknowledge",
@@ -252,6 +256,7 @@ DefineUnitType("unit-teuton-old-man", { Name = _("Old Man"),
 	Variations = {},
 	DaySightRangeBonus = 1,
 	NightSightRangeBonus = -1,
+	HackDamage = true,
 	Sounds = {
 		"selected", "basic-teuton-voices-selected-group",
 		"acknowledge", "basic-teuton-voices-acknowledge",

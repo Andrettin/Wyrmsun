@@ -11196,6 +11196,14 @@ if (GrandStrategyYear >= -550) then
 	SetProvinceSettlementBuilding("Liguria", "unit-germanic-town-hall", true)
 	
 	-- Celts first mentioned by classical authors around 550 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 113.
+	
+	-- Commercial routes in Europe between 550 BC and 752 AD (for the overland, non-river ones, this would mean at least trail-level pathway); Source: "Atlas de História Mundial", 2001, pp. 70-71.
+	SetWorldMapTilePathway(503, 117, "east", "trail")
+	SetWorldMapTilePathway(504, 117, "west", "trail")
+	SetWorldMapTilePathway(504, 117, "northeast", "trail")
+	SetWorldMapTilePathway(505, 116, "southwest", "trail")
+	SetWorldMapTilePathway(505, 116, "east", "trail")
+	SetWorldMapTilePathway(506, 116, "west", "trail")
 end
 
 if (GrandStrategyYear >= -500) then

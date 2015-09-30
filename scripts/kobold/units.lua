@@ -45,6 +45,7 @@ DefineUnitType("unit-kobold-footpad", { Name = _("Footpad"),
 	Gender = 0, -- 0 = Not Set, 1 = Male, 2 = Female (since Kobolds are reptilian creatures, their graphics can represent both genders)
 	DaySightRangeBonus = -1,
 	NightSightRangeBonus = 1,
+	HackDamage = true,
 	Corpse = "unit-kobold-dead-body",
 	Variations = {
 		{

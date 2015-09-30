@@ -231,6 +231,7 @@ DefineUnitType("unit-rat", { Name = "Rat",
 	Flesh = true,
 	Carnivore = true,
 	ChildUpgrade = "upgrade-child",
+	PierceDamage = true,
 	Variations = {
 		{
 			"variation-id", "dark-gray-fur"
@@ -296,6 +297,7 @@ DefineUnitType("unit-yale", { Name = "Yale",
 	PersonalNameSuffixes = {"pan"},
 	ChildUpgrade = "upgrade-child",
 	Excrement = "unit-yale-excrement",
+	BluntDamage = true,
 	Variations = {
 		--[[
 		{
@@ -382,6 +384,7 @@ DefineUnitType("unit-gryphon", { Name = _("Gryphon"),
 	Carnivore = true,
 	BoardSize = 100, -- to prevent this unit from being loaded into transporters
 	ChildUpgrade = "upgrade-gryphon-child",
+	PierceDamage = true,
 	PersonalNames = {
 		"Graa", "Greaa", "Gree", "Kaaa", "Kaasa", "Kassshh", "Kayya", "Kessshh", "Keyya", "Kiira", "Korra", "Korro", "Kraa", "Kuu", "Kzaaa", "Kzuuu",
 		"Kawn", "Krawg", -- names from the "Sceptre of Fire" Wesnoth campaign
@@ -463,6 +466,7 @@ DefineUnitType("unit-wyrm", { Name = _("Wyrm"),
 	PersonalNames = {"Goin", "Jormungand", "Ladon", "Moin", "Ofnir", "Svafnir"}, -- Grabak = Gray-Back, Midgardsorm = Midgard Serpent, Nidhogg = Corpse Tearer / The Dread Biter, Ofnir = The Bewilderer, Svafnir = The Sleep-Bringer
 	PersonalNamePrefixes = {"Gra", "Graf", "Nid"}, -- Gra = Gray, Graf = Gnawer / Gnawing, Nid = Corpse / Dread
 	PersonalNameSuffixes = {"bak", "hogg", "orm", "vitnir", "volluth"}, -- Bak = Back, Hogg = Tearer / Biter, Orm = Serpent, Vitnir = Wolf, Volluth = Field
+	PierceDamage = true,
 	Variations = {
 		--[[
 		{
@@ -568,6 +572,7 @@ DefineUnitType("unit-slime", { Name = _("Slime"),
 	Detritivore = true,	
 	Carnivore = true,	
 	ChildUpgrade = "upgrade-child",
+	BluntDamage = true,
 	Variations = {
 		{
 			"variation-id", "green",
@@ -677,6 +682,7 @@ DefineUnitType("unit-bee", { Name = _("Bee"),
 	Fauna = true,
 	Insect = true,
 	Herbivore = true,
+	PierceDamage = true,
 	ChildUpgrade = "upgrade-bee-child",
 	Sounds = {
 		"selected", "click",
@@ -717,6 +723,7 @@ DefineUnitType("unit-fly", { Name = _("Fly"),
 	Fauna = true,
 	Insect = true,
 	Detritivore = true,	
+	PierceDamage = true,
 	ChildUpgrade = "upgrade-bee-child",
 	Sounds = {
 		"selected", "click",
@@ -1045,6 +1052,7 @@ DefineUnitType("unit-bird", { Name = _("Bird"),
 	Fauna = true,
 	Flesh = true,
 	Insectivore = true,
+	PierceDamage = true,
 	ChildUpgrade = "upgrade-child",
 	Variations = {
 		{
@@ -1098,6 +1106,7 @@ DefineUnitType("unit-crow", { Name = _("Crow"),
 	Flesh = true,
 	Insectivore = true,
 	Detritivore = true,	
+	PierceDamage = true,
 	ChildUpgrade = "upgrade-child",
 	Sounds = {
 		"selected", "crow-selected",
@@ -1141,6 +1150,7 @@ DefineUnitType("unit-bat", { Name = _("Bat"),
 	PeopleAversion = true,
 	Flesh = true,
 	Insectivore = true,
+	PierceDamage = true,
 	ChildUpgrade = "upgrade-child",
 	Sounds = {
 		"selected", "bat-selected",
@@ -1184,6 +1194,7 @@ DefineUnitType("unit-blood-bat", { Name = _("Blood Bat"),
 	Flesh = true,
 	Predator = true,
 	Carnivore = true,
+	PierceDamage = true,
 	ChildUpgrade = "upgrade-child",
 	Sounds = {
 		"selected", "bat-selected",
@@ -1228,6 +1239,7 @@ DefineUnitType("unit-dread-bat", { Name = _("Dread Bat"),
 	Flesh = true,
 	Predator = true,
 	Carnivore = true,
+	PierceDamage = true,
 	ChildUpgrade = "upgrade-child",
 	Sounds = {
 		"selected", "bat-selected",
@@ -2124,7 +2136,7 @@ DefineUnitType("unit-volcanic-crater", { Name = _("Volcanic Crater"),
 	DrawLevel = 30,
 	TileSize = {2, 2}, BoxSize = {63, 63},
 	SightRange = 0,
-	BasicDamage = 80, Missile = "missile-catapult-flaming-rock",
+	FireDamage = 80, Missile = "missile-catapult-flaming-rock",
 	Priority = 0,
 	Type = "land",
 	MaxAttackRange = 2,
@@ -3097,6 +3109,7 @@ DefineUnitType("unit-caltrops", { Name = _("Caltrops"),
 	Type = "land",
 	NumDirections = 1,	
 	Trap = true,
+	PierceDamage = true,
 	Variations = {
 		{
 			"variation-id", "1"
@@ -3136,6 +3149,7 @@ DefineUnitType("unit-trap", { Name = _("Trap"),
 	Type = "land",
 	NumDirections = 1,	
 	Trap = true,
+	PierceDamage = true,
 	Sounds = {
 		"selected", "click",
 		"dead", "axe-attack"
@@ -3979,6 +3993,7 @@ DefineUnitType("unit-elven-swordsman", { Name = _("Swordsman"),
 	Quote = _("\"This he learned, | the lord of Lintanir, / That Volund alone | in Ulfdalir lay; / By night went his men, | their mail-coats were studded, / Their shields in the waning | moonlight shone.\" - The Lay of Volund"),
 	Image = {"file", "dwarf/units/dwarven_axefighter.png", "size", {72, 72}},
 	Animations = "animations-dwarven-axefighter", Icon = "icon-elven-swordsman",
+	HackDamage = true,
 	Sounds = {
 --		"selected", "basic-dwarf-voices-selected-group",
 --		"acknowledge", "basic-dwarf-voices-acknowledge",
@@ -3997,6 +4012,7 @@ DefineUnitType("unit-orc-spearthrower", { Name = _("Spearthrower"),
 	Image = {"file", "dwarf/units/dwarven_scout.png", "size", {72, 72}},
 	Animations = "animations-dwarven-scout", Icon = "icon-orc-spearthrower",
 	Missile = "missile-javelin",
+	PierceDamage = true,
 	Corpse = "unit-dwarven-dead-body",
 	Sounds = {
 		"selected", "basic-dwarf-voices-selected-group",
@@ -4031,6 +4047,7 @@ DefineUnitType("unit-orc-sea-orc", { Name = _("Sea Orc"),
 	CanTargetLand = true,
 	organic = true,
 	SelectableByRectangle = true,
+	HackDamage = true,
 	Sounds = {
 --		"selected", "basic-dwarf-voices-selected-group",
 --		"acknowledge", "basic-dwarf-voices-acknowledge",
@@ -4065,6 +4082,7 @@ DefineUnitType("unit-orc-shaman", { Name = _("Shaman"),
 	CanAttack = true,
 	CanTargetLand = true,
 	organic = true,
+	BluntDamage = true,
 	SelectableByRectangle = true,
 	Sounds = {
 --		"selected", "basic-dwarf-voices-selected-group",
@@ -4128,6 +4146,7 @@ DefineUnitType("unit-long-swordsman", { Name = _("Long Swordsman"),
 	organic = true,
 	SelectableByRectangle = true,
 	Indestructible = true, -- because it doesn't have death animations
+	HackDamage = true,
 	Sounds = {
 		"selected", "click",
 --		"acknowledge", "basic-dwarf-voices-acknowledge",

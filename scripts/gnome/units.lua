@@ -42,6 +42,7 @@ DefineUnitType("unit-gnomish-worker", { Name = _("Scavenger"),
 	Accuracy = 9,
 	Evasion = 10,
 	Corpse = "unit-gnomish-dead-body",
+	BluntDamage = true,
 	CanGatherResources = {
 		{
 			"file-when-loaded", "gnome/units/gnomish_worker_with_gold.png",
@@ -124,6 +125,7 @@ DefineUnitType("unit-gnomish-recruit", { Name = _("Recruit"),
 	Accuracy = 12,
 	Evasion = 12,
 	Corpse = "unit-gnomish-dead-body",
+	PierceDamage = true,
 	Variations = {
 		{
 			"variation-id", "blond-hair",
@@ -159,6 +161,7 @@ DefineUnitType("unit-gnomish-herbalist", { Name = _("Herbalist"),
 	Corpse = "unit-gnomish-dead-body",
 	CanCastSpell = {"spell-herbal-cure", "spell-portent"},
 	AutoCastActive = {"spell-herbal-cure"},
+	HackDamage = true,
 	Variations = {
 		{
 			"variation-id", "blond-hair",

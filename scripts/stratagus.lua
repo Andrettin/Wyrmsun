@@ -660,6 +660,14 @@ function StandardTriggers()
 						for unit2 = 1,table.getn(nearby_uncount) do 
 							if ((GetUnitVariable(uncount[unit1], "BasicDamage") > 0 or GetUnitVariable(uncount[unit1], "PiercingDamage") > 0) and GetUnitTypeData(GetUnitVariable(nearby_uncount[unit2], "Ident"), "Type") ~= "fly" and GetUnitTypeData(GetUnitVariable(nearby_uncount[unit2], "Ident"), "Type") ~= "fly-low" and GetUnitTypeData(GetUnitVariable(nearby_uncount[unit2], "Ident"), "organic")) then
 								local hp_lost = GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "BasicDamage") + GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "PiercingDamage")
+								-- apply resistances
+								if (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "HackDamage")) then
+									hp_lost = math.floor(hp_lost * (100 - GetUnitVariable(nearby_uncount[unit2], "HackResistance")) / 100)
+								elseif (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "PierceDamage")) then
+									hp_lost = math.floor(hp_lost * (100 - GetUnitVariable(nearby_uncount[unit2], "PierceResistance")) / 100)
+								elseif (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "BluntDamage")) then
+									hp_lost = math.floor(hp_lost * (100 - GetUnitVariable(nearby_uncount[unit2], "BluntResistance")) / 100)
+								end
 								if (GetUnitVariable(nearby_uncount[unit2], "Player") == GetThisPlayer()) then
 									AddMessage(GetUnitVariable(uncount[unit1], "Name") .. _(" suffered ") .. hp_lost .. _(" HP loss"))
 								end
@@ -1624,6 +1632,7 @@ function DeathExplosion(unit, pixel_x, pixel_y)
 	for unit1 = 1,table.getn(nearby_uncount) do 
 		if (GetUnitVariable(nearby_uncount[unit1], "HitPoints") > 0) then
 			local damage = 6
+			damage = math.floor(damage * (100 - GetUnitVariable(nearby_uncount[unit1], "FireResistance")) / 100)
 			if (GameSettings.NoRandomness) then
 				damage = damage - math.floor(((damage + 2) / 2) / 2) -- if no randomness setting is used, then the damage will always return what would have been the average damage with randomness
 			else
