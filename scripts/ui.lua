@@ -90,14 +90,48 @@ end
 
 local min_damage = Div(
 	Add(
-		ActiveUnitVar("BasicDamage"),
-		ActiveUnitVar("PiercingDamage")
+		Add(
+			Add(
+				ActiveUnitVar("PiercingDamage"), ActiveUnitVar("BasicDamage")
+			),
+			Add(
+				ActiveUnitVar("FireDamage"), ActiveUnitVar("ColdDamage")
+			)
+		),
+		Add(
+			Add(
+				ActiveUnitVar("ArcaneDamage"), ActiveUnitVar("LightningDamage")
+			),
+			Add(
+				Add(
+					ActiveUnitVar("AirDamage"), ActiveUnitVar("EarthDamage")
+				),
+				ActiveUnitVar("WaterDamage")
+			)
+		)
 	),
 	2
 )
-local max_damage = Add(
-	ActiveUnitVar("BasicDamage"),
-	ActiveUnitVar("PiercingDamage")
+local max_damage = 	Add(
+	Add(
+		Add(
+			ActiveUnitVar("PiercingDamage"), ActiveUnitVar("BasicDamage")
+		),
+		Add(
+			ActiveUnitVar("FireDamage"), ActiveUnitVar("ColdDamage")
+		)
+	),
+	Add(
+		Add(
+			ActiveUnitVar("ArcaneDamage"), ActiveUnitVar("LightningDamage")
+		),
+		Add(
+			Add(
+				ActiveUnitVar("AirDamage"), ActiveUnitVar("EarthDamage")
+			),
+			ActiveUnitVar("WaterDamage")
+		)
+	)
 )
 
 UI.InfoPanel.X = 162
@@ -725,9 +759,58 @@ if not (ui_loaded_first_time) then
 					More = {"Variable", {Text = _("Range: "), Variable = "AttackRange", Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {BasicDamage = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(_("Damage: "),
-						String(Div(Add(TypeVar("PiercingDamage","Value"), TypeVar("BasicDamage","Value")), 2)), "-",
-						String(Add(TypeVar("PiercingDamage","Value"), TypeVar("BasicDamage","Value")))
+					More = {"Variable", {Text = Concat(
+						_("Damage: "),
+						String(
+							Div(
+								Add(
+									Add(
+										Add(
+											TypeVar("PiercingDamage","Value"), TypeVar("BasicDamage","Value")
+										),
+										Add(
+											TypeVar("FireDamage","Value"), TypeVar("ColdDamage","Value")
+										)
+									),
+									Add(
+										Add(
+											TypeVar("ArcaneDamage","Value"), TypeVar("LightningDamage","Value")
+										),
+										Add(
+											Add(
+												TypeVar("AirDamage","Value"), TypeVar("EarthDamage","Value")
+											),
+											TypeVar("WaterDamage","Value")
+										)
+									)
+								),
+								2
+							)
+						),
+						"-",
+						String(
+							Add(
+								Add(
+									Add(
+										TypeVar("PiercingDamage","Value"), TypeVar("BasicDamage","Value")
+									),
+									Add(
+										TypeVar("FireDamage","Value"), TypeVar("ColdDamage","Value")
+									)
+								),
+								Add(
+									Add(
+										TypeVar("ArcaneDamage","Value"), TypeVar("LightningDamage","Value")
+									),
+									Add(
+										Add(
+											TypeVar("AirDamage","Value"), TypeVar("EarthDamage","Value")
+										),
+										TypeVar("WaterDamage","Value")
+									)
+								)
+							)
+						)
 					), Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {Accuracy = "only"}, HighlightColor = "yellow",
@@ -741,6 +824,9 @@ if not (ui_loaded_first_time) then
 				},
 				{ 	Condition = {BonusAgainstMounted = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("+% vs. Mounted: "), Variable = "BonusAgainstMounted", Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {BonusAgainstGiants = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("+% vs. Giants: "), Variable = "BonusAgainstGiants", Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {BonusAgainstBuildings = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("+% vs. Buildings: "), Variable = "BonusAgainstBuildings", Font = wyr.preferences.PopupDescriptionFont}}
