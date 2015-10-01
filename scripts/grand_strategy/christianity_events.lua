@@ -515,10 +515,10 @@ local ChristianityEvents = {
 		Description = "After journeying from Utrecht to the Ijssel river, the Anglo-Saxon missionary Liafwin has founded an oratory on its left bank.",
 		Conditions = function(s)
 			if (
-				GetProvinceOwner("Holland") == EventFaction.Name
+				GetProvinceOwner("Overijssel") == EventFaction.Name
 				and GetProvinceCivilization("England") == "teuton" -- should be English; Liafwin's province of origin has to be the same culture as he historically was
 			) then
-				EventProvince = WorldMapProvinces.Holland
+				EventProvince = WorldMapProvinces.Overijssel
 				return true
 			else
 				return false

@@ -328,14 +328,16 @@ function RunGrandStrategyGameSetupMenu()
 				
 				if (GrandStrategyWorld == "Earth") then
 					date_minimum = -3000 -- beginning of the last wave of Indo-European migrations, which lasted until 2800 BC
-					date_maximum = 486
+--					date_maximum = 486 -- conquest of Syagrius' realm by the Frankish Merovingian king, Clovis
+					date_maximum = 1918
 					
 					bookmark_list = {
 						"3000 BC", -- beginning of the last wave of Indo-European migrations, which lasted until 2800 BC
 						"2800 BC", -- end of the last wave of the Indo-European migrations and begin of the Single Grave culture in modern Denmark
 						"71 BC", -- the Suebic king Ariovistus enters Gaul at the request of the Arverni and the Sequani to fight the Aedui
 						"27 BC", -- Augustus assumes power in Rome
-						"486 AD" -- conquest of Syagrius' realm by the Frankish Merovingian king, Clovis
+						"486 AD", -- conquest of Syagrius' realm by the Frankish Merovingian king, Clovis
+						"1918 AD" -- end of the Great War
 					}
 				elseif (GrandStrategyWorld == "Nidavellir") then
 					date_minimum = -3000 -- approximate beginning of the Asa's journey to Scandinavia (the Mead of Poetry should have taken place sometime before that)

@@ -10760,6 +10760,9 @@ if (GrandStrategyYear >= -3950) then
 	SetProvinceOwner("Friesland", "basque", "Funnelbeaker Tribe")
 	SetProvinceCivilization("Friesland", "basque")
 	SetProvinceSettlementBuilding("Friesland", "unit-germanic-town-hall", true)
+	SetProvinceOwner("Drenthe", "basque", "Funnelbeaker Tribe")
+	SetProvinceCivilization("Drenthe", "basque")
+	SetProvinceSettlementBuilding("Drenthe", "unit-germanic-town-hall", true)
 	SetProvinceOwner("East Friesland", "basque", "Funnelbeaker Tribe")
 	SetProvinceCivilization("East Friesland", "basque")
 	SetProvinceSettlementBuilding("East Friesland", "unit-germanic-town-hall", true)
@@ -11435,6 +11438,7 @@ if (GrandStrategyYear >= -264) then
 	SetProvinceCivilization("Bremen", "teuton")
 	SetProvinceOwner("Oldenburg", "teuton", "Chauci Tribe")
 	SetProvinceCivilization("Oldenburg", "teuton")
+	AddProvinceClaim("Oldenburg", "teuton", "Chauci Tribe")
 	AcquireFactionTechnologies("germanic", "Asa Tribe", "teuton", "Chauci Tribe")
 
 	SetProvinceOwner("Brunswick", "teuton", "Cherusci Tribe")	
@@ -11460,6 +11464,8 @@ if (GrandStrategyYear >= -264) then
 
 	SetProvinceOwner("Holstein", "teuton", "Saxon Tribe") -- also inhabited by the Teutones
 	SetProvinceCivilization("Holstein", "teuton")
+	SetProvinceOwner("Lauenburg", "teuton", "Saxon Tribe") 
+	SetProvinceCivilization("Lauenburg", "teuton")
 	AcquireFactionTechnologies("germanic", "Asa Tribe", "teuton", "Saxon Tribe")
 	
 	SetProvinceOwner("Schleswig", "teuton", "Angle Tribe")	
@@ -11746,6 +11752,15 @@ if (GrandStrategyYear >= -27) then
 	SetProvinceOwner("Franconia", "celt", "Turone Tribe")
 	SetProvinceCivilization("Franconia", "celt")
 	AcquireFactionTechnologies("celt", "Boii Tribe", "celt", "Turone Tribe")
+	
+	SetProvinceOwner("Drenthe", "teuton", "Ampsivarii Tribe")
+	SetProvinceCivilization("Drenthe", "teuton")
+	AcquireFactionTechnologies("germanic", "Asa Tribe", "teuton", "Ampsivarii Tribe")
+	
+	SetProvinceOwner("Overijssel", "teuton", "Chamavi Tribe")
+	SetProvinceCivilization("Overijssel", "teuton")
+	SetProvinceSettlementBuilding("Overijssel", "unit-teuton-town-hall", true)
+	AcquireFactionTechnologies("germanic", "Asa Tribe", "teuton", "Chamavi Tribe")
 end
 
 if (GrandStrategyYear >= -17) then -- Gallaecia and Asturias acquired by Rome in 17 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
@@ -11986,8 +12001,12 @@ end
 
 if (GrandStrategyYear >= 450) then
 	SetProvinceOwner("Holland", "", "") -- Franks had left most of the modern Netherlands by 450 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 48.
-	SetProvinceOwner("Belgium", "teuton", "Frank Tribe") -- Frankish territory included modern Belgium in 450 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 48.
-	SetProvinceUnitQuantity("Belgium", "unit-germanic-warrior", 0) -- let's remove those oodles of warriors placed there to make this province difficult to conquer
+	
+	-- Frankish territory in 450 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 48.
+	SetProvinceOwner("Belgium", "teuton", "Frank Tribe")
+	SetProvinceOwner("Palatinate", "teuton", "Frank Tribe")
+	SetProvinceOwner("Lower Rhine", "teuton", "Frank Tribe")
+	
 	SetProvinceOwner("Portugal", "teuton", "Suebi Tribe") -- The Suebi were in possession of most of modern Portugal by around 450 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 	SetProvinceUnitQuantity("Portugal", "unit-germanic-warrior", 0)
 end
@@ -11997,10 +12016,29 @@ if (GrandStrategyYear >= 454) then
 	SetProvinceOwner("Pannonia", "goth", "Ostrogoth Tribe") -- The eastern goths had migrated to Pannonia in about 454 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 end
 
-if (GrandStrategyYear >= 481) then -- Frankish territory included modern Belgium in 481 AD, and the Franks had already established their kingdom; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
+if (GrandStrategyYear >= 481) then
+	-- Frankish territory in 481 AD, and the Franks had already established their kingdom; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
 	SetProvinceOwner("Belgium", "teuton", "Francia")
 	AddProvinceClaim("Belgium", "teuton", "Francia")
+	SetProvinceOwner("Drenthe", "teuton", "Francia")
+	AddProvinceClaim("Drenthe", "teuton", "Francia")
+	SetProvinceOwner("Lorraine", "teuton", "Francia")
+	AddProvinceClaim("Lorraine", "teuton", "Francia")
+	SetProvinceOwner("Moselle", "teuton", "Francia")
+	AddProvinceClaim("Moselle", "teuton", "Francia")
+	SetProvinceOwner("Lower Rhine", "teuton", "Francia")
+	AddProvinceClaim("Lower Rhine", "teuton", "Francia")
+	SetProvinceOwner("Overijssel", "teuton", "Francia")
+	AddProvinceClaim("Overijssel", "teuton", "Francia")
 	AcquireFactionTechnologies("teuton", "Frank Tribe", "teuton", "Francia")
+
+	-- Political situation of the territories surrounding the Frankish realm in 481-814 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
+	SetProvinceOwner("Alsace", "teuton", "Alamanni Tribe")
+	SetProvinceOwner("Baden", "teuton", "Alamanni Tribe")
+	SetProvinceOwner("Wurtemberg", "teuton", "Alamanni Tribe")
+	SetProvinceOwner("Augsburg", "teuton", "Alamanni Tribe")
+	SetProvinceOwner("Palatinate", "teuton", "Alamanni Tribe")
+	AcquireFactionTechnologies("teuton", "Suebi Tribe", "teuton", "Alamanni Tribe")
 end
 
 if (GrandStrategyYear >= 486) then
@@ -12051,20 +12089,11 @@ if (GrandStrategyYear >= 500) then
 end
 
 if (GrandStrategyYear >= 506) then
---	SetProvinceOwner("Alsace", "teuton", "Alamanni Tribe")
---	SetProvinceOwner("Baden", "teuton", "Alamanni Tribe")
---	SetProvinceOwner("Lorraine", "teuton", "Alamanni Tribe")
---	SetProvinceOwner("Moselle", "teuton", "Alamanni Tribe")
---	SetProvinceOwner("Wurtemberg", "teuton", "Alamanni Tribe")
---	SetProvinceOwner("Augsburg", "teuton", "Alamanni Tribe")
---	SetProvinceOwner("Palatinate", "teuton", "Alamanni Tribe")
-	-- Alemanni lands (Alsace, Baden, Wurtemberg, Augsburg, Lorraine and etc.) conquered by the Franks in 506; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
+	-- Alemanni lands (Alsace, Baden, Wurtemberg, Augsburg and etc.) conquered by the Franks in 506; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
 	SetProvinceOwner("Alsace", "teuton", "Francia")
 	SetProvinceOwner("Baden", "teuton", "Francia")
 	SetProvinceOwner("Wurtemberg", "teuton", "Francia")
 	SetProvinceOwner("Augsburg", "teuton", "Francia")
-	SetProvinceOwner("Lorraine", "teuton", "Francia")
-	SetProvinceOwner("Moselle", "teuton", "Francia")
 	SetProvinceOwner("Palatinate", "teuton", "Francia")
 end
 
@@ -12417,7 +12446,9 @@ if (GrandStrategyYear >= 1560) then -- Political situation in Europe in 1560 AD;
 
 	SetProvinceOwner("Belgium", "latin", "Spain")
 	SetProvinceOwner("Holland", "latin", "Spain")
+	SetProvinceOwner("Overijssel", "latin", "Spain")
 	SetProvinceOwner("Friesland", "latin", "Spain")
+	SetProvinceOwner("Drenthe", "latin", "Spain")
 	SetProvinceOwner("Franche Comte", "latin", "Spain")
 	SetProvinceOwner("Switzerland", "teuton", "Switzerland")
 	
@@ -12510,8 +12541,10 @@ end
 
 if (GrandStrategyYear >= 1648) then
 	-- Political situation in Central Europe in 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
-	SetProvinceOwner("Netherlands", "teuton", "Netherlands")
+	SetProvinceOwner("Holland", "teuton", "Netherlands")
+	SetProvinceOwner("Overijssel", "teuton", "Netherlands")
 	SetProvinceOwner("Friesland", "teuton", "Netherlands")
+	SetProvinceOwner("Drenthe", "teuton", "Netherlands")
 	SetProvinceOwner("Rhineland", "teuton", "Westphalia")
 	SetProvinceOwner("Hither Pomerania", "norse", "Sweden")
 	SetProvinceOwner("Bremen", "norse", "Sweden")

@@ -41,6 +41,14 @@ DefineFaction("Alamanni Tribe", {
 	DevelopsTo = {"Baden", "Switzerland", "Wurtemberg"}
 })
 
+DefineFaction("Ampsivarii Tribe", {
+	Civilization = "teuton",
+	Type = "tribe",
+	Color = "cyan",
+	SecondaryColor = "cyan",
+	DevelopsTo = {"Drenthe", "Netherlands"} -- same general area
+})
+
 DefineFaction("Avione Tribe", {
 	Civilization = "teuton",
 	Type = "tribe",
@@ -53,7 +61,7 @@ DefineFaction("Batavian Tribe", {
 	Type = "tribe",
 	Color = "orange",
 	SecondaryColor = "orange",
-	DevelopsTo = {"Netherlands"}
+	DevelopsTo = {"Holland", "Netherlands"} -- same general area
 })
 
 DefineFaction("Bavarian Tribe", {
@@ -69,6 +77,14 @@ DefineFaction("Charude Tribe", {
 	Type = "tribe",
 	Color = "purple",
 	SecondaryColor = "purple"
+})
+
+DefineFaction("Chamavi Tribe", {
+	Civilization = "teuton",
+	Type = "tribe",
+	Color = "pink",
+	SecondaryColor = "pink",
+	DevelopsTo = {"Overijssel", "Netherlands"} -- same general area
 })
 
 DefineFaction("Chauci Tribe", {
@@ -100,7 +116,7 @@ DefineFaction("Frisian Tribe", {
 	Type = "tribe",
 	Color = "violet", -- change to a better one?
 	SecondaryColor = "purple",
-	DevelopsTo = {"Netherlands"} -- same general area
+	DevelopsTo = {"Friesland", "Netherlands"}
 })
 
 DefineFaction("Jute Tribe", {
@@ -237,6 +253,15 @@ DefineFaction("Brunswick", {
 	}
 })
 
+DefineFaction("Drenthe", {
+	Civilization = "teuton",
+	Type = "polity",
+	Color = "cyan",
+	SecondaryColor = "cyan",
+	DefaultTier = "county", -- Drenthe was a county in 1559-1600; Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
+	DevelopsTo = {"Netherlands"}
+})
+
 DefineFaction("England", {
 	Civilization = "teuton",
 	Type = "polity",
@@ -259,6 +284,18 @@ DefineFaction("Francia", {
 	}
 })
 
+DefineFaction("Friesland", {
+	Civilization = "teuton",
+	Type = "polity",
+	Color = "black",
+	SecondaryColor = "black",
+	DefaultTier = "barony", -- Friesland was a lordship in 1559-1600; Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
+	Titles = {
+		"monarchy", "barony", "Lordship"
+	},
+	DevelopsTo = {"Netherlands"}
+})
+
 DefineFaction("Galicia", { -- Suebi kingdom of Galicia
 	Civilization = "teuton",
 	Type = "polity",
@@ -268,6 +305,15 @@ DefineFaction("Galicia", { -- Suebi kingdom of Galicia
 	Titles = {
 		"monarchy", "kingdom", "Kingdom"
 	}
+})
+
+DefineFaction("Holland", {
+	Civilization = "teuton",
+	Type = "polity",
+	Color = "red",
+	SecondaryColor = "red",
+	DefaultTier = "county", -- Holland was a county in 1559-1600; Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
+	DevelopsTo = {"Netherlands"}
 })
 
 DefineFaction("Jutland", {
@@ -420,6 +466,15 @@ DefineFaction("Muscovy", {
 	Titles = {
 		"monarchy", "duchy", "Principality"
 	}
+})
+
+DefineFaction("Overijssel", {
+	Civilization = "teuton",
+	Type = "polity",
+	Color = "pink",
+	SecondaryColor = "pink",
+	DefaultTier = "barony", -- Overijssel was a lordship in 1559-1600; Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
+	DevelopsTo = {"Netherlands"}
 })
 
 DefineFaction("Poland", {
