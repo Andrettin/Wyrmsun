@@ -11496,6 +11496,20 @@ if (GrandStrategyYear >= -264) then
 	SetProvinceCivilization("Farther Pomerania", "goth")
 	SetProvinceSettlementBuilding("Farther Pomerania", "unit-teuton-town-hall", true)
 	AcquireFactionTechnologies("goth", "Goth Tribe", "goth", "Turcilingian Tribe")
+	
+	SetProvinceOwner("Westphalia", "teuton", "Sugambri Tribe")
+	SetProvinceCivilization("Westphalia", "teuton")
+	SetProvinceSettlementBuilding("Westphalia", "unit-teuton-town-hall", true)
+	AcquireFactionTechnologies("germanic", "Asa Tribe", "teuton", "Sugambri Tribe")
+	
+	SetProvinceOwner("Hesse", "teuton", "Chatti Tribe")
+	SetProvinceCivilization("Hesse", "teuton")
+	SetProvinceSettlementBuilding("Hesse", "unit-teuton-town-hall", true)
+	AcquireFactionTechnologies("germanic", "Asa Tribe", "teuton", "Chatti Tribe")
+	
+	SetProvinceOwner("Franconia", "teuton", "Hermunduri Tribe")
+	SetProvinceCivilization("Franconia", "teuton")
+	AcquireFactionTechnologies("germanic", "Asa Tribe", "teuton", "Hermunduri Tribe")
 end
 
 if (GrandStrategyYear >= -241) then
@@ -12440,6 +12454,7 @@ if (GrandStrategyYear >= 1560) then -- Political situation in Europe in 1560 AD;
 	
 	SetProvinceOwner("Savoy", "latin", "Savoy")
 	SetProvinceOwner("Venetia", "latin", "Venice")
+	SetFactionGovernmentType("latin", "Venice", "republic")	
 	SetProvinceOwner("Sardinia", "latin", "Spain")
 	SetProvinceOwner("Palermo", "latin", "Spain")
 	SetProvinceOwner("Syracuse", "latin", "Spain")
@@ -12451,6 +12466,7 @@ if (GrandStrategyYear >= 1560) then -- Political situation in Europe in 1560 AD;
 	SetProvinceOwner("Drenthe", "latin", "Spain")
 	SetProvinceOwner("Franche Comte", "latin", "Spain")
 	SetProvinceOwner("Switzerland", "teuton", "Switzerland")
+	SetFactionGovernmentType("teuton", "Switzerland", "republic")	
 	
 	SetProvinceOwner("Zealand", "norse", "Denmark")
 	SetProvinceOwner("Jutland", "norse", "Denmark")
@@ -12545,7 +12561,8 @@ if (GrandStrategyYear >= 1648) then
 	SetProvinceOwner("Overijssel", "teuton", "Netherlands")
 	SetProvinceOwner("Friesland", "teuton", "Netherlands")
 	SetProvinceOwner("Drenthe", "teuton", "Netherlands")
-	SetProvinceOwner("Rhineland", "teuton", "Westphalia")
+	SetProvinceOwner("Westphalia", "teuton", "Westphalia")
+	SetProvinceOwner("Hesse", "teuton", "Hesse")
 	SetProvinceOwner("Hither Pomerania", "norse", "Sweden")
 	SetProvinceOwner("Bremen", "norse", "Sweden")
 	
@@ -12579,6 +12596,10 @@ end
 
 if (GrandStrategyYear >= 1781) then -- The Serfdom Act for Bohemia and Moravia enacted in 1781 by Emperor Joseph II; Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 14.
 	GrandStrategyEvents.TheSerfdomActForBohemiaAndMoravia = nil
+end
+
+if (GrandStrategyYear >= 1815) then
+	SetFactionTier("teuton", "Hesse", "grand duchy") -- Hesse was a grand duchy in 1815-1866 (there were two German states called "Hesse" then, the Grand Duchy of Hesse and the Electorate of Hesse); Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 end
 
 if (GrandStrategyYear >= 1833) then -- Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 17.

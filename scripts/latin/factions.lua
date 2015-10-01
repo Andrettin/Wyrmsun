@@ -221,7 +221,7 @@ DefineFaction("Spain", {
 	DefaultTier = "kingdom",
 	Titles = {
 		"monarchy", "kingdom", "Kingdom",
-		"monarchy", "kingdom", "Republic"
+		"republic", "kingdom", "Republic"
 	}
 })
 

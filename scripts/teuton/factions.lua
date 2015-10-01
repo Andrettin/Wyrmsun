@@ -76,7 +76,8 @@ DefineFaction("Charude Tribe", {
 	Civilization = "teuton", -- were the Charudes actually West Germanic?
 	Type = "tribe",
 	Color = "purple",
-	SecondaryColor = "purple"
+	SecondaryColor = "purple",
+	DevelopsTo = {"Jutland"} -- same general area
 })
 
 DefineFaction("Chamavi Tribe", {
@@ -85,6 +86,14 @@ DefineFaction("Chamavi Tribe", {
 	Color = "pink",
 	SecondaryColor = "pink",
 	DevelopsTo = {"Overijssel", "Netherlands"} -- same general area
+})
+
+DefineFaction("Chatti Tribe", {
+	Civilization = "teuton",
+	Type = "tribe",
+	Color = "yellow",
+	SecondaryColor = "yellow",
+	DevelopsTo = {"Hesse"} -- same general area
 })
 
 DefineFaction("Chauci Tribe", {
@@ -119,6 +128,14 @@ DefineFaction("Frisian Tribe", {
 	DevelopsTo = {"Friesland", "Netherlands"}
 })
 
+DefineFaction("Hermunduri Tribe", {
+	Civilization = "teuton",
+	Type = "tribe",
+	Color = "blue",
+	SecondaryColor = "blue",
+	DevelopsTo = {"Thuringia"} -- same general area
+})
+
 DefineFaction("Jute Tribe", {
 	Civilization = "teuton",
 	Type = "tribe",
@@ -147,7 +164,7 @@ DefineFaction("Saxon Tribe", {
 	Type = "tribe",
 	Color = "pink",
 	SecondaryColor = "pink",
-	DevelopsTo = {"Saxony", "Brandenburg", "England", "Prussia", "Scotland", "Westphalia"}
+	DevelopsTo = {"Saxony", "Brandenburg", "England", "Prussia", "Scotland"}
 })
 
 DefineFaction("Semnone Tribe", {
@@ -165,6 +182,14 @@ DefineFaction("Suebi Tribe", {
 	SecondaryColor = "black",
 	DefaultTier = "duchy",
 	DevelopsTo = {"Galicia", "Bavaria", "Austria"}
+})
+
+DefineFaction("Sugambri Tribe", {
+	Civilization = "teuton",
+	Type = "tribe",
+	Color = "black",
+	SecondaryColor = "black",
+	DevelopsTo = {"Westphalia"} -- same general area
 })
 
 DefineFaction("Thuringian Tribe", {
@@ -307,6 +332,17 @@ DefineFaction("Galicia", { -- Suebi kingdom of Galicia
 	}
 })
 
+DefineFaction("Hesse", {
+	Civilization = "teuton",
+	Type = "polity",
+	Color = "black",
+	SecondaryColor = "black",
+	DefaultTier = "duchy", -- Hesse was a landgraviate in 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
+	Titles = {
+		"monarchy", "duchy", "Landgraviate"
+	}
+})
+
 DefineFaction("Holland", {
 	Civilization = "teuton",
 	Type = "polity",
@@ -394,6 +430,14 @@ DefineFaction("Switzerland", {
 	Titles = {
 		"republic", "kingdom", "Confederation"
 	}
+})
+
+DefineFaction("Thuringia", {
+	Civilization = "teuton",
+	Type = "polity",
+	Color = "pink",
+	SecondaryColor = "pink",
+	DefaultTier = "duchy" -- Thuringia was a landgraviate in 1378; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 78-79.
 })
 
 DefineFaction("Westphalia", {

@@ -596,8 +596,8 @@ local GermanicEvents = {
 		Conditions = function(s)
 			if (
 				(EventFaction.Civilization == "germanic" or EventFaction.Civilization == "teuton")
-				and GetProvinceOwner("Rhineland") == EventFaction.Name
-				and ProvinceHasBuildingClass(WorldMapProvinces.Rhineland.Name, "town-hall")
+				and GetProvinceOwner("Westphalia") == EventFaction.Name
+				and ProvinceHasBuildingClass(WorldMapProvinces.Westphalia.Name, "town-hall")
 				and GetFactionMilitaryScore(EventFaction) > 250 -- basic infantry x 5
 			) then
 				return true
@@ -609,24 +609,24 @@ local GermanicEvents = {
 		OptionEffects = {
 			function(s)
 				EqualizeProvinceUnits(EventFaction) -- distribute the military units of the faction equally between the newly forming faction and the old one, to prevent one of them from easily conquering the other just by happening to have more units in their province
-				AcquireProvince(WorldMapProvinces.Rhineland, "Saxon Tribe")
+				AcquireProvince(WorldMapProvinces.Westphalia, "Saxon Tribe")
 				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, Factions.SaxonTribe.Civilization, "Saxon Tribe")
-				SetProvinceUnitQuantity("Brandenburg", "unit-germanic-warrior", 1) -- if the Rhineland has been conquered, reduce the quantity of warriors in Brandenburg too, so that a tribe won't lose too many warriors when expanding to it
+				SetProvinceUnitQuantity("Brandenburg", "unit-germanic-warrior", 1) -- if Westphalia has been conquered, reduce the quantity of warriors in Brandenburg too, so that a tribe won't lose too many warriors when expanding to it
 			end,
 			function(s)
 				EqualizeProvinceUnits(EventFaction) -- distribute the military units of the faction equally between the newly forming faction and the old one, to prevent one of them from easily conquering the other just by happening to have more units in their province
-				AcquireProvince(WorldMapProvinces.Rhineland, "Saxon Tribe")
+				AcquireProvince(WorldMapProvinces.Westphalia, "Saxon Tribe")
 				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, Factions.SaxonTribe.Civilization, "Saxon Tribe")
-				SetProvinceUnitQuantity("Brandenburg", "unit-germanic-warrior", 1) -- if the Rhineland has been conquered, reduce the quantity of warriors in Brandenburg too, so that a tribe won't lose too many warriors when expanding to it
+				SetProvinceUnitQuantity("Brandenburg", "unit-germanic-warrior", 1) -- if Westphalia has been conquered, reduce the quantity of warriors in Brandenburg too, so that a tribe won't lose too many warriors when expanding to it
 				SetFactionDiplomacyState(EventFaction.Civilization, EventFaction.Name, Factions.SaxonTribe.Civilization, "Saxon Tribe", "war")
 			end,
 			function(s)
 				EqualizeProvinceUnits(EventFaction)
-				AcquireProvince(WorldMapProvinces.Rhineland, "Saxon Tribe")
+				AcquireProvince(WorldMapProvinces.Westphalia, "Saxon Tribe")
 				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, Factions.SaxonTribe.Civilization, "Saxon Tribe")
 				GrandStrategyFaction = Factions.SaxonTribe
 				SetPlayerFaction(Factions.SaxonTribe.Civilization, "Saxon Tribe")
-				SetProvinceUnitQuantity("Brandenburg", "unit-germanic-warrior", 1) -- if the Rhineland has been conquered, reduce the quantity of warriors in Brandenburg too, so that a tribe won't lose too many warriors when expanding to it
+				SetProvinceUnitQuantity("Brandenburg", "unit-germanic-warrior", 1) -- if Westphalia has been conquered, reduce the quantity of warriors in Brandenburg too, so that a tribe won't lose too many warriors when expanding to it
 			end
 		}
 	},
