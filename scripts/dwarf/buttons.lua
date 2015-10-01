@@ -301,7 +301,13 @@ DefineButton( { Pos = 6, Level = 1, Icon = "icon-dwarven-smithy",
   Key = "s", Hint = _("Build ~!Smithy"), Popup = "popup-building",
   ForUnit = {"unit-dwarven-miner", "unit-gnomish-worker"} } )
 
-DefineButton( { Pos = 7, Level = 1, Icon = "icon-dwarven-sentry-tower",
+DefineButton( { Pos = 7, Level = 1, Icon = "icon-dwarven-yale-pen",
+	Action = "build", Value = "unit-dwarven-yale-pen",
+	Key = "y", Hint = _("Build ~!Yale Pen"), Popup = "popup-building",
+	ForUnit = {"unit-dwarven-miner", "unit-gnomish-worker"}
+} )
+
+DefineButton( { Pos = 8, Level = 1, Icon = "icon-dwarven-sentry-tower",
 	Action = "build", Value = "unit-dwarven-sentry-tower",
 	Key = "t", Hint = _("Build Sentry ~!Tower"), Popup = "popup-building",
 	ForUnit = {"unit-dwarven-miner", "unit-gnomish-worker"}

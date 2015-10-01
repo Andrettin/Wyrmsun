@@ -693,6 +693,22 @@ DefineUnitType("unit-dwarven-smithy", { Name = _("Smithy"),
 	}
 } )
 
+DefineUnitType("unit-dwarven-yale-pen", { Name = _("Yale Pen"),
+	Parent = "unit-template-stables",
+	Civilization = "dwarf",
+	Description = _("Although the underground dwarves shun mounted combat, their wild hill-dwelling kin cherish it as a noble tradition. The mobility given by the yale is crucial for traversing their homelands' hills and peaks. Dwarves have been breeding yales since time immemorial, the animals being valuable not only as mounts, but also as beasts of carry."),
+	Image = {"file", "dwarf/buildings/yale_pen.png", "size", {96, 96}},
+	Shadow = {"file", "dwarf/buildings/yale_pen_shadow.png", "size", {96, 96}},
+	Icon = "icon-dwarven-yale-pen",
+--	Costs = {"time", 150, "gold", 1000, "lumber", 300},
+	Costs = {"time", 150, "gold", 1000, "lumber", 240, "stone", 60},
+	RepairCosts = {"gold", 1, "lumber", 1, "stone", 1},
+	TechnologyPointCost = 1,
+	Sounds = {
+		"help", "basic-dwarf-voices-help-town"
+	}
+} )
+
 DefineUnitType("unit-dwarven-sentry-tower", { Name = _("Sentry Tower"),
 	Parent = "unit-template-watch-tower",
 	Civilization = "dwarf",

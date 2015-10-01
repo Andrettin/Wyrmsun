@@ -1673,6 +1673,8 @@ function AddGrandStrategyBuildingButton(x, y, unit_type)
 		building_function_tooltip = " (researches projectile upgrades)"
 	elseif (GetUnitTypeData(unit_type, "Class") == "smithy") then
 		building_function_tooltip = " (researches melee weapon, shield and siege weapon upgrades)"
+	elseif (GetUnitTypeData(unit_type, "Class") == "stables") then
+		building_function_tooltip = " (allows cavalry units to be trained)"
 	elseif (GetUnitTypeData(unit_type, "Class") == "mercenary-camp") then
 		building_function_tooltip = " (hires mercenaries)"
 	end
@@ -2561,6 +2563,7 @@ function DrawGrandStrategyInterface()
 				b:setPressedImage(g_btp)
 				b:setSize(99, 13)
 				b:setFont(Fonts["game"])
+			elseif (GrandStrategyInterfaceState == "stables") then
 			elseif (GrandStrategyInterfaceState == "mercenary-camp") then
 				AddGrandStrategyLabel(GetUnitTypeName("unit-mercenary-camp"), UI.InfoPanel.X + 109, UI.InfoPanel.Y + 53, Fonts["game"], true, false)
 				
@@ -2833,6 +2836,7 @@ function DrawGrandStrategyInterface()
 					Tip("Lumber Mill Interface", "Here you can research some new technologies. Click on a technology's icon to research it. You can only research one technology in a given turn. The presence of a lumber mill in a province increases its lumber output by 25%.")
 				elseif (GrandStrategyInterfaceState == "smithy") then
 					Tip("Smithy Interface", "Here you can research some new technologies. Click on a technology's icon to research it. You can only research one technology in a given turn.")
+				elseif (GrandStrategyInterfaceState == "stables") then
 				elseif (GrandStrategyInterfaceState == "mercenary-camp") then
 					Tip("Mercenary Camp Interface", "Here you can recruit thief units as you would normal units, as well as hire unique mercenary squads.")
 				end
@@ -2954,6 +2958,9 @@ function AIDoTurn(ai_faction)
 						BuildStructure(WorldMapProvinces[key], unitName)
 						break
 					elseif (GetUnitTypeData(unitName, "Class") == "smithy" and ((ProvinceHasBuildingClass(WorldMapProvinces[key].Name, "barracks") and ProvinceHasBuildingClass(WorldMapProvinces[key].Name, "lumber-mill")) or GetFactionBuildingTypeCount(ai_faction, "smithy") == 0)) then -- it only makes sense to build more than one smithy if it is to make ballistas available in a province
+						BuildStructure(WorldMapProvinces[key], unitName)
+						break
+					elseif (GetUnitTypeData(unitName, "Class") == "stables" and ((ProvinceHasBuildingClass(WorldMapProvinces[key].Name, "barracks") and ProvinceHasBuildingClass(WorldMapProvinces[key].Name, "smithy")) or GetFactionBuildingTypeCount(ai_faction, "stables") == 0)) then -- it only makes sense to build more than one stables if it is to make cavalry available in a province
 						BuildStructure(WorldMapProvinces[key], unitName)
 						break
 					end
@@ -4091,6 +4098,16 @@ function GetUnitTypeRequiredBuildings(unit_type)
 			end
 			if (GetCivilizationClassUnitType("lumber-mill", GetUnitTypeData(unit_type, "Civilization")) ~= nil) then
 				table.insert(required_buildings, GetCivilizationClassUnitType("lumber-mill", GetUnitTypeData(unit_type, "Civilization")))
+			end
+		elseif (GetUnitTypeData(unit_type, "Class") == "cavalry") then
+			if (GetCivilizationClassUnitType("barracks", GetUnitTypeData(unit_type, "Civilization")) ~= nil) then
+				table.insert(required_buildings, GetCivilizationClassUnitType("barracks", GetUnitTypeData(unit_type, "Civilization")))
+			end
+			if (GetCivilizationClassUnitType("smithy", GetUnitTypeData(unit_type, "Civilization")) ~= nil) then
+				table.insert(required_buildings, GetCivilizationClassUnitType("smithy", GetUnitTypeData(unit_type, "Civilization")))
+			end
+			if (GetCivilizationClassUnitType("stables", GetUnitTypeData(unit_type, "Civilization")) ~= nil) then
+				table.insert(required_buildings, GetCivilizationClassUnitType("stables", GetUnitTypeData(unit_type, "Civilization")))
 			end
 		elseif (GetUnitTypeData(unit_type, "Class") == "siege-engine") then
 			if (GetCivilizationClassUnitType("barracks", GetUnitTypeData(unit_type, "Civilization")) ~= nil) then

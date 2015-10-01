@@ -414,6 +414,19 @@ DefineUnitType("unit-teuton-smithy", { Name = _("Smithy"),
 	}
 } )
 
+DefineUnitType("unit-teuton-stables", { Name = _("Stables"),
+	Parent = "unit-template-stables",
+	Civilization = "teuton",
+	Description = _("The fierce Teutons are renowned for their heavy cavalry. Any military center of import will have stables to provide the well-bred horses such forces require."),
+	Image = {"file", "teuton/buildings/stables.png", "size", {96, 96}},
+	Shadow = {"file", "teuton/buildings/stables_shadow.png", "size", {96, 96}},
+	Icon = "icon-teuton-stables",
+	TechnologyPointCost = 1,
+	Sounds = {
+		"help", "basic-teuton-voices-help-town"
+	}
+} )
+
 DefineUnitType("unit-teuton-watch-tower", { Name = _("Watch Tower"),
 	Parent = "unit-template-watch-tower",
 	Civilization = "teuton",

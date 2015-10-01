@@ -161,6 +161,7 @@ DefineModifier("upgrade-teuton-masonry",
 	{"apply-to", "unit-teuton-town-hall"}, {"apply-to", "unit-teuton-stronghold"},
 	{"apply-to", "unit-teuton-farm"}, {"apply-to", "unit-teuton-barracks"},
 	{"apply-to", "unit-teuton-lumber-mill"}, {"apply-to", "unit-teuton-smithy"},
+	{"apply-to", "unit-teuton-stables"},
 	{"apply-to", "unit-teuton-watch-tower"}, {"apply-to", "unit-teuton-guard-tower"}
 )
 
@@ -252,4 +253,8 @@ DefineDependency("unit-teuton-stronghold",
 
 DefineDependency("upgrade-teuton-coinage",
 	{"unit-teuton-smithy"}
+)
+
+DefineDependency("unit-teuton-ritter",
+	{"unit-teuton-smithy", "unit-teuton-stables"}
 )

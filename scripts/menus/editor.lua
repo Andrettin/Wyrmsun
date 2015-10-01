@@ -27,6 +27,7 @@ editor_types = {
    "unit-teuton-barracks",
    "unit-teuton-lumber-mill",
    "unit-teuton-smithy",
+   "unit-teuton-stables",
    "unit-teuton-watch-tower",
    "unit-teuton-guard-tower",
 
@@ -54,6 +55,7 @@ editor_types = {
    "unit-dwarven-barracks",
    "unit-dwarven-lumber-mill",
    "unit-dwarven-smithy",
+   "unit-dwarven-yale-pen",
    "unit-dwarven-sentry-tower",
    "unit-dwarven-guard-tower",
 

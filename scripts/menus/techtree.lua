@@ -164,6 +164,12 @@ function RunTechTreeMenu(civilization_number)
 					if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("lumber-mill", civilization)) == false and GetTechnologyPointCost(civilization, GetCivilizationClassUnitType("lumber-mill", civilization)) > 0) then
 						tech_allowed = false
 					end
+				elseif (GetUnitTypeData(unitName, "Class") == "cavalry") then
+					tech_icon_x = 0
+					tech_icon_y = 3
+					if ((GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("stables", civilization)) == false and GetTechnologyPointCost(civilization, GetCivilizationClassUnitType("stables", civilization)) > 0) or (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("smithy", civilization)) == false and GetTechnologyPointCost(civilization, GetCivilizationClassUnitType("smithy", civilization)) > 0)) then
+						tech_allowed = false
+					end
 				elseif (GetUnitTypeData(unitName, "Class") == "siege-engine") then
 					tech_icon_x = 1
 					tech_icon_y = 3
@@ -190,6 +196,9 @@ function RunTechTreeMenu(civilization_number)
 					tech_icon_y = 2
 				elseif (GetUnitTypeData(unitName, "Class") == "smithy") then
 					tech_icon_x = 3
+					tech_icon_y = 2
+				elseif (GetUnitTypeData(unitName, "Class") == "stables") then
+					tech_icon_x = 0
 					tech_icon_y = 2
 				elseif (GetUnitTypeData(unitName, "Class") == "watch-tower") then
 					tech_icon_x = 9
@@ -407,8 +416,15 @@ function GetTechnologyAllowsString(technology, civilization)
 			if (GetCivilizationClassUnitType("bronze-shield", civilization) ~= nil) then
 				table.insert(allowed_technologies, GetCivilizationClassUnitType("bronze-shield", civilization))
 			end
+			if (GetCivilizationClassUnitType("cavalry", civilization) ~= nil) then
+				table.insert(allowed_technologies, GetCivilizationClassUnitType("cavalry", civilization))
+			end
 			if (GetCivilizationClassUnitType("siege-engine", civilization) ~= nil) then
 				table.insert(allowed_technologies, GetCivilizationClassUnitType("siege-engine", civilization))
+			end
+		elseif (GetUnitTypeData(technology, "Class") == "stables") then
+			if (GetCivilizationClassUnitType("cavalry", civilization) ~= nil) then
+				table.insert(allowed_technologies, GetCivilizationClassUnitType("cavalry", civilization))
 			end
 		elseif (GetUnitTypeData(technology, "Class") == "watch-tower") then
 			if (GetCivilizationClassUnitType("guard-tower", civilization) ~= nil) then

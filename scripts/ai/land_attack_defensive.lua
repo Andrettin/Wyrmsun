@@ -160,6 +160,9 @@ function AiLandAttackDefensive()
 		end
 		
 		if (GetAiUnitType("stronghold") ~= nil and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("stronghold")) >= 1) then
+			if (GetAiUnitType("stables") ~= nil and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("stables")) < 1) then
+				AiSet(GetAiUnitType("stables"), 1) -- if has a stronghold but no stables, build one
+			end
 			if (GetAiUnitType("coinage") ~= nil and CheckDependency(AiPlayer(), GetAiUnitType("coinage"))) then
 				AiResearch(GetAiUnitType("coinage")) -- if has a stronghold, research coinage
 			end
@@ -216,6 +219,31 @@ function AiLandAttackDefensive()
 			end
 			if (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", AiSiegeWeapon()) < 2 and force_attacking[AiPlayer()] == false) then
 				AiSet(AiSiegeWeapon(), 2)
+			end
+		elseif (
+			GetAiUnitType("stronghold") ~= nil
+			and CheckDependency(AiPlayer(), AiSoldier())
+			and CheckDependency(AiPlayer(), AiShooter())
+			and CheckDependency(AiPlayer(), AiSiegeWeapon())
+			and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("barracks")) >= 2
+			and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", AiLumberMill()) >= 1
+			and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("stronghold")) >= 1
+			and GetAiUnitType("cavalry") ~= nil
+			and CheckDependency(AiPlayer(), GetAiUnitType("cavalry"))
+			and GetAiUnitType("stables") ~= nil
+			and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("stables")) >= 1
+		) then -- if has stronghold and stables, use cavalry units
+			if (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", AiSoldier()) < 12 and force_attacking[AiPlayer()] == false) then
+				AiSet(AiSoldier(), 12)
+			end
+			if (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", AiShooter()) < 12 and force_attacking[AiPlayer()] == false) then
+				AiSet(AiShooter(), 12)
+			end
+			if (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", AiSiegeWeapon()) < 3 and force_attacking[AiPlayer()] == false) then
+				AiSet(AiSiegeWeapon(), 3)
+			end
+			if (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("cavalry")) < 9 and force_attacking[AiPlayer()] == false) then
+				AiSet(GetAiUnitType("cavalry"), 9)
 			end
 		end
 	end

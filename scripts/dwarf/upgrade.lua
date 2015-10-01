@@ -252,6 +252,7 @@ DefineModifier("upgrade-dwarven-masonry",
 	{"apply-to", "unit-dwarven-town-hall"}, {"apply-to", "unit-dwarven-stronghold"},
 	{"apply-to", "unit-dwarven-mushroom-farm"}, {"apply-to", "unit-dwarven-barracks"},
 	{"apply-to", "unit-dwarven-lumber-mill"}, {"apply-to", "unit-dwarven-smithy"},
+	{"apply-to", "unit-dwarven-yale-pen"},
 	{"apply-to", "unit-dwarven-sentry-tower"}, {"apply-to", "unit-dwarven-guard-tower"}
 )
 
@@ -307,4 +308,8 @@ DefineDependency("unit-dwarven-guard-tower",
 
 DefineDependency("unit-dwarven-ballista",
 	{"unit-dwarven-smithy", "unit-dwarven-lumber-mill"}
+)
+
+DefineDependency("unit-dwarven-yale-rider",
+	{"unit-dwarven-smithy", "unit-dwarven-yale-pen"}
 )

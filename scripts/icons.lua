@@ -376,6 +376,12 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-teuton-stables",
+	Size = {46, 38},
+	File = "teuton/icons/stables.png"
+})
+
+DefineIcon({
 	Name = "icon-teuton-watch-tower",
 	Size = {46, 38},
 	File = "teuton/icons/watch_tower.png"
@@ -637,6 +643,12 @@ DefineIcon({
 	Name = "icon-dwarven-smithy",
 	Size = {46, 38},
 	File = "dwarf/icons/smithy.png"
+})
+
+DefineIcon({
+	Name = "icon-dwarven-yale-pen",
+	Size = {46, 38},
+	File = "dwarf/icons/yale_pen.png"
 })
 
 DefineIcon({

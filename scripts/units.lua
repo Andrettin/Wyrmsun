@@ -42,6 +42,7 @@ Units = {
 	"unit-teuton-town-hall", "unit-teuton-stronghold",
 	"unit-teuton-farm", "unit-teuton-barracks",
 	"unit-teuton-lumber-mill", "unit-teuton-smithy",
+	"unit-teuton-stables",
 	"unit-teuton-watch-tower", "unit-teuton-guard-tower",
 	"upgrade-teuton-spatha", "upgrade-teuton-iron-shield", "upgrade-teuton-bodkin-arrow",
 	"upgrade-teuton-catapult-projectile-1", "upgrade-teuton-catapult-projectile-2",
@@ -57,6 +58,7 @@ Units = {
 	"unit-dwarven-town-hall", "unit-dwarven-stronghold", 
 	"unit-dwarven-mushroom-farm", "unit-dwarven-barracks",
 	"unit-dwarven-lumber-mill", "unit-dwarven-smithy",
+	"unit-dwarven-yale-pen",
 	"unit-dwarven-sentry-tower", "unit-dwarven-guard-tower",
 	"upgrade-dwarven-broad-axe", "upgrade-dwarven-great-axe", "upgrade-dwarven-shield-1", "upgrade-dwarven-shield-2",
 	"upgrade-dwarven-throwing-axe-1", "upgrade-dwarven-throwing-axe-2", "upgrade-dwarven-ballista-bolt-1", "upgrade-dwarven-ballista-bolt-2",
@@ -3863,6 +3865,37 @@ DefineUnitType("unit-template-smithy", { Name = _("Smithy"),
 		"selected", "smithy-selected",
 --		"acknowledge", "dwarven-lumber-mill-acknowledge",
 		"ready", "smithy-ready",
+--		"help", "basic-dwarf-voices-help",
+		"dead", "building-destroyed"
+	}
+} )
+
+DefineUnitType("unit-template-stables", { Name = _("Stables"),
+	Class = "stables",
+	Animations = "animations-building",
+	Costs = {"time", 150, "gold", 1000, "lumber", 300},
+	RepairHp = 4,
+	RepairCosts = {"gold", 1, "lumber", 1},
+	Construction = "construction-land",
+	Speed = 0,
+	HitPoints = 417, -- 500 with masonry
+	DrawLevel = 40,
+	TileSize = {3, 3}, BoxSize = {95, 95},
+	SightRange = 1,
+	Armor = 5, BasicDamage = 0, Missile = "missile-none",
+	Priority = 15, AnnoyComputerFactor = 15,
+	Points = 210,
+	Corpse = "unit-destroyed-3x3-place",
+	ExplodeWhenKilled = "missile-explosion",
+	Type = "land",
+	Building = true, VisibleUnderFog = true,
+	BuilderOutside = true,
+	Drops = {"unit-wood-pile"},
+	SelectableByRectangle = true,
+	Sounds = {
+--		"selected", "lumber-mill-selected",
+--		"acknowledge", "dwarven-lumber-mill-acknowledge",
+--		"ready", "storehouse-ready",
 --		"help", "basic-dwarf-voices-help",
 		"dead", "building-destroyed"
 	}
