@@ -58,6 +58,36 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-labor",
+	Size = {46, 38},
+	File = "neutral/icons/labor.png"
+})
+
+DefineIcon({
+	Name = "icon-gold",
+	Size = {46, 38},
+	File = "neutral/icons/gold.png"
+})
+
+DefineIcon({
+	Name = "icon-food",
+	Size = {46, 38},
+	File = "neutral/icons/food.png"
+})
+
+DefineIcon({
+	Name = "icon-prestige",
+	Size = {46, 38},
+	File = "neutral/icons/prestige.png"
+})
+
+DefineIcon({
+	Name = "icon-research",
+	Size = {46, 38},
+	File = "neutral/icons/research.png"
+})
+
+DefineIcon({
 	Name = "icon-level-up",
 	Size = {46, 38},
 	File = "neutral/icons/level_up.png"
