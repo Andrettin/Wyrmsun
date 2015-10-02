@@ -5757,6 +5757,7 @@ SetWorldMapTileRiver(517, 108, "west", "Elbe")
 SetWorldMapTileRiver(517, 108, "south", "Elbe")
 SetWorldMapTileTerrain(517, 109, plains_id)
 SetWorldMapTileRiver(517, 109, "north", "Elbe")
+SetWorldMapTileRiver(517, 109, "east", "Elbe")
 SetWorldMapTileTerrain(517, 110, plains_id)
 SetWorldMapTileTerrain(517, 111, plains_id)
 SetWorldMapTileTerrain(517, 112, plains_id)
@@ -5841,11 +5842,11 @@ SetWorldMapTileTerrain(518, 105, plains_id)
 SetWorldMapTileTerrain(518, 106, plains_id)
 SetWorldMapTileTerrain(518, 107, plains_id)
 SetWorldMapTileTerrain(518, 108, plains_id)
-SetWorldMapTileRiver(518, 108, "south", "Elbe")
 SetWorldMapTileTerrain(518, 109, plains_id)
-SetWorldMapTileRiver(518, 109, "north", "Elbe")
-SetWorldMapTileRiver(518, 109, "east", "Elbe")
+SetWorldMapTileRiver(518, 109, "west", "Elbe")
+SetWorldMapTileRiver(518, 109, "south", "Elbe")
 SetWorldMapTileTerrain(518, 110, plains_id)
+SetWorldMapTileRiver(518, 110, "north", "Elbe")
 SetWorldMapTileTerrain(518, 111, plains_id)
 SetWorldMapTileTerrain(518, 112, plains_id)
 SetWorldMapTileTerrain(518, 113, plains_id)
@@ -5928,7 +5929,6 @@ SetWorldMapTileTerrain(519, 106, plains_id)
 SetWorldMapTileTerrain(519, 107, plains_id)
 SetWorldMapTileTerrain(519, 108, plains_id)
 SetWorldMapTileTerrain(519, 109, plains_id)
-SetWorldMapTileRiver(519, 109, "west", "Elbe")
 SetWorldMapTileRiver(519, 109, "south", "Elbe")
 SetWorldMapTileTerrain(519, 110, plains_id)
 SetWorldMapTileRiver(519, 110, "north", "Elbe")
@@ -11444,6 +11444,9 @@ if (GrandStrategyYear >= -264) then
 	SetProvinceOwner("Brunswick", "teuton", "Cherusci Tribe")	
 	SetProvinceCivilization("Brunswick", "teuton")
 	SetProvinceSettlementBuilding("Brunswick", "unit-teuton-town-hall", true)
+	SetProvinceOwner("Magdeburg", "teuton", "Cherusci Tribe")	
+	SetProvinceCivilization("Magdeburg", "teuton")
+	SetProvinceSettlementBuilding("Magdeburg", "unit-teuton-town-hall", true)
 	AcquireFactionTechnologies("germanic", "Asa Tribe", "teuton", "Cherusci Tribe")
 	
 	SetProvinceOwner("Hanover", "teuton", "Lombard Tribe")	
@@ -11509,6 +11512,12 @@ if (GrandStrategyYear >= -264) then
 	
 	SetProvinceOwner("Franconia", "teuton", "Hermunduri Tribe")
 	SetProvinceCivilization("Franconia", "teuton")
+	SetProvinceOwner("Upper Saxony", "teuton", "Hermunduri Tribe")
+	SetProvinceCivilization("Upper Saxony", "teuton")
+	SetProvinceSettlementBuilding("Upper Saxony", "unit-teuton-town-hall", true)
+	SetProvinceOwner("Thuringia", "teuton", "Hermunduri Tribe")
+	SetProvinceCivilization("Thuringia", "teuton")
+	SetProvinceSettlementBuilding("Thuringia", "unit-teuton-town-hall", true)
 	AcquireFactionTechnologies("germanic", "Asa Tribe", "teuton", "Hermunduri Tribe")
 end
 
@@ -12432,6 +12441,12 @@ end
 
 if (GrandStrategyYear >= 1526) then -- East Prussian Land Ordinance of 1526; Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 23.
 	GrandStrategyEvents.TheEastPrussianLandOrdinance = nil
+end
+
+if (GrandStrategyYear >= 1547) then
+	-- Political situation in Central Europe in 1547; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 114-115.
+	SetProvinceOwner("Magdeburg", "teuton", "Magdeburg")
+	SetFactionGovernmentType("teuton", "Magdeburg", "theocracy")
 end
 
 if (GrandStrategyYear >= 1557) then -- Astrakhan acquired by Muscovy in 1557 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.

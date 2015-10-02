@@ -109,7 +109,7 @@ DefineFaction("Cherusci Tribe", {
 	Type = "tribe",
 	Color = "teal",
 	SecondaryColor = "teal",
-	DevelopsTo = {"Brunswick"} -- same general area
+	DevelopsTo = {"Brunswick", "Magdeburg"} -- same general area
 })
 
 DefineFaction("Frank Tribe", {
@@ -360,6 +360,17 @@ DefineFaction("Jutland", {
 	DefaultTier = "duchy",
 	Titles = {
 		"monarchy", "duchy", "Duchy"
+	}
+})
+
+DefineFaction("Magdeburg", {
+	Civilization = "teuton",
+	Type = "polity",
+	Color = "black",
+	SecondaryColor = "black",
+	DefaultTier = "duchy", -- Magdeburg was an archbishopric in 1547; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 114-115.
+	Titles = {
+		"theocracy", "duchy", "Archbishopric"
 	}
 })
 

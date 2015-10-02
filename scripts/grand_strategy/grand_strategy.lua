@@ -337,6 +337,7 @@ function RunGrandStrategyGameSetupMenu()
 						"71 BC", -- the Suebic king Ariovistus enters Gaul at the request of the Arverni and the Sequani to fight the Aedui
 						"27 BC", -- Augustus assumes power in Rome
 						"486 AD", -- conquest of Syagrius' realm by the Frankish Merovingian king, Clovis
+						"1547 AD",
 						"1648 AD", -- Peace of Westphalia
 						"1918 AD" -- end of the Great War
 					}
