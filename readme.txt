@@ -269,8 +269,13 @@ https://github.com/Andrettin/Wyrmsun
 - Added resistances against hack, pierce and blunt damage.
 - Added new types of damage with their respective resistances: fire, cold, arcane, lightning, air, earth and water.
 
+* Quests
+- The Home of the Boii and Moving into Galicia quests (Teuton) now give 3 technology points instead of 2.
+- The Necklace of the Brisings and The Binding of Grafvitnir quests (Dwarf) now give 2 technology points instead of 1.
+
 * Units
 - A unit type's bonus against mounted units, bonus against buildings, bonus against giants and backstab bonus now appear in its popup.
+- The Dwarven Yale Rider is now trainable, if the player has a Yale Pen and a Smithy.
 
 -----------------------------------------------------------------------
 - 1.3.3

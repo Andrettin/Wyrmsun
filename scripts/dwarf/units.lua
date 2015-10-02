@@ -439,6 +439,7 @@ DefineUnitType("unit-dwarven-yale-rider", { Name = _("Yale Rider"),
 	Animations = "animations-melee-unit", Icon = "icon-dwarven-yale-rider",
 	Corpse = "unit-dwarven-dead-body",
 	HackDamage = true,
+	TechnologyPointCost = 1,
 	Variations = {
 		{
 			"variation-id", "black-hair-brown-fur",
