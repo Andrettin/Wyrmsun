@@ -688,7 +688,7 @@ function LoadProvinces(world)
 				{518, 104}, {518, 105}, {518, 106}, {518, 107},
 				{519, 104}, {519, 105}, {519, 106}, {519, 107},
 				{520, 106}, {520, 107},
-				{521, 106}
+				{521, 106}, {521, 107}
 			},
 			SettlementName = "Berlin",
 			CulturalSettlementNames = {
