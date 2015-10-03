@@ -6476,6 +6476,7 @@ SetWorldMapTileRiver(525, 108, "west", "Oder")
 SetWorldMapTileRiver(525, 108, "south", "Oder")
 SetWorldMapTileTerrain(525, 109, plains_id)
 SetWorldMapTileRiver(525, 109, "north", "Oder")
+SetWorldMapTileRiver(525, 109, "east", "Oder")
 SetWorldMapTileTerrain(525, 110, plains_id)
 SetWorldMapTileTerrain(525, 111, plains_id)
 SetWorldMapTileTerrain(525, 112, plains_id)
@@ -6562,11 +6563,11 @@ SetWorldMapTileTerrain(526, 105, plains_id)
 SetWorldMapTileTerrain(526, 106, plains_id)
 SetWorldMapTileTerrain(526, 107, plains_id)
 SetWorldMapTileTerrain(526, 108, plains_id)
-SetWorldMapTileRiver(526, 108, "south", "Oder")
 SetWorldMapTileTerrain(526, 109, plains_id)
-SetWorldMapTileRiver(526, 109, "north", "Oder")
-SetWorldMapTileRiver(526, 109, "east", "Oder")
+SetWorldMapTileRiver(526, 109, "south", "Oder")
+SetWorldMapTileRiver(526, 109, "west", "Oder")
 SetWorldMapTileTerrain(526, 110, plains_id)
+SetWorldMapTileRiver(526, 110, "north", "Oder")
 SetWorldMapTileRiver(526, 110, "east", "Oder")
 SetWorldMapTileTerrain(526, 111, plains_id)
 SetWorldMapTileTerrain(526, 112, plains_id)
@@ -6653,7 +6654,6 @@ SetWorldMapTileTerrain(527, 106, plains_id)
 SetWorldMapTileTerrain(527, 107, plains_id)
 SetWorldMapTileTerrain(527, 108, plains_id)
 SetWorldMapTileTerrain(527, 109, plains_id)
-SetWorldMapTileRiver(527, 109, "west", "Oder")
 SetWorldMapTileTerrain(527, 110, plains_id)
 SetWorldMapTileRiver(527, 110, "west", "Oder")
 SetWorldMapTileRiver(527, 110, "south", "Oder")
@@ -11672,6 +11672,11 @@ if (GrandStrategyYear >= -264) then
 	SetProvinceCivilization("Thuringia", "teuton")
 	SetProvinceSettlementBuilding("Thuringia", "unit-teuton-town-hall", true)
 	AcquireFactionTechnologies("germanic", "Asa Tribe", "teuton", "Hermunduri Tribe")
+	
+	SetProvinceOwner("Silesia", "goth", "Silingae Tribe")
+	SetProvinceCivilization("Silesia", "goth")
+	SetProvinceSettlementBuilding("Silesia", "unit-teuton-town-hall", true)
+	AcquireFactionTechnologies("goth", "Goth Tribe", "goth", "Silingae Tribe")	
 end
 
 if (GrandStrategyYear >= -241) then
@@ -12657,6 +12662,8 @@ if (GrandStrategyYear >= 1560) then -- Political situation in Europe in 1560 AD;
 	SetProvinceOwner("Carniola", "teuton", "Austria")
 	SetProvinceOwner("Istria", "teuton", "Austria") -- the outer parts of Istria were owned by Venice, but the inner parts (including Trieste) were owned by Austria)
 	SetProvinceOwner("Silesia", "teuton", "Austria")
+	SetProvinceOwner("Lower Lusatia", "teuton", "Austria")
+	SetProvinceOwner("Upper Lusatia", "teuton", "Austria")
 	
 	SetProvinceOwner("Dalmatia", "latin", "Venice")
 	SetProvinceOwner("Croatia", "teuton", "Turkey")
@@ -12721,6 +12728,7 @@ if (GrandStrategyYear >= 1629) then -- Sweden acquired Estonia in 1561 and Livon
 end
 
 if (GrandStrategyYear >= 1635) then -- Saxony acquired Upper Lusatia in 1635; Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 6.
+	SetProvinceOwner("Upper Lusatia", "teuton", "Saxony")
 end
 
 if (GrandStrategyYear >= 1648) then

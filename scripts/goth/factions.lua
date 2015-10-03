@@ -63,6 +63,13 @@ DefineFaction("Rugian Tribe", {
 	SecondaryColor = "orange"
 })
 
+DefineFaction("Silingae Tribe", {
+	Civilization = "goth",
+	Type = "tribe",
+	Color = "orange",
+	SecondaryColor = "orange"
+})
+
 DefineFaction("Turcilingian Tribe", {
 	Civilization = "goth",
 	Type = "tribe",
