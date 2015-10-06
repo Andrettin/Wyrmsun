@@ -879,6 +879,22 @@ João Victor G. Costa (Jinn):
 /graphics/ui/backgrounds/yale_small.png (modified from Tanja Nov.'s drawing)
 /graphics/ui/cursors/magnifying_glass.png
 /graphics/ui/fonts/small.png
+/graphics/ui/icons/badge_bronze.png
+/graphics/ui/icons/badge_cracked.png
+/graphics/ui/icons/badge_foil.png
+/graphics/ui/icons/badge_glow.png
+/graphics/ui/icons/badge_gold.png
+/graphics/ui/icons/badge_silver.png
+/graphics/ui/icons/food.png
+/graphics/ui/icons/food_small.png
+/graphics/ui/icons/gold.png
+/graphics/ui/icons/gold_small.png
+/graphics/ui/icons/labor.png
+/graphics/ui/icons/labor_small.png
+/graphics/ui/icons/prestige.png
+/graphics/ui/icons/prestige_small.png
+/graphics/ui/icons/research.png
+/graphics/ui/icons/research_small.png
 /graphics/ui/bar_frame.png
 /graphics/ui/coal.png
 /graphics/ui/coal_extra_1.png
