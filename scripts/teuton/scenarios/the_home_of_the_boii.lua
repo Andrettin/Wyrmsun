@@ -125,10 +125,10 @@ if (LoadedGame == false) then
 		local units_to_be_created = {}
 		
 		-- Vandals (Lugii)
-		if (GetProvinceOwner("Poland") == "Vandal Tribe") then
+		if (GetProvinceOwner("Mazovia") == "Vandal Tribe") then
 			player_spawn_point = FindAppropriateSpawnPoint(0, 48, 0, Map.Info.MapHeight - 1)
 			SetStartView(2, player_spawn_point[1], player_spawn_point[2])
-			CreateProvinceUnits("Poland", 2, 4)
+			CreateProvinceUnits("Mazovia", 2, 4)
 		end
 
 		-- Suebi (Semnones)
