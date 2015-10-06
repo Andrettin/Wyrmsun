@@ -2744,7 +2744,7 @@ function LoadProvinces(world)
 		Silesia = {
 			Name = "Silesia",
 			CulturalNames = {
-				teuton = "Silesia"
+				teuton = "Schlesien"
 			},
 			Tiles = {
 				{130, 27}, {131, 27}, {132, 27}, {132, 28}, -- old map

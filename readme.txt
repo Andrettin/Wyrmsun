@@ -276,6 +276,7 @@ https://github.com/Andrettin/Wyrmsun
 * Units
 - A unit type's bonus against mounted units, bonus against buildings, bonus against giants and backstab bonus now appear in its popup.
 - The Dwarven Yale Rider is now trainable, if the player has a Yale Pen and a Smithy.
+- Added Horse (unit graphics by b_o).
 
 -----------------------------------------------------------------------
 - 1.3.3

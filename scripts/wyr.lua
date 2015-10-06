@@ -127,7 +127,9 @@ function CreateUnit(unittype, player, pos)
     return nil
   end
 
-  unittype = ConvertUnitType(unittype, GetPlayerData(player, "RaceName"), wyrmsun.tileset)
+  if (Players[player].Type ~= PlayerNeutral) then
+	unittype = ConvertUnitType(unittype, GetPlayerData(player, "RaceName"), wyrmsun.tileset)
+  end
 
   return OldCreateUnit(unittype, player, pos)
 end
