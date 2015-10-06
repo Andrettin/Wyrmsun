@@ -11537,6 +11537,7 @@ if (GrandStrategyYear >= -325) then -- Pytheas sets out on an exploration voyage
 	
 	SetProvinceOwner("Gotland", "goth", "Goth Tribe") -- maybe should be later?
 	SetProvinceSettlementBuilding("Gotland", "unit-teuton-town-hall", true)
+	AddProvinceClaim("Gotland", "goth", "Goth Tribe")
 	
 	GrandStrategyEvents.DagChieftainOfTheGoths = nil
 	GrandStrategyEvents.DagChieftainOfTheGothsSwedeTribe = nil
@@ -11677,6 +11678,15 @@ if (GrandStrategyYear >= -264) then
 	SetProvinceCivilization("Silesia", "goth")
 	SetProvinceSettlementBuilding("Silesia", "unit-teuton-town-hall", true)
 	AcquireFactionTechnologies("goth", "Goth Tribe", "goth", "Silingae Tribe")	
+	
+	SetProvinceOwner("Pomerelia", "goth", "Goth Tribe")
+	SetProvinceCivilization("Pomerelia", "goth")
+	SetProvinceSettlementBuilding("Pomerelia", "unit-teuton-town-hall", true)
+	AddProvinceClaim("Pomerelia", "goth", "Goth Tribe")
+	SetProvinceOwner("Prussia", "goth", "Goth Tribe")
+	SetProvinceCivilization("Prussia", "goth")
+	SetProvinceSettlementBuilding("Prussia", "unit-teuton-town-hall", true)
+	AddProvinceClaim("Prussia", "goth", "Goth Tribe")
 end
 
 if (GrandStrategyYear >= -241) then
@@ -12058,11 +12068,6 @@ if (GrandStrategyYear >= 142) then
 end
 
 if (GrandStrategyYear >= 150) then
-	SetProvinceOwner("Gotaland", "", "")
-	SetProvinceOwner("Gotland", "", "")
-	SetProvinceOwner("Prussia", "goth", "Goth Tribe") -- Goths were present in the Danzig/Gdansk area in about 150 AD (having migrated from southern Scandinavia); Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
-	SetProvinceUnitQuantity("Prussia", "unit-germanic-warrior", 0)
-	
 	SetProvinceOwner("Holland", "teuton", "Frank Tribe") -- Franks were the people settled in the modern Netherlands in (presumably) 150 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 	SetProvinceCivilization("Holland", "teuton")
 	SetProvinceSettlementBuilding("Holland", "unit-teuton-town-hall", true)
@@ -12082,7 +12087,10 @@ if (GrandStrategyYear >= 170) then
 end
 
 if (GrandStrategyYear >= 200) then
+	SetProvinceOwner("Pomerelia", "", "")
 	SetProvinceOwner("Prussia", "", "")
+	SetProvinceOwner("Gotaland", "", "")
+	SetProvinceOwner("Gotland", "", "")
 	SetProvinceOwner("Ukraine", "goth", "Ostrogoth Tribe") -- The eastern goths had migrated to the area of modern Ukraine in about 200 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 	AcquireFactionTechnologies("goth", "Goth Tribe", "goth", "Ostrogoth Tribe")
 	SetProvinceOwner("Wallachia", "goth", "Visigoth Tribe") -- The western goths had migrated to the area of modern Romania / ancient Dacia in about 200 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
@@ -12654,6 +12662,7 @@ if (GrandStrategyYear >= 1560) then -- Political situation in Europe in 1560 AD;
 	AddProvinceClaim("Bavaria", "teuton", "Bavaria")
 	
 	SetProvinceOwner("Brandenburg", "teuton", "Brandenburg")
+	SetProvinceOwner("Neumark", "teuton", "Brandenburg")
 	SetProvinceOwner("Prussia", "teuton", "Prussia")
 	
 	SetFactionTier("teuton", "Austria", "grand duchy")
@@ -12679,6 +12688,7 @@ if (GrandStrategyYear >= 1560) then -- Political situation in Europe in 1560 AD;
 	SetProvinceOwner("Crimea", "teuton", "Crimea")
 	SetProvinceOwner("Don", "teuton", "Crimea")
 
+	SetProvinceOwner("Pomerelia", "teuton", "Poland")
 	SetProvinceOwner("Galicia", "teuton", "Poland")
 	SetProvinceOwner("Poland", "teuton", "Poland")
 	SetProvinceOwner("Russia", "teuton", "Muscovy")
