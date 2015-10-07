@@ -160,7 +160,7 @@ function AiLandAttack()
 		end
 		
 		if (GetAiUnitType("stronghold") ~= nil and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("stronghold")) >= 1) then
-			if (GetAiUnitType("stables") ~= nil and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("stables")) < 1) then
+			if (GetAiUnitType("stables") ~= nil and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("stables")) < 1 and CheckDependency(AiPlayer(), GetAiUnitType("stables"))) then
 				AiSet(GetAiUnitType("stables"), 1) -- if has a stronghold but no stables, build one
 			end
 			if (GetAiUnitType("coinage") ~= nil and CheckDependency(AiPlayer(), GetAiUnitType("coinage"))) then

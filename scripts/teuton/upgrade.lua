@@ -255,6 +255,10 @@ DefineDependency("upgrade-teuton-coinage",
 	{"unit-teuton-smithy"}
 )
 
-DefineDependency("unit-teuton-ritter",
-	{"unit-teuton-smithy", "unit-teuton-stables"}
+DefineDependency("unit-teuton-stables",
+	{"unit-teuton-lumber-mill"}
 )
+
+--DefineDependency("unit-teuton-ritter",
+--	{"unit-teuton-smithy", "unit-teuton-stables"}
+--)

@@ -4055,7 +4055,7 @@ function GetUnitTypeInterfaceState(unit_type)
 		elseif (GetUnitTypeData(unit_type, "Class") == "shooter") then
 			return "barracks"
 		elseif (GetUnitTypeData(unit_type, "Class") == "cavalry") then
-			return "stables" -- should be barracks, but keep it that way for now, to make it not be trainable
+			return "barracks"
 		elseif (GetUnitTypeData(unit_type, "Class") == "siege-engine") then
 			return "barracks"
 		elseif (GetUnitTypeData(unit_type, "Class") == "priest") then
@@ -4130,6 +4130,13 @@ function GetUnitTypeRequiredBuildings(unit_type)
 		elseif (GetUnitTypeData(unit_type, "Class") == "barracks" or GetUnitTypeData(unit_type, "Class") == "lumber-mill" or GetUnitTypeData(unit_type, "Class") == "smithy") then
 			if (GetCivilizationClassUnitType("town-hall", GetUnitTypeData(unit_type, "Civilization")) ~= nil) then
 				table.insert(required_buildings, GetCivilizationClassUnitType("town-hall", GetUnitTypeData(unit_type, "Civilization")))
+			end
+		elseif (GetUnitTypeData(unit_type, "Class") == "stables") then
+			if (GetCivilizationClassUnitType("town-hall", GetUnitTypeData(unit_type, "Civilization")) ~= nil) then
+				table.insert(required_buildings, GetCivilizationClassUnitType("town-hall", GetUnitTypeData(unit_type, "Civilization")))
+			end
+			if (GetCivilizationClassUnitType("lumber-mill", GetUnitTypeData(unit_type, "Civilization")) ~= nil) then
+				table.insert(required_buildings, GetCivilizationClassUnitType("lumber-mill", GetUnitTypeData(unit_type, "Civilization")))
 			end
 		elseif (GetUnitTypeData(unit_type, "Class") == "stronghold") then
 			if (GetCivilizationClassUnitType("town-hall", GetUnitTypeData(unit_type, "Civilization")) ~= nil) then
