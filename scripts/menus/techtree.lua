@@ -72,18 +72,23 @@ function RunTechTreeMenu(civilization_number)
 		local unit_name = ""
 		local tech_description
 		local techicon
+		local techicon_frame = 0
 		if (string.find(unit, "upgrade-") == nil) then
 			unit_name = GetUnitTypeName(unit)
 			tech_description = GetUnitTypeData(unit, "Description")
 			techicon = CIcon:Get(GetUnitTypeData(unit, "Icon")).G
+			techicon_frame = CIcon:Get(GetUnitTypeData(unit, "Icon")).Frame
 		else
 			unit_name = CUpgrade:Get(unit).Name
 			tech_description = CUpgrade:Get(unit).Description
 			techicon = CUpgrade:Get(unit).Icon.G
+			techicon_frame = CUpgrade:Get(unit).Icon.Frame
 		end
 		tech_description = tech_description .. GetTechnologyAllowsString(unit, civilization)
 		local b
 		techicon:Load()
+		local techicon_x_origin = (techicon_frame * 46) % techicon:getGraphicWidth()
+		local techicon_y_origin = math.floor((techicon_frame * 46) / techicon:getGraphicWidth()) * 38
 		b = PlayerColorImageButton("", playercolor)
 		if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, unit) == false and GetTechnologyPointCost("", unit) > 0) then
 			b:setTransparency(66)
@@ -96,7 +101,8 @@ function RunTechTreeMenu(civilization_number)
 				tech_menu:setSize(352, 352)
 				tech_menu:setPosition((Video.Width - tech_menu:getWidth()) / 2, (Video.Height - tech_menu:getHeight()) / 2)
 				tech_menu:addLabel(unit_name, 176, 11)
-				local tech_menu_image = ImageWidget(techicon)
+				local tech_menu_image = PlayerColorImageWidget(techicon, playercolor)
+				tech_menu_image:setImageOrigin(techicon_x_origin, techicon_y_origin)
 				tech_menu:add(tech_menu_image, 153, 48)
 
 				local l = MultiLineLabel()
@@ -124,6 +130,7 @@ function RunTechTreeMenu(civilization_number)
 			end
 		)
 		menu:add(b, x, y)
+		b:setImageOrigin(techicon_x_origin, techicon_y_origin)
 		b:setNormalImage(techicon)
 		b:setPressedImage(techicon)
 		b:setDisabledImage(techicon)
@@ -138,8 +145,12 @@ function RunTechTreeMenu(civilization_number)
 	local playercolor
 	if (civilization == "dwarf") then
 		playercolor = "red"
+	elseif (civilization == "english") then
+		playercolor = "red"
 	elseif (civilization == "germanic") then
 		playercolor = "orange"
+	elseif (civilization == "orc") then
+		playercolor = "red"
 	elseif (civilization == "teuton") then
 		playercolor = "orange"
 	end
@@ -508,10 +519,27 @@ function GetCivilizationTechnologyPoints(civilization)
 end
 
 function GetAvailableCivilizationsTechTree()
-	local civilization_list = {"Dwarf", "Human - Germanic"}
-	if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Gylve's Realm")) then
-		table.insert(civilization_list, "Human - Teuton")
+	local civilization_list = {}
+	
+	local civilizations = GetCivilizations()
+	for i=1,table.getn(civilizations) do
+		if (IsCivilizationPlayable(civilizations[i])) then
+			if (
+				(civilizations[i] ~= "teuton" or GetArrayIncludes(wyr.preferences.QuestsCompleted, "Gylve's Realm"))
+			) then
+				local playable_civilization_species = CapitalizeString(GetCivilizationSpecies(civilizations[i]))
+				local playable_civilization = CapitalizeString(civilizations[i])
+				if (playable_civilization_species ~= playable_civilization) then
+					table.insert(civilization_list, _(playable_civilization_species .. " - " .. playable_civilization))
+				else
+					table.insert(civilization_list, _(playable_civilization))
+				end
+			end
+		end
 	end
+	
+	table.sort(civilization_list)
+
 	return civilization_list
 end
 

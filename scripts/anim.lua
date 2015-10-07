@@ -132,6 +132,25 @@ WorkerDeath = {
 	"frame 50", "wait 3", "frame 55", "wait 3", "frame 60", "wait 100", "frame 60",
 	"unbreakable end", "wait 1",
 }
+WorkerMetalMining = {
+	"frame 25", "wait 4", "frame 30", "wait 4", "frame 35", "wait 4",
+	"frame 40", "sound metal-mining", "wait 5", "frame 45", "wait 3",
+	"frame 25", "wait 9", "frame 25",
+	"wait 1",
+}
+WorkerLumberHarvesting = {
+	"frame 25", "wait 4", "frame 30", "wait 4", "frame 35", "wait 4",
+	"frame 40", "sound tree-chopping", "wait 5", "frame 45", "wait 3",
+	"frame 25", "wait 9", "frame 25",
+	"wait 1",
+}
+WorkerStoneMining = {
+	"frame 25", "wait 4", "frame 30", "wait 4", "frame 35", "wait 4",
+	"frame 40", "sound stone-mining", "wait 5", "frame 45", "wait 3",
+	"frame 25", "wait 9", "frame 25",
+	"wait 1",
+}
+
 BuildingStill = {"frame 0", "wait 4", "frame 0", "wait 1",}
 
 Load("scripts/dwarf/anim.lua")
@@ -170,6 +189,23 @@ DefineAnimations("animations-melee-unit-new", {
 	Still = UnitStill,
 	Move = UnitMove,
 	Attack = UnitMeleeAttackNew,
+	Death = WorkerDeath
+})
+
+DefineAnimations("animations-worker", {
+	Still = UnitStill,
+	Move = UnitMove,
+	Attack = WorkerAttack,
+	Harvest_gold = WorkerMetalMining,
+	Harvest_silver = WorkerMetalMining,
+	Harvest_copper = WorkerMetalMining,
+	Harvest_lumber = WorkerLumberHarvesting,
+	Harvest_stone = WorkerStoneMining,
+	Repair = {
+		"unbreakable begin", "frame 25", "wait 3", "frame 30", "wait 3", "frame 35", "wait 3",
+		"frame 40", "sound construction-wood", "wait 5", "frame 45", "wait 3",
+		"frame 25", "wait 7", "frame 25", "unbreakable end", "wait 1",
+	},
 	Death = WorkerDeath
 })
 

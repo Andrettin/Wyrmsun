@@ -145,9 +145,11 @@ function RunModsMenu(selected_mod)
 end
 
 ModPath = ""
+Mods = ""
 function LoadMods()
 	ModPath = ""
-	local mods = {}
+	Mods = nil
+	Mods = {}
   
 	local i
 	local f
@@ -167,7 +169,7 @@ function LoadMods()
 		local fileslist = ListFilesInDirectory(ModDirectory .. dirlist[j])
 		for i,f in ipairs(fileslist) do
 			if (string.find(f, "info.lua")) then
-				mods[u] = ModDirectory .. dirlist[j] .. f
+				Mods[u] = ModDirectory .. dirlist[j] .. f
 				u = u + 1
 			end
 		end
@@ -179,19 +181,19 @@ function LoadMods()
 		local fileslist = ListFilesInDirectory(ModDirectory .. dirlist[j])
 		for i,f in ipairs(fileslist) do
 			if (string.find(f, "main.lua")) then
-				mods[u] = ModDirectory .. dirlist[j] .. f
+				Mods[u] = ModDirectory .. dirlist[j] .. f
 				u = u + 1
 			end
 		end
 	end
 
-	for i=1,table.getn(mods) do
+	for i=1,table.getn(Mods) do
 		ModName = ""
-		ModPath = tostring(string.gsub(mods[i], "main.lua", ""))
-		Load(tostring(string.gsub(mods[i], "main", "info")))
+		ModPath = tostring(string.gsub(Mods[i], "main.lua", ""))
+		Load(tostring(string.gsub(Mods[i], "main", "info")))
 		if (GetArrayIncludes(wyr.preferences.EnabledMods, ModName)) then
-			table.insert(MapDirectories, tostring(string.gsub(mods[i], "main.lua", "maps/")))
-			Load(mods[i])
+			table.insert(MapDirectories, tostring(string.gsub(Mods[i], "main.lua", "maps/")))
+			Load(Mods[i])
 		end
 	end
 	

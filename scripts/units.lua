@@ -2543,7 +2543,8 @@ DefineUnitType("unit-dwarven-dead-body", { Name = "Dead Body",
 	Type = "land",
 	Vanishes = true,
 	Detritus = true,
-	Sounds = {} } )
+	Sounds = {}
+} )
 
 DefineUnitType("unit-gnomish-dead-body", { Name = "Dead Body",
 	Image = {"file", "neutral/units/gnomish_goblin_and_kobold_corpses.png", "size", {72, 72}},
@@ -2558,7 +2559,8 @@ DefineUnitType("unit-gnomish-dead-body", { Name = "Dead Body",
 	Type = "land",
 	Vanishes = true,
 	Detritus = true,
-	Sounds = {} } )
+	Sounds = {}
+} )
 
 DefineUnitType("unit-goblin-dead-body", { Name = "Dead Body",
 	Image = {"file", "neutral/units/gnomish_goblin_and_kobold_corpses.png", "size", {72, 72}},
@@ -2573,7 +2575,8 @@ DefineUnitType("unit-goblin-dead-body", { Name = "Dead Body",
 	Type = "land",
 	Vanishes = true,
 	Detritus = true,
-	Sounds = {} } )
+	Sounds = {}
+} )
 
 DefineUnitType("unit-human-dead-body", { Name = "Dead Body",
 	Image = {"file", "neutral/units/human_corpse.png", "size", {72, 72}},
@@ -2588,7 +2591,8 @@ DefineUnitType("unit-human-dead-body", { Name = "Dead Body",
 	Type = "land",
 	Vanishes = true,
 	Detritus = true,
-	Sounds = {} } )
+	Sounds = {}
+} )
 
 DefineUnitType("unit-kobold-dead-body", { Name = "Dead Body",
 	Image = {"file", "neutral/units/gnomish_goblin_and_kobold_corpses.png", "size", {72, 72}},
@@ -2603,7 +2607,8 @@ DefineUnitType("unit-kobold-dead-body", { Name = "Dead Body",
 	Type = "land",
 	Vanishes = true,
 	Detritus = true,
-	Sounds = {} } )
+	Sounds = {}
+} )
 
 --DefineUnitType("unit-dead-sea-body", { Name = "Dead Body",
 --	Image = {"file", "neutral/units/corpses.png", "size", {72, 72}},

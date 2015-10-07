@@ -31,37 +31,6 @@ if (OldCreateUnit == nil) then
 	OldCreateUnit = CreateUnit
 end
 
--- build table with civilization class unit types
-CivilizationClassUnitTypes = {}
-for i, unitName in ipairs(Units) do
-	if (string.find(unitName, "upgrade-") == nil) then
-		if (GetUnitTypeData(unitName, "Civilization") ~= "" and GetUnitTypeData(unitName, "Class") ~= "") then
-			if (CivilizationClassUnitTypes[GetUnitTypeData(unitName, "Civilization")] == nil) then
-				CivilizationClassUnitTypes[GetUnitTypeData(unitName, "Civilization")] = {}
-			end
-			CivilizationClassUnitTypes[GetUnitTypeData(unitName, "Civilization")][string.gsub(GetUnitTypeData(unitName, "Class"), "-", "_")] = unitName
-		end
-	else
-		if (CUpgrade:Get(unitName).Civilization ~= "" and CUpgrade:Get(unitName).Class ~= "") then
-			if (CivilizationClassUnitTypes[CUpgrade:Get(unitName).Civilization] == nil) then
-				CivilizationClassUnitTypes[CUpgrade:Get(unitName).Civilization] = {}
-			end
-			CivilizationClassUnitTypes[CUpgrade:Get(unitName).Civilization][string.gsub(CUpgrade:Get(unitName).Class, "-", "_")] = unitName
-		end
-	end
-end
-
-function GetCivilizationClassUnitType(class, civilization)
-	if (civilization ~= "" and civilization ~= "neutral" and class ~= "") then
-		if (CivilizationClassUnitTypes[civilization] ~= nil and CivilizationClassUnitTypes[civilization][string.gsub(class, "-", "_")] ~= nil) then
-			return CivilizationClassUnitTypes[civilization][string.gsub(class, "-", "_")]
-		elseif (GetParentCivilization(civilization) ~= "") then
-			return GetCivilizationClassUnitType(class, GetParentCivilization(civilization))
-		end
-	end
-	return nil
-end
-
 -- Convert a unit type to the equivalent for a different race
 function ConvertUnitType(unittype, civilization, terrain)
 	local equiv
@@ -324,7 +293,21 @@ function LoadCivilizationUI(civilization)
 	if (UsingTechTree == false and civilization ~= GetPlayerData(GetThisPlayer(), "RaceName")) then
 		StopMusic()
 	end
-	Load("scripts/" .. civilization .. "/ui.lua")
+	local ui_file = "scripts/" .. civilization .. "/ui.lua"
+	if not (CanAccessFile(ui_file)) then
+		for i=1,table.getn(Mods) do
+			ModName = ""
+			local mod_path = tostring(string.gsub(Mods[i], "main.lua", ""))
+			Load(tostring(string.gsub(Mods[i], "main", "info")))
+			if (GetArrayIncludes(wyr.preferences.EnabledMods, ModName)) then
+				if (CanAccessFile(mod_path .. "scripts/" .. civilization .. "/ui.lua")) then
+					ui_file = mod_path .. "scripts/" .. civilization .. "/ui.lua"
+				end
+			end
+		end
+	
+	end
+	Load(ui_file)
 	if not (RunningScenario) then
 		wyrmsun.playlist = { "music/battle_theme_a.ogg" }
 	end

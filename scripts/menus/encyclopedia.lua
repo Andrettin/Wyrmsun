@@ -171,11 +171,13 @@ end
 
 function addEncyclopediaIcon(unit_name, menu, x, y)
 	local encyclopedia_icon
+	local encyclopedia_icon_frame = 0
 	local civilization
 	local tooltip_name = ""
 	local tooltip_civilization = ""
 	if (string.find(unit_name, "upgrade-") == nil) then
 		encyclopedia_icon = CIcon:Get(GetUnitTypeData(unit_name, "Icon")).G
+		encyclopedia_icon_frame = CIcon:Get(GetUnitTypeData(unit_name, "Icon")).Frame
 		civilization = GetUnitTypeData(unit_name, "Civilization")
 		if (GetUnitTypeData(unit_name, "Hero") == false) then
 			tooltip_name = GetUnitTypeData(unit_name, "Name")
@@ -187,6 +189,7 @@ function addEncyclopediaIcon(unit_name, menu, x, y)
 		end
 	else
 		encyclopedia_icon = CUpgrade:Get(unit_name).Icon.G
+		encyclopedia_icon_frame = CUpgrade:Get(unit_name).Icon.Frame
 		civilization = CUpgrade:Get(unit_name).Civilization
 		tooltip_name = CUpgrade:Get(unit_name).Name
 		if (CUpgrade:Get(unit_name).Civilization ~= "") then
@@ -194,10 +197,14 @@ function addEncyclopediaIcon(unit_name, menu, x, y)
 		end
 	end
 	encyclopedia_icon:Load()
+	local encyclopedia_icon_x_origin = (encyclopedia_icon_frame * 46) % encyclopedia_icon:getGraphicWidth()
+	local encyclopedia_icon_y_origin = math.floor((encyclopedia_icon_frame * 46) / encyclopedia_icon:getGraphicWidth()) * 38
 	local playercolor
 	if (civilization == "celt") then
 		playercolor = "green"
 	elseif (civilization == "dwarf") then
+		playercolor = "red"
+	elseif (civilization == "english") then
 		playercolor = "red"
 	elseif (civilization == "germanic") then
 		playercolor = "orange"
@@ -235,7 +242,8 @@ function addEncyclopediaIcon(unit_name, menu, x, y)
 			local offx = (Video.Width - 640) / 2
 			local offy = (Video.Height - 480) / 2
 
-			local encyclopedia_entry_menu_image = ImageWidget(encyclopedia_icon)
+			local encyclopedia_entry_menu_image = PlayerColorImageWidget(encyclopedia_icon, playercolor)
+			encyclopedia_entry_menu_image:setImageOrigin(encyclopedia_icon_x_origin, encyclopedia_icon_y_origin)
 			encyclopedia_entry_menu:add(encyclopedia_entry_menu_image, (Video.Width / 2) - 23, offy + 104 + 36*-1)
 			encyclopedia_entry_menu:addLabel("~<" .. tooltip_name .. "~>", offx + 320, offy + 104 + 36*-2, nil, true)
 
@@ -325,6 +333,7 @@ function addEncyclopediaIcon(unit_name, menu, x, y)
 		end
 	)
 	menu:add(b, x, y)
+	b:setImageOrigin(encyclopedia_icon_x_origin, encyclopedia_icon_y_origin)
 	b:setNormalImage(encyclopedia_icon)
 	b:setPressedImage(encyclopedia_icon)
 	b:setDisabledImage(encyclopedia_icon)
