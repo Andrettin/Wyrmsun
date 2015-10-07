@@ -149,15 +149,12 @@ function RunJoiningMapMenu(s)
   local civilization_list = {_("Map Default"), _("Dwarf"), _("Human - Germanic")}
   local race = menu:addDropDown(civilization_list, sx + 100, sy*11,
     function(dd)
-	  if (civilization_list[dd:getSelected() + 1] == _("Dwarf")) then
-		  GameSettings.Presets[NetLocalHostsSlot].Race = 1
-		  LocalSetupState.Race[NetLocalHostsSlot] = 1
-	  elseif (civilization_list[dd:getSelected() + 1] == _("Human - Germanic")) then
-		  GameSettings.Presets[NetLocalHostsSlot].Race = 2
-		  LocalSetupState.Race[NetLocalHostsSlot] = 2
-	  elseif (civilization_list[dd:getSelected() + 1] == _("Human - Teuton")) then
-		  GameSettings.Presets[NetLocalHostsSlot].Race = 3
-		  LocalSetupState.Race[NetLocalHostsSlot] = 3
+	  if (civilization_list[dd:getSelected() + 1] ~= _("Map Default")) then
+			local chosen_civilization = civilization_list[dd:getSelected() + 1]
+			chosen_civilization = string.gsub(chosen_civilization, "Human %- ", "")
+			chosen_civilization = string.lower(chosen_civilization)
+			GameSettings.Presets[NetLocalHostsSlot].Race = GetCivilizationID(chosen_civilization)
+			LocalSetupState.Race[NetLocalHostsSlot] = GetCivilizationID(chosen_civilization)
 	  end
     end)
   race:setSize(190, 20)
@@ -382,15 +379,12 @@ function RunServerMultiGameMenu(map, description, numplayers)
    local civilization_list = {_("Map Default"), _("Dwarf"), _("Human - Germanic")}
    d = menu:addDropDown(civilization_list, sx + 100, sy*11,
     function(dd)
-	  if (civilization_list[dd:getSelected() + 1] == _("Dwarf")) then
-		  GameSettings.Presets[0].Race = 1
-		  ServerSetupState.Race[0] = 1
-	  elseif (civilization_list[dd:getSelected() + 1] == _("Human - Germanic")) then
-		  GameSettings.Presets[0].Race = 2
-		  ServerSetupState.Race[0] = 2
-	  elseif (civilization_list[dd:getSelected() + 1] == _("Human - Teuton")) then
-		  GameSettings.Presets[0].Race = 3
-		  ServerSetupState.Race[0] = 3
+	  if (civilization_list[dd:getSelected() + 1] ~= _("Map Default")) then
+			local chosen_civilization = civilization_list[dd:getSelected() + 1]
+			chosen_civilization = string.gsub(chosen_civilization, "Human %- ", "")
+			chosen_civilization = string.lower(chosen_civilization)
+			GameSettings.Presets[0].Race = GetCivilizationID(chosen_civilization)
+			ServerSetupState.Race[0] = GetCivilizationID(chosen_civilization)
 	  end
       NetworkServerResyncClients()
     end)

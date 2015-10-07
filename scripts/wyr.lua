@@ -158,16 +158,8 @@ function SetPlayerData(player, data, arg1, arg2)
 	local res = {arg2, arg2, arg2, arg2, arg2, arg2, arg2, arg2}
 
 	if (data == "RaceName") then
-		if (GameSettings.Presets[player].Race == 1) then
-			arg1 = "dwarf"
-		elseif (GameSettings.Presets[player].Race == 2) then
-			arg1 = "germanic"
-		elseif (GameSettings.Presets[player].Race == 3) then
-			arg1 = "teuton"
---		elseif (GameSettings.Presets[player].Race == 3) then
---			arg1 = "gnome"
---		elseif (GameSettings.Presets[player].Race == 4) then
---			arg1 = "goblin"
+		if (GameSettings.Presets[player].Race ~= -1) then
+			arg1 = GetCivilizations()[GameSettings.Presets[player].Race + 1]
 		end
 		
 		if (GrandStrategy and GrandStrategyFaction ~= nil) then

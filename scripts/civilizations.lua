@@ -584,7 +584,8 @@ DefineRaceNames(
 	},
 	"race", {
 		"name", "neutral",
-		"display", "Neutral"
+		"display", "Neutral",
+		"playable", false
 	}
 )
 
@@ -599,3 +600,13 @@ Load("scripts/minoan/factions.lua")
 Load("scripts/norse/factions.lua")
 Load("scripts/teuton/factions.lua")
 Load("scripts/factions.lua")
+
+function GetCivilizationID(civilization)
+	local civilizations = GetCivilizations()
+	for i=1,table.getn(civilizations) do
+		if (civilizations[i] == civilization) then
+			return i - 1
+		end
+	end
+	return nil
+end

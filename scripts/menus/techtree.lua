@@ -57,9 +57,7 @@ function RunTechTreeMenu(civilization_number)
 
 	local tech_points = 0
 	
-	local civilization = string.gsub(civilization_list[civilization_number + 1], "Human", "")
-	civilization = string.gsub(civilization, "-", "")
-	civilization = string.gsub(civilization, " ", "")
+	local civilization = string.gsub(civilization_list[civilization_number + 1], "Human %- ", "")
 	civilization = string.lower(civilization)
 
 	if (RunningScenario == false) then
@@ -519,9 +517,7 @@ end
 
 function GetTechTreeCivilizationNumber(civilization)
 	for i=1,table.getn(GetAvailableCivilizationsTechTree()) do
-		local tech_tree_civilization = string.gsub(GetAvailableCivilizationsTechTree()[i], "Human", "")
-		tech_tree_civilization = string.gsub(tech_tree_civilization, "-", "")
-		tech_tree_civilization = string.gsub(tech_tree_civilization, " ", "")
+		local tech_tree_civilization = string.gsub(GetAvailableCivilizationsTechTree()[i], "Human %- ", "")
 		tech_tree_civilization = string.lower(tech_tree_civilization)
 		if (tech_tree_civilization == civilization) then
 			return i - 1

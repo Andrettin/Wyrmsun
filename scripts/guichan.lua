@@ -1020,12 +1020,11 @@ function RunSinglePlayerCustomGameMenu()
 				end
 			end
 		end
-	  if (civilization_list[race:getSelected() + 1] == "Dwarf") then
-		  GameSettings.Presets[MapPersonPlayer].Race = 1
-	  elseif (civilization_list[race:getSelected() + 1] == "Human - Germanic") then
-		  GameSettings.Presets[MapPersonPlayer].Race = 2
-	  elseif (civilization_list[race:getSelected() + 1] == "Human - Teuton") then
-		  GameSettings.Presets[MapPersonPlayer].Race = 3
+	  if (civilization_list[race:getSelected() + 1] ~= _("Map Default")) then
+			local chosen_civilization = civilization_list[race:getSelected() + 1]
+			chosen_civilization = string.gsub(chosen_civilization, "Human %- ", "")
+			chosen_civilization = string.lower(chosen_civilization)
+			GameSettings.Presets[MapPersonPlayer].Race = GetCivilizationID(chosen_civilization)
 	  end
       GameSettings.Resources = resources:getSelected()
       if (faction:getSelected() == 0) then
@@ -1084,7 +1083,7 @@ function RunSinglePlayerCustomGameMenu()
   difficulty:setSelected(wyr.preferences.Difficulty - 1)
 
   menu:addLabel(_("Your Civilization:"), offx + 40, offy + (10 + 180) - 20, Fonts["game"], false)
-  race = menu:addDropDown({_("Map Default"), _("Dwarf"), _("Human - Germanic")}, offx + 40, offy + 10 + 180,
+  race = menu:addDropDown(civilization_list, offx + 40, offy + 10 + 180,
     function(dd) CivilizationChanged() end)
   race:setSize(152, 20)
 
@@ -1190,9 +1189,7 @@ function RunSinglePlayerCustomGameMenu()
     faction_list = {_("Map Default")}
 	
 	local factions_civilization = civilization_list[race:getSelected() + 1]
-	factions_civilization = string.gsub(factions_civilization, "Human", "")
-	factions_civilization = string.gsub(factions_civilization, "-", "")
-	factions_civilization = string.gsub(factions_civilization, " ", "")
+	factions_civilization = string.gsub(factions_civilization, "Human %- ", "")
 	factions_civilization = string.lower(factions_civilization)
 	
 	if (race:getSelected() > 0) then
@@ -1210,12 +1207,9 @@ function RunSinglePlayerCustomGameMenu()
   end
 
   function TechLevelChanged()
-	civilization_list = {_("Map Default")}
 	max_tech_level_list = {_("Map Default")}
 	
-	table.insert(civilization_list, "Dwarf")
     if (tech_level:getSelected() - 1 == -1 or tech_level_list[tech_level:getSelected() + 1] == "Agrarian (Bronze)") then
-		table.insert(civilization_list, "Human - Germanic")
 		table.insert(max_tech_level_list, _("Agrarian (Bronze)"))
 	end
     if (tech_level:getSelected() - 1 == -1 or tech_level_list[tech_level:getSelected() + 1] == "Agrarian (Bronze)" or tech_level_list[tech_level:getSelected() + 1] == "Agrarian (Iron)") then
@@ -1225,19 +1219,45 @@ function RunSinglePlayerCustomGameMenu()
 		table.insert(max_tech_level_list, _("Civilized (Bronze)"))
 	end
 	table.insert(max_tech_level_list, _("Civilized (Iron)"))
-    if (tech_level_list[tech_level:getSelected() + 1] == "Agrarian (Iron)" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Bronze)" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Iron)") then
-		table.insert(civilization_list, "Human - Teuton")
+	
+	max_tech_level:setList(max_tech_level_list)
+    max_tech_level:setSize(152, 20)
+    max_tech_level:setSelected(0)
+	BuildCivilizationList()
+  end
+
+  function BuildCivilizationList()
+	civilization_list = {}
+	
+	local civilizations = GetCivilizations()
+	for i=1,table.getn(civilizations) do
+		if (IsCivilizationPlayable(civilizations[i])) then
+			if (
+				(civilizations[i] ~= "germanic" or tech_level_list[tech_level:getSelected() + 1] == "Map Default" or tech_level_list[tech_level:getSelected() + 1] == "Agrarian (Bronze)")
+				and (civilizations[i] ~= "teuton" or tech_level_list[tech_level:getSelected() + 1] == "Agrarian (Iron)" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Bronze)" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Iron)")
+				and (civilizations[i] ~= "english" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Iron)")
+			) then
+				local playable_civilization_species = CapitalizeString(GetCivilizationSpecies(civilizations[i]))
+				local playable_civilization = CapitalizeString(civilizations[i])
+				if (playable_civilization_species ~= playable_civilization) then
+					table.insert(civilization_list, _(playable_civilization_species .. " - " .. playable_civilization))
+				else
+					table.insert(civilization_list, _(playable_civilization))
+				end
+			end
+		end
 	end
+	
+	table.sort(civilization_list)
+	table.insert(civilization_list, 1, _("Map Default"))
+	
 	
 	race:setList(civilization_list)
     race:setSize(152, 20)
     race:setSelected(0)
 	CivilizationChanged()
-	max_tech_level:setList(max_tech_level_list)
-    max_tech_level:setSize(152, 20)
-    max_tech_level:setSelected(0)
   end
-
+	
   function MapChanged()
 	mapl:setCaption(string.sub(mapname, 6))
 	mapl:adjustSize()
