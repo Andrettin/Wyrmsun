@@ -746,6 +746,9 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {Mercenary = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Class: "), TypeClass("Type")), Font = wyr.preferences.PopupDescriptionFont}}
 				},
+				{ 	Condition = {Mercenary = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = Concat(_("Troop Quantity: "), String(TypeTrainQuantity("Type"))), Font = wyr.preferences.PopupDescriptionFont}}
+				},
 				{ 	Condition = {HitPoints = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Hit Points: "), Variable = "HitPoints", Font = wyr.preferences.PopupDescriptionFont}}
 				},

@@ -300,6 +300,7 @@ DefineUnitType("unit-horse", { Name = "Horse",
 	ChildUpgrade = "upgrade-child",
 	Excrement = "unit-yale-excrement",
 	BluntDamage = true,
+	Coward = true,
 	Sounds = {
 --		"selected", "yale-selected",
 --		"acknowledge", "yale-acknowledge",
