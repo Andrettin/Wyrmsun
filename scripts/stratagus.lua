@@ -2205,4 +2205,4 @@ Load("scripts/0_ad_equivalencies.lua")
 
 DebugPrint("... ready!\n")
 
---Convert0ADMap("maps/Third Macedonian War.xml")
+--Convert0ADMap("maps/The Massacre of Delphi.xml")

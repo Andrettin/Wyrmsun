@@ -10,7 +10,7 @@
 --
 --      units.ccl - Defines the celt unit-types.
 --
---      (c) Copyright 2014 by Andrettin
+--      (c) Copyright 2014-2015 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -38,7 +38,7 @@ DefineUnitType("unit-celt-farm", { Name = _("Farm"),
 	Civilization = "celt",
 	Description = _("Farms are essential for supporting a settlement's population."),
 --	Background = _("The bronze age predecessors of the germanic peoples had a variety of plants and animals in their farms. Wheat, millet and peas figured among the crops planted, while the most common animals were sheep and pigs. The animals bred by them were generally smaller than their modern counterparts, but they were sturdier."),
-	Image = {"file", "celt/buildings/farm.png", "size", {64, 64}},
+	Image = {"file", "celt/buildings/farm.png", "size", {70, 66}},
 	Icon = "icon-celt-farm",
 	Construction = "construction-land-simple",
 	Sounds = {

@@ -65,7 +65,7 @@ Set0ADTemplateUnitTypeEquivalency("gaia/flora_tree_poplar", "Tree")
 Set0ADTemplateUnitTypeEquivalency("gaia/flora_tree_poplar_lombardy", "Tree")
 
 -- Geology
-Set0ADTemplateUnitTypeEquivalency("gaia/geology_metal_mediterranean_slabs", "unit-gold-deposit")
+Set0ADTemplateUnitTypeEquivalency("gaia/geology_metal_mediterranean_slabs", "Gold")
 Set0ADTemplateUnitTypeEquivalency("gaia/geology_stone_mediterranean", "Rock")
 Set0ADTemplateUnitTypeEquivalency("gaia/geology_stonemine_desert_badlands_quarry", "Rock")
 Set0ADTemplateUnitTypeEquivalency("gaia/geology_stonemine_medit_quarry", "Rock")
