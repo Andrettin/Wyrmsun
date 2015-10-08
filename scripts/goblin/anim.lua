@@ -99,8 +99,6 @@ DefineAnimations("animations-goblin-thief", {
 local GoblinArcherStill  = {"frame 0", "wait 4", "random-goto 1 taunt", "random-goto 99 no-rotate", "random-rotate 1", "goto no-rotate",
 	"label taunt", "frame 70", "wait 6", "frame 75", "wait 6", "frame 70", "wait 6", "frame 75", "wait 6", "frame 70", "wait 6", "frame 75", "wait 6", "frame 0",
 	"label no-rotate", "wait 1",}
-local GoblinArcherDeath = {"unbreakable begin", "frame 55", "wait 3", "frame 60", "wait 3", "frame 65", "wait 100",
-	"frame 65", "unbreakable end", "wait 1",}
 
 DefineAnimations("animations-goblin-archer", {
 	Still = GoblinArcherStill,
@@ -118,7 +116,7 @@ DefineAnimations("animations-goblin-archer", {
 		"frame 40", "wait 3", "frame 45", "wait 10", "frame 50", "wait 13", "frame 50",
 		"unbreakable end", "wait 1",
 	},
-	Death = GoblinArcherDeath
+	Death = ArcherDeath
 })
 
 --

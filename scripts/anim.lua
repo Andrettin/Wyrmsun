@@ -132,6 +132,10 @@ WorkerDeath = {
 	"frame 50", "wait 3", "frame 55", "wait 3", "frame 60", "wait 100", "frame 60",
 	"unbreakable end", "wait 1",
 }
+ArcherDeath = {
+	"unbreakable begin", "frame 55", "wait 3", "frame 60", "wait 3", "frame 65", "wait 100",
+	"frame 65", "unbreakable end", "wait 1",
+}
 WorkerMetalMining = {
 	"frame 25", "wait 4", "frame 30", "wait 4", "frame 35", "wait 4",
 	"frame 40", "sound metal-mining", "wait 5", "frame 45", "wait 3",
@@ -207,6 +211,18 @@ DefineAnimations("animations-worker", {
 		"frame 25", "wait 7", "frame 25", "unbreakable end", "wait 1",
 	},
 	Death = WorkerDeath
+})
+
+DefineAnimations("animations-archer", {
+	Still = UnitStill,
+	Move = UnitMove,
+	Attack = {
+		"unbreakable begin",
+		"frame 25", "wait 5", "frame 30", "wait 5", "frame 35", "attack", "sound bow", "wait 3",
+		"frame 40", "wait 3", "frame 45", "wait 10", "frame 50", "wait 13", "frame 50",
+		"unbreakable end", "wait 1",
+	},
+	Death = ArcherDeath
 })
 
 --

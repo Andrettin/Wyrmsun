@@ -29,6 +29,7 @@
 
 RunningScenario = false
 CurrentQuest = ""
+QuestWorlds = {"~!Earth", "~!Nidavellir"}
 
 function RunQuestWorldMenu()
 	SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
@@ -43,21 +44,28 @@ function RunQuestWorldMenu()
 	local offy = (Video.Height - 480) / 2
 
 	menu:addLabel(_("~<Quests~>"), offx + 320, offy + 212 - 25 - (36 * 1))
-	menu:addFullButton(_("~!Earth"), "e", offx + 208, offy + 104 + 36*2,
-	function()
-		RunQuestMenu("Earth");
-		if (RunningScenario) then
-			menu:stop()
+
+	local quest_world_y = 2
+	for i=1, table.getn(QuestWorlds) do
+		local quest_world_hotkey = ""		
+		if (string.find(QuestWorlds[i], "~!") ~= nil) then
+			quest_world_hotkey = string.sub(string.match(_(QuestWorlds[i]), "~!%a"), 3)
+			quest_world_hotkey = string.lower(quest_world_hotkey)
 		end
-	end)
-	menu:addFullButton(_("~!Nidavellir"), "n", offx + 208, offy + 104 + 36*3,
-	function()
-		RunQuestMenu("Nidavellir");
-		if (RunningScenario) then
-			menu:stop()
-		end
-	end)
-	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + 36*4,
+		local quest_world_name = string.gsub(QuestWorlds[i], "~!", "")
+		
+		menu:addFullButton(_(QuestWorlds[i]), quest_world_hotkey, offx + 208, offy + 104 + 36*quest_world_y,
+		function()
+			RunQuestMenu(quest_world_name);
+			if (RunningScenario) then
+				menu:stop()
+			end
+		end)
+		
+		quest_world_y = quest_world_y + 1
+	end
+
+	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + 36*quest_world_y,
 		function() menu:stop()
 	end)
 	return menu:run()
@@ -117,17 +125,21 @@ function RunQuestMenu(world)
 end
 
 function addQuestIcon(quest, menu, x, y)
+	local quest_icon_file = string.sub(CIcon:Get(quest.Icon).G:getFile(), 0, -5)
+	local quest_icon_frame = CIcon:Get(quest.Icon).Frame
 	local questicon
 	local b
 	if (GetArrayIncludes(wyr.preferences.QuestsCompleted, quest.Name)) then
-		questicon = CGraphic:New(quest.Icon .. "_grayed.png")
+		questicon = CGraphic:New(quest_icon_file .. "_grayed.png")
 		questicon:Load()
 		b = ImageButton("")
 	else
-		questicon = CPlayerColorGraphic:New(quest.Icon .. ".png")
+		questicon = CPlayerColorGraphic:New(quest_icon_file .. ".png")
 		questicon:Load()
 		b = PlayerColorImageButton("", quest.PlayerColor)
 	end
+	local quest_icon_x_origin = (quest_icon_frame * 46) % questicon:getGraphicWidth()
+	local quest_icon_y_origin = math.floor((quest_icon_frame * 46) / questicon:getGraphicWidth()) * 38
 	b:setActionCallback(
 		function()
 			PlaySound("click")
@@ -136,7 +148,8 @@ function addQuestIcon(quest, menu, x, y)
 			quest_menu:setSize(352, 352)
     			quest_menu:setPosition((Video.Width - quest_menu:getWidth()) / 2, (Video.Height - quest_menu:getHeight()) / 2)
 			quest_menu:addLabel(_(quest.Name), 176, 11)
-			local quest_menu_image = ImageWidget(questicon)
+			local quest_menu_image = PlayerColorImageWidget(questicon, quest.PlayerColor)
+			quest_menu_image:setImageOrigin(quest_icon_x_origin, quest_icon_y_origin)	
 			quest_menu:add(quest_menu_image, 153, 48)
 
 			local l = MultiLineLabel()
@@ -177,6 +190,7 @@ function addQuestIcon(quest, menu, x, y)
 		end
 	)
 	menu:add(b, x, y)
+	b:setImageOrigin(quest_icon_x_origin, quest_icon_y_origin)	
 	b:setNormalImage(questicon)
 	b:setPressedImage(questicon)
 	b:setDisabledImage(questicon)
@@ -202,7 +216,19 @@ function Briefing(quest)
 		SetPlayerData(GetThisPlayer(), "RaceName", quest.Civilization)
 	end
 
-	local menu = WarMenu(nil, GetBackground("ui/backgrounds/wyrm.png"))
+	local briefing_background = GetBackground("ui/backgrounds/wyrm.png")
+	if (quest.BriefingBackground ~= nil) then
+		briefing_background = GetBackground(quest.BriefingBackground)
+	end
+	
+	local menu = WarMenu(nil, briefing_background)
+	
+	wyrmsun.playlist = {}
+	if (quest.BriefingMusic) then
+		PlayMusic(quest.BriefingMusic)
+	else
+		StopMusic()
+	end	
 
 	if (quest.Name ~= nil) then
 		menu:addLabel(quest.Name, Video.Width / 2, 28 * Video.Height / 480, Fonts["large"], true)
@@ -222,11 +248,47 @@ function Briefing(quest)
 	sw:add(l, 0, 0)
 	menu:add(sw, Video.Width / 2 - (l:getWidth() / 2), 80 * Video.Height / 480)
 
+	if (quest.Objectives ~= nil) then
+		menu:addLabel("Objectives:", 372 * Video.Width / 640, 306 * Video.Height / 480, Fonts["large"], false)
+
+		local objectives = ""
+		table.foreachi(quest.Objectives, function(k,v) objectives = objectives .. v .. "\n" end)
+
+		local l = MultiLineLabel(objectives)
+		l:setFont(Fonts["large"])
+		l:setAlignment(MultiLineLabel.LEFT)
+		l:setLineWidth(250 * Video.Width / 640)
+		l:adjustSize()
+		menu:add(l, 372 * Video.Width / 640, (306 * Video.Height / 480) + 30)
+	end
+  
+	local voice = 0
+	local channel = -1
+
 	menu:addFullButton(_("~!Continue"), "c", Video.Width / 2 - 112, 440 * Video.Height / 480,
 		function()
+			if (quest.BriefingSounds) then
+				if (channel ~= -1) then
+					voice = table.getn(quest.BriefingSounds)
+					StopChannel(channel)
+				end
+			end
 			menu:stop()
+			StopMusic()
 		end
 	)
+
+	if (quest.BriefingSounds) then
+		function PlayNextVoice()
+			voice = voice + 1
+			if (voice <= table.getn(quest.BriefingSounds)) then
+				channel = PlaySoundFile(quest.BriefingSounds[voice], PlayNextVoice);
+			else
+				channel = -1
+			end
+		end
+		PlayNextVoice()
+	end
 
 	menu:run()
 end

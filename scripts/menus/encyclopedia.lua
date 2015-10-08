@@ -200,28 +200,8 @@ function addEncyclopediaIcon(unit_name, menu, x, y)
 	local encyclopedia_icon_x_origin = (encyclopedia_icon_frame * 46) % encyclopedia_icon:getGraphicWidth()
 	local encyclopedia_icon_y_origin = math.floor((encyclopedia_icon_frame * 46) / encyclopedia_icon:getGraphicWidth()) * 38
 	local playercolor
-	if (civilization == "celt") then
-		playercolor = "green"
-	elseif (civilization == "dwarf") then
-		playercolor = "red"
-	elseif (civilization == "english") then
-		playercolor = "red"
-	elseif (civilization == "germanic") then
-		playercolor = "orange"
-	elseif (civilization == "gnome") then
-		playercolor = "blue"
-	elseif (civilization == "goblin") then
-		playercolor = "teal"
-	elseif (civilization == "kobold") then
-		playercolor = "violet"
-	elseif (civilization == "elf") then
-		playercolor = "teal"
-	elseif (civilization == "orc") then
-		playercolor = "red"
-	elseif (civilization == "phoenician") then
-		playercolor = "black"
-	elseif (civilization == "teuton") then
-		playercolor = "orange"
+	if (civilization ~= "") then
+		playercolor = GetCivilizationDefaultColor(civilization)
 	else
 		playercolor = "gray"
 	end

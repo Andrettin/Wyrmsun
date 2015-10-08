@@ -388,6 +388,12 @@ function SinglePlayerTriggers()
 	end
 
 	if (CurrentQuest ~= "" and GetQuestFromName(CurrentQuest).Scenario ~= nil) then
+		if (GetQuestFromName(CurrentQuest).Objectives ~= nil) then -- if quest has pre-set objectives, add them now
+			RemovePlayerObjective(GetThisPlayer(), "- Defeat your enemies")
+			for i=1, table.getn(GetQuestFromName(CurrentQuest).Objectives) do
+				AddPlayerObjective(GetThisPlayer(), GetQuestFromName(CurrentQuest).Objectives[i])
+			end
+		end
 		Load(GetQuestFromName(CurrentQuest).Scenario)
 	end
 

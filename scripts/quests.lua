@@ -30,7 +30,7 @@
 Quests = {
 	OnTheVanaquisl = {
 		Name = "On the Vanaquisl",
-		Icon = "germanic/icons/warrior",
+		Icon = "icon-germanic-warrior",
 		Description = "Having assembled a great army, we are to attack the people of Vanaland and take their lands into our possession.\n\nMap: Tanais\n\nRewards: 1 Germanic Technology Point.",
 		World = "Earth",
 		Civilization = "germanic",
@@ -43,7 +43,7 @@ Quests = {
 	},
 	WestwardMigration = {
 		Name = "Westward Migration",
-		Icon = "germanic/icons/worker",
+		Icon = "icon-germanic-worker",
 		Description = "With expansion through Vanaland denied to us, we seek an alternative migration route to the west.\n\nMap: Holmgard\n\nRewards: 1 Germanic Technology Point.",
 		RequiredQuest = "On the Vanaquisl",
 		World = "Earth",
@@ -57,7 +57,7 @@ Quests = {
 	},
 	NorthwardsToTheSea = {
 		Name = "Northwards to the Sea",
-		Icon = "germanic/icons/town_hall",
+		Icon = "icon-germanic-town-hall",
 		Description = "After moving southwest, we now find ourselves near a peninsula which seems promising for settlement.\n\nMap: Jutland\n\nRewards: 2 Germanic Technology Points.",
 		RequiredQuest = "Westward Migration",
 		World = "Earth",
@@ -71,7 +71,7 @@ Quests = {
 	},
 	GylvesRealm = {
 		Name = "Gylve's Realm",
-		Icon = "germanic/icons/barbed_arrow",
+		Icon = "icon-germanic-barbed-arrow",
 		Description = "After establishing ourselves in Jutland and the islands of Fyen and Zealand we journeyed north, but we do not seem welcome in these new shores...\n\nMap: Malmo\n\nRewards: 2 Germanic Technology Points.",
 		RequiredQuest = "Northwards to the Sea",
 		World = "Earth",
@@ -85,7 +85,7 @@ Quests = {
 	},
 	TheBattleOfMagetobria = {
 		Name = "The Battle of Magetobria",
-		Icon = "germanic/icons/broad_sword",
+		Icon = "icon-germanic-broad-sword",
 		Description = "Under the leadership of Ariovistus, we have crossed the Rhine to aid the Sequani and the Arverni in defeating the Aedui, and now an Aedui army approaches the Sequani settlement of Magetobria...\n\nMap: Belfort\n\nRewards: 2 Teuton Technology Points.",
 		RequiredQuest = "Gylve's Realm",
 		World = "Earth",
@@ -99,7 +99,7 @@ Quests = {
 	},
 	TheHomeOfTheBoii = {
 		Name = "The Home of the Boii",
-		Icon = "teuton/icons/marbod",
+		Icon = "icon-marbod",
 		Description = "After a devastating conflict with the Romans, Marbod seeks to lead the tribe of the Marcomanni to safer lands.\n\nMap: Prague\n\nRewards: 3 Teuton Technology Points.",
 		RequiredQuest = "The Battle of Magetobria",
 		World = "Earth",
@@ -113,7 +113,7 @@ Quests = {
 	},
 	TheSackOfIuvavum = {
 		Name = "The Sack of Iuvavum",
-		Icon = "teuton/icons/spatha",
+		Icon = "icon-teuton-spatha",
 		Description = "Almost two centuries after the time of Marbod, the Marcomanni chieftain Ballomar has gathered more than a dozen Germanic tribes in an alliance to invade the Roman Empire.\n\nMap: Salzburg\n\nRewards: 2 Teuton Technology Points.",
 		RequiredQuest = "The Home of the Boii",
 		World = "Earth",
@@ -127,7 +127,7 @@ Quests = {
 	},
 	TheRazingOfOpitergium = {
 		Name = "The Razing of Opitergium",
-		Icon = "neutral/icons/catapult_projectile_sandstone",
+		Icon = "icon-catapult-projectile-1",
 		Description = "Leaving a trail of destruction behind them, the Marcomanni have now reached Italy and lay siege to the Roman city of Opitergium.\n\nMap: Oderzo\n\nRewards: 2 Teuton Technology Points.",
 		RequiredQuest = "The Sack of Iuvavum",
 		World = "Earth",
@@ -141,7 +141,7 @@ Quests = {
 	},
 	MovingIntoGalicia = { -- happened in 411 AD
 		Name = "Moving into Galicia",
-		Icon = "teuton/icons/town_hall",
+		Icon = "icon-teuton-town-hall",
 		Description = "Times are changing. The Roman Empire, once invincible, is now falling prey to a conjunction of domestic troubles and external pressures. A group of Suebi has decided to take on this opportunity, moving into the Roman province of Galicia...\n\nMap: Braga\n\nRewards: 2 Teuton Technology Points.",
 		RequiredQuest = "The Razing of Opitergium",
 		World = "Earth",
@@ -155,7 +155,7 @@ Quests = {
 	},
 	TheBlueDanube = {
 		Name = "The Blue Danube",
-		Icon = "teuton/icons/saxon_swordsman",
+		Icon = "icon-teuton-swordsman",
 		Description = "As time passed, the Marcomanni abandoned their old name and adopted a new one - that of the Bavarians. Expelled from Bohemia by the Lombards, they must now seek a home on the margins of the Danube, facing the forces of the crumbling Roman Empire, if need be.\n\nMap: Regensburg\n\nRewards: 3 Teuton Technology Points.",
 		RequiredQuest = "The Razing of Opitergium",
 		World = "Earth",
@@ -169,7 +169,7 @@ Quests = {
 	},
 	ARockyHome = {
 		Name = "A Rocky Home",
-		Icon = "dwarf/icons/modsognir",
+		Icon = "icon-modsognir",
 		Description = "A clan of dwarves led by Modsognir has arrived in Svarinshaug, seeking a new home. Beset by hostile natural forces on all sides, can they survive their first winter?\n\nMap: Svarinshaug\n\nRewards: 1 Dwarven Technology Point.",
 		World = "Nidavellir",
 		Civilization = "dwarf",
@@ -182,7 +182,7 @@ Quests = {
 	},
 	TheMeadOfWisdom = {
 		Name = "The Mead of Wisdom",
-		Icon = "dwarf/icons/durin",
+		Icon = "icon-durin",
 		Description = "The sage of Modsognir's clan has disappeared, taken by two dwarves called Fjalar and Galar. Modsognir has sent Durin to enter their hall, rescue the sage - or what remains of him - and bring the evil pair to justice.\n\nMap: Fjalar's and Galar's Hall\n\nRewards: 2 Dwarven Technology Points.",
 		RequiredQuest = "A Rocky Home",
 		World = "Nidavellir",
@@ -196,7 +196,7 @@ Quests = {
 	},
 	TheTreasuresOfSvarinshaug = {
 		Name = "The Treasures of Svarinshaug",
-		Icon = "dwarf/icons/smithy",
+		Icon = "icon-dwarven-smithy",
 		Description = "The dwarven smiths Brokk and Eitri are competing with the renowned sons of Ivaldi to craft the best artifacts for Modsognir. To obtain the necessary high quality ores will be perilous, however, as dangerous creatures abound in the deep mines where they lay...\n\nMap: Eastern Mines\n\nRewards: 1 Dwarven Technology Point.",
 		RequiredQuest = "The Mead of Wisdom",
 		World = "Nidavellir",
@@ -210,7 +210,7 @@ Quests = {
 	},
 	TheNecklaceOfTheBrisings = {
 		Name = "The Necklace of the Brisings",
-		Icon = "dwarf/icons/dwarven_steelclad",
+		Icon = "icon-dwarven-steelclad",
 		Description = "The necklace made for Modsognir's wife by the Brisings - a group of four dwarven smiths - has been stolen! The culprits, a band of local dwarven thieves, sneaked away with the necklace last night, going back to their hideout. We must recover the necklace from these bandits!\n\nMap: Aurvang\n\nRewards: 2 Dwarven Technology Points.",
 		RequiredQuest = "The Treasures of Svarinshaug",
 		World = "Nidavellir",
@@ -224,7 +224,7 @@ Quests = {
 	},
 	TheBindingOfGrafvitnir = {
 		Name = "The Binding of Grafvitnir",
-		Icon = "neutral/icons/wyrm",
+		Icon = "icon-wyrm",
 		Description = "The colossal wyrm Grafvitnir threatens the survival of the fledgling dwarves, who have little chance of slaying the monstrous creature. The only hope rests in getting close enough to bind Grafvitnir with a powerful fetter crafted by the clan's talented smiths.\n\nMap: Grafvitnir's Lair\n\nRewards: 2 Dwarven Technology Points.",
 		RequiredQuest = "The Necklace of the Brisings",
 		World = "Nidavellir",
@@ -238,7 +238,7 @@ Quests = {
 	},
 	TheTombOfDurahnEikinskjaldi = {
 		Name = "The Tomb of Durahn Eikinskjaldi",
-		Icon = "dwarf/icons/shield_3",
+		Icon = "icon-dwarven-shield-3",
 		Description = "The dwarves of the Eikinskjaldi Clan need to recover Durahn Eikinskjaldi's skull to prove their claim in the lordship of Joruvellir, but Durahn's tomb has fallen prey to a band of gnomish raiders...\n\nMap: Tomb of Durahn Eikinskjaldi\n\nRewards: 1 Dwarven Technology Point.",
 		RequiredQuest = "The Necklace of the Brisings",
 		World = "Nidavellir",
@@ -252,7 +252,7 @@ Quests = {
 	},
 	ABargainIsStruck = {
 		Name = "A Bargain is Struck",
-		Icon = "dwarf/icons/rugnur",
+		Icon = "icon-rugnur",
 		Description = "A gnomish monarch arrives at a small border outpost led by Rugnur, asking that his clan craft a special scepter for him.\n\nMap: Chaincolt Foothills\n\nRewards: 2 Dwarven Technology Points.",
 		RequiredQuest = "The Mead of Wisdom",
 		World = "Nidavellir",
@@ -266,7 +266,7 @@ Quests = {
 	},
 	ClosingTheGates = {
 		Name = "Closing the Gates",
-		Icon = "dwarf/icons/baglur",
+		Icon = "icon-baglur",
 		Description = "Having retreated from the raiders' onslaught, Rugnur reaches the gates of his clan's tunnels.\n\nMap: Caverns of Chaincolt\n\nRewards: 2 Dwarven Technology Points.",
 		RequiredQuest = "A Bargain is Struck",
 		World = "Nidavellir",
@@ -280,7 +280,7 @@ Quests = {
 	},
 	SearchingForTheRunecrafter = {
 		Name = "Searching for the Runecrafter",
-		Icon = "dwarf/icons/thursagan",
+		Icon = "icon-thursagan",
 		Description = "Rugnur's expedition reaches the northlands, and begin to search for the runesmith named Thursagan - the sage of fire.\n\nMap: Northern Wastelands\n\nRewards: 2 Dwarven Technology Points.",
 		RequiredQuest = "Closing the Gates",
 		World = "Nidavellir",
@@ -294,7 +294,7 @@ Quests = {
 	},
 	GatheringMaterials = {
 		Name = "Gathering Materials",
-		Icon = "dwarf/icons/miner",
+		Icon = "icon-dwarven-miner",
 		Description = "Rugnur and his brave companions, having spent two years harvesting materials in the tunnels of the eastern mines, now venture into the very heart of the goblins' territory to obtain the last materials needed...\n\nMap: Eastern Mines\n\nRewards: 2 Dwarven Technology Points.",
 		RequiredQuest = "Searching for the Runecrafter",
 		World = "Nidavellir",
@@ -308,7 +308,7 @@ Quests = {
 	},
 	HillsOfTheShorbearClan = {
 		Name = "Hills of the Shorbear Clan",
-		Icon = "dwarf/icons/durstorn",
+		Icon = "icon-durstorn",
 		Description = "Durstorn, Rugnur and their companions travel to the hills of the Shorbear Clan, seeking access to that tribe's magnificent tools, which are needed to craft the Scepter of Fire.\n\nMap: Shorbear Hills\n\nRewards: 2 Dwarven Technology Points.",
 		RequiredQuest = "Gathering Materials",
 		World = "Nidavellir",
@@ -322,7 +322,7 @@ Quests = {
 	},
 	TheWyrm = {
 		Name = "The Wyrm",
-		Icon = "neutral/icons/wyrm_vicious",
+		Icon = "icon-wyrm-vicious",
 		Description = "Rugnur's dwarves delve deep into underground caves, seeking to escape from the Shinsplitter Clan. However, the section of the old eastern mines that they reached had long since become the lair of Svafnir... the wyrm.\n\nMap: Svafnir's Lair\n\nRewards: 2 Dwarven Technology Points.",
 		RequiredQuest = "Hills of the Shorbear Clan",
 		World = "Nidavellir",
@@ -336,7 +336,7 @@ Quests = {
 	},
 	CavernsOfFlame = {
 		Name = "Caverns of Flame",
-		Icon = "goblin/icons/goblin_spearman",
+		Icon = "icon-goblin-spearman",
 		Description = "Rugnur and his companions reach deep into the Caverns of Flame, where they find an ancient dwarven mechanism which may just allow them to prevent the Shinsplitters from getting their hands on the Scepter.\n\nMap: Caverns of Flame\n\nRewards: 1 Dwarven Technology Point.",
 		RequiredQuest = "The Wyrm",
 		World = "Nidavellir",
@@ -350,7 +350,7 @@ Quests = {
 	},
 	LastStandAtTheForge = {
 		Name = "Last Stand at the Forge",
-		Icon = "dwarf/icons/smithy",
+		Icon = "icon-dwarven-smithy",
 		Description = "Goblins are overruning dwarven settlements in the region of the Caverns of Flame. The volcanic forge must be defended, lest the goblins be able to use it to craft wondrous weapon with which they could inflict even more damage on dwarven societies.\n\nMap: Svafnir's Lair\n\nRewards: 1 Dwarven Technology Point.",
 		RequiredTechnology = "upgrade-dwarven-alchemy",
 		World = "Nidavellir",

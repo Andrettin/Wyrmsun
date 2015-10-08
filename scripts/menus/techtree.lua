@@ -142,18 +142,7 @@ function RunTechTreeMenu(civilization_number)
 		return b
 	end
 
-	local playercolor
-	if (civilization == "dwarf") then
-		playercolor = "red"
-	elseif (civilization == "english") then
-		playercolor = "red"
-	elseif (civilization == "germanic") then
-		playercolor = "orange"
-	elseif (civilization == "orc") then
-		playercolor = "red"
-	elseif (civilization == "teuton") then
-		playercolor = "orange"
-	end
+	local playercolor = GetCivilizationDefaultColor(civilization)
 
 	for i, unitName in ipairs(Units) do
 		if (string.find(unitName, "upgrade-") == nil) then

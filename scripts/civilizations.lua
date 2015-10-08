@@ -94,7 +94,8 @@ DefineRaceNames(
 		"name", "dwarf",
 		"display", "Dwarf",
 		"visible",
-		"species", "dwarf"
+		"species", "dwarf",
+		"default-color", "red"
 	},
 	--[[
 	"race", {
@@ -108,7 +109,8 @@ DefineRaceNames(
 			"Slagfid", -- from Norse mythology, brother of Egil and Volund
 			"Volund" -- elven smith from Norse mythology, brother of Slagfid and Egil
 		},
-		"playable", false
+		"playable", false,
+		"default-color", "teal"
 	},
 	--]]
 	--[[
@@ -134,7 +136,8 @@ DefineRaceNames(
 		"name-translations", {
 			"Lisboa", "Lisbon",
 			"Wien", "Vienna"
-		}
+		},
+		"default-color", "red"
 	},
 	--]]
 	"race", {
@@ -160,7 +163,8 @@ DefineRaceNames(
 			"ridaz", -- Ridaz = Rider
 			"riks", -- Riks = Ruler
 			"staldaz" -- Staldaz = Owner
-		}
+		},
+		"default-color", "orange"
 	},
 	"race", { -- has to be defined after the germanic civilization because it uses it as its parent civilization
 		"name", "celt",
@@ -168,7 +172,8 @@ DefineRaceNames(
 		"visible",
 		"species", "human",
 		"parent-civilization", "germanic",
-		"playable", false
+		"playable", false,
+		"default-color", "green"
 	},
 	"race", {
 		"name", "gnome",
@@ -177,7 +182,8 @@ DefineRaceNames(
 		"species", "gnome",
 		"parent-civilization", "dwarf",
 		"personal-names", {"Bimbam", "Clavo", "Cravatu", "Kalutho", "Pypo", "Rubezahl"},
-		"playable", false
+		"playable", false,
+		"default-color", "blue"
 	},
 	"race", {
 		"name", "goblin",
@@ -187,7 +193,8 @@ DefineRaceNames(
 		"personal-names", {"Dran", "Erdog", "Fal Khag", "Gashnok", "Gatrakh", "Gorokh", "Greebo", "Grogor-Tuk", "Hrugt", "Kardur", "Kartrog", "Krung", "Odrun", "Orhtib", "Ozdul", "Panok", "Pruol", "Sbrak", "Sdrul", "Thurg", "T'shar Lggi", "Uhmit", "Urdum", "Utrub", "Vrag", "Vrunt", "Zhuk", "Zuzerd"},
 		"personal-name-prefixes", {"Gom", "Grash", "Grut", "Gum", "Kar", "Kret", "Krom", "Stug"}, -- from Mike Anderson's Tyrant
 		"personal-name-suffixes", {"bag", "dag", "lig", "lug", "nak", "nark", "rat", "tug"}, -- from Mike Anderson's Tyrant
-		"playable", false
+		"playable", false,
+		"default-color", "teal"
 	},
 	"race", {
 		"name", "kobold",
@@ -197,7 +204,8 @@ DefineRaceNames(
 		"personal-name-prefixes", {"Hod", "Hoid", "Napf", "Pump"},
 		"personal-name-suffixes", {"coat", "eke", "ike", "hut"}, -- Hut = Hat
 		"parent-civilization", "goblin",
-		"playable", false
+		"playable", false,
+		"default-color", "violet"
 		 -- Sources for Kobold names: Hodeke (Jacob Grimm, "Deutsche Mythologie", pp. 392, 1049, 1080), Hoidike (Jacob Grimm, "Deutsche Mythologie", p. 392), Napfhans (Jacob Grimm, "Deutsche Mythologie", p. 393), Pumphut (Jacob Grimm, "Deutsche Mythologie", p. 1049), Shellycoat (Jacob Grimm, "Deutsche Mythologie", p. 394)
 	},
 	"race", {
@@ -312,6 +320,7 @@ DefineRaceNames(
 			"Waida", "Waid", -- from Proto-Germanic to German
 			"Walakuzjōn", "Walküre" -- from Proto-Germanic to German
 		},
+		"default-color", "orange"
 	},
 	"race", {
 		"name", "basque", -- represents not only the speakers of Vasconic languages, but also various pre-Indo-European cultures
@@ -564,7 +573,8 @@ DefineRaceNames(
 		"visible",
 		"species", "human",
 		"parent-civilization", "teuton",
-		"playable", false
+		"playable", false,
+		"default-color", "black"
 	},
 	"race", {
 		"name", "phrygian",
