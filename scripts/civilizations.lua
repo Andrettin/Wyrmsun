@@ -585,6 +585,15 @@ DefineRaceNames(
 		"playable", false
 	},
 	"race", {
+		"name", "slav",
+		"display", "Slav",
+		"visible",
+		"species", "human",
+		"parent-civilization", "teuton",
+		"playable", false,
+		"default-color", "blue"
+	},
+	"race", {
 		"name", "thracian",
 		"display", "Thracian",
 		"visible",
@@ -608,6 +617,7 @@ Load("scripts/greek/factions.lua")
 Load("scripts/latin/factions.lua")
 Load("scripts/minoan/factions.lua")
 Load("scripts/norse/factions.lua")
+Load("scripts/slav/factions.lua")
 Load("scripts/teuton/factions.lua")
 Load("scripts/factions.lua")
 

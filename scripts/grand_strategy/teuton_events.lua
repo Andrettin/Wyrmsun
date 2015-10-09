@@ -528,7 +528,8 @@ local TeutonEvents = {
 		Conditions = function(s)
 			if (
 				EventFaction.Name == "Prussia" -- should also be possible for other countries, but let's leave this here for now so that this event doesn't trigger in antiquity
-				and GetProvinceOwner("Baltic Lands") == EventFaction.Name
+				and GetProvinceOwner("Estonia") == EventFaction.Name
+				and GetProvinceOwner("Latvia") == EventFaction.Name
 				-- should only trigger after a technology for the appropriate time period has been researched
 			) then
 				return true

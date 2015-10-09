@@ -397,6 +397,15 @@ DefineFaction("Netherlands", {
 	}
 })
 
+DefineFaction("Overijssel", {
+	Civilization = "teuton",
+	Type = "polity",
+	Color = "pink",
+	SecondaryColor = "pink",
+	DefaultTier = "barony", -- Overijssel was a lordship in 1559-1600; Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
+	DevelopsTo = {"Netherlands"}
+})
+
 DefineFaction("Prussia", {
 	Civilization = "teuton",
 	Type = "polity",
@@ -487,18 +496,6 @@ DefineFaction("Crimea", {
 	}
 })
 
-DefineFaction("Croatia", {
-	Civilization = "teuton",
-	Type = "polity",
-	Color = "blue",
-	SecondaryColor = "red",
-	Playable = false,
-	DefaultTier = "kingdom",
-	Titles = {
-		"monarchy", "kingdom", "Kingdom"
-	}
-})
-
 DefineFaction("Hungary", {
 	Civilization = "teuton",
 	Type = "polity",
@@ -508,51 +505,6 @@ DefineFaction("Hungary", {
 	DefaultTier = "kingdom",
 	Titles = {
 		"monarchy", "kingdom", "Kingdom"
-	}
-})
-
-DefineFaction("Muscovy", {
-	Civilization = "teuton",
-	Type = "polity",
-	Color = "red",
-	SecondaryColor = "red",
-	Playable = false,
-	DefaultTier = "duchy",
-	Titles = {
-		"monarchy", "duchy", "Principality"
-	}
-})
-
-DefineFaction("Overijssel", {
-	Civilization = "teuton",
-	Type = "polity",
-	Color = "pink",
-	SecondaryColor = "pink",
-	DefaultTier = "barony", -- Overijssel was a lordship in 1559-1600; Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
-	DevelopsTo = {"Netherlands"}
-})
-
-DefineFaction("Poland", {
-	Civilization = "teuton",
-	Type = "polity",
-	Color = "red",
-	SecondaryColor = "white",
-	Playable = false,
-	DefaultTier = "kingdom",
-	Titles = {
-		"monarchy", "kingdom", "Kingdom"
-	}
-})
-
-DefineFaction("Russia", {
-	Civilization = "teuton",
-	Type = "polity",
-	Color = "blue",
-	SecondaryColor = "red",
-	Playable = false,
-	DefaultTier = "empire",
-	Titles = {
-		"monarchy", "empire", "Empire"
 	}
 })
 
