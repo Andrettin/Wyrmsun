@@ -317,3 +317,7 @@ DefineDependency("unit-dwarven-yale-pen",
 DefineDependency("unit-dwarven-yale-rider",
 	{"unit-dwarven-smithy", "unit-dwarven-yale-pen"}
 )
+
+DefineDependency("unit-dwarven-gryphon-rider",
+	{"unit-dwarven-stronghold", "unit-dwarven-lumber-mill"}
+)

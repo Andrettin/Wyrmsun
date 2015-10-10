@@ -350,6 +350,12 @@ DefineButton( { Pos = 4, Level = 0, Icon = "icon-dwarven-ballista",
 	ForUnit = {"unit-dwarven-barracks", "unit-gnomish-barracks"}
 } )
 
+DefineButton( { Pos = 5, Level = 0, Icon = "icon-dwarven-gryphon-rider",
+	Action = "train-unit", Value = "unit-dwarven-gryphon-rider",
+	Key = "g", Hint = _("Train ~!Gryphon Rider"), Popup = "popup-unit",
+	ForUnit = {"unit-dwarven-barracks", "unit-gnomish-barracks"}
+} )
+
 DefineButton( { Pos = 5, Level = 0, Icon = "icon-surghan-mercenary-steelclad",
 	Action = "train-unit", Value = "unit-surghan-mercenary-steelclad",
 	Key = "s", Hint = _("Hire ~!Surghan Mercenaries"), Popup = "popup-unit",

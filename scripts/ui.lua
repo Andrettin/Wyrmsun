@@ -828,6 +828,9 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {BonusAgainstMounted = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("+% vs. Mounted: "), Variable = "BonusAgainstMounted", Font = wyr.preferences.PopupDescriptionFont}}
 				},
+				{ 	Condition = {BonusAgainstAir = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("+% vs. Air: "), Variable = "BonusAgainstAir", Font = wyr.preferences.PopupDescriptionFont}}
+				},
 				{ 	Condition = {BonusAgainstGiants = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("+% vs. Giants: "), Variable = "BonusAgainstGiants", Font = wyr.preferences.PopupDescriptionFont}}
 				},

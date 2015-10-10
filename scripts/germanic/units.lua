@@ -257,6 +257,7 @@ DefineUnitType("unit-germanic-archer", { Name = _("Skutan"),
 	TechnologyPointCost = 1,
 	DaySightRangeBonus = 1,
 	NightSightRangeBonus = -1,
+	BonusAgainstAir = 50,
 	PierceDamage = true,
 	Variations = {
 		{

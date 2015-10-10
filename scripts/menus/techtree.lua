@@ -174,6 +174,16 @@ function RunTechTreeMenu(civilization_number)
 					if ((GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("lumber-mill", civilization)) == false and GetTechnologyPointCost(civilization, GetCivilizationClassUnitType("lumber-mill", civilization)) > 0) or (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("smithy", civilization)) == false and GetTechnologyPointCost(civilization, GetCivilizationClassUnitType("smithy", civilization)) > 0)) then
 						tech_allowed = false
 					end
+				elseif (GetUnitTypeData(unitName, "Class") == "flying-rider") then
+					tech_icon_x = 8
+					tech_icon_y = 4
+					if (
+						(GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("lumber-mill", civilization)) == false and GetTechnologyPointCost(civilization, GetCivilizationClassUnitType("lumber-mill", civilization)) > 0)
+						or (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("stronghold", civilization)) == false and GetTechnologyPointCost(civilization, GetCivilizationClassUnitType("stronghold", civilization)) > 0)
+						or (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("shooter", civilization)) == false and GetTechnologyPointCost(civilization, GetCivilizationClassUnitType("shooter", civilization)) > 0)
+					) then
+						tech_allowed = false
+					end
 				elseif (GetUnitTypeData(unitName, "Class") == "town-hall") then
 					tech_icon_x = 5
 					tech_icon_y = 2
@@ -384,6 +394,9 @@ function GetTechnologyAllowsString(technology, civilization)
 	local allowed_technologies = {}
 	if (string.find(technology, "upgrade-") == nil) then
 		if (GetUnitTypeData(technology, "Class") == "shooter") then
+			if (GetCivilizationClassUnitType("flying-rider", civilization) ~= nil) then
+				table.insert(allowed_technologies, GetCivilizationClassUnitType("flying-rider", civilization))
+			end
 			if (GetCivilizationClassUnitType("ranged-projectile-1", civilization) ~= nil) then
 				table.insert(allowed_technologies, GetCivilizationClassUnitType("ranged-projectile-1", civilization))
 			end
@@ -397,6 +410,9 @@ function GetTechnologyAllowsString(technology, civilization)
 			end
 			if (GetCivilizationClassUnitType("siege-engine", civilization) ~= nil) then
 				table.insert(allowed_technologies, GetCivilizationClassUnitType("siege-engine", civilization))
+			end
+			if (GetCivilizationClassUnitType("flying-rider", civilization) ~= nil) then
+				table.insert(allowed_technologies, GetCivilizationClassUnitType("flying-rider", civilization))
 			end
 			if (GetCivilizationClassUnitType("stables", civilization) ~= nil) then
 				table.insert(allowed_technologies, GetCivilizationClassUnitType("stables", civilization))
@@ -435,6 +451,9 @@ function GetTechnologyAllowsString(technology, civilization)
 				table.insert(allowed_technologies, GetCivilizationClassUnitType("guard-tower", civilization))
 			end
 		elseif (GetUnitTypeData(technology, "Class") == "stronghold") then
+			if (GetCivilizationClassUnitType("flying-rider", civilization) ~= nil) then
+				table.insert(allowed_technologies, GetCivilizationClassUnitType("flying-rider", civilization))
+			end
 			if (GetCivilizationClassUnitType("coinage", civilization) ~= nil) then
 				table.insert(allowed_technologies, GetCivilizationClassUnitType("coinage", civilization))
 			end

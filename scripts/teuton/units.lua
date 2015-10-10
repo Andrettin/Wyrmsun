@@ -198,6 +198,7 @@ DefineUnitType("unit-teuton-archer", { Name = _("Skutan"),
 	Corpse = "unit-human-dead-body",
 	DaySightRangeBonus = 1,
 	NightSightRangeBonus = -1,
+	BonusAgainstAir = 50,
 	PierceDamage = true,
 	Variations = {
 		{

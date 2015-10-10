@@ -3724,6 +3724,37 @@ DefineUnitType("unit-template-siege-engine", { Name = _("Siege Engine"),
 	}
 } )
 
+DefineUnitType("unit-template-flying-rider", { Name = _("Flying Rider"),
+	Class = "flying-rider",
+	Costs = {"time", 250, "gold", 1750, "lumber", 750},
+	Speed = 14,
+	HitPoints = 100,
+	DrawLevel = 60,
+	TileSize = {2, 2}, BoxSize = {63, 63},
+	SightRange = 6,
+	BasicDamage = 11, Missile = "missile-arrow",
+	MaxAttackRange = 5,
+	Accuracy = 10,
+	Evasion = 10,
+	Priority = 65,
+	Points = 150,
+	StartingLevel = 3,
+	Demand = 1,
+	Gender = 1, -- 1 = Male, 2 = Female
+	Type = "fly",
+	RightMouseAction = "attack",
+	CanAttack = true,
+	CanTargetLand = true, CanTargetSea = true, CanTargetAir = true,
+	DetectCloak = true,
+	organic = true,
+	Flesh = true,
+	Mounted = true,
+	SelectableByRectangle = true,
+	TechnologyPointCost = 1,
+	Sounds = {
+	}
+} )
+
 DefineUnitType("unit-template-town-hall", { Name = _("Town Hall"),
 	Class = "town-hall",
 	Animations = "animations-building",

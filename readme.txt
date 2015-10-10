@@ -279,6 +279,8 @@ https://github.com/Andrettin/Wyrmsun
 - The Dwarven Yale Rider is now trainable, if the player has a Yale Pen and a Smithy.
 - Added Horse (unit graphics by b_o).
 - Fixed the display of the mercenary hiring popup.
+- Dwarven Gryphon Riders are now trainable (they require a Lumber Mill and a Bastion to be trained).
+- Germanic and Teuton archers now have a 50% damage bonus against air units.
 
 -----------------------------------------------------------------------
 - 1.3.3
