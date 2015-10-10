@@ -11491,6 +11491,12 @@ if (GrandStrategyYear >= -5500) then
 	SetProvinceOwner("Pannonia", "basque", "Linearware Tribe")
 	SetProvinceCivilization("Pannonia", "basque")
 	SetProvinceSettlementBuilding("Pannonia", "unit-germanic-town-hall", true)
+	SetProvinceOwner("Moravia", "basque", "Linearware Tribe")
+	SetProvinceCivilization("Moravia", "basque")
+	SetProvinceSettlementBuilding("Moravia", "unit-germanic-town-hall", true)
+	SetProvinceOwner("Slovakia", "basque", "Linearware Tribe")
+	SetProvinceCivilization("Slovakia", "basque")
+	SetProvinceSettlementBuilding("Slovakia", "unit-germanic-town-hall", true)
 		
 	-- Tybrind Vig (in the coast of the Danish island of Fyn) begins being occupied around 5500 BC (it pertained to the Ertebolle culture); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 142.
 	
@@ -12140,7 +12146,6 @@ end
 if (GrandStrategyYear >= -400) then -- Boii attested c. 400 BC; Source: John T. Koch, "Celtic Culture: Aberdeen breviary-celticism", 2006, pp. 223-224.
 	SetProvinceOwner("Bohemia", "celt", "Boii Tribe")
 	SetProvinceCivilization("Bohemia", "celt")
-	SetProvinceUnitQuantity("Bohemia", "unit-germanic-warrior", 0)
 end
 
 
@@ -12668,6 +12673,13 @@ if (GrandStrategyYear >= -9) then -- Marbod, king of the Suebic tribe of the Mar
 	SetProvinceUnitQuantity("Bohemia", "unit-teuton-archer", 2) -- let's make 20,000 of those soldiers into archers
 	SetProvinceUnitQuantity("Bohemia", "unit-teuton-swordsman", GetProvinceUnitQuantity("Bohemia", "unit-teuton-swordsman") + 1) -- treat cavalry as infantry for now, while cavalry units haven't been added yet
 	AcquireFactionTechnologies("teuton", "Suebi Tribe", "teuton", "Marcomanni Tribe")
+	
+	-- if the Boii were conquered by the Marcomanni in 9 BC, the Quadi probably moved to Moravia and Slovakia at around the same time
+	SetProvinceOwner("Moravia", "teuton", "Quadi Tribe")
+	SetProvinceCivilization("Moravia", "teuton")
+	SetProvinceOwner("Slovakia", "teuton", "Quadi Tribe")
+	SetProvinceCivilization("Slovakia", "teuton")
+	AcquireFactionTechnologies("teuton", "Suebi Tribe", "teuton", "Quadi Tribe")
 end
 
 if (GrandStrategyYear >= 0) then
@@ -12996,6 +13008,10 @@ if (GrandStrategyYear >= 526) then -- political situation in 526-600 in Europe; 
 	SetProvinceCivilization("Bavaria", "teuton")
 	SetProvinceOwner("Bohemia", "teuton", "Bavarian Tribe")
 	SetProvinceCivilization("Bohemia", "teuton")
+	SetProvinceOwner("Moravia", "teuton", "Bavarian Tribe")
+	SetProvinceCivilization("Moravia", "teuton")
+	SetProvinceOwner("Slovakia", "teuton", "Lombard Tribe")
+	SetProvinceCivilization("Slovakia", "teuton")
 	SetProvinceOwner("Holland", "teuton", "Frisian Tribe")
 	
 	SetProvinceOwner("Scania", "norse", "Dane Tribe") -- Danes were in southern Scandinavia in 526 (so presumably this would be their dwelling place previously as well); Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
@@ -13351,6 +13367,8 @@ if (GrandStrategyYear >= 1560) then -- Political situation in Europe in 1560 AD;
 	SetFactionTier("teuton", "Austria", "grand duchy")
 	SetProvinceOwner("Austria", "teuton", "Austria")
 	SetProvinceOwner("Bohemia", "teuton", "Austria")
+	SetProvinceOwner("Moravia", "teuton", "Austria")
+	SetProvinceOwner("Slovakia", "teuton", "Austria")
 	SetProvinceOwner("Carniola", "teuton", "Austria")
 	SetProvinceOwner("Istria", "teuton", "Austria") -- the outer parts of Istria were owned by Venice, but the inner parts (including Trieste) were owned by Austria)
 	SetProvinceOwner("Silesia", "teuton", "Austria")

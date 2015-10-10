@@ -159,6 +159,14 @@ DefineFaction("Marcomanni Tribe", {
 	DevelopsTo = {"Bavaria", "Galicia", "Austria"}
 })
 
+DefineFaction("Quadi Tribe", {
+	Civilization = "teuton",
+	Type = "tribe",
+	Color = "brown",
+	SecondaryColor = "brown",
+	DevelopsTo = {"Bavaria", "Galicia", "Austria"} -- the Quadi were a Suebic tribe
+})
+
 DefineFaction("Saxon Tribe", {
 	Civilization = "teuton",
 	Type = "tribe",
