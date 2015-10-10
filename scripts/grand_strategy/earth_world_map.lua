@@ -11668,11 +11668,14 @@ if (GrandStrategyYear >= -2800) then -- establishment of the Single Grave Cultur
 	
 	SetProvinceOwner("Scania", "germanic", "Asa Tribe")
 	SetProvinceCivilization("Scania", "germanic")
+	SetProvinceSettlementBuilding("Scania", "unit-germanic-town-hall", true)
 	SetProvinceOwner("Zealand", "germanic", "Asa Tribe")
 	SetProvinceCivilization("Zealand", "germanic")
+	SetProvinceSettlementBuilding("Zealand", "unit-germanic-town-hall", true)
 
 	SetProvinceOwner("Gotaland", "germanic", "Asa Tribe")
 	SetProvinceCivilization("Gotaland", "germanic")
+	SetProvinceSettlementBuilding("Gotaland", "unit-germanic-town-hall", true)
 	
 	SetProvinceOwner("Astrakhan", "", "")
 	SetProvinceSettlementBuilding("Astrakhan", "unit-germanic-town-hall", false)
