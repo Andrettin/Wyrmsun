@@ -266,7 +266,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added new Gnashorn and Yale backgrounds (used for Wyrmsun with permission).
 
 * Modding
-- Added the possibility of making units have a bonus against buildings or a bonus against giants.
+- Added the possibility of making units have a damage bonus against buildings, against giants (with a corresponding "Giant" tag to be used by units) or against air units.
 - Added resistances against hack, pierce and blunt damage.
 - Added new types of damage with their respective resistances: fire, cold, arcane, lightning, air, earth and water.
 
