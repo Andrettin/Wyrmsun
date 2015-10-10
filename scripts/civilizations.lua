@@ -209,6 +209,14 @@ DefineRaceNames(
 		 -- Sources for Kobold names: Hodeke (Jacob Grimm, "Deutsche Mythologie", pp. 392, 1049, 1080), Hoidike (Jacob Grimm, "Deutsche Mythologie", p. 392), Napfhans (Jacob Grimm, "Deutsche Mythologie", p. 393), Pumphut (Jacob Grimm, "Deutsche Mythologie", p. 1049), Shellycoat (Jacob Grimm, "Deutsche Mythologie", p. 394)
 	},
 	"race", {
+		"name", "orc",
+		"display", "Orc",
+		"visible",
+		"species", "orc",
+		"playable", false,
+		"default-color", "red"
+	},
+	"race", {
 		"name", "teuton",
 		"display", "Teuton",
 		"visible",

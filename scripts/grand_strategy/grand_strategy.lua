@@ -3001,6 +3001,7 @@ function AIDoTurn(ai_faction)
 		local desired_infantry_in_province = 6
 		local desired_archers_in_province = 3
 		local desired_catapults_in_province = 1
+		local desired_flying_riders_in_province = 1
 
 		local borders_foreign = false
 
@@ -3034,10 +3035,12 @@ function AIDoTurn(ai_faction)
 					local new_desired_infantry_in_province = 0
 					local new_desired_archers_in_province = 0
 					local new_desired_catapults_in_province = 0
+					local new_desired_flying_riders_in_province = 0
 					if (GetProvinceMilitaryScore(WorldMapProvinces[second_key].Name, false, true) > 0) then
 						new_desired_infantry_in_province = round(desired_infantry_in_province * (GetProvinceMilitaryScore(WorldMapProvinces[second_key].Name, false, true) * 3 / 2) / base_military_score)
 						new_desired_archers_in_province = round(desired_archers_in_province * (GetProvinceMilitaryScore(WorldMapProvinces[second_key].Name, false, true) * 3 / 2) / base_military_score)
 						new_desired_catapults_in_province = round(desired_catapults_in_province * (GetProvinceMilitaryScore(WorldMapProvinces[second_key].Name, false, true) * 3 / 2) / base_military_score)
+						new_desired_flying_riders_in_province = round(desired_flying_riders_in_province * (GetProvinceMilitaryScore(WorldMapProvinces[second_key].Name, false, true) * 3 / 2) / base_military_score)
 					end
 					if (new_desired_infantry_in_province > desired_infantry_in_province) then
 						desired_infantry_in_province = new_desired_infantry_in_province
@@ -3047,6 +3050,9 @@ function AIDoTurn(ai_faction)
 					end
 					if (new_desired_catapults_in_province > desired_catapults_in_province) then
 						desired_catapults_in_province = new_desired_catapults_in_province
+					end
+					if (new_desired_flying_riders_in_province > desired_flying_riders_in_province) then
+						desired_flying_riders_in_province = new_desired_flying_riders_in_province
 					end
 				end
 			end
@@ -3084,10 +3090,12 @@ function AIDoTurn(ai_faction)
 						local new_desired_infantry_in_province = 0
 						local new_desired_archers_in_province = 0
 						local new_desired_catapults_in_province = 0
+						local new_desired_flying_riders_in_province = 0
 						if (GetProvinceMilitaryScore(WorldMapProvinces[second_key].Name, false, true) > 0) then
 							new_desired_infantry_in_province = round(desired_infantry_in_province * (GetProvinceMilitaryScore(WorldMapProvinces[second_key].Name, false, true) * 3 / 2) / base_military_score)
 							new_desired_archers_in_province = round(desired_archers_in_province * (GetProvinceMilitaryScore(WorldMapProvinces[second_key].Name, false, true) * 3 / 2) / base_military_score)
 							new_desired_catapults_in_province = round(desired_catapults_in_province * (GetProvinceMilitaryScore(WorldMapProvinces[second_key].Name, false, true) * 3 / 2) / base_military_score)
+							new_desired_flying_riders_in_province = round(desired_flying_riders_in_province * (GetProvinceMilitaryScore(WorldMapProvinces[second_key].Name, false, true) * 3 / 2) / base_military_score)
 						end
 						if (new_desired_infantry_in_province > desired_infantry_in_province) then
 							desired_infantry_in_province = new_desired_infantry_in_province
@@ -3097,6 +3105,9 @@ function AIDoTurn(ai_faction)
 						end
 						if (new_desired_catapults_in_province > desired_catapults_in_province) then
 							desired_catapults_in_province = new_desired_catapults_in_province
+						end
+						if (new_desired_flying_riders_in_province > desired_flying_riders_in_province) then
+							desired_flying_riders_in_province = new_desired_flying_riders_in_province
 						end
 					end
 				end
@@ -3131,10 +3142,12 @@ function AIDoTurn(ai_faction)
 					local new_desired_infantry_in_province = 0
 					local new_desired_archers_in_province = 0
 					local new_desired_catapults_in_province = 0
+					local new_desired_flying_riders_in_province = 0
 					if (GetProvinceMilitaryScore(WorldMapProvinces[second_key].Name, false, true) > 0) then
 						new_desired_infantry_in_province = round(desired_infantry_in_province * (GetProvinceMilitaryScore(WorldMapProvinces[second_key].Name, false, true) * 3 / 2) / base_military_score)
 						new_desired_archers_in_province = round(desired_archers_in_province * (GetProvinceMilitaryScore(WorldMapProvinces[second_key].Name, false, true) * 3 / 2) / base_military_score)
 						new_desired_catapults_in_province = round(desired_catapults_in_province * (GetProvinceMilitaryScore(WorldMapProvinces[second_key].Name, false, true) * 3 / 2) / base_military_score)
+						new_desired_flying_riders_in_province = round(desired_flying_riders_in_province * (GetProvinceMilitaryScore(WorldMapProvinces[second_key].Name, false, true) * 3 / 2) / base_military_score)
 					end
 					if (new_desired_infantry_in_province > desired_infantry_in_province) then
 						desired_infantry_in_province = new_desired_infantry_in_province
@@ -3144,6 +3157,9 @@ function AIDoTurn(ai_faction)
 					end
 					if (new_desired_catapults_in_province > desired_catapults_in_province) then
 						desired_catapults_in_province = new_desired_catapults_in_province
+					end
+					if (new_desired_flying_riders_in_province > desired_flying_riders_in_province) then
+						desired_flying_riders_in_province = new_desired_flying_riders_in_province
 					end
 				end
 			end
@@ -3158,6 +3174,7 @@ function AIDoTurn(ai_faction)
 			desired_infantry_in_province = 0
 			desired_archers_in_province = 0
 			desired_catapults_in_province = 0
+			desired_flying_riders_in_province = 0
 		end
 
 		for i, unitName in ipairs(Units) do
@@ -3182,6 +3199,14 @@ function AIDoTurn(ai_faction)
 					elseif (GetUnitTypeData(unitName, "Class") == "siege-engine" and desired_catapults_in_province > 0) then
 						for j=1,desired_catapults_in_province do
 							if ((GetProvinceUnitQuantity(WorldMapProvinces[key].Name, unitName) + GetProvinceUnderConstructionUnitQuantity(WorldMapProvinces[key].Name, unitName)) < desired_catapults_in_province and CanTrainUnit(WorldMapProvinces[key], unitName)) then
+								TrainUnit(WorldMapProvinces[key], unitName)
+							else
+								break
+							end
+						end
+					elseif (GetUnitTypeData(unitName, "Class") == "flying-rider" and desired_flying_riders_in_province > 0) then
+						for j=1,desired_flying_riders_in_province do
+							if ((GetProvinceUnitQuantity(WorldMapProvinces[key].Name, unitName) + GetProvinceUnderConstructionUnitQuantity(WorldMapProvinces[key].Name, unitName)) < desired_flying_riders_in_province and CanTrainUnit(WorldMapProvinces[key], unitName)) then
 								TrainUnit(WorldMapProvinces[key], unitName)
 							else
 								break
@@ -4065,7 +4090,7 @@ function GetUnitTypeInterfaceState(unit_type)
 		elseif (GetUnitTypeData(unit_type, "Class") == "glider") then
 			return "barracks"
 		elseif (GetUnitTypeData(unit_type, "Class") == "flying-rider") then
-			return "aviary"
+			return "barracks"
 		elseif (GetUnitTypeData(unit_type, "Class") == "thief") then
 			return "mercenary-camp"
 		else
@@ -4119,6 +4144,13 @@ function GetUnitTypeRequiredBuildings(unit_type)
 			end
 			if (GetCivilizationClassUnitType("smithy", GetUnitTypeData(unit_type, "Civilization")) ~= nil) then
 				table.insert(required_buildings, GetCivilizationClassUnitType("smithy", GetUnitTypeData(unit_type, "Civilization")))
+			end
+		elseif (GetUnitTypeData(unit_type, "Class") == "flying-rider") then
+			if (GetCivilizationClassUnitType("stronghold", GetUnitTypeData(unit_type, "Civilization")) ~= nil) then
+				table.insert(required_buildings, GetCivilizationClassUnitType("stronghold", GetUnitTypeData(unit_type, "Civilization")))
+			end
+			if (GetCivilizationClassUnitType("lumber-mill", GetUnitTypeData(unit_type, "Civilization")) ~= nil) then
+				table.insert(required_buildings, GetCivilizationClassUnitType("lumber-mill", GetUnitTypeData(unit_type, "Civilization")))
 			end
 		elseif (GetUnitTypeData(unit_type, "Class") == "glider") then
 			if (GetCivilizationClassUnitType("barracks", GetUnitTypeData(unit_type, "Civilization")) ~= nil) then
