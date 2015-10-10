@@ -13008,8 +13008,6 @@ if (GrandStrategyYear >= 526) then -- political situation in 526-600 in Europe; 
 	SetProvinceCivilization("Bavaria", "teuton")
 	SetProvinceOwner("Bohemia", "teuton", "Bavarian Tribe")
 	SetProvinceCivilization("Bohemia", "teuton")
-	SetProvinceOwner("Moravia", "teuton", "Bavarian Tribe")
-	SetProvinceCivilization("Moravia", "teuton")
 	SetProvinceOwner("Slovakia", "teuton", "Lombard Tribe")
 	SetProvinceCivilization("Slovakia", "teuton")
 	SetProvinceOwner("Holland", "teuton", "Frisian Tribe")
