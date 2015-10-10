@@ -46,6 +46,13 @@ DefineFaction("Boii Tribe", {
 	SecondaryColor = "brown"
 })
 
+DefineFaction("Cotini Tribe", {
+	Civilization = "celt",
+	Type = "tribe",
+	Color = "teal",
+	SecondaryColor = "teal"
+})
+
 DefineFaction("Helvetii Tribe", {
 	Civilization = "celt",
 	Type = "tribe",

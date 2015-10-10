@@ -72,6 +72,14 @@ DefineFaction("Bavarian Tribe", {
 	DevelopsTo = {"Bavaria", "Austria"}
 })
 
+DefineFaction("Buri Tribe", {
+	Civilization = "teuton", -- accurate?
+	Type = "tribe",
+	Color = "brown",
+	SecondaryColor = "brown",
+	DevelopsTo = {"Bavaria", "Galicia", "Austria"} -- accurate?
+})
+
 DefineFaction("Charude Tribe", {
 	Civilization = "teuton", -- were the Charudes actually West Germanic?
 	Type = "tribe",

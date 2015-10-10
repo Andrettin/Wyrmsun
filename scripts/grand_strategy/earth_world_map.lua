@@ -12376,6 +12376,21 @@ if (GrandStrategyYear >= -264) then
 	SetProvinceOwner("Lithuania", "slav", "Aestui Tribe")
 	SetProvinceCivilization("Lithuania", "slav")
 	SetProvinceSettlementBuilding("Lithuania", "unit-teuton-town-hall", true)
+	
+	SetProvinceOwner("Slovakia", "celt", "Cotini Tribe")
+	SetProvinceCivilization("Slovakia", "celt")
+	
+	SetProvinceOwner("Hungary", "persian", "Iazyge Tribe")
+	SetProvinceCivilization("Hungary", "persian")
+	SetProvinceSettlementBuilding("Hungary", "unit-teuton-town-hall", true)
+	
+	SetProvinceOwner("Galicia", "goth", "Bastarnae Tribe")
+	SetProvinceCivilization("Galicia", "goth")
+	SetProvinceSettlementBuilding("Galicia", "unit-teuton-town-hall", true)
+	SetProvinceOwner("Bessarabia", "goth", "Bastarnae Tribe")
+	SetProvinceCivilization("Bessarabia", "goth")
+	SetProvinceSettlementBuilding("Bessarabia", "unit-teuton-town-hall", true)
+	AcquireFactionTechnologies("goth", "Goth Tribe", "goth", "Bastarnae Tribe")
 end
 
 if (GrandStrategyYear >= -241) then

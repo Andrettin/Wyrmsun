@@ -566,6 +566,7 @@ function LoadProvinces(world)
 			Map = "maps/random_maps/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
+				"goth", "Bastarnae Tribe"
 --				"latin", "Moldavia"
 			}
 		},
@@ -1529,6 +1530,8 @@ function LoadProvinces(world)
 			Map = "maps/random_maps/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
+				"goth", "Bastarnae Tribe",
+				"goth", "Gepidae Tribe",
 				"slav", "Poland"
 			}
 		},
@@ -1813,7 +1816,10 @@ function LoadProvinces(world)
 			SettlementName = "Pest",
 			SettlementLocation = {535, 120}, -- Pest
 			Map = "maps/random_maps/random-map-forest.smp",
-			SettlementTerrain = "Plains"
+			SettlementTerrain = "Plains",
+			Claims = {
+				"persian", "Iazyge Tribe"
+			}
 		},
 		Iceland = {
 			Name = "Iceland",
@@ -2405,6 +2411,7 @@ function LoadProvinces(world)
 			SettlementTerrain = "Plains",
 			Claims = {
 				"basque", "Linearware Tribe",
+				"teuton", "Buri Tribe",
 				"teuton", "Quadi Tribe"
 			}
 		},
@@ -3048,6 +3055,7 @@ function LoadProvinces(world)
 			Map = "maps/random_maps/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
+				"goth", "Lugii Tribe",
 				"goth", "Silingae Tribe"
 			}
 		},
@@ -3107,7 +3115,10 @@ function LoadProvinces(world)
 			SettlementTerrain = "Plains",
 			Claims = {
 				"basque", "Linearware Tribe",
-				"teuton", "Quadi Tribe"
+				"celt", "Cotini Tribe",
+				"goth", "Gepidae Tribe",
+				"teuton", "Quadi Tribe",
+				"thracian", "Carpi Tribe"
 			}
 		},
 		Sweden = {

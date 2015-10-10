@@ -25,12 +25,26 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineFaction("Bastarnae Tribe", {
+	Civilization = "goth",
+	Type = "tribe",
+	Color = "blue",
+	SecondaryColor = "blue"
+})
+
 DefineFaction("Burgundian Tribe", {
 	Civilization = "goth",
 	Type = "tribe",
 	Color = "brown",
 	SecondaryColor = "brown",
 	DevelopsTo = {"Burgundy"}
+})
+
+DefineFaction("Gepidae Tribe", {
+	Civilization = "goth",
+	Type = "tribe",
+	Color = "black",
+	SecondaryColor = "black"
 })
 
 DefineFaction("Goth Tribe", {
@@ -46,6 +60,13 @@ DefineFaction("Herulian Tribe", {
 	Type = "tribe",
 	Color = "green",
 	SecondaryColor = "green"
+})
+
+DefineFaction("Lugii Tribe", {
+	Civilization = "goth",
+	Type = "tribe",
+	Color = "purple",
+	SecondaryColor = "purple"
 })
 
 DefineFaction("Ostrogoth Tribe", {

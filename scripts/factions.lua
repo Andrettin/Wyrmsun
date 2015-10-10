@@ -198,6 +198,13 @@ DefineFaction("Kobolds", {
 	SecondaryColor = "purple"
 })
 
+DefineFaction("Iazyge Tribe", {
+	Civilization = "persian", -- accurate?
+	Type = "tribe",
+	Color = "violet",
+	SecondaryColor = "violet"
+})
+
 DefineFaction("Sarmatian Tribe", {
 	Civilization = "persian",
 	Type = "tribe",
@@ -242,6 +249,13 @@ DefineFaction("Apsinthii Tribe", {
 	Type = "tribe",
 	Color = "purple",
 	SecondaryColor = "purple"
+})
+
+DefineFaction("Carpi Tribe", {
+	Civilization = "thracian", -- accurate?
+	Type = "tribe",
+	Color = "blue",
+	SecondaryColor = "blue"
 })
 
 DefineFaction("Edoni Tribe", {
