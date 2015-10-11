@@ -12368,10 +12368,12 @@ if (GrandStrategyYear >= -264) then
 	SetProvinceOwner("Mazovia", "goth", "Vandal Tribe")
 	SetProvinceCivilization("Mazovia", "goth")
 	SetProvinceSettlementBuilding("Mazovia", "unit-teuton-town-hall", true)
-	SetProvinceOwner("Posen", "goth", "Vandal Tribe")
+	AcquireFactionTechnologies("goth", "Goth Tribe", "goth", "Vandal Tribe")
+	
+	SetProvinceOwner("Posen", "goth", "Burgundian Tribe")
 	SetProvinceCivilization("Posen", "goth")
 	SetProvinceSettlementBuilding("Posen", "unit-teuton-town-hall", true)
-	AcquireFactionTechnologies("goth", "Goth Tribe", "goth", "Vandal Tribe")
+	AcquireFactionTechnologies("goth", "Goth Tribe", "goth", "Burgundian Tribe")
 	
 	SetProvinceOwner("Lithuania", "slav", "Aestui Tribe")
 	SetProvinceCivilization("Lithuania", "slav")
@@ -12893,9 +12895,8 @@ if (GrandStrategyYear >= 440) then
 end
 
 if (GrandStrategyYear >= 445) then
+	SetProvinceOwner("Posen", "", "")
 	SetProvinceOwner("Switzerland", "goth", "Burgundian Tribe") -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
-	SetProvinceUnitQuantity("Switzerland", "unit-germanic-warrior", 0) -- let's remove those oodles of warriors placed there to make this province difficult to conquer
-	AcquireFactionTechnologies("germanic", "Asa Tribe", "goth", "Burgundian Tribe")
 end
 
 if (GrandStrategyYear >= 450) then
