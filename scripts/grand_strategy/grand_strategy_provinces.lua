@@ -3658,6 +3658,7 @@ function LoadProvinces(world)
 			Map = "maps/random_maps/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
+				"slav", "Venedae Tribe",
 				"slav", "Poland"
 			}
 		},

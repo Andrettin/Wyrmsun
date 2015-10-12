@@ -12398,6 +12398,9 @@ if (GrandStrategyYear >= -264) then
 	SetProvinceOwner("West Galicia", "slav", "Venedae Tribe")
 	SetProvinceCivilization("West Galicia", "slav")
 	SetProvinceSettlementBuilding("West Galicia", "unit-teuton-town-hall", true)
+	SetProvinceOwner("White Russia", "slav", "Venedae Tribe")
+	SetProvinceCivilization("White Russia", "slav")
+	SetProvinceSettlementBuilding("White Russia", "unit-teuton-town-hall", true)
 end
 
 if (GrandStrategyYear >= -241) then
