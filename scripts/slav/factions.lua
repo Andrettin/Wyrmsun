@@ -32,6 +32,13 @@ DefineFaction("Aestui Tribe", {
 	SecondaryColor = "green"
 })
 
+DefineFaction("Venedae Tribe", {
+	Civilization = "slav",
+	Type = "tribe",
+	Color = "yellow",
+	SecondaryColor = "yellow"
+})
+
 DefineFaction("Croatia", {
 	Civilization = "slav",
 	Type = "polity",

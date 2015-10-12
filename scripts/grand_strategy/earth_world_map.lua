@@ -12374,6 +12374,7 @@ if (GrandStrategyYear >= -264) then
 	SetProvinceCivilization("Posen", "goth")
 	SetProvinceSettlementBuilding("Posen", "unit-teuton-town-hall", true)
 	AcquireFactionTechnologies("goth", "Goth Tribe", "goth", "Burgundian Tribe")
+	AddProvinceClaim("Posen", "teuton", "Burgundian Tribe")	
 	
 	SetProvinceOwner("Lithuania", "slav", "Aestui Tribe")
 	SetProvinceCivilization("Lithuania", "slav")
@@ -12393,6 +12394,10 @@ if (GrandStrategyYear >= -264) then
 	SetProvinceCivilization("Bessarabia", "goth")
 	SetProvinceSettlementBuilding("Bessarabia", "unit-teuton-town-hall", true)
 	AcquireFactionTechnologies("goth", "Goth Tribe", "goth", "Bastarnae Tribe")
+	
+	SetProvinceOwner("West Galicia", "slav", "Venedae Tribe")
+	SetProvinceCivilization("West Galicia", "slav")
+	SetProvinceSettlementBuilding("West Galicia", "unit-teuton-town-hall", true)
 end
 
 if (GrandStrategyYear >= -241) then
@@ -13408,6 +13413,7 @@ if (GrandStrategyYear >= 1560) then -- Political situation in Europe in 1560 AD;
 	SetProvinceOwner("Pomerelia", "slav", "Poland")
 	SetProvinceOwner("Galicia", "slav", "Poland")
 	SetProvinceOwner("Mazovia", "slav", "Poland")
+	SetProvinceOwner("West Galicia", "slav", "Poland")
 	SetProvinceOwner("Russia", "slav", "Muscovy")
 	SetProvinceOwner("Ukraine", "slav", "Poland")
 	SetProvinceOwner("White Russia", "slav", "Poland")
