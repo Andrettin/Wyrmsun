@@ -334,6 +334,12 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-teuton-ritter",
+	Size = {46, 38},
+	File = "teuton/icons/ritter.png"
+})
+
+DefineIcon({
 	Name = "icon-teuton-catapult",
 	Size = {46, 38},
 	File = "teuton/icons/catapult.png"
@@ -1057,6 +1063,18 @@ DefineIcon({
 	Name = "icon-slime-teal",
 	Size = {46, 38},
 	File = "neutral/icons/slime_teal.png"
+})
+
+DefineIcon({
+	Name = "icon-horse",
+	Size = {46, 38},
+	File = "neutral/icons/horse.png"
+})
+
+DefineIcon({
+	Name = "icon-horse-trained",
+	Size = {46, 38},
+	File = "neutral/icons/horse_trained.png"
 })
 
 DefineIcon({

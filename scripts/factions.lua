@@ -205,6 +205,13 @@ DefineFaction("Alazone Tribe", { -- Source: William R. Shepherd, "Historical Atl
 	SecondaryColor = "orange"
 })
 
+DefineFaction("Aorsi Tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	Civilization = "persian", -- accurate?
+	Type = "tribe",
+	Color = "violet",
+	SecondaryColor = "violet"
+})
+
 DefineFaction("Iazyge Tribe", {
 	Civilization = "persian", -- accurate?
 	Type = "tribe",

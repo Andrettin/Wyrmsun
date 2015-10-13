@@ -62,6 +62,7 @@ The Stratagus engine, as well as the code, artwork, sounds, music and story elem
 /sounds/buildings/complete_barracks.wav (licensed under the CC-BY-SA 3.0)
 /sounds/buildings/complete_blacksmith.wav (licensed under the CC-BY-SA 3.0)
 /sounds/buildings/complete_civ_center.wav (licensed under the CC-BY-SA 3.0)
+/sounds/buildings/complete_cavalry_stables.wav (licensed under the CC-BY-SA 3.0)
 /sounds/buildings/complete_corral.wav (licensed under the CC-BY-SA 3.0)
 /sounds/buildings/complete_farmstead.wav (licensed under the CC-BY-SA 3.0)
 /sounds/buildings/complete_fortress.wav (licensed under the CC-BY-SA 3.0)
@@ -70,6 +71,7 @@ The Stratagus engine, as well as the code, artwork, sounds, music and story elem
 /sounds/buildings/sel_barracks.wav (licensed under the CC-BY-SA 3.0)
 /sounds/buildings/sel_blacksmith.wav (licensed under the CC-BY-SA 3.0)
 /sounds/buildings/sel_civ_center.wav (licensed under the CC-BY-SA 3.0)
+/sounds/buildings/sel_cavalry_stables.wav (licensed under the CC-BY-SA 3.0)
 /sounds/buildings/sel_corral.wav (licensed under the CC-BY-SA 3.0)
 /sounds/buildings/sel_farmstead.wav (licensed under the CC-BY-SA 3.0)
 /sounds/buildings/sel_fortress.wav (licensed under the CC-BY-SA 3.0)
@@ -191,6 +193,20 @@ The Stratagus engine, as well as the code, artwork, sounds, music and story elem
 /sounds/missiles/sword/swordhit_18a.wav (licensed under the CC-BY-SA 3.0)
 /sounds/missiles/sword/swordhit_19.wav (licensed under the CC-BY-SA 3.0)
 /sounds/missiles/sword/swordhit_19a.wav (licensed under the CC-BY-SA 3.0)
+/sounds/neutral/horse/horse_11.wav (licensed under the CC-BY-SA 3.0)
+/sounds/neutral/horse/horse_attack1.wav (licensed under the CC-BY-SA 3.0)
+/sounds/neutral/horse/horse_attack2.wav (licensed under the CC-BY-SA 3.0)
+/sounds/neutral/horse/horse_attack3.wav (licensed under the CC-BY-SA 3.0)
+/sounds/neutral/horse/horse_death1.wav (licensed under the CC-BY-SA 3.0)
+/sounds/neutral/horse/horse_death2.wav (licensed under the CC-BY-SA 3.0)
+/sounds/neutral/horse/horse_death3.wav (licensed under the CC-BY-SA 3.0)
+/sounds/neutral/horse/horse_death4.wav (licensed under the CC-BY-SA 3.0)
+/sounds/neutral/horse/horse_idle1.wav (licensed under the CC-BY-SA 3.0)
+/sounds/neutral/horse/horse_idle2.wav (licensed under the CC-BY-SA 3.0)
+/sounds/neutral/horse/horse_idle3.wav (licensed under the CC-BY-SA 3.0)
+/sounds/neutral/horse/horse_select1.wav (licensed under the CC-BY-SA 3.0)
+/sounds/neutral/horse/horse_select2.wav (licensed under the CC-BY-SA 3.0)
+/sounds/neutral/horse/horse_select3.wav (licensed under the CC-BY-SA 3.0)
 
 
 See the license.txt file for the text of the GPL 2.0. The contents of the CC-BY-SA 3.0 license can be found at: http://creativecommons.org/licenses/by-sa/3.0/
@@ -277,10 +293,12 @@ https://github.com/Andrettin/Wyrmsun
 * Units
 - A unit type's bonus against mounted units, bonus against buildings, bonus against giants and backstab bonus now appear in its popup.
 - The Dwarven Yale Rider is now trainable, if the player has a Yale Pen and a Smithy.
-- Added Horse (unit graphics by b_o).
+- Added Horse (unit graphics by b_o and icon by Jinn).
 - Fixed the display of the mercenary hiring popup.
 - Dwarven Gryphon Riders are now trainable (they require a Lumber Mill and a Bastion to be trained).
 - Germanic and Teuton archers now have a 50% damage bonus against air units.
+- Added Teuton Ritter (icon by Jinn).
+- Teuton Kriegers can now upgrade to Teuton Ritters through experience.
 
 -----------------------------------------------------------------------
 - 1.3.3

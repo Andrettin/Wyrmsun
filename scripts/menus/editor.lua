@@ -20,6 +20,7 @@ editor_types = {
    "unit-teuton-swordsman",
    "unit-teuton-archer",
    "unit-teuton-old-man",
+   "unit-teuton-ritter",
    "unit-teuton-catapult",
    "unit-teuton-town-hall",
    "unit-teuton-stronghold",

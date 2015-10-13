@@ -439,7 +439,6 @@ DefineUnitType("unit-dwarven-yale-rider", { Name = _("Yale Rider"),
 	Animations = "animations-melee-unit", Icon = "icon-dwarven-yale-rider",
 	Corpse = "unit-dwarven-dead-body",
 	HackDamage = true,
-	TechnologyPointCost = 1,
 	Variations = {
 		{
 			"variation-id", "black-hair-brown-fur",
@@ -683,6 +682,7 @@ DefineUnitType("unit-dwarven-yale-pen", { Name = _("Yale Pen"),
 	RepairCosts = {"gold", 1, "lumber", 1, "stone", 1},
 	TechnologyPointCost = 1,
 	Sounds = {
+		"selected", "yale-pen-selected",
 		"help", "basic-dwarf-voices-help-town"
 	}
 } )

@@ -361,6 +361,7 @@ function LoadProvinces(world)
 			SettlementTerrain = "Plains",
 			Claims = {
 				"germanic", "Asa Tribe",
+				"persian", "Aorsi Tribe",
 				"persian", "Sarmatian Tribe"
 			}
 		},

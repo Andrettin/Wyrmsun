@@ -539,12 +539,11 @@ function StandardTriggers()
 				end
 
 				-- fix starting level for upgraded units
-				if (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-steelclad" or GetUnitVariable(uncount[unit1], "Ident") == "unit-hero-rugnur-steelclad" or GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-yale-rider") then
+				if (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "StartingLevel") == 2) then
 					if (GetUnitVariable(uncount[unit1], "StartingLevel") <= 1) then
 						SetUnitVariable(uncount[unit1], "StartingLevel", 2)
 					end
-				end
-				if (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-thane" or GetUnitVariable(uncount[unit1], "Ident") == "unit-surghan-mercenary-thane" or GetUnitVariable(uncount[unit1], "Ident") == "unit-hero-modsognir-thane" or GetUnitVariable(uncount[unit1], "Ident") == "unit-hero-durin-thane" or GetUnitVariable(uncount[unit1], "Ident") == "unit-hero-rugnur-thane" or GetUnitVariable(uncount[unit1], "Ident") == "unit-hero-baglur-thane") then
+				elseif (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "StartingLevel") == 3) then
 					if (GetUnitVariable(uncount[unit1], "StartingLevel") <= 2) then
 						SetUnitVariable(uncount[unit1], "StartingLevel", 3)
 					end
@@ -595,6 +594,10 @@ function StandardTriggers()
 									end
 									if (string.find(GetUnitVariable(uncount[unit1], "Ident"), "yale-rider") ~= nil and GetArrayIncludes(wyr.preferences.Heroes[key].upgrades, "unit-dwarven-yale-rider") == false) then
 										table.insert(wyr.preferences.Heroes[key].upgrades, "unit-dwarven-yale-rider")
+										SavePreferences()
+									end
+									if (string.find(GetUnitVariable(uncount[unit1], "Ident"), "ritter") ~= nil and GetArrayIncludes(wyr.preferences.Heroes[key].upgrades, "unit-teuton-ritter") == false) then
+										table.insert(wyr.preferences.Heroes[key].upgrades, "unit-teuton-ritter")
 										SavePreferences()
 									end
 								end
@@ -1505,10 +1508,14 @@ function GetUnitTypeLevelUpUpgrades(unit_type)
 		return { "upgrade-critical-strike", "upgrade-deadly-precision", "upgrade-eagle-eye" }
 	elseif (unit_type == "unit-dwarven-gryphon-rider") then
 		return { "upgrade-critical-strike", "upgrade-deadly-precision", "upgrade-eagle-eye" }
-	elseif (unit_type == "unit-germanic-warrior" or unit_type == "unit-teuton-swordsman" or unit_type == "unit-hero-marbod") then
+	elseif (unit_type == "unit-germanic-warrior" or unit_type == "unit-hero-marbod") then
 		return { "upgrade-critical-strike", "upgrade-sword-mastery", "upgrade-deadly-precision", "upgrade-eagle-eye" }
 	elseif (unit_type == "unit-germanic-archer" or unit_type == "unit-teuton-archer") then
 		return { "upgrade-critical-strike", "upgrade-deadly-precision", "upgrade-eagle-eye" }
+	elseif (unit_type == "unit-teuton-swordsman") then
+		return { "unit-teuton-ritter" }
+	elseif (unit_type == "unit-teuton-ritter") then
+		return { "upgrade-critical-strike", "upgrade-sword-mastery", "upgrade-deadly-precision", "upgrade-eagle-eye" }
 	elseif (unit_type == "unit-gnomish-recruit") then
 		return { "upgrade-critical-strike", "upgrade-sword-mastery", "upgrade-deadly-precision", "upgrade-eagle-eye" }
 	elseif (unit_type == "unit-gnomish-herbalist") then

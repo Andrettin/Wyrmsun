@@ -331,6 +331,7 @@ U.S. Fish and Wildlife Service (Public Domain) (http://www.fws.gov/video/sound.h
 Wildfire Games (http://www.wildfiregames.com/):
 /sounds/buildings/complete_barracks.wav
 /sounds/buildings/complete_blacksmith.wav
+/sounds/buildings/complete_cavalry_stables.wav
 /sounds/buildings/complete_civ_center.wav
 /sounds/buildings/complete_corral.wav
 /sounds/buildings/complete_farmstead.wav
@@ -339,6 +340,7 @@ Wildfire Games (http://www.wildfiregames.com/):
 /sounds/buildings/complete_tower.wav
 /sounds/buildings/sel_barracks.wav
 /sounds/buildings/sel_blacksmith.wav
+/sounds/buildings/sel_cavalry_stables.wav
 /sounds/buildings/sel_civ_center.wav
 /sounds/buildings/sel_corral.wav
 /sounds/buildings/sel_farmstead.wav
@@ -461,6 +463,20 @@ Wildfire Games (http://www.wildfiregames.com/):
 /sounds/missiles/shield_metal/shieldimpmetal_213.wav
 /sounds/missiles/shield_metal/shieldimpmetal_214.wav
 /sounds/missiles/shield_metal/shieldimpmetal_215.wav
+/sounds/neutral/horse/horse_11.wav
+/sounds/neutral/horse/horse_attack1.wav
+/sounds/neutral/horse/horse_attack2.wav
+/sounds/neutral/horse/horse_attack3.wav
+/sounds/neutral/horse/horse_death1.wav
+/sounds/neutral/horse/horse_death2.wav
+/sounds/neutral/horse/horse_death3.wav
+/sounds/neutral/horse/horse_death4.wav
+/sounds/neutral/horse/horse_idle1.wav
+/sounds/neutral/horse/horse_idle2.wav
+/sounds/neutral/horse/horse_idle3.wav
+/sounds/neutral/horse/horse_select1.wav
+/sounds/neutral/horse/horse_select2.wav
+/sounds/neutral/horse/horse_select3.wav
 
 Wolfgang Kohler:
 /sounds/buildings/lumbermill.wav

@@ -426,6 +426,7 @@ MakeSound("corral-selected", "buildings/sel_corral.wav")
 MakeSound("barracks-selected", "buildings/sel_barracks.wav")
 MakeSound("gold-mine-selected", "buildings/gold_mine.wav")
 MakeSound("lumber-mill-selected", "buildings/lumbermill.wav")
+MakeSound("stables-selected", "buildings/sel_cavalry_stables.wav")
 MakeSound("smithy-selected", "buildings/sel_blacksmith.wav")
 MakeSound("yale-pen-selected", "buildings/yalepen.wav")
 SetSoundVolumePercent("yale-pen-selected", 50)
@@ -437,6 +438,7 @@ MakeSound("farm-ready", "buildings/complete_farmstead.wav")
 MakeSound("corral-ready", "buildings/complete_corral.wav")
 MakeSound("barracks-ready", "buildings/complete_barracks.wav")
 MakeSound("storehouse-ready", "buildings/complete_storehouse.wav")
+MakeSound("stables-ready", "buildings/complete_cavalry_stables.wav")
 MakeSound("smithy-ready", "buildings/complete_blacksmith.wav")
 MakeSound("fortress-ready", "buildings/complete_fortress.wav")
 MakeSound("tower-ready", "buildings/complete_tower.wav")
@@ -825,6 +827,31 @@ MakeSound("yale-acknowledge", {
 })
 MakeSound("yale-dead", "neutral/yale/yaledead.wav")
 SetSoundRange("yale-dead", 32)
+
+MakeSound("horse-idle", {
+	"neutral/horse/horse_idle1.wav",
+	"neutral/horse/horse_idle2.wav",
+	"neutral/horse/horse_idle3.wav"
+})
+SetSoundRange("horse-idle", 32)
+MakeSound("horse-selected", {
+	"neutral/horse/horse_select1.wav",
+	"neutral/horse/horse_select2.wav",
+	"neutral/horse/horse_select3.wav"
+})
+SetSoundRange("horse-selected", 32)
+MakeSound("horse-attack", {
+	"neutral/horse/horse_attack1.wav",
+	"neutral/horse/horse_attack2.wav",
+	"neutral/horse/horse_attack3.wav"
+})
+MakeSound("horse-dead", {
+	"neutral/horse/horse_death1.wav",
+	"neutral/horse/horse_death2.wav",
+	"neutral/horse/horse_death3.wav",
+	"neutral/horse/horse_death4.wav"
+})
+SetSoundRange("horse-dead", 32)
 
 --	Define sounds used by the game
 --

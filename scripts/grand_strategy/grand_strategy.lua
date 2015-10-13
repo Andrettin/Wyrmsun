@@ -178,9 +178,9 @@ function RunGrandStrategyGameSetupMenu()
 				-- if is an empty province with no troops, put 6 infantry in it to prevent extremely easy conquests (do this here so it won't affect the history)
 				if (GetProvinceOwner(WorldMapProvinces[key].Name) == "" and GetProvinceMilitaryScore(WorldMapProvinces[key].Name, false, true) >= 1) then
 					if (GrandStrategyWorld == "Nidavellir") then
-						SetProvinceUnitQuantity(WorldMapProvinces[key].Name, "unit-goblin-spearman", 4)
+						SetProvinceUnitQuantity(WorldMapProvinces[key].Name, "unit-goblin-spearman", 6)
 					else
-						SetProvinceUnitQuantity(WorldMapProvinces[key].Name, "unit-germanic-warrior", 4)
+						SetProvinceUnitQuantity(WorldMapProvinces[key].Name, "unit-germanic-warrior", 6)
 					end
 				end
 			end

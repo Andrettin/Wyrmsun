@@ -38,6 +38,7 @@ Units = {
 	"upgrade-germanic-wood-plow",
 	"upgrade-teuton-civilization",
 	"unit-teuton-worker", "unit-teuton-swordsman", "unit-teuton-archer", "unit-teuton-old-man",
+	"unit-teuton-ritter",
 	"unit-teuton-catapult",
 	"unit-teuton-town-hall", "unit-teuton-stronghold",
 	"unit-teuton-farm", "unit-teuton-barracks",
@@ -266,9 +267,9 @@ DefineUnitType("unit-rat", { Name = "Rat",
 
 DefineUnitType("unit-horse", { Name = "Horse",
 	Class = "grazer",
---	Description = _("Yales are caprid creatures who inhabit Nidavellir. They have sturdy, golden tusks and horns, and their fur is covered by golden spots. Dwarves often use them as mounts or as a source of food."),
-	Image = {"file", "neutral/units/horse.png", "size", {72, 72}},
-	Animations = "animations-yale", Icon = "icon-yale",
+	Description = _("Horses are valuable for their speed as well as their endurance, making excellent mounts. The creatures were a vital component of any army, and was an essential part of the lifestyle of the peoples of the Eurasian steppes."),
+	Image = {"file", "neutral/units/horse_brown_skin_brown_hair_brown_eyes.png", "size", {72, 72}},
+	Animations = "animations-yale", Icon = "icon-horse",
 	NeutralMinimapColor = {192, 192, 192},
 	Speed = 13,
 	HitPoints = 30,
@@ -301,13 +302,31 @@ DefineUnitType("unit-horse", { Name = "Horse",
 	Excrement = "unit-yale-excrement",
 	BluntDamage = true,
 	Coward = true,
+	Variations = {
+		{
+			"variation-id", "brown-skin-brown-hair-brown-eyes"
+		},
+		{
+			"variation-id", "brown-skin-tan-hair-brown-eyes",
+			"file", "neutral/units/horse_brown_skin_tan_hair_brown_eyes.png"
+		},
+		{
+			"variation-id", "black-skin-brown-hair-brown-eyes",
+			"file", "neutral/units/horse_black_skin_brown_hair_brown_eyes.png"
+		},
+		{
+			"variation-id", "brown-skin-tan-hair-blue-eyes",
+			"file", "neutral/units/horse_brown_skin_tan_hair_blue_eyes.png"
+		}
+	},
 	Sounds = {
---		"selected", "yale-selected",
---		"acknowledge", "yale-acknowledge",
---		"idle", "yale-selected",
---		"ready", "yale-selected",
+		"selected", "horse-selected",
+		"acknowledge", "horse-idle",
+		"attack", "horse-attack",
+		"idle", "horse-idle",
+		"ready", "horse-idle",
 --		"help", "critter-help",
---		"dead", "yale-dead",
+		"dead", "horse-dead",
 		"hit", "bite-attack",
 		"miss", "attack-miss",
 		"step", "step-dirt",
@@ -321,7 +340,7 @@ DefineUnitType("unit-horse", { Name = "Horse",
 
 DefineUnitType("unit-yale", { Name = "Yale",
 	Class = "grazer",
-	Description = _("Yales are caprid creatures who inhabit Nidavellir. They have sturdy, golden tusks and horns, and their fur is covered by golden spots. Dwarves often use them as mounts or as a source of food."),
+	Description = _("Yales are caprid creatures who inhabit Nidavellir. They have sturdy, golden tusks and horns, and their fur is covered by golden spots. Dwarves often use them as mounts or as beasts of carry."),
 	Image = {"file", "neutral/units/yale.png", "size", {72, 72}},
 	Animations = "animations-yale", Icon = "icon-yale",
 	NeutralMinimapColor = {192, 192, 192},
@@ -3644,6 +3663,7 @@ DefineUnitType("unit-template-cavalry", { Name = _("Cavalry"),
 	Mounted = true,
 	Flesh = true,
 	SelectableByRectangle = true,
+	TechnologyPointCost = 1,
 	Sounds = {
 		"step", "step-dirt",
 		"step-dirt", "step-dirt",
@@ -4002,9 +4022,9 @@ DefineUnitType("unit-template-stables", { Name = _("Stables"),
 	BurnDamageRate = 1,
 	SelectableByRectangle = true,
 	Sounds = {
---		"selected", "lumber-mill-selected",
+		"selected", "stables-selected",
 --		"acknowledge", "dwarven-lumber-mill-acknowledge",
---		"ready", "storehouse-ready",
+		"ready", "stables-ready",
 --		"help", "basic-dwarf-voices-help",
 		"dead", "building-destroyed"
 	}

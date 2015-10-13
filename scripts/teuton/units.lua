@@ -229,6 +229,29 @@ DefineUnitType("unit-teuton-archer", { Name = _("Skutan"),
 	}
 } )
 
+DefineUnitType("unit-teuton-ritter", { Name = _("Ritter"),
+	Parent = "unit-template-cavalry",
+	Civilization = "teuton",
+	Description = _("The Teutons excel in mounted combat. Their well-armored and trained heavy cavalry strikes fear in the hearts of their enemies whenever they are seen upon the battlefield."),
+	Background = _("\"Ritter\" is the German word for \"knight\"."),
+	Image = {"file", "dwarf/units/yale_rider_red_hair_gray_fur.png", "size", {72, 72}},
+	Animations = "animations-melee-unit", Icon = "icon-teuton-ritter",
+	Armor = 3, BasicDamage = 13, -- +1 armor, +1 damage
+	DaySightRangeBonus = 1,
+	NightSightRangeBonus = -1,
+	HackDamage = true,
+	Corpse = "unit-human-dead-body",
+	Sounds = {
+		"selected", "basic-teuton-voices-selected-group",
+		"acknowledge", "basic-teuton-voices-acknowledge",
+		"ready", "basic-teuton-voices-ready",
+		"help", "basic-teuton-voices-help",
+		"dead", "basic-human-voices-dead",
+		"hit", "sword-attack",
+		"miss", "attack-miss"
+	}
+} )
+
 DefineUnitType("unit-teuton-catapult", { Name = _("Catapult"),
 	Parent = "unit-template-siege-engine",
 	Civilization = "teuton",

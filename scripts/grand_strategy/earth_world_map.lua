@@ -12408,10 +12408,19 @@ if (GrandStrategyYear >= -264) then
 	SetProvinceSettlementBuilding("Crimea", "unit-teuton-town-hall", true)
 	
 	SetProvinceOwner("Ukraine", "persian", "Roxolani Tribe")
+	SetProvinceCivilization("Ukraine", "persian")
 	
 	SetProvinceOwner("Russia", "slav", "Budini Tribe")
 	SetProvinceCivilization("Russia", "slav")
 	SetProvinceSettlementBuilding("Russia", "unit-teuton-town-hall", true)
+	
+	SetProvinceOwner("Astrakhan", "persian", "Aorsi Tribe")
+	SetProvinceCivilization("Astrakhan", "persian")
+	
+	-- remove the Asa
+	SetProvinceOwner("Scania", "", "")
+	SetProvinceOwner("Zealand", "", "")
+	SetProvinceOwner("Jutland", "", "")
 end
 
 if (GrandStrategyYear >= -241) then

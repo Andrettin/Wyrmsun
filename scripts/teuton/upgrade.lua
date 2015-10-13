@@ -122,6 +122,7 @@ DefineModifier("upgrade-teuton-spatha",
 	{"Points", 10},
 	{"apply-to", "unit-teuton-swordsman"},
 --	{"apply-to", "unit-teuton-old-man"},
+	{"apply-to", "unit-teuton-ritter"},
 	{"apply-to", "unit-hero-marbod"}
 )
 
@@ -129,6 +130,7 @@ DefineModifier("upgrade-teuton-iron-shield",
 	{"Armor", 2},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-swordsman"},
+	{"apply-to", "unit-teuton-ritter"},
 	{"apply-to", "unit-hero-marbod"}
 )
 
@@ -259,6 +261,6 @@ DefineDependency("unit-teuton-stables",
 	{"unit-teuton-lumber-mill"}
 )
 
---DefineDependency("unit-teuton-ritter",
---	{"unit-teuton-smithy", "unit-teuton-stables"}
---)
+DefineDependency("unit-teuton-ritter",
+	{"unit-teuton-smithy", "unit-teuton-stables"}
+)

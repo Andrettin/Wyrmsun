@@ -10,7 +10,7 @@
 --
 --      buttons.ccl - Define the unit-buttons of the teuton civilization.
 --
---      (c) Copyright 2014 by Andrettin
+--      (c) Copyright 2014-2015 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -41,7 +41,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-teuton-spatha",
 	Allowed = "check-upgrade", AllowArg = {"upgrade-teuton-spatha"},
 	Key = "a", Hint = _("~!Attack"), Popup = "popup-commands",
 	ForUnit = {
-		"unit-teuton-swordsman",
+		"unit-teuton-swordsman", "unit-teuton-ritter",
 		"unit-hero-marbod",
 		"unit-hero-greebo",
 		"germanic-group", "teuton-group"
@@ -53,7 +53,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-teuton-iron-shield",
 	Allowed = "check-upgrade", AllowArg = {"upgrade-teuton-iron-shield"},
 	Key = "s", Hint = _("~!Stop"), Popup = "popup-commands",
 	ForUnit = {
-		"unit-teuton-swordsman",
+		"unit-teuton-swordsman", "unit-teuton-ritter",
 		"unit-hero-marbod",
 		"germanic-group", "teuton-group"
 	}
@@ -207,7 +207,13 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-germanic-archer",
 	ForUnit = {"unit-teuton-barracks"}
 } )
   
-DefineButton( { Pos = 3, Level = 0, Icon = "icon-teuton-catapult",
+DefineButton( { Pos = 3, Level = 0, Icon = "icon-teuton-ritter",
+	Action = "train-unit", Value = "unit-teuton-ritter",
+	Key = "r", Hint = _("Train ~!Ritter"), Popup = "popup-unit",
+	ForUnit = {"unit-teuton-barracks"}
+} )
+
+DefineButton( { Pos = 4, Level = 0, Icon = "icon-teuton-catapult",
 	Action = "train-unit", Value = "unit-teuton-catapult",
 	Key = "c", Hint = _("Build ~!Catapult"), Popup = "popup-unit",
 	ForUnit = {"unit-teuton-barracks"}
@@ -299,3 +305,10 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-teuton-stronghold",
   Allowed = "check-upgrade-to",
   Key = "u", Hint = _("Upgrade to B~!urg"), Popup = "popup-building",
   ForUnit = {"unit-teuton-town-hall"} } )
+
+DefineButton( { Pos = 1, Level = 1, Icon = "icon-teuton-ritter",
+	Action = "experience-upgrade-to", Value = "unit-teuton-ritter",
+	Key = "r", Hint = _("Upgrade to ~!Ritter"), Popup = "popup-unit",
+	ForUnit = {"unit-teuton-swordsman"}
+} )
+
