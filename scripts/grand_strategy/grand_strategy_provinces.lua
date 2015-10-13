@@ -1027,7 +1027,8 @@ function LoadProvinces(world)
 		Crimea = {
 			Name = "Crimea",
 			CulturalNames = {
-				greek = "Tauric Chersonese"
+				greek = "Tauric Chersonese",
+				latin = "Tauric Chersonese" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 			},
 			Tiles = {
 				{573, 126},
@@ -1050,16 +1051,15 @@ function LoadProvinces(world)
 			Map = "maps/random_maps/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
+				"greek", "Cimmerian Bosphorus"
 --				"teuton", "Crimea"
 			}
 		},
 		Croatia = {
 			Name = "Croatia",
 			CulturalNames = {
-				Croatia = "Croatia",
-				Muscovy = "Croatia",
-				Poland = "Croatia",
-				Russia = "Croatia"
+				slav = "Croatia",
+				Croatia = "Croatia"
 			},
 			Tiles = {
 				{130, 31}, {131, 31}, {131, 32}, {132, 31}, {132, 32}, {133, 32}, {133, 33}, -- old map
@@ -1609,7 +1609,8 @@ function LoadProvinces(world)
 			SettlementTerrain = "Plains",
 			Coastal = true,
 			Claims = {
-				"goth", "Goth Tribe"
+				"goth", "Goth Tribe",
+				"norse", "Geat Tribe"
 			}
 		},
 		Gotland = {
@@ -2280,6 +2281,9 @@ function LoadProvinces(world)
 		},
 		Mazovia = {
 			Name = "Mazovia",
+			CulturalNames = {
+				slav = "Mazovia"
+			},
 			Tiles = {
 				{133, 26}, {133, 27}, {134, 26}, {134, 27}, {135, 26}, {135, 27}, -- old map
 				{531, 107}, {531, 108},
@@ -2297,6 +2301,9 @@ function LoadProvinces(world)
 				{543, 103}, {543, 104}, {543, 105}, {543, 106}
 			},
 			SettlementName = "Warsaw",
+			CulturalSettlementNames = {
+				slav = "Warsaw"
+			},
 			SettlementLocation = {538, 107}, -- Warsaw
 			Map = "maps/random_maps/random-map-forest.smp",
 			SettlementTerrain = "Plains",
@@ -2684,6 +2691,7 @@ function LoadProvinces(world)
 			Name = "Pomerelia",
 			CulturalNames = {
 				goth = "Gothiscandza",
+				slav = "Pomerelia",
 				teuton = "Westpreussen"
 			},
 			Tiles = {
@@ -2701,7 +2709,8 @@ function LoadProvinces(world)
 			},
 			SettlementName = "Danzig",
 			CulturalSettlementNames = {
---				polish = "Gdansk",
+--				polish = "Gdańsk",
+				slav = "Gdańsk",
 				teuton = "Danzig"
 			},
 			SettlementLocation = {532, 101}, -- Danzig
@@ -2910,6 +2919,7 @@ function LoadProvinces(world)
 			},
 			SettlementTerrain = "Plains",
 			Claims = {
+				"slav", "Budini Tribe",
 				"slav", "Muscovy",
 				"slav", "Russia"
 			}
@@ -3442,7 +3452,11 @@ function LoadProvinces(world)
 			},
 			SettlementTerrain = "Plains",
 			Claims = {
-				"persian", "Scythian Tribe"
+				"persian", "Alazone Tribe",
+				"persian", "Navari Tribe",
+				"persian", "Roxolani Tribe",
+				"persian", "Scythian Tribe",
+				"slav", "Venedae Tribe"
 			}
 		},
 		Umbria = {
@@ -3625,7 +3639,7 @@ function LoadProvinces(world)
 		Westphalia = {
 			Name = "Westphalia",
 			CulturalNames = {
-				teuton = "Westphalia"
+				teuton = "Westphalien"
 			},
 			Tiles = {
 				{125, 26}, {125, 27}, {125, 28}, {126, 26}, {126, 27}, {126, 28}, {127, 26}, -- old map
@@ -3654,16 +3668,37 @@ function LoadProvinces(world)
 		},
 		WhiteRussia = {
 			Name = "White Russia",
+			CulturalNames = {
+				slav = "White Russia"
+			},
 			Tiles = {
 				{136, 25}, {136, 26}, {136, 27}, {137, 25}, {137, 26}, {137, 27}, {138, 25}, {138, 26}, {138, 27}, {139, 24}, {139, 25}, {139, 26}, {139, 27}, -- old map
 				{543, 107},
+				{544, 101}, {544, 102}, {544, 103}, {544, 104}, {544, 105}, {544, 106}, {544, 107},
+				{545, 101}, {545, 102}, {545, 103}, {545, 104}, {545, 105}, {545, 106}, {545, 107},
+				{546, 101}, {546, 102}, {546, 103}, {546, 104}, {546, 105}, {546, 106}, {546, 107},
+				{547, 102}, {547, 103}, {547, 104}, {547, 105}, {547, 106}, {547, 107}, {547, 108}, {547, 109}, {547, 110},
+				{548, 102}, {548, 103}, {548, 104}, {548, 105}, {548, 106}, {548, 107}, {548, 108}, {548, 109},
+				{549, 102}, {549, 103}, {549, 104}, {549, 105}, {549, 106}, {549, 107}, {549, 108}, {549, 109},
+				{550, 101}, {550, 102}, {550, 103}, {550, 104}, {550, 105}, {550, 106}, {550, 107}, {550, 108},
+				{551, 101}, {551, 102}, {551, 103}, {551, 104}, {551, 105}, {551, 106}, {551, 107}, {551, 108},
+				{552, 101}, {552, 102}, {552, 103}, {552, 104}, {552, 105}, {552, 106}, {552, 107}, {552, 108},
+				{553, 100}, {553, 101}, {553, 102}, {553, 103}, {553, 104}, {553, 105}, {553, 106}, {553, 107}, {553, 108},
+				{554, 100}, {554, 101}, {554, 102}, {554, 103}, {554, 104}, {554, 105}, {554, 106}, {554, 107}, {554, 108}, {554, 109},
+				{555, 100}, {555, 101}, {555, 102}, {555, 103}, {555, 104}, {555, 105}, {555, 106}, {555, 107}, {555, 108}, {555, 109},
+				{556, 98}, {556, 99}, {556, 100}, {556, 101}, {556, 102}, {556, 103}, {556, 104}, {556, 105}, {556, 106}, {556, 107}, {556, 108}, {556, 109},
+				{557, 97}, {557, 98}, {557, 99}, {557, 100}, {557, 101}, {557, 102}, {557, 103}, {557, 104}, {557, 105}, {557, 106}, {557, 107}, {557, 108}, {557, 109},
+				{558, 97}, {558, 98}, {558, 99}, {558, 100}, {558, 101}, {558, 102}, {558, 103}, {558, 104}, {558, 105}, {558, 106}, {558, 107}, {558, 108}, {558, 109},
+				{559, 96}, {559, 97}, {559, 98}, {559, 99}, {559, 100}, {559, 101}, {559, 102}, {559, 103}, {559, 104}, {559, 105}, {559, 106}, {559, 107}, {559, 108}, {559, 109},
 			},
 			SettlementName = "Minsk",
-			SettlementLocation = {139, 25}, -- Minsk
+			CulturalSettlementNames = {
+				slav = "Minsk"
+			},
+			SettlementLocation = {559, 102}, -- Minsk
 			Map = "maps/random_maps/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
-				"slav", "Venedae Tribe",
 				"slav", "Poland"
 			}
 		},
@@ -4705,7 +4740,8 @@ function LoadProvinces(world)
 		SeaOfAzov = { -- Source: "Limits of Oceans and Seas", 1953, p. 18.
 			Name = "Sea of Azov",
 			CulturalNames = {
-				greek = "Lake Maeotis"
+				greek = "Lake Maeotis",
+				latin = "Lake Maeotis" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 			},
 			ReferenceProvince = "Don",
 			Tiles = {

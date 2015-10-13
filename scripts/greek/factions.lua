@@ -68,6 +68,14 @@ DefineFaction("Athens", {
 	}
 })
 
+DefineFaction("Cimmerian Bosphorus", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	Civilization = "greek", -- accurate?
+	Type = "polity",
+	Color = "green",
+	SecondaryColor = "green",
+	DefaultTier = "kingdom" -- Kingdom of the Cimmerian Bosphorus
+})
+
 DefineFaction("Corinth", {
 	Civilization = "greek",
 	Type = "polity",

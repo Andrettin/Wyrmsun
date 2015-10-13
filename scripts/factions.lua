@@ -198,11 +198,32 @@ DefineFaction("Kobolds", {
 	SecondaryColor = "purple"
 })
 
+DefineFaction("Alazone Tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	Civilization = "persian", -- accurate?
+	Type = "tribe",
+	Color = "orange",
+	SecondaryColor = "orange"
+})
+
 DefineFaction("Iazyge Tribe", {
 	Civilization = "persian", -- accurate?
 	Type = "tribe",
 	Color = "violet",
 	SecondaryColor = "violet"
+})
+
+DefineFaction("Navari Tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	Civilization = "persian", -- accurate?
+	Type = "tribe",
+	Color = "blue",
+	SecondaryColor = "blue"
+})
+
+DefineFaction("Roxolani Tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	Civilization = "persian", -- accurate?
+	Type = "tribe",
+	Color = "red",
+	SecondaryColor = "red"
 })
 
 DefineFaction("Sarmatian Tribe", {

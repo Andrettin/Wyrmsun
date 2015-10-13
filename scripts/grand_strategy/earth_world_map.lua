@@ -11242,13 +11242,17 @@ SetWorldMapTileTerrain(623, 122, plains_id)
 SetWorldMapTileTerrain(624, 121, plains_id)
 SetWorldMapTileTerrain(624, 122, plains_id)
 
-SetRiverCulturalName("Rhine", "latin", "Rhenus") -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-SetRiverCulturalName("Rhine", "teuton", "Rhein")
 SetRiverCulturalName("Danube", "latin", "Danuvius") -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 SetRiverCulturalName("Danube", "teuton", "Donau")
-SetRiverCulturalName("Elbe", "latin", "Albis") -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-SetRiverCulturalName("Tagus", "latin", "Tagus") -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+--SetRiverCulturalName("Dnieper", "latin", "Borysthenes") -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+--SetRiverCulturalName("Don", "greek", "Tanais")
+--SetRiverCulturalName("Don", "latin", "Tanais") -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 SetRiverCulturalName("Guadiana", "latin", "Anas") -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+SetRiverCulturalName("Elbe", "latin", "Albis") -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+SetRiverCulturalName("Rhine", "latin", "Rhenus") -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+SetRiverCulturalName("Rhine", "teuton", "Rhein")
+SetRiverCulturalName("Tagus", "latin", "Tagus") -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+--SetRiverCulturalName("Volga", "latin", "Rha") -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 
 --[[
 WorldMapResources = {
@@ -12398,9 +12402,16 @@ if (GrandStrategyYear >= -264) then
 	SetProvinceOwner("West Galicia", "slav", "Venedae Tribe")
 	SetProvinceCivilization("West Galicia", "slav")
 	SetProvinceSettlementBuilding("West Galicia", "unit-teuton-town-hall", true)
-	SetProvinceOwner("White Russia", "slav", "Venedae Tribe")
-	SetProvinceCivilization("White Russia", "slav")
-	SetProvinceSettlementBuilding("White Russia", "unit-teuton-town-hall", true)
+	
+	SetProvinceOwner("Crimea", "greek", "Cimmerian Bosphorus")
+	SetProvinceCivilization("Crimea", "greek")
+	SetProvinceSettlementBuilding("Crimea", "unit-teuton-town-hall", true)
+	
+	SetProvinceOwner("Ukraine", "persian", "Roxolani Tribe")
+	
+	SetProvinceOwner("Russia", "slav", "Budini Tribe")
+	SetProvinceCivilization("Russia", "slav")
+	SetProvinceSettlementBuilding("Russia", "unit-teuton-town-hall", true)
 end
 
 if (GrandStrategyYear >= -241) then

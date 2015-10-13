@@ -33,6 +33,13 @@ DefineFaction("Dane Tribe", {
 	DevelopsTo = {"Denmark"}
 })
 
+DefineFaction("Geat Tribe", {
+	Civilization = "norse",
+	Type = "tribe",
+	Color = "teal",
+	SecondaryColor = "teal"
+})
+
 DefineFaction("Swede Tribe", {
 	Civilization = "norse",
 	Type = "tribe",
