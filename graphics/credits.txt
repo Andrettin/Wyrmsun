@@ -701,10 +701,14 @@ João Victor G. Costa (Jinn):
 /graphics/tilesets/swamp/neutral/icons/rat.png
 /graphics/tilesets/swamp/terrain/rock.png
 /graphics/tilesets/swamp/terrain/swamp.png
-/graphics/tilesets/world/sites/dwarven_settlement_with_barracks.png
+/graphics/tilesets/world/sites/dwarf_barracks.png
+/graphics/tilesets/world/sites/dwarf_settlement.png
+/graphics/tilesets/world/sites/germanic_barracks.png
 /graphics/tilesets/world/sites/germanic_settlement.png
-/graphics/tilesets/world/sites/gnomish_settlement.png
-/graphics/tilesets/world/sites/goblin_settlement_with_barracks.png (based on the goblin buildings made by Leo)
+/graphics/tilesets/world/sites/gnome_barracks.png
+/graphics/tilesets/world/sites/gnome_settlement.png
+/graphics/tilesets/world/sites/goblin_barracks.png (based on the goblin mess hall made by Leo)
+/graphics/tilesets/world/sites/goblin_settlement.png (based on the goblin buildings made by Leo)
 /graphics/tilesets/world/sites/kal_karthan_settlement.png
 /graphics/tilesets/world/sites/resource_building_gold.png
 /graphics/tilesets/world/sites/resource_building_gold_player_color.png
@@ -724,6 +728,8 @@ João Victor G. Costa (Jinn):
 /graphics/tilesets/world/sites/resource_building_mushrooms_mountains.png
 /graphics/tilesets/world/sites/resource_building_stone.png
 /graphics/tilesets/world/sites/resource_building_stone_mountains.png
+/graphics/tilesets/world/sites/resource_not_worked.png
+/graphics/tilesets/world/sites/teuton_settlement_masonry.png
 /graphics/tilesets/world/terrain/conifer_forest/conifer_forest_east_1.png
 /graphics/tilesets/world/terrain/conifer_forest/conifer_forest_east_2.png
 /graphics/tilesets/world/terrain/conifer_forest/conifer_forest_inner.png
