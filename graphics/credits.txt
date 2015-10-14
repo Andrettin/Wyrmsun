@@ -878,6 +878,9 @@ João Victor G. Costa (Jinn):
 /graphics/ui/backgrounds/gryphon.png (modified from Tanja Nov.'s drawing)
 /graphics/ui/backgrounds/gryphon_profile.png (modified from Tanja Nov.'s drawing)
 /graphics/ui/backgrounds/gryphon_small.png (modified from Tanja Nov.'s drawing)
+/graphics/ui/backgrounds/gullinburst.png (modified from Tanja Nov.'s drawing)
+/graphics/ui/backgrounds/gullinburst_profile.png (modified from Tanja Nov.'s drawing)
+/graphics/ui/backgrounds/gullinburst_small.png (modified from Tanja Nov.'s drawing)
 /graphics/ui/backgrounds/wyrm.png (modified from Tanja Nov.'s drawing)
 /graphics/ui/backgrounds/wyrm_profile.png (modified from Tanja Nov.'s drawing)
 /graphics/ui/backgrounds/wyrm_small.png (modified from Tanja Nov.'s drawing)
@@ -1032,6 +1035,7 @@ StumpyStrust:
 Tanja Nov.:
 /graphics/ui/backgrounds/gnashorn.png (later modified by Jinn)
 /graphics/ui/backgrounds/gryphon.png (later modified by Jinn)
+/graphics/ui/backgrounds/gullinburst.png (later modified by Jinn)
 /graphics/ui/backgrounds/wyrm.png (later modified by Jinn)
 /graphics/ui/backgrounds/yale.png (later modified by Jinn)
 

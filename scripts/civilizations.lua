@@ -328,7 +328,7 @@ DefineRaceNames(
 			"Waida", "Waid", -- from Proto-Germanic to German
 			"Walakuzjōn", "Walküre" -- from Proto-Germanic to German
 		},
-		"default-color", "orange"
+		"default-color", "yellow"
 	},
 	"race", {
 		"name", "basque", -- represents not only the speakers of Vasconic languages, but also various pre-Indo-European cultures
