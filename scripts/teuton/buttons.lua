@@ -306,9 +306,10 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-teuton-stronghold",
   Key = "u", Hint = _("Upgrade to B~!urg"), Popup = "popup-building",
   ForUnit = {"unit-teuton-town-hall"} } )
 
-DefineButton( { Pos = 1, Level = 1, Icon = "icon-teuton-ritter",
+--[[
+DefineButton( { Pos = 2, Level = 1, Icon = "icon-teuton-ritter",
 	Action = "experience-upgrade-to", Value = "unit-teuton-ritter",
 	Key = "r", Hint = _("Upgrade to ~!Ritter"), Popup = "popup-unit",
 	ForUnit = {"unit-teuton-swordsman"}
 } )
-
+--]]

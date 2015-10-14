@@ -1513,7 +1513,8 @@ function GetUnitTypeLevelUpUpgrades(unit_type)
 	elseif (unit_type == "unit-germanic-archer" or unit_type == "unit-teuton-archer") then
 		return { "upgrade-critical-strike", "upgrade-deadly-precision", "upgrade-eagle-eye" }
 	elseif (unit_type == "unit-teuton-swordsman") then
-		return { "unit-teuton-ritter" }
+--		return { "unit-teuton-ritter" }
+		return { "upgrade-critical-strike", "upgrade-sword-mastery", "upgrade-deadly-precision", "upgrade-eagle-eye" }
 	elseif (unit_type == "unit-teuton-ritter") then
 		return { "upgrade-critical-strike", "upgrade-sword-mastery", "upgrade-deadly-precision", "upgrade-eagle-eye" }
 	elseif (unit_type == "unit-gnomish-recruit") then

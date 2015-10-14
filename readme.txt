@@ -298,7 +298,6 @@ https://github.com/Andrettin/Wyrmsun
 - Dwarven Gryphon Riders are now trainable (they require a Lumber Mill and a Bastion to be trained).
 - Germanic and Teuton archers now have a 50% damage bonus against air units.
 - Added Teuton Ritter (icon by Jinn).
-- Teuton Kriegers can now upgrade to Teuton Ritters through experience.
 
 -----------------------------------------------------------------------
 - 1.3.3
