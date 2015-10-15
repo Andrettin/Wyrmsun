@@ -1029,6 +1029,9 @@ Oray Studios:
 /graphics/ui/mana_icon.png
 /graphics/ui/timber_extra_1.png
 
+pasunna:
+/graphics/neutral/icons/cheese.png
+
 Ransom.00:
 /graphics/dwarf/icons/axe_2.png (later modified by Jinn)
 

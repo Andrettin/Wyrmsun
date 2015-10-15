@@ -3009,6 +3009,7 @@ function AIDoTurn(ai_faction)
 	for province_i, key in ipairs(ai_faction.OwnedProvinces) do
 		local desired_infantry_in_province = 6
 		local desired_archers_in_province = 3
+		local desired_cavalry_in_province = 2
 		local desired_catapults_in_province = 1
 		local desired_flying_riders_in_province = 1
 
@@ -3043,11 +3044,13 @@ function AIDoTurn(ai_faction)
 					end
 					local new_desired_infantry_in_province = 0
 					local new_desired_archers_in_province = 0
+					local new_desired_cavalry_in_province = 0
 					local new_desired_catapults_in_province = 0
 					local new_desired_flying_riders_in_province = 0
 					if (GetProvinceMilitaryScore(WorldMapProvinces[second_key].Name, false, true) > 0) then
 						new_desired_infantry_in_province = round(desired_infantry_in_province * (GetProvinceMilitaryScore(WorldMapProvinces[second_key].Name, false, true) * 3 / 2) / base_military_score)
 						new_desired_archers_in_province = round(desired_archers_in_province * (GetProvinceMilitaryScore(WorldMapProvinces[second_key].Name, false, true) * 3 / 2) / base_military_score)
+						new_desired_cavalry_in_province = round(desired_cavalry_in_province * (GetProvinceMilitaryScore(WorldMapProvinces[second_key].Name, false, true) * 3 / 2) / base_military_score)
 						new_desired_catapults_in_province = round(desired_catapults_in_province * (GetProvinceMilitaryScore(WorldMapProvinces[second_key].Name, false, true) * 3 / 2) / base_military_score)
 						new_desired_flying_riders_in_province = round(desired_flying_riders_in_province * (GetProvinceMilitaryScore(WorldMapProvinces[second_key].Name, false, true) * 3 / 2) / base_military_score)
 					end
@@ -3056,6 +3059,9 @@ function AIDoTurn(ai_faction)
 					end
 					if (new_desired_archers_in_province > desired_archers_in_province) then
 						desired_archers_in_province = new_desired_archers_in_province
+					end
+					if (new_desired_cavalry_in_province > desired_cavalry_in_province) then
+						desired_cavalry_in_province = new_desired_cavalry_in_province
 					end
 					if (new_desired_catapults_in_province > desired_catapults_in_province) then
 						desired_catapults_in_province = new_desired_catapults_in_province
@@ -3098,11 +3104,13 @@ function AIDoTurn(ai_faction)
 						end
 						local new_desired_infantry_in_province = 0
 						local new_desired_archers_in_province = 0
+						local new_desired_cavalry_in_province = 0
 						local new_desired_catapults_in_province = 0
 						local new_desired_flying_riders_in_province = 0
 						if (GetProvinceMilitaryScore(WorldMapProvinces[second_key].Name, false, true) > 0) then
 							new_desired_infantry_in_province = round(desired_infantry_in_province * (GetProvinceMilitaryScore(WorldMapProvinces[second_key].Name, false, true) * 3 / 2) / base_military_score)
 							new_desired_archers_in_province = round(desired_archers_in_province * (GetProvinceMilitaryScore(WorldMapProvinces[second_key].Name, false, true) * 3 / 2) / base_military_score)
+							new_desired_cavalry_in_province = round(desired_cavalry_in_province * (GetProvinceMilitaryScore(WorldMapProvinces[second_key].Name, false, true) * 3 / 2) / base_military_score)
 							new_desired_catapults_in_province = round(desired_catapults_in_province * (GetProvinceMilitaryScore(WorldMapProvinces[second_key].Name, false, true) * 3 / 2) / base_military_score)
 							new_desired_flying_riders_in_province = round(desired_flying_riders_in_province * (GetProvinceMilitaryScore(WorldMapProvinces[second_key].Name, false, true) * 3 / 2) / base_military_score)
 						end
@@ -3111,6 +3119,9 @@ function AIDoTurn(ai_faction)
 						end
 						if (new_desired_archers_in_province > desired_archers_in_province) then
 							desired_archers_in_province = new_desired_archers_in_province
+						end
+						if (new_desired_cavalry_in_province > desired_cavalry_in_province) then
+							desired_cavalry_in_province = new_desired_cavalry_in_province
 						end
 						if (new_desired_catapults_in_province > desired_catapults_in_province) then
 							desired_catapults_in_province = new_desired_catapults_in_province
@@ -3150,11 +3161,13 @@ function AIDoTurn(ai_faction)
 					end
 					local new_desired_infantry_in_province = 0
 					local new_desired_archers_in_province = 0
+					local new_desired_cavalry_in_province = 0
 					local new_desired_catapults_in_province = 0
 					local new_desired_flying_riders_in_province = 0
 					if (GetProvinceMilitaryScore(WorldMapProvinces[second_key].Name, false, true) > 0) then
 						new_desired_infantry_in_province = round(desired_infantry_in_province * (GetProvinceMilitaryScore(WorldMapProvinces[second_key].Name, false, true) * 3 / 2) / base_military_score)
 						new_desired_archers_in_province = round(desired_archers_in_province * (GetProvinceMilitaryScore(WorldMapProvinces[second_key].Name, false, true) * 3 / 2) / base_military_score)
+						new_desired_cavalry_in_province = round(desired_cavalry_in_province * (GetProvinceMilitaryScore(WorldMapProvinces[second_key].Name, false, true) * 3 / 2) / base_military_score)
 						new_desired_catapults_in_province = round(desired_catapults_in_province * (GetProvinceMilitaryScore(WorldMapProvinces[second_key].Name, false, true) * 3 / 2) / base_military_score)
 						new_desired_flying_riders_in_province = round(desired_flying_riders_in_province * (GetProvinceMilitaryScore(WorldMapProvinces[second_key].Name, false, true) * 3 / 2) / base_military_score)
 					end
@@ -3163,6 +3176,9 @@ function AIDoTurn(ai_faction)
 					end
 					if (new_desired_archers_in_province > desired_archers_in_province) then
 						desired_archers_in_province = new_desired_archers_in_province
+					end
+					if (new_desired_cavalry_in_province > desired_cavalry_in_province) then
+						desired_cavalry_in_province = new_desired_cavalry_in_province
 					end
 					if (new_desired_catapults_in_province > desired_catapults_in_province) then
 						desired_catapults_in_province = new_desired_catapults_in_province
@@ -3182,6 +3198,7 @@ function AIDoTurn(ai_faction)
 		) then -- don't build any military units if a province is lacking a town hall, if it doesn't border any non-owned provinces, or if net income is too small and gold reserves are too small; 800 is the highest gold cost a unit/building/technology can have
 			desired_infantry_in_province = 0
 			desired_archers_in_province = 0
+			desired_cavalry_in_province = 0
 			desired_catapults_in_province = 0
 			desired_flying_riders_in_province = 0
 		end
@@ -3200,6 +3217,14 @@ function AIDoTurn(ai_faction)
 					elseif (GetUnitTypeData(unitName, "Class") == "shooter" and desired_archers_in_province > 0) then
 						for j=1,desired_archers_in_province do
 							if ((GetProvinceUnitQuantity(WorldMapProvinces[key].Name, unitName) + GetProvinceUnderConstructionUnitQuantity(WorldMapProvinces[key].Name, unitName)) < desired_archers_in_province and CanTrainUnit(WorldMapProvinces[key], unitName)) then
+								TrainUnit(WorldMapProvinces[key], unitName)
+							else
+								break
+							end
+						end
+					elseif (GetUnitTypeData(unitName, "Class") == "cavalry" and desired_cavalry_in_province > 0) then
+						for j=1,desired_cavalry_in_province do
+							if ((GetProvinceUnitQuantity(WorldMapProvinces[key].Name, unitName) + GetProvinceUnderConstructionUnitQuantity(WorldMapProvinces[key].Name, unitName)) < desired_cavalry_in_province and CanTrainUnit(WorldMapProvinces[key], unitName)) then
 								TrainUnit(WorldMapProvinces[key], unitName)
 							else
 								break
