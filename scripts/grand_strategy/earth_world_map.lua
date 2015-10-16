@@ -11298,6 +11298,7 @@ AddProvinceResource(WorldMapProvinces.Serbia, "grain", 1)
 
 for key, value in pairs(WorldMapProvinces) do
 	AddProvinceResource(WorldMapProvinces[key], "lumber", SyncRand(3))
+	AddProvinceResource(WorldMapProvinces[key], "stone", SyncRand(2))
 end
 
 MercenaryGroups = {
