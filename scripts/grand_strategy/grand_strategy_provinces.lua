@@ -1319,7 +1319,7 @@ function LoadProvinces(world)
 			CulturalSettlementNames = {
 				teuton = "Reval"
 			},
-			SettlementLocation = {137, 23}, -- Tallinn
+			SettlementLocation = {550, 87}, -- Tallinn
 			Map = "maps/random_maps/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Coastal = true
