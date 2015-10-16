@@ -911,6 +911,12 @@ João Victor G. Costa (Jinn):
 /graphics/ui/icons/prestige_small.png
 /graphics/ui/icons/research.png
 /graphics/ui/icons/research_small.png
+/graphics/ui/icons/wyrm_egg_foil.png
+/graphics/ui/icons/wyrm_egg_level_1.png
+/graphics/ui/icons/wyrm_egg_level_2.png
+/graphics/ui/icons/wyrm_egg_level_3.png
+/graphics/ui/icons/wyrm_egg_level_4.png
+/graphics/ui/icons/wyrm_egg_level_5.png
 /graphics/ui/bar_frame.png
 /graphics/ui/coal.png
 /graphics/ui/coal_extra_1.png
