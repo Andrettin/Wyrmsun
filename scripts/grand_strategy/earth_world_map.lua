@@ -11334,9 +11334,11 @@ AddProvinceResource(WorldMapProvinces.Savoy, "grain", 1)
 AddProvinceResource(WorldMapProvinces.Serbia, "grain", 1)
 AddProvinceResource(WorldMapProvinces.UpperSaxony, "grain", 1)
 
+-- generate resources while there aren't sufficient predefined resources for the provinces
 for key, value in pairs(WorldMapProvinces) do
 	AddProvinceResource(WorldMapProvinces[key], "lumber", SyncRand(3))
 	AddProvinceResource(WorldMapProvinces[key], "stone", SyncRand(2))
+	AddProvinceResource(WorldMapProvinces[key], "gold", SyncRand(2))
 end
 
 MercenaryGroups = {
