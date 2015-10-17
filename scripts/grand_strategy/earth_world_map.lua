@@ -4333,8 +4333,8 @@ SetWorldMapTileRiver(498, 110, "south", "Rhine")
 SetWorldMapTileTerrain(498, 111, plains_id)
 SetWorldMapTileRiver(498, 111, "north", "Rhine")
 SetWorldMapTileRiver(498, 111, "east", "Rhine")
-AddWorldMapResource("grain", 498, 111, true) -- Vines; Source: "Philip's International School Atlas", 2006, p. 59.
 SetWorldMapTileTerrain(498, 112, plains_id)
+AddWorldMapResource("grain", 498, 112, true) -- Vines; should be in {498, 111}, but that tile is occupied by a settlement; Source: "Philip's International School Atlas", 2006, p. 59.
 SetWorldMapTileTerrain(498, 113, plains_id)
 SetWorldMapTileTerrain(498, 114, plains_id)
 SetWorldMapTileTerrain(498, 115, plains_id)
