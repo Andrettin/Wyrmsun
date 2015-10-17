@@ -1284,7 +1284,7 @@ DefineIcon({
 DefineIcon({
 	Name = "icon-cheese",
 	Size = {46, 38},
-	File = "neutral/icons/cheese.png"
+	File = "neutral/icons/food.png"
 })
 
 DefineIcon({
