@@ -234,7 +234,7 @@ DefineUnitType("unit-teuton-ritter", { Name = _("Ritter"),
 	Civilization = "teuton",
 	Description = _("The Teutons excel in mounted combat. Their well-armored and trained heavy cavalry strikes fear in the hearts of their enemies whenever they are seen upon the battlefield."),
 	Background = _("\"Ritter\" is the German word for \"knight\"."),
-	Image = {"file", "dwarf/units/yale_rider_red_hair_gray_fur.png", "size", {72, 72}},
+	Image = {"file", "teuton/units/ritter.png", "size", {72, 72}},
 	Animations = "animations-melee-unit", Icon = "icon-teuton-ritter",
 	Armor = 3, BasicDamage = 13, -- +1 armor, +1 damage
 	DaySightRangeBonus = 1,

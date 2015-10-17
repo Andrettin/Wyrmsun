@@ -291,6 +291,7 @@ https://github.com/Andrettin/Wyrmsun
 - The Home of the Boii and Moving into Galicia quests (Teuton) now give 3 technology points instead of 2.
 - The Necklace of the Brisings and The Binding of Grafvitnir quests (Dwarf) now give 2 technology points instead of 1.
 - The Hills of the Shorbear Clan quest (Dwarf) now gives 3 technology points instead of 2.
+- The allied tribes in The Home of the Boii quest now have one Ritter each in place of a Krieger they previously had.
 
 * Units
 - A unit type's bonus against mounted units, bonus against buildings, bonus against giants and backstab bonus now appear in its popup.
@@ -299,7 +300,7 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed the display of the mercenary hiring popup.
 - Dwarven Gryphon Riders are now trainable (they require a Lumber Mill and a Bastion to be trained).
 - Germanic and Teuton archers now have a 50% damage bonus against air units.
-- Added Teuton Ritter (icon by Jinn).
+- Added Teuton Ritter (icon by Jinn and unit graphics by badbuckle).
 
 -----------------------------------------------------------------------
 - 1.3.3

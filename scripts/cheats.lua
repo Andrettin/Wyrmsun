@@ -177,6 +177,9 @@ function HandleCheats(str)
 			end
 		end
 
+  elseif (str == "horserider") then
+		unit = CreateUnit("unit-teuton-ritter", GetThisPlayer(), {Players[GetThisPlayer()].StartPos.x, Players[GetThisPlayer()].StartPos.y})
+
   else
     return false
   end

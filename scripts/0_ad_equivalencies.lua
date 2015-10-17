@@ -75,10 +75,10 @@ Set0ADTemplateUnitTypeEquivalency("gaia/special_treasure_pegasus", "unit-gold-ch
 Set0ADTemplateUnitTypeEquivalency("gaia/special_treasure_golden_fleece", "unit-gold-chest")
 
 -- Carthaginian units
-Set0ADTemplateUnitTypeEquivalency("units/cart_cavalry_spearman_b", "unit-teuton-swordsman")
-Set0ADTemplateUnitTypeEquivalency("units/cart_cavalry_spearman_a", "unit-teuton-swordsman")
-Set0ADTemplateUnitTypeEquivalency("units/cart_cavalry_spearman_e", "unit-teuton-swordsman")
-Set0ADTemplateUnitTypeEquivalency("units/cart_champion_cavalry", "unit-teuton-swordsman")
+Set0ADTemplateUnitTypeEquivalency("units/cart_cavalry_spearman_b", "unit-teuton-ritter")
+Set0ADTemplateUnitTypeEquivalency("units/cart_cavalry_spearman_a", "unit-teuton-ritter")
+Set0ADTemplateUnitTypeEquivalency("units/cart_cavalry_spearman_e", "unit-teuton-ritter")
+Set0ADTemplateUnitTypeEquivalency("units/cart_champion_cavalry", "unit-teuton-ritter")
 
 -- Celt units
 Set0ADTemplateUnitTypeEquivalency("units/celt_fanatic", "unit-germanic-warrior")
@@ -95,12 +95,12 @@ Set0ADTemplateUnitTypeEquivalency("units/gaul_infantry_spearman_e", "unit-german
 Set0ADTemplateUnitTypeEquivalency("units/gaul_infantry_javelinist_b", "unit-germanic-archer")
 Set0ADTemplateUnitTypeEquivalency("units/gaul_infantry_javelinist_a", "unit-germanic-archer")
 Set0ADTemplateUnitTypeEquivalency("units/gaul_infantry_javelinist_e", "unit-germanic-archer")
-Set0ADTemplateUnitTypeEquivalency("units/gaul_cavalry_swordsman_b", "unit-germanic-warrior")
-Set0ADTemplateUnitTypeEquivalency("units/gaul_cavalry_swordsman_a", "unit-germanic-warrior")
-Set0ADTemplateUnitTypeEquivalency("units/gaul_cavalry_swordsman_e", "unit-germanic-warrior")
-Set0ADTemplateUnitTypeEquivalency("units/gaul_cavalry_javelinist_b", "unit-germanic-archer")
-Set0ADTemplateUnitTypeEquivalency("units/gaul_cavalry_javelinist_a", "unit-germanic-archer")
-Set0ADTemplateUnitTypeEquivalency("units/gaul_cavalry_javelinist_e", "unit-germanic-archer")
+Set0ADTemplateUnitTypeEquivalency("units/gaul_cavalry_swordsman_b", "unit-teuton-ritter")
+Set0ADTemplateUnitTypeEquivalency("units/gaul_cavalry_swordsman_a", "unit-teuton-ritter")
+Set0ADTemplateUnitTypeEquivalency("units/gaul_cavalry_swordsman_e", "unit-teuton-ritter")
+Set0ADTemplateUnitTypeEquivalency("units/gaul_cavalry_javelinist_b", "unit-teuton-ritter")
+Set0ADTemplateUnitTypeEquivalency("units/gaul_cavalry_javelinist_a", "unit-teuton-ritter")
+Set0ADTemplateUnitTypeEquivalency("units/gaul_cavalry_javelinist_e", "unit-teuton-ritter")
 -- Gaul structures
 Set0ADTemplateUnitTypeEquivalency("structures/gaul_civil_centre", "unit-germanic-town-hall")
 Set0ADTemplateUnitTypeEquivalency("structures/gaul_defense_tower", "unit-teuton-guard-tower")
@@ -116,12 +116,12 @@ Set0ADTemplateUnitTypeEquivalency("units/hele_infantry_spearman_e", "unit-teuton
 Set0ADTemplateUnitTypeEquivalency("units/hele_infantry_archer_b", "unit-teuton-archer")
 Set0ADTemplateUnitTypeEquivalency("units/hele_infantry_javelinist_b", "unit-teuton-archer")
 Set0ADTemplateUnitTypeEquivalency("units/hele_infantry_javelinist_a", "unit-teuton-archer")
-Set0ADTemplateUnitTypeEquivalency("units/hele_cavalry_swordsman_b", "unit-teuton-swordsman") --cavalry swordsman
-Set0ADTemplateUnitTypeEquivalency("units/hele_cavalry_swordsman_a", "unit-teuton-swordsman") --advanced cavalry swordsman
-Set0ADTemplateUnitTypeEquivalency("units/hele_cavalry_swordsman_e", "unit-teuton-swordsman") --elite cavalry swordsman
-Set0ADTemplateUnitTypeEquivalency("units/hele_cavalry_javelinist_b", "unit-teuton-archer") --javelinist cavalry
-Set0ADTemplateUnitTypeEquivalency("units/hele_cavalry_javelinist_a", "unit-teuton-archer") --advanced javelinist cavalry
-Set0ADTemplateUnitTypeEquivalency("units/hele_cavalry_javelinist_e", "unit-teuton-archer") --elite javelinist cavalry
+Set0ADTemplateUnitTypeEquivalency("units/hele_cavalry_swordsman_b", "unit-teuton-ritter") --cavalry swordsman
+Set0ADTemplateUnitTypeEquivalency("units/hele_cavalry_swordsman_a", "unit-teuton-ritter") --advanced cavalry swordsman
+Set0ADTemplateUnitTypeEquivalency("units/hele_cavalry_swordsman_e", "unit-teuton-ritter") --elite cavalry swordsman
+Set0ADTemplateUnitTypeEquivalency("units/hele_cavalry_javelinist_b", "unit-teuton-ritter") --javelinist cavalry
+Set0ADTemplateUnitTypeEquivalency("units/hele_cavalry_javelinist_a", "unit-teuton-ritter") --advanced javelinist cavalry
+Set0ADTemplateUnitTypeEquivalency("units/hele_cavalry_javelinist_e", "unit-teuton-ritter") --elite javelinist cavalry
 -- Hellene structures
 Set0ADTemplateUnitTypeEquivalency("structures/hele_civil_centre", "unit-teuton-town-hall")
 Set0ADTemplateUnitTypeEquivalency("structures/hele_field", "")
@@ -140,11 +140,11 @@ Set0ADTemplateUnitTypeEquivalency("units/mace_champion_infantry_a", "unit-teuton
 Set0ADTemplateUnitTypeEquivalency("units/mace_thorakites", "unit-teuton-swordsman")
 Set0ADTemplateUnitTypeEquivalency("units/mace_infantry_archer_e", "unit-teuton-swordsman")
 Set0ADTemplateUnitTypeEquivalency("units/mace_thureophoros", "unit-teuton-archer")
-Set0ADTemplateUnitTypeEquivalency("units/mace_cavalry_spearman_a", "unit-teuton-swordsman")
-Set0ADTemplateUnitTypeEquivalency("units/mace_cavalry_spearman_e", "unit-teuton-swordsman")
-Set0ADTemplateUnitTypeEquivalency("units/mace_champion_cavalry", "unit-teuton-swordsman")
-Set0ADTemplateUnitTypeEquivalency("units/mace_cavalry_javelinist_a", "unit-teuton-archer")
-Set0ADTemplateUnitTypeEquivalency("units/mace_cavalry_javelinist_e", "unit-teuton-archer")
+Set0ADTemplateUnitTypeEquivalency("units/mace_cavalry_spearman_a", "unit-teuton-ritter")
+Set0ADTemplateUnitTypeEquivalency("units/mace_cavalry_spearman_e", "unit-teuton-ritter")
+Set0ADTemplateUnitTypeEquivalency("units/mace_champion_cavalry", "unit-teuton-ritter")
+Set0ADTemplateUnitTypeEquivalency("units/mace_cavalry_javelinist_a", "unit-teuton-ritter")
+Set0ADTemplateUnitTypeEquivalency("units/mace_cavalry_javelinist_e", "unit-teuton-ritter")
 -- Macedonian structures
 Set0ADTemplateUnitTypeEquivalency("structures/mace_civil_centre", "unit-teuton-town-hall")
 Set0ADTemplateUnitTypeEquivalency("structures/mace_outpost", "unit-teuton-watch-tower")
@@ -157,7 +157,7 @@ Set0ADTemplateUnitTypeEquivalency("units/rome_infantry_javelinist_b", "unit-teut
 Set0ADTemplateUnitTypeEquivalency("units/rome_infantry_javelinist_a", "unit-teuton-archer")
 Set0ADTemplateUnitTypeEquivalency("units/rome_infantry_javelinist_e", "unit-teuton-archer")
 Set0ADTemplateUnitTypeEquivalency("units/rome_champion_infantry", "unit-teuton-swordsman")
-Set0ADTemplateUnitTypeEquivalency("units/rome_champion_cavalry", "unit-teuton-swordsman")
+Set0ADTemplateUnitTypeEquivalency("units/rome_champion_cavalry", "unit-teuton-ritter")
 -- Roman structures
 Set0ADTemplateUnitTypeEquivalency("structures/rome_civil_centre", "unit-teuton-town-hall")
 Set0ADTemplateUnitTypeEquivalency("structures/rome_army_camp", "unit-teuton-barracks")
@@ -165,7 +165,7 @@ Set0ADTemplateUnitTypeEquivalency("structures/rome_outpost", "unit-teuton-watch-
 Set0ADTemplateUnitTypeEquivalency("structures/rome_defense_tower", "unit-teuton-guard-tower")
 Set0ADTemplateUnitTypeEquivalency("structures/rome_tent", "unit-teuton-farm")
 -- Roman heroes
-Set0ADTemplateUnitTypeEquivalency("units/rome_hero_marcellus", "unit-teuton-swordsman") --cavalry swordsman
+Set0ADTemplateUnitTypeEquivalency("units/rome_hero_marcellus", "unit-teuton-ritter") -- cavalry swordsman
 
 -- Seleucid units
 Set0ADTemplateUnitTypeEquivalency("units/sele_champion_infantry_pikeman", "unit-teuton-swordsman")
