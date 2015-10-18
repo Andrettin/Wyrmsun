@@ -101,7 +101,7 @@ DefineButton( { Pos = 13, Level = 0, Icon = "icon-rally-point",
 
 DefineButton( { Pos = 6, Level = 0, Icon = "icon-build-basic-structure",
   Action = "button", Value = 1,
-  Key = "b", Hint = _("~!Build Basic Structure"), Popup = "popup-commands",
+  Key = "b", Hint = _("~!Build Structure"), Popup = "popup-commands",
   ForUnit = {"unit-goblin-worker"} } )
 
 -- simple buildings goblin -----------------------------------------------------

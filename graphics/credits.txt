@@ -301,7 +301,7 @@ b_o:
 /graphics/ui/slow.png
 /graphics/ui/status_effect_icons.png
 
-badbuckle:
+badbuckle (Cenk Açan):
 /graphics/teuton/units/ritter.png (uses b_o's horse)
 
 Battle for Wesnoth Team:

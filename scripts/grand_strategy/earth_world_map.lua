@@ -11331,7 +11331,7 @@ AddProvinceResource(WorldMapProvinces.Palatinate, "grain", 1)
 AddProvinceResource(WorldMapProvinces.Parma, "grain", 1)
 AddProvinceResource(WorldMapProvinces.Romagna, "grain", 1)
 AddProvinceResource(WorldMapProvinces.Savoy, "grain", 1)
-AddProvinceResource(WorldMapProvinces.Schleswig, "grain", 1)
+AddProvinceResource(WorldMapProvinces.Schleswig, "grain", 1) -- actually has a coastal settlement which provides 1 food, but will get this grain in case it has multiple resources
 AddProvinceResource(WorldMapProvinces.Serbia, "grain", 1)
 AddProvinceResource(WorldMapProvinces.UpperSaxony, "grain", 1)
 
