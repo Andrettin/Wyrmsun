@@ -292,6 +292,7 @@ https://github.com/Andrettin/Wyrmsun
 - The Necklace of the Brisings and The Binding of Grafvitnir quests (Dwarf) now give 2 technology points instead of 1.
 - The Hills of the Shorbear Clan quest (Dwarf) now gives 3 technology points instead of 2.
 - The allied tribes in The Home of the Boii quest now have one Ritter each in place of a Krieger they previously had.
+- Fixed an issue which caused the tech tree menu not to be brought up when finishing a quest after loading a game.
 
 * Units
 - A unit type's bonus against mounted units, bonus against buildings, bonus against giants and backstab bonus now appear in its popup.
