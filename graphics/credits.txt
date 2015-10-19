@@ -915,6 +915,7 @@ João Victor G. Costa (Jinn):
 /graphics/ui/icons/research.png
 /graphics/ui/icons/research_small.png
 /graphics/ui/icons/wyrm_egg_foil.png
+/graphics/ui/icons/wyrm_egg_foil_without_effect.png
 /graphics/ui/icons/wyrm_egg_level_1.png
 /graphics/ui/icons/wyrm_egg_level_2.png
 /graphics/ui/icons/wyrm_egg_level_3.png
@@ -924,10 +925,13 @@ João Victor G. Costa (Jinn):
 /graphics/ui/coal.png
 /graphics/ui/coal_extra_1.png
 /graphics/ui/command_button_frame.png
+/graphics/ui/copper.png
+/graphics/ui/fish.png
 /graphics/ui/food.png
 /graphics/ui/fuel.png
 /graphics/ui/gold.png
 /graphics/ui/gold_ore.png
+/graphics/ui/grain.png
 /graphics/ui/housing.png
 /graphics/ui/icon_frame.png
 /graphics/ui/icon_frame_pressed.png
@@ -935,6 +939,7 @@ João Victor G. Costa (Jinn):
 /graphics/ui/labor.png
 /graphics/ui/labor_extra_1.png
 /graphics/ui/lumber.png
+/graphics/ui/mushrooms.png
 /graphics/ui/oil.png
 /graphics/ui/potion.png
 /graphics/ui/prestige.png
@@ -943,6 +948,7 @@ João Victor G. Costa (Jinn):
 /graphics/ui/research.png
 /graphics/ui/score.png
 /graphics/ui/score_extra_1.png
+/graphics/ui/silver.png
 /graphics/ui/stone.png
 /graphics/ui/timber.png
 /graphics/ui/wyrmsun_logo.png
