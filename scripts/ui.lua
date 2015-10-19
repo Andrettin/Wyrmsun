@@ -275,6 +275,8 @@ UI.StatusLine.Font = Fonts["game"]
 
 UI.Resources[GetResourceID("labor")].G = CGraphic:New("ui/labor.png", 14, 14)
 UI.Resources[GetResourceID("labor")].IconFrame = 0
+UI.Resources[GetResourceID("labor")].IconX = Video.Width
+UI.Resources[GetResourceID("labor")].IconY = Video.Height
 
 Load("scripts/celt/ui.lua")
 Load("scripts/dwarf/ui.lua")
