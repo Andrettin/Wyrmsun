@@ -679,6 +679,10 @@ end
 
 function AddProvinceResource(province, resource, quantity)
 	local WhileCount = 0
+	if (quantity > GetProvinceFoodCapacity(province.Name, true)) then
+		quantity = GetProvinceFoodCapacity(province.Name, true)
+	end
+	
 	while (quantity > 0) do
 		local random_tile = province.Tiles[SyncRand(table.getn(province.Tiles)) + 1]
 		local prospected = resource ~= "gold"
