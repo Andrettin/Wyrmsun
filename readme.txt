@@ -286,6 +286,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added the possibility of making units have a damage bonus against buildings, against giants (with a corresponding "Giant" tag to be used by units) or against air units.
 - Added resistances against hack, pierce and blunt damage.
 - Added new types of damage with their respective resistances: fire, cold, arcane, lightning, air, earth and water.
+- The Steam version of Wyrmsun will now also identify mods in the /mods/ folder, instead of only ones available through the Steam Workshop.
 
 * Quests
 - The Home of the Boii and Moving into Galicia quests (Teuton) now give 3 technology points instead of 2.

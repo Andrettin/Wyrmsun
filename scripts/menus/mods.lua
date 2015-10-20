@@ -41,42 +41,39 @@ function RunModsMenu(selected_mod)
 
 	-- load the mods
 	local mods = {}
-  
-	local i
-	local f
-	local u = 1
+	for mod_dir_i=1,table.getn(ModDirectories) do
+	  
+		local i
+		local f
+		local u = 1
 
-	-- list the subdirectories in the mods folder
-	local dirlist = {}
-	local dirs = ListDirsInDirectory(ModDirectory)
-	for i,f in ipairs(dirs) do
-		dirlist[u] = f .. "/"
-		u = u + 1
-	end
+		-- list the subdirectories in the mods folder
+		local dirlist = {}
+		local dirs = ListDirsInDirectory(ModDirectories[mod_dir_i])
+		for i,f in ipairs(dirs) do
+			dirlist[u] = f .. "/"
+			u = u + 1
+		end
 
-	u = 1
-	-- get mods in the subdirectories of the mods folder
-	for j=1,table.getn(dirlist) do
-		local fileslist = ListFilesInDirectory(ModDirectory .. dirlist[j])
-		for i,f in ipairs(fileslist) do
-			if (string.find(f, "info.lua")) then
-				mods[u] = ModDirectory .. dirlist[j] .. f
-				u = u + 1
+		u = 1
+		-- get mods in the subdirectories of the mods folder
+		for j=1,table.getn(dirlist) do
+			local fileslist = ListFilesInDirectory(ModDirectories[mod_dir_i] .. dirlist[j])
+			for i,f in ipairs(fileslist) do
+				ModName = ""
+				if (string.find(f, "info.lua")) then
+					local mod_location = ModDirectories[mod_dir_i] .. dirlist[j] .. f
+					Load(mod_location)
+					if (GetArrayIncludes(mod_list, ModName) == false) then
+						mods[table.getn(mods) + 1] = mod_location
+						table.insert(mod_list, ModName)
+					end
+					u = u + 1
+				end
 			end
 		end
 	end
-
-	-- build the mods list
-	for i=1,table.getn(mods) do
-		ModName = ""
-		ModDescription = ""
-		ModDependencies = nil
-		Load(mods[i])
-		if (ModName ~= "") then
-			table.insert(mod_list, ModName)
-		end
-	end
-	
+			
 	menu:addLabel(_("~<Mods~>"), offx + 176, offy + 1)
 --	menu:addLabel(_("Resolution Width"), offx + 8, offy + 34, Fonts["game"], false)
 	mod_dd = menu:addDropDown(mod_list, offx + 8 + 42, offy + 55 + 26*0,
@@ -145,56 +142,51 @@ function RunModsMenu(selected_mod)
 end
 
 ModPath = ""
-Mods = ""
+Mods = {}
 function LoadMods()
 	ModPath = ""
 	Mods = nil
 	Mods = {}
+	local mod_list = {}
   
-	local i
-	local f
-	local u = 1
+	for mod_dir_i=1,table.getn(ModDirectories) do
+		local i
+		local f
+		local u = 1
 
-	-- list the subdirectories in the mods folder
-	local dirlist = {}
-	local dirs = ListDirsInDirectory(ModDirectory)
-	for i,f in ipairs(dirs) do
-		dirlist[u] = f .. "/"
-		u = u + 1
-	end
-
-	u = 1
-	-- get mods in the subdirectories of the mods folder
-	for j=1,table.getn(dirlist) do
-		local fileslist = ListFilesInDirectory(ModDirectory .. dirlist[j])
-		for i,f in ipairs(fileslist) do
-			if (string.find(f, "info.lua")) then
-				Mods[u] = ModDirectory .. dirlist[j] .. f
-				u = u + 1
-			end
+		-- list the subdirectories in the mods folder
+		local dirlist = {}
+		local dirs = ListDirsInDirectory(ModDirectories[mod_dir_i])
+		for i,f in ipairs(dirs) do
+			dirlist[u] = f .. "/"
+			u = u + 1
 		end
-	end
 
-	u = 1
-	-- get mod main files in the subdirectories of the mods folder
-	for j=1,table.getn(dirlist) do
-		local fileslist = ListFilesInDirectory(ModDirectory .. dirlist[j])
-		for i,f in ipairs(fileslist) do
-			if (string.find(f, "main.lua")) then
-				Mods[u] = ModDirectory .. dirlist[j] .. f
-				u = u + 1
+		u = 1
+		-- get mods in the subdirectories of the mods folder
+		for j=1,table.getn(dirlist) do
+			local fileslist = ListFilesInDirectory(ModDirectories[mod_dir_i] .. dirlist[j])
+			for i,f in ipairs(fileslist) do
+				ModName = ""
+				if (string.find(f, "info.lua")) then
+					local mod_location = ModDirectories[mod_dir_i] .. dirlist[j] .. f
+					Load(mod_location)
+					if (GetArrayIncludes(mod_list, ModName) == false and GetArrayIncludes(wyr.preferences.EnabledMods, ModName)) then
+						Mods[table.getn(Mods) + 1] = mod_location
+						table.insert(mod_list, ModName)
+					end
+					u = u + 1
+				end
 			end
 		end
 	end
 
 	for i=1,table.getn(Mods) do
 		ModName = ""
-		ModPath = tostring(string.gsub(Mods[i], "main.lua", ""))
-		Load(tostring(string.gsub(Mods[i], "main", "info")))
-		if (GetArrayIncludes(wyr.preferences.EnabledMods, ModName)) then
-			table.insert(MapDirectories, tostring(string.gsub(Mods[i], "main.lua", "maps/")))
-			Load(Mods[i])
-		end
+		ModPath = tostring(string.gsub(Mods[i], "info.lua", ""))
+		Load(Mods[i])
+		table.insert(MapDirectories, tostring(string.gsub(Mods[i], "info.lua", "maps/")))
+		Load(tostring(string.gsub(Mods[i], "info", "main")))
 	end
 	
 	ModPath = ""

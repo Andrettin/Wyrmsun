@@ -47,10 +47,10 @@ wyrmsun.Copyright = "Copyright (c) 2013-2015 by Andrettin"
 -------------------------------------------------------------------------------
 
 MapDirectories = {"maps/"}
-ModDirectory = "mods/"
+ModDirectories = {"mods/"}
 
 if (table.getn(ListDirsInDirectory("../../workshop/content/370070/")) > 0) then
-	ModDirectory = "../../workshop/content/370070/"
+	table.insert(ModDirectories, "../../workshop/content/370070/")
 end
 
 

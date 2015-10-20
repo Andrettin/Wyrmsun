@@ -296,13 +296,9 @@ function LoadCivilizationUI(civilization)
 	local ui_file = "scripts/" .. civilization .. "/ui.lua"
 	if not (CanAccessFile(ui_file)) then
 		for i=1,table.getn(Mods) do
-			ModName = ""
-			local mod_path = tostring(string.gsub(Mods[i], "main.lua", ""))
-			Load(tostring(string.gsub(Mods[i], "main", "info")))
-			if (GetArrayIncludes(wyr.preferences.EnabledMods, ModName)) then
-				if (CanAccessFile(mod_path .. "scripts/" .. civilization .. "/ui.lua")) then
-					ui_file = mod_path .. "scripts/" .. civilization .. "/ui.lua"
-				end
+			local mod_path = tostring(string.gsub(Mods[i], "info.lua", ""))
+			if (CanAccessFile(mod_path .. "scripts/" .. civilization .. "/ui.lua")) then
+				ui_file = mod_path .. "scripts/" .. civilization .. "/ui.lua"
 			end
 		end
 	

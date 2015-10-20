@@ -190,85 +190,46 @@ editor_tilesets = { "cave", "conifer_forest_summer", "conifer_forest_autumn", "d
 
 --  Menu for new map to edit
 local function RunEditorNewMapMenu()
-  local menu = WarMenu()
-  local offx = (Video.Width - 640) / 2
-  local offy = (Video.Height - 480) / 2
-  local tilesets = editor_tilesets
-  local mapSizes = {"32", "64", "96", "128", "256"}
+	local menu = WarMenu()
+	local offx = (Video.Width - 640) / 2
+	local offy = (Video.Height - 480) / 2
+	local tilesets = editor_tilesets
+	local mapSizes = {"32", "64", "96", "128", "256"}
 
-  menu:addLabel("Map Description:", offx + 208, offy + 104 + 32 * 0, Fonts["game"], false)
-  local mapDescription = menu:addTextInputField("", offx + 208, offy + 104 + 32 * 1, 200)
-  menu:addLabel("Terrain:", offx + 208, offy + 104 + 32 * 2, Fonts["game"], false)
-  local dropDownTileset = menu:addDropDown(editor_tilesets, offx + 208 + 60, offy + 104 + 32 * 2, function() end)
+	menu:addLabel("Map Description:", offx + 208, offy + 104 + 32 * 0, Fonts["game"], false)
+	local mapDescription = menu:addTextInputField("", offx + 208, offy + 104 + 32 * 1, 200)
+	menu:addLabel("Terrain:", offx + 208, offy + 104 + 32 * 2, Fonts["game"], false)
+	local dropDownTileset = menu:addDropDown(editor_tilesets, offx + 208 + 60, offy + 104 + 32 * 2, function() end)
 
-  menu:addLabel("Size:", offx + 208, offy + 104 + 32 * 3, Fonts["game"], false)
-  local mapSizex = menu:addDropDown(mapSizes, offx + 208 + 50, offy + 104 + 32 * 3, function() end)
-  mapSizex:setWidth(50)
-  menu:addLabel("x", offx + 208 + 110, offy + 104 + 32 * 3, Fonts["game"], false)
-  local mapSizey = menu:addDropDown(mapSizes, offx + 208 + 125, offy + 104 + 32 * 3, function() end)
-  mapSizey:setWidth(50)
+	menu:addLabel("Size:", offx + 208, offy + 104 + 32 * 3, Fonts["game"], false)
+	local mapSizex = menu:addDropDown(mapSizes, offx + 208 + 50, offy + 104 + 32 * 3, function() end)
+	mapSizex:setWidth(50)
+	menu:addLabel("x", offx + 208 + 110, offy + 104 + 32 * 3, Fonts["game"], false)
+	local mapSizey = menu:addDropDown(mapSizes, offx + 208 + 125, offy + 104 + 32 * 3, function() end)
+	mapSizey:setWidth(50)
 
-  menu:addFullButton(_("~!New Map"), "n", offx + 208, offy + 104 + 36 * 5,
-    function()
-      -- TODO : check value
-      Map.Info.Description = mapDescription:getText()
-      Map.Info.MapWidth = mapSizes[1 + mapSizex:getSelected()]
-      Map.Info.MapHeight = mapSizes[1 + mapSizey:getSelected()]
-	  if (CanAccessFile("scripts/tilesets/" .. string.gsub(editor_tilesets[1 + dropDownTileset:getSelected()], "-", "_") .. ".lua")) then
+	menu:addFullButton(_("~!New Map"), "n", offx + 208, offy + 104 + 36 * 5,
+	function()
+		-- TODO : check value
+		Map.Info.Description = mapDescription:getText()
+		Map.Info.MapWidth = mapSizes[1 + mapSizex:getSelected()]
+		Map.Info.MapHeight = mapSizes[1 + mapSizey:getSelected()]
+		if (CanAccessFile("scripts/tilesets/" .. string.gsub(editor_tilesets[1 + dropDownTileset:getSelected()], "-", "_") .. ".lua")) then
 			LoadTileModels("scripts/tilesets/" .. string.gsub(editor_tilesets[1 + dropDownTileset:getSelected()], "-", "_") .. ".lua")
-	  else -- check if any mod has this tileset
-			local mods = {}
-		  
-			local i
-			local f
-			local u = 1
-
-			-- list the subdirectories in the mods folder
-			local dirlist = {}
-			local dirs = ListDirsInDirectory(ModDirectory)
-			for i,f in ipairs(dirs) do
-				dirlist[u] = f .. "/"
-				u = u + 1
-			end
-
-			u = 1
-			-- get mods in the subdirectories of the mods folder
-			for j=1,table.getn(dirlist) do
-				local fileslist = ListFilesInDirectory(ModDirectory .. dirlist[j])
-				for i,f in ipairs(fileslist) do
-					if (string.find(f, "info.lua")) then
-						mods[u] = ModDirectory .. dirlist[j] .. f
-						u = u + 1
-					end
+		else -- if the tileset doesn't exist in the base game, check if any enabled mod has this tileset
+			for i=1,table.getn(Mods) do
+				if (CanAccessFile(string.gsub(Mods[i], "info.lua", "scripts/tilesets/") .. string.gsub(editor_tilesets[1 + dropDownTileset:getSelected()], "-", "_") .. ".lua")) then
+					LoadTileModels(string.gsub(Mods[i], "info.lua", "scripts/tilesets/") .. string.gsub(editor_tilesets[1 + dropDownTileset:getSelected()], "-", "_") .. ".lua")
+					break
 				end
 			end
-
-			u = 1
-			-- get mod main files in the subdirectories of the mods folder
-			for j=1,table.getn(dirlist) do
-				local fileslist = ListFilesInDirectory(ModDirectory .. dirlist[j])
-				for i,f in ipairs(fileslist) do
-					if (string.find(f, "main.lua")) then
-						mods[u] = ModDirectory .. dirlist[j] .. f
-						u = u + 1
-					end
-				end
-			end
-
-			for i=1,table.getn(mods) do
-				ModName = ""
-				Load(tostring(string.gsub(mods[i], "main", "info")))
-				if (CanAccessFile(string.gsub(mods[i], "main.lua", "scripts/tilesets/") .. string.gsub(editor_tilesets[1 + dropDownTileset:getSelected()], "-", "_") .. ".lua")) then
-					LoadTileModels(string.gsub(mods[i], "main.lua", "scripts/tilesets/") .. string.gsub(editor_tilesets[1 + dropDownTileset:getSelected()], "-", "_") .. ".lua")
-				end
-			end		
-	  end
-      menu:stop()
-      StartEditor(nil)
-      RunEditorMenu()
-    end)
-  menu:addFullButton(_("~!Cancel"), "c", offx + 208, offy + 104 + 36 * 6, function() menu:stop(1); RunEditorMenu() end)
-  return menu:run()
+		end
+		menu:stop()
+		StartEditor(nil)
+		RunEditorMenu()
+	end)
+	menu:addFullButton(_("~!Cancel"), "c", offx + 208, offy + 104 + 36 * 6, function() menu:stop(1); RunEditorMenu() end)
+	return menu:run()
 end
 
 -- Menu for loading map to edit
