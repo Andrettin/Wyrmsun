@@ -473,7 +473,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-coinage",
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-norse-runewriting",
 	Action = "research", Value = "upgrade-dwarven-runewriting",
 	Allowed = "check-single-research",
-	Description = _("+10% Research Speed."),
+	Description = _("+10% Research Speed, changes faction from tribe to polity."),
 	Key = "r", Hint = _("Research Dvalic ~!Runewriting"), Popup = "popup-research",
 	ForUnit = {"unit-dwarven-stronghold"}
 } )

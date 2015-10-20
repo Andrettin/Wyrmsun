@@ -288,7 +288,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-teuton-coinage",
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-norse-runewriting",
 	Action = "research", Value = "upgrade-teuton-writing",
 	Allowed = "check-single-research",
-	Description = _("+10% Research Speed."),
+	Description = _("+10% Research Speed, changes faction from tribe to polity."),
 	Key = "w", Hint = _("Research ~!Writing"), Popup = "popup-research",
 	ForUnit = {"unit-teuton-stronghold"}
 } )
