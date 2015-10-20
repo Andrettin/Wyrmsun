@@ -825,19 +825,19 @@ if not (ui_loaded_first_time) then
 					More = {"Variable", {Text = _("Evasion: "), Variable = "Evasion", Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {Backstab = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Backstab +%: "), Variable = "Backstab", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = Concat(_("Backstab Bonus: "), String(TypeVar("Backstab","Value")), "%"), Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {BonusAgainstMounted = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("+% vs. Mounted: "), Variable = "BonusAgainstMounted", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = Concat(_("Bonus vs. Mounted: "), String(TypeVar("BonusAgainstMounted","Value")), "%"), Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {BonusAgainstAir = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("+% vs. Air: "), Variable = "BonusAgainstAir", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = Concat(_("Bonus vs. Air: "), String(TypeVar("BonusAgainstAir","Value")), "%"), Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {BonusAgainstGiants = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("+% vs. Giants: "), Variable = "BonusAgainstGiants", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = Concat(_("Bonus vs. Giants: "), String(TypeVar("BonusAgainstGiants","Value")), "%"), Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {BonusAgainstBuildings = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("+% vs. Buildings: "), Variable = "BonusAgainstBuildings", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = Concat(_("Bonus vs. Buildings: "), String(TypeVar("BonusAgainstBuildings","Value")), "%"), Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				
 				-- Description
