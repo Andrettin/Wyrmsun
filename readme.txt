@@ -252,7 +252,7 @@ https://github.com/Andrettin/Wyrmsun
 - Greatly increased the proportions of the Earth map.
 - New Earth provinces: Abruzzo, Aetolia, Alsace, Apulia, Augsburg, Baden, Bessarabia, Boeotia, Bosnia, Bremen, Brunswick, Bukowina, Calabria, Campania, Carniola, Corinth, Courland, Crimea, Dalmatia, Dobruja, Drenthe, East Friesland, Epirus, Estonia, Euboea, Farther Pomerania, Franche Comte, Franconia, Friesland, Hanover, Hesse, Highland Scotland, Hither Pomerania, Holstein, Istria, Latvia, Lauenburg, Liguria, Lithuania, Lombardy, Lorraine, Lower Lusatia, Lower Rhine, Lowland Scotland, Magdeburg, Malta, Mecklenburg, Modena, Montenegro, Moravia, Moselle, Neumark, Normandy, Oldenburg, Overijssel, Palatinate, Palermo, Pannonia, Parma, Piedmont, Pomerelia, Provence, Rhodes, Rhodope, Savoy, Scania, Schleswig, Skopje, Slovakia, Syracuse, Thessaly, Thuringia, Tuscany, Umbria, Upper Lusatia, Upper Saxony, Venetia, Vojvodina, West Galicia, Wurtemberg, Zealand.
 - New Earth water provinces: Bristol Channel, Celtic Sea, Gulf of Bothnia, Gulf of Finland, Gulf of Riga, Inner Seas, Kattegat, Lake Vättern, Lake Wener, Sea of Azov, Sea of Marmara, Skagerrak.
-- Players can now choose any year between 3000 BC and 486 AD as the starting date for Earth.
+- Players can now choose any year between 3000 BC and 71 BC as the starting date for Earth.
 - Players can now choose any year between 3000 BC and 550 AD as the starting date for Nidavellir.
 - Burgs and Bastions now provide two guard towers in defensive battles.
 - Tile tooltips are now drawn as popups in the bottom-left corner of the map, instead of being drawn below the minimap.
@@ -269,7 +269,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added an enormous number of new factions to populate historical Europe.
 - Grand strategy gold mine graphics have been reworked, and now have player color (by Jinn).
 - New ocean tile variations (by Jinn).
-- The Asa migration event chain (if followed to the end) now results in a unified Asa Tribe holding the whole conquered territory, only to be split later on.
+- The Asa migration event chain (if followed to the end) now results in a unified Asa Tribe holding the whole conquered territory.
 - Teuton settlements now have a different appearance if masonry is researched (graphics by Jinn).
 
 * Maps
@@ -296,7 +296,7 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed an issue which caused the tech tree menu not to be brought up when finishing a quest after loading a game.
 
 * Units
-- A unit type's bonus against mounted units, bonus against buildings, bonus against giants and backstab bonus now appear in its popup.
+- A unit type's bonus against mounted units, bonus against buildings, bonus against giants, bonus against air and backstab bonus now appear in its popup.
 - The Dwarven Yale Rider is now trainable, if the player has a Yale Pen and a Smithy.
 - Added Horse (unit graphics by b_o and icon by Jinn).
 - Fixed the display of the mercenary hiring popup.
