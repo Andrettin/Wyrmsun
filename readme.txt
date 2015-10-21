@@ -281,6 +281,7 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed a few minor issues with button clicking.
 - Encyclopedia, tech tree and quest tooltips are now drawn as popups.
 - Added new Gnashorn and Yale backgrounds (used for Wyrmsun with permission).
+- In the video options screen, the resolution is now changed only after pressing "OK", instead of immediately when using the drop-downs.
 
 * Modding
 - Added the possibility of making units have a damage bonus against buildings, against giants (with a corresponding "Giant" tag to be used by units) or against air units.

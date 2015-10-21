@@ -28,44 +28,44 @@
 --
 
 function RunGameVideoOptionsMenu()
-  local menu = WarGameMenu(panel(1))
-  local resolution_width_list = {"640", "720", "800", "1024", "1280", "1360", "1366", "1400", "1440", "1600", "1680", "1920"}
-  local resolution_width_dd
-  local resolution_height_list = {"480", "600", "720", "768", "800", "864", "900", "960", "1024", "1050", "1080"}
-  local resolution_height_dd
-  local resolution_width = Video.Width
-  local resolution_height = Video.Height
-  local offx = 0
-  local offy = 0
+	local menu = WarGameMenu(panel(1))
+	local resolution_width_list = {"640", "720", "800", "1024", "1280", "1360", "1366", "1400", "1440", "1600", "1680", "1920"}
+	local resolution_width_dd
+	local resolution_height_list = {"480", "600", "720", "768", "800", "864", "900", "960", "1024", "1050", "1080"}
+	local resolution_height_dd
+	local resolution_width = Video.Width
+	local resolution_height = Video.Height
+	local offx = 0
+	local offy = 0
 
-  menu:addLabel(_("Video Options"), 128, 11)
+	menu:addLabel(_("Video Options"), 128, 11)
 
-  menu:addLabel(_("Resolution Width"), offx + (256 / 2 - (152  / 2)), offy + 34, Fonts["game"], false)
-  resolution_width_dd = menu:addDropDown(resolution_width_list, offx + (256 / 2 - (152  / 2)), offy + 55 + 26*0,
-    function(dd)
-   		resolution_width = tonumber(resolution_width_list[resolution_width_dd:getSelected() + 1])
-    end)
-  resolution_width_dd:setSize(152, 20)
-  for i = 1,table.getn(resolution_width_list) do
-	if (tonumber(resolution_width_list[i]) == Video.Width) then
-		resolution_width_dd:setSelected(i - 1)
+	menu:addLabel(_("Resolution Width"), offx + (256 / 2 - (152 / 2)), offy + 34, Fonts["game"], false)
+	resolution_width_dd = menu:addDropDown(resolution_width_list, offx + (256 / 2 - (152 / 2)), offy + 55 + 26*0,
+	function(dd)
+			resolution_width = tonumber(resolution_width_list[resolution_width_dd:getSelected() + 1])
+	end)
+	resolution_width_dd:setSize(152, 20)
+	for i = 1,table.getn(resolution_width_list) do
+		if (tonumber(resolution_width_list[i]) == Video.Width) then
+			resolution_width_dd:setSelected(i - 1)
+		end
 	end
-  end
 
-  menu:addLabel(_("Resolution Height"), offx + (256 / 2 - (152  / 2)), offy + 34 + 26*2, Fonts["game"], false)
-  resolution_height_dd = menu:addDropDown(resolution_height_list, offx + (256 / 2 - (152  / 2)), offy + 55 + 26*2,
-    function(dd)
-   		resolution_height = tonumber(resolution_height_list[resolution_height_dd:getSelected() + 1])
-    end)
-  resolution_height_dd:setSize(152, 20)
-  for i = 1,table.getn(resolution_height_list) do
-	if (tonumber(resolution_height_list[i]) == Video.Height) then
-		resolution_height_dd:setSelected(i - 1)
+	menu:addLabel(_("Resolution Height"), offx + (256 / 2 - (152 / 2)), offy + 34 + 26*2, Fonts["game"], false)
+	resolution_height_dd = menu:addDropDown(resolution_height_list, offx + (256 / 2 - (152 / 2)), offy + 55 + 26*2,
+	function(dd)
+			resolution_height = tonumber(resolution_height_list[resolution_height_dd:getSelected() + 1])
+	end)
+	resolution_height_dd:setSize(152, 20)
+	for i = 1,table.getn(resolution_height_list) do
+		if (tonumber(resolution_height_list[i]) == Video.Height) then
+			resolution_height_dd:setSelected(i - 1)
+		end
 	end
-  end
 
-  menu:addFullButton("~!OK", "o", 128 - (224 / 2), 288 - 40,
-    function()
+	menu:addFullButton("~!OK", "o", 128 - (224 / 2), 288 - 40,
+	function()
 		if (resolution_width ~= Video.Width or resolution_height ~= Video.Height) then
 			LoadCivilizationUI(GetPlayerData(GetThisPlayer(), "RaceName"))
 			SetVideoSize(resolution_width, resolution_height)
@@ -74,9 +74,9 @@ function RunGameVideoOptionsMenu()
 			SavePreferences()
 		end
 		menu:stop()
-    end)
+	end)
 
-  menu:run()
+	menu:run()
 end
 
 function AddSoundOptions(menu, offx, offy, centerx, bottom)
@@ -498,8 +498,6 @@ function RunVideoOptionsMenu()
   resolution_width_dd = menu:addDropDown(resolution_width_list, offx + 8, offy + 55 + 26*0,
     function(dd)
    		resolution_width = tonumber(resolution_width_list[resolution_width_dd:getSelected() + 1])
-		SetVideoSize(resolution_width, resolution_height) menu:stop()
-		RunVideoOptionsMenu()
     end)
   resolution_width_dd:setSize(152, 20)
   for i = 1,table.getn(resolution_width_list) do
@@ -512,8 +510,6 @@ function RunVideoOptionsMenu()
   resolution_height_dd = menu:addDropDown(resolution_height_list, offx + 16 + 152 + 24, offy + 55 + 26*0,
     function(dd)
    		resolution_height = tonumber(resolution_height_list[resolution_height_dd:getSelected() + 1])
-		SetVideoSize(resolution_width, resolution_height) menu:stop()
-		RunVideoOptionsMenu()
     end)
   resolution_height_dd:setSize(152, 20)
   for i = 1,table.getn(resolution_height_list) do
@@ -629,6 +625,9 @@ function RunVideoOptionsMenu()
 	wyr.preferences.EffectsEnabled = IsEffectsEnabled()
 	wyr.preferences.MusicVolume = GetMusicVolume()
 	wyr.preferences.MusicEnabled = IsMusicEnabled()
+	if (resolution_width ~= Video.Width or resolution_height ~= Video.Height) then
+		SetVideoSize(resolution_width, resolution_height)
+	end
 	SavePreferences()
   	menu:stop()
   end)
