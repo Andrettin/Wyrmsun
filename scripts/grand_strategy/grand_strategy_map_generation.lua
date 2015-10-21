@@ -679,7 +679,7 @@ end
 
 function AddProvinceResource(province, resource, quantity)
 	local WhileCount = 0
-	if (quantity > GetProvinceFoodCapacity(province.Name, true)) then
+	if (resource ~= "grain" and resource ~= "mushrooms" and resource ~= "fish" and quantity > GetProvinceFoodCapacity(province.Name, true)) then
 		quantity = GetProvinceFoodCapacity(province.Name, true)
 	end
 	
