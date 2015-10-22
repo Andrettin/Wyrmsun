@@ -22,12 +22,12 @@ Features:
 - Retro-style graphics
 - 2 playable civilizations, and a number of non-playable ones
 - 23 quests to play, earning technology points which can be used to obtain new units, buildings and technologies
-- 38 units, 30 buildings and 21 technologies
+- 39 units, 32 buildings and 21 technologies
 - Units can earn experience, being able to upgrade to new unit types or acquire new abilities upon level-up
 - Persistent heroes, who carry over their level and abilities throughout scenarios
 - Personal names and traits for units
 - Cave, Conifer Forest, Dungeon, Fairlimbed Forest and Swamp tilesets
-- 37 maps of real and fictional locations to choose from, as well as random maps
+- Dozens of maps of real and fictional locations to choose from, as well as random maps
 - Living environment, with fauna reproduction and predation
 - Very moddable game, with mod-loading capability built in
 - Grand strategy mode, where production is resolved on the strategic (world map) level, while battles are resolved on the tactical level
