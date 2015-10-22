@@ -6,6 +6,7 @@ if (LoadedGame == false) then
 			MercenaryCamp = true,
 			RockQuantity = "medium",
 			TreeQuantity = "low",
+			RoughLandQuantity = "high",
 			WaterQuantity = "high",
 			WorkerQuantity = 0,
 			NoFlyingCreeps = true, -- too early a mission to add such perils
@@ -20,6 +21,7 @@ if (LoadedGame == false) then
 			MercenaryCamp = true,
 			RockQuantity = "medium",
 			TreeQuantity = "low",
+			RoughLandQuantity = "high",
 			WaterQuantity = "high",
 			WorkerQuantity = 5,
 			PlayerCivilizations = {"dwarf", "dwarf"}

@@ -11,6 +11,7 @@ if (LoadedGame == false) then
 		TreeQuantity = "medium",
 		WaterQuantity = "low",
 		DarkLandQuantity = "medium",
+		RoughLandQuantity = "medium",
 		DarkRoughLandQuantity = "medium",
 		WorkerQuantity = 5
 	})

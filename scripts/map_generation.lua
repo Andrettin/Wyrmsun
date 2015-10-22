@@ -1966,7 +1966,13 @@ function GenerateRandomMap(arg)
 		
 		CreatePlayers(0, Map.Info.MapWidth, 0, Map.Info.MapHeight, mixed_civilizations, not arg.NoTownHall, symmetric, not arg.NoDeposits, arg.PlayerCivilizations, arg.PlayerBuildings) -- generate players after rocks and water
 
-		GenerateRoughLand((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 8)
+		if (arg.RoughLandQuantity == "high") then
+			GenerateRoughLand((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 8)
+		elseif (arg.RoughLandQuantity == "medium") then
+			GenerateRoughLand((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 16)
+		elseif (arg.RoughLandQuantity == "low") then
+			GenerateRoughLand((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 32)
+		end
 
 		if (arg.DarkRoughLandQuantity == "high") then
 			GenerateDarkRoughLand((Map.Info.MapWidth * Map.Info.MapHeight) / 256, (Map.Info.MapWidth * Map.Info.MapHeight) / 32, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight, "Rough")

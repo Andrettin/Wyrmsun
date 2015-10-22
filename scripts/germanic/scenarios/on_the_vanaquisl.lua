@@ -40,6 +40,7 @@ if (LoadedGame == false) then
 	SetPlayerData(1, "Resources", "stone", 500)
 	SetPlayerData(1, "Resources", "oil", 0)
 	SetPlayerData(GetFactionPlayer("Asa Tribe"), "Allow", "upgrade-teuton-civilization", "F")
+	SetPlayerData(GetFactionPlayer("Vana Tribe"), "Allow", "unit-germanic-town-hall", "F")
 
 	if (GrandStrategy == false) then
 		unit = CreateUnit("unit-germanic-warrior", 0, {Players[0].StartPos.x, Players[0].StartPos.y})

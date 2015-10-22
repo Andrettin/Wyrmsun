@@ -12,11 +12,12 @@ SetMapStat("unit-germanic-town-hall", "Armor", 0, "Increase")
 
 if (LoadedGame == false) then
 	GenerateRandomMap({
-		RockQuantity = "low",
+--		RockQuantity = "low",
 		TreeQuantity = "medium",
-		WaterQuantity = "low",
+--		WaterQuantity = "low",
 		DarkLandQuantity = "medium",
-		DarkRoughLandQuantity = "medium",
+--		DarkRoughLandQuantity = "medium",
+		RoughLandQuantity = "low",
 		WorkerQuantity = 0,
 		PlayerCivilizations = {"germanic", "celt"},
 		NoTownHall = true,

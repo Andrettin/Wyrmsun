@@ -10,6 +10,7 @@ if (LoadedGame == false) then
 		TreeQuantity = "low", -- tree quantity is low to not overcrowd the map with trees, as a significant part of it is already covered by rocks
 		WaterQuantity = "low",
 		DarkLandQuantity = "medium",
+		RoughLandQuantity = "medium",
 		DarkRoughLandQuantity = "medium",
 		WorkerQuantity = 5,
 		PlayerCivilizations = {"latin", "celt", "celt", "celt", "teuton"},

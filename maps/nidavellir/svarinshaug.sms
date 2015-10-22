@@ -5,6 +5,7 @@ if (LoadedGame == false) then
 		RockQuantity = "high",
 		TreeQuantity = "low",
 		WaterQuantity = "low",
+		RoughLandQuantity = "medium",
 		NoFlyingCreeps = true,
 		WorkerQuantity = 3,
 		NoDeposits = true

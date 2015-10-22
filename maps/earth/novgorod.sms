@@ -10,6 +10,7 @@ if (LoadedGame == false) then
 		TreeQuantity = "medium",
 		WaterQuantity = "low",
 		DarkLandQuantity = "medium",
+		RoughLandQuantity = "medium",
 		DarkRoughLandQuantity = "medium",
 		PlayerCivilizations = {"germanic", "celt"},
 		PlayerBuildings = {

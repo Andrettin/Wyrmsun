@@ -9,6 +9,7 @@ if (LoadedGame == false) then
 		RockQuantity = "low",
 		TreeQuantity = "medium",
 		WaterQuantity = "low",
+		RoughLandQuantity = "medium",
 		DarkLandQuantity = "medium",
 		DarkRoughLandQuantity = "medium",
 		WorkerQuantity = 5,

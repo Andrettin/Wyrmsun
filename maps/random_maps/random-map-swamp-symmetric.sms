@@ -8,6 +8,7 @@ if (LoadedGame == false) then
 		RockQuantity = "low",
 		TreeQuantity = "medium",
 		WaterQuantity = "low",
+		RoughLandQuantity = "medium",
 		WorkerQuantity = 5
 	})
 end
