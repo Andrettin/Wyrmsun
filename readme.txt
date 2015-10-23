@@ -230,6 +230,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Grand Strategy
 - Tip added explaining the relationship between workers and food storage.
+- Fix to menu button pause issue.
 
 -----------------------------------------------------------------------
 - 1.4.0

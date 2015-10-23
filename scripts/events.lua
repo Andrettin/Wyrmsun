@@ -606,7 +606,7 @@ function Event(speaker, event_description, player, options, option_effects, even
 			)
 		end
 
-		menu:run()
+		menu:run(false)
 	else -- AIs always choose the first option
 --		option_effects[SyncRand(table.getn(option_effects)) + 1]()
 		option_effects[1]()
