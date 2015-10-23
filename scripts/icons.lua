@@ -1324,6 +1324,30 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-silver-deposit",
+	Size = {46, 38},
+	File = "neutral/icons/silver_deposit.png"
+})
+
+DefineIcon({
+	Name = "icon-silver-mine",
+	Size = {46, 38},
+	File = "neutral/icons/silver_mine.png"
+})
+
+DefineIcon({
+	Name = "icon-copper-deposit",
+	Size = {46, 38},
+	File = "neutral/icons/copper_deposit.png"
+})
+
+DefineIcon({
+	Name = "icon-copper-mine",
+	Size = {46, 38},
+	File = "neutral/icons/copper_mine.png"
+})
+
+DefineIcon({
 	Name = "icon-coal-mine",
 	Size = {46, 38},
 	File = "neutral/icons/coal_mine.png"

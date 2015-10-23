@@ -594,6 +594,11 @@ João Victor G. Costa (Jinn):
 /graphics/missiles/siege_projectile_impact.png (modified from Cuzco's graphics)
 /graphics/missiles/small_fire.png (modified from Mikodrak's graphics)
 /graphics/neutral/buildings/coal_mine.png
+/graphics/neutral/buildings/copper_deposit.png
+/graphics/neutral/buildings/copper_deposit_shadow.png
+/graphics/neutral/buildings/copper_mine.png
+/graphics/neutral/buildings/copper_mine_light.png
+/graphics/neutral/buildings/copper_mine_shadow.png
 /graphics/neutral/buildings/glyph.png
 /graphics/neutral/buildings/glyph_player_color.png
 /graphics/neutral/buildings/gold_deposit.png
@@ -613,6 +618,11 @@ João Victor G. Costa (Jinn):
 /graphics/neutral/buildings/land_construction_site.png
 /graphics/neutral/buildings/mercenary_camp.png (later modified by b_o to add the fire animation)
 /graphics/neutral/buildings/mercenary_camp_shadow.png
+/graphics/neutral/buildings/silver_deposit.png
+/graphics/neutral/buildings/silver_deposit_shadow.png
+/graphics/neutral/buildings/silver_mine.png
+/graphics/neutral/buildings/silver_mine_light.png
+/graphics/neutral/buildings/silver_mine_shadow.png
 /graphics/neutral/buildings/wood_pile.png
 /graphics/neutral/icons/attack_ground.png
 /graphics/neutral/icons/axe_mastery.png

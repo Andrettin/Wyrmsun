@@ -67,6 +67,12 @@ DefineDefaultResourceMaxAmounts(-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 
 SetResourceBaseLaborInput("gold", 100)
 SetResourceBaseOutput("gold", 200)
 
+SetResourceBaseLaborInput("silver", 100)
+SetResourceBaseOutput("silver", 200)
+
+SetResourceBaseLaborInput("copper", 100)
+SetResourceBaseOutput("copper", 200)
+
 SetResourceBasePrice("lumber", 100)
 SetResourceBaseLaborInput("lumber", 100)
 SetResourceBaseOutput("lumber", 100)

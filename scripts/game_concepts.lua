@@ -72,7 +72,7 @@ GameConcepts = {
 	},
 	Harvesting = {
 		Name = _("Har~!vesting"),
-		Description = _("Resources can be harvested by worker units. Gold is mined by assigning workers to gold rocks or gold mines (built on gold deposits), while lumber is gathered by harvesting trees or wood piles. Stone is harvested from rocks. Coal mines are used in a similar manner to gold mines, but they appear only in specific scenarios. In Grand Strategy mode, resources are harvested by the province's population, if there are enough laborers available.")
+		Description = _("Resources can be harvested by worker units. Gold is mined by assigning workers to gold rocks or gold mines (built on gold deposits), or to their copper and silver equivalents - which when delivered will be converted to gold. Lumber is gathered by harvesting trees or wood piles, while stone is harvested from rocks. Coal mines are used in a similar manner to gold mines, but they appear only in specific scenarios. In Grand Strategy mode, resources are harvested by the province's population, if there are enough laborers available.")
 	},
 	Heroes = {
 		Name = _("~!Heroes"),

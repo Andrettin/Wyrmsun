@@ -69,6 +69,8 @@ if (LoadedGame == false) then
 	SetPlayerData(0, "Allow", "unit-dwarven-lumber-mill", "F")
 	SetPlayerData(0, "Allow", "unit-dwarven-sentry-tower", "F")
 	SetPlayerData(0, "Allow", "unit-gold-mine", "F")
+	SetPlayerData(0, "Allow", "unit-silver-mine", "F")
+	SetPlayerData(0, "Allow", "unit-copper-mine", "F")
 	SetPlayerData(0, "Allow", "unit-dwarven-miner", "F")
 	
 	GameTimeOfDay = 2

@@ -1033,9 +1033,18 @@ function CreateGoldSpots(gold_mine_number, min_x, max_x, min_y, max_y, symmetric
 	local RandomNumber = 0
 	while (Count > 0 and WhileCount < gold_mine_number * 100) do
 		local gold_mine_spawn_point = FindAppropriateGoldMineSpawnPoint(min_x, max_x, min_y, max_y, symmetric)
-		RandomNumber = SyncRand(3)
-		if (RandomNumber == 0) then -- 33% chance a gold mine will be generated, 33% a group of gold rocks will be generated, and 33% a group of silver rocks will be generated
-			unit = CreateUnit("unit-gold-deposit", 15, {gold_mine_spawn_point[1], gold_mine_spawn_point[2]})
+		RandomNumber = SyncRand(2)
+		if (RandomNumber == 0) then -- 50% chance a deposit will be generated, 50% chance a group of precious metal rocks will be generated
+			RandomNumber = SyncRand(3)
+			local deposit_type
+			if (RandomNumber == 0) then
+				deposit_type = "unit-gold-deposit"
+			elseif (RandomNumber == 1) then
+				deposit_type = "unit-silver-deposit"
+			elseif (RandomNumber == 2) then
+				deposit_type = "unit-copper-deposit"
+			end
+			unit = CreateUnit(deposit_type, 15, {gold_mine_spawn_point[1], gold_mine_spawn_point[2]})
 			Count = Count - 1
 			if (symmetric) then
 				local mirrored_tile_x = gold_mine_spawn_point[1] + 1 - 128
@@ -1048,16 +1057,17 @@ function CreateGoldSpots(gold_mine_number, min_x, max_x, min_y, max_y, symmetric
 					mirrored_tile_y = mirrored_tile_y * -1
 				end
 
-				unit = CreateUnit("unit-gold-deposit", 15, {mirrored_tile_x - (GetUnitTypeData("unit-gold-deposit", "TileWidth") - 1), gold_mine_spawn_point[2]})
+				unit = CreateUnit(deposit_type, 15, {mirrored_tile_x - (GetUnitTypeData(deposit_type, "TileWidth") - 1), gold_mine_spawn_point[2]})
 				Count = Count - 1
 
-				unit = CreateUnit("unit-gold-deposit", 15, {gold_mine_spawn_point[1], mirrored_tile_y - (GetUnitTypeData("unit-gold-deposit", "TileHeight") - 1)})
+				unit = CreateUnit(deposit_type, 15, {gold_mine_spawn_point[1], mirrored_tile_y - (GetUnitTypeData(deposit_type, "TileHeight") - 1)})
 				Count = Count - 1
 
-				unit = CreateUnit("unit-gold-deposit", 15, {mirrored_tile_x - (GetUnitTypeData("unit-gold-deposit", "TileWidth") - 1), mirrored_tile_y - (GetUnitTypeData("unit-gold-deposit", "TileHeight") - 1)})
+				unit = CreateUnit(deposit_type, 15, {mirrored_tile_x - (GetUnitTypeData(deposit_type, "TileWidth") - 1), mirrored_tile_y - (GetUnitTypeData(deposit_type, "TileHeight") - 1)})
 				Count = Count - 1
 			end
 		elseif (RandomNumber == 1) then
+			RandomNumber = SyncRand(3)
 			for sub_x=0,(GetUnitTypeData("unit-gold-deposit", "TileWidth") - 1) do
 				for sub_y=0,(GetUnitTypeData("unit-gold-deposit", "TileHeight") - 1) do
 					if (SyncRand(100) <= 50) then -- give a chance of a gold rock not being generated, to make the shape of the gold rock group seem more natural
@@ -1199,7 +1209,16 @@ function CreateGoldMines(gold_mine_number, gold_quantity, min_x, max_x, min_y, m
 	local WhileCount = 0
 	while (Count > 0 and WhileCount < gold_mine_number * 100) do
 		local gold_mine_spawn_point = FindAppropriateGoldMineSpawnPoint(min_x, max_x, min_y, max_y, symmetric)
-		unit = CreateUnit("unit-gold-deposit", 15, {gold_mine_spawn_point[1], gold_mine_spawn_point[2]})
+		local RandomNumber = SyncRand(3)
+		local deposit_type
+		if (RandomNumber == 0) then
+			deposit_type = "unit-gold-deposit"
+		elseif (RandomNumber == 1) then
+			deposit_type = "unit-silver-deposit"
+		elseif (RandomNumber == 2) then
+			deposit_type = "unit-copper-deposit"
+		end
+		unit = CreateUnit(deposit_type, 15, {gold_mine_spawn_point[1], gold_mine_spawn_point[2]})
 		SetResourcesHeld(unit, gold_quantity)
 		Count = Count - 1
 		if (symmetric) then
@@ -1213,15 +1232,15 @@ function CreateGoldMines(gold_mine_number, gold_quantity, min_x, max_x, min_y, m
 				mirrored_tile_y = mirrored_tile_y * -1
 			end
 
-			unit = CreateUnit("unit-gold-deposit", 15, {mirrored_tile_x - (GetUnitTypeData("unit-gold-deposit", "TileWidth") - 1), gold_mine_spawn_point[2]})
+			unit = CreateUnit(deposit_type, 15, {mirrored_tile_x - (GetUnitTypeData(deposit_type, "TileWidth") - 1), gold_mine_spawn_point[2]})
 			SetResourcesHeld(unit, gold_quantity)
 			Count = Count - 1
 
-			unit = CreateUnit("unit-gold-deposit", 15, {gold_mine_spawn_point[1], mirrored_tile_y - (GetUnitTypeData("unit-gold-deposit", "TileHeight") - 1) })
+			unit = CreateUnit(deposit_type, 15, {gold_mine_spawn_point[1], mirrored_tile_y - (GetUnitTypeData(deposit_type, "TileHeight") - 1) })
 			SetResourcesHeld(unit, gold_quantity)
 			Count = Count - 1
 
-			unit = CreateUnit("unit-gold-deposit", 15, {mirrored_tile_x - (GetUnitTypeData("unit-gold-deposit", "TileWidth") - 1), mirrored_tile_y - (GetUnitTypeData("unit-gold-deposit", "TileHeight") - 1) })
+			unit = CreateUnit(deposit_type, 15, {mirrored_tile_x - (GetUnitTypeData(deposit_type, "TileWidth") - 1), mirrored_tile_y - (GetUnitTypeData(deposit_type, "TileHeight") - 1) })
 			SetResourcesHeld(unit, gold_quantity)
 			Count = Count - 1
 		end
@@ -2174,10 +2193,19 @@ function ApplyRawTiles()
 			elseif (RawTile(x, y) == "Gold Mine") then
 				RandomNumber = SyncRand(3)
 				if (RandomNumber == 0) then
-					unit = CreateUnit("unit-gold-deposit", 15, {x, y})
+					RandomNumber = SyncRand(3)
+					local deposit_type
+					if (RandomNumber == 0) then
+						deposit_type = "unit-gold-deposit"
+					elseif (RandomNumber == 1) then
+						deposit_type = "unit-silver-deposit"
+					elseif (RandomNumber == 2) then
+						deposit_type = "unit-copper-deposit"
+					end
+					unit = CreateUnit(deposit_type, 15, {x, y})
 					SetResourcesHeld(unit, 50000)
-					for sub_x=0,(GetUnitTypeData("unit-gold-deposit", "TileWidth") - 1) do
-						for sub_y=0,(GetUnitTypeData("unit-gold-deposit", "TileHeight") - 1) do
+					for sub_x=0,(GetUnitTypeData(deposit_type, "TileWidth") - 1) do
+						for sub_y=0,(GetUnitTypeData(deposit_type, "TileHeight") - 1) do
 							SetRawTile(x + sub_x, y + sub_y, "Land")
 						end
 					end
@@ -2675,8 +2703,8 @@ function FindAppropriatePlayerSpawnPoint(min_x, max_x, min_y, max_y)
 				unit_quantity = unit_quantity + GetNumUnitsAt(i, "any", {RandomX - 16, RandomY - 16}, {RandomX + 16, RandomY + 16})
 			end
 
-			local gold_mine_quantity = GetNumUnitsAt(15, "unit-gold-deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8})
-			local close_gold_mine_quantity = GetNumUnitsAt(15, "unit-gold-deposit", {RandomX - 6, RandomY - 6}, {RandomX + 6, RandomY + 6})
+			local gold_mine_quantity = GetNumUnitsAt(15, "unit-gold-deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(15, "unit-silver-deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(15, "unit-copper-deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8})
+			local close_gold_mine_quantity = GetNumUnitsAt(15, "unit-gold-deposit", {RandomX - 6, RandomY - 6}, {RandomX + 6, RandomY + 6}) + GetNumUnitsAt(15, "unit-silver-deposit", {RandomX - 6, RandomY - 6}, {RandomX + 6, RandomY + 6}) + GetNumUnitsAt(15, "unit-copper-deposit", {RandomX - 6, RandomY - 6}, {RandomX + 6, RandomY + 6})
 
 			if (unit_quantity < 1 and (gold_mine_quantity >= 1 or GrandStrategy) and close_gold_mine_quantity < 1) then
 				location_found = true
@@ -2700,7 +2728,7 @@ function FindAppropriateGoldMineSpawnPoint(min_x, max_x, min_y, max_y, symmetric
 			RandomY = SyncRand(max_y - min_y + 1) + min_y
 		end
 		
-		local unit_quantity = GetNumUnitsAt(15, "unit-gold-deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(15, "unit-coal-mine", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(-1, "unit-dwarven-town-hall", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(-1, "unit-germanic-town-hall", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(-1, "unit-gnomish-town-hall", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(-1, "unit-goblin-town-hall", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8})
+		local unit_quantity = GetNumUnitsAt(15, "unit-gold-deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(15, "unit-silver-deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(15, "unit-copper-deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(15, "unit-coal-mine", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(-1, "unit-dwarven-town-hall", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(-1, "unit-germanic-town-hall", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(-1, "unit-gnomish-town-hall", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(-1, "unit-goblin-town-hall", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8})
 		
 		if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false and GetTileTerrainHasFlag(RandomX, RandomY, "no-building") == false and GetTileTerrainHasFlag(RandomX + 1, RandomY + 1, "land") and GetTileTerrainHasFlag(RandomX + 1, RandomY + 1, "unpassable") == false and GetTileTerrainHasFlag(RandomX + 1, RandomY + 1, "no-building") == false and GetTileTerrainHasFlag(RandomX + 2, RandomY + 2, "land") and GetTileTerrainHasFlag(RandomX + 2, RandomY + 2, "unpassable") == false and GetTileTerrainHasFlag(RandomX + 2, RandomY + 2, "no-building") == false) then
 			if (unit_quantity < 1) then
@@ -3315,286 +3343,6 @@ function FillArea(x1, y1, x2, y2, tile_type, adjust_transitions)
 				end
 			end
 		end
-	end
-end
-
--- town generation algorithm based on Mike Anderson's code for Tyrant, which was released under the GPLv2 license
-function CreateTown(layout, town_player, invader_player)
-	CleanRawTiles()
-
-	local RandomNumber = 0
-
-	-- out of town areas (buildarea -1)
-	local outer = {0, 1, 2, 7, 14}
-
-	-- inner town areas (buildarea -2)
-	local inner = {4, 15, 5, 3, 24, 26}
-
-	-- build town sector of type t
-	-- -2 = random inner town area
-	-- -1 = random outer town area
-	-- 0 = wooded
-	-- 1 = cleared
-	-- 2 = animals
-	-- 3 = huts
-	-- 4 = block
-	-- 5 = hall
-	-- 6 = square
-	-- 7 = pond
-	-- 8 = N/S river
-	-- 9 = N/S river + bridge
-	-- 10 = E/W river
-	-- 11 = E/W river + bridge
-	-- 12 = N/S street
-	-- 13 = E/W street
-	-- 14 = orchard
-	-- 15 = smithy (north exit)
-	-- 16 = N/W river bend
-	-- 17 = N/E river bend
-	-- 18 = S/E river bend
-	-- 19 = S/W river bend
-	-- 20 = N/W/E river fork
-	-- 21 = N/S/E river fork
-	-- 22 = S/W/E river fork
-	-- 23 = N/S/W river fork
-	-- 24 = water garden
-	-- 25 = invader's location
-	-- 26 = lumber mill
-	-- 27 = gold mine
-
-	-- array of town arrays
-	local towns = {
-		{{11, 22, 16, -2, -1}, {-2, 9, 6, 13, -2}, {-2, 8, -2, 15, -1}},
-		{{8, -1, -2, -1, 7}, {9, 13, 6, -2, -1}, {17, 19, 12, -2, 14}},
-		{{-1, 17, 19, -2, 13}, {-1, -2, 9, 6, 13}}, 
-		{{-1, 12, -2}, {13, 6, 13}, {-2, 12, -1}}, 
-		{{-1, -2, 14}, {-2, 6, -2}, {7, -2, -1}}
-	}
-	
-	if (layout == nil) then
-		layout = towns[SyncRand(table.getn(towns)) + 1]
-	end
-	
-	if (invader_player ~= nil) then
-		local invader_location_found = false
-		while (invader_location_found == false) do
-			local potential_location_y = SyncRand(table.getn(layout)) + 1
-			local potential_location_x = SyncRand(table.getn(layout[potential_location_y])) + 1
-			if (layout[potential_location_y][potential_location_x] == -1) then
-				layout[potential_location_y][potential_location_x] = 25
-				invader_location_found = true
-			end
-		end
-	end
-	
-	FillArea(0, 0, (Map.Info.MapWidth - 1), (Map.Info.MapHeight - 1), "Land", false)
-
-	local function BuildArea(x, y, t)
-		if (t == -1) then
-			t = outer[SyncRand(table.getn(outer)) + 1]
-		elseif (t == -2) then
-			t = inner[SyncRand(table.getn(inner)) + 1]
-		end
-		
-		if (t == 0) then -- wooded area
-			GenerateTrees(20, 20, x, x + 15, y, y + 15)
-			
-			RandomNumber = SyncRand(4)
-			if (RandomNumber == 0) then
-				-- add well
-			elseif (RandomNumber == 1) then
-				-- add gravestone
-			else
-				-- create small house with equipment inside
-			end
-			unit = AddThing("unit-dwarven-scout", town_player, x, y, x + 15, y + 15) -- add a ranger to the wooded area
-		elseif (t == 3) then -- hut
-			local hx = x + 1 + SyncRand(14 - 2)
-			local hy = y + 1 + SyncRand(14 - 2)
-			unit = CreateUnit("unit-germanic-farm", town_player, {hx, hy}) -- add a hut
-		elseif (t == 4) then -- block
-			unit = AddThing("unit-germanic-farm", town_player, x + 8 - dice(2, 3), y + 8 - dice(2, 3), x + 8, y + 8)
-			unit = AddThing("unit-germanic-farm", town_player, x + 8 - dice(2, 3), y + 8, x + 8, y + 8 + dice(2, 3))
-			unit = AddThing("unit-germanic-farm", town_player, x + 8, y + 8 - dice(2, 3), x + 8 + dice(2, 3), y + 8)
-			unit = AddThing("unit-germanic-farm", town_player, x + 8, y + 8, x + 8 + dice(2, 3), y + 8 + dice(2, 3))
---		elseif (t == 5) then -- temple hall
---			unit = AddThing("unit-dwarven-temple", town_player, x + 8 - dice(2, 3), y + 3, x + dice(2, 3), y + 12)
---			unit = AddThing("unit-dwarven-witness", town_player, x + 8, y + 7, x + 8, y + 7) -- add a healer to the temple's entrance
-		elseif (t == 6) then -- central crossroads with shops
-			FillArea(x, y, x + 15, y + 15, "Land", false) -- make sure that the area is entirely buildable land
-			SetStartView(town_player, x + 8, y + 8)
-			unit = CreateUnit("unit-germanic-town-hall", town_player, {x + 6, y + 6}) -- add the settlement's town hall
-			RandomNumber = SyncRand(4)
-			if (RandomNumber == 0) then
-				unit = AddThing("unit-gold-deposit", 15, x, y, x + dice(2, 2), y + dice(2, 2))
-				SetResourcesHeld(unit, 50000)
-			elseif (RandomNumber == 1) then
-				unit = AddThing("unit-gold-deposit", 15, x + 15 - dice(2, 2), y, x + 15, y + dice(2, 2))
-				SetResourcesHeld(unit, 50000)
-			elseif (RandomNumber == 2) then
-				unit = AddThing("unit-gold-deposit", 15, x, y + 15 - dice(2, 2), x + dice(2, 2), y + 15)
-				SetResourcesHeld(unit, 50000)
-			elseif (RandomNumber == 3) then
-				unit = AddThing("unit-gold-deposit", 15, x + 15 - dice(2, 2), y + 15 - dice(2, 2), x + 15, y + 15)
-				SetResourcesHeld(unit, 50000)
-			end
-			--[[
-			if (RandomNumber ~= 0) then
-				unit = AddThing("random-shop", town_player, x, y, x + dice(3, 2), y + dice(3, 2)) -- general store
-			end
-			if (RandomNumber ~= 1) then
-				unit = AddThing("random-shop", town_player, x + 15 - dice(3, 2), y, x + 15, y + dice(3, 2)) -- random store
-			end
-			if (RandomNumber ~= 2) then
-				unit = AddThing("unit-dwarven-smithy", town_player, x, y + 15 - dice(3, 2), x + dice(3, 2), y + 15) -- weapon store
-				unit = AddThing("unit-germanic-warrior", town_player, x, y + 15 - dice(3, 2), x + dice(3, 2), y + 15) -- weapon store guard
-			end
-			if (RandomNumber ~= 3) then
-				unit = AddThing("random-shop", town_player, x + 15 - dice(3, 2), y + 15 - dice(3, 2), x + 15, y + 15) -- food store
-			end
-			--]]
-			
-			-- add townspeople
-			for i=0,4 do -- farmers; was i=0,10
-				unit = AddThing("unit-germanic-worker", 0, x, y, x + 15, y + 15)
-			end
-		elseif (t == 7) then -- pond
-			SetRawTile(x + 8, y + 8, "Water")
-			Fractalize(x + 4, y + 4, x + 11, y + 11, 4)
-			AdjustRawMapTileIrregularities(x, x + 15, y, y + 15) -- correct for leftover single tiles
-			for i=1,10 do
-				unit = AddThing("random-plant", 15, x, y, x + 15, y + 15) -- should be a bush
-			end
-		elseif (t == 8) then -- N/S river
-			MakeRandomPath(x + 8, y, x + 8, y + 15, x, y, x + 15, y + 15, "Water", false)
-			SpreadTiles(x, y, x + 15, y + 15, "Water", "Land")
-			AdjustRawMapTileIrregularities(x - 2, x + 17, y - 2, y + 17, 2, false) -- correct for leftover single tiles
-		elseif (t == 9) then -- N/S river + bridge
-			MakeRandomPath(x + 8, y, x + 8, y + 15, x, y, x + 15, y + 15, "Water", false)
-			SpreadTiles(x, y, x + 15, y + 15, "Water", "Land")
-			AdjustRawMapTileIrregularities(x - 2, x + 17, y - 2, y + 17, 2, false) -- correct for leftover single tiles
-			ReplaceTiles(x, y + 7, x + 15, y + 7 + SyncRand(3) + 1, "Water", "Rough") -- add the bridge
-		elseif (t == 10) then -- E/W river
-			MakeRandomPath(x + 8, y, x + 8, y + 15, x, y, x + 15, y + 15, "Water", false)
-			SpreadTiles(x, y, x + 15, y + 15, "Water", "Land")
-			RotateArea(x, y, 16, 1)
-			AdjustRawMapTileIrregularities(x - 2, x + 17, y - 2, y + 17, 2, false) -- correct for leftover single tiles
-		elseif (t == 11) then -- E/W river + bridge
-			MakeRandomPath(x + 8, y, x + 8, y + 15, x, y, x + 15, y + 15, "Water", false)
-			SpreadTiles(x, y, x + 15, y + 15, "Water", "Land")
-			ReplaceTiles(x, y + 7, x + 15, y + 7 + SyncRand(3) + 1, "Water", "Rough") -- add the bridge
-			RotateArea(x, y, 16, 1)
-			AdjustRawMapTileIrregularities(x - 2, x + 17, y - 2, y + 17, 2, false) -- correct for leftover single tiles
-		elseif (t == 14) then -- orchard
-			GenerateTrees(20, 20, x, x + 15, y, y + 15) -- should be fruit trees or mix between fruit and normal trees instead
-		elseif (t == 15) then -- smithy
-			FillArea(x, y, x + 15, y + 15, "Land", false) -- make sure that the area is entirely buildable land
-			unit = AddThing("unit-dwarven-smithy", town_player, x + 5, y + 5, x + 10, y + 10)
-		elseif (t == 16 or t == 17 or t == 18 or t == 19) then -- river bends
-			MakeRandomPath(x + 8, y, x, y + 8, x, y, x + 15, y + 15, "Water", false)
-			SpreadTiles(x, y, x + 15, y + 15, "Water", "Land")
-			RotateArea(x, y, 16, t - 16) -- rotate clockwise to correct orientation; 16 = N/W position, etc.
-			AdjustRawMapTileIrregularities(x - 2, x + 17, y - 2, y + 17, 2, false) -- correct for leftover single tiles
-		elseif (t == 20 or t == 21 or t == 22 or t == 23) then -- river forks
-			MakeRandomPath(x + 8, y, x, y + 8, x, y, x + 15, y + 15, "Water", false)
-			MakeRandomPath(x + 8, y, x + 15, y + 8, x, y, x + 15, y + 15, "Water", false)
-			SpreadTiles(x, y, x + 15, y + 15, "Water", "Land")
-			RotateArea(x, y, 16, t - 20) -- rotate clockwise to correct orientation; 20 = N/W/E position, etc.
-			AdjustRawMapTileIrregularities(x - 2, x + 17, y - 2, y + 17, 2, false) -- correct for leftover single tiles
-		elseif (t == 24) then -- water garden
-			-- water area, (7, 7) is the center
-			FillArea(x + 1, y + 1, x + 13, y + 13, "Water", true)
-			
-			-- island
-			FillArea(x + 3, y + 3, x + 11, y + 11, "Land", true)
-			
-			-- bridges
-			FillArea(x, y + 6, x + 14, y + 8, "Land", true)
-			FillArea(x + 6, y, x + 8, y + 14, "Land", true)
-			
-			--[[
-			RandomNumber = SyncRand(4)
-			if (RandomNumber == 0) then
-			--]]
-				for rx=5,9,2 do
-					for ry=5,9,2 do
-						unit = AddThing("random-plant", 15, x + rx, y + ry, x + rx, y + ry)
-					end
-				end
-			--[[
-			elseif (RandomNumber == 1) then
-				for rx=5,9,2 do
-					for ry=5,9,2 do
-						SetRawTile(x + rx, y + ry, "Water")
-					end
-				end
-			elseif (RandomNumber == 2) then -- room with teacher
-			elseif (RandomNumber == 3) then -- fountain
-			end
-			--]]
-		elseif (t == 25) then -- invader's location
-			SetStartView(invader_player, x + 8, y + 8)
-			for i=1,5 do -- workers
-				unit = AddThing("unit-germanic-worker", 4, x, y, x + 15, y + 15)
-			end
-			for i=1,3 do -- warriors
-				unit = AddThing("unit-germanic-warrior", 4, x, y, x + 15, y + 15)
-			end
-
-			unit = AddThing("unit-gold-deposit", 15, x, y, x + 15, y + 15)
-			SetResourcesHeld(unit, 50000)
-		elseif (t == 26) then -- lumber mill
-			GenerateTrees(10, 10, x, x + 15, y, y + 15)
-			unit = AddThing("unit-germanic-carpenters-shop", town_player, x, y, x + 15, y + 15)
-		elseif (t == 1 or t == 2) then -- make "cleared" and "animals" areas wooded
-			GenerateTrees(20, 20, x, x + 15, y, y + 15)
-		end
-	end
-
-	for ay=1,table.getn(layout) do
-		for ax=1,table.getn(layout[ay]) do
-			BuildArea((ax-1) * 16, (ay-1) * 16, layout[ay][ax])
-		end
-	end
-	
-	AdjustTransitions(0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
-	
-	for i=0,4 do -- guards; was i=0,8
-		unit = AddThing("unit-germanic-warrior", 0, 0, 0, (Map.Info.MapWidth - 1), (Map.Info.MapHeight - 1))
-	end
-
-	ApplyRawTiles()
-	
-	CleanRawTiles()
-	
-	CreateCritters((Map.Info.MapWidth * Map.Info.MapHeight) / 512)
-end
-
-function AddThing(unit_type, player, x1, y1, x2, y2)
-	if (unit_type == "random-shop") then
-		local RandomNumber = SyncRand(3)
-		if (RandomNumber == 0) then
-			unit_type = "unit-dwarven-lumber-mill"
-		elseif (RandomNumber == 1) then
-			unit_type = "unit-dwarven-smithy"
-		elseif (RandomNumber == 2) then
-			unit_type = "unit-dwarven-mushroom-farm"
-		end
-	elseif (unit_type == "random-plant") then
-		local RandomNumber = SyncRand(3)
-		if (RandomNumber == 0) then
-			unit_type = "unit-flowers"
-		elseif (RandomNumber == 1) then
-			unit_type = "unit-large-flower"
-		elseif (RandomNumber == 2) then
-			unit_type = "unit-fern"
-		end
-	end
-	local p = FindFreeSquare(x1, y1, x2 - GetUnitTypeData(unit_type, "TileWidth") + 1, y2 - GetUnitTypeData(unit_type, "TileHeight") + 1, GetUnitTypeData(unit_type, "TileWidth"), GetUnitTypeData(unit_type, "TileHeight"))
-	if (p ~= nil) then
-		return CreateUnit(unit_type, player, p)
-	else
-		return CreateUnit(unit_type, player, {rspread(x1,x2), rspread(y1,y2)})
 	end
 end
 

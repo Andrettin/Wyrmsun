@@ -116,26 +116,38 @@ DefineButton( { Pos = 2, Level = 1, Icon = "icon-goblin-farm",
   Key = "f", Hint = _("Build ~!Farm"), Popup = "popup-building",
   ForUnit = {"unit-goblin-worker"} } )
 
-DefineButton( { Pos = 3, Level = 1, Icon = "icon-gold-mine",
+DefineButton( { Pos = 3, Level = 1, Icon = "icon-goblin-mess-hall",
+  Action = "build", Value = "unit-goblin-mess-hall",
+  Key = "m", Hint = _("Build ~!Mess Hall"), Popup = "popup-building",
+  ForUnit = {"unit-goblin-worker"} } )
+
+DefineButton( { Pos = 4, Level = 1, Icon = "icon-goblin-lumber-mill",
+  Action = "build", Value = "unit-goblin-lumber-mill",
+  Key = "l", Hint = _("Build ~!Lumber Mill"), Popup = "popup-building",
+  ForUnit = {"unit-goblin-worker"} } )
+
+DefineButton( { Pos = 5, Level = 1, Icon = "icon-goblin-smithy",
+  Action = "build", Value = "unit-goblin-smithy",
+  Key = "o", Hint = _("Build Fugla F~!orge"), Popup = "popup-building",
+  ForUnit = {"unit-goblin-worker"} } )
+
+DefineButton( { Pos = 8, Level = 1, Icon = "icon-gold-mine",
 	Action = "build", Value = "unit-gold-mine",
 	Key = "g", Hint = _("Build ~!Gold Mine"), Popup = "popup-building",
 	ForUnit = {"unit-goblin-worker"}
 } )
 
-DefineButton( { Pos = 4, Level = 1, Icon = "icon-goblin-mess-hall",
-  Action = "build", Value = "unit-goblin-mess-hall",
-  Key = "m", Hint = _("Build ~!Mess Hall"), Popup = "popup-building",
-  ForUnit = {"unit-goblin-worker"} } )
+DefineButton( { Pos = 9, Level = 1, Icon = "icon-silver-mine",
+	Action = "build", Value = "unit-silver-mine",
+	Key = "v", Hint = _("Build Si~!lver Mine"), Popup = "popup-building",
+	ForUnit = {"unit-goblin-worker"}
+} )
 
-DefineButton( { Pos = 5, Level = 1, Icon = "icon-goblin-lumber-mill",
-  Action = "build", Value = "unit-goblin-lumber-mill",
-  Key = "l", Hint = _("Build ~!Lumber Mill"), Popup = "popup-building",
-  ForUnit = {"unit-goblin-worker"} } )
-
-DefineButton( { Pos = 6, Level = 1, Icon = "icon-goblin-smithy",
-  Action = "build", Value = "unit-goblin-smithy",
-  Key = "g", Hint = _("Build Fu~!gla Forge"), Popup = "popup-building",
-  ForUnit = {"unit-goblin-worker"} } )
+DefineButton( { Pos = 10, Level = 1, Icon = "icon-copper-mine",
+	Action = "build", Value = "unit-copper-mine",
+	Key = "c", Hint = _("Build ~!Copper Mine"), Popup = "popup-building",
+	ForUnit = {"unit-goblin-worker"}
+} )
 
 DefineButton( { Pos = 16, Level = 1, Icon = "icon-cancel",
   Action = "button", Value = 0,

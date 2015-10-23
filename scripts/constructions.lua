@@ -89,7 +89,7 @@ DefineConstruction("construction-land-simple", {
     Frame = 1}}
 })
 
-DefineConstruction("construction-gold-mine", {
+DefineConstruction("construction-mine", {
 	Constructions = {
 		{
 			Percent = 0,

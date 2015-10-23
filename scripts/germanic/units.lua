@@ -103,48 +103,6 @@ DefineUnitType("unit-germanic-worker", { Name = _("Bura"), -- Bûra = "Bauer" in
 	}
 } )
 
-DefineUnitType("unit-germanic-builder", { Name = _("Builder"),
-	Civilization = "germanic",
-	Image = {"file", "germanic/units/builder.png", "size", {72, 72}},
-	Animations = "animations-worker", Icon = "icon-germanic-worker",
-	Costs = {"time", 45, "gold", 400},
-	Speed = 10,
-	HitPoints = 30,
-	DrawLevel = 40,
-	TileSize = {1, 1}, BoxSize = {31, 31},
-	SightRange = 4,
-	AutoRepairRange = 4,
-	BasicDamage = 5, Missile = "missile-none",
-	MaxAttackRange = 1,
-	Accuracy = 8,
-	Evasion = 9,
-	DaySightRangeBonus = 1,
-	NightSightRangeBonus = -1,
-	Priority = 50,
-	Points = 30,
-	Demand = 1,
-	Corpse = "unit-human-dead-body",
-	Type = "land",
-	RightMouseAction = "harvest",
-	CanAttack = true, RepairRange = 1,
-	CanTargetLand = true,
-	Coward = true,
-	organic = true,
-	Flesh = true,
-	SelectableByRectangle = true,
-	BluntDamage = true,
-	Sounds = {
-		"selected", "basic-germanic-voices-selected-group",
-		"acknowledge", "basic-germanic-voices-acknowledge",
-		"attack", "basic-germanic-voices-attack",
-		"ready", "basic-germanic-voices-ready",
-		"help", "basic-germanic-voices-help",
-		"dead", "basic-human-voices-dead",
-		"hit", "mace-attack",
-		"miss", "attack-miss"
-	}
-} )
-
 DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior" in Proto-Germanic, according to the "Wortschatz der Germanischen Spracheinheit" by August Fick
 	Parent = "unit-template-infantry",
 	Civilization = "germanic",

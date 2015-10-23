@@ -49,7 +49,7 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-boots",
 		"unit-hero-modsognir", "unit-hero-modsognir-thane", "unit-hero-durin", "unit-hero-durin-thane", 
 		"unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-rugnur-thane", "unit-hero-baglur", "unit-hero-baglur-thane", "unit-hero-thursagan", "unit-hero-durstorn",
 		"unit-hero-greebo",
-		"unit-germanic-worker", "unit-germanic-builder",
+		"unit-germanic-worker",
 		"unit-germanic-warrior", "unit-germanic-archer",
 		"unit-germanic-old-man",
 		"unit-teuton-worker", 
@@ -280,37 +280,49 @@ DefineButton( { Pos = 2, Level = 1, Icon = "icon-dwarven-mushroom-farm",
   Key = "f", Hint = _("Build Mushroom ~!Farm"), Popup = "popup-building",
   ForUnit = {"unit-dwarven-miner"} } )
 
-DefineButton( { Pos = 3, Level = 1, Icon = "icon-gold-mine",
-	Action = "build", Value = "unit-gold-mine",
-	Key = "g", Hint = _("Build ~!Gold Mine"), Popup = "popup-building",
-	ForUnit = {"unit-dwarven-miner"}
-} )
-
-DefineButton( { Pos = 4, Level = 1, Icon = "icon-dwarven-barracks",
+DefineButton( { Pos = 3, Level = 1, Icon = "icon-dwarven-barracks",
   Action = "build", Value = "unit-dwarven-barracks",
   Key = "w", Hint = _("Build ~!War Hall"), Popup = "popup-building",
   ForUnit = {"unit-dwarven-miner"} } )
 
-DefineButton( { Pos = 5, Level = 1, Icon = "icon-dwarven-lumber-mill",
+DefineButton( { Pos = 4, Level = 1, Icon = "icon-dwarven-lumber-mill",
   Action = "build", Value = "unit-dwarven-lumber-mill",
   Key = "l", Hint = _("Build ~!Lumber Mill"), Popup = "popup-building",
   ForUnit = {"unit-dwarven-miner", "unit-gnomish-worker"} } )
 
-DefineButton( { Pos = 6, Level = 1, Icon = "icon-dwarven-smithy",
+DefineButton( { Pos = 5, Level = 1, Icon = "icon-dwarven-smithy",
   Action = "build", Value = "unit-dwarven-smithy",
   Key = "s", Hint = _("Build ~!Smithy"), Popup = "popup-building",
   ForUnit = {"unit-dwarven-miner", "unit-gnomish-worker"} } )
 
-DefineButton( { Pos = 7, Level = 1, Icon = "icon-dwarven-yale-pen",
+DefineButton( { Pos = 6, Level = 1, Icon = "icon-dwarven-yale-pen",
 	Action = "build", Value = "unit-dwarven-yale-pen",
 	Key = "y", Hint = _("Build ~!Yale Pen"), Popup = "popup-building",
 	ForUnit = {"unit-dwarven-miner", "unit-gnomish-worker"}
 } )
 
-DefineButton( { Pos = 8, Level = 1, Icon = "icon-dwarven-sentry-tower",
+DefineButton( { Pos = 7, Level = 1, Icon = "icon-dwarven-sentry-tower",
 	Action = "build", Value = "unit-dwarven-sentry-tower",
 	Key = "t", Hint = _("Build Sentry ~!Tower"), Popup = "popup-building",
 	ForUnit = {"unit-dwarven-miner", "unit-gnomish-worker"}
+} )
+
+DefineButton( { Pos = 8, Level = 1, Icon = "icon-gold-mine",
+	Action = "build", Value = "unit-gold-mine",
+	Key = "g", Hint = _("Build ~!Gold Mine"), Popup = "popup-building",
+	ForUnit = {"unit-dwarven-miner"}
+} )
+
+DefineButton( { Pos = 9, Level = 1, Icon = "icon-silver-mine",
+	Action = "build", Value = "unit-silver-mine",
+	Key = "v", Hint = _("Build Si~!lver Mine"), Popup = "popup-building",
+	ForUnit = {"unit-dwarven-miner"}
+} )
+
+DefineButton( { Pos = 10, Level = 1, Icon = "icon-copper-mine",
+	Action = "build", Value = "unit-copper-mine",
+	Key = "c", Hint = _("Build ~!Copper Mine"), Popup = "popup-building",
+	ForUnit = {"unit-dwarven-miner"}
 } )
 
 DefineButton( { Pos = 16, Level = 1, Icon = "icon-cancel",

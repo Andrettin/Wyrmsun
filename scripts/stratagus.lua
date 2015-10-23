@@ -271,7 +271,7 @@ function SinglePlayerTriggers()
 	AddTrigger(
 		function()
 			local total_units = GetPlayerData(GetThisPlayer(), "TotalNumUnits") - GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-goblin-glider")
-			total_units = total_units - GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-gold-mine")
+			total_units = total_units - GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-gold-mine") - GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-silver-mine") - GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-copper-mine")
 			if (GetCivilizationClassUnitType("farm", GetPlayerData(GetThisPlayer(), "RaceName")) ~= nil) then
 				total_units = total_units - GetPlayerData(GetThisPlayer(), "UnitTypesCount", GetCivilizationClassUnitType("farm", GetPlayerData(GetThisPlayer(), "RaceName")))
 			end
@@ -1265,6 +1265,38 @@ function StandardTriggers()
 			)
 		end
 		
+		if (GetArrayIncludes(wyr.preferences.TipsShown, "Silver Deposit") == false) then
+			AddTrigger(
+				function()
+					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-silver-deposit") then
+						return true
+					else
+						return false
+					end
+				end,
+				function()
+					Tip("Silver Deposit", "Silver deposits are the most durable source of silver. Build a silver mine on top of it to harvest the silver within, which when processed is converted to gold at a 50% rate.")
+					return false
+				end
+			)
+		end
+		
+		if (GetArrayIncludes(wyr.preferences.TipsShown, "Copper Deposit") == false) then
+			AddTrigger(
+				function()
+					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-copper-deposit") then
+						return true
+					else
+						return false
+					end
+				end,
+				function()
+					Tip("Copper Deposit", "Copper deposits are the most durable source of copper. Build a copper mine on top of it to harvest the copper within, which when processed is converted to gold at a 25% rate.")
+					return false
+				end
+			)
+		end
+		
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Wood Pile") == false) then
 			AddTrigger(
 				function()
@@ -1459,7 +1491,7 @@ function GetNumRivals(player)
 	for i=0,14 do
 		if (player ~= i and (Players[i].Type == PlayerPerson or Players[i].Type == PlayerComputer) and (Players[player]:IsAllied(Players[i]) == false or Players[i]:IsAllied(Players[player]) == false)) then
 			local total_units = GetPlayerData(i, "TotalNumUnits") - GetPlayerData(i, "UnitTypesCount", "unit-goblin-glider")
-			total_units = total_units - GetPlayerData(i, "UnitTypesCount", "unit-gold-mine")
+			total_units = total_units - GetPlayerData(i, "UnitTypesCount", "unit-gold-mine") - GetPlayerData(i, "UnitTypesCount", "unit-silver-mine") - GetPlayerData(i, "UnitTypesCount", "unit-copper-mine")
 			if (GetCivilizationClassUnitType("farm", GetPlayerData(i, "RaceName")) ~= nil) then
 				total_units = total_units - GetPlayerData(i, "UnitTypesCount", GetCivilizationClassUnitType("farm", GetPlayerData(i, "RaceName")))
 			end
