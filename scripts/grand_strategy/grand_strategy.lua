@@ -2840,6 +2840,7 @@ function DrawGrandStrategyInterface()
 					Tip("Province Interface", "Click on a built structure (colored) to make use of its functions, and on an unbuilt one (grayed-out) to build it. The number on each unit icon represents how many units of that type are in the province, while the one between the arrows represent how many are currently selected. Use the arrows to select or deselect units.")
 				elseif (GrandStrategyInterfaceState == "town-hall" or GrandStrategyInterfaceState == "stronghold") then
 					Tip("Town Hall Interface", "A province's culture determines what is available in it. A province that has a different culture than your faction will suffer a penalty to economic efficiency. The number beside each commodity icon represents its price in gold, while the one between the arrows represents its quantity currently bid or offered by your faction - use the arrows to change it.")
+					Tip("Workers and Food", "Food is stored in each province. Once 2000 is accumulated, a new worker is created.")
 				elseif (GrandStrategyInterfaceState == "barracks") then
 					Tip("Barracks Interface", "Here you can recruit new units. The number on each unit icon represents how many units of that type are present in the province, while the number between the arrows represents how many are currently being trained. Use the arrows to change the quantity of units being trained.")
 				elseif (GrandStrategyInterfaceState == "lumber-mill") then
