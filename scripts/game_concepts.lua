@@ -33,7 +33,7 @@ GameConcepts = {
 		Description = _("Many units can learn new abilities when leveling up. These provide them with some form of benefit, such as increasing damage.")
 	},
 	AccuracyEvasion = {
-		Name = _("Accuracy/E~!vasion"),
+		Name = _("Accuracy/Evasion"),
 		Description = _("A unit's chance to hit another unit is determined by its accuracy relative to the target's evasion.")
 	},
 	AdministrativeEfficiency = {
