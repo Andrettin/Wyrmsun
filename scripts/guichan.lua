@@ -149,7 +149,9 @@ function AddMenuHelpers(menu)
 
   function menu:addButton(caption, hotkey, x, y, callback, size)
     local b = ButtonWidget(caption)
-    b:setHotKey(hotkey)
+	if (hotkey ~= "") then
+		b:setHotKey(hotkey)
+	end
     b:setActionCallback(
 		function()
 --			PlaySound("click")
@@ -164,61 +166,63 @@ function AddMenuHelpers(menu)
     return b
   end
 
-  function menu:addImageButton(caption, hotkey, x, y, callback)
-    local b = ImageButton(caption)
-    b:setHotKey(hotkey)
-    b:setActionCallback(
-		function()
-			PlaySound("click")
-			callback()
+	function menu:addImageButton(caption, hotkey, x, y, callback)
+		local b = ImageButton(caption)
+		if (hotkey ~= "") then
+			b:setHotKey(hotkey)
 		end
-	)
-    self:add(b, x, y)
-    b:setBorderSize(0) -- Andrettin: make buttons not have the borders they previously had
-    return b
-  end
+		b:setActionCallback(
+			function()
+				PlaySound("click")
+				callback()
+			end
+		)
+		self:add(b, x, y)
+		b:setBorderSize(0) -- Andrettin: make buttons not have the borders they previously had
+		return b
+	end
 
-  function menu:addFullButton(caption, hotkey, x, y, callback)
-	local b = self:addImageButton(caption, hotkey, x, y, callback)
-	b:setBaseColor(Color(0,0,0,0))
-	b:setForegroundColor(Color(0,0,0,0))
-	b:setBackgroundColor(Color(0,0,0,0))
-	local g_bln
-	local g_blp
-	local g_blg
-	if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
-		g_bln = CGraphic:New("dwarf/ui/widgets/button-large-normal.png")
-		g_blp = CGraphic:New("dwarf/ui/widgets/button-large-pressed.png")
-		g_blg = CGraphic:New("dwarf/ui/widgets/button-large-grayed.png")
-	elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "germanic") then
-		g_bln = CGraphic:New("germanic/ui/widgets/button-large-normal.png")
-		g_blp = CGraphic:New("germanic/ui/widgets/button-large-pressed.png")
-		g_blg = CGraphic:New("germanic/ui/widgets/button-large-grayed.png")
-	elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "gnome") then
-		g_bln = CGraphic:New("gnome/ui/widgets/button-large-normal.png")
-		g_blp = CGraphic:New("gnome/ui/widgets/button-large-pressed.png")
-		g_blg = CGraphic:New("gnome/ui/widgets/button-large-grayed.png")
-	elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "teuton") then
-		g_bln = CGraphic:New("germanic/ui/widgets/button-large-normal.png")
-		g_blp = CGraphic:New("germanic/ui/widgets/button-large-pressed.png")
-		g_blg = CGraphic:New("germanic/ui/widgets/button-large-grayed.png")
-	else
-		g_bln = CGraphic:New("dwarf/ui/widgets/button-large-normal.png")
-		g_blp = CGraphic:New("dwarf/ui/widgets/button-large-pressed.png")
-		g_blg = CGraphic:New("dwarf/ui/widgets/button-large-grayed.png")
+	function menu:addFullButton(caption, hotkey, x, y, callback)
+		local b = self:addImageButton(caption, hotkey, x, y, callback)
+		b:setBaseColor(Color(0,0,0,0))
+		b:setForegroundColor(Color(0,0,0,0))
+		b:setBackgroundColor(Color(0,0,0,0))
+		local g_bln
+		local g_blp
+		local g_blg
+		if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
+			g_bln = CGraphic:New("dwarf/ui/widgets/button-large-normal.png")
+			g_blp = CGraphic:New("dwarf/ui/widgets/button-large-pressed.png")
+			g_blg = CGraphic:New("dwarf/ui/widgets/button-large-grayed.png")
+		elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "germanic") then
+			g_bln = CGraphic:New("germanic/ui/widgets/button-large-normal.png")
+			g_blp = CGraphic:New("germanic/ui/widgets/button-large-pressed.png")
+			g_blg = CGraphic:New("germanic/ui/widgets/button-large-grayed.png")
+		elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "gnome") then
+			g_bln = CGraphic:New("gnome/ui/widgets/button-large-normal.png")
+			g_blp = CGraphic:New("gnome/ui/widgets/button-large-pressed.png")
+			g_blg = CGraphic:New("gnome/ui/widgets/button-large-grayed.png")
+		elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "teuton") then
+			g_bln = CGraphic:New("germanic/ui/widgets/button-large-normal.png")
+			g_blp = CGraphic:New("germanic/ui/widgets/button-large-pressed.png")
+			g_blg = CGraphic:New("germanic/ui/widgets/button-large-grayed.png")
+		else
+			g_bln = CGraphic:New("dwarf/ui/widgets/button-large-normal.png")
+			g_blp = CGraphic:New("dwarf/ui/widgets/button-large-pressed.png")
+			g_blg = CGraphic:New("dwarf/ui/widgets/button-large-grayed.png")
+		end
+		g_bln:Load()
+		g_blp:Load()
+		g_blg:Load()
+		b:setNormalImage(g_bln)
+		b:setPressedImage(g_blp)
+		b:setDisabledImage(g_blg)
+		b:setSize(224, 28)
+		if (string.len(caption) > 24) then
+			b:setFont(Fonts["game"])
+		end
+		return b
 	end
-	g_bln:Load()
-	g_blp:Load()
-	g_blg:Load()
-	b:setNormalImage(g_bln)
-	b:setPressedImage(g_blp)
-	b:setDisabledImage(g_blg)
-	b:setSize(224, 28)
-	if (string.len(caption) > 24) then
-		b:setFont(Fonts["game"])
-	end
-	return b
-  end
 
   function menu:addHalfButton(caption, hotkey, x, y, callback)
 	local b = self:addImageButton(caption, hotkey, x, y, callback)
