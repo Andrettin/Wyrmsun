@@ -1540,6 +1540,7 @@ function AddUIElement(file, x, y)
 	ui_element:Load()
 	UIElements[table.getn(UIElements) + 1] = ImageWidget(ui_element)
 	GrandStrategyMenu:add(UIElements[table.getn(UIElements)], x, y)
+	return UIElements[table.getn(UIElements)]
 end
 
 function AddGrandStrategyLabel(text, x, y, font, center, multiline)
@@ -2268,10 +2269,10 @@ function DrawGrandStrategyInterface()
 				for key, value in pairs(GrandStrategyCommodities) do
 					local icon_offset_y = Video.Height - 186 + 8 + (item_y * 47)
 
-					AddUIElement("ui/" .. string.lower(key) .. ".png", Video.Width - 243 + 12, icon_offset_y + 3)
+					local b = AddUIElement("ui/" .. string.lower(key) .. ".png", Video.Width - 243 + 12, icon_offset_y + 3)
 
 					-- add trade bid/offer arrows
-					local b = AddGrandStrategyImageButton("", "", Video.Width - 243 + 112 - 2 - 24, icon_offset_y, function()
+					b = AddGrandStrategyImageButton("", "", Video.Width - 243 + 112 - 2 - 24, icon_offset_y, function()
 						if (GetFactionCommodityTrade(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, string.lower(key)) > 0 and GetFactionCommodityTrade(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, string.lower(key)) < 100) then
 							SetFactionCommodityTrade(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, string.lower(key), 0)
 						elseif (GetFactionResource(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "gold") >= -1 * (GetFactionCommodityTrade(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, string.lower(key)) - 100) * GetCommodityPrice(string.lower(key)) / 100) then
@@ -2317,11 +2318,18 @@ function DrawGrandStrategyInterface()
 						b:setTooltip("Decrease bid of " .. key .. " by 100")
 					end
 
-					AddGrandStrategyLabel(GetCommodityPrice(string.lower(key)), Video.Width - 243 + 12 + 18, icon_offset_y + 3 + 1, Fonts["game"], false, false)
-					AddGrandStrategyLabel(math.abs(GetFactionCommodityTrade(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, string.lower(key))), Video.Width - 243 + 112 + 24 - 12, icon_offset_y + 2, Fonts["game"], true, false)
+					b = AddGrandStrategyLabel(GetCommodityPrice(string.lower(key)), Video.Width - 243 + 12 + 18, icon_offset_y + 3 + 1, Fonts["game"], false, false)
+					b:setTooltip(_("Price of 100 " .. key .. " in Gold"))
+					
+					if (GetFactionCommodityTrade(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, string.lower(key)) ~= 0) then
+						b = AddGrandStrategyLabel(math.abs(GetFactionCommodityTrade(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, string.lower(key))), Video.Width - 243 + 112 + 24 - 12, icon_offset_y + 2, Fonts["game"], true, false)
+					end
+					
 					if (GetFactionCommodityTrade(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, string.lower(key)) < 0) then
+						b:setTooltip(_("Quantity of " .. key .. " bid"))
 						AddGrandStrategyLabel("Bid", Video.Width - 243 + 112 + 2 + 46 - 20 + 56 - 10, icon_offset_y + 3 + 1, Fonts["game"], false, false)
 					elseif (GetFactionCommodityTrade(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, string.lower(key)) > 0) then
+						b:setTooltip(_("Quantity of " .. key .. " offered"))
 						AddGrandStrategyLabel("Offer", Video.Width - 243 + 112 + 2 + 46 - 20 + 56 - 10, icon_offset_y + 3 + 1, Fonts["game"], false, false)
 					end
 					

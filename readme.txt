@@ -232,6 +232,9 @@ https://github.com/Andrettin/Wyrmsun
 - Added silver deposit and mine (graphics by Jinn). Silver is converted at a 50% rate to gold when processed.
 - Added copper deposit and mine (graphics by Jinn). Copper is converted at a 25% rate to gold when processed.
 
+* Grand Strategy
+- Made clearer what the numbers in the town hall interface represent.
+
 * Miscellaneous
 - Fixed an issue which caused a savegame crash.
 
