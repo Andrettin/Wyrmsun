@@ -37,7 +37,7 @@ GameConcepts = {
 		Description = _("A unit's chance to hit another unit is determined by its accuracy relative to the target's evasion.")
 	},
 	AdministrativeEfficiency = {
-		Name = _("Administrative Efficiency"),
+		Name = _("Admi~!nistrative Efficiency"),
 		Description = _("In Grand Strategy mode, administrative efficiency affected provinces' productivity and research output. Administrative efficiency is 100% by default, but is decreased if the province has a different culture than its owner.")
 	},
 	Backstab = {
@@ -83,7 +83,7 @@ GameConcepts = {
 		Description = _("Items such as potions and food lay down on the ground, and can be used by units by moving on top of them. Food items like cheese and carrots appear when a farm is destroyed. Red potions heal units, blue potions damage them, food items heal, and gold coins give gold to the player. Additionally, destroying barrels will sometimes yield potions, and opening chests (by attacking them) will grant gold.")
 	},
 	Labor = {
-		Name = _("Labor"),
+		Name = _("~!Labor"),
 		Description = _("Workers in a province produce Labor (100 for each worker), which is then used to produce resources in the province.")
 	},
 	Mercenaries = {
@@ -103,7 +103,7 @@ GameConcepts = {
 		Description = _("Research is a Grand Strategy mode only resource, which is used to acquire technologies. A faction gains research depending on the ~<proportion~> of its provinces that has town halls, lumber mills and smithies.")
 	},
 	Revolts = {
-		Name = _("Revolts"),
+		Name = _("Rev~!olts"),
 		Description = _("In Grand Strategy mode, provinces have a chance to revolt against their owner's rule. There is a risk of revolt occurring in recently conquered provinces, as well as ones of a culture different than their owner's.")
 	},
 	TechTreeScreen = {
