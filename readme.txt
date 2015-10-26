@@ -235,6 +235,7 @@ https://github.com/Andrettin/Wyrmsun
 * Grand Strategy
 - Made clearer what the numbers in the town hall interface represent.
 - Worked resource tiles now show how much they produce when being hovered over.
+- Fixed issue which caused the "OK" button to not appear in the Stables/Yale Pen interface.
 
 * Miscellaneous
 - Fixed an issue which caused a savegame crash.

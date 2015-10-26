@@ -2582,6 +2582,43 @@ function DrawGrandStrategyInterface()
 				b:setSize(99, 13)
 				b:setFont(Fonts["game"])
 			elseif (GrandStrategyInterfaceState == "stables") then
+				AddGrandStrategyLabel(GetUnitTypeName(GetCivilizationClassUnitType(GrandStrategyInterfaceState, GetProvinceCivilization(SelectedProvince.Name))), UI.InfoPanel.X + 109, UI.InfoPanel.Y + 53, Fonts["game"], true, false)
+				
+				local item_x = 0
+				local item_y = 0
+				for i, unitName in ipairs(Units) do
+					if (string.find(unitName, "upgrade-") ~= nil) then
+						if (GetUnitTypeInterfaceState(unitName) == GrandStrategyInterfaceState and IsTechnologyAvailable(SelectedProvince, unitName)) then
+							local icon_offset_x = Video.Width - 243 + 15 + (item_x * 56)
+							local icon_offset_y = Video.Height - 186 + 13 + (item_y * 47)
+
+							AddGrandStrategyTechnologyButton(icon_offset_x, icon_offset_y, unitName)
+							
+							item_x = item_x + 1
+							if (item_x > 3) then
+								item_x = 0
+								item_y = item_y + 1
+							end
+						end
+					end
+				end
+
+				-- add a button to go back to the main province interface
+				local b = AddGrandStrategyImageButton("~!OK", "o", Video.Width - 243 + 72, Video.Height - (15 * 2) - 8, function()
+					GrandStrategyInterfaceState = "Province"
+					DrawGrandStrategyInterface()
+				end)
+				b:setBaseColor(Color(0,0,0,0))
+				b:setForegroundColor(Color(0,0,0,0))
+				b:setBackgroundColor(Color(0,0,0,0))
+				local g_btn = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-thinest-medium-normal.png")
+				local g_btp = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-thinest-medium-pressed.png")
+				g_btn:Load()
+				g_btp:Load()
+				b:setNormalImage(g_btn)
+				b:setPressedImage(g_btp)
+				b:setSize(99, 13)
+				b:setFont(Fonts["game"])
 			elseif (GrandStrategyInterfaceState == "mercenary-camp") then
 				AddGrandStrategyLabel(GetUnitTypeName("unit-mercenary-camp"), UI.InfoPanel.X + 109, UI.InfoPanel.Y + 53, Fonts["game"], true, false)
 				
