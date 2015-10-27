@@ -273,35 +273,35 @@ UI.StatusLine.TextY = Video.Height + 2 - 16
 UI.StatusLine.Width = Video.Width - 16 - 2 - 176
 UI.StatusLine.Font = Fonts["game"]
 
-UI.Resources[GetResourceID("grain")].G = CGraphic:New("ui/grain.png", 14, 14)
-UI.Resources[GetResourceID("grain")].IconFrame = 0
-UI.Resources[GetResourceID("grain")].IconX = Video.Width
-UI.Resources[GetResourceID("grain")].IconY = Video.Height
+UI.Resources[GetResourceIdByName("grain")].G = CGraphic:New("ui/grain.png", 14, 14)
+UI.Resources[GetResourceIdByName("grain")].IconFrame = 0
+UI.Resources[GetResourceIdByName("grain")].IconX = Video.Width
+UI.Resources[GetResourceIdByName("grain")].IconY = Video.Height
 
-UI.Resources[GetResourceID("mushrooms")].G = CGraphic:New("ui/mushrooms.png", 14, 14)
-UI.Resources[GetResourceID("mushrooms")].IconFrame = 0
-UI.Resources[GetResourceID("mushrooms")].IconX = Video.Width
-UI.Resources[GetResourceID("mushrooms")].IconY = Video.Height
+UI.Resources[GetResourceIdByName("mushrooms")].G = CGraphic:New("ui/mushrooms.png", 14, 14)
+UI.Resources[GetResourceIdByName("mushrooms")].IconFrame = 0
+UI.Resources[GetResourceIdByName("mushrooms")].IconX = Video.Width
+UI.Resources[GetResourceIdByName("mushrooms")].IconY = Video.Height
 
-UI.Resources[GetResourceID("fish")].G = CGraphic:New("ui/fish.png", 14, 14)
-UI.Resources[GetResourceID("fish")].IconFrame = 0
-UI.Resources[GetResourceID("fish")].IconX = Video.Width
-UI.Resources[GetResourceID("fish")].IconY = Video.Height
+UI.Resources[GetResourceIdByName("fish")].G = CGraphic:New("ui/fish.png", 14, 14)
+UI.Resources[GetResourceIdByName("fish")].IconFrame = 0
+UI.Resources[GetResourceIdByName("fish")].IconX = Video.Width
+UI.Resources[GetResourceIdByName("fish")].IconY = Video.Height
 
-UI.Resources[GetResourceID("silver")].G = CGraphic:New("ui/silver.png", 14, 14)
-UI.Resources[GetResourceID("silver")].IconFrame = 0
-UI.Resources[GetResourceID("silver")].IconX = Video.Width
-UI.Resources[GetResourceID("silver")].IconY = Video.Height
+UI.Resources[GetResourceIdByName("silver")].G = CGraphic:New("ui/silver.png", 14, 14)
+UI.Resources[GetResourceIdByName("silver")].IconFrame = 0
+UI.Resources[GetResourceIdByName("silver")].IconX = Video.Width
+UI.Resources[GetResourceIdByName("silver")].IconY = Video.Height
 
-UI.Resources[GetResourceID("copper")].G = CGraphic:New("ui/copper.png", 14, 14)
-UI.Resources[GetResourceID("copper")].IconFrame = 0
-UI.Resources[GetResourceID("copper")].IconX = Video.Width
-UI.Resources[GetResourceID("copper")].IconY = Video.Height
+UI.Resources[GetResourceIdByName("copper")].G = CGraphic:New("ui/copper.png", 14, 14)
+UI.Resources[GetResourceIdByName("copper")].IconFrame = 0
+UI.Resources[GetResourceIdByName("copper")].IconX = Video.Width
+UI.Resources[GetResourceIdByName("copper")].IconY = Video.Height
 
-UI.Resources[GetResourceID("labor")].G = CGraphic:New("ui/labor.png", 14, 14)
-UI.Resources[GetResourceID("labor")].IconFrame = 0
-UI.Resources[GetResourceID("labor")].IconX = Video.Width
-UI.Resources[GetResourceID("labor")].IconY = Video.Height
+UI.Resources[GetResourceIdByName("labor")].G = CGraphic:New("ui/labor.png", 14, 14)
+UI.Resources[GetResourceIdByName("labor")].IconFrame = 0
+UI.Resources[GetResourceIdByName("labor")].IconX = Video.Width
+UI.Resources[GetResourceIdByName("labor")].IconY = Video.Height
 
 Load("scripts/celt/ui.lua")
 Load("scripts/dwarf/ui.lua")

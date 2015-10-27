@@ -48,31 +48,27 @@ end
 
 -- Convert unit type to the player's race
 function CreateUnit(unittype, player, pos)
-	if (unittype == "unit-silver-rock") then
-		unittype = "unit-gold-rock"
+	if (not IsNetworkGame()) then
+		-- if Rugnur has a persistent level of 2 or higher, create him as his older version already
+		if (unittype == "unit-hero-modsognir" and GetArrayIncludes(wyr.preferences.Heroes.Modsognir.upgrades, "unit-dwarven-thane")) then
+			unittype = "unit-hero-modsognir-thane"
+		elseif (unittype == "unit-hero-durin" and GetArrayIncludes(wyr.preferences.Heroes.Durin.upgrades, "unit-dwarven-thane")) then
+			unittype = "unit-hero-durin-thane"
+		elseif ((unittype == "unit-hero-rugnur" or unittype == "unit-hero-rugnur-steelclad") and GetArrayIncludes(wyr.preferences.Heroes.Rugnur.upgrades, "unit-dwarven-thane")) then
+			unittype = "unit-hero-rugnur-thane"
+		elseif (unittype == "unit-hero-rugnur" and GetArrayIncludes(wyr.preferences.Heroes.Rugnur.upgrades, "unit-dwarven-steelclad")) then
+			unittype = "unit-hero-rugnur-steelclad"
+		elseif (unittype == "unit-hero-baglur" and GetArrayIncludes(wyr.preferences.Heroes.Baglur.upgrades, "unit-dwarven-thane")) then
+			unittype = "unit-hero-baglur-thane"
+		end
 	end
 
-  if (not IsNetworkGame()) then
-	-- if Rugnur has a persistent level of 2 or higher, create him as his older version already
-	if (unittype == "unit-hero-modsognir" and GetArrayIncludes(wyr.preferences.Heroes.Modsognir.upgrades, "unit-dwarven-thane")) then
-		unittype = "unit-hero-modsognir-thane"
-	elseif (unittype == "unit-hero-durin" and GetArrayIncludes(wyr.preferences.Heroes.Durin.upgrades, "unit-dwarven-thane")) then
-		unittype = "unit-hero-durin-thane"
-	elseif ((unittype == "unit-hero-rugnur" or unittype == "unit-hero-rugnur-steelclad") and GetArrayIncludes(wyr.preferences.Heroes.Rugnur.upgrades, "unit-dwarven-thane")) then
-		unittype = "unit-hero-rugnur-thane"
-	elseif (unittype == "unit-hero-rugnur" and GetArrayIncludes(wyr.preferences.Heroes.Rugnur.upgrades, "unit-dwarven-steelclad")) then
-		unittype = "unit-hero-rugnur-steelclad"
-	elseif (unittype == "unit-hero-baglur" and GetArrayIncludes(wyr.preferences.Heroes.Baglur.upgrades, "unit-dwarven-thane")) then
-		unittype = "unit-hero-baglur-thane"
-	end  
-  end
+	if (GameCycle ~= 0) then
+		return OldCreateUnit(unittype, player, pos)
+	end
 
-  if (GameCycle ~= 0) then
-    return OldCreateUnit(unittype, player, pos)
-  end
-
-  -- Don't add any units if the player setup the units to use, and don't add scenario units if in a grand strategy game
-  if (
+	-- Don't add any units if the player setup the units to use, and don't add scenario units if in a grand strategy game
+	if (
 		(
 			GameSettings.NumUnits >= 1
 			and player ~= 15
@@ -84,27 +80,27 @@ function CreateUnit(unittype, player, pos)
 			and (unittype == "unit-gold-deposit" or unittype == "unit-silver-deposit" or unittype == "unit-copper-deposit" or unittype == "unit-coal-mine" or unittype == "unit-mercenary-camp" or (player ~= 15 and Players[player].Type ~= PlayerNeutral))
 		)
 	) then
-    return
-  end
+		return
+	end
 
-  -- Leave neutral the way it is
---  if (player == 15) then
---    return OldCreateUnit(unittype, player, pos)
---  end
+	-- Leave neutral the way it is
+--	if (player == 15) then
+--		return OldCreateUnit(unittype, player, pos)
+--	end
 
-  if (Players[player].Type == PlayerNobody) then
-    return nil
-  end
+	if (Players[player].Type == PlayerNobody) then
+		return nil
+	end
 
-  if (Players[player].Type ~= PlayerNeutral) then
-	unittype = ConvertUnitType(unittype, GetPlayerData(player, "RaceName"), wyrmsun.tileset)
-  end
+	if (Players[player].Type ~= PlayerNeutral) then
+		unittype = ConvertUnitType(unittype, GetPlayerData(player, "RaceName"), wyrmsun.tileset)
+	end
 
-  return OldCreateUnit(unittype, player, pos)
+	return OldCreateUnit(unittype, player, pos)
 end
 
 if (OldSetPlayerData == nil) then
-  OldSetPlayerData = SetPlayerData
+	OldSetPlayerData = SetPlayerData
 end
 
 --Define Player Data.
@@ -192,7 +188,7 @@ function SetPlayerData(player, data, arg1, arg2)
 			res = {10000, 5000, 5000, 0, 5000, 0, 0, 0, 0, 0, 0, 0, 0}
 		end
 		if (GrandStrategy == false or GrandStrategyEventMap) then
-			arg2 = res[GetResourceID(arg1)]
+			arg2 = res[GetResourceIdByName(arg1)]
 		else
 			arg2 = 0
 		end

@@ -115,6 +115,7 @@ editor_types = {
    "unit-silver-rock",
    "unit-silver-deposit",
    "unit-silver-mine",
+   "unit-copper-rock",
    "unit-copper-deposit",
    "unit-copper-mine",
    "unit-wood-pile",
@@ -594,8 +595,7 @@ function EditUnitProperties()
 	table.insert(trait_list, "") -- for if the unit has no trait
 	local unit_trait
 	local activeCheckBox
-	local resourceName = {"gold", "lumber", "stone"}
-	local resource = GetUnitUnderCursor().Type.GivesResource - 1
+	local resource = GetUnitUnderCursor().Type.GivesResource
 	local resourceValue
 
 	if (GetUnitBoolFlag(UnitNumber(GetUnitUnderCursor()), "organic") and table.getn(GetUnitTypeTraits(GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Ident"), true)) > 0) then
@@ -610,7 +610,7 @@ function EditUnitProperties()
 		activeCheckBox = menu:addImageCheckBox(_("Active"), sizeX / 2 - 30, 11 + (36 * 6))
 		activeCheckBox:setMarked(GetUnitUnderCursor().Active)
 	else
-		menu:addLabel(_("Amount of") .. " " .. _(CapitalizeString(resourceName[1 + resource])), sizeX / 2, 11 + (36 * 5))
+		menu:addLabel(_("Amount of") .. " " .. _(CapitalizeString(GetResourceNameById(resource))), sizeX / 2, 11 + (36 * 5))
 		resourceValue = menu:addTextInputField(GetUnitUnderCursor().ResourcesHeld, sizeX / 2 - 30, 11 + (36 * 6), 60)
 	end
 	

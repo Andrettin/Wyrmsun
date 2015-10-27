@@ -68,17 +68,17 @@ function DefineUpgrade(upgrade, data)
 	end
 	if (data.Costs ~= nil) then
 		for i = 1,table.getn(data.Costs),2 do
-			upgrade.Costs[GetResourceID(data.Costs[i])] = data.Costs[i + 1]
+			upgrade.Costs[GetResourceIdByName(data.Costs[i])] = data.Costs[i + 1]
 		end
 	end
 	if (data.GrandStrategyCosts ~= nil) then
 		for i = 1,table.getn(data.GrandStrategyCosts),2 do
-			upgrade.GrandStrategyCosts[GetResourceID(data.GrandStrategyCosts[i])] = data.GrandStrategyCosts[i + 1]
+			upgrade.GrandStrategyCosts[GetResourceIdByName(data.GrandStrategyCosts[i])] = data.GrandStrategyCosts[i + 1]
 		end
 	end
 	if (data.GrandStrategyProductionEfficiencyModifier ~= nil) then
 		for i = 1,table.getn(data.GrandStrategyProductionEfficiencyModifier),2 do
-			upgrade.GrandStrategyProductionEfficiencyModifier[GetResourceID(data.GrandStrategyProductionEfficiencyModifier[i])] = data.GrandStrategyProductionEfficiencyModifier[i + 1]
+			upgrade.GrandStrategyProductionEfficiencyModifier[GetResourceIdByName(data.GrandStrategyProductionEfficiencyModifier[i])] = data.GrandStrategyProductionEfficiencyModifier[i + 1]
 		end
 	end
 	if (data.TechnologyPointCost ~= nil) then

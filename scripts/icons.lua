@@ -1384,6 +1384,12 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-copper-rock",
+	Size = {46, 38},
+	File = "neutral/icons/gold_rock.png"
+})
+
+DefineIcon({
 	Name = "icon-wood-pile",
 	Size = {46, 38},
 	File = "neutral/icons/wood_pile.png"

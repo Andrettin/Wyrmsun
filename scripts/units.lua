@@ -81,7 +81,7 @@ Units = {
 	"unit-slime", "unit-yale", "unit-gryphon", "unit-wyrm", "unit-water-elemental",
 	"unit-gold-rock", "unit-gold-deposit", "unit-gold-mine",
 	"unit-silver-rock", "unit-silver-deposit", "unit-silver-mine",
-	"unit-copper-deposit", "unit-copper-mine",
+	"unit-copper-rock", "unit-copper-deposit", "unit-copper-mine",
 	"unit-coal-mine",
 	"unit-mercenary-camp",
 	"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
@@ -124,6 +124,7 @@ function DefineUnitType(unit_type, data)
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-silver-rock"},
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-silver-deposit"},
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-silver-mine"},
+				"distance", { Distance = 3, DistanceType = ">", Type = "unit-copper-rock"},
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-copper-deposit"},
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-copper-mine"},
 				"distance", { Distance = 3, DistanceType = ">", Type = "unit-coal-mine"}
@@ -1684,7 +1685,7 @@ DefineUnitType("unit-gold-rock", { Name = _("Gold Rock"),
 
 DefineUnitType("unit-silver-rock", { Name = _("Silver Rock"),
 	Image = {"file", "neutral/buildings/silver_rock_1.png", "size", {43, 43}},
---	Shadow = {"file", "neutral/buildings/gold_rock_1_shadow.png", "size", {43, 43}},
+	Shadow = {"file", "neutral/buildings/silver_rock_1_shadow.png", "size", {43, 43}},
 	Animations = "animations-building", Icon = "icon-silver-rock",
 	NeutralMinimapColor = {255, 255, 0},
 	Costs = {"time", 150},
@@ -1711,17 +1712,68 @@ DefineUnitType("unit-silver-rock", { Name = _("Silver Rock"),
 		{
 			"variation-id", "2",
 			"file", "neutral/buildings/silver_rock_2.png",
---			"shadow-file", "neutral/buildings/gold_rock_2_shadow.png"
+			"shadow-file", "neutral/buildings/silver_rock_2_shadow.png"
 		},
 		{
 			"variation-id", "3",
 			"file", "neutral/buildings/silver_rock_3.png",
---			"shadow-file", "neutral/buildings/gold_rock_3_shadow.png"
+			"shadow-file", "neutral/buildings/silver_rock_3_shadow.png"
 		},
 		{
 			"variation-id", "4",
 			"file", "neutral/buildings/silver_rock_4.png",
---			"shadow-file", "neutral/buildings/gold_rock_4_shadow.png"
+			"shadow-file", "neutral/buildings/silver_rock_4_shadow.png"
+		}
+	},
+	Sounds = {
+		"selected", "metal-selected",
+--		"acknowledge", "gold-mine-acknowledge",
+--		"ready", "gold-mine-ready",
+--		"help", "gold-mine-help",
+--		"dead", "building-destroyed"
+	}
+} )
+
+DefineUnitType("unit-copper-rock", { Name = _("Copper Rock"),
+	Image = {"file", "neutral/buildings/copper_rock_1.png", "size", {43, 43}},
+	Shadow = {"file", "neutral/buildings/copper_rock_1_shadow.png", "size", {43, 43}},
+	Animations = "animations-building", Icon = "icon-copper-rock",
+	NeutralMinimapColor = {255, 255, 0},
+	Costs = {"time", 150},
+	Speed = 0,
+	HitPoints = 25500,
+	DrawLevel = 30,
+	TileSize = {1, 1}, BoxSize = {31, 31},
+	SightRange = 1,
+	Armor = 20, BasicDamage = 0, Missile = "missile-none",
+	Accuracy = 0,
+	Evasion = 0,
+	Priority = 0,
+--	Corpse = "unit-destroyed-3x3-place",
+	Type = "land",
+	StartingResources = 1000,
+	NumDirections = 1,
+	Building = false, VisibleUnderFog = true,
+	GivesResource = "copper", CanHarvest = true,
+	HarvestFromOutside = true,
+	Variations = {
+		{
+			"variation-id", "1"
+		},
+		{
+			"variation-id", "2",
+			"file", "neutral/buildings/copper_rock_2.png",
+			"shadow-file", "neutral/buildings/copper_rock_2_shadow.png"
+		},
+		{
+			"variation-id", "3",
+			"file", "neutral/buildings/copper_rock_3.png",
+			"shadow-file", "neutral/buildings/copper_rock_3_shadow.png"
+		},
+		{
+			"variation-id", "4",
+			"file", "neutral/buildings/copper_rock_4.png",
+			"shadow-file", "neutral/buildings/copper_rock_4_shadow.png"
 		}
 	},
 	Sounds = {

@@ -1281,6 +1281,22 @@ function StandardTriggers()
 			)
 		end
 		
+		if (GetArrayIncludes(wyr.preferences.TipsShown, "Copper Rock") == false) then
+			AddTrigger(
+				function()
+					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-copper-rock") then
+						return true
+					else
+						return false
+					end
+				end,
+				function()
+					Tip("Copper Rock", "Copper rocks can be mined for copper, which when processed is converted to gold at a 25% rate.")
+					return false
+				end
+			)
+		end
+		
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Copper Deposit") == false) then
 			AddTrigger(
 				function()

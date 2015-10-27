@@ -229,13 +229,16 @@ https://github.com/Andrettin/Wyrmsun
 -----------------------------------------------------------------------
 
 * Buildings
-- Added silver deposit and mine (graphics by Jinn). Silver is converted at a 50% rate to gold when processed.
-- Added copper deposit and mine (graphics by Jinn). Copper is converted at a 25% rate to gold when processed.
+- Added silver deposit, mine and rocks (graphics by Jinn). Silver is converted at a 50% rate to gold when processed.
+- Added copper deposit, mine and rocks (graphics by Jinn). Copper is converted at a 25% rate to gold when processed.
 
 * Grand Strategy
 - Made clearer what the numbers in the town hall interface represent.
 - Worked resource tiles now show how much they produce when being hovered over.
 - Fixed issue which caused the "OK" button to not appear in the Stables/Yale Pen interface.
+
+* Map Editor
+- Fixed issue which caused metal rocks placed with the editor to have 50000 of their resource stored by default, instead of 1000 as they should have.
 
 * Miscellaneous
 - Fixed an issue which caused a savegame crash.

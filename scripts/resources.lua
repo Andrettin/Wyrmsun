@@ -91,13 +91,3 @@ SetResourceGrandStrategyBuildingVariations("mushrooms", 4)
 
 SetResourceBaseLaborInput("fish", 100)
 SetResourceBaseOutput("fish", 100)
-
-function GetResourceID(resource)
-	local resource_types = {"time", "gold", "lumber", "oil", "ore", "stone", "coal", "research", "prestige", "timber", "silver", "copper", "grain", "mushrooms", "labor", "fish"}
-	for i=1,table.getn(resource_types) do
-		if (resource_types[i] == resource) then
-			return i - 1
-		end
-	end
-	return nil
-end
