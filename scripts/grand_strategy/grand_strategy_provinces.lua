@@ -108,6 +108,7 @@ function LoadProvinces(world)
 				{539, 140}
 			},
 			CulturalNames = {
+				illyrian = "Taulantia",
 				latin = "Taulantia"
 			},
 			SettlementName = "Dyrrhachium",

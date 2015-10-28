@@ -3724,6 +3724,54 @@ DefineUnitType("unit-template-worker", { Name = _("Worker"),
 	organic = true,
 	Flesh = true,
 	SelectableByRectangle = true,
+	CanGatherResources = {
+		{
+			"resource-id", "gold",
+			"resource-capacity", 100,
+			"resource-step", 2,
+			"wait-at-resource", 6,
+			"wait-at-depot", 150
+		},
+		{
+			"resource-id", "silver",
+			"resource-capacity", 100,
+			"resource-step", 2,
+			"wait-at-resource", 6,
+			"wait-at-depot", 150,
+			"final-resource", "gold",
+			"final-resource-conversion-rate", 50
+		},
+		{
+			"resource-id", "copper",
+			"resource-capacity", 100,
+			"resource-step", 2,
+			"wait-at-resource", 6,
+			"wait-at-depot", 150,
+			"final-resource", "gold",
+			"final-resource-conversion-rate", 25
+		},
+		{
+			"resource-id", "lumber",
+			"resource-capacity", 100,
+			"resource-step", 2,
+			"wait-at-resource", 24,
+			"wait-at-depot", 150
+		},
+		{
+			"resource-id", "stone",
+			"resource-capacity", 100,
+			"resource-step", 2,
+			"wait-at-resource", 24,
+			"wait-at-depot", 150
+		},
+		{
+			"resource-id", "coal",
+			"resource-capacity", 100,
+			"resource-step", 2,
+			"wait-at-resource", 6,
+			"wait-at-depot", 150
+		}
+	},
 	Sounds = {
 		"step", "step-dirt",
 		"step-dirt", "step-dirt",

@@ -47,48 +47,28 @@ DefineUnitType("unit-goblin-worker", { Name = _("Worker"),
 	BluntDamage = true,
 	CanGatherResources = {
 		{
-			"file-when-loaded", "goblin/units/goblin_worker_with_gold.png",
 			"resource-id", "gold",
-			"resource-capacity", 100,
-			"resource-step", 2,
-			"wait-at-resource", 6,
-			"wait-at-depot", 150
+			"file-when-loaded", "goblin/units/goblin_worker_with_gold.png"
 		},
 		{
-			"file-when-loaded", "goblin/units/goblin_worker_with_gold.png",
 			"resource-id", "silver",
-			"resource-capacity", 100,
-			"resource-step", 2,
-			"wait-at-resource", 6,
-			"wait-at-depot", 150,
-			"final-resource", "gold",
-			"final-resource-conversion-rate", 50
+			"file-when-loaded", "goblin/units/goblin_worker_with_gold.png"
 		},
 		{
-			"file-when-loaded", "goblin/units/goblin_worker_with_gold.png",
 			"resource-id", "copper",
-			"resource-capacity", 100,
-			"resource-step", 2,
-			"wait-at-resource", 6,
-			"wait-at-depot", 150,
-			"final-resource", "gold",
-			"final-resource-conversion-rate", 25
+			"file-when-loaded", "goblin/units/goblin_worker_with_gold.png"
 		},
 		{
-			"file-when-loaded", "goblin/units/goblin_worker_with_lumber.png",
 			"resource-id", "lumber",
-			"resource-capacity", 100,
-			"resource-step", 2,
-			"wait-at-resource", 24,
-			"wait-at-depot", 150
+			"file-when-loaded", "goblin/units/goblin_worker_with_lumber.png"
 		},
 		{
-			"file-when-loaded", "goblin/units/goblin_worker_with_gold.png",
 			"resource-id", "stone",
-			"resource-capacity", 100,
-			"resource-step", 2,
-			"wait-at-resource", 24,
-			"wait-at-depot", 150
+			"file-when-loaded", "goblin/units/goblin_worker_with_gold.png"
+		},
+		{
+			"resource-id", "coal",
+			"file-when-loaded", "goblin/units/goblin_worker_with_gold.png"
 		}
 	},
 	Variations = {
