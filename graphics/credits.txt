@@ -739,6 +739,8 @@ João Victor G. Costa (Jinn):
 /graphics/tilesets/world/sites/goblin_barracks.png (based on the goblin mess hall made by Leo)
 /graphics/tilesets/world/sites/goblin_settlement.png (based on the goblin buildings made by Leo)
 /graphics/tilesets/world/sites/kal_karthan_settlement.png
+/graphics/tilesets/world/sites/resource_building_copper.png
+/graphics/tilesets/world/sites/resource_building_copper_player_color.png
 /graphics/tilesets/world/sites/resource_building_gold.png
 /graphics/tilesets/world/sites/resource_building_gold_player_color.png
 /graphics/tilesets/world/sites/resource_building_gold_mountains.png
@@ -755,6 +757,8 @@ João Victor G. Costa (Jinn):
 /graphics/tilesets/world/sites/resource_building_mushrooms_4.png
 /graphics/tilesets/world/sites/resource_building_mushrooms_hills.png
 /graphics/tilesets/world/sites/resource_building_mushrooms_mountains.png
+/graphics/tilesets/world/sites/resource_building_silver.png
+/graphics/tilesets/world/sites/resource_building_silver_player_color.png
 /graphics/tilesets/world/sites/resource_building_stone.png
 /graphics/tilesets/world/sites/resource_building_stone_mountains.png
 /graphics/tilesets/world/sites/resource_not_worked.png
