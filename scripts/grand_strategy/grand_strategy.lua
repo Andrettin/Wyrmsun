@@ -201,7 +201,7 @@ function RunGrandStrategyGameSetupMenu()
 						else
 							SetWorldMapTileTerrain(x, y, GetWorldMapTerrainTypeId("Conifer Forest"))
 						end
-					elseif ((WorldMapTileHasResource(x, y, "gold", true) or WorldMapTileHasResource(x, y, "stone", true)) and GetWorldMapTileTerrain(x, y) ~= "Hills" and GetWorldMapTileTerrain(x, y) ~= "Mountains") then -- make plains tiles into hills if there is a mine or quarry there
+					elseif ((WorldMapTileHasResource(x, y, "gold", true) or WorldMapTileHasResource(x, y, "silver", true) or WorldMapTileHasResource(x, y, "copper", true) or WorldMapTileHasResource(x, y, "stone", true)) and GetWorldMapTileTerrain(x, y) ~= "Hills" and GetWorldMapTileTerrain(x, y) ~= "Mountains") then -- make plains tiles into hills if there is a mine or quarry there
 						SetWorldMapTileTerrain(x, y, GetWorldMapTerrainTypeId("Hills"))
 					elseif (WorldMapTileHasResource(x, y, "grain", true) and GetWorldMapTileTerrain(x, y) ~= "Plains") then
 						SetWorldMapTileTerrain(x, y, GetWorldMapTerrainTypeId("Plains"))

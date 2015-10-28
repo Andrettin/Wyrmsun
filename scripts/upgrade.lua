@@ -127,7 +127,7 @@ DefineUpgrade("upgrade-coinage", {
 	Description = _("While previously trade was conducted by trading one commodity for another, the introduction of currency provides a more practical means of exchange.\n\nEffect: +10% Gold Processing."),
 	Costs = {"time", 250, "gold", 1500},
 	GrandStrategyCosts = {"time", 250, "gold", 1500, "research", 1500},
-	GrandStrategyProductionEfficiencyModifier = {"gold", 10},
+	GrandStrategyProductionEfficiencyModifier = {"gold", 10, "silver", 10, "copper", 10},
 	Ability = false
 })
 

@@ -76,6 +76,8 @@ DefineWorldMapTerrainTypes(
 )
 
 SetResourceGrandStrategyBuildingTerrainSpecificGraphic("gold", "Mountains", true)
+SetResourceGrandStrategyBuildingTerrainSpecificGraphic("silver", "Mountains", true)
+SetResourceGrandStrategyBuildingTerrainSpecificGraphic("copper", "Mountains", true)
 SetResourceGrandStrategyBuildingTerrainSpecificGraphic("lumber", "Conifer Forest", true) -- has to be placed here, rather than in the resources.lua file, because terrain types are loaded after resources
 SetResourceGrandStrategyBuildingTerrainSpecificGraphic("stone", "Mountains", true)
 SetResourceGrandStrategyBuildingTerrainSpecificGraphic("mushrooms", "Hills", true)

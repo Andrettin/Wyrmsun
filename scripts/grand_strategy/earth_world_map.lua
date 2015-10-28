@@ -1166,7 +1166,7 @@ SetWorldMapTileTerrain(454, 119, water_id)
 SetWorldMapTileTerrain(454, 131, water_id)
 SetWorldMapTileTerrain(454, 132, water_id)
 SetWorldMapTileTerrain(454, 133, plains_id)
-AddWorldMapResource("gold", 454, 133, false) -- Tin deposits; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 7.
+AddWorldMapResource("copper", 454, 133, false) -- Tin deposits; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 7.
 SetWorldMapTileTerrain(454, 134, plains_id)
 SetWorldMapTileTerrain(454, 135, water_id)
 SetWorldMapTileRiver(454, 135, "south", "Minho")
@@ -1306,7 +1306,7 @@ SetWorldMapTileRiver(456, 147, "west", "Sado")
 SetWorldMapTileTerrain(456, 148, plains_id)
 SetWorldMapTileRiverhead(456, 148, "west", "Sado")
 SetWorldMapTileRiver(456, 148, "northwest", "Sado")
-AddWorldMapResource("gold", 456, 148, false) -- Iron deposits; Source: http://www.lib.utexas.edu/maps/europe/portugal_econ_1972.jpg
+AddWorldMapResource("copper", 456, 148, false) -- Iron deposits; Source: http://www.lib.utexas.edu/maps/europe/portugal_econ_1972.jpg
 SetWorldMapTileTerrain(456, 149, plains_id)
 SetWorldMapTileTerrain(456, 150, plains_id)
 SetWorldMapTileTerrain(456, 151, water_id)
@@ -1560,7 +1560,7 @@ SetWorldMapTileTerrain(460, 135, mountains_id)
 SetWorldMapTileTerrain(460, 136, mountains_id)
 SetWorldMapTileTerrain(460, 137, hills_id)
 SetWorldMapTileTerrain(460, 138, hills_id)
-AddWorldMapResource("gold", 460, 138, false) -- Iron deposits; Source: http://www.lib.utexas.edu/maps/europe/portugal_econ_1972.jpg
+AddWorldMapResource("copper", 460, 138, false) -- Iron deposits; Source: http://www.lib.utexas.edu/maps/europe/portugal_econ_1972.jpg
 SetWorldMapTileTerrain(460, 139, hills_id)
 SetWorldMapTileTerrain(460, 140, hills_id)
 SetWorldMapTileTerrain(460, 141, hills_id)
@@ -1576,7 +1576,7 @@ SetWorldMapTileRiver(460, 146, "north", "Guadiana")
 SetWorldMapTileTerrain(460, 147, hills_id)
 SetWorldMapTileTerrain(460, 148, plains_id)
 SetWorldMapTileTerrain(460, 149, plains_id)
-AddWorldMapResource("gold", 460, 149, false) -- Copper deposits; Source: http://www.lib.utexas.edu/maps/europe/spain_mineral_1974.jpg
+AddWorldMapResource("copper", 460, 149, false) -- Copper deposits; Source: http://www.lib.utexas.edu/maps/europe/spain_mineral_1974.jpg
 SetWorldMapTileTerrain(460, 150, water_id)
 SetWorldMapTileTerrain(460, 151, water_id)
 SetWorldMapTileTerrain(460, 152, water_id)
@@ -1626,7 +1626,7 @@ SetWorldMapTileTerrain(461, 132, hills_id)
 SetWorldMapTileTerrain(461, 133, mountains_id)
 SetWorldMapTileTerrain(461, 134, mountains_id)
 SetWorldMapTileTerrain(461, 135, hills_id)
-AddWorldMapResource("gold", 461, 135, false) -- Tin deposits in northwestern Iberia; Source: "Atlas de História Mundial", 2001, p. 41.
+AddWorldMapResource("copper", 461, 135, false) -- Tin deposits in northwestern Iberia; Source: "Atlas de História Mundial", 2001, p. 41.
 SetWorldMapTileTerrain(461, 136, mountains_id)
 SetWorldMapTileTerrain(461, 137, hills_id)
 SetWorldMapTileTerrain(461, 138, hills_id)
@@ -1646,7 +1646,7 @@ SetWorldMapTileRiver(461, 146, "north", "Guadiana")
 SetWorldMapTileTerrain(461, 147, hills_id)
 SetWorldMapTileTerrain(461, 148, plains_id)
 SetWorldMapTileTerrain(461, 149, plains_id)
-AddWorldMapResource("gold", 461, 149, false) -- Copper deposits; Source: http://www.lib.utexas.edu/maps/europe/spain_mineral_1974.jpg
+AddWorldMapResource("copper", 461, 149, false) -- Copper deposits; Source: http://www.lib.utexas.edu/maps/europe/spain_mineral_1974.jpg
 SetWorldMapTileTerrain(461, 150, plains_id)
 SetWorldMapTileTerrain(461, 151, water_id)
 SetWorldMapTileTerrain(461, 152, water_id)
@@ -1966,7 +1966,7 @@ SetWorldMapTileTerrain(466, 109, water_id)
 SetWorldMapTileTerrain(466, 110, water_id)
 SetWorldMapTileTerrain(466, 111, water_id)
 SetWorldMapTileTerrain(466, 112, plains_id)
-AddWorldMapResource("gold", 466, 112, false) -- Tin deposits in Cornwall; Source: "Atlas de História Mundial", 2001, p. 41.
+AddWorldMapResource("copper", 466, 112, false) -- Tin deposits in Cornwall; Source: "Atlas de História Mundial", 2001, p. 41.
 SetWorldMapTileTerrain(466, 113, water_id)
 SetWorldMapTileTerrain(466, 114, water_id)
 SetWorldMapTileTerrain(466, 115, water_id)
@@ -2645,7 +2645,7 @@ SetWorldMapTileTerrain(474, 146, hills_id)
 SetWorldMapTileTerrain(474, 147, mountains_id)
 SetWorldMapTileTerrain(474, 148, hills_id)
 SetWorldMapTileTerrain(474, 149, hills_id)
-AddWorldMapResource("gold", 474, 149, false) -- Copper deposits; Source: http://www.lib.utexas.edu/maps/europe/spain_mineral_1974.jpg
+AddWorldMapResource("copper", 474, 149, false) -- Copper deposits; Source: http://www.lib.utexas.edu/maps/europe/spain_mineral_1974.jpg
 SetWorldMapTileTerrain(474, 150, hills_id)
 SetWorldMapTileTerrain(474, 151, water_id)
 SetWorldMapTileTerrain(474, 152, water_id)
@@ -5790,7 +5790,7 @@ SetWorldMapTileTerrain(517, 110, plains_id)
 SetWorldMapTileTerrain(517, 111, hills_id)
 SetWorldMapTileTerrain(517, 112, mountains_id)
 SetWorldMapTileTerrain(517, 113, plains_id)
-AddWorldMapResource("gold", 517, 113, false) -- Tin deposits; Source: "Atlas de História Mundial", 2001, p. 41.
+AddWorldMapResource("copper", 517, 113, false) -- Tin deposits; Source: "Atlas de História Mundial", 2001, p. 41.
 SetWorldMapTileTerrain(517, 114, plains_id)
 SetWorldMapTileTerrain(517, 115, plains_id)
 SetWorldMapTileTerrain(517, 116, mountains_id)
@@ -12694,6 +12694,7 @@ for key, value in pairs(WorldMapProvinces) do
 	AddProvinceResource(WorldMapProvinces[key], "lumber", SyncRand(3))
 	AddProvinceResource(WorldMapProvinces[key], "stone", SyncRand(2))
 	AddProvinceResource(WorldMapProvinces[key], "gold", SyncRand(2))
+	AddProvinceResource(WorldMapProvinces[key], "silver", SyncRand(2))
 end
 
 MercenaryGroups = {
@@ -13126,9 +13127,9 @@ if (GrandStrategyYear >= -2000) then
 	-- Somogyvar-Vinkovci culture existed in Hungary around 2000 BC, and possessed wagons / wooden wheels; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 15.
 	-- early Wietenberg culture existed in Romania around 2000 BC, and possessed wagons / wooden wheels; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 15.
 	
-	SetWorldMapResourceProspected("gold", 466, 112, true) -- Tin deposits in Cornwall which were exploited in the 2nd millenium BC; Source: "Atlas de História Mundial", 2001, p. 41.
-	SetWorldMapResourceProspected("gold", 461, 135, true) -- Tin deposits in northwestern Iberia which were exploited in the 2nd millenium BC; Source: "Atlas de História Mundial", 2001, p. 41.
-	SetWorldMapResourceProspected("gold", 517, 113, true) -- Tin deposits which were exploited in the 2nd millenium BC; Source: "Atlas de História Mundial", 2001, p. 41.
+	SetWorldMapResourceProspected("copper", 466, 112, true) -- Tin deposits in Cornwall which were exploited in the 2nd millenium BC; Source: "Atlas de História Mundial", 2001, p. 41.
+	SetWorldMapResourceProspected("copper", 461, 135, true) -- Tin deposits in northwestern Iberia which were exploited in the 2nd millenium BC; Source: "Atlas de História Mundial", 2001, p. 41.
+	SetWorldMapResourceProspected("copper", 517, 113, true) -- Tin deposits which were exploited in the 2nd millenium BC; Source: "Atlas de História Mundial", 2001, p. 41.
 	
 	SetRegionPopulation("West and Central Europe", 10300000) -- Non-CIS Europe had a population of around 10.3 millions in 2000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
 	

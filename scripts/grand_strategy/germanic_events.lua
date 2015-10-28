@@ -219,7 +219,9 @@ local GermanicEvents = {
 				and (EventFaction.Name == "Asa Tribe" or EventFaction.Name == "Swede Tribe")
 				and GetProvinceOwner("Brandenburg") == EventFaction.Name
 				and GetProvinceUnitQuantity("Brandenburg", "unit-germanic-warrior") >= 6 -- event only happens if player has enough warriors to successfully attack the province
-				and ProvinceHasBorderWith(WorldMapProvinces.Brandenburg, WorldMapProvinces.Jutland)
+				and ProvinceHasBorderWith(WorldMapProvinces.Brandenburg, WorldMapProvinces.Mecklenburg)
+				and ProvinceHasBorderWith(WorldMapProvinces.Mecklenburg, WorldMapProvinces.Holstein)
+				and ProvinceHasBorderWith(WorldMapProvinces.Holstein, WorldMapProvinces.Jutland)
 				and GetProvinceOwner("Jutland") ~= EventFaction.Name
 				and (GetProvinceOwner("Jutland") == "" or GetFactionFromName(GetProvinceOwner("Jutland")).Civilization == "basque")
 --				and SyncRand(100) < 50

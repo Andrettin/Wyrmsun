@@ -125,7 +125,8 @@ DefineFaction("Etruria", {
 	Civilization = "etruscan",
 	Type = "polity",
 	Color = "yellow",
-	SecondaryColor = "yellow"
+	SecondaryColor = "yellow",
+	DefaultTier = "kingdom"
 })
 
 DefineFaction("Acthnic Tribe", {

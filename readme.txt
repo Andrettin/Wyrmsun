@@ -236,6 +236,8 @@ https://github.com/Andrettin/Wyrmsun
 - Made clearer what the numbers in the town hall interface represent.
 - Worked resource tiles now show how much they produce when being hovered over.
 - Fixed issue which caused the "OK" button to not appear in the Stables/Yale Pen interface.
+- Fixed issue with the "Northwards to the Sea" event which prevented it from triggering.
+- Added silver and copper resources to the grand strategy map.
 
 * Map Editor
 - Fixed issue which caused metal rocks placed with the editor to have 50000 of their resource stored by default, instead of 1000 as they should have.
