@@ -1380,13 +1380,13 @@ DefineIcon({
 DefineIcon({
 	Name = "icon-silver-rock",
 	Size = {46, 38},
-	File = "neutral/icons/gold_rock.png"
+	File = "neutral/icons/silver_rock.png"
 })
 
 DefineIcon({
 	Name = "icon-copper-rock",
 	Size = {46, 38},
-	File = "neutral/icons/gold_rock.png"
+	File = "neutral/icons/copper_rock.png"
 })
 
 DefineIcon({
