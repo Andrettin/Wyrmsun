@@ -329,9 +329,9 @@ function RunEditorSaveMenu()
 
   menu:resize(384, 256)
 
-  menu:addLabel("Save Game", 384 / 2, 11)
+  menu:addLabel("Save Map", 384 / 2, 11)
 
-  local t = menu:addTextInputField("game.smp",
+  local t = menu:addTextInputField("map.smp",
     (384 - 300 - 18) / 2, 11 + 36, 318)
 
   local browser = menu:addBrowser(MapDirectories[1], ".smp.gz$",
