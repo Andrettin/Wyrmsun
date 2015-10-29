@@ -329,14 +329,21 @@ function GenerateRandomWorldMap()
 		end
 	end
 
-	-- generate gold deposits
+	-- generate precious metal deposits
 	for i=1,(world_map_width * world_map_height / 128) do
 		for j=1,100 do
 			local RandomX = SyncRand(world_map_width)
 			local RandomY = SyncRand(world_map_height)
 			if (GetWorldMapTileTerrain(RandomX, RandomY) == "Hills" or GetWorldMapTileTerrain(RandomX, RandomY) == "Mountains") then
 				if (WorldMapTileHasResource(RandomX, RandomY, "any", true) == false and GetWorldMapTileProvinceName(RandomX, RandomY) == "") then -- requires no tile province to be assigned to avoid being on a settlement spot
-					AddWorldMapResource("gold", RandomX, RandomY, false)
+					local RandomNumber = SyncRand(3)
+					if (RandomNumber == 0) then
+						AddWorldMapResource("gold", RandomX, RandomY, false)
+					elseif (RandomNumber == 1) then
+						AddWorldMapResource("silver", RandomX, RandomY, false)
+					elseif (RandomNumber == 2) then
+						AddWorldMapResource("copper", RandomX, RandomY, false)
+					end
 					break
 				end
 			end
@@ -685,10 +692,10 @@ function AddProvinceResource(province, resource, quantity)
 	
 	while (quantity > 0) do
 		local random_tile = province.Tiles[SyncRand(table.getn(province.Tiles)) + 1]
-		local prospected = resource ~= "gold"
+		local prospected = resource ~= "gold" and resource ~= "silver" and resource ~= "copper"
 		if (
 			(
-				(resource == "gold" or resource == "stone")
+				(resource == "gold" or resource == "silver" or resource == "copper" or resource == "stone")
 				and (
 					GetWorldMapTileTerrain(random_tile[1], random_tile[2]) == "Hills"
 					or GetWorldMapTileTerrain(random_tile[1], random_tile[2]) == "Mountains"

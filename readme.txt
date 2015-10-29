@@ -225,6 +225,16 @@ https://github.com/Andrettin/Wyrmsun
 ############################################################
 
 -----------------------------------------------------------------------
+- 1.5.1
+-----------------------------------------------------------------------
+
+* Grand Strategy
+- Fixed grand strategy random map generation to produce silver and copper resources.
+
+* Miscellaneous
+- Maps are now saved directly as SMP and SMS files, instead of being saved within a compressed GZ file.
+
+-----------------------------------------------------------------------
 - 1.5.0
 -----------------------------------------------------------------------
 
