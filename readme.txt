@@ -228,6 +228,9 @@ https://github.com/Andrettin/Wyrmsun
 - 1.5.1
 -----------------------------------------------------------------------
 
+* Buildings
+- Updated dwarven Sentry Tower and Guard Tower icons.
+
 * Grand Strategy
 - Fixed grand strategy random map generation to produce silver and copper resources.
 

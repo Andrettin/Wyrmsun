@@ -658,6 +658,18 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-dwarven-sentry-tower",
+	Size = {46, 38},
+	File = "dwarf/icons/sentry_tower.png"
+})
+
+DefineIcon({
+	Name = "icon-dwarven-guard-tower",
+	Size = {46, 38},
+	File = "dwarf/icons/guard_tower.png"
+})
+
+DefineIcon({
 	Name = "icon-dwarven-axe-1",
 	Size = {46, 38},
 	File = "dwarf/icons/axe_1.png"
@@ -1459,18 +1471,6 @@ if (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "dungeon") then
 	})
 
 	DefineIcon({
-		Name = "icon-dwarven-sentry-tower",
-		Size = {46, 38},
-		File = "tilesets/swamp/dwarf/icons/sentry_tower.png"
-	})
-
-	DefineIcon({
-		Name = "icon-dwarven-guard-tower",
-		Size = {46, 38},
-		File = "tilesets/swamp/dwarf/icons/guard_tower.png"
-	})
-
-	DefineIcon({
 		Name = "icon-gnomish-caravan",
 		Size = {46, 38},
 		File = "tilesets/swamp/gnome/icons/gnomish_caravan.png"
@@ -1561,18 +1561,6 @@ elseif (wyrmsun.tileset == "conifer_forest_summer" or wyrmsun.tileset == "conife
 	})
 
 	DefineIcon({
-		Name = "icon-dwarven-sentry-tower",
-		Size = {46, 38},
-		File = "tilesets/forest/dwarf/icons/sentry_tower.png"
-	})
-
-	DefineIcon({
-		Name = "icon-dwarven-guard-tower",
-		Size = {46, 38},
-		File = "tilesets/forest/dwarf/icons/guard_tower.png"
-	})
-
-	DefineIcon({
 		Name = "icon-gnomish-caravan",
 		Size = {46, 38},
 		File = "tilesets/forest/gnome/icons/gnomish_caravan.png"
@@ -1660,18 +1648,6 @@ else
 		Name = "icon-dwarven-lumber-mill",
 		Size = {46, 38},
 		File = "tilesets/swamp/dwarf/icons/lumber_mill.png"
-	})
-
-	DefineIcon({
-		Name = "icon-dwarven-sentry-tower",
-		Size = {46, 38},
-		File = "tilesets/swamp/dwarf/icons/sentry_tower.png"
-	})
-
-	DefineIcon({
-		Name = "icon-dwarven-guard-tower",
-		Size = {46, 38},
-		File = "tilesets/swamp/dwarf/icons/guard_tower.png"
 	})
 
 	DefineIcon({

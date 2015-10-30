@@ -992,10 +992,6 @@ Jim16:
 /graphics/neutral/buildings/runestone.png (later modified by Nikita_Sadkov)
 
 KPJ:
-/graphics/neutral/buildings/silver_rock_1.png
-/graphics/neutral/buildings/silver_rock_2.png
-/graphics/neutral/buildings/silver_rock_3.png
-/graphics/neutral/buildings/silver_rock_4.png
 /graphics/ui/fonts/KPJsWyrmSunFont.png
 
 Leo:
