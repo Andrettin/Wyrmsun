@@ -235,13 +235,13 @@ function RunJoiningMapMenu(s)
   menu:run()
 end
 
-function RunJoiningGameMenu(s)
+function RunJoiningGameMenu(server_address, s)
   local menu = WarMenu(nil, panel(4), false)
   menu:setSize(288, 128)
   menu:setPosition((Video.Width - 288) / 2, (Video.Height - 128) / 2)
   menu:setDrawMenusUnder(true)
 
-  menu:addLabel("Connecting to server", 144, 11)
+  menu:addLabel("Connecting to " .. server_address, 144, 11)
 
   local percent = 0
 
@@ -291,32 +291,32 @@ function RunJoiningGameMenu(s)
 end
 
 function RunJoinIpMenu()
-  local menu = WarMenu(nil, panel(4), false)
-  menu:setSize(288, 128)
-  menu:setPosition((Video.Width - 288) / 2, (Video.Height - 128) / 2)
-  menu:setDrawMenusUnder(true)
+	local menu = WarMenu(nil, panel(4), false)
+	menu:setSize(288, 128)
+	menu:setPosition((Video.Width - 288) / 2, (Video.Height - 128) / 2)
+	menu:setDrawMenusUnder(true)
 
-  menu:addLabel("Enter server IP-address:", 144, 11)
-  local server = menu:addTextInputField("localhost", 40, 38, 212)
+	menu:addLabel("Enter server IP-address:", 144, 11)
+	local server = menu:addTextInputField("localhost", 40, 38, 212)
 
-  menu:addHalfButton("~!OK", "o", 24, 80,
-    function(s)
-      -- FIXME: allow port ("localhost:1234")
-      if (NetworkSetupServerAddress(server:getText()) ~= 0) then
-        ErrorMenu("Invalid server name")
-        return
-      end
-      NetworkInitClientConnect()
-      if (RunJoiningGameMenu() ~= 0) then
-        -- connect failed, don't leave this menu
-        return
-      end
-      menu:stop()
-    end
-  )
-  menu:addHalfButton(_("~!Cancel"), "c", 154, 80, function() menu:stop() end)
+	menu:addHalfButton("~!OK", "o", 24, 80,
+		function(s)
+			-- FIXME: allow port ("localhost:1234")
+			if (NetworkSetupServerAddress(server:getText()) ~= 0) then
+				ErrorMenu("Invalid address")
+				return
+			end
+			NetworkInitClientConnect()
+			if (RunJoiningGameMenu(server:getText()) ~= 0) then
+				-- connect failed, don't leave this menu
+				return
+			end
+			menu:stop()
+		end
+	)
+	menu:addHalfButton(_("~!Cancel"), "c", 154, 80, function() menu:stop() end)
 
-  menu:run()
+	menu:run()
 end
 
 function RunServerMultiGameMenu(map, description, numplayers)

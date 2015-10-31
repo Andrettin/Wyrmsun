@@ -236,6 +236,11 @@ https://github.com/Andrettin/Wyrmsun
 
 * Miscellaneous
 - Maps are now saved directly as SMP and SMS files, instead of being saved within a compressed GZ file.
+- Fixed a bug which caused a health bar to be shown for decoration units.
+
+* Multiplayer
+- Fix to IP address validation code (to prevent the game from repeatedly trying to connect to an invalid IP address).
+- The IP address to which the player is trying to connect is now shown while in the "Connecting..." panel.
 
 -----------------------------------------------------------------------
 - 1.5.0
