@@ -172,12 +172,26 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 	},
 	ShieldAnimation = {
 		{
+			"frame", 3,
+			"overlay-frame", 3
+		},
+		{
 			"frame", 4,
 			"overlay-frame", 4
 		},
 		{
+			"frame", 8,
+			"overlay-frame", 8
+		},
+		{
 			"frame", 9,
 			"overlay-frame", 9
+		},
+		{
+			"frame", 13,
+			"overlay-frame", 8,
+			"x-offset", 2,
+			"y-offset", -1
 		},
 		{
 			"frame", 14,
@@ -186,10 +200,24 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 			"y-offset", 1
 		},
 		{
+			"frame", 18,
+			"overlay-frame", 18
+		},
+		{
 			"frame", 19,
 			"overlay-frame", 4,
 			"x-offset", -2,
 			"y-offset", 1
+		},
+		{
+			"frame", 22,
+			"overlay-frame", 8,
+			"x-offset", -1,
+			"y-offset", -2
+		},
+		{
+			"frame", 23,
+			"overlay-frame", 23
 		},
 		{
 			"frame", 24,
@@ -198,8 +226,23 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 			"y-offset", 1
 		},
 		{
+			"frame", 28,
+			"overlay-frame", 3
+		},
+		{
 			"frame", 29,
 			"overlay-frame", 4
+		},
+		{
+			"frame", 32,
+			"overlay-frame", 3,
+			"x-offset", -1,
+			"y-offset", -2
+		},
+		{
+			"frame", 33,
+			"overlay-frame", 3,
+			"x-offset", 3
 		},
 		{
 			"frame", 34,
@@ -208,9 +251,21 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 			"y-offset", -2
 		},
 		{
+			"frame", 38,
+			"overlay-frame", 8,
+			"x-offset", 6,
+			"y-offset", -1
+		},
+		{
 			"frame", 39,
 			"overlay-frame", 4,
 			"x-offset", -2
+		},
+		{
+			"frame", 43,
+			"overlay-frame", 8,
+			"x-offset", 5,
+			"y-offset", -1
 		},
 		{
 			"frame", 44,
@@ -218,9 +273,38 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 			"y-offset", 1
 		},
 		{
+			"frame", 48,
+			"overlay-frame", 8,
+			"x-offset", 3
+		},
+		{
 			"frame", 49,
 			"overlay-frame", 9,
 			"y-offset", 4
+		},
+		{
+			"frame", 53,
+			"overlay-frame", 53
+		},
+		{
+			"frame", 54,
+			"overlay-frame", 53
+		},
+		{
+			"frame", 58,
+			"overlay-frame", 58
+		},
+		{
+			"frame", 59,
+			"overlay-frame", 58
+		},
+		{
+			"frame", 63,
+			"overlay-frame", 63
+		},
+		{
+			"frame", 64,
+			"overlay-frame", 63
 		}
 	},
 	Sounds = {
