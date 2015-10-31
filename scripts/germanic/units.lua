@@ -170,6 +170,59 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 			"upgrade-forbidden", "upgrade-old"
 		}
 	},
+	ShieldAnimation = {
+		{
+			"frame", 4,
+			"overlay-frame", 4
+		},
+		{
+			"frame", 9,
+			"overlay-frame", 9
+		},
+		{
+			"frame", 14,
+			"overlay-frame", 9,
+			"x-offset", -1,
+			"y-offset", 1
+		},
+		{
+			"frame", 19,
+			"overlay-frame", 4,
+			"x-offset", -2,
+			"y-offset", 1
+		},
+		{
+			"frame", 24,
+			"overlay-frame", 4,
+			"x-offset", -1,
+			"y-offset", 1
+		},
+		{
+			"frame", 29,
+			"overlay-frame", 4
+		},
+		{
+			"frame", 34,
+			"overlay-frame", 4,
+			"x-offset", 4,
+			"y-offset", -2
+		},
+		{
+			"frame", 39,
+			"overlay-frame", 4,
+			"x-offset", -2
+		},
+		{
+			"frame", 44,
+			"overlay-frame", 4,
+			"y-offset", 1
+		},
+		{
+			"frame", 49,
+			"overlay-frame", 9,
+			"y-offset", 4
+		}
+	},
 	Sounds = {
 		"selected", "basic-germanic-voices-selected-group",
 		"acknowledge", "basic-germanic-voices-acknowledge",
