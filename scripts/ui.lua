@@ -27,10 +27,8 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-local ui_loaded_first_time
-
 if not (ui_loaded_first_time) then
-	ui_loaded_first_time = false
+	local ui_loaded_first_time = false
 end
 
 if not (ui_loaded_first_time) then
