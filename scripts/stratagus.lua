@@ -1495,7 +1495,7 @@ end
 
 function GetFactionPlayer(faction)
 	for i=0,14 do
-		if (GetPlayerData(i, "Name") == faction) then
+		if (Players[i].Type ~= PlayerNobody and GetPlayerData(i, "Name") == faction) then
 			return i
 		end
 	end

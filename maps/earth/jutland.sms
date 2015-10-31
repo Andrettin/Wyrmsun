@@ -165,57 +165,29 @@ SetPlayerData(4, "Resources", "lumber", 2500)
 SetPlayerData(4, "Resources", "stone", 1250)
 SetPlayerData(4, "Resources", "oil", 0)
 SetPlayerData(4, "RaceName", "germanic")
-SetPlayerData(4, "Faction", "Asa Tribe")
 SetAiType(4, "land-attack")
 SetPlayerData(15, "RaceName", "neutral")
 
 ApplyRawTiles()
 
-if (GrandStrategy == false) then
-	if (MaxTechLevel[GetThisPlayer() + 1] == "") then
-		for i=0,15 do
-			if (MaxTechLevel[i + 1] == "" and i ~= GetThisPlayer()) then
-				MaxTechLevel[i + 1] = "Agrarian (Bronze)"
-			end
-		end
-	end
+unit = CreateUnit("unit-germanic-worker", 1, {27, 44})
+unit = CreateUnit("unit-germanic-warrior", 1, {27, 44})
+unit = CreateUnit("unit-germanic-warrior", 1, {27, 44})
+unit = CreateUnit("unit-germanic-warrior", 1, {27, 44})
 
-	-- unit = CreateUnit("unit-germanic-town-hall", 0, {25, 88}) -- saxon town hall
-
-	unit = CreateUnit("unit-germanic-worker", 1, {27, 44})
-	unit = CreateUnit("unit-germanic-warrior", 1, {27, 44})
-	unit = CreateUnit("unit-germanic-warrior", 1, {27, 44})
-	unit = CreateUnit("unit-germanic-warrior", 1, {27, 44})
-
-	unit = CreateUnit("unit-germanic-worker", 4, {44, 85})
-	unit = CreateUnit("unit-germanic-worker", 4, {44, 85})
-	unit = CreateUnit("unit-germanic-worker", 4, {44, 85})
-	unit = CreateUnit("unit-germanic-worker", 4, {44, 85})
-	unit = CreateUnit("unit-germanic-worker", 4, {44, 85})
-	unit = CreateUnit("unit-germanic-warrior", 4, {44, 85})
-	unit = CreateUnit("unit-germanic-warrior", 4, {44, 85})
-	unit = CreateUnit("unit-germanic-archer", 4, {44, 85})
+unit = CreateUnit("unit-germanic-worker", 4, {44, 85})
+unit = CreateUnit("unit-germanic-worker", 4, {44, 85})
+unit = CreateUnit("unit-germanic-worker", 4, {44, 85})
+unit = CreateUnit("unit-germanic-worker", 4, {44, 85})
+unit = CreateUnit("unit-germanic-worker", 4, {44, 85})
+unit = CreateUnit("unit-germanic-warrior", 4, {44, 85})
+unit = CreateUnit("unit-germanic-warrior", 4, {44, 85})
+unit = CreateUnit("unit-germanic-archer", 4, {44, 85})
 	
-	-- create a raft in the nearest coast tile to the native settlement
-	local nearest_coast = FindNearestTerrainFlagTile("coast", Players[1].StartPos.x, Players[1].StartPos.y)
-	if (nearest_coast ~= nil) then
-		unit = CreateUnit("unit-raft", 15, nearest_coast)
-	end
-elseif (GrandStrategyEventMap) then
-	SetAiType(1, "grand-strategy-battle")
-	SetAiType(4, "grand-strategy-battle")
-	
-	-- Asa units
-	CreateProvinceUnits("Brandenburg", 4)
-	
-	-- native units
-	CreateProvinceUnits("Jutland", 1)
-	
-	-- create a raft in the nearest coast tile to the native settlement
-	local nearest_coast = FindNearestTerrainFlagTile("coast", Players[1].StartPos.x, Players[1].StartPos.y)
-	if (nearest_coast ~= nil) then
-		unit = CreateUnit("unit-raft", 15, nearest_coast)
-	end
+-- create a raft in the nearest coast tile to the native settlement
+local nearest_coast = FindNearestTerrainFlagTile("coast", Players[1].StartPos.x, Players[1].StartPos.y)
+if (nearest_coast ~= nil) then
+	unit = CreateUnit("unit-raft", 15, nearest_coast)
 end
 
 CreateCritters((Map.Info.MapWidth * Map.Info.MapHeight) / 512)

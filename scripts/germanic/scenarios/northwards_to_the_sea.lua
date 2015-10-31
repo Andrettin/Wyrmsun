@@ -28,6 +28,7 @@
 --
 
 if (LoadedGame == false) then
+	SetPlayerData(4, "Faction", "Asa Tribe")
 	SetPlayerData(4, "Allow", "upgrade-teuton-civilization", "F")
 	SetPlayerData(1, "Allow", "upgrade-germanic-bronze-shield", "F")
 	SetPlayerData(1, "Allow", "upgrade-germanic-broad-sword", "F")
@@ -36,6 +37,14 @@ if (LoadedGame == false) then
 		SetPlayerData(1, "Faction", "Ertebolle Tribe")
 	else
 		SetPlayerData(1, "Faction", GetProvinceOwner("Jutland"))
+	end
+	
+	if (GrandStrategyEventMap) then
+		-- Asa units
+		CreateProvinceUnits("Brandenburg", 4)
+		
+		-- native units
+		CreateProvinceUnits("Jutland", 1)
 	end
 end
 

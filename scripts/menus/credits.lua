@@ -208,6 +208,7 @@ function RunShowCreditsMenu()
 	"  Jeff",
 	"  João Victor G. Costa (Jinn)",
 	"  KPJ",
+	"  KroArtem",
 	"  Kyran",
 	"  Leo",
 	"  Little Luigi",
