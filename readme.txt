@@ -228,6 +228,9 @@ https://github.com/Andrettin/Wyrmsun
 - 1.5.2
 -----------------------------------------------------------------------
 
+* Miscellaneous
+- Fixed bug which caused a crash when changing the resolution from within a scenario, if the game had to draw a health bar.
+
 -----------------------------------------------------------------------
 - 1.5.1
 -----------------------------------------------------------------------
