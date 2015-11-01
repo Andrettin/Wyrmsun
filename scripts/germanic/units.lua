@@ -379,7 +379,9 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 		},
 		{
 			"frame", 40,
-			"overlay-frame", 40
+			"overlay-frame", 0,
+			"x-offset", -1,
+			"y-offset", -1
 		},
 		{
 			"frame", 41,
