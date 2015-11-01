@@ -172,6 +172,20 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 	},
 	ShieldAnimation = {
 		{
+			"frame", 0,
+			"overlay-frame", 0
+		},
+		{
+			"frame", 1,
+			"overlay-frame", 2,
+			"x-offset", -6,
+			"y-offset", -4
+		},
+		{
+			"frame", 2,
+			"overlay-frame", 2
+		},
+		{
 			"frame", 3,
 			"overlay-frame", 3
 		},
@@ -180,23 +194,71 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 			"overlay-frame", 4
 		},
 		{
+			"frame", 5,
+			"overlay-frame", 5
+		},
+		{
+			"frame", 6,
+			"overlay-frame", 6
+		},
+		{
+			"frame", 7,
+			"overlay-frame", 2,
+			"x-offset", -3,
+			"y-offset", -1
+		},
+		{
 			"frame", 8,
-			"overlay-frame", 8
+			"overlay-frame", 2,
+			"x-offset", -2,
+			"y-offset", 1
 		},
 		{
 			"frame", 9,
 			"overlay-frame", 9
 		},
 		{
-			"frame", 13,
-			"overlay-frame", 8,
-			"x-offset", 2,
+			"frame", 10,
+			"overlay-frame", 11,
+			"x-offset", -1,
+			"y-offset", 6
+		},
+		{
+			"frame", 11,
+			"overlay-frame", 11
+		},
+		{
+			"frame", 12,
+			"overlay-frame", 2,
+			"x-offset", -1,
 			"y-offset", -1
+		},
+		{
+			"frame", 13,
+			"overlay-frame", 2
 		},
 		{
 			"frame", 14,
 			"overlay-frame", 9,
 			"x-offset", -1,
+			"y-offset", 1
+		},
+		{
+			"frame", 15,
+			"overlay-frame", 0,
+			"x-offset", 1,
+			"y-offset", -3
+		},
+		{
+			"frame", 16,
+			"overlay-frame", 2,
+			"x-offset", -5,
+			"y-offset", -6
+		},
+		{
+			"frame", 17,
+			"overlay-frame", 3,
+			"x-offset", -2,
 			"y-offset", 1
 		},
 		{
@@ -210,10 +272,21 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 			"y-offset", 1
 		},
 		{
-			"frame", 22,
-			"overlay-frame", 8,
-			"x-offset", -1,
+			"frame", 20,
+			"overlay-frame", 0,
 			"y-offset", -2
+		},
+		{
+			"frame", 21,
+			"overlay-frame", 2,
+			"x-offset", -4,
+			"y-offset", -6
+		},
+		{
+			"frame", 22,
+			"overlay-frame", 2,
+			"x-offset", 2,
+			"y-offset", -1
 		},
 		{
 			"frame", 23,
@@ -226,12 +299,38 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 			"y-offset", 1
 		},
 		{
+			"frame", 25,
+			"overlay-frame", 0
+		},
+		{
+			"frame", 26,
+			"overlay-frame", 2,
+			"x-offset", -6,
+			"y-offset", -4
+		},
+		{
+			"frame", 27,
+			"overlay-frame", 2
+		},
+		{
 			"frame", 28,
 			"overlay-frame", 3
 		},
 		{
 			"frame", 29,
 			"overlay-frame", 4
+		},
+		{
+			"frame", 30,
+			"overlay-frame", 0,
+			"x-offset", 2,
+			"y-offset", -3
+		},
+		{
+			"frame", 31,
+			"overlay-frame", 2,
+			"x-offset", -4,
+			"y-offset", -7
 		},
 		{
 			"frame", 32,
@@ -251,10 +350,26 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 			"y-offset", -2
 		},
 		{
+			"frame", 35,
+			"overlay-frame", 0,
+			"y-offset", -2
+		},
+		{
+			"frame", 36,
+			"overlay-frame", 2,
+			"x-offset", -5,
+			"y-offset", -6
+		},
+		{
+			"frame", 37,
+			"overlay-frame", 2,
+			"x-offset", 4,
+			"y-offset", -3
+		},
+		{
 			"frame", 38,
-			"overlay-frame", 8,
-			"x-offset", 6,
-			"y-offset", -1
+			"overlay-frame", 2,
+			"x-offset", 4
 		},
 		{
 			"frame", 39,
@@ -262,10 +377,25 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 			"x-offset", -2
 		},
 		{
+			"frame", 40,
+			"overlay-frame", 40
+		},
+		{
+			"frame", 41,
+			"overlay-frame", 11,
+			"x-offset", 2,
+			"y-offset", -2
+		},
+		{
+			"frame", 42,
+			"overlay-frame", 2,
+			"x-offset", 3,
+			"y-offset", -2
+		},
+		{
 			"frame", 43,
-			"overlay-frame", 8,
-			"x-offset", 5,
-			"y-offset", -1
+			"overlay-frame", 2,
+			"x-offset", 3
 		},
 		{
 			"frame", 44,
@@ -273,14 +403,44 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 			"y-offset", 1
 		},
 		{
+			"frame", 45,
+			"overlay-frame", 6,
+			"x-offset", -1,
+			"y-offset", 3
+		},
+		{
+			"frame", 46,
+			"overlay-frame", 6,
+			"x-offset", 2,
+			"y-offset", -2
+		},
+		{
+			"frame", 47,
+			"overlay-frame", 2,
+			"x-offset", 2
+		},
+		{
 			"frame", 48,
-			"overlay-frame", 8,
-			"x-offset", 3
+			"overlay-frame", 2,
+			"x-offset", 1,
+			"y-offset", 1
 		},
 		{
 			"frame", 49,
 			"overlay-frame", 9,
 			"y-offset", 4
+		},
+		{
+			"frame", 50,
+			"overlay-frame", 51
+		},
+		{
+			"frame", 51,
+			"overlay-frame", 51
+		},
+		{
+			"frame", 52,
+			"overlay-frame", 51
 		},
 		{
 			"frame", 53,
@@ -291,12 +451,36 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 			"overlay-frame", 53
 		},
 		{
+			"frame", 55,
+			"overlay-frame", 56
+		},
+		{
+			"frame", 56,
+			"overlay-frame", 56
+		},
+		{
+			"frame", 57,
+			"overlay-frame", 56
+		},
+		{
 			"frame", 58,
 			"overlay-frame", 58
 		},
 		{
 			"frame", 59,
 			"overlay-frame", 58
+		},
+		{
+			"frame", 60,
+			"overlay-frame", 61
+		},
+		{
+			"frame", 61,
+			"overlay-frame", 61
+		},
+		{
+			"frame", 62,
+			"overlay-frame", 61
 		},
 		{
 			"frame", 63,
