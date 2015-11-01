@@ -210,8 +210,8 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 		{
 			"frame", 8,
 			"overlay-frame", 2,
-			"x-offset", -2,
-			"y-offset", 1
+			"x-offset", 2,
+			"y-offset", -1
 		},
 		{
 			"frame", 9,
@@ -235,7 +235,9 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 		},
 		{
 			"frame", 13,
-			"overlay-frame", 2
+			"overlay-frame", 2,
+			"x-offset", 4,
+			"y-offset", -2
 		},
 		{
 			"frame", 14,
@@ -369,7 +371,8 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 		{
 			"frame", 38,
 			"overlay-frame", 2,
-			"x-offset", 4
+			"x-offset", 8,
+			"y-offset", -2
 		},
 		{
 			"frame", 39,
@@ -395,7 +398,8 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 		{
 			"frame", 43,
 			"overlay-frame", 2,
-			"x-offset", 3
+			"x-offset", 7,
+			"y-offset", -2
 		},
 		{
 			"frame", 44,
@@ -422,8 +426,8 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 		{
 			"frame", 48,
 			"overlay-frame", 2,
-			"x-offset", 1,
-			"y-offset", 1
+			"x-offset", 5,
+			"y-offset", -1
 		},
 		{
 			"frame", 49,
