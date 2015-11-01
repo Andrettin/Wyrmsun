@@ -154,7 +154,7 @@ function HandleCheats(str)
 	}
 	for i, unitName in ipairs(bronze_upgrades) do
 		for j=0,15 do
-			if (CUpgrade:Get(unitName).Civilization == GetPlayerData(j, "RaceName")) then
+			if (unitName == GetCivilizationClassUnitType(CUpgrade:Get(unitName).Class, GetPlayerData(j, "RaceName"))) then
 				SetPlayerData(j, "Allow", unitName, "R")
 			end
 		end
