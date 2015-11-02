@@ -1146,11 +1146,13 @@ function RunSinglePlayerCustomGameMenu()
 		GetMapInfo(maps[i])
 		if (MapWorld == world_list[world:getSelected() + 1] or (MapWorld == "" and world_list[world:getSelected() + 1] == "Custom")) then
 			if (MapRequiredQuest == "" or GetArrayIncludes(wyr.preferences.QuestsCompleted, MapRequiredQuest)) then
-				local map_description = _(mapinfo.description)
-				if (map_description == "") then
-					map_description = string.gsub(string.gsub(maps[i], ".smp", ""), "(.*)/", "")
+				if (mapinfo.npersonplayers > 0) then
+					local map_description = _(mapinfo.description)
+					if (map_description == "") then
+						map_description = string.gsub(string.gsub(maps[i], ".smp", ""), "(.*)/", "")
+					end
+					table.insert(scenario_list, map_description)
 				end
-				table.insert(scenario_list, map_description)
 			end
 		end
 	end

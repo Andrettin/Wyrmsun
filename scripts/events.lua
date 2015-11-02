@@ -677,3 +677,61 @@ function Tip(tip_name, tip_description)
 		menu:run()
 	end
 end
+
+function GenericDialog(title, message, tooltip)
+	if (GameRunning and not IsNetworkGame()) then
+		SetGamePaused(true)
+	elseif (GrandStrategy) then
+		GrandStrategyGamePaused = true
+	end
+	
+	local menu
+	
+	if (GrandStrategy == false) then
+		menu = WarGameMenu(panel(1))
+	else
+		menu = WarGrandStrategyGameMenu(panel(1))
+		menu:setDrawMenusUnder(true)
+	end
+
+	menu:addLabel(_(title), 128, 11)
+
+	local l = MultiLineLabel()
+	l:setFont(Fonts["game"])
+	l:setSize(228, 256)
+	l:setLineWidth(228)
+	menu:add(l, 14, 35)
+	l:setCaption(_(message))
+
+	local ok_button = menu:addFullButton("~!OK", "o", 16, 248 - (36 * 0),
+		function()
+			if (GameRunning and not IsNetworkGame()) then
+				SetGamePaused(false)
+			elseif (GrandStrategy) then
+				GrandStrategyGamePaused = false
+			end
+			menu:stop()
+		end
+	)
+	if (tooltip) then
+		ok_button:setTooltip(_(tooltip))
+	end
+	
+	menu:addButton("", "return", -1, -1,
+		function()
+			if (GameRunning and not IsNetworkGame()) then
+				SetGamePaused(false)
+			elseif (GrandStrategy) then
+				GrandStrategyGamePaused = false
+			end
+			menu:stop()
+		end,
+		{0, 0}
+	)	
+	
+	if (GrandStrategy == false) then
+		menu:run(false)
+	else
+		menu:run()
+	end
+end

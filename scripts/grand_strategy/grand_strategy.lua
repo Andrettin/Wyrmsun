@@ -847,7 +847,7 @@ function AttackProvince(province, faction)
 			battle_report_message = "My lord, the province of " .. GetProvinceName(AttackedProvince) .. " has risen in rebellion, resulting in the declaration of independence of the " .. GetFactionFullName(GetFactionFromName(Attacker).Civilization, Attacker) .. "!"
 		end
 		battle_report_message = battle_report_message .. "\n\nUnits Lost: " .. units_lost_string
-		GrandStrategyDialog(battle_report_title, battle_report_message)
+		GenericDialog(battle_report_title, battle_report_message)
 	end
 	
 	Attacker = ""
@@ -4429,38 +4429,6 @@ function ChangeProvinceOwner(province, faction) -- used to change the owner and 
 	else
 		SetProvinceOwner(province.Name, "", "")
 	end
-end
-
-function GrandStrategyDialog(title, message, tooltip)
-	GrandStrategyGamePaused = true
-	local menu = WarGrandStrategyGameMenu(panel(1))
-	menu:setDrawMenusUnder(true)
-
-	menu:addLabel(title, 128, 11)
-
-	local l = MultiLineLabel()
-	l:setFont(Fonts["game"])
-	l:setSize(228, 256)
-	l:setLineWidth(228)
-	menu:add(l, 14, 35)
-	l:setCaption(message)
-	local ok_button = menu:addFullButton("~!OK", "o", 16, 248 - (36 * 0),
-		function()
-			GrandStrategyGamePaused = false
-			menu:stop()
-		end
-	)
-	if (tooltip) then
-		ok_button:setTooltip(_(tooltip))
-	end
-	menu:addButton("", "return", -1, -1, -- allow enter to be used as a way to close the battle dialog
-		function()
-			GrandStrategyGamePaused = false
-			menu:stop()
-		end,
-		{0, 0}
-	)
-	menu:run()
 end
 
 function GetUnitTypeNamePluralForm(unit_type)

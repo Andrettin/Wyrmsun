@@ -325,6 +325,18 @@ end
 --  Save map from the editor
 --
 function RunEditorSaveMenu()
+	local map_has_person_player = false
+	for i = 0, 14 do
+		if (Map.Info.PlayerType[i] == 5) then
+			map_has_person_player = true
+			break
+		end
+	end
+	if not (map_has_person_player) then
+		GenericDialog ("Error", "A map needs to have at least one person player.")
+		return
+	end
+	
 	local menu = WarGameMenu(panel(3))
 
 	menu:resize(384, 256)

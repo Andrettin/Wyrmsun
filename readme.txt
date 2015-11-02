@@ -234,8 +234,12 @@ https://github.com/Andrettin/Wyrmsun
 * Grand Strategy
 - Added a new event, "Skjold's Domain", in which the southern lands of the Asa Tribe are given to the Skjoldung Tribe.
 
+* Map Editor
+- The editor now gives an error message when trying to save a map without any person player.
+
 * Miscellaneous
 - Fixed bug which caused a crash when changing the resolution from within a scenario, if the game had to draw a health bar.
+- Maps with no person players are no longer selectable in the map dropdown.
 
 -----------------------------------------------------------------------
 - 1.5.1

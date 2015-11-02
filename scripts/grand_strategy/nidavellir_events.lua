@@ -139,7 +139,7 @@ local NidavellirEvents = {
 					ChangeFactionResource("dwarf", "Modsogning Clan", "stone", 200) -- stone gained from the mission
 					if (GrandStrategyFaction.Name == EventFaction.Name) then
 						CenterGrandStrategyMapOnTile(WorldMapProvinces.Svarinshaug.SettlementLocation[1], WorldMapProvinces.Svarinshaug.SettlementLocation[2])
-						GrandStrategyDialog("A Rocky Home", "We have successfully hunted enough yales and gathered enough lumber and stone to survive our early days in Svarinshaug.")
+						GenericDialog("A Rocky Home", "We have successfully hunted enough yales and gathered enough lumber and stone to survive our early days in Svarinshaug.")
 					end
 				end
 			end
@@ -196,7 +196,7 @@ local NidavellirEvents = {
 				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "Modsogning Clan" or wyr.preferences.AutomaticBattles)) then
 					ChangeFactionResource("dwarf", "Modsogning Clan", "prestige", 10) -- prestige for punishing the evil doers and recovering the sage's remains
 					if (GrandStrategyFaction.Name == EventFaction.Name) then
-						GrandStrategyDialog("The Mead of Wisdom", "Fjalar and Galar had brewn Thjodrorir's remains into mead, gloating that drink it had made them wiser. Durin survived the encounter with them, and brought the mead to be buried in Thjodrorir's tomb.")
+						GenericDialog("The Mead of Wisdom", "Fjalar and Galar had brewn Thjodrorir's remains into mead, gloating that drink it had made them wiser. Durin survived the encounter with them, and brought the mead to be buried in Thjodrorir's tomb.")
 					end
 				end
 			end,
@@ -253,7 +253,7 @@ local NidavellirEvents = {
 					ChangeFactionResource("dwarf", "Modsogning Clan", "prestige", 30) -- prestige for obtaining the wondrous artifacts
 					ChangeFactionResource("dwarf", "Modsogning Clan", "gold", 1000) -- gold value of Draupnir
 					if (GrandStrategyFaction.Name == EventFaction.Name) then
-						GrandStrategyDialog("The Treasures of Svarinshaug", "Having gathered the necessary resources, Brokk and Eitri crafted their gifts for Modsognir. The sons of Ivaldi had presented the chieftain with a magnificent throwing spear, Gungnir, and a sleek ship, Skidbladnir. But Modsognir judged Brokk and Eitri's artifacts to be the better ones: they gave him a solid gold arm-ring, Draupnir, and a mighty hammer, Mjollnir.")
+						GenericDialog("The Treasures of Svarinshaug", "Having gathered the necessary resources, Brokk and Eitri crafted their gifts for Modsognir. The sons of Ivaldi had presented the chieftain with a magnificent throwing spear, Gungnir, and a sleek ship, Skidbladnir. But Modsognir judged Brokk and Eitri's artifacts to be the better ones: they gave him a solid gold arm-ring, Draupnir, and a mighty hammer, Mjollnir.")
 					end
 				end
 			end
@@ -325,7 +325,7 @@ local NidavellirEvents = {
 					SetProvinceUnitQuantity("Aurvang", "unit-goblin-archer", 3)
 					
 					if (GrandStrategyFaction.Name == EventFaction.Name) then
-						GrandStrategyDialog("The Necklace of the Brisings", "After rooting out the bandits in Aurvang, Modsognir recovered the necklace.")
+						GenericDialog("The Necklace of the Brisings", "After rooting out the bandits in Aurvang, Modsognir recovered the necklace.")
 					end
 				end
 			end
@@ -384,7 +384,7 @@ local NidavellirEvents = {
 				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "Modsogning Clan" or wyr.preferences.AutomaticBattles)) then
 					ChangeFactionResource("dwarf", "Modsogning Clan", "prestige", 25) -- prestige for chaining the beast
 					if (GrandStrategyFaction.Name == EventFaction.Name) then
-						GrandStrategyDialog("The Binding of Grafvitnir", "Modsognir successfully entered Grafvitnir's lair and chained the beast. With much effort, the enormous Grafvitnir was brought to Svarinshaug by the dwarves. The monster's fetters were bound to the walls of a nearby cave, and the entrance destroyed. Little is known of what ultimately became of the wyrm. What is certain is that the creature never bothered our clan again.")
+						GenericDialog("The Binding of Grafvitnir", "Modsognir successfully entered Grafvitnir's lair and chained the beast. With much effort, the enormous Grafvitnir was brought to Svarinshaug by the dwarves. The monster's fetters were bound to the walls of a nearby cave, and the entrance destroyed. Little is known of what ultimately became of the wyrm. What is certain is that the creature never bothered our clan again.")
 					end
 				end
 			end
@@ -717,7 +717,7 @@ local NidavellirEvents = {
 				ChangeProvinceUnitQuantity("Southern Tunnels", "unit-dwarven-steelclad", -1)
 			end
 			if (GrandStrategyFaction.Name == "Norlund Clan" and wyr.preferences.AutomaticBattles) then
-				GrandStrategyDialog("A Bargain is Struck", "Pypo I has proposed to Rugnur that our clan craft a wondrous scepter for him, encrusted with the gnomish Ruby of Fire. Rugnur agreed for the price of 10,000 pieces of silver, half to be paid upfront, and half when the artifact were completed. The Shinsplitter Clan tried to intercept the silver caravans and the gnomish envoy who carried the ruby, but Rugnur made sure they arrived at the outpost safely.")
+				GenericDialog("A Bargain is Struck", "Pypo I has proposed to Rugnur that our clan craft a wondrous scepter for him, encrusted with the gnomish Ruby of Fire. Rugnur agreed for the price of 10,000 pieces of silver, half to be paid upfront, and half when the artifact were completed. The Shinsplitter Clan tried to intercept the silver caravans and the gnomish envoy who carried the ruby, but Rugnur made sure they arrived at the outpost safely.")
 			end
 			GrandStrategyEvent(Factions.ShinsplitterClan, GrandStrategyEvents.ABargainIsStruckShinsplitterClan)
 		end}
@@ -759,7 +759,7 @@ local NidavellirEvents = {
 				end
 			end
 			if (GrandStrategyFaction.Name == "Shinsplitter Clan" and wyr.preferences.AutomaticBattles) then
-				GrandStrategyDialog("A Bargain is Struck", "The Norlund Clan refused to pay the toll! We tried to intercept the caravans and the envoy who carried the gnomish Ruby of Fire, but we failed...")
+				GenericDialog("A Bargain is Struck", "The Norlund Clan refused to pay the toll! We tried to intercept the caravans and the envoy who carried the gnomish Ruby of Fire, but we failed...")
 			end
 			if (GetProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-recruit") >= 1) then -- way to check if Norlund Clan successfully transported the caravans
 				GrandStrategyEvent(Factions.NorlundClan, GrandStrategyEvents.ClosingTheGates)
@@ -818,7 +818,7 @@ local NidavellirEvents = {
 				ChangeProvinceUnitQuantity("Southern Tunnels", "unit-dwarven-steelclad", -1)
 			end
 			if (GrandStrategyFaction.Name == "Norlund Clan" and wyr.preferences.AutomaticBattles) then
-				GrandStrategyDialog("Closing the Gates", "With the help of Baglur, Rugnur successfully closed the gates to our cavern homes, leaving the Shinsplitters blocked outside. The young dwarf informed the clan's council of what had happened, and our chieftain Durstorn decided to send him, Baglur and the gnomish envoy to the Northern Wastelands, where Thursagan - a runesmith capable of crafting the magnificent scepter - lived.")
+				GenericDialog("Closing the Gates", "With the help of Baglur, Rugnur successfully closed the gates to our cavern homes, leaving the Shinsplitters blocked outside. The young dwarf informed the clan's council of what had happened, and our chieftain Durstorn decided to send him, Baglur and the gnomish envoy to the Northern Wastelands, where Thursagan - a runesmith capable of crafting the magnificent scepter - lived.")
 			end
 			GrandStrategyEvent(Factions.ShinsplitterClan, GrandStrategyEvents.ClosingTheGatesShinsplitterClan)
 		end}
@@ -867,7 +867,7 @@ local NidavellirEvents = {
 				end
 			end
 			if (GrandStrategyFaction.Name == "Shinsplitter Clan" and wyr.preferences.AutomaticBattles) then
-				GrandStrategyDialog("Closing the Gates", "Again, the Norlunds foiled us. They managed to close the gates to their caves, blocking us outside. We will keep watch - someday they must exit their caves again, and then we will get what is due to us.")
+				GenericDialog("Closing the Gates", "Again, the Norlunds foiled us. They managed to close the gates to their caves, blocking us outside. We will keep watch - someday they must exit their caves again, and then we will get what is due to us.")
 			end
 		end}
 	},
@@ -922,7 +922,7 @@ local NidavellirEvents = {
 				ChangeProvinceUnitQuantity("Caverns of Chaincolt", "unit-dwarven-gryphon-rider", 2) -- two gryphon riders joined from the travel to the Northern Wastelands
 			end
 			if (GrandStrategyFaction.Name == EventFaction.Name and wyr.preferences.AutomaticBattles) then
-				GrandStrategyDialog("Searching for the Runecrafter", "Upon reaching the area where Thursagan's home is located, a few gryphon riders approached us, offering their help in exchange for aiding them to get rid of the local goblins. After finally finding Thursagan, Rugnur convinced the expert smith to return with him and craft the scepter. Now, Durstorn has sent them to gather materials of the high quality necessary for the scepter in the Eastern Mines.")
+				GenericDialog("Searching for the Runecrafter", "Upon reaching the area where Thursagan's home is located, a few gryphon riders approached us, offering their help in exchange for aiding them to get rid of the local goblins. After finally finding Thursagan, Rugnur convinced the expert smith to return with him and craft the scepter. Now, Durstorn has sent them to gather materials of the high quality necessary for the scepter in the Eastern Mines.")
 			end
 		end}
 	},
@@ -972,7 +972,7 @@ local NidavellirEvents = {
 --				SetProvinceUnitQuantity("Eastern Mines", "unit-goblin-archer", GetProvinceUnitQuantity("Eastern Mines", "unit-goblin-archer") / 2)
 			end
 			if (GrandStrategyFaction.Name == EventFaction.Name and wyr.preferences.AutomaticBattles) then
-				GrandStrategyDialog("Gathering Materials", "After mining the necessary materials from the mines, Rugnur and his party returned to the clan's home. Unfortunately, the tools available for the task of crafting the scepter proved unsuitable. We will have to to seek the Shorbear Clan, and bargain with them for use of their extraordinary tools. This time, however, Durstorn insists that he lead the expedition.")
+				GenericDialog("Gathering Materials", "After mining the necessary materials from the mines, Rugnur and his party returned to the clan's home. Unfortunately, the tools available for the task of crafting the scepter proved unsuitable. We will have to to seek the Shorbear Clan, and bargain with them for use of their extraordinary tools. This time, however, Durstorn insists that he lead the expedition.")
 			end
 		end}
 	},
@@ -1052,8 +1052,8 @@ local NidavellirEvents = {
 	
 				AcquireProvince(WorldMapProvinces.ShorbearHills, "Shinsplitter Clan")
 				if (GrandStrategyFaction.Name == "Norlund Clan" and wyr.preferences.AutomaticBattles) then
-					GrandStrategyDialog("Hills of the Shorbear Clan", "High was the price the Shorbears asked for use of their tools. Durstorn - against the advice of Thursagan - decided to take the tools by force. During the battle the Shinsplitters appeared, quickly making an alliance with the Shorbear chieftain. Nevertheless, we breached the Shorbears' walls and occupied their stronghold, being then besieged by the Shinsplitters.")
-					GrandStrategyDialog("Hills of the Shorbear Clan", "A long time afterwards, a desperate Durstorn desired to surrender to the enemy. The others refused, having to kill the enraged chieftain. Rugnur and the rest of the party fled into the caves to the north of the hold, while the gnomish envoy returned to Untersberg to ask for reinforcements.")
+					GenericDialog("Hills of the Shorbear Clan", "High was the price the Shorbears asked for use of their tools. Durstorn - against the advice of Thursagan - decided to take the tools by force. During the battle the Shinsplitters appeared, quickly making an alliance with the Shorbear chieftain. Nevertheless, we breached the Shorbears' walls and occupied their stronghold, being then besieged by the Shinsplitters.")
+					GenericDialog("Hills of the Shorbear Clan", "A long time afterwards, a desperate Durstorn desired to surrender to the enemy. The others refused, having to kill the enraged chieftain. Rugnur and the rest of the party fled into the caves to the north of the hold, while the gnomish envoy returned to Untersberg to ask for reinforcements.")
 				end
 				GrandStrategyEvent(Factions.NorlundClan, GrandStrategyEvents.TheWyrm)
 			end
@@ -1101,7 +1101,7 @@ local NidavellirEvents = {
 				end
 			end
 			if (GrandStrategyFaction.Name == EventFaction.Name and wyr.preferences.AutomaticBattles) then
-				GrandStrategyDialog("Hills of the Shorbear Clan", "We found the Norlunds attacking the Shorbear Hold. We quickly made an alliance with the Shorbear chieftain - but the Norlunds still managed to defeat the Shorbears, squirreling themselves in their stronghold. Eventually they tried to escape our siege, and unfortunately succeeded in fleeing to the nearby caves.")
+				GenericDialog("Hills of the Shorbear Clan", "We found the Norlunds attacking the Shorbear Hold. We quickly made an alliance with the Shorbear chieftain - but the Norlunds still managed to defeat the Shorbears, squirreling themselves in their stronghold. Eventually they tried to escape our siege, and unfortunately succeeded in fleeing to the nearby caves.")
 			end
 		end}
 	},
@@ -1144,7 +1144,7 @@ local NidavellirEvents = {
 				end
 			end
 			if (GrandStrategyFaction.Name == EventFaction.Name and wyr.preferences.AutomaticBattles) then
-				GrandStrategyDialog("Hills of the Shorbear Clan", "The Norlunds came to bargain the use of our tools to craft a scepter. We offered them a price - they claimed it was too high, and attacked us! The battle raged, and our chieftain Glonoin fell. The Norlunds then occupied our stronghold, leaving our people in subjection...")
+				GenericDialog("Hills of the Shorbear Clan", "The Norlunds came to bargain the use of our tools to craft a scepter. We offered them a price - they claimed it was too high, and attacked us! The battle raged, and our chieftain Glonoin fell. The Norlunds then occupied our stronghold, leaving our people in subjection...")
 			end
 		end}
 	},
@@ -1217,7 +1217,7 @@ local NidavellirEvents = {
 				ChangeFactionResource("dwarf", "Norlund Clan", "coal", -20000) -- Scepter of Fire crafted
 				
 				if (GrandStrategyFaction.Name == "Norlund Clan" and wyr.preferences.AutomaticBattles) then
-					GrandStrategyDialog("The Wyrm", "The Shinsplitters followed us deep into the caves we had entered, bring Surghan mercenaries with them. Rugnur and his party ran as fast as they could, escaping the clutches of Svafnir and finding a lava-heated forge. As the party fought off incoming attacks, Thursagan finally crafted the Scepter of Fire.")
+					GenericDialog("The Wyrm", "The Shinsplitters followed us deep into the caves we had entered, bring Surghan mercenaries with them. Rugnur and his party ran as fast as they could, escaping the clutches of Svafnir and finding a lava-heated forge. As the party fought off incoming attacks, Thursagan finally crafted the Scepter of Fire.")
 				end
 			
 				GrandStrategyEvent(Factions.NorlundClan, GrandStrategyEvents.CavernsOfFlame)
@@ -1262,7 +1262,7 @@ local NidavellirEvents = {
 				end
 			end
 			if (GrandStrategyFaction.Name == EventFaction.Name and wyr.preferences.AutomaticBattles) then
-				GrandStrategyDialog("The Wyrm", "We followed the Norlunds into the caves, this time bringing Surghan mercenaries with us. As we tried to catch the running Norlunds, we came upon an enormous wyrm. After this delay, we again set to pursue the Norlunds, but they skillfully escaped deeper into the tunnels.")
+				GenericDialog("The Wyrm", "We followed the Norlunds into the caves, this time bringing Surghan mercenaries with us. As we tried to catch the running Norlunds, we came upon an enormous wyrm. After this delay, we again set to pursue the Norlunds, but they skillfully escaped deeper into the tunnels.")
 			end
 		end}
 	},
@@ -1328,11 +1328,11 @@ local NidavellirEvents = {
 				ChangeFactionResource("dwarf", "Norlund Clan", "prestige", 100) -- a lot of prestige for completing the legendary scepter
 				
 				if (GrandStrategyFaction.Name == "Norlund Clan" and wyr.preferences.AutomaticBattles) then
-					GrandStrategyDialog("Caverns of Flame", "After deflecting a number of goblins, Rugnur's party came upon some ancient mechanism in the depth of the tunnels. It somehow activated a dormant volcano! The Shinsplitters who had followed tried to escape, but too late - Norlund, Shinsplitter and goblin alike perished that day.")
-					GrandStrategyDialog("Caverns of Flame", "The lone survivor was a Norlund gryphon rider, who flew fast and high as the volcano erupted. He then went to Untersberg to inform the gnomish king of what had happened, arriving just as the gnomish envoy did. Together, they relayed the sad news to the king, that Rugnur and his companions did fulfill their promise to craft the Scepter, but died tragically in the Caverns of Flame.")
-					GrandStrategyDialog("Caverns of Flame", "Pypo I thought it little wise to send forces to uncover the Scepter, with goblins swarming the region, and given that the volcano might still be too unstable. Aged and nearing the end of his life himself, he did not have the energy to undertake such an enterprise either. All he could do was sending the rest of the payment to the remnants of the Norlund Clan, as the promise to craft the Scepter was indeed fulfilled.")
-					GrandStrategyDialog("Caverns of Flame", "The Shinsplitters, depleted by war and wary of the forces the Norlunds would be able to muster with the gnomish silver, accepted a peace, ceding the Shorbear Hold back to the Norlunds. The Scepter sat in the caves of the Northlands, unfound but undestroyed, moved around by goblins who never understood its true meaning.")
-					GrandStrategyDialog("Caverns of Flame", "Legends grew up around it, and around its makers - Thursagan, most brilliant of the dwarven runesmiths, and Rugnur, one of the greatest dwarven heroes.")
+					GenericDialog("Caverns of Flame", "After deflecting a number of goblins, Rugnur's party came upon some ancient mechanism in the depth of the tunnels. It somehow activated a dormant volcano! The Shinsplitters who had followed tried to escape, but too late - Norlund, Shinsplitter and goblin alike perished that day.")
+					GenericDialog("Caverns of Flame", "The lone survivor was a Norlund gryphon rider, who flew fast and high as the volcano erupted. He then went to Untersberg to inform the gnomish king of what had happened, arriving just as the gnomish envoy did. Together, they relayed the sad news to the king, that Rugnur and his companions did fulfill their promise to craft the Scepter, but died tragically in the Caverns of Flame.")
+					GenericDialog("Caverns of Flame", "Pypo I thought it little wise to send forces to uncover the Scepter, with goblins swarming the region, and given that the volcano might still be too unstable. Aged and nearing the end of his life himself, he did not have the energy to undertake such an enterprise either. All he could do was sending the rest of the payment to the remnants of the Norlund Clan, as the promise to craft the Scepter was indeed fulfilled.")
+					GenericDialog("Caverns of Flame", "The Shinsplitters, depleted by war and wary of the forces the Norlunds would be able to muster with the gnomish silver, accepted a peace, ceding the Shorbear Hold back to the Norlunds. The Scepter sat in the caves of the Northlands, unfound but undestroyed, moved around by goblins who never understood its true meaning.")
+					GenericDialog("Caverns of Flame", "Legends grew up around it, and around its makers - Thursagan, most brilliant of the dwarven runesmiths, and Rugnur, one of the greatest dwarven heroes.")
 				end
 			end
 		end}
@@ -1361,8 +1361,8 @@ local NidavellirEvents = {
 				end
 			end
 			if (GrandStrategyFaction.Name == EventFaction.Name and wyr.preferences.AutomaticBattles) then
-				GrandStrategyDialog("Caverns of Flame", "We reached the goblins' tunnels. The Norlunds were somewhere nearby, still alive. Unexplicably, a dormant volcano began to erupt, obliterating our valiant kin!")
-				GrandStrategyDialog("Caverns of Flame", "The Norlunds seem to have done well in the eyes of the gnomish king, for he sent silver caravans with the rest of the payment to them. With our forces depleted and the Norlunds possessing the financial capability of mustering more soldiers, we had no choice but to sue for peace - resulting in our cession of the Shorbear Hold to the Norlund Clan.")
+				GenericDialog("Caverns of Flame", "We reached the goblins' tunnels. The Norlunds were somewhere nearby, still alive. Unexplicably, a dormant volcano began to erupt, obliterating our valiant kin!")
+				GenericDialog("Caverns of Flame", "The Norlunds seem to have done well in the eyes of the gnomish king, for he sent silver caravans with the rest of the payment to them. With our forces depleted and the Norlunds possessing the financial capability of mustering more soldiers, we had no choice but to sue for peace - resulting in our cession of the Shorbear Hold to the Norlund Clan.")
 			end
 		end}
 	},
