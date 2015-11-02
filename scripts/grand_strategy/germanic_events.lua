@@ -400,31 +400,15 @@ local GermanicEvents = {
 				return false
 			end
 		end,
-		MinYear = -2800, -- approximately when Scandinavia was settled
-		MaxYear = -2800,
+		MinYear = -325, -- Goths first attested
+		MaxYear = -325 + 30, -- estimated
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
 				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
-				GrandStrategyEvent(Factions.SwedeTribe, GrandStrategyEvents.DagChieftainOfTheGothsSwedeTribe)
 			end
 		},
 		OptionTooltips = {"+1 Prestige"}
-	},
-	DagChieftainOfTheGothsSwedeTribe = { -- Dag is the first legendary king of Gotaland; Source: http://www.oe.eclipse.co.uk/nom/Sturlaug.htm
-		Name = "Dag, Chieftain of the Goths",
-		Description = "The tribesmen to our south have declared Dag as their chieftain.",
-		TriggeredOnly = true,
-		Options = {"~!OK", "Play as ~!Dag"},
-		OptionEffects = {
-			function(s)
-			end,
-			function(s)
-				GrandStrategyFaction = Factions.GothTribe
-				SetPlayerFaction(Factions.GothTribe.Civilization, "Goth Tribe")
-				CenterGrandStrategyMapOnTile(WorldMapProvinces.Gotaland.SettlementLocation[1], WorldMapProvinces.Gotaland.SettlementLocation[2])
-			end
-		}
 	},
 	DivisionOfDomains = { -- Source: Snorri Sturlson, "Heimskringla", 1844.
 		Name = "Division of Domains",
@@ -475,6 +459,100 @@ local GermanicEvents = {
 			end
 		},
 		OptionTooltips = {"+500 Gold"}
+	},
+	SkjoldsDomain = { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
+		Name = "Skjold's Domain",
+		Description = "Our chieftain has granted our newly-conquered lands to the south to his younger son, Skjold.",
+		Conditions = function(s)
+			if (
+				EventFaction.Name == "Asa Tribe"
+				and (GetProvinceOwner("Zealand") == EventFaction.Name or GetProvinceOwner("Jutland") == EventFaction.Name)
+			) then
+				return true
+			else
+				return false
+			end
+		end,
+		MinYear = -2800, -- estimated
+		MaxYear = -2800 + 30, -- estimated
+		Options = {"~!OK", "Play as ~!Skjold"},
+		OptionEffects = {
+			function(s)
+				EqualizeProvinceUnits(EventFaction)
+				if (GetProvinceOwner("Jutland") == EventFaction.Name) then
+					AcquireProvince(WorldMapProvinces.Jutland, "Skjoldung Tribe")
+				end
+				if (GetProvinceOwner("Zealand") == EventFaction.Name) then
+					AcquireProvince(WorldMapProvinces.Zealand, "Skjoldung Tribe")
+				end
+				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "germanic", "Skjoldung Tribe")
+			end,
+			function(s)
+				EqualizeProvinceUnits(EventFaction)
+				EqualizeProvinceUnits(EventFaction)
+				if (GetProvinceOwner("Jutland") == EventFaction.Name) then
+					AcquireProvince(WorldMapProvinces.Jutland, "Skjoldung Tribe")
+				end
+				if (GetProvinceOwner("Zealand") == EventFaction.Name) then
+					AcquireProvince(WorldMapProvinces.Zealand, "Skjoldung Tribe")
+				end
+				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "germanic", "Skjoldung Tribe")
+				GrandStrategyFaction = Factions.SkjoldungTribe
+				SetPlayerFaction("germanic", "Skjoldung Tribe")
+			end
+		},
+		OptionTooltips = {"Skjoldung Tribe acquires our lands beyond the sea", "Skjoldung Tribe acquires our lands beyond the sea, plas as the Skjoldung Tribe"}
+	},
+	YngveChieftainOfTheSwedes = { -- Source: Snorri Sturlson, "Heimskringla", 1844.
+		Name = "Yngve, Chieftain",
+--		Description = "Yngve has become our new chieftain, founding a new dynasty, the Ynglings. He managed to establish order in our lands, and was blessed with good seasons. Due to the good seasons and the reigning peace, our people have become prosperous as never before. Preferring Upsal to Sigtun, Yngve moved his capital there, where he built a great temple, and spent many resources in embellishing the town. Our chieftain's wife is Gerd, daughter of Gymis, and their son Fjolne stands in line to become our next chieftain.",
+		Description = "With the death of our long-lived chieftain, his son Yngve has taken his place. He managed to establish order in our lands, and was blessed with good seasons. Due to the good seasons and the reigning peace, our people have become prosperous as never before. Preferring Upsal to Sigtun, Yngve moved his capital there, where he built a great temple, and spent many resources in embellishing the town. Our chieftain's wife is Gerd, daughter of Gymis, and their son stands in line to become our next chieftain.",
+		Conditions = function(s)
+			if (
+				EventFaction.Name == "Asa Tribe"
+				and GetProvinceOwner("Sweden") == EventFaction.Name
+			) then
+				return true
+			else
+				return false
+			end
+		end,
+		MinYear = -2800 + 30, -- estimated
+		MaxYear = -2800 + 30 + 30, -- estimated
+		Options = {"~!OK"},
+		OptionEffects = {
+			function(s)
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "gold", 250)
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
+				FormFactionLua(EventFaction, Factions.YnglingTribe)
+			end
+		},
+		OptionTooltips = {"Form the Yngling Tribe", "+250 Gold, +1 Prestige"}
+	},
+	YngvesSickness = { -- Source: Snorri Sturlson, "Heimskringla", 1844.
+		Name = "Yngve's Sickness",
+		Description = "Our chieftain Yngve fell ill. As the disease advanced, not many would be allowed to see him, and meanwhile a great mound began to be built... where he would be finally buried when his time came.",
+		Conditions = function(s)
+			if (
+				EventFaction.Name == "Asa Tribe"
+			) then
+				return true
+			else
+				return false
+			end
+		end,
+		MinYear = -2800 + 60, -- estimated
+		MaxYear = -2800 + 60 + 30, -- estimated
+		RequiredEvents = {
+			YngveChieftainOfTheSwedes = true
+		},
+		Options = {"~!OK"},
+		OptionEffects = {
+			function(s)
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
+			end
+		},
+		OptionTooltips = {"+1 Prestige"}
 	},
 	TheBirthOfSaeming = { -- Source: Snorri Sturlson, "Heimskringla", 1844.
 		Name = "The Birth of Saeming",
@@ -718,7 +796,7 @@ local GermanicEvents = {
 				and FactionHasTechnologyType(EventFaction, "bronze-shield")
 				and FactionHasTechnologyType(EventFaction, "ranged-projectile-1")
 				and FactionHasTechnologyType(EventFaction, "wood-plow")
-				and EventFaction.Name == "Asa Tribe"
+				and (EventFaction.Name == "Asa Tribe" or EventFaction.Name == "Skjoldung Tribe" or EventFaction.Name == "Yngling Tribe")
 				and EventFaction.Name ~= GrandStrategyFaction.Name -- only available for NPC factions, since the goth civilization is not playable
 				and (SyncRand(50) < 1 or FactionHasCulture(EventFaction, "goth"))
 			) then
@@ -730,10 +808,9 @@ local GermanicEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				if (EventFaction.Name == "Asa Tribe") then
-					FormFactionLua(EventFaction, Factions.GothTribe)
-					EventFaction = Factions.GothTribe
-				end
+				FormFactionLua(EventFaction, Factions.GothTribe)
+				EventFaction = Factions.GothTribe
+
 				for province_i, province_key in ipairs(EventFaction.OwnedProvinces) do
 					if (
 						GetProvinceCivilization(WorldMapProvinces[province_key].Name) == "germanic"

@@ -1916,6 +1916,7 @@ function LoadProvinces(world)
 		Jutland = {
 			Name = "Jutland",
 			CulturalNames = {
+				goth = "Reidgothland", -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
 				teuton = "Jutland",
 				JuteTribe = "Jutland"
 			},
@@ -1940,6 +1941,7 @@ function LoadProvinces(world)
 			SettlementTerrain = "Plains",
 			Coastal = true,
 			Claims = {
+				"germanic", "Skjoldung Tribe",
 				"norse", "Dane Tribe",
 				"teuton", "Charude Tribe",
 				"teuton", "Jute Tribe"
@@ -3261,6 +3263,7 @@ function LoadProvinces(world)
 			},
 			SettlementTerrain = "Plains",
 			Claims = {
+				"germanic", "Yngling Tribe",
 				"norse", "Swede Tribe"
 			}
 		},
@@ -3840,8 +3843,9 @@ function LoadProvinces(world)
 				"basque", "Funnelbeaker Tribe",
 				"basque", "Maglemose Tribe",
 				"basque", "Kongemose Tribe",
-				"norse", "Dane Tribe",
-				"goth", "Herulian Tribe"
+				"germanic", "Skjoldung Tribe",
+				"goth", "Herulian Tribe",
+				"norse", "Dane Tribe"
 			}
 		}
 	}

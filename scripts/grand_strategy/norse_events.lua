@@ -38,7 +38,7 @@ local NorseEvents = {
 				and FactionHasTechnologyType(EventFaction, "bronze-shield")
 				and FactionHasTechnologyType(EventFaction, "ranged-projectile-1")
 				and FactionHasTechnologyType(EventFaction, "wood-plow")
-				and (EventFaction.Name == "Asa Tribe" or EventFaction.Name == "Dane Tribe" or EventFaction.Name == "Swede Tribe")
+				and (EventFaction.Name == "Asa Tribe" or EventFaction.Name == "Skjoldung Tribe" or EventFaction.Name == "Yngling Tribe")
 				and EventFaction.Name ~= GrandStrategyFaction.Name -- only available for NPC factions, since the norse civilization is not playable
 				and (SyncRand(50) < 1 or FactionHasCulture(EventFaction, "norse"))
 			) then
@@ -50,10 +50,9 @@ local NorseEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				if (EventFaction.Name == "Asa Tribe") then
-					FormFactionLua(EventFaction, Factions.SwedeTribe)
-					EventFaction = Factions.SwedeTribe
-				end
+				FormFactionLua(EventFaction, Factions.SwedeTribe)
+				EventFaction = Factions.SwedeTribe
+
 				for province_i, province_key in ipairs(EventFaction.OwnedProvinces) do
 					if (
 						GetProvinceCivilization(WorldMapProvinces[province_key].Name) == "germanic"
@@ -90,54 +89,6 @@ local NorseEvents = {
 				SetProvinceCivilization(EventProvince.Name, "norse")
 			end
 		}
-	},
-	YngveChieftainOfTheSwedes = { -- Source: Snorri Sturlson, "Heimskringla", 1844.
-		Name = "Yngve, Chieftain of the Swedes",
-		Description = "Yngve has become our new chieftain, founding a new dynasty, the Ynglings. He managed to establish order in our lands, and was blessed with good seasons. Due to the good seasons and the reigning peace, our people have become prosperous as never before. Preferring Upsal to Sigtun, Yngve moved his capital there, where he built a great temple, and spent many resources in embellishing the town. Our chieftain's wife is Gerd, daughter of Gymis, and their son Fjolne stands in line to become our next chieftain.",
-		Conditions = function(s)
-			if (
-				(EventFaction.Name == "Swede Tribe" or EventFaction.Name == "Sweden")
-			) then
-				return true
-			else
-				return false
-			end
-		end,
-		MinYear = -27 - 30,
-		MaxYear = -27,
-		Options = {"~!OK"},
-		OptionEffects = {
-			function(s)
-				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "gold", 250)
-				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
-			end
-		},
-		OptionTooltips = {"+250 Gold, +1 Prestige"}
-	},
-	YngvesSickness = { -- Source: Snorri Sturlson, "Heimskringla", 1844.
-		Name = "Yngve's Sickness",
-		Description = "Our chieftain Yngve fell ill. As the disease advanced, not many would be allowed to see him, and meanwhile a great mound began to be built... where he would be finally buried when his time came.",
-		Conditions = function(s)
-			if (
-				(EventFaction.Name == "Swede Tribe" or EventFaction.Name == "Sweden")
-			) then
-				return true
-			else
-				return false
-			end
-		end,
-		MinYear = -27,
-		MaxYear = -27,
-		RequiredEvents = {
-			YngveChieftainOfTheSwedes = true
-		},
-		Options = {"~!OK"},
-		OptionEffects = {
-			function(s)
-				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
-			end
-		},
-		OptionTooltips = {"+1 Prestige"}
 	},
 	FjolneChieftainOfTheSwedes = { -- Source: Snorri Sturlson, "Heimskringla", 1844.
 		Name = "Fjolne, Chieftain of the Swedes",

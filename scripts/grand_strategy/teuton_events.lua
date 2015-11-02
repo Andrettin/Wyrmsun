@@ -36,7 +36,7 @@ local TeutonEvents = {
 				and FactionHasTechnologyType(EventFaction, "bronze-shield")
 				and FactionHasTechnologyType(EventFaction, "ranged-projectile-1")
 				and FactionHasTechnologyType(EventFaction, "wood-plow")
-				and EventFaction.Name == "Asa Tribe"
+				and (EventFaction.Name == "Asa Tribe" or EventFaction.Name == "Skjoldung Tribe" or EventFaction.Name == "Yngling Tribe") -- the Ynglings shouldn't be able to become Teutons, but let's allow it for now since the other two germanic civilizations are not available for human players
 				and (SyncRand(50) < 1 or FactionHasCulture(EventFaction, "teuton"))
 				and GetProvinceOwner("Jutland") == EventFaction.Name
 			) then
@@ -48,7 +48,7 @@ local TeutonEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				if (EventFaction.Name == "Asa Tribe" and GetFactionProvinceCount(Factions.JuteTribe) == 0) then
+				if (GetFactionProvinceCount(Factions.JuteTribe) == 0) then
 					FormFactionLua(EventFaction, Factions.JuteTribe)
 					EventFaction = Factions.JuteTribe
 				end

@@ -228,6 +228,12 @@ https://github.com/Andrettin/Wyrmsun
 - 1.5.2
 -----------------------------------------------------------------------
 
+* Factions
+- Added two new Germanic factions, the Skjoldung Tribe and the Yngling Tribe.
+
+* Grand Strategy
+- Added a new event, "Skjold's Domain", in which the southern lands of the Asa Tribe are given to the Skjoldung Tribe.
+
 * Miscellaneous
 - Fixed bug which caused a crash when changing the resolution from within a scenario, if the game had to draw a health bar.
 

@@ -13069,7 +13069,8 @@ if (GrandStrategyYear >= -2800) then -- establishment of the Single Grave Cultur
 	-- Funnel Beaker culture ends in Zealand in 2800 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 38.
 
 	-- in the Ynglinga saga, "Odin's people", the Asa, settle Scandinavia in a manner not too dissimilar from what archaeological findings tell us of Indo-European settlement in the region; thus the name "Asa Tribe" is used here to denote the Indo-European-speaking peoples who settled in Scandinavia, and were the precursors of the Germanic peoples
-	SetProvinceOwner("Jutland", "germanic", "Asa Tribe")
+	AcquireFactionTechnologies("germanic", "Asa Tribe", "germanic", "Skjoldung Tribe")
+	SetProvinceOwner("Jutland", "germanic", "Skjoldung Tribe")
 	SetProvinceCivilization("Jutland", "germanic")
 	SetProvinceSettlementBuilding("Jutland", "unit-germanic-town-hall", true)
 	
@@ -13080,7 +13081,8 @@ if (GrandStrategyYear >= -2800) then -- establishment of the Single Grave Cultur
 	SetProvinceOwner("Scania", "germanic", "Asa Tribe")
 	SetProvinceCivilization("Scania", "germanic")
 	SetProvinceSettlementBuilding("Scania", "unit-germanic-town-hall", true)
-	SetProvinceOwner("Zealand", "germanic", "Asa Tribe")
+	
+	SetProvinceOwner("Zealand", "germanic", "Skjoldung Tribe")
 	SetProvinceCivilization("Zealand", "germanic")
 	SetProvinceSettlementBuilding("Zealand", "unit-germanic-town-hall", true)
 
@@ -13104,9 +13106,22 @@ if (GrandStrategyYear >= -2800) then -- establishment of the Single Grave Cultur
 	GrandStrategyEvents.GylvesRealm = nil
 	GrandStrategyEvents.DivisionOfDomains = nil
 	GrandStrategyEvents.AsaLawgiving = nil
+	GrandStrategyEvents.SkjoldsDomain = nil
 	GrandStrategyEvents.TheBirthOfSaeming = nil
 
 	-- Corded Ware culture (neolithic) begins in Zealand in 2800 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 38.
+end
+
+if (GrandStrategyYear >= -2770) then -- estimated date
+	GrandStrategyEvents.YngveChieftainOfTheSwedes = nil
+	AcquireFactionTechnologies("germanic", "Asa Tribe", "germanic", "Yngling Tribe")
+	SetProvinceOwner("Sweden", "germanic", "Yngling Tribe")
+	SetProvinceOwner("Gotaland", "germanic", "Yngling Tribe")
+	SetProvinceOwner("Scania", "germanic", "Yngling Tribe")
+end
+
+if (GrandStrategyYear >= -2740) then -- estimated date
+	GrandStrategyEvents.YngvesSickness = nil
 end
 
 if (GrandStrategyYear >= -2700) then
@@ -13342,12 +13357,12 @@ if (GrandStrategyYear >= -1190) then
 end
 
 if (GrandStrategyYear >= -1100) then -- bronze shields found in the Danish bogs began to be made; Source: http://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-bronze-age-shields/
-	SetFactionTechnology("germanic", "Asa Tribe", "upgrade-germanic-bronze-shield", true)
+	SetFactionTechnology("germanic", "Skjoldung Tribe", "upgrade-germanic-bronze-shield", true)
 	GrandStrategyEvents.TheSunShields = nil
 end
 
 if (GrandStrategyYear >= -1000) then -- broad bronze sword from FÃ¸llenslev; Source: http://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/men-and-woman-in-the-bronze-age/
-	SetFactionTechnology("germanic", "Asa Tribe", "upgrade-germanic-broad-sword", true)
+	SetFactionTechnology("germanic", "Skjoldung Tribe", "upgrade-germanic-broad-sword", true)
 	
 	-- Widespread accretion of fine-grained floodpain alluvium in Northern European lowland rivers after 1000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 129.
 	
@@ -13615,14 +13630,13 @@ if (GrandStrategyYear >= -325) then -- Pytheas sets out on an exploration voyage
 	
 	SetProvinceOwner("Gotaland", "goth", "Goth Tribe") -- Goths are the earliest Germanic people known to inhabit Götaland; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 	SetProvinceCivilization("Gotaland", "goth")
-	AcquireFactionTechnologies("germanic", "Asa Tribe", "goth", "Goth Tribe")
+	AcquireFactionTechnologies("germanic", "Yngling Tribe", "goth", "Goth Tribe")
 	
 	SetProvinceOwner("Gotland", "goth", "Goth Tribe") -- maybe should be later?
 	SetProvinceSettlementBuilding("Gotland", "unit-teuton-town-hall", true)
 	AddProvinceClaim("Gotland", "goth", "Goth Tribe")
 	
 	GrandStrategyEvents.DagChieftainOfTheGoths = nil
-	GrandStrategyEvents.DagChieftainOfTheGothsSwedeTribe = nil
 end
 
 if (GrandStrategyYear >= -323) then
@@ -13675,7 +13689,7 @@ if (GrandStrategyYear >= -264) then
 	SetProvinceOwner("Oldenburg", "teuton", "Chauci Tribe")
 	SetProvinceCivilization("Oldenburg", "teuton")
 	AddProvinceClaim("Oldenburg", "teuton", "Chauci Tribe")
-	AcquireFactionTechnologies("germanic", "Asa Tribe", "teuton", "Chauci Tribe")
+	AcquireFactionTechnologies("germanic", "Skjoldung Tribe", "teuton", "Chauci Tribe")
 
 	SetProvinceOwner("Brunswick", "teuton", "Cherusci Tribe")	
 	SetProvinceCivilization("Brunswick", "teuton")
@@ -13683,49 +13697,49 @@ if (GrandStrategyYear >= -264) then
 	SetProvinceOwner("Magdeburg", "teuton", "Cherusci Tribe")	
 	SetProvinceCivilization("Magdeburg", "teuton")
 	SetProvinceSettlementBuilding("Magdeburg", "unit-teuton-town-hall", true)
-	AcquireFactionTechnologies("germanic", "Asa Tribe", "teuton", "Cherusci Tribe")
+	AcquireFactionTechnologies("germanic", "Skjoldung Tribe", "teuton", "Cherusci Tribe")
 	
 	SetProvinceOwner("Hanover", "teuton", "Lombard Tribe")	
 	SetProvinceCivilization("Hanover", "teuton")
 	SetProvinceSettlementBuilding("Hanover", "unit-teuton-town-hall", true)
-	AcquireFactionTechnologies("germanic", "Asa Tribe", "teuton", "Lombard Tribe")
+	AcquireFactionTechnologies("germanic", "Skjoldung Tribe", "teuton", "Lombard Tribe")
 	
 	SetProvinceOwner("Holland", "teuton", "Batavian Tribe")	
 	SetProvinceCivilization("Holland", "teuton")
 	SetProvinceSettlementBuilding("Holland", "unit-teuton-town-hall", true)
-	AcquireFactionTechnologies("germanic", "Asa Tribe", "teuton", "Batavian Tribe")
+	AcquireFactionTechnologies("germanic", "Skjoldung Tribe", "teuton", "Batavian Tribe")
 	
 	SetProvinceOwner("Friesland", "teuton", "Frisian Tribe")	
 	SetProvinceCivilization("Friesland", "teuton")
 	SetProvinceOwner("East Friesland", "teuton", "Frisian Tribe")	
 	SetProvinceCivilization("East Friesland", "teuton")
-	AcquireFactionTechnologies("germanic", "Asa Tribe", "teuton", "Frisian Tribe")
+	AcquireFactionTechnologies("germanic", "Skjoldung Tribe", "teuton", "Frisian Tribe")
 
 	SetProvinceOwner("Holstein", "teuton", "Saxon Tribe") -- also inhabited by the Teutones
 	SetProvinceCivilization("Holstein", "teuton")
 	SetProvinceOwner("Lauenburg", "teuton", "Saxon Tribe") 
 	SetProvinceCivilization("Lauenburg", "teuton")
-	AcquireFactionTechnologies("germanic", "Asa Tribe", "teuton", "Saxon Tribe")
+	AcquireFactionTechnologies("germanic", "Skjoldung Tribe", "teuton", "Saxon Tribe")
 	
 	SetProvinceOwner("Schleswig", "teuton", "Angle Tribe")	
 	SetProvinceCivilization("Schleswig", "teuton")
 	SetProvinceSettlementBuilding("Schleswig", "unit-teuton-town-hall", true)
-	AcquireFactionTechnologies("germanic", "Asa Tribe", "teuton", "Angle Tribe")
+	AcquireFactionTechnologies("germanic", "Skjoldung Tribe", "teuton", "Angle Tribe")
 	
 	SetProvinceOwner("Mecklenburg", "teuton", "Varini Tribe")
 	SetProvinceCivilization("Mecklenburg", "teuton")
-	AcquireFactionTechnologies("germanic", "Asa Tribe", "teuton", "Varini Tribe")
+	AcquireFactionTechnologies("germanic", "Skjoldung Tribe", "teuton", "Varini Tribe")
 	
 	SetProvinceOwner("Sweden", "norse", "Swede Tribe")
 	SetProvinceCivilization("Sweden", "norse")
 	SetProvinceSettlementBuilding("Sweden", "unit-teuton-town-hall", true)
-	AcquireFactionTechnologies("germanic", "Asa Tribe", "norse", "Swede Tribe")
+	AcquireFactionTechnologies("germanic", "Yngling Tribe", "norse", "Swede Tribe")
 	
 	SetProvinceOwner("Brandenburg", "teuton", "Semnone Tribe")
 	SetProvinceCivilization("Brandenburg", "teuton")
 	SetProvinceSettlementBuilding("Brandenburg", "unit-teuton-town-hall", true)
-	AcquireFactionTechnologies("germanic", "Asa Tribe", "teuton", "Semnone Tribe")
-	AcquireFactionTechnologies("germanic", "Asa Tribe", "teuton", "Suebi Tribe")
+	AcquireFactionTechnologies("germanic", "Skjoldung Tribe", "teuton", "Semnone Tribe")
+	AcquireFactionTechnologies("germanic", "Skjoldung Tribe", "teuton", "Suebi Tribe")
 	
 	SetProvinceOwner("Hither Pomerania", "goth", "Rugian Tribe")
 	SetProvinceCivilization("Hither Pomerania", "goth")
@@ -13739,12 +13753,12 @@ if (GrandStrategyYear >= -264) then
 	SetProvinceOwner("Westphalia", "teuton", "Sugambri Tribe")
 	SetProvinceCivilization("Westphalia", "teuton")
 	SetProvinceSettlementBuilding("Westphalia", "unit-teuton-town-hall", true)
-	AcquireFactionTechnologies("germanic", "Asa Tribe", "teuton", "Sugambri Tribe")
+	AcquireFactionTechnologies("germanic", "Skjoldung Tribe", "teuton", "Sugambri Tribe")
 	
 	SetProvinceOwner("Hesse", "teuton", "Chatti Tribe")
 	SetProvinceCivilization("Hesse", "teuton")
 	SetProvinceSettlementBuilding("Hesse", "unit-teuton-town-hall", true)
-	AcquireFactionTechnologies("germanic", "Asa Tribe", "teuton", "Chatti Tribe")
+	AcquireFactionTechnologies("germanic", "Skjoldung Tribe", "teuton", "Chatti Tribe")
 	
 	SetProvinceOwner("Franconia", "teuton", "Hermunduri Tribe")
 	SetProvinceCivilization("Franconia", "teuton")
@@ -13754,7 +13768,7 @@ if (GrandStrategyYear >= -264) then
 	SetProvinceOwner("Thuringia", "teuton", "Hermunduri Tribe")
 	SetProvinceCivilization("Thuringia", "teuton")
 	SetProvinceSettlementBuilding("Thuringia", "unit-teuton-town-hall", true)
-	AcquireFactionTechnologies("germanic", "Asa Tribe", "teuton", "Hermunduri Tribe")
+	AcquireFactionTechnologies("germanic", "Skjoldung Tribe", "teuton", "Hermunduri Tribe")
 	
 	SetProvinceOwner("Silesia", "goth", "Silingae Tribe")
 	SetProvinceCivilization("Silesia", "goth")
@@ -13999,10 +14013,6 @@ if (GrandStrategyYear >= -58) then -- in 58 BC Caesar fought Ariovistus' Suebi a
 	SetFactionTechnology("latin", "Rome", "upgrade-teuton-coinage", true)
 end
 
-if (GrandStrategyYear >= -57) then -- estimated date
-	GrandStrategyEvents.YngveChieftainOfTheSwedes = nil
-end
-
 if (GrandStrategyYear >= -52) then
 	GrandStrategyEvents.DeBelloGallico = nil -- De Bello Gallico was written 58-52 BC
 end
@@ -14051,9 +14061,8 @@ end
 if (GrandStrategyYear >= -27) then
 	-- according to the Grottasongr, King Fjolnir of the Swedes lived around the same time as Augustus came to reign, establishing the Pax Romana
 --	SetProvinceOwner("Sweden", "norse", "Swede Tribe")
---	AcquireFactionTechnologies("germanic", "Asa Tribe", "norse", "Swede Tribe")
+--	AcquireFactionTechnologies("germanic", "Yngling Tribe", "norse", "Swede Tribe")
 --	SetProvinceOwner("Scania", "norse", "Dane Tribe") -- the Ynglinga saga gives a Danish king (Fredfrode) living at around the same time as Fjolnir; Danes were in southern Scandinavia in 526 (so presumably this would be their dwelling place previously as well); Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
-	GrandStrategyEvents.YngvesSickness = nil
 	GrandStrategyEvents.FjolneChieftainOfTheSwedes = nil
 	GrandStrategyEvents.FredfrodeChieftainOfTheDanes = nil
 	
@@ -14073,7 +14082,7 @@ if (GrandStrategyYear >= -27) then
 	SetProvinceOwner("Jutland", "teuton", "Charude Tribe")	
 	SetProvinceCivilization("Jutland", "teuton")
 	SetProvinceSettlementBuilding("Jutland", "unit-teuton-town-hall", true)
-	AcquireFactionTechnologies("germanic", "Asa Tribe", "teuton", "Charude Tribe")
+	AcquireFactionTechnologies("germanic", "Skjoldung Tribe", "teuton", "Charude Tribe")
 	
 	SetProvinceOwner("Franconia", "celt", "Turone Tribe")
 	SetProvinceCivilization("Franconia", "celt")
@@ -14081,12 +14090,12 @@ if (GrandStrategyYear >= -27) then
 	
 	SetProvinceOwner("Drenthe", "teuton", "Ampsivarii Tribe")
 	SetProvinceCivilization("Drenthe", "teuton")
-	AcquireFactionTechnologies("germanic", "Asa Tribe", "teuton", "Ampsivarii Tribe")
+	AcquireFactionTechnologies("germanic", "Skjoldung Tribe", "teuton", "Ampsivarii Tribe")
 	
 	SetProvinceOwner("Overijssel", "teuton", "Chamavi Tribe")
 	SetProvinceCivilization("Overijssel", "teuton")
 	SetProvinceSettlementBuilding("Overijssel", "unit-teuton-town-hall", true)
-	AcquireFactionTechnologies("germanic", "Asa Tribe", "teuton", "Chamavi Tribe")
+	AcquireFactionTechnologies("germanic", "Skjoldung Tribe", "teuton", "Chamavi Tribe")
 end
 
 if (GrandStrategyYear >= -17) then -- Gallaecia and Asturias acquired by Rome in 17 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
@@ -14212,7 +14221,7 @@ if (GrandStrategyYear >= 150) then
 	SetProvinceOwner("Holland", "teuton", "Frank Tribe") -- Franks were the people settled in the modern Netherlands in (presumably) 150 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 	SetProvinceCivilization("Holland", "teuton")
 	SetProvinceSettlementBuilding("Holland", "unit-teuton-town-hall", true)
-	AcquireFactionTechnologies("germanic", "Asa Tribe", "teuton", "Frank Tribe")
+	AcquireFactionTechnologies("germanic", "Skjoldung Tribe", "teuton", "Frank Tribe")
 	
 	-- Rugians shown as being in Bavaria (presumably) in 150 AD; Source William R. Shepherd's Historical Atlas, 1911, p. 45.
 	SetProvinceOwner("Bavaria", "goth", "Rugian Tribe")
@@ -14461,7 +14470,7 @@ if (GrandStrategyYear >= 526) then -- political situation in 526-600 in Europe; 
 	SetProvinceCivilization("Scania", "norse")
 	SetProvinceOwner("Zealand", "norse", "Dane Tribe")
 	SetProvinceCivilization("Zealand", "norse")
-	AcquireFactionTechnologies("germanic", "Asa Tribe", "norse", "Dane Tribe")
+	AcquireFactionTechnologies("germanic", "Skjoldung Tribe", "norse", "Dane Tribe")
 	
 	SetProvinceOwner("England", "teuton", "Angle Tribe") -- by 526 AD the Anglo-Saxons had become masters of most of Roman Britannia; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 end

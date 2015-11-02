@@ -3684,7 +3684,7 @@ DefineUnitType("unit-destroyed-4x4-place", { Name = "Destroyed 4x4 Place",
 	Vanishes = true,
 	Sounds = {} } )
 
-DefineUnitType("unit-revealer", { Name = "Dummy unit",
+DefineUnitType("unit-revealer", { Name = "Revealer",
 	Animations = "animations-building", Icon = "icon-dwarven-shield-1",
 	Speed = 0,
 	HitPoints = 1,
@@ -3697,7 +3697,8 @@ DefineUnitType("unit-revealer", { Name = "Dummy unit",
 	Building = true, VisibleUnderFog = true,
 	Revealer = true,
 	DetectCloak = true,
-	Sounds = {} } )
+	Sounds = {}
+} )
 
 -- Template Units
 
