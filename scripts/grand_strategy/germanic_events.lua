@@ -202,11 +202,11 @@ local GermanicEvents = {
 				SetProvinceUnitQuantity("Brandenburg", "unit-germanic-warrior", 8) -- give them enough units to continue migrating
 				SetProvinceUnitQuantity("Brandenburg", "unit-germanic-worker", GetProvinceUnitQuantity("Astrakhan", "unit-germanic-worker") / 2)
 				ChangeProvinceUnitQuantity("Astrakhan", "unit-germanic-worker", - GetProvinceUnitQuantity("Brandenburg", "unit-germanic-worker"))
-				AcquireProvince(WorldMapProvinces.Brandenburg, "Swede Tribe")
-				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "germanic", "Swede Tribe")
-				SetFactionResource(Factions.SwedeTribe.Civilization, "Swede Tribe", "gold", GetFactionResource(EventFaction.Civilization, EventFaction.Name, "gold") / 2)
-				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "gold", - GetFactionResource(Factions.SwedeTribe.Civilization, "Swede Tribe", "gold"))
-				ChangeFactionResource(Factions.SwedeTribe.Civilization, "Swede Tribe", "gold", 2000) -- help them stay afloat a bit
+				AcquireProvince(WorldMapProvinces.Brandenburg, "Yngling Tribe")
+				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "germanic", "Yngling Tribe")
+				SetFactionResource(Factions.YnglingTribe.Civilization, "Yngling Tribe", "gold", GetFactionResource(EventFaction.Civilization, EventFaction.Name, "gold") / 2)
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "gold", - GetFactionResource(Factions.YnglingTribe.Civilization, "Yngling Tribe", "gold"))
+				ChangeFactionResource(Factions.YnglingTribe.Civilization, "Yngling Tribe", "gold", 2000) -- help them stay afloat a bit
 			end
 		}
 	},
@@ -216,7 +216,7 @@ local GermanicEvents = {
 		Conditions = function(s)
 			if (
 				EventFaction.Civilization == "germanic"
-				and (EventFaction.Name == "Asa Tribe" or EventFaction.Name == "Swede Tribe")
+				and (EventFaction.Name == "Asa Tribe" or EventFaction.Name == "Yngling Tribe")
 				and GetProvinceOwner("Brandenburg") == EventFaction.Name
 				and GetProvinceUnitQuantity("Brandenburg", "unit-germanic-warrior") >= 6 -- event only happens if player has enough warriors to successfully attack the province
 				and ProvinceHasBorderWith(WorldMapProvinces.Brandenburg, WorldMapProvinces.Mecklenburg)
@@ -244,6 +244,7 @@ local GermanicEvents = {
 					GrandStrategyEventMap = false
 					if (GameResult == GameVictory) then
 						AcquireProvince(WorldMapProvinces.Jutland, EventFaction.Name)
+						AddProvinceClaim("Jutland", EventFaction.Civilization, EventFaction.Name)
 						for i, unitName in ipairs(Units) do
 							if (IsOffensiveMilitaryUnit(unitName)) then
 								SetProvinceUnitQuantity("Jutland", unitName, GetProvinceUnitQuantity("Brandenburg", unitName) + math.ceil(GetPlayerData(4, "UnitTypesCount", unitName) / BattalionMultiplier))
@@ -260,6 +261,7 @@ local GermanicEvents = {
 						SetProvinceUnitQuantity("Brandenburg", "unit-germanic-warrior", 6)
 						SetProvinceCivilization("Jutland", "germanic")
 						AcquireProvince(WorldMapProvinces.Zealand, EventFaction.Name)
+						AddProvinceClaim("Zealand", EventFaction.Civilization, EventFaction.Name)
 						SetProvinceCivilization("Zealand", "germanic")
 						CenterGrandStrategyMapOnTile(WorldMapProvinces.Jutland.SettlementLocation[1], WorldMapProvinces.Jutland.SettlementLocation[2])
 					elseif (GameResult == GameDefeat) then
@@ -271,6 +273,7 @@ local GermanicEvents = {
 					end
 				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= EventFaction.Name or wyr.preferences.AutomaticBattles)) then
 					AcquireProvince(WorldMapProvinces.Jutland, EventFaction.Name)
+					AddProvinceClaim("Jutland", EventFaction.Civilization, EventFaction.Name)
 					for i, unitName in ipairs(Units) do
 						if (IsOffensiveMilitaryUnit(unitName)) then
 							SetProvinceUnitQuantity("Jutland", unitName, GetProvinceUnitQuantity("Brandenburg", unitName))
@@ -287,6 +290,7 @@ local GermanicEvents = {
 					SetProvinceUnitQuantity("Brandenburg", "unit-germanic-warrior", 6)
 					SetProvinceCivilization("Jutland", "germanic")					
 					AcquireProvince(WorldMapProvinces.Zealand, EventFaction.Name)
+					AddProvinceClaim("Zealand", EventFaction.Civilization, EventFaction.Name)
 					SetProvinceCivilization("Zealand", "germanic")					
 					if (GrandStrategyFaction.Name == EventFaction.Name) then
 						CenterGrandStrategyMapOnTile(WorldMapProvinces.Jutland.SettlementLocation[1], WorldMapProvinces.Jutland.SettlementLocation[2])
@@ -305,7 +309,7 @@ local GermanicEvents = {
 		Conditions = function(s)
 			if (
 				EventFaction.Civilization == "germanic"
-				and (EventFaction.Name == "Asa Tribe" or EventFaction.Name == "Swede Tribe")
+				and (EventFaction.Name == "Asa Tribe" or EventFaction.Name == "Yngling Tribe")
 				and GetProvinceOwner("Jutland") == EventFaction.Name
 				and GetProvinceUnitQuantity("Jutland", "unit-germanic-warrior") >= 8 -- event only happens if player has enough warriors to successfully attack the province
 				and ProvinceHasBorderWith(WorldMapWaterProvinces.Kattegat, WorldMapProvinces.Jutland)
@@ -334,6 +338,9 @@ local GermanicEvents = {
 						SetProvinceCivilization("Sweden", "germanic")
 						AcquireProvince(WorldMapProvinces.Gotaland, EventFaction.Name)
 						AcquireProvince(WorldMapProvinces.Sweden, EventFaction.Name)
+						AddProvinceClaim("Scania", EventFaction.Civilization, EventFaction.Name)
+						AddProvinceClaim("Gotaland", EventFaction.Civilization, EventFaction.Name)
+						AddProvinceClaim("Sweden", EventFaction.Civilization, EventFaction.Name)
 						
 						for i, unitName in ipairs(Units) do
 							if (IsOffensiveMilitaryUnit(unitName)) then
@@ -362,6 +369,9 @@ local GermanicEvents = {
 					SetProvinceCivilization("Sweden", "germanic")
 					AcquireProvince(WorldMapProvinces.Gotaland, EventFaction.Name)
 					AcquireProvince(WorldMapProvinces.Sweden, EventFaction.Name)
+					AddProvinceClaim("Scania", EventFaction.Civilization, EventFaction.Name)
+					AddProvinceClaim("Gotaland", EventFaction.Civilization, EventFaction.Name)
+					AddProvinceClaim("Sweden", EventFaction.Civilization, EventFaction.Name)
 					for i, unitName in ipairs(Units) do
 						if (IsOffensiveMilitaryUnit(unitName)) then
 							SetProvinceUnitQuantity("Scania", unitName, 0)
@@ -416,7 +426,7 @@ local GermanicEvents = {
 		Conditions = function(s)
 			if (
 				EventFaction.Civilization == "germanic"
-				and (EventFaction.Name == "Asa Tribe" or EventFaction.Name == "Swede Tribe")
+				and (EventFaction.Name == "Asa Tribe" or EventFaction.Name == "Yngling Tribe")
 				and GetProvinceOwner("Sweden") == EventFaction.Name
 				and GetProvinceSettlementBuilding(WorldMapProvinces.Sweden.Name, "unit-germanic-town-hall") -- Hall of Sigtun
 				-- should require a temple having been built? when those are implemented in the game
@@ -442,7 +452,7 @@ local GermanicEvents = {
 		Conditions = function(s)
 			if (
 				EventFaction.Civilization == "germanic"
-				and (EventFaction.Name == "Asa Tribe" or EventFaction.Name == "Swede Tribe")
+				and (EventFaction.Name == "Asa Tribe" or EventFaction.Name == "Yngling Tribe")
 				and GetProvinceOwner("Sweden") == EventFaction.Name
 				and GetProvinceSettlementBuilding(WorldMapProvinces.Sweden.Name, "unit-germanic-town-hall") -- a town hall is needed, since without basic political organization there can be no lawgiving
 				and SyncRand(100) < 25
@@ -481,9 +491,13 @@ local GermanicEvents = {
 				EqualizeProvinceUnits(EventFaction)
 				if (GetProvinceOwner("Jutland") == EventFaction.Name) then
 					AcquireProvince(WorldMapProvinces.Jutland, "Skjoldung Tribe")
+					RemoveProvinceClaim("Jutland", EventFaction.Civilization, EventFaction.Name)
+					AddProvinceClaim("Jutland", "germanic", "Skjoldung Tribe")
 				end
 				if (GetProvinceOwner("Zealand") == EventFaction.Name) then
 					AcquireProvince(WorldMapProvinces.Zealand, "Skjoldung Tribe")
+					RemoveProvinceClaim("Zealand", EventFaction.Civilization, EventFaction.Name)
+					AddProvinceClaim("Zealand", "germanic", "Skjoldung Tribe")
 				end
 				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "germanic", "Skjoldung Tribe")
 			end,
@@ -492,9 +506,13 @@ local GermanicEvents = {
 				EqualizeProvinceUnits(EventFaction)
 				if (GetProvinceOwner("Jutland") == EventFaction.Name) then
 					AcquireProvince(WorldMapProvinces.Jutland, "Skjoldung Tribe")
+					RemoveProvinceClaim("Jutland", EventFaction.Civilization, EventFaction.Name)
+					AddProvinceClaim("Jutland", "germanic", "Skjoldung Tribe")
 				end
 				if (GetProvinceOwner("Zealand") == EventFaction.Name) then
 					AcquireProvince(WorldMapProvinces.Zealand, "Skjoldung Tribe")
+					RemoveProvinceClaim("Zealand", EventFaction.Civilization, EventFaction.Name)
+					AddProvinceClaim("Zealand", "germanic", "Skjoldung Tribe")
 				end
 				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "germanic", "Skjoldung Tribe")
 				GrandStrategyFaction = Factions.SkjoldungTribe
