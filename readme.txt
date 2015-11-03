@@ -43,22 +43,22 @@ Getting Wyrmsun on Steam (http://store.steampowered.com/app/370070) provides you
 
 The Stratagus engine, as well as the code, artwork, sounds, music and story elements included in Wyrmsun are distributed under the GPL 2.0 license, with the exception of the following files:
 
-/graphics/ui/backgrounds/gnashorn.png (used for Wyrmsun with permission)
-/graphics/ui/backgrounds/gnashorn_4_3.png (used for Wyrmsun with permission)
-/graphics/ui/backgrounds/gnashorn_profile.png (used for Wyrmsun with permission)
-/graphics/ui/backgrounds/gnashorn_small.png (used for Wyrmsun with permission)
-/graphics/ui/backgrounds/gryphon.png (used for Wyrmsun with permission)
-/graphics/ui/backgrounds/gryphon_4_3.png (used for Wyrmsun with permission)
-/graphics/ui/backgrounds/gryphon_profile.png (used for Wyrmsun with permission)
-/graphics/ui/backgrounds/gryphon_small.png (used for Wyrmsun with permission)
-/graphics/ui/backgrounds/wyrm.png (used for Wyrmsun with permission)
-/graphics/ui/backgrounds/wyrm_4_3.png (used for Wyrmsun with permission)
-/graphics/ui/backgrounds/wyrm_profile.png (used for Wyrmsun with permission)
-/graphics/ui/backgrounds/wyrm_small.png (used for Wyrmsun with permission)
-/graphics/ui/backgrounds/yale.png (used for Wyrmsun with permission)
-/graphics/ui/backgrounds/yale_4_3.png (used for Wyrmsun with permission)
-/graphics/ui/backgrounds/yale_profile.png (used for Wyrmsun with permission)
-/graphics/ui/backgrounds/yale_small.png (used for Wyrmsun with permission)
+/graphics/ui/backgrounds/gnashorn.png (Steam-only) (used for Wyrmsun with permission)
+/graphics/ui/backgrounds/gnashorn_4_3.png (Steam-only) (used for Wyrmsun with permission)
+/graphics/ui/backgrounds/gnashorn_profile.png (Steam-only) (used for Wyrmsun with permission)
+/graphics/ui/backgrounds/gnashorn_small.png (Steam-only) (used for Wyrmsun with permission)
+/graphics/ui/backgrounds/gryphon.png (Steam-only) (used for Wyrmsun with permission)
+/graphics/ui/backgrounds/gryphon_4_3.png (Steam-only) (used for Wyrmsun with permission)
+/graphics/ui/backgrounds/gryphon_profile.png (Steam-only) (used for Wyrmsun with permission)
+/graphics/ui/backgrounds/gryphon_small.png (Steam-only) (used for Wyrmsun with permission)
+/graphics/ui/backgrounds/wyrm.png (Steam-only) (used for Wyrmsun with permission)
+/graphics/ui/backgrounds/wyrm_4_3.png (Steam-only) (used for Wyrmsun with permission)
+/graphics/ui/backgrounds/wyrm_profile.png (Steam-only) (used for Wyrmsun with permission)
+/graphics/ui/backgrounds/wyrm_small.png (Steam-only) (used for Wyrmsun with permission)
+/graphics/ui/backgrounds/yale.png (Steam-only) (used for Wyrmsun with permission)
+/graphics/ui/backgrounds/yale_4_3.png (Steam-only) (used for Wyrmsun with permission)
+/graphics/ui/backgrounds/yale_profile.png (Steam-only) (used for Wyrmsun with permission)
+/graphics/ui/backgrounds/yale_small.png (Steam-only) (used for Wyrmsun with permission)
 /sounds/buildings/complete_barracks.wav (licensed under the CC-BY-SA 3.0)
 /sounds/buildings/complete_blacksmith.wav (licensed under the CC-BY-SA 3.0)
 /sounds/buildings/complete_civ_center.wav (licensed under the CC-BY-SA 3.0)
@@ -233,6 +233,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Grand Strategy
 - Added a new event, "Skjold's Domain", in which the southern lands of the Asa Tribe are given to the Skjoldung Tribe.
+- Added the Iceland province to the Earth map.
 
 * Map Editor
 - The editor now gives an error message when trying to save a map without any person player.
