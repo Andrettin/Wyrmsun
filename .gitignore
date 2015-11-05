@@ -11,6 +11,10 @@ stderr.txt
 stdout.txt
 stratagus.exe
 wyrmsun.exe
+wyrmsun32
+wyrmsun64
+run.sh
+linux_readme.txt
 wyrmsun_debug.lnk
 wyrmsun_multiplayer.lnk
 
