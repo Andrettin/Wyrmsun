@@ -67,33 +67,32 @@ function ChooseFaction(old_civilization, old_faction)
 
 	menu:addLabel(_("Choose Your Faction"), 128, 11)
 	
-	faction_dd = menu:addDropDown(faction_list, (256 / 2 - (152 / 2)), 55 + 26*0,
+	faction_dd = menu:addDropDown(faction_list, (256 / 2 - (152 / 2)), 55 + 26*2,
 	function(dd)
 		chosen_faction = faction_list[faction_dd:getSelected() + 1]
 	end)
 	faction_dd:setSize(152, 20)
-	
 
 	local ok_button = menu:addFullButton("~!OK", "o", 16, 248 - (36 * 0),
-		function(s)
+		function()
 			if (GameRunning and not IsNetworkGame()) then
 				SetGamePaused(false)
 			elseif (GrandStrategy) then
 				GrandStrategyGamePaused = false
 			end
-			SetPlayerData(GetThisPlayer(), "Faction", faction_list[faction_dd:getSelected() + 1])
+			NetworkSetFaction(GetThisPlayer(), faction_list[faction_dd:getSelected() + 1])
 			menu:stop()
 		end
 	)
 	
 	menu:addButton("", "return", -1, -1,
-		function(s)
+		function()
 			if (GameRunning and not IsNetworkGame()) then
 				SetGamePaused(false)
 			elseif (GrandStrategy) then
 				GrandStrategyGamePaused = false
 			end
-			SetPlayerData(GetThisPlayer(), "Faction", faction_list[faction_dd:getSelected() + 1])
+			NetworkSetFaction(GetThisPlayer(), faction_list[faction_dd:getSelected() + 1])
 			menu:stop()
 		end,
 		{0, 0}
