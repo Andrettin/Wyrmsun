@@ -249,29 +249,6 @@ DefineUnitType("unit-teuton-catapult", { Name = _("Catapult"),
 	}
 } )
 
-DefineUnitType("unit-teuton-old-man", { Name = _("Old Man"),
-	Parent = "unit-teuton-swordsman",
-	Class = "",
-	Image = {"file", "teuton/units/old_man.png", "size", {72, 72}},
-	Animations = "animations-worker", Icon = "icon-old-man",
-	HitPoints = 40,
-	BasicDamage = 6,
-	Corpse = "unit-human-dead-body",
-	Variations = {},
-	DaySightRangeBonus = 1,
-	NightSightRangeBonus = -1,
-	HackDamage = true,
-	Sounds = {
-		"selected", "basic-teuton-voices-selected-group",
-		"acknowledge", "basic-teuton-voices-acknowledge",
-		"ready", "basic-teuton-voices-ready",
-		"help", "basic-teuton-voices-help",
-		"dead", "basic-human-voices-dead",
-		"hit", "dagger-attack",
-		"miss", "attack-miss"
-	}
-} )
-
 DefineUnitType("unit-teuton-town-hall", { Name = _("Rathaus"),
 	Parent = "unit-template-town-hall",
 	Civilization = "teuton",

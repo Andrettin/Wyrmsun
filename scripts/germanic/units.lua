@@ -227,30 +227,6 @@ DefineUnitType("unit-germanic-archer", { Name = _("Skutan"),
 	}
 } )
 
-DefineUnitType("unit-germanic-old-man", { Name = _("Old Man"),
-	Parent = "unit-germanic-warrior",
-	Class = "",
-	Image = {"file", "germanic/units/old_man.png", "size", {72, 72}},
-	Animations = "animations-worker", Icon = "icon-old-man",
-	HitPoints = 40,
-	BasicDamage = 6,
-	Corpse = "unit-human-dead-body",
-	Variations = {},
-	DaySightRangeBonus = 1,
-	NightSightRangeBonus = -1,
-	HackDamage = true,
-	Sounds = {
-		"selected", "basic-germanic-voices-selected-group",
-		"acknowledge", "basic-germanic-voices-acknowledge",
-		"attack", "basic-germanic-voices-attack",
-		"ready", "basic-germanic-voices-ready",
-		"help", "basic-germanic-voices-help",
-		"dead", "basic-human-voices-dead",
-		"hit", "dagger-attack",
-		"miss", "attack-miss"
-	}
-} )
-
 DefineUnitType("unit-germanic-town-hall", { Name = _("Chieftain's Hall"),
 	Parent = "unit-template-town-hall",
 	Civilization = "germanic",

@@ -121,7 +121,6 @@ DefineModifier("upgrade-teuton-spatha",
 	{"BasicDamage", 2},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-swordsman"},
---	{"apply-to", "unit-teuton-old-man"},
 	{"apply-to", "unit-teuton-ritter"},
 	{"apply-to", "unit-hero-marbod"}
 )
@@ -207,10 +206,6 @@ DefineModifier("upgrade-teuton-civilization",
 
 DefineModifier("upgrade-teuton-civilization",
 	{"apply-to", "unit-germanic-archer"}, {"convert-to", "unit-teuton-archer"}
-)
-
-DefineModifier("upgrade-teuton-civilization",
-	{"apply-to", "unit-germanic-old-man"}, {"convert-to", "unit-teuton-old-man"}
 )
 
 DefineDependency("unit-teuton-archer",

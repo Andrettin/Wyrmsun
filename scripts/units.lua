@@ -30,14 +30,14 @@
 UnitTypeFiles = {}
 
 Units = {
-	"unit-germanic-worker", "unit-germanic-warrior", "unit-germanic-archer", "unit-germanic-old-man",
+	"unit-germanic-worker", "unit-germanic-warrior", "unit-germanic-archer",
 	"unit-germanic-town-hall", "unit-germanic-farm", "unit-germanic-barracks",
 	"unit-germanic-carpenters-shop", "unit-germanic-smithy",
 	"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield",
 	"upgrade-germanic-barbed-arrow",
 	"upgrade-germanic-wood-plow",
 	"upgrade-teuton-civilization",
-	"unit-teuton-worker", "unit-teuton-swordsman", "unit-teuton-archer", "unit-teuton-old-man",
+	"unit-teuton-worker", "unit-teuton-swordsman", "unit-teuton-archer",
 	"unit-teuton-ritter",
 	"unit-teuton-catapult",
 	"unit-teuton-town-hall", "unit-teuton-stronghold",
@@ -3984,7 +3984,7 @@ DefineUnitType("unit-template-infantry", { Name = _("Infantry"),
 		{
 			"frame", 34,
 			"overlay-frame", 4,
-			"x-offset", 4,
+			"x-offset", -4,
 			"y-offset", -2
 		},
 		{
