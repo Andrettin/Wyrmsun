@@ -229,7 +229,7 @@ https://github.com/Andrettin/Wyrmsun
 -----------------------------------------------------------------------
 
 * Factions
-- Factions can now be chosen in-game instead of being randomly set unless pre-chosen.
+- Factions can now be chosen in-game.
 
 -----------------------------------------------------------------------
 - 1.5.2
