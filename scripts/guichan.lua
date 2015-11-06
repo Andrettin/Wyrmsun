@@ -1436,6 +1436,7 @@ Load("scripts/menus/achievements.lua")
 Load("scripts/menus/mods.lua")
 Load("scripts/grand_strategy/grand_strategy.lua")
 Load("scripts/menus/encyclopedia.lua")
+Load("scripts/menus/factions.lua")
 
 SetGrabMouse(wyr.preferences.GrabMouse)
 

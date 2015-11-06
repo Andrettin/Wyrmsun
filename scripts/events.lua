@@ -597,7 +597,7 @@ function Event(speaker, event_description, player, options, option_effects, even
 		
 		if (table.getn(options) == 1) then -- for events with just one option, allow enter to be used as a way to close the event dialogue
 			menu:addButton("", "return", -1, -1,
-				function()
+				function(s)
 					SetGamePaused(false)
 					menu:stop()
 					option_effects[1]()

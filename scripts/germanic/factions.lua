@@ -38,7 +38,8 @@ DefineFaction("Skjoldung Tribe", { -- mythical Danish dynasty, Skjöldr was a son
 	Type = "tribe",
 	Color = "red",
 	SecondaryColor = "white",
-	DevelopsTo = {"Dane Tribe", "Goth Tribe", "Herulian Tribe", "Jute Tribe"}
+--	DevelopsTo = {"Dane Tribe", "Goth Tribe", "Herulian Tribe", "Jute Tribe"}
+	DevelopsTo = {"Dane Tribe", "Goth Tribe", "Herulian Tribe"}
 })
 
 DefineFaction("Yngling Tribe", { -- mythical Swedish dynasty, Yngve was a son of Odin set to succeed him in the rule of Sweden; Source: Snorri Sturlson, "The Prose Edda", 1916, p. 9.
@@ -48,4 +49,3 @@ DefineFaction("Yngling Tribe", { -- mythical Swedish dynasty, Yngve was a son of
 	SecondaryColor = "yellow",
 	DevelopsTo = {"Goth Tribe", "Swede Tribe"}
 })
-
