@@ -67,11 +67,24 @@ function ChooseFaction(old_civilization, old_faction)
 
 	menu:addLabel(_("Choose Your Faction"), 128, 11)
 	
-	faction_dd = menu:addDropDown(faction_list, (256 / 2 - (152 / 2)), 55 + 26*2,
+	faction_dd = menu:addDropDown(faction_list, (256 / 2 - (152 / 2)), 55 + 26*1,
 	function(dd)
 		chosen_faction = faction_list[faction_dd:getSelected() + 1]
 	end)
 	faction_dd:setSize(152, 20)
+	
+	-- faction effects
+	local l = MultiLineLabel()
+	l:setFont(Fonts["game"])
+	l:setSize(228, 192)
+	l:setLineWidth(228)
+	menu:add(l, 14, 3 + (32 * 4))
+	l:setCaption(_(GetFactionEffectsString(current_civilization, faction_list[faction_dd:getSelected() + 1])))
+	local function listen()
+		l:setCaption(_(GetFactionEffectsString(current_civilization, faction_list[faction_dd:getSelected() + 1])))
+	end
+	local listener = LuaActionListener(listen)
+	menu:addLogicCallback(listener)
 
 	local ok_button = menu:addFullButton("~!OK", "o", 16, 248 - (36 * 0),
 		function()
