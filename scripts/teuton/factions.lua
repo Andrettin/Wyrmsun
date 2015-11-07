@@ -37,7 +37,7 @@ DefineFaction("Suebi Tribe", {
 
 DefineFaction("Alamanni Tribe", {
 	Civilization = "teuton",
-	ParentFaction = "Suebi Tribe",
+--	ParentFaction = "Suebi Tribe",
 	Type = "tribe",
 	Color = "blue",
 	SecondaryColor = "blue",
