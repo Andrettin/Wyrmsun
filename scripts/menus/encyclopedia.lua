@@ -173,27 +173,38 @@ function addEncyclopediaIcon(unit_name, menu, x, y)
 	local encyclopedia_icon
 	local encyclopedia_icon_frame = 0
 	local civilization
+	local faction
 	local tooltip_name = ""
 	local tooltip_civilization = ""
 	if (string.find(unit_name, "upgrade-") == nil) then
 		encyclopedia_icon = CIcon:Get(GetUnitTypeData(unit_name, "Icon")).G
 		encyclopedia_icon_frame = CIcon:Get(GetUnitTypeData(unit_name, "Icon")).Frame
 		civilization = GetUnitTypeData(unit_name, "Civilization")
+		faction = GetUnitTypeData(unit_name, "Faction")
 		if (GetUnitTypeData(unit_name, "Hero") == false) then
 			tooltip_name = GetUnitTypeData(unit_name, "Name")
 		else
 			tooltip_name = GetUnitTypeData(unit_name, "DefaultName")
 		end
-		if (GetUnitTypeData(unit_name, "Civilization") ~= "") then
-			tooltip_civilization = "(" ..  _(CapitalizeString(GetUnitTypeData(unit_name, "Civilization"))) .. ")"
+		if (civilization ~= "") then
+			tooltip_civilization = "(" ..  _(CapitalizeString(civilization))
+			if (faction ~= "") then
+				tooltip_civilization = tooltip_civilization ..  " - " .. _(FullyCapitalizeString(string.gsub(faction, "-", " ")))
+			end
+			tooltip_civilization = tooltip_civilization .. ")"
 		end
 	else
 		encyclopedia_icon = CUpgrade:Get(unit_name).Icon.G
 		encyclopedia_icon_frame = CUpgrade:Get(unit_name).Icon.Frame
 		civilization = CUpgrade:Get(unit_name).Civilization
+		faction = CUpgrade:Get(unit_name).Faction
 		tooltip_name = CUpgrade:Get(unit_name).Name
-		if (CUpgrade:Get(unit_name).Civilization ~= "") then
-			tooltip_civilization = "(" ..  _(CapitalizeString(CUpgrade:Get(unit_name).Civilization)) .. ")"
+		if (civilization ~= "") then
+			tooltip_civilization = "(" ..  _(CapitalizeString(civilization))
+			if (faction ~= "") then
+				tooltip_civilization = tooltip_civilization ..  ": " .. _(FullyCapitalizeString(string.gsub(faction, "-", " ")))
+			end
+			tooltip_civilization = tooltip_civilization .. ")"
 		end
 	end
 	encyclopedia_icon:Load()
@@ -233,6 +244,7 @@ function addEncyclopediaIcon(unit_name, menu, x, y)
 			l:setLineWidth(Video.Width - 64)
 			encyclopedia_entry_menu:add(l, 32, offy + 104 + 36*0 + 18)
 			local civilization = ""
+			local faction = ""
 			local unit_type_class = ""
 			local description = ""
 			local quote = ""
@@ -240,6 +252,9 @@ function addEncyclopediaIcon(unit_name, menu, x, y)
 			if (string.find(unit_name, "upgrade-") == nil) then
 				if (GetUnitTypeData(unit_name, "Civilization") ~= "") then
 					civilization = "Civilization: " .. _(CapitalizeString(GetUnitTypeData(unit_name, "Civilization"))) .. "\n\n"
+				end
+				if (GetUnitTypeData(unit_name, "Faction") ~= "") then
+					faction = "Faction: " .. _(CapitalizeString(GetUnitTypeData(unit_name, "Faction"))) .. "\n\n"
 				end
 				if (GetUnitTypeData(unit_name, "Class") ~= "") then
 					unit_type_class = "Class: " .. _(FullyCapitalizeString(string.gsub(GetUnitTypeData(unit_name, "Class"), "-", " "))) .. "\n\n"
@@ -257,6 +272,9 @@ function addEncyclopediaIcon(unit_name, menu, x, y)
 				if (CUpgrade:Get(unit_name).Civilization ~= "") then
 					civilization = "Civilization: " .. CapitalizeString(CUpgrade:Get(unit_name).Civilization) .. "\n\n"
 				end
+				if (CUpgrade:Get(unit_name).Faction ~= "") then
+					faction = "Faction: " .. CapitalizeString(CUpgrade:Get(unit_name).Faction) .. "\n\n"
+				end
 				if (CUpgrade:Get(unit_name).Class ~= "") then
 					unit_type_class = "Class: " .. _(FullyCapitalizeString(string.gsub(CUpgrade:Get(unit_name).Class, "-", " "))) .. "\n\n"
 				end
@@ -270,8 +288,7 @@ function addEncyclopediaIcon(unit_name, menu, x, y)
 					background = "\n\nBackground: " .. CUpgrade:Get(unit_name).Background
 				end
 			end
-			l:setCaption(civilization .. unit_type_class .. description .. quote .. background)
---			l:setCaption(civilization .. description .. quote .. background)
+			l:setCaption(civilization .. faction .. unit_type_class .. description .. quote .. background)
 			
 			-- add buttons of texts related to the subject matter of the entry
 			local chapter_references = 0
