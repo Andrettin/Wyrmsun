@@ -17982,7 +17982,7 @@ if (GrandStrategyYear >= -264) then
 	SetProvinceCivilization("Posen", "goth")
 	SetProvinceSettlementBuilding("Posen", "unit-teuton-town-hall", true)
 	AcquireFactionTechnologies("goth", "Goth Tribe", "goth", "Burgundian Tribe")
-	AddProvinceClaim("Posen", "teuton", "Burgundian Tribe")	
+	AddProvinceClaim("Posen", "goth", "Burgundian Tribe")	
 	
 	SetProvinceOwner("Lithuania", "slav", "Aestui Tribe")
 	SetProvinceCivilization("Lithuania", "slav")

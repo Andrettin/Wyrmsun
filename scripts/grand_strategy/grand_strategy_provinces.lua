@@ -1023,7 +1023,7 @@ function LoadProvinces(world)
 			Claims = {
 				"minoan", "Minoan Tribe",
 				"minoan", "Crete",
-				"greek", "Crete"
+				"greek", "Krete"
 			}
 		},
 		Crimea = {
@@ -3103,7 +3103,7 @@ function LoadProvinces(world)
 			Claims = {
 				"basque", "Ertebolle Tribe",
 				"basque", "Gylfing Tribe",
-				"teuton", "Dane Tribe"
+				"norse", "Dane Tribe"
 			}
 		},
 		Schleswig = {
