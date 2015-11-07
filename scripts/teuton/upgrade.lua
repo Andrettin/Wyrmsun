@@ -117,6 +117,11 @@ DefineUpgrade("upgrade-teuton-writing", {
 	TechnologyPointCost = 1
 })
 
+DefineUpgrade("upgrade-suebi-tribe-faction", {
+	Name = _("Suebi Tribe Faction"),
+	Ability = false
+})
+
 DefineModifier("upgrade-teuton-spatha",
 	{"BasicDamage", 2},
 	{"Points", 10},
@@ -208,6 +213,10 @@ DefineModifier("upgrade-teuton-civilization",
 	{"apply-to", "unit-germanic-archer"}, {"convert-to", "unit-teuton-archer"}
 )
 
+DefineModifier("upgrade-suebi-tribe-faction",
+	{"apply-to", "unit-teuton-swordsman"}, {"convert-to", "unit-suebi-swordsman"}
+)
+
 DefineDependency("unit-teuton-archer",
 	{"unit-teuton-lumber-mill"}
 )
@@ -258,4 +267,8 @@ DefineDependency("unit-teuton-stables",
 
 DefineDependency("unit-teuton-ritter",
 	{"unit-teuton-smithy", "unit-teuton-stables"}
+)
+
+DefineDependency("unit-suebi-swordsman",
+	{"upgrade-suebi-tribe-faction"}
 )

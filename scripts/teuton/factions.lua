@@ -25,12 +25,14 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineFaction("Angle Tribe", {
+DefineFaction("Suebi Tribe", {
 	Civilization = "teuton",
 	Type = "tribe",
-	Color = "white",
-	SecondaryColor = "white",
-	DevelopsTo = {"England", "Scotland"}
+	Color = "black",
+	SecondaryColor = "black",
+	DefaultTier = "duchy",
+	DevelopsTo = {"Galicia", "Bavaria", "Austria"},
+	FactionUpgrade = "upgrade-suebi-tribe-faction"
 })
 
 DefineFaction("Alamanni Tribe", {
@@ -50,6 +52,14 @@ DefineFaction("Ampsivarii Tribe", {
 	DevelopsTo = {"Drenthe", "Netherlands"} -- same general area
 })
 
+DefineFaction("Angle Tribe", {
+	Civilization = "teuton",
+	Type = "tribe",
+	Color = "white",
+	SecondaryColor = "white",
+	DevelopsTo = {"England", "Scotland"}
+})
+
 DefineFaction("Avione Tribe", {
 	Civilization = "teuton",
 	Type = "tribe",
@@ -63,15 +73,6 @@ DefineFaction("Batavian Tribe", {
 	Color = "orange",
 	SecondaryColor = "orange",
 	DevelopsTo = {"Holland", "Netherlands"} -- same general area
-})
-
-DefineFaction("Bavarian Tribe", {
-	Civilization = "teuton",
-	ParentFaction = "Marcomanni Tribe",
-	Type = "tribe",
-	Color = "cyan",
-	SecondaryColor = "white",
-	DevelopsTo = {"Bavaria", "Austria"}
 })
 
 DefineFaction("Buri Tribe", {
@@ -171,6 +172,15 @@ DefineFaction("Marcomanni Tribe", {
 	DevelopsTo = {"Bavaria", "Galicia", "Austria"}
 })
 
+DefineFaction("Bavarian Tribe", {
+	Civilization = "teuton",
+--	ParentFaction = "Marcomanni Tribe",
+	Type = "tribe",
+	Color = "cyan",
+	SecondaryColor = "white",
+	DevelopsTo = {"Bavaria", "Austria"}
+})
+
 DefineFaction("Quadi Tribe", {
 	Civilization = "teuton",
 	ParentFaction = "Suebi Tribe",
@@ -195,15 +205,6 @@ DefineFaction("Semnone Tribe", {
 	Color = "black",
 	SecondaryColor = "black",
 	DevelopsTo = {"Suebi Tribe", "Bavaria", "Austria"}
-})
-
-DefineFaction("Suebi Tribe", {
-	Civilization = "teuton",
-	Type = "tribe",
-	Color = "black",
-	SecondaryColor = "black",
-	DefaultTier = "duchy",
-	DevelopsTo = {"Galicia", "Bavaria", "Austria"}
 })
 
 DefineFaction("Sugambri Tribe", {
@@ -231,19 +232,6 @@ DefineFaction("Varini Tribe", {
 
 -- Teuton polities
 
-DefineFaction("Austria", {
-	Civilization = "teuton",
-	ParentFaction = "Bavaria",
-	Type = "polity",
-	Color = "white",
-	SecondaryColor = "red",
-	DefaultTier = "duchy",
-	Titles = {
-		"monarchy", "duchy", "Duchy",
-		"monarchy", "grand duchy", "Archduchy"
-	}
-})
-
 DefineFaction("Baden", {
 	Civilization = "teuton",
 	ParentFaction = "Alamanni Tribe",
@@ -266,6 +254,19 @@ DefineFaction("Bavaria", {
 	Titles = {
 		"monarchy", "duchy", "Duchy",
 		"monarchy", "kingdom", "Kingdom"
+	}
+})
+
+DefineFaction("Austria", {
+	Civilization = "teuton",
+	ParentFaction = "Bavaria",
+	Type = "polity",
+	Color = "white",
+	SecondaryColor = "red",
+	DefaultTier = "duchy",
+	Titles = {
+		"monarchy", "duchy", "Duchy",
+		"monarchy", "grand duchy", "Archduchy"
 	}
 })
 
