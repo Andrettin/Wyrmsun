@@ -932,7 +932,13 @@ function StandardTriggers()
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Krieger") == false) then
 			AddTrigger(
 				function()
-					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-teuton-swordsman") then
+					if (
+						table.getn(GetSelectedUnits()) > 0
+						and (
+							GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-teuton-swordsman"
+							or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-suebi-swordsman"
+						)
+					) then
 						return true
 					else
 						return false
@@ -1560,7 +1566,7 @@ function GetUnitTypeLevelUpUpgrades(unit_type)
 		return { "upgrade-critical-strike", "upgrade-sword-mastery", "upgrade-deadly-precision", "upgrade-eagle-eye" }
 	elseif (unit_type == "unit-germanic-archer" or unit_type == "unit-teuton-archer") then
 		return { "upgrade-critical-strike", "upgrade-deadly-precision", "upgrade-eagle-eye" }
-	elseif (unit_type == "unit-teuton-swordsman") then
+	elseif (unit_type == "unit-teuton-swordsman" or unit_type == "unit-suebi-swordsman") then
 --		return { "unit-teuton-ritter" }
 		return { "upgrade-critical-strike", "upgrade-sword-mastery", "upgrade-deadly-precision", "upgrade-eagle-eye" }
 	elseif (unit_type == "unit-teuton-ritter") then

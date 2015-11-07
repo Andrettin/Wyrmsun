@@ -39,35 +39,35 @@ function AiLandAttackDefensive()
 		end
 	end
 	
-	local town_halls = GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", AiTownHall())
+	local town_halls = GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("town-hall"))
 	if (GetAiUnitType("stronghold") ~= nil) then
 		town_halls = town_halls + GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("stronghold"))
 	end
 	
-	if (CheckDependency(AiPlayer(), AiTownHall()) and town_halls < 1) then
-		AiSet(AiTownHall(), 1)
+	if (CheckDependency(AiPlayer(), GetAiUnitType("town-hall")) and town_halls < 1) then
+		AiSet(GetAiUnitType("town-hall"), 1)
 	end
-	if (CheckDependency(AiPlayer(), AiWorker()) and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", AiWorker()) < 1) then
-		AiSet(AiWorker(), 1)
+	if (CheckDependency(AiPlayer(), GetAiUnitType("worker")) and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("worker")) < 1) then
+		AiSet(GetAiUnitType("worker"), 1)
 	end
-	if (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", AiWorker()) >= 1 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", AiWorker()) < 5) then
-		AiSet(AiWorker(), 5)
+	if (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("worker")) >= 1 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("worker")) < 5) then
+		AiSet(GetAiUnitType("worker"), 5)
 	end
 	
 	if (
 		town_halls >= 1
-		and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", AiWorker()) >= 5
+		and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("worker")) >= 5
 	) then -- only begin building more structures if there is at least one town hall and a minimum quantity of workers is present
 		if (CheckDependency(AiPlayer(), GetAiUnitType("barracks")) and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("barracks")) < 1 and (GameCycle >= 2500 or GameSettings.Difficulty ~= 1)) then -- wait a bit with doing things for easy difficulty
 			AiSet(GetAiUnitType("barracks"), 1)
 		end
-		if (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("barracks")) >= 1 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", AiWorker()) >= 5 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", AiWorker()) < (10 * town_halls)) then
-			AiSet(AiWorker(), (10 * town_halls)) -- 10 workers per town hall
+		if (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("barracks")) >= 1 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("worker")) >= 5 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("worker")) < (10 * town_halls)) then
+			AiSet(GetAiUnitType("worker"), (10 * town_halls)) -- 10 workers per town hall
 		end
-		if (CheckDependency(AiPlayer(), AiLumberMill()) and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("barracks")) >= 1 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", AiWorker()) >= 10 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", AiLumberMill()) < 1 and (GameCycle >= 5000 or GameSettings.Difficulty ~= 1)) then
-			AiSet(AiLumberMill(), 1)
+		if (CheckDependency(AiPlayer(), GetAiUnitType("lumber-mill")) and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("barracks")) >= 1 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("worker")) >= 10 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("lumber-mill")) < 1 and (GameCycle >= 5000 or GameSettings.Difficulty ~= 1)) then
+			AiSet(GetAiUnitType("lumber-mill"), 1)
 		end
-		if (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("barracks")) >= 1 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", AiWorker()) >= 10 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", AiLumberMill()) >= 1 and (GameCycle >= 7500 or GameSettings.Difficulty ~= 1)) then
+		if (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("barracks")) >= 1 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("worker")) >= 10 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("lumber-mill")) >= 1 and (GameCycle >= 7500 or GameSettings.Difficulty ~= 1)) then
 			if (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("barracks")) < 2) then
 				AiSet(GetAiUnitType("barracks"), 2)
 			end
@@ -77,22 +77,22 @@ function AiLandAttackDefensive()
 		end
 		
 		if (
-			CheckDependency(AiPlayer(), AiSmithy())
+			CheckDependency(AiPlayer(), GetAiUnitType("smithy"))
 			and (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("barracks")) >= 2 or (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("barracks")) >= 1 and GetPlayerData(AiPlayer(), "Faction") == "Shorbear Clan")) -- The Shorbears are masterful crafters of tools, so they probably should invest in smithing sooner rather than later
-			and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", AiWorker()) >= 10 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", AiSmithy()) < 1
+			and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("worker")) >= 10 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("smithy")) < 1
 			and (GameCycle >= 10000 or GameSettings.Difficulty ~= 1)
 		) then
-			AiSet(AiSmithy(), 1)
+			AiSet(GetAiUnitType("smithy"), 1)
 		end
 		
 		if (
 			(GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("barracks")) >= 2 or (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("barracks")) >= 1 and GetPlayerData(AiPlayer(), "Faction") == "Shorbear Clan")) -- The Shorbears are masterful crafters of tools, so they probably should invest in smithing sooner rather than later
-			and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", AiWorker()) >= 10
-			and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", AiSmithy()) >= 1
+			and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("worker")) >= 10
+			and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("smithy")) >= 1
 		) then -- if has a smithy and two barracks, begin researching upgrades
 			if not (GetPlayerData(AiPlayer(), "Faction") == "Eikinskjaldi Clan") then -- The Eikinskjaldi Clan focuses on shields and avoids weapon upgrades
-				if (AiUpgradeWeapon1() ~= nil and CheckDependency(AiPlayer(), AiUpgradeWeapon1())) then
-					AiResearch(AiUpgradeWeapon1())
+				if (GetAiUnitType("melee-weapon-1") ~= nil and CheckDependency(AiPlayer(), GetAiUnitType("melee-weapon-1"))) then
+					AiResearch(GetAiUnitType("melee-weapon-1"))
 				end
 			end
 			if not (GetPlayerData(AiPlayer(), "Faction") == "Shinsplitter Clan") then -- Shinsplitters are more offensive, and use less armor in combat
@@ -101,8 +101,8 @@ function AiLandAttackDefensive()
 				end
 			end
 			if not (GetPlayerData(AiPlayer(), "Faction") == "Eikinskjaldi Clan") then -- The Eikinskjaldi Clan focuses on shields and avoids weapon upgrades
-				if (AiUpgradeWeapon2() ~= nil and CheckDependency(AiPlayer(), AiUpgradeWeapon2())) then
-					AiResearch(AiUpgradeWeapon2())
+				if (GetAiUnitType("melee-weapon-2") ~= nil and CheckDependency(AiPlayer(), GetAiUnitType("melee-weapon-2"))) then
+					AiResearch(GetAiUnitType("melee-weapon-2"))
 				end
 			end
 			if not (GetPlayerData(AiPlayer(), "Faction") == "Shinsplitter Clan") then -- Shinsplitters are more offensive, and use less armor in combat
@@ -112,15 +112,15 @@ function AiLandAttackDefensive()
 			end
 		end
 		
-		if (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("barracks")) >= 2 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", AiWorker()) >= 10 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", AiLumberMill()) >= 1) then -- if has a lumber mill and two barracks, begin researching upgrades
-			if (AiUpgradeMissile1() ~= nil and CheckDependency(AiPlayer(), AiUpgradeMissile1())) then
-				AiResearch(AiUpgradeMissile1())
+		if (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("barracks")) >= 2 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("worker")) >= 10 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("lumber-mill")) >= 1) then -- if has a lumber mill and two barracks, begin researching upgrades
+			if (GetAiUnitType("ranged-projectile-1") ~= nil and CheckDependency(AiPlayer(), GetAiUnitType("ranged-projectile-1"))) then
+				AiResearch(GetAiUnitType("ranged-projectile-1"))
 			end
 			if (GetAiUnitType("iron-tipped-wood-plow") ~= nil and CheckDependency(AiPlayer(), GetAiUnitType("iron-tipped-wood-plow"))) then
 				AiResearch(GetAiUnitType("iron-tipped-wood-plow"))
 			end
-			if (AiUpgradeMissile2() ~= nil and CheckDependency(AiPlayer(), AiUpgradeMissile2())) then
-				AiResearch(AiUpgradeMissile2())
+			if (GetAiUnitType("ranged-projectile-2") ~= nil and CheckDependency(AiPlayer(), GetAiUnitType("ranged-projectile-2"))) then
+				AiResearch(GetAiUnitType("ranged-projectile-2"))
 			end
 		end
 		if (AiGetRace() == "germanic" and CheckDependency(AiPlayer(), "upgrade-teuton-civilization")) then -- if is Germanic and can develop Teuton civilization, do so now
@@ -129,12 +129,12 @@ function AiLandAttackDefensive()
 		
 		if (
 			GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("barracks")) >= 2
-			and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", AiWorker()) >= 10
-			and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", AiLumberMill()) >= 1
-			and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", AiSmithy()) >= 1
-			and (AiUpgradeWeapon2() == nil or GetPlayerData(AiPlayer(), "Allow", AiUpgradeWeapon2()) == "R" or GetPlayerData(AiPlayer(), "Faction") == "Eikinskjaldi Clan") -- The Eikinskjaldi Clan focuses on shields and avoids weapon upgrades
+			and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("worker")) >= 10
+			and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("lumber-mill")) >= 1
+			and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("smithy")) >= 1
+			and (GetAiUnitType("melee-weapon-2") == nil or GetPlayerData(AiPlayer(), "Allow", GetAiUnitType("melee-weapon-2")) == "R" or GetPlayerData(AiPlayer(), "Faction") == "Eikinskjaldi Clan") -- The Eikinskjaldi Clan focuses on shields and avoids weapon upgrades
 			and (GetAiUnitType("iron-shield") == nil or GetPlayerData(AiPlayer(), "Allow", GetAiUnitType("iron-shield")) == "R" or GetPlayerData(AiPlayer(), "Faction") == "Shinsplitter Clan") -- Shinsplitters are more offensive, and use less armor in combat
-			and (AiUpgradeMissile2() == nil or GetPlayerData(AiPlayer(), "Allow", AiUpgradeMissile2()) == "R")
+			and (GetAiUnitType("ranged-projectile-2") == nil or GetPlayerData(AiPlayer(), "Allow", GetAiUnitType("ranged-projectile-2")) == "R")
 			and (GetAiUnitType("iron-tipped-wood-plow") == nil or GetPlayerData(AiPlayer(), "Allow", GetAiUnitType("iron-tipped-wood-plow")) == "R")
 			and (GameCycle >= 15000 or GameSettings.Difficulty ~= 1)
 		) then -- research masonry and upgrade to stronghold
@@ -146,7 +146,7 @@ function AiLandAttackDefensive()
 				local town_hall_upgrading = false
 				local uncount = GetUnits(AiPlayer())
 				for unit1 = 1,table.getn(uncount) do 
-					if (GetUnitVariable(uncount[unit1], "Ident") == AiTownHall() and GetUnitVariable(uncount[unit1], "UpgradeTo", "Max") > 0) then -- the "max" value of "UpgradeTo" is the time cost of the unit type to which the hall is being upgraded
+					if (GetUnitVariable(uncount[unit1], "Ident") == GetAiUnitType("town-hall") and GetUnitVariable(uncount[unit1], "UpgradeTo", "Max") > 0) then -- the "max" value of "UpgradeTo" is the time cost of the unit type to which the hall is being upgraded
 						town_hall_upgrading = true
 					end
 				end
@@ -155,7 +155,7 @@ function AiLandAttackDefensive()
 				end
 			end
 			if (AiGetRace() == "goblin") then -- if is goblin, train a glider
-				AiSet(AiGlider(), 1)
+				AiSet(GetAiUnitType("glider"), 1)
 			end
 		end
 		
@@ -169,78 +169,78 @@ function AiLandAttackDefensive()
 			if (GetAiUnitType("writing") ~= nil and CheckDependency(AiPlayer(), GetAiUnitType("writing"))) then
 				AiResearch(GetAiUnitType("writing")) -- if has a stronghold, research writing
 			end
-			AiSet(AiTownHall(), 2) -- make an expansion
+			AiSet(GetAiUnitType("town-hall"), 2) -- make an expansion
 			AiSet(GetAiUnitType("barracks"), 3)
 		end
 		
-		if (GetAiUnitType("stronghold") ~= nil and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", AiSmithy()) >= 1 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("barracks")) >= 2 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("stronghold")) >= 1) then -- if has a stronghold, a smithy and two barracks, begin researching siege projectile upgrades
-			if (AiUpgradeSiegeProjectile1() ~= nil and CheckDependency(AiPlayer(), AiUpgradeSiegeProjectile1())) then
-				AiResearch(AiUpgradeSiegeProjectile1())
+		if (GetAiUnitType("stronghold") ~= nil and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("smithy")) >= 1 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("barracks")) >= 2 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("stronghold")) >= 1) then -- if has a stronghold, a smithy and two barracks, begin researching siege projectile upgrades
+			if (GetAiUnitType("siege-projectile-1") ~= nil and CheckDependency(AiPlayer(), GetAiUnitType("siege-projectile-1"))) then
+				AiResearch(GetAiUnitType("siege-projectile-1"))
 			end
-			if (AiUpgradeSiegeProjectile2() ~= nil and CheckDependency(AiPlayer(), AiUpgradeSiegeProjectile2())) then
-				AiResearch(AiUpgradeSiegeProjectile2())
+			if (GetAiUnitType("siege-projectile-2") ~= nil and CheckDependency(AiPlayer(), GetAiUnitType("siege-projectile-2"))) then
+				AiResearch(GetAiUnitType("siege-projectile-2"))
 			end
 		end
 	end
 	
 	if (
 		town_halls >= 1
-		and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", AiWorker()) >= 5
+		and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("worker")) >= 5
 	) then -- only begin attacking/training if there is at least one town hall and a minimum quantity of workers is present
 		-- train units / attack
-		if (CheckDependency(AiPlayer(), AiSoldier()) and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("barracks")) >= 1 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", AiLumberMill()) < 1) then
-			if (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", AiSoldier()) < 3 and force_attacking[AiPlayer()] == false) then
-				AiSet(AiSoldier(), 3)
+		if (CheckDependency(AiPlayer(), GetAiUnitType("infantry")) and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("barracks")) >= 1 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("lumber-mill")) < 1) then
+			if (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("infantry")) < 3 and force_attacking[AiPlayer()] == false) then
+				AiSet(GetAiUnitType("infantry"), 3)
 			end
-		elseif (CheckDependency(AiPlayer(), AiSoldier()) and CheckDependency(AiPlayer(), AiShooter()) and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("barracks")) >= 1 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("barracks")) < 2 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", AiLumberMill()) >= 1) then
-			if (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", AiSoldier()) < 3 and force_attacking[AiPlayer()] == false) then
-				AiSet(AiSoldier(), 3)
+		elseif (CheckDependency(AiPlayer(), GetAiUnitType("infantry")) and CheckDependency(AiPlayer(), GetAiUnitType("shooter")) and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("barracks")) >= 1 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("barracks")) < 2 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("lumber-mill")) >= 1) then
+			if (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("infantry")) < 3 and force_attacking[AiPlayer()] == false) then
+				AiSet(GetAiUnitType("infantry"), 3)
 			end
-			if (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", AiShooter()) < 1 and force_attacking[AiPlayer()] == false) then
-				AiSet(AiShooter(), 1)
+			if (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("shooter")) < 1 and force_attacking[AiPlayer()] == false) then
+				AiSet(GetAiUnitType("shooter"), 1)
 			end
-		elseif (CheckDependency(AiPlayer(), AiSoldier()) and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("barracks")) >= 2 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", AiLumberMill()) < 1) then
-			if (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", AiSoldier()) < 6 and force_attacking[AiPlayer()] == false) then
-				AiSet(AiSoldier(), 6)
+		elseif (CheckDependency(AiPlayer(), GetAiUnitType("infantry")) and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("barracks")) >= 2 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("lumber-mill")) < 1) then
+			if (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("infantry")) < 6 and force_attacking[AiPlayer()] == false) then
+				AiSet(GetAiUnitType("infantry"), 6)
 			end
-		elseif (CheckDependency(AiPlayer(), AiSoldier()) and CheckDependency(AiPlayer(), AiShooter()) and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("barracks")) >= 2 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", AiLumberMill()) >= 1 and (GetAiUnitType("stronghold") == nil or GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("stronghold")) < 1)) then
-			if (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", AiSoldier()) < 6 and force_attacking[AiPlayer()] == false) then
-				AiSet(AiSoldier(), 6)
+		elseif (CheckDependency(AiPlayer(), GetAiUnitType("infantry")) and CheckDependency(AiPlayer(), GetAiUnitType("shooter")) and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("barracks")) >= 2 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("lumber-mill")) >= 1 and (GetAiUnitType("stronghold") == nil or GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("stronghold")) < 1)) then
+			if (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("infantry")) < 6 and force_attacking[AiPlayer()] == false) then
+				AiSet(GetAiUnitType("infantry"), 6)
 			end
-			if (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", AiShooter()) < 3 and force_attacking[AiPlayer()] == false) then
-				AiSet(AiShooter(), 3)
+			if (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("shooter")) < 3 and force_attacking[AiPlayer()] == false) then
+				AiSet(GetAiUnitType("shooter"), 3)
 			end
-		elseif (GetAiUnitType("stronghold") ~= nil and CheckDependency(AiPlayer(), AiSoldier()) and CheckDependency(AiPlayer(), AiShooter()) and CheckDependency(AiPlayer(), AiSiegeWeapon()) and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("barracks")) >= 2 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", AiLumberMill()) >= 1 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("stronghold")) >= 1) then -- if has stronghold, begin building siege weapons
-			if (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", AiSoldier()) < 12 and force_attacking[AiPlayer()] == false) then
-				AiSet(AiSoldier(), 12)
+		elseif (GetAiUnitType("stronghold") ~= nil and CheckDependency(AiPlayer(), GetAiUnitType("infantry")) and CheckDependency(AiPlayer(), GetAiUnitType("shooter")) and CheckDependency(AiPlayer(), GetAiUnitType("siege-engine")) and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("barracks")) >= 2 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("lumber-mill")) >= 1 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("stronghold")) >= 1) then -- if has stronghold, begin building siege weapons
+			if (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("infantry")) < 12 and force_attacking[AiPlayer()] == false) then
+				AiSet(GetAiUnitType("infantry"), 12)
 			end
-			if (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", AiShooter()) < 6 and force_attacking[AiPlayer()] == false) then
-				AiSet(AiShooter(), 6)
+			if (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("shooter")) < 6 and force_attacking[AiPlayer()] == false) then
+				AiSet(GetAiUnitType("shooter"), 6)
 			end
-			if (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", AiSiegeWeapon()) < 2 and force_attacking[AiPlayer()] == false) then
-				AiSet(AiSiegeWeapon(), 2)
+			if (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("siege-engine")) < 2 and force_attacking[AiPlayer()] == false) then
+				AiSet(GetAiUnitType("siege-engine"), 2)
 			end
 		elseif (
 			GetAiUnitType("stronghold") ~= nil
-			and CheckDependency(AiPlayer(), AiSoldier())
-			and CheckDependency(AiPlayer(), AiShooter())
-			and CheckDependency(AiPlayer(), AiSiegeWeapon())
+			and CheckDependency(AiPlayer(), GetAiUnitType("infantry"))
+			and CheckDependency(AiPlayer(), GetAiUnitType("shooter"))
+			and CheckDependency(AiPlayer(), GetAiUnitType("siege-engine"))
 			and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("barracks")) >= 2
-			and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", AiLumberMill()) >= 1
+			and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("lumber-mill")) >= 1
 			and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("stronghold")) >= 1
 			and GetAiUnitType("cavalry") ~= nil
 			and CheckDependency(AiPlayer(), GetAiUnitType("cavalry"))
 			and GetAiUnitType("stables") ~= nil
 			and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("stables")) >= 1
 		) then -- if has stronghold and stables, use cavalry units
-			if (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", AiSoldier()) < 12 and force_attacking[AiPlayer()] == false) then
-				AiSet(AiSoldier(), 12)
+			if (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("infantry")) < 12 and force_attacking[AiPlayer()] == false) then
+				AiSet(GetAiUnitType("infantry"), 12)
 			end
-			if (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", AiShooter()) < 12 and force_attacking[AiPlayer()] == false) then
-				AiSet(AiShooter(), 12)
+			if (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("shooter")) < 12 and force_attacking[AiPlayer()] == false) then
+				AiSet(GetAiUnitType("shooter"), 12)
 			end
-			if (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", AiSiegeWeapon()) < 3 and force_attacking[AiPlayer()] == false) then
-				AiSet(AiSiegeWeapon(), 3)
+			if (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("siege-engine")) < 3 and force_attacking[AiPlayer()] == false) then
+				AiSet(GetAiUnitType("siege-engine"), 3)
 			end
 			if (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("cavalry")) < 9 and force_attacking[AiPlayer()] == false) then
 				AiSet(GetAiUnitType("cavalry"), 9)
@@ -248,7 +248,7 @@ function AiLandAttackDefensive()
 		end
 	end
 	
-	if (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", AiSoldier()) == 0 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", AiShooter()) == 0 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", AiSiegeWeapon()) == 0 and force_attacking[AiPlayer()] == true) then
+	if (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("infantry")) == 0 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("shooter")) == 0 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("siege-engine")) == 0 and force_attacking[AiPlayer()] == true) then
 		force_attacking[AiPlayer()] = false
 	end
 	

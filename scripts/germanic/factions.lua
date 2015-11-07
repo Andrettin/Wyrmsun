@@ -35,6 +35,7 @@ DefineFaction("Asa Tribe", {
 
 DefineFaction("Skjoldung Tribe", { -- mythical Danish dynasty, Skjöldr was a son of Odin set to rule over Reidgothland (Jutland) and Zealand; Source: Snorri Sturlson, "Heimskringla", 1844; Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
 	Civilization = "germanic",
+	ParentFaction = "Asa Tribe",
 	Type = "tribe",
 	Color = "red",
 	SecondaryColor = "white",
@@ -44,6 +45,7 @@ DefineFaction("Skjoldung Tribe", { -- mythical Danish dynasty, Skjöldr was a son
 
 DefineFaction("Yngling Tribe", { -- mythical Swedish dynasty, Yngve was a son of Odin set to succeed him in the rule of Sweden; Source: Snorri Sturlson, "The Prose Edda", 1916, p. 9.
 	Civilization = "germanic",
+	ParentFaction = "Asa Tribe",
 	Type = "tribe",
 	Color = "blue",
 	SecondaryColor = "yellow",

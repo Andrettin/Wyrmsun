@@ -35,6 +35,7 @@ DefineFaction("Angle Tribe", {
 
 DefineFaction("Alamanni Tribe", {
 	Civilization = "teuton",
+	ParentFaction = "Suebi Tribe",
 	Type = "tribe",
 	Color = "blue",
 	SecondaryColor = "blue",
@@ -66,6 +67,7 @@ DefineFaction("Batavian Tribe", {
 
 DefineFaction("Bavarian Tribe", {
 	Civilization = "teuton",
+	ParentFaction = "Marcomanni Tribe",
 	Type = "tribe",
 	Color = "cyan",
 	SecondaryColor = "white",
@@ -74,6 +76,7 @@ DefineFaction("Bavarian Tribe", {
 
 DefineFaction("Buri Tribe", {
 	Civilization = "teuton", -- accurate?
+	ParentFaction = "Suebi Tribe", -- accurate?
 	Type = "tribe",
 	Color = "brown",
 	SecondaryColor = "brown",
@@ -161,6 +164,7 @@ DefineFaction("Lombard Tribe", {
 
 DefineFaction("Marcomanni Tribe", {
 	Civilization = "teuton",
+	ParentFaction = "Suebi Tribe",
 	Type = "tribe",
 	Color = "orange", -- change to a better one?
 	SecondaryColor = "red",
@@ -169,6 +173,7 @@ DefineFaction("Marcomanni Tribe", {
 
 DefineFaction("Quadi Tribe", {
 	Civilization = "teuton",
+	ParentFaction = "Suebi Tribe",
 	Type = "tribe",
 	Color = "brown",
 	SecondaryColor = "brown",
@@ -185,6 +190,7 @@ DefineFaction("Saxon Tribe", {
 
 DefineFaction("Semnone Tribe", {
 	Civilization = "teuton",
+	ParentFaction = "Suebi Tribe",
 	Type = "tribe",
 	Color = "black",
 	SecondaryColor = "black",
@@ -227,6 +233,7 @@ DefineFaction("Varini Tribe", {
 
 DefineFaction("Austria", {
 	Civilization = "teuton",
+	ParentFaction = "Bavaria",
 	Type = "polity",
 	Color = "white",
 	SecondaryColor = "red",
@@ -239,6 +246,7 @@ DefineFaction("Austria", {
 
 DefineFaction("Baden", {
 	Civilization = "teuton",
+	ParentFaction = "Alamanni Tribe",
 	Type = "polity",
 	Color = "black",
 	SecondaryColor = "black",
@@ -250,6 +258,7 @@ DefineFaction("Baden", {
 
 DefineFaction("Bavaria", {
 	Civilization = "teuton",
+	ParentFaction = "Bavarian Tribe",
 	Type = "polity",
 	Color = "cyan",
 	SecondaryColor = "white",
@@ -262,6 +271,7 @@ DefineFaction("Bavaria", {
 
 DefineFaction("Brandenburg", {
 	Civilization = "teuton",
+	ParentFaction = "Saxony Tribe",
 	Type = "polity",
 	Color = "blue",
 	SecondaryColor = "blue",
@@ -305,6 +315,7 @@ DefineFaction("Drenthe", {
 
 DefineFaction("England", {
 	Civilization = "teuton",
+	ParentFaction = "Angle Tribe",
 	Type = "polity",
 	Color = "red",
 	SecondaryColor = "white",
@@ -316,6 +327,7 @@ DefineFaction("England", {
 
 DefineFaction("Francia", {
 	Civilization = "teuton",
+	ParentFaction = "Frank Tribe",
 	Type = "polity",
 	Color = "green",
 	SecondaryColor = "orange",
@@ -327,6 +339,7 @@ DefineFaction("Francia", {
 
 DefineFaction("Friesland", {
 	Civilization = "teuton",
+	ParentFaction = "Frisian Tribe",
 	Type = "polity",
 	Color = "black",
 	SecondaryColor = "black",
@@ -339,6 +352,7 @@ DefineFaction("Friesland", {
 
 DefineFaction("Galicia", { -- Suebi kingdom of Galicia
 	Civilization = "teuton",
+	ParentFaction = "Suebi Tribe",
 	Type = "polity",
 	Color = "black",
 	SecondaryColor = "black",
@@ -436,6 +450,7 @@ DefineFaction("Prussia", {
 
 DefineFaction("Saxony", {
 	Civilization = "teuton",
+	ParentFaction = "Saxon Tribe",
 	Type = "polity",
 	Color = "pink",
 	SecondaryColor = "pink",
@@ -459,6 +474,7 @@ DefineFaction("Scotland", {
 
 DefineFaction("Switzerland", {
 	Civilization = "teuton",
+	ParentFaction = "Alamanni Tribe",
 	Type = "polity",
 	Color = "red",
 	SecondaryColor = "white",
@@ -489,6 +505,7 @@ DefineFaction("Westphalia", {
 
 DefineFaction("Wurtemberg", {
 	Civilization = "teuton",
+	ParentFaction = "Alamanni Tribe",
 	Type = "polity",
 	Color = "red",
 	SecondaryColor = "red",

@@ -153,8 +153,8 @@ function HandleCheats(str)
 		"upgrade-goblin-wood-plow"
 	}
 	for i, unitName in ipairs(bronze_upgrades) do
-		for j=0,15 do
-			if (unitName == GetCivilizationClassUnitType(CUpgrade:Get(unitName).Class, GetPlayerData(j, "RaceName"))) then
+		for j=0,14 do
+			if (Players[j].Type ~= PlayerNobody and unitName == GetFactionClassUnitType(CUpgrade:Get(unitName).Class, GetPlayerData(j, "RaceName"), GetPlayerData(j, "Faction"))) then
 				SetPlayerData(j, "Allow", unitName, "R")
 			end
 		end

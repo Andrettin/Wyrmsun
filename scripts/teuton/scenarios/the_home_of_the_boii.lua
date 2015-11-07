@@ -49,7 +49,7 @@ if (LoadedGame == false) then
 	
 	if (GrandStrategy == false) then
 		unit = CreateUnit("unit-hero-marbod", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		unit = CreateUnit("unit-teuton-swordsman", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		unit = CreateUnit("unit-suebi-swordsman", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 		unit = CreateUnit("unit-teuton-archer", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 		
 		unit = CreateUnit("unit-germanic-warrior", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
@@ -108,8 +108,8 @@ if (LoadedGame == false) then
 		-- Suebi (Semnones)
 		player_spawn_point = FindAppropriateSpawnPoint(0, 48, 0, Map.Info.MapHeight - 1)
 		SetStartView(3, player_spawn_point[1], player_spawn_point[2])
-		unit = CreateUnit("unit-teuton-swordsman", 3, {Players[3].StartPos.x, Players[3].StartPos.y})
-		unit = CreateUnit("unit-teuton-swordsman", 3, {Players[3].StartPos.x, Players[3].StartPos.y})
+		unit = CreateUnit("unit-suebi-swordsman", 3, {Players[3].StartPos.x, Players[3].StartPos.y})
+		unit = CreateUnit("unit-suebi-swordsman", 3, {Players[3].StartPos.x, Players[3].StartPos.y})
 		unit = CreateUnit("unit-teuton-archer", 3, {Players[3].StartPos.x, Players[3].StartPos.y})
 		unit = CreateUnit("unit-teuton-ritter", 3, {Players[3].StartPos.x, Players[3].StartPos.y})
 
@@ -226,7 +226,13 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if (GetFactionExists("Marcomanni Tribe") and PlayerHasObjective(GetFactionPlayer("Marcomanni Tribe"), "- Defeat the Boii") and GetPlayerData(GetFactionPlayer("Marcomanni Tribe"), "UnitTypesCount", "unit-teuton-farm") >= 4 and GetPlayerData(GetFactionPlayer("Marcomanni Tribe"), "UnitTypesCount", "unit-teuton-barracks") >= 1 and GetPlayerData(GetFactionPlayer("Marcomanni Tribe"), "UnitTypesCount", "unit-teuton-swordsman") >= 8) then
+		if (
+			GetFactionExists("Marcomanni Tribe")
+			and PlayerHasObjective(GetFactionPlayer("Marcomanni Tribe"), "- Defeat the Boii")
+			and GetPlayerData(GetFactionPlayer("Marcomanni Tribe"), "UnitTypesCount", "unit-teuton-farm") >= 4
+			and GetPlayerData(GetFactionPlayer("Marcomanni Tribe"), "UnitTypesCount", "unit-teuton-barracks") >= 1
+			and (GetPlayerData(GetFactionPlayer("Marcomanni Tribe"), "UnitTypesCount", "unit-teuton-swordsman") + GetPlayerData(GetFactionPlayer("Marcomanni Tribe"), "UnitTypesCount", "unit-suebi-swordsman")) >= 8
+		) then
 			player = GetFactionPlayer("Marcomanni Tribe")
 			return true
 		end

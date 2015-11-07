@@ -32,18 +32,18 @@ local end_loop_funcs = {
 
 -- EXPANSION AND DEFENSE
 
-  function() return AiNeed(AiTownHall()) end,
-  function() return AiNeed(AiLumberMill()) end,
-  function() return AiNeed(AiWatchTower()) end,
+  function() return AiNeed(GetAiUnitType("town-hall")) end,
+  function() return AiNeed(GetAiUnitType("lumber-mill")) end,
+  function() return AiNeed(GetAiUnitType("watch-tower")) end,
 --  function() return AiUpgradeTo(AiCannonTower()) end,
-  function() return AiUpgradeTo(AiGuardTower()) end,
-  function() return AiNeed(AiWatchTower()) end,
-  function() return AiUpgradeTo(AiGuardTower()) end,
-  function() return AiNeed(AiWatchTower()) end,
+  function() return AiUpgradeTo(GetAiUnitType("guard-tower")) end,
+  function() return AiNeed(GetAiUnitType("watch-tower")) end,
+  function() return AiUpgradeTo(GetAiUnitType("guard-tower")) end,
+  function() return AiNeed(GetAiUnitType("watch-tower")) end,
 --  function() return AiUpgradeTo(AiCannonTower()) end,
-  function() return AiUpgradeTo(AiGuardTower()) end,
-  function() return AiNeed(AiWatchTower()) end,
-  function() return AiUpgradeTo(AiGuardTower()) end,
+  function() return AiUpgradeTo(GetAiUnitType("guard-tower")) end,
+  function() return AiNeed(GetAiUnitType("watch-tower")) end,
+  function() return AiUpgradeTo(GetAiUnitType("guard-tower")) end,
 
   function()
 	if (GameSettings.Difficulty == 1) then -- if on easy difficulty, sleep a bit
@@ -53,40 +53,40 @@ local end_loop_funcs = {
 	end
   end,
   
---  function() return AiDifficultyForce(0, {AiSoldier(), 0, AiEliteShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 8, AiSiegeWeapon(), 0, AiPriest(), 0}) end,
---  function() return AiDifficultyForce(6, {AiSoldier(), 0, AiEliteShooter(), 10, AiCavalry(), 0, AiCavalryMage(), 20, AiSiegeWeapon(), 2, AiPriest(), 4}, true) end,
-  function() return AiDifficultyForce(0, {AiSoldier(), 8, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}) end,
-  function() return AiDifficultyForce(6, {AiSoldier(), 20, AiShooter(), 10, AiSiegeWeapon(), 2, AiPriest(), 4}, true) end,
+--  function() return AiDifficultyForce(0, {GetAiUnitType("infantry"), 0, AiEliteShooter(), 0, GetAiUnitType("cavalry"), 0, AiCavalryMage(), 8, GetAiUnitType("siege-engine"), 0, GetAiUnitType("priest"), 0}) end,
+--  function() return AiDifficultyForce(6, {GetAiUnitType("infantry"), 0, AiEliteShooter(), 10, GetAiUnitType("cavalry"), 0, AiCavalryMage(), 20, GetAiUnitType("siege-engine"), 2, GetAiUnitType("priest"), 4}, true) end,
+  function() return AiDifficultyForce(0, {GetAiUnitType("infantry"), 8, GetAiUnitType("shooter"), 0, GetAiUnitType("siege-engine"), 0, GetAiUnitType("priest"), 0}) end,
+  function() return AiDifficultyForce(6, {GetAiUnitType("infantry"), 20, GetAiUnitType("shooter"), 10, GetAiUnitType("siege-engine"), 2, GetAiUnitType("priest"), 4}, true) end,
 --  function() return AiDifficultyForce(7, {AiFlyer(), 4}, true) end,
   function() return AiWaitForce(6) end,
   function() return AiAttackWithForce(6) end,
---  function() return AiDifficultyForce(6, {AiSoldier(), 0, AiEliteShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 0, AiSiegeWeapon(), 0, AiFlyer(), 0, AiPriest(), 0}, true) end,
-  function() return AiDifficultyForce(6, {AiSoldier(), 0, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
+--  function() return AiDifficultyForce(6, {GetAiUnitType("infantry"), 0, AiEliteShooter(), 0, GetAiUnitType("cavalry"), 0, AiCavalryMage(), 0, GetAiUnitType("siege-engine"), 0, AiFlyer(), 0, GetAiUnitType("priest"), 0}, true) end,
+  function() return AiDifficultyForce(6, {GetAiUnitType("infantry"), 0, GetAiUnitType("shooter"), 0, GetAiUnitType("siege-engine"), 0, GetAiUnitType("priest"), 0}, true) end,
 
 --  function() return AiWaitForce(7) end,
 --  function() return AiAttackWithForce(7) end,
---  function() return AiDifficultyForce(7, {AiSoldier(), 0, AiEliteShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 0, AiSiegeWeapon(), 0, AiFlyer(), 0, AiPriest(), 0}, true) end,
+--  function() return AiDifficultyForce(7, {GetAiUnitType("infantry"), 0, AiEliteShooter(), 0, GetAiUnitType("cavalry"), 0, AiCavalryMage(), 0, GetAiUnitType("siege-engine"), 0, AiFlyer(), 0, GetAiUnitType("priest"), 0}, true) end,
   function() stratagus.gameData.AIState.loop_index[1 + AiPlayer()] = 0; return false end,
 }
 
 local land_funcs = {
   function() return AiDifficultySleep(AiGetSleepCycles()) end,
-  function() return AiNeed(AiTownHall()) end,
-  function() return AiSet(AiWorker(), 1) end,
-  function() return AiWait(AiTownHall()) end,
-  function() return AiWait(AiWorker()) end, -- start hangs if nothing available
+  function() return AiNeed(GetAiUnitType("town-hall")) end,
+  function() return AiSet(GetAiUnitType("worker"), 1) end,
+  function() return AiWait(GetAiUnitType("town-hall")) end,
+  function() return AiWait(GetAiUnitType("worker")) end, -- start hangs if nothing available
 
-  function() return AiSet(AiWorker(), 4) end, -- 4
+  function() return AiSet(GetAiUnitType("worker"), 4) end, -- 4
 
   function() return AiNeed(GetAiUnitType("barracks")) end,
-  function() return AiSet(AiWorker(), 8) end, -- 8
+  function() return AiSet(GetAiUnitType("worker"), 8) end, -- 8
   function() return AiWait(GetAiUnitType("barracks")) end,
-  function() return AiSet(AiSmithy(), 1) end,
-  function() if (AiUpgradeWeapon1() ~= nil) then return AiResearch(AiUpgradeWeapon1()) end end,
+  function() return AiSet(GetAiUnitType("smithy"), 1) end,
+  function() if (GetAiUnitType("melee-weapon-1") ~= nil) then return AiResearch(GetAiUnitType("melee-weapon-1")) end end,
   function() if (GetAiUnitType("bronze-shield") ~= nil) then return AiResearch(GetAiUnitType("bronze-shield")) end end,
 
 -- FAST AND FURIOUS
-  function() return AiDifficultyForce(1, {AiSoldier(), 1}, true) end,
+  function() return AiDifficultyForce(1, {GetAiUnitType("infantry"), 1}, true) end,
   function() return AiWaitForce(1) end,
   function()
 	if (GameSettings.Difficulty == 1) then -- if on easy difficulty, sleep a bit
@@ -98,9 +98,9 @@ local land_funcs = {
   function() return AiAttackWithForce(1) end,
 
 -- SECOND FAST ATTACK
-  function() return AiDifficultyForce(1, {AiSoldier(), 4}, true) end,
+  function() return AiDifficultyForce(1, {GetAiUnitType("infantry"), 4}, true) end,
   function() return AiWaitForce(1) end,
-  function() return AiSet(AiWorker(), 12) end,
+  function() return AiSet(GetAiUnitType("worker"), 12) end,
   function()
 	if (GameSettings.Difficulty == 1) then -- if on easy difficulty, sleep a bit
 		return AiSleep(1000)
@@ -113,15 +113,15 @@ local land_funcs = {
 
 -- PREPARING FIRST SERIOUS ATTACK
 
-  function() return AiNeed(AiLumberMill()) end, -- moved here, as it is necessary for the stronghold to be available
-  function() return AiWait(AiLumberMill()) end,
-  function() return AiResearch(AiUpgradeMissile1()) end,
+  function() return AiNeed(GetAiUnitType("lumber-mill")) end, -- moved here, as it is necessary for the stronghold to be available
+  function() return AiWait(GetAiUnitType("lumber-mill")) end,
+  function() return AiResearch(GetAiUnitType("ranged-projectile-1")) end,
   function() if (AiGetRace() == "germanic") then return AiResearch("upgrade-teuton-civilization") else return false end end,
 
   function() return AiSet(GetAiUnitType("barracks"), 2) end,
-  function() return AiDifficultyForce(1, {AiSoldier(), 12, AiShooter(), 4}, true) end,
-  function() return AiDifficultyForce(0, {AiSoldier(), 3, AiShooter(), 1}) end,
-  function() return AiSet(AiWorker(), 20) end,
+  function() return AiDifficultyForce(1, {GetAiUnitType("infantry"), 12, GetAiUnitType("shooter"), 4}, true) end,
+  function() return AiDifficultyForce(0, {GetAiUnitType("infantry"), 3, GetAiUnitType("shooter"), 1}) end,
+  function() return AiSet(GetAiUnitType("worker"), 20) end,
   function() return AiWaitForce(1) end,
   function()
 	if (GameSettings.Difficulty == 1) then -- if on easy difficulty, sleep a bit
@@ -134,25 +134,25 @@ local land_funcs = {
 
 -- NOW UPGRADING
 
-  function() return AiResearch(AiUpgradeWeapon2()) end,
+  function() return AiResearch(GetAiUnitType("melee-weapon-2")) end,
   function() return AiResearch(GetAiUnitType("iron-shield")) end,
-  function() return AiResearch(AiUpgradeMissile2()) end,
+  function() return AiResearch(GetAiUnitType("ranged-projectile-2")) end,
   function() return AiResearch(GetAiUnitType("masonry")) end,
   
   function() return AiUpgradeTo(GetAiUnitType("stronghold")) end,
   function() return AiWait(GetAiUnitType("stronghold")) end,
-  function() return AiSet(AiWorker(), 25) end,
+  function() return AiSet(GetAiUnitType("worker"), 25) end,
 --  function() return AiNeed(AiStables()) end,
 
 -- BUILDING A DEFENSE
--- function() return AiDifficultyForce(0, {AiSoldier(), 0, AiShooter(), 0, AiCavalry(), 2, AiCavalryMage(), 0, AiSiegeWeapon(), 0}) end,
-  function() return AiDifficultyForce(0, {AiSoldier(), 2, AiShooter(), 0, AiSiegeWeapon(), 0}) end,
+-- function() return AiDifficultyForce(0, {GetAiUnitType("infantry"), 0, GetAiUnitType("shooter"), 0, GetAiUnitType("cavalry"), 2, AiCavalryMage(), 0, GetAiUnitType("siege-engine"), 0}) end,
+  function() return AiDifficultyForce(0, {GetAiUnitType("infantry"), 2, GetAiUnitType("shooter"), 0, GetAiUnitType("siege-engine"), 0}) end,
 
-  function() if (AiGetRace() == "goblin") then return AiSet(AiGlider(), 1) else return false end end,
+  function() if (AiGetRace() == "goblin") then return AiSet(GetAiUnitType("glider"), 1) else return false end end,
 -- function() return AiUpgradeTo(AiBestCityCenter()) end,
--- function() return AiDifficultyForce(0, {AiSoldier(), 0, AiShooter(), 2, AiCavalry(), 2, AiCavalryMage(), 0, AiSiegeWeapon(), 0}) end,
- function() return AiDifficultyForce(0, {AiSoldier(), 2, AiShooter(), 2, AiSiegeWeapon(), 0}) end,
- function() return AiSet(AiWorker(), 30) end,
+-- function() return AiDifficultyForce(0, {GetAiUnitType("infantry"), 0, GetAiUnitType("shooter"), 2, GetAiUnitType("cavalry"), 2, AiCavalryMage(), 0, GetAiUnitType("siege-engine"), 0}) end,
+ function() return AiDifficultyForce(0, {GetAiUnitType("infantry"), 2, GetAiUnitType("shooter"), 2, GetAiUnitType("siege-engine"), 0}) end,
+ function() return AiSet(GetAiUnitType("worker"), 30) end,
 -- function() return AiWait(AiBestCityCenter()) end,
 
   function() return AiResearch(GetAiUnitType("coinage")) end,
@@ -163,25 +163,25 @@ local land_funcs = {
   
 -- PREPARING SECOND ATTACK
 
---  function() return AiDifficultyForce(4, {AiSoldier(), 0, AiShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 10, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
---  function() return AiDifficultyForce(5, {AiSoldier(), 0, AiShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 8, AiSiegeWeapon(), 0, AiPriest(), 4}, true) end,
---  function() return AiDifficultyForce(6, {AiSoldier(), 0, AiShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 6, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
---  function() return AiDifficultyForce(7, {AiSoldier(), 0, AiShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 4, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
---  function() return AiDifficultyForce(8, {AiSoldier(), 0, AiShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 3, AiSiegeWeapon(), 1, AiPriest(), 0}, true) end,
-  function() return AiDifficultyForce(4, {AiSoldier(), 10, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
-  function() return AiDifficultyForce(5, {AiSoldier(), 8, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 4}, true) end,
-  function() return AiDifficultyForce(6, {AiSoldier(), 6, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
-  function() return AiDifficultyForce(7, {AiSoldier(), 4, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
-  function() return AiDifficultyForce(8, {AiSoldier(), 3, AiShooter(), 0, AiSiegeWeapon(), 1, AiPriest(), 0}, true) end,
-  function() return AiSet(AiWorker(), 35) end,
-  function() return AiDifficultyForce(0, {AiSoldier(), 0}) end,
+--  function() return AiDifficultyForce(4, {GetAiUnitType("infantry"), 0, GetAiUnitType("shooter"), 0, GetAiUnitType("cavalry"), 0, AiCavalryMage(), 10, GetAiUnitType("siege-engine"), 0, GetAiUnitType("priest"), 0}, true) end,
+--  function() return AiDifficultyForce(5, {GetAiUnitType("infantry"), 0, GetAiUnitType("shooter"), 0, GetAiUnitType("cavalry"), 0, AiCavalryMage(), 8, GetAiUnitType("siege-engine"), 0, GetAiUnitType("priest"), 4}, true) end,
+--  function() return AiDifficultyForce(6, {GetAiUnitType("infantry"), 0, GetAiUnitType("shooter"), 0, GetAiUnitType("cavalry"), 0, AiCavalryMage(), 6, GetAiUnitType("siege-engine"), 0, GetAiUnitType("priest"), 0}, true) end,
+--  function() return AiDifficultyForce(7, {GetAiUnitType("infantry"), 0, GetAiUnitType("shooter"), 0, GetAiUnitType("cavalry"), 0, AiCavalryMage(), 4, GetAiUnitType("siege-engine"), 0, GetAiUnitType("priest"), 0}, true) end,
+--  function() return AiDifficultyForce(8, {GetAiUnitType("infantry"), 0, GetAiUnitType("shooter"), 0, GetAiUnitType("cavalry"), 0, AiCavalryMage(), 3, GetAiUnitType("siege-engine"), 1, GetAiUnitType("priest"), 0}, true) end,
+  function() return AiDifficultyForce(4, {GetAiUnitType("infantry"), 10, GetAiUnitType("shooter"), 0, GetAiUnitType("siege-engine"), 0, GetAiUnitType("priest"), 0}, true) end,
+  function() return AiDifficultyForce(5, {GetAiUnitType("infantry"), 8, GetAiUnitType("shooter"), 0, GetAiUnitType("siege-engine"), 0, GetAiUnitType("priest"), 4}, true) end,
+  function() return AiDifficultyForce(6, {GetAiUnitType("infantry"), 6, GetAiUnitType("shooter"), 0, GetAiUnitType("siege-engine"), 0, GetAiUnitType("priest"), 0}, true) end,
+  function() return AiDifficultyForce(7, {GetAiUnitType("infantry"), 4, GetAiUnitType("shooter"), 0, GetAiUnitType("siege-engine"), 0, GetAiUnitType("priest"), 0}, true) end,
+  function() return AiDifficultyForce(8, {GetAiUnitType("infantry"), 3, GetAiUnitType("shooter"), 0, GetAiUnitType("siege-engine"), 1, GetAiUnitType("priest"), 0}, true) end,
+  function() return AiSet(GetAiUnitType("worker"), 35) end,
+  function() return AiDifficultyForce(0, {GetAiUnitType("infantry"), 0}) end,
   function() return AiWaitForce(0) end,
---  function() return AiDifficultyForce(0, {AiSoldier(), 0, AiShooter(), 2, AiCavalry(), 0, AiCavalryMage(), 4, AiSiegeWeapon(), 0}) end,
-  function() return AiDifficultyForce(0, {AiSoldier(), 4, AiShooter(), 2, AiSiegeWeapon(), 0}) end,
+--  function() return AiDifficultyForce(0, {GetAiUnitType("infantry"), 0, GetAiUnitType("shooter"), 2, GetAiUnitType("cavalry"), 0, AiCavalryMage(), 4, GetAiUnitType("siege-engine"), 0}) end,
+  function() return AiDifficultyForce(0, {GetAiUnitType("infantry"), 4, GetAiUnitType("shooter"), 2, GetAiUnitType("siege-engine"), 0}) end,
 
 -- EXPANSION
 
-  function() return AiNeed(AiTownHall()) end,
+  function() return AiNeed(GetAiUnitType("town-hall")) end,
   function() return AiNeed(GetAiUnitType("barracks")) end,
 
 -- ATTACK!!
@@ -207,15 +207,15 @@ local land_funcs = {
   function() return AiAttackWithForce(6) end,
   function() return AiAttackWithForce(5) end,
   function() return AiAttackWithForce(4) end,
---  function() return AiDifficultyForce(8, {AiSoldier(), 0, AiShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
---  function() return AiDifficultyForce(4, {AiSoldier(), 0, AiShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 22, AiSiegeWeapon(), 0, AiPriest(), 4}, true) end,
---  function() return AiDifficultyForce(5, {AiSoldier(), 0, AiShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 18, AiSiegeWeapon(), 2, AiPriest(), 0}, true) end,
---  function() return AiDifficultyForce(6, {AiSoldier(), 0, AiShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 14, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
-  function() return AiDifficultyForce(8, {AiSoldier(), 0, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
-  function() return AiDifficultyForce(4, {AiSoldier(), 22, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 4}, true) end,
-  function() return AiDifficultyForce(5, {AiSoldier(), 18, AiShooter(), 0, AiSiegeWeapon(), 2, AiPriest(), 0}, true) end,
-  function() return AiDifficultyForce(6, {AiSoldier(), 14, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
-  function() return AiSet(AiWorker(), 40) end,
+--  function() return AiDifficultyForce(8, {GetAiUnitType("infantry"), 0, GetAiUnitType("shooter"), 0, GetAiUnitType("cavalry"), 0, AiCavalryMage(), 0, GetAiUnitType("siege-engine"), 0, GetAiUnitType("priest"), 0}, true) end,
+--  function() return AiDifficultyForce(4, {GetAiUnitType("infantry"), 0, GetAiUnitType("shooter"), 0, GetAiUnitType("cavalry"), 0, AiCavalryMage(), 22, GetAiUnitType("siege-engine"), 0, GetAiUnitType("priest"), 4}, true) end,
+--  function() return AiDifficultyForce(5, {GetAiUnitType("infantry"), 0, GetAiUnitType("shooter"), 0, GetAiUnitType("cavalry"), 0, AiCavalryMage(), 18, GetAiUnitType("siege-engine"), 2, GetAiUnitType("priest"), 0}, true) end,
+--  function() return AiDifficultyForce(6, {GetAiUnitType("infantry"), 0, GetAiUnitType("shooter"), 0, GetAiUnitType("cavalry"), 0, AiCavalryMage(), 14, GetAiUnitType("siege-engine"), 0, GetAiUnitType("priest"), 0}, true) end,
+  function() return AiDifficultyForce(8, {GetAiUnitType("infantry"), 0, GetAiUnitType("shooter"), 0, GetAiUnitType("siege-engine"), 0, GetAiUnitType("priest"), 0}, true) end,
+  function() return AiDifficultyForce(4, {GetAiUnitType("infantry"), 22, GetAiUnitType("shooter"), 0, GetAiUnitType("siege-engine"), 0, GetAiUnitType("priest"), 4}, true) end,
+  function() return AiDifficultyForce(5, {GetAiUnitType("infantry"), 18, GetAiUnitType("shooter"), 0, GetAiUnitType("siege-engine"), 2, GetAiUnitType("priest"), 0}, true) end,
+  function() return AiDifficultyForce(6, {GetAiUnitType("infantry"), 14, GetAiUnitType("shooter"), 0, GetAiUnitType("siege-engine"), 0, GetAiUnitType("priest"), 0}, true) end,
+  function() return AiSet(GetAiUnitType("worker"), 40) end,
 
   function()
 	if (GameSettings.Difficulty == 1) then -- if on easy difficulty, sleep a bit
@@ -226,29 +226,29 @@ local land_funcs = {
   end,
   function() return AiWaitForce(4) end,
   function() return AiAttackWithForce(4) end,
---  function() return AiDifficultyForce(4, {AiSoldier(), 0, AiShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
-  function() return AiDifficultyForce(4, {AiSoldier(), 0, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
+--  function() return AiDifficultyForce(4, {GetAiUnitType("infantry"), 0, GetAiUnitType("shooter"), 0, GetAiUnitType("cavalry"), 0, AiCavalryMage(), 0, GetAiUnitType("siege-engine"), 0, GetAiUnitType("priest"), 0}, true) end,
+  function() return AiDifficultyForce(4, {GetAiUnitType("infantry"), 0, GetAiUnitType("shooter"), 0, GetAiUnitType("siege-engine"), 0, GetAiUnitType("priest"), 0}, true) end,
   function() return AiWaitForce(5) end,
   function() return AiAttackWithForce(5) end,
---  function() return AiDifficultyForce(5, {AiSoldier(), 0, AiShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
-  function() return AiDifficultyForce(5, {AiSoldier(), 0, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
+--  function() return AiDifficultyForce(5, {GetAiUnitType("infantry"), 0, GetAiUnitType("shooter"), 0, GetAiUnitType("cavalry"), 0, AiCavalryMage(), 0, GetAiUnitType("siege-engine"), 0, GetAiUnitType("priest"), 0}, true) end,
+  function() return AiDifficultyForce(5, {GetAiUnitType("infantry"), 0, GetAiUnitType("shooter"), 0, GetAiUnitType("siege-engine"), 0, GetAiUnitType("priest"), 0}, true) end,
   function() return AiWaitForce(6) end,
   function() return AiAttackWithForce(6) end,
---  function() return AiDifficultyForce(6, {AiSoldier(), 0, AiShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
-  function() return AiDifficultyForce(6, {AiSoldier(), 0, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
+--  function() return AiDifficultyForce(6, {GetAiUnitType("infantry"), 0, GetAiUnitType("shooter"), 0, GetAiUnitType("cavalry"), 0, AiCavalryMage(), 0, GetAiUnitType("siege-engine"), 0, GetAiUnitType("priest"), 0}, true) end,
+  function() return AiDifficultyForce(6, {GetAiUnitType("infantry"), 0, GetAiUnitType("shooter"), 0, GetAiUnitType("siege-engine"), 0, GetAiUnitType("priest"), 0}, true) end,
 
 -- EXPANSION
 
-  function() return AiSet(AiWorker(), 45) end,
-  function() return AiNeed(AiTownHall()) end,
-  function() return AiNeed(AiWatchTower()) end,
+  function() return AiSet(GetAiUnitType("worker"), 45) end,
+  function() return AiNeed(GetAiUnitType("town-hall")) end,
+  function() return AiNeed(GetAiUnitType("watch-tower")) end,
 --  function() return AiUpgradeTo(AiCannonTower()) end,
-  function() return AiUpgradeTo(AiGuardTower()) end,
-  function() return AiNeed(AiWatchTower()) end,
-  function() return AiUpgradeTo(AiGuardTower()) end,
-  function() return AiNeed(AiWatchTower()) end,
+  function() return AiUpgradeTo(GetAiUnitType("guard-tower")) end,
+  function() return AiNeed(GetAiUnitType("watch-tower")) end,
+  function() return AiUpgradeTo(GetAiUnitType("guard-tower")) end,
+  function() return AiNeed(GetAiUnitType("watch-tower")) end,
 --  function() return AiUpgradeTo(AiCannonTower()) end,
-  function() return AiUpgradeTo(AiGuardTower()) end,
+  function() return AiUpgradeTo(GetAiUnitType("guard-tower")) end,
 
 -- UPGRADING SHOOTERS
 
@@ -257,20 +257,20 @@ local land_funcs = {
 --  function() return AiResearch(AiUpgradeEliteShooter2()) end,
 --  function() return AiResearch(AiUpgradeEliteShooter3()) end,
 
-  function() return AiSet(AiWorker(), 40) end,
-  function() return AiNeed(AiTownHall()) end,
+  function() return AiSet(GetAiUnitType("worker"), 40) end,
+  function() return AiNeed(GetAiUnitType("town-hall")) end,
   
 
 -- SECOND BIG WAVE
 
---  function() return AiDifficultyForce(4, {AiSoldier(), 0, AiEliteShooter(), 5, AiCavalry(), 0, AiCavalryMage(), 12, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
---  function() return AiDifficultyForce(5, {AiSoldier(), 0, AiEliteShooter(), 5, AiCavalry(), 0, AiCavalryMage(), 10, AiSiegeWeapon(), 0, AiPriest(), 4}, true) end,
---  function() return AiDifficultyForce(6, {AiSoldier(), 0, AiEliteShooter(), 2, AiCavalry(), 0, AiCavalryMage(), 5, AiSiegeWeapon(), 2, AiPriest(), 0}, true) end,
---  function() return AiDifficultyForce(7, {AiSoldier(), 0, AiEliteShooter(), 1, AiCavalry(), 0, AiCavalryMage(), 3, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
-  function() return AiDifficultyForce(4, {AiSoldier(), 12, AiShooter(), 5, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
-  function() return AiDifficultyForce(5, {AiSoldier(), 10, AiShooter(), 5, AiSiegeWeapon(), 0, AiPriest(), 4}, true) end,
-  function() return AiDifficultyForce(6, {AiSoldier(), 5, AiShooter(), 2, AiSiegeWeapon(), 2, AiPriest(), 0}, true) end,
-  function() return AiDifficultyForce(7, {AiSoldier(), 3, AiShooter(), 1, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
+--  function() return AiDifficultyForce(4, {GetAiUnitType("infantry"), 0, AiEliteShooter(), 5, GetAiUnitType("cavalry"), 0, AiCavalryMage(), 12, GetAiUnitType("siege-engine"), 0, GetAiUnitType("priest"), 0}, true) end,
+--  function() return AiDifficultyForce(5, {GetAiUnitType("infantry"), 0, AiEliteShooter(), 5, GetAiUnitType("cavalry"), 0, AiCavalryMage(), 10, GetAiUnitType("siege-engine"), 0, GetAiUnitType("priest"), 4}, true) end,
+--  function() return AiDifficultyForce(6, {GetAiUnitType("infantry"), 0, AiEliteShooter(), 2, GetAiUnitType("cavalry"), 0, AiCavalryMage(), 5, GetAiUnitType("siege-engine"), 2, GetAiUnitType("priest"), 0}, true) end,
+--  function() return AiDifficultyForce(7, {GetAiUnitType("infantry"), 0, AiEliteShooter(), 1, GetAiUnitType("cavalry"), 0, AiCavalryMage(), 3, GetAiUnitType("siege-engine"), 0, GetAiUnitType("priest"), 0}, true) end,
+  function() return AiDifficultyForce(4, {GetAiUnitType("infantry"), 12, GetAiUnitType("shooter"), 5, GetAiUnitType("siege-engine"), 0, GetAiUnitType("priest"), 0}, true) end,
+  function() return AiDifficultyForce(5, {GetAiUnitType("infantry"), 10, GetAiUnitType("shooter"), 5, GetAiUnitType("siege-engine"), 0, GetAiUnitType("priest"), 4}, true) end,
+  function() return AiDifficultyForce(6, {GetAiUnitType("infantry"), 5, GetAiUnitType("shooter"), 2, GetAiUnitType("siege-engine"), 2, GetAiUnitType("priest"), 0}, true) end,
+  function() return AiDifficultyForce(7, {GetAiUnitType("infantry"), 3, GetAiUnitType("shooter"), 1, GetAiUnitType("siege-engine"), 0, GetAiUnitType("priest"), 0}, true) end,
 
   function()
 	if (GameSettings.Difficulty == 1) then -- if on easy difficulty, sleep a bit
@@ -281,36 +281,36 @@ local land_funcs = {
   end,
   function() return AiWaitForce(4) end,
   function() return AiAttackWithForce(4) end,
---  function() return AiDifficultyForce(4, {AiSoldier(), 0, AiEliteShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
-  function() return AiDifficultyForce(4, {AiSoldier(), 0, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
+--  function() return AiDifficultyForce(4, {GetAiUnitType("infantry"), 0, AiEliteShooter(), 0, GetAiUnitType("cavalry"), 0, AiCavalryMage(), 0, GetAiUnitType("siege-engine"), 0, GetAiUnitType("priest"), 0}, true) end,
+  function() return AiDifficultyForce(4, {GetAiUnitType("infantry"), 0, GetAiUnitType("shooter"), 0, GetAiUnitType("siege-engine"), 0, GetAiUnitType("priest"), 0}, true) end,
   function() return AiWaitForce(5) end,
   function() return AiAttackWithForce(5) end,
---  function() return AiDifficultyForce(5, {AiSoldier(), 0, AiEliteShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
-  function() return AiDifficultyForce(5, {AiSoldier(), 0, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
+--  function() return AiDifficultyForce(5, {GetAiUnitType("infantry"), 0, AiEliteShooter(), 0, GetAiUnitType("cavalry"), 0, AiCavalryMage(), 0, GetAiUnitType("siege-engine"), 0, GetAiUnitType("priest"), 0}, true) end,
+  function() return AiDifficultyForce(5, {GetAiUnitType("infantry"), 0, GetAiUnitType("shooter"), 0, GetAiUnitType("siege-engine"), 0, GetAiUnitType("priest"), 0}, true) end,
   function() return AiWaitForce(6) end,
   function() return AiAttackWithForce(6) end,
---  function() return AiDifficultyForce(6, {AiSoldier(), 0, AiEliteShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
-  function() return AiDifficultyForce(6, {AiSoldier(), 0, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
+--  function() return AiDifficultyForce(6, {GetAiUnitType("infantry"), 0, AiEliteShooter(), 0, GetAiUnitType("cavalry"), 0, AiCavalryMage(), 0, GetAiUnitType("siege-engine"), 0, GetAiUnitType("priest"), 0}, true) end,
+  function() return AiDifficultyForce(6, {GetAiUnitType("infantry"), 0, GetAiUnitType("shooter"), 0, GetAiUnitType("siege-engine"), 0, GetAiUnitType("priest"), 0}, true) end,
   function() return AiWaitForce(7) end,
   function() return AiAttackWithForce(7) end,
   function() return AiAttackWithForce(6) end,
   function() return AiAttackWithForce(5) end,
   function() return AiAttackWithForce(4) end,
 
---  function() return AiDifficultyForce(7, {AiSoldier(), 0, AiEliteShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
-  function() return AiDifficultyForce(7, {AiSoldier(), 0, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
+--  function() return AiDifficultyForce(7, {GetAiUnitType("infantry"), 0, AiEliteShooter(), 0, GetAiUnitType("cavalry"), 0, AiCavalryMage(), 0, GetAiUnitType("siege-engine"), 0, GetAiUnitType("priest"), 0}, true) end,
+  function() return AiDifficultyForce(7, {GetAiUnitType("infantry"), 0, GetAiUnitType("shooter"), 0, GetAiUnitType("siege-engine"), 0, GetAiUnitType("priest"), 0}, true) end,
 
 -- EXPANSION, AGAIN
 
 --  function() return AiNeed(AiAirport()) end,
 --  function() return AiNeed(AiAirport()) end,
 
-  function() return AiNeed(AiWatchTower()) end,
+  function() return AiNeed(GetAiUnitType("watch-tower")) end,
 --  function() return AiUpgradeTo(AiCannonTower()) end,
-  function() return AiUpgradeTo(AiGuardTower()) end,
+  function() return AiUpgradeTo(GetAiUnitType("guard-tower")) end,
 
-  function() return AiNeed(AiWatchTower()) end,
-  function() return AiUpgradeTo(AiGuardTower()) end,
+  function() return AiNeed(GetAiUnitType("watch-tower")) end,
+  function() return AiUpgradeTo(GetAiUnitType("guard-tower")) end,
 
 -- AEREAL UNITS
 --  function() return AiNeed(AiAirport()) end,
@@ -328,43 +328,43 @@ local land_funcs = {
 	end
   end,
   
---  function() return AiDifficultyForce(6, {AiSoldier(), 0, AiEliteShooter(), 10, AiCavalry(), 0, AiCavalryMage(), 15, AiSiegeWeapon(), 0, AiPriest(), 4}, true) end,
---  function() return AiDifficultyForce(7, {AiSoldier(), 0, AiEliteShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 20, AiSiegeWeapon(), 2, AiPriest(), 0}, true) end,
-  function() return AiDifficultyForce(6, {AiSoldier(), 15, AiShooter(), 10, AiSiegeWeapon(), 0, AiPriest(), 4}, true) end,
-  function() return AiDifficultyForce(7, {AiSoldier(), 20, AiShooter(), 0, AiSiegeWeapon(), 2, AiPriest(), 0}, true) end,
+--  function() return AiDifficultyForce(6, {GetAiUnitType("infantry"), 0, AiEliteShooter(), 10, GetAiUnitType("cavalry"), 0, AiCavalryMage(), 15, GetAiUnitType("siege-engine"), 0, GetAiUnitType("priest"), 4}, true) end,
+--  function() return AiDifficultyForce(7, {GetAiUnitType("infantry"), 0, AiEliteShooter(), 0, GetAiUnitType("cavalry"), 0, AiCavalryMage(), 20, GetAiUnitType("siege-engine"), 2, GetAiUnitType("priest"), 0}, true) end,
+  function() return AiDifficultyForce(6, {GetAiUnitType("infantry"), 15, GetAiUnitType("shooter"), 10, GetAiUnitType("siege-engine"), 0, GetAiUnitType("priest"), 4}, true) end,
+  function() return AiDifficultyForce(7, {GetAiUnitType("infantry"), 20, GetAiUnitType("shooter"), 0, GetAiUnitType("siege-engine"), 2, GetAiUnitType("priest"), 0}, true) end,
 --  function() return AiWaitForce(5) end,
 --  function() return AiAttackWithForce(5) end,
---  function() return AiDifficultyForce(5, {AiSoldier(), 0, AiEliteShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 0, AiSiegeWeapon(), 0, AiFlyer(), 0, AiPriest(), 0}, true) end,
+--  function() return AiDifficultyForce(5, {GetAiUnitType("infantry"), 0, AiEliteShooter(), 0, GetAiUnitType("cavalry"), 0, AiCavalryMage(), 0, GetAiUnitType("siege-engine"), 0, AiFlyer(), 0, GetAiUnitType("priest"), 0}, true) end,
   function() return AiWaitForce(6) end,
   function() return AiAttackWithForce(6) end,
---  function() return AiDifficultyForce(6, {AiSoldier(), 0, AiEliteShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 0, AiSiegeWeapon(), 0, AiFlyer(), 0, AiPriest(), 0}, true) end,
-  function() return AiDifficultyForce(6, {AiSoldier(), 0, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
+--  function() return AiDifficultyForce(6, {GetAiUnitType("infantry"), 0, AiEliteShooter(), 0, GetAiUnitType("cavalry"), 0, AiCavalryMage(), 0, GetAiUnitType("siege-engine"), 0, AiFlyer(), 0, GetAiUnitType("priest"), 0}, true) end,
+  function() return AiDifficultyForce(6, {GetAiUnitType("infantry"), 0, GetAiUnitType("shooter"), 0, GetAiUnitType("siege-engine"), 0, GetAiUnitType("priest"), 0}, true) end,
   function() return AiWaitForce(7) end,
   function() return AiAttackWithForce(7) end,
---  function() return AiDifficultyForce(7, {AiSoldier(), 0, AiEliteShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 0, AiSiegeWeapon(), 0, AiFlyer(), 0, AiPriest(), 0}, true) end,
-  function() return AiDifficultyForce(7, {AiSoldier(), 0, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
+--  function() return AiDifficultyForce(7, {GetAiUnitType("infantry"), 0, AiEliteShooter(), 0, GetAiUnitType("cavalry"), 0, AiCavalryMage(), 0, GetAiUnitType("siege-engine"), 0, AiFlyer(), 0, GetAiUnitType("priest"), 0}, true) end,
+  function() return AiDifficultyForce(7, {GetAiUnitType("infantry"), 0, GetAiUnitType("shooter"), 0, GetAiUnitType("siege-engine"), 0, GetAiUnitType("priest"), 0}, true) end,
 
 
-  function() return AiNeed(AiWatchTower()) end,
+  function() return AiNeed(GetAiUnitType("watch-tower")) end,
 --  function() return AiUpgradeTo(AiCannonTower()) end,
-  function() return AiUpgradeTo(AiGuardTower()) end,
-  function() return AiNeed(AiWatchTower()) end,
-  function() return AiUpgradeTo(AiGuardTower()) end,
-  function() return AiNeed(AiWatchTower()) end,
+  function() return AiUpgradeTo(GetAiUnitType("guard-tower")) end,
+  function() return AiNeed(GetAiUnitType("watch-tower")) end,
+  function() return AiUpgradeTo(GetAiUnitType("guard-tower")) end,
+  function() return AiNeed(GetAiUnitType("watch-tower")) end,
 --  function() return AiUpgradeTo(AiCannonTower()) end,
-  function() return AiUpgradeTo(AiGuardTower()) end,
-  function() return AiNeed(AiWatchTower()) end,
-  function() return AiUpgradeTo(AiGuardTower()) end,
-  function() return AiNeed(AiWatchTower()) end,
+  function() return AiUpgradeTo(GetAiUnitType("guard-tower")) end,
+  function() return AiNeed(GetAiUnitType("watch-tower")) end,
+  function() return AiUpgradeTo(GetAiUnitType("guard-tower")) end,
+  function() return AiNeed(GetAiUnitType("watch-tower")) end,
 --  function() return AiUpgradeTo(AiCannonTower()) end,
-  function() return AiUpgradeTo(AiGuardTower()) end,
-  function() return AiNeed(AiWatchTower()) end,
-  function() return AiUpgradeTo(AiGuardTower()) end,
-  function() return AiNeed(AiWatchTower()) end,
+  function() return AiUpgradeTo(GetAiUnitType("guard-tower")) end,
+  function() return AiNeed(GetAiUnitType("watch-tower")) end,
+  function() return AiUpgradeTo(GetAiUnitType("guard-tower")) end,
+  function() return AiNeed(GetAiUnitType("watch-tower")) end,
 --  function() return AiUpgradeTo(AiCannonTower()) end,
-  function() return AiUpgradeTo(AiGuardTower()) end,
-  function() return AiNeed(AiWatchTower()) end,
-  function() return AiUpgradeTo(AiGuardTower()) end,
+  function() return AiUpgradeTo(GetAiUnitType("guard-tower")) end,
+  function() return AiNeed(GetAiUnitType("watch-tower")) end,
+  function() return AiUpgradeTo(GetAiUnitType("guard-tower")) end,
 
 -- ANOTHER EXPANSION, ANOTHER BIG ATTACK
 
@@ -379,45 +379,45 @@ local land_funcs = {
 	end
   end,
   
---  function() return AiDifficultyForce(5, {AiSoldier(), 0, AiEliteShooter(), 15, AiCavalry(), 0, AiCavalryMage(), 40, AiSiegeWeapon(), 0, AiPriest(), 4}, true) end,
---  function() return AiDifficultyForce(6, {AiSoldier(), 0, AiEliteShooter(), 10, AiCavalry(), 0, AiCavalryMage(), 20, AiSiegeWeapon(), 2, AiPriest(), 0}, true) end,
-  function() return AiDifficultyForce(5, {AiSoldier(), 40, AiShooter(), 15, AiSiegeWeapon(), 0, AiPriest(), 4}, true) end,
-  function() return AiDifficultyForce(6, {AiSoldier(), 20, AiShooter(), 10, AiSiegeWeapon(), 2, AiPriest(), 0}, true) end,
+--  function() return AiDifficultyForce(5, {GetAiUnitType("infantry"), 0, AiEliteShooter(), 15, GetAiUnitType("cavalry"), 0, AiCavalryMage(), 40, GetAiUnitType("siege-engine"), 0, GetAiUnitType("priest"), 4}, true) end,
+--  function() return AiDifficultyForce(6, {GetAiUnitType("infantry"), 0, AiEliteShooter(), 10, GetAiUnitType("cavalry"), 0, AiCavalryMage(), 20, GetAiUnitType("siege-engine"), 2, GetAiUnitType("priest"), 0}, true) end,
+  function() return AiDifficultyForce(5, {GetAiUnitType("infantry"), 40, GetAiUnitType("shooter"), 15, GetAiUnitType("siege-engine"), 0, GetAiUnitType("priest"), 4}, true) end,
+  function() return AiDifficultyForce(6, {GetAiUnitType("infantry"), 20, GetAiUnitType("shooter"), 10, GetAiUnitType("siege-engine"), 2, GetAiUnitType("priest"), 0}, true) end,
 --  function() return AiDifficultyForce(7, {AiFlyer(), 4}, true) end,
   function() return AiWaitForce(5) end,
   function() return AiAttackWithForce(5) end,
---  function() return AiDifficultyForce(5, {AiSoldier(), 0, AiEliteShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 0, AiSiegeWeapon(), 0, AiFlyer(), 0, AiPriest(), 0}, true) end,
-  function() return AiDifficultyForce(5, {AiSoldier(), 0, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
+--  function() return AiDifficultyForce(5, {GetAiUnitType("infantry"), 0, AiEliteShooter(), 0, GetAiUnitType("cavalry"), 0, AiCavalryMage(), 0, GetAiUnitType("siege-engine"), 0, AiFlyer(), 0, GetAiUnitType("priest"), 0}, true) end,
+  function() return AiDifficultyForce(5, {GetAiUnitType("infantry"), 0, GetAiUnitType("shooter"), 0, GetAiUnitType("siege-engine"), 0, GetAiUnitType("priest"), 0}, true) end,
   function() return AiWaitForce(6) end,
   function() return AiAttackWithForce(6) end,
---  function() return AiDifficultyForce(6, {AiSoldier(), 0, AiEliteShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 0, AiSiegeWeapon(), 0, AiFlyer(), 0, AiPriest(), 0}, true) end,
-  function() return AiDifficultyForce(6, {AiSoldier(), 0, AiShooter(), 0, AiSiegeWeapon(), 0, AiPriest(), 0}, true) end,
+--  function() return AiDifficultyForce(6, {GetAiUnitType("infantry"), 0, AiEliteShooter(), 0, GetAiUnitType("cavalry"), 0, AiCavalryMage(), 0, GetAiUnitType("siege-engine"), 0, AiFlyer(), 0, GetAiUnitType("priest"), 0}, true) end,
+  function() return AiDifficultyForce(6, {GetAiUnitType("infantry"), 0, GetAiUnitType("shooter"), 0, GetAiUnitType("siege-engine"), 0, GetAiUnitType("priest"), 0}, true) end,
 --  function() return AiWaitForce(7) end,
 --  function() return AiAttackWithForce(7) end,
---  function() return AiDifficultyForce(7, {AiSoldier(), 0, AiEliteShooter(), 0, AiCavalry(), 0, AiCavalryMage(), 0, AiSiegeWeapon(), 0, AiFlyer(), 0, AiPriest(), 0}, true) end,
+--  function() return AiDifficultyForce(7, {GetAiUnitType("infantry"), 0, AiEliteShooter(), 0, GetAiUnitType("cavalry"), 0, AiCavalryMage(), 0, GetAiUnitType("siege-engine"), 0, AiFlyer(), 0, GetAiUnitType("priest"), 0}, true) end,
 
 -- LITTLE DEFENSE
 
-  function() return AiNeed(AiWatchTower()) end,
+  function() return AiNeed(GetAiUnitType("watch-tower")) end,
 --  function() return AiUpgradeTo(AiCannonTower()) end,
-  function() return AiUpgradeTo(AiGuardTower()) end,
-  function() return AiNeed(AiWatchTower()) end,
-  function() return AiUpgradeTo(AiGuardTower()) end,
-  function() return AiNeed(AiWatchTower()) end,
+  function() return AiUpgradeTo(GetAiUnitType("guard-tower")) end,
+  function() return AiNeed(GetAiUnitType("watch-tower")) end,
+  function() return AiUpgradeTo(GetAiUnitType("guard-tower")) end,
+  function() return AiNeed(GetAiUnitType("watch-tower")) end,
 --  function() return AiUpgradeTo(AiCannonTower()) end,
-  function() return AiUpgradeTo(AiGuardTower()) end,
-  function() return AiNeed(AiWatchTower()) end,
-  function() return AiUpgradeTo(AiGuardTower()) end,
-  function() return AiNeed(AiWatchTower()) end,
+  function() return AiUpgradeTo(GetAiUnitType("guard-tower")) end,
+  function() return AiNeed(GetAiUnitType("watch-tower")) end,
+  function() return AiUpgradeTo(GetAiUnitType("guard-tower")) end,
+  function() return AiNeed(GetAiUnitType("watch-tower")) end,
 --  function() return AiUpgradeTo(AiCannonTower()) end,
-  function() return AiUpgradeTo(AiGuardTower()) end,
-  function() return AiNeed(AiWatchTower()) end,
-  function() return AiUpgradeTo(AiGuardTower()) end,
-  function() return AiNeed(AiWatchTower()) end,
+  function() return AiUpgradeTo(GetAiUnitType("guard-tower")) end,
+  function() return AiNeed(GetAiUnitType("watch-tower")) end,
+  function() return AiUpgradeTo(GetAiUnitType("guard-tower")) end,
+  function() return AiNeed(GetAiUnitType("watch-tower")) end,
 --  function() return AiUpgradeTo(AiCannonTower()) end,
-  function() return AiUpgradeTo(AiGuardTower()) end,
-  function() return AiNeed(AiWatchTower()) end,
-  function() return AiUpgradeTo(AiGuardTower()) end,
+  function() return AiUpgradeTo(GetAiUnitType("guard-tower")) end,
+  function() return AiNeed(GetAiUnitType("watch-tower")) end,
+  function() return AiUpgradeTo(GetAiUnitType("guard-tower")) end,
 
 
   -- Everything researched...

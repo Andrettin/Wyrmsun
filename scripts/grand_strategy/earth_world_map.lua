@@ -18162,7 +18162,7 @@ if (GrandStrategyYear >= -71) then -- The Suebic king Ariovistus enters Gaul at 
 	SetFactionDiplomacyState("celt", "Aedui Tribe", "celt", "Arverni Tribe", "war")
 	SetFactionDiplomacyState("celt", "Aedui Tribe", "celt", "Sequani Tribe", "war")
 	
-	SetProvinceUnitQuantity("Brandenburg", "unit-teuton-swordsman", 13) -- 135,000 (15,000 + 120,000) Germanic warriors who participated in Ariovistus' invasion of Gaul; one unit per 10,000 troops, as that is more practical for game purposes; Source: http://www.gutenberg.org/cache/epub/10657/pg10657.html
+	SetProvinceUnitQuantity("Brandenburg", "unit-suebi-swordsman", 13) -- 135,000 (15,000 + 120,000) Germanic warriors who participated in Ariovistus' invasion of Gaul; one unit per 10,000 troops, as that is more practical for game purposes; Source: http://www.gutenberg.org/cache/epub/10657/pg10657.html
 	
 	SetProvinceUnitQuantity("Provence", "unit-teuton-swordsman", 30) -- enough troops to vanquish Ariovistus (in reality Caesar won while outnumbered)
 	
@@ -18175,9 +18175,9 @@ end
 
 if (GrandStrategyYear >= -61) then -- Battle of Magetobria, in which Ariovistus defeated a number of Gaulish tribes, and afterwards established himself in Alsace and began lording over the Gauls; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 139; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 218.
 	SetProvinceOwner("Alsace", "teuton", "Suebi Tribe")
-	SetProvinceUnitQuantity("Brandenburg", "unit-teuton-swordsman", 4) -- to give them something of a defense
+	SetProvinceUnitQuantity("Brandenburg", "unit-suebi-swordsman", 4) -- to give them something of a defense
 	SetProvinceUnitQuantity("Alsace", "unit-germanic-warrior", 0)
-	SetProvinceUnitQuantity("Alsace", "unit-teuton-swordsman", 13)
+	SetProvinceUnitQuantity("Alsace", "unit-suebi-swordsman", 13)
 	SetProvinceUnitQuantity("Burgundy", "unit-germanic-warrior", 0) -- Aedui forces defeated
 	GrandStrategyEvents.TheSequanisAppeal = nil
 	GrandStrategyEvents.TheBattleOfMagetobria = nil
@@ -18313,7 +18313,7 @@ if (GrandStrategyYear >= -9) then -- Marbod, king of the Suebic tribe of the Mar
 	SetProvinceCivilization("Bohemia", "teuton")
 	SetProvinceUnitQuantity("Bohemia", "unit-germanic-warrior", 0)
 	SetProvinceHero("Bohemia", "unit-hero-marbod", 2) 
-	SetProvinceUnitQuantity("Bohemia", "unit-teuton-swordsman", 5) -- Marbod had 70,000 foot soldiers and 4,000 horse riders; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 231.
+	SetProvinceUnitQuantity("Bohemia", "unit-suebi-swordsman", 5) -- Marbod had 70,000 foot soldiers and 4,000 horse riders; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 231.
 	SetProvinceUnitQuantity("Bohemia", "unit-teuton-archer", 2) -- let's make 20,000 of those soldiers into archers
 	SetProvinceUnitQuantity("Bohemia", "unit-teuton-ritter", 1) -- 4,000 horse riders
 	AcquireFactionTechnologies("teuton", "Suebi Tribe", "teuton", "Marcomanni Tribe")

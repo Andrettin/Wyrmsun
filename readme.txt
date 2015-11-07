@@ -230,6 +230,20 @@ https://github.com/Andrettin/Wyrmsun
 
 * Factions
 - Factions can now be chosen in-game.
+- Factions can now have unit types of their own which replace or supplement their civilization's unit types.
+- Factions can now have a parent faction (from which they inherit units).
+- Set the Suebi Tribe as the parent faction of the Alamanni Tribe, Buri Tribe, Marcomanni Tribe, Quadi Tribe, Semnone Tribe and Galicia.
+- Set the Marcomanni Tribe as the parent faction of the Bavarian Tribe.
+- Set the Bavarian Tribe as the parent faction of Bavaria.
+- Set Bavaria as the parent faction of Austria.
+- Set the Alamanni Tribe as the parent of Baden, Switzerland and Wurtemberg.
+
+* Grand Strategy
+- Fixed issue which caused labor to not be allocated after loading a saved game.
+
+* Units
+- Added a faction-specific version of the Krieger for the Suebi Tribe.
+- Added a new Suebi shield, used by their Krieger (graphics by Jinn).
 
 -----------------------------------------------------------------------
 - 1.5.2

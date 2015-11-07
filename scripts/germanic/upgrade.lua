@@ -86,7 +86,7 @@ DefineUpgrade("upgrade-germanic-wood-plow", {
 DefineModifier("upgrade-germanic-broad-sword",
 	{"BasicDamage", 2},
 	{"Points", 10},
-	{"apply-to", "unit-germanic-warrior"}, {"apply-to", "unit-teuton-swordsman"},
+	{"apply-to", "unit-germanic-warrior"}, {"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-suebi-swordsman"},
 	{"apply-to", "unit-teuton-ritter"},
 	{"apply-to", "unit-hero-marbod"}
 )
@@ -94,7 +94,7 @@ DefineModifier("upgrade-germanic-broad-sword",
 DefineModifier("upgrade-germanic-bronze-shield",
 	{"Armor", 2},
 	{"Points", 10},
-	{"apply-to", "unit-germanic-warrior"}, {"apply-to", "unit-teuton-swordsman"},
+	{"apply-to", "unit-germanic-warrior"}, {"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-suebi-swordsman"},
 	{"apply-to", "unit-teuton-ritter"},
 	{"apply-to", "unit-hero-marbod"}
 )
