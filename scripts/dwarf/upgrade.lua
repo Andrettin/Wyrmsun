@@ -184,6 +184,11 @@ DefineUpgrade("upgrade-shorbear-clan-faction", {
 	Ability = false
 })
 
+DefineUpgrade("upgrade-joruvellir-faction", {
+	Name = _("Joruvellir Faction"),
+	Ability = false
+})
+
 DefineUpgrade("upgrade-kal-kartha-faction", {
 	Name = _("Kal Kartha Faction"),
 	Ability = false
@@ -337,6 +342,12 @@ DefineModifier("upgrade-shorbear-clan-faction",
 	{"BasicDamage", 15},
 	{"Points", 10},
 	{"apply-to", "unit-dwarven-ballista"}
+)
+
+DefineModifier("upgrade-joruvellir-faction",
+	{"BasicDamage", 1},
+	{"Points", 10},
+	{"apply-to", "unit-dwarven-scout"}
 )
 
 DefineModifier("upgrade-kal-kartha-faction",

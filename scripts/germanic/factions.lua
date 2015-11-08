@@ -45,6 +45,16 @@ DefineFaction("Skjoldung Tribe", { -- mythical Danish dynasty, Skjöldr was a son
 	FactionUpgrade = "upgrade-skjoldung-tribe-faction"
 })
 
+DefineFaction("Volsung Tribe", { -- mythical Frankish dynasty, which originated from the descendants of Odin set to rule over "Frankland"; Source: Snorri Sturlson, "Heimskringla", 1844; Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
+	Civilization = "germanic",
+	ParentFaction = "Asa Tribe",
+	Type = "tribe",
+	Color = "blue",
+	SecondaryColor = "blue",
+--	DevelopsTo = {"Frank Tribe"}
+	FactionUpgrade = "upgrade-volsung-tribe-faction"
+})
+
 DefineFaction("Yngling Tribe", { -- mythical Swedish dynasty, Yngve was a son of Odin set to succeed him in the rule of Sweden; Source: Snorri Sturlson, "The Prose Edda", 1916, p. 9.
 	Civilization = "germanic",
 	ParentFaction = "Asa Tribe",

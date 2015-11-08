@@ -30,7 +30,7 @@ DefineFaction("Eikinskjaldi Clan", { -- originally Oakenshield (from Dyson Logos
 	Type = "tribe",
 	Color = "brown",
 	SecondaryColor = "brown",
-	DevelopsTo = {"Kal Kartha", "Knalga", "Lyr"},
+	DevelopsTo = {"Joruvellir", "Kal Kartha", "Knalga", "Lyr"},
 	FactionUpgrade = "upgrade-eikinskjaldi-clan-faction"
 })
 
@@ -39,7 +39,7 @@ DefineFaction("Modsogning Clan", { -- clan of Modsognir
 	Type = "tribe",
 	Color = "white",
 	SecondaryColor = "white",
-	DevelopsTo = {"Kal Kartha", "Knalga", "Lyr"},
+	DevelopsTo = {"Joruvellir", "Kal Kartha", "Knalga", "Lyr"},
 	FactionUpgrade = "upgrade-modsogning-clan-faction"
 })
 
@@ -48,7 +48,8 @@ DefineFaction("Norlund Clan", {
 	Type = "tribe",
 	Color = "red",
 	SecondaryColor = "orange",
-	DevelopsTo = {"Kal Kartha", "Knalga"},
+--	DevelopsTo = {"Kal Kartha", "Knalga"},
+	DevelopsTo = {"Joruvellir", "Kal Kartha", "Knalga", "Lyr"},
 	FactionUpgrade = "upgrade-norlund-clan-faction"
 })
 
@@ -57,7 +58,7 @@ DefineFaction("Shinsplitter Clan", {
 	Type = "tribe",
 	Color = "green",
 	SecondaryColor = "teal",
-	DevelopsTo = {"Kal Kartha", "Knalga", "Lyr"},
+	DevelopsTo = {"Joruvellir", "Kal Kartha", "Knalga", "Lyr"},
 	FactionUpgrade = "upgrade-shinsplitter-clan-faction"
 })
 
@@ -66,7 +67,8 @@ DefineFaction("Shorbear Clan", {
 	Type = "tribe",
 	Color = "blue",
 	SecondaryColor = "cyan",
-	DevelopsTo = {"Knalga"},
+--	DevelopsTo = {"Knalga"},
+	DevelopsTo = {"Joruvellir", "Kal Kartha", "Knalga", "Lyr"},
 	FactionUpgrade = "upgrade-shorbear-clan-faction"
 })
 
@@ -92,6 +94,18 @@ DefineFaction("Knalga", {
 		"monarchy", "barony", "Lordship"
 	},
 	FactionUpgrade = "upgrade-knalga-faction"
+})
+
+DefineFaction("Joruvellir", {
+	Civilization = "dwarf",
+	Type = "polity",
+	Color = "brown",
+	SecondaryColor = "brown",
+	DefaultTier = "barony",
+	Titles = {
+		"monarchy", "barony", "Lordship"
+	},
+	FactionUpgrade = "upgrade-joruvellir-faction"
 })
 
 DefineFaction("Lyr", {

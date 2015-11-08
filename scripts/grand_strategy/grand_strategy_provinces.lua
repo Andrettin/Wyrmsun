@@ -4072,7 +4072,10 @@ function LoadProvinces(world)
 				unit_goblin_spearman = 6, -- some enemy goblins
 				unit_goblin_archer = 3
 			},
-			SettlementTerrain = "Plains" -- should be Dark Plains, but those are not generated in random maps (yet); when there are desert tiles implemented, this should be Desert instead
+			SettlementTerrain = "Plains", -- should be Dark Plains, but those are not generated in random maps (yet); when there are desert tiles implemented, this should be Desert instead
+			Claims = {
+				"dwarf", "Joruvellir"
+			}
 		},
 		KalKartha = {
 			Name = "Kal Kartha",
