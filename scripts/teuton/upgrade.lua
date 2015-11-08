@@ -117,8 +117,53 @@ DefineUpgrade("upgrade-teuton-writing", {
 	TechnologyPointCost = 1
 })
 
+DefineUpgrade("upgrade-alamanni-tribe-faction", {
+	Name = _("Alamanni Tribe Faction"),
+	Ability = false
+})
+
+DefineUpgrade("upgrade-angle-tribe-faction", {
+	Name = _("Angle Tribe Faction"),
+	Ability = false
+})
+
+DefineUpgrade("upgrade-bavarian-tribe-faction", {
+	Name = _("Bavarian Tribe Faction"),
+	Ability = false
+})
+
+DefineUpgrade("upgrade-frank-tribe-faction", {
+	Name = _("Frank Tribe Faction"),
+	Ability = false
+})
+
+DefineUpgrade("upgrade-frisian-tribe-faction", {
+	Name = _("Frisian Tribe Faction"),
+	Ability = false
+})
+
+DefineUpgrade("upgrade-lombard-tribe-faction", {
+	Name = _("Lombard Tribe Faction"),
+	Ability = false
+})
+
+DefineUpgrade("upgrade-saxon-tribe-faction", {
+	Name = _("Saxon Tribe Faction"),
+	Ability = false
+})
+
 DefineUpgrade("upgrade-suebi-tribe-faction", {
 	Name = _("Suebi Tribe Faction"),
+	Ability = false
+})
+
+DefineUpgrade("upgrade-thuringian-tribe-faction", {
+	Name = _("Thuringian Tribe Faction"),
+	Ability = false
+})
+
+DefineUpgrade("upgrade-mecklenburg-faction", {
+	Name = _("Mecklenburg Faction"),
 	Ability = false
 })
 
@@ -213,8 +258,66 @@ DefineModifier("upgrade-teuton-civilization",
 	{"apply-to", "unit-germanic-archer"}, {"convert-to", "unit-teuton-archer"}
 )
 
+DefineModifier("upgrade-alamanni-tribe-faction",
+	{"HitPoints", 10},
+	{"Points", 10},
+	{"apply-to", "unit-teuton-swordsman"}
+)
+
+DefineModifier("upgrade-angle-tribe-faction",
+	{"BasicDamage", 2},
+	{"Points", 10},
+	{"apply-to", "unit-teuton-swordsman"}
+)
+
+DefineModifier("upgrade-bavarian-tribe-faction",
+	{"Armor", 1},
+	{"BasicDamage", 1},
+	{"Points", 10},
+	{"apply-to", "unit-teuton-swordsman"}
+)
+
+DefineModifier("upgrade-frank-tribe-faction",
+	{"BasicDamage", 1},
+	{"Armor", 1},
+	{"Points", 10},
+	{"apply-to", "unit-teuton-ritter"}
+)
+
+DefineModifier("upgrade-frisian-tribe-faction",
+	{"Armor", 1},
+	{"HitPoints", 5},
+	{"Points", 10},
+	{"apply-to", "unit-teuton-swordsman"}
+)
+
+DefineModifier("upgrade-lombard-tribe-faction",
+	{"BasicDamage", 2},
+	{"Points", 10},
+	{"apply-to", "unit-teuton-swordsman"}
+)
+
+DefineModifier("upgrade-saxon-tribe-faction",
+	{"BasicDamage", 1},
+	{"HitPoints", 5},
+	{"Points", 10},
+	{"apply-to", "unit-teuton-swordsman"}
+)
+
 DefineModifier("upgrade-suebi-tribe-faction",
 	{"apply-to", "unit-teuton-swordsman"}, {"convert-to", "unit-suebi-swordsman"}
+)
+
+DefineModifier("upgrade-thuringian-tribe-faction",
+	{"BasicDamage", 1},
+	{"Points", 10},
+	{"apply-to", "unit-teuton-archer"}
+)
+
+DefineModifier("upgrade-mecklenburg-faction",
+	{"Armor", 2},
+	{"Points", 10},
+	{"apply-to", "unit-teuton-swordsman"}
 )
 
 DefineDependency("unit-teuton-archer",

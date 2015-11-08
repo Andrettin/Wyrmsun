@@ -30,7 +30,8 @@ DefineFaction("Eikinskjaldi Clan", { -- originally Oakenshield (from Dyson Logos
 	Type = "tribe",
 	Color = "brown",
 	SecondaryColor = "brown",
-	DevelopsTo = {"Kal Kartha", "Knalga", "Lyr"}
+	DevelopsTo = {"Kal Kartha", "Knalga", "Lyr"},
+	FactionUpgrade = "upgrade-eikinskjaldi-clan-faction"
 })
 
 DefineFaction("Modsogning Clan", { -- clan of Modsognir
@@ -38,7 +39,8 @@ DefineFaction("Modsogning Clan", { -- clan of Modsognir
 	Type = "tribe",
 	Color = "white",
 	SecondaryColor = "white",
-	DevelopsTo = {"Kal Kartha", "Knalga", "Lyr"}
+	DevelopsTo = {"Kal Kartha", "Knalga", "Lyr"},
+	FactionUpgrade = "upgrade-modsogning-clan-faction"
 })
 
 DefineFaction("Norlund Clan", {
@@ -46,7 +48,8 @@ DefineFaction("Norlund Clan", {
 	Type = "tribe",
 	Color = "red",
 	SecondaryColor = "orange",
-	DevelopsTo = {"Kal Kartha", "Knalga"}
+	DevelopsTo = {"Kal Kartha", "Knalga"},
+	FactionUpgrade = "upgrade-norlund-clan-faction"
 })
 
 DefineFaction("Shinsplitter Clan", {
@@ -54,7 +57,8 @@ DefineFaction("Shinsplitter Clan", {
 	Type = "tribe",
 	Color = "green",
 	SecondaryColor = "teal",
-	DevelopsTo = {"Kal Kartha", "Knalga", "Lyr"}
+	DevelopsTo = {"Kal Kartha", "Knalga", "Lyr"},
+	FactionUpgrade = "upgrade-shinsplitter-clan-faction"
 })
 
 DefineFaction("Shorbear Clan", {
@@ -62,7 +66,8 @@ DefineFaction("Shorbear Clan", {
 	Type = "tribe",
 	Color = "blue",
 	SecondaryColor = "cyan",
-	DevelopsTo = {"Knalga"}
+	DevelopsTo = {"Knalga"},
+	FactionUpgrade = "upgrade-shorbear-clan-faction"
 })
 
 DefineFaction("Kal Kartha", {
@@ -73,7 +78,8 @@ DefineFaction("Kal Kartha", {
 	DefaultTier = "barony",
 	Titles = {
 		"monarchy", "barony", "Lordship"
-	}
+	},
+	FactionUpgrade = "upgrade-kal-kartha-faction"
 })
 
 DefineFaction("Knalga", {
@@ -84,7 +90,8 @@ DefineFaction("Knalga", {
 	DefaultTier = "barony",
 	Titles = {
 		"monarchy", "barony", "Lordship"
-	}
+	},
+	FactionUpgrade = "upgrade-knalga-faction"
 })
 
 DefineFaction("Lyr", {
@@ -95,5 +102,6 @@ DefineFaction("Lyr", {
 	DefaultTier = "barony",
 	Titles = {
 		"monarchy", "barony", "Lordship"
-	}
+	},
+	FactionUpgrade = "upgrade-lyr-faction"
 })

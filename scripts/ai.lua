@@ -55,7 +55,11 @@ DefineAiHelper(
 --  Get unit type of this class for the current AI's civilization
 --
 function GetAiUnitType(unit_class)
-	return GetFactionClassUnitType(unit_class, AiGetRace(), GetPlayerData(AiPlayer(), "Faction"))
+	if (GetPlayerData(AiPlayer(), "Faction") ~= "") then
+		return GetFactionClassUnitType(unit_class, AiGetRace(), GetPlayerData(AiPlayer(), "Faction"))
+	else
+		return GetCivilizationClassUnitType(unit_class, AiGetRace())
+	end
 end
 
 --

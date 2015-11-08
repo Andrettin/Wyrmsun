@@ -83,6 +83,21 @@ DefineUpgrade("upgrade-germanic-wood-plow", {
 	TechnologyPointCost = 1
 })
 
+DefineUpgrade("upgrade-asa-tribe-faction", {
+	Name = _("Asa Tribe Faction"),
+	Ability = false
+})
+
+DefineUpgrade("upgrade-skjoldung-tribe-faction", {
+	Name = _("Skjoldung Tribe Faction"),
+	Ability = false
+})
+
+DefineUpgrade("upgrade-yngling-tribe-faction", {
+	Name = _("Yngling Tribe Faction"),
+	Ability = false
+})
+
 DefineModifier("upgrade-germanic-broad-sword",
 	{"BasicDamage", 2},
 	{"Points", 10},
@@ -112,6 +127,25 @@ DefineModifier("upgrade-germanic-wood-plow",
 
 DefineModifier("upgrade-teuton-civilization",
 	{"change-civilization-to", "teuton"}
+)
+
+DefineModifier("upgrade-asa-tribe-faction",
+	{"BasicDamage", 1},
+	{"HitPoints", 5},
+	{"Points", 10},
+	{"apply-to", "unit-germanic-warrior"}
+)
+
+DefineModifier("upgrade-skjoldung-tribe-faction",
+	{"BasicDamage", 2},
+	{"Points", 10},
+	{"apply-to", "unit-germanic-warrior"}
+)
+
+DefineModifier("upgrade-yngling-tribe-faction",
+	{"BasicDamage", 1},
+	{"Points", 10},
+	{"apply-to", "unit-germanic-archer"}
 )
 
 DefineDependency("unit-germanic-archer",

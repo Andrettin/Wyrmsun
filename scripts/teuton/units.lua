@@ -185,7 +185,8 @@ DefineUnitType("unit-suebi-swordsman", { Name = _("Krieger"),
 	HelmetImage = {"file", ""},
 	WeaponImage = {"file", "teuton/units/long_iron_sword.png"},
 	Icon = "icon-marbod",
-	Armor = 0, BasicDamage = 10, Accuracy = 11, -- -2 armor, +1 damage, +1 accuracy
+	Armor = 0, BasicDamage = 11, Accuracy = 12, -- -2 armor, +2 damage, +2 accuracy
+	Points = 60, -- +10 points
 	Variations = {
 		{
 			"variation-id", "blond-hair", -- no shield, bronze sword

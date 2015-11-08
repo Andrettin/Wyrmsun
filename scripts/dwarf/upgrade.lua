@@ -159,6 +159,46 @@ DefineUpgrade("upgrade-dwarven-runewriting", {
 	TechnologyPointCost = 1
 })
 
+DefineUpgrade("upgrade-eikinskjaldi-clan-faction", {
+	Name = _("Eikinskjaldi Clan Faction"),
+	Ability = false
+})
+
+DefineUpgrade("upgrade-modsogning-clan-faction", {
+	Name = _("Modsogning Clan Faction"),
+	Ability = false
+})
+
+DefineUpgrade("upgrade-norlund-clan-faction", {
+	Name = _("Norlund Clan Faction"),
+	Ability = false
+})
+
+DefineUpgrade("upgrade-shinsplitter-clan-faction", {
+	Name = _("Shinsplitter Clan Faction"),
+	Ability = false
+})
+
+DefineUpgrade("upgrade-shorbear-clan-faction", {
+	Name = _("Shorbear Clan Faction"),
+	Ability = false
+})
+
+DefineUpgrade("upgrade-kal-kartha-faction", {
+	Name = _("Kal Kartha Faction"),
+	Ability = false
+})
+
+DefineUpgrade("upgrade-knalga-faction", {
+	Name = _("Knalga Faction"),
+	Ability = false
+})
+
+DefineUpgrade("upgrade-lyr-faction", {
+	Name = _("Lyr Faction"),
+	Ability = false
+})
+
 DefineModifier("upgrade-dwarven-broad-axe",
 	{"BasicDamage", 2},
 	{"Points", 10},
@@ -249,6 +289,7 @@ DefineModifier("upgrade-dwarven-iron-tipped-wood-plow",
 DefineModifier("upgrade-dwarven-masonry",
 	{"HitPoints", 20, "Percent"},
 	{"Armor", 5},
+	{"Points", 10},
 	{"apply-to", "unit-dwarven-town-hall"}, {"apply-to", "unit-dwarven-stronghold"},
 	{"apply-to", "unit-dwarven-mushroom-farm"}, {"apply-to", "unit-dwarven-barracks"},
 	{"apply-to", "unit-dwarven-lumber-mill"}, {"apply-to", "unit-dwarven-smithy"},
@@ -264,6 +305,57 @@ DefineModifier("upgrade-dwarven-coinage",
 DefineModifier("upgrade-dwarven-runewriting",
 	{"research-speed", 10}
 --	{"apply-to", "unit-dwarven-town-hall"}, {"apply-to", "unit-dwarven-stronghold"}
+)
+
+DefineModifier("upgrade-eikinskjaldi-clan-faction",
+	{"Armor", 2},
+	{"Points", 10},
+	{"apply-to", "unit-dwarven-axefighter"}, {"apply-to", "unit-dwarven-steelclad"}, {"apply-to", "unit-dwarven-thane"}
+)
+
+DefineModifier("upgrade-modsogning-clan-faction",
+	{"BasicDamage", 2},
+	{"Points", 10},
+	{"apply-to", "unit-dwarven-axefighter"}, {"apply-to", "unit-dwarven-steelclad"}, {"apply-to", "unit-dwarven-thane"}
+)
+
+DefineModifier("upgrade-norlund-clan-faction",
+	{"BasicDamage", 1},
+	{"Armor", 1},
+	{"Points", 10},
+	{"apply-to", "unit-dwarven-axefighter"}, {"apply-to", "unit-dwarven-steelclad"}, {"apply-to", "unit-dwarven-thane"}
+)
+
+DefineModifier("upgrade-shinsplitter-clan-faction",
+	{"Armor", -1},
+	{"BasicDamage", 3},
+	{"Points", 10},
+	{"apply-to", "unit-dwarven-axefighter"}, {"apply-to", "unit-dwarven-steelclad"}, {"apply-to", "unit-dwarven-thane"}
+)
+
+DefineModifier("upgrade-shorbear-clan-faction",
+	{"BasicDamage", 15},
+	{"Points", 10},
+	{"apply-to", "unit-dwarven-ballista"}
+)
+
+DefineModifier("upgrade-kal-kartha-faction",
+	{"BasicDamage", 3},
+	{"HitPoints", -5},
+	{"Points", 10},
+	{"apply-to", "unit-dwarven-axefighter"}, {"apply-to", "unit-dwarven-steelclad"}, {"apply-to", "unit-dwarven-thane"}
+)
+
+DefineModifier("upgrade-knalga-faction",
+	{"BasicDamage", 2},
+	{"Points", 10},
+	{"apply-to", "unit-dwarven-axefighter"}, {"apply-to", "unit-dwarven-steelclad"}, {"apply-to", "unit-dwarven-thane"}
+)
+
+DefineModifier("upgrade-lyr-faction",
+	{"Armor", 5}, -- Thrymgjol bonus
+	{"Points", 10},
+	{"apply-to", "unit-dwarven-sentry-tower"}, {"apply-to", "unit-dwarven-guard-tower"}
 )
 
 DefineDependency("unit-dwarven-scout",

@@ -35,17 +35,45 @@ DefineFaction("Suebi Tribe", {
 	FactionUpgrade = "upgrade-suebi-tribe-faction"
 })
 
+DefineFaction("Frank Tribe", {
+	Civilization = "teuton",
+	Type = "tribe",
+	Color = "green",
+	SecondaryColor = "orange",
+	DevelopsTo = {"Francia", "Netherlands"},
+	FactionUpgrade = "upgrade-frank-tribe-faction"
+})
+
+DefineFaction("Saxon Tribe", {
+	Civilization = "teuton",
+	Type = "tribe",
+	Color = "pink",
+	SecondaryColor = "pink",
+	DevelopsTo = {"Saxony", "Brandenburg", "England", "Prussia", "Scotland"},
+	FactionUpgrade = "upgrade-saxon-tribe-faction"
+})
+
+DefineFaction("Thuringian Tribe", {
+	Civilization = "teuton",
+	Type = "tribe",
+	Color = "green",
+	SecondaryColor = "green",
+	FactionUpgrade = "upgrade-thuringian-tribe-faction"
+})
+
 DefineFaction("Alamanni Tribe", {
 	Civilization = "teuton",
 --	ParentFaction = "Suebi Tribe",
 	Type = "tribe",
 	Color = "blue",
 	SecondaryColor = "blue",
-	DevelopsTo = {"Baden", "Switzerland", "Wurtemberg"}
+	DevelopsTo = {"Baden", "Switzerland", "Wurtemberg"},
+	FactionUpgrade = "upgrade-alamanni-tribe-faction"
 })
 
 DefineFaction("Ampsivarii Tribe", {
 	Civilization = "teuton",
+	ParentFaction = "Frank Tribe", -- accurate?,
 	Type = "tribe",
 	Color = "cyan",
 	SecondaryColor = "cyan",
@@ -57,11 +85,13 @@ DefineFaction("Angle Tribe", {
 	Type = "tribe",
 	Color = "white",
 	SecondaryColor = "white",
-	DevelopsTo = {"England", "Scotland"}
+	DevelopsTo = {"England", "Scotland"},
+	FactionUpgrade = "upgrade-angle-tribe-faction"
 })
 
 DefineFaction("Avione Tribe", {
 	Civilization = "teuton",
+	ParentFaction = "Angle Tribe", -- accurate?,
 	Type = "tribe",
 	Color = "white",
 	SecondaryColor = "white"
@@ -69,6 +99,7 @@ DefineFaction("Avione Tribe", {
 
 DefineFaction("Batavian Tribe", {
 	Civilization = "teuton",
+	ParentFaction = "Frank Tribe", -- accurate?
 	Type = "tribe",
 	Color = "orange",
 	SecondaryColor = "orange",
@@ -86,6 +117,7 @@ DefineFaction("Buri Tribe", {
 
 DefineFaction("Charude Tribe", {
 	Civilization = "teuton", -- were the Charudes actually West Germanic?
+	ParentFaction = "Angle Tribe", -- accurate?
 	Type = "tribe",
 	Color = "purple",
 	SecondaryColor = "purple",
@@ -94,6 +126,7 @@ DefineFaction("Charude Tribe", {
 
 DefineFaction("Chamavi Tribe", {
 	Civilization = "teuton",
+	ParentFaction = "Frank Tribe", -- accurate?
 	Type = "tribe",
 	Color = "pink",
 	SecondaryColor = "pink",
@@ -102,6 +135,7 @@ DefineFaction("Chamavi Tribe", {
 
 DefineFaction("Chatti Tribe", {
 	Civilization = "teuton",
+	ParentFaction = "Frank Tribe", -- accurate?
 	Type = "tribe",
 	Color = "yellow",
 	SecondaryColor = "yellow",
@@ -110,6 +144,7 @@ DefineFaction("Chatti Tribe", {
 
 DefineFaction("Chauci Tribe", {
 	Civilization = "teuton",
+	ParentFaction = "Saxon Tribe", -- accurate?
 	Type = "tribe",
 	Color = "black",
 	SecondaryColor = "black",
@@ -118,18 +153,11 @@ DefineFaction("Chauci Tribe", {
 
 DefineFaction("Cherusci Tribe", {
 	Civilization = "teuton",
+	ParentFaction = "Saxon Tribe", -- accurate?
 	Type = "tribe",
 	Color = "teal",
 	SecondaryColor = "teal",
 	DevelopsTo = {"Brunswick", "Magdeburg"} -- same general area
-})
-
-DefineFaction("Frank Tribe", {
-	Civilization = "teuton",
-	Type = "tribe",
-	Color = "green",
-	SecondaryColor = "orange",
-	DevelopsTo = {"Francia", "Netherlands"}
 })
 
 DefineFaction("Frisian Tribe", {
@@ -137,11 +165,13 @@ DefineFaction("Frisian Tribe", {
 	Type = "tribe",
 	Color = "violet", -- change to a better one?
 	SecondaryColor = "purple",
-	DevelopsTo = {"Friesland", "Netherlands"}
+	DevelopsTo = {"Friesland", "Netherlands"},
+	FactionUpgrade = "upgrade-frisian-tribe-faction"
 })
 
 DefineFaction("Hermunduri Tribe", {
 	Civilization = "teuton",
+	ParentFaction = "Thuringian Tribe", -- accurate?
 	Type = "tribe",
 	Color = "blue",
 	SecondaryColor = "blue",
@@ -150,6 +180,7 @@ DefineFaction("Hermunduri Tribe", {
 
 DefineFaction("Jute Tribe", {
 	Civilization = "teuton",
+	ParentFaction = "Angle Tribe", -- accurate?
 	Type = "tribe",
 	Color = "red",
 	SecondaryColor = "white",
@@ -160,7 +191,8 @@ DefineFaction("Lombard Tribe", {
 	Civilization = "teuton",
 	Type = "tribe",
 	Color = "green",
-	SecondaryColor = "green"
+	SecondaryColor = "green",
+	FactionUpgrade = "upgrade-lombard-tribe-faction"
 })
 
 DefineFaction("Marcomanni Tribe", {
@@ -178,7 +210,8 @@ DefineFaction("Bavarian Tribe", {
 	Type = "tribe",
 	Color = "cyan",
 	SecondaryColor = "white",
-	DevelopsTo = {"Bavaria", "Austria"}
+	DevelopsTo = {"Bavaria", "Austria"},
+	FactionUpgrade = "upgrade-bavarian-tribe-faction"
 })
 
 DefineFaction("Quadi Tribe", {
@@ -188,14 +221,6 @@ DefineFaction("Quadi Tribe", {
 	Color = "brown",
 	SecondaryColor = "brown",
 	DevelopsTo = {"Bavaria", "Galicia", "Austria"} -- the Quadi were a Suebic tribe
-})
-
-DefineFaction("Saxon Tribe", {
-	Civilization = "teuton",
-	Type = "tribe",
-	Color = "pink",
-	SecondaryColor = "pink",
-	DevelopsTo = {"Saxony", "Brandenburg", "England", "Prussia", "Scotland"}
 })
 
 DefineFaction("Semnone Tribe", {
@@ -209,21 +234,16 @@ DefineFaction("Semnone Tribe", {
 
 DefineFaction("Sugambri Tribe", {
 	Civilization = "teuton",
+	ParentFaction = "Saxon Tribe", -- accurate?
 	Type = "tribe",
 	Color = "black",
 	SecondaryColor = "black",
 	DevelopsTo = {"Westphalia"} -- same general area
 })
 
-DefineFaction("Thuringian Tribe", {
-	Civilization = "teuton",
-	Type = "tribe",
-	Color = "green",
-	SecondaryColor = "green"
-})
-
 DefineFaction("Varini Tribe", {
 	Civilization = "teuton",
+	ParentFaction = "Saxon Tribe", -- accurate?
 	Type = "tribe",
 	Color = "brown",
 	SecondaryColor = "brown",
@@ -272,7 +292,7 @@ DefineFaction("Austria", {
 
 DefineFaction("Brandenburg", {
 	Civilization = "teuton",
-	ParentFaction = "Saxony Tribe",
+	ParentFaction = "Saxon Tribe",
 	Type = "polity",
 	Color = "blue",
 	SecondaryColor = "blue",
@@ -285,6 +305,7 @@ DefineFaction("Brandenburg", {
 
 DefineFaction("Bremen", {
 	Civilization = "teuton",
+	ParentFaction = "Saxony",
 	Type = "polity",
 	Color = "black",
 	SecondaryColor = "black",
@@ -296,6 +317,7 @@ DefineFaction("Bremen", {
 
 DefineFaction("Brunswick", {
 	Civilization = "teuton",
+	ParentFaction = "Saxony",
 	Type = "polity",
 	Color = "green",
 	SecondaryColor = "green",
@@ -307,6 +329,7 @@ DefineFaction("Brunswick", {
 
 DefineFaction("Drenthe", {
 	Civilization = "teuton",
+	ParentFaction = "Netherlands",
 	Type = "polity",
 	Color = "cyan",
 	SecondaryColor = "cyan",
@@ -365,6 +388,7 @@ DefineFaction("Galicia", { -- Suebi kingdom of Galicia
 
 DefineFaction("Hesse", {
 	Civilization = "teuton",
+	ParentFaction = "Francia",
 	Type = "polity",
 	Color = "black",
 	SecondaryColor = "black",
@@ -376,6 +400,7 @@ DefineFaction("Hesse", {
 
 DefineFaction("Holland", {
 	Civilization = "teuton",
+	ParentFaction = "Netherlands",
 	Type = "polity",
 	Color = "red",
 	SecondaryColor = "red",
@@ -385,6 +410,7 @@ DefineFaction("Holland", {
 
 DefineFaction("Jutland", {
 	Civilization = "teuton",
+	ParentFaction = "Jute Tribe",
 	Type = "polity",
 	Color = "red",
 	SecondaryColor = "white",
@@ -396,6 +422,7 @@ DefineFaction("Jutland", {
 
 DefineFaction("Magdeburg", {
 	Civilization = "teuton",
+	ParentFaction = "Brandenburg",
 	Type = "polity",
 	Color = "black",
 	SecondaryColor = "black",
@@ -407,17 +434,20 @@ DefineFaction("Magdeburg", {
 
 DefineFaction("Mecklenburg", {
 	Civilization = "teuton",
+	ParentFaction = "Saxony",
 	Type = "polity",
 	Color = "brown",
 	SecondaryColor = "brown",
 	DefaultTier = "grand duchy",
 	Titles = {
 		"monarchy", "grand duchy", "Grand Duchy"
-	}
+	},
+	FactionUpgrade = "upgrade-mecklenburg-faction"
 })
 
 DefineFaction("Netherlands", {
 	Civilization = "teuton",
+	ParentFaction = "Francia",
 	Type = "polity",
 	Color = "orange",
 	SecondaryColor = "blue",
@@ -430,6 +460,7 @@ DefineFaction("Netherlands", {
 
 DefineFaction("Overijssel", {
 	Civilization = "teuton",
+	ParentFaction = "Netherlands",
 	Type = "polity",
 	Color = "pink",
 	SecondaryColor = "pink",
@@ -439,6 +470,7 @@ DefineFaction("Overijssel", {
 
 DefineFaction("Prussia", {
 	Civilization = "teuton",
+	ParentFaction = "Brandenburg",
 	Type = "polity",
 	Color = "black",
 	SecondaryColor = "white",
@@ -464,6 +496,7 @@ DefineFaction("Saxony", {
 
 DefineFaction("Scotland", {
 	Civilization = "teuton",
+	ParentFaction = "England",
 	Type = "polity",
 	Color = "blue",
 	SecondaryColor = "white",
@@ -487,6 +520,7 @@ DefineFaction("Switzerland", {
 
 DefineFaction("Thuringia", {
 	Civilization = "teuton",
+	ParentFaction = "Thuringian Tribe",
 	Type = "polity",
 	Color = "pink",
 	SecondaryColor = "pink",
@@ -495,6 +529,7 @@ DefineFaction("Thuringia", {
 
 DefineFaction("Westphalia", {
 	Civilization = "teuton",
+	ParentFaction = "Saxony",
 	Type = "polity",
 	Color = "black",
 	SecondaryColor = "black",
