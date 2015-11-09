@@ -277,6 +277,19 @@ DefineFaction("Bavaria", {
 	}
 })
 
+DefineFaction("Saxony", {
+	Civilization = "teuton",
+	ParentFaction = "Saxon Tribe",
+	Type = "polity",
+	Color = "pink",
+	SecondaryColor = "pink",
+	DefaultTier = "duchy",
+	Titles = {
+		"monarchy", "duchy", "Duchy",
+		"monarchy", "kingdom", "Kingdom"
+	}
+})
+
 DefineFaction("Austria", {
 	Civilization = "teuton",
 	ParentFaction = "Bavaria",
@@ -292,7 +305,7 @@ DefineFaction("Austria", {
 
 DefineFaction("Brandenburg", {
 	Civilization = "teuton",
-	ParentFaction = "Saxon Tribe",
+	ParentFaction = "Saxony",
 	Type = "polity",
 	Color = "blue",
 	SecondaryColor = "blue",
@@ -324,6 +337,19 @@ DefineFaction("Brunswick", {
 	DefaultTier = "duchy",
 	Titles = {
 		"monarchy", "duchy", "Duchy"
+	}
+})
+
+DefineFaction("Netherlands", {
+	Civilization = "teuton",
+	ParentFaction = "Francia",
+	Type = "polity",
+	Color = "orange",
+	SecondaryColor = "blue",
+	DefaultTier = "kingdom",
+	Titles = {
+		"monarchy", "kingdom", "Kingdom",
+		"republic", "kingdom", "Republic"
 	}
 })
 
@@ -445,19 +471,6 @@ DefineFaction("Mecklenburg", {
 	FactionUpgrade = "upgrade-mecklenburg-faction"
 })
 
-DefineFaction("Netherlands", {
-	Civilization = "teuton",
-	ParentFaction = "Francia",
-	Type = "polity",
-	Color = "orange",
-	SecondaryColor = "blue",
-	DefaultTier = "kingdom",
-	Titles = {
-		"monarchy", "kingdom", "Kingdom",
-		"republic", "kingdom", "Republic"
-	}
-})
-
 DefineFaction("Overijssel", {
 	Civilization = "teuton",
 	ParentFaction = "Netherlands",
@@ -474,19 +487,6 @@ DefineFaction("Prussia", {
 	Type = "polity",
 	Color = "black",
 	SecondaryColor = "white",
-	DefaultTier = "duchy",
-	Titles = {
-		"monarchy", "duchy", "Duchy",
-		"monarchy", "kingdom", "Kingdom"
-	}
-})
-
-DefineFaction("Saxony", {
-	Civilization = "teuton",
-	ParentFaction = "Saxon Tribe",
-	Type = "polity",
-	Color = "pink",
-	SecondaryColor = "pink",
 	DefaultTier = "duchy",
 	Titles = {
 		"monarchy", "duchy", "Duchy",
