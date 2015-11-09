@@ -242,7 +242,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Units
 - Added a faction-specific version of the Krieger for the Suebi Tribe.
-- Added a new Suebi shield, used by their Krieger (graphics by Jinn).
+- Added graphics for a Suebi shield, used by their Krieger (graphics by Jinn).
 
 -----------------------------------------------------------------------
 - 1.5.2

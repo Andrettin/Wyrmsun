@@ -213,7 +213,7 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-teuton-swordsman",
 	ForUnit = {"unit-teuton-barracks"}
 } )
 
-DefineButton( { Pos = 1, Level = 0, Icon = "icon-marbod",
+DefineButton( { Pos = 1, Level = 0, Icon = "icon-teuton-swordsman",
 	Action = "train-unit", Value = "unit-suebi-swordsman",
 	Key = "k", Hint = _("Train ~!Krieger"), Popup = "popup-unit",
 	ForUnit = {"unit-teuton-barracks"}
