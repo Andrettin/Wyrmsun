@@ -239,13 +239,14 @@ https://github.com/Andrettin/Wyrmsun
 - Set the Suebi Tribe as the parent faction of the Buri Tribe, Marcomanni Tribe, Quadi Tribe, Semnone Tribe and Galicia.
 - Factions now have faction-specific bonuses.
 - Added a new Dwarven faction, Joruvellir (polity).
+- Added the Bavarian Tribe to the encyclopedia faction entries.
 
 * Grand Strategy
 - Fixed issue which caused labor to not be allocated after loading a saved game.
 
 * Units
 - Added a faction-specific version of the Krieger for the Suebi Tribe.
-- Added graphics for a Suebi shield, used by their Krieger (graphics by Jinn).
+- Added graphics for a Suebi shield, used by their Krieger after Iron Shield has been researched (graphics by Jinn).
 
 -----------------------------------------------------------------------
 - 1.5.2

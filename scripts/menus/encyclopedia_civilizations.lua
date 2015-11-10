@@ -80,6 +80,11 @@ FactionsEncyclopedia = {
 		Civilization = "germanic",
 		Description = _("The Asa are the legendary progenitors of the Germanic peoples.")
 	},
+	BavarianTribe = {
+		Name = _("Bava~!rian Tribe (Teuton)"),
+		Civilization = "teuton",
+		Description = _("The Bavarians were a West Germanic people, tracing their origins to the Marcomanni. Their name means \"men of Bohemia\", an appelation they gained due to the Marcomanni having established themselves in Bohemia under Marbod. The Bavarians migrated south, giving their newly-settled land the name it has to this day, Bavaria.")
+	},
 	EikinskjaldiClan = {
 		Name = _("~!Eikinskjaldi Clan (Dwarf)"),
 		Civilization = "dwarf",

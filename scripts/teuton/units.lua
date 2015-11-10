@@ -168,6 +168,7 @@ DefineUnitType("unit-teuton-swordsman", { Name = _("Krieger"),
 
 DefineUnitType("unit-suebi-swordsman", { Name = _("Krieger"),
 	Parent = "unit-teuton-swordsman",
+	Civilization = "teuton",
 	Faction = "Suebi Tribe",
 	Description = _("Little armored but intensely courageous, the Suebi swordsmen are fierce opponents in battle."),
 	Background = _("\"Krieger\" is the German word for \"warrior\"."),
