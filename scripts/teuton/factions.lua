@@ -340,6 +340,18 @@ DefineFaction("Brunswick", {
 	}
 })
 
+DefineFaction("Francia", {
+	Civilization = "teuton",
+	ParentFaction = "Frank Tribe",
+	Type = "polity",
+	Color = "green",
+	SecondaryColor = "orange",
+	DefaultTier = "kingdom",
+	Titles = {
+		"monarchy", "kingdom", "Kingdom"
+	}
+})
+
 DefineFaction("Netherlands", {
 	Civilization = "teuton",
 	ParentFaction = "Francia",
@@ -369,18 +381,6 @@ DefineFaction("England", {
 	Type = "polity",
 	Color = "red",
 	SecondaryColor = "white",
-	DefaultTier = "kingdom",
-	Titles = {
-		"monarchy", "kingdom", "Kingdom"
-	}
-})
-
-DefineFaction("Francia", {
-	Civilization = "teuton",
-	ParentFaction = "Frank Tribe",
-	Type = "polity",
-	Color = "green",
-	SecondaryColor = "orange",
 	DefaultTier = "kingdom",
 	Titles = {
 		"monarchy", "kingdom", "Kingdom"
