@@ -228,6 +228,9 @@ https://github.com/Andrettin/Wyrmsun
 - 1.6.0
 -----------------------------------------------------------------------
 
+* Buildings
+- Reduced the cost of the copper and silver mines.
+
 * Factions
 - Added a new Germanic faction, the Volsung Tribe.
 - Factions can now be chosen in-game.
