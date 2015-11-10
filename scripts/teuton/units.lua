@@ -168,7 +168,6 @@ DefineUnitType("unit-teuton-swordsman", { Name = _("Krieger"),
 
 DefineUnitType("unit-suebi-swordsman", { Name = _("Krieger"),
 	Parent = "unit-teuton-swordsman",
-	Civilization = "teuton",
 	Faction = "Suebi Tribe",
 	Description = _("Little armored but intensely courageous, the Suebi swordsmen are fierce opponents in battle."),
 	Background = _("\"Krieger\" is the German word for \"warrior\"."),
@@ -208,9 +207,10 @@ DefineUnitType("unit-suebi-swordsman", { Name = _("Krieger"),
 			"variation-id", "blond-hair", -- iron shield, bronze sword
 			"weapon-file", "germanic/units/broad_bronze_sword.png",
 			"left-arm-file", "human/units/human_left_arm_shield.png",
-			"shield-file", "teuton/units/saxon_shield.png",
+			"shield-file", "teuton/units/suebi_shield.png",
 			"upgrade-forbidden", "upgrade-teuton-spatha",
-			"upgrade-required", "upgrade-teuton-iron-shield"
+			"upgrade-required", "upgrade-teuton-iron-shield",
+			"shield-animation", SuebiShieldAnimation
 		},
 		{
 			"variation-id", "blond-hair", -- no shield, long iron sword
@@ -232,9 +232,10 @@ DefineUnitType("unit-suebi-swordsman", { Name = _("Krieger"),
 			"variation-id", "blond-hair", -- iron shield, long iron sword
 			"weapon-file", "teuton/units/long_iron_sword.png",
 			"left-arm-file", "human/units/human_left_arm_shield.png",
-			"shield-file", "teuton/units/saxon_shield.png",
+			"shield-file", "teuton/units/suebi_shield.png",
 			"upgrade-required", "upgrade-teuton-spatha",
-			"upgrade-required", "upgrade-teuton-iron-shield"
+			"upgrade-required", "upgrade-teuton-iron-shield",
+			"shield-animation", SuebiShieldAnimation
 		}
 	}
 } )
@@ -514,5 +515,57 @@ DefineUnitType("unit-hero-marbod", { Name = _("Krieger"),
 	Description = _("A young chieftain of the Marcomanni, Marbod aspires to forge a realm for his tribe capable of withstanding the test of time."),
 	Icon = "icon-marbod",
 	Hero = true,
-	Gender = 1
+	Gender = 1,
+	Variations = {
+		{
+			"variation-id", "blond-hair", -- no shield, bronze sword
+			"weapon-file", "germanic/units/broad_bronze_sword.png",
+			"upgrade-forbidden", "upgrade-teuton-spatha",
+			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
+			"upgrade-forbidden", "upgrade-teuton-iron-shield"
+		},
+		{
+			"variation-id", "blond-hair", -- bronze shield, bronze sword
+			"weapon-file", "germanic/units/broad_bronze_sword.png",
+			"left-arm-file", "human/units/human_left_arm_shield.png",
+			"shield-file", "germanic/units/bronze_shield.png",
+			"upgrade-forbidden", "upgrade-teuton-spatha",
+			"upgrade-required", "upgrade-germanic-bronze-shield",
+			"upgrade-forbidden", "upgrade-teuton-iron-shield"
+		},
+		{
+			"variation-id", "blond-hair", -- iron shield, bronze sword
+			"weapon-file", "germanic/units/broad_bronze_sword.png",
+			"left-arm-file", "human/units/human_left_arm_shield.png",
+			"shield-file", "teuton/units/suebi_shield.png",
+			"upgrade-forbidden", "upgrade-teuton-spatha",
+			"upgrade-required", "upgrade-teuton-iron-shield",
+			"shield-animation", SuebiShieldAnimation
+		},
+		{
+			"variation-id", "blond-hair", -- no shield, long iron sword
+			"weapon-file", "teuton/units/long_iron_sword.png",
+			"upgrade-required", "upgrade-teuton-spatha",
+			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
+			"upgrade-forbidden", "upgrade-teuton-iron-shield"
+		},
+		{
+			"variation-id", "blond-hair", -- bronze shield, long iron sword
+			"weapon-file", "teuton/units/long_iron_sword.png",
+			"left-arm-file", "human/units/human_left_arm_shield.png",
+			"shield-file", "germanic/units/bronze_shield.png",
+			"upgrade-required", "upgrade-teuton-spatha",
+			"upgrade-required", "upgrade-germanic-bronze-shield",
+			"upgrade-forbidden", "upgrade-teuton-iron-shield"
+		},
+		{
+			"variation-id", "blond-hair", -- iron shield, long iron sword
+			"weapon-file", "teuton/units/long_iron_sword.png",
+			"left-arm-file", "human/units/human_left_arm_shield.png",
+			"shield-file", "teuton/units/suebi_shield.png",
+			"upgrade-required", "upgrade-teuton-spatha",
+			"upgrade-required", "upgrade-teuton-iron-shield",
+			"shield-animation", SuebiShieldAnimation
+		}
+	}
 } )
