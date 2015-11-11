@@ -261,12 +261,12 @@ DefineModifier("upgrade-dwarven-shield-2",
 )
 
 DefineModifier("upgrade-dwarven-throwing-axe-1",
-	{"BasicDamage", 1},
+	{"BasicDamage", 2},
 	{"Points", 10},
 	{"apply-to", "unit-dwarven-scout"}, {"apply-to", "unit-dwarven-gryphon-rider"})
 
 DefineModifier("upgrade-dwarven-throwing-axe-2",
-	{"BasicDamage", 1},
+	{"BasicDamage", 2},
 	{"Points", 10},
 	{"apply-to", "unit-dwarven-scout"}, {"apply-to", "unit-dwarven-gryphon-rider"}
 )

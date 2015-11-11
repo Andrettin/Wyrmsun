@@ -184,7 +184,7 @@ DefineModifier("upgrade-teuton-iron-shield",
 )
 
 DefineModifier("upgrade-teuton-bodkin-arrow",
-	{"BasicDamage", 1},
+	{"BasicDamage", 2},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-archer"}
 )

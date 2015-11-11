@@ -225,6 +225,16 @@ https://github.com/Andrettin/Wyrmsun
 ############################################################
 
 -----------------------------------------------------------------------
+- 1.6.1
+-----------------------------------------------------------------------
+
+* Units
+- Germanic (and Teuton) Skutans, Dwarven Scouts, Dwarven Gryphon Riders and Goblin Archers now have 1 more damage.
+
+* Upgrades
+- Arrow and throwing axe upgrades now increase damage by 2 instead of 1.
+
+-----------------------------------------------------------------------
 - 1.6.0
 -----------------------------------------------------------------------
 

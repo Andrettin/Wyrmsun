@@ -120,7 +120,7 @@ DefineModifier("upgrade-germanic-bronze-shield",
 )
 
 DefineModifier("upgrade-germanic-barbed-arrow",
-	{"BasicDamage", 1},
+	{"BasicDamage", 2},
 	{"Points", 10},
 	{"apply-to", "unit-germanic-archer"}, {"apply-to", "unit-teuton-archer"}
 )
