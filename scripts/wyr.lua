@@ -300,6 +300,10 @@ function LoadCivilizationUI(civilization)
 	
 	end
 	Load(ui_file)
+	UI.GrandStrategyOKButton.Style = UI.MenuButton.Style
+	UI.GrandStrategyEndTurnButton.Style = UI.MenuButton.Style
+	UI.GrandStrategyShowHeroesButton.Style = UI.MenuButton.Style
+	UI.GrandStrategyShowRulerButton.Style = UI.MenuButton.Style
 	if not (RunningScenario) then
 		wyrmsun.playlist = { "music/battle_theme_a.ogg" }
 	end

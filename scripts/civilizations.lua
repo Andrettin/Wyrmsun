@@ -326,7 +326,9 @@ DefineRaceNames(
 			"Uzdaz", "Ort", -- from Proto-Germanic to German
 			"Vindobona", "Wien", -- "Wien" = "Vienna"; from the Latin name "Vindobona"
 			"Waida", "Waid", -- from Proto-Germanic to German
-			"Walakuzjōn", "Walküre" -- from Proto-Germanic to German
+			"Walakuzjōn", "Walküre", -- from Proto-Germanic to German
+			"Ermanaric", "Ermenrich", -- "Ermenrich" is the German form of the Gothic name Ermanaric
+			"Theodoric", "Dietrich" -- "Dietrich" is the German form of the Gothic name Theodoric
 		},
 		"default-color", "yellow"
 	},

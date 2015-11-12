@@ -301,6 +301,73 @@ UI.Resources[GetResourceIdByName("labor")].IconFrame = 0
 UI.Resources[GetResourceIdByName("labor")].IconX = Video.Width
 UI.Resources[GetResourceIdByName("labor")].IconY = Video.Height
 
+UI.MenuButton.X = 26
+UI.MenuButton.Y = 1
+UI.MenuButton.Text = "Menu (~<F10~>)"
+UI.MenuButton:SetCallback(
+	function()
+		if (Editor.Running == EditorNotRunning) then
+			RunGameMenu()
+		elseif (GrandStrategy and not GrandStrategyGamePaused and not GameRunning and GameResult == GameNoResult) then
+			RunGrandStrategyGameMenu()
+		else
+			RunInEditorMenu()
+		end
+	end
+)
+
+UI.NetworkDiplomacyButton.X = Video.Width - 99 - 26
+UI.NetworkDiplomacyButton.Y = 1
+UI.NetworkDiplomacyButton.Text = "Diplomacy"
+UI.NetworkDiplomacyButton:SetCallback(function() RunDiplomacyMenu() end)
+
+UI.GrandStrategyOKButton.X = Video.Width - 243 + 72
+UI.GrandStrategyOKButton.Y = Video.Height - (15 * 2) - 8
+UI.GrandStrategyOKButton.Text = "~!OK"
+UI.GrandStrategyOKButton:SetCallback(
+	function()
+		if (GrandStrategyInterfaceState == "Ruler") then
+			if (ProvinceHasBuildingClass(SelectedProvince.Name, "stronghold")) then
+				GrandStrategyInterfaceState = "stronghold"
+			else
+				GrandStrategyInterfaceState = "town-hall"
+			end
+		else
+			GrandStrategyInterfaceState = "Province"
+		end
+		DrawGrandStrategyInterface()
+	end
+)
+
+UI.GrandStrategyEndTurnButton.X = Video.Width - 243 + 72
+UI.GrandStrategyEndTurnButton.Y = Video.Height - (15 * 1) - 8
+UI.GrandStrategyEndTurnButton.Text = "~!End Turn"
+UI.GrandStrategyEndTurnButton:SetCallback(
+	function()
+		EndTurn()
+	end
+)
+
+UI.GrandStrategyShowHeroesButton.X = Video.Width - 243 + 72
+UI.GrandStrategyShowHeroesButton.Y = Video.Height - (15 * 2) - 8
+UI.GrandStrategyShowHeroesButton.Text = "Show ~!Heroes"
+UI.GrandStrategyShowHeroesButton:SetCallback(
+	function()
+		GrandStrategyInterfaceState = "Heroes"
+		DrawGrandStrategyInterface()
+	end
+)
+
+UI.GrandStrategyShowRulerButton.X = Video.Width - 243 + 72
+UI.GrandStrategyShowRulerButton.Y = Video.Height - (15 * 3) - 8
+UI.GrandStrategyShowRulerButton.Text = "Show ~!Ruler"
+UI.GrandStrategyShowRulerButton:SetCallback(
+	function()
+		GrandStrategyInterfaceState = "Ruler"
+		DrawGrandStrategyInterface()
+	end
+)
+
 Load("scripts/celt/ui.lua")
 Load("scripts/dwarf/ui.lua")
 Load("scripts/germanic/ui.lua")
@@ -311,6 +378,13 @@ Load("scripts/kobold/ui.lua")
 Load("scripts/latin/ui.lua")
 Load("scripts/norse/ui.lua")
 Load("scripts/teuton/ui.lua")
+
+UI.GrandStrategyOKButton.Style = UI.MenuButton.Style
+UI.GrandStrategyEndTurnButton.Style = UI.MenuButton.Style
+UI.GrandStrategyShowHeroesButton.Style = UI.MenuButton.Style
+UI.GrandStrategyShowRulerButton.Style = UI.MenuButton.Style
+
+
 
 local info_panel_x = UI.InfoPanel.X
 local info_panel_y = UI.InfoPanel.Y

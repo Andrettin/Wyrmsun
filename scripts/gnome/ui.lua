@@ -167,27 +167,5 @@ UI.Resources[ManaResCost].IconY = -100
 UI.Resources[ManaResCost].TextX = -100
 UI.Resources[ManaResCost].TextY = -100
 
-UI.MenuButton.X = 26
-UI.MenuButton.Y = 1
-UI.MenuButton.Text = "Menu (~<F10~>)"
 UI.MenuButton.Style = FindButtonStyle("main-gnome")
-UI.MenuButton:SetCallback(
-  function()
-    if (Editor.Running == EditorNotRunning) then
-	  RunGameMenu()
-	else
-	  RunInEditorMenu()
-	end
-  end)
-
-UI.NetworkMenuButton.X = 26
-UI.NetworkMenuButton.Y = 1
-UI.NetworkMenuButton.Text = "Menu"
-UI.NetworkMenuButton.Style = FindButtonStyle("main-gnome")
-UI.NetworkMenuButton:SetCallback(function() RunGameMenu() end)
-
-UI.NetworkDiplomacyButton.X = Video.Width - 99 - 26
-UI.NetworkDiplomacyButton.Y = 1
-UI.NetworkDiplomacyButton.Text = "Diplomacy"
 UI.NetworkDiplomacyButton.Style = FindButtonStyle("main-gnome")
-UI.NetworkDiplomacyButton:SetCallback(function() RunDiplomacyMenu() end)
