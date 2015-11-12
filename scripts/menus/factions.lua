@@ -90,8 +90,6 @@ function ChooseFaction(old_civilization, old_faction)
 		function()
 			if (GameRunning and not IsNetworkGame()) then
 				SetGamePaused(false)
-			elseif (GrandStrategy) then
-				GrandStrategyGamePaused = false
 			end
 			NetworkSetFaction(GetThisPlayer(), faction_list[faction_dd:getSelected() + 1])
 			menu:stop()
@@ -102,8 +100,6 @@ function ChooseFaction(old_civilization, old_faction)
 		function()
 			if (GameRunning and not IsNetworkGame()) then
 				SetGamePaused(false)
-			elseif (GrandStrategy) then
-				GrandStrategyGamePaused = false
 			end
 			NetworkSetFaction(GetThisPlayer(), faction_list[faction_dd:getSelected() + 1])
 			menu:stop()

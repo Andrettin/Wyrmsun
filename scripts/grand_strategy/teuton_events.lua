@@ -220,7 +220,7 @@ local TeutonEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				SetProvinceHero("Brandenburg", "unit-hero-marbod", 2)
+				SetProvinceHero("Brandenburg", "Marbod", "", "unit-hero-marbod", 2)
 			end
 		}
 	},
@@ -250,7 +250,7 @@ local TeutonEvents = {
 						SetProvinceUnitQuantity("Brandenburg", unitName, math.floor(GetProvinceUnitQuantity("Brandenburg", unitName) / 2))
 					end
 				end
-				SetProvinceHero("Bohemia", "unit-hero-marbod", 2)
+				SetProvinceHero("Bohemia", "Marbod", "", "unit-hero-marbod", 2)
 				AcquireFactionTechnologies(Factions.SuebiTribe.Civilization, Factions.SuebiTribe.Name, Factions.MarcomanniTribe.Civilization, "Marcomanni Tribe")
 				SetProvinceCivilization("Bohemia", "teuton")
 			end,
@@ -270,7 +270,7 @@ local TeutonEvents = {
 								SetProvinceUnitQuantity("Bohemia", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
 							elseif (IsHero(unitName)) then
 								if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
-									SetProvinceHero("Bohemia", unitName, 2)
+									SetProvinceHero("Bohemia", GetUnitTypeData(unitName, "DefaultName"), "", unitName, 2)
 								end
 							end
 						end
@@ -293,7 +293,7 @@ local TeutonEvents = {
 							SetProvinceUnitQuantity("Brandenburg", unitName, math.floor(GetProvinceUnitQuantity("Brandenburg", unitName) / 2))
 						end
 					end
-					SetProvinceHero("Bohemia", "unit-hero-marbod", 2)
+					SetProvinceHero("Bohemia", "Marbod", "", "unit-hero-marbod", 2)
 					SetProvinceCivilization("Bohemia", "teuton")
 					AcquireFactionTechnologies(Factions.SuebiTribe.Civilization, Factions.SuebiTribe.Name, Factions.MarcomanniTribe.Civilization, "Marcomanni Tribe")
 
@@ -354,7 +354,7 @@ local TeutonEvents = {
 								SetProvinceUnitQuantity("Austria", unitName, math.ceil(GetPlayerData(4, "UnitTypesCount", unitName) / BattalionMultiplier))
 							elseif (IsHero(unitName)) then
 								if (GetPlayerData(4, "UnitTypesCount", unitName) > 0) then
-									SetProvinceHero("Austria", unitName, 2)
+									SetProvinceHero("Austria", GetUnitTypeData(unitName, "DefaultName"), "", unitName, 2)
 								end
 							end
 						end
@@ -418,7 +418,7 @@ local TeutonEvents = {
 								SetProvinceUnitQuantity("Venetia", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
 							elseif (IsHero(unitName)) then
 								if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
-									SetProvinceHero("Venetia", unitName, 2)
+									SetProvinceHero("Venetia", GetUnitTypeData(unitName, "DefaultName"), "", unitName, 2)
 								end
 							end
 						end

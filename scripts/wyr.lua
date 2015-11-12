@@ -273,9 +273,9 @@ function SetPlayerData(player, data, arg1, arg2)
 				end
 				for i, unitName in ipairs(Units) do
 					if (IsHero(unitName)) then -- create heroes which are in the province for the defender
-						if (arg1 == Attacker and GetProvinceHero(AttackedProvince.Name, unitName) == 3) then
+						if (arg1 == Attacker and GetProvinceHero(AttackedProvince.Name, GetUnitTypeData(unitName, "DefaultName"), "") == 3) then
 							OldCreateUnit(unitName, player, {Players[player].StartPos.x, Players[player].StartPos.y})
-						elseif (arg1 == Defender and GetProvinceHero(AttackedProvince.Name, unitName) == 2) then
+						elseif (arg1 == Defender and GetProvinceHero(AttackedProvince.Name, GetUnitTypeData(unitName, "DefaultName"), "") == 2) then
 							OldCreateUnit(unitName, player, {Players[player].StartPos.x, Players[player].StartPos.y})
 						end
 					end

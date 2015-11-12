@@ -42,17 +42,17 @@ if (LoadedGame == false) then
 		CreateProvinceUnits("Svarinshaug", 0, 1, false, false)
 	
 		for i, unitName in ipairs(Units) do
-			if (IsHero(unitName) and GetProvinceHero("Svarinshaug", unitName) == 2) then
+			if (IsHero(unitName) and GetProvinceHero("Svarinshaug", GetUnitTypeData(unitName, "DefaultName"), "") == 2) then
 				unit = OldCreateUnit(unitName, 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-				SetProvinceHero("Svarinshaug", unitName, 0)
+				SetProvinceHero("Svarinshaug", GetUnitTypeData(unitName, "DefaultName"), "", unitName, 0)
 			end
 		end
 		
-		if (FactionHasHero(GetFactionFromName("Modsogning Clan"), "unit-hero-modsognir")) then
+		if (FactionHasHero("dwarf", "Modsogning Clan", "Modsognir", "")) then
 			RemoveHeroFromFaction("unit-hero-modsognir", GetFactionFromName("Modsogning Clan"))
 			unit = CreateUnit("unit-hero-modsognir", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 		end
-		if (FactionHasHero(GetFactionFromName("Modsogning Clan"), "unit-hero-durin")) then
+		if (FactionHasHero("dwarf", "Modsogning Clan", "Durin", "")) then
 			RemoveHeroFromFaction("unit-hero-durin", GetFactionFromName("Modsogning Clan"))
 			unit = CreateUnit("unit-hero-durin", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 		end

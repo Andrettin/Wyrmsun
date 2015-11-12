@@ -3928,7 +3928,6 @@ function LoadProvinces(world)
 			Units = {
 				unit_goblin_spearman = 4
 			},
-			Heroes = {},
 			SettlementTerrain = "Mountains", -- for random map generation
 			Claims = {
 				"dwarf", "Norlund Clan",
@@ -5146,7 +5145,8 @@ function LoadProvinces(world)
 			end
 			if (province_table[key].Heroes ~= nil) then
 				for second_key, second_value in pairs(province_table[key].Heroes) do
-					SetProvinceHero(WorldMapProvinces[key].Name, second_key, province_table[key].Heroes[second_key])
+					local hero_unit_type = string.gsub(second_key, "_", "-")
+					SetProvinceHero(WorldMapProvinces[key].Name, GetUnitTypeData(hero_unit_type, "DefaultName"), "", hero_unit_type, province_table[key].Heroes[second_key])
 				end
 			end
 			if (province_table[key].SettlementTerrain ~= nil) then

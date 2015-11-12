@@ -18312,7 +18312,7 @@ if (GrandStrategyYear >= -9) then -- Marbod, king of the Suebic tribe of the Mar
 	SetProvinceOwner("Bohemia", "teuton", "Marcomanni Tribe")
 	SetProvinceCivilization("Bohemia", "teuton")
 	SetProvinceUnitQuantity("Bohemia", "unit-germanic-warrior", 0)
-	SetProvinceHero("Bohemia", "unit-hero-marbod", 2) 
+	SetProvinceHero("Bohemia", "Marbod", "", "unit-hero-marbod", 2)
 	SetProvinceUnitQuantity("Bohemia", "unit-suebi-swordsman", 5) -- Marbod had 70,000 foot soldiers and 4,000 horse riders; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 231.
 	SetProvinceUnitQuantity("Bohemia", "unit-teuton-archer", 2) -- let's make 20,000 of those soldiers into archers
 	SetProvinceUnitQuantity("Bohemia", "unit-teuton-ritter", 1) -- 4,000 horse riders
@@ -18344,7 +18344,7 @@ end
 
 if (GrandStrategyYear >= 19) then
 	GrandStrategyEvents.MarbodDeposed = nil
-	SetProvinceHero("Bohemia", "unit-hero-marbod", 0)
+	SetProvinceHero("Bohemia", "Marbod", "", "unit-hero-marbod", 0)
 end
 
 if (GrandStrategyYear >= 28) then -- estimated date
