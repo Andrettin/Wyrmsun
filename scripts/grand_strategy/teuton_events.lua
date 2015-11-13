@@ -268,11 +268,12 @@ local TeutonEvents = {
 						for i, unitName in ipairs(Units) do
 							if (IsOffensiveMilitaryUnit(unitName)) then
 								SetProvinceUnitQuantity("Bohemia", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
-							elseif (IsHero(unitName)) then
-								if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
-									SetProvinceHero("Bohemia", GetUnitTypeData(unitName, "DefaultName"), "", unitName, 2)
-								end
 							end
+						end
+						if (GetPlayerData(0, "UnitTypesCount", GetHeroUnitType("Marbod", "")) > 0) then
+							SetProvinceHero("Bohemia", "Marbod", "", GetHeroUnitType("Marbod", ""), 2)
+						else
+							SetProvinceHero("Bohemia", "Marbod", "", GetHeroUnitType("Marbod", ""), 0)
 						end
 						CenterGrandStrategyMapOnTile(WorldMapProvinces.Bohemia.SettlementLocation[1], WorldMapProvinces.Bohemia.SettlementLocation[2])
 						AcquireFactionTechnologies(Factions.SuebiTribe.Civilization, Factions.SuebiTribe.Name, Factions.MarcomanniTribe.Civilization, "Marcomanni Tribe")
@@ -355,6 +356,8 @@ local TeutonEvents = {
 							elseif (IsHero(unitName)) then
 								if (GetPlayerData(4, "UnitTypesCount", unitName) > 0) then
 									SetProvinceHero("Austria", GetUnitTypeData(unitName, "DefaultName"), "", unitName, 2)
+								else
+									SetProvinceHero("Austria", GetUnitTypeData(unitName, "DefaultName"), "", unitName, 0)
 								end
 							end
 						end
@@ -419,6 +422,8 @@ local TeutonEvents = {
 							elseif (IsHero(unitName)) then
 								if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
 									SetProvinceHero("Venetia", GetUnitTypeData(unitName, "DefaultName"), "", unitName, 2)
+								else
+									SetProvinceHero("Venetia", GetUnitTypeData(unitName, "DefaultName"), "", unitName, 0)
 								end
 							end
 						end

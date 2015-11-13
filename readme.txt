@@ -228,6 +228,9 @@ https://github.com/Andrettin/Wyrmsun
 - 1.6.1
 -----------------------------------------------------------------------
 
+* Grand Strategy
+- Fixed crash which happened if the player attacked an empty province with the automatic battles option disabled.
+
 * Units
 - Germanic (and Teuton) Skutans, Dwarven Scouts, Dwarven Gryphon Riders and Goblin Archers now have 1 more damage.
 

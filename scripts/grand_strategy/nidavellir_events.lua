@@ -102,25 +102,23 @@ local NidavellirEvents = {
 		OptionEffects = {
 			function(s)
 				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Modsogning Clan" and wyr.preferences.AutomaticBattles == false) then
+					SetProvinceHero("Svarinshaug", "Modsognir", "", GetHeroUnitType("Modsognir", ""), 2)
+					SetProvinceHero("Svarinshaug", "Durin", "", GetHeroUnitType("Durin", ""), 2)
+
 					GrandStrategyEventMap = true
 					GetMapInfo("maps/nidavellir/svarinshaug.smp")
 					CurrentQuest = "A Rocky Home"
 					RunMap("maps/nidavellir/svarinshaug.smp")
 					GrandStrategyEventMap = false
 					
-					for province_i, key in ipairs(EventFaction.OwnedProvinces) do
-						SetProvinceHero(WorldMapProvinces[key].Name, "Modsognir", "", "unit-hero-modsognir", 0)
-						SetProvinceHero(WorldMapProvinces[key].Name, "Modsognir", "", "unit-hero-modsognir-thane", 0)
-						SetProvinceHero(WorldMapProvinces[key].Name, "Durin", "", "unit-hero-durin", 0)
-						SetProvinceHero(WorldMapProvinces[key].Name, "Durin", "", "unit-hero-durin-thane", 0)
-					end
-
 					for i, unitName in ipairs(Units) do
 						if (IsOffensiveMilitaryUnit(unitName)) then
 							ChangeProvinceUnitQuantity("Svarinshaug", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
 						elseif (IsHero(unitName)) then
 							if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
 								SetProvinceHero("Svarinshaug", GetUnitTypeData(unitName, "DefaultName"), "", unitName, 2)
+							else
+								SetProvinceHero("Svarinshaug", GetUnitTypeData(unitName, "DefaultName"), "", unitName, 0)
 							end
 						end
 					end
@@ -170,26 +168,25 @@ local NidavellirEvents = {
 		OptionEffects = {
 			function(s)
 				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Modsogning Clan" and wyr.preferences.AutomaticBattles == false) then
+					SetProvinceHero("Svarinshaug", "Durin", "", GetHeroUnitType("Durin", ""), 2)
+
 					GrandStrategyEventMap = true
 					GetMapInfo("maps/nidavellir/fjalars-and-galars-hall.smp")
 					CurrentQuest = "The Mead of Wisdom"
 					RunMap("maps/nidavellir/fjalars-and-galars-hall.smp")
 					GrandStrategyEventMap = false
 					
-					for province_i, key in ipairs(EventFaction.OwnedProvinces) do
-						SetProvinceHero(WorldMapProvinces[key].Name, "Durin", "", "unit-hero-durin", 0)
-						SetProvinceHero(WorldMapProvinces[key].Name, "Durin", "", "unit-hero-durin-thane", 0)
-					end
-
 					for i, unitName in ipairs(Units) do
 						if (IsOffensiveMilitaryUnit(unitName)) then
 							ChangeProvinceUnitQuantity("Svarinshaug", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
-						elseif (IsHero(unitName)) then
-							if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
-								SetProvinceHero("Svarinshaug", GetUnitTypeData(unitName, "DefaultName"), "", unitName, 2)
-							end
 						end
 					end
+					if (GetPlayerData(0, "UnitTypesCount", GetHeroUnitType("Durin", "")) > 0) then
+						SetProvinceHero("Svarinshaug", "Durin", "", GetHeroUnitType("Durin", ""), 2)
+					else
+						SetProvinceHero("Svarinshaug", "Durin", "", GetHeroUnitType("Durin", ""), 0)
+					end
+					
 					if (GameResult == GameVictory) then
 						ChangeFactionResource("dwarf", "Modsogning Clan", "prestige", 10) -- prestige for punishing the evil doers and recovering the sage's remains
 					end
@@ -239,10 +236,6 @@ local NidavellirEvents = {
 					for i, unitName in ipairs(Units) do
 						if (IsOffensiveMilitaryUnit(unitName)) then
 							ChangeProvinceUnitQuantity("Svarinshaug", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
-						elseif (IsHero(unitName)) then
-							if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
-								SetProvinceHero("Svarinshaug", GetUnitTypeData(unitName, "DefaultName"), "", unitName, 2)
-							end
 						end
 					end
 					if (GameResult == GameVictory) then
@@ -285,25 +278,23 @@ local NidavellirEvents = {
 		OptionEffects = {
 			function(s)
 				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Modsogning Clan" and wyr.preferences.AutomaticBattles == false) then
+					SetProvinceHero("Svarinshaug", "Modsognir", "", GetHeroUnitType("Modsognir", ""), 2)
+					SetProvinceHero("Svarinshaug", "Durin", "", GetHeroUnitType("Durin", ""), 2)
+
 					GrandStrategyEventMap = true
 					GetMapInfo("maps/nidavellir/aurvang.smp")
 					CurrentQuest = "The Necklace of the Brisings"
 					RunMap("maps/nidavellir/aurvang.smp")
 					GrandStrategyEventMap = false
 					
-					for province_i, key in ipairs(EventFaction.OwnedProvinces) do
-						SetProvinceHero(WorldMapProvinces[key].Name, "Modsognir", "", "unit-hero-modsognir", 0)
-						SetProvinceHero(WorldMapProvinces[key].Name, "Modsognir", "", "unit-hero-modsognir-thane", 0)
-						SetProvinceHero(WorldMapProvinces[key].Name, "Durin", "", "unit-hero-durin", 0)
-						SetProvinceHero(WorldMapProvinces[key].Name, "Durin", "", "unit-hero-durin-thane", 0)
-					end
-
 					for i, unitName in ipairs(Units) do
 						if (IsOffensiveMilitaryUnit(unitName)) then
 							ChangeProvinceUnitQuantity("Svarinshaug", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
 						elseif (IsHero(unitName)) then
 							if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
 								SetProvinceHero("Svarinshaug", GetUnitTypeData(unitName, "DefaultName"), "", unitName, 2)
+							else
+								SetProvinceHero("Svarinshaug", GetUnitTypeData(unitName, "DefaultName"), "", unitName, 0)
 							end
 						end
 					end
@@ -356,25 +347,23 @@ local NidavellirEvents = {
 		OptionEffects = {
 			function(s)
 				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Modsogning Clan" and wyr.preferences.AutomaticBattles == false) then
+					SetProvinceHero("Svarinshaug", "Modsognir", "", GetHeroUnitType("Modsognir", ""), 2)
+					SetProvinceHero("Svarinshaug", "Durin", "", GetHeroUnitType("Durin", ""), 2)
+					
 					GrandStrategyEventMap = true
 					GetMapInfo(Quests.TheBindingOfGrafvitnir.Map)
 					CurrentQuest = "The Binding of Grafvitnir"
 					RunMap(Quests.TheBindingOfGrafvitnir.Map)
 					GrandStrategyEventMap = false
 					
-					for province_i, key in ipairs(EventFaction.OwnedProvinces) do
-						SetProvinceHero(WorldMapProvinces[key].Name, "Modsognir", "", "unit-hero-modsognir", 0)
-						SetProvinceHero(WorldMapProvinces[key].Name, "Modsognir", "", "unit-hero-modsognir-thane", 0)
-						SetProvinceHero(WorldMapProvinces[key].Name, "Durin", "", "unit-hero-durin", 0)
-						SetProvinceHero(WorldMapProvinces[key].Name, "Durin", "", "unit-hero-durin-thane", 0)
-					end
-
 					for i, unitName in ipairs(Units) do
 						if (IsOffensiveMilitaryUnit(unitName)) then
 							ChangeProvinceUnitQuantity("Svarinshaug", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
 						elseif (IsHero(unitName)) then
 							if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
 								SetProvinceHero("Svarinshaug", GetUnitTypeData(unitName, "DefaultName"), "", unitName, 2)
+							else
+								SetProvinceHero("Svarinshaug", GetUnitTypeData(unitName, "DefaultName"), "", unitName, 0)
 							end
 						end
 					end
@@ -699,13 +688,11 @@ local NidavellirEvents = {
 						ChangeProvinceUnitQuantity("Southern Tunnels", unitName, math.ceil(GetPlayerData(2, "UnitTypesCount", unitName) / BattalionMultiplier))
 					end
 				end
-				for i, unitName in ipairs(Units) do
-					if (IsHero(unitName)) then
-						if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
-							SetProvinceHero("Caverns of Chaincolt", GetUnitTypeData(unitName, "DefaultName"), "", unitName, 2)
-						end
-					end
-				end
+			end
+			if (GetPlayerData(0, "UnitTypesCount", GetHeroUnitType("Rugnur", "")) > 0) then
+				SetProvinceHero("Caverns of Chaincolt", "Rugnur", "", GetHeroUnitType("Rugnur", ""), 2)
+			else
+				SetProvinceHero("Caverns of Chaincolt", "Rugnur", "", GetHeroUnitType("Rugnur", ""), 0)
 			end
 			if (("Norlund Clan" ~= GrandStrategyFaction.Name or wyr.preferences.AutomaticBattles) and ("Shinsplitter Clan" ~= GrandStrategyFaction.Name or wyr.preferences.AutomaticBattles)) then -- if neither Norlund Clan nor Shinsplitter Clan are played by the human player, then enact the effects of the bargain between the gnomes and Rugnur successfully being struck
 				SetFactionDiplomacyState("dwarf", "Norlund Clan", "dwarf", "Shinsplitter Clan", "war") -- begin war between Norlund Clan and Shinsplitter Clan
@@ -748,12 +735,10 @@ local NidavellirEvents = {
 						ChangeProvinceUnitQuantity("Southern Tunnels", unitName, math.ceil(GetPlayerData(2, "UnitTypesCount", unitName) / BattalionMultiplier))
 					end
 				end
-				for i, unitName in ipairs(Units) do
-					if (IsHero(unitName)) then
-						if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
-							SetProvinceHero("Caverns of Chaincolt", GetUnitTypeData(unitName, "DefaultName"), "", unitName, 2)
-						end
-					end
+				if (GetPlayerData(0, "UnitTypesCount", GetHeroUnitType("Rugnur", "")) > 0) then
+					SetProvinceHero("Caverns of Chaincolt", "Rugnur", "", GetHeroUnitType("Rugnur", ""), 2)
+				else
+					SetProvinceHero("Caverns of Chaincolt", "Rugnur", "", GetHeroUnitType("Rugnur", ""), 0)
 				end
 			end
 			if (GrandStrategyFaction.Name == "Shinsplitter Clan" and wyr.preferences.AutomaticBattles) then
@@ -789,12 +774,15 @@ local NidavellirEvents = {
 				RunMap("maps/nidavellir/caverns-of-chaincolt.smp")
 				GrandStrategyEventMap = false
 
-				for i, unitName in ipairs(Units) do
-					if (IsHero(unitName)) then
-						if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
-							SetProvinceHero("Caverns of Chaincolt", GetUnitTypeData(unitName, "DefaultName"), "", unitName, 2)
-						end
-					end
+				if (GetPlayerData(0, "UnitTypesCount", GetHeroUnitType("Rugnur", "")) > 0) then
+					SetProvinceHero("Caverns of Chaincolt", "Rugnur", "", GetHeroUnitType("Rugnur", ""), 2)
+				else
+					SetProvinceHero("Caverns of Chaincolt", "Rugnur", "", GetHeroUnitType("Rugnur", ""), 0)
+				end
+				if (GetPlayerData(0, "UnitTypesCount", GetHeroUnitType("Baglur", "")) > 0) then
+					SetProvinceHero("Caverns of Chaincolt", "Baglur", "", GetHeroUnitType("Baglur", ""), 2)
+				else
+					SetProvinceHero("Caverns of Chaincolt", "Baglur", "", GetHeroUnitType("Baglur", ""), 0)
 				end
 				if (GetProvinceOwner("Caverns of Chaincolt") == "Shinsplitter Clan") then
 					for i, unitName in ipairs(Units) do
@@ -802,6 +790,8 @@ local NidavellirEvents = {
 							ChangeProvinceUnitQuantity("Caverns of Chaincolt", unitName, math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier))
 						end
 					end
+					SetProvinceHero("Caverns of Chaincolt", "Rugnur", "", GetHeroUnitType("Rugnur", ""), 0)
+					SetProvinceHero("Caverns of Chaincolt", "Baglur", "", GetHeroUnitType("Baglur", ""), 0)
 					SetProvinceHero("Caverns of Chaincolt", "Durstorn", "", "unit-hero-durstorn", 0)
 				else
 					for i, unitName in ipairs(Units) do
@@ -841,12 +831,15 @@ local NidavellirEvents = {
 				RunMap("maps/nidavellir/caverns-of-chaincolt.smp")
 				GrandStrategyEventMap = false
 
-				for i, unitName in ipairs(Units) do
-					if (IsHero(unitName)) then
-						if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
-							SetProvinceHero("Caverns of Chaincolt", GetUnitTypeData(unitName, "DefaultName"), "", unitName, 2)
-						end
-					end
+				if (GetPlayerData(0, "UnitTypesCount", GetHeroUnitType("Rugnur", "")) > 0) then
+					SetProvinceHero("Caverns of Chaincolt", "Rugnur", "", GetHeroUnitType("Rugnur", ""), 2)
+				else
+					SetProvinceHero("Caverns of Chaincolt", "Rugnur", "", GetHeroUnitType("Rugnur", ""), 0)
+				end
+				if (GetPlayerData(0, "UnitTypesCount", GetHeroUnitType("Baglur", "")) > 0) then
+					SetProvinceHero("Caverns of Chaincolt", "Baglur", "", GetHeroUnitType("Baglur", ""), 2)
+				else
+					SetProvinceHero("Caverns of Chaincolt", "Baglur", "", GetHeroUnitType("Baglur", ""), 0)
 				end
 				if (GetProvinceOwner("Caverns of Chaincolt") == "Shinsplitter Clan") then
 					for i, unitName in ipairs(Units) do
@@ -854,6 +847,8 @@ local NidavellirEvents = {
 							ChangeProvinceUnitQuantity("Caverns of Chaincolt", unitName, math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier))
 						end
 					end
+					SetProvinceHero("Caverns of Chaincolt", "Rugnur", "", GetHeroUnitType("Rugnur", ""), 0)
+					SetProvinceHero("Caverns of Chaincolt", "Baglur", "", GetHeroUnitType("Baglur", ""), 0)
 					SetProvinceHero("Caverns of Chaincolt", "Durstorn", "", "unit-hero-durstorn", 0)
 				else
 					for i, unitName in ipairs(Units) do
@@ -903,16 +898,16 @@ local NidavellirEvents = {
 				end
 				for i, unitName in ipairs(Units) do
 					if (IsHero(unitName)) then
-						if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
-							SetProvinceHero("Caverns of Chaincolt", GetUnitTypeData(unitName, "DefaultName"), "", unitName, 2)
+						if (GetUnitTypeData(unitName, "DefaultName") ~= "Durstorn") then
+							if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
+								SetProvinceHero("Caverns of Chaincolt", GetUnitTypeData(unitName, "DefaultName"), "", unitName, 2)
+							else
+								SetProvinceHero("Caverns of Chaincolt", GetUnitTypeData(unitName, "DefaultName"), "", unitName, 0)
+							end
 						end
 					end
 				end
-				if (GetPlayerData(0, "UnitTypesCount", "unit-hero-thursagan") > 0) then
-					SetProvinceHero("Northern Wastelands", "Thursagan", "", "unit-hero-thursagan", 0)
-				end
 			elseif ("Norlund Clan" ~= GrandStrategyFaction.Name or wyr.preferences.AutomaticBattles) then
-				SetProvinceHero("Northern Wastelands", "Thursagan", "", "unit-hero-thursagan", 0)
 				SetProvinceHero("Caverns of Chaincolt", "Thursagan", "", "unit-hero-thursagan", 2)
 				SetProvinceSettlementBuilding("Northern Wastelands", "unit-dwarven-smithy", false)
 				SetProvinceUnitQuantity("Northern Wastelands", "unit-goblin-spearman", GetProvinceUnitQuantity("Northern Wastelands", "unit-goblin-spearman") / 2) -- halve enemies in the northern wastelands

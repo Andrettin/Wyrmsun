@@ -303,7 +303,7 @@ function SinglePlayerTriggers()
 			end,
 			function()
 				local revolt = false
-				if (GetFactionProvinceCount(GetFactionFromName(Attacker)) == 0 and GetFactionDiplomacyState(GetFactionFromName(Attacker).Civilization, Attacker, GetFactionFromName(Defender).Civilization, Defender) == "peace") then -- if the attacker doesn't own any provinces, then this must be a revolt
+				if (GetFactionProvinceCount(GetFactionFromName(Attacker)) == 0 and GetProvinceOwner(AttackedProvince.Name) ~= "" and GetFactionDiplomacyState(GetFactionFromName(Attacker).Civilization, Attacker, GetFactionFromName(Defender).Civilization, Defender) == "peace") then -- if the attacker doesn't own any provinces, then this must be a revolt
 					revolt = true
 				end
 				
@@ -374,11 +374,13 @@ function SinglePlayerTriggers()
 		end
 		if (GrandStrategy) then
 			for i=0,14 do
-				if (GetPlayerData(i, "TotalNumUnits") > 0 and GetFactionFromName(GetPlayerData(i, "Name")) ~= nil) then
-					for j, unitName in ipairs(Units) do -- if in grand strategy mode, apply upgrades researched
-						if (string.find(unitName, "upgrade-") ~= nil) then
-							if (GetFactionTechnology(GetPlayerData(i, "RaceName"), GetPlayerData(i, "Name"), unitName)) then
-								SetPlayerData(i, "Allow", unitName, "R")
+				if (GetPlayerData(i, "Name") == Attacker or (GetPlayerData(i, "Name") == Defender and GetProvinceOwner(AttackedProvince.Name) ~= "")) then
+					if (GetPlayerData(i, "TotalNumUnits") > 0 and GetFactionFromName(GetPlayerData(i, "Name")) ~= nil) then
+						for j, unitName in ipairs(Units) do -- if in grand strategy mode, apply upgrades researched
+							if (string.find(unitName, "upgrade-") ~= nil) then
+								if (GetFactionTechnology(GetPlayerData(i, "RaceName"), GetPlayerData(i, "Name"), unitName)) then
+									SetPlayerData(i, "Allow", unitName, "R")
+								end
 							end
 						end
 					end

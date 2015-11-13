@@ -151,23 +151,17 @@ function RunGrandStrategyGameSetupMenu()
 				
 				-- load heroes' upgraded versions, if those have been acquired
 				if (GetProvinceHero(WorldMapProvinces[key].Name, "Modsognir", "") == 2 and GetArrayIncludes(wyr.preferences.Heroes.Modsognir.upgrades, "unit-dwarven-thane")) then
-					SetProvinceHero(WorldMapProvinces[key].Name, "Modsognir", "", "unit-hero-modsognir", 0)
 					SetProvinceHero(WorldMapProvinces[key].Name, "Modsognir", "", "unit-hero-modsognir-thane", 2)
 				end
 				if (GetProvinceHero(WorldMapProvinces[key].Name, "Durin", "") == 2 and GetArrayIncludes(wyr.preferences.Heroes.Durin.upgrades, "unit-dwarven-thane")) then
-					SetProvinceHero(WorldMapProvinces[key].Name, "Durin", "", "unit-hero-durin", 0)
 					SetProvinceHero(WorldMapProvinces[key].Name, "Durin", "", "unit-hero-durin-thane", 2)
 				end
 				if (GetProvinceHero(WorldMapProvinces[key].Name, "Rugnur", "") == 2 and GetArrayIncludes(wyr.preferences.Heroes.Rugnur.upgrades, "unit-dwarven-thane")) then
-					SetProvinceHero(WorldMapProvinces[key].Name, "Rugnur", "", "unit-hero-rugnur", 0)
-					SetProvinceHero(WorldMapProvinces[key].Name, "Rugnur", "", "unit-hero-rugnur-steelclad", 0)
 					SetProvinceHero(WorldMapProvinces[key].Name, "Rugnur", "", "unit-hero-rugnur-thane", 2)
 				elseif (GetProvinceHero(WorldMapProvinces[key].Name, "Rugnur", "") == 2 and GetArrayIncludes(wyr.preferences.Heroes.Rugnur.upgrades, "unit-dwarven-steelclad")) then
-					SetProvinceHero(WorldMapProvinces[key].Name, "Rugnur", "", "unit-hero-rugnur", 0)
 					SetProvinceHero(WorldMapProvinces[key].Name, "Rugnur", "", "unit-hero-rugnur-steelclad", 2)
 				end
 				if (GetProvinceHero(WorldMapProvinces[key].Name, "Baglur", "") == 2 and GetArrayIncludes(wyr.preferences.Heroes.Baglur.upgrades, "unit-dwarven-thane")) then
-					SetProvinceHero(WorldMapProvinces[key].Name, "Baglur", "", "unit-hero-baglur", 0)
 					SetProvinceHero(WorldMapProvinces[key].Name, "Baglur", "", "unit-hero-baglur-thane", 2)
 				end
 				
@@ -710,9 +704,10 @@ function AttackProvince(province, faction)
 			if (IsOffensiveMilitaryUnit(unitName)) then
 				SetProvinceUnitQuantity(province.Name, unitName, math.ceil(GetPlayerData(GetFactionPlayer(victorious_player), "UnitTypesCount", unitName) / BattalionMultiplier))
 			elseif (IsHero(unitName)) then
-				SetProvinceHero(AttackedProvince.Name, GetUnitTypeData(unitName, "DefaultName"), "", unitName, 0)
 				if (GetPlayerData(GetFactionPlayer(victorious_player), "UnitTypesCount", unitName) >= 1) then
 					SetProvinceHero(AttackedProvince.Name, GetUnitTypeData(unitName, "DefaultName"), "", unitName, 2)
+				else
+					SetProvinceHero(AttackedProvince.Name, GetUnitTypeData(unitName, "DefaultName"), "", unitName, 0)
 				end
 			end
 		end

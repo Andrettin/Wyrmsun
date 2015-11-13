@@ -88,7 +88,6 @@ if (LoadedGame == false) then
 		-- Marcomanni units
 		CreateProvinceUnits("Bohemia", 4)		
 	--	unit = CreateUnit("unit-hero-marbod", 4, {Players[4].StartPos.x, Players[4].StartPos.y}) -- add Ballomar here later
-	--	SetProvinceHero("Bohemia", "Marbod", "", "unit-hero-marbod", 0)
 		
 		-- Roman units
 		CreateProvinceUnits("Austria", 0, 4)

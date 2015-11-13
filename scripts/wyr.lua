@@ -254,7 +254,7 @@ function SetPlayerData(player, data, arg1, arg2)
 					if (Players[player].Type == PlayerPerson) then
 						SetPlayerData(player, "Faction", GrandStrategyFaction.Name)
 					elseif (Players[player].Type == PlayerComputer) then
-						if (GrandStrategyFaction.Name == Attacker) then
+						if (GrandStrategyFaction.Name == Attacker and GetProvinceOwner(AttackedProvince.Name) ~= "") then
 							SetPlayerData(player, "Faction", Defender)
 						elseif (GrandStrategyFaction.Name == Defender) then
 							SetPlayerData(player, "Faction", Attacker)

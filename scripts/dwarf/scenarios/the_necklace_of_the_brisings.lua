@@ -55,7 +55,6 @@ if (LoadedGame == false) then
 		for i, unitName in ipairs(Units) do
 			if (IsHero(unitName) and GetProvinceHero("Svarinshaug", GetUnitTypeData(unitName, "DefaultName"), "") == 2) then
 				unit = OldCreateUnit(unitName, 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-				SetProvinceHero("Svarinshaug", GetUnitTypeData(unitName, "DefaultName"), "", unitName, 0)
 			end
 		end
 		

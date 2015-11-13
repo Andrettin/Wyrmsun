@@ -59,22 +59,16 @@ if (LoadedGame == false) then
 		-- Rugnur
 		if (GetProvinceHero("Caverns of Chaincolt", "Rugnur", "") == 2) then
 			unit = CreateUnit("unit-hero-rugnur", 0, {19, 47})
-			SetProvinceHero("Caverns of Chaincolt", "Rugnur", "", "unit-hero-rugnur", 0)
-			SetProvinceHero("Caverns of Chaincolt", "Rugnur", "", "unit-hero-rugnur-steelclad", 0)
-			SetProvinceHero("Caverns of Chaincolt", "Rugnur", "", "unit-hero-rugnur-thane", 0)
 		end
 
 		-- Baglur
 		if (GetProvinceHero("Caverns of Chaincolt", "Baglur", "") == 2) then
 			unit = CreateUnit("unit-hero-baglur", 0, {19, 47})
-			SetProvinceHero("Caverns of Chaincolt", "Baglur", "", "unit-hero-baglur", 0)
-			SetProvinceHero("Caverns of Chaincolt", "Baglur", "", "unit-hero-baglur-thane", 0)
 		end
 
 		-- Thursagan
 		if (GetProvinceHero("Caverns of Chaincolt", "Thursagan", "") == 2) then
 			unit = CreateUnit("unit-hero-thursagan", 0, {19, 47})
-			SetProvinceHero("Caverns of Chaincolt", "Thursagan", "", "unit-hero-thursagan", 0)
 		end
 	end
 	

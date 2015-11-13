@@ -875,6 +875,7 @@ LoadEvents("Nidavellir")
 if (GrandStrategyYear >= -3000) then
 	SetProvinceHero("Svarinshaug", "Modsognir", "", "unit-hero-modsognir", 2) 
 	SetProvinceHero("Svarinshaug", "Durin", "", "unit-hero-durin", 2) 
+	SetFactionRuler("dwarf", "Modsogning Clan", "Modsognir", "") 
 	GrandStrategyEvents.ModsognirTribalChieftain = nil
 	GrandStrategyEvents.DurinWarrior = nil
 end
@@ -1017,10 +1018,6 @@ if (GrandStrategyYear >= 29) then
 	SetProvinceHero("Shorbear Hills", "Baglur", "", "unit-hero-baglur", 2)
 	SetProvinceHero("Shorbear Hills", "Durstorn", "", "unit-hero-durstorn", 2)
 	SetProvinceHero("Shorbear Hills", "Thursagan", "", "unit-hero-thursagan", 2)
-	SetProvinceHero("Caverns of Chaincolt", "Rugnur", "", "unit-hero-rugnur", 0)
-	SetProvinceHero("Caverns of Chaincolt", "Baglur", "", "unit-hero-baglur", 0)
-	SetProvinceHero("Caverns of Chaincolt", "Durstorn", "", "unit-hero-durstorn", 0)
-	SetProvinceHero("Caverns of Chaincolt", "Thursagan", "", "unit-hero-thursagan", 0)
 	--]]
 
 	SetProvinceSettlementBuilding("Shorbear Hills", "unit-dwarven-lumber-mill", true) -- had capability to train scouts by then
@@ -1034,14 +1031,10 @@ if (GrandStrategyYear >= 35) then
 	SetProvinceUnitQuantity("Shorbear Hills", "unit-dwarven-axefighter", 0)
 	SetProvinceUnitQuantity("Shorbear Hills", "unit-dwarven-thane", 0)
 	--[[
-	SetProvinceHero("Caverns of Chaincolt", "Rugnur", "", "unit-hero-rugnur", 2)
-	SetProvinceHero("Caverns of Chaincolt", "Baglur", "", "unit-hero-baglur", 2)
-	SetProvinceHero("Caverns of Chaincolt", "Thursagan", "", "unit-hero-thursagan", 2)
-	SetProvinceHero("Caverns of Chaincolt", "Rugnur", "", "unit-hero-rugnur", 0)
-	SetProvinceHero("Shorbear Hills", "Baglur", "", "unit-hero-baglur", 0)
-	SetProvinceHero("Shorbear Hills", "Thursagan", "", "unit-hero-thursagan", 0)
+	SetProvinceHero("Caverns of Flame", "Rugnur", "", "unit-hero-rugnur", 2)
+	SetProvinceHero("Caverns of Flame", "Baglur", "", "unit-hero-baglur", 2)
+	SetProvinceHero("Caverns of Flame", "Thursagan", "", "unit-hero-thursagan", 2)
 	--]]
-	SetProvinceHero("Caverns of Chaincolt", "Durstorn", "", "unit-hero-durstorn", 0) -- Durstorn is killed in a conflict between him and other members of the clan
 	SetProvinceHero("Shorbear Hills", "Durstorn", "", "unit-hero-durstorn", 0) -- Durstorn is killed in a conflict between him and other members of the clan
 	GrandStrategyEvents.DurstornDies = nil
 	SetProvinceSettlementBuilding("Southern Tunnels", "unit-mercenary-camp", true) -- at some point between 35 and 40 AD the Shinsplitters had the capacity to recruit mercenaries, as shown by them having hired the Surghan Mercenaries
