@@ -136,12 +136,12 @@ if (GrandStrategy == false) then
 elseif (GrandStrategyEventMap) then
 	-- Rugnur
 	if (GetProvinceHero("Caverns of Chaincolt", "Rugnur", "") == 2) then
-		unit = CreateUnit("unit-hero-rugnur", 0, {8, 60})
+		unit = CreateUnit(GetHeroUnitType("Rugnur", ""), 0, {8, 60})
 	end
 
 	-- Baglur
 	if (GetProvinceHero("Caverns of Chaincolt", "Baglur", "") == 2) then
-		unit = CreateUnit("unit-hero-baglur", 0, {8, 60})
+		unit = CreateUnit(GetHeroUnitType("Baglur", ""), 0, {8, 60})
 	end
 end
 

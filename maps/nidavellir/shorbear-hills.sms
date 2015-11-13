@@ -251,22 +251,22 @@ elseif (GrandStrategyEventMap) then
 
 	-- Rugnur
 	if (GetProvinceHero("Caverns of Chaincolt", "Rugnur", "") == 2) then
-		unit = CreateUnit("unit-hero-rugnur", 0, {6, 5})
+		unit = CreateUnit(GetHeroUnitType("Rugnur", ""), 0, {6, 5})
 	end
 
 	-- Baglur
 	if (GetProvinceHero("Caverns of Chaincolt", "Baglur", "") == 2) then
-		unit = CreateUnit("unit-hero-baglur", 0, {6, 5})
+		unit = CreateUnit(GetHeroUnitType("Baglur", ""), 0, {6, 5})
 	end
 
 	-- Thursagan
 	if (GetProvinceHero("Caverns of Chaincolt", "Thursagan", "") == 2) then
-		unit = CreateUnit("unit-hero-thursagan", 0, {6, 5})
+		unit = CreateUnit(GetHeroUnitType("Thursagan", ""), 0, {6, 5})
 	end
 
 	-- Durstorn
 	if (GetProvinceHero("Caverns of Chaincolt", "Durstorn", "") == 2) then
-		unit = CreateUnit("unit-hero-durstorn", 0, {6, 5})
+		unit = CreateUnit(GetHeroUnitType("Durstorn", ""), 0, {6, 5})
 	end
 	
 	-- Gnomish Envoy

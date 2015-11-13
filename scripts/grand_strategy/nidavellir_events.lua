@@ -390,7 +390,7 @@ local NidavellirEvents = {
 		MinYear = -3000 + 30, -- estimated death date
 		Options = {"~!OK"},
 		OptionEffects = {function(s)
-			RemoveHeroFromFaction("unit-hero-modsognir", EventFaction)
+			RemoveHeroFromFaction(GetHeroUnitType("Modsognir", ""), EventFaction)
 		end}
 	},
 	DurinDies = {
@@ -402,7 +402,7 @@ local NidavellirEvents = {
 		MinYear = -3000 + 30, -- estimated death date
 		Options = {"~!OK"},
 		OptionEffects = {function(s)
-			RemoveHeroFromFaction("unit-hero-durin", EventFaction)
+			RemoveHeroFromFaction(GetHeroUnitType("Durin", ""), EventFaction)
 		end}
 	},
 	TheNorlundClan = {
@@ -630,7 +630,7 @@ local NidavellirEvents = {
 		Civilization = "dwarf",
 		Faction = "NorlundClan",
 		Conditions = function(s)
-			if (SyncRand(100) < 10 and FactionHasHero(EventFaction.Civilization, EventFaction.Name, "Thursagan", "") and FactionHasHero(EventFaction.Civilization, EventFaction.Name, "Durstorn", "")) then
+			if (SyncRand(100) < 10 and FactionHasHero(EventFaction.Civilization, EventFaction.Name, "Thursagan", "") and FactionHasHero(EventFaction.Civilization, EventFaction.Name, "Durstorn", "") and GetProvinceOwner("Northern Wastelands") ~= "Norlund Clan") then
 				return true
 			else
 				return false
@@ -640,12 +640,7 @@ local NidavellirEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				for province_i, key in ipairs(EventFaction.OwnedProvinces) do
-					RemoveHeroFromFaction("unit-hero-thursagan", EventFaction)
-				end
-				if (GetProvinceOwner("Northern Wastelands") ~= "Norlund Clan") then
-					SetProvinceHero("Northern Wastelands", "Thursagan", "", "unit-hero-thursagan", 2)
-				end
+				SetProvinceHero("Northern Wastelands", "Thursagan", "", "unit-hero-thursagan", 2)
 			end
 		},
 		OptionTooltips = {"Thursagan leaves our clan's territory"}
@@ -1401,7 +1396,7 @@ local NidavellirEvents = {
 		MinYear = 40 + 30, -- died in 40 AD of a violent death, and wasn't old; +30 years
 		Options = {"~!OK"},
 		OptionEffects = {function(s)
-			RemoveHeroFromFaction("unit-hero-rugnur", EventFaction)
+			RemoveHeroFromFaction(GetHeroUnitType("Rugnur", ""), EventFaction)
 		end}
 	},
 	BaglurDies = {
@@ -1413,7 +1408,7 @@ local NidavellirEvents = {
 		MinYear = 40 + 10, -- died in 40 AD of a violent death, but was already rather old; +10 years
 		Options = {"~!OK"},
 		OptionEffects = {function(s)
-			RemoveHeroFromFaction("unit-hero-baglur", EventFaction)
+			RemoveHeroFromFaction(GetHeroUnitType("Baglur", ""), EventFaction)
 		end}
 	},
 	ThursaganDies = {
@@ -1425,7 +1420,7 @@ local NidavellirEvents = {
 		MinYear = 40 + 10, -- died in 40 AD of a violent death, but was already rather old; +10 years
 		Options = {"~!OK"},
 		OptionEffects = {function(s)
-			RemoveHeroFromFaction("unit-hero-thursagan", EventFaction)
+			RemoveHeroFromFaction(GetHeroUnitType("Thursagan", ""), EventFaction)
 		end}
 	},
 	DurstornDies = {
@@ -1437,7 +1432,7 @@ local NidavellirEvents = {
 		MinYear = 35 + 15, -- died in 35 AD of a violent death, but was already old; +15 years
 		Options = {"~!OK"},
 		OptionEffects = {function(s)
-			RemoveHeroFromFaction("unit-hero-durstorn", EventFaction)
+			RemoveHeroFromFaction(GetHeroUnitType("Durstorn", ""), EventFaction)
 		end}
 	},
 	GoblinLooters = {

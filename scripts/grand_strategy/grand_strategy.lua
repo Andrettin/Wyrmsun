@@ -486,7 +486,7 @@ function EndTurn()
 		end
 		for i, unitName in ipairs(Units) do
 			if (IsHero(unitName)) then
-				if (GetProvinceHero(WorldMapProvinces[key].Name, GetUnitTypeData(unitName, "DefaultName"), "") == 1) then
+				if (GetProvinceHero(WorldMapProvinces[key].Name, GetUnitTypeData(unitName, "DefaultName"), "") == 1 and GetHeroUnitType(GetUnitTypeData(unitName, "DefaultName"), "") == unitName) then
 					SetProvinceHero(WorldMapProvinces[key].Name, GetUnitTypeData(unitName, "DefaultName"), "", unitName, 2)
 				end
 			end
@@ -703,7 +703,7 @@ function AttackProvince(province, faction)
 		for i, unitName in ipairs(Units) do
 			if (IsOffensiveMilitaryUnit(unitName)) then
 				SetProvinceUnitQuantity(province.Name, unitName, math.ceil(GetPlayerData(GetFactionPlayer(victorious_player), "UnitTypesCount", unitName) / BattalionMultiplier))
-			elseif (IsHero(unitName) and GetProvinceHero(AttackedProvince.Name, GetUnitTypeData(unitName, "DefaultName"), "") ~= 0) then
+			elseif (IsHero(unitName) and GetProvinceHero(AttackedProvince.Name, GetUnitTypeData(unitName, "DefaultName"), "") ~= 0 and GetHeroUnitType(GetUnitTypeData(unitName, "DefaultName"), "") == unitName) then
 				if (GetPlayerData(GetFactionPlayer(victorious_player), "UnitTypesCount", unitName) >= 1) then
 					SetProvinceHero(AttackedProvince.Name, GetUnitTypeData(unitName, "DefaultName"), "", unitName, 2)
 				else
@@ -2720,7 +2720,7 @@ function SetSelectedProvinceLua(province)
 			end
 			for i, unitName in ipairs(Units) do
 				if (IsHero(unitName)) then
-					if (SelectedHero == unitName and GetProvinceHero(SelectedProvince.Name, GetUnitTypeData(unitName, "DefaultName"), "") == 2) then
+					if (SelectedHero == unitName and GetProvinceHero(SelectedProvince.Name, GetUnitTypeData(unitName, "DefaultName"), "") == 2 and GetHeroUnitType(GetUnitTypeData(unitName, "DefaultName"), "") == unitName) then
 						SetProvinceHero(province.Name, GetUnitTypeData(unitName, "DefaultName"), "", unitName, 1)
 						SelectedHero = ""
 					end

@@ -318,7 +318,7 @@ local TeutonEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				RemoveHeroFromFaction("unit-hero-marbod", EventFaction)
+				RemoveHeroFromFaction(GetHeroUnitType("Marbod", ""), EventFaction)
 			end
 		}
 	},
