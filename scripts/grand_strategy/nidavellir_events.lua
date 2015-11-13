@@ -114,7 +114,7 @@ local NidavellirEvents = {
 					for i, unitName in ipairs(Units) do
 						if (IsOffensiveMilitaryUnit(unitName)) then
 							ChangeProvinceUnitQuantity("Svarinshaug", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
-						elseif (IsHero(unitName)) then
+						elseif (IsHero(unitName) and GetProvinceHero("Svarinshaug", GetUnitTypeData(unitName, "DefaultName"), "") == 2) then
 							if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
 								SetProvinceHero("Svarinshaug", GetUnitTypeData(unitName, "DefaultName"), "", unitName, 2)
 							else
@@ -179,12 +179,13 @@ local NidavellirEvents = {
 					for i, unitName in ipairs(Units) do
 						if (IsOffensiveMilitaryUnit(unitName)) then
 							ChangeProvinceUnitQuantity("Svarinshaug", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
+						elseif (IsHero(unitName) and GetUnitTypeData(unitName, "DefaultName") == "Durin" and GetProvinceHero("Svarinshaug", GetUnitTypeData(unitName, "DefaultName"), "") == 2) then
+							if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
+								SetProvinceHero("Svarinshaug", GetUnitTypeData(unitName, "DefaultName"), "", unitName, 2)
+							else
+								SetProvinceHero("Svarinshaug", GetUnitTypeData(unitName, "DefaultName"), "", unitName, 0)
+							end
 						end
-					end
-					if (GetPlayerData(0, "UnitTypesCount", GetHeroUnitType("Durin", "")) > 0) then
-						SetProvinceHero("Svarinshaug", "Durin", "", GetHeroUnitType("Durin", ""), 2)
-					else
-						SetProvinceHero("Svarinshaug", "Durin", "", GetHeroUnitType("Durin", ""), 0)
 					end
 					
 					if (GameResult == GameVictory) then
@@ -290,7 +291,7 @@ local NidavellirEvents = {
 					for i, unitName in ipairs(Units) do
 						if (IsOffensiveMilitaryUnit(unitName)) then
 							ChangeProvinceUnitQuantity("Svarinshaug", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
-						elseif (IsHero(unitName)) then
+						elseif (IsHero(unitName) and GetProvinceHero("Svarinshaug", GetUnitTypeData(unitName, "DefaultName"), "") == 2) then
 							if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
 								SetProvinceHero("Svarinshaug", GetUnitTypeData(unitName, "DefaultName"), "", unitName, 2)
 							else
@@ -359,7 +360,7 @@ local NidavellirEvents = {
 					for i, unitName in ipairs(Units) do
 						if (IsOffensiveMilitaryUnit(unitName)) then
 							ChangeProvinceUnitQuantity("Svarinshaug", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
-						elseif (IsHero(unitName)) then
+						elseif (IsHero(unitName) and GetProvinceHero("Svarinshaug", GetUnitTypeData(unitName, "DefaultName"), "") == 2) then
 							if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
 								SetProvinceHero("Svarinshaug", GetUnitTypeData(unitName, "DefaultName"), "", unitName, 2)
 							else
@@ -686,13 +687,14 @@ local NidavellirEvents = {
 						ChangeProvinceUnitQuantity("Caverns of Chaincolt", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
 						ChangeProvinceUnitQuantity("Brown Hills", unitName, math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier))
 						ChangeProvinceUnitQuantity("Southern Tunnels", unitName, math.ceil(GetPlayerData(2, "UnitTypesCount", unitName) / BattalionMultiplier))
+					elseif (IsHero(unitName) and GetUnitTypeData(unitName, "DefaultName") == "Rugnur" and GetProvinceHero("Caverns of Chaincolt", GetUnitTypeData(unitName, "DefaultName"), "") == 2) then
+						if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
+							SetProvinceHero("Caverns of Chaincolt", GetUnitTypeData(unitName, "DefaultName"), "", unitName, 2)
+						else
+							SetProvinceHero("Caverns of Chaincolt", GetUnitTypeData(unitName, "DefaultName"), "", unitName, 0)
+						end
 					end
 				end
-			end
-			if (GetPlayerData(0, "UnitTypesCount", GetHeroUnitType("Rugnur", "")) > 0) then
-				SetProvinceHero("Caverns of Chaincolt", "Rugnur", "", GetHeroUnitType("Rugnur", ""), 2)
-			else
-				SetProvinceHero("Caverns of Chaincolt", "Rugnur", "", GetHeroUnitType("Rugnur", ""), 0)
 			end
 			if (("Norlund Clan" ~= GrandStrategyFaction.Name or wyr.preferences.AutomaticBattles) and ("Shinsplitter Clan" ~= GrandStrategyFaction.Name or wyr.preferences.AutomaticBattles)) then -- if neither Norlund Clan nor Shinsplitter Clan are played by the human player, then enact the effects of the bargain between the gnomes and Rugnur successfully being struck
 				SetFactionDiplomacyState("dwarf", "Norlund Clan", "dwarf", "Shinsplitter Clan", "war") -- begin war between Norlund Clan and Shinsplitter Clan
@@ -733,13 +735,21 @@ local NidavellirEvents = {
 						ChangeProvinceUnitQuantity("Caverns of Chaincolt", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
 						ChangeProvinceUnitQuantity("Brown Hills", unitName, math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier))
 						ChangeProvinceUnitQuantity("Southern Tunnels", unitName, math.ceil(GetPlayerData(2, "UnitTypesCount", unitName) / BattalionMultiplier))
+					elseif (IsHero(unitName) and GetUnitTypeData(unitName, "DefaultName") == "Rugnur" and GetProvinceHero("Caverns of Chaincolt", GetUnitTypeData(unitName, "DefaultName"), "") == 2) then
+						if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
+							SetProvinceHero("Caverns of Chaincolt", GetUnitTypeData(unitName, "DefaultName"), "", unitName, 2)
+						else
+							SetProvinceHero("Caverns of Chaincolt", GetUnitTypeData(unitName, "DefaultName"), "", unitName, 0)
+						end
 					end
 				end
+				--[[
 				if (GetPlayerData(0, "UnitTypesCount", GetHeroUnitType("Rugnur", "")) > 0) then
 					SetProvinceHero("Caverns of Chaincolt", "Rugnur", "", GetHeroUnitType("Rugnur", ""), 2)
 				else
 					SetProvinceHero("Caverns of Chaincolt", "Rugnur", "", GetHeroUnitType("Rugnur", ""), 0)
 				end
+				--]]
 			end
 			if (GrandStrategyFaction.Name == "Shinsplitter Clan" and wyr.preferences.AutomaticBattles) then
 				GenericDialog("A Bargain is Struck", "The Norlund Clan refused to pay the toll! We tried to intercept the caravans and the envoy who carried the gnomish Ruby of Fire, but we failed...")
@@ -774,6 +784,7 @@ local NidavellirEvents = {
 				RunMap("maps/nidavellir/caverns-of-chaincolt.smp")
 				GrandStrategyEventMap = false
 
+				--[[
 				if (GetPlayerData(0, "UnitTypesCount", GetHeroUnitType("Rugnur", "")) > 0) then
 					SetProvinceHero("Caverns of Chaincolt", "Rugnur", "", GetHeroUnitType("Rugnur", ""), 2)
 				else
@@ -784,6 +795,7 @@ local NidavellirEvents = {
 				else
 					SetProvinceHero("Caverns of Chaincolt", "Baglur", "", GetHeroUnitType("Baglur", ""), 0)
 				end
+				--]]
 				if (GetProvinceOwner("Caverns of Chaincolt") == "Shinsplitter Clan") then
 					for i, unitName in ipairs(Units) do
 						if (IsOffensiveMilitaryUnit(unitName)) then
@@ -798,6 +810,12 @@ local NidavellirEvents = {
 						if (IsOffensiveMilitaryUnit(unitName)) then
 							ChangeProvinceUnitQuantity("Caverns of Chaincolt", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
 							ChangeProvinceUnitQuantity("Southern Tunnels", unitName, math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier))
+						elseif (IsHero(unitName) and (GetUnitTypeData(unitName, "DefaultName") == "Rugnur" or GetUnitTypeData(unitName, "DefaultName") == "Baglur") and GetProvinceHero("Caverns of Chaincolt", GetUnitTypeData(unitName, "DefaultName"), "") == 2) then
+							if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
+								SetProvinceHero("Caverns of Chaincolt", GetUnitTypeData(unitName, "DefaultName"), "", unitName, 2)
+							else
+								SetProvinceHero("Caverns of Chaincolt", GetUnitTypeData(unitName, "DefaultName"), "", unitName, 0)
+							end
 						end
 					end
 				end
@@ -831,6 +849,7 @@ local NidavellirEvents = {
 				RunMap("maps/nidavellir/caverns-of-chaincolt.smp")
 				GrandStrategyEventMap = false
 
+				--[[
 				if (GetPlayerData(0, "UnitTypesCount", GetHeroUnitType("Rugnur", "")) > 0) then
 					SetProvinceHero("Caverns of Chaincolt", "Rugnur", "", GetHeroUnitType("Rugnur", ""), 2)
 				else
@@ -841,6 +860,7 @@ local NidavellirEvents = {
 				else
 					SetProvinceHero("Caverns of Chaincolt", "Baglur", "", GetHeroUnitType("Baglur", ""), 0)
 				end
+				--]]
 				if (GetProvinceOwner("Caverns of Chaincolt") == "Shinsplitter Clan") then
 					for i, unitName in ipairs(Units) do
 						if (IsOffensiveMilitaryUnit(unitName)) then
@@ -855,6 +875,12 @@ local NidavellirEvents = {
 						if (IsOffensiveMilitaryUnit(unitName)) then
 							ChangeProvinceUnitQuantity("Caverns of Chaincolt", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
 							ChangeProvinceUnitQuantity("Southern Tunnels", unitName, math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier))
+						elseif (IsHero(unitName) and (GetUnitTypeData(unitName, "DefaultName") == "Rugnur" or GetUnitTypeData(unitName, "DefaultName") == "Baglur") and GetProvinceHero("Caverns of Chaincolt", GetUnitTypeData(unitName, "DefaultName"), "") == 2) then
+							if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
+								SetProvinceHero("Caverns of Chaincolt", GetUnitTypeData(unitName, "DefaultName"), "", unitName, 2)
+							else
+								SetProvinceHero("Caverns of Chaincolt", GetUnitTypeData(unitName, "DefaultName"), "", unitName, 0)
+							end
 						end
 					end
 				end
@@ -897,13 +923,11 @@ local NidavellirEvents = {
 					end
 				end
 				for i, unitName in ipairs(Units) do
-					if (IsHero(unitName)) then
-						if (GetUnitTypeData(unitName, "DefaultName") ~= "Durstorn") then
-							if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
-								SetProvinceHero("Caverns of Chaincolt", GetUnitTypeData(unitName, "DefaultName"), "", unitName, 2)
-							else
-								SetProvinceHero("Caverns of Chaincolt", GetUnitTypeData(unitName, "DefaultName"), "", unitName, 0)
-							end
+					if (IsHero(unitName) and (GetUnitTypeData(unitName, "DefaultName") == "Rugnur" or GetUnitTypeData(unitName, "DefaultName") == "Baglur" or GetUnitTypeData(unitName, "DefaultName") == "Thursagan") and GetProvinceHero("Caverns of Chaincolt", GetUnitTypeData(unitName, "DefaultName"), "") == 2) then
+						if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
+							SetProvinceHero("Caverns of Chaincolt", GetUnitTypeData(unitName, "DefaultName"), "", unitName, 2)
+						else
+							SetProvinceHero("Caverns of Chaincolt", GetUnitTypeData(unitName, "DefaultName"), "", unitName, 0)
 						end
 					end
 				end
@@ -953,9 +977,11 @@ local NidavellirEvents = {
 					end
 				end
 				for i, unitName in ipairs(Units) do
-					if (IsHero(unitName)) then
+					if (IsHero(unitName) and (GetUnitTypeData(unitName, "DefaultName") == "Rugnur" or GetUnitTypeData(unitName, "DefaultName") == "Baglur" or GetUnitTypeData(unitName, "DefaultName") == "Thursagan") and GetProvinceHero("Caverns of Chaincolt", GetUnitTypeData(unitName, "DefaultName"), "") == 2) then
 						if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
 							SetProvinceHero("Caverns of Chaincolt", GetUnitTypeData(unitName, "DefaultName"), "", unitName, 2)
+						else
+							SetProvinceHero("Caverns of Chaincolt", GetUnitTypeData(unitName, "DefaultName"), "", unitName, 0)
 						end
 					end
 				end
@@ -1013,9 +1039,11 @@ local NidavellirEvents = {
 					end
 				end
 				for i, unitName in ipairs(Units) do
-					if (IsHero(unitName)) then
+					if (IsHero(unitName) and GetProvinceHero("Caverns of Chaincolt", GetUnitTypeData(unitName, "DefaultName"), "") == 2) then
 						if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
 							SetProvinceHero("Caverns of Chaincolt", GetUnitTypeData(unitName, "DefaultName"), "", unitName, 2)
+						else
+							SetProvinceHero("Caverns of Chaincolt", GetUnitTypeData(unitName, "DefaultName"), "", unitName, 0)
 						end
 					end
 				end
@@ -1083,9 +1111,11 @@ local NidavellirEvents = {
 					end
 				end
 				for i, unitName in ipairs(Units) do
-					if (IsHero(unitName)) then
+					if (IsHero(unitName) and GetProvinceHero("Caverns of Chaincolt", GetUnitTypeData(unitName, "DefaultName"), "") == 2) then
 						if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
 							SetProvinceHero("Caverns of Chaincolt", GetUnitTypeData(unitName, "DefaultName"), "", unitName, 2)
+						else
+							SetProvinceHero("Caverns of Chaincolt", GetUnitTypeData(unitName, "DefaultName"), "", unitName, 0)
 						end
 					end
 				end
@@ -1129,9 +1159,11 @@ local NidavellirEvents = {
 					end
 				end
 				for i, unitName in ipairs(Units) do
-					if (IsHero(unitName)) then
+					if (IsHero(unitName) and GetProvinceHero("Caverns of Chaincolt", GetUnitTypeData(unitName, "DefaultName"), "") == 2) then
 						if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
 							SetProvinceHero("Caverns of Chaincolt", GetUnitTypeData(unitName, "DefaultName"), "", unitName, 2)
+						else
+							SetProvinceHero("Caverns of Chaincolt", GetUnitTypeData(unitName, "DefaultName"), "", unitName, 0)
 						end
 					end
 				end
@@ -1183,9 +1215,11 @@ local NidavellirEvents = {
 					end
 				end
 				for i, unitName in ipairs(Units) do
-					if (IsHero(unitName)) then
+					if (IsHero(unitName) and GetProvinceHero("Caverns of Chaincolt", GetUnitTypeData(unitName, "DefaultName"), "") == 2) then
 						if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
 							SetProvinceHero("Caverns of Chaincolt", GetUnitTypeData(unitName, "DefaultName"), "", unitName, 2)
+						else
+							SetProvinceHero("Caverns of Chaincolt", GetUnitTypeData(unitName, "DefaultName"), "", unitName, 0)
 						end
 					end
 				end
@@ -1242,13 +1276,15 @@ local NidavellirEvents = {
 					end
 				end
 				for i, unitName in ipairs(Units) do
-					if (IsHero(unitName)) then
+					if (IsHero(unitName) and GetProvinceHero("Caverns of Chaincolt", GetUnitTypeData(unitName, "DefaultName"), "") == 2) then
 						if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
 							SetProvinceHero("Caverns of Chaincolt", GetUnitTypeData(unitName, "DefaultName"), "", unitName, 2)
+						else
+							SetProvinceHero("Caverns of Chaincolt", GetUnitTypeData(unitName, "DefaultName"), "", unitName, 0)
 						end
 					end
 				end
-				if (GameResult ~= GameVictory and GetProvinceHero("Caverns of Chaincolt", "Rugnur", "") == 2 and GetProvinceHero("Caverns of Chaincolt", "Baglur", "") == 2 and GetProvinceHero("Caverns of Chaincolt", "Thursagan", "")) then
+				if (GameResult ~= GameVictory and GetProvinceHero("Caverns of Chaincolt", "Rugnur", "") == 2 and GetProvinceHero("Caverns of Chaincolt", "Baglur", "") == 2 and GetProvinceHero("Caverns of Chaincolt", "Thursagan", "") == 2) then
 					ChangeFactionResource("dwarf", "Norlund Clan", "coal", -20000) -- Scepter of Fire crafted
 					SetProvinceHero("Caverns of Chaincolt", "Durstorn", "", "unit-hero-durstorn", 0)
 					GrandStrategyEvent(Factions.NorlundClan, GrandStrategyEvents.CavernsOfFlame)
@@ -1301,14 +1337,11 @@ local NidavellirEvents = {
 				SetProvinceUnitQuantity("Southern Tunnels", "unit-dwarven-thane", 0)
 				SetProvinceUnitQuantity("Southern Tunnels", "unit-surghan-mercenary-steelclad", 0)
 				
-				SetProvinceHero("Caverns of Chaincolt", "Rugnur", "", "unit-hero-rugnur", 0) -- Rugnur, Baglur and Thursagan die at the Caverns of Flame
-				SetProvinceHero("Caverns of Chaincolt", "Rugnur", "", "unit-hero-rugnur-steelclad", 0)
-				SetProvinceHero("Caverns of Chaincolt", "Rugnur", "", "unit-hero-rugnur-thane", 0)
+				SetProvinceHero("Caverns of Chaincolt", "Rugnur", "", GetHeroUnitType("Rugnur", ""), 0) -- Rugnur, Baglur and Thursagan die at the Caverns of Flame
 				GrandStrategyEvents.RugnurDies = nil
-				SetProvinceHero("Caverns of Chaincolt", "Baglur", "", "unit-hero-baglur", 0)
-				SetProvinceHero("Caverns of Chaincolt", "Baglur", "", "unit-hero-baglur-thane", 0)
+				SetProvinceHero("Caverns of Chaincolt", "Baglur", "", GetHeroUnitType("Baglur", ""), 0)
 				GrandStrategyEvents.BaglurDies = nil
-				SetProvinceHero("Caverns of Chaincolt", "Thursagan", "", "unit-hero-thursagan", 0)
+				SetProvinceHero("Caverns of Chaincolt", "Thursagan", "", GetHeroUnitType("Thursagan", ""), 0)
 				GrandStrategyEvents.ThursaganDies = nil
 
 				ChangeProvinceUnitQuantity("Caverns of Chaincolt", "unit-dwarven-gryphon-rider", -2) -- the dwarven gryphon riders return to the Northern Wastelands
@@ -1453,9 +1486,11 @@ local NidavellirEvents = {
 						end
 					end
 					for i, unitName in ipairs(Units) do
-						if (IsHero(unitName)) then
+						if (IsHero(unitName) and GetProvinceHero("Caverns of Chaincolt", GetUnitTypeData(unitName, "DefaultName"), "") == 2) then
 							if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
-								SetProvinceHero(EventProvince.Name, GetUnitTypeData(unitName, "DefaultName"), "", unitName, 2)
+								SetProvinceHero("Caverns of Chaincolt", GetUnitTypeData(unitName, "DefaultName"), "", unitName, 2)
+							else
+								SetProvinceHero("Caverns of Chaincolt", GetUnitTypeData(unitName, "DefaultName"), "", unitName, 0)
 							end
 						end
 					end

@@ -186,24 +186,13 @@ elseif (GrandStrategyEventMap) then
 	unit = CreateUnit("unit-dwarven-miner", 0, {35, 26})
 
 	-- Rugnur
-	if (GetProvinceHero("Caverns of Chaincolt", "unit-hero-rugnur") == 2) then
+	if (GetProvinceHero("Caverns of Chaincolt", "Rugnur", "") == 2) then
 		unit = CreateUnit("unit-hero-rugnur", 0, {35, 26})
-		SetProvinceHero("Caverns of Chaincolt", "unit-hero-rugnur", 0)
-	elseif (GetProvinceHero("Caverns of Chaincolt", "unit-hero-rugnur-steelclad") == 2) then
-		unit = CreateUnit("unit-hero-rugnur-steelclad", 0, {35, 26})
-		SetProvinceHero("Caverns of Chaincolt", "unit-hero-rugnur-steelclad", 0)
-	elseif (GetProvinceHero("Caverns of Chaincolt", "unit-hero-rugnur-thane") == 2) then
-		unit = CreateUnit("unit-hero-rugnur-thane", 0, {35, 26})
-		SetProvinceHero("Caverns of Chaincolt", "unit-hero-rugnur-thane", 0)
 	end
 
 	-- Baglur
-	if (GetProvinceHero("Caverns of Chaincolt", "unit-hero-baglur") == 2) then
+	if (GetProvinceHero("Caverns of Chaincolt", "Baglur", "") == 2) then
 		unit = CreateUnit("unit-hero-baglur", 0, {36, 25})
-		SetProvinceHero("Caverns of Chaincolt", "unit-hero-baglur", 0)
-	elseif (GetProvinceHero("Caverns of Chaincolt", "unit-hero-baglur-thane") == 2) then
-		unit = CreateUnit("unit-hero-baglur-thane", 0, {36, 25})
-		SetProvinceHero("Caverns of Chaincolt", "unit-hero-baglur-thane", 0)
 	end
 
 	unit = CreateUnit("unit-dwarven-sentry-tower", 0, {16, 31})

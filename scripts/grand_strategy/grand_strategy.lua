@@ -703,7 +703,7 @@ function AttackProvince(province, faction)
 		for i, unitName in ipairs(Units) do
 			if (IsOffensiveMilitaryUnit(unitName)) then
 				SetProvinceUnitQuantity(province.Name, unitName, math.ceil(GetPlayerData(GetFactionPlayer(victorious_player), "UnitTypesCount", unitName) / BattalionMultiplier))
-			elseif (IsHero(unitName)) then
+			elseif (IsHero(unitName) and GetProvinceHero(AttackedProvince.Name, GetUnitTypeData(unitName, "DefaultName"), "") ~= 0) then
 				if (GetPlayerData(GetFactionPlayer(victorious_player), "UnitTypesCount", unitName) >= 1) then
 					SetProvinceHero(AttackedProvince.Name, GetUnitTypeData(unitName, "DefaultName"), "", unitName, 2)
 				else
@@ -1116,16 +1116,6 @@ end
 function RemoveHeroFromProvince(unit_type, province)
 	if (GetProvinceHero(province.Name, GetUnitTypeData(unit_type, "DefaultName"), "") == 2) then
 		SetProvinceHero(province.Name, GetUnitTypeData(unit_type, "DefaultName"), "", unit_type, 0)
-	else
-		local has_other_hero_version = false -- check to see if the province has another version of the hero in it
-		for j, second_unitName in ipairs(Units) do
-			if (IsHero(second_unitName)) then
-				if (GetUnitTypeData(unit_type, "DefaultName") == GetUnitTypeData(second_unitName, "DefaultName") and GetProvinceHero(province.Name, GetUnitTypeData(second_unitName, "DefaultName"), "") == 2) then
-					SetProvinceHero(province.Name, GetUnitTypeData(second_unitName, "DefaultName"), "", second_unitName, 0)
-					break
-				end
-			end
-		end
 	end
 end
 
