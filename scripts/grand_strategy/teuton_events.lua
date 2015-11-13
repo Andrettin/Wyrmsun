@@ -353,7 +353,7 @@ local TeutonEvents = {
 						for i, unitName in ipairs(Units) do
 							if (IsOffensiveMilitaryUnit(unitName)) then
 								SetProvinceUnitQuantity("Austria", unitName, math.ceil(GetPlayerData(4, "UnitTypesCount", unitName) / BattalionMultiplier))
-							elseif (IsHero(unitName) and GetProvinceHero("Bohemia", GetUnitTypeData(unitName, "DefaultName"), "") == 2) then
+							elseif (IsHero(unitName) and GetProvinceHero("Bohemia", GetUnitTypeData(unitName, "DefaultName"), "") == 2 and GetHeroUnitType(GetUnitTypeData(unitName, "DefaultName"), "") == unitName) then
 								if (GetPlayerData(4, "UnitTypesCount", unitName) > 0) then
 									SetProvinceHero("Austria", GetUnitTypeData(unitName, "DefaultName"), "", unitName, 2)
 								else
@@ -419,7 +419,7 @@ local TeutonEvents = {
 						for i, unitName in ipairs(Units) do
 							if (IsOffensiveMilitaryUnit(unitName)) then
 								SetProvinceUnitQuantity("Venetia", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
-							elseif (IsHero(unitName) and GetProvinceHero("Austria", GetUnitTypeData(unitName, "DefaultName"), "") == 2) then
+							elseif (IsHero(unitName) and GetProvinceHero("Austria", GetUnitTypeData(unitName, "DefaultName"), "") == 2 and GetHeroUnitType(GetUnitTypeData(unitName, "DefaultName"), "") == unitName) then
 								if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
 									SetProvinceHero("Venetia", GetUnitTypeData(unitName, "DefaultName"), "", unitName, 2)
 								else

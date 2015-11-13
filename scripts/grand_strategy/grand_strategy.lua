@@ -720,7 +720,7 @@ function AttackProvince(province, faction)
 			for i, unitName in ipairs(Units) do
 				if (IsOffensiveMilitaryUnit(unitName)) then
 					SetProvinceUnitQuantity(province.Name, unitName, round(GetProvinceAttackingUnitQuantity(province.Name, unitName) * (attacker_military_score - defender_military_score) / attacker_military_score)) -- formula for calculating units belonging to the victorious player that were killed
-				elseif (IsHero(unitName)) then -- kill off defending heroes if the attacking player was the victorious one
+				elseif (IsHero(unitName) and GetHeroUnitType(GetUnitTypeData(unitName, "DefaultName"), "") == unitName) then -- kill off defending heroes if the attacking player was the victorious one
 					if (GetProvinceHero(AttackedProvince.Name, GetUnitTypeData(unitName, "DefaultName"), "") == 2) then
 						SetProvinceHero(AttackedProvince.Name, GetUnitTypeData(unitName, "DefaultName"), "", unitName, 0)
 					elseif (GetProvinceHero(AttackedProvince.Name, GetUnitTypeData(unitName, "DefaultName"), "") == 3) then
@@ -737,7 +737,7 @@ function AttackProvince(province, faction)
 						* (defender_military_score - attacker_military_score)
 						/ defender_military_score
 					))
-				elseif (IsHero(unitName)) then -- kill off attacking heroes if the defending player was the victorious one
+				elseif (IsHero(unitName) and GetHeroUnitType(GetUnitTypeData(unitName, "DefaultName"), "") == unitName) then -- kill off attacking heroes if the defending player was the victorious one
 					if (GetProvinceHero(AttackedProvince.Name, GetUnitTypeData(unitName, "DefaultName"), "") == 3) then
 						SetProvinceHero(AttackedProvince.Name, GetUnitTypeData(unitName, "DefaultName"), "", unitName, 0)
 					end
@@ -870,7 +870,7 @@ function AcquireProvince(province, faction)
 		end
 
 		for i, unitName in ipairs(Units) do
-			if (IsHero(unitName)) then
+			if (IsHero(unitName) and GetHeroUnitType(GetUnitTypeData(unitName, "DefaultName"), "") == unitName) then
 				if (GetProvinceHero(province.Name, GetUnitTypeData(unitName, "DefaultName"), "") == 1) then -- if a hero is moving here, remove him
 					SetProvinceHero(province.Name, GetUnitTypeData(unitName, "DefaultName"), "", unitName, 0)
 				end

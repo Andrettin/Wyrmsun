@@ -589,10 +589,26 @@ function StandardTriggers()
 									if (string.find(GetUnitVariable(uncount[unit1], "Ident"), "steelclad") ~= nil and GetArrayIncludes(wyr.preferences.Heroes[key].upgrades, "unit-dwarven-steelclad") == false) then
 										table.insert(wyr.preferences.Heroes[key].upgrades, "unit-dwarven-steelclad")
 										SavePreferences()
+										if (GrandStrategy) then
+											if (wyr.preferences.Heroes[key].name == "Rugnur") then
+												SetHeroUnitType("Rugnur", "", "unit-hero-rugnur-steelclad")
+											end
+										end
 									end
 									if (string.find(GetUnitVariable(uncount[unit1], "Ident"), "thane") ~= nil and GetArrayIncludes(wyr.preferences.Heroes[key].upgrades, "unit-dwarven-thane") == false) then
 										table.insert(wyr.preferences.Heroes[key].upgrades, "unit-dwarven-thane")
 										SavePreferences()
+										if (GrandStrategy) then
+											if (wyr.preferences.Heroes[key].name == "Modsognir") then
+												SetHeroUnitType("Modsognir", "", "unit-hero-modsognir-thane")
+											elseif (wyr.preferences.Heroes[key].name == "Durin") then
+												SetHeroUnitType("Durin", "", "unit-hero-durin-thane")
+											elseif (wyr.preferences.Heroes[key].name == "Rugnur") then
+												SetHeroUnitType("Rugnur", "", "unit-hero-rugnur-thane")
+											elseif (wyr.preferences.Heroes[key].name == "Baglur") then
+												SetHeroUnitType("Baglur", "", "unit-hero-baglur-thane")
+											end
+										end
 									end
 									if (string.find(GetUnitVariable(uncount[unit1], "Ident"), "yale-rider") ~= nil and GetArrayIncludes(wyr.preferences.Heroes[key].upgrades, "unit-dwarven-yale-rider") == false) then
 										table.insert(wyr.preferences.Heroes[key].upgrades, "unit-dwarven-yale-rider")
