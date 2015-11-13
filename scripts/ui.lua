@@ -359,7 +359,8 @@ UI.GrandStrategyShowHeroesButton:SetCallback(
 	end
 )
 
-UI.GrandStrategyShowRulerButton.X = Video.Width - 243 + 72
+--UI.GrandStrategyShowRulerButton.X = Video.Width - 243 + 72
+UI.GrandStrategyShowRulerButton.X = -1
 UI.GrandStrategyShowRulerButton.Y = Video.Height - (15 * 3) - 8
 UI.GrandStrategyShowRulerButton.Text = "Show ~!Ruler"
 UI.GrandStrategyShowRulerButton:SetCallback(

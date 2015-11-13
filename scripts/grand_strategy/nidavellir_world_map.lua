@@ -875,7 +875,7 @@ LoadEvents("Nidavellir")
 if (GrandStrategyYear >= -3000) then
 	SetProvinceHero("Svarinshaug", "Modsognir", "", "unit-hero-modsognir", 2) 
 	SetProvinceHero("Svarinshaug", "Durin", "", "unit-hero-durin", 2) 
-	SetFactionRuler("dwarf", "Modsogning Clan", "Modsognir", "") 
+	--SetFactionRuler("dwarf", "Modsogning Clan", "Modsognir", "") 
 	GrandStrategyEvents.ModsognirTribalChieftain = nil
 	GrandStrategyEvents.DurinWarrior = nil
 end
