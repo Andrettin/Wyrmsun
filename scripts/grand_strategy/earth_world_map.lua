@@ -16886,8 +16886,6 @@ for key, value in pairs(WorldMapProvinces) do
 	AddProvinceResource(WorldMapProvinces[key], "silver", SyncRand(2))
 end
 
-Load("scripts/grand_strategy/grand_strategy_heroes.lua")
-
 MercenaryGroups = {
 }
 
@@ -18309,7 +18307,6 @@ end
 -- Battle of Teutoburg Forest between the Cherusci chieftain Arminius' forces, and the Romans (when did this happen?); Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 231.
 
 if (GrandStrategyYear >= -9) then -- Marbod, king of the Suebic tribe of the Marcomanni, conquers Bohemia
-	GrandStrategyEvents.MarbodReturns = nil -- should happen earlier
 	GrandStrategyEvents.TheHomeOfTheBoii = nil
 	SetProvinceOwner("Bohemia", "teuton", "Marcomanni Tribe")
 	SetProvinceCivilization("Bohemia", "teuton")

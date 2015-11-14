@@ -419,8 +419,6 @@ function GenerateRandomWorldMap()
 		AddProvinceResource(WorldMapProvinces[key], "mushrooms", SyncRand(3))
 	end
 	
-	Load("scripts/grand_strategy/grand_strategy_heroes.lua")
-
 	MercenaryGroups = {
 		unit_surghan_mercenary_steelclad = 4
 	}

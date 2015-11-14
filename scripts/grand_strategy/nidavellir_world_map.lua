@@ -866,8 +866,6 @@ AddProvinceResource(WorldMapProvinces.SouthernTunnels, "stone", 1)
 AddProvinceResource(WorldMapProvinces.Svarinshaug, "mushrooms", 2)
 AddProvinceResource(WorldMapProvinces.Svarinshaug, "stone", 1)
 
-Load("scripts/grand_strategy/grand_strategy_heroes.lua")
-
 MercenaryGroups = {
 	unit_surghan_mercenary_steelclad = 4
 }

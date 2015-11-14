@@ -201,29 +201,6 @@ local TeutonEvents = {
 			end
 		}
 	},
-	MarbodReturns = {
-		Name = "Marbod Returns",
-		Description = "After spending long years abroad, Marbod has finally returned to lead the Suebic tribe of the Marcomanni.",
-		Conditions = function(s)
-			if (
-				 -- for historical personages to appear, they require three things: the year of their historical rise to prominence, ownership of the province in which they were born or raised, and that that province be of the correct culture for them, if they belonged to the cultural majority
-				GetProvinceOwner("Brandenburg") == EventFaction.Name
-				and GetProvinceCivilization("Brandenburg") == "teuton"
-			) then
-				return true
-			else
-				return false
-			end
-		end,
-		MinYear = -9,
-		MaxYear = -9 + 30, -- estimated death date
-		Options = {"~!OK"},
-		OptionEffects = {
-			function(s)
-				SetProvinceHero("Brandenburg", "Marbod", "unit-hero-marbod", 2)
-			end
-		}
-	},
 	TheHomeOfTheBoii = {
 		Name = "The Home of the Boii",
 		Description = "Worried about the Roman presence on the Rhine, Marbod wishes to take the Marcomanni into the lands of the Boii and to establish a kingdom there, splitting off from the rest of the Suebi.",
@@ -313,7 +290,8 @@ local TeutonEvents = {
 		Description = "Catualda, a Marcomanni noble who had been expelled from our lands by Marbod, has returned to Bohemia with an army behind him, yearning for revenge. The tribe's notables made a compact with him, making the deposition of Marbod a foregone conclusion.",
 		Conditions = function(s)
 			if (
-				GetFactionRuler("Marcomanni Tribe") == "Marbod"
+				EventFaction.Name == "Marcomanni Tribe"
+				and GetFactionRuler("teuton", "Marcomanni Tribe") == "Marbod"
 			) then
 				return true
 			else
