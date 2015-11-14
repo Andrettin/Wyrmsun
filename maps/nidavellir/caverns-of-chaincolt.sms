@@ -186,13 +186,13 @@ elseif (GrandStrategyEventMap) then
 	unit = CreateUnit("unit-dwarven-miner", 0, {35, 26})
 
 	-- Rugnur
-	if (GetProvinceHero("Caverns of Chaincolt", "Rugnur", "") == 2) then
-		unit = CreateUnit(GetHeroUnitType("Rugnur", ""), 0, {35, 26})
+	if (GetProvinceHero("Caverns of Chaincolt", "Rugnur") == 2) then
+		unit = CreateUnit(GetHeroUnitType("Rugnur"), 0, {35, 26})
 	end
 
 	-- Baglur
-	if (GetProvinceHero("Caverns of Chaincolt", "Baglur", "") == 2) then
-		unit = CreateUnit(GetHeroUnitType("Baglur", ""), 0, {36, 25})
+	if (GetProvinceHero("Caverns of Chaincolt", "Baglur") == 2) then
+		unit = CreateUnit(GetHeroUnitType("Baglur"), 0, {36, 25})
 	end
 
 	unit = CreateUnit("unit-dwarven-sentry-tower", 0, {16, 31})

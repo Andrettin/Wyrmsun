@@ -220,7 +220,7 @@ local TeutonEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				SetProvinceHero("Brandenburg", "Marbod", "", "unit-hero-marbod", 2)
+				SetProvinceHero("Brandenburg", "Marbod", "unit-hero-marbod", 2)
 			end
 		}
 	},
@@ -250,7 +250,7 @@ local TeutonEvents = {
 						SetProvinceUnitQuantity("Brandenburg", unitName, math.floor(GetProvinceUnitQuantity("Brandenburg", unitName) / 2))
 					end
 				end
-				SetProvinceHero("Bohemia", "Marbod", "", "unit-hero-marbod", 2)
+				SetProvinceHero("Bohemia", "Marbod", "unit-hero-marbod", 2)
 				AcquireFactionTechnologies(Factions.SuebiTribe.Civilization, Factions.SuebiTribe.Name, Factions.MarcomanniTribe.Civilization, "Marcomanni Tribe")
 				SetProvinceCivilization("Bohemia", "teuton")
 			end,
@@ -270,10 +270,10 @@ local TeutonEvents = {
 								SetProvinceUnitQuantity("Bohemia", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
 							end
 						end
-						if (GetPlayerData(0, "UnitTypesCount", GetHeroUnitType("Marbod", "")) > 0) then
-							SetProvinceHero("Bohemia", "Marbod", "", GetHeroUnitType("Marbod", ""), 2)
+						if (GetPlayerData(0, "UnitTypesCount", GetGrandStrategyHeroUnitType("Marbod")) > 0) then
+							SetProvinceHero("Bohemia", "Marbod", GetGrandStrategyHeroUnitType("Marbod"), 2)
 						else
-							SetProvinceHero("Bohemia", "Marbod", "", GetHeroUnitType("Marbod", ""), 0)
+							SetProvinceHero("Bohemia", "Marbod", GetGrandStrategyHeroUnitType("Marbod"), 0)
 						end
 						CenterGrandStrategyMapOnTile(WorldMapProvinces.Bohemia.SettlementLocation[1], WorldMapProvinces.Bohemia.SettlementLocation[2])
 						AcquireFactionTechnologies(Factions.SuebiTribe.Civilization, Factions.SuebiTribe.Name, Factions.MarcomanniTribe.Civilization, "Marcomanni Tribe")
@@ -294,7 +294,7 @@ local TeutonEvents = {
 							SetProvinceUnitQuantity("Brandenburg", unitName, math.floor(GetProvinceUnitQuantity("Brandenburg", unitName) / 2))
 						end
 					end
-					SetProvinceHero("Bohemia", "Marbod", "", "unit-hero-marbod", 2)
+					SetProvinceHero("Bohemia", "Marbod", "unit-hero-marbod", 2)
 					SetProvinceCivilization("Bohemia", "teuton")
 					AcquireFactionTechnologies(Factions.SuebiTribe.Civilization, Factions.SuebiTribe.Name, Factions.MarcomanniTribe.Civilization, "Marcomanni Tribe")
 
@@ -311,6 +311,15 @@ local TeutonEvents = {
 	MarbodDeposed = {
 		Name = "Marbod Deposed",
 		Description = "Catualda, a Marcomanni noble who had been expelled from our lands by Marbod, has returned to Bohemia with an army behind him, yearning for revenge. The tribe's notables made a compact with him, making the deposition of Marbod a foregone conclusion.",
+		Conditions = function(s)
+			if (
+				GetFactionRuler("Marcomanni Tribe") == "Marbod"
+			) then
+				return true
+			else
+				return false
+			end
+		end,
 		Heroes = {
 			unit_hero_marbod = true
 		},
@@ -318,7 +327,7 @@ local TeutonEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				RemoveHeroFromFaction(GetHeroUnitType("Marbod", ""), EventFaction)
+				RemoveHeroFromFaction(GetGrandStrategyHeroUnitType("Marbod"), EventFaction)
 			end
 		}
 	},
@@ -353,11 +362,11 @@ local TeutonEvents = {
 						for i, unitName in ipairs(Units) do
 							if (IsOffensiveMilitaryUnit(unitName)) then
 								SetProvinceUnitQuantity("Austria", unitName, math.ceil(GetPlayerData(4, "UnitTypesCount", unitName) / BattalionMultiplier))
-							elseif (IsHero(unitName) and GetProvinceHero("Bohemia", GetUnitTypeData(unitName, "DefaultName"), "") == 2 and GetHeroUnitType(GetUnitTypeData(unitName, "DefaultName"), "") == unitName) then
+							elseif (IsHero(unitName) and GetProvinceHero("Bohemia", GetUnitTypeData(unitName, "DefaultName")) == 2 and GetGrandStrategyHeroUnitType(GetUnitTypeData(unitName, "DefaultName")) == unitName) then
 								if (GetPlayerData(4, "UnitTypesCount", unitName) > 0) then
-									SetProvinceHero("Austria", GetUnitTypeData(unitName, "DefaultName"), "", unitName, 2)
+									SetProvinceHero("Austria", GetUnitTypeData(unitName, "DefaultName"), unitName, 2)
 								else
-									SetProvinceHero("Austria", GetUnitTypeData(unitName, "DefaultName"), "", unitName, 0)
+									SetProvinceHero("Austria", GetUnitTypeData(unitName, "DefaultName"), unitName, 0)
 								end
 							end
 						end
@@ -419,11 +428,11 @@ local TeutonEvents = {
 						for i, unitName in ipairs(Units) do
 							if (IsOffensiveMilitaryUnit(unitName)) then
 								SetProvinceUnitQuantity("Venetia", unitName, math.ceil(GetPlayerData(0, "UnitTypesCount", unitName) / BattalionMultiplier))
-							elseif (IsHero(unitName) and GetProvinceHero("Austria", GetUnitTypeData(unitName, "DefaultName"), "") == 2 and GetHeroUnitType(GetUnitTypeData(unitName, "DefaultName"), "") == unitName) then
+							elseif (IsHero(unitName) and GetProvinceHero("Austria", GetUnitTypeData(unitName, "DefaultName")) == 2 and GetGrandStrategyHeroUnitType(GetUnitTypeData(unitName, "DefaultName")) == unitName) then
 								if (GetPlayerData(0, "UnitTypesCount", unitName) > 0) then
-									SetProvinceHero("Venetia", GetUnitTypeData(unitName, "DefaultName"), "", unitName, 2)
+									SetProvinceHero("Venetia", GetUnitTypeData(unitName, "DefaultName"), unitName, 2)
 								else
-									SetProvinceHero("Venetia", GetUnitTypeData(unitName, "DefaultName"), "", unitName, 0)
+									SetProvinceHero("Venetia", GetUnitTypeData(unitName, "DefaultName"), unitName, 0)
 								end
 							end
 						end

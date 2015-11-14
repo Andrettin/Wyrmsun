@@ -37,7 +37,7 @@ DebugPrint("Stratagus default config file loading ...\n")
 wyrmsun = {}
 
 wyrmsun.Name = "Wyrmsun"
-wyrmsun.Version = "1.6.1"
+wyrmsun.Version = "1.7.0"
 wyrmsun.Homepage = ""
 wyrmsun.Licence = "GPL 2.0"
 wyrmsun.Copyright = "Copyright (c) 2013-2015 by Andrettin"
@@ -591,7 +591,7 @@ function StandardTriggers()
 										SavePreferences()
 										if (GrandStrategy) then
 											if (wyr.preferences.Heroes[key].name == "Rugnur") then
-												SetHeroUnitType("Rugnur", "", "unit-hero-rugnur-steelclad")
+												SetGrandStrategyHeroUnitType("Rugnur", "unit-hero-rugnur-steelclad")
 											end
 										end
 									end
@@ -600,13 +600,13 @@ function StandardTriggers()
 										SavePreferences()
 										if (GrandStrategy) then
 											if (wyr.preferences.Heroes[key].name == "Modsognir") then
-												SetHeroUnitType("Modsognir", "", "unit-hero-modsognir-thane")
+												SetGrandStrategyHeroUnitType("Modsognir", "unit-hero-modsognir-thane")
 											elseif (wyr.preferences.Heroes[key].name == "Durin") then
-												SetHeroUnitType("Durin", "", "unit-hero-durin-thane")
+												SetGrandStrategyHeroUnitType("Durin", "unit-hero-durin-thane")
 											elseif (wyr.preferences.Heroes[key].name == "Rugnur") then
-												SetHeroUnitType("Rugnur", "", "unit-hero-rugnur-thane")
+												SetGrandStrategyHeroUnitType("Rugnur", "unit-hero-rugnur-thane")
 											elseif (wyr.preferences.Heroes[key].name == "Baglur") then
-												SetHeroUnitType("Baglur", "", "unit-hero-baglur-thane")
+												SetGrandStrategyHeroUnitType("Baglur", "unit-hero-baglur-thane")
 											end
 										end
 									end

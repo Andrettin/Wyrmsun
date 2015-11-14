@@ -5146,7 +5146,7 @@ function LoadProvinces(world)
 			if (province_table[key].Heroes ~= nil) then
 				for second_key, second_value in pairs(province_table[key].Heroes) do
 					local hero_unit_type = string.gsub(second_key, "_", "-")
-					SetProvinceHero(WorldMapProvinces[key].Name, GetUnitTypeData(hero_unit_type, "DefaultName"), "", hero_unit_type, province_table[key].Heroes[second_key])
+					SetProvinceHero(WorldMapProvinces[key].Name, GetUnitTypeData(hero_unit_type, "DefaultName"), hero_unit_type, province_table[key].Heroes[second_key])
 				end
 			end
 			if (province_table[key].SettlementTerrain ~= nil) then

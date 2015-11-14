@@ -46,11 +46,11 @@ if (LoadedGame == false) then
 	elseif (GrandStrategyEventMap) then
 		CreateProvinceUnits("Svarinshaug", 0, 1, false, true)
 
-		if (FactionHasHero("dwarf", "Modsogning Clan", "Modsognir", "")) then
-			unit = CreateUnit(GetHeroUnitType("Modsognir", ""), 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		if (FactionHasHero("dwarf", "Modsogning Clan", "Modsognir")) then
+			unit = CreateUnit(GetGrandStrategyHeroUnitType("Modsognir"), 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 		end
-		if (FactionHasHero("dwarf", "Modsogning Clan", "Durin", "")) then
-			unit = CreateUnit(GetHeroUnitType("Durin", ""), 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		if (FactionHasHero("dwarf", "Modsogning Clan", "Durin")) then
+			unit = CreateUnit(GetGrandStrategyHeroUnitType("Durin"), 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 		end
 	end
 	

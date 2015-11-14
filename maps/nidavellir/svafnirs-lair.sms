@@ -407,18 +407,18 @@ elseif (GrandStrategyEventMap) then
 	unit = CreateUnit("unit-gold-rock", 15, {5, 12})
 	
 	-- Rugnur
-	if (GetProvinceHero("Caverns of Chaincolt", "Rugnur", "") == 2) then
-		unit = CreateUnit(GetHeroUnitType("Rugnur", ""), 0, {16, 16})
+	if (GetProvinceHero("Caverns of Chaincolt", "Rugnur") == 2) then
+		unit = CreateUnit(GetHeroUnitType("Rugnur"), 0, {16, 16})
 	end
 
 	-- Baglur
-	if (GetProvinceHero("Caverns of Chaincolt", "Baglur", "") == 2) then
-		unit = CreateUnit(GetHeroUnitType("Baglur", ""), 0, {16, 16})
+	if (GetProvinceHero("Caverns of Chaincolt", "Baglur") == 2) then
+		unit = CreateUnit(GetHeroUnitType("Baglur"), 0, {16, 16})
 	end
 
 	-- Thursagan
-	if (GetProvinceHero("Caverns of Chaincolt", "Thursagan", "") == 2) then
-		unit = CreateUnit(GetHeroUnitType("Thursagan", ""), 0, {16, 16})
+	if (GetProvinceHero("Caverns of Chaincolt", "Thursagan") == 2) then
+		unit = CreateUnit(GetHeroUnitType("Thursagan"), 0, {16, 16})
 	end
 
 	-- Norlund units

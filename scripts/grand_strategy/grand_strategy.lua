@@ -149,22 +149,6 @@ function RunGrandStrategyGameSetupMenu()
 					WorldMapProvinces[key]["Coastal"] = false
 				end
 				
-				-- load heroes' upgraded versions, if those have been acquired
-				if (GetProvinceHero(WorldMapProvinces[key].Name, "Modsognir", "") == 2 and GetArrayIncludes(wyr.preferences.Heroes.Modsognir.upgrades, "unit-dwarven-thane")) then
-					SetProvinceHero(WorldMapProvinces[key].Name, "Modsognir", "", "unit-hero-modsognir-thane", 2)
-				end
-				if (GetProvinceHero(WorldMapProvinces[key].Name, "Durin", "") == 2 and GetArrayIncludes(wyr.preferences.Heroes.Durin.upgrades, "unit-dwarven-thane")) then
-					SetProvinceHero(WorldMapProvinces[key].Name, "Durin", "", "unit-hero-durin-thane", 2)
-				end
-				if (GetProvinceHero(WorldMapProvinces[key].Name, "Rugnur", "") == 2 and GetArrayIncludes(wyr.preferences.Heroes.Rugnur.upgrades, "unit-dwarven-thane")) then
-					SetProvinceHero(WorldMapProvinces[key].Name, "Rugnur", "", "unit-hero-rugnur-thane", 2)
-				elseif (GetProvinceHero(WorldMapProvinces[key].Name, "Rugnur", "") == 2 and GetArrayIncludes(wyr.preferences.Heroes.Rugnur.upgrades, "unit-dwarven-steelclad")) then
-					SetProvinceHero(WorldMapProvinces[key].Name, "Rugnur", "", "unit-hero-rugnur-steelclad", 2)
-				end
-				if (GetProvinceHero(WorldMapProvinces[key].Name, "Baglur", "") == 2 and GetArrayIncludes(wyr.preferences.Heroes.Baglur.upgrades, "unit-dwarven-thane")) then
-					SetProvinceHero(WorldMapProvinces[key].Name, "Baglur", "", "unit-hero-baglur-thane", 2)
-				end
-				
 				if (GrandStrategyFaction ~= nil and GetProvinceOwner(WorldMapProvinces[key].Name) == GrandStrategyFaction.Name) then
 					CenterGrandStrategyMapOnTile(WorldMapProvinces[key].SettlementLocation[1], WorldMapProvinces[key].SettlementLocation[2])
 				end
@@ -179,6 +163,22 @@ function RunGrandStrategyGameSetupMenu()
 				end
 			end
 
+			-- load heroes' upgraded versions, if those have been acquired
+			if (GetArrayIncludes(wyr.preferences.Heroes.Modsognir.upgrades, "unit-dwarven-thane")) then
+				SetGrandStrategyHeroUnitType("Modsognir", "unit-hero-modsognir-thane")
+			end
+			if (GetArrayIncludes(wyr.preferences.Heroes.Durin.upgrades, "unit-dwarven-thane")) then
+				SetGrandStrategyHeroUnitType("Durin", "unit-hero-durin-thane")
+			end
+			if (GetArrayIncludes(wyr.preferences.Heroes.Rugnur.upgrades, "unit-dwarven-thane")) then
+				SetGrandStrategyHeroUnitType("Rugnur", "unit-hero-rugnur-thane")
+			elseif (GetArrayIncludes(wyr.preferences.Heroes.Rugnur.upgrades, "unit-dwarven-steelclad")) then
+				SetGrandStrategyHeroUnitType("Rugnur", "unit-hero-rugnur-steelclad")
+			end
+			if (GetArrayIncludes(wyr.preferences.Heroes.Baglur.upgrades, "unit-dwarven-thane")) then
+				SetGrandStrategyHeroUnitType("Baglur", "unit-hero-baglur-thane")
+			end
+				
 			SelectedUnits = {}
 			for i, unitName in ipairs(Units) do
 				if (IsMilitaryUnit(unitName)) then
@@ -486,8 +486,8 @@ function EndTurn()
 		end
 		for i, unitName in ipairs(Units) do
 			if (IsHero(unitName)) then
-				if (GetProvinceHero(WorldMapProvinces[key].Name, GetUnitTypeData(unitName, "DefaultName"), "") == 1 and GetHeroUnitType(GetUnitTypeData(unitName, "DefaultName"), "") == unitName) then
-					SetProvinceHero(WorldMapProvinces[key].Name, GetUnitTypeData(unitName, "DefaultName"), "", unitName, 2)
+				if (GetProvinceHero(WorldMapProvinces[key].Name, GetUnitTypeData(unitName, "DefaultName")) == 1 and GetGrandStrategyHeroUnitType(GetUnitTypeData(unitName, "DefaultName")) == unitName) then
+					SetProvinceHero(WorldMapProvinces[key].Name, GetUnitTypeData(unitName, "DefaultName"), unitName, 2)
 				end
 			end
 		end
@@ -703,11 +703,11 @@ function AttackProvince(province, faction)
 		for i, unitName in ipairs(Units) do
 			if (IsOffensiveMilitaryUnit(unitName)) then
 				SetProvinceUnitQuantity(province.Name, unitName, math.ceil(GetPlayerData(GetFactionPlayer(victorious_player), "UnitTypesCount", unitName) / BattalionMultiplier))
-			elseif (IsHero(unitName) and GetProvinceHero(AttackedProvince.Name, GetUnitTypeData(unitName, "DefaultName"), "") ~= 0 and GetHeroUnitType(GetUnitTypeData(unitName, "DefaultName"), "") == unitName) then
+			elseif (IsHero(unitName) and GetProvinceHero(AttackedProvince.Name, GetUnitTypeData(unitName, "DefaultName")) ~= 0 and GetGrandStrategyHeroUnitType(GetUnitTypeData(unitName, "DefaultName")) == unitName) then
 				if (GetPlayerData(GetFactionPlayer(victorious_player), "UnitTypesCount", unitName) >= 1) then
-					SetProvinceHero(AttackedProvince.Name, GetUnitTypeData(unitName, "DefaultName"), "", unitName, 2)
+					SetProvinceHero(AttackedProvince.Name, GetUnitTypeData(unitName, "DefaultName"), unitName, 2)
 				else
-					SetProvinceHero(AttackedProvince.Name, GetUnitTypeData(unitName, "DefaultName"), "", unitName, 0)
+					SetProvinceHero(AttackedProvince.Name, GetUnitTypeData(unitName, "DefaultName"), unitName, 0)
 				end
 			end
 		end
@@ -720,11 +720,11 @@ function AttackProvince(province, faction)
 			for i, unitName in ipairs(Units) do
 				if (IsOffensiveMilitaryUnit(unitName)) then
 					SetProvinceUnitQuantity(province.Name, unitName, round(GetProvinceAttackingUnitQuantity(province.Name, unitName) * (attacker_military_score - defender_military_score) / attacker_military_score)) -- formula for calculating units belonging to the victorious player that were killed
-				elseif (IsHero(unitName) and GetHeroUnitType(GetUnitTypeData(unitName, "DefaultName"), "") == unitName) then -- kill off defending heroes if the attacking player was the victorious one
-					if (GetProvinceHero(AttackedProvince.Name, GetUnitTypeData(unitName, "DefaultName"), "") == 2) then
-						SetProvinceHero(AttackedProvince.Name, GetUnitTypeData(unitName, "DefaultName"), "", unitName, 0)
-					elseif (GetProvinceHero(AttackedProvince.Name, GetUnitTypeData(unitName, "DefaultName"), "") == 3) then
-						SetProvinceHero(AttackedProvince.Name, GetUnitTypeData(unitName, "DefaultName"), "", unitName, 2)
+				elseif (IsHero(unitName) and GetGrandStrategyHeroUnitType(GetUnitTypeData(unitName, "DefaultName")) == unitName) then -- kill off defending heroes if the attacking player was the victorious one
+					if (GetProvinceHero(AttackedProvince.Name, GetUnitTypeData(unitName, "DefaultName")) == 2) then
+						SetProvinceHero(AttackedProvince.Name, GetUnitTypeData(unitName, "DefaultName"), unitName, 0)
+					elseif (GetProvinceHero(AttackedProvince.Name, GetUnitTypeData(unitName, "DefaultName")) == 3) then
+						SetProvinceHero(AttackedProvince.Name, GetUnitTypeData(unitName, "DefaultName"), unitName, 2)
 					end
 				end
 			end
@@ -737,9 +737,9 @@ function AttackProvince(province, faction)
 						* (defender_military_score - attacker_military_score)
 						/ defender_military_score
 					))
-				elseif (IsHero(unitName) and GetHeroUnitType(GetUnitTypeData(unitName, "DefaultName"), "") == unitName) then -- kill off attacking heroes if the defending player was the victorious one
-					if (GetProvinceHero(AttackedProvince.Name, GetUnitTypeData(unitName, "DefaultName"), "") == 3) then
-						SetProvinceHero(AttackedProvince.Name, GetUnitTypeData(unitName, "DefaultName"), "", unitName, 0)
+				elseif (IsHero(unitName) and GetGrandStrategyHeroUnitType(GetUnitTypeData(unitName, "DefaultName")) == unitName) then -- kill off attacking heroes if the defending player was the victorious one
+					if (GetProvinceHero(AttackedProvince.Name, GetUnitTypeData(unitName, "DefaultName")) == 3) then
+						SetProvinceHero(AttackedProvince.Name, GetUnitTypeData(unitName, "DefaultName"), unitName, 0)
 					end
 				end
 			end
@@ -870,9 +870,9 @@ function AcquireProvince(province, faction)
 		end
 
 		for i, unitName in ipairs(Units) do
-			if (IsHero(unitName) and GetHeroUnitType(GetUnitTypeData(unitName, "DefaultName"), "") == unitName) then
-				if (GetProvinceHero(province.Name, GetUnitTypeData(unitName, "DefaultName"), "") == 1) then -- if a hero is moving here, remove him
-					SetProvinceHero(province.Name, GetUnitTypeData(unitName, "DefaultName"), "", unitName, 0)
+			if (IsHero(unitName) and GetGrandStrategyHeroUnitType(GetUnitTypeData(unitName, "DefaultName")) == unitName) then
+				if (GetProvinceHero(province.Name, GetUnitTypeData(unitName, "DefaultName")) == 1) then -- if a hero is moving here, remove him
+					SetProvinceHero(province.Name, GetUnitTypeData(unitName, "DefaultName"), unitName, 0)
 				end
 			end
 		end
@@ -1097,7 +1097,7 @@ function FactionHasTechnologyType(faction, technology_type)
 end
 
 function ProvinceHasHero(province, unit_type)
-	if (GetProvinceHero(province.Name, GetUnitTypeData(unit_type, "DefaultName"), "") == 2) then
+	if (GetProvinceHero(province.Name, GetUnitTypeData(unit_type, "DefaultName")) == 2) then
 		return true
 	else
 		return false
@@ -1114,8 +1114,8 @@ function GetHeroProvinceForFaction(unit_type, faction)
 end
 
 function RemoveHeroFromProvince(unit_type, province)
-	if (GetProvinceHero(province.Name, GetUnitTypeData(unit_type, "DefaultName"), "") == 2) then
-		SetProvinceHero(province.Name, GetUnitTypeData(unit_type, "DefaultName"), "", unit_type, 0)
+	if (GetProvinceHero(province.Name, GetUnitTypeData(unit_type, "DefaultName")) == 2) then
+		SetProvinceHero(province.Name, GetUnitTypeData(unit_type, "DefaultName"), unit_type, 0)
 	end
 end
 
@@ -2603,7 +2603,7 @@ function DrawGrandStrategyInterface()
 				local item_y = 0
 				for i, unitName in ipairs(Units) do
 					if (IsHero(unitName)) then
-						if (GetProvinceHero(SelectedProvince.Name, GetUnitTypeData(unitName, "DefaultName"), "") == 2 and GetHeroUnitType(GetUnitTypeData(unitName, "DefaultName"), "") == unitName) then
+						if (GetProvinceHero(SelectedProvince.Name, GetUnitTypeData(unitName, "DefaultName")) == 2 and GetGrandStrategyHeroUnitType(GetUnitTypeData(unitName, "DefaultName")) == unitName) then
 							local icon_offset_x = Video.Width - 243 + 15 + (item_x * 56)
 							local icon_offset_y = Video.Height - 186 + 13 + (item_y * 47)
 
@@ -2704,7 +2704,7 @@ function SetSelectedProvinceLua(province)
 				if (IsHero(unitName)) then
 					if (SelectedHero == unitName) then
 						SetProvinceAttackedBy(province.Name, GrandStrategyFaction.Civilization, GrandStrategyFaction.Name)
-						SetProvinceHero(province.Name, GetUnitTypeData(unitName, "DefaultName"), "", unitName, 3)
+						SetProvinceHero(province.Name, GetUnitTypeData(unitName, "DefaultName"), unitName, 3)
 						SelectedHero = ""
 					end
 				end
@@ -2720,8 +2720,8 @@ function SetSelectedProvinceLua(province)
 			end
 			for i, unitName in ipairs(Units) do
 				if (IsHero(unitName)) then
-					if (SelectedHero == unitName and GetProvinceHero(SelectedProvince.Name, GetUnitTypeData(unitName, "DefaultName"), "") == 2 and GetHeroUnitType(GetUnitTypeData(unitName, "DefaultName"), "") == unitName) then
-						SetProvinceHero(province.Name, GetUnitTypeData(unitName, "DefaultName"), "", unitName, 1)
+					if (SelectedHero == unitName and GetProvinceHero(SelectedProvince.Name, GetUnitTypeData(unitName, "DefaultName")) == 2 and GetGrandStrategyHeroUnitType(GetUnitTypeData(unitName, "DefaultName")) == unitName) then
+						SetProvinceHero(province.Name, GetUnitTypeData(unitName, "DefaultName"), unitName, 1)
 						SelectedHero = ""
 					end
 				end
@@ -3732,11 +3732,11 @@ function CanTriggerEvent(faction, event)
 			for key, value in pairs(event.Provinces) do
 				for i, unitName in ipairs(Units) do
 					if (IsHero(unitName)) then
-						if (event.Heroes[string.gsub(unitName, "-", "_")] ~= nil and event.Provinces[key] == true and GetProvinceOwner(WorldMapProvinces[key].Name) == faction.Name and (GetProvinceHero(WorldMapProvinces[key].Name, GetUnitTypeData(unitName, "DefaultName"), "") == 2) ~= event.Heroes[string.gsub(unitName, "-", "_")]) then
+						if (event.Heroes[string.gsub(unitName, "-", "_")] ~= nil and event.Provinces[key] == true and GetProvinceOwner(WorldMapProvinces[key].Name) == faction.Name and (GetProvinceHero(WorldMapProvinces[key].Name, GetUnitTypeData(unitName, "DefaultName")) == 2) ~= event.Heroes[string.gsub(unitName, "-", "_")]) then
 							local has_other_hero_version = false -- check to see if the province has another version of the hero in it
 							for j, second_unitName in ipairs(Units) do
 								if (IsHero(second_unitName)) then
-									if (GetUnitTypeData(unitName, "DefaultName") == GetUnitTypeData(second_unitName, "DefaultName") and GetProvinceHero(WorldMapProvinces[key].Name, GetUnitTypeData(second_unitName, "DefaultName"), "") == 2) then
+									if (GetUnitTypeData(unitName, "DefaultName") == GetUnitTypeData(second_unitName, "DefaultName") and GetProvinceHero(WorldMapProvinces[key].Name, GetUnitTypeData(second_unitName, "DefaultName")) == 2) then
 										has_other_hero_version = true
 									end
 								end
@@ -3754,12 +3754,12 @@ function CanTriggerEvent(faction, event)
 					if (event.Heroes[string.gsub(unitName, "-", "_")] ~= nil) then
 						local has_hero = false
 						for province_i, province_key in ipairs(faction.OwnedProvinces) do
-							if (GetProvinceHero(WorldMapProvinces[province_key].Name, GetUnitTypeData(unitName, "DefaultName"), "") == 2) then
+							if (GetProvinceHero(WorldMapProvinces[province_key].Name, GetUnitTypeData(unitName, "DefaultName")) == 2) then
 								has_hero = true
 							end
 							for j, second_unitName in ipairs(Units) do -- check for other versions of the hero (for instance, thane Rugnur)
 								if (IsHero(second_unitName)) then
-									if (GetUnitTypeData(unitName, "DefaultName") == GetUnitTypeData(second_unitName, "DefaultName") and GetProvinceHero(WorldMapProvinces[province_key].Name, GetUnitTypeData(second_unitName, "DefaultName"), "") == 2) then
+									if (GetUnitTypeData(unitName, "DefaultName") == GetUnitTypeData(second_unitName, "DefaultName") and GetProvinceHero(WorldMapProvinces[province_key].Name, GetUnitTypeData(second_unitName, "DefaultName")) == 2) then
 										has_hero = true
 									end
 								end
