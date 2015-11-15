@@ -388,7 +388,7 @@ local GermanicEvents = {
 					end
 					SetProvinceCurrentConstruction("Sweden", "unit-germanic-town-hall")
 					ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 25)
-					if (GrandStrategyFaction.Name == "Asa Tribe") then
+					if (GrandStrategyFaction.Name == EventFaction.Name) then
 						CenterGrandStrategyMapOnTile(WorldMapProvinces.Sweden.SettlementLocation[1], WorldMapProvinces.Sweden.SettlementLocation[2])
 						GenericDialog("Gylve's Realm", "Gylve has been defeated, and subsequently swore an oath of fealty to us. We moved north... and came upon a lake with fair fields spread around it. We founded a hall by the lake, Sigtun, from which we shall rule for untold generations!")
 					end

@@ -17252,6 +17252,104 @@ if (GrandStrategyYear >= -3000) then -- around this time Gylve or his ancestors 
 	SetRegionPopulation("Eurasia", 2700000) -- CIS had a population of around 2.7 millions in 3000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
 	
 	-- First Greek Bronze Age begins around 3000 BC; Source: "Atlas de História Mundial", 2001, p. 66.
+	
+	SetFactionRuler("germanic", "Asa Tribe", "Lorikus")
+	CreateGrandStrategyHero("Tror") -- Trór born
+end
+
+if (GrandStrategyYear >= -2988) then
+	KillGrandStrategyHero("Lorikus")
+	SetFactionRuler("germanic", "Asa Tribe", "Tror") -- when Trór was 12 years old, he slew his foster-father Lóríkus and took his place
+end
+
+if (GrandStrategyYear >= -2978) then
+	KillGrandStrategyHero("Tror")
+	SetFactionRuler("germanic", "Asa Tribe", "Loridi")
+end
+
+if (GrandStrategyYear >= -2968) then
+	KillGrandStrategyHero("Loridi")
+	SetFactionRuler("germanic", "Asa Tribe", "Einridi")
+end
+
+if (GrandStrategyYear >= -2958) then
+	KillGrandStrategyHero("Einridi")
+	SetFactionRuler("germanic", "Asa Tribe", "Vingethor")
+end
+
+if (GrandStrategyYear >= -2948) then
+	KillGrandStrategyHero("Vingethor")
+	SetFactionRuler("germanic", "Asa Tribe", "Vingener")
+end
+
+if (GrandStrategyYear >= -2938) then
+	KillGrandStrategyHero("Vingener")
+	SetFactionRuler("germanic", "Asa Tribe", "Moda")
+end
+
+if (GrandStrategyYear >= -2928) then
+	KillGrandStrategyHero("Moda")
+	SetFactionRuler("germanic", "Asa Tribe", "Magi")
+end
+
+if (GrandStrategyYear >= -2918) then
+	KillGrandStrategyHero("Magi")
+	SetFactionRuler("germanic", "Asa Tribe", "Seskef")
+end
+
+if (GrandStrategyYear >= -2908) then
+	KillGrandStrategyHero("Seskef")
+	SetFactionRuler("germanic", "Asa Tribe", "Bedvig")
+end
+
+if (GrandStrategyYear >= -2898) then
+	KillGrandStrategyHero("Bedvig")
+	SetFactionRuler("germanic", "Asa Tribe", "Athra")
+end
+
+if (GrandStrategyYear >= -2888) then
+	KillGrandStrategyHero("Athra")
+	SetFactionRuler("germanic", "Asa Tribe", "Itermann")
+end
+
+if (GrandStrategyYear >= -2878) then
+	KillGrandStrategyHero("Itermann")
+	SetFactionRuler("germanic", "Asa Tribe", "Heremod")
+end
+
+if (GrandStrategyYear >= -2868) then
+	KillGrandStrategyHero("Heremod")
+	SetFactionRuler("germanic", "Asa Tribe", "Skjaldun")
+end
+
+if (GrandStrategyYear >= -2858) then
+	KillGrandStrategyHero("Skjaldun")
+	SetFactionRuler("germanic", "Asa Tribe", "Bjaf")
+end
+
+if (GrandStrategyYear >= -2848) then
+	KillGrandStrategyHero("Bjaf")
+	SetFactionRuler("germanic", "Asa Tribe", "Jat")
+end
+
+if (GrandStrategyYear >= -2838) then
+	KillGrandStrategyHero("Jat")
+	SetFactionRuler("germanic", "Asa Tribe", "Gudolf")
+end
+
+if (GrandStrategyYear >= -2828) then
+	KillGrandStrategyHero("Gudolf")
+	SetFactionRuler("germanic", "Asa Tribe", "Finn")
+end
+
+if (GrandStrategyYear >= -2818) then
+	KillGrandStrategyHero("Finn")
+	SetFactionRuler("germanic", "Asa Tribe", "Friallaf")
+end
+
+if (GrandStrategyYear >= -2808) then
+	KillGrandStrategyHero("Friallaf")
+	SetFactionRuler("germanic", "Asa Tribe", "Voden")
 end
 
 if (GrandStrategyYear >= -2800) then -- establishment of the Single Grave Culture (a part of the Indo-European-speaking Corded Ware cultures) in Jutland; around this time southern Sweden was settled by the Battle Axe culture (also a part of the Corded Ware cultures)

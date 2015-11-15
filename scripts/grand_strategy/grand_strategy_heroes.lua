@@ -27,6 +27,206 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+-- Germanic heroes
+
+DefineGrandStrategyHero("Lóríkus", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 6.
+	Name = "Lóríkus", -- Duke of Thrudheim, married to Lórá (also called Glórá)
+	DefaultType = "unit-germanic-warrior",
+	Civilization = "germanic",
+	ProvinceOfOrigin = "Astrakhan",
+	Year = -3000, -- beginning of the process of the Indo-European migrations to Scandinavia
+	DeathYear = -3000 + 12 -- Trór becomes 12 years old and slays Lóríkus
+})
+
+DefineGrandStrategyHero("Trór", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 6.
+	Name = "Trór", -- was goodly to look upon, his hair was fairer than gold
+	DefaultType = "unit-germanic-warrior",
+	Civilization = "germanic",
+	ProvinceOfOrigin = "Astrakhan",
+	Year = -3000,
+	DeathYear = -3000 + 12 + 10 -- 30 years is the default lifetime of a hero after having risen to prominence, but here we use 10 to make the genealogy fit from 3000 to 2800 BC, by when Scandinavia was settled by Indo-Europeans (in the Ynglinga Saga, with an euhemerized Odin leading the Asa there)
+})
+
+DefineGrandStrategyHero("Lóridi", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
+	Name = "Lóridi", -- resembled his father, Trór
+	DefaultType = "unit-germanic-warrior",
+	Civilization = "germanic",
+	ProvinceOfOrigin = "Astrakhan",
+	Year = -3000 + 12 + (10 * 1),
+	DeathYear = -3000 + 12 + (10 * 2),
+	Father = "Trór"
+})
+
+DefineGrandStrategyHero("Einridi", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
+	Name = "Einridi",
+	DefaultType = "unit-germanic-warrior",
+	Civilization = "germanic",
+	ProvinceOfOrigin = "Astrakhan",
+	Year = -3000 + 12 + (10 * 2),
+	DeathYear = -3000 + 12 + (10 * 3),
+	Father = "Loridi"
+})
+
+DefineGrandStrategyHero("Vingethor", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
+	Name = "Vingethor",
+	DefaultType = "unit-germanic-warrior",
+	Civilization = "germanic",
+	ProvinceOfOrigin = "Astrakhan",
+	Year = -3000 + 12 + (10 * 3),
+	DeathYear = -3000 + 12 + (10 * 4),
+	Father = "Einridi"
+})
+
+DefineGrandStrategyHero("Vingener", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
+	Name = "Vingener",
+	DefaultType = "unit-germanic-warrior",
+	Civilization = "germanic",
+	ProvinceOfOrigin = "Astrakhan",
+	Year = -3000 + 12 + (10 * 4),
+	DeathYear = -3000 + 12 + (10 * 5),
+	Father = "Vingethor"
+})
+
+DefineGrandStrategyHero("Móda", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
+	Name = "Móda",
+	DefaultType = "unit-germanic-warrior",
+	Civilization = "germanic",
+	ProvinceOfOrigin = "Astrakhan",
+	Year = -3000 + 12 + (10 * 5),
+	DeathYear = -3000 + 12 + (10 * 6),
+	Father = "Vingener"
+})
+
+DefineGrandStrategyHero("Magi", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
+	Name = "Magi",
+	DefaultType = "unit-germanic-warrior",
+	Civilization = "germanic",
+	ProvinceOfOrigin = "Astrakhan",
+	Year = -3000 + 12 + (10 * 6),
+	DeathYear = -3000 + 12 + (10 * 7),
+	Father = "Móda"
+})
+
+DefineGrandStrategyHero("Seskef", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
+	Name = "Seskef",
+	DefaultType = "unit-germanic-warrior",
+	Civilization = "germanic",
+	ProvinceOfOrigin = "Astrakhan",
+	Year = -3000 + 12 + (10 * 7),
+	DeathYear = -3000 + 12 + (10 * 8),
+	Father = "Magi"
+})
+
+DefineGrandStrategyHero("Bedvig", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
+	Name = "Bedvig",
+	DefaultType = "unit-germanic-warrior",
+	Civilization = "germanic",
+	ProvinceOfOrigin = "Astrakhan",
+	Year = -3000 + 12 + (10 * 8),
+	DeathYear = -3000 + 12 + (10 * 9),
+	Father = "Seskef"
+})
+
+DefineGrandStrategyHero("Athra", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
+	Name = "Athra",
+	DefaultType = "unit-germanic-warrior",
+	Civilization = "germanic",
+	ProvinceOfOrigin = "Astrakhan",
+	Year = -3000 + 12 + (10 * 9),
+	DeathYear = -3000 + 12 + (10 * 10),
+	Father = "Bedvig"
+})
+
+DefineGrandStrategyHero("Ítermann", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
+	Name = "Ítermann",
+	DefaultType = "unit-germanic-warrior",
+	Civilization = "germanic",
+	ProvinceOfOrigin = "Astrakhan",
+	Year = -3000 + 12 + (10 * 10),
+	DeathYear = -3000 + 12 + (10 * 11),
+	Father = "Athra"
+})
+
+DefineGrandStrategyHero("Heremód", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
+	Name = "Heremód",
+	DefaultType = "unit-germanic-warrior",
+	Civilization = "germanic",
+	ProvinceOfOrigin = "Astrakhan",
+	Year = -3000 + 12 + (10 * 11),
+	DeathYear = -3000 + 12 + (10 * 12),
+	Father = "Ítermann"
+})
+
+DefineGrandStrategyHero("Skjaldun", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
+	Name = "Skjaldun",
+	DefaultType = "unit-germanic-warrior",
+	Civilization = "germanic",
+	ProvinceOfOrigin = "Astrakhan",
+	Year = -3000 + 12 + (10 * 12),
+	DeathYear = -3000 + 12 + (10 * 13),
+	Father = "Heremód"
+})
+
+DefineGrandStrategyHero("Bjáf", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
+	Name = "Bjáf",
+	DefaultType = "unit-germanic-warrior",
+	Civilization = "germanic",
+	ProvinceOfOrigin = "Astrakhan",
+	Year = -3000 + 12 + (10 * 13),
+	DeathYear = -3000 + 12 + (10 * 14),
+	Father = "Skjaldun"
+})
+
+DefineGrandStrategyHero("Ját", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
+	Name = "Ját",
+	DefaultType = "unit-germanic-warrior",
+	Civilization = "germanic",
+	ProvinceOfOrigin = "Astrakhan",
+	Year = -3000 + 12 + (10 * 14),
+	DeathYear = -3000 + 12 + (10 * 15),
+	Father = "Bjáf"
+})
+
+DefineGrandStrategyHero("Gudólfr", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
+	Name = "Gudólfr",
+	DefaultType = "unit-germanic-warrior",
+	Civilization = "germanic",
+	ProvinceOfOrigin = "Astrakhan",
+	Year = -3000 + 12 + (10 * 15),
+	DeathYear = -3000 + 12 + (10 * 16),
+	Father = "Ját"
+})
+
+DefineGrandStrategyHero("Finn", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
+	Name = "Finn",
+	DefaultType = "unit-germanic-warrior",
+	Civilization = "germanic",
+	ProvinceOfOrigin = "Astrakhan",
+	Year = -3000 + 12 + (10 * 16),
+	DeathYear = -3000 + 12 + (10 * 17),
+	Father = "Gudólfr"
+})
+
+DefineGrandStrategyHero("Fríallaf", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
+	Name = "Fríallaf",
+	DefaultType = "unit-germanic-warrior",
+	Civilization = "germanic",
+	ProvinceOfOrigin = "Astrakhan",
+	Year = -3000 + 12 + (10 * 17),
+	DeathYear = -3000 + 12 + (10 * 18),
+	Father = "Finn"
+})
+
+DefineGrandStrategyHero("Vóden", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
+	Name = "Vóden", -- euhemerized version of Odin
+	DefaultType = "unit-germanic-warrior",
+	Civilization = "germanic",
+	ProvinceOfOrigin = "Astrakhan",
+	Year = -3000 + 12 + (10 * 18),
+	DeathYear = -3000 + 12 + (10 * 18) + (30 * 1), -- with Voden begins a new genealogy, and he can live the standard 30 years
+	Father = "Fríallaf"
+})
+
 -- Teuton heroes
 
 DefineGrandStrategyHero("Marbod", {
@@ -92,4 +292,12 @@ DefineGrandStrategyHero("Thursagan", {
 	ProvinceOfOrigin = "Caverns of Chaincolt",
 	Year = -1,
 	DeathYear = 40 + 10 -- died in 40 AD of a violent death, but was already rather old; +10 years
+})
+
+-- Goblin heroes
+
+DefineGrandStrategyHero("Greebo", {
+	Name = "Greebo",
+	DefaultType = "unit-hero-greebo",
+	Civilization = "goblin"
 })
