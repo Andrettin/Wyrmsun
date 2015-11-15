@@ -17350,6 +17350,7 @@ end
 if (GrandStrategyYear >= -2808) then
 	KillGrandStrategyHero("Friallaf")
 	SetFactionRuler("germanic", "Asa Tribe", "Voden")
+	SetFactionRuler("basque", "Gylfing Tribe", "Gylve")
 end
 
 if (GrandStrategyYear >= -2800) then -- establishment of the Single Grave Culture (a part of the Indo-European-speaking Corded Ware cultures) in Jutland; around this time southern Sweden was settled by the Battle Axe culture (also a part of the Corded Ware cultures)
@@ -17360,6 +17361,10 @@ if (GrandStrategyYear >= -2800) then -- establishment of the Single Grave Cultur
 	SetProvinceOwner("Jutland", "germanic", "Skjoldung Tribe")
 	SetProvinceCivilization("Jutland", "germanic")
 	SetProvinceSettlementBuilding("Jutland", "unit-germanic-town-hall", true)
+	SetProvinceOwner("Zealand", "germanic", "Skjoldung Tribe")
+	SetProvinceCivilization("Zealand", "germanic")
+	SetProvinceSettlementBuilding("Zealand", "unit-germanic-town-hall", true)
+	SetFactionRuler("germanic", "Skjoldung Tribe", "Skjold")
 	
 	SetProvinceOwner("Sweden", "germanic", "Asa Tribe")
 	SetProvinceCivilization("Sweden", "germanic")
@@ -17369,10 +17374,6 @@ if (GrandStrategyYear >= -2800) then -- establishment of the Single Grave Cultur
 	SetProvinceCivilization("Scania", "germanic")
 	SetProvinceSettlementBuilding("Scania", "unit-germanic-town-hall", true)
 	
-	SetProvinceOwner("Zealand", "germanic", "Skjoldung Tribe")
-	SetProvinceCivilization("Zealand", "germanic")
-	SetProvinceSettlementBuilding("Zealand", "unit-germanic-town-hall", true)
-
 	SetProvinceOwner("Gotaland", "germanic", "Asa Tribe")
 	SetProvinceCivilization("Gotaland", "germanic")
 	SetProvinceSettlementBuilding("Gotaland", "unit-germanic-town-hall", true)
@@ -17394,21 +17395,27 @@ if (GrandStrategyYear >= -2800) then -- establishment of the Single Grave Cultur
 	GrandStrategyEvents.DivisionOfDomains = nil
 	GrandStrategyEvents.AsaLawgiving = nil
 	GrandStrategyEvents.SkjoldsDomain = nil
-	GrandStrategyEvents.TheBirthOfSaeming = nil
 
 	-- Corded Ware culture (neolithic) begins in Zealand in 2800 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 38.
 end
 
 if (GrandStrategyYear >= -2770) then -- estimated date
+	KillGrandStrategyHero("Voden")
+	KillGrandStrategyHero("Gylve")
+	CreateGrandStrategyHero("Saeming")
 	GrandStrategyEvents.YngveChieftainOfTheSwedes = nil
 	AcquireFactionTechnologies("germanic", "Asa Tribe", "germanic", "Yngling Tribe")
 	SetProvinceOwner("Sweden", "germanic", "Yngling Tribe")
 	SetProvinceOwner("Gotaland", "germanic", "Yngling Tribe")
 	SetProvinceOwner("Scania", "germanic", "Yngling Tribe")
+	SetFactionRuler("germanic", "Yngling Tribe", "Yngve")
 end
 
 if (GrandStrategyYear >= -2740) then -- estimated date
-	GrandStrategyEvents.YngvesSickness = nil
+	KillGrandStrategyHero("Skjold")
+	SetFactionRuler("germanic", "Skjoldung Tribe", "Fridleifr Skjoldung")
+	KillGrandStrategyHero("Yngve")
+	KillGrandStrategyHero("Saeming")
 end
 
 if (GrandStrategyYear >= -2700) then

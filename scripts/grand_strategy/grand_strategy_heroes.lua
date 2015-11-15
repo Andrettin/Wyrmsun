@@ -223,8 +223,49 @@ DefineGrandStrategyHero("Vóden", { -- Source: Snorri Sturlson, "The Prose Edda"
 	Civilization = "germanic",
 	ProvinceOfOrigin = "Astrakhan",
 	Year = -3000 + 12 + (10 * 18),
-	DeathYear = -3000 + 12 + (10 * 18) + (30 * 1), -- with Voden begins a new genealogy, and he can live the standard 30 years
+	DeathYear = -2800 + (30 * 1), -- with Voden begins a new genealogy, and he can live the standard 30 years
 	Father = "Fríallaf"
+})
+
+DefineGrandStrategyHero("Skjöldr", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
+	Name = "Skjöldr",
+	DefaultType = "unit-germanic-warrior",
+	Civilization = "germanic",
+	ProvinceOfOrigin = "Astrakhan",
+	Year = -2800,
+	DeathYear = -2800 + (30 * 2), -- 30 years is the default lifetime of a hero after having risen to prominence
+	Father = "Vóden"
+})
+
+DefineGrandStrategyHero("Yngve", { -- Source: Snorri Sturlson, "Heimskringla", 1844; Source: Snorri Sturlson, "The Prose Edda", 1916, p. 9.
+	Name = "Yngve",
+	DefaultType = "unit-germanic-warrior",
+	Civilization = "germanic",
+	ProvinceOfOrigin = "Astrakhan",
+	Year = -2800,
+	DeathYear = -2800 + (30 * 2),
+	Father = "Vóden"
+})
+
+DefineGrandStrategyHero("Saeming", { -- Source: Snorri Sturlson, "Heimskringla", 1844.
+	Name = "Saeming",
+	DefaultType = "unit-germanic-warrior",
+	Civilization = "germanic",
+	ProvinceOfOrigin = "Sweden",
+	Year = -2800 + (30 * 1),
+	DeathYear = -2800 + (30 * 2),
+	Father = "Vóden"
+})
+
+DefineGrandStrategyHero("Fridleifr", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
+	Name = "Fridleifr",
+	Dynasty = "Skjoldung",
+	DefaultType = "unit-germanic-warrior",
+	Civilization = "germanic",
+	ProvinceOfOrigin = "Zealand",
+	Year = -2800 + (30 * 2),
+	DeathYear = -2800 + (30 * 3),
+	Father = "Skjöldr"
 })
 
 -- Teuton heroes
@@ -300,4 +341,15 @@ DefineGrandStrategyHero("Greebo", {
 	Name = "Greebo",
 	DefaultType = "unit-hero-greebo",
 	Civilization = "goblin"
+})
+
+-- Basque heroes
+
+DefineGrandStrategyHero("Gylve", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
+	Name = "Gylve", -- ruled over Scania; contemporary of Voden
+	DefaultType = "unit-germanic-warrior",
+	Civilization = "basque",
+	ProvinceOfOrigin = "Scania",
+	Year = -3000 + 12 + (10 * 18),
+	DeathYear = -2800 + (30 * 1)
 })

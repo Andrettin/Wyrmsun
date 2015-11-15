@@ -315,6 +315,7 @@ local GermanicEvents = {
 				and ProvinceHasBorderWith(WorldMapWaterProvinces.Kattegat, WorldMapProvinces.Jutland)
 				and ProvinceHasBorderWith(WorldMapWaterProvinces.Kattegat, WorldMapProvinces.Scania)
 				and GetProvinceOwner("Scania") == "Gylfing Tribe"
+				and GetFactionRuler("basque", "Gylfing Tribe") == "Gylve"
 --				and SyncRand(100) < 50
 			) then
 				return true
@@ -472,19 +473,19 @@ local GermanicEvents = {
 	},
 	SkjoldsDomain = { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
 		Name = "Skjold's Domain",
-		Description = "Our chieftain has granted our newly-conquered lands to the south to his younger son, Skjold.",
+		Description = "Our chieftain Voden has granted our newly-conquered lands to the south to his younger son, Skjold.",
 		Conditions = function(s)
 			if (
 				EventFaction.Name == "Asa Tribe"
 				and (GetProvinceOwner("Zealand") == EventFaction.Name or GetProvinceOwner("Jutland") == EventFaction.Name)
+				and GetFactionRuler(EventFaction.Civilization, EventFaction.Name) == "Voden"
+				and GrandStrategyHeroIsAlive("Skjold")
 			) then
 				return true
 			else
 				return false
 			end
 		end,
-		MinYear = -2800, -- estimated
-		MaxYear = -2800 + 30, -- estimated
 		Options = {"~!OK", "Play as ~!Skjold"},
 		OptionEffects = {
 			function(s)
@@ -500,9 +501,9 @@ local GermanicEvents = {
 					AddProvinceClaim("Zealand", "germanic", "Skjoldung Tribe")
 				end
 				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "germanic", "Skjoldung Tribe")
+				SetFactionRuler("germanic", "Skjoldung Tribe", "Skjold")
 			end,
 			function(s)
-				EqualizeProvinceUnits(EventFaction)
 				EqualizeProvinceUnits(EventFaction)
 				if (GetProvinceOwner("Jutland") == EventFaction.Name) then
 					AcquireProvince(WorldMapProvinces.Jutland, "Skjoldung Tribe")
@@ -515,6 +516,7 @@ local GermanicEvents = {
 					AddProvinceClaim("Zealand", "germanic", "Skjoldung Tribe")
 				end
 				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "germanic", "Skjoldung Tribe")
+				SetFactionRuler("germanic", "Skjoldung Tribe", "Skjold")
 				GrandStrategyFaction = Factions.SkjoldungTribe
 				SetPlayerFaction("germanic", "Skjoldung Tribe")
 			end
@@ -523,20 +525,18 @@ local GermanicEvents = {
 	},
 	YngveChieftainOfTheSwedes = { -- Source: Snorri Sturlson, "Heimskringla", 1844.
 		Name = "Yngve, Chieftain",
---		Description = "Yngve has become our new chieftain, founding a new dynasty, the Ynglings. He managed to establish order in our lands, and was blessed with good seasons. Due to the good seasons and the reigning peace, our people have become prosperous as never before. Preferring Upsal to Sigtun, Yngve moved his capital there, where he built a great temple, and spent many resources in embellishing the town. Our chieftain's wife is Gerd, daughter of Gymis, and their son Fjolne stands in line to become our next chieftain.",
-		Description = "With the death of our long-lived chieftain, his son Yngve has taken his place. He managed to establish order in our lands, and was blessed with good seasons. Due to the good seasons and the reigning peace, our people have become prosperous as never before. Preferring Upsal to Sigtun, Yngve moved his capital there, where he built a great temple, and spent many resources in embellishing the town. Our chieftain's wife is Gerd, daughter of Gymis, and their son stands in line to become our next chieftain.",
+		Description = "Yngve has become our new chieftain, founding a new dynasty, the Ynglings. He managed to establish order in our lands, and was blessed with good seasons. Due to the good seasons and the reigning peace, our people have become prosperous as never before. Preferring Upsal to Sigtun, Yngve moved his capital there, where he built a great temple, and spent many resources in embellishing the town. Our chieftain's wife is Gerd, daughter of Gymis, and their son Fjolne stands in line to become our next chieftain.",
 		Conditions = function(s)
 			if (
 				EventFaction.Name == "Asa Tribe"
 				and GetProvinceOwner("Sweden") == EventFaction.Name
+				and GetFactionRuler(EventFaction.Civilization, EventFaction.Name) == "Yngve"
 			) then
 				return true
 			else
 				return false
 			end
 		end,
-		MinYear = -2800 + 30, -- estimated
-		MaxYear = -2800 + 30 + 30, -- estimated
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
@@ -546,55 +546,6 @@ local GermanicEvents = {
 			end
 		},
 		OptionTooltips = {"Form the Yngling Tribe", "+250 Gold, +1 Prestige"}
-	},
-	YngvesSickness = { -- Source: Snorri Sturlson, "Heimskringla", 1844.
-		Name = "Yngve's Sickness",
-		Description = "Our chieftain Yngve fell ill. As the disease advanced, not many would be allowed to see him, and meanwhile a great mound began to be built... where he would be finally buried when his time came.",
-		Conditions = function(s)
-			if (
-				EventFaction.Name == "Asa Tribe"
-			) then
-				return true
-			else
-				return false
-			end
-		end,
-		MinYear = -2800 + 60, -- estimated
-		MaxYear = -2800 + 60 + 30, -- estimated
-		RequiredEvents = {
-			YngveChieftainOfTheSwedes = true
-		},
-		Options = {"~!OK"},
-		OptionEffects = {
-			function(s)
-				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
-			end
-		},
-		OptionTooltips = {"+1 Prestige"}
-	},
-	TheBirthOfSaeming = { -- Source: Snorri Sturlson, "Heimskringla", 1844.
-		Name = "The Birth of Saeming",
-		Description = "Our chieftain's wife has bore him a son, who has been named Saeming. The notables of the tribe have given our ruler many gifts to commemorate Saeming's birth.",
-		Conditions = function(s)
-			if (
-				GetProvinceOwner("Sweden") == EventFaction.Name
-				and (GetProvinceCivilization("Sweden") == "germanic" or GetProvinceCivilization("Sweden") == "norse")
-			) then
-				return true
-			else
-				return false
-			end
-		end,
-		MinYear = -2800, -- approximately when Scandinavia was settled (in the Ynglinga Saga, Saeming is born just after the settlement of Scandinavia)
-		MaxYear = -2800,
-		Options = {"~!OK"},
-		OptionEffects = {
-			function(s)
-				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "gold", 100) -- gifts
-				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
-			end
-		},
-		OptionTooltips = {"+100 Gold, +1 Prestige"}
 	},
 	TheCurvedSwords = { -- Source: http://natmus.dk/en/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-roerby-swords/
 		Name = "The Curved Swords",
