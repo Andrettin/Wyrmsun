@@ -31,7 +31,7 @@
 
 DefineGrandStrategyHero("Marbod", {
 	Name = "Marbod",
-	Type = "unit-hero-marbod",
+	DefaultType = "unit-hero-marbod",
 	Civilization = "teuton",
 	ProvinceOfOrigin = "Brandenburg",
 	Year = -9, -- Marbod, king of the Suebic tribe of the Marcomanni, conquers Bohemia in 9 BC
@@ -42,7 +42,7 @@ DefineGrandStrategyHero("Marbod", {
 
 DefineGrandStrategyHero("Baglur", {
 	Name = "Baglur",
-	Type = "unit-hero-baglur",
+	DefaultType = "unit-hero-baglur",
 	Civilization = "dwarf",
 	ProvinceOfOrigin = "Caverns of Chaincolt",
 	Year = -1,
@@ -51,7 +51,7 @@ DefineGrandStrategyHero("Baglur", {
 
 DefineGrandStrategyHero("Durin", {
 	Name = "Durin",
-	Type = "unit-hero-durin",
+	DefaultType = "unit-hero-durin",
 	Civilization = "dwarf",
 	ProvinceOfOrigin = "Svarinshaug",
 	Year = -3000,
@@ -60,7 +60,7 @@ DefineGrandStrategyHero("Durin", {
 
 DefineGrandStrategyHero("Durstorn", {
 	Name = "Durstorn",
-	Type = "unit-hero-durstorn",
+	DefaultType = "unit-hero-durstorn",
 	Civilization = "dwarf",
 	ProvinceOfOrigin = "Caverns of Chaincolt",
 	Year = -1,
@@ -69,7 +69,7 @@ DefineGrandStrategyHero("Durstorn", {
 
 DefineGrandStrategyHero("Modsognir", {
 	Name = "Modsognir",
-	Type = "unit-hero-modsognir",
+	DefaultType = "unit-hero-modsognir",
 	Civilization = "dwarf",
 	ProvinceOfOrigin = "Svarinshaug",
 	Year = -3000,
@@ -78,7 +78,7 @@ DefineGrandStrategyHero("Modsognir", {
 
 DefineGrandStrategyHero("Rugnur", {
 	Name = "Rugnur",
-	Type = "unit-hero-rugnur",
+	DefaultType = "unit-hero-rugnur",
 	Civilization = "dwarf",
 	ProvinceOfOrigin = "Caverns of Chaincolt",
 	Year = 25,
@@ -87,7 +87,7 @@ DefineGrandStrategyHero("Rugnur", {
 
 DefineGrandStrategyHero("Thursagan", {
 	Name = "Thursagan",
-	Type = "unit-hero-thursagan",
+	DefaultType = "unit-hero-thursagan",
 	Civilization = "dwarf",
 	ProvinceOfOrigin = "Caverns of Chaincolt",
 	Year = -1,
