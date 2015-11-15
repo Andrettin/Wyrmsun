@@ -34,7 +34,6 @@ if (LoadedGame == false) then
 	SetPlayerData(0, "Resources", "stone", 0)
 	SetPlayerData(0, "Resources", "oil", 0)
 	SetAiType(0, "land-attack")
-	SetPlayerData(1, "Name", "Natives")
 	SetPlayerData(1, "Resources", "gold", 2000)
 	SetPlayerData(1, "Resources", "lumber", 1000)
 	SetPlayerData(1, "Resources", "stone", 500)
@@ -166,7 +165,7 @@ AddTrigger(
 		end
 		if (PlayerHasObjective(GetFactionPlayer("Asa Tribe"), "- Have a Bura stand on the glyph to the southwest")) then
 			local uncount = 0
-			uncount = GetUnits(GetFactionPlayer("Natives"))
+			uncount = GetUnits(1)
 			for unit1 = 1,table.getn(uncount) do 
 				if (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "organic")) then
 					local unit_quantity = GetNumUnitsAt(GetFactionPlayer("Asa Tribe"), "units", {GetUnitVariable(uncount[unit1],"PosX") - 3, GetUnitVariable(uncount[unit1],"PosY") - 3}, {GetUnitVariable(uncount[unit1],"PosX") + 3, GetUnitVariable(uncount[unit1],"PosY") + 3})
@@ -184,7 +183,7 @@ AddTrigger(
 		local asa_unit
 		
 		local uncount = 0
-		uncount = GetUnits(GetFactionPlayer("Natives"))
+		uncount = GetUnits(1)
 		for unit1 = 1,table.getn(uncount) do 
 			if (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "organic")) then
 				local nearby_uncount = 0
@@ -230,7 +229,7 @@ AddTrigger(
 		end
 		if (PlayerHasObjective(GetFactionPlayer("Asa Tribe"), "- Have a Bura stand on the glyph to the southwest")) then
 			local uncount = 0
-			uncount = GetUnits(GetFactionPlayer("Natives"))
+			uncount = GetUnits(1)
 			for unit1 = 1,table.getn(uncount) do 
 				if (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Building")) then
 					local unit_quantity = GetNumUnitsAt(GetFactionPlayer("Asa Tribe"), "units", {GetUnitVariable(uncount[unit1],"PosX") - 3, GetUnitVariable(uncount[unit1],"PosY") - 3}, {GetUnitVariable(uncount[unit1],"PosX") + 3 + GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "TileWidth"), GetUnitVariable(uncount[unit1],"PosY") + 3 + GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "TileHeight")})
@@ -248,7 +247,7 @@ AddTrigger(
 		local asa_unit
 		
 		local uncount = 0
-		uncount = GetUnits(GetFactionPlayer("Natives"))
+		uncount = GetUnits(1)
 		for unit1 = 1,table.getn(uncount) do 
 			if (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Building")) then
 				local nearby_uncount = 0
