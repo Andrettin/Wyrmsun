@@ -17413,9 +17413,13 @@ end
 
 if (GrandStrategyYear >= -2740) then -- estimated date
 	KillGrandStrategyHero("Skjold")
-	SetFactionRuler("germanic", "Skjoldung Tribe", "Fridleifr Skjoldung")
+	SetFactionRuler("germanic", "Skjoldung Tribe", "Fridleif Skjoldung")
 	KillGrandStrategyHero("Yngve")
 	KillGrandStrategyHero("Saeming")
+end
+
+if (GrandStrategyYear >= -2710) then
+	KillGrandStrategyHero("Fridleif Skjoldung")
 end
 
 if (GrandStrategyYear >= -2700) then
