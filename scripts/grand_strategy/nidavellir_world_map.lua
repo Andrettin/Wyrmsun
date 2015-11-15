@@ -874,7 +874,7 @@ LoadEvents("Nidavellir")
 
 if (GrandStrategyYear >= -3000) then
 	SetProvinceHero("Svarinshaug", "Modsognir", "unit-hero-modsognir", 2) 
---	SetFactionRuler("dwarf", "Modsogning Clan", "Modsognir")
+	SetFactionRuler("dwarf", "Modsogning Clan", "Modsognir")
 	SetProvinceHero("Svarinshaug", "Durin", "unit-hero-durin", 2) 
 end
 
@@ -951,7 +951,7 @@ if (GrandStrategyYear >= -1) then
 	SetFactionTechnology("dwarf", "Lyr", "upgrade-dwarven-throwing-axe-1", true)
 	
 	SetProvinceHero("Caverns of Chaincolt", "Durstorn", "unit-hero-durstorn", 2) -- Durstorn was already present when the conflict with Pypo over the Brown Hills happened
---	SetFactionRuler("dwarf", "Norlund Clan", "Durstorn")
+	SetFactionRuler("dwarf", "Norlund Clan", "Durstorn")
 	SetProvinceHero("Caverns of Chaincolt", "Baglur", "unit-hero-baglur", 2) -- Baglur was already present when the conflict with Pypo over the Brown Hills happened
 	SetProvinceHero("Caverns of Chaincolt", "Thursagan", "unit-hero-thursagan", 2) -- Thursagan could be in the Caverns of Chaincolt at this time
 end
