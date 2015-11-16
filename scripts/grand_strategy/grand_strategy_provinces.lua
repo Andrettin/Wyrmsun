@@ -316,7 +316,7 @@ function LoadProvinces(world)
 		Astrakhan = {
 			Name = "Astrakhan",
 			CulturalNames = {
-				AsaTribe = "Ansulanda" -- rendering of "Asaland" in Proto-Germanic
+				germanic = "Ansulanda" -- rendering of "Asaland" in Proto-Germanic
 			},
 			Tiles = {
 --				{151, 30}, {152, 28}, {152, 29}, {152, 30}, {152, 31}, {153, 28}, {153, 29}, {153, 30}, {153, 31}, {154, 28}, {154, 29}, {154, 30}, {155, 29}, {155, 30}, -- old map

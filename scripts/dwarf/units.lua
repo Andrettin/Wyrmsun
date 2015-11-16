@@ -740,7 +740,7 @@ DefineUnitType("unit-hero-modsognir", { Name = _("Steelclad"),
 	Image = {"file", "dwarf/units/dwarven_steelclad_brown_hair.png", "size", {72, 72}},
 	Animations = "animations-dwarven-axefighter", Icon = "icon-modsognir",
 	Hero = true,
-	Gender = 1,
+	Gender = "male",
 	Variations = {
 		{
 			"variation-id", "brown-hair",
@@ -762,7 +762,7 @@ DefineUnitType("unit-hero-modsognir-thane", { Name = _("Stonelord"),
 	Image = {"file", "dwarf/units/thane_brown_hair.png", "size", {72, 72}},
 	Animations = "animations-dwarven-axefighter", Icon = "icon-modsognir",
 	Hero = true,
-	Gender = 1,
+	Gender = "male",
 	Variations = {}
 } )
 
@@ -776,7 +776,7 @@ DefineUnitType("unit-hero-durin", { Name = _("Steelclad"),
 	Image = {"file", "dwarf/units/dwarven_steelclad_brown_hair.png", "size", {72, 72}},
 	Animations = "animations-dwarven-axefighter", Icon = "icon-durin",
 	Hero = true,
-	Gender = 1,
+	Gender = "male",
 	Variations = {
 		{
 			"variation-id", "brown-hair",
@@ -798,7 +798,7 @@ DefineUnitType("unit-hero-durin-thane", { Name = _("Stonelord"),
 	Image = {"file", "dwarf/units/thane_brown_hair.png", "size", {72, 72}},
 	Animations = "animations-dwarven-axefighter", Icon = "icon-durin",
 	Hero = true,
-	Gender = 1,
+	Gender = "male",
 	Variations = {}
 } )
 
@@ -811,7 +811,7 @@ DefineUnitType("unit-hero-rugnur", { Name = _("Axefighter"),
 	Image = {"file", "dwarf/units/rugnur.png", "size", {72, 72}},
 	Animations = "animations-dwarven-axefighter", Icon = "icon-rugnur",
 	Hero = true,
-	Gender = 1,
+	Gender = "male",
 	Variations = {}
 } )
 
@@ -823,7 +823,7 @@ DefineUnitType("unit-hero-rugnur-steelclad", { Name = _("Steelclad"),
 	Image = {"file", "dwarf/units/dwarven_steelclad_brown_hair.png", "size", {72, 72}},
 	Animations = "animations-dwarven-axefighter", Icon = "icon-rugnur",
 	Hero = true,
-	Gender = 1,
+	Gender = "male",
 	Variations = {
 		{
 			"variation-id", "brown-hair",
@@ -845,7 +845,7 @@ DefineUnitType("unit-hero-rugnur-thane", { Name = _("Stonelord"),
 	Image = {"file", "dwarf/units/thane_brown_hair.png", "size", {72, 72}},
 	Animations = "animations-dwarven-axefighter", Icon = "icon-rugnur-older",
 	Hero = true,
-	Gender = 1,
+	Gender = "male",
 	Variations = {}
 } )
 
@@ -859,7 +859,7 @@ DefineUnitType("unit-hero-baglur", { Name = _("Steelclad"),
 	Image = {"file", "dwarf/units/dwarven_steelclad_gray_hair.png", "size", {72, 72}},
 	Animations = "animations-dwarven-axefighter", Icon = "icon-baglur",
 	Hero = true,
-	Gender = 1,
+	Gender = "male",
 	Variations = {
 		{
 			"variation-id", "gray-hair",
@@ -881,7 +881,7 @@ DefineUnitType("unit-hero-baglur-thane", { Name = _("Stonelord"),
 	Image = {"file", "dwarf/units/thane_gray_hair.png", "size", {72, 72}},
 	Animations = "animations-dwarven-axefighter", Icon = "icon-baglur",
 	Hero = true,
-	Gender = 1,
+	Gender = "male",
 	Variations = {}
 } )
 
@@ -896,7 +896,7 @@ DefineUnitType("unit-hero-thursagan", { Name = _("Stonelord"),
 	Image = {"file", "dwarf/units/thane_gray_hair.png", "size", {72, 72}},
 	Animations = "animations-dwarven-axefighter", Icon = "icon-thursagan",
 	Hero = true,
-	Gender = 1,
+	Gender = "male",
 	Variations = {}
 } )
 
@@ -909,6 +909,6 @@ DefineUnitType("unit-hero-durstorn", { Name = _("Stonelord"),
 	Image = {"file", "dwarf/units/thane_brown_hair.png", "size", {72, 72}},
 	Animations = "animations-dwarven-axefighter", Icon = "icon-durstorn",
 	Hero = true,
-	Gender = 1,
+	Gender = "male",
 	Variations = {}
 } )

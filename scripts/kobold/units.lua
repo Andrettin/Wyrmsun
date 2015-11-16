@@ -42,7 +42,7 @@ DefineUnitType("unit-kobold-footpad", { Name = _("Footpad"),
 	HitPoints = 50,
 	Accuracy = 12,
 	Evasion = 12,
-	Gender = 0, -- 0 = Not Set, 1 = Male, 2 = Female (since Kobolds are reptilian creatures, their graphics can represent both genders)
+	-- don't set gender for Kobolds: since they are reptilian creatures, their graphics can represent both genders)
 	DaySightRangeBonus = -1,
 	NightSightRangeBonus = 1,
 	HackDamage = true,

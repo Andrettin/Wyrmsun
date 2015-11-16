@@ -518,7 +518,7 @@ DefineUnitType("unit-hero-marbod", { Name = _("Krieger"),
 	Description = _("A young chieftain of the Marcomanni, Marbod aspires to forge a realm for his tribe capable of withstanding the test of time."),
 	Icon = "icon-marbod",
 	Hero = true,
-	Gender = 1,
+	Gender = "male",
 	Variations = {
 		{
 			"variation-id", "blond-hair", -- no shield, bronze sword
