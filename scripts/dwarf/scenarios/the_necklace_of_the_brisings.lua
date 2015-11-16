@@ -60,9 +60,6 @@ if (LoadedGame == false) then
 		if (FactionHasHero("dwarf", "Modsogning Clan", "Durin")) then
 			unit = CreateUnit(GetGrandStrategyHeroUnitType("Durin"), 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 		end
-		unit = CreateUnit("unit-dwarven-miner", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		unit = CreateUnit("unit-dwarven-miner", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		unit = CreateUnit("unit-dwarven-miner", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 		
 		CreateProvinceUnits("Aurvang", 1, 1)
 		

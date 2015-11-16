@@ -232,6 +232,7 @@ https://github.com/Andrettin/Wyrmsun
 - Dwarves now start with plow in the first start date.
 - Dwarven provinces now start with 4 workers.
 - Fixed issue with "The Necklace of the Brisings" mission event which caused the enemy to be able to build, and to start with goblin infantry instead of dwarves.
+- Fixed tactical battle crash.
 
 -----------------------------------------------------------------------
 - 1.6.2
