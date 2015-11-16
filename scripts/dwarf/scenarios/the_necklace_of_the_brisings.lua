@@ -29,6 +29,7 @@ if (LoadedGame == false) then
 	SetPlayerData(0, "Resources", "gold", 5000)
 	SetPlayerData(0, "Resources", "lumber", 1500)
 	SetPlayerData(0, "Resources", "stone", 1000)
+	SetPlayerData(1, "RaceName", "dwarf")
 	SetPlayerData(1, "Faction", "Shinsplitter Clan")
 	SetPlayerData(1, "Name", "Bandits")
 	SetPlayerData(1, "Resources", "gold", 5000)
@@ -76,6 +77,16 @@ if (LoadedGame == false) then
 		SetPlayerData(0, "Allow", "unit-gold-mine", "F")
 		SetPlayerData(0, "Allow", "unit-silver-mine", "F")
 		SetPlayerData(0, "Allow", "unit-copper-mine", "F")
+		SetPlayerData(1, "Allow", "unit-dwarven-miner", "F")
+		SetPlayerData(1, "Allow", "unit-dwarven-town-hall", "F")
+		SetPlayerData(1, "Allow", "unit-dwarven-mushroom-farm", "F")
+		SetPlayerData(1, "Allow", "unit-dwarven-barracks", "F")
+		SetPlayerData(1, "Allow", "unit-dwarven-smithy", "F")
+		SetPlayerData(1, "Allow", "unit-dwarven-lumber-mill", "F")
+		SetPlayerData(1, "Allow", "unit-dwarven-sentry-tower", "F")
+		SetPlayerData(1, "Allow", "unit-gold-mine", "F")
+		SetPlayerData(1, "Allow", "unit-silver-mine", "F")
+		SetPlayerData(1, "Allow", "unit-copper-mine", "F")
 	end
 end
 

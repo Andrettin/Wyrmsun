@@ -39,14 +39,35 @@ DefineGrandStrategyHero("Lóríkus", { -- Source: Snorri Sturlson, "The Prose Ed
 	DeathYear = -3000 + 12 -- Trór becomes 12 years old and slays Lóríkus
 })
 
+DefineGrandStrategyHero("Lórá", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 6.
+	Name = "Lórá", -- Lórá (also called Glórá) was Lóríkus' wife
+	Gender = "female",
+	DefaultType = "unit-germanic-archer",
+	Civilization = "germanic",
+	ProvinceOfOrigin = "Astrakhan",
+	Year = -3000,
+	DeathYear = -3000 + 12 -- Trór becomes 12 years old and slays Lóríkus
+})
+
+DefineGrandStrategyHero("Tróán", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 6.
+	Name = "Tróán", -- Trór's mother; in the euhemerized account Tróán is said to be a daughter of the Trojan king Priam; however, since she doesn't seem to appear in any other account about Troy, it makes more sense to place this character together with Trór's genealogy (which we've placed to match the time of the Indo-European migrations to Scandinavia) rather than with Priam, specially since she's part of the account of how Scandinavia came to be settled
+	Gender = "female",
+	DefaultType = "unit-germanic-archer",
+	Civilization = "germanic",
+	ProvinceOfOrigin = "Astrakhan",
+	Year = -3000,
+	DeathYear = -3000 + 10
+})
+
 DefineGrandStrategyHero("Trór", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 6.
-	Name = "Trór", -- was goodly to look upon, his hair was fairer than gold
+	Name = "Trór", -- euhemerized version of Thor; was goodly to look upon, his hair was fairer than gold
 	Gender = "male",
 	DefaultType = "unit-germanic-warrior",
 	Civilization = "germanic",
 	ProvinceOfOrigin = "Astrakhan",
 	Year = -3000,
-	DeathYear = -3000 + 12 + 10 -- 30 years is the default lifetime of a hero after having risen to prominence, but here we use 10 to make the genealogy fit from 3000 to 2800 BC, by when Scandinavia was settled by Indo-Europeans (in the Ynglinga Saga, with an euhemerized Odin leading the Asa there)
+	DeathYear = -3000 + 12 + 10, -- 30 years is the default lifetime of a hero after having risen to prominence, but here we use 10 to make the genealogy fit from 3000 to 2800 BC, by when Scandinavia was settled by Indo-Europeans (in the Ynglinga Saga, with an euhemerized Odin leading the Asa there)
+	Mother = "Tróán"
 })
 
 DefineGrandStrategyHero("Lóridi", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
@@ -237,7 +258,7 @@ DefineGrandStrategyHero("Fríallaf", { -- Source: Snorri Sturlson, "The Prose Ed
 })
 
 DefineGrandStrategyHero("Vóden", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
-	Name = "Vóden", -- euhemerized version of Odin
+	Name = "Vóden", -- euhemerized version of Odin; "far-famed for his wisdom and every accomplishment"; had "second sight"
 	Gender = "male",
 	DefaultType = "unit-germanic-warrior",
 	Civilization = "germanic",
@@ -245,6 +266,28 @@ DefineGrandStrategyHero("Vóden", { -- Source: Snorri Sturlson, "The Prose Edda"
 	Year = -3000 + 12 + (10 * 18),
 	DeathYear = -2800 + (30 * 1), -- with Voden begins a new genealogy, and he can live the standard 30 years
 	Father = "Fríallaf"
+})
+
+DefineGrandStrategyHero("Frígídá", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
+	Name = "Frígídá", -- wife of Vóden; euhemerized version of Frigg
+	Gender = "female",
+	DefaultType = "unit-germanic-archer",
+	Civilization = "germanic",
+	ProvinceOfOrigin = "Astrakhan",
+	Year = -3000 + 12 + (10 * 18),
+	DeathYear = -2800 + (30 * 1)
+})
+
+DefineGrandStrategyHero("Yngve", { -- Source: Snorri Sturlson, "Heimskringla", 1844; Source: Snorri Sturlson, "The Prose Edda", 1916, p. 9.
+	Name = "Yngve", -- has to be defined first so that he becomes the first in line to succede Vóden in Sweden
+	Gender = "male",
+	DefaultType = "unit-germanic-warrior",
+	Civilization = "germanic",
+	ProvinceOfOrigin = "Astrakhan",
+	Year = -2800,
+	DeathYear = -2800 + (30 * 2),
+	Father = "Vóden",
+	Mother = "Frígídá" -- presumably, since she was Vóden's wife
 })
 
 DefineGrandStrategyHero("Skjöldr", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
@@ -255,18 +298,8 @@ DefineGrandStrategyHero("Skjöldr", { -- Source: Snorri Sturlson, "The Prose Edd
 	ProvinceOfOrigin = "Astrakhan",
 	Year = -2800,
 	DeathYear = -2800 + (30 * 2), -- 30 years is the default lifetime of a hero after having risen to prominence
-	Father = "Vóden"
-})
-
-DefineGrandStrategyHero("Yngve", { -- Source: Snorri Sturlson, "Heimskringla", 1844; Source: Snorri Sturlson, "The Prose Edda", 1916, p. 9.
-	Name = "Yngve",
-	Gender = "male",
-	DefaultType = "unit-germanic-warrior",
-	Civilization = "germanic",
-	ProvinceOfOrigin = "Astrakhan",
-	Year = -2800,
-	DeathYear = -2800 + (30 * 2),
-	Father = "Vóden"
+	Father = "Vóden",
+	Mother = "Frígídá" -- presumably, since she was Vóden's wife
 })
 
 DefineGrandStrategyHero("Saeming", { -- Source: Snorri Sturlson, "Heimskringla", 1844.
@@ -277,7 +310,8 @@ DefineGrandStrategyHero("Saeming", { -- Source: Snorri Sturlson, "Heimskringla",
 	ProvinceOfOrigin = "Sweden",
 	Year = -2800 + (30 * 1),
 	DeathYear = -2800 + (30 * 2),
-	Father = "Vóden"
+	Father = "Vóden",
+	Mother = "Frígídá" -- presumably, since she was Vóden's wife
 })
 
 DefineGrandStrategyHero("Fridleifr", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.

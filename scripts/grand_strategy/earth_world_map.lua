@@ -17254,12 +17254,19 @@ if (GrandStrategyYear >= -3000) then -- around this time Gylve or his ancestors 
 	-- First Greek Bronze Age begins around 3000 BC; Source: "Atlas de História Mundial", 2001, p. 66.
 	
 	SetFactionRuler("germanic", "Asa Tribe", "Lorikus")
+	CreateGrandStrategyHero("Lora")
+	CreateGrandStrategyHero("Troan")
 	CreateGrandStrategyHero("Tror") -- Trór born
+end
+
+if (GrandStrategyYear >= -2990) then
+	KillGrandStrategyHero("Troan")
 end
 
 if (GrandStrategyYear >= -2988) then
 	KillGrandStrategyHero("Lorikus")
 	SetFactionRuler("germanic", "Asa Tribe", "Tror") -- when Trór was 12 years old, he slew his foster-father Lóríkus and took his place
+	KillGrandStrategyHero("Lora")
 end
 
 if (GrandStrategyYear >= -2978) then
@@ -17350,6 +17357,7 @@ end
 if (GrandStrategyYear >= -2808) then
 	KillGrandStrategyHero("Friallaf")
 	SetFactionRuler("germanic", "Asa Tribe", "Voden")
+	CreateGrandStrategyHero("Frigida")
 	SetFactionRuler("basque", "Gylfing Tribe", "Gylve")
 end
 
