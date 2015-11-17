@@ -471,7 +471,7 @@ DefineGrandStrategyHero("Fridleifr", { -- Source: Snorri Sturlson, "The Prose Ed
 	Father = "Skjöldr"
 })
 
-DefineGrandStrategyHero("Sæmingr", { -- Source: Snorri Sturlson, "Heimskringla", 1844.
+DefineGrandStrategyHero("Sæmingr", { -- Source: Snorri Sturlson, "Heimskringla", 1844; Source: Snorri Sturlson, "The Prose Edda", 1916, p. 9.
 	Name = "Sæmingr", -- Vóden's son set to rule over Norway
 	Gender = "male",
 	DefaultType = "unit-germanic-warrior",

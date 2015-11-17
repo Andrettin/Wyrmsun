@@ -35,6 +35,7 @@ local GermanicEvents = {
 				and EventFaction.Name == "Asa Tribe"
 				and GetFactionRuler("germanic", "Asa Tribe") == "Lorikus"
 				and GetProvinceOwner("Astrakhan") == "Asa Tribe"
+--				and FactionHasHero("germanic", "Asa Tribe", "Tror")
 				and GrandStrategyHeroIsAlive("Tror")
 			) then
 				return true
@@ -63,6 +64,7 @@ local GermanicEvents = {
 				and EventFaction.Name == "Asa Tribe"
 				and GetFactionRuler("germanic", "Asa Tribe") == "Lorikus"
 				and GetProvinceOwner("Astrakhan") == "Asa Tribe"
+--				and FactionHasHero("germanic", "Asa Tribe", "Tror")
 				and GrandStrategyHeroIsAlive("Tror")
 			) then
 				return true
@@ -98,7 +100,7 @@ local GermanicEvents = {
 				and EventFaction.Name == "Asa Tribe"
 				and GetProvinceOwner("Astrakhan") == EventFaction.Name
 				and GetProvinceOwner("Don") == "Vana Tribe"
-				and GetFactionRuler(EventFaction.Civilization, EventFaction.Name) ~= "Lorikus" -- only begin the migration with Tror and his descendants
+--				and GetFactionRuler(EventFaction.Civilization, EventFaction.Name) ~= "Lorikus" -- only begin the migration with Tror and his descendants
 				and GetProvinceUnitQuantity("Astrakhan", "unit-germanic-warrior") >= 8 -- event only happens if player has gathered enough warriors for a raid
 				and FactionHasBorderWith(Factions.AsaTribe, Factions.VanaTribe)
 				and SyncRand(100) < 33

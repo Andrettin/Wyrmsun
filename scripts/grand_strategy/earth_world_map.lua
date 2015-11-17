@@ -19084,7 +19084,7 @@ end
 
 if (GrandStrategyYear >= 1241) then
 	GrandStrategyEvents.Heimskringla = nil -- should be moved to actual date of composition/publication
-	GrandStrategyEvents.SnorrisMurder = nil
+	GrandStrategyEvents.SnorrisMurder = nil -- Snorri murdered by his son-in-law, Gizurr Thórvaldssoon; Source: Snorri Sturlson, "The Prose Edda", 1916, p. XI.
 end
 
 if (GrandStrategyYear >= 1401) then
