@@ -339,13 +339,13 @@ DefineGrandStrategyHero("Marbod", {
 
 -- Dwarven heroes
 
-DefineGrandStrategyHero("Baglur", {
-	Name = "Baglur",
-	DefaultType = "unit-hero-baglur",
+DefineGrandStrategyHero("Modsognir", {
+	Name = "Modsognir",
+	DefaultType = "unit-hero-modsognir",
 	Civilization = "dwarf",
-	ProvinceOfOrigin = "Caverns of Chaincolt",
-	Year = -1,
-	DeathYear = 40 + 10 -- died in 40 AD of a violent death, but was already rather old; +10 years
+	ProvinceOfOrigin = "Svarinshaug",
+	Year = -3000,
+	DeathYear = -3000 + 30 -- estimated
 })
 
 DefineGrandStrategyHero("Durin", {
@@ -357,6 +357,24 @@ DefineGrandStrategyHero("Durin", {
 	DeathYear = -3000 + 30 -- estimated
 })
 
+DefineGrandStrategyHero("Thursagan", {
+	Name = "Thursagan",
+	DefaultType = "unit-hero-thursagan",
+	Civilization = "dwarf",
+	ProvinceOfOrigin = "Caverns of Chaincolt",
+	Year = -1,
+	DeathYear = 40 + 10 -- died in 40 AD of a violent death, but was already rather old; +10 years
+})
+
+DefineGrandStrategyHero("Baglur", {
+	Name = "Baglur",
+	DefaultType = "unit-hero-baglur",
+	Civilization = "dwarf",
+	ProvinceOfOrigin = "Caverns of Chaincolt",
+	Year = -1,
+	DeathYear = 40 + 10 -- died in 40 AD of a violent death, but was already rather old; +10 years
+})
+
 DefineGrandStrategyHero("Durstorn", {
 	Name = "Durstorn",
 	DefaultType = "unit-hero-durstorn",
@@ -366,15 +384,6 @@ DefineGrandStrategyHero("Durstorn", {
 	DeathYear = 35 + 15 -- died in 35 AD of a violent death, but was already somewhat old; +15 years
 })
 
-DefineGrandStrategyHero("Modsognir", {
-	Name = "Modsognir",
-	DefaultType = "unit-hero-modsognir",
-	Civilization = "dwarf",
-	ProvinceOfOrigin = "Svarinshaug",
-	Year = -3000,
-	DeathYear = -3000 + 30 -- estimated
-})
-
 DefineGrandStrategyHero("Rugnur", {
 	Name = "Rugnur",
 	DefaultType = "unit-hero-rugnur",
@@ -382,15 +391,6 @@ DefineGrandStrategyHero("Rugnur", {
 	ProvinceOfOrigin = "Caverns of Chaincolt",
 	Year = 25,
 	DeathYear = 40 + 30 -- died in 40 AD of a violent death, and wasn't old; +30 years
-})
-
-DefineGrandStrategyHero("Thursagan", {
-	Name = "Thursagan",
-	DefaultType = "unit-hero-thursagan",
-	Civilization = "dwarf",
-	ProvinceOfOrigin = "Caverns of Chaincolt",
-	Year = -1,
-	DeathYear = 40 + 10 -- died in 40 AD of a violent death, but was already rather old; +10 years
 })
 
 -- Goblin heroes

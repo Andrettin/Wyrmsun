@@ -524,7 +524,10 @@ DefineFaction("Thuringia", {
 	Type = "polity",
 	Color = "pink",
 	SecondaryColor = "pink",
-	DefaultTier = "duchy" -- Thuringia was a landgraviate in 1378; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 78-79.
+	DefaultTier = "duchy", -- Thuringia was a landgraviate in 1378; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 78-79.
+	Titles = {
+		"monarchy", "duchy", "Landgraviate"
+	}
 })
 
 DefineFaction("Westphalia", {

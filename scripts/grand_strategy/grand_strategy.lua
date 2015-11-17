@@ -543,6 +543,9 @@ function EndTurn()
 	DoProspection()
 	
 	GrandStrategyYear = GrandStrategyYear + 1;
+	if (GrandStrategyYear == 0) then -- the year 0 AD didn't exist
+		GrandStrategyYear = GrandStrategyYear + 1;
+	end
 
 	DoEvents()
 
