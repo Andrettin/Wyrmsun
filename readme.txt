@@ -238,6 +238,8 @@ https://github.com/Andrettin/Wyrmsun
 - Set Modsognir as the Modsogning Clan's ruler in the earliest Nidavellir start date.
 - Set Durstorn as the Norlund Clan's ruler in 1 BC.
 - Set Marbod as the Marcomanni Tribe's ruler in 9 BC.
+- Added two new events for the Asa Tribe about Tror.
+- Fixed bug which caused the "Quit To Menu" button to be available despite being disabled by pressing its hotkey.
 
 -----------------------------------------------------------------------
 - 1.6.2

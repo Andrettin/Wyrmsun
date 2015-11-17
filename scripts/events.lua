@@ -536,11 +536,25 @@ function FlavorDialogueTriggers()
 end
 
 function Event(speaker, event_description, player, options, option_effects, event_icon, event_image, continue_automatically)
-	if (GetThisPlayer() == player and (continue_automatically == nil or continue_automatically == false)) then
-		if not (IsNetworkGame()) then
+	if (
+		(
+			(GrandStrategy and not GameRunning and GameResult == GameNoResult and player == GetPlayerFactionName())
+			or (GameRunning and GetThisPlayer() == player)
+		)
+		and (continue_automatically == nil or continue_automatically == false)
+	) then
+		if (GameRunning and not IsNetworkGame()) then
 			SetGamePaused(true)
+		elseif (GrandStrategy) then
+			GrandStrategyGamePaused = true
 		end
-		local menu = WarGameMenu(panel(5))
+		
+		if (GameRunning) then
+			menu = WarGameMenu(panel(5))
+		else
+			menu = WarGrandStrategyGameMenu(panel(5))
+			menu:setDrawMenusUnder(true)
+		end
 		menu:resize(352, 352)
 
 		if (type(speaker) == "number") then
@@ -553,7 +567,7 @@ function Event(speaker, event_description, player, options, option_effects, even
 		l:setFont(Fonts["game"])
 		l:setSize(324, 208)
 		l:setLineWidth(324)
-		if (event_icon == nil and type(speaker) == "string") then
+		if (event_icon == nil and type(speaker) == "string" and not (GrandStrategy and not GameRunning and GameResult == GameNoResult)) then
 			menu:add(l, 14, 76)
 		else
 			menu:add(l, 14, 112)
@@ -564,6 +578,11 @@ function Event(speaker, event_description, player, options, option_effects, even
 			event_icon = CIcon:Get(GetUnitVariable(speaker, "Icon")).G
 			event_icon:Load()
 			local b = PlayerColorImageWidget(event_icon, GetPlayerData(GetUnitVariable(speaker, "Player"), "Color"))
+			menu:add(b, 153, 48)
+		elseif (GrandStrategy and not GameRunning and GameResult == GameNoResult) then
+			event_icon = CIcon:Get(GetUnitTypeData(GetGrandStrategyHeroUnitType(speaker), "Icon")).G
+			event_icon:Load()
+			local b = PlayerColorImageWidget(event_icon, GetFactionData(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "Color"))
 			menu:add(b, 153, 48)
 		elseif (event_icon ~= nil) then
 			event_icon = CGraphic:New(event_icon)
@@ -588,7 +607,11 @@ function Event(speaker, event_description, player, options, option_effects, even
 
 			menu:addFullButton(_(options[i]), option_hotkey, 176 - (224 / 2), 352 - 40 * (table.getn(options) - (i - 1)),
 				function(s)
-					SetGamePaused(false)
+					if (GameRunning and not IsNetworkGame()) then
+						SetGamePaused(false)
+					elseif (GrandStrategy) then
+						GrandStrategyGamePaused = false
+					end
 					menu:stop()
 					option_effects[i]()
 				end
@@ -598,7 +621,11 @@ function Event(speaker, event_description, player, options, option_effects, even
 		if (table.getn(options) == 1) then -- for events with just one option, allow enter to be used as a way to close the event dialogue
 			menu:addButton("", "return", -1, -1,
 				function(s)
-					SetGamePaused(false)
+					if (GameRunning and not IsNetworkGame()) then
+						SetGamePaused(false)
+					elseif (GrandStrategy) then
+						GrandStrategyGamePaused = false
+					end
 					menu:stop()
 					option_effects[1]()
 				end,
@@ -606,7 +633,11 @@ function Event(speaker, event_description, player, options, option_effects, even
 			)
 		end
 
-		menu:run(false)
+		if (GameRunning) then
+			menu:run(false)
+		else
+			menu:run()
+		end
 	else -- AIs always choose the first option
 --		option_effects[SyncRand(table.getn(option_effects)) + 1]()
 		option_effects[1]()
@@ -626,7 +657,7 @@ function Tip(tip_name, tip_description)
 	
 	local menu
 	
-	if (GrandStrategy == false) then
+	if (GameRunning) then
 		menu = WarGameMenu(panel(2))
 	else
 		menu = WarGrandStrategyGameMenu(panel(2))
@@ -671,7 +702,7 @@ function Tip(tip_name, tip_description)
 		{0, 0}
 	)	
 	
-	if (GrandStrategy == false) then
+	if (GameRunning) then
 		menu:run(false)
 	else
 		menu:run()
@@ -687,8 +718,8 @@ function GenericDialog(title, message, tooltip)
 	
 	local menu
 	
-	if (GrandStrategy == false) then
-		menu = WarGameMenu(panel(1))
+	if (GameRunning) then
+		menu = WarGameMenu(panel(2))
 	else
 		menu = WarGrandStrategyGameMenu(panel(1))
 		menu:setDrawMenusUnder(true)
@@ -729,7 +760,7 @@ function GenericDialog(title, message, tooltip)
 		{0, 0}
 	)	
 	
-	if (GrandStrategy == false) then
+	if (GameRunning) then
 		menu:run(false)
 	else
 		menu:run()

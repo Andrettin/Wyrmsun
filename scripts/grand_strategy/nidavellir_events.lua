@@ -1274,7 +1274,7 @@ local NidavellirEvents = {
 				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", -2)
 			end
 		},
-		OptionTooltips = {"Fight the goblin thieves", "-500 Gold, -1 Prestige"}
+		OptionTooltips = {"Fight the goblin thieves", "-500 Gold\n-1 Prestige"}
 	}
 }
 	

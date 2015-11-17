@@ -218,7 +218,7 @@ local EarthEvents = {
 				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", -1)
 			end
 		},
-		OptionTooltips = {"-100 Gold, -1 Prestige"}
+		OptionTooltips = {"-100 Gold\n-1 Prestige"}
 	},
 	TheUlozhenieLawCode = { -- Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 17.
 		Name = "The Ulozhenie Law Code",
@@ -240,7 +240,7 @@ local EarthEvents = {
 				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "research", -5) -- strengthening of serfdom increases long-term backwardness
 			end
 		},
-		OptionTooltips = {"+500 Gold, -5 Research"}
+		OptionTooltips = {"+500 Gold\n-5 Research"}
 	},
 	CelticAndAntediluvianAntiquities = { -- Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 17.
 		Name = "Celtic and Antediluvian Antiquities",

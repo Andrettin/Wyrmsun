@@ -559,7 +559,7 @@ local NorseEvents = {
 				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "research", -5)
 			end
 		},
-		OptionTooltips = {"+500 Gold, -5 Research"}
+		OptionTooltips = {"+500 Gold\n-5 Research"}
 	},
 	NoblesAcquireLegalJurisdictionPrivilege = { -- Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 20.
 		Name = "Nobles Acquire Legal Jurisdiction Privilege",
@@ -581,7 +581,7 @@ local NorseEvents = {
 				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "research", -5)
 			end
 		},
-		OptionTooltips = {"+500 Gold, -5 Research", ""}
+		OptionTooltips = {"+500 Gold\n-5 Research", ""}
 	},
 	TheLiftingOfTheVornedskabet = { -- Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 20.
 		Name = "The Lifting of the Vornedskabet",
@@ -632,7 +632,7 @@ local NorseEvents = {
 				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "research", -2)
 			end
 		},
-		OptionTooltips = {"-300 Gold, -2 Research"}
+		OptionTooltips = {"-300 Gold\n-2 Research"}
 	}
 }
 	

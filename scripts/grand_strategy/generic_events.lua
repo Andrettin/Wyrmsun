@@ -74,7 +74,7 @@ local GenericEvents = {
 				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "research", 1)
 			end
 		},
-		OptionTooltips = {"+100 Gold, +1 Research"}
+		OptionTooltips = {"+100 Gold\n+1 Research"}
 	},
 	SkilledMasons = {
 		Name = "Skilled Masons",
@@ -102,7 +102,7 @@ local GenericEvents = {
 				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "research", 1)
 			end
 		},
-		OptionTooltips = {"+100 Gold, +1 Research"}
+		OptionTooltips = {"+100 Gold\n+1 Research"}
 	},
 	BuildObservatory = {
 		Name = "Build Observatory?",
@@ -133,7 +133,7 @@ local GenericEvents = {
 			function(s)
 			end
 		},
-		OptionTooltips = {"-500 Gold, +5 Research", ""}
+		OptionTooltips = {"-500 Gold\n+5 Research", ""}
 	},
 	BuildLibrary = {
 		Name = "Build Library?",
@@ -165,7 +165,7 @@ local GenericEvents = {
 			function(s)
 			end			
 		},
-		OptionTooltips = {"-400 Gold, +4 Research", ""}
+		OptionTooltips = {"-400 Gold\n+4 Research", ""}
 	},
 	BuildMonument = {
 		Name = "Build Monument?",
@@ -196,7 +196,7 @@ local GenericEvents = {
 			function(s)
 			end
 		},
-		OptionTooltips = {"-500 Gold, +5 Prestige", ""}
+		OptionTooltips = {"-500 Gold\n+5 Prestige", ""}
 	},
 	ProvinceAssimilates = {
 		Name = "PROVINCE_NAME Assimilates",

@@ -26,6 +26,69 @@
 --
 
 local GermanicEvents = {
+	TrorInheritsHisWeapons = {
+		Name = "Tror Inherits His Weapons",
+		Description = "The young Tror, son of the fair lady Troan, came to these lands ten years ago in exile from the devastated realm of his family. Our chieftain Lorikus took him as a foster-child. Today, the fair-haired Tror - despite his youth - has claimed his father's weapons for himself.",
+		Conditions = function(s)
+			if (
+				EventFaction.Civilization == "germanic"
+				and EventFaction.Name == "Asa Tribe"
+				and GetFactionRuler("germanic", "Asa Tribe") == "Lorikus"
+				and GetProvinceOwner("Astrakhan") == "Asa Tribe"
+				and GrandStrategyHeroIsAlive("Tror")
+			) then
+				return true
+			else
+				return false
+			end
+		end,
+		MinYear = -2990,
+		Options = {"A ~!brave boy!"},
+		OptionEffects = {
+			function(s)
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
+			end
+		},
+		OptionTooltips = {"+1 Prestige"}
+	},
+	LorikusDemise = {
+		Name = "Lorikus' Demise",
+		Description = "The handsome young Tror has grown to his full measure of strength. Conscious of his might and discontent with his fate as a subject of Lorikus' family, the ambitious Tror has slain the chieftain, taking his place!",
+		RequiredEvents = {
+			TrorInheritsHisWeapons = true
+		},
+		Conditions = function(s)
+			if (
+				EventFaction.Civilization == "germanic"
+				and EventFaction.Name == "Asa Tribe"
+				and GetFactionRuler("germanic", "Asa Tribe") == "Lorikus"
+				and GetProvinceOwner("Astrakhan") == "Asa Tribe"
+				and GrandStrategyHeroIsAlive("Tror")
+			) then
+				return true
+			else
+				return false
+			end
+		end,
+		MinYear = -2988,
+		Options = {"What will the ~!future hold?"},
+		OptionEffects = {
+			function(s)
+				Event(
+					"Tror",
+					"My grandfather was a king beyond these lands... And though my family has been disgraced, we were born to rule!",
+					"Asa Tribe",
+					{"~!OK"},
+					{function(s)
+						SetFactionRuler("germanic", "Asa Tribe", "Tror")
+						KillGrandStrategyHero("Lorikus")
+					end}
+				)
+				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 3)
+			end
+		},
+		OptionTooltips = {"+3 Prestige\nChieftain Lorikus dies\nTror becomes our chieftain"}
+	},
 	OnTheVanaquisl = {
 		Name = "On the Vanaquisl",
 		Description = "Our people hunger for new land: the steppes we live in are no longer enough for our sustenance. Neighboring us are the Vana people, and adding their lands to our own may well solve our dilemma. Shall we attack them?",
@@ -35,6 +98,7 @@ local GermanicEvents = {
 				and EventFaction.Name == "Asa Tribe"
 				and GetProvinceOwner("Astrakhan") == EventFaction.Name
 				and GetProvinceOwner("Don") == "Vana Tribe"
+				and GetFactionRuler(EventFaction.Civilization, EventFaction.Name) ~= "Lorikus" -- only begin the migration with Tror and his descendants
 				and GetProvinceUnitQuantity("Astrakhan", "unit-germanic-warrior") >= 8 -- event only happens if player has gathered enough warriors for a raid
 				and FactionHasBorderWith(Factions.AsaTribe, Factions.VanaTribe)
 				and SyncRand(100) < 33
@@ -445,7 +509,7 @@ local GermanicEvents = {
 				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "gold", -300) -- cost of the land grant
 			end
 		},
-		OptionTooltips = {"-300 Gold, +3 Prestige"}
+		OptionTooltips = {"-300 Gold\n+3 Prestige"}
 	},
 	AsaLawgiving = { -- Source: Snorri Sturlson, "Heimskringla", 1844.
 		Name = "Asa Lawgiving",
@@ -545,7 +609,7 @@ local GermanicEvents = {
 				FormFactionLua(EventFaction, Factions.YnglingTribe)
 			end
 		},
-		OptionTooltips = {"Form the Yngling Tribe", "+250 Gold, +1 Prestige"}
+		OptionTooltips = {"Form the Yngling Tribe\n+250 Gold\n+1 Prestige"}
 	},
 	TheCurvedSwords = { -- Source: http://natmus.dk/en/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-roerby-swords/
 		Name = "The Curved Swords",
@@ -840,7 +904,7 @@ local GermanicEvents = {
 				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
 			end
 		},
-		OptionTooltips = {"+1 Research, +1 Prestige"}
+		OptionTooltips = {"+1 Research\n+1 Prestige"}
 	}
 }
 	
