@@ -17412,6 +17412,7 @@ end
 
 if (GrandStrategyYear >= -2770) then -- estimated date
 	KillGrandStrategyHero("Voden")
+	KillGrandStrategyHero("Frigida")
 	KillGrandStrategyHero("Gylve")
 	CreateGrandStrategyHero("Saeming")
 	GrandStrategyEvents.YngveChieftainOfTheSwedes = nil
@@ -18297,6 +18298,7 @@ end
 if (GrandStrategyYear >= -71) then -- The Suebic king Ariovistus enters Gaul at the request of the Arverni and the Sequani to fight the Aedui in 71 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 230.
 	-- since the Suebi were in existence then, they were also probably already settled where Tacitus had described the Suebic Semnones as living in, since the other territories settled by Suebic tribes (Bohemia and Moravia) were only conquered later on
 	SetProvinceOwner("Brandenburg", "teuton", "Suebi Tribe")
+	SetFactionRuler("teuton", "Suebi Tribe", "Ariovistus")
 	
 	SetProvinceOwner("Burgundy", "celt", "Aedui Tribe") -- Aedui inhabited modern Bourgogne; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 	SetProvinceCivilization("Burgundy", "celt")
@@ -18346,6 +18348,7 @@ if (GrandStrategyYear >= -58) then -- in 58 BC Caesar fought Ariovistus' Suebi a
 	GrandStrategyEvents.AskRomeForHelp = nil
 	GrandStrategyEvents.DivitiacusPleaForAssistance = nil
 	SetProvinceOwner("Alsace", "", "")
+	KillGrandStrategyHero("Ariovistus")
 	
 	-- gold (northern) Gallic currency, the gold staters, in existence when Caesar began his campaigns in Gaul; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, pp. 190-191.
 --	SetFactionTechnology("celt", "Aedui Tribe", "upgrade-teuton-coinage", true)

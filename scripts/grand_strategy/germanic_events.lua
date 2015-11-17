@@ -34,7 +34,6 @@ local GermanicEvents = {
 				EventFaction.Civilization == "germanic"
 				and EventFaction.Name == "Asa Tribe"
 				and GetFactionRuler("germanic", "Asa Tribe") == "Lorikus"
-				and GetProvinceOwner("Astrakhan") == "Asa Tribe"
 --				and FactionHasHero("germanic", "Asa Tribe", "Tror")
 				and GrandStrategyHeroIsAlive("Tror")
 			) then
@@ -63,7 +62,6 @@ local GermanicEvents = {
 				EventFaction.Civilization == "germanic"
 				and EventFaction.Name == "Asa Tribe"
 				and GetFactionRuler("germanic", "Asa Tribe") == "Lorikus"
-				and GetProvinceOwner("Astrakhan") == "Asa Tribe"
 --				and FactionHasHero("germanic", "Asa Tribe", "Tror")
 				and GrandStrategyHeroIsAlive("Tror")
 			) then

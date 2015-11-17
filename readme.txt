@@ -240,6 +240,8 @@ https://github.com/Andrettin/Wyrmsun
 - Set Marbod as the Marcomanni Tribe's ruler in 9 BC.
 - Added two new events for the Asa Tribe about Tror.
 - Fixed bug which caused the "Quit To Menu" button to be available despite being disabled by pressing its hotkey.
+- Set Ariovistus as the Suebi Tribe's ruler in 71 BC.
+- Set Glonoin as the Shorbear Clan's ruler in 1 BC.
 
 -----------------------------------------------------------------------
 - 1.6.2

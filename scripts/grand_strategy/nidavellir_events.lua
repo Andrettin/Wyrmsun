@@ -876,7 +876,8 @@ local NidavellirEvents = {
 				ChangeProvinceUnitQuantity("Southern Tunnels", "unit-dwarven-steelclad", -1) -- Kalnar
 				ChangeProvinceUnitQuantity("Southern Tunnels", "unit-dwarven-thane", -3) -- Lyndar, Gaenlar and Glinan
 				SetProvinceUnitQuantity("Shorbear Hills", "unit-dwarven-axefighter", 0)
-				SetProvinceUnitQuantity("Shorbear Hills", "unit-dwarven-thane", 0)
+				SetProvinceUnitQuantity("Shorbear Hills", "unit-dwarven-thane", 0) -- Glonoin
+				KillGrandStrategyHero("Glonoin")
 				
 				SetProvinceHero("Caverns of Chaincolt", "Durstorn", "unit-hero-durstorn", 0) -- Durstorn is killed in a conflict between him and other members of the clan
 				GrandStrategyEvents.DurstornDies = nil

@@ -459,7 +459,7 @@ DefineGrandStrategyHero("Skjöldr", { -- Source: Snorri Sturlson, "The Prose Edd
 	Mother = "Frígídá" -- presumably, since she was Vóden's wife
 })
 
-DefineGrandStrategyHero("Fridleifr", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
+DefineGrandStrategyHero("Fridleif Skjoldung", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
 	Name = "Fridleifr",
 	Dynasty = "Skjoldung",
 	Gender = "male",
@@ -484,6 +484,16 @@ DefineGrandStrategyHero("Sæmingr", { -- Source: Snorri Sturlson, "Heimskringla"
 })
 
 -- Teuton heroes
+
+DefineGrandStrategyHero("Ariovistus", {
+	Name = "Ariovistus",
+	Gender = "male",
+	DefaultType = "unit-suebi-swordsman",
+	Civilization = "teuton",
+	ProvinceOfOrigin = "Brandenburg",
+	Year = -71, -- Ariovistus invades Gaul in 71 BC
+	DeathYear = -58 -- Ariovistus beaten by Caesar in 58 BC
+})
 
 DefineGrandStrategyHero("Marbod", {
 	Name = "Marbod",
@@ -541,6 +551,16 @@ DefineGrandStrategyHero("Durstorn", {
 	DeathYear = 35 + 15 -- died in 35 AD of a violent death, but was already somewhat old; +15 years
 })
 
+DefineGrandStrategyHero("Glonoin", {
+	Name = "Glonoin",
+	Gender = "male",
+	DefaultType = "unit-dwarven-thane",
+	Civilization = "dwarf",
+	ProvinceOfOrigin = "Shorbear Hills",
+	Year = -1,
+	DeathYear = 29 + 15 -- Shorbear Hold conquered in 29 AD by Rugnur's and Durstorn's Clan
+})
+
 DefineGrandStrategyHero("Rugnur", {
 	Name = "Rugnur",
 	DefaultType = "unit-hero-rugnur",
@@ -548,6 +568,18 @@ DefineGrandStrategyHero("Rugnur", {
 	ProvinceOfOrigin = "Caverns of Chaincolt",
 	Year = 25,
 	DeathYear = 40 + 30 -- died in 40 AD of a violent death, and wasn't old; +30 years
+})
+
+-- Gnome heroes
+
+DefineGrandStrategyHero("Pypo", {
+	Name = "Pypo",
+	Gender = "male",
+	DefaultType = "unit-gnomish-recruit",
+	Civilization = "gnome",
+	ProvinceOfOrigin = "Brown Hills",
+	Year = -1,
+	DeathYear = 40 -- last we hear of him
 })
 
 -- Goblin heroes

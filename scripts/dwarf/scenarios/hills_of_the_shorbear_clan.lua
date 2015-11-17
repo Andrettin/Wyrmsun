@@ -615,6 +615,9 @@ AddTrigger(
 	end,
 	function()
 		RemovePlayerObjective(player, "- Defeat Glonoin, the Shorbear Clan leader")
+		if (GrandStrategy) then
+			KillGrandStrategyHero("Glonoin")
+		end
 		Event(
 			FindHero("Durstorn"),
 			"Ha! Now we can get those tools easily, and go back to our own caves.",

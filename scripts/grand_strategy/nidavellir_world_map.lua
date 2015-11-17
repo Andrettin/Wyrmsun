@@ -927,6 +927,7 @@ if (GrandStrategyYear >= -1) then
 	SetProvinceSettlementBuilding("Shorbear Hills", "unit-dwarven-smithy", true) -- renowned skilled crafters
 	SetProvinceUnitQuantity("Shorbear Hills", "unit-goblin-spearman", 0)
 	SetProvinceUnitQuantity("Shorbear Hills", "unit-dwarven-thane", 1) -- Glonoin
+	SetFactionRuler("dwarf", "Shorbear Clan", "Glonoin")
 	SetProvinceUnitQuantity("Shorbear Hills", "unit-dwarven-miner", 4)
 	SetWorldMapResourceProspected("gold", 34, 14, true)
 	SetProvinceOwner("Southern Tunnels", "dwarf", "Shinsplitter Clan")
@@ -968,6 +969,8 @@ if (GrandStrategyYear >= -1) then
 	SetFactionRuler("dwarf", "Norlund Clan", "Durstorn")
 	SetProvinceHero("Caverns of Chaincolt", "Baglur", "unit-hero-baglur", 2) -- Baglur was already present when the conflict with Pypo over the Brown Hills happened
 	SetProvinceHero("Caverns of Chaincolt", "Thursagan", "unit-hero-thursagan", 2) -- Thursagan could be in the Caverns of Chaincolt at this time
+	
+	SetFactionRuler("gnome", "Untersberg", "Pypo")
 end
 
 if (GrandStrategyYear >= 25) then -- at this time Rugnur was already in charge of the outpost in the Chaincolt Foothills, Baglur was at the Caverns of Chaincolt gate, Thursagan was living in the Northern Wastelands and Durstorn was the chief of the Norlund clan
@@ -1026,6 +1029,7 @@ if (GrandStrategyYear >= 29) then
 	SetProvinceHero("Shorbear Hills", "Durstorn", "unit-hero-durstorn", 2)
 	SetProvinceHero("Shorbear Hills", "Thursagan", "unit-hero-thursagan", 2)
 	--]]
+	KillGrandStrategyHero("Glonoin")
 
 	SetProvinceSettlementBuilding("Shorbear Hills", "unit-dwarven-lumber-mill", true) -- had capability to train scouts by then
 end
@@ -1058,6 +1062,7 @@ if (GrandStrategyYear >= 40) then
 	ChangeFactionResource("gnome", "Untersberg", "gold", -2500) -- payment for the crafting of the Scepter
 	SetProvinceOwner("Shorbear Hills", "dwarf", "Norlund Clan") -- Shorbear Hold ceded by the Shinsplitters to the Norlunds and peace established
 	SetFactionDiplomacyState("dwarf", "Norlund Clan", "dwarf", "Shinsplitter Clan", "peace")
+	KillGrandStrategyHero("Pypo")
 end
 
 if (GrandStrategyYear >= 389) then
