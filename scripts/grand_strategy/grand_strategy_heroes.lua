@@ -290,6 +290,163 @@ DefineGrandStrategyHero("Yngve", { -- Source: Snorri Sturlson, "Heimskringla", 1
 	Mother = "Frígídá" -- presumably, since she was Vóden's wife
 })
 
+DefineGrandStrategyHero("Vegdeg", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
+	Name = "Vegdeg", -- in the Prose Edda, Vegdeg was Vóden's son who was set to rule over East Saxland; described as a "mighty king"; Vóden's first son (presumably)
+	Gender = "male",
+	DefaultType = "unit-germanic-warrior",
+	Civilization = "germanic",
+	ProvinceOfOrigin = "Astrakhan",
+	Year = -2800,
+	DeathYear = -2800 + (30 * 2),
+	Father = "Vóden",
+	Mother = "Frígídá" -- presumably, since she was Vóden's wife
+})
+
+DefineGrandStrategyHero("Vitgils", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
+	Name = "Vitgils",
+	Gender = "male",
+	DefaultType = "unit-germanic-warrior",
+	Civilization = "germanic",
+	ProvinceOfOrigin = "Jutland", -- his father was in the Prose Edda set to rule over East Saxland; but since that region wasn't settled by Germanic peoples yet, place Vegdeg's family in the region settled by Germanics which would later give rise to West Germanic culture (Jutland)
+	Year = -2800 + (30 * 2),
+	DeathYear = -2800 + (30 * 3),
+	Father = "Vegdeg"
+})
+
+DefineGrandStrategyHero("Vitta", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
+	Name = "Vitta",
+	Gender = "male",
+	DefaultType = "unit-germanic-warrior",
+	Civilization = "germanic",
+	ProvinceOfOrigin = "Jutland",
+	Year = -2800 + (30 * 3),
+	DeathYear = -2800 + (30 * 4),
+	Father = "Vitgils"
+})
+
+DefineGrandStrategyHero("Heingistr", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
+	Name = "Heingistr",
+	Gender = "male",
+	DefaultType = "unit-germanic-warrior",
+	Civilization = "germanic",
+	ProvinceOfOrigin = "Jutland",
+	Year = -2800 + (30 * 4),
+	DeathYear = -2800 + (30 * 5),
+	Father = "Vitta"
+})
+
+DefineGrandStrategyHero("Sigarr", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
+	Name = "Sigarr",
+	Gender = "male",
+	DefaultType = "unit-germanic-warrior",
+	Civilization = "germanic",
+	ProvinceOfOrigin = "Jutland",
+	Year = -2800 + (30 * 3),
+	DeathYear = -2800 + (30 * 4),
+	Father = "Vitgils"
+})
+
+DefineGrandStrategyHero("Svebdeg", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
+	Name = "Svebdeg", -- also known as Svipdagr
+	Gender = "male",
+	DefaultType = "unit-germanic-warrior",
+	Civilization = "germanic",
+	ProvinceOfOrigin = "Jutland",
+	Year = -2800 + (30 * 4),
+	DeathYear = -2800 + (30 * 5),
+	Father = "Sigarr"
+})
+
+DefineGrandStrategyHero("Beldeg", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, pp. 7-8.
+	Name = "Beldeg", -- euhemerized version of Baldr; in the Prose Edda, was a son of Odin set to rule over Westphalia; Vóden's second son
+	Gender = "male",
+	DefaultType = "unit-germanic-warrior",
+	Civilization = "germanic",
+	ProvinceOfOrigin = "Astrakhan",
+	Year = -2800,
+	DeathYear = -2800 + (30 * 2),
+	Father = "Vóden",
+	Mother = "Frígídá" -- presumably, since she was Vóden's wife
+})
+
+DefineGrandStrategyHero("Brandr", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
+	Name = "Brandr",
+	Gender = "male",
+	DefaultType = "unit-germanic-warrior",
+	Civilization = "germanic",
+	ProvinceOfOrigin = "Jutland", -- his father was in the Prose Edda set to rule over Westphalia; but since that region wasn't settled by Germanic peoples yet, place Beldeg's family in the region settled by Germanics which would later give rise to West Germanic culture (Jutland)
+	Year = -2800 + (30 * 2),
+	DeathYear = -2800 + (30 * 3),
+	Father = "Beldeg"
+})
+
+DefineGrandStrategyHero("Frjódigar", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
+	Name = "Frjódigar", -- also known as Fródi
+	Gender = "male",
+	DefaultType = "unit-germanic-warrior",
+	Civilization = "germanic",
+	ProvinceOfOrigin = "Jutland",
+	Year = -2800 + (30 * 3),
+	DeathYear = -2800 + (30 * 4),
+	Father = "Brandr"
+})
+
+DefineGrandStrategyHero("Freóvin", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
+	Name = "Freóvin",
+	Gender = "male",
+	DefaultType = "unit-germanic-warrior",
+	Civilization = "germanic",
+	ProvinceOfOrigin = "Jutland",
+	Year = -2800 + (30 * 4),
+	DeathYear = -2800 + (30 * 5),
+	Father = "Frjódigar"
+})
+
+DefineGrandStrategyHero("Uvigg", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
+	Name = "Uvigg",
+	Gender = "male",
+	DefaultType = "unit-germanic-warrior",
+	Civilization = "germanic",
+	ProvinceOfOrigin = "Jutland",
+	Year = -2800 + (30 * 5),
+	DeathYear = -2800 + (30 * 6),
+	Father = "Freóvin"
+})
+
+DefineGrandStrategyHero("Gevis", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
+	Name = "Gevis", -- also known as Gave
+	Gender = "male",
+	DefaultType = "unit-germanic-warrior",
+	Civilization = "germanic",
+	ProvinceOfOrigin = "Jutland",
+	Year = -2800 + (30 * 6),
+	DeathYear = -2800 + (30 * 7),
+	Father = "Uvigg"
+})
+
+DefineGrandStrategyHero("Sigi", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
+	Name = "Sigi", -- in the Prose Edda, was a son of Odin set to rule over Frankland; Vóden's third son
+	Gender = "male",
+	DefaultType = "unit-germanic-warrior",
+	Civilization = "germanic",
+	ProvinceOfOrigin = "Astrakhan",
+	Year = -2800,
+	DeathYear = -2800 + (30 * 2),
+	Father = "Vóden",
+	Mother = "Frígídá" -- presumably, since she was Vóden's wife
+})
+
+DefineGrandStrategyHero("Rerir", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
+	Name = "Rerir", -- ancestor of the Völsungs
+	Gender = "male",
+	DefaultType = "unit-germanic-warrior",
+	Civilization = "germanic",
+	ProvinceOfOrigin = "Jutland", -- his father was in the Prose Edda set to rule over Frankland; but since that region wasn't settled by Germanic peoples yet, place Sigi's family in the region settled by Germanics which would later give rise to West Germanic culture (Jutland)
+	Year = -2800 + (30 * 2),
+	DeathYear = -2800 + (30 * 3),
+	Father = "Sigi"
+})
+
 DefineGrandStrategyHero("Skjöldr", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
 	Name = "Skjöldr",
 	Gender = "male",
@@ -298,18 +455,6 @@ DefineGrandStrategyHero("Skjöldr", { -- Source: Snorri Sturlson, "The Prose Edd
 	ProvinceOfOrigin = "Astrakhan",
 	Year = -2800,
 	DeathYear = -2800 + (30 * 2), -- 30 years is the default lifetime of a hero after having risen to prominence
-	Father = "Vóden",
-	Mother = "Frígídá" -- presumably, since she was Vóden's wife
-})
-
-DefineGrandStrategyHero("Saeming", { -- Source: Snorri Sturlson, "Heimskringla", 1844.
-	Name = "Saeming",
-	Gender = "male",
-	DefaultType = "unit-germanic-warrior",
-	Civilization = "germanic",
-	ProvinceOfOrigin = "Sweden",
-	Year = -2800 + (30 * 1),
-	DeathYear = -2800 + (30 * 2),
 	Father = "Vóden",
 	Mother = "Frígídá" -- presumably, since she was Vóden's wife
 })
@@ -324,6 +469,18 @@ DefineGrandStrategyHero("Fridleifr", { -- Source: Snorri Sturlson, "The Prose Ed
 	Year = -2800 + (30 * 2),
 	DeathYear = -2800 + (30 * 3),
 	Father = "Skjöldr"
+})
+
+DefineGrandStrategyHero("Sæmingr", { -- Source: Snorri Sturlson, "Heimskringla", 1844.
+	Name = "Sæmingr", -- Vóden's son set to rule over Norway
+	Gender = "male",
+	DefaultType = "unit-germanic-warrior",
+	Civilization = "germanic",
+	ProvinceOfOrigin = "Sweden",
+	Year = -2800 + (30 * 1),
+	DeathYear = -2800 + (30 * 2),
+	Father = "Vóden",
+	Mother = "Frígídá" -- presumably, since she was Vóden's wife
 })
 
 -- Teuton heroes

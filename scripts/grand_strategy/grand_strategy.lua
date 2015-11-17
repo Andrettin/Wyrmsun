@@ -3463,7 +3463,7 @@ end
 
 function ClearGrandStrategyVariables()
 	GrandStrategy = false
-	GrandStrategyEventMap = false	
+	GrandStrategyEventMap = false
 	GrandStrategyBattle = false	
 	WorldMapOffsetX = 0
 	WorldMapOffsetY = 0

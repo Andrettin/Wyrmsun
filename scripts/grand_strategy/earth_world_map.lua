@@ -17365,6 +17365,10 @@ if (GrandStrategyYear >= -2800) then -- establishment of the Single Grave Cultur
 	-- Funnel Beaker culture ends in Zealand in 2800 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 38.
 
 	-- in the Ynglinga saga, "Odin's people", the Asa, settle Scandinavia in a manner not too dissimilar from what archaeological findings tell us of Indo-European settlement in the region; thus the name "Asa Tribe" is used here to denote the Indo-European-speaking peoples who settled in Scandinavia, and were the precursors of the Germanic peoples
+	CreateGrandStrategyHero("Vegdeg")
+	CreateGrandStrategyHero("Beldeg")
+	CreateGrandStrategyHero("Sigi")
+	
 	AcquireFactionTechnologies("germanic", "Asa Tribe", "germanic", "Skjoldung Tribe")
 	SetProvinceOwner("Jutland", "germanic", "Skjoldung Tribe")
 	SetProvinceCivilization("Jutland", "germanic")
@@ -17419,18 +17423,57 @@ if (GrandStrategyYear >= -2770) then -- estimated date
 end
 
 if (GrandStrategyYear >= -2740) then -- estimated date
+	KillGrandStrategyHero("Vegdeg")
+	CreateGrandStrategyHero("Vitgils")
+	KillGrandStrategyHero("Beldeg")
+	CreateGrandStrategyHero("Brand")
+	KillGrandStrategyHero("Sigi")
+	CreateGrandStrategyHero("Rerir")
+
 	KillGrandStrategyHero("Skjold")
 	SetFactionRuler("germanic", "Skjoldung Tribe", "Fridleif Skjoldung")
+	
 	KillGrandStrategyHero("Yngve")
 	KillGrandStrategyHero("Saeming")
 end
 
 if (GrandStrategyYear >= -2710) then
+	KillGrandStrategyHero("Vitgils")
+	CreateGrandStrategyHero("Vitta")
+	CreateGrandStrategyHero("Sigar")
+	KillGrandStrategyHero("Brand")
+	KillGrandStrategyHero("Rerir")
+	CreateGrandStrategyHero("Frjodigar")
 	KillGrandStrategyHero("Fridleif Skjoldung")
 end
 
 if (GrandStrategyYear >= -2700) then
 	-- Egyptian pyramids built between 2700 and 2500 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 44.
+end
+
+if (GrandStrategyYear >= -2680) then
+	KillGrandStrategyHero("Vitta")
+	CreateGrandStrategyHero("Heingist")
+	KillGrandStrategyHero("Sigar")
+	CreateGrandStrategyHero("Svebdeg")
+	KillGrandStrategyHero("Frjodigar")
+	CreateGrandStrategyHero("Freovin")
+end
+
+if (GrandStrategyYear >= -2650) then
+	KillGrandStrategyHero("Heingist")
+	KillGrandStrategyHero("Svebdeg")
+	KillGrandStrategyHero("Freovin")
+	CreateGrandStrategyHero("Uvigg")
+end
+
+if (GrandStrategyYear >= -2620) then
+	KillGrandStrategyHero("Uvigg")
+	CreateGrandStrategyHero("Gevis")
+end
+
+if (GrandStrategyYear >= -2590) then
+	KillGrandStrategyHero("Gevis")
 end
 
 if (GrandStrategyYear >= -2500) then
