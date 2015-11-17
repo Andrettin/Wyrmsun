@@ -233,6 +233,11 @@ https://github.com/Andrettin/Wyrmsun
 - Dwarven provinces now start with 4 workers.
 - Fixed issue with "The Necklace of the Brisings" mission event which caused the enemy to be able to build, and to start with goblin infantry instead of dwarves.
 - Fixed tactical battle crash.
+- Factions can now have rulers, who affect administrative efficiency (and thus resource/research production). To view your faction's ruler and the related bonus, click the main hall (or stronghold), and then the "Show Ruler" button. When rulers die, they are succeeded by a child of theirs (if the faction is a tribe or if it is a monarchical polity), or (in the case of republics or tribal/monarchical factions with no heirs) by a chosen character living in the faction's borders.
+- Added a succession of mythical Germanic rulers, from the earliest start date to the settlement of Scandinavia.
+- Set Modsognir as the Modsogning Clan's ruler in the earliest Nidavellir start date.
+- Set Durstorn as the Norlund Clan's ruler in 1 BC.
+- Set Marbod as the Marcomanni Tribe's ruler in 9 BC.
 
 -----------------------------------------------------------------------
 - 1.6.2
