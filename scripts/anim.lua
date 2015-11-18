@@ -211,7 +211,7 @@ SuebiShieldAnimation = {
 	},
 	{
 		"frame", 12,
-		"overlay-frame", 12
+		"overlay-frame", 2
 	},
 	{
 		"frame", 13,
@@ -241,7 +241,7 @@ SuebiShieldAnimation = {
 	},
 	{
 		"frame", 18,
-		"overlay-frame", 2,
+		"overlay-frame", 27,
 		"x-offset", 5,
 		"y-offset", 3
 	},
@@ -286,7 +286,7 @@ SuebiShieldAnimation = {
 	},
 	{
 		"frame", 27,
-		"overlay-frame", 2
+		"overlay-frame", 27
 	},
 	{
 		"frame", 28,
@@ -308,11 +308,11 @@ SuebiShieldAnimation = {
 	},
 	{
 		"frame", 32,
-		"overlay-frame", 2
+		"overlay-frame", 27
 	},
 	{
 		"frame", 33,
-		"overlay-frame", 2,
+		"overlay-frame", 27,
 		"x-offset", 5,
 		"y-offset", 1
 	},
@@ -332,7 +332,7 @@ SuebiShieldAnimation = {
 	},
 	{
 		"frame", 37,
-		"overlay-frame", 2,
+		"overlay-frame", 27,
 		"y-offset", 1
 	},
 	{
@@ -355,7 +355,7 @@ SuebiShieldAnimation = {
 	},
 	{
 		"frame", 42,
-		"overlay-frame", 12,
+		"overlay-frame", 2,
 		"y-offset", 1
 	},
 	{

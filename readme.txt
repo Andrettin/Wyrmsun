@@ -228,6 +228,10 @@ https://github.com/Andrettin/Wyrmsun
 - 1.7.1
 -----------------------------------------------------------------------
 
+* Units
+- The Germanic Skutan is now drawn in layers.
+- Improvement to the Suebi Krieger's east/west walk animations.
+
 -----------------------------------------------------------------------
 - 1.7.0
 -----------------------------------------------------------------------
