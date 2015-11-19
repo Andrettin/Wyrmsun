@@ -416,7 +416,7 @@ DefineUnitType("unit-yale", { Name = "Yale",
 	Sounds = {
 		"selected", "yale-selected",
 		"acknowledge", "yale-acknowledge",
-		"idle", "yale-selected",
+		"idle", "yale-acknowledge",
 		"ready", "yale-selected",
 --		"help", "critter-help",
 		"dead", "yale-dead",
