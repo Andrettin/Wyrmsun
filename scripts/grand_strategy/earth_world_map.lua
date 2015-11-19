@@ -10414,7 +10414,7 @@ SetWorldMapTileTerrain(522, 95, plains_id)
 SetWorldMapTileTerrain(522, 96, water_id)
 SetWorldMapTileTerrain(522, 97, water_id)
 SetWorldMapTileTerrain(522, 98, water_id)
-SetWorldMapTileTerrain(522, 99, water_id)
+SetWorldMapTileTerrain(522, 99, plains_id) -- Bornholm
 SetWorldMapTileTerrain(522, 100, water_id)
 SetWorldMapTileTerrain(522, 101, water_id)
 SetWorldMapTileTerrain(522, 102, plains_id)
@@ -17257,6 +17257,8 @@ if (GrandStrategyYear >= -3000) then -- around this time Gylve or his ancestors 
 	CreateGrandStrategyHero("Lora")
 	CreateGrandStrategyHero("Troan")
 	CreateGrandStrategyHero("Tror") -- Trór born
+	
+	-- The Zodiac was invented around 3000 BC; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 5.
 end
 
 if (GrandStrategyYear >= -2990) then
@@ -17479,10 +17481,20 @@ end
 
 if (GrandStrategyYear >= -2500) then
 	-- Plowing well-disseminated in Europe by 2500 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 329.
+	
+	-- Around 2500 BC the star Thuban in the constellation of Draco was the pole star; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 5.
 end
 
 if (GrandStrategyYear >= -2400) then
 	-- Corded Ware culture (neolithic) ends in Zealand in 2400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 38.
+end
+
+if (GrandStrategyYear >= -2140) then
+	-- In 2160 BC the Spring equinox changed from Taurus to Aries; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 5.
+end
+
+if (GrandStrategyYear >= -2140) then
+	-- In 2140 BC the star Polaris (in Little Dipper) became the pole star; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 5.
 end
 
 if (GrandStrategyYear >= -2000) then
@@ -17782,6 +17794,8 @@ if (GrandStrategyYear >= -600) then -- Jastorf culture dates from 600 BC, and en
 	GrandStrategyEvents.VegdegsKingdom = nil
 	GrandStrategyEvents.BeldegsLands = nil
 	GrandStrategyEvents.SigisLands = nil
+	
+	-- Iron-working begins being practiced by the people of the Jastorf culture, south of the Elbe and north of the Weser, between 600 and 300 BC; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
 	
 	-- Late Hallstatt in West-Central Europe between 600 and 480 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 24.
 	
@@ -18260,6 +18274,12 @@ if (GrandStrategyYear >= -191) then -- Cisalpine Gaul acquired by Rome in 191 BC
 	SetProvinceUnitQuantity("Venetia", "unit-germanic-warrior", 0)
 end
 
+if (GrandStrategyYear >= -175) then
+	-- Huns defeated the Massagetae in 175 BC; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 5.
+	
+	-- Iazyges found a kingdom after 175 BC; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 5.
+end
+
 if (GrandStrategyYear >= -154) then -- Liguria acquired by Rome in 154 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	SetProvinceOwner("Liguria", "latin", "Rome")
 	SetProvinceSettlementBuilding("Liguria", "unit-teuton-town-hall", true)
@@ -18509,6 +18529,10 @@ if (GrandStrategyYear >= 19) then
 	SetProvinceHero("Bohemia", "Marbod", "unit-hero-marbod", 0)
 end
 
+if (GrandStrategyYear >= 20) then
+	-- Tiberius placed the Iazyges (as Roman allies) between the Danube and the Tisa around 20 AD; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
+end
+
 if (GrandStrategyYear >= 28) then -- estimated date
 	GrandStrategyEvents.SwegdesJourney = nil
 end
@@ -18521,6 +18545,10 @@ end
 if (GrandStrategyYear >= 43) then
 	SetProvinceOwner("England", "latin", "Rome")  -- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	SetProvinceOwner("Rhodes", "latin", "Rome")  -- Rhodes acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+end
+
+if (GrandStrategyYear >= 50) then
+	-- By 50 AD the greater part of the Sarmatians lived between the Tisa and the Danube; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 5.
 end
 
 if (GrandStrategyYear >= 53) then -- estimated date
@@ -18581,10 +18609,52 @@ end
 
 if (GrandStrategyYear >= 166) then
 	-- Army of 6,000 allied Marcomanni, Lombards and Obii raid the Romans in 166-167 AD; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 231.
+	
+	-- The Iazyges were allied with the Marcomanni in the Marcomannic War of 166/167-175 AD; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
 end
 
 if (GrandStrategyYear >= 170) then
 	GrandStrategyEvents.TheSackOfIuvavum = nil
+end
+
+if (GrandStrategyYear >= 175) then
+	-- In 175 AD the Romans sent 5,500 Iazyges to Britain, and Marcomanni, Quadi and Nuristae cavalry to Syria; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
+end
+
+if (GrandStrategyYear >= 177) then
+	-- The Iazyges were allied with the Marcomanni in the Marcomannic War of 177-180 AD; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
+end
+
+if (GrandStrategyYear >= 180) then
+	-- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
+	SetFactionTechnology("goth", "Bastarnae Tribe", "upgrade-teuton-spatha", true)
+	SetFactionTechnology("goth", "Burgundian Tribe", "upgrade-teuton-spatha", true)
+	SetFactionTechnology("goth", "Goth Tribe", "upgrade-teuton-spatha", true)
+	SetFactionTechnology("goth", "Herulian Tribe", "upgrade-teuton-spatha", true)
+	SetFactionTechnology("goth", "Rugian Tribe", "upgrade-teuton-spatha", true)
+	SetFactionTechnology("goth", "Silingae Tribe", "upgrade-teuton-spatha", true)
+	SetFactionTechnology("goth", "Turcilingian Tribe", "upgrade-teuton-spatha", true)
+	SetFactionTechnology("goth", "Vandal Tribe", "upgrade-teuton-spatha", true)
+	SetFactionTechnology("norse", "Swede Tribe", "upgrade-teuton-spatha", true)
+	SetFactionTechnology("teuton", "Ampsivarii Tribe", "upgrade-teuton-spatha", true)
+	SetFactionTechnology("teuton", "Angle Tribe", "upgrade-teuton-spatha", true)
+	SetFactionTechnology("teuton", "Batavian Tribe", "upgrade-teuton-spatha", true)
+	SetFactionTechnology("teuton", "Chamavi Tribe", "upgrade-teuton-spatha", true)
+	SetFactionTechnology("teuton", "Chatti Tribe", "upgrade-teuton-spatha", true)
+	SetFactionTechnology("teuton", "Charude Tribe", "upgrade-teuton-spatha", true)
+	SetFactionTechnology("teuton", "Chauci Tribe", "upgrade-teuton-spatha", true)
+	SetFactionTechnology("teuton", "Cherusci Tribe", "upgrade-teuton-spatha", true)
+	SetFactionTechnology("teuton", "Frank Tribe", "upgrade-teuton-spatha", true)
+	SetFactionTechnology("teuton", "Frisian Tribe", "upgrade-teuton-spatha", true)
+	SetFactionTechnology("teuton", "Hermunduri Tribe", "upgrade-teuton-spatha", true)
+	SetFactionTechnology("teuton", "Marcomanni Tribe", "upgrade-teuton-spatha", true)
+	SetFactionTechnology("teuton", "Lombard Tribe", "upgrade-teuton-spatha", true)
+	SetFactionTechnology("teuton", "Quadi Tribe", "upgrade-teuton-spatha", true)
+	SetFactionTechnology("teuton", "Saxon Tribe", "upgrade-teuton-spatha", true)
+	SetFactionTechnology("teuton", "Semnone Tribe", "upgrade-teuton-spatha", true)
+	SetFactionTechnology("teuton", "Suebi Tribe", "upgrade-teuton-spatha", true)
+	SetFactionTechnology("teuton", "Sugambri Tribe", "upgrade-teuton-spatha", true)
+	SetFactionTechnology("teuton", "Varini Tribe", "upgrade-teuton-spatha", true)
 end
 
 if (GrandStrategyYear >= 200) then
@@ -18631,6 +18701,12 @@ if (GrandStrategyYear >= 358) then
 	-- The Salii (Salic Franks) were attacked by the Frankish tribe of the Chamavi in 358 AD in the Batavian isle, being saved by the Romans; previously the Salii had been driven out of the region near the river Isala (in the area of Wesel) by the Chamavi; Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 320.
 end
 
+if (GrandStrategyYear >= 381) then
+	-- date estimated from Gundahar's establishment of the Kingdom of the Burgundians
+	SetProvinceOwner("Franconia", "goth", "Burgundian Tribe")
+	SetFactionRuler("goth", "Burgundian Tribe", "Gibica")
+end
+
 if (GrandStrategyYear >= 395) then
 	SetProvinceOwner("Ireland", "celt", "Scot Tribe") -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 	SetProvinceCivilization("Ireland", "celt")
@@ -18658,11 +18734,22 @@ if (GrandStrategyYear >= 400) then
 	SetRegionPopulation("Eurasia", 7400000) -- CIS had a population of around 7.4 millions in 400 AD; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html	
 end
 
+if (GrandStrategyYear >= 406) then
+	-- Gundahar and his father Gibica brought the Burgundians over the Rhine in 406/407 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 91.
+	SetProvinceOwner("Palatinate", "goth", "Burgundian Tribe")
+end
+
 if (GrandStrategyYear >= 411) then
 	SetProvinceOwner("Gallaecia", "teuton", "Suebi Tribe") -- The Suebi conquered Gallaecia in 411 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 	SetProvinceSettlementBuilding("Gallaecia", "unit-teuton-town-hall", true)
 	SetProvinceUnitQuantity("Gallaecia", "unit-germanic-warrior", 0)
 	-- Alans conquered the area of modern Portugal in 411; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
+	
+	-- Kingdom of the Burgundians established by Gundahar (a Burgundian tribal chief) in 411 AD, with its center in Borbetomagus (Worms); Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 91-93.
+	SetProvinceOwner("Palatinate", "goth", "Burgundy")
+	AcquireFactionTechnologies("goth", "Burgundian Tribe", "goth", "Burgundy")
+	SetFactionRuler("goth", "Burgundy", "Gundahar")
+	KillGrandStrategyHero("Gibica")
 end
 
 if (GrandStrategyYear >= 412) then
@@ -18679,13 +18766,20 @@ if (GrandStrategyYear >= 431) then
 	GrandStrategyEvents.PalladiusTheApostleOfIreland = nil
 end
 
-if (GrandStrategyYear >= 440) then
-	GrandStrategyEvents.PatrickTheApostleOfIreland = nil
+if (GrandStrategyYear >= 436) then
+	-- Roman general Flavius Aetius (who served under Emperor Valentinian III) invoked Attila's Huns to do away with Gundahar's kingdom in 436 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 93.
 end
 
-if (GrandStrategyYear >= 445) then
-	SetProvinceOwner("Posen", "", "")
-	SetProvinceOwner("Switzerland", "goth", "Burgundian Tribe") -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
+if (GrandStrategyYear >= 437) then
+	-- Invasion of Gundahar's kingdom in 437 AD by Attila's Huns, with 20,000 Burgundians having died as a result; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 93.
+	KillGrandStrategyHero("Gundahar")
+	CreateGrandStrategyHero("Attila")
+	
+	SetFactionRuler("goth", "Burgundy", "Gundioc") -- Gundioc became king of the Burgundians in 437 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 94-95.
+end
+
+if (GrandStrategyYear >= 440) then
+	GrandStrategyEvents.PatrickTheApostleOfIreland = nil
 end
 
 if (GrandStrategyYear >= 450) then
@@ -18700,9 +18794,29 @@ if (GrandStrategyYear >= 450) then
 	SetProvinceUnitQuantity("Portugal", "unit-germanic-warrior", 0)
 end
 
+if (GrandStrategyYear >= 451) then
+	-- Burgundians fought on both the Roman and Hunnic sides in the Battle of the Catalaunian Fields in (June) 451 AD; with the Roman victory, the Burgundians under Gundioc were granted more land; Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 94-95.
+	SetProvinceOwner("Palatinate", "", "")
+	SetProvinceOwner("Switzerland", "goth", "Burgundy")
+	SetProvinceOwner("Savoy", "goth", "Burgundy")
+	SetProvinceOwner("Franche Comte", "goth", "Burgundy")
+end
+
+if (GrandStrategyYear >= 452) then
+	CreateGrandStrategyHero("Sidonius Apollinaris")
+end
+
 if (GrandStrategyYear >= 454) then
 	SetProvinceOwner("Ukraine", "", "")
 	SetProvinceOwner("Pannonia", "goth", "Ostrogoth Tribe") -- The eastern goths had migrated to Pannonia in about 454 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
+end
+
+if (GrandStrategyYear >= 467) then
+	KillGrandStrategyHero("Attila") -- estimated
+end
+
+if (GrandStrategyYear >= 474) then
+	KillGrandStrategyHero("Gundioc") -- end of Gundioc's reign over the Burgundians in 474 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 94-95.
 end
 
 if (GrandStrategyYear >= 481) then
@@ -18728,6 +18842,10 @@ if (GrandStrategyYear >= 481) then
 	SetProvinceOwner("Augsburg", "teuton", "Alamanni Tribe")
 	SetProvinceOwner("Palatinate", "teuton", "Alamanni Tribe")
 	AcquireFactionTechnologies("teuton", "Suebi Tribe", "teuton", "Alamanni Tribe")
+end
+
+if (GrandStrategyYear >= 482) then
+	KillGrandStrategyHero("Sidonius Apollinaris") -- estimated
 end
 
 if (GrandStrategyYear >= 486) then
@@ -19105,6 +19223,10 @@ end
 
 if (GrandStrategyYear >= 1523) then
 	GrandStrategyEvents.NoblesAcquireLegalJurisdictionPrivilege = nil -- happened in 1523-1536; Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 20.
+
+	-- Bornholm captured by Denmark in 1523; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 90.
+	SetProvinceOwner("Bornholm", "norse", "Denmark")
+	SetProvinceSettlementBuilding("Bornholm", "unit-teuton-town-hall", true)
 end
 
 if (GrandStrategyYear >= 1526) then -- East Prussian Land Ordinance of 1526; Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 23.
@@ -19279,6 +19401,10 @@ end
 
 if (GrandStrategyYear >= 1702) then -- Vornedskabet lifted in 1702; Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 20.
 	GrandStrategyEvents.TheLiftingOfTheVornedskabet = nil
+end
+
+if (GrandStrategyYear >= 1716) then
+	-- Bornholm visited by Peter the Great of Russia in 1716; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 90.
 end
 
 if (GrandStrategyYear >= 1733) then -- Stavnsbandet established in 1733; Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 20.

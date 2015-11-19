@@ -8,6 +8,8 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
+--      grand_strategy_factions.lua - Defines the grand strategy factions.
+--
 --      (c) Copyright 2015 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
@@ -25,21 +27,12 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineDeity("Odin", {
-	Civilization = "norse",
-	ParentDeity = "Wodanaz",
+DefineGrandStrategyHero("Sidonius Apollinaris", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
+	Name = "Sidonius Apollinaris", -- Gallo-Roman writer
 	Gender = "male",
-	Major = true
-})
-
-DefineDeity("Ull", { -- Archer god; Source: PoE, p. 494
-	Civilization = "norse",
-	Gender = "male",
-	Portfolio = "Archery"
-})
-
-DefineDeity("Thor", {
-	Civilization = "norse",
-	Gender = "male",
-	Major = true
+	DefaultType = "unit-teuton-swordsman",
+	Civilization = "latin",
+	ProvinceOfOrigin = "Provence", -- place where the Burgundians dwelled before moving to the area of the Palatinate
+	Year = 452, -- 20 years old, met Burgundians at his home city of Lugdunum
+	DeathYear = 452 + (30 * 1) -- estimated
 })

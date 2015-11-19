@@ -228,6 +228,10 @@ https://github.com/Andrettin/Wyrmsun
 - 1.7.1
 -----------------------------------------------------------------------
 
+* Grand Strategy
+- Added Bornholm province.
+- Added the Burgundian succession line of Gundahar (the historical Burgundian chief who became Gunnar in the Norse myths and Günter in the Nibelungenlied).
+
 * Units
 - The Germanic Skutan is now drawn in layers.
 - Improvement to the Suebi Krieger's east/west walk animations.

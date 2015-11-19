@@ -455,7 +455,7 @@ function EventTriggers()
 	)
 
 	if (mapinfo.description == "East Prussia") then
-		-- The Fall of the Island Fortress briefing; information source: Norman Davies, "Vanished Kingdoms", p. 343
+		-- The Fall of the Island Fortress briefing; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 343.
 		AddTrigger(
 			function()
 				if (GameCycle == 0) then
