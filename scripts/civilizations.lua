@@ -97,7 +97,6 @@ DefineRaceNames(
 		"species", "dwarf",
 		"default-color", "red"
 	},
-	--[[
 	"race", {
 		"name", "elf",
 		"display", "Elf",
@@ -112,7 +111,6 @@ DefineRaceNames(
 		"playable", false,
 		"default-color", "teal"
 	},
-	--]]
 	--[[
 	"race", { -- information for later use
 		"name", "english",
@@ -331,6 +329,15 @@ DefineRaceNames(
 			"Theodoric", "Dietrich" -- "Dietrich" is the German form of the Gothic name Theodoric
 		},
 		"default-color", "yellow"
+	},
+	"race", {
+		"name", "troll",
+		"display", "Troll",
+		"visible",
+		"species", "troll",
+		"parent-civilization", "goblin",
+		"playable", false,
+		"default-color", "green"
 	},
 	"race", {
 		"name", "basque", -- represents not only the speakers of Vasconic languages, but also various pre-Indo-European cultures
