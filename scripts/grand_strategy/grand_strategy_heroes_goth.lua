@@ -83,7 +83,7 @@ DefineGrandStrategyHero("Chilperic", { -- Source: Norman Davies, "Vanished Kingd
 })
 
 DefineGrandStrategyHero("Clothilda", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, p. 97.
-	Name = "Clothilda", -- Daughter of Chilperic's who was married to the Clovis, king of the Franks
+	Name = "Clothilda", -- Daughter of Chilperic's who was married to the Clovis, king of the Franks; later became a saint due to her having convinced her husband to convert to Catholic Christianity; was buried in the church of St Geneviève in Paris
 	Gender = "female",
 	DefaultType = "unit-teuton-archer",
 	Civilization = "goth",
