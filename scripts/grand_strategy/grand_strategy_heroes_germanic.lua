@@ -58,11 +58,12 @@ DefineGrandStrategyHero("Tróán", { -- Source: Snorri Sturlson, "The Prose Edda
 })
 
 DefineGrandStrategyHero("Trór", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 6.
-	Name = "Trór", -- euhemerized version of Thor; was goodly to look upon, his hair was fairer than gold
+	Name = "Trór", -- euhemerized version of Thor
 	Gender = "male",
 	DefaultType = "unit-germanic-warrior",
 	Civilization = "germanic",
 	ProvinceOfOrigin = "Astrakhan",
+	Trait = "upgrade-mighty", -- described as goodly to look upon; his hair was fairer than gold; very strong
 	Year = -3000,
 	DeathYear = -3000 + 12 + 10, -- 30 years is the default lifetime of a hero after having risen to prominence, but here we use 10 to make the genealogy fit from 3000 to 2800 BC, by when Scandinavia was settled by Indo-Europeans (in the Ynglinga Saga, with an euhemerized Odin leading the Asa there)
 	Mother = "Tróán"
@@ -261,17 +262,19 @@ DefineGrandStrategyHero("Vóden", { -- Source: Snorri Sturlson, "The Prose Edda"
 	DefaultType = "unit-germanic-warrior",
 	Civilization = "germanic",
 	ProvinceOfOrigin = "Astrakhan",
+	Trait = "upgrade-wise",
 	Year = -3000 + 12 + (10 * 18),
 	DeathYear = -2800 + (30 * 1), -- with Voden begins a new genealogy, and he can live the standard 30 years
 	Father = "Fríallaf"
 })
 
 DefineGrandStrategyHero("Frígídá", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
-	Name = "Frígídá", -- wife of Vóden; euhemerized version of Frigg
+	Name = "Frígídá", -- wife of Vóden; euhemerized version of Frigg; had "second sight"
 	Gender = "female",
 	DefaultType = "unit-germanic-archer",
 	Civilization = "germanic",
 	ProvinceOfOrigin = "Astrakhan",
+	Trait = "upgrade-wise",
 	Year = -3000 + 12 + (10 * 18),
 	DeathYear = -2800 + (30 * 1)
 })
@@ -289,11 +292,12 @@ DefineGrandStrategyHero("Yngve", { -- Source: Snorri Sturlson, "Heimskringla", 1
 })
 
 DefineGrandStrategyHero("Vegdeg", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
-	Name = "Vegdeg", -- in the Prose Edda, Vegdeg was Vóden's son who was set to rule over East Saxland; described as a "mighty king"; Vóden's first son (presumably)
+	Name = "Vegdeg", -- in the Prose Edda, Vegdeg was Vóden's son who was set to rule over East Saxland; Vóden's first son (presumably)
 	Gender = "male",
 	DefaultType = "unit-germanic-warrior",
 	Civilization = "germanic",
 	ProvinceOfOrigin = "Astrakhan",
+	Trait = "upgrade-mighty", -- described as a "mighty king"
 	Year = -2800,
 	DeathYear = -2800 + (30 * 2),
 	Father = "Vóden",

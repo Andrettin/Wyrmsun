@@ -364,7 +364,8 @@ local traits = {
 	{"upgrade-slow", _("Slow")},
 	{"upgrade-strong", _("Strong")},
 	{"upgrade-vicious", _("Vicious")},
-	{"upgrade-weak", _("Weak")}
+	{"upgrade-weak", _("Weak")},
+	{"upgrade-wise", _("Wise")} -- not available for normal units, because intelligence has no effect in the game yet
 }
 
 for i = 1,table.getn(traits) do
@@ -442,6 +443,10 @@ DefineModifier("upgrade-vicious",
 
 DefineModifier("upgrade-weak",
 	{"BasicDamage", -1}
+)
+
+DefineModifier("upgrade-wise",
+	{"Intelligence", 1}
 )
 
 -- miscellaneous individual upgrades

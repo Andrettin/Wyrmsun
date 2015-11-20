@@ -531,6 +531,7 @@ DefineUnitType("unit-hero-marbod", { Name = _("Krieger"),
 	Icon = "icon-marbod",
 	Hero = true,
 	Gender = "male",
+	Traits = {"upgrade-keen"},
 	Variations = {
 		{
 			"variation-id", "blond-hair", -- no shield, bronze sword

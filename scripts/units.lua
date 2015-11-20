@@ -241,6 +241,7 @@ DefineUnitType("unit-rat", { Name = "Rat",
 	Carnivore = true,
 	ChildUpgrade = "upgrade-child",
 	PierceDamage = true,
+	Traits = {"upgrade-mighty", "upgrade-strong", "upgrade-weak", "upgrade-dextrous", "upgrade-clumsy", "upgrade-reckless", "upgrade-near-sighted", "upgrade-keen", "upgrade-limping", "upgrade-old", "upgrade-quick", "upgrade-resilient", "upgrade-slow"},
 	Variations = {
 		{
 			"variation-id", "dark-gray-fur"
@@ -308,6 +309,7 @@ DefineUnitType("unit-horse", { Name = "Horse",
 	Excrement = "unit-yale-excrement",
 	BluntDamage = true,
 	Coward = true,
+	Traits = {"upgrade-mighty", "upgrade-strong", "upgrade-weak", "upgrade-dextrous", "upgrade-clumsy", "upgrade-reckless", "upgrade-near-sighted", "upgrade-keen", "upgrade-limping", "upgrade-old", "upgrade-quick", "upgrade-resilient", "upgrade-slow"},
 	Variations = {
 		{
 			"variation-id", "brown-skin-brown-hair-brown-eyes"
@@ -380,6 +382,7 @@ DefineUnitType("unit-yale", { Name = "Yale",
 	ChildUpgrade = "upgrade-child",
 	Excrement = "unit-yale-excrement",
 	BluntDamage = true,
+	Traits = {"upgrade-mighty", "upgrade-strong", "upgrade-weak", "upgrade-dextrous", "upgrade-clumsy", "upgrade-reckless", "upgrade-near-sighted", "upgrade-keen", "upgrade-limping", "upgrade-old", "upgrade-quick", "upgrade-resilient", "upgrade-slow"},
 	Variations = {
 		--[[
 		{
@@ -467,6 +470,7 @@ DefineUnitType("unit-gryphon", { Name = _("Gryphon"),
 	BoardSize = 100, -- to prevent this unit from being loaded into transporters
 	ChildUpgrade = "upgrade-gryphon-child",
 	PierceDamage = true,
+	Traits = {"upgrade-mighty", "upgrade-strong", "upgrade-weak", "upgrade-dextrous", "upgrade-clumsy", "upgrade-reckless", "upgrade-near-sighted", "upgrade-keen", "upgrade-limping", "upgrade-old", "upgrade-quick", "upgrade-resilient", "upgrade-slow"},
 	PersonalNames = {
 		"Graa", "Greaa", "Gree", "Kaaa", "Kaasa", "Kassshh", "Kayya", "Kessshh", "Keyya", "Kiira", "Korra", "Korro", "Kraa", "Kuu", "Kzaaa", "Kzuuu",
 		"Kawn", "Krawg", -- names from the "Sceptre of Fire" Wesnoth campaign
@@ -549,6 +553,7 @@ DefineUnitType("unit-wyrm", { Name = _("Wyrm"),
 	PersonalNamePrefixes = {"Gra", "Graf", "Nid"}, -- Gra = Gray, Graf = Gnawer / Gnawing, Nid = Corpse / Dread
 	PersonalNameSuffixes = {"bak", "hogg", "orm", "vitnir", "volluth"}, -- Bak = Back, Hogg = Tearer / Biter, Orm = Serpent, Vitnir = Wolf, Volluth = Field
 	PierceDamage = true,
+	Traits = {"upgrade-mighty", "upgrade-strong", "upgrade-weak", "upgrade-dextrous", "upgrade-clumsy", "upgrade-reckless", "upgrade-near-sighted", "upgrade-keen", "upgrade-limping", "upgrade-old", "upgrade-quick", "upgrade-resilient", "upgrade-slow", "upgrade-vicious"},
 	Variations = {
 		--[[
 		{
@@ -655,6 +660,7 @@ DefineUnitType("unit-slime", { Name = _("Slime"),
 	Carnivore = true,	
 	ChildUpgrade = "upgrade-child",
 	BluntDamage = true,
+	Traits = {"upgrade-mighty", "upgrade-strong", "upgrade-weak", "upgrade-old", "upgrade-quick", "upgrade-resilient", "upgrade-slow"}, -- slimes have a more limited selection of traits, since they have a rather different biology
 	Variations = {
 		{
 			"variation-id", "green",
@@ -1234,6 +1240,7 @@ DefineUnitType("unit-bat", { Name = _("Bat"),
 	Insectivore = true,
 	PierceDamage = true,
 	ChildUpgrade = "upgrade-child",
+	Traits = {"upgrade-mighty", "upgrade-strong", "upgrade-weak", "upgrade-dextrous", "upgrade-clumsy", "upgrade-reckless", "upgrade-near-sighted", "upgrade-keen", "upgrade-limping", "upgrade-old", "upgrade-quick", "upgrade-resilient", "upgrade-slow"},
 	Sounds = {
 		"selected", "bat-selected",
 		"acknowledge", "bat-selected",
@@ -1278,6 +1285,7 @@ DefineUnitType("unit-blood-bat", { Name = _("Blood Bat"),
 	Carnivore = true,
 	PierceDamage = true,
 	ChildUpgrade = "upgrade-child",
+	Traits = {"upgrade-mighty", "upgrade-strong", "upgrade-weak", "upgrade-dextrous", "upgrade-clumsy", "upgrade-reckless", "upgrade-near-sighted", "upgrade-keen", "upgrade-limping", "upgrade-old", "upgrade-quick", "upgrade-resilient", "upgrade-slow"},
 	Sounds = {
 		"selected", "bat-selected",
 		"acknowledge", "bat-selected",
@@ -1323,6 +1331,7 @@ DefineUnitType("unit-dread-bat", { Name = _("Dread Bat"),
 	Carnivore = true,
 	PierceDamage = true,
 	ChildUpgrade = "upgrade-child",
+	Traits = {"upgrade-mighty", "upgrade-strong", "upgrade-weak", "upgrade-dextrous", "upgrade-clumsy", "upgrade-reckless", "upgrade-near-sighted", "upgrade-keen", "upgrade-limping", "upgrade-old", "upgrade-quick", "upgrade-resilient", "upgrade-slow"},
 	Sounds = {
 		"selected", "bat-selected",
 		"acknowledge", "bat-selected",
@@ -3726,6 +3735,7 @@ DefineUnitType("unit-template-worker", { Name = _("Worker"),
 	organic = true,
 	Flesh = true,
 	SelectableByRectangle = true,
+	Traits = {"upgrade-mighty", "upgrade-strong", "upgrade-weak", "upgrade-dextrous", "upgrade-clumsy", "upgrade-reckless", "upgrade-near-sighted", "upgrade-keen", "upgrade-limping", "upgrade-old", "upgrade-quick", "upgrade-resilient", "upgrade-slow"},
 	CanGatherResources = {
 		{
 			"resource-id", "gold",
@@ -3808,6 +3818,7 @@ DefineUnitType("unit-template-infantry", { Name = _("Infantry"),
 	organic = true,
 	Flesh = true,
 	SelectableByRectangle = true,
+	Traits = {"upgrade-mighty", "upgrade-strong", "upgrade-weak", "upgrade-dextrous", "upgrade-clumsy", "upgrade-reckless", "upgrade-near-sighted", "upgrade-keen", "upgrade-limping", "upgrade-old", "upgrade-quick", "upgrade-resilient", "upgrade-slow"},
 	ShieldAnimation = {
 		{
 			"frame", 0,
@@ -4201,6 +4212,7 @@ DefineUnitType("unit-template-archer", { Name = _("Archer"),
 	Flesh = true,
 	SelectableByRectangle = true,
 	AttackFromTransporter = true,
+	Traits = {"upgrade-mighty", "upgrade-strong", "upgrade-weak", "upgrade-dextrous", "upgrade-clumsy", "upgrade-reckless", "upgrade-keen", "upgrade-limping", "upgrade-old", "upgrade-quick", "upgrade-resilient", "upgrade-slow"}, -- near-sighted upgrade not allowed, as it would make the unit have a smaller sight range than its attack range
 	Sounds = {
 		"step", "step-dirt",
 		"step-dirt", "step-dirt",
@@ -4236,6 +4248,7 @@ DefineUnitType("unit-template-thief", { Name = _("Thief"),
 	organic = true,
 	Flesh = true,
 	SelectableByRectangle = true,
+	Traits = {"upgrade-mighty", "upgrade-strong", "upgrade-weak", "upgrade-dextrous", "upgrade-clumsy", "upgrade-reckless", "upgrade-near-sighted", "upgrade-keen", "upgrade-limping", "upgrade-old", "upgrade-quick", "upgrade-resilient", "upgrade-slow"},
 	Sounds = {
 		"step", "step-dirt",
 		"step-dirt", "step-dirt",
@@ -4273,6 +4286,7 @@ DefineUnitType("unit-template-cavalry", { Name = _("Cavalry"),
 	Flesh = true,
 	SelectableByRectangle = true,
 	TechnologyPointCost = 1,
+	Traits = {"upgrade-mighty", "upgrade-strong", "upgrade-weak", "upgrade-dextrous", "upgrade-clumsy", "upgrade-reckless", "upgrade-near-sighted", "upgrade-keen", "upgrade-limping", "upgrade-old", "upgrade-quick", "upgrade-resilient", "upgrade-slow"},
 	Sounds = {
 		"step", "step-dirt",
 		"step-dirt", "step-dirt",
@@ -4309,6 +4323,7 @@ DefineUnitType("unit-template-priest", { Name = _("Priest"),
 	Flesh = true,
 	SelectableByRectangle = true,
 	Mana = {Enable = true},
+	Traits = {"upgrade-mighty", "upgrade-strong", "upgrade-weak", "upgrade-dextrous", "upgrade-clumsy", "upgrade-reckless", "upgrade-near-sighted", "upgrade-keen", "upgrade-limping", "upgrade-old", "upgrade-quick", "upgrade-resilient", "upgrade-slow"},
 	Sounds = {
 		"step", "step-dirt",
 		"step-dirt", "step-dirt",
@@ -4382,6 +4397,7 @@ DefineUnitType("unit-template-flying-rider", { Name = _("Flying Rider"),
 	Mounted = true,
 	SelectableByRectangle = true,
 	TechnologyPointCost = 1,
+	Traits = {"upgrade-mighty", "upgrade-strong", "upgrade-weak", "upgrade-dextrous", "upgrade-clumsy", "upgrade-reckless", "upgrade-near-sighted", "upgrade-keen", "upgrade-limping", "upgrade-old", "upgrade-quick", "upgrade-resilient", "upgrade-slow"},
 	Sounds = {
 	}
 } )

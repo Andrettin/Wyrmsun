@@ -226,6 +226,7 @@ DefineUnitType("unit-goblin-glider", { Name = _("Glider"),
 	Flesh = true,
 	SelectableByRectangle = true,
 	BoardSize = 100, -- to prevent this unit from being loaded into transporters
+	Traits = {"upgrade-near-sighted", "upgrade-keen", "upgrade-limping", "upgrade-old", "upgrade-quick", "upgrade-resilient", "upgrade-slow"}, -- removed traits which affect damage, as this unit can't attack
 	Sounds = {
 		"selected", "basic-goblin-voices-selected-group",
 		"acknowledge", "glider-flying",
@@ -311,6 +312,7 @@ DefineUnitType("unit-hero-greebo", { Name = _("Impaler"),
 	Gender = "male",
 	Hero = true,
 	HackDamage = true,
+	Traits = {"upgrade-strong"}, -- seems appropriate, but maybe something else for this character would be better?
 	Sounds = {
 		"selected", "basic-goblin-voices-selected-group",
 		"acknowledge", "basic-goblin-voices-acknowledge",

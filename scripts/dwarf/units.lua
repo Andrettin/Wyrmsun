@@ -113,6 +113,7 @@ DefineUnitType("unit-dwarven-militia", { Name = _("Militia"),
 	Flesh = true,
 	SelectableByRectangle = true,
 	HackDamage = true,
+	Traits = {"upgrade-mighty", "upgrade-strong", "upgrade-weak", "upgrade-dextrous", "upgrade-clumsy", "upgrade-reckless", "upgrade-near-sighted", "upgrade-keen", "upgrade-limping", "upgrade-old", "upgrade-quick", "upgrade-resilient", "upgrade-slow"},
 	Sounds = {
 		"selected", "basic-dwarf-voices-selected-group",
 		"acknowledge", "dwarven-miner-acknowledge",
@@ -741,6 +742,7 @@ DefineUnitType("unit-hero-modsognir", { Name = _("Steelclad"),
 	Animations = "animations-dwarven-axefighter", Icon = "icon-modsognir",
 	Hero = true,
 	Gender = "male",
+	Traits = {"upgrade-mighty"},
 	Variations = {
 		{
 			"variation-id", "brown-hair",
@@ -763,6 +765,7 @@ DefineUnitType("unit-hero-modsognir-thane", { Name = _("Stonelord"),
 	Animations = "animations-dwarven-axefighter", Icon = "icon-modsognir",
 	Hero = true,
 	Gender = "male",
+	Traits = {"upgrade-mighty"},
 	Variations = {}
 } )
 
@@ -777,6 +780,7 @@ DefineUnitType("unit-hero-durin", { Name = _("Steelclad"),
 	Animations = "animations-dwarven-axefighter", Icon = "icon-durin",
 	Hero = true,
 	Gender = "male",
+	Traits = {"upgrade-dextrous"},
 	Variations = {
 		{
 			"variation-id", "brown-hair",
@@ -799,6 +803,7 @@ DefineUnitType("unit-hero-durin-thane", { Name = _("Stonelord"),
 	Animations = "animations-dwarven-axefighter", Icon = "icon-durin",
 	Hero = true,
 	Gender = "male",
+	Traits = {"upgrade-dextrous"},
 	Variations = {}
 } )
 
@@ -812,6 +817,7 @@ DefineUnitType("unit-hero-rugnur", { Name = _("Axefighter"),
 	Animations = "animations-dwarven-axefighter", Icon = "icon-rugnur",
 	Hero = true,
 	Gender = "male",
+	Traits = {"upgrade-keen"}, -- not the best fit for this character, should be replaced with something else perhaps?
 	Variations = {}
 } )
 
@@ -824,6 +830,7 @@ DefineUnitType("unit-hero-rugnur-steelclad", { Name = _("Steelclad"),
 	Animations = "animations-dwarven-axefighter", Icon = "icon-rugnur",
 	Hero = true,
 	Gender = "male",
+	Traits = {"upgrade-keen"}, -- not the best fit for this character, should be replaced with something else perhaps?
 	Variations = {
 		{
 			"variation-id", "brown-hair",
@@ -846,6 +853,7 @@ DefineUnitType("unit-hero-rugnur-thane", { Name = _("Stonelord"),
 	Animations = "animations-dwarven-axefighter", Icon = "icon-rugnur-older",
 	Hero = true,
 	Gender = "male",
+	Traits = {"upgrade-keen"}, -- not the best fit for this character, should be replaced with something else perhaps?
 	Variations = {}
 } )
 
@@ -860,6 +868,7 @@ DefineUnitType("unit-hero-baglur", { Name = _("Steelclad"),
 	Animations = "animations-dwarven-axefighter", Icon = "icon-baglur",
 	Hero = true,
 	Gender = "male",
+	Traits = {"upgrade-resilient"},
 	Variations = {
 		{
 			"variation-id", "gray-hair",
@@ -882,6 +891,7 @@ DefineUnitType("unit-hero-baglur-thane", { Name = _("Stonelord"),
 	Animations = "animations-dwarven-axefighter", Icon = "icon-baglur",
 	Hero = true,
 	Gender = "male",
+	Traits = {"upgrade-resilient"},
 	Variations = {}
 } )
 
@@ -897,6 +907,7 @@ DefineUnitType("unit-hero-thursagan", { Name = _("Stonelord"),
 	Animations = "animations-dwarven-axefighter", Icon = "icon-thursagan",
 	Hero = true,
 	Gender = "male",
+	Traits = {"upgrade-strong"},
 	Variations = {}
 } )
 
@@ -910,5 +921,6 @@ DefineUnitType("unit-hero-durstorn", { Name = _("Stonelord"),
 	Animations = "animations-dwarven-axefighter", Icon = "icon-durstorn",
 	Hero = true,
 	Gender = "male",
+	Traits = {"upgrade-strong"},
 	Variations = {}
 } )

@@ -603,14 +603,15 @@ function EditUnitProperties()
 	menu:addLabel(_("Unit Name"), sizeX / 2, 11 + (36 * 1))
 	local name_value = menu:addTextInputField(GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Name"), sizeX / 2 - 60, 11 + (36 * 2), 120)
 
-	local trait_list = GetUnitTypeTraits(GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Ident"), true)
+	local trait_list = GetUnitTypeData(GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Ident"), "Traits")
+	
 	table.insert(trait_list, "") -- for if the unit has no trait
 	local unit_trait
 	local activeCheckBox
 	local resource = GetUnitUnderCursor().Type.GivesResource
 	local resourceValue
 
-	if (GetUnitBoolFlag(UnitNumber(GetUnitUnderCursor()), "organic") and table.getn(GetUnitTypeTraits(GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Ident"), true)) > 0) then
+	if (GetUnitBoolFlag(UnitNumber(GetUnitUnderCursor()), "organic") and table.getn(GetUnitTypeData(GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Ident"), "Traits")) > 0) then
 		menu:addLabel(_("Unit Trait"), sizeX / 2, 11 + (36 * 3))
 		unit_trait = menu:addDropDown(trait_list, (sizeX / 2) - 60, 11 + (36 * 4), function(dd) end)
 		unit_trait:setSize(120, 20)
@@ -632,7 +633,7 @@ function EditUnitProperties()
 	menu:addHalfButton(_("~!OK"), "o", 20 + 48, sizeY - 40,
 		function()
 			SetUnitName(UnitNumber(GetUnitUnderCursor()), name_value:getText())
-			if (GetUnitBoolFlag(UnitNumber(GetUnitUnderCursor()), "organic") and table.getn(GetUnitTypeTraits(GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Ident"), true)) > 0) then
+			if (GetUnitBoolFlag(UnitNumber(GetUnitUnderCursor()), "organic") and table.getn(GetUnitTypeData(GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Ident"), "Traits")) > 0) then
 				if (trait_list[unit_trait:getSelected() + 1] ~= GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Trait")) then
 					AcquireTrait(UnitNumber(GetUnitUnderCursor()), trait_list[unit_trait:getSelected() + 1])
 				end

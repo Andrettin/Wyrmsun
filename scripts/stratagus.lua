@@ -1606,63 +1606,6 @@ function GetUnitTypeLevelUpUpgrades(unit_type)
 	end
 end
 
-function GetUnitTypeTraits(unit_type, ignore_hero_default_trait)
-	local traits = {}
-	if (GetUnitTypeData(unit_type, "Hero") == false or ignore_hero_default_trait) then
-		if (GetUnitTypeData(unit_type, "AttackRange") > 0) then
-			table.insert(traits, "upgrade-mighty")
-			table.insert(traits, "upgrade-strong")
-			table.insert(traits, "upgrade-weak")
-			table.insert(traits, "upgrade-dextrous")
-			table.insert(traits, "upgrade-clumsy")
-			table.insert(traits, "upgrade-reckless")
-		end
-		if ((GetUnitTypeData(unit_type, "SightRange") - 1) >= GetUnitTypeData(unit_type, "AttackRange")) then -- don't allow near-sighted trait for units whose vision would become smaller than their range with the trait
-			table.insert(traits, "upgrade-near-sighted")
-		end
-		table.insert(traits, "upgrade-keen")
-		table.insert(traits, "upgrade-limping")
-		table.insert(traits, "upgrade-old")
-		table.insert(traits, "upgrade-quick")
-		table.insert(traits, "upgrade-resilient")
-		table.insert(traits, "upgrade-slow")
-		if (unit_type == "unit-wyrm") then
-			table.insert(traits, "upgrade-vicious")
-		end
-		if (GetUnitTypeData(unit_type, "Civilization") ~= "") then -- only for sapient units
-			-- insert more traits here later
-		end
-	elseif (unit_type == "unit-hero-marbod") then
-		table.insert(traits, "upgrade-keen")
-	elseif (unit_type == "unit-hero-modsognir" or unit_type == "unit-hero-modsognir-thane") then
-		table.insert(traits, "upgrade-mighty")
-	elseif (unit_type == "unit-hero-durin" or unit_type == "unit-hero-durin-thane") then
-		table.insert(traits, "upgrade-dextrous")
-	elseif (unit_type == "unit-hero-rugnur" or unit_type == "unit-hero-rugnur-steelclad" or unit_type == "unit-hero-rugnur-thane") then
-		table.insert(traits, "upgrade-keen") -- not the best fit for this character, should be replaced with something else perhaps?
-	elseif (unit_type == "unit-hero-baglur" or unit_type == "unit-hero-baglur-thane") then
-		table.insert(traits, "upgrade-resilient")
-	elseif (unit_type == "unit-hero-thursagan") then
-		table.insert(traits, "upgrade-strong")
-	elseif (unit_type == "unit-hero-durstorn") then
-		table.insert(traits, "upgrade-strong") -- seems appropriate, but maybe something else for this character would be better?
-	elseif (unit_type == "unit-hero-greebo") then
-		table.insert(traits, "upgrade-strong") -- seems appropriate, but maybe something else for this character would be better?
-	end
-	return traits
-end
-
-function GenerateTrait(unit)
-	if (
-		GetUnitVariable(unit, "Trait") == ""
-		and GetUnitBoolFlag(unit, "organic")
-		and table.getn(GetUnitTypeTraits(GetUnitVariable(unit, "Ident"))) > 0
-		and (Editor.Running == EditorNotRunning or GetUnitTypeData(GetUnitVariable(unit, "Ident"), "Hero"))
-	) then
-		AcquireTrait(unit, GetUnitTypeTraits(GetUnitVariable(unit, "Ident"))[SyncRand(table.getn(GetUnitTypeTraits(GetUnitVariable(unit, "Ident")))) + 1])
-	end
-end
-
 function InitializeUnit(unit)
 	if (GetUnitVariable(unit,"GraphicsVariation") == 0) then
 		if ((GetUnitVariable(unit, "Ident") == "unit-large-flower" and wyrmsun.tileset == "swamp")) then
@@ -1686,10 +1629,6 @@ function InitializeUnit(unit)
 			
 	if (GetUnitTypeData(GetUnitVariable(unit, "Ident"), "Hero")) then
 		InitializeHero(unit)
-	end
-	
-	if (GetUnitTypeData(GetUnitVariable(unit, "Ident"), "organic")) then
-		GenerateTrait(unit)
 	end
 end
 
