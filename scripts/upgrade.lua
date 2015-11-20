@@ -353,6 +353,7 @@ DefineModifier("upgrade-eagle-eye",
 local traits = {
 	{"upgrade-clumsy", _("Clumsy")},
 	{"upgrade-dextrous", _("Dextrous")},
+	{"upgrade-generous", _("Generous")}, -- no current effect
 	{"upgrade-keen", _("Keen")},
 	{"upgrade-limping", _("Limping")},
 	{"upgrade-mighty", _("Mighty")},

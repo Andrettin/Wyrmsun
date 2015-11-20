@@ -230,11 +230,14 @@ https://github.com/Andrettin/Wyrmsun
 
 * Grand Strategy
 - Added Bornholm province.
-- Added the Burgundian succession line of Gundahar (the historical Burgundian chief who became Gunnar in the Norse myths and Günter in the Nibelungenlied).
+- Added the Burgundian succession line of Gundahar (the historical Burgundian king who became Gunnar in the Norse myths and Günter in the Nibelungenlied).
+- Fixed issue which caused all resources of a particular type in a province to appear worked if a single resource of that type was worked.
+- Fixed issue with playing the Asa Tribe in the random world map.
 
 * Units
 - The Germanic Skutan is now drawn in layers.
 - Improvement to the Suebi Krieger's east/west walk animations.
+- Fixed issue which caused Marbod's name to appear blank.
 
 -----------------------------------------------------------------------
 - 1.7.0

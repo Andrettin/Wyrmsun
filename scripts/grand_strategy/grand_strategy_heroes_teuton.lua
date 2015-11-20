@@ -124,3 +124,13 @@ DefineGrandStrategyHero("Siegfried", { -- Source: Norman Davies, "Vanished Kingd
 	Father = "Siegmund",
 	Mother = "Sieglind"
 })
+
+DefineGrandStrategyHero("Ricimer", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 96-97.
+	Name = "Ricimer", -- ally of Flavius Aetius and de facto ruler of the Roman Empire at a certain stage; was married to the sister of the Burgundian king Gundioc
+	Gender = "male",
+	DefaultType = "unit-teuton-swordsman",
+	Civilization = "teuton", -- correct?
+--	ProvinceOfOrigin = "?",
+	Year = 405, -- born
+	DeathYear = 472
+})

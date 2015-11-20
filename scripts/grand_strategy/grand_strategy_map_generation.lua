@@ -424,13 +424,15 @@ function GenerateRandomWorldMap()
 	}
 	
 	-- make tribal factions from an initial culture with a claim on a province become the province's owner
-	for province_key, province_value in pairs(WorldMapProvinces) do	
-		for key, value in pairs(Factions) do
-			if (Factions[key].Civilization == "basque" or Factions[key].Civilization == "celt" or Factions[key].Civilization == "dwarf" or Factions[key].Civilization == "etruscan" or Factions[key].Civilization == "germanic" or Factions[key].Civilization == "gnome" or Factions[key].Civilization == "goblin" or Factions[key].Civilization == "greek" or Factions[key].Civilization == "illyrian" or Factions[key].Civilization == "kobold" or Factions[key].Civilization == "latin" or Factions[key].Civilization == "minoan" or Factions[key].Civilization == "persian" or Factions[key].Civilization == "phoenician" or Factions[key].Civilization == "phrygian" or Factions[key].Civilization == "slav" or Factions[key].Civilization == "thracian") then
-				if (GetFactionData(Factions[key].Civilization, Factions[key].Name, "Type") == "tribe") then
-					if (ProvinceHasClaim(WorldMapProvinces[province_key].Name, Factions[key].Civilization, Factions[key].Name)) then
-						SetProvinceOwner(WorldMapProvinces[province_key].Name, Factions[key].Civilization, Factions[key].Name)
-						break
+	for province_key, province_value in pairs(WorldMapProvinces) do
+		if (GetProvinceOwner(WorldMapProvinces[province_key].Name) ~= "Asa Tribe" and GetProvinceOwner(WorldMapProvinces[province_key].Name) ~= "Modsogning Clan") then
+			for key, value in pairs(Factions) do
+				if (Factions[key].Civilization == "basque" or Factions[key].Civilization == "celt" or Factions[key].Civilization == "dwarf" or Factions[key].Civilization == "etruscan" or Factions[key].Civilization == "germanic" or Factions[key].Civilization == "gnome" or Factions[key].Civilization == "goblin" or Factions[key].Civilization == "greek" or Factions[key].Civilization == "illyrian" or Factions[key].Civilization == "kobold" or Factions[key].Civilization == "latin" or Factions[key].Civilization == "minoan" or Factions[key].Civilization == "persian" or Factions[key].Civilization == "phoenician" or Factions[key].Civilization == "phrygian" or Factions[key].Civilization == "slav" or Factions[key].Civilization == "thracian") then
+					if (GetFactionData(Factions[key].Civilization, Factions[key].Name, "Type") == "tribe") then
+						if (ProvinceHasClaim(WorldMapProvinces[province_key].Name, Factions[key].Civilization, Factions[key].Name)) then
+							SetProvinceOwner(WorldMapProvinces[province_key].Name, Factions[key].Civilization, Factions[key].Name)
+							break
+						end
 					end
 				end
 			end

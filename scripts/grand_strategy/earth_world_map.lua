@@ -18735,7 +18735,7 @@ if (GrandStrategyYear >= 400) then
 end
 
 if (GrandStrategyYear >= 406) then
-	-- Gundahar and his father Gibica brought the Burgundians over the Rhine in 406/407 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 91.
+	-- Gundahar and his father Gibica brought the Burgundians over the Rhine in 406/407 AD; the initial quantity of Burgundians was c. 80,000; Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 91, 93.
 	SetProvinceOwner("Palatinate", "goth", "Burgundian Tribe")
 end
 
@@ -18817,6 +18817,13 @@ end
 
 if (GrandStrategyYear >= 474) then
 	KillGrandStrategyHero("Gundioc") -- end of Gundioc's reign over the Burgundians in 474 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 94-95.
+	SetFactionRuler("goth", "Burgundy", "Chilperic") -- beginning of Chilperic's reign over the Burgundians in 474 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
+	CreateGrandStrategyHero("Clothilda") -- Chilperic's daughter Clothilda was born in 474 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 97.
+end
+
+if (GrandStrategyYear >= 480) then
+	KillGrandStrategyHero("Chilperic") -- end of Chilperic's reign over the Burgundians in 480 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
+	SetFactionRuler("goth", "Burgundy", "Gundobad") -- beginning of Gundobad's reign over the Burgundians in 480 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
 end
 
 if (GrandStrategyYear >= 481) then
@@ -18892,7 +18899,9 @@ if (GrandStrategyYear >= 500) then
 	
 	SetRegionPopulation("West and Central Europe", 25900000) -- Non-CIS Europe had a population of around 25.9 millions in 500 AD; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
 	
-	SetRegionPopulation("Eurasia", 6900000) -- CIS had a population of around 6.9 millions in 500 AD; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html	
+	SetRegionPopulation("Eurasia", 6900000) -- CIS had a population of around 6.9 millions in 500 AD; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+	
+	-- around 500 AD a royal palace (which had a hall and a Christian chapel) was built by the Burgundians in Geneva; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
 end
 
 if (GrandStrategyYear >= 506) then
@@ -18925,6 +18934,16 @@ if (GrandStrategyYear >= 507) then -- political situation in 507-534 in Europe; 
 	SetProvinceSettlementBuilding("Franconia", "unit-teuton-town-hall", true)
 end
 
+if (GrandStrategyYear >= 516) then
+	KillGrandStrategyHero("Gundobad") -- end of Gundobad's reign over the Burgundians in 516 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
+	SetFactionRuler("goth", "Burgundy", "Sigismund") -- beginning of Sigismund's reign over the Burgundians in 516 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
+end
+
+if (GrandStrategyYear >= 523) then
+	KillGrandStrategyHero("Sigismund") -- end of Sigismund's reign over the Burgundians in 523 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
+	SetFactionRuler("goth", "Burgundy", "Gundimar") -- beginning of Gundimar's reign over the Burgundians in 523 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
+end
+
 if (GrandStrategyYear >= 526) then -- political situation in 526-600 in Europe; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 	SetProvinceOwner("Bavaria", "teuton", "Bavarian Tribe")
 	AcquireFactionTechnologies("teuton", "Marcomanni Tribe", "teuton", "Bavarian Tribe")
@@ -18949,13 +18968,15 @@ if (GrandStrategyYear >= 531) then
 end
 
 if (GrandStrategyYear >= 534) then
+	KillGrandStrategyHero("Gundimar") -- end of Gundimar's reign over the Burgundians in 534 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
+	
 	-- The Burgundian realm, which included the Franche Comté, Burgundy, Savoy and most of Switzerland, was conquered by the Franks in 534; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
 	SetProvinceOwner("Burgundy", "teuton", "Francia")
 	AddProvinceClaim("Burgundy", "teuton", "Francia")
 	SetProvinceOwner("Franche Comte", "teuton", "Francia")
 	AddProvinceClaim("Franche Comte", "teuton", "Francia")
 	SetProvinceOwner("Savoy", "teuton", "Francia")
-	AddProvinceClaim("Svoy", "teuton", "Francia")
+	AddProvinceClaim("Savoy", "teuton", "Francia")
 	SetProvinceOwner("Switzerland", "teuton", "Francia")
 	AddProvinceClaim("Switzerland", "teuton", "Francia")
 	
@@ -18970,6 +18991,10 @@ if (GrandStrategyYear >= 537) then
 	
 	SetProvinceOwner("Provence", "teuton", "Francia") -- Provence conquered by the Franks in 537; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
 	AddProvinceClaim("Provence", "teuton", "Francia")
+end
+
+if (GrandStrategyYear >= 545) then
+	CreateGrandStrategyHero("Clothilda") -- Chilperic's daughter Clothilda died in 545 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 97.
 end
 
 if (GrandStrategyYear >= 563) then

@@ -217,13 +217,11 @@ function RunGrandStrategyGameSetupMenu()
 			
 			InitializeGrandStrategyMinimap()
 
+			InitializeGrandStrategyFactions()
 --			CalculateFactionDisembarkmentProvinces()
-			for key, value in pairs(Factions) do
-				if (GetFactionProvinceCount(Factions[key]) > 0) then
-					CalculateFactionIncomes(Factions[key].Civilization, Factions[key].Name)
-				end
-			end
 			CalculateFactionUpkeeps()
+			
+			GrandStrategyGameInitialized = true
 			
 			InitGameSettings() -- initialize scenario variables (i.e. No Randomness)
 			

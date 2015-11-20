@@ -38,11 +38,12 @@ DefineGrandStrategyHero("Gibica", { -- Source: Norman Davies, "Vanished Kingdoms
 })
 
 DefineGrandStrategyHero("Gundahar", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 91-94.
-	Name = "Gundahar", -- also known as Gunnar in Norse myths, and as Günter in the Nibelungenlied
+	Name = "Gundahar", -- also known as Gunnar in Norse myths, as Günter in the Nibelungenlied, and as Gunthere in the Anglo-Saxon poem Widsith
 	Gender = "male",
 	DefaultType = "unit-teuton-swordsman",
 	Civilization = "goth",
 	ProvinceOfOrigin = "Franconia", -- place where the Burgundians dwelled before moving to the area of the Palatinate
+	Trait = "upgrade-generous", -- in the Anglo-Saxon poem "Widsith", Gundahar (Gunthere) gave the poet "a shining treasure" for his songs
 	Year = 406, -- Gundahar and his father Gibica brought the Burgundians over the Rhine in 406/407 AD
 	DeathYear = 437, -- invasion of Gundahar's kingdom in 437 AD by Attila's Huns
 	Father = "Gibica"
@@ -68,4 +69,59 @@ DefineGrandStrategyHero("Gundioc", { -- Source: Norman Davies, "Vanished Kingdom
 	Year = 437, -- beginning of reign
 	DeathYear = 474, -- end of reign
 	Father = "Gundahar" -- from Gibica's line (so presumably a child of Gundahar)
+})
+
+DefineGrandStrategyHero("Chilperic", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
+	Name = "Chilperic", -- Burgundian king after Gundioc
+	Gender = "male",
+	DefaultType = "unit-teuton-swordsman",
+	Civilization = "goth",
+	ProvinceOfOrigin = "Switzerland", -- the Burgundian kingdom was centered in Genava (Geneva); Source: Norman Davies, "Vanished Kingdoms", 2012, p. 95.
+	Year = 474, -- beginning of reign
+	DeathYear = 480, -- end of reign
+	Father = "Gundioc" -- from Gibica's line (so presumably a child of Gundioc)
+})
+
+DefineGrandStrategyHero("Clothilda", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, p. 97.
+	Name = "Clothilda", -- Daughter of Chilperic's who was married to the Clovis, king of the Franks
+	Gender = "female",
+	DefaultType = "unit-teuton-archer",
+	Civilization = "goth",
+	ProvinceOfOrigin = "Switzerland", -- the Burgundian kingdom was centered in Genava (Geneva); Source: Norman Davies, "Vanished Kingdoms", 2012, p. 95.
+	Year = 474, -- born
+	DeathYear = 545,
+	Father = "Chilperic"
+})
+
+DefineGrandStrategyHero("Gundobad", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
+	Name = "Gundobad", -- Burgundian king after Chilperic; name means "bold in battle"
+	Gender = "male",
+	DefaultType = "unit-teuton-swordsman",
+	Civilization = "goth",
+	ProvinceOfOrigin = "Switzerland",
+	Year = 480, -- beginning of reign
+	DeathYear = 516, -- end of reign
+	Father = "Chilperic" -- from Gibica's line (so presumably a child of Chilperic)
+})
+
+DefineGrandStrategyHero("Sigismund", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
+	Name = "Sigismund", -- Burgundian king after Gundobad
+	Gender = "male",
+	DefaultType = "unit-teuton-swordsman",
+	Civilization = "goth",
+	ProvinceOfOrigin = "Switzerland",
+	Year = 516, -- beginning of reign
+	DeathYear = 523, -- end of reign
+	Father = "Gundobad" -- from Gibica's line (so presumably a child of Gundobad)
+})
+
+DefineGrandStrategyHero("Gundimar", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
+	Name = "Gundimar", -- Burgundian king after Sigismund; also known as Godomar; name means "celebrated in battle"
+	Gender = "male",
+	DefaultType = "unit-teuton-swordsman",
+	Civilization = "goth",
+	ProvinceOfOrigin = "Switzerland",
+	Year = 523, -- beginning of reign
+	DeathYear = 534, -- end of reign
+	Father = "Sigismund" -- from Gibica's line (so presumably a child of Sigismund)
 })
