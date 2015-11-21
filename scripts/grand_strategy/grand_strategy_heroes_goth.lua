@@ -90,39 +90,41 @@ DefineGrandStrategyHero("Clothilda", { -- Source: Norman Davies, "Vanished Kingd
 	Trait = "upgrade-pious",
 	ProvinceOfOrigin = "Switzerland",
 	Year = 474, -- born
-	DeathYear = 545,
+	DeathYear = 545, -- died
 	Father = "Chilperic"
 })
 
 DefineGrandStrategyHero("Gundobad", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 96-97.
-	Name = "Gundobad", -- Burgundian king after Chilperic; name means "bold in battle"
+	Name = "Gundobad", -- Burgundian king after Chilperic; name means "bold in battle"; had the title of Roman patrician; wrote two law codes, the "Lex Romana Burgundionum" and the "Lex Gundobada"
 	Gender = "male",
 	DefaultType = "unit-teuton-swordsman",
 	Civilization = "goth",
+	Trait = "upgrade-wise",
 	ProvinceOfOrigin = "Switzerland",
 	Year = 480, -- beginning of reign
 	DeathYear = 516, -- end of reign
 	Father = "Gundioc" -- was Chilperic's brother, so presumably a child of Gundioc's
 })
 
-DefineGrandStrategyHero("Sigismund", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
-	Name = "Sigismund", -- Burgundian king after Gundobad
+DefineGrandStrategyHero("Sigismund", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 96, 98.
+	Name = "Sigismund", -- Burgundian king after Gundobad; converted to Catholic Christianity and later became a saint
 	Gender = "male",
 	DefaultType = "unit-teuton-swordsman",
 	Civilization = "goth",
 	ProvinceOfOrigin = "Switzerland",
+	Trait = "upgrade-pious",
 	Year = 516, -- beginning of reign
 	DeathYear = 523, -- end of reign
-	Father = "Gundobad" -- from Gibica's line (so presumably a child of Gundobad's)
+	Father = "Gundobad" -- son of Gundobad
 })
 
-DefineGrandStrategyHero("Gundimar", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
+DefineGrandStrategyHero("Gundimar", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 96, 99.
 	Name = "Gundimar", -- Burgundian king after Sigismund; also known as Godomar; name means "celebrated in battle"
 	Gender = "male",
 	DefaultType = "unit-teuton-swordsman",
 	Civilization = "goth",
 	ProvinceOfOrigin = "Switzerland",
 	Year = 523, -- beginning of reign
-	DeathYear = 534, -- end of reign
+	DeathYear = 534, -- end of reign (was proscribed, pursued and executed by the Franks, and his realm was annexed by them)
 	Father = "Sigismund" -- from Gibica's line (so presumably a child of Sigismund's)
 })

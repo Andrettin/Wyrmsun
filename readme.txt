@@ -242,6 +242,7 @@ https://github.com/Andrettin/Wyrmsun
 - The Germanic Skutan is now drawn in layers.
 - Improvement to the Suebi Krieger's east/west walk animations.
 - Fixed issue which caused Marbod's name to appear blank.
+- The unit training timer will now reset to 0 if the player lacks food to train the unit (previously the timer went to completion but the unit wouldn't actually be trained until the player had the necessary food).
 
 -----------------------------------------------------------------------
 - 1.7.0

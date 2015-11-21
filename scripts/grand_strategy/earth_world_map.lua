@@ -18882,6 +18882,10 @@ if (GrandStrategyYear >= 493) then
 	GrandStrategyEvents.SPatriciiCanticumScotticum = nil -- Patrick's mission lasted until 493
 end
 
+if (GrandStrategyYear >= 494) then
+	CreateGrandStrategyHero("Avitus") -- Archbishop Avitus of Vienne begins corresponding with the Burgundian king Sigismund c. 494 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 99.
+end
+
 if (GrandStrategyYear >= 495) then
 	-- Ostrogoths conquer Italy in 495 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 	SetProvinceOwner("Lombardy", "goth", "Ostrogoth Tribe")
@@ -18939,9 +18943,14 @@ if (GrandStrategyYear >= 516) then
 	SetFactionRuler("goth", "Burgundy", "Sigismund") -- beginning of Sigismund's reign over the Burgundians in 516 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
 end
 
+if (GrandStrategyYear >= 516) then
+	-- Catholic ascendancy systematized in the Burgundian kingdom in 517, in the Council of Epaon (perhaps Albon in the Dauphiné); during the Council Avitus laid out guidelines for socio-religious practice; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 99.
+end
+
 if (GrandStrategyYear >= 523) then
 	KillGrandStrategyHero("Sigismund") -- end of Sigismund's reign over the Burgundians in 523 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
 	SetFactionRuler("goth", "Burgundy", "Gundimar") -- beginning of Gundimar's reign over the Burgundians in 523 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
+	KillGrandStrategyHero("Avitus") -- Archbishop Avitus of Vienne stops corresponding with the Burgundian king Sigismund c. 523 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 99.
 end
 
 if (GrandStrategyYear >= 526) then -- political situation in 526-600 in Europe; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
@@ -18968,7 +18977,7 @@ if (GrandStrategyYear >= 531) then
 end
 
 if (GrandStrategyYear >= 534) then
-	KillGrandStrategyHero("Gundimar") -- end of Gundimar's reign over the Burgundians in 534 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
+	KillGrandStrategyHero("Gundimar") -- end of Gundimar's reign over the Burgundians in 534 AD; he was proscribed, pursued and executed by the Franks, and his realm was annexed by them; Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 96, 99.
 	
 	-- The Burgundian realm, which included the Franche Comté, Burgundy, Savoy and most of Switzerland, was conquered by the Franks in 534; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
 	SetProvinceOwner("Burgundy", "teuton", "Francia")

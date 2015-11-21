@@ -32,7 +32,17 @@ DefineGrandStrategyHero("Sidonius Apollinaris", { -- Source: Norman Davies, "Van
 	Gender = "male",
 	DefaultType = "unit-teuton-swordsman",
 	Civilization = "latin",
-	ProvinceOfOrigin = "Provence", -- place where the Burgundians dwelled before moving to the area of the Palatinate
+	ProvinceOfOrigin = "Provence",
 	Year = 452, -- 20 years old, met Burgundians at his home city of Lugdunum
 	DeathYear = 452 + (30 * 1) -- estimated
+})
+
+DefineGrandStrategyHero("Avitus", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, p. 99.
+	Name = "Avitus", -- Archbishop Avitus of Vienne; corresponded with the Burgundian king Sigismund c. 494-523, and was his chief advisor
+	Gender = "male",
+	DefaultType = "unit-teuton-archer", -- should be a priest
+	Civilization = "latin",
+	ProvinceOfOrigin = "Provence", -- Vienne
+	Year = 494, -- began corresponding with Sigismund
+	DeathYear = 523 -- ended corresponding with Sigismund
 })

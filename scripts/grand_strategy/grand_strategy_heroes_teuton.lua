@@ -132,5 +132,15 @@ DefineGrandStrategyHero("Ricimer", { -- Source: Norman Davies, "Vanished Kingdom
 	Civilization = "teuton", -- correct?
 --	ProvinceOfOrigin = "?",
 	Year = 405, -- born
-	DeathYear = 472
+	DeathYear = 472 -- died
+})
+
+DefineGrandStrategyHero("Clovis", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 97, 99.
+	Name = "Clovis", -- Frankish king and husband of Clothilda (daughter of the Burgundian king Chilperic); converted to Catholic Christianity
+	Gender = "male",
+	DefaultType = "unit-teuton-swordsman",
+	Civilization = "teuton",
+--	ProvinceOfOrigin = "?",
+	Year = 511 - 30, -- estimated
+	DeathYear = 511 -- died
 })
