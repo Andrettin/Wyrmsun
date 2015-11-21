@@ -25,16 +25,16 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-Load("scripts/celt/factions.lua")
-Load("scripts/dwarf/factions.lua")
-Load("scripts/germanic/factions.lua")
-Load("scripts/goth/factions.lua")
-Load("scripts/greek/factions.lua")
-Load("scripts/latin/factions.lua")
-Load("scripts/minoan/factions.lua")
-Load("scripts/norse/factions.lua")
-Load("scripts/slav/factions.lua")
-Load("scripts/teuton/factions.lua")
+Load("scripts/civilizations/celt/factions.lua")
+Load("scripts/civilizations/dwarf/factions.lua")
+Load("scripts/civilizations/germanic/factions.lua")
+Load("scripts/civilizations/goth/factions.lua")
+Load("scripts/civilizations/greek/factions.lua")
+Load("scripts/civilizations/latin/factions.lua")
+Load("scripts/civilizations/minoan/factions.lua")
+Load("scripts/civilizations/norse/factions.lua")
+Load("scripts/civilizations/slav/factions.lua")
+Load("scripts/civilizations/teuton/factions.lua")
 
 -- Basque factions
 DefineFaction("Ertebolle Tribe", { -- based on the Ertebolle culture of Zealand - not actually a tribe, but an archaeological culture, but this is still the most appropriate way to represent it in-game

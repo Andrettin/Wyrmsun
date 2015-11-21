@@ -30,7 +30,7 @@
 function EventTriggers()
 
 	if (GameSettings.Opponents <= 0 and GameSettings.GameType == -1 and GameSettings.NumUnits <= 0 and GameSettings.Resources <= 0 and (GrandStrategy == false or GrandStrategyEventMap)) then
-		Load("scripts/gnome/events.lua")
+		Load("scripts/civilizations/gnome/events.lua")
 	end
 
 	-- Greebo's Shinies

@@ -25,14 +25,14 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-Load("scripts/dwarf/deities.lua")
-Load("scripts/elf/deities.lua")
-Load("scripts/germanic/deities.lua")
-Load("scripts/goblin/deities.lua")
-Load("scripts/norse/deities.lua")
-Load("scripts/slav/deities.lua")
-Load("scripts/teuton/deities.lua")
-Load("scripts/troll/deities.lua")
+Load("scripts/civilizations/dwarf/deities.lua")
+Load("scripts/civilizations/elf/deities.lua")
+Load("scripts/civilizations/germanic/deities.lua")
+Load("scripts/civilizations/goblin/deities.lua")
+Load("scripts/civilizations/norse/deities.lua")
+Load("scripts/civilizations/slav/deities.lua")
+Load("scripts/civilizations/teuton/deities.lua")
+Load("scripts/civilizations/troll/deities.lua")
 
 --[[
 DefineDeity("Indo-European Sky God", { -- real name? Source: Encyclopedia of the Barbarian World, vol. 1, p. 108

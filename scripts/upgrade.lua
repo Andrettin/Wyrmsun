@@ -142,12 +142,12 @@ DefineUpgrade("upgrade-writing", {
 })
 
 -- Load the different civilizations
-Load("scripts/celt/upgrade.lua")
-Load("scripts/dwarf/upgrade.lua")
-Load("scripts/germanic/upgrade.lua")
-Load("scripts/gnome/upgrade.lua")
-Load("scripts/goblin/upgrade.lua")
-Load("scripts/teuton/upgrade.lua")
+Load("scripts/civilizations/celt/upgrade.lua")
+Load("scripts/civilizations/dwarf/upgrade.lua")
+Load("scripts/civilizations/germanic/upgrade.lua")
+Load("scripts/civilizations/gnome/upgrade.lua")
+Load("scripts/civilizations/goblin/upgrade.lua")
+Load("scripts/civilizations/teuton/upgrade.lua")
 
 function DefineAllowNormalUnits(flags)
 	-- Allow units for human players only if they have been acquired

@@ -4951,13 +4951,13 @@ DefineUnitType("unit-long-swordsman", { Name = _("Long Swordsman"),
 } )
 
 -- Load the different civilizations
-Load("scripts/celt/units.lua")
-Load("scripts/dwarf/units.lua")
-Load("scripts/germanic/units.lua")
-Load("scripts/gnome/units.lua")
-Load("scripts/goblin/units.lua")
-Load("scripts/kobold/units.lua")
-Load("scripts/teuton/units.lua")
+Load("scripts/civilizations/celt/units.lua")
+Load("scripts/civilizations/dwarf/units.lua")
+Load("scripts/civilizations/germanic/units.lua")
+Load("scripts/civilizations/gnome/units.lua")
+Load("scripts/civilizations/goblin/units.lua")
+Load("scripts/civilizations/kobold/units.lua")
+Load("scripts/civilizations/teuton/units.lua")
 
 DefineUnitType("unit-human-wall", { Name = _("Wall"),
 	Image = {"file", "neutral/buildings/glyph.png", "size", {32, 32}},

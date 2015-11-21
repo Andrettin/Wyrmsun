@@ -30,12 +30,12 @@
 
 -- Load the buttons of all races
 
-Load("scripts/celt/buttons.lua")
-Load("scripts/dwarf/buttons.lua")
-Load("scripts/germanic/buttons.lua")
-Load("scripts/gnome/buttons.lua")
-Load("scripts/goblin/buttons.lua")
-Load("scripts/teuton/buttons.lua")
+Load("scripts/civilizations/celt/buttons.lua")
+Load("scripts/civilizations/dwarf/buttons.lua")
+Load("scripts/civilizations/germanic/buttons.lua")
+Load("scripts/civilizations/gnome/buttons.lua")
+Load("scripts/civilizations/goblin/buttons.lua")
+Load("scripts/civilizations/teuton/buttons.lua")
 
 ------------------------------------------------------------------------------
 --  Define unit-button.
