@@ -233,6 +233,10 @@ https://github.com/Andrettin/Wyrmsun
 - Added the Burgundian succession line of Gundahar (the historical Burgundian king who became Gunnar in the Norse myths and Günter in the Nibelungenlied).
 - Fixed issue which caused all resources of a particular type in a province to appear worked if a single resource of that type was worked.
 - Fixed issue with playing the Asa Tribe in the random world map.
+- Added tooltip to the "World" drop-down for the grand strategy game setup.
+
+* Quest
+- Fixed crash which happened in certain quests.
 
 * Units
 - The Germanic Skutan is now drawn in layers.

@@ -68,7 +68,7 @@ DefineGrandStrategyHero("Gundioc", { -- Source: Norman Davies, "Vanished Kingdom
 	ProvinceOfOrigin = "Palatinate",
 	Year = 437, -- beginning of reign
 	DeathYear = 474, -- end of reign
-	Father = "Gundahar" -- from Gibica's line (so presumably a child of Gundahar)
+	Father = "Gundahar" -- from Gibica's line (so presumably a child of Gundahar's)
 })
 
 DefineGrandStrategyHero("Chilperic", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
@@ -79,7 +79,7 @@ DefineGrandStrategyHero("Chilperic", { -- Source: Norman Davies, "Vanished Kingd
 	ProvinceOfOrigin = "Switzerland", -- the Burgundian kingdom was centered in Genava (Geneva); Source: Norman Davies, "Vanished Kingdoms", 2012, p. 95.
 	Year = 474, -- beginning of reign
 	DeathYear = 480, -- end of reign
-	Father = "Gundioc" -- from Gibica's line (so presumably a child of Gundioc)
+	Father = "Gundioc" -- from Gibica's line (so presumably a child of Gundioc's)
 })
 
 DefineGrandStrategyHero("Clothilda", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, p. 97.
@@ -87,13 +87,14 @@ DefineGrandStrategyHero("Clothilda", { -- Source: Norman Davies, "Vanished Kingd
 	Gender = "female",
 	DefaultType = "unit-teuton-archer",
 	Civilization = "goth",
-	ProvinceOfOrigin = "Switzerland", -- the Burgundian kingdom was centered in Genava (Geneva); Source: Norman Davies, "Vanished Kingdoms", 2012, p. 95.
+	Trait = "upgrade-pious",
+	ProvinceOfOrigin = "Switzerland",
 	Year = 474, -- born
 	DeathYear = 545,
 	Father = "Chilperic"
 })
 
-DefineGrandStrategyHero("Gundobad", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
+DefineGrandStrategyHero("Gundobad", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 96-97.
 	Name = "Gundobad", -- Burgundian king after Chilperic; name means "bold in battle"
 	Gender = "male",
 	DefaultType = "unit-teuton-swordsman",
@@ -101,7 +102,7 @@ DefineGrandStrategyHero("Gundobad", { -- Source: Norman Davies, "Vanished Kingdo
 	ProvinceOfOrigin = "Switzerland",
 	Year = 480, -- beginning of reign
 	DeathYear = 516, -- end of reign
-	Father = "Chilperic" -- from Gibica's line (so presumably a child of Chilperic)
+	Father = "Gundioc" -- was Chilperic's brother, so presumably a child of Gundioc's
 })
 
 DefineGrandStrategyHero("Sigismund", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
@@ -112,7 +113,7 @@ DefineGrandStrategyHero("Sigismund", { -- Source: Norman Davies, "Vanished Kingd
 	ProvinceOfOrigin = "Switzerland",
 	Year = 516, -- beginning of reign
 	DeathYear = 523, -- end of reign
-	Father = "Gundobad" -- from Gibica's line (so presumably a child of Gundobad)
+	Father = "Gundobad" -- from Gibica's line (so presumably a child of Gundobad's)
 })
 
 DefineGrandStrategyHero("Gundimar", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
@@ -123,5 +124,5 @@ DefineGrandStrategyHero("Gundimar", { -- Source: Norman Davies, "Vanished Kingdo
 	ProvinceOfOrigin = "Switzerland",
 	Year = 523, -- beginning of reign
 	DeathYear = 534, -- end of reign
-	Father = "Sigismund" -- from Gibica's line (so presumably a child of Sigismund)
+	Father = "Sigismund" -- from Gibica's line (so presumably a child of Sigismund's)
 })

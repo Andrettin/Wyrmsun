@@ -246,6 +246,7 @@ function RunGrandStrategyGameSetupMenu()
 	world = menu:addDropDown(world_list, offx + 40, offy + 10 + 120,
 		function(dd) DateChanged(true) end)
 	world:setSize(152, 20)
+	world:setTooltip(_("Choose a world to play in, or generate a random world map mixing the factions from the worlds"))
 
 	menu:addLabel(_("Bookmark:"), offx + 220, offy + (10 + 120) - 20, Fonts["game"], false)
 	bookmark = menu:addDropDown(bookmark_list, offx + 220, offy + 10 + 120,

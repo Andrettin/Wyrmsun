@@ -359,6 +359,7 @@ local traits = {
 	{"upgrade-mighty", _("Mighty")},
 	{"upgrade-near-sighted", _("Near-Sighted")},
 	{"upgrade-old", _("Old")},
+	{"upgrade-pious", _("Pious")}, -- no current effect
 	{"upgrade-quick", _("Quick")},
 	{"upgrade-reckless", _("Reckless")},
 	{"upgrade-resilient", _("Resilient")},
