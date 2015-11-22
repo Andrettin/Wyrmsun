@@ -17254,112 +17254,84 @@ if (GrandStrategyYear >= -3000) then -- around this time Gylve or his ancestors 
 	-- First Greek Bronze Age begins around 3000 BC; Source: "Atlas de História Mundial", 2001, p. 66.
 	
 	SetFactionRuler("germanic", "Asa Tribe", "Lorikus")
-	CreateGrandStrategyHero("Lora")
-	CreateGrandStrategyHero("Troan")
-	CreateGrandStrategyHero("Tror") -- Trór born
 	
 	-- The Zodiac was invented around 3000 BC; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 5.
 end
 
-if (GrandStrategyYear >= -2990) then
-	KillGrandStrategyHero("Troan")
-end
-
 if (GrandStrategyYear >= -2988) then
-	KillGrandStrategyHero("Lorikus")
 	SetFactionRuler("germanic", "Asa Tribe", "Tror") -- when Trór was 12 years old, he slew his foster-father Lóríkus and took his place
-	KillGrandStrategyHero("Lora")
 end
 
 if (GrandStrategyYear >= -2978) then
-	KillGrandStrategyHero("Tror")
 	SetFactionRuler("germanic", "Asa Tribe", "Loridi")
 end
 
 if (GrandStrategyYear >= -2968) then
-	KillGrandStrategyHero("Loridi")
 	SetFactionRuler("germanic", "Asa Tribe", "Einridi")
 end
 
 if (GrandStrategyYear >= -2958) then
-	KillGrandStrategyHero("Einridi")
 	SetFactionRuler("germanic", "Asa Tribe", "Vingethor")
 end
 
 if (GrandStrategyYear >= -2948) then
-	KillGrandStrategyHero("Vingethor")
 	SetFactionRuler("germanic", "Asa Tribe", "Vingener")
 end
 
 if (GrandStrategyYear >= -2938) then
-	KillGrandStrategyHero("Vingener")
 	SetFactionRuler("germanic", "Asa Tribe", "Moda")
 end
 
 if (GrandStrategyYear >= -2928) then
-	KillGrandStrategyHero("Moda")
 	SetFactionRuler("germanic", "Asa Tribe", "Magi")
 end
 
 if (GrandStrategyYear >= -2918) then
-	KillGrandStrategyHero("Magi")
 	SetFactionRuler("germanic", "Asa Tribe", "Seskef")
 end
 
 if (GrandStrategyYear >= -2908) then
-	KillGrandStrategyHero("Seskef")
 	SetFactionRuler("germanic", "Asa Tribe", "Bedvig")
 end
 
 if (GrandStrategyYear >= -2898) then
-	KillGrandStrategyHero("Bedvig")
 	SetFactionRuler("germanic", "Asa Tribe", "Athra")
 end
 
 if (GrandStrategyYear >= -2888) then
-	KillGrandStrategyHero("Athra")
 	SetFactionRuler("germanic", "Asa Tribe", "Itermann")
 end
 
 if (GrandStrategyYear >= -2878) then
-	KillGrandStrategyHero("Itermann")
 	SetFactionRuler("germanic", "Asa Tribe", "Heremod")
 end
 
 if (GrandStrategyYear >= -2868) then
-	KillGrandStrategyHero("Heremod")
 	SetFactionRuler("germanic", "Asa Tribe", "Skjaldun")
 end
 
 if (GrandStrategyYear >= -2858) then
-	KillGrandStrategyHero("Skjaldun")
 	SetFactionRuler("germanic", "Asa Tribe", "Bjaf")
 end
 
 if (GrandStrategyYear >= -2848) then
-	KillGrandStrategyHero("Bjaf")
 	SetFactionRuler("germanic", "Asa Tribe", "Jat")
 end
 
 if (GrandStrategyYear >= -2838) then
-	KillGrandStrategyHero("Jat")
 	SetFactionRuler("germanic", "Asa Tribe", "Gudolf")
 end
 
 if (GrandStrategyYear >= -2828) then
-	KillGrandStrategyHero("Gudolf")
 	SetFactionRuler("germanic", "Asa Tribe", "Finn")
 end
 
 if (GrandStrategyYear >= -2818) then
-	KillGrandStrategyHero("Finn")
 	SetFactionRuler("germanic", "Asa Tribe", "Friallaf")
 end
 
 if (GrandStrategyYear >= -2808) then
-	KillGrandStrategyHero("Friallaf")
 	SetFactionRuler("germanic", "Asa Tribe", "Voden")
-	CreateGrandStrategyHero("Frigida")
 	SetFactionRuler("basque", "Gylfing Tribe", "Gylve")
 end
 
@@ -17367,10 +17339,6 @@ if (GrandStrategyYear >= -2800) then -- establishment of the Single Grave Cultur
 	-- Funnel Beaker culture ends in Zealand in 2800 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 38.
 
 	-- in the Ynglinga saga, "Odin's people", the Asa, settle Scandinavia in a manner not too dissimilar from what archaeological findings tell us of Indo-European settlement in the region; thus the name "Asa Tribe" is used here to denote the Indo-European-speaking peoples who settled in Scandinavia, and were the precursors of the Germanic peoples
-	CreateGrandStrategyHero("Vegdeg")
-	CreateGrandStrategyHero("Beldeg")
-	CreateGrandStrategyHero("Sigi")
-	
 	AcquireFactionTechnologies("germanic", "Asa Tribe", "germanic", "Skjoldung Tribe")
 	SetProvinceOwner("Jutland", "germanic", "Skjoldung Tribe")
 	SetProvinceCivilization("Jutland", "germanic")
@@ -17389,7 +17357,6 @@ if (GrandStrategyYear >= -2800) then -- establishment of the Single Grave Cultur
 	SetProvinceOwner("Gotaland", "germanic", "Asa Tribe")
 	SetProvinceCivilization("Gotaland", "germanic")
 	SetProvinceSettlementBuilding("Gotaland", "unit-germanic-town-hall", true)
-	CreateGrandStrategyHero("Yngve")
 	
 	SetProvinceOwner("Astrakhan", "", "")
 	SetProvinceSettlementBuilding("Astrakhan", "unit-germanic-town-hall", false)
@@ -17413,10 +17380,6 @@ if (GrandStrategyYear >= -2800) then -- establishment of the Single Grave Cultur
 end
 
 if (GrandStrategyYear >= -2770) then -- estimated date
-	KillGrandStrategyHero("Voden")
-	KillGrandStrategyHero("Frigida")
-	KillGrandStrategyHero("Gylve")
-	CreateGrandStrategyHero("Saeming")
 	GrandStrategyEvents.YngveChieftainOfTheSwedes = nil
 	AcquireFactionTechnologies("germanic", "Asa Tribe", "germanic", "Yngling Tribe")
 	SetProvinceOwner("Sweden", "germanic", "Yngling Tribe")
@@ -17426,57 +17389,11 @@ if (GrandStrategyYear >= -2770) then -- estimated date
 end
 
 if (GrandStrategyYear >= -2740) then -- estimated date
-	KillGrandStrategyHero("Vegdeg")
-	CreateGrandStrategyHero("Vitgils")
-	KillGrandStrategyHero("Beldeg")
-	CreateGrandStrategyHero("Brand")
-	KillGrandStrategyHero("Sigi")
-	CreateGrandStrategyHero("Rerir")
-
-	KillGrandStrategyHero("Skjold")
 	SetFactionRuler("germanic", "Skjoldung Tribe", "Fridleif Skjoldung")
-	
-	KillGrandStrategyHero("Yngve")
-	KillGrandStrategyHero("Saeming")
-end
-
-if (GrandStrategyYear >= -2710) then
-	KillGrandStrategyHero("Vitgils")
-	CreateGrandStrategyHero("Vitta")
-	CreateGrandStrategyHero("Sigar")
-	KillGrandStrategyHero("Brand")
-	KillGrandStrategyHero("Rerir")
-	CreateGrandStrategyHero("Frjodigar")
-	KillGrandStrategyHero("Fridleif Skjoldung")
 end
 
 if (GrandStrategyYear >= -2700) then
 	-- Egyptian pyramids built between 2700 and 2500 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 44.
-end
-
-if (GrandStrategyYear >= -2680) then
-	KillGrandStrategyHero("Vitta")
-	CreateGrandStrategyHero("Heingist")
-	KillGrandStrategyHero("Sigar")
-	CreateGrandStrategyHero("Svebdeg")
-	KillGrandStrategyHero("Frjodigar")
-	CreateGrandStrategyHero("Freovin")
-end
-
-if (GrandStrategyYear >= -2650) then
-	KillGrandStrategyHero("Heingist")
-	KillGrandStrategyHero("Svebdeg")
-	KillGrandStrategyHero("Freovin")
-	CreateGrandStrategyHero("Uvigg")
-end
-
-if (GrandStrategyYear >= -2620) then
-	KillGrandStrategyHero("Uvigg")
-	CreateGrandStrategyHero("Gevis")
-end
-
-if (GrandStrategyYear >= -2590) then
-	KillGrandStrategyHero("Gevis")
 end
 
 if (GrandStrategyYear >= -2500) then
@@ -18368,7 +18285,6 @@ if (GrandStrategyYear >= -58) then -- in 58 BC Caesar fought Ariovistus' Suebi a
 	GrandStrategyEvents.AskRomeForHelp = nil
 	GrandStrategyEvents.DivitiacusPleaForAssistance = nil
 	SetProvinceOwner("Alsace", "", "")
-	KillGrandStrategyHero("Ariovistus")
 	
 	-- gold (northern) Gallic currency, the gold staters, in existence when Caesar began his campaigns in Gaul; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, pp. 190-191.
 --	SetFactionTechnology("celt", "Aedui Tribe", "upgrade-teuton-coinage", true)
@@ -18749,7 +18665,6 @@ if (GrandStrategyYear >= 411) then
 	SetProvinceOwner("Palatinate", "goth", "Burgundy")
 	AcquireFactionTechnologies("goth", "Burgundian Tribe", "goth", "Burgundy")
 	SetFactionRuler("goth", "Burgundy", "Gundahar")
-	KillGrandStrategyHero("Gibica")
 end
 
 if (GrandStrategyYear >= 412) then
@@ -18772,8 +18687,6 @@ end
 
 if (GrandStrategyYear >= 437) then
 	-- Invasion of Gundahar's kingdom in 437 AD by Attila's Huns, with 20,000 Burgundians having died as a result; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 93.
-	KillGrandStrategyHero("Gundahar")
-	CreateGrandStrategyHero("Attila")
 	
 	SetFactionRuler("goth", "Burgundy", "Gundioc") -- Gundioc became king of the Burgundians in 437 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 94-95.
 end
@@ -18802,27 +18715,16 @@ if (GrandStrategyYear >= 451) then
 	SetProvinceOwner("Franche Comte", "goth", "Burgundy")
 end
 
-if (GrandStrategyYear >= 452) then
-	CreateGrandStrategyHero("Sidonius Apollinaris")
-end
-
 if (GrandStrategyYear >= 454) then
 	SetProvinceOwner("Ukraine", "", "")
 	SetProvinceOwner("Pannonia", "goth", "Ostrogoth Tribe") -- The eastern goths had migrated to Pannonia in about 454 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 end
 
-if (GrandStrategyYear >= 467) then
-	KillGrandStrategyHero("Attila") -- estimated
-end
-
 if (GrandStrategyYear >= 474) then
-	KillGrandStrategyHero("Gundioc") -- end of Gundioc's reign over the Burgundians in 474 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 94-95.
 	SetFactionRuler("goth", "Burgundy", "Chilperic") -- beginning of Chilperic's reign over the Burgundians in 474 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
-	CreateGrandStrategyHero("Clothilda") -- Chilperic's daughter Clothilda was born in 474 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 97.
 end
 
 if (GrandStrategyYear >= 480) then
-	KillGrandStrategyHero("Chilperic") -- end of Chilperic's reign over the Burgundians in 480 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
 	SetFactionRuler("goth", "Burgundy", "Gundobad") -- beginning of Gundobad's reign over the Burgundians in 480 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
 end
 
@@ -18851,10 +18753,6 @@ if (GrandStrategyYear >= 481) then
 	AcquireFactionTechnologies("teuton", "Suebi Tribe", "teuton", "Alamanni Tribe")
 end
 
-if (GrandStrategyYear >= 482) then
-	KillGrandStrategyHero("Sidonius Apollinaris") -- estimated
-end
-
 if (GrandStrategyYear >= 486) then
 	 -- The Frankish Merovingian king Clovis conquers Syagrius' realm, the last Roman territory in Gaul; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
 	SetProvinceOwner("France", "teuton", "Francia")
@@ -18880,10 +18778,6 @@ end
 
 if (GrandStrategyYear >= 493) then
 	GrandStrategyEvents.SPatriciiCanticumScotticum = nil -- Patrick's mission lasted until 493
-end
-
-if (GrandStrategyYear >= 494) then
-	CreateGrandStrategyHero("Avitus") -- Archbishop Avitus of Vienne begins corresponding with the Burgundian king Sigismund c. 494 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 99.
 end
 
 if (GrandStrategyYear >= 495) then
@@ -18939,7 +18833,6 @@ if (GrandStrategyYear >= 507) then -- political situation in 507-534 in Europe; 
 end
 
 if (GrandStrategyYear >= 516) then
-	KillGrandStrategyHero("Gundobad") -- end of Gundobad's reign over the Burgundians in 516 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
 	SetFactionRuler("goth", "Burgundy", "Sigismund") -- beginning of Sigismund's reign over the Burgundians in 516 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
 end
 
@@ -18948,9 +18841,7 @@ if (GrandStrategyYear >= 516) then
 end
 
 if (GrandStrategyYear >= 523) then
-	KillGrandStrategyHero("Sigismund") -- end of Sigismund's reign over the Burgundians in 523 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
 	SetFactionRuler("goth", "Burgundy", "Gundimar") -- beginning of Gundimar's reign over the Burgundians in 523 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
-	KillGrandStrategyHero("Avitus") -- Archbishop Avitus of Vienne stops corresponding with the Burgundian king Sigismund c. 523 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 99.
 end
 
 if (GrandStrategyYear >= 526) then -- political situation in 526-600 in Europe; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
@@ -18977,7 +18868,7 @@ if (GrandStrategyYear >= 531) then
 end
 
 if (GrandStrategyYear >= 534) then
-	KillGrandStrategyHero("Gundimar") -- end of Gundimar's reign over the Burgundians in 534 AD; he was proscribed, pursued and executed by the Franks, and his realm was annexed by them; Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 96, 99.
+	-- end of Gundimar's reign over the Burgundians in 534 AD; he was proscribed, pursued and executed by the Franks, and his realm was annexed by them; Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 96, 99.
 	
 	-- The Burgundian realm, which included the Franche Comté, Burgundy, Savoy and most of Switzerland, was conquered by the Franks in 534; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
 	SetProvinceOwner("Burgundy", "teuton", "Francia")
@@ -19000,10 +18891,6 @@ if (GrandStrategyYear >= 537) then
 	
 	SetProvinceOwner("Provence", "teuton", "Francia") -- Provence conquered by the Franks in 537; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
 	AddProvinceClaim("Provence", "teuton", "Francia")
-end
-
-if (GrandStrategyYear >= 545) then
-	CreateGrandStrategyHero("Clothilda") -- Chilperic's daughter Clothilda died in 545 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 97.
 end
 
 if (GrandStrategyYear >= 563) then

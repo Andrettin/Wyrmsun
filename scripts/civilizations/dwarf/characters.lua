@@ -27,7 +27,7 @@
 
 -- Dwarven heroes
 
-DefineCharacter("Modsognir", {
+DefineCharacter("Modsognir", { -- one of the earliest dwarven leaders; in Norse mythology Modsognir was the mightiest and first of dwarves
 	Name = "Modsognir",
 	Type = "unit-hero-modsognir",
 	Civilization = "dwarf",
@@ -36,13 +36,51 @@ DefineCharacter("Modsognir", {
 	DeathYear = -3000 + 30 -- estimated
 })
 
-DefineCharacter("Durin", {
+DefineCharacter("Durin", { -- deputy of Modsognir
 	Name = "Durin",
 	Type = "unit-hero-durin",
 	Civilization = "dwarf",
 	ProvinceOfOrigin = "Svarinshaug",
 	Year = -3000,
 	DeathYear = -3000 + 30 -- estimated
+})
+
+DefineCharacter("Thjodrorir", { -- dwarven sage of Modsognir's clan; in Norse mythology, a dwarf who knew a charm of power to the gods
+	Name = "Thjodrorir",
+	Type = "unit-dwarven-steelclad", -- should be a priest
+	Civilization = "dwarf",
+	ProvinceOfOrigin = "Svarinshaug",
+	Year = -3000,
+	DeathYear = -3000 + 30 -- estimated
+})
+
+DefineCharacter("Oin", {
+	Name = "Oin",
+	Type = "unit-dwarven-steelclad",
+	Civilization = "dwarf",
+	ProvinceOfOrigin = "Svarinshaug",
+	Year = 437 - (30 * 3),
+	DeathYear = 437 - (30 * 2)
+})
+
+DefineCharacter("Andvari", { -- dwarf who possessed a lot of gold, including a golden ring (Andvaranaut); was possibly one of the settlers of Joruvellir; son of Oin
+	Name = "Andvari",
+	Type = "unit-dwarven-steelclad",
+	Civilization = "dwarf",
+	ProvinceOfOrigin = "Svarinshaug",
+	Year = 437 - (30 * 2),
+	DeathYear = 437 - (30 * 1), -- Gunnar died in 437 AD; Andvari comes from one generation before him
+	Father = "Oin"
+})
+
+DefineCharacter("Regin", { -- skilled smith
+	Name = "Regin",
+	Type = "unit-dwarven-steelclad", -- should be a runesmith
+	Civilization = "dwarf",
+	ProvinceOfOrigin = "Svarinshaug",
+	Year = 437 - (30 * 2),
+	DeathYear = 437 - (30 * 1) -- Gunnar died in 437 AD; Regin comes from one generation before him
+	-- in the Norse myths Regin was the son of Hreidmar; but whereas Regin has been identified as a dwarf, to my knowledge Hreidmar hasn't
 })
 
 DefineCharacter("Thursagan", {

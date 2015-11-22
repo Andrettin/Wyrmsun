@@ -1458,15 +1458,12 @@ function RunGrandStrategyLoadGameMenu()
 			
 			InitializeGrandStrategyMinimap()
 			
+			InitializeGrandStrategyFactions()
+			
 			menu:stop()
 			if (GrandStrategyMenu) then
 				ClearGrandStrategyUIVariables()
 				GrandStrategyMenu:stop();
-			end
-			for key, value in pairs(Factions) do
-				if (GetFactionProvinceCount(Factions[key]) > 0) then
-					CalculateFactionIncomes(Factions[key].Civilization, Factions[key].Name)
-				end
 			end
 			CalculateFactionUpkeeps()
 			InitGameSettings() -- initialize scenario variables (i.e. No Randomness)

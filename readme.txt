@@ -228,6 +228,9 @@ https://github.com/Andrettin/Wyrmsun
 - 1.7.2
 -----------------------------------------------------------------------
 
+* Grand Strategy
+- Added three new dwarven characters who may potentially become rulers: Oin, Andvari and Regin.
+
 * Units
 - Added two new name prefixes and one new name suffix for yales.
 

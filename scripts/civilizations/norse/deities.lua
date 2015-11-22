@@ -170,7 +170,7 @@ DefineDeity("Tyr", { -- Son of Odin; bravest of the gods; sacrificed one of his 
 	Portfolio = "War"
 })
 
-DefineDeity("Ull", { -- name means "Glory" or "Brilliance"; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 251; Source: PoE, p. 494
+DefineDeity("Ull", { -- name means "Glory" or "Brilliance"; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 251; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 494.
 	Civilization = "norse",
 	Gender = "male",
 	Portfolio = "Archery and Skiing"

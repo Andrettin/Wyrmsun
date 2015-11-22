@@ -1062,7 +1062,6 @@ if (GrandStrategyYear >= 40) then
 	ChangeFactionResource("gnome", "Untersberg", "gold", -2500) -- payment for the crafting of the Scepter
 	SetProvinceOwner("Shorbear Hills", "dwarf", "Norlund Clan") -- Shorbear Hold ceded by the Shinsplitters to the Norlunds and peace established
 	SetFactionDiplomacyState("dwarf", "Norlund Clan", "dwarf", "Shinsplitter Clan", "peace")
-	KillGrandStrategyHero("Pypo")
 end
 
 if (GrandStrategyYear >= 389) then
