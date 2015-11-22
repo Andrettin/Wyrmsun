@@ -8,8 +8,6 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      grand_strategy_factions.lua - Defines the grand strategy factions.
---
 --      (c) Copyright 2015 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
@@ -27,19 +25,19 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineGrandStrategyHero("Ariovistus", {
+DefineCharacter("Ariovistus", {
 	Name = "Ariovistus",
 	Gender = "male",
-	DefaultType = "unit-suebi-swordsman",
+	Type = "unit-suebi-swordsman",
 	Civilization = "teuton",
 	ProvinceOfOrigin = "Brandenburg",
 	Year = -71, -- Ariovistus invades Gaul in 71 BC
 	DeathYear = -58 -- Ariovistus beaten by Caesar in 58 BC
 })
 
-DefineGrandStrategyHero("Marbod", {
+DefineCharacter("Marbod", {
 	Name = "Marbod",
-	DefaultType = "unit-hero-marbod",
+	Type = "unit-hero-marbod",
 	Civilization = "teuton",
 	ProvinceOfOrigin = "Brandenburg",
 	Year = -9, -- Marbod, king of the Suebic tribe of the Marcomanni, conquers Bohemia in 9 BC
@@ -47,20 +45,20 @@ DefineGrandStrategyHero("Marbod", {
 })
 
 -- personnages from the Volsungasaga, presumed Teuton since Sigurd was a Frank
-DefineGrandStrategyHero("Volsung", { -- Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 3.
+DefineCharacter("Volsung", { -- Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 3.
 	Name = "Volsung",
 	Gender = "male",
-	DefaultType = "unit-teuton-swordsman",
+	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
 --	ProvinceOfOrigin = "?",
 --	Year = ?,
 --	DeathYear = ?
 })
 
-DefineGrandStrategyHero("Signy", { -- Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, pp. 2-3.
+DefineCharacter("Signy", { -- Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, pp. 2-3.
 	Name = "Signy",
 	Gender = "female",
-	DefaultType = "unit-teuton-archer",
+	Type = "unit-teuton-archer",
 	Civilization = "teuton",
 --	ProvinceOfOrigin = "?",
 --	Year = ?,
@@ -69,10 +67,10 @@ DefineGrandStrategyHero("Signy", { -- Source: C. Scott Littleton, "The Germanic 
 	-- wedded to Siggeir
 })
 
-DefineGrandStrategyHero("Siggeir", { -- Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, pp. 2-3.
+DefineCharacter("Siggeir", { -- Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, pp. 2-3.
 	Name = "Siggeir",
 	Gender = "male",
-	DefaultType = "unit-teuton-swordsman",
+	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
 --	ProvinceOfOrigin = "?",
 --	Year = ?,
@@ -80,10 +78,10 @@ DefineGrandStrategyHero("Siggeir", { -- Source: C. Scott Littleton, "The Germani
 	-- wedded to Signy
 })
 
-DefineGrandStrategyHero("Siegmund", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, p. 94; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 3.
+DefineCharacter("Siegmund", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, p. 94; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 3.
 	Name = "Siegmund", -- also known as Sigmund in the Norse myths; tenth and youngest son of Volsung
 	Gender = "male",
-	DefaultType = "unit-teuton-swordsman",
+	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
 --	ProvinceOfOrigin = "?",
 --	Year = ?,
@@ -91,20 +89,20 @@ DefineGrandStrategyHero("Siegmund", { -- Source: Norman Davies, "Vanished Kingdo
 	Father = "Volsung"
 })
 
-DefineGrandStrategyHero("Sieglind", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, p. 94.
+DefineCharacter("Sieglind", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, p. 94.
 	Name = "Sieglind",
 	Gender = "female",
-	DefaultType = "unit-teuton-archer",
+	Type = "unit-teuton-archer",
 	Civilization = "teuton",
 --	ProvinceOfOrigin = "?",
 --	Year = ?,
 --	DeathYear = ?
 })
 
-DefineGrandStrategyHero("Sinfiotli", { -- Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 3.
+DefineCharacter("Sinfiotli", { -- Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 3.
 	Name = "Sinfiotli", -- born out of the incestuous relationship between Siegmund and his sister Signy
 	Gender = "male",
-	DefaultType = "unit-teuton-swordsman",
+	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
 --	ProvinceOfOrigin = "?",
 --	Year = ?,
@@ -113,10 +111,10 @@ DefineGrandStrategyHero("Sinfiotli", { -- Source: C. Scott Littleton, "The Germa
 	Mother = "Signy"
 })
 
-DefineGrandStrategyHero("Siegfried", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, p. 94.
+DefineCharacter("Siegfried", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, p. 94.
 	Name = "Siegfried", -- Son of Siegmund and Sieglind; Gudrun's husband
 	Gender = "male",
-	DefaultType = "unit-teuton-swordsman",
+	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
 --	ProvinceOfOrigin = "?",
 --	Year = ?,
@@ -125,20 +123,20 @@ DefineGrandStrategyHero("Siegfried", { -- Source: Norman Davies, "Vanished Kingd
 	Mother = "Sieglind"
 })
 
-DefineGrandStrategyHero("Ricimer", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 96-97.
+DefineCharacter("Ricimer", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 96-97.
 	Name = "Ricimer", -- ally of Flavius Aetius and de facto ruler of the Roman Empire at a certain stage; was married to the sister of the Burgundian king Gundioc
 	Gender = "male",
-	DefaultType = "unit-teuton-swordsman",
+	Type = "unit-teuton-swordsman",
 	Civilization = "teuton", -- correct?
 --	ProvinceOfOrigin = "?",
 	Year = 405, -- born
 	DeathYear = 472 -- died
 })
 
-DefineGrandStrategyHero("Clovis", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 97, 99.
+DefineCharacter("Clovis", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 97, 99.
 	Name = "Clovis", -- Frankish king and husband of Clothilda (daughter of the Burgundian king Chilperic); converted to Catholic Christianity
 	Gender = "male",
-	DefaultType = "unit-teuton-swordsman",
+	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
 --	ProvinceOfOrigin = "?",
 	Year = 511 - 30, -- estimated

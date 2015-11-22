@@ -8,8 +8,6 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      grand_strategy_factions.lua - Defines the grand strategy factions.
---
 --      (c) Copyright 2015 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
@@ -27,22 +25,55 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineGrandStrategyHero("Sidonius Apollinaris", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
-	Name = "Sidonius Apollinaris", -- Gallo-Roman writer
+Load("scripts/civilizations/dwarf/characters.lua")
+Load("scripts/civilizations/germanic/characters.lua")
+Load("scripts/civilizations/goth/characters.lua")
+Load("scripts/civilizations/latin/characters.lua")
+Load("scripts/civilizations/teuton/characters.lua")
+
+-- Gnome heroes
+
+DefineCharacter("Pypo", {
+	Name = "Pypo",
 	Gender = "male",
-	DefaultType = "unit-teuton-swordsman",
-	Civilization = "latin",
-	ProvinceOfOrigin = "Provence",
-	Year = 452, -- 20 years old, met Burgundians at his home city of Lugdunum
-	DeathYear = 452 + (30 * 1) -- estimated
+	Type = "unit-gnomish-recruit",
+	Civilization = "gnome",
+	ProvinceOfOrigin = "Brown Hills",
+	Year = -1,
+	DeathYear = 40 -- last we hear of him
 })
 
-DefineGrandStrategyHero("Avitus", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, p. 99.
-	Name = "Avitus", -- Archbishop Avitus of Vienne; corresponded with the Burgundian king Sigismund c. 494-523, and was his chief advisor
+-- Goblin heroes
+
+DefineCharacter("Greebo", {
+	Name = "Greebo",
+	Type = "unit-hero-greebo",
+	Civilization = "goblin",
+--	ProvinceOfOrigin = "?",
+--	Year = ?,
+--	DeathYear = ?
+})
+
+-- Basque heroes
+
+DefineCharacter("Gylve", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
+	Name = "Gylve", -- ruled over Scania; contemporary of Voden
 	Gender = "male",
-	DefaultType = "unit-teuton-archer", -- should be a priest
-	Civilization = "latin",
-	ProvinceOfOrigin = "Provence", -- Vienne
-	Year = 494, -- began corresponding with Sigismund
-	DeathYear = 523 -- ended corresponding with Sigismund
+	Type = "unit-germanic-warrior",
+	Civilization = "basque",
+	ProvinceOfOrigin = "Scania",
+	Year = -3000 + 12 + (10 * 18),
+	DeathYear = -2800 + (30 * 1)
+})
+
+-- Hun heroes
+
+DefineCharacter("Attila", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 93-94.
+	Name = "Attila", -- also known as Atli in Norse myths, in which he married Gudrun
+	Gender = "male",
+	Type = "unit-teuton-ritter",
+	Civilization = "persian", -- should be Hun
+--	ProvinceOfOrigin = "?",
+	Year = 437, -- invasion of Gundahar's kingdom in 437 AD by Attila's Huns
+	DeathYear = 437 + (30 * 1) -- estimated
 })

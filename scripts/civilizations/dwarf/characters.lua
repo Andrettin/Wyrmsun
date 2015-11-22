@@ -8,8 +8,6 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      grand_strategy_factions.lua - Defines the grand strategy factions.
---
 --      (c) Copyright 2015 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
@@ -29,64 +27,64 @@
 
 -- Dwarven heroes
 
-DefineGrandStrategyHero("Modsognir", {
+DefineCharacter("Modsognir", {
 	Name = "Modsognir",
-	DefaultType = "unit-hero-modsognir",
+	Type = "unit-hero-modsognir",
 	Civilization = "dwarf",
 	ProvinceOfOrigin = "Svarinshaug",
 	Year = -3000,
 	DeathYear = -3000 + 30 -- estimated
 })
 
-DefineGrandStrategyHero("Durin", {
+DefineCharacter("Durin", {
 	Name = "Durin",
-	DefaultType = "unit-hero-durin",
+	Type = "unit-hero-durin",
 	Civilization = "dwarf",
 	ProvinceOfOrigin = "Svarinshaug",
 	Year = -3000,
 	DeathYear = -3000 + 30 -- estimated
 })
 
-DefineGrandStrategyHero("Thursagan", {
+DefineCharacter("Thursagan", {
 	Name = "Thursagan",
-	DefaultType = "unit-hero-thursagan",
+	Type = "unit-hero-thursagan",
 	Civilization = "dwarf",
 	ProvinceOfOrigin = "Caverns of Chaincolt",
 	Year = -1,
 	DeathYear = 40 + 10 -- died in 40 AD of a violent death, but was already rather old; +10 years
 })
 
-DefineGrandStrategyHero("Baglur", {
+DefineCharacter("Baglur", {
 	Name = "Baglur",
-	DefaultType = "unit-hero-baglur",
+	Type = "unit-hero-baglur",
 	Civilization = "dwarf",
 	ProvinceOfOrigin = "Caverns of Chaincolt",
 	Year = -1,
 	DeathYear = 40 + 10 -- died in 40 AD of a violent death, but was already rather old; +10 years
 })
 
-DefineGrandStrategyHero("Durstorn", {
+DefineCharacter("Durstorn", {
 	Name = "Durstorn",
-	DefaultType = "unit-hero-durstorn",
+	Type = "unit-hero-durstorn",
 	Civilization = "dwarf",
 	ProvinceOfOrigin = "Caverns of Chaincolt",
 	Year = -1,
 	DeathYear = 35 + 15 -- died in 35 AD of a violent death, but was already somewhat old; +15 years
 })
 
-DefineGrandStrategyHero("Glonoin", {
+DefineCharacter("Glonoin", {
 	Name = "Glonoin",
 	Gender = "male",
-	DefaultType = "unit-dwarven-thane",
+	Type = "unit-dwarven-thane",
 	Civilization = "dwarf",
 	ProvinceOfOrigin = "Shorbear Hills",
 	Year = -1,
 	DeathYear = 29 + 15 -- Shorbear Hold conquered in 29 AD by Rugnur's and Durstorn's Clan
 })
 
-DefineGrandStrategyHero("Rugnur", {
+DefineCharacter("Rugnur", {
 	Name = "Rugnur",
-	DefaultType = "unit-hero-rugnur",
+	Type = "unit-hero-rugnur",
 	Civilization = "dwarf",
 	ProvinceOfOrigin = "Caverns of Chaincolt",
 	Year = 25,

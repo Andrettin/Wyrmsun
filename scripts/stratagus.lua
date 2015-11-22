@@ -2219,7 +2219,7 @@ Load("scripts/grand_strategy/grand_strategy_map_generation.lua")
 Load("scripts/grand_strategy/grand_strategy_factions.lua")
 Load("scripts/grand_strategy/grand_strategy_provinces.lua")
 Load("scripts/grand_strategy/grand_strategy_events.lua")
-Load("scripts/grand_strategy/grand_strategy_heroes.lua")
+Load("scripts/characters.lua")
 
 Load("scripts/0_ad_equivalencies.lua")
 

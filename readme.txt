@@ -229,7 +229,7 @@ https://github.com/Andrettin/Wyrmsun
 -----------------------------------------------------------------------
 
 * Units
-- Added two new name prefixes for yales, and one new name suffix.
+- Added two new name prefixes and one new name suffix for yales.
 
 -----------------------------------------------------------------------
 - 1.7.1
