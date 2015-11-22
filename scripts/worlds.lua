@@ -43,9 +43,19 @@ Worlds = {
 		Description = _("The world of Jotunheim is home to orcs, ogres, cyclops and other brutal races. The environment is hostile, and orcs often have to be wary, lest a roc descend upon them and devour the green creatures. Jotunheim's sun is called Everbright, and its single moon is known as the Rapid Traveller."),
 		Background = _("Jotunheim was the world of the giants in Norse mythology. The ~<Alvissmol~> mentions that the giants call the sun \"Ever-Bright\", and the moon \"Rapid Traveller\".")
 	},
+	Muspelheim = {
+		Name = _("~!Muspelheim"),
+		Description = _("A volcanic planet, Muspelheim is inhabited by fiery creatures."),
+		Background = _("Muspelheim was the fire world of Norse mythology, the encounter of its heat with Niflheim's cold resulting in the creation of the cosmos.")
+	},
 	Nidavellir = {
 		Name = _("~!Nidavellir"),
 		Description = _("The dark plains and mountains of Nidavellir are home to the dwarves, gnomes, goblins and kobolds. Of these diminutive races, the gnomes established the first civilization, and the dwarves the greatest. Nidavellir orbits around a star known as Dvalin's Deceiver, which received its name from Dvalin's dislike of sunlight. The legendary dwarf allegedly preferred the dark even more than most dwarves, complaining incessantly if the sunlight caught him unaware during his travels. The Deep Sea which lies to the east of the dwarven realms of Kal Kartha and Lyr remained unexplored for a long time, until dwarves began building ships robust enough to sail through it. Nidavellir has one moon, which is called \"the Gleamer\". The first contact between dwarves and humans happened in the 23rd century, when an expedition happened upon a dwarven mining operation on a distant planet, resulting in a skirmish."),
 		Background = _("Nidavellir was the world of the dwarves in Norse mythology. The name means \"the Dark Fields\" or \"the Dark Crags\". Nidavellir is mentioned in the ~<Voluspo~>. In the ~<Alvissmol~> it is said that \"the Gleamer\" is the dwarves' term for the moon, while \"the Deceiver of Dvalin\" is their term for the sun.")
+	},
+	Niflheim = {
+		Name = _("Ni~!flheim"),
+		Description = _("A dark, cold world. Niflheim is inhabited by elemental creatures who can thrive in its freezing conditions."),
+		Background = _("Niflheim was the ice world of Norse mythology, the encounter of its cold with Niflheim's heat resulting in the creation of the cosmos. Hel was a part of Niflheim.")
 	}
 }
