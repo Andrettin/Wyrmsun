@@ -140,16 +140,17 @@ DefineCharacter("Siegfried Volsung", { -- Source: Norman Davies, "Vanished Kingd
 	Mother = "Sieglind Hraudung"
 })
 
-DefineCharacter("Svanhild Volsung", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 226.
-	Name = "Svanhild",
+DefineCharacter("Svanhild Volsung", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", pp. 226, 536, 538, 542, 546.
+	Name = "Svanhild", -- also called Sunilda or Sanielh; in the Norse myths was married to and killed by Jormunrek, but they could hardly have lived at the same time
 	Dynasty = "Volsung",
 	Gender = "female",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-teuton-archer",
 	Civilization = "teuton",
 --	ProvinceOfOrigin = "?",
 	Year = 437,
 	DeathYear = 437 + (30 * 1), -- Gunnar/Gundahar died in 437 AD; Svanhild comes from one generation after him
-	Father = "Siegfried Volsung"
+	Father = "Siegfried Volsung",
+	Mother = "Gudrun"
 })
 
 DefineCharacter("Ricimer", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 96-97.

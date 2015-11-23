@@ -71,8 +71,8 @@ DefineCharacter("Agnar II", { -- Source: Kevin Crossley-Holland, "The Norse Myth
 	Father = "Geirrod"
 })
 
-DefineCharacter("Ermanarich", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", pp. 225-226.
-	Name = "Ermanarich", -- king of the Goths; known as Jormunrek in the Norse myths; in Norse tradition, slew his own sons; in the Norse myths married with Sigurd's daughter Svanhild (it would, however, have been impossible for Sigurd to be a contemporary of Gundahar/Gunnar and his daughter and Ermanarich have married)
+DefineCharacter("Ermanaric", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", pp. 225-226, 536, 552; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 22.
+	Name = "Ermanaric", -- king of the East Goths; also known as Ermanarich; known as Ermenrich in High German; known as Jormunrek in the Norse myths; in Norse tradition, slew his own sons; in the Norse myths married with Sigurd's daughter Svanhild and slew her (it would, however, have been impossible for Sigurd to be a contemporary of Gundahar/Gunnar and his daughter and Ermanaric have married); in the Dietrich saga, was the uncle of Dietrich who expelled him from his possessions (he could not have been a contemporary of Dietrich/Theodoric, however)
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth",
@@ -91,7 +91,7 @@ DefineCharacter("Gibica", { -- Source: Norman Davies, "Vanished Kingdoms", 2012,
 	DeathYear = 411
 })
 
-DefineCharacter("Grimhild", { -- Source: Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 226.
+DefineCharacter("Grimhild", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", pp. 226, 519.
 	Name = "Grimhild", -- married to Gibica/Gjuki; also known as Kriemhild
 	Gender = "female",
 	Type = "unit-teuton-archer",
@@ -114,14 +114,24 @@ DefineCharacter("Gundahar", { -- Source: Norman Davies, "Vanished Kingdoms", 201
 	Mother = "Grimhild"
 })
 
+DefineCharacter("Glaumvor", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 502.
+	Name = "Glaumvor", -- name means "The Merry"; the wife of Gundahar/Gunnar in the Norse myths; "knew well to care for the needs of the guests"
+	Gender = "female",
+	Type = "unit-teuton-archer",
+	Civilization = "goth",
+	ProvinceOfOrigin = "Franconia", -- place where the Burgundians dwelled before moving to the area of the Palatinate
+	Year = 437 - (30 * 1),
+	DeathYear = 437 -- comes from the same generation as Gunnar/Gundahar, who died in 437 AD
+})
+
 DefineCharacter("Gudrun", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, p. 94; Source: Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 226.
 	Name = "Gudrun", -- Gundahar's sister in the Norse myths, in which she would first marry Siegfried (Sigurd), and then Attila (Atli); also known as Kriemhild in the Nibelungenlied
 	Gender = "female",
 	Type = "unit-teuton-archer",
 	Civilization = "goth",
 	ProvinceOfOrigin = "Franconia", -- place where the Burgundians dwelled before moving to the area of the Palatinate
-	Year = 406, -- brother of Gundahar/Gunnar, so his contemporary
-	DeathYear = 437,
+	Year = 437 - (30 * 1),
+	DeathYear = 437 -- comes from the same generation as Gunnar/Gundahar, who died in 437 AD
 	Father = "Gibica",
 	Mother = "Grimhild"
 })
@@ -132,20 +142,65 @@ DefineCharacter("Hogni", { -- Source: Source: Kevin Crossley-Holland, "The Norse
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth",
 	ProvinceOfOrigin = "Franconia",
-	Year = 406, -- brother of Gundahar/Gunnar, so his contemporary
-	DeathYear = 437,
+	Year = 437 - (30 * 1),
+	DeathYear = 437, -- comes from the same generation as Gunnar/Gundahar, who died in 437 AD
 	Father = "Gibica",
 	Mother = "Grimhild"
 })
 
-DefineCharacter("Gotthorm", { -- Source: Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 226.
+DefineCharacter("Kostbera", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", pp. 502-503.
+	Name = "Kostbera", -- wife of Hogni; name means "The Giver of Food"
+	Gender = "female",
+	Type = "unit-teuton-archer",
+	Civilization = "goth",
+	Trait = "upgrade-wise", -- kind; wise and cunning in rune-craft
+	ProvinceOfOrigin = "Franconia",
+	Year = 437 - (30 * 1),
+	DeathYear = 437 -- comes from the same generation as Gunnar/Gundahar, who died in 437 AD
+})
+
+DefineCharacter("Orkning", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", pp. 509-510.
+	Name = "Orkning", -- Kostbera's brother
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "goth",
+	ProvinceOfOrigin = "Franconia",
+	Year = 437 - (30 * 1),
+	DeathYear = 437 -- comes from the same generation as Gunnar/Gundahar, who died in 437 AD
+})
+
+DefineCharacter("Snaevar", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", pp. 509, 517.
+	Name = "Snaevar",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "goth",
+	ProvinceOfOrigin = "Franconia",
+	Year = 437, -- he belonged to one generation after Gundahar/Gunnar, who died in 437 AD
+	DeathYear = 437 + (30 * 1),
+	Father = "Hogni",
+	Mother = "Kostbera"
+})
+
+DefineCharacter("Solar", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", pp. 509, 517.
+	Name = "Solar",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "goth",
+	ProvinceOfOrigin = "Franconia",
+	Year = 437, -- he belonged to one generation after Gundahar/Gunnar, who died in 437 AD
+	DeathYear = 437 + (30 * 1),
+	Father = "Hogni",
+	Mother = "Kostbera"
+})
+
+DefineCharacter("Gotthorm", { -- Source: Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", pp. 226, 533.
 	Name = "Gotthorm", -- half-brother of Gundahar/Gunnar, Hogni and Gudrun in the Norse myths; his father was not Gibica/Gjuki (who was thus his step-father); killed Sigurd at Brynhild's request
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth",
 	ProvinceOfOrigin = "Franconia",
-	Year = 406, -- brother of Gundahar/Gunnar, so his contemporary
-	DeathYear = 437,
+	Year = 437 - (30 * 1),
+	DeathYear = 437 -- comes from the same generation as Gunnar/Gundahar, who died in 437 AD
 	Mother = "Grimhild"
 })
 
@@ -155,8 +210,8 @@ DefineCharacter("Brynhild", { -- Source: Henry Adams Bellows (transl.), "The Poe
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth", -- put her as a Burgundian until we have better information
 	ProvinceOfOrigin = "Franconia",
-	Year = 406, -- contemporary of Gundahar/Gunnar
-	DeathYear = 437
+	Year = 437 - (30 * 1),
+	DeathYear = 437 -- comes from the same generation as Gunnar/Gundahar, who died in 437 AD
 })
 
 DefineCharacter("Gundioc", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 94-96.
@@ -167,7 +222,8 @@ DefineCharacter("Gundioc", { -- Source: Norman Davies, "Vanished Kingdoms", 2012
 	ProvinceOfOrigin = "Palatinate",
 	Year = 437, -- beginning of reign
 	DeathYear = 474, -- end of reign
-	Father = "Gundahar" -- from Gibica's line (so presumably a child of Gundahar's)
+	Father = "Gundahar", -- from Gibica's line (so presumably a child of Gundahar's)
+	Mother = "Glaumvor" -- if he was a child of Gundahar's, then his mother would likely be Glaumvor
 })
 
 DefineCharacter("Chilperic", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
