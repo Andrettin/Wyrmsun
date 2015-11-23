@@ -143,9 +143,11 @@ local NidavellirEvents = {
 						GenericDialog("The Mead of Wisdom", "Fjalar and Galar had brewn Thjodrorir's remains into mead, gloating that drink it had made them wiser. Durin survived the encounter with them, and brought the mead to be buried in Thjodrorir's tomb.")
 					end
 				end
+				KillGrandStrategyHero("Thjodrorir")
 			end,
 			function(s)
 				ChangeFactionResource("dwarf", "Modsogning Clan", "prestige", -10) -- doing nothing in such a situation would be dishonorable
+				KillGrandStrategyHero("Thjodrorir")
 			end
 		},
 		OptionTooltips = {"", "-10 Prestige"}

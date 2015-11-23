@@ -97,6 +97,7 @@ function RunGrandStrategyGameSetupMenu()
 			GrandStrategyYear = math.floor(date_slider:getValue())
 			if (world_list[world:getSelected() + 1] ~= "Random") then
 				Load("scripts/grand_strategy/" .. string.lower(world_list[world:getSelected() + 1]) .. "_world_map.lua");
+				Load("scripts/grand_strategy/" .. string.lower(world_list[world:getSelected() + 1]) .. "_history.lua");
 			else
 				GenerateRandomWorldMap()
 			end
@@ -379,6 +380,7 @@ function RunGrandStrategyGameSetupMenu()
 		if (IsMouseLeftButtonPressed() == false or ignore_mouse_state) then
 			if (world_list[world:getSelected() + 1] ~= "Random") then
 				Load("scripts/grand_strategy/" .. string.lower(world_list[world:getSelected() + 1]) .. "_world_map.lua");
+				Load("scripts/grand_strategy/" .. string.lower(world_list[world:getSelected() + 1]) .. "_history.lua");
 				
 				faction_list = {}
 				for key, value in pairsByKeys(Factions) do
