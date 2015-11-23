@@ -1849,7 +1849,13 @@ function LoadProvinces(world)
 		Hordaland = {
 			Name = "Hordaland",
 			Tiles = {
-				{515, 97}
+				{494, 83},
+				{495, 83}, {495, 84}, {495, 85}, {495, 86},
+				{496, 83}, {496, 84}, {496, 85}, {496, 86},
+				{497, 83}, {497, 84}, {497, 85},
+				{498, 83}, {498, 84}, {498, 85},
+				{499, 83}, {499, 84}, {499, 85},
+				{500, 83}, {500, 84}
 			},
 			CulturalNames = {
 				norse = "Hordaland"
@@ -1858,7 +1864,7 @@ function LoadProvinces(world)
 			CulturalSettlementNames = {
 				norse = "Bergen"
 			},
-			SettlementLocation = {515, 97}, -- Bergen
+			SettlementLocation = {495, 84}, -- Bergen
 			Map = "maps/random_maps/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {

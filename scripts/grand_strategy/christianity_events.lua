@@ -611,7 +611,9 @@ local ChristianityEvents = {
 			if (
 				GetProvinceOwner("Ireland") == EventFaction.Name
 				and GetProvinceCivilization("Ireland") == "celt"
-				and GetProvinceCivilization("Akershus") == "norse"
+				and ( -- check if any province in Norway has Norse culture (should check only for the provinces from which those Norsemen actually attacked)
+					GetProvinceCivilization("Hordaland") == "norse"
+				)
 				and SyncRand(100) < 10
 			) then
 				return true
