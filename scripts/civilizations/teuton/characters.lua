@@ -45,24 +45,36 @@ DefineCharacter("Marbod", {
 })
 
 -- personnages from the Volsungasaga, presumed Teuton since Sigurd was a Frank
-DefineCharacter("Volsung", { -- Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 3.
+DefineCharacter("Volsung", { -- Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 3; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 226.
 	Name = "Volsung",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
 --	ProvinceOfOrigin = "?",
---	Year = ?,
---	DeathYear = ?
+	Year = 437 - (30 * 3),
+	DeathYear = 437 - (30 * 2) -- Gunnar/Gundahar died in 437 AD; Volsung comes from two generations before him
 })
 
-DefineCharacter("Signy", { -- Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, pp. 2-3.
+DefineCharacter("Eylimi Othling", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 226.
+	Name = "Eylimi",
+	Dynasty = "Othling", -- dynasty name in the Norse myths
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "teuton", -- Norse?
+	ProvinceOfOrigin = "Zealand", -- since he descends from Halfdan the Old of Denmark
+	Year = 437 - (30 * 3),
+	DeathYear = 437 - (30 * 2) -- Gunnar/Gundahar died in 437 AD; Eylimi comes from one generation before him
+})
+
+DefineCharacter("Signy Volsung", { -- Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, pp. 2-3.
 	Name = "Signy",
+	Dynasty = "Volsung",
 	Gender = "female",
 	Type = "unit-teuton-archer",
 	Civilization = "teuton",
 --	ProvinceOfOrigin = "?",
---	Year = ?,
---	DeathYear = ?
+	Year = 437 - (30 * 2),
+	DeathYear = 437 - (30 * 1), -- Gunnar/Gundahar died in 437 AD; Signy comes from one generation before him
 	Father = "Volsung"
 	-- wedded to Siggeir
 })
@@ -73,54 +85,71 @@ DefineCharacter("Siggeir", { -- Source: C. Scott Littleton, "The Germanic Sword 
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
 --	ProvinceOfOrigin = "?",
---	Year = ?,
---	DeathYear = ?
+	Year = 437 - (30 * 2),
+	DeathYear = 437 - (30 * 1), -- Gunnar/Gundahar died in 437 AD; Siggeir comes from one generation before him
 	-- wedded to Signy
 })
 
-DefineCharacter("Siegmund", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, p. 94; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 3.
+DefineCharacter("Siegmund Volsung", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, p. 94; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 3.
 	Name = "Siegmund", -- also known as Sigmund in the Norse myths; tenth and youngest son of Volsung
+	Dynasty = "Volsung",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
 --	ProvinceOfOrigin = "?",
---	Year = ?,
---	DeathYear = ?,
+	Year = 437 - (30 * 2),
+	DeathYear = 437 - (30 * 1), -- Gunnar/Gundahar died in 437 AD; Siegmund comes from one generation before him
 	Father = "Volsung"
 })
 
-DefineCharacter("Sieglind", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, p. 94.
-	Name = "Sieglind",
+DefineCharacter("Sieglind Hraudung", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, p. 94; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 226.
+	Name = "Sieglind", -- also known as Hjordis in the Norse myths; 
+	Dynasty = "Hraudung", -- dynasty name in the Norse myths (would be better to know the German name to put here, since her given name is in German); she was also an Othling
 	Gender = "female",
 	Type = "unit-teuton-archer",
-	Civilization = "teuton",
---	ProvinceOfOrigin = "?",
---	Year = ?,
---	DeathYear = ?
+	Civilization = "teuton", -- Norse?
+	ProvinceOfOrigin = "Zealand", -- since he descends from Halfdan the Old of Denmark
+	Year = 437 - (30 * 2),
+	DeathYear = 437 - (30 * 1), -- Gunnar/Gundahar died in 437 AD; Sieglind comes from one generation before him
+	Father = "Eylimi Othling"
 })
 
-DefineCharacter("Sinfiotli", { -- Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 3.
+DefineCharacter("Sinfiotli Volsung", { -- Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 3.
 	Name = "Sinfiotli", -- born out of the incestuous relationship between Siegmund and his sister Signy
+	Dynasty = "Volsung",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
 --	ProvinceOfOrigin = "?",
---	Year = ?,
---	DeathYear = ?,
-	Father = "Siegmund",
-	Mother = "Signy"
+	Year = 437 - (30 * 1),
+	DeathYear = 437, -- Gunnar/Gundahar died in 437 AD; Siegfried comes from the same generation as him
+	Father = "Siegmund Volsung",
+	Mother = "Signy Volsung"
 })
 
-DefineCharacter("Siegfried", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, p. 94.
+DefineCharacter("Siegfried Volsung", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, p. 94.
 	Name = "Siegfried", -- Son of Siegmund and Sieglind; Gudrun's husband
+	Dynasty = "Volsung",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
 --	ProvinceOfOrigin = "?",
---	Year = ?,
---	DeathYear = ?,
-	Father = "Siegmund",
-	Mother = "Sieglind"
+	Year = 437 - (30 * 1),
+	DeathYear = 437, -- Gunnar/Gundahar died in 437 AD; Siegfried comes from the same generation as him
+	Father = "Siegmund Volsung",
+	Mother = "Sieglind Hraudung"
+})
+
+DefineCharacter("Svanhild Volsung", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 226.
+	Name = "Svanhild",
+	Dynasty = "Volsung",
+	Gender = "female",
+	Type = "unit-teuton-swordsman",
+	Civilization = "teuton",
+--	ProvinceOfOrigin = "?",
+	Year = 437,
+	DeathYear = 437 + (30 * 1), -- Gunnar/Gundahar died in 437 AD; Svanhild comes from one generation after him
+	Father = "Siegfried Volsung"
 })
 
 DefineCharacter("Ricimer", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 96-97.

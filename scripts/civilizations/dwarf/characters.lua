@@ -54,33 +54,14 @@ DefineCharacter("Thjodrorir", { -- dwarven sage of Modsognir's clan; in Norse my
 	DeathYear = -3000 + 30 -- estimated
 })
 
-DefineCharacter("Oin", {
-	Name = "Oin",
-	Type = "unit-dwarven-steelclad",
+DefineCharacter("Ivaldi", { -- his sons were skilled craftsmen; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 63.
+	Name = "Ivaldi",
+	Type = "unit-dwarven-steelclad", -- should be a runesmith?
 	Civilization = "dwarf",
+	Trait = "upgrade-mighty", -- described as mighty
 	ProvinceOfOrigin = "Svarinshaug",
-	Year = 437 - (30 * 3),
-	DeathYear = 437 - (30 * 2)
-})
-
-DefineCharacter("Andvari", { -- dwarf who possessed a lot of gold, including a golden ring (Andvaranaut); was possibly one of the settlers of Joruvellir; son of Oin
-	Name = "Andvari",
-	Type = "unit-dwarven-steelclad",
-	Civilization = "dwarf",
-	ProvinceOfOrigin = "Svarinshaug",
-	Year = 437 - (30 * 2),
-	DeathYear = 437 - (30 * 1), -- Gunnar died in 437 AD; Andvari comes from one generation before him
-	Father = "Oin"
-})
-
-DefineCharacter("Regin", { -- skilled smith
-	Name = "Regin",
-	Type = "unit-dwarven-steelclad", -- should be a runesmith
-	Civilization = "dwarf",
-	ProvinceOfOrigin = "Svarinshaug",
-	Year = 437 - (30 * 2),
-	DeathYear = 437 - (30 * 1) -- Gunnar died in 437 AD; Regin comes from one generation before him
-	-- in the Norse myths Regin was the son of Hreidmar; but whereas Regin has been identified as a dwarf, to my knowledge Hreidmar hasn't
+	Year = -3000 - (30 * 1),
+	DeathYear = -3000
 })
 
 DefineCharacter("Thursagan", {
@@ -127,4 +108,51 @@ DefineCharacter("Rugnur", {
 	ProvinceOfOrigin = "Caverns of Chaincolt",
 	Year = 25,
 	DeathYear = 40 + 30 -- died in 40 AD of a violent death, and wasn't old; +30 years
+})
+
+DefineCharacter("Oin", {
+	Name = "Oin",
+	Type = "unit-dwarven-steelclad",
+	Civilization = "dwarf",
+	ProvinceOfOrigin = "Svarinshaug",
+	Year = 437 - (30 * 3),
+	DeathYear = 437 - (30 * 2)
+})
+
+DefineCharacter("Andvari", { -- dwarf who possessed a lot of gold, including a golden ring (Andvaranaut); was possibly one of the settlers of Joruvellir; son of Oin
+	Name = "Andvari",
+	Type = "unit-dwarven-steelclad",
+	Civilization = "dwarf",
+	ProvinceOfOrigin = "Svarinshaug",
+	Year = 437 - (30 * 2),
+	DeathYear = 437 - (30 * 1), -- Gunnar died in 437 AD; Andvari comes from one generation before him
+	Father = "Oin"
+})
+
+DefineCharacter("Regin", { -- skilled smith
+	Name = "Regin",
+	Type = "unit-dwarven-steelclad", -- should be a runesmith
+	Civilization = "dwarf",
+	ProvinceOfOrigin = "Svarinshaug",
+	Year = 437 - (30 * 2),
+	DeathYear = 437 - (30 * 1) -- Gunnar died in 437 AD; Regin comes from one generation before him
+	-- in the Norse myths Regin was the son of Hreidmar; but whereas Regin has been identified as a dwarf, to my knowledge Hreidmar hasn't
+})
+
+DefineCharacter("Dain", { -- dwarven mastersmith; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 100.
+	Name = "Dain",
+	Type = "unit-dwarven-steelclad", -- should be a runesmith
+	Civilization = "dwarf",
+	ProvinceOfOrigin = "Svarinshaug",
+--	Year = ?, -- contemporary of Ottar, who lived after Siegfried
+--	DeathYear = ?
+})
+
+DefineCharacter("Nabbi", { -- dwarven mastersmith; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 100.
+	Name = "Nabbi",
+	Type = "unit-dwarven-steelclad", -- should be a runesmith
+	Civilization = "dwarf",
+	ProvinceOfOrigin = "Svarinshaug",
+--	Year = ?, -- contemporary of Ottar, who lived after Siegfried
+--	DeathYear = ?
 })

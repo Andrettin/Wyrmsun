@@ -37,7 +37,8 @@ DefineFaction("Geat Tribe", {
 	Civilization = "norse",
 	Type = "tribe",
 	Color = "teal",
-	SecondaryColor = "teal"
+	SecondaryColor = "teal",
+	DevelopsTo = {"Gautland"}
 })
 
 DefineFaction("Swede Tribe", {
@@ -59,6 +60,30 @@ DefineFaction("Denmark", {
 	Titles = {
 		"monarchy", "kingdom", "Kingdom"
 	}
+})
+
+DefineFaction("Gautland", {
+	Civilization = "norse",
+	Type = "polity",
+	Color = "teal",
+	SecondaryColor = "teal",
+	DefaultTier = "kingdom"
+})
+
+DefineFaction("Holmgard", {
+	Civilization = "norse",
+	Type = "polity",
+	Color = "blue",
+	SecondaryColor = "blue",
+	DefaultTier = "kingdom"
+})
+
+DefineFaction("Hordaland", {
+	Civilization = "norse",
+	Type = "polity",
+	Color = "cyan",
+	SecondaryColor = "cyan",
+	DefaultTier = "kingdom"
 })
 
 DefineFaction("Norway", {

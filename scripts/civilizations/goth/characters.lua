@@ -25,8 +25,64 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineCharacter("Gibica", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, p. 91.
-	Name = "Gibica",
+DefineCharacter("Hraudung", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 59.
+	Name = "Hraudung", -- king of the Goths in the Lay of Grimnir
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "goth",
+--	ProvinceOfOrigin = "?",
+--	Year = ?,
+--	DeathYear = ?
+})
+
+DefineCharacter("Agnar", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 59-60.
+	Name = "Agnar", -- Hraudung's eldest son in the Lay of Grimnir, who was sent away in a boat by his brother Geirrod, but eventually found his way to a cave where he mated with a giantess
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "goth",
+--	ProvinceOfOrigin = "?",
+--	Year = ?,
+--	DeathYear = ?,
+	Father = "Hraudung"
+})
+
+DefineCharacter("Geirrod", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 59-60, 64.
+	Name = "Geirrod", -- Hraudung's younger son in the Lay of Grimnir, who sent his brother Agnar away and then became king (Hraudung had died while they were away); died by falling on his own sword
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "goth",
+	Trait = "upgrade-cruel", -- was a cruel, tyrannical ruler; had sudden fits of anger; nevertheless, was generous and welcoming of guests
+--	ProvinceOfOrigin = "?",
+--	Year = ?,
+--	DeathYear = ?,
+	Father = "Hraudung"
+})
+
+DefineCharacter("Agnar II", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 60-61, 64.
+	Name = "Agnar", -- Geirrod's son, named after Geirrod's brother; ruled for a long time after succeeding Geirrod
+	ExtraName = "II", -- to differentiate him from his uncle
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "goth",
+	Trait = "upgrade-compassionate", -- when Grimnir (Odin in disguise) suffered, Agnar suffered with him; gave Grimnir a horn with drink
+--	ProvinceOfOrigin = "?",
+--	Year = ?,
+--	DeathYear = ?,
+	Father = "Geirrod"
+})
+
+DefineCharacter("Ermanarich", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", pp. 225-226.
+	Name = "Ermanarich", -- king of the Goths; known as Jormunrek in the Norse myths; in Norse tradition, slew his own sons; in the Norse myths married with Sigurd's daughter Svanhild (it would, however, have been impossible for Sigurd to be a contemporary of Gundahar/Gunnar and his daughter and Ermanarich have married)
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "goth",
+	ProvinceOfOrigin = "Ukraine", -- accurate?
+	Year = 376 - (30 * 1), -- estimated
+	DeathYear = 376 -- died
+})
+
+DefineCharacter("Gibica", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, p. 91; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 226.
+	Name = "Gibica", -- known as Gjuki in the Norse myths; married to Grimhild
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth",
@@ -35,7 +91,17 @@ DefineCharacter("Gibica", { -- Source: Norman Davies, "Vanished Kingdoms", 2012,
 	DeathYear = 411
 })
 
-DefineCharacter("Gundahar", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 91-94.
+DefineCharacter("Grimhild", { -- Source: Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 226.
+	Name = "Grimhild", -- married to Gibica/Gjuki; also known as Kriemhild
+	Gender = "female",
+	Type = "unit-teuton-archer",
+	Civilization = "goth",
+	ProvinceOfOrigin = "Franconia", -- place where the Burgundians dwelled before moving to the area of the Palatinate
+	Year = 411 - (30 * 1), -- estimated
+	DeathYear = 411
+})
+
+DefineCharacter("Gundahar", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 91-94; Source: Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 226.
 	Name = "Gundahar", -- also known as Gunnar in Norse myths, as Günter in the Nibelungenlied, and as Gunthere in the Anglo-Saxon poem Widsith
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
@@ -44,18 +110,53 @@ DefineCharacter("Gundahar", { -- Source: Norman Davies, "Vanished Kingdoms", 201
 	Trait = "upgrade-generous", -- in the Anglo-Saxon poem "Widsith", Gundahar (Gunthere) gave the poet "a shining treasure" for his songs
 	Year = 406, -- Gundahar and his father Gibica brought the Burgundians over the Rhine in 406/407 AD
 	DeathYear = 437, -- invasion of Gundahar's kingdom in 437 AD by Attila's Huns
-	Father = "Gibica"
+	Father = "Gibica",
+	Mother = "Grimhild"
 })
 
-DefineCharacter("Gudrun", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, p. 94.
+DefineCharacter("Gudrun", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, p. 94; Source: Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 226.
 	Name = "Gudrun", -- Gundahar's sister in the Norse myths, in which she would first marry Siegfried (Sigurd), and then Attila (Atli); also known as Kriemhild in the Nibelungenlied
 	Gender = "female",
 	Type = "unit-teuton-archer",
 	Civilization = "goth",
 	ProvinceOfOrigin = "Franconia", -- place where the Burgundians dwelled before moving to the area of the Palatinate
-	Year = 406, -- Gundahar and his father Gibica brought the Burgundians over the Rhine in 406/407 AD
-	DeathYear = 437, -- invasion of Gundahar's kingdom in 437 AD by Attila's Huns
-	Father = "Gibica" -- presumably, since her brother Gundahar was a son of Gibica, and they seem to have been full-blooded siblings
+	Year = 406, -- brother of Gundahar/Gunnar, so his contemporary
+	DeathYear = 437,
+	Father = "Gibica",
+	Mother = "Grimhild"
+})
+
+DefineCharacter("Hogni", { -- Source: Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 226.
+	Name = "Hogni", -- brother of Gundahar/Gunnar in the Norse myths
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "goth",
+	ProvinceOfOrigin = "Franconia",
+	Year = 406, -- brother of Gundahar/Gunnar, so his contemporary
+	DeathYear = 437,
+	Father = "Gibica",
+	Mother = "Grimhild"
+})
+
+DefineCharacter("Gotthorm", { -- Source: Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 226.
+	Name = "Gotthorm", -- half-brother of Gundahar/Gunnar, Hogni and Gudrun in the Norse myths; his father was not Gibica/Gjuki (who was thus his step-father); killed Sigurd at Brynhild's request
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "goth",
+	ProvinceOfOrigin = "Franconia",
+	Year = 406, -- brother of Gundahar/Gunnar, so his contemporary
+	DeathYear = 437,
+	Mother = "Grimhild"
+})
+
+DefineCharacter("Brynhild", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 226.
+	Name = "Brynhild", -- requested Gotthorm to kill Sigurd
+	Gender = "female",
+	Type = "unit-teuton-swordsman",
+	Civilization = "goth", -- put her as a Burgundian until we have better information
+	ProvinceOfOrigin = "Franconia",
+	Year = 406, -- contemporary of Gundahar/Gunnar
+	DeathYear = 437
 })
 
 DefineCharacter("Gundioc", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 94-96.

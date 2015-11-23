@@ -611,7 +611,7 @@ local ChristianityEvents = {
 			if (
 				GetProvinceOwner("Ireland") == EventFaction.Name
 				and GetProvinceCivilization("Ireland") == "celt"
---				and GetProvinceCivilization("Norway") == "norse"
+				and GetProvinceCivilization("Akershus") == "norse"
 				and SyncRand(100) < 10
 			) then
 				return true

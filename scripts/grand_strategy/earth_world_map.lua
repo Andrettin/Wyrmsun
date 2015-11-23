@@ -18609,6 +18609,10 @@ if (GrandStrategyYear >= 325) then
 	-- decree by Emperor Constantine in 325 AD regulating the issue of gold solidi for Sicily, Sardinia and Corsica; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, p. 186.
 end
 
+if (GrandStrategyYear >= 346) then
+	SetFactionRuler("goth", "Ostrogoth Tribe", "Ermanarich") -- Ermanarich died c. 376, so we estimate him having become ruler a certain number of years before
+end
+
 if (GrandStrategyYear >= 357) then
 	-- Roman commander (and later emperor) Julian defeat an Alamannic army (led by their king Chnodomar and his nephew Serapio/Agenarich) in the battle of Argentoratum in 357 AD; the Alamanns counted with an alliance of five kings (Vestralp, Urius, Ursicinus, Suomer and Hortar), totalling 35,000 soldiers commanded by 17 warlords, with each leading 2,000-3,000 warriors; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 231.
 end

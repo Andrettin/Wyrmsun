@@ -113,7 +113,7 @@ DefineUnitType("unit-dwarven-militia", { Name = _("Militia"),
 	Flesh = true,
 	SelectableByRectangle = true,
 	HackDamage = true,
-	Traits = {"upgrade-mighty", "upgrade-strong", "upgrade-weak", "upgrade-dextrous", "upgrade-clumsy", "upgrade-reckless", "upgrade-near-sighted", "upgrade-keen", "upgrade-limping", "upgrade-old", "upgrade-quick", "upgrade-resilient", "upgrade-slow"},
+	Traits = {"upgrade-mighty", "upgrade-strong", "upgrade-weak", "upgrade-dextrous", "upgrade-clumsy", "upgrade-reckless", "upgrade-near-sighted", "upgrade-keen", "upgrade-limping", "upgrade-old", "upgrade-quick", "upgrade-resilient", "upgrade-slow", "upgrade-cruel"},
 	Sounds = {
 		"selected", "basic-dwarf-voices-selected-group",
 		"acknowledge", "dwarven-miner-acknowledge",

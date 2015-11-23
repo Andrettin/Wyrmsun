@@ -3735,7 +3735,7 @@ DefineUnitType("unit-template-worker", { Name = _("Worker"),
 	organic = true,
 	Flesh = true,
 	SelectableByRectangle = true,
-	Traits = {"upgrade-mighty", "upgrade-strong", "upgrade-weak", "upgrade-dextrous", "upgrade-clumsy", "upgrade-reckless", "upgrade-near-sighted", "upgrade-keen", "upgrade-limping", "upgrade-old", "upgrade-quick", "upgrade-resilient", "upgrade-slow"},
+	Traits = {"upgrade-mighty", "upgrade-strong", "upgrade-weak", "upgrade-dextrous", "upgrade-clumsy", "upgrade-reckless", "upgrade-near-sighted", "upgrade-keen", "upgrade-limping", "upgrade-old", "upgrade-quick", "upgrade-resilient", "upgrade-slow", "upgrade-cruel"},
 	CanGatherResources = {
 		{
 			"resource-id", "gold",
@@ -3818,7 +3818,7 @@ DefineUnitType("unit-template-infantry", { Name = _("Infantry"),
 	organic = true,
 	Flesh = true,
 	SelectableByRectangle = true,
-	Traits = {"upgrade-mighty", "upgrade-strong", "upgrade-weak", "upgrade-dextrous", "upgrade-clumsy", "upgrade-reckless", "upgrade-near-sighted", "upgrade-keen", "upgrade-limping", "upgrade-old", "upgrade-quick", "upgrade-resilient", "upgrade-slow"},
+	Traits = {"upgrade-mighty", "upgrade-strong", "upgrade-weak", "upgrade-dextrous", "upgrade-clumsy", "upgrade-reckless", "upgrade-near-sighted", "upgrade-keen", "upgrade-limping", "upgrade-old", "upgrade-quick", "upgrade-resilient", "upgrade-slow", "upgrade-cruel"},
 	ShieldAnimation = {
 		{
 			"frame", 0,
@@ -4212,7 +4212,7 @@ DefineUnitType("unit-template-archer", { Name = _("Archer"),
 	Flesh = true,
 	SelectableByRectangle = true,
 	AttackFromTransporter = true,
-	Traits = {"upgrade-mighty", "upgrade-strong", "upgrade-weak", "upgrade-dextrous", "upgrade-clumsy", "upgrade-reckless", "upgrade-keen", "upgrade-limping", "upgrade-old", "upgrade-quick", "upgrade-resilient", "upgrade-slow"}, -- near-sighted upgrade not allowed, as it would make the unit have a smaller sight range than its attack range
+	Traits = {"upgrade-mighty", "upgrade-strong", "upgrade-weak", "upgrade-dextrous", "upgrade-clumsy", "upgrade-reckless", "upgrade-keen", "upgrade-limping", "upgrade-old", "upgrade-quick", "upgrade-resilient", "upgrade-slow", "upgrade-cruel"}, -- near-sighted upgrade not allowed, as it would make the unit have a smaller sight range than its attack range
 	Sounds = {
 		"step", "step-dirt",
 		"step-dirt", "step-dirt",
@@ -4248,7 +4248,7 @@ DefineUnitType("unit-template-thief", { Name = _("Thief"),
 	organic = true,
 	Flesh = true,
 	SelectableByRectangle = true,
-	Traits = {"upgrade-mighty", "upgrade-strong", "upgrade-weak", "upgrade-dextrous", "upgrade-clumsy", "upgrade-reckless", "upgrade-near-sighted", "upgrade-keen", "upgrade-limping", "upgrade-old", "upgrade-quick", "upgrade-resilient", "upgrade-slow"},
+	Traits = {"upgrade-mighty", "upgrade-strong", "upgrade-weak", "upgrade-dextrous", "upgrade-clumsy", "upgrade-reckless", "upgrade-near-sighted", "upgrade-keen", "upgrade-limping", "upgrade-old", "upgrade-quick", "upgrade-resilient", "upgrade-slow", "upgrade-cruel"},
 	Sounds = {
 		"step", "step-dirt",
 		"step-dirt", "step-dirt",
@@ -4286,7 +4286,7 @@ DefineUnitType("unit-template-cavalry", { Name = _("Cavalry"),
 	Flesh = true,
 	SelectableByRectangle = true,
 	TechnologyPointCost = 1,
-	Traits = {"upgrade-mighty", "upgrade-strong", "upgrade-weak", "upgrade-dextrous", "upgrade-clumsy", "upgrade-reckless", "upgrade-near-sighted", "upgrade-keen", "upgrade-limping", "upgrade-old", "upgrade-quick", "upgrade-resilient", "upgrade-slow"},
+	Traits = {"upgrade-mighty", "upgrade-strong", "upgrade-weak", "upgrade-dextrous", "upgrade-clumsy", "upgrade-reckless", "upgrade-near-sighted", "upgrade-keen", "upgrade-limping", "upgrade-old", "upgrade-quick", "upgrade-resilient", "upgrade-slow", "upgrade-cruel"},
 	Sounds = {
 		"step", "step-dirt",
 		"step-dirt", "step-dirt",
@@ -4323,7 +4323,7 @@ DefineUnitType("unit-template-priest", { Name = _("Priest"),
 	Flesh = true,
 	SelectableByRectangle = true,
 	Mana = {Enable = true},
-	Traits = {"upgrade-mighty", "upgrade-strong", "upgrade-weak", "upgrade-dextrous", "upgrade-clumsy", "upgrade-reckless", "upgrade-near-sighted", "upgrade-keen", "upgrade-limping", "upgrade-old", "upgrade-quick", "upgrade-resilient", "upgrade-slow"},
+	Traits = {"upgrade-mighty", "upgrade-strong", "upgrade-weak", "upgrade-dextrous", "upgrade-clumsy", "upgrade-reckless", "upgrade-near-sighted", "upgrade-keen", "upgrade-limping", "upgrade-old", "upgrade-quick", "upgrade-resilient", "upgrade-slow", "upgrade-cruel"},
 	Sounds = {
 		"step", "step-dirt",
 		"step-dirt", "step-dirt",
@@ -4397,7 +4397,7 @@ DefineUnitType("unit-template-flying-rider", { Name = _("Flying Rider"),
 	Mounted = true,
 	SelectableByRectangle = true,
 	TechnologyPointCost = 1,
-	Traits = {"upgrade-mighty", "upgrade-strong", "upgrade-weak", "upgrade-dextrous", "upgrade-clumsy", "upgrade-reckless", "upgrade-near-sighted", "upgrade-keen", "upgrade-limping", "upgrade-old", "upgrade-quick", "upgrade-resilient", "upgrade-slow"},
+	Traits = {"upgrade-mighty", "upgrade-strong", "upgrade-weak", "upgrade-dextrous", "upgrade-clumsy", "upgrade-reckless", "upgrade-near-sighted", "upgrade-keen", "upgrade-limping", "upgrade-old", "upgrade-quick", "upgrade-resilient", "upgrade-slow", "upgrade-cruel"},
 	Sounds = {
 	}
 } )

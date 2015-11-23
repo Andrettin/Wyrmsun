@@ -29,6 +29,7 @@ Load("scripts/civilizations/dwarf/characters.lua")
 Load("scripts/civilizations/germanic/characters.lua")
 Load("scripts/civilizations/goth/characters.lua")
 Load("scripts/civilizations/latin/characters.lua")
+Load("scripts/civilizations/norse/characters.lua")
 Load("scripts/civilizations/teuton/characters.lua")
 
 -- Gnome heroes
