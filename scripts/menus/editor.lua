@@ -632,7 +632,7 @@ function EditUnitProperties()
 
 	menu:addHalfButton(_("~!OK"), "o", 20 + 48, sizeY - 40,
 		function()
-			SetUnitName(UnitNumber(GetUnitUnderCursor()), name_value:getText())
+			SetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Name", name_value:getText())
 			if (GetUnitBoolFlag(UnitNumber(GetUnitUnderCursor()), "organic") and table.getn(GetUnitTypeData(GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Ident"), "Traits")) > 0) then
 				if (trait_list[unit_trait:getSelected() + 1] ~= GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Trait")) then
 					AcquireTrait(UnitNumber(GetUnitUnderCursor()), trait_list[unit_trait:getSelected() + 1])
