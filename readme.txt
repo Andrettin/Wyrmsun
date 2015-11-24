@@ -231,6 +231,7 @@ https://github.com/Andrettin/Wyrmsun
 * Grand Strategy
 - Added three new dwarven characters who may potentially become rulers: Oin, Andvari and Regin.
 - Added Hordaland province in Norway.
+- Improved the performance of the grand strategy hero code.
 
 * Units
 - Added two new name prefixes and one new name suffix for yales.

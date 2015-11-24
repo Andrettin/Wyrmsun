@@ -42,7 +42,7 @@ DefineCharacter("Leo", { -- Source: F. E. Sandbach, "The Heroic Saga-Cycle of Di
 	Civilization = "latin",
 	ProvinceOfOrigin = "Thrace", -- possibly not accurate, but since he was the (Eastern) Roman emperor put him there until we have better information
 	Year = 462, -- ruled in 462 AD when Walamer invaded Illyria because of the treaty's renouncement
-	DeathYear = 480 -- by 480 the ruler of Eastern Rome was Zeno
+	DeathYear = 480 -- by 480 AD the ruler of Eastern Rome was Zeno
 })
 
 DefineCharacter("Zeno", { -- Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 7.
@@ -51,7 +51,7 @@ DefineCharacter("Zeno", { -- Source: F. E. Sandbach, "The Heroic Saga-Cycle of D
 	Type = "unit-teuton-swordsman",
 	Civilization = "latin",
 	ProvinceOfOrigin = "Thrace", -- possibly not accurate, but since he was the (Eastern) Roman emperor put him there until we have better information
-	Year = 480, -- by 480 the ruler of Eastern Rome was Zeno
+	Year = 480, -- by 480 AD the ruler of Eastern Rome was Zeno
 	DeathYear = 480 + 30 -- estimated
 })
 

@@ -50,9 +50,9 @@ DefineCharacter("Greebo", {
 	Name = "Greebo",
 	Type = "unit-hero-greebo",
 	Civilization = "goblin",
---	ProvinceOfOrigin = "?",
---	Year = ?,
---	DeathYear = ?
+	ProvinceOfOrigin = "Caverns of Flame", -- placeholder (this character needs to have a province of origin since he has a hero unit type)
+	Year = 3000, -- placeholder (this character needs to have a year since he has a hero unit type)
+	DeathYear = 3000 + 30 -- placeholder (this character needs to have a death year since he has a hero unit type)
 })
 
 -- Basque heroes
