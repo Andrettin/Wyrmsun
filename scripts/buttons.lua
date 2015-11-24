@@ -156,7 +156,7 @@ DefineButton( { Pos = 2, Level = 1, Icon = "icon-critical-strike",
 
 DefineButton( { Pos = 2, Level = 1, Icon = "icon-deadly-precision",
 	Action = "learn-ability", Value = "upgrade-deadly-precision",
-	Allowed = "check-ability", AllowArg = {"upgrade-critical-strike"},
+	Allowed = "check-individual-upgrade", AllowArg = {"upgrade-critical-strike"},
 	Key = "d", Hint = "Learn ~!Deadly Precision", Popup = "popup-commands",
 	Description = "Deadly Precision is a passive ability that increases critical strike chance by 10%. In No Randomness mode it provides a 10% damage bonus instead.",
 	ForUnit = {

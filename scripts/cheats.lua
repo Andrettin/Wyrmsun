@@ -164,8 +164,8 @@ function HandleCheats(str)
 		local uncount = 0
 		uncount = GetUnits("any")
 		for unit1 = 1,table.getn(uncount) do 
-			if (GetUnitBoolFlag(uncount[unit1], "Fauna") and UnitHasAbility(uncount[unit1], GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "ChildUpgrade")) == false) then
-				AcquireIndividualUpgrade(uncount[unit1], GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "ChildUpgrade"))
+			if (GetUnitBoolFlag(uncount[unit1], "Fauna") and GetUnitVariable(uncount[unit1], "IndividualUpgrade", GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "ChildUpgrade")) == false) then
+				SetUnitVariable(uncount[unit1], "IndividualUpgrade", GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "ChildUpgrade"), true)
 			end
 		end
 

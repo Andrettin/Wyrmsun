@@ -127,18 +127,3 @@ DefineSpell("spell-axe-twirl",
 	"autocast", {"range", 1, "condition", {"alliance", "false", "opponent", "only", "AirUnit", "false"}},
 	"ai-cast", {"range", 1, "condition", {"alliance", "false", "opponent", "only", "AirUnit", "false"}}
 )
-
-DefineSpell("spell-equip-axe-of-perun",
-	"showname", _("equip toporik"),
-	"manacost", 0,
-	"range", 0,
-	"target", "self",
-	"action", {
-		{"adjust-variable", {AxeOfPerun = {Value = 2}}}
---		{"adjust-variable", {BasicDamageBonus = {AddValue = 2}}}
-	},
-	"condition", {
-		"AxeOfPerun", {MinValue = 0, MaxValue = 2}
-	},
-	"ai-cast", {}
-)

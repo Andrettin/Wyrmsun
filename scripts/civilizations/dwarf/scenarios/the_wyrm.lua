@@ -268,7 +268,7 @@ AddTrigger(
 				uncount = 0
 				uncount = GetUnits(GetFactionPlayer("Svafnir"))
 				for unit1 = 1,table.getn(uncount) do 
---					if (IsUnitIdle(uncount[unit1])) then
+--					if (GetUnitVariable(uncount[unit1], "Idle")) then
 						OrderUnit(2, GetUnitVariable(uncount[unit1],"Ident"), {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(thursagan,"PosX"), GetUnitVariable(thursagan,"PosY")}, "attack")
 						local nearby_uncount = 0
 						nearby_uncount = GetUnitsAroundUnit(uncount[unit1], 6, true)
@@ -319,7 +319,7 @@ AddTrigger(
 		uncount = 0
 		uncount = GetUnits(GetFactionPlayer("Norlund Clan"))
 		for unit1 = 1,table.getn(uncount) do 
-			if (GetUnitVariable(uncount[unit1],"Ident") ~= "unit-dwarven-scout" and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Building") == false and IsUnitIdle(uncount[unit1])) then
+			if (GetUnitVariable(uncount[unit1],"Ident") ~= "unit-dwarven-scout" and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Building") == false and GetUnitVariable(uncount[unit1], "Idle")) then
 				if (GetUnitVariable(uncount[unit1],"Ident") ~= "unit-hero-thursagan") then
 					OrderUnit(GetFactionPlayer("Norlund Clan"), GetUnitVariable(uncount[unit1],"Ident"), {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(thursagan,"PosX"), GetUnitVariable(thursagan,"PosY")}, "move")
 				else

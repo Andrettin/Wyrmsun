@@ -590,7 +590,7 @@ AddTrigger(
 		uncount = 0
 		uncount = GetUnits(GetFactionPlayer("Shinsplitter Clan"))
 		for unit1 = 1,table.getn(uncount) do 
-			if (IsUnitIdle(uncount[unit1])) then
+			if (GetUnitVariable(uncount[unit1], "Idle")) then
 				if (GetUnitVariable(uncount[unit1],"CustomAIState") == 1 or (GetUnitVariable(uncount[unit1],"CustomAIState") == 2 and GameCycle >= 2500) or (GetUnitVariable(uncount[unit1],"CustomAIState") == 3 and GameCycle >= 3500) or (GetUnitVariable(uncount[unit1],"CustomAIState") == 4 and GameCycle >= 4500)) then
 					OrderUnit(GetFactionPlayer("Shinsplitter Clan"), GetUnitVariable(uncount[unit1],"Ident"), {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(thursagan,"PosX"), GetUnitVariable(thursagan,"PosY")}, "attack")
 				end
@@ -630,7 +630,7 @@ AddTrigger(
 		uncount = 0
 		uncount = GetUnits(GetFactionPlayer("Norlund Clan"))
 		for unit1 = 1,table.getn(uncount) do 
-			if (IsUnitIdle(uncount[unit1])) then
+			if (GetUnitVariable(uncount[unit1], "Idle")) then
 				OrderUnit(GetFactionPlayer("Norlund Clan"), GetUnitVariable(uncount[unit1],"Ident"), {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(glyph,"PosX"), GetUnitVariable(glyph,"PosY")}, "move")
 			end
 		end

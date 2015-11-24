@@ -228,6 +228,9 @@ https://github.com/Andrettin/Wyrmsun
 - 1.7.2
 -----------------------------------------------------------------------
 
+* Buildings
+- Fixed issue which sometimes caused the Teuton town hall to briefly flicker before changing graphics after the research of Masonry.
+
 * Grand Strategy
 - Added three new dwarven characters who may potentially become rulers: Oin, Andvari and Regin.
 - Added Hordaland province in Norway.

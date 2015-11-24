@@ -689,18 +689,6 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-guard-tower",
 --  Key = "o", Hint = _("~!Open Inventory"), Popup = "popup-commands",
 --  ForUnit = {"unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-rugnur-thane"} } )
 
---DefineButton( { Pos = 1, Level = 1, Icon = "icon-dwarven-axe-3",
---  Action = "cast-spell", Value = "spell-equip-axe-of-perun",
---  Allowed = "check-unit-variable", AllowArg = {"AxeOfPerun", "Value", "==", "1"},
---  Key = "e", Hint = _("~!Equip Toporik"), Popup = "popup-commands",
---  ForUnit = {"unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-rugnur-thane"} } )
-
---DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-axe-3",
---  Action = "attack",
---  Allowed = "check-unit-variable", AllowArg = {"AxeOfPerun", "Value", "==", "2"},
---  Key = "a", Hint = _("~!Attack"), Popup = "popup-commands",
---  ForUnit = {"unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-rugnur-thane"} } )
-
 -- Special Abilities ------------------------------------------------------
 
 --DefineButton( { Pos = 7, Level = 0, Icon = "icon-dwarven-throwing-axe-1",

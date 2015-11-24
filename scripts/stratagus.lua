@@ -254,8 +254,7 @@ DefineVariables(
 	"LifeStage", {Max = 99999, Value = 0, Increase = 0, Enable = true},
 	"LastCycle", {Max = 99999, Value = 0, Increase = 0, Enable = true},
 	"CustomAIState", {Max = 99999, Value = 0, Increase = 0, Enable = true},
-	"ForTheMotherland", {Max = 1, Value = 0, Increase = 0, Enable = true}, -- 0 = not a FtM unit creator, 1 = is a FtM unit creator
-	"AxeOfPerun", {Max = 2, Value = 0, Increase = 0, Enable = true} -- 0 = not owned, 1 = owned, 2 = equipped
+	"ForTheMotherland", {Max = 1, Value = 0, Increase = 0, Enable = true} -- 0 = not a FtM unit creator, 1 = is a FtM unit creator
 )
 
 -------------------------------------------------------------------------------
@@ -488,9 +487,9 @@ function StandardTriggers()
 						ConvertUnit(uncount[unit1], "unit-surghan-mercenary-thane")
 					else -- for other units, learn an ability, if any are present for learning
 						for i=1,table.getn(GetUnitTypeLevelUpUpgrades(GetUnitVariable(uncount[unit1], "Ident"))) do
-							if (string.find(GetUnitTypeLevelUpUpgrades(GetUnitVariable(uncount[unit1], "Ident"))[i], "upgrade-") ~= nil and UnitHasAbility(uncount[unit1], GetUnitTypeLevelUpUpgrades(GetUnitVariable(uncount[unit1], "Ident"))[i]) == false) then
+							if (string.find(GetUnitTypeLevelUpUpgrades(GetUnitVariable(uncount[unit1], "Ident"))[i], "upgrade-") ~= nil and GetUnitVariable(uncount[unit1], "IndividualUpgrade", GetUnitTypeLevelUpUpgrades(GetUnitVariable(uncount[unit1], "Ident"))[i]) == false) then
 								if not (
-									GetUnitTypeLevelUpUpgrades(GetUnitVariable(uncount[unit1], "Ident"))[i] == "upgrade-deadly-precision" and UnitHasAbility(uncount[unit1], "upgrade-critical-strike") == false
+									GetUnitTypeLevelUpUpgrades(GetUnitVariable(uncount[unit1], "Ident"))[i] == "upgrade-deadly-precision" and GetUnitVariable(uncount[unit1], "IndividualUpgrade", "upgrade-critical-strike") == false
 								) then
 									AcquireAbility(uncount[unit1], GetUnitTypeLevelUpUpgrades(GetUnitVariable(uncount[unit1], "Ident"))[i])
 								end
@@ -562,27 +561,27 @@ function StandardTriggers()
 
 								-- save upgrades
 								if (GetPlayerData(GetUnitVariable(uncount[unit1], "Player"), "AiEnabled") == false) then
-									if (UnitHasAbility(uncount[unit1], "upgrade-axe-mastery") and GetArrayIncludes(wyr.preferences.Heroes[key].upgrades, "upgrade-axe-mastery") == false) then
+									if (GetUnitVariable(uncount[unit1], "IndividualUpgrade", "upgrade-axe-mastery") and GetArrayIncludes(wyr.preferences.Heroes[key].upgrades, "upgrade-axe-mastery") == false) then
 										table.insert(wyr.preferences.Heroes[key].upgrades, "upgrade-axe-mastery")
 										SavePreferences()
 									end
-									if (UnitHasAbility(uncount[unit1], "upgrade-sword-mastery") and GetArrayIncludes(wyr.preferences.Heroes[key].upgrades, "upgrade-sword-mastery") == false) then
+									if (GetUnitVariable(uncount[unit1], "IndividualUpgrade", "upgrade-sword-mastery") and GetArrayIncludes(wyr.preferences.Heroes[key].upgrades, "upgrade-sword-mastery") == false) then
 										table.insert(wyr.preferences.Heroes[key].upgrades, "upgrade-sword-mastery")
 										SavePreferences()
 									end
-									if (UnitHasAbility(uncount[unit1], "upgrade-critical-strike") and GetArrayIncludes(wyr.preferences.Heroes[key].upgrades, "upgrade-critical-strike") == false) then
+									if (GetUnitVariable(uncount[unit1], "IndividualUpgrade", "upgrade-critical-strike") and GetArrayIncludes(wyr.preferences.Heroes[key].upgrades, "upgrade-critical-strike") == false) then
 										table.insert(wyr.preferences.Heroes[key].upgrades, "upgrade-critical-strike")
 										SavePreferences()
 									end
-									if (UnitHasAbility(uncount[unit1], "upgrade-deadly-precision") and GetArrayIncludes(wyr.preferences.Heroes[key].upgrades, "upgrade-deadly-precision") == false) then
+									if (GetUnitVariable(uncount[unit1], "IndividualUpgrade", "upgrade-deadly-precision") and GetArrayIncludes(wyr.preferences.Heroes[key].upgrades, "upgrade-deadly-precision") == false) then
 										table.insert(wyr.preferences.Heroes[key].upgrades, "upgrade-deadly-precision")
 										SavePreferences()
 									end
-									if (UnitHasAbility(uncount[unit1], "upgrade-eagle-eye") and GetArrayIncludes(wyr.preferences.Heroes[key].upgrades, "upgrade-eagle-eye") == false) then
+									if (GetUnitVariable(uncount[unit1], "IndividualUpgrade", "upgrade-eagle-eye") and GetArrayIncludes(wyr.preferences.Heroes[key].upgrades, "upgrade-eagle-eye") == false) then
 										table.insert(wyr.preferences.Heroes[key].upgrades, "upgrade-eagle-eye")
 										SavePreferences()
 									end
-									if (UnitHasAbility(uncount[unit1], "upgrade-portent") and GetArrayIncludes(wyr.preferences.Heroes[key].upgrades, "upgrade-portent") == false) then
+									if (GetUnitVariable(uncount[unit1], "IndividualUpgrade", "upgrade-portent") and GetArrayIncludes(wyr.preferences.Heroes[key].upgrades, "upgrade-portent") == false) then
 										table.insert(wyr.preferences.Heroes[key].upgrades, "upgrade-portent")
 										SavePreferences()
 									end
@@ -742,7 +741,7 @@ function StandardTriggers()
 				end
 				
 				-- move AI gliders
-				if (GetPlayerData(GetUnitVariable(uncount[unit1], "Player"), "AiEnabled") and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Class") == "glider" and IsUnitIdle(uncount[unit1])) then
+				if (GetPlayerData(GetUnitVariable(uncount[unit1], "Player"), "AiEnabled") and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Class") == "glider" and GetUnitVariable(uncount[unit1], "Idle")) then
 					if (SyncRand(100) < 33) then
 						local target_x = GetUnitVariable(uncount[unit1],"PosX") + SyncRand(33) - 16
 						local target_y = GetUnitVariable(uncount[unit1],"PosY") + SyncRand(33) - 16
@@ -771,7 +770,7 @@ function StandardTriggers()
 			local uncount = 0
 			uncount = GetUnits("any")
 			for unit1 = 1,table.getn(uncount) do 
-				if (GetPlayerData(GetUnitVariable(uncount[unit1], "Player"), "AiEnabled") and (GetUnitVariable(uncount[unit1], "Ident") == "unit-surghan-mercenary-steelclad" or GetUnitVariable(uncount[unit1], "Ident") == "unit-surghan-mercenary-thane") and IsUnitIdle(uncount[unit1])) then
+				if (GetPlayerData(GetUnitVariable(uncount[unit1], "Player"), "AiEnabled") and (GetUnitVariable(uncount[unit1], "Ident") == "unit-surghan-mercenary-steelclad" or GetUnitVariable(uncount[unit1], "Ident") == "unit-surghan-mercenary-thane") and GetUnitVariable(uncount[unit1], "Idle")) then
 
 					local enemy_unit = nil
 
@@ -1643,7 +1642,7 @@ function InitializeHero(unit)
 
 				-- load upgrades
 				for i=1,table.getn(wyr.preferences.Heroes[key].upgrades) do
-					if (string.find(wyr.preferences.Heroes[key].upgrades[i], "upgrade-") ~= nil and UnitHasAbility(unit, wyr.preferences.Heroes[key].upgrades[i]) == false) then
+					if (string.find(wyr.preferences.Heroes[key].upgrades[i], "upgrade-") ~= nil and GetUnitVariable(unit, "IndividualUpgrade", wyr.preferences.Heroes[key].upgrades[i]) == false) then
 						AcquireAbility(unit, wyr.preferences.Heroes[key].upgrades[i])
 					end
 				end
