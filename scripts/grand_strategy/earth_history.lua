@@ -1898,17 +1898,38 @@ if (GrandStrategyYear >= 451) then
 	SetProvinceOwner("Franche Comte", "goth", "Burgundy")
 end
 
-if (GrandStrategyYear >= 454) then
+if (GrandStrategyYear >= 453) then
+	-- Attila died and his Hunnic empire collapsed in 453 AD; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 6.
+
+	-- Walamer was king over the Ostrogoths in Pannonia (between the Danube and the Drave) when Attila's empire collapsed in 453 AD; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 6.
 	SetProvinceOwner("Ukraine", "", "")
-	SetProvinceOwner("Pannonia", "goth", "Ostrogoth Tribe") -- The eastern goths had migrated to Pannonia in about 454 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
+	SetProvinceOwner("Pannonia", "goth", "Ostrogoth Tribe")
+	SetFactionRuler("goth", "Ostrogoth Tribe", "Walamer Amelung")
+	
+	SetFactionRuler("latin", "Rome", "Marcian") -- Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 6.
+end
+
+if (GrandStrategyYear >= 462) then
+	SetFactionRuler("latin", "Rome", "Leo") -- Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 6.
+end
+
+if (GrandStrategyYear >= 472) then
+	SetFactionRuler("goth", "Ostrogoth Tribe", "Theodemer Amelung") -- by 472 AD Theodemer has become king of the Ostrogoths; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, pp. 6-7.
 end
 
 if (GrandStrategyYear >= 474) then
 	SetFactionRuler("goth", "Burgundy", "Chilperic") -- beginning of Chilperic's reign over the Burgundians in 474 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
+	
+	-- In 474 AD the Ostrogoths left Pannonia to settle in Macedonia under the aegis of the Eastern Roman Emperor, and in that same year Theodemer died, being succeeded by Theoderic; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 7.
+	SetProvinceOwner("Pannonia", "", "")
+	SetProvinceOwner("Macedonia", "goth", "Ostrogoth Tribe")
+	SetFactionRuler("goth", "Ostrogoth Tribe", "Theoderic Amelung")
 end
 
 if (GrandStrategyYear >= 480) then
 	SetFactionRuler("goth", "Burgundy", "Gundobad") -- beginning of Gundobad's reign over the Burgundians in 480 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
+	
+	SetFactionRuler("latin", "Rome", "Zeno") -- Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 7.
 end
 
 if (GrandStrategyYear >= 481) then
@@ -1959,12 +1980,24 @@ if (GrandStrategyYear >= 486) then
 	SetProvinceUnitQuantity("Aragon", "unit-germanic-warrior", 0)
 end
 
-if (GrandStrategyYear >= 493) then
-	GrandStrategyEvents.SPatriciiCanticumScotticum = nil -- Patrick's mission lasted until 493
+if (GrandStrategyYear >= 488) then
+	-- Ostrogoths commissioned by the Eastern Roman Emperor to wrest control of Italy from Odoacer; as a result, the Ostrogoths marched from Moesia to Italy (this means that by 488 they were in Moesia), with a quarter of a million men, women and children; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, pp. 7-8.
+	SetProvinceOwner("Macedonia", "latin", "Rome")
+	SetProvinceOwner("Bulgaria", "goth", "Ostrogoth Tribe") -- Lower Moesia
+	SetProvinceOwner("Serbia", "goth", "Ostrogoth Tribe") -- Upper Moesia
+	SetProvinceOwner("Skopje", "goth", "Ostrogoth Tribe") -- Upper Moesia
 end
 
-if (GrandStrategyYear >= 495) then
-	-- Ostrogoths conquer Italy in 495 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
+if (GrandStrategyYear >= 489) then
+	-- In the Summer of 489 AD, the Ostrogoths arrived at the frontiers of Odoacer's realm (the Isonzo), crossing it in August and defeating him in Verona in September, with Odoacer fleeing to Ravenna; Odoacer's follower Tufa deserted to Theoderic and led a force against Odoacer, but upon arriving for the confrontation in Favenzia switched back to his old allegiance and sent the Ostrogoth officers who had come with him in chains to Ravenna; other deserters from Odoacer's army followed suit and returned to his allegiance; Theoderic became shut by Odoacer in Pavia when an army of Visigoths from southern Gaul succurred the Ostrogoth chieftain; Odoacer's siege was raised and he was defeated in a battle on the banks of the Adda; Odoacer fled again to Ravenna; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 8.
+end
+
+if (GrandStrategyYear >= 493) then
+	GrandStrategyEvents.SPatriciiCanticumScotticum = nil -- Patrick's mission lasted until 493
+	
+	-- Odoacer held out against Theoderic for 2 years entrenched in Ravenna, but in 493 AD the fortress fell; the terms of the surrender foresaw leaving the defenders alive, but later Theoderic suspected a plot of theirs against his life and put them (including Odoacer) to death; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, pp. 8-9.
+	
+	-- Ostrogoths conquer Italy in 493 AD; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, pp. 8-9; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 	SetProvinceOwner("Lombardy", "goth", "Ostrogoth Tribe")
 	SetProvinceUnitQuantity("Lombardy", "unit-teuton-swordsman", 0) -- let's remove those oodles of warriors placed there to make Italy difficult to conquer
 	SetProvinceOwner("Latium", "goth", "Ostrogoth Tribe")

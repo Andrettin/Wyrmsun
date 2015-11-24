@@ -69,12 +69,12 @@ DefineCharacter("Gylve", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p
 
 -- Hun heroes
 
-DefineCharacter("Attila", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 93-94.
+DefineCharacter("Attila", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 93-94; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 6.
 	Name = "Attila", -- also known as Atli in Norse myths, in which he married Gudrun
 	Gender = "male",
 	Type = "unit-teuton-ritter",
 	Civilization = "persian", -- should be Hun
 --	ProvinceOfOrigin = "?",
 	Year = 437, -- invasion of Gundahar's kingdom in 437 AD by Attila's Huns
-	DeathYear = 437 + (30 * 1) -- estimated
+	DeathYear = 453 -- died
 })

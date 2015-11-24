@@ -81,6 +81,71 @@ DefineCharacter("Ermanaric", { -- Source: Henry Adams Bellows (transl.), "The Po
 	DeathYear = 376 -- died
 })
 
+DefineCharacter("Walamer Amelung", { -- Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 6.
+	Name = "Walamer", -- king of the Ostrogoths; invaded Illyria in 462 AD
+	Dynasty = "Amelung",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "goth",
+	ProvinceOfOrigin = "Pannonia",
+	Year = 453, -- ruled over the Ostrogoths when Attila died and his Hunnic empire collapsed in 453 AD
+	DeathYear = 472 -- died
+})
+
+DefineCharacter("Theodemer Amelung", { -- Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, pp. 6-7.
+	Name = "Theodemer", -- brother of Walamer
+	Dynasty = "Amelung",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "goth",
+	ProvinceOfOrigin = "Pannonia",
+	Year = 453, -- same generation as Walamer
+	DeathYear = 474 -- died
+})
+
+DefineCharacter("Widemer Amelung", { -- Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 6.
+	Name = "Widemer", -- brother of Walamer
+	Dynasty = "Amelung",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "goth",
+	ProvinceOfOrigin = "Pannonia",
+	Year = 453, -- same generation as Walamer
+	DeathYear = 453 + (30 * 1) -- estimated
+})
+
+DefineCharacter("Theoderic Amelung", { -- Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, pp. 6-7, 9.
+	Name = "Theoderic", -- king of the Ostrogoths; Dietrich von Bern in the German sagas; was given as a hostage by Walamer to the Romans, and thus stayed for 10 years (until 472 AD) in the Byzantine court; his religion was Arian Christianity
+	Dynasty = "Amelung",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "goth",
+	ProvinceOfOrigin = "Pannonia",
+	Year = 454, -- born (was 8 years old in 462 AD)
+	DeathYear = 526, -- died; he was put in a magnificent marble tomb in Ravenna
+	Father = "Theodemer Amelung"
+})
+
+DefineCharacter("Odoacer", { -- Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, pp. 7-9.
+	Name = "Odoacer",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "goth",
+--	ProvinceOfOrigin = "?",
+	Year = 480, -- Odoacer deposed Romulus Augustus in 480 AD, going then on to rule Italy as an independent king
+	DeathYear = 493 -- was put to death by Theoderic in 493 AD
+})
+
+DefineCharacter("Tufa", { -- Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 8-9.
+	Name = "Tufa", -- follower of Odoacer who deserted to Theoderic in or just after 489 AD, only to return his allegiance to Odoacer afterwards, betraying Theoderic
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "goth",
+--	ProvinceOfOrigin = "?",
+	Year = 489,
+	DeathYear = 493 -- was probably put to death by Theoderic in 493 AD when the defenders of Ravenna (including Odoacer) were
+})
+
 DefineCharacter("Gibica", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, p. 91; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 226.
 	Name = "Gibica", -- known as Gjuki in the Norse myths; married to Grimhild
 	Gender = "male",
@@ -131,7 +196,7 @@ DefineCharacter("Gudrun", { -- Source: Norman Davies, "Vanished Kingdoms", 2012,
 	Civilization = "goth",
 	ProvinceOfOrigin = "Franconia", -- place where the Burgundians dwelled before moving to the area of the Palatinate
 	Year = 437 - (30 * 1),
-	DeathYear = 437 -- comes from the same generation as Gunnar/Gundahar, who died in 437 AD
+	DeathYear = 437, -- comes from the same generation as Gunnar/Gundahar, who died in 437 AD
 	Father = "Gibica",
 	Mother = "Grimhild"
 })
@@ -200,7 +265,7 @@ DefineCharacter("Gotthorm", { -- Source: Source: Kevin Crossley-Holland, "The No
 	Civilization = "goth",
 	ProvinceOfOrigin = "Franconia",
 	Year = 437 - (30 * 1),
-	DeathYear = 437 -- comes from the same generation as Gunnar/Gundahar, who died in 437 AD
+	DeathYear = 437, -- comes from the same generation as Gunnar/Gundahar, who died in 437 AD
 	Mother = "Grimhild"
 })
 

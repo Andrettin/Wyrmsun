@@ -25,6 +25,36 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineCharacter("Marcian", { -- Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 6.
+	Name = "Marcian", -- Roman emperor who concluded a treaty with the Ostrogothic king Walamer after he had become independent in 453 AD, with the Ostrogoths providing protection of the frontier while the Romans gave them a subsidy
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "latin",
+	ProvinceOfOrigin = "Thrace", -- possibly not accurate, but since he was the (Eastern) Roman emperor put him there until we have better information
+	Year = 453, -- concluded a treaty with Walamer soon after he became independent in 453 AD
+	DeathYear = 462 -- by 462 AD the Roman emperor was his successor Leo
+})
+
+DefineCharacter("Leo", { -- Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 6.
+	Name = "Leo", -- Roman emperor who renounced the treaty with the Ostrogoths
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "latin",
+	ProvinceOfOrigin = "Thrace", -- possibly not accurate, but since he was the (Eastern) Roman emperor put him there until we have better information
+	Year = 462, -- ruled in 462 AD when Walamer invaded Illyria because of the treaty's renouncement
+	DeathYear = 480 -- by 480 the ruler of Eastern Rome was Zeno
+})
+
+DefineCharacter("Zeno", { -- Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 7.
+	Name = "Zeno", -- Roman emperor
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "latin",
+	ProvinceOfOrigin = "Thrace", -- possibly not accurate, but since he was the (Eastern) Roman emperor put him there until we have better information
+	Year = 480, -- by 480 the ruler of Eastern Rome was Zeno
+	DeathYear = 480 + 30 -- estimated
+})
+
 DefineCharacter("Sidonius Apollinaris", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
 	Name = "Sidonius Apollinaris", -- Gallo-Roman writer
 	Gender = "male",
