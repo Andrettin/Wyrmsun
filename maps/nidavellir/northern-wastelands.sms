@@ -197,7 +197,7 @@ if (LoadedGame == false) then
 		SetStartView(2, 50, 63)
 		unit = CreateUnit("unit-dwarven-smithy", 2, {50, 63})
 	end
-	SetUnitName(unit, "Thursagan's Forge")
+	SetUnitVariable(unit, "Name", "Thursagan's Forge")
 end
 
 -- create gryphon riders

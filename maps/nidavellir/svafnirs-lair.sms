@@ -392,7 +392,7 @@ if (GrandStrategy == false) then
 
 --	unit = CreateUnit("unit-wyrm", 2, {8, 34}) -- Khrakrahs / Svafnir
 	unit = CreateUnit("unit-wyrm", 2, {26, 31}) -- moved Svafnir here, so that he is accessible
-	SetUnitName(unit, "Svafnir")
+	SetUnitVariable(unit, "Name", "Svafnir")
 elseif (GrandStrategyEventMap) then
 	SetPlayerData(0, "Resources", "gold", 0)
 	SetPlayerData(0, "Resources", "lumber", 0)
@@ -505,7 +505,7 @@ elseif (GrandStrategyEventMap) then
 	end
 
 	unit = CreateUnit("unit-wyrm", 2, {26, 31}) -- moved Svafnir here, so that he is accessible
-	SetUnitName(unit, "Svafnir")
+	SetUnitVariable(unit, "Name", "Svafnir")
 end
 
 if (ForTheMotherland) then

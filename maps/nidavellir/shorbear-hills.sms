@@ -180,10 +180,10 @@ if (GrandStrategy == false) then
 		IncreaseUnitLevel(unit, 1, true)
 		AcquireAbility(unit, "upgrade-critical-strike")
 		AcquireTrait(unit, "upgrade-keen") -- was loyal and intelligent in Wesnoth
-		SetUnitName(unit, "Noiraran")
+		SetUnitVariable(unit, "Name", "Noiraran")
 		unit = CreateUnit("unit-dwarven-steelclad", 0, {6, 5}) -- Kuhnar
 		AcquireTrait(unit, "upgrade-quick") -- was loyal and quick in Wesnoth
-		SetUnitName(unit, "Kuhnar")
+		SetUnitVariable(unit, "Name", "Kuhnar")
 		unit = CreateUnit("unit-dwarven-gryphon-rider", 0, {6, 5}) -- Krawg
 		IncreaseUnitLevel(unit, 1, true)
 		AcquireAbility(unit, "upgrade-critical-strike")
@@ -196,7 +196,7 @@ if (GrandStrategy == false) then
 --	unit = CreateUnit("unit-dwarven-miner", 1, {38, 33})
 --	unit = CreateUnit("unit-dwarven-miner", 1, {38, 33})
 	unit = CreateUnit("unit-dwarven-thane", 1, {36, 33}) -- Glonoin
-	SetUnitName(unit, "Glonoin")
+	SetUnitVariable(unit, "Name", "Glonoin")
 
 	-- give a few towers to the Shorbear Clan to make their stronghold less vulnerable at game start
 	unit = CreateUnit("unit-dwarven-guard-tower", 1, {29, 29})
@@ -294,7 +294,7 @@ elseif (GrandStrategyEventMap) then
 	uncount = GetUnits(GetFactionPlayer("Shorbear Clan"))
 	for unit1 = 1,table.getn(uncount) do 
 		if (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-thane") then
-			SetUnitName(uncount[unit1], "Glonoin")
+			SetUnitVariable(uncount[unit1], "Name", "Glonoin")
 			break
 		end
 	end

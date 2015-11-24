@@ -172,7 +172,7 @@ if (GrandStrategy == false) then
 		IncreaseUnitLevel(unit, 2, true)
 		AcquireAbility(unit, "upgrade-sword-mastery")
 		AcquireAbility(unit, "upgrade-critical-strike")
-		SetUnitName(unit, "Pypo I")
+		SetUnitVariable(unit, "Name", "Pypo I")
 	end
 
 	unit = CreateUnit("unit-gnomish-worker", 1, {8, 58})
