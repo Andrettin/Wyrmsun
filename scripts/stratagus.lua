@@ -501,7 +501,7 @@ function StandardTriggers()
 				-- make AI guard towers be filled with defenders
 				if (GetPlayerData(GetUnitVariable(uncount[unit1], "Player"), "AiEnabled") and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Class") == "guard-tower"  and GetUnitVariable(uncount[unit1], "Transport") < 2) then
 					unit = CreateUnitInTransporter(GetCivilizationClassUnitType("shooter", GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Civilization")), GetUnitVariable(uncount[unit1], "Player"), uncount[unit1])
-					SetUnitActive(unit, false) -- set garrisoned unit to passive AI (so that they are not counted for attack participation)
+					SetUnitVariable(unit, "Active", false) -- set garrisoned unit to passive AI (so that they are not counted for attack participation)
 				end
 				
 				-- AI units inside tree stumps get out to attack if an enemy is near

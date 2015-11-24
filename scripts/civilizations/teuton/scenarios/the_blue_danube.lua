@@ -50,11 +50,11 @@ if (LoadedGame == false) then
 		unit = CreateUnit("unit-teuton-archer", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 		
 		unit = CreateUnit("unit-teuton-archer", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
-		SetUnitActive(unit, false)
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-teuton-archer", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
-		SetUnitActive(unit, false)
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-teuton-catapult", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
-		SetUnitActive(unit, false)
+		SetUnitVariable(unit, "Active", false)
 	elseif (GrandStrategyEventMap) then
 		SetAiType(0, "grand-strategy-battle")
 		SetAiType(1, "grand-strategy-battle")

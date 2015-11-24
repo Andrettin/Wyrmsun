@@ -3705,7 +3705,7 @@ function GenerateTown(layout, town_player, town_player_civilization, town_player
 
 		for i=1,table.getn(town_units) do
 			unit = CreateUnit(town_units[i], town_player, {Players[town_player].StartPos.x, Players[town_player].StartPos.y})
-			SetUnitActive(unit, false) -- set town defender to passive AI (so that they do not participate in attacks)
+			SetUnitVariable(unit, "Active", false) -- set town defender to passive AI (so that they do not participate in attacks)
 		end
 
 		if (invader_base) then

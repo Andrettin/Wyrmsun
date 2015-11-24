@@ -60,11 +60,11 @@ if (LoadedGame == false) then
 		unit = CreateUnit("unit-germanic-worker", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
 		unit = CreateUnit("unit-germanic-worker", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
 		unit = CreateUnit("unit-germanic-warrior", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
-		SetUnitActive(unit, false)
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-germanic-warrior", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
-		SetUnitActive(unit, false)
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-germanic-warrior", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
-		SetUnitActive(unit, false)
+		SetUnitVariable(unit, "Active", false)
 		
 		if (GameSettings.Difficulty == 1) then -- if difficulty is easy
 			CreateCreeps(1, "unit-germanic-warrior", 4, Map.Info.MapWidth / 4, Map.Info.MapWidth * 7 / 8, Map.Info.MapHeight / 6, Map.Info.MapHeight * 5 / 6)
