@@ -5524,12 +5524,12 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 								end
 								unit = CreateUnit(dungeon_boss, 2, {RandomX, RandomY})
 								if (unit and dungeon_boss_name ~= "") then
-									SetUnitVariable(unit, "Name" dungeon_boss_name)
+									SetUnitVariable(unit, "Name", dungeon_boss_name)
 								end
 								if (second_dungeon_boss ~= "") then
 									unit = CreateUnit(second_dungeon_boss, 2, {RandomX, RandomY})
 									if (unit and second_dungeon_boss_name ~= "") then
-										SetUnitVariable(unit, "Name" second_dungeon_boss_name)
+										SetUnitVariable(unit, "Name", second_dungeon_boss_name)
 									end
 								end
 								Count = Count - 1

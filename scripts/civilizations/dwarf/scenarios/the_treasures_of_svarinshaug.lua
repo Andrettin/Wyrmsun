@@ -33,18 +33,18 @@ if (LoadedGame == false) then
 	
 	if not (GrandStrategy) then
 		unit = CreateUnit("unit-dwarven-steelclad", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		SetUnitVariable(unit, "Name" "Brokk")
+		SetUnitVariable(unit, "Name", "Brokk")
 		AcquireTrait(unit, "upgrade-keen")
 		unit = CreateUnit("unit-dwarven-steelclad", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		SetUnitVariable(unit, "Name" "Eitri")
+		SetUnitVariable(unit, "Name", "Eitri")
 		AcquireTrait(unit, "upgrade-dextrous")
 		unit = CreateUnit("unit-dwarven-scout", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 	elseif (GrandStrategyEventMap) then
 		unit = CreateUnit("unit-dwarven-steelclad", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		SetUnitVariable(unit, "Name" "Brokk")
+		SetUnitVariable(unit, "Name", "Brokk")
 		AcquireTrait(unit, "upgrade-keen")
 		unit = CreateUnit("unit-dwarven-steelclad", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		SetUnitVariable(unit, "Name" "Eitri")
+		SetUnitVariable(unit, "Name", "Eitri")
 		AcquireTrait(unit, "upgrade-dextrous")
 		
 		CreateProvinceUnits("Svarinshaug", 0, 2, false, true)

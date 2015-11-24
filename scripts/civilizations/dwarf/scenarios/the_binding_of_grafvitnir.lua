@@ -65,7 +65,7 @@ if (LoadedGame == false) then
 		CreateCreeps(1, "unit-kobold-footpad", 72, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
 	end
 	unit = CreateUnit("unit-wyrm", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
-	SetUnitVariable(unit, "Name" "Grafvitnir")
+	SetUnitVariable(unit, "Name", "Grafvitnir")
 	SetUnitVariable(unit, "HitPoints", GetUnitVariable(unit, "HitPoints", "Max") * 10, "Max") -- Grafvitnir should be virtually indestructible
 	SetUnitVariable(unit, "HitPoints", GetUnitVariable(unit, "HitPoints", "Max")) -- Grafvitnir should be virtually indestructible
 	SetUnitVariable(unit, "Armor", 20, "Max")
