@@ -848,3 +848,13 @@ DefineCharacter("Hörvir", { -- Source: Henry Adams Bellows (transl.), "The Poet
 --	Year = ?,
 --	DeathYear = ?
 })
+
+DefineCharacter("Swerre", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 115.
+	Name = "Swerre", -- king (presumably) of Norway
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Hordaland", -- accurate? either way this is the only Norwegian province in the game, so it makes sense to set it as the province of origin
+	Year = 1177, -- reign began
+	DeathYear = 1203 -- reign ended
+})
