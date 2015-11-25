@@ -1,0 +1,115 @@
+LoadTileModels("scripts/tilesets/swamp.lua")
+
+if (LoadedGame == false) then
+	GenerateRandomMap({
+		RockQuantity = "low",
+		TreeQuantity = "low",
+		WaterQuantity = "high",
+		RoughLandQuantity = "medium",
+		NoFlyingCreeps = true,
+		WorkerQuantity = 0,
+		NoDeposits = true,
+		NoTownHall = true,
+		PlayerCivilizations = {"dwarf", "dwarf", "dwarf"}
+	})
+end
+
+SetPlayerData(0, "Faction", "Random")
+SetPlayerData(0, "Resources", "gold", 0)
+SetPlayerData(0, "Resources", "lumber", 0)
+SetPlayerData(0, "Resources", "stone", 0)
+SetPlayerData(1, "Faction", "Random")
+SetPlayerData(1, "Name", "Regin")
+SetPlayerData(1, "Resources", "gold", 0)
+SetPlayerData(1, "Resources", "lumber", 0)
+SetPlayerData(1, "Resources", "stone", 0)
+SetPlayerData(2, "Faction", "Random")
+SetPlayerData(2, "Name", "Andvari")
+SetPlayerData(2, "Resources", "gold", 0)
+SetPlayerData(2, "Resources", "lumber", 0)
+SetPlayerData(2, "Resources", "stone", 0)
+
+unit = CreateUnit("unit-dwarven-axefighter", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+
+unit = CreateUnit("unit-dwarven-mushroom-farm", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+unit = CreateUnit("unit-dwarven-steelclad", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+SetUnitVariable(unit, "Name", "Regin")
+
+unit = CreateUnit("unit-dwarven-mushroom-farm", 2, {Players[2].StartPos.x, Players[2].StartPos.y})
+unit = CreateUnit("unit-dwarven-steelclad", 2, {Players[2].StartPos.x, Players[2].StartPos.y})
+SetUnitVariable(unit, "Name", "Andvari")
+
+SetDiplomacy(0, "neutral", 1)
+SetDiplomacy(0, "neutral", 2)
+SetDiplomacy(1, "neutral", 0)
+SetDiplomacy(1, "neutral", 2)
+SetDiplomacy(2, "neutral", 0)
+SetDiplomacy(2, "neutral", 1)
+
+AddTrigger(
+	function()
+		local uncount = 0
+		uncount = GetUnits(GetFactionPlayer("Regin"))
+		for unit1 = 1,table.getn(uncount) do 
+			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-steelclad") then
+				local unit_quantity = GetNumUnitsAt(GetThisPlayer(), "units", {GetUnitVariable(uncount[unit1],"PosX") - 2, GetUnitVariable(uncount[unit1],"PosY") - 2}, {GetUnitVariable(uncount[unit1],"PosX") + 2, GetUnitVariable(uncount[unit1],"PosY") + 2})
+				if (unit_quantity > 0) then
+					player = GetThisPlayer()
+					return true
+				end
+			end
+		end
+		return false
+	end,
+	function()
+		Event(
+			FindUnit("unit-dwarven-steelclad", 1),
+			"A traveller around these parts, I see? You seem tough, I could have a use for you.",
+			player,
+			{"~!Continue"},
+			{function(s)
+				Event(
+					FindUnit("unit-dwarven-axefighter", 0),
+					"Yes?",
+					player,
+					{"~!Continue"},
+					{function(s)
+						Event(
+							FindUnit("unit-dwarven-steelclad", 1),
+							"The dwarf Andvari lives nearby. A gold-hoarder, he is. Marvelous trinkets, he has. Alone, I am not strong enough. But together... we can wrest his gold from him.",
+							player,
+							{"~!Accept", "~!Decline"},
+							{function(s)
+								Event(
+									FindUnit("unit-dwarven-steelclad", 1),
+									"Let's go then!",
+									player,
+									{"~!OK"},
+									{function(s)
+										RemovePlayerObjective(player, "- Defeat your enemies")
+										AddPlayerObjective(player, "- Take Andvari's gold")
+										AddPlayerObjective(player, "- Regin must survive")
+										ChangeUnitOwner(FindUnit("unit-dwarven-steelclad", 1), 0)
+										SetDiplomacy(0, "enemy", 2)
+										SetDiplomacy(2, "enemy", 0)
+									end}
+								)
+							end,
+							function(s)
+								Event(
+									FindUnit("unit-dwarven-steelclad", 1),
+									"Ah well...",
+									player,
+									{"~!OK"},
+									{function(s)
+									end}
+								)
+							end}
+						)
+					end}
+				)
+			end}
+		)
+		return false
+	end
+)
