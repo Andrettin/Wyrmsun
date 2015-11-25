@@ -375,3 +375,31 @@ DefineQuest("Andvari's Gold", {
 	CompletionSpeech = "Andvari's gold, taken away by kobolds... We must find this wyrm Fafnir's lair!",
 	Hidden = true
 })
+
+DefineQuest("Andvari's Gold", {
+	Icon = "icon-gold",
+	Description = "Regin has asked you to help him take Andvari's gold forcibly, giving promises of great wealth.",
+	World = "Nidavellir",
+	Civilization = "dwarf",
+	RequiredQuest = "The Binding of Grafvitnir", -- this happens much later after Modsognir's time
+	QuestGiver = "Regin",
+	Area = "Andvari's Falls",
+	StartSpeech = "Listen... there is a dwarf who lives near here, called Andvari. He has gathered a large gold hoard, by methods unknown. For me alone, it would be too risky to wrest the gold from Andvari. But with your help... can I count on it?",
+	InProgressSpeech = "We shall be very wealthy!",
+	CompletionSpeech = "Andvari's gold, taken away by kobolds...",
+	Hidden = true
+})
+
+DefineQuest("Fafnir's Hoard", {
+	Icon = "icon-wyrm-vicious",
+	Description = "Andvari's gold hoard has been taken by the kobolds who care for the wyrm Fafnir. If you and Regin are to recover the gold, you must enter Fafnir's perilous domain and slay the giant beast.",
+	World = "Nidavellir",
+	Civilization = "dwarf",
+	RequiredQuest = "Andvari's Gold",
+	QuestGiver = "Regin",
+	Area = "Gnitaheith",
+	StartSpeech = "Andvari's gold hoard was taken by a group of treacherous kobolds, who took it to the lair of their wyrm, Fafnir. To recover the precious metal, we must enter the wyrm's lair.",
+	InProgressSpeech = "Fafnir is a vicious creature - be on your guard!",
+	CompletionSpeech = "Excellent! So much gold... Ah, and this ring of red gold, so beautiful...",
+	Hidden = true
+})
