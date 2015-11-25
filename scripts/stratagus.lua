@@ -388,14 +388,14 @@ function SinglePlayerTriggers()
 		end
 	end
 
-	if (CurrentQuest ~= "" and GetQuestFromName(CurrentQuest).Scenario ~= nil) then
-		if (GetQuestFromName(CurrentQuest).Objectives ~= nil) then -- if quest has pre-set objectives, add them now
+	if (CurrentQuest ~= "" and GetQuestData(CurrentQuest, "Scenario") ~= "") then
+		if (table.getn(GetQuestData(CurrentQuest, "Objectives")) > 0) then -- if quest has pre-set objectives, add them now
 			RemovePlayerObjective(GetThisPlayer(), "- Defeat your enemies")
-			for i=1, table.getn(GetQuestFromName(CurrentQuest).Objectives) do
-				AddPlayerObjective(GetThisPlayer(), GetQuestFromName(CurrentQuest).Objectives[i])
+			for i=1, table.getn(GetQuestData(CurrentQuest, "Objectives")) do
+				AddPlayerObjective(GetThisPlayer(), GetQuestData(CurrentQuest, "Objectives")[i])
 			end
 		end
-		Load(GetQuestFromName(CurrentQuest).Scenario)
+		Load(GetQuestData(CurrentQuest, "Scenario"))
 	end
 
 	-- for now events are limited to single player
@@ -621,31 +621,6 @@ function StandardTriggers()
 							end
 						end
 					end
-					
-					--[[
-					-- was causing too much of a performance issue
-					if (GameCycle % 1000 == 0 and GrandStrategy == false) then -- autosave the game every 1000 cycles
-						HexTiles = nil
-						HexTiles = {}
-						RawTiles = nil
-						RawTiles = {}
-						LoadedGame = true
-						local saved_globals = {}
-						saved_globals.Quests = copy(Quests)
-						saved_globals.Achievements = copy(Achievements)
-						saved_globals.Preferences = copy(wyr.preferences)
-						Quests = nil
-						Achievements = nil
-						wyr.preferences = nil
-						if not (SaveGame("autosave.sav") == -1) then
-							UI.StatusLine:Set("Autosave")
-						end
-						Quests = copy(saved_globals.Quests)
-						Achievements = copy(saved_globals.Achievements)
-						wyr.preferences = copy(saved_globals.Preferences)
-						LoadedGame = false
-					end
-					--]]
 				end
 
 				-- make certain critters retaliate if people get too near

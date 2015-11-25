@@ -300,9 +300,9 @@ local NidavellirEvents = {
 					SetProvinceHero("Svarinshaug", "Durin", GetGrandStrategyHeroUnitType("Durin"), 2)
 					
 					GrandStrategyEventMap = true
-					GetMapInfo(Quests.TheBindingOfGrafvitnir.Map)
+					GetMapInfo(GetQuestData("The Binding of Grafvitnir", "Map"))
 					CurrentQuest = "The Binding of Grafvitnir"
-					RunMap(Quests.TheBindingOfGrafvitnir.Map)
+					RunMap(GetQuestData("The Binding of Grafvitnir", "Map"))
 					GrandStrategyEventMap = false
 					
 					for i, unitName in ipairs(Units) do

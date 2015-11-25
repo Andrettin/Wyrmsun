@@ -87,11 +87,12 @@ function RunQuestMenu(world)
 	
 	menu:addLabel(_("~<Quests~>"), offx + 320, offy + 104 + 36*-2)
 
-	for key, value in pairs(Quests) do
-		if ((Quests[key].Hidden == nil or Quests[key].Hidden == false) and Quests[key].World == world) then
-			if (Quests[key].RequiredQuest == nil or GetArrayIncludes(wyr.preferences.QuestsCompleted, Quests[key].RequiredQuest) or GetArrayIncludes(wyr.preferences.QuestsCompleted, Quests[key].Name)) then
-				if (Quests[key].RequiredTechnology == nil or GetArrayIncludes(wyr.preferences.TechnologyAcquired, Quests[key].RequiredTechnology)) then
-					addQuestIcon(Quests[key], menu, offx + 23 + 4 + (54 * Quests[key].X), offy + 10 + 4 + (46 * (Quests[key].Y + 1))) -- increase Y by 1 because right now there aren't all that many quests, so that it makes sense to make the existing quests more centralized in the interface
+	local quests = GetQuests()
+	for i=1, table.getn(quests) do
+		if (GetQuestData(quests[i], "Hidden") == false and GetQuestData(quests[i], "World") == world) then
+			if (GetQuestData(quests[i], "RequiredQuest") == "" or GetArrayIncludes(wyr.preferences.QuestsCompleted, GetQuestData(quests[i], "RequiredQuest")) or GetArrayIncludes(wyr.preferences.QuestsCompleted, quests[i])) then
+				if (GetQuestData(quests[i], "RequiredTechnology") == "" or GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetQuestData(quests[i], "RequiredTechnology"))) then
+					addQuestIcon(quests[i], menu, offx + 23 + 4 + (54 * GetQuestData(quests[i], "X")), offy + 10 + 4 + (46 * (GetQuestData(quests[i], "Y") + 1))) -- increase Y by 1 because there are few enough quests that it makes sense to make the existing quests more centralized in the interface
 				end
 			end
 		end
@@ -125,18 +126,18 @@ function RunQuestMenu(world)
 end
 
 function addQuestIcon(quest, menu, x, y)
-	local quest_icon_file = string.sub(CIcon:Get(quest.Icon).G:getFile(), 0, -5)
-	local quest_icon_frame = CIcon:Get(quest.Icon).Frame
+	local quest_icon_file = string.sub(CIcon:Get(GetQuestData(quest, "Icon")).G:getFile(), 0, -5)
+	local quest_icon_frame = CIcon:Get(GetQuestData(quest, "Icon")).Frame
 	local questicon
 	local b
-	if (GetArrayIncludes(wyr.preferences.QuestsCompleted, quest.Name)) then
+	if (GetArrayIncludes(wyr.preferences.QuestsCompleted, quest)) then
 		questicon = CGraphic:New(quest_icon_file .. "_grayed.png")
 		questicon:Load()
 		b = ImageButton("")
 	else
 		questicon = CPlayerColorGraphic:New(quest_icon_file .. ".png")
 		questicon:Load()
-		b = PlayerColorImageButton("", quest.PlayerColor)
+		b = PlayerColorImageButton("", GetQuestData(quest, "PlayerColor"))
 	end
 	local quest_icon_x_origin = (quest_icon_frame * 46) % questicon:getGraphicWidth()
 	local quest_icon_y_origin = math.floor((quest_icon_frame * 46) / questicon:getGraphicWidth()) * 38
@@ -147,12 +148,12 @@ function addQuestIcon(quest, menu, x, y)
 			local quest_menu = WarGameMenu(panel(5))
 			quest_menu:setSize(352, 352)
     			quest_menu:setPosition((Video.Width - quest_menu:getWidth()) / 2, (Video.Height - quest_menu:getHeight()) / 2)
-			quest_menu:addLabel(_(quest.Name), 176, 11)
+			quest_menu:addLabel(_(quest), 176, 11)
 			local quest_menu_image
-			if (GetArrayIncludes(wyr.preferences.QuestsCompleted, quest.Name)) then
+			if (GetArrayIncludes(wyr.preferences.QuestsCompleted, quest)) then
 				quest_menu_image = ImageWidget(questicon)
 			else
-				quest_menu_image = PlayerColorImageWidget(questicon, quest.PlayerColor)
+				quest_menu_image = PlayerColorImageWidget(questicon, GetQuestData(quest, "PlayerColor"))
 			end
 			quest_menu_image:setImageOrigin(quest_icon_x_origin, quest_icon_y_origin)	
 			quest_menu:add(quest_menu_image, 153, 48)
@@ -162,12 +163,12 @@ function addQuestIcon(quest, menu, x, y)
 			l:setSize(324, 208)
 			l:setLineWidth(324)
 			quest_menu:add(l, 14, 112)
-			l:setCaption(quest.Description)
+			l:setCaption(GetQuestData(quest, "Description"))
 			
 			quest_menu:addFullButton("~!Play Quest", "p", 176 - (224 / 2), 352 - 40 * 2,
 				function()
 					RunningScenario = true
-					GetMapInfo(quest.Map)
+					GetMapInfo(GetQuestData(quest, "Map"))
 					for i=1,mapinfo.nplayers do
 						if ((i - 1) ~= MapPersonPlayer and mapinfo.playertypes[i] == "person") then
 							GameSettings.Presets[i-1].Type = PlayerComputer
@@ -175,16 +176,16 @@ function addQuestIcon(quest, menu, x, y)
 					end
 					GameSettings.NoRandomness = wyr.preferences.NoRandomness
 					GameSettings.Difficulty = wyr.preferences.Difficulty
-					CurrentQuest = quest.Name
-					if (quest.Briefing) then
+					CurrentQuest = quest
+					if (GetQuestData(quest, "Briefing") ~= "") then
 						Briefing(quest)
 					end
-					mapname = quest.Map
+					mapname = GetQuestData(quest, "Map")
 					RunMap(mapname)
 					quest_menu:stop()
 					menu:stop()
 					if not (LoadGameFile) then
-						RunQuestMenu(quest.World)
+						RunQuestMenu(GetQuestData(quest, "World"))
 					end
 				end)
 			quest_menu:addFullButton("~!Close", "c", 176 - (224 / 2), 352 - 40 * 1,
@@ -203,43 +204,32 @@ function addQuestIcon(quest, menu, x, y)
 	b:setBorderSize(0) -- Andrettin: make buttons not have the borders they previously had
 	b:setFrameImage(Preference.IconFrameG)
 	b:setPressedFrameImage(Preference.PressedIconFrameG)
-	b:setTooltip(quest.Name .. " (" .. CapitalizeString(quest.Civilization) .. ")")
+	b:setTooltip(quest .. " (" .. CapitalizeString(GetQuestData(quest, "Civilization")) .. ")")
 	return b
 end
 
-function GetQuestFromName(quest_name)
-	for key, value in pairs(Quests) do
-		if (Quests[key].Name == quest_name) then
-			return Quests[key]
-		end
-	end
-	return nil
-end
-
 function Briefing(quest)
-	if (quest.Civilization ~= nil) then
-		SetPlayerData(GetThisPlayer(), "RaceName", quest.Civilization)
+	if (GetQuestData(quest, "Civilization") ~= "") then
+		SetPlayerData(GetThisPlayer(), "RaceName", GetQuestData(quest, "Civilization"))
 	end
 
 	local briefing_background = GetBackground("ui/backgrounds/wyrm.png")
-	if (quest.BriefingBackground ~= nil) then
-		briefing_background = GetBackground(quest.BriefingBackground)
+	if (GetQuestData(quest, "BriefingBackground") ~= "") then
+		briefing_background = GetBackground(GetQuestData(quest, "BriefingBackground"))
 	end
 	
 	local menu = WarMenu(nil, briefing_background)
 	
 	wyrmsun.playlist = {}
-	if (quest.BriefingMusic) then
-		PlayMusic(quest.BriefingMusic)
+	if (GetQuestData(quest, "BriefingMusic") ~= "") then
+		PlayMusic(GetQuestData(quest, "BriefingMusic"))
 	else
 		StopMusic()
 	end	
 
-	if (quest.Name ~= nil) then
-		menu:addLabel(quest.Name, Video.Width / 2, 28 * Video.Height / 480, Fonts["large"], true)
-	end
+	menu:addLabel(quest, Video.Width / 2, 28 * Video.Height / 480, Fonts["large"], true)
 
-	local t = quest.Briefing
+	local t = GetQuestData(quest, "Briefing")
 	t = "\n\n\n\n\n\n\n\n\n\n" .. t .. "\n\n\n\n\n\n\n\n\n\n\n\n\n"
 	local sw = ScrollingWidget(320, 170 * Video.Height / 480)
 	sw:setBackgroundColor(Color(0,0,0,0))
@@ -253,11 +243,11 @@ function Briefing(quest)
 	sw:add(l, 0, 0)
 	menu:add(sw, Video.Width / 2 - (l:getWidth() / 2), 80 * Video.Height / 480)
 
-	if (quest.Objectives ~= nil) then
+	if (table.getn(GetQuestData(quest, "Objectives")) > 0) then
 		menu:addLabel("Objectives:", 372 * Video.Width / 640, 306 * Video.Height / 480, Fonts["large"], false)
 
 		local objectives = ""
-		table.foreachi(quest.Objectives, function(k,v) objectives = objectives .. v .. "\n" end)
+		table.foreachi(GetQuestData(quest, "Objectives"), function(k,v) objectives = objectives .. v .. "\n" end)
 
 		local l = MultiLineLabel(objectives)
 		l:setFont(Fonts["large"])
@@ -272,9 +262,9 @@ function Briefing(quest)
 
 	menu:addFullButton(_("~!Continue"), "c", Video.Width / 2 - 112, 440 * Video.Height / 480,
 		function()
-			if (quest.BriefingSounds) then
+			if (table.getn(GetQuestData(quest, "BriefingSounds")) > 0) then
 				if (channel ~= -1) then
-					voice = table.getn(quest.BriefingSounds)
+					voice = table.getn(GetQuestData(quest, "BriefingSounds"))
 					StopChannel(channel)
 				end
 			end
@@ -283,11 +273,11 @@ function Briefing(quest)
 		end
 	)
 
-	if (quest.BriefingSounds) then
+	if (table.getn(GetQuestData(quest, "BriefingSounds")) > 0) then
 		function PlayNextVoice()
 			voice = voice + 1
-			if (voice <= table.getn(quest.BriefingSounds)) then
-				channel = PlaySoundFile(quest.BriefingSounds[voice], PlayNextVoice);
+			if (voice <= table.getn(GetQuestData(quest, "BriefingSounds"))) then
+				channel = PlaySoundFile(GetQuestData(quest, "BriefingSounds")[voice], PlayNextVoice);
 			else
 				channel = -1
 			end

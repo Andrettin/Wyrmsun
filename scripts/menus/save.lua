@@ -5,10 +5,8 @@ function RunSaveGame(name, menu)
 	RawTiles = {}
 	LoadedGame = true
 	local saved_globals = {}
-	saved_globals.Quests = copy(Quests)
 	saved_globals.Achievements = copy(Achievements)
 	saved_globals.Preferences = copy(wyr.preferences)
-	Quests = nil
 	Achievements = nil
 	wyr.preferences = nil
 	if (menu ~= nil) then
@@ -26,7 +24,6 @@ function RunSaveGame(name, menu)
 	else
 		SaveGame(name)
 	end
-	Quests = copy(saved_globals.Quests)
 	Achievements = copy(saved_globals.Achievements)
 	wyr.preferences = copy(saved_globals.Preferences)
 	LoadedGame = false

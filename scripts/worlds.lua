@@ -8,8 +8,6 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      quests.lua - Defines quests.
---
 --      (c) Copyright 2013-2014 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify

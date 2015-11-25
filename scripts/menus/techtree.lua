@@ -367,16 +367,11 @@ function ResetTechnologiesAcquired(civilization)
 end
 
 function GetQuestTechnologyPoints(civilization, quest)
-	for key, value in pairs(Quests) do
-		if (Quests[key].Name == quest) then
-			if (Quests[key].Civilization == civilization) then
-				return Quests[key].TechnologyPoints
-			else
-				return 0
-			end
-		end
+	if (GetQuestData(quest, "Civilization") == civilization) then
+		return GetQuestData(quest, "TechnologyPoints")
+	else
+		return 0
 	end
-	return 0
 end
 
 function GetTechnologyPointCost(civilization, technology)
