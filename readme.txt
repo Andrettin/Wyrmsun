@@ -230,7 +230,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Buildings
 - Fixed issue which sometimes caused the Teuton town hall to briefly flicker before changing graphics after the research of Masonry.
-- Added dwarven Dock (graphics by Jinn).
+- Added dwarven Dock (graphics by Jinn) (requires a Lumber Mill).
 
 * Grand Strategy
 - Added three new dwarven characters who may potentially become rulers: Oin, Andvari and Regin.
