@@ -676,7 +676,6 @@ DefineUnitType("unit-dwarven-sentry-tower", { Name = _("Sentry Tower"),
 	Costs = {"time", 60, "gold", 550, "lumber", 50, "stone", 150},
 	RepairCosts = {"gold", 1, "lumber", 1, "stone", 1},
 	HitPoints = 250, -- 300 with masonry
-	TechnologyPointCost = 1,
 	Construction = "construction-dwarven-sentry-tower",
 	Sounds = {
 		"help", "basic-dwarf-voices-help-town"
@@ -693,7 +692,20 @@ DefineUnitType("unit-dwarven-guard-tower", { Name = _("Guard Tower"),
 	Costs = {"time", 140, "gold", 500, "lumber", 40, "stone", 110},
 	RepairCosts = {"gold", 1, "lumber", 1, "stone", 1},
 	HitPoints = 325, -- 390 with masonry
-	TechnologyPointCost = 1,
+	Sounds = {
+		"help", "basic-dwarf-voices-help-town"
+	}
+} )
+
+DefineUnitType("unit-dwarven-dock", { Name = _("Dock"),
+	Parent = "unit-template-dock",
+	Civilization = "dwarf",
+	Description = _("Although nautical dwarves are few in number, dwarven shipwrighting is a refined craft. They construct sturdy ships, capable of braving oceans and subterranean rivers alike."),
+	Image = {"file", "dwarf/buildings/dock.png", "size", {96, 96}},
+	Shadow = {"file", "dwarf/buildings/dock_shadow.png", "size", {96, 96}},
+	Animations = "animations-building", Icon = "icon-dwarven-dock",
+	Costs = {"time", 200, "gold", 800, "lumber", 360, "stone", 90},
+	RepairCosts = {"gold", 1, "lumber", 1, "stone", 1},
 	Sounds = {
 		"help", "basic-dwarf-voices-help-town"
 	}

@@ -211,6 +211,12 @@ function RunTechTreeMenu(civilization_number)
 					if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("lumber-mill", civilization)) == false and GetTechnologyPointCost(civilization, GetCivilizationClassUnitType("lumber-mill", civilization)) > 0) then
 						tech_allowed = false
 					end
+				elseif (GetUnitTypeData(unitName, "Class") == "dock") then
+					tech_icon_x = 6
+					tech_icon_y = 5
+					if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("lumber-mill", civilization)) == false and GetTechnologyPointCost(civilization, GetCivilizationClassUnitType("lumber-mill", civilization)) > 0) then
+						tech_allowed = false
+					end
 				elseif (GetUnitTypeData(unitName, "Class") == "watch-tower") then
 					tech_icon_x = 9
 					tech_icon_y = 2
@@ -417,6 +423,9 @@ function GetTechnologyAllowsString(technology, civilization)
 			if (GetCivilizationClassUnitType("stables", civilization) ~= nil) then
 				table.insert(allowed_technologies, GetCivilizationClassUnitType("stables", civilization))
 			end
+			if (GetCivilizationClassUnitType("dock", civilization) ~= nil) then
+				table.insert(allowed_technologies, GetCivilizationClassUnitType("dock", civilization))
+			end
 			if (GetCivilizationClassUnitType("wood-plow", civilization) ~= nil) then
 				table.insert(allowed_technologies, GetCivilizationClassUnitType("wood-plow", civilization))
 			end
@@ -446,6 +455,7 @@ function GetTechnologyAllowsString(technology, civilization)
 			if (GetCivilizationClassUnitType("cavalry", civilization) ~= nil) then
 				table.insert(allowed_technologies, GetCivilizationClassUnitType("cavalry", civilization))
 			end
+		elseif (GetUnitTypeData(technology, "Class") == "dock") then
 		elseif (GetUnitTypeData(technology, "Class") == "watch-tower") then
 			if (GetCivilizationClassUnitType("guard-tower", civilization) ~= nil) then
 				table.insert(allowed_technologies, GetCivilizationClassUnitType("guard-tower", civilization))

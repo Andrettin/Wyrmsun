@@ -338,6 +338,8 @@ João Victor G. Costa (Jinn):
 /graphics/celt/buildings/farm.png
 /graphics/dwarf/buildings/barracks.png
 /graphics/dwarf/buildings/barracks_shadow.png
+/graphics/dwarf/buildings/dock.png
+/graphics/dwarf/buildings/dock_shadow.png
 /graphics/dwarf/buildings/guard_tower.png
 /graphics/dwarf/buildings/guard_tower_shadow.png
 /graphics/dwarf/buildings/lumber_mill.png

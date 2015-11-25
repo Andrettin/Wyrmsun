@@ -1139,7 +1139,7 @@ function CanAttackProvince(province, faction, province_from)
 		return false
 	end
 
-	if (ProvinceHasBorderWith(province_from, province) == false and (province.Coastal == false or ProvinceHasSecondaryBorderThroughWaterWith(province_from, province) == false)) then
+	if (ProvinceHasBorderWith(province_from, province) == false and (province.Coastal == false or ProvinceHasBuildingClass(province.Name, "dock") == false or ProvinceHasSecondaryBorderThroughWaterWith(province_from, province) == false)) then
 		return false
 	end
 
@@ -1649,6 +1649,8 @@ function AddGrandStrategyBuildingButton(x, y, unit_type)
 		building_function_tooltip = " (researches melee weapon, shield and siege weapon upgrades)"
 	elseif (GetUnitTypeData(unit_type, "Class") == "stables") then
 		building_function_tooltip = " (allows cavalry units to be trained)"
+	elseif (GetUnitTypeData(unit_type, "Class") == "dock") then
+		building_function_tooltip = " (allows fishing and attacking nearby coasts)"
 	elseif (GetUnitTypeData(unit_type, "Class") == "mercenary-camp") then
 		building_function_tooltip = " (hires mercenaries)"
 	end
@@ -2452,7 +2454,7 @@ function DrawGrandStrategyInterface()
 						end
 					end
 				end
-			elseif (GrandStrategyInterfaceState == "stables") then
+			elseif (GrandStrategyInterfaceState == "stables" or GrandStrategyInterfaceState == "dock") then
 				AddGrandStrategyLabel(GetUnitTypeName(GetCivilizationClassUnitType(GrandStrategyInterfaceState, GetProvinceCivilization(SelectedProvince.Name))), UI.InfoPanel.X + 109, UI.InfoPanel.Y + 53, Fonts["game"], true, false)
 				
 				local item_x = 0
@@ -2677,6 +2679,7 @@ function DrawGrandStrategyInterface()
 				elseif (GrandStrategyInterfaceState == "smithy") then
 					Tip("Smithy Interface", "Here you can research some new technologies. Click on a technology's icon to research it. You can only research one technology in a given turn.")
 				elseif (GrandStrategyInterfaceState == "stables") then
+				elseif (GrandStrategyInterfaceState == "dock") then
 				elseif (GrandStrategyInterfaceState == "mercenary-camp") then
 					Tip("Mercenary Camp Interface", "Here you can recruit thief units as you would normal units, as well as hire unique mercenary squads.")
 				end
@@ -2803,6 +2806,9 @@ function AIDoTurn(ai_faction)
 					elseif (GetUnitTypeData(unitName, "Class") == "stables" and ((ProvinceHasBuildingClass(WorldMapProvinces[key].Name, "barracks") and ProvinceHasBuildingClass(WorldMapProvinces[key].Name, "smithy")) or GetFactionBuildingTypeCount(ai_faction, "stables") == 0)) then -- it only makes sense to build more than one stables if it is to make cavalry available in a province
 						BuildStructure(WorldMapProvinces[key], unitName)
 						break
+					elseif (GetUnitTypeData(unitName, "Class") == "dock") then -- it only makes sense to build a dock if the province 
+						BuildStructure(WorldMapProvinces[key], unitName)
+						break
 					end
 				end
 			end
@@ -2903,7 +2909,7 @@ function AIDoTurn(ai_faction)
 			end
 		end
 		
-		if (borders_foreign == false) then -- only look for potential targets through water if no targets connected by land exist
+		if (borders_foreign == false and ProvinceHasBuildingClass(WorldMapProvinces[key].Name, "dock")) then -- only look for potential targets through water if no targets connected by land exist
 			local secondary_border_provinces_through_water = GetProvinceSecondaryBorderProvincesThroughWater(WorldMapProvinces[key])
 			for second_i, second_key in ipairs(secondary_border_provinces_through_water) do
 				if ((WorldMapProvinces[second_key] ~= nil and GetProvinceOwner(WorldMapProvinces[second_key].Name) ~= ai_faction.Name) or WorldMapWaterProvinces[second_key] ~= nil) then
@@ -3174,6 +3180,10 @@ function IsBuildingAvailable(province, unit_type)
 	end
 
 	if (GetUnitTypeData(unit_type, "Class") == "town-hall" and ProvinceHasBuildingClass(province.Name, "stronghold")) then -- if stronghold is built, town hall is no longer available for use
+		return false
+	end
+	
+	if (GetUnitTypeData(unit_type, "Class") == "dock" and province.Coastal == false) then -- only coastal provinces may build a dock
 		return false
 	end
 	
@@ -4059,6 +4069,13 @@ function GetUnitTypeRequiredBuildings(unit_type)
 			end
 			if (GetCivilizationClassUnitType("barracks", GetUnitTypeData(unit_type, "Civilization")) ~= nil) then
 				table.insert(required_buildings, GetCivilizationClassUnitType("barracks", GetUnitTypeData(unit_type, "Civilization")))
+			end
+		elseif (GetUnitTypeData(unit_type, "Class") == "dock") then
+			if (GetCivilizationClassUnitType("town-hall", GetUnitTypeData(unit_type, "Civilization")) ~= nil) then
+				table.insert(required_buildings, GetCivilizationClassUnitType("town-hall", GetUnitTypeData(unit_type, "Civilization")))
+			end
+			if (GetCivilizationClassUnitType("lumber-mill", GetUnitTypeData(unit_type, "Civilization")) ~= nil) then
+				table.insert(required_buildings, GetCivilizationClassUnitType("lumber-mill", GetUnitTypeData(unit_type, "Civilization")))
 			end
 		end
 	else

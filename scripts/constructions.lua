@@ -27,26 +27,9 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-if (wyrmsun.tileset == nil) then
-  wyrmsun.tileset = "conifer_forest_summer"
-end
-
-local files = {
-  cave = "neutral/buildings/land_construction_site.png",
-  conifer_forest_summer = "neutral/buildings/land_construction_site.png",
-  conifer_forest_autumn = "neutral/buildings/land_construction_site.png",
-  dungeon = "neutral/buildings/land_construction_site.png",
-  fairlimbed_forest = "neutral/buildings/land_construction_site.png",
-  swamp = "neutral/buildings/land_construction_site.png"
-}
-
-if (files[wyrmsun.tileset] == nil) then
-  files[wyrmsun.tileset] = files["conifer_forest_summer"]
-end
-
 DefineConstruction("construction-none", {
   Files = {
-    File = files[wyrmsun.tileset],
+    File = "neutral/buildings/land_construction_site.png",
     Size = {64, 64}},
   Constructions = {
    {Percent = 0,
@@ -61,32 +44,46 @@ DefineConstruction("construction-none", {
 })
 
 DefineConstruction("construction-land", {
-  Files = {
-    File = files[wyrmsun.tileset],
-    Size = {64, 64}},
-  Constructions = {
-   {Percent = 0,
-    File = "construction",
-    Frame = 0},
-   {Percent = 25,
-    File = "construction",
-    Frame = 1},
-   {Percent = 50,
-    File = "main",
-    Frame = 1}}
+	Files = {
+		File = "neutral/buildings/land_construction_site.png",
+		Size = {64, 64}
+	},
+	Constructions = {
+		{
+			Percent = 0,
+			File = "construction",
+			Frame = 0
+		},
+		{
+			Percent = 25,
+			File = "construction",
+			Frame = 1
+		},
+		{
+			Percent = 50,
+			File = "main",
+			Frame = 1
+		}
+	}
 })
 
 DefineConstruction("construction-land-simple", {
-  Files = {
-    File = files[wyrmsun.tileset],
-    Size = {64, 64}},
-  Constructions = {
-   {Percent = 0,
-    File = "construction",
-    Frame = 0},
-   {Percent = 25,
-    File = "construction",
-    Frame = 1}}
+	Files = {
+		File = "neutral/buildings/land_construction_site.png",
+		Size = {64, 64}
+	},
+	Constructions = {
+		{
+			Percent = 0,
+			File = "construction",
+			Frame = 0
+		},
+		{
+			Percent = 25,
+			File = "construction",
+			Frame = 1
+		}
+	}
 })
 
 DefineConstruction("construction-mine", {
@@ -109,9 +106,24 @@ DefineConstruction("construction-mine", {
 	}
 })
 
+DefineConstruction("construction-dock", {
+	Constructions = {
+		{
+			Percent = 0,
+			File = "main",
+			Frame = 2
+		},
+		{
+			Percent = 50,
+			File = "main",
+			Frame = 1
+		}
+	}
+})
+
 DefineConstruction("construction-germanic-town-hall", {
   Files = {
-    File = files[wyrmsun.tileset],
+    File = "neutral/buildings/land_construction_site.png",
     Size = {64, 64}},
   Constructions = {
    {Percent = 0,
@@ -127,7 +139,7 @@ DefineConstruction("construction-germanic-town-hall", {
 
 DefineConstruction("construction-dwarven-sentry-tower", {
   Files = {
-    File = files[wyrmsun.tileset],
+    File = "neutral/buildings/land_construction_site.png",
     Size = {64, 64}},
   Constructions = {
    {Percent = 0,
@@ -146,7 +158,7 @@ DefineConstruction("construction-dwarven-sentry-tower", {
 
 DefineConstruction("construction-land2", {
   Files = {
-    File = files[wyrmsun.tileset],
+    File = "neutral/buildings/land_construction_site.png",
     Size = {64, 64}},
   Constructions = {
    {Percent = 0,
@@ -157,18 +169,9 @@ DefineConstruction("construction-land2", {
     Frame = 1}}
 })
 
-local files = {
-  cave = "neutral/buildings/land_construction_site.png",
-  conifer_forest_summer = "neutral/buildings/land_construction_site.png",
-  conifer_forest_autumn = "neutral/buildings/land_construction_site.png",
-  dungeon = "neutral/buildings/land_construction_site.png",
-  fairlimbed_forest = "neutral/buildings/land_construction_site.png",
-  swamp = "neutral/buildings/land_construction_site.png"
-}
-
 DefineConstruction("construction-wall", {
   Files = {
-    File = files[wyrmsun.tileset],
+    File = "neutral/buildings/land_construction_site.png",
     Size = {64, 64}},
   Constructions = {
    {Percent = 0,

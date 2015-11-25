@@ -230,11 +230,16 @@ https://github.com/Andrettin/Wyrmsun
 
 * Buildings
 - Fixed issue which sometimes caused the Teuton town hall to briefly flicker before changing graphics after the research of Masonry.
+- Added dwarven Dock (graphics by Jinn).
 
 * Grand Strategy
 - Added three new dwarven characters who may potentially become rulers: Oin, Andvari and Regin.
 - Added Hordaland province in Norway.
 - Improved the performance of the grand strategy hero code.
+- Building a Dock is now necessary for fishing and for attacking provinces through water.
+
+* Quests
+- The Caverns of Flame quest (Dwarf) now gives 2 technology points instead of 1.
 
 * Units
 - Added two new name prefixes and one new name suffix for yales.

@@ -504,7 +504,6 @@ DefineUnitType("unit-teuton-watch-tower", { Name = _("Watch Tower"),
 	Image = {"file", "teuton/buildings/watch_tower.png", "size", {64, 64}},
 	Shadow = {"file", "teuton/buildings/watch_tower_shadow.png", "size", {64, 64}},
 	Icon = "icon-teuton-watch-tower",
-	TechnologyPointCost = 1,
 	Sounds = {
 		"help", "basic-teuton-voices-help-town"
 	}
@@ -517,7 +516,6 @@ DefineUnitType("unit-teuton-guard-tower", { Name = _("Guard Tower"),
 	Image = {"file", "teuton/buildings/guard_tower.png", "size", {64, 64}},
 	Shadow = {"file", "teuton/buildings/guard_tower_shadow.png", "size", {64, 64}},
 	Icon = "icon-teuton-guard-tower",
-	TechnologyPointCost = 1,
 	Sounds = {
 		"help", "basic-teuton-voices-help-town"
 	}
