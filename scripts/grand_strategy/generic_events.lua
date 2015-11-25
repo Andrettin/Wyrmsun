@@ -205,7 +205,7 @@ local GenericEvents = {
 			for province_i, province_key in ipairs(EventFaction.OwnedProvinces) do
 				if (
 					GetProvinceCivilization(WorldMapProvinces[province_key].Name) ~= EventFaction.Civilization
-					and GetCivilizationSpecies(GetProvinceCivilization(WorldMapProvinces[province_key].Name)) == GetCivilizationSpecies(EventFaction.Civilization) -- assimilation can only happen between civilizations which belong to the same species
+					and GetCivilizationData(GetProvinceCivilization(WorldMapProvinces[province_key].Name), "Species") == GetCivilizationData(EventFaction.Civilization, "Species") -- assimilation can only happen between civilizations which belong to the same species
 					and SyncRand(200) < 1
 					and ProvinceBordersCulture(WorldMapProvinces[province_key], EventFaction.Civilization)
 				) then

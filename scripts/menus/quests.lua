@@ -163,7 +163,13 @@ function addQuestIcon(quest, menu, x, y)
 			l:setSize(324, 208)
 			l:setLineWidth(324)
 			quest_menu:add(l, 14, 112)
-			l:setCaption(GetQuestData(quest, "Description"))
+			local quest_description = GetQuestData(quest, "Description") .. "\n\nRewards: " .. tostring(GetQuestData(quest, "TechnologyPoints")) .. " " .. CapitalizeString(GetQuestData(quest, "Civilization"))
+			if (GetQuestData(quest, "TechnologyPoints") > 1) then
+				quest_description = quest_description .. " Technology Points."
+			else
+				quest_description = quest_description .. " Technology Point."
+			end
+			l:setCaption(quest_description)
 			
 			quest_menu:addFullButton("~!Play Quest", "p", 176 - (224 / 2), 352 - 40 * 2,
 				function()

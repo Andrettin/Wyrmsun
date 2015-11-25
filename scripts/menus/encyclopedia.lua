@@ -212,7 +212,7 @@ function addEncyclopediaIcon(unit_name, menu, x, y)
 	local encyclopedia_icon_y_origin = math.floor((encyclopedia_icon_frame * 46) / encyclopedia_icon:getGraphicWidth()) * 38
 	local playercolor
 	if (civilization ~= "") then
-		playercolor = GetCivilizationDefaultColor(civilization)
+		playercolor = GetCivilizationData(civilization, "DefaultColor")
 	else
 		playercolor = "gray"
 	end

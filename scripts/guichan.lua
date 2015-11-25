@@ -1237,13 +1237,13 @@ function RunSinglePlayerCustomGameMenu()
 	
 	local civilizations = GetCivilizations()
 	for i=1,table.getn(civilizations) do
-		if (IsCivilizationPlayable(civilizations[i])) then
+		if (GetCivilizationData(civilizations[i], "Playable")) then
 			if (
 				(civilizations[i] ~= "germanic" or tech_level_list[tech_level:getSelected() + 1] == "Map Default" or tech_level_list[tech_level:getSelected() + 1] == "Agrarian (Bronze)")
 				and (civilizations[i] ~= "teuton" or tech_level_list[tech_level:getSelected() + 1] == "Agrarian (Iron)" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Bronze)" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Iron)")
 				and (civilizations[i] ~= "english" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Iron)")
 			) then
-				local playable_civilization_species = CapitalizeString(GetCivilizationSpecies(civilizations[i]))
+				local playable_civilization_species = CapitalizeString(GetCivilizationData(civilizations[i], "Species"))
 				local playable_civilization = CapitalizeString(civilizations[i])
 				if (playable_civilization_species ~= playable_civilization) then
 					table.insert(civilization_list, _(playable_civilization_species .. " - " .. playable_civilization))

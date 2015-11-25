@@ -142,7 +142,7 @@ function RunTechTreeMenu(civilization_number)
 		return b
 	end
 
-	local playercolor = GetCivilizationDefaultColor(civilization)
+	local playercolor = GetCivilizationData(civilization, "DefaultColor")
 
 	for i, unitName in ipairs(Units) do
 		if (string.find(unitName, "upgrade-") == nil) then
@@ -536,11 +536,11 @@ function GetAvailableCivilizationsTechTree()
 	
 	local civilizations = GetCivilizations()
 	for i=1,table.getn(civilizations) do
-		if (IsCivilizationPlayable(civilizations[i])) then
+		if (GetCivilizationData(civilizations[i], "Playable")) then
 			if (
 				(civilizations[i] ~= "teuton" or GetArrayIncludes(wyr.preferences.QuestsCompleted, "Gylve's Realm"))
 			) then
-				local playable_civilization_species = CapitalizeString(GetCivilizationSpecies(civilizations[i]))
+				local playable_civilization_species = CapitalizeString(GetCivilizationData(civilizations[i], "Species"))
 				local playable_civilization = CapitalizeString(civilizations[i])
 				if (playable_civilization_species ~= playable_civilization) then
 					table.insert(civilization_list, _(playable_civilization_species .. " - " .. playable_civilization))
