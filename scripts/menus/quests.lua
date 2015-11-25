@@ -171,33 +171,37 @@ function addQuestIcon(quest, menu, x, y)
 			end
 			l:setCaption(quest_description)
 			
-			quest_menu:addFullButton("~!Play Quest", "p", 176 - (224 / 2), 352 - 40 * 2,
-				function()
-					RunningScenario = true
-					GetMapInfo(GetQuestData(quest, "Map"))
-					for i=1,mapinfo.nplayers do
-						if ((i - 1) ~= MapPersonPlayer and mapinfo.playertypes[i] == "person") then
-							GameSettings.Presets[i-1].Type = PlayerComputer
+			if (GetQuestData(quest, "Map") ~= "") then
+				quest_menu:addFullButton("~!Play Quest", "p", 176 - (224 / 2), 352 - 40 * 2,
+					function()
+						RunningScenario = true
+						GetMapInfo(GetQuestData(quest, "Map"))
+						for i=1,mapinfo.nplayers do
+							if ((i - 1) ~= MapPersonPlayer and mapinfo.playertypes[i] == "person") then
+								GameSettings.Presets[i-1].Type = PlayerComputer
+							end
+						end
+						GameSettings.NoRandomness = wyr.preferences.NoRandomness
+						GameSettings.Difficulty = wyr.preferences.Difficulty
+						CurrentQuest = quest
+						if (GetQuestData(quest, "Briefing") ~= "") then
+							Briefing(quest)
+						end
+						mapname = GetQuestData(quest, "Map")
+						RunMap(mapname)
+						quest_menu:stop()
+						menu:stop()
+						if not (LoadGameFile) then
+							RunQuestMenu(GetQuestData(quest, "World"))
 						end
 					end
-					GameSettings.NoRandomness = wyr.preferences.NoRandomness
-					GameSettings.Difficulty = wyr.preferences.Difficulty
-					CurrentQuest = quest
-					if (GetQuestData(quest, "Briefing") ~= "") then
-						Briefing(quest)
-					end
-					mapname = GetQuestData(quest, "Map")
-					RunMap(mapname)
-					quest_menu:stop()
-					menu:stop()
-					if not (LoadGameFile) then
-						RunQuestMenu(GetQuestData(quest, "World"))
-					end
-				end)
+				)
+			end
 			quest_menu:addFullButton("~!Close", "c", 176 - (224 / 2), 352 - 40 * 1,
 				function()
 					quest_menu:stop()
-				end)
+				end
+			)
 			quest_menu:run()
 		end
 	)
