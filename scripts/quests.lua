@@ -372,20 +372,6 @@ DefineQuest("Andvari's Gold", {
 	Area = "Andvari's Falls",
 	StartSpeech = "Listen... there is a dwarf who lives near here, called Andvari. He has gathered a large gold hoard, by methods unknown. For me alone, it would be too risky to wrest the gold from Andvari. But with your help... can I count on it?",
 	InProgressSpeech = "We shall be very wealthy!",
-	CompletionSpeech = "Andvari's gold, taken away by kobolds... We must find this wyrm Fafnir's lair!",
-	Hidden = true
-})
-
-DefineQuest("Andvari's Gold", {
-	Icon = "icon-gold",
-	Description = "Regin has asked you to help him take Andvari's gold forcibly, giving promises of great wealth.",
-	World = "Nidavellir",
-	Civilization = "dwarf",
-	RequiredQuest = "The Binding of Grafvitnir", -- this happens much later after Modsognir's time
-	QuestGiver = "Regin",
-	Area = "Andvari's Falls",
-	StartSpeech = "Listen... there is a dwarf who lives near here, called Andvari. He has gathered a large gold hoard, by methods unknown. For me alone, it would be too risky to wrest the gold from Andvari. But with your help... can I count on it?",
-	InProgressSpeech = "We shall be very wealthy!",
 	CompletionSpeech = "Andvari's gold, taken away by kobolds...",
 	Hidden = true
 })
