@@ -389,3 +389,16 @@ DefineQuest("Fafnir's Hoard", {
 	CompletionSpeech = "Excellent! So much gold... Ah, and this ring of red gold, so beautiful...",
 	Hidden = true
 })
+
+DefineQuest("Tror's Inheritance", {
+	Icon = "icon-germanic-short-sword",
+	Description = "The young Tror has come of age, and requested you bring his father's weapons to him.",
+	World = "Earth",
+	Civilization = "germanic",
+	QuestGiver = "Tror",
+	Area = "Asaland",
+	StartSpeech = "I am finally old enough to receive my father's weapons. Would you be so kind and get them for me from chieftain Lorikus?",
+	InProgressSpeech = "Long have I waited for this moment...",
+	CompletionSpeech = "I am grateful to you. I have now finally became the warrior I was meant to be.",
+	Hidden = true
+})
