@@ -173,6 +173,16 @@ DefineCharacter("Clovis", { -- Source: Norman Davies, "Vanished Kingdoms", 2012,
 	DeathYear = 511 -- died
 })
 
+DefineCharacter("Ethelred", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 127.
+	Name = "Ethelred", -- did the massacre of the Danes in 1002 AD
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "teuton", -- should be English?
+	ProvinceOfOrigin = "England", -- presumably
+	Year = 1002, -- massacred the Danes
+	DeathYear = 1002 + 30 -- estimated
+})
+
 DefineCharacter("Nicolas Breakspear", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 126.
 	Name = "Nicolas", -- son of a peasant employed in the Benedictine monastery of Saint Albans in Hertfordshire; was educated by the monks there; later became a cardinal and was sent on a mission to Norway to settle the Church there; was elected Pope in 1154 AD under the title of Hadrian IV
 	ExtraName = "Breakspear", -- I assume this isn't his family name, but a nickname or something of the sort?

@@ -859,8 +859,8 @@ DefineCharacter("Swerre", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vo
 	DeathYear = 1203 -- reign ended
 })
 
-DefineCharacter("Magnus the Saint", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 125.
-	Name = "Magnus", -- Earl (presumably) of Orkney, his sister was married to Koll
+DefineCharacter("Magnus the Saint", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 125, 128.
+	Name = "Magnus", -- Earl (presumably) of Orkney, his sister was married to Koll; in his youth carried the dishes to the royal table
 	ExtraName = "the Saint",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",

@@ -2282,6 +2282,10 @@ if (GrandStrategyYear >= 999) then
 	-- Gaimar IV becomes lord of Salerno in 999 AD; Gaimar IV sought to engage the Norman knights who had saved Salerno as mercenaries, but they decided to return to Normandy instead; Gaimar IV did send envoys with them to seek other mercenaries in Normandy, however; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 233.
 end
 
+if (GrandStrategyYear >= 1002) then
+	-- Massacre of the Danes in 1002 AD by Ethelred, presumably in England; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 127.
+end
+
 if (GrandStrategyYear >= 1015) then
 	-- Norman warriors appear in southern Italy in 1015-1016 AD, to fight the Muslims and Byzantines for the local nobles; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 233.
 end
