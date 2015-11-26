@@ -2661,6 +2661,7 @@ function LoadProvinces(world)
 			SettlementTerrain = "Plains",
 			Coastal = true,
 			Claims = {
+				"norse", "Orkney",
 				"teuton", "Scotland" -- should be English-cultured instead
 			}
 		},

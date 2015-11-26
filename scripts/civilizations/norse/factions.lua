@@ -83,7 +83,8 @@ DefineFaction("Hordaland", {
 	Type = "polity",
 	Color = "cyan",
 	SecondaryColor = "cyan",
-	DefaultTier = "kingdom"
+	DefaultTier = "kingdom",
+	DevelopsTo = {"Norway"} -- allow Hordaland to become Norway if it unifies its territories
 })
 
 DefineFaction("Norway", {
@@ -95,6 +96,18 @@ DefineFaction("Norway", {
 	Titles = {
 		"monarchy", "kingdom", "Kingdom"
 	}
+})
+
+DefineFaction("Orkney", { -- Earldom of Orkney
+	Civilization = "norse",
+	Type = "polity",
+	Color = "yellow",
+	SecondaryColor = "yellow",
+	DefaultTier = "duchy",
+	Titles = {
+		"monarchy", "duchy", "Earldom"
+	},
+	DevelopsTo = {"Norway"}
 })
 
 DefineFaction("Sweden", {

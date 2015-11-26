@@ -2319,8 +2319,16 @@ if (GrandStrategyYear >= 1091) then
 	-- The sole remaining Muslim stronghold in Sicily fell to the Norman forces in 1091 AD; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 233.
 end
 
+if (GrandStrategyYear >= 1099) then
+	SetFactionRuler("norse", "Orkney", "Magnus the Saint") -- date estimated; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 125.
+end
+
 if (GrandStrategyYear >= 1104) then
 	GrandStrategyEvents.TheEruptionOfHekla = nil
+end
+
+if (GrandStrategyYear >= 1129) then
+	SetFactionRuler("norse", "Orkney", "Kala") -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 125.
 end
 
 if (GrandStrategyYear >= 1133) then -- Saemund died in 1133

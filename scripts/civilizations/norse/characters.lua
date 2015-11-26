@@ -858,3 +858,35 @@ DefineCharacter("Swerre", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vo
 	Year = 1177, -- reign began
 	DeathYear = 1203 -- reign ended
 })
+
+DefineCharacter("Magnus the Saint", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 125.
+	Name = "Magnus", -- Earl (presumably) of Orkney, his sister was married to Koll
+	ExtraName = "the Saint",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Orkney", -- presumably
+	Year = 1129 - 30, -- estimated
+	DeathYear = 1129 -- presumably
+})
+
+DefineCharacter("Koll", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 125.
+	Name = "Koll", -- husband of the sister of Earl Magnus the Saint
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Orkney", -- since his son was Earl of Orkney
+	Year = 1129 - 30, -- estimated
+	DeathYear = 1129 -- estimated
+})
+
+DefineCharacter("Kala", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 125.
+	Name = "Kala", -- Earl of Orkney; was made earl under the name of Earl Rognvald
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Orkney", -- presumably
+	Year = 1129, -- was made Earl of Orkney
+	DeathYear = 1129 + 30, -- estimated
+	Father = "Koll"
+})
