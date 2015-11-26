@@ -2470,6 +2470,7 @@ if (GrandStrategyYear >= 1560) then -- Political situation in Europe in 1560 AD;
 	SetProvinceOwner("England", "teuton", "England")
 	SetProvinceOwner("Lowland Scotland", "teuton", "Scotland")
 	SetProvinceOwner("Highland Scotland", "teuton", "Scotland")
+	SetProvinceOwner("Orkney", "teuton", "Scotland")
 end
 
 if (GrandStrategyYear >= 1561) then

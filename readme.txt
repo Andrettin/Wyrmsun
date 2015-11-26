@@ -237,6 +237,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added Hordaland province in Norway.
 - Improved the performance of the grand strategy hero code.
 - Building a Dock is now necessary for fishing and for attacking provinces through water.
+- Added Orkney province off the coast of Scotland.
 
 * Quests
 - The Caverns of Flame quest (Dwarf) now gives 2 technology points instead of 1.

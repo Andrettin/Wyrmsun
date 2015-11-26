@@ -6386,7 +6386,7 @@ SetWorldMapTileTerrain(470, 83, water_id)
 SetWorldMapTileTerrain(470, 84, water_id)
 SetWorldMapTileTerrain(470, 85, water_id)
 SetWorldMapTileTerrain(470, 86, water_id)
-SetWorldMapTileTerrain(470, 87, water_id)
+SetWorldMapTileTerrain(470, 87, plains_id) -- Orkney (most of the main island is actually in {470, 88} and {470, 89}, but those tiles are adjacent to the Scottish mainland
 SetWorldMapTileTerrain(470, 88, water_id)
 SetWorldMapTileTerrain(470, 89, plains_id)
 SetWorldMapTileTerrain(470, 90, water_id)
