@@ -402,3 +402,16 @@ DefineQuest("Tror's Inheritance", {
 	CompletionSpeech = "I am grateful to you. I have now finally became the warrior I was meant to be.",
 	Hidden = true
 })
+
+DefineQuest("Ottar's Lineage", {
+	Icon = "icon-teuton-swordsman",
+	Description = "Ottar has bet his entire inheritance against Argantyr, to see who has the better lineage. He now asks you to take him to a seeress who can tell him about his bloodline.",
+	World = "Earth",
+	Civilization = "norse",
+	QuestGiver = "Ottar",
+	Area = "Hordaland",
+	StartSpeech = "In the heat of a discussion, me and Argantyr have made a bet - to see who has the better lineage. Each of us has put our entire inheritance at stake. There is a seeress who can tell me about my bloodline - would you escort me to her?",
+	InProgressSpeech = "Everything is at stake...",
+	CompletionSpeech = "Me, a kinsman of Siegfried! The bet is as good as won.",
+	Hidden = true
+})

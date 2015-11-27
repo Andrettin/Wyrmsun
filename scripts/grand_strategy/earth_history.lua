@@ -2276,6 +2276,10 @@ if (GrandStrategyYear >= 984) then
 	-- Bishop Dietrich of Metz died in 984 AD; Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 321.
 end
 
+if (GrandStrategyYear >= 995) then
+	-- The Norwegian longships Long Serpent and the Crane were built sometime between 995 and 1000 AD; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 134.
+end
+
 if (GrandStrategyYear >= 999) then
 	-- Norman knights reach Salerno (south Italy) in 999 AD in pilgrimage (after coming back from Jerusalem); Salerno was under Saracen siege, and the Normans drove the Saracens away, after getting weapons and horses; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 233.
 	
@@ -2325,6 +2329,7 @@ end
 
 if (GrandStrategyYear >= 1099) then
 	SetFactionRuler("norse", "Orkney", "Magnus the Saint") -- date estimated; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 125.
+	SetProvinceOwner("Orkney", "norse", "Orkney") -- if the faction had a ruler at this date, then it must have existed
 end
 
 if (GrandStrategyYear >= 1104) then
