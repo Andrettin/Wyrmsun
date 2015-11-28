@@ -161,6 +161,7 @@ if (GrandStrategy == false) then
 	-- Rugnur
 	if (GetPlayerData(0, "Name") ~= "Shorbear Clan") then -- Rugnur cannot belong to the Shorbear Clan
 		unit = CreateUnit("unit-hero-rugnur", 0, {47, 10})
+		SetUnitVariable(unit, "Character", "Rugnur")
 	end
 
 	-- Gnomish outpost
@@ -226,7 +227,8 @@ elseif (GrandStrategyEventMap) then
 
 	-- Rugnur
 	if (GetProvinceHero("Caverns of Chaincolt", "Rugnur") == 2) then
-		unit = CreateUnit(GetHeroUnitType("Rugnur"), 0, {47, 10})
+		unit = CreateUnit(GetGrandStrategyHeroUnitType("Rugnur"), 0, {47, 10})
+		SetUnitVariable(unit, "Character", "Rugnur")
 	end
 
 	-- Gnomish outpost

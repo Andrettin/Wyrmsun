@@ -53,22 +53,28 @@ if (LoadedGame == false) then
 	if (GrandStrategy == false) then
 		SetPlayerData(0, "Allow", "upgrade-dwarven-runewriting", "F")
 		unit = CreateUnit("unit-hero-rugnur", 0, {19, 47})
+		SetUnitVariable(unit, "Character", "Rugnur")
 		unit = CreateUnit("unit-hero-baglur", 0, {19, 47})
+		SetUnitVariable(unit, "Character", "Baglur")
 		unit = CreateUnit("unit-hero-thursagan", 0, {19, 47})
+		SetUnitVariable(unit, "Character", "Thursagan")
 	elseif (GrandStrategyEventMap) then
 		-- Rugnur
 		if (GetProvinceHero("Caverns of Chaincolt", "Rugnur") == 2) then
 			unit = CreateUnit(GetGrandStrategyHeroUnitType("Rugnur"), 0, {19, 47})
+			SetUnitVariable(unit, "Character", "Rugnur")
 		end
 
 		-- Baglur
 		if (GetProvinceHero("Caverns of Chaincolt", "Baglur") == 2) then
 			unit = CreateUnit(GetGrandStrategyHeroUnitType("Baglur"), 0, {19, 47})
+			SetUnitVariable(unit, "Character", "Baglur")
 		end
 
 		-- Thursagan
 		if (GetProvinceHero("Caverns of Chaincolt", "Thursagan") == 2) then
 			unit = CreateUnit(GetGrandStrategyHeroUnitType("Thursagan"), 0, {19, 47})
+			SetUnitVariable(unit, "Character", "Thursagan")
 		end
 	end
 	
@@ -112,7 +118,7 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if ((PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have one unit standing on each glyph at the same time") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Find Thursagan and bring him to your Mead Hall") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Collect 10000 gold and 20000 coal") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Defeat Glonoin, the Shorbear Clan leader") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have all heroes in the Shorbear caves while no enemies are in the caves") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Move Rugnur to the northeast cave entrance") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Get all heroes to the end of the tunnel") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Rugnur, Baglur and Thursagan must survive")) and (GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-rugnur-thane")) < 1) then
+		if ((PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have one unit standing on each glyph at the same time") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Find Thursagan and bring him to your Mead Hall") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Collect 10000 gold and 20000 coal") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Defeat Glonoin, the Shorbear Clan leader") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have all heroes in the Shorbear caves while no enemies are in the caves") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Move Rugnur to the northeast cave entrance") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Get all heroes to the end of the tunnel") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Rugnur, Baglur and Thursagan must survive")) and FindHero("Rugnur", GetFactionPlayer("Norlund Clan")) == nil) then
 			player = GetFactionPlayer("Norlund Clan")
 			return true
 		end
@@ -152,8 +158,8 @@ AddTrigger(
 				or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Rugnur, Baglur and Thursagan must survive")
 				or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Durstorn and Baglur must survive")
 			)
-			and GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-baglur") + GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-baglur-thane") < 1
-			and (GetFactionExists("Baglur") == false or GetPlayerData(GetFactionPlayer("Baglur"), "UnitTypesCount", "unit-hero-baglur") + GetPlayerData(GetFactionPlayer("Baglur"), "UnitTypesCount", "unit-hero-baglur-thane") < 1)
+			and FindHero("Baglur", GetFactionPlayer("Norlund Clan")) == nil
+			and (GetFactionExists("Baglur") == false or FindHero("Baglur", GetFactionPlayer("Baglur")) == nil)
 		) then
 			player = GetFactionPlayer("Norlund Clan")
 			return true
@@ -1004,7 +1010,7 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if ((PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Collect 10000 gold and 20000 coal") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Defeat Glonoin, the Shorbear Clan leader") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have all heroes in the Shorbear caves while no enemies are in the caves") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Move Rugnur to the northeast cave entrance") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Get all heroes to the end of the tunnel") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Rugnur, Baglur and Thursagan must survive")) and GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-thursagan") < 1 and GetPlayerData(15, "UnitTypesCount", "unit-hero-thursagan") < 1) then
+		if ((PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Collect 10000 gold and 20000 coal") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Defeat Glonoin, the Shorbear Clan leader") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have all heroes in the Shorbear caves while no enemies are in the caves") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Move Rugnur to the northeast cave entrance") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Get all heroes to the end of the tunnel") or PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Rugnur, Baglur and Thursagan must survive")) and FindHero("Thursagan", GetFactionPlayer("Norlund Clan")) == nil and FindHero("Thursagan", 15) == nil) then
 			player = GetFactionPlayer("Norlund Clan")
 			return true
 		end

@@ -49,6 +49,7 @@ if (LoadedGame == false) then
 	
 	if (GrandStrategy == false) then
 		unit = CreateUnit("unit-hero-marbod", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		SetUnitVariable(unit, "Character", "Marbod")
 		unit = CreateUnit("unit-suebi-swordsman", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 		unit = CreateUnit("unit-teuton-archer", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 		
@@ -89,6 +90,7 @@ if (LoadedGame == false) then
 		-- Marcomanni units
 		CreateProvinceUnits("Brandenburg", 0, 2)
 		unit = CreateUnit("unit-hero-marbod", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		SetUnitVariable(unit, "Character", "Marbod")
 		
 		-- Boii units
 		CreateProvinceUnits("Bohemia", 1)
@@ -291,7 +293,7 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if (GetFactionExists("Marcomanni Tribe") and PlayerHasObjective(GetFactionPlayer("Marcomanni Tribe"), "- Marbod must survive") and GetPlayerData(GetFactionPlayer("Marcomanni Tribe"), "UnitTypesCount", "unit-hero-marbod") < 1) then
+		if (GetFactionExists("Marcomanni Tribe") and PlayerHasObjective(GetFactionPlayer("Marcomanni Tribe"), "- Marbod must survive") and FindHero("Marbod", GetFactionPlayer("Marcomanni Tribe")) == nil) then
 			return true
 		end
 		return false

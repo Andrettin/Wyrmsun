@@ -547,79 +547,6 @@ function StandardTriggers()
 					end
 				end
 
-				if (not IsNetworkGame()) then
-					if (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Hero")) then
-						for key, value in pairs(wyr.preferences.Heroes) do
-							if (wyr.preferences.Heroes[key].name == GetUnitVariable(uncount[unit1], "Name")) then
---								if (GetUnitVariable(uncount[unit1], "LevelUp") > 0 and GetUnitVariable(uncount[unit1], "Level") > table.getn(GetUnitTypeLevelUpUpgrades(GetUnitVariable(uncount[unit1], "Ident"))) + GetUnitVariable(uncount[unit1], "StartingLevel")) then
---									SetUnitVariable(uncount[unit1], "HitPoints", GetUnitVariable(uncount[unit1], "HitPoints", "Max") + (15 * GetUnitVariable(uncount[unit1], "LevelUp")), "Max")
---									SetUnitVariable(uncount[unit1], "LevelUp", 0)
---								end
-
-								-- save upgrades
-								if (GetPlayerData(GetUnitVariable(uncount[unit1], "Player"), "AiEnabled") == false) then
-									if (GetUnitVariable(uncount[unit1], "IndividualUpgrade", "upgrade-axe-mastery") and GetArrayIncludes(wyr.preferences.Heroes[key].upgrades, "upgrade-axe-mastery") == false) then
-										table.insert(wyr.preferences.Heroes[key].upgrades, "upgrade-axe-mastery")
-										SavePreferences()
-									end
-									if (GetUnitVariable(uncount[unit1], "IndividualUpgrade", "upgrade-sword-mastery") and GetArrayIncludes(wyr.preferences.Heroes[key].upgrades, "upgrade-sword-mastery") == false) then
-										table.insert(wyr.preferences.Heroes[key].upgrades, "upgrade-sword-mastery")
-										SavePreferences()
-									end
-									if (GetUnitVariable(uncount[unit1], "IndividualUpgrade", "upgrade-critical-strike") and GetArrayIncludes(wyr.preferences.Heroes[key].upgrades, "upgrade-critical-strike") == false) then
-										table.insert(wyr.preferences.Heroes[key].upgrades, "upgrade-critical-strike")
-										SavePreferences()
-									end
-									if (GetUnitVariable(uncount[unit1], "IndividualUpgrade", "upgrade-deadly-precision") and GetArrayIncludes(wyr.preferences.Heroes[key].upgrades, "upgrade-deadly-precision") == false) then
-										table.insert(wyr.preferences.Heroes[key].upgrades, "upgrade-deadly-precision")
-										SavePreferences()
-									end
-									if (GetUnitVariable(uncount[unit1], "IndividualUpgrade", "upgrade-eagle-eye") and GetArrayIncludes(wyr.preferences.Heroes[key].upgrades, "upgrade-eagle-eye") == false) then
-										table.insert(wyr.preferences.Heroes[key].upgrades, "upgrade-eagle-eye")
-										SavePreferences()
-									end
-									if (GetUnitVariable(uncount[unit1], "IndividualUpgrade", "upgrade-portent") and GetArrayIncludes(wyr.preferences.Heroes[key].upgrades, "upgrade-portent") == false) then
-										table.insert(wyr.preferences.Heroes[key].upgrades, "upgrade-portent")
-										SavePreferences()
-									end
-									if (string.find(GetUnitVariable(uncount[unit1], "Ident"), "steelclad") ~= nil and GetArrayIncludes(wyr.preferences.Heroes[key].upgrades, "unit-dwarven-steelclad") == false) then
-										table.insert(wyr.preferences.Heroes[key].upgrades, "unit-dwarven-steelclad")
-										SavePreferences()
-										if (GrandStrategy) then
-											if (wyr.preferences.Heroes[key].name == "Rugnur") then
-												SetGrandStrategyHeroUnitType("Rugnur", "unit-hero-rugnur-steelclad")
-											end
-										end
-									end
-									if (string.find(GetUnitVariable(uncount[unit1], "Ident"), "thane") ~= nil and GetArrayIncludes(wyr.preferences.Heroes[key].upgrades, "unit-dwarven-thane") == false) then
-										table.insert(wyr.preferences.Heroes[key].upgrades, "unit-dwarven-thane")
-										SavePreferences()
-										if (GrandStrategy) then
-											if (wyr.preferences.Heroes[key].name == "Modsognir") then
-												SetGrandStrategyHeroUnitType("Modsognir", "unit-hero-modsognir-thane")
-											elseif (wyr.preferences.Heroes[key].name == "Durin") then
-												SetGrandStrategyHeroUnitType("Durin", "unit-hero-durin-thane")
-											elseif (wyr.preferences.Heroes[key].name == "Rugnur") then
-												SetGrandStrategyHeroUnitType("Rugnur", "unit-hero-rugnur-thane")
-											elseif (wyr.preferences.Heroes[key].name == "Baglur") then
-												SetGrandStrategyHeroUnitType("Baglur", "unit-hero-baglur-thane")
-											end
-										end
-									end
-									if (string.find(GetUnitVariable(uncount[unit1], "Ident"), "yale-rider") ~= nil and GetArrayIncludes(wyr.preferences.Heroes[key].upgrades, "unit-dwarven-yale-rider") == false) then
-										table.insert(wyr.preferences.Heroes[key].upgrades, "unit-dwarven-yale-rider")
-										SavePreferences()
-									end
-									if (string.find(GetUnitVariable(uncount[unit1], "Ident"), "ritter") ~= nil and GetArrayIncludes(wyr.preferences.Heroes[key].upgrades, "unit-teuton-ritter") == false) then
-										table.insert(wyr.preferences.Heroes[key].upgrades, "unit-teuton-ritter")
-										SavePreferences()
-									end
-								end
-							end
-						end
-					end
-				end
-
 				-- make certain critters retaliate if people get too near
 				-- is not working (neutral player critters don't attack no matter what)
 --				if (GetUnitVariable(uncount[unit1], "Ident") == "unit-critter") then
@@ -1597,30 +1524,6 @@ function InitializeUnit(unit)
 	if (GetUnitVariable(unit, "Level") < GetUnitVariable(unit, "StartingLevel")) then
 		IncreaseUnitLevel(unit, (GetUnitVariable(unit, "StartingLevel") - GetUnitVariable(unit, "Level")), false)
 	end
-			
-	if (GetUnitTypeData(GetUnitVariable(unit, "Ident"), "Hero")) then
-		InitializeHero(unit)
-	end
-end
-
-function InitializeHero(unit)
-	if (not IsNetworkGame()) then
-		for key, value in pairs(wyr.preferences.Heroes) do
-			if (wyr.preferences.Heroes[key].name == GetUnitVariable(unit, "Name")) then
-				-- apply persistent hero levels
-				if (GetUnitVariable(unit, "Level") < wyr.preferences.Heroes[key].level) then
-					IncreaseUnitLevel(unit, (wyr.preferences.Heroes[key].level - GetUnitVariable(unit, "Level")), true)
-				end
-
-				-- load upgrades
-				for i=1,table.getn(wyr.preferences.Heroes[key].upgrades) do
-					if (string.find(wyr.preferences.Heroes[key].upgrades[i], "upgrade-") ~= nil and GetUnitVariable(unit, "IndividualUpgrade", wyr.preferences.Heroes[key].upgrades[i]) == false) then
-						AcquireAbility(unit, wyr.preferences.Heroes[key].upgrades[i])
-					end
-				end
-			end
-		end
-	end
 end
 
 function DeathExplosion(unit, pixel_x, pixel_y)
@@ -1746,18 +1649,6 @@ function IncreaseUnitLevel(unit, level_number, advancement)
 			SetUnitVariable(unit, "HitPoints", GetUnitVariable(unit, "HitPoints", "Max"))
 			level_number = level_number - 1
 		end
-
-		-- save the levels of heroes in a persistent manner
-		if (not IsNetworkGame()) then
-			for key, value in pairs(wyr.preferences.Heroes) do
-				if (wyr.preferences.Heroes[key].name == GetUnitVariable(unit, "Name") and GetUnitBoolFlag(unit, "Hero")) then
-					if (GetUnitVariable(unit, "Level") > wyr.preferences.Heroes[key].level) then
-						wyr.preferences.Heroes[key].level = GetUnitVariable(unit, "Level")
-						SavePreferences()
-					end
-				end
-			end
-		end
 	end
 end
 
@@ -1849,7 +1740,7 @@ function FindHero(hero, player)
 	end
 	
 	for unit1 = 1,table.getn(uncount) do 
-		if (GetUnitVariable(uncount[unit1], "Name") == hero) then
+		if (GetUnitVariable(uncount[unit1], "Character") == hero and GetUnitVariable(uncount[unit1], "CustomCharacter") == false) then
 			return uncount[unit1]
 		end
 	end
@@ -2193,6 +2084,10 @@ Load("scripts/grand_strategy/grand_strategy_provinces.lua")
 Load("scripts/grand_strategy/grand_strategy_events.lua")
 
 Load("scripts/0_ad_equivalencies.lua")
+
+if (CanAccessFile("wyr/heroes.lua")) then
+	Load("heroes.lua")
+end
 
 DebugPrint("... ready!\n")
 

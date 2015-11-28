@@ -1288,106 +1288,138 @@ function RunSinglePlayerCustomGameMenu()
 end
 
 function BuildProgramStartMenu()
-  SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
-  wyrmsun.playlist = { "music/battle_theme_a.ogg" }
+	SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
+	wyrmsun.playlist = { "music/battle_theme_a.ogg" }
 
-  if not (IsMusicPlaying()) then
-    PlayMusic("music/battle_theme_a.ogg")
-  end
+	if not (IsMusicPlaying()) then
+		PlayMusic("music/battle_theme_a.ogg")
+	end
 
-  local menu = WarMenu()
-  local offx = (Video.Width - 640) / 2
-  local offy = (Video.Height - 480) / 2
+	local menu = WarMenu()
+	local offx = (Video.Width - 640) / 2
+	local offy = (Video.Height - 480) / 2
 
---  menu:addLabel("v" .. wyrmsun.Version .. "  " .. wyrmsun.Homepage, offx + 320, (Video.Height - 90) + 18*2, Fonts["game"])
-  menu:addLabel(wyrmsun.Copyright, offx + 320, (Video.Height - 90) + 18*4, Fonts["small"])
+--	menu:addLabel("v" .. wyrmsun.Version .. "  " .. wyrmsun.Homepage, offx + 320, (Video.Height - 90) + 18*2, Fonts["game"])
+	menu:addLabel(wyrmsun.Copyright, offx + 320, (Video.Height - 90) + 18*4, Fonts["small"])
 
---  wyrmsun_logo_widget:setSize(6197 * 800 / Video.Width / 16, 2456 * 600 / Video.Height / 16)
-  menu:add(wyrmsun_logo_widget, Video.Width / 2 - (wyrmsun_logo_widget:getWidth() / 2), 0)
-  menu:addLabel("v" .. wyrmsun.Version, Video.Width / 2 + (wyrmsun_logo_widget:getWidth() * 7 / 16), wyrmsun_logo_widget:getHeight() * 3 / 4)
-  
+--	wyrmsun_logo_widget:setSize(6197 * 800 / Video.Width / 16, 2456 * 600 / Video.Height / 16)
+	menu:add(wyrmsun_logo_widget, Video.Width / 2 - (wyrmsun_logo_widget:getWidth() / 2), 0)
+	menu:addLabel("v" .. wyrmsun.Version, Video.Width / 2 + (wyrmsun_logo_widget:getWidth() * 7 / 16), wyrmsun_logo_widget:getHeight() * 3 / 4)
+
 	if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "The Mead of Poetry")) then
 		RemoveElementFromArray(wyr.preferences.QuestsCompleted, "The Mead of Poetry")
 		table.insert(wyr.preferences.QuestsCompleted, "The Mead of Wisdom")
 	end
 	
-  if (wyr.preferences.LastVersionPlayed ~= wyrmsun.Version) then
-  	-- changes to the player's persistent data to update it to the latest game version should be done here
-	
-	if (wyr.preferences.SavedGrandStrategyGames ~= nil) then -- grand strategy games are now saved in separate files
-		wyr.preferences.SavedGrandStrategyGames = nil
-	elseif (wyr.preferences.GrandStrategySaveGames ~= nil) then -- grand strategy games are now saved in separate files
-		wyr.preferences.GrandStrategySaveGames = nil
-	end
-	
-	if (wyr.preferences.ShowOrders ~= nil) then
-		if (wyr.preferences.ShowOrders == 2) then
-			wyr.preferences.ShowPathlines = true
-			Preference.ShowPathlines = wyr.preferences.ShowPathlines
+	if (wyr.preferences.Heroes ~= nil) then
+		for key, value in pairs(wyr.preferences.Heroes) do
+			local hero_type = GetCharacterData(wyr.preferences.Heroes[key].name, "Type")
+			local hero_abilities = {}
+			if (wyr.preferences.Heroes[key].upgrades ~= nil) then
+				for i=1,table.getn(wyr.preferences.Heroes[key].upgrades) do
+					if (string.find(wyr.preferences.Heroes[key].upgrades[i], "upgrade") ~= nil) then
+						table.insert(hero_abilities, wyr.preferences.Heroes[key].upgrades[i])
+					else
+						hero_type = wyr.preferences.Heroes[key].upgrades[i]
+					end
+				end
+			end
+			DefineCharacter(wyr.preferences.Heroes[key].name, {
+				Name = wyr.preferences.Heroes[key].name,
+				Level = wyr.preferences.Heroes[key].level,
+				Abilities = hero_abilities,
+				Type = hero_type
+			})
 		end
-		wyr.preferences.ShowOrders = nil
+	end
+		
+	if (wyr.preferences.LastVersionPlayed ~= wyrmsun.Version) then
+		-- changes to the player's persistent data to update it to the latest game version should be done here
+		
+		if (wyr.preferences.SavedGrandStrategyGames ~= nil) then -- grand strategy games are now saved in separate files
+			wyr.preferences.SavedGrandStrategyGames = nil
+		elseif (wyr.preferences.GrandStrategySaveGames ~= nil) then -- grand strategy games are now saved in separate files
+			wyr.preferences.GrandStrategySaveGames = nil
+		end
+		
+		if (wyr.preferences.ShowOrders ~= nil) then
+			if (wyr.preferences.ShowOrders == 2) then
+				wyr.preferences.ShowPathlines = true
+				Preference.ShowPathlines = wyr.preferences.ShowPathlines
+			end
+			wyr.preferences.ShowOrders = nil
+		end
+
+		if (wyr.preferences.Heroes ~= nil) then
+			for key, value in pairs(wyr.preferences.Heroes) do
+				DefineCharacter(wyr.preferences.Heroes[key].name, {
+					Name = wyr.preferences.Heroes[key].name,
+					Level = wyr.preferences.Heroes[key].level,
+					Abilities = wyr.preferences.Heroes[key].upgrades
+				})
+			end
+		end
+		
+		if (wyr.preferences.LastVersionPlayed ~= "0.0.0" and tonumber(tostring(string.gsub(wyr.preferences.LastVersionPlayed, "%.", ""))) < 16) then
+			wyr.preferences.Heroes.Rugnur.upgrades = nil
+			wyr.preferences.Heroes.Rugnur.upgrades = {}
+			wyr.preferences.Heroes.Baglur.upgrades = nil
+			wyr.preferences.Heroes.Baglur.upgrades = {}
+			wyr.preferences.Heroes.Thursagan.upgrades = nil
+			wyr.preferences.Heroes.Thursagan.upgrades = {}
+			wyr.preferences.Heroes.Durstorn.upgrades = nil
+			wyr.preferences.Heroes.Durstorn.upgrades = {}
+
+			wyr.preferences.TechnologyAcquired = nil
+			wyr.preferences.TechnologyAcquired = {}
+
+			local warning_menu = WarGameMenu(panel(2))
+			warning_menu:setSize(288, 256)
+			warning_menu:setPosition((Video.Width - warning_menu:getWidth()) / 2, (Video.Height - warning_menu:getHeight()) / 2)
+			warning_menu:addLabel("Warning", 144, 11)
+
+			local l = MultiLineLabel()
+			l:setFont(Fonts["game"])
+			l:setSize(270, 128)
+			l:setLineWidth(270)
+			warning_menu:add(l, 14, 70)
+			l:setCaption(_("Due to changes in the tech tree in the latest version of Wyrmsun, your choice of technologies has been reset. You may reallocate your tech points."))
+
+			warning_menu:addFullButton(_("~!Close"), "c", 32, 256 - 40,
+				function()
+					warning_menu:stop()
+				end)
+			warning_menu:run()
+		end
+		
+		wyr.preferences.LastVersionPlayed = wyrmsun.Version
+		SavePreferences()
 	end
 
-	if (wyr.preferences.LastVersionPlayed ~= "0.0.0" and tonumber(tostring(string.gsub(wyr.preferences.LastVersionPlayed, "%.", ""))) < 16) then
-		wyr.preferences.Heroes.Rugnur.upgrades = nil
-		wyr.preferences.Heroes.Rugnur.upgrades = {}
-		wyr.preferences.Heroes.Baglur.upgrades = nil
-		wyr.preferences.Heroes.Baglur.upgrades = {}
-		wyr.preferences.Heroes.Thursagan.upgrades = nil
-		wyr.preferences.Heroes.Thursagan.upgrades = {}
-		wyr.preferences.Heroes.Durstorn.upgrades = nil
-		wyr.preferences.Heroes.Durstorn.upgrades = {}
+	menu:addFullButton(_("~!Single Player Game"), "s", offx + 208, offy + 104 + 36*1,
+		function() RunSinglePlayerGameMenu(); menu:stop(1) end)
+	menu:addFullButton(_("~!Multiplayer Game"), "m", offx + 208, offy + 104 + 36*2,
+		function() RunMultiPlayerGameMenu(); menu:stop(1) end)
+	menu:addFullButton(_("~!Grand Strategy Game"), "g", offx + 208, offy + 104 + 36*3,
+		function() RunGrandStrategyGameSetupMenu(); menu:stop(1) end)
+--	menu:addFullButton(_("~!Replay Game"), "r", offx + 208, offy + 104 + 36*3, -- replays are broken at the moment
+--		function() RunReplayGameMenu(); menu:stop(1) end)
+--	menu:addFullButton(_("~!Achievements"), "a", offx + 208, offy + 104 + 36*3,
+--		function() RunAchievementsMenu(); menu:stop(1) end)
+	menu:addFullButton(_("~!Options"), "o", offx + 208, offy + 104 + 36*4,
+		function() RunOptionsMenu(); menu:stop(1) end)
+	menu:addFullButton(_("Map ~!Editor"), "e", offx + 208, offy + 104 + 36*5,
+	function() RunEditorMenu(); menu:stop(1) end)
+	menu:addFullButton(_("Mo~!ds"), "d", offx + 208, offy + 104 + 36*6,
+		function() RunModsMenu(0); menu:stop(1) end)
+	menu:addFullButton(_("En~!cyclopedia"), "c", offx + 208, offy + 104 + 36*7,
+		function() RunEncyclopediaMenu(); menu:stop(1) end)
+	menu:addFullButton(_("Cred~!its"), "i", offx + 208, offy + 104 + 36*8, RunShowCreditsMenu)
 
-		wyr.preferences.TechnologyAcquired = nil
-		wyr.preferences.TechnologyAcquired = {}
+	menu:addFullButton(_("E~!xit"), "x", offx + 208, offy + 104 + 36*9,
+		function() menu:stop() end)
 
-		local warning_menu = WarGameMenu(panel(2))
-		warning_menu:setSize(288, 256)
-		warning_menu:setPosition((Video.Width - warning_menu:getWidth()) / 2, (Video.Height - warning_menu:getHeight()) / 2)
-		warning_menu:addLabel("Warning", 144, 11)
-
-		local l = MultiLineLabel()
-		l:setFont(Fonts["game"])
-		l:setSize(270, 128)
-		l:setLineWidth(270)
-		warning_menu:add(l, 14, 70)
-		l:setCaption(_("Due to changes in the tech tree in the latest version of Wyrmsun, your choice of technologies has been reset. You may reallocate your tech points."))
-
-		warning_menu:addFullButton(_("~!Close"), "c", 32, 256 - 40,
-			function()
-				warning_menu:stop()
-			end)
-		warning_menu:run()
-	end
-	
-	wyr.preferences.LastVersionPlayed = wyrmsun.Version
-	SavePreferences()
-  end
-
-  menu:addFullButton(_("~!Single Player Game"), "s", offx + 208, offy + 104 + 36*1,
-    function() RunSinglePlayerGameMenu(); menu:stop(1) end)
-  menu:addFullButton(_("~!Multiplayer Game"), "m", offx + 208, offy + 104 + 36*2,
-    function() RunMultiPlayerGameMenu(); menu:stop(1) end)
-  menu:addFullButton(_("~!Grand Strategy Game"), "g", offx + 208, offy + 104 + 36*3,
-    function() RunGrandStrategyGameSetupMenu(); menu:stop(1) end)
---  menu:addFullButton(_("~!Replay Game"), "r", offx + 208, offy + 104 + 36*3, -- replays are broken at the moment
---    function() RunReplayGameMenu(); menu:stop(1) end)
---  menu:addFullButton(_("~!Achievements"), "a", offx + 208, offy + 104 + 36*3,
---    function() RunAchievementsMenu(); menu:stop(1) end)
-  menu:addFullButton(_("~!Options"), "o", offx + 208, offy + 104 + 36*4,
-    function() RunOptionsMenu(); menu:stop(1) end)
-  menu:addFullButton(_("Map ~!Editor"), "e", offx + 208, offy + 104 + 36*5,
-    function() RunEditorMenu(); menu:stop(1) end)
-  menu:addFullButton(_("Mo~!ds"), "d", offx + 208, offy + 104 + 36*6,
-    function() RunModsMenu(0); menu:stop(1) end)
-  menu:addFullButton(_("En~!cyclopedia"), "c", offx + 208, offy + 104 + 36*7,
-    function() RunEncyclopediaMenu(); menu:stop(1) end)
-  menu:addFullButton(_("Cred~!its"), "i", offx + 208, offy + 104 + 36*8, RunShowCreditsMenu)
-
-  menu:addFullButton(_("E~!xit"), "x", offx + 208, offy + 104 + 36*9,
-    function() menu:stop() end)
-
-  return menu:run()
+	return menu:run()
 end
 
 LoadGameFile = nil

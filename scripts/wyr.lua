@@ -48,21 +48,6 @@ end
 
 -- Convert unit type to the player's race
 function CreateUnit(unittype, player, pos)
-	if (not IsNetworkGame()) then
-		-- if Rugnur has a persistent level of 2 or higher, create him as his older version already
-		if (unittype == "unit-hero-modsognir" and GetArrayIncludes(wyr.preferences.Heroes.Modsognir.upgrades, "unit-dwarven-thane")) then
-			unittype = "unit-hero-modsognir-thane"
-		elseif (unittype == "unit-hero-durin" and GetArrayIncludes(wyr.preferences.Heroes.Durin.upgrades, "unit-dwarven-thane")) then
-			unittype = "unit-hero-durin-thane"
-		elseif ((unittype == "unit-hero-rugnur" or unittype == "unit-hero-rugnur-steelclad") and GetArrayIncludes(wyr.preferences.Heroes.Rugnur.upgrades, "unit-dwarven-thane")) then
-			unittype = "unit-hero-rugnur-thane"
-		elseif (unittype == "unit-hero-rugnur" and GetArrayIncludes(wyr.preferences.Heroes.Rugnur.upgrades, "unit-dwarven-steelclad")) then
-			unittype = "unit-hero-rugnur-steelclad"
-		elseif (unittype == "unit-hero-baglur" and GetArrayIncludes(wyr.preferences.Heroes.Baglur.upgrades, "unit-dwarven-thane")) then
-			unittype = "unit-hero-baglur-thane"
-		end
-	end
-
 	if (GameCycle ~= 0) then
 		return OldCreateUnit(unittype, player, pos)
 	end
@@ -274,9 +259,11 @@ function SetPlayerData(player, data, arg1, arg2)
 				for i, unitName in ipairs(Units) do
 					if (IsHero(unitName) and GetGrandStrategyHeroUnitType(GetUnitTypeData(unitName, "DefaultName")) == unitName) then -- create heroes which are in the province for the defender
 						if (arg1 == Attacker and GetProvinceHero(AttackedProvince.Name, GetUnitTypeData(unitName, "DefaultName")) == 3) then
-							OldCreateUnit(unitName, player, {Players[player].StartPos.x, Players[player].StartPos.y})
+							unit = OldCreateUnit(unitName, player, {Players[player].StartPos.x, Players[player].StartPos.y})
+							SetUnitVariable(unit, "Character", GetUnitTypeData(unitName, "DefaultName"))
 						elseif (arg1 == Defender and GetProvinceHero(AttackedProvince.Name, GetUnitTypeData(unitName, "DefaultName")) == 2) then
-							OldCreateUnit(unitName, player, {Players[player].StartPos.x, Players[player].StartPos.y})
+							unit = OldCreateUnit(unitName, player, {Players[player].StartPos.x, Players[player].StartPos.y})
+							SetUnitVariable(unit, "Character", GetUnitTypeData(unitName, "DefaultName"))
 						end
 					end
 				end

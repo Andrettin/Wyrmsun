@@ -164,22 +164,6 @@ function RunGrandStrategyGameSetupMenu()
 				end
 			end
 
-			-- load heroes' upgraded versions, if those have been acquired
-			if (GetArrayIncludes(wyr.preferences.Heroes.Modsognir.upgrades, "unit-dwarven-thane")) then
-				SetGrandStrategyHeroUnitType("Modsognir", "unit-hero-modsognir-thane")
-			end
-			if (GetArrayIncludes(wyr.preferences.Heroes.Durin.upgrades, "unit-dwarven-thane")) then
-				SetGrandStrategyHeroUnitType("Durin", "unit-hero-durin-thane")
-			end
-			if (GetArrayIncludes(wyr.preferences.Heroes.Rugnur.upgrades, "unit-dwarven-thane")) then
-				SetGrandStrategyHeroUnitType("Rugnur", "unit-hero-rugnur-thane")
-			elseif (GetArrayIncludes(wyr.preferences.Heroes.Rugnur.upgrades, "unit-dwarven-steelclad")) then
-				SetGrandStrategyHeroUnitType("Rugnur", "unit-hero-rugnur-steelclad")
-			end
-			if (GetArrayIncludes(wyr.preferences.Heroes.Baglur.upgrades, "unit-dwarven-thane")) then
-				SetGrandStrategyHeroUnitType("Baglur", "unit-hero-baglur-thane")
-			end
-				
 			SelectedUnits = {}
 			for i, unitName in ipairs(Units) do
 				if (IsMilitaryUnit(unitName)) then

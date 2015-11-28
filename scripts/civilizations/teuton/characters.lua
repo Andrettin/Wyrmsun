@@ -41,7 +41,8 @@ DefineCharacter("Marbod", {
 	Civilization = "teuton",
 	ProvinceOfOrigin = "Brandenburg",
 	Year = -9, -- Marbod, king of the Suebic tribe of the Marcomanni, conquers Bohemia in 9 BC
-	DeathYear = 19 + 15 -- Marbod deposed in 19 AD; give +15 years of life
+	DeathYear = 19 + 15, -- Marbod deposed in 19 AD; give +15 years of life
+	Persistent = true
 })
 
 -- personnages from the Volsungasaga, presumed Teuton since Sigurd was a Frank

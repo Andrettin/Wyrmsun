@@ -44,7 +44,9 @@ if (LoadedGame == false) then
 	
 	if not (GrandStrategy) then
 		unit = CreateUnit("unit-hero-modsognir", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		SetUnitVariable(unit, "Character", "Modsognir")
 		unit = CreateUnit("unit-hero-durin", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		SetUnitVariable(unit, "Character", "Durin")
 		unit = CreateUnit("unit-dwarven-miner", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 		unit = CreateUnit("unit-dwarven-miner", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 		unit = CreateUnit("unit-dwarven-miner", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
@@ -56,9 +58,11 @@ if (LoadedGame == false) then
 		
 		if (FactionHasHero("dwarf", "Modsogning Clan", "Modsognir")) then
 			unit = CreateUnit(GetGrandStrategyHeroUnitType("Modsognir"), 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+			SetUnitVariable(unit, "Character", "Modsognir")
 		end
 		if (FactionHasHero("dwarf", "Modsogning Clan", "Durin")) then
 			unit = CreateUnit(GetGrandStrategyHeroUnitType("Durin"), 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+			SetUnitVariable(unit, "Character", "Durin")
 		end
 		
 		CreateProvinceUnits("Aurvang", 1, 1)
@@ -211,7 +215,7 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if (PlayerHasObjective(GetThisPlayer(), "- Modsognir must survive") and GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-hero-modsognir") < 1 and GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-hero-modsognir-thane") < 1) then
+		if (PlayerHasObjective(GetThisPlayer(), "- Modsognir must survive") and FindHero("Modsognir", GetThisPlayer()) == nil) then
 			player = GetThisPlayer()
 			return true
 		end
@@ -229,7 +233,7 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if (PlayerHasObjective(GetThisPlayer(), "- Durin must survive") and GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-hero-durin") < 1 and GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-hero-durin-thane") < 1) then
+		if (PlayerHasObjective(GetThisPlayer(), "- Durin must survive") and FindHero("Durin", GetThisPlayer()) == nil) then
 			player = GetThisPlayer()
 			return true
 		end

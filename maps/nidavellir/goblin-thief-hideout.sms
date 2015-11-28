@@ -22,8 +22,9 @@ if (GrandStrategyEventMap) then
 	-- create heroes, if any
 	for i, unitName in ipairs(Units) do
 		if (IsHero(unitName)) then
-			if (GetProvinceHero(EventProvince.Name, GetUnitTypeData(unitName, "DefaultName"), "") == 2 and GetHeroUnitType(GetUnitTypeData(unitName, "DefaultName"), "") == unitName) then
+			if (GetProvinceHero(EventProvince.Name, GetUnitTypeData(unitName, "DefaultName")) == 2 and GetGrandStrategyHeroUnitType(GetUnitTypeData(unitName, "DefaultName")) == unitName) then
 				unit = OldCreateUnit(unitName, 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+				SetUnitVariable(unit, "Character", GetUnitTypeData(unitName, "DefaultName"))
 			end
 		end
 	end

@@ -33,7 +33,8 @@ DefineCharacter("Modsognir", { -- one of the earliest dwarven leaders; in Norse 
 	Civilization = "dwarf",
 	ProvinceOfOrigin = "Svarinshaug",
 	Year = -3000,
-	DeathYear = -3000 + 30 -- estimated
+	DeathYear = -3000 + 30, -- estimated
+	Persistent = true
 })
 
 DefineCharacter("Durin", { -- deputy of Modsognir
@@ -42,7 +43,8 @@ DefineCharacter("Durin", { -- deputy of Modsognir
 	Civilization = "dwarf",
 	ProvinceOfOrigin = "Svarinshaug",
 	Year = -3000,
-	DeathYear = -3000 + 30 -- estimated
+	DeathYear = -3000 + 30, -- estimated
+	Persistent = true
 })
 
 DefineCharacter("Thjodrorir", { -- dwarven sage of Modsognir's clan; in Norse mythology, a dwarf who knew a charm of power to the gods
@@ -70,7 +72,8 @@ DefineCharacter("Thursagan", {
 	Civilization = "dwarf",
 	ProvinceOfOrigin = "Caverns of Chaincolt",
 	Year = -1,
-	DeathYear = 40 + 10 -- died in 40 AD of a violent death, but was already rather old; +10 years
+	DeathYear = 40 + 10, -- died in 40 AD of a violent death, but was already rather old; +10 years
+	Persistent = true
 })
 
 DefineCharacter("Baglur", {
@@ -79,7 +82,8 @@ DefineCharacter("Baglur", {
 	Civilization = "dwarf",
 	ProvinceOfOrigin = "Caverns of Chaincolt",
 	Year = -1,
-	DeathYear = 40 + 10 -- died in 40 AD of a violent death, but was already rather old; +10 years
+	DeathYear = 40 + 10, -- died in 40 AD of a violent death, but was already rather old; +10 years
+	Persistent = true
 })
 
 DefineCharacter("Durstorn", {
@@ -88,7 +92,8 @@ DefineCharacter("Durstorn", {
 	Civilization = "dwarf",
 	ProvinceOfOrigin = "Caverns of Chaincolt",
 	Year = -1,
-	DeathYear = 35 + 15 -- died in 35 AD of a violent death, but was already somewhat old; +15 years
+	DeathYear = 35 + 15, -- died in 35 AD of a violent death, but was already somewhat old; +15 years
+	Persistent = true
 })
 
 DefineCharacter("Glonoin", {
@@ -107,7 +112,8 @@ DefineCharacter("Rugnur", {
 	Civilization = "dwarf",
 	ProvinceOfOrigin = "Caverns of Chaincolt",
 	Year = 25,
-	DeathYear = 40 + 30 -- died in 40 AD of a violent death, and wasn't old; +30 years
+	DeathYear = 40 + 30, -- died in 40 AD of a violent death, and wasn't old; +30 years
+	Persistent = true
 })
 
 DefineCharacter("Oin", {

@@ -131,17 +131,21 @@ unit = CreateUnit("unit-gold-rock", 15, {15, 53})
 if (GrandStrategy == false) then
 	if (GetPlayerData(0, "Name") ~= "Shorbear Clan" and GetPlayerData(0, "Name") ~= "Shinsplitter Clan" and (GetThisPlayer() ~= 0 or (PlayerFaction ~= "Shorbear Clan" and PlayerFaction ~= "Shinsplitter Clan"))) then
 		unit = CreateUnit("unit-hero-rugnur", 0, {8, 60})
+		SetUnitVariable(unit, "Character", "Rugnur")
 		unit = CreateUnit("unit-hero-baglur", 0, {8, 60})
+		SetUnitVariable(unit, "Character", "Baglur")
 	end
 elseif (GrandStrategyEventMap) then
 	-- Rugnur
 	if (GetProvinceHero("Caverns of Chaincolt", "Rugnur") == 2) then
-		unit = CreateUnit(GetHeroUnitType("Rugnur"), 0, {8, 60})
+		unit = CreateUnit(GetGrandStrategyHeroUnitType("Rugnur"), 0, {8, 60})
+		SetUnitVariable(unit, "Character", "Rugnur")
 	end
 
 	-- Baglur
 	if (GetProvinceHero("Caverns of Chaincolt", "Baglur") == 2) then
-		unit = CreateUnit(GetHeroUnitType("Baglur"), 0, {8, 60})
+		unit = CreateUnit(GetGrandStrategyHeroUnitType("Baglur"), 0, {8, 60})
+		SetUnitVariable(unit, "Character", "Baglur")
 	end
 end
 

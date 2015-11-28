@@ -384,7 +384,7 @@ for i = 1,table.getn(traits) do
 		u.Costs[j - 1] = 0
 	end
 	u.TechnologyPointCost = 0
-	u.Ability = true
+	u.Ability = false
 	DefineAllow(traits[i][1], "AAAAAAAAAAAAAAAA")
 end
 
@@ -477,7 +477,7 @@ for i = 1,table.getn(misc_individual_upgrades) do
 		u.Costs[j - 1] = 0
 	end
 	u.TechnologyPointCost = 0
-	u.Ability = true
+	u.Ability = false
 	DefineAllow(misc_individual_upgrades[i][1], "AAAAAAAAAAAAAAAA")
 end
 

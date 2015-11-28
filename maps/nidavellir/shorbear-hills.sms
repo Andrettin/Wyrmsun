@@ -172,9 +172,13 @@ if (GrandStrategy == false) then
 
 	if (GetPlayerData(0, "Name") ~= "Shorbear Clan" and GetPlayerData(0, "Name") ~= "Shinsplitter Clan" and (GetThisPlayer() ~= 0 or (PlayerFaction ~= "Shorbear Clan" and PlayerFaction ~= "Shinsplitter Clan"))) then
 		unit = CreateUnit("unit-hero-rugnur", 0, {6, 5})
+		SetUnitVariable(unit, "Character", "Rugnur")
 		unit = CreateUnit("unit-hero-baglur", 0, {6, 5})
+		SetUnitVariable(unit, "Character", "Baglur")
 		unit = CreateUnit("unit-hero-thursagan", 0, {6, 5})
+		SetUnitVariable(unit, "Character", "Thursagan")
 		unit = CreateUnit("unit-hero-durstorn", 0, {6, 5})
+		SetUnitVariable(unit, "Character", "Durstorn")
 
 		unit = CreateUnit("unit-dwarven-scout", 0, {6, 5}) -- Noiraran
 		IncreaseUnitLevel(unit, 1, true)
@@ -251,22 +255,26 @@ elseif (GrandStrategyEventMap) then
 
 	-- Rugnur
 	if (GetProvinceHero("Caverns of Chaincolt", "Rugnur") == 2) then
-		unit = CreateUnit(GetHeroUnitType("Rugnur"), 0, {6, 5})
+		unit = CreateUnit(GetGrandStrategyHeroUnitType("Rugnur"), 0, {6, 5})
+		SetUnitVariable(unit, "Character", "Rugnur")
 	end
 
 	-- Baglur
 	if (GetProvinceHero("Caverns of Chaincolt", "Baglur") == 2) then
-		unit = CreateUnit(GetHeroUnitType("Baglur"), 0, {6, 5})
+		unit = CreateUnit(GetGrandStrategyHeroUnitType("Baglur"), 0, {6, 5})
+		SetUnitVariable(unit, "Character", "Baglur")
 	end
 
 	-- Thursagan
 	if (GetProvinceHero("Caverns of Chaincolt", "Thursagan") == 2) then
-		unit = CreateUnit(GetHeroUnitType("Thursagan"), 0, {6, 5})
+		unit = CreateUnit(GetGrandStrategyHeroUnitType("Thursagan"), 0, {6, 5})
+		SetUnitVariable(unit, "Character", "Thursagan")
 	end
 
 	-- Durstorn
 	if (GetProvinceHero("Caverns of Chaincolt", "Durstorn") == 2) then
-		unit = CreateUnit(GetHeroUnitType("Durstorn"), 0, {6, 5})
+		unit = CreateUnit(GetGrandStrategyHeroUnitType("Durstorn"), 0, {6, 5})
+		SetUnitVariable(unit, "Character", "Durstorn")
 	end
 	
 	-- Gnomish Envoy
