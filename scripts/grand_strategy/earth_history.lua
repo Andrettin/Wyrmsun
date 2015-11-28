@@ -2272,6 +2272,10 @@ if (GrandStrategyYear >= 970) then
 	GrandStrategyEvents.ForannanMissionaryToTheFrontierOfBelgium = nil
 end
 
+if (GrandStrategyYear >= 981) then
+	-- Greenland discovered by the Icelanders c. 981 AD; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 141.
+end
+
 if (GrandStrategyYear >= 984) then
 	-- Bishop Dietrich of Metz died in 984 AD; Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 321.
 end
@@ -2336,6 +2340,10 @@ if (GrandStrategyYear >= 1104) then
 	GrandStrategyEvents.TheEruptionOfHekla = nil
 end
 
+if (GrandStrategyYear >= 1124) then
+	-- Regular succession of bishops in Greenland begins in 1124 AD; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 141.
+end
+
 if (GrandStrategyYear >= 1129) then
 	SetFactionRuler("norse", "Orkney", "Kala") -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 125.
 end
@@ -2357,9 +2365,27 @@ if (GrandStrategyYear >= 1208) then -- estimated date
 	GrandStrategyEvents.SnorriSturlsonSage = nil
 end
 
+if (GrandStrategyYear >= 1231) then
+	SetFactionRuler("norse", "Norway", "Hakon") -- his son was King of Norway, so presumably he was too; date estimated; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 142.
+end
+
 if (GrandStrategyYear >= 1241) then
 	GrandStrategyEvents.Heimskringla = nil -- should be moved to actual date of composition/publication
 	GrandStrategyEvents.SnorrisMurder = nil -- Snorri murdered by his son-in-law, Gizurr Thórvaldssoon; Source: Snorri Sturlson, "The Prose Edda", 1916, p. XI.
+end
+
+if (GrandStrategyYear >= 1261) then
+	-- Norse settlements in Greenland annexed to Norway in 1261 AD by King Hakon Hakonson; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 142.
+--	SetProvinceOwner("Greenland", "norse", "Norway") 
+	SetFactionRuler("norse", "Norway", "Hakon Hakonson")
+end
+
+if (GrandStrategyYear >= 1349) then
+	-- black death appeared in Europe in 1349 AD; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 145.
+end
+
+if (GrandStrategyYear >= 1389) then
+	-- Regular succession of bishops in Greenland ends in 1389 AD; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 141.
 end
 
 if (GrandStrategyYear >= 1401) then

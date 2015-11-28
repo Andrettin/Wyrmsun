@@ -183,6 +183,16 @@ DefineCharacter("Ethelred", { -- Source: Snorri Sturlson, "Heimskringla", 1844, 
 	DeathYear = 1002 + 30 -- estimated
 })
 
+DefineCharacter("Adalbert", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 141.
+	Name = "Adalbert", -- archbishop of Bremen; was requested by Norse people (including from Greenland) to send clergymen to them, which he did
+	Gender = "male",
+	Type = "unit-teuton-swordsman", -- should be priest
+	Civilization = "teuton", -- presumably
+	ProvinceOfOrigin = "Bremen", -- presumably
+	Year = 1075 - 30, -- estimated
+	DeathYear = 1075 -- died
+})
+
 DefineCharacter("Nicolas Breakspear", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 126.
 	Name = "Nicolas", -- son of a peasant employed in the Benedictine monastery of Saint Albans in Hertfordshire; was educated by the monks there; later became a cardinal and was sent on a mission to Norway to settle the Church there; was elected Pope in 1154 AD under the title of Hadrian IV
 	ExtraName = "Breakspear", -- I assume this isn't his family name, but a nickname or something of the sort?

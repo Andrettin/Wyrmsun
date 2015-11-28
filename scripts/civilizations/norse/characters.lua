@@ -890,3 +890,96 @@ DefineCharacter("Kala", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol.
 	DeathYear = 1129 + 30, -- estimated
 	Father = "Koll"
 })
+
+DefineCharacter("Arnold", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 142.
+	Name = "Arnold", -- Bishop of Greenland
+	Gender = "male",
+	Type = "unit-teuton-swordsman", -- should be priest
+	Civilization = "norse", -- presumably
+	ProvinceOfOrigin = "Scania", -- presumably, since he was ordained there
+	Year = 1121, -- ordained Bishop of Greenland by the Archbishop of Lund (in Scania)
+	DeathYear = 1121 + 30 -- estimated
+})
+
+DefineCharacter("Hakon", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 142.
+	Name = "Hakon", -- his son was King of Norway, so presumably he was too
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Hordaland", -- only province implemented that is part of Norway; but Akershus/Oslo would be a better fit: since we only know he came from Norway, it makes sense to set the capital as his province of origin
+	Year = 1261 - 30, -- estimated
+	DeathYear = 1261 -- estimated
+})
+
+DefineCharacter("Hakon Hakonson", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 142.
+	Name = "Hakon", -- King of Norway
+	ExtraName = "Hakonson", -- to differentiate his full name from his father's
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Hordaland", -- only province implemented that is part of Norway; but Akershus/Oslo would be a better fit: since we only know he came from Norway, it makes sense to set the capital as his province of origin
+	Year = 1261, -- annexed the Norse settlements in Greenland to Norway in 1261 AD
+	DeathYear = 1261 + 30, -- estimated
+	Father = "Hakon"
+})
+
+DefineCharacter("Alf", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 142.
+	Name = "Alf", -- also known as Alfus; officiated in Greenland; presumably was Bishop of Greenland
+	Gender = "male",
+	Type = "unit-teuton-swordsman", -- should be priest
+	Civilization = "norse", -- presumably
+	ProvinceOfOrigin = "Greenland", -- possibly he was from elsewhere, but we have no information about that
+	Year = 1378 - 30, -- estimated
+	DeathYear = 1378 -- died in Greenland
+})
+
+DefineCharacter("Margaret", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 146-147.
+	Name = "Margaret", -- Queen of Denmark, Sweden and Norway
+	Gender = "female",
+	Type = "unit-teuton-archer",
+	Civilization = "norse",
+--	ProvinceOfOrigin = "?",
+	Year = 1387, -- the three northern crowns devolved to her in 1387 AD
+	DeathYear = 1387 + 30 -- estimated
+})
+
+DefineCharacter("Henry", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 142.
+	Name = "Henry", -- appointed Bishop of Greenland, but never arrived there
+	Gender = "male",
+	Type = "unit-teuton-swordsman", -- should be priest
+	Civilization = "norse", -- presumably
+--	ProvinceOfOrigin = "?",
+	Year = 1389, -- appointed Bishop of Greenland
+	DeathYear = 1389 + 30 -- estimated
+})
+
+DefineCharacter("Askil", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 142.
+	Name = "Askil", -- appointed Bishop of Greenland to succeed Henry in case he was dead; never reached Greenland
+	Gender = "male",
+	Type = "unit-teuton-swordsman", -- should be priest
+	Civilization = "norse", -- presumably
+--	ProvinceOfOrigin = "?",
+	Year = 1406, -- appointed Bishop of Greenland to succeed Henry in case he was dead
+	DeathYear = 1406 + 30 -- estimated
+})
+
+DefineCharacter("Andreas", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 142.
+	Name = "Andreas",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse", -- presumably
+	ProvinceOfOrigin = "Greenland", -- accurate? his son was Bishop of Greenland
+	Year = 1409 - 30, -- estimated
+	DeathYear = 1409 -- estimated
+})
+
+DefineCharacter("Endrede", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 142.
+	Name = "Endrede", -- Bishop of Greenland
+	Gender = "male",
+	Type = "unit-teuton-swordsman", -- should be priest
+	Civilization = "norse", -- presumably
+	ProvinceOfOrigin = "Greenland", -- accurate?
+	Year = 1409, -- executed a marriage settlement at Garda (the episcopal seat of Greenland) in 1409
+	DeathYear = 1409 + 30, -- estimated
+	Father = "Andreas"
+})
