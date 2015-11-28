@@ -37,7 +37,8 @@ DefineCharacter("Ariovistus", {
 
 DefineCharacter("Marbod", {
 	Name = "Marbod",
-	Type = "unit-hero-marbod",
+	Type = "unit-suebi-swordsman",
+	Level = 2,
 	Civilization = "teuton",
 	ProvinceOfOrigin = "Brandenburg",
 	Year = -9, -- Marbod, king of the Suebic tribe of the Marcomanni, conquers Bohemia in 9 BC

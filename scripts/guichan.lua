@@ -1325,7 +1325,6 @@ function BuildProgramStartMenu()
 				end
 			end
 			DefineCharacter(wyr.preferences.Heroes[key].name, {
-				Name = wyr.preferences.Heroes[key].name,
 				Level = wyr.preferences.Heroes[key].level,
 				Abilities = hero_abilities,
 				Type = hero_type

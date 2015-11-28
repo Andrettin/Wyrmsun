@@ -1968,56 +1968,6 @@ local defaultPreferences = {
 	TipsShown = {},
 	LastVersionPlayed = "0.0.0",
 	EnabledMods = {},
-	Heroes = {
-		Marbod = {
-			name = "Marbod",
-			level = 2,
-			upgrades = {},
-			items = {}
-		},
-		Modsognir = {
-			name = "Modsognir",
-			level = 2,
-			upgrades = { "unit-dwarven-steelclad" },
-			items = {}
-		},
-		Durin = {
-			name = "Durin",
-			level = 2,
-			upgrades = { "unit-dwarven-steelclad" },
-			items = {}
-		},
-		Rugnur = {
-			name = "Rugnur",
-			level = 1,
-			upgrades = {},
-			items = {}
-		},
-		Baglur = {
-			name = "Baglur",
-			level = 2,
-			upgrades = { "unit-dwarven-steelclad" },
-			items = {}
-		},
-		Thursagan = {
-			name = "Thursagan",
-			level = 3,
-			upgrades = { "unit-dwarven-steelclad", "unit-dwarven-thane" },
-			items = {}
-		},
-		Durstorn = {
-			name = "Durstorn",
-			level = 3,
-			upgrades = { "unit-dwarven-steelclad", "unit-dwarven-thane" },
-			items = {}
-		},
-		Greebo = {
-			name = "Greebo",
-			level = 2,
-			upgrades = {},
-			items = {}
-		}
-	},
 	GrandStrategySaveGames = {}
 }
 

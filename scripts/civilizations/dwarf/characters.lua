@@ -29,7 +29,7 @@
 
 DefineCharacter("Modsognir", { -- one of the earliest dwarven leaders; in Norse mythology Modsognir was the mightiest and first of dwarves
 	Name = "Modsognir",
-	Type = "unit-hero-modsognir",
+	Type = "unit-dwarven-steelclad",
 	Civilization = "dwarf",
 	ProvinceOfOrigin = "Svarinshaug",
 	Year = -3000,
@@ -39,7 +39,7 @@ DefineCharacter("Modsognir", { -- one of the earliest dwarven leaders; in Norse 
 
 DefineCharacter("Durin", { -- deputy of Modsognir
 	Name = "Durin",
-	Type = "unit-hero-durin",
+	Type = "unit-dwarven-steelclad",
 	Civilization = "dwarf",
 	ProvinceOfOrigin = "Svarinshaug",
 	Year = -3000,
@@ -68,7 +68,7 @@ DefineCharacter("Ivaldi", { -- his sons were skilled craftsmen; Source: Kevin Cr
 
 DefineCharacter("Thursagan", {
 	Name = "Thursagan",
-	Type = "unit-hero-thursagan",
+	Type = "unit-dwarven-thane",
 	Civilization = "dwarf",
 	ProvinceOfOrigin = "Caverns of Chaincolt",
 	Year = -1,
@@ -78,7 +78,7 @@ DefineCharacter("Thursagan", {
 
 DefineCharacter("Baglur", {
 	Name = "Baglur",
-	Type = "unit-hero-baglur",
+	Type = "unit-dwarven-steelclad",
 	Civilization = "dwarf",
 	ProvinceOfOrigin = "Caverns of Chaincolt",
 	Year = -1,
@@ -88,7 +88,7 @@ DefineCharacter("Baglur", {
 
 DefineCharacter("Durstorn", {
 	Name = "Durstorn",
-	Type = "unit-hero-durstorn",
+	Type = "unit-dwarven-thane",
 	Civilization = "dwarf",
 	ProvinceOfOrigin = "Caverns of Chaincolt",
 	Year = -1,
@@ -108,7 +108,7 @@ DefineCharacter("Glonoin", {
 
 DefineCharacter("Rugnur", {
 	Name = "Rugnur",
-	Type = "unit-hero-rugnur",
+	Type = "unit-dwarven-axefighter",
 	Civilization = "dwarf",
 	ProvinceOfOrigin = "Caverns of Chaincolt",
 	Year = 25,
