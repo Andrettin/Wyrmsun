@@ -243,8 +243,6 @@ SetAllPlayersTotalUnitLimit(400)
 -------------------------------------------------------------------------------
 
 DefineVariables(
---	"CharacterName", {Max = 255, Value = 0, Increase = 0, Enable = true},
-	"Level", {Max = 255, Value = 1, Increase = 0, Enable = true},
 	"XpRequired", {Enable = true},
 	"LevelUp", {Enable = true},
 	"Variation", {Enable = true},
@@ -253,8 +251,7 @@ DefineVariables(
 	"StartingLevel", {Max = 255, Value = 1, Increase = 0, Enable = true},
 	"LifeStage", {Max = 99999, Value = 0, Increase = 0, Enable = true},
 	"LastCycle", {Max = 99999, Value = 0, Increase = 0, Enable = true},
-	"CustomAIState", {Max = 99999, Value = 0, Increase = 0, Enable = true},
-	"ForTheMotherland", {Max = 1, Value = 0, Increase = 0, Enable = true} -- 0 = not a FtM unit creator, 1 = is a FtM unit creator
+	"CustomAIState", {Max = 99999, Value = 0, Increase = 0, Enable = true}
 )
 
 -------------------------------------------------------------------------------

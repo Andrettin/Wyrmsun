@@ -29,7 +29,6 @@
 
 PlayerFaction = ""
 GrandStrategy = false
-ForTheMotherland = false
 
 
 SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
@@ -947,7 +946,6 @@ function RunSinglePlayerCustomGameMenu()
   local difficulty = nil
   
   GrandStrategy = false
-  ForTheMotherland = false
   RunningScenario = false
   
   local maps = {}
@@ -1039,13 +1037,7 @@ function RunSinglePlayerCustomGameMenu()
       GameSettings.Opponents = opponents:getSelected()
       GameSettings.NumUnits = numunits:getSelected()
 	  GameSettings.Difficulty = difficulty:getSelected() + 1
-      if (game_type_list[gametype:getSelected() + 1] == "For the Motherland") then
-	      ForTheMotherland = true
-	      GameSettings.GameType = -1
-      else
-	      ForTheMotherland = false
-	      GameSettings.GameType = gametype:getSelected() - 1
-      end
+      GameSettings.GameType = gametype:getSelected() - 1
 	  if (tech_level:getSelected() > 0) then
 		for i=1,mapinfo.nplayers do
 			TechLevel[i] = tech_level_list[tech_level:getSelected() + 1]
@@ -1186,7 +1178,6 @@ function RunSinglePlayerCustomGameMenu()
 		end
 	end
 
-	MapForTheMotherland = false
 	GetMapInfo(mapname)
 	MapChanged()
   end
@@ -1282,9 +1273,6 @@ function RunSinglePlayerCustomGameMenu()
 
 	game_type_list = nil
 	game_type_list = {_("Use Map Settings"), _("Melee"), _("Free for All"), _("Top vs Bottom"), _("Left vs Right"), _("Man vs Machine")}
-	if (MapForTheMotherland) then
-		table.insert(game_type_list, _("For the Motherland"))
-	end
 	gametype:setList(game_type_list)
 	gametype:setSize(152, 20)
 	gametype:setSelected(0)
