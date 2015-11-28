@@ -52,11 +52,11 @@ if (LoadedGame == false) then
 
 	if (GrandStrategy == false) then
 		SetPlayerData(0, "Allow", "upgrade-dwarven-runewriting", "F")
-		unit = CreateUnit("unit-hero-rugnur", 0, {19, 47})
+		unit = CreateUnit("unit-dwarven-axefighter", 0, {19, 47})
 		SetUnitVariable(unit, "Character", "Rugnur")
-		unit = CreateUnit("unit-hero-baglur", 0, {19, 47})
+		unit = CreateUnit("unit-dwarven-steelclad", 0, {19, 47})
 		SetUnitVariable(unit, "Character", "Baglur")
-		unit = CreateUnit("unit-hero-thursagan", 0, {19, 47})
+		unit = CreateUnit("unit-dwarven-thane", 0, {19, 47})
 		SetUnitVariable(unit, "Character", "Thursagan")
 	elseif (GrandStrategyEventMap) then
 		-- Rugnur
@@ -188,7 +188,7 @@ AddTrigger(
 		end
 		if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Searching for the Runecrafter") and PlayerHasObjective(GetThisPlayer(), "- Collect 10000 gold and 20000 coal") == false and GetNumUnitsAt(-1, "unit-gold-deposit", {0, 0}, {256, 256}) >= 1 and GetNumUnitsAt(-1, "unit-coal-mine", {0, 0}, {256, 256}) >= 2) then
 			for i=0,14 do
-				if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Shinsplitter Clan" or GetPlayerData(i, "Name") == "Knalga") and GetPlayerData(i, "Name") ~= "Shinsplitter Clan" and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-thane")) >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-hero-baglur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-baglur-thane") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-hero-thursagan") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1) then
+				if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Shinsplitter Clan" or GetPlayerData(i, "Name") == "Knalga") and GetPlayerData(i, "Name") ~= "Shinsplitter Clan" and FindHero("Rugnur", i) ~= nil and FindHero("Baglur", i) ~= nil and FindHero("Thursagan", i) ~= nil and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1) then
 					player = i
 					return true
 				end

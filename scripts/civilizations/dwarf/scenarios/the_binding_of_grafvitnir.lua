@@ -35,9 +35,9 @@ if (LoadedGame == false) then
 	SetPlayerData(1, "Resources", "stone", 1000)
 	
 	if not (GrandStrategy) then
-		unit = CreateUnit("unit-hero-modsognir", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		unit = CreateUnit("unit-dwarven-steelclad", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 		SetUnitVariable(unit, "Character", "Modsognir")
-		unit = CreateUnit("unit-hero-durin", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		unit = CreateUnit("unit-dwarven-steelclad", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 		SetUnitVariable(unit, "Character", "Durin")
 		unit = CreateUnit("unit-dwarven-steelclad", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 		unit = CreateUnit("unit-dwarven-steelclad", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
@@ -246,15 +246,21 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if (PlayerHasObjective(GetThisPlayer(), "- Get Modsognir close to Grafvitnir") and (IfNearUnit(GetThisPlayer(), ">=", 1, "unit-hero-modsognir", "unit-wyrm") or IfNearUnit(GetThisPlayer(), ">=", 1, "unit-hero-modsognir-thane", "unit-wyrm"))) then
+		if (PlayerHasObjective(GetThisPlayer(), "- Get Modsognir close to Grafvitnir")) then
 			local uncount = 0
 			uncount = GetUnits(GetFactionPlayer("Grafvitnir"))
 			for unit1 = 1,table.getn(uncount) do 
 				if (GetUnitVariable(uncount[unit1], "Ident") == "unit-wyrm") then
 					local unit_quantity = GetNumUnitsAt(GetFactionPlayer("Grafvitnir"), "unit-kobold-footpad", {GetUnitVariable(uncount[unit1],"PosX") - 6, GetUnitVariable(uncount[unit1],"PosY") - 6}, {GetUnitVariable(uncount[unit1],"PosX") + 1 + 6, GetUnitVariable(uncount[unit1],"PosY") + 1 + 6})
 					if (unit_quantity == 0) then
-						player = GetThisPlayer()
-						return true
+						local nearby_uncount = 0
+						nearby_uncount = GetUnitsAroundUnit(uncount[unit1], 1, true)
+						for unit2 = 1,table.getn(nearby_uncount) do 
+							if (GetUnitVariable(nearby_uncount[unit2], "Character") == "Modsognir") then
+								player = GetThisPlayer()
+								return true
+							end
+						end
 					end
 				end
 			end

@@ -132,7 +132,7 @@ AddTrigger(
 		end
 		if (GetFactionExists("Thursagan") and PlayerHasObjective(GetThisPlayer(), "- Find Thursagan and bring him to your Mead Hall") == false) then
 			for i=0,14 do
-				if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Shinsplitter Clan" or GetPlayerData(i, "Name") == "Knalga") and GetPlayerData(i, "Name") ~= "Shinsplitter Clan" and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-thane")) >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-hero-baglur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-baglur-thane") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1) then
+				if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Shinsplitter Clan" or GetPlayerData(i, "Name") == "Knalga") and GetPlayerData(i, "Name") ~= "Shinsplitter Clan" and FindHero("Rugnur", i) ~= nil and FindHero("Baglur", i) ~= nil and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1) then
 					player = i
 					return true
 				end
@@ -437,7 +437,7 @@ AddTrigger(
 		return false
 	end,
 	function()
-		unit = CreateUnit("unit-hero-thursagan", player, {Players[GetFactionPlayer("Thursagan")].StartPos.x, Players[GetFactionPlayer("Thursagan")].StartPos.y})
+		unit = CreateUnit("unit-dwarven-thane", player, {Players[GetFactionPlayer("Thursagan")].StartPos.x, Players[GetFactionPlayer("Thursagan")].StartPos.y})
 		SetUnitVariable(unit, "Character", "Thursagan")
 		Event(
 			FindHero("Thursagan"),
@@ -523,7 +523,7 @@ AddTrigger(
 															end
 															AddTrigger(
 																function()
-																	if (PlayerHasObjective(GetThisPlayer(), "- Find Thursagan and bring him to your Mead Hall") and GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-hero-thursagan") < 1) then
+																	if (PlayerHasObjective(GetThisPlayer(), "- Find Thursagan and bring him to your Mead Hall") and FindHero("Thursagan", GetThisPlayer()) == nil) then
 																		player = GetThisPlayer()
 																		return true
 																	end
@@ -582,7 +582,7 @@ AddTrigger(
 		for i=0,14 do
 			if (
 				PlayerHasObjective(i, "- Find Thursagan and bring him to your Mead Hall")
-				and (IfNearUnit(i, ">=", 1, "unit-hero-thursagan", "unit-dwarven-town-hall") or IfNearUnit(i, ">=", 1, "unit-hero-thursagan", "unit-dwarven-stronghold"))
+				and UnitIsAt(FindHero("Thursagan"), {7, 59}, {12, 64})
 			) then
 				player = i
 				return true

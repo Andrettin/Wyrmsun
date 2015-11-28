@@ -37,9 +37,14 @@ DefineCharacter("Ariovistus", {
 
 DefineCharacter("Marbod", {
 	Name = "Marbod",
+	Gender = "male",
 	Type = "unit-suebi-swordsman",
 	Level = 2,
 	Civilization = "teuton",
+	Trait = "upgrade-keen",
+	Variation = "blond-hair",
+	Description = _("A young chieftain of the Marcomanni, Marbod aspires to forge a realm for his tribe capable of withstanding the test of time."),
+	Icon = "icon-marbod",
 	ProvinceOfOrigin = "Brandenburg",
 	Year = -9, -- Marbod, king of the Suebic tribe of the Marcomanni, conquers Bohemia in 9 BC
 	DeathYear = 19 + 15, -- Marbod deposed in 19 AD; give +15 years of life

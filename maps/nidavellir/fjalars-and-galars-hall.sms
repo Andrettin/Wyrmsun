@@ -13,8 +13,7 @@ elseif (GameSettings.Difficulty == 4) then -- if difficulty is brutal
 end
 
 
-GenerateRandomDungeon("dwarf", "", "unit-hero-durin", "", "", "", "dwarf", "Fjalar and Galar", enemy_quantity, fjalar_and_galars_unit_type, "Fjalar", fjalar_and_galars_unit_type, "Galar", {"unit-alchemy-bench"}, "", 0)
-SetUnitVariable(FindHero("Durin"), "Character", "Durin")
+GenerateRandomDungeon("dwarf", "", "Durin", "", "", "", "dwarf", "Fjalar and Galar", enemy_quantity, fjalar_and_galars_unit_type, "Fjalar", fjalar_and_galars_unit_type, "Galar", {"unit-alchemy-bench"}, "", 0)
 			
 if (LoadedGame == false) then
 	if (GameSettings.Difficulty == 4) then -- if difficulty is brutal

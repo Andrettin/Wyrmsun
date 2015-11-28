@@ -171,13 +171,13 @@ if (GrandStrategy == false) then
 	unit = CreateUnit("unit-dwarven-mushroom-farm", 0, {23, 1})
 
 	if (GetPlayerData(0, "Name") ~= "Shorbear Clan" and GetPlayerData(0, "Name") ~= "Shinsplitter Clan" and (GetThisPlayer() ~= 0 or (PlayerFaction ~= "Shorbear Clan" and PlayerFaction ~= "Shinsplitter Clan"))) then
-		unit = CreateUnit("unit-hero-rugnur", 0, {6, 5})
+		unit = CreateUnit("unit-dwarven-axefighter", 0, {6, 5})
 		SetUnitVariable(unit, "Character", "Rugnur")
-		unit = CreateUnit("unit-hero-baglur", 0, {6, 5})
+		unit = CreateUnit("unit-dwarven-steelclad", 0, {6, 5})
 		SetUnitVariable(unit, "Character", "Baglur")
-		unit = CreateUnit("unit-hero-thursagan", 0, {6, 5})
+		unit = CreateUnit("unit-dwarven-thane", 0, {6, 5})
 		SetUnitVariable(unit, "Character", "Thursagan")
-		unit = CreateUnit("unit-hero-durstorn", 0, {6, 5})
+		unit = CreateUnit("unit-dwarven-thane", 0, {6, 5})
 		SetUnitVariable(unit, "Character", "Durstorn")
 
 		unit = CreateUnit("unit-dwarven-scout", 0, {6, 5}) -- Noiraran

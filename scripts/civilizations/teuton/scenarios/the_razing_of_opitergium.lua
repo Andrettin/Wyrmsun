@@ -43,7 +43,7 @@ if (LoadedGame == false) then
 		SetPlayerData(rome_player, "Allow", "upgrade-teuton-masonry", "R")
 		SetPlayerData(0, "Faction", "Marcomanni Tribe")
 
-	--	unit = CreateUnit("unit-hero-marbod", 0, {Players[0].StartPos.x, Players[0].StartPos.y}) -- add Ballomar here later
+	--	unit = CreateUnit("unit-suebi-swordsman", 0, {Players[0].StartPos.x, Players[0].StartPos.y}) -- add Ballomar here later
 	
 		unit = CreateUnit("unit-suebi-swordsman", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 		unit = CreateUnit("unit-suebi-swordsman", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
@@ -54,7 +54,7 @@ if (LoadedGame == false) then
 		
 		-- Marcomanni units
 		CreateProvinceUnits("Austria", 0)		
-	--	unit = CreateUnit("unit-hero-marbod", 0, {Players[0].StartPos.x, Players[0].StartPos.y}) -- add Ballomar here later
+	--	unit = CreateUnit("unit-suebi-swordsman", 0, {Players[0].StartPos.x, Players[0].StartPos.y}) -- add Ballomar here later
 		
 		-- Roman units
 		CreateProvinceUnits("Venetia", 1, 4)

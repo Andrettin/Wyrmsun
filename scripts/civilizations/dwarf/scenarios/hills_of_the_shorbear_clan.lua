@@ -160,7 +160,7 @@ AddTrigger(
 		end
 		if (PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Defeat Glonoin, the Shorbear Clan leader") == false and PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have all heroes in the Shorbear caves while no enemies are in the caves") == false and PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Move Rugnur to the northeast cave entrance") == false) then
 			for i=0,14 do
-				if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Knalga") and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-thane")) >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-hero-baglur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-baglur-thane") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-hero-thursagan") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-hero-durstorn") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1) then
+				if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Knalga") and FindHero("Rugnur", i) ~= nil and FindHero("Baglur", i) ~= nil and FindHero("Thursagan", i) ~= nil and FindHero("Durstorn", i) ~= nil and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1) then
 					player = i
 					return true
 				end
@@ -481,10 +481,10 @@ AddTrigger(
 			for i=0,14 do
 				if (
 					GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Knalga")
-					and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-thane")) >= 1
-					and GetPlayerData(i, "UnitTypesCount", "unit-hero-baglur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-baglur-thane") >= 1
-					and GetPlayerData(i, "UnitTypesCount", "unit-hero-thursagan") >= 1
-					and GetPlayerData(i, "UnitTypesCount", "unit-hero-durstorn") >= 1
+					and FindHero("Rugnur", i) ~= nil
+					and FindHero("Baglur", i) ~= nil
+					and FindHero("Thursagan", i) ~= nil
+					and FindHero("Durstorn", i) ~= nil
 					and (GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1 or GetPlayerData(i, "UnitTypesCount", "unit-dwarven-stronghold") >= 1)
 				) then
 					player = i
@@ -637,7 +637,7 @@ AddTrigger(
 					{"~!Continue"},
 					{function(s)
 					if (GetNumUnitsAt(1, "units", {26, 23}, {51, 44}) + GetNumUnitsAt(2, "units", {26, 23}, {51, 44}) >= 1) then
-						if ((GetNumUnitsAt(player, "unit-hero-rugnur", {26, 23}, {51, 44}) + GetNumUnitsAt(player, "unit-hero-rugnur-steelclad", {26, 23}, {51, 44}) + GetNumUnitsAt(player, "unit-hero-rugnur-thane", {26, 23}, {51, 44})) >= 1 and (GetNumUnitsAt(player, "unit-hero-baglur", {26, 23}, {51, 44}) + GetNumUnitsAt(player, "unit-hero-baglur-thane", {26, 23}, {51, 44})) >= 1 and GetNumUnitsAt(player, "unit-hero-thursagan", {26, 23}, {51, 44}) >= 1 and GetNumUnitsAt(player, "unit-hero-durstorn", {26, 23}, {51, 44}) >= 1 and GetNumUnitsAt(player, "unit-gnomish-recruit", {26, 23}, {51, 44}) >= 1) then
+						if (UnitIsAt(FindHero("Rugnur"), {26, 23}, {51, 44}) and UnitIsAt(FindHero("Baglur"), {26, 23}, {51, 44}) and UnitIsAt(FindHero("Thursagan"), {26, 23}, {51, 44}) and UnitIsAt(FindHero("Durstorn"), {26, 23}, {51, 44}) and GetNumUnitsAt(player, "unit-gnomish-recruit", {26, 23}, {51, 44}) >= 1) then
 							Event(
 								FindHero("Thursagan"),
 								"Well, back to the battle - we are all in the caves, but there are still enemies in here also!",
@@ -674,7 +674,7 @@ AddTrigger(
 								"dwarf/icons/thursagan.png"
 							)
 						end
-					elseif (((GetNumUnitsAt(player, "unit-hero-rugnur", {26, 23}, {51, 44}) + GetNumUnitsAt(player, "unit-hero-rugnur-steelclad", {26, 23}, {51, 44}) + GetNumUnitsAt(player, "unit-hero-rugnur-thane", {26, 23}, {51, 44})) >= 1 and (GetNumUnitsAt(player, "unit-hero-baglur", {26, 23}, {51, 44}) + GetNumUnitsAt(player, "unit-hero-baglur-thane", {26, 23}, {51, 44})) >= 1 and GetNumUnitsAt(player, "unit-hero-thursagan", {26, 23}, {51, 44}) >= 1 and GetNumUnitsAt(player, "unit-hero-durstorn", {26, 23}, {51, 44}) >= 1 and GetNumUnitsAt(player, "unit-gnomish-recruit", {26, 23}, {51, 44}) >= 1) == false) then
+					elseif ((UnitIsAt(FindHero("Rugnur"), {26, 23}, {51, 44}) and UnitIsAt(FindHero("Baglur"), {26, 23}, {51, 44}) and UnitIsAt(FindHero("Thursagan"), {26, 23}, {51, 44}) and UnitIsAt(FindHero("Durstorn"), {26, 23}, {51, 44}) and GetNumUnitsAt(player, "unit-gnomish-recruit", {26, 23}, {51, 44}) >= 1) == false) then
 						Event(
 							FindHero("Thursagan"),
 							"Well, back to the battle - we need everyone to get into the Shorbear caves. And then stop any enemies from coming in here.",
@@ -712,7 +712,7 @@ AddTrigger(
 		end
 		if (PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have all heroes in the Shorbear caves while no enemies are in the caves")) then
 			if (GetNumUnitsAt(1, "any", {26, 23}, {51, 44}) + GetNumUnitsAt(2, "any", {26, 23}, {51, 44}) < 1) then
-				if ((GetNumUnitsAt(GetFactionPlayer("Norlund Clan"), "unit-hero-rugnur", {26, 23}, {51, 44}) + GetNumUnitsAt(GetFactionPlayer("Norlund Clan"), "unit-hero-rugnur-steelclad", {26, 23}, {51, 44}) + GetNumUnitsAt(GetFactionPlayer("Norlund Clan"), "unit-hero-rugnur-thane", {26, 23}, {51, 44})) >= 1 and (GetNumUnitsAt(GetFactionPlayer("Norlund Clan"), "unit-hero-baglur", {26, 23}, {51, 44}) + GetNumUnitsAt(GetFactionPlayer("Norlund Clan"), "unit-hero-baglur-thane", {26, 23}, {51, 44})) >= 1 and GetNumUnitsAt(GetFactionPlayer("Norlund Clan"), "unit-hero-thursagan", {26, 23}, {51, 44}) >= 1 and GetNumUnitsAt(GetFactionPlayer("Norlund Clan"), "unit-hero-durstorn", {26, 23}, {51, 44}) >= 1 and GetNumUnitsAt(GetFactionPlayer("Norlund Clan"), "unit-gnomish-recruit", {26, 23}, {51, 44}) >= 1) then
+				if (UnitIsAt(FindHero("Rugnur"), {26, 23}, {51, 44}) and UnitIsAt(FindHero("Baglur"), {26, 23}, {51, 44}) and UnitIsAt(FindHero("Thursagan"), {26, 23}, {51, 44}) and UnitIsAt(FindHero("Durstorn"), {26, 23}, {51, 44}) and GetNumUnitsAt(player, "unit-gnomish-recruit", {26, 23}, {51, 44}) >= 1) then
 					player = GetFactionPlayer("Norlund Clan")
 					return true
 				end
@@ -848,7 +848,7 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if (PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Move Rugnur to the northeast cave entrance") and GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-durstorn") >= 1) then
+		if (PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Move Rugnur to the northeast cave entrance") and FindHero("Durstorn", GetFactionPlayer("Norlund Clan"))) then
 			for i=0,14 do
 				if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Knalga")) then
 					player = i
@@ -933,7 +933,7 @@ AddTrigger(
 														{"~!Continue"},
 														{function(s)
 															PlaySound("axe-attack")
-															KillUnitAt("unit-hero-durstorn", player, 1, {0, 0}, {256, 256})
+															KillUnit(FindHero("Durstorn"))
 															Event(
 																FindHero("Rugnur"),
 																"Well, I suppose we were right to silence him, but I don't like this. In any case, now we should try to get out of here.",
@@ -1121,7 +1121,7 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if (PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Move Rugnur to the northeast cave entrance") and (GetNumUnitsAt(GetFactionPlayer("Norlund Clan"), "unit-hero-rugnur", {69, 14}, {69, 14}) + GetNumUnitsAt(GetFactionPlayer("Norlund Clan"), "unit-hero-rugnur-steelclad", {69, 14}, {69, 14}) + GetNumUnitsAt(GetFactionPlayer("Norlund Clan"), "unit-hero-rugnur-thane", {69, 14}, {69, 14})) >= 1) then
+		if (PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Move Rugnur to the northeast cave entrance") and UnitIsAt(FindHero("Rugnur"), {69, 14}, {69, 14})) then
 			player = GetFactionPlayer("Norlund Clan")
 			return true
 		end
@@ -1146,7 +1146,7 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if (PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Move Rugnur to the northeast cave entrance") and (GetNumUnitsAt(GetFactionPlayer("Norlund Clan"), "unit-hero-rugnur", {69, 14}, {69, 14}) + GetNumUnitsAt(GetFactionPlayer("Norlund Clan"), "unit-hero-rugnur-steelclad", {69, 14}, {69, 14}) + GetNumUnitsAt(GetFactionPlayer("Norlund Clan"), "unit-hero-rugnur-thane", {69, 14}, {69, 14})) >= 1 and GetNumUnitsAt(GetFactionPlayer("Norlund Clan"), "unit-gnomish-recruit", {44, 76}, {256, 256}) >= 1) then
+		if (PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Move Rugnur to the northeast cave entrance") and UnitIsAt(FindHero("Rugnur"), {69, 14}, {69, 14}) and GetNumUnitsAt(GetFactionPlayer("Norlund Clan"), "unit-gnomish-recruit", {44, 76}, {256, 256}) >= 1) then
 			player = GetFactionPlayer("Norlund Clan")
 			return true
 		end

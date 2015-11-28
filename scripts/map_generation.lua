@@ -5370,32 +5370,35 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 							if (player_hero == "random") then
 								local available_heroes = {}
 								if (player_civilization == "teuton") then
-									if (GetNumUnitsAt(-1, "unit-hero-marbod", {0, 0}, {256, 256}) < 1) then
-										table.insert(available_heroes, "unit-hero-marbod")
+									if (FindHero("Marbod") == nil) then
+										table.insert(available_heroes, "Marbod")
 									end
 								elseif (player_civilization == "dwarf") then
-									if (GetNumUnitsAt(-1, "unit-hero-modsognir", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-hero-modsognir-thane", {0, 0}, {256, 256}) < 1) then
-										table.insert(available_heroes, "unit-hero-modsognir")
+									if (FindHero("Modsognir") == nil) then
+										table.insert(available_heroes, "Modsognir")
 									end
-									if (GetNumUnitsAt(-1, "unit-hero-durin", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-hero-durin-thane", {0, 0}, {256, 256}) < 1) then
-										table.insert(available_heroes, "unit-hero-durin")
+									if (FindHero("Durin") == nil) then
+										table.insert(available_heroes, "Durin")
 									end
-									if (GetNumUnitsAt(-1, "unit-hero-rugnur", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-hero-rugnur-steelclad", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-hero-rugnur-thane", {0, 0}, {256, 256}) < 1) then
-										table.insert(available_heroes, "unit-hero-rugnur")
+									if (FindHero("Rugnur") == nil) then
+										table.insert(available_heroes, "Rugnur")
 									end
-									if (GetNumUnitsAt(-1, "unit-hero-baglur", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-hero-baglur-thane", {0, 0}, {256, 256}) < 1) then
-										table.insert(available_heroes, "unit-hero-baglur")
+									if (FindHero("Baglur") == nil) then
+										table.insert(available_heroes, "Baglur")
 									end
-									if (GetNumUnitsAt(-1, "unit-hero-thursagan", {0, 0}, {256, 256}) < 1) then
-										table.insert(available_heroes, "unit-hero-thursagan")
+									if (FindHero("Thursagan") == nil) then
+										table.insert(available_heroes, "Thursagan")
 									end
-									if (GetNumUnitsAt(-1, "unit-hero-durstorn", {0, 0}, {256, 256}) < 1) then
-										table.insert(available_heroes, "unit-hero-durstorn")
+									if (FindHero("Durstorn") == nil) then
+										table.insert(available_heroes, "Durstorn")
 									end
 								end
-								unit = CreateUnit(available_heroes[SyncRand(table.getn(available_heroes)) + 1], 0, {RandomX, RandomY})
+								local chosen_hero = available_heroes[SyncRand(table.getn(available_heroes)) + 1]
+								unit = CreateUnit(GetCharacterData(chosen_hero, "Type"), 0, {RandomX, RandomY})
+								SetUnitVariable(unit, "Character", chosen_hero)
 							else
-								unit = CreateUnit(player_hero, 0, {RandomX, RandomY})
+								unit = CreateUnit(GetCharacterData(player_hero, "Type"), 0, {RandomX, RandomY})
+								SetUnitVariable(unit, "Character", player_hero)
 							end
 							-- create stairs beside the hero to make it seem like he came from somewhere
 							local SecondRandomX = 0
@@ -5445,34 +5448,36 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 						if (GetNumUnitsAt(-1, "any", {RandomX - 1, RandomY - 1}, {RandomX + 1, RandomY + 1}) < 1) then
 							SetStartView(1, RandomX, RandomY)
 							if (second_player_hero == "random") then
-								local available_heroes = {}
 								if (second_player_civilization == "teuton") then
-									if (GetNumUnitsAt(-1, "unit-hero-marbod", {0, 0}, {256, 256}) < 1) then
-										table.insert(available_heroes, "unit-hero-marbod")
+									if (FindHero("Marbod") == nil) then
+										table.insert(available_heroes, "Marbod")
 									end
 								elseif (second_player_civilization == "dwarf") then
-									if (GetNumUnitsAt(-1, "unit-hero-modsognir", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-hero-modsognir-thane", {0, 0}, {256, 256}) < 1) then
-										table.insert(available_heroes, "unit-hero-modsognir")
+									if (FindHero("Modsognir") == nil) then
+										table.insert(available_heroes, "Modsognir")
 									end
-									if (GetNumUnitsAt(-1, "unit-hero-durin", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-hero-durin-thane", {0, 0}, {256, 256}) < 1) then
-										table.insert(available_heroes, "unit-hero-durin")
+									if (FindHero("Durin") == nil) then
+										table.insert(available_heroes, "Durin")
 									end
-									if (GetNumUnitsAt(-1, "unit-hero-rugnur", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-hero-rugnur-steelclad", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-hero-rugnur-thane", {0, 0}, {256, 256}) < 1) then
-										table.insert(available_heroes, "unit-hero-rugnur")
+									if (FindHero("Rugnur") == nil) then
+										table.insert(available_heroes, "Rugnur")
 									end
-									if (GetNumUnitsAt(-1, "unit-hero-baglur", {0, 0}, {256, 256}) + GetNumUnitsAt(-1, "unit-hero-baglur-thane", {0, 0}, {256, 256}) < 1) then
-										table.insert(available_heroes, "unit-hero-baglur")
+									if (FindHero("Baglur") == nil) then
+										table.insert(available_heroes, "Baglur")
 									end
-									if (GetNumUnitsAt(-1, "unit-hero-thursagan", {0, 0}, {256, 256}) < 1) then
-										table.insert(available_heroes, "unit-hero-thursagan")
+									if (FindHero("Thursagan") == nil) then
+										table.insert(available_heroes, "Thursagan")
 									end
-									if (GetNumUnitsAt(-1, "unit-hero-durstorn", {0, 0}, {256, 256}) < 1) then
-										table.insert(available_heroes, "unit-hero-durstorn")
+									if (FindHero("Durstorn") == nil) then
+										table.insert(available_heroes, "Durstorn")
 									end
 								end
-								unit = CreateUnit(available_heroes[SyncRand(table.getn(available_heroes)) + 1], 1, {RandomX, RandomY})
+								local chosen_hero = available_heroes[SyncRand(table.getn(available_heroes)) + 1]
+								unit = CreateUnit(GetCharacterData(chosen_hero, "Type"), 1, {RandomX, RandomY})
+								SetUnitVariable(unit, "Character", chosen_hero)
 							else
-								unit = CreateUnit(second_player_hero, 1, {RandomX, RandomY})
+								unit = CreateUnit(GetCharacterData(second_player_hero, "Type"), 0, {RandomX, RandomY})
+								SetUnitVariable(unit, "Character", second_player_hero)
 							end
 							-- create stairs beside the hero to make it seem like he came from somewhere
 							local SecondRandomX = 0

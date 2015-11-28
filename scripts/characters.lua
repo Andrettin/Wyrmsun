@@ -48,8 +48,12 @@ DefineCharacter("Pypo", {
 
 DefineCharacter("Greebo", {
 	Name = "Greebo",
-	Type = "unit-hero-greebo",
+	Gender = "male",
+	Type = "unit-goblin-spearman",
 	Civilization = "goblin",
+	Description = _("Greebo is a scoundrel, simply put. He lives in a rocky hideout, and survives by stealing from the farms in the region. He is quick to thrust his short sword into those who get in his way, holding love only for his baby child."),
+	Icon = "icon-greebo",
+	Trait = "upgrade-strong", -- seems appropriate, but maybe something else for this character would be better?
 	ProvinceOfOrigin = "Caverns of Flame", -- placeholder (this character needs to have a province of origin since he has a hero unit type)
 	Year = 3000, -- placeholder (this character needs to have a year since he has a hero unit type)
 	DeathYear = 3000 + 30 -- placeholder (this character needs to have a death year since he has a hero unit type)

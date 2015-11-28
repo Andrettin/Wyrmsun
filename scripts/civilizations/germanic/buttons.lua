@@ -44,8 +44,6 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-germanic-short-sword",
     "unit-germanic-warrior",
 	"unit-teuton-worker",
 	"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-teuton-ritter",
-	"unit-hero-marbod",
-	"unit-hero-greebo",
 	"germanic-group", "teuton-group"
 } } )
 
@@ -56,8 +54,6 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-germanic-broad-sword",
   ForUnit = {
     "unit-germanic-warrior",
 	"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-teuton-ritter",
-	"unit-hero-marbod",
-	"unit-hero-greebo",
 	"germanic-group", "teuton-group"
 } } )
 
@@ -70,7 +66,6 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-germanic-wooden-oblong-shield",
 	"unit-teuton-worker",
 	"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-teuton-archer", "unit-teuton-ritter",
 	"unit-teuton-catapult",
-	"unit-hero-marbod",
 	"germanic-group", "teuton-group"
 } } )
 
@@ -81,7 +76,6 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-germanic-bronze-shield",
   ForUnit = {
     "unit-germanic-warrior",
 	"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-teuton-ritter",
-	"unit-hero-marbod",
 	"germanic-group", "teuton-group"
 } } )
 
@@ -108,7 +102,6 @@ DefineButton( { Pos = 4, Level = 0, Icon = "icon-germanic-patrol-land",
     "unit-germanic-warrior", "unit-germanic-archer",
 	"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-teuton-archer", "unit-teuton-ritter",
 	"unit-teuton-catapult",
-	"unit-hero-marbod",
 	"germanic-group", "teuton-group"
   } } )
   
@@ -119,7 +112,6 @@ DefineButton( { Pos = 5, Level = 0, Icon = "icon-germanic-stand-ground",
     "unit-germanic-warrior", "unit-germanic-archer",
 	"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-teuton-archer", "unit-teuton-ritter",
 	"unit-teuton-catapult",
-	"unit-hero-marbod",
 	"germanic-group", "teuton-group"
 } } )
 

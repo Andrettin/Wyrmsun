@@ -227,7 +227,7 @@ local TeutonEvents = {
 						SetProvinceUnitQuantity("Brandenburg", unitName, math.floor(GetProvinceUnitQuantity("Brandenburg", unitName) / 2))
 					end
 				end
-				SetProvinceHero("Bohemia", "Marbod", "unit-hero-marbod", 2)
+				SetProvinceHero("Bohemia", "Marbod", "unit-suebi-swordsman", 2)
 				AcquireFactionTechnologies(Factions.SuebiTribe.Civilization, Factions.SuebiTribe.Name, Factions.MarcomanniTribe.Civilization, "Marcomanni Tribe")
 				SetProvinceCivilization("Bohemia", "teuton")
 			end,
@@ -271,7 +271,7 @@ local TeutonEvents = {
 							SetProvinceUnitQuantity("Brandenburg", unitName, math.floor(GetProvinceUnitQuantity("Brandenburg", unitName) / 2))
 						end
 					end
-					SetProvinceHero("Bohemia", "Marbod", "unit-hero-marbod", 2)
+					SetProvinceHero("Bohemia", "Marbod", "unit-suebi-swordsman", 2)
 					SetProvinceCivilization("Bohemia", "teuton")
 					AcquireFactionTechnologies(Factions.SuebiTribe.Civilization, Factions.SuebiTribe.Name, Factions.MarcomanniTribe.Civilization, "Marcomanni Tribe")
 

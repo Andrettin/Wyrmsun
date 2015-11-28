@@ -301,30 +301,6 @@ DefineUnitType("unit-goblin-smithy", { Name = _("Fugla Forge"),
 	}
 } )
 
-DefineUnitType("unit-hero-greebo", { Name = _("Impaler"),
-	Parent = "unit-goblin-spearman",
-	DefaultName = "Greebo",
-	Civilization = "goblin",
-	Class = "",
-	Description = _("Greebo is a scoundrel, simply put. He lives in a rocky hideout, and survives by stealing from the farms in the region. He is quick to thrust his short sword into those who get in his way, holding love only for his baby child."),
-	Image = {"file", "goblin/units/goblin_swordsman.png", "size", {72, 72}},
-	Animations = "animations-goblin-swordsman", Icon = "icon-greebo",
-	Gender = "male",
-	Hero = true,
-	HackDamage = true,
-	Traits = {"upgrade-strong"}, -- seems appropriate, but maybe something else for this character would be better?
-	Sounds = {
-		"selected", "basic-goblin-voices-selected-group",
-		"acknowledge", "basic-goblin-voices-acknowledge",
-		"attack", "basic-goblin-voices-acknowledge",
-		"ready", "goblin-impaler-ready",
-		"help", "basic-goblin-voices-help",
-		"dead", "basic-goblin-voices-dead",
-		"hit", "sword-attack",
-		"miss", "attack-miss"
-	}
-} )
-
 DefineUnitType("unit-goblin-banner", { Name = _("Goblin Banner"),
 	Civilization = "goblin",
 	Image = {"file", "goblin/decorations/goblin_banner.png", "size", {32, 32}},

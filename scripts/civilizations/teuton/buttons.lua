@@ -42,8 +42,6 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-teuton-spatha",
 	Key = "a", Hint = _("~!Attack"), Popup = "popup-commands",
 	ForUnit = {
 		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-teuton-ritter",
-		"unit-hero-marbod",
-		"unit-hero-greebo",
 		"germanic-group", "teuton-group"
 	}
 } )
@@ -54,7 +52,6 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-teuton-iron-shield",
 	Key = "s", Hint = _("~!Stop"), Popup = "popup-commands",
 	ForUnit = {
 		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-teuton-ritter",
-		"unit-hero-marbod",
 		"germanic-group", "teuton-group"
 	}
 } )

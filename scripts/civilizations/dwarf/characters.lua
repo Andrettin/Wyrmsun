@@ -29,8 +29,14 @@
 
 DefineCharacter("Modsognir", { -- one of the earliest dwarven leaders; in Norse mythology Modsognir was the mightiest and first of dwarves
 	Name = "Modsognir",
+	Gender = "male",
 	Type = "unit-dwarven-steelclad",
 	Civilization = "dwarf",
+	Description = _("The leader of one of the first dwarven tribes, Modsognir is a mighty warrior."),
+	Background = _("In Norse mythology, Modsognir appears in the ~<Voluspo~> as the first and mightiest of the dwarves."),
+	Icon = "icon-modsognir",
+	Variation = "brown-hair",
+	Trait = "upgrade-mighty",
 	ProvinceOfOrigin = "Svarinshaug",
 	Year = -3000,
 	DeathYear = -3000 + 30, -- estimated
@@ -39,8 +45,14 @@ DefineCharacter("Modsognir", { -- one of the earliest dwarven leaders; in Norse 
 
 DefineCharacter("Durin", { -- deputy of Modsognir
 	Name = "Durin",
+	Gender = "male",
 	Type = "unit-dwarven-steelclad",
 	Civilization = "dwarf",
+	Description = _("Durin is a valiant dwarven warrior and loyal vassal of chieftain Modsognir."),
+	Background = _("In Norse mythology, Durin appears in the ~<Voluspo~> as one of the first dwarves."),
+	Icon = "icon-durin",
+	Variation = "brown-hair",
+	Trait = "upgrade-dextrous",
 	ProvinceOfOrigin = "Svarinshaug",
 	Year = -3000,
 	DeathYear = -3000 + 30, -- estimated
@@ -68,8 +80,15 @@ DefineCharacter("Ivaldi", { -- his sons were skilled craftsmen; Source: Kevin Cr
 
 DefineCharacter("Thursagan", {
 	Name = "Thursagan",
+	Gender = "male",
 	Type = "unit-dwarven-thane",
 	Civilization = "dwarf",
+	Description = _("Thursagan is an extremely skilled runemaster who has retired to live as a hermit in the Northern Wastelands. Due to his talents, he was contacted by Rugnur to craft of the Scepter of Fire. His hammer is considered legendary, and dwarves have sought to find it for centuries after his death."),
+	Quote = _("\"Ye mean the insane dwarf who lives in the far north?!\" - Baglur, Retired Norlund Warrior"),
+	Background = "~<The Sceptre of Fire~> poem about the crafting of that artifact mentions Thursagan (as \"a runesmith\") as the maker of the scepter.",
+	Trait = "upgrade-strong",
+	Icon = "icon-thursagan",
+	Variation = "gray-hair",
 	ProvinceOfOrigin = "Caverns of Chaincolt",
 	Year = -1,
 	DeathYear = 40 + 10, -- died in 40 AD of a violent death, but was already rather old; +10 years
@@ -78,8 +97,14 @@ DefineCharacter("Thursagan", {
 
 DefineCharacter("Baglur", {
 	Name = "Baglur",
+	Gender = "male",
 	Type = "unit-dwarven-steelclad",
 	Civilization = "dwarf",
+	Description = _("Baglur is an old and well-experienced warrior. He came back from retirement to help Rugnur defend their homeland against an attack from the Shinsplitter Clan."),
+--	Quote = _("\"Argh! I'm a retired warrior... it looks like I'll ha' to come out and help ye, else we'll be overrun by these damn raiders...\" - Baglur"), -- repeats information already given
+	Icon = "icon-baglur",
+	Trait = "upgrade-resilient",
+	Variation = "gray-hair",
 	ProvinceOfOrigin = "Caverns of Chaincolt",
 	Year = -1,
 	DeathYear = 40 + 10, -- died in 40 AD of a violent death, but was already rather old; +10 years
@@ -88,8 +113,13 @@ DefineCharacter("Baglur", {
 
 DefineCharacter("Durstorn", {
 	Name = "Durstorn",
+	Gender = "male",
 	Type = "unit-dwarven-thane",
 	Civilization = "dwarf",
+	Description = _("Durstorn is the chief of the Norlund Clan. Despite being greedy and unpleasant to be around, he makes a passable leader. When under pressure, however, he tends to become hasty and crass, impoverishing his capability to make good decisions."),
+	Icon = "icon-durstorn",
+	Trait = "upgrade-strong",
+	Variation = "brown-hair",
 	ProvinceOfOrigin = "Caverns of Chaincolt",
 	Year = -1,
 	DeathYear = 35 + 15, -- died in 35 AD of a violent death, but was already somewhat old; +15 years
@@ -108,8 +138,14 @@ DefineCharacter("Glonoin", {
 
 DefineCharacter("Rugnur", {
 	Name = "Rugnur",
+	Gender = "male",
 	Type = "unit-dwarven-axefighter",
 	Civilization = "dwarf",
+	Description = _("Rugnur is a relatively young dwarven warrior. He belongs to the lower strata of his tribe's notables, not being of high enough rank to have a leading position in the clan, but important enough to be granted control of an outpost in the Chaincolt Foothills. Despite being neither ambitious nor adventurous, Rugnur nevertheless ended up being embroiled in the quest to craft the Scepter of Fire for a gnomish monarch."),
+	Icon = "icon-rugnur",
+	HeroicIcon = "icon-rugnur-older",
+	Trait = "upgrade-keen", -- not the best fit for this character, should be replaced with something else perhaps?
+	Variation = "brown-hair",
 	ProvinceOfOrigin = "Caverns of Chaincolt",
 	Year = 25,
 	DeathYear = 40 + 30, -- died in 40 AD of a violent death, and wasn't old; +30 years

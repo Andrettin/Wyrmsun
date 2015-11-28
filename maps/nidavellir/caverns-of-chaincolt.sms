@@ -140,11 +140,11 @@ if (GrandStrategy == false) then
 	unit = CreateUnit("unit-dwarven-miner", 0, {35, 26})
 
 	-- Rugnur
-	unit = CreateUnit("unit-hero-rugnur", 0, {35, 26})
+	unit = CreateUnit("unit-dwarven-axefighter", 0, {35, 26})
 	SetUnitVariable(unit, "Character", "Rugnur")
 
 	-- Baglur
-	unit = CreateUnit("unit-hero-baglur", 0, {36, 25})
+	unit = CreateUnit("unit-dwarven-steelclad", 0, {36, 25})
 	SetUnitVariable(unit, "Character", "Baglur")
 
 	unit = CreateUnit("unit-dwarven-sentry-tower", 0, {16, 31})

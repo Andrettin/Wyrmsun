@@ -303,7 +303,7 @@ AddTrigger(
 			return false
 		end
 		if (
-			GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-hero-baglur") + GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-hero-baglur-thane") < 1
+			FindHero("Baglur") == nil
 		) then
 			return true
 		end
@@ -322,7 +322,7 @@ AddTrigger(
 			return false
 		end
 		if (
-			GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-hero-durstorn") < 1
+			FindHero("Durstorn") == nil
 		) then
 			return true
 		end

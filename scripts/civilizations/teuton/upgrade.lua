@@ -171,16 +171,14 @@ DefineModifier("upgrade-teuton-spatha",
 	{"BasicDamage", 2},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-suebi-swordsman"},
-	{"apply-to", "unit-teuton-ritter"},
-	{"apply-to", "unit-hero-marbod"}
+	{"apply-to", "unit-teuton-ritter"}
 )
 
 DefineModifier("upgrade-teuton-iron-shield",
 	{"Armor", 2},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-suebi-swordsman"},
-	{"apply-to", "unit-teuton-ritter"},
-	{"apply-to", "unit-hero-marbod"}
+	{"apply-to", "unit-teuton-ritter"}
 )
 
 DefineModifier("upgrade-teuton-bodkin-arrow",

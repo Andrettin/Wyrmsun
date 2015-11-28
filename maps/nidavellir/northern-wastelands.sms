@@ -130,9 +130,9 @@ unit = CreateUnit("unit-gold-rock", 15, {15, 53})
 
 if (GrandStrategy == false) then
 	if (GetPlayerData(0, "Name") ~= "Shorbear Clan" and GetPlayerData(0, "Name") ~= "Shinsplitter Clan" and (GetThisPlayer() ~= 0 or (PlayerFaction ~= "Shorbear Clan" and PlayerFaction ~= "Shinsplitter Clan"))) then
-		unit = CreateUnit("unit-hero-rugnur", 0, {8, 60})
+		unit = CreateUnit("unit-dwarven-axefighter", 0, {8, 60})
 		SetUnitVariable(unit, "Character", "Rugnur")
-		unit = CreateUnit("unit-hero-baglur", 0, {8, 60})
+		unit = CreateUnit("unit-dwarven-steelclad", 0, {8, 60})
 		SetUnitVariable(unit, "Character", "Baglur")
 	end
 elseif (GrandStrategyEventMap) then

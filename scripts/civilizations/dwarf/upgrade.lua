@@ -210,12 +210,7 @@ DefineModifier("upgrade-dwarven-broad-axe",
 	{"apply-to", "unit-dwarven-axefighter"}, {"apply-to", "unit-dwarven-steelclad"}, {"apply-to", "unit-dwarven-thane"},
 	{"apply-to", "unit-dwarven-militia"},
 	{"apply-to", "unit-dwarven-yale-rider"},
-	{"apply-to", "unit-surghan-mercenary-steelclad"}, {"apply-to", "unit-surghan-mercenary-thane"},
-	{"apply-to", "unit-hero-modsognir"}, {"apply-to", "unit-hero-modsognir-thane"},
-	{"apply-to", "unit-hero-durin"}, {"apply-to", "unit-hero-durin-thane"},
-	{"apply-to", "unit-hero-rugnur"}, {"apply-to", "unit-hero-rugnur-steelclad"}, {"apply-to", "unit-hero-rugnur-thane"},
-	{"apply-to", "unit-hero-baglur"}, {"apply-to", "unit-hero-baglur-thane"},
-	{"apply-to", "unit-hero-durstorn"}, {"apply-to", "unit-hero-thursagan"}
+	{"apply-to", "unit-surghan-mercenary-steelclad"}, {"apply-to", "unit-surghan-mercenary-thane"}
 )
 
 DefineModifier("upgrade-dwarven-great-axe",
@@ -224,12 +219,7 @@ DefineModifier("upgrade-dwarven-great-axe",
 	{"apply-to", "unit-dwarven-axefighter"}, {"apply-to", "unit-dwarven-steelclad"}, {"apply-to", "unit-dwarven-thane"},
 	{"apply-to", "unit-dwarven-militia"},
 	{"apply-to", "unit-dwarven-yale-rider"},
-	{"apply-to", "unit-surghan-mercenary-steelclad"}, {"apply-to", "unit-surghan-mercenary-thane"},
-	{"apply-to", "unit-hero-modsognir"}, {"apply-to", "unit-hero-modsognir-thane"},
-	{"apply-to", "unit-hero-durin"}, {"apply-to", "unit-hero-durin-thane"},
-	{"apply-to", "unit-hero-rugnur"}, {"apply-to", "unit-hero-rugnur-steelclad"}, {"apply-to", "unit-hero-rugnur-thane"},
-	{"apply-to", "unit-hero-baglur"}, {"apply-to", "unit-hero-baglur-thane"},
-	{"apply-to", "unit-hero-durstorn"}, {"apply-to", "unit-hero-thursagan"}
+	{"apply-to", "unit-surghan-mercenary-steelclad"}, {"apply-to", "unit-surghan-mercenary-thane"}
 )
 
 DefineModifier("upgrade-dwarven-shield-1",
@@ -238,12 +228,7 @@ DefineModifier("upgrade-dwarven-shield-1",
 	{"apply-to", "unit-dwarven-axefighter"}, {"apply-to", "unit-dwarven-steelclad"}, {"apply-to", "unit-dwarven-thane"},
 	{"apply-to", "unit-dwarven-militia"},
 	{"apply-to", "unit-dwarven-yale-rider"},
-	{"apply-to", "unit-surghan-mercenary-steelclad"}, {"apply-to", "unit-surghan-mercenary-thane"},
-	{"apply-to", "unit-hero-modsognir"}, {"apply-to", "unit-hero-modsognir-thane"},
-	{"apply-to", "unit-hero-durin"}, {"apply-to", "unit-hero-durin-thane"},
-	{"apply-to", "unit-hero-rugnur"}, {"apply-to", "unit-hero-rugnur-steelclad"}, {"apply-to", "unit-hero-rugnur-thane"},
-	{"apply-to", "unit-hero-baglur"}, {"apply-to", "unit-hero-baglur-thane"},
-	{"apply-to", "unit-hero-durstorn"}, {"apply-to", "unit-hero-thursagan"}
+	{"apply-to", "unit-surghan-mercenary-steelclad"}, {"apply-to", "unit-surghan-mercenary-thane"}
 )
 
 DefineModifier("upgrade-dwarven-shield-2",
@@ -252,12 +237,7 @@ DefineModifier("upgrade-dwarven-shield-2",
 	{"apply-to", "unit-dwarven-axefighter"}, {"apply-to", "unit-dwarven-steelclad"}, {"apply-to", "unit-dwarven-thane"},
 	{"apply-to", "unit-dwarven-militia"},
 	{"apply-to", "unit-dwarven-yale-rider"},
-	{"apply-to", "unit-surghan-mercenary-steelclad"}, {"apply-to", "unit-surghan-mercenary-thane"},
-	{"apply-to", "unit-hero-modsognir"}, {"apply-to", "unit-hero-modsognir-thane"},
-	{"apply-to", "unit-hero-durin"}, {"apply-to", "unit-hero-durin-thane"},
-	{"apply-to", "unit-hero-rugnur"}, {"apply-to", "unit-hero-rugnur-steelclad"}, {"apply-to", "unit-hero-rugnur-thane"},
-	{"apply-to", "unit-hero-baglur"}, {"apply-to", "unit-hero-baglur-thane"},
-	{"apply-to", "unit-hero-durstorn"}, {"apply-to", "unit-hero-thursagan"}
+	{"apply-to", "unit-surghan-mercenary-steelclad"}, {"apply-to", "unit-surghan-mercenary-thane"}
 )
 
 DefineModifier("upgrade-dwarven-throwing-axe-1",

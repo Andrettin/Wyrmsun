@@ -86,11 +86,7 @@ DefineButton( { Pos = 13, Level = 0, Icon = "icon-level-up",
 		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-teuton-archer", "unit-teuton-ritter",
 		"unit-gnomish-recruit", "unit-gnomish-herbalist",
 		"unit-goblin-thief", "unit-goblin-spearman", "unit-goblin-archer",
-		"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
-		"unit-hero-marbod",
-		"unit-hero-modsognir", "unit-hero-modsognir-thane", "unit-hero-durin", "unit-hero-durin-thane", 
-		"unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-rugnur-thane", "unit-hero-baglur", "unit-hero-baglur-thane", "unit-hero-thursagan", "unit-hero-durstorn",
-		"unit-hero-greebo"
+		"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane"
 	}
 } )
 
@@ -101,9 +97,7 @@ DefineButton( { Pos = 1, Level = 1, Icon = "icon-axe-mastery",
 	ForUnit = {
 		"unit-dwarven-thane",
 		"unit-dwarven-yale-rider",
-		"unit-surghan-mercenary-thane",
-		"unit-hero-modsognir-thane", "unit-hero-durin-thane", 
-		"unit-hero-rugnur-thane", "unit-hero-baglur-thane", "unit-hero-thursagan", "unit-hero-durstorn"
+		"unit-surghan-mercenary-thane"
 	}
 } )
 
@@ -114,9 +108,7 @@ DefineButton( { Pos = 1, Level = 1, Icon = "icon-sword-mastery-bronze",
 	ForUnit = {
 		"unit-germanic-warrior",
 		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-teuton-ritter",
-		"unit-gnomish-recruit",
-		"unit-hero-marbod",
-		"unit-hero-greebo"
+		"unit-gnomish-recruit"
 	}
 } )
 
@@ -128,9 +120,7 @@ DefineButton( { Pos = 1, Level = 1, Icon = "icon-sword-mastery",
 	ForUnit = {
 		"unit-germanic-warrior",
 		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-teuton-ritter",
-		"unit-gnomish-recruit",
-		"unit-hero-marbod",
-		"unit-hero-greebo"
+		"unit-gnomish-recruit"
 	}
 } )
 
@@ -146,11 +136,7 @@ DefineButton( { Pos = 2, Level = 1, Icon = "icon-critical-strike",
 		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-teuton-archer", "unit-teuton-ritter",
 		"unit-gnomish-recruit",
 		"unit-goblin-thief", "unit-goblin-spearman", "unit-goblin-archer",
-		"unit-surghan-mercenary-thane",
-		"unit-hero-marbod",
-		"unit-hero-modsognir-thane", "unit-hero-durin-thane", 
-		"unit-hero-rugnur-thane", "unit-hero-baglur-thane", "unit-hero-thursagan", "unit-hero-durstorn",
-		"unit-hero-greebo"
+		"unit-surghan-mercenary-thane"
 	}
 } )
 
@@ -167,11 +153,7 @@ DefineButton( { Pos = 2, Level = 1, Icon = "icon-deadly-precision",
 		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-teuton-archer", "unit-teuton-ritter",
 		"unit-gnomish-recruit",
 		"unit-goblin-thief", "unit-goblin-spearman", "unit-goblin-archer",
-		"unit-surghan-mercenary-thane",
-		"unit-hero-marbod",
-		"unit-hero-modsognir-thane", "unit-hero-durin-thane", 
-		"unit-hero-rugnur-thane", "unit-hero-baglur-thane", "unit-hero-thursagan", "unit-hero-durstorn",
-		"unit-hero-greebo"
+		"unit-surghan-mercenary-thane"
 	}
 } )
 
@@ -187,11 +169,7 @@ DefineButton( { Pos = 3, Level = 1, Icon = "icon-eagle-eye",
 		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-teuton-archer", "unit-teuton-ritter",
 		"unit-gnomish-recruit",
 		"unit-goblin-thief", "unit-goblin-spearman", "unit-goblin-archer",
-		"unit-surghan-mercenary-thane",
-		"unit-hero-marbod",
-		"unit-hero-modsognir-thane", "unit-hero-durin-thane", 
-		"unit-hero-rugnur-thane", "unit-hero-baglur-thane", "unit-hero-thursagan", "unit-hero-durstorn",
-		"unit-hero-greebo"
+		"unit-surghan-mercenary-thane"
 	}
 } )
 
@@ -206,11 +184,7 @@ DefineButton( { Pos = 16, Level = 1, Icon = "icon-cancel",
 		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-teuton-archer", "unit-teuton-ritter",
 		"unit-gnomish-recruit", "unit-gnomish-herbalist",
 		"unit-goblin-thief", "unit-goblin-spearman", "unit-goblin-archer",
-		"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
-		"unit-hero-marbod",
-		"unit-hero-modsognir", "unit-hero-modsognir-thane", "unit-hero-durin", "unit-hero-durin-thane", 
-		"unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-rugnur-thane", "unit-hero-baglur", "unit-hero-baglur-thane", "unit-hero-thursagan", "unit-hero-durstorn",
-		"unit-hero-greebo"
+		"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane"
 	} 
 } )
 

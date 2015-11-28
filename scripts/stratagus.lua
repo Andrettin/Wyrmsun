@@ -1466,11 +1466,9 @@ end
 function GetUnitTypeLevelUpUpgrades(unit_type)
 	if (unit_type == "unit-dwarven-axefighter") then
 		return { "unit-dwarven-steelclad", "unit-dwarven-yale-rider" }
-	elseif (unit_type == "unit-hero-rugnur") then
-		return { "unit-dwarven-steelclad" }
-	elseif (unit_type == "unit-dwarven-steelclad" or unit_type == "unit-surghan-mercenary-steelclad" or unit_type == "unit-hero-modsognir" or unit_type == "unit-hero-durin" or unit_type == "unit-hero-rugnur-steelclad" or unit_type == "unit-hero-baglur") then
+	elseif (unit_type == "unit-dwarven-steelclad" or unit_type == "unit-surghan-mercenary-steelclad") then
 		return { "unit-dwarven-thane" }
-	elseif (unit_type == "unit-dwarven-thane" or unit_type == "unit-surghan-mercenary-thane" or unit_type == "unit-hero-modsognir-thane" or unit_type == "unit-hero-durin-thane" or unit_type == "unit-hero-rugnur-thane" or unit_type == "unit-hero-baglur-thane" or unit_type == "unit-hero-thursagan" or unit_type == "unit-hero-durstorn") then
+	elseif (unit_type == "unit-dwarven-thane" or unit_type == "unit-surghan-mercenary-thane") then
 		return { "upgrade-axe-mastery", "upgrade-critical-strike", "upgrade-deadly-precision", "upgrade-eagle-eye" }
 	elseif (unit_type == "unit-dwarven-yale-rider") then
 		return { "upgrade-axe-mastery", "upgrade-critical-strike", "upgrade-deadly-precision", "upgrade-eagle-eye" }
@@ -1478,7 +1476,7 @@ function GetUnitTypeLevelUpUpgrades(unit_type)
 		return { "upgrade-critical-strike", "upgrade-deadly-precision", "upgrade-eagle-eye" }
 	elseif (unit_type == "unit-dwarven-gryphon-rider") then
 		return { "upgrade-critical-strike", "upgrade-deadly-precision", "upgrade-eagle-eye" }
-	elseif (unit_type == "unit-germanic-warrior" or unit_type == "unit-hero-marbod") then
+	elseif (unit_type == "unit-germanic-warrior") then
 		return { "upgrade-critical-strike", "upgrade-sword-mastery", "upgrade-deadly-precision", "upgrade-eagle-eye" }
 	elseif (unit_type == "unit-germanic-archer" or unit_type == "unit-teuton-archer") then
 		return { "upgrade-critical-strike", "upgrade-deadly-precision", "upgrade-eagle-eye" }
@@ -1497,8 +1495,6 @@ function GetUnitTypeLevelUpUpgrades(unit_type)
 		return { "upgrade-critical-strike", "upgrade-deadly-precision", "upgrade-eagle-eye" }
 	elseif (unit_type == "unit-goblin-archer") then
 		return { "upgrade-critical-strike", "upgrade-deadly-precision", "upgrade-eagle-eye" }
-	elseif (unit_type == "unit-hero-greebo") then
-		return { "upgrade-critical-strike", "upgrade-sword-mastery", "upgrade-deadly-precision", "upgrade-eagle-eye" }
 	else
 		return {}
 	end
@@ -1913,9 +1909,6 @@ local function CompleteMissingValues(table, defaultTable)
 	for key, defaultValue in pairs(defaultTable) do
 		if table[key] == nil then table[key] = defaultValue end
 	end
-	for key, defaultValue in pairs(defaultTable.Heroes) do
-		if table.Heroes[key] == nil then table.Heroes[key] = defaultValue end
-	end
 end
 
 wyr = {preferences = {}}
@@ -1946,7 +1939,6 @@ local defaultPreferences = {
 	ShowTips = true,
 	StratagusTranslation = "",
 	TipNumber = 0,
---	UseFancyBuildings = false,       --  Enable/disable fancy building (random mirroring buildings)
 	UseOpenGL = true,
 	VideoFullScreen = false,
 	VideoHeight = 600,
@@ -2035,7 +2027,7 @@ Load("scripts/grand_strategy/grand_strategy_events.lua")
 
 Load("scripts/0_ad_equivalencies.lua")
 
-if (CanAccessFile("wyr/heroes.lua")) then
+if (CanAccessFile("wyr/heroes.lua")) then -- load persistent heroes
 	Load("heroes.lua")
 end
 

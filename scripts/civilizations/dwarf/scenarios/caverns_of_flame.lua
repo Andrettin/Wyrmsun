@@ -221,7 +221,7 @@ AddTrigger(
 		end
 		if (PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Explore as much of the cave as possible") == false) then
 			for i=0,14 do
-				if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Knalga") and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-thane")) >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-hero-baglur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-baglur-thane") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-hero-thursagan") >= 1) then
+				if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Knalga") and FindHero("Rugnur", i) ~= nil and FindHero("Baglur", i) ~= nil and FindHero("Thursagan", i) ~= nil) then
 					player = i
 					return true
 				end
@@ -572,16 +572,8 @@ AddTrigger(
 		return true
 	end,
 	function() 
-		local thursagan = nil
+		local thursagan = FindHero("Thursagan", GetFactionPlayer("Norlund Clan"))
 	
-		local uncount = 0
-		uncount = GetUnits(GetFactionPlayer("Norlund Clan"))
-		for unit1 = 1,table.getn(uncount) do 
-			if (GetUnitVariable(uncount[unit1],"Ident") == "unit-hero-thursagan") then
-				thursagan = uncount[unit1]
-			end
-		end
-
 		if (thursagan == nil) then
 			return true
 		end
@@ -693,13 +685,7 @@ AddTrigger(
 							{function(s)
 							PlaySound("rumble")
 							PlaySound("rumble")
-							local uncount = 0
-							uncount = GetUnits(GetFactionPlayer("Norlund Clan"))
-							for unit1 = 1,table.getn(uncount) do 
-								if (GetUnitVariable(uncount[unit1], "Ident") == "unit-hero-thursagan") then
-									SetUnitVariable(uncount[unit1], "LastCycle", GameCycle)
-								end
-							end
+							SetUnitVariable(FindHero("Thursagan", GetFactionPlayer("Norlund Clan")), "LastCycle", GameCycle)
 							AddPlayerObjective(player, "- Distract the Shinsplitters until the volcano erupts and kills them")
 							end}
 						)
@@ -721,13 +707,9 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		local uncount = 0
-		uncount = GetUnits(GetFactionPlayer("Norlund Clan"))
-		for unit1 = 1,table.getn(uncount) do 
-			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-hero-thursagan" and (GameCycle - GetUnitVariable(uncount[unit1], "LastCycle")) > 3500 and PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Distract the Shinsplitters until the volcano erupts and kills them")) then
-				player = GetFactionPlayer("Norlund Clan")
-				return true
-			end
+		if ((GameCycle - GetUnitVariable(FindHero("Thursagan", GetFactionPlayer("Norlund Clan")), "LastCycle")) > 3500 and PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Distract the Shinsplitters until the volcano erupts and kills them")) then
+			player = GetFactionPlayer("Norlund Clan")
+			return true
 		end
 		return false
 	end,
@@ -753,13 +735,9 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		local uncount = 0
-		uncount = GetUnits(GetFactionPlayer("Norlund Clan"))
-		for unit1 = 1,table.getn(uncount) do 
-			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-hero-thursagan" and (GameCycle - GetUnitVariable(uncount[unit1], "LastCycle")) > 3000 and PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Distract the Shinsplitters until the volcano erupts and kills them")) then
-				player = GetFactionPlayer("Norlund Clan")
-				return true
-			end
+		if ((GameCycle - GetUnitVariable(FindHero("Thursagan", GetFactionPlayer("Norlund Clan")), "LastCycle")) > 3000 and PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Distract the Shinsplitters until the volcano erupts and kills them")) then
+			player = GetFactionPlayer("Norlund Clan")
+			return true
 		end
 		return false
 	end,
@@ -818,12 +796,6 @@ AddTrigger(
 			KillUnitAt("unit-dwarven-ballista", GetFactionPlayer("Norlund Clan"), GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-dwarven-ballista"), {0, 0}, {256, 256})
 			KillUnitAt("unit-surghan-mercenary-steelclad", GetFactionPlayer("Norlund Clan"), GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-surghan-mercenary-steelclad"), {0, 0}, {256, 256})
 			KillUnitAt("unit-surghan-mercenary-thane", GetFactionPlayer("Norlund Clan"), GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-surghan-mercenary-thane"), {0, 0}, {256, 256})
-			KillUnitAt("unit-hero-rugnur", GetFactionPlayer("Norlund Clan"), GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-rugnur"), {0, 0}, {256, 256})
-			KillUnitAt("unit-hero-rugnur-steelclad", GetFactionPlayer("Norlund Clan"), GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-rugnur-steelclad"), {0, 0}, {256, 256})
-			KillUnitAt("unit-hero-rugnur-thane", GetFactionPlayer("Norlund Clan"), GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-rugnur-thane"), {0, 0}, {256, 256})
-			KillUnitAt("unit-hero-baglur", GetFactionPlayer("Norlund Clan"), GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-baglur"), {0, 0}, {256, 256})
-			KillUnitAt("unit-hero-baglur-thane", GetFactionPlayer("Norlund Clan"), GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-baglur-thane"), {0, 0}, {256, 256})
-			KillUnitAt("unit-hero-thursagan", GetFactionPlayer("Norlund Clan"), GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-hero-thursagan"), {0, 0}, {256, 256})
 			Event(
 				FindUnit("unit-dwarven-gryphon-rider", GetFactionPlayer("Norlund Clan")),
 				"Hm... I'll leave now!",

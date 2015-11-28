@@ -31,8 +31,6 @@ editor_types = {
    "unit-teuton-watch-tower",
    "unit-teuton-guard-tower",
 
-   "unit-hero-marbod",
-   
 --- - - - - - - - - - - - - - - - - - -
 
    "unit-celt-farm",
@@ -63,18 +61,6 @@ editor_types = {
    "unit-surghan-mercenary-steelclad",
    "unit-surghan-mercenary-thane",
 
-   "unit-hero-modsognir",
-   "unit-hero-modsognir-thane",
-   "unit-hero-durin",
-   "unit-hero-durin-thane",
-   "unit-hero-rugnur",
-   "unit-hero-rugnur-steelclad",
-   "unit-hero-rugnur-thane",
-   "unit-hero-baglur",
-   "unit-hero-baglur-thane",
-   "unit-hero-thursagan",
-   "unit-hero-durstorn",
-
 --- - - - - - - - - - - - - - - - - - -
 
    "unit-gnomish-worker",
@@ -100,8 +86,6 @@ editor_types = {
    "unit-goblin-mess-hall",
    "unit-goblin-lumber-mill",
    "unit-goblin-smithy",
-
-   "unit-hero-greebo",
 
 --- - - - - - - - - - - - - - - - - - -
 

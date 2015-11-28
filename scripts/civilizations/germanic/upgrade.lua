@@ -107,16 +107,14 @@ DefineModifier("upgrade-germanic-broad-sword",
 	{"BasicDamage", 2},
 	{"Points", 10},
 	{"apply-to", "unit-germanic-warrior"}, {"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-suebi-swordsman"},
-	{"apply-to", "unit-teuton-ritter"},
-	{"apply-to", "unit-hero-marbod"}
+	{"apply-to", "unit-teuton-ritter"}
 )
 
 DefineModifier("upgrade-germanic-bronze-shield",
 	{"Armor", 2},
 	{"Points", 10},
 	{"apply-to", "unit-germanic-warrior"}, {"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-suebi-swordsman"},
-	{"apply-to", "unit-teuton-ritter"},
-	{"apply-to", "unit-hero-marbod"}
+	{"apply-to", "unit-teuton-ritter"}
 )
 
 DefineModifier("upgrade-germanic-barbed-arrow",

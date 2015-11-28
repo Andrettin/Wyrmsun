@@ -160,7 +160,7 @@ if (GrandStrategy == false) then
 
 	-- Rugnur
 	if (GetPlayerData(0, "Name") ~= "Shorbear Clan") then -- Rugnur cannot belong to the Shorbear Clan
-		unit = CreateUnit("unit-hero-rugnur", 0, {47, 10})
+		unit = CreateUnit("unit-dwarven-axefighter", 0, {47, 10})
 		SetUnitVariable(unit, "Character", "Rugnur")
 	end
 

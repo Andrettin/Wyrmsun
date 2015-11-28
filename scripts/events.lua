@@ -61,7 +61,8 @@ function EventTriggers()
 						Players[greebo_player].Type = PlayerComputer
 						local greebo_spawnpoint = FindAppropriateTileTypeSpawnPoint("Rock")
 						unit = CreateUnit("unit-goblin-banner", greebo_player, greebo_spawnpoint)
-						unit = CreateUnit("unit-hero-greebo", greebo_player, greebo_spawnpoint)
+						unit = CreateUnit("unit-goblin-spearman", greebo_player, greebo_spawnpoint)
+						SetUnitVariable(unit, "Character", "Greebo")
 						SetAiType(greebo_player, "passive")
 						for i=0,14 do
 							if (i ~= greebo_player) then
@@ -82,7 +83,7 @@ function EventTriggers()
 							local uncount = 0
 							uncount = GetUnits(GetFactionPlayer("Greebo"))
 							for unit1 = 1,table.getn(uncount) do 
-								if (GetUnitVariable(uncount[unit1], "Ident") == "unit-hero-greebo") then
+								if (GetUnitVariable(uncount[unit1], "Character") == "Greebo") then
 									local unit_quantity = GetNumUnitsAt(GetThisPlayer(), "units", {GetUnitVariable(uncount[unit1],"PosX") - 4, GetUnitVariable(uncount[unit1],"PosY") - 4}, {GetUnitVariable(uncount[unit1],"PosX") + 4, GetUnitVariable(uncount[unit1],"PosY") + 4})
 									if (unit_quantity > 0) then
 										player = GetThisPlayer()
@@ -124,7 +125,7 @@ function EventTriggers()
 									return false
 								end
 								for i=0,14 do
-									if (GetPlayerData(i, "Name") == "Greebo" and GetPlayerData(i, "UnitTypesCount", "unit-hero-greebo") == 0) then
+									if (GetPlayerData(i, "Name") == "Greebo" and FindHero("Greebo", i) == nil) then
 										player = GetThisPlayer()
 										return true
 									end

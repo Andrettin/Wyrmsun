@@ -132,7 +132,7 @@ AddTrigger(
 		end
 		if (PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Get all heroes to the end of the tunnel") == false) then
 			for i=0,14 do
-				if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Knalga") and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-thane")) >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-hero-baglur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-baglur-thane") >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-hero-thursagan") >= 1) then
+				if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Knalga") and FindHero("Rugnur", i) ~= nil and FindHero("Baglur", i) ~= nil and FindHero("Thursagan", i) ~= nil) then
 					player = i
 					return true
 				end
@@ -233,16 +233,8 @@ AddTrigger(
 		return true
 	end,
 	function() 
-		local thursagan = nil
+		local thursagan = FindHero("Thursagan")
 	
-		local uncount = 0
-		uncount = GetUnits("any")
-		for unit1 = 1,table.getn(uncount) do 
-			if (GetUnitVariable(uncount[unit1],"Ident") == "unit-hero-thursagan") then
-				thursagan = uncount[unit1]
-			end
-		end
-
 		if (thursagan == nil) then
 			return true
 		end
@@ -292,22 +284,20 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if (GetFactionPlayer("Norlund Clan") == GetThisPlayer() or GetPlayerData(15, "UnitTypesCount", "unit-hero-thursagan") >= 1) then
+		if (GetFactionPlayer("Norlund Clan") == GetThisPlayer() or FindHero("Thursagan", 15) ~= nil) then
 			return false
 		end
 		return true
 	end,
 	function() 
 		local smithy = nil
-		local thursagan = nil
+		local thursagan = FindHero("Thursagan")
 	
 		local uncount = 0
 		uncount = GetUnits("any")
 		for unit1 = 1,table.getn(uncount) do 
 			if (GetUnitVariable(uncount[unit1],"Ident") == "unit-dwarven-smithy" and GetUnitVariable(uncount[unit1],"Player") ~= GetFactionPlayer("Shinsplitter Clan")) then
 				smithy = uncount[unit1]
-			elseif (GetUnitVariable(uncount[unit1],"Ident") == "unit-hero-thursagan") then
-				thursagan = uncount[unit1]
 			end
 		end
 
@@ -320,7 +310,7 @@ AddTrigger(
 		uncount = GetUnits(GetFactionPlayer("Norlund Clan"))
 		for unit1 = 1,table.getn(uncount) do 
 			if (GetUnitVariable(uncount[unit1],"Ident") ~= "unit-dwarven-scout" and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Building") == false and GetUnitVariable(uncount[unit1], "Idle")) then
-				if (GetUnitVariable(uncount[unit1],"Ident") ~= "unit-hero-thursagan") then
+				if (GetUnitVariable(uncount[unit1],"Character") ~= "Thursagan") then
 					OrderUnit(GetFactionPlayer("Norlund Clan"), GetUnitVariable(uncount[unit1],"Ident"), {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(thursagan,"PosX"), GetUnitVariable(thursagan,"PosY")}, "move")
 				else
 					OrderUnit(GetFactionPlayer("Norlund Clan"), GetUnitVariable(uncount[unit1],"Ident"), {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(smithy,"PosX"), GetUnitVariable(smithy,"PosY")}, "move")
@@ -476,29 +466,25 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if (IfNearUnit(GetFactionPlayer("Norlund Clan"), ">=", 1, "unit-hero-thursagan", "unit-dwarven-smithy") and IfNearUnit(GetFactionPlayer("Norlund Clan"), ">=", 1, "unit-dwarven-smithy", "unit-hero-thursagan")) then
+		if (UnitIsAt(FindHero("Thursagan"), {30, 48}, {34, 52})) then
 			player = GetFactionPlayer("Norlund Clan")
 			return true
 		end
 		return false
 	end,
 	function() 
-		local uncount = 0
-		uncount = GetUnits(GetFactionPlayer("Norlund Clan"))
-		for unit1 = 1,table.getn(uncount) do 
-			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-hero-thursagan") then
-				Event(
-					FindHero("Thursagan"),
-					"This forge will work perfectly. Give me a few days here, and I can reforge the Scepter of Fire to become a proper artifact.",
-					player,
-					{"~!Continue"},
-					{function(s)
-						ChangeUnitOwner(uncount[unit1], 15)
-						SetUnitVariable(uncount[unit1], "LastCycle", GameCycle)
-					end},
-					"dwarf/icons/thursagan.png"
-				)
-			end
+		if (FindHero("Thursagan", GetFactionPlayer("Norlund Clan")) ~= nil) then
+			Event(
+				FindHero("Thursagan"),
+				"This forge will work perfectly. Give me a few days here, and I can reforge the Scepter of Fire to become a proper artifact.",
+				player,
+				{"~!Continue"},
+				{function(s)
+					ChangeUnitOwner(FindHero("Thursagan", GetFactionPlayer("Norlund Clan")), 15)
+					SetUnitVariable(FindHero("Thursagan", GetFactionPlayer("Norlund Clan")), "LastCycle", GameCycle)
+				end},
+				"dwarf/icons/thursagan.png"
+			)
 		end
 		return false
 	end
@@ -591,7 +577,7 @@ AddTrigger(
 		local uncount = 0
 		uncount = GetUnits(15)
 		for unit1 = 1,table.getn(uncount) do 
-			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-hero-thursagan" and (GameCycle - GetUnitVariable(uncount[unit1], "LastCycle")) > 6000) then -- Scepter is crafted after 6000 cycles
+			if (GetUnitVariable(uncount[unit1], "Character") == "Thursagan" and (GameCycle - GetUnitVariable(uncount[unit1], "LastCycle")) > 6000) then -- Scepter is crafted after 6000 cycles
 				unit = CreateUnit("unit-scepter-of-fire", 15, {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY") + 1})
 				player = GetFactionPlayer("Norlund Clan")
 				return true
@@ -600,13 +586,7 @@ AddTrigger(
 		return false
 	end,
 	function() 
-		local uncount = 0
-		uncount = GetUnits(15)
-		for unit1 = 1,table.getn(uncount) do 
-			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-hero-thursagan") then
-				ChangeUnitOwner(uncount[unit1], GetFactionPlayer("Norlund Clan"))
-			end
-		end
+		ChangeUnitOwner(FindHero("Thursagan"), GetFactionPlayer("Norlund Clan"))
 		Event(
 			FindHero("Thursagan"),
 			"I have completed my work. Now it is truly the Scepter of Fire, a mighty artifact.",

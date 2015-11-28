@@ -45,7 +45,7 @@ if (LoadedGame == false) then
 		SetPlayerData(rome_player, "Allow", "unit-teuton-catapult", "F")
 		SetPlayerData(rome_player, "Allow", "unit-teuton-stronghold", "F")
 
-	--	unit = CreateUnit("unit-hero-marbod", 0, {Players[0].StartPos.x, Players[0].StartPos.y}) -- add Ballomar here later
+	--	unit = CreateUnit("unit-suebi-swordsman", 0, {Players[0].StartPos.x, Players[0].StartPos.y}) -- add Ballomar here later
 	
 		unit = CreateUnit("unit-teuton-swordsman", rome_player, {Players[rome_player].StartPos.x, Players[rome_player].StartPos.y})
 		SetUnitVariable(unit, "Active", false) -- set town defender to passive AI (so that they do not participate in attacks)
@@ -87,7 +87,7 @@ if (LoadedGame == false) then
 		
 		-- Marcomanni units
 		CreateProvinceUnits("Bohemia", 4)		
-	--	unit = CreateUnit("unit-hero-marbod", 4, {Players[4].StartPos.x, Players[4].StartPos.y}) -- add Ballomar here later
+	--	unit = CreateUnit("unit-suebi-swordsman", 4, {Players[4].StartPos.x, Players[4].StartPos.y}) -- add Ballomar here later
 		
 		-- Roman units
 		CreateProvinceUnits("Austria", 0, 4)

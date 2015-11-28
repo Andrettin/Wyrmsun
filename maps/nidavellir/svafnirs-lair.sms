@@ -259,11 +259,11 @@ if (GrandStrategy == false) then
 		SetUnitVariable(unit, "ForTheMotherland", 1)
 	else
 		if (GetPlayerData(0, "Name") ~= "Shorbear Clan" and GetPlayerData(0, "Name") ~= "Shinsplitter Clan" and (GetThisPlayer() ~= 0 or (PlayerFaction ~= "Shorbear Clan" and PlayerFaction ~= "Shinsplitter Clan"))) then
-			unit = CreateUnit("unit-hero-rugnur", 0, {16, 16})
+			unit = CreateUnit("unit-dwarven-axefighter", 0, {16, 16})
 			SetUnitVariable(unit, "Character", "Rugnur")
-			unit = CreateUnit("unit-hero-baglur", 0, {16, 16})
+			unit = CreateUnit("unit-dwarven-steelclad", 0, {16, 16})
 			SetUnitVariable(unit, "Character", "Baglur")
-			unit = CreateUnit("unit-hero-thursagan", 0, {16, 16})
+			unit = CreateUnit("unit-dwarven-thane", 0, {16, 16})
 			SetUnitVariable(unit, "Character", "Thursagan")
 			unit = CreateUnit("unit-dwarven-gryphon-rider", 0, {16, 16}) -- Krawg
 			IncreaseUnitLevel(unit, 1, true)

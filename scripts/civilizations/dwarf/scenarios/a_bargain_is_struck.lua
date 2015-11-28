@@ -43,7 +43,7 @@ AddTrigger(
 			return false
 		end
 		for i=0,14 do
-			if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Shinsplitter Clan" or GetPlayerData(i, "Name") == "Knalga") and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-thane")) >= 1 and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1 and GetCivilizationExists("gnome") and GetNumRivals(i) >= 2 and not Players[i]:IsEnemy(Players[GetCivilizationPlayer("gnome")]) and GetPlayerData(i, "UnitTypesCount", "unit-gnomish-caravan") < 1) then
+			if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Shinsplitter Clan" or GetPlayerData(i, "Name") == "Knalga") and FindHero("Rugnur", i) ~= nil and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1 and GetCivilizationExists("gnome") and GetNumRivals(i) >= 2 and not Players[i]:IsEnemy(Players[GetCivilizationPlayer("gnome")]) and GetPlayerData(i, "UnitTypesCount", "unit-gnomish-caravan") < 1) then
 				player = i
 				
 				-- this check is necessary to see if there is a viable raider player (so that the game doesn't crash if the only other dwarven clan are the Shorbear)
@@ -547,7 +547,7 @@ AddTrigger(
 			if (
 				PlayerHasObjective(i, "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall")
 				and GetPlayerData(i, "RaceName") == "dwarf"
-				and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-thane")) >= 1
+				and FindHero("Rugnur", i) ~= nil
 				and (IfNearUnit(i, ">=", 1, "unit-gnomish-recruit", "unit-dwarven-town-hall") or IfNearUnit(i, ">=", 1, "unit-gnomish-recruit", "unit-dwarven-stronghold"))
 				and (IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-recruit") or IfNearUnit(i, ">=", 1, "unit-dwarven-stronghold", "unit-gnomish-recruit"))
 			) then
@@ -620,7 +620,7 @@ AddTrigger(
 			if (
 				PlayerHasObjective(i, "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall")
 				and GetPlayerData(i, "RaceName") == "dwarf"
-				and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-thane")) >= 1
+				and FindHero("Rugnur", i) ~= nil
 				and (IfNearUnit(i, ">=", 4, "unit-gnomish-caravan", "unit-dwarven-town-hall") or IfNearUnit(i, ">=", 4, "unit-gnomish-caravan", "unit-dwarven-stronghold"))
 				and (IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-caravan") or IfNearUnit(i, ">=", 1, "unit-dwarven-stronghold", "unit-gnomish-caravan"))
 			) then
@@ -697,7 +697,7 @@ AddTrigger(
 				(SyncRand(100) + 1) <= 10
 				and PlayerHasObjective(i, "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall")
 				and GetPlayerData(i, "RaceName") == "dwarf"
-				and (GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-steelclad") + GetPlayerData(i, "UnitTypesCount", "unit-hero-rugnur-thane")) >= 1
+				and FindHero("Rugnur", i) ~= nil
 				and (IfNearUnit(i, ">=", 4, "unit-gnomish-caravan", "unit-dwarven-town-hall") or IfNearUnit(i, ">=", 4, "unit-gnomish-caravan", "unit-dwarven-stronghold"))
 				and (IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-caravan") or IfNearUnit(i, ">=", 1, "unit-dwarven-stronghold", "unit-gnomish-caravan"))
 				and (IfNearUnit(i, ">=", 1, "unit-gnomish-recruit", "unit-dwarven-town-hall") or IfNearUnit(i, ">=", 1, "unit-gnomish-recruit", "unit-dwarven-stronghold"))

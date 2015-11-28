@@ -48,7 +48,7 @@ if (LoadedGame == false) then
 	SetPlayerData(15, "RaceName", "neutral")
 	
 	if (GrandStrategy == false) then
-		unit = CreateUnit("unit-hero-marbod", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		unit = CreateUnit("unit-suebi-swordsman", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 		SetUnitVariable(unit, "Character", "Marbod")
 		unit = CreateUnit("unit-suebi-swordsman", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 		unit = CreateUnit("unit-teuton-archer", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
@@ -89,7 +89,7 @@ if (LoadedGame == false) then
 		
 		-- Marcomanni units
 		CreateProvinceUnits("Brandenburg", 0, 2)
-		unit = CreateUnit("unit-hero-marbod", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		unit = CreateUnit("unit-suebi-swordsman", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 		SetUnitVariable(unit, "Character", "Marbod")
 		
 		-- Boii units
