@@ -256,15 +256,14 @@ function SetPlayerData(player, data, arg1, arg2)
 				elseif (arg1 == Defender) then
 					CreateProvinceUnits(AttackedProvince.Name, player, 1, false, false)
 				end
-				for i, unitName in ipairs(Units) do
-					if (IsHero(unitName) and GetGrandStrategyHeroUnitType(GetUnitTypeData(unitName, "DefaultName")) == unitName) then -- create heroes which are in the province for the defender
-						if (arg1 == Attacker and GetProvinceHero(AttackedProvince.Name, GetUnitTypeData(unitName, "DefaultName")) == 3) then
-							unit = OldCreateUnit(unitName, player, {Players[player].StartPos.x, Players[player].StartPos.y})
-							SetUnitVariable(unit, "Character", GetUnitTypeData(unitName, "DefaultName"))
-						elseif (arg1 == Defender and GetProvinceHero(AttackedProvince.Name, GetUnitTypeData(unitName, "DefaultName")) == 2) then
-							unit = OldCreateUnit(unitName, player, {Players[player].StartPos.x, Players[player].StartPos.y})
-							SetUnitVariable(unit, "Character", GetUnitTypeData(unitName, "DefaultName"))
-						end
+				local grand_strategy_heroes = GetGrandStrategyHeroes()
+				for i = 1, table.getn(grand_strategy_heroes) do
+					if (
+						(arg1 == Attacker and GetProvinceHero(AttackedProvince.Name, grand_strategy_heroes[i]) == 3)
+						or (arg1 == Defender and GetProvinceHero(AttackedProvince.Name, grand_strategy_heroes[i]) == 2) -- create heroes which are in the province for the defender
+					) then
+						unit = OldCreateUnit(GetGrandStrategyHeroUnitType(grand_strategy_heroes[i]), player, {Players[player].StartPos.x, Players[player].StartPos.y})
+						SetUnitVariable(unit, "Character", grand_strategy_heroes[i])
 					end
 				end
 			end

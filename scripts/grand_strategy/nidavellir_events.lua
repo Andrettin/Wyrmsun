@@ -32,8 +32,8 @@ local NidavellirEvents = {
 		Name = "A Rocky Home",
 		Description = "Our clan, led by Modsognir, has arrived in Svarinshaug seeking a new home. Beset by hostile natural forces on all sides, can we survive our first winter?",
 		Heroes = {
-			unit_hero_modsognir = true,
-			unit_hero_durin = true
+			Modsognir = true,
+			Durin = true
 		},
 		Conditions = function(s)
 			if (
@@ -94,8 +94,8 @@ local NidavellirEvents = {
 		Name = "The Mead of Wisdom",
 		Description = "Word has reached our chieftain Modsognir that the dwarves Fjalar and Galar have slain our wise clansman Thjodrorir. Modsognir's advisors suggest sending Durin to enter the two dwarves' hall, returning with the sage's remains to give him a proper burial, and bringing the evil pair to the clan's justice.",
 		Heroes = {
-			unit_hero_modsognir = true,
-			unit_hero_durin = true
+			Modsognir = true,
+			Durin = true
 		},
 		RequiredEvents = {
 			ARockyHome = true
@@ -156,8 +156,8 @@ local NidavellirEvents = {
 		Name = "The Treasures of Svarinshaug",
 		Description = "The dwarven smiths Brokk and Eitri are competing with the renowned sons of Ivaldi to craft the best artifacts for Modsognir. To obtain the necessary high quality ores will be perilous, however, as dangerous creatures abound in the deep mines where they lay...",
 		Heroes = {
-			unit_hero_modsognir = true,
-			unit_hero_durin = true
+			Modsognir = true,
+			Durin = true
 		},
 		RequiredEvents = {
 			TheMeadOfWisdom = true
@@ -206,8 +206,8 @@ local NidavellirEvents = {
 		Name = "The Necklace of the Brisings",
 		Description = "The necklace made for Modsognir's wife by the Brisings - a group of four dwarven smiths - has been stolen! The culprits, a band of local dwarven thieves, sneaked away with the necklace last night, going back to their hideout. We must avenge this dishonor to our clan, and recover the necklace from these bandits!",
 		Heroes = {
-			unit_hero_modsognir = true,
-			unit_hero_durin = true
+			Modsognir = true,
+			Durin = true
 		},
 		RequiredEvents = {
 			TheTreasuresOfSvarinshaug = true
@@ -276,8 +276,8 @@ local NidavellirEvents = {
 		Name = "The Binding of Grafvitnir",
 		Description = "The colossal wyrm Grafvitnir threatens the survival of the fledgling dwarves, who have little chance of slaying the monstrous creature. The only hope rests in getting close enough to bind Grafvitnir with a powerful fetter crafted by the clan's talented smiths.",
 		Heroes = {
-			unit_hero_modsognir = true,
-			unit_hero_durin = true
+			Modsognir = true,
+			Durin = true
 		},
 		RequiredEvents = {
 			TheNecklaceOfTheBrisings = true
@@ -582,9 +582,9 @@ local NidavellirEvents = {
 			CavernsOfChaincolt = true
 		},
 		Heroes = {
-			unit_hero_rugnur = true,
-			unit_hero_baglur = true,
-			unit_hero_durstorn = true
+			Rugnur = true,
+			Baglur = true,
+			Durstorn = true
 		},
 		TriggeredOnly = true,
 		Options = {"~!OK"},
@@ -716,9 +716,9 @@ local NidavellirEvents = {
 			unit_gnomish_recruit = 1 -- must have a gnomish recruit in the Caverns of Chaincolt
 		},
 		Heroes = {
-			unit_hero_rugnur = true,
-			unit_hero_baglur = true,
-			unit_hero_durstorn = true
+			Rugnur = true,
+			Baglur = true,
+			Durstorn = true
 		},
 		RandomChance = 50, -- took two years
 		Options = {"~!OK"},
@@ -769,10 +769,10 @@ local NidavellirEvents = {
 			unit_gnomish_recruit = 1 -- must have a gnomish recruit in the Caverns of Chaincolt
 		},
 		Heroes = {
-			unit_hero_rugnur = true,
-			unit_hero_baglur = true,
-			unit_hero_thursagan = true,
-			unit_hero_durstorn = true
+			Rugnur = true,
+			Baglur = true,
+			Thursagan = true,
+			Durstorn = true
 		},
 		RandomChance = 50, -- took two years
 		Options = {"~!OK"},
@@ -821,10 +821,10 @@ local NidavellirEvents = {
 			unit_gnomish_recruit = 1 -- must have a gnomish recruit in the Caverns of Chaincolt
 		},
 		Heroes = {
-			unit_hero_rugnur = true,
-			unit_hero_baglur = true,
-			unit_hero_thursagan = true,
-			unit_hero_durstorn = true
+			Rugnur = true,
+			Baglur = true,
+			Thursagan = true,
+			Durstorn = true
 		},
 		Commodities = {
 			Coal = 20000
@@ -997,9 +997,9 @@ local NidavellirEvents = {
 			CavernsOfChaincolt = true
 		},
 		Heroes = {
-			unit_hero_rugnur = true,
-			unit_hero_baglur = true,
-			unit_hero_thursagan = true
+			Rugnur = true,
+			Baglur = true,
+			Thursagan = true
 		},
 		Commodities = {
 			Coal = 20000
@@ -1119,9 +1119,9 @@ local NidavellirEvents = {
 			CavernsOfChaincolt = true
 		},
 		Heroes = {
-			unit_hero_rugnur = true,
-			unit_hero_baglur = true,
-			unit_hero_thursagan = true
+			Rugnur = true,
+			Baglur = true,
+			Thursagan = true
 		},
 		RequiredEvents = {
 			TheWyrm = true

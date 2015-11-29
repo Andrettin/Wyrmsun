@@ -181,11 +181,7 @@ function addEncyclopediaIcon(unit_name, menu, x, y)
 		encyclopedia_icon_frame = CIcon:Get(GetUnitTypeData(unit_name, "Icon")).Frame
 		civilization = GetUnitTypeData(unit_name, "Civilization")
 		faction = GetUnitTypeData(unit_name, "Faction")
-		if (GetUnitTypeData(unit_name, "Hero") == false) then
-			tooltip_name = GetUnitTypeData(unit_name, "Name")
-		else
-			tooltip_name = GetUnitTypeData(unit_name, "DefaultName")
-		end
+		tooltip_name = GetUnitTypeData(unit_name, "Name")
 		if (civilization ~= "") then
 			tooltip_civilization = "(" ..  _(CapitalizeString(civilization))
 			if (faction ~= "") then

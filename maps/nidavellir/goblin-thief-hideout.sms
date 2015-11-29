@@ -20,11 +20,11 @@ if (GrandStrategyEventMap) then
 	CreateProvinceUnits(EventProvince.Name, 0)
 	
 	-- create heroes, if any
-	for i, unitName in ipairs(Units) do
-		if (IsHero(unitName)) then
-			if (GetProvinceHero(EventProvince.Name, GetUnitTypeData(unitName, "DefaultName")) == 2 and GetGrandStrategyHeroUnitType(GetUnitTypeData(unitName, "DefaultName")) == unitName) then
-				unit = OldCreateUnit(unitName, 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-				SetUnitVariable(unit, "Character", GetUnitTypeData(unitName, "DefaultName"))
+	local grand_strategy_heroes = GetGrandStrategyHeroes()
+	for i = 1, table.getn(grand_strategy_heroes) do
+		if (GetProvinceHero(EventProvince.Name, grand_strategy_heroes[i]) == 2) then
+				unit = OldCreateUnit(GetGrandStrategyHeroUnitType(grand_strategy_heroes[i]), 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+				SetUnitVariable(unit, "Character", grand_strategy_heroes[i])
 			end
 		end
 	end

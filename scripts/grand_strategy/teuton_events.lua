@@ -205,7 +205,7 @@ local TeutonEvents = {
 		Name = "The Home of the Boii",
 		Description = "Worried about the Roman presence on the Rhine, Marbod wishes to take the Marcomanni into the lands of the Boii and to establish a kingdom there, splitting off from the rest of the Suebi.",
 		Heroes = {
-			unit_hero_marbod = true
+			Marbod = true
 		},
 		Conditions = function(s)
 			if (
@@ -299,7 +299,7 @@ local TeutonEvents = {
 			end
 		end,
 		Heroes = {
-			unit_hero_marbod = true
+			Marbod = true
 		},
 		MinYear = 19,
 		Options = {"~!OK"},
