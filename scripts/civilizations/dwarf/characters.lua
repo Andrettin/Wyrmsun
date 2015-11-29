@@ -149,7 +149,8 @@ DefineCharacter("Rugnur", {
 	ProvinceOfOrigin = "Caverns of Chaincolt",
 	Year = 25,
 	DeathYear = 40 + 30, -- died in 40 AD of a violent death, and wasn't old; +30 years
-	Persistent = true
+	Persistent = true,
+	ForbiddenUpgrades = {"unit-dwarven-yale-rider"}
 })
 
 DefineCharacter("Oin", {
