@@ -4242,3 +4242,30 @@ function SetRegionPopulation(region_name, quantity)
 		SetProvincePopulation(region[i], quantity / table.getn(region))
 	end
 end
+
+function RestoreScenarioUnitsToProvince(arg) -- restore the units of a certain faction to a certain province
+	if (arg.IgnoredUnitClasses ~= nil) then
+		arg.IgnoredUnitClasses = {}
+	end
+	
+	for i, unitName in ipairs(Units) do
+		if (IsOffensiveMilitaryUnit(unitName) and GetArrayIncludes(arg.IgnoredUnitClasses, GetUnitTypeData(unitName, "Class")) == false) then
+			ChangeProvinceUnitQuantity(arg.ProvinceName, unitName, math.ceil(GetPlayerData(GetFactionPlayer(arg.FactionName), "UnitTypesNonHeroCount", unitName) / BattalionMultiplier))
+		end
+	end
+	
+	if (arg.Heroes ~= nil) then
+		if (arg.Heroes == "any") then
+			arg.Heroes = GetGrandStrategyHeroes()
+		end
+
+		local faction_heroes = GetPlayerData(GetFactionPlayer(arg.FactionName), "Heroes")
+		for i = 1, table.getn(arg.Heroes) do
+			if (GetArrayIncludes(faction_heroes, arg.Heroes[i])) then
+				SetProvinceHero(arg.ProvinceName, arg.Heroes[i], GetGrandStrategyHeroUnitType(arg.Heroes[i]), 2)
+			elseif (GetProvinceHero(arg.ProvinceName, arg.Heroes[i]) == 2) then
+				SetProvinceHero(arg.ProvinceName, arg.Heroes[i], GetGrandStrategyHeroUnitType(arg.Heroes[i]), 0)
+			end
+		end
+	end
+end

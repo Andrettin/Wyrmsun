@@ -127,20 +127,35 @@ function RunEncyclopediaUnitsMenu(state)
 	
 	local icon_x = 0
 	local icon_y = 0
-	for i, unitName in ipairs(Units) do
-		if (state ~= "technologies" and string.find(unitName, "upgrade-") == nil) then
-			if ((GetUnitTypeData(unitName, "Description") ~= "" or GetUnitTypeData(unitName, "Background") ~= "") and GetUnitTypeData(unitName, "Building") == (state == "buildings") and IsHero(unitName) == (state == "heroes") and (GetUnitTypeData(unitName, "Mercenary") and GetUnitTypeData(unitName, "Building") == false) == (state == "mercenaries")) then
-				addEncyclopediaIcon(unitName, menu, offx + 23 + 4 + (54 * icon_x), offy + 10 + 4 + (46 * (icon_y + 1)))
-				if (icon_x >= 10) then
-					icon_x = 0
-					icon_y = icon_y + 1
-				else
-					icon_x = icon_x + 1
+	if (state ~= "heroes") then
+		for i, unitName in ipairs(Units) do
+			if (state ~= "technologies" and string.find(unitName, "upgrade-") == nil) then
+				if ((GetUnitTypeData(unitName, "Description") ~= "" or GetUnitTypeData(unitName, "Background") ~= "") and GetUnitTypeData(unitName, "Building") == (state == "buildings") and (GetUnitTypeData(unitName, "Mercenary") and GetUnitTypeData(unitName, "Building") == false) == (state == "mercenaries")) then
+					addEncyclopediaIcon(unitName, menu, offx + 23 + 4 + (54 * icon_x), offy + 10 + 4 + (46 * (icon_y + 1)))
+					if (icon_x >= 10) then
+						icon_x = 0
+						icon_y = icon_y + 1
+					else
+						icon_x = icon_x + 1
+					end
+				end
+			elseif (state == "technologies" and string.find(unitName, "unit-") == nil) then
+				if (CUpgrade:Get(unitName).Description ~= "" or CUpgrade:Get(unitName).Background ~= "") then
+					addEncyclopediaIcon(unitName, menu, offx + 23 + 4 + (54 * icon_x), offy + 10 + 4 + (46 * (icon_y + 1)))
+					if (icon_x >= 10) then
+						icon_x = 0
+						icon_y = icon_y + 1
+					else
+						icon_x = icon_x + 1
+					end
 				end
 			end
-		elseif (state == "technologies" and string.find(unitName, "unit-") == nil) then
-			if (CUpgrade:Get(unitName).Description ~= "" or CUpgrade:Get(unitName).Background ~= "") then
-				addEncyclopediaIcon(unitName, menu, offx + 23 + 4 + (54 * icon_x), offy + 10 + 4 + (46 * (icon_y + 1)))
+		end
+	else
+		local heroes = GetCharacters()
+		for i = 1, table.getn(heroes) do
+			if (GetCharacterData(heroes[i], "Persistent") and (GetCharacterData(heroes[i], "Description") ~= "" or GetCharacterData(heroes[i], "Background") ~= "")) then
+				addEncyclopediaIcon(heroes[i], menu, offx + 23 + 4 + (54 * icon_x), offy + 10 + 4 + (46 * (icon_y + 1)))
 				if (icon_x >= 10) then
 					icon_x = 0
 					icon_y = icon_y + 1
@@ -176,7 +191,7 @@ function addEncyclopediaIcon(unit_name, menu, x, y)
 	local faction
 	local tooltip_name = ""
 	local tooltip_civilization = ""
-	if (string.find(unit_name, "upgrade-") == nil) then
+	if (string.find(unit_name, "unit") ~= nil) then
 		encyclopedia_icon = CIcon:Get(GetUnitTypeData(unit_name, "Icon")).G
 		encyclopedia_icon_frame = CIcon:Get(GetUnitTypeData(unit_name, "Icon")).Frame
 		civilization = GetUnitTypeData(unit_name, "Civilization")
@@ -189,7 +204,7 @@ function addEncyclopediaIcon(unit_name, menu, x, y)
 			end
 			tooltip_civilization = tooltip_civilization .. ")"
 		end
-	else
+	elseif (string.find(unit_name, "upgrade") ~= nil) then
 		encyclopedia_icon = CUpgrade:Get(unit_name).Icon.G
 		encyclopedia_icon_frame = CUpgrade:Get(unit_name).Icon.Frame
 		civilization = CUpgrade:Get(unit_name).Civilization
@@ -199,6 +214,19 @@ function addEncyclopediaIcon(unit_name, menu, x, y)
 			tooltip_civilization = "(" ..  _(CapitalizeString(civilization))
 			if (faction ~= "") then
 				tooltip_civilization = tooltip_civilization ..  ": " .. _(FullyCapitalizeString(string.gsub(faction, "-", " ")))
+			end
+			tooltip_civilization = tooltip_civilization .. ")"
+		end
+	else -- heroes
+		encyclopedia_icon = CIcon:Get(GetCharacterData(unit_name, "Icon")).G
+		encyclopedia_icon_frame = CIcon:Get(GetCharacterData(unit_name, "Icon")).Frame
+		civilization = GetCharacterData(unit_name, "Civilization")
+		faction = ""
+		tooltip_name = GetCharacterData(unit_name, "FullName")
+		if (civilization ~= "") then
+			tooltip_civilization = "(" ..  _(CapitalizeString(civilization))
+			if (faction ~= "") then
+				tooltip_civilization = tooltip_civilization ..  " - " .. _(FullyCapitalizeString(string.gsub(faction, "-", " ")))
 			end
 			tooltip_civilization = tooltip_civilization .. ")"
 		end
@@ -245,7 +273,7 @@ function addEncyclopediaIcon(unit_name, menu, x, y)
 			local description = ""
 			local quote = ""
 			local background = ""
-			if (string.find(unit_name, "upgrade-") == nil) then
+			if (string.find(unit_name, "unit") ~= nil) then
 				if (GetUnitTypeData(unit_name, "Civilization") ~= "") then
 					civilization = "Civilization: " .. _(CapitalizeString(GetUnitTypeData(unit_name, "Civilization"))) .. "\n\n"
 				end
@@ -264,7 +292,7 @@ function addEncyclopediaIcon(unit_name, menu, x, y)
 				if (GetUnitTypeData(unit_name, "Background") ~= "") then
 					background = "\n\nBackground: " .. GetUnitTypeData(unit_name, "Background")
 				end
-			else
+			elseif (string.find(unit_name, "upgrade") ~= nil) then
 				if (CUpgrade:Get(unit_name).Civilization ~= "") then
 					civilization = "Civilization: " .. CapitalizeString(CUpgrade:Get(unit_name).Civilization) .. "\n\n"
 				end
@@ -282,6 +310,25 @@ function addEncyclopediaIcon(unit_name, menu, x, y)
 				end
 				if (CUpgrade:Get(unit_name).Background ~= "") then
 					background = "\n\nBackground: " .. CUpgrade:Get(unit_name).Background
+				end
+			else
+				if (GetCharacterData(unit_name, "Civilization") ~= "") then
+					civilization = "Civilization: " .. _(CapitalizeString(GetCharacterData(unit_name, "Civilization"))) .. "\n\n"
+				end
+--				if (GetCharacterData(unit_name, "Faction") ~= "") then
+--					faction = "Faction: " .. _(CapitalizeString(GetCharacterData(unit_name, "Faction"))) .. "\n\n"
+--				end
+				if (GetUnitTypeData(GetCharacterData(unit_name, "Type"), "Class") ~= "") then
+					unit_type_class = "Class: " .. _(FullyCapitalizeString(string.gsub(GetUnitTypeData(GetCharacterData(unit_name, "Type"), "Class"), "-", " "))) .. "\n\n"
+				end
+				if (GetCharacterData(unit_name, "Description") ~= "") then
+					description = "Description: " .. GetCharacterData(unit_name, "Description")
+				end
+				if (GetCharacterData(unit_name, "Quote") ~= "") then
+					quote = "\n\nQuote: " .. GetCharacterData(unit_name, "Quote")
+				end
+				if (GetCharacterData(unit_name, "Background") ~= "") then
+					background = "\n\nBackground: " .. GetCharacterData(unit_name, "Background")
 				end
 			end
 			l:setCaption(civilization .. faction .. unit_type_class .. description .. quote .. background)
@@ -1141,7 +1188,7 @@ function GetCivilizationBackground(civilization)
 end
 
 function GetUnitBackground(unit_name)
-	if (string.find(unit_name, "upgrade-") == nil) then
+	if (string.find(unit_name, "unit") ~= nil) then
 		if (GetUnitTypeData(unit_name, "Civilization") ~= "") then
 			return GetCivilizationBackground(GetUnitTypeData(unit_name, "Civilization"))
 		elseif (unit_name == "unit-gryphon") then
@@ -1151,8 +1198,12 @@ function GetUnitBackground(unit_name)
 		elseif (unit_name == "unit-yale") then
 			return "ui/backgrounds/yale.png"
 		end
-	else
+	elseif (string.find(unit_name, "upgrade") ~= nil) then
 		return GetCivilizationBackground(CUpgrade:Get(unit_name).Civilization)
+	else -- heroes
+		if (GetCharacterData(unit_name, "Civilization") ~= "") then
+			return GetCivilizationBackground(GetCharacterData(unit_name, "Civilization"))
+		end
 	end
 	
 	return "ui/backgrounds/wyrm.png"
