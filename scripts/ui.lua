@@ -222,6 +222,12 @@ b.Y = 16 + 12
 b.Style = FindButtonStyle("icon")
 UI.IdleWorkerButton = b
 
+b = CUIButton:new()
+b.X = Video.Width - 12 - 46
+b.Y = 16 + 12 + 38 + 24
+b.Style = FindButtonStyle("icon")
+UI.LevelUpUnitButton = b
+
 UI.CompletedBarColorRGB = CColor(48, 100, 4)
 UI.CompletedBarShadow = false
 
