@@ -5207,12 +5207,6 @@ function LoadProvinces(world)
 					SetProvinceUnitQuantity(WorldMapProvinces[key].Name, string.gsub(second_key, "_", "-"), province_table[key].Units[second_key])
 				end
 			end
-			if (province_table[key].Heroes ~= nil) then
-				for second_key, second_value in pairs(province_table[key].Heroes) do
-					local hero_unit_type = string.gsub(second_key, "_", "-")
-					SetProvinceHero(WorldMapProvinces[key].Name, GetUnitTypeData(hero_unit_type, "DefaultName"), hero_unit_type, province_table[key].Heroes[second_key])
-				end
-			end
 			if (province_table[key].SettlementTerrain ~= nil) then
 				WorldMapProvinces[key]["SettlementTerrain"] = province_table[key].SettlementTerrain
 			end

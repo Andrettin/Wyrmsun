@@ -1095,35 +1095,6 @@ function FactionHasTechnologyType(faction, technology_type)
 	return false
 end
 
-function ProvinceHasHero(province, unit_type)
-	if (GetProvinceHero(province.Name, GetUnitTypeData(unit_type, "DefaultName")) == 2) then
-		return true
-	else
-		return false
-	end
-end
-
-function GetHeroProvinceForFaction(unit_type, faction)
-	for province_i, key in ipairs(faction.OwnedProvinces) do
-		if (ProvinceHasHero(WorldMapProvinces[key], unit_type)) then
-			return WorldMapProvinces[key]
-		end
-	end
-	return WorldMapProvinces[key]
-end
-
-function RemoveHeroFromProvince(unit_type, province)
-	if (GetProvinceHero(province.Name, GetUnitTypeData(unit_type, "DefaultName")) == 2) then
-		SetProvinceHero(province.Name, GetUnitTypeData(unit_type, "DefaultName"), unit_type, 0)
-	end
-end
-
-function RemoveHeroFromFaction(unit_type, faction)
-	for province_i, key in ipairs(faction.OwnedProvinces) do
-		RemoveHeroFromProvince(unit_type, WorldMapProvinces[key])
-	end
-end
-
 function CanAttackProvince(province, faction, province_from)
 	if (GetProvinceOwner(province.Name) == faction.Name or GetProvinceWater(province.Name) or (GetProvinceAttackedBy(province.Name) ~= "" and GetProvinceAttackedBy(province.Name) ~= faction.Name)) then -- province can only be attacked by one player per turn because of mechanical limitations of the current code
 		return false

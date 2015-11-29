@@ -284,7 +284,7 @@ local TeutonEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				RemoveHeroFromFaction(GetGrandStrategyHeroUnitType("Marbod"), EventFaction)
+				KillGrandStrategyHero("Marbod")
 			end
 		}
 	},

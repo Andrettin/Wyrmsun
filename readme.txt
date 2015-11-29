@@ -239,6 +239,9 @@ https://github.com/Andrettin/Wyrmsun
 - Building a Dock is now necessary for fishing and for attacking provinces through water.
 - Added Orkney province off the coast of Scotland.
 
+* Heroes
+- Thoroughly reworked the hero code. Heroes are now saved in the "heroes.lua" file instead of "preferences.lua".
+
 * Quests
 - The Caverns of Flame quest (Dwarf) now gives 2 technology points instead of 1.
 

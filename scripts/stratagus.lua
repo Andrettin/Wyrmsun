@@ -703,8 +703,8 @@ function StandardTriggers()
 				if (GetUnitVariable(uncount[unit1], "XpRequired") > 0 and GetUnitVariable(uncount[unit1], "Xp") >= GetUnitVariable(uncount[unit1], "XpRequired") and GetUnitBoolFlag(uncount[unit1], "Building") == false and GetUnitBoolFlag(uncount[unit1], "organic") and GetUnitBoolFlag(uncount[unit1], "Fauna") == false) then
 					IncreaseUnitLevel(uncount[unit1], 1, true)
 					if (GetUnitVariable(uncount[unit1], "Player") == GetThisPlayer()) then
-						if (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "DefaultName") ~= "") then
-							AddMessage(GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "DefaultName") .. " has leveled up!")
+						if (GetUnitVariable(uncount[unit1], "Character") ~= "") then
+							AddMessage(GetUnitVariable(uncount[unit1], "Character") .. " has leveled up!")
 						else
 							AddMessage("Your " .. GetUnitTypeName(GetUnitVariable(uncount[unit1], "Ident")) .. " has leveled up!")
 						end
@@ -1742,6 +1742,53 @@ function FindHero(hero, player)
 	end
 	
 	return nil
+end
+
+function PersistencyUpdates()
+	if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "The Mead of Poetry")) then
+		RemoveElementFromArray(wyr.preferences.QuestsCompleted, "The Mead of Poetry")
+		table.insert(wyr.preferences.QuestsCompleted, "The Mead of Wisdom")
+		SavePreferences()
+	end
+	
+	if (wyr.preferences.Heroes ~= nil) then
+		for key, value in pairs(wyr.preferences.Heroes) do
+			local hero_type = GetCharacterData(wyr.preferences.Heroes[key].name, "Type")
+			local hero_abilities = {}
+			if (wyr.preferences.Heroes[key].upgrades ~= nil) then
+				for i=1,table.getn(wyr.preferences.Heroes[key].upgrades) do
+					if (string.find(wyr.preferences.Heroes[key].upgrades[i], "upgrade") ~= nil) then
+						table.insert(hero_abilities, wyr.preferences.Heroes[key].upgrades[i])
+					else
+						hero_type = wyr.preferences.Heroes[key].upgrades[i]
+					end
+				end
+			end
+			DefineCharacter(wyr.preferences.Heroes[key].name, {
+				Level = wyr.preferences.Heroes[key].level,
+				Abilities = hero_abilities,
+				Type = hero_type
+			})
+		end
+		wyr.preferences.Heroes = nil
+		SavePreferences()
+	end
+	
+	if (wyr.preferences.SavedGrandStrategyGames ~= nil) then -- grand strategy games are now saved in separate files
+		wyr.preferences.SavedGrandStrategyGames = nil
+	elseif (wyr.preferences.GrandStrategySaveGames ~= nil) then -- grand strategy games are now saved in separate files
+		wyr.preferences.GrandStrategySaveGames = nil
+		SavePreferences()
+	end
+		
+	if (wyr.preferences.ShowOrders ~= nil) then
+		if (wyr.preferences.ShowOrders == 2) then
+			wyr.preferences.ShowPathlines = true
+			Preference.ShowPathlines = wyr.preferences.ShowPathlines
+		end
+		wyr.preferences.ShowOrders = nil
+		SavePreferences()
+	end
 end
 
 -------------------------------------------------------------------------------
