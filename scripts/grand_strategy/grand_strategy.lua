@@ -472,7 +472,7 @@ function EndTurn()
 		local grand_strategy_heroes = GetGrandStrategyHeroes()
 		for i = 1, table.getn(grand_strategy_heroes) do
 			if (GetProvinceHero(WorldMapProvinces[key].Name, grand_strategy_heroes[i]) == 1) then
-				SetProvinceHero(WorldMapProvinces[key].Name, grand_strategy_heroes[i], GetGrandStrategyHeroUnitType(grand_strategy_heroes[i]), 2)
+				SetProvinceHero(WorldMapProvinces[key].Name, grand_strategy_heroes[i], 2)
 			end
 		end
 	end
@@ -698,9 +698,9 @@ function AttackProvince(province, faction)
 		for i = 1, table.getn(grand_strategy_heroes) do
 			if (GetProvinceHero(province.Name, grand_strategy_heroes[i]) ~= 0) then
 				if (GetArrayIncludes(victorious_player_heroes, grand_strategy_heroes[i])) then
-					SetProvinceHero(province.Name, grand_strategy_heroes[i], GetGrandStrategyHeroUnitType(grand_strategy_heroes[i]), 2)
+					SetProvinceHero(province.Name, grand_strategy_heroes[i], 2)
 				else
-					SetProvinceHero(province.Name, grand_strategy_heroes[i], GetGrandStrategyHeroUnitType(grand_strategy_heroes[i]), 0)
+					SetProvinceHero(province.Name, grand_strategy_heroes[i], 0)
 				end
 			end
 		end
@@ -720,9 +720,9 @@ function AttackProvince(province, faction)
 			local grand_strategy_heroes = GetGrandStrategyHeroes()
 			for i = 1, table.getn(grand_strategy_heroes) do -- kill off defending heroes if the attacking player was the victorious one
 				if (GetProvinceHero(province.Name, grand_strategy_heroes[i]) == 2) then
-					SetProvinceHero(province.Name, grand_strategy_heroes[i], GetGrandStrategyHeroUnitType(grand_strategy_heroes[i]), 0)
+					SetProvinceHero(province.Name, grand_strategy_heroes[i], 0)
 				elseif (GetProvinceHero(province.Name, grand_strategy_heroes[i]) == 3) then
-					SetProvinceHero(province.Name, grand_strategy_heroes[i], GetGrandStrategyHeroUnitType(grand_strategy_heroes[i]), 2)
+					SetProvinceHero(province.Name, grand_strategy_heroes[i], 2)
 				end
 			end
 		else
@@ -739,7 +739,7 @@ function AttackProvince(province, faction)
 				local grand_strategy_heroes = GetGrandStrategyHeroes()
 				for i = 1, table.getn(grand_strategy_heroes) do -- kill off attacking heroes if the defending player was the victorious one
 					if (GetProvinceHero(province.Name, grand_strategy_heroes[i]) == 3) then
-						SetProvinceHero(province.Name, grand_strategy_heroes[i], GetGrandStrategyHeroUnitType(grand_strategy_heroes[i]), 0)
+						SetProvinceHero(province.Name, grand_strategy_heroes[i], 0)
 					end
 				end
 			end
@@ -872,7 +872,7 @@ function AcquireProvince(province, faction)
 		local grand_strategy_heroes = GetGrandStrategyHeroes()
 		for i = 1, table.getn(grand_strategy_heroes) do
 			if (GetProvinceHero(province.Name, grand_strategy_heroes[i]) == 1) then -- if a hero is moving here, remove him
-				SetProvinceHero(province.Name, grand_strategy_heroes[i], GetGrandStrategyHeroUnitType(grand_strategy_heroes[i]), 0)
+				SetProvinceHero(province.Name, grand_strategy_heroes[i], 0)
 			end
 		end
 	elseif (faction == "") then
@@ -2673,7 +2673,7 @@ function SetSelectedProvinceLua(province)
 			
 			if (SelectedHero ~= "" and SelectedHero ~= nil) then
 				SetProvinceAttackedBy(province.Name, GrandStrategyFaction.Civilization, GrandStrategyFaction.Name)
-				SetProvinceHero(province.Name, SelectedHero, GetGrandStrategyHeroUnitType(SelectedHero), 3)
+				SetProvinceHero(province.Name, SelectedHero, 3)
 				SelectedHero = ""
 			end
 		elseif (SelectedProvince ~= nil and GrandStrategyFaction ~= nil and GetProvinceOwner(SelectedProvince.Name) == GetProvinceOwner(province.Name) and GetProvinceOwner(SelectedProvince.Name) == GrandStrategyFaction.Name) then
@@ -2688,7 +2688,7 @@ function SetSelectedProvinceLua(province)
 			
 			if (SelectedHero ~= "" and SelectedHero ~= nil and GetProvinceHero(SelectedProvince.Name, SelectedHero) == 2) then
 				SetProvinceAttackedBy(province.Name, GrandStrategyFaction.Civilization, GrandStrategyFaction.Name)
-				SetProvinceHero(province.Name, SelectedHero, GetGrandStrategyHeroUnitType(SelectedHero), 1)
+				SetProvinceHero(province.Name, SelectedHero, 1)
 				SelectedHero = ""
 			end
 		end
@@ -4233,9 +4233,9 @@ function RestoreScenarioUnitsToProvince(arg) -- restore the units of a certain f
 		local faction_heroes = GetPlayerData(GetFactionPlayer(arg.FactionName), "Heroes")
 		for i = 1, table.getn(arg.Heroes) do
 			if (GetArrayIncludes(faction_heroes, arg.Heroes[i])) then
-				SetProvinceHero(arg.ProvinceName, arg.Heroes[i], GetGrandStrategyHeroUnitType(arg.Heroes[i]), 2)
+				SetProvinceHero(arg.ProvinceName, arg.Heroes[i], 2)
 			elseif (GetProvinceHero(arg.ProvinceName, arg.Heroes[i]) == 2) then
-				SetProvinceHero(arg.ProvinceName, arg.Heroes[i], GetGrandStrategyHeroUnitType(arg.Heroes[i]), 0)
+				SetProvinceHero(arg.ProvinceName, arg.Heroes[i], 0)
 			end
 		end
 	end

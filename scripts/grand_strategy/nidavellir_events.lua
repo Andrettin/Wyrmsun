@@ -48,8 +48,8 @@ local NidavellirEvents = {
 		OptionEffects = {
 			function(s)
 				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Modsogning Clan" and wyr.preferences.AutomaticBattles == false) then
-					SetProvinceHero("Svarinshaug", "Modsognir", GetGrandStrategyHeroUnitType("Modsognir"), 2)
-					SetProvinceHero("Svarinshaug", "Durin", GetGrandStrategyHeroUnitType("Durin"), 2)
+					SetProvinceHero("Svarinshaug", "Modsognir", 2)
+					SetProvinceHero("Svarinshaug", "Durin", 2)
 
 					GrandStrategyEventMap = true
 					GetMapInfo("maps/nidavellir/svarinshaug.smp")
@@ -105,7 +105,7 @@ local NidavellirEvents = {
 		OptionEffects = {
 			function(s)
 				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Modsogning Clan" and wyr.preferences.AutomaticBattles == false) then
-					SetProvinceHero("Svarinshaug", "Durin", GetGrandStrategyHeroUnitType("Durin"), 2)
+					SetProvinceHero("Svarinshaug", "Durin", 2)
 
 					GrandStrategyEventMap = true
 					GetMapInfo("maps/nidavellir/fjalars-and-galars-hall.smp")
@@ -204,8 +204,8 @@ local NidavellirEvents = {
 		OptionEffects = {
 			function(s)
 				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Modsogning Clan" and wyr.preferences.AutomaticBattles == false) then
-					SetProvinceHero("Svarinshaug", "Modsognir", GetGrandStrategyHeroUnitType("Modsognir"), 2)
-					SetProvinceHero("Svarinshaug", "Durin", GetGrandStrategyHeroUnitType("Durin"), 2)
+					SetProvinceHero("Svarinshaug", "Modsognir", 2)
+					SetProvinceHero("Svarinshaug", "Durin", 2)
 
 					GrandStrategyEventMap = true
 					GetMapInfo("maps/nidavellir/aurvang.smp")
@@ -264,8 +264,8 @@ local NidavellirEvents = {
 		OptionEffects = {
 			function(s)
 				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Modsogning Clan" and wyr.preferences.AutomaticBattles == false) then
-					SetProvinceHero("Svarinshaug", "Modsognir", GetGrandStrategyHeroUnitType("Modsognir"), 2)
-					SetProvinceHero("Svarinshaug", "Durin", GetGrandStrategyHeroUnitType("Durin"), 2)
+					SetProvinceHero("Svarinshaug", "Modsognir", 2)
+					SetProvinceHero("Svarinshaug", "Durin", 2)
 					
 					GrandStrategyEventMap = true
 					GetMapInfo(GetQuestData("The Binding of Grafvitnir", "Map"))
@@ -418,7 +418,7 @@ local NidavellirEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				SetProvinceHero("Northern Wastelands", "Thursagan", "unit-dwarven-thane", 2)
+				SetProvinceHero("Northern Wastelands", "Thursagan", 2)
 			end
 		},
 		OptionTooltips = {"Thursagan leaves our clan's territory"}
@@ -532,9 +532,9 @@ local NidavellirEvents = {
 
 				if (GetProvinceOwner("Caverns of Chaincolt") == "Shinsplitter Clan") then
 					RestoreScenarioUnitsToProvince({ProvinceName = "Caverns of Chaincolt", FactionName = "Shinsplitter Clan"})
-					SetProvinceHero("Caverns of Chaincolt", "Rugnur", GetGrandStrategyHeroUnitType("Rugnur"), 0)
-					SetProvinceHero("Caverns of Chaincolt", "Baglur", GetGrandStrategyHeroUnitType("Baglur"), 0)
-					SetProvinceHero("Caverns of Chaincolt", "Durstorn", "unit-dwarven-thane", 0)
+					SetProvinceHero("Caverns of Chaincolt", "Rugnur", 0)
+					SetProvinceHero("Caverns of Chaincolt", "Baglur", 0)
+					SetProvinceHero("Caverns of Chaincolt", "Durstorn", 0)
 				else
 					RestoreScenarioUnitsToProvince({ProvinceName = "Caverns of Chaincolt", FactionName = "Norlund Clan", Heroes = {"Rugnur", "Baglur"}})
 					RestoreScenarioUnitsToProvince({ProvinceName = "Southern Tunnels", FactionName = "Shinsplitter Clan"})
@@ -571,9 +571,9 @@ local NidavellirEvents = {
 
 				if (GetProvinceOwner("Caverns of Chaincolt") == "Shinsplitter Clan") then
 					RestoreScenarioUnitsToProvince({ProvinceName = "Caverns of Chaincolt", FactionName = "Shinsplitter Clan"})
-					SetProvinceHero("Caverns of Chaincolt", "Rugnur", GetGrandStrategyHeroUnitType("Rugnur"), 0)
-					SetProvinceHero("Caverns of Chaincolt", "Baglur", GetGrandStrategyHeroUnitType("Baglur"), 0)
-					SetProvinceHero("Caverns of Chaincolt", "Durstorn", "unit-dwarven-thane", 0)
+					SetProvinceHero("Caverns of Chaincolt", "Rugnur", 0)
+					SetProvinceHero("Caverns of Chaincolt", "Baglur", 0)
+					SetProvinceHero("Caverns of Chaincolt", "Durstorn", 0)
 				else
 					RestoreScenarioUnitsToProvince({ProvinceName = "Caverns of Chaincolt", FactionName = "Norlund Clan", Heroes = {"Rugnur", "Baglur"}})
 					RestoreScenarioUnitsToProvince({ProvinceName = "Southern Tunnels", FactionName = "Shinsplitter Clan"})
@@ -612,7 +612,7 @@ local NidavellirEvents = {
 
 				RestoreScenarioUnitsToProvince({ProvinceName = "Caverns of Chaincolt", FactionName = "Norlund Clan", Heroes = {"Rugnur", "Baglur", "Thursagan"}})
 			elseif ("Norlund Clan" ~= GrandStrategyFaction.Name or wyr.preferences.AutomaticBattles) then
-				SetProvinceHero("Caverns of Chaincolt", "Thursagan", "unit-dwarven-thane", 2)
+				SetProvinceHero("Caverns of Chaincolt", "Thursagan", 2)
 				SetProvinceSettlementBuilding("Northern Wastelands", "unit-dwarven-smithy", false)
 				SetProvinceUnitQuantity("Northern Wastelands", "unit-goblin-spearman", GetProvinceUnitQuantity("Northern Wastelands", "unit-goblin-spearman") / 2) -- halve enemies in the northern wastelands
 				SetProvinceUnitQuantity("Northern Wastelands", "unit-goblin-archer", GetProvinceUnitQuantity("Northern Wastelands", "unit-goblin-archer") / 2)
@@ -718,8 +718,7 @@ local NidavellirEvents = {
 				SetProvinceUnitQuantity("Shorbear Hills", "unit-dwarven-thane", 0) -- Glonoin
 				KillGrandStrategyHero("Glonoin")
 				
-				SetProvinceHero("Caverns of Chaincolt", "Durstorn", "unit-dwarven-thane", 0) -- Durstorn is killed in a conflict between him and other members of the clan
-				GrandStrategyEvents.DurstornDies = nil
+				SetProvinceHero("Caverns of Chaincolt", "Durstorn", 0) -- Durstorn is killed in a conflict between him and other members of the clan
 				ChangeProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-recruit", -1) -- the gnomish envoy returns south
 				ChangeProvinceUnitQuantity("Brown Hills", "unit-gnomish-recruit", 1)
 	
@@ -878,7 +877,7 @@ local NidavellirEvents = {
 				
 				if (GameResult ~= GameVictory and GetProvinceHero("Caverns of Chaincolt", "Rugnur") == 2 and GetProvinceHero("Caverns of Chaincolt", "Baglur") == 2 and GetProvinceHero("Caverns of Chaincolt", "Thursagan") == 2) then
 					ChangeFactionResource("dwarf", "Norlund Clan", "coal", -20000) -- Scepter of Fire crafted
-					SetProvinceHero("Caverns of Chaincolt", "Durstorn", "unit-dwarven-thane", 0)
+					SetProvinceHero("Caverns of Chaincolt", "Durstorn", 0)
 					GrandStrategyEvent(Factions.NorlundClan, GrandStrategyEvents.CavernsOfFlame)
 				end
 			end
@@ -925,12 +924,9 @@ local NidavellirEvents = {
 				SetProvinceUnitQuantity("Southern Tunnels", "unit-dwarven-thane", 0)
 				SetProvinceUnitQuantity("Southern Tunnels", "unit-surghan-mercenary-steelclad", 0)
 				
-				SetProvinceHero("Caverns of Chaincolt", "Rugnur", GetGrandStrategyHeroUnitType("Rugnur"), 0) -- Rugnur, Baglur and Thursagan die at the Caverns of Flame
-				GrandStrategyEvents.RugnurDies = nil
-				SetProvinceHero("Caverns of Chaincolt", "Baglur", GetGrandStrategyHeroUnitType("Baglur"), 0)
-				GrandStrategyEvents.BaglurDies = nil
-				SetProvinceHero("Caverns of Chaincolt", "Thursagan", GetGrandStrategyHeroUnitType("Thursagan"), 0)
-				GrandStrategyEvents.ThursaganDies = nil
+				SetProvinceHero("Caverns of Chaincolt", "Rugnur", 0) -- Rugnur, Baglur and Thursagan die at the Caverns of Flame
+				SetProvinceHero("Caverns of Chaincolt", "Baglur", 0)
+				SetProvinceHero("Caverns of Chaincolt", "Thursagan", 0)
 
 				ChangeProvinceUnitQuantity("Caverns of Chaincolt", "unit-dwarven-gryphon-rider", -2) -- the dwarven gryphon riders return to the Northern Wastelands
 

@@ -125,8 +125,7 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 			"variation-id", "gray-hair",
 			"hair-file", "human/units/gray_hair_warrior.png",
 			"icon", "icon-germanic-warrior-gray-hair",
-			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
-			"upgrade-required", "upgrade-old"
+			"upgrade-forbidden", "upgrade-germanic-bronze-shield"
 		},
 		{
 			"variation-id", "red-hair",
@@ -157,8 +156,7 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 			"left-arm-file", "human/units/human_left_arm_shield.png",
 			"shield-file", "germanic/units/bronze_shield.png",
 			"icon", "icon-germanic-warrior-gray-hair",
-			"upgrade-required", "upgrade-germanic-bronze-shield",
-			"upgrade-required", "upgrade-old"
+			"upgrade-required", "upgrade-germanic-bronze-shield"
 		},
 		{
 			"variation-id", "red-hair",
@@ -217,8 +215,7 @@ DefineUnitType("unit-germanic-archer", { Name = _("Skutan"),
 		{
 			"variation-id", "gray-hair",
 			"hair-file", "human/units/gray_hair_archer.png",
-			"icon", "icon-germanic-archer-gray-hair",
-			"upgrade-required", "upgrade-old"
+			"icon", "icon-germanic-archer-gray-hair"
 		},
 		{
 			"variation-id", "blond-hair",

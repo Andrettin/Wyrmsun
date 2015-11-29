@@ -277,8 +277,7 @@ DefineUnitType("unit-teuton-archer", { Name = _("Skutan"),
 		{
 			"variation-id", "gray-hair",
 			"hair-file", "human/units/gray_hair_archer.png",
-			"icon", "icon-germanic-archer-gray-hair",
-			"upgrade-required", "upgrade-old"
+			"icon", "icon-germanic-archer-gray-hair"
 		},
 		{
 			"variation-id", "blond-hair",

@@ -113,8 +113,7 @@ DefineUnitType("unit-gnomish-recruit", { Name = _("Recruit"),
 		},
 		{
 			"variation-id", "gray-hair",
-			"file", "gnome/units/gnomish_recruit_gray_hair.png",
-			"upgrade-required", "upgrade-old"
+			"file", "gnome/units/gnomish_recruit_gray_hair.png"
 		}
 	},
 	Sounds = {
@@ -149,8 +148,7 @@ DefineUnitType("unit-gnomish-herbalist", { Name = _("Herbalist"),
 		},
 		{
 			"variation-id", "gray-hair",
-			"file", "gnome/units/gnomish_herbalist_gray_hair.png",
-			"upgrade-required", "upgrade-old"
+			"file", "gnome/units/gnomish_herbalist_gray_hair.png"
 		}
 	},
 	Sounds = {

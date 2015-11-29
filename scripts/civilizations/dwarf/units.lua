@@ -149,8 +149,7 @@ DefineUnitType("unit-dwarven-axefighter", { Name = _("Axefighter"),
 		{
 			"variation-id", "gray-hair",
 			"file", "dwarf/units/dwarven_axefighter_gray_hair.png",
-			"icon", "icon-dwarven-axefighter-gray-hair",
-			"upgrade-required", "upgrade-old"
+			"icon", "icon-dwarven-axefighter-gray-hair"
 		},
 		{
 			"variation-id", "orange-hair",
@@ -207,8 +206,7 @@ DefineUnitType("unit-dwarven-steelclad", { Name = _("Steelclad"),
 			"variation-id", "gray-hair",
 			"file", "dwarf/units/dwarven_steelclad_gray_hair.png",
 			"icon", "icon-dwarven-steelclad-gray-hair",
-			"upgrade-forbidden", "upgrade-dwarven-great-axe",
-			"upgrade-required", "upgrade-old"
+			"upgrade-forbidden", "upgrade-dwarven-great-axe"
 		},
 		{
 			"variation-id", "orange-hair",
@@ -248,8 +246,7 @@ DefineUnitType("unit-dwarven-steelclad", { Name = _("Steelclad"),
 			"variation-id", "gray-hair",
 			"file", "dwarf/units/dwarven_steelclad_gray_hair_great_axe.png",
 			"icon", "icon-dwarven-steelclad-gray-hair",
-			"upgrade-required", "upgrade-dwarven-great-axe",
-			"upgrade-required", "upgrade-old"
+			"upgrade-required", "upgrade-dwarven-great-axe"
 		},
 		{
 			"variation-id", "orange-hair",
@@ -311,8 +308,7 @@ DefineUnitType("unit-dwarven-thane", { Name = _("Stonelord"),
 		{
 			"variation-id", "gray-hair",
 			"file", "dwarf/units/thane_gray_hair.png",
-			"icon", "icon-dwarven-thane-gray-hair",
-			"upgrade-required", "upgrade-old"
+			"icon", "icon-dwarven-thane-gray-hair"
 		},
 		{
 			"variation-id", "orange-hair",
@@ -390,14 +386,12 @@ DefineUnitType("unit-dwarven-scout", { Name = _("Scout"),
 		{
 			"variation-id", "gray-hair-short-beard",
 			"file", "dwarf/units/dwarven_scout_gray_hair.png",
-			"icon", "icon-dwarven-scout-gray-hair",
-			"upgrade-required", "upgrade-old"
+			"icon", "icon-dwarven-scout-gray-hair"
 		},
 		{
 			"variation-id", "gray-hair-braided-beard",
 			"file", "dwarf/units/dwarven_scout_gray_hair.png",
-			"icon", "icon-dwarven-scout-gray-hair-braided-beard",
-			"upgrade-required", "upgrade-old"
+			"icon", "icon-dwarven-scout-gray-hair-braided-beard"
 		}
 	},
 	Sounds = {
@@ -452,8 +446,7 @@ DefineUnitType("unit-dwarven-yale-rider", { Name = _("Yale Rider"),
 		{
 			"variation-id", "gray-hair-gray-brown-fur",
 			"file", "dwarf/units/yale_rider_gray_hair_gray_brown_fur.png",
-			"icon", "icon-dwarven-yale-rider-gray-hair",
-			"upgrade-required", "upgrade-old"
+			"icon", "icon-dwarven-yale-rider-gray-hair"
 		},
 		{
 			"variation-id", "orange-hair-brown-fur",
@@ -529,8 +522,7 @@ DefineUnitType("unit-dwarven-gryphon-rider", { Name = _("Gryphon Rider"),
 		},
 		{
 			"variation-id", "gray-hair-brown-feathers",
-			"file", "dwarf/units/gryphon_rider_gray_hair_brown_feathers.png",
-			"upgrade-required", "upgrade-old"
+			"file", "dwarf/units/gryphon_rider_gray_hair_brown_feathers.png"
 		},
 		{
 			"variation-id", "red-hair-gray-feathers",

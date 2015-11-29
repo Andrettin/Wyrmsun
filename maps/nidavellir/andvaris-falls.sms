@@ -33,11 +33,11 @@ unit = CreateUnit("unit-dwarven-axefighter", 0, {Players[0].StartPos.x, Players[
 
 unit = CreateUnit("unit-dwarven-mushroom-farm", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
 unit = CreateUnit("unit-dwarven-steelclad", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
-SetUnitVariable(unit, "Name", "Regin")
+SetUnitVariable(unit, "Character", "Regin")
 
 unit = CreateUnit("unit-dwarven-mushroom-farm", 2, {Players[2].StartPos.x, Players[2].StartPos.y})
 unit = CreateUnit("unit-dwarven-steelclad", 2, {Players[2].StartPos.x, Players[2].StartPos.y})
-SetUnitVariable(unit, "Name", "Andvari")
+SetUnitVariable(unit, "Character", "Andvari")
 
 SetDiplomacy(0, "neutral", 1)
 SetDiplomacy(0, "neutral", 2)

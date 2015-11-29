@@ -247,6 +247,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Units
 - Added two new name prefixes and one new name suffix for yales.
+- Units can now have gray hair without having the old trait (like certain dwarven heroes do).
 
 -----------------------------------------------------------------------
 - 1.7.1
