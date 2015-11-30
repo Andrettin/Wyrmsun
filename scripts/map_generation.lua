@@ -1757,14 +1757,14 @@ function GenerateRandomMap(arg)
 			mixed_civilizations = true
 		end
 		
-		if (arg.WaterLayout ~= nil) then
-			local block_size = 16
-			if (Map.Info.MapWidth > Map.Info.MapHeight) then
-				block_size = Map.Info.MapWidth / table.getn(arg.WaterLayout[1])
-			else
-				block_size = Map.Info.MapHeight / table.getn(arg.WaterLayout)
-			end
+		local block_size = 16
+		if (Map.Info.MapWidth > Map.Info.MapHeight) then
+			block_size = Map.Info.MapWidth / table.getn(arg.WaterLayout[1])
+		else
+			block_size = Map.Info.MapHeight / table.getn(arg.WaterLayout)
+		end
 		
+		if (arg.WaterLayout ~= nil) then
 			-- 8 = N/S river
 			-- 9 = N/S river + bridge
 			-- 10 = E/W river
@@ -1883,6 +1883,22 @@ function GenerateRandomMap(arg)
 			GenerateWater((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 32, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
 		end
 		
+		if (arg.WaterLayout ~= nil) then -- make sure the bridges will be present
+			for ay=1,table.getn(arg.WaterLayout) do
+				for ax=1,table.getn(arg.WaterLayout[ay]) do
+					local x = (ax-1) * block_size
+					local y = (ay-1) * block_size
+					if (arg.WaterLayout[ay][ax] == 9) then
+						ReplaceTiles(x, y + ((block_size / 2) - 1), x + (block_size - 1), y + ((block_size / 2) - 1) + SyncRand(3) + 1, "Water", "Rough")
+						AdjustRawMapTileIrregularities(x - 2, x + (block_size + 1), y - 2, y + (block_size + 1), 2, false) -- correct for leftover single tiles
+					elseif (arg.WaterLayout[ay][ax] == 11) then
+						ReplaceTiles(x + ((block_size / 2) - 1), y, x + ((block_size / 2) - 1) + SyncRand(3) + 1, y + (block_size - 1), "Water", "Rough")
+						AdjustRawMapTileIrregularities(x - 2, x + (block_size + 1), y - 2, y + (block_size + 1), 2, false) -- correct for leftover single tiles
+					end
+				end
+			end
+		end
+			
 		if (arg.RockQuantity == "high") then
 			GenerateRocks((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, ((Map.Info.MapWidth * Map.Info.MapHeight) / 8), "Land", 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
 		elseif (arg.RockQuantity == "medium") then

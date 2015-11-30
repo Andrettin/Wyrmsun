@@ -242,6 +242,9 @@ https://github.com/Andrettin/Wyrmsun
 * Heroes
 - Thoroughly reworked the hero code. Heroes are now saved in the "heroes.lua" file instead of "preferences.lua".
 
+* Maps
+- Fixed issue with random map generation which caused bridges to sometimes not fully appear.
+
 * Quests
 - The Caverns of Flame quest (Dwarf) now gives 2 technology points instead of 1.
 - Fixed issue which caused nothing to be clickable in-game after the initial quest dialogue, if the player had played a grand strategy game just before.
