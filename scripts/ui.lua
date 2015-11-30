@@ -307,6 +307,16 @@ UI.Resources[GetResourceIdByName("labor")].IconFrame = 0
 UI.Resources[GetResourceIdByName("labor")].IconX = Video.Width
 UI.Resources[GetResourceIdByName("labor")].IconY = Video.Height
 
+UI.Resources[GetResourceIdByName("research")].G = CGraphic:New("ui/research.png", 14, 14)
+UI.Resources[GetResourceIdByName("research")].IconFrame = 0
+UI.Resources[GetResourceIdByName("research")].IconX = Video.Width
+UI.Resources[GetResourceIdByName("research")].IconY = Video.Height
+
+UI.Resources[GetResourceIdByName("prestige")].G = CGraphic:New("ui/prestige.png", 14, 14)
+UI.Resources[GetResourceIdByName("prestige")].IconFrame = 0
+UI.Resources[GetResourceIdByName("prestige")].IconX = Video.Width
+UI.Resources[GetResourceIdByName("prestige")].IconY = Video.Height
+
 UI.MenuButton.X = 26
 UI.MenuButton.Y = 1
 UI.MenuButton.Text = "Menu (~<F10~>)"
