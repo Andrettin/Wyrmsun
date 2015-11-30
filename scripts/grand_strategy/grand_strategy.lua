@@ -216,9 +216,6 @@ function RunGrandStrategyGameSetupMenu()
 	menu:addFullButton(_("~!Load Game"), "l", offx + 208, offy + 212 + (36 * 5),
 		function()
 			RunGrandStrategyLoadGameMenu()
-			if not (GrandStrategy) then
-				menu:stop()
-			end
 		end)
 	menu:addFullButton(_("~!Cancel Game"), "c", offx + 208, offy + 212 + (36 * 6),
 		function()
@@ -1233,7 +1230,7 @@ end
 
 function RunGrandStrategyGameMenu()
 	GrandStrategyGamePaused = true
-	local menu = WarGameMenu(panel(1))
+	local menu = WarGrandStrategyGameMenu(panel(1))
 
 	menu:addLabel("Game Menu", 128, 11)
 
@@ -1268,7 +1265,7 @@ function RunGrandStrategyGameMenu()
 end
 
 function RunEndGrandStrategyGameMenu()
-	local menu = WarGameMenu(panel(1))
+	local menu = WarGrandStrategyGameMenu(panel(1))
 
 	menu:addLabel("End Game", 128, 11)
 --	local b = menu:addFullButton("~!Restart Scenario", "r", 16, 40 + (36 * 0),
@@ -1289,7 +1286,7 @@ function RunEndGrandStrategyGameMenu()
 end
 
 function RunGrandStrategyQuitToMenuConfirmMenu()
-	local menu = WarGameMenu(panel(1))
+	local menu = WarGrandStrategyGameMenu(panel(1))
 
 	menu:addLabel("Are you sure?", 128, 11)
 	menu:addFullButton("~!Yes", "y", 16, 11 + (36 * 2) + 29,
@@ -1297,9 +1294,9 @@ function RunGrandStrategyQuitToMenuConfirmMenu()
 			StopMusic();
 			ClearGrandStrategyUIVariables()
 			GrandStrategyMenu:stop()
-			menu:stop()
 			ClearGrandStrategyVariables()
 			SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
+			menu:stop()
 		end)
 	menu:addFullButton("~!No", "n", 16, 11 + (36 * 3) + 29,
 		function() menu:stop() end)
@@ -1309,7 +1306,7 @@ end
 
 function RunGrandStrategySaveMenu()
 	GrandStrategyGamePaused = true
-	local menu = WarGameMenu(panel(3))
+	local menu = WarGrandStrategyGameMenu(panel(3))
 	menu:resize(384, 256)
 
 	menu:addLabel("Save Game", 384 / 2, 11)
@@ -1362,7 +1359,7 @@ end
 
 function RunGrandStrategyLoadGameMenu()
 	GrandStrategyGamePaused = true
-	local menu = WarGameMenu(panel(3))
+	local menu = WarGrandStrategyGameMenu(panel(3))
 	menu:resize(384, 256)
 	menu:setDrawMenusUnder(true)
 
@@ -1454,13 +1451,15 @@ function RunGrandStrategyLoadGameMenu()
 	menu:addHalfButton(_("~!Cancel"), "c", 384 - ((384 - 300 - 18) / 2) - 106, 256 - 16 - 27,
 		function()
 			menu:stop()
-			ClearGrandStrategyUIVariables()
-			GrandStrategyMenu:stop();
-			RunGrandStrategyGame()
-			GrandStrategyGamePaused = false
+			if (GrandStrategy) then
+				GrandStrategyGamePaused = false
+				ClearGrandStrategyUIVariables()
+				GrandStrategyMenu:stop();
+				RunGrandStrategyGame()
+			end
 		end)
 
-	menu:run()
+	menu:run(false)
 end
 
 -- draw UI

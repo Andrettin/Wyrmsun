@@ -1757,14 +1757,14 @@ function GenerateRandomMap(arg)
 			mixed_civilizations = true
 		end
 		
-		local block_size = 16
-		if (Map.Info.MapWidth > Map.Info.MapHeight) then
-			block_size = Map.Info.MapWidth / table.getn(arg.WaterLayout[1])
-		else
-			block_size = Map.Info.MapHeight / table.getn(arg.WaterLayout)
-		end
-		
 		if (arg.WaterLayout ~= nil) then
+			local block_size = 16
+			if (Map.Info.MapWidth > Map.Info.MapHeight) then
+				block_size = Map.Info.MapWidth / table.getn(arg.WaterLayout[1])
+			else
+				block_size = Map.Info.MapHeight / table.getn(arg.WaterLayout)
+			end
+			
 			-- 8 = N/S river
 			-- 9 = N/S river + bridge
 			-- 10 = E/W river
@@ -1884,6 +1884,13 @@ function GenerateRandomMap(arg)
 		end
 		
 		if (arg.WaterLayout ~= nil) then -- make sure the bridges will be present
+			local block_size = 16
+			if (Map.Info.MapWidth > Map.Info.MapHeight) then
+				block_size = Map.Info.MapWidth / table.getn(arg.WaterLayout[1])
+			else
+				block_size = Map.Info.MapHeight / table.getn(arg.WaterLayout)
+			end
+			
 			for ay=1,table.getn(arg.WaterLayout) do
 				for ax=1,table.getn(arg.WaterLayout[ay]) do
 					local x = (ax-1) * block_size
