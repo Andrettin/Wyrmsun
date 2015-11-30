@@ -225,6 +225,19 @@ https://github.com/Andrettin/Wyrmsun
 ############################################################
 
 -----------------------------------------------------------------------
+- 1.8.0
+-----------------------------------------------------------------------
+
+* Buildings
+- Added dwarven Dock (graphics by Jinn) (requires a Lumber Mill).
+
+* Grand Strategy
+- Building a Dock is now necessary for fishing and for attacking provinces through water.
+
+* Quests
+- The Caverns of Flame quest (Dwarf) now gives 2 technology points instead of 1.
+
+-----------------------------------------------------------------------
 - 1.7.2
 -----------------------------------------------------------------------
 

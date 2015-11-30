@@ -1066,7 +1066,7 @@ function CanAttackProvince(province, faction, province_from)
 		return false
 	end
 
-	if (ProvinceHasBorderWith(province_from, province) == false and (province.Coastal == false or ProvinceHasSecondaryBorderThroughWaterWith(province_from, province) == false)) then
+	if (ProvinceHasBorderWith(province_from, province) == false and (province.Coastal == false or ProvinceHasBuildingClass(province.Name, "dock") == false or ProvinceHasSecondaryBorderThroughWaterWith(province_from, province) == false)) then
 		return false
 	end
 
@@ -2750,7 +2750,7 @@ function AIDoTurn(ai_faction)
 			end
 		end
 		
-		if (borders_foreign == false) then -- only look for potential targets through water if no targets connected by land exist
+		if (borders_foreign == false and ProvinceHasBuildingClass(WorldMapProvinces[key].Name, "dock")) then -- only look for potential targets through water if no targets connected by land exist
 			local secondary_border_provinces_through_water = GetProvinceSecondaryBorderProvincesThroughWater(WorldMapProvinces[key])
 			for second_i, second_key in ipairs(secondary_border_provinces_through_water) do
 				if ((WorldMapProvinces[second_key] ~= nil and GetProvinceOwner(WorldMapProvinces[second_key].Name) ~= ai_faction.Name) or WorldMapWaterProvinces[second_key] ~= nil) then

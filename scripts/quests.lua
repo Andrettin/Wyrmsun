@@ -339,7 +339,7 @@ DefineQuest("Caverns of Flame", {
 	RequiredQuest = "The Wyrm",
 	World = "Nidavellir",
 	Civilization = "dwarf",
-	TechnologyPoints = 1,
+	TechnologyPoints = 2,
 	Map = "maps/nidavellir/caverns-of-flame.smp",
 	Scenario = "scripts/civilizations/dwarf/scenarios/caverns_of_flame.lua",
 	X = 4,
