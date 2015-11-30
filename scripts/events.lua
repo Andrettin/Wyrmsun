@@ -633,8 +633,7 @@ function Event(speaker, event_description, player, options, option_effects, even
 		end
 
 		if (GameRunning) then
---			menu:run(false)
-			menu:run()
+			menu:run(false)
 		else
 			menu:run()
 		end

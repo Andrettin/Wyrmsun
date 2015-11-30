@@ -1230,7 +1230,7 @@ end
 
 function RunGrandStrategyGameMenu()
 	GrandStrategyGamePaused = true
-	local menu = WarGrandStrategyGameMenu(panel(1))
+	local menu = WarGameMenu(panel(1))
 
 	menu:addLabel("Game Menu", 128, 11)
 
@@ -1265,7 +1265,7 @@ function RunGrandStrategyGameMenu()
 end
 
 function RunEndGrandStrategyGameMenu()
-	local menu = WarGrandStrategyGameMenu(panel(1))
+	local menu = WarGameMenu(panel(1))
 
 	menu:addLabel("End Game", 128, 11)
 --	local b = menu:addFullButton("~!Restart Scenario", "r", 16, 40 + (36 * 0),
@@ -1286,7 +1286,7 @@ function RunEndGrandStrategyGameMenu()
 end
 
 function RunGrandStrategyQuitToMenuConfirmMenu()
-	local menu = WarGrandStrategyGameMenu(panel(1))
+	local menu = WarGameMenu(panel(1))
 
 	menu:addLabel("Are you sure?", 128, 11)
 	menu:addFullButton("~!Yes", "y", 16, 11 + (36 * 2) + 29,
@@ -1306,7 +1306,7 @@ end
 
 function RunGrandStrategySaveMenu()
 	GrandStrategyGamePaused = true
-	local menu = WarGrandStrategyGameMenu(panel(3))
+	local menu = WarGameMenu(panel(3))
 	menu:resize(384, 256)
 
 	menu:addLabel("Save Game", 384 / 2, 11)
@@ -1359,7 +1359,7 @@ end
 
 function RunGrandStrategyLoadGameMenu()
 	GrandStrategyGamePaused = true
-	local menu = WarGrandStrategyGameMenu(panel(3))
+	local menu = WarGameMenu(panel(3))
 	menu:resize(384, 256)
 	menu:setDrawMenusUnder(true)
 
