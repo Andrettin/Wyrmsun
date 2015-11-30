@@ -107,7 +107,7 @@ function ChooseFaction(old_civilization, old_faction)
 		{0, 0}
 	)	
 	
-	if (GrandStrategy == false) then
+	if (GameRunning) then
 		menu:run(false)
 	else
 		menu:run()

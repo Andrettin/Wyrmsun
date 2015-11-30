@@ -1196,6 +1196,48 @@ function RunGrandStrategyGameMenu()
 	GrandStrategyGamePaused = true
 	local menu = WarGameMenu(panel(1))
 
+	local function RunEndGrandStrategyGameMenu()
+		local end_game_menu = WarGameMenu(panel(1))
+
+		local function RunGrandStrategyQuitToMenuConfirmMenu()
+			local quit_to_menu_menu = WarGameMenu(panel(1))
+
+			quit_to_menu_menu:addLabel("Are you sure?", 128, 11)
+			quit_to_menu_menu:addFullButton("~!Yes", "y", 16, 11 + (36 * 2) + 29,
+				function()
+					menu:stop()
+					end_game_menu:stop()
+					quit_to_menu_menu:stop()
+					StopMusic();
+					ClearGrandStrategyUIVariables()
+					GrandStrategyMenu:stop()
+					ClearGrandStrategyVariables()
+					SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
+				end)
+			quit_to_menu_menu:addFullButton("~!No", "n", 16, 11 + (36 * 3) + 29,
+				function() quit_to_menu_menu:stop() end)
+
+			quit_to_menu_menu:run()
+		end
+		
+		end_game_menu:addLabel("End Game", 128, 11)
+	--	local b = end_game_menu:addFullButton("~!Restart Scenario", "r", 16, 40 + (36 * 0),
+	--		function() RunRestartConfirmMenu() end)
+	--	if (IsNetworkGame()) then
+	--		b:setEnabled(false)
+	--	end
+	--	end_game_menu:addFullButton("~!Surrender", "s", 16, 40 + (36 * 1),
+	--		function() RunSurrenderConfirmMenu() end)
+		end_game_menu:addFullButton("~!Quit Game", "q", 16, 40 + (36 * 1),
+			function() RunGrandStrategyQuitToMenuConfirmMenu() end)
+		end_game_menu:addFullButton("E~!xit to Desktop", "x", 16, 40 + (36 * 2),
+			function() RunExitConfirmMenu() end)
+		end_game_menu:addFullButton("Previous Menu (~<Esc~>)", "escape", 16, 248,
+			function() end_game_menu:stop() end)
+
+		end_game_menu:run()
+	end
+	
 	menu:addLabel("Game Menu", 128, 11)
 
 	menu:addFullButton("Save (~<F11~>)", "f11", 16, 40 + 36*0,
@@ -1225,47 +1267,7 @@ function RunGrandStrategyGameMenu()
 			RunGrandStrategyGame()
 		end)
 
-	menu:run(false)
-end
-
-function RunEndGrandStrategyGameMenu()
-	local menu = WarGameMenu(panel(1))
-
-	menu:addLabel("End Game", 128, 11)
---	local b = menu:addFullButton("~!Restart Scenario", "r", 16, 40 + (36 * 0),
---		function() RunRestartConfirmMenu() end)
---	if (IsNetworkGame()) then
---		b:setEnabled(false)
---	end
---	menu:addFullButton("~!Surrender", "s", 16, 40 + (36 * 1),
---		function() RunSurrenderConfirmMenu() end)
-	menu:addFullButton("~!Quit Game", "q", 16, 40 + (36 * 1),
-		function() RunGrandStrategyQuitToMenuConfirmMenu() end)
-	menu:addFullButton("E~!xit to Desktop", "x", 16, 40 + (36 * 2),
-		function() RunExitConfirmMenu() end)
-	menu:addFullButton("Previous Menu (~<Esc~>)", "escape", 16, 248,
-		function() menu:stop() end)
-
-	menu:run(false)
-end
-
-function RunGrandStrategyQuitToMenuConfirmMenu()
-	local menu = WarGameMenu(panel(1))
-
-	menu:addLabel("Are you sure?", 128, 11)
-	menu:addFullButton("~!Yes", "y", 16, 11 + (36 * 2) + 29,
-		function()
-			StopMusic();
-			ClearGrandStrategyUIVariables()
-			GrandStrategyMenu:stop()
-			ClearGrandStrategyVariables()
-			SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
-			menu:stop()
-		end)
-	menu:addFullButton("~!No", "n", 16, 11 + (36 * 3) + 29,
-		function() menu:stop() end)
-
-	menu:run(false)
+	menu:run()
 end
 
 function RunGrandStrategySaveMenu()
@@ -1318,7 +1320,7 @@ function RunGrandStrategySaveMenu()
 			GrandStrategyGamePaused = false
 		end)
 
-	menu:run(false)
+	menu:run()
 end
 
 function RunGrandStrategyLoadGameMenu()
@@ -1422,7 +1424,7 @@ function RunGrandStrategyLoadGameMenu()
 			end
 		end)
 
-	menu:run(false)
+	menu:run()
 end
 
 -- draw UI
