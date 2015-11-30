@@ -44,6 +44,7 @@ function RunShowCreditsMenu()
 	"  Nehal Mistry",
 	"  Pali Rohar",
 	"  Russell Smith",
+	"  a-detiste",
 	"  Akien",
 	"  Chris Beck (iceiceice)",
 	"  DinkyDyeAussie",

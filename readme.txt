@@ -225,19 +225,18 @@ https://github.com/Andrettin/Wyrmsun
 ############################################################
 
 -----------------------------------------------------------------------
-- 1.8.0
+- 1.7.3
 -----------------------------------------------------------------------
 
 * Buildings
-- Added Dwarven Dock (graphics by Jinn) (requires a Lumber Mill).
-- Added Teuton Dock (graphics by Jinn) (requires a Lumber Mill).
+- Added Dwarven Dock (graphics by Jinn) (requires a Lumber Mill) (for now only available in the Grand Strategy mode and through the editor).
+- Added Teuton Dock (graphics by Jinn) (requires a Lumber Mill) (for now only available in the Grand Strategy mode and through the editor).
 
 * Grand Strategy
 - Building a Dock is now necessary for fishing and for attacking provinces through water.
 
 * Quests
-- The Caverns of Flame quest (Dwarf) now gives 2 technology points instead of 1.
-- The Razing of Opitergium quest (Teuton) now gives 3 technology points instead of 2.
+- Fixed issue with quest icon player color.
 
 -----------------------------------------------------------------------
 - 1.7.2
