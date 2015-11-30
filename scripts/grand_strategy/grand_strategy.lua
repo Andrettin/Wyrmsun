@@ -204,7 +204,6 @@ function RunGrandStrategyGameSetupMenu()
 
 			InitializeGrandStrategyFactions()
 --			CalculateFactionDisembarkmentProvinces()
-			CalculateFactionUpkeeps()
 			
 			GrandStrategyGameInitialized = true
 			
@@ -411,23 +410,6 @@ function RunGrandStrategyGame()
 
 	DrawGrandStrategyInterface()
 	
-	-- add a pseudo-button to bring up the menu
-	GrandStrategyMenu:addButton("", "f11", -1, -1,
-		function()
-			RunGrandStrategySaveMenu()
-		end,
-	{0, 0})
-	GrandStrategyMenu:addButton("", "f12", -1, -1,
-		function()
-			RunGrandStrategyLoadGameMenu()
-		end,
-	{0, 0})
-	GrandStrategyMenu:addButton("", "f5", -1, -1,
-		function()
-			RunEncyclopediaMenu()
-		end,
-	{0, 0})
-
 	GrandStrategyMenu:run()
 end
 
@@ -487,25 +469,25 @@ function EndTurn()
 	CalculateFactionUpkeeps()
 
 	for key, value in pairs(Factions) do
-		ChangeFactionResource(Factions[key].Civilization, Factions[key].Name, "gold", - Factions[key].Upkeep)
+		ChangeFactionResource(Factions[key].Civilization, Factions[key].Name, "gold", - GetFactionUpkeep(Factions[key].Civilization, Factions[key].Name))
 	end
 
 	local disbanding_happened = false
 	-- disband units if gold is on the negative and upkeep is higher than income
 	for key, value in pairs(Factions) do
-		if (GetFactionResource(Factions[key].Civilization, Factions[key].Name, "gold") < 0 and Factions[key].Upkeep > GetFactionIncome(Factions[key].Civilization, Factions[key].Name, "gold")) then
+		if (GetFactionResource(Factions[key].Civilization, Factions[key].Name, "gold") < 0 and GetFactionUpkeep(Factions[key].Civilization, Factions[key].Name) > GetFactionIncome(Factions[key].Civilization, Factions[key].Name, "gold")) then
 			disbanding_happened = true
-			local disband_quota = Factions[key].Upkeep - GetFactionIncome(Factions[key].Civilization, Factions[key].Name, "gold")
+			local disband_quota = GetFactionUpkeep(Factions[key].Civilization, Factions[key].Name) - GetFactionIncome(Factions[key].Civilization, Factions[key].Name, "gold")
 			for province_i, province_key in ipairs(Factions[key].OwnedProvinces) do
 				for i, unitName in ipairs(Units) do
 					if (IsMilitaryUnit(unitName)) then
-						if (GetProvinceUnitQuantity(WorldMapProvinces[province_key].Name, unitName) > 0 and GetUnitTypeUpkeep(unitName) > 0) then
-							if (disband_quota > GetProvinceUnitQuantity(WorldMapProvinces[province_key].Name, unitName) * GetUnitTypeUpkeep(unitName)) then
-								disband_quota = disband_quota - GetProvinceUnitQuantity(WorldMapProvinces[province_key].Name, unitName) * GetUnitTypeUpkeep(unitName)
+						if (GetProvinceUnitQuantity(WorldMapProvinces[province_key].Name, unitName) > 0 and GetUnitTypeData(unitName, "Upkeep") > 0) then
+							if (disband_quota > GetProvinceUnitQuantity(WorldMapProvinces[province_key].Name, unitName) * GetUnitTypeData(unitName, "Upkeep")) then
+								disband_quota = disband_quota - GetProvinceUnitQuantity(WorldMapProvinces[province_key].Name, unitName) * GetUnitTypeData(unitName, "Upkeep")
 								SetProvinceUnitQuantity(WorldMapProvinces[province_key].Name, unitName, 0)
 							else
-								SetProvinceUnitQuantity(WorldMapProvinces[province_key].Name, unitName, GetProvinceUnitQuantity(WorldMapProvinces[province_key].Name, unitName) - math.floor(disband_quota / GetUnitTypeUpkeep(unitName)))
-								disband_quota = disband_quota - math.floor(disband_quota / GetUnitTypeUpkeep(unitName)) * GetUnitTypeUpkeep(unitName)
+								SetProvinceUnitQuantity(WorldMapProvinces[province_key].Name, unitName, GetProvinceUnitQuantity(WorldMapProvinces[province_key].Name, unitName) - math.floor(disband_quota / GetUnitTypeData(unitName, "Upkeep")))
+								disband_quota = disband_quota - math.floor(disband_quota / GetUnitTypeData(unitName, "Upkeep")) * GetUnitTypeData(unitName, "Upkeep")
 							end
 						end
 					end
@@ -948,24 +930,6 @@ function CalculateProvinceBorderTiles()
 			if (GetTileProvince(WorldMapWaterProvinces[key].Tiles[i][1], WorldMapWaterProvinces[key].Tiles[i][2] + 1) ~= WorldMapWaterProvinces[key]) then
 				if (GetTileProvince(WorldMapWaterProvinces[key].Tiles[i][1], WorldMapWaterProvinces[key].Tiles[i][2] + 1) ~= nil and GetArrayIncludes(WorldMapWaterProvinces[key].BorderProvinces, GetProvinceKeyFromName(GetTileProvince(WorldMapWaterProvinces[key].Tiles[i][1], WorldMapWaterProvinces[key].Tiles[i][2] + 1).Name)) == false) then
 					table.insert(WorldMapWaterProvinces[key].BorderProvinces, GetProvinceKeyFromName(GetTileProvince(WorldMapWaterProvinces[key].Tiles[i][1], WorldMapWaterProvinces[key].Tiles[i][2] + 1).Name))
-				end
-			end
-		end
-	end
-end
-
-function CalculateFactionUpkeeps()
-	for key, value in pairs(Factions) do
-		Factions[key]["Upkeep"] = 0
-	end
-	
-	for key, value in pairs(WorldMapProvinces) do
-		local province_owner = GetFactionFromName(GetProvinceOwner(WorldMapProvinces[key].Name))
-	
-		for i, unitName in ipairs(Units) do
-			if (IsMilitaryUnit(unitName)) then
-				if (province_owner ~= nil) then -- pay upkeep for military units
-					province_owner.Upkeep = province_owner.Upkeep + GetProvinceUnitQuantity(WorldMapProvinces[key].Name, unitName) * GetUnitTypeUpkeep(unitName)
 				end
 			end
 		end
@@ -1430,7 +1394,6 @@ function RunGrandStrategyLoadGameMenu()
 				ClearGrandStrategyUIVariables()
 				GrandStrategyMenu:stop();
 			end
-			CalculateFactionUpkeeps()
 			InitGameSettings() -- initialize scenario variables (i.e. No Randomness)
 			RunGrandStrategyGame()
 		end)
@@ -1877,8 +1840,8 @@ function AddGrandStrategyMercenaryButton(x, y, unit_type)
 		cost_tooltip = cost_tooltip .. ")"
 	end
 							
-	if (GetUnitTypeUpkeep(unit_type) > 0) then
-		cost_tooltip = cost_tooltip .. " (" .. GetUnitTypeUpkeep(unit_type) * GetUnitTypeData(unit_type, "TrainQuantity") .. " Gold Upkeep)"
+	if (GetUnitTypeData(unit_type, "Upkeep") > 0) then
+		cost_tooltip = cost_tooltip .. " (" .. GetUnitTypeData(unit_type, "Upkeep") * GetUnitTypeData(unit_type, "TrainQuantity") .. " Gold Upkeep)"
 	end
 							
 	local regiment_type_name = GetUnitTypeNamePluralForm(unit_type)
@@ -1892,88 +1855,6 @@ function AddGrandStrategyMercenaryButton(x, y, unit_type)
 	UIElements[table.getn(UIElements)]:setPressedFrameImage(Preference.PressedIconFrameG)
 	
 	return UIElements[table.getn(UIElements)]
-end
-
-function AddGrandStrategyCommodityButton(x, y, commodity)
-	CommodityButtons[table.getn(CommodityButtons) + 1] = ImageButton("")
-	CommodityButtons[table.getn(CommodityButtons)]:setActionCallback(
-		function()
-			PlaySound("click")
-			DrawGrandStrategyInterface()
-		end
-	)
-	GrandStrategyMenu:add(CommodityButtons[table.getn(CommodityButtons)], x, y)
-	CommodityButtons[table.getn(CommodityButtons)]:setBorderSize(0) -- Andrettin: make buttons not have the borders they previously had
-
---	CommodityButtons[table.getn(CommodityButtons)]:setBaseColor(Color(0,0,0,0))
---	CommodityButtons[table.getn(CommodityButtons)]:setForegroundColor(Color(0,0,0,0))
---	CommodityButtons[table.getn(CommodityButtons)]:setBackgroundColor(Color(0,0,0,0))
-	local commodity_icon = CGraphic:New("ui/" .. commodity .. ".png", 14, 14)
-	commodity_icon:Load()
-	CommodityButtons[table.getn(CommodityButtons)]:setNormalImage(commodity_icon)
-	CommodityButtons[table.getn(CommodityButtons)]:setPressedImage(commodity_icon)
-	CommodityButtons[table.getn(CommodityButtons)]:setDisabledImage(commodity_icon)
-	CommodityButtons[table.getn(CommodityButtons)]:setSize(14, 14)
-	CommodityButtons[table.getn(CommodityButtons)]:setFont(Fonts["game"])
-
-	if (commodity == "research") then
-		CommodityButtons[table.getn(CommodityButtons)]:setTooltip("Gain Research by building town halls, lumber mills and smithies")
-	elseif (commodity == "prestige") then
-		CommodityButtons[table.getn(CommodityButtons)]:setTooltip("Prestige influences trade priority between nations, among other things")
-	end
-
-	local quantity_stored = GetFactionResource(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, commodity)
-	local income = ""
-	if (commodity == "gold") then
-		if (GetFactionIncome(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "gold") < GrandStrategyFaction.Upkeep) then
-			income = GetFactionIncome(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "gold") - GrandStrategyFaction.Upkeep
-		elseif (GetFactionIncome(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "gold") > GrandStrategyFaction.Upkeep) then
-			income = "+" .. GetFactionIncome(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "gold") - GrandStrategyFaction.Upkeep
-		end
-	elseif (commodity == "research") then
-		if (GetFactionIncome(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, commodity) > 0) then
-			income = "+" .. math.floor(GetFactionIncome(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, commodity) / GetFactionProvinceCount(GrandStrategyFaction))
-		end
-	else
-		if (GetFactionIncome(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, commodity) > 0) then
-			income = "+" .. GetFactionIncome(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, commodity)
-		end
-	end
-
-	if (string.len(quantity_stored .. income) <= 9) then
-		CommodityButtons[table.getn(CommodityButtons) + 1] = Label(quantity_stored .. income)
-		CommodityButtons[table.getn(CommodityButtons)]:setFont(Fonts["game"])
-		CommodityButtons[table.getn(CommodityButtons)]:adjustSize()
-		GrandStrategyMenu:add(CommodityButtons[table.getn(CommodityButtons)], x + 18, y + 1)
-	else
-		CommodityButtons[table.getn(CommodityButtons) + 1] = Label(quantity_stored .. income)
-		CommodityButtons[table.getn(CommodityButtons)]:setFont(Fonts["small"])
-		CommodityButtons[table.getn(CommodityButtons)]:adjustSize()
-		GrandStrategyMenu:add(CommodityButtons[table.getn(CommodityButtons)], x + 18, y + 1 + 2)
-	end
-end
-
-function DrawGrandStrategyResourceBar()
-	if (CommodityButtons ~= nil) then
-		for i=1,table.getn(CommodityButtons) do
-			if (CommodityButtons[i] ~= nil) then
-				GrandStrategyMenu:remove(CommodityButtons[i])
-			end
-		end
-	end
-
-	CommodityButtons = nil
-	CommodityButtons = {}
-	
-	if (GrandStrategyFaction ~= nil) then
-		-- add resource quantities
-		AddGrandStrategyCommodityButton(154 + (100 * 0), 0, "gold")
-		AddGrandStrategyCommodityButton(154 + (100 * 1), 0, "lumber")
-		AddGrandStrategyCommodityButton(154 + (100 * 2), 0, "stone")
-		AddGrandStrategyCommodityButton(154 + (100 * 3), 0, "research")
-		AddGrandStrategyCommodityButton(154 + (100 * 4), 0, "prestige")
-	end
-	
 end
 
 function DrawGrandStrategyInterface()
@@ -1999,8 +1880,6 @@ function DrawGrandStrategyInterface()
 	GrandStrategyLabels = nil
 	GrandStrategyLabels = {}
 
-	DrawGrandStrategyResourceBar()
-	
 	if (GrandStrategyFaction ~= nil) then
 		AddGrandStrategyLabel(GrandStrategyFaction.Name .. ", " .. GetYearString(GrandStrategyYear), 81, Video.Height - 186 + 8, Fonts["game"], true, false)
 	end
@@ -2352,8 +2231,8 @@ function DrawGrandStrategyInterface()
 								cost_tooltip = cost_tooltip .. ")"
 							end
 							
-							if (GetUnitTypeUpkeep(unitName) > 0) then
-								cost_tooltip = cost_tooltip .. " (" .. GetUnitTypeUpkeep(unitName) .. " Gold Upkeep)"
+							if (GetUnitTypeData(unitName, "Upkeep") > 0) then
+								cost_tooltip = cost_tooltip .. " (" .. GetUnitTypeData(unitName, "Upkeep") .. " Gold Upkeep)"
 							end
 							
 							local regiment_type_name = GetUnitTypeNamePluralForm(unitName)
@@ -2529,8 +2408,8 @@ function DrawGrandStrategyInterface()
 								cost_tooltip = cost_tooltip .. ")"
 							end
 							
-							if (GetUnitTypeUpkeep(unitName) > 0) then
-								cost_tooltip = cost_tooltip .. " (" .. GetUnitTypeUpkeep(unitName) .. " Gold Upkeep)"
+							if (GetUnitTypeData(unitName, "Upkeep") > 0) then
+								cost_tooltip = cost_tooltip .. " (" .. GetUnitTypeData(unitName, "Upkeep") .. " Gold Upkeep)"
 							end
 							
 							local regiment_type_name = GetUnitTypeNamePluralForm(unitName)
@@ -2989,7 +2868,7 @@ function AIDoTurn(ai_faction)
 		if (
 			borders_foreign == false
 			or GetFactionBuildingTypeCount(ai_faction, "town-hall") < GetFactionProvinceCount(ai_faction)
-			or ((GetFactionIncome(ai_faction.Civilization, ai_faction.Name, "gold") - ai_faction.Upkeep) < 100 and GetFactionResource(ai_faction.Civilization, ai_faction.Name, "gold") < 1500 * 4)
+			or ((GetFactionIncome(ai_faction.Civilization, ai_faction.Name, "gold") - GetFactionUpkeep(ai_faction.Civilization, ai_faction.Name)) < 100 and GetFactionResource(ai_faction.Civilization, ai_faction.Name, "gold") < 1500 * 4)
 			or GetProvinceAvailableWorkersForTraining(WorldMapProvinces[key].Name) < 1
 		) then -- don't build any military units if a province is lacking a town hall, if it doesn't border any non-owned provinces, or if net income is too small and gold reserves are too small; 800 is the highest gold cost a unit/building/technology can have
 			desired_infantry_in_province = 0
@@ -3474,15 +3353,6 @@ function ClearGrandStrategyUIVariables()
 	end
 	UIElements = nil
 	
-	if (CommodityButtons ~= nil) then
-		for i=1,table.getn(CommodityButtons) do
-			if (CommodityButtons[i] ~= nil) then
-				GrandStrategyMenu:remove(CommodityButtons[i])
-			end
-		end
-	end
-	CommodityButtons = nil
-	
 	if (GrandStrategyLabels ~= nil) then
 		for i=1,table.getn(GrandStrategyLabels) do
 			if (GrandStrategyLabels[i] ~= nil) then
@@ -3878,30 +3748,6 @@ function FormFactionLua(old_faction, new_faction)
 	FormFaction(old_faction.Civilization, old_faction.Name, new_faction.Civilization, new_faction.Name)
 
 	DrawGrandStrategyInterface()
-end
-
-function GetUnitTypeUpkeep(unit_type)
-	if (GetUnitTypeData(unit_type, "Class") == "infantry" or GetUnitTypeData(unit_type, "Class") == "veteran-infantry" or GetUnitTypeData(unit_type, "Class") == "heroic-infantry") then
-		return 25
-	elseif (GetUnitTypeData(unit_type, "Class") == "shooter") then
-		return 25
-	elseif (GetUnitTypeData(unit_type, "Class") == "cavalry") then
-		return 25
-	elseif (GetUnitTypeData(unit_type, "Class") == "thief") then
-		return 25
-	elseif (GetUnitTypeData(unit_type, "Class") == "siege-engine") then
-		return 50
-	elseif (GetUnitTypeData(unit_type, "Class") == "priest") then
-		return 25
-	elseif (GetUnitTypeData(unit_type, "Class") == "flying-rider") then
-		return 50
-	elseif (GetUnitTypeData(unit_type, "Class") == "glider") then
-		return 25
-	elseif (GetUnitTypeData(unit_type, "Mercenary")) then
-		return 25
-	else
-		return 0
-	end
 end
 
 function GetUnitTypeInterfaceState(unit_type)
