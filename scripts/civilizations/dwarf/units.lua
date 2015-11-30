@@ -690,7 +690,7 @@ DefineUnitType("unit-dwarven-guard-tower", { Name = _("Guard Tower"),
 } )
 
 DefineUnitType("unit-dwarven-dock", { Name = _("Dock"),
-	Parent = "unit-template-dock",
+--	Parent = "unit-template-dock",
 	Civilization = "dwarf",
 	Description = _("Although nautical dwarves are few in number, dwarven shipwrighting is a refined craft. They construct sturdy ships, capable of braving oceans and subterranean rivers alike."),
 	Image = {"file", "dwarf/buildings/dock.png", "size", {96, 96}},

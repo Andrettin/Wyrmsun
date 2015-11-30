@@ -56,7 +56,7 @@ editor_types = {
    "unit-dwarven-yale-pen",
    "unit-dwarven-sentry-tower",
    "unit-dwarven-guard-tower",
-   "unit-dwarven-dock",
+--   "unit-dwarven-dock",
 
    "unit-surghan-mercenary-steelclad",
    "unit-surghan-mercenary-thane",
