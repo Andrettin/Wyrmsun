@@ -244,6 +244,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Quests
 - The Caverns of Flame quest (Dwarf) now gives 2 technology points instead of 1.
+- Fixed issue which caused nothing to be clickable in-game after the initial quest dialogue, if the player had played a grand strategy game just before.
 
 * Units
 - Added two new name prefixes and one new name suffix for yales.

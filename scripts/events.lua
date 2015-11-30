@@ -8,9 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      events.lua - Defines events.
---
---      (c) Copyright 2014 by Andrettin
+--      (c) Copyright 2014-2015 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -635,7 +633,8 @@ function Event(speaker, event_description, player, options, option_effects, even
 		end
 
 		if (GameRunning) then
-			menu:run(false)
+--			menu:run(false)
+			menu:run()
 		else
 			menu:run()
 		end

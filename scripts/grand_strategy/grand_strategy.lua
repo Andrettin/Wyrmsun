@@ -3458,10 +3458,11 @@ function ClearGrandStrategyVariables()
 	ProcessingEndTurn = nil
 	GrandStrategyMapWidthIndent = 0
 	GrandStrategyMapHeightIndent = 0
+	GameResult = GameNoResult
 
 	ClearGrandStrategyUIVariables()
 
---	GrandStrategyMenu = nil
+	GrandStrategyMenu = nil
 end
 
 function ClearGrandStrategyUIVariables()
