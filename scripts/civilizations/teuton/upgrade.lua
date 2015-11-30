@@ -211,7 +211,8 @@ DefineModifier("upgrade-teuton-masonry",
 	{"apply-to", "unit-teuton-farm"}, {"apply-to", "unit-teuton-barracks"},
 	{"apply-to", "unit-teuton-lumber-mill"}, {"apply-to", "unit-teuton-smithy"},
 	{"apply-to", "unit-teuton-stables"},
-	{"apply-to", "unit-teuton-watch-tower"}, {"apply-to", "unit-teuton-guard-tower"}
+	{"apply-to", "unit-teuton-watch-tower"}, {"apply-to", "unit-teuton-guard-tower"},
+	{"apply-to", "unit-teuton-dock"}
 )
 
 DefineModifier("upgrade-teuton-coinage",
@@ -372,4 +373,8 @@ DefineDependency("unit-teuton-ritter",
 
 DefineDependency("unit-suebi-swordsman",
 	{"upgrade-suebi-tribe-faction"}
+)
+
+DefineDependency("unit-teuton-dock",
+	{"unit-teuton-lumber-mill"}
 )

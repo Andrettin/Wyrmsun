@@ -697,6 +697,8 @@ João Victor G. Costa (Jinn):
 /graphics/orc/icons/warrior.png
 /graphics/teuton/buildings/barracks.png
 /graphics/teuton/buildings/barracks_shadow.png
+/graphics/teuton/buildings/dock.png
+/graphics/teuton/buildings/dock_shadow.png
 /graphics/teuton/buildings/farm.png
 /graphics/teuton/buildings/farm_shadow.png
 /graphics/teuton/buildings/guard_tower.png

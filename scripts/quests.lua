@@ -130,7 +130,7 @@ DefineQuest("The Razing of Opitergium", {
 	RequiredQuest = "The Sack of Iuvavum",
 	World = "Earth",
 	Civilization = "teuton",
-	TechnologyPoints = 2,
+	TechnologyPoints = 3,
 	Map = "maps/earth/oderzo.smp",
 	Scenario = "scripts/civilizations/teuton/scenarios/the_razing_of_opitergium.lua",
 	X = 8,

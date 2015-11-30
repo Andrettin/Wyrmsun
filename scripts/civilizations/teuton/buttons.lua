@@ -178,6 +178,12 @@ DefineButton( { Pos = 7, Level = 1, Icon = "icon-teuton-watch-tower",
   Key = "t", Hint = _("Build Watch ~!Tower"), Popup = "popup-building",
   ForUnit = {"unit-teuton-worker"} } )
 
+DefineButton( { Pos = 8, Level = 1, Icon = "icon-teuton-dock",
+	Action = "build", Value = "unit-teuton-dock",
+	Key = "d", Hint = _("Build ~!Dock"), Popup = "popup-building",
+	ForUnit = {"unit-teuton-worker"}
+} )
+
 DefineButton( { Pos = 9, Level = 1, Icon = "icon-gold-mine",
 	Action = "build", Value = "unit-gold-mine",
 	Key = "g", Hint = _("Build ~!Gold Mine"), Popup = "popup-building",

@@ -30,6 +30,7 @@ editor_types = {
    "unit-teuton-stables",
    "unit-teuton-watch-tower",
    "unit-teuton-guard-tower",
+   "unit-teuton-dock",
 
 --- - - - - - - - - - - - - - - - - - -
 

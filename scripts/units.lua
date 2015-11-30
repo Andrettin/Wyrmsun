@@ -45,6 +45,7 @@ Units = {
 	"unit-teuton-lumber-mill", "unit-teuton-smithy",
 	"unit-teuton-stables",
 	"unit-teuton-watch-tower", "unit-teuton-guard-tower",
+	"unit-teuton-dock",
 	"upgrade-teuton-spatha", "upgrade-teuton-iron-shield", "upgrade-teuton-bodkin-arrow",
 	"upgrade-teuton-catapult-projectile-1", "upgrade-teuton-catapult-projectile-2",
 	"upgrade-teuton-iron-tipped-wood-plow",

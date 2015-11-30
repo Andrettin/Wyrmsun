@@ -519,3 +519,15 @@ DefineUnitType("unit-teuton-guard-tower", { Name = _("Guard Tower"),
 		"help", "basic-teuton-voices-help-town"
 	}
 } )
+
+DefineUnitType("unit-teuton-dock", { Name = _("Dock"),
+	Parent = "unit-template-dock",
+	Civilization = "teuton",
+	Description = _("Shipbuilding is an ancient craft in the Teuton shores. Already in antiquity they constructed sturdy ships, capable of assaulting the vulnerable coasts to the west. During medieval times, their shipbuilding flourished even further, as the Hanseatic League dominated commerce in the Baltic and North Seas."),
+	Image = {"file", "teuton/buildings/dock.png", "size", {96, 96}},
+	Shadow = {"file", "teuton/buildings/dock_shadow.png", "size", {96, 96}},
+	Animations = "animations-building", Icon = "icon-teuton-dock",
+	Sounds = {
+		"help", "basic-teuton-voices-help-town"
+	}
+} )
