@@ -276,15 +276,15 @@ if (GrandStrategy == false) then
 		unit = CreateUnit("unit-dwarven-mushroom-farm", 1, {10, 1})
 
 		unit = CreateUnit("unit-dwarven-thane", 1, {4, 20}) -- Crintil
-		SetUnitActive(unit, false)
+		SetUnitVariable(unit, "Active", false)
 
 		-- create a few more steelclads, to make the Shinsplitters have more of a fighting force
 		unit = CreateUnit("unit-dwarven-steelclad", 1, {4, 28})
-		SetUnitActive(unit, false)
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-dwarven-steelclad", 1, {4, 28})
-		SetUnitActive(unit, false)
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-dwarven-steelclad", 1, {4, 28})
-		SetUnitActive(unit, false)
+		SetUnitVariable(unit, "Active", false)
 
 
 		unit = CreateUnit("unit-dwarven-miner", 1, {4, 20})
@@ -296,36 +296,36 @@ if (GrandStrategy == false) then
 
 		-- the enemy gets mercenaries
 		unit = CreateUnit("unit-surghan-mercenary-steelclad", 1, {4, 28})
-		SetUnitActive(unit, false)
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-surghan-mercenary-steelclad", 1, {4, 28})
-		SetUnitActive(unit, false)
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-surghan-mercenary-steelclad", 1, {4, 28})
-		SetUnitActive(unit, false)
+		SetUnitVariable(unit, "Active", false)
 
 		-- extra mercenary for hard difficulty and beyond
 		if (GameSettings.Difficulty == 3) then -- if difficulty is hard
 			unit = CreateUnit("unit-surghan-mercenary-steelclad", 1, {4, 28})
-			SetUnitActive(unit, false)
+			SetUnitVariable(unit, "Active", false)
 		end
 
 		-- two extra mercenaries for brutal difficulty
 		if (GameSettings.Difficulty == 4) then -- if difficulty is brutal
 			unit = CreateUnit("unit-surghan-mercenary-steelclad", 1, {4, 28})
-			SetUnitActive(unit, false)
+			SetUnitVariable(unit, "Active", false)
 		end
 
 		unit = CreateUnit("unit-surghan-mercenary-thane", 1, {4, 28})
-		SetUnitActive(unit, false)
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-surghan-mercenary-thane", 1, {4, 28})
-		SetUnitActive(unit, false)
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-surghan-mercenary-thane", 1, {4, 28})
-		SetUnitActive(unit, false)
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-dwarven-scout", 1, {4, 28})
-		SetUnitActive(unit, false)
+		SetUnitVariable(unit, "Active", false)
 		IncreaseUnitLevel(unit, 2, true)
 		AcquireAbility(unit, "upgrade-critical-strike")
 		unit = CreateUnit("unit-dwarven-scout", 1, {4, 28})
-		SetUnitActive(unit, false)
+		SetUnitVariable(unit, "Active", false)
 		IncreaseUnitLevel(unit, 2, true)
 		AcquireAbility(unit, "upgrade-critical-strike")
 
