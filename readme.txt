@@ -22,7 +22,7 @@ Features:
 - Retro-style graphics
 - 2 playable civilizations, and a number of non-playable ones
 - 23 quests to play, earning technology points which can be used to obtain new units, buildings and technologies
-- 39 units, 32 buildings and 21 technologies
+- 39 units, 34 buildings and 21 technologies
 - Units can earn experience, being able to upgrade to new unit types or acquire new abilities upon level-up
 - Persistent heroes, who carry over their level and abilities throughout scenarios
 - Personal names and traits for units
