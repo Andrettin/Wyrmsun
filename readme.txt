@@ -215,7 +215,7 @@ Wyrmsun uses a modified version of the Stratagus engine, and its source code can
 https://github.com/Andrettin/Wyrmgus
 
 For the source code of the Stratagus engine itself, see:
-https://launchpad.net/stratagus
+https://github.com/Wargus/stratagus
 
 Wyrmsun's data repository can be found here:
 https://github.com/Andrettin/Wyrmsun
@@ -223,6 +223,17 @@ https://github.com/Andrettin/Wyrmsun
 ############################################################
 # Changelog
 ############################################################
+
+-----------------------------------------------------------------------
+- 1.8.0
+-----------------------------------------------------------------------
+
+* Buildings
+- The Dwarven and Teuton Dock buildings are now buildable in RTS mode.
+
+* Quests
+- The Caverns of Flame quest (Dwarf) now gives 2 technology points instead of 1.
+- The Razing of Opitergium quest (Teuton) now gives 3 technology points instead of 2.
 
 -----------------------------------------------------------------------
 - 1.7.4
