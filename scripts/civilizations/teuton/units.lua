@@ -89,16 +89,18 @@ DefineUnitType("unit-teuton-swordsman", { Name = _("Krieger"),
 	Background = _("\"Krieger\" is the German word for \"warrior\"."),
 	Image = {"file", "human/units/human_body_warrior.png", "size", {72, 72}},
 	Shadow = {"file", "human/units/human_shadow.png", "size", {72, 72}},
-	HairImage = {"file", "human/units/red_hair_warrior.png"},
-	LeftArmImage = {"file", "human/units/human_left_arm.png"},
-	RightArmImage = {"file", "human/units/human_right_arm.png"},
-	ClothingImage = {"file", "teuton/units/chainmail.png"},
-	ClothingLeftArmImage = {"file", "teuton/units/chainmail_left_arm.png"},
-	ClothingRightArmImage = {"file", "teuton/units/chainmail_right_arm.png"},
-	PantsImage = {"file", "human/units/pants.png"},
-	ShoesImage = {"file", "teuton/units/leather_shoes.png"},
-	HelmetImage = {"file", "teuton/units/iron_helm.png"},
-	WeaponImage = {"file", "teuton/units/long_iron_sword.png"},
+	LayerImages = {
+		{"layer", "hair", "file", "human/units/red_hair_warrior.png"},
+		{"layer", "left-arm", "file", "human/units/human_left_arm.png"},
+		{"layer", "right-arm", "file", "human/units/human_right_arm.png"},
+		{"layer", "clothing", "file", "teuton/units/chainmail.png"},
+		{"layer", "clothing-left-arm", "file", "teuton/units/chainmail_left_arm.png"},
+		{"layer", "clothing-right-arm", "file", "teuton/units/chainmail_right_arm.png"},
+		{"layer", "pants", "file", "human/units/pants.png"},
+		{"layer", "shoes", "file", "teuton/units/leather_shoes.png"},
+		{"layer", "helmet", "file", "teuton/units/iron_helm.png"},
+		{"layer", "weapon", "file", "teuton/units/long_iron_sword.png"}
+	},
 	Animations = "animations-melee-unit-new", Icon = "icon-teuton-swordsman",
 	Costs = {"time", 50, "gold", 600},
 	Corpse = "unit-human-dead-body",
@@ -108,49 +110,49 @@ DefineUnitType("unit-teuton-swordsman", { Name = _("Krieger"),
 	Variations = {
 		{
 			"variation-id", "red-hair", -- no shield, bronze sword
-			"weapon-file", "germanic/units/broad_bronze_sword.png",
+			"layer-file", "weapon", "germanic/units/broad_bronze_sword.png",
 			"upgrade-forbidden", "upgrade-teuton-spatha",
 			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
 			"upgrade-forbidden", "upgrade-teuton-iron-shield"
 		},
 		{
 			"variation-id", "red-hair", -- bronze shield, bronze sword
-			"weapon-file", "germanic/units/broad_bronze_sword.png",
-			"left-arm-file", "human/units/human_left_arm_shield.png",
-			"shield-file", "germanic/units/bronze_shield.png",
+			"layer-file", "weapon", "germanic/units/broad_bronze_sword.png",
+			"layer-file", "left-arm", "human/units/human_left_arm_shield.png",
+			"layer-file", "shield", "germanic/units/bronze_shield.png",
 			"upgrade-forbidden", "upgrade-teuton-spatha",
 			"upgrade-required", "upgrade-germanic-bronze-shield",
 			"upgrade-forbidden", "upgrade-teuton-iron-shield"
 		},
 		{
 			"variation-id", "red-hair", -- iron shield, bronze sword
-			"weapon-file", "germanic/units/broad_bronze_sword.png",
-			"left-arm-file", "human/units/human_left_arm_shield.png",
-			"shield-file", "teuton/units/saxon_shield.png",
+			"layer-file", "weapon", "germanic/units/broad_bronze_sword.png",
+			"layer-file", "left-arm", "human/units/human_left_arm_shield.png",
+			"layer-file", "shield", "teuton/units/saxon_shield.png",
 			"upgrade-forbidden", "upgrade-teuton-spatha",
 			"upgrade-required", "upgrade-teuton-iron-shield"
 		},
 		{
 			"variation-id", "red-hair", -- no shield, long iron sword
-			"weapon-file", "teuton/units/long_iron_sword.png",
+			"layer-file", "weapon", "teuton/units/long_iron_sword.png",
 			"upgrade-required", "upgrade-teuton-spatha",
 			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
 			"upgrade-forbidden", "upgrade-teuton-iron-shield"
 		},
 		{
 			"variation-id", "red-hair", -- bronze shield, long iron sword
-			"weapon-file", "teuton/units/long_iron_sword.png",
-			"left-arm-file", "human/units/human_left_arm_shield.png",
-			"shield-file", "germanic/units/bronze_shield.png",
+			"layer-file", "weapon", "teuton/units/long_iron_sword.png",
+			"layer-file", "left-arm", "human/units/human_left_arm_shield.png",
+			"layer-file", "shield", "germanic/units/bronze_shield.png",
 			"upgrade-required", "upgrade-teuton-spatha",
 			"upgrade-required", "upgrade-germanic-bronze-shield",
 			"upgrade-forbidden", "upgrade-teuton-iron-shield"
 		},
 		{
 			"variation-id", "red-hair", -- iron shield, long iron sword
-			"weapon-file", "teuton/units/long_iron_sword.png",
-			"left-arm-file", "human/units/human_left_arm_shield.png",
-			"shield-file", "teuton/units/saxon_shield.png",
+			"layer-file", "weapon", "teuton/units/long_iron_sword.png",
+			"layer-file", "left-arm", "human/units/human_left_arm_shield.png",
+			"layer-file", "shield", "teuton/units/saxon_shield.png",
 			"upgrade-required", "upgrade-teuton-spatha",
 			"upgrade-required", "upgrade-teuton-iron-shield"
 		}
@@ -176,66 +178,68 @@ DefineUnitType("unit-suebi-swordsman", { Name = _("Krieger"),
 	Background = "",
 	Image = {"file", "human/units/human_body_warrior.png", "size", {72, 72}},
 	Shadow = {"file", "human/units/human_shadow.png", "size", {72, 72}},
-	HairImage = {"file", "teuton/units/suebi_hair.png"},
-	LeftArmImage = {"file", "human/units/human_left_arm.png"},
-	RightArmImage = {"file", "human/units/human_right_arm.png"},
-	ClothingImage = {"file", "human/units/leather_strap.png"},
-	ClothingLeftArmImage = {"file", ""},
-	ClothingRightArmImage = {"file", ""},
-	PantsImage = {"file", "human/units/pants.png"},
-	ShoesImage = {"file", "teuton/units/leather_shoes.png"},
-	HelmetImage = {"file", ""},
-	WeaponImage = {"file", "teuton/units/long_iron_sword.png"},
+	LayerImages = {
+		{"layer", "hair", "file", "teuton/units/suebi_hair.png"},
+		{"layer", "left-arm", "file", "human/units/human_left_arm.png"},
+		{"layer", "right-arm", "file", "human/units/human_right_arm.png"},
+		{"layer", "clothing", "file", "human/units/leather_strap.png"},
+		{"layer", "clothing-left-arm", "file", ""},
+		{"layer", "clothing-right-arm", "file", ""},
+		{"layer", "pants", "file", "human/units/pants.png"},
+		{"layer", "shoes", "file", "teuton/units/leather_shoes.png"},
+		{"layer", "helmet", "file", ""},
+		{"layer", "weapon", "file", "teuton/units/long_iron_sword.png"}
+	},
 	Icon = "icon-teuton-swordsman",
 	Armor = 0, BasicDamage = 11, Accuracy = 12, -- -2 armor, +2 damage, +2 accuracy
 	Points = 60, -- +10 points
 	Variations = {
 		{
 			"variation-id", "blond-hair", -- no shield, bronze sword
-			"weapon-file", "germanic/units/broad_bronze_sword.png",
+			"layer-file", "weapon", "germanic/units/broad_bronze_sword.png",
 			"upgrade-forbidden", "upgrade-teuton-spatha",
 			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
 			"upgrade-forbidden", "upgrade-teuton-iron-shield"
 		},
 		{
 			"variation-id", "blond-hair", -- bronze shield, bronze sword
-			"weapon-file", "germanic/units/broad_bronze_sword.png",
-			"left-arm-file", "human/units/human_left_arm_shield.png",
-			"shield-file", "germanic/units/bronze_shield.png",
+			"layer-file", "weapon", "germanic/units/broad_bronze_sword.png",
+			"layer-file", "left-arm", "human/units/human_left_arm_shield.png",
+			"layer-file", "shield", "germanic/units/bronze_shield.png",
 			"upgrade-forbidden", "upgrade-teuton-spatha",
 			"upgrade-required", "upgrade-germanic-bronze-shield",
 			"upgrade-forbidden", "upgrade-teuton-iron-shield"
 		},
 		{
 			"variation-id", "blond-hair", -- iron shield, bronze sword
-			"weapon-file", "germanic/units/broad_bronze_sword.png",
-			"left-arm-file", "human/units/human_left_arm_shield.png",
-			"shield-file", "teuton/units/suebi_shield.png",
+			"layer-file", "weapon", "germanic/units/broad_bronze_sword.png",
+			"layer-file", "left-arm", "human/units/human_left_arm_shield.png",
+			"layer-file", "shield", "teuton/units/suebi_shield.png",
 			"upgrade-forbidden", "upgrade-teuton-spatha",
 			"upgrade-required", "upgrade-teuton-iron-shield",
 			"shield-animation", SuebiShieldAnimation
 		},
 		{
 			"variation-id", "blond-hair", -- no shield, long iron sword
-			"weapon-file", "teuton/units/long_iron_sword.png",
+			"layer-file", "weapon", "teuton/units/long_iron_sword.png",
 			"upgrade-required", "upgrade-teuton-spatha",
 			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
 			"upgrade-forbidden", "upgrade-teuton-iron-shield"
 		},
 		{
 			"variation-id", "blond-hair", -- bronze shield, long iron sword
-			"weapon-file", "teuton/units/long_iron_sword.png",
-			"left-arm-file", "human/units/human_left_arm_shield.png",
-			"shield-file", "germanic/units/bronze_shield.png",
+			"layer-file", "weapon", "teuton/units/long_iron_sword.png",
+			"layer-file", "left-arm", "human/units/human_left_arm_shield.png",
+			"layer-file", "shield", "germanic/units/bronze_shield.png",
 			"upgrade-required", "upgrade-teuton-spatha",
 			"upgrade-required", "upgrade-germanic-bronze-shield",
 			"upgrade-forbidden", "upgrade-teuton-iron-shield"
 		},
 		{
 			"variation-id", "blond-hair", -- iron shield, long iron sword
-			"weapon-file", "teuton/units/long_iron_sword.png",
-			"left-arm-file", "human/units/human_left_arm_shield.png",
-			"shield-file", "teuton/units/suebi_shield.png",
+			"layer-file", "weapon", "teuton/units/long_iron_sword.png",
+			"layer-file", "left-arm", "human/units/human_left_arm_shield.png",
+			"layer-file", "shield", "teuton/units/suebi_shield.png",
 			"upgrade-required", "upgrade-teuton-spatha",
 			"upgrade-required", "upgrade-teuton-iron-shield",
 			"shield-animation", SuebiShieldAnimation
@@ -251,17 +255,19 @@ DefineUnitType("unit-teuton-archer", { Name = _("Skutan"),
 --	Background = _("\"Skutan\" is the Proto-Germanic word for \"archer\"."),
 	Image = {"file", "human/units/human_body_archer.png", "size", {72, 72}},
 	Shadow = {"file", "human/units/human_shadow_archer.png", "size", {72, 72}},
-	HairImage = {"file", "human/units/red_hair_archer.png"},
-	LeftArmImage = {"file", "human/units/human_left_arm_archer.png"},
-	RightArmImage = {"file", "human/units/human_right_arm_archer.png"},
-	ClothingImage = {"file", "germanic/units/coat_archer.png"},
-	ClothingLeftArmImage = {"file", "germanic/units/coat_left_arm_archer.png"},
-	ClothingRightArmImage = {"file", "germanic/units/coat_right_arm_archer.png"},
-	PantsImage = {"file", "human/units/pants_archer.png"},
-	ShoesImage = {"file", "human/units/shoes_archer.png"},
-	WeaponImage = {"file", "human/units/bow_and_bronze_knife.png"},
-	HelmetImage = {"file", "germanic/units/wool_hat_archer.png"},
-	BackpackImage = {"file", "human/units/quiver.png"},	
+	LayerImages = {
+		{"layer", "hair", "file", "human/units/red_hair_archer.png"},
+		{"layer", "left-arm", "file", "human/units/human_left_arm_archer.png"},
+		{"layer", "right-arm", "file", "human/units/human_right_arm_archer.png"},
+		{"layer", "clothing", "file", "germanic/units/coat_archer.png"},
+		{"layer", "clothing-left-arm", "file", "germanic/units/coat_left_arm_archer.png"},
+		{"layer", "clothing-right-arm", "file", "germanic/units/coat_right_arm_archer.png"},
+		{"layer", "pants", "file", "human/units/pants_archer.png"},
+		{"layer", "shoes", "file", "human/units/shoes_archer.png"},
+		{"layer", "weapon", "file", "human/units/bow_and_bronze_knife.png"},
+		{"layer", "helmet", "file", "germanic/units/wool_hat_archer.png"},
+		{"layer", "backpack", "file", "human/units/quiver.png"}
+	},
 	Animations = "animations-goblin-archer", Icon = "icon-germanic-archer",
 	Missile = "missile-arrow",
 	Corpse = "unit-human-dead-body",
@@ -276,12 +282,12 @@ DefineUnitType("unit-teuton-archer", { Name = _("Skutan"),
 		},
 		{
 			"variation-id", "gray-hair",
-			"hair-file", "human/units/gray_hair_archer.png",
+			"layer-file", "hair", "human/units/gray_hair_archer.png",
 			"icon", "icon-germanic-archer-gray-hair"
 		},
 		{
 			"variation-id", "blond-hair",
-			"hair-file", "human/units/blond_hair_archer.png",
+			"layer-file", "hair", "human/units/blond_hair_archer.png",
 			"icon", "icon-germanic-archer-blond-hair",
 			"upgrade-forbidden", "upgrade-old"
 		}
