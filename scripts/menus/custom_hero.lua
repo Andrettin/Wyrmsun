@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-function CustomHeroCreationMenu(civilization)
+function CustomHeroCreationMenu(civilization, quest_menu)
 	local menu = WarGameMenu(panel(5))
 	menu:setSize(352, 352)
     menu:setPosition((Video.Width - menu:getWidth()) / 2, (Video.Height - menu:getHeight()) / 2)
@@ -90,6 +90,8 @@ function CustomHeroCreationMenu(civilization)
 					Trait = trait_ident_list[trait:getSelected() + 1],
 					Variation = string.lower(string.gsub(variation_list[variation:getSelected() + 1], " ", "-"))
 				})
+				quest_menu:stop()
+				RunQuestMenu("Nidavellir")
 				menu:stop()
 			end
 		end

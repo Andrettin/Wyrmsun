@@ -225,6 +225,17 @@ https://github.com/Andrettin/Wyrmsun
 ############################################################
 
 -----------------------------------------------------------------------
+- 1.8.0
+-----------------------------------------------------------------------
+
+* Buildings
+- The Dwarven and Teuton Dock buildings are now buildable in RTS mode.
+
+* Quests
+- The Caverns of Flame quest (Dwarf) now gives 2 technology points instead of 1.
+- The Razing of Opitergium quest (Teuton) now gives 3 technology points instead of 2.
+
+-----------------------------------------------------------------------
 - 1.7.5
 -----------------------------------------------------------------------
 

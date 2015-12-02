@@ -119,37 +119,22 @@ function RunQuestMenu(world)
 	difficulty:setSize(152, 20)
 	difficulty:setSelected(wyr.preferences.Difficulty - 1)
 
-	if (world == "Nidavellir" and true == false) then
-		local heroes_changed = false
-		
+	if (world == "Nidavellir") then
 		local hero_list = GetCustomHeroes()
+		local hero_dd
 		table.sort(hero_list)
 		table.insert(hero_list, "") -- to allow players to choose having no custom hero selected
 		menu:addLabel(_("Hero:"), offx + 40, offy + (10 + 300) - 20, Fonts["game"], false)
-		local hero_dd = menu:addDropDown(hero_list, offx + 40, offy + 10 + 300,
+		hero_dd = menu:addDropDown(hero_list, offx + 40, offy + 10 + 300,
 			function(dd)
 				SetCurrentCustomHero(hero_list[hero_dd:getSelected() + 1])
 			end
 		)
 		hero_dd:setSize(152, 20)
-		hero_dd:setSelected(0)
+		hero_dd:setSelected(GetElementIndexFromArray(hero_list, GetCurrentCustomHero()))
 				
-		local function listen()
-			if (heroes_changed) then
-				hero_list = GetCustomHeroes()
-				table.sort(hero_list)
-				table.insert(hero_list, "") -- to allow players to choose having no custom hero selected
-				hero_dd:setList(hero_list)
-				hero_dd:setSize(152, 20)
-				hero_dd:setSelected(0)
-				heroes_changed = false
-			end
-		end
-		local listener = LuaActionListener(listen)
-		menu:addLogicCallback(listener)
-
 		menu:addFullButton(_("Create Custom ~!Hero"), "h", offx + 208, offy + 212 + (36 * 4),
-			function() CustomHeroCreationMenu("dwarf"); heroes_changed = true; end
+			function() CustomHeroCreationMenu("dwarf", quest_menu); end
 		)
 		
 		menu:addFullButton(_("~!Delete Custom Hero"), "h", offx + 208, offy + 212 + (36 * 5),
@@ -165,8 +150,8 @@ function RunQuestMenu(world)
 					confirm:addHalfButton("~!Yes", "y", 1 * (288 / 3) - 90, 120 - 16 - 27,
 						function()
 							DeleteCustomHero(hero_list[hero_dd:getSelected() + 1])
-							heroes_changed = true
 							confirm:stop()
+							quest_menu:stop(); RunQuestMenu(world);
 						end
 					)
 
