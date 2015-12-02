@@ -221,7 +221,7 @@ function addEncyclopediaIcon(unit_name, menu, x, y)
 		encyclopedia_icon = CIcon:Get(GetCharacterData(unit_name, "Icon")).G
 		encyclopedia_icon_frame = CIcon:Get(GetCharacterData(unit_name, "Icon")).Frame
 		civilization = GetCharacterData(unit_name, "Civilization")
-		faction = ""
+		faction = GetCharacterData(unit_name, "Faction")
 		tooltip_name = GetCharacterData(unit_name, "FullName")
 		if (civilization ~= "") then
 			tooltip_civilization = "(" ..  _(CapitalizeString(civilization))
@@ -235,7 +235,9 @@ function addEncyclopediaIcon(unit_name, menu, x, y)
 	local encyclopedia_icon_x_origin = (encyclopedia_icon_frame * 46) % encyclopedia_icon:getGraphicWidth()
 	local encyclopedia_icon_y_origin = math.floor((encyclopedia_icon_frame * 46) / encyclopedia_icon:getGraphicWidth()) * 38
 	local playercolor
-	if (civilization ~= "") then
+	if (civilization ~= "" and faction ~= "") then
+		playercolor = GetFactionData(civilization, faction, "Color")
+	elseif (civilization ~= "") then
 		playercolor = GetCivilizationData(civilization, "DefaultColor")
 	else
 		playercolor = "gray"
@@ -315,9 +317,9 @@ function addEncyclopediaIcon(unit_name, menu, x, y)
 				if (GetCharacterData(unit_name, "Civilization") ~= "") then
 					civilization = "Civilization: " .. _(CapitalizeString(GetCharacterData(unit_name, "Civilization"))) .. "\n\n"
 				end
---				if (GetCharacterData(unit_name, "Faction") ~= "") then
---					faction = "Faction: " .. _(CapitalizeString(GetCharacterData(unit_name, "Faction"))) .. "\n\n"
---				end
+				if (GetCharacterData(unit_name, "Faction") ~= "") then
+					faction = "Faction: " .. _(CapitalizeString(GetCharacterData(unit_name, "Faction"))) .. "\n\n"
+				end
 				if (GetUnitTypeData(GetCharacterData(unit_name, "Type"), "Class") ~= "") then
 					unit_type_class = "Class: " .. _(FullyCapitalizeString(string.gsub(GetUnitTypeData(GetCharacterData(unit_name, "Type"), "Class"), "-", " "))) .. "\n\n"
 				end

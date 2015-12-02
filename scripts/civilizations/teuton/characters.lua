@@ -30,6 +30,7 @@ DefineCharacter("Ariovistus", {
 	Gender = "male",
 	Type = "unit-suebi-swordsman",
 	Civilization = "teuton",
+	Faction = "Suebi Tribe",
 	ProvinceOfOrigin = "Brandenburg",
 	Year = -71, -- Ariovistus invades Gaul in 71 BC
 	DeathYear = -58 -- Ariovistus beaten by Caesar in 58 BC
@@ -41,6 +42,7 @@ DefineCharacter("Marbod", {
 	Type = "unit-suebi-swordsman",
 	Level = 2,
 	Civilization = "teuton",
+	Faction = "Marcomanni Tribe",
 	Trait = "upgrade-keen",
 	Variation = "blond-hair",
 	Description = _("A young chieftain of the Marcomanni, Marbod aspires to forge a realm for his tribe capable of withstanding the test of time."),

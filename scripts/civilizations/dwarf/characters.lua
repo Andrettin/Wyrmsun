@@ -32,6 +32,7 @@ DefineCharacter("Modsognir", { -- one of the earliest dwarven leaders; in Norse 
 	Gender = "male",
 	Type = "unit-dwarven-steelclad",
 	Civilization = "dwarf",
+	Faction = "Modsogning Clan",
 	Description = _("The leader of one of the first dwarven tribes, Modsognir is a mighty warrior."),
 	Background = _("In Norse mythology, Modsognir appears in the ~<Voluspo~> as the first and mightiest of the dwarves."),
 	Icon = "icon-modsognir",
@@ -48,6 +49,7 @@ DefineCharacter("Durin", { -- deputy of Modsognir
 	Gender = "male",
 	Type = "unit-dwarven-steelclad",
 	Civilization = "dwarf",
+	Faction = "Modsogning Clan",
 	Description = _("Durin is a valiant dwarven warrior and loyal vassal of chieftain Modsognir."),
 	Background = _("In Norse mythology, Durin appears in the ~<Voluspo~> as one of the first dwarves."),
 	Icon = "icon-durin",
@@ -63,6 +65,7 @@ DefineCharacter("Thjodrorir", { -- dwarven sage of Modsognir's clan; in Norse my
 	Name = "Thjodrorir",
 	Type = "unit-dwarven-steelclad", -- should be a priest
 	Civilization = "dwarf",
+	Faction = "Modsogning Clan",
 	ProvinceOfOrigin = "Svarinshaug",
 	Year = -3000,
 	DeathYear = -3000 + 30 -- estimated
@@ -83,6 +86,7 @@ DefineCharacter("Thursagan", {
 	Gender = "male",
 	Type = "unit-dwarven-thane",
 	Civilization = "dwarf",
+	Faction = "Norlund Clan",
 	Description = _("Thursagan is an extremely skilled runemaster who has retired to live as a hermit in the Northern Wastelands. Due to his talents, he was contacted by Rugnur to craft of the Scepter of Fire. His hammer is considered legendary, and dwarves have sought to find it for centuries after his death."),
 	Quote = _("\"Ye mean the insane dwarf who lives in the far north?!\" - Baglur, Retired Norlund Warrior"),
 	Background = "~<The Sceptre of Fire~> poem about the crafting of that artifact mentions Thursagan (as \"a runesmith\") as the maker of the scepter.",
@@ -100,6 +104,7 @@ DefineCharacter("Baglur", {
 	Gender = "male",
 	Type = "unit-dwarven-steelclad",
 	Civilization = "dwarf",
+	Faction = "Norlund Clan",
 	Description = _("Baglur is an old and well-experienced warrior. He came back from retirement to help Rugnur defend their homeland against an attack from the Shinsplitter Clan."),
 --	Quote = _("\"Argh! I'm a retired warrior... it looks like I'll ha' to come out and help ye, else we'll be overrun by these damn raiders...\" - Baglur"), -- repeats information already given
 	Icon = "icon-baglur",
@@ -116,6 +121,7 @@ DefineCharacter("Durstorn", {
 	Gender = "male",
 	Type = "unit-dwarven-thane",
 	Civilization = "dwarf",
+	Faction = "Norlund Clan",
 	Description = _("Durstorn is the chief of the Norlund Clan. Despite being greedy and unpleasant to be around, he makes a passable leader. When under pressure, however, he tends to become hasty and crass, impoverishing his capability to make good decisions."),
 	Icon = "icon-durstorn",
 	Trait = "upgrade-strong",
@@ -131,6 +137,7 @@ DefineCharacter("Glonoin", {
 	Gender = "male",
 	Type = "unit-dwarven-thane",
 	Civilization = "dwarf",
+	Faction = "Shorbear Clan",
 	ProvinceOfOrigin = "Shorbear Hills",
 	Year = -1,
 	DeathYear = 29 + 15 -- Shorbear Hold conquered in 29 AD by Rugnur's and Durstorn's Clan
@@ -141,6 +148,7 @@ DefineCharacter("Rugnur", {
 	Gender = "male",
 	Type = "unit-dwarven-axefighter",
 	Civilization = "dwarf",
+	Faction = "Norlund Clan",
 	Description = _("Rugnur is a relatively young dwarven warrior. He belongs to the lower strata of his tribe's notables, not being of high enough rank to have a leading position in the clan, but important enough to be granted control of an outpost in the Chaincolt Foothills. Despite being neither ambitious nor adventurous, Rugnur nevertheless ended up being embroiled in the quest to craft the Scepter of Fire for a gnomish monarch."),
 	Icon = "icon-rugnur",
 	HeroicIcon = "icon-rugnur-older",

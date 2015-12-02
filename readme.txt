@@ -231,6 +231,10 @@ https://github.com/Andrettin/Wyrmsun
 * Buildings
 - The Dwarven and Teuton Dock buildings are now buildable in RTS mode.
 
+* Heroes
+- The heroes' icons in the encyclopedia now show up with their faction's player color (rather than their civilization's default player color, as was the case previously).
+- The heroes' factions are now displayed in their encyclopedia entries.
+
 * Quests
 - The Caverns of Flame quest (Dwarf) now gives 2 technology points instead of 1.
 - The Razing of Opitergium quest (Teuton) now gives 3 technology points instead of 2.
