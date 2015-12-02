@@ -118,7 +118,13 @@ function RunQuestMenu(world)
 	)
 	difficulty:setSize(152, 20)
 	difficulty:setSelected(wyr.preferences.Difficulty - 1)
-  
+
+	if (world == "Nidavellir") then
+		menu:addFullButton(_("Create Custom ~!Hero"), "h", offx + 208, offy + 212 + (36 * 5),
+			function() CustomHeroCreationMenu("dwarf"); end
+		)
+	end
+
 	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 212 + (36 * 6),
 		function() menu:stop(); end)
 
