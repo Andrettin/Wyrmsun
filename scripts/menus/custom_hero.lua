@@ -94,7 +94,7 @@ function CustomHeroCreationMenu(civilization)
 					Civilization = "dwarf",
 					Type = "unit-dwarven-axefighter",
 					Trait = "upgrade-" .. string.lower(string.gsub(trait_list[trait:getSelected() + 1], " ", "-")),
-					Variation = string.lower(string.gsub(trait_list[trait:getSelected() + 1], " ", "-"))
+					Variation = string.lower(string.gsub(variation_list[variation:getSelected() + 1], " ", "-"))
 				})
 				menu:stop()
 			end
