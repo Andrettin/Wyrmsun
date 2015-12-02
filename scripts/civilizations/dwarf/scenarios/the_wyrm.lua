@@ -29,6 +29,8 @@ if (LoadedGame == false) then
 	SetPlayerData(0, "Allow", "upgrade-dwarven-runewriting", "F")
 	SetPlayerData(1, "Allow", "upgrade-dwarven-runewriting", "F")
 	SetAiType(1, "land-attack")
+	SetPlayerData(2, "Name", "Svafnir")
+	SetPlayerData(3, "Name", "Abandoned Stronghold")
 end
 
 -- If Rugnur dies, any quests of the Scepter of Fire campaign currently being pursued fail

@@ -119,7 +119,7 @@ function RunQuestMenu(world)
 	difficulty:setSize(152, 20)
 	difficulty:setSelected(wyr.preferences.Difficulty - 1)
 
-	if (world == "Nidavellir") then
+	if (world == "Nidavellir" and true == false) then
 		local heroes_changed = false
 		
 		local hero_list = GetCustomHeroes()
@@ -128,8 +128,7 @@ function RunQuestMenu(world)
 		menu:addLabel(_("Hero:"), offx + 40, offy + (10 + 300) - 20, Fonts["game"], false)
 		local hero_dd = menu:addDropDown(hero_list, offx + 40, offy + 10 + 300,
 			function(dd)
---				wyr.preferences.Difficulty = difficulty:getSelected() + 1
---				SavePreferences()
+				SetCurrentCustomHero(hero_list[hero_dd:getSelected() + 1])
 			end
 		)
 		hero_dd:setSize(152, 20)
@@ -142,6 +141,7 @@ function RunQuestMenu(world)
 				table.insert(hero_list, "") -- to allow players to choose having no custom hero selected
 				hero_dd:setList(hero_list)
 				hero_dd:setSize(152, 20)
+				hero_dd:setSelected(0)
 				heroes_changed = false
 			end
 		end
@@ -181,7 +181,11 @@ function RunQuestMenu(world)
 	end
 
 	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 212 + (36 * 6),
-		function() menu:stop(); end)
+		function()
+			SetCurrentCustomHero("")
+			menu:stop();
+		end
+	)
 
 	menu:run()
 end

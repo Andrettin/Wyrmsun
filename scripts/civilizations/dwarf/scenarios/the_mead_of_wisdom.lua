@@ -29,6 +29,7 @@
 
 if (LoadedGame == false) then
 	SetPlayerData(0, "Faction", "Modsogning Clan")
+	SetPlayerData(2, "Name", "Fjalar and Galar")
 
 	if (GrandStrategy == false) then
 		if (GameSettings.Difficulty == 1) then -- if difficulty is easy
