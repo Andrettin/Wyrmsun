@@ -120,8 +120,63 @@ function RunQuestMenu(world)
 	difficulty:setSelected(wyr.preferences.Difficulty - 1)
 
 	if (world == "Nidavellir") then
-		menu:addFullButton(_("Create Custom ~!Hero"), "h", offx + 208, offy + 212 + (36 * 5),
-			function() CustomHeroCreationMenu("dwarf"); end
+		local heroes_changed = false
+		
+		local hero_list = GetCustomHeroes()
+		table.sort(hero_list)
+		table.insert(hero_list, "") -- to allow players to choose having no custom hero selected
+		menu:addLabel(_("Hero:"), offx + 40, offy + (10 + 300) - 20, Fonts["game"], false)
+		local hero_dd = menu:addDropDown(hero_list, offx + 40, offy + 10 + 300,
+			function(dd)
+--				wyr.preferences.Difficulty = difficulty:getSelected() + 1
+--				SavePreferences()
+			end
+		)
+		hero_dd:setSize(152, 20)
+		hero_dd:setSelected(0)
+				
+		local function listen()
+			if (heroes_changed) then
+				hero_list = GetCustomHeroes()
+				table.sort(hero_list)
+				table.insert(hero_list, "") -- to allow players to choose having no custom hero selected
+				hero_dd:setList(hero_list)
+				hero_dd:setSize(152, 20)
+				heroes_changed = false
+			end
+		end
+		local listener = LuaActionListener(listen)
+		menu:addLogicCallback(listener)
+
+		menu:addFullButton(_("Create Custom ~!Hero"), "h", offx + 208, offy + 212 + (36 * 4),
+			function() CustomHeroCreationMenu("dwarf"); heroes_changed = true; end
+		)
+		
+		menu:addFullButton(_("~!Delete Custom Hero"), "h", offx + 208, offy + 212 + (36 * 5),
+			function()
+				if (hero_list[hero_dd:getSelected() + 1] ~= "") then
+					local confirm = WarGameMenu(panel(4))
+
+					confirm:resize(288,128)
+
+					confirm:addLabel("Delete " .. hero_list[hero_dd:getSelected() + 1], 288 / 2, 11)
+					confirm:addLabel("Are you sure? This cannot be undone.", 288 / 2, 45, Fonts["game"])
+
+					confirm:addHalfButton("~!Yes", "y", 1 * (288 / 3) - 90, 120 - 16 - 27,
+						function()
+							DeleteCustomHero(hero_list[hero_dd:getSelected() + 1])
+							heroes_changed = true
+							confirm:stop()
+						end
+					)
+
+					confirm:addHalfButton("~!No", "n", 3 * (288 / 3) - 116, 120 - 16 - 27,
+						function() confirm:stop() end
+					)
+
+					confirm:run()
+				end
+			end
 		)
 	end
 

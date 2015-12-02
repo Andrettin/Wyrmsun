@@ -29,25 +29,19 @@ function CustomHeroCreationMenu(civilization)
 	local menu = WarGameMenu(panel(5))
 	menu:setSize(352, 352)
     menu:setPosition((Video.Width - menu:getWidth()) / 2, (Video.Height - menu:getHeight()) / 2)
-	menu:addLabel(_("Custom Hero"), 176, 11)
+	menu:addLabel(_("Create Custom Hero"), 176, 11)
 	
---	local menu_image
---	menu_image = PlayerColorImageWidget(questicon, GetQuestData(quest, "PlayerColor"))
---	menu_image:setImageOrigin(quest_icon_x_origin, quest_icon_y_origin)	
---	menu:add(menu_image, 153, 48)
-
 	local sizeX = 352
 	local sizeY = 352
 
 	local hero_civilization_list = {"Dwarf"}
 	local hero_class_list = {"Axefighter"}
-	local trait_list = GetUnitTypeData("unit-dwarven-axefighter", "Traits")
-	for i=1,table.getn(trait_list) do
-		trait_list[i] = string.sub(trait_list[i], 9)
-		trait_list[i] = string.gsub(trait_list[i], "-", " ")
-		trait_list[i] = FullyCapitalizeString(trait_list[i])
+	local trait_ident_list = GetUnitTypeData("unit-dwarven-axefighter", "Traits")
+	table.sort(trait_ident_list)
+	local trait_list = {}
+	for i=1,table.getn(trait_ident_list) do
+		table.insert(trait_list, CUpgrade:Get(trait_ident_list[i]).Name .. ": " .. GetUpgradeEffectsString(trait_ident_list[i]))
 	end
-	table.sort(trait_list)
 	local variation_list = {"Black Hair", "Blond Hair", "Brown Hair", "Gray Hair", "Orange Hair", "Red Hair"}
 	
 	menu:addLabel(_("Name:"), 10, 12 + 36 * 1, Fonts["game"], false)
@@ -93,7 +87,7 @@ function CustomHeroCreationMenu(civilization)
 					Dynasty = hero_family_name:getText(),
 					Civilization = "dwarf",
 					Type = "unit-dwarven-axefighter",
-					Trait = "upgrade-" .. string.lower(string.gsub(trait_list[trait:getSelected() + 1], " ", "-")),
+					Trait = trait_ident_list[trait:getSelected() + 1],
 					Variation = string.lower(string.gsub(variation_list[variation:getSelected() + 1], " ", "-"))
 				})
 				menu:stop()
