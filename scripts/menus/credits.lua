@@ -117,6 +117,7 @@ function RunShowCreditsMenu()
 	"  João Victor G. Costa (Jinn)",
 	"  Leo",
 	"  Tanja Nov.",
+	"  2D-Retroperspectives",
 	"  badbuckle (Cenk Açan)",
 	"  Battle for Wesnoth Team",
 	"  Brian Brickwagon Jennings",
