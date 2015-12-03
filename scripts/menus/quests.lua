@@ -131,27 +131,28 @@ function RunQuestMenu(world)
 			end
 		)
 		hero_dd:setSize(152, 20)
-		hero_dd:setSelected(GetElementIndexFromArray(hero_list, GetCurrentCustomHero()))
+		hero_dd:setSelected(GetElementIndexFromArray(hero_list, GetCurrentCustomHero()) - 1)
 				
 		menu:addFullButton(_("Create Custom ~!Hero"), "h", offx + 208, offy + 212 + (36 * 4),
-			function() CustomHeroCreationMenu("dwarf", quest_menu); end
+			function() CustomHeroCreationMenu("dwarf", menu);
+			end
 		)
 		
 		menu:addFullButton(_("~!Delete Custom Hero"), "h", offx + 208, offy + 212 + (36 * 5),
 			function()
-				if (hero_list[hero_dd:getSelected() + 1] ~= "") then
+				if (GetCurrentCustomHero() ~= "") then
 					local confirm = WarGameMenu(panel(4))
 
 					confirm:resize(288,128)
 
-					confirm:addLabel("Delete " .. hero_list[hero_dd:getSelected() + 1], 288 / 2, 11)
+					confirm:addLabel("Delete " .. GetCurrentCustomHero(), 288 / 2, 11)
 					confirm:addLabel("Are you sure? This cannot be undone.", 288 / 2, 45, Fonts["game"])
 
 					confirm:addHalfButton("~!Yes", "y", 1 * (288 / 3) - 90, 120 - 16 - 27,
 						function()
-							DeleteCustomHero(hero_list[hero_dd:getSelected() + 1])
+							DeleteCustomHero(GetCurrentCustomHero())
 							confirm:stop()
-							quest_menu:stop(); RunQuestMenu(world);
+							menu:stop(); RunQuestMenu(world);
 						end
 					)
 

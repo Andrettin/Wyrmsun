@@ -88,11 +88,12 @@ function CustomHeroCreationMenu(civilization, quest_menu)
 					Civilization = "dwarf",
 					Type = "unit-dwarven-axefighter",
 					Trait = trait_ident_list[trait:getSelected() + 1],
-					Variation = string.lower(string.gsub(variation_list[variation:getSelected() + 1], " ", "-"))
+					Variation = string.lower(string.gsub(variation_list[variation:getSelected() + 1], " ", "-")),
+					ForbiddenUpgrades = {"unit-dwarven-yale-rider"}
 				})
+				menu:stop()
 				quest_menu:stop()
 				RunQuestMenu("Nidavellir")
-				menu:stop()
 			end
 		end
 	)
