@@ -30,7 +30,7 @@
 UnitTypeFiles = {}
 
 Units = {
-	"unit-germanic-worker", "unit-germanic-warrior", "unit-germanic-archer",
+	"unit-germanic-worker", "unit-germanic-warrior", "unit-germanic-spearman", "unit-germanic-archer",
 	"unit-germanic-town-hall", "unit-germanic-farm", "unit-germanic-barracks",
 	"unit-germanic-carpenters-shop", "unit-germanic-smithy",
 	"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield",
@@ -4184,6 +4184,19 @@ DefineUnitType("unit-template-heroic-infantry", { Name = _("Heroic Infantry"),
 	CanTargetLand = true,
 	organic = true,
 	SelectableByRectangle = true
+} )
+
+DefineUnitType("unit-template-spearman", { Name = _("Spearman"),
+	Parent = "unit-template-infantry",
+	Class = "spearman",
+	Costs = {"gold", 500, "lumber", 50},
+	BasicDamage = 6, -- reduced damage, since it has a bonus against mounted units
+	BonusAgainstMounted = 100,
+	PierceDamage = true,
+	Sounds = {
+		"hit", "spear-attack",
+		"miss", "spear-miss"
+	}
 } )
 
 DefineUnitType("unit-template-archer", { Name = _("Archer"),

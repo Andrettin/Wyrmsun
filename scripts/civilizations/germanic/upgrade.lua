@@ -106,14 +106,16 @@ DefineUpgrade("upgrade-yngling-tribe-faction", {
 DefineModifier("upgrade-germanic-broad-sword",
 	{"BasicDamage", 2},
 	{"Points", 10},
-	{"apply-to", "unit-germanic-warrior"}, {"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-suebi-swordsman"},
+	{"apply-to", "unit-germanic-warrior"}, {"apply-to", "unit-germanic-spearman"},
+	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-suebi-swordsman"},
 	{"apply-to", "unit-teuton-ritter"}
 )
 
 DefineModifier("upgrade-germanic-bronze-shield",
 	{"Armor", 2},
 	{"Points", 10},
-	{"apply-to", "unit-germanic-warrior"}, {"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-suebi-swordsman"},
+	{"apply-to", "unit-germanic-warrior"}, {"apply-to", "unit-germanic-spearman"},
+	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-suebi-swordsman"},
 	{"apply-to", "unit-teuton-ritter"}
 )
 

@@ -89,9 +89,9 @@ Set0ADTemplateUnitTypeEquivalency("other/celt_longhouse", "unit-celt-farm")
 
 -- Gaul units
 Set0ADTemplateUnitTypeEquivalency("units/gaul_support_female_citizen", "unit-germanic-worker")
-Set0ADTemplateUnitTypeEquivalency("units/gaul_infantry_spearman_b", "unit-germanic-warrior")
-Set0ADTemplateUnitTypeEquivalency("units/gaul_infantry_spearman_a", "unit-germanic-warrior")
-Set0ADTemplateUnitTypeEquivalency("units/gaul_infantry_spearman_e", "unit-germanic-warrior")
+Set0ADTemplateUnitTypeEquivalency("units/gaul_infantry_spearman_b", "unit-germanic-spearman")
+Set0ADTemplateUnitTypeEquivalency("units/gaul_infantry_spearman_a", "unit-germanic-spearman")
+Set0ADTemplateUnitTypeEquivalency("units/gaul_infantry_spearman_e", "unit-germanic-spearman")
 Set0ADTemplateUnitTypeEquivalency("units/gaul_infantry_javelinist_b", "unit-germanic-archer")
 Set0ADTemplateUnitTypeEquivalency("units/gaul_infantry_javelinist_a", "unit-germanic-archer")
 Set0ADTemplateUnitTypeEquivalency("units/gaul_infantry_javelinist_e", "unit-germanic-archer")

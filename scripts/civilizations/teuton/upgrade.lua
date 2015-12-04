@@ -253,6 +253,12 @@ DefineModifier("upgrade-teuton-civilization",
 	{"apply-to", "unit-germanic-warrior"}, {"convert-to", "unit-teuton-swordsman"}
 )
 
+--[[
+DefineModifier("upgrade-teuton-civilization",
+	{"apply-to", "unit-germanic-spearman"}, {"convert-to", "unit-teuton-spearman"}
+)
+--]]
+
 DefineModifier("upgrade-teuton-civilization",
 	{"apply-to", "unit-germanic-archer"}, {"convert-to", "unit-teuton-archer"}
 )

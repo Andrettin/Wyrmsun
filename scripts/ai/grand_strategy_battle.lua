@@ -83,6 +83,7 @@ local land_funcs = {
 -- FAST AND FURIOUS
   function() return AiForce(1, {
 	"unit-germanic-warrior", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-germanic-warrior"),
+	"unit-germanic-spearman", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-germanic-spearman"),
 	"unit-germanic-archer", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-germanic-archer"),
 	"unit-teuton-swordsman", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-teuton-swordsman"),
 	"unit-suebi-swordsman", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-suebi-swordsman"),

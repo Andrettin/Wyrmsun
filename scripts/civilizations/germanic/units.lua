@@ -182,6 +182,100 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 	}
 } )
 
+DefineUnitType("unit-germanic-spearman", { Name = _("Spearman"),
+	Parent = "unit-template-spearman",
+	Civilization = "germanic",
+--	Description = _("Germanic tribes are known for their fierceness in combat, and these sword-wielding warriors act accordingly."),
+--	Quote = _("\"His spear he shook, | his shield he brandished, / His horse he spurred, | with his sword he hewed; / Wars he raised, | and reddened the field, / Warriors slew he, | and land he won.\" - Rigsthula"),
+	Quote = _("\"Soon grew up | the sons of Jarl, / Beasts they tamed, | and bucklers rounded, / Shafts they fashioned, | and spears they shook.\" - Rigsthula"),
+--	Background = _("\"Erala\" is the Proto-Germanic word for \"warrior\"."),
+	Image = {"file", "human/units/human_body.png", "size", {72, 72}},
+	Shadow = {"file", "human/units/human_shadow.png", "size", {72, 72}},
+	LayerImages = {
+		{"layer", "hair", "file", "human/units/blond_hair_warrior.png"},
+		{"layer", "left-arm", "file", "human/units/human_left_arm.png"},
+		{"layer", "right-arm", "file", "human/units/human_right_arm_spear.png"},
+		{"layer", "clothing", "file", "germanic/units/coat.png"},
+		{"layer", "clothing-left-arm", "file", "germanic/units/coat_left_arm.png"},
+		{"layer", "clothing-right-arm", "file", "germanic/units/coat_right_arm_spear.png"},
+		{"layer", "pants", "file", "human/units/pants.png"},
+		{"layer", "shoes", "file", "human/units/shoes.png"},
+		{"layer", "weapon", "file", "human/units/spear.png"},
+	},
+	Animations = "animations-melee-unit-new", Icon = "icon-germanic-warrior",
+	Corpse = "unit-human-dead-body",
+	DaySightRangeBonus = 1,
+	NightSightRangeBonus = -1,
+	Variations = {
+		{
+			"variation-id", "blond-hair",
+			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"variation-id", "brown-hair",
+			"layer-file", "hair", "human/units/brown_hair_warrior.png",
+			"icon", "icon-germanic-warrior-brown-hair",
+			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"variation-id", "gray-hair",
+			"layer-file", "hair", "human/units/gray_hair_warrior.png",
+			"icon", "icon-germanic-warrior-gray-hair",
+			"upgrade-forbidden", "upgrade-germanic-bronze-shield"
+		},
+		{
+			"variation-id", "red-hair",
+			"layer-file", "hair", "human/units/red_hair_warrior.png",
+			"icon", "icon-germanic-warrior-red-hair",
+			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"variation-id", "blond-hair",
+			"layer-file", "left-arm", "human/units/human_left_arm_shield.png",
+			"layer-file", "shield", "germanic/units/bronze_shield.png",
+			"upgrade-required", "upgrade-germanic-bronze-shield",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"variation-id", "brown-hair",
+			"layer-file", "hair", "human/units/brown_hair_warrior.png",
+			"layer-file", "left-arm", "human/units/human_left_arm_shield.png",
+			"layer-file", "shield", "germanic/units/bronze_shield.png",
+			"icon", "icon-germanic-warrior-brown-hair",
+			"upgrade-required", "upgrade-germanic-bronze-shield",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"variation-id", "gray-hair",
+			"layer-file", "hair", "human/units/gray_hair_warrior.png",
+			"layer-file", "left-arm", "human/units/human_left_arm_shield.png",
+			"layer-file", "shield", "germanic/units/bronze_shield.png",
+			"icon", "icon-germanic-warrior-gray-hair",
+			"upgrade-required", "upgrade-germanic-bronze-shield"
+		},
+		{
+			"variation-id", "red-hair",
+			"layer-file", "hair", "human/units/red_hair_warrior.png",
+			"layer-file", "left-arm", "human/units/human_left_arm_shield.png",
+			"layer-file", "shield", "germanic/units/bronze_shield.png",
+			"icon", "icon-germanic-warrior-red-hair",
+			"upgrade-required", "upgrade-germanic-bronze-shield",
+			"upgrade-forbidden", "upgrade-old"
+		}
+	},
+	Sounds = {
+		"selected", "basic-germanic-voices-selected-group",
+		"acknowledge", "basic-germanic-voices-acknowledge",
+		"attack", "basic-germanic-voices-attack",
+		"ready", "basic-germanic-voices-ready",
+		"help", "basic-germanic-voices-help",
+		"dead", "basic-human-voices-dead"
+	}
+} )
+
 DefineUnitType("unit-germanic-archer", { Name = _("Skutan"),
 	Parent = "unit-template-archer",
 	Civilization = "germanic",
