@@ -2041,7 +2041,11 @@ UI.ButtonPanel.ShowCommandKey = wyr.preferences.ShowCommandKey
 
 Preference.ShowPathlines = wyr.preferences.ShowPathlines
 Preference.ShowMessages = wyr.preferences.ShowMessages
-Preference.Autosave = wyr.preferences.Autosave
+if (wyr.preferences.Autosave) then
+	Preference.Autosave = 5
+else
+	Preference.Autosave = 0
+end
 Preference.PlayerColorCircle = wyr.preferences.PlayerColorCircle
 
 --- Uses Stratagus Library path!
