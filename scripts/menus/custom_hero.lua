@@ -43,9 +43,14 @@ function CustomHeroCreationMenu(civilization, quest_menu)
 		table.insert(trait_list, CUpgrade:Get(trait_ident_list[i]).Name .. ": " .. GetUpgradeEffectsString(trait_ident_list[i]))
 	end
 	local variation_list = {"Black Hair", "Blond Hair", "Brown Hair", "Gray Hair", "Orange Hair", "Red Hair"}
+
+	local generated_personal_name = ""
+	while (generated_personal_name == "" or GetArrayIncludes(GetCustomHeroes(), generated_personal_name)) do
+		generated_personal_name = GeneratePersonalName("dwarf", "unit-dwarven-axefighter")
+	end
 	
 	menu:addLabel(_("Name:"), 10, 12 + 36 * 1, Fonts["game"], false)
-	local hero_name = menu:addTextInputField(GeneratePersonalName("dwarf", "unit-dwarven-axefighter"), (sizeX / 2) - 60 - 10, 11 + 36 * 1, 120)
+	local hero_name = menu:addTextInputField(generated_personal_name, (sizeX / 2) - 60 - 10, 11 + 36 * 1, 120)
 
 	menu:addLabel(_("Surname:"), 10, 12 + 36 * 2, Fonts["game"], false)
 	local hero_family_name = menu:addTextInputField("", (sizeX / 2) - 60 - 10, 11 + 36 * 2, 120)
