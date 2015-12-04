@@ -584,10 +584,10 @@ DefinePanelContents(
 	{ Pos = {184, 116}, Condition = {Accuracy = "only", Building = "false"},
 		More = {"Text", {Text = String(ActiveUnitVar("Accuracy"))}}
 	},
-	{ Pos = {9, 144}, Condition = {AttackRange = "only"},
+	{ Pos = {9, 144}, Condition = {AttackRange = "only", SaveCargo = "false"}, -- SaveCargo is used here as a proxy for knowing whether the unit is a transporter or not (transporters don't have their own range, with their range being used as a range bonus for the units in them instead)
 		More = {"Text", {Text = "Range:"}}
 	},
-	{ Pos = {76, 144}, Condition = {AttackRange = "only"},
+	{ Pos = {76, 144}, Condition = {AttackRange = "only", SaveCargo = "false"},
 		More = {"Text", {Text = String(ActiveUnitVar("AttackRange"))}}
 	},
 	{ Pos = {115, 144}, Condition = {SightRange = "only", Building = "false"},
@@ -830,6 +830,12 @@ if not (ui_loaded_first_time) then
 				}, 
 				{ 	Condition = {AttackFromTransporter = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Garrison: "), String(TypeVar("Transport", "Max"))), Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {AttackRange = "only", AttackFromTransporter = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Range Bonus: +"), Variable = "AttackRange", Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {AttackRange = "only", AttackFromTransporter = "false"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Range: "), Variable = "AttackRange", Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				-- Description
 				{ 	Margin = {1, 1}, Condition = {HasDescription = true}, 
