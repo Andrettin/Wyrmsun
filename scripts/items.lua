@@ -25,6 +25,38 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineUnitType("unit-template-item", { Name = _("Item"),
+	Image = {"file", "neutral/items/gold_sack.png", "size", {16, 14}},
+	Animations = "animations-item", Icon = "icon-gold-sack",
+	NeutralMinimapColor = {255, 255, 0},
+	Speed = 0,
+	HitPoints = 1,
+	DrawLevel = 30,
+	TileSize = {1, 1}, BoxSize = {31, 31},
+	SightRange = 1,
+	BasicDamage = 0, Missile = "missile-none",
+	Priority = 0,
+	Type = "land",
+	NumDirections = 1,
+	Item = true,
+	Sounds = {
+		"selected", "click"
+	} 
+} )
+
+DefineUnitType("unit-potion-of-healing", { Name = _("Potion of Healing"),
+	Parent = "unit-template-item",
+	Image = {"file", "neutral/items/potion_red.png", "size", {16, 16}},
+	Animations = "animations-potion", Icon = "icon-red-potion",
+	ItemClass = "potion",
+	Costs = {"gold", 150},
+	HitPointHealing = 45,
+	Sounds = {
+		"used", "potion"
+	} 
+} )
+
+--[[
 DefineItemType("Short Sword", {
 	Class = "Sword",
 	Icon = "icon-germanic-short-sword"
@@ -94,3 +126,4 @@ DefineItemType("Thrymgjol Shield", {
 	Class = "Shield",
 	Icon = "icon-dwarven-shield-3"
 })
+--]]

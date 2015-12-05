@@ -86,6 +86,18 @@ function DefineUpgrade(upgrade, data)
 	end
 	if (data.Ability ~= nil) then
 		upgrade.Ability = data.Ability
+	else
+		upgrade.Ability = false
+	end
+	if (data.Weapon ~= nil) then
+		upgrade.Weapon = data.Weapon
+	else
+		upgrade.Weapon = false
+	end
+	if (data.Shield ~= nil) then
+		upgrade.Shield = data.Shield
+	else
+		upgrade.Shield = false
 	end
 end
 

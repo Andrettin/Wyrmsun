@@ -235,6 +235,9 @@ https://github.com/Andrettin/Wyrmsun
 * Heroes
 - Custom heroes can now be created in the quest interface, and if one is selected the hero will appear alongside your starting units in quest scenarios. For now custom heroes are limited to dwarven Axefighters/Steelclads/Stonelords.
 
+* Items
+- Stonelords now have an inventory in which they can carry items (such as potions). Other units can still use potions by right-clicking on them, but they can't carry them around.
+
 * Quests
 - The Caverns of Flame quest (Dwarf) now gives 2 technology points instead of 1.
 - The Razing of Opitergium quest (Teuton) now gives 3 technology points instead of 2.

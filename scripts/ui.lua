@@ -215,6 +215,32 @@ AddTransportingButton(17, 119)
 AddTransportingButton(73, 119)
 AddTransportingButton(129, 119)
 
+UI.InventoryButtons:clear()
+
+function AddInventoryButton(x, y)
+	b = CUIButton:new_local()
+	b.X = Video.Width - 243 + x
+	b.Y = Video.Height - 186 + y
+	b.Style = FindButtonStyle("icon")
+	UI.InventoryButtons:push_back(b)
+end
+
+AddInventoryButton(17, 11)
+AddInventoryButton(73, 11)
+AddInventoryButton(129, 11)
+AddInventoryButton(185, 11)
+AddInventoryButton(17, 54)
+AddInventoryButton(73, 54)
+AddInventoryButton(129, 54)
+AddInventoryButton(185, 54)
+AddInventoryButton(17, 97)
+AddInventoryButton(73, 97)
+AddInventoryButton(129, 97)
+AddInventoryButton(185, 97)
+AddInventoryButton(17, 140)
+AddInventoryButton(73, 140)
+AddInventoryButton(129, 140)
+
 b = CUIButton:new()
 --b.X = 12
 b.X = Video.Width - 12 - 46
@@ -987,6 +1013,9 @@ if not (ui_loaded_first_time) then
 				}, 
 				{ 	Margin = {1, 1},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
+				},
+				{ 	HighlightColor = "yellow",
+					More = {"Variable", {Text = Concat(_("Class: "), TypeClass("Type")), Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {HitPointHealing = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Healing: "), Variable = "HitPointHealing", Font = wyr.preferences.PopupDescriptionFont}}

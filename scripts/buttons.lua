@@ -188,6 +188,28 @@ DefineButton( { Pos = 16, Level = 1, Icon = "icon-cancel",
 	} 
 } )
 
+-- Inventory ------------------------------------------------------
+
+DefineButton( { Pos = 14, Level = 0, Icon = "icon-inventory",
+	Action = "button", Value = 2,
+	Key = "i", Hint = "Open ~!Inventory", Popup = "popup-commands",
+	ForUnit = {
+		"unit-dwarven-thane",
+		"unit-dwarven-gryphon-rider",
+		"unit-surghan-mercenary-thane"
+	}
+} )
+
+DefineButton( { Pos = 16, Level = 2, Icon = "icon-cancel",
+	Action = "button", Value = 0,
+	Key = "escape", Hint = "Cancel (~<Esc~>)", Popup = "popup-commands",
+	ForUnit = {
+		"unit-dwarven-thane",
+		"unit-dwarven-gryphon-rider",
+		"unit-surghan-mercenary-thane"
+	} 
+} )
+
 -- Purchasable Items ------------------------------------------------------
 
 DefineButton( { Pos = 4, Level = 0, Icon = "icon-red-potion",

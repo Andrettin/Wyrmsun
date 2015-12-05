@@ -562,21 +562,6 @@ function StandardTriggers()
 --					end
 --				end
 
-				-- process items if stepped upon
-				if (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Item") and GetUnitVariable(uncount[unit1], "HitPoints") > 0) then
-					local people_quantity = GetNumUnitsAt(-1, "units", {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")})
-					if (people_quantity > 0) then
-						local nearby_uncount = 0
-						nearby_uncount = GetUnitsAroundUnit(uncount[unit1], 0, true)
-						for unit2 = 1,table.getn(nearby_uncount) do 
-							if (GetUnitTypeData(GetUnitVariable(nearby_uncount[unit2], "Ident"), "organic")) then
-								AcquireItem(nearby_uncount[unit2], uncount[unit1])
-								return true
-							end
-						end
-					end
-				end
-
 				if (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Trap") and GetUnitVariable(uncount[unit1], "HitPoints") > 0) then
 					local people_quantity = GetNumUnitsAt(-1, "units", {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")})
 					if (people_quantity > 0) then
@@ -2057,7 +2042,6 @@ Load("scripts/sound.lua")
 Load("scripts/missiles.lua")
 Load("scripts/constructions.lua")
 Load("scripts/spells.lua")
-Load("scripts/items.lua")
 Load("scripts/units.lua")
 Load("scripts/upgrade.lua")
 Load("scripts/wyr.lua")
