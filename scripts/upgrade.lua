@@ -44,6 +44,8 @@ function DefineUpgrade(upgrade, data)
 		end
 		upgrade.TechnologyPointCost = CUpgrade:Get(data.Parent).TechnologyPointCost
 		upgrade.Ability = CUpgrade:Get(data.Parent).Ability
+		upgrade.Weapon = CUpgrade:Get(data.Parent).Weapon
+		upgrade.Shield = CUpgrade:Get(data.Parent).Shield
 	end
 	if (data.Name ~= nil) then
 		upgrade.Name = data.Name
