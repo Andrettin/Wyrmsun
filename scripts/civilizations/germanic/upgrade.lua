@@ -28,20 +28,6 @@
 --
 
 local upgrades = {
-	{"upgrade-germanic-broad-sword", _("Broad Sword"), "icon-germanic-broad-sword", "melee-weapon-1",
-		_("While the earlier short swords relied mostly on stabbing attacks, the enlarged width of the broad swords allowed germanic swordsmen to deal devastating slashing attacks.\n\nEffect: +2 Damage for Eralas."),
-		"",
-		_("A number of bronze age swords have been found in Denmark. They were used by men not only in combat, but also as a symbol of social status."),
-		{   200,   800,     0,     0,     0,     0,     0,     0},
-		{   200,   800,     0,     0,     0,     0,     0,   800},
-		1},
-	{"upgrade-germanic-bronze-shield", _("Bronze Shield"), "icon-germanic-bronze-shield", "bronze-shield",
-		_("Although earlier shields were made of simpler materials, the arrival of bronzeworking technologies allows Germanic craftsmen to produce bronze shields for the warriors, improving their personal protection.\n\nEffect: +2 Armor for Eralas."),
-		"",
-		_("A number of bronze shields have been found preserved in Danish bogs, belonging to the archaeological period known as the Nordic Bronze Age (during which many scholars posit that the linguistic change from the Proto-Indo-European to Proto-Germanic happened). Those shields were actually probably not used in battle, but in rituals related to the sun and the seasons."),
-		{   200,   300,   450,     0,     0,     0,     0,     0},
-		{   200,   300,   450,     0,     0,     0,     0,  1200},
-		1},
 	{"upgrade-germanic-barbed-arrow", _("Barbed Arrow"), "icon-germanic-barbed-arrow", "ranged-projectile-1",
 		_("An improvement over the basic triangular-shaped arrow, the barbed arrow is much harder to be removed from the wound after puncturing an enemy.\n\nEffect: +1 Damage for Skutans."),
 		"",
@@ -77,6 +63,24 @@ for i = 1,table.getn(upgrades) do
 	u.Ability = false
 end
 
+DefineUpgrade("upgrade-germanic-broad-sword", {
+	Parent = "upgrade-broad-sword",
+	Icon = "icon-germanic-broad-sword",
+	Civilization = "germanic",
+	Description = _("While the earlier short swords relied mostly on stabbing attacks, the enlarged width of the broad swords allowed germanic swordsmen to deal devastating slashing attacks.\n\nEffect: +2 Damage for Eralas."),
+	Background = _("A number of bronze age swords have been found in Denmark. They were used by men not only in combat, but also as a symbol of social status."),
+	TechnologyPointCost = 1
+})
+
+DefineUpgrade("upgrade-germanic-bronze-shield", {
+	Parent = "upgrade-bronze-shield",
+	Icon = "icon-germanic-bronze-shield",
+	Civilization = "germanic",
+	Description = _("Although earlier shields were made of simpler materials, the arrival of bronzeworking technologies allows Germanic craftsmen to produce bronze shields for the warriors, improving their personal protection.\n\nEffect: +2 Armor for Eralas."),
+	Background = _("A number of bronze shields have been found preserved in Danish bogs, belonging to the archaeological period known as the Nordic Bronze Age (during which many scholars posit that the linguistic change from the Proto-Indo-European to Proto-Germanic happened). Those shields were actually probably not used in battle, but in rituals related to the sun and the seasons."),
+	TechnologyPointCost = 1
+})
+
 DefineUpgrade("upgrade-germanic-wood-plow", {
 	Parent = "upgrade-wood-plow",
 	Civilization = "germanic",
@@ -84,23 +88,19 @@ DefineUpgrade("upgrade-germanic-wood-plow", {
 })
 
 DefineUpgrade("upgrade-asa-tribe-faction", {
-	Name = _("Asa Tribe Faction"),
-	Ability = false
+	Name = _("Asa Tribe Faction")
 })
 
 DefineUpgrade("upgrade-skjoldung-tribe-faction", {
-	Name = _("Skjoldung Tribe Faction"),
-	Ability = false
+	Name = _("Skjoldung Tribe Faction")
 })
 
 DefineUpgrade("upgrade-volsung-tribe-faction", {
-	Name = _("Volsung Tribe Faction"),
-	Ability = false
+	Name = _("Volsung Tribe Faction")
 })
 
 DefineUpgrade("upgrade-yngling-tribe-faction", {
-	Name = _("Yngling Tribe Faction"),
-	Ability = false
+	Name = _("Yngling Tribe Faction")
 })
 
 DefineModifier("upgrade-germanic-broad-sword",

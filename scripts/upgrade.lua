@@ -101,6 +101,62 @@ function DefineUpgrade(upgrade, data)
 	end
 end
 
+DefineUpgrade("upgrade-melee-weapon-1", {
+	Name = _("Melee Weapon 1"),
+	Class = "melee-weapon-1",
+	Weapon = true
+})
+
+DefineUpgrade("upgrade-broad-sword", {
+	Name = _("Broad Sword"),
+	Parent = "upgrade-melee-weapon-1",
+	Costs = {"time", 200, "gold", 800},
+	GrandStrategyCosts = {"time", 200, "gold", 800, "research", 800}
+})
+
+DefineUpgrade("upgrade-broad-axe", {
+	Name = _("Broad Axe"),
+	Parent = "upgrade-melee-weapon-1",
+	Costs = {"time", 200, "gold", 500, "lumber", 150},
+	GrandStrategyCosts = {"time", 200, "gold", 500, "lumber", 150, "research", 800}
+})
+
+DefineUpgrade("upgrade-melee-weapon-2", {
+	Name = _("Melee Weapon 2"),
+	Class = "melee-weapon-2",
+	Weapon = true
+})
+
+DefineUpgrade("upgrade-long-sword", {
+	Name = _("Long Sword"),
+	Parent = "upgrade-melee-weapon-2",
+	Costs = {"time", 250, "gold", 2400},
+	GrandStrategyCosts = {"time", 250, "gold", 2400, "research", 2400}
+})
+
+DefineUpgrade("upgrade-great-axe", {
+	Name = _("Great Axe"),
+	Parent = "upgrade-melee-weapon-2",
+	Costs = {"time", 250, "gold", 1500, "lumber", 450},
+	GrandStrategyCosts = {"time", 250, "gold", 1500, "lumber", 450, "research", 2400}
+})
+
+DefineUpgrade("upgrade-bronze-shield", {
+	Name = _("Bronze Shield"),
+	Class = "bronze-shield",
+	Shield = true,
+	Costs = {"time", 200, "gold", 300, "lumber", 450},
+	GrandStrategyCosts = {"time", 200, "gold", 300, "lumber", 450, "research", 1200}
+})
+
+DefineUpgrade("upgrade-iron-shield", {
+	Name = _("Iron Shield"),
+	Class = "iron-shield",
+	Shield = true,
+	Costs = {"time", 250, "gold", 900, "lumber", 750},
+	GrandStrategyCosts = {"time", 250, "gold", 900, "lumber", 750, "research", 2400}
+})
+
 DefineUpgrade("upgrade-wood-plow", {
 	Name = _("Wood Plow"),
 	Class = "wood-plow",
@@ -108,8 +164,7 @@ DefineUpgrade("upgrade-wood-plow", {
 	Description = _("While at the dawn of agriculture seeds were simply spread over the soil, the invention of the plow allows farmers to more easily make furrows where seeds would be planted. This made way for the cultivation of heavier soils, and planting over larger areas became a more practical possibility.\n\nEffect: +1 Food supply for farms."),
 	Costs = {"time", 200, "gold", 300, "lumber", 450},
 	GrandStrategyCosts = {"time", 200, "gold", 300, "lumber", 450, "research", 1200},
-	GrandStrategyProductionEfficiencyModifier = {"grain", 100, "mushrooms", 100},
-	Ability = false
+	GrandStrategyProductionEfficiencyModifier = {"grain", 100, "mushrooms", 100}
 })
 
 DefineUpgrade("upgrade-iron-tipped-wood-plow", {
@@ -119,8 +174,7 @@ DefineUpgrade("upgrade-iron-tipped-wood-plow", {
 	Description = _("The use of plowshares made of iron greatly increases the plow's strength, allowing it to penetrate more deeply into the soil.\n\nEffect: +1 Food supply for farms."),
 	Costs = {"time", 250, "gold", 900, "lumber", 750},
 	GrandStrategyCosts = {"time", 250, "gold", 900, "lumber", 750, "research", 2400},
-	GrandStrategyProductionEfficiencyModifier = {"grain", 100, "mushrooms", 100},
-	Ability = false
+	GrandStrategyProductionEfficiencyModifier = {"grain", 100, "mushrooms", 100}
 })
 
 DefineUpgrade("upgrade-masonry", {
@@ -129,8 +183,7 @@ DefineUpgrade("upgrade-masonry", {
 	Icon = "icon-masonry",
 	Description = _("Masonry is the craft of building structures from blocks, which are bound together with mortar."),
 	Costs = {"time", 250, "gold", 900, "lumber", 500, "stone", 250},
-	GrandStrategyCosts = {"time", 250, "gold", 900, "lumber", 500, "stone", 250, "research", 2400},
-	Ability = false
+	GrandStrategyCosts = {"time", 250, "gold", 900, "lumber", 500, "stone", 250, "research", 2400}
 })
 
 DefineUpgrade("upgrade-coinage", {
@@ -139,8 +192,7 @@ DefineUpgrade("upgrade-coinage", {
 	Description = _("While previously trade was conducted by trading one commodity for another, the introduction of currency provides a more practical means of exchange.\n\nEffect: +10% Gold Processing."),
 	Costs = {"time", 250, "gold", 1500},
 	GrandStrategyCosts = {"time", 250, "gold", 1500, "research", 1500},
-	GrandStrategyProductionEfficiencyModifier = {"gold", 10, "silver", 10, "copper", 10},
-	Ability = false
+	GrandStrategyProductionEfficiencyModifier = {"gold", 10, "silver", 10, "copper", 10}
 })
 
 DefineUpgrade("upgrade-writing", {
@@ -149,8 +201,7 @@ DefineUpgrade("upgrade-writing", {
 	Description = _("The invention of writing makes it possible for ideas and traditions to be more easily spread and preserved.\n\nEffect: +10% Research Speed."),
 	Costs = {"time", 250, "gold", 900, "lumber", 750},
 	GrandStrategyCosts = {"time", 250, "gold", 900, "lumber", 750, "research", 2400},
-	GrandStrategyProductionEfficiencyModifier = {"research", 50},
-	Ability = false
+	GrandStrategyProductionEfficiencyModifier = {"research", 50}
 })
 
 -- Load the different civilizations

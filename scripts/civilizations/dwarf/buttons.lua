@@ -94,7 +94,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-shield-3",
  	"dwarf-group"
     } } )
 
-DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-axe-1",
+DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-battle-axe",
   Action = "attack",
   Key = "a", Hint = _("~!Attack"), Popup = "popup-commands",
   ForUnit = {
@@ -105,7 +105,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-axe-1",
 	"unit-slime", "unit-yale", "unit-gryphon", "unit-wyrm",
 	"dwarf-group"} } )
 
-DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-axe-2",
+DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-broad-axe",
   Action = "attack",
   Allowed = "check-upgrade", AllowArg = {"upgrade-dwarven-broad-axe"},
   Key = "a", Hint = _("~!Attack"), Popup = "popup-commands",
@@ -116,7 +116,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-axe-2",
  	"dwarf-group"
     } } )
 
-DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-axe-3",
+DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-great-axe",
   Action = "attack",
   Allowed = "check-upgrade", AllowArg = {"upgrade-dwarven-great-axe"},
   Key = "a", Hint = _("~!Attack"), Popup = "popup-commands",
@@ -357,7 +357,7 @@ DefineButton( { Pos = 5, Level = 0, Icon = "icon-surghan-mercenary-steelclad",
 
 -- Researches ---------------------------------------------------------
 
-DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-axe-2",
+DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-broad-axe",
 	Action = "research", Value = "upgrade-dwarven-broad-axe",
 	Allowed = "check-single-research",
 	Key = "a", Hint = _("Research Broad ~!Axe"), Popup = "popup-research",
@@ -365,7 +365,7 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-axe-2",
 	ForUnit = {"unit-dwarven-smithy"}
 } )
 
-DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-axe-3",
+DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-great-axe",
 	Action = "research", Value = "upgrade-dwarven-great-axe",
 	Allowed = "check-single-research",
 	Key = "a", Hint = _("Research Great ~!Axe"), Popup = "popup-research",

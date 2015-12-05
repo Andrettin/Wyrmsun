@@ -682,21 +682,21 @@ DefineIcon({
 })
 
 DefineIcon({
-	Name = "icon-dwarven-axe-1",
+	Name = "icon-dwarven-battle-axe",
 	Size = {46, 38},
-	File = "dwarf/icons/axe_1.png"
+	File = "dwarf/icons/battle_axe.png"
 })
 
 DefineIcon({
-	Name = "icon-dwarven-axe-2",
+	Name = "icon-dwarven-broad-axe",
 	Size = {46, 38},
-	File = "dwarf/icons/axe_2.png"
+	File = "dwarf/icons/broad_axe.png"
 })
 
 DefineIcon({
-	Name = "icon-dwarven-axe-3",
+	Name = "icon-dwarven-great-axe",
 	Size = {46, 38},
-	File = "dwarf/icons/axe_3.png"
+	File = "dwarf/icons/great_axe.png"
 })
 
 DefineIcon({

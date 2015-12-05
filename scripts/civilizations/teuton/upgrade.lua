@@ -28,22 +28,6 @@
 --
 
 local upgrades = {
-	{"upgrade-teuton-spatha", _("Spatha"), "icon-teuton-spatha", "melee-weapon-2",
-		_("With the development of iron working, the forging of longer swords became a practical possibility.\n\nEffect: +2 Damage for Kriegers."),
-		"",
-		_("During the Migration Period, Germanic peoples - including West Germanics - used longswords such as these in combat."),
-		{   250,  2400,     0,     0,     0,     0,     0,     0},
-		{   250,  2400,     0,     0,     0,     0,     0,  2400},
-		1
-	},
-	{"upgrade-teuton-iron-shield", _("Iron Shield"), "icon-teuton-iron-shield", "iron-shield",
-		_("The development of iron working makes the crafting of sturdier shields possible.\n\nEffect: +2 Armor for Kriegers."),
-		"",
-		"",
-		{   250,   900,   750,     0,     0,     0,     0,     0},
-		{   250,   900,   750,     0,     0,     0,     0,  2400},
-		1
-	},
 	{"upgrade-teuton-bodkin-arrow", _("Bodkin Arrow"), "icon-bodkin-arrow", "ranged-projectile-2",
 		_("Bodkin arrows focus pressure on a single point, greatly enhancing their piercing capability.\n\nEffect: +1 Damage for Skutans."),
 		"",
@@ -89,6 +73,24 @@ for i = 1,table.getn(upgrades) do
 	u.Ability = false
 end
 
+DefineUpgrade("upgrade-teuton-spatha", {
+	Name = _("Spatha"),
+	Parent = "upgrade-long-sword",
+	Icon = "icon-teuton-spatha",
+	Civilization = "teuton",
+	Description = _("With the development of iron working, the forging of longer swords became a practical possibility.\n\nEffect: +2 Damage for Kriegers."),
+	Background = _("During the Migration Period, Germanic peoples - including West Germanics - used longswords such as these in combat."),
+	TechnologyPointCost = 1
+})
+
+DefineUpgrade("upgrade-teuton-iron-shield", {
+	Parent = "upgrade-iron-shield",
+	Icon = "icon-teuton-iron-shield",
+	Civilization = "teuton",
+	Description = _("The development of iron working makes the crafting of sturdier shields possible.\n\nEffect: +2 Armor for Kriegers."),
+	TechnologyPointCost = 1
+})
+
 DefineUpgrade("upgrade-teuton-iron-tipped-wood-plow", {
 	Parent = "upgrade-iron-tipped-wood-plow",
 	Civilization = "teuton",
@@ -118,53 +120,43 @@ DefineUpgrade("upgrade-teuton-writing", {
 })
 
 DefineUpgrade("upgrade-alamanni-tribe-faction", {
-	Name = _("Alamanni Tribe Faction"),
-	Ability = false
+	Name = _("Alamanni Tribe Faction")
 })
 
 DefineUpgrade("upgrade-angle-tribe-faction", {
-	Name = _("Angle Tribe Faction"),
-	Ability = false
+	Name = _("Angle Tribe Faction")
 })
 
 DefineUpgrade("upgrade-bavarian-tribe-faction", {
-	Name = _("Bavarian Tribe Faction"),
-	Ability = false
+	Name = _("Bavarian Tribe Faction")
 })
 
 DefineUpgrade("upgrade-frank-tribe-faction", {
-	Name = _("Frank Tribe Faction"),
-	Ability = false
+	Name = _("Frank Tribe Faction")
 })
 
 DefineUpgrade("upgrade-frisian-tribe-faction", {
-	Name = _("Frisian Tribe Faction"),
-	Ability = false
+	Name = _("Frisian Tribe Faction")
 })
 
 DefineUpgrade("upgrade-lombard-tribe-faction", {
-	Name = _("Lombard Tribe Faction"),
-	Ability = false
+	Name = _("Lombard Tribe Faction")
 })
 
 DefineUpgrade("upgrade-saxon-tribe-faction", {
-	Name = _("Saxon Tribe Faction"),
-	Ability = false
+	Name = _("Saxon Tribe Faction")
 })
 
 DefineUpgrade("upgrade-suebi-tribe-faction", {
-	Name = _("Suebi Tribe Faction"),
-	Ability = false
+	Name = _("Suebi Tribe Faction")
 })
 
 DefineUpgrade("upgrade-thuringian-tribe-faction", {
-	Name = _("Thuringian Tribe Faction"),
-	Ability = false
+	Name = _("Thuringian Tribe Faction")
 })
 
 DefineUpgrade("upgrade-mecklenburg-faction", {
-	Name = _("Mecklenburg Faction"),
-	Ability = false
+	Name = _("Mecklenburg Faction")
 })
 
 DefineModifier("upgrade-teuton-spatha",

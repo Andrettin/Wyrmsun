@@ -29,42 +29,6 @@
 
 local upgrades = {
 	{
-		"upgrade-dwarven-broad-axe", _("Broad Axe"), "icon-dwarven-axe-2", "melee-weapon-1",
-		_("Dwarven smiths work hard at their craft to improve soldiers' weapons, and with the perfecting of smithing techniques the broadening of axe blades becomes possible.\n\nEffect: +2 Damage for Axefighters, Steelclads, Stonelords and Yale Riders."),
-		"",
-		"",
-		{   200,   500,   150,     0,     0,     0,     0,     0},
-		{   200,   500,   150,     0,     0,     0,     0,   800},
-		1
-	},
-	{
-		"upgrade-dwarven-great-axe", _("Great Axe"), "icon-dwarven-axe-3", "melee-weapon-2",
-		_("Further innovations in dwarven smithing allow axes to be made sturdier, and often to carry double blades.\n\nEffect: +2 Damage for Axefighters, Steelclads, Stonelords and Yale Riders."),
-		"",
-		"",
-		{   250,  1500,   450,     0,     0,     0,     0,     0},
-		{   250,  1500,   450,     0,     0,     0,     0,  2400},
-		1
-	},
-	{
-		"upgrade-dwarven-shield-1", _("Heater Shield"), "icon-dwarven-shield-2", "bronze-shield",
-		_("Earlier shields provided little more than a minimal degree of protection. With the development of heater shields, dwarven soldiers have a greater chance of survival in battle.\n\nEffect: +2 Armor for Axefighters, Steelclads, Stonelords and Yale Riders."),
-		"",
-		"",
-		{   200,   300,   450,     0,     0,     0,     0,      0},
-		{   200,   300,   450,     0,     0,     0,     0,   1200},
-		1
-	},
-	{
-		"upgrade-dwarven-shield-2", _("Thrymgjol Shield"), "icon-dwarven-shield-3", "iron-shield",
-		_("As shield-making techniques improved, the creation of thrymgjol shields became possible. These shields receive their name from the impregnable gate crafted by the sons of the dwarf Solblindi, due to the mighty protection they give their users.\n\nEffect: +2 Armor for Axefighters, Steelclads, Stonelords and Yale Riders."),
-		_("The Warder: \"Thrymgjol they call it; | 'twas made by the three, / The sons of Solblindi; / And fast as a fetter | the farer it holds, / Whoever shall lift the latch.\" - Dwarven Traditional Poetry"),
-		_("The Thrymgjol gate and its makers, the sons of the dwarf Solblindi, are mentioned in the ~<Svipdagsmol~> of Norse mythology. The name \"Thrymgjol\" means \"loud-clanging\"."),
-		{   250,   900,   750,     0,     0,     0,     0,     0},
-		{   250,   900,   750,     0,     0,     0,     0,  2400},
-		1
-	},
-	{
 		"upgrade-dwarven-throwing-axe-1", _("Sharp Throwing Axe"), "icon-dwarven-throwing-axe-2", "ranged-projectile-1",
 		_("As their craftsmanship progresses, dwarven artisans become capable of improving the basic throwing axe to have sharper blades.\n\nEffect: +1 Damage for Scouts and Gryphon Riders."),
 		"",
@@ -121,6 +85,42 @@ for i = 1,table.getn(upgrades) do
 	u.Ability = false
 end
 
+DefineUpgrade("upgrade-dwarven-broad-axe", {
+	Parent = "upgrade-broad-axe",
+	Icon = "icon-dwarven-broad-axe",
+	Civilization = "dwarf",
+	Description = _("Dwarven smiths work hard at their craft to improve soldiers' weapons, and with the perfecting of smithing techniques the broadening of axe blades becomes possible.\n\nEffect: +2 Damage for Axefighters, Steelclads, Stonelords and Yale Riders."),
+	TechnologyPointCost = 1
+})
+
+DefineUpgrade("upgrade-dwarven-great-axe", {
+	Parent = "upgrade-great-axe",
+	Icon = "icon-dwarven-great-axe",
+	Civilization = "dwarf",
+	Description = _("Further innovations in dwarven smithing allow axes to be made sturdier, and often to carry double blades.\n\nEffect: +2 Damage for Axefighters, Steelclads, Stonelords and Yale Riders."),
+	TechnologyPointCost = 1
+})
+
+DefineUpgrade("upgrade-dwarven-shield-1", {
+	Name = _("Heater Shield"),
+	Parent = "upgrade-bronze-shield",
+	Icon = "icon-dwarven-shield-2",
+	Civilization = "dwarf",
+	Description = _("Earlier shields provided little more than a minimal degree of protection. With the development of heater shields, dwarven soldiers have a greater chance of survival in battle.\n\nEffect: +2 Armor for Axefighters, Steelclads, Stonelords and Yale Riders."),
+	TechnologyPointCost = 1
+})
+
+DefineUpgrade("upgrade-dwarven-shield-2", {
+	Name = _("Thrymgjol Shield"),
+	Parent = "upgrade-iron-shield",
+	Icon = "icon-dwarven-shield-3",
+	Civilization = "dwarf",
+	Description = _("As shield-making techniques improved, the creation of thrymgjol shields became possible. These shields receive their name from the impregnable gate crafted by the sons of the dwarf Solblindi, due to the mighty protection they give their users.\n\nEffect: +2 Armor for Axefighters, Steelclads, Stonelords and Yale Riders."),
+	Background = _("The Thrymgjol gate and its makers, the sons of the dwarf Solblindi, are mentioned in the ~<Svipdagsmol~> of Norse mythology. The name \"Thrymgjol\" means \"loud-clanging\"."),
+	Quote = _("The Warder: \"Thrymgjol they call it; | 'twas made by the three, / The sons of Solblindi; / And fast as a fetter | the farer it holds, / Whoever shall lift the latch.\" - Dwarven Traditional Poetry"),
+	TechnologyPointCost = 1
+})
+
 DefineUpgrade("upgrade-dwarven-wood-plow", {
 	Parent = "upgrade-wood-plow",
 	Civilization = "dwarf",
@@ -160,48 +160,39 @@ DefineUpgrade("upgrade-dwarven-runewriting", {
 })
 
 DefineUpgrade("upgrade-eikinskjaldi-clan-faction", {
-	Name = _("Eikinskjaldi Clan Faction"),
-	Ability = false
+	Name = _("Eikinskjaldi Clan Faction")
 })
 
 DefineUpgrade("upgrade-modsogning-clan-faction", {
-	Name = _("Modsogning Clan Faction"),
-	Ability = false
+	Name = _("Modsogning Clan Faction")
 })
 
 DefineUpgrade("upgrade-norlund-clan-faction", {
-	Name = _("Norlund Clan Faction"),
-	Ability = false
+	Name = _("Norlund Clan Faction")
 })
 
 DefineUpgrade("upgrade-shinsplitter-clan-faction", {
-	Name = _("Shinsplitter Clan Faction"),
-	Ability = false
+	Name = _("Shinsplitter Clan Faction")
 })
 
 DefineUpgrade("upgrade-shorbear-clan-faction", {
-	Name = _("Shorbear Clan Faction"),
-	Ability = false
+	Name = _("Shorbear Clan Faction")
 })
 
 DefineUpgrade("upgrade-joruvellir-faction", {
-	Name = _("Joruvellir Faction"),
-	Ability = false
+	Name = _("Joruvellir Faction")
 })
 
 DefineUpgrade("upgrade-kal-kartha-faction", {
-	Name = _("Kal Kartha Faction"),
-	Ability = false
+	Name = _("Kal Kartha Faction")
 })
 
 DefineUpgrade("upgrade-knalga-faction", {
-	Name = _("Knalga Faction"),
-	Ability = false
+	Name = _("Knalga Faction")
 })
 
 DefineUpgrade("upgrade-lyr-faction", {
-	Name = _("Lyr Faction"),
-	Ability = false
+	Name = _("Lyr Faction")
 })
 
 DefineModifier("upgrade-dwarven-broad-axe",

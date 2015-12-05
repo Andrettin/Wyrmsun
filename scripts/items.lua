@@ -74,17 +74,17 @@ DefineItemType("Spatha", {
 
 DefineItemType("Battle Axe", {
 	Class = "Axe",
-	Icon = "icon-dwarven-axe-1"
+	Icon = "icon-dwarven-battle-axe"
 })
 
 DefineItemType("Broad Axe", {
 	Class = "Axe",
-	Icon = "icon-dwarven-axe-2"
+	Icon = "icon-dwarven-broad-axe"
 })
 
 DefineItemType("Great Axe", {
 	Class = "Axe",
-	Icon = "icon-dwarven-axe-3"
+	Icon = "icon-dwarven-great-axe"
 })
 
 DefineItemType("Wooden Shield", {
