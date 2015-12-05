@@ -1032,6 +1032,42 @@ if not (ui_loaded_first_time) then
 	})
 
 	DefinePopup({
+		Ident = "popup-item-inventory",
+		BackgroundColor = PopupBackgroundColor,
+		BorderColor = PopupBorderColor,
+		MinWidth = 128,
+		DefaultFont = wyr.preferences.PopupDescriptionFont,
+		Contents = {
+				{	Margin = {1, 1}, HighlightColor = "yellow",
+					More = {"ButtonInfo", {InfoType = "Hint", Font = PopupFont}}
+				}, 
+				{ 	Margin = {1, 1},
+					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
+				}, 
+				{ 	HighlightColor = "yellow",
+					More = {"Variable", {Text = Concat(_("Class: "), TypeClass("Type")), Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {BasicDamage = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Damage Bonus: "), Variable = "BasicDamage", Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {Armor = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Armor Bonus: "), Variable = "Armor", Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {HitPointHealing = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Healing: "), Variable = "HitPointHealing", Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				
+				-- Description
+				{ 	Margin = {1, 1}, Condition = {HasDescription = true}, 
+					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
+				}, 
+				{ 	Condition = {HasDescription = true}, Margin = {1, 1}, HighlightColor = "yellow",
+					More = {"ButtonInfo", {InfoType = "Description", MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+				},
+		}	
+	})
+
+	DefinePopup({
 		Ident = "popup-research",
 		BackgroundColor = PopupBackgroundColor,
 		BorderColor = PopupBorderColor,

@@ -34,7 +34,7 @@ DefineUnitType("unit-template-item", { Name = _("Item"),
 	DrawLevel = 30,
 	TileSize = {1, 1}, BoxSize = {31, 31},
 	SightRange = 1,
-	BasicDamage = 0, Missile = "missile-none",
+	Missile = "missile-none",
 	Priority = 0,
 	Type = "land",
 	NumDirections = 1,
@@ -56,6 +56,38 @@ DefineUnitType("unit-potion-of-healing", { Name = _("Potion of Healing"),
 	} 
 } )
 
+DefineUnitType("unit-battle-axe", { Name = _("Battle Axe"),
+	Parent = "unit-template-item",
+	Image = {"file", "neutral/items/axe.png", "size", {32, 32}},
+	Icon = "icon-dwarven-battle-axe",
+	ItemClass = "axe",
+	BasicDamage = 0
+} )
+
+DefineUnitType("unit-broad-axe", { Name = _("Broad Axe"),
+	Parent = "unit-template-item",
+	Image = {"file", "neutral/items/axe.png", "size", {32, 32}},
+	Icon = "icon-dwarven-broad-axe",
+	ItemClass = "axe",
+	BasicDamage = 2
+} )
+
+DefineUnitType("unit-great-axe", { Name = _("Great Axe"),
+	Parent = "unit-template-item",
+	Image = {"file", "neutral/items/axe.png", "size", {32, 32}},
+	Icon = "icon-dwarven-great-axe",
+	ItemClass = "axe",
+	BasicDamage = 4
+} )
+
+DefineUnitType("unit-thrymgjol-shield", { Name = _("Thrymgjol Shield"),
+	Parent = "unit-template-item",
+	Image = {"file", "neutral/items/crown.png", "size", {32, 32}},
+	Icon = "icon-dwarven-shield-3",
+	ItemClass = "shield",
+	Armor = 4
+} )
+
 --[[
 DefineItemType("Short Sword", {
 	Class = "Sword",
@@ -70,21 +102,6 @@ DefineItemType("Broad Sword", {
 DefineItemType("Spatha", {
 	Class = "Sword",
 	Icon = "icon-teuton-spatha"
-})
-
-DefineItemType("Battle Axe", {
-	Class = "Axe",
-	Icon = "icon-dwarven-battle-axe"
-})
-
-DefineItemType("Broad Axe", {
-	Class = "Axe",
-	Icon = "icon-dwarven-broad-axe"
-})
-
-DefineItemType("Great Axe", {
-	Class = "Axe",
-	Icon = "icon-dwarven-great-axe"
 })
 
 DefineItemType("Wooden Shield", {
