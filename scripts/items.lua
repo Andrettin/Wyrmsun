@@ -58,7 +58,7 @@ DefineUnitType("unit-potion-of-healing", { Name = _("Potion of Healing"),
 
 DefineUnitType("unit-short-sword", { Name = _("Short Sword"),
 	Parent = "unit-template-item",
-	Image = {"file", "neutral/items/axe.png", "size", {32, 32}},
+	Image = {"file", "germanic/items/broad_bronze_sword.png", "size", {32, 32}},
 	Icon = "icon-germanic-short-sword",
 	ItemClass = "sword",
 	BasicDamage = 0
@@ -66,7 +66,7 @@ DefineUnitType("unit-short-sword", { Name = _("Short Sword"),
 
 DefineUnitType("unit-broad-sword", { Name = _("Broad Sword"),
 	Parent = "unit-template-item",
-	Image = {"file", "neutral/items/axe.png", "size", {32, 32}},
+	Image = {"file", "germanic/items/broad_bronze_sword.png", "size", {32, 32}},
 	Icon = "icon-germanic-broad-sword",
 	ItemClass = "sword",
 	BasicDamage = 2
@@ -74,7 +74,7 @@ DefineUnitType("unit-broad-sword", { Name = _("Broad Sword"),
 
 DefineUnitType("unit-spatha", { Name = _("Spatha"),
 	Parent = "unit-template-item",
-	Image = {"file", "neutral/items/axe.png", "size", {32, 32}},
+	Image = {"file", "teuton/items/long_iron_sword.png", "size", {32, 32}},
 	Icon = "icon-teuton-spatha",
 	ItemClass = "sword",
 	BasicDamage = 4
