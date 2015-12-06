@@ -46,6 +46,8 @@ function DefineUpgrade(upgrade, data)
 		upgrade.Ability = CUpgrade:Get(data.Parent).Ability
 		upgrade.Weapon = CUpgrade:Get(data.Parent).Weapon
 		upgrade.Shield = CUpgrade:Get(data.Parent).Shield
+		upgrade.ItemPrefix = CUpgrade:Get(data.Parent).ItemPrefix
+		upgrade.ItemSuffix = CUpgrade:Get(data.Parent).ItemSuffix
 	end
 	if (data.Name ~= nil) then
 		upgrade.Name = data.Name
@@ -100,6 +102,16 @@ function DefineUpgrade(upgrade, data)
 		upgrade.Shield = data.Shield
 	elseif (data.Parent == nil) then
 		upgrade.Shield = false
+	end
+	if (data.ItemPrefix ~= nil) then
+		upgrade.ItemPrefix = data.Weapon
+	elseif (data.Parent == nil) then
+		upgrade.ItemPrefix = false
+	end
+	if (data.ItemSuffix ~= nil) then
+		upgrade.ItemSuffix = data.Weapon
+	elseif (data.Parent == nil) then
+		upgrade.ItemSuffix = false
 	end
 end
 
@@ -547,4 +559,15 @@ DefineModifier("upgrade-gryphon-child",
 
 DefineModifier("upgrade-wyrm-child",
 	{"BasicDamage", -24}
+)
+
+-- Item Affixes
+
+DefineUpgrade("upgrade-item-prefix-cruel", {
+	Name = _("Cruel"),
+	ItemPrefix = true
+})
+
+DefineModifier("upgrade-item-prefix-cruel",
+	{"BasicDamage", 1}
 )

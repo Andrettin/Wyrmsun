@@ -476,8 +476,11 @@ DefinePanelContents(
 	},
 	--]]
 
-	{ Pos = {170, 26}, More = {"Text", {Text = Line(1, UnitName("Active"), 96, "game"), Centered = true}} },
-	{ Pos = {170, 37}, More = {"Text", {Text = Line(2, UnitName("Active"), 96, "game"), Centered = true}} },
+	{ Pos = {170, 26}, Condition = {Affixed = "false"}, More = {"Text", {Text = Line(1, UnitName("Active"), 96, "game"), Centered = true}} },
+	{ Pos = {170, 37}, Condition = {Affixed = "false"}, More = {"Text", {Text = Line(2, UnitName("Active"), 96, "game"), Centered = true}} },
+
+	{ Pos = {170, 26}, Condition = {Affixed = "only"}, TextColor = "blue", More = {"Text", {Text = Line(1, UnitName("Active"), 96, "game"), Centered = true}} },
+	{ Pos = {170, 37}, Condition = {Affixed = "only"}, TextColor = "blue", More = {"Text", {Text = Line(2, UnitName("Active"), 96, "game"), Centered = true}} },
 
 	-- unit type name, if the unit has a personal name
 	{ Pos = {170, 61}, Condition = {ShowOpponent = true}, More = {"Text", {Text = Line(1, UnitTypeName("Active"), 96, "game"), Centered = true}} },
@@ -1038,7 +1041,10 @@ if not (ui_loaded_first_time) then
 		MinWidth = 128,
 		DefaultFont = wyr.preferences.PopupDescriptionFont,
 		Contents = {
-				{	Margin = {1, 1}, HighlightColor = "yellow",
+				{	Condition = {Affixed = "false"}, Margin = {1, 1}, HighlightColor = "yellow",
+					More = {"ButtonInfo", {InfoType = "Hint", Font = PopupFont}}
+				}, 
+				{	Condition = {Affixed = "only"}, Margin = {1, 1}, TextColor = "blue", HighlightColor = "yellow",
 					More = {"ButtonInfo", {InfoType = "Hint", Font = PopupFont}}
 				}, 
 				{ 	Margin = {1, 1},
