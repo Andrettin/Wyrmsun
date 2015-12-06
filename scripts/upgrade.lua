@@ -592,14 +592,24 @@ DefineUpgrade("upgrade-item-prefix-glacial", {
 	ItemPrefix = {"axe", true, "bow", true, "dagger", true, "javelin", true, "mace", true, "rapier", true, "spear", true, "sword", true, "throwing-axe", true}
 })
 
+DefineUpgrade("upgrade-item-prefix-impregnable", {
+	Name = _("Impregnable"),
+	ItemSuffix = {"armor", true, "shield", true, "helmet", true}
+})
+
 DefineUpgrade("upgrade-item-prefix-sharp", {
 	Name = _("Sharp"),
-	ItemPrefix = {"axe", true, "bow", true, "dagger", true, "javelin", true, "mace", true, "rapier", true, "spear", true, "sword", true, "throwing-axe", true}
+	ItemPrefix = {"axe", true, "dagger", true, "javelin", true, "mace", true, "rapier", true, "spear", true, "sword", true, "throwing-axe", true}
 })
 
 DefineUpgrade("upgrade-item-prefix-storm", { -- example: Storm Trident (from Wesnoth)
 	Name = _("Storm"),
 	ItemPrefix = {"axe", true, "bow", true, "dagger", true, "javelin", true, "mace", true, "rapier", true, "spear", true, "sword", true, "throwing-axe", true}
+})
+
+DefineUpgrade("upgrade-item-prefix-sturdy", {
+	Name = _("Sturdy"),
+	ItemSuffix = {"armor", true, "shield", true, "helmet", true}
 })
 
 DefineUpgrade("upgrade-item-prefix-vicious", {
@@ -656,12 +666,20 @@ DefineModifier("upgrade-item-prefix-glacial",
 	{"ColdDamage", 2}
 )
 
+DefineModifier("upgrade-item-prefix-impregnable",
+	{"Armor", 2}
+)
+
 DefineModifier("upgrade-item-prefix-sharp",
 	{"BasicDamage", 1}
 )
 
 DefineModifier("upgrade-item-prefix-storm",
 	{"LightningDamage", 1}
+)
+
+DefineModifier("upgrade-item-prefix-sturdy",
+	{"Armor", 1}
 )
 
 DefineModifier("upgrade-item-prefix-vicious",
