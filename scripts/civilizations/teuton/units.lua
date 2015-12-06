@@ -44,6 +44,7 @@ DefineUnitType("unit-teuton-worker", { Name = _("Bura"),
 	Corpse = "unit-human-dead-body",
 	DaySightRangeBonus = 1,
 	NightSightRangeBonus = -1,
+	WeaponClass = "mace",
 	BluntDamage = true,
 	CanGatherResources = {
 		{
@@ -106,6 +107,7 @@ DefineUnitType("unit-teuton-swordsman", { Name = _("Krieger"),
 	Corpse = "unit-human-dead-body",
 	DaySightRangeBonus = 1,
 	NightSightRangeBonus = -1,
+	WeaponClass = "sword",
 	HackDamage = true,
 	Variations = {
 		{
@@ -274,6 +276,7 @@ DefineUnitType("unit-teuton-archer", { Name = _("Skutan"),
 	DaySightRangeBonus = 1,
 	NightSightRangeBonus = -1,
 	BonusAgainstAir = 50,
+	WeaponClass = "bow",
 	PierceDamage = true,
 	Variations = {
 		{
@@ -313,6 +316,7 @@ DefineUnitType("unit-teuton-ritter", { Name = _("Ritter"),
 	Armor = 3, BasicDamage = 13, -- +1 armor, +1 damage
 	DaySightRangeBonus = 1,
 	NightSightRangeBonus = -1,
+	WeaponClass = "sword",
 	HackDamage = true,
 	Corpse = "unit-human-dead-body",
 	Sounds = {

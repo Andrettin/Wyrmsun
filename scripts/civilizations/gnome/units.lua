@@ -42,6 +42,7 @@ DefineUnitType("unit-gnomish-worker", { Name = _("Scavenger"),
 	Accuracy = 9,
 	Evasion = 10,
 	Corpse = "unit-gnomish-dead-body",
+	WeaponClass = "mace",
 	BluntDamage = true,
 	CanGatherResources = {
 		{
@@ -105,6 +106,7 @@ DefineUnitType("unit-gnomish-recruit", { Name = _("Recruit"),
 	Accuracy = 12,
 	Evasion = 12,
 	Corpse = "unit-gnomish-dead-body",
+	WeaponClass = "rapier",
 	PierceDamage = true,
 	Variations = {
 		{

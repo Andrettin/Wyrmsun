@@ -41,6 +41,7 @@ DefineUnitType("unit-dwarven-miner", { Name = _("Miner"),
 	Image = {"file", "dwarf/units/miner.png", "size", {72, 72}},
 	Animations = "animations-dwarven-miner", Icon = "icon-dwarven-miner",
 	Corpse = "unit-dwarven-dead-body",
+	WeaponClass = "mace",
 	BluntDamage = true,
 	CanGatherResources = {
 		{
@@ -112,6 +113,7 @@ DefineUnitType("unit-dwarven-militia", { Name = _("Militia"),
 	organic = true,
 	Flesh = true,
 	SelectableByRectangle = true,
+	WeaponClass = "axe",
 	HackDamage = true,
 	Traits = {"upgrade-mighty", "upgrade-strong", "upgrade-weak", "upgrade-dextrous", "upgrade-clumsy", "upgrade-reckless", "upgrade-near-sighted", "upgrade-keen", "upgrade-limping", "upgrade-old", "upgrade-quick", "upgrade-resilient", "upgrade-slow", "upgrade-cruel"},
 	Sounds = {
@@ -140,6 +142,7 @@ DefineUnitType("unit-dwarven-axefighter", { Name = _("Axefighter"),
 	Animations = "animations-dwarven-axefighter", Icon = "icon-dwarven-axefighter",
 	Costs = {"time", 60, "gold", 495, "lumber", 22},
 	Corpse = "unit-dwarven-dead-body",
+	WeaponClass = "axe",
 	HackDamage = true,
 	Variations = {
 		{
@@ -195,6 +198,7 @@ DefineUnitType("unit-dwarven-steelclad", { Name = _("Steelclad"),
 	Animations = "animations-dwarven-axefighter", Icon = "icon-dwarven-steelclad",
 	Costs = {"time", 90, "gold", 825, "lumber", 75},
 	Armor = 4,
+	WeaponClass = "axe",
 	HackDamage = true,
 	Variations = {
 		{
@@ -299,6 +303,7 @@ DefineUnitType("unit-dwarven-thane", { Name = _("Stonelord"),
 	Armor = 6,
 	Corpse = "unit-dwarven-dead-body",
 	CanCastSpell = {"spell-axe-twirl"},
+	WeaponClass = "axe",
 	HackDamage = true,
 	Variations = {
 		{
@@ -360,6 +365,7 @@ DefineUnitType("unit-dwarven-scout", { Name = _("Scout"),
 	Speed = 11,
 	Corpse = "unit-dwarven-dead-body",
 	TechnologyPointCost = 1,
+	WeaponClass = "throwing-axe",
 	HackDamage = true,
 	Variations = {
 		{
@@ -411,6 +417,7 @@ DefineUnitType("unit-dwarven-yale-rider", { Name = _("Yale Rider"),
 	Image = {"file", "dwarf/units/yale_rider_red_hair_gray_fur.png", "size", {72, 72}},
 	Animations = "animations-melee-unit", Icon = "icon-dwarven-yale-rider",
 	Corpse = "unit-dwarven-dead-body",
+	WeaponClass = "axe",
 	HackDamage = true,
 	Variations = {
 		{
@@ -508,6 +515,7 @@ DefineUnitType("unit-dwarven-gryphon-rider", { Name = _("Gryphon Rider"),
 	Missile = "missile-throwing-axe",
 	BasicDamage = 13,
 	MaxAttackRange = 4,
+	WeaponClass = "throwing-axe",
 	HackDamage = true,
 	Variations = {
 		{

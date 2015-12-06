@@ -56,6 +56,30 @@ DefineUnitType("unit-potion-of-healing", { Name = _("Potion of Healing"),
 	} 
 } )
 
+DefineUnitType("unit-short-sword", { Name = _("Short Sword"),
+	Parent = "unit-template-item",
+	Image = {"file", "neutral/items/axe.png", "size", {32, 32}},
+	Icon = "icon-germanic-short-sword",
+	ItemClass = "sword",
+	BasicDamage = 0
+} )
+
+DefineUnitType("unit-broad-sword", { Name = _("Broad Sword"),
+	Parent = "unit-template-item",
+	Image = {"file", "neutral/items/axe.png", "size", {32, 32}},
+	Icon = "icon-germanic-broad-sword",
+	ItemClass = "sword",
+	BasicDamage = 2
+} )
+
+DefineUnitType("unit-spatha", { Name = _("Spatha"),
+	Parent = "unit-template-item",
+	Image = {"file", "neutral/items/axe.png", "size", {32, 32}},
+	Icon = "icon-teuton-spatha",
+	ItemClass = "sword",
+	BasicDamage = 4
+} )
+
 DefineUnitType("unit-battle-axe", { Name = _("Battle Axe"),
 	Parent = "unit-template-item",
 	Image = {"file", "neutral/items/axe.png", "size", {32, 32}},
@@ -80,67 +104,60 @@ DefineUnitType("unit-great-axe", { Name = _("Great Axe"),
 	BasicDamage = 4
 } )
 
-DefineUnitType("unit-thrymgjol-shield", { Name = _("Thrymgjol Shield"),
+DefineUnitType("unit-wooden-shield", { Name = _("Wooden Shield"),
 	Parent = "unit-template-item",
-	Image = {"file", "neutral/items/crown.png", "size", {32, 32}},
-	Icon = "icon-dwarven-shield-3",
+	Image = {"file", "neutral/items/round_shield.png", "size", {32, 32}},
+	Icon = "icon-germanic-wooden-oblong-shield",
+	ItemClass = "shield",
+	Armor = 0
+} )
+
+DefineUnitType("unit-bronze-shield", { Name = _("Bronze Shield"),
+	Parent = "unit-template-item",
+	Image = {"file", "germanic/items/bronze_shield.png", "size", {32, 32}},
+	Icon = "icon-germanic-bronze-shield",
+	ItemClass = "shield",
+	Armor = 2
+} )
+
+DefineUnitType("unit-iron-shield", { Name = _("Iron Shield"),
+	Parent = "unit-template-item",
+	Image = {"file", "teuton/items/saxon_shield.png", "size", {32, 32}},
+	Icon = "icon-teuton-iron-shield",
 	ItemClass = "shield",
 	Armor = 4
 } )
 
 --[[
-DefineItemType("Short Sword", {
-	Class = "Sword",
-	Icon = "icon-germanic-short-sword"
-})
-
-DefineItemType("Broad Sword", {
-	Class = "Sword",
-	Icon = "icon-germanic-broad-sword"
-})
-
-DefineItemType("Spatha", {
-	Class = "Sword",
-	Icon = "icon-teuton-spatha"
-})
-
-DefineItemType("Wooden Shield", {
-	Class = "Shield",
-	Icon = "icon-germanic-wooden-oblong-shield"
-})
-
-DefineItemType("Bronze Shield", {
-	Class = "Shield",
-	Icon = "icon-germanic-bronze-shield"
-})
-
-DefineItemType("Iron Shield", {
-	Class = "Shield",
-	Icon = "icon-teuton-iron-shield"
-})
-
-DefineItemType("Wooden Shield", {
-	Class = "Shield",
-	Icon = "icon-germanic-wooden-oblong-shield"
-})
-
-DefineItemType("Bronze Shield", {
-	Class = "Shield",
-	Icon = "icon-germanic-bronze-shield"
-})
-
-DefineItemType("Round Shield", {
-	Class = "Shield",
-	Icon = "icon-dwarven-shield-1"
-})
-
-DefineItemType("Heater Shield", {
-	Class = "Shield",
-	Icon = "icon-dwarven-shield-2"
-})
-
-DefineItemType("Thrymgjol Shield", {
-	Class = "Shield",
-	Icon = "icon-dwarven-shield-3"
-})
+DefineUnitType("unit-suebi-shield", { Name = _("Suebi Shield"),
+	Parent = "unit-template-item",
+	Image = {"file", "teuton/items/suebi_shield.png", "size", {32, 32}},
+	Icon = "icon-teuton-iron-shield", -- each base item type needs to have its own icon
+	ItemClass = "shield",
+	Armor = 4
+} )
 --]]
+
+DefineUnitType("unit-round-shield", { Name = _("Round Shield"),
+	Parent = "unit-template-item",
+	Image = {"file", "neutral/items/round_shield.png", "size", {32, 32}},
+	Icon = "icon-dwarven-shield-1",
+	ItemClass = "shield",
+	Armor = 0
+} )
+
+DefineUnitType("unit-heater-shield", { Name = _("Heater Shield"),
+	Parent = "unit-template-item",
+	Image = {"file", "neutral/items/round_shield_2.png", "size", {32, 32}},
+	Icon = "icon-dwarven-shield-2",
+	ItemClass = "shield",
+	Armor = 2
+} )
+
+DefineUnitType("unit-thrymgjol-shield", { Name = _("Thrymgjol Shield"),
+	Parent = "unit-template-item",
+	Image = {"file", "neutral/items/round_shield_2.png", "size", {32, 32}},
+	Icon = "icon-dwarven-shield-3",
+	ItemClass = "shield",
+	Armor = 4
+} )

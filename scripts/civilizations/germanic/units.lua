@@ -44,6 +44,7 @@ DefineUnitType("unit-germanic-worker", { Name = _("Bura"), -- Bûra = "Bauer" in
 	Corpse = "unit-human-dead-body",
 	DaySightRangeBonus = 1,
 	NightSightRangeBonus = -1,
+	WeaponClass = "mace",
 	BluntDamage = true,
 	CanGatherResources = {
 		{
@@ -109,6 +110,7 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 	Corpse = "unit-human-dead-body",
 	DaySightRangeBonus = 1,
 	NightSightRangeBonus = -1,
+	WeaponClass = "sword",
 	HackDamage = true,
 	Variations = {
 		{
@@ -304,6 +306,7 @@ DefineUnitType("unit-germanic-archer", { Name = _("Skutan"),
 	DaySightRangeBonus = 1,
 	NightSightRangeBonus = -1,
 	BonusAgainstAir = 50,
+	WeaponClass = "bow",
 	PierceDamage = true,
 	Variations = {
 		{
