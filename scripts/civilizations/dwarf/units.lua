@@ -43,6 +43,7 @@ DefineUnitType("unit-dwarven-miner", { Name = _("Miner"),
 	Corpse = "unit-dwarven-dead-body",
 	WeaponClass = "mace",
 	BluntDamage = true,
+	AiDrops = {"unit-cheese"},
 	CanGatherResources = {
 		{
 			"resource-id", "gold",
@@ -115,6 +116,7 @@ DefineUnitType("unit-dwarven-militia", { Name = _("Militia"),
 	SelectableByRectangle = true,
 	WeaponClass = "axe",
 	HackDamage = true,
+	AiDrops = {"unit-battle-axe", "unit-round-shield", "unit-cheese"},
 	Traits = {"upgrade-mighty", "upgrade-strong", "upgrade-weak", "upgrade-dextrous", "upgrade-clumsy", "upgrade-reckless", "upgrade-near-sighted", "upgrade-keen", "upgrade-limping", "upgrade-old", "upgrade-quick", "upgrade-resilient", "upgrade-slow", "upgrade-cruel"},
 	Sounds = {
 		"selected", "basic-dwarf-voices-selected-group",
@@ -144,6 +146,7 @@ DefineUnitType("unit-dwarven-axefighter", { Name = _("Axefighter"),
 	Corpse = "unit-dwarven-dead-body",
 	WeaponClass = "axe",
 	HackDamage = true,
+	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-cheese", "unit-potion-of-healing"},
 	Variations = {
 		{
 			"variation-id", "red-hair",
@@ -200,6 +203,7 @@ DefineUnitType("unit-dwarven-steelclad", { Name = _("Steelclad"),
 	Armor = 4,
 	WeaponClass = "axe",
 	HackDamage = true,
+	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-cheese", "unit-potion-of-healing"},
 	Variations = {
 		{
 			"variation-id", "red-hair",
@@ -305,6 +309,7 @@ DefineUnitType("unit-dwarven-thane", { Name = _("Stonelord"),
 	CanCastSpell = {"spell-axe-twirl"},
 	WeaponClass = "axe",
 	HackDamage = true,
+	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-cheese", "unit-potion-of-healing"},
 	Variations = {
 		{
 			"variation-id", "red-hair",
@@ -367,6 +372,7 @@ DefineUnitType("unit-dwarven-scout", { Name = _("Scout"),
 	TechnologyPointCost = 1,
 	WeaponClass = "throwing-axe",
 	HackDamage = true,
+	AiDrops = {"unit-cheese", "unit-potion-of-healing"},
 	Variations = {
 		{
 			"variation-id", "orange-hair-short-beard",
@@ -419,6 +425,7 @@ DefineUnitType("unit-dwarven-yale-rider", { Name = _("Yale Rider"),
 	Corpse = "unit-dwarven-dead-body",
 	WeaponClass = "axe",
 	HackDamage = true,
+	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-cheese", "unit-potion-of-healing"},
 	Variations = {
 		{
 			"variation-id", "black-hair-brown-fur",
@@ -517,6 +524,7 @@ DefineUnitType("unit-dwarven-gryphon-rider", { Name = _("Gryphon Rider"),
 	MaxAttackRange = 4,
 	WeaponClass = "throwing-axe",
 	HackDamage = true,
+	AiDrops = {"unit-cheese", "unit-potion-of-healing"},
 	Variations = {
 		{
 			"variation-id", "black-hair-brown-feathers",

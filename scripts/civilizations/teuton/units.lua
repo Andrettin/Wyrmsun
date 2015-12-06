@@ -46,6 +46,7 @@ DefineUnitType("unit-teuton-worker", { Name = _("Bura"),
 	NightSightRangeBonus = -1,
 	WeaponClass = "mace",
 	BluntDamage = true,
+	AiDrops = {"unit-cheese", "unit-carrots"},
 	CanGatherResources = {
 		{
 			"resource-id", "gold",
@@ -109,6 +110,7 @@ DefineUnitType("unit-teuton-swordsman", { Name = _("Krieger"),
 	NightSightRangeBonus = -1,
 	WeaponClass = "sword",
 	HackDamage = true,
+	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
 	Variations = {
 		{
 			"variation-id", "red-hair", -- no shield, bronze sword
@@ -278,6 +280,7 @@ DefineUnitType("unit-teuton-archer", { Name = _("Skutan"),
 	BonusAgainstAir = 50,
 	WeaponClass = "bow",
 	PierceDamage = true,
+	AiDrops = {"unit-cheese", "unit-carrots", "unit-potion-of-healing"},
 	Variations = {
 		{
 			"variation-id", "red-hair",
@@ -318,6 +321,7 @@ DefineUnitType("unit-teuton-ritter", { Name = _("Ritter"),
 	NightSightRangeBonus = -1,
 	WeaponClass = "sword",
 	HackDamage = true,
+	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
 	Corpse = "unit-human-dead-body",
 	Sounds = {
 		"selected", "basic-teuton-voices-selected-group",

@@ -42,6 +42,10 @@ function DefineUpgrade(upgrade, data)
 			upgrade.GrandStrategyCosts[i - 1] = CUpgrade:Get(data.Parent).GrandStrategyCosts[i - 1]
 			upgrade.GrandStrategyProductionEfficiencyModifier[i - 1] = CUpgrade:Get(data.Parent).GrandStrategyProductionEfficiencyModifier[i - 1]
 		end
+		for i = 1,MaxItemClasses do
+			upgrade.ItemPrefix[i - 1] = CUpgrade:Get(data.Parent).ItemPrefix[i - 1]
+			upgrade.ItemSuffix[i - 1] = CUpgrade:Get(data.Parent).ItemSuffix[i - 1]
+		end
 		upgrade.TechnologyPointCost = CUpgrade:Get(data.Parent).TechnologyPointCost
 		upgrade.Ability = CUpgrade:Get(data.Parent).Ability
 		upgrade.Weapon = CUpgrade:Get(data.Parent).Weapon
@@ -104,14 +108,14 @@ function DefineUpgrade(upgrade, data)
 		upgrade.Shield = false
 	end
 	if (data.ItemPrefix ~= nil) then
-		upgrade.ItemPrefix = data.Weapon
-	elseif (data.Parent == nil) then
-		upgrade.ItemPrefix = false
+		for i = 1,table.getn(data.ItemPrefix),2 do
+			upgrade.ItemPrefix[GetItemClassIdByName(data.ItemPrefix[i])] = data.ItemPrefix[i + 1]
+		end
 	end
 	if (data.ItemSuffix ~= nil) then
-		upgrade.ItemSuffix = data.Weapon
-	elseif (data.Parent == nil) then
-		upgrade.ItemSuffix = false
+		for i = 1,table.getn(data.ItemSuffix),2 do
+			upgrade.ItemSuffix[GetItemClassIdByName(data.ItemSuffix[i])] = data.ItemSuffix[i + 1]
+		end
 	end
 end
 
@@ -565,7 +569,7 @@ DefineModifier("upgrade-wyrm-child",
 
 DefineUpgrade("upgrade-item-prefix-cruel", {
 	Name = _("Cruel"),
-	ItemPrefix = true
+	ItemPrefix = {"axe", true, "bow", true, "dagger", true, "javelin", true, "mace", true, "rapier", true, "spear", true, "sword", true, "throwing-axe", true}
 })
 
 DefineModifier("upgrade-item-prefix-cruel",

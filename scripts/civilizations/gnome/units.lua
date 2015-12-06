@@ -44,6 +44,7 @@ DefineUnitType("unit-gnomish-worker", { Name = _("Scavenger"),
 	Corpse = "unit-gnomish-dead-body",
 	WeaponClass = "mace",
 	BluntDamage = true,
+	AiDrops = {"unit-cheese"},
 	CanGatherResources = {
 		{
 			"resource-id", "gold",
@@ -107,6 +108,7 @@ DefineUnitType("unit-gnomish-recruit", { Name = _("Recruit"),
 	Evasion = 12,
 	Corpse = "unit-gnomish-dead-body",
 	WeaponClass = "rapier",
+	AiDrops = {"unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-cheese", "unit-potion-of-healing"},
 	PierceDamage = true,
 	Variations = {
 		{

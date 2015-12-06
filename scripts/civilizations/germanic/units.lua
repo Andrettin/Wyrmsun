@@ -46,6 +46,7 @@ DefineUnitType("unit-germanic-worker", { Name = _("Bura"), -- Bûra = "Bauer" in
 	NightSightRangeBonus = -1,
 	WeaponClass = "mace",
 	BluntDamage = true,
+	AiDrops = {"unit-cheese", "unit-carrots"},
 	CanGatherResources = {
 		{
 			"resource-id", "gold", -- this needs to be on top
@@ -112,6 +113,7 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 	NightSightRangeBonus = -1,
 	WeaponClass = "sword",
 	HackDamage = true,
+	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-wooden-shield", "unit-bronze-shield", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
 	Variations = {
 		{
 			"variation-id", "blond-hair",
@@ -208,6 +210,7 @@ DefineUnitType("unit-germanic-spearman", { Name = _("Spearman"),
 	Corpse = "unit-human-dead-body",
 	DaySightRangeBonus = 1,
 	NightSightRangeBonus = -1,
+	AiDrops = {"unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
 	Variations = {
 		{
 			"variation-id", "blond-hair",
@@ -308,6 +311,7 @@ DefineUnitType("unit-germanic-archer", { Name = _("Skutan"),
 	BonusAgainstAir = 50,
 	WeaponClass = "bow",
 	PierceDamage = true,
+	AiDrops = {"unit-cheese", "unit-carrots", "unit-potion-of-healing"},
 	Variations = {
 		{
 			"variation-id", "red-hair",

@@ -47,6 +47,7 @@ DefineUnitType("unit-kobold-footpad", { Name = _("Footpad"),
 	NightSightRangeBonus = 1,
 	WeaponClass = "sword",
 	HackDamage = true,
+	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-cheese", "unit-potion-of-healing"},
 	Corpse = "unit-kobold-dead-body",
 	Variations = {
 		{
