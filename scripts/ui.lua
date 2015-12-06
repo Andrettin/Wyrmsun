@@ -1044,6 +1044,21 @@ if not (ui_loaded_first_time) then
 				{ 	Margin = {1, 1},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				}, 
+				{ 	Condition = {Equipped = "false", Equippable = "only"}, Margin = {1, 1}, TextColor = "white", HighlightColor = "yellow",
+					More = {"Text", {Text = _("Right-click to equip."), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {Equipped = "only"}, Margin = {1, 1}, TextColor = "white", HighlightColor = "yellow",
+					More = {"Text", {Text = _("Right-click to de-equip."), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {ItemClass = "potion"}, Margin = {1, 1}, TextColor = "white", HighlightColor = "yellow",
+					More = {"Text", {Text = _("Right-click to use."), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Margin = {1, 1}, TextColor = "white", HighlightColor = "yellow",
+					More = {"Text", {Text = _("Left-click to drop."), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Margin = {1, 1},
+					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
+				},
 				{ 	HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Class: "), TypeClass("Type")), Font = wyr.preferences.PopupDescriptionFont}}
 				},
