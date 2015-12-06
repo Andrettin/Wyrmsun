@@ -231,6 +231,7 @@ https://github.com/Andrettin/Wyrmsun
 * Buildings
 - The Dwarven and Teuton Dock buildings are now buildable in RTS mode.
 - Guard Towers now provide +1 range for the ranged units attacking from within them.
+- Buildings no longer provide experience when destroyed.
 
 * Heroes
 - Custom heroes can now be created in the quest interface, and if one is selected the hero will appear alongside your starting units in quest scenarios. For now custom heroes are limited to dwarven Axefighters/Steelclads/Stonelords.
@@ -244,6 +245,10 @@ https://github.com/Andrettin/Wyrmsun
 * Quests
 - The Caverns of Flame quest (Dwarf) now gives 2 technology points instead of 1.
 - The Razing of Opitergium quest (Teuton) now gives 3 technology points instead of 2.
+
+* Units
+- Improved the calculation of the XP required for level up.
+- Improved the XP bar display.
 
 -----------------------------------------------------------------------
 - 1.7.5

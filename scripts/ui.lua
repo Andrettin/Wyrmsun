@@ -460,13 +460,13 @@ DefinePanelContents(
 		More = {"LifeBar", {Variable = "Xp", Height = 4, Width = 50}}
 	},
 	{ Pos = {67, 50}, Condition = {ShowOpponent = false, HideNeutral = true, organic = "only", Mana = "false"},
-		More = { "Text", {Text = Concat("XP: ", String(ActiveUnitVar("Xp")), "/", String(ActiveUnitVar("XpRequired"))), Font = "small"}}
+		More = { "Text", {Text = Concat("XP: ", String(ActiveUnitVar("Xp")), "/", String(ActiveUnitVar("XPRequired"))), Font = "small"}}
     },
 	{ Pos = {70, 67}, Condition = {ShowOpponent = false, HideNeutral = true, organic = "only", Mana = "only"},
 		More = {"LifeBar", {Variable = "Xp", Height = 4, Width = 50}}
 	},
 	{ Pos = {67, 72}, Condition = {ShowOpponent = false, HideNeutral = true, organic = "only", Mana = "only"},
-		More = { "Text", {Text = Concat("XP: ", String(ActiveUnitVar("Xp")), "/", String(ActiveUnitVar("XpRequired"))), Font = "small"}}
+		More = { "Text", {Text = Concat("XP: ", String(ActiveUnitVar("Xp")), "/", String(ActiveUnitVar("XPRequired"))), Font = "small"}}
     },
 	--[[
 	{ Pos = {35, 61}, Condition = {ShowOpponent = false, HideNeutral = true},
@@ -1020,6 +1020,15 @@ if not (ui_loaded_first_time) then
 				{ 	HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Class: "), TypeClass("Type")), Font = wyr.preferences.PopupDescriptionFont}}
 				},
+				{ 	Condition = {BasicDamage = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Damage Bonus: "), Variable = "BasicDamage", Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {FireDamage = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Fire Damage Bonus: "), Variable = "FireDamage", Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {Armor = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Armor Bonus: "), Variable = "Armor", Font = wyr.preferences.PopupDescriptionFont}}
+				},
 				{ 	Condition = {HitPointHealing = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Healing: "), Variable = "HitPointHealing", Font = wyr.preferences.PopupDescriptionFont}}
 				},
@@ -1070,6 +1079,9 @@ if not (ui_loaded_first_time) then
 				},
 				{ 	Condition = {BasicDamage = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Damage Bonus: "), Variable = "BasicDamage", Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {FireDamage = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Fire Damage Bonus: "), Variable = "FireDamage", Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {Armor = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Armor Bonus: "), Variable = "Armor", Font = wyr.preferences.PopupDescriptionFont}}

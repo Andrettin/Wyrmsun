@@ -243,7 +243,6 @@ SetAllPlayersTotalUnitLimit(400)
 -------------------------------------------------------------------------------
 
 DefineVariables(
-	"XpRequired", {Enable = true},
 	"LevelUp", {Enable = true},
 	"Variation", {Enable = true},
 	"Slow", {Max = 1000, Value = 0, Enable = true},
@@ -526,12 +525,6 @@ function StandardTriggers()
 					end
 				end
 
-				if (GetUnitVariable(uncount[unit1], "XpRequired") == 0) then
-					local xp_required = GetUnitVariable(uncount[unit1], "XpRequired")
-					xp_required = xp_required + math.floor(GetUnitVariable(uncount[unit1], "Points") / (GetUnitVariable(uncount[unit1], "StartingLevel") + 1) * 4 * 2)
-					SetUnitVariable(uncount[unit1], "XpRequired", xp_required)
-				end
-				
 				if (GetUnitVariable(uncount[unit1], "Level") < GetUnitVariable(uncount[unit1], "StartingLevel")) then
 					IncreaseUnitLevel(uncount[unit1], (GetUnitVariable(uncount[unit1], "StartingLevel") - GetUnitVariable(uncount[unit1], "Level")), false)
 				end
@@ -685,7 +678,9 @@ function StandardTriggers()
 			local uncount = 0
 			uncount = GetUnits("any")
 			for unit1 = 1,table.getn(uncount) do 
-				if (GetUnitVariable(uncount[unit1], "XpRequired") > 0 and GetUnitVariable(uncount[unit1], "Xp") >= GetUnitVariable(uncount[unit1], "XpRequired") and GetUnitBoolFlag(uncount[unit1], "Building") == false and GetUnitBoolFlag(uncount[unit1], "organic") and GetUnitBoolFlag(uncount[unit1], "Fauna") == false) then
+				if (GetUnitVariable(uncount[unit1], "XPRequired") > 0 and GetUnitVariable(uncount[unit1], "Xp") >= GetUnitVariable(uncount[unit1], "XPRequired") and GetUnitBoolFlag(uncount[unit1], "Building") == false and GetUnitBoolFlag(uncount[unit1], "organic") and GetUnitBoolFlag(uncount[unit1], "Fauna") == false) then
+					SetUnitVariable(uncount[unit1], "Xp", GetUnitVariable(uncount[unit1], "Xp") - GetUnitVariable(uncount[unit1], "XPRequired"))
+					SetUnitVariable(uncount[unit1], "Xp", GetUnitVariable(uncount[unit1], "Xp", "Max") - GetUnitVariable(uncount[unit1], "XPRequired"), "Max")
 					IncreaseUnitLevel(uncount[unit1], 1, true)
 					if (GetUnitVariable(uncount[unit1], "Player") == GetThisPlayer()) then
 						if (GetUnitVariable(uncount[unit1], "Character") ~= "") then
@@ -1497,11 +1492,6 @@ function InitializeUnit(unit)
 			SetUnitVariable(unit, "LifeStage", (SyncRand(13) + 1))
 		end
 	end
-	if (GetUnitVariable(unit, "XpRequired") == 0) then
-		local xp_required = GetUnitVariable(unit, "XpRequired")
-		xp_required = xp_required + math.floor(GetUnitVariable(unit, "Points") / (GetUnitVariable(unit, "StartingLevel") + 1) * 4 * 2)
-		SetUnitVariable(unit, "XpRequired", xp_required)
-	end
 	if (GetUnitVariable(unit, "Level") < GetUnitVariable(unit, "StartingLevel")) then
 		IncreaseUnitLevel(unit, (GetUnitVariable(unit, "StartingLevel") - GetUnitVariable(unit, "Level")), false)
 	end
@@ -1608,13 +1598,6 @@ function IncreaseUnitLevel(unit, level_number, advancement)
 	if (unit ~= nil) then
 		while (level_number > 0) do
 			SetUnitVariable(unit, "Level", GetUnitVariable(unit, "Level") + 1)
-			if (GetUnitVariable(unit, "Xp", "Max") < GetUnitVariable(unit, "XpRequired")) then
-				SetUnitVariable(unit, "Xp", GetUnitVariable(unit, "XpRequired"), "Max")
-				SetUnitVariable(unit, "Xp", GetUnitVariable(unit, "Xp", "Max"))
-			end
-			local xp_required = GetUnitVariable(unit, "XpRequired")
-			xp_required = xp_required + 100 * (GetUnitVariable(unit, "Level") + 1)
-			SetUnitVariable(unit, "XpRequired", xp_required)
 			if (GetUnitVariable(unit, "StartingLevel") < GetUnitVariable(unit, "Level")) then
 				SetUnitVariable(unit, "Points", GetUnitVariable(unit, "Points", "Max") + (5 * (GetUnitVariable(unit, "Level") + 1)), "Max")
 				SetUnitVariable(unit, "Points", GetUnitVariable(unit, "Points") + (5 * (GetUnitVariable(unit, "Level") + 1)))

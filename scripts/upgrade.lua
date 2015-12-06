@@ -572,6 +572,33 @@ DefineUpgrade("upgrade-item-prefix-cruel", {
 	ItemPrefix = {"axe", true, "bow", true, "dagger", true, "javelin", true, "mace", true, "rapier", true, "spear", true, "sword", true, "throwing-axe", true}
 })
 
+DefineUpgrade("upgrade-item-prefix-vicious", {
+	Name = _("Vicious"),
+	ItemPrefix = {"axe", true, "bow", true, "dagger", true, "javelin", true, "mace", true, "rapier", true, "spear", true, "sword", true, "throwing-axe", true}
+})
+
+DefineUpgrade("upgrade-item-suffix-of-fire", {
+	Name = _("of Fire"),
+	ItemSuffix = {"axe", true, "bow", true, "dagger", true, "javelin", true, "mace", true, "rapier", true, "spear", true, "sword", true, "throwing-axe", true}
+})
+
+DefineUpgrade("upgrade-item-suffix-of-victory", {
+	Name = _("of Victory"),
+	ItemSuffix = {"axe", true, "bow", true, "dagger", true, "javelin", true, "mace", true, "rapier", true, "spear", true, "sword", true, "throwing-axe", true}
+})
+
 DefineModifier("upgrade-item-prefix-cruel",
 	{"BasicDamage", 1}
+)
+
+DefineModifier("upgrade-item-prefix-vicious",
+	{"BasicDamage", 2}
+)
+
+DefineModifier("upgrade-item-suffix-of-fire",
+	{"FireDamage", 1}
+)
+
+DefineModifier("upgrade-item-suffix-of-victory",
+	{"BasicDamage", 3}
 )
