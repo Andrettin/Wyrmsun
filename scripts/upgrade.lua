@@ -597,6 +597,11 @@ DefineUpgrade("upgrade-item-prefix-impregnable", {
 	ItemPrefix = {"armor", true, "shield", true, "helmet", true}
 })
 
+DefineUpgrade("upgrade-item-prefix-penetrating", {
+	Name = _("Penetrating"),
+	ItemPrefix = {"bow", true, "dagger", true, "javelin", true, "rapier", true, "spear", true, "sword", true}
+})
+
 DefineUpgrade("upgrade-item-prefix-quenching", {
 	Name = _("Quenching"),
 	ItemPrefix = {"armor", true, "shield", true, "helmet", true}
@@ -612,8 +617,18 @@ DefineUpgrade("upgrade-item-prefix-sturdy", {
 	ItemPrefix = {"armor", true, "shield", true, "helmet", true}
 })
 
+DefineUpgrade("upgrade-item-prefix-swift", {
+	Name = _("Swift"),
+	ItemPrefix = {"axe", true, "bow", true, "dagger", true, "javelin", true, "mace", true, "rapier", true, "spear", true, "sword", true, "throwing-axe", true}
+})
+
 DefineUpgrade("upgrade-item-prefix-vicious", {
 	Name = _("Vicious"),
+	ItemPrefix = {"axe", true, "bow", true, "dagger", true, "javelin", true, "mace", true, "rapier", true, "spear", true, "sword", true, "throwing-axe", true}
+})
+
+DefineUpgrade("upgrade-item-prefix-wounding", {
+	Name = _("Wounding"),
 	ItemPrefix = {"axe", true, "bow", true, "dagger", true, "javelin", true, "mace", true, "rapier", true, "spear", true, "sword", true, "throwing-axe", true}
 })
 
@@ -645,9 +660,24 @@ DefineUpgrade("upgrade-item-suffix-of-lightning", {
 	ItemSuffix = {"axe", true, "bow", true, "dagger", true, "javelin", true, "mace", true, "rapier", true, "spear", true, "sword", true, "throwing-axe", true}
 })
 
+DefineUpgrade("upgrade-item-suffix-of-perfuration", {
+	Name = _("of Perfuration"),
+	ItemSuffix = {"bow", true, "dagger", true, "javelin", true, "rapier", true, "spear", true, "sword", true}
+})
+
+DefineUpgrade("upgrade-item-suffix-of-the-serpent", {
+	Name = _("of the Serpent"),
+	ItemSuffix = {"axe", true, "bow", true, "dagger", true, "javelin", true, "mace", true, "rapier", true, "spear", true, "sword", true, "throwing-axe", true}
+})
+
 DefineUpgrade("upgrade-item-suffix-of-thorns", {
 	Name = _("of Thorns"),
 	ItemSuffix = {"armor", true, "shield", true, "helmet", true}
+})
+
+DefineUpgrade("upgrade-item-suffix-of-trickery", {
+	Name = _("of Trickery"),
+	ItemSuffix = {"axe", true, "bow", true, "dagger", true, "javelin", true, "mace", true, "rapier", true, "spear", true, "sword", true, "throwing-axe", true}
 })
 
 DefineUpgrade("upgrade-item-suffix-of-victory", {
@@ -675,6 +705,10 @@ DefineModifier("upgrade-item-prefix-impregnable",
 	{"Armor", 2}
 )
 
+DefineModifier("upgrade-item-prefix-penetrating",
+	{"PiercingDamage", 1}
+)
+
 DefineModifier("upgrade-item-prefix-quenching",
 	{"FireResistance", 10}
 )
@@ -687,7 +721,15 @@ DefineModifier("upgrade-item-prefix-sturdy",
 	{"Armor", 1}
 )
 
+DefineModifier("upgrade-item-prefix-swift",
+	{"Accuracy", 1}
+)
+
 DefineModifier("upgrade-item-prefix-vicious",
+	{"BasicDamage", 2}
+)
+
+DefineModifier("upgrade-item-prefix-wounding",
 	{"BasicDamage", 2}
 )
 
@@ -711,8 +753,20 @@ DefineModifier("upgrade-item-suffix-of-lightning",
 	{"LightningDamage", 1}
 )
 
+DefineModifier("upgrade-item-suffix-of-perfuration",
+	{"PiercingDamage", 1}
+)
+
+DefineModifier("upgrade-item-suffix-of-the-serpent",
+	{"Backstab", 100}
+)
+
 DefineModifier("upgrade-item-suffix-of-thorns",
 	{"ThornsDamage", 1}
+)
+
+DefineModifier("upgrade-item-suffix-of-trickery",
+	{"ArcaneDamage", 1}
 )
 
 DefineModifier("upgrade-item-suffix-of-victory",

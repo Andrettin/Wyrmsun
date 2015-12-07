@@ -109,7 +109,7 @@ DefineUnitType("unit-gnomish-recruit", { Name = _("Recruit"),
 	Corpse = "unit-gnomish-dead-body",
 	WeaponClass = "rapier",
 	AiDrops = {"unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-cheese", "unit-potion-of-healing"},
-	DropAffixes = {"upgrade-item-prefix-storm", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-lightning"}, -- allow more magic enchantments than normal 
+	DropAffixes = {"upgrade-item-prefix-penetrating", "upgrade-item-prefix-storm", "upgrade-item-prefix-vicious", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-lightning", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-trickery"}, -- allow more magic enchantments than normal 
 	PierceDamage = true,
 	Variations = {
 		{

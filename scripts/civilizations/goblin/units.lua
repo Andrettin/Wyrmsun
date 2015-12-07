@@ -141,7 +141,7 @@ DefineUnitType("unit-goblin-spearman", { Name = _("Impaler"),
 	WeaponClass = "spear",
 	PierceDamage = true,
 	AiDrops = {"unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-cheese", "unit-potion-of-healing"},
-	DropAffixes = {"upgrade-item-prefix-cruel", "upgrade-item-prefix-vicious", "upgrade-item-suffix-of-fire"}, -- allow more magic enchantments than normal 
+	DropAffixes = {"upgrade-item-prefix-penetrating", "upgrade-item-prefix-vicious", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-trickery"}, -- allow more magic enchantments than normal 
 	Corpse = "unit-goblin-dead-body",
 	Sounds = {
 		"selected", "basic-goblin-voices-selected-group",

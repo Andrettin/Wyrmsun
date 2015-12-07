@@ -241,6 +241,11 @@ https://github.com/Andrettin/Wyrmsun
 - Added weapon and shield items. These can be equipped by right-clicking, and will replace the bonuses of the weapon/shield technologies with those of the item.
 - AI units now have a chance to drop items.
 - Dropped items now have a chance of having a magic prefix or suffix, as well as a chance of being a unique item.
+- Added Brimir (unique broad sword).
+- Added Laevatein (unique broad sword).
+- Added Gram (unique spatha).
+- Added Hrotti (unique spatha).
+- Added Rithil (unique spatha).
 - Added Svalin (unique bronze shield).
 - Added Toporik (unique bearded throwing axe).
 
