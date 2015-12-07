@@ -372,7 +372,7 @@ DefineUnitType("unit-dwarven-scout", { Name = _("Scout"),
 	TechnologyPointCost = 1,
 	WeaponClass = "throwing-axe",
 	HackDamage = true,
-	AiDrops = {"unit-cheese", "unit-potion-of-healing"},
+	AiDrops = {"unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-cheese", "unit-potion-of-healing"},
 	Variations = {
 		{
 			"variation-id", "orange-hair-short-beard",
@@ -524,7 +524,7 @@ DefineUnitType("unit-dwarven-gryphon-rider", { Name = _("Gryphon Rider"),
 	MaxAttackRange = 4,
 	WeaponClass = "throwing-axe",
 	HackDamage = true,
-	AiDrops = {"unit-cheese", "unit-potion-of-healing"},
+	AiDrops = {"unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-cheese", "unit-potion-of-healing"},
 	Variations = {
 		{
 			"variation-id", "black-hair-brown-feathers",

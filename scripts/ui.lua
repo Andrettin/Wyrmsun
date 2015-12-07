@@ -479,8 +479,11 @@ DefinePanelContents(
 	{ Pos = {170, 26}, Condition = {ShowOpponent = true, Affixed = "false"}, More = {"Text", {Text = Line(1, UnitName("Active"), 96, "game"), Centered = true}} },
 	{ Pos = {170, 37}, Condition = {ShowOpponent = true, Affixed = "false"}, More = {"Text", {Text = Line(2, UnitName("Active"), 96, "game"), Centered = true}} },
 
-	{ Pos = {170, 26}, Condition = {ShowOpponent = true, Affixed = "only"}, TextColor = "blue", More = {"Text", {Text = Line(1, UnitName("Active"), 96, "game"), Centered = true}} },
-	{ Pos = {170, 37}, Condition = {ShowOpponent = true, Affixed = "only"}, TextColor = "blue", More = {"Text", {Text = Line(2, UnitName("Active"), 96, "game"), Centered = true}} },
+	{ Pos = {170, 26}, Condition = {ShowOpponent = true, Affixed = "only", Unique = "false"}, TextColor = "blue", More = {"Text", {Text = Line(1, UnitName("Active"), 96, "game"), Centered = true}} },
+	{ Pos = {170, 37}, Condition = {ShowOpponent = true, Affixed = "only", Unique = "false"}, TextColor = "blue", More = {"Text", {Text = Line(2, UnitName("Active"), 96, "game"), Centered = true}} },
+
+	{ Pos = {170, 26}, Condition = {ShowOpponent = true, Unique = "only"}, TextColor = "orange", More = {"Text", {Text = Line(1, UnitName("Active"), 96, "game"), Centered = true}} },
+	{ Pos = {170, 37}, Condition = {ShowOpponent = true, Unique = "only"}, TextColor = "orange", More = {"Text", {Text = Line(2, UnitName("Active"), 96, "game"), Centered = true}} },
 
 	-- unit type name, if the unit has a personal name
 	{ Pos = {170, 61}, Condition = {ShowOpponent = true}, More = {"Text", {Text = Line(1, UnitTypeName("Active"), 96, "game"), Centered = true}} },
@@ -1059,10 +1062,13 @@ if not (ui_loaded_first_time) then
 		MinWidth = 128,
 		DefaultFont = wyr.preferences.PopupDescriptionFont,
 		Contents = {
-				{	Condition = {Affixed = "false"}, Margin = {1, 1}, HighlightColor = "yellow",
+				{	Condition = {Affixed = "false", Unique = "false"}, Margin = {1, 1}, HighlightColor = "yellow",
 					More = {"ButtonInfo", {InfoType = "Hint", Font = PopupFont}}
 				}, 
-				{	Condition = {Affixed = "only"}, Margin = {1, 1}, TextColor = "blue", HighlightColor = "yellow",
+				{	Condition = {Affixed = "only", Unique = "false"}, Margin = {1, 1}, TextColor = "blue", HighlightColor = "yellow",
+					More = {"ButtonInfo", {InfoType = "Hint", Font = PopupFont}}
+				}, 
+				{	Condition = {Unique = "only"}, Margin = {1, 1}, TextColor = "orange", HighlightColor = "yellow",
 					More = {"ButtonInfo", {InfoType = "Hint", Font = PopupFont}}
 				}, 
 				{ 	Margin = {1, 1},
@@ -1082,6 +1088,9 @@ if not (ui_loaded_first_time) then
 				},
 				{ 	Margin = {1, 1},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
+				},
+				{ 	Condition = {Unique = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = Concat(_("Type: "), TypeName("Type")), Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Class: "), TypeClass("Type")), Font = wyr.preferences.PopupDescriptionFont}}

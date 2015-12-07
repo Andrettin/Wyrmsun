@@ -240,7 +240,12 @@ https://github.com/Andrettin/Wyrmsun
 - Stonelords and Gryphon Riders now have an inventory in which they can carry items (such as potions). Other units can still use potions by right-clicking on them, but they can't carry them around. Items are saved for persistent heroes.
 - Added weapon and shield items. These can be equipped by right-clicking, and will replace the bonuses of the weapon/shield technologies with those of the item.
 - AI units now have a chance to drop items.
-- Dropped items now have a 10% chance of having a magic prefix and a 10% chance of having a magic suffix.
+- Dropped items now have a chance of having a magic prefix or suffix, as well as a chance of being a unique item.
+- Added Toporik (unique bearded throwing axe).
+
+
+* Miscellaneous
+- Units' names now appear in a tooltip when they are hovered.
 
 * Quests
 - The Caverns of Flame quest (Dwarf) now gives 2 technology points instead of 1.

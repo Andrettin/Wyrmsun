@@ -102,6 +102,30 @@ DefineUnitType("unit-great-axe", { Name = _("Great Axe"),
 	BasicDamage = 4
 } )
 
+DefineUnitType("unit-throwing-axe", { Name = _("Throwing Axe"),
+	Parent = "unit-template-item",
+	Image = {"file", "neutral/items/axe.png", "size", {32, 32}},
+	Icon = "icon-dwarven-throwing-axe-1",
+	ItemClass = "throwing-axe",
+	BasicDamage = 0
+} )
+
+DefineUnitType("unit-sharp-throwing-axe", { Name = _("Sharp Throwing Axe"),
+	Parent = "unit-template-item",
+	Image = {"file", "neutral/items/axe.png", "size", {32, 32}},
+	Icon = "icon-dwarven-throwing-axe-2",
+	ItemClass = "throwing-axe",
+	BasicDamage = 2
+} )
+
+DefineUnitType("unit-bearded-throwing-axe", { Name = _("Bearded Throwing Axe"),
+	Parent = "unit-template-item",
+	Image = {"file", "neutral/items/axe.png", "size", {32, 32}},
+	Icon = "icon-dwarven-throwing-axe-3",
+	ItemClass = "throwing-axe",
+	BasicDamage = 4
+} )
+
 DefineUnitType("unit-wooden-shield", { Name = _("Wooden Shield"),
 	Parent = "unit-template-item",
 	Image = {"file", "neutral/items/round_shield.png", "size", {32, 32}},
