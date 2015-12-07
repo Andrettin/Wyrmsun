@@ -154,7 +154,7 @@ function CustomHeroCreationMenu(world, quest_menu)
 				})
 				menu:stop()
 				quest_menu:stop()
-				RunQuestMenu("Nidavellir")
+				RunQuestMenu(world)
 			end
 		end
 	)

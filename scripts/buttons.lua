@@ -192,11 +192,18 @@ DefineButton( { Pos = 16, Level = 1, Icon = "icon-cancel",
 
 DefineButton( { Pos = 14, Level = 0, Icon = "icon-inventory",
 	Action = "button", Value = 2,
+	Allowed = "check-has-inventory",
 	Key = "i", Hint = "Open ~!Inventory", Popup = "popup-commands",
 	ForUnit = {
-		"unit-dwarven-thane",
+		"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
+		"unit-dwarven-scout",
+		"unit-dwarven-yale-rider",
 		"unit-dwarven-gryphon-rider",
-		"unit-surghan-mercenary-thane"
+		"unit-germanic-warrior", "unit-germanic-spearman", "unit-germanic-archer",
+		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-teuton-archer", "unit-teuton-ritter",
+		"unit-gnomish-recruit", "unit-gnomish-herbalist",
+		"unit-goblin-thief", "unit-goblin-spearman", "unit-goblin-archer",
+		"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane"
 	}
 } )
 
@@ -204,9 +211,15 @@ DefineButton( { Pos = 16, Level = 2, Icon = "icon-cancel",
 	Action = "button", Value = 0,
 	Key = "escape", Hint = "Cancel (~<Esc~>)", Popup = "popup-commands",
 	ForUnit = {
-		"unit-dwarven-thane",
+		"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
+		"unit-dwarven-scout",
+		"unit-dwarven-yale-rider",
 		"unit-dwarven-gryphon-rider",
-		"unit-surghan-mercenary-thane"
+		"unit-germanic-warrior", "unit-germanic-spearman", "unit-germanic-archer",
+		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-teuton-archer", "unit-teuton-ritter",
+		"unit-gnomish-recruit", "unit-gnomish-herbalist",
+		"unit-goblin-thief", "unit-goblin-spearman", "unit-goblin-archer",
+		"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane"
 	} 
 } )
 

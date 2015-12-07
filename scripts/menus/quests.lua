@@ -237,8 +237,8 @@ function addQuestIcon(quest, menu, x, y)
 							Briefing(quest)
 						end
 						mapname = GetQuestData(quest, "Map")
-						RunMap(mapname)
 						quest_menu:stop()
+						RunMap(mapname)
 						menu:stop()
 						if not (LoadGameFile) then
 							RunQuestMenu(GetQuestData(quest, "World"))
