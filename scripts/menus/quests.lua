@@ -136,8 +136,18 @@ function RunQuestMenu(world)
 		function() CustomHeroCreationMenu(world, menu);
 		end
 	)
-		
-	menu:addFullButton(_("~!Delete Custom Hero"), "h", offx + 208, offy + 212 + (36 * 5),
+	
+	if (world == "Earth") then
+		menu:addFullButton(_("~!Advance Hero Civilization"), "a", offx + 208 - 226, offy + 212 + (36 * 4),
+			function()
+				if (GetCurrentCustomHero() ~= "" and GetCustomHeroData(GetCurrentCustomHero(), "Civilization") == "germanic" and GetArrayIncludes(wyr.preferences.QuestsCompleted, "Gylve's Realm")) then
+					CustomHeroCivilizationAdvancementMenu(world, menu)
+				end
+			end
+		)
+	end
+
+	menu:addFullButton(_("~!Delete Custom Hero"), "h", offx + 208 + 226, offy + 212 + (36 * 4),
 		function()
 			if (GetCurrentCustomHero() ~= "") then
 				local confirm = WarGameMenu(panel(4))
@@ -164,7 +174,7 @@ function RunQuestMenu(world)
 		end
 	)
 
-	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 212 + (36 * 6),
+	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 212 + (36 * 5),
 		function()
 			SetCurrentCustomHero("")
 			menu:stop();
