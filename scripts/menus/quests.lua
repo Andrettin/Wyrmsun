@@ -119,7 +119,16 @@ function RunQuestMenu(world)
 	difficulty:setSize(152, 20)
 	difficulty:setSelected(wyr.preferences.Difficulty - 1)
 
-	local hero_list = GetCustomHeroes()
+	local custom_heroes = GetCustomHeroes()
+	local hero_list = {}
+	for i=1,table.getn(custom_heroes) do
+		if (
+			(world == "Earth" and (GetCustomHeroData(custom_heroes[i], "Civilization") == "germanic" or GetCustomHeroData(custom_heroes[i], "Civilization") == "teuton"))
+			or (world == "Nidavellir" and GetCustomHeroData(custom_heroes[i], "Civilization") == "dwarf")
+		) then
+			table.insert(hero_list, custom_heroes[i])
+		end
+	end
 	local hero_dd
 	table.sort(hero_list)
 	table.insert(hero_list, "") -- to allow players to choose having no custom hero selected
