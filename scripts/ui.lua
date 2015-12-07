@@ -1032,14 +1032,56 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {ColdDamage = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Cold Damage: +"), Variable = "ColdDamage", Font = wyr.preferences.PopupDescriptionFont}}
 				},
+				{ 	Condition = {ArcaneDamage = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Arcane Damage: +"), Variable = "ArcaneDamage", Font = wyr.preferences.PopupDescriptionFont}}
+				},
 				{ 	Condition = {LightningDamage = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Lightning Damage: +"), Variable = "LightningDamage", Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {AirDamage = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Air Damage: +"), Variable = "AirDamage", Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {EarthDamage = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Earth Damage: +"), Variable = "EarthDamage", Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {WaterDamage = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Water Damage: +"), Variable = "WaterDamage", Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {ThornsDamage = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Thorns Damage: +"), Variable = "ThornsDamage", Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {Armor = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Armor: +"), Variable = "Armor", Font = wyr.preferences.PopupDescriptionFont}}
 				},
-				{ 	Condition = {ThornsDamage = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Thorns Damage: +"), Variable = "ThornsDamage", Font = wyr.preferences.PopupDescriptionFont}}
+				{ 	Condition = {FireResistance = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = Concat(_("Fire Resistance: +"), String(TypeVar("FireResistance","Value")), "%"), Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {ColdResistance = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = Concat(_("Cold Resistance: +"), String(TypeVar("ColdResistance","Value")), "%"), Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {ArcaneResistance = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = Concat(_("Arcane Resistance: +"), String(TypeVar("ArcaneResistance","Value")), "%"), Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {LightningResistance = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = Concat(_("Lightning Resistance: +"), String(TypeVar("LightningResistance","Value")), "%"), Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {AirResistance = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = Concat(_("Air Resistance: +"), String(TypeVar("AirResistance","Value")), "%"), Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {EarthResistance = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = Concat(_("Earth Resistance: +"), String(TypeVar("EarthResistance","Value")), "%"), Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {WaterResistance = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = Concat(_("Water Resistance: +"), String(TypeVar("WaterResistance","Value")), "%"), Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {HackResistance = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = Concat(_("Hack Resistance: +"), String(TypeVar("HackResistance","Value")), "%"), Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {PierceResistance = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = Concat(_("Pierce Resistance: +"), String(TypeVar("PierceResistance","Value")), "%"), Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {BluntResistance = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = Concat(_("Blunt Resistance: +"), String(TypeVar("BluntResistance","Value")), "%"), Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {HitPointHealing = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Healing: "), Variable = "HitPointHealing", Font = wyr.preferences.PopupDescriptionFont}}
@@ -1104,14 +1146,56 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {ColdDamage = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Cold Damage: +"), Variable = "ColdDamage", Font = wyr.preferences.PopupDescriptionFont}}
 				},
+				{ 	Condition = {ArcaneDamage = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Arcane Damage: +"), Variable = "ArcaneDamage", Font = wyr.preferences.PopupDescriptionFont}}
+				},
 				{ 	Condition = {LightningDamage = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Lightning Damage: +"), Variable = "LightningDamage", Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {AirDamage = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Air Damage: +"), Variable = "AirDamage", Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {EarthDamage = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Earth Damage: +"), Variable = "EarthDamage", Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {WaterDamage = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Water Damage: +"), Variable = "WaterDamage", Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {ThornsDamage = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Thorns Damage: +"), Variable = "ThornsDamage", Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {Armor = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Armor: +"), Variable = "Armor", Font = wyr.preferences.PopupDescriptionFont}}
 				},
-				{ 	Condition = {ThornsDamage = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Thorns Damage: +"), Variable = "ThornsDamage", Font = wyr.preferences.PopupDescriptionFont}}
+				{ 	Condition = {FireResistance = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = Concat(_("Fire Resistance: +"), String(UnitVar("FireResistance","Value")), "%"), Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {ColdResistance = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = Concat(_("Cold Resistance: +"), String(UnitVar("ColdResistance","Value")), "%"), Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {ArcaneResistance = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = Concat(_("Arcane Resistance: +"), String(UnitVar("ArcaneResistance","Value")), "%"), Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {LightningResistance = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = Concat(_("Lightning Resistance: +"), String(UnitVar("LightningResistance","Value")), "%"), Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {AirResistance = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = Concat(_("Air Resistance: +"), String(UnitVar("AirResistance","Value")), "%"), Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {EarthResistance = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = Concat(_("Earth Resistance: +"), String(UnitVar("EarthResistance","Value")), "%"), Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {WaterResistance = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = Concat(_("Water Resistance: +"), String(UnitVar("WaterResistance","Value")), "%"), Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {HackResistance = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = Concat(_("Hack Resistance: +"), String(UnitVar("HackResistance","Value")), "%"), Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {PierceResistance = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = Concat(_("Pierce Resistance: +"), String(UnitVar("PierceResistance","Value")), "%"), Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {BluntResistance = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = Concat(_("Blunt Resistance: +"), String(UnitVar("BluntResistance","Value")), "%"), Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {HitPointHealing = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Healing: "), Variable = "HitPointHealing", Font = wyr.preferences.PopupDescriptionFont}}

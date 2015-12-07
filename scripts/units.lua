@@ -64,7 +64,7 @@ Units = {
 	"unit-dwarven-sentry-tower", "unit-dwarven-guard-tower",
 	"unit-dwarven-dock",
 	"upgrade-dwarven-broad-axe", "upgrade-dwarven-great-axe", "upgrade-dwarven-shield-1", "upgrade-dwarven-shield-2",
-	"upgrade-dwarven-throwing-axe-1", "upgrade-dwarven-throwing-axe-2", "upgrade-dwarven-ballista-bolt-1", "upgrade-dwarven-ballista-bolt-2",
+	"upgrade-dwarven-sharp-throwing-axe", "upgrade-dwarven-bearded-throwing-axe", "upgrade-dwarven-ballista-bolt-1", "upgrade-dwarven-ballista-bolt-2",
 	"upgrade-dwarven-wood-plow", "upgrade-dwarven-iron-tipped-wood-plow",
 	"upgrade-dwarven-masonry",
 	"upgrade-dwarven-coinage", "upgrade-dwarven-runewriting",

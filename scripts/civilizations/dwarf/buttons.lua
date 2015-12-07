@@ -127,24 +127,24 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-great-axe",
  	"dwarf-group"
     } } )
 
-DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-throwing-axe-1",
+DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-throwing-axe",
   Action = "attack",
   Key = "a", Hint = _("~!Attack"), Popup = "popup-commands",
   ForUnit = {
 	"unit-dwarven-scout", "unit-dwarven-gryphon-rider"
   } } )
 
-DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-throwing-axe-2",
+DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-sharp-throwing-axe",
   Action = "attack",
-  Allowed = "check-upgrade", AllowArg = {"upgrade-dwarven-throwing-axe-1"},
+  Allowed = "check-upgrade", AllowArg = {"upgrade-dwarven-sharp-throwing-axe"},
   Key = "a", Hint = _("~!Attack"), Popup = "popup-commands",
   ForUnit = {
 	"unit-dwarven-scout", "unit-dwarven-gryphon-rider"
   } } )
 
-DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-throwing-axe-3",
+DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-bearded-throwing-axe",
 	Action = "attack",
-	Allowed = "check-upgrade", AllowArg = {"upgrade-dwarven-throwing-axe-2"},
+	Allowed = "check-upgrade", AllowArg = {"upgrade-dwarven-bearded-throwing-axe"},
 	Key = "a", Hint = _("~!Attack"), Popup = "popup-commands",
 	ForUnit = {
 		"unit-dwarven-scout", "unit-dwarven-gryphon-rider"
@@ -405,16 +405,16 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-ballista-bolt-3",
 	ForUnit = {"unit-dwarven-smithy"}
 } )
 
-DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-throwing-axe-2",
-	Action = "research", Value = "upgrade-dwarven-throwing-axe-1",
+DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-sharp-throwing-axe",
+	Action = "research", Value = "upgrade-dwarven-sharp-throwing-axe",
 	Allowed = "check-single-research",
 	Key = "t", Hint = _("Research Sharp ~!Throwing Axe"), Popup = "popup-research",
 	Description = _("+1 Damage for Scouts and Gryphon Riders."),
 	ForUnit = {"unit-dwarven-lumber-mill"}
 } )
 
-DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-throwing-axe-3",
-	Action = "research", Value = "upgrade-dwarven-throwing-axe-2",
+DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-bearded-throwing-axe",
+	Action = "research", Value = "upgrade-dwarven-bearded-throwing-axe",
 	Allowed = "check-single-research",
 	Key = "t", Hint = _("~!Research Bearded ~!Throwing Axe"), Popup = "popup-research",
 	Description = _("+1 Damage for Scouts and Gryphon Riders."),
@@ -650,7 +650,7 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-guard-tower",
 
 -- Special Abilities ------------------------------------------------------
 
---DefineButton( { Pos = 7, Level = 0, Icon = "icon-dwarven-throwing-axe-1",
+--DefineButton( { Pos = 7, Level = 0, Icon = "icon-dwarven-throwing-axe",
 --  Action = "cast-spell", Value = "spell-axe-twirl",
 --  Key = "w", Hint = _("Axe T~!wirl"), Popup = "popup-commands",
 --  ForUnit = {"unit-dwarven-thane", "unit-hero-rugnur-thane"} } )

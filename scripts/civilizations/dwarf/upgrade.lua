@@ -29,7 +29,7 @@
 
 local upgrades = {
 	{
-		"upgrade-dwarven-throwing-axe-1", _("Sharp Throwing Axe"), "icon-dwarven-throwing-axe-2", "ranged-projectile-1",
+		"upgrade-dwarven-sharp-throwing-axe", _("Sharp Throwing Axe"), "icon-dwarven-sharp-throwing-axe", "ranged-projectile-1",
 		_("As their craftsmanship progresses, dwarven artisans become capable of improving the basic throwing axe to have sharper blades.\n\nEffect: +1 Damage for Scouts and Gryphon Riders."),
 		"",
 		"",
@@ -38,7 +38,7 @@ local upgrades = {
 		1
 	},
 	{
-		"upgrade-dwarven-throwing-axe-2", _("Bearded Throwing Axe"), "icon-dwarven-throwing-axe-3", "ranged-projectile-2",
+		"upgrade-dwarven-bearded-throwing-axe", _("Bearded Throwing Axe"), "icon-dwarven-bearded-throwing-axe", "ranged-projectile-2",
 		_("The 'bearding' of throwing axes by extending the bottom of their blades is an innovation which makes them more deadly when thrown.\n\nEffect: +1 Damage for Scouts and Gryphon Riders."),
 		"",
 		"",
@@ -231,12 +231,12 @@ DefineModifier("upgrade-dwarven-shield-2",
 	{"apply-to", "unit-surghan-mercenary-steelclad"}, {"apply-to", "unit-surghan-mercenary-thane"}
 )
 
-DefineModifier("upgrade-dwarven-throwing-axe-1",
+DefineModifier("upgrade-dwarven-sharp-throwing-axe",
 	{"BasicDamage", 2},
 	{"Points", 10},
 	{"apply-to", "unit-dwarven-scout"}, {"apply-to", "unit-dwarven-gryphon-rider"})
 
-DefineModifier("upgrade-dwarven-throwing-axe-2",
+DefineModifier("upgrade-dwarven-bearded-throwing-axe",
 	{"BasicDamage", 2},
 	{"Points", 10},
 	{"apply-to", "unit-dwarven-scout"}, {"apply-to", "unit-dwarven-gryphon-rider"}
@@ -353,8 +353,8 @@ DefineDependency("upgrade-dwarven-shield-2",
 	{"upgrade-dwarven-shield-1"}
 )
 
-DefineDependency("upgrade-dwarven-throwing-axe-2",
-	{"upgrade-dwarven-throwing-axe-1"}
+DefineDependency("upgrade-dwarven-bearded-throwing-axe",
+	{"upgrade-dwarven-sharp-throwing-axe"}
 )
 
 DefineDependency("upgrade-dwarven-ballista-bolt-1",

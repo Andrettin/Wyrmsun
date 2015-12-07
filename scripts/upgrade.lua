@@ -308,7 +308,7 @@ function ApplyTechLevels()
 		"upgrade-teuton-coinage"
 	}
 	local bronze_upgrades = {
-		"upgrade-dwarven-broad-axe", "upgrade-dwarven-shield-1", "upgrade-dwarven-throwing-axe-1",
+		"upgrade-dwarven-broad-axe", "upgrade-dwarven-shield-1", "upgrade-dwarven-sharp-throwing-axe",
 		"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield", "upgrade-germanic-barbed-arrow",
 		"upgrade-dwarven-wood-plow",
 		"upgrade-goblin-wood-plow",
@@ -318,7 +318,7 @@ function ApplyTechLevels()
 		"upgrade-teuton-spatha", "upgrade-teuton-iron-shield", "upgrade-teuton-bodkin-arrow",
 		"upgrade-teuton-catapult-projectile-1", "upgrade-teuton-catapult-projectile-2",
 		"upgrade-teuton-iron-tipped-wood-plow",
-		"upgrade-dwarven-great-axe", "upgrade-dwarven-shield-2", "upgrade-dwarven-throwing-axe-2",
+		"upgrade-dwarven-great-axe", "upgrade-dwarven-shield-2", "upgrade-dwarven-bearded-throwing-axe",
 		"upgrade-dwarven-ballista-bolt-1", "upgrade-dwarven-ballista-bolt-2",
 		"upgrade-dwarven-iron-tipped-wood-plow",
 		"upgrade-goblin-catapult-projectile-1", "upgrade-goblin-catapult-projectile-2",
@@ -594,7 +594,12 @@ DefineUpgrade("upgrade-item-prefix-glacial", {
 
 DefineUpgrade("upgrade-item-prefix-impregnable", {
 	Name = _("Impregnable"),
-	ItemSuffix = {"armor", true, "shield", true, "helmet", true}
+	ItemPrefix = {"armor", true, "shield", true, "helmet", true}
+})
+
+DefineUpgrade("upgrade-item-prefix-quenching", {
+	Name = _("Quenching"),
+	ItemPrefix = {"armor", true, "shield", true, "helmet", true}
 })
 
 DefineUpgrade("upgrade-item-prefix-storm", { -- example: Storm Trident (from Wesnoth)
@@ -604,7 +609,7 @@ DefineUpgrade("upgrade-item-prefix-storm", { -- example: Storm Trident (from Wes
 
 DefineUpgrade("upgrade-item-prefix-sturdy", {
 	Name = _("Sturdy"),
-	ItemSuffix = {"armor", true, "shield", true, "helmet", true}
+	ItemPrefix = {"armor", true, "shield", true, "helmet", true}
 })
 
 DefineUpgrade("upgrade-item-prefix-vicious", {
@@ -616,6 +621,11 @@ DefineUpgrade("upgrade-item-suffix-of-cold", {
 	Name = _("of Cold"),
 	ItemSuffix = {"axe", true, "bow", true, "dagger", true, "javelin", true, "mace", true, "rapier", true, "spear", true, "sword", true, "throwing-axe", true},
 	IncompatibleAffixes = {"upgrade-item-prefix-cold"}
+})
+
+DefineUpgrade("upgrade-item-suffix-of-extinguishment", {
+	Name = _("of Extinguishment"),
+	ItemSuffix = {"armor", true, "shield", true, "helmet", true}
 })
 
 DefineUpgrade("upgrade-item-suffix-of-fire", {
@@ -635,14 +645,14 @@ DefineUpgrade("upgrade-item-suffix-of-lightning", {
 	ItemSuffix = {"axe", true, "bow", true, "dagger", true, "javelin", true, "mace", true, "rapier", true, "spear", true, "sword", true, "throwing-axe", true}
 })
 
-DefineUpgrade("upgrade-item-suffix-of-victory", {
-	Name = _("of Victory"),
-	ItemSuffix = {"axe", true, "bow", true, "dagger", true, "javelin", true, "mace", true, "rapier", true, "spear", true, "sword", true, "throwing-axe", true}
-})
-
 DefineUpgrade("upgrade-item-suffix-of-thorns", {
 	Name = _("of Thorns"),
 	ItemSuffix = {"armor", true, "shield", true, "helmet", true}
+})
+
+DefineUpgrade("upgrade-item-suffix-of-victory", {
+	Name = _("of Victory"),
+	ItemSuffix = {"axe", true, "bow", true, "dagger", true, "javelin", true, "mace", true, "rapier", true, "spear", true, "sword", true, "throwing-axe", true}
 })
 
 DefineModifier("upgrade-item-prefix-cold",
@@ -665,6 +675,10 @@ DefineModifier("upgrade-item-prefix-impregnable",
 	{"Armor", 2}
 )
 
+DefineModifier("upgrade-item-prefix-quenching",
+	{"FireResistance", 10}
+)
+
 DefineModifier("upgrade-item-prefix-storm",
 	{"LightningDamage", 1}
 )
@@ -679,6 +693,10 @@ DefineModifier("upgrade-item-prefix-vicious",
 
 DefineModifier("upgrade-item-suffix-of-cold",
 	{"ColdDamage", 1}
+)
+
+DefineModifier("upgrade-item-suffix-of-extinguishment",
+	{"FireResistance", 30}
 )
 
 DefineModifier("upgrade-item-suffix-of-fire",

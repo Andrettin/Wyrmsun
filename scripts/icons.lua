@@ -718,21 +718,21 @@ DefineIcon({
 })
 
 DefineIcon({
-	Name = "icon-dwarven-throwing-axe-1",
+	Name = "icon-dwarven-throwing-axe",
 	Size = {46, 38},
-	File = "dwarf/icons/throwing_axe_1.png"
+	File = "dwarf/icons/throwing_axe.png"
 })
 
 DefineIcon({
-	Name = "icon-dwarven-throwing-axe-2",
+	Name = "icon-dwarven-sharp-throwing-axe",
 	Size = {46, 38},
-	File = "dwarf/icons/throwing_axe_2.png"
+	File = "dwarf/icons/sharp_throwing_axe.png"
 })
 
 DefineIcon({
-	Name = "icon-dwarven-throwing-axe-3",
+	Name = "icon-dwarven-bearded-throwing-axe",
 	Size = {46, 38},
-	File = "dwarf/icons/throwing_axe_3.png"
+	File = "dwarf/icons/bearded_throwing_axe.png"
 })
 
 DefineIcon({
