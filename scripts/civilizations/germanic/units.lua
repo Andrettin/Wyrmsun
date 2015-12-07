@@ -119,6 +119,10 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 		{
 			"variation-id", "blond-hair",
 			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
+			"item-not-equipped", "unit-bronze-shield",
+			"item-not-equipped", "unit-iron-shield",
+			"item-not-equipped", "unit-heater-shield",
+			"item-not-equipped", "unit-thrymgjol-shield",
 			"upgrade-forbidden", "upgrade-old"
 		},
 		{
@@ -126,26 +130,43 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 			"layer-file", "hair", "human/units/brown_hair_warrior.png",
 			"icon", "icon-germanic-warrior-brown-hair",
 			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
+			"item-not-equipped", "unit-bronze-shield",
+			"item-not-equipped", "unit-iron-shield",
+			"item-not-equipped", "unit-heater-shield",
+			"item-not-equipped", "unit-thrymgjol-shield",
 			"upgrade-forbidden", "upgrade-old"
 		},
 		{
 			"variation-id", "gray-hair",
 			"layer-file", "hair", "human/units/gray_hair_warrior.png",
 			"icon", "icon-germanic-warrior-gray-hair",
-			"upgrade-forbidden", "upgrade-germanic-bronze-shield"
+			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
+			"item-not-equipped", "unit-bronze-shield",
+			"item-not-equipped", "unit-iron-shield",
+			"item-not-equipped", "unit-heater-shield",
+			"item-not-equipped", "unit-thrymgjol-shield"
 		},
 		{
 			"variation-id", "red-hair",
 			"layer-file", "hair", "human/units/red_hair_warrior.png",
 			"icon", "icon-germanic-warrior-red-hair",
 			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
+			"item-not-equipped", "unit-bronze-shield",
+			"item-not-equipped", "unit-iron-shield",
+			"item-not-equipped", "unit-heater-shield",
+			"item-not-equipped", "unit-thrymgjol-shield",
 			"upgrade-forbidden", "upgrade-old"
 		},
+		-- Bronze Shield
 		{
 			"variation-id", "blond-hair",
 			"layer-file", "left-arm", "human/units/human_left_arm_shield.png",
 			"layer-file", "shield", "germanic/units/bronze_shield.png",
 			"upgrade-required", "upgrade-germanic-bronze-shield",
+			"item-equipped", "unit-bronze-shield",
+			"item-equipped", "unit-heater-shield",
+			"item-not-equipped", "unit-iron-shield",
+			"item-not-equipped", "unit-thrymgjol-shield",
 			"upgrade-forbidden", "upgrade-old"
 		},
 		{
@@ -155,6 +176,10 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 			"layer-file", "shield", "germanic/units/bronze_shield.png",
 			"icon", "icon-germanic-warrior-brown-hair",
 			"upgrade-required", "upgrade-germanic-bronze-shield",
+			"item-equipped", "unit-bronze-shield",
+			"item-equipped", "unit-heater-shield",
+			"item-not-equipped", "unit-iron-shield",
+			"item-not-equipped", "unit-thrymgjol-shield",
 			"upgrade-forbidden", "upgrade-old"
 		},
 		{
@@ -163,7 +188,11 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 			"layer-file", "left-arm", "human/units/human_left_arm_shield.png",
 			"layer-file", "shield", "germanic/units/bronze_shield.png",
 			"icon", "icon-germanic-warrior-gray-hair",
-			"upgrade-required", "upgrade-germanic-bronze-shield"
+			"upgrade-required", "upgrade-germanic-bronze-shield",
+			"item-equipped", "unit-bronze-shield",
+			"item-equipped", "unit-heater-shield",
+			"item-not-equipped", "unit-iron-shield",
+			"item-not-equipped", "unit-thrymgjol-shield"
 		},
 		{
 			"variation-id", "red-hair",
@@ -172,6 +201,48 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 			"layer-file", "shield", "germanic/units/bronze_shield.png",
 			"icon", "icon-germanic-warrior-red-hair",
 			"upgrade-required", "upgrade-germanic-bronze-shield",
+			"item-equipped", "unit-bronze-shield",
+			"item-equipped", "unit-heater-shield",
+			"item-not-equipped", "unit-iron-shield",
+			"item-not-equipped", "unit-thrymgjol-shield",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		-- Iron Shield
+		{
+			"variation-id", "blond-hair",
+			"layer-file", "left-arm", "human/units/human_left_arm_shield.png",
+			"layer-file", "shield", "teuton/units/saxon_shield.png",
+			"item-equipped", "unit-iron-shield",
+			"item-equipped", "unit-thrymgjol-shield",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"variation-id", "brown-hair",
+			"layer-file", "hair", "human/units/brown_hair_warrior.png",
+			"layer-file", "left-arm", "human/units/human_left_arm_shield.png",
+			"layer-file", "shield", "teuton/units/saxon_shield.png",
+			"icon", "icon-germanic-warrior-brown-hair",
+			"item-equipped", "unit-iron-shield",
+			"item-equipped", "unit-thrymgjol-shield",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"variation-id", "gray-hair",
+			"layer-file", "hair", "human/units/gray_hair_warrior.png",
+			"layer-file", "left-arm", "human/units/human_left_arm_shield.png",
+			"layer-file", "shield", "teuton/units/saxon_shield.png",
+			"icon", "icon-germanic-warrior-gray-hair",
+			"item-equipped", "unit-iron-shield",
+			"item-equipped", "unit-thrymgjol-shield"
+		},
+		{
+			"variation-id", "red-hair",
+			"layer-file", "hair", "human/units/red_hair_warrior.png",
+			"layer-file", "left-arm", "human/units/human_left_arm_shield.png",
+			"layer-file", "shield", "teuton/units/saxon_shield.png",
+			"icon", "icon-germanic-warrior-red-hair",
+			"item-equipped", "unit-iron-shield",
+			"item-equipped", "unit-thrymgjol-shield",
 			"upgrade-forbidden", "upgrade-old"
 		}
 	},
@@ -217,6 +288,10 @@ DefineUnitType("unit-germanic-spearman", { Name = _("Spearman"),
 		{
 			"variation-id", "blond-hair",
 			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
+			"item-not-equipped", "unit-bronze-shield",
+			"item-not-equipped", "unit-iron-shield",
+			"item-not-equipped", "unit-heater-shield",
+			"item-not-equipped", "unit-thrymgjol-shield",
 			"upgrade-forbidden", "upgrade-old"
 		},
 		{
@@ -224,26 +299,43 @@ DefineUnitType("unit-germanic-spearman", { Name = _("Spearman"),
 			"layer-file", "hair", "human/units/brown_hair_warrior.png",
 			"icon", "icon-germanic-warrior-brown-hair",
 			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
+			"item-not-equipped", "unit-bronze-shield",
+			"item-not-equipped", "unit-iron-shield",
+			"item-not-equipped", "unit-heater-shield",
+			"item-not-equipped", "unit-thrymgjol-shield",
 			"upgrade-forbidden", "upgrade-old"
 		},
 		{
 			"variation-id", "gray-hair",
 			"layer-file", "hair", "human/units/gray_hair_warrior.png",
 			"icon", "icon-germanic-warrior-gray-hair",
-			"upgrade-forbidden", "upgrade-germanic-bronze-shield"
+			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
+			"item-not-equipped", "unit-bronze-shield",
+			"item-not-equipped", "unit-iron-shield",
+			"item-not-equipped", "unit-heater-shield",
+			"item-not-equipped", "unit-thrymgjol-shield"
 		},
 		{
 			"variation-id", "red-hair",
 			"layer-file", "hair", "human/units/red_hair_warrior.png",
 			"icon", "icon-germanic-warrior-red-hair",
 			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
+			"item-not-equipped", "unit-bronze-shield",
+			"item-not-equipped", "unit-iron-shield",
+			"item-not-equipped", "unit-heater-shield",
+			"item-not-equipped", "unit-thrymgjol-shield",
 			"upgrade-forbidden", "upgrade-old"
 		},
+		-- Bronze Shield
 		{
 			"variation-id", "blond-hair",
 			"layer-file", "left-arm", "human/units/human_left_arm_shield.png",
 			"layer-file", "shield", "germanic/units/bronze_shield.png",
 			"upgrade-required", "upgrade-germanic-bronze-shield",
+			"item-equipped", "unit-bronze-shield",
+			"item-equipped", "unit-heater-shield",
+			"item-not-equipped", "unit-iron-shield",
+			"item-not-equipped", "unit-thrymgjol-shield",
 			"upgrade-forbidden", "upgrade-old"
 		},
 		{
@@ -253,6 +345,10 @@ DefineUnitType("unit-germanic-spearman", { Name = _("Spearman"),
 			"layer-file", "shield", "germanic/units/bronze_shield.png",
 			"icon", "icon-germanic-warrior-brown-hair",
 			"upgrade-required", "upgrade-germanic-bronze-shield",
+			"item-equipped", "unit-bronze-shield",
+			"item-equipped", "unit-heater-shield",
+			"item-not-equipped", "unit-iron-shield",
+			"item-not-equipped", "unit-thrymgjol-shield",
 			"upgrade-forbidden", "upgrade-old"
 		},
 		{
@@ -261,7 +357,11 @@ DefineUnitType("unit-germanic-spearman", { Name = _("Spearman"),
 			"layer-file", "left-arm", "human/units/human_left_arm_shield.png",
 			"layer-file", "shield", "germanic/units/bronze_shield.png",
 			"icon", "icon-germanic-warrior-gray-hair",
-			"upgrade-required", "upgrade-germanic-bronze-shield"
+			"upgrade-required", "upgrade-germanic-bronze-shield",
+			"item-equipped", "unit-bronze-shield",
+			"item-equipped", "unit-heater-shield",
+			"item-not-equipped", "unit-iron-shield",
+			"item-not-equipped", "unit-thrymgjol-shield"
 		},
 		{
 			"variation-id", "red-hair",
@@ -270,6 +370,48 @@ DefineUnitType("unit-germanic-spearman", { Name = _("Spearman"),
 			"layer-file", "shield", "germanic/units/bronze_shield.png",
 			"icon", "icon-germanic-warrior-red-hair",
 			"upgrade-required", "upgrade-germanic-bronze-shield",
+			"item-equipped", "unit-bronze-shield",
+			"item-equipped", "unit-heater-shield",
+			"item-not-equipped", "unit-iron-shield",
+			"item-not-equipped", "unit-thrymgjol-shield",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		-- Iron Shield
+		{
+			"variation-id", "blond-hair",
+			"layer-file", "left-arm", "human/units/human_left_arm_shield.png",
+			"layer-file", "shield", "germanic/units/bronze_shield.png",
+			"item-equipped", "unit-iron-shield",
+			"item-equipped", "unit-thrymgjol-shield",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"variation-id", "brown-hair",
+			"layer-file", "hair", "human/units/brown_hair_warrior.png",
+			"layer-file", "left-arm", "human/units/human_left_arm_shield.png",
+			"layer-file", "shield", "germanic/units/bronze_shield.png",
+			"icon", "icon-germanic-warrior-brown-hair",
+			"item-equipped", "unit-iron-shield",
+			"item-equipped", "unit-thrymgjol-shield",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"variation-id", "gray-hair",
+			"layer-file", "hair", "human/units/gray_hair_warrior.png",
+			"layer-file", "left-arm", "human/units/human_left_arm_shield.png",
+			"layer-file", "shield", "germanic/units/bronze_shield.png",
+			"icon", "icon-germanic-warrior-gray-hair",
+			"item-equipped", "unit-iron-shield",
+			"item-equipped", "unit-thrymgjol-shield"
+		},
+		{
+			"variation-id", "red-hair",
+			"layer-file", "hair", "human/units/red_hair_warrior.png",
+			"layer-file", "left-arm", "human/units/human_left_arm_shield.png",
+			"layer-file", "shield", "germanic/units/bronze_shield.png",
+			"icon", "icon-germanic-warrior-red-hair",
+			"item-equipped", "unit-iron-shield",
+			"item-equipped", "unit-thrymgjol-shield",
 			"upgrade-forbidden", "upgrade-old"
 		}
 	},

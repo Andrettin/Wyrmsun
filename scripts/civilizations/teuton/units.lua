@@ -117,8 +117,13 @@ DefineUnitType("unit-teuton-swordsman", { Name = _("Krieger"),
 			"variation-id", "red-hair", -- no shield, bronze sword
 			"layer-file", "weapon", "germanic/units/broad_bronze_sword.png",
 			"upgrade-forbidden", "upgrade-teuton-spatha",
+			"item-not-equipped", "unit-spatha",
 			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
-			"upgrade-forbidden", "upgrade-teuton-iron-shield"
+			"item-not-equipped", "unit-bronze-shield",
+			"item-not-equipped", "unit-heater-shield",
+			"upgrade-forbidden", "upgrade-teuton-iron-shield",
+			"item-not-equipped", "unit-iron-shield",
+			"item-not-equipped", "unit-thrymgjol-shield",
 		},
 		{
 			"variation-id", "red-hair", -- bronze shield, bronze sword
@@ -126,8 +131,13 @@ DefineUnitType("unit-teuton-swordsman", { Name = _("Krieger"),
 			"layer-file", "left-arm", "human/units/human_left_arm_shield.png",
 			"layer-file", "shield", "germanic/units/bronze_shield.png",
 			"upgrade-forbidden", "upgrade-teuton-spatha",
+			"item-not-equipped", "unit-spatha",
 			"upgrade-required", "upgrade-germanic-bronze-shield",
-			"upgrade-forbidden", "upgrade-teuton-iron-shield"
+			"item-equipped", "unit-bronze-shield",
+			"item-equipped", "unit-heater-shield",
+			"upgrade-forbidden", "upgrade-teuton-iron-shield",
+			"item-not-equipped", "unit-iron-shield",
+			"item-not-equipped", "unit-thrymgjol-shield"
 		},
 		{
 			"variation-id", "red-hair", -- iron shield, bronze sword
@@ -135,14 +145,22 @@ DefineUnitType("unit-teuton-swordsman", { Name = _("Krieger"),
 			"layer-file", "left-arm", "human/units/human_left_arm_shield.png",
 			"layer-file", "shield", "teuton/units/saxon_shield.png",
 			"upgrade-forbidden", "upgrade-teuton-spatha",
-			"upgrade-required", "upgrade-teuton-iron-shield"
+			"item-not-equipped", "unit-spatha",
+			"upgrade-required", "upgrade-teuton-iron-shield",
+			"item-equipped", "unit-iron-shield",
+			"item-equipped", "unit-thrymgjol-shield"
 		},
 		{
 			"variation-id", "red-hair", -- no shield, long iron sword
 			"layer-file", "weapon", "teuton/units/long_iron_sword.png",
 			"upgrade-required", "upgrade-teuton-spatha",
+			"item-equipped", "unit-spatha",
 			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
-			"upgrade-forbidden", "upgrade-teuton-iron-shield"
+			"item-not-equipped", "unit-bronze-shield",
+			"item-not-equipped", "unit-heater-shield",
+			"upgrade-forbidden", "upgrade-teuton-iron-shield",
+			"item-not-equipped", "unit-iron-shield",
+			"item-not-equipped", "unit-thrymgjol-shield"
 		},
 		{
 			"variation-id", "red-hair", -- bronze shield, long iron sword
@@ -150,8 +168,13 @@ DefineUnitType("unit-teuton-swordsman", { Name = _("Krieger"),
 			"layer-file", "left-arm", "human/units/human_left_arm_shield.png",
 			"layer-file", "shield", "germanic/units/bronze_shield.png",
 			"upgrade-required", "upgrade-teuton-spatha",
+			"item-equipped", "unit-spatha",
 			"upgrade-required", "upgrade-germanic-bronze-shield",
-			"upgrade-forbidden", "upgrade-teuton-iron-shield"
+			"item-equipped", "unit-bronze-shield",
+			"item-equipped", "unit-heater-shield",
+			"upgrade-forbidden", "upgrade-teuton-iron-shield",
+			"item-not-equipped", "unit-iron-shield",
+			"item-not-equipped", "unit-thrymgjol-shield"
 		},
 		{
 			"variation-id", "red-hair", -- iron shield, long iron sword
@@ -159,7 +182,10 @@ DefineUnitType("unit-teuton-swordsman", { Name = _("Krieger"),
 			"layer-file", "left-arm", "human/units/human_left_arm_shield.png",
 			"layer-file", "shield", "teuton/units/saxon_shield.png",
 			"upgrade-required", "upgrade-teuton-spatha",
-			"upgrade-required", "upgrade-teuton-iron-shield"
+			"item-equipped", "unit-spatha",
+			"upgrade-required", "upgrade-teuton-iron-shield",
+			"item-equipped", "unit-iron-shield",
+			"item-equipped", "unit-thrymgjol-shield"
 		}
 	},
 	Sounds = {
@@ -203,8 +229,13 @@ DefineUnitType("unit-suebi-swordsman", { Name = _("Krieger"),
 			"variation-id", "blond-hair", -- no shield, bronze sword
 			"layer-file", "weapon", "germanic/units/broad_bronze_sword.png",
 			"upgrade-forbidden", "upgrade-teuton-spatha",
+			"item-not-equipped", "unit-spatha",
 			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
-			"upgrade-forbidden", "upgrade-teuton-iron-shield"
+			"item-not-equipped", "unit-bronze-shield",
+			"item-not-equipped", "unit-heater-shield",
+			"upgrade-forbidden", "upgrade-teuton-iron-shield",
+			"item-not-equipped", "unit-iron-shield",
+			"item-not-equipped", "unit-thrymgjol-shield"
 		},
 		{
 			"variation-id", "blond-hair", -- bronze shield, bronze sword
@@ -212,8 +243,13 @@ DefineUnitType("unit-suebi-swordsman", { Name = _("Krieger"),
 			"layer-file", "left-arm", "human/units/human_left_arm_shield.png",
 			"layer-file", "shield", "germanic/units/bronze_shield.png",
 			"upgrade-forbidden", "upgrade-teuton-spatha",
+			"item-not-equipped", "unit-spatha",
 			"upgrade-required", "upgrade-germanic-bronze-shield",
-			"upgrade-forbidden", "upgrade-teuton-iron-shield"
+			"item-equipped", "unit-bronze-shield",
+			"item-equipped", "unit-heater-shield",
+			"upgrade-forbidden", "upgrade-teuton-iron-shield",
+			"item-not-equipped", "unit-iron-shield",
+			"item-not-equipped", "unit-thrymgjol-shield"
 		},
 		{
 			"variation-id", "blond-hair", -- iron shield, bronze sword
@@ -221,15 +257,23 @@ DefineUnitType("unit-suebi-swordsman", { Name = _("Krieger"),
 			"layer-file", "left-arm", "human/units/human_left_arm_shield.png",
 			"layer-file", "shield", "teuton/units/suebi_shield.png",
 			"upgrade-forbidden", "upgrade-teuton-spatha",
+			"item-not-equipped", "unit-spatha",
 			"upgrade-required", "upgrade-teuton-iron-shield",
+			"item-equipped", "unit-iron-shield",
+			"item-equipped", "unit-thrymgjol-shield",
 			"shield-animation", SuebiShieldAnimation
 		},
 		{
 			"variation-id", "blond-hair", -- no shield, long iron sword
 			"layer-file", "weapon", "teuton/units/long_iron_sword.png",
 			"upgrade-required", "upgrade-teuton-spatha",
+			"item-equipped", "unit-spatha",
 			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
-			"upgrade-forbidden", "upgrade-teuton-iron-shield"
+			"item-not-equipped", "unit-bronze-shield",
+			"item-not-equipped", "unit-heater-shield",
+			"upgrade-forbidden", "upgrade-teuton-iron-shield",
+			"item-not-equipped", "unit-iron-shield",
+			"item-not-equipped", "unit-thrymgjol-shield"
 		},
 		{
 			"variation-id", "blond-hair", -- bronze shield, long iron sword
@@ -237,8 +281,13 @@ DefineUnitType("unit-suebi-swordsman", { Name = _("Krieger"),
 			"layer-file", "left-arm", "human/units/human_left_arm_shield.png",
 			"layer-file", "shield", "germanic/units/bronze_shield.png",
 			"upgrade-required", "upgrade-teuton-spatha",
+			"item-equipped", "unit-spatha",
 			"upgrade-required", "upgrade-germanic-bronze-shield",
-			"upgrade-forbidden", "upgrade-teuton-iron-shield"
+			"item-equipped", "unit-bronze-shield",
+			"item-equipped", "unit-heater-shield",
+			"upgrade-forbidden", "upgrade-teuton-iron-shield",
+			"item-not-equipped", "unit-iron-shield",
+			"item-not-equipped", "unit-thrymgjol-shield"
 		},
 		{
 			"variation-id", "blond-hair", -- iron shield, long iron sword
@@ -246,7 +295,10 @@ DefineUnitType("unit-suebi-swordsman", { Name = _("Krieger"),
 			"layer-file", "left-arm", "human/units/human_left_arm_shield.png",
 			"layer-file", "shield", "teuton/units/suebi_shield.png",
 			"upgrade-required", "upgrade-teuton-spatha",
+			"item-equipped", "unit-spatha",
 			"upgrade-required", "upgrade-teuton-iron-shield",
+			"item-equipped", "unit-iron-shield",
+			"item-equipped", "unit-thrymgjol-shield",
 			"shield-animation", SuebiShieldAnimation
 		}
 	}

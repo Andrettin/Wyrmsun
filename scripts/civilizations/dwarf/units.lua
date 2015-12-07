@@ -209,18 +209,21 @@ DefineUnitType("unit-dwarven-steelclad", { Name = _("Steelclad"),
 		{
 			"variation-id", "red-hair",
 			"upgrade-forbidden", "upgrade-dwarven-great-axe",
+			"item-not-equipped", "unit-great-axe",
 			"upgrade-forbidden", "upgrade-old"
 		},
 		{
 			"variation-id", "gray-hair",
 			"file", "dwarf/units/dwarven_steelclad_gray_hair.png",
 			"icon", "icon-dwarven-steelclad-gray-hair",
-			"upgrade-forbidden", "upgrade-dwarven-great-axe"
+			"upgrade-forbidden", "upgrade-dwarven-great-axe",
+			"item-not-equipped", "unit-great-axe"
 		},
 		{
 			"variation-id", "orange-hair",
 			"file", "dwarf/units/dwarven_steelclad_orange_hair.png",
 			"upgrade-forbidden", "upgrade-dwarven-great-axe",
+			"item-not-equipped", "unit-great-axe",
 			"upgrade-forbidden", "upgrade-old"
 		},
 		{
@@ -228,6 +231,7 @@ DefineUnitType("unit-dwarven-steelclad", { Name = _("Steelclad"),
 			"file", "dwarf/units/dwarven_steelclad_blond_hair.png",
 			"icon", "icon-dwarven-steelclad-blond-hair",
 			"upgrade-forbidden", "upgrade-dwarven-great-axe",
+			"item-not-equipped", "unit-great-axe",
 			"upgrade-forbidden", "upgrade-old"
 		},
 		{
@@ -235,6 +239,7 @@ DefineUnitType("unit-dwarven-steelclad", { Name = _("Steelclad"),
 			"file", "dwarf/units/dwarven_steelclad_black_hair.png",
 			"icon", "icon-dwarven-steelclad-black-hair",
 			"upgrade-forbidden", "upgrade-dwarven-great-axe",
+			"item-not-equipped", "unit-great-axe",
 			"upgrade-forbidden", "upgrade-old"
 		},
 		{
@@ -242,6 +247,7 @@ DefineUnitType("unit-dwarven-steelclad", { Name = _("Steelclad"),
 			"file", "dwarf/units/dwarven_steelclad_brown_hair.png",
 			"icon", "icon-dwarven-steelclad-brown-hair",
 			"upgrade-forbidden", "upgrade-dwarven-great-axe",
+			"item-not-equipped", "unit-great-axe",
 			"upgrade-forbidden", "upgrade-old"
 		},
 		-- Great Axe
@@ -249,6 +255,7 @@ DefineUnitType("unit-dwarven-steelclad", { Name = _("Steelclad"),
 			"variation-id", "red-hair",
 			"file", "dwarf/units/dwarven_steelclad_great_axe.png",
 			"upgrade-required", "upgrade-dwarven-great-axe",
+			"item-equipped", "unit-great-axe",
 			"upgrade-forbidden", "upgrade-old"
 		},
 		{
@@ -261,6 +268,7 @@ DefineUnitType("unit-dwarven-steelclad", { Name = _("Steelclad"),
 			"variation-id", "orange-hair",
 			"file", "dwarf/units/dwarven_steelclad_orange_hair_great_axe.png",
 			"upgrade-required", "upgrade-dwarven-great-axe",
+			"item-equipped", "unit-great-axe",
 			"upgrade-forbidden", "upgrade-old"
 		},
 		{
@@ -268,6 +276,7 @@ DefineUnitType("unit-dwarven-steelclad", { Name = _("Steelclad"),
 			"file", "dwarf/units/dwarven_steelclad_blond_hair_great_axe.png",
 			"icon", "icon-dwarven-steelclad-blond-hair",
 			"upgrade-required", "upgrade-dwarven-great-axe",
+			"item-equipped", "unit-great-axe",
 			"upgrade-forbidden", "upgrade-old"
 		},
 		{
@@ -275,6 +284,7 @@ DefineUnitType("unit-dwarven-steelclad", { Name = _("Steelclad"),
 			"file", "dwarf/units/dwarven_steelclad_black_hair_great_axe.png",
 			"icon", "icon-dwarven-steelclad-black-hair",
 			"upgrade-required", "upgrade-dwarven-great-axe",
+			"item-equipped", "unit-great-axe",
 			"upgrade-forbidden", "upgrade-old"
 		},
 		{
@@ -282,6 +292,7 @@ DefineUnitType("unit-dwarven-steelclad", { Name = _("Steelclad"),
 			"file", "dwarf/units/dwarven_steelclad_brown_hair_great_axe.png",
 			"icon", "icon-dwarven-steelclad-brown-hair",
 			"upgrade-required", "upgrade-dwarven-great-axe",
+			"item-equipped", "unit-great-axe",
 			"upgrade-forbidden", "upgrade-old"
 		}
 	},
