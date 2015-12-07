@@ -204,6 +204,7 @@ DefineUnitType("unit-dwarven-steelclad", { Name = _("Steelclad"),
 	WeaponClass = "axe",
 	HackDamage = true,
 	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-cheese", "unit-potion-of-healing"},
+	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold"},
 	Variations = {
 		{
 			"variation-id", "red-hair",
@@ -310,6 +311,7 @@ DefineUnitType("unit-dwarven-thane", { Name = _("Stonelord"),
 	WeaponClass = "axe",
 	HackDamage = true,
 	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-cheese", "unit-potion-of-healing"},
+	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-glacial", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment"},
 	Variations = {
 		{
 			"variation-id", "red-hair",
@@ -426,6 +428,7 @@ DefineUnitType("unit-dwarven-yale-rider", { Name = _("Yale Rider"),
 	WeaponClass = "axe",
 	HackDamage = true,
 	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-cheese", "unit-potion-of-healing"},
+	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold"},
 	Variations = {
 		{
 			"variation-id", "black-hair-brown-fur",
@@ -525,6 +528,7 @@ DefineUnitType("unit-dwarven-gryphon-rider", { Name = _("Gryphon Rider"),
 	WeaponClass = "throwing-axe",
 	HackDamage = true,
 	AiDrops = {"unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-cheese", "unit-potion-of-healing"},
+	DropAffixes = {"upgrade-item-prefix-storm", "upgrade-item-suffix-of-lightning"},
 	Variations = {
 		{
 			"variation-id", "black-hair-brown-feathers",

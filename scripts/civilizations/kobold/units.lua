@@ -48,6 +48,7 @@ DefineUnitType("unit-kobold-footpad", { Name = _("Footpad"),
 	WeaponClass = "sword",
 	HackDamage = true,
 	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-cheese", "unit-potion-of-healing"},
+	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-cruel", "upgrade-item-prefix-vicious", "upgrade-item-suffix-of-cold"}, -- allow more magic enchantments than normal 
 	Corpse = "unit-kobold-dead-body",
 	Variations = {
 		{
