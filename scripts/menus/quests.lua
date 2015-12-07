@@ -119,52 +119,50 @@ function RunQuestMenu(world)
 	difficulty:setSize(152, 20)
 	difficulty:setSelected(wyr.preferences.Difficulty - 1)
 
-	if (world == "Nidavellir") then
-		local hero_list = GetCustomHeroes()
-		local hero_dd
-		table.sort(hero_list)
-		table.insert(hero_list, "") -- to allow players to choose having no custom hero selected
-		menu:addLabel(_("Hero:"), offx + 40, offy + (10 + 300) - 20, Fonts["game"], false)
-		hero_dd = menu:addDropDown(hero_list, offx + 40, offy + 10 + 300,
-			function(dd)
-				SetCurrentCustomHero(hero_list[hero_dd:getSelected() + 1])
-			end
-		)
-		hero_dd:setSize(152, 20)
-		hero_dd:setSelected(GetElementIndexFromArray(hero_list, GetCurrentCustomHero()) - 1)
+	local hero_list = GetCustomHeroes()
+	local hero_dd
+	table.sort(hero_list)
+	table.insert(hero_list, "") -- to allow players to choose having no custom hero selected
+	menu:addLabel(_("Hero:"), offx + 40, offy + (10 + 300) - 20, Fonts["game"], false)
+	hero_dd = menu:addDropDown(hero_list, offx + 40, offy + 10 + 300,
+		function(dd)
+			SetCurrentCustomHero(hero_list[hero_dd:getSelected() + 1])
+		end
+	)
+	hero_dd:setSize(152, 20)
+	hero_dd:setSelected(GetElementIndexFromArray(hero_list, GetCurrentCustomHero()) - 1)
 				
-		menu:addFullButton(_("Create Custom ~!Hero"), "h", offx + 208, offy + 212 + (36 * 4),
-			function() CustomHeroCreationMenu("dwarf", menu);
-			end
-		)
+	menu:addFullButton(_("Create Custom ~!Hero"), "h", offx + 208, offy + 212 + (36 * 4),
+		function() CustomHeroCreationMenu(world, menu);
+		end
+	)
 		
-		menu:addFullButton(_("~!Delete Custom Hero"), "h", offx + 208, offy + 212 + (36 * 5),
-			function()
-				if (GetCurrentCustomHero() ~= "") then
-					local confirm = WarGameMenu(panel(4))
+	menu:addFullButton(_("~!Delete Custom Hero"), "h", offx + 208, offy + 212 + (36 * 5),
+		function()
+			if (GetCurrentCustomHero() ~= "") then
+				local confirm = WarGameMenu(panel(4))
 
-					confirm:resize(288,128)
+				confirm:resize(288,128)
 
-					confirm:addLabel("Delete " .. GetCurrentCustomHero(), 288 / 2, 11)
-					confirm:addLabel("Are you sure? This cannot be undone.", 288 / 2, 45, Fonts["game"])
+				confirm:addLabel("Delete " .. GetCurrentCustomHero(), 288 / 2, 11)
+				confirm:addLabel("Are you sure? This cannot be undone.", 288 / 2, 45, Fonts["game"])
 
-					confirm:addHalfButton("~!Yes", "y", 1 * (288 / 3) - 90, 120 - 16 - 27,
-						function()
-							DeleteCustomHero(GetCurrentCustomHero())
-							confirm:stop()
-							menu:stop(); RunQuestMenu(world);
-						end
-					)
+				confirm:addHalfButton("~!Yes", "y", 1 * (288 / 3) - 90, 120 - 16 - 27,
+					function()
+						DeleteCustomHero(GetCurrentCustomHero())
+						confirm:stop()
+						menu:stop(); RunQuestMenu(world);
+					end
+				)
 
-					confirm:addHalfButton("~!No", "n", 3 * (288 / 3) - 116, 120 - 16 - 27,
-						function() confirm:stop() end
-					)
+				confirm:addHalfButton("~!No", "n", 3 * (288 / 3) - 116, 120 - 16 - 27,
+					function() confirm:stop() end
+				)
 
-					confirm:run()
-				end
+				confirm:run()
 			end
-		)
-	end
+		end
+	)
 
 	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 212 + (36 * 6),
 		function()

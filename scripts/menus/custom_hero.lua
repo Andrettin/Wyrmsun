@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-function CustomHeroCreationMenu(civilization, quest_menu)
+function CustomHeroCreationMenu(world, quest_menu)
 	local menu = WarGameMenu(panel(5))
 	menu:setSize(352, 352)
     menu:setPosition((Video.Width - menu:getWidth()) / 2, (Video.Height - menu:getHeight()) / 2)
@@ -34,46 +34,102 @@ function CustomHeroCreationMenu(civilization, quest_menu)
 	local sizeX = 352
 	local sizeY = 352
 
-	local hero_civilization_list = {"Dwarf"}
-	local hero_class_list = {"Axefighter"}
-	local trait_ident_list = GetUnitTypeData("unit-dwarven-axefighter", "Traits")
-	table.sort(trait_ident_list)
-	local trait_list = {}
-	for i=1,table.getn(trait_ident_list) do
-		table.insert(trait_list, CUpgrade:Get(trait_ident_list[i]).Name .. ": " .. GetUpgradeEffectsString(trait_ident_list[i]))
+	local hero_civilization_list = {}
+	if (world == "Earth") then
+		table.insert(hero_civilization_list, "Germanic")
+		if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Gylve's Realm")) then
+			table.insert(hero_civilization_list, "Teuton")
+		end
+	elseif (world == "Nidavellir") then
+		table.insert(hero_civilization_list, "Dwarf")
 	end
-	local variation_list = {"Black Hair", "Blond Hair", "Brown Hair", "Gray Hair", "Orange Hair", "Red Hair"}
+	local hero_class_ident_list = {}
+	local hero_class_list = {}
+	local trait_ident_list = {}
+	local trait_list = {}
+	local variation_list = {}
+	
+	local hero_name
+	local hero_family_name
+	local hero_civilization
+	local hero_class
+	local trait
+	local variation
 
-	local generated_personal_name = ""
-	while (generated_personal_name == "" or GetArrayIncludes(GetCustomHeroes(), generated_personal_name)) do
-		generated_personal_name = GeneratePersonalName("dwarf", "unit-dwarven-axefighter")
+	local function ClassChanged()
+		trait_ident_list = nil
+		trait_ident_list = GetUnitTypeData(hero_class_ident_list[hero_class:getSelected() + 1], "Traits")
+		table.sort(trait_ident_list)
+		trait_list = nil
+		trait_list = {}
+		for i=1,table.getn(trait_ident_list) do
+			table.insert(trait_list, CUpgrade:Get(trait_ident_list[i]).Name .. ": " .. GetUpgradeEffectsString(trait_ident_list[i]))
+		end
+		trait:setList(trait_list)
+		trait:setSize(236, 20)
+		trait:setSelected(0)
+		
+		variation_list = nil
+		variation_list = {}
+		local variation_ident_list = GetUnitTypeData(hero_class_ident_list[hero_class:getSelected() + 1], "Variations")
+		for i=1,table.getn(variation_ident_list) do
+			table.insert(variation_list, FullyCapitalizeString(string.gsub(variation_ident_list[i], "-", " ")))
+		end
+		table.sort(variation_list)
+		variation:setList(variation_list)
+		variation:setSize(236, 20)
+		variation:setSelected(0)
+	end
+	
+	local function CivilizationChanged()
+		hero_class_ident_list = nil
+		hero_class_ident_list = {}
+		hero_class_list = nil
+		hero_class_list = {}
+		for i, unitName in ipairs(Units) do
+			if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Civilization") == string.lower(hero_civilization_list[hero_civilization:getSelected() + 1]) and GetUnitTypeData(unitName, "Faction") == "" and GetUnitTypeData(unitName, "Class") == "infantry") then
+				table.insert(hero_class_ident_list, unitName)
+				table.insert(hero_class_list, GetUnitTypeData(unitName, "Name"))
+			end
+		end
+		hero_class:setList(hero_class_list)
+		hero_class:setSize(236, 20)
+		
+		hero_class:setSelected(0)
+		ClassChanged()
+	
+		local generated_personal_name = ""
+		while (generated_personal_name == "" or GetArrayIncludes(GetCustomHeroes(), generated_personal_name)) do
+			generated_personal_name = GeneratePersonalName(string.lower(hero_civilization_list[hero_civilization:getSelected() + 1]), hero_class_ident_list[hero_class:getSelected() + 1])
+		end
+		hero_name:setText(generated_personal_name)
 	end
 	
 	menu:addLabel(_("Name:"), 10, 12 + 36 * 1, Fonts["game"], false)
-	local hero_name = menu:addTextInputField(generated_personal_name, (sizeX / 2) - 60 - 10, 11 + 36 * 1, 120)
+	hero_name = menu:addTextInputField("", (sizeX / 2) - 60 - 10, 11 + 36 * 1, 120)
 
 	menu:addLabel(_("Surname:"), 10, 12 + 36 * 2, Fonts["game"], false)
-	local hero_family_name = menu:addTextInputField("", (sizeX / 2) - 60 - 10, 11 + 36 * 2, 120)
+	hero_family_name = menu:addTextInputField("", (sizeX / 2) - 60 - 10, 11 + 36 * 2, 120)
 
 	menu:addLabel(_("Civilization:"), 10, 14 + 36 * 3, Fonts["game"], false)
-	local hero_civilization = menu:addDropDown(hero_civilization_list, (sizeX / 2) - 60 - 10, 11 + 36 * 3, function(dd) end)
+	hero_civilization = menu:addDropDown(hero_civilization_list, (sizeX / 2) - 60 - 10, 11 + 36 * 3, function(dd) CivilizationChanged() end)
 	hero_civilization:setSize(236, 20)
-	hero_civilization:setSelected(0)
 	
 	menu:addLabel(_("Class:"), 10, 14 + 36 * 4, Fonts["game"], false)
-	local hero_class = menu:addDropDown(hero_class_list, (sizeX / 2) - 60 - 10, 11 + 36 * 4, function(dd) end)
+	hero_class = menu:addDropDown(hero_class_list, (sizeX / 2) - 60 - 10, 11 + 36 * 4, function(dd) ClassChanged() end)
 	hero_class:setSize(236, 20)
-	hero_class:setSelected(0)
 	
 	menu:addLabel(_("Trait:"), 10, 14 + 36 * 5, Fonts["game"], false)
-	local trait = menu:addDropDown(trait_list, (sizeX / 2) - 60 - 10, 11 + 36 * 5, function(dd) end)
+	trait = menu:addDropDown(trait_list, (sizeX / 2) - 60 - 10, 11 + 36 * 5, function(dd) end)
 	trait:setSize(236, 20)
-	trait:setSelected(0)
 	
 	menu:addLabel(_("Hair:"), 10, 14 + 36 * 6, Fonts["game"], false)
-	local variation = menu:addDropDown(variation_list, (sizeX / 2) - 60 - 10, 11 + 36 * 6, function(dd) end)
+	variation = menu:addDropDown(variation_list, (sizeX / 2) - 60 - 10, 11 + 36 * 6, function(dd) end)
 	variation:setSize(236, 20)
 	variation:setSelected(0)
+	
+	hero_civilization:setSelected(0)
+	CivilizationChanged()
 	
 	menu:addFullButton("Create ~!Hero", "p", 176 - (224 / 2), 352 - 40 * 2,
 		function()
@@ -90,8 +146,8 @@ function CustomHeroCreationMenu(civilization, quest_menu)
 				DefineCustomHero(hero_full_name, {
 					Name = hero_name:getText(),
 					Dynasty = hero_family_name:getText(),
-					Civilization = "dwarf",
-					Type = "unit-dwarven-axefighter",
+					Civilization = string.lower(hero_civilization_list[hero_civilization:getSelected() + 1]),
+					Type = hero_class_ident_list[hero_class:getSelected() + 1],
 					Trait = trait_ident_list[trait:getSelected() + 1],
 					Variation = string.lower(string.gsub(variation_list[variation:getSelected() + 1], " ", "-")),
 					ForbiddenUpgrades = {"unit-dwarven-yale-rider"}

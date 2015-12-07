@@ -237,7 +237,7 @@ https://github.com/Andrettin/Wyrmsun
 - Custom heroes can now be created in the quest interface, and if one is selected the hero will appear alongside your starting units in quest scenarios. For now custom heroes are limited to dwarven Axefighters/Steelclads/Stonelords.
 
 * Items
-- Stonelords and Gryphon Riders now have an inventory in which they can carry items (such as potions). Other units can still use potions by right-clicking on them, but they can't carry them around. Items are saved for persistent heroes.
+- Persistent heroes, Stonelords and Gryphon Riders now have an inventory in which they can carry items (such as potions). Other units can still use potions by right-clicking on them, but they can't carry them around. Items are saved for persistent heroes.
 - Added weapon and shield items. These can be equipped by right-clicking, and will replace the bonuses of the weapon/shield technologies with those of the item.
 - AI units now have a chance to drop items.
 - Dropped items now have a chance of having a magic prefix or suffix, as well as a chance of being a unique item.
