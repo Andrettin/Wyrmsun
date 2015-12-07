@@ -369,7 +369,7 @@ function ApplyTechLevels()
 	end
 	for j=0,15 do
 		if (GetPlayerData(j, "RaceName") == "teuton") then
-			SetPlayerData(j, "Allow", "upgrade-teuton-civilization", "R") -- ad hoc way of setting civilization upgrades (wouldn't be necessary if they had their own workers and etc.)
+			SetPlayerData(j, "Allow", "upgrade-teuton-civilization", "R") -- ad hoc way of setting civilization upgrades
 		elseif (GetPlayerData(j, "RaceName") == "celt") then
 			SetPlayerData(j, "Allow", "upgrade-celt-civilization", "R")
 		end
