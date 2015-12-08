@@ -789,49 +789,49 @@ if not (ui_loaded_first_time) then
 		BorderColor = PopupBorderColor,
 		DefaultFont = wyr.preferences.PopupDescriptionFont,
 		Contents = {
-				{ 	Margin = {1, 1}, HighlightColor = "yellow",
+				{ 	HighlightColor = "yellow",
 					More = {"ButtonInfo", {InfoType = "Hint", Font = PopupFont}}
 				}, 
 				-- Description
 				{ 	Margin = {1, 1}, Condition = {HasDescription = true},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				}, 
-				{ 	Condition = {HasDescription = true}, Margin = {1, 1}, HighlightColor = "yellow",
+				{ 	Condition = {HasDescription = true}, HighlightColor = "yellow",
 					More = {"ButtonInfo", {InfoType = "Description", MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 				}, 
 				-- Move  hint
 				{ 	Margin = {1, 1}, Condition = {ButtonAction = "move", Speed = "only"}, -- speed as a proxy for not being a building
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
-				{ 	Condition = {ButtonAction = "move", Speed = "only"}, Margin = {1, 1}, TextColor = "white", HighlightColor = "yellow",
-					More = {"Text", {Text = _("~<ALT~>-click to defend a unit."), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+				{ 	Condition = {ButtonAction = "move", Speed = "only"}, TextColor = "white", HighlightColor = "yellow",
+					More = {"Text", {Text = _("~<ALT~>-click to defend a unit"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 				},
-				{ 	Condition = {ButtonAction = "move", Speed = "only"}, Margin = {1, 1}, TextColor = "white", HighlightColor = "yellow",
-					More = {"Text", {Text = _("~<SHIFT~>-click to make waypoints."), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+				{ 	Condition = {ButtonAction = "move", Speed = "only"}, TextColor = "white", HighlightColor = "yellow",
+					More = {"Text", {Text = _("~<SHIFT~>-click to make waypoints"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 				},
-				{ 	Condition = {ButtonAction = "move", Speed = "only"}, Margin = {1, 1}, TextColor = "white", HighlightColor = "yellow",
-					More = {"Text", {Text = _("~<CTRL~>-click to stand ground after moving."), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+				{ 	Condition = {ButtonAction = "move", Speed = "only"}, TextColor = "white", HighlightColor = "yellow",
+					More = {"Text", {Text = _("~<CTRL~>-click to stand ground after moving"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				-- Attack hint
 				{ 	Margin = {1, 1}, Condition = {ButtonAction = "attack"},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
-				{ 	Condition = {ButtonAction = "attack"}, Margin = {1, 1}, TextColor = "white", HighlightColor = "yellow",
-					More = {"Text", {Text = _("Click on an empty space to attack-move."), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+				{ 	Condition = {ButtonAction = "attack"}, TextColor = "white", HighlightColor = "yellow",
+					More = {"Text", {Text = _("Click on an empty space to attack-move"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				-- Repair hint
 				{ 	Margin = {1, 1}, Condition = {ButtonAction = "repair"},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
-				{ 	Condition = {ButtonAction = "repair"}, Margin = {1, 1}, TextColor = "white", HighlightColor = "yellow",
-					More = {"Text", {Text = _("~<CTRL~>-click on button enables/disables auto-repair of damaged buildings."), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+				{ 	Condition = {ButtonAction = "repair"}, TextColor = "white", HighlightColor = "yellow",
+					More = {"Text", {Text = _("~<CTRL~>-click on button enables/disables auto-repair of damaged buildings"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				-- Heal hint
 				{ 	Margin = {1, 1}, Condition = {ButtonValue = "spell-herbal-cure"},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
-				{ 	Condition = {ButtonValue = "spell-herbal-cure"}, Margin = {1, 1}, TextColor = "white", HighlightColor = "yellow",
-					More = {"Text", {Text = _("~<CTRL~>-click on button enables/disables autoheal ability."), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+				{ 	Condition = {ButtonValue = "spell-herbal-cure"}, TextColor = "white", HighlightColor = "yellow",
+					More = {"Text", {Text = _("~<CTRL~>-click on button enables/disables auto-heal ability"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 				}
 		}	
 	})
@@ -843,7 +843,7 @@ if not (ui_loaded_first_time) then
 		MinWidth = 128,
 		DefaultFont = wyr.preferences.PopupDescriptionFont,
 		Contents = {
-				{	Margin = {1, 1}, HighlightColor = "yellow",
+				{	HighlightColor = "yellow",
 					More = {"ButtonInfo", {InfoType = "Hint", Font = PopupFont}}
 				}, 
 				{ 	Margin = {1, 1},
@@ -873,7 +873,7 @@ if not (ui_loaded_first_time) then
 				{ 	Margin = {1, 1}, Condition = {HasDescription = true}, 
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				}, 
-				{ 	Condition = {HasDescription = true}, Margin = {1, 1}, HighlightColor = "yellow",
+				{ 	Condition = {HasDescription = true}, HighlightColor = "yellow",
 					More = {"ButtonInfo", {InfoType = "Description", MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 				},
 		}	
@@ -886,7 +886,7 @@ if not (ui_loaded_first_time) then
 		MinWidth = 128,
 		DefaultFont = wyr.preferences.PopupDescriptionFont,
 		Contents = {
-				{	Margin = {1, 1}, HighlightColor = "yellow",
+				{	HighlightColor = "yellow",
 					More = {"ButtonInfo", {InfoType = "Hint", Font = PopupFont}}
 				}, 
 				{ 	Margin = {1, 1},
@@ -996,7 +996,7 @@ if not (ui_loaded_first_time) then
 				{ 	Margin = {1, 1}, Condition = {HasDescription = true}, 
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				}, 
-				{ 	Condition = {HasDescription = true}, Margin = {1, 1}, HighlightColor = "yellow",
+				{ 	Condition = {HasDescription = true}, HighlightColor = "yellow",
 					More = {"ButtonInfo", {InfoType = "Description", MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 				},
 		}	
@@ -1009,14 +1009,14 @@ if not (ui_loaded_first_time) then
 		MinWidth = 128,
 		DefaultFont = wyr.preferences.PopupDescriptionFont,
 		Contents = {
-				{	Margin = {1, 1}, HighlightColor = "yellow",
+				{	HighlightColor = "yellow",
 					More = {"ButtonInfo", {InfoType = "Hint", Font = PopupFont}}
 				}, 
 				{ 	Margin = {1, 1},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				}, 
 				{ 	More = {"Costs", {Font = PopupFont}}, HighlightColor = "yellow",
-				}, 
+				},
 				{ 	Margin = {1, 1},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
@@ -1098,12 +1098,20 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {HitPointHealing = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Healing: "), Variable = "HitPointHealing", Font = wyr.preferences.PopupDescriptionFont}}
 				},
-				
+				{ 	Condition = {Weapon = "only"}, HighlightColor = "yellow",
+					More = {"Text", {Text = _("Replaces weapon technology bonuses"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {Shield = "only"}, HighlightColor = "yellow",
+					More = {"Text", {Text = _("Replaces shield technology bonuses"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {Arrows = "only"}, HighlightColor = "yellow",
+					More = {"Text", {Text = _("Replaces arrow technology bonuses"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+				},				
 				-- Description
 				{ 	Margin = {1, 1}, Condition = {HasDescription = true}, 
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				}, 
-				{ 	Condition = {HasDescription = true}, Margin = {1, 1}, HighlightColor = "yellow",
+				{ 	Condition = {HasDescription = true}, HighlightColor = "yellow",
 					More = {"ButtonInfo", {InfoType = "Description", MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 				},
 		}	
@@ -1116,29 +1124,38 @@ if not (ui_loaded_first_time) then
 		MinWidth = 128,
 		DefaultFont = wyr.preferences.PopupDescriptionFont,
 		Contents = {
-				{	Condition = {Affixed = "false", Unique = "false"}, Margin = {1, 1}, HighlightColor = "yellow",
+				{	Condition = {Affixed = "false", Unique = "false"}, HighlightColor = "yellow",
 					More = {"ButtonInfo", {InfoType = "Hint", Font = PopupFont}}
 				}, 
-				{	Condition = {Affixed = "only", Unique = "false"}, Margin = {1, 1}, TextColor = "blue", HighlightColor = "yellow",
+				{	Condition = {Affixed = "only", Unique = "false"}, TextColor = "blue", HighlightColor = "yellow",
 					More = {"ButtonInfo", {InfoType = "Hint", Font = PopupFont}}
 				}, 
-				{	Condition = {Unique = "only"}, Margin = {1, 1}, TextColor = "orange", HighlightColor = "yellow",
+				{	Condition = {Unique = "only"}, TextColor = "orange", HighlightColor = "yellow",
 					More = {"ButtonInfo", {InfoType = "Hint", Font = PopupFont}}
 				}, 
 				{ 	Margin = {1, 1},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				}, 
-				{ 	Condition = {Equipped = "false", Equippable = "only"}, Margin = {1, 1}, TextColor = "white", HighlightColor = "yellow",
-					More = {"Text", {Text = _("Right-click to equip."), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+				{ 	Condition = {Equipped = "false", Equippable = "only"}, TextColor = "white", HighlightColor = "yellow",
+					More = {"Text", {Text = _("Right-click to equip"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 				},
-				{ 	Condition = {Equipped = "only"}, Margin = {1, 1}, TextColor = "white", HighlightColor = "yellow",
-					More = {"Text", {Text = _("Right-click to de-equip."), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+				{ 	Condition = {Equipped = "only"}, TextColor = "white", HighlightColor = "yellow",
+					More = {"Text", {Text = _("Right-click to de-equip"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 				},
-				{ 	Condition = {ItemClass = "potion"}, Margin = {1, 1}, TextColor = "white", HighlightColor = "yellow",
-					More = {"Text", {Text = _("Right-click to use."), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+				{ 	Condition = {ItemClass = "potion"}, TextColor = "white", HighlightColor = "yellow",
+					More = {"Text", {Text = _("Right-click to use"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 				},
-				{ 	Margin = {1, 1}, TextColor = "white", HighlightColor = "yellow",
-					More = {"Text", {Text = _("Left-click to drop."), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+				{ 	TextColor = "white", HighlightColor = "yellow",
+					More = {"Text", {Text = _("Left-click to drop"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {Weapon = "only", Equippable = "only"}, HighlightColor = "yellow",
+					More = {"Text", {Text = _("Replaces weapon technology bonuses when equipped"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {Shield = "only", Equippable = "only"}, HighlightColor = "yellow",
+					More = {"Text", {Text = _("Replaces shield technology bonuses when equipped"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {Arrows = "only", Equippable = "only"}, HighlightColor = "yellow",
+					More = {"Text", {Text = _("Replaces arrow technology bonuses when equipped"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Margin = {1, 1},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
@@ -1224,12 +1241,11 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {HitPointHealing = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Healing: "), Variable = "HitPointHealing", Font = wyr.preferences.PopupDescriptionFont}}
 				},
-				
 				-- Description
 				{ 	Margin = {1, 1}, Condition = {HasDescription = true}, 
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				}, 
-				{ 	Condition = {HasDescription = true}, Margin = {1, 1}, HighlightColor = "yellow",
+				{ 	Condition = {HasDescription = true}, HighlightColor = "yellow",
 					More = {"ButtonInfo", {InfoType = "Description", MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 				},
 		}	
@@ -1242,7 +1258,7 @@ if not (ui_loaded_first_time) then
 		MinWidth = 128,
 		DefaultFont = wyr.preferences.PopupDescriptionFont,
 		Contents = {
-				{	Margin = {1, 1}, HighlightColor = "yellow",
+				{	HighlightColor = "yellow",
 					More = {"ButtonInfo", {InfoType = "Hint", Font = PopupFont}}
 				}, 
 				{ 	Margin = {1, 1},
@@ -1254,7 +1270,7 @@ if not (ui_loaded_first_time) then
 				{ 	Margin = {1, 1}, Condition = {HasDescription = true}, 
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				}, 
-				{ 	Condition = {HasDescription = true}, Margin = {1, 1}, HighlightColor = "yellow",
+				{ 	Condition = {HasDescription = true}, HighlightColor = "yellow",
 					More = {"ButtonInfo", {InfoType = "Description", MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 				},
 		}	
