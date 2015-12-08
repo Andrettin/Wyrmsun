@@ -991,7 +991,6 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {BonusAgainstBuildings = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Bonus vs. Buildings: "), String(TypeVar("BonusAgainstBuildings","Value")), "%"), Font = wyr.preferences.PopupDescriptionFont}}
 				},
-				
 				-- Description
 				{ 	Margin = {1, 1}, Condition = {HasDescription = true}, 
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
@@ -1098,15 +1097,6 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {HitPointHealing = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Healing: "), Variable = "HitPointHealing", Font = wyr.preferences.PopupDescriptionFont}}
 				},
-				{ 	Condition = {Weapon = "only"}, HighlightColor = "yellow",
-					More = {"Text", {Text = _("Replaces weapon technology bonuses"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
-				},
-				{ 	Condition = {Shield = "only"}, HighlightColor = "yellow",
-					More = {"Text", {Text = _("Replaces shield technology bonuses"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
-				},
-				{ 	Condition = {Arrows = "only"}, HighlightColor = "yellow",
-					More = {"Text", {Text = _("Replaces arrow technology bonuses"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
-				},				
 				-- Description
 				{ 	Margin = {1, 1}, Condition = {HasDescription = true}, 
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
