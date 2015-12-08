@@ -1055,8 +1055,8 @@ function RunSinglePlayerCustomGameMenu()
 
 			RunningScenario = true
 
-			RunMap(mapname)
 			menu:stop()
+			RunMap(mapname)
 		end
 	)
 	menu:addFullButton(_("~!Cancel Game"), "c", offx + 640 - 224 - 16, offy + 360 + 36*2, function() menu:stop() end)

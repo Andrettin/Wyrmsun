@@ -378,11 +378,11 @@ function GetTechnologyPointCost(civilization, technology)
 	if (technology == nil) then
 		return 1
 	end
-	if (string.find(technology, "upgrade-") == nil) then
+	if (string.find(technology, "upgrade") == nil) then
 		if (civilization == GetUnitTypeData(technology, "Civilization") or civilization == "") then
 			return GetUnitTypeData(technology, "TechnologyPointCost")
 		end
-	else
+	elseif (string.find(technology, "upgrade") ~= nil) then
 		if (civilization == CUpgrade:Get(technology).Civilization or civilization == "") then
 			return CUpgrade:Get(technology).TechnologyPointCost
 		end

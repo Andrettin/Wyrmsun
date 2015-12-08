@@ -1719,6 +1719,18 @@ function PersistencyUpdates()
 		SavePreferences()
 	end
 	
+	if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "upgrade-dwarven-throwing-axe-1")) then
+		RemoveElementFromArray(wyr.preferences.TechnologyAcquired, "upgrade-dwarven-throwing-axe-1")
+		table.insert(wyr.preferences.TechnologyAcquired, "upgrade-dwarven-sharp-throwing-axe")
+		SavePreferences()
+	end
+	
+	if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, "upgrade-dwarven-throwing-axe-2")) then
+		RemoveElementFromArray(wyr.preferences.TechnologyAcquired, "upgrade-dwarven-throwing-axe-2")
+		table.insert(wyr.preferences.TechnologyAcquired, "upgrade-dwarven-bearded-throwing-axe")
+		SavePreferences()
+	end
+	
 	if (wyr.preferences.Heroes ~= nil) then
 		for key, value in pairs(wyr.preferences.Heroes) do
 			local hero_type = GetCharacterData(wyr.preferences.Heroes[key].name, "Type")
