@@ -28,14 +28,6 @@
 --
 
 local upgrades = {
-	{"upgrade-teuton-bodkin-arrow", _("Bodkin Arrow"), "icon-bodkin-arrow", "ranged-projectile-2",
-		_("Bodkin arrows focus pressure on a single point, greatly enhancing their piercing capability.\n\nEffect: +1 Damage for Skutans."),
-		"",
-		"",
-		{   250,   900,   750,     0,     0,     0,     0,     0},
-		{   250,   900,   750,     0,     0,     0,     0,  2400},
-		1
-	},
 	{"upgrade-teuton-catapult-projectile-1", _("Catapult Granite Projectile"), "icon-catapult-projectile-2", "siege-projectile-1",
 		_("As siegecrafting techniques develop, catapult rocks made out of sandstone are replaced by ones made of granite, increasing the damage catapults can cause.\n\nEffect: +15 Damage for Catapults."),
 		"",
@@ -70,7 +62,6 @@ for i = 1,table.getn(upgrades) do
 		u.GrandStrategyCosts[j - 1] = upgrades[i][9][j]
 	end
 	u.TechnologyPointCost = upgrades[i][10]
-	u.Ability = false
 end
 
 DefineUpgrade("upgrade-teuton-spatha", {
@@ -89,6 +80,16 @@ DefineUpgrade("upgrade-teuton-iron-shield", {
 	Civilization = "teuton",
 	Description = _("The development of iron working makes the crafting of sturdier shields possible.\n\nEffect: +2 Armor for Kriegers."),
 	TechnologyPointCost = 1
+})
+
+DefineUpgrade("upgrade-teuton-bodkin-arrow", {
+	Name = _("Bodkin Arrow"),
+	Parent = "upgrade-ranged-projectile-2",
+	Icon = "icon-bodkin-arrow",
+	Civilization = "teuton",
+	Description = _("Bodkin arrows focus pressure on a single point, greatly enhancing their piercing capability.\n\nEffect: +1 Damage for Skutans."),
+	TechnologyPointCost = 1,
+	Arrows = true
 })
 
 DefineUpgrade("upgrade-teuton-iron-tipped-wood-plow", {

@@ -46,7 +46,7 @@ DefineUnitType("unit-germanic-worker", { Name = _("Bura"), -- Bûra = "Bauer" in
 	NightSightRangeBonus = -1,
 	WeaponClass = "mace",
 	BluntDamage = true,
-	AiDrops = {"unit-cheese", "unit-carrots"},
+	AiDrops = {"unit-boots", "unit-cheese", "unit-carrots"},
 	CanGatherResources = {
 		{
 			"resource-id", "gold", -- this needs to be on top
@@ -102,7 +102,7 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 		{"layer", "clothing-left-arm", "file", "germanic/units/coat_left_arm.png"},
 		{"layer", "clothing-right-arm", "file", "germanic/units/coat_right_arm.png"},
 		{"layer", "pants", "file", "human/units/pants.png"},
-		{"layer", "shoes", "file", "human/units/shoes.png"},
+		{"layer", "boots", "file", "human/units/shoes.png"},
 		{"layer", "weapon", "file", "germanic/units/broad_bronze_sword.png"},
 		{"layer", "helmet", "file", "germanic/units/bronze_helmet.png"}
 	},
@@ -113,8 +113,8 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 	NightSightRangeBonus = -1,
 	WeaponClass = "sword",
 	HackDamage = true,
-	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-wooden-shield", "unit-bronze-shield", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
-	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-flaming", "upgrade-item-prefix-glacial", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-penetrating", "upgrade-item-prefix-quenching", "upgrade-item-prefix-vicious", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-the-serpent", "upgrade-item-suffix-of-thorns", "upgrade-item-suffix-of-trickery", "upgrade-item-suffix-of-victory"}, -- allow more affixes than normal for the unit's level, to compensate for the unit not being upgradeable
+	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-wooden-shield", "unit-bronze-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
+	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-flaming", "upgrade-item-prefix-glacial", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-penetrating", "upgrade-item-prefix-quenching", "upgrade-item-prefix-vicious", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-the-serpent", "upgrade-item-suffix-of-the-snail", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-thorns", "upgrade-item-suffix-of-trickery", "upgrade-item-suffix-of-victory"}, -- allow more affixes than normal for the unit's level, to compensate for the unit not being upgradeable
 	Variations = {
 		{
 			"variation-id", "blond-hair",
@@ -275,15 +275,15 @@ DefineUnitType("unit-germanic-spearman", { Name = _("Spearman"),
 		{"layer", "clothing-left-arm", "file", "germanic/units/coat_left_arm.png"},
 		{"layer", "clothing-right-arm", "file", "germanic/units/coat_right_arm_spear.png"},
 		{"layer", "pants", "file", "human/units/pants.png"},
-		{"layer", "shoes", "file", "human/units/shoes.png"},
+		{"layer", "boots", "file", "human/units/shoes.png"},
 		{"layer", "weapon", "file", "human/units/spear.png"},
 	},
 	Animations = "animations-melee-unit-new", Icon = "icon-germanic-warrior",
 	Corpse = "unit-human-dead-body",
 	DaySightRangeBonus = 1,
 	NightSightRangeBonus = -1,
-	AiDrops = {"unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
-	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-flaming", "upgrade-item-prefix-glacial", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-penetrating", "upgrade-item-prefix-quenching", "upgrade-item-prefix-vicious", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-the-serpent", "upgrade-item-suffix-of-thorns", "upgrade-item-suffix-of-trickery", "upgrade-item-suffix-of-victory"}, -- allow more affixes than normal for the unit's level, to compensate for the unit not being upgradeable
+	AiDrops = {"unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
+	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-flaming", "upgrade-item-prefix-glacial", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-penetrating", "upgrade-item-prefix-quenching", "upgrade-item-prefix-vicious", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-the-serpent", "upgrade-item-suffix-of-the-snail", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-thorns", "upgrade-item-suffix-of-trickery", "upgrade-item-suffix-of-victory"}, -- allow more affixes than normal for the unit's level, to compensate for the unit not being upgradeable
 	Variations = {
 		{
 			"variation-id", "blond-hair",
@@ -441,7 +441,7 @@ DefineUnitType("unit-germanic-archer", { Name = _("Skutan"),
 		{"layer", "clothing-left-arm", "file", "germanic/units/coat_left_arm_archer.png"},
 		{"layer", "clothing-right-arm", "file", "germanic/units/coat_right_arm_archer.png"},
 		{"layer", "pants", "file", "human/units/pants_archer.png"},
-		{"layer", "shoes", "file", "human/units/shoes_archer.png"},
+		{"layer", "boots", "file", "human/units/shoes_archer.png"},
 		{"layer", "weapon", "file", "human/units/bow_and_bronze_knife.png"},
 		{"layer", "helmet", "file", "germanic/units/wool_hat_archer.png"},
 		{"layer", "backpack", "file", "human/units/quiver.png"}
@@ -455,7 +455,8 @@ DefineUnitType("unit-germanic-archer", { Name = _("Skutan"),
 	BonusAgainstAir = 50,
 	WeaponClass = "bow",
 	PierceDamage = true,
-	AiDrops = {"unit-cheese", "unit-carrots", "unit-potion-of-healing"},
+	AiDrops = {"unit-arrows", "unit-barbed-arrows", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
+	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-flaming", "upgrade-item-prefix-glacial", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-penetrating", "upgrade-item-prefix-quenching", "upgrade-item-prefix-vicious", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-the-serpent", "upgrade-item-suffix-of-the-snail", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-thorns", "upgrade-item-suffix-of-trickery", "upgrade-item-suffix-of-victory"}, -- allow more affixes than normal for the unit's level, to compensate for the unit not being upgradeable
 	Variations = {
 		{
 			"variation-id", "red-hair",

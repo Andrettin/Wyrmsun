@@ -28,13 +28,6 @@
 --
 
 local upgrades = {
-	{"upgrade-germanic-barbed-arrow", _("Barbed Arrow"), "icon-germanic-barbed-arrow", "ranged-projectile-1",
-		_("An improvement over the basic triangular-shaped arrow, the barbed arrow is much harder to be removed from the wound after puncturing an enemy.\n\nEffect: +1 Damage for Skutans."),
-		"",
-		"",
-		{   200,   300,   450,     0,     0,     0,     0,     0},
-		{   200,   300,   450,     0,     0,     0,     0,  1200},
-		1},
 	{"upgrade-teuton-civilization", _("Teuton Civilization"), "icon-teuton-civilization", "",
 		"",
 		"",
@@ -60,7 +53,6 @@ for i = 1,table.getn(upgrades) do
 		u.GrandStrategyCosts[j - 1] = upgrades[i][9][j]
 	end
 	u.TechnologyPointCost = upgrades[i][10]
-	u.Ability = false
 end
 
 DefineUpgrade("upgrade-germanic-broad-sword", {
@@ -79,6 +71,16 @@ DefineUpgrade("upgrade-germanic-bronze-shield", {
 	Description = _("Although earlier shields were made of simpler materials, the arrival of bronzeworking technologies allows Germanic craftsmen to produce bronze shields for the warriors, improving their personal protection.\n\nEffect: +2 Armor for Eralas."),
 	Background = _("A number of bronze shields have been found preserved in Danish bogs, belonging to the archaeological period known as the Nordic Bronze Age (during which many scholars posit that the linguistic change from the Proto-Indo-European to Proto-Germanic happened). Those shields were actually probably not used in battle, but in rituals related to the sun and the seasons."),
 	TechnologyPointCost = 1
+})
+
+DefineUpgrade("upgrade-germanic-barbed-arrow", {
+	Name = _("Barbed Arrow"),
+	Parent = "upgrade-ranged-projectile-1",
+	Icon = "icon-germanic-barbed-arrow",
+	Civilization = "germanic",
+	Description = _("An improvement over the basic triangular-shaped arrow, the barbed arrow is much harder to be removed from the wound after puncturing an enemy.\n\nEffect: +1 Damage for Skutans."),
+	TechnologyPointCost = 1,
+	Arrows = true
 })
 
 DefineUpgrade("upgrade-germanic-wood-plow", {

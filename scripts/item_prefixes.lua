@@ -1,0 +1,134 @@
+--       _________ __                 __
+--      /   _____//  |_____________ _/  |______     ____  __ __  ______
+--      \_____  \\   __\_  __ \__  \\   __\__  \   / ___\|  |  \/  ___/
+--      /        \|  |  |  | \// __ \|  |  / __ \_/ /_/  >  |  /\___ \
+--     /_______  /|__|  |__|  (____  /__| (____  /\___  /|____//____  >
+--             \/                  \/          \//_____/            \/
+--  ______________________                           ______________________
+--                        T H E   W A R   B E G I N S
+--         Stratagus - A free fantasy real time strategy game engine
+--
+--      (c) Copyright 2015 by Andrettin
+--
+--      This program is free software; you can redistribute it and/or modify
+--      it under the terms of the GNU General Public License as published by
+--      the Free Software Foundation; either version 2 of the License, or
+--      (at your option) any later version.
+--
+--      This program is distributed in the hope that it will be useful,
+--      but WITHOUT ANY WARRANTY; without even the implied warranty of
+--      MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+--      GNU General Public License for more details.
+--
+--      You should have received a copy of the GNU General Public License
+--      along with this program; if not, write to the Free Software
+--      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+--
+
+DefineUpgrade("upgrade-item-prefix-cold", { -- example: Cold Blade (from Wesnoth)
+	Name = _("Cold"),
+	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "rapier", true, "spear", true, "sword", true, "throwing-axe", true}
+})
+
+DefineUpgrade("upgrade-item-prefix-cruel", {
+	Name = _("Cruel"),
+	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "rapier", true, "spear", true, "sword", true, "throwing-axe", true}
+})
+
+DefineUpgrade("upgrade-item-prefix-flaming", { -- example: Flaming Sword (from Wesnoth)
+	Name = _("Flaming"),
+	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "rapier", true, "spear", true, "sword", true, "throwing-axe", true}
+})
+
+DefineUpgrade("upgrade-item-prefix-glacial", {
+	Name = _("Glacial"),
+	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "rapier", true, "spear", true, "sword", true, "throwing-axe", true}
+})
+
+DefineUpgrade("upgrade-item-prefix-impregnable", {
+	Name = _("Impregnable"),
+	ItemPrefix = {"armor", true, "shield", true, "helmet", true}
+})
+
+DefineUpgrade("upgrade-item-prefix-penetrating", {
+	Name = _("Penetrating"),
+	ItemPrefix = {"arrows", true, "dagger", true, "javelin", true, "rapier", true, "spear", true, "sword", true}
+})
+
+DefineUpgrade("upgrade-item-prefix-quenching", {
+	Name = _("Quenching"),
+	ItemPrefix = {"armor", true, "shield", true, "helmet", true}
+})
+
+DefineUpgrade("upgrade-item-prefix-storm", { -- example: Storm Trident (from Wesnoth)
+	Name = _("Storm"),
+	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "rapier", true, "spear", true, "sword", true, "throwing-axe", true}
+})
+
+DefineUpgrade("upgrade-item-prefix-sturdy", {
+	Name = _("Sturdy"),
+	ItemPrefix = {"armor", true, "shield", true, "helmet", true}
+})
+
+DefineUpgrade("upgrade-item-prefix-swift", {
+	Name = _("Swift"),
+	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "rapier", true, "spear", true, "sword", true, "throwing-axe", true}
+})
+
+DefineUpgrade("upgrade-item-prefix-vicious", {
+	Name = _("Vicious"),
+	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "rapier", true, "spear", true, "sword", true, "throwing-axe", true}
+})
+
+DefineUpgrade("upgrade-item-prefix-wounding", {
+	Name = _("Wounding"),
+	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "rapier", true, "spear", true, "sword", true, "throwing-axe", true}
+})
+
+DefineModifier("upgrade-item-prefix-cold",
+	{"ColdDamage", 1}
+)
+
+DefineModifier("upgrade-item-prefix-cruel",
+	{"BasicDamage", 1}
+)
+
+DefineModifier("upgrade-item-prefix-flaming",
+	{"FireDamage", 2}
+)
+
+DefineModifier("upgrade-item-prefix-glacial",
+	{"ColdDamage", 2}
+)
+
+DefineModifier("upgrade-item-prefix-impregnable",
+	{"Armor", 2}
+)
+
+DefineModifier("upgrade-item-prefix-penetrating",
+	{"PiercingDamage", 1}
+)
+
+DefineModifier("upgrade-item-prefix-quenching",
+	{"FireResistance", 10}
+)
+
+DefineModifier("upgrade-item-prefix-storm",
+	{"LightningDamage", 1}
+)
+
+DefineModifier("upgrade-item-prefix-sturdy",
+	{"Armor", 1}
+)
+
+DefineModifier("upgrade-item-prefix-swift",
+	{"Accuracy", 1}
+)
+
+DefineModifier("upgrade-item-prefix-vicious",
+	{"BasicDamage", 2}
+)
+
+DefineModifier("upgrade-item-prefix-wounding",
+	{"BasicDamage", 2}
+)

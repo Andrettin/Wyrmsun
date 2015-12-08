@@ -183,3 +183,54 @@ DefineUnitType("unit-thrymgjol-shield", { Name = _("Thrymgjol Shield"),
 	ItemClass = "shield",
 	Armor = 4
 } )
+
+DefineUnitType("unit-boots", { Name = _("Boots"),
+	Parent = "unit-template-item",
+	Image = {"file", "dwarf/items/dwarven_boots.png", "size", {32, 32}},
+	Icon = "icon-dwarven-boots",
+	ItemClass = "boots",
+	Armor = 0
+} )
+
+DefineUnitType("unit-wool-shoes", { Name = _("Wool Shoes"),
+	Parent = "unit-template-item",
+	Image = {"file", "dwarf/items/dwarven_boots.png", "size", {32, 32}},
+	Icon = "icon-gnomish-boots",
+	ItemClass = "boots",
+	Armor = 0
+} )
+
+DefineUnitType("unit-furry-wool-shoes", { Name = _("Furry Wool Shoes"),
+	Parent = "unit-template-item",
+	Image = {"file", "dwarf/items/dwarven_boots.png", "size", {32, 32}},
+	Icon = "icon-gnomish-boots-fur",
+	ItemClass = "boots",
+	Armor = 0
+} )
+
+DefineUnitType("unit-arrows", { Name = _("Arrows"),
+	Parent = "unit-template-item",
+	Image = {"file", "neutral/items/arrow.png", "size", {32, 32}},
+	Icon = "icon-germanic-arrow",
+	ItemClass = "arrows",
+	NumDirections = 8,
+	BasicDamage = 0
+} )
+
+DefineUnitType("unit-barbed-arrows", { Name = _("Barbed Arrows"),
+	Parent = "unit-template-item",
+	Image = {"file", "neutral/items/arrow.png", "size", {32, 32}},
+	Icon = "icon-germanic-barbed-arrow",
+	ItemClass = "arrows",
+	NumDirections = 8,
+	BasicDamage = 2
+} )
+
+DefineUnitType("unit-bodkin-arrows", { Name = _("Bodkin Arrows"),
+	Parent = "unit-template-item",
+	Image = {"file", "neutral/items/arrow.png", "size", {32, 32}},
+	Icon = "icon-bodkin-arrow",
+	ItemClass = "arrows",
+	NumDirections = 8,
+	BasicDamage = 4
+} )

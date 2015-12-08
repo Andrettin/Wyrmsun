@@ -4147,7 +4147,7 @@ DefineUnitType("unit-template-veteran-infantry", { Name = _("Veteran Infantry"),
 	CanTargetLand = true,
 	organic = true,
 	SelectableByRectangle = true,
-	DropAffixes = {"upgrade-item-prefix-impregnable", "upgrade-item-prefix-penetrating", "upgrade-item-prefix-vicious", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-thorns"}
+	DropAffixes = {"upgrade-item-prefix-impregnable", "upgrade-item-prefix-penetrating", "upgrade-item-prefix-vicious", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-thorns"}
 } )
 
 DefineUnitType("unit-template-heroic-infantry", { Name = _("Heroic Infantry"),
@@ -4167,7 +4167,7 @@ DefineUnitType("unit-template-heroic-infantry", { Name = _("Heroic Infantry"),
 	Inventory = true,
 	organic = true,
 	SelectableByRectangle = true,
-	DropAffixes = {"upgrade-item-suffix-of-victory"}
+	DropAffixes = {"upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-victory"}
 } )
 
 DefineUnitType("unit-template-spearman", { Name = _("Spearman"),
@@ -4291,7 +4291,7 @@ DefineUnitType("unit-template-cavalry", { Name = _("Cavalry"),
 	SelectableByRectangle = true,
 	TechnologyPointCost = 1,
 	Traits = {"upgrade-mighty", "upgrade-strong", "upgrade-weak", "upgrade-dextrous", "upgrade-clumsy", "upgrade-reckless", "upgrade-near-sighted", "upgrade-keen", "upgrade-limping", "upgrade-old", "upgrade-quick", "upgrade-resilient", "upgrade-slow", "upgrade-cruel"},
-	DropAffixes = {"upgrade-item-prefix-cruel", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-penetrating", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-swift", "upgrade-item-prefix-vicious", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-thorns"},
+	DropAffixes = {"upgrade-item-prefix-cruel", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-penetrating", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-swift", "upgrade-item-prefix-vicious", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-thorns"},
 	Sounds = {
 		"step", "step-dirt",
 		"step-dirt", "step-dirt",
@@ -4330,7 +4330,7 @@ DefineUnitType("unit-template-priest", { Name = _("Priest"),
 	SelectableByRectangle = true,
 	Mana = {Enable = true},
 	Traits = {"upgrade-mighty", "upgrade-strong", "upgrade-weak", "upgrade-dextrous", "upgrade-clumsy", "upgrade-reckless", "upgrade-near-sighted", "upgrade-keen", "upgrade-limping", "upgrade-old", "upgrade-quick", "upgrade-resilient", "upgrade-slow", "upgrade-cruel"},
-	DropAffixes = {"upgrade-item-prefix-cruel", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-penetrating", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-swift", "upgrade-item-prefix-vicious", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-thorns"},
+	DropAffixes = {"upgrade-item-prefix-cruel", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-penetrating", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-swift", "upgrade-item-prefix-vicious", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-thorns"},
 	Sounds = {
 		"step", "step-dirt",
 		"step-dirt", "step-dirt",
@@ -4409,7 +4409,7 @@ DefineUnitType("unit-template-flying-rider", { Name = _("Flying Rider"),
 	SelectableByRectangle = true,
 	TechnologyPointCost = 1,
 	Traits = {"upgrade-mighty", "upgrade-strong", "upgrade-weak", "upgrade-dextrous", "upgrade-clumsy", "upgrade-reckless", "upgrade-near-sighted", "upgrade-keen", "upgrade-limping", "upgrade-old", "upgrade-quick", "upgrade-resilient", "upgrade-slow", "upgrade-cruel"},
-	DropAffixes = {"upgrade-item-prefix-cruel", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-penetrating", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-swift", "upgrade-item-prefix-vicious", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-thorns", "upgrade-item-suffix-of-victory"},
+	DropAffixes = {"upgrade-item-prefix-cruel", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-penetrating", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-swift", "upgrade-item-prefix-vicious", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-thorns", "upgrade-item-suffix-of-victory"},
 	Sounds = {
 	}
 } )

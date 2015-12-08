@@ -180,6 +180,20 @@ DefineUpgrade("upgrade-iron-shield", {
 	GrandStrategyCosts = {"time", 250, "gold", 900, "lumber", 750, "research", 2400}
 })
 
+DefineUpgrade("upgrade-ranged-projectile-1", {
+	Name = _("Ranged Projectile 1"),
+	Class = "ranged-projectile-1",
+	Costs = {"time", 200, "gold", 300, "lumber", 450},
+	GrandStrategyCosts = {"time", 200, "gold", 300, "lumber", 450, "research", 1200}
+})
+
+DefineUpgrade("upgrade-ranged-projectile-2", {
+	Name = _("Ranged Projectile 2"),
+	Class = "ranged-projectile-2",
+	Costs = {"time", 250, "gold", 900, "lumber", 750},
+	GrandStrategyCosts = {"time", 250, "gold", 900, "lumber", 750, "research", 2400}
+})
+
 DefineUpgrade("upgrade-wood-plow", {
 	Name = _("Wood Plow"),
 	Class = "wood-plow",
@@ -570,205 +584,5 @@ DefineModifier("upgrade-wyrm-child",
 	{"BasicDamage", -24}
 )
 
--- Item Affixes
-
-DefineUpgrade("upgrade-item-prefix-cold", { -- example: Cold Blade (from Wesnoth)
-	Name = _("Cold"),
-	ItemPrefix = {"axe", true, "bow", true, "dagger", true, "javelin", true, "mace", true, "rapier", true, "spear", true, "sword", true, "throwing-axe", true}
-})
-
-DefineUpgrade("upgrade-item-prefix-cruel", {
-	Name = _("Cruel"),
-	ItemPrefix = {"axe", true, "bow", true, "dagger", true, "javelin", true, "mace", true, "rapier", true, "spear", true, "sword", true, "throwing-axe", true}
-})
-
-DefineUpgrade("upgrade-item-prefix-flaming", { -- example: Flaming Sword (from Wesnoth)
-	Name = _("Flaming"),
-	ItemPrefix = {"axe", true, "bow", true, "dagger", true, "javelin", true, "mace", true, "rapier", true, "spear", true, "sword", true, "throwing-axe", true}
-})
-
-DefineUpgrade("upgrade-item-prefix-glacial", {
-	Name = _("Glacial"),
-	ItemPrefix = {"axe", true, "bow", true, "dagger", true, "javelin", true, "mace", true, "rapier", true, "spear", true, "sword", true, "throwing-axe", true}
-})
-
-DefineUpgrade("upgrade-item-prefix-impregnable", {
-	Name = _("Impregnable"),
-	ItemPrefix = {"armor", true, "shield", true, "helmet", true}
-})
-
-DefineUpgrade("upgrade-item-prefix-penetrating", {
-	Name = _("Penetrating"),
-	ItemPrefix = {"bow", true, "dagger", true, "javelin", true, "rapier", true, "spear", true, "sword", true}
-})
-
-DefineUpgrade("upgrade-item-prefix-quenching", {
-	Name = _("Quenching"),
-	ItemPrefix = {"armor", true, "shield", true, "helmet", true}
-})
-
-DefineUpgrade("upgrade-item-prefix-storm", { -- example: Storm Trident (from Wesnoth)
-	Name = _("Storm"),
-	ItemPrefix = {"axe", true, "bow", true, "dagger", true, "javelin", true, "mace", true, "rapier", true, "spear", true, "sword", true, "throwing-axe", true}
-})
-
-DefineUpgrade("upgrade-item-prefix-sturdy", {
-	Name = _("Sturdy"),
-	ItemPrefix = {"armor", true, "shield", true, "helmet", true}
-})
-
-DefineUpgrade("upgrade-item-prefix-swift", {
-	Name = _("Swift"),
-	ItemPrefix = {"axe", true, "bow", true, "dagger", true, "javelin", true, "mace", true, "rapier", true, "spear", true, "sword", true, "throwing-axe", true}
-})
-
-DefineUpgrade("upgrade-item-prefix-vicious", {
-	Name = _("Vicious"),
-	ItemPrefix = {"axe", true, "bow", true, "dagger", true, "javelin", true, "mace", true, "rapier", true, "spear", true, "sword", true, "throwing-axe", true}
-})
-
-DefineUpgrade("upgrade-item-prefix-wounding", {
-	Name = _("Wounding"),
-	ItemPrefix = {"axe", true, "bow", true, "dagger", true, "javelin", true, "mace", true, "rapier", true, "spear", true, "sword", true, "throwing-axe", true}
-})
-
-DefineUpgrade("upgrade-item-suffix-of-cold", {
-	Name = _("of Cold"),
-	ItemSuffix = {"axe", true, "bow", true, "dagger", true, "javelin", true, "mace", true, "rapier", true, "spear", true, "sword", true, "throwing-axe", true},
-	IncompatibleAffixes = {"upgrade-item-prefix-cold"}
-})
-
-DefineUpgrade("upgrade-item-suffix-of-extinguishment", {
-	Name = _("of Extinguishment"),
-	ItemSuffix = {"armor", true, "shield", true, "helmet", true}
-})
-
-DefineUpgrade("upgrade-item-suffix-of-fire", {
-	Name = _("of Fire"),
-	ItemSuffix = {"axe", true, "bow", true, "dagger", true, "javelin", true, "mace", true, "rapier", true, "spear", true, "sword", true, "throwing-axe", true},
-	IncompatibleAffixes = {"upgrade-item-prefix-flaming"}
-})
-
-DefineUpgrade("upgrade-item-suffix-of-flame", {
-	Name = _("of Flame"),
-	ItemSuffix = {"axe", true, "bow", true, "dagger", true, "javelin", true, "mace", true, "rapier", true, "spear", true, "sword", true, "throwing-axe", true},
-	IncompatibleAffixes = {"upgrade-item-prefix-flaming"}
-})
-
-DefineUpgrade("upgrade-item-suffix-of-lightning", {
-	Name = _("of Lightning"),
-	ItemSuffix = {"axe", true, "bow", true, "dagger", true, "javelin", true, "mace", true, "rapier", true, "spear", true, "sword", true, "throwing-axe", true}
-})
-
-DefineUpgrade("upgrade-item-suffix-of-perfuration", {
-	Name = _("of Perfuration"),
-	ItemSuffix = {"bow", true, "dagger", true, "javelin", true, "rapier", true, "spear", true, "sword", true}
-})
-
-DefineUpgrade("upgrade-item-suffix-of-the-serpent", {
-	Name = _("of the Serpent"),
-	ItemSuffix = {"axe", true, "bow", true, "dagger", true, "javelin", true, "mace", true, "rapier", true, "spear", true, "sword", true, "throwing-axe", true}
-})
-
-DefineUpgrade("upgrade-item-suffix-of-thorns", {
-	Name = _("of Thorns"),
-	ItemSuffix = {"armor", true, "shield", true, "helmet", true}
-})
-
-DefineUpgrade("upgrade-item-suffix-of-trickery", {
-	Name = _("of Trickery"),
-	ItemSuffix = {"axe", true, "bow", true, "dagger", true, "javelin", true, "mace", true, "rapier", true, "spear", true, "sword", true, "throwing-axe", true}
-})
-
-DefineUpgrade("upgrade-item-suffix-of-victory", {
-	Name = _("of Victory"),
-	ItemSuffix = {"axe", true, "bow", true, "dagger", true, "javelin", true, "mace", true, "rapier", true, "spear", true, "sword", true, "throwing-axe", true}
-})
-
-DefineModifier("upgrade-item-prefix-cold",
-	{"ColdDamage", 1}
-)
-
-DefineModifier("upgrade-item-prefix-cruel",
-	{"BasicDamage", 1}
-)
-
-DefineModifier("upgrade-item-prefix-flaming",
-	{"FireDamage", 2}
-)
-
-DefineModifier("upgrade-item-prefix-glacial",
-	{"ColdDamage", 2}
-)
-
-DefineModifier("upgrade-item-prefix-impregnable",
-	{"Armor", 2}
-)
-
-DefineModifier("upgrade-item-prefix-penetrating",
-	{"PiercingDamage", 1}
-)
-
-DefineModifier("upgrade-item-prefix-quenching",
-	{"FireResistance", 10}
-)
-
-DefineModifier("upgrade-item-prefix-storm",
-	{"LightningDamage", 1}
-)
-
-DefineModifier("upgrade-item-prefix-sturdy",
-	{"Armor", 1}
-)
-
-DefineModifier("upgrade-item-prefix-swift",
-	{"Accuracy", 1}
-)
-
-DefineModifier("upgrade-item-prefix-vicious",
-	{"BasicDamage", 2}
-)
-
-DefineModifier("upgrade-item-prefix-wounding",
-	{"BasicDamage", 2}
-)
-
-DefineModifier("upgrade-item-suffix-of-cold",
-	{"ColdDamage", 1}
-)
-
-DefineModifier("upgrade-item-suffix-of-extinguishment",
-	{"FireResistance", 30}
-)
-
-DefineModifier("upgrade-item-suffix-of-fire",
-	{"FireDamage", 1}
-)
-
-DefineModifier("upgrade-item-suffix-of-flame",
-	{"FireDamage", 2}
-)
-
-DefineModifier("upgrade-item-suffix-of-lightning",
-	{"LightningDamage", 1}
-)
-
-DefineModifier("upgrade-item-suffix-of-perfuration",
-	{"PiercingDamage", 1}
-)
-
-DefineModifier("upgrade-item-suffix-of-the-serpent",
-	{"Backstab", 100}
-)
-
-DefineModifier("upgrade-item-suffix-of-thorns",
-	{"ThornsDamage", 1}
-)
-
-DefineModifier("upgrade-item-suffix-of-trickery",
-	{"ArcaneDamage", 1}
-)
-
-DefineModifier("upgrade-item-suffix-of-victory",
-	{"BasicDamage", 3}
-)
+Load("scripts/item_prefixes.lua")
+Load("scripts/item_suffixes.lua")

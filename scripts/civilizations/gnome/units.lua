@@ -44,7 +44,7 @@ DefineUnitType("unit-gnomish-worker", { Name = _("Scavenger"),
 	Corpse = "unit-gnomish-dead-body",
 	WeaponClass = "mace",
 	BluntDamage = true,
-	AiDrops = {"unit-cheese"},
+	AiDrops = {"unit-cheese", "unit-wool-shoes"},
 	CanGatherResources = {
 		{
 			"resource-id", "gold",
@@ -108,8 +108,8 @@ DefineUnitType("unit-gnomish-recruit", { Name = _("Recruit"),
 	Evasion = 12,
 	Corpse = "unit-gnomish-dead-body",
 	WeaponClass = "rapier",
-	AiDrops = {"unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-cheese", "unit-potion-of-healing"},
-	DropAffixes = {"upgrade-item-prefix-penetrating", "upgrade-item-prefix-storm", "upgrade-item-prefix-vicious", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-lightning", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-trickery"}, -- allow more magic enchantments than normal 
+	AiDrops = {"unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-wool-shoes", "unit-furry-wool-shoes", "unit-cheese", "unit-potion-of-healing"},
+	DropAffixes = {"upgrade-item-prefix-penetrating", "upgrade-item-prefix-storm", "upgrade-item-prefix-vicious", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-lightning", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-the-snigill", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-trickery"}, -- allow more magic enchantments than normal 
 	PierceDamage = true,
 	Variations = {
 		{
@@ -145,6 +145,8 @@ DefineUnitType("unit-gnomish-herbalist", { Name = _("Herbalist"),
 	Corpse = "unit-gnomish-dead-body",
 	CanCastSpell = {"spell-herbal-cure", "spell-portent"},
 	AutoCastActive = {"spell-herbal-cure"},
+	AiDrops = {"unit-wool-shoes", "unit-furry-wool-shoes", "unit-cheese", "unit-potion-of-healing"},
+	DropAffixes = {"upgrade-item-prefix-penetrating", "upgrade-item-prefix-storm", "upgrade-item-prefix-vicious", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-lightning", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-the-snigill", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-trickery"}, -- allow more magic enchantments than normal 
 	HackDamage = true,
 	Variations = {
 		{

@@ -76,11 +76,11 @@ GameConcepts = {
 	},
 	Heroes = {
 		Name = _("~!Heroes"),
-		Description = _("Heroes belong to one of the normal unit types, but unlike normal units, a hero's experience level and learned abilities are saved across scenarios.")
+		Description = _("Heroes belong to one of the normal unit types, but unlike regular units, a hero's experience level and learned abilities are saved across scenarios. Besides the story heroes, players can also create custom heroes to use in quests and (single-player) custom games.")
 	},
 	Items = {
 		Name = _("Ite~!ms"),
-		Description = _("Items such as potions and food lay down on the ground, and can be used by units by moving on top of them. Food items like cheese and carrots appear when a farm is destroyed. Red potions heal units, blue potions damage them, food items heal, and gold coins give gold to the player. Additionally, destroying barrels will sometimes yield potions, and opening chests (by attacking them) will grant gold.")
+		Description = _("Items can be picked up by units with an inventory (persistent heroes as well as Stonelords and Gryphon Riders). Items come in four types: weapons, shields, boots and potions. Units can equip weapons of a particular class (i.e. Axefighters can equip axes), and non-ranged units may equip shields as well. Any unit can wear boots or drink potions; the latter can be used as a power-up by units who don't have an inventory. Equipping an item will replace the bonuses from weapon technologies with those of the item.\n\nItems are generally dropped by AI-controlled units, and possess a chance of having a magic affix. Such prefixes and suffixes affect the item's stats, changing its damage, armor and other values. Additionally, unique items also have a chance of dropping. Unique items are generally better than magic items, but not necessarily.\n\nBesides items, units can also pick up power-ups. These are not restricted to units with inventories, and will perform effects such as restoring HP, causing a status effect or providing resources.")
 	},
 	Labor = {
 		Name = _("~!Labor"),

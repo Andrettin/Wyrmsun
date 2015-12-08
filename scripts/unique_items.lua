@@ -52,7 +52,7 @@ DefineUniqueItem("Laevatein", { -- sword from Norse mythology; "the Wounding Wan
 DefineUniqueItem("Rithil", { -- sword from Norse mythology; owned by Regin and used by him to slay his brother Fafnir; name means "Swift-Moving"; is alternatively called "Refil" (serpent); Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 380.
 	Type = "unit-spatha",
 	Prefix = "upgrade-item-prefix-swift",
-	Suffix = "upgrade-item-suffix-of-the-serpent"
+	Suffix = "upgrade-item-suffix-of-betrayal"
 } )
 
 DefineUniqueItem("Toporik", { -- name means "hatchet" in Russian; renaming of the Axe of Perun (Perun is a god from Slavic mythology), here made into a dwarven unique throwing axe (since it wouldn't make much sense for the dwarves to have a throwing axe named after a god from a human mythology); was made a dwarven item under the following premise: many scholars associate the Axe of Perun with Thor's Mjollnir hammer in function and origin, and the latter was made by dwarves

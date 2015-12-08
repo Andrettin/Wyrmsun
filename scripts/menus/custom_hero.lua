@@ -42,6 +42,7 @@ function CustomHeroCreationMenu(world, quest_menu)
 		end
 	elseif (world == "Nidavellir") then
 		table.insert(hero_civilization_list, "Dwarf")
+--		table.insert(hero_civilization_list, "Gnome")
 	end
 	local hero_class_ident_list = {}
 	local hero_class_list = {}
@@ -87,7 +88,17 @@ function CustomHeroCreationMenu(world, quest_menu)
 		hero_class_list = nil
 		hero_class_list = {}
 		for i, unitName in ipairs(Units) do
-			if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Civilization") == string.lower(hero_civilization_list[hero_civilization:getSelected() + 1]) and GetUnitTypeData(unitName, "Faction") == "" and GetUnitTypeData(unitName, "Class") == "infantry") then
+			if (
+				string.find(unitName, "upgrade-") == nil
+				and GetUnitTypeData(unitName, "Civilization") == string.lower(hero_civilization_list[hero_civilization:getSelected() + 1])
+				and GetUnitTypeData(unitName, "Faction") == ""
+				and GetUnitTypeData(unitName, "Class") ~= "worker"
+				and GetUnitTypeData(unitName, "Class") ~= "militia"
+				and GetUnitTypeData(unitName, "Class") ~= "spearman"
+				and GetUnitTypeData(unitName, "Class") ~= "priest"
+				and GetUnitTypeData(unitName, "Level") == 1
+				and GetUnitTypeData(unitName, "organic")
+			) then
 				table.insert(hero_class_ident_list, unitName)
 				table.insert(hero_class_list, GetUnitTypeData(unitName, "Name"))
 			end
@@ -149,8 +160,7 @@ function CustomHeroCreationMenu(world, quest_menu)
 					Civilization = string.lower(hero_civilization_list[hero_civilization:getSelected() + 1]),
 					Type = hero_class_ident_list[hero_class:getSelected() + 1],
 					Trait = trait_ident_list[trait:getSelected() + 1],
-					Variation = string.lower(string.gsub(variation_list[variation:getSelected() + 1], " ", "-")),
-					ForbiddenUpgrades = {"unit-dwarven-yale-rider"}
+					Variation = string.lower(string.gsub(variation_list[variation:getSelected() + 1], " ", "-"))
 				})
 				menu:stop()
 				quest_menu:stop()

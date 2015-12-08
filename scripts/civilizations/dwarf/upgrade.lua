@@ -29,24 +29,6 @@
 
 local upgrades = {
 	{
-		"upgrade-dwarven-sharp-throwing-axe", _("Sharp Throwing Axe"), "icon-dwarven-sharp-throwing-axe", "ranged-projectile-1",
-		_("As their craftsmanship progresses, dwarven artisans become capable of improving the basic throwing axe to have sharper blades.\n\nEffect: +1 Damage for Scouts and Gryphon Riders."),
-		"",
-		"",
-		{   200,   300,   450,     0,     0,     0,     0,     0},
-		{   200,   300,   450,     0,     0,     0,     0,  1200},
-		1
-	},
-	{
-		"upgrade-dwarven-bearded-throwing-axe", _("Bearded Throwing Axe"), "icon-dwarven-bearded-throwing-axe", "ranged-projectile-2",
-		_("The 'bearding' of throwing axes by extending the bottom of their blades is an innovation which makes them more deadly when thrown.\n\nEffect: +1 Damage for Scouts and Gryphon Riders."),
-		"",
-		"",
-		{   250,   900,   750,     0,     0,     0,     0,     0},
-		{   250,   900,   750,     0,     0,     0,     0,  2400},
-		1
-	},
-	{
 		"upgrade-dwarven-ballista-bolt-1", _("Broadhead Ballista Bolt"), "icon-dwarven-ballista-bolt-2", "siege-projectile-1",
 		_("While the earliest dwarven ballista bolts had been little more than tree trunks cut to have more penetrating effect, these bolts exhibit a broad metal head capable of slicing enemy foes and structures alike.\n\nEffect: +15 Damage for Ballistas."),
 		"",
@@ -119,6 +101,26 @@ DefineUpgrade("upgrade-dwarven-shield-2", {
 	Background = _("The Thrymgjol gate and its makers, the sons of the dwarf Solblindi, are mentioned in the ~<Svipdagsmol~> of Norse mythology. The name \"Thrymgjol\" means \"loud-clanging\"."),
 	Quote = _("The Warder: \"Thrymgjol they call it; | 'twas made by the three, / The sons of Solblindi; / And fast as a fetter | the farer it holds, / Whoever shall lift the latch.\" - Dwarven Traditional Poetry"),
 	TechnologyPointCost = 1
+})
+
+DefineUpgrade("upgrade-dwarven-sharp-throwing-axe", {
+	Name = _("Sharp Throwing Axe"),
+	Parent = "upgrade-ranged-projectile-1",
+	Icon = "icon-dwarven-sharp-throwing-axe",
+	Civilization = "dwarf",
+	Description = _("As their craftsmanship progresses, dwarven artisans become capable of improving the basic throwing axe to have sharper blades.\n\nEffect: +1 Damage for Scouts and Gryphon Riders."),
+	TechnologyPointCost = 1,
+	Weapon = true
+})
+
+DefineUpgrade("upgrade-dwarven-bearded-throwing-axe", {
+	Name = _("Bearded Throwing Axe"),
+	Parent = "upgrade-ranged-projectile-2",
+	Icon = "icon-dwarven-bearded-throwing-axe",
+	Civilization = "dwarf",
+	Description = _("The 'bearding' of throwing axes by extending the bottom of their blades is an innovation which makes them more deadly when thrown.\n\nEffect: +1 Damage for Scouts and Gryphon Riders."),
+	TechnologyPointCost = 1,
+	Weapon = true
 })
 
 DefineUpgrade("upgrade-dwarven-wood-plow", {

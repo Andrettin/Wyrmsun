@@ -342,7 +342,7 @@ function RunTechTreeMenu(civilization_number)
 			RunTechTreeMenu(civilization_dd:getSelected())
 		end)
 	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 212 + (36 * 6),
-		function() menu:stop(); end)
+		function() SetPlayerData(GetThisPlayer(), "RaceName", "gnome"); menu:stop(); end)
 
 	menu:run()
 end

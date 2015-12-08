@@ -46,7 +46,7 @@ DefineUnitType("unit-goblin-worker", { Name = _("Worker"),
 	Corpse = "unit-goblin-dead-body",
 	WeaponClass = "mace",
 	BluntDamage = true,
-	AiDrops = {"unit-cheese"},
+	AiDrops = {"unit-boots", "unit-cheese"},
 	CanGatherResources = {
 		{
 			"resource-id", "gold",
@@ -111,7 +111,7 @@ DefineUnitType("unit-goblin-thief", { Name = _("Thief"),
 	Corpse = "unit-goblin-dead-body",
 	WeaponClass = "dagger",
 	PierceDamage = true,
-	AiDrops = {"unit-cheese", "unit-potion-of-healing"},
+	AiDrops = {"unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	Sounds = {
 		"selected", "basic-goblin-voices-selected-group",
 		"acknowledge", "basic-goblin-voices-acknowledge",
@@ -140,8 +140,8 @@ DefineUnitType("unit-goblin-spearman", { Name = _("Impaler"),
 	NightSightRangeBonus = 1,
 	WeaponClass = "spear",
 	PierceDamage = true,
-	AiDrops = {"unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-cheese", "unit-potion-of-healing"},
-	DropAffixes = {"upgrade-item-prefix-penetrating", "upgrade-item-prefix-vicious", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-trickery"}, -- allow more magic enchantments than normal 
+	AiDrops = {"unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	DropAffixes = {"upgrade-item-prefix-penetrating", "upgrade-item-prefix-vicious", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-the-snigill", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-trickery"}, -- allow more magic enchantments than normal to compensate for the unit not being able to upgrade
 	Corpse = "unit-goblin-dead-body",
 	Sounds = {
 		"selected", "basic-goblin-voices-selected-group",
@@ -169,7 +169,8 @@ DefineUnitType("unit-goblin-archer", { Name = _("Archer"),
 	Missile = "missile-goblin-arrow",
 	WeaponClass = "bow",
 	PierceDamage = true,
-	AiDrops = {"unit-cheese", "unit-potion-of-healing"},
+	AiDrops = {"unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	DropAffixes = {"upgrade-item-prefix-penetrating", "upgrade-item-prefix-vicious", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-the-snigill", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-trickery"}, -- allow more magic enchantments than normal to compensate for the unit not being able to upgrade
 	Corpse = "unit-goblin-dead-body",
 	Sounds = {
 		"selected", "basic-goblin-voices-selected-group",
