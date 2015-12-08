@@ -914,377 +914,404 @@ function RunSinglePlayerGameMenu()
 end
 
 function RunSinglePlayerCustomGameMenu()
-  local menu = WarMenu()
-  local offx = (Video.Width - 640) / 2
-  local offy = (Video.Height - 480) / 2
-  local d
-  local world
-  local scenario
-  local race
-  local faction
-  local resources
-  local opponents
-  local numunits
-  local gametype
-  local mapl
-  local descriptionl
-  local tech_level
-  local max_tech_level
-  local no_randomness
-  MapPersonPlayer = 0
-  PlayerFaction = ""
+	local menu = WarMenu()
+	local offx = (Video.Width - 640) / 2
+	local offy = (Video.Height - 480) / 2
+	local d
+	local world
+	local scenario
+	local race
+	local faction
+	local resources
+	local opponents
+	local numunits
+	local gametype
+	local mapl
+	local descriptionl
+	local tech_level
+	local max_tech_level
+	local hero_dd
+	local no_randomness
+	MapPersonPlayer = 0
+	PlayerFaction = ""
 
-  -- create the scenario and faction lists
-  local scenario_list = {}
-  local civilization_list = {_("Map Default")}
-  local faction_list = {_("Map Default")}
-  local world_list = { }
-  local game_type_list = { }
-  local tech_level_list = {_("Map Default"), _("Agrarian (Bronze)"), _("Agrarian (Iron)"), _("Civilized (Bronze)"), _("Civilized (Iron)")}
-  local max_tech_level_list = {_("Map Default")}
-  local difficulty_list = {_("Easy"), _("Normal"), _("Hard"),_("Brutal")}
-  local difficulty = nil
-  
-  GrandStrategy = false
-  RunningScenario = false
-  
-  local maps = {}
+	-- create the scenario and faction lists
+	local scenario_list = {}
+	local civilization_list = {_("Map Default")}
+	local faction_list = {_("Map Default")}
+	local world_list = { }
+	local game_type_list = { }
+	local tech_level_list = {_("Map Default"), _("Agrarian (Bronze)"), _("Agrarian (Iron)"), _("Civilized (Bronze)"), _("Civilized (Iron)")}
+	local max_tech_level_list = {_("Map Default")}
+	local difficulty_list = {_("Easy"), _("Normal"), _("Hard"),_("Brutal")}
+	local difficulty = nil
+	
+	local hero_list = {}
+	
+	GrandStrategy = false
+	RunningScenario = false
+	
+	local maps = {}
 
-  local custom_map_present = false
-  for map_directory=1,table.getn(MapDirectories) do
-	-- load the maps
-	local i
-	local f
-	local u = 1
+	local custom_map_present = false
+	for map_directory=1,table.getn(MapDirectories) do
+		-- load the maps
+		local i
+		local f
+		local u = 1
 
-	-- list the subdirectories in the maps folder
-	local dirlist = {}
-	local dirs = ListDirsInDirectory(MapDirectories[map_directory])
-	for i,f in ipairs(dirs) do
-		dirlist[u] = f .. "/"
-		u = u + 1
-	end
-
-	-- get maps in the main maps folder
-	u = table.getn(maps) + 1
-	local fileslist = ListFilesInDirectory(MapDirectories[map_directory])
-	for i,f in ipairs(fileslist) do
-		if (string.find(f, "^.*%.smp%.?g?z?$")) then
-			maps[u] = MapDirectories[map_directory] .. f
+		-- list the subdirectories in the maps folder
+		local dirlist = {}
+		local dirs = ListDirsInDirectory(MapDirectories[map_directory])
+		for i,f in ipairs(dirs) do
+			dirlist[u] = f .. "/"
 			u = u + 1
 		end
-	end
 
-	-- get maps in subdirectories of the maps folder
-	for j=1,table.getn(dirlist) do
-		fileslist = ListFilesInDirectory(MapDirectories[map_directory] .. dirlist[j])
+		-- get maps in the main maps folder
+		u = table.getn(maps) + 1
+		local fileslist = ListFilesInDirectory(MapDirectories[map_directory])
 		for i,f in ipairs(fileslist) do
 			if (string.find(f, "^.*%.smp%.?g?z?$")) then
-				maps[u] = MapDirectories[map_directory] .. dirlist[j] .. f
+				maps[u] = MapDirectories[map_directory] .. f
 				u = u + 1
 			end
 		end
-	end
 
-	-- build the world list from world references in the maps
-	for i=1,table.getn(maps) do
-		MapWorld = ""
-		GetMapInfo(maps[i])
-		if (MapWorld ~= "" and MapWorld ~= "None" and GetArrayIncludes(world_list, _(MapWorld)) == false) then
-			table.insert(world_list, _(MapWorld))
-		elseif (MapWorld == "") then
-			custom_map_present = true
-		end
-	end
-  end
-  table.sort(world_list)
-  if (custom_map_present) then
-	  table.insert(world_list, _("Custom"))
-  end
-
-  mapl = menu:addLabel(string.sub(mapname, 6), offx + 16, offy + 360 + 24, Fonts["game"], false)
-  descriptionl = menu:addLabel("descriptionl", offx + 16, offy + 360, Fonts["game"], false)
-
-  menu:addLabel("~<Single Player Game Setup~>", offx + 640/2 + 12, offy + 72)
-  menu:addFullButton(_("~!Start Game"), "s", offx + 640 - 224 - 16, offy + 360 + 36*1,
-    function()
-    	-- change the human player in special cases
-		if (mapinfo.description == "Chaincolt Foothills" and civilization_list[race:getSelected() + 1] == "Dwarf" and faction_list[faction:getSelected() + 1] == _("Shorbear Clan") and (opponents:getSelected() == 0 or opponents:getSelected() >= 2) and mapinfo.nplayers >= 3 and mapinfo.playertypes[3] == "person") then
-			MapPersonPlayer = 2
-		elseif (mapinfo.description == "Caverns of Chaincolt" and civilization_list[race:getSelected() + 1] == "Dwarf" and (faction_list[faction:getSelected() + 1] == _("Shorbear Clan") or faction_list[faction:getSelected() + 1] == _("Shinsplitter Clan")) and mapinfo.nplayers >= 2 and mapinfo.playertypes[2] == "person") then
-			MapPersonPlayer = 1
-		end
-
-		if (MapPersonPlayer > 0) then -- only do this if the person player is not 0, as otherwise it's unnecessary to do it
-			for i=1,mapinfo.nplayers do
-				if ((i - 1) ~= MapPersonPlayer and mapinfo.playertypes[i] == "person") then
-					GameSettings.Presets[i-1].Type = PlayerComputer
+		-- get maps in subdirectories of the maps folder
+		for j=1,table.getn(dirlist) do
+			fileslist = ListFilesInDirectory(MapDirectories[map_directory] .. dirlist[j])
+			for i,f in ipairs(fileslist) do
+				if (string.find(f, "^.*%.smp%.?g?z?$")) then
+					maps[u] = MapDirectories[map_directory] .. dirlist[j] .. f
+					u = u + 1
 				end
 			end
 		end
-	  if (civilization_list[race:getSelected() + 1] ~= _("Map Default")) then
-			local chosen_civilization = civilization_list[race:getSelected() + 1]
-			chosen_civilization = string.gsub(chosen_civilization, "Human %- ", "")
-			chosen_civilization = string.lower(chosen_civilization)
-			GameSettings.Presets[MapPersonPlayer].Race = GetCivilizationID(chosen_civilization)
-	  end
-      GameSettings.Resources = resources:getSelected()
-      if (faction:getSelected() == 0) then
-        PlayerFaction = ""
-      else
-        PlayerFaction = faction_list[faction:getSelected() + 1]
-      end
-      GameSettings.Opponents = opponents:getSelected()
-      GameSettings.NumUnits = numunits:getSelected()
-	  GameSettings.Difficulty = difficulty:getSelected() + 1
-      GameSettings.GameType = gametype:getSelected() - 1
-	  if (tech_level:getSelected() > 0) then
-		for i=1,mapinfo.nplayers do
-			TechLevel[i] = tech_level_list[tech_level:getSelected() + 1]
+
+		-- build the world list from world references in the maps
+		for i=1,table.getn(maps) do
+			MapWorld = ""
+			GetMapInfo(maps[i])
+			if (MapWorld ~= "" and MapWorld ~= "None" and GetArrayIncludes(world_list, _(MapWorld)) == false) then
+				table.insert(world_list, _(MapWorld))
+			elseif (MapWorld == "") then
+				custom_map_present = true
+			end
 		end
-	  end
-	  if (max_tech_level:getSelected() > 0) then
-		for i=1,mapinfo.nplayers do
-			MaxTechLevel[i] = max_tech_level_list[max_tech_level:getSelected() + 1]
-		end
-	  end
-      GameSettings.NoRandomness = wyr.preferences.NoRandomness
-	  
-	  RunningScenario = true
-	  
-      RunMap(mapname)
-      menu:stop()
-    end)
-  menu:addFullButton(_("~!Cancel Game"), "c", offx + 640 - 224 - 16, offy + 360 + 36*2, function() menu:stop() end)
-
-  menu:addLabel(_("World:"), offx + 40, offy + (10 + 120) - 20, Fonts["game"], false)
-  world = menu:addDropDown(world_list, offx + 40, offy + 10 + 120,
-    function(dd) WorldChanged() end)
-  world:setSize(152, 20)
-  world:setSelected(0)
-
-  menu:addLabel(_("Map:"), offx + 220, offy + (10 + 120) - 20, Fonts["game"], false)
-  scenario = menu:addDropDown(scenario_list, offx + 220, offy + 10 + 120,
-    function(dd) ScenarioChanged() end)
-  scenario:setSize(152, 20)
-
-  menu:addLabel(_("Difficulty:"), offx + 640 - 224 - 16, offy + (10 + 120) - 20, Fonts["game"], false)
-  difficulty = menu:addDropDown(difficulty_list, offx + 640 - 224 - 16, offy + 10 + 120,
-    function(dd)
-		wyr.preferences.Difficulty = difficulty:getSelected() + 1
-		SavePreferences()
 	end
-  )
-  difficulty:setSize(152, 20)
-  difficulty:setSelected(wyr.preferences.Difficulty - 1)
-
-  menu:addLabel(_("Your Civilization:"), offx + 40, offy + (10 + 180) - 20, Fonts["game"], false)
-  race = menu:addDropDown(civilization_list, offx + 40, offy + 10 + 180,
-    function(dd) CivilizationChanged() end)
-  race:setSize(152, 20)
-
-  menu:addLabel(_("Your Faction:"), offx + 220, offy + (10 + 180) - 20, Fonts["game"], false)
-  faction = menu:addDropDown({_("Map Default")}, offx + 220, offy + 10 + 180,
-    function(dd) end)
-  faction:setSize(152, 20)
-
-  menu:addLabel(_("Resources:"), offx + 640 - 224 - 16, offy + (10 + 180) - 20, Fonts["game"], false)
-  resources = menu:addDropDown({_("Map Default"), _("Low"), _("Medium"), _("High")}, offx + 640 - 224 - 16, offy + 10 + 180,
-    function(dd) end)
-  resources:setSize(152, 20)
-
-  menu:addLabel(_("Units:"), offx + 40, offy + (10 + 240) - 20, Fonts["game"], false)
-  numunits = menu:addDropDown({_("Map Default"), _("1 Worker"), _("Town Hall + Workers"), _("Basic Squad"), _("Improved Squad"), _("Advanced Squad")}, offx + 40, offy + 10 + 240,
-    function(dd) end)
-  numunits:setSize(152, 20)
-
-  local opponents_list = {_("Map Default"), _("1 Opponent"), _("2 Opponents"),
-    _("3 Opponents"), _("4 Opponents"), _("5 Opponents"), _("6 Opponents"), _("7 Opponents")}
-
-  menu:addLabel(_("Opponents:"), offx + 220, offy + (10 + 240) - 20, Fonts["game"], false)
-  opponents = menu:addDropDown(opponents_list, offx + 220, offy + 10 + 240,
-    function(dd) end)
-  opponents:setSize(152, 20)
-
-  menu:addLabel(_("Game Type:"), offx + 640 - 224 - 16, offy + (10 + 240) - 20, Fonts["game"], false)
-  gametype = menu:addDropDown(game_type_list, offx + 640 - 224 - 16, offy + 10 + 240,
-    function(dd) end)
-  gametype:setSize(152, 20)
-
-  menu:addLabel(_("Tech Level:"), offx + 40, offy + (10 + 300) - 20, Fonts["game"], false)
-  tech_level = menu:addDropDown(tech_level_list, offx + 40, offy + 10 + 300,
-    function(dd) TechLevelChanged() end)
-  tech_level:setSize(152, 20)
-
-  menu:addLabel(_("Max Tech Level:"), offx + 220, offy + (10 + 300) - 20, Fonts["game"], false)
-  max_tech_level = menu:addDropDown(max_tech_level_list, offx + 220, offy + 10 + 300,
-    function(dd) end)
-  max_tech_level:setSize(152, 20)
-
-  no_randomness = menu:addImageCheckBox(_("No Randomness"), offx + 640 - 224 - 16, offy + 10 + 300 + 3,
-	function()
-		wyr.preferences.NoRandomness = no_randomness:isMarked()
-		SavePreferences()
+	table.sort(world_list)
+	if (custom_map_present) then
+		table.insert(world_list, _("Custom"))
 	end
-  )
-  no_randomness:setMarked(wyr.preferences.NoRandomness)
-  
-  function WorldChanged()
-	scenario_list = {}
 
-	for i=1,table.getn(maps) do
-		MapWorld = ""
-		MapRequiredQuest = ""
-		GetMapInfo(maps[i])
-		if (MapWorld == world_list[world:getSelected() + 1] or (MapWorld == "" and world_list[world:getSelected() + 1] == "Custom")) then
-			if (MapRequiredQuest == "" or GetArrayIncludes(wyr.preferences.QuestsCompleted, MapRequiredQuest)) then
-				if (mapinfo.npersonplayers > 0) then
-					local map_description = _(mapinfo.description)
-					if (map_description == "") then
-						map_description = string.gsub(string.gsub(maps[i], ".smp", ""), "(.*)/", "")
+	mapl = menu:addLabel(string.sub(mapname, 6), offx + 16, offy + 360 + 24, Fonts["game"], false)
+	descriptionl = menu:addLabel("descriptionl", offx + 16, offy + 360, Fonts["game"], false)
+
+	menu:addLabel("~<Single Player Game Setup~>", offx + 640/2 + 12, offy + 72)
+	menu:addFullButton(_("~!Start Game"), "s", offx + 640 - 224 - 16, offy + 360 + 36*1,
+		function()
+			-- change the human player in special cases
+			if (mapinfo.description == "Chaincolt Foothills" and civilization_list[race:getSelected() + 1] == "Dwarf" and faction_list[faction:getSelected() + 1] == _("Shorbear Clan") and (opponents:getSelected() == 0 or opponents:getSelected() >= 2) and mapinfo.nplayers >= 3 and mapinfo.playertypes[3] == "person") then
+				MapPersonPlayer = 2
+			elseif (mapinfo.description == "Caverns of Chaincolt" and civilization_list[race:getSelected() + 1] == "Dwarf" and (faction_list[faction:getSelected() + 1] == _("Shorbear Clan") or faction_list[faction:getSelected() + 1] == _("Shinsplitter Clan")) and mapinfo.nplayers >= 2 and mapinfo.playertypes[2] == "person") then
+				MapPersonPlayer = 1
+			end
+
+			if (MapPersonPlayer > 0) then -- only do this if the person player is not 0, as otherwise it's unnecessary to do it
+				for i=1,mapinfo.nplayers do
+					if ((i - 1) ~= MapPersonPlayer and mapinfo.playertypes[i] == "person") then
+						GameSettings.Presets[i-1].Type = PlayerComputer
 					end
-					table.insert(scenario_list, map_description)
+				end
+			end
+			if (civilization_list[race:getSelected() + 1] ~= _("Map Default")) then
+				local chosen_civilization = civilization_list[race:getSelected() + 1]
+				chosen_civilization = string.gsub(chosen_civilization, "Human %- ", "")
+				chosen_civilization = string.lower(chosen_civilization)
+				GameSettings.Presets[MapPersonPlayer].Race = GetCivilizationID(chosen_civilization)
+			end
+			GameSettings.Resources = resources:getSelected()
+			if (faction:getSelected() == 0) then
+				PlayerFaction = ""
+			else
+				PlayerFaction = faction_list[faction:getSelected() + 1]
+			end
+			GameSettings.Opponents = opponents:getSelected()
+			GameSettings.NumUnits = numunits:getSelected()
+			GameSettings.Difficulty = difficulty:getSelected() + 1
+			GameSettings.GameType = gametype:getSelected() - 1
+			if (tech_level:getSelected() > 0) then
+				for i=1,mapinfo.nplayers do
+					TechLevel[i] = tech_level_list[tech_level:getSelected() + 1]
+				end
+			end
+			if (max_tech_level:getSelected() > 0) then
+				for i=1,mapinfo.nplayers do
+					MaxTechLevel[i] = max_tech_level_list[max_tech_level:getSelected() + 1]
+				end
+			end
+			GameSettings.NoRandomness = wyr.preferences.NoRandomness
+
+			RunningScenario = true
+
+			RunMap(mapname)
+			menu:stop()
+		end
+	)
+	menu:addFullButton(_("~!Cancel Game"), "c", offx + 640 - 224 - 16, offy + 360 + 36*2, function() menu:stop() end)
+
+	menu:addLabel(_("World:"), offx + 40, offy + (10 + 120) - 20, Fonts["game"], false)
+	world = menu:addDropDown(world_list, offx + 40, offy + 10 + 120,
+		function(dd) WorldChanged() end)
+	world:setSize(152, 20)
+	world:setSelected(0)
+
+	menu:addLabel(_("Map:"), offx + 220, offy + (10 + 120) - 20, Fonts["game"], false)
+	scenario = menu:addDropDown(scenario_list, offx + 220, offy + 10 + 120,
+		function(dd) ScenarioChanged() end)
+	scenario:setSize(152, 20)
+
+	menu:addLabel(_("Difficulty:"), offx + 640 - 224 - 16, offy + (10 + 120) - 20, Fonts["game"], false)
+	difficulty = menu:addDropDown(difficulty_list, offx + 640 - 224 - 16, offy + 10 + 120,
+		function(dd)
+			wyr.preferences.Difficulty = difficulty:getSelected() + 1
+			SavePreferences()
+		end
+	)
+	difficulty:setSize(152, 20)
+	difficulty:setSelected(wyr.preferences.Difficulty - 1)
+
+	menu:addLabel(_("Your Civilization:"), offx + 40, offy + (10 + 180) - 20, Fonts["game"], false)
+	race = menu:addDropDown(civilization_list, offx + 40, offy + 10 + 180,
+		function(dd) CivilizationChanged() end)
+	race:setSize(152, 20)
+
+	menu:addLabel(_("Your Faction:"), offx + 220, offy + (10 + 180) - 20, Fonts["game"], false)
+	faction = menu:addDropDown({_("Map Default")}, offx + 220, offy + 10 + 180,
+		function(dd) end)
+	faction:setSize(152, 20)
+
+	menu:addLabel(_("Resources:"), offx + 640 - 224 - 16, offy + (10 + 180) - 20, Fonts["game"], false)
+	resources = menu:addDropDown({_("Map Default"), _("Low"), _("Medium"), _("High")}, offx + 640 - 224 - 16, offy + 10 + 180,
+		function(dd) end)
+	resources:setSize(152, 20)
+
+	menu:addLabel(_("Units:"), offx + 40, offy + (10 + 240) - 20, Fonts["game"], false)
+	numunits = menu:addDropDown({_("Map Default"), _("1 Worker"), _("Town Hall + Workers"), _("Basic Squad"), _("Improved Squad"), _("Advanced Squad")}, offx + 40, offy + 10 + 240,
+		function(dd) end)
+	numunits:setSize(152, 20)
+
+	local opponents_list = {_("Map Default"), _("1 Opponent"), _("2 Opponents"), _("3 Opponents"), _("4 Opponents"), _("5 Opponents"), _("6 Opponents"), _("7 Opponents")}
+
+	menu:addLabel(_("Opponents:"), offx + 220, offy + (10 + 240) - 20, Fonts["game"], false)
+	opponents = menu:addDropDown(opponents_list, offx + 220, offy + 10 + 240,
+		function(dd) end)
+	opponents:setSize(152, 20)
+
+	menu:addLabel(_("Game Type:"), offx + 640 - 224 - 16, offy + (10 + 240) - 20, Fonts["game"], false)
+	gametype = menu:addDropDown(game_type_list, offx + 640 - 224 - 16, offy + 10 + 240, function(dd) end)
+	gametype:setSize(152, 20)
+
+	menu:addLabel(_("Tech Level:"), offx + 40, offy + (10 + 300) - 20, Fonts["game"], false)
+	tech_level = menu:addDropDown(tech_level_list, offx + 40, offy + 10 + 300, function(dd) TechLevelChanged() end)
+	tech_level:setSize(152, 20)
+
+	menu:addLabel(_("Max Tech Level:"), offx + 220, offy + (10 + 300) - 20, Fonts["game"], false)
+	max_tech_level = menu:addDropDown(max_tech_level_list, offx + 220, offy + 10 + 300, function(dd) end)
+	max_tech_level:setSize(152, 20)
+
+	menu:addLabel(_("Custom Hero:"), offx + 640 - 224 - 16, offy + (10 + 300) - 20, Fonts["game"], false)
+	hero_dd = menu:addDropDown(hero_list, offx + 640 - 224 - 16, offy + 10 + 300,
+		function(dd)
+			SetCurrentCustomHero(hero_list[hero_dd:getSelected() + 1])
+		end
+	)
+	hero_dd:setSize(152, 20)
+	
+	no_randomness = menu:addImageCheckBox(_("No Randomness"), offx + 640 - 224 - 16, offy + 10 + 300 + 3 + 45,
+		function()
+			wyr.preferences.NoRandomness = no_randomness:isMarked()
+			SavePreferences()
+		end
+	)
+	no_randomness:setMarked(wyr.preferences.NoRandomness)
+
+	function WorldChanged()
+		scenario_list = {}
+
+		for i=1,table.getn(maps) do
+			MapWorld = ""
+			MapRequiredQuest = ""
+			GetMapInfo(maps[i])
+			if (MapWorld == world_list[world:getSelected() + 1] or (MapWorld == "" and world_list[world:getSelected() + 1] == "Custom")) then
+				if (MapRequiredQuest == "" or GetArrayIncludes(wyr.preferences.QuestsCompleted, MapRequiredQuest)) then
+					if (mapinfo.npersonplayers > 0) then
+						local map_description = _(mapinfo.description)
+						if (map_description == "") then
+							map_description = string.gsub(string.gsub(maps[i], ".smp", ""), "(.*)/", "")
+						end
+						table.insert(scenario_list, map_description)
+					end
 				end
 			end
 		end
+
+		table.sort(scenario_list)
+		scenario:setList(scenario_list)
+		scenario:setSize(152, 20)
+		scenario:setSelected(0)
+		ScenarioChanged()
 	end
 
-	table.sort(scenario_list)
-	scenario:setList(scenario_list)
-	scenario:setSize(152, 20)
-	scenario:setSelected(0)
-	ScenarioChanged()
-  end
-
-  function ScenarioChanged()
-	for i=1,table.getn(maps) do
-		MapWorld = ""
-		GetMapInfo(maps[i])
-		if (
-			(
-				_(mapinfo.description) == scenario_list[scenario:getSelected() + 1]
-				or string.gsub(string.gsub(maps[i], ".smp", ""), "(.*)/", "") == scenario_list[scenario:getSelected() + 1]
-			)
-			and (
-				_(MapWorld) == _(world_list[world:getSelected() + 1])
-				or (
-					MapWorld == ""
-					and world_list[world:getSelected() + 1] == "Custom"
+	function ScenarioChanged()
+		for i=1,table.getn(maps) do
+			MapWorld = ""
+			GetMapInfo(maps[i])
+			if (
+				(
+					_(mapinfo.description) == scenario_list[scenario:getSelected() + 1]
+					or string.gsub(string.gsub(maps[i], ".smp", ""), "(.*)/", "") == scenario_list[scenario:getSelected() + 1]
 				)
-			)
-		) then
-			mapname = maps[i]
-			mapl:setCaption(string.sub(mapname, 6))
+				and (
+					_(MapWorld) == _(world_list[world:getSelected() + 1])
+					or (
+						MapWorld == ""
+						and world_list[world:getSelected() + 1] == "Custom"
+					)
+				)
+			) then
+				mapname = maps[i]
+				mapl:setCaption(string.sub(mapname, 6))
+			end
 		end
+
+		GetMapInfo(mapname)
+		MapChanged()
+	end
+
+	function CivilizationChanged()
+		faction_list = {_("Map Default")}
+		
+		local new_civilization = civilization_list[race:getSelected() + 1]
+		new_civilization = string.gsub(new_civilization, "Human %- ", "")
+		new_civilization = string.lower(new_civilization)
+		
+		if (race:getSelected() > 0) then
+			for i=1,table.getn(GetCivilizationFactionNames(new_civilization)) do
+				if ((GetFactionData(new_civilization, GetCivilizationFactionNames(new_civilization)[i], "Type") == "tribe" and (tech_level:getSelected() - 1 == -1 or tech_level_list[tech_level:getSelected() + 1] == "Agrarian (Bronze)" or tech_level_list[tech_level:getSelected() + 1] == "Agrarian (Iron)")) or (GetFactionData(new_civilization, GetCivilizationFactionNames(new_civilization)[i], "Type") == "polity" and (tech_level_list[tech_level:getSelected() + 1] == "Civilized (Bronze)" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Iron)"))) then
+					if (GetFactionData(new_civilization, GetCivilizationFactionNames(new_civilization)[i], "Playable")) then
+						table.insert(faction_list, GetCivilizationFactionNames(new_civilization)[i])
+					end
+				end
+			end
+		end
+		faction:setList(faction_list)
+		faction:setSize(152, 20)
+		faction:setSelected(0)
+		
+		hero_list = nil
+		hero_list = {}
+		if (race:getSelected() > 0) then
+			local custom_heroes = GetCustomHeroes()
+			for i=1,table.getn(custom_heroes) do
+				if (
+					(GetCustomHeroData(custom_heroes[i], "Civilization") == new_civilization)
+					or ((new_civilization == "germanic" or new_civilization == "teuton") and (GetCustomHeroData(custom_heroes[i], "Civilization") == "germanic" or GetCustomHeroData(custom_heroes[i], "Civilization") == "teuton"))
+				) then
+					table.insert(hero_list, custom_heroes[i])
+				end
+			end
+		end
+		table.sort(hero_list)
+		table.insert(hero_list, "") -- to allow players to choose having no custom hero selected
+		hero_dd:setList(hero_list)
+		hero_dd:setSize(152, 20)
+		hero_dd:setSelected(table.getn(hero_list) - 1)
+	end
+
+	function TechLevelChanged()
+		max_tech_level_list = {_("Map Default")}
+		
+		if (tech_level:getSelected() - 1 == -1 or tech_level_list[tech_level:getSelected() + 1] == "Agrarian (Bronze)") then
+			table.insert(max_tech_level_list, _("Agrarian (Bronze)"))
+		end
+		if (tech_level:getSelected() - 1 == -1 or tech_level_list[tech_level:getSelected() + 1] == "Agrarian (Bronze)" or tech_level_list[tech_level:getSelected() + 1] == "Agrarian (Iron)") then
+			table.insert(max_tech_level_list, _("Agrarian (Iron)"))
+		end
+		if (tech_level:getSelected() - 1 == -1 or tech_level_list[tech_level:getSelected() + 1] == "Agrarian (Bronze)" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Bronze)") then
+			table.insert(max_tech_level_list, _("Civilized (Bronze)"))
+		end
+		table.insert(max_tech_level_list, _("Civilized (Iron)"))
+		
+		max_tech_level:setList(max_tech_level_list)
+		max_tech_level:setSize(152, 20)
+		max_tech_level:setSelected(0)
+		BuildCivilizationList()
+	end
+
+	function BuildCivilizationList()
+		civilization_list = {}
+		
+		local civilizations = GetCivilizations()
+		for i=1,table.getn(civilizations) do
+			if (GetCivilizationData(civilizations[i], "Playable")) then
+				if (
+					(civilizations[i] ~= "germanic" or tech_level_list[tech_level:getSelected() + 1] == "Map Default" or tech_level_list[tech_level:getSelected() + 1] == "Agrarian (Bronze)")
+					and (civilizations[i] ~= "teuton" or tech_level_list[tech_level:getSelected() + 1] == "Agrarian (Iron)" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Bronze)" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Iron)")
+					and (civilizations[i] ~= "english" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Iron)")
+				) then
+					local playable_civilization_species = CapitalizeString(GetCivilizationData(civilizations[i], "Species"))
+					local playable_civilization = CapitalizeString(civilizations[i])
+					if (playable_civilization_species ~= playable_civilization) then
+						table.insert(civilization_list, _(playable_civilization_species .. " - " .. playable_civilization))
+					else
+						table.insert(civilization_list, _(playable_civilization))
+					end
+				end
+			end
+		end
+		
+		table.sort(civilization_list)
+		table.insert(civilization_list, 1, _("Map Default"))
+		
+		
+		race:setList(civilization_list)
+		race:setSize(152, 20)
+		race:setSelected(0)
+		CivilizationChanged()
+	end
+	
+	function MapChanged()
+		mapl:setCaption(string.sub(mapname, 6))
+		mapl:adjustSize()
+
+		local map_description = _("Map:") .. " " .. _(mapinfo.description)
+		descriptionl:setCaption(map_description ..
+			" (" .. mapinfo.w .. " x " .. mapinfo.h .. ")")
+		descriptionl:adjustSize()
+
+		local o = {}
+		for i=1,mapinfo.nplayers do
+			table.insert(o, opponents_list[i])
+		end
+		opponents:setList(o)
+		opponents:setSize(152, 20)
+
+		game_type_list = nil
+		game_type_list = {_("Use Map Settings"), _("Melee"), _("Free for All"), _("Top vs Bottom"), _("Left vs Right"), _("Man vs Machine")}
+		gametype:setList(game_type_list)
+		gametype:setSize(152, 20)
+		gametype:setSelected(0)
 	end
 
 	GetMapInfo(mapname)
 	MapChanged()
-  end
 
-  function CivilizationChanged()
-    faction_list = {_("Map Default")}
-	
-	local factions_civilization = civilization_list[race:getSelected() + 1]
-	factions_civilization = string.gsub(factions_civilization, "Human %- ", "")
-	factions_civilization = string.lower(factions_civilization)
-	
-	if (race:getSelected() > 0) then
-		for i=1,table.getn(GetCivilizationFactionNames(factions_civilization)) do
-			if ((GetFactionData(factions_civilization, GetCivilizationFactionNames(factions_civilization)[i], "Type") == "tribe" and (tech_level:getSelected() - 1 == -1 or tech_level_list[tech_level:getSelected() + 1] == "Agrarian (Bronze)" or tech_level_list[tech_level:getSelected() + 1] == "Agrarian (Iron)")) or (GetFactionData(factions_civilization, GetCivilizationFactionNames(factions_civilization)[i], "Type") == "polity" and (tech_level_list[tech_level:getSelected() + 1] == "Civilized (Bronze)" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Iron)"))) then
-				if (GetFactionData(factions_civilization, GetCivilizationFactionNames(factions_civilization)[i], "Playable")) then
-					table.insert(faction_list, GetCivilizationFactionNames(factions_civilization)[i])
-				end
-			end
-		end
-    end
-    faction:setList(faction_list)
-    faction:setSize(152, 20)
-    faction:setSelected(0)
-  end
+	WorldChanged()
+	TechLevelChanged()
 
-  function TechLevelChanged()
-	max_tech_level_list = {_("Map Default")}
-	
-    if (tech_level:getSelected() - 1 == -1 or tech_level_list[tech_level:getSelected() + 1] == "Agrarian (Bronze)") then
-		table.insert(max_tech_level_list, _("Agrarian (Bronze)"))
-	end
-    if (tech_level:getSelected() - 1 == -1 or tech_level_list[tech_level:getSelected() + 1] == "Agrarian (Bronze)" or tech_level_list[tech_level:getSelected() + 1] == "Agrarian (Iron)") then
-		table.insert(max_tech_level_list, _("Agrarian (Iron)"))
-	end
-    if (tech_level:getSelected() - 1 == -1 or tech_level_list[tech_level:getSelected() + 1] == "Agrarian (Bronze)" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Bronze)") then
-		table.insert(max_tech_level_list, _("Civilized (Bronze)"))
-	end
-	table.insert(max_tech_level_list, _("Civilized (Iron)"))
-	
-	max_tech_level:setList(max_tech_level_list)
-    max_tech_level:setSize(152, 20)
-    max_tech_level:setSelected(0)
-	BuildCivilizationList()
-  end
-
-  function BuildCivilizationList()
-	civilization_list = {}
-	
-	local civilizations = GetCivilizations()
-	for i=1,table.getn(civilizations) do
-		if (GetCivilizationData(civilizations[i], "Playable")) then
-			if (
-				(civilizations[i] ~= "germanic" or tech_level_list[tech_level:getSelected() + 1] == "Map Default" or tech_level_list[tech_level:getSelected() + 1] == "Agrarian (Bronze)")
-				and (civilizations[i] ~= "teuton" or tech_level_list[tech_level:getSelected() + 1] == "Agrarian (Iron)" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Bronze)" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Iron)")
-				and (civilizations[i] ~= "english" or tech_level_list[tech_level:getSelected() + 1] == "Civilized (Iron)")
-			) then
-				local playable_civilization_species = CapitalizeString(GetCivilizationData(civilizations[i], "Species"))
-				local playable_civilization = CapitalizeString(civilizations[i])
-				if (playable_civilization_species ~= playable_civilization) then
-					table.insert(civilization_list, _(playable_civilization_species .. " - " .. playable_civilization))
-				else
-					table.insert(civilization_list, _(playable_civilization))
-				end
-			end
-		end
-	end
-	
-	table.sort(civilization_list)
-	table.insert(civilization_list, 1, _("Map Default"))
-	
-	
-	race:setList(civilization_list)
-    race:setSize(152, 20)
-    race:setSelected(0)
-	CivilizationChanged()
-  end
-	
-  function MapChanged()
-	mapl:setCaption(string.sub(mapname, 6))
-	mapl:adjustSize()
-
-	local map_description = _("Map:") .. " " .. _(mapinfo.description)
-	descriptionl:setCaption(map_description ..
-		" (" .. mapinfo.w .. " x " .. mapinfo.h .. ")")
-	descriptionl:adjustSize()
-
-	local o = {}
-	for i=1,mapinfo.nplayers do
-		table.insert(o, opponents_list[i])
-	end
-	opponents:setList(o)
-	opponents:setSize(152, 20)
-
-	game_type_list = nil
-	game_type_list = {_("Use Map Settings"), _("Melee"), _("Free for All"), _("Top vs Bottom"), _("Left vs Right"), _("Man vs Machine")}
-	gametype:setList(game_type_list)
-	gametype:setSize(152, 20)
-	gametype:setSelected(0)
-  end
-
-  GetMapInfo(mapname)
-  MapChanged()
-
-  WorldChanged()
-  TechLevelChanged()
-  
-  menu:run()
+	menu:run()
 end
 
 function BuildProgramStartMenu()

@@ -234,7 +234,7 @@ https://github.com/Andrettin/Wyrmsun
 - Buildings no longer provide experience when destroyed.
 
 * Heroes
-- Custom heroes can now be created in the quest interface, and if one is selected the hero will appear alongside your starting units in quest scenarios. For now custom heroes are limited to dwarven Axefighters/Steelclads/Stonelords.
+- Custom heroes can now be created in the quest interface, and if one is selected the hero will appear alongside your starting units in quest scenarios. Custom heroes are also available in (single-player) custom games if an appropriate civilization is selected.
 
 * Items
 - Persistent heroes, Stonelords and Gryphon Riders now have an inventory in which they can carry items (such as potions). Other units can still use potions by right-clicking on them, but they can't carry them around. Items are saved for persistent heroes.

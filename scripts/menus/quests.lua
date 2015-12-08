@@ -132,10 +132,12 @@ function RunQuestMenu(world)
 	local hero_dd
 	table.sort(hero_list)
 	table.insert(hero_list, "") -- to allow players to choose having no custom hero selected
-	menu:addLabel(_("Hero:"), offx + 40, offy + (10 + 300) - 20, Fonts["game"], false)
+	menu:addLabel(_("Custom Hero:"), offx + 40, offy + (10 + 300) - 20, Fonts["game"], false)
 	hero_dd = menu:addDropDown(hero_list, offx + 40, offy + 10 + 300,
 		function(dd)
 			SetCurrentCustomHero(hero_list[hero_dd:getSelected() + 1])
+			menu:stop()
+			RunQuestMenu(world)
 		end
 	)
 	hero_dd:setSize(152, 20)
@@ -146,12 +148,10 @@ function RunQuestMenu(world)
 		end
 	)
 	
-	if (world == "Earth") then
+	if (GetCurrentCustomHero() ~= "" and GetCustomHeroData(GetCurrentCustomHero(), "Civilization") == "germanic" and GetArrayIncludes(wyr.preferences.QuestsCompleted, "Gylve's Realm")) then
 		menu:addFullButton(_("~!Advance Hero Civilization"), "a", offx + 208 - 226, offy + 212 + (36 * 4),
 			function()
-				if (GetCurrentCustomHero() ~= "" and GetCustomHeroData(GetCurrentCustomHero(), "Civilization") == "germanic" and GetArrayIncludes(wyr.preferences.QuestsCompleted, "Gylve's Realm")) then
-					CustomHeroCivilizationAdvancementMenu(world, menu)
-				end
+				CustomHeroCivilizationAdvancementMenu(world, menu)
 			end
 		)
 	end
