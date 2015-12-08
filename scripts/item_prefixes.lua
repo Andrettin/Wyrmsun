@@ -50,6 +50,11 @@ DefineUpgrade("upgrade-item-prefix-impregnable", {
 	ItemPrefix = {"armor", true, "shield", true, "helmet", true}
 })
 
+DefineUpgrade("upgrade-item-prefix-jinns", { -- homage to the pixel artist Jinn
+	Name = _("Jinn's"),
+	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "rapier", true, "spear", true, "sword", true, "throwing-axe", true}
+})
+
 DefineUpgrade("upgrade-item-prefix-penetrating", {
 	Name = _("Penetrating"),
 	ItemPrefix = {"arrows", true, "dagger", true, "javelin", true, "rapier", true, "spear", true, "sword", true}
@@ -103,6 +108,10 @@ DefineModifier("upgrade-item-prefix-glacial",
 
 DefineModifier("upgrade-item-prefix-impregnable",
 	{"Armor", 2}
+)
+
+DefineModifier("upgrade-item-prefix-jinns",
+	{"AirDamage", 2}
 )
 
 DefineModifier("upgrade-item-prefix-penetrating",
