@@ -53,6 +53,11 @@ DefineUpgrade("upgrade-item-suffix-of-flame", {
 	IncompatibleAffixes = {"upgrade-item-prefix-flaming"}
 })
 
+DefineUpgrade("upgrade-item-suffix-of-the-jinn", {
+	Name = _("of the Jinn"),
+	ItemSuffix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "rapier", true, "spear", true, "sword", true, "throwing-axe", true}
+})
+
 DefineUpgrade("upgrade-item-suffix-of-lightning", {
 	Name = _("of Lightning"),
 	ItemSuffix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "rapier", true, "spear", true, "sword", true, "throwing-axe", true}
@@ -121,6 +126,10 @@ DefineModifier("upgrade-item-suffix-of-fire",
 
 DefineModifier("upgrade-item-suffix-of-flame",
 	{"FireDamage", 2}
+)
+
+DefineModifier("upgrade-item-suffix-of-the-jinn",
+	{"AirDamage", 2}
 )
 
 DefineModifier("upgrade-item-suffix-of-lightning",

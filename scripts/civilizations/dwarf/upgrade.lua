@@ -399,6 +399,10 @@ DefineDependency("unit-dwarven-dock",
 	{"unit-dwarven-lumber-mill"}
 )
 
+DefineDependency("unit-dwarven-transport-ship",
+	{"unit-dwarven-lumber-mill"}
+)
+
 DefineDependency("unit-dwarven-gryphon-rider",
 	{"unit-dwarven-stronghold", "unit-dwarven-lumber-mill"}
 )

@@ -511,22 +511,6 @@ DefineUnitType("unit-dwarven-yale-rider", { Name = _("Yale Rider"),
 	}
 } )
 
-DefineUnitType("unit-dwarven-ballista", { Name = _("Ballista"),
-	Parent = "unit-template-siege-engine",
-	Civilization = "dwarf",
-	Description = _("Dwarves employ heavy ballistas as their siege weapon of choice, with devastating effects on enemy fortifications."),
-	Image = {"file", "dwarf/units/dwarven_ballista.png", "size", {64, 64}},
-	Animations = "animations-dwarven-ballista", Icon = "icon-dwarven-ballista",
-	Missile = "missile-dwarven-ballista-bolt",
-	PierceDamage = true,
-	Sounds = {
-		"selected", "click",
---		"acknowledge", "ballista-acknowledge",
-		"ready", "dwarven-ballista-ready",
-		"help", "basic-dwarf-voices-help",
-		"dead", "explosion"
-} } )
-
 DefineUnitType("unit-dwarven-gryphon-rider", { Name = _("Gryphon Rider"),
 	Parent = "unit-template-flying-rider",
 	Civilization = "dwarf",
@@ -572,6 +556,45 @@ DefineUnitType("unit-dwarven-gryphon-rider", { Name = _("Gryphon Rider"),
 		"dead", "gryphon-dead"
 	}
 } )
+
+DefineUnitType("unit-dwarven-ballista", { Name = _("Ballista"),
+	Parent = "unit-template-siege-engine",
+	Civilization = "dwarf",
+	Description = _("Dwarves employ heavy ballistas as their siege weapon of choice, with devastating effects on enemy fortifications."),
+	Image = {"file", "dwarf/units/dwarven_ballista.png", "size", {64, 64}},
+	Animations = "animations-dwarven-ballista", Icon = "icon-dwarven-ballista",
+	Missile = "missile-dwarven-ballista-bolt",
+	PierceDamage = true,
+	Sounds = {
+		"selected", "click",
+--		"acknowledge", "ballista-acknowledge",
+		"ready", "dwarven-ballista-ready",
+		"help", "basic-dwarf-voices-help",
+		"dead", "explosion"
+	}
+})
+
+DefineUnitType("unit-dwarven-transport-ship", { Name = _("Transport"),
+	Parent = "unit-template-transport-ship",
+	Civilization = "dwarf",
+	Description = _("Sailing the Deep Sea and underground rivers alike, these ships are manned by hearty dwarven crews. Every journey brings back new tales, be it of a kobold dwarf-eating tribe, or of treacherous goblin pirates..."),
+	Image = {"file", "dwarf/units/transport.png", "size", {72, 72}},
+	Animations = "animations-transport-ship", Icon = "icon-dwarven-ballista",
+	Sounds = {
+		"selected", "basic-dwarf-voices-selected-group",
+		"acknowledge", "basic-dwarf-voices-acknowledge",
+		"attack", "basic-dwarf-voices-attack",
+		"ready", "dwarven-gryphon-rider-ready",
+		"help", "basic-dwarf-voices-help",
+--		"selected", "click",
+
+--		"acknowledge", "ship-acknowledge",
+--		"ready", "dwarven-ballista-ready",
+
+--		"help", "basic-dwarf-voices-help",
+		"dead", "explosion"
+	}
+})
 
 DefineUnitType("unit-dwarven-town-hall", { Name = _("Mead Hall"),
 	Parent = "unit-template-town-hall",

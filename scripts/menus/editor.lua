@@ -46,8 +46,9 @@ editor_types = {
    "unit-dwarven-thane",
    "unit-dwarven-scout",
    "unit-dwarven-yale-rider",
-   "unit-dwarven-ballista",
    "unit-dwarven-gryphon-rider",
+   "unit-dwarven-ballista",
+   "unit-dwarven-transport-ship",
 
    "unit-dwarven-town-hall",
    "unit-dwarven-stronghold",

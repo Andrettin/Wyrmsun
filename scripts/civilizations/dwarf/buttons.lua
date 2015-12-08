@@ -53,94 +53,107 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-boots",
 		"unit-teuton-catapult", 
 		"unit-slug", "unit-rat",
 		"unit-slime", "unit-yale", "unit-gryphon", "unit-wyrm",
+		"unit-dwarven-transport-ship",
 		"dwarf-group", "germanic-group", "teuton-group"
 	}
 } )
 
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-shield-1",
-  Action = "stop",
-  Key = "s", Hint = _("~!Stop"), Popup = "popup-commands",
-  ForUnit = {
-	"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane", "unit-dwarven-scout", "unit-dwarven-miner", "unit-dwarven-militia",
-	"unit-dwarven-yale-rider",
-	"unit-dwarven-ballista", "unit-dwarven-gryphon-rider",
-	"unit-gnomish-worker", "unit-gnomish-recruit", "unit-gnomish-herbalist", "unit-gnomish-caravan",
-	"unit-goblin-worker", "unit-goblin-thief", "unit-goblin-spearman", "unit-goblin-archer",
-	"unit-goblin-war-machine", "unit-goblin-glider",
-	"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
- 	"unit-slug", "unit-rat",
-	"unit-slime", "unit-yale", "unit-gryphon", "unit-wyrm",
- 	"dwarf-group"} } )
+	Action = "stop",
+	Key = "s", Hint = _("~!Stop"), Popup = "popup-commands",
+	ForUnit = {
+		"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane", "unit-dwarven-scout", "unit-dwarven-miner", "unit-dwarven-militia",
+		"unit-dwarven-yale-rider",
+		"unit-dwarven-ballista", "unit-dwarven-gryphon-rider",
+		"unit-gnomish-worker", "unit-gnomish-recruit", "unit-gnomish-herbalist", "unit-gnomish-caravan",
+		"unit-goblin-worker", "unit-goblin-thief", "unit-goblin-spearman", "unit-goblin-archer",
+		"unit-goblin-war-machine", "unit-goblin-glider",
+		"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
+		"unit-slug", "unit-rat",
+		"unit-slime", "unit-yale", "unit-gryphon", "unit-wyrm",
+		"unit-dwarven-transport-ship",
+		"dwarf-group"
+	}
+})
 
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-shield-2",
-  Action = "stop",
-  Allowed = "check-upgrade", AllowArg = {"upgrade-dwarven-shield-1"},
-  Key = "s", Hint = _("~!Stop"), Popup = "popup-commands",
-  ForUnit = {
-	"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane", "unit-dwarven-militia",
-	"unit-dwarven-yale-rider",
-	"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
- 	"dwarf-group"
-    } } )
+	Action = "stop",
+	Allowed = "check-upgrade", AllowArg = {"upgrade-dwarven-shield-1"},
+	Key = "s", Hint = _("~!Stop"), Popup = "popup-commands",
+	ForUnit = {
+		"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane", "unit-dwarven-militia",
+		"unit-dwarven-yale-rider",
+		"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
+		"dwarf-group"
+	}
+})
 
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-shield-3",
-  Action = "stop",
-  Allowed = "check-upgrade", AllowArg = {"upgrade-dwarven-shield-2"},
-  Key = "s", Hint = _("~!Stop"), Popup = "popup-commands",
-  ForUnit = {
-	"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane", "unit-dwarven-militia",
-	"unit-dwarven-yale-rider",
-	"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
- 	"dwarf-group"
-    } } )
+	Action = "stop",
+	Allowed = "check-upgrade", AllowArg = {"upgrade-dwarven-shield-2"},
+	Key = "s", Hint = _("~!Stop"), Popup = "popup-commands",
+	ForUnit = {
+		"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane", "unit-dwarven-militia",
+		"unit-dwarven-yale-rider",
+		"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
+		"dwarf-group"
+	}
+})
 
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-battle-axe",
-  Action = "attack",
-  Key = "a", Hint = _("~!Attack"), Popup = "popup-commands",
-  ForUnit = {
-	"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane", "unit-dwarven-miner", "unit-dwarven-militia",
-	"unit-dwarven-yale-rider",
-	"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
-	"unit-slug", "unit-rat",
-	"unit-slime", "unit-yale", "unit-gryphon", "unit-wyrm",
-	"dwarf-group"} } )
+	Action = "attack",
+	Key = "a", Hint = _("~!Attack"), Popup = "popup-commands",
+	ForUnit = {
+		"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane", "unit-dwarven-miner", "unit-dwarven-militia",
+		"unit-dwarven-yale-rider",
+		"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
+		"unit-slug", "unit-rat",
+		"unit-slime", "unit-yale", "unit-gryphon", "unit-wyrm",
+		"unit-dwarven-transport-ship",
+		"dwarf-group"
+	}
+})
 
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-broad-axe",
-  Action = "attack",
-  Allowed = "check-upgrade", AllowArg = {"upgrade-dwarven-broad-axe"},
-  Key = "a", Hint = _("~!Attack"), Popup = "popup-commands",
-  ForUnit = {
-	"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane", "unit-dwarven-militia",
-	"unit-dwarven-yale-rider",
-	"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
- 	"dwarf-group"
-    } } )
+	Action = "attack",
+	Allowed = "check-upgrade", AllowArg = {"upgrade-dwarven-broad-axe"},
+	Key = "a", Hint = _("~!Attack"), Popup = "popup-commands",
+	ForUnit = {
+		"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane", "unit-dwarven-militia",
+		"unit-dwarven-yale-rider",
+		"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
+		"dwarf-group"
+	}
+})
 
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-great-axe",
-  Action = "attack",
-  Allowed = "check-upgrade", AllowArg = {"upgrade-dwarven-great-axe"},
-  Key = "a", Hint = _("~!Attack"), Popup = "popup-commands",
-  ForUnit = {
-	"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane", "unit-dwarven-militia",
-	"unit-dwarven-yale-rider",
-	"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
- 	"dwarf-group"
-    } } )
+	Action = "attack",
+	Allowed = "check-upgrade", AllowArg = {"upgrade-dwarven-great-axe"},
+	Key = "a", Hint = _("~!Attack"), Popup = "popup-commands",
+	ForUnit = {
+		"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane", "unit-dwarven-militia",
+		"unit-dwarven-yale-rider",
+		"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
+		"dwarf-group"
+	}
+})
 
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-throwing-axe",
-  Action = "attack",
-  Key = "a", Hint = _("~!Attack"), Popup = "popup-commands",
-  ForUnit = {
-	"unit-dwarven-scout", "unit-dwarven-gryphon-rider"
-  } } )
+	Action = "attack",
+	Key = "a", Hint = _("~!Attack"), Popup = "popup-commands",
+	ForUnit = {
+		"unit-dwarven-scout", "unit-dwarven-gryphon-rider"
+	}
+})
 
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-sharp-throwing-axe",
-  Action = "attack",
-  Allowed = "check-upgrade", AllowArg = {"upgrade-dwarven-sharp-throwing-axe"},
-  Key = "a", Hint = _("~!Attack"), Popup = "popup-commands",
-  ForUnit = {
-	"unit-dwarven-scout", "unit-dwarven-gryphon-rider"
-  } } )
+	Action = "attack",
+	Allowed = "check-upgrade", AllowArg = {"upgrade-dwarven-sharp-throwing-axe"},
+	Key = "a", Hint = _("~!Attack"), Popup = "popup-commands",
+	ForUnit = {
+		"unit-dwarven-scout", "unit-dwarven-gryphon-rider"
+	}
+})
 
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-bearded-throwing-axe",
 	Action = "attack",
@@ -178,51 +191,59 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-ballista-bolt-3",
 } )
 
 DefineButton( { Pos = 4, Level = 0, Icon = "icon-dwarven-patrol-land",
-  Action = "patrol",
-  Key = "p", Hint = _("~!Patrol"), Popup = "popup-commands",
-  ForUnit = {
-	"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane", "unit-dwarven-militia", "unit-dwarven-scout",
-	"unit-dwarven-yale-rider",
-	"unit-dwarven-ballista", "unit-dwarven-gryphon-rider",
-	"unit-goblin-thief", "unit-goblin-spearman", "unit-goblin-archer",
-	"unit-goblin-war-machine", "unit-goblin-glider",
-	"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
-	"dwarf-group"
-  } } )
+	Action = "patrol",
+	Key = "p", Hint = _("~!Patrol"), Popup = "popup-commands",
+	ForUnit = {
+		"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane", "unit-dwarven-militia", "unit-dwarven-scout",
+		"unit-dwarven-yale-rider",
+		"unit-dwarven-ballista", "unit-dwarven-gryphon-rider",
+		"unit-goblin-thief", "unit-goblin-spearman", "unit-goblin-archer",
+		"unit-goblin-war-machine", "unit-goblin-glider",
+		"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
+		"unit-dwarven-transport-ship",
+		"dwarf-group"
+	}
+})
 
 DefineButton( { Pos = 5, Level = 0, Icon = "icon-dwarven-stand-ground",
-  Action = "stand-ground",
-  Key = "t", Hint = _("S~!tand Ground"), Popup = "popup-commands",
-  ForUnit = {
-  	"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane", "unit-dwarven-militia", "unit-dwarven-scout",
-	"unit-dwarven-yale-rider",
-	"unit-dwarven-ballista", "unit-dwarven-gryphon-rider",
-	"unit-gnomish-recruit", 
-	"unit-goblin-thief", "unit-goblin-spearman", "unit-goblin-archer", "unit-goblin-war-machine",
-	"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
-	"dwarf-group"} } )
+	Action = "stand-ground",
+	Key = "t", Hint = _("S~!tand Ground"), Popup = "popup-commands",
+	ForUnit = {
+		"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane", "unit-dwarven-militia", "unit-dwarven-scout",
+		"unit-dwarven-yale-rider",
+		"unit-dwarven-ballista", "unit-dwarven-gryphon-rider",
+		"unit-gnomish-recruit", 
+		"unit-goblin-thief", "unit-goblin-spearman", "unit-goblin-archer", "unit-goblin-war-machine",
+		"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
+		"dwarf-group"
+	}
+})
 
 DefineButton( { Pos = 6, Level = 0, Icon = "icon-attack-ground",
-  Action = "attack-ground",
-  Key = "g", Hint = _("Attack ~!Ground"), Popup = "popup-commands",
-  ForUnit = {"unit-dwarven-ballista", "dwarf-group"} } )
+	Action = "attack-ground",
+	Key = "g", Hint = _("Attack ~!Ground"), Popup = "popup-commands",
+	ForUnit = {"unit-dwarven-ballista", "dwarf-group"}
+})
 
--- miner specific actions ---------------------------------------------------
+-- Miner-specific actions ---------------------------------------------------
 
 DefineButton( { Pos = 4, Level = 0, Icon = "icon-repair",
-  Action = "repair",
-  Key = "r", Hint = _("~!Repair"), Popup = "popup-commands",
-  ForUnit = {"unit-dwarven-miner"} } )
+	Action = "repair",
+	Key = "r", Hint = _("~!Repair"), Popup = "popup-commands",
+	ForUnit = {"unit-dwarven-miner"}
+})
 
 DefineButton( { Pos = 5, Level = 0, Icon = "icon-harvest",
-  Action = "harvest",
-  Key = "h", Hint = _("~!Harvest Resource"), Popup = "popup-commands",
-  ForUnit = {"unit-dwarven-miner"} } )
+	Action = "harvest",
+	Key = "h", Hint = _("~!Harvest Resource"), Popup = "popup-commands",
+	ForUnit = {"unit-dwarven-miner"}
+})
 
 DefineButton( { Pos = 5, Level = 0, Icon = "icon-dwarven-return-goods",
-  Action = "return-goods",
-  Key = "g", Hint = _("Return with ~!Goods"), Popup = "popup-commands",
-  ForUnit = {"unit-dwarven-miner", "unit-gnomish-worker", "unit-goblin-worker" } } )
+	Action = "return-goods",
+	Key = "g", Hint = _("Return with ~!Goods"), Popup = "popup-commands",
+	ForUnit = {"unit-dwarven-miner", "unit-gnomish-worker", "unit-goblin-worker" }
+})
 
 -- Building Commands -----------------------------------------------
 
@@ -239,36 +260,42 @@ DefineButton( { Pos = 13, Level = 0, Icon = "icon-rally-point",
 -- build basic/advanced structs -----------------------------------------------
 
 DefineButton( { Pos = 6, Level = 0, Icon = "icon-build-basic-structure",
-  Action = "button", Value = 1,
-  Key = "b", Hint = _("~!Build Structure"), Popup = "popup-commands",
-  ForUnit = {"unit-dwarven-miner"} } )
+	Action = "button", Value = 1,
+	Key = "b", Hint = _("~!Build Structure"), Popup = "popup-commands",
+	ForUnit = {"unit-dwarven-miner"}
+})
 
--- simple buildings dwarf -----------------------------------------------------
+-- Buildings -----------------------------------------------------
 
 DefineButton( { Pos = 1, Level = 1, Icon = "icon-dwarven-town-hall",
-  Action = "build", Value = "unit-dwarven-town-hall",
-  Key = "h", Hint = _("Build Mead ~!Hall"), Popup = "popup-building",
-  ForUnit = {"unit-dwarven-miner"} } )
+	Action = "build", Value = "unit-dwarven-town-hall",
+	Key = "h", Hint = _("Build Mead ~!Hall"), Popup = "popup-building",
+	ForUnit = {"unit-dwarven-miner"}
+})
 
 DefineButton( { Pos = 2, Level = 1, Icon = "icon-dwarven-mushroom-farm",
-  Action = "build", Value = "unit-dwarven-mushroom-farm",
-  Key = "f", Hint = _("Build Mushroom ~!Farm"), Popup = "popup-building",
-  ForUnit = {"unit-dwarven-miner"} } )
+	Action = "build", Value = "unit-dwarven-mushroom-farm",
+	Key = "f", Hint = _("Build Mushroom ~!Farm"), Popup = "popup-building",
+	ForUnit = {"unit-dwarven-miner"}
+})
 
 DefineButton( { Pos = 3, Level = 1, Icon = "icon-dwarven-barracks",
-  Action = "build", Value = "unit-dwarven-barracks",
-  Key = "w", Hint = _("Build ~!War Hall"), Popup = "popup-building",
-  ForUnit = {"unit-dwarven-miner"} } )
+	Action = "build", Value = "unit-dwarven-barracks",
+	Key = "w", Hint = _("Build ~!War Hall"), Popup = "popup-building",
+	ForUnit = {"unit-dwarven-miner"}
+})
 
 DefineButton( { Pos = 4, Level = 1, Icon = "icon-dwarven-lumber-mill",
-  Action = "build", Value = "unit-dwarven-lumber-mill",
-  Key = "l", Hint = _("Build ~!Lumber Mill"), Popup = "popup-building",
-  ForUnit = {"unit-dwarven-miner", "unit-gnomish-worker"} } )
+	Action = "build", Value = "unit-dwarven-lumber-mill",
+	Key = "l", Hint = _("Build ~!Lumber Mill"), Popup = "popup-building",
+	ForUnit = {"unit-dwarven-miner", "unit-gnomish-worker"}
+})
 
 DefineButton( { Pos = 5, Level = 1, Icon = "icon-dwarven-smithy",
-  Action = "build", Value = "unit-dwarven-smithy",
-  Key = "s", Hint = _("Build ~!Smithy"), Popup = "popup-building",
-  ForUnit = {"unit-dwarven-miner", "unit-gnomish-worker"} } )
+	Action = "build", Value = "unit-dwarven-smithy",
+	Key = "s", Hint = _("Build ~!Smithy"), Popup = "popup-building",
+	ForUnit = {"unit-dwarven-miner", "unit-gnomish-worker"}
+})
 
 DefineButton( { Pos = 6, Level = 1, Icon = "icon-dwarven-yale-pen",
 	Action = "build", Value = "unit-dwarven-yale-pen",
@@ -307,9 +334,10 @@ DefineButton( { Pos = 11, Level = 1, Icon = "icon-copper-mine",
 } )
 
 DefineButton( { Pos = 16, Level = 1, Icon = "icon-cancel",
-  Action = "button", Value = 0,
-  Key = "escape", Hint = _("Cancel (~<Esc~>)"), Popup = "popup-commands",
-  ForUnit = {"unit-dwarven-miner"} } )
+	Action = "button", Value = 0,
+	Key = "escape", Hint = _("Cancel (~<Esc~>)"), Popup = "popup-commands",
+	ForUnit = {"unit-dwarven-miner"}
+})
 
 -- Building Commands ---------------------------------------------------------
 
@@ -353,6 +381,12 @@ DefineButton( { Pos = 5, Level = 0, Icon = "icon-surghan-mercenary-steelclad",
 	Action = "train-unit", Value = "unit-surghan-mercenary-steelclad",
 	Key = "s", Hint = _("Hire ~!Surghan Mercenaries"), Popup = "popup-unit",
 	ForUnit = {"unit-mercenary-camp"}
+} )
+
+DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-ballista",
+	Action = "train-unit", Value = "unit-dwarven-transport-ship",
+	Key = "t", Hint = _("Build ~!Transport"), Popup = "popup-unit",
+	ForUnit = {"unit-dwarven-dock"}
 } )
 
 -- Researches ---------------------------------------------------------

@@ -174,6 +174,12 @@ function RunTechTreeMenu(civilization_number)
 					if ((GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("lumber-mill", civilization)) == false and GetTechnologyPointCost(civilization, GetCivilizationClassUnitType("lumber-mill", civilization)) > 0) or (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("smithy", civilization)) == false and GetTechnologyPointCost(civilization, GetCivilizationClassUnitType("smithy", civilization)) > 0)) then
 						tech_allowed = false
 					end
+				elseif (GetUnitTypeData(unitName, "Class") == "transport-ship") then
+					tech_icon_x = 6
+					tech_icon_y = 6
+					if ((GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("dock", civilization)) == false and GetTechnologyPointCost(civilization, GetCivilizationClassUnitType("dock", civilization)) > 0)) then
+						tech_allowed = false
+					end
 				elseif (GetUnitTypeData(unitName, "Class") == "flying-rider") then
 					tech_icon_x = 8
 					tech_icon_y = 4
@@ -451,6 +457,9 @@ function GetTechnologyAllowsString(technology, civilization)
 				table.insert(allowed_technologies, GetCivilizationClassUnitType("cavalry", civilization))
 			end
 		elseif (GetUnitTypeData(technology, "Class") == "dock") then
+			if (GetCivilizationClassUnitType("transport-ship", civilization) ~= nil) then
+				table.insert(allowed_technologies, GetCivilizationClassUnitType("transport-ship", civilization))
+			end
 		elseif (GetUnitTypeData(technology, "Class") == "watch-tower") then
 			if (GetCivilizationClassUnitType("guard-tower", civilization) ~= nil) then
 				table.insert(allowed_technologies, GetCivilizationClassUnitType("guard-tower", civilization))

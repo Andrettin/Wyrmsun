@@ -10,8 +10,7 @@
 --
 --      anim.lua - The unit animation definitions.
 --
---      (c) Copyright 2000-2011 by Josh Cogliati, Lutz Sammer,
---                                 Jimmy Salmon and Pali Rohár
+--      (c) Copyright 2000-2015 by Josh Cogliati, Lutz Sammer, Jimmy Salmon, Pali Rohár and Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -1452,4 +1451,20 @@ DefineAnimations("animations-raft", {
 		"unbreakable end", "wait 1",
 	},
 	Death = BuildingStill,
+})
+
+DefineAnimations("animations-transport-ship", {
+	Still = {"frame 0", "wait 4", "frame 0", "wait 1",},
+	Move = {
+		"unbreakable begin", "frame 0", "move 2", "wait 1", "frame 0", "move 2", "wait 1",
+		"frame 0", "move 2", "wait 1", "frame 0", "move 2", "wait 1",
+		"frame 0", "move 2", "wait 1", "frame 0", "move 2", "wait 1",
+		"frame 0", "move 2", "wait 1", "frame 0", "move 2", "wait 1",
+		"frame 0", "move 2", "wait 1", "frame 0", "move 2", "wait 1",
+		"frame 0", "move 2", "wait 1", "frame 0", "move 2", "wait 1",
+		"frame 0", "move 2", "wait 1", "frame 0", "move 2", "wait 1",
+		"frame 0", "move 2", "wait 1", "frame 0", "move 2", "unbreakable end", "wait 1",
+	},
+	Attack = {"unbreakable begin", "frame 0", "attack", "wait 119", "frame 0", "unbreakable end", "wait 1",},
+	Death = {"unbreakable begin", "frame 5", "wait 50", "frame 10", "wait 50", "frame 10", "unbreakable end", "wait 1",}
 })
