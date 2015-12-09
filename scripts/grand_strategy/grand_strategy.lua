@@ -1382,6 +1382,7 @@ function RunGrandStrategyLoadGameMenu()
 			if (saved_games:getSelected() < 0) then
 				return
 			end
+			SetCurrentCustomHero("")
 			CleanGrandStrategyGame()
 			InitializeGrandStrategyGame()
 			
