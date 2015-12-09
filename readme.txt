@@ -260,6 +260,7 @@ https://github.com/Andrettin/Wyrmsun
 * Units
 - Improved the calculation of the XP required for level up.
 - Improved the XP bar display.
+- Added Dwarven Transport (graphics by Jinn).
 
 -----------------------------------------------------------------------
 - 1.7.5

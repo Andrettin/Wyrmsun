@@ -470,30 +470,6 @@ function StandardTriggers()
 					end
 				end
 				
-				-- upgrade AI units that have leveled up and are capable of doing so
-				if (GetPlayerData(GetUnitVariable(uncount[unit1], "Player"), "AiEnabled") and GetUnitVariable(uncount[unit1], "LevelUp") >= 1) then
-					if (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-axefighter") then
-						SetUnitVariable(uncount[unit1], "LevelUp", GetUnitVariable(uncount[unit1], "LevelUp") - 1)
-						ConvertUnit(uncount[unit1], "unit-dwarven-steelclad")
-					elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-steelclad") then
-						SetUnitVariable(uncount[unit1], "LevelUp", GetUnitVariable(uncount[unit1], "LevelUp") - 1)
-						ConvertUnit(uncount[unit1], "unit-dwarven-thane")
-					elseif (GetUnitVariable(uncount[unit1], "Ident") == "unit-surghan-mercenary-steelclad") then
-						SetUnitVariable(uncount[unit1], "LevelUp", GetUnitVariable(uncount[unit1], "LevelUp") - 1)
-						ConvertUnit(uncount[unit1], "unit-surghan-mercenary-thane")
-					else -- for other units, learn an ability, if any are present for learning
-						for i=1,table.getn(GetUnitTypeLevelUpUpgrades(GetUnitVariable(uncount[unit1], "Ident"))) do
-							if (string.find(GetUnitTypeLevelUpUpgrades(GetUnitVariable(uncount[unit1], "Ident"))[i], "upgrade-") ~= nil and GetUnitVariable(uncount[unit1], "IndividualUpgrade", GetUnitTypeLevelUpUpgrades(GetUnitVariable(uncount[unit1], "Ident"))[i]) == false) then
-								if not (
-									GetUnitTypeLevelUpUpgrades(GetUnitVariable(uncount[unit1], "Ident"))[i] == "upgrade-deadly-precision" and GetUnitVariable(uncount[unit1], "IndividualUpgrade", "upgrade-critical-strike") == false
-								) then
-									AcquireAbility(uncount[unit1], GetUnitTypeLevelUpUpgrades(GetUnitVariable(uncount[unit1], "Ident"))[i])
-								end
-							end
-						end
-					end
-				end
-
 				-- make AI guard towers be filled with defenders
 				if (GetPlayerData(GetUnitVariable(uncount[unit1], "Player"), "AiEnabled") and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Class") == "guard-tower"  and GetUnitVariable(uncount[unit1], "Transport") < 2) then
 					unit = CreateUnitInTransporter(GetCivilizationClassUnitType("shooter", GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Civilization")), GetUnitVariable(uncount[unit1], "Player"), uncount[unit1])
@@ -523,10 +499,6 @@ function StandardTriggers()
 							end
 						end
 					end
-				end
-
-				if (GetUnitVariable(uncount[unit1], "Level") < GetUnitVariable(uncount[unit1], "StartingLevel")) then
-					IncreaseUnitLevel(uncount[unit1], (GetUnitVariable(uncount[unit1], "StartingLevel") - GetUnitVariable(uncount[unit1], "Level")), false)
 				end
 
 				-- fix starting level for upgraded units
@@ -681,7 +653,7 @@ function StandardTriggers()
 				if (GetUnitVariable(uncount[unit1], "XPRequired") > 0 and GetUnitVariable(uncount[unit1], "Xp") >= GetUnitVariable(uncount[unit1], "XPRequired") and GetUnitBoolFlag(uncount[unit1], "Building") == false and GetUnitBoolFlag(uncount[unit1], "organic") and GetUnitBoolFlag(uncount[unit1], "Fauna") == false) then
 					SetUnitVariable(uncount[unit1], "Xp", GetUnitVariable(uncount[unit1], "Xp") - GetUnitVariable(uncount[unit1], "XPRequired"))
 					SetUnitVariable(uncount[unit1], "Xp", GetUnitVariable(uncount[unit1], "Xp", "Max") - GetUnitVariable(uncount[unit1], "XPRequired"), "Max")
-					IncreaseUnitLevel(uncount[unit1], 1, true)
+					IncreaseUnitLevel(uncount[unit1], 1)
 					if (GetUnitVariable(uncount[unit1], "Player") == GetThisPlayer()) then
 						if (GetUnitVariable(uncount[unit1], "Character") ~= "") then
 							AddMessage(GetUnitVariable(uncount[unit1], "Character") .. " has leveled up!")
@@ -1492,9 +1464,6 @@ function InitializeUnit(unit)
 			SetUnitVariable(unit, "LifeStage", (SyncRand(13) + 1))
 		end
 	end
-	if (GetUnitVariable(unit, "Level") < GetUnitVariable(unit, "StartingLevel")) then
-		IncreaseUnitLevel(unit, (GetUnitVariable(unit, "StartingLevel") - GetUnitVariable(unit, "Level")), false)
-	end
 end
 
 function DeathExplosion(unit, pixel_x, pixel_y)
@@ -1590,28 +1559,6 @@ function GetCharacterNamePersonalPronoun(character_name, type, is_capitalized)
 			else
 				return "it"
 			end
-		end
-	end
-end
-
-function IncreaseUnitLevel(unit, level_number, advancement)
-	if (unit ~= nil) then
-		while (level_number > 0) do
-			SetUnitVariable(unit, "Level", GetUnitVariable(unit, "Level") + 1)
-			if (GetUnitVariable(unit, "StartingLevel") < GetUnitVariable(unit, "Level")) then
-				SetUnitVariable(unit, "Points", GetUnitVariable(unit, "Points", "Max") + (5 * (GetUnitVariable(unit, "Level") + 1)), "Max")
-				SetUnitVariable(unit, "Points", GetUnitVariable(unit, "Points") + (5 * (GetUnitVariable(unit, "Level") + 1)))
-			end
-			if (advancement) then
-				SetUnitVariable(unit, "LevelUp", GetUnitVariable(unit, "LevelUp") + 1)
-				-- if the unit's level is greater than the availability of level-up upgrades for it, increase its HP instead
-				if (GetUnitVariable(unit, "Level") > table.getn(GetUnitTypeLevelUpUpgrades(GetUnitVariable(unit, "Ident"))) + GetUnitVariable(unit, "StartingLevel")) then
-					SetUnitVariable(unit, "HitPoints", GetUnitVariable(unit, "HitPoints", "Max") + 15, "Max")
-					SetUnitVariable(unit, "LevelUp", GetUnitVariable(unit, "LevelUp") - 1)
-				end
-			end
-			SetUnitVariable(unit, "HitPoints", GetUnitVariable(unit, "HitPoints", "Max"))
-			level_number = level_number - 1
 		end
 	end
 end

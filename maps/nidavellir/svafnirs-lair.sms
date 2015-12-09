@@ -162,8 +162,7 @@ if (GrandStrategy == false) then
 		unit = CreateUnit("unit-dwarven-thane", 0, {16, 16})
 		SetUnitVariable(unit, "Character", "Thursagan")
 		unit = CreateUnit("unit-dwarven-gryphon-rider", 0, {16, 16}) -- Krawg
-		IncreaseUnitLevel(unit, 1, true)
-		AcquireAbility(unit, "upgrade-critical-strike")
+		IncreaseUnitLevel(unit, 1)
 	end
 
 	-- base for the Shinsplitters
@@ -216,12 +215,10 @@ if (GrandStrategy == false) then
 	SetUnitVariable(unit, "Active", false)
 	unit = CreateUnit("unit-dwarven-scout", 1, {4, 28})
 	SetUnitVariable(unit, "Active", false)
-	IncreaseUnitLevel(unit, 2, true)
-	AcquireAbility(unit, "upgrade-critical-strike")
+	IncreaseUnitLevel(unit, 2)
 	unit = CreateUnit("unit-dwarven-scout", 1, {4, 28})
 	SetUnitVariable(unit, "Active", false)
-	IncreaseUnitLevel(unit, 2, true)
-	AcquireAbility(unit, "upgrade-critical-strike")
+	IncreaseUnitLevel(unit, 2)
 
 	-- abandoned dwarven buildings
 	unit = CreateUnit("unit-dwarven-smithy", 3, {31, 49})

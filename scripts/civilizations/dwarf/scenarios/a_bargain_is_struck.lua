@@ -240,7 +240,7 @@ AddTrigger(
 																														{"~!Continue"},
 																														{function(s)
 																															unit = CreateUnit("unit-gnomish-recruit", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y}) -- gnomish envoy who holds the ruby
-																															IncreaseUnitLevel(unit, 1, true)
+																															IncreaseUnitLevel(unit, 1)
 																															AcquireAbility(unit, "upgrade-sword-mastery")
 																															if (GetThisPlayer() == GetFactionPlayer("Shinsplitter Clan")) then
 																																-- if human-controlled player is Shinsplitter Clan, then tell the caravans to move

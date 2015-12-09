@@ -27,8 +27,8 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-function DefineUpgrade(upgrade, data)
-	upgrade = CUpgrade:New(upgrade)
+function DefineUpgrade(upgrade_ident, data)
+	upgrade = CUpgrade:New(upgrade_ident)
 	if (data.Parent ~= nil) then
 		upgrade.Name = CUpgrade:Get(data.Parent).Name
 		upgrade.Icon = CUpgrade:Get(data.Parent).Icon
@@ -50,8 +50,8 @@ function DefineUpgrade(upgrade, data)
 		upgrade.Ability = CUpgrade:Get(data.Parent).Ability
 		upgrade.Weapon = CUpgrade:Get(data.Parent).Weapon
 		upgrade.Shield = CUpgrade:Get(data.Parent).Shield
-		upgrade.ItemPrefix = CUpgrade:Get(data.Parent).ItemPrefix
-		upgrade.ItemSuffix = CUpgrade:Get(data.Parent).ItemSuffix
+		upgrade.Boots = CUpgrade:Get(data.Parent).Boots
+		upgrade.Arrows = CUpgrade:Get(data.Parent).Arrows
 	end
 	if (data.Name ~= nil) then
 		upgrade.Name = data.Name
@@ -99,13 +99,15 @@ function DefineUpgrade(upgrade, data)
 	end
 	if (data.Weapon ~= nil) then
 		upgrade.Weapon = data.Weapon
-	elseif (data.Parent == nil) then
-		upgrade.Weapon = false
 	end
 	if (data.Shield ~= nil) then
 		upgrade.Shield = data.Shield
-	elseif (data.Parent == nil) then
-		upgrade.Shield = false
+	end
+	if (data.Boots ~= nil) then
+		upgrade.Boots = data.Boots
+	end
+	if (data.Arrows ~= nil) then
+		upgrade.Arrows = data.Arrows
 	end
 	if (data.ItemPrefix ~= nil) then
 		for i = 1,table.getn(data.ItemPrefix),2 do
@@ -121,6 +123,15 @@ function DefineUpgrade(upgrade, data)
 		for i = 1,table.getn(data.IncompatibleAffixes) do
 			upgrade.IncompatibleAffixes[CUpgrade:Get(data.IncompatibleAffixes[i]).ID] = true
 		end
+	end
+	if (data.RequiredAbilities ~= nil) then
+		for i = 1,table.getn(data.RequiredAbilities) do
+			AddUpgradeRequiredAbility(upgrade_ident, data.RequiredAbilities[i])
+		end
+	end
+	
+	if (upgrade.Ability) then
+		DefineAllow(upgrade_ident, "AAAAAAAAAAAAAAAA")
 	end
 end
 
@@ -390,37 +401,46 @@ function ApplyTechLevels()
 	end
 end
 
--- neutral upgrades
-local upgrades = {
-	{"upgrade-axe-mastery", _("Axe Mastery"), "icon-axe-mastery"},
-	{"upgrade-sword-mastery", _("Sword Mastery"), "icon-sword-mastery"},
-	{"upgrade-critical-strike", _("Critical Strike"), "icon-critical-strike"},
-	{"upgrade-deadly-precision", _("Deadly Precision"), "icon-deadly-precision"},
-	{"upgrade-eagle-eye", _("Eagle Eye"), "icon-eagle-eye"},
-	{"upgrade-portent", _("Portent"), "icon-portent"}
-}
+-- Learnable Abilities
 
-for i = 1,table.getn(upgrades) do
-	u = CUpgrade:New(upgrades[i][1])
-	u.Name = upgrades[i][2]
-	u.Icon = Icons[upgrades[i][3]]
-	u.Class = ""
-	u.Description = ""
-	u.Quote = ""
-	u.Background = ""
-	for j = 1,7 do
-		u.Costs[j - 1] = 0
-	end
-	u.TechnologyPointCost = 0
-	u.Ability = true
-	DefineAllow(upgrades[i][1], "AAAAAAAAAAAAAAAA")
-end
+DefineUpgrade("upgrade-axe-mastery", {
+	Name = _("Axe Mastery"),
+	Icon = "icon-axe-mastery",
+	Ability = true
+})
+
+DefineUpgrade("upgrade-critical-strike", {
+	Name = _("Critical Strike"),
+	Icon = "icon-critical-strike",
+	Ability = true
+})
+
+DefineUpgrade("upgrade-deadly-precision", {
+	Name = _("Deadly Precision"),
+	Icon = "icon-deadly-precision",
+	RequiredAbilities = {"upgrade-critical-strike"},
+	Ability = true
+})
+
+DefineUpgrade("upgrade-eagle-eye", {
+	Name = _("Eagle Eye"),
+	Icon = "icon-eagle-eye",
+	Ability = true
+})
+
+DefineUpgrade("upgrade-portent", {
+	Name = _("Portent"),
+	Icon = "icon-portent",
+	Ability = true
+})
+
+DefineUpgrade("upgrade-sword-mastery", {
+	Name = _("Sword Mastery"),
+	Icon = "icon-sword-mastery",
+	Ability = true
+})
 
 DefineModifier("upgrade-axe-mastery",
-	{"BasicDamage", 2}
-)
-
-DefineModifier("upgrade-sword-mastery",
 	{"BasicDamage", 2}
 )
 
@@ -434,6 +454,10 @@ DefineModifier("upgrade-deadly-precision",
 
 DefineModifier("upgrade-eagle-eye",
 	{"Accuracy", 2}
+)
+
+DefineModifier("upgrade-sword-mastery",
+	{"BasicDamage", 2}
 )
 
 -- traits

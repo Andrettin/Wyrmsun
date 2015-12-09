@@ -21,7 +21,7 @@ if (LoadedGame == false) then
 		uncount = GetUnits(2)
 		for unit1 = 1,table.getn(uncount) do 
 			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-thane") then
-				IncreaseUnitLevel(uncount[unit1], 3 - GetUnitVariable(uncount[unit1], "Level"), false)
+				IncreaseUnitLevel(uncount[unit1], 3 - GetUnitVariable(uncount[unit1], "Level"))
 				IncreaseUnitLevel(uncount[unit1], 1) -- make Fjalar's and Galar's level be 4
 			end
 		end

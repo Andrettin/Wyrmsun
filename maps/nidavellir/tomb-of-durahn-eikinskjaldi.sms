@@ -76,62 +76,62 @@ if (GameSettings.Difficulty == 1) then -- if difficulty is easy
 	unit = CreateUnit("unit-gnomish-recruit", 1, {16, 6}) -- originally Durahn as an undead wight, but since Wyrmsun's universe doesn't have undead, make this a particularly powerful gnomish raider instead
 elseif (GameSettings.Difficulty == 2) then -- if difficulty is normal
 	unit = CreateUnit("unit-gnomish-recruit", 1, {8, 9})
-	--IncreaseUnitLevel(unit, 1, true)
+	--IncreaseUnitLevel(unit, 1)
 	unit = CreateUnit("unit-gnomish-recruit", 1, {9, 10})
-	--IncreaseUnitLevel(unit, 1, true)
+	--IncreaseUnitLevel(unit, 1)
 	
 	unit = CreateUnit("unit-gnomish-recruit", 1, {9, 7})
-	--IncreaseUnitLevel(unit, 1, true)
+	--IncreaseUnitLevel(unit, 1)
 	unit = CreateUnit("unit-gnomish-recruit", 1, {10, 7})
-	--IncreaseUnitLevel(unit, 1, true)
+	--IncreaseUnitLevel(unit, 1)
 	unit = CreateUnit("unit-gnomish-recruit", 1, {11, 8})
-	--IncreaseUnitLevel(unit, 1, true)
+	--IncreaseUnitLevel(unit, 1)
 	unit = CreateUnit("unit-gnomish-recruit", 1, {11, 9})
-	--IncreaseUnitLevel(unit, 1, true)
+	--IncreaseUnitLevel(unit, 1)
 
 	unit = CreateUnit("unit-gnomish-recruit", 1, {14, 11})
-	--IncreaseUnitLevel(unit, 1, true)
+	--IncreaseUnitLevel(unit, 1)
 	unit = CreateUnit("unit-gnomish-recruit", 1, {15, 12})
-	--IncreaseUnitLevel(unit, 1, true)
+	--IncreaseUnitLevel(unit, 1)
 
 	unit = CreateUnit("unit-gnomish-recruit", 1, {17, 10})
-	--IncreaseUnitLevel(unit, 3, true)
-	IncreaseUnitLevel(unit, 1, true)
+	--IncreaseUnitLevel(unit, 3)
+	IncreaseUnitLevel(unit, 1)
 	unit = CreateUnit("unit-potion-of-healing", 15, {16, 10})
 
 	unit = CreateUnit("unit-gnomish-recruit", 1, {16, 6}) -- originally Durahn as an undead wight, but since Wyrmsun's universe doesn't have undead, make this a particularly powerful gnomish raider instead
-	--IncreaseUnitLevel(unit, 2, true)
-	IncreaseUnitLevel(unit, 1, true)
+	--IncreaseUnitLevel(unit, 2)
+	IncreaseUnitLevel(unit, 1)
 elseif (GameSettings.Difficulty == 3 or GameSettings.Difficulty == 4) then -- if difficulty is hard or brutal
 	unit = CreateUnit("unit-gnomish-recruit", 1, {8, 9})
-	IncreaseUnitLevel(unit, 1, true)
+	IncreaseUnitLevel(unit, 1)
 	unit = CreateUnit("unit-gnomish-recruit", 1, {9, 10})
-	IncreaseUnitLevel(unit, 1, true)
+	IncreaseUnitLevel(unit, 1)
 	
 	unit = CreateUnit("unit-gnomish-recruit", 1, {9, 7})
-	IncreaseUnitLevel(unit, 1, true)
+	IncreaseUnitLevel(unit, 1)
 	unit = CreateUnit("unit-gnomish-recruit", 1, {10, 7})
-	IncreaseUnitLevel(unit, 1, true)
+	IncreaseUnitLevel(unit, 1)
 	unit = CreateUnit("unit-gnomish-recruit", 1, {11, 8})
-	IncreaseUnitLevel(unit, 1, true)
+	IncreaseUnitLevel(unit, 1)
 	unit = CreateUnit("unit-gnomish-recruit", 1, {11, 9})
-	IncreaseUnitLevel(unit, 1, true)
+	IncreaseUnitLevel(unit, 1)
 
 	unit = CreateUnit("unit-gnomish-recruit", 1, {14, 11})
-	IncreaseUnitLevel(unit, 1, true)
+	IncreaseUnitLevel(unit, 1)
 	unit = CreateUnit("unit-gnomish-recruit", 1, {15, 12})
-	IncreaseUnitLevel(unit, 1, true)
+	IncreaseUnitLevel(unit, 1)
 
 	unit = CreateUnit("unit-gnomish-recruit", 1, {17, 10})
 	if (GameSettings.Difficulty == 3) then
-		IncreaseUnitLevel(unit, 2, true)
+		IncreaseUnitLevel(unit, 2)
 		unit = CreateUnit("unit-potion-of-healing", 15, {16, 10})
 	elseif (GameSettings.Difficulty == 4) then
-		IncreaseUnitLevel(unit, 3, true)
+		IncreaseUnitLevel(unit, 3)
 	end
 
 	unit = CreateUnit("unit-gnomish-recruit", 1, {16, 6}) -- originally Durahn as an undead wight, but since Wyrmsun's universe doesn't have undead, make this a particularly powerful gnomish raider instead
-	IncreaseUnitLevel(unit, 2, true)
+	IncreaseUnitLevel(unit, 2)
 end
 
 unit = CreateUnit("unit-bones", 15, {6, 8})

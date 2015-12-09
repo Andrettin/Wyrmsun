@@ -79,25 +79,22 @@ if (LoadedGame == false) then
 	end
 	
 	unit = CreateUnit("unit-goblin-spearman", 1, {59, 53})
-	IncreaseUnitLevel(unit, 1, true)
+	IncreaseUnitLevel(unit, 1)
 	if (GameSettings.Difficulty == 4) then -- if difficulty is brutal
-		IncreaseUnitLevel(unit, 1, true)
+		IncreaseUnitLevel(unit, 1)
 	end
-	AcquireAbility(unit, "upgrade-critical-strike")
 	
 	unit = CreateUnit("unit-goblin-spearman", 2, {55, 29})
-	IncreaseUnitLevel(unit, 1, true)
+	IncreaseUnitLevel(unit, 1)
 	if (GameSettings.Difficulty == 4) then -- if difficulty is brutal
-		IncreaseUnitLevel(unit, 1, true)
+		IncreaseUnitLevel(unit, 1)
 	end
-	AcquireAbility(unit, "upgrade-critical-strike")
 	
 	unit = CreateUnit("unit-goblin-spearman", 3, {35, 17})
-	IncreaseUnitLevel(unit, 1, true)
+	IncreaseUnitLevel(unit, 1)
 	if (GameSettings.Difficulty == 4) then -- if difficulty is brutal
-		IncreaseUnitLevel(unit, 1, true)
+		IncreaseUnitLevel(unit, 1)
 	end
-	AcquireAbility(unit, "upgrade-critical-strike")
 		
 	CreateCoalMines(1, 12500, Map.Info.MapWidth / 2, Map.Info.MapWidth - 3, Map.Info.MapHeight / 2, Map.Info.MapHeight - 3, false)
 	CreateCoalMines(1, 12500, 0, Map.Info.MapWidth / 2, 0, Map.Info.MapHeight / 2, false)

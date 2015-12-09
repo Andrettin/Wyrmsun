@@ -551,8 +551,8 @@ DefineLanguageNoun("Gneissus", {
 	Meaning = "?",
 	SingularNominative = "Gneissus",
 	Gender = "Feminine",
-	NameSingular = true,
-	PersonalName = true -- example: "Gneissus" (from Dyson Logos' The Tomb of Durâhn Oakenshield)
+--	NameSingular = true,
+--	PersonalName = true -- example: "Gneissus" (from Dyson Logos' The Tomb of Durâhn Oakenshield)
 })
 
 DefineLanguageNoun("Goldemar", {

@@ -350,7 +350,7 @@ AddTrigger(
 																															{function(s)
 																																if (GrandStrategy == false) then
 																																	unit = CreateUnit("unit-gnomish-recruit", 0, {6, 5}) -- gnomish envoy
-																																	IncreaseUnitLevel(unit, 1, true)
+																																	IncreaseUnitLevel(unit, 1)
 																																	AcquireAbility(unit, "upgrade-sword-mastery")
 																																end
 																																if (mapinfo.description == "Shorbear Hills") then
