@@ -1156,6 +1156,9 @@ if not (ui_loaded_first_time) then
 				{ 	HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Class: "), TypeClass("Type")), Font = wyr.preferences.PopupDescriptionFont}}
 				},
+				{ 	Condition = {Unique = "only"}, HighlightColor = "yellow",
+					More = {"Text", {Text = _("Unique Item"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+				},
 				{ 	Condition = {BasicDamage = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Damage: +"), String(Add(UnitVar("BasicDamage","Value"), UnitVar("PiercingDamage","Value")))), Font = wyr.preferences.PopupDescriptionFont}}
 				},
