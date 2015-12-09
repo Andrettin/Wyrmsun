@@ -233,6 +233,9 @@ https://github.com/Andrettin/Wyrmsun
 - Guard Towers now provide +1 range for the ranged units attacking from within them.
 - Buildings no longer provide experience when destroyed.
 
+* Grand Strategy
+- Decreased the probability of revolts while increasing the amount of rebel troops per revolt, to make revolts more significant and less of a nuisance.
+
 * Heroes
 - Custom heroes can now be created in the quest interface, and if one is selected the hero will appear alongside your starting units in quest scenarios. Custom heroes are also available in (single-player) custom games if an appropriate civilization is selected.
 

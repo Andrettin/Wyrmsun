@@ -53,7 +53,7 @@ DefineUpgrade("upgrade-item-suffix-of-flame", {
 	IncompatibleAffixes = {"upgrade-item-prefix-flaming"}
 })
 
-DefineUpgrade("upgrade-item-suffix-of-the-jinn", { -- homage to the pixel artist Jinn
+DefineUpgrade("upgrade-item-suffix-of-the-jinn", {
 	Name = _("of the Jinn"),
 	ItemSuffix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "rapier", true, "spear", true, "sword", true, "throwing-axe", true},
 	IncompatibleAffixes = {"upgrade-item-prefix-jinns"}

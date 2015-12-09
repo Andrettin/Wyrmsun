@@ -50,7 +50,7 @@ DefineUpgrade("upgrade-item-prefix-impregnable", {
 	ItemPrefix = {"armor", true, "shield", true, "helmet", true}
 })
 
-DefineUpgrade("upgrade-item-prefix-jinns", { -- homage to the pixel artist Jinn
+DefineUpgrade("upgrade-item-prefix-jinns", {
 	Name = _("Jinn's"),
 	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "rapier", true, "spear", true, "sword", true, "throwing-axe", true}
 })

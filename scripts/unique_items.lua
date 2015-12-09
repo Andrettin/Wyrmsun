@@ -28,41 +28,50 @@
 DefineUniqueItem("Brimir", { -- sword from Norse mythology; best of swords; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 102.
 	Type = "unit-broad-sword",
 	Prefix = "upgrade-item-prefix-penetrating",
-	Suffix = "upgrade-item-suffix-of-victory"
+	Suffix = "upgrade-item-suffix-of-victory",
+	Quote = "\"Of all the gods | is Odin the greatest, / And Sleipnir the best of steeds; / Bifrost of bridges, | Bragi of skalds, / Hobrok of hawks, | Garm of hounds, / and Brimir of swords.\" - Grimnismol"
 } )
 
-DefineUniqueItem("Gram", { -- sword from Norse mythology; given by Odin to Sigmund, later broken; was reforged by Regin; was owned by Sigurd; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 365.
+DefineUniqueItem("Gram", { -- sword from Norse mythology; given by Odin to Sigmund, later broken; was reforged by Regin; was owned by Sigurd; Source: Henry Adams Bellows (transl.), "The Poetic Edda", pp. 351, 365.
 	Type = "unit-spatha",
 	Prefix = "upgrade-item-prefix-wounding",
-	Suffix = "upgrade-item-suffix-of-victory"
+	Suffix = "upgrade-item-suffix-of-victory",
+--	Quote = "\"My kin, methinks, | is unknown to thee, / And so am I myself; / Sigurd my name, | and Sigmund's son, / Who smote thee thus with the sword.\" - Fafnismol"
+	Quote = "\"With thy sword between, | three nights thou sleepest / With her thou winnest | for Gunnar's wife.\" - Gripisspo"
 } )
 
 DefineUniqueItem("Hrotti", { -- sword from Norse mythology; owned by Fafnir and taken from him by Sigurd; name means "Thruster"; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 385.
 	Type = "unit-spatha",
 	Prefix = "upgrade-item-prefix-penetrating",
-	Suffix = "upgrade-item-suffix-of-perfuration"
+	Suffix = "upgrade-item-suffix-of-perfuration",
+	Quote = "\"There he found a mighty store of gold, and he filled two chests full thereof; he took the fear-helm and a golden mail-coat and the sword Hrotti, and many other precious things.\" - Fafnismol"
 } )
 
-DefineUniqueItem("Laevatein", { -- sword from Norse mythology; "the Wounding Wand"; forged by Loki with runes at the gates of Niflheim; is placed under nine locks in Laegjarn's chest and guarded by Sinmora; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 124.
+DefineUniqueItem("Laevatein", { -- sword from Norse mythology; "the Wounding Wand"; forged by Loki with runes at the gates of Niflheim; is placed under nine locks in Laegjarn's chest and guarded by Sinmora; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 124; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 245.
 	Type = "unit-broad-sword",
 	Prefix = "upgrade-item-prefix-wounding",
-	Suffix = "upgrade-item-suffix-of-trickery"
+	Suffix = "upgrade-item-suffix-of-trickery",
+	Background = "In Norse mythology, Laevatein (\the Wounding Wand\") was a sword forged by Loki with runes at the doors of Niflheim, and was placed under nine locks in Laegjarn's chest, with Sinmora guarding over it.",
+	Quote = "\"Laevatein is there | that Lopt with runes / Once made by the doors of death; / In Laegjarn's chest | by Sinmora lies it, / And nine locks fasten it firm.\" - Svipdagsmol"
 } )
 
 DefineUniqueItem("Rithil", { -- sword from Norse mythology; owned by Regin and used by him to slay his brother Fafnir; name means "Swift-Moving"; is alternatively called "Refil" (serpent); Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 380.
 	Type = "unit-spatha",
 	Prefix = "upgrade-item-prefix-swift",
-	Suffix = "upgrade-item-suffix-of-betrayal"
+	Suffix = "upgrade-item-suffix-of-betrayal",
+	Quote = "\"Then Regin went up to Fafnir and cut out his heart with his sword, that was named Rithil, and then he drank blood from the wounds.\" - Fafnismol"
 } )
 
 DefineUniqueItem("Toporik", { -- name means "hatchet" in Russian; renaming of the Axe of Perun (Perun is a god from Slavic mythology), here made into a dwarven unique throwing axe (since it wouldn't make much sense for the dwarves to have a throwing axe named after a god from a human mythology); was made a dwarven item under the following premise: many scholars associate the Axe of Perun with Thor's Mjollnir hammer in function and origin, and the latter was made by dwarves
 	Type = "unit-bearded-throwing-axe",
 	Prefix = "upgrade-item-prefix-storm",
-	Suffix = "upgrade-item-suffix-of-victory"
+	Suffix = "upgrade-item-suffix-of-victory",
+	Quote = "\"The old god / Has nine sons: / Three strike, three thunder, / Three lighten.\" - Dwarven Traditional Poetry" -- Source: W. R. S. Ralston, "Songs of the Russian People", 1872, p. 90.
 } )
 
 DefineUniqueItem("Svalin", { -- shield from Norse mythology which stands in front of the sun, preventing the mountains and the sea from bursting into flames; name means "the Cooling"; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 63; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 100.
 	Type = "unit-bronze-shield",
 	Prefix = "upgrade-item-prefix-impregnable",
-	Suffix = "upgrade-item-suffix-of-extinguishment"
+	Suffix = "upgrade-item-suffix-of-extinguishment",
+	Quote = "\"In front of the sun | does Svalin stand, / The shield for the shining god; / Mountains and sea | would be set in flames / If it fell from before the sun.\" - Grimnismol"
 } )

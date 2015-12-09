@@ -1241,6 +1241,12 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {HasDescription = true}, HighlightColor = "yellow",
 					More = {"ButtonInfo", {InfoType = "Description", MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 				},
+				{ 	Margin = {1, 1}, Condition = {Unique = "only", Quote = true},
+					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
+				}, 
+				{ 	Condition = {Unique = "only", Quote = true}, HighlightColor = "yellow",
+					More = {"Text", {Text = UnitQuote("Unit"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+				},
 		}	
 	})
 
