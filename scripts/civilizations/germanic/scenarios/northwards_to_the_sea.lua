@@ -42,6 +42,13 @@ if (LoadedGame == false) then
 	if (GrandStrategyEventMap) then
 		-- Asa units
 		CreateProvinceUnits("Brandenburg", 4)
+		local all_heroes = GetGrandStrategyHeroes()
+		for i = 1, table.getn(all_heroes) do
+			if (GetProvinceHero("Brandenburg", all_heroes[i]) == 2 and GrandStrategyHeroIsCustom(all_heroes[i])) then
+				unit = CreateUnit("unit-germanic-warrior", 4, {Players[4].StartPos.x, Players[4].StartPos.y})
+				SetUnitVariable(unit, "CustomHero", all_heroes[i])
+			end
+		end
 		
 		-- native units
 		CreateProvinceUnits("Jutland", 1)

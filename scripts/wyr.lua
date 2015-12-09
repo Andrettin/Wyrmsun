@@ -263,7 +263,11 @@ function SetPlayerData(player, data, arg1, arg2)
 						or (arg1 == Defender and GetProvinceHero(AttackedProvince.Name, grand_strategy_heroes[i]) == 2) -- create heroes which are in the province for the defender
 					) then
 						unit = OldCreateUnit(GetGrandStrategyHeroUnitType(grand_strategy_heroes[i]), player, {Players[player].StartPos.x, Players[player].StartPos.y})
-						SetUnitVariable(unit, "Character", grand_strategy_heroes[i])
+						if (GrandStrategyHeroIsCustom(grand_strategy_heroes[i])) then
+							SetUnitVariable(unit, "CustomHero", grand_strategy_heroes[i])
+						else
+							SetUnitVariable(unit, "Character", grand_strategy_heroes[i])
+						end
 					end
 				end
 			end

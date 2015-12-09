@@ -641,32 +641,6 @@ function StandardTriggers()
 		end
 	)
 
-	-- increase unit level if it has enough experience
-	AddTrigger(
-		function()
-			return true
-		end,
-		function()
-			local uncount = 0
-			uncount = GetUnits("any")
-			for unit1 = 1,table.getn(uncount) do 
-				if (GetUnitVariable(uncount[unit1], "XPRequired") > 0 and GetUnitVariable(uncount[unit1], "Xp") >= GetUnitVariable(uncount[unit1], "XPRequired") and GetUnitBoolFlag(uncount[unit1], "Building") == false and GetUnitBoolFlag(uncount[unit1], "organic") and GetUnitBoolFlag(uncount[unit1], "Fauna") == false) then
-					SetUnitVariable(uncount[unit1], "Xp", GetUnitVariable(uncount[unit1], "Xp") - GetUnitVariable(uncount[unit1], "XPRequired"))
-					SetUnitVariable(uncount[unit1], "Xp", GetUnitVariable(uncount[unit1], "Xp", "Max") - GetUnitVariable(uncount[unit1], "XPRequired"), "Max")
-					IncreaseUnitLevel(uncount[unit1], 1)
-					if (GetUnitVariable(uncount[unit1], "Player") == GetThisPlayer()) then
-						if (GetUnitVariable(uncount[unit1], "Character") ~= "") then
-							AddMessage(GetUnitVariable(uncount[unit1], "Character") .. " has leveled up!")
-						else
-							AddMessage("Your " .. GetUnitTypeName(GetUnitVariable(uncount[unit1], "Ident")) .. " has leveled up!")
-						end
-					end
-				end
-			end
-			return true
-		end
-	)
-	
 	-- Tips
 	if (wyr.preferences.ShowTips and not IsReplayGame() and not IsNetworkGame()) then
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Level Up") == false) then

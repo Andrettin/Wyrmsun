@@ -221,6 +221,15 @@ local GermanicEvents = {
 								SetProvinceUnitQuantity("Astrakhan", unitName, 0)
 							end
 						end
+						local all_heroes = GetGrandStrategyHeroes()
+						local faction_heroes = GetPlayerData(0, "Heroes")
+						for i = 1, table.getn(all_heroes) do
+							if (GetArrayIncludes(faction_heroes, all_heroes[i])) then
+								SetProvinceHero("Brandenburg", all_heroes[i], 2)
+							elseif (GetProvinceHero("Astrakhan", all_heroes[i]) == 2) then
+								SetProvinceHero("Astrakhan", all_heroes[i], 0)
+							end
+						end
 						SetProvinceUnitQuantity("Astrakhan", "unit-germanic-worker", 1) -- keep one worker there, so that the province won't be entirely depopulated and the population will be able to regrow
 						AcquireProvince(WorldMapProvinces.Astrakhan, "")
 						SetProvinceCivilization("Astrakhan", "")
@@ -247,6 +256,12 @@ local GermanicEvents = {
 						elseif (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Class") == "worker") then
 							ChangeProvinceUnitQuantity("Brandenburg", unitName, GetProvinceUnitQuantity("Astrakhan", unitName))
 							SetProvinceUnitQuantity("Astrakhan", unitName, 0)
+						end
+					end
+					local all_heroes = GetGrandStrategyHeroes()
+					for i = 1, table.getn(all_heroes) do
+						if (GetProvinceHero("Astrakhan", all_heroes[i]) == 2) then
+							SetProvinceHero("Brandenburg", all_heroes[i], 2)
 						end
 					end
 					SetProvinceUnitQuantity("Astrakhan", "unit-germanic-worker", 1) -- keep one worker there, so that the province won't be entirely depopulated and the population will be able to regrow					
@@ -319,6 +334,15 @@ local GermanicEvents = {
 								SetProvinceUnitQuantity("Brandenburg", unitName, 0)
 							end
 						end
+						local all_heroes = GetGrandStrategyHeroes()
+						local faction_heroes = GetPlayerData(4, "Heroes")
+						for i = 1, table.getn(all_heroes) do
+							if (GetArrayIncludes(faction_heroes, all_heroes[i])) then
+								SetProvinceHero("Jutland", all_heroes[i], 2)
+							elseif (GetProvinceHero("Brandenburg", all_heroes[i]) == 2) then
+								SetProvinceHero("Brandenburg", all_heroes[i], 0)
+							end
+						end
 						SetProvinceUnitQuantity("Brandenburg", "unit-germanic-worker", 1) -- keep one worker there, so that the province won't be entirely depopulated and the population will be able to regrow
 						AcquireProvince(WorldMapProvinces.Brandenburg, "")
 						SetProvinceCivilization("Brandenburg", "")
@@ -346,6 +370,12 @@ local GermanicEvents = {
 							ChangeProvinceUnitQuantity("Jutland", unitName, GetProvinceUnitQuantity("Brandenburg", unitName) / 5)
 							ChangeProvinceUnitQuantity("Zealand", unitName, GetProvinceUnitQuantity("Brandenburg", unitName) - GetProvinceUnitQuantity("Jutland", unitName))
 							SetProvinceUnitQuantity("Brandenburg", unitName, 0)
+						end
+					end
+					local all_heroes = GetGrandStrategyHeroes()
+					for i = 1, table.getn(all_heroes) do
+						if (GetProvinceHero("Brandenburg", all_heroes[i]) == 2) then
+							SetProvinceHero("Jutland", all_heroes[i], 2)
 						end
 					end
 					SetProvinceUnitQuantity("Brandenburg", "unit-germanic-worker", 1) -- keep one worker there, so that the province won't be entirely depopulated and the population will be able to regrow
@@ -417,6 +447,15 @@ local GermanicEvents = {
 								ChangeProvinceUnitQuantity("Zealand", unitName, - GetProvinceUnitQuantity("Sweden", unitName) - GetProvinceUnitQuantity("Gotaland", unitName) - GetProvinceUnitQuantity("Scania", unitName))
 							end
 						end
+						local all_heroes = GetGrandStrategyHeroes()
+						local faction_heroes = GetPlayerData(0, "Heroes")
+						for i = 1, table.getn(all_heroes) do
+							if (GetArrayIncludes(faction_heroes, all_heroes[i])) then
+								SetProvinceHero("Sweden", all_heroes[i], 2)
+							elseif (GetProvinceHero("Jutland", all_heroes[i]) == 2) then
+								SetProvinceHero("Jutland", all_heroes[i], 0)
+							end
+						end
 						SetProvinceCurrentConstruction("Sweden", "unit-germanic-town-hall")
 						CenterGrandStrategyMapOnTile(WorldMapProvinces.Sweden.SettlementLocation[1], WorldMapProvinces.Sweden.SettlementLocation[2])
 						ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 25)
@@ -449,6 +488,12 @@ local GermanicEvents = {
 							ChangeProvinceUnitQuantity("Gotaland", unitName, GetProvinceUnitQuantity("Zealand", unitName) / 4)
 							ChangeProvinceUnitQuantity("Scania", unitName, GetProvinceUnitQuantity("Zealand", unitName) / 4)
 							ChangeProvinceUnitQuantity("Zealand", unitName, - GetProvinceUnitQuantity("Sweden", unitName) - GetProvinceUnitQuantity("Gotaland", unitName) - GetProvinceUnitQuantity("Scania", unitName))
+						end
+					end
+					local all_heroes = GetGrandStrategyHeroes()
+					for i = 1, table.getn(all_heroes) do
+						if (GetProvinceHero("Jutland", all_heroes[i]) == 2) then
+							SetProvinceHero("Sweden", all_heroes[i], 2)
 						end
 					end
 					SetProvinceCurrentConstruction("Sweden", "unit-germanic-town-hall")

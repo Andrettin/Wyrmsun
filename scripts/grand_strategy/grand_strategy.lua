@@ -81,10 +81,32 @@ function RunGrandStrategyGameSetupMenu()
 	local date_maximum = 0
 	local faction
 	local faction_list = {}
+	local faction_civilization_list = {}
 	local battalions
+	local hero_dd
+	local hero_list = {}
 	local automatic_battles
 	local no_randomness
 
+	local function FactionChanged()
+		hero_list = nil
+		hero_list = {}
+		local custom_heroes = GetCustomHeroes()
+		for i=1,table.getn(custom_heroes) do
+			if (
+				(GetCustomHeroData(custom_heroes[i], "Civilization") == faction_civilization_list[faction:getSelected() + 1])
+				or ((faction_civilization_list[faction:getSelected() + 1] == "germanic" or faction_civilization_list[faction:getSelected() + 1] == "teuton") and (GetCustomHeroData(custom_heroes[i], "Civilization") == "germanic" or GetCustomHeroData(custom_heroes[i], "Civilization") == "teuton"))
+			) then
+				table.insert(hero_list, custom_heroes[i])
+			end
+		end
+		table.sort(hero_list)
+		table.insert(hero_list, "") -- to allow players to choose having no custom hero selected
+		hero_dd:setList(hero_list)
+		hero_dd:setSize(152, 20)
+		hero_dd:setSelected(table.getn(hero_list) - 1)
+	end
+	
 	menu:addLabel(_("~<Grand Strategy Game Setup~>"), offx + 640/2 + 12, offy + 72)
 
 	menu:addFullButton(_("~!Start Game"), "s", offx + 208, offy + 212 + (36 * 4),
@@ -206,6 +228,7 @@ function RunGrandStrategyGameSetupMenu()
 --			CalculateFactionDisembarkmentProvinces()
 			
 			GrandStrategyGameInitialized = true
+			SetCurrentCustomHero("")
 			
 			InitGameSettings() -- initialize scenario variables (i.e. No Randomness)
 			
@@ -220,6 +243,7 @@ function RunGrandStrategyGameSetupMenu()
 		function()
 			menu:stop();
 			ClearGrandStrategyVariables()
+			SetCurrentCustomHero("")
 			SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
 		end)
 
@@ -245,7 +269,7 @@ function RunGrandStrategyGameSetupMenu()
 	
 	menu:addLabel(_("Faction:"), offx + 640 - 224 - 16, offy + (10 + 120) - 20, Fonts["game"], false)
 	faction = menu:addDropDown(faction_list, offx + 640 - 224 - 16, offy + 10 + 120,
-		function(dd) end)
+		function(dd) FactionChanged(); end)
 	faction:setSize(152, 20)
 
 	menu:addLabel(_("Tactical Unit Multiplier:"), offx + 40, offy + (10 + 180) - 20, Fonts["game"], false)
@@ -259,7 +283,15 @@ function RunGrandStrategyGameSetupMenu()
 	battalions:setSelected(wyr.preferences.GrandStrategyBattalionMultiplier - 1)
 	battalions:setTooltip(_("Multiplier for the quantity of units in battle (relative to the quantity of strategic map units)"))
 
-	automatic_battles = menu:addImageCheckBox(_("Automatic Battles"), offx + 220, offy + 10 + 180 + 3,
+	menu:addLabel(_("Custom Hero:"), offx + 220, offy + (10 + 180) - 20, Fonts["game"], false)
+	hero_dd = menu:addDropDown(hero_list, offx + 220, offy + 10 + 180,
+		function(dd)
+			SetCurrentCustomHero(hero_list[hero_dd:getSelected() + 1])
+		end
+	)
+	hero_dd:setSize(152, 20)
+	
+	automatic_battles = menu:addImageCheckBox(_("Automatic Battles"), offx + 640 - 224 - 16, offy + 10 + 180 + 3,
 		function()
 			wyr.preferences.AutomaticBattles = automatic_battles:isMarked()
 			SavePreferences()
@@ -267,7 +299,7 @@ function RunGrandStrategyGameSetupMenu()
 	)
 	automatic_battles:setMarked(wyr.preferences.AutomaticBattles)
   
-	no_randomness = menu:addImageCheckBox(_("No Randomness"), offx + 640 - 224 - 16, offy + 10 + 180 + 3,
+	no_randomness = menu:addImageCheckBox(_("No Randomness"), offx + 40, offy + 10 + 240 + 3,
 		function()
 			wyr.preferences.NoRandomness = no_randomness:isMarked()
 			SavePreferences()
@@ -363,18 +395,22 @@ function RunGrandStrategyGameSetupMenu()
 				Load("scripts/grand_strategy/" .. string.lower(world_list[world:getSelected() + 1]) .. "_history.lua");
 				
 				faction_list = {}
+				faction_civilization_list = {}
 				for key, value in pairsByKeys(Factions) do
 					if (GetFactionProvinceCountPreGame(Factions[key].Name) > 0 and GetCivilizationData(Factions[key].Civilization, "Playable") and GetFactionData(Factions[key].Civilization, Factions[key].Name, "Playable")) then
 						table.insert(faction_list, Factions[key].Name)
+						table.insert(faction_civilization_list, Factions[key].Civilization)
 					end
 				end
 			else
 				faction_list = {"Asa Tribe", "Modsogning Clan"}
+				faction_civilization_list = {"germanic", "dwarf"}
 			end
 
 			faction:setList(faction_list)
 			faction:setSize(152, 20)
 			faction:setSelected(0)
+			FactionChanged()
 			
 			bookmark:setList(bookmark_list)
 			bookmark:setSize(152, 20)
@@ -1397,6 +1433,7 @@ function RunGrandStrategyLoadGameMenu()
 				GrandStrategyMenu:stop();
 			end
 			InitGameSettings() -- initialize scenario variables (i.e. No Randomness)
+			SetCurrentCustomHero("")
 			RunGrandStrategyGame()
 		end)
 --	menu:addHalfButton("Delete", "", 384 - ((384 - 300 - 18) / 2) - 212, 256 - 16 - 27,
@@ -1736,10 +1773,18 @@ function AddGrandStrategyHeroButton(x, y, hero_name)
 	
 	if (SelectedHero == hero_name) then -- if hero is already selected, make icon gray
 		b = ImageButton("")
-		unit_icon = CGraphic:New(string.sub(CIcon:Get(GetCharacterData(hero_name, "Icon")).G:getFile(), 0, -5) .. "_grayed.png", 46, 38)
+		if (GrandStrategyHeroIsCustom(hero_name)) then
+			unit_icon = CGraphic:New(string.sub(CIcon:Get(GetCustomHeroData(hero_name, "Icon")).G:getFile(), 0, -5) .. "_grayed.png", 46, 38)
+		else
+			unit_icon = CGraphic:New(string.sub(CIcon:Get(GetCharacterData(hero_name, "Icon")).G:getFile(), 0, -5) .. "_grayed.png", 46, 38)
+		end
 	else
 		b = PlayerColorImageButton("", GetFactionData(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "Color"))
-		unit_icon = CIcon:Get(GetCharacterData(hero_name, "Icon")).G
+		if (GrandStrategyHeroIsCustom(hero_name)) then
+			unit_icon = CIcon:Get(GetCustomHeroData(hero_name, "Icon")).G
+		else
+			unit_icon = CIcon:Get(GetCharacterData(hero_name, "Icon")).G
+		end
 	end
 	unit_icon:Load()
 	UIElements[table.getn(UIElements) + 1] = b
