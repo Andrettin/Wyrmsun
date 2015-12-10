@@ -25,40 +25,44 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineUniqueItem("Brimir", { -- sword from Norse mythology; best of swords; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 102.
+DefineUniqueItem("Brimir", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 102.
 	Type = "unit-broad-sword",
 	Prefix = "upgrade-item-prefix-penetrating",
 	Suffix = "upgrade-item-suffix-of-victory",
+	Background = "Brimir was described in Norse mythology as being the best of swords.",
 	Quote = "\"Of all the gods | is Odin the greatest, / And Sleipnir the best of steeds; / Bifrost of bridges, | Bragi of skalds, / Hobrok of hawks, | Garm of hounds, / and Brimir of swords.\" - Grimnismol"
 } )
 
-DefineUniqueItem("Gram", { -- sword from Norse mythology; given by Odin to Sigmund, later broken; was reforged by Regin; was owned by Sigurd; Source: Henry Adams Bellows (transl.), "The Poetic Edda", pp. 351, 365.
+DefineUniqueItem("Gram", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", pp. 351, 365.
 	Type = "unit-spatha",
 	Prefix = "upgrade-item-prefix-wounding",
 	Suffix = "upgrade-item-suffix-of-victory",
+	Background = "In Norse mythology, Gram was the sword given by Odin to Sigmund. Being later broken into pieces, the sword was reforged by Regin for Sigurd.",
 --	Quote = "\"My kin, methinks, | is unknown to thee, / And so am I myself; / Sigurd my name, | and Sigmund's son, / Who smote thee thus with the sword.\" - Fafnismol"
 	Quote = "\"With thy sword between, | three nights thou sleepest / With her thou winnest | for Gunnar's wife.\" - Gripisspo"
 } )
 
-DefineUniqueItem("Hrotti", { -- sword from Norse mythology; owned by Fafnir and taken from him by Sigurd; name means "Thruster"; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 385.
+DefineUniqueItem("Hrotti", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 385.
 	Type = "unit-spatha",
 	Prefix = "upgrade-item-prefix-penetrating",
 	Suffix = "upgrade-item-suffix-of-perfuration",
+	Background = "In Norse mythology, Hrotti (\"Thruster\") was Fafnir's sword, which was taken by Sigurd.",
 	Quote = "\"There he found a mighty store of gold, and he filled two chests full thereof; he took the fear-helm and a golden mail-coat and the sword Hrotti, and many other precious things.\" - Fafnismol"
 } )
 
-DefineUniqueItem("Laevatein", { -- sword from Norse mythology; "the Wounding Wand"; forged by Loki with runes at the gates of Niflheim; is placed under nine locks in Laegjarn's chest and guarded by Sinmora; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 124; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 245.
+DefineUniqueItem("Laevatein", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 124; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 245.
 	Type = "unit-broad-sword",
 	Prefix = "upgrade-item-prefix-wounding",
 	Suffix = "upgrade-item-suffix-of-trickery",
-	Background = "In Norse mythology, Laevatein (\the Wounding Wand\") was a sword forged by Loki with runes at the doors of Niflheim, and was placed under nine locks in Laegjarn's chest, with Sinmora guarding over it.",
+	Background = "In Norse mythology, Laevatein (\"the Wounding Wand\") was a sword forged by Loki with runes at the doors of Niflheim, and was placed under nine locks in Laegjarn's chest, with Sinmora guarding over it.",
 	Quote = "\"Laevatein is there | that Lopt with runes / Once made by the doors of death; / In Laegjarn's chest | by Sinmora lies it, / And nine locks fasten it firm.\" - Svipdagsmol"
 } )
 
-DefineUniqueItem("Rithil", { -- sword from Norse mythology; owned by Regin and used by him to slay his brother Fafnir; name means "Swift-Moving"; is alternatively called "Refil" (serpent); Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 380.
+DefineUniqueItem("Rithil", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 380.
 	Type = "unit-spatha",
 	Prefix = "upgrade-item-prefix-swift",
 	Suffix = "upgrade-item-suffix-of-betrayal",
+	Background = "In Norse mythology, Rithil (\"Swift-Moving\") was Regin's sword, which he used to slay his brother Fafnir. One source gives the alternate name Refil (\"Serpent\") for the sword.",
 	Quote = "\"Then Regin went up to Fafnir and cut out his heart with his sword, that was named Rithil, and then he drank blood from the wounds.\" - Fafnismol"
 } )
 
@@ -66,12 +70,14 @@ DefineUniqueItem("Toporik", { -- name means "hatchet" in Russian; renaming of th
 	Type = "unit-bearded-throwing-axe",
 	Prefix = "upgrade-item-prefix-storm",
 	Suffix = "upgrade-item-suffix-of-victory",
+	Background = "In Slavic mythology, the god Perun wielded a throwing axe. Perun's axe has often been identified with Thor's Mjollnir hammer in function and origin. The name Toporik means \"hatchet\" in Russian.",
 	Quote = "\"The old god / Has nine sons: / Three strike, three thunder, / Three lighten.\" - Dwarven Traditional Poetry" -- Source: W. R. S. Ralston, "Songs of the Russian People", 1872, p. 90.
 } )
 
-DefineUniqueItem("Svalin", { -- shield from Norse mythology which stands in front of the sun, preventing the mountains and the sea from bursting into flames; name means "the Cooling"; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 63; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 100.
+DefineUniqueItem("Svalin", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 63; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 100.
 	Type = "unit-bronze-shield",
 	Prefix = "upgrade-item-prefix-impregnable",
 	Suffix = "upgrade-item-suffix-of-extinguishment",
+	Background = "In Norse mythology, Svalin (\"the Cooling\") was the shied which stood in front of the sun, protecting the mountains and the sea from burning in flames.",
 	Quote = "\"In front of the sun | does Svalin stand, / The shield for the shining god; / Mountains and sea | would be set in flames / If it fell from before the sun.\" - Grimnismol"
 } )
