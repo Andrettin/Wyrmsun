@@ -74,6 +74,11 @@ DefineUpgrade("upgrade-item-suffix-of-perfuration", {
 	ItemSuffix = {"arrows", true, "dagger", true, "javelin", true, "spear", true, "sword", true, "thrusting-sword", true}
 })
 
+DefineUpgrade("upgrade-item-suffix-of-slowness", {
+	Name = _("of Slowness"),
+	ItemSuffix = {"boots", true}
+})
+
 DefineUpgrade("upgrade-item-suffix-of-the-snail", {
 	Name = _("of the Snail"),
 	ItemSuffix = {"boots", true}
@@ -152,6 +157,10 @@ DefineModifier("upgrade-item-suffix-of-perfuration",
 
 DefineModifier("upgrade-item-suffix-of-the-serpent",
 	{"Backstab", 50}
+)
+
+DefineModifier("upgrade-item-suffix-of-slowness",
+	{"Speed", -1}
 )
 
 DefineModifier("upgrade-item-suffix-of-the-snail",
