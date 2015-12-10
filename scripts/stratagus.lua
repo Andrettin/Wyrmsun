@@ -1389,43 +1389,6 @@ function GetNumPlayers()
 	return player_count
 end
 
-function GetUnitTypeLevelUpUpgrades(unit_type)
-	if (unit_type == "unit-dwarven-axefighter") then
-		return { "unit-dwarven-steelclad", "unit-dwarven-yale-rider" }
-	elseif (unit_type == "unit-dwarven-steelclad" or unit_type == "unit-surghan-mercenary-steelclad") then
-		return { "unit-dwarven-thane" }
-	elseif (unit_type == "unit-dwarven-thane" or unit_type == "unit-surghan-mercenary-thane") then
-		return { "upgrade-axe-mastery", "upgrade-critical-strike", "upgrade-deadly-precision", "upgrade-eagle-eye" }
-	elseif (unit_type == "unit-dwarven-yale-rider") then
-		return { "upgrade-axe-mastery", "upgrade-critical-strike", "upgrade-deadly-precision", "upgrade-eagle-eye" }
-	elseif (unit_type == "unit-dwarven-scout") then
-		return { "upgrade-critical-strike", "upgrade-deadly-precision", "upgrade-eagle-eye" }
-	elseif (unit_type == "unit-dwarven-gryphon-rider") then
-		return { "upgrade-critical-strike", "upgrade-deadly-precision", "upgrade-eagle-eye" }
-	elseif (unit_type == "unit-germanic-warrior") then
-		return { "upgrade-critical-strike", "upgrade-sword-mastery", "upgrade-deadly-precision", "upgrade-eagle-eye" }
-	elseif (unit_type == "unit-germanic-archer" or unit_type == "unit-teuton-archer") then
-		return { "upgrade-critical-strike", "upgrade-deadly-precision", "upgrade-eagle-eye" }
-	elseif (unit_type == "unit-teuton-swordsman" or unit_type == "unit-suebi-swordsman") then
---		return { "unit-teuton-ritter" }
-		return { "upgrade-critical-strike", "upgrade-sword-mastery", "upgrade-deadly-precision", "upgrade-eagle-eye" }
-	elseif (unit_type == "unit-teuton-ritter") then
-		return { "upgrade-critical-strike", "upgrade-sword-mastery", "upgrade-deadly-precision", "upgrade-eagle-eye" }
-	elseif (unit_type == "unit-gnomish-recruit") then
-		return { "upgrade-critical-strike", "upgrade-sword-mastery", "upgrade-deadly-precision", "upgrade-eagle-eye" }
-	elseif (unit_type == "unit-gnomish-herbalist") then
-		return { "upgrade-portent" }
-	elseif (unit_type == "unit-goblin-thief") then
-		return { "upgrade-critical-strike", "upgrade-deadly-precision", "upgrade-eagle-eye" }
-	elseif (unit_type == "unit-goblin-spearman") then
-		return { "upgrade-critical-strike", "upgrade-deadly-precision", "upgrade-eagle-eye" }
-	elseif (unit_type == "unit-goblin-archer") then
-		return { "upgrade-critical-strike", "upgrade-deadly-precision", "upgrade-eagle-eye" }
-	else
-		return {}
-	end
-end
-
 function InitializeUnit(unit)
 	if (GetUnitVariable(unit,"GraphicsVariation") == 0) then
 		if ((GetUnitVariable(unit, "Ident") == "unit-large-flower" and wyrmsun.tileset == "swamp")) then

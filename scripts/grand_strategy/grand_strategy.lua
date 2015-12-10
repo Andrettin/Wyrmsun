@@ -96,6 +96,7 @@ function RunGrandStrategyGameSetupMenu()
 			if (
 				(GetCustomHeroData(custom_heroes[i], "Civilization") == faction_civilization_list[faction:getSelected() + 1])
 				or ((faction_civilization_list[faction:getSelected() + 1] == "germanic" or faction_civilization_list[faction:getSelected() + 1] == "teuton") and (GetCustomHeroData(custom_heroes[i], "Civilization") == "germanic" or GetCustomHeroData(custom_heroes[i], "Civilization") == "teuton"))
+				or (faction_civilization_list[faction:getSelected() + 1] == "dwarf" and GetCustomHeroData(custom_heroes[i], "Civilization") == "gnome")
 			) then
 				table.insert(hero_list, custom_heroes[i])
 			end

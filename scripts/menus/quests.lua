@@ -125,6 +125,7 @@ function RunQuestMenu(world)
 		if (
 			(world == "Earth" and (GetCustomHeroData(custom_heroes[i], "Civilization") == "germanic" or GetCustomHeroData(custom_heroes[i], "Civilization") == "teuton"))
 			or (world == "Nidavellir" and GetCustomHeroData(custom_heroes[i], "Civilization") == "dwarf")
+			or (world == "Nidavellir" and GetCustomHeroData(custom_heroes[i], "Civilization") == "gnome")
 		) then
 			table.insert(hero_list, custom_heroes[i])
 		end

@@ -42,7 +42,7 @@ function CustomHeroCreationMenu(world, quest_menu)
 		end
 	elseif (world == "Nidavellir") then
 		table.insert(hero_civilization_list, "Dwarf")
---		table.insert(hero_civilization_list, "Gnome")
+		table.insert(hero_civilization_list, "Gnome")
 	end
 	local hero_class_ident_list = {}
 	local hero_class_list = {}

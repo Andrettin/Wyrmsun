@@ -237,7 +237,8 @@ https://github.com/Andrettin/Wyrmsun
 - Decreased the probability of revolts while increasing the amount of rebel troops per revolt, to make revolts more significant and less of a nuisance.
 
 * Heroes
-- Custom heroes can now be created in the quest interface, and if one is selected the hero will appear alongside your starting units in quest scenarios. Custom heroes are also available in (single-player) custom games if an appropriate civilization is selected.
+- Custom heroes can now be created in the quest interface, and if one is selected the hero will appear alongside your starting units in quest scenarios. Custom heroes are also available in the grand strategy mode or (single-player) custom games if an appropriate civilization is selected.
+- Gnomish custom heroes can be created for play with the dwarves.
 
 * Items
 - Persistent heroes, Stonelords and Gryphon Riders now have an inventory in which they can carry items (such as potions). Other units can still use potions by right-clicking on them, but they can't carry them around. Items are saved for persistent heroes.
@@ -251,7 +252,6 @@ https://github.com/Andrettin/Wyrmsun
 - Added Rithil (unique spatha).
 - Added Svalin (unique bronze shield).
 - Added Toporik (unique bearded throwing axe).
-
 
 * Miscellaneous
 - Units' names now appear in a tooltip when they are hovered.
