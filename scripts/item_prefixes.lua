@@ -27,22 +27,22 @@
 
 DefineUpgrade("upgrade-item-prefix-cold", { -- example: Cold Blade (from Wesnoth)
 	Name = _("Cold"),
-	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "rapier", true, "spear", true, "sword", true, "throwing-axe", true}
+	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true}
 })
 
 DefineUpgrade("upgrade-item-prefix-cruel", {
 	Name = _("Cruel"),
-	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "rapier", true, "spear", true, "sword", true, "throwing-axe", true}
+	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true}
 })
 
 DefineUpgrade("upgrade-item-prefix-flaming", { -- example: Flaming Sword (from Wesnoth)
 	Name = _("Flaming"),
-	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "rapier", true, "spear", true, "sword", true, "throwing-axe", true}
+	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true}
 })
 
 DefineUpgrade("upgrade-item-prefix-glacial", {
 	Name = _("Glacial"),
-	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "rapier", true, "spear", true, "sword", true, "throwing-axe", true}
+	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true}
 })
 
 DefineUpgrade("upgrade-item-prefix-impregnable", {
@@ -52,12 +52,12 @@ DefineUpgrade("upgrade-item-prefix-impregnable", {
 
 DefineUpgrade("upgrade-item-prefix-jinns", {
 	Name = _("Jinn's"),
-	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "rapier", true, "spear", true, "sword", true, "throwing-axe", true}
+	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true}
 })
 
 DefineUpgrade("upgrade-item-prefix-penetrating", {
 	Name = _("Penetrating"),
-	ItemPrefix = {"arrows", true, "dagger", true, "javelin", true, "rapier", true, "spear", true, "sword", true}
+	ItemPrefix = {"arrows", true, "dagger", true, "javelin", true, "spear", true, "sword", true, "thrusting-sword", true}
 })
 
 DefineUpgrade("upgrade-item-prefix-quenching", {
@@ -67,7 +67,7 @@ DefineUpgrade("upgrade-item-prefix-quenching", {
 
 DefineUpgrade("upgrade-item-prefix-storm", { -- example: Storm Trident (from Wesnoth)
 	Name = _("Storm"),
-	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "rapier", true, "spear", true, "sword", true, "throwing-axe", true}
+	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true}
 })
 
 DefineUpgrade("upgrade-item-prefix-sturdy", {
@@ -77,17 +77,17 @@ DefineUpgrade("upgrade-item-prefix-sturdy", {
 
 DefineUpgrade("upgrade-item-prefix-swift", {
 	Name = _("Swift"),
-	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "rapier", true, "spear", true, "sword", true, "throwing-axe", true}
+	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true}
 })
 
 DefineUpgrade("upgrade-item-prefix-vicious", {
 	Name = _("Vicious"),
-	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "rapier", true, "spear", true, "sword", true, "throwing-axe", true}
+	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true}
 })
 
 DefineUpgrade("upgrade-item-prefix-wounding", {
 	Name = _("Wounding"),
-	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "rapier", true, "spear", true, "sword", true, "throwing-axe", true}
+	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true}
 })
 
 DefineModifier("upgrade-item-prefix-cold",

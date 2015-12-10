@@ -78,6 +78,14 @@ DefineUnitType("unit-spatha", { Name = _("Spatha"),
 	BasicDamage = 4
 } )
 
+DefineUnitType("unit-thrusting-sword", { Name = _("Short Sword"),
+	Parent = "unit-template-item",
+	Image = {"file", "germanic/items/broad_bronze_sword.png", "size", {32, 32}},
+	Icon = "icon-gnomish-thrusting-sword-1",
+	ItemClass = "thrusting-sword",
+	BasicDamage = 0
+} )
+
 DefineUnitType("unit-battle-axe", { Name = _("Battle Axe"),
 	Parent = "unit-template-item",
 	Image = {"file", "neutral/items/axe.png", "size", {32, 32}},
@@ -148,6 +156,14 @@ DefineUnitType("unit-iron-shield", { Name = _("Iron Shield"),
 	Icon = "icon-teuton-iron-shield",
 	ItemClass = "shield",
 	Armor = 4
+} )
+
+DefineUnitType("unit-kite-shield", { Name = _("Kite Shield"),
+	Parent = "unit-template-item",
+	Image = {"file", "teuton/items/saxon_shield.png", "size", {32, 32}},
+	Icon = "icon-heater-shield",
+	ItemClass = "shield",
+	Armor = 6
 } )
 
 --[[

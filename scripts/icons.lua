@@ -76,9 +76,9 @@ DefineIcon({
 })
 
 DefineIcon({
-	Name = "icon-prestige",
+	Name = "icon-heater-shield",
 	Size = {46, 38},
-	File = "neutral/icons/prestige.png"
+	File = "neutral/icons/heater_shield.png"
 })
 
 DefineIcon({

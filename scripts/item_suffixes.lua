@@ -27,12 +27,12 @@
 
 DefineUpgrade("upgrade-item-suffix-of-betrayal", {
 	Name = _("of Betrayal"),
-	ItemSuffix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "rapier", true, "spear", true, "sword", true, "throwing-axe", true}
+	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true}
 })
 
 DefineUpgrade("upgrade-item-suffix-of-cold", {
 	Name = _("of Cold"),
-	ItemSuffix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "rapier", true, "spear", true, "sword", true, "throwing-axe", true},
+	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true},
 	IncompatibleAffixes = {"upgrade-item-prefix-cold"}
 })
 
@@ -48,30 +48,30 @@ DefineUpgrade("upgrade-item-suffix-of-extinguishment", {
 
 DefineUpgrade("upgrade-item-suffix-of-fire", {
 	Name = _("of Fire"),
-	ItemSuffix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "rapier", true, "spear", true, "sword", true, "throwing-axe", true},
+	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true},
 	IncompatibleAffixes = {"upgrade-item-prefix-flaming"}
 })
 
 DefineUpgrade("upgrade-item-suffix-of-flame", {
 	Name = _("of Flame"),
-	ItemSuffix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "rapier", true, "spear", true, "sword", true, "throwing-axe", true},
+	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true},
 	IncompatibleAffixes = {"upgrade-item-prefix-flaming"}
 })
 
 DefineUpgrade("upgrade-item-suffix-of-the-jinn", {
 	Name = _("of the Jinn"),
-	ItemSuffix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "rapier", true, "spear", true, "sword", true, "throwing-axe", true},
+	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true},
 	IncompatibleAffixes = {"upgrade-item-prefix-jinns"}
 })
 
 DefineUpgrade("upgrade-item-suffix-of-lightning", {
 	Name = _("of Lightning"),
-	ItemSuffix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "rapier", true, "spear", true, "sword", true, "throwing-axe", true}
+	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true}
 })
 
 DefineUpgrade("upgrade-item-suffix-of-perfuration", {
 	Name = _("of Perfuration"),
-	ItemSuffix = {"arrows", true, "dagger", true, "javelin", true, "rapier", true, "spear", true, "sword", true}
+	ItemSuffix = {"arrows", true, "dagger", true, "javelin", true, "spear", true, "sword", true, "thrusting-sword", true}
 })
 
 DefineUpgrade("upgrade-item-suffix-of-the-snail", {
@@ -96,7 +96,7 @@ DefineUpgrade("upgrade-item-suffix-of-swiftness", {
 
 DefineUpgrade("upgrade-item-suffix-of-the-serpent", {
 	Name = _("of the Serpent"),
-	ItemSuffix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "rapier", true, "spear", true, "sword", true, "throwing-axe", true}
+	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true}
 })
 
 DefineUpgrade("upgrade-item-suffix-of-thorns", {
@@ -106,12 +106,12 @@ DefineUpgrade("upgrade-item-suffix-of-thorns", {
 
 DefineUpgrade("upgrade-item-suffix-of-trickery", {
 	Name = _("of Trickery"),
-	ItemSuffix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "rapier", true, "spear", true, "sword", true, "throwing-axe", true}
+	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true}
 })
 
 DefineUpgrade("upgrade-item-suffix-of-victory", {
 	Name = _("of Victory"),
-	ItemSuffix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "rapier", true, "spear", true, "sword", true, "throwing-axe", true}
+	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true}
 })
 
 DefineModifier("upgrade-item-suffix-of-betrayal",
