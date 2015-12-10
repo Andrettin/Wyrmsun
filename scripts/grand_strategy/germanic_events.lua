@@ -129,6 +129,15 @@ local GermanicEvents = {
 							ChangeProvinceUnitQuantity("Don", unitName, math.ceil(GetPlayerData(1, "UnitTypesCount", unitName) / BattalionMultiplier))
 						end
 					end
+					local all_heroes = GetGrandStrategyHeroes()
+					local faction_heroes = GetPlayerData(0, "Heroes")
+					for i = 1, table.getn(all_heroes) do
+						if (GetArrayIncludes(faction_heroes, all_heroes[i])) then
+							SetProvinceHero("Brandenburg", all_heroes[i], 2)
+						elseif (GetProvinceHero("Astrakhan", all_heroes[i]) == 2) then
+							SetProvinceHero("Astrakhan", all_heroes[i], 0)
+						end
+					end
 				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "Asa Tribe" or wyr.preferences.AutomaticBattles) and GrandStrategyFaction.Name ~= "Vana Tribe") then
 					ChangeFactionResource("germanic", "Asa Tribe", "gold", 1000) -- gold from raiding Vanaland
 					

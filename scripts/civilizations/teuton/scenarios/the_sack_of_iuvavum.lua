@@ -86,11 +86,13 @@ if (LoadedGame == false) then
 		local units_to_be_created = {}
 		
 		-- Marcomanni units
-		CreateProvinceUnits("Bohemia", 4)		
+		CreateProvinceUnits("Bohemia", 4)
+		CreateProvinceCustomHero("Bohemia", 4)
 	--	unit = CreateUnit("unit-suebi-swordsman", 4, {Players[4].StartPos.x, Players[4].StartPos.y}) -- add Ballomar here later
 		
 		-- Roman units
 		CreateProvinceUnits("Austria", 0, 4)
+		CreateProvinceCustomHero("Austria", 0)
 	end
 end
 

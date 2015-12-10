@@ -59,13 +59,7 @@ if (LoadedGame == false) then
 		
 		-- Asa units
 		CreateProvinceUnits("Jutland", 0)
-		local all_heroes = GetGrandStrategyHeroes()
-		for i = 1, table.getn(all_heroes) do
-			if (GetProvinceHero("Jutland", all_heroes[i]) == 2 and GrandStrategyHeroIsCustom(all_heroes[i])) then
-				unit = CreateUnit("unit-germanic-warrior", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-				SetUnitVariable(unit, "CustomHero", all_heroes[i])
-			end
-		end
+		CreateProvinceCustomHero("Jutland", 0)
 		
 		-- Gylfing units
 		CreateProvinceUnits("Scania", 1)

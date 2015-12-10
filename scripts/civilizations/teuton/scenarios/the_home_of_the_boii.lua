@@ -89,11 +89,13 @@ if (LoadedGame == false) then
 		
 		-- Marcomanni units
 		CreateProvinceUnits("Brandenburg", 0, 2)
+		CreateProvinceCustomHero("Brandenburg", 0)
 		unit = CreateUnit("unit-suebi-swordsman", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 		SetUnitVariable(unit, "Character", "Marbod")
 		
 		-- Boii units
 		CreateProvinceUnits("Bohemia", 1)
+		CreateProvinceCustomHero("Bohemia", 1)
 	end
 	
 	-- create allied Germanic forces

@@ -63,9 +63,11 @@ if (LoadedGame == false) then
 		
 		-- Bavarian units
 		CreateProvinceUnits("Bohemia", 0)
+		CreateProvinceCustomHero("Bohemia", 0)
 		
 		-- Roman units
 		CreateProvinceUnits("Bavaria", 1, 4)
+		CreateProvinceCustomHero("Bavaria", 1)
 	end
 end
 

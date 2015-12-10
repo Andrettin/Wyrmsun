@@ -283,9 +283,11 @@ elseif (GrandStrategyEventMap) then
 	
 	-- Norlund units
 	CreateProvinceUnits("Caverns of Chaincolt", 0, 1, false, true)
+	CreateProvinceCustomHero("Caverns of Chaincolt", 0)
 
 	-- Shinsplitters
 	CreateProvinceUnits("Southern Tunnels", 2, 4, false, true)
+	CreateProvinceCustomHero("Southern Tunnels", 2)
 	if (GetNumUnitsAt(GetFactionPlayer("Shinsplitter Clan"), "unit-dwarven-thane", {0, 0}, {256, 256}) < 1 and GetProvinceUnitQuantity("Southern Tunnels", "unit-dwarven-thane") >= 1) then
 		unit = CreateUnit("unit-dwarven-thane", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
 		ChangeProvinceUnitQuantity("Southern Tunnels", "unit-dwarven-thane", -1)
@@ -295,6 +297,7 @@ elseif (GrandStrategyEventMap) then
 
 	-- Shorbears
 	CreateProvinceUnits("Shorbear Hills", 1)
+	CreateProvinceCustomHero("Shorbear Hills", 1)
 	
 	local uncount = 0
 	uncount = GetUnits(GetFactionPlayer("Shorbear Clan"))

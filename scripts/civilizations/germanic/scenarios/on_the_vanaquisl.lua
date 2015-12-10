@@ -82,7 +82,8 @@ if (LoadedGame == false) then
 		
 		-- Asa units
 		CreateProvinceUnits("Astrakhan", 0)
-
+		CreateProvinceCustomHero("Astrakhan", 0)
+		
 		-- Vana units
 		CreateProvinceUnits("Don", 1)
 	end

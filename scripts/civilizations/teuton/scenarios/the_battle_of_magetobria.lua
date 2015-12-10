@@ -66,9 +66,11 @@ if (LoadedGame == false) then
 		
 		-- Suebi units
 		CreateProvinceUnits("Brandenburg", 0, 1, false, true)
+		CreateProvinceCustomHero("Brandenburg", 0)
 		
 		-- Aedui units
 		CreateProvinceUnits("Burgundy", 1, 1, false, true)
+		CreateProvinceCustomHero("Burgundy", 1)
 	end
 	
 	if (GrandStrategy == false or GrandStrategyEventMap) then

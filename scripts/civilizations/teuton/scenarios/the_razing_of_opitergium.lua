@@ -53,11 +53,13 @@ if (LoadedGame == false) then
 		SetAiType(1, "grand-strategy-battle")
 		
 		-- Marcomanni units
-		CreateProvinceUnits("Austria", 0)		
+		CreateProvinceUnits("Austria", 0)
+		CreateProvinceCustomHero("Austria", 0)
 	--	unit = CreateUnit("unit-suebi-swordsman", 0, {Players[0].StartPos.x, Players[0].StartPos.y}) -- add Ballomar here later
 		
 		-- Roman units
 		CreateProvinceUnits("Venetia", 1, 4)
+		CreateProvinceCustomHero("Venetia", 1)
 	end
 end
 

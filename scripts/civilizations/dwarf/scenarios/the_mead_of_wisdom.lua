@@ -49,6 +49,7 @@ if (LoadedGame == false) then
 		end
 	elseif (GrandStrategyEventMap) then
 		CreateProvinceUnits("Svarinshaug", 0, 2, false, true)
+		CreateProvinceCustomHero("Svarinshaug", 0)
 	end
 end
 

@@ -48,6 +48,7 @@ if (LoadedGame == false) then
 		AcquireTrait(unit, "upgrade-dextrous")
 		
 		CreateProvinceUnits("Svarinshaug", 0, 2, false, true)
+		CreateProvinceCustomHero("Svarinshaug", 0)
 		
 		-- don't allow the player to build/train units if in grand strategy mode
 		SetPlayerData(0, "Allow", "unit-dwarven-barracks", "F")

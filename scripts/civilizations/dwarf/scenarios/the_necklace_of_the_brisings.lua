@@ -55,6 +55,7 @@ if (LoadedGame == false) then
 		unit = CreateUnit("unit-dwarven-steelclad", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
 	elseif (GrandStrategyEventMap) then
 		CreateProvinceUnits("Svarinshaug", 0, 1, false, true)
+		CreateProvinceCustomHero("Svarinshaug", 0)
 		
 		if (FactionHasHero("dwarf", "Modsogning Clan", "Modsognir")) then
 			unit = CreateUnit(GetGrandStrategyHeroUnitType("Modsognir"), 0, {Players[0].StartPos.x, Players[0].StartPos.y})

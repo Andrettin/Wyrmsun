@@ -222,6 +222,7 @@ elseif (GrandStrategyEventMap) then
 	unit = CreateUnit("unit-dwarven-mushroom-farm", 0, {40, 20})
 
 	CreateProvinceUnits("Caverns of Chaincolt", 0, 3)
+	CreateProvinceCustomHero("Caverns of Chaincolt", 0)
 
 	-- Rugnur
 	if (GetProvinceHero("Caverns of Chaincolt", "Rugnur") == 2) then
@@ -238,9 +239,11 @@ elseif (GrandStrategyEventMap) then
 --	IncreaseUnitLevel(unit, 2)
 
 	CreateProvinceUnits("Brown Hills", 1, 5)
+	CreateProvinceCustomHero("Brown Hills", 1)
 
 	-- Shinsplitter Clan
 	CreateProvinceUnits("Southern Tunnels", 2, 3, false, true)
+	CreateProvinceCustomHero("Southern Tunnels", 2)
 
 	-- if there is at least one steelclad in the Southern Tunnels, make sure that it is used for the raid
 	if (GetNumUnitsAt(GetFactionPlayer("Shinsplitter Clan"), "unit-dwarven-steelclad", {0, 0}, {256, 256}) < 1 and GetProvinceUnitQuantity("Southern Tunnels", "unit-dwarven-steelclad") >= 1) then

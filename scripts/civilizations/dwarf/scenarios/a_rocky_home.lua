@@ -42,6 +42,7 @@ if (LoadedGame == false) then
 		unit = CreateUnit("unit-dwarven-axefighter", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 	elseif (GrandStrategyEventMap) then
 		CreateProvinceUnits("Svarinshaug", 0, 1, false, false)
+		CreateProvinceCustomHero("Svarinshaug", 0)
 	
 		if (FactionHasHero("dwarf", "Modsogning Clan", "Modsognir")) then
 			unit = CreateUnit(GetGrandStrategyHeroUnitType("Modsognir"), 0, {Players[0].StartPos.x, Players[0].StartPos.y})

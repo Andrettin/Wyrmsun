@@ -4119,18 +4119,42 @@ function RestoreScenarioUnitsToProvince(arg) -- restore the units of a certain f
 		end
 	end
 	
+	local faction_heroes = GetPlayerData(GetFactionPlayer(arg.FactionName), "Heroes")
 	if (arg.Heroes ~= nil) then
 		if (arg.Heroes == "any") then
 			arg.Heroes = GetGrandStrategyHeroes()
 		end
 
-		local faction_heroes = GetPlayerData(GetFactionPlayer(arg.FactionName), "Heroes")
 		for i = 1, table.getn(arg.Heroes) do
-			if (GetArrayIncludes(faction_heroes, arg.Heroes[i])) then
-				SetProvinceHero(arg.ProvinceName, arg.Heroes[i], 2)
-			elseif (GetProvinceHero(arg.ProvinceName, arg.Heroes[i]) == 2) then
-				SetProvinceHero(arg.ProvinceName, arg.Heroes[i], 0)
+			if not (GrandStrategyHeroIsCustom(arg.Heroes[i])) then
+				if (GetArrayIncludes(faction_heroes, arg.Heroes[i])) then
+					SetProvinceHero(arg.ProvinceName, arg.Heroes[i], 2)
+				elseif (GetProvinceHero(arg.ProvinceName, arg.Heroes[i]) == 2) then
+					SetProvinceHero(arg.ProvinceName, arg.Heroes[i], 0)
+				end
 			end
+		end
+	end
+	
+	-- restore custom hero
+	local all_heroes = GetGrandStrategyHeroes()
+	for i = 1, table.getn(all_heroes) do
+		if (GrandStrategyHeroIsCustom(all_heroes[i])) then
+			if (GetArrayIncludes(faction_heroes, all_heroes[i])) then
+				SetProvinceHero(arg.ProvinceName, all_heroes[i], 2)
+			elseif (GetProvinceHero(arg.ProvinceName, all_heroes[i]) == 2) then
+				SetProvinceHero(arg.ProvinceName, all_heroes[i], 0)
+			end
+		end
+	end
+end
+
+function CreateProvinceCustomHero(province_name, player)
+	local all_heroes = GetGrandStrategyHeroes()
+	for i = 1, table.getn(all_heroes) do
+		if (GetProvinceHero(province_name, all_heroes[i]) == 2 and GrandStrategyHeroIsCustom(all_heroes[i])) then
+			unit = CreateUnit("unit-germanic-warrior", player, {Players[player].StartPos.x, Players[player].StartPos.y})
+			SetUnitVariable(unit, "CustomHero", all_heroes[i])
 		end
 	end
 end

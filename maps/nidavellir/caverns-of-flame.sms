@@ -380,6 +380,7 @@ elseif (GrandStrategyEventMap) then
 
 	-- Norlund units
 	CreateProvinceUnits("Caverns of Chaincolt", 0, 1, false, true)
+	CreateProvinceCustomHero("Caverns of Chaincolt", 0)
 
 	unit = CreateUnit("unit-goblin-town-hall", 2, {53, 7})
 	unit = CreateUnit("unit-goblin-spearman", 2, {54, 8}) -- orcish warlord

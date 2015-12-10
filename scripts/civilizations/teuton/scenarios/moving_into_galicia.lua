@@ -57,9 +57,11 @@ if (LoadedGame == false) then
 		
 		-- Suebi units
 		CreateProvinceUnits("Brandenburg", 0)
+		CreateProvinceCustomHero("Brandenburg", 0)
 		
 		-- Roman units
 		CreateProvinceUnits("Portugal", 1, 4)
+		CreateProvinceCustomHero("Portugal", 1)
 	end
 end
 
