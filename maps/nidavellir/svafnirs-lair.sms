@@ -163,6 +163,7 @@ if (GrandStrategy == false) then
 		SetUnitVariable(unit, "Character", "Thursagan")
 		unit = CreateUnit("unit-dwarven-gryphon-rider", 0, {16, 16}) -- Krawg
 		IncreaseUnitLevel(unit, 1)
+		AcquireAbility(unit, "upgrade-critical-strike")
 	end
 
 	-- base for the Shinsplitters

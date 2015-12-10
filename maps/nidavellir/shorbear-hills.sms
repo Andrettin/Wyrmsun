@@ -184,11 +184,13 @@ if (GrandStrategy == false) then
 		IncreaseUnitLevel(unit, 1)
 		AcquireTrait(unit, "upgrade-keen") -- was loyal and intelligent in Wesnoth
 		SetUnitVariable(unit, "Name", "Noiraran")
+		AcquireAbility(unit, "upgrade-critical-strike")
 		unit = CreateUnit("unit-dwarven-steelclad", 0, {6, 5}) -- Kuhnar
 		AcquireTrait(unit, "upgrade-quick") -- was loyal and quick in Wesnoth
 		SetUnitVariable(unit, "Name", "Kuhnar")
 		unit = CreateUnit("unit-dwarven-gryphon-rider", 0, {6, 5}) -- Krawg
 		IncreaseUnitLevel(unit, 1)
+		AcquireAbility(unit, "upgrade-critical-strike")
 	end
 
 	unit = CreateUnit("unit-dwarven-stronghold", 1, {37, 32})

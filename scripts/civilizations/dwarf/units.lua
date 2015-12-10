@@ -323,7 +323,7 @@ DefineUnitType("unit-dwarven-thane", { Name = _("Stonelord"),
 	WeaponClass = "axe",
 	HackDamage = true,
 	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
-	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-glacial", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-the-snigill"},
+	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-glacial", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-the-colossus", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-the-snigill"},
 	Variations = {
 		{
 			"variation-id", "red-hair",

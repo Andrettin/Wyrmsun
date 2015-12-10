@@ -712,7 +712,7 @@ AddTrigger(
 		end
 		if (PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have all heroes in the Shorbear caves while no enemies are in the caves")) then
 			if (GetNumUnitsAt(1, "any", {26, 23}, {51, 44}) + GetNumUnitsAt(2, "any", {26, 23}, {51, 44}) < 1) then
-				if (UnitIsAt(FindHero("Rugnur"), {26, 23}, {51, 44}) and UnitIsAt(FindHero("Baglur"), {26, 23}, {51, 44}) and UnitIsAt(FindHero("Thursagan"), {26, 23}, {51, 44}) and UnitIsAt(FindHero("Durstorn"), {26, 23}, {51, 44}) and GetNumUnitsAt(player, "unit-gnomish-recruit", {26, 23}, {51, 44}) >= 1) then
+				if (UnitIsAt(FindHero("Rugnur"), {26, 23}, {51, 44}) and UnitIsAt(FindHero("Baglur"), {26, 23}, {51, 44}) and UnitIsAt(FindHero("Thursagan"), {26, 23}, {51, 44}) and UnitIsAt(FindHero("Durstorn"), {26, 23}, {51, 44}) and GetNumUnitsAt(GetFactionPlayer("Norlund Clan"), "unit-gnomish-recruit", {26, 23}, {51, 44}) >= 1) then
 					player = GetFactionPlayer("Norlund Clan")
 					return true
 				end
@@ -729,28 +729,16 @@ AddTrigger(
 			{function(s)
 				RemovePlayerObjective(player, "- Have all heroes in the Shorbear caves while no enemies are in the caves")
 				RemovePlayerObjective(player, "- Rugnur, Baglur, Thursagan, Durstorn and the Gnomish Envoy must survive")
-				KillUnitAt("unit-dwarven-town-hall", player, GetPlayerData(player, "UnitTypesCount", "unit-dwarven-town-hall"), {0, 0}, {256, 256})
-				KillUnitAt("unit-dwarven-stronghold", player, GetPlayerData(player, "UnitTypesCount", "unit-dwarven-stronghold"), {0, 0}, {256, 256})
-				KillUnitAt("unit-dwarven-mushroom-farm", player, GetPlayerData(player, "UnitTypesCount", "unit-dwarven-mushroom-farm"), {0, 0}, {256, 256})
-				KillUnitAt("unit-dwarven-barracks", player, GetPlayerData(player, "UnitTypesCount", "unit-dwarven-barracks"), {0, 0}, {256, 256})
-				KillUnitAt("unit-dwarven-smithy", player, GetPlayerData(player, "UnitTypesCount", "unit-dwarven-smithy"), {0, 0}, {256, 256})
-				KillUnitAt("unit-dwarven-lumber-mill", player, GetPlayerData(player, "UnitTypesCount", "unit-dwarven-lumber-mill"), {0, 0}, {256, 256})
-				KillUnitAt("unit-dwarven-sentry-tower", player, GetPlayerData(player, "UnitTypesCount", "unit-dwarven-sentry-tower"), {0, 0}, {256, 256})
-				KillUnitAt("unit-dwarven-guard-tower", player, GetPlayerData(player, "UnitTypesCount", "unit-dwarven-guard-tower"), {0, 0}, {256, 256})
-				KillUnitAt("unit-dwarven-miner", player, GetPlayerData(player, "UnitTypesCount", "unit-dwarven-miner"), {0, 0}, {256, 256})
-				KillUnitAt("unit-dwarven-axefighter", player, GetPlayerData(player, "UnitTypesCount", "unit-dwarven-axefighter"), {0, 0}, {256, 256})
-				KillUnitAt("unit-dwarven-steelclad", player, GetPlayerData(player, "UnitTypesCount", "unit-dwarven-steelclad"), {0, 0}, {256, 256})
-				KillUnitAt("unit-dwarven-thane", player, GetPlayerData(player, "UnitTypesCount", "unit-dwarven-thane"), {0, 0}, {256, 256})
-				KillUnitAt("unit-dwarven-scout", player, GetPlayerData(player, "UnitTypesCount", "unit-dwarven-scout"), {0, 0}, {256, 256})
-				KillUnitAt("unit-dwarven-ballista", player, GetPlayerData(player, "UnitTypesCount", "unit-dwarven-ballista"), {0, 0}, {256, 256})
 				local uncount = 0
 				uncount = GetUnits(0)
 				for unit1 = 1,table.getn(uncount) do 
-					if (GetUnitVariable(uncount[unit1], "Character") ~= "" or GetUnitVariable(uncount[unit1], "Ident") == "unit-gnomish-recruit") then
+					if (GetUnitVariable(uncount[unit1], "Character") ~= "" or GetUnitVariable(uncount[unit1], "Ident") == "unit-gnomish-recruit" or GetUnitVariable(uncount[unit1], "Ident") == "unit-gryphon-rider") then
 						if (GetUnitVariable(uncount[unit1],"PosX") >= 26 and GetUnitVariable(uncount[unit1],"PosX") <= 51 and GetUnitVariable(uncount[unit1],"PosY") >= 23 and GetUnitVariable(uncount[unit1],"PosY") <= 44) then
 --							MoveUnit(uncount[unit1], {41, 41}) -- move all units to this spot to open up place for buildings -- the "MoveUnit" is not working properly for some reason: buildings will still be blocked from being created at the unit's original location, and when Durstorn dies, after his corpse disappears the game crashes
 							SetUnitVariable(uncount[unit1], "HitPoints", GetUnitVariable(uncount[unit1], "HitPoints", "Max")) -- heal the heroes
 						end
+					else
+						KillUnit(uncount[unit1])
 					end
 				end
 				-- create settlement for the Norlund Clan in the Shorbear Hold, after its conquest

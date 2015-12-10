@@ -36,6 +36,11 @@ DefineUpgrade("upgrade-item-suffix-of-cold", {
 	IncompatibleAffixes = {"upgrade-item-prefix-cold"}
 })
 
+DefineUpgrade("upgrade-item-suffix-of-the-colossus", {
+	Name = _("of the Colossus"),
+	ItemSuffix = {"armor", true, "shield", true, "helmet", true}
+})
+
 DefineUpgrade("upgrade-item-suffix-of-extinguishment", {
 	Name = _("of Extinguishment"),
 	ItemSuffix = {"armor", true, "shield", true, "helmet", true}
@@ -115,6 +120,10 @@ DefineModifier("upgrade-item-suffix-of-betrayal",
 
 DefineModifier("upgrade-item-suffix-of-cold",
 	{"ColdDamage", 1}
+)
+
+DefineModifier("upgrade-item-suffix-of-the-colossus",
+	{"Armor", 2}
 )
 
 DefineModifier("upgrade-item-suffix-of-extinguishment",

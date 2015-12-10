@@ -220,6 +220,7 @@ if (GrandStrategy == false) then
 		SetUnitVariable(unit, "Character", "Thursagan")
 		unit = CreateUnit("unit-dwarven-gryphon-rider", 0, {30, 8}) -- Krawg
 		IncreaseUnitLevel(unit, 1)
+		AcquireAbility(unit, "upgrade-critical-strike")
 		-- give some veteran units to Rugnur's group, otherwise they would have too few warriors (4 sentinels and 2 runemasters)
 		unit = CreateUnit("unit-dwarven-thane", 0, {30, 8})
 		unit = CreateUnit("unit-dwarven-thane", 0, {30, 8})
