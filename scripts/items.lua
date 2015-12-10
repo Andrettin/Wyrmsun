@@ -78,7 +78,7 @@ DefineUnitType("unit-spatha", { Name = _("Spatha"),
 	BasicDamage = 4
 } )
 
-DefineUnitType("unit-thrusting-sword", { Name = _("Short Sword"),
+DefineUnitType("unit-thrusting-sword", { Name = _("Thrusting Sword"),
 	Parent = "unit-template-item",
 	Image = {"file", "germanic/items/broad_bronze_sword.png", "size", {32, 32}},
 	Icon = "icon-gnomish-thrusting-sword-1",

@@ -121,6 +121,7 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
 			"item-not-equipped", "unit-bronze-shield",
 			"item-not-equipped", "unit-iron-shield",
+			"item-not-equipped", "unit-kite-shield",
 			"item-not-equipped", "unit-heater-shield",
 			"item-not-equipped", "unit-thrymgjol-shield",
 			"upgrade-forbidden", "upgrade-old"
@@ -132,6 +133,7 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
 			"item-not-equipped", "unit-bronze-shield",
 			"item-not-equipped", "unit-iron-shield",
+			"item-not-equipped", "unit-kite-shield",
 			"item-not-equipped", "unit-heater-shield",
 			"item-not-equipped", "unit-thrymgjol-shield",
 			"upgrade-forbidden", "upgrade-old"
@@ -143,6 +145,7 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
 			"item-not-equipped", "unit-bronze-shield",
 			"item-not-equipped", "unit-iron-shield",
+			"item-not-equipped", "unit-kite-shield",
 			"item-not-equipped", "unit-heater-shield",
 			"item-not-equipped", "unit-thrymgjol-shield"
 		},
@@ -153,6 +156,7 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
 			"item-not-equipped", "unit-bronze-shield",
 			"item-not-equipped", "unit-iron-shield",
+			"item-not-equipped", "unit-kite-shield",
 			"item-not-equipped", "unit-heater-shield",
 			"item-not-equipped", "unit-thrymgjol-shield",
 			"upgrade-forbidden", "upgrade-old"
@@ -166,6 +170,7 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 			"item-equipped", "unit-bronze-shield",
 			"item-equipped", "unit-heater-shield",
 			"item-not-equipped", "unit-iron-shield",
+			"item-not-equipped", "unit-kite-shield",
 			"item-not-equipped", "unit-thrymgjol-shield",
 			"upgrade-forbidden", "upgrade-old"
 		},
@@ -179,6 +184,7 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 			"item-equipped", "unit-bronze-shield",
 			"item-equipped", "unit-heater-shield",
 			"item-not-equipped", "unit-iron-shield",
+			"item-not-equipped", "unit-kite-shield",
 			"item-not-equipped", "unit-thrymgjol-shield",
 			"upgrade-forbidden", "upgrade-old"
 		},
@@ -192,6 +198,7 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 			"item-equipped", "unit-bronze-shield",
 			"item-equipped", "unit-heater-shield",
 			"item-not-equipped", "unit-iron-shield",
+			"item-not-equipped", "unit-kite-shield",
 			"item-not-equipped", "unit-thrymgjol-shield"
 		},
 		{
@@ -204,6 +211,7 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 			"item-equipped", "unit-bronze-shield",
 			"item-equipped", "unit-heater-shield",
 			"item-not-equipped", "unit-iron-shield",
+			"item-not-equipped", "unit-kite-shield",
 			"item-not-equipped", "unit-thrymgjol-shield",
 			"upgrade-forbidden", "upgrade-old"
 		},
@@ -213,6 +221,7 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 			"layer-file", "left-arm", "human/units/human_left_arm_shield.png",
 			"layer-file", "shield", "teuton/units/saxon_shield.png",
 			"item-equipped", "unit-iron-shield",
+			"item-equipped", "unit-kite-shield",
 			"item-equipped", "unit-thrymgjol-shield",
 			"upgrade-forbidden", "upgrade-old"
 		},
@@ -223,6 +232,7 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 			"layer-file", "shield", "teuton/units/saxon_shield.png",
 			"icon", "icon-germanic-warrior-brown-hair",
 			"item-equipped", "unit-iron-shield",
+			"item-equipped", "unit-kite-shield",
 			"item-equipped", "unit-thrymgjol-shield",
 			"upgrade-forbidden", "upgrade-old"
 		},
@@ -233,6 +243,7 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 			"layer-file", "shield", "teuton/units/saxon_shield.png",
 			"icon", "icon-germanic-warrior-gray-hair",
 			"item-equipped", "unit-iron-shield",
+			"item-equipped", "unit-kite-shield",
 			"item-equipped", "unit-thrymgjol-shield"
 		},
 		{
@@ -242,6 +253,7 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 			"layer-file", "shield", "teuton/units/saxon_shield.png",
 			"icon", "icon-germanic-warrior-red-hair",
 			"item-equipped", "unit-iron-shield",
+			"item-equipped", "unit-kite-shield",
 			"item-equipped", "unit-thrymgjol-shield",
 			"upgrade-forbidden", "upgrade-old"
 		}
@@ -290,6 +302,7 @@ DefineUnitType("unit-germanic-spearman", { Name = _("Spearman"),
 			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
 			"item-not-equipped", "unit-bronze-shield",
 			"item-not-equipped", "unit-iron-shield",
+			"item-not-equipped", "unit-kite-shield",
 			"item-not-equipped", "unit-heater-shield",
 			"item-not-equipped", "unit-thrymgjol-shield",
 			"upgrade-forbidden", "upgrade-old"
@@ -301,6 +314,7 @@ DefineUnitType("unit-germanic-spearman", { Name = _("Spearman"),
 			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
 			"item-not-equipped", "unit-bronze-shield",
 			"item-not-equipped", "unit-iron-shield",
+			"item-not-equipped", "unit-kite-shield",
 			"item-not-equipped", "unit-heater-shield",
 			"item-not-equipped", "unit-thrymgjol-shield",
 			"upgrade-forbidden", "upgrade-old"
@@ -312,6 +326,7 @@ DefineUnitType("unit-germanic-spearman", { Name = _("Spearman"),
 			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
 			"item-not-equipped", "unit-bronze-shield",
 			"item-not-equipped", "unit-iron-shield",
+			"item-not-equipped", "unit-kite-shield",
 			"item-not-equipped", "unit-heater-shield",
 			"item-not-equipped", "unit-thrymgjol-shield"
 		},
@@ -322,6 +337,7 @@ DefineUnitType("unit-germanic-spearman", { Name = _("Spearman"),
 			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
 			"item-not-equipped", "unit-bronze-shield",
 			"item-not-equipped", "unit-iron-shield",
+			"item-not-equipped", "unit-kite-shield",
 			"item-not-equipped", "unit-heater-shield",
 			"item-not-equipped", "unit-thrymgjol-shield",
 			"upgrade-forbidden", "upgrade-old"
@@ -335,6 +351,7 @@ DefineUnitType("unit-germanic-spearman", { Name = _("Spearman"),
 			"item-equipped", "unit-bronze-shield",
 			"item-equipped", "unit-heater-shield",
 			"item-not-equipped", "unit-iron-shield",
+			"item-not-equipped", "unit-kite-shield",
 			"item-not-equipped", "unit-thrymgjol-shield",
 			"upgrade-forbidden", "upgrade-old"
 		},
@@ -348,6 +365,7 @@ DefineUnitType("unit-germanic-spearman", { Name = _("Spearman"),
 			"item-equipped", "unit-bronze-shield",
 			"item-equipped", "unit-heater-shield",
 			"item-not-equipped", "unit-iron-shield",
+			"item-not-equipped", "unit-kite-shield",
 			"item-not-equipped", "unit-thrymgjol-shield",
 			"upgrade-forbidden", "upgrade-old"
 		},
@@ -361,6 +379,7 @@ DefineUnitType("unit-germanic-spearman", { Name = _("Spearman"),
 			"item-equipped", "unit-bronze-shield",
 			"item-equipped", "unit-heater-shield",
 			"item-not-equipped", "unit-iron-shield",
+			"item-not-equipped", "unit-kite-shield",
 			"item-not-equipped", "unit-thrymgjol-shield"
 		},
 		{
@@ -373,6 +392,7 @@ DefineUnitType("unit-germanic-spearman", { Name = _("Spearman"),
 			"item-equipped", "unit-bronze-shield",
 			"item-equipped", "unit-heater-shield",
 			"item-not-equipped", "unit-iron-shield",
+			"item-not-equipped", "unit-kite-shield",
 			"item-not-equipped", "unit-thrymgjol-shield",
 			"upgrade-forbidden", "upgrade-old"
 		},
@@ -382,6 +402,7 @@ DefineUnitType("unit-germanic-spearman", { Name = _("Spearman"),
 			"layer-file", "left-arm", "human/units/human_left_arm_shield.png",
 			"layer-file", "shield", "germanic/units/bronze_shield.png",
 			"item-equipped", "unit-iron-shield",
+			"item-equipped", "unit-kite-shield",
 			"item-equipped", "unit-thrymgjol-shield",
 			"upgrade-forbidden", "upgrade-old"
 		},
@@ -392,6 +413,7 @@ DefineUnitType("unit-germanic-spearman", { Name = _("Spearman"),
 			"layer-file", "shield", "germanic/units/bronze_shield.png",
 			"icon", "icon-germanic-warrior-brown-hair",
 			"item-equipped", "unit-iron-shield",
+			"item-equipped", "unit-kite-shield",
 			"item-equipped", "unit-thrymgjol-shield",
 			"upgrade-forbidden", "upgrade-old"
 		},
@@ -402,6 +424,7 @@ DefineUnitType("unit-germanic-spearman", { Name = _("Spearman"),
 			"layer-file", "shield", "germanic/units/bronze_shield.png",
 			"icon", "icon-germanic-warrior-gray-hair",
 			"item-equipped", "unit-iron-shield",
+			"item-equipped", "unit-kite-shield",
 			"item-equipped", "unit-thrymgjol-shield"
 		},
 		{
@@ -411,6 +434,7 @@ DefineUnitType("unit-germanic-spearman", { Name = _("Spearman"),
 			"layer-file", "shield", "germanic/units/bronze_shield.png",
 			"icon", "icon-germanic-warrior-red-hair",
 			"item-equipped", "unit-iron-shield",
+			"item-equipped", "unit-kite-shield",
 			"item-equipped", "unit-thrymgjol-shield",
 			"upgrade-forbidden", "upgrade-old"
 		}

@@ -123,6 +123,7 @@ DefineUnitType("unit-teuton-swordsman", { Name = _("Krieger"),
 			"item-not-equipped", "unit-heater-shield",
 			"upgrade-forbidden", "upgrade-teuton-iron-shield",
 			"item-not-equipped", "unit-iron-shield",
+			"item-not-equipped", "unit-kite-shield",
 			"item-not-equipped", "unit-thrymgjol-shield",
 		},
 		{
@@ -137,6 +138,7 @@ DefineUnitType("unit-teuton-swordsman", { Name = _("Krieger"),
 			"item-equipped", "unit-heater-shield",
 			"upgrade-forbidden", "upgrade-teuton-iron-shield",
 			"item-not-equipped", "unit-iron-shield",
+			"item-not-equipped", "unit-kite-shield",
 			"item-not-equipped", "unit-thrymgjol-shield"
 		},
 		{
@@ -148,6 +150,7 @@ DefineUnitType("unit-teuton-swordsman", { Name = _("Krieger"),
 			"item-not-equipped", "unit-spatha",
 			"upgrade-required", "upgrade-teuton-iron-shield",
 			"item-equipped", "unit-iron-shield",
+			"item-equipped", "unit-kite-shield",
 			"item-equipped", "unit-thrymgjol-shield"
 		},
 		{
@@ -160,6 +163,7 @@ DefineUnitType("unit-teuton-swordsman", { Name = _("Krieger"),
 			"item-not-equipped", "unit-heater-shield",
 			"upgrade-forbidden", "upgrade-teuton-iron-shield",
 			"item-not-equipped", "unit-iron-shield",
+			"item-not-equipped", "unit-kite-shield",
 			"item-not-equipped", "unit-thrymgjol-shield"
 		},
 		{
@@ -174,6 +178,7 @@ DefineUnitType("unit-teuton-swordsman", { Name = _("Krieger"),
 			"item-equipped", "unit-heater-shield",
 			"upgrade-forbidden", "upgrade-teuton-iron-shield",
 			"item-not-equipped", "unit-iron-shield",
+			"item-not-equipped", "unit-kite-shield",
 			"item-not-equipped", "unit-thrymgjol-shield"
 		},
 		{
@@ -185,6 +190,7 @@ DefineUnitType("unit-teuton-swordsman", { Name = _("Krieger"),
 			"item-equipped", "unit-spatha",
 			"upgrade-required", "upgrade-teuton-iron-shield",
 			"item-equipped", "unit-iron-shield",
+			"item-equipped", "unit-kite-shield",
 			"item-equipped", "unit-thrymgjol-shield"
 		}
 	},
@@ -235,6 +241,7 @@ DefineUnitType("unit-suebi-swordsman", { Name = _("Krieger"),
 			"item-not-equipped", "unit-heater-shield",
 			"upgrade-forbidden", "upgrade-teuton-iron-shield",
 			"item-not-equipped", "unit-iron-shield",
+			"item-not-equipped", "unit-kite-shield",
 			"item-not-equipped", "unit-thrymgjol-shield"
 		},
 		{
@@ -249,6 +256,7 @@ DefineUnitType("unit-suebi-swordsman", { Name = _("Krieger"),
 			"item-equipped", "unit-heater-shield",
 			"upgrade-forbidden", "upgrade-teuton-iron-shield",
 			"item-not-equipped", "unit-iron-shield",
+			"item-not-equipped", "unit-kite-shield",
 			"item-not-equipped", "unit-thrymgjol-shield"
 		},
 		{
@@ -260,6 +268,7 @@ DefineUnitType("unit-suebi-swordsman", { Name = _("Krieger"),
 			"item-not-equipped", "unit-spatha",
 			"upgrade-required", "upgrade-teuton-iron-shield",
 			"item-equipped", "unit-iron-shield",
+			"item-equipped", "unit-kite-shield",
 			"item-equipped", "unit-thrymgjol-shield",
 			"shield-animation", SuebiShieldAnimation
 		},
@@ -273,6 +282,7 @@ DefineUnitType("unit-suebi-swordsman", { Name = _("Krieger"),
 			"item-not-equipped", "unit-heater-shield",
 			"upgrade-forbidden", "upgrade-teuton-iron-shield",
 			"item-not-equipped", "unit-iron-shield",
+			"item-not-equipped", "unit-kite-shield",
 			"item-not-equipped", "unit-thrymgjol-shield"
 		},
 		{
@@ -287,6 +297,7 @@ DefineUnitType("unit-suebi-swordsman", { Name = _("Krieger"),
 			"item-equipped", "unit-heater-shield",
 			"upgrade-forbidden", "upgrade-teuton-iron-shield",
 			"item-not-equipped", "unit-iron-shield",
+			"item-not-equipped", "unit-kite-shield",
 			"item-not-equipped", "unit-thrymgjol-shield"
 		},
 		{
@@ -298,6 +309,7 @@ DefineUnitType("unit-suebi-swordsman", { Name = _("Krieger"),
 			"item-equipped", "unit-spatha",
 			"upgrade-required", "upgrade-teuton-iron-shield",
 			"item-equipped", "unit-iron-shield",
+			"item-equipped", "unit-kite-shield",
 			"item-equipped", "unit-thrymgjol-shield",
 			"shield-animation", SuebiShieldAnimation
 		}
