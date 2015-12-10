@@ -43,7 +43,7 @@ DefineUnitType("unit-dwarven-miner", { Name = _("Miner"),
 	Corpse = "unit-dwarven-dead-body",
 	WeaponClass = "mace",
 	BluntDamage = true,
-	AiDrops = {"unit-boots", "unit-cheese"},
+	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-boots", "unit-cheese"},
 	CanGatherResources = {
 		{
 			"resource-id", "gold",

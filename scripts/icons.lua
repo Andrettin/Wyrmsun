@@ -34,6 +34,18 @@ function DefineIcon(arg)
 end
 
 DefineIcon({
+	Name = "icon-hammer",
+	Size = {46, 38},
+	File = "neutral/icons/hammer.png"
+})
+
+DefineIcon({
+	Name = "icon-mining-pick",
+	Size = {46, 38},
+	File = "neutral/icons/mining_pick.png"
+})
+
+DefineIcon({
 	Name = "icon-repair",
 	Size = {46, 38},
 	File = "neutral/icons/repair.png"

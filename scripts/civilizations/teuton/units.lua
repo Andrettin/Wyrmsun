@@ -46,7 +46,7 @@ DefineUnitType("unit-teuton-worker", { Name = _("Bura"),
 	NightSightRangeBonus = -1,
 	WeaponClass = "mace",
 	BluntDamage = true,
-	AiDrops = {"unit-boots", "unit-cheese", "unit-carrots"},
+	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-boots", "unit-cheese", "unit-carrots"},
 	CanGatherResources = {
 		{
 			"resource-id", "gold",

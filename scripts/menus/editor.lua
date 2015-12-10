@@ -153,6 +153,8 @@ editor_types = {
    "unit-battle-axe",
    "unit-broad-axe",
    "unit-great-axe",
+   "unit-hammer",
+   "unit-mining-pick",
    "unit-throwing-axe",
    "unit-sharp-throwing-axe",
    "unit-bearded-throwing-axe",

@@ -46,7 +46,7 @@ DefineUnitType("unit-germanic-worker", { Name = _("Bura"), -- Bûra = "Bauer" in
 	NightSightRangeBonus = -1,
 	WeaponClass = "mace",
 	BluntDamage = true,
-	AiDrops = {"unit-boots", "unit-cheese", "unit-carrots"},
+	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-boots", "unit-cheese", "unit-carrots"},
 	CanGatherResources = {
 		{
 			"resource-id", "gold", -- this needs to be on top

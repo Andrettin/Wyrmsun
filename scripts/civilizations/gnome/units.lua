@@ -44,7 +44,7 @@ DefineUnitType("unit-gnomish-worker", { Name = _("Scavenger"),
 	Corpse = "unit-gnomish-dead-body",
 	WeaponClass = "mace",
 	BluntDamage = true,
-	AiDrops = {"unit-cheese", "unit-wool-shoes"},
+	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-cheese", "unit-wool-shoes"},
 	CanGatherResources = {
 		{
 			"resource-id", "gold",

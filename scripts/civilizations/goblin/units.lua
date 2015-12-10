@@ -46,7 +46,7 @@ DefineUnitType("unit-goblin-worker", { Name = _("Worker"),
 	Corpse = "unit-goblin-dead-body",
 	WeaponClass = "mace",
 	BluntDamage = true,
-	AiDrops = {"unit-boots", "unit-cheese"},
+	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-boots", "unit-cheese"},
 	CanGatherResources = {
 		{
 			"resource-id", "gold",

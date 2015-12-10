@@ -110,6 +110,22 @@ DefineUnitType("unit-great-axe", { Name = _("Great Axe"),
 	BasicDamage = 4
 } )
 
+DefineUnitType("unit-hammer", { Name = _("Hammer"),
+	Parent = "unit-template-item",
+	Image = {"file", "neutral/items/hammer.png", "size", {32, 32}},
+	Icon = "icon-hammer",
+	ItemClass = "mace",
+	BasicDamage = 0
+} )
+
+DefineUnitType("unit-mining-pick", { Name = _("Mining Pick"),
+	Parent = "unit-template-item",
+	Image = {"file", "neutral/items/mining_pick.png", "size", {32, 32}},
+	Icon = "icon-mining-pick",
+	ItemClass = "mace",
+	BasicDamage = 0
+} )
+
 DefineUnitType("unit-throwing-axe", { Name = _("Throwing Axe"),
 	Parent = "unit-template-item",
 	Image = {"file", "neutral/items/axe.png", "size", {32, 32}},
