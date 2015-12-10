@@ -264,6 +264,7 @@ https://github.com/Andrettin/Wyrmsun
 - Improved the calculation of the XP required for level up.
 - Improved the XP bar display.
 - Added Dwarven Transport (graphics by Jinn).
+- Germanic Skutans and Goblin Archers no longer use different animations for melee and ranged attacks.
 
 -----------------------------------------------------------------------
 - 1.7.5

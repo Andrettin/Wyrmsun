@@ -218,6 +218,7 @@ function RunShowCreditsMenu()
 	"  pirro",
 	"  Spfnym",
 	"  Szunti",
+	"  Talos, Colossus of Bronze",
 	"  TaShadan",
 	"  X3M",
 	"",
