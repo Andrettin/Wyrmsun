@@ -42,6 +42,14 @@ DefineUniqueItem("Gram", { -- Source: Henry Adams Bellows (transl.), "The Poetic
 	Quote = "\"With thy sword between, | three nights thou sleepest / With her thou winnest | for Gunnar's wife.\" - Gripisspo"
 } )
 
+DefineUniqueItem("The Hammer of Thursagan", {
+	Type = "unit-hammer",
+	Prefix = "upgrade-item-prefix-flaming",
+	Suffix = "upgrade-item-suffix-of-victory",
+--	Quote = "\"The very tool with which our greatest runesmith made the Scepter of Fire. But it is ancient, far older than Thursagan; he was but the last to wield it, and our oldest histories hint that this very hammer was used to forge the dwarves themselves in the heart of the earth.\" - Angarthing"
+	Quote = "\"The very tool with which our greatest runesmith made the Scepter of Fire. But it is ancient, far older than Thursagan; he was but the last to wield it.\" - Angarthing"
+} )
+
 DefineUniqueItem("Hrotti", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 385.
 	Type = "unit-spatha",
 	Prefix = "upgrade-item-prefix-penetrating",
@@ -71,7 +79,7 @@ DefineUniqueItem("Toporik", { -- name means "hatchet" in Russian; renaming of th
 	Prefix = "upgrade-item-prefix-storm",
 	Suffix = "upgrade-item-suffix-of-victory",
 	Background = "In Slavic mythology, the god Perun wielded a throwing axe. Perun's axe has often been identified with Thor's Mjollnir hammer in function and origin. The name Toporik means \"hatchet\" in Russian.",
-	Quote = "\"The old god / Has nine sons: / Three strike, three thunder, / Three lighten.\" - Dwarven Traditional Poetry" -- Source: W. R. S. Ralston, "Songs of the Russian People", 1872, p. 90.
+	Quote = "\"The wise Hroptatyr / Has nine sons: / Three strike, three thunder, / Three lighten.\" - Dwarven Traditional Poetry" -- Source: W. R. S. Ralston, "Songs of the Russian People", 1872, p. 90.
 } )
 
 DefineUniqueItem("Svalin", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 63; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 100.

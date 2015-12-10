@@ -96,7 +96,13 @@ DefineCharacter("Thursagan", {
 	ProvinceOfOrigin = "Caverns of Chaincolt",
 	Year = -1,
 	DeathYear = 40 + 10, -- died in 40 AD of a violent death, but was already rather old; +10 years
-	Persistent = true
+	Persistent = true,
+	Items = {
+		{
+			"unique", "The Hammer of Thursagan",
+			"bound", true
+		},
+	}
 })
 
 DefineCharacter("Baglur", {

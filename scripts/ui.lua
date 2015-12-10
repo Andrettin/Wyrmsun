@@ -1135,8 +1135,11 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {ItemClass = "potion"}, TextColor = "white", HighlightColor = "yellow",
 					More = {"Text", {Text = _("Right-click to use"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 				},
-				{ 	TextColor = "white", HighlightColor = "yellow",
+				{ 	Condition = {Bound = "false"}, TextColor = "white", HighlightColor = "yellow",
 					More = {"Text", {Text = _("Left-click to drop"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {Bound = "only"}, TextColor = "white", HighlightColor = "yellow",
+					More = {"Text", {Text = _("Cannot be dropped"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {Weapon = "only", Equippable = "only"}, HighlightColor = "yellow",
 					More = {"Text", {Text = _("Replaces weapon technology bonuses when equipped"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
