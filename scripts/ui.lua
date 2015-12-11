@@ -1132,7 +1132,7 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {Equipped = "only"}, TextColor = "white", HighlightColor = "yellow",
 					More = {"Text", {Text = _("Right-click to de-equip"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 				},
-				{ 	Condition = {ItemClass = "potion"}, TextColor = "white", HighlightColor = "yellow",
+				{ 	Condition = {Consumable = "only"}, TextColor = "white", HighlightColor = "yellow",
 					More = {"Text", {Text = _("Right-click to use"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {Bound = "false"}, TextColor = "white", HighlightColor = "yellow",
@@ -1161,6 +1161,9 @@ if not (ui_loaded_first_time) then
 				},
 				{ 	Condition = {Unique = "only"}, HighlightColor = "yellow",
 					More = {"Text", {Text = _("Unique Item"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {Spell = "only"}, HighlightColor = "yellow",
+					More = {"Text", {Text = Concat(_("Casts "), UnitSpell("Unit")), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {BasicDamage = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Damage: +"), String(Add(UnitVar("BasicDamage","Value"), UnitVar("PiercingDamage","Value")))), Font = wyr.preferences.PopupDescriptionFont}}

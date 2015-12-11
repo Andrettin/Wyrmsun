@@ -29,7 +29,7 @@
 
 -- For documentation see stratagus/doc/ccl/ccl.html
 
-DefineBoolFlags("isundead", "volatile", "Capturable")
+DefineBoolFlags("Capturable")
 
 --
 --  Speed     : just drawing
@@ -127,3 +127,15 @@ DefineSpell("spell-axe-twirl",
 	"autocast", {"range", 1, "condition", {"alliance", "false", "opponent", "only", "AirUnit", "false"}},
 	"ai-cast", {"range", 1, "condition", {"alliance", "false", "opponent", "only", "AirUnit", "false"}}
 )
+
+DefineSpell("spell-retraining",
+	"showname", _("Retraining"),
+	"manacost", 0,
+	"range", 0,
+	"target", "self",
+	"action", {
+		{"retrain"}
+	},
+	"sound-when-cast", "magic-holy"
+)
+

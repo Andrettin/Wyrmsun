@@ -243,6 +243,7 @@ https://github.com/Andrettin/Wyrmsun
 * Items
 - Persistent heroes, Stonelords and Gryphon Riders now have an inventory in which they can carry items (such as potions). Other units can still use potions by right-clicking on them, but they can't carry them around. Items are saved for persistent heroes.
 - Added weapon and shield items. These can be equipped by right-clicking, and will replace the bonuses of the weapon/shield technologies with those of the item.
+- Added equippable boot items.
 - AI units now have a chance to drop items.
 - Dropped items now have a chance of having a magic prefix or suffix, as well as a chance of being a unique item.
 - Added Brimir (unique broad sword).
@@ -252,6 +253,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added Rithil (unique spatha).
 - Added Svalin (unique bronze shield).
 - Added Toporik (unique bearded throwing axe).
+- Added a Scroll of Retraining (allows heroes to re-pick abilities).
 
 * Miscellaneous
 - Units' names now appear in a tooltip when they are hovered.
