@@ -146,6 +146,7 @@ editor_types = {
    "unit-cheese",
    "unit-carrots",
    "unit-gryphon-feather",
+   "unit-scroll",
    "unit-short-sword",
    "unit-broad-sword",
    "unit-spatha",

@@ -1342,6 +1342,12 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-scroll",
+	Size = {46, 38},
+	File = "norse/icons/scroll.png"
+})
+
+DefineIcon({
 	Name = "icon-caltrops",
 	Size = {46, 38},
 	File = "neutral/icons/caltrops.png"

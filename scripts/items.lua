@@ -42,18 +42,6 @@ DefineUnitType("unit-template-item", { Name = _("Item"),
 	} 
 } )
 
-DefineUnitType("unit-potion-of-healing", { Name = _("Potion of Healing"),
-	Parent = "unit-template-item",
-	Image = {"file", "neutral/items/potion_red.png", "size", {16, 16}},
-	Animations = "animations-potion", Icon = "icon-red-potion",
-	ItemClass = "potion",
-	Costs = {"gold", 150},
-	HitPointHealing = 45,
-	Sounds = {
-		"used", "potion"
-	} 
-} )
-
 DefineUnitType("unit-short-sword", { Name = _("Short Sword"),
 	Parent = "unit-template-item",
 	Image = {"file", "germanic/items/broad_bronze_sword.png", "size", {32, 32}},
@@ -265,4 +253,23 @@ DefineUnitType("unit-bodkin-arrows", { Name = _("Bodkin Arrows"),
 	ItemClass = "arrows",
 	NumDirections = 8,
 	BasicDamage = 4
+} )
+
+DefineUnitType("unit-potion-of-healing", { Name = _("Potion of Healing"),
+	Parent = "unit-template-item",
+	Image = {"file", "neutral/items/potion_red.png", "size", {16, 16}},
+	Animations = "animations-potion", Icon = "icon-red-potion",
+	ItemClass = "potion",
+	Costs = {"gold", 150},
+	HitPointHealing = 45,
+	Sounds = {
+		"used", "potion"
+	} 
+} )
+
+DefineUnitType("unit-scroll", { Name = _("Scroll"),
+	Parent = "unit-template-item",
+	Image = {"file", "neutral/items/scroll.png", "size", {32, 32}},
+	Icon = "icon-scroll",
+	ItemClass = "scroll"
 } )
