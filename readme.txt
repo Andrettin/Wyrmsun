@@ -265,6 +265,8 @@ https://github.com/Andrettin/Wyrmsun
 - Improved the XP bar display.
 - Added Dwarven Transport (graphics by Jinn).
 - Germanic Skutans and Goblin Archers no longer use different animations for melee and ranged attacks.
+- Blood Bats and Dread Bats now give more experience.
+- Dread Bats now deal less damage.
 
 -----------------------------------------------------------------------
 - 1.7.5

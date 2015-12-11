@@ -75,6 +75,17 @@ DefineCharacter("Avitus", { -- Source: Norman Davies, "Vanished Kingdoms", 2012,
 	DeathYear = 523 -- ended corresponding with Sigismund
 })
 
+DefineCharacter("Geofrei Gaimar", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 76.
+	Name = "Geofrei",
+	Dynasty = "Gaimar", -- was that actually his family name?
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "latin", -- should be French
+	ProvinceOfOrigin = "France", -- accurate?
+	Year = 1135, -- composed Estoire des Anglais c. 1135-1140 AD
+	DeathYear = 1135 + 30 -- estimated
+})
+
 DefineCharacter("Nicholas", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 142.
 	Name = "Nicholas", -- Pope Nicholas V; what was his real name?
 	Gender = "male",
