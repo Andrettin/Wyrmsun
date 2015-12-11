@@ -79,7 +79,7 @@ DefineCharacter("Geofrei Gaimar", { -- Source: Alaric Hall, "The Meanings of Elf
 	Name = "Geofrei",
 	Dynasty = "Gaimar", -- was that actually his family name?
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-teuton-swordsman", -- should be something more appropriate for a writer?
 	Civilization = "latin", -- should be French
 	ProvinceOfOrigin = "France", -- accurate?
 	Year = 1135, -- composed Estoire des Anglais c. 1135-1140 AD
