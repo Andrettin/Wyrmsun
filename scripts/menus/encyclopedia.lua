@@ -10,7 +10,7 @@
 --
 --      encyclopedia.lua - Defines the encyclopedia for tech trees.
 --
---      (c) Copyright 2014 by Andrettin
+--      (c) Copyright 2014-2015 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -275,6 +275,8 @@ function addEncyclopediaIcon(unit_name, menu, x, y)
 			local description = ""
 			local quote = ""
 			local background = ""
+			local drops_string = ""
+			local drop_affixes_string = ""
 			if (string.find(unit_name, "unit") ~= nil) then
 				if (GetUnitTypeData(unit_name, "Civilization") ~= "") then
 					civilization = "Civilization: " .. _(CapitalizeString(GetUnitTypeData(unit_name, "Civilization"))) .. "\n\n"
@@ -290,6 +292,33 @@ function addEncyclopediaIcon(unit_name, menu, x, y)
 				end
 				if (GetUnitTypeData(unit_name, "Quote") ~= "") then
 					quote = "\n\nQuote: " .. GetUnitTypeData(unit_name, "Quote")
+				end
+				if (table.getn(GetUnitTypeData(unit_name, "Drops")) > 0 or table.getn(GetUnitTypeData(unit_name, "AiDrops")) > 0) then
+					drops_string = "\n\n\Dropped Items: "
+					local drops = GetUnitTypeData(unit_name, "Drops")
+					for i=1,table.getn(GetUnitTypeData(unit_name, "AiDrops")) do
+						table.insert(drops, GetUnitTypeData(unit_name, "AiDrops")[i])
+					end
+					table.sort(drops)
+					for i=1,table.getn(drops) do
+						if (i > 1) then
+							drops_string = drops_string .. ", "
+						end
+						drops_string = drops_string .. GetUnitTypeData(drops[i], "Name")
+					end
+					drops_string = drops_string .. "."
+				end
+				if (table.getn(GetUnitTypeData(unit_name, "DropAffixes")) > 0) then
+					drop_affixes_string = "\n\n\Dropped Item Affixes: "
+					local drop_affixes = GetUnitTypeData(unit_name, "DropAffixes")
+					table.sort(drop_affixes)
+					for i=1,table.getn(drop_affixes) do
+						if (i > 1) then
+							drop_affixes_string = drop_affixes_string .. ", "
+						end
+						drop_affixes_string = drop_affixes_string .. CUpgrade:Get(drop_affixes[i]).Name
+					end
+					drop_affixes_string = drop_affixes_string .. "."
 				end
 				if (GetUnitTypeData(unit_name, "Background") ~= "") then
 					background = "\n\nBackground: " .. GetUnitTypeData(unit_name, "Background")
@@ -333,7 +362,7 @@ function addEncyclopediaIcon(unit_name, menu, x, y)
 					background = "\n\nBackground: " .. GetCharacterData(unit_name, "Background")
 				end
 			end
-			l:setCaption(civilization .. faction .. unit_type_class .. description .. quote .. background)
+			l:setCaption(civilization .. faction .. unit_type_class .. description .. quote .. drops_string .. drop_affixes_string .. background)
 			
 			-- add buttons of texts related to the subject matter of the entry
 			local chapter_references = 0
