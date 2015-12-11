@@ -25,6 +25,11 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineUpgrade("upgrade-item-suffix-of-accuracy", {
+	Name = _("of Accuracy"),
+	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true}
+})
+
 DefineUpgrade("upgrade-item-suffix-of-betrayal", {
 	Name = _("of Betrayal"),
 	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true}
@@ -118,6 +123,10 @@ DefineUpgrade("upgrade-item-suffix-of-victory", {
 	Name = _("of Victory"),
 	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true}
 })
+
+DefineModifier("upgrade-item-suffix-of-accuracy",
+	{"Accuracy", 1}
+)
 
 DefineModifier("upgrade-item-suffix-of-betrayal",
 	{"Backstab", 100}
