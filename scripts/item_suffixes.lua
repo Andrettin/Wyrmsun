@@ -27,7 +27,8 @@
 
 DefineUpgrade("upgrade-item-suffix-of-accuracy", {
 	Name = _("of Accuracy"),
-	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true}
+	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true},
+	IncompatibleAffixes = {"upgrade-item-prefix-accurate"}
 })
 
 DefineUpgrade("upgrade-item-suffix-of-betrayal", {

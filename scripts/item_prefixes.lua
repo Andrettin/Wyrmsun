@@ -25,6 +25,11 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineUpgrade("upgrade-item-prefix-accurate", {
+	Name = _("Accurate"),
+	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true}
+})
+
 DefineUpgrade("upgrade-item-prefix-cold", { -- example: Cold Blade (from Wesnoth)
 	Name = _("Cold"),
 	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true}
@@ -89,6 +94,10 @@ DefineUpgrade("upgrade-item-prefix-wounding", {
 	Name = _("Wounding"),
 	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true}
 })
+
+DefineModifier("upgrade-item-prefix-accurate",
+	{"Accuracy", 1}
+)
 
 DefineModifier("upgrade-item-prefix-cold",
 	{"ColdDamage", 1}
