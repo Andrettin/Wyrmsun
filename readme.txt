@@ -267,6 +267,7 @@ https://github.com/Andrettin/Wyrmsun
 - Germanic Skutans and Goblin Archers no longer use different animations for melee and ranged attacks.
 - Blood Bats and Dread Bats now give more experience.
 - Dread Bats now deal less damage.
+- Blood Bats and Dread Bats now eat Snigills.
 
 -----------------------------------------------------------------------
 - 1.7.5
