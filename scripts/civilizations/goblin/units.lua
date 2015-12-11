@@ -307,6 +307,8 @@ DefineUnitType("unit-goblin-smithy", { Name = _("Fugla Forge"),
 	Image = {"file", "goblin/buildings/smithy.png", "size", {96, 96}},
 	Shadow = {"file", "goblin/buildings/smithy_shadow.png", "size", {96, 96}},
 	Icon = "icon-goblin-smithy",
+	AiDrops = {"unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield"},
+	DropAffixes = {"upgrade-item-prefix-flaming", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-the-snigill", "upgrade-item-suffix-of-trickery"},
 	Sounds = {
 		"help", "basic-goblin-voices-help-town"
 	}

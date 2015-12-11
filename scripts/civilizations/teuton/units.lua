@@ -546,6 +546,8 @@ DefineUnitType("unit-teuton-smithy", { Name = _("Smithy"),
 	Image = {"file", "teuton/buildings/smithy.png", "size", {96, 96}},
 	Shadow = {"file", "teuton/buildings/smithy_shadow.png", "size", {96, 96}},
 	Icon = "icon-teuton-smithy",
+	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield"},
+	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-flaming", "upgrade-item-prefix-glacial", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-the-serpent", "upgrade-item-suffix-of-the-snail", "upgrade-item-suffix-of-trickery"},
 	Variations = {
 		{
 			"variation-id", "smithy",
