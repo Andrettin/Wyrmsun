@@ -182,6 +182,13 @@ DefineLanguageNoun("Hund", { -- Source: Richard M. Runge, "The Phonetic Realizat
 	SingularNominative = "Hund"
 })
 
+DefineLanguageNoun("Mann", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, pp. 85-86.
+	Civilization = "old-english",
+	Meaning = "Person",
+	SingularNominative = "Mann",
+	Gender = "Masculine"
+})
+
 DefineLanguageNoun("Mearg", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
 	Civilization = "old-english",
 	Meaning = "Marrow",
@@ -280,6 +287,13 @@ DefineLanguageNoun("Weg", { -- Source: Richard M. Runge, "The Phonetic Realizati
 	Civilization = "old-english",
 	Meaning = "Way",
 	SingularNominative = "Weg"
+})
+
+DefineLanguageNoun("Wif", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 85.
+	Civilization = "old-english",
+	Meaning = "Woman",
+	SingularNominative = "Wif",
+	Gender = "Neuter"
 })
 
 DefineLanguageVerb("Aseowen", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 239.
