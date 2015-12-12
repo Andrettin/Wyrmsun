@@ -697,7 +697,7 @@ DefineUnitType("unit-dwarven-smithy", { Name = _("Smithy"),
 	PersonalNamePrefixes = {"The Black", "Brisings'", "Brokk's", "Eitri's", "The Fiery", "Ivaldi's", "Regin's"}, -- The Brisings were a group of dwarves who crafter a magnificent necklace; Brokk and Eitri were skilled dwarven smiths; Ivaldi's sons were skilled dwarven smiths; Regin was a dwarven smith in the Siegfried myth
 	PersonalNameSuffixes = {" Anvil", " Forge", " Hammer", " Smithy"},
 	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-spatha"}, -- drops Spatha to allow dropping dwarven unique swords
-	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-glacial", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-the-snigill"},
+	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-flaming", "upgrade-item-prefix-glacial", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-the-snigill"}, -- has flaming prefix to allow dropping The Hammer of Thursagan
 	Sounds = {
 		"help", "basic-dwarf-voices-help-town"
 	}
