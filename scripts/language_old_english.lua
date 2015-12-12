@@ -407,11 +407,26 @@ DefineLanguageVerb("Witan", { -- Source: Richard M. Runge, "The Phonetic Realiza
 	Infinitive = "Witan"
 })
 
+DefineLanguageAdjective("Gydig", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 94.
+	Civilization = "old-english",
+	Meaning = "Possessed (by a God)"
+})
+
 DefineLanguageAdjective("Māra", { -- this is the comparative, what is the normal version of the word? Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
 	Civilization = "old-english",
 	Meaning = "More",
 	Comparative = "Māra",
 	Superlative = "Māst"
+})
+
+DefineLanguageAdjective("Sælig", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 94.
+	Civilization = "old-english",
+	Meaning = "Happy, Prosperous"
+})
+
+DefineLanguageAdjective("Werig", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 94.
+	Civilization = "old-english",
+	Meaning = "Weary, Tired, Exhausted"
 })
 
 DefineLanguagePronoun("Mē", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
