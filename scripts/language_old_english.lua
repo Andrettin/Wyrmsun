@@ -111,6 +111,21 @@ DefineLanguageNoun("Glīwmǣden", { -- Source: Alaric Hall, "The Meanings of Elf
 	Gender = "Feminine" -- presumably, given the source is talking about occupations for women
 })
 
+DefineLanguageNoun("God", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 89.
+	Civilization = "old-english",
+	Meaning = "God",
+	SingularNominative = "God",
+	Gender = "Masculine"
+})
+
+DefineLanguageNoun("Gyden", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 89.
+	Civilization = "old-english",
+	Meaning = "Goddess",
+	SingularNominative = "Gyden",
+	PluralNominative = "Gydena",
+	Gender = "Feminine"
+})
+
 DefineLanguageNoun("Hād", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 3.
 	Civilization = "old-english",
 	Meaning = "Hair",
@@ -182,7 +197,7 @@ DefineLanguageNoun("Hund", { -- Source: Richard M. Runge, "The Phonetic Realizat
 	SingularNominative = "Hund"
 })
 
-DefineLanguageNoun("Mann", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, pp. 85-86.
+DefineLanguageNoun("Mann", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, pp. 85-86, 89.
 	Civilization = "old-english",
 	Meaning = "Person",
 	SingularNominative = "Mann",
@@ -199,6 +214,27 @@ DefineLanguageNoun("Mēd", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Civilization = "old-english",
 	Meaning = "Reward, Payment",
 	SingularNominative = "Mēd", -- source also gives as an alternative the form "Meord"
+	Gender = "Feminine"
+})
+
+DefineLanguageNoun("Mennen", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 89.
+	Civilization = "old-english",
+	Meaning = "Handmaid, Female Slave",
+	SingularNominative = "Mennen",
+	Gender = "Feminine"
+})
+
+DefineLanguageNoun("Munuc", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 89.
+	Civilization = "old-english",
+	Meaning = "Monk",
+	SingularNominative = "Munuc",
+	Gender = "Masculine"
+})
+
+DefineLanguageNoun("Mynecenu", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 89.
+	Civilization = "old-english",
+	Meaning = "Nun",
+	SingularNominative = "Mynecenu",
 	Gender = "Feminine"
 })
 

@@ -796,3 +796,10 @@ DefineCivilizationLanguage("norwegian", -- Norwegian
 		}
 	}
 )
+
+DefineLanguageNoun("Alßinjō", { -- alternatively spelled "Alßnjō"; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 89.
+	Civilization = "west-germanic",
+	Meaning = "Female Elf",
+	SingularNominative = "Alßinjō",
+	Gender = "Feminine"
+})
