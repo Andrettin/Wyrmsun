@@ -167,7 +167,7 @@ DefineUnitType("unit-kite-shield", { Name = _("Kite Shield"),
 	Image = {"file", "teuton/items/saxon_shield.png", "size", {32, 32}},
 	Icon = "icon-heater-shield",
 	ItemClass = "shield",
-	Armor = 6
+	Armor = 5
 } )
 
 --[[
