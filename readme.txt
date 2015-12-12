@@ -254,6 +254,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added Svalin (unique bronze shield).
 - Added Toporik (unique bearded throwing axe).
 - Added a Scroll of Retraining (allows heroes to re-pick abilities).
+- The encyclopedia now has information on items, item affixes and unique items.
 
 * Miscellaneous
 - Units' names now appear in a tooltip when they are hovered.

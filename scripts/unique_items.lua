@@ -33,6 +33,14 @@ DefineUniqueItem("Brimir", { -- Source: Henry Adams Bellows (transl.), "The Poet
 	Quote = "\"Of all the gods | is Odin the greatest, / And Sleipnir the best of steeds; / Bifrost of bridges, | Bragi of skalds, / Hobrok of hawks, | Garm of hounds, / and Brimir of swords.\" - Grimnismol"
 } )
 
+DefineUniqueItem("Laevatein", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 124; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 245.
+	Type = "unit-broad-sword",
+	Prefix = "upgrade-item-prefix-wounding",
+	Suffix = "upgrade-item-suffix-of-trickery",
+	Background = "In Norse mythology, Laevatein (\"the Wounding Wand\") was a sword forged by Loki with runes at the doors of Niflheim, and was placed under nine locks in Laegjarn's chest, with Sinmora guarding over it.",
+	Quote = "\"Laevatein is there | that Lopt with runes / Once made by the doors of death; / In Laegjarn's chest | by Sinmora lies it, / And nine locks fasten it firm.\" - Svipdagsmol"
+} )
+
 DefineUniqueItem("Gram", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", pp. 351, 365.
 	Type = "unit-spatha",
 	Prefix = "upgrade-item-prefix-wounding",
@@ -40,14 +48,6 @@ DefineUniqueItem("Gram", { -- Source: Henry Adams Bellows (transl.), "The Poetic
 	Background = "In Norse mythology, Gram was the sword given by Odin to Sigmund. Being later broken into pieces, the sword was reforged by Regin for Sigurd.",
 --	Quote = "\"My kin, methinks, | is unknown to thee, / And so am I myself; / Sigurd my name, | and Sigmund's son, / Who smote thee thus with the sword.\" - Fafnismol"
 	Quote = "\"With thy sword between, | three nights thou sleepest / With her thou winnest | for Gunnar's wife.\" - Gripisspo"
-} )
-
-DefineUniqueItem("The Hammer of Thursagan", {
-	Type = "unit-hammer",
-	Prefix = "upgrade-item-prefix-flaming",
-	Suffix = "upgrade-item-suffix-of-victory",
---	Quote = "\"The very tool with which our greatest runesmith made the Scepter of Fire. But it is ancient, far older than Thursagan; he was but the last to wield it, and our oldest histories hint that this very hammer was used to forge the dwarves themselves in the heart of the earth.\" - Angarthing"
-	Quote = "\"The very tool with which our greatest runesmith made the Scepter of Fire. But it is ancient, far older than Thursagan; he was but the last to wield it.\" - Angarthing"
 } )
 
 DefineUniqueItem("Hrotti", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 385.
@@ -58,20 +58,20 @@ DefineUniqueItem("Hrotti", { -- Source: Henry Adams Bellows (transl.), "The Poet
 	Quote = "\"There he found a mighty store of gold, and he filled two chests full thereof; he took the fear-helm and a golden mail-coat and the sword Hrotti, and many other precious things.\" - Fafnismol"
 } )
 
-DefineUniqueItem("Laevatein", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 124; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 245.
-	Type = "unit-broad-sword",
-	Prefix = "upgrade-item-prefix-wounding",
-	Suffix = "upgrade-item-suffix-of-trickery",
-	Background = "In Norse mythology, Laevatein (\"the Wounding Wand\") was a sword forged by Loki with runes at the doors of Niflheim, and was placed under nine locks in Laegjarn's chest, with Sinmora guarding over it.",
-	Quote = "\"Laevatein is there | that Lopt with runes / Once made by the doors of death; / In Laegjarn's chest | by Sinmora lies it, / And nine locks fasten it firm.\" - Svipdagsmol"
-} )
-
 DefineUniqueItem("Rithil", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 380.
 	Type = "unit-spatha",
 	Prefix = "upgrade-item-prefix-swift",
 	Suffix = "upgrade-item-suffix-of-betrayal",
 	Background = "In Norse mythology, Rithil (\"Swift-Moving\") was Regin's sword, which he used to slay his brother Fafnir. One source gives the alternate name Refil (\"Serpent\") for the sword.",
 	Quote = "\"Then Regin went up to Fafnir and cut out his heart with his sword, that was named Rithil, and then he drank blood from the wounds.\" - Fafnismol"
+} )
+
+DefineUniqueItem("The Hammer of Thursagan", {
+	Type = "unit-hammer",
+	Prefix = "upgrade-item-prefix-flaming",
+	Suffix = "upgrade-item-suffix-of-victory",
+--	Quote = "\"The very tool with which our greatest runesmith made the Scepter of Fire. But it is ancient, far older than Thursagan; he was but the last to wield it, and our oldest histories hint that this very hammer was used to forge the dwarves themselves in the heart of the earth.\" - Angarthing"
+	Quote = "\"The very tool with which our greatest runesmith made the Scepter of Fire. But it is ancient, far older than Thursagan; he was but the last to wield it.\" - Angarthing"
 } )
 
 DefineUniqueItem("Toporik", { -- name means "hatchet" in Russian; renaming of the Axe of Perun (Perun is a god from Slavic mythology), here made into a dwarven unique throwing axe (since it wouldn't make much sense for the dwarves to have a throwing axe named after a god from a human mythology); was made a dwarven item under the following premise: many scholars associate the Axe of Perun with Thor's Mjollnir hammer in function and origin, and the latter was made by dwarves
@@ -86,6 +86,6 @@ DefineUniqueItem("Svalin", { -- Source: Kevin Crossley-Holland, "The Norse Myths
 	Type = "unit-bronze-shield",
 	Prefix = "upgrade-item-prefix-impregnable",
 	Suffix = "upgrade-item-suffix-of-extinguishment",
-	Background = "In Norse mythology, Svalin (\"the Cooling\") was the shied which stood in front of the sun, protecting the mountains and the sea from burning in flames.",
+	Background = "In Norse mythology, Svalin (\"the Cooling\") was the shield which stood in front of the sun, protecting the mountains and the sea from burning in flames.",
 	Quote = "\"In front of the sun | does Svalin stand, / The shield for the shining god; / Mountains and sea | would be set in flames / If it fell from before the sun.\" - Grimnismol"
 } )
