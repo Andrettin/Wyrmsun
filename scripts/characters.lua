@@ -26,6 +26,7 @@
 --
 
 Load("scripts/civilizations/dwarf/characters.lua")
+Load("scripts/civilizations/elf/characters.lua")
 Load("scripts/civilizations/germanic/characters.lua")
 Load("scripts/civilizations/goth/characters.lua")
 Load("scripts/civilizations/latin/characters.lua")
