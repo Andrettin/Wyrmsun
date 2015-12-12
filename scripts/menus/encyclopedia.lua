@@ -65,34 +65,40 @@ function RunEncyclopediaMenu()
 	
 	menu:addLabel(_("~<Encyclopedia~>"), offx + 320, offy + 104 + 36*-2)
 
-	menu:addFullButton(_("~!Civilizations"), "c", offx + 208, offy + 104 + 36*-1,
+	menu:addFullButton(_("~!Civilizations"), "c", offx + 208 + (113 * -1), offy + 104 + 36*-1,
 		function() RunEncyclopediaCivilizationsMenu() end)
 
-	menu:addFullButton(_("~!Factions"), "f", offx + 208, offy + 104 + 36*0,
+	menu:addFullButton(_("~!Factions"), "f", offx + 208 + (113 * -1), offy + 104 + 36*0,
 		function() RunEncyclopediaFactionsMenu() end)
 
-	menu:addFullButton(_("~!Units"), "u", offx + 208, offy + 104 + 36*1,
+	menu:addFullButton(_("~!Units"), "u", offx + 208 + (113 * -1), offy + 104 + 36*1,
 		function() RunEncyclopediaUnitsMenu("units") end)
 
-	menu:addFullButton(_("~!Buildings"), "b", offx + 208, offy + 104 + 36*2,
+	menu:addFullButton(_("~!Buildings"), "b", offx + 208 + (113 * -1), offy + 104 + 36*2,
 		function() RunEncyclopediaUnitsMenu("buildings") end)
 
-	menu:addFullButton(_("~!Technologies"), "t", offx + 208, offy + 104 + 36*3,
+	menu:addFullButton(_("~!Technologies"), "t", offx + 208 + (113 * -1), offy + 104 + 36*3,
 		function() RunEncyclopediaUnitsMenu("technologies") end)
 
-	menu:addFullButton(_("~!Heroes"), "h", offx + 208, offy + 104 + 36*4,
+	menu:addFullButton(_("Item ~!Prefixes"), "p", offx + 208 + (113 * -1), offy + 104 + 36*5,
+		function() RunEncyclopediaUnitsMenu("item_prefixes") end)
+
+	menu:addFullButton(_("Item ~!Suffixes"), "s", offx + 208 + (113 * -1), offy + 104 + 36*6,
+		function() RunEncyclopediaUnitsMenu("item_suffixes") end)
+
+	menu:addFullButton(_("~!Heroes"), "h", offx + 208 + (113 * -1), offy + 104 + 36*7,
 		function() RunEncyclopediaUnitsMenu("heroes") end)
 
-	menu:addFullButton(_("~!Mercenaries"), "m", offx + 208, offy + 104 + 36*5,
+	menu:addFullButton(_("~!Mercenaries"), "m", offx + 208 + (113 * -1), offy + 104 + 36*8,
 		function() RunEncyclopediaUnitsMenu("mercenaries") end)
 
-	menu:addFullButton(_("~!Worlds"), "w", offx + 208, offy + 104 + 36*6,
+	menu:addFullButton(_("~!Worlds"), "w", offx + 208 + (113 * 1), offy + 104 + 36*-1,
 		function() RunEncyclopediaWorldsMenu() end)
 
-	menu:addFullButton(_("~!Game Concepts"), "g", offx + 208, offy + 104 + 36*7,
+	menu:addFullButton(_("~!Game Concepts"), "g", offx + 208 + (113 * 1), offy + 104 + 36*0,
 		function() RunEncyclopediaGameConceptsMenu() end)
 
-	menu:addFullButton(_("Te~!xts"), "x", offx + 208, offy + 104 + 36*8,
+	menu:addFullButton(_("Te~!xts"), "x", offx + 208 + (113 * 1), offy + 104 + 36*1,
 		function() RunEncyclopediaTextsMenu() end)
 
 	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * 9),
@@ -127,7 +133,7 @@ function RunEncyclopediaUnitsMenu(state)
 	
 	local icon_x = 0
 	local icon_y = 0
-	if (state ~= "heroes") then
+	if (state ~= "heroes" and state ~= "item_prefixes" and state ~= "item_suffixes") then
 		for i, unitName in ipairs(Units) do
 			if (state ~= "technologies" and string.find(unitName, "upgrade-") == nil) then
 				if ((GetUnitTypeData(unitName, "Description") ~= "" or GetUnitTypeData(unitName, "Background") ~= "") and GetUnitTypeData(unitName, "Building") == (state == "buildings") and (GetUnitTypeData(unitName, "Mercenary") and GetUnitTypeData(unitName, "Building") == false) == (state == "mercenaries")) then
@@ -151,6 +157,29 @@ function RunEncyclopediaUnitsMenu(state)
 				end
 			end
 		end
+	elseif (state == "item_prefixes" or state == "item_suffixes") then
+		local affixes = {}
+		if (state == "item_prefixes") then
+			affixes = GetItemPrefixes()
+		elseif (state == "item_suffixes") then
+			affixes = GetItemSuffixes()
+		end
+		table.sort(affixes)
+		if (GetTableSize(affixes) > 20) then
+			icon_x = -2
+		elseif (GetTableSize(affixes) > 10) then
+			icon_x = -1
+		end
+		icon_y = -1
+		for i, unitName in ipairs(affixes) do
+			addEncyclopediaIcon(unitName, menu, offx + 208 + (113 * icon_x), offy + 104 + (36 * icon_y))
+			if (icon_y > 7) then
+				icon_x = icon_x + 2
+				icon_y = -1
+			else
+				icon_y = icon_y + 1
+			end
+		end
 	else
 		local heroes = GetCharacters()
 		for i = 1, table.getn(heroes) do
@@ -172,6 +201,12 @@ function RunEncyclopediaUnitsMenu(state)
 		menu:addLabel("~<Encyclopedia: Buildings~>", offx + 320, offy + 104 + 36*-2)
 	elseif (state == "technologies") then
 		menu:addLabel("~<Encyclopedia: Technologies~>", offx + 320, offy + 104 + 36*-2)
+	elseif (state == "items") then
+		menu:addLabel("~<Encyclopedia: Items~>", offx + 320, offy + 104 + 36*-2)
+	elseif (state == "item_prefixes") then
+		menu:addLabel("~<Encyclopedia: Item Prefixes~>", offx + 320, offy + 104 + 36*-2)
+	elseif (state == "item_suffixes") then
+		menu:addLabel("~<Encyclopedia: Item Suffixes~>", offx + 320, offy + 104 + 36*-2)
 	elseif (state == "heroes") then
 		menu:addLabel("~<Encyclopedia: Heroes~>", offx + 320, offy + 104 + 36*-2)
 	elseif (state == "mercenaries") then
@@ -186,6 +221,8 @@ end
 
 function addEncyclopediaIcon(unit_name, menu, x, y)
 	local encyclopedia_icon
+	local encyclopedia_icon_pressed
+	local encyclopedia_icon_disabled
 	local encyclopedia_icon_frame = 0
 	local civilization
 	local faction
@@ -205,8 +242,14 @@ function addEncyclopediaIcon(unit_name, menu, x, y)
 			tooltip_civilization = tooltip_civilization .. ")"
 		end
 	elseif (string.find(unit_name, "upgrade") ~= nil) then
-		encyclopedia_icon = CUpgrade:Get(unit_name).Icon.G
-		encyclopedia_icon_frame = CUpgrade:Get(unit_name).Icon.Frame
+		if (string.find(unit_name, "prefix") == nil and string.find(unit_name, "suffix") == nil) then
+			encyclopedia_icon = CUpgrade:Get(unit_name).Icon.G
+			encyclopedia_icon_frame = CUpgrade:Get(unit_name).Icon.Frame
+		else
+			encyclopedia_icon = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-large-normal.png")
+			encyclopedia_icon_pressed = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-large-pressed.png")
+			encyclopedia_icon_grayed = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-large-grayed.png")
+		end
 		civilization = CUpgrade:Get(unit_name).Civilization
 		faction = CUpgrade:Get(unit_name).Faction
 		tooltip_name = CUpgrade:Get(unit_name).Name
@@ -232,17 +275,32 @@ function addEncyclopediaIcon(unit_name, menu, x, y)
 		end
 	end
 	encyclopedia_icon:Load()
-	local encyclopedia_icon_x_origin = (encyclopedia_icon_frame * 46) % encyclopedia_icon:getGraphicWidth()
-	local encyclopedia_icon_y_origin = math.floor((encyclopedia_icon_frame * 46) / encyclopedia_icon:getGraphicWidth()) * 38
-	local playercolor
-	if (civilization ~= "" and faction ~= "") then
-		playercolor = GetFactionData(civilization, faction, "Color")
-	elseif (civilization ~= "") then
-		playercolor = GetCivilizationData(civilization, "DefaultColor")
+	if not (encyclopedia_icon_pressed) then
+		encyclopedia_icon_pressed = encyclopedia_icon
 	else
-		playercolor = "gray"
+		encyclopedia_icon_pressed:Load()
 	end
-	local b = PlayerColorImageButton("", playercolor)
+	if not (encyclopedia_icon_disabled) then
+		encyclopedia_icon_disabled = encyclopedia_icon
+	else
+		encyclopedia_icon_disabled:Load()
+	end
+	local encyclopedia_icon_x_origin = (encyclopedia_icon_frame * encyclopedia_icon:getWidth()) % encyclopedia_icon:getGraphicWidth()
+	local encyclopedia_icon_y_origin = math.floor((encyclopedia_icon_frame * encyclopedia_icon:getWidth()) / encyclopedia_icon:getGraphicWidth()) * encyclopedia_icon:getHeight()
+	local b
+	local playercolor
+	if (string.find(unit_name, "prefix") == nil and string.find(unit_name, "suffix") == nil) then
+		if (civilization ~= "" and faction ~= "") then
+			playercolor = GetFactionData(civilization, faction, "Color")
+		elseif (civilization ~= "") then
+			playercolor = GetCivilizationData(civilization, "DefaultColor")
+		else
+			playercolor = "gray"
+		end
+		b = PlayerColorImageButton("", playercolor)
+	else
+		b = ImageButton(tooltip_name)
+	end
 	b:setActionCallback(
 		function()
 			PlaySound("click")
@@ -259,9 +317,11 @@ function addEncyclopediaIcon(unit_name, menu, x, y)
 			local offx = (Video.Width - 640) / 2
 			local offy = (Video.Height - 480) / 2
 
-			local encyclopedia_entry_menu_image = PlayerColorImageWidget(encyclopedia_icon, playercolor)
-			encyclopedia_entry_menu_image:setImageOrigin(encyclopedia_icon_x_origin, encyclopedia_icon_y_origin)
-			encyclopedia_entry_menu:add(encyclopedia_entry_menu_image, (Video.Width / 2) - 23, offy + 104 + 36*-1)
+			if (string.find(unit_name, "prefix") == nil and string.find(unit_name, "suffix") == nil) then
+				local encyclopedia_entry_menu_image = PlayerColorImageWidget(encyclopedia_icon, playercolor)
+				encyclopedia_entry_menu_image:setImageOrigin(encyclopedia_icon_x_origin, encyclopedia_icon_y_origin)
+				encyclopedia_entry_menu:add(encyclopedia_entry_menu_image, (Video.Width / 2) - 23, offy + 104 + 36*-1)
+			end
 			encyclopedia_entry_menu:addLabel("~<" .. tooltip_name .. "~>", offx + 320, offy + 104 + 36*-2, nil, true)
 
 			local l = MultiLineLabel()
@@ -273,10 +333,11 @@ function addEncyclopediaIcon(unit_name, menu, x, y)
 			local faction = ""
 			local unit_type_class = ""
 			local description = ""
+			local effects = ""
+			local applies_to = ""
+			local droppers_string = ""
 			local quote = ""
 			local background = ""
-			local drops_string = ""
-			local drop_affixes_string = ""
 			if (string.find(unit_name, "unit") ~= nil) then
 				if (GetUnitTypeData(unit_name, "Civilization") ~= "") then
 					civilization = "Civilization: " .. _(CapitalizeString(GetUnitTypeData(unit_name, "Civilization"))) .. "\n\n"
@@ -293,33 +354,6 @@ function addEncyclopediaIcon(unit_name, menu, x, y)
 				if (GetUnitTypeData(unit_name, "Quote") ~= "") then
 					quote = "\n\nQuote: " .. GetUnitTypeData(unit_name, "Quote")
 				end
-				if (table.getn(GetUnitTypeData(unit_name, "Drops")) > 0 or table.getn(GetUnitTypeData(unit_name, "AiDrops")) > 0) then
-					drops_string = "\n\n\Dropped Items: "
-					local drops = GetUnitTypeData(unit_name, "Drops")
-					for i=1,table.getn(GetUnitTypeData(unit_name, "AiDrops")) do
-						table.insert(drops, GetUnitTypeData(unit_name, "AiDrops")[i])
-					end
-					table.sort(drops)
-					for i=1,table.getn(drops) do
-						if (i > 1) then
-							drops_string = drops_string .. ", "
-						end
-						drops_string = drops_string .. GetUnitTypeData(drops[i], "Name")
-					end
-					drops_string = drops_string .. "."
-				end
-				if (table.getn(GetUnitTypeData(unit_name, "DropAffixes")) > 0) then
-					drop_affixes_string = "\n\n\Dropped Item Affixes: "
-					local drop_affixes = GetUnitTypeData(unit_name, "DropAffixes")
-					table.sort(drop_affixes)
-					for i=1,table.getn(drop_affixes) do
-						if (i > 1) then
-							drop_affixes_string = drop_affixes_string .. ", "
-						end
-						drop_affixes_string = drop_affixes_string .. CUpgrade:Get(drop_affixes[i]).Name
-					end
-					drop_affixes_string = drop_affixes_string .. "."
-				end
 				if (GetUnitTypeData(unit_name, "Background") ~= "") then
 					background = "\n\nBackground: " .. GetUnitTypeData(unit_name, "Background")
 				end
@@ -335,6 +369,43 @@ function addEncyclopediaIcon(unit_name, menu, x, y)
 				end
 				if (CUpgrade:Get(unit_name).Description ~= "") then
 					description = "Description: " .. CUpgrade:Get(unit_name).Description
+				end
+				if (string.find(unit_name, "prefix") ~= nil or string.find(unit_name, "suffix") ~= nil) then
+					effects = "Effects: " .. GetUpgradeEffectsString(unit_name) .. ".\n\n"
+					applies_to = "Available For: "
+					local applies_to_items = GetUpgradeData(unit_name, "AppliesTo")
+					table.sort(applies_to_items)
+					for i=1,table.getn(applies_to_items) do
+						if (i > 1) then
+							applies_to = applies_to .. ", "
+						end
+						applies_to = applies_to .. _(FullyCapitalizeString(string.gsub(applies_to_items[i], "-", " ")))
+						if (string.sub(applies_to_items[i], -1) ~= "s") then
+							applies_to = applies_to .. "s"
+						end
+					end
+					applies_to = applies_to .. ".\n\n"
+				end
+				if (string.find(unit_name, "prefix") ~= nil or string.find(unit_name, "suffix") ~= nil) then
+					droppers_string = "Dropped By: "
+					local droppers = GetUpgradeData(unit_name, "Droppers")
+					local first_dropper = true
+					for i=1,table.getn(droppers) do
+						if (string.find(droppers[i], "template") == nil and GetUnitTypeData(droppers[i], "Mercenary") == false and GetUnitTypeData(droppers[i], "Civilization") ~= "elf" and GetUnitTypeData(droppers[i], "Civilization") ~= "orc") then
+							if not (first_dropper) then
+								droppers_string = droppers_string .. ", "
+							else
+								first_dropper = false
+							end
+							droppers_string = droppers_string .. GetUnitTypeData(droppers[i], "Name")
+							if (GetUnitTypeData(droppers[i], "Civilization") ~= "" and GetUnitTypeData(droppers[i], "Faction") ~= "") then
+								droppers_string = droppers_string .. " (" .. CapitalizeString(GetUnitTypeData(droppers[i], "Civilization")) .. " - " .. GetUnitTypeData(droppers[i], "Faction") .. ")"
+							elseif (GetUnitTypeData(droppers[i], "Civilization") ~= "") then
+								droppers_string = droppers_string .. " (" .. CapitalizeString(GetUnitTypeData(droppers[i], "Civilization")) .. ")"
+							end
+						end
+					end
+					droppers_string = droppers_string .. ".\n\n"
 				end
 				if (CUpgrade:Get(unit_name).Quote ~= "") then
 					quote = "\n\nQuote: " .. CUpgrade:Get(unit_name).Quote
@@ -362,7 +433,7 @@ function addEncyclopediaIcon(unit_name, menu, x, y)
 					background = "\n\nBackground: " .. GetCharacterData(unit_name, "Background")
 				end
 			end
-			l:setCaption(civilization .. faction .. unit_type_class .. description .. quote .. drops_string .. drop_affixes_string .. background)
+			l:setCaption(civilization .. faction .. unit_type_class .. description .. effects .. applies_to .. droppers_string .. quote .. background)
 			
 			-- add buttons of texts related to the subject matter of the entry
 			local chapter_references = 0
@@ -406,13 +477,19 @@ function addEncyclopediaIcon(unit_name, menu, x, y)
 	menu:add(b, x, y)
 	b:setImageOrigin(encyclopedia_icon_x_origin, encyclopedia_icon_y_origin)
 	b:setNormalImage(encyclopedia_icon)
-	b:setPressedImage(encyclopedia_icon)
-	b:setDisabledImage(encyclopedia_icon)
-	b:setSize(46, 38)
+	b:setPressedImage(encyclopedia_icon_pressed)
+	b:setDisabledImage(encyclopedia_icon_disabled)
+	b:setSize(encyclopedia_icon:getWidth(), encyclopedia_icon:getHeight())
 	b:setBorderSize(0) -- Andrettin: make buttons not have the borders they previously had
-	b:setFrameImage(Preference.IconFrameG)
-	b:setPressedFrameImage(Preference.PressedIconFrameG)
-	b:setTooltip(tooltip_name .. " " .. tooltip_civilization)
+	if (string.find(unit_name, "prefix") == nil and string.find(unit_name, "suffix") == nil) then
+		b:setFrameImage(Preference.IconFrameG)
+		b:setPressedFrameImage(Preference.PressedIconFrameG)
+		b:setTooltip(tooltip_name .. " " .. tooltip_civilization)
+	else
+		b:setBaseColor(Color(0,0,0,0))
+		b:setForegroundColor(Color(0,0,0,0))
+		b:setBackgroundColor(Color(0,0,0,0))
+	end
 	return b
 end
 
