@@ -653,6 +653,8 @@ DefineUnitType("unit-dwarven-barracks", { Name = _("War Hall"),
 	Icon = "icon-dwarven-barracks",
 	Costs = {"time", 200, "gold", 700, "lumber", 340, "stone", 110},
 	RepairCosts = {"gold", 1, "lumber", 1, "stone", 1},
+	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots"},
+	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-glacial", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-the-snigill"},
 	Sounds = {
 		"help", "basic-dwarf-voices-help-town"
 	}
@@ -694,7 +696,7 @@ DefineUnitType("unit-dwarven-smithy", { Name = _("Smithy"),
 	TechnologyPointCost = 1,
 	PersonalNamePrefixes = {"The Black", "Brisings'", "Brokk's", "Eitri's", "The Fiery", "Ivaldi's", "Regin's"}, -- The Brisings were a group of dwarves who crafter a magnificent necklace; Brokk and Eitri were skilled dwarven smiths; Ivaldi's sons were skilled dwarven smiths; Regin was a dwarven smith in the Siegfried myth
 	PersonalNameSuffixes = {" Anvil", " Forge", " Hammer", " Smithy"},
-	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-spatha", "unit-thrusting-sword"}, -- drops Spatha to allow dropping dwarven unique swords, and drops Thrusting Sword because Gnomes don't have a smithy of their own and build dwarven ones
+	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-spatha"}, -- drops Spatha to allow dropping dwarven unique swords
 	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-glacial", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-the-snigill"},
 	Sounds = {
 		"help", "basic-dwarf-voices-help-town"

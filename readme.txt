@@ -232,6 +232,7 @@ https://github.com/Andrettin/Wyrmsun
 - The Dwarven and Teuton Dock buildings are now buildable in RTS mode.
 - Guard Towers now provide +1 range for the ranged units attacking from within them.
 - Buildings no longer provide experience when destroyed.
+- Buildings now always drop items when destroyed.
 
 * Grand Strategy
 - Decreased the probability of revolts while increasing the amount of rebel troops per revolt, to make revolts more significant and less of a nuisance.

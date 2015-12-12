@@ -486,7 +486,7 @@ function addEncyclopediaIcon(unit_name, state, menu, x, y)
 					droppers_string = droppers_string .. ".\n\n"
 				end
 				if (CUpgrade:Get(unit_name).Background ~= "") then
-					background = "\n\nBackground: " .. CUpgrade:Get(unit_name).Background .. "\n\n"
+					background = "Background: " .. CUpgrade:Get(unit_name).Background .. "\n\n"
 				end
 			elseif (state == "heroes") then
 				if (GetCharacterData(unit_name, "Civilization") ~= "") then
