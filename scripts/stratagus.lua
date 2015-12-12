@@ -247,7 +247,6 @@ DefineVariables(
 	"Variation", {Enable = true},
 	"Slow", {Max = 1000, Value = 0, Enable = true},
 	"GraphicsVariation", {Max = 255, Value = 0, Increase = 0, Enable = true},
-	"StartingLevel", {Max = 255, Value = 1, Increase = 0, Enable = true},
 	"LifeStage", {Max = 99999, Value = 0, Increase = 0, Enable = true},
 	"LastCycle", {Max = 99999, Value = 0, Increase = 0, Enable = true},
 	"CustomAIState", {Max = 99999, Value = 0, Increase = 0, Enable = true}
@@ -498,17 +497,6 @@ function StandardTriggers()
 								OrderUnit(15, GetUnitVariable(uncount[unit1], "Ident"), {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, "unload")
 							end
 						end
-					end
-				end
-
-				-- fix starting level for upgraded units
-				if (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "StartingLevel") == 2) then
-					if (GetUnitVariable(uncount[unit1], "StartingLevel") <= 1) then
-						SetUnitVariable(uncount[unit1], "StartingLevel", 2)
-					end
-				elseif (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "StartingLevel") == 3) then
-					if (GetUnitVariable(uncount[unit1], "StartingLevel") <= 2) then
-						SetUnitVariable(uncount[unit1], "StartingLevel", 3)
 					end
 				end
 
