@@ -370,11 +370,11 @@ function addEncyclopediaIcon(unit_name, menu, x, y)
 				if (GetUnitTypeData(unit_name, "Description") ~= "") then
 					description = "Description: " .. GetUnitTypeData(unit_name, "Description")
 				end
-				if (GetUnitTypeData(unit_name, "Item") and GetItemEffectsString(unit_name)) then
-					effects = "Effects: " .. GetItemEffectsString(unit_name) .. "."
+				if (GetUnitTypeData(unit_name, "Item") and GetItemEffectsString(unit_name) ~= "") then
+					effects = "Effects: " .. GetItemEffectsString(unit_name) .. ".\n\n"
 				end
 				if (GetUnitTypeData(unit_name, "Item") and table.getn(GetUnitTypeData(unit_name, "Droppers")) > 0) then
-					droppers_string = "\n\nDropped By: "
+					droppers_string = "Dropped By: "
 					local droppers = GetUnitTypeData(unit_name, "Droppers")
 					local first_dropper = true
 					for i=1,table.getn(droppers) do
@@ -392,7 +392,7 @@ function addEncyclopediaIcon(unit_name, menu, x, y)
 							end
 						end
 					end
-					droppers_string = droppers_string .. ".\n\n"
+					droppers_string = droppers_string .. "."
 				end
 				if (GetUnitTypeData(unit_name, "Quote") ~= "") then
 					quote = "\n\nQuote: " .. GetUnitTypeData(unit_name, "Quote")

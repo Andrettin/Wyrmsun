@@ -209,7 +209,7 @@ DefineUnitType("unit-boots", { Name = _("Boots"),
 	Image = {"file", "dwarf/items/dwarven_boots.png", "size", {32, 32}},
 	Icon = "icon-dwarven-boots",
 	ItemClass = "boots",
-	Armor = 0
+	Speed = 0
 } )
 
 DefineUnitType("unit-wool-shoes", { Name = _("Wool Shoes"),
@@ -217,7 +217,7 @@ DefineUnitType("unit-wool-shoes", { Name = _("Wool Shoes"),
 	Image = {"file", "dwarf/items/dwarven_boots.png", "size", {32, 32}},
 	Icon = "icon-gnomish-boots",
 	ItemClass = "boots",
-	Armor = 0
+	Speed = 0
 } )
 
 DefineUnitType("unit-furry-wool-shoes", { Name = _("Furry Wool Shoes"),
@@ -225,7 +225,7 @@ DefineUnitType("unit-furry-wool-shoes", { Name = _("Furry Wool Shoes"),
 	Image = {"file", "dwarf/items/dwarven_boots.png", "size", {32, 32}},
 	Icon = "icon-gnomish-boots-fur",
 	ItemClass = "boots",
-	Armor = 0
+	Speed = 0
 } )
 
 DefineUnitType("unit-arrows", { Name = _("Arrows"),
