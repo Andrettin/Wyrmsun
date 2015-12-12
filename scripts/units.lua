@@ -4626,6 +4626,7 @@ DefineUnitType("unit-template-lumber-mill", { Name = _("Lumber Mill"),
 	SelectableByRectangle = true,
 	BurnPercent = 50,
 	BurnDamageRate = 1,
+	DropAffixes = {"upgrade-item-prefix-accurate", "upgrade-item-prefix-cruel", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-penetrating", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-swift", "upgrade-item-prefix-vicious", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-accuracy", "upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-the-colossus", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-thorns", "upgrade-item-suffix-of-victory"},
 	Sounds = {
 		"selected", "lumber-mill-selected",
 --		"acknowledge", "dwarven-lumber-mill-acknowledge",

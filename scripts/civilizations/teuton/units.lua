@@ -520,6 +520,8 @@ DefineUnitType("unit-teuton-lumber-mill", { Name = _("Lumber Mill"),
 	Image = {"file", "teuton/buildings/lumber_mill.png", "size", {96, 96}},
 	Shadow = {"file", "teuton/buildings/lumber_mill_shadow.png", "size", {96, 96}},
 	Icon = "icon-teuton-lumber-mill",
+	AiDrops = {"unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows"},
+	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-flaming", "upgrade-item-prefix-glacial", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-the-serpent", "upgrade-item-suffix-of-the-snail", "upgrade-item-suffix-of-trickery"},
 	Variations = {
 		{
 			"variation-id", "lumber-mill",

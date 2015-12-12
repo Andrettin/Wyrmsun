@@ -671,6 +671,8 @@ DefineUnitType("unit-dwarven-lumber-mill", { Name = _("Lumber Mill"),
 	Costs = {"time", 165, "gold", 660, "lumber", 370, "stone", 125},
 	RepairCosts = {"gold", 1, "lumber", 1, "stone", 1},
 	TechnologyPointCost = 1,
+	AiDrops = {"unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe"},
+	DropAffixes = {"upgrade-item-prefix-storm", "upgrade-item-suffix-of-lightning", "upgrade-item-suffix-of-the-snigill"},
 	Sounds = {
 		"help", "basic-dwarf-voices-help-town"
 	}

@@ -294,6 +294,8 @@ DefineUnitType("unit-goblin-lumber-mill", { Name = _("Lumber Mill"),
 	Image = {"file", "goblin/buildings/lumber_mill.png", "size", {96, 96}},
 	Shadow = {"file", "goblin/buildings/lumber_mill_shadow.png", "size", {96, 96}},
 	Icon = "icon-goblin-lumber-mill",
+	AiDrops = {"unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows"},
+	DropAffixes = {"upgrade-item-prefix-flaming", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-the-snigill", "upgrade-item-suffix-of-trickery"},
 	Sounds = {
 		"help", "basic-goblin-voices-help-town"
 	}
