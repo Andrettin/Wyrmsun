@@ -332,6 +332,12 @@ DefineLanguageNoun("Wif", { -- Source: Alaric Hall, "The Meanings of Elf and Elv
 	Gender = "Neuter"
 })
 
+DefineLanguageNoun("Wihte", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 102.
+	Civilization = "old-english",
+	Meaning = "Being",
+	PluralNominative = "Wihte"
+})
+
 DefineLanguageVerb("Aseowen", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 239.
 	Civilization = "old-english",
 	Meaning = "Sifted", -- it seems like Aseowen corresponds to the English past participle of "sift" (the source says simply Aseowen = Sifted); maybe it is an adjective instead?
@@ -407,6 +413,21 @@ DefineLanguageVerb("Witan", { -- Source: Richard M. Runge, "The Phonetic Realiza
 	Infinitive = "Witan"
 })
 
+DefineLanguageAdjective("Ceorlisc", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 100.
+	Civilization = "old-english",
+	Meaning = "Of a Churl, Common"
+})
+
+DefineLanguageAdjective("Cildisc", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 100.
+	Civilization = "old-english",
+	Meaning = "Childish"
+})
+
+DefineLanguageAdjective("Denisc", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 100.
+	Civilization = "old-english",
+	Meaning = "Danish"
+})
+
 DefineLanguageAdjective("Gydig", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 94.
 	Civilization = "old-english",
 	Meaning = "Possessed (by a God)"
@@ -419,6 +440,11 @@ DefineLanguageAdjective("Māra", { -- this is the comparative, what is the norma
 	Superlative = "Māst"
 })
 
+DefineLanguageAdjective("Mennisc", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 100.
+	Civilization = "old-english",
+	Meaning = "Human"
+})
+
 DefineLanguageAdjective("Sælig", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 94.
 	Civilization = "old-english",
 	Meaning = "Happy, Prosperous"
@@ -427,6 +453,11 @@ DefineLanguageAdjective("Sælig", { -- Source: Alaric Hall, "The Meanings of Elf
 DefineLanguageAdjective("Werig", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 94.
 	Civilization = "old-english",
 	Meaning = "Weary, Tired, Exhausted"
+})
+
+DefineLanguageAdjective("Wod", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 96.
+	Civilization = "old-english",
+	Meaning = "Frenzied, Enraged, Mad"
 })
 
 DefineLanguagePronoun("Mē", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.

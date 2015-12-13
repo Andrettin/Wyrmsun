@@ -1022,6 +1022,9 @@ if not (ui_loaded_first_time) then
 				{ 	HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Class: "), TypeClass("Type")), Font = wyr.preferences.PopupDescriptionFont}}
 				},
+				{ 	Condition = {HitPointBonus = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Hit Points: "), Variable = "HitPointBonus", Font = wyr.preferences.PopupDescriptionFont}}
+				},
 				{ 	Condition = {BasicDamage = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Damage: "), Variable = "BasicDamage", Font = wyr.preferences.PopupDescriptionFont}}
 				},
@@ -1164,6 +1167,9 @@ if not (ui_loaded_first_time) then
 				},
 				{ 	Condition = {Spell = "only"}, HighlightColor = "yellow",
 					More = {"Text", {Text = Concat(_("Casts "), UnitSpell("Unit")), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {HitPointBonus = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Hit Points: "), Variable = "HitPointBonus", Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {BasicDamage = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Damage: +"), String(Add(UnitVar("BasicDamage","Value"), UnitVar("PiercingDamage","Value")))), Font = wyr.preferences.PopupDescriptionFont}}

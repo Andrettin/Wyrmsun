@@ -228,6 +228,14 @@ DefineUnitType("unit-furry-wool-shoes", { Name = _("Furry Wool Shoes"),
 	Speed = 0
 } )
 
+DefineUnitType("unit-ring", { Name = _("Ring"),
+	Parent = "unit-template-item",
+	Image = {"file", "neutral/items/ring.png", "size", {32, 32}},
+	Icon = "icon-ring",
+	ItemClass = "ring"
+} )
+
+
 DefineUnitType("unit-arrows", { Name = _("Arrows"),
 	Parent = "unit-template-item",
 	Image = {"file", "neutral/items/arrow.png", "size", {32, 32}},

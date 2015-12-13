@@ -122,6 +122,7 @@ function RunShowCreditsMenu()
 	"  Battle for Wesnoth Team",
 	"  Brian Brickwagon Jennings",
 	"  Cuzco",
+	"  DreamRunner (Vlad L)",
 	"  Elvish_Hunter",
 	"  Emilien Rotival (LordBob)",
 	"  Francois Beerten",

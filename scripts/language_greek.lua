@@ -115,3 +115,9 @@ DefineCivilizationLanguage("greek",
 		}
 	}
 )
+
+DefineLanguageNoun("Κώνωπες", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 101.
+	Civilization = "greek",
+	Meaning = "Gnats",
+	PluralNominative = "Κώνωπες"
+})

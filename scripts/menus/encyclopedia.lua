@@ -83,7 +83,7 @@ function RunEncyclopediaMenu()
 	menu:addFullButton(_("~!Items"), "i", offx + 208 + (113 * -1), offy + 104 + 36*4,
 		function() RunEncyclopediaUnitsMenu("items") end)
 
-	menu:addFullButton(_("Item ~!Prefixes"), "p", offx + 208 + (113 * -1), offy + 104 + 36*5,
+	menu:addFullButton(_("Item P~!refixes"), "r", offx + 208 + (113 * -1), offy + 104 + 36*5,
 		function() RunEncyclopediaUnitsMenu("item_prefixes") end)
 
 	menu:addFullButton(_("Item ~!Suffixes"), "s", offx + 208 + (113 * -1), offy + 104 + 36*6,

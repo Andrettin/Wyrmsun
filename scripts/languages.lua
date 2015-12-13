@@ -35,6 +35,7 @@ Load("scripts/language_dwarven.lua")
 
 -- these are kept for reference, but not used
 Load("scripts/language_english.lua")
+Load("scripts/language_middle_english.lua")
 Load("scripts/language_old_english.lua")
 
 DefineCivilizationLanguage("old-high-german", -- Old High German

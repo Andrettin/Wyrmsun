@@ -80,29 +80,34 @@ DefineUpgrade("upgrade-item-suffix-of-perfuration", {
 	ItemSuffix = {"arrows", true, "dagger", true, "javelin", true, "spear", true, "sword", true, "thrusting-sword", true}
 })
 
-DefineUpgrade("upgrade-item-suffix-of-slowness", {
+DefineUpgrade("upgrade-item-suffix-of-power", { -- example: Ring of Power (from Wesnoth)
+	Name = _("of Power"),
+	ItemSuffix = {"ring", true}
+})
+
+DefineUpgrade("upgrade-item-suffix-of-slowness", { -- example: Ring of Slowness (from Wesnoth)
 	Name = _("of Slowness"),
-	ItemSuffix = {"boots", true}
+	ItemSuffix = {"boots", true, "ring", true}
 })
 
 DefineUpgrade("upgrade-item-suffix-of-the-snail", {
 	Name = _("of the Snail"),
-	ItemSuffix = {"boots", true}
+	ItemSuffix = {"boots", true, "ring", true}
 })
 
 DefineUpgrade("upgrade-item-suffix-of-the-snigill", {
 	Name = _("of the Snigill"),
-	ItemSuffix = {"boots", true}
+	ItemSuffix = {"boots", true, "ring", true}
 })
 
-DefineUpgrade("upgrade-item-suffix-of-speed", {
+DefineUpgrade("upgrade-item-suffix-of-speed", { -- example: Ring of Speed (from Wesnoth)
 	Name = _("of Speed"),
-	ItemSuffix = {"boots", true}
+	ItemSuffix = {"boots", true, "ring", true}
 })
 
 DefineUpgrade("upgrade-item-suffix-of-swiftness", {
 	Name = _("of Swiftness"),
-	ItemSuffix = {"boots", true}
+	ItemSuffix = {"boots", true, "ring", true}
 })
 
 DefineUpgrade("upgrade-item-suffix-of-the-serpent", {
@@ -112,7 +117,7 @@ DefineUpgrade("upgrade-item-suffix-of-the-serpent", {
 
 DefineUpgrade("upgrade-item-suffix-of-thorns", {
 	Name = _("of Thorns"),
-	ItemSuffix = {"armor", true, "shield", true, "helmet", true}
+	ItemSuffix = {"armor", true, "shield", true, "helmet", true, "ring", true}
 })
 
 DefineUpgrade("upgrade-item-suffix-of-trickery", {
@@ -163,6 +168,11 @@ DefineModifier("upgrade-item-suffix-of-lightning",
 
 DefineModifier("upgrade-item-suffix-of-perfuration",
 	{"PiercingDamage", 1}
+)
+
+DefineModifier("upgrade-item-suffix-of-power",
+	{"BasicDamage", 1},
+	{"HitPointBonus", 5}
 )
 
 DefineModifier("upgrade-item-suffix-of-the-serpent",

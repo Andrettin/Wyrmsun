@@ -333,6 +333,9 @@ Cuzco:
 /graphics/missiles/siege_projectile_impact.png (later modified by Jinn)
 /graphics/ui/Menu_background_with_title.png
 
+DreamRunner (Vlad L):
+/graphics/neutral/icons/ring.png
+
 igoku:
 /graphics/dwarf/icons/boots.png (later modified by Jinn)
 /graphics/dwarf/icons/shield_1.png (later modified by Jinn)

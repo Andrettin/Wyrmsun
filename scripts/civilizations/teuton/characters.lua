@@ -202,6 +202,16 @@ DefineCharacter("Adalbert", { -- Source: Snorri Sturlson, "Heimskringla", 1844, 
 	DeathYear = 1075 -- died
 })
 
+DefineCharacter("Aldhelm", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 98.
+	Name = "Aldhelm", -- composed the "Helleborus" riddle
+	Gender = "male",
+	Type = "unit-teuton-swordsman", -- should be something more appropriate for the composer of a riddle?
+	Civilization = "teuton", -- Anglo-Saxon
+	ProvinceOfOrigin = "England", -- presumably
+	Year = 709 - 30, -- estimated
+	DeathYear = 709 -- died in 709/710
+})
+
 DefineCharacter("Nicolas Breakspear", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 126.
 	Name = "Nicolas", -- son of a peasant employed in the Benedictine monastery of Saint Albans in Hertfordshire; was educated by the monks there; later became a cardinal and was sent on a mission to Norway to settle the Church there; was elected Pope in 1154 AD under the title of Hadrian IV
 	ExtraName = "Breakspear", -- I assume this isn't his family name, but a nickname or something of the sort?
