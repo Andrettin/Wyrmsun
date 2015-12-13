@@ -33,7 +33,7 @@ DefineUpgrade("upgrade-item-suffix-of-accuracy", {
 
 DefineUpgrade("upgrade-item-suffix-of-betrayal", {
 	Name = _("of Betrayal"),
-	ItemSuffix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true}
+	ItemSuffix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true, "ring", true}
 })
 
 DefineUpgrade("upgrade-item-suffix-of-cold", {
@@ -117,7 +117,7 @@ DefineUpgrade("upgrade-item-suffix-of-swiftness", {
 
 DefineUpgrade("upgrade-item-suffix-of-the-serpent", {
 	Name = _("of the Serpent"),
-	ItemSuffix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true}
+	ItemSuffix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true, "ring", true}
 })
 
 DefineUpgrade("upgrade-item-suffix-of-thorns", {
@@ -133,6 +133,11 @@ DefineUpgrade("upgrade-item-suffix-of-trickery", {
 DefineUpgrade("upgrade-item-suffix-of-victory", {
 	Name = _("of Victory"),
 	ItemSuffix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true}
+})
+
+DefineUpgrade("upgrade-item-suffix-of-vision", {
+	Name = _("of Vision"),
+	ItemSuffix = {"ring", true}
 })
 
 DefineModifier("upgrade-item-suffix-of-accuracy",
@@ -219,4 +224,8 @@ DefineModifier("upgrade-item-suffix-of-trickery",
 
 DefineModifier("upgrade-item-suffix-of-victory",
 	{"BasicDamage", 3}
+)
+
+DefineModifier("upgrade-item-suffix-of-vision",
+	{"SightRange", 1}
 )

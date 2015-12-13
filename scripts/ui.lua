@@ -536,19 +536,19 @@ DefinePanelContents(
   Contents = {
 	{ Pos = {9, 103}, More = {"Text", "Processing"} },
 	{ Pos = {9, 116}, More = { "Text", {Text = "Gold:"}}},
-	{ Pos = {76, 116}, More = { "Text", {Text = Concat("100", 
+	{ Pos = {76, 116}, More = { "Text", HighlightColor = "yellow", {Text = Concat("100", 
 										If(GreaterThan(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "gold"), 100),
 										InverseVideo(Concat("+", String(Sub(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "gold"), 100)))),
 										""))}}
     },
 	{ Pos = {9, 130}, Condition = {LumberImprove = "only"}, More = {"Text", {Text = "Lumber:"}}},
-	{ Pos = {76, 130}, Condition = {LumberImprove = "only"}, More = { "Text", {Text = Concat("100",
+	{ Pos = {76, 130}, Condition = {LumberImprove = "only"}, HighlightColor = "yellow", More = { "Text", {Text = Concat("100",
 										If(GreaterThan(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "lumber"), 100),
 										InverseVideo(Concat("+", String(Sub(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "lumber"), 100)))),
 										"" ))}}
     },
 	{ Pos = {9, 144}, Condition = {StoneImprove = "only"}, More = { "Text", {Text = "Stone:"}}},
-	{ Pos = {76, 144}, Condition = {StoneImprove = "only"}, More = { "Text", {Text = Concat("100", 
+	{ Pos = {76, 144}, Condition = {StoneImprove = "only"}, HighlightColor = "yellow", More = { "Text", {Text = Concat("100", 
 										If(GreaterThan(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "stone"), 100),
 										InverseVideo(Concat("+", String(Sub(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "stone"), 100)))),
 										"" ))}}
@@ -570,13 +570,13 @@ DefinePanelContents(
 	{ Pos = {9, 103}, Condition = {StoneImprove = "only"}, More = {"Text", "Processing"} },
 --	{ Pos = {9, 103}, Condition = {OilImprove = "only"}, More = {"Text", "Processing"} },
 	{ Pos = {9, 116}, Condition = {LumberImprove = "only"}, More = {"Text", {Text = "Lumber:"}}},
-	{ Pos = {76, 116}, Condition = {LumberImprove = "only"}, More = { "Text", {Text = Concat("100",
+	{ Pos = {76, 116}, Condition = {LumberImprove = "only"}, HighlightColor = "yellow", More = { "Text", {Text = Concat("100",
 										If(GreaterThan(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "lumber"), 100),
 										InverseVideo(Concat("+", String(Sub(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "lumber"), 100)))),
 										"" ))}}
     },
 	{ Pos = {9, 116}, Condition = {StoneImprove = "only"}, More = { "Text", {Text = "Stone:"}}},
-	{ Pos = {76, 116}, Condition = {StoneImprove = "only"}, More = { "Text", {Text = Concat("100", 
+	{ Pos = {76, 116}, Condition = {StoneImprove = "only"}, HighlightColor = "yellow", More = { "Text", {Text = Concat("100", 
 										If(GreaterThan(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "stone"), 100),
 										InverseVideo(Concat("+", String(Sub(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "stone"), 100)))),
 										"" ))}}
@@ -1097,6 +1097,9 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {Speed = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Speed: "), Variable = "Speed", Font = wyr.preferences.PopupDescriptionFont}}
 				},
+				{ 	Condition = {SightRange = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Sight: "), Variable = "SightRange", Font = wyr.preferences.PopupDescriptionFont}}
+				},
 				{ 	Condition = {HitPointHealing = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Healing: "), Variable = "HitPointHealing", Font = wyr.preferences.PopupDescriptionFont}}
 				},
@@ -1245,6 +1248,9 @@ if not (ui_loaded_first_time) then
 				},
 				{ 	Condition = {Speed = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Speed: "), Variable = "Speed", Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {SightRange = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Sight: "), Variable = "SightRange", Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {HitPointHealing = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Healing: "), Variable = "HitPointHealing", Font = wyr.preferences.PopupDescriptionFont}}

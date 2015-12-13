@@ -89,3 +89,19 @@ DefineUniqueItem("Svalin", { -- Source: Kevin Crossley-Holland, "The Norse Myths
 	Background = "In Norse mythology, Svalin (\"the Cooling\") was the shield which stood in front of the sun, protecting the mountains and the sea from burning in flames.",
 	Quote = "\"In front of the sun | does Svalin stand, / The shield for the shining god; / Mountains and sea | would be set in flames / If it fell from before the sun.\" - Grimnismol"
 } )
+
+DefineUniqueItem("Andvaranaut", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", pp. 114, 360; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 21.
+	Type = "unit-ring",
+	Prefix = "upgrade-item-prefix-vicious",
+	Suffix = "upgrade-item-suffix-of-betrayal",
+	Background = "In Norse mythology, Andvaranaut (\"Andvari's Booty\") was a gold ring owned by Andvari and forcibly taken from him by Loki. Upon the ring's theft, Andvari cursed whoever would come to own it. The ring had the power to make gold.",
+	Quote = "\"Now shall the gold | that I once had / Bring their death | to warriors twain, / And evil be | for heroes eight; / Joy of my wealth | shall no dwarf win.\" - Reginsmol"
+} )
+
+DefineUniqueItem("Draupnir", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 241; Source: Henry Adams Bellows (transl.), "The Poetic Edda", pp. 114.
+	Type = "unit-ring",
+	Prefix = "upgrade-item-prefix-flaming",
+	Suffix = "upgrade-item-suffix-of-power",
+	Background = "In Norse mythology, Draupnir (\"Dropper\") was a gold arm-ring crafted by the dwarves Brokk and Eitri for the Aesir. Eight rings with the same weight in gold as Draupnir dropped from it every ninth night. Draupnir was burned with Odin's son Balder in his funeral pyre.",
+	Quote = "\"The ring I wish not, | though burned it was / Of old with Modsognir's son; / In my home | is no lack of gold / In the wealth my father wields.\" - Dwarven Traditional Poetry"
+} )

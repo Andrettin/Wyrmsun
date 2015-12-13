@@ -42,7 +42,7 @@ DefineUpgrade("upgrade-item-prefix-cruel", {
 
 DefineUpgrade("upgrade-item-prefix-flaming", { -- example: Flaming Sword (from Wesnoth)
 	Name = _("Flaming"),
-	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true}
+	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true, "ring", true} -- allowed for rings to allow Draupnir to drop, maybe should change that item's prefix to something else?
 })
 
 DefineUpgrade("upgrade-item-prefix-glacial", {
@@ -87,7 +87,7 @@ DefineUpgrade("upgrade-item-prefix-swift", {
 
 DefineUpgrade("upgrade-item-prefix-vicious", {
 	Name = _("Vicious"),
-	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true}
+	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true, "ring", true} -- allowed for rings to allow Andvaranaut to drop, but its prefix should be changed later
 })
 
 DefineUpgrade("upgrade-item-prefix-wounding", {
