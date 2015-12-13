@@ -85,6 +85,11 @@ DefineUpgrade("upgrade-item-suffix-of-power", { -- example: Ring of Power (from 
 	ItemSuffix = {"ring", true}
 })
 
+DefineUpgrade("upgrade-item-suffix-of-regeneration", { -- example: Ring of Regeneration (from Wesnoth)
+	Name = _("of Regeneration"),
+	ItemSuffix = {"ring", true}
+})
+
 DefineUpgrade("upgrade-item-suffix-of-slowness", { -- example: Ring of Slowness (from Wesnoth)
 	Name = _("of Slowness"),
 	ItemSuffix = {"boots", true, "ring", true}
@@ -173,6 +178,10 @@ DefineModifier("upgrade-item-suffix-of-perfuration",
 DefineModifier("upgrade-item-suffix-of-power",
 	{"BasicDamage", 1},
 	{"HitPointBonus", 5}
+)
+
+DefineModifier("upgrade-item-suffix-of-regeneration",
+	{"HitPointBonus", 1, "Increase"}
 )
 
 DefineModifier("upgrade-item-suffix-of-the-serpent",

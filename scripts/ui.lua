@@ -1171,6 +1171,9 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {HitPointBonus = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Hit Points: "), Variable = "HitPointBonus", Font = wyr.preferences.PopupDescriptionFont}}
 				},
+				{ 	Condition = {Regeneration = "only"}, HighlightColor = "yellow",
+					More = {"Text", {Text = Concat(_("Regeneration: +"), String(UnitVar("HitPointBonus", "Increase"))), Font = wyr.preferences.PopupDescriptionFont}}
+				},
 				{ 	Condition = {BasicDamage = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Damage: +"), String(Add(UnitVar("BasicDamage","Value"), UnitVar("PiercingDamage","Value")))), Font = wyr.preferences.PopupDescriptionFont}}
 				},
