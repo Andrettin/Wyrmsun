@@ -233,6 +233,7 @@ https://github.com/Andrettin/Wyrmsun
 - Guard Towers now provide +1 range for the ranged units attacking from within them.
 - Buildings no longer provide experience when destroyed.
 - Buildings now always drop items when destroyed.
+- There is now a chance that a horse or a yale will appear when a Stables or Yale Pen building is destroyed, respectively.
 
 * Grand Strategy
 - Decreased the probability of revolts while increasing the amount of rebel troops per revolt, to make revolts more significant and less of a nuisance.
