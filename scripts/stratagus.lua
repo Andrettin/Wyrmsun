@@ -1643,6 +1643,37 @@ function PersistencyUpdates()
 	end
 end
 
+function LoadHeroes()
+	local i
+	local f
+	local u = 1
+
+	local fileslist = ListFilesInDirectory("wyr/heroes/")
+	for i,f in ipairs(fileslist) do
+		Load("wyr/heroes/" .. f)
+		u = u + 1
+	end
+		
+	u = 1
+	-- list the subdirectories in the heroes folder
+	local dirlist = {}
+	local dirs = ListDirsInDirectory("wyr/heroes/")
+	for i,f in ipairs(dirs) do
+		dirlist[u] = f .. "/"
+		u = u + 1
+	end
+
+	u = 1
+	-- get the heroes in the subdirectories of the heroes folder
+	for j=1,table.getn(dirlist) do
+		fileslist = ListFilesInDirectory("wyr/heroes/" .. dirlist[j])
+		for i,f in ipairs(fileslist) do
+			Load("wyr/heroes/" .. dirlist[j] .. f)
+			u = u + 1
+		end
+	end
+end
+
 -------------------------------------------------------------------------------
 --  Tables-Part
 -------------------------------------------------------------------------------
@@ -1933,7 +1964,9 @@ Load("scripts/0_ad_equivalencies.lua")
 
 if (CanAccessFile("wyr/heroes.lua")) then -- load persistent heroes
 	Load("heroes.lua")
+	SaveHeroes()
 end
+LoadHeroes()
 
 DebugPrint("... ready!\n")
 

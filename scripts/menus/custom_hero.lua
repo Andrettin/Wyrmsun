@@ -162,6 +162,7 @@ function CustomHeroCreationMenu(world, quest_menu)
 					Trait = trait_ident_list[trait:getSelected() + 1],
 					Variation = string.lower(string.gsub(variation_list[variation:getSelected() + 1], " ", "-"))
 				})
+				SaveCustomHero(hero_full_name)
 				menu:stop()
 				quest_menu:stop()
 				RunQuestMenu(world)
