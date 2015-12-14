@@ -1624,6 +1624,7 @@ function PersistencyUpdates()
 		end
 		wyr.preferences.Heroes = nil
 		SavePreferences()
+		SaveHeroes()
 	end
 	
 	if (wyr.preferences.SavedGrandStrategyGames ~= nil) then -- grand strategy games are now saved in separate files
@@ -1962,11 +1963,12 @@ Load("scripts/grand_strategy/grand_strategy_events.lua")
 
 Load("scripts/0_ad_equivalencies.lua")
 
-if (CanAccessFile("wyr/heroes.lua")) then -- load persistent heroes
+if (CanAccessFile("wyr/heroes.lua")) then -- keep compatibility with how heroes were saved before
 	Load("heroes.lua")
 	SaveHeroes()
+else
+	LoadHeroes() -- load persistent heroes
 end
-LoadHeroes()
 
 DebugPrint("... ready!\n")
 

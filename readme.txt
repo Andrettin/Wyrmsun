@@ -229,7 +229,6 @@ https://github.com/Andrettin/Wyrmsun
 -----------------------------------------------------------------------
 
 * Buildings
-- The Dwarven and Teuton Dock buildings are now buildable in RTS mode.
 - Guard Towers now provide +1 range for the ranged units attacking from within them.
 - Buildings no longer provide experience when destroyed.
 - Buildings now always drop items when destroyed.
@@ -264,14 +263,9 @@ https://github.com/Andrettin/Wyrmsun
 * Miscellaneous
 - Units' names now appear in a tooltip when they are hovered.
 
-* Quests
-- The Caverns of Flame quest (Dwarf) now gives 2 technology points instead of 1.
-- The Razing of Opitergium quest (Teuton) now gives 3 technology points instead of 2.
-
 * Units
 - Improved the calculation of the XP required for level up.
 - Improved the XP bar display.
-- Added Dwarven Transport (graphics by Jinn).
 - Germanic Skutans and Goblin Archers no longer use different animations for melee and ranged attacks.
 - Blood Bats and Dread Bats now give more experience.
 - Dread Bats now deal less damage.
