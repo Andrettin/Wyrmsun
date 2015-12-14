@@ -407,6 +407,13 @@ DefineLanguageVerb("Tiohhian", { -- Source: Richard M. Runge, "The Phonetic Real
 	Infinitive = "Tiohhian"
 })
 
+DefineLanguageVerb("Wesan", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 110.
+	Civilization = "old-english",
+	Meaning = "Be",
+	Infinitive = "Wesan",
+--	ThirdPersonPresentSubjunctive = "Sy"
+})
+
 DefineLanguageVerb("Witan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
 	Civilization = "old-english",
 	Meaning = "Know",

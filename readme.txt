@@ -225,6 +225,26 @@ https://github.com/Andrettin/Wyrmsun
 ############################################################
 
 -----------------------------------------------------------------------
+- 1.8.1
+-----------------------------------------------------------------------
+
+* Buildings
+- The Dwarven and Teuton Dock buildings are now buildable in RTS mode.
+
+* Items
+- Added a Scroll of Retraining (allows heroes to re-pick abilities).
+
+* Miscellaneous
+- When units are attacked, now their personal names appears in the notification alongside their unit type's name (previously only the unit type's name appeared).
+
+* Quests
+- The Caverns of Flame quest (Dwarf) now gives 2 technology points instead of 1.
+- The Razing of Opitergium quest (Teuton) now gives 3 technology points instead of 2.
+
+* Units
+- Added Dwarven Transport ship (graphics by Jinn).
+
+-----------------------------------------------------------------------
 - 1.8.0
 -----------------------------------------------------------------------
 
@@ -257,7 +277,6 @@ https://github.com/Andrettin/Wyrmsun
 - Added Svalin (unique bronze shield).
 - Added Andvaranaut (unique ring).
 - Added Draupnir (unique ring).
-- Added a Scroll of Retraining (allows heroes to re-pick abilities).
 - The encyclopedia now has information on items, item affixes and unique items.
 
 * Miscellaneous
