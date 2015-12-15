@@ -25,7 +25,11 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageAdjective("Sliper", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 103.
-	Civilization = "middle-english",
-	Meaning = "Deceitful, False, Treacherous"
+DefineUpgrade("upgrade-item-suffix-of-os", {
+	Name = _("of Os"), -- "Os" is an Anglo-Saxon rune meaning "mouth"; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 63.
+	ItemSuffix = {"armor", true, "shield", true, "helmet", true, "amulet", true, "ring", true}
 })
+
+DefineModifier("upgrade-item-suffix-of-os",
+	{"ThornsDamage", 1}
+)

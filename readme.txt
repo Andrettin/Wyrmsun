@@ -237,6 +237,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added a Scroll of Retraining (allows heroes to re-pick abilities).
 - Fixed issue which prevented units without inventories from picking up power-ups.
 - Fixed issue which prevented the damage bonus of "of Perfuration" weapons from appearing in the tooltip if the base weapon had +0 damage.
+- Added the "of Os" magic suffix (+1 Thorns damage), named after the Anglo-Saxon rune Os. This suffix is dropped only by Teuton smithies.
 
 * Miscellaneous
 - When units are attacked, now their personal names appears in the notification alongside their unit type's name (previously only the unit type's name appeared).

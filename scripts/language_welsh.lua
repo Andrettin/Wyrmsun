@@ -25,7 +25,21 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageAdjective("Sliper", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 103.
-	Civilization = "middle-english",
-	Meaning = "Deceitful, False, Treacherous"
+DefineLanguageNoun("Hud", { -- presumably a noun; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 121.
+	Civilization = "welsh",
+	Meaning = "Magic",
+	SingularNominative = "Hud"
 })
+
+DefineLanguageVerb("Brathu", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
+	Civilization = "welsh",
+	Meaning = "Prick, Bite",
+	Infinitive = "Brathu"
+})
+
+DefineLanguageVerb("Hudo", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 121.
+	Civilization = "welsh",
+	Meaning = "Work Magic, Work by Magic",
+	Infinitive = "Hudo"
+})
+

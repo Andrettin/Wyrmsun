@@ -35,8 +35,12 @@ Load("scripts/language_dwarven.lua")
 
 -- these are kept for reference, but not used
 Load("scripts/language_english.lua")
+Load("scripts/language_finnish.lua")
+Load("scripts/language_lithuanian.lua")
 Load("scripts/language_middle_english.lua")
 Load("scripts/language_old_english.lua")
+Load("scripts/language_welsh.lua")
+Load("scripts/language_west_germanic.lua")
 
 DefineCivilizationLanguage("old-high-german", -- Old High German
 	"nouns", {
@@ -668,15 +672,6 @@ DefineCivilizationLanguage("irish", -- Irish
 	}
 )
 
-DefineCivilizationLanguage("welsh", -- Welsh
-	"verbs", {
-		"Brathu", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
-			"meaning", "Prick, Bite",
-			"infinitive", "Brathu"
-		}
-	}
-)
-
 DefineCivilizationLanguage("sanskrit", -- Sanskrit
 	"nouns", {
 		"Késara", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 7.
@@ -797,10 +792,3 @@ DefineCivilizationLanguage("norwegian", -- Norwegian
 		}
 	}
 )
-
-DefineLanguageNoun("Alßinjō", { -- alternatively spelled "Alßnjō"; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 89.
-	Civilization = "west-germanic",
-	Meaning = "Female Elf",
-	SingularNominative = "Alßinjō",
-	Gender = "Feminine"
-})

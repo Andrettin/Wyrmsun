@@ -203,6 +203,12 @@ DefineLanguageNoun("Hund", { -- Source: Richard M. Runge, "The Phonetic Realizat
 	SingularNominative = "Hund"
 })
 
+DefineLanguageNoun("Leoðurun", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 124.
+	Civilization = "old-english",
+	Meaning = "Sung Mistery",
+	SingularNominative = "Leoðurun"
+})
+
 DefineLanguageNoun("Mann", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, pp. 85-86, 89.
 	Civilization = "old-english",
 	Meaning = "Person",
