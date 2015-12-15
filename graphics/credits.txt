@@ -478,6 +478,7 @@ João Victor G. Costa (Jinn):
 /graphics/dwarf/ui/widgets/slider-knob.png
 /graphics/dwarf/units/miner_with_coal.png (modified from b_o's dwarven miner unit graphics)
 /graphics/dwarf/units/transport_ship.png
+/graphics/dwarf/units/transport_ship_water.png
 /graphics/elf/icons/elven_swordsman.png
 /graphics/germanic/buildings/barracks.png
 /graphics/germanic/buildings/barracks_shadow.png
