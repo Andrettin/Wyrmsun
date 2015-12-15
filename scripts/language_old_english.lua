@@ -411,7 +411,7 @@ DefineLanguageVerb("Wesan", { -- Source: Alaric Hall, "The Meanings of Elf and E
 	Civilization = "old-english",
 	Meaning = "Be",
 	Infinitive = "Wesan",
---	ThirdPersonPresentSubjunctive = "Sy"
+	SingularThirdPersonPresentSubjunctive = "Sy"
 })
 
 DefineLanguageVerb("Witan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.

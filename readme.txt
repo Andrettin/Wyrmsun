@@ -235,6 +235,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Items
 - Added a Scroll of Retraining (allows heroes to re-pick abilities).
+- Fixed issue which prevented units without inventories from picking up power-ups.
 
 * Miscellaneous
 - When units are attacked, now their personal names appears in the notification alongside their unit type's name (previously only the unit type's name appeared).
@@ -248,6 +249,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Units
 - Added Dwarven Transport ship (graphics by Jinn).
+- Fixed issue which caused units to try to walk up to enemies even though there was a door between them.
 
 -----------------------------------------------------------------------
 - 1.8.0
