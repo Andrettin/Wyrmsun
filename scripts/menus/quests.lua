@@ -104,6 +104,7 @@ function RunQuestMenu(world)
 		end
 	end
 	
+	--[[
 	local quest_completion_percent = completed_quest_quantity * 100 / total_quest_quantity
 	local badge_icon
 	if (quest_completion_percent == 100) then
@@ -123,6 +124,8 @@ function RunQuestMenu(world)
 	local b = ImageWidget(badge_icon)
 	menu:add(b, (Video.Width / 2) - (badge_icon:getWidth() / 2), (Video.Height / 2) - (badge_icon:getHeight() / 2))
 	b:setTooltip(completed_quest_quantity .. "/" .. total_quest_quantity .. " Quests Completed")
+	--]]
+	menu:addLabel(completed_quest_quantity .. "/" .. total_quest_quantity .. _(" Quests Completed"), Video.Width / 2, Video.Height / 2, Fonts["game"], true)
 
 	no_randomness = menu:addImageCheckBox(_("No Randomness"), offx + 480, offy + 10 + 300 + 3,
 		function()

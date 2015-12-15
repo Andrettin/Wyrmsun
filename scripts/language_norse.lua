@@ -167,3 +167,20 @@ DefineCivilizationLanguage("norse", -- Old Norse
 		}
 	}
 )
+
+DefineLanguageNoun("Síði", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 118.
+	Civilization = "norse",
+	Meaning = "Magic-Worker",
+	SingularNominative = "Síði"
+})
+
+DefineLanguageVerb("Síða", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 118.
+	Civilization = "norse",
+	Meaning = "Work Magic",
+	Infinitive = "Síða"
+})
+
+DefineLanguageAdjective("Seiðr", { -- maybe is the past participle of Síði instead? Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 118.
+	Civilization = "norse",
+	Meaning = "Magic Worked"
+})
