@@ -79,7 +79,7 @@ AddTrigger(
 		end
 		if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "A Bargain is Struck") and GetFactionExists("Shinsplitter Clan")) then
 			for i=0,14 do
-				if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Shinsplitter Clan" or GetPlayerData(i, "Name") == "Knalga") and GetPlayerData(i, "Name") ~= "Shinsplitter Clan" and FindHero("Rugnur", i) ~= nil and FindHero("Baglur", i) ~= nil and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1 and GetPlayerData(15, "UnitTypesCount", "unit-glyph") >= 6) then
+				if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Knalga") and FindHero("Rugnur", i) ~= nil and FindHero("Baglur", i) ~= nil and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1 and GetPlayerData(15, "UnitTypesCount", "unit-glyph") >= 6 and PlayerHasObjective(i, "- Have one unit standing on each glyph at the same time") == false) then
 					player = i
 					return true
 				end

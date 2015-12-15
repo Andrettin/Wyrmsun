@@ -238,11 +238,13 @@ https://github.com/Andrettin/Wyrmsun
 
 * Miscellaneous
 - When units are attacked, now their personal names appears in the notification alongside their unit type's name (previously only the unit type's name appeared).
+- Fixed a save game loading issue.
 
 * Quests
 - The Caverns of Flame quest (Dwarf) now gives 2 technology points instead of 1.
 - The Razing of Opitergium quest (Teuton) now gives 3 technology points instead of 2.
 - There is now a symbol in the quests screen indicating how many quests of the total have been completed for that world.
+- Fixed an issue with the Closing the Gates quest (Dwarf) which caused its initial dialogue to re-run after loading a saved game of that scenario.
 
 * Units
 - Added Dwarven Transport ship (graphics by Jinn).
