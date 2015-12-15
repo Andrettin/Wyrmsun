@@ -32,6 +32,12 @@ DefineLanguageNoun("Ærn", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Gender = "Neuter"
 })
 
+DefineLanguageNoun("Adl", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 114.
+	Civilization = "old-english",
+	Meaning = "Illness",
+	SingularNominative = "Adl"
+})
+
 DefineLanguageNoun("Bearn", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 238.
 	Civilization = "old-english",
 	Meaning = "Child",
