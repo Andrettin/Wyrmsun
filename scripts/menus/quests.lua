@@ -66,8 +66,8 @@ function RunQuestWorldMenu()
 	end
 
 	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + 36*quest_world_y,
-		function() menu:stop()
-	end)
+		function() menu:stop() end
+	)
 	return menu:run()
 end
 
@@ -87,18 +87,44 @@ function RunQuestMenu(world)
 	
 	menu:addLabel(_("~<Quests~>"), offx + 320, offy + 104 + 36*-2)
 
+	local completed_quest_quantity = 0
+	local total_quest_quantity = 0
 	local quests = GetQuests()
 	for i=1, table.getn(quests) do
 		if (GetQuestData(quests[i], "Hidden") == false and GetQuestData(quests[i], "World") == world) then
+			total_quest_quantity = total_quest_quantity + 1
 			if (GetQuestData(quests[i], "RequiredQuest") == "" or GetArrayIncludes(wyr.preferences.QuestsCompleted, GetQuestData(quests[i], "RequiredQuest")) or GetArrayIncludes(wyr.preferences.QuestsCompleted, quests[i])) then
 				if (GetQuestData(quests[i], "RequiredTechnology") == "" or GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetQuestData(quests[i], "RequiredTechnology"))) then
 					addQuestIcon(quests[i], menu, offx + 23 + 4 + (54 * GetQuestData(quests[i], "X")), offy + 10 + 4 + (46 * (GetQuestData(quests[i], "Y") + 1))) -- increase Y by 1 because there are few enough quests that it makes sense to make the existing quests more centralized in the interface
 				end
+				if (GetArrayIncludes(wyr.preferences.QuestsCompleted, quests[i])) then
+					completed_quest_quantity = completed_quest_quantity + 1
+				end
 			end
 		end
 	end
+	
+	local quest_completion_percent = completed_quest_quantity * 100 / total_quest_quantity
+	local badge_icon
+	if (quest_completion_percent == 100) then
+		badge_icon = CGraphic:New("ui/icons/badge_foil.png")
+	elseif (quest_completion_percent >= 80) then
+		badge_icon = CGraphic:New("ui/icons/badge_gold.png")
+	elseif (quest_completion_percent >= 60) then
+		badge_icon = CGraphic:New("ui/icons/badge_silver.png")
+	elseif (quest_completion_percent >= 40) then
+		badge_icon = CGraphic:New("ui/icons/badge_bronze.png")
+	elseif (quest_completion_percent >= 20) then
+		badge_icon = CGraphic:New("ui/icons/badge_glow.png")
+	else
+		badge_icon = CGraphic:New("ui/icons/badge_cracked.png")
+	end
+	badge_icon:Load()
+	local b = ImageWidget(badge_icon)
+	menu:add(b, (Video.Width / 2) - (badge_icon:getWidth() / 2), (Video.Height / 2) - (badge_icon:getHeight() / 2))
+	b:setTooltip(completed_quest_quantity .. "/" .. total_quest_quantity .. " Quests Completed")
 
-	no_randomness = menu:addImageCheckBox(_("No Randomness"), offx + 640 - 224 - 16, offy + 10 + 300 + 3,
+	no_randomness = menu:addImageCheckBox(_("No Randomness"), offx + 480, offy + 10 + 300 + 3,
 		function()
 			wyr.preferences.NoRandomness = no_randomness:isMarked()
 			SavePreferences()
@@ -109,8 +135,8 @@ function RunQuestMenu(world)
 	local difficulty_list = {_("Easy"), _("Normal"), _("Hard"),_("Brutal")}
 	local difficulty = nil
 	
-	menu:addLabel(_("Difficulty:"), offx + 220, offy + (10 + 300) - 20, Fonts["game"], false)
-	difficulty = menu:addDropDown(difficulty_list, offx + 220, offy + 10 + 300,
+	menu:addLabel(_("Difficulty:"), offx + 244, offy + (10 + 300) - 20, Fonts["game"], false)
+	difficulty = menu:addDropDown(difficulty_list, offx + 244, offy + 10 + 300,
 		function(dd)
 			wyr.preferences.Difficulty = difficulty:getSelected() + 1
 			SavePreferences()
@@ -133,8 +159,8 @@ function RunQuestMenu(world)
 	local hero_dd
 	table.sort(hero_list)
 	table.insert(hero_list, "") -- to allow players to choose having no custom hero selected
-	menu:addLabel(_("Custom Hero:"), offx + 40, offy + (10 + 300) - 20, Fonts["game"], false)
-	hero_dd = menu:addDropDown(hero_list, offx + 40, offy + 10 + 300,
+	menu:addLabel(_("Custom Hero:"), offx + 30, offy + (10 + 300) - 20, Fonts["game"], false)
+	hero_dd = menu:addDropDown(hero_list, offx + 30, offy + 10 + 300,
 		function(dd)
 			SetCurrentCustomHero(hero_list[hero_dd:getSelected() + 1])
 			menu:stop()

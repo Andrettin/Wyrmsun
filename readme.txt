@@ -23,9 +23,11 @@ Features:
 - 2 playable civilizations, and a number of non-playable ones
 - 23 quests to play, earning technology points which can be used to obtain new units, buildings and technologies
 - 39 units, 34 buildings and 21 technologies
-- Units can earn experience, being able to upgrade to new unit types or acquire new abilities upon level-up
-- Persistent heroes, who carry over their level and abilities throughout scenarios
 - Personal names and traits for units
+- Units can earn experience, being able to upgrade to new unit types or acquire new abilities upon level-up
+- Persistent heroes, who carry over their level, abilities and items throughout scenarios
+- Possibility to create your own custom persistent heroes
+- Normal, magic-enchanted and unique items drop from your enemies
 - Cave, Conifer Forest, Dungeon, Fairlimbed Forest and Swamp tilesets
 - Dozens of maps of real and fictional locations to choose from, as well as random maps
 - Living environment, with fauna reproduction and predation
@@ -240,6 +242,7 @@ https://github.com/Andrettin/Wyrmsun
 * Quests
 - The Caverns of Flame quest (Dwarf) now gives 2 technology points instead of 1.
 - The Razing of Opitergium quest (Teuton) now gives 3 technology points instead of 2.
+- There is now a symbol in the quests screen indicating how many quests of the total have been completed for that world.
 
 * Units
 - Added Dwarven Transport ship (graphics by Jinn).
