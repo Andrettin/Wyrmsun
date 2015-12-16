@@ -236,6 +236,11 @@ https://github.com/Andrettin/Wyrmsun
 - Added three new runic magic suffixes, "of Aedi", "of Ergi", "of Othola" and "of Thurs".
 - Cheese and carrots can now be carried (icon graphics by Vladislav "iDreamRunner").
 - Added equippable amulet items (graphics by Vladislav "iDreamRunner").
+- Added "of Strength" suffix for amulets and rings.
+
+* Miscellaneous
+- Fixed a potential cause of crashes when loading saved games of certain quests.
+- Fixed an issue which caused persistent heroes' items to be duplicated when loading a game.
 
 * Units
 - Added a new icon for chests (icon graphics by Vladislav "iDreamRunner").

@@ -168,7 +168,7 @@ AddTrigger(
 			local uncount = 0
 			uncount = GetUnits(1)
 			for unit1 = 1,table.getn(uncount) do 
-				if (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "organic")) then
+				if (uncount[unit1] and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "organic")) then
 					local unit_quantity = GetNumUnitsAt(GetFactionPlayer("Asa Tribe"), "units", {GetUnitVariable(uncount[unit1],"PosX") - 3, GetUnitVariable(uncount[unit1],"PosY") - 3}, {GetUnitVariable(uncount[unit1],"PosX") + 3, GetUnitVariable(uncount[unit1],"PosY") + 3})
 					if (unit_quantity > 0) then
 						player = GetFactionPlayer("Asa Tribe")
@@ -186,11 +186,11 @@ AddTrigger(
 		local uncount = 0
 		uncount = GetUnits(1)
 		for unit1 = 1,table.getn(uncount) do 
-			if (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "organic")) then
+			if (uncount[unit1] and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "organic")) then
 				local nearby_uncount = 0
 				nearby_uncount = GetUnitsAroundUnit(uncount[unit1], 3, true)
 				for unit2 = 1,table.getn(nearby_uncount) do 
-					if (GetUnitVariable(nearby_uncount[unit2], "Player") == GetFactionPlayer("Asa Tribe") and not GetUnitTypeData(GetUnitVariable(nearby_uncount[unit2], "Ident"), "Coward")) then
+					if (nearby_uncount[unit2] and GetUnitVariable(nearby_uncount[unit2], "Player") == GetFactionPlayer("Asa Tribe") and not GetUnitTypeData(GetUnitVariable(nearby_uncount[unit2], "Ident"), "Coward")) then
 						native_unit = uncount[unit1]
 						asa_unit = nearby_uncount[unit2]
 						break
@@ -232,7 +232,7 @@ AddTrigger(
 			local uncount = 0
 			uncount = GetUnits(1)
 			for unit1 = 1,table.getn(uncount) do 
-				if (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Building")) then
+				if (uncount[unit1] and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Building")) then
 					local unit_quantity = GetNumUnitsAt(GetFactionPlayer("Asa Tribe"), "units", {GetUnitVariable(uncount[unit1],"PosX") - 3, GetUnitVariable(uncount[unit1],"PosY") - 3}, {GetUnitVariable(uncount[unit1],"PosX") + 3 + GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "TileWidth"), GetUnitVariable(uncount[unit1],"PosY") + 3 + GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "TileHeight")})
 					if (unit_quantity > 0) then
 						player = GetFactionPlayer("Asa Tribe")
@@ -250,7 +250,7 @@ AddTrigger(
 		local uncount = 0
 		uncount = GetUnits(1)
 		for unit1 = 1,table.getn(uncount) do 
-			if (GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Building")) then
+			if (uncount[unit1] and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Building")) then
 				local nearby_uncount = 0
 				nearby_uncount = GetUnitsAroundUnit(uncount[unit1], 3, true)
 				for unit2 = 1,table.getn(nearby_uncount) do 

@@ -224,7 +224,7 @@ AddTrigger(
 				if (GetNumUnitsAt(GetFactionPlayer("Modsogning Clan"), "units", {GetUnitVariable(uncount[unit1],"PosX") - 4, GetUnitVariable(uncount[unit1],"PosY") - 4}, {GetUnitVariable(uncount[unit1],"PosX") + 4, GetUnitVariable(uncount[unit1],"PosY") + 4}) > 0) then -- if there are units from Brokk and Eitri's entourage near the beast
 					local nearby_uncount = GetUnitsAroundUnit(uncount[unit1], 4, true)
 					for unit2 = 1,table.getn(nearby_uncount) do 
-						if (GetUnitVariable(nearby_uncount[unit2], "Player") == GetFactionPlayer("Modsogning Clan") and GetUnitTypeData(GetUnitVariable(nearby_uncount[unit2], "Ident"), "organic")) then
+						if (nearby_uncount[unit2] and GetUnitVariable(nearby_uncount[unit2], "Player") == GetFactionPlayer("Modsogning Clan") and GetUnitTypeData(GetUnitVariable(nearby_uncount[unit2], "Ident"), "organic")) then
 							OrderUnit(15, GetUnitVariable(uncount[unit1],"Ident"), {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(nearby_uncount[unit2],"PosX"), GetUnitVariable(nearby_uncount[unit2],"PosY")}, "attack")
 						end
 					end
