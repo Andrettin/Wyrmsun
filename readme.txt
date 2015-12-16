@@ -27,7 +27,7 @@ Features:
 - Units can earn experience, being able to upgrade to new unit types or acquire new abilities upon level-up
 - Persistent heroes, who carry over their level, abilities and items throughout scenarios
 - Possibility to create your own custom persistent heroes
-- Normal, magic-enchanted and unique items drop from your enemies
+- Normal, magic-enchanted and unique items drop from enemies
 - Cave, Conifer Forest, Dungeon, Fairlimbed Forest and Swamp tilesets
 - Dozens of maps of real and fictional locations to choose from, as well as random maps
 - Living environment, with fauna reproduction and predation
@@ -225,6 +225,14 @@ https://github.com/Andrettin/Wyrmsun
 ############################################################
 # Changelog
 ############################################################
+
+-----------------------------------------------------------------------
+- 1.8.2
+-----------------------------------------------------------------------
+
+* Items
+- Units who have inventories now auto-use healing items if they are too low on health.
+- Cheese and carrots now heal 5 HP instead of 3.
 
 -----------------------------------------------------------------------
 - 1.8.1
