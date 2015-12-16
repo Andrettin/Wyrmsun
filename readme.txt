@@ -233,6 +233,7 @@ https://github.com/Andrettin/Wyrmsun
 * Items
 - Units who have inventories now auto-use healing items if they are too low on health.
 - Cheese and carrots now heal 5 HP instead of 3.
+- Added three new runic magic suffixes, "of Aedi", "of Ergi", "of Othola" and "of Thurs".
 
 -----------------------------------------------------------------------
 - 1.8.1

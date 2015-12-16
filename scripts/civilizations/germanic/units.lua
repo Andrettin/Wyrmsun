@@ -577,7 +577,7 @@ DefineUnitType("unit-germanic-smithy", { Name = _("Smithy"),
 	Icon = "icon-germanic-smithy",
 	TechnologyPointCost = 1,
 	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-wooden-shield", "unit-bronze-shield"},
-	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-flaming", "upgrade-item-prefix-glacial", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-the-serpent", "upgrade-item-suffix-of-the-snail", "upgrade-item-suffix-of-trickery"},
+	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-flaming", "upgrade-item-prefix-glacial", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-the-serpent", "upgrade-item-suffix-of-the-snail", "upgrade-item-suffix-of-trickery", "upgrade-item-suffix-of-aedi", "upgrade-item-suffix-of-ergi", "upgrade-item-suffix-of-othola", "upgrade-item-suffix-of-thurs"}, -- Aedi, Ergi, Othola and Thurs are Norse runes
 	Sounds = {
 		"help", "basic-germanic-voices-help-town"
 	}
