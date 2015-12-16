@@ -30,3 +30,19 @@ DefineDeity("Eloh", { -- from Under the Burning Suns (Battle for Wesnoth)
 	Gender = "female",
 	Major = true
 })
+
+DefineDeity("Frey", {
+	Civilization = "elf", -- is a Norse deity, but Alaric Hall proposes that the Vanir are more or less identical with the Elves, so it makes sense to make Njord an elven deity here; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 135.
+	Gender = "male"
+})
+
+DefineDeity("Freyja", {
+	Civilization = "elf", -- is a Norse deity, but Alaric Hall proposes that the Vanir are more or less identical with the Elves, so it makes sense to make Njord an elven deity here; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 135.
+	Gender = "female"
+})
+
+DefineDeity("Njord", { -- One of the Vanir; father of Frey and Freyja; husband of Skadi; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 248.
+	Civilization = "elf", -- is a Norse deity, but Alaric Hall proposes that the Vanir are more or less identical with the Elves, so it makes sense to make Njord an elven deity here; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 135.
+	Gender = "male",
+	Portfolio = "Wind and Sea"
+})

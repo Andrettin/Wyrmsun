@@ -309,11 +309,13 @@ DefineButton( { Pos = 7, Level = 1, Icon = "icon-dwarven-sentry-tower",
 	ForUnit = {"unit-dwarven-miner", "unit-gnomish-worker"}
 } )
 
+--[[
 DefineButton( { Pos = 8, Level = 1, Icon = "icon-dwarven-dock",
 	Action = "build", Value = "unit-dwarven-dock",
 	Key = "d", Hint = _("Build ~!Dock"), Popup = "popup-building",
 	ForUnit = {"unit-dwarven-miner", "unit-gnomish-worker"}
 } )
+--]]
 
 DefineButton( { Pos = 9, Level = 1, Icon = "icon-gold-mine",
 	Action = "build", Value = "unit-gold-mine",

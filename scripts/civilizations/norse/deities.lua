@@ -54,7 +54,7 @@ DefineDeity("Forseti", { -- Son of Balder and Nanna; Source: Kevin Crossley-Holl
 	Portfolio = "Justice"
 })
 
-DefineDeity("Forseti", { -- Wife of Odin; mother of Balder; first among the goddesses; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 242.
+DefineDeity("Frigg", { -- Wife of Odin; mother of Balder; first among the goddesses; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 242.
 	Civilization = "norse",
 	Gender = "female"
 })
@@ -116,12 +116,6 @@ DefineDeity("Mimir", { -- Wise god sent by the Aesir to seal their truce with th
 DefineDeity("Nanna", { -- Balder's wife and daughter of Nep; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 248.
 	Civilization = "norse",
 	Gender = "female"
-})
-
-DefineDeity("Njord", { -- One of the Vanir; father of Frey and Freyja; husband of Skadi; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 248.
-	Civilization = "norse",
-	Gender = "male",
-	Portfolio = "Wind and Sea"
 })
 
 DefineDeity("Odin", { -- Father of Thor; most important of the Aesir; known as Allfather, the Terrible One, One-eyed, Father of Battle; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 248.

@@ -4999,6 +4999,7 @@ DefineUnitType("unit-long-swordsman", { Name = _("Long Swordsman"),
 	Indestructible = true, -- because it doesn't have death animations
 	WeaponClasses = {"sword"},
 	HackDamage = true,
+	NumDirections = 1,
 	Sounds = {
 		"selected", "click",
 --		"acknowledge", "basic-dwarf-voices-acknowledge",

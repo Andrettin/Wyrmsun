@@ -230,11 +230,7 @@ https://github.com/Andrettin/Wyrmsun
 - 1.8.1
 -----------------------------------------------------------------------
 
-* Buildings
-- The Dwarven and Teuton Dock buildings are now buildable in RTS mode.
-
 * Items
-- Added a Scroll of Retraining (allows heroes to re-pick abilities).
 - Fixed issue which prevented units without inventories from picking up power-ups.
 - Fixed issue which prevented the damage bonus of "of Perfuration" weapons from appearing in the tooltip if the base weapon had +0 damage.
 - Added the "of Os" magic suffix (+1 Thorns damage), named after the Anglo-Saxon rune Os. This suffix is dropped only by Teuton smithies.
@@ -242,16 +238,15 @@ https://github.com/Andrettin/Wyrmsun
 * Miscellaneous
 - When units are attacked, now their personal names appears in the notification alongside their unit type's name (previously only the unit type's name appeared).
 - Fixed a save game loading issue.
+- Fixed an issue which caused custom heroes to duplicate in certain circumstances when loading a saved game.
 
 * Quests
-- The Caverns of Flame quest (Dwarf) now gives 2 technology points instead of 1.
-- The Razing of Opitergium quest (Teuton) now gives 3 technology points instead of 2.
 - There is now text in the quests screen indicating how many quests of the total have been completed for that world.
 - Fixed an issue with the Closing the Gates quest (Dwarf) which caused its initial dialogue to re-run after loading a saved game of that scenario.
 
 * Units
-- Added Dwarven Transport ship (graphics by Jinn).
 - Fixed issue which caused units to try to walk up to enemies even though there was a door between them.
+- Fixed issue which caused the NPC unit Long Swordsman to not have its graphics show up properly.
 
 -----------------------------------------------------------------------
 - 1.8.0
