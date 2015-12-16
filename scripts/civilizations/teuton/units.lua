@@ -425,6 +425,8 @@ DefineUnitType("unit-teuton-town-hall", { Name = _("Rathaus"),
 	Image = {"file", "teuton/buildings/town_hall.png", "size", {128, 128}},
 	Shadow = {"file", "teuton/buildings/town_hall_shadow.png", "size", {128, 128}},
 	Icon = "icon-teuton-town-hall",
+	AiDrops = {"unit-boots"},
+	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-flaming", "upgrade-item-prefix-glacial", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-the-serpent", "upgrade-item-suffix-of-the-snail", "upgrade-item-suffix-of-trickery"},
 	Variations = {
 		{
 			"variation-id", "town-hall",
@@ -454,6 +456,8 @@ DefineUnitType("unit-teuton-stronghold", { Name = _("Burg"),
 	Shadow = {"file", "teuton/buildings/stronghold_shadow.png", "size", {128, 128}},
 	Icon = "icon-teuton-stronghold",
 	TechnologyPointCost = 1,
+	AiDrops = {"unit-boots"},
+	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-flaming", "upgrade-item-prefix-glacial", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-the-serpent", "upgrade-item-suffix-of-the-snail", "upgrade-item-suffix-of-trickery"},
 	Sounds = {
 		"help", "basic-teuton-voices-help-town"
 	}

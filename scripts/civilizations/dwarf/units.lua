@@ -607,6 +607,8 @@ DefineUnitType("unit-dwarven-town-hall", { Name = _("Mead Hall"),
 	Icon = "icon-dwarven-town-hall",
 	Costs = {"time", 255, "gold", 1200, "lumber", 600, "stone", 200},
 	RepairCosts = {"gold", 1, "lumber", 1, "stone", 1},
+	AiDrops = {"unit-boots"},
+	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-glacial", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-the-snigill"},
 	Sounds = {
 		"help", "basic-dwarf-voices-help-town"
 	}
@@ -623,6 +625,8 @@ DefineUnitType("unit-dwarven-stronghold", { Name = _("Bastion"),
 	Costs = {"time", 200, "gold", 2200, "lumber", 275, "stone", 825},
 	RepairCosts = {"gold", 1, "lumber", 1, "stone", 1},
 	TechnologyPointCost = 1,
+	AiDrops = {"unit-boots"},
+	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-glacial", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-the-snigill"},
 	Sounds = {
 		"help", "basic-dwarf-voices-help-town"
 	}

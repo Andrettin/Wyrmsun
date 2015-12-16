@@ -90,6 +90,14 @@ DefineUniqueItem("Svalin", { -- Source: Kevin Crossley-Holland, "The Norse Myths
 	Quote = "\"In front of the sun | does Svalin stand, / The shield for the shining god; / Mountains and sea | would be set in flames / If it fell from before the sun.\" - Grimnismol"
 } )
 
+DefineUniqueItem("Brisingamen", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", pp. 177.
+	Type = "unit-amulet",
+	Prefix = "upgrade-item-prefix-flaming",
+	Suffix = "upgrade-item-suffix-of-swiftness",
+	Background = "In Norse mythology, Brisingamen (\"The Necklace of the Brisings\") was a golden necklace crafted by the four dwarven smiths known as the Brisings for the goddess Freyja.",
+	Quote = "\"The dwelling great | of the dwarves was shaken, / And burst was the mighty | Brisings' necklace.\" - Dwarven Traditional Poetry"
+} )
+
 DefineUniqueItem("Andvaranaut", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", pp. 114, 360; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 21.
 	Type = "unit-ring",
 	Prefix = "upgrade-item-prefix-vicious",

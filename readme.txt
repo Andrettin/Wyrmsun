@@ -230,6 +230,9 @@ https://github.com/Andrettin/Wyrmsun
 - 1.8.2
 -----------------------------------------------------------------------
 
+* Buildings
+- Town Hall-type and Stronghold-type buildings can now drop hammers, mining picks, boots, rings and amulets.
+
 * Items
 - Units who have inventories now auto-use healing items if they are too low on health.
 - Cheese and carrots now heal 5 HP instead of 3.
@@ -237,6 +240,7 @@ https://github.com/Andrettin/Wyrmsun
 - Cheese and carrots can now be carried (icon graphics by Vladislav "iDreamRunner").
 - Added equippable amulet items (graphics by Vladislav "iDreamRunner").
 - Added "of Strength" suffix for amulets and rings.
+- Added Brisingamen (unique amulet).
 
 * Miscellaneous
 - Fixed a potential cause of crashes when loading saved games of certain quests.

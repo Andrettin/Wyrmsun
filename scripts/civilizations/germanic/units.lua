@@ -518,6 +518,8 @@ DefineUnitType("unit-germanic-town-hall", { Name = _("Chieftain's Hall"),
 	Shadow = {"file", "germanic/buildings/town_hall_shadow.png", "size", {128, 128}},
 	Animations = "animations-germanic-town-hall", Icon = "icon-germanic-town-hall",
 	Construction = "construction-germanic-town-hall",
+	AiDrops = {"unit-boots"},
+	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-flaming", "upgrade-item-prefix-glacial", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-the-serpent", "upgrade-item-suffix-of-the-snail", "upgrade-item-suffix-of-trickery"},
 	Sounds = {
 		"help", "basic-germanic-voices-help-town"
 	}
