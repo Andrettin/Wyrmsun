@@ -234,6 +234,11 @@ https://github.com/Andrettin/Wyrmsun
 - Units who have inventories now auto-use healing items if they are too low on health.
 - Cheese and carrots now heal 5 HP instead of 3.
 - Added three new runic magic suffixes, "of Aedi", "of Ergi", "of Othola" and "of Thurs".
+- Cheese and carrots can now be carried (icon graphics by Vladislav "iDreamRunner").
+- Added equippable amulet items (graphics by Vladislav "iDreamRunner").
+
+* Units
+- Added a new icon for chests (icon graphics by Vladislav "iDreamRunner").
 
 -----------------------------------------------------------------------
 - 1.8.1
@@ -278,7 +283,7 @@ https://github.com/Andrettin/Wyrmsun
 - Persistent heroes, Stonelords and Gryphon Riders now have an inventory in which they can carry items (such as potions). Other units can still use potions by right-clicking on them, but they can't carry them around. Items are saved for persistent heroes.
 - Added weapon and shield items. These can be equipped by right-clicking, and will replace the bonuses of the weapon/shield technologies with those of the item.
 - Added equippable boot items.
-- Added equippable rings items (ring icon graphics by Vladislav "iDreamRunner").
+- Added equippable rings items (ring icon graphics by Vladislav "iDreamRunner"); each hero can equip two of them.
 - AI units now have a chance to drop items.
 - Dropped items now have a chance of having a magic prefix or suffix, as well as a chance of being a unique item (the probability of getting a magic or unique item from a building is doubled).
 - Added Brimir (unique broad sword).

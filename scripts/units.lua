@@ -3335,52 +3335,6 @@ DefineUnitType("unit-explosive-barrel", { Name = _("Explosive Barrel"),
 	}
 } )
 
-DefineUnitType("unit-cheese", { Name = _("Cheese"),
-	Image = {"file", "neutral/items/cheese.png", "size", {15, 12}},
-	Animations = "animations-item", Icon = "icon-food",
-	NeutralMinimapColor = {255, 255, 0},
-	Costs = {"gold", 20},
-	Speed = 0,
-	HitPoints = 1,
-	DrawLevel = 30,
-	TileSize = {1, 1}, BoxSize = {31, 31},
-	SightRange = 1,
-	BasicDamage = 0, Missile = "missile-none",
-	Priority = 0,
-	Type = "land",
-	NumDirections = 1,	
-	PowerUp = true,
-	Dairy = true,
-	HitPointHealing = 5,
-	Sounds = {
-		"selected", "click",
-		"used", "eat"
-	} 
-} )
-
-DefineUnitType("unit-carrots", { Name = _("Carrots"),
-	Image = {"file", "neutral/items/carrots.png", "size", {18, 12}},
-	Animations = "animations-item", Icon = "icon-food",
-	NeutralMinimapColor = {255, 255, 0},
-	Costs = {"gold", 20},
-	Speed = 0,
-	HitPoints = 1,
-	DrawLevel = 30,
-	TileSize = {1, 1}, BoxSize = {31, 31},
-	SightRange = 1,
-	BasicDamage = 0, Missile = "missile-none",
-	Priority = 0,
-	Type = "land",
-	NumDirections = 1,	
-	PowerUp = true, 
-	HitPointHealing = 5,
-	Vegetable = true,
-	Sounds = {
-		"selected", "click",
-		"used", "eat"
-	} 
-} )
-
 DefineUnitType("unit-gryphon-feather", { Name = _("Gryphon Feather"),
 	Image = {"file", "neutral/items/gryphon_feather.png", "size", {28, 26}},
 	Animations = "animations-item", Icon = "icon-gryphon-feather",
@@ -4150,7 +4104,7 @@ DefineUnitType("unit-template-veteran-infantry", { Name = _("Veteran Infantry"),
 	CanTargetLand = true,
 	organic = true,
 	SelectableByRectangle = true,
-	AiDrops = {"unit-ring"},
+	AiDrops = {"unit-amulet", "unit-ring"},
 	DropAffixes = {"upgrade-item-prefix-impregnable", "upgrade-item-prefix-penetrating", "upgrade-item-prefix-vicious", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-thorns"}
 } )
 
@@ -4293,7 +4247,7 @@ DefineUnitType("unit-template-cavalry", { Name = _("Cavalry"),
 	SelectableByRectangle = true,
 	TechnologyPointCost = 1,
 	Traits = {"upgrade-mighty", "upgrade-strong", "upgrade-weak", "upgrade-dextrous", "upgrade-clumsy", "upgrade-reckless", "upgrade-near-sighted", "upgrade-keen", "upgrade-limping", "upgrade-old", "upgrade-quick", "upgrade-resilient", "upgrade-slow", "upgrade-cruel"},
-	AiDrops = {"unit-ring"},
+	AiDrops = {"unit-amulet", "unit-ring"},
 	DropAffixes = {"upgrade-item-prefix-accurate", "upgrade-item-prefix-cruel", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-penetrating", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-swift", "upgrade-item-prefix-vicious", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-accuracy", "upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-thorns"},
 	Sounds = {
 		"step", "step-dirt",
@@ -4333,7 +4287,7 @@ DefineUnitType("unit-template-priest", { Name = _("Priest"),
 	SelectableByRectangle = true,
 	Mana = {Enable = true},
 	Traits = {"upgrade-mighty", "upgrade-strong", "upgrade-weak", "upgrade-dextrous", "upgrade-clumsy", "upgrade-reckless", "upgrade-near-sighted", "upgrade-keen", "upgrade-limping", "upgrade-old", "upgrade-quick", "upgrade-resilient", "upgrade-slow", "upgrade-cruel"},
-	AiDrops = {"unit-ring"},
+	AiDrops = {"unit-amulet", "unit-ring"},
 	DropAffixes = {"upgrade-item-prefix-accurate", "upgrade-item-prefix-cruel", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-penetrating", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-swift", "upgrade-item-prefix-vicious", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-accuracy", "upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-thorns"},
 	Sounds = {
 		"step", "step-dirt",
@@ -4376,7 +4330,7 @@ DefineUnitType("unit-template-flying-rider", { Name = _("Flying Rider"),
 	SelectableByRectangle = true,
 	TechnologyPointCost = 1,
 	Traits = {"upgrade-mighty", "upgrade-strong", "upgrade-weak", "upgrade-dextrous", "upgrade-clumsy", "upgrade-reckless", "upgrade-near-sighted", "upgrade-keen", "upgrade-limping", "upgrade-old", "upgrade-quick", "upgrade-resilient", "upgrade-slow", "upgrade-cruel"},
-	AiDrops = {"unit-ring"},
+	AiDrops = {"unit-amulet", "unit-ring"},
 	DropAffixes = {"upgrade-item-prefix-accurate", "upgrade-item-prefix-cruel", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-penetrating", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-swift", "upgrade-item-prefix-vicious", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-accuracy", "upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-power", "upgrade-item-suffix-of-regeneration", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-thorns", "upgrade-item-suffix-of-victory", "upgrade-item-suffix-of-vision"},
 	Sounds = {
 	}
@@ -4479,6 +4433,8 @@ DefineUnitType("unit-template-town-hall", { Name = _("Town Hall"),
 	BurnPercent = 50,
 	BurnDamageRate = 1,
 	SelectableByRectangle = true,
+	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-amulet", "unit-ring"}, -- worker-related items, as well as those we would expect a center of administration to have
+	DropAffixes = {"upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-power", "upgrade-item-suffix-of-regeneration", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-thorns", "upgrade-item-suffix-of-vision"},
 	Sounds = {
 		"selected", "town-hall-selected",
 --		"acknowledge", "town-hall-acknowledge",
@@ -4665,7 +4621,7 @@ DefineUnitType("unit-template-smithy", { Name = _("Smithy"),
 	BurnPercent = 50,
 	BurnDamageRate = 1,
 	SelectableByRectangle = true,
-	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-ring"},
+	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-amulet", "unit-ring"},
 	DropAffixes = {"upgrade-item-prefix-accurate", "upgrade-item-prefix-cruel", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-penetrating", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-swift", "upgrade-item-prefix-vicious", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-accuracy", "upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-the-colossus", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-power", "upgrade-item-suffix-of-regeneration", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-thorns", "upgrade-item-suffix-of-victory", "upgrade-item-suffix-of-vision"},
 	Sounds = {
 		"selected", "smithy-selected",

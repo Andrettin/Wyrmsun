@@ -169,6 +169,8 @@ editor_types = {
    "unit-boots",
    "unit-wool-shoes",
    "unit-furry-wool-shoes",
+   "unit-ring",
+   "unit-amulet",
    "unit-arrows",
    "unit-barbed-arrows",
    "unit-bodkin-arrows",

@@ -33,7 +33,7 @@ DefineUpgrade("upgrade-item-suffix-of-accuracy", {
 
 DefineUpgrade("upgrade-item-suffix-of-betrayal", {
 	Name = _("of Betrayal"),
-	ItemSuffix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true, "ring", true}
+	ItemSuffix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true, "amulet", true, "ring", true}
 })
 
 DefineUpgrade("upgrade-item-suffix-of-cold", {
@@ -82,47 +82,52 @@ DefineUpgrade("upgrade-item-suffix-of-perfuration", {
 
 DefineUpgrade("upgrade-item-suffix-of-power", { -- example: Ring of Power (from Wesnoth)
 	Name = _("of Power"),
-	ItemSuffix = {"ring", true}
+	ItemSuffix = {"amulet", true, "ring", true}
 })
 
 DefineUpgrade("upgrade-item-suffix-of-regeneration", { -- example: Ring of Regeneration (from Wesnoth)
 	Name = _("of Regeneration"),
-	ItemSuffix = {"ring", true}
+	ItemSuffix = {"amulet", true, "ring", true}
 })
 
 DefineUpgrade("upgrade-item-suffix-of-slowness", { -- example: Ring of Slowness (from Wesnoth)
 	Name = _("of Slowness"),
-	ItemSuffix = {"boots", true, "ring", true}
+	ItemSuffix = {"boots", true, "amulet", true, "ring", true}
 })
 
 DefineUpgrade("upgrade-item-suffix-of-the-snail", {
 	Name = _("of the Snail"),
-	ItemSuffix = {"boots", true, "ring", true}
+	ItemSuffix = {"boots", true, "amulet", true, "ring", true}
 })
 
 DefineUpgrade("upgrade-item-suffix-of-the-snigill", {
 	Name = _("of the Snigill"),
-	ItemSuffix = {"boots", true, "ring", true}
+	ItemSuffix = {"boots", true, "amulet", true, "ring", true}
 })
 
 DefineUpgrade("upgrade-item-suffix-of-speed", { -- example: Ring of Speed (from Wesnoth)
 	Name = _("of Speed"),
-	ItemSuffix = {"boots", true, "ring", true}
+	ItemSuffix = {"boots", true, "amulet", true, "ring", true}
+})
+
+DefineUpgrade("upgrade-item-suffix-of-strength", { -- example: Amulet of Strength (from Wesnoth)
+	Name = _("of Strength"),
+	ItemSuffix = {"amulet", true, "ring", true}
 })
 
 DefineUpgrade("upgrade-item-suffix-of-swiftness", {
 	Name = _("of Swiftness"),
-	ItemSuffix = {"boots", true, "ring", true}
+	ItemSuffix = {"boots", true, "amulet", true, "ring", true}
 })
 
 DefineUpgrade("upgrade-item-suffix-of-the-serpent", {
 	Name = _("of the Serpent"),
-	ItemSuffix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true, "ring", true}
+	ItemSuffix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true, "amulet", true, "ring", true}
 })
 
 DefineUpgrade("upgrade-item-suffix-of-thorns", {
 	Name = _("of Thorns"),
-	ItemSuffix = {"armor", true, "shield", true, "helmet", true, "ring", true}
+	ItemSuffix = {"armor", true, "shield", true, "helmet", true, "amulet", true, "ring", true}
 })
 
 DefineUpgrade("upgrade-item-suffix-of-trickery", {
@@ -137,7 +142,7 @@ DefineUpgrade("upgrade-item-suffix-of-victory", {
 
 DefineUpgrade("upgrade-item-suffix-of-vision", {
 	Name = _("of Vision"),
-	ItemSuffix = {"ring", true}
+	ItemSuffix = {"amulet", true, "ring", true}
 })
 
 DefineModifier("upgrade-item-suffix-of-accuracy",
@@ -207,6 +212,10 @@ DefineModifier("upgrade-item-suffix-of-the-snigill",
 
 DefineModifier("upgrade-item-suffix-of-speed",
 	{"Speed", 1}
+)
+
+DefineModifier("upgrade-item-suffix-of-strength",
+	{"BasicDamage", 2}
 )
 
 DefineModifier("upgrade-item-suffix-of-swiftness",

@@ -211,7 +211,7 @@ DefineLanguageNoun("Bodn", {
 	Meaning = "?",
 	SingularNominative = "Bodn",
 	NameSingular = true,
-	ItemName = {"Potion", true} -- example: "Bodn" (jar which contained some of the mead of poetry)
+	ItemName = {"potion", true} -- example: "Bodn" (jar which contained some of the mead of poetry)
 })
 
 DefineLanguageNoun("Bombor", {
@@ -229,7 +229,7 @@ DefineLanguageNoun("Brising", {
 	SingularGenitive = "Brisinga", -- as in "Brisingamen"
 	Gender = "Masculine", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 772.
 	PrefixSingular = true,
-	PrefixItemName = {"Amulet", true}, -- example: "Brisingamen" (golden necklace made by four dwarves, the Brisings)
+	PrefixItemName = {"amulet", true}, -- example: "Brisingamen" (golden necklace made by four dwarves, the Brisings)
 	PrefixProvinceName = true, -- no examples, but seems sensible in face of a general lack of examples
 	PrefixSettlementName = true, -- no examples, but seems sensible in face of a general lack of examples
 	PrefixTerrainName = {
@@ -272,7 +272,7 @@ DefineLanguageNoun("Dain", {
 	NameSingular = true,
 	PersonalName = true, -- example: "Dain" (dwarf from Norse mythology)
 	PrefixSingular = true,
-	PrefixItemName = {"Sword", true} -- example: "Dainsleif"
+	PrefixItemName = {"sword", true} -- example: "Dainsleif"
 })
 
 DefineLanguageNoun("Delling", {
@@ -313,7 +313,7 @@ DefineLanguageNoun("Draupnir", {
 	SingularNominative = "Draupnir",
 	Gender = "Masculine", -- presumably, since it's the name of a male dwarf?
 	NameSingular = true,
-	ItemName = {"Ring", true}, -- example: "Draupnir" (solid gold arm-ring made by the dwarven brothers Brokk and Eitri; maybe should be a different item type than ring, as it is actually an arm-ring?)
+	ItemName = {"ring", true}, -- example: "Draupnir" (solid gold arm-ring made by the dwarven brothers Brokk and Eitri; maybe should be a different item type than ring, as it is actually an arm-ring?)
 	PersonalName = true -- example: "Draupnir" (dwarf from Norse mythology)
 })
 
@@ -576,7 +576,7 @@ DefineLanguageNoun("Gram", {
 	Meaning = "?",
 	SingularNominative = "Gram",
 	NameSingular = true,
-	ItemName = {"Sword", true} -- example: "Gram" (sword made by the dwarf Regin)
+	ItemName = {"sword", true} -- example: "Gram" (sword made by the dwarf Regin)
 })
 
 DefineLanguageNoun("Grerr", {
@@ -601,7 +601,7 @@ DefineLanguageNoun("Gungnir", {
 	Meaning = "?",
 	SingularNominative = "Gungnir",
 	NameSingular = true,
-	ItemName = {"Javelin", true} -- example: "Gungnir" (throwing spear made by the sons of Ivaldi)
+	ItemName = {"javelin", true} -- example: "Gungnir" (throwing spear made by the sons of Ivaldi)
 })
 
 DefineLanguageNoun("Hamel", {
@@ -827,7 +827,7 @@ DefineLanguageNoun("Leif", {
 	SingularNominative = "Leif",
 	Gender = "Feminine", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 381.
 	SuffixSingular = true,
-	SuffixItemName = {"Sword", true} -- example: "Dainsleif"
+	SuffixItemName = {"sword", true} -- example: "Dainsleif"
 })
 
 DefineLanguageNoun("Lit", {
@@ -869,7 +869,7 @@ DefineLanguageNoun("Men", {
 	SingularNominative = "Men",
 	Gender = "Neuter", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 772.
 	SuffixSingular = true,
-	SuffixItemName = {"Amulet", true} -- example: "Brisingamen" (golden necklace made by four dwarves, the Brisings)
+	SuffixItemName = {"amulet", true} -- example: "Brisingamen" (golden necklace made by four dwarves, the Brisings)
 })
 
 DefineLanguageNoun("Mjod", {
@@ -885,7 +885,7 @@ DefineLanguageNoun("Mjod", {
 		"Hills", true, -- no examples, but seems sensible in face of a general lack of examples
 		"Mountains", true -- no examples, but seems sensible in face of a general lack of examples
 	},
---	PrefixItemName = {"Potion", true} -- no examples, but seems sensible (commented out because there are no suffixes)
+--	PrefixItemName = {"potion", true} -- no examples, but seems sensible (commented out because there are no suffixes)
 })
 
 DefineLanguageNoun("Mjollnir", {
@@ -893,7 +893,7 @@ DefineLanguageNoun("Mjollnir", {
 	Meaning = "?",
 	SingularNominative = "Mjollnir",
 	NameSingular = true,
-	ItemName = {"Mace", true} -- example: "Mjollnir" (iron hammer made by the dwarven brothers Brokk and Eitri)
+	ItemName = {"mace", true} -- example: "Mjollnir" (iron hammer made by the dwarven brothers Brokk and Eitri)
 })
 
 DefineLanguageNoun("Modsognir", {
@@ -918,7 +918,7 @@ DefineLanguageNoun("Naglering", { -- possibly "Nagle-ring"?
 	Meaning = "?",
 	SingularNominative = "Naglering",
 	NameSingular = true,
-	ItemName = {"Sword", true} -- example: "Naglering" (sword forged by the dwarf Alberich)
+	ItemName = {"sword", true} -- example: "Naglering" (sword forged by the dwarf Alberich)
 })
 
 DefineLanguageNoun("Nar", { -- prefix used by Wesnoth's dwarven names; not necessarily a noun
@@ -936,7 +936,7 @@ DefineLanguageNoun("Naut", {
 	SingularNominative = "Naut",
 	Gender = "Masculine", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 447.
 	SuffixSingular = true,
-	SuffixItemName = {"Ring", true} -- example: "Andvaranaut" (gold ring made by Andvari and stolen by Loki; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 21.)
+	SuffixItemName = {"ring", true} -- example: "Andvaranaut" (gold ring made by Andvari and stolen by Loki; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 21.)
 })
 
 DefineLanguageNoun("Nefi", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 450.
@@ -1035,7 +1035,7 @@ DefineLanguageNoun("Odrorir", {
 	Meaning = "?",
 	SingularNominative = "Odrorir",
 	NameSingular = true,
-	ItemName = {"Potion", true} -- example: "Odrorir" (cauldron which contained some of the mead of poetry)
+	ItemName = {"potion", true} -- example: "Odrorir" (cauldron which contained some of the mead of poetry)
 })
 
 DefineLanguageNoun("Oin", {
@@ -1197,7 +1197,7 @@ DefineLanguageNoun("Son", {
 	Meaning = "?",
 	SingularNominative = "Son",
 	NameSingular = true,
-	ItemName = {"Potion", true} -- example: "Son" (jar which contained some of the mead of poetry)
+	ItemName = {"potion", true} -- example: "Son" (jar which contained some of the mead of poetry)
 })
 
 DefineLanguageNoun("Sudri", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, pp. 457, 603.
@@ -1561,7 +1561,7 @@ DefineLanguageAdjective("Rad", {
 DefineLanguageAdjective("Rithil", {
 	Civilization = "dwarf",
 	Meaning = "Swift-Moving",
-	ItemName = {"Sword", true} -- example: "Rithil" (the dwarf Regin's sword)
+	ItemName = {"sword", true} -- example: "Rithil" (the dwarf Regin's sword)
 })
 
 DefineLanguageAdjective("Svid", {

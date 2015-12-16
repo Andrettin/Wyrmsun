@@ -228,13 +228,19 @@ DefineUnitType("unit-furry-wool-shoes", { Name = _("Furry Wool Shoes"),
 	Speed = 0
 } )
 
+DefineUnitType("unit-amulet", { Name = _("Amulet"),
+	Parent = "unit-template-item",
+	Image = {"file", "neutral/items/amulet.png", "size", {32, 32}},
+	Icon = "icon-amulet",
+	ItemClass = "amulet"
+} )
+
 DefineUnitType("unit-ring", { Name = _("Ring"),
 	Parent = "unit-template-item",
 	Image = {"file", "neutral/items/ring.png", "size", {32, 32}},
 	Icon = "icon-ring",
 	ItemClass = "ring"
 } )
-
 
 DefineUnitType("unit-arrows", { Name = _("Arrows"),
 	Parent = "unit-template-item",
@@ -280,4 +286,30 @@ DefineUnitType("unit-scroll", { Name = _("Scroll"),
 	Image = {"file", "neutral/items/scroll.png", "size", {32, 32}},
 	Icon = "icon-scroll",
 	ItemClass = "scroll"
+} )
+
+DefineUnitType("unit-cheese", { Name = _("Cheese"),
+	Parent = "unit-template-item",
+	Image = {"file", "neutral/items/cheese.png", "size", {15, 12}},
+	Icon = "icon-cheese",
+	ItemClass = "food",
+	Costs = {"gold", 20},
+	Dairy = true,
+	HitPointHealing = 5,
+	Sounds = {
+		"used", "eat"
+	} 
+} )
+
+DefineUnitType("unit-carrots", { Name = _("Carrots"),
+	Parent = "unit-template-item",
+	Image = {"file", "neutral/items/carrots.png", "size", {18, 12}},
+	Icon = "icon-carrots",
+	ItemClass = "food",
+	Costs = {"gold", 20},
+	HitPointHealing = 5,
+	Vegetable = true,
+	Sounds = {
+		"used", "eat"
+	} 
 } )

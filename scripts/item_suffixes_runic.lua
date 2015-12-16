@@ -46,7 +46,7 @@ DefineUpgrade("upgrade-item-suffix-of-othola", {
 })
 
 DefineUpgrade("upgrade-item-suffix-of-thurs", {
-	Name = _("of Thurs"), -- "Thurs" is a Norse rune, presumably meaning "giant"; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 146.
+	Name = _("of Thurs"), -- "Thurs" is a Norse rune meaning "giant"; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 146.
 	ItemSuffix = {"armor", true, "shield", true, "helmet", true, "amulet", true, "ring", true}
 })
 

@@ -1100,4 +1100,9 @@ TaShadan:
 /graphics/neutral/units/long_swordsman.png
 
 Vladislav "iDreamRunner":
+/graphics/neutral/icons/amulet.png
+/graphics/neutral/icons/carrots.png
+/graphics/neutral/icons/cheese.png
+/graphics/neutral/icons/chest.png
 /graphics/neutral/icons/ring.png
+/graphics/neutral/items/amulet.png

@@ -46,6 +46,12 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-amulet",
+	Size = {46, 38},
+	File = "neutral/icons/amulet.png"
+})
+
+DefineIcon({
 	Name = "icon-ring",
 	Size = {46, 38},
 	File = "neutral/icons/ring.png"
@@ -1332,7 +1338,7 @@ DefineIcon({
 DefineIcon({
 	Name = "icon-cheese",
 	Size = {46, 38},
-	File = "neutral/icons/food.png"
+	File = "neutral/icons/cheese.png"
 })
 
 DefineIcon({
