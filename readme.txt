@@ -245,6 +245,9 @@ https://github.com/Andrettin/Wyrmsun
 * Units
 - Added a new icon for chests (icon graphics by Vladislav "iDreamRunner").
 
+* Upgrades
+- The Dvalic Runewriting's description now correctly shows its effect in the tech tree.
+
 -----------------------------------------------------------------------
 - 1.8.1
 -----------------------------------------------------------------------

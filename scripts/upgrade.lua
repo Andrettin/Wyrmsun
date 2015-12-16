@@ -246,7 +246,7 @@ DefineUpgrade("upgrade-coinage", {
 DefineUpgrade("upgrade-writing", {
 	Name = _("Writing"),
 	Class = "writing",
-	Description = _("The invention of writing makes it possible for ideas and traditions to be more easily spread and preserved.\n\nEffect: +10% Research Speed."),
+	Description = _("The invention of writing makes it possible for ideas and traditions to be more easily spread and preserved.\n\nEffect: +10% Research Speed, changes faction from tribe to polity."),
 	Costs = {"time", 250, "gold", 900, "lumber", 750},
 	GrandStrategyCosts = {"time", 250, "gold", 900, "lumber", 750, "research", 2400},
 	GrandStrategyProductionEfficiencyModifier = {"research", 50}
