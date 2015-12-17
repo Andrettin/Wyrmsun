@@ -122,6 +122,17 @@ SetRawTile(14, 3, "Rough")
 SetRawTile(15, 2, "Land")
 SetRawTile(15, 3, "Rough")
 
+-- Clear space for the Shinsplitter gold mine
+SetRawTile(4, 73, "Land")
+SetRawTile(4, 74, "Land")
+SetRawTile(4, 75, "Land")
+SetRawTile(5, 73, "Land")
+SetRawTile(5, 74, "Land")
+SetRawTile(5, 75, "Land")
+SetRawTile(6, 73, "Land")
+SetRawTile(6, 74, "Land")
+SetRawTile(6, 75, "Land")
+
 ApplyRawTiles()
 
 -- Player Setup
@@ -205,6 +216,7 @@ if (GrandStrategy == false) then
 
 	-- give a few towers to the Shorbear Clan to make their stronghold less vulnerable at game start
 	unit = CreateUnit("unit-dwarven-guard-tower", 1, {29, 29})
+	SetUnitVariable(unit, "Active", false)
 	if (unit) then
 		unit = CreateUnitInTransporter("unit-dwarven-scout", 1, unit)
 		SetUnitVariable(unit, "Active", false)
@@ -212,6 +224,7 @@ if (GrandStrategy == false) then
 		SetUnitVariable(unit, "Active", false)
 	end
 	unit = CreateUnit("unit-dwarven-guard-tower", 1, {29, 37})
+	SetUnitVariable(unit, "Active", false)
 	if (unit) then
 		unit = CreateUnitInTransporter("unit-dwarven-scout", 1, unit)
 		SetUnitVariable(unit, "Active", false)
@@ -219,6 +232,7 @@ if (GrandStrategy == false) then
 		SetUnitVariable(unit, "Active", false)
 	end
 	unit = CreateUnit("unit-dwarven-guard-tower", 1, {38, 25})
+	SetUnitVariable(unit, "Active", false)
 	if (unit) then
 		unit = CreateUnitInTransporter("unit-dwarven-scout", 1, unit)
 		SetUnitVariable(unit, "Active", false)
@@ -226,6 +240,7 @@ if (GrandStrategy == false) then
 		SetUnitVariable(unit, "Active", false)
 	end
 	unit = CreateUnit("unit-dwarven-guard-tower", 1, {47, 29})
+	SetUnitVariable(unit, "Active", false)
 	if (unit) then
 		unit = CreateUnitInTransporter("unit-dwarven-scout", 1, unit)
 		SetUnitVariable(unit, "Active", false)
@@ -233,6 +248,7 @@ if (GrandStrategy == false) then
 		SetUnitVariable(unit, "Active", false)
 	end
 	unit = CreateUnit("unit-dwarven-guard-tower", 1, {47, 35})
+	SetUnitVariable(unit, "Active", false)
 	if (unit) then
 		unit = CreateUnitInTransporter("unit-dwarven-scout", 1, unit)
 		SetUnitVariable(unit, "Active", false)
@@ -249,7 +265,7 @@ if (GrandStrategy == false) then
 	unit = CreateUnit("unit-dwarven-mushroom-farm", 1, {44, 36})
 
 	unit = CreateUnit("unit-dwarven-town-hall", 2, {4, 64})
-	unit = CreateUnit("unit-dwarven-miner", 2, {5, 65}) -- only one miner so that they start slower
+	unit = CreateUnit("unit-dwarven-miner", 2, {10, 65}) -- only one miner so that they start slower (was originally placed at {5, 65}, but let's place him a bit farther to east to make sure he isn't bounded in a complex of the hall+trees
 	unit = CreateUnit("unit-dwarven-thane", 2, {2, 70}) -- Lyndar
 	SetUnitVariable(unit, "Active", false)
 --	unit = CreateUnit("unit-dwarven-mushroom-farm", 2, {0, 70})
