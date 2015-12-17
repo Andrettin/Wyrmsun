@@ -243,8 +243,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added Brisingamen (unique amulet).
 
 * Miscellaneous
-- Fixed a potential cause of crashes when loading saved games of certain quests.
-- Fixed an issue which caused persistent heroes' items to be duplicated when loading a game.
+- Fixed an issue which caused persistent heroes' items to be duplicated when loading a saved game.
 
 * Units
 - Added a new icon for chests (icon graphics by Vladislav "iDreamRunner").
