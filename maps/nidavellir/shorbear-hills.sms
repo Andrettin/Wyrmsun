@@ -201,32 +201,43 @@ if (GrandStrategy == false) then
 --	unit = CreateUnit("unit-dwarven-miner", 1, {38, 33})
 	unit = CreateUnit("unit-dwarven-thane", 1, {36, 33}) -- Glonoin
 	SetUnitVariable(unit, "Name", "Glonoin")
+	SetUnitVariable(unit, "Active", false)
 
 	-- give a few towers to the Shorbear Clan to make their stronghold less vulnerable at game start
 	unit = CreateUnit("unit-dwarven-guard-tower", 1, {29, 29})
 	if (unit) then
 		unit = CreateUnitInTransporter("unit-dwarven-scout", 1, unit)
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnitInTransporter("unit-dwarven-scout", 1, unit - 1)
+		SetUnitVariable(unit, "Active", false)
 	end
 	unit = CreateUnit("unit-dwarven-guard-tower", 1, {29, 37})
 	if (unit) then
 		unit = CreateUnitInTransporter("unit-dwarven-scout", 1, unit)
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnitInTransporter("unit-dwarven-scout", 1, unit - 1)
+		SetUnitVariable(unit, "Active", false)
 	end
 	unit = CreateUnit("unit-dwarven-guard-tower", 1, {38, 25})
 	if (unit) then
 		unit = CreateUnitInTransporter("unit-dwarven-scout", 1, unit)
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnitInTransporter("unit-dwarven-scout", 1, unit - 1)
+		SetUnitVariable(unit, "Active", false)
 	end
 	unit = CreateUnit("unit-dwarven-guard-tower", 1, {47, 29})
 	if (unit) then
 		unit = CreateUnitInTransporter("unit-dwarven-scout", 1, unit)
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnitInTransporter("unit-dwarven-scout", 1, unit - 1)
+		SetUnitVariable(unit, "Active", false)
 	end
 	unit = CreateUnit("unit-dwarven-guard-tower", 1, {47, 35})
 	if (unit) then
 		unit = CreateUnitInTransporter("unit-dwarven-scout", 1, unit)
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnitInTransporter("unit-dwarven-scout", 1, unit - 1)
+		SetUnitVariable(unit, "Active", false)
 	end
 
 	-- Give the Shorbear Hold a few other buildings which are appropriate
@@ -240,6 +251,7 @@ if (GrandStrategy == false) then
 	unit = CreateUnit("unit-dwarven-town-hall", 2, {4, 64})
 	unit = CreateUnit("unit-dwarven-miner", 2, {5, 65}) -- only one miner so that they start slower
 	unit = CreateUnit("unit-dwarven-thane", 2, {2, 70}) -- Lyndar
+	SetUnitVariable(unit, "Active", false)
 --	unit = CreateUnit("unit-dwarven-mushroom-farm", 2, {0, 70})
 elseif (GrandStrategyEventMap) then
 	SetPlayerData(0, "Resources", "gold", 0)

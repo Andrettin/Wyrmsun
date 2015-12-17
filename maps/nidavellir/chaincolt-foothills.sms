@@ -172,6 +172,7 @@ if (GrandStrategy == false) then
 		unit = CreateUnit("unit-gnomish-recruit", 1, {8, 58})
 		IncreaseUnitLevel(unit, 2)
 		SetUnitVariable(unit, "Name", "Pypo I")
+		SetUnitVariable(unit, "Active", false)
 	end
 
 	unit = CreateUnit("unit-gnomish-worker", 1, {8, 58})
@@ -182,16 +183,25 @@ if (GrandStrategy == false) then
 	unit = CreateUnit("unit-dwarven-town-hall", 2, {40, 61})
 	unit = CreateUnit("unit-dwarven-mushroom-farm", 2, {45, 67})
 	unit = CreateUnit("unit-dwarven-steelclad", 2, {42, 60})
+	SetUnitVariable(unit, "Active", false)
 	unit = CreateUnit("unit-dwarven-scout", 2, {42, 60})
+	SetUnitVariable(unit, "Active", false)
 	unit = CreateUnit("unit-dwarven-scout", 2, {42, 60})
+	SetUnitVariable(unit, "Active", false)
 	if (GameSettings.Difficulty == 3) then -- if difficulty is hard
 		unit = CreateUnit("unit-dwarven-scout", 2, {42, 60})
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-dwarven-scout", 2, {42, 60})
+		SetUnitVariable(unit, "Active", false)
 	elseif (GameSettings.Difficulty == 4) then -- if difficulty is brutal
 		unit = CreateUnit("unit-dwarven-scout", 2, {42, 60})
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-dwarven-scout", 2, {42, 60})
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-dwarven-scout", 2, {42, 60})
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-dwarven-scout", 2, {42, 60})
+		SetUnitVariable(unit, "Active", false)
 	end
 
 	unit = CreateUnit("unit-dwarven-miner", 2, {42, 60})
@@ -207,10 +217,12 @@ if (GrandStrategy == false) then
 	unit = CreateUnit("unit-tree-stump", 15, {43, 30})
 	if (unit) then
 		unit = CreateUnitInTransporter("unit-dwarven-scout", 2, unit)
+		SetUnitVariable(unit, "Active", false)
 	end
 	unit = CreateUnit("unit-tree-stump", 15, {33, 56})
 	if (unit) then
 		unit = CreateUnitInTransporter("unit-dwarven-scout", 2, unit)
+		SetUnitVariable(unit, "Active", false)
 	end
 	unit = CreateUnit("unit-raft", 15, {14, 32})
 elseif (GrandStrategyEventMap) then

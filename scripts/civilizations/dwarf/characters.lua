@@ -41,7 +41,8 @@ DefineCharacter("Modsognir", { -- one of the earliest dwarven leaders; in Norse 
 	ProvinceOfOrigin = "Svarinshaug",
 	Year = -3000,
 	DeathYear = -3000 + 30, -- estimated
-	Persistent = true
+	Persistent = true,
+	ForbiddenUpgrades = {"unit-dwarven-yale-rider"}
 })
 
 DefineCharacter("Durin", { -- deputy of Modsognir
@@ -58,7 +59,8 @@ DefineCharacter("Durin", { -- deputy of Modsognir
 	ProvinceOfOrigin = "Svarinshaug",
 	Year = -3000,
 	DeathYear = -3000 + 30, -- estimated
-	Persistent = true
+	Persistent = true,
+	ForbiddenUpgrades = {"unit-dwarven-yale-rider"}
 })
 
 DefineCharacter("Thjodrorir", { -- dwarven sage of Modsognir's clan; in Norse mythology, a dwarf who knew a charm of power to the gods
@@ -97,6 +99,7 @@ DefineCharacter("Thursagan", {
 	Year = -1,
 	DeathYear = 40 + 10, -- died in 40 AD of a violent death, but was already rather old; +10 years
 	Persistent = true,
+	ForbiddenUpgrades = {"unit-dwarven-yale-rider"},
 	Items = {
 		{
 			"unique", "The Hammer of Thursagan",
@@ -119,7 +122,8 @@ DefineCharacter("Baglur", {
 	ProvinceOfOrigin = "Caverns of Chaincolt",
 	Year = -1,
 	DeathYear = 40 + 10, -- died in 40 AD of a violent death, but was already rather old; +10 years
-	Persistent = true
+	Persistent = true,
+	ForbiddenUpgrades = {"unit-dwarven-yale-rider"}
 })
 
 DefineCharacter("Durstorn", {
@@ -135,7 +139,8 @@ DefineCharacter("Durstorn", {
 	ProvinceOfOrigin = "Caverns of Chaincolt",
 	Year = -1,
 	DeathYear = 35 + 15, -- died in 35 AD of a violent death, but was already somewhat old; +15 years
-	Persistent = true
+	Persistent = true,
+	ForbiddenUpgrades = {"unit-dwarven-yale-rider"}
 })
 
 DefineCharacter("Glonoin", {

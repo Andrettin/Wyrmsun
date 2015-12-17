@@ -35,9 +35,9 @@ if (LoadedGame == false) then
 	SetPlayerData(1, "Resources", "stone", 1000)
 	
 	if not (GrandStrategy) then
-		unit = CreateUnit("unit-dwarven-steelclad", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		unit = CreateUnit("unit-dwarven-axefighter", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 		SetUnitVariable(unit, "Character", "Modsognir")
-		unit = CreateUnit("unit-dwarven-steelclad", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		unit = CreateUnit("unit-dwarven-axefighter", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 		SetUnitVariable(unit, "Character", "Durin")
 		unit = CreateUnit("unit-dwarven-steelclad", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 		unit = CreateUnit("unit-dwarven-steelclad", 0, {Players[0].StartPos.x, Players[0].StartPos.y})

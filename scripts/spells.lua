@@ -128,8 +128,8 @@ DefineSpell("spell-axe-twirl",
 	"ai-cast", {"range", 1, "condition", {"alliance", "false", "opponent", "only", "AirUnit", "false"}}
 )
 
-DefineSpell("spell-retraining",
-	"showname", _("Retraining"),
+DefineSpell("spell-forgetfulness",
+	"showname", _("Forgetfulness"),
 	"manacost", 0,
 	"range", 0,
 	"target", "self",

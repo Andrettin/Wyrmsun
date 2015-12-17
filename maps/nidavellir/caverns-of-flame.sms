@@ -233,48 +233,66 @@ if (GrandStrategy == false) then
 	unit = CreateUnit("unit-goblin-town-hall", 2, {53, 7})
 	unit = CreateUnit("unit-goblin-spearman", 2, {54, 8}) -- orcish warlord
 	IncreaseUnitLevel(unit, 2)
+	SetUnitVariable(unit, "Active", false)
 	unit = CreateUnit("unit-goblin-worker", 2, {54, 8})
 
 	unit = CreateUnit("unit-goblin-town-hall", 3, {11, 10})
 	unit = CreateUnit("unit-goblin-spearman", 3, {12, 10}) -- orcish warlord
 	IncreaseUnitLevel(unit, 2)
+	SetUnitVariable(unit, "Active", false)
 	unit = CreateUnit("unit-goblin-worker", 3, {12, 10})
 
 	unit = CreateUnit("unit-goblin-town-hall", 4, {11, 31})
 	unit = CreateUnit("unit-goblin-spearman", 4, {12, 32}) -- troll warrior
 	IncreaseUnitLevel(unit, 2)
+	SetUnitVariable(unit, "Active", false)
 	unit = CreateUnit("unit-goblin-spearman", 4, {34, 42}) -- troll
 	IncreaseUnitLevel(unit, 1)
+	SetUnitVariable(unit, "Active", false)
 	unit = CreateUnit("unit-goblin-spearman", 4, {30, 48}) -- orcish warrior
 	IncreaseUnitLevel(unit, 1)
+	SetUnitVariable(unit, "Active", false)
 	unit = CreateUnit("unit-goblin-spearman", 4, {32, 50}) -- orcish warrior
 	IncreaseUnitLevel(unit, 1)
+	SetUnitVariable(unit, "Active", false)
 	if (GameSettings.Difficulty == 3) then -- if difficulty is hard
 		unit = CreateUnit("unit-goblin-spearman", 4, {34, 42}) -- troll
 		IncreaseUnitLevel(unit, 1)
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-goblin-spearman", 4, {30, 48}) -- orcish warrior
 		IncreaseUnitLevel(unit, 1)
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-goblin-spearman", 4, {32, 50}) -- orcish warrior
 		IncreaseUnitLevel(unit, 1)
+		SetUnitVariable(unit, "Active", false)
 	elseif (GameSettings.Difficulty == 4) then -- if difficulty is brutal
 		unit = CreateUnit("unit-goblin-spearman", 4, {34, 42}) -- troll
 		IncreaseUnitLevel(unit, 1)
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-goblin-spearman", 4, {30, 48}) -- orcish warrior
 		IncreaseUnitLevel(unit, 1)
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-goblin-spearman", 4, {32, 50}) -- orcish warrior
 		IncreaseUnitLevel(unit, 1)
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-goblin-spearman", 4, {34, 42}) -- troll
 		IncreaseUnitLevel(unit, 1)
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-goblin-spearman", 4, {30, 48}) -- orcish warrior
 		IncreaseUnitLevel(unit, 1)
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-goblin-spearman", 4, {32, 50}) -- orcish warrior
 		IncreaseUnitLevel(unit, 1)
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-goblin-spearman", 4, {34, 42}) -- troll
 		IncreaseUnitLevel(unit, 1)
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-goblin-spearman", 4, {30, 48}) -- orcish warrior
 		IncreaseUnitLevel(unit, 1)
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-goblin-spearman", 4, {32, 50}) -- orcish warrior
 		IncreaseUnitLevel(unit, 1)
+		SetUnitVariable(unit, "Active", false)
 	end
 	unit = CreateUnit("unit-goblin-worker", 4, {12, 32})
 	unit = CreateUnit("unit-goblin-banner", 4, {17, 27})
@@ -285,38 +303,54 @@ if (GrandStrategy == false) then
 	unit = CreateUnit("unit-goblin-town-hall", 5, {53, 31})
 	unit = CreateUnit("unit-goblin-spearman", 5, {56, 32}) -- troll warrior
 	IncreaseUnitLevel(unit, 2)
+	SetUnitVariable(unit, "Active", false)
 	unit = CreateUnit("unit-goblin-spearman", 5, {38, 42}) -- troll
 	IncreaseUnitLevel(unit, 1)
+	SetUnitVariable(unit, "Active", false)
 	unit = CreateUnit("unit-goblin-spearman", 5, {42, 48}) -- orcish warrior
 	IncreaseUnitLevel(unit, 1)
+	SetUnitVariable(unit, "Active", false)
 	unit = CreateUnit("unit-goblin-spearman", 5, {40, 50}) -- orcish warrior
 	IncreaseUnitLevel(unit, 1)
+	SetUnitVariable(unit, "Active", false)
 	if (GameSettings.Difficulty == 3) then -- if difficulty is hard
 		unit = CreateUnit("unit-goblin-spearman", 5, {38, 42}) -- troll
 		IncreaseUnitLevel(unit, 1)
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-goblin-spearman", 5, {42, 48}) -- orcish warrior
 		IncreaseUnitLevel(unit, 1)
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-goblin-spearman", 5, {40, 50}) -- orcish warrior
 		IncreaseUnitLevel(unit, 1)
+		SetUnitVariable(unit, "Active", false)
 	elseif (GameSettings.Difficulty == 4) then -- if difficulty is brutal
 		unit = CreateUnit("unit-goblin-spearman", 5, {38, 42}) -- troll
 		IncreaseUnitLevel(unit, 1)
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-goblin-spearman", 5, {42, 48}) -- orcish warrior
 		IncreaseUnitLevel(unit, 1)
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-goblin-spearman", 5, {40, 50}) -- orcish warrior
 		IncreaseUnitLevel(unit, 1)
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-goblin-spearman", 5, {38, 42}) -- troll
 		IncreaseUnitLevel(unit, 1)
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-goblin-spearman", 5, {42, 48}) -- orcish warrior
 		IncreaseUnitLevel(unit, 1)
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-goblin-spearman", 5, {40, 50}) -- orcish warrior
 		IncreaseUnitLevel(unit, 1)
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-goblin-spearman", 5, {38, 42}) -- troll
 		IncreaseUnitLevel(unit, 1)
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-goblin-spearman", 5, {42, 48}) -- orcish warrior
 		IncreaseUnitLevel(unit, 1)
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-goblin-spearman", 5, {40, 50}) -- orcish warrior
 		IncreaseUnitLevel(unit, 1)
+		SetUnitVariable(unit, "Active", false)
 	end
 	unit = CreateUnit("unit-goblin-worker", 5, {56, 32})
 	unit = CreateUnit("unit-goblin-banner", 5, {47, 33})
@@ -396,38 +430,54 @@ elseif (GrandStrategyEventMap) then
 	unit = CreateUnit("unit-goblin-town-hall", 4, {11, 31})
 	unit = CreateUnit("unit-goblin-spearman", 4, {12, 32}) -- troll warrior
 	IncreaseUnitLevel(unit, 2)
+	SetUnitVariable(unit, "Active", false)
 	unit = CreateUnit("unit-goblin-spearman", 4, {34, 42}) -- troll
 	IncreaseUnitLevel(unit, 1)
+	SetUnitVariable(unit, "Active", false)
 	unit = CreateUnit("unit-goblin-spearman", 4, {30, 48}) -- orcish warrior
 	IncreaseUnitLevel(unit, 1)
+	SetUnitVariable(unit, "Active", false)
 	unit = CreateUnit("unit-goblin-spearman", 4, {32, 50}) -- orcish warrior
 	IncreaseUnitLevel(unit, 1)
+	SetUnitVariable(unit, "Active", false)
 	if (GameSettings.Difficulty == 3) then -- if difficulty is hard
 		unit = CreateUnit("unit-goblin-spearman", 4, {34, 42}) -- troll
 		IncreaseUnitLevel(unit, 1)
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-goblin-spearman", 4, {30, 48}) -- orcish warrior
 		IncreaseUnitLevel(unit, 1)
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-goblin-spearman", 4, {32, 50}) -- orcish warrior
 		IncreaseUnitLevel(unit, 1)
+		SetUnitVariable(unit, "Active", false)
 	elseif (GameSettings.Difficulty == 4) then -- if difficulty is brutal
 		unit = CreateUnit("unit-goblin-spearman", 4, {34, 42}) -- troll
 		IncreaseUnitLevel(unit, 1)
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-goblin-spearman", 4, {30, 48}) -- orcish warrior
 		IncreaseUnitLevel(unit, 1)
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-goblin-spearman", 4, {32, 50}) -- orcish warrior
 		IncreaseUnitLevel(unit, 1)
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-goblin-spearman", 4, {34, 42}) -- troll
 		IncreaseUnitLevel(unit, 1)
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-goblin-spearman", 4, {30, 48}) -- orcish warrior
 		IncreaseUnitLevel(unit, 1)
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-goblin-spearman", 4, {32, 50}) -- orcish warrior
 		IncreaseUnitLevel(unit, 1)
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-goblin-spearman", 4, {34, 42}) -- troll
 		IncreaseUnitLevel(unit, 1)
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-goblin-spearman", 4, {30, 48}) -- orcish warrior
 		IncreaseUnitLevel(unit, 1)
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-goblin-spearman", 4, {32, 50}) -- orcish warrior
 		IncreaseUnitLevel(unit, 1)
+		SetUnitVariable(unit, "Active", false)
 	end
 	unit = CreateUnit("unit-goblin-worker", 4, {12, 32})
 	unit = CreateUnit("unit-goblin-banner", 4, {17, 27})
@@ -438,38 +488,54 @@ elseif (GrandStrategyEventMap) then
 	unit = CreateUnit("unit-goblin-town-hall", 5, {53, 31})
 	unit = CreateUnit("unit-goblin-spearman", 5, {56, 32}) -- troll warrior
 	IncreaseUnitLevel(unit, 2)
+	SetUnitVariable(unit, "Active", false)
 	unit = CreateUnit("unit-goblin-spearman", 5, {38, 42}) -- troll
 	IncreaseUnitLevel(unit, 1)
+	SetUnitVariable(unit, "Active", false)
 	unit = CreateUnit("unit-goblin-spearman", 5, {42, 48}) -- orcish warrior
 	IncreaseUnitLevel(unit, 1)
+	SetUnitVariable(unit, "Active", false)
 	unit = CreateUnit("unit-goblin-spearman", 5, {40, 50}) -- orcish warrior
 	IncreaseUnitLevel(unit, 1)
+	SetUnitVariable(unit, "Active", false)
 	if (GameSettings.Difficulty == 3) then -- if difficulty is hard
 		unit = CreateUnit("unit-goblin-spearman", 5, {38, 42}) -- troll
 		IncreaseUnitLevel(unit, 1)
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-goblin-spearman", 5, {42, 48}) -- orcish warrior
 		IncreaseUnitLevel(unit, 1)
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-goblin-spearman", 5, {40, 50}) -- orcish warrior
 		IncreaseUnitLevel(unit, 1)
+		SetUnitVariable(unit, "Active", false)
 	elseif (GameSettings.Difficulty == 4) then -- if difficulty is brutal
 		unit = CreateUnit("unit-goblin-spearman", 5, {38, 42}) -- troll
 		IncreaseUnitLevel(unit, 1)
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-goblin-spearman", 5, {42, 48}) -- orcish warrior
 		IncreaseUnitLevel(unit, 1)
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-goblin-spearman", 5, {40, 50}) -- orcish warrior
 		IncreaseUnitLevel(unit, 1)
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-goblin-spearman", 5, {38, 42}) -- troll
 		IncreaseUnitLevel(unit, 1)
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-goblin-spearman", 5, {42, 48}) -- orcish warrior
 		IncreaseUnitLevel(unit, 1)
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-goblin-spearman", 5, {40, 50}) -- orcish warrior
 		IncreaseUnitLevel(unit, 1)
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-goblin-spearman", 5, {38, 42}) -- troll
 		IncreaseUnitLevel(unit, 1)
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-goblin-spearman", 5, {42, 48}) -- orcish warrior
 		IncreaseUnitLevel(unit, 1)
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-goblin-spearman", 5, {40, 50}) -- orcish warrior
 		IncreaseUnitLevel(unit, 1)
+		SetUnitVariable(unit, "Active", false)
 	end
 	unit = CreateUnit("unit-goblin-worker", 5, {56, 32})
 	unit = CreateUnit("unit-goblin-banner", 5, {47, 33})

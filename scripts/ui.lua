@@ -892,9 +892,10 @@ if not (ui_loaded_first_time) then
 				{ 	Margin = {1, 1},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				}, 
-				{ 	More = {"Costs", {Font = PopupFont}}, HighlightColor = "yellow",
+				{	Condition = {ButtonAction = "train-unit"},
+					More = {"Costs", {Font = PopupFont}}, HighlightColor = "yellow",
 				}, 
-				{ 	Margin = {1, 1},
+				{ 	Condition = {ButtonAction = "train-unit"}, Margin = {1, 1},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
 				{ 	Condition = {Mercenary = "false"}, HighlightColor = "yellow",

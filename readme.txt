@@ -227,6 +227,10 @@ https://github.com/Andrettin/Wyrmsun
 ############################################################
 
 -----------------------------------------------------------------------
+- 1.8.3
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
 - 1.8.2
 -----------------------------------------------------------------------
 
@@ -249,7 +253,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added a new icon for chests (icon graphics by Vladislav "iDreamRunner").
 
 * Upgrades
-- The Dvalic Runewriting's description now correctly shows its effect in the tech tree.
+- The Dvalic Runewriting's description now correctly shows its effects in the tech tree screen.
 
 -----------------------------------------------------------------------
 - 1.8.1

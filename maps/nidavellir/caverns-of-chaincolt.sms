@@ -170,9 +170,13 @@ if (GrandStrategy == false) then
 
 	-- Extra Bandits to make them not be easily defeatable at scenario begin
 	unit = CreateUnit("unit-dwarven-axefighter", 1, {11, 50})
+	SetUnitVariable(unit, "Active", false)
 	unit = CreateUnit("unit-dwarven-axefighter", 1, {11, 50})
+	SetUnitVariable(unit, "Active", false)
 	unit = CreateUnit("unit-dwarven-axefighter", 1, {11, 50})
+	SetUnitVariable(unit, "Active", false)
 	unit = CreateUnit("unit-dwarven-axefighter", 1, {11, 50})
+	SetUnitVariable(unit, "Active", false)
 elseif (GrandStrategyEventMap) then
 	SetPlayerData(0, "Resources", "gold", 0)
 	SetPlayerData(0, "Resources", "lumber", 0)
