@@ -477,6 +477,7 @@ Wildfire Games (http://www.wildfiregames.com/):
 /sounds/neutral/horse/horse_select1.wav
 /sounds/neutral/horse/horse_select2.wav
 /sounds/neutral/horse/horse_select3.wav
+/sounds/neutral/onager_shooting.wav
 
 Wolfgang Kohler:
 /sounds/buildings/lumbermill.wav

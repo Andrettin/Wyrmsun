@@ -206,7 +206,7 @@ DefineUnitType("unit-thrymgjol-shield", { Name = _("Thrymgjol Shield"),
 
 DefineUnitType("unit-boots", { Name = _("Boots"),
 	Parent = "unit-template-item",
-	Image = {"file", "dwarf/items/dwarven_boots.png", "size", {32, 32}},
+	Image = {"file", "neutral/items/boots.png", "size", {32, 32}},
 	Icon = "icon-dwarven-boots",
 	ItemClass = "boots",
 	Speed = 0
@@ -214,7 +214,7 @@ DefineUnitType("unit-boots", { Name = _("Boots"),
 
 DefineUnitType("unit-wool-shoes", { Name = _("Wool Shoes"),
 	Parent = "unit-template-item",
-	Image = {"file", "dwarf/items/dwarven_boots.png", "size", {32, 32}},
+	Image = {"file", "neutral/items/boots.png", "size", {32, 32}},
 	Icon = "icon-gnomish-boots",
 	ItemClass = "boots",
 	Speed = 0
@@ -222,7 +222,7 @@ DefineUnitType("unit-wool-shoes", { Name = _("Wool Shoes"),
 
 DefineUnitType("unit-furry-wool-shoes", { Name = _("Furry Wool Shoes"),
 	Parent = "unit-template-item",
-	Image = {"file", "dwarf/items/dwarven_boots.png", "size", {32, 32}},
+	Image = {"file", "neutral/items/boots.png", "size", {32, 32}},
 	Icon = "icon-gnomish-boots-fur",
 	ItemClass = "boots",
 	Speed = 0
@@ -237,7 +237,7 @@ DefineUnitType("unit-amulet", { Name = _("Amulet"),
 
 DefineUnitType("unit-ring", { Name = _("Ring"),
 	Parent = "unit-template-item",
-	Image = {"file", "neutral/items/ring.png", "size", {32, 32}},
+	Image = {"file", "missiles/catapult_sandstone_rock.png", "size", {32, 32}},
 	Icon = "icon-ring",
 	ItemClass = "ring"
 } )

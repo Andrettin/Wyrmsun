@@ -209,6 +209,7 @@ The Stratagus engine, as well as the code, artwork, sounds, music and story elem
 /sounds/neutral/horse/horse_select1.wav (licensed under the CC-BY-SA 3.0)
 /sounds/neutral/horse/horse_select2.wav (licensed under the CC-BY-SA 3.0)
 /sounds/neutral/horse/horse_select3.wav (licensed under the CC-BY-SA 3.0)
+/sounds/neutral/onager_shooting.wav (licensed under the CC-BY-SA 3.0)
 
 
 See the license.txt file for the text of the GPL 2.0. The contents of the CC-BY-SA 3.0 license can be found at: http://creativecommons.org/licenses/by-sa/3.0/
@@ -234,10 +235,14 @@ https://github.com/Andrettin/Wyrmsun
 - Weapons that have no effect now show "+0 Damage" in their tooltip.
 - Shields that have no effect now show "+0 Armor" in their tooltip.
 - Boots that have no effect now show "+0 Speed" in their tooltip.
+- New graphics for boots when they are laying on the floor (by Vladislav "iDreamRunner").
 
 * Quests
 - Increased starting goblin defense forces in the Gathering Materials quest to prevent the player easily rushing them.
 - Added melee troops to the starting Shorbear defense forces in the Hills of the Shorbear Clan quest to prevent the player from being able to destroy the Shorbear Hold with a single ballista.
+
+* Units
+- Added a new sound for when a siege engine fires (by Wildfire Games).
 
 -----------------------------------------------------------------------
 - 1.8.3

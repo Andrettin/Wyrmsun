@@ -1100,9 +1100,14 @@ TaShadan:
 /graphics/neutral/units/long_swordsman.png
 
 Vladislav "iDreamRunner":
+/graphics/missiles/catapult_sandstone_rock.png
+/graphics/missiles/flaming_arrow.png
+/graphics/missiles/flaming_dwarven_ballista_bolt.png
+/graphics/missiles/flaming_goblin_arrow.png
 /graphics/neutral/icons/amulet.png
 /graphics/neutral/icons/carrots.png
 /graphics/neutral/icons/cheese.png
 /graphics/neutral/icons/chest.png
 /graphics/neutral/icons/ring.png
 /graphics/neutral/items/amulet.png
+/graphics/neutral/items/boots.png

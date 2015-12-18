@@ -133,7 +133,7 @@ DefineAnimations("animations-goblin-war-machine", {
 		"frame 0", "move 2", "unbreakable end", "wait 1",
 	},	
 	Attack = {
-		"unbreakable begin", "frame 15", "attack", "wait 2",
+		"unbreakable begin", "frame 15", "attack", "sound catapult-attack", "wait 2",
 		"frame 10", "wait 41", "frame 15", "wait 6", "frame 15", "wait 100", "frame 0", "wait 50", "frame 0", "unbreakable end", "wait 1",
 	},
 	SpellCast = {

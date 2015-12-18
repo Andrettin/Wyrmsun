@@ -117,26 +117,30 @@ DefineAnimations("animations-dwarven-scout", {
 --
 
 DefineAnimations("animations-dwarven-ballista", {
-  Still = {"frame 0", "wait 4", "frame 0", "wait 1",},
-  Move = {"unbreakable begin","frame 0", "wait 1", "frame 5", "move 2", "wait 2",
-    "frame 0", "move 2", "wait 2", "frame 5", "move 2", "wait 2",
-    "frame 0", "move 2", "wait 2", "frame 5", "move 2", "wait 2",
-    "frame 0", "move 2", "wait 2", "frame 5", "move 2", "wait 2",
-    "frame 0", "move 2", "wait 2", "frame 5", "move 2", "wait 2",
-    "frame 0", "move 2", "wait 2", "frame 5", "move 2", "wait 2",
-    "frame 0", "move 2", "wait 2", "frame 5", "move 2", "wait 2",
-    "frame 0", "move 2", "wait 2", "frame 5", "move 2", "wait 2",
-    "frame 0", "move 2", "unbreakable end", "wait 1",},	
-  Attack = {"unbreakable begin",
-    "frame 10", "wait 25",
-    "frame 15", "attack", "wait 5", 
-    "frame 20", "wait 4",
-    "frame 15", "wait 6",
-    "frame 20", "wait 8",
-    "frame 15", "wait 10",
-    "frame 15", "wait 92",
-    "frame 0", "wait 49",
-    "frame 0", "unbreakable end", "wait 1",},
+	Still = {"frame 0", "wait 4", "frame 0", "wait 1",},
+	Move = {
+		"unbreakable begin","frame 0", "wait 1", "frame 5", "move 2", "wait 2",
+		"frame 0", "move 2", "wait 2", "frame 5", "move 2", "wait 2",
+		"frame 0", "move 2", "wait 2", "frame 5", "move 2", "wait 2",
+		"frame 0", "move 2", "wait 2", "frame 5", "move 2", "wait 2",
+		"frame 0", "move 2", "wait 2", "frame 5", "move 2", "wait 2",
+		"frame 0", "move 2", "wait 2", "frame 5", "move 2", "wait 2",
+		"frame 0", "move 2", "wait 2", "frame 5", "move 2", "wait 2",
+		"frame 0", "move 2", "wait 2", "frame 5", "move 2", "wait 2",
+		"frame 0", "move 2", "unbreakable end", "wait 1",
+	},	
+	Attack = {
+		"unbreakable begin",
+		"frame 10", "wait 25",
+		"frame 15", "attack", "sound catapult-attack", "wait 5", 
+		"frame 20", "wait 4",
+		"frame 15", "wait 6",
+		"frame 20", "wait 8",
+		"frame 15", "wait 10",
+		"frame 15", "wait 92",
+		"frame 0", "wait 49",
+		"frame 0", "unbreakable end", "wait 1",
+	}
 })
 
 --

@@ -419,7 +419,7 @@ placement_success = MakeSound("placement success", "ui/placement_success.wav")
 
 rescue = MakeSound("rescue", "misc/rescue.wav")
 
-    -- building selection sounds
+-- building selection sounds
 MakeSound("town-hall-selected", "buildings/sel_civ_center.wav")
 MakeSound("farm-selected", "buildings/sel_farmstead.wav")
 MakeSound("corral-selected", "buildings/sel_corral.wav")
@@ -586,7 +586,8 @@ SetSoundRange("throwing-axe", 32)
 SetSoundVolumePercent("throwing-axe", 75)
 MakeSound("throwing-axe-hit", "missiles/throwing_axe_hit.wav")
 SetSoundRange("throwing-axe-hit", 32)
-
+MakeSound("catapult-attack", "neutral/onager_shooting.wav")
+SetSoundRange("catapult-attack", 32)
 
 MakeSound("attack-miss",
 	{"missiles/miss-1.wav",

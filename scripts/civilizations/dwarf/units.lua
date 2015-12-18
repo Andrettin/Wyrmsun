@@ -566,7 +566,6 @@ DefineUnitType("unit-dwarven-ballista", { Name = _("Ballista"),
 	Missile = "missile-dwarven-ballista-bolt",
 	PierceDamage = true,
 	Sounds = {
-		"selected", "click",
 --		"acknowledge", "ballista-acknowledge",
 		"ready", "dwarven-ballista-ready",
 		"help", "basic-dwarf-voices-help",
