@@ -224,7 +224,7 @@ DefineButton( { Pos = 16, Level = 2, Icon = "icon-cancel",
 
 -- Purchasable Items ------------------------------------------------------
 
-DefineButton( { Pos = 4, Level = 0, Icon = "icon-red-potion",
+DefineButton( { Pos = 5, Level = 0, Icon = "icon-red-potion",
 	Action = "train-unit", Value = "unit-potion-of-healing",
 	Key = "h", Hint = _("Buy Potion of ~!Healing"), Popup = "popup-item",
 	ForUnit = {"unit-teuton-stronghold", "unit-dwarven-stronghold"}

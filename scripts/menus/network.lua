@@ -10,7 +10,8 @@
 --
 --      network.lua - Define the menu for network game.
 --
---      (c) Copyright 2005-2010 by François Beerten, Jimmy Salmon and Pali Rohár
+--      (c) Copyright 2005-2015 by François Beerten, Jimmy Salmon, Pali Rohár
+--		and Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by

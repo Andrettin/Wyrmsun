@@ -108,7 +108,7 @@ DefineUpgrade("upgrade-dwarven-sharp-throwing-axe", {
 	Parent = "upgrade-ranged-projectile-1",
 	Icon = "icon-dwarven-sharp-throwing-axe",
 	Civilization = "dwarf",
-	Description = _("As their craftsmanship progresses, dwarven artisans become capable of improving the basic throwing axe to have sharper blades.\n\nEffect: +1 Damage for Scouts and Gryphon Riders."),
+	Description = _("As their craftsmanship progresses, dwarven artisans become capable of improving the basic throwing axe to have sharper blades.\n\nEffect: +2 Damage for Scouts and Gryphon Riders."),
 	TechnologyPointCost = 1,
 	Weapon = true
 })
@@ -118,7 +118,7 @@ DefineUpgrade("upgrade-dwarven-bearded-throwing-axe", {
 	Parent = "upgrade-ranged-projectile-2",
 	Icon = "icon-dwarven-bearded-throwing-axe",
 	Civilization = "dwarf",
-	Description = _("The 'bearding' of throwing axes by extending the bottom of their blades is an innovation which makes them more deadly when thrown.\n\nEffect: +1 Damage for Scouts and Gryphon Riders."),
+	Description = _("The 'bearding' of throwing axes by extending the bottom of their blades is an innovation which makes them more deadly when thrown.\n\nEffect: +2 Damage for Scouts and Gryphon Riders."),
 	TechnologyPointCost = 1,
 	Weapon = true
 })
@@ -158,6 +158,13 @@ DefineUpgrade("upgrade-dwarven-runewriting", {
 	Description = _("The dwarven system of runewriting is said to have been invented by the dwarven scholar, Dvalin.\n\nEffect: +10% Research Speed, changes faction from tribe to polity."),
 	Background = _("In the Poetic Edda's ~<Hovamol~>, Dvalin is mentioned as the one who bestowed the knowledge of runes upon the dwarves."),
 	Icon = "icon-norse-runewriting",
+	TechnologyPointCost = 1
+})
+
+DefineUpgrade("upgrade-dwarven-alchemy", {
+	Parent = "upgrade-alchemy",
+	Civilization = "dwarf",
+	Description = _("Once writing had been developed, observations on the basic substances that form the world could be noted down and more easily passed on. This led to the appearance of the discipline of alchemy, mixing esoteric, scientific and philosophical postulations about the elements from which the material world is composed.\n\nEffect: +1 Fire Damage for Scouts and Gryphon Riders, +5 Fire Damage for Ballistas."),
 	TechnologyPointCost = 1
 })
 
@@ -286,6 +293,18 @@ DefineModifier("upgrade-dwarven-runewriting",
 --	{"apply-to", "unit-dwarven-town-hall"}, {"apply-to", "unit-dwarven-stronghold"}
 )
 
+DefineModifier("upgrade-dwarven-alchemy",
+	{"FireDamage", 1},
+	{"Points", 8},
+	{"apply-to", "unit-dwarven-scout"}, {"apply-to", "unit-dwarven-gryphon-rider"}
+)
+
+DefineModifier("upgrade-dwarven-alchemy",
+	{"FireDamage", 5},
+	{"Points", 5},
+	{"apply-to", "unit-dwarven-ballista"}
+)
+
 DefineModifier("upgrade-eikinskjaldi-clan-faction",
 	{"Armor", 2},
 	{"Points", 10},
@@ -377,6 +396,10 @@ DefineDependency("unit-dwarven-stronghold",
 
 DefineDependency("upgrade-dwarven-coinage",
 	{"unit-dwarven-smithy"}
+)
+
+DefineDependency("upgrade-dwarven-alchemy",
+	{"upgrade-dwarven-runewriting"}
 )
 
 DefineDependency("unit-dwarven-guard-tower",

@@ -169,6 +169,9 @@ function AiLandAttackDefensive()
 			if (GetAiUnitType("writing") ~= nil and CheckDependency(AiPlayer(), GetAiUnitType("writing"))) then
 				AiResearch(GetAiUnitType("writing")) -- if has a stronghold, research writing
 			end
+			if (GetAiUnitType("alchemy") ~= nil and CheckDependency(AiPlayer(), GetAiUnitType("alchemy"))) then
+				AiResearch(GetAiUnitType("alchemy")) -- if has a stronghold, research alchemy
+			end
 			AiSet(GetAiUnitType("town-hall"), 2) -- make an expansion
 			AiSet(GetAiUnitType("barracks"), 3)
 		end

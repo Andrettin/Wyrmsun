@@ -335,6 +335,15 @@ function RunTechTreeMenu(civilization_number)
 					if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("stronghold", civilization)) == false and GetTechnologyPointCost(civilization, GetCivilizationClassUnitType("stronghold", civilization)) > 0) then
 						tech_allowed = false
 					end
+				elseif (CUpgrade:Get(unitName).Class == "alchemy") then
+					tech_icon_x = 5
+					tech_icon_y = 5
+					if (
+						(GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("stronghold", civilization)) == false and GetTechnologyPointCost(civilization, GetCivilizationClassUnitType("stronghold", civilization)) > 0)
+						or GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("writing", civilization)) == false
+					) then
+						tech_allowed = false
+					end
 				else
 					tech_allowed = false
 				end
@@ -482,6 +491,9 @@ function GetTechnologyAllowsString(technology, civilization)
 			if (GetCivilizationClassUnitType("writing", civilization) ~= nil) then
 				table.insert(allowed_technologies, GetCivilizationClassUnitType("writing", civilization))
 			end
+			if (GetCivilizationClassUnitType("alchemy", civilization) ~= nil) then
+				table.insert(allowed_technologies, GetCivilizationClassUnitType("alchemy", civilization))
+			end
 		end
 	else
 		if (CUpgrade:Get(technology).Class == "melee-weapon-1") then
@@ -514,6 +526,10 @@ function GetTechnologyAllowsString(technology, civilization)
 			end
 			if (GetCivilizationClassUnitType("guard-tower", civilization) ~= nil) then
 				table.insert(allowed_technologies, GetCivilizationClassUnitType("guard-tower", civilization))
+			end
+		elseif (CUpgrade:Get(technology).Class == "writing") then
+			if (GetCivilizationClassUnitType("alchemy", civilization) ~= nil) then
+				table.insert(allowed_technologies, GetCivilizationClassUnitType("alchemy", civilization))
 			end
 		end
 	end

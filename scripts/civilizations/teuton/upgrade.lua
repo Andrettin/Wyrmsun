@@ -87,7 +87,7 @@ DefineUpgrade("upgrade-teuton-bodkin-arrow", {
 	Parent = "upgrade-ranged-projectile-2",
 	Icon = "icon-bodkin-arrow",
 	Civilization = "teuton",
-	Description = _("Bodkin arrows focus pressure on a single point, greatly enhancing their piercing capability.\n\nEffect: +1 Damage for Skutans."),
+	Description = _("Bodkin arrows focus pressure on a single point, greatly enhancing their piercing capability.\n\nEffect: +2 Damage for Skutans."),
 	TechnologyPointCost = 1,
 	Arrows = true
 })
@@ -117,6 +117,13 @@ DefineUpgrade("upgrade-teuton-writing", {
 	Parent = "upgrade-writing",
 	Civilization = "teuton",
 	Icon = "icon-norse-runewriting",
+	TechnologyPointCost = 1
+})
+
+DefineUpgrade("upgrade-teuton-alchemy", {
+	Parent = "upgrade-alchemy",
+	Civilization = "teuton",
+	Description = _("Once writing had been developed, observations on the basic substances that form the world could be noted down and more easily passed on. This led to the appearance of the discipline of alchemy, mixing esoteric, scientific and philosophical postulations about the elements from which the material world is composed.\n\nEffect: +1 Fire Damage for Skutans, +5 Fire Damage for Catapults."),
 	TechnologyPointCost = 1
 })
 
@@ -216,6 +223,18 @@ DefineModifier("upgrade-teuton-coinage",
 DefineModifier("upgrade-teuton-writing",
 	{"research-speed", 10}
 --	{"apply-to", "unit-teuton-town-hall"}, {"apply-to", "unit-teuton-stronghold"}
+)
+
+DefineModifier("upgrade-teuton-alchemy",
+	{"FireDamage", 1},
+	{"Points", 8},
+	{"apply-to", "unit-teuton-archer"}
+)
+
+DefineModifier("upgrade-teuton-alchemy",
+	{"FireDamage", 5},
+	{"Points", 5},
+	{"apply-to", "unit-teuton-catapult"}
 )
 
 DefineModifier("upgrade-teuton-civilization",
@@ -360,6 +379,10 @@ DefineDependency("unit-teuton-stronghold",
 
 DefineDependency("upgrade-teuton-coinage",
 	{"unit-teuton-smithy"}
+)
+
+DefineDependency("upgrade-teuton-alchemy",
+	{"upgrade-teuton-writing"}
 )
 
 DefineDependency("unit-teuton-stables",

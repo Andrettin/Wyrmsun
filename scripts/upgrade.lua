@@ -252,6 +252,15 @@ DefineUpgrade("upgrade-writing", {
 	GrandStrategyProductionEfficiencyModifier = {"research", 50}
 })
 
+DefineUpgrade("upgrade-alchemy", {
+	Name = _("Alchemy"),
+	Class = "alchemy",
+	Icon = "icon-cauldron",
+	Description = _("Once writing had been developed, observations on the basic substances that form the world could be noted down and more easily passed on. This led to the appearance of the discipline of alchemy, mixing esoteric, scientific and philosophical postulations about the elements from which the material world is composed."),
+	Costs = {"time", 250, "gold", 4000},
+	GrandStrategyCosts = {"time", 250, "gold", 4000, "research", 4000}
+})
+
 -- Load the different civilizations
 Load("scripts/civilizations/celt/upgrade.lua")
 Load("scripts/civilizations/dwarf/upgrade.lua")
@@ -329,8 +338,8 @@ function ApplyTechLevels()
 		"upgrade-goblin-masonry"
 	}
 	local civilized_upgrades = {
-		"upgrade-dwarven-coinage", 
-		"upgrade-teuton-coinage"
+		"upgrade-dwarven-coinage", "upgrade-dwarven-alchemy",
+		"upgrade-teuton-coinage", "upgrade-teuton-alchemy"
 	}
 	local bronze_upgrades = {
 		"upgrade-dwarven-broad-axe", "upgrade-dwarven-shield-1", "upgrade-dwarven-sharp-throwing-axe",

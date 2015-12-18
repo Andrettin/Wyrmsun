@@ -445,7 +445,7 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-sharp-throwing-axe",
 	Action = "research", Value = "upgrade-dwarven-sharp-throwing-axe",
 	Allowed = "check-single-research",
 	Key = "t", Hint = _("Research Sharp ~!Throwing Axe"), Popup = "popup-research",
-	Description = _("+1 Damage for Scouts and Gryphon Riders."),
+	Description = _("+2 Damage for Scouts and Gryphon Riders."),
 	ForUnit = {"unit-dwarven-lumber-mill"}
 } )
 
@@ -504,6 +504,14 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-norse-runewriting",
 	Allowed = "check-single-research",
 	Description = _("+10% Research Speed, changes faction from tribe to polity."),
 	Key = "r", Hint = _("Research Dvalic ~!Runewriting"), Popup = "popup-research",
+	ForUnit = {"unit-dwarven-stronghold"}
+} )
+
+DefineButton( { Pos = 4, Level = 0, Icon = "icon-cauldron",
+	Action = "research", Value = "upgrade-dwarven-alchemy",
+	Allowed = "check-single-research",
+	Description = _("+1 Fire Damage for Scouts and Gryphon Riders, +5 Fire Damage for Ballistas."),
+	Key = "a", Hint = _("Research ~!Alchemy"), Popup = "popup-research",
 	ForUnit = {"unit-dwarven-stronghold"}
 } )
 

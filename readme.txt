@@ -240,9 +240,15 @@ https://github.com/Andrettin/Wyrmsun
 * Quests
 - Increased starting goblin defense forces in the Gathering Materials quest to prevent the player easily rushing them.
 - Added melee troops to the starting Shorbear defense forces in the Hills of the Shorbear Clan quest to prevent the player from being able to destroy the Shorbear Hold with a single ballista.
+- The Caverns of Flame quest (dwarf) now grants 2 technology points instead of 1.
+- The Razing of Opitergium quest (teuton) now grants 3 technology points instead of 2.
 
 * Units
 - Added a new sound for when a siege engine fires (by Wildfire Games).
+
+* Upgrades
+- Added Alchemy upgrade for the Dwarves and the Teutons (ranged and siege units deal fire damage, requires Writing) (icon by Vladislav "iDreamRunner").
+- Updated Throwing Axe and Arrow upgrade tooltips to represent that they increase damage by 2 rather than 1.
 
 -----------------------------------------------------------------------
 - 1.8.3
