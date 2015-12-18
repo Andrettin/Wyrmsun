@@ -84,8 +84,8 @@ DefineMissileType("missile-catapult-sandstone-rock", {
 	ImpactMissile = "missile-impact", SplashFactor = 4
 })
   
-DefineMissileType("missile-catapult-flaming-rock", {
-	File = "missiles/catapult_flaming_rock.png", Size = {32, 32}, Frames = 15, NumDirections = 9,
+DefineMissileType("missile-flaming-catapult-rock", {
+	File = "missiles/flaming_catapult_rock.png", Size = {32, 32}, Frames = 15, NumDirections = 9,
 	ImpactSound = "explosion",
 	DrawLevel = 44, Class = "missile-class-point-to-point-cycle-once", Sleep = 1, Speed = 8, Range = 2,
 	ImpactMissile = "missile-impact", SplashFactor = 4

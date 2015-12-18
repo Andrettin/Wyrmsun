@@ -471,7 +471,6 @@ DefineUnitType("unit-germanic-archer", { Name = _("Skutan"),
 		{"layer", "backpack", "file", "human/units/quiver.png"}
 	},
 	Animations = "animations-goblin-archer", Icon = "icon-germanic-archer",
-	Missile = "missile-arrow",
 	Corpse = "unit-human-dead-body",
 	TechnologyPointCost = 1,
 	DaySightRangeBonus = 1,

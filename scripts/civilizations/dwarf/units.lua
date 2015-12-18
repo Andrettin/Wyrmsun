@@ -564,6 +564,7 @@ DefineUnitType("unit-dwarven-ballista", { Name = _("Ballista"),
 	Image = {"file", "dwarf/units/dwarven_ballista.png", "size", {64, 64}},
 	Animations = "animations-dwarven-ballista", Icon = "icon-dwarven-ballista",
 	Missile = "missile-dwarven-ballista-bolt",
+	FireMissile = "missile-flaming-dwarven-ballista-bolt",
 	PierceDamage = true,
 	Sounds = {
 --		"acknowledge", "ballista-acknowledge",

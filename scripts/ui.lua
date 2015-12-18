@@ -536,7 +536,7 @@ DefinePanelContents(
   Contents = {
 	{ Pos = {9, 103}, More = {"Text", "Processing"} },
 	{ Pos = {9, 116}, More = { "Text", {Text = "Gold:"}}},
-	{ Pos = {76, 116}, More = { "Text", HighlightColor = "yellow", {Text = Concat("100", 
+	{ Pos = {76, 116}, HighlightColor = "yellow", More = { "Text", {Text = Concat("100", 
 										If(GreaterThan(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "gold"), 100),
 										InverseVideo(Concat("+", String(Sub(PlayerData(ActiveUnitVar("Player", "Value"), "Incomes", "gold"), 100)))),
 										""))}}

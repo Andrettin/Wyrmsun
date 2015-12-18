@@ -237,6 +237,9 @@ https://github.com/Andrettin/Wyrmsun
 - Boots that have no effect now show "+0 Speed" in their tooltip.
 - New graphics for boots when they are laying on the floor (by Vladislav "iDreamRunner").
 
+* Miscellaneous
+- Fixed the color of the gold processing bonus text in the interface.
+
 * Quests
 - Increased starting goblin defense forces in the Gathering Materials quest to prevent the player easily rushing them.
 - Added melee troops to the starting Shorbear defense forces in the Hills of the Shorbear Clan quest to prevent the player from being able to destroy the Shorbear Hold with a single ballista.
@@ -245,6 +248,8 @@ https://github.com/Andrettin/Wyrmsun
 
 * Units
 - Added a new sound for when a siege engine fires (by Wildfire Games).
+- The graphics for the missile of the Teuton Catapult and the Goblin War Machine now change depending on whether they cause fire damage or not (non-flaming catapult rock missile graphics by Vladislav "iDreamRunner").
+- Germanic Skutans, Goblin Archers and Dwarven Ballistas now use flaming missile graphics if they cause fire damage (graphics modification by Vladislav "iDreamRunner").
 
 * Upgrades
 - Added Alchemy upgrade for the Dwarves and the Teutons (ranged and siege units deal fire damage, requires Writing) (icon by Vladislav "iDreamRunner").
