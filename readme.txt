@@ -234,6 +234,10 @@ https://github.com/Andrettin/Wyrmsun
 - Improved resource-gathering AI.
 - Fixed some AI issues for certain quests.
 
+* Quests
+- Fixed issue which caused silver and copper to sometimes be generated instead of gold for the Gathering Materials quest.
+- Fixed issue which gave a small random chance for the Shinsplitter gold mine to not be created in the proper position in the Hills of the Shorbear Clan quest.
+
 -----------------------------------------------------------------------
 - 1.8.2
 -----------------------------------------------------------------------

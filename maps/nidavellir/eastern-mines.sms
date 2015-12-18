@@ -157,15 +157,15 @@ else
 end
 
 if (CurrentQuest == "The Treasures of Svarinshaug") then
-	CreateGoldMines(1, 15000, 0, Map.Info.MapWidth / 2, 0, Map.Info.MapHeight / 2, false)
-	CreateGoldMines(1, 15000, 0, Map.Info.MapWidth / 2, Map.Info.MapHeight / 2, Map.Info.MapHeight - 3, false)
-	CreateGoldMines(1, 5000, Map.Info.MapWidth / 2, Map.Info.MapWidth - 3, Map.Info.MapHeight / 2, Map.Info.MapHeight - 3, false) -- the starting gold mine in the Treasures of Svarinshaug quest is much smaller
-	CreateGoldMines(1, 15000, Map.Info.MapWidth / 2, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight / 2, false)
+	CreateGoldMines(1, 15000, 0, Map.Info.MapWidth / 2, 0, Map.Info.MapHeight / 2, false, true)
+	CreateGoldMines(1, 15000, 0, Map.Info.MapWidth / 2, Map.Info.MapHeight / 2, Map.Info.MapHeight - 3, false, true)
+	CreateGoldMines(1, 5000, Map.Info.MapWidth / 2, Map.Info.MapWidth - 3, Map.Info.MapHeight / 2, Map.Info.MapHeight - 3, false, true) -- the starting gold mine in the Treasures of Svarinshaug quest is much smaller
+	CreateGoldMines(1, 15000, Map.Info.MapWidth / 2, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight / 2, false, true)
 else
-	CreateGoldMines(1, 50000, 0, Map.Info.MapWidth / 2, 0, Map.Info.MapHeight / 2, false)
-	CreateGoldMines(1, 50000, 0, Map.Info.MapWidth / 2, Map.Info.MapHeight / 2, Map.Info.MapHeight - 3, false)
-	CreateGoldMines(1, 50000, Map.Info.MapWidth / 2, Map.Info.MapWidth - 3, Map.Info.MapHeight / 2, Map.Info.MapHeight - 3, false)
-	CreateGoldMines(1, 50000, Map.Info.MapWidth / 2, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight / 2, false)
+	CreateGoldMines(1, 50000, 0, Map.Info.MapWidth / 2, 0, Map.Info.MapHeight / 2, false, true)
+	CreateGoldMines(1, 50000, 0, Map.Info.MapWidth / 2, Map.Info.MapHeight / 2, Map.Info.MapHeight - 3, false, true)
+	CreateGoldMines(1, 50000, Map.Info.MapWidth / 2, Map.Info.MapWidth - 3, Map.Info.MapHeight / 2, Map.Info.MapHeight - 3, false, true)
+	CreateGoldMines(1, 50000, Map.Info.MapWidth / 2, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight / 2, false, true)
 end
 
 -- create a couple of gold rocks on top of the gold deposits

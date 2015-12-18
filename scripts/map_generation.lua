@@ -1158,7 +1158,7 @@ function CreateGoldRocks(gold_mine_number, min_x, max_x, min_y, max_y, symmetric
 	end
 end
 
-function CreateGoldMines(gold_mine_number, gold_quantity, min_x, max_x, min_y, max_y, symmetric)
+function CreateGoldMines(gold_mine_number, gold_quantity, min_x, max_x, min_y, max_y, symmetric, no_convertibles)
 	local Count = 0
 	-- create gold mines
 	Count = gold_mine_number
@@ -1167,7 +1167,7 @@ function CreateGoldMines(gold_mine_number, gold_quantity, min_x, max_x, min_y, m
 		local gold_mine_spawn_point = FindAppropriateGoldMineSpawnPoint(min_x, max_x, min_y, max_y, symmetric)
 		local RandomNumber = SyncRand(3)
 		local deposit_type
-		if (RandomNumber == 0) then
+		if (RandomNumber == 0 or no_convertibles) then
 			deposit_type = "unit-gold-deposit"
 		elseif (RandomNumber == 1) then
 			deposit_type = "unit-silver-deposit"
