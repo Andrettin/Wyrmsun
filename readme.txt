@@ -227,6 +227,19 @@ https://github.com/Andrettin/Wyrmsun
 ############################################################
 
 -----------------------------------------------------------------------
+- 1.8.4
+-----------------------------------------------------------------------
+
+* Items
+- Weapons that have no effect now show "+0 Damage" in their tooltip.
+- Shields that have no effect now show "+0 Armor" in their tooltip.
+- Boots that have no effect now show "+0 Speed" in their tooltip.
+
+* Quests
+- Increased starting goblin defense forces in the Gathering Materials quest to prevent the player easily rushing them.
+- Added melee troops to the starting Shorbear defense forces in the Hills of the Shorbear Clan quest to prevent the player from being able to destroy the Shorbear Hold with a single ballista.
+
+-----------------------------------------------------------------------
 - 1.8.3
 -----------------------------------------------------------------------
 

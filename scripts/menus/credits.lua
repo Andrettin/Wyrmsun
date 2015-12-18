@@ -49,6 +49,7 @@ function RunShowCreditsMenu()
 	"  Chris Beck (iceiceice)",
 	"  DinkyDyeAussie",
 	"  Dmitry Marakasov",
+	"  marcelofg55",
 	"  Spfnym",
 	"  Szunti",
 	"  Martin Renold",

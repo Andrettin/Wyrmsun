@@ -85,12 +85,109 @@ if (LoadedGame == false) then
 	end
 	SetUnitVariable(unit, "Active", false)
 	
+	-- extra units for defense
+	if (GameSettings.Difficulty >= 2) then -- if difficulty is normal or higher
+		unit = CreateUnit("unit-goblin-spearman", 1, {59, 53})
+		SetUnitVariable(unit, "Active", false)
+		unit = CreateUnit("unit-goblin-spearman", 1, {59, 53})
+		SetUnitVariable(unit, "Active", false)
+		unit = CreateUnit("unit-goblin-spearman", 1, {59, 53})
+		SetUnitVariable(unit, "Active", false)
+		unit = CreateUnit("unit-goblin-archer", 1, {59, 53})
+		SetUnitVariable(unit, "Active", false)
+		unit = CreateUnit("unit-goblin-archer", 1, {59, 53})
+		SetUnitVariable(unit, "Active", false)
+	end
+	if (GameSettings.Difficulty >= 3) then -- if difficulty is hard or higher
+		unit = CreateUnit("unit-goblin-spearman", 1, {59, 53})
+		SetUnitVariable(unit, "Active", false)
+		unit = CreateUnit("unit-goblin-spearman", 1, {59, 53})
+		SetUnitVariable(unit, "Active", false)
+		unit = CreateUnit("unit-goblin-spearman", 1, {59, 53})
+		SetUnitVariable(unit, "Active", false)
+		unit = CreateUnit("unit-goblin-archer", 1, {59, 53})
+		SetUnitVariable(unit, "Active", false)
+		unit = CreateUnit("unit-goblin-archer", 1, {59, 53})
+		SetUnitVariable(unit, "Active", false)
+	end
+	if (GameSettings.Difficulty == 4) then -- if difficulty is brutal
+		unit = CreateUnit("unit-goblin-spearman", 1, {59, 53})
+		SetUnitVariable(unit, "Active", false)
+		unit = CreateUnit("unit-goblin-spearman", 1, {59, 53})
+		SetUnitVariable(unit, "Active", false)
+		unit = CreateUnit("unit-goblin-spearman", 1, {59, 53})
+		SetUnitVariable(unit, "Active", false)
+		unit = CreateUnit("unit-goblin-archer", 1, {59, 53})
+		SetUnitVariable(unit, "Active", false)
+		unit = CreateUnit("unit-goblin-archer", 1, {59, 53})
+		SetUnitVariable(unit, "Active", false)
+		unit = CreateUnit("unit-goblin-spearman", 1, {59, 53})
+		SetUnitVariable(unit, "Active", false)
+		unit = CreateUnit("unit-goblin-spearman", 1, {59, 53})
+		SetUnitVariable(unit, "Active", false)
+		unit = CreateUnit("unit-goblin-spearman", 1, {59, 53})
+		SetUnitVariable(unit, "Active", false)
+		unit = CreateUnit("unit-goblin-archer", 1, {59, 53})
+		SetUnitVariable(unit, "Active", false)
+		unit = CreateUnit("unit-goblin-archer", 1, {59, 53})
+		SetUnitVariable(unit, "Active", false)
+	end
+	
 	unit = CreateUnit("unit-goblin-spearman", 2, {55, 29})
 	IncreaseUnitLevel(unit, 1)
 	if (GameSettings.Difficulty == 4) then -- if difficulty is brutal
 		IncreaseUnitLevel(unit, 1)
 	end
 	SetUnitVariable(unit, "Active", false)
+	
+	-- extra units for defense
+	if (GameSettings.Difficulty >= 2) then -- if difficulty is normal or higher
+		unit = CreateUnit("unit-goblin-spearman", 2, {55, 29})
+		SetUnitVariable(unit, "Active", false)
+		unit = CreateUnit("unit-goblin-spearman", 2, {55, 29})
+		SetUnitVariable(unit, "Active", false)
+		unit = CreateUnit("unit-goblin-spearman", 2, {55, 29})
+		SetUnitVariable(unit, "Active", false)
+		unit = CreateUnit("unit-goblin-archer", 2, {55, 29})
+		SetUnitVariable(unit, "Active", false)
+		unit = CreateUnit("unit-goblin-archer", 2, {55, 29})
+		SetUnitVariable(unit, "Active", false)
+	end
+	if (GameSettings.Difficulty >= 3) then -- if difficulty is hard or higher
+		unit = CreateUnit("unit-goblin-spearman", 2, {55, 29})
+		SetUnitVariable(unit, "Active", false)
+		unit = CreateUnit("unit-goblin-spearman", 2, {55, 29})
+		SetUnitVariable(unit, "Active", false)
+		unit = CreateUnit("unit-goblin-spearman", 2, {55, 29})
+		SetUnitVariable(unit, "Active", false)
+		unit = CreateUnit("unit-goblin-archer", 2, {55, 29})
+		SetUnitVariable(unit, "Active", false)
+		unit = CreateUnit("unit-goblin-archer", 2, {55, 29})
+		SetUnitVariable(unit, "Active", false)
+	end
+	if (GameSettings.Difficulty == 4) then -- if difficulty is brutal
+		unit = CreateUnit("unit-goblin-spearman", 2, {55, 29})
+		SetUnitVariable(unit, "Active", false)
+		unit = CreateUnit("unit-goblin-spearman", 2, {55, 29})
+		SetUnitVariable(unit, "Active", false)
+		unit = CreateUnit("unit-goblin-spearman", 2, {55, 29})
+		SetUnitVariable(unit, "Active", false)
+		unit = CreateUnit("unit-goblin-archer", 2, {55, 29})
+		SetUnitVariable(unit, "Active", false)
+		unit = CreateUnit("unit-goblin-archer", 2, {55, 29})
+		SetUnitVariable(unit, "Active", false)
+		unit = CreateUnit("unit-goblin-spearman", 2, {55, 29})
+		SetUnitVariable(unit, "Active", false)
+		unit = CreateUnit("unit-goblin-spearman", 2, {55, 29})
+		SetUnitVariable(unit, "Active", false)
+		unit = CreateUnit("unit-goblin-spearman", 2, {55, 29})
+		SetUnitVariable(unit, "Active", false)
+		unit = CreateUnit("unit-goblin-archer", 2, {55, 29})
+		SetUnitVariable(unit, "Active", false)
+		unit = CreateUnit("unit-goblin-archer", 2, {55, 29})
+		SetUnitVariable(unit, "Active", false)
+	end
+	
 	
 	unit = CreateUnit("unit-goblin-spearman", 3, {35, 17})
 	IncreaseUnitLevel(unit, 1)
@@ -99,6 +196,54 @@ if (LoadedGame == false) then
 	end
 	SetUnitVariable(unit, "Active", false)
 		
+	-- extra units for defense
+	if (GameSettings.Difficulty >= 2) then -- if difficulty is normal or higher
+		unit = CreateUnit("unit-goblin-spearman", 3, {35, 17})
+		SetUnitVariable(unit, "Active", false)
+		unit = CreateUnit("unit-goblin-spearman", 3, {35, 17})
+		SetUnitVariable(unit, "Active", false)
+		unit = CreateUnit("unit-goblin-spearman", 3, {35, 17})
+		SetUnitVariable(unit, "Active", false)
+		unit = CreateUnit("unit-goblin-archer", 3, {35, 17})
+		SetUnitVariable(unit, "Active", false)
+		unit = CreateUnit("unit-goblin-archer", 3, {35, 17})
+		SetUnitVariable(unit, "Active", false)
+	end
+	if (GameSettings.Difficulty >= 3) then -- if difficulty is hard or higher
+		unit = CreateUnit("unit-goblin-spearman", 3, {35, 17})
+		SetUnitVariable(unit, "Active", false)
+		unit = CreateUnit("unit-goblin-spearman", 3, {35, 17})
+		SetUnitVariable(unit, "Active", false)
+		unit = CreateUnit("unit-goblin-spearman", 3, {35, 17})
+		SetUnitVariable(unit, "Active", false)
+		unit = CreateUnit("unit-goblin-archer", 3, {35, 17})
+		SetUnitVariable(unit, "Active", false)
+		unit = CreateUnit("unit-goblin-archer", 3, {35, 17})
+		SetUnitVariable(unit, "Active", false)
+	end
+	if (GameSettings.Difficulty == 4) then -- if difficulty is brutal
+		unit = CreateUnit("unit-goblin-spearman", 3, {35, 17})
+		SetUnitVariable(unit, "Active", false)
+		unit = CreateUnit("unit-goblin-spearman", 3, {35, 17})
+		SetUnitVariable(unit, "Active", false)
+		unit = CreateUnit("unit-goblin-spearman", 3, {35, 17})
+		SetUnitVariable(unit, "Active", false)
+		unit = CreateUnit("unit-goblin-archer", 3, {35, 17})
+		SetUnitVariable(unit, "Active", false)
+		unit = CreateUnit("unit-goblin-archer", 3, {35, 17})
+		SetUnitVariable(unit, "Active", false)
+		unit = CreateUnit("unit-goblin-spearman", 3, {35, 17})
+		SetUnitVariable(unit, "Active", false)
+		unit = CreateUnit("unit-goblin-spearman", 3, {35, 17})
+		SetUnitVariable(unit, "Active", false)
+		unit = CreateUnit("unit-goblin-spearman", 3, {35, 17})
+		SetUnitVariable(unit, "Active", false)
+		unit = CreateUnit("unit-goblin-archer", 3, {35, 17})
+		SetUnitVariable(unit, "Active", false)
+		unit = CreateUnit("unit-goblin-archer", 3, {35, 17})
+		SetUnitVariable(unit, "Active", false)
+	end
+	
 	CreateCoalMines(1, 12500, Map.Info.MapWidth / 2, Map.Info.MapWidth - 3, Map.Info.MapHeight / 2, Map.Info.MapHeight - 3, false)
 	CreateCoalMines(1, 12500, 0, Map.Info.MapWidth / 2, 0, Map.Info.MapHeight / 2, false)
 end
