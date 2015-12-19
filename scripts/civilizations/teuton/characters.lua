@@ -44,7 +44,7 @@ DefineCharacter("Marbod", {
 	Civilization = "teuton",
 	Faction = "Marcomanni Tribe",
 	Trait = "upgrade-keen",
-	Variation = "blond-hair",
+	HairVariation = "blond-hair",
 	Description = _("A young chieftain of the Marcomanni, Marbod aspires to forge a realm for his tribe capable of withstanding the test of time."),
 	Icon = "icon-marbod",
 	ProvinceOfOrigin = "Brandenburg",

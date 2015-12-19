@@ -36,7 +36,7 @@ DefineCharacter("Modsognir", { -- one of the earliest dwarven leaders; in Norse 
 	Description = _("The leader of one of the first dwarven tribes, Modsognir is a mighty warrior."),
 	Background = _("In Norse mythology, Modsognir appears in the ~<Voluspo~> as the first and mightiest of the dwarves."),
 	Icon = "icon-modsognir",
-	Variation = "brown-hair",
+	HairVariation = "brown-hair",
 	Trait = "upgrade-mighty",
 	ProvinceOfOrigin = "Svarinshaug",
 	Year = -3000,
@@ -54,7 +54,7 @@ DefineCharacter("Durin", { -- deputy of Modsognir
 	Description = _("Durin is a valiant dwarven warrior and loyal vassal of chieftain Modsognir."),
 	Background = _("In Norse mythology, Durin appears in the ~<Voluspo~> as one of the first dwarves."),
 	Icon = "icon-durin",
-	Variation = "brown-hair",
+	HairVariation = "brown-hair",
 	Trait = "upgrade-dextrous",
 	ProvinceOfOrigin = "Svarinshaug",
 	Year = -3000,
@@ -94,7 +94,7 @@ DefineCharacter("Thursagan", {
 	Background = "~<The Sceptre of Fire~> poem about the crafting of that artifact mentions Thursagan (as \"a runesmith\") as the maker of the scepter.",
 	Trait = "upgrade-strong",
 	Icon = "icon-thursagan",
-	Variation = "gray-hair",
+	HairVariation = "gray-hair",
 	ProvinceOfOrigin = "Caverns of Chaincolt",
 	Year = -1,
 	DeathYear = 40 + 10, -- died in 40 AD of a violent death, but was already rather old; +10 years
@@ -118,7 +118,7 @@ DefineCharacter("Baglur", {
 --	Quote = _("\"Argh! I'm a retired warrior... it looks like I'll ha' to come out and help ye, else we'll be overrun by these damn raiders...\" - Baglur"), -- repeats information already given
 	Icon = "icon-baglur",
 	Trait = "upgrade-resilient",
-	Variation = "gray-hair",
+	HairVariation = "gray-hair",
 	ProvinceOfOrigin = "Caverns of Chaincolt",
 	Year = -1,
 	DeathYear = 40 + 10, -- died in 40 AD of a violent death, but was already rather old; +10 years
@@ -135,7 +135,7 @@ DefineCharacter("Durstorn", {
 	Description = _("Durstorn is the chief of the Norlund Clan. Despite being greedy and unpleasant to be around, he makes a passable leader. When under pressure, however, he tends to become hasty and crass, impoverishing his capability to make good decisions."),
 	Icon = "icon-durstorn",
 	Trait = "upgrade-strong",
-	Variation = "brown-hair",
+	HairVariation = "brown-hair",
 	ProvinceOfOrigin = "Caverns of Chaincolt",
 	Year = -1,
 	DeathYear = 35 + 15, -- died in 35 AD of a violent death, but was already somewhat old; +15 years
@@ -164,7 +164,7 @@ DefineCharacter("Rugnur", {
 	Icon = "icon-rugnur",
 	HeroicIcon = "icon-rugnur-older",
 	Trait = "upgrade-keen", -- not the best fit for this character, should be replaced with something else perhaps?
-	Variation = "brown-hair",
+	HairVariation = "brown-hair",
 	ProvinceOfOrigin = "Caverns of Chaincolt",
 	Year = 25,
 	DeathYear = 40 + 30, -- died in 40 AD of a violent death, and wasn't old; +30 years

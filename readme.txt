@@ -245,6 +245,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added melee troops to the starting Shorbear defense forces in the Hills of the Shorbear Clan quest to prevent the player from being able to destroy the Shorbear Hold with a single ballista.
 - The Caverns of Flame quest (dwarf) now grants 2 technology points instead of 1.
 - The Razing of Opitergium quest (teuton) now grants 3 technology points instead of 2.
+- Fixed a crash cause in the Hills of the Shorbear Clan quest.
 
 * Units
 - Added a new sound for when a siege engine fires (by Wildfire Games).

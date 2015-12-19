@@ -237,7 +237,7 @@ DefineUnitType("unit-amulet", { Name = _("Amulet"),
 
 DefineUnitType("unit-ring", { Name = _("Ring"),
 	Parent = "unit-template-item",
-	Image = {"file", "missiles/catapult_sandstone_rock.png", "size", {32, 32}},
+	Image = {"file", "neutral/items/ring.png", "size", {32, 32}},
 	Icon = "icon-ring",
 	ItemClass = "ring"
 } )

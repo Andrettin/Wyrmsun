@@ -62,7 +62,7 @@ DefineCharacter("Trór", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p
 	Civilization = "germanic",
 	ProvinceOfOrigin = "Astrakhan",
 	Trait = "upgrade-mighty", -- described as goodly to look upon; very strong
-	Variation = "blond-hair", -- his hair was fairer than gold
+	HairVariation = "blond-hair", -- his hair was fairer than gold
 	Year = -3000, -- born
 	DeathYear = -3000 + 12 + 10, -- 30 years is the default lifetime of a hero after having risen to prominence, but here we use 10 to make the genealogy fit from 3000 to 2800 BC, by when Scandinavia was settled by Indo-Europeans (in the Ynglinga Saga, with an euhemerized Odin leading the Asa there)
 	Mother = "Tróán"

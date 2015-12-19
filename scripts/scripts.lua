@@ -27,17 +27,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
--- Set the unit type graphics to the correct tileset
-table.foreach(UnitTypeFiles,
-	function(k, v)
-		if (v[wyrmsun.tileset] ~= nil) then
-			DefineUnitType(k, {Image = {"file", v[wyrmsun.tileset]}})
-		else
-			DefineUnitType(k, {Image = {"file", v["conifer_forest_summer"]}}) -- use the conifer forest as default if the image is not defined for this tileset
-		end
-	end
-)
-
 -- Icon and construction graphics also depend on the tileset
 
 Load("scripts/icons.lua")

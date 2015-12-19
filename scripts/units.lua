@@ -3513,10 +3513,6 @@ DefineUnitType("unit-miasma", { Name = _("Miasma"),
 	}
 } )
 
---UnitTypeFiles["unit-destroyed-1x1-place"] = {
---	swamp = "tilesets/swamp/neutral/buildings/destroyed_site.png"
---}
-
 --DefineUnitType("unit-destroyed-1x1-place", { Name = "Destroyed 1x1 Place",
 --	Image = {"size", {32, 32}},
 --	Animations = "animations-destroyed-place", Icon = "icon-dwarven-miner",
@@ -3532,59 +3528,36 @@ DefineUnitType("unit-miasma", { Name = _("Miasma"),
 --	Vanishes = true,
 --	Sounds = {} } )
 
-
-UnitTypeFiles["unit-destroyed-2x2-place"] = {
-	cave = "tilesets/swamp/neutral/buildings/destroyed_site.png",
-	conifer_forest_autumn = "tilesets/swamp/neutral/buildings/destroyed_site.png",
-	conifer_forest_summer = "tilesets/swamp/neutral/buildings/destroyed_site.png",
-	dungeon = "tilesets/swamp/neutral/buildings/destroyed_site.png",
-	fairlimbed_forest = "tilesets/swamp/neutral/buildings/destroyed_site.png",
-	swamp = "tilesets/swamp/neutral/buildings/destroyed_site.png",
-}
-
 DefineUnitType("unit-destroyed-2x2-place", { Name = "Destroyed 2x2 Place",
-	Image = {"size", {64, 64}},
+	Image = {"file", "tilesets/swamp/neutral/buildings/destroyed_site.png", "size", {64, 64}},
 	Animations = "animations-destroyed-place", Icon = "icon-dwarven-miner",
 	Speed = 0,
 	HitPoints = 255,
 	DrawLevel = 10,
 	TileSize = {2, 2}, BoxSize = {63, 63},
-	SightRange = 0,
+	SightRange = 1,
 	BasicDamage = 0, Missile = "missile-none",
 	Priority = 0,
 	Type = "land",
 	Building = true, VisibleUnderFog = true,
 	Vanishes = true,
-	Sounds = {} } )
-
-
-UnitTypeFiles["unit-destroyed-3x3-place"] = {
-	cave = "tilesets/swamp/neutral/buildings/destroyed_site.png",
-	conifer_forest_autumn = "tilesets/swamp/neutral/buildings/destroyed_site.png",
-	conifer_forest_summer = "tilesets/swamp/neutral/buildings/destroyed_site.png",
-	dungeon = "tilesets/swamp/neutral/buildings/destroyed_site.png",
-	fairlimbed_forest = "tilesets/swamp/neutral/buildings/destroyed_site.png",
-	swamp = "tilesets/swamp/neutral/buildings/destroyed_site.png"
-}
+	Sounds = {}
+} )
 
 DefineUnitType("unit-destroyed-3x3-place", { Name = "Destroyed 3x3 Place",
-	Image = {"size", {64, 64}},
+	Image = {"file", "tilesets/swamp/neutral/buildings/destroyed_site.png", "size", {64, 64}},
 	Animations = "animations-destroyed-place", Icon = "icon-dwarven-miner",
 	Speed = 0,
 	HitPoints = 255,
 	DrawLevel = 10,
 	TileSize = {3, 3}, BoxSize = {95, 95},
-	SightRange = 0,
+	SightRange = 1,
 	BasicDamage = 0, Missile = "missile-none",
 	Priority = 0,
 	Type = "land",
 	Building = true, VisibleUnderFog = true,
 	Vanishes = true,
 	Sounds = {} } )
-
---UnitTypeFiles["unit-destroyed-3x3-place-water"] = {
---	swamp = "tilesets/swamp/neutral/buildings/destroyed_site.png"
---}
 
 --DefineUnitType("unit-destroyed-3x3-place-water", { Name = "Destroyed 3x3 Place Water",
 --	Image = {"size", {64, 64}},
@@ -3601,23 +3574,14 @@ DefineUnitType("unit-destroyed-3x3-place", { Name = "Destroyed 3x3 Place",
 --	Vanishes = true,
 --	Sounds = {} } )
 
-UnitTypeFiles["unit-destroyed-4x4-place"] = {
-	cave = "tilesets/swamp/neutral/buildings/destroyed_site.png",
-	conifer_forest_autumn = "tilesets/swamp/neutral/buildings/destroyed_site.png",
-	conifer_forest_summer = "tilesets/swamp/neutral/buildings/destroyed_site.png",
-	dungeon = "tilesets/swamp/neutral/buildings/destroyed_site.png",
-	fairlimbed_forest = "tilesets/swamp/neutral/buildings/destroyed_site.png",
-	swamp = "tilesets/swamp/neutral/buildings/destroyed_site.png"
-}
-
 DefineUnitType("unit-destroyed-4x4-place", { Name = "Destroyed 4x4 Place",
-	Image = {"size", {64, 64}},
+	Image = {"file", "tilesets/swamp/neutral/buildings/destroyed_site.png", "size", {64, 64}},
 	Animations = "animations-destroyed-place", Icon = "icon-dwarven-miner",
 	Speed = 0,
 	HitPoints = 255,
 	DrawLevel = 10,
 	TileSize = {4, 4}, BoxSize = {127, 127},
-	SightRange = 0,
+	SightRange = 1,
 	BasicDamage = 0, Missile = "missile-none",
 	Priority = 0,
 	Type = "land",

@@ -160,7 +160,7 @@ function CustomHeroCreationMenu(world, quest_menu)
 					Civilization = string.lower(hero_civilization_list[hero_civilization:getSelected() + 1]),
 					Type = hero_class_ident_list[hero_class:getSelected() + 1],
 					Trait = trait_ident_list[trait:getSelected() + 1],
-					Variation = string.lower(string.gsub(variation_list[variation:getSelected() + 1], " ", "-"))
+					HairVariation = string.lower(string.gsub(variation_list[variation:getSelected() + 1], " ", "-"))
 				})
 				SaveCustomHero(hero_full_name)
 				menu:stop()

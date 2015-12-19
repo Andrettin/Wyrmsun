@@ -731,6 +731,7 @@ AddTrigger(
 				RemovePlayerObjective(player, "- Rugnur, Baglur, Thursagan, Durstorn and the Gnomish Envoy must survive")
 				local uncount = 0
 				uncount = GetUnits(0)
+				local units_to_die = {}
 				for unit1 = 1,table.getn(uncount) do 
 					if (GetUnitVariable(uncount[unit1], "Character") ~= "" or GetUnitVariable(uncount[unit1], "Ident") == "unit-gnomish-recruit" or GetUnitVariable(uncount[unit1], "Ident") == "unit-gryphon-rider") then
 						if (GetUnitVariable(uncount[unit1],"PosX") >= 26 and GetUnitVariable(uncount[unit1],"PosX") <= 51 and GetUnitVariable(uncount[unit1],"PosY") >= 23 and GetUnitVariable(uncount[unit1],"PosY") <= 44) then
@@ -738,9 +739,13 @@ AddTrigger(
 							SetUnitVariable(uncount[unit1], "HitPoints", GetUnitVariable(uncount[unit1], "HitPoints", "Max")) -- heal the heroes
 						end
 					else
-						KillUnit(uncount[unit1])
+						table.insert(units_to_die, uncount[unit1])
 					end
 				end
+				for i = 1,table.getn(units_to_die) do 
+					KillUnit(units_to_die[i])
+				end
+				
 				-- create settlement for the Norlund Clan in the Shorbear Hold, after its conquest
 				unit = CreateUnit("unit-dwarven-stronghold", 0, {37, 32})
 				if (GrandStrategy == false) then
