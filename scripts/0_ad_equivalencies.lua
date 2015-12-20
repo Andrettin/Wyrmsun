@@ -110,9 +110,9 @@ Set0ADTemplateUnitTypeEquivalency("units/gaul_hero_brennus", "unit-germanic-warr
 
 -- Hellene units
 Set0ADTemplateUnitTypeEquivalency("units/hele_support_female_citizen", "unit-teuton-worker")
-Set0ADTemplateUnitTypeEquivalency("units/hele_infantry_spearman_b", "unit-teuton-swordsman")
-Set0ADTemplateUnitTypeEquivalency("units/hele_infantry_spearman_a", "unit-teuton-swordsman") --advanced greek spearman
-Set0ADTemplateUnitTypeEquivalency("units/hele_infantry_spearman_e", "unit-teuton-swordsman") --elite greek spearman
+Set0ADTemplateUnitTypeEquivalency("units/hele_infantry_spearman_b", "unit-teuton-spearman")
+Set0ADTemplateUnitTypeEquivalency("units/hele_infantry_spearman_a", "unit-teuton-spearman") --advanced greek spearman
+Set0ADTemplateUnitTypeEquivalency("units/hele_infantry_spearman_e", "unit-teuton-spearman") --elite greek spearman
 Set0ADTemplateUnitTypeEquivalency("units/hele_infantry_archer_b", "unit-teuton-archer")
 Set0ADTemplateUnitTypeEquivalency("units/hele_infantry_javelinist_b", "unit-teuton-archer")
 Set0ADTemplateUnitTypeEquivalency("units/hele_infantry_javelinist_a", "unit-teuton-archer")
@@ -133,9 +133,9 @@ Set0ADTemplateUnitTypeEquivalency("other/unfinished_greek_temple", "") --should 
 Set0ADTemplateUnitTypeEquivalency("units/hele_hero_themistocles", "unit-teuton-swordsman")
 
 -- Macedonian units
-Set0ADTemplateUnitTypeEquivalency("units/mace_infantry_spearman_b", "unit-teuton-swordsman")
-Set0ADTemplateUnitTypeEquivalency("units/mace_infantry_spearman_a", "unit-teuton-swordsman")
-Set0ADTemplateUnitTypeEquivalency("units/mace_infantry_spearman_e", "unit-teuton-swordsman")
+Set0ADTemplateUnitTypeEquivalency("units/mace_infantry_spearman_b", "unit-teuton-spearman")
+Set0ADTemplateUnitTypeEquivalency("units/mace_infantry_spearman_a", "unit-teuton-spearman")
+Set0ADTemplateUnitTypeEquivalency("units/mace_infantry_spearman_e", "unit-teuton-spearman")
 Set0ADTemplateUnitTypeEquivalency("units/mace_champion_infantry_a", "unit-teuton-swordsman")
 Set0ADTemplateUnitTypeEquivalency("units/mace_thorakites", "unit-teuton-swordsman")
 Set0ADTemplateUnitTypeEquivalency("units/mace_infantry_archer_e", "unit-teuton-swordsman")
@@ -151,7 +151,7 @@ Set0ADTemplateUnitTypeEquivalency("structures/mace_outpost", "unit-teuton-watch-
 Set0ADTemplateUnitTypeEquivalency("structures/mace_field", "")
 
 -- Roman units
-Set0ADTemplateUnitTypeEquivalency("units/rome_infantry_spearman_e", "unit-teuton-swordsman")
+Set0ADTemplateUnitTypeEquivalency("units/rome_infantry_spearman_e", "unit-teuton-spearman")
 Set0ADTemplateUnitTypeEquivalency("units/rome_infantry_swordsman_a", "unit-teuton-swordsman")
 Set0ADTemplateUnitTypeEquivalency("units/rome_infantry_javelinist_b", "unit-teuton-archer")
 Set0ADTemplateUnitTypeEquivalency("units/rome_infantry_javelinist_a", "unit-teuton-archer")
@@ -171,7 +171,7 @@ Set0ADTemplateUnitTypeEquivalency("units/rome_hero_marcellus", "unit-teuton-ritt
 Set0ADTemplateUnitTypeEquivalency("units/sele_champion_infantry_pikeman", "unit-teuton-swordsman")
 
 -- Theban units
-Set0ADTemplateUnitTypeEquivalency("units/thebes_sacred_band_hoplitai", "unit-teuton-swordsman") --champion spearman
+Set0ADTemplateUnitTypeEquivalency("units/thebes_sacred_band_hoplitai", "unit-teuton-spearman") --champion spearman
 
 -- Thracian units
 Set0ADTemplateUnitTypeEquivalency("units/thrace_black_cloak", "unit-teuton-swordsman")

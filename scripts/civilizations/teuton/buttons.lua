@@ -51,7 +51,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-teuton-iron-shield",
 	Allowed = "check-upgrade", AllowArg = {"upgrade-teuton-iron-shield"},
 	Key = "s", Hint = _("~!Stop"), Popup = "popup-commands",
 	ForUnit = {
-		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-teuton-ritter",
+		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-teuton-spearman", "unit-teuton-ritter",
 		"germanic-group", "teuton-group"
 	}
 } )
@@ -223,6 +223,14 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-teuton-swordsman",
 	Key = "k", Hint = _("Train ~!Krieger"), Popup = "popup-unit",
 	ForUnit = {"unit-teuton-barracks"}
 } )
+
+--[[
+DefineButton( { Pos = 2, Level = 0, Icon = "icon-teuton-swordsman",
+	Action = "train-unit", Value = "unit-teuton-spearman",
+	Key = "s", Hint = _("Train ~!Spearman"), Popup = "popup-unit",
+	ForUnit = {"unit-teuton-barracks"}
+} )
+--]]
 
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-germanic-archer",
 	Action = "train-unit", Value = "unit-teuton-archer",

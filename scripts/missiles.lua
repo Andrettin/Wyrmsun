@@ -57,6 +57,12 @@ DefineMissileType("missile-throwing-axe", {
 	DrawLevel = 50, Class = "missile-class-point-to-point", Sleep = 1, Speed = 32, Range = 0
 })
 
+DefineMissileType("missile-flaming-throwing-axe", {
+	File = "missiles/flaming_throwing_axe.png", Size = {32, 32}, Frames = 15, NumDirections = 9,
+	ImpactSound = "throwing-axe-hit",
+	DrawLevel = 50, Class = "missile-class-point-to-point", Sleep = 1, Speed = 32, Range = 0
+})
+
 DefineMissileType("missile-javelin", {
 	File = "missiles/javelin.png", Size = {32, 32}, Frames = 5, NumDirections = 9,
 	ImpactSound = "bow-hit",

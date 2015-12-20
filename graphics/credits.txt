@@ -1101,9 +1101,10 @@ TaShadan:
 
 Vladislav "iDreamRunner":
 /graphics/missiles/catapult_sandstone_rock.png
-/graphics/missiles/flaming_arrow.png
-/graphics/missiles/flaming_dwarven_ballista_bolt.png
-/graphics/missiles/flaming_goblin_arrow.png
+/graphics/missiles/flaming_arrow.png (modified from b_o's arrow)
+/graphics/missiles/flaming_dwarven_ballista_bolt.png (modified from b_o's dwarven ballista bolt)
+/graphics/missiles/flaming_goblin_arrow.png (modified from b_o's goblin arrow)
+/graphics/missiles/flaming_throwing_axe.png (modified from b_o's throwing axe)
 /graphics/neutral/icons/amulet.png
 /graphics/neutral/icons/carrots.png
 /graphics/neutral/icons/cauldron.png
@@ -1112,3 +1113,4 @@ Vladislav "iDreamRunner":
 /graphics/neutral/icons/ring.png
 /graphics/neutral/items/amulet.png
 /graphics/neutral/items/boots.png
+/graphics/teuton/units/cherusci_shield.png

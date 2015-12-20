@@ -159,6 +159,18 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 			"item-equipped", "unit-thrymgjol-shield"
 		},
 		{
+			"layer", "weapon",
+			"variation-id", "broad-bronze-sword",
+			"file", "germanic/units/broad_bronze_sword.png",
+			"item-not-equipped", "unit-spatha"
+		},
+		{
+			"layer", "weapon",
+			"variation-id", "long-iron-sword",
+			"file", "teuton/units/long_iron_sword.png",
+			"item-equipped", "unit-spatha"
+		},
+		{
 			"layer", "shield",
 			"variation-id", "no-shield",
 			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
@@ -207,13 +219,13 @@ DefineUnitType("unit-germanic-spearman", { Name = _("Spearman"),
 --	Quote = _("\"His spear he shook, | his shield he brandished, / His horse he spurred, | with his sword he hewed; / Wars he raised, | and reddened the field, / Warriors slew he, | and land he won.\" - Rigsthula"),
 	Quote = _("\"Soon grew up | the sons of Jarl, / Beasts they tamed, | and bucklers rounded, / Shafts they fashioned, | and spears they shook.\" - Rigsthula"),
 --	Background = _("\"Erala\" is the Proto-Germanic word for \"warrior\"."),
-	Image = {"file", "human/units/human_body.png", "size", {72, 72}},
+	Image = {"file", "human/units/human_body_warrior.png", "size", {72, 72}},
 	Shadow = {"file", "human/units/human_shadow.png", "size", {72, 72}},
 	LayerImages = {
 		{"layer", "hair", "file", "human/units/blond_hair_warrior.png"},
 		{"layer", "left-arm", "file", "human/units/human_left_arm.png"},
 		{"layer", "right-arm", "file", "human/units/human_right_arm_spear.png"},
-		{"layer", "clothing", "file", "germanic/units/coat.png"},
+		{"layer", "clothing", "file", "germanic/units/coat_warrior.png"},
 		{"layer", "clothing-left-arm", "file", "germanic/units/coat_left_arm.png"},
 		{"layer", "clothing-right-arm", "file", "germanic/units/coat_right_arm_spear.png"},
 		{"layer", "pants", "file", "human/units/pants.png"},

@@ -233,6 +233,10 @@ https://github.com/Andrettin/Wyrmsun
 
 * Miscellaneous
 - Fixed a crash cause.
+- Added flaming throwing axe graphics (by Vladislav "iDreamRunner").
+
+* Units
+- Eralas now use the iron long sword graphics if they have a Spatha equipped.
 
 -----------------------------------------------------------------------
 - 1.8.4

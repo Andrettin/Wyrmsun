@@ -297,6 +297,98 @@ DefineUnitType("unit-suebi-swordsman", { Name = _("Krieger"),
 	}
 } )
 
+DefineUnitType("unit-teuton-spearman", { Name = _("Spearman"),
+	Parent = "unit-template-spearman",
+	Civilization = "teuton",
+--	Description = _("Germanic tribes are known for their fierceness in combat, and these sword-wielding warriors act accordingly."),
+--	Background = _("\"Erala\" is the Proto-Germanic word for \"warrior\"."),
+	Image = {"file", "human/units/human_body_warrior.png", "size", {72, 72}},
+	Shadow = {"file", "human/units/human_shadow.png", "size", {72, 72}},
+	LayerImages = {
+		{"layer", "hair", "file", "teuton/units/suebi_hair.png"},
+		{"layer", "left-arm", "file", "human/units/human_left_arm.png"},
+		{"layer", "right-arm", "file", "human/units/human_right_arm_spear.png"},
+		{"layer", "clothing", "file", "germanic/units/coat_warrior.png"},
+		{"layer", "clothing-left-arm", "file", "germanic/units/coat_left_arm.png"},
+		{"layer", "clothing-right-arm", "file", "germanic/units/coat_right_arm_spear.png"},
+		{"layer", "pants", "file", "human/units/pants.png"},
+		{"layer", "boots", "file", "human/units/shoes.png"},
+		{"layer", "weapon", "file", "human/units/spear.png"},
+	},
+	Animations = "animations-melee-unit-new", Icon = "icon-teuton-swordsman",
+	Corpse = "unit-human-dead-body",
+	DaySightRangeBonus = 1,
+	NightSightRangeBonus = -1,
+	AiDrops = {"unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
+	Variations = {
+		{
+			"variation-id", "red-hair"
+		},
+		{
+			"layer", "left-arm",
+			"variation-id", "left-arm",
+			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
+			"upgrade-forbidden", "upgrade-teuton-iron-shield",
+			"item-not-equipped", "unit-bronze-shield",
+			"item-not-equipped", "unit-heater-shield",
+			"item-not-equipped", "unit-iron-shield",
+			"item-not-equipped", "unit-kite-shield",
+			"item-not-equipped", "unit-thrymgjol-shield"
+		},
+		{
+			"layer", "left-arm",
+			"variation-id", "shield-left-arm",
+			"file", "human/units/human_left_arm_shield.png",
+			"upgrade-required", "upgrade-germanic-bronze-shield",
+			"item-equipped", "unit-bronze-shield",
+			"item-equipped", "unit-heater-shield",
+			"item-equipped", "unit-iron-shield",
+			"item-equipped", "unit-kite-shield",
+			"item-equipped", "unit-thrymgjol-shield"
+		},
+		{
+			"layer", "shield",
+			"variation-id", "no-shield",
+			"upgrade-forbidden", "upgrade-germanic-bronze-shield",
+			"upgrade-forbidden", "upgrade-teuton-iron-shield",
+			"item-not-equipped", "unit-bronze-shield",
+			"item-not-equipped", "unit-heater-shield",
+			"item-not-equipped", "unit-iron-shield",
+			"item-not-equipped", "unit-kite-shield",
+			"item-not-equipped", "unit-thrymgjol-shield"
+		},
+		{
+			"layer", "shield",
+			"variation-id", "bronze-shield",
+			"file", "germanic/units/bronze_shield.png",
+			"upgrade-required", "upgrade-germanic-bronze-shield",
+			"item-equipped", "unit-bronze-shield",
+			"item-equipped", "unit-heater-shield",
+			"upgrade-forbidden", "upgrade-teuton-iron-shield",
+			"item-not-equipped", "unit-iron-shield",
+			"item-not-equipped", "unit-kite-shield",
+			"item-not-equipped", "unit-thrymgjol-shield"
+		},
+		{
+			"layer", "shield",
+			"variation-id", "iron-shield",
+			"file", "teuton/units/cherusci_shield_player_color.png",
+			"upgrade-required", "upgrade-teuton-iron-shield",
+			"item-equipped", "unit-iron-shield",
+			"item-equipped", "unit-kite-shield",
+			"item-equipped", "unit-thrymgjol-shield",
+			"layer-animation", SuebiShieldAnimation
+		}
+	},
+	Sounds = {
+		"selected", "basic-teuton-voices-selected-group",
+		"acknowledge", "basic-teuton-voices-acknowledge",
+		"ready", "basic-teuton-voices-ready",
+		"help", "basic-teuton-voices-help",
+		"dead", "basic-human-voices-dead"
+	}
+} )
+
 DefineUnitType("unit-teuton-archer", { Name = _("Skutan"),
 	Parent = "unit-template-archer",
 	Civilization = "teuton",
