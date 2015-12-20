@@ -112,20 +112,51 @@ DefineUnitType("unit-gnomish-recruit", { Name = _("Recruit"),
 	Accuracy = 12,
 	Evasion = 12,
 	Corpse = "unit-gnomish-dead-body",
-	WeaponClasses = {"thrusting-sword", "sword", "mace"},
+	WeaponClasses = {"thrusting-sword", "sword"},
+--	WeaponClasses = {"thrusting-sword", "sword", "mace"},
 	AiDrops = {"unit-thrusting-sword", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-wool-shoes", "unit-furry-wool-shoes", "unit-cheese", "unit-potion-of-healing"},
 	DropAffixes = {"upgrade-item-prefix-jinns", "upgrade-item-prefix-penetrating", "upgrade-item-prefix-storm", "upgrade-item-prefix-vicious", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-the-jinn", "upgrade-item-suffix-of-lightning", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-the-snigill", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-trickery"}, -- allow more magic enchantments than normal 
 	PierceDamage = true,
 	Variations = {
 		{
 			"variation-id", "blond-hair",
-			"upgrade-forbidden", "upgrade-old"
+			"upgrade-forbidden", "upgrade-old",
+			"item-not-equipped", "unit-hammer",
+			"item-not-equipped", "unit-mining-pick"
 		},
 		{
 			"variation-id", "gray-hair",
-			"layer-file", "hair", "gnome/units/gray_hair_warrior.png"
+			"layer-file", "hair", "gnome/units/gray_hair_warrior.png",
+			"item-not-equipped", "unit-hammer",
+			"item-not-equipped", "unit-mining-pick"
 		},
-		--[[
+		{
+			"variation-id", "blond-hair",
+			"file", "gnome/units/body_warrior_slash.png",
+			"upgrade-forbidden", "upgrade-old",
+			"item-equipped", "unit-hammer",
+			"item-equipped", "unit-mining-pick"
+		},
+		{
+			"variation-id", "gray-hair",
+			"file", "gnome/units/body_warrior_slash.png",
+			"layer-file", "hair", "gnome/units/gray_hair_warrior.png",
+			"item-equipped", "unit-hammer",
+			"item-equipped", "unit-mining-pick"
+		},
+		{
+			"layer", "right-arm",
+			"variation-id", "right-arm",
+			"item-not-equipped", "unit-hammer",
+			"item-not-equipped", "unit-mining-pick"
+		},
+		{
+			"layer", "right-arm",
+			"variation-id", "right-arm-slash",
+			"file", "gnome/units/right_arm_warrior_slash.png",
+			"item-equipped", "unit-hammer",
+			"item-equipped", "unit-mining-pick"
+		},
 		{
 			"layer", "weapon",
 			"variation-id", "sword",
@@ -139,7 +170,6 @@ DefineUnitType("unit-gnomish-recruit", { Name = _("Recruit"),
 			"item-equipped", "unit-hammer",
 			"item-equipped", "unit-mining-pick"
 		}
-		--]]
 	},
 	Sounds = {
 		"selected", "gnomish-recruit-selected-group",
