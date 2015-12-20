@@ -1,7 +1,0 @@
--- Stratagus Map Presentation
-
-DefinePlayerTypes("person", "computer", "person", "person")
-PresentMap("Iberia", 3, 136, 100, 1)
-MapWorld = "Earth"
-
--- Map by Miguel Farah F., licensed under the GPLv2 and included in FreeCiv

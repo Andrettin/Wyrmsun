@@ -1,7 +1,0 @@
--- Stratagus Map Presentation
-
-DefinePlayerTypes("person", "person")
-PresentMap("Central Great Britain", 2, 192, 128, 1)
-MapWorld = "Earth"
-
--- Map by GM1530, licensed under the GPLv2 and included in the "GM1530 Scenarios" modpack for FreeCiv

@@ -233,6 +233,8 @@ https://github.com/Andrettin/Wyrmsun
 
 * Maps
 - Added gold rocks to the Scandinavia map.
+- Added gold rocks to the Southern Tunnels map.
+- Removed the Central Great Britain, France, Iberia, North America, North Italy, Southern Central Europe, Southern Great Britain and South Italy maps.
 
 -----------------------------------------------------------------------
 - 1.8.5
