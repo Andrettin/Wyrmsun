@@ -133,6 +133,7 @@ DefineUnitType("unit-gnomish-recruit", { Name = _("Recruit"),
 		{
 			"variation-id", "blond-hair",
 			"file", "gnome/units/body_warrior_slash.png",
+			"layer-file", "hair", "gnome/units/blond_hair_warrior_slash.png",
 			"upgrade-forbidden", "upgrade-old",
 			"item-equipped", "unit-hammer",
 			"item-equipped", "unit-mining-pick"
@@ -140,7 +141,7 @@ DefineUnitType("unit-gnomish-recruit", { Name = _("Recruit"),
 		{
 			"variation-id", "gray-hair",
 			"file", "gnome/units/body_warrior_slash.png",
-			"layer-file", "hair", "gnome/units/gray_hair_warrior.png",
+			"layer-file", "hair", "gnome/units/gray_hair_warrior_slash.png",
 			"item-equipped", "unit-hammer",
 			"item-equipped", "unit-mining-pick"
 		},
