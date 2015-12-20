@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      units.ccl - Defines the teuton (west germanic) unit-types.
+--      units.lua - Defines the teuton (west germanic) unit-types.
 --
 --      (c) Copyright 2015 by Andrettin
 --

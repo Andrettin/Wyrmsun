@@ -101,13 +101,18 @@ DefineUnitType("unit-gnomish-recruit", { Name = _("Recruit"),
 	Civilization = "gnome",
 	Description = _("Gnomish recruits form the common soldiery of the gnomish armies. Due to their small size, they tend to attack by thrusting their swords, rather than slashing with them, seeking to strike vital points and cause more damage than their strength would allow when hacking away at enemies."),
 	Quote = _("\"With a tremendous crash, the great mountain burst apart and a whole troop of tiny, little mountain gnomes came out, dancing grotesquely like sprites of another world.\" - The Gnomes of the Saline Mountains"),
-	Image = {"file", "gnome/units/gnomish_recruit.png", "size", {72, 72}},
+	Image = {"file", "gnome/units/body_warrior.png", "size", {72, 72}},
+	LayerImages = {
+		{"layer", "hair", "file", "gnome/units/blond_hair_warrior.png"},
+		{"layer", "right-arm", "file", "gnome/units/right_arm_warrior.png"},
+		{"layer", "weapon", "file", "gnome/units/thrusting_sword.png"}
+	},
 	Animations = "animations-gnomish-recruit", Icon = "icon-gnomish-recruit",
 	HitPoints = 50,
 	Accuracy = 12,
 	Evasion = 12,
 	Corpse = "unit-gnomish-dead-body",
-	WeaponClasses = {"thrusting-sword", "sword"},
+	WeaponClasses = {"thrusting-sword", "sword", "mace"},
 	AiDrops = {"unit-thrusting-sword", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-wool-shoes", "unit-furry-wool-shoes", "unit-cheese", "unit-potion-of-healing"},
 	DropAffixes = {"upgrade-item-prefix-jinns", "upgrade-item-prefix-penetrating", "upgrade-item-prefix-storm", "upgrade-item-prefix-vicious", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-the-jinn", "upgrade-item-suffix-of-lightning", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-the-snigill", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-trickery"}, -- allow more magic enchantments than normal 
 	PierceDamage = true,
@@ -118,8 +123,23 @@ DefineUnitType("unit-gnomish-recruit", { Name = _("Recruit"),
 		},
 		{
 			"variation-id", "gray-hair",
-			"file", "gnome/units/gnomish_recruit_gray_hair.png"
+			"layer-file", "hair", "gnome/units/gray_hair_warrior.png"
+		},
+		--[[
+		{
+			"layer", "weapon",
+			"variation-id", "sword",
+			"item-not-equipped", "unit-hammer",
+			"item-not-equipped", "unit-mining-pick"
+		},
+		{
+			"layer", "weapon",
+			"variation-id", "hammer",
+			"file", "gnome/units/hammer_warrior.png",
+			"item-equipped", "unit-hammer",
+			"item-equipped", "unit-mining-pick"
 		}
+		--]]
 	},
 	Sounds = {
 		"selected", "gnomish-recruit-selected-group",
