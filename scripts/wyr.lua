@@ -279,6 +279,7 @@ function LoadCivilizationUI(civilization)
 	if (UsingTechTree == false and civilization ~= GetPlayerData(GetThisPlayer(), "RaceName")) then
 		StopMusic()
 	end
+	Load("scripts/ui.lua")
 	local ui_file = "scripts/civilizations/" .. civilization .. "/ui.lua"
 	if not (CanAccessFile(ui_file)) then
 		for i=1,table.getn(Mods) do

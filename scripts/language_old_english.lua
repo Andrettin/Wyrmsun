@@ -312,6 +312,12 @@ DefineLanguageNoun("Sealticge", { -- Source: Alaric Hall, "The Meanings of Elf a
 	Gender = "Feminine" -- presumably, given the source is talking about occupations for women
 })
 
+DefineLanguageNoun("Þunorrad", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 169.
+	Civilization = "old-english",
+	Meaning = "Peal of Thunder", -- literally: "thunder-ride" or "Thunor-ride"
+	SingularNominative = "Þunorrad"
+})
+
 DefineLanguageNoun("Twīn", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 6.
 	Civilization = "old-english",
 	Meaning = "Canvas, Screen",
