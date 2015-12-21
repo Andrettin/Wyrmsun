@@ -167,7 +167,12 @@ DefineUnitType("unit-gnomish-recruit", { Name = _("Recruit"),
 			"layer", "weapon",
 			"variation-id", "hammer",
 			"file", "gnome/units/hammer_warrior.png",
-			"item-equipped", "unit-hammer",
+			"item-equipped", "unit-hammer"
+		},
+		{
+			"layer", "weapon",
+			"variation-id", "mining-pick",
+			"file", "gnome/units/mining_pick_warrior.png",
 			"item-equipped", "unit-mining-pick"
 		}
 	},
