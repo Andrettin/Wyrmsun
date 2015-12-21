@@ -238,8 +238,8 @@ https://github.com/Andrettin/Wyrmsun
 
 * Units
 - Gnomish Recruits who are persistent heroes can now equip mace-class items (such as hammers and mining picks).
-- Gnomish Recruits now exhibit a hammer in their graphics if a hammer is equipped.
-- Gnomish Recruits now exhibit a mining pick in their graphics if a mining pick is equipped.
+- Gnomish Recruits now display a hammer in their graphics if a hammer is equipped.
+- Gnomish Recruits now display a mining pick in their graphics if a mining pick is equipped.
 
 -----------------------------------------------------------------------
 - 1.8.5
