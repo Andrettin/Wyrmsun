@@ -398,3 +398,7 @@ DefineDependency("unit-suebi-swordsman",
 DefineDependency("unit-teuton-dock",
 	{"unit-teuton-lumber-mill"}
 )
+
+DefineDependency("unit-teuton-kogge",
+	{"unit-teuton-lumber-mill"}
+)

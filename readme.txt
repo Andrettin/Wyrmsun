@@ -228,11 +228,18 @@ https://github.com/Andrettin/Wyrmsun
 ############################################################
 
 -----------------------------------------------------------------------
-- 1.8.7
+- 1.9.0
 -----------------------------------------------------------------------
+
+* Buildings
+- The Dwarven and Teuton Dock buildings are now buildable in RTS mode.
 
 * Miscellaneous
 - Fixed issue which caused part of the game screen to be black after playing the Tomb of Durahn Eikinskjaldi quest.
+
+* Units
+- Added the Transport ship for the Dwarves (graphics by Jinn).
+- Added the Kogge (transport ship) for the Teutons (graphics by Jinn).
 
 -----------------------------------------------------------------------
 - 1.8.6

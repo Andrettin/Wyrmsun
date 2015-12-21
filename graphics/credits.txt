@@ -729,6 +729,8 @@ João Victor G. Costa (Jinn):
 /graphics/teuton/icons/saxon_swordsman_black_hair.png
 /graphics/teuton/icons/saxon_swordsman_blond_hair.png
 /graphics/teuton/icons/saxon_swordsman_brown_hair.png
+/graphics/teuton/units/kogge.png
+/graphics/teuton/units/kogge_water.png
 /graphics/teuton/units/suebi_shield.png
 /graphics/tilesets/cave/terrain/cave.png
 /graphics/tilesets/cave/terrain/rock.png

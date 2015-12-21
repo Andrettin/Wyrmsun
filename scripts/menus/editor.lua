@@ -23,6 +23,7 @@ editor_types = {
 	"unit-teuton-archer",
 	"unit-teuton-ritter",
 	"unit-teuton-catapult",
+	"unit-teuton-kogge",
 	"unit-teuton-town-hall",
 	"unit-teuton-stronghold",
 	"unit-teuton-farm",

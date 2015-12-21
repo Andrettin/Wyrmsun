@@ -43,6 +43,7 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-boots",
 		"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane", "unit-dwarven-scout", "unit-dwarven-miner", "unit-dwarven-militia",
 		"unit-dwarven-yale-rider",
 		"unit-dwarven-ballista", "unit-dwarven-gryphon-rider",
+		"unit-dwarven-transport-ship",
 		"unit-goblin-worker", "unit-goblin-thief", "unit-goblin-spearman", "unit-goblin-archer",
 		"unit-goblin-war-machine", "unit-goblin-glider",
 		"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
@@ -51,9 +52,9 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-boots",
 		"unit-teuton-worker", 
 		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-teuton-spearman", "unit-teuton-archer", "unit-teuton-ritter",
 		"unit-teuton-catapult", 
+		"unit-teuton-kogge",
 		"unit-slug", "unit-rat",
 		"unit-slime", "unit-yale", "unit-gryphon", "unit-wyrm",
-		"unit-dwarven-transport-ship",
 		"dwarf-group", "germanic-group", "teuton-group"
 	}
 } )
@@ -109,7 +110,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-battle-axe",
 		"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
 		"unit-slug", "unit-rat",
 		"unit-slime", "unit-yale", "unit-gryphon", "unit-wyrm",
-		"unit-dwarven-transport-ship",
+--		"unit-dwarven-transport-ship",
 		"dwarf-group"
 	}
 })
@@ -200,7 +201,7 @@ DefineButton( { Pos = 4, Level = 0, Icon = "icon-dwarven-patrol-land",
 		"unit-goblin-thief", "unit-goblin-spearman", "unit-goblin-archer",
 		"unit-goblin-war-machine", "unit-goblin-glider",
 		"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
-		"unit-dwarven-transport-ship",
+--		"unit-dwarven-transport-ship",
 		"dwarf-group"
 	}
 })
@@ -309,13 +310,11 @@ DefineButton( { Pos = 7, Level = 1, Icon = "icon-dwarven-sentry-tower",
 	ForUnit = {"unit-dwarven-miner", "unit-gnomish-worker"}
 } )
 
---[[
 DefineButton( { Pos = 8, Level = 1, Icon = "icon-dwarven-dock",
 	Action = "build", Value = "unit-dwarven-dock",
 	Key = "d", Hint = _("Build ~!Dock"), Popup = "popup-building",
 	ForUnit = {"unit-dwarven-miner", "unit-gnomish-worker"}
 } )
---]]
 
 DefineButton( { Pos = 9, Level = 1, Icon = "icon-gold-mine",
 	Action = "build", Value = "unit-gold-mine",
@@ -379,16 +378,16 @@ DefineButton( { Pos = 5, Level = 0, Icon = "icon-dwarven-gryphon-rider",
 	ForUnit = {"unit-dwarven-barracks", "unit-gnomish-barracks"}
 } )
 
+DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-transport-ship",
+	Action = "train-unit", Value = "unit-dwarven-transport-ship",
+	Key = "t", Hint = _("Build ~!Transport"), Popup = "popup-unit",
+	ForUnit = {"unit-dwarven-dock"}
+} )
+
 DefineButton( { Pos = 5, Level = 0, Icon = "icon-surghan-mercenary-steelclad",
 	Action = "train-unit", Value = "unit-surghan-mercenary-steelclad",
 	Key = "s", Hint = _("Hire ~!Surghan Mercenaries"), Popup = "popup-unit",
 	ForUnit = {"unit-mercenary-camp"}
-} )
-
-DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-ballista",
-	Action = "train-unit", Value = "unit-dwarven-transport-ship",
-	Key = "t", Hint = _("Build ~!Transport"), Popup = "popup-unit",
-	ForUnit = {"unit-dwarven-dock"}
 } )
 
 -- Researches ---------------------------------------------------------

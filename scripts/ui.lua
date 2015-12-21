@@ -913,7 +913,7 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {SightRange = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Sight: "), Variable = "SightRange", Font = wyr.preferences.PopupDescriptionFont}}
 				},
-				{ 	HighlightColor = "yellow",
+				{ 	Condition = {AttackRange = "only", BasicDamage = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Range: "), Variable = "AttackRange", Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {BasicDamage = "only"}, HighlightColor = "yellow",
@@ -991,6 +991,12 @@ if not (ui_loaded_first_time) then
 				},
 				{ 	Condition = {BonusAgainstBuildings = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Bonus vs. Buildings: "), String(TypeVar("BonusAgainstBuildings","Value")), "%"), Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {AttackFromTransporter = "only", BasicDamage = "false"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = Concat(_("Transport: "), String(TypeVar("Transport", "Max"))), Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {AttackRange = "only", AttackFromTransporter = "only", BasicDamage = "false"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Range Bonus: +"), Variable = "AttackRange", Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				-- Description
 				{ 	Margin = {1, 1}, Condition = {HasDescription = true}, 

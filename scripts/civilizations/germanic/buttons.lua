@@ -37,47 +37,53 @@
 -- general commands -------------------------------
 
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-germanic-short-sword",
-  Action = "attack",
-  Key = "a", Hint = _("~!Attack"), Popup = "popup-commands",
-  ForUnit = {
-	"unit-germanic-worker",
-    "unit-germanic-warrior", "unit-germanic-spearman",
-	"unit-teuton-worker",
-	"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-teuton-spearman", "unit-teuton-ritter",
-	"germanic-group", "teuton-group"
-} } )
+	Action = "attack",
+	Key = "a", Hint = _("~!Attack"), Popup = "popup-commands",
+	ForUnit = {
+		"unit-germanic-worker",
+		"unit-germanic-warrior", "unit-germanic-spearman",
+		"unit-teuton-worker",
+		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-teuton-spearman", "unit-teuton-ritter",
+--		"unit-teuton-kogge",
+		"germanic-group", "teuton-group"
+	}
+})
 
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-germanic-broad-sword",
-  Action = "attack",
-  Allowed = "check-upgrade", AllowArg = {"upgrade-germanic-broad-sword"},
-  Key = "a", Hint = _("~!Attack"), Popup = "popup-commands",
-  ForUnit = {
-    "unit-germanic-warrior",
-	"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-teuton-ritter",
-	"germanic-group", "teuton-group"
-} } )
+	Action = "attack",
+	Allowed = "check-upgrade", AllowArg = {"upgrade-germanic-broad-sword"},
+	Key = "a", Hint = _("~!Attack"), Popup = "popup-commands",
+	ForUnit = {
+		"unit-germanic-warrior",
+		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-teuton-ritter",
+		"germanic-group", "teuton-group"
+	}
+})
 
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-germanic-wooden-oblong-shield",
-  Action = "stop",
-  Key = "s", Hint = _("~!Stop"), Popup = "popup-commands",
-  ForUnit = {
-	"unit-germanic-worker",
-    "unit-germanic-warrior", "unit-germanic-spearman", "unit-germanic-archer",
-	"unit-teuton-worker",
-	"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-teuton-spearman", "unit-teuton-archer", "unit-teuton-ritter",
-	"unit-teuton-catapult",
-	"germanic-group", "teuton-group"
-} } )
+	Action = "stop",
+	Key = "s", Hint = _("~!Stop"), Popup = "popup-commands",
+	ForUnit = {
+		"unit-germanic-worker",
+		"unit-germanic-warrior", "unit-germanic-spearman", "unit-germanic-archer",
+		"unit-teuton-worker",
+		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-teuton-spearman", "unit-teuton-archer", "unit-teuton-ritter",
+		"unit-teuton-catapult",
+		"unit-teuton-kogge",
+		"germanic-group", "teuton-group"
+	}
+})
 
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-germanic-bronze-shield",
-  Action = "stop",
-  Allowed = "check-upgrade", AllowArg = {"upgrade-germanic-bronze-shield"},
-  Key = "s", Hint = _("~!Stop"), Popup = "popup-commands",
-  ForUnit = {
-    "unit-germanic-warrior", "unit-germanic-spearman",
-	"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-teuton-spearman", "unit-teuton-ritter",
-	"germanic-group", "teuton-group"
-} } )
+	Action = "stop",
+	Allowed = "check-upgrade", AllowArg = {"upgrade-germanic-bronze-shield"},
+	Key = "s", Hint = _("~!Stop"), Popup = "popup-commands",
+	ForUnit = {
+		"unit-germanic-warrior", "unit-germanic-spearman",
+		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-teuton-spearman", "unit-teuton-ritter",
+		"germanic-group", "teuton-group"
+	}
+})
 
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-germanic-arrow",
 	Action = "attack",
@@ -96,14 +102,16 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-germanic-barbed-arrow",
   } } )
 
 DefineButton( { Pos = 4, Level = 0, Icon = "icon-germanic-patrol-land",
-  Action = "patrol",
-  Key = "p", Hint = _("~!Patrol"), Popup = "popup-commands",
-  ForUnit = {
-    "unit-germanic-warrior", "unit-germanic-spearman", "unit-germanic-archer",
-	"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-teuton-spearman", "unit-teuton-archer", "unit-teuton-ritter",
-	"unit-teuton-catapult",
-	"germanic-group", "teuton-group"
-  } } )
+	Action = "patrol",
+	Key = "p", Hint = _("~!Patrol"), Popup = "popup-commands",
+	ForUnit = {
+		"unit-germanic-warrior", "unit-germanic-spearman", "unit-germanic-archer",
+		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-teuton-spearman", "unit-teuton-archer", "unit-teuton-ritter",
+		"unit-teuton-catapult",
+--		"unit-teuton-kogge",
+		"germanic-group", "teuton-group"
+	}
+})
   
 DefineButton( { Pos = 5, Level = 0, Icon = "icon-germanic-stand-ground",
   Action = "stand-ground",

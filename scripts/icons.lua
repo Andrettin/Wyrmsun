@@ -376,6 +376,12 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-teuton-kogge",
+	Size = {46, 38},
+	File = "teuton/icons/kogge.png"
+})
+
+DefineIcon({
 	Name = "icon-teuton-town-hall",
 	Size = {46, 38},
 	File = "teuton/icons/town_hall.png"
@@ -655,6 +661,12 @@ DefineIcon({
 	Name = "icon-dwarven-gryphon-rider-red-hair",
 	Size = {46, 38},
 	File = "dwarf/icons/gryphon_rider_red_hair.png"
+})
+
+DefineIcon({
+	Name = "icon-dwarven-transport-ship",
+	Size = {46, 38},
+	File = "dwarf/icons/transport.png"
 })
 
 DefineIcon({

@@ -92,9 +92,10 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-catapult-projectile-3",
 } )
 
 DefineButton( { Pos = 6, Level = 0, Icon = "icon-attack-ground",
-  Action = "attack-ground",
-  Key = "g", Hint = _("Attack ~!Ground"), Popup = "popup-commands",
-  ForUnit = {"unit-teuton-catapult", "germanic-group", "teuton-group"} } )
+	Action = "attack-ground",
+	Key = "g", Hint = _("Attack ~!Ground"), Popup = "popup-commands",
+	ForUnit = {"unit-teuton-catapult", "germanic-group", "teuton-group"}
+})
 
 -- Building Commands -----------------------------------------------
 
@@ -178,13 +179,11 @@ DefineButton( { Pos = 7, Level = 1, Icon = "icon-teuton-watch-tower",
   Key = "t", Hint = _("Build Watch ~!Tower"), Popup = "popup-building",
   ForUnit = {"unit-teuton-worker"} } )
 
---[[
 DefineButton( { Pos = 8, Level = 1, Icon = "icon-teuton-dock",
 	Action = "build", Value = "unit-teuton-dock",
 	Key = "d", Hint = _("Build ~!Dock"), Popup = "popup-building",
 	ForUnit = {"unit-teuton-worker"}
 } )
---]]
 
 DefineButton( { Pos = 9, Level = 1, Icon = "icon-gold-mine",
 	Action = "build", Value = "unit-gold-mine",
@@ -248,6 +247,12 @@ DefineButton( { Pos = 4, Level = 0, Icon = "icon-teuton-catapult",
 	Action = "train-unit", Value = "unit-teuton-catapult",
 	Key = "c", Hint = _("Build ~!Catapult"), Popup = "popup-unit",
 	ForUnit = {"unit-teuton-barracks"}
+} )
+
+DefineButton( { Pos = 1, Level = 0, Icon = "icon-teuton-kogge",
+	Action = "train-unit", Value = "unit-teuton-kogge",
+	Key = "k", Hint = _("Build ~!Kogge"), Popup = "popup-unit",
+	ForUnit = {"unit-teuton-dock"}
 } )
 
 -- Researches ---------------------------------------------------------
