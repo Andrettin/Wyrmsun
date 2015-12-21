@@ -236,6 +236,10 @@ https://github.com/Andrettin/Wyrmsun
 - Added gold rocks to the Southern Tunnels map.
 - Removed the Central Great Britain, France, Iberia, North America, North Italy, Southern Central Europe, Southern Great Britain and South Italy maps.
 
+* Units
+- Gnomish Recruits who are persistent heroes can now equip mace-class items (such as hammers and mining picks).
+- Gnomish Recruits now display a hammer attack animation if a hammer or mining pick is equipped.
+
 -----------------------------------------------------------------------
 - 1.8.5
 -----------------------------------------------------------------------
