@@ -236,6 +236,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Buildings
 - The Dwarven and Teuton Dock buildings are now buildable in RTS mode.
+- Dwarven buildings now have 20% fire resistance, to represent their heavier use of stone and lesser use of wood in construction making their structures less flamable.
 
 * Items
 - Added "of Slaughter" magic suffix for weapons (+3 damage).
