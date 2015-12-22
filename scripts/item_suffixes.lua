@@ -90,6 +90,16 @@ DefineUpgrade("upgrade-item-suffix-of-regeneration", { -- example: Ring of Regen
 	ItemSuffix = {"amulet", true, "ring", true}
 })
 
+DefineUpgrade("upgrade-item-suffix-of-the-serpent", {
+	Name = _("of the Serpent"),
+	ItemSuffix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true, "amulet", true, "ring", true}
+})
+
+DefineUpgrade("upgrade-item-suffix-of-slaughter", {
+	Name = _("of Slaughter"),
+	ItemSuffix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true}
+})
+
 DefineUpgrade("upgrade-item-suffix-of-slowness", { -- example: Ring of Slowness (from Wesnoth)
 	Name = _("of Slowness"),
 	ItemSuffix = {"boots", true, "amulet", true, "ring", true}
@@ -118,11 +128,6 @@ DefineUpgrade("upgrade-item-suffix-of-strength", { -- example: Amulet of Strengt
 DefineUpgrade("upgrade-item-suffix-of-swiftness", {
 	Name = _("of Swiftness"),
 	ItemSuffix = {"boots", true, "amulet", true, "ring", true}
-})
-
-DefineUpgrade("upgrade-item-suffix-of-the-serpent", {
-	Name = _("of the Serpent"),
-	ItemSuffix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true, "amulet", true, "ring", true}
 })
 
 DefineUpgrade("upgrade-item-suffix-of-thorns", {
@@ -196,6 +201,10 @@ DefineModifier("upgrade-item-suffix-of-regeneration",
 
 DefineModifier("upgrade-item-suffix-of-the-serpent",
 	{"Backstab", 50}
+)
+
+DefineModifier("upgrade-item-suffix-of-slaughter",
+	{"BasicDamage", 3}
 )
 
 DefineModifier("upgrade-item-suffix-of-slowness",

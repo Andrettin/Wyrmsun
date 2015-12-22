@@ -237,6 +237,10 @@ https://github.com/Andrettin/Wyrmsun
 * Buildings
 - The Dwarven and Teuton Dock buildings are now buildable in RTS mode.
 
+* Items
+- Added "of Slaughter" magic suffix for weapons (+3 damage).
+- The unique broad sword Laevatein now has +7 as its effect.
+
 * Miscellaneous
 - Fixed issue which caused part of the game screen to be black after playing the Tomb of Durahn Eikinskjaldi quest.
 - Added drop-down graphics for the Dwarves and Germanics (by Jinn).

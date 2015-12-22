@@ -36,7 +36,7 @@ DefineUniqueItem("Brimir", { -- Source: Henry Adams Bellows (transl.), "The Poet
 DefineUniqueItem("Laevatein", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 124; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 245.
 	Type = "unit-broad-sword",
 	Prefix = "upgrade-item-prefix-wounding",
-	Suffix = "upgrade-item-suffix-of-trickery",
+	Suffix = "upgrade-item-suffix-of-slaughter",
 	Background = "In Norse mythology, Laevatein (\"the Wounding Wand\") was a sword forged by Loki with runes at the doors of Niflheim, and was placed under nine locks in Laegjarn's chest, with Sinmora guarding over it.",
 	Quote = "\"Laevatein is there | that Lopt with runes / Once made by the doors of death; / In Laegjarn's chest | by Sinmora lies it, / And nine locks fasten it firm.\" - Svipdagsmol"
 } )
