@@ -72,7 +72,13 @@ function RunQuestWorldMenu()
 end
 
 function RunQuestMenu(world)
-	SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
+	if (world == "Earth") then
+		SetPlayerData(GetThisPlayer(), "RaceName", "germanic")
+	elseif (world == "Nidavellir") then
+		SetPlayerData(GetThisPlayer(), "RaceName", "dwarf")
+	else
+		SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
+	end
 	wyrmsun.playlist = { "music/battle_theme_a.ogg" }
 
 	if not (IsMusicPlaying()) then

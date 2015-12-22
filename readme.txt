@@ -236,6 +236,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Miscellaneous
 - Fixed issue which caused part of the game screen to be black after playing the Tomb of Durahn Eikinskjaldi quest.
+- Added drop-down graphics for the Dwarves and Germanics (by Jinn).
 
 * Units
 - Added the Transport ship for the Dwarves (graphics by Jinn).

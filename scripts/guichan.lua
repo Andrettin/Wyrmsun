@@ -613,17 +613,42 @@ function AddMenuHelpers(menu)
 	return b
   end
   
-  function menu:addDropDown(list, x, y, callback)
-    local dd = DropDownWidget()
-    dd:setFont(Fonts["game"])
-    dd:setList(list)
-    dd:setActionCallback(function(s) PlaySound("click"); callback(dd, s) end)
-    dd:setBaseColor(dark)
-    dd:setForegroundColor(clear)
-    dd:setBackgroundColor(dark)
-    self:add(dd, x, y)
-    return dd
-  end
+	function menu:addDropDown(list, x, y, callback)
+		local dd = ImageDropDownWidget()
+		dd:setFont(Fonts["game"])
+		local g_bar
+		local g_dslider_n
+		local g_dslider_p
+		if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
+			g_bar = CGraphic:New("dwarf/ui/widgets/pulldown-bar-normal.png")
+			g_dslider_n = CGraphic:New("dwarf/ui/widgets/down-arrow-normal-slider.png")
+			g_dslider_p = CGraphic:New("dwarf/ui/widgets/down-arrow-pressed-slider.png")
+		elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "germanic") then
+			g_bar = CGraphic:New("germanic/ui/widgets/pulldown-bar-normal.png")
+			g_dslider_n = CGraphic:New("germanic/ui/widgets/down-arrow-normal-slider.png")
+			g_dslider_p = CGraphic:New("germanic/ui/widgets/down-arrow-pressed-slider.png")
+		elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "teuton") then
+			g_bar = CGraphic:New("germanic/ui/widgets/pulldown-bar-normal.png")
+			g_dslider_n = CGraphic:New("germanic/ui/widgets/down-arrow-normal-slider.png")
+			g_dslider_p = CGraphic:New("germanic/ui/widgets/down-arrow-pressed-slider.png")
+		else
+			g_bar = CGraphic:New("dwarf/ui/widgets/pulldown-bar-normal.png")
+			g_dslider_n = CGraphic:New("dwarf/ui/widgets/down-arrow-normal-slider.png")
+			g_dslider_p = CGraphic:New("dwarf/ui/widgets/down-arrow-pressed-slider.png")
+		end
+		g_bar:Load()
+		g_dslider_n:Load()
+		g_dslider_p:Load()
+		dd:setItemImage(g_bar)
+		dd:setDownNormalImage(g_dslider_n)
+		dd:setDownPressedImage(g_dslider_p)
+		dd:setList(list)
+		dd:setActionCallback(function(s) PlaySound("click"); callback(dd, s) end)
+		dd:setBorderSize(0)
+
+		self:add(dd, x, y)
+		return dd
+	end
 
   function menu:addTextInputField(text, x, y, w)
     local b = TextField(text)
@@ -914,6 +939,7 @@ function RunSinglePlayerGameMenu()
 end
 
 function RunSinglePlayerCustomGameMenu()
+	SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
 	local menu = WarMenu()
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2

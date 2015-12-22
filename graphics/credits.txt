@@ -466,8 +466,13 @@ João Victor G. Costa (Jinn):
 /graphics/dwarf/ui/widgets/button-thin-small-pressed.png
 /graphics/dwarf/ui/widgets/button-thinest-medium-normal.png
 /graphics/dwarf/ui/widgets/button-thinest-medium-pressed.png
+/graphics/dwarf/ui/widgets/down-arrow-normal.png
+/graphics/dwarf/ui/widgets/down-arrow-pressed.png
+/graphics/dwarf/ui/widgets/down-arrow-normal-slider.png
+/graphics/dwarf/ui/widgets/down-arrow-pressed-slider.png
 /graphics/dwarf/ui/widgets/left-arrow-normal.png
 /graphics/dwarf/ui/widgets/left-arrow-pressed.png
+/graphics/dwarf/ui/widgets/pulldown-bar-normal.png
 /graphics/dwarf/ui/widgets/right-arrow-normal.png
 /graphics/dwarf/ui/widgets/right-arrow-pressed.png
 /graphics/dwarf/ui/widgets/radio-normal-selected.png
@@ -476,6 +481,10 @@ João Victor G. Costa (Jinn):
 /graphics/dwarf/ui/widgets/radio-pressed-unselected.png
 /graphics/dwarf/ui/widgets/slider-bar-normal.png
 /graphics/dwarf/ui/widgets/slider-knob.png
+/graphics/dwarf/ui/widgets/up-arrow-normal.png
+/graphics/dwarf/ui/widgets/up-arrow-pressed.png
+/graphics/dwarf/ui/widgets/up-arrow-normal-slider.png
+/graphics/dwarf/ui/widgets/up-arrow-pressed-slider.png
 /graphics/dwarf/units/miner_with_coal.png (modified from b_o's dwarven miner unit graphics)
 /graphics/dwarf/units/transport_ship.png
 /graphics/dwarf/units/transport_ship_water.png
@@ -550,8 +559,13 @@ João Victor G. Costa (Jinn):
 /graphics/germanic/ui/widgets/button-thin-small-pressed.png
 /graphics/germanic/ui/widgets/button-thinest-medium-normal.png
 /graphics/germanic/ui/widgets/button-thinest-medium-pressed.png
+/graphics/germanic/ui/widgets/down-arrow-normal.png
+/graphics/germanic/ui/widgets/down-arrow-pressed.png
+/graphics/germanic/ui/widgets/down-arrow-normal-slider.png
+/graphics/germanic/ui/widgets/down-arrow-pressed-slider.png
 /graphics/germanic/ui/widgets/left-arrow-normal.png
 /graphics/germanic/ui/widgets/left-arrow-pressed.png
+/graphics/germanic/ui/widgets/pulldown-bar-normal.png
 /graphics/germanic/ui/widgets/right-arrow-normal.png
 /graphics/germanic/ui/widgets/right-arrow-pressed.png
 /graphics/germanic/ui/widgets/radio-normal-selected.png
@@ -560,6 +574,10 @@ João Victor G. Costa (Jinn):
 /graphics/germanic/ui/widgets/radio-pressed-unselected.png
 /graphics/germanic/ui/widgets/slider-bar-normal.png
 /graphics/germanic/ui/widgets/slider-knob.png
+/graphics/germanic/ui/widgets/up-arrow-normal.png
+/graphics/germanic/ui/widgets/up-arrow-pressed.png
+/graphics/germanic/ui/widgets/up-arrow-normal-slider.png
+/graphics/germanic/ui/widgets/up-arrow-pressed-slider.png
 /graphics/gnome/buildings/barracks.png
 /graphics/gnome/buildings/barracks_shadow.png
 /graphics/gnome/buildings/farm.png
