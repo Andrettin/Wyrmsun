@@ -621,20 +621,20 @@ function AddMenuHelpers(menu)
 		local g_dslider_p
 		if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
 			g_bar = CGraphic:New("dwarf/ui/widgets/pulldown-bar-normal.png")
-			g_dslider_n = CGraphic:New("dwarf/ui/widgets/down-arrow-normal-slider.png")
-			g_dslider_p = CGraphic:New("dwarf/ui/widgets/down-arrow-pressed-slider.png")
+			g_dslider_n = CGraphic:New("dwarf/ui/widgets/down-arrow-normal.png")
+			g_dslider_p = CGraphic:New("dwarf/ui/widgets/down-arrow-pressed.png")
 		elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "germanic") then
 			g_bar = CGraphic:New("germanic/ui/widgets/pulldown-bar-normal.png")
-			g_dslider_n = CGraphic:New("germanic/ui/widgets/down-arrow-normal-slider.png")
-			g_dslider_p = CGraphic:New("germanic/ui/widgets/down-arrow-pressed-slider.png")
+			g_dslider_n = CGraphic:New("germanic/ui/widgets/down-arrow-normal.png")
+			g_dslider_p = CGraphic:New("germanic/ui/widgets/down-arrow-pressed.png")
 		elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "teuton") then
 			g_bar = CGraphic:New("germanic/ui/widgets/pulldown-bar-normal.png")
-			g_dslider_n = CGraphic:New("germanic/ui/widgets/down-arrow-normal-slider.png")
-			g_dslider_p = CGraphic:New("germanic/ui/widgets/down-arrow-pressed-slider.png")
+			g_dslider_n = CGraphic:New("germanic/ui/widgets/down-arrow-normal.png")
+			g_dslider_p = CGraphic:New("germanic/ui/widgets/down-arrow-pressed.png")
 		else
 			g_bar = CGraphic:New("dwarf/ui/widgets/pulldown-bar-normal.png")
-			g_dslider_n = CGraphic:New("dwarf/ui/widgets/down-arrow-normal-slider.png")
-			g_dslider_p = CGraphic:New("dwarf/ui/widgets/down-arrow-pressed-slider.png")
+			g_dslider_n = CGraphic:New("dwarf/ui/widgets/down-arrow-normal.png")
+			g_dslider_p = CGraphic:New("dwarf/ui/widgets/down-arrow-pressed.png")
 		end
 		g_bar:Load()
 		g_dslider_n:Load()

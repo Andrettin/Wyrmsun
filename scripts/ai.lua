@@ -77,14 +77,12 @@ function AiDifficultyForce(num, units, reset_force)
 		return
 	end
 	local transporter = false
-	--[[
 	for i = 1, table.getn(units)/2 do
-		if units[i*2 - 1] == AiTransporter() then
+		if units[i*2 - 1] == GetAiUnitType("transport-ship") then
 			transporter = true
 			break
 		end
 	end
-	--]]
 	local add
 	if transporter == true then
 		add = math.min(0, GameSettings.Difficulty - 2)

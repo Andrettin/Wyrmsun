@@ -28,6 +28,7 @@
 --
 
 local force_attacking = {}
+local water_build = {}
 
 function AiLandAttack()
 	if (force_attacking[AiPlayer()] == nil) then -- init variables
@@ -38,7 +39,13 @@ function AiLandAttack()
 			AiSetCollect({0, 45, 45, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0})
 		end
 	end
-	
+	if (water_build[AiPlayer()] == nil) then
+		if (GetTileTerrainFlagCount("water") >= (Map.Info.MapWidth * Map.Info.MapHeight) / 3) then -- if the map is composed of 2/3rds water or more, build docks
+			water_build[AiPlayer()] = true
+		else
+			water_build[AiPlayer()] = false
+		end
+	end
 	local town_halls = GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("town-hall"))
 	if (GetAiUnitType("stronghold") ~= nil) then
 		town_halls = town_halls + GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("stronghold"))
@@ -68,6 +75,9 @@ function AiLandAttack()
 			AiSet(GetAiUnitType("lumber-mill"), 1)
 		end
 		if (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("barracks")) >= 1 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("worker")) >= 10 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("lumber-mill")) >= 1 and (GameCycle >= 7500 or GameSettings.Difficulty ~= 1)) then
+			if (water_build[AiPlayer()] and GetAiUnitType("dock") ~= nil and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("dock")) < 1) then
+				AiSet(GetAiUnitType("dock"), 1)
+			end
 			if (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("barracks")) < 2) then
 				AiSet(GetAiUnitType("barracks"), 2)
 			end
@@ -199,8 +209,15 @@ function AiLandAttack()
 			if (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("infantry")) < 3 and force_attacking[AiPlayer()] == false) then
 				AiSet(GetAiUnitType("infantry"), 3)
 			end
-			if (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("infantry")) >= 3 and force_attacking[AiPlayer()] == false) then
-				AiForce(1, {GetAiUnitType("infantry"), 3})
+			if (water_build[AiPlayer()] and GetAiUnitType("transport-ship") ~= nil and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("transport-ship")) < 1) then
+				AiSet(GetAiUnitType("transport-ship"), 1)
+			end
+			if (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("infantry")) >= 3 and (water_build[AiPlayer()] == false or (GetAiUnitType("transport-ship") ~= nil and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("transport-ship")) >= 1)) and force_attacking[AiPlayer()] == false) then
+				if (water_build[AiPlayer()] == false) then
+					AiForce(1, {GetAiUnitType("infantry"), 3})
+				else
+					AiForce(1, {GetAiUnitType("infantry"), 3, GetAiUnitType("transport-ship"), 1})
+				end
 				AiAttackWithForce(1)
 				AiSet(GetAiUnitType("infantry"), 0)
 				force_attacking[AiPlayer()] = true
@@ -212,8 +229,15 @@ function AiLandAttack()
 			if (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("shooter")) < 1 and force_attacking[AiPlayer()] == false) then
 				AiSet(GetAiUnitType("shooter"), 1)
 			end
-			if (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("infantry")) >= 3 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("shooter")) >= 1 and force_attacking[AiPlayer()] == false) then
-				AiForce(1, {GetAiUnitType("infantry"), 3, GetAiUnitType("shooter"), 1})
+			if (water_build[AiPlayer()] and GetAiUnitType("transport-ship") ~= nil and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("transport-ship")) < 2) then
+				AiSet(GetAiUnitType("transport-ship"), 2)
+			end
+			if (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("infantry")) >= 3 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("shooter")) >= 1 and (water_build[AiPlayer()] == false or (GetAiUnitType("transport-ship") ~= nil and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("transport-ship")) >= 2)) and force_attacking[AiPlayer()] == false) then
+				if (water_build[AiPlayer()] == false) then
+					AiForce(1, {GetAiUnitType("infantry"), 3, GetAiUnitType("shooter"), 1})
+				else
+					AiForce(1, {GetAiUnitType("infantry"), 3, GetAiUnitType("shooter"), 1, GetAiUnitType("transport-ship"), 1})
+				end
 				AiAttackWithForce(1)
 				AiSet(GetAiUnitType("infantry"), 0)
 				AiSet(GetAiUnitType("shooter"), 0)
@@ -223,8 +247,15 @@ function AiLandAttack()
 			if (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("infantry")) < 6 and force_attacking[AiPlayer()] == false) then
 				AiSet(GetAiUnitType("infantry"), 6)
 			end
-			if (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("infantry")) >= 6 and force_attacking[AiPlayer()] == false) then
-				AiForce(1, {GetAiUnitType("infantry"), 6})
+			if (water_build[AiPlayer()] and GetAiUnitType("transport-ship") ~= nil and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("transport-ship")) < 2) then
+				AiSet(GetAiUnitType("transport-ship"), 2)
+			end
+			if (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("infantry")) >= 6 and (water_build[AiPlayer()] == false or (GetAiUnitType("transport-ship") ~= nil and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("transport-ship")) >= 2)) and force_attacking[AiPlayer()] == false) then
+				if (water_build[AiPlayer()] == false) then
+					AiForce(1, {GetAiUnitType("infantry"), 6})
+				else
+					AiForce(1, {GetAiUnitType("infantry"), 6, GetAiUnitType("transport-ship"), 2})
+				end
 				AiAttackWithForce(1)
 				AiSet(GetAiUnitType("infantry"), 0)
 				force_attacking[AiPlayer()] = true
@@ -236,8 +267,15 @@ function AiLandAttack()
 			if (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("shooter")) < 3 and force_attacking[AiPlayer()] == false) then
 				AiSet(GetAiUnitType("shooter"), 3)
 			end
-			if (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("infantry")) >= 6 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("shooter")) >= 3 and force_attacking[AiPlayer()] == false) then
-				AiForce(1, {GetAiUnitType("infantry"), 6, GetAiUnitType("shooter"), 3})
+			if (water_build[AiPlayer()] and GetAiUnitType("transport-ship") ~= nil and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("transport-ship")) < 3) then
+				AiSet(GetAiUnitType("transport-ship"), 3)
+			end
+			if (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("infantry")) >= 6 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("shooter")) >= 3 and (water_build[AiPlayer()] == false or (GetAiUnitType("transport-ship") ~= nil and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("transport-ship")) >= 3)) and force_attacking[AiPlayer()] == false) then
+				if (water_build[AiPlayer()] == false) then
+					AiForce(1, {GetAiUnitType("infantry"), 6, GetAiUnitType("shooter"), 3})
+				else
+					AiForce(1, {GetAiUnitType("infantry"), 6, GetAiUnitType("shooter"), 3, GetAiUnitType("transport-ship"), 3})
+				end
 				AiAttackWithForce(1)
 				AiSet(GetAiUnitType("infantry"), 0)
 				AiSet(GetAiUnitType("shooter"), 0)
@@ -262,8 +300,15 @@ function AiLandAttack()
 			if (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("siege-engine")) < 2 and force_attacking[AiPlayer()] == false) then
 				AiSet(GetAiUnitType("siege-engine"), 2)
 			end
-			if (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("infantry")) >= 12 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("shooter")) >= 6 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("siege-engine")) >= 2 and force_attacking[AiPlayer()] == false) then
-				AiForce(1, {GetAiUnitType("infantry"), 12, GetAiUnitType("shooter"), 6, GetAiUnitType("siege-engine"), 2})
+			if (water_build[AiPlayer()] and GetAiUnitType("transport-ship") ~= nil and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("transport-ship")) < 7) then
+				AiSet(GetAiUnitType("transport-ship"), 7)
+			end
+			if (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("infantry")) >= 12 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("shooter")) >= 6 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("siege-engine")) >= 2 and (water_build[AiPlayer()] == false or (GetAiUnitType("transport-ship") ~= nil and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("transport-ship")) >= 7)) and force_attacking[AiPlayer()] == false) then
+				if (water_build[AiPlayer()] == false) then
+					AiForce(1, {GetAiUnitType("infantry"), 12, GetAiUnitType("shooter"), 6, GetAiUnitType("siege-engine"), 2})
+				else
+					AiForce(1, {GetAiUnitType("infantry"), 12, GetAiUnitType("shooter"), 6, GetAiUnitType("siege-engine"), 2, GetAiUnitType("transport-ship"), 7})
+				end
 				AiAttackWithForce(1)
 				AiSet(GetAiUnitType("infantry"), 0)
 				AiSet(GetAiUnitType("shooter"), 0)
@@ -295,8 +340,15 @@ function AiLandAttack()
 			if (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("cavalry")) < 9 and force_attacking[AiPlayer()] == false) then
 				AiSet(GetAiUnitType("cavalry"), 9)
 			end
-			if (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("infantry")) >= 12 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("shooter")) >= 12 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("siege-engine")) >= 3 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("cavalry")) >= 9 and force_attacking[AiPlayer()] == false) then
-				AiForce(1, {GetAiUnitType("infantry"), 12, GetAiUnitType("shooter"), 12, GetAiUnitType("siege-engine"), 3, GetAiUnitType("cavalry"), 9})
+			if (water_build[AiPlayer()] and GetAiUnitType("transport-ship") ~= nil and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("transport-ship")) < 12) then
+				AiSet(GetAiUnitType("transport-ship"), 12)
+			end
+			if (GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("infantry")) >= 12 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("shooter")) >= 12 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("siege-engine")) >= 3 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("cavalry")) >= 9 and (water_build[AiPlayer()] == false or (GetAiUnitType("transport-ship") ~= nil and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("transport-ship")) >= 12)) and force_attacking[AiPlayer()] == false) then
+				if (water_build[AiPlayer()] == false) then
+					AiForce(1, {GetAiUnitType("infantry"), 12, GetAiUnitType("shooter"), 12, GetAiUnitType("siege-engine"), 3, GetAiUnitType("cavalry"), 9})
+				else
+					AiForce(1, {GetAiUnitType("infantry"), 12, GetAiUnitType("shooter"), 12, GetAiUnitType("siege-engine"), 3, GetAiUnitType("cavalry"), 9, GetAiUnitType("transport-ship"), 12})
+				end
 				AiAttackWithForce(1)
 				AiSet(GetAiUnitType("infantry"), 0)
 				AiSet(GetAiUnitType("shooter"), 0)

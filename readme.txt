@@ -231,6 +231,9 @@ https://github.com/Andrettin/Wyrmsun
 - 1.9.0
 -----------------------------------------------------------------------
 
+* AI
+- Updated the AI to make use of ships.
+
 * Buildings
 - The Dwarven and Teuton Dock buildings are now buildable in RTS mode.
 
