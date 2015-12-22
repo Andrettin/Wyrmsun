@@ -61,7 +61,7 @@ function RunTechTreeMenu(civilization_number)
 	civilization = string.lower(civilization)
 
 	if (RunningScenario == false) then
-		SetPlayerData(GetThisPlayer(), "RaceName", civilization)
+		SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
 	end
 	
 	tech_points = GetCivilizationTechnologyPoints(civilization)

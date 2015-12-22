@@ -241,6 +241,12 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed issue which caused part of the game screen to be black after playing the Tomb of Durahn Eikinskjaldi quest.
 - Added drop-down graphics for the Dwarves and Germanics (by Jinn).
 
+* Quests
+- The Battle of Magetobria quest (Teuton) now gives 3 technology points instead of 2.
+- The Razing of Opitergium quest (Teuton) now gives 3 technology points instead of 2.
+- The A Rocky Home quest (Dwarf) now gives 2 technology points instead of 1.
+- The Treasures of Svarinshaug quest (Dwarf) now gives 2 technology points instead of 1.
+
 * Units
 - Added the Transport ship for the Dwarves (graphics by Jinn).
 - Added the Kogge (transport ship) for the Teutons (graphics by Jinn).
