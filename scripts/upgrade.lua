@@ -129,6 +129,11 @@ function DefineUpgrade(upgrade_ident, data)
 			AddUpgradeRequiredAbility(upgrade_ident, data.RequiredAbilities[i])
 		end
 	end
+	if (data.WeaponClasses ~= nil) then
+		for i = 1,table.getn(data.WeaponClasses) do
+			AddUpgradeWeaponClass(upgrade_ident, GetItemClassIdByName(data.WeaponClasses[i]))
+		end
+	end
 	
 	if (upgrade.Ability) then
 		DefineAllow(upgrade_ident, "AAAAAAAAAAAAAAAA")
@@ -415,7 +420,8 @@ end
 DefineUpgrade("upgrade-axe-mastery", {
 	Name = _("Axe Mastery"),
 	Icon = "icon-axe-mastery",
-	Ability = true
+	Ability = true,
+	WeaponClasses = {"axe"}
 })
 
 DefineUpgrade("upgrade-critical-strike", {
@@ -437,16 +443,31 @@ DefineUpgrade("upgrade-eagle-eye", {
 	Ability = true
 })
 
+DefineUpgrade("upgrade-mace-mastery", {
+	Name = _("Mace Mastery"),
+	Icon = "icon-mace-mastery",
+	Ability = true,
+	WeaponClasses = {"mace"}
+})
+
 DefineUpgrade("upgrade-portent", {
 	Name = _("Portent"),
 	Icon = "icon-portent",
 	Ability = true
 })
 
+DefineUpgrade("upgrade-spear-mastery", {
+	Name = _("spear Mastery"),
+	Icon = "icon-spear-mastery",
+	Ability = true,
+	WeaponClasses = {"spear"}
+})
+
 DefineUpgrade("upgrade-sword-mastery", {
 	Name = _("Sword Mastery"),
 	Icon = "icon-sword-mastery",
-	Ability = true
+	Ability = true,
+	WeaponClasses = {"sword", "thrusting-sword"}
 })
 
 DefineModifier("upgrade-axe-mastery",
@@ -463,6 +484,14 @@ DefineModifier("upgrade-deadly-precision",
 
 DefineModifier("upgrade-eagle-eye",
 	{"Accuracy", 2}
+)
+
+DefineModifier("upgrade-mace-mastery",
+	{"BasicDamage", 2}
+)
+
+DefineModifier("upgrade-spear-mastery",
+	{"BasicDamage", 2}
 )
 
 DefineModifier("upgrade-sword-mastery",

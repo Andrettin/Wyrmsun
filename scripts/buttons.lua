@@ -46,7 +46,19 @@ Load("scripts/civilizations/teuton/buttons.lua")
 --    Key = key, Hint = hint, ForUnit = units)
 --
 
--- general cancel button ------------------------------------------------------
+-- General Commands ------------------------------------------------------
+
+DefineButton( { Pos = 3, Level = 0, Icon = "icon-spear",
+	Action = "attack",
+	Key = "a", Hint = _("~!Attack"), Popup = "popup-commands",
+	ForUnit = {
+		"unit-goblin-worker", "unit-goblin-thief", "unit-goblin-spearman",
+		"unit-germanic-spearman", "unit-teuton-spearman",
+		"goblin-group"
+	}
+})
+
+-- General Cancel Buttons ------------------------------------------------------
 
 DefineButton( { Pos = 16, Level = 9, Icon = "icon-cancel",
 	Action = "cancel",
@@ -90,10 +102,20 @@ DefineButton( { Pos = 13, Level = 0, Icon = "icon-level-up",
 	}
 } )
 
-DefineButton( { Pos = 1, Level = 1, Icon = "icon-axe-mastery",
+DefineButton( { Pos = 1, Level = 1, Icon = "icon-mace-mastery",
+	Action = "learn-ability", Value = "upgrade-mace-mastery",
+	Key = "m", Hint = "Learn ~!Mace Mastery", Popup = "popup-commands",
+	Description = "Mace Mastery is a passive ability that increases damage with maces by 2.",
+	ForUnit = {
+		"unit-dwarven-thane",
+		"unit-surghan-mercenary-thane"
+	}
+} )
+
+DefineButton( { Pos = 2, Level = 1, Icon = "icon-axe-mastery",
 	Action = "learn-ability", Value = "upgrade-axe-mastery",
 	Key = "x", Hint = "Learn A~!xe Mastery", Popup = "popup-commands",
-	Description = "Axe Mastery is a passive ability that increases the axe-wielding unit's damage by 2.",
+	Description = "Axe Mastery is a passive ability that increases damage with axes by 2.",
 	ForUnit = {
 		"unit-dwarven-thane",
 		"unit-dwarven-yale-rider",
@@ -101,10 +123,10 @@ DefineButton( { Pos = 1, Level = 1, Icon = "icon-axe-mastery",
 	}
 } )
 
-DefineButton( { Pos = 1, Level = 1, Icon = "icon-sword-mastery-bronze",
+DefineButton( { Pos = 3, Level = 1, Icon = "icon-sword-mastery-bronze",
 	Action = "learn-ability", Value = "upgrade-sword-mastery",
 	Key = "w", Hint = "Learn S~!word Mastery", Popup = "popup-commands",
-	Description = "Sword Mastery is a passive ability that increases the sword-wielding unit's damage by 2.",
+	Description = "Sword Mastery is a passive ability that increases damage with swords by 2.",
 	ForUnit = {
 		"unit-germanic-warrior",
 		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-teuton-ritter",
@@ -112,11 +134,11 @@ DefineButton( { Pos = 1, Level = 1, Icon = "icon-sword-mastery-bronze",
 	}
 } )
 
-DefineButton( { Pos = 1, Level = 1, Icon = "icon-sword-mastery",
+DefineButton( { Pos = 3, Level = 1, Icon = "icon-sword-mastery",
 	Action = "learn-ability", Value = "upgrade-sword-mastery",
 	Allowed = "check-upgrade", AllowArg = {"upgrade-teuton-spatha"},
 	Key = "w", Hint = "Learn S~!word Mastery", Popup = "popup-commands",
-	Description = "Sword Mastery is a passive ability that increases the sword-wielding unit's damage by 2.",
+	Description = "Sword Mastery is a passive ability that increases damage with swords by 2.",
 	ForUnit = {
 		"unit-germanic-warrior",
 		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-teuton-ritter",
@@ -124,7 +146,17 @@ DefineButton( { Pos = 1, Level = 1, Icon = "icon-sword-mastery",
 	}
 } )
 
-DefineButton( { Pos = 2, Level = 1, Icon = "icon-critical-strike",
+DefineButton( { Pos = 4, Level = 1, Icon = "icon-spear-mastery",
+	Action = "learn-ability", Value = "upgrade-spear-mastery",
+	Key = "s", Hint = "Learn ~!Spear Mastery", Popup = "popup-commands",
+	Description = "Spear Mastery is a passive ability that increases damage with spears by 2.",
+	ForUnit = {
+		"unit-goblin-spearman",
+		"unit-germanic-spearman", "unit-teuton-spearman"
+	}
+} )
+
+DefineButton( { Pos = 5, Level = 1, Icon = "icon-critical-strike",
 	Action = "learn-ability", Value = "upgrade-critical-strike",
 	Key = "c", Hint = "Learn ~!Critical Strike", Popup = "popup-commands",
 	Description = "Critical Strike is a passive ability that provides a 10% chance to deal double damage in combat. In No Randomness mode it provides a 10% damage bonus instead.",
@@ -140,7 +172,7 @@ DefineButton( { Pos = 2, Level = 1, Icon = "icon-critical-strike",
 	}
 } )
 
-DefineButton( { Pos = 2, Level = 1, Icon = "icon-deadly-precision",
+DefineButton( { Pos = 5, Level = 1, Icon = "icon-deadly-precision",
 	Action = "learn-ability", Value = "upgrade-deadly-precision",
 	Key = "d", Hint = "Learn ~!Deadly Precision", Popup = "popup-commands",
 	Description = "Deadly Precision is a passive ability that increases critical strike chance by 10%. In No Randomness mode it provides a 10% damage bonus instead.",
@@ -156,7 +188,7 @@ DefineButton( { Pos = 2, Level = 1, Icon = "icon-deadly-precision",
 	}
 } )
 
-DefineButton( { Pos = 3, Level = 1, Icon = "icon-eagle-eye",
+DefineButton( { Pos = 6, Level = 1, Icon = "icon-eagle-eye",
 	Action = "learn-ability", Value = "upgrade-eagle-eye",
 	Key = "e", Hint = "Learn Eagle ~!Eye", Popup = "popup-commands",
 	Description = "Eagle Eye is a passive ability that increases accuracy by 2.",

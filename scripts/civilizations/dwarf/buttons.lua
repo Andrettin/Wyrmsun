@@ -34,7 +34,7 @@
 --		['allowed check ['values]] Key = key, Hint = hint 'for-unit", "units)
 --
 
--- general commands -- almost all", "units have it -------------------------------
+-- general commands -- almost all units have it -------------------------------
 
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-boots",
 	Action = "move",

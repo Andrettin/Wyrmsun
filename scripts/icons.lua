@@ -46,6 +46,12 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-spear",
+	Size = {46, 38},
+	File = "neutral/icons/spear.png"
+})
+
+DefineIcon({
 	Name = "icon-amulet",
 	Size = {46, 38},
 	File = "neutral/icons/amulet.png"
@@ -121,6 +127,18 @@ DefineIcon({
 	Name = "icon-axe-mastery",
 	Size = {46, 38},
 	File = "neutral/icons/axe_mastery.png"
+})
+
+DefineIcon({
+	Name = "icon-mace-mastery",
+	Size = {46, 38},
+	File = "neutral/icons/mace_mastery.png"
+})
+
+DefineIcon({
+	Name = "icon-spear-mastery",
+	Size = {46, 38},
+	File = "neutral/icons/spear_mastery.png"
 })
 
 DefineIcon({
@@ -982,6 +1000,12 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-stun",
+	Size = {46, 38},
+	File = "neutral/icons/stun.png"
+})
+
+DefineIcon({
 	Name = "icon-goblin-town-hall",
 	Size = {46, 38},
 	File = "goblin/icons/town_hall.png"
@@ -1051,12 +1075,6 @@ DefineIcon({
 	Name = "icon-greebo",
 	Size = {46, 38},
 	File = "goblin/icons/greebo.png"
-})
-
-DefineIcon({
-	Name = "icon-goblin-spear-1",
-	Size = {46, 38},
-	File = "goblin/icons/spear_1.png"
 })
 
 DefineIcon({

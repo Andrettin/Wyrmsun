@@ -307,9 +307,6 @@ b_o:
 badbuckle (Cenk Açan):
 /graphics/teuton/units/ritter.png (uses b_o's horse)
 
-Battle for Wesnoth Team:
-/graphics/goblin/icons/spear_1.png (later modified by b_o and Jinn)
-
 Bos Wars Team:
 /graphics/missiles/green_cross.png
 /graphics/missiles/red_cross.png
@@ -1130,7 +1127,11 @@ Vladislav "iDreamRunner":
 /graphics/neutral/icons/cauldron.png
 /graphics/neutral/icons/cheese.png
 /graphics/neutral/icons/chest.png
+/graphics/neutral/icons/mace_mastery.png (modified from Jinn's axe mastery icon)
 /graphics/neutral/icons/ring.png
+/graphics/neutral/icons/spear.png
+/graphics/neutral/icons/spear_mastery.png (modified from Jinn's axe mastery icon)
+/graphics/neutral/icons/stun.png
 /graphics/neutral/items/amulet.png
 /graphics/neutral/items/boots.png
 /graphics/teuton/units/cherusci_shield.png

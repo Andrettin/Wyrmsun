@@ -231,6 +231,10 @@ https://github.com/Andrettin/Wyrmsun
 - 1.9.0
 -----------------------------------------------------------------------
 
+* Abilities
+- Added Mace Mastery passive ability (learnable by Dwarven Stonelords) (icon by Vladislav "iDreamRunner" and Jinn).
+- Added Spear Mastery passive ability (learnable by Goblin Spearmen) (icon by Vladislav "iDreamRunner" and Jinn).
+
 * AI
 - Updated the AI to make use of ships.
 
@@ -245,6 +249,7 @@ https://github.com/Andrettin/Wyrmsun
 * Miscellaneous
 - Fixed issue which caused part of the game screen to be black after playing the Tomb of Durahn Eikinskjaldi quest.
 - Added drop-down graphics for the Dwarves and Germanics (by Jinn).
+- New spear icon (icon by Vladislav "iDreamRunner").
 
 * Quests
 - The Battle of Magetobria quest (Teuton) now gives 3 technology points instead of 2.

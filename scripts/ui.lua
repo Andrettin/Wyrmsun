@@ -616,10 +616,10 @@ DefinePanelContents(
 	{ Pos = {184, 116}, Condition = {Accuracy = "only", Building = "false"},
 		More = {"Text", {Text = String(ActiveUnitVar("Accuracy"))}}
 	},
-	{ Pos = {9, 144}, Condition = {AttackRange = "only", SaveCargo = "false"}, -- SaveCargo is used here as a proxy for knowing whether the unit is a transporter or not (transporters don't have their own range, with their range being used as a range bonus for the units in them instead)
+	{ Pos = {9, 144}, Condition = {AttackRange = "only", SaveCargo = "false", BasicDamage = "only"}, -- SaveCargo is used here as a proxy for knowing whether the unit is a transporter or not (transporters don't have their own range, with their range being used as a range bonus for the units in them instead)
 		More = {"Text", {Text = "Range:"}}
 	},
-	{ Pos = {76, 144}, Condition = {AttackRange = "only", SaveCargo = "false"},
+	{ Pos = {76, 144}, Condition = {AttackRange = "only", SaveCargo = "false", BasicDamage = "only"},
 		More = {"Text", {Text = String(ActiveUnitVar("AttackRange"))}}
 	},
 	{ Pos = {115, 144}, Condition = {SightRange = "only", Building = "false"},

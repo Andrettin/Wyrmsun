@@ -213,6 +213,7 @@ DefineLanguageNoun("Mann", { -- Source: Alaric Hall, "The Meanings of Elf and El
 	Civilization = "old-english",
 	Meaning = "Person",
 	SingularNominative = "Mann",
+	PluralNominative = "Menn", -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 197.
 	Gender = "Masculine"
 })
 
@@ -312,6 +313,18 @@ DefineLanguageNoun("Sealticge", { -- Source: Alaric Hall, "The Meanings of Elf a
 	Gender = "Feminine" -- presumably, given the source is talking about occupations for women
 })
 
+DefineLanguageNoun("Sperehealf", { -- also given as Sperehand; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 197.
+	Civilization = "old-english",
+	Meaning = "Spear-Side, Patrilineal Ancestry",
+	SingularNominative = "Sperehealf"
+})
+
+DefineLanguageNoun("Spinelhealf", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 197.
+	Civilization = "old-english",
+	Meaning = "Spindle-Side",
+	SingularNominative = "Spinelhealf"
+})
+
 DefineLanguageNoun("Þunorrad", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 169.
 	Civilization = "old-english",
 	Meaning = "Peal of Thunder", -- literally: "thunder-ride" or "Thunor-ride"
@@ -337,6 +350,12 @@ DefineLanguageNoun("Wælcyrige", { -- Source: Sean Crist, "An Analysis of *z los
 	Gender = "feminine"
 })
 
+DefineLanguageNoun("Wæpnedmann", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 197.
+	Civilization = "old-english",
+	Meaning = "Armed Person",
+	SingularNominative = "Wæpnedmann"
+})
+
 DefineLanguageNoun("Weg", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
 	Civilization = "old-english",
 	Meaning = "Way",
@@ -348,6 +367,12 @@ DefineLanguageNoun("Wif", { -- Source: Alaric Hall, "The Meanings of Elf and Elv
 	Meaning = "Woman",
 	SingularNominative = "Wif",
 	Gender = "Neuter"
+})
+
+DefineLanguageNoun("Wifmann", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 197.
+	Civilization = "old-english",
+	Meaning = "Woman-Person",
+	SingularNominative = "Wifmann"
 })
 
 DefineLanguageNoun("Wihte", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 102.

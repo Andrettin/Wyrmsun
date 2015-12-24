@@ -41,9 +41,9 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-germanic-short-sword",
 	Key = "a", Hint = _("~!Attack"), Popup = "popup-commands",
 	ForUnit = {
 		"unit-germanic-worker",
-		"unit-germanic-warrior", "unit-germanic-spearman",
+		"unit-germanic-warrior",
 		"unit-teuton-worker",
-		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-teuton-spearman", "unit-teuton-ritter",
+		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-teuton-ritter",
 --		"unit-teuton-kogge",
 		"germanic-group", "teuton-group"
 	}

@@ -34,13 +34,13 @@ Load("scripts/language_greek.lua")
 Load("scripts/language_dwarven.lua")
 
 -- these are kept for reference, but not used
-Load("scripts/language_english.lua")
-Load("scripts/language_finnish.lua")
-Load("scripts/language_lithuanian.lua")
-Load("scripts/language_middle_english.lua")
-Load("scripts/language_old_english.lua")
-Load("scripts/language_welsh.lua")
-Load("scripts/language_west_germanic.lua")
+--Load("scripts/language_english.lua")
+--Load("scripts/language_finnish.lua")
+--Load("scripts/language_lithuanian.lua")
+--Load("scripts/language_middle_english.lua")
+--Load("scripts/language_old_english.lua")
+--Load("scripts/language_welsh.lua")
+--Load("scripts/language_west_germanic.lua")
 
 DefineCivilizationLanguage("old-high-german", -- Old High German
 	"nouns", {
@@ -272,6 +272,14 @@ DefineCivilizationLanguage("old-high-german", -- Old High German
 		}
 	}
 )
+
+DefineLanguageNoun("Hagazussa", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 200.
+	Civilization = "old-high-german",
+	Meaning = "Travelling Actor or Minstrel who Performs in Women's Clothing",
+	SingularNominative = "Hagazussa",
+	PluralNominative = "Hagazussan"
+})
+
 
 DefineCivilizationLanguage("middle-high-german", -- Middle High German
 	"nouns", {

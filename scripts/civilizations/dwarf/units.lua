@@ -813,5 +813,6 @@ DefineUnitType("unit-surghan-mercenary-thane", { Name = _("Surghan Mercenary"),
 	Civilization = "dwarf",
 	Image = {"file", "dwarf/units/thane.png", "size", {72, 72}},
 	Animations = "animations-dwarven-axefighter", Icon = "icon-surghan-mercenary-thane",
-	Mercenary = true
+	Mercenary = true,
+	Variations = {}
 } )
