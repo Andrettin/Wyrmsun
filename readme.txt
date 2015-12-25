@@ -266,6 +266,7 @@ https://github.com/Andrettin/Wyrmsun
 * Units
 - Added the Transport ship for the Dwarves (graphics by Jinn).
 - Added the Kogge (transport ship) for the Teutons (graphics by Jinn).
+- Added a new tip popup saying that units can earn experience, when an organic unit is first clicked.
 
 -----------------------------------------------------------------------
 - 1.8.6
