@@ -59,24 +59,12 @@ if not (ui_loaded_first_time) then
 		end
 		DefineDecorations({Index = "CarryResource", HideNeutral = false, CenterX = true,OffsetPercent = {50, 100},Method = {"sprite", {"sprite-mana"}}})
 	end
-	--DefineSprites({Name = "sprite-shadow", File = "missiles/unit_shadow.png", Offset = {3, 42}, Size = {32, 32}})
-	--DefineSprites({Name = "sprite-spell", File = "ui/bloodlust,haste,slow,invisible,shield.png", Offset = {1, 1}, Size = {16, 16}})
 	DefineSprites({Name = "sprite-slow", File = "ui/slow.png", Offset = {1, 1}, Size = {16, 16}})
 	DefineSprites({Name = "sprite-level-up", File = "ui/level_up.png", Offset = {1, 1}, Size = {16, 16}})
 
-	--[[
-	DefineDecorations({Index = "Bloodlust", ShowOpponent = true,
-	  Offset = {0, 0}, Method = {"static-sprite", {"sprite-spell", 0}}})
-	DefineDecorations({Index = "Haste", ShowOpponent = true,
-	  Offset = {0, 16}, Method = {"static-sprite", {"sprite-spell", 1}}})
-	DefineDecorations({Index = "Invisible", ShowOpponent = true,
-	  Offset = {16, 16}, Method = {"static-sprite", {"sprite-spell", 3}}})
-	DefineDecorations({Index = "UnholyArmor", ShowOpponent = true,
-	  Offset = {16, 0}, Method = {"static-sprite", {"sprite-spell", 4}}})
-	--]]
-	--DefineDecorations({Index = "ShadowFly", ShowOpponent = true, ShowWhenMax = true, ShowWhenNull = true,
-	--  Offset = {0, 0}, Method = {"sprite", {"sprite-shadow"}}})
 	DefineDecorations({Index = "Slow", ShowOpponent = true,
+	  Offset = {0, 16}, Method = {"static-sprite", {"sprite-slow", 0}}})
+	DefineDecorations({Index = "Stun", ShowOpponent = true,
 	  Offset = {0, 16}, Method = {"static-sprite", {"sprite-slow", 0}}})
 	DefineDecorations({Index = "LevelUp", ShowOpponent = false, HideAllied = true,
 	  Offset = {16, 16}, Method = {"static-sprite", {"sprite-level-up", 0}}})

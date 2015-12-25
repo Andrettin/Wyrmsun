@@ -244,12 +244,12 @@ https://github.com/Andrettin/Wyrmsun
 
 * Items
 - Added "of Slaughter" magic suffix for weapons (+3 damage).
-- The unique broad sword Laevatein now has +7 as its effect.
+- The unique broad sword Laevatein now has +7 damage as its effect.
 
 * Miscellaneous
 - Fixed issue which caused part of the game screen to be black after playing the Tomb of Durahn Eikinskjaldi quest.
 - Added drop-down graphics for the Dwarves and Germanics (by Jinn).
-- New spear icon (icon by Vladislav "iDreamRunner").
+- New spear icon (by Vladislav "iDreamRunner").
 
 * Quests
 - The Battle of Magetobria quest (Teuton) now gives 3 technology points instead of 2.

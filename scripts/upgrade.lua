@@ -463,6 +463,12 @@ DefineUpgrade("upgrade-spear-mastery", {
 	WeaponClasses = {"spear"}
 })
 
+DefineUpgrade("upgrade-stun", {
+	Name = _("Stun"),
+	Icon = "icon-stun",
+	Ability = true
+})
+
 DefineUpgrade("upgrade-sword-mastery", {
 	Name = _("Sword Mastery"),
 	Icon = "icon-sword-mastery",

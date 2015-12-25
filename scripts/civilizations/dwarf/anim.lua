@@ -67,21 +67,25 @@ DefineAnimations("animations-dwarven-militia", {
 --
 
 DefineAnimations("animations-dwarven-axefighter", {
-  Still = UnitStill,
-  Move = UnitMove,
-  Attack = UnitMeleeAttack,
-  Death = UnitDeath,
-  SpellCast = {"unbreakable begin",
-	"if-var s_spell-axe-twirl == 1 axe_twirl",
-	"attack",
-	"goto end",
-	"label axe_twirl",
-	"frame 25", "wait 3", "frame 30", "wait 3", "frame 35", "wait 3",
-	"frame 40", "wait 2", "rotate -1", "wait 2", "rotate -1", "attack", "sound axe-attack", "wait 2", "rotate -1", "wait 2", "rotate -1", "wait 2", "rotate -1", "wait 2", "rotate -1", "wait 2", "rotate -1", "wait 2", "rotate -1",
-	"wait 2", "frame 0", "goto end",
-	"label end",
-	"unbreakable end",
-	"wait 1",}
+	Still = UnitStill,
+	Move = UnitMove,
+	Attack = UnitMeleeAttack,
+	Death = UnitDeath,
+	--[[
+	SpellCast = {
+		"unbreakable begin",
+		"if-var s_spell-axe-twirl == 1 axe_twirl",
+		"attack",
+		"goto end",
+		"label axe_twirl",
+		"frame 25", "wait 3", "frame 30", "wait 3", "frame 35", "wait 3",
+		"frame 40", "wait 2", "rotate -1", "wait 2", "rotate -1", "attack", "sound axe-attack", "wait 2", "rotate -1", "wait 2", "rotate -1", "wait 2", "rotate -1", "wait 2", "rotate -1", "wait 2", "rotate -1", "wait 2", "rotate -1",
+		"wait 2", "frame 0", "goto end",
+		"label end",
+		"unbreakable end",
+		"wait 1",
+	}
+	--]]
 })
 
 --

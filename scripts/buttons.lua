@@ -148,7 +148,7 @@ DefineButton( { Pos = 3, Level = 1, Icon = "icon-sword-mastery",
 
 DefineButton( { Pos = 4, Level = 1, Icon = "icon-spear-mastery",
 	Action = "learn-ability", Value = "upgrade-spear-mastery",
-	Key = "s", Hint = "Learn ~!Spear Mastery", Popup = "popup-commands",
+	Key = "p", Hint = "Learn S~!pear Mastery", Popup = "popup-commands",
 	Description = "Spear Mastery is a passive ability that increases damage with spears by 2.",
 	ForUnit = {
 		"unit-goblin-spearman",
@@ -200,6 +200,20 @@ DefineButton( { Pos = 6, Level = 1, Icon = "icon-eagle-eye",
 		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-teuton-spearman", "unit-teuton-archer", "unit-teuton-ritter",
 		"unit-gnomish-recruit",
 		"unit-goblin-thief", "unit-goblin-spearman", "unit-goblin-archer",
+		"unit-surghan-mercenary-thane"
+	}
+} )
+
+DefineButton( { Pos = 7, Level = 1, Icon = "icon-stun",
+	Action = "learn-ability", Value = "upgrade-stun",
+	Key = "u", Hint = "Learn St~!un", Popup = "popup-commands",
+	Description = "Stun is an active ability which does a stunning attack on a target, leaving it paralyzed for a few moments.",
+	ForUnit = {
+		"unit-dwarven-thane",
+		"unit-dwarven-yale-rider",
+		"unit-germanic-warrior",
+		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-teuton-ritter",
+		"unit-gnomish-recruit",
 		"unit-surghan-mercenary-thane"
 	}
 } )
@@ -261,3 +275,20 @@ DefineButton( { Pos = 5, Level = 0, Icon = "icon-red-potion",
 	Key = "h", Hint = _("Buy Potion of ~!Healing"), Popup = "popup-item",
 	ForUnit = {"unit-teuton-stronghold", "unit-dwarven-stronghold"}
 } )
+
+-- Special Abilities ---------------------------------------------------
+
+DefineButton( { Pos = 6, Level = 0, Icon = "icon-stun",
+	Action = "cast-spell", Value = "spell-stun",
+	Allowed = "check-individual-upgrade", AllowArg = {"upgrade-stun"},
+	Description = "Stun is an active ability which does a stunning attack on a target, leaving it paralyzed for a few moments.",
+	Key = "u", Hint = _("St~!un"), Popup = "popup-commands",
+	ForUnit = {
+		"unit-dwarven-thane",
+		"unit-dwarven-yale-rider",
+		"unit-germanic-warrior",
+		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-teuton-ritter",
+		"unit-gnomish-recruit",
+		"unit-surghan-mercenary-thane"
+	}
+})

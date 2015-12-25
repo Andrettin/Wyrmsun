@@ -74,20 +74,23 @@ DefineButton( { Pos = 5, Level = 0, Icon = "icon-harvest",
 -- Special Abilities ---------------------------------------------------
 
 DefineButton( { Pos = 4, Level = 0, Icon = "icon-herbal-cure",
-  Action = "cast-spell", Value = "spell-herbal-cure",
-  Key = "h", Hint = _("~!Herbal Cure (per 1 HP)"), Popup = "popup-commands",
-  ForUnit = {"unit-gnomish-herbalist"} } )
+	Action = "cast-spell", Value = "spell-herbal-cure",
+	Key = "h", Hint = _("~!Herbal Cure (per 1 HP)"), Popup = "popup-commands",
+	ForUnit = {"unit-gnomish-herbalist"}
+})
 
 DefineButton( { Pos = 1, Level = 1, Icon = "icon-portent",
-  Action = "learn-ability", Value = "upgrade-portent",
-  Key = "p", Hint = _("Learn ~!Portent"), Popup = "popup-commands",
-  ForUnit = {"unit-gnomish-herbalist"} } )
+	Action = "learn-ability", Value = "upgrade-portent",
+	Key = "p", Hint = _("Learn ~!Portent"), Popup = "popup-commands",
+	ForUnit = {"unit-gnomish-herbalist"}
+})
 
 DefineButton( { Pos = 5, Level = 0, Icon = "icon-portent",
-  Action = "cast-spell", Value = "spell-portent",
-  Allowed = "check-individual-upgrade", AllowArg = {"upgrade-portent"},
-  Key = "p", Hint = _("~!Portent"), Popup = "popup-commands",
-  ForUnit = {"unit-gnomish-herbalist"} } )
+	Action = "cast-spell", Value = "spell-portent",
+	Allowed = "check-individual-upgrade", AllowArg = {"upgrade-portent"},
+	Key = "p", Hint = _("~!Portent"), Popup = "popup-commands",
+	ForUnit = {"unit-gnomish-herbalist"}
+})
 
 -- Building Commands -----------------------------------------------
 

@@ -10,7 +10,7 @@
 --
 --      spells.lua - The spells.
 --
---      (c) Copyright 1998-2005 by Joris Dauphin and Jimmy Salmon.
+--      (c) Copyright 1998-2015 by Joris Dauphin, Jimmy Salmon and Andrettin.
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -139,3 +139,20 @@ DefineSpell("spell-forgetfulness",
 	"sound-when-cast", "magic-holy"
 )
 
+DefineSpell("spell-stun",
+	"showname", _("Stun"),
+	"manacost", 50,
+	"range", 1,
+	"target", "unit",
+	"action", {
+		{"adjust-variable", {Stun = 200}},
+		{"adjust-vitals", "hit-points", -10},
+	},
+	"condition", {
+		"organic", "only",
+		"Building", "false"
+	}
+--	"sound-when-cast", "foraging",
+--	"autocast", {"range", 6, "condition", {"alliance", "only", "HitPoints", {MaxValuePercent = 90}}},
+--	"ai-cast", {"range", 6, "condition", {"alliance", "only", "HitPoints", {MaxValuePercent = 90}}}
+)
