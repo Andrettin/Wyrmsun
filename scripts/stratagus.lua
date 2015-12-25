@@ -647,6 +647,22 @@ function StandardTriggers()
 			)
 		end
 		
+		if (GetArrayIncludes(wyr.preferences.TipsShown, "Experience") == false) then
+			AddTrigger(
+				function()
+					if (table.getn(GetSelectedUnits()) > 0 and GetUnitBoolFlag(GetSelectedUnits()[1], "organic") and GetUnitVariable(GetSelectedUnits()[1], "Player") == GetThisPlayer()) then
+						return true
+					else
+						return false
+					end
+				end,
+				function()
+					Tip("Experience", "Organic units you control can earn experience through combat. When an enemy is killed, experience is divided between your nearby organic units. Once enough experience has been attained, your unit will level up, allowing it to upgrade to a better unit type or to learn a new ability.")
+					return false
+				end
+			)
+		end
+		
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Bura") == false) then
 			AddTrigger(
 				function()
