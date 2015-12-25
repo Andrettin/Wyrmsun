@@ -329,7 +329,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-norse-runewriting",
 	ForUnit = {"unit-teuton-stronghold"}
 } )
 
-DefineButton( { Pos = 4, Level = 0, Icon = "icon-cauldron",
+DefineButton( { Pos = 3, Level = 0, Icon = "icon-cauldron",
 	Action = "research", Value = "upgrade-teuton-alchemy",
 	Allowed = "check-single-research",
 	Description = _("+1 Fire Damage for Skutans, +5 Fire Damage for Catapults."),

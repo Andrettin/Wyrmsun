@@ -506,7 +506,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-norse-runewriting",
 	ForUnit = {"unit-dwarven-stronghold"}
 } )
 
-DefineButton( { Pos = 4, Level = 0, Icon = "icon-cauldron",
+DefineButton( { Pos = 3, Level = 0, Icon = "icon-cauldron",
 	Action = "research", Value = "upgrade-dwarven-alchemy",
 	Allowed = "check-single-research",
 	Description = _("+1 Fire Damage for Scouts and Gryphon Riders, +5 Fire Damage for Ballistas."),
