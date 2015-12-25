@@ -22,7 +22,7 @@ Features:
 - Retro-style graphics
 - 2 playable civilizations, and a number of non-playable ones
 - 23 quests to play, earning technology points which can be used to obtain new units, buildings and technologies
-- 39 units, 34 buildings and 21 technologies
+- Dozens of units, buildings and technologies
 - Personal names and traits for units
 - Units can earn experience, being able to upgrade to new unit types or acquire new abilities upon level-up
 - Persistent heroes, who carry over their level, abilities and items throughout scenarios
@@ -243,7 +243,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Buildings
 - The Dwarven and Teuton Dock buildings are now buildable in RTS mode.
-- Dwarven buildings now have 20% fire resistance, to represent their heavier use of stone and lesser use of wood in construction making their structures less flamable.
+- Dwarven buildings now have 20% fire resistance, to represent their heavier use of stone and lesser use of wood in construction (making their structures less flamable).
 
 * Items
 - Added "of Slaughter" magic suffix for weapons (+3 damage).
