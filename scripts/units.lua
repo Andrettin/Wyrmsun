@@ -4372,7 +4372,13 @@ DefineUnitType("unit-template-transport-ship", { Name = _("Transport"),
 	CanDock = true,
 	AttackFromTransporter = true,
 	SelectableByRectangle = true,
-	TechnologyPointCost = 1
+	TechnologyPointCost = 1,
+	Sounds = {
+		"selected", "ship-selected",
+		"ready", "ship-selected",
+		"acknowledge", "ship-move",
+		"dead", "ship-destroyed"
+	}
 })
 
 DefineUnitType("unit-template-town-hall", { Name = _("Town Hall"),

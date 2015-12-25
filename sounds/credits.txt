@@ -392,6 +392,10 @@ Wildfire Games (http://www.wildfiregames.com/):
 /sounds/misc/metal_mining/mine_metal_22.wav
 /sounds/misc/metal_mining/mine_metal_23.wav
 /sounds/misc/metal_mining/mine_metal_24.wav
+/sounds/misc/sel_metal_01.wav
+/sounds/misc/sel_tree_01.wav
+/sounds/misc/ship_move.wav
+/sounds/misc/ship_selected.wav
 /sounds/misc/stone_mining/mine_stone_01.wav
 /sounds/misc/stone_mining/mine_stone_02.wav
 /sounds/misc/stone_mining/mine_stone_03.wav
@@ -417,8 +421,6 @@ Wildfire Games (http://www.wildfiregames.com/):
 /sounds/misc/stone_mining/mine_stone_23.wav
 /sounds/misc/stone_mining/mine_stone_24.wav
 /sounds/misc/stone_mining/mine_stone_25.wav
-/sounds/misc/sel_metal_01.wav
-/sounds/misc/sel_tree_01.wav
 /sounds/misc/warship_death_01.wav
 /sounds/misc/warship_death_02.wav
 /sounds/missiles/sword/swordhit_10.wav

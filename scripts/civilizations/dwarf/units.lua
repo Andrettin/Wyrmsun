@@ -584,18 +584,7 @@ DefineUnitType("unit-dwarven-transport-ship", { Name = _("Transport"),
 	LightImage = {"file", "dwarf/units/transport_water.png"},
 	Animations = "animations-transport-ship", Icon = "icon-dwarven-transport-ship",
 	Sounds = {
-		"selected", "basic-dwarf-voices-selected-group",
-		"acknowledge", "basic-dwarf-voices-acknowledge",
-		"attack", "basic-dwarf-voices-attack",
---		"ready", "dwarven-gryphon-rider-ready",
-		"help", "basic-dwarf-voices-help",
---		"selected", "click",
-
---		"acknowledge", "ship-acknowledge",
---		"ready", "dwarven-ballista-ready",
-
---		"help", "basic-dwarf-voices-help",
-		"dead", "explosion"
+		"help", "basic-dwarf-voices-help"
 	}
 })
 

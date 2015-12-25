@@ -499,17 +499,7 @@ DefineUnitType("unit-teuton-kogge", { Name = _("Kogge"),
 	LightImage = {"file", "teuton/units/kogge_water.png"},
 	Animations = "animations-transport-ship", Icon = "icon-teuton-kogge",
 	Sounds = {
-		"selected", "basic-teuton-voices-selected-group",
-		"acknowledge", "basic-teuton-voices-acknowledge",
-		"ready", "basic-teuton-voices-ready",
-		"help", "basic-teuton-voices-help",
---		"selected", "click",
-
---		"acknowledge", "ship-acknowledge",
---		"ready", "dwarven-ballista-ready",
-
---		"help", "basic-dwarf-voices-help",
-		"dead", "explosion"
+		"help", "basic-teuton-voices-help"
 	}
 })
 

@@ -477,6 +477,15 @@ MakeSound("building-destroyed",
 	{"misc/building_explosion/1.wav",
 	"misc/building_explosion/2.wav"})
 SetSoundRange("building-destroyed", 32)
+
+MakeSound("ship-selected",
+	"misc/ship_selected.wav"
+)
+SetSoundRange("ship-move", 32)
+MakeSound("ship-move",
+	"misc/ship_move.wav"
+)
+SetSoundRange("ship-move", 32)
 MakeSound("ship-destroyed",
 	{
 		"misc/warship_death_01.wav",
@@ -484,6 +493,7 @@ MakeSound("ship-destroyed",
 	}
 )
 SetSoundRange("ship-destroyed", 32)
+
 MakeSound("axe-attack",
 	"missiles/axe.wav"
 )
