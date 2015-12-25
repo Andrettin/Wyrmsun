@@ -248,9 +248,13 @@ https://github.com/Andrettin/Wyrmsun
 * Items
 - Added "of Slaughter" magic suffix for weapons (+3 damage).
 - The unique broad sword Laevatein now has +7 damage as its effect.
+- Items can no longer be destroyed with splash damage when laying on the ground.
 
 * Map Editor
 - Fixed an issue which caused no cursor to appear if editing a map in which the first player belong to certain NPC civilizations.
+
+* Maps
+- Added a new custom map, "No Man's Land" (from the Stratagus Media Project).
 
 * Miscellaneous
 - Fixed issue which caused part of the game screen to be black after playing the Tomb of Durahn Eikinskjaldi quest.
