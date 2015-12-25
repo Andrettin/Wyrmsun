@@ -717,8 +717,8 @@ function GenericDialog(title, message, tooltip)
 	
 	local menu
 	
-	if (GameRunning) then
-		menu = WarGameMenu(panel(2))
+	if (GameRunning or Editor.Running ~= EditorNotRunning) then
+		menu = WarGameMenu(panel(1))
 	else
 		menu = WarGrandStrategyGameMenu(panel(1))
 		menu:setDrawMenusUnder(true)
@@ -759,7 +759,7 @@ function GenericDialog(title, message, tooltip)
 		{0, 0}
 	)	
 	
-	if (GameRunning) then
+	if (GameRunning or Editor.Running ~= EditorNotRunning) then
 		menu:run(false)
 	else
 		menu:run()

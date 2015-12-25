@@ -399,16 +399,28 @@ UI.GrandStrategyShowRulerButton:SetCallback(
 	end
 )
 
+Load("scripts/civilizations/basque/ui.lua")
 Load("scripts/civilizations/celt/ui.lua")
 Load("scripts/civilizations/dwarf/ui.lua")
+Load("scripts/civilizations/elf/ui.lua")
+Load("scripts/civilizations/etruscan/ui.lua")
 Load("scripts/civilizations/germanic/ui.lua")
 Load("scripts/civilizations/gnome/ui.lua")
 Load("scripts/civilizations/goblin/ui.lua")
 Load("scripts/civilizations/goth/ui.lua")
+Load("scripts/civilizations/greek/ui.lua")
+Load("scripts/civilizations/illyrian/ui.lua")
 Load("scripts/civilizations/kobold/ui.lua")
 Load("scripts/civilizations/latin/ui.lua")
+Load("scripts/civilizations/minoan/ui.lua")
 Load("scripts/civilizations/norse/ui.lua")
+Load("scripts/civilizations/persian/ui.lua")
+Load("scripts/civilizations/phoenician/ui.lua")
+Load("scripts/civilizations/phrygian/ui.lua")
+Load("scripts/civilizations/slav/ui.lua")
 Load("scripts/civilizations/teuton/ui.lua")
+Load("scripts/civilizations/thracian/ui.lua")
+Load("scripts/civilizations/troll/ui.lua")
 
 UI.GrandStrategyOKButton.Style = UI.MenuButton.Style
 UI.GrandStrategyEndTurnButton.Style = UI.MenuButton.Style

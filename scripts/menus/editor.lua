@@ -227,13 +227,14 @@ local function RunEditorNewMapMenu()
 	local mapDescription = menu:addTextInputField("", offx + 208, offy + 104 + 32 * 1, 200)
 	menu:addLabel("Terrain:", offx + 208, offy + 104 + 32 * 2, Fonts["game"], false)
 	local dropDownTileset = menu:addDropDown(editor_tilesets, offx + 208 + 60, offy + 104 + 32 * 2, function() end)
+	dropDownTileset:setSize(152, 20)
 
 	menu:addLabel("Size:", offx + 208, offy + 104 + 32 * 3, Fonts["game"], false)
 	local mapSizex = menu:addDropDown(mapSizes, offx + 208 + 50, offy + 104 + 32 * 3, function() end)
-	mapSizex:setWidth(50)
+	mapSizex:setSize(50, 20)
 	menu:addLabel("x", offx + 208 + 110, offy + 104 + 32 * 3, Fonts["game"], false)
 	local mapSizey = menu:addDropDown(mapSizes, offx + 208 + 125, offy + 104 + 32 * 3, function() end)
-	mapSizey:setWidth(50)
+	mapSizey:setSize(50, 20)
 
 	menu:addFullButton(_("~!New Map"), "n", offx + 208, offy + 104 + 36 * 5,
 	function()
@@ -355,7 +356,7 @@ function RunEditorSaveMenu()
 		end
 	end
 	if not (map_has_person_player) then
-		GenericDialog ("Error", "A map needs to have at least one person player.")
+		GenericDialog("Error", "A map needs to have at least one person player.")
 		return
 	end
 	
@@ -457,11 +458,11 @@ function RunEditorPlayerProperties()
 
   menu:addLabel("#", 15, 36)
   menu:addLabel("Type", offxType, 36)
-  menu:addLabel("Civilization", offxRace, 36)
+  menu:addLabel("Civilization", offxRace + 15, 36)
   menu:addLabel("AI", offxAI, 36)
-  menu:addLabel("Gold", offxGold, 36)
-  menu:addLabel("Lumber", offxLumber, 36)
-  menu:addLabel("Stone", offxOil, 36)
+  menu:addLabel("Gold", offxGold, 36, Fonts["game"])
+  menu:addLabel("Lumber", offxLumber, 36, Fonts["game"])
+  menu:addLabel("Stone", offxOil, 36, Fonts["game"])
 --  menu:addLabel("Oil", offxOil, 36)
 
   local playersProp = {nil, nil, nil, nil, nil,
@@ -496,17 +497,17 @@ function RunEditorPlayerProperties()
 
     playersProp[1 + i].type = menu:addDropDown(types, offxType - 40, offy_i, function() updateProp(index) end)
     playersProp[1 + i].type:setSelected(Map.Info.PlayerType[i] - 2)
-    playersProp[1 + i].type:setWidth(115)
+	playersProp[1 + i].type:setSize(115, 20)
 
     playersProp[1 + i].race = menu:addDropDown(racenames, offxRace - 20, offy_i, function() end)
     playersProp[1 + i].race:setSelected(Players[i].Race)
-    playersProp[1 + i].race:setWidth(65)
+	playersProp[1 + i].race:setSize(65, 20)
 
     playersProp[1 + i].ai = menu:addDropDown(ais, offxAI - 65, offy_i, function() end)
     for j = 0,3 do
       if (ais[1 + j] == Players[i].AiName) then playersProp[1 + i].ai:setSelected(j) end
     end
-    playersProp[1 + i].ai:setWidth(130)
+	playersProp[1 + i].ai:setSize(130, 20)
 
     playersProp[1 + i].gold = menu:addTextInputField(Players[i].Resources[1], offxGold - 20, offy_i, 40)
     playersProp[1 + i].lumber = menu:addTextInputField(Players[i].Resources[2], offxLumber - 20, offy_i, 40)
@@ -540,48 +541,49 @@ end
 --
 function RunEditorMapProperties()
 -- TODO : manage edition of all properties.
-  local menu = WarGameMenu(panel(3))
+	local menu = WarGameMenu(panel(3))
 
-  local sizeX = 384
-  local sizeY = 256
+	local sizeX = 384
+	local sizeY = 256
 
-  menu:resize(sizeX, sizeY)
-  menu:addLabel("Map Properties", sizeX / 2, 11)
+	menu:resize(sizeX, sizeY)
+	menu:addLabel("Map Properties", sizeX / 2, 11)
 
-  menu:addLabel("Map Name: ", 45, 11 + 36, nil, false)
-  local desc = menu:addTextInputField(Map.Info.Description, 15, 36 * 2, 350)
+	menu:addLabel("Map Name: ", 45, 11 + 36, nil, false)
+	local desc = menu:addTextInputField(Map.Info.Description, 15, 36 * 2, 350)
 
-  menu:addLabel("Size    : " .. Map.Info.MapWidth .. " x " .. Map.Info.MapHeight, 45, 36 * 3, nil, false)
---  menu:addLabel("Size : ", 15, 36 * 3, nil, false)
---  local sizeX = menu:addTextInputField(Map.Info.MapWidth, 75, 36 * 3, 50)
---  menu:addLabel(" x ", 130, 36 * 3, nil, false)
---  local sizeY = menu:addTextInputField(Map.Info.MapHeight, 160, 36 * 3, 50)
+	menu:addLabel("Size: " .. Map.Info.MapWidth .. " x " .. Map.Info.MapHeight, 45, 36 * 3, nil, false)
+--	menu:addLabel("Size : ", 15, 36 * 3, nil, false)
+--	local sizeX = menu:addTextInputField(Map.Info.MapWidth, 75, 36 * 3, 50)
+--	menu:addLabel(" x ", 130, 36 * 3, nil, false)
+--	local sizeY = menu:addTextInputField(Map.Info.MapHeight, 160, 36 * 3, 50)
 
-  menu:addLabel("Tileset : ", 45, 36 * 4, nil, false)
+	menu:addLabel("Tileset: ", 45, 36 * 4, nil, false)
 
-  local list = { "Cave", "Conifer Forest (Summer)", "Conifer Forest (Autumn)", "Dungeon", "Fairlimbed Forest", "Swamp"}
-  for i=table.getn(list)+1, table.getn(editor_tilesets) do
-	table.insert(list, FullyCapitalizeString(string.gsub(editor_tilesets[i], "_", " ")))
-  end
-  local dropDownTileset = menu:addDropDown(list, 130, 36 * 4, function() end)
-  for i = 0,table.getn(list)-1 do
-    if (list[1 + i] == Map.Tileset.Name) then dropDownTileset:setSelected(i)
-    end
-  end
-  dropDownTileset:setEnabled(false) -- TODO : manage this properties
+	local list = { "Cave", "Conifer Forest (Summer)", "Conifer Forest (Autumn)", "Dungeon", "Fairlimbed Forest", "Swamp"}
+	for i=table.getn(list)+1, table.getn(editor_tilesets) do
+		table.insert(list, FullyCapitalizeString(string.gsub(editor_tilesets[i], "_", " ")))
+	end
+	local dropDownTileset = menu:addDropDown(list, 130, 36 * 4, function() end)
+	for i = 0,table.getn(list)-1 do
+		if (list[1 + i] == Map.Tileset.Name) then dropDownTileset:setSelected(i)
+		end
+	end
+	dropDownTileset:setEnabled(false) -- TODO : manage this properties
+	dropDownTileset:setSize(152, 20)
 
-  menu:addHalfButton("~!OK", "o", 1 * (sizeX / 3) - 106 - 10, sizeY - 16 - 27,
-    function()
-      Map.Info.Description = desc:getText()
-      -- TODO : Add others properties
-      menu:stop()
-    end
-    )
+	menu:addHalfButton("~!OK", "o", 1 * (sizeX / 3) - 106 - 10, sizeY - 16 - 27,
+		function()
+			Map.Info.Description = desc:getText()
+			-- TODO : Add others properties
+			menu:stop()
+		end
+	)
 
-  menu:addHalfButton(_("~!Cancel"), "c", 3 * (sizeX / 3) - 106 - 10, sizeY - 16 - 27,
-    function() menu:stop() end)
+	menu:addHalfButton(_("~!Cancel"), "c", 3 * (sizeX / 3) - 106 - 10, sizeY - 16 - 27,
+		function() menu:stop() end)
 
-  menu:run(false)
+	menu:run(false)
 end
 
 --

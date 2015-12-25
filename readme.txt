@@ -246,6 +246,9 @@ https://github.com/Andrettin/Wyrmsun
 - Added "of Slaughter" magic suffix for weapons (+3 damage).
 - The unique broad sword Laevatein now has +7 damage as its effect.
 
+* Map Editor
+- Fixed an issue which caused no cursor to appear if editing a map in which the first player belong to certain NPC civilizations.
+
 * Miscellaneous
 - Fixed issue which caused part of the game screen to be black after playing the Tomb of Durahn Eikinskjaldi quest.
 - Added drop-down graphics for the Dwarves and Germanics (by Jinn).
