@@ -9,6 +9,7 @@ if (LoadedGame == false) then
 			WaterQuantity = "medium",
 			RoughLandQuantity = "medium",
 			WorkerQuantity = 0,
+			NoMightyCreeps = true,
 			NoFlyingCreeps = true,
 			NoTownHall = true,
 			PlayerCivilizations = {"dwarf", "kobold"}

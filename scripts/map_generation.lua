@@ -2074,7 +2074,7 @@ function GenerateRandomMap(arg)
 			CreateGryphons((Map.Info.MapWidth * Map.Info.MapHeight) / 8192)
 		end
 
-		if ((wyrmsun.tileset == "swamp" or wyrmsun.tileset == "cave") and SyncRand(100) < 20) then -- 20% chance that the map will contain a wyrm
+		if ((wyrmsun.tileset == "swamp" or wyrmsun.tileset == "cave") and not arg.NoMightyCreeps and SyncRand(100) < 20) then -- 20% chance that the map will contain a wyrm
 			CreateCreeps(15, "unit-wyrm", 1, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2)
 		end
 

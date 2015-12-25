@@ -256,6 +256,7 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed issue which caused part of the game screen to be black after playing the Tomb of Durahn Eikinskjaldi quest.
 - Added drop-down graphics for the Dwarves and Germanics (by Jinn).
 - New spear icon (by Vladislav "iDreamRunner").
+- Toned down the scrolling speed when CTRL is held.
 
 * Quests
 - The Battle of Magetobria quest (Teuton) now gives 3 technology points instead of 2.
