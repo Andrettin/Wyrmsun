@@ -257,6 +257,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added drop-down graphics for the Dwarves and Germanics (by Jinn).
 - New spear icon (by Vladislav "iDreamRunner").
 - Toned down the scrolling speed when CTRL is held.
+- Added option to have position-based hotkeys (i.e. the first command button has the "Q" hotkey, the second "W", and so forth).
 
 * Quests
 - The Battle of Magetobria quest (Teuton) now gives 3 technology points instead of 2.

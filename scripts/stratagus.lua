@@ -1929,6 +1929,7 @@ local defaultPreferences = {
 	PopupDescriptionFont = "small",
 	Autosave = true,
 	PlayerColorCircle = false,
+	ButtonHotKeysByPosition = false,
 	NoRandomness = false,
 	AutomaticBattles = false,
 	Difficulty = 2,
@@ -1979,6 +1980,7 @@ else
 	Preference.Autosave = 0
 end
 Preference.PlayerColorCircle = wyr.preferences.PlayerColorCircle
+Preference.ButtonHotKeysByPosition = wyr.preferences.ButtonHotKeysByPosition
 
 --- Uses Stratagus Library path!
 Load("scripts/civilizations.lua")

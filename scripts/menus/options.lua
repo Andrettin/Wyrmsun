@@ -321,163 +321,186 @@ function BuildOptionsMenu()
 end
 
 function RunGameplayOptionsMenu()
-  local menu = WarMenu()
-  local offx = (Video.Width - 352) / 2
-  local offy = (Video.Height - 352) / 2
-  local b
+	local menu = WarMenu()
+	local offx = (Video.Width - 352) / 2
+	local offy = (Video.Height - 352) / 2
+	local b
 
-  menu:addLabel(_("~<Options~>"), offx + 176, offy + 1)
-  
+	menu:addLabel(_("~<Options~>"), offx + 176, offy + 1)
+	
 --[[
-  menu:addLabel(_("Language"), offx + 8, offy + 34 + 26*2, Fonts["game"], false)
+	menu:addLabel(_("Language"), offx + 8, offy + 34 + 26*2, Fonts["game"], false)
 
-  language_list = menu:addDropDown({"English", "French", "German", "Portuguese"}, offx + 8, offy + 55 + 26*2,
-    function(dd)
-    	if (language_list:getSelected() == 0) then
-			wyr.preferences.Language = "English"
-			wyr.preferences.StratagusTranslation = ""
-			wyr.preferences.GameTranslation = ""
-    	elseif (language_list:getSelected() == 1) then
-			wyr.preferences.Language = "French"
-			wyr.preferences.StratagusTranslation = "translations/wyr-fr.po"
-			wyr.preferences.GameTranslation = "translations/wyr-fr.po"
-    	elseif (language_list:getSelected() == 2) then
-			wyr.preferences.Language = "German"
-			wyr.preferences.StratagusTranslation = "translations/wyr-de.po"
-			wyr.preferences.GameTranslation = "translations/wyr-de.po"
-    	elseif (language_list:getSelected() == 3) then
-			wyr.preferences.Language = "Portuguese"
-			wyr.preferences.StratagusTranslation = "translations/wyr-pt.po"
-			wyr.preferences.GameTranslation = "translations/wyr-pt.po"
-    	end
-    	SetTranslationsFiles(wyr.preferences.StratagusTranslation, wyr.preferences.GameTranslation)
-  	menu:stop()
-	RunGameplayOptionsMenu()
-    end)
-  language_list:setSize(152, 20)
-  if (wyr.preferences.Language == "English") then
-  	language_list:setSelected(0)
-  elseif (wyr.preferences.Language == "French") then
-    	language_list:setSelected(1)
-  elseif (wyr.preferences.Language == "German") then
-    	language_list:setSelected(2)
-  elseif (wyr.preferences.Language == "Portuguese") then
-    	language_list:setSelected(3)
-  end
+	language_list = menu:addDropDown({"English", "French", "German", "Portuguese"}, offx + 8, offy + 55 + 26*2,
+		function(dd)
+			if (language_list:getSelected() == 0) then
+				wyr.preferences.Language = "English"
+				wyr.preferences.StratagusTranslation = ""
+				wyr.preferences.GameTranslation = ""
+			elseif (language_list:getSelected() == 1) then
+				wyr.preferences.Language = "French"
+				wyr.preferences.StratagusTranslation = "translations/wyr-fr.po"
+				wyr.preferences.GameTranslation = "translations/wyr-fr.po"
+			elseif (language_list:getSelected() == 2) then
+				wyr.preferences.Language = "German"
+				wyr.preferences.StratagusTranslation = "translations/wyr-de.po"
+				wyr.preferences.GameTranslation = "translations/wyr-de.po"
+			elseif (language_list:getSelected() == 3) then
+				wyr.preferences.Language = "Portuguese"
+				wyr.preferences.StratagusTranslation = "translations/wyr-pt.po"
+				wyr.preferences.GameTranslation = "translations/wyr-pt.po"
+			end
+			SetTranslationsFiles(wyr.preferences.StratagusTranslation, wyr.preferences.GameTranslation)
+			menu:stop()
+			RunGameplayOptionsMenu()
+		end
+	)
+	language_list:setSize(152, 20)
+	if (wyr.preferences.Language == "English") then
+		language_list:setSelected(0)
+	elseif (wyr.preferences.Language == "French") then
+		language_list:setSelected(1)
+	elseif (wyr.preferences.Language == "German") then
+		language_list:setSelected(2)
+	elseif (wyr.preferences.Language == "Portuguese") then
+		language_list:setSelected(3)
+	end
 --]]
 
-  b = menu:addImageCheckBox(_("Mouse Grabbing"), offx + 16, offy + 55 + 26*4 + 14,
-    function()
-		if (wyr.preferences.GrabMouse == false) then
-			wyr.preferences.GrabMouse = true
-		elseif (wyr.preferences.GrabMouse == true) then
-			wyr.preferences.GrabMouse = false
+	b = menu:addImageCheckBox(_("Mouse Grabbing"), offx + 16, offy + 55 + 26*4 + 14,
+		function()
+			if (wyr.preferences.GrabMouse == false) then
+				wyr.preferences.GrabMouse = true
+			elseif (wyr.preferences.GrabMouse == true) then
+				wyr.preferences.GrabMouse = false
+			end
+			SetGrabMouse(wyr.preferences.GrabMouse)
+			SavePreferences()
+			menu:stop()
+			RunGameplayOptionsMenu()
 		end
-		SetGrabMouse(wyr.preferences.GrabMouse)
+	)
+	b:setMarked(wyr.preferences.GrabMouse)
+
+	b = menu:addImageCheckBox(_("Show Tips"), offx + 16, offy + 55 + 26*1 + 14,
+		function()
+			if (wyr.preferences.ShowTips == false) then
+				wyr.preferences.ShowTips = true
+			else
+				wyr.preferences.ShowTips = false
+			end
+			menu:stop()
+			RunGameplayOptionsMenu()
+		end
+	)
+	b:setMarked(wyr.preferences.ShowTips)
+
+	b = menu:addImageCheckBox(_("Show Resource Bar"), offx + 16, offy + 55 + 26*2 + 14,
+		function()
+			if (wyr.preferences.ShowResourceBar == false) then -- sort of ugly way to set the preferences for this, fix later please
+				wyr.preferences.ShowResourceBar = true
+				DefineDecorations({Index = "GiveResource", MinValue = 1000, ShowWhenMax = true, HideNeutral = false, CenterX = true, OffsetPercent = {50, 100}, Method = {"sprite", {"sprite-mana"}}})
+			else
+				wyr.preferences.ShowResourceBar = false
+				DefineDecorations({Index = "GiveResource", MinValue = 1000, ShowWhenMax = true, HideNeutral = true, CenterX = true, OffsetPercent = {50, 100}, Method = {"sprite", {"sprite-mana"}}})
+			end
+			menu:stop()
+			RunGameplayOptionsMenu()
+		end
+	)
+	b:setMarked(wyr.preferences.ShowResourceBar)
+
+	b = menu:addImageCheckBox(_("Larger Popup Text"), offx + 16, offy + 55 + 26*5 + 14,
+		function()
+			if (wyr.preferences.PopupDescriptionFont == "small") then
+				wyr.preferences.PopupDescriptionFont = "game"
+			elseif (wyr.preferences.PopupDescriptionFont == "game") then
+				wyr.preferences.PopupDescriptionFont = "small"
+			end
+			Load("scripts/ui.lua")
+			menu:stop()
+			RunGameplayOptionsMenu()
+		end
+	)
+	b:setMarked(wyr.preferences.PopupDescriptionFont == "game")
+
+	b = menu:addImageCheckBox(_("Show Player Color Circle"), offx + 16, offy + 55 + 26*8 + 14,
+		function()
+			if (wyr.preferences.PlayerColorCircle == false) then
+				wyr.preferences.PlayerColorCircle = true
+			else
+				wyr.preferences.PlayerColorCircle = false
+			end
+			Preference.PlayerColorCircle = wyr.preferences.PlayerColorCircle
+			menu:stop()
+			RunGameplayOptionsMenu()
+		end
+	)
+	b:setMarked(wyr.preferences.PlayerColorCircle)
+
+	b = menu:addImageCheckBox(_("Autosave"), offx + 16, offy + 55 + 26*3 + 14,
+		function()
+			if (wyr.preferences.Autosave == false) then
+				wyr.preferences.Autosave = true
+				Preference.Autosave = 5
+			else
+				wyr.preferences.Autosave = false
+				Preference.Autosave = 0
+			end
+			menu:stop()
+			RunGameplayOptionsMenu()
+		end
+	)
+	b:setMarked(wyr.preferences.Autosave)
+
+	b = menu:addImageCheckBox(_("Show Pathlines"), offx + 16, offy + 55 + 26*6 + 14,
+		function()
+			if (wyr.preferences.ShowPathlines == false) then
+				wyr.preferences.ShowPathlines = true
+			else
+				wyr.preferences.ShowPathlines = false
+			end
+			Preference.ShowPathlines = wyr.preferences.ShowPathlines
+			menu:stop()
+			RunGameplayOptionsMenu()
+		end
+	)
+	b:setMarked(wyr.preferences.ShowPathlines)
+
+	b = menu:addImageCheckBox(_("Disable Messages"), offx + 16, offy + 55 + 26*7 + 14,
+		function()
+			if (wyr.preferences.ShowMessages) then
+				wyr.preferences.ShowMessages = false
+			else
+				wyr.preferences.ShowMessages = true
+			end
+			Preference.ShowMessages = wyr.preferences.ShowMessages
+			menu:stop()
+			RunGameplayOptionsMenu()
+		end
+	)
+	if (wyr.preferences.ShowMessages == false) then b:setMarked(true) end
+
+	b = menu:addImageCheckBox(_("Position-Based Hotkeys"), offx + 16, offy + 55 + 26*9 + 14,
+		function()
+			if (wyr.preferences.ButtonHotKeysByPosition == false) then
+				wyr.preferences.ButtonHotKeysByPosition = true
+			else
+				wyr.preferences.ButtonHotKeysByPosition = false
+			end
+			Preference.ButtonHotKeysByPosition = wyr.preferences.ButtonHotKeysByPosition
+			menu:stop()
+			RunGameplayOptionsMenu()
+		end
+	)
+	b:setMarked(wyr.preferences.ButtonHotKeysByPosition)
+
+	menu:addHalfButton(_("~!OK"), "o", offx + 123, offy + 55 + 26*12 + 14, function()
 		SavePreferences()
 		menu:stop()
-		RunGameplayOptionsMenu()
-    end)
-  b:setMarked(wyr.preferences.GrabMouse)
+	end)
 
-  b = menu:addImageCheckBox(_("Show Tips"), offx + 16, offy + 55 + 26*1 + 14,
-    function()
-	if (wyr.preferences.ShowTips == false) then
-		wyr.preferences.ShowTips = true
-	else
-		wyr.preferences.ShowTips = false
-	end
-	menu:stop()
-	RunGameplayOptionsMenu()
-    end)
-  b:setMarked(wyr.preferences.ShowTips)
-
-  b = menu:addImageCheckBox(_("Show Resource Bar"), offx + 16, offy + 55 + 26*2 + 14,
-    function()
-	if (wyr.preferences.ShowResourceBar == false) then -- sort of ugly way to set the preferences for this, fix later please
-		wyr.preferences.ShowResourceBar = true
-		DefineDecorations({Index = "GiveResource", MinValue = 1000, ShowWhenMax = true, HideNeutral = false, CenterX = true, OffsetPercent = {50, 100}, Method = {"sprite", {"sprite-mana"}}})
-	else
-		wyr.preferences.ShowResourceBar = false
-		DefineDecorations({Index = "GiveResource", MinValue = 1000, ShowWhenMax = true, HideNeutral = true, CenterX = true, OffsetPercent = {50, 100}, Method = {"sprite", {"sprite-mana"}}})
-	end
-	menu:stop()
-	RunGameplayOptionsMenu()
-    end)
-  b:setMarked(wyr.preferences.ShowResourceBar)
-
-  b = menu:addImageCheckBox(_("Larger Popup Text"), offx + 16, offy + 55 + 26*5 + 14,
-    function()
-		if (wyr.preferences.PopupDescriptionFont == "small") then
-			wyr.preferences.PopupDescriptionFont = "game"
-		elseif (wyr.preferences.PopupDescriptionFont == "game") then
-			wyr.preferences.PopupDescriptionFont = "small"
-		end
-		Load("scripts/ui.lua")
-		menu:stop()
-		RunGameplayOptionsMenu()
-    end)
-  b:setMarked(wyr.preferences.PopupDescriptionFont == "game")
-
-  b = menu:addImageCheckBox(_("Show Player Color Circle"), offx + 16, offy + 55 + 26*8 + 14,
-    function()
-	if (wyr.preferences.PlayerColorCircle == false) then
-		wyr.preferences.PlayerColorCircle = true
-	else
-		wyr.preferences.PlayerColorCircle = false
-	end
-	Preference.PlayerColorCircle = wyr.preferences.PlayerColorCircle
-	menu:stop()
-	RunGameplayOptionsMenu()
-    end)
-  b:setMarked(wyr.preferences.PlayerColorCircle)
-
-  b = menu:addImageCheckBox(_("Autosave"), offx + 16, offy + 55 + 26*3 + 14,
-    function()
-	if (wyr.preferences.Autosave == false) then
-		wyr.preferences.Autosave = true
-		Preference.Autosave = 5
-	else
-		wyr.preferences.Autosave = false
-		Preference.Autosave = 0
-	end
-	menu:stop()
-	RunGameplayOptionsMenu()
-    end)
-  b:setMarked(wyr.preferences.Autosave)
-
-  b = menu:addImageCheckBox(_("Show Pathlines"), offx + 16, offy + 55 + 26*6 + 14,
-    function()
-	if (wyr.preferences.ShowPathlines == false) then
-		wyr.preferences.ShowPathlines = true
-	else
-		wyr.preferences.ShowPathlines = false
-	end
-	Preference.ShowPathlines = wyr.preferences.ShowPathlines
-	menu:stop()
-	RunGameplayOptionsMenu()
-    end)
-  b:setMarked(wyr.preferences.ShowPathlines)
-
-  b = menu:addImageCheckBox(_("Disable Messages"), offx + 16, offy + 55 + 26*7 + 14,
-    function()
-	if (wyr.preferences.ShowMessages) then
-		wyr.preferences.ShowMessages = false
-	else
-		wyr.preferences.ShowMessages = true
-	end
-	Preference.ShowMessages = wyr.preferences.ShowMessages
-	menu:stop()
-	RunGameplayOptionsMenu()
-    end)
-  if (wyr.preferences.ShowMessages == false) then b:setMarked(true) end
-
-  menu:addHalfButton(_("~!OK"), "o", offx + 123, offy + 55 + 26*12 + 14, function()
-	SavePreferences()
-  	menu:stop()
-  end)
-
-  return menu:run()
+	return menu:run()
 end
 
 function RunVideoOptionsMenu()
