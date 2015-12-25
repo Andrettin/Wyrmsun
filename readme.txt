@@ -248,7 +248,7 @@ https://github.com/Andrettin/Wyrmsun
 * Items
 - Added "of Slaughter" magic suffix for weapons (+3 damage).
 - The unique broad sword Laevatein now has +7 damage as its effect.
-- Items can no longer be destroyed with splash damage when laying on the ground.
+- Items are no longer destroyed by splash damage when laying on the ground.
 
 * Map Editor
 - Fixed an issue which caused no cursor to appear if editing a map in which the first player belong to certain NPC civilizations.
