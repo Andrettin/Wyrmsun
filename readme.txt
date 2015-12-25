@@ -266,7 +266,10 @@ https://github.com/Andrettin/Wyrmsun
 * Units
 - Added the Transport ship for the Dwarves (graphics by Jinn).
 - Added the Kogge (transport ship) for the Teutons (graphics by Jinn).
-- Added a new tip popup saying that units can earn experience, when an organic unit is first clicked.
+- Added a new popup tip saying that units can earn experience (triggered when an organic unit is first clicked).
+- Added a new popup tip describing persistent heroes (triggered when a persistent hero is first clicked).
+- Improved the Food popup tip.
+- Added a new popup tip for potions of healing.
 
 -----------------------------------------------------------------------
 - 1.8.6

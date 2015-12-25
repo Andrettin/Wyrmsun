@@ -663,6 +663,22 @@ function StandardTriggers()
 			)
 		end
 		
+		if (GetArrayIncludes(wyr.preferences.TipsShown, "Persistent Heroes") == false) then
+			AddTrigger(
+				function()
+					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Character") ~= "" and GetCharacterData(GetUnitVariable(GetSelectedUnits()[1], "Character"), "Persistent") and GetUnitVariable(GetSelectedUnits()[1], "Player") == GetThisPlayer()) then
+						return true
+					else
+						return false
+					end
+				end,
+				function()
+					Tip("Persistent Heroes", "Each persistent hero (with the exception of custom ones) has a unique icon. They carry over their experience level, inventory and abilities across scenarios and even game modes.")
+					return false
+				end
+			)
+		end
+		
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Bura") == false) then
 			AddTrigger(
 				function()
@@ -1255,7 +1271,23 @@ function StandardTriggers()
 					end
 				end,
 				function()
-					Tip("Food", "Food items provide healing to units.")
+					Tip("Food", "Food items provide healing to units. They can be carried by units who have an inventory, or used directly by units who don't. Healing items are automatically used if the unit is low enough on health.")
+					return false
+				end
+			)
+		end
+		
+		if (GetArrayIncludes(wyr.preferences.TipsShown, "Potion of Healing") == false) then
+			AddTrigger(
+				function()
+					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-potion-of-healing") then
+						return true
+					else
+						return false
+					end
+				end,
+				function()
+					Tip("Potion of Healing", "Potions of healing can greatly increase the survivability of your units. They can be carried by units who have an inventory, or used directly by units who don't. Healing items are automatically used if the unit is low enough on health.")
 					return false
 				end
 			)
