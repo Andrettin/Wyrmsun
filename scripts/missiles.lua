@@ -128,7 +128,8 @@ DefineMissileType("missile-axe-twirl", {
 
 DefineMissileType("missile-magic-effect", {
 	File = "missiles/magic.png", Size = {32, 32}, Frames = 9, NumDirections = 1,
-	DrawLevel = 50, Class = "missile-class-stay", Sleep = 2, Speed = 16, Range = 1, Transparency = 25
+	DrawLevel = 50, Class = "missile-class-stay", Sleep = 2, Speed = 16, Range = 1, Transparency = 25,
+	AlwaysHits = true
 })
 
 DefineMissileType("missile-small-fire", {
@@ -149,6 +150,12 @@ DefineMissileType("missile-explosion", {
 DefineMissileType("missile-green-cross", {
 	File = "missiles/green_cross.png", Size = {32, 32}, Frames = 4, NumDirections = 1,
 	DrawLevel = 150, Class = "missile-class-cycle-once", Sleep = 1, Speed = 16, Range = 1
+})
+
+DefineMissileType("missile-always-hits", {
+	Size = {32, 32},
+	DrawLevel = 50, Class = "missile-class-stay", Sleep = 2, Speed = 16, Range = 1, Transparency = 25,
+	AlwaysHits = true
 })
 
 --[[ -- unused

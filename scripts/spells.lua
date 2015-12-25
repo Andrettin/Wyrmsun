@@ -31,17 +31,9 @@
 
 DefineBoolFlags("Capturable")
 
---
---  Speed     : just drawing
---  ShadowFly : Shadow of flying unit (0:big, 1:normal, 2:small)
---  Level     : Increase each time an upgrade is applyed to an unit.
---
-DefineVariables("Mana", {Max = 255, Value = 84, Increase = 1, Enable = false}, "ShadowFly", {Max = 2})
-
 --  Declare some unit types used in spells. This is quite accetable, the other
 --  way would be to define can-cast-spell outside unit definitions, not much of an improvement.
 DefineUnitType("unit-revealer", {})
-DefineUnitType("unit-critter", {})
 
 -- And declare upgrade for dependency...
 
@@ -146,13 +138,13 @@ DefineSpell("spell-stun",
 	"target", "unit",
 	"action", {
 		{"adjust-variable", {Stun = 200}},
-		{"adjust-vitals", "hit-points", -10},
+		{"spawn-missile", "missile", "missile-magic-effect", "start-point", {"base", "target"}},
+		{"spawn-missile", "missile", "missile-always-hits", "start-point", {"base", "target"}, "use-unit-var"}
 	},
 	"condition", {
 		"organic", "only",
 		"Building", "false"
 	}
---	"sound-when-cast", "foraging",
 --	"autocast", {"range", 6, "condition", {"alliance", "only", "HitPoints", {MaxValuePercent = 90}}},
 --	"ai-cast", {"range", 6, "condition", {"alliance", "only", "HitPoints", {MaxValuePercent = 90}}}
 )

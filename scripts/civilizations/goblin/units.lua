@@ -230,7 +230,6 @@ DefineUnitType("unit-goblin-glider", { Name = _("Glider"),
 	Upkeep = 25,
 	Type = "fly",
 --	Corpse = "unit-goblin-dead-body",
---	ShadowFly = {Value = 1, Enable = true}, -- deactivated the shadow because it was appearing on top of the unit
 	RightMouseAction = "move",
 	DetectCloak = true,
 	Coward = true,

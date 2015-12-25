@@ -234,6 +234,7 @@ https://github.com/Andrettin/Wyrmsun
 * Abilities
 - Added Mace Mastery passive ability (learnable by Dwarven Stonelords) (icon by Vladislav "iDreamRunner" and Jinn).
 - Added Spear Mastery passive ability (learnable by Goblin Spearmen) (icon by Vladislav "iDreamRunner" and Jinn).
+- Added Stun active ability (learnable by Dwarven Stonelords and Yale Riders, Germanic Eralas, Teuton Kriegers and Ritters, and Gnomish Recruits) (icon by Vladislav "iDreamRunner").
 
 * AI
 - Updated the AI to make use of ships.
