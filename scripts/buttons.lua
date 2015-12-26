@@ -58,6 +58,14 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-spear",
 	}
 })
 
+DefineButton( { Pos = 13, Level = 0, Icon = "icon-build-basic-structure",
+	Action = "button", Value = 1,
+	Key = "b", Hint = _("~!Build Structure"), Popup = "popup-commands",
+	ForUnit = {
+		"unit-dwarven-miner", "unit-germanic-worker", "unit-gnomish-worker", "unit-goblin-worker", "unit-teuton-worker"
+	}
+})
+
 -- General Cancel Buttons ------------------------------------------------------
 
 DefineButton( { Pos = 16, Level = 9, Icon = "icon-cancel",

@@ -230,6 +230,14 @@ https://github.com/Andrettin/Wyrmsun
 ############################################################
 
 -----------------------------------------------------------------------
+- 1.9.2
+-----------------------------------------------------------------------
+
+* Miscellaneous
+- Moved "Build Structure" button to the bottom row.
+- Fixed an issue which caused a button's popup to continue being drawn after the button "level" had changed (i.e. if a submenu had been selected like the "Build Structure" one).
+
+-----------------------------------------------------------------------
 - 1.9.1
 -----------------------------------------------------------------------
 

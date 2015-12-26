@@ -151,14 +151,6 @@ DefineButton( { Pos = 13, Level = 0, Icon = "icon-rally-point",
 	}
 } )
 
--- build basic/advanced structs -----------------------------------------------
-
-DefineButton( { Pos = 6, Level = 0, Icon = "icon-build-basic-structure",
-	Action = "button", Value = 1,
-	Key = "b", Hint = _("~!Build Structure"), Popup = "popup-commands",
-	ForUnit = {"unit-germanic-worker"}
-} )
-
 -- Simple Buildings Germanic -----------------------------------------------------
 
 DefineButton( { Pos = 1, Level = 1, Icon = "icon-germanic-town-hall",
