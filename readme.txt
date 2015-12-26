@@ -230,6 +230,18 @@ https://github.com/Andrettin/Wyrmsun
 ############################################################
 
 -----------------------------------------------------------------------
+- 1.9.1
+-----------------------------------------------------------------------
+
+* Miscellaneous
+- Fixed issue which caused the C key to center on the selected unit, rather than Ctrl+C or Alt+C, as intended.
+- To prevent conflicts with command button hotkeys, the hotkey for selecting the entire army is now Alt+Q, rather than Q.
+- To prevent conflicts with command button hotkeys, the hotkey for selecting all visible units of the same type as the currently selected one is now Alt+W, rather than W.
+
+* Units
+- Fixed issue which caused rescued units to get all upgrades applied to them, regardless of whether their new owner had them researched or not.
+
+-----------------------------------------------------------------------
 - 1.9.0
 -----------------------------------------------------------------------
 

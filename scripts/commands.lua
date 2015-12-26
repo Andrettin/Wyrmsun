@@ -52,7 +52,7 @@ local function HandleIneditorCommandKey(key, ctrl, alt, shift)
     RunEditorSaveMenu()
   elseif (key == "f12") then -- Load
     RunEditorLoadMenu()
-  elseif (key == "q" and (ctrl or alt)) then -- Quit to menu
+  elseif (key == "q" and (ctrl)) then -- Quit to menu
     RunQuitToMenuConfirmMenu()
   elseif (key == "x" and (ctrl or alt)) then -- Exit
     RunExitConfirmMenu()
