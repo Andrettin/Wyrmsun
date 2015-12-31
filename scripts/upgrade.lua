@@ -52,6 +52,8 @@ function DefineUpgrade(upgrade_ident, data)
 		upgrade.Shield = CUpgrade:Get(data.Parent).Shield
 		upgrade.Boots = CUpgrade:Get(data.Parent).Boots
 		upgrade.Arrows = CUpgrade:Get(data.Parent).Arrows
+		upgrade.MagicPrefix = CUpgrade:Get(data.Parent).MagicPrefix
+		upgrade.MagicSuffix = CUpgrade:Get(data.Parent).MagicSuffix
 	end
 	if (data.Name ~= nil) then
 		upgrade.Name = data.Name
@@ -108,6 +110,12 @@ function DefineUpgrade(upgrade_ident, data)
 	end
 	if (data.Arrows ~= nil) then
 		upgrade.Arrows = data.Arrows
+	end
+	if (data.MagicPrefix ~= nil) then
+		upgrade.MagicPrefix = data.MagicPrefix
+	end
+	if (data.MagicSuffix ~= nil) then
+		upgrade.MagicSuffix = data.MagicSuffix
 	end
 	if (data.ItemPrefix ~= nil) then
 		for i = 1,table.getn(data.ItemPrefix),2 do

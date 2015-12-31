@@ -27,71 +27,85 @@
 
 DefineUpgrade("upgrade-item-prefix-accurate", {
 	Name = _("Accurate"),
+	MagicPrefix = true,
 	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true}
 })
 
 DefineUpgrade("upgrade-item-prefix-cold", { -- example: Cold Blade (from Wesnoth)
 	Name = _("Cold"),
+	MagicPrefix = true,
 	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true}
 })
 
 DefineUpgrade("upgrade-item-prefix-cruel", {
 	Name = _("Cruel"),
+	MagicPrefix = true,
 	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true}
 })
 
 DefineUpgrade("upgrade-item-prefix-flaming", { -- example: Flaming Sword (from Wesnoth)
 	Name = _("Flaming"),
-	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true, "ring", true, "amulet", true} -- allowed for rings to allow Draupnir to drop, maybe should change that item's prefix to something else?; allowed for amulets to allow Brisingamen to drop
+	MagicPrefix = true,
+	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true}
 })
 
 DefineUpgrade("upgrade-item-prefix-glacial", {
 	Name = _("Glacial"),
+	MagicPrefix = true,
 	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true}
 })
 
 DefineUpgrade("upgrade-item-prefix-impregnable", {
 	Name = _("Impregnable"),
+	MagicPrefix = true,
 	ItemPrefix = {"armor", true, "shield", true, "helmet", true}
 })
 
 DefineUpgrade("upgrade-item-prefix-jinns", {
 	Name = _("Jinn's"),
+	MagicPrefix = true,
 	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true}
 })
 
 DefineUpgrade("upgrade-item-prefix-penetrating", {
 	Name = _("Penetrating"),
+	MagicPrefix = true,
 	ItemPrefix = {"arrows", true, "dagger", true, "javelin", true, "spear", true, "sword", true, "thrusting-sword", true}
 })
 
 DefineUpgrade("upgrade-item-prefix-quenching", {
 	Name = _("Quenching"),
+	MagicPrefix = true,
 	ItemPrefix = {"armor", true, "shield", true, "helmet", true}
 })
 
 DefineUpgrade("upgrade-item-prefix-storm", { -- example: Storm Trident (from Wesnoth)
 	Name = _("Storm"),
+	MagicPrefix = true,
 	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true}
 })
 
 DefineUpgrade("upgrade-item-prefix-sturdy", {
 	Name = _("Sturdy"),
+	MagicPrefix = true,
 	ItemPrefix = {"armor", true, "shield", true, "helmet", true}
 })
 
 DefineUpgrade("upgrade-item-prefix-swift", {
 	Name = _("Swift"),
+	MagicPrefix = true,
 	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true}
 })
 
 DefineUpgrade("upgrade-item-prefix-vicious", {
 	Name = _("Vicious"),
+	MagicPrefix = true,
 	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true, "ring", true} -- allowed for rings to allow Andvaranaut to drop, but its prefix should be changed later
 })
 
 DefineUpgrade("upgrade-item-prefix-wounding", {
 	Name = _("Wounding"),
+	MagicPrefix = true,
 	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true}
 })
 

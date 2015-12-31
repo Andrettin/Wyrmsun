@@ -233,10 +233,14 @@ https://github.com/Andrettin/Wyrmsun
 - 1.9.2
 -----------------------------------------------------------------------
 
+* Buildings
+- Gold, Silver and Copper Deposits and Mines can now have magic prefixes and suffixes, and can be unique as well (starting gold mines aren't generated with affixes).
+
 * Miscellaneous
 - Moved "Build Structure" button to the bottom row.
 - Fixed an issue which caused a button's popup to continue being drawn after the button "level" had changed (i.e. if a submenu had been selected like the "Build Structure" one).
 - A player's units will now be revealed 30 seconds after the loss of the last town hall.
+- Fixed a Linux-specific freeze issue.
 
 -----------------------------------------------------------------------
 - 1.9.1

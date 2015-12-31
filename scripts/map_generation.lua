@@ -1045,6 +1045,7 @@ function CreateGoldSpots(gold_mine_number, min_x, max_x, min_y, max_y, symmetric
 				deposit_type = "unit-copper-deposit"
 			end
 			unit = CreateUnit(deposit_type, 15, {gold_mine_spawn_point[1], gold_mine_spawn_point[2]})
+			SetUnitVariable(unit, "GenerateSpecialProperties")
 			Count = Count - 1
 			if (symmetric) then
 				local mirrored_tile_x = gold_mine_spawn_point[1] + 1 - 128
@@ -1058,12 +1059,15 @@ function CreateGoldSpots(gold_mine_number, min_x, max_x, min_y, max_y, symmetric
 				end
 
 				unit = CreateUnit(deposit_type, 15, {mirrored_tile_x - (GetUnitTypeData(deposit_type, "TileWidth") - 1), gold_mine_spawn_point[2]})
+				SetUnitVariable(unit, "GenerateSpecialProperties")
 				Count = Count - 1
 
 				unit = CreateUnit(deposit_type, 15, {gold_mine_spawn_point[1], mirrored_tile_y - (GetUnitTypeData(deposit_type, "TileHeight") - 1)})
+				SetUnitVariable(unit, "GenerateSpecialProperties")
 				Count = Count - 1
 
 				unit = CreateUnit(deposit_type, 15, {mirrored_tile_x - (GetUnitTypeData(deposit_type, "TileWidth") - 1), mirrored_tile_y - (GetUnitTypeData(deposit_type, "TileHeight") - 1)})
+				SetUnitVariable(unit, "GenerateSpecialProperties")
 				Count = Count - 1
 			end
 		elseif (RandomNumber == 1) then
@@ -1176,6 +1180,7 @@ function CreateGoldMines(gold_mine_number, gold_quantity, min_x, max_x, min_y, m
 		end
 		unit = CreateUnit(deposit_type, 15, {gold_mine_spawn_point[1], gold_mine_spawn_point[2]})
 		SetResourcesHeld(unit, gold_quantity)
+		SetUnitVariable(unit, "GenerateSpecialProperties")
 		Count = Count - 1
 		if (symmetric) then
 			local mirrored_tile_x = gold_mine_spawn_point[1] + 1 - 128
@@ -1190,14 +1195,17 @@ function CreateGoldMines(gold_mine_number, gold_quantity, min_x, max_x, min_y, m
 
 			unit = CreateUnit(deposit_type, 15, {mirrored_tile_x - (GetUnitTypeData(deposit_type, "TileWidth") - 1), gold_mine_spawn_point[2]})
 			SetResourcesHeld(unit, gold_quantity)
+			SetUnitVariable(unit, "GenerateSpecialProperties")
 			Count = Count - 1
 
 			unit = CreateUnit(deposit_type, 15, {gold_mine_spawn_point[1], mirrored_tile_y - (GetUnitTypeData(deposit_type, "TileHeight") - 1) })
 			SetResourcesHeld(unit, gold_quantity)
+			SetUnitVariable(unit, "GenerateSpecialProperties")
 			Count = Count - 1
 
 			unit = CreateUnit(deposit_type, 15, {mirrored_tile_x - (GetUnitTypeData(deposit_type, "TileWidth") - 1), mirrored_tile_y - (GetUnitTypeData(deposit_type, "TileHeight") - 1) })
 			SetResourcesHeld(unit, gold_quantity)
+			SetUnitVariable(unit, "GenerateSpecialProperties")
 			Count = Count - 1
 		end
 		WhileCount = WhileCount + 1
@@ -2183,6 +2191,7 @@ function ApplyRawTiles()
 					end
 					unit = CreateUnit(deposit_type, 15, {x, y})
 					SetResourcesHeld(unit, 50000)
+					SetUnitVariable(unit, "GenerateSpecialProperties")
 					for sub_x=0,(GetUnitTypeData(deposit_type, "TileWidth") - 1) do
 						for sub_y=0,(GetUnitTypeData(deposit_type, "TileHeight") - 1) do
 							SetRawTile(x + sub_x, y + sub_y, "Land")
