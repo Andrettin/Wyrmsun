@@ -256,6 +256,8 @@ https://github.com/Andrettin/Wyrmsun
 - A player's units will now be revealed 30 seconds after the loss of the last town hall.
 - Fixed a Linux-specific freeze issue (thanks to marcelofg55).
 - Slightly changed the color unique item names have.
+- Encyclopedia categories are now in alphabetical order.
+- Added an encyclopedia category for runic suffixes.
 
 * Quests
 - The starting Shorbear Bastion is now the unique Shorbear Hold.

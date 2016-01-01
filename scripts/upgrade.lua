@@ -54,6 +54,7 @@ function DefineUpgrade(upgrade_ident, data)
 		upgrade.Arrows = CUpgrade:Get(data.Parent).Arrows
 		upgrade.MagicPrefix = CUpgrade:Get(data.Parent).MagicPrefix
 		upgrade.MagicSuffix = CUpgrade:Get(data.Parent).MagicSuffix
+		upgrade.RunicAffix = CUpgrade:Get(data.Parent).RunicAffix
 	end
 	if (data.Name ~= nil) then
 		upgrade.Name = data.Name
@@ -116,6 +117,9 @@ function DefineUpgrade(upgrade_ident, data)
 	end
 	if (data.MagicSuffix ~= nil) then
 		upgrade.MagicSuffix = data.MagicSuffix
+	end
+	if (data.RunicAffix ~= nil) then
+		upgrade.RunicAffix = data.RunicAffix
 	end
 	if (data.ItemPrefix ~= nil) then
 		for i = 1,table.getn(data.ItemPrefix),2 do

@@ -65,47 +65,50 @@ function RunEncyclopediaMenu()
 	
 	menu:addLabel(_("~<Encyclopedia~>"), offx + 320, offy + 104 + 36*-2)
 
-	menu:addFullButton(_("~!Civilizations"), "c", offx + 208 + (113 * -1), offy + 104 + 36*-1,
-		function() RunEncyclopediaCivilizationsMenu() end)
-
-	menu:addFullButton(_("~!Factions"), "f", offx + 208 + (113 * -1), offy + 104 + 36*0,
-		function() RunEncyclopediaFactionsMenu() end)
-
-	menu:addFullButton(_("~!Units"), "u", offx + 208 + (113 * -1), offy + 104 + 36*1,
-		function() RunEncyclopediaUnitsMenu("units") end)
-
-	menu:addFullButton(_("~!Buildings"), "b", offx + 208 + (113 * -1), offy + 104 + 36*2,
+	menu:addFullButton(_("~!Buildings"), "b", offx + 208 + (113 * -1), offy + 104 + 36*-1,
 		function() RunEncyclopediaUnitsMenu("buildings") end)
 
-	menu:addFullButton(_("~!Technologies"), "t", offx + 208 + (113 * -1), offy + 104 + 36*3,
-		function() RunEncyclopediaUnitsMenu("technologies") end)
+	menu:addFullButton(_("~!Civilizations"), "c", offx + 208 + (113 * -1), offy + 104 + 36*0,
+		function() RunEncyclopediaCivilizationsMenu() end)
+
+	menu:addFullButton(_("~!Factions"), "f", offx + 208 + (113 * -1), offy + 104 + 36*1,
+		function() RunEncyclopediaFactionsMenu() end)
+
+	menu:addFullButton(_("~!Game Concepts"), "g", offx + 208 + (113 * -1), offy + 104 + 36*2,
+		function() RunEncyclopediaGameConceptsMenu() end)
+
+	menu:addFullButton(_("~!Heroes"), "h", offx + 208 + (113 * -1), offy + 104 + 36*3,
+		function() RunEncyclopediaUnitsMenu("heroes") end)
 
 	menu:addFullButton(_("~!Items"), "i", offx + 208 + (113 * -1), offy + 104 + 36*4,
 		function() RunEncyclopediaUnitsMenu("items") end)
 
-	menu:addFullButton(_("Item P~!refixes"), "r", offx + 208 + (113 * -1), offy + 104 + 36*5,
+	menu:addFullButton(_("Magic P~!refixes"), "r", offx + 208 + (113 * -1), offy + 104 + 36*5,
 		function() RunEncyclopediaUnitsMenu("item_prefixes") end)
 
-	menu:addFullButton(_("Item ~!Suffixes"), "s", offx + 208 + (113 * -1), offy + 104 + 36*6,
+	menu:addFullButton(_("Magic ~!Suffixes"), "s", offx + 208 + (113 * -1), offy + 104 + 36*6,
 		function() RunEncyclopediaUnitsMenu("item_suffixes") end)
 
-	menu:addFullButton(_("~!Heroes"), "h", offx + 208 + (113 * -1), offy + 104 + 36*7,
-		function() RunEncyclopediaUnitsMenu("heroes") end)
-
-	menu:addFullButton(_("~!Mercenaries"), "m", offx + 208 + (113 * -1), offy + 104 + 36*8,
+	menu:addFullButton(_("~!Mercenaries"), "m", offx + 208 + (113 * -1), offy + 104 + 36*7,
 		function() RunEncyclopediaUnitsMenu("mercenaries") end)
 
-	menu:addFullButton(_("U~!nique Items"), "n", offx + 208 + (113 * 1), offy + 104 + 36*-1,
+	menu:addFullButton(_("Runic ~!Suffixes"), "s", offx + 208 + (113 * -1), offy + 104 + 36*8,
+		function() RunEncyclopediaUnitsMenu("runic_suffixes") end)
+
+	menu:addFullButton(_("~!Technologies"), "t", offx + 208 + (113 * 1), offy + 104 + 36*-1,
+		function() RunEncyclopediaUnitsMenu("technologies") end)
+
+	menu:addFullButton(_("Te~!xts"), "x", offx + 208 + (113 * 1), offy + 104 + 36*0,
+		function() RunEncyclopediaTextsMenu() end)
+
+	menu:addFullButton(_("U~!niques"), "n", offx + 208 + (113 * 1), offy + 104 + 36*1,
 		function() RunEncyclopediaUnitsMenu("unique_items") end)
 
-	menu:addFullButton(_("~!Worlds"), "w", offx + 208 + (113 * 1), offy + 104 + 36*0,
+	menu:addFullButton(_("~!Units"), "u", offx + 208 + (113 * 1), offy + 104 + 36*2,
+		function() RunEncyclopediaUnitsMenu("units") end)
+
+	menu:addFullButton(_("~!Worlds"), "w", offx + 208 + (113 * 1), offy + 104 + 36*3,
 		function() RunEncyclopediaWorldsMenu() end)
-
-	menu:addFullButton(_("~!Game Concepts"), "g", offx + 208 + (113 * 1), offy + 104 + 36*1,
-		function() RunEncyclopediaGameConceptsMenu() end)
-
-	menu:addFullButton(_("Te~!xts"), "x", offx + 208 + (113 * 1), offy + 104 + 36*2,
-		function() RunEncyclopediaTextsMenu() end)
 
 	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * 9),
 		function()
@@ -139,7 +142,7 @@ function RunEncyclopediaUnitsMenu(state)
 	
 	local icon_x = 0
 	local icon_y = 0
-	if (state ~= "heroes" and state ~= "item_prefixes" and state ~= "item_suffixes" and state ~= "unique_items") then
+	if (state ~= "heroes" and state ~= "item_prefixes" and state ~= "item_suffixes" and state ~= "runic_suffixes" and state ~= "unique_items") then
 		local units_table = {}
 		if not (state == "items") then
 			units_table = Units
@@ -179,12 +182,14 @@ function RunEncyclopediaUnitsMenu(state)
 				end
 			end
 		end
-	elseif (state == "item_prefixes" or state == "item_suffixes") then
+	elseif (state == "item_prefixes" or state == "item_suffixes" or state == "runic_suffixes") then
 		local affixes = {}
 		if (state == "item_prefixes") then
 			affixes = GetItemPrefixes()
 		elseif (state == "item_suffixes") then
 			affixes = GetItemSuffixes()
+		elseif (state == "runic_suffixes") then
+			affixes = GetRunicSuffixes()
 		end
 		table.sort(affixes)
 		if (GetTableSize(affixes) > 20) then
@@ -239,15 +244,17 @@ function RunEncyclopediaUnitsMenu(state)
 	elseif (state == "items") then
 		menu:addLabel("~<Encyclopedia: Items~>", offx + 320, offy + 104 + 36*-2)
 	elseif (state == "item_prefixes") then
-		menu:addLabel("~<Encyclopedia: Item Prefixes~>", offx + 320, offy + 104 + 36*-2)
+		menu:addLabel("~<Encyclopedia: Magic Prefixes~>", offx + 320, offy + 104 + 36*-2)
 	elseif (state == "item_suffixes") then
-		menu:addLabel("~<Encyclopedia: Item Suffixes~>", offx + 320, offy + 104 + 36*-2)
+		menu:addLabel("~<Encyclopedia: Magic Suffixes~>", offx + 320, offy + 104 + 36*-2)
+	elseif (state == "runic_suffixes") then
+		menu:addLabel("~<Encyclopedia: Runic Suffixes~>", offx + 320, offy + 104 + 36*-2)
 	elseif (state == "heroes") then
 		menu:addLabel("~<Encyclopedia: Heroes~>", offx + 320, offy + 104 + 36*-2)
 	elseif (state == "mercenaries") then
 		menu:addLabel("~<Encyclopedia: Mercenaries~>", offx + 320, offy + 104 + 36*-2)
 	elseif (state == "unique_items") then
-		menu:addLabel("~<Encyclopedia: Unique Items~>", offx + 320, offy + 104 + 36*-2)
+		menu:addLabel("~<Encyclopedia: Uniques~>", offx + 320, offy + 104 + 36*-2)
 	end
 
 	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * 9),
