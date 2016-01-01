@@ -240,6 +240,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added "Replenishing" magic prefix for deposits/mines (+1 Resource Replenishment).
 - Added "of Replenishment" magic suffix for deposits/mines (+1 Resource Replenishment).
 - Added "Dwindling" magic prefix for deposits/mines (-1 Resource Replenishment).
+- Added "of Diligence" magic suffix for deposits/mines (+10% Time Efficiency Bonus).
 
 * Maps
 - The Wedding Veil (unique gold deposit/mine) is now always present in the Prague map (including when the map is used for The Home of the Boii quest).

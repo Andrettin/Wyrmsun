@@ -51,6 +51,11 @@ DefineUpgrade("upgrade-item-suffix-of-the-colossus", {
 	ItemSuffix = {"armor", true, "shield", true, "helmet", true}
 })
 
+DefineUpgrade("upgrade-item-suffix-of-diligence", {
+	Name = _("of Diligence"),
+	MagicSuffix = true
+})
+
 DefineUpgrade("upgrade-item-suffix-of-extinguishment", {
 	Name = _("of Extinguishment"),
 	MagicSuffix = true,
@@ -194,6 +199,10 @@ DefineModifier("upgrade-item-suffix-of-cold",
 
 DefineModifier("upgrade-item-suffix-of-the-colossus",
 	{"Armor", 2}
+)
+
+DefineModifier("upgrade-item-suffix-of-diligence",
+	{"TimeEfficiencyBonus", 10}
 )
 
 DefineModifier("upgrade-item-suffix-of-extinguishment",

@@ -506,6 +506,17 @@ DefinePanelContents(
 		More = {"Text", {Text = String(ActiveUnitVar("GiveResource", "Increase"))}}
 	},
 
+	-- Time Efficiency Bonus
+	{ Pos = {9, 130}, Condition = {ShowOpponent = false, TimeEfficiencyBonus = "only", Build = "false"},
+		More = {"Text", {Text = "Time Eff.:"}}
+	},
+	{ Pos = {115, 130}, Condition = {ShowOpponent = false, TimeEfficiencyBonus = "only", Build = "false"},
+		More = {"Text", {Text = Concat(
+			If(GreaterThan(ActiveUnitVar("TimeEfficiencyBonus", "Value"), 0), "+", ""),
+			Concat(String(ActiveUnitVar("TimeEfficiencyBonus", "Value")), "%")
+		)}}
+	},
+
 	-- Construction
 	{ Pos = {25, 152}, Condition = {ShowOpponent = false, HideNeutral = true, Build = "only"},
 		More = {"CompleteBar", {Variable = "Build", Width = 152, Height = 14, Border = false}}

@@ -1360,7 +1360,7 @@ DefineUnitType("unit-template-deposit", { Name = _("Deposit"),
 	Type = "land",
 	Building = true, VisibleUnderFog = true,
 	StartingResources = 50000,
-	Affixes = {"upgrade-item-prefix-dwindling", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-replenishing", "upgrade-item-prefix-sturdy", "upgrade-item-suffix-of-replenishment"},
+	Affixes = {"upgrade-item-prefix-dwindling", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-replenishing", "upgrade-item-prefix-sturdy", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-replenishment"},
 	Sounds = {
 		"selected", "gold-mine-selected",
 --		"acknowledge", "gold-mine-acknowledge",
