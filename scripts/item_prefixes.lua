@@ -43,6 +43,11 @@ DefineUpgrade("upgrade-item-prefix-cruel", {
 	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true}
 })
 
+DefineUpgrade("upgrade-item-prefix-dwindling", {
+	Name = _("Dwindling"),
+	MagicPrefix = true
+})
+
 DefineUpgrade("upgrade-item-prefix-flaming", { -- example: Flaming Sword (from Wesnoth)
 	Name = _("Flaming"),
 	MagicPrefix = true,
@@ -124,6 +129,10 @@ DefineModifier("upgrade-item-prefix-cold",
 
 DefineModifier("upgrade-item-prefix-cruel",
 	{"BasicDamage", 1}
+)
+
+DefineModifier("upgrade-item-prefix-dwindling",
+	{"GiveResource", -1, "Increase"}
 )
 
 DefineModifier("upgrade-item-prefix-flaming",

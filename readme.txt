@@ -236,9 +236,10 @@ https://github.com/Andrettin/Wyrmsun
 * Buildings
 - Gold, Silver and Copper Deposits and Mines can now have magic prefixes and suffixes, and can be unique as well (starting gold mines aren't generated with affixes).
 - Added The Wedding Veil (unique gold deposit/mine).
-- The "Sturdy" and "Impregnable" prefixes are now available for deposits/mines.
-- Added "Replenishing" prefix for deposits/mines (+1 Resource Replenishment).
-- Added "of Replenishment" suffix for deposits/mines (+1 Resource Replenishment).
+- The "Sturdy" and "Impregnable" magic prefixes are now available for deposits/mines.
+- Added "Replenishing" magic prefix for deposits/mines (+1 Resource Replenishment).
+- Added "of Replenishment" magic suffix for deposits/mines (+1 Resource Replenishment).
+- Added "Dwindling" magic prefix for deposits/mines (-1 Resource Replenishment).
 
 * Maps
 - The Wedding Veil (unique gold deposit/mine) is now always present in the Prague map (including when the map is used for The Home of the Boii quest).
