@@ -205,6 +205,7 @@ if (GrandStrategy == false) then
 	end
 
 	unit = CreateUnit("unit-dwarven-stronghold", 1, {37, 32})
+	SetUnitVariable(unit, "Unique", "Shorbear Hold")
 	if (GameSettings.Difficulty >= 3) then -- if difficulty is hard or higher
 		unit = CreateUnitInTransporter("unit-dwarven-scout", 1, unit)
 		SetUnitVariable(unit, "Active", false)
@@ -220,7 +221,7 @@ if (GrandStrategy == false) then
 --	unit = CreateUnit("unit-dwarven-miner", 1, {38, 33})
 --	unit = CreateUnit("unit-dwarven-miner", 1, {38, 33})
 	unit = CreateUnit("unit-dwarven-thane", 1, {36, 33}) -- Glonoin
-	SetUnitVariable(unit, "Name", "Glonoin")
+	SetUnitVariable(unit, "Character", "Glonoin")
 	SetUnitVariable(unit, "Active", false)
 
 	-- give a few towers to the Shorbear Clan to make their stronghold less vulnerable at game start
@@ -457,6 +458,7 @@ elseif (GrandStrategyEventMap) then
 	end
 
 	unit = CreateUnit("unit-dwarven-stronghold", 1, {37, 32})
+	SetUnitVariable(unit, "Unique", "Shorbear Hold")
 
 	-- Shorbears
 	CreateProvinceUnits("Shorbear Hills", 1)

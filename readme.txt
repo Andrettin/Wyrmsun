@@ -241,6 +241,8 @@ https://github.com/Andrettin/Wyrmsun
 - Added "of Replenishment" magic suffix for deposits/mines (+1 Resource Replenishment).
 - Added "Dwindling" magic prefix for deposits/mines (-1 Resource Replenishment).
 - Added "of Diligence" magic suffix for deposits/mines (+10% Time Efficiency Bonus).
+- Added Shorbear Hold (unique dwarven Bastion).
+- Unique buildings provide a greatly increased chance of magic or unique items dropping.
 
 * Maps
 - The Wedding Veil (unique gold deposit/mine) is now always present in the Prague map (including when the map is used for The Home of the Boii quest).
@@ -249,10 +251,15 @@ https://github.com/Andrettin/Wyrmsun
 - Moved "Build Structure" button to the bottom row.
 - Fixed an issue which caused a button's popup to continue being drawn after the button "level" had changed (i.e. if a submenu had been selected like the "Build Structure" one).
 - A player's units will now be revealed 30 seconds after the loss of the last town hall.
-- Fixed a Linux-specific freeze issue.
+- Fixed a Linux-specific freeze issue (thanks to marcelofg55).
+- Slightly changed the color unique item names have.
+
+* Quests
+- The starting Shorbear Bastion is now the unique Shorbear Hold.
 
 * Units
 - Organic units no longer drop items unless they have a character assigned to them.
+- The name of units who have characters assigned to them now appears in orange (as with unique items).
 
 -----------------------------------------------------------------------
 - 1.9.1

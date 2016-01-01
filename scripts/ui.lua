@@ -480,11 +480,11 @@ DefinePanelContents(
 	{ Pos = {170, 26}, Condition = {ShowOpponent = true, Affixed = "false"}, More = {"Text", {Text = Line(1, UnitName("Active"), 96, "game"), Centered = true}} },
 	{ Pos = {170, 37}, Condition = {ShowOpponent = true, Affixed = "false"}, More = {"Text", {Text = Line(2, UnitName("Active"), 96, "game"), Centered = true}} },
 
-	{ Pos = {170, 26}, Condition = {ShowOpponent = true, Affixed = "only", Unique = "false"}, TextColor = "blue", More = {"Text", {Text = Line(1, UnitName("Active"), 96, "game"), Centered = true}} },
-	{ Pos = {170, 37}, Condition = {ShowOpponent = true, Affixed = "only", Unique = "false"}, TextColor = "blue", More = {"Text", {Text = Line(2, UnitName("Active"), 96, "game"), Centered = true}} },
+	{ Pos = {170, 26}, Condition = {ShowOpponent = true, Affixed = "only", Unique = "false"}, TextColor = "light-blue", More = {"Text", {Text = Line(1, UnitName("Active"), 96, "game"), Centered = true}} },
+	{ Pos = {170, 37}, Condition = {ShowOpponent = true, Affixed = "only", Unique = "false"}, TextColor = "light-blue", More = {"Text", {Text = Line(2, UnitName("Active"), 96, "game"), Centered = true}} },
 
-	{ Pos = {170, 26}, Condition = {ShowOpponent = true, Unique = "only"}, TextColor = "orange", More = {"Text", {Text = Line(1, UnitName("Active"), 96, "game"), Centered = true}} },
-	{ Pos = {170, 37}, Condition = {ShowOpponent = true, Unique = "only"}, TextColor = "orange", More = {"Text", {Text = Line(2, UnitName("Active"), 96, "game"), Centered = true}} },
+	{ Pos = {170, 26}, Condition = {ShowOpponent = true, Unique = "only"}, TextColor = "fire", More = {"Text", {Text = Line(1, UnitName("Active"), 96, "game"), Centered = true}} },
+	{ Pos = {170, 37}, Condition = {ShowOpponent = true, Unique = "only"}, TextColor = "fire", More = {"Text", {Text = Line(2, UnitName("Active"), 96, "game"), Centered = true}} },
 
 	-- unit type name, if the unit has a personal name
 	{ Pos = {170, 61}, Condition = {ShowOpponent = true}, More = {"Text", {Text = Line(1, UnitTypeName("Active"), 96, "game"), Centered = true}} },
@@ -1156,10 +1156,10 @@ if not (ui_loaded_first_time) then
 				{	Condition = {Affixed = "false", Unique = "false"}, HighlightColor = "yellow",
 					More = {"ButtonInfo", {InfoType = "Hint", Font = PopupFont}}
 				}, 
-				{	Condition = {Affixed = "only", Unique = "false"}, TextColor = "blue", HighlightColor = "yellow",
+				{	Condition = {Affixed = "only", Unique = "false"}, TextColor = "light-blue", HighlightColor = "yellow",
 					More = {"ButtonInfo", {InfoType = "Hint", Font = PopupFont}}
 				}, 
-				{	Condition = {Unique = "only"}, TextColor = "orange", HighlightColor = "yellow",
+				{	Condition = {Unique = "only"}, TextColor = "fire", HighlightColor = "yellow",
 					More = {"ButtonInfo", {InfoType = "Hint", Font = PopupFont}}
 				}, 
 				{ 	Margin = {1, 1},
