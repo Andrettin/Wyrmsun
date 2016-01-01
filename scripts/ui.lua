@@ -498,6 +498,14 @@ DefinePanelContents(
 		More = {"Text", {Text = String(ActiveUnitVar("GiveResource", "Value"))}}
 	},
 
+	-- Resource Replenishment
+	{ Pos = {9, 116}, Condition = {ShowOpponent = false, GiveResource = "only", Replenishment = "only", Build = "false"},
+		More = {"Text", {Text = "Replenishment:"}}
+	},
+	{ Pos = {115, 116}, Condition = {ShowOpponent = false, GiveResource = "only", Replenishment = "only", Build = "false"},
+		More = {"Text", {Text = String(ActiveUnitVar("GiveResource", "Increase"))}}
+	},
+
 	-- Construction
 	{ Pos = {25, 152}, Condition = {ShowOpponent = false, HideNeutral = true, Build = "only"},
 		More = {"CompleteBar", {Variable = "Build", Width = 152, Height = 14, Border = false}}
