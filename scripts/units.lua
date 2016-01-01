@@ -1341,11 +1341,8 @@ DefineUnitType("unit-dread-bat", { Name = _("Dread Bat"),
 	}
 } )
 
-DefineUnitType("unit-gold-deposit", { Name = _("Gold Deposit"),
-	Description = _("Gold deposits contain deep veins of gold, which can be gainfully mined after the proper infrastructure is put into place."),
-	Image = {"file", "neutral/buildings/gold_deposit.png", "size", {96, 96}},
-	Shadow = {"file", "neutral/buildings/gold_deposit_shadow.png", "size", {96, 96}},
-	Animations = "animations-building", Icon = "icon-gold-deposit",
+DefineUnitType("unit-template-deposit", { Name = _("Deposit"),
+	Animations = "animations-building",
 	NeutralMinimapColor = {255, 255, 0},
 	Costs = {"time", 150},
 	Construction = "construction-land2",
@@ -1363,18 +1360,7 @@ DefineUnitType("unit-gold-deposit", { Name = _("Gold Deposit"),
 	Type = "land",
 	Building = true, VisibleUnderFog = true,
 	StartingResources = 50000,
-	BuildingRules = {
-		{
-			"distance", { Distance = 3, DistanceType = ">", Type = "unit-dwarven-town-hall"},
-			"distance", { Distance = 3, DistanceType = ">", Type = "unit-dwarven-stronghold"},
-			"distance", { Distance = 3, DistanceType = ">", Type = "unit-germanic-town-hall"},
-			"distance", { Distance = 3, DistanceType = ">", Type = "unit-gnomish-town-hall"},
-			"distance", { Distance = 3, DistanceType = ">", Type = "unit-goblin-town-hall"},
-			"distance", { Distance = 3, DistanceType = ">", Type = "unit-teuton-town-hall"},
-			"distance", { Distance = 3, DistanceType = ">", Type = "unit-teuton-stronghold"}
-		}
-	},
-	GivesResource = "gold",
+	Affixes = {"upgrade-item-prefix-impregnable", "upgrade-item-prefix-replenishing", "upgrade-item-prefix-sturdy", "upgrade-item-suffix-of-replenishment"},
 	Sounds = {
 		"selected", "gold-mine-selected",
 --		"acknowledge", "gold-mine-acknowledge",
@@ -1384,16 +1370,9 @@ DefineUnitType("unit-gold-deposit", { Name = _("Gold Deposit"),
 	}
 } )
 
-DefineUnitType("unit-gold-mine", { Name = _("Gold Mine"),
-	Class = "gold-mine",
-	Description = _("Gold is a crucial metal for most societies, as it serves both as a durable stock of value, and as a means of exchange with which a myriad of goods and services can be traded for."),
-	Image = {"file", "neutral/buildings/gold_mine.png", "size", {96, 96}},
-	Shadow = {"file", "neutral/buildings/gold_mine_shadow.png", "size", {96, 96}},
-	LightImage = {"file", "neutral/buildings/gold_mine_light.png"},
-	Animations = "animations-mine", Icon = "icon-gold-mine",
+DefineUnitType("unit-template-mine", { Name = _("Mine"),
+	Animations = "animations-mine",
 	NeutralMinimapColor = {255, 255, 0},
---	Costs = {"time", 200, "gold", 700, "lumber", 450},
-	Costs = {"time", 200, "lumber", 800},
 	Construction = "construction-mine",
 	RepairHp = 4,
 	RepairCosts = {"gold", 1, "lumber", 1},
@@ -1427,28 +1406,12 @@ DefineUnitType("unit-gold-mine", { Name = _("Gold Mine"),
 	}
 } )
 
-DefineUnitType("unit-silver-deposit", { Name = _("Silver Deposit"),
-	Description = _("Silver deposits often contain deep veins of silver, which can be gainfully mined after the proper infrastructure is put into place."),
-	Image = {"file", "neutral/buildings/silver_deposit.png", "size", {96, 96}},
-	Shadow = {"file", "neutral/buildings/silver_deposit_shadow.png", "size", {96, 96}},
-	Animations = "animations-building", Icon = "icon-silver-deposit",
-	NeutralMinimapColor = {255, 255, 0},
-	Costs = {"time", 150},
-	Construction = "construction-land2",
-	Speed = 0,
-	HitPoints = 25500,
-	DrawLevel = 40,
-	TileSize = {3, 3}, BoxSize = {95, 95},
-	SightRange = 1,
-	Armor = 20, BasicDamage = 0, Missile = "missile-none",
-	Accuracy = 0,
-	Evasion = 0,
-	Priority = 0,
-	Corpse = "unit-destroyed-3x3-place",
-	ExplodeWhenKilled = "missile-explosion",
-	Type = "land",
-	Building = true, VisibleUnderFog = true,
-	StartingResources = 50000,
+DefineUnitType("unit-gold-deposit", { Name = _("Gold Deposit"),
+	Parent = "unit-template-deposit",
+	Description = _("Gold deposits contain deep veins of gold, which can be gainfully mined after the proper infrastructure is put into place."),
+	Image = {"file", "neutral/buildings/gold_deposit.png", "size", {96, 96}},
+	Shadow = {"file", "neutral/buildings/gold_deposit_shadow.png", "size", {96, 96}},
+	Icon = "icon-gold-deposit",
 	BuildingRules = {
 		{
 			"distance", { Distance = 3, DistanceType = ">", Type = "unit-dwarven-town-hall"},
@@ -1460,80 +1423,62 @@ DefineUnitType("unit-silver-deposit", { Name = _("Silver Deposit"),
 			"distance", { Distance = 3, DistanceType = ">", Type = "unit-teuton-stronghold"}
 		}
 	},
-	GivesResource = "silver",
-	Sounds = {
-		"selected", "gold-mine-selected",
---		"acknowledge", "gold-mine-acknowledge",
---		"ready", "gold-mine-ready",
---		"help", "gold-mine-help",
-		"dead", "building-destroyed"
-	}
+	GivesResource = "gold"
+} )
+
+DefineUnitType("unit-gold-mine", { Name = _("Gold Mine"),
+	Parent = "unit-template-mine",
+	Class = "gold-mine",
+	Description = _("Gold is a crucial metal for most societies, as it serves both as a durable stock of value, and as a means of exchange with which a myriad of goods and services can be traded for."),
+	Image = {"file", "neutral/buildings/gold_mine.png", "size", {96, 96}},
+	Shadow = {"file", "neutral/buildings/gold_mine_shadow.png", "size", {96, 96}},
+	LightImage = {"file", "neutral/buildings/gold_mine_light.png"},
+	Icon = "icon-gold-mine",
+--	Costs = {"time", 200, "gold", 700, "lumber", 450},
+	Costs = {"time", 200, "lumber", 800},
+	BuildingRules = { { "ontop", { Type = "unit-gold-deposit", ReplaceOnDie = true, ReplaceOnBuild = true} } },
+	GivesResource = "gold"
+} )
+
+DefineUnitType("unit-silver-deposit", { Name = _("Silver Deposit"),
+	Parent = "unit-template-deposit",
+	Description = _("Silver deposits often contain deep veins of silver, which can be gainfully mined after the proper infrastructure is put into place."),
+	Image = {"file", "neutral/buildings/silver_deposit.png", "size", {96, 96}},
+	Shadow = {"file", "neutral/buildings/silver_deposit_shadow.png", "size", {96, 96}},
+	Icon = "icon-silver-deposit",
+	BuildingRules = {
+		{
+			"distance", { Distance = 3, DistanceType = ">", Type = "unit-dwarven-town-hall"},
+			"distance", { Distance = 3, DistanceType = ">", Type = "unit-dwarven-stronghold"},
+			"distance", { Distance = 3, DistanceType = ">", Type = "unit-germanic-town-hall"},
+			"distance", { Distance = 3, DistanceType = ">", Type = "unit-gnomish-town-hall"},
+			"distance", { Distance = 3, DistanceType = ">", Type = "unit-goblin-town-hall"},
+			"distance", { Distance = 3, DistanceType = ">", Type = "unit-teuton-town-hall"},
+			"distance", { Distance = 3, DistanceType = ">", Type = "unit-teuton-stronghold"}
+		}
+	},
+	GivesResource = "silver"
 } )
 
 DefineUnitType("unit-silver-mine", { Name = _("Silver Mine"),
+	Parent = "unit-template-mine",
 	Class = "silver-mine",
 	Description = _("Silver is a crucial metal for most societies, as it serves both as a durable stock of value, and as a means of exchange with which a myriad of goods and services can be traded for. Although not as valuable as gold, silver is still a highly sought-after metal."),
 	Image = {"file", "neutral/buildings/silver_mine.png", "size", {96, 96}},
 	Shadow = {"file", "neutral/buildings/silver_mine_shadow.png", "size", {96, 96}},
 	LightImage = {"file", "neutral/buildings/silver_mine_light.png"},
-	Animations = "animations-mine", Icon = "icon-silver-mine",
-	NeutralMinimapColor = {255, 255, 0},
+	Icon = "icon-silver-mine",
 	Costs = {"time", 200, "lumber", 400},
-	Construction = "construction-mine",
-	RepairHp = 4,
-	RepairCosts = {"gold", 1, "lumber", 1},
-	Speed = 0,
-	HitPoints = 650,
-	DrawLevel = 40,
-	TileSize = {3, 3}, BoxSize = {95, 95},
-	SightRange = 1,
---	Armor = 20, BasicDamage = 0, Missile = "missile-none",
-	Armor = 5, BasicDamage = 0, Missile = "missile-none",
-	Accuracy = 0,
-	Evasion = 0,
-	Priority = 15, AnnoyComputerFactor = 15,
-	Points = 80,
-	Corpse = "unit-destroyed-3x3-place",
-	ExplodeWhenKilled = "missile-explosion",
-	Type = "land",
-	Building = true, VisibleUnderFog = true,
-	BuilderOutside = true,
 	BuildingRules = { { "ontop", { Type = "unit-silver-deposit", ReplaceOnDie = true, ReplaceOnBuild = true} } },
-	GivesResource = "silver", CanHarvest = true,
-	SelectableByRectangle = true,
-	BurnPercent = 50,
-	BurnDamageRate = 1,
-	Sounds = {
-		"selected", "gold-mine-selected",
---		"acknowledge", "gold-mine-acknowledge",
---		"ready", "gold-mine-ready",
---		"help", "gold-mine-help",
-		"dead", "building-destroyed"
-	}
+	GivesResource = "silver"
 } )
 
 DefineUnitType("unit-copper-deposit", { Name = _("Copper Deposit"),
+	Parent = "unit-template-deposit",
 	Description = _("Copper deposits contain deep veins of copper, which can be gainfully mined after the proper infrastructure is put into place."),
 	Image = {"file", "neutral/buildings/copper_deposit.png", "size", {96, 96}},
 	Shadow = {"file", "neutral/buildings/copper_deposit_shadow.png", "size", {96, 96}},
-	Animations = "animations-building", Icon = "icon-copper-deposit",
-	NeutralMinimapColor = {255, 255, 0},
-	Costs = {"time", 150},
-	Construction = "construction-land2",
-	Speed = 0,
-	HitPoints = 25500,
-	DrawLevel = 40,
-	TileSize = {3, 3}, BoxSize = {95, 95},
-	SightRange = 1,
-	Armor = 20, BasicDamage = 0, Missile = "missile-none",
-	Accuracy = 0,
-	Evasion = 0,
-	Priority = 0,
-	Corpse = "unit-destroyed-3x3-place",
-	ExplodeWhenKilled = "missile-explosion",
-	Type = "land",
-	Building = true, VisibleUnderFog = true,
-	StartingResources = 50000,
+	Icon = "icon-copper-deposit",
 	BuildingRules = {
 		{
 			"distance", { Distance = 3, DistanceType = ">", Type = "unit-dwarven-town-hall"},
@@ -1545,56 +1490,20 @@ DefineUnitType("unit-copper-deposit", { Name = _("Copper Deposit"),
 			"distance", { Distance = 3, DistanceType = ">", Type = "unit-teuton-stronghold"}
 		}
 	},
-	GivesResource = "copper",
-	Sounds = {
-		"selected", "gold-mine-selected",
---		"acknowledge", "gold-mine-acknowledge",
---		"ready", "gold-mine-ready",
---		"help", "gold-mine-help",
-		"dead", "building-destroyed"
-	}
+	GivesResource = "copper"
 } )
 
 DefineUnitType("unit-copper-mine", { Name = _("Copper Mine"),
+	Parent = "unit-template-mine",
 	Class = "copper-mine",
 	Description = _("More common than either gold or silver, copper has a multitude of uses. It not only serves as a stock of value and means of exchange, but also as a material for utensils and as an ingredient to the making of bronze."),
 	Image = {"file", "neutral/buildings/copper_mine.png", "size", {96, 96}},
 	Shadow = {"file", "neutral/buildings/copper_mine_shadow.png", "size", {96, 96}},
 	LightImage = {"file", "neutral/buildings/copper_mine_light.png"},
-	Animations = "animations-mine", Icon = "icon-copper-mine",
-	NeutralMinimapColor = {255, 255, 0},
+	Icon = "icon-copper-mine",
 	Costs = {"time", 200, "lumber", 200},
-	Construction = "construction-mine",
-	RepairHp = 4,
-	RepairCosts = {"gold", 1, "lumber", 1},
-	Speed = 0,
-	HitPoints = 650,
-	DrawLevel = 40,
-	TileSize = {3, 3}, BoxSize = {95, 95},
-	SightRange = 1,
---	Armor = 20, BasicDamage = 0, Missile = "missile-none",
-	Armor = 5, BasicDamage = 0, Missile = "missile-none",
-	Accuracy = 0,
-	Evasion = 0,
-	Priority = 10, AnnoyComputerFactor = 10,
-	Points = 40,
-	Corpse = "unit-destroyed-3x3-place",
-	ExplodeWhenKilled = "missile-explosion",
-	Type = "land",
-	Building = true, VisibleUnderFog = true,
-	BuilderOutside = true,
 	BuildingRules = { { "ontop", { Type = "unit-copper-deposit", ReplaceOnDie = true, ReplaceOnBuild = true} } },
-	GivesResource = "copper", CanHarvest = true,
-	SelectableByRectangle = true,
-	BurnPercent = 50,
-	BurnDamageRate = 1,
-	Sounds = {
-		"selected", "gold-mine-selected",
---		"acknowledge", "gold-mine-acknowledge",
---		"ready", "gold-mine-ready",
---		"help", "gold-mine-help",
-		"dead", "building-destroyed"
-	}
+	GivesResource = "copper"
 } )
 
 DefineUnitType("unit-coal-mine", { Name = _("Coal Mine"),

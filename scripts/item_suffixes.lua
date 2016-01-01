@@ -102,6 +102,12 @@ DefineUpgrade("upgrade-item-suffix-of-regeneration", { -- example: Ring of Regen
 	ItemSuffix = {"amulet", true, "ring", true}
 })
 
+DefineUpgrade("upgrade-item-suffix-of-replenishment", {
+	Name = _("of Replenishment"),
+	MagicSuffix = true,
+	IncompatibleAffixes = {"upgrade-item-prefix-replenishing"}
+})
+
 DefineUpgrade("upgrade-item-suffix-of-the-serpent", {
 	Name = _("of the Serpent"),
 	MagicSuffix = true,
@@ -221,6 +227,10 @@ DefineModifier("upgrade-item-suffix-of-power",
 
 DefineModifier("upgrade-item-suffix-of-regeneration",
 	{"HitPointBonus", 1, "Increase"}
+)
+
+DefineModifier("upgrade-item-suffix-of-replenishment",
+	{"GiveResource", 1, "Increase"}
 )
 
 DefineModifier("upgrade-item-suffix-of-the-serpent",

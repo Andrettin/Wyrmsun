@@ -113,3 +113,12 @@ DefineUniqueItem("Draupnir", { -- Source: Kevin Crossley-Holland, "The Norse Myt
 	Background = "In Norse mythology, Draupnir (\"Dropper\") was a gold arm-ring crafted by the dwarves Brokk and Eitri for the Aesir. Eight rings with the same weight in gold as Draupnir dropped from it every ninth night. Draupnir was burned with Odin's son Balder in his funeral pyre.",
 	Quote = "\"The ring I wish not, | though burned it was / Of old with Modsognir's son; / In my home | is no lack of gold / In the wealth my father wields.\" - Dwarven Traditional Poetry"
 } )
+
+DefineUniqueItem("The Wedding Veil", { -- Source: Alena Ježková, "77 Prague Legends", 2006, p. 31.
+	Type = "unit-gold-deposit",
+	Prefix = "upgrade-item-prefix-replenishing",
+	Suffix = "upgrade-item-suffix-of-replenishment",
+	ResourcesHeld = 200000,
+	Background = "The Wedding Veil was a gold mine in Jilova owned by the Prague burgher Rotlev, who lived in the time of Charles IV. The mine was very profitable, but had begun to dry up. Strongly believing that it still contained much gold inside, Rotlev sold off more and more of his possessions to keep paying for the mining operations. Eventually, he had nothing left to sell. His wife then took a golden veil which he had given to her as a wedding gift, and told him to sell it. He hesitantly accepted. During the further week of mining the veil had paid for, vast gold veins were found in the mine. Rotlev was saved. He bought back his wife's veil, and the gold was so abundant that he became an even wealthier man than he had been previously. And thus the mine became known for the veil which saved its owner, receiving its name from it. With the mine's riches, Rotlev built a large house in Prague, which was later bought by the crown and became the Carolinum."
+} )
+

@@ -79,6 +79,11 @@ DefineUpgrade("upgrade-item-prefix-quenching", {
 	ItemPrefix = {"armor", true, "shield", true, "helmet", true}
 })
 
+DefineUpgrade("upgrade-item-prefix-replenishing", {
+	Name = _("Replenishing"),
+	MagicPrefix = true
+})
+
 DefineUpgrade("upgrade-item-prefix-storm", { -- example: Storm Trident (from Wesnoth)
 	Name = _("Storm"),
 	MagicPrefix = true,
@@ -143,6 +148,10 @@ DefineModifier("upgrade-item-prefix-penetrating",
 
 DefineModifier("upgrade-item-prefix-quenching",
 	{"FireResistance", 10}
+)
+
+DefineModifier("upgrade-item-prefix-replenishing",
+	{"GiveResource", 1, "Increase"}
 )
 
 DefineModifier("upgrade-item-prefix-storm",

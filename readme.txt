@@ -235,12 +235,22 @@ https://github.com/Andrettin/Wyrmsun
 
 * Buildings
 - Gold, Silver and Copper Deposits and Mines can now have magic prefixes and suffixes, and can be unique as well (starting gold mines aren't generated with affixes).
+- Added The Wedding Veil (unique gold deposit/mine).
+- The "Sturdy" and "Impregnable" prefixes are now available for deposits/mines.
+- Added "Replenishing" prefix for deposits/mines.
+- Added "of Replenishment" suffix for deposits/mines.
+
+* Maps
+- The Wedding Veil (unique gold deposit/mine) is now always present in the Prague map.
 
 * Miscellaneous
 - Moved "Build Structure" button to the bottom row.
 - Fixed an issue which caused a button's popup to continue being drawn after the button "level" had changed (i.e. if a submenu had been selected like the "Build Structure" one).
 - A player's units will now be revealed 30 seconds after the loss of the last town hall.
 - Fixed a Linux-specific freeze issue.
+
+* Units
+- Organic units no longer drop items unless they have a character assigned to them.
 
 -----------------------------------------------------------------------
 - 1.9.1

@@ -50,3 +50,6 @@ if (nearest_coast ~= nil) then
 	unit = CreateUnit("unit-raft", 15, nearest_coast)
 	unit = CreateUnit("unit-raft", 15, nearest_coast)
 end
+
+CreateGoldMines(1, 50000, 0, Map.Info.MapWidth - 3, math.floor(Map.Info.MapHeight * 3 / 4), Map.Info.MapHeight - 3, false, true)
+SetUnitVariable(unit, "Unique", "The Wedding Veil")
