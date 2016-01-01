@@ -4360,7 +4360,7 @@ DefineUnitType("unit-template-stronghold", { Name = _("Stronghold"),
 	SelectableByRectangle = true,
 	Drops = {"unit-wood-pile"},
 	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-amulet", "unit-ring"}, -- worker-related items, as well as those we would expect a center of administration to have; and military ones, since this is a stronghold
-	DropAffixes = {"upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-power", "upgrade-item-suffix-of-regeneration", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-thorns", "upgrade-item-suffix-of-vision"},
+	DropAffixes = {"upgrade-item-prefix-accurate", "upgrade-item-prefix-cruel", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-penetrating", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-swift", "upgrade-item-prefix-vicious", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-accuracy", "upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-power", "upgrade-item-suffix-of-regeneration", "upgrade-item-suffix-of-slaughter", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-thorns", "upgrade-item-suffix-of-victory", "upgrade-item-suffix-of-vision"},
 	Sounds = {
 		"selected", "fortress-selected",
 --		"acknowledge", "town-hall-acknowledge",
