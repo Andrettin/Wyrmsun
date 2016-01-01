@@ -243,6 +243,9 @@ https://github.com/Andrettin/Wyrmsun
 - Added "of Diligence" magic suffix for deposits/mines (+10% Time Efficiency Bonus).
 - Added Shorbear Hold (unique dwarven Bastion).
 - Unique buildings provide a greatly increased chance of magic or unique items dropping.
+- Added "Industrious" magic prefix for deposits/mines (+10% Time Efficiency Bonus).
+- Added Smitna (unique silver deposit/mine).
+- Added Esel (unique silver deposit/mine).
 
 * Maps
 - The Wedding Veil (unique gold deposit/mine) is now always present in the Prague map (including when the map is used for The Home of the Boii quest).

@@ -122,6 +122,22 @@ DefineUniqueItem("The Wedding Veil", { -- Source: Alena Ježková, "77 Prague Le
 	Background = "The Wedding Veil was a gold mine in Jilova owned by the Prague burgher Rotlev, who lived in the time of Charles IV. The mine was very profitable, but had begun to dry up. Strongly believing that it still contained much gold inside, Rotlev sold off more and more of his possessions to keep paying for the mining operations. Eventually, he had nothing left to sell. His wife then took a golden veil which he had given to her as a wedding gift, and told him to sell it. He hesitantly accepted. During the further week of mining the veil had paid for, vast gold veins were found in the mine. Rotlev was saved. He bought back his wife's veil, and the gold was so abundant that he became an even wealthier man than he had been previously. And thus the mine became known for the veil which saved its owner, receiving its name from it. With the mine's riches, Rotlev built a large house in Prague, which was later bought by the crown and became the Carolinum."
 } )
 
+DefineUniqueItem("Esel", { -- Source: Alena Ježková, "22 Böhmische Legenden", 2007, pp. 82-83.
+	Type = "unit-silver-deposit",
+	Prefix = "upgrade-item-prefix-replenishing",
+	Suffix = "upgrade-item-suffix-of-diligence",
+	ResourcesHeld = 200000,
+	Background = "Esel was a very rich silver mine near Kuttenberg (Kutná Hora), in Bohemia. It was legendary for never having flooded, and it was said among the miners that as long as Esel was not filled with water, the silver mining near Kuttenberg would remain strong. In 1540, Esel suddenly began to flood, and by 1554 it was entirely submerged in water. The miners' prophecy turned true: soon after Esel's flood, the silver finds in the Kuttenberg area began to dwindle."
+} )
+
+DefineUniqueItem("Smitna", { -- Source: Alena Ježková, "22 Böhmische Legenden", 2007, p. 81.
+	Type = "unit-silver-deposit",
+	Prefix = "upgrade-item-prefix-industrious",
+	Suffix = "upgrade-item-suffix-of-diligence",
+	ResourcesHeld = 100000,
+	Background = "Šmitna was a silver mine near Kuttenberg (Kutná Hora), in Bohemia. It was said to be inhabited by kobolds, who would warn the miners of which parts of the mine were unsafe to dig through. In 1509 Šmitna was flooded, resulting in the drowning of 18 miners - according to legend, they had been told not to dig at a certain place by the mine's kobolds, but such warnings went unheeded."
+} )
+
 DefineUniqueItem("Shorbear Hold", {
 	Type = "unit-dwarven-stronghold",
 	Prefix = "upgrade-item-prefix-impregnable",

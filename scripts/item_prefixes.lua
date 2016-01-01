@@ -66,6 +66,11 @@ DefineUpgrade("upgrade-item-prefix-impregnable", {
 	ItemPrefix = {"armor", true, "shield", true, "helmet", true}
 })
 
+DefineUpgrade("upgrade-item-prefix-industrious", {
+	Name = _("Industrious"),
+	MagicPrefix = true
+})
+
 DefineUpgrade("upgrade-item-prefix-jinns", {
 	Name = _("Jinn's"),
 	MagicPrefix = true,
@@ -145,6 +150,10 @@ DefineModifier("upgrade-item-prefix-glacial",
 
 DefineModifier("upgrade-item-prefix-impregnable",
 	{"Armor", 2}
+)
+
+DefineModifier("upgrade-item-prefix-industrious",
+	{"TimeEfficiencyBonus", 10}
 )
 
 DefineModifier("upgrade-item-prefix-jinns",
