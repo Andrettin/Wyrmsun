@@ -233,6 +233,9 @@ https://github.com/Andrettin/Wyrmsun
 - 1.9.3
 -----------------------------------------------------------------------
 
+* Factions
+- The faction choice menu now tells the player which color each faction has.
+
 * Units
 - Added 26 personal names for horses based on horses from Norse mythology and Bohemian legends.
 
