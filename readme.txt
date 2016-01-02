@@ -233,6 +233,9 @@ https://github.com/Andrettin/Wyrmsun
 - 1.9.3
 -----------------------------------------------------------------------
 
+* Buildings
+- The AI now gets shooter defenders in its stronghold-class buildings (previously this happened only to guard towers).
+
 * Factions
 - The faction choice menu now tells the player which color each faction has.
 

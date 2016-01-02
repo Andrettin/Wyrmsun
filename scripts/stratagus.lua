@@ -475,6 +475,12 @@ function StandardTriggers()
 					SetUnitVariable(unit, "Active", false) -- set garrisoned unit to passive AI (so that they are not counted for attack participation)
 				end
 				
+				-- make AI strongholds be filled with defenders
+				if (GetPlayerData(GetUnitVariable(uncount[unit1], "Player"), "AiEnabled") and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Class") == "stronghold"  and GetUnitVariable(uncount[unit1], "Transport") < 3) then
+					unit = CreateUnitInTransporter(GetCivilizationClassUnitType("shooter", GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Civilization")), GetUnitVariable(uncount[unit1], "Player"), uncount[unit1])
+					SetUnitVariable(unit, "Active", false) -- set garrisoned unit to passive AI (so that they are not counted for attack participation)
+				end
+				
 				-- AI units inside tree stumps get out to attack if an enemy is near
 				if ((GetUnitVariable(uncount[unit1], "Ident") == "unit-tree-stump" or GetUnitVariable(uncount[unit1], "Ident") == "unit-hole") and GetUnitVariable(uncount[unit1], "Transport") > 0) then
 					local inside_uncount = 0
