@@ -37,7 +37,7 @@ DebugPrint("Stratagus default config file loading ...\n")
 wyrmsun = {}
 
 wyrmsun.Name = "Wyrmsun"
-wyrmsun.Version = "1.9.2"
+wyrmsun.Version = "1.9.3"
 wyrmsun.Homepage = ""
 wyrmsun.Licence = "GPL 2.0"
 wyrmsun.Copyright = "Copyright (c) 2013-2015 by Andrettin"
@@ -672,7 +672,15 @@ function StandardTriggers()
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Persistent Heroes") == false) then
 			AddTrigger(
 				function()
-					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Character") ~= "" and GetCharacterData(GetUnitVariable(GetSelectedUnits()[1], "Character"), "Persistent") and GetUnitVariable(GetSelectedUnits()[1], "Player") == GetThisPlayer()) then
+					if (
+						table.getn(GetSelectedUnits()) > 0
+						and GetUnitVariable(GetSelectedUnits()[1], "Character") ~= ""
+						and (
+							GetUnitVariable(GetSelectedUnits()[1], "CustomCharacter") == false and (GetCharacterData(GetUnitVariable(GetSelectedUnits()[1], "Character"), "Persistent"))
+							or GetUnitVariable(GetSelectedUnits()[1], "CustomCharacter") == true
+						)
+						and GetUnitVariable(GetSelectedUnits()[1], "Player") == GetThisPlayer()
+					) then
 						return true
 					else
 						return false

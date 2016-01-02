@@ -239,6 +239,12 @@ https://github.com/Andrettin/Wyrmsun
 * Factions
 - The faction choice menu now tells the player which color each faction has.
 
+* Heroes
+- Fixed crash which happened when the "Persistent Heroes" popup tip triggered by selecting a custom hero.
+
+* Miscellaneous
+- Loading screen improvements (thanks to marcelofg55).
+
 * Units
 - Added 26 personal names for horses based on horses from Norse mythology and Bohemian legends.
 
