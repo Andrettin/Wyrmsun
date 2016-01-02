@@ -260,11 +260,12 @@ https://github.com/Andrettin/Wyrmsun
 - Added an encyclopedia category for runic suffixes.
 
 * Quests
-- The starting Shorbear Bastion is now the unique Shorbear Hold.
+- In the Hills of the Shorbear Clan quest (dwarf), the starting Shorbear Bastion is now the unique Shorbear Hold.
 
 * Units
 - Organic units no longer drop items unless they have a character assigned to them.
 - The name of units who have characters assigned to them now appears in orange (as with unique items).
+- The probability of a magic or unique item dropping from a unit is now linked to the unit's level (rather than only whether it is assigned to a character or not, as was previously).
 
 -----------------------------------------------------------------------
 - 1.9.1
