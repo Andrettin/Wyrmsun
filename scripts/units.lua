@@ -55,7 +55,7 @@ Units = {
 	"unit-celt-farm",
 	"upgrade-celt-civilization",
 	"unit-dwarven-miner", "unit-dwarven-militia", "unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
-	"unit-dwarven-scout",
+	"unit-dwarven-scout", "unit-dwarven-pathfinder",
 	"unit-dwarven-yale-rider", "unit-dwarven-ballista",
 	"unit-dwarven-gryphon-rider",
 	"unit-dwarven-transport-ship",
@@ -4045,7 +4045,7 @@ DefineUnitType("unit-template-spearman", { Name = _("Spearman"),
 	}
 } )
 
-DefineUnitType("unit-template-archer", { Name = _("Archer"),
+DefineUnitType("unit-template-archer", { Name = _("Shooter"),
 	Class = "shooter",
 	Costs = {"time", 70, "gold", 500, "lumber", 50},
 	Intelligence = 11,
@@ -4083,6 +4083,20 @@ DefineUnitType("unit-template-archer", { Name = _("Archer"),
 		"step-stone", "step-stone",
 		"step-grass", "step-leaves"
 	}
+} )
+
+DefineUnitType("unit-template-veteran-shooter", { Name = _("Veteran Shooter"),
+	Parent = "unit-template-archer",
+	Class = "veteran-shooter",
+	Costs = {"time", 105, "gold", 750, "lumber", 75},
+	Intelligence = 12,
+	HitPoints = 50,
+	BasicDamage = 10,
+	Accuracy = 11,
+	Points = 90,
+	Level = 2,
+	AiDrops = {"unit-amulet", "unit-ring"},
+	DropAffixes = {"upgrade-item-prefix-impregnable", "upgrade-item-prefix-penetrating", "upgrade-item-prefix-vicious", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-thorns"}
 } )
 
 DefineUnitType("unit-template-thief", { Name = _("Thief"),

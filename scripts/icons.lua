@@ -628,6 +628,30 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-dwarven-pathfinder",
+	Size = {46, 38},
+	File = "dwarf/icons/pathfinder.png"
+})
+
+DefineIcon({
+	Name = "icon-dwarven-pathfinder-black-hair",
+	Size = {46, 38},
+	File = "dwarf/icons/pathfinder_black_hair.png"
+})
+
+DefineIcon({
+	Name = "icon-dwarven-pathfinder-blond-hair",
+	Size = {46, 38},
+	File = "dwarf/icons/pathfinder_blond_hair.png"
+})
+
+DefineIcon({
+	Name = "icon-dwarven-pathfinder-gray-hair",
+	Size = {46, 38},
+	File = "dwarf/icons/pathfinder_gray_hair.png"
+})
+
+DefineIcon({
 	Name = "icon-dwarven-yale-rider",
 	Size = {46, 38},
 	File = "dwarf/icons/yale_rider.png"

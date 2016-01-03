@@ -214,12 +214,12 @@ if (GrandStrategy == false) then
 	SetUnitVariable(unit, "Active", false)
 	unit = CreateUnit("unit-surghan-mercenary-thane", 1, {4, 28})
 	SetUnitVariable(unit, "Active", false)
-	unit = CreateUnit("unit-dwarven-scout", 1, {4, 28})
+	unit = CreateUnit("unit-dwarven-pathfinder", 1, {4, 28})
 	SetUnitVariable(unit, "Active", false)
-	IncreaseUnitLevel(unit, 2)
-	unit = CreateUnit("unit-dwarven-scout", 1, {4, 28})
+	IncreaseUnitLevel(unit, 1)
+	unit = CreateUnit("unit-dwarven-pathfinder", 1, {4, 28})
 	SetUnitVariable(unit, "Active", false)
-	IncreaseUnitLevel(unit, 2)
+	IncreaseUnitLevel(unit, 1)
 
 	-- abandoned dwarven buildings
 	unit = CreateUnit("unit-dwarven-smithy", 3, {31, 49})

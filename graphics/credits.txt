@@ -382,6 +382,10 @@ João Victor G. Costa (Jinn):
 /graphics/dwarf/icons/militia.png
 /graphics/dwarf/icons/miner.png
 /graphics/dwarf/icons/miner_extra_1.png
+/graphics/dwarf/icons/pathfinder.png
+/graphics/dwarf/icons/pathfinder_black_hair.png
+/graphics/dwarf/icons/pathfinder_blond_hair.png
+/graphics/dwarf/icons/pathfinder_gray_hair.png
 /graphics/dwarf/icons/patrol_land.png
 /graphics/dwarf/icons/return_goods.png
 /graphics/dwarf/icons/rugnur.png

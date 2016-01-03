@@ -47,6 +47,7 @@ editor_types = {
 	"unit-dwarven-steelclad",
 	"unit-dwarven-thane",
 	"unit-dwarven-scout",
+	"unit-dwarven-pathfinder",
 	"unit-dwarven-yale-rider",
 	"unit-dwarven-gryphon-rider",
 	"unit-dwarven-ballista",

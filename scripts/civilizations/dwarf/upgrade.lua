@@ -108,7 +108,7 @@ DefineUpgrade("upgrade-dwarven-sharp-throwing-axe", {
 	Parent = "upgrade-ranged-projectile-1",
 	Icon = "icon-dwarven-sharp-throwing-axe",
 	Civilization = "dwarf",
-	Description = _("As their craftsmanship progresses, dwarven artisans become capable of improving the basic throwing axe to have sharper blades.\n\nEffect: +2 Damage for Scouts and Gryphon Riders."),
+	Description = _("As their craftsmanship progresses, dwarven artisans become capable of improving the basic throwing axe to have sharper blades.\n\nEffect: +2 Damage for Scouts, Pathfinders and Gryphon Riders."),
 	TechnologyPointCost = 1,
 	Weapon = true
 })
@@ -118,7 +118,7 @@ DefineUpgrade("upgrade-dwarven-bearded-throwing-axe", {
 	Parent = "upgrade-ranged-projectile-2",
 	Icon = "icon-dwarven-bearded-throwing-axe",
 	Civilization = "dwarf",
-	Description = _("The 'bearding' of throwing axes by extending the bottom of their blades is an innovation which makes them more deadly when thrown.\n\nEffect: +2 Damage for Scouts and Gryphon Riders."),
+	Description = _("The 'bearding' of throwing axes by extending the bottom of their blades is an innovation which makes them more deadly when thrown.\n\nEffect: +2 Damage for Scouts, Pathfinders and Gryphon Riders."),
 	TechnologyPointCost = 1,
 	Weapon = true
 })
@@ -164,7 +164,7 @@ DefineUpgrade("upgrade-dwarven-runewriting", {
 DefineUpgrade("upgrade-dwarven-alchemy", {
 	Parent = "upgrade-alchemy",
 	Civilization = "dwarf",
-	Description = _("Once writing had been developed, observations on the basic substances that form the world could be noted down and more easily passed on. This led to the appearance of the discipline of alchemy, mixing esoteric, scientific and philosophical postulations about the elements from which the material world is composed.\n\nEffect: +1 Fire Damage for Scouts and Gryphon Riders, +5 Fire Damage for Ballistas."),
+	Description = _("Once writing had been developed, observations on the basic substances that form the world could be noted down and more easily passed on. This led to the appearance of the discipline of alchemy, mixing esoteric, scientific and philosophical postulations about the elements from which the material world is composed.\n\nEffect: +1 Fire Damage for Scouts, Pathfinders and Gryphon Riders, +5 Fire Damage for Ballistas."),
 	TechnologyPointCost = 1
 })
 
@@ -243,12 +243,12 @@ DefineModifier("upgrade-dwarven-shield-2",
 DefineModifier("upgrade-dwarven-sharp-throwing-axe",
 	{"BasicDamage", 2},
 	{"Points", 10},
-	{"apply-to", "unit-dwarven-scout"}, {"apply-to", "unit-dwarven-gryphon-rider"})
+	{"apply-to", "unit-dwarven-scout"}, {"apply-to", "unit-dwarven-pathfinder"}, {"apply-to", "unit-dwarven-gryphon-rider"})
 
 DefineModifier("upgrade-dwarven-bearded-throwing-axe",
 	{"BasicDamage", 2},
 	{"Points", 10},
-	{"apply-to", "unit-dwarven-scout"}, {"apply-to", "unit-dwarven-gryphon-rider"}
+	{"apply-to", "unit-dwarven-scout"}, {"apply-to", "unit-dwarven-pathfinder"}, {"apply-to", "unit-dwarven-gryphon-rider"}
 )
 
 DefineModifier("upgrade-dwarven-ballista-bolt-1",
@@ -296,7 +296,7 @@ DefineModifier("upgrade-dwarven-runewriting",
 DefineModifier("upgrade-dwarven-alchemy",
 	{"FireDamage", 1},
 	{"Points", 8},
-	{"apply-to", "unit-dwarven-scout"}, {"apply-to", "unit-dwarven-gryphon-rider"}
+	{"apply-to", "unit-dwarven-scout"}, {"apply-to", "unit-dwarven-pathfinder"}, {"apply-to", "unit-dwarven-gryphon-rider"}
 )
 
 DefineModifier("upgrade-dwarven-alchemy",
@@ -340,7 +340,7 @@ DefineModifier("upgrade-shorbear-clan-faction",
 DefineModifier("upgrade-joruvellir-faction",
 	{"BasicDamage", 1},
 	{"Points", 10},
-	{"apply-to", "unit-dwarven-scout"}
+	{"apply-to", "unit-dwarven-scout"}, {"apply-to", "unit-dwarven-pathfinder"}
 )
 
 DefineModifier("upgrade-kal-kartha-faction",

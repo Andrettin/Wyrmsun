@@ -382,7 +382,7 @@ DefineUnitType("unit-dwarven-scout", { Name = _("Scout"),
 	Missile = "missile-throwing-axe",
 	FireMissile = "missile-flaming-throwing-axe",
 	MaxAttackRange = 4,
-	Speed = 11,
+	SightRange = 6,
 	Corpse = "unit-dwarven-dead-body",
 	TechnologyPointCost = 1,
 	WeaponClasses = {"throwing-axe"},
@@ -426,6 +426,47 @@ DefineUnitType("unit-dwarven-scout", { Name = _("Scout"),
 		"acknowledge", "basic-dwarf-voices-acknowledge",
 		"attack", "basic-dwarf-voices-attack",
 		"ready", "dwarven-scout-ready",
+		"help", "basic-dwarf-voices-help",
+		"dead", "basic-dwarf-voices-dead"
+	}
+} )
+
+DefineUnitType("unit-dwarven-pathfinder", { Name = _("Pathfinder"),
+	Parent = "unit-template-veteran-shooter",
+	Civilization = "dwarf",
+	Description = _("These hardy dwarves are sometimes away from their caves for long periods, scouting and patrolling the borders. They spend this time watching for invaders, and fighting bandits and thieves who encroach on dwarven territory. Their deftly thrown axes can rival the power and accuracy of a gnomish marksman."),
+	Image = {"file", "dwarf/units/dwarven_scout.png", "size", {72, 72}},
+	Animations = "animations-dwarven-scout", Icon = "icon-dwarven-pathfinder",
+	BasicDamage = 11,
+	Missile = "missile-throwing-axe",
+	FireMissile = "missile-flaming-throwing-axe",
+	MaxAttackRange = 4,
+	SightRange = 6,
+	Corpse = "unit-dwarven-dead-body",
+	WeaponClasses = {"throwing-axe"},
+	HackDamage = true,
+	AiDrops = {"unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	Variations = {
+		{
+			"variation-id", "orange-hair",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"variation-id", "blond-hair",
+			"file", "dwarf/units/dwarven_scout_blond_hair.png",
+			"icon", "icon-dwarven-pathfinder-blond-hair",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"variation-id", "gray-hair",
+			"file", "dwarf/units/dwarven_scout_gray_hair.png",
+			"icon", "icon-dwarven-pathfinder-gray-hair"
+		}
+	},
+	Sounds = {
+		"selected", "basic-dwarf-voices-selected-group",
+		"acknowledge", "basic-dwarf-voices-acknowledge",
+		"attack", "basic-dwarf-voices-attack",
 		"help", "basic-dwarf-voices-help",
 		"dead", "basic-dwarf-voices-dead"
 	}

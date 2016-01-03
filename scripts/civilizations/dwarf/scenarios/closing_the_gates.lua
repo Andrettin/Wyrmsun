@@ -552,7 +552,7 @@ AddTrigger(
 																						end}
 																						)
 																					end},
-																					"dwarf/icons/dwarven_scout.png"
+																					"dwarf/icons/pathfinder.png"
 																				)
 																				end}
 																			)
@@ -581,7 +581,7 @@ AddTrigger(
 											"dwarf/icons/durstorn.png"
 										)
 										end},
-										"dwarf/icons/dwarven_scout.png"
+										"dwarf/icons/pathfinder.png"
 									)
 									end},
 									"dwarf/icons/durstorn.png"

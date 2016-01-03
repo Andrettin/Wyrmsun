@@ -236,6 +236,10 @@ https://github.com/Andrettin/Wyrmsun
 * Abilities
 - Update to the Mace Mastery icon.
 
+* Units
+- Dwarven Scouts now have +1 Sight (losing their previous +1 Speed bonus).
+- Added Dwarven Pathfinder (experience upgrade of the Scout) (icon by Jinn).
+
 -----------------------------------------------------------------------
 - 1.9.3
 -----------------------------------------------------------------------
