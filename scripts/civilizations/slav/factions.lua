@@ -28,29 +28,25 @@
 DefineFaction("Aestui Tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	Civilization = "slav", -- actually they were apparently Baltic (this needs to be confirmed), but let's make them Slavic to not have too many NPC civilizations in the game
 	Type = "tribe",
-	Color = "green",
-	SecondaryColor = "green"
+	Colors = {"green"}
 })
 
 DefineFaction("Budini Tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	Civilization = "slav", -- accurate?
 	Type = "tribe",
-	Color = "blue",
-	SecondaryColor = "blue"
+	Colors = {"blue"}
 })
 
 DefineFaction("Venedae Tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	Civilization = "slav",
 	Type = "tribe",
-	Color = "yellow",
-	SecondaryColor = "yellow"
+	Colors = {"yellow"}
 })
 
 DefineFaction("Croatia", {
 	Civilization = "slav",
 	Type = "polity",
-	Color = "blue",
-	SecondaryColor = "red",
+	Colors = {"blue", "red"},
 	DefaultTier = "kingdom",
 	Titles = {
 		"monarchy", "kingdom", "Kingdom"
@@ -60,8 +56,7 @@ DefineFaction("Croatia", {
 DefineFaction("Muscovy", {
 	Civilization = "slav",
 	Type = "polity",
-	Color = "red",
-	SecondaryColor = "red",
+	Colors = {"red"},
 	DefaultTier = "duchy",
 	Titles = {
 		"monarchy", "duchy", "Principality"
@@ -71,8 +66,7 @@ DefineFaction("Muscovy", {
 DefineFaction("Poland", {
 	Civilization = "slav",
 	Type = "polity",
-	Color = "red",
-	SecondaryColor = "white",
+	Colors = {"red", "white"},
 	DefaultTier = "kingdom",
 	Titles = {
 		"monarchy", "kingdom", "Kingdom"
@@ -82,8 +76,7 @@ DefineFaction("Poland", {
 DefineFaction("Russia", {
 	Civilization = "slav",
 	Type = "polity",
-	Color = "blue",
-	SecondaryColor = "red",
+	Colors = {"blue", "red"},
 	DefaultTier = "empire",
 	Titles = {
 		"monarchy", "empire", "Empire"

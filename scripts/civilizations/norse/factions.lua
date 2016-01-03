@@ -28,24 +28,21 @@
 DefineFaction("Dane Tribe", {
 	Civilization = "norse",
 	Type = "tribe",
-	Color = "red",
-	SecondaryColor = "white",
+	Colors = {"red", "white"},
 	DevelopsTo = {"Denmark"}
 })
 
 DefineFaction("Geat Tribe", {
 	Civilization = "norse",
 	Type = "tribe",
-	Color = "teal",
-	SecondaryColor = "teal",
+	Colors = {"teal"},
 	DevelopsTo = {"Gautland"}
 })
 
 DefineFaction("Swede Tribe", {
 	Civilization = "norse",
 	Type = "tribe",
-	Color = "blue",
-	SecondaryColor = "yellow",
+	Colors = {"blue", "yellow"},
 	DevelopsTo = {"Sweden"}
 })
 
@@ -54,8 +51,7 @@ DefineFaction("Swede Tribe", {
 DefineFaction("Denmark", {
 	Civilization = "norse",
 	Type = "polity",
-	Color = "red",
-	SecondaryColor = "white",
+	Colors = {"red", "white"},
 	DefaultTier = "kingdom",
 	Titles = {
 		"monarchy", "kingdom", "Kingdom"
@@ -65,24 +61,21 @@ DefineFaction("Denmark", {
 DefineFaction("Gautland", {
 	Civilization = "norse",
 	Type = "polity",
-	Color = "teal",
-	SecondaryColor = "teal",
+	Colors = {"teal"},
 	DefaultTier = "kingdom"
 })
 
 DefineFaction("Holmgard", {
 	Civilization = "norse",
 	Type = "polity",
-	Color = "blue",
-	SecondaryColor = "blue",
+	Colors = {"blue"},
 	DefaultTier = "kingdom"
 })
 
 DefineFaction("Hordaland", {
 	Civilization = "norse",
 	Type = "polity",
-	Color = "cyan",
-	SecondaryColor = "cyan",
+	Colors = {"cyan"},
 	DefaultTier = "kingdom",
 	DevelopsTo = {"Norway"} -- allow Hordaland to become Norway if it unifies its territories
 })
@@ -90,8 +83,7 @@ DefineFaction("Hordaland", {
 DefineFaction("Norway", {
 	Civilization = "norse",
 	Type = "polity",
-	Color = "blue",
-	SecondaryColor = "red",
+	Colors = {"blue", "red"},
 	DefaultTier = "kingdom",
 	Titles = {
 		"monarchy", "kingdom", "Kingdom"
@@ -101,8 +93,7 @@ DefineFaction("Norway", {
 DefineFaction("Orkney", { -- Earldom of Orkney
 	Civilization = "norse",
 	Type = "polity",
-	Color = "yellow",
-	SecondaryColor = "yellow",
+	Colors = {"yellow"},
 	DefaultTier = "duchy",
 	Titles = {
 		"monarchy", "duchy", "Earldom"
@@ -113,8 +104,7 @@ DefineFaction("Orkney", { -- Earldom of Orkney
 DefineFaction("Sweden", {
 	Civilization = "norse",
 	Type = "polity",
-	Color = "blue",
-	SecondaryColor = "yellow",
+	Colors = {"blue", "yellow"},
 	DefaultTier = "kingdom",
 	Titles = {
 		"monarchy", "kingdom", "Kingdom"

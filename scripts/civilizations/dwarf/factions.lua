@@ -28,8 +28,7 @@
 DefineFaction("Eikinskjaldi Clan", { -- originally Oakenshield (from Dyson Logos' The Tomb of Durahn Oakenshield), translated into Norse to make it seem more dwarvish
 	Civilization = "dwarf",
 	Type = "tribe",
-	Color = "brown",
-	SecondaryColor = "brown",
+	Colors = {"brown"},
 	DevelopsTo = {"Joruvellir", "Kal Kartha", "Knalga", "Lyr"},
 	FactionUpgrade = "upgrade-eikinskjaldi-clan-faction"
 })
@@ -37,8 +36,7 @@ DefineFaction("Eikinskjaldi Clan", { -- originally Oakenshield (from Dyson Logos
 DefineFaction("Modsogning Clan", { -- clan of Modsognir
 	Civilization = "dwarf",
 	Type = "tribe",
-	Color = "white",
-	SecondaryColor = "white",
+	Colors = {"white"},
 	DevelopsTo = {"Joruvellir", "Kal Kartha", "Knalga", "Lyr"},
 	FactionUpgrade = "upgrade-modsogning-clan-faction"
 })
@@ -46,8 +44,7 @@ DefineFaction("Modsogning Clan", { -- clan of Modsognir
 DefineFaction("Norlund Clan", {
 	Civilization = "dwarf",
 	Type = "tribe",
-	Color = "red",
-	SecondaryColor = "orange",
+	Colors = {"red", "orange"},
 --	DevelopsTo = {"Kal Kartha", "Knalga"},
 	DevelopsTo = {"Joruvellir", "Kal Kartha", "Knalga", "Lyr"},
 	FactionUpgrade = "upgrade-norlund-clan-faction"
@@ -56,8 +53,7 @@ DefineFaction("Norlund Clan", {
 DefineFaction("Shinsplitter Clan", {
 	Civilization = "dwarf",
 	Type = "tribe",
-	Color = "green",
-	SecondaryColor = "teal",
+	Colors = {"green", "teal"},
 	DevelopsTo = {"Joruvellir", "Kal Kartha", "Knalga", "Lyr"},
 	FactionUpgrade = "upgrade-shinsplitter-clan-faction"
 })
@@ -65,8 +61,7 @@ DefineFaction("Shinsplitter Clan", {
 DefineFaction("Shorbear Clan", {
 	Civilization = "dwarf",
 	Type = "tribe",
-	Color = "blue",
-	SecondaryColor = "cyan",
+	Colors = {"blue", "cyan"},
 --	DevelopsTo = {"Knalga"},
 	DevelopsTo = {"Joruvellir", "Kal Kartha", "Knalga", "Lyr"},
 	FactionUpgrade = "upgrade-shorbear-clan-faction"
@@ -75,8 +70,7 @@ DefineFaction("Shorbear Clan", {
 DefineFaction("Kal Kartha", {
 	Civilization = "dwarf",
 	Type = "polity",
-	Color = "black",
-	SecondaryColor = "black",
+	Colors = {"black"},
 	DefaultTier = "barony",
 	Titles = {
 		"monarchy", "barony", "Lordship"
@@ -87,8 +81,7 @@ DefineFaction("Kal Kartha", {
 DefineFaction("Knalga", {
 	Civilization = "dwarf",
 	Type = "polity",
-	Color = "red",
-	SecondaryColor = "orange",
+	Colors = {"red", "orange"},
 	DefaultTier = "barony",
 	Titles = {
 		"monarchy", "barony", "Lordship"
@@ -99,8 +92,7 @@ DefineFaction("Knalga", {
 DefineFaction("Joruvellir", {
 	Civilization = "dwarf",
 	Type = "polity",
-	Color = "brown",
-	SecondaryColor = "brown",
+	Colors = {"brown"},
 	DefaultTier = "barony",
 	Titles = {
 		"monarchy", "barony", "Lordship"
@@ -111,8 +103,7 @@ DefineFaction("Joruvellir", {
 DefineFaction("Lyr", {
 	Civilization = "dwarf",
 	Type = "polity",
-	Color = "green",
-	SecondaryColor = "teal",
+	Colors = {"green", "teal"},
 	DefaultTier = "barony",
 	Titles = {
 		"monarchy", "barony", "Lordship"

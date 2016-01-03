@@ -29,8 +29,7 @@
 DefineFaction("Asa Tribe", {
 	Civilization = "germanic",
 	Type = "tribe",
-	Color = "orange",
-	SecondaryColor = "red",
+	Colors = {"orange", "red"},
 	FactionUpgrade = "upgrade-asa-tribe-faction"
 })
 
@@ -38,8 +37,7 @@ DefineFaction("Skjoldung Tribe", { -- mythical Danish dynasty, Skjöldr was a son
 	Civilization = "germanic",
 	ParentFaction = "Asa Tribe",
 	Type = "tribe",
-	Color = "red",
-	SecondaryColor = "white",
+	Colors = {"red", "white"},
 --	DevelopsTo = {"Dane Tribe", "Goth Tribe", "Herulian Tribe", "Jute Tribe"}
 	DevelopsTo = {"Dane Tribe", "Goth Tribe", "Herulian Tribe"},
 	FactionUpgrade = "upgrade-skjoldung-tribe-faction"
@@ -49,8 +47,7 @@ DefineFaction("Volsung Tribe", { -- mythical Frankish dynasty, which originated 
 	Civilization = "germanic",
 	ParentFaction = "Asa Tribe",
 	Type = "tribe",
-	Color = "blue",
-	SecondaryColor = "blue",
+	Colors = {"blue"},
 --	DevelopsTo = {"Frank Tribe"}
 	FactionUpgrade = "upgrade-volsung-tribe-faction"
 })
@@ -59,8 +56,7 @@ DefineFaction("Yngling Tribe", { -- mythical Swedish dynasty, Yngve was a son of
 	Civilization = "germanic",
 	ParentFaction = "Asa Tribe",
 	Type = "tribe",
-	Color = "blue",
-	SecondaryColor = "yellow",
+	Colors = {"blue", "yellow"},
 	DevelopsTo = {"Goth Tribe", "Swede Tribe"},
 	FactionUpgrade = "upgrade-yngling-tribe-faction"
 })

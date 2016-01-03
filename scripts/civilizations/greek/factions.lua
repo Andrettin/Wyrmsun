@@ -30,16 +30,14 @@
 DefineFaction("Chaoni Tribe", {
 	Civilization = "greek",
 	Type = "tribe",
-	Color = "yellow",
-	SecondaryColor = "yellow",
+	Colors = {"yellow"},
 	DevelopsTo = {"Epirus"}
 })
 
 DefineFaction("Dolopes Tribe", {
 	Civilization = "greek",
 	Type = "tribe",
-	Color = "green",
-	SecondaryColor = "green"
+	Colors = {"green"}
 })
 
 -- polities
@@ -47,8 +45,7 @@ DefineFaction("Dolopes Tribe", {
 DefineFaction("Argos", {
 	Civilization = "greek",
 	Type = "polity",
-	Color = "green",
-	SecondaryColor = "green",
+	Colors = {"green"},
 	DefaultTier = "county",
 	Titles = {
 		"monarchy", "county", "City-State",
@@ -59,8 +56,7 @@ DefineFaction("Argos", {
 DefineFaction("Athens", {
 	Civilization = "greek",
 	Type = "polity",
-	Color = "red",
-	SecondaryColor = "red",
+	Colors = {"red"},
 	DefaultTier = "county",
 	Titles = {
 		"monarchy", "county", "City-State",
@@ -71,16 +67,14 @@ DefineFaction("Athens", {
 DefineFaction("Cimmerian Bosphorus", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	Civilization = "greek", -- accurate?
 	Type = "polity",
-	Color = "green",
-	SecondaryColor = "green",
+	Colors = {"green"},
 	DefaultTier = "kingdom" -- Kingdom of the Cimmerian Bosphorus
 })
 
 DefineFaction("Corinth", {
 	Civilization = "greek",
 	Type = "polity",
-	Color = "black",
-	SecondaryColor = "black",
+	Colors = {"black"},
 	DefaultTier = "county",
 	Titles = {
 		"monarchy", "county", "City-State",
@@ -91,8 +85,7 @@ DefineFaction("Corinth", {
 DefineFaction("Epirus", {
 	Civilization = "greek",
 	Type = "polity",
-	Color = "yellow",
-	SecondaryColor = "yellow",
+	Colors = {"yellow"},
 	DefaultTier = "kingdom",
 	Titles = {
 		"monarchy", "kingdom", "Kingdom"
@@ -102,8 +95,7 @@ DefineFaction("Epirus", {
 DefineFaction("Krete", {
 	Civilization = "greek",
 	Type = "polity",
-	Color = "yellow",
-	SecondaryColor = "yellow",
+	Colors = {"yellow"},
 	DefaultTier = "kingdom",
 	Titles = {
 		"monarchy", "kingdom", "Kingdom"
@@ -113,8 +105,7 @@ DefineFaction("Krete", {
 DefineFaction("Macedon", {
 	Civilization = "greek",
 	Type = "polity",
-	Color = "brown",
-	SecondaryColor = "red",
+	Colors = {"brown", "red"},
 	DefaultTier = "kingdom",
 	Titles = {
 		"monarchy", "kingdom", "Kingdom"
@@ -124,8 +115,7 @@ DefineFaction("Macedon", {
 DefineFaction("Mycenae", {
 	Civilization = "greek",
 	Type = "polity",
-	Color = "orange",
-	SecondaryColor = "orange",
+	Colors = {"orange"},
 	DefaultTier = "county",
 	Titles = {
 		"monarchy", "county", "City-State",
@@ -136,8 +126,7 @@ DefineFaction("Mycenae", {
 DefineFaction("Sparta", {
 	Civilization = "greek",
 	Type = "polity",
-	Color = "brown",
-	SecondaryColor = "brown",
+	Colors = {"brown"},
 	DefaultTier = "county",
 	Titles = {
 		"monarchy", "county", "City-State",
@@ -148,8 +137,7 @@ DefineFaction("Sparta", {
 DefineFaction("Thebes", {
 	Civilization = "greek",
 	Type = "polity",
-	Color = "blue",
-	SecondaryColor = "blue",
+	Colors = {"blue"},
 	DefaultTier = "county",
 	Titles = {
 		"monarchy", "county", "City-State",
@@ -160,8 +148,7 @@ DefineFaction("Thebes", {
 DefineFaction("Thrace", {
 	Civilization = "greek",
 	Type = "polity",
-	Color = "orange",
-	SecondaryColor = "orange",
+	Colors = {"orange"},
 	DefaultTier = "kingdom",
 	Titles = {
 		"monarchy", "kingdom", "Kingdom"

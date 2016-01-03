@@ -40,105 +40,91 @@ Load("scripts/civilizations/teuton/factions.lua")
 DefineFaction("Ertebolle Tribe", { -- based on the Ertebolle culture of Zealand - not actually a tribe, but an archaeological culture, but this is still the most appropriate way to represent it in-game
 	Civilization = "basque",
 	Type = "tribe",
-	Color = "red",
-	SecondaryColor = "white"
+	Colors = {"red", "white"}
 })
 
 DefineFaction("Funnelbeaker Tribe", { -- based on the Funnel Beaker culture of Zealand - not actually a tribe, but an archaeological culture, but this is still the most appropriate way to represent it in-game
 	Civilization = "basque",
 	Type = "tribe",
-	Color = "red",
-	SecondaryColor = "white"
+	Colors = {"red", "white"}
 })
 
 DefineFaction("Gylfing Tribe", { -- Scandinavian pre-Indo-Europeans are very unlikely to have spoken a Vasconic language, but this fits better than making them Germanic (as the Vasconic languages are pre-Indo-European)
 	Civilization = "basque",
 	Type = "tribe",
-	Color = "green",
-	SecondaryColor = "teal"
+	Colors = {"green", "teal"}
 })
 
 DefineFaction("Kongemose Tribe", { -- based on the Kongemose culture of Zealand - not actually a tribe, but an archaeological culture, but this is still the most appropriate way to represent it in-game
 	Civilization = "basque",
 	Type = "tribe",
-	Color = "red",
-	SecondaryColor = "white"
+	Colors = {"red", "white"}
 })
 
 DefineFaction("Maglemose Tribe", { -- Scandinavian pre-Indo-Europeans are very unlikely to have spoken a Vasconic language, but this fits better than making them Germanic (as the Vasconic languages are pre-Indo-European); based on the Maglemose culture of Zealand - not actually a tribe, but an archaeological culture, but this is still the most appropriate way to represent it in-game
 	Civilization = "basque",
 	Type = "tribe",
-	Color = "red",
-	SecondaryColor = "white"
+	Colors = {"red", "white"}
 })
 
 DefineFaction("Cardialware Tribe", {
 	Civilization = "basque",
 	Type = "tribe",
-	Color = "yellow",
-	SecondaryColor = "yellow"
+	Colors = {"yellow"}
 })
 
 DefineFaction("Bellbeaker Tribe", {
 	Civilization = "basque",
 	Type = "tribe",
-	Color = "green",
-	SecondaryColor = "green"
+	Colors = {"green"}
 })
 
 DefineFaction("Linearware Tribe", {
 	Civilization = "basque",
 	Type = "tribe",
-	Color = "yellow",
-	SecondaryColor = "yellow"
+	Colors = {"yellow"}
 })
 
 -- Etruscan factions
 DefineFaction("Etruscan Tribe", {
 	Civilization = "etruscan",
 	Type = "tribe",
-	Color = "yellow",
-	SecondaryColor = "yellow",
+	Colors = {"yellow"},
 	DevelopsTo = {"Etruria"}
 })
 
 DefineFaction("Etruria", {
 	Civilization = "etruscan",
 	Type = "polity",
-	Color = "yellow",
-	SecondaryColor = "yellow",
+	Colors = {"yellow"},
 	DefaultTier = "kingdom"
 })
 
 DefineFaction("Acthnic Tribe", {
 	Civilization = "gnome",
 	Type = "tribe",
-	Color = "red",
-	SecondaryColor = "red",
+	Colors = {"red"},
 	DevelopsTo = {"Untersberg"}
 })
 
 DefineFaction("Cubital Tribe", {
 	Civilization = "gnome",
 	Type = "tribe",
-	Color = "brown",
-	SecondaryColor = "brown",
+	Colors = {"brown"},
 	DevelopsTo = {"Untersberg"}
 })
 
 DefineFaction("Sagan Tribe", {
 	Civilization = "gnome",
 	Type = "tribe",
-	Color = "green",
-	SecondaryColor = "green",
+	Colors = {"green"},
 	DevelopsTo = {"Untersberg"}
 })
 
 DefineFaction("Untersberg", {
 	Civilization = "gnome",
 	Type = "polity",
-	Color = "purple",
-	SecondaryColor = "purple",
+	Colors = {"purple"},
 	DefaultTier = "kingdom",
 	Titles = {
 		"monarchy", "kingdom", "Kingdom"
@@ -148,92 +134,79 @@ DefineFaction("Untersberg", {
 DefineFaction("Khag Tribe", {
 	Civilization = "goblin",
 	Type = "tribe",
-	Color = "blue",
-	SecondaryColor = "cyan"
+	Colors = {"blue", "cyan"}
 })
 
 DefineFaction("Lggi Tribe", {
 	Civilization = "goblin",
 	Type = "tribe",
-	Color = "blue",
-	SecondaryColor = "cyan"
+	Colors = {"blue", "cyan"}
 })
 
 DefineFaction("Illyrian Tribe", {
 	Civilization = "illyrian",
 	Type = "tribe",
-	Color = "red",
-	SecondaryColor = "red"
+	Colors = {"red"}
 })
 
 DefineFaction("Taulantii Tribe", {
 	Civilization = "illyrian",
 	Type = "tribe",
-	Color = "blue",
-	SecondaryColor = "blue"
+	Colors = {"blue"}
 })
 
 DefineFaction("Kobolds", {
 	Civilization = "kobold",
 	Type = "tribe",
-	Color = "violet",
-	SecondaryColor = "purple"
+	Colors = {"violet", "purple"}
 })
 
 DefineFaction("Alazone Tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	Civilization = "persian", -- accurate?
 	Type = "tribe",
-	Color = "orange",
-	SecondaryColor = "orange"
+	Colors = {"orange"}
 })
 
 DefineFaction("Aorsi Tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	Civilization = "persian", -- accurate?
 	Type = "tribe",
-	Color = "violet",
-	SecondaryColor = "violet"
+	Colors = {"violet"}
 })
 
 DefineFaction("Iazyge Tribe", {
 	Civilization = "persian", -- accurate?
 	Type = "tribe",
-	Color = "violet",
-	SecondaryColor = "violet"
+	Colors = {"violet"}
 })
 
 DefineFaction("Navari Tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	Civilization = "persian", -- accurate?
 	Type = "tribe",
-	Color = "blue",
-	SecondaryColor = "blue"
+	Colors = {"blue"}
 })
 
 DefineFaction("Roxolani Tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	Civilization = "persian", -- accurate?
 	Type = "tribe",
-	Color = "red",
-	SecondaryColor = "red"
+	Colors = {"red"}
 })
 
 DefineFaction("Sarmatian Tribe", {
 	Civilization = "persian",
 	Type = "tribe",
-	Color = "red",
-	SecondaryColor = "red"
+	Colors = {"red"}
 })
 
 DefineFaction("Scythian Tribe", {
 	Civilization = "persian",
 	Type = "tribe",
-	Color = "green",
-	SecondaryColor = "green"
+	Colors = {"green"}
 })
 
 DefineFaction("Persia", {
 	Civilization = "persian",
 	Type = "polity",
-	Color = "yellow",
-	SecondaryColor = "green",
+	Colors = {"yellow", "green"},
 	DefaultTier = "kingdom",
 	Titles = {
 		"monarchy", "kingdom", "Kingdom"
@@ -243,62 +216,53 @@ DefineFaction("Persia", {
 DefineFaction("Carthage", {
 	Civilization = "phoenician",
 	Type = "polity",
-	Color = "black",
-	SecondaryColor = "black"
+	Colors = {"black"}
 })
 
 DefineFaction("Bryges Tribe", {
 	Civilization = "phrygian",
 	Type = "tribe",
-	Color = "violet",
-	SecondaryColor = "violet"
+	Colors = {"violet"}
 })
 
 DefineFaction("Apsinthii Tribe", {
 	Civilization = "thracian",
 	Type = "tribe",
-	Color = "purple",
-	SecondaryColor = "purple"
+	Colors = {"purple"}
 })
 
 DefineFaction("Carpi Tribe", {
 	Civilization = "thracian", -- accurate?
 	Type = "tribe",
-	Color = "blue",
-	SecondaryColor = "blue"
+	Colors = {"blue"}
 })
 
 DefineFaction("Edoni Tribe", {
 	Civilization = "thracian",
 	Type = "tribe",
-	Color = "white",
-	SecondaryColor = "white"
+	Colors = {"white"}
 })
 
 DefineFaction("Getae Tribe", {
 	Civilization = "thracian",
 	Type = "tribe",
-	Color = "teal",
-	SecondaryColor = "teal"
+	Colors = {"teal"}
 })
 
 DefineFaction("Odomanti Tribe", {
 	Civilization = "thracian", -- were they really Thracian?
 	Type = "tribe",
-	Color = "black",
-	SecondaryColor = "black"
+	Colors = {"black"}
 })
 
 DefineFaction("Odrysae Tribe", {
 	Civilization = "thracian",
 	Type = "tribe",
-	Color = "red",
-	SecondaryColor = "red"
+	Colors = {"red"}
 })
 
 DefineFaction("Triballi Tribe", {
 	Civilization = "thracian",
 	Type = "tribe",
-	Color = "green",
-	SecondaryColor = "green"
+	Colors = {"green"}
 })

@@ -40,7 +40,7 @@ wyrmsun.Name = "Wyrmsun"
 wyrmsun.Version = "1.9.3"
 wyrmsun.Homepage = ""
 wyrmsun.Licence = "GPL 2.0"
-wyrmsun.Copyright = "Copyright (c) 2013-2015 by Andrettin"
+wyrmsun.Copyright = "Copyright (c) 2013-2016 by Andrettin"
 
 -------------------------------------------------------------------------------
 --  Config-Part

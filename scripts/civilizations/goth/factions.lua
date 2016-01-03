@@ -28,89 +28,77 @@
 DefineFaction("Bastarnae Tribe", {
 	Civilization = "goth",
 	Type = "tribe",
-	Color = "blue",
-	SecondaryColor = "blue"
+	Colors = {"blue"}
 })
 
 DefineFaction("Burgundian Tribe", {
 	Civilization = "goth",
 	Type = "tribe",
-	Color = "brown",
-	SecondaryColor = "brown",
+	Colors = {"brown"},
 	DevelopsTo = {"Burgundy"}
 })
 
 DefineFaction("Gepidae Tribe", {
 	Civilization = "goth",
 	Type = "tribe",
-	Color = "black",
-	SecondaryColor = "black"
+	Colors = {"black"}
 })
 
 DefineFaction("Goth Tribe", {
 	Civilization = "goth",
 	Type = "tribe",
-	Color = "red",
-	SecondaryColor = "red",
+	Colors = {"red"},
 	DevelopsTo = {"Gothia"}
 })
 
 DefineFaction("Herulian Tribe", {
 	Civilization = "goth",
 	Type = "tribe",
-	Color = "green",
-	SecondaryColor = "green"
+	Colors = {"green"}
 })
 
 DefineFaction("Lugii Tribe", {
 	Civilization = "goth",
 	Type = "tribe",
-	Color = "purple",
-	SecondaryColor = "purple"
+	Colors = {"purple"}
 })
 
 DefineFaction("Ostrogoth Tribe", {
 	Civilization = "goth",
 	Type = "tribe",
-	Color = "red",
-	SecondaryColor = "red",
+	Colors = {"red"},
 	DevelopsTo = {"Gothia"}
 })
 
 DefineFaction("Rugian Tribe", {
 	Civilization = "goth",
 	Type = "tribe",
-	Color = "red", -- change to a better one?
-	SecondaryColor = "orange"
+	Colors = {"red", "orange"} -- change to a better one?
 })
 
 DefineFaction("Silingae Tribe", {
 	Civilization = "goth",
 	Type = "tribe",
-	Color = "orange",
-	SecondaryColor = "orange"
+	Colors = {"orange"}
 })
 
 DefineFaction("Turcilingian Tribe", {
 	Civilization = "goth",
 	Type = "tribe",
-	Color = "blue",
-	SecondaryColor = "blue"
+	Colors = {"blue"}
 })
 
 DefineFaction("Vandal Tribe", {
 	Civilization = "goth",
 	Type = "tribe",
-	Color = "cyan",
-	SecondaryColor = "blue",
+	Colors = {"cyan", "blue"},
 	DevelopsTo = {"Vandalia"}
 })
 
 DefineFaction("Visigoth Tribe", {
 	Civilization = "goth",
 	Type = "tribe",
-	Color = "pink",
-	SecondaryColor = "pink",
+	Colors = {"pink"},
 	DevelopsTo = {"Gothia"}
 })
 
@@ -119,8 +107,7 @@ DefineFaction("Visigoth Tribe", {
 DefineFaction("Burgundy", {
 	Civilization = "goth",
 	Type = "polity",
-	Color = "brown",
-	SecondaryColor = "brown",
+	Colors = {"brown"},
 	DefaultTier = "kingdom",
 	Titles = {
 		"monarchy", "kingdom", "Kingdom"
@@ -130,8 +117,7 @@ DefineFaction("Burgundy", {
 DefineFaction("Gothia", {
 	Civilization = "goth",
 	Type = "polity",
-	Color = "red",
-	SecondaryColor = "red",
+	Colors = {"red"},
 	DefaultTier = "kingdom",
 	Titles = {
 		"monarchy", "kingdom", "Kingdom"
@@ -141,8 +127,7 @@ DefineFaction("Gothia", {
 DefineFaction("Vandalia", {
 	Civilization = "goth",
 	Type = "polity",
-	Color = "cyan",
-	SecondaryColor = "blue",
+	Colors = {"cyan", "blue"},
 	DefaultTier = "kingdom",
 	Titles = {
 		"monarchy", "kingdom", "Kingdom"

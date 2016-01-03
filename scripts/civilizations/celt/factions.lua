@@ -28,85 +28,73 @@
 DefineFaction("Aedui Tribe", {
 	Civilization = "celt",
 	Type = "tribe",
-	Color = "green",
-	SecondaryColor = "green"
+	Colors = {"green"}
 })
 
 DefineFaction("Arverni Tribe", {
 	Civilization = "celt",
 	Type = "tribe",
-	Color = "blue",
-	SecondaryColor = "blue"
+	Colors = {"blue"}
 })
 
 DefineFaction("Boii Tribe", {
 	Civilization = "celt",
 	Type = "tribe",
-	Color = "brown",
-	SecondaryColor = "brown"
+	Colors = {"brown"}
 })
 
 DefineFaction("Cotini Tribe", {
 	Civilization = "celt",
 	Type = "tribe",
-	Color = "teal",
-	SecondaryColor = "teal"
+	Colors = {"teal"}
 })
 
 DefineFaction("Helvetii Tribe", {
 	Civilization = "celt",
 	Type = "tribe",
-	Color = "violet", -- another color, perhaps?
-	SecondaryColor = "violet"
+	Colors = {"violet"} -- another color, perhaps?
 })
 
 DefineFaction("Ligurian Tribe", {
 	Civilization = "celt", -- were they really Celts?
 	Type = "tribe",
-	Color = "green",
-	SecondaryColor = "green"
+	Colors = {"green"}
 })
 
 DefineFaction("Menapii Tribe", {
 	Civilization = "celt",
 	Type = "tribe",
-	Color = "yellow",
-	SecondaryColor = "yellow"
+	Colors = {"yellow"}
 })
 
 DefineFaction("Norici Tribe", {
 	Civilization = "celt",
 	Type = "tribe",
-	Color = "white", -- another color, perhaps?
-	SecondaryColor = "white"
+	Colors = {"white"} -- another color, perhaps?
 })
 
 DefineFaction("Pict Tribe", {
 	Civilization = "celt",
 	Type = "tribe",
-	Color = "cyan",
-	SecondaryColor = "cyan"
+	Colors = {"cyan"}
 })
 
 DefineFaction("Scot Tribe", {
 	Civilization = "celt",
 	Type = "tribe",
-	Color = "brown",
-	SecondaryColor = "brown"
+	Colors = {"brown"}
 })
 
 DefineFaction("Sequani Tribe", {
 	Civilization = "celt",
 	Type = "tribe",
-	Color = "pink",
-	SecondaryColor = "red"
+	Colors = {"pink", "red"}
 })
 
 DefineFaction("Turone Tribe", {
 	Civilization = "celt",
 	Type = "tribe",
-	Color = "cyan",
-	SecondaryColor = "cyan"
+	Colors = {"cyan"}
 })
 
 -- Non-Playable Tribes
@@ -114,7 +102,6 @@ DefineFaction("Turone Tribe", {
 DefineFaction("Vana Tribe", {
 	Civilization = "celt",
 	Type = "tribe",
-	Color = "blue",
-	SecondaryColor = "cyan",
+	Colors = {"blue", "cyan"},
 	Playable = false
 })

@@ -28,114 +28,98 @@
 DefineFaction("Aequian Tribe", {
 	Civilization = "latin",
 	Type = "tribe",
-	Color = "teal",
-	SecondaryColor = "teal"
+	Colors = {"teal"}
 })
 
 DefineFaction("Elymian Tribe", {
 	Civilization = "latin", -- were they actually an Italic people?
 	Type = "tribe",
-	Color = "yellow",
-	SecondaryColor = "red"
+	Colors = {"yellow", "red"}
 })
 
 DefineFaction("Frentanian Tribe", {
 	Civilization = "latin",
 	Type = "tribe",
-	Color = "orange",
-	SecondaryColor = "orange"
+	Colors = {"orange"}
 })
 
 DefineFaction("Iapygian Tribe", {
 	Civilization = "latin",
 	Type = "tribe",
-	Color = "teal",
-	SecondaryColor = "teal"
+	Colors = {"teal"}
 })
 
 DefineFaction("Latin Tribe", {
 	Civilization = "latin",
 	Type = "tribe",
-	Color = "red",
-	SecondaryColor = "yellow",
+	Colors = {"red", "yellow"},
 	DevelopsTo = {"Rome"}
 })
 
 DefineFaction("Marsian Tribe", {
 	Civilization = "latin",
 	Type = "tribe",
-	Color = "brown",
-	SecondaryColor = "brown"
+	Colors = {"brown"}
 })
 
 DefineFaction("Messapian Tribe", {
 	Civilization = "latin",
 	Type = "tribe",
-	Color = "green",
-	SecondaryColor = "green"
+	Colors = {"green"}
 })
 
 DefineFaction("Oenotrian Tribe", {
 	Civilization = "latin",
 	Type = "tribe",
-	Color = "blue",
-	SecondaryColor = "blue"
+	Colors = {"blue"}
 })
 
 DefineFaction("Picentian Tribe", {
 	Civilization = "latin",
 	Type = "tribe",
-	Color = "green",
-	SecondaryColor = "green"
+	Colors = {"green"}
 })
 
 DefineFaction("Sabellian Tribe", {
 	Civilization = "latin",
 	Type = "tribe",
-	Color = "white",
-	SecondaryColor = "white"
+	Colors = {"white"}
 })
 
 DefineFaction("Sabine Tribe", {
 	Civilization = "latin",
 	Type = "tribe",
-	Color = "blue",
-	SecondaryColor = "blue"
+	Colors = {"blue"}
 })
 
 DefineFaction("Samnite Tribe", {
 	Civilization = "latin",
 	Type = "tribe",
-	Color = "yellow",
-	SecondaryColor = "yellow"
+	Colors = {"yellow"}
 })
 
 DefineFaction("Sicanian Tribe", {
 	Civilization = "latin", -- were they actually an Italic people?
 	Type = "tribe",
-	Color = "yellow",
-	SecondaryColor = "red"
+	Colors = {"yellow", "red"}
 })
 
 DefineFaction("Sicel Tribe", {
 	Civilization = "latin", -- were they actually an Italic people?
 	Type = "tribe",
-	Color = "red",
-	SecondaryColor = "yellow"
+	Colors = {"red", "yellow"}
 })
 
 DefineFaction("Umbrian Tribe", {
 	Civilization = "latin",
 	Type = "tribe",
-	Color = "pink",
-	SecondaryColor = "pink"
+	Colors = {"pink"}
 })
 
 DefineFaction("Venetian Tribe", {
 	Civilization = "latin", -- is not correct, but they could be reasonably close to justify it for game purposes
 	Type = "tribe",
-	Color = "teal",
-	SecondaryColor = "teal"
+	Colors = {"teal"}
 })
 
 -- polities
@@ -143,8 +127,7 @@ DefineFaction("Venetian Tribe", {
 DefineFaction("France", {
 	Civilization = "latin",
 	Type = "polity",
-	Color = "blue",
-	SecondaryColor = "white",
+	Colors = {"blue", "white"},
 	DefaultTier = "kingdom",
 	Titles = {
 		"monarchy", "kingdom", "Kingdom",
@@ -157,8 +140,7 @@ DefineFaction("France", {
 DefineFaction("Moldavia", {
 	Civilization = "latin",
 	Type = "polity",
-	Color = "brown",
-	SecondaryColor = "brown",
+	Colors = {"brown"},
 	DefaultTier = "duchy",
 	Titles = {
 		"monarchy", "duchy", "Principality"
@@ -168,8 +150,7 @@ DefineFaction("Moldavia", {
 DefineFaction("Portugal", {
 	Civilization = "latin",
 	Type = "polity",
-	Color = "green",
-	SecondaryColor = "red",
+	Colors = {"green", "red"},
 	DefaultTier = "kingdom",
 	Titles = {
 		"monarchy", "kingdom", "Kingdom",
@@ -180,8 +161,7 @@ DefineFaction("Portugal", {
 DefineFaction("Rome", {
 	Civilization = "latin",
 	Type = "polity",
-	Color = "red",
-	SecondaryColor = "yellow",
+	Colors = {"red", "yellow"},
 	DefaultTier = "kingdom",
 	Titles = {
 		"monarchy", "kingdom", "Kingdom",
@@ -194,8 +174,7 @@ DefineFaction("Rome", {
 DefineFaction("Savoy", {
 	Civilization = "latin",
 	Type = "polity",
-	Color = "brown",
-	SecondaryColor = "brown",
+	Colors = {"brown"},
 	DefaultTier = "duchy",
 	Titles = {
 		"monarchy", "duchy", "Duchy"
@@ -205,8 +184,7 @@ DefineFaction("Savoy", {
 DefineFaction("Sicily", {
 	Civilization = "latin",
 	Type = "polity",
-	Color = "green",
-	SecondaryColor = "green",
+	Colors = {"green"},
 	DefaultTier = "duchy",
 	Titles = {
 		"monarchy", "duchy", "Duchy"
@@ -216,8 +194,7 @@ DefineFaction("Sicily", {
 DefineFaction("Spain", {
 	Civilization = "latin",
 	Type = "polity",
-	Color = "yellow",
-	SecondaryColor = "red",
+	Colors = {"yellow", "red"},
 	DefaultTier = "kingdom",
 	Titles = {
 		"monarchy", "kingdom", "Kingdom",
@@ -228,8 +205,7 @@ DefineFaction("Spain", {
 DefineFaction("Transylvania", {
 	Civilization = "latin",
 	Type = "polity",
-	Color = "cyan",
-	SecondaryColor = "cyan",
+	Colors = {"cyan"},
 	DefaultTier = "duchy",
 	Titles = {
 		"monarchy", "duchy", "Principality"
@@ -239,8 +215,7 @@ DefineFaction("Transylvania", {
 DefineFaction("Venice", {
 	Civilization = "latin",
 	Type = "polity",
-	Color = "red",
-	SecondaryColor = "red",
+	Colors = {"red"},
 	DefaultTier = "duchy",
 	Titles = {
 		"republic", "duchy", "Republic"
@@ -250,8 +225,7 @@ DefineFaction("Venice", {
 DefineFaction("Wallachia", {
 	Civilization = "latin",
 	Type = "polity",
-	Color = "brown",
-	SecondaryColor = "brown",
+	Colors = {"brown"},
 	DefaultTier = "duchy",
 	Titles = {
 		"monarchy", "duchy", "Principality"

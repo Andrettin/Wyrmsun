@@ -233,11 +233,14 @@ https://github.com/Andrettin/Wyrmsun
 - 1.9.3
 -----------------------------------------------------------------------
 
-* Buildings
+* AI
 - The AI now gets shooter defenders in its stronghold-class buildings (previously this happened only to guard towers).
+- AI workers now stop gathering resources to repair (previously they didn't go repair a structure if they were currently harvesting a resource).
+- Improved resource-gathering AI to make the AI workers harvest object resources that are nearby first before harvesting farther away tile resources.
 
 * Factions
 - The faction choice menu now tells the player which color each faction has.
+- An unused color will now be chosen for a player if their faction's color is already used.
 
 * Heroes
 - Fixed crash which happened when the "Persistent Heroes" popup tip triggered by selecting a custom hero.
