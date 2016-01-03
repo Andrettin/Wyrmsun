@@ -245,6 +245,9 @@ https://github.com/Andrettin/Wyrmsun
 * Heroes
 - Fixed crash which happened when the "Persistent Heroes" popup tip triggered by selecting a custom hero.
 
+* Map Editor
+- It is now possible to set magic prefixes and suffixes for the appropriate units in the map editor.
+
 * Miscellaneous
 - Loading screen improvements (thanks to marcelofg55).
 

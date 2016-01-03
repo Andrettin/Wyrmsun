@@ -629,18 +629,54 @@ function EditUnitProperties()
 	local name_value = menu:addTextInputField(GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Name"), sizeX / 2 - 60, 11 + (36 * 2), 120)
 
 	local trait_list = GetUnitTypeData(GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Ident"), "Traits")
-	
+	local prefix_list = GetUnitTypeData(GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Ident"), "Prefixes")
+	local suffix_list = GetUnitTypeData(GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Ident"), "Suffixes")
 	table.insert(trait_list, "") -- for if the unit has no trait
+	table.insert(prefix_list, "") -- for if the unit has no prefix
+	table.insert(suffix_list, "") -- for if the unit has no suffix
+
+	local display_trait_list = {}
+	local display_prefix_list = {}
+	local display_suffix_list = {}
+	
+	for i=1,table.getn(trait_list) do
+		table.insert(display_trait_list, tostring(string.gsub(trait_list[i], "upgrade%-", "")))
+	end
+	for i=1,table.getn(prefix_list) do
+		table.insert(display_prefix_list, tostring(string.gsub(prefix_list[i], "upgrade%-item%-prefix%-", "")))
+	end
+	for i=1,table.getn(suffix_list) do
+		table.insert(display_suffix_list, tostring(string.gsub(suffix_list[i], "upgrade%-item%-suffix%-", "")))
+	end
+	
+	
 	local unit_trait
+	local unit_prefix
+	local unit_suffix
 	local activeCheckBox
 	local resource = GetUnitUnderCursor().Type.GivesResource
 	local resourceValue
 
 	if (GetUnitBoolFlag(UnitNumber(GetUnitUnderCursor()), "organic") and table.getn(GetUnitTypeData(GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Ident"), "Traits")) > 0) then
 		menu:addLabel(_("Unit Trait"), sizeX / 2, 11 + (36 * 3))
-		unit_trait = menu:addDropDown(trait_list, (sizeX / 2) - 60, 11 + (36 * 4), function(dd) end)
+		unit_trait = menu:addDropDown(display_trait_list, (sizeX / 2) - 60, 11 + (36 * 4), function(dd) end)
 		unit_trait:setSize(120, 20)
 		unit_trait:setSelected(GetElementIndexFromArray(trait_list, GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Trait")) - 1)
+	end
+
+	if ((GetUnitBoolFlag(UnitNumber(GetUnitUnderCursor()), "Building") or GetUnitBoolFlag(UnitNumber(GetUnitUnderCursor()), "Item"))) then
+		if (table.getn(GetUnitTypeData(GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Ident"), "Prefixes")) > 0) then
+			menu:addLabel(_("Prefix"), sizeX / 4, 11 + (36 * 3))
+			unit_prefix = menu:addDropDown(display_prefix_list, (sizeX / 4) - 60, 11 + (36 * 4), function(dd) end)
+			unit_prefix:setSize(120, 20)
+			unit_prefix:setSelected(GetElementIndexFromArray(prefix_list, GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Prefix")) - 1)
+		end
+		if (table.getn(GetUnitTypeData(GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Ident"), "Suffixes")) > 0) then
+			menu:addLabel(_("Suffix"), math.floor(sizeX * 3 / 4), 11 + (36 * 3))
+			unit_suffix = menu:addDropDown(display_suffix_list, math.floor(sizeX * 3 / 4) - 60, 11 + (36 * 4), function(dd) end)
+			unit_suffix:setSize(120, 20)
+			unit_suffix:setSelected(GetElementIndexFromArray(suffix_list, GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Suffix")) - 1)
+		end
 	end
 
 	if (GetUnitUnderCursor().Type.GivesResource == 0) then
@@ -661,6 +697,14 @@ function EditUnitProperties()
 			if (GetUnitBoolFlag(UnitNumber(GetUnitUnderCursor()), "organic") and table.getn(GetUnitTypeData(GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Ident"), "Traits")) > 0) then
 				if (trait_list[unit_trait:getSelected() + 1] ~= GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Trait")) then
 					AcquireTrait(UnitNumber(GetUnitUnderCursor()), trait_list[unit_trait:getSelected() + 1])
+				end
+			end
+			if (GetUnitBoolFlag(UnitNumber(GetUnitUnderCursor()), "Building") or GetUnitBoolFlag(UnitNumber(GetUnitUnderCursor()), "Item")) then
+				if (table.getn(GetUnitTypeData(GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Ident"), "Prefixes")) > 0 and prefix_list[unit_prefix:getSelected() + 1] ~= GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Prefix")) then
+					SetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Prefix", prefix_list[unit_prefix:getSelected() + 1])
+				end
+				if (table.getn(GetUnitTypeData(GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Ident"), "Suffixes")) > 0 and suffix_list[unit_suffix:getSelected() + 1] ~= GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Suffix")) then
+					SetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Suffix", suffix_list[unit_suffix:getSelected() + 1])
 				end
 			end
 			if (GetUnitUnderCursor().Type.GivesResource ~= 0) then
