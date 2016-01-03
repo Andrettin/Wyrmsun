@@ -36,6 +36,8 @@ DefineBoolFlags("Capturable")
 DefineUnitType("unit-revealer", {})
 
 -- And declare upgrade for dependency...
+CUpgrade:New("upgrade-portent")
+CUpgrade:New("upgrade-stun")
 
 DefineSpell("spell-herbal-cure",
 	"showname", _("Herbal Cure"),
@@ -65,7 +67,8 @@ DefineSpell("spell-portent",
 		{"summon", "unit-type", "unit-revealer", "time-to-live", 50},
 		{"spawn-missile", "missile", "missile-magic-effect", "start-point", {"base", "target"}}
 	},
-	"sound-when-cast", "magic-holy"
+	"sound-when-cast", "magic-holy",
+	"depend-upgrade", "upgrade-portent"
 )
 
 DefineSpell("spell-slow",
@@ -144,7 +147,8 @@ DefineSpell("spell-stun",
 	"condition", {
 		"organic", "only",
 		"Building", "false"
-	}
---	"autocast", {"range", 6, "condition", {"alliance", "only", "HitPoints", {MaxValuePercent = 90}}},
---	"ai-cast", {"range", 6, "condition", {"alliance", "only", "HitPoints", {MaxValuePercent = 90}}}
+	},
+	"autocast", {"range", 6, "combat", "only", "condition", {"Coward", "false", "opponent", "only", "Stun", {ExactValue = 0}}},
+	"ai-cast", {"range", 6, "combat", "only", "condition", {"Coward", "false", "opponent", "only", "Stun", {ExactValue = 0}}},
+	"depend-upgrade", "upgrade-stun"
 )

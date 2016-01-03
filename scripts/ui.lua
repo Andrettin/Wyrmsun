@@ -844,14 +844,13 @@ if not (ui_loaded_first_time) then
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
 				{ 	Condition = {ButtonAction = "repair"}, TextColor = "white", HighlightColor = "yellow",
-					More = {"Text", {Text = _("~<CTRL~>-click on button enables/disables auto-repair of damaged buildings"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = _("~<CTRL~>-click on the button toggles auto-repair of damaged buildings"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 				},
-				-- Heal hint
-				{ 	Margin = {1, 1}, Condition = {ButtonValue = "spell-herbal-cure"},
+				{ 	Margin = {1, 1}, Condition = {ButtonAction = "cast-spell", AutoCast = "only"},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
-				{ 	Condition = {ButtonValue = "spell-herbal-cure"}, TextColor = "white", HighlightColor = "yellow",
-					More = {"Text", {Text = _("~<CTRL~>-click on button enables/disables auto-heal ability"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+				{ 	Condition = {ButtonAction = "cast-spell", AutoCast = "only"}, TextColor = "white", HighlightColor = "yellow",
+					More = {"Text", {Text = _("~<CTRL~>-click on the button toggles autocast"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 				}
 		}	
 	})
@@ -1326,6 +1325,13 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {HasDescription = true}, HighlightColor = "yellow",
 					More = {"ButtonInfo", {InfoType = "Description", MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 				},
+				-- AutoCast Tooltip
+				{ 	Margin = {1, 1}, Condition = {ButtonAction = "cast-spell", AutoCast = "only"},
+					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
+				},
+				{ 	Condition = {ButtonAction = "cast-spell", AutoCast = "only"}, TextColor = "white", HighlightColor = "yellow",
+					More = {"Text", {Text = _("~<CTRL~>-click on the button toggles autocast"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+				}
 		}	
 	})
 end

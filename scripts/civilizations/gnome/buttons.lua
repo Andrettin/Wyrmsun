@@ -87,7 +87,6 @@ DefineButton( { Pos = 1, Level = 1, Icon = "icon-portent",
 
 DefineButton( { Pos = 5, Level = 0, Icon = "icon-portent",
 	Action = "cast-spell", Value = "spell-portent",
-	Allowed = "check-individual-upgrade", AllowArg = {"upgrade-portent"},
 	Key = "p", Hint = _("~!Portent"), Popup = "popup-commands",
 	ForUnit = {"unit-gnomish-herbalist"}
 })

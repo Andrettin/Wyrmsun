@@ -288,7 +288,6 @@ DefineButton( { Pos = 4, Level = 0, Icon = "icon-red-potion",
 
 DefineButton( { Pos = 6, Level = 0, Icon = "icon-stun",
 	Action = "cast-spell", Value = "spell-stun",
-	Allowed = "check-individual-upgrade", AllowArg = {"upgrade-stun"},
 	Description = "Does a stunning attack on a target, leaving it paralyzed for a few moments.",
 	Key = "u", Hint = _("St~!un"), Popup = "popup-research",
 	ForUnit = {

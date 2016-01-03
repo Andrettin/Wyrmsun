@@ -233,6 +233,9 @@ https://github.com/Andrettin/Wyrmsun
 - 1.9.3
 -----------------------------------------------------------------------
 
+* Abilities
+- The Stun ability can now be autocast (active by default).
+
 * AI
 - The AI now gets shooter defenders in its stronghold-class buildings (previously this happened only to guard towers).
 - AI workers now stop gathering resources to repair (previously they didn't go repair a structure if they were currently harvesting a resource).
