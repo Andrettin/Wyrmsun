@@ -53,6 +53,7 @@ if (LoadedGame == false) then
 		unit = CreateUnit("unit-dwarven-miner", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 		unit = CreateUnit("unit-dwarven-miner", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 		unit = CreateUnit("unit-dwarven-steelclad", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+		SetUnitVariable(unit, "Active", false)
 	elseif (GrandStrategyEventMap) then
 		CreateProvinceUnits("Svarinshaug", 0, 1, false, true)
 		CreateProvinceCustomHero("Svarinshaug", 0)

@@ -142,19 +142,23 @@ if (GrandStrategy == false) then
 	-- Rugnur
 	unit = CreateUnit("unit-dwarven-axefighter", 0, {35, 26})
 	SetUnitVariable(unit, "Character", "Rugnur")
+	SetUnitVariable(unit, "Active", false)
 
 	-- Baglur
 	unit = CreateUnit("unit-dwarven-steelclad", 0, {36, 25})
 	SetUnitVariable(unit, "Character", "Baglur")
+	SetUnitVariable(unit, "Active", false)
 
 	unit = CreateUnit("unit-dwarven-sentry-tower", 0, {16, 31})
 	if (unit) then
 		unit = CreateUnitInTransporter("unit-dwarven-scout", 0, unit)
+		SetUnitVariable(unit, "Active", false)
 	end
 	unit = CreateUnit("unit-dwarven-sentry-tower", 0, {20, 31}) -- could also have an accompanying dwarven scout
 	unit = CreateUnit("unit-dwarven-sentry-tower", 0, {22, 34})
 	if (unit) then
 		unit = CreateUnitInTransporter("unit-dwarven-scout", 0, unit)
+		SetUnitVariable(unit, "Active", false)
 	end
 
 	-- Bandits
@@ -162,6 +166,7 @@ if (GrandStrategy == false) then
 	unit = CreateUnit("unit-dwarven-mushroom-farm", 1, {16, 61})
 	unit = CreateUnit("unit-dwarven-mushroom-farm", 1, {7, 54})
 	unit = CreateUnit("unit-dwarven-steelclad", 1, {11, 50})
+	SetUnitVariable(unit, "Active", false)
 	unit = CreateUnit("unit-dwarven-miner", 1, {11, 50})
 	unit = CreateUnit("unit-dwarven-miner", 1, {11, 50})
 	unit = CreateUnit("unit-dwarven-miner", 1, {11, 50})
@@ -195,22 +200,26 @@ elseif (GrandStrategyEventMap) then
 	if (GetProvinceHero("Caverns of Chaincolt", "Rugnur") == 2) then
 		unit = CreateUnit(GetGrandStrategyHeroUnitType("Rugnur"), 0, {35, 26})
 		SetUnitVariable(unit, "Character", "Rugnur")
+		SetUnitVariable(unit, "Active", false)
 	end
 
 	-- Baglur
 	if (GetProvinceHero("Caverns of Chaincolt", "Baglur") == 2) then
 		unit = CreateUnit(GetGrandStrategyHeroUnitType("Baglur"), 0, {36, 25})
 		SetUnitVariable(unit, "Character", "Baglur")
+		SetUnitVariable(unit, "Active", false)
 	end
 
 	unit = CreateUnit("unit-dwarven-sentry-tower", 0, {16, 31})
 	if (unit) then
 		unit = CreateUnitInTransporter("unit-dwarven-scout", 0, unit)
+		SetUnitVariable(unit, "Active", false)
 	end
 	unit = CreateUnit("unit-dwarven-sentry-tower", 0, {20, 31}) -- could also be guard tower
 	unit = CreateUnit("unit-dwarven-sentry-tower", 0, {22, 34})
 	if (unit) then
 		unit = CreateUnitInTransporter("unit-dwarven-scout", 0, unit)
+		SetUnitVariable(unit, "Active", false)
 	end
 
 	local units_to_be_created = {}
@@ -244,6 +253,7 @@ elseif (GrandStrategyEventMap) then
 	if (units_to_be_created.unit_dwarven_steelclad < 1 and GetProvinceUnitQuantity("Southern Tunnels", "unit-dwarven-steelclad") >= 1) then
 		units_to_be_created.unit_dwarven_steelclad = 1
 		ChangeProvinceUnitQuantity("Southern Tunnels", "unit-dwarven-steelclad", -1)
+		SetUnitVariable(unit, "Active", false)
 	end
 	for i, unitName in ipairs(Units) do
 		if (IsMilitaryUnit(unitName) and GetUnitTypeData(unitName, "Class") ~= "militia") then
@@ -258,47 +268,87 @@ end
 
 -- Goblins
 unit = CreateUnit("unit-goblin-spearman", 2, {10, 7})
+SetUnitVariable(unit, "Active", false)
 unit = CreateUnit("unit-goblin-spearman", 2, {10, 7})
+SetUnitVariable(unit, "Active", false)
 unit = CreateUnit("unit-goblin-spearman", 2, {10, 7})
+SetUnitVariable(unit, "Active", false)
 unit = CreateUnit("unit-goblin-spearman", 2, {50, 56})
+SetUnitVariable(unit, "Active", false)
 unit = CreateUnit("unit-goblin-spearman", 2, {50, 56})
+SetUnitVariable(unit, "Active", false)
 unit = CreateUnit("unit-goblin-spearman", 2, {50, 56})
+SetUnitVariable(unit, "Active", false)
 unit = CreateUnit("unit-goblin-spearman", 2, {50, 56})
+SetUnitVariable(unit, "Active", false)
 unit = CreateUnit("unit-goblin-spearman", 2, {50, 56})
+SetUnitVariable(unit, "Active", false)
 if (GameSettings.Difficulty == 3) then -- if difficulty is hard
 	unit = CreateUnit("unit-goblin-spearman", 2, {10, 7})
+	SetUnitVariable(unit, "Active", false)
 	unit = CreateUnit("unit-goblin-spearman", 2, {10, 7})
+	SetUnitVariable(unit, "Active", false)
 	unit = CreateUnit("unit-goblin-spearman", 2, {10, 7})
+	SetUnitVariable(unit, "Active", false)
 	unit = CreateUnit("unit-goblin-spearman", 2, {50, 56})
+	SetUnitVariable(unit, "Active", false)
 	unit = CreateUnit("unit-goblin-spearman", 2, {50, 56})
+	SetUnitVariable(unit, "Active", false)
 	unit = CreateUnit("unit-goblin-spearman", 2, {50, 56})
+	SetUnitVariable(unit, "Active", false)
 	unit = CreateUnit("unit-goblin-spearman", 2, {50, 56})
+	SetUnitVariable(unit, "Active", false)
 	unit = CreateUnit("unit-goblin-spearman", 2, {50, 56})
+	SetUnitVariable(unit, "Active", false)
 elseif (GameSettings.Difficulty == 4) then -- if difficulty is brutal
 	unit = CreateUnit("unit-goblin-spearman", 2, {10, 7})
+	SetUnitVariable(unit, "Active", false)
 	unit = CreateUnit("unit-goblin-spearman", 2, {10, 7})
+	SetUnitVariable(unit, "Active", false)
 	unit = CreateUnit("unit-goblin-spearman", 2, {10, 7})
+	SetUnitVariable(unit, "Active", false)
 	unit = CreateUnit("unit-goblin-spearman", 2, {50, 56})
+	SetUnitVariable(unit, "Active", false)
 	unit = CreateUnit("unit-goblin-spearman", 2, {50, 56})
+	SetUnitVariable(unit, "Active", false)
 	unit = CreateUnit("unit-goblin-spearman", 2, {50, 56})
+	SetUnitVariable(unit, "Active", false)
 	unit = CreateUnit("unit-goblin-spearman", 2, {50, 56})
+	SetUnitVariable(unit, "Active", false)
 	unit = CreateUnit("unit-goblin-spearman", 2, {50, 56})
+	SetUnitVariable(unit, "Active", false)
 	unit = CreateUnit("unit-goblin-spearman", 2, {10, 7})
+	SetUnitVariable(unit, "Active", false)
 	unit = CreateUnit("unit-goblin-spearman", 2, {10, 7})
+	SetUnitVariable(unit, "Active", false)
 	unit = CreateUnit("unit-goblin-spearman", 2, {10, 7})
+	SetUnitVariable(unit, "Active", false)
 	unit = CreateUnit("unit-goblin-spearman", 2, {50, 56})
+	SetUnitVariable(unit, "Active", false)
 	unit = CreateUnit("unit-goblin-spearman", 2, {50, 56})
+	SetUnitVariable(unit, "Active", false)
 	unit = CreateUnit("unit-goblin-spearman", 2, {50, 56})
+	SetUnitVariable(unit, "Active", false)
 	unit = CreateUnit("unit-goblin-spearman", 2, {50, 56})
+	SetUnitVariable(unit, "Active", false)
 	unit = CreateUnit("unit-goblin-spearman", 2, {50, 56})
+	SetUnitVariable(unit, "Active", false)
 	unit = CreateUnit("unit-goblin-spearman", 2, {10, 7})
+	SetUnitVariable(unit, "Active", false)
 	unit = CreateUnit("unit-goblin-spearman", 2, {10, 7})
+	SetUnitVariable(unit, "Active", false)
 	unit = CreateUnit("unit-goblin-spearman", 2, {10, 7})
+	SetUnitVariable(unit, "Active", false)
 	unit = CreateUnit("unit-goblin-spearman", 2, {50, 56})
+	SetUnitVariable(unit, "Active", false)
 	unit = CreateUnit("unit-goblin-spearman", 2, {50, 56})
+	SetUnitVariable(unit, "Active", false)
 	unit = CreateUnit("unit-goblin-spearman", 2, {50, 56})
+	SetUnitVariable(unit, "Active", false)
 	unit = CreateUnit("unit-goblin-spearman", 2, {50, 56})
+	SetUnitVariable(unit, "Active", false)
 	unit = CreateUnit("unit-goblin-spearman", 2, {50, 56})
+	SetUnitVariable(unit, "Active", false)
 end
 
 unit = CreateUnit("unit-glyph", 15, {5, 11})

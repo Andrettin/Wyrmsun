@@ -44,14 +44,23 @@ if (LoadedGame == false) then
 
 	if (GrandStrategy == false) then
 		unit = CreateUnit("unit-germanic-warrior", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-germanic-warrior", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-germanic-warrior", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-germanic-warrior", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-germanic-warrior", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-germanic-warrior", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-germanic-warrior", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-germanic-warrior", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-germanic-warrior", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		SetUnitVariable(unit, "Active", false)
 		
 		unit = CreateUnit("unit-germanic-town-hall", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
 		unit = CreateUnit("unit-germanic-worker", 1, {Players[1].StartPos.x, Players[1].StartPos.y})

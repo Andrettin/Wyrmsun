@@ -1395,6 +1395,7 @@ function CreateCreeps(player, creep_type, creep_number, min_x, max_x, min_y, max
 
 				if (unit_quantity < 1) then -- creeps shouldn't start near a settlement, or the player will likely be destroyed
 					unit = CreateUnit(creep_type, player, {RandomX, RandomY})
+					SetUnitVariable(unit, "Active", false)
 					Count = Count - 1
 				end
 			end
@@ -4146,6 +4147,7 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 						if (RawTile(SecondRandomX, SecondRandomY) == "Land") then
 							if (GetNumUnitsAt(-1, "any", {SecondRandomX, SecondRandomY}, {SecondRandomX, SecondRandomY}) < 1) then
 								unit = CreateUnit("unit-gnomish-herbalist", 2, {SecondRandomX, SecondRandomY}) -- create the scholar
+								SetUnitVariable(unit, "Active", false)
 								SecondCount = SecondCount - 1
 							end
 						end
@@ -4643,6 +4645,7 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 						if (RawTile(SecondRandomX, SecondRandomY) == "Land") then
 							if (GetNumUnitsAt(-1, "any", {SecondRandomX, SecondRandomY}, {SecondRandomX, SecondRandomY}) < 1) then
 								unit = CreateUnit("unit-goblin-thief", 2, {SecondRandomX, SecondRandomY}) -- create thieves
+								SetUnitVariable(unit, "Active", false)
 								SecondCount = SecondCount - 1
 							end
 						end
@@ -5428,9 +5431,11 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 								local chosen_hero = available_heroes[SyncRand(table.getn(available_heroes)) + 1]
 								unit = CreateUnit(GetCharacterData(chosen_hero, "Type"), 0, {RandomX, RandomY})
 								SetUnitVariable(unit, "Character", chosen_hero)
+								SetUnitVariable(unit, "Active", false)
 							else
 								unit = CreateUnit(GetCharacterData(player_hero, "Type"), 0, {RandomX, RandomY})
 								SetUnitVariable(unit, "Character", player_hero)
+								SetUnitVariable(unit, "Active", false)
 							end
 							-- create stairs beside the hero to make it seem like he came from somewhere
 							local SecondRandomX = 0
@@ -5507,9 +5512,11 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 								local chosen_hero = available_heroes[SyncRand(table.getn(available_heroes)) + 1]
 								unit = CreateUnit(GetCharacterData(chosen_hero, "Type"), 1, {RandomX, RandomY})
 								SetUnitVariable(unit, "Character", chosen_hero)
+								SetUnitVariable(unit, "Active", false)
 							else
 								unit = CreateUnit(GetCharacterData(second_player_hero, "Type"), 0, {RandomX, RandomY})
 								SetUnitVariable(unit, "Character", second_player_hero)
+								SetUnitVariable(unit, "Active", false)
 							end
 							-- create stairs beside the hero to make it seem like he came from somewhere
 							local SecondRandomX = 0
@@ -5563,11 +5570,13 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 								if (unit and dungeon_boss_name ~= "") then
 									SetUnitVariable(unit, "Name", dungeon_boss_name)
 								end
+								SetUnitVariable(unit, "Active", false)
 								if (second_dungeon_boss ~= "") then
 									unit = CreateUnit(second_dungeon_boss, 2, {RandomX, RandomY})
 									if (unit and second_dungeon_boss_name ~= "") then
 										SetUnitVariable(unit, "Name", second_dungeon_boss_name)
 									end
+									SetUnitVariable(unit, "Active", false)
 								end
 								Count = Count - 1
 							end
@@ -5590,49 +5599,63 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 					if (hostile_dungeon_player_civilization == "dwarf" or hostile_dungeon_player_civilization == "germanic") then
 						if (RandomNumber < 33) then
 							unit = OldCreateUnit("unit-dwarven-axefighter", 2, {RandomX, RandomY})
+							SetUnitVariable(unit, "Active", false)
 							Count = Count - 1
 						elseif (RandomNumber >= 33 and RandomNumber < 66) then
 							unit = OldCreateUnit("unit-dwarven-scout", 2, {RandomX, RandomY})
+							SetUnitVariable(unit, "Active", false)
 							Count = Count - 1
 						elseif (RandomNumber >= 66) then
 							unit = OldCreateUnit("unit-dwarven-militia", 2, {RandomX, RandomY})
+							SetUnitVariable(unit, "Active", false)
 							unit = OldCreateUnit("unit-dwarven-militia", 2, {RandomX, RandomY})
+							SetUnitVariable(unit, "Active", false)
 							Count = Count - 1
 						end
 					elseif (hostile_dungeon_player_civilization == "germanic") then
 						if (RandomNumber < 50) then
 							unit = OldCreateUnit("unit-germanic-warrior", 2, {RandomX, RandomY})
+							SetUnitVariable(unit, "Active", false)
 							Count = Count - 1
 						elseif (RandomNumber >= 50) then
 							unit = OldCreateUnit("unit-germanic-archer", 2, {RandomX, RandomY})
+							SetUnitVariable(unit, "Active", false)
 							Count = Count - 1
 						end
 					elseif (hostile_dungeon_player_civilization == "gnome") then
 						if (RandomNumber < 75) then
 							unit = OldCreateUnit("unit-gnomish-recruit", 2, {RandomX, RandomY})
+							SetUnitVariable(unit, "Active", false)
 							Count = Count - 1
 						elseif (RandomNumber >= 75) then
 							unit = OldCreateUnit("unit-gnomish-herbalist", 2, {RandomX, RandomY})
+							SetUnitVariable(unit, "Active", false)
 							Count = Count - 1
 						end
 					elseif (hostile_dungeon_player_civilization == "goblin") then
 						if (RandomNumber < 33) then
 							unit = OldCreateUnit("unit-goblin-spearman", 2, {RandomX, RandomY})
+							SetUnitVariable(unit, "Active", false)
 							Count = Count - 1
 						elseif (RandomNumber >= 33 and RandomNumber < 66) then
 							unit = OldCreateUnit("unit-goblin-archer", 2, {RandomX, RandomY})
+							SetUnitVariable(unit, "Active", false)
 							Count = Count - 1
 						elseif (RandomNumber >= 66) then
 							unit = OldCreateUnit("unit-goblin-thief", 2, {RandomX, RandomY})
+							SetUnitVariable(unit, "Active", false)
 							unit = OldCreateUnit("unit-goblin-thief", 2, {RandomX, RandomY})
+							SetUnitVariable(unit, "Active", false)
 							Count = Count - 1
 						end
 					elseif (hostile_dungeon_player_civilization == "kobold") then
 						if (RandomNumber < 90) then
 							unit = OldCreateUnit("unit-kobold-footpad", 2, {RandomX, RandomY})
+							SetUnitVariable(unit, "Active", false)
 							Count = Count - 1
 						elseif (RandomNumber >= 90) then
 							unit = OldCreateUnit("unit-wyrm", 2, {RandomX, RandomY})
+							SetUnitVariable(unit, "Active", false)
 							Count = Count - 1
 						end
 					end
@@ -5666,47 +5689,58 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 										RandomNumber = SyncRand(100)
 										if (RandomNumber < 90) then
 											unit = OldCreateUnit("unit-dwarven-miner", 3, {RandomX, RandomY})
+											SetUnitVariable(unit, "Active", false)
 											Count = Count - 1
 										elseif (RandomNumber < 95) then
 											unit = OldCreateUnit("unit-gnomish-worker", 3, {RandomX, RandomY}) -- there is a small chance that a dweller of a dwarven hall will be a gnome instead of a dwarf
+											SetUnitVariable(unit, "Active", false)
 											Count = Count - 1
 										elseif (GetNumUnitsAt(-1, "unit-long-swordsman", {0, 0}, {256, 256}) < 1) then -- there is a small chance that a neutral long swordsman will be created (only one per map)
 											unit = OldCreateUnit("unit-long-swordsman", 3, {RandomX, RandomY})
+											SetUnitVariable(unit, "Active", false)
 											Count = Count - 1
 										end
 									elseif (hostile_dungeon_player_civilization == "germanic") then
 										RandomNumber = SyncRand(100)
 										if (RandomNumber < 95) then
 											unit = OldCreateUnit("unit-germanic-worker", 3, {RandomX, RandomY})
+											SetUnitVariable(unit, "Active", false)
 											Count = Count - 1
 										elseif (GetNumUnitsAt(-1, "unit-long-swordsman", {0, 0}, {256, 256}) < 1) then -- there is a small chance that a neutral long swordsman will be created (only one per map)
 											unit = OldCreateUnit("unit-long-swordsman", 3, {RandomX, RandomY})
+											SetUnitVariable(unit, "Active", false)
 											Count = Count - 1
 										end
 									elseif (hostile_dungeon_player_civilization == "gnome") then
 										RandomNumber = SyncRand(100)
 										if (RandomNumber < 90) then
 											unit = OldCreateUnit("unit-gnomish-worker", 3, {RandomX, RandomY})
+											SetUnitVariable(unit, "Active", false)
 											Count = Count - 1
 										elseif (RandomNumber < 95) then
 											unit = OldCreateUnit("unit-dwarven-miner", 3, {RandomX, RandomY}) -- there is a small chance that a dweller of a gnomish hall will be a dwarf instead of a gnome
+											SetUnitVariable(unit, "Active", false)
 											Count = Count - 1
 										elseif (GetNumUnitsAt(-1, "unit-long-swordsman", {0, 0}, {256, 256}) < 1) then -- there is a small chance that a neutral long swordsman will be created (only one per map)
 											unit = OldCreateUnit("unit-long-swordsman", 3, {RandomX, RandomY})
+											SetUnitVariable(unit, "Active", false)
 											Count = Count - 1
 										end
 									elseif (hostile_dungeon_player_civilization == "goblin") then
 										RandomNumber = SyncRand(100)
 										if (RandomNumber < 95) then
 											unit = OldCreateUnit("unit-goblin-worker", 3, {RandomX, RandomY})
+											SetUnitVariable(unit, "Active", false)
 											Count = Count - 1
 										elseif (GetNumUnitsAt(-1, "unit-long-swordsman", {0, 0}, {256, 256}) < 1) then -- there is a small chance that a neutral long swordsman will be created (only one per map)
 											unit = OldCreateUnit("unit-long-swordsman", 3, {RandomX, RandomY})
+											SetUnitVariable(unit, "Active", false)
 											Count = Count - 1
 										end
 									elseif (hostile_dungeon_player_civilization == "kobold") then
 										if (GetNumUnitsAt(-1, "unit-long-swordsman", {0, 0}, {256, 256}) < 1) then -- there is a small chance that a neutral long swordsman will be created (only one per map)
 											unit = OldCreateUnit("unit-long-swordsman", 3, {RandomX, RandomY})
+											SetUnitVariable(unit, "Active", false)
 											Count = Count - 1
 										else
 											Count = Count - 1

@@ -260,6 +260,7 @@ elseif (GrandStrategyEventMap) then
 	-- if there is at least one steelclad in the Southern Tunnels, make sure that it is used for the raid
 	if (GetNumUnitsAt(GetFactionPlayer("Shinsplitter Clan"), "unit-dwarven-steelclad", {0, 0}, {256, 256}) < 1 and GetProvinceUnitQuantity("Southern Tunnels", "unit-dwarven-steelclad") >= 1) then
 		unit = CreateUnit("unit-dwarven-steelclad", 2, {Players[2].StartPos.x, Players[2].StartPos.y})
+		SetUnitVariable(unit, "Active", false)
 		ChangeProvinceUnitQuantity("Southern Tunnels", "unit-dwarven-steelclad", -1)
 	end
 	

@@ -420,11 +420,13 @@ elseif (GrandStrategyEventMap) then
 	unit = CreateUnit("unit-goblin-town-hall", 2, {53, 7})
 	unit = CreateUnit("unit-goblin-spearman", 2, {54, 8}) -- orcish warlord
 	IncreaseUnitLevel(unit, 2)
+	SetUnitVariable(unit, "Active", false)
 	unit = CreateUnit("unit-goblin-worker", 2, {54, 8})
 
 	unit = CreateUnit("unit-goblin-town-hall", 3, {11, 10})
 	unit = CreateUnit("unit-goblin-spearman", 3, {12, 10}) -- orcish warlord
 	IncreaseUnitLevel(unit, 2)
+	SetUnitVariable(unit, "Active", false)
 	unit = CreateUnit("unit-goblin-worker", 3, {12, 10})
 
 	unit = CreateUnit("unit-goblin-town-hall", 4, {11, 31})

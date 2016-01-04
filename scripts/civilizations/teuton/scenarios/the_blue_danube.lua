@@ -46,8 +46,11 @@ if (LoadedGame == false) then
 		SetPlayerData(0, "Faction", "Bavarian Tribe")
 		
 		unit = CreateUnit("unit-teuton-swordsman", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-teuton-swordsman", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-teuton-archer", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		SetUnitVariable(unit, "Active", false)
 		
 		unit = CreateUnit("unit-teuton-archer", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
 		SetUnitVariable(unit, "Active", false)

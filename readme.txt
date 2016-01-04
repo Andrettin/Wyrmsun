@@ -238,6 +238,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * AI
 - Increased the reaction range of AI units.
+- Improved AI response to attacks.
 
 * Map Editor
 - It is now possible to to set magic prefixes and suffixes to mines.

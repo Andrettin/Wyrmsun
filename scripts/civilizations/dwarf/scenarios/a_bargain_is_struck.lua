@@ -242,6 +242,7 @@ AddTrigger(
 																															unit = CreateUnit("unit-gnomish-recruit", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y}) -- gnomish envoy who holds the ruby
 																															IncreaseUnitLevel(unit, 1)
 																															AcquireAbility(unit, "upgrade-sword-mastery")
+																															SetUnitVariable(unit, "Active", false)
 																															if (GetThisPlayer() == GetFactionPlayer("Shinsplitter Clan")) then
 																																-- if human-controlled player is Shinsplitter Clan, then tell the caravans to move
 																																OrderUnit(player, "unit-gnomish-recruit", {GetUnitVariable(unit,"PosX"), GetUnitVariable(unit,"PosY")}, {47, 8}, "move")
@@ -471,30 +472,50 @@ AddTrigger(
 												Players[second_bandit_player].Type = PlayerComputer
 												if (GrandStrategy == false) then
 													unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {bandit_x, bandit_y})
+													SetUnitVariable(unit, "Active", false)
 													unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {bandit_x, bandit_y})
+													SetUnitVariable(unit, "Active", false)
 													unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {bandit_x, bandit_y})
+													SetUnitVariable(unit, "Active", false)
 
 													unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {(Players[bandit_player].StartPos.x + Players[player].StartPos.x) / 2, (Players[bandit_player].StartPos.y + Players[player].StartPos.y) / 2})
+													SetUnitVariable(unit, "Active", false)
 													if (GameSettings.Difficulty == 3) then -- if difficulty is hard
 														unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {bandit_x, bandit_y})
+														SetUnitVariable(unit, "Active", false)
 														unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {bandit_x, bandit_y})
+														SetUnitVariable(unit, "Active", false)
 														unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {bandit_x, bandit_y})
+														SetUnitVariable(unit, "Active", false)
 
 														unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {(Players[bandit_player].StartPos.x + Players[player].StartPos.x) / 2, (Players[bandit_player].StartPos.y + Players[player].StartPos.y) / 2})
+														SetUnitVariable(unit, "Active", false)
 													elseif (GameSettings.Difficulty == 4) then -- if difficulty is brutal
 														unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {bandit_x, bandit_y})
+														SetUnitVariable(unit, "Active", false)
 														unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {bandit_x, bandit_y})
+														SetUnitVariable(unit, "Active", false)
 														unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {bandit_x, bandit_y})
+														SetUnitVariable(unit, "Active", false)
 														unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {bandit_x, bandit_y})
+														SetUnitVariable(unit, "Active", false)
 														unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {bandit_x, bandit_y})
+														SetUnitVariable(unit, "Active", false)
 														unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {bandit_x, bandit_y})
+														SetUnitVariable(unit, "Active", false)
 														unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {bandit_x, bandit_y})
+														SetUnitVariable(unit, "Active", false)
 														unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {bandit_x, bandit_y})
+														SetUnitVariable(unit, "Active", false)
 														unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {bandit_x, bandit_y})
+														SetUnitVariable(unit, "Active", false)
 
 														unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {(Players[bandit_player].StartPos.x + Players[player].StartPos.x) / 2, (Players[bandit_player].StartPos.y + Players[player].StartPos.y) / 2})
+														SetUnitVariable(unit, "Active", false)
 														unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {(Players[bandit_player].StartPos.x + Players[player].StartPos.x) / 2, (Players[bandit_player].StartPos.y + Players[player].StartPos.y) / 2})
+														SetUnitVariable(unit, "Active", false)
 														unit = CreateUnit("unit-dwarven-axefighter", second_bandit_player, {(Players[bandit_player].StartPos.x + Players[player].StartPos.x) / 2, (Players[bandit_player].StartPos.y + Players[player].StartPos.y) / 2})
+														SetUnitVariable(unit, "Active", false)
 													end
 												end
 

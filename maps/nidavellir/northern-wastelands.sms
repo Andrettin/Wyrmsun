@@ -207,28 +207,36 @@ end
 -- create gryphon riders
 unit = CreateUnit("unit-dwarven-gryphon-rider", 3, {2, 35})
 IncreaseUnitLevel(unit, 1)
+SetUnitVariable(unit, "Active", false)
 unit = CreateUnit("unit-dwarven-gryphon-rider", 3, {0, 34})
+SetUnitVariable(unit, "Active", false)
 
 function NorthernWastelandsEnemy(enemy_x, enemy_y)
 	RandomNumber = SyncRand(2)
 	if (RandomNumber == 0) then
 		unit = CreateUnit("unit-goblin-spearman", 1, {enemy_x, enemy_y})
+		SetUnitVariable(unit, "Active", false)
 	elseif (RandomNumber == 1) then
 		unit = CreateUnit("unit-goblin-archer", 1, {enemy_x, enemy_y})
+		SetUnitVariable(unit, "Active", false)
 	end
 
 	RandomNumber = SyncRand(2)
 	if (RandomNumber == 0) then
 		unit = CreateUnit("unit-goblin-spearman", 1, {enemy_x, enemy_y})
+		SetUnitVariable(unit, "Active", false)
 	elseif (RandomNumber == 1) then
 		unit = CreateUnit("unit-goblin-archer", 1, {enemy_x, enemy_y})
+		SetUnitVariable(unit, "Active", false)
 	end
 
 	RandomNumber = SyncRand(2)
 	if (RandomNumber == 0) then
 		unit = CreateUnit("unit-goblin-spearman", 1, {enemy_x, enemy_y})
+		SetUnitVariable(unit, "Active", false)
 	elseif (RandomNumber == 1) then
 		unit = CreateUnit("unit-goblin-archer", 1, {enemy_x, enemy_y})
+		SetUnitVariable(unit, "Active", false)
 	end
 
 	if (GameSettings.Difficulty >= 2) then -- if difficulty is normal or higher
@@ -236,15 +244,19 @@ function NorthernWastelandsEnemy(enemy_x, enemy_y)
 		RandomNumber = SyncRand(2)
 		if (RandomNumber == 0) then
 			unit = CreateUnit("unit-goblin-spearman", 1, {enemy_x, enemy_y})
+			SetUnitVariable(unit, "Active", false)
 		elseif (RandomNumber == 1) then
 			unit = CreateUnit("unit-goblin-archer", 1, {enemy_x, enemy_y})
+			SetUnitVariable(unit, "Active", false)
 		end
 
 		RandomNumber = SyncRand(2)
 		if (RandomNumber == 0) then
 			unit = CreateUnit("unit-goblin-spearman", 1, {enemy_x, enemy_y})
+			SetUnitVariable(unit, "Active", false)
 		elseif (RandomNumber == 1) then
 			unit = CreateUnit("unit-goblin-archer", 1, {enemy_x, enemy_y})
+			SetUnitVariable(unit, "Active", false)
 		end
 	end
 
@@ -253,8 +265,10 @@ function NorthernWastelandsEnemy(enemy_x, enemy_y)
 		RandomNumber = SyncRand(2)
 		if (RandomNumber == 0) then
 			unit = CreateUnit("unit-goblin-spearman", 1, {enemy_x, enemy_y})
+			SetUnitVariable(unit, "Active", false)
 		elseif (RandomNumber == 1) then
 			unit = CreateUnit("unit-goblin-archer", 1, {enemy_x, enemy_y})
+			SetUnitVariable(unit, "Active", false)
 		end
 	end
 end

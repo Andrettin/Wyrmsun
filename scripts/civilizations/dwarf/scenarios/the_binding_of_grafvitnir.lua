@@ -75,19 +75,28 @@ if (LoadedGame == false) then
 	SetUnitVariable(unit, "HitPoints", GetUnitVariable(unit, "HitPoints", "Max")) -- Grafvitnir should be virtually indestructible
 	SetUnitVariable(unit, "Armor", 20, "Max")
 	SetUnitVariable(unit, "Armor", 20)
+	SetUnitVariable(unit, "Active", false)
 	unit = CreateUnit("unit-kobold-footpad", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+	SetUnitVariable(unit, "Active", false)
 	unit = CreateUnit("unit-kobold-footpad", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+	SetUnitVariable(unit, "Active", false)
 	if (GameSettings.Difficulty >= 2) then
 		unit = CreateUnit("unit-kobold-footpad", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-kobold-footpad", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+		SetUnitVariable(unit, "Active", false)
 	end
 	if (GameSettings.Difficulty >= 3) then
 		unit = CreateUnit("unit-kobold-footpad", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-kobold-footpad", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+		SetUnitVariable(unit, "Active", false)
 	end
 	if (GameSettings.Difficulty >= 4) then
 		unit = CreateUnit("unit-kobold-footpad", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-kobold-footpad", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+		SetUnitVariable(unit, "Active", false)
 	end
 end
 

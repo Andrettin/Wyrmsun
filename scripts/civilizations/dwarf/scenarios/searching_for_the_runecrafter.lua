@@ -187,6 +187,7 @@ AddTrigger(
 											unit = CreateUnit("unit-gnomish-recruit", 0, {8, 60}) -- gnomish envoy
 											IncreaseUnitLevel(unit, 1)
 											AcquireAbility(unit, "upgrade-sword-mastery")
+											SetUnitVariable(unit, "Active", false)
 										end
 										if (mapinfo.description == "Northern Wastelands") then
 											RemovePlayerObjective(player, "- Defeat your enemies")

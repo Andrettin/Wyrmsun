@@ -47,8 +47,11 @@ if (LoadedGame == false) then
 		SetPlayerData(0, "Faction", "Suebi Tribe")
 		
 		unit = CreateUnit("unit-suebi-swordsman", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-suebi-swordsman", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-teuton-archer", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		SetUnitVariable(unit, "Active", false)
 	elseif (GrandStrategyEventMap) then
 		SetAiType(0, "grand-strategy-battle")
 		SetAiType(1, "grand-strategy-battle")

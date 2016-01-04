@@ -352,6 +352,7 @@ AddTrigger(
 																																	unit = CreateUnit("unit-gnomish-recruit", 0, {6, 5}) -- gnomish envoy
 																																	IncreaseUnitLevel(unit, 1)
 																																	AcquireAbility(unit, "upgrade-sword-mastery")
+																																	SetUnitVariable(unit, "Active", false)
 																																end
 																																if (mapinfo.description == "Shorbear Hills") then
 																																	RemovePlayerObjective(player, "- Defeat your enemies")
@@ -770,6 +771,7 @@ AddTrigger(
 
 				if (GrandStrategy == false) then
 					unit = CreateUnit("unit-dwarven-thane", 2, {5, 65}) -- Gaenlar
+					SetUnitVariable(unit, "Active", false)
 
 					-- create second encampment for Shinsplitters
 					unit = CreateUnit("unit-dwarven-town-hall", 2, {40, 10})
@@ -779,6 +781,7 @@ AddTrigger(
 					unit = CreateUnit("unit-dwarven-miner", 2, {40, 10})
 					unit = CreateUnit("unit-dwarven-miner", 2, {40, 10})
 					unit = CreateUnit("unit-dwarven-thane", 2, {40, 10}) -- Glinan
+					SetUnitVariable(unit, "Active", false)
 
 					-- create third encampment for Shinsplitters
 					unit = CreateUnit("unit-dwarven-town-hall", 2, {60, 60})
@@ -788,12 +791,14 @@ AddTrigger(
 					unit = CreateUnit("unit-dwarven-miner", 2, {60, 60})
 					unit = CreateUnit("unit-dwarven-miner", 2, {60, 60})
 					unit = CreateUnit("unit-dwarven-thane", 2, {60, 60}) -- Kalnar
+					SetUnitVariable(unit, "Active", false)
 				elseif (GrandStrategyEventMap) then
 					-- Shinsplitters
 					SetStartView(2, 40, 10)
 					CreateProvinceUnits("Southern Tunnels", 2, 4)
 					if (GetNumUnitsAt(GetFactionPlayer("Shinsplitter Clan"), "unit-dwarven-thane", {0, 0}, {256, 256}) < 1 and GetProvinceUnitQuantity("Southern Tunnels", "unit-dwarven-thane") >= 1) then
 						unit = CreateUnit("unit-dwarven-thane", 2, {40, 10})
+						SetUnitVariable(unit, "Active", false)
 						ChangeProvinceUnitQuantity("Southern Tunnels", "unit-dwarven-thane", -1)
 					end
 					
