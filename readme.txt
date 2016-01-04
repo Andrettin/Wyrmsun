@@ -240,6 +240,9 @@ https://github.com/Andrettin/Wyrmsun
 - Increased the reaction range of AI units.
 - Improved AI response to attacks.
 
+* Heroes
+- Persistent heroes now carry over experience (previously only their level was saved).
+
 * Map Editor
 - It is now possible to to set magic prefixes and suffixes to mines.
 - Revamped the player properties editing menu.
