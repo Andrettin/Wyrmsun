@@ -1424,6 +1424,7 @@ DefineUnitType("unit-template-mine", { Name = _("Mine"),
 	SelectableByRectangle = true,
 	BurnPercent = 50,
 	BurnDamageRate = 1,
+	Affixes = {"upgrade-item-prefix-dwindling", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-replenishing", "upgrade-item-prefix-sturdy", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-replenishment"},
 	Sounds = {
 		"selected", "gold-mine-selected",
 --		"acknowledge", "gold-mine-acknowledge",

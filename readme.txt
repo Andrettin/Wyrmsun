@@ -236,6 +236,12 @@ https://github.com/Andrettin/Wyrmsun
 * Abilities
 - Update to the Mace Mastery icon.
 
+* AI
+- Increased the reaction range of AI units.
+
+* Map Editor
+- It is now possible to to set magic prefixes and suffixes to mines.
+
 * Units
 - Dwarven Scouts now have +1 Sight (losing their previous +1 Speed bonus).
 - Added Dwarven Pathfinder (experience upgrade of the Scout) (icon by Jinn).
