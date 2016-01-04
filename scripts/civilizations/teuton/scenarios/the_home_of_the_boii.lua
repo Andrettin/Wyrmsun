@@ -50,8 +50,11 @@ if (LoadedGame == false) then
 	if (GrandStrategy == false) then
 		unit = CreateUnit("unit-suebi-swordsman", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 		SetUnitVariable(unit, "Character", "Marbod")
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-suebi-swordsman", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-teuton-archer", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		SetUnitVariable(unit, "Active", false)
 		
 		unit = CreateUnit("unit-germanic-warrior", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
 		SetUnitVariable(unit, "Active", false) -- set town defender to passive AI (so that they do not participate in attacks)
@@ -92,6 +95,7 @@ if (LoadedGame == false) then
 		CreateProvinceCustomHero("Brandenburg", 0)
 		unit = CreateUnit("unit-suebi-swordsman", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 		SetUnitVariable(unit, "Character", "Marbod")
+		SetUnitVariable(unit, "Active", false)
 		
 		-- Boii units
 		CreateProvinceUnits("Bohemia", 1)
