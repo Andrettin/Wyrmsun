@@ -243,6 +243,9 @@ https://github.com/Andrettin/Wyrmsun
 * Map Editor
 - It is now possible to to set magic prefixes and suffixes to mines.
 
+* Miscellaneous
+- Fixed display issue with the results screen if a scenario had 8 players.
+
 * Units
 - Dwarven Scouts now have +1 Sight (losing their previous +1 Speed bonus).
 - Added Dwarven Pathfinder (experience upgrade of the Scout) (icon by Jinn).
