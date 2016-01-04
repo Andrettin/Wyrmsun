@@ -242,6 +242,8 @@ https://github.com/Andrettin/Wyrmsun
 
 * Map Editor
 - It is now possible to to set magic prefixes and suffixes to mines.
+- Revamped the player properties editing menu.
+- It is now possible to set a player's faction when editing player properties.
 
 * Miscellaneous
 - Fixed display issue with the results screen if a scenario had 8 players.

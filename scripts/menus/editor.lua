@@ -436,105 +436,147 @@ end
 --  Change player properties from the editor
 --
 function RunEditorPlayerProperties()
--- TODO : manage edition.
--- TODO : find a correct backgroung menu
-  local menu = WarGameMenu()
-  local sizeX = 500
-  local sizeY = 480
+	-- TODO : find a correct backgroung menu
+	local menu = WarGameMenu(panel(5))
+	local sizeX = 352
+	local sizeY = 352
 
-  menu:resize(sizeX, sizeY)
-  menu:addLabel("Player Properties", sizeX / 2, 11)
+	menu:resize(sizeX, sizeY)
+	menu:addLabel("Player Properties", sizeX / 2, 11)
 
-  local offxPlayer = 15
-  local offxType = 70
-  local offxRace = 170
-  local offxAI = 285
-  local offxGold = 375
-  local offxLumber = 425
-  local offxOil = 470
+	local types = {"neutral", "nobody", "computer", "person", "rescue-passive", "rescue-active"}
+	local civilization_names = GetCivilizations()
+	local faction_list = {}
+	local ais = { "passive", "land-attack", "northern-wastelands-goblins" }
 
-  local types = {"neutral", "nobody", "computer", "person", "rescue-passive", "rescue-active"}
-  local racenames = GetCivilizations()
-  local ais = { "passive", "land-attack", "northern-wastelands-goblins" }
+	local player_list = {}
+	local player_properties = {}
+	for i = 1,15 do
+		player_properties[i] = {}
+		player_properties[i]["Type"] = Map.Info.PlayerType[i-1] - 2
+		player_properties[i]["Civilization"] = Players[i-1].Race
+		player_properties[i]["Faction"] = GetPlayerData(i-1, "Faction")
+		player_properties[i]["AI"] = 0
+		for j = 1,table.getn(ais) do
+			if (ais[j] == Players[i-1].AiName) then player_properties[i].AI = j-1 end
+		end
+		player_properties[i]["Gold"] = Players[i-1].Resources[1]
+		player_properties[i]["Lumber"] = Players[i-1].Resources[2]
+		player_properties[i]["Stone"] = Players[i-1].Resources[5]
+		table.insert(player_list, "Player " .. i)
+	end
+	
+	local current_player
+	local current_player_type
+	local current_player_civilization
+	local current_player_civilization_label
+	local current_player_faction
+	local current_player_faction_label
+	local current_player_ai
+	local current_player_ai_label
+	local current_player_gold
+	local current_player_gold_label
+	local current_player_lumber
+	local current_player_lumber_label
+	local current_player_stone
+	local current_player_stone_label
+	
+	local function PlayerChanged()
+		current_player_type:setSelected(player_properties[current_player:getSelected() + 1].Type)
+		current_player_civilization:setSelected(player_properties[current_player:getSelected() + 1].Civilization)
+		
+		faction_list = GetCivilizationFactionNames(civilization_names[current_player_civilization:getSelected() + 1])
+		table.insert(faction_list, "")
+		current_player_faction:setList(faction_list)
+		current_player_faction:setSelected(GetElementIndexFromArray(faction_list, player_properties[current_player:getSelected() + 1].Faction) - 1)
+		current_player_faction:setSize(236, 20)
+		
+		current_player_ai:setSelected(player_properties[current_player:getSelected() + 1].AI)
+		current_player_gold:setText(player_properties[current_player:getSelected() + 1].Gold)
+		current_player_lumber:setText(player_properties[current_player:getSelected() + 1].Lumber)
+		current_player_stone:setText(player_properties[current_player:getSelected() + 1].Stone)
+		local player_active = current_player_type:getSelected() ~= 1
+		current_player_civilization:setVisible(player_active)
+		current_player_civilization_label:setVisible(player_active)
+		current_player_faction:setVisible(player_active)
+		current_player_faction_label:setVisible(player_active)
+		current_player_ai:setVisible(player_active)
+		current_player_ai_label:setVisible(player_active)
+		current_player_gold:setVisible(player_active)
+		current_player_gold_label:setVisible(player_active)
+		current_player_lumber:setVisible(player_active)
+		current_player_lumber_label:setVisible(player_active)
+		current_player_stone:setVisible(player_active)
+		current_player_stone_label:setVisible(player_active)
+	end
 
-  menu:addLabel("#", 15, 36)
-  menu:addLabel("Type", offxType, 36)
-  menu:addLabel("Civilization", offxRace + 15, 36)
-  menu:addLabel("AI", offxAI, 36)
-  menu:addLabel("Gold", offxGold, 36, Fonts["game"])
-  menu:addLabel("Lumber", offxLumber, 36, Fonts["game"])
-  menu:addLabel("Stone", offxOil, 36, Fonts["game"])
---  menu:addLabel("Oil", offxOil, 36)
+	current_player = menu:addDropDown(player_list, (sizeX / 2) - 60, 11 + (36 * 1), function(dd) PlayerChanged() end)
+	current_player:setSize(120, 20)
+		
+	menu:addLabel(_("Type:"), 10, 14 + 36 * 2, Fonts["game"], false)
+	current_player_type = menu:addDropDown(types, (sizeX / 2) - 60 - 10, 11 + 36 * 2, function(dd)
+		player_properties[current_player:getSelected() + 1].Type = current_player_type:getSelected()
+		PlayerChanged()
+	end)
+	current_player_type:setSize(236, 20)
+	
+	current_player_civilization_label = menu:addLabel(_("Civilization:"), 10, 14 + 36 * 3, Fonts["game"], false)
+	current_player_civilization = menu:addDropDown(civilization_names, (sizeX / 2) - 60 - 10, 11 + 36 * 3, function(dd)
+		player_properties[current_player:getSelected() + 1].Civilization = current_player_civilization:getSelected()
+		PlayerChanged()
+	end)
+	current_player_civilization:setSize(236, 20)
+	
+	current_player_faction_label = menu:addLabel(_("Faction:"), 10, 14 + 36 * 4, Fonts["game"], false)
+	current_player_faction = menu:addDropDown(faction_list, (sizeX / 2) - 60 - 10, 11 + 36 * 4, function(dd)
+		player_properties[current_player:getSelected() + 1].Faction = faction_list[current_player_faction:getSelected() + 1]
+	end)
+	current_player_faction:setSize(236, 20)
+	
+	current_player_ai_label = menu:addLabel(_("AI:"), 10, 14 + 36 * 5, Fonts["game"], false)
+	current_player_ai = menu:addDropDown(ais, (sizeX / 2) - 60 - 10, 11 + 36 * 5, function(dd)
+		player_properties[current_player:getSelected() + 1].AI = current_player_ai:getSelected()
+	end)
+	current_player_ai:setSize(236, 20)
+	
+	current_player_gold_label = menu:addLabel(_("Gold:"), 10, 12 + 36 * 6, Fonts["game"], false)
+	current_player_gold = menu:addTextInputField(player_properties[current_player:getSelected() + 1].Gold, (sizeX / 2) - 60 - 10, 11 + 36 * 6, 60)
 
-  local playersProp = {nil, nil, nil, nil, nil,
-                       nil, nil, nil, nil, nil,
-                       nil, nil, nil, nil, nil}
-  for i = 0, 14 do
-    local playerLine = {
-      type = nil,
-      race = nil,
-      ai = nil,
-      gold = nil,
-      lumber = nil,
-      oil = nil,
-      stone = nil
-    }
-    local offy_i = 36 + 25 * (i + 1)
-    local index = i -- use for local function
+	current_player_lumber_label = menu:addLabel(_("Lumber:"), (sizeX / 2) + 10, 12 + 36 * 6, Fonts["game"], false)
+	current_player_lumber = menu:addTextInputField(player_properties[current_player:getSelected() + 1].Lumber, sizeX - 60 - 10, 11 + 36 * 6, 60)
 
-    local function updateProp(ind)
-      local b = (playersProp[1 + ind].type:getSelected() ~= 1) -- != nobody
-      playersProp[1 + ind].race:setVisible(b)
-      playersProp[1 + ind].ai:setVisible(b)
-      playersProp[1 + ind].gold:setVisible(b)
-      playersProp[1 + ind].lumber:setVisible(b)
-      playersProp[1 + ind].stone:setVisible(b)
---      playersProp[1 + ind].oil:setVisible(b)
-    end
+	current_player_stone_label = menu:addLabel(_("Stone:"), 10, 12 + 36 * 7, Fonts["game"], false)
+	current_player_stone = menu:addTextInputField(player_properties[current_player:getSelected() + 1].Stone, (sizeX / 2) - 60 - 10, 11 + 36 * 7, 60)
 
-    playersProp[1 + i] = playerLine
+	local function listen()
+		player_properties[current_player:getSelected() + 1].Gold = current_player_gold:getText()
+		player_properties[current_player:getSelected() + 1].Lumber = current_player_lumber:getText()
+		player_properties[current_player:getSelected() + 1].Stone = current_player_stone:getText()
+	end
+	local listener = LuaActionListener(listen)
+	menu:addLogicCallback(listener)
+	
+	PlayerChanged()
+	
+	menu:addHalfButton("~!OK", "o", 20 + 48, sizeY - 40,
+		function()
+			for i = 0, 14 do
+				Map.Info.PlayerType[i] = player_properties[i + 1].Type + 2
+				Players[i].Race = player_properties[i + 1].Civilization
+				SetPlayerData(i, "Faction", player_properties[i + 1].Faction)
+				Players[i].AiName = ais[player_properties[i + 1].AI + 1]
+				Players[i].Resources[1] = player_properties[i + 1].Gold
+				Players[i].Resources[2] = player_properties[i + 1].Lumber
+				Players[i].Resources[5] = player_properties[i + 1].Stone
+			end
+			menu:stop()
+		end
+	)
 
-    menu:addLabel("p" .. (i + 1), offxPlayer, offy_i)
+	menu:addHalfButton(_("~!Cancel"), "c", 130 + 48, sizeY - 40,
+		function() menu:stop() end)
 
-    playersProp[1 + i].type = menu:addDropDown(types, offxType - 40, offy_i, function() updateProp(index) end)
-    playersProp[1 + i].type:setSelected(Map.Info.PlayerType[i] - 2)
-	playersProp[1 + i].type:setSize(115, 20)
-
-    playersProp[1 + i].race = menu:addDropDown(racenames, offxRace - 20, offy_i, function() end)
-    playersProp[1 + i].race:setSelected(Players[i].Race)
-	playersProp[1 + i].race:setSize(65, 20)
-
-    playersProp[1 + i].ai = menu:addDropDown(ais, offxAI - 65, offy_i, function() end)
-    for j = 0,3 do
-      if (ais[1 + j] == Players[i].AiName) then playersProp[1 + i].ai:setSelected(j) end
-    end
-	playersProp[1 + i].ai:setSize(130, 20)
-
-    playersProp[1 + i].gold = menu:addTextInputField(Players[i].Resources[1], offxGold - 20, offy_i, 40)
-    playersProp[1 + i].lumber = menu:addTextInputField(Players[i].Resources[2], offxLumber - 20, offy_i, 40)
-    playersProp[1 + i].stone = menu:addTextInputField(Players[i].Resources[5], offxOil - 20, offy_i, 40)
---    playersProp[1 + i].oil = menu:addTextInputField(Players[i].Resources[3], offxOil - 20, offy_i, 40)
-    updateProp(i)
-  end
-
-  menu:addHalfButton("~!Ok", "o", 1 * (sizeX / 4) - 106 - 10, sizeY - 16 - 27,
-    function()
-      for i = 0, 14 do
-        Map.Info.PlayerType[i] = playersProp[1 + i].type:getSelected() + 2
-        Players[i].Race = playersProp[1 + i].race:getSelected()
-        Players[i].AiName = ais[1 + playersProp[1 + i].ai:getSelected()]
-        Players[i].Resources[1] = playersProp[1 + i].gold:getText()
-        Players[i].Resources[2] = playersProp[1 + i].lumber:getText()
-        Players[i].Resources[5] = playersProp[1 + i].stone:getText()
---        Players[i].Resources[3] = playersProp[1 + i].oil:getText()
-      end
-      menu:stop()
-    end)
-
-  menu:addHalfButton(_("~!Cancel"), "c", 3 * (sizeX / 4) - 106 - 10, sizeY - 16 - 27,
-    function() menu:stop() end)
-
-  menu:run(false)
+	menu:run(false)
 end
 
 --
