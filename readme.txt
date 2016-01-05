@@ -244,7 +244,7 @@ https://github.com/Andrettin/Wyrmsun
 - Persistent heroes now carry over experience (previously only their level was saved). Please note that experience is saved as the percentage of experience in relation to the experience required for the next level-up.
 
 * Items
-- Equipment tooltips now show the change in stats, rather than the item's absolute bonus to a stat.
+- Equipment tooltips now show the change in stats, rather than the item's absolute bonuses to stats.
 
 * Map Editor
 - It is now possible to to set magic prefixes and suffixes to mines.
