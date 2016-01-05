@@ -241,7 +241,7 @@ https://github.com/Andrettin/Wyrmsun
 - Improved AI response to attacks.
 
 * Grand Strategy
-- Grand strategy saves are now stored in the /wyr/save/grand_strategy/ folder, instead of directly on the /wyr/ one.
+- Grand strategy saves are now stored in the /wyr/save/grand_strategy/ folder, instead of directly in the /wyr/ one.
 
 * Heroes
 - Persistent heroes now carry over experience (previously only their level was saved). Please note that experience is saved as the percentage of experience in relation to the experience required for the next level-up.
