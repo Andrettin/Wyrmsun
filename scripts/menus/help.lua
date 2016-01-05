@@ -122,6 +122,8 @@ local tips = {
 --  "Know a useful tip?  Then add it here!",
 }
 
+LoadingBarSetTips(tips)
+
 function RunTipsMenu()
   local menu = WarGameMenu(panel(2))
   menu:resize(288, 256)
