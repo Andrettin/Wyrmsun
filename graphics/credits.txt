@@ -1131,6 +1131,8 @@ Vladislav "iDreamRunner":
 /graphics/neutral/icons/cauldron.png
 /graphics/neutral/icons/cheese.png
 /graphics/neutral/icons/chest.png
+/graphics/neutral/icons/halberd.png
+/graphics/neutral/icons/longspear.png
 /graphics/neutral/icons/mace_mastery.png (modified from Jinn's axe mastery icon)
 /graphics/neutral/icons/ring.png
 /graphics/neutral/icons/spear.png
