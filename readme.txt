@@ -242,6 +242,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Heroes
 - Persistent heroes now carry over experience (previously only their level was saved). Please note that experience is saved as the percentage of experience in relation to the experience required for the next level-up.
+- Fixed a crash when loading a game which happened if a persistent hero was selected when the game was saved.
 
 * Items
 - Equipment tooltips now show the change in stats, rather than the item's absolute bonuses to stats.
