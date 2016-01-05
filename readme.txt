@@ -241,7 +241,7 @@ https://github.com/Andrettin/Wyrmsun
 - Improved AI response to attacks.
 
 * Heroes
-- Persistent heroes now carry over experience (previously only their level was saved).
+- Persistent heroes now carry over experience (previously only their level was saved). Please note that experience is saved as the percentage of experience in relation to the experience required for the next level-up.
 
 * Map Editor
 - It is now possible to to set magic prefixes and suffixes to mines.
