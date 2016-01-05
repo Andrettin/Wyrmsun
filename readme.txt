@@ -254,6 +254,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Miscellaneous
 - Fixed display issue with the results screen if a scenario had 8 players.
+- Fixed Linux-specific bug with persistency which prevented heroes from and grand strategy saves from being loaded properly (thanks to zenorogue for the help in debugging it).
 
 * Units
 - Dwarven Scouts now have +1 Sight (losing their previous +1 Speed bonus).

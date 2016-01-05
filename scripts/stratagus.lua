@@ -1711,16 +1711,16 @@ function LoadHeroes()
 	local f
 	local u = 1
 
-	local fileslist = ListFilesInDirectory("wyr/heroes/")
+	local fileslist = ListFilesInDirectory("heroes/", true)
 	for i,f in ipairs(fileslist) do
-		Load("wyr/heroes/" .. f)
+		Load("heroes/" .. f)
 		u = u + 1
 	end
 		
 	u = 1
 	-- list the subdirectories in the heroes folder
 	local dirlist = {}
-	local dirs = ListDirsInDirectory("wyr/heroes/")
+	local dirs = ListDirsInDirectory("heroes/", true)
 	for i,f in ipairs(dirs) do
 		dirlist[u] = f .. "/"
 		u = u + 1
@@ -1729,9 +1729,9 @@ function LoadHeroes()
 	u = 1
 	-- get the heroes in the subdirectories of the heroes folder
 	for j=1,table.getn(dirlist) do
-		fileslist = ListFilesInDirectory("wyr/heroes/" .. dirlist[j])
+		fileslist = ListFilesInDirectory("heroes/" .. dirlist[j], true)
 		for i,f in ipairs(fileslist) do
-			Load("wyr/heroes/" .. dirlist[j] .. f)
+			Load("heroes/" .. dirlist[j] .. f)
 			u = u + 1
 		end
 	end

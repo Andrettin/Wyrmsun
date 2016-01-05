@@ -1367,7 +1367,7 @@ function RunGrandStrategyLoadGameMenu()
 	menu:setDrawMenusUnder(true)
 
 	local saved_games_list = {}
-	for i, key in ipairs(ListFilesInDirectory("wyr/")) do
+	for i, key in ipairs(ListFilesInDirectory("save/grand_strategy/", true)) do
 		if (key ~= "preferences.lua") then
 			table.insert(saved_games_list, string.sub(key, 0, -5))
 		end
@@ -1390,7 +1390,7 @@ function RunGrandStrategyLoadGameMenu()
 			GrandStrategy = true
 			GrandStrategyGamePaused = false
 			GameResult = GameNoResult
-			Load("wyr/" .. saved_games_list[saved_games:getSelected() + 1] .. ".lua")
+			Load("save/grand_strategy/" .. saved_games_list[saved_games:getSelected() + 1] .. ".lua")
 			GrandStrategyYear = wyr[saved_games_list[saved_games:getSelected() + 1]].SavedGrandStrategyYear
 			SetGrandStrategyWorld(wyr[saved_games_list[saved_games:getSelected() + 1]].SavedGrandStrategyWorld)
 			for x=0,GetWorldMapWidth() - 1 do
