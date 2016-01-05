@@ -145,3 +145,18 @@ DefineUniqueItem("Shorbear Hold", {
 	Quote = "\"Everyone to the caves, and kill those still inside!\" - Durstorn, Norlund Chieftain"
 } )
 
+--[[
+DefineUniqueItem("Carolinum", { -- Source: Alena Ježková, "77 Prague Legends", 2006, p. 31.
+	Type = "unit-teuton-university", -- could also be a library, or perhaps a temple
+	Prefix = ?
+	Suffix = ?
+	Background = "The Carolinum was the seat of the Prague University. It was first built as a residence by the rich burgher Rotlev, being later acquired by the crown and transformed into a university seat.
+} )
+--]]
+
+-- Unique houses in Prague
+-- "House at Death"; Source: Alena Ježková, "77 Prague Legends", 2006, p. 35.
+-- "House at the Golden Well"; Source: Alena Ježková, "77 Prague Legends", 2006, p. 42.
+
+-- Judita Bridge, unique bridge; first stone bridge built across the Vltava in Prague (built in 1158 at the orders of Judita, wife of Vladislav II); the bridge was 500m long, being the largest in Central Europe when built; the bridge was destroyed by a great flood in 1342; Source: Alena Ježková, "77 Prague Legends", 2006, p. 45.
+-- Charles Bridge: built to replace Judita Bridge, had its foundation stone laid by Emperor and King Charles IV in the 9th of July 1357; its construction was entrusted to Petr Parléř, who had built St Vitus' Cathedral; the bridge had wine, raw eggs and cream cheese added to the mortar; Source: Alena Ježková, "77 Prague Legends", 2006, pp. 45-46.
