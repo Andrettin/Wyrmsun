@@ -223,6 +223,7 @@ function RunShowCreditsMenu()
 	"  Szunti",
 	"  TaShadan",
 	"  X3M",
+	"  zenorogue",
 	"",
 	_("Code used:"),
 	"  SDL Copyright by Sam Lantinga",
