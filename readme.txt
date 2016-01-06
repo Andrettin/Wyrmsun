@@ -235,12 +235,14 @@ https://github.com/Andrettin/Wyrmsun
 
 * AI
 - AI units now pick up healing items to heal themselves.
+- Improved the efficiency of AI troop regrouping.
 
 * Factions
 - Fixed issue which made the faction bonuses of the new player be applied to rescued units.
 
 * Miscellaneous
 - Fixed crash which happened when a missile with splash damage hit a unit during its death animation.
+- Fixed an issue which caused dropped units to sometimes be generated with an incorrect magic affix.
 
 -----------------------------------------------------------------------
 - 1.9.5
