@@ -236,6 +236,7 @@ https://github.com/Andrettin/Wyrmsun
 * AI
 - AI units now pick up healing items to heal themselves.
 - Improved the efficiency of AI troop regrouping.
+- Fixed issue which caused AI workers to not repair buildings suffering from burning damage, because they thought they were still under attack (and thus that it would be dangerous to repair them).
 
 * Factions
 - Fixed issue which made the faction bonuses of the new player be applied to rescued units.
