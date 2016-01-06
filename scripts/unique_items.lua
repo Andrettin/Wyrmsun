@@ -153,8 +153,34 @@ DefineUniqueItem("Carolinum", { -- Source: Alena Ježková, "77 Prague Legends",
 	Background = "The Carolinum was the seat of the Prague University. It was first built as a residence by the rich burgher Rotlev, being later acquired by the crown and transformed into a university seat.
 } )
 
-DefineUniqueItem("Castle of Žebrak", { -- Source: Alena Ježková, "77 Prague Legends", 2006, p. 52.
+DefineUniqueItem("Castle of Zebrak", { -- Castle of Žebrák; Source: Alena Ježková, "77 Prague Legends", 2006, p. 52.
 	Type = "unit-teuton-burg", -- should be a castle
+	Prefix = ?,
+	Suffix = ?
+} )
+
+DefineUniqueItem("Prague Castle", { -- Source: Alena Ježková, "77 Prague Legends", 2006, pp. 53, 61.
+	Type = "unit-teuton-burg", -- should be a castle
+	Prefix = ?,
+	Suffix = ?
+} )
+
+DefineUniqueItem("Novy Hrad", { -- Nový Hrad; Source: Alena Ježková, "77 Prague Legends", 2006, p. 53.
+	Type = "unit-teuton-burg", -- should be a castle
+	Prefix = ?,
+	Suffix = ?,
+	Background = "\"Nový Hrad\" means \"new castle\" in Czech."
+} )
+
+DefineUniqueItem("Clementinum", { -- Alena Ježková, "77 Prague Legends", 2006, p. 54.
+	Type = "unit-teuton-temple", -- should be limited to only churches
+	Prefix = ?,
+	Suffix = ?,
+	Background = "The Clementinum was a large complex of buildings built by the Jesuit Order in Prague. It encompassed six courtyards, two churches and two chapels. The complex was abandoned by the Jesuits in 1773, when Pope Clement XV dissolved their order."
+} )
+
+DefineUniqueItem("Schwarzenberg Palace", { -- Located in Prague; Source: Alena Ježková, "77 Prague Legends", 2006, p. 62.
+	Type = "unit-teuton-burg", -- should be a castle?
 	Prefix = ?,
 	Suffix = ?
 } )
@@ -163,6 +189,23 @@ DefineUniqueItem("Castle of Žebrak", { -- Source: Alena Ježková, "77 Prague L
 -- Unique houses in Prague
 -- "House at Death"; Source: Alena Ježková, "77 Prague Legends", 2006, p. 35.
 -- "House at the Golden Well"; Source: Alena Ježková, "77 Prague Legends", 2006, p. 42.
+-- "House at the Three Bells"; Source: Alena Ježková, "77 Prague Legends", 2006, p. 71.
+
+-- Unique streets in Prague
+-- Tomášská Street; Source: Alena Ježková, "77 Prague Legends", 2006, p. 70.
+-- Mostecká Street; Source: Alena Ježková, "77 Prague Legends", 2006, p. 72.
+-- Karmelitská Street; Source: Alena Ježková, "77 Prague Legends", 2006, p. 74.
 
 -- Judita Bridge, unique bridge; first stone bridge built across the Vltava in Prague (built in 1158 at the orders of Judita, wife of Vladislav II); the bridge was 500m long, being the largest in Central Europe when built; the bridge was destroyed by a great flood in 1342; Source: Alena Ježková, "77 Prague Legends", 2006, p. 45.
 -- Charles Bridge: built to replace Judita Bridge, had its foundation stone laid by Emperor and King Charles IV in the 9th of July 1357; its construction was entrusted to Petr Parléř, who had built St Vitus' Cathedral; the bridge had wine, raw eggs and cream cheese added to the mortar; Source: Alena Ježková, "77 Prague Legends", 2006, pp. 45-46.
+
+-- Kunratice Forest (in or nearby Prague); Source: Alena Ježková, "77 Prague Legends", 2006, p. 53.
+-- Petřín Hill (in or nearby Prague); Source: Alena Ježková, "77 Prague Legends", 2006, p. 61.
+-- Jánský vršek ("John Hill"; in or nearby Prague); a Chapel of St John was located in this hill; Source: Alena Ježková, "77 Prague Legends", 2006, p. 65.
+-- Kampa (river) (in or nearby Prague); Source: Alena Ježková, "77 Prague Legends", 2006, p. 69.
+
+-- "U Jezurů" ("At the Lakes"); night tavern in Prague frequented by prostitutes, which was said to be haunted by a hairy ghost who killed prostitutes near the tavern; Source: Alena Ježková, "77 Prague Legends", 2006, p. 58.
+
+-- The Hunger Wall (wall in Prague); Source: Alena Ježková, "77 Prague Legends", 2006, p. 61.
+
+-- Zikmund (unique bell in Prague); Source: Alena Ježková, "77 Prague Legends", 2006, p. 84.

@@ -57,6 +57,16 @@ DefineCharacter("Petr Parléř", { -- Source: Alena Ježková, "77 Prague Legend
 	DeathYear = 1357 + 30 -- estimated
 })
 
+DefineCharacter("Charles", { -- Source: Alena Ježková, "77 Prague Legends", 2006, pp. 45, 87.
+	Name = "Charles", -- Emperor and king Charles IV
+	Gender = "male",
+	Type = "unit-teuton-ritter",
+	Civilization = "slav",
+	ProvinceOfOrigin = "Bohemia", -- presumably
+	Year = 1357, -- The foundation stone of a new bridge to replace Judita Bridge was laid in the 9th of July 1357 by Emperor and King Charles IV
+	DeathYear = 1378 -- Charles IV was on his deathbed in November 1378, in Prague Castle
+})
+
 DefineCharacter("Mikulás of Kadaň", { -- Source: Alena Ježková, "77 Prague Legends", 2006, p. 10.
 	Name = "Mikulás",
 	ExtraName = "of Kadaň",
