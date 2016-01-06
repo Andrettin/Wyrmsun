@@ -148,9 +148,15 @@ DefineUniqueItem("Shorbear Hold", {
 --[[
 DefineUniqueItem("Carolinum", { -- Source: Alena Ježková, "77 Prague Legends", 2006, p. 31.
 	Type = "unit-teuton-university", -- could also be a library, or perhaps a temple
-	Prefix = ?
-	Suffix = ?
+	Prefix = ?,
+	Suffix = ?,
 	Background = "The Carolinum was the seat of the Prague University. It was first built as a residence by the rich burgher Rotlev, being later acquired by the crown and transformed into a university seat.
+} )
+
+DefineUniqueItem("Castle of Žebrak", { -- Source: Alena Ježková, "77 Prague Legends", 2006, p. 52.
+	Type = "unit-teuton-burg", -- should be a castle
+	Prefix = ?,
+	Suffix = ?
 } )
 --]]
 
