@@ -61,6 +61,8 @@ The Stratagus engine, as well as the code, artwork, sounds, music and story elem
 /graphics/ui/backgrounds/yale_4_3.png (Steam-only) (used for Wyrmsun with permission)
 /graphics/ui/backgrounds/yale_profile.png (Steam-only) (used for Wyrmsun with permission)
 /graphics/ui/backgrounds/yale_small.png (Steam-only) (used for Wyrmsun with permission)
+/graphics/ui/loadingEmpty.png (licensed under the CC-BY 3.0)
+/graphics/ui/loadingFull.png (licensed under the CC-BY 3.0)
 /sounds/buildings/complete_barracks.wav (licensed under the CC-BY-SA 3.0)
 /sounds/buildings/complete_blacksmith.wav (licensed under the CC-BY-SA 3.0)
 /sounds/buildings/complete_civ_center.wav (licensed under the CC-BY-SA 3.0)
@@ -237,6 +239,7 @@ https://github.com/Andrettin/Wyrmsun
 - AI units now pick up healing items to heal themselves.
 - Improved the efficiency of AI troop regrouping.
 - Fixed issue which caused AI workers to not repair buildings suffering from burning damage, because they thought they were still under attack (and thus that it would be dangerous to repair them).
+- The AI now makes use of gryphon riders in its attacks.
 
 * Factions
 - Fixed issue which made the faction bonuses of the new player be applied to rescued units.
@@ -246,6 +249,8 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed an issue which caused dropped units to sometimes be generated with an incorrect magic affix.
 - Fixed crash which happened when loading a game if the game had been saved while a unit which has a character assigned to it was dying.
 - Enhanced the support for position-based hotkeys to allow players to have position-based hotkeys only for training/building/etc.
+- Adding a loading bar when starting scenarios, with tips being displayed during loading (code by marcelofg55) (loading bar graphics by StumpyStrust).
+- Added several new tips.
 
 -----------------------------------------------------------------------
 - 1.9.5

@@ -96,27 +96,43 @@ function RunKeystrokeHelpMenu()
 end
 
 local tips = {
-  "Completing quests may reward you with technology points and unlock new maps.",
-  "You can select all of your currently visible units of the same type by holding down the CTRL key and selecting a unit or by \"double clicking\" on a unit.",
-  "The more workers you have collecting resources, the faster your economy will grow.",
-  "Building more than one barracks will let you train more units faster.",
-  "Use your workers to repair damaged buildings.",
-  "Explore your surroundings early in the game.",
+	"Completing quests rewards you with technology points.",
+	"You can select all of your currently visible units of the same type by holding down the CTRL key and selecting a unit or by \"double clicking\" on a unit.",
+	"The more workers you have collecting resources, the faster your economy will grow.",
+	"Building more than one barracks will let you train more units faster.",
+	"Use your workers to repair damaged buildings.",
+	"Explore your surroundings early in the game.",
 
-  "Keep all workers working. Use ALT-I to find idle workers.",
-  "You can make units automatically cast spells by selecting a unit, holding down CTRL and clicking on the spell icon.  CTRL click again to turn off.",
+	"Keep all workers working. Use ALT-I to find idle workers.",
+	"You can make units automatically cast spells by selecting a unit, holding down CTRL and clicking on the spell icon. CTRL click again to turn off.",
 
-  -- Shift tips
-  "You can give an unit an order which is executed after it finishes the current work, if you hold the SHIFT key.",
-  "You can give way points, if you press the SHIFT key, while you click right for the move command.",
-  "You can order a worker to build one building after the other, if you hold the SHIFT key, while you place the building.",
-  "You can build many of the same building, if you hold the ALT and SHIFT keys while you place the buildings.",
+	-- Shift tips
+	"You can give a unit an order which is executed after it finishes the current work, if you hold the SHIFT key.",
+	"You can give way points, if you press the SHIFT key, while you click right for the move command.",
+	"You can order a worker to build one building after the other, if you hold the SHIFT key, while you place the building.",
+	"You can build many of the same building, if you hold the ALT and SHIFT keys while you place the buildings.",
 
-  "Use CTRL-V or ALT-V to cycle through the viewport configuration, you can then monitor your base and lead an attack.",
+	"Use CTRL-V or ALT-V to cycle through the viewport configuration, you can then monitor your base and lead an attack.",
 
---  "Attack a chest to open it.",
-  "Potions of healing and food items can be used by damaged units to heal themselves. Right-click on those items to pick them up.",
-  "When a unit levels up an exclamation point appears over it, and it can upgrade to a new unit type or learn new abilities."
+--	"Attack a chest to open it.",
+	"Potions of healing and food items can be used by damaged units to heal themselves. Right-click on those items to pick them up.",
+	"Your organic units can level up.",
+	"When a unit levels up an exclamation point appears over it, and it can upgrade to a new unit type or learn new abilities.",
+	
+	-- Resource-related tips
+	"You can build gold mines on top of gold deposits.",
+	"Silver and copper are converted into gold when delivered, at a rate of 50% and 25%.",
+	
+	-- Fauna-related tips
+	"Yales are territorial creatures.",
+	"Slimes can breed asexually.",
+	"Wild gryphons are dangerous predators.",
+
+	"Thieves deal bonus damage when attacking from the back.",
+	"Persistent heroes, dwarven stonelords and gryphon riders can carry items.",
+	"Healing items in a unit's inventory are automatically used if the unit's health is too low.",
+	"Fire damage ignores armor.",
+--	"Each mercenary group can only be hired once per game.",
 }
 
 LoadingBarSetTips(tips)
