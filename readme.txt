@@ -241,6 +241,9 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed issue which caused AI workers to not repair buildings suffering from burning damage, because they thought they were still under attack (and thus that it would be dangerous to repair them).
 - The AI now makes use of gryphon riders in its attacks.
 
+* Buildings
+- Bastions and Burgs now increase the range of ranged units garrisoned within by 1, as guard towers do.
+
 * Factions
 - Fixed issue which made the faction bonuses of the new player be applied to rescued units.
 
