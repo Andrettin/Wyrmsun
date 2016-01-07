@@ -722,19 +722,19 @@ if not (ui_loaded_first_time) then
 	UI.MessageScrollSpeed = 5
 
 	DefineCursor({
-	  Name = "cursor-glass",
-	  Race = "any",
-	  File = "ui/cursors/magnifying_glass.png",
-	  HotSpot = {11, 11},
-	  Size = {34, 35}})
+		Name = "cursor-glass",
+		Race = "any",
+		File = "ui/cursors/magnifying_glass.png",
+		HotSpot = {11, 11},
+		Size = {34, 35}})
 	DefineCursor({
-	  Name = "cursor-cross",
-	  Race = "any",
-	  File = "ui/cursors/small_green_cross.png",
-	  HotSpot = { 8,  8},
-	  Size = {18, 18}})
+		Name = "cursor-cross",
+		Race = "any",
+		File = "ui/cursors/small_green_cross.png",
+		HotSpot = { 8,	8},
+		Size = {18, 18}})
 	if (CanAccessFile("ui/cursors/cross.png")) then
-	  DefineCursor({
+		DefineCursor({
 		Name = "cursor-scroll",
 		Race = "any",
 		File = "ui/cursors/cross.png",
@@ -742,53 +742,53 @@ if not (ui_loaded_first_time) then
 		Size = {32, 32}})
 	end
 	DefineCursor({
-	  Name = "cursor-arrow-e",
-	  Race = "any",
-	  File = "ui/cursors/arrow_E.png",
-	  HotSpot = {22, 10},
-	  Size = {32, 24}})
+		Name = "cursor-arrow-e",
+		Race = "any",
+		File = "ui/cursors/arrow_E.png",
+		HotSpot = {22, 10},
+		Size = {32, 24}})
 	DefineCursor({
-	  Name = "cursor-arrow-ne",
-	  Race = "any",
-	  File = "ui/cursors/arrow_NE.png",
-	  HotSpot = {20,  2},
-	  Size = {32, 24}})
+		Name = "cursor-arrow-ne",
+		Race = "any",
+		File = "ui/cursors/arrow_NE.png",
+		HotSpot = {20, 2},
+		Size = {32, 24}})
 	DefineCursor({
-	  Name = "cursor-arrow-n",
-	  Race = "any",
-	  File = "ui/cursors/arrow_N.png",
-	  HotSpot = {12,  2},
-	  Size = {24, 32}})
+		Name = "cursor-arrow-n",
+		Race = "any",
+		File = "ui/cursors/arrow_N.png",
+		HotSpot = {12, 2},
+		Size = {24, 32}})
 	DefineCursor({
-	  Name = "cursor-arrow-nw",
-	  Race = "any",
-	  File = "ui/cursors/arrow_NW.png",
-	  HotSpot = { 2,  2},
-	  Size = {24, 32}})
+		Name = "cursor-arrow-nw",
+		Race = "any",
+		File = "ui/cursors/arrow_NW.png",
+		HotSpot = { 2, 2},
+		Size = {24, 32}})
 	DefineCursor({
-	  Name = "cursor-arrow-w",
-	  Race = "any",
-	  File = "ui/cursors/arrow_W.png",
-	  HotSpot = { 4, 10},
-	  Size = {32, 24}})
+		Name = "cursor-arrow-w",
+		Race = "any",
+		File = "ui/cursors/arrow_W.png",
+		HotSpot = { 4, 10},
+		Size = {32, 24}})
 	DefineCursor({
-	  Name = "cursor-arrow-s",
-	  Race = "any",
-	  File = "ui/cursors/arrow_S.png",
-	  HotSpot = {12, 22},
-	  Size = {24, 32}})
+		Name = "cursor-arrow-s",
+		Race = "any",
+		File = "ui/cursors/arrow_S.png",
+		HotSpot = {12, 22},
+		Size = {24, 32}})
 	DefineCursor({
-	  Name = "cursor-arrow-sw",
-	  Race = "any",
-	  File = "ui/cursors/arrow_SW.png",
-	  HotSpot = { 2, 18},
-	  Size = {32, 24}})
+		Name = "cursor-arrow-sw",
+		Race = "any",
+		File = "ui/cursors/arrow_SW.png",
+		HotSpot = { 2, 18},
+		Size = {32, 24}})
 	DefineCursor({
-	  Name = "cursor-arrow-se",
-	  Race = "any",
-	  File = "ui/cursors/arrow_SE.png",
-	  HotSpot = {20, 18},
-	  Size = {24, 32}})
+		Name = "cursor-arrow-se",
+		Race = "any",
+		File = "ui/cursors/arrow_SE.png",
+		HotSpot = {20, 18},
+		Size = {24, 32}})
 
 	function GetRGBA(r, g, b, a)
 		if (wyr.preferences.UseOpenGL == false) then

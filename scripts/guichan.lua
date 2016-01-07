@@ -750,48 +750,48 @@ end
 InitGameSettings()
 
 function RunMap(map, objective, fow, revealmap)
-  if (LoadedGame == false) then
-	  for key, value in pairs(CustomPlayerData) do
-		for i=1,table.getn(CustomPlayerData[key].Objectives) do
-			table.remove(CustomPlayerData[key].Objectives, i)
-		end
-	  end
-
-	  if objective == nil then
+	if (LoadedGame == false) then
 		for key, value in pairs(CustomPlayerData) do
-			CustomPlayerData[key].Objectives = DefaultObjectives
+			for i=1,table.getn(CustomPlayerData[key].Objectives) do
+				table.remove(CustomPlayerData[key].Objectives, i)
+			end
 		end
-	  else
-		for key, value in pairs(CustomPlayerData) do
-			CustomPlayerData[key].Objectives = objective
-		end
-	  end
-  end
-  local loop = true
-  while (loop) do
-    InitGameVariables()
-    if fow ~= nil then
-      SetFogOfWar(fow)
-    end
-    if revealmap == true then
-       RevealMap()
-    end
-    StartMap(map)
-    if GameResult ~= GameRestart then
-      loop = false
-    end
-  end
-  RunResultsMenu(s)
-  if not (IsNetworkGame()) then
-	  if (GetCivilizationTechnologyPoints(GetPlayerData(GetThisPlayer(), "RaceName")) > 0 and GameResult == GameVictory and CurrentQuest ~= "" and not IsReplayGame() and not GrandStrategy) then
-		  RunTechTreeMenu(GetTechTreeCivilizationNumber(GetPlayerData(GetThisPlayer(), "RaceName")))
-	  end
-  end
 
-  InitGameSettings()
-  SetPlayerData(GetThisPlayer(), "RaceName", "dwarf")
-  
-  CurrentQuest = ""
+		if objective == nil then
+			for key, value in pairs(CustomPlayerData) do
+				CustomPlayerData[key].Objectives = DefaultObjectives
+			end
+		else
+			for key, value in pairs(CustomPlayerData) do
+				CustomPlayerData[key].Objectives = objective
+			end
+		end
+	end
+	local loop = true
+	while (loop) do
+		InitGameVariables()
+		if fow ~= nil then
+			SetFogOfWar(fow)
+		end
+		if revealmap == true then
+			RevealMap()
+		end
+		StartMap(map)
+		if GameResult ~= GameRestart then
+			loop = false
+		end
+	end
+	RunResultsMenu(s)
+	if not (IsNetworkGame()) then
+		if (GetCivilizationTechnologyPoints(GetPlayerData(GetThisPlayer(), "RaceName")) > 0 and GameResult == GameVictory and CurrentQuest ~= "" and not IsReplayGame() and not GrandStrategy) then
+			RunTechTreeMenu(GetTechTreeCivilizationNumber(GetPlayerData(GetThisPlayer(), "RaceName")))
+		end
+	end
+
+	InitGameSettings()
+	SetPlayerData(GetThisPlayer(), "RaceName", "dwarf")
+	
+	CurrentQuest = ""
 end
 
 mapname = "maps/nidavellir/chaincolt-foothills.smp"

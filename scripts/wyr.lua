@@ -130,7 +130,6 @@ function SetPlayerData(player, data, arg1, arg2)
 			end
 		end
 		
-		-- load different UIs depending on player civilization at scenario begin; FIXME: should be possible to change UIs in-game
 		if (player == GetThisPlayer()) then
 			LoadCivilizationUI(arg1)
 		end

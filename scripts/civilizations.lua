@@ -28,6 +28,11 @@
 --
 
 DefineRaceNames(
+	"race", {
+		"name", "neutral",
+		"display", "Neutral",
+		"playable", false
+	},
 	--[[
 	"race", { -- information for later use
 		"name", "dutch",
@@ -616,11 +621,6 @@ DefineRaceNames(
 		"visible",
 		"species", "human",
 		"parent-civilization", "teuton",
-		"playable", false
-	},
-	"race", {
-		"name", "neutral",
-		"display", "Neutral",
 		"playable", false
 	}
 )

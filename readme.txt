@@ -254,6 +254,11 @@ https://github.com/Andrettin/Wyrmsun
 - Enhanced the support for position-based hotkeys to allow players to have position-based hotkeys only for training/building/etc.
 - Adding a loading bar when starting scenarios, with tips being displayed during loading (code by marcelofg55) (loading bar graphics by StumpyStrust).
 - Added several new tips.
+- Fixed issue which caused the incorrect UI to be loaded after loading a save game.
+- Fixed issue which caused the incorrect music to sometimes be loaded.
+
+* Quests
+- Fixed issue which caused the initial dialogue of The Mead of Poetry quest (dwarf) to play again after loading a saved game of that mission.
 
 -----------------------------------------------------------------------
 - 1.9.5

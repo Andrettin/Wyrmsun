@@ -122,7 +122,7 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if (GetFactionExists("Fjalar and Galar") and GetFactionExists("Modsogning Clan")) then
+		if (GetFactionExists("Fjalar and Galar") and GetFactionExists("Modsogning Clan") and PlayerHasObjective(GetThisPlayer(), "- Bring Fjalar and Galar to the clan's justice") == false) then
 			player = GetFactionPlayer("Modsogning Clan")
 			return true
 		end
