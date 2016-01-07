@@ -244,6 +244,8 @@ https://github.com/Andrettin/Wyrmsun
 * Miscellaneous
 - Fixed crash which happened when a missile with splash damage hit a unit during its death animation.
 - Fixed an issue which caused dropped units to sometimes be generated with an incorrect magic affix.
+- Fixed crash which happened when loading a game if the game had been saved while a unit which has a character assigned to it was dying.
+- Enhanced the support for position-based hotkeys to allow players to have position-based hotkeys only for training/building/etc.
 
 -----------------------------------------------------------------------
 - 1.9.5

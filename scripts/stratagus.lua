@@ -1704,6 +1704,17 @@ function PersistencyUpdates()
 		wyr.preferences.ShowOrders = nil
 		SavePreferences()
 	end
+	
+	if (wyr.preferences.ButtonHotKeysByPosition ~= nil) then
+		if (wyr.preferences.ButtonHotKeysByPosition == true) then
+			wyr.preferences.HotkeySetup = 1
+		else
+			wyr.preferences.HotkeySetup = 0
+		end
+		wyr.preferences.ButtonHotKeysByPosition = nil
+		Preference.HotkeySetup = wyr.preferences.HotkeySetup
+		SavePreferences()
+	end
 end
 
 function LoadHeroes()
@@ -1943,7 +1954,7 @@ local defaultPreferences = {
 	PopupDescriptionFont = "small",
 	Autosave = true,
 	PlayerColorCircle = false,
-	ButtonHotKeysByPosition = false,
+	HotkeySetup = 0,
 	NoRandomness = false,
 	AutomaticBattles = false,
 	Difficulty = 2,
@@ -1994,7 +2005,7 @@ else
 	Preference.Autosave = 0
 end
 Preference.PlayerColorCircle = wyr.preferences.PlayerColorCircle
-Preference.ButtonHotKeysByPosition = wyr.preferences.ButtonHotKeysByPosition
+Preference.HotkeySetup = wyr.preferences.HotkeySetup
 
 --- Uses Stratagus Library path!
 Load("scripts/civilizations.lua")

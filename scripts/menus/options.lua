@@ -40,7 +40,7 @@ function RunGameVideoOptionsMenu()
 
 	menu:addLabel(_("Video Options"), 128, 11)
 
-	menu:addLabel(_("Resolution Width"), offx + (256 / 2 - (152 / 2)), offy + 34, Fonts["game"], false)
+	menu:addLabel(_("Resolution Width:"), offx + (256 / 2 - (152 / 2)), offy + 34, Fonts["game"], false)
 	resolution_width_dd = menu:addDropDown(resolution_width_list, offx + (256 / 2 - (152 / 2)), offy + 55 + 26*0,
 	function(dd)
 			resolution_width = tonumber(resolution_width_list[resolution_width_dd:getSelected() + 1])
@@ -52,7 +52,7 @@ function RunGameVideoOptionsMenu()
 		end
 	end
 
-	menu:addLabel(_("Resolution Height"), offx + (256 / 2 - (152 / 2)), offy + 34 + 26*2, Fonts["game"], false)
+	menu:addLabel(_("Resolution Height:"), offx + (256 / 2 - (152 / 2)), offy + 34 + 26*2, Fonts["game"], false)
 	resolution_height_dd = menu:addDropDown(resolution_height_list, offx + (256 / 2 - (152 / 2)), offy + 55 + 26*2,
 	function(dd)
 			resolution_height = tonumber(resolution_height_list[resolution_height_dd:getSelected() + 1])
@@ -325,6 +325,8 @@ function RunGameplayOptionsMenu()
 	local offx = (Video.Width - 352) / 2
 	local offy = (Video.Height - 352) / 2
 	local b
+	local hotkey_setup_list = {"Default", "Position-Based", "Position-Based (except Commands)"}
+	local hotkey_setup_dd
 
 	menu:addLabel(_("~<Options~>"), offx + 176, offy + 1)
 	
@@ -366,7 +368,18 @@ function RunGameplayOptionsMenu()
 		language_list:setSelected(3)
 	end
 --]]
-
+	menu:addLabel(_("Hotkey Setup:"), offx + 8, offy + 34, Fonts["game"], false)
+	hotkey_setup_dd = menu:addDropDown(hotkey_setup_list, offx + 8, offy + 55 + 26*0,
+		function(dd)
+			wyr.preferences.HotkeySetup = hotkey_setup_dd:getSelected()
+			Preference.HotkeySetup = wyr.preferences.HotkeySetup
+			menu:stop()
+			RunGameplayOptionsMenu()
+		end
+	)
+	hotkey_setup_dd:setSize(266, 20)
+	hotkey_setup_dd:setSelected(wyr.preferences.HotkeySetup)
+	
 	b = menu:addImageCheckBox(_("Mouse Grabbing"), offx + 16, offy + 55 + 26*4 + 14,
 		function()
 			if (wyr.preferences.GrabMouse == false) then
@@ -481,20 +494,6 @@ function RunGameplayOptionsMenu()
 	)
 	if (wyr.preferences.ShowMessages == false) then b:setMarked(true) end
 
-	b = menu:addImageCheckBox(_("Position-Based Hotkeys"), offx + 16, offy + 55 + 26*9 + 14,
-		function()
-			if (wyr.preferences.ButtonHotKeysByPosition == false) then
-				wyr.preferences.ButtonHotKeysByPosition = true
-			else
-				wyr.preferences.ButtonHotKeysByPosition = false
-			end
-			Preference.ButtonHotKeysByPosition = wyr.preferences.ButtonHotKeysByPosition
-			menu:stop()
-			RunGameplayOptionsMenu()
-		end
-	)
-	b:setMarked(wyr.preferences.ButtonHotKeysByPosition)
-
 	menu:addHalfButton(_("~!OK"), "o", offx + 123, offy + 55 + 26*12 + 14, function()
 		SavePreferences()
 		menu:stop()
@@ -518,7 +517,7 @@ function RunVideoOptionsMenu()
   local resolution_height = Video.Height
 
   menu:addLabel(_("~<Options~>"), offx + 176, offy + 1)
-  menu:addLabel(_("Resolution Width"), offx + 8, offy + 34, Fonts["game"], false)
+  menu:addLabel(_("Resolution Width:"), offx + 8, offy + 34, Fonts["game"], false)
   resolution_width_dd = menu:addDropDown(resolution_width_list, offx + 8, offy + 55 + 26*0,
     function(dd)
    		resolution_width = tonumber(resolution_width_list[resolution_width_dd:getSelected() + 1])
@@ -530,7 +529,7 @@ function RunVideoOptionsMenu()
 	end
   end
 
-  menu:addLabel(_("Resolution Height"), offx + 16 + 152 + 24, offy + 34, Fonts["game"], false)
+  menu:addLabel(_("Resolution Height:"), offx + 16 + 152 + 24, offy + 34, Fonts["game"], false)
   resolution_height_dd = menu:addDropDown(resolution_height_list, offx + 16 + 152 + 24, offy + 55 + 26*0,
     function(dd)
    		resolution_height = tonumber(resolution_height_list[resolution_height_dd:getSelected() + 1])
@@ -667,26 +666,27 @@ function RunOptionsMenu()
 end
 
 function RunGameOptionsMenu(previous_menu)
-  local menu = WarGameMenu(panel(1))
+	local menu = WarGameMenu(panel(1))
 
-  menu:addLabel(_("Game Options"), 128, 11)
-  menu:addFullButton(_("~!Video"), "v", 16, 40 + 36*0,
-    function()
-		RunGameVideoOptionsMenu()
-		menu:setPosition((Video.Width - menu:getWidth()) / 2, (Video.Height - menu:getHeight()) / 2)
-		if (previous_menu ~= nil) then
-			previous_menu:setPosition((Video.Width - previous_menu:getWidth()) / 2, (Video.Height - previous_menu:getHeight()) / 2)
+	menu:addLabel(_("Game Options"), 128, 11)
+	menu:addFullButton(_("~!Video"), "v", 16, 40 + 36*0,
+		function()
+			RunGameVideoOptionsMenu()
+			menu:setPosition((Video.Width - menu:getWidth()) / 2, (Video.Height - menu:getHeight()) / 2)
+			if (previous_menu ~= nil) then
+				previous_menu:setPosition((Video.Width - previous_menu:getWidth()) / 2, (Video.Height - previous_menu:getHeight()) / 2)
+			end
 		end
-	end)
-  menu:addFullButton(_("Sound (~<F7~>)"), "f7", 16, 40 + 36*1,
-    function() RunGameSoundOptionsMenu() end)
-  menu:addFullButton(_("Preferences (~<F8~>)"), "f8", 16, 40 + 36*2,
-    function() RunPreferencesMenu() end)
-  menu:addFullButton(_("Diplomacy (~<F9~>)"), "f9", 16, 40 + 36*3,
-    function() RunDiplomacyMenu() end)
-  menu:addFullButton(_("Previous Menu (~<Esc~>)"), "escape", 128 - (224 / 2), 288 - 40,
-    function() menu:stop() end)
+	)
+	menu:addFullButton(_("Sound (~<F7~>)"), "f7", 16, 40 + 36*1,
+		function() RunGameSoundOptionsMenu() end)
+	menu:addFullButton(_("Preferences (~<F8~>)"), "f8", 16, 40 + 36*2,
+		function() RunPreferencesMenu() end)
+	menu:addFullButton(_("Diplomacy (~<F9~>)"), "f9", 16, 40 + 36*3,
+		function() RunDiplomacyMenu() end)
+	menu:addFullButton(_("Previous Menu (~<Esc~>)"), "escape", 128 - (224 / 2), 288 - 40,
+		function() menu:stop() end)
 
-  menu:run(false)
+	menu:run(false)
 end
 
