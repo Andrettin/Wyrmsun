@@ -184,6 +184,34 @@ DefineUniqueItem("Schwarzenberg Palace", { -- Located in Prague; Source: Alena J
 	Prefix = ?,
 	Suffix = ?
 } )
+
+DefineUniqueItem("Daliborka", { -- Source: Alena Ježková, "77 Prague Legends", 2006, p. 88.
+	Type = "unit-teuton-watch-tower",
+	Prefix = ?,
+	Suffix = ?,
+	Background = "Daliborka was a prison tower in Prague, named after its most renowned capative, Dalibor of Kozajedy."
+} )
+
+DefineUniqueItem("The White Tower", { -- Source: Alena Ježková, "77 Prague Legends", 2006, p. 88.
+	Type = "unit-teuton-watch-tower",
+	Prefix = ?,
+	Suffix = ?,
+	Background = "The White Tower was a tower in Prague."
+} )
+
+DefineUniqueItem("Mihulka", { -- Source: Alena Ježková, "77 Prague Legends", 2006, p. 88.
+	Type = "unit-teuton-watch-tower",
+	Prefix = ?,
+	Suffix = ?,
+	Background = "Mihulka was a tower in Prague."
+} )
+
+DefineUniqueItem("Ploskovice", { -- Source: Alena Ježková, "77 Prague Legends", 2006, p. 88.
+	Type = "unit-teuton-burg",
+	Prefix = ?,
+	Suffix = ?,
+	Background = "Ploskovice was a stronghold near Litoměřice."
+} )
 --]]
 
 -- Unique houses in Prague

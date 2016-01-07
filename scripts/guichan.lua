@@ -1396,15 +1396,15 @@ end
 LoadGameFile = nil
 
 function RunProgramStartMenu()
-  local continue = 1
+	local continue = 1
 
-  while continue == 1 do
-    if (LoadGameFile ~= nil) then
-      LoadGame(LoadGameFile)
-    else
-      continue = BuildProgramStartMenu(menu)
-    end
-  end
+	while continue == 1 do
+		if (LoadGameFile ~= nil) then
+			LoadGame(LoadGameFile)
+		else
+			continue = BuildProgramStartMenu(menu)
+		end
+	end
 end
 
 
@@ -1435,27 +1435,25 @@ SetGrabMouse(wyr.preferences.GrabMouse)
 -- load mods now
 LoadMods()
 
-
 function GameStarting()
 	--[[
-  if (wyr.preferences.ShowTips and not IsReplayGame() and not IsNetworkGame()) then
-    SetGamePaused(true)
-    RunTipsMenu()
-  end
-  --]]
+	if (wyr.preferences.ShowTips and not IsReplayGame() and not IsNetworkGame()) then
+		SetGamePaused(true)
+		RunTipsMenu()
+	end
+	--]]
 end
 
 if (Editor.Running == EditorCommandLine) then
-  if (CliMapName and CliMapName ~= "") then
-    StartEditor(CliMapName)
-  else
-    RunEditorMenu()
-  end
+	if (CliMapName and CliMapName ~= "") then
+		StartEditor(CliMapName)
+	else
+		RunEditorMenu()
+	end
 else
-  if (CliMapName and CliMapName ~= "") then
-    RunMap(CliMapName)
-  else
-    RunProgramStartMenu()
-  end
+	if (CliMapName and CliMapName ~= "") then
+		RunMap(CliMapName)
+	else
+		RunProgramStartMenu()
+	end
 end
-
