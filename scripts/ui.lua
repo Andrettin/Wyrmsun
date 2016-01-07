@@ -789,6 +789,31 @@ if not (ui_loaded_first_time) then
 		File = "ui/cursors/arrow_SE.png",
 		HotSpot = {20, 18},
 		Size = {24, 32}})
+		
+	DefineCursor({
+		Name = "cursor-point",
+		Race = "any",
+		File = "dwarf/ui/cursors/dwarven_gauntlet.png",
+		HotSpot = { 3, 2},
+		Size = {28, 32}})
+	DefineCursor({
+		Name = "cursor-green-hair",
+		Race = "any",
+		File = "ui/cursors/green.png",
+		HotSpot = {15, 15},
+		Size = {32, 32}})
+	DefineCursor({
+		Name = "cursor-yellow-hair",
+		Race = "any",
+		File = "ui/cursors/yellow.png",
+		HotSpot = {15, 15},
+		Size = {32, 32}})
+	DefineCursor({
+		Name = "cursor-red-hair",
+		Race = "any",
+		File = "ui/cursors/red.png",
+		HotSpot = {15, 15},
+		Size = {32, 32}})
 
 	function GetRGBA(r, g, b, a)
 		if (wyr.preferences.UseOpenGL == false) then
