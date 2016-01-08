@@ -61,8 +61,6 @@ The Stratagus engine, as well as the code, artwork, sounds, music and story elem
 /graphics/ui/backgrounds/yale_4_3.png (Steam-only) (used for Wyrmsun with permission)
 /graphics/ui/backgrounds/yale_profile.png (Steam-only) (used for Wyrmsun with permission)
 /graphics/ui/backgrounds/yale_small.png (Steam-only) (used for Wyrmsun with permission)
-/graphics/ui/loadingEmpty.png (licensed under the CC-BY 3.0)
-/graphics/ui/loadingFull.png (licensed under the CC-BY 3.0)
 /sounds/buildings/complete_barracks.wav (licensed under the CC-BY-SA 3.0)
 /sounds/buildings/complete_blacksmith.wav (licensed under the CC-BY-SA 3.0)
 /sounds/buildings/complete_civ_center.wav (licensed under the CC-BY-SA 3.0)

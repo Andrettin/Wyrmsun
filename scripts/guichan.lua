@@ -794,7 +794,7 @@ function RunMap(map, objective, fow, revealmap)
 	CurrentQuest = ""
 end
 
-mapname = "maps/nidavellir/chaincolt-foothills.smp"
+mapname = "maps/random/random-map-swamp.smp"
 local buttonStatut = 0 -- 0:not initialised, 1: Ok, 2: Cancel
 mapinfo = {
   playertypes = {nil, nil, nil, nil, nil, nil, nil, nil},

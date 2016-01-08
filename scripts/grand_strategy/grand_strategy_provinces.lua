@@ -71,7 +71,7 @@ function LoadProvinces(world)
 				latin = "Amiternum"
 			},
 			SettlementLocation = {518, 135}, -- L'Aquila
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Coastal = true
 		},
@@ -93,7 +93,7 @@ function LoadProvinces(world)
 				greek = "Naupactus"
 			},
 			SettlementLocation = {541, 145}, -- Naupactus
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Coastal = true
 		},
@@ -117,7 +117,7 @@ function LoadProvinces(world)
 				latin = "Dyrrhachium"
 			},
 			SettlementLocation = {536, 138}, -- Tirana
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
 				"illyrian", "Taulantii Tribe"
@@ -139,7 +139,7 @@ function LoadProvinces(world)
 				teuton = "Strasburg"
 			},
 			SettlementLocation = {501, 118}, -- Strasburg
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
 				"teuton", "Alamanni Tribe"
@@ -180,7 +180,7 @@ function LoadProvinces(world)
 				latin = "Corduba"
 			},
 			SettlementLocation = {466, 148}, -- Cordoba
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains"
 		},
 		Apulia = {
@@ -204,7 +204,7 @@ function LoadProvinces(world)
 				latin = "Barium"
 			},
 			SettlementLocation = {527, 139}, -- Bari
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Coastal = true
 		},
@@ -241,7 +241,7 @@ function LoadProvinces(world)
 				latin = "Tolosa"
 			},
 			SettlementLocation = {483, 132}, -- Toulouse
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
 				"celt", "Arverni Tribe"
@@ -279,7 +279,7 @@ function LoadProvinces(world)
 				latin = "Caesaraugusta"
 			},
 			SettlementLocation = {477, 137}, -- Zaragoza
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Coastal = true,
 			Claims = {
@@ -305,7 +305,7 @@ function LoadProvinces(world)
 				Mycenae = "Mycenae"
 			},
 			SettlementLocation = {544, 148}, -- Argos
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Coastal = true,
 			Claims = {
@@ -355,7 +355,7 @@ function LoadProvinces(world)
 				unit_germanic_town_hall = true,
 				unit_germanic_barracks = true
 			},
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			Units = {
 				unit_germanic_warrior = 8
 			},
@@ -382,7 +382,7 @@ function LoadProvinces(world)
 				latin = "Athens"
 			},
 			SettlementLocation = {547, 147}, -- Athens
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Coastal = true,
 			Claims = {
@@ -405,7 +405,7 @@ function LoadProvinces(world)
 				teuton = "Augsburg"
 			},
 			SettlementLocation = {510, 118}, -- Augsburg
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
 				"teuton", "Alamanni Tribe"
@@ -477,7 +477,7 @@ function LoadProvinces(world)
 				teuton = "Rastatt"
 			},
 			SettlementLocation = {503, 117}, -- Rastatt
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
 				"teuton", "Alamanni Tribe",
@@ -540,7 +540,7 @@ function LoadProvinces(world)
 				latin = "Aduatuca"
 			},
 			SettlementLocation = {492, 111}, -- Brussels
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
 				"celt", "Menapii Tribe"
@@ -565,7 +565,7 @@ function LoadProvinces(world)
 			},
 			SettlementName = "Kishinev",
 			SettlementLocation = {562, 122}, -- Kishinev
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
 				"goth", "Bastarnae Tribe"
@@ -587,7 +587,7 @@ function LoadProvinces(world)
 				greek = "Thebes"
 			},
 			SettlementLocation = {546, 146}, -- Thebes
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Coastal = true,
 			Claims = {
@@ -647,7 +647,7 @@ function LoadProvinces(world)
 				norse = "Sigtun"
 			},
 			SettlementLocation = {522, 99},
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
 				"goth", "Burgundian Tribe"
@@ -670,7 +670,7 @@ function LoadProvinces(world)
 			},
 			SettlementName = "Sarajevo",
 			SettlementLocation = {532, 131}, -- Sarajevo
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains"
 		},
 		Brandenburg = {
@@ -697,7 +697,7 @@ function LoadProvinces(world)
 				teuton = "Berlin"
 			},
 			SettlementLocation = {518, 106}, -- Berlin
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
 				"teuton", "Semnone Tribe",
@@ -720,7 +720,7 @@ function LoadProvinces(world)
 				teuton = "Bremen"
 			},
 			SettlementLocation = {504, 104}, -- Bremen
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
 				"basque", "Funnelbeaker Tribe",
@@ -752,7 +752,7 @@ function LoadProvinces(world)
 			SettlementName = "Rennes",
 --			SettlementLocation = {475, 121}, -- Nantes
 			SettlementLocation = {475, 119}, -- Rennes
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains"
 		},
 		Brunswick = {
@@ -771,7 +771,7 @@ function LoadProvinces(world)
 				teuton = "Braunschweig"
 			},
 			SettlementLocation = {509, 107}, -- Brunswick
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
 				"teuton", "Cherusci Tribe",
@@ -792,7 +792,7 @@ function LoadProvinces(world)
 				teuton = "Czernowitz"
 			},
 			SettlementLocation = {552, 119}, -- Czernowitz / Chernivtsi
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
 				"slav", "Poland"
@@ -829,7 +829,7 @@ function LoadProvinces(world)
 				-- Sardica
 			},
 			SettlementLocation = {546, 134}, -- Sofia
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
 				"greek", "Thrace",
@@ -852,7 +852,7 @@ function LoadProvinces(world)
 			},
 			SettlementName = "Dijon",
 			SettlementLocation = {494, 121}, -- Dijon
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
 				"celt", "Aedui Tribe"
@@ -875,7 +875,7 @@ function LoadProvinces(world)
 				latin = "Castra Hannibalis"
 			},
 			SettlementLocation = {526, 145}, -- Catanzaro
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Coastal = true
 		},
@@ -897,7 +897,7 @@ function LoadProvinces(world)
 				teuton = "Laibach" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 			},
 			SettlementLocation = {521, 125}, -- Laibach/Ljubljana
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains"
 		},
 		Castille = {
@@ -934,7 +934,7 @@ function LoadProvinces(world)
 				latin = "Complutum" -- Toletum is also in the same region and more important in antiquity, but not in the same site as Madrid
 			},
 			SettlementLocation = {469, 141}, -- Madrid
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains"
 		},
 		Corinth = {
@@ -950,7 +950,7 @@ function LoadProvinces(world)
 				greek = "Corinth"
 			},
 			SettlementLocation = {545, 148}, -- Corinth
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Coastal = true,
 			Claims = {
@@ -972,7 +972,7 @@ function LoadProvinces(world)
 				latin = "Aleria"
 			},
 			SettlementLocation = {506, 136},
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Coastal = true
 		},
@@ -1005,7 +1005,7 @@ function LoadProvinces(world)
 				teuton = "Mitau"
 			},
 			SettlementLocation = {547, 95}, -- Mitau
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Coastal = true,
 			Claims = {
@@ -1037,7 +1037,7 @@ function LoadProvinces(world)
 			SettlementBuildings = {
 				unit_teuton_town_hall = true
 			},
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Coastal = true,
 			Claims = {
@@ -1070,7 +1070,7 @@ function LoadProvinces(world)
 			CulturalSettlementNames = {
 				greek = "Heraclea Chersonesus" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 18-19.
 			},
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
 				"greek", "Cimmerian Bosphorus"
@@ -1104,7 +1104,7 @@ function LoadProvinces(world)
 				latin = "Celeta" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 			},
 			SettlementLocation = {525, 125}, -- Zagreb
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Coastal = true,
 			Claims = {
@@ -1134,7 +1134,7 @@ function LoadProvinces(world)
 			CulturalSettlementNames = {
 				latin = "Iadera" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 			},
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Coastal = true,
 			Claims = {
@@ -1160,7 +1160,7 @@ function LoadProvinces(world)
 --				romanian = "Constanța"
 			},
 			SettlementLocation = {560, 130}, -- Constanta
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
 				"greek", "Thrace",
@@ -1227,7 +1227,7 @@ function LoadProvinces(world)
 				teuton = "Assen" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
 			},
 			SettlementLocation = {498, 105}, -- Assen
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Coastal = true,
 			Claims = {
@@ -1253,7 +1253,7 @@ function LoadProvinces(world)
 				teuton = "Emden"
 			},
 			SettlementLocation = {500, 104}, -- Emden
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
 				"basque", "Funnelbeaker Tribe",
@@ -1300,7 +1300,7 @@ function LoadProvinces(world)
 				teuton = "London"
 			},
 			SettlementLocation = {480, 109}, -- London
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Coastal = true,
 			Claims = {
@@ -1324,7 +1324,7 @@ function LoadProvinces(world)
 				greek = "Nicopolis"
 			},
 			SettlementLocation = {538, 144}, -- Nicopolis
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			Claims = {
 				"greek", "Chaoni Tribe",
 				"greek", "Epirus"
@@ -1360,7 +1360,7 @@ function LoadProvinces(world)
 				teuton = "Reval"
 			},
 			SettlementLocation = {550, 87}, -- Tallinn
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Coastal = true
 		},
@@ -1379,7 +1379,7 @@ function LoadProvinces(world)
 				greek = "Chalcis"
 			},
 			SettlementLocation = {548, 145}, -- Chalcis
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Coastal = true,
 			Claims = {
@@ -1408,7 +1408,7 @@ function LoadProvinces(world)
 				teuton = "Kolberg"
 			},
 			SettlementLocation = {523, 102}, -- Kolberg
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
 				"goth", "Turcilingian Tribe"
@@ -1454,7 +1454,7 @@ function LoadProvinces(world)
 				latin = "Lutetia"
 			},
 			SettlementLocation = {486, 117}, -- Paris
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
 --				"latin", "France"
@@ -1507,7 +1507,7 @@ function LoadProvinces(world)
 				teuton = "Würzburg"
 			},
 			SettlementLocation = {508, 114}, -- Würzburg
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
 				"basque", "Linearware Tribe",
@@ -1533,7 +1533,7 @@ function LoadProvinces(world)
 				teuton = "Leeuwarden" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
 			},
 			SettlementLocation = {496, 104}, -- Leeuwarden
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Coastal = true,
 			Claims = {
@@ -1578,7 +1578,7 @@ function LoadProvinces(world)
 				teuton = "Lemberg"
 			},
 			SettlementLocation = {137, 28}, -- Lvov / Lemberg
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
 				"goth", "Bastarnae Tribe",
@@ -1609,7 +1609,7 @@ function LoadProvinces(world)
 				latin = "Lucus Augusti"
 			},
 			SettlementLocation = {456, 132}, -- Corunna
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
 				"teuton", "Galicia"
@@ -1646,7 +1646,7 @@ function LoadProvinces(world)
 				norse = "Göteborg"
 			},
 			SettlementLocation = {513, 91}, -- Gothenburg
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Coastal = true,
 			Claims = {
@@ -1663,7 +1663,7 @@ function LoadProvinces(world)
 			},
 			SettlementLocation = {532, 92},
 			SettlementName = "Wisby",
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Coastal = true,
 			Claims = {
@@ -1689,7 +1689,7 @@ function LoadProvinces(world)
 				teuton = "Hannover"
 			},
 			SettlementLocation = {507, 107}, -- Hanover
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
 				"teuton", "Lombard Tribe"
@@ -1714,7 +1714,7 @@ function LoadProvinces(world)
 				teuton = "Kassel"
 			},
 			SettlementLocation = {506, 109}, -- Kassel
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
 				"teuton", "Chatti Tribe",
@@ -1751,7 +1751,7 @@ function LoadProvinces(world)
 			},
 			SettlementName = "Aberdeen",
 			SettlementLocation = {473, 93}, -- Aberdeen
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Hills",
 			Coastal = true,
 			Claims = {
@@ -1778,7 +1778,7 @@ function LoadProvinces(world)
 				teuton = "Stettin"
 			},
 			SettlementLocation = {521, 103}, -- Stettin
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
 				"basque", "Funnelbeaker Tribe",
@@ -1810,7 +1810,7 @@ function LoadProvinces(world)
 				teuton = "Amsterdam"
 			},
 			SettlementLocation = {493, 107}, -- Amsterdam
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Coastal = true,
 			Claims = {
@@ -1838,7 +1838,7 @@ function LoadProvinces(world)
 				teuton = "Kiel"
 			},
 			SettlementLocation = {508, 101}, -- Kiel
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
 				"basque", "Funnelbeaker Tribe",
@@ -1865,7 +1865,7 @@ function LoadProvinces(world)
 				norse = "Bergen"
 			},
 			SettlementLocation = {495, 84}, -- Bergen
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
 				"norse", "Hordaland",
@@ -1894,7 +1894,7 @@ function LoadProvinces(world)
 			},
 			SettlementName = "Pest",
 			SettlementLocation = {535, 120}, -- Pest
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
 				"persian", "Iazyge Tribe"
@@ -1936,7 +1936,7 @@ function LoadProvinces(world)
 			},
 			SettlementName = "Reykjavik",
 			SettlementLocation = {418, 73}, -- Reykjavik
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Coastal = true
 		},
@@ -1963,7 +1963,7 @@ function LoadProvinces(world)
 			},
 			SettlementName = "Eblana", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 			SettlementLocation = {462, 104}, -- Dublin
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Coastal = true,
 			Claims = {
@@ -1987,7 +1987,7 @@ function LoadProvinces(world)
 				teuton = "Triest"
 			},
 			SettlementLocation = {519, 126}, -- Trieste
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Coastal = true
 		},
@@ -2011,7 +2011,7 @@ function LoadProvinces(world)
 			},
 			SettlementName = "Aarhus",
 			SettlementLocation = {508, 96}, -- Aarhus
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			Units = {
 				unit_germanic_warrior = 4,
 				unit_germanic_archer = 2
@@ -2042,7 +2042,7 @@ function LoadProvinces(world)
 				greek = "Sparta"
 			},
 			SettlementLocation = {543, 150}, -- Sparta
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Coastal = true,
 			Claims = {
@@ -2067,7 +2067,7 @@ function LoadProvinces(world)
 				latin = "Roma"
 			},
 			SettlementLocation = {515, 136}, -- Rome
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
 				"latin", "Latin Tribe",
@@ -2098,7 +2098,7 @@ function LoadProvinces(world)
 				teuton = "Riga"
 			},
 			SettlementLocation = {548, 94}, -- Riga
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Coastal = true,
 			Claims = {
@@ -2118,7 +2118,7 @@ function LoadProvinces(world)
 				teuton = "Lübeck"
 			},
 			SettlementLocation = {510, 102},
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Coastal = true,
 			Claims = {
@@ -2145,7 +2145,7 @@ function LoadProvinces(world)
 			CulturalSettlementNames = {
 				latin = "Genua"
 			},
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Coastal = true,
 			Claims = {
@@ -2179,7 +2179,7 @@ function LoadProvinces(world)
 			CulturalSettlementNames = {
 			},
 			SettlementLocation = {552, 100}, -- Vilnius
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Coastal = true,
 			Claims = {
@@ -2206,7 +2206,7 @@ function LoadProvinces(world)
 				teuton = "Mailand"
 			},
 			SettlementLocation = {506, 126}, -- Milan
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains"
 		},
 		Lorraine = {
@@ -2226,7 +2226,7 @@ function LoadProvinces(world)
 			CulturalSettlementNames = {
 			},
 			SettlementLocation = {496, 118}, -- Nancy
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
 			}
@@ -2249,7 +2249,7 @@ function LoadProvinces(world)
 				teuton = "Guben"
 			},
 			SettlementLocation = {521, 108}, -- Guben
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains"
 		},
 		LowerRhine = {
@@ -2271,7 +2271,7 @@ function LoadProvinces(world)
 				teuton = "Köln"
 			},
 			SettlementLocation = {498, 111}, -- Cologne
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
 			}
@@ -2298,7 +2298,7 @@ function LoadProvinces(world)
 			},
 			SettlementName = "Edinburgh",
 			SettlementLocation = {470, 97}, -- Edinburgh
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Hills",
 			Coastal = true,
 			Claims = {
@@ -2329,7 +2329,7 @@ function LoadProvinces(world)
 				latin = "Edessa"
 			},
 			SettlementLocation = {542, 140}, -- Aegae
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
 				"greek", "Macedon",
@@ -2357,7 +2357,7 @@ function LoadProvinces(world)
 				teuton = "Magdeburg"
 			},
 			SettlementLocation = {513, 107}, -- Magdeburg
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
 				"teuton", "Cherusci Tribe",
@@ -2374,7 +2374,7 @@ function LoadProvinces(world)
 			},
 			SettlementName = "Valletta",
 			SettlementLocation = {521, 153},
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Coastal = true,
 			Claims = {
@@ -2406,7 +2406,7 @@ function LoadProvinces(world)
 				slav = "Warsaw"
 			},
 			SettlementLocation = {538, 107}, -- Warsaw
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
 				"goth", "Vandal Tribe",
@@ -2432,7 +2432,7 @@ function LoadProvinces(world)
 				teuton = "Schwerin"
 			},
 			SettlementLocation = {512, 103}, -- Schwerin
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
 				"basque", "Ertebolle Tribe",
@@ -2452,7 +2452,7 @@ function LoadProvinces(world)
 			},
 			SettlementName = "Modena",
 			SettlementLocation = {511, 129}, -- Modena
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Coastal = true
 		},
@@ -2478,7 +2478,7 @@ function LoadProvinces(world)
 			CulturalSettlementNames = {
 --				romanian = "Iași"
 			},
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
 --				"latin", "Moldavia"
@@ -2498,7 +2498,7 @@ function LoadProvinces(world)
 				latin = "Doclea" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 			},
 			SettlementLocation = {534, 135}, -- Podgorica
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Coastal = true
 		},
@@ -2547,7 +2547,7 @@ function LoadProvinces(world)
 			CulturalSettlementNames = {
 			},
 			SettlementLocation = {496, 116}, -- Metz
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
 			}
@@ -2577,7 +2577,7 @@ function LoadProvinces(world)
 				latin = "Neapolis"
 			},
 			SettlementLocation = {520, 139}, -- Naples
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Coastal = true
 		},
@@ -2599,7 +2599,7 @@ function LoadProvinces(world)
 				teuton = "Küstrin"
 			},
 			SettlementLocation = {522, 106}, -- Küstrin
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
 				"teuton", "Brandenburg"
@@ -2623,7 +2623,7 @@ function LoadProvinces(world)
 			},
 			SettlementName = "Rouen",
 			SettlementLocation = {482, 115}, -- Rouen
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
 				"basque", "Bellbeaker Tribe"
@@ -2643,7 +2643,7 @@ function LoadProvinces(world)
 				teuton = "Oldenburg"
 			},
 			SettlementLocation = {503, 104}, -- Oldenburg
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
 				"basque", "Funnelbeaker Tribe"
@@ -2657,7 +2657,7 @@ function LoadProvinces(world)
 			},
 			SettlementName = "Kirkwall",
 			SettlementLocation = {470, 87},
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Coastal = true,
 			Claims = {
@@ -2680,7 +2680,7 @@ function LoadProvinces(world)
 				teuton = "Zwolle" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
 			},
 			SettlementLocation = {497, 106}, -- Zwolle
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Coastal = true,
 			Claims = {
@@ -2705,7 +2705,7 @@ function LoadProvinces(world)
 				teuton = "Kaiserslautern"
 			},
 			SettlementLocation = {502, 115}, -- Kaiserslautern
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
 			}
@@ -2729,7 +2729,7 @@ function LoadProvinces(world)
 				latin = "Panormus"
 			},
 			SettlementLocation = {517, 147}, -- Palermo
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Coastal = true, -- this variable is calculated automatically, but we place it here anyway for the random map generation (this will mean that this province is generated near a water body)
 			Claims = {
@@ -2759,7 +2759,7 @@ function LoadProvinces(world)
 				latin = "Aquincum"
 			},
 			SettlementLocation = {534, 120}, -- Buda
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
 				"basque", "Linearware Tribe"
@@ -2781,7 +2781,7 @@ function LoadProvinces(world)
 --				latin = "Placentia" -- Piacenza
 			},
 			SettlementLocation = {509, 128}, -- Parma
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains"
 		},
 		Piedmont = {
@@ -2800,7 +2800,7 @@ function LoadProvinces(world)
 				latin = "Augusta Taurinorum"
 			},
 			SettlementLocation = {502, 127}, -- Turin
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains"
 		},
 		Pomerelia = {
@@ -2830,7 +2830,7 @@ function LoadProvinces(world)
 				teuton = "Danzig"
 			},
 			SettlementLocation = {532, 101}, -- Danzig
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
 				"slav", "Poland",
@@ -2887,7 +2887,7 @@ function LoadProvinces(world)
 				teuton = "Posen"
 			},
 			SettlementLocation = {528, 107}, -- Posen
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
 				"goth", "Vandal Tribe",
@@ -2918,7 +2918,7 @@ function LoadProvinces(world)
 				France = "Marseilles"
 			},
 			SettlementLocation = {495, 132}, -- Marseilles
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
 --				"latin", "France"
@@ -2946,7 +2946,7 @@ function LoadProvinces(world)
 				teuton = "Königsberg"
 			},
 			SettlementLocation = {537, 100}, -- Königsberg
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Coastal = true,
 			Claims = {
@@ -2966,7 +2966,7 @@ function LoadProvinces(world)
 				greek = "Ialysus"
 			},
 			SettlementLocation = {559, 152}, -- Ialysus
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Coastal = true
 		},
@@ -2987,7 +2987,7 @@ function LoadProvinces(world)
 				greek = "Komotiní"
 			},
 			SettlementLocation = {552, 139}, -- Komotini
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
 				"greek", "Thrace"
@@ -3010,7 +3010,7 @@ function LoadProvinces(world)
 			CulturalSettlementNames = {
 				latin = "Bononia"
 			},
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Coastal = true
 		},
@@ -3111,7 +3111,7 @@ function LoadProvinces(world)
 				latin = "Caralis"
 			},
 			SettlementLocation = {505, 144}, -- Cagliari
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Coastal = true
 		},
@@ -3132,7 +3132,7 @@ function LoadProvinces(world)
 				France = "Chambéry"
 			},
 			SettlementLocation = {496, 126}, -- Chambéry
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
 --				"latin", "France",
@@ -3184,7 +3184,7 @@ function LoadProvinces(world)
 				teuton = "Flensburg"
 			},
 			SettlementLocation = {506, 100}, -- Flensburg
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
 				"teuton", "Angle Tribe",
@@ -3215,7 +3215,7 @@ function LoadProvinces(world)
 				latin = "Singidunum" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 			},
 			SettlementLocation = {538, 129}, -- Belgrade
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
 				"thracian", "Triballi Tribe"
@@ -3246,7 +3246,7 @@ function LoadProvinces(world)
 				teuton = "Breslau"
 			},
 			SettlementLocation = {526, 110}, -- Breslau
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
 				"goth", "Lugii Tribe",
@@ -3272,7 +3272,7 @@ function LoadProvinces(world)
 				latin = "Scupi" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 			},
 			SettlementLocation = {540, 136}, -- Skopje
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
 				"phrygian", "Bryges Tribe"
@@ -3311,7 +3311,7 @@ function LoadProvinces(world)
 				teuton = "Presburg"
 			},
 			SettlementLocation = {528, 118}, -- Bratislava
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
 				"basque", "Linearware Tribe",
@@ -3351,7 +3351,7 @@ function LoadProvinces(world)
 				norse = "Sigtun"
 			},
 			SettlementLocation = {531, 87}, -- Stockholm / Sigtun
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			Units = {
 				unit_germanic_warrior = 10 -- soldiers to stop the Gylfing Tribe from expanding here
 			},
@@ -3386,7 +3386,7 @@ function LoadProvinces(world)
 			},
 			SettlementName = "Bern",
 			SettlementLocation = {501, 122}, -- Bern
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Mountains",
 			Claims = {
 				"celt", "Helvetii Tribe",
@@ -3411,7 +3411,7 @@ function LoadProvinces(world)
 				latin = "Syracusae"
 			},
 			SettlementLocation = {522, 150}, -- Syracuse
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Coastal = true,
 			Claims = {
@@ -3435,7 +3435,7 @@ function LoadProvinces(world)
 				greek = "Larissa"
 			},
 			SettlementLocation = {543, 143}, -- Larissa
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Coastal = true,
 			Claims = {
@@ -3460,7 +3460,7 @@ function LoadProvinces(world)
 				latin = "Constantinople"
 			},
 			SettlementLocation = {561, 138}, -- Constantinople
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
 				"thracian", "Apsinthii Tribe",
@@ -3487,7 +3487,7 @@ function LoadProvinces(world)
 				teuton = "Erfurt"
 			},
 			SettlementLocation = {511, 110}, -- Erfurt
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
 				"teuton", "Hermunduri Tribe"
@@ -3524,7 +3524,7 @@ function LoadProvinces(world)
 --				romanian = "Cluj",
 				teuton = "Klausenburg"
 			},
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
 --				"latin", "Transylvania"
@@ -3550,7 +3550,7 @@ function LoadProvinces(world)
 				latin = "Florentia"
 			},
 			SettlementLocation = {512, 131}, -- Florence
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Coastal = true,
 			Claims = {
@@ -3617,7 +3617,7 @@ function LoadProvinces(world)
 			},
 			SettlementName = "Kiev",
 			SettlementLocation = {566, 112}, -- Kiev
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			Units = {
 				unit_germanic_warrior = 20 -- soldiers to stop the Vana Tribe from expanding here
 			},
@@ -3643,7 +3643,7 @@ function LoadProvinces(world)
 			},
 			SettlementName = "Perugia",
 			SettlementLocation = {515, 134}, -- Perugia
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Coastal = true,
 			Claims = {
@@ -3669,7 +3669,7 @@ function LoadProvinces(world)
 				teuton = "Bautzen"
 			},
 			SettlementLocation = {520, 109}, -- Bautzen
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains"
 		},
 		UpperSaxony = {
@@ -3689,7 +3689,7 @@ function LoadProvinces(world)
 				teuton = "Leipzig"
 			},
 			SettlementLocation = {515, 109}, -- Leipzig
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
 				"teuton", "Hermunduri Tribe"
@@ -3740,7 +3740,7 @@ function LoadProvinces(world)
 				teuton = "Neusatz" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 168.
 			},
 			SettlementLocation = {536, 127}, -- Novi Sad
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains"
 		},
 		Wallachia = {
@@ -3772,7 +3772,7 @@ function LoadProvinces(world)
 			CulturalSettlementNames = {
 --				romanian = "Bucharest"
 			},
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
 --				"latin", "Wallachia",
@@ -3800,7 +3800,7 @@ function LoadProvinces(world)
 			},
 			SettlementName = "Lublin",
 			SettlementLocation = {543, 110}, -- Lublin
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
 				"slav", "Venedae Tribe",
@@ -3830,7 +3830,7 @@ function LoadProvinces(world)
 				teuton = "Düsseldorf"
 			},
 			SettlementLocation = {500, 109}, -- Düsseldorf
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
 				"teuton", "Sugambri Tribe",
@@ -3880,7 +3880,7 @@ function LoadProvinces(world)
 				slav = "Minsk"
 			},
 			SettlementLocation = {559, 102}, -- Minsk
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
 				"slav", "Poland"
@@ -3904,7 +3904,7 @@ function LoadProvinces(world)
 				teuton = "Stuttgart"
 			},
 			SettlementLocation = {506, 117}, -- Stuttgart
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
 				"teuton", "Alamanni Tribe",
@@ -3930,7 +3930,7 @@ function LoadProvinces(world)
 				norse = "Copenhagen"
 			},
 			SettlementLocation = {515, 97}, -- Copenhagen
-			Map = "maps/random_maps/random-map-forest.smp",
+			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
 				"basque", "Ertebolle Tribe",
@@ -4063,7 +4063,7 @@ function LoadProvinces(world)
 				dwarf = "Gryphon Mountain"
 			},
 			SettlementLocation = {29, 23},
-			Map = "maps/random_maps/random-map-swamp.smp",
+			Map = "maps/random/random-map-swamp.smp",
 			Units = { -- wild units in the Gryphon Mountain scenario
 				unit_dwarven_gryphon_rider = 6 -- Mother Gryphon, Graak, Grook, Gruak, Graik, Griak
 			},
@@ -4081,7 +4081,7 @@ function LoadProvinces(world)
 			SettlementBuildings = {
 				unit_goblin_town_hall = true
 			},
-			Map = "maps/random_maps/random-map-swamp.smp",
+			Map = "maps/random/random-map-swamp.smp",
 			Units = {
 				unit_goblin_spearman = 5 -- Fal Khag, Gatrakh, Thurg, Krung, Gorokh (should all be cavalry)
 			},
@@ -4097,7 +4097,7 @@ function LoadProvinces(world)
 			CulturalNames = {
 				dwarf = "High Pass"
 			},
-			Map = "maps/random_maps/random-map-swamp.smp",
+			Map = "maps/random/random-map-swamp.smp",
 			Units = { -- wild units in the High Pass scenario
 				unit_goblin_spearman = 10, -- 10 uses of the WILD_THING function which generates trolls, ogres and wolves
 				unit_dwarven_gryphon_rider = 1 -- Kaara
@@ -4111,7 +4111,7 @@ function LoadProvinces(world)
 				dwarf = "Highbrook Pass"
 			},
 			SettlementLocation = {35, 11},
-			Map = "maps/random_maps/random-map-swamp.smp",
+			Map = "maps/random/random-map-swamp.smp",
 			Units = { -- starting units in the Settling Disputes scenario
 				unit_dwarven_axefighter = 0,
 				unit_dwarven_steelclad = 0,
@@ -4130,7 +4130,7 @@ function LoadProvinces(world)
 			CulturalNames = {
 				dwarf = "Joruvellir"
 			},
-			Map = "maps/random_maps/random-map-swamp.smp",
+			Map = "maps/random/random-map-swamp.smp",
 			Units = {
 				unit_goblin_spearman = 6, -- some enemy goblins
 				unit_goblin_archer = 3
@@ -4167,7 +4167,7 @@ function LoadProvinces(world)
 				dwarf = "Kal Kartha"
 			},
 			SettlementLocation = {45, 5},
-			Map = "maps/random_maps/random-map-swamp.smp",
+			Map = "maps/random/random-map-swamp.smp",
 			Units = { -- some wild gnomes from the Forbidden Forest to stop too early expansion into this province
 				unit_dwarven_axefighter = 0,
 				unit_dwarven_steelclad = 0,
@@ -4190,7 +4190,7 @@ function LoadProvinces(world)
 				dwarf = "Lyr"
 			},
 			SettlementLocation = {50, 13},
-			Map = "maps/random_maps/random-map-swamp.smp",
+			Map = "maps/random/random-map-swamp.smp",
 			Units = { -- some wild dwarves to stop too early expansion into this province
 				unit_dwarven_axefighter = 12
 			},
@@ -4241,7 +4241,7 @@ function LoadProvinces(world)
 				unit_goblin_town_hall = true,
 				unit_goblin_barracks = true -- has capability to train soldiers
 			},
-			Map = "maps/random_maps/random-map-swamp.smp",
+			Map = "maps/random/random-map-swamp.smp",
 			Units = {
 				unit_goblin_spearman = 14 -- 13 is the quantity of villages in Peaceful Valley map (each can generate 0-2 goblin spearmen) + T'shar Lggi himself
 			},
