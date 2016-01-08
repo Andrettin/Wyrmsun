@@ -54,6 +54,12 @@ DefineUpgrade("upgrade-item-prefix-flaming", { -- example: Flaming Sword (from W
 	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true}
 })
 
+DefineUpgrade("upgrade-item-prefix-frail", {
+	Name = _("Frail"),
+	MagicPrefix = true,
+	ItemPrefix = {"armor", true, "shield", true, "helmet", true}
+})
+
 DefineUpgrade("upgrade-item-prefix-glacial", {
 	Name = _("Glacial"),
 	MagicPrefix = true,
@@ -118,6 +124,12 @@ DefineUpgrade("upgrade-item-prefix-vicious", {
 	ItemPrefix = {"arrows", true, "axe", true, "dagger", true, "javelin", true, "mace", true, "spear", true, "sword", true, "throwing-axe", true, "thrusting-sword", true, "ring", true} -- allowed for rings to allow Andvaranaut to drop, but its prefix should be changed later
 })
 
+DefineUpgrade("upgrade-item-prefix-vulnerable", {
+	Name = _("Vulnerable"),
+	MagicPrefix = true,
+	ItemPrefix = {"armor", true, "shield", true, "helmet", true}
+})
+
 DefineUpgrade("upgrade-item-prefix-wounding", {
 	Name = _("Wounding"),
 	MagicPrefix = true,
@@ -142,6 +154,10 @@ DefineModifier("upgrade-item-prefix-dwindling",
 
 DefineModifier("upgrade-item-prefix-flaming",
 	{"FireDamage", 2}
+)
+
+DefineModifier("upgrade-item-prefix-frail",
+	{"Armor", -2}
 )
 
 DefineModifier("upgrade-item-prefix-glacial",
@@ -186,6 +202,10 @@ DefineModifier("upgrade-item-prefix-swift",
 
 DefineModifier("upgrade-item-prefix-vicious",
 	{"BasicDamage", 2}
+)
+
+DefineModifier("upgrade-item-prefix-vulnerable",
+	{"Armor", -1}
 )
 
 DefineModifier("upgrade-item-prefix-wounding",

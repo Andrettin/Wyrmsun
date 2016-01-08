@@ -233,9 +233,18 @@ https://github.com/Andrettin/Wyrmsun
 - 1.9.7
 -----------------------------------------------------------------------
 
+* Items
+- Added "Frail" magic prefix for armor items and buildings.
+- Added "Vulnerable" magic prefix for armor items and buildings.
+- Added "of Frailty" magic suffix for armor items, rings, amulets and buildings.
+- Added "of Vulnerability" magic suffix for armor items, rings, amulets and buildings.
+
 * Miscellaneous
 - The loading screen now has a background.
 - Loading screen tips and backgrounds now appear when loading a grand strategy map as well.
+
+* Quests
+- Instead of the Chieftain's Hall stats having lower armor for the On the Vanaquisl mission (germanic), the Vana Chieftain's Hall now has the "Frail" and "of Vulnerability" affixes on Easy and Normal difficulties.
 
 -----------------------------------------------------------------------
 - 1.9.6

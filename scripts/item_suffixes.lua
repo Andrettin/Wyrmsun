@@ -76,6 +76,13 @@ DefineUpgrade("upgrade-item-suffix-of-flame", {
 	IncompatibleAffixes = {"upgrade-item-prefix-flaming"}
 })
 
+DefineUpgrade("upgrade-item-suffix-of-frailty", {
+	Name = _("of Frailty"),
+	MagicSuffix = true,
+	ItemSuffix = {"armor", true, "shield", true, "helmet", true, "amulet", true, "ring", true},
+	IncompatibleAffixes = {"upgrade-item-prefix-frail"}
+})
+
 DefineUpgrade("upgrade-item-suffix-of-the-jinn", {
 	Name = _("of the Jinn"),
 	MagicSuffix = true,
@@ -185,6 +192,13 @@ DefineUpgrade("upgrade-item-suffix-of-vision", {
 	ItemSuffix = {"amulet", true, "ring", true}
 })
 
+DefineUpgrade("upgrade-item-suffix-of-vulnerability", {
+	Name = _("of Vulnerability"),
+	MagicSuffix = true,
+	ItemSuffix = {"armor", true, "shield", true, "helmet", true, "amulet", true, "ring", true},
+	IncompatibleAffixes = {"upgrade-item-prefix-vulnerable"}
+})
+
 DefineModifier("upgrade-item-suffix-of-accuracy",
 	{"Accuracy", 1}
 )
@@ -215,6 +229,10 @@ DefineModifier("upgrade-item-suffix-of-fire",
 
 DefineModifier("upgrade-item-suffix-of-flame",
 	{"FireDamage", 2}
+)
+
+DefineModifier("upgrade-item-suffix-of-frailty",
+	{"Armor", -2}
 )
 
 DefineModifier("upgrade-item-suffix-of-the-jinn",
@@ -289,4 +307,8 @@ DefineModifier("upgrade-item-suffix-of-victory",
 
 DefineModifier("upgrade-item-suffix-of-vision",
 	{"SightRange", 1}
+)
+
+DefineModifier("upgrade-item-suffix-of-vulnerability",
+	{"Armor", -1}
 )

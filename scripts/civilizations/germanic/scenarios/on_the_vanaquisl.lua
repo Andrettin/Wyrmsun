@@ -42,6 +42,11 @@ if (LoadedGame == false) then
 	SetPlayerData(GetFactionPlayer("Asa Tribe"), "Allow", "upgrade-teuton-civilization", "F")
 	SetPlayerData(GetFactionPlayer("Vana Tribe"), "Allow", "unit-germanic-town-hall", "F")
 
+	unit = OldCreateUnit("unit-germanic-town-hall", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+	if (GameSettings.Difficulty <= 2) then -- if the difficulty is normal or lower
+		SetUnitVariable(unit, "Prefix", "upgrade-item-prefix-frail")
+		SetUnitVariable(unit, "Suffix", "upgrade-item-suffix-of-vulnerability")
+	end
 	if (GrandStrategy == false) then
 		unit = CreateUnit("unit-germanic-warrior", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 		SetUnitVariable(unit, "Active", false)
@@ -62,7 +67,6 @@ if (LoadedGame == false) then
 		unit = CreateUnit("unit-germanic-warrior", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 		SetUnitVariable(unit, "Active", false)
 		
-		unit = CreateUnit("unit-germanic-town-hall", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
 		unit = CreateUnit("unit-germanic-worker", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
 		unit = CreateUnit("unit-germanic-worker", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
 		unit = CreateUnit("unit-germanic-worker", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
@@ -85,8 +89,6 @@ if (LoadedGame == false) then
 			CreateCreeps(1, "unit-germanic-warrior", 36, Map.Info.MapWidth / 4, Map.Info.MapWidth * 7 / 8, Map.Info.MapHeight / 6, Map.Info.MapHeight * 5 / 6)
 		end
 	elseif (GrandStrategyEventMap) then
-		unit = OldCreateUnit("unit-germanic-town-hall", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
-		
 		SetAiType(0, "grand-strategy-battle")
 		
 		-- Asa units

@@ -4,12 +4,6 @@ else
 	LoadTileModels("scripts/tilesets/conifer_forest_autumn.lua")
 end
 
--- reduce the armor of the town hall to zero just for this map
-SetMapStat("unit-germanic-town-hall", "Armor", 0, "Value")
-SetMapStat("unit-germanic-town-hall", "Armor", 0, "Max")
-SetMapStat("unit-germanic-town-hall", "Armor", 1, "Enable")
-SetMapStat("unit-germanic-town-hall", "Armor", 0, "Increase")
-
 if (LoadedGame == false) then
 	GenerateRandomMap({
 --		RockQuantity = "low",

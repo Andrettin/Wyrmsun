@@ -128,7 +128,7 @@ local tips = {
 	-- Levelling-related tips
 	"Your organic units can level up.",
 	"When a unit levels up an exclamation point appears over it, and it can upgrade to a new unit type or learn new abilities.",
-	"Persistent heroes will carry over their experience level, items and abilities between scenarios and even game modes.",
+	"Persistent heroes will carry over their experience level, items and abilities across scenarios and even game modes.",
 	
 	-- Resource-related tips
 	"You can build gold mines on top of gold deposits.",
