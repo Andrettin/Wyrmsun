@@ -247,6 +247,9 @@ https://github.com/Andrettin/Wyrmsun
 * Factions
 - Fixed issue which made the faction bonuses of the new player be applied to rescued units.
 
+* Map Editor
+- Made it possible to set affixes for any building in the editor.
+
 * Miscellaneous
 - Fixed crash which happened when a missile with splash damage hit a unit during its death animation.
 - Fixed an issue which caused dropped units to sometimes be generated with an incorrect magic affix.
