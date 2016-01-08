@@ -131,3 +131,14 @@ DefineCharacter("Mydlář", { -- Source: Alena Ježková, "77 Prague Legends", 2
 	Year = 1621, -- Executed the Czech lords in 21st of June 1621
 	DeathYear = 1621 + 30 -- estimated
 })
+
+DefineCharacter("Humprecht Černín of Chudenice", { -- Source: Alena Ježková, "77 Prague Legends", 2006, p. 94.
+	Name = "Humprecht", -- Imperial envoy to Venice
+	ExtraName = "Černín of Chudenice",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "slav",
+	ProvinceOfOrigin = "Bohemia", -- presumably
+	Year = 1669, -- Had the Černín Palace built in Prague for him in 1669
+	DeathYear = 1669 + 30 -- estimated
+})

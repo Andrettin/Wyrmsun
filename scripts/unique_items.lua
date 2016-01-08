@@ -212,17 +212,78 @@ DefineUniqueItem("Ploskovice", { -- Source: Alena Ježková, "77 Prague Legends"
 	Suffix = ?,
 	Background = "Ploskovice was a stronghold near Litoměřice."
 } )
+
+DefineUniqueItem("Tyn Church", { -- Týn Church; Alena Ježková, "77 Prague Legends", 2006, p. 14.
+	Type = "unit-teuton-temple", -- should be limited to only churches
+	Prefix = ?,
+	Suffix = ?,
+	Background = "The Týn Church was a church in Prague."
+} )
+
+DefineUniqueItem("Ungelt", { -- Alena Ježková, "77 Prague Legends", 2006, p. 17.
+	Type = "unit-teuton-market",
+	Prefix = ?,
+	Suffix = ?,
+	Background = "Also known as the Týn Court, the Ungelt was the royal customs house in Prague."
+} )
+
+DefineUniqueItem("Rott", { -- Alena Ježková, "77 Prague Legends", 2006, p. 19.
+	Type = "unit-teuton-smithy",
+	Prefix = ?,
+	Suffix = ?,
+	Background = "The Rott ironmonger's shop was located in Prague."
+} )
+
+DefineUniqueItem("V Kotcich", { -- Alena Ježková, "77 Prague Legends", 2006, p. 32.
+	Type = "unit-teuton-market",
+	Prefix = ?,
+	Suffix = ?,
+	Background = "V Kotcich was a marketplace in Prague."
+} )
+
+DefineUniqueItem("The Lion Court", { -- Alena Ježková, "77 Prague Legends", 2006, p. 90.
+	Type = "unit-teuton-stables",
+	Prefix = ?,
+	Suffix = ?,
+	Background = "The Lion Court was a bestiary in Prague."
+} )
+
+DefineUniqueItem("Cernin Palace", { -- Alena Ježková, "77 Prague Legends", 2006, p. 94.
+	Type = "unit-teuton-burg",
+	Prefix = ?,
+	Suffix = ?,
+	Background = "The Černín Palace was built in the Loretánské Square in Prague for Humprecht Černín of Chudenice, the Holy Roman Empire's envoy to Venice."
+} )
 --]]
 
 -- Unique houses in Prague
 -- "House at Death"; Source: Alena Ježková, "77 Prague Legends", 2006, p. 35.
 -- "House at the Golden Well"; Source: Alena Ježková, "77 Prague Legends", 2006, p. 42.
 -- "House at the Three Bells"; Source: Alena Ježková, "77 Prague Legends", 2006, p. 71.
+-- "House at the Three White Roses"; also known as House U Rotta (because of the Rott ironmonger's shop); Source: Alena Ježková, "77 Prague Legends", 2006, p. 19.
+-- "The Chateau"; smallest house in the Golden Lane, which had once been inhabited by an elderly nobleman; Source: Alena Ježková, "77 Prague Legends", 2006, p. 93.
 
 -- Unique streets in Prague
 -- Tomášská Street; Source: Alena Ježková, "77 Prague Legends", 2006, p. 70.
 -- Mostecká Street; Source: Alena Ježková, "77 Prague Legends", 2006, p. 72.
 -- Karmelitská Street; Source: Alena Ježková, "77 Prague Legends", 2006, p. 74.
+-- Liliová Street; Source: Alena Ježková, "77 Prague Legends", 2006, p. 21.
+-- Řetězová Street; Source: Alena Ježková, "77 Prague Legends", 2006, p. 22.
+-- Karlova Street; Source: Alena Ježková, "77 Prague Legends", 2006, p. 23.
+-- Platnéřská Street; Source: Alena Ježková, "77 Prague Legends", 2006, p. 25.
+-- Dlouhá Street; Source: Alena Ježková, "77 Prague Legends", 2006, p. 33.
+-- Husourea Street; Source: Alena Ježková, "77 Prague Legends", 2006, p. 40.
+-- Seminářská Street; Source: Alena Ježková, "77 Prague Legends", 2006, p. 42.
+-- Komeiktská Street; Source: Alena Ježková, "77 Prague Legends", 2006, p. 58.
+-- Karoliny Světle Street; Source: Alena Ježková, "77 Prague Legends", 2006, p. 58.
+-- Nerudova Street; Source: Alena Ježková, "77 Prague Legends", 2006, p. 62.
+-- Ostruhová Street; Source: Alena Ježková, "77 Prague Legends", 2006, p. 62.
+-- Golden Lane (called Zlatá - "golden"); Source: Alena Ježková, "77 Prague Legends", 2006, p. 92.
+
+-- Unique squares in Prague
+-- Malé náměstí ("Small Square"); Source: Alena Ježková, "77 Prague Legends", 2006, p. 19.
+-- Mariánské Square; Source: Alena Ježková, "77 Prague Legends", 2006, p. 26.
+-- Loretánské Square; the Černín Palace was located in it; Source: Alena Ježková, "77 Prague Legends", 2006, p. 94.
 
 -- Judita Bridge, unique bridge; first stone bridge built across the Vltava in Prague (built in 1158 at the orders of Judita, wife of Vladislav II); the bridge was 500m long, being the largest in Central Europe when built; the bridge was destroyed by a great flood in 1342; Source: Alena Ježková, "77 Prague Legends", 2006, p. 45.
 -- Charles Bridge: built to replace Judita Bridge, had its foundation stone laid by Emperor and King Charles IV in the 9th of July 1357; its construction was entrusted to Petr Parléř, who had built St Vitus' Cathedral; the bridge had wine, raw eggs and cream cheese added to the mortar; Source: Alena Ježková, "77 Prague Legends", 2006, pp. 45-46.
@@ -231,6 +292,8 @@ DefineUniqueItem("Ploskovice", { -- Source: Alena Ježková, "77 Prague Legends"
 -- Petřín Hill (in or nearby Prague); Source: Alena Ježková, "77 Prague Legends", 2006, p. 61.
 -- Jánský vršek ("John Hill"; in or nearby Prague); a Chapel of St John was located in this hill; Source: Alena Ježková, "77 Prague Legends", 2006, p. 65.
 -- Kampa (river) (in or nearby Prague); Source: Alena Ježková, "77 Prague Legends", 2006, p. 69.
+-- Vltava (river) (in or nearby Prague); Source: Alena Ježková, "77 Prague Legends", 2006, p. 32.
+-- Kampa Park (in or neaby Prague); Source: Alena Ježková, "77 Prague Legends", 2006, p. 49.
 
 -- "U Jezurů" ("At the Lakes"); night tavern in Prague frequented by prostitutes, which was said to be haunted by a hairy ghost who killed prostitutes near the tavern; Source: Alena Ježková, "77 Prague Legends", 2006, p. 58.
 
