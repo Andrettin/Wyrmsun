@@ -97,7 +97,7 @@ end
 
 local tips = {
 	"Completing quests rewards you with technology points.",
-	"You can select all of your currently visible units of the same type by holding down the CTRL key and selecting a unit or by \"double clicking\" on a unit.",
+	"You can select all of your currently visible units of the same type by holding down the CTRL key and selecting a unit or by double-clicking on a unit.",
 	"The more workers you have collecting resources, the faster your economy will grow.",
 	"Building more than one barracks will let you train more units faster.",
 	"Use your workers to repair damaged buildings.",
@@ -107,17 +107,28 @@ local tips = {
 	"You can make units automatically cast spells by selecting a unit, holding down CTRL and clicking on the spell icon. CTRL click again to turn off.",
 
 	-- Shift tips
-	"You can give a unit an order which is executed after it finishes the current work, if you hold the SHIFT key.",
-	"You can give way points, if you press the SHIFT key, while you click right for the move command.",
-	"You can order a worker to build one building after the other, if you hold the SHIFT key, while you place the building.",
-	"You can build many of the same building, if you hold the ALT and SHIFT keys while you place the buildings.",
+	"You can give a unit an order which is executed after it finishes the current one, if you hold the SHIFT key.",
+	"You can give waypoints to units if you press the SHIFT key and then right-click for the move command.",
+	"You can order a worker to build one building after the other, if you hold the SHIFT key while you place the building.",
+	"You can build the same building many times, if you hold the ALT and SHIFT keys while you place the structures.",
 
 	"Use CTRL-V or ALT-V to cycle through the viewport configuration, you can then monitor your base and lead an attack.",
 
 --	"Attack a chest to open it.",
-	"Potions of healing and food items can be used by damaged units to heal themselves. Right-click on those items to pick them up.",
+
+	-- Unit type-related tips
+	"Unlike the dwarves, humans have no flying rider unit. Their archers have a bonus against flying units, however.",
+	"It is not safe to get close to a goblin war machine.",
+	"Goblin spearmen have a bonus against mounted units.",
+	"Ranged units can shoot from within towers, strongholds and transport ships, with extra range.",
+
+	-- Technology-related tips
+	"Researching Writing will allow your faction to advance from a tribal one to a polity.",
+	
+	-- Levelling-related tips
 	"Your organic units can level up.",
 	"When a unit levels up an exclamation point appears over it, and it can upgrade to a new unit type or learn new abilities.",
+	"Persistent heroes will carry over their experience level, items and abilities between scenarios and even game modes.",
 	
 	-- Resource-related tips
 	"You can build gold mines on top of gold deposits.",
@@ -127,10 +138,17 @@ local tips = {
 	"Yales are territorial creatures.",
 	"Slimes can breed asexually.",
 	"Wild gryphons are dangerous predators.",
+	"There is a chance animals will escape from destroyed stables or pens.",
+	
+	-- Item-related tips
+	"Potions of healing and food items can be used by damaged units to heal themselves. Right-click on those items to pick them up.",
+	"Healing items in a unit's inventory are automatically used if the unit's health is too low.",
+	"Persistent heroes can carry items, and the same applies to regular dwarven stonelords and gryphon riders.",
+	"AI buildings and unique units drop items when killed.",
+	"The chance a unique unit will drop a magic or unique item depends on its level.",
+--	"Magic and unique buildings have a higher chance of dropping magic and unique items.",
 
 	"Thieves deal bonus damage when attacking from the back.",
-	"Persistent heroes, dwarven stonelords and gryphon riders can carry items.",
-	"Healing items in a unit's inventory are automatically used if the unit's health is too low.",
 	"Fire damage ignores armor.",
 --	"Each mercenary group can only be hired once per game.",
 }

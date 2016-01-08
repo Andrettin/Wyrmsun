@@ -253,7 +253,7 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed an issue which caused dropped units to sometimes be generated with an incorrect magic affix.
 - Fixed crash which happened when loading a game if the game had been saved while a unit which has a character assigned to it was dying.
 - Enhanced the support for position-based hotkeys to allow players to have position-based hotkeys only for training/building/etc.
-- Adding a loading bar when starting scenarios, with tips being displayed during loading (code by marcelofg55) (loading bar graphics by StumpyStrust).
+- Tips are now displayed when loading a scenario (thanks to marcelofg55).
 - Added several new tips.
 - Fixed issue which caused the incorrect UI to be loaded after loading a save game.
 - Fixed issue which caused the incorrect music to sometimes be loaded.
