@@ -31,6 +31,10 @@ if not (ui_loaded_first_time) then
 	local ui_loaded_first_time = false
 end
 
+LoadingBarSetBackgrounds({
+	GetBackground("ui/backgrounds/gnashorn.png"), GetBackground("ui/backgrounds/gryphon.png"), GetBackground("ui/backgrounds/gullinburst.png"), GetBackground("ui/backgrounds/wyrm.png"), GetBackground("ui/backgrounds/yale.png")
+})
+
 if not (ui_loaded_first_time) then
 	Load("scripts/widgets.lua")
 

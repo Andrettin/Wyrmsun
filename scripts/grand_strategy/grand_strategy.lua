@@ -337,7 +337,7 @@ function RunGrandStrategyGameSetupMenu()
 	function DateChanged(ignore_mouse_state)
 		if (IsMouseLeftButtonPressed() == false or ignore_mouse_state) then
 			CleanGrandStrategyGame()
-			InitializeGrandStrategyGame()
+			InitializeGrandStrategyGame(false)
 			
 			if (GrandStrategyWorld ~= world_list[world:getSelected() + 1]) then
 				SetGrandStrategyWorld(world_list[world:getSelected() + 1])
