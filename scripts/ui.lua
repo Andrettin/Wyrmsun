@@ -31,11 +31,23 @@ if not (ui_loaded_first_time) then
 	local ui_loaded_first_time = false
 end
 
-LoadingBarSetBackgrounds({
-	GetBackground("ui/backgrounds/gnashorn.png"), GetBackground("ui/backgrounds/gryphon.png"), GetBackground("ui/backgrounds/gullinburst.png"), GetBackground("ui/backgrounds/wyrm.png"), GetBackground("ui/backgrounds/yale.png")
-})
-
 if not (ui_loaded_first_time) then
+	function GetBackground(background_image)
+		if (math.floor(Video.Width * 100 / Video.Height) == 133) then
+			local new_background_image = string.gsub(background_image, ".png", "_4_3.png")
+			if (CanAccessFile(new_background_image)) then
+				return new_background_image
+			end
+		end
+		if (CanAccessFile(background_image)) then -- check if can access the background image
+			return background_image
+		else -- substitute the image for another, if it isn't present
+			return "graphics/dwarf/ui/the_first_dwarves.png"
+		end
+		
+		return 
+	end
+
 	Load("scripts/widgets.lua")
 
 	--
@@ -74,6 +86,10 @@ if not (ui_loaded_first_time) then
 	DefineDecorations({Index = "LevelUp", ShowOpponent = false, HideAllied = true,
 	  Offset = {16, 16}, Method = {"static-sprite", {"sprite-level-up", 0}}})
 end
+
+LoadingBarSetBackgrounds({
+	GetBackground("ui/backgrounds/gnashorn.png"), GetBackground("ui/backgrounds/gryphon.png"), GetBackground("ui/backgrounds/gullinburst.png"), GetBackground("ui/backgrounds/wyrm.png"), GetBackground("ui/backgrounds/yale.png")
+})
 
 --
 --  Define Panels

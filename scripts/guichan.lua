@@ -48,22 +48,6 @@ wyrmsun_logo:Load()
 --wyrmsun_logo:Resize(6197 * Video.Width / 800 / 16, 2456 * Video.Height / 600 / 16)
 wyrmsun_logo_widget = ImageWidget(wyrmsun_logo)
 
-function GetBackground(background_image)
-	if (math.floor(Video.Width * 100 / Video.Height) == 133) then
-		local new_background_image = string.gsub(background_image, ".png", "_4_3.png")
-		if (CanAccessFile(new_background_image)) then
-			return new_background_image
-		end
-	end
-	if (CanAccessFile(background_image)) then -- check if can access the background image
-		return background_image
-	else -- substitute the image for another, if it isn't present
-		return "graphics/dwarf/ui/the_first_dwarves.png"
-	end
-	
-	return 
-end
-
 function panel(n)
 	local panels = {}
 	if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
