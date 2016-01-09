@@ -33,8 +33,8 @@ DefineLanguageNoun("Aiza", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	SingularNominative = "Aiza", -- source also gives the alternative form "Skara"
 	Gender = "Neuter",
 	PrefixSingular = true,
-	PrefixSettlementName = true, -- seems sensible in face of a lack of examples
 	PrefixTypeName = {
+		"settlement", -- seems sensible in face of a lack of examples
 		"terrain-mountains", -- seems sensible in face of a lack of examples
 		"terrain-hills" -- seems sensible in face of a lack of examples
 	}
@@ -46,7 +46,16 @@ DefineLanguageNoun("Ansu", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	SingularNominative = "Ansu",
 	Gender = "Masculine",
 	PrefixSingular = true,
-	PrefixSettlementName = true -- seems sensible in face of a lack of examples (cognate of the prefix in Asgard, and Asgard is the settlement in "Asia" in which Odin's people used to be center until they migrated to Scandinavia in the Ynglinga saga's story)
+	PrefixTypeName = {"settlement"} -- seems sensible in face of a lack of examples (cognate of the prefix in Asgard, and Asgard is the settlement in "Asia" in which Odin's people used to be center until they migrated to Scandinavia in the Ynglinga saga's story)
+})
+
+DefineLanguageNoun("Asjôn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 20.
+	Civilization = "germanic",
+	Meaning = "Forge", -- source gives the German "Esse" as the meaning
+	Gender = "Feminine",
+	SingularNominative = "Asjôn",
+	SuffixSingular = true,
+	SuffixTypeName = {"unit-germanic-smithy"} -- seems sensible
 })
 
 DefineLanguageNoun("Austa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 12.
@@ -54,8 +63,10 @@ DefineLanguageNoun("Austa", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Meaning = "East",
 	SingularNominative = "Austa", -- source also gives the form "Austra"
 	PrefixSingular = true,
-	PrefixProvinceName = true, -- seems sensible in face of a lack of examples
-	PrefixSettlementName = true -- seems sensible in face of a lack of examples
+	PrefixTypeName = {
+		"settlement",  -- seems sensible in face of a lack of examples
+		"province" -- seems sensible in face of a lack of examples
+	}
 })
 
 DefineLanguageNoun("Austrôn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 12.
@@ -64,7 +75,7 @@ DefineLanguageNoun("Austrôn", { -- Source: August Fick and Alf Torp, "Wortschat
 	SingularNominative = "Austrôn",
 	Gender = "Feminine",
 	PrefixSingular = true,
-	PrefixSettlementName = true -- seems sensible in face of a lack of examples
+	PrefixTypeName = {"settlement"} -- seems sensible in face of a lack of examples
 })
 
 DefineLanguageNoun("Berga", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
@@ -98,8 +109,10 @@ DefineLanguageNoun("Burg", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	SingularNominative = "Burg",
 	Gender = "Feminine",
 	SuffixSingular = true,
-	SuffixProvinceName = true, -- seems sensible in face of a lack of examples
-	SuffixSettlementName = true -- seems sensible in face of a lack of examples
+	SuffixTypeName = {
+		"settlement",  -- seems sensible in face of a lack of examples
+		"province" -- seems sensible in face of a lack of examples
+	}
 })
 
 DefineLanguageNoun("Bûra", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 141.
@@ -129,9 +142,9 @@ DefineLanguageNoun("Garda", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	SingularNominative = "Garda", -- source also gives the alternate forms "Gardi" and "Gardan"
 	Gender = "Masculine",
 	PrefixSingular = true,
-	PrefixProvinceName = true, -- seems sensible in face of a lack of examples, specially since is a cognate of the prefix in "Gardarike"
+	PrefixTypeName = {"province"}, -- seems sensible in face of a lack of examples, specially since is a cognate of the prefix in "Gardarike"
 	SuffixSingular = true,
-	SuffixSettlementName = true -- seems sensible in face of a lack of examples (cognate of the suffix in Asgard, and Asgard is the settlement in "Asia" in which Odin's people used to be center until they migrated to Scandinavia in the Ynglinga saga's story)
+	SuffixTypeName = {"settlement"} -- seems sensible in face of a lack of examples (cognate of the suffix in Asgard, and Asgard is the settlement in "Asia" in which Odin's people used to be center until they migrated to Scandinavia in the Ynglinga saga's story)
 })
 
 DefineLanguageNoun("Gastiz", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 74; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2007, 3.3.5.
@@ -140,7 +153,7 @@ DefineLanguageNoun("Gastiz", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	SingularNominative = "Gastiz",
 	Gender = "Masculine",
 	SuffixSingular = true,
-	SuffixPersonalName = true -- examples: "Hlewagastiz", "Holtagastiz"
+	SuffixTypeName = {"person"} -- examples: "Hlewagastiz", "Holtagastiz"
 })
 
 DefineLanguageNoun("Gavja", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 68.
@@ -149,7 +162,7 @@ DefineLanguageNoun("Gavja", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	SingularNominative = "Gavja",
 	Gender = "Neuter",
 	SuffixSingular = true,
-	SuffixProvinceName = true -- seems sensible in face of a lack of examples
+	SuffixTypeName = {"province"} -- seems sensible in face of a lack of examples
 })
 
 DefineLanguageNoun("Gazdaz", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.
@@ -157,6 +170,15 @@ DefineLanguageNoun("Gazdaz", { -- Source: Sean Crist, "An Analysis of *z loss in
 	Meaning = "Rod, Prickle, Point",
 	SingularNominative = "Gazdaz",
 	Gender = "Masculine"
+})
+
+DefineLanguageNoun("Glôdi", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 82.
+	Civilization = "germanic",
+	Meaning = "Ember", -- source gives the German "Glut" as the meaning
+	Gender = "Feminine",
+	SingularNominative = "Glôdi",
+	PrefixSingular = true,
+	PrefixTypeName = {"unit-germanic-smithy"} -- seems sensible
 })
 
 DefineLanguageNoun("Gôm", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 71.
@@ -172,8 +194,19 @@ DefineLanguageNoun("Haima", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	SingularAccusative = "Haima",
 	Gender = "Masculine",
 	SuffixSingular = true,
-	SuffixProvinceName = true, -- seems sensible in face of a lack of examples (specially since in Old Norse there are many placenames ending in -heim)
-	SuffixSettlementName = true -- seems sensible in face of a lack of examples
+	SuffixTypeName = {
+		"province", -- seems sensible in face of a lack of examples (specially since in Old Norse there are many placenames ending in -heim)
+		"settlement" -- seems sensible in face of a lack of examples
+	}
+})
+
+DefineLanguageNoun("Hamara", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 46.
+	Civilization = "germanic",
+	Meaning = "Stone, Hammer", -- source gives the German "Stein, Hammer"
+	Gender = "Masculine",
+	SingularNominative = "Hamara",
+	SuffixSingular = true,
+	SuffixTypeName = {"unit-germanic-smithy"} -- seems sensible
 })
 
 DefineLanguageNoun("Hazdaz", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
@@ -216,7 +249,7 @@ DefineLanguageNoun("Landa", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	SingularNominative = "Landa",
 	Gender = "Neuter",
 	SuffixSingular = true,
-	SuffixProvinceName = true -- seems sensible in face of a lack of examples
+	SuffixTypeName = {"province"} -- seems sensible in face of a lack of examples
 })
 
 DefineLanguageNoun("Lauda", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 181.
@@ -226,8 +259,8 @@ DefineLanguageNoun("Lauda", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Gender = "Neuter",
 	Uncountable = true, -- as a material, it is likely to be uncountable
 	PrefixSingular = true,
-	PrefixSettlementName = true, -- seems sensible in face of a lack of examples
 	PrefixTypeName = {
+		"settlement", -- seems sensible in face of a lack of examples
 		"terrain-mountains", -- seems sensible in face of a lack of examples
 		"terrain-hills" -- seems sensible in face of a lack of examples
 	}
@@ -246,7 +279,7 @@ DefineLanguageNoun("Mark", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	SingularNominative = "Mark", -- source also gives the form "Markô"
 	Gender = "Feminine",
 	SuffixSingular = true,
-	SuffixProvinceName = true -- seems sensible in face of a lack of examples
+	SuffixTypeName = {"province"} -- seems sensible in face of a lack of examples
 })
 
 DefineLanguageNoun("Mazgaz", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 9.
@@ -303,7 +336,7 @@ DefineLanguageNoun("Rîkia", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	SingularNominative = "Rîkia",
 	Gender = "Neuter",
 	SuffixSingular = true,
-	SuffixProvinceName = true -- seems sensible in face of a lack of examples, specially since it is the etymological origin of the suffix in "Gardarike"
+	SuffixTypeName = {"province"} -- seems sensible in face of a lack of examples, specially since it is the etymological origin of the suffix in "Gardarike"
 })
 
 DefineLanguageNoun("Rîþa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
@@ -311,13 +344,38 @@ DefineLanguageNoun("Rîþa", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Meaning = "Current, Stream", -- source gives meaning as "Strom, Bach"
 	SingularNominative = "Rîþa",
 	SuffixSingular = true,
-	SuffixSettlementName = true -- seems sensible in face of a lack of examples, specially since there are German settlement names which end in -bach
+	SuffixTypeName = {"settlement"} -- seems sensible in face of a lack of examples, specially since there are German settlement names which end in -bach
+})
+
+DefineLanguageNoun("Saiþa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 221.
+	Civilization = "germanic",
+	Meaning = "Magic", -- source gives the German "Zauber"
+	Gender = "Masculine",
+	SingularNominative = "Saiþa",
+	PrefixSingular = true,
+	PrefixTypeName = {"unit-germanic-smithy"} -- seems sensible
 })
 
 DefineLanguageNoun("Skaran", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 227.
 	Civilization = "germanic",
 	Meaning = "Plowshare", -- source gives "Schar, Pflugeisen" as the meaning
 	SingularNominative = "Skaran" -- source also gives the alternative form "Skara"
+})
+
+DefineLanguageNoun("Smiþjôn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 264.
+	Civilization = "germanic",
+	Meaning = "Smithy", -- source gives "Schmiede" as the meaning
+	Gender = "Feminine",
+	SingularNominative = "Smiþjôn",
+	SuffixSingular = true,
+	SuffixTypeName = {"unit-germanic-smithy"} -- seems sensible
+})
+
+DefineLanguageNoun("Smiþu", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 263.
+	Civilization = "germanic",
+	Meaning = "Smith, Master Craftsman", -- source gives "Schmied, Werkmeister" as the meaning
+	Gender = "Masculine",
+	SingularNominative = "Smiþu" -- source also gives the alternative form "Smiþa"
 })
 
 DefineLanguageNoun("Snaigva", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 260.
@@ -330,13 +388,22 @@ DefineLanguageNoun("Snaigva", { -- Source: August Fick and Alf Torp, "Wortschatz
 	PrefixTypeName = {"terrain-mountains"} -- seems sensible in face of a lack of examples, specially since in German there is the "Schneeberg"
 })
 
+DefineLanguageNoun("Tandran", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 84.
+	Civilization = "germanic",
+	Meaning = "Fire, Burning Coal", -- source gives the German "Feuer, glühende Kohle" as the meaning
+	Gender = "Masculine",
+	SingularNominative = "Tandran",
+	PrefixSingular = true,
+	PrefixTypeName = {"unit-germanic-smithy"} -- seems sensible
+})
+
 DefineLanguageNoun("Tîva", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 88.
 	Civilization = "germanic",
 	Meaning = "God", -- can also mean the name of a particular god
 	SingularNominative = "Tîva",
 	Gender = "Masculine",
 	PrefixSingular = true,
-	PrefixSettlementName = true -- seems sensible in face of a lack of examples
+	PrefixTypeName = {"settlement"} -- seems sensible in face of a lack of examples
 })
 
 DefineLanguageNoun("Þurpa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 100.
@@ -345,7 +412,7 @@ DefineLanguageNoun("Þurpa", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	SingularNominative = "Þurpa",
 	Gender = "Neuter",
 	SuffixSingular = true,
-	SuffixSettlementName = true -- seems sensible in face of a lack of examples
+	SuffixTypeName = {"settlement"} -- seems sensible in face of a lack of examples
 })
 
 DefineLanguageNoun("Uzdaz", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 7.
@@ -367,7 +434,7 @@ DefineLanguageNoun("Vîhsa", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	SingularNominative = "Vîhsa",
 	Gender = "Neuter",
 	SuffixSingular = true,
-	SuffixSettlementName = true -- seems sensible in face of a lack of examples
+	SuffixTypeName = {"settlement"} -- seems sensible in face of a lack of examples
 })
 
 DefineLanguageNoun("Vikkan", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 206.
@@ -436,7 +503,7 @@ DefineLanguageAdjective("Þrizna", { -- Source: Sean Crist, "An Analysis of *z l
 DefineLanguageAdjective("Vîha", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 206.
 	Civilization = "germanic",
 	Meaning = "Holy",
-	PrefixSettlementName = true -- seems sensible in face of a lack of examples
+	PrefixTypeName = {"settlement", "unit-germanic-smithy"}, -- seems sensible in face of a lack of examples
 })
 
 DefineLanguagePronoun("Miz", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
@@ -454,4 +521,112 @@ DefineLanguagePronoun("Wīz", { -- Source: Sean Crist, "An Analysis of *z loss i
 DefineLanguageAdverb("Maiz", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
 	Civilization = "germanic",
 	Meaning = "More"
+})
+
+
+
+-- Must re-check to see if actually correct
+
+DefineLanguageNoun("Godagaz", {
+	Civilization = "germanic",
+	Meaning = "Goody, Good One",
+	SingularNominative = "Godagaz",
+	NameSingular = true,
+	TypeName = {"person"}
+})
+
+DefineLanguageNoun("Hadu", {
+	Civilization = "germanic",
+	Meaning = "Battle",
+	SingularNominative = "Hadu",
+	PrefixSingular = true,
+	PrefixTypeName = {"person"} -- example: "Hadulaikaz"
+})
+
+DefineLanguageNoun("Hagu", {
+	Civilization = "germanic",
+	Meaning = "Small Property",
+	SingularNominative = "Hadu",
+	PrefixSingular = true,
+	PrefixTypeName = {"person"} -- example: "Hagustaldaz"
+})
+
+DefineLanguageNoun("Hlewa", {
+	Civilization = "germanic",
+	Meaning = "Glory",
+	SingularNominative = "Hlewa",
+	PrefixSingular = true,
+	PrefixTypeName = {"person"} -- example: "Hlewagastiz"
+})
+
+DefineLanguageNoun("Holta", {
+	Civilization = "germanic",
+	Meaning = "Wood",
+	SingularNominative = "Holta",
+	PrefixSingular = true,
+	PrefixTypeName = {"person"} -- example: "Holtagastiz"
+})
+
+DefineLanguageNoun("Laikaz", {
+	Civilization = "germanic",
+	Meaning = "Dancer",
+	SingularNominative = "Laikaz",
+	SuffixSingular = true,
+	SuffixTypeName = {"person"} -- example: Hadulaikaz
+})
+
+DefineLanguageNoun("Ridaz", {
+	Civilization = "germanic",
+	Meaning = "Rider",
+	SingularNominative = "Ridaz",
+	SuffixSingular = true,
+	SuffixTypeName = {"person"} -- example: Woduridaz
+})
+
+DefineLanguageNoun("Riks", {
+	Civilization = "germanic",
+	Meaning = "Ruler",
+	SingularNominative = "Riks",
+	SuffixSingular = true,
+	SuffixTypeName = {"person"} -- example: Theudariks
+})
+
+DefineLanguageNoun("Staldaz", {
+	Civilization = "germanic",
+	Meaning = "Owner",
+	SingularNominative = "Staldaz",
+	SuffixSingular = true,
+	SuffixTypeName = {"person"} -- example: Hagustaldaz
+})
+
+DefineLanguageNoun("Theuda", {
+	Civilization = "germanic",
+	Meaning = "People",
+	SingularNominative = "Theuda",
+	PrefixSingular = true,
+	PrefixTypeName = {"person"} -- example: "Theudariks"
+})
+
+DefineLanguageNoun("Wagigaz", {
+	Civilization = "germanic",
+	Meaning = "One Who Moves Along Impetuously",
+	SingularNominative = "Wagigaz",
+	NameSingular = true,
+	TypeName = {"person"}
+})
+
+DefineLanguageNoun("Wiwaz", {
+	Civilization = "germanic",
+	Meaning = "Darter",
+	SingularNominative = "Wiwaz",
+	NameSingular = true,
+	TypeName = {"person"}
+})
+
+DefineLanguageNoun("Wodu", {
+	Civilization = "germanic",
+	Meaning = "Fury",
+	SingularNominative = "Wodu",
+	PrefixSingular = true,
+	PrefixTypeName = {"person"} -- example: Woduridaz
 })

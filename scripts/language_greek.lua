@@ -25,99 +25,124 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineCivilizationLanguage("greek",
-	"nouns", {
-		"Χέσ-χιον", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
-			"meaning", "Oakum", -- source gives the German word "Werg" as the meaning
-			"singular-nominative", "Χέσ-χιον" -- is this really an hyphen in the word, or are these two forms of the word?
-		},
-		"Χύσθος", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
-			"meaning", "Cavity, Vulva",
-			"singular-nominative", "Χύσθος",
-			"gender", "Masculine"
-		},
-		"Μισθός", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 7.
-			"meaning", "Reward, Payment of a Soldier",
-			"singular-nominative", "Μισθός",
-			"gender", "Masculine"
-		},
-		"Abdera", { -- should be written as the original Greek name (with Greek characters)
-			"meaning", "?",
-			"singular-nominative", "Abdera",
-			"name-singular", true,
-			"settlement-name", true -- example: "Abdera"
-		},
-		"Abydus", { -- should be written as the original Greek name (with Greek characters)
-			"meaning", "?",
-			"singular-nominative", "Abydus",
-			"name-singular", true,
-			"settlement-name", true -- example: "Abydus"
-		},
-		"Acragas", { -- should be written as the original Greek name (with Greek characters)
-			"meaning", "?",
-			"singular-nominative", "Acragas",
-			"name-singular", true,
-			"settlement-name", true -- example: "Acragas" (Agrigentum)
-		},
-		"Agathe", { -- should be written as the original Greek name (with Greek characters)
-			"meaning", "?",
-			"singular-nominative", "Agathe",
-			"name-singular", true,
-			"settlement-name", true -- example: "Agathe"
-		},
-		"Ainos", { -- should be written as the original Greek name (with Greek characters)
-			"meaning", "?",
-			"singular-nominative", "Ainos",
-			"name-singular", true,
-			"settlement-name", true -- example: "Ainos"
-		},
-		"Alalia", { -- should be written as the original Greek name (with Greek characters)
-			"meaning", "?",
-			"singular-nominative", "Alalia",
-			"name-singular", true,
-			"settlement-name", true -- example: "Alalia" (Aleria)
-		},
-		"Alonae", { -- should be written as the original Greek name (with Greek characters)
-			"meaning", "?",
-			"singular-nominative", "Alonae",
-			"name-singular", true,
-			"settlement-name", true -- example: "Alonae"
-		},
-		"Amisus", { -- should be written as the original Greek name (with Greek characters)
-			"meaning", "?",
-			"singular-nominative", "Amisus",
-			"name-singular", true,
-			"settlement-name", true -- example: "Amisus"
-		},
-		"Amphi", { -- should be written as the original Greek name (with Greek characters)
-			"meaning", "?",
-			"singular-nominative", "Amphi",
-			"prefix-singular", true,
-			"prefix-settlement-name", true -- example: "Amphipolis"
-		},
-		"Calli", { -- should be written as the original Greek name (with Greek characters)
-			"meaning", "?",
-			"singular-nominative", "Calli",
-			"prefix-singular", true,
-			"prefix-settlement-name", true -- example: "Callipolis"
-		},
-		"Polis", { -- should be written as the original Greek name (with Greek characters)
-			"meaning", "City",
-			"singular-nominative", "Polis",
-			"suffix-singular", true,
-			"suffix-settlement-name", true -- examples: "Amphipolis", "Callipolis", "Neapolis" (Naples)
-		}
-	},
-	"adjectives", {
-		"Nea", { -- should be written as the original Greek name (with Greek characters)
-			"meaning", "New",
-			"prefix-settlement-name", true -- example: "Neapolis" (Naples)
-		}
-	}
-)
+-- Greek
 
 DefineLanguageNoun("Κώνωπες", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 101.
 	Civilization = "greek",
 	Meaning = "Gnats",
 	PluralNominative = "Κώνωπες"
+})
+
+DefineLanguageNoun("Μισθός", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 7.
+	Civilization = "greek",
+	Meaning = "Reward, Payment of a Soldier",
+	SingularNominative = "Μισθός",
+	Gender = "Masculine"
+})
+
+DefineLanguageNoun("Χέσ-χιον", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
+	Civilization = "greek",
+	Meaning = "Oakum", -- source gives the German word "Werg" as the meaning
+	SingularNominative = "Χέσ-χιον" -- is this really an hyphen in the word, or are these two forms of the word?
+})
+
+DefineLanguageNoun("Χύσθος", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
+	Civilization = "greek",
+	Meaning = "Cavity, Vulva",
+	SingularNominative = "Χύσθος",
+	Gender = "Masculine"
+})
+
+DefineLanguageNoun("Abdera", { -- should be written as the original Greek name (with Greek characters)
+	Civilization = "greek",
+	Meaning = "?",
+	SingularNominative = "Abdera",
+	NameSingular = true,
+	TypeName = {"settlement"} -- example: "Abdera"
+})
+
+DefineLanguageNoun("Abydus", { -- should be written as the original Greek name (with Greek characters)
+	Civilization = "greek",
+	Meaning = "?",
+	SingularNominative = "Abydus",
+	NameSingular = true,
+	TypeName = {"settlement"} -- example: "Abydus"
+})
+
+DefineLanguageNoun("Acragas", { -- should be written as the original Greek name (with Greek characters)
+	Civilization = "greek",
+	Meaning = "?",
+	SingularNominative = "Acragas",
+	NameSingular = true,
+	TypeName = {"settlement"} -- example: "Acragas" (Agrigentum)
+})
+
+DefineLanguageNoun("Agathe", { -- should be written as the original Greek name (with Greek characters)
+	Civilization = "greek",
+	Meaning = "?",
+	SingularNominative = "Agathe",
+	NameSingular = true,
+	TypeName = {"settlement"} -- example: "Agathe"
+})
+
+DefineLanguageNoun("Ainos", { -- should be written as the original Greek name (with Greek characters)
+	Civilization = "greek",
+	Meaning = "?",
+	SingularNominative = "Ainos",
+	NameSingular = true,
+	TypeName = {"settlement"} -- example: "Ainos"
+})
+
+DefineLanguageNoun("Alalia", { -- should be written as the original Greek name (with Greek characters)
+	Civilization = "greek",
+	Meaning = "?",
+	SingularNominative = "Alalia",
+	NameSingular = true,
+	TypeName = {"settlement"} -- example: "Alalia" (Aleria)
+})
+
+DefineLanguageNoun("Alonae", { -- should be written as the original Greek name (with Greek characters)
+	Civilization = "greek",
+	Meaning = "?",
+	SingularNominative = "Alonae",
+	NameSingular = true,
+	TypeName = {"settlement"} -- example: "Alonae"
+})
+
+DefineLanguageNoun("Amisus", { -- should be written as the original Greek name (with Greek characters)
+	Civilization = "greek",
+	Meaning = "?",
+	SingularNominative = "Amisus",
+	NameSingular = true,
+	TypeName = {"settlement"} -- example: "Amisus"
+})
+
+DefineLanguageNoun("Amphi", { -- should be written as the original Greek name (with Greek characters)
+	Civilization = "greek",
+	Meaning = "?",
+	SingularNominative = "Amphi",
+	PrefixSingular = true,
+	PrefixTypeName = {"settlement"} -- example: "Amphipolis"
+})
+
+DefineLanguageNoun("Calli", { -- should be written as the original Greek name (with Greek characters)
+	Civilization = "greek",
+	Meaning = "?",
+	SingularNominative = "Calli",
+	PrefixSingular = true,
+	PrefixTypeName = {"settlement"} -- example: "Callipolis"
+})
+
+DefineLanguageNoun("Polis", { -- should be written as the original Greek name (with Greek characters)
+	Civilization = "greek",
+	Meaning = "City",
+	SingularNominative = "Polis",
+	SuffixSingular = true,
+	SuffixTypeName = {"settlement"} -- examples: "Amphipolis", "Callipolis", "Neapolis" (Naples)
+})
+
+DefineLanguageAdjective("Nea", { -- should be written as the original Greek name (with Greek characters)
+	Civilization = "greek",
+	Meaning = "New",
+	PrefixTypeName = {"settlement"} -- example: "Neapolis" (Naples)
 })

@@ -31,7 +31,7 @@ DefineLanguageNoun("Charles", {
 	SingularNominative = "Charles",
 	Gender = "Masculine",
 	NameSingular = true,
-	PersonalName = true
+	TypeName = {"person"}
 })
 
 DefineLanguageNoun("Francis", {
@@ -40,7 +40,7 @@ DefineLanguageNoun("Francis", {
 	SingularNominative = "Francis",
 	Gender = "Masculine",
 	NameSingular = true,
-	PersonalName = true
+	TypeName = {"person"}
 })
 
 DefineLanguageNoun("Henry", {
@@ -49,7 +49,7 @@ DefineLanguageNoun("Henry", {
 	SingularNominative = "Henry",
 	Gender = "Masculine",
 	NameSingular = true,
-	PersonalName = true
+	TypeName = {"person"}
 })
 
 DefineLanguageNoun("John", {
@@ -58,7 +58,7 @@ DefineLanguageNoun("John", {
 	SingularNominative = "John",
 	Gender = "Masculine",
 	NameSingular = true,
-	PersonalName = true
+	TypeName = {"person"}
 })
 
 DefineLanguageNoun("Lewis", {
@@ -67,7 +67,7 @@ DefineLanguageNoun("Lewis", {
 	SingularNominative = "Lewis",
 	Gender = "Masculine",
 	NameSingular = true,
-	PersonalName = true
+	TypeName = {"person"}
 })
 
 DefineLanguageNoun("William", {
@@ -76,7 +76,7 @@ DefineLanguageNoun("William", {
 	SingularNominative = "William",
 	Gender = "Masculine",
 	NameSingular = true,
-	PersonalName = true
+	TypeName = {"person"}
 })
 
 DefineLanguageNoun("House", {
@@ -85,7 +85,7 @@ DefineLanguageNoun("House", {
 	SingularNominative = "House",
 	Gender = "Neuter",
 	SuffixSingular = true,
-	SuffixSettlementName = true -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 336.
+	SuffixTypeName = {"settlement"} -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 336.
 })
 
 DefineLanguageNoun("Hyrst", {
@@ -94,7 +94,7 @@ DefineLanguageNoun("Hyrst", {
 	SingularNominative = "Hyrst",
 	Gender = "Neuter",
 	SuffixSingular = true,
-	SuffixSettlementName = true -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 336.
+	SuffixTypeName = {"settlement"} -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 336.
 })
 
 DefineLanguageNoun("Ing", {
@@ -103,7 +103,7 @@ DefineLanguageNoun("Ing", {
 	SingularNominative = "Ing",
 --	Gender = "?",
 	SuffixSingular = true,
-	SuffixSettlementName = true -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 336.
+	SuffixTypeName = {"settlement"} -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 336.
 })
 
 DefineLanguageNoun("Mouth", {
@@ -112,7 +112,7 @@ DefineLanguageNoun("Mouth", {
 	SingularNominative = "Mouth",
 	Gender = "Neuter",
 	SuffixSingular = true,
-	SuffixSettlementName = true -- example: "Plymouth"
+	SuffixTypeName = {"settlement"} -- example: "Plymouth"
 })
 
 DefineLanguageNoun("Ply", {
@@ -121,7 +121,7 @@ DefineLanguageNoun("Ply", {
 	SingularNominative = "Ply",
 --	Gender = "?",
 	PrefixSingular = true,
-	PrefixSettlementName = true -- example: "Plymouth"
+	PrefixTypeName = {"settlement"} -- example: "Plymouth"
 })
 
 DefineLanguageNoun("Town", {
@@ -130,7 +130,7 @@ DefineLanguageNoun("Town", {
 	SingularNominative = "Town",
 	Gender = "Neuter",
 	SuffixSingular = true,
-	SuffixSettlementName = true -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 336.
+	SuffixTypeName = {"settlement"} -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 336.
 })
 
 DefineLanguageNoun("Tree", {
@@ -139,7 +139,7 @@ DefineLanguageNoun("Tree", {
 	SingularNominative = "Tree",
 	Gender = "Neuter",
 	SuffixSingular = true,
-	SuffixSettlementName = true -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 336.
+	SuffixTypeName = {"settlement"} -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 336.
 })
 
 DefineLanguageNoun("Wich", {
@@ -148,5 +148,5 @@ DefineLanguageNoun("Wich", {
 	SingularNominative = "Wich",
 	Gender = "Neuter",
 	SuffixSingular = true,
-	SuffixSettlementName = true -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 336.
+	SuffixTypeName = {"settlement"} -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 336.
 })

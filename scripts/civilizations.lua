@@ -123,19 +123,6 @@ DefineRaceNames(
 		"visible",
 		"species", "human",
 		"parent-civilization", "teuton",
-		"personal-names", {"Charles", "Francis", "Henry", "John", "Lewis", "William"},
-		"settlement-name-prefixes", {
-			"Ply", -- Example: "Plymouth"
-		},
-		"settlement-name-suffixes", {
-			"house", -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 336.
-			"hyrst", -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 336.
-			"ing", -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 336.
-			"mouth", -- Example: "Plymouth"
-			"town", -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
-			"tree", -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
-			"wich" -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
-		},
 		"name-translations", {
 			"Lisboa", "Lisbon",
 			"Wien", "Vienna"
@@ -148,25 +135,6 @@ DefineRaceNames(
 		"display", "Germanic",
 		"visible",
 		"species", "human",
-		"personal-names", {
-			"Godagaz", -- Godagaz = Goody / Good One
-			"Wagigaz", -- Wagigaz = One Who Moves Along Impetuously
-			"Wiwaz" -- Wiwaz = Darter
-		}, -- Hagustaldaz = Young Warrior / Owner of a Small Property, Hadulaikaz = Battle-Dancer, Hlewagastiz = Protected / Glory-Guest, Holtagastiz = Wood Guest
-		"personal-name-prefixes", {
-			"Hadu", -- Hadu = Battle
-			"Hagu", -- Hagu = Small Property
-			"Hlewa", -- Hlewa = Glory
-			"Holta", -- Holta = Wood
-			"Theuda", -- Theuda = People
-			"Wodu" -- Wodu = Fury
-		},
-		"personal-name-suffixes", {
-			"laikaz", -- Laikaz = Dancer
-			"ridaz", -- Ridaz = Rider
-			"riks", -- Riks = Ruler
-			"staldaz" -- Staldaz = Owner
-		},
 		"default-color", "orange"
 	},
 	"race", { -- has to be defined after the germanic civilization because it uses it as its parent civilization
@@ -184,7 +152,6 @@ DefineRaceNames(
 		"visible",
 		"species", "gnome",
 		"parent-civilization", "dwarf",
-		"personal-names", {"Bimbam", "Clavo", "Cravatu", "Kalutho", "Pypo", "Rubezahl"},
 		"playable", false,
 		"default-color", "blue"
 	},
@@ -193,9 +160,6 @@ DefineRaceNames(
 		"display", "Goblin",
 		"visible",
 		"species", "goblin",
-		"personal-names", {"Dran", "Erdog", "Fal Khag", "Gashnok", "Gatrakh", "Gorokh", "Greebo", "Grogor-Tuk", "Hrugt", "Kardur", "Kartrog", "Krung", "Odrun", "Orhtib", "Ozdul", "Panok", "Pruol", "Sbrak", "Sdrul", "Thurg", "T'shar Lggi", "Uhmit", "Urdum", "Utrub", "Vrag", "Vrunt", "Zhuk", "Zuzerd"},
-		"personal-name-prefixes", {"Gom", "Grash", "Grut", "Gum", "Kar", "Kret", "Krom", "Stug"}, -- from Mike Anderson's Tyrant
-		"personal-name-suffixes", {"bag", "dag", "lig", "lug", "nak", "nark", "rat", "tug"}, -- from Mike Anderson's Tyrant
 		"playable", false,
 		"default-color", "teal"
 	},
@@ -204,12 +168,9 @@ DefineRaceNames(
 		"display", "Kobold",
 		"visible",
 		"species", "kobold",
-		"personal-name-prefixes", {"Hod", "Hoid", "Napf", "Pump"},
-		"personal-name-suffixes", {"coat", "eke", "ike", "hut"}, -- Hut = Hat
 		"parent-civilization", "goblin",
 		"playable", false,
 		"default-color", "violet"
-		 -- Sources for Kobold names: Hodeke (Jacob Grimm, "Deutsche Mythologie", pp. 392, 1049, 1080), Hoidike (Jacob Grimm, "Deutsche Mythologie", p. 392), Napfhans (Jacob Grimm, "Deutsche Mythologie", p. 393), Pumphut (Jacob Grimm, "Deutsche Mythologie", p. 1049), Shellycoat (Jacob Grimm, "Deutsche Mythologie", p. 394)
 	},
 	"race", {
 		"name", "orc",
@@ -225,9 +186,6 @@ DefineRaceNames(
 		"visible",
 		"species", "human",
 		"parent-civilization", "germanic",
-		"personal-names", {"Arnulf", "Bernhard", "Franz", "Friedrich", "Gerhard", "Gunther", "Gustav", "Heinrich", "Hermann", "Johann", "Hans", "Karl", "Klaus", "Kurt", "Lothar", "Ludwig", "Manfred", "Otto", "Pippin", "Walter", "Werner", "Wilhelm"},
-		"personal-name-prefixes", {"Hel", "Karl"},
-		"personal-name-suffixes", {"fried", "gang"},
 		"province-names", {
 			"Baden",
 			"Bayern", -- "Bayern" = "Bavaria"

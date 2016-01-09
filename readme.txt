@@ -233,6 +233,9 @@ https://github.com/Andrettin/Wyrmsun
 - 1.9.7
 -----------------------------------------------------------------------
 
+* Buildings
+- Germanic smithies are now generated with proper names.
+
 * Items
 - Added "Frail" magic prefix for armor items and buildings.
 - Added "Vulnerable" magic prefix for armor items and buildings.

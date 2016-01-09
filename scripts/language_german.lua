@@ -32,7 +32,7 @@ DefineLanguageNoun("Adel", {
 	SingularGenitive = "Adels",
 	Gender = "Masculine",
 	PrefixSingular = true,
-	PrefixSettlementName = true -- example: "Adelsberg"
+	PrefixTypeName = {"settlement"} -- example: "Adelsberg"
 })
 
 DefineLanguageNoun("Arl", {
@@ -41,6 +41,14 @@ DefineLanguageNoun("Arl", {
 	SingularNominative = "Arl",
 	PrefixSingular = true,
 	PrefixTypeName = {"terrain-mountains"} -- example: "Arlberg"
+})
+
+DefineLanguageNoun("Arnulf", {
+	Civilization = "teuton",
+	Meaning = "?",
+	SingularNominative = "Arnulf",
+	NameSingular = true,
+	TypeName = {"person"}
 })
 
 DefineLanguageNoun("Au", { -- Source: http://www.duden.de/rechtschreibung/Au_feuchte_Niederung
@@ -56,7 +64,7 @@ DefineLanguageNoun("Au", { -- Source: http://www.duden.de/rechtschreibung/Au_feu
 	PluralGenitive = "Auen",
 	Gender = "Feminine",
 	SuffixSingular = true,
-	SuffixSettlementName = true -- example: "Blumenau"
+	SuffixTypeName = {"settlement"} -- example: "Blumenau"
 })
 
 DefineLanguageNoun("Bach", { -- Source: http://www.duden.de/rechtschreibung/Bach_Wasserlauf
@@ -72,7 +80,7 @@ DefineLanguageNoun("Bach", { -- Source: http://www.duden.de/rechtschreibung/Bach
 	PluralGenitive = "Bäche",
 	Gender = "Masculine",
 	SuffixSingular = true,
-	SuffixSettlementName = true -- example: "Mühlenbach"
+	SuffixTypeName = {"settlement"} -- example: "Mühlenbach"
 })
 
 DefineLanguageNoun("Bad", { -- Source: http://www.duden.de/rechtschreibung/Bad
@@ -88,7 +96,7 @@ DefineLanguageNoun("Bad", { -- Source: http://www.duden.de/rechtschreibung/Bad
 	PluralGenitive = "Bäder",
 	Gender = "Neuter",
 	SuffixSingular = true,
-	SuffixSettlementName = true -- example: "Karlsbad"
+	SuffixTypeName = {"settlement"} -- example: "Karlsbad"
 })
 
 DefineLanguageNoun("Bär", { -- Source: http://www.duden.de/rechtschreibung/Baer_Raubtier
@@ -114,12 +122,20 @@ DefineLanguageNoun("Berg", {
 	PluralNominative = "Berge",
 	Gender = "Masculine",
 	SuffixSingular = true,
-	SuffixProvinceName = true, -- example: "Vorarlberg" (Vorarlberg is a special case, however - ideally we should generate mountain names like "Arlberg", and then have the possibility of adding the prefix "Vor" regarding the mountain, if it is on the edge of the province
-	SuffixSettlementName = true, -- examples: "Adelsberg", "Lemberg", "Königsberg", "Spielberg"
 	SuffixTypeName = {
+		"settlement", -- examples: "Adelsberg", "Lemberg", "Königsberg", "Spielberg"
+		"province", -- example: "Vorarlberg" (Vorarlberg is a special case, however - ideally we should generate mountain names like "Arlberg", and then have the possibility of adding the prefix "Vor" regarding the mountain, if it is on the edge of the province
 		"terrain-hills", -- examples: "Bärenberg", "Hackenberg"
 		"terrain-mountains" -- example: "Arlberg", "Schneeberg"
 	}
+})
+
+DefineLanguageNoun("Bernhard", {
+	Civilization = "teuton",
+	Meaning = "?",
+	SingularNominative = "Bernhard",
+	NameSingular = true,
+	TypeName = {"person"}
 })
 
 DefineLanguageNoun("Blume", { -- Source: http://www.duden.de/rechtschreibung/Blume
@@ -135,7 +151,7 @@ DefineLanguageNoun("Blume", { -- Source: http://www.duden.de/rechtschreibung/Blu
 	PluralGenitive = "Blumen",
 	Gender = "Feminine",
 	PrefixPlural = true,
-	PrefixSettlementName = true -- example: "Blumenau"
+	PrefixTypeName = {"settlement"} -- example: "Blumenau"
 })
 
 DefineLanguageNoun("Bruck", {
@@ -145,9 +161,9 @@ DefineLanguageNoun("Bruck", {
 	PluralNominative = "Brucken",
 	Gender = "Feminine",
 	NameSingular = true,
-	SettlementName = true, -- example: "Bruck"
+	TypeName = {"settlement"}, -- example: "Bruck"
 	SuffixSingular = true,
-	SuffixSettlementName = true -- example: "Innsbruck"
+	SuffixTypeName = {"settlement"} -- example: "Innsbruck"
 })
 
 DefineLanguageNoun("Burg", {
@@ -157,10 +173,12 @@ DefineLanguageNoun("Burg", {
 	PluralNominative = "Burgen",
 	Gender = "Feminine",
 	PrefixPlural = true,
-	PrefixProvinceName = true, -- example: "Burgenland"
+	PrefixTypeName = {"province"}, -- example: "Burgenland"
 	SuffixSingular = true,
-	SuffixProvinceName = true, -- example: "Brandenburg"
-	SuffixSettlementName = true -- examples: Hamburg, Klausenburg, Marburg, Nikolsburg, Ödenburg, Regensburg, Salzburg, Schässburg
+	SuffixTypeName = {
+		"settlement", -- examples: Hamburg, Klausenburg, Marburg, Nikolsburg, Ödenburg, Regensburg, Salzburg, Schässburg
+		"province" -- example: "Brandenburg"
+	}
 })
 
 DefineLanguageNoun("Dorf", {
@@ -170,7 +188,7 @@ DefineLanguageNoun("Dorf", {
 	PluralNominative = "Dörfer",
 	Gender = "Neuter",
 	SuffixSingular = true,
-	SuffixSettlementName = true -- examples: Frohsdorf, Gänserndorf
+	SuffixTypeName = {"settlement"} -- examples: Frohsdorf, Gänserndorf
 })
 
 DefineLanguageNoun("Drasch", {
@@ -193,7 +211,7 @@ DefineLanguageNoun("Eisen", {
 	Gender = "Neuter",
 	Uncountable = true,
 	PrefixSingular = true,
-	PrefixSettlementName = true -- examples: "Eisenerz", "Eisenstadt"
+	PrefixTypeName = {"settlement"} -- examples: "Eisenerz", "Eisenstadt"
 })
 
 DefineLanguageNoun("Erz", {
@@ -209,7 +227,31 @@ DefineLanguageNoun("Erz", {
 	PluralGenitive = "Erze",
 	Gender = "Neuter",
 	SuffixSingular = true,
-	SuffixSettlementName = true -- example: "Eisenerz"
+	SuffixTypeName = {"settlement"} -- example: "Eisenerz"
+})
+
+DefineLanguageNoun("Franz", {
+	Civilization = "teuton",
+	Meaning = "?",
+	SingularNominative = "Franz",
+	NameSingular = true,
+	TypeName = {"person"}
+})
+
+DefineLanguageNoun("Fried", {
+	Civilization = "teuton",
+	Meaning = "?",
+	SingularNominative = "Fried",
+	SuffixSingular = true,
+	SuffixTypeName = {"person"}
+})
+
+DefineLanguageNoun("Friedrich", {
+	Civilization = "teuton",
+	Meaning = "?",
+	SingularNominative = "Friedrich",
+	NameSingular = true,
+	TypeName = {"person"}
 })
 
 DefineLanguageNoun("Furt", { -- Source: http://www.duden.de/rechtschreibung/Furt
@@ -225,7 +267,23 @@ DefineLanguageNoun("Furt", { -- Source: http://www.duden.de/rechtschreibung/Furt
 	PluralGenitive = "Furten",
 	Gender = "Feminine",
 	SuffixSingular = true,
-	SuffixSettlementName = true -- example: "Klagenfurt"
+	SuffixTypeName = {"settlement"} -- example: "Klagenfurt"
+})
+
+DefineLanguageNoun("Gang", {
+	Civilization = "teuton",
+	Meaning = "?",
+	SingularNominative = "Gang",
+	SuffixSingular = true,
+	SuffixTypeName = {"person"}
+})
+
+DefineLanguageNoun("Gerhard", {
+	Civilization = "teuton",
+	Meaning = "?",
+	SingularNominative = "Gerhard",
+	NameSingular = true,
+	TypeName = {"person"}
 })
 
 DefineLanguageNoun("Gott", {
@@ -234,7 +292,23 @@ DefineLanguageNoun("Gott", {
 	SingularNominative = "Gott",
 	Gender = "Masculine",
 	PrefixSingular = true,
-	PrefixPersonalName = true -- example: Gottfried
+	PrefixTypeName = {"person"} -- example: Gottfried
+})
+
+DefineLanguageNoun("Gunther", {
+	Civilization = "teuton",
+	Meaning = "?",
+	SingularNominative = "Gunther",
+	NameSingular = true,
+	TypeName = {"person"}
+})
+
+DefineLanguageNoun("Gustav", {
+	Civilization = "teuton",
+	Meaning = "?",
+	SingularNominative = "Gustav",
+	NameSingular = true,
+	TypeName = {"person"}
 })
 
 DefineLanguageNoun("Hacken", {
@@ -262,7 +336,39 @@ DefineLanguageNoun("Hagen", { -- Source: http://www.duden.de/rechtschreibung/Hag
 	SingularGenitive = "Hagen",
 	Gender = "Masculine",
 	NameSingular = true,
-	PersonalName = true
+	TypeName = {"person"}
+})
+
+DefineLanguageNoun("Hans", {
+	Civilization = "teuton",
+	Meaning = "?",
+	SingularNominative = "Hans",
+	NameSingular = true,
+	TypeName = {"person"}
+})
+
+DefineLanguageNoun("Heinrich", {
+	Civilization = "teuton",
+	Meaning = "?",
+	SingularNominative = "Heinrich",
+	NameSingular = true,
+	TypeName = {"person"}
+})
+
+DefineLanguageNoun("Hel", {
+	Civilization = "teuton",
+	Meaning = "?",
+	SingularNominative = "Hel",
+	PrefixSingular = true,
+	PrefixTypeName = {"person"}
+})
+
+DefineLanguageNoun("Hermann", {
+	Civilization = "teuton",
+	Meaning = "?",
+	SingularNominative = "Hermann",
+	NameSingular = true,
+	TypeName = {"person"}
 })
 
 DefineLanguageNoun("Hof", {
@@ -272,7 +378,7 @@ DefineLanguageNoun("Hof", {
 	PluralNominative = "Höfe",
 	Gender = "Masculine",
 	SuffixSingular = true,
-	SuffixSettlementName = true -- example: "Königinhof"
+	SuffixTypeName = {"settlement"} -- example: "Königinhof"
 })
 
 DefineLanguageNoun("Horn", {
@@ -295,7 +401,7 @@ DefineLanguageNoun("Huhn", {
 	PluralGenitive = "Hühner",
 	Gender = "Neuter",
 	PrefixPlural = true,
-	PrefixSettlementName = true -- example: "Hühnerwasser"
+	PrefixTypeName = {"settlement"} -- example: "Hühnerwasser"
 })
 
 DefineLanguageNoun("Hunger", { -- Source: http://www.duden.de/rechtschreibung/Hunger
@@ -327,6 +433,24 @@ DefineLanguageNoun("Hügel", {
 	SuffixTypeName = {"terrain-hills"} -- example: "Konstantinhügel" (http://www.wien.gv.at/umwelt/parks/anlagen/prater.html)
 })
 
+DefineLanguageNoun("Johann", {
+	Civilization = "teuton",
+	Meaning = "?",
+	SingularNominative = "Johann",
+	NameSingular = true,
+	TypeName = {"person"}
+})
+
+DefineLanguageNoun("Karl", {
+	Civilization = "teuton",
+	Meaning = "?",
+	SingularNominative = "Karl",
+	NameSingular = true,
+	TypeName = {"person"},
+	PrefixSingular = true,
+	PrefixTypeName = {"person"}
+})
+
 DefineLanguageNoun("Kirche", {
 	Civilization = "teuton",
 	Meaning = "Church",
@@ -334,7 +458,7 @@ DefineLanguageNoun("Kirche", {
 	PluralNominative = "Kirchen",
 	Gender = "Feminine",
 	SuffixPlural = true,
-	SuffixSettlementName = true -- examples: "Fünfkirchen", "Weisskirchen"
+	SuffixTypeName = {"settlement"} -- examples: "Fünfkirchen", "Weisskirchen"
 })
 
 DefineLanguageNoun("Klage", { -- Source: http://www.duden.de/rechtschreibung/Klage
@@ -350,7 +474,15 @@ DefineLanguageNoun("Klage", { -- Source: http://www.duden.de/rechtschreibung/Kla
 	PluralGenitive = "Klagen",
 	Gender = "Feminine",
 	PrefixPlural = true,
-	PrefixSettlementName = true -- example: "Klagenfurt"
+	PrefixTypeName = {"settlement"} -- example: "Klagenfurt"
+})
+
+DefineLanguageNoun("Klaus", {
+	Civilization = "teuton",
+	Meaning = "?",
+	SingularNominative = "Klaus",
+	NameSingular = true,
+	TypeName = {"person"}
 })
 
 DefineLanguageNoun("Klause", { -- Source: http://www.duden.de/rechtschreibung/Klause
@@ -366,7 +498,7 @@ DefineLanguageNoun("Klause", { -- Source: http://www.duden.de/rechtschreibung/Kl
 	PluralGenitive = "Klausen",
 	Gender = "Feminine",
 	PrefixPlural = true,
-	PrefixSettlementName = true -- example: "Klausenburg"
+	PrefixTypeName = {"settlement"} -- example: "Klausenburg"
 })
 
 DefineLanguageNoun("König", {
@@ -377,7 +509,7 @@ DefineLanguageNoun("König", {
 	PluralNominative = "Könige",
 	Gender = "Masculine",
 	PrefixSingular = true,
-	PrefixSettlementName = true -- examples: "Königgrätz", "Königsberg"
+	PrefixTypeName = {"settlement"} -- examples: "Königgrätz", "Königsberg"
 })
 
 DefineLanguageNoun("Königin", {
@@ -388,7 +520,7 @@ DefineLanguageNoun("Königin", {
 	PluralNominative = "Königinnen",
 	Gender = "Feminine",
 	PrefixSingular = true,
-	PrefixSettlementName = true -- example: "Königinhof"
+	PrefixTypeName = {"settlement"} -- example: "Königinhof"
 })
 
 DefineLanguageNoun("Kugel", {
@@ -407,6 +539,14 @@ DefineLanguageNoun("Kugel", {
 	SuffixTypeName = {"terrain-mountains"} -- example: "Weißkugel"
 })
 
+DefineLanguageNoun("Kurt", {
+	Civilization = "teuton",
+	Meaning = "?",
+	SingularNominative = "Kurt",
+	NameSingular = true,
+	TypeName = {"person"}
+})
+
 DefineLanguageNoun("Lai", { -- Source: http://www.duden.de/rechtschreibung/Lai
 	Civilization = "teuton",
 	Meaning = "Old French Poetry",
@@ -415,7 +555,7 @@ DefineLanguageNoun("Lai", { -- Source: http://www.duden.de/rechtschreibung/Lai
 	PluralNominative = "Lais",
 	Gender = "Neuter",
 	PrefixSingular = true,
-	PrefixSettlementName = true -- example: "Laibach"
+	PrefixTypeName = {"settlement"} -- example: "Laibach"
 })
 
 DefineLanguageNoun("Land", {
@@ -427,7 +567,31 @@ DefineLanguageNoun("Land", {
 	PluralGenitive = "Länder",
 	Gender = "Neuter",
 	SuffixSingular = true,
-	SuffixProvinceName = true -- example: "Burgenland"
+	SuffixTypeName = {"province"} -- example: "Burgenland"
+})
+
+DefineLanguageNoun("Lothar", {
+	Civilization = "teuton",
+	Meaning = "?",
+	SingularNominative = "Lothar",
+	NameSingular = true,
+	TypeName = {"person"}
+})
+
+DefineLanguageNoun("Ludwig", {
+	Civilization = "teuton",
+	Meaning = "?",
+	SingularNominative = "Ludwig",
+	NameSingular = true,
+	TypeName = {"person"}
+})
+
+DefineLanguageNoun("Manfred", {
+	Civilization = "teuton",
+	Meaning = "?",
+	SingularNominative = "Manfred",
+	NameSingular = true,
+	TypeName = {"person"}
 })
 
 DefineLanguageNoun("Mann", {
@@ -437,7 +601,7 @@ DefineLanguageNoun("Mann", {
 	PluralNominative = "Männer",
 	Gender = "Masculine",
 	SuffixSingular = true,
-	SuffixPersonalName = true -- example: Hermann, Karlmann
+	SuffixTypeName = {"person"} -- example: Hermann, Karlmann
 })
 
 DefineLanguageNoun("Mark", {
@@ -447,7 +611,7 @@ DefineLanguageNoun("Mark", {
 	PluralNominative = "Marken",
 	Gender = "Feminine",
 	SuffixSingular = true,
-	SuffixProvinceName = true -- example: "Steiermark" (Styria)
+	SuffixTypeName = {"province"} -- example: "Steiermark" (Styria)
 })
 
 DefineLanguageNoun("Mühle", { -- Source: http://www.duden.de/rechtschreibung/Muehle
@@ -463,7 +627,7 @@ DefineLanguageNoun("Mühle", { -- Source: http://www.duden.de/rechtschreibung/Mu
 	PluralGenitive = "Mühlen",
 	Gender = "Feminine",
 	PrefixPlural = true,
-	PrefixSettlementName = true -- example: "Mühlenbach"
+	PrefixTypeName = {"settlement"} -- example: "Mühlenbach"
 })
 
 DefineLanguageNoun("Mut", {
@@ -473,7 +637,7 @@ DefineLanguageNoun("Mut", {
 	Gender = "Masculine",
 	Uncountable = true,
 	SuffixSingular = true,
-	SuffixPersonalName = true
+	SuffixTypeName = {"person"}
 })
 
 DefineLanguageNoun("Nuss", { -- Source: http://www.duden.de/rechtschreibung/Nuss
@@ -499,7 +663,23 @@ DefineLanguageNoun("Ost", {
 	SingularGenitive = "Ost",
 	Gender = "Masculine",
 	PrefixSingular = true,
-	PrefixProvinceName = true -- example: "Ostmark"
+	PrefixTypeName = {"province"} -- example: "Ostmark"
+})
+
+DefineLanguageNoun("Otto", {
+	Civilization = "teuton",
+	Meaning = "?",
+	SingularNominative = "Otto",
+	NameSingular = true,
+	TypeName = {"person"}
+})
+
+DefineLanguageNoun("Pippin", {
+	Civilization = "teuton",
+	Meaning = "?",
+	SingularNominative = "Pippin",
+	NameSingular = true,
+	TypeName = {"person"}
 })
 
 DefineLanguageNoun("Rose", { -- Source: http://www.duden.de/rechtschreibung/Rose_Pflanze_Bluete_Verdickung
@@ -525,7 +705,7 @@ DefineLanguageNoun("Salz", {
 	Gender = "Masculine",
 	Uncountable = true,
 	PrefixSingular = true,
-	PrefixSettlementName = true -- example: Salzburg
+	PrefixTypeName = {"settlement"} -- example: Salzburg
 })
 
 DefineLanguageNoun("Schaf", {
@@ -584,7 +764,7 @@ DefineLanguageNoun("Sieg", {
 	PluralNominative = "Siege",
 	Gender = "Masculine",
 	PrefixSingular = true,
-	PrefixPersonalName = true
+	PrefixTypeName = {"person"}
 })
 
 DefineLanguageNoun("Spitze", {
@@ -610,7 +790,7 @@ DefineLanguageNoun("Stadt", {
 	PluralNominative = "Städte",
 	Gender = "Feminine",
 	SuffixSingular = true,
-	SuffixSettlementName = true -- examples: "Eisenstadt", "Josefstadt", "Kronstadt", "Leopoldstadt"
+	SuffixTypeName = {"settlement"} -- examples: "Eisenstadt", "Josefstadt", "Kronstadt", "Leopoldstadt"
 })
 
 DefineLanguageNoun("Stuhl", {
@@ -629,7 +809,7 @@ DefineLanguageNoun("Tal", {
 	PluralNominative = "Täler",
 	Gender = "Neuter",
 	SuffixSingular = true,
-	SuffixSettlementName = true -- examples: "Zillertal"
+	SuffixTypeName = {"settlement"} -- examples: "Zillertal"
 })
 
 DefineLanguageNoun("Teufel", {
@@ -670,6 +850,14 @@ DefineLanguageNoun("Waid", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	SingularNominative = "Waid"
 })
 
+DefineLanguageNoun("Walter", {
+	Civilization = "teuton",
+	Meaning = "?",
+	SingularNominative = "Walter",
+	NameSingular = true,
+	TypeName = {"person"}
+})
+
 DefineLanguageNoun("Wasser", {
 	Civilization = "teuton",
 	Meaning = "Water",
@@ -677,7 +865,15 @@ DefineLanguageNoun("Wasser", {
 	Gender = "Neuter",
 	Uncountable = true,
 	SuffixSingular = true,
-	SuffixSettlementName = true -- example: "Hühnerwasser"
+	SuffixTypeName = {"settlement"} -- example: "Hühnerwasser"
+})
+
+DefineLanguageNoun("Werner", {
+	Civilization = "teuton",
+	Meaning = "?",
+	SingularNominative = "Werner",
+	NameSingular = true,
+	TypeName = {"person"}
 })
 
 DefineLanguageNoun("West", {
@@ -687,7 +883,15 @@ DefineLanguageNoun("West", {
 	SingularGenitive = "West",
 	Gender = "Masculine",
 	PrefixSingular = true,
-	PrefixProvinceName = true -- example: "Westphalien"
+	PrefixTypeName = {"province"} -- example: "Westphalien"
+})
+
+DefineLanguageNoun("Wilhelm", {
+	Civilization = "teuton",
+	Meaning = "?",
+	SingularNominative = "Wilhelm",
+	NameSingular = true,
+	TypeName = {"person"}
 })
 
 DefineLanguageNoun("Wolf", {
@@ -697,7 +901,7 @@ DefineLanguageNoun("Wolf", {
 	PluralNominative = "Wölfe",
 	Gender = "Masculine",
 	PrefixSingular = true,
-	PrefixPersonalName = true
+	PrefixTypeName = {"person"}
 })
 
 DefineLanguageVerb("Hacken", {
@@ -723,7 +927,7 @@ DefineLanguageVerb("Hacken", {
 DefineLanguageAdjective("Alt", {
 	Civilization = "teuton",
 	Meaning = "Old",
-	PrefixSettlementName = true -- example: "Altsohl"
+	PrefixTypeName = {"settlement"} -- example: "Altsohl"
 })
 
 DefineLanguageAdjective("Hart", { -- Source: http://www.duden.de/rechtschreibung/hart
@@ -731,20 +935,22 @@ DefineLanguageAdjective("Hart", { -- Source: http://www.duden.de/rechtschreibung
 	Meaning = "Hard",
 	Comparative = "Härter",
 	Superlative = "Härteste",
-	SuffixPersonalName = true -- examples: "Alphart", "Wolfhart"
+	SuffixTypeName = {"person"} -- examples: "Alphart", "Wolfhart"
 })
 
 DefineLanguageAdjective("Neu", {
 	Civilization = "teuton",
 	Meaning = "New",
-	PrefixSettlementName = true -- example: "Neusohl"
+	PrefixTypeName = {"settlement"} -- example: "Neusohl"
 })
 
 DefineLanguageAdjective("Weiß", {
 	Civilization = "teuton",
 	Meaning = "White",
-	PrefixSettlementName = true, -- example: "Weisskirchen"
-	PrefixTypeName = {"terrain-mountains"} -- example: "Weißkugel"
+	PrefixTypeName = {
+		"settlement", -- example: "Weisskirchen"
+		"terrain-mountains" -- example: "Weißkugel"
+	}
 })
 
 DefineLanguageAdjective("Wild", {
@@ -760,10 +966,10 @@ DefineLanguageAdverb("Mehr", {
 
 DefineLanguageNumeral("Fünf", {
 	Number = 5,
-	PrefixSettlementName = true -- example: "Fünfkirchen"
+	PrefixTypeName = {"settlement"} -- example: "Fünfkirchen"
 })
 
 DefineLanguageNumeral("Sieben", {
 	Number = 7,
-	PrefixProvinceName = true -- example: "Siebenbürgen"
+	PrefixTypeName = {"province"} -- example: "Siebenbürgen"
 })

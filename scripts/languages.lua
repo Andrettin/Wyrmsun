@@ -32,6 +32,9 @@ Load("scripts/language_gothic.lua")
 Load("scripts/language_latin.lua")
 Load("scripts/language_greek.lua")
 Load("scripts/language_dwarven.lua")
+Load("scripts/language_gnomish.lua")
+Load("scripts/language_goblin.lua")
+Load("scripts/language_kobold.lua")
 
 -- these are kept for reference, but not used
 --Load("scripts/language_english.lua")
