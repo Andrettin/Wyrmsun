@@ -976,6 +976,12 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-gnomish-recruit-gray-hair",
+	Size = {46, 38},
+	File = "gnome/icons/gnomish_recruit_gray_hair.png"
+})
+
+DefineIcon({
 	Name = "icon-gnomish-herbalist",
 	Size = {46, 38},
 	File = "gnome/icons/gnomish_herbalist.png"

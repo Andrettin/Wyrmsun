@@ -252,6 +252,9 @@ https://github.com/Andrettin/Wyrmsun
 - Instead of the Chieftain's Hall stats having lower armor for the On the Vanaquisl mission (germanic), the Vana Chieftain's Hall now has the "Frail" and "of Vulnerability" affixes on Easy and Normal difficulties.
 - Fixed the AI ally in the Battle of Magetobria quest (teuton), so that it is passive (doesn't train troops and attack the enemy), as it should.
 
+* Units
+- The icon of the Gnomish Recruit now has a gray-haired variation (thanks to Leo).
+
 -----------------------------------------------------------------------
 - 1.9.6
 -----------------------------------------------------------------------
