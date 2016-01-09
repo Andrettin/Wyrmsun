@@ -41,6 +41,7 @@ if (LoadedGame == false) then
 	SetPlayerData(1, "Resources", "oil", 0)
 	SetPlayerData(GetFactionPlayer("Asa Tribe"), "Allow", "upgrade-teuton-civilization", "F")
 	SetPlayerData(GetFactionPlayer("Vana Tribe"), "Allow", "unit-germanic-town-hall", "F")
+	SetPlayerData(GetFactionPlayer("Vana Tribe"), "Allow", "unit-germanic-barracks", "F")
 
 	unit = OldCreateUnit("unit-germanic-town-hall", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
 	if (GameSettings.Difficulty <= 2) then -- if the difficulty is normal or lower

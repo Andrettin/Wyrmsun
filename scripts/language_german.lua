@@ -35,6 +35,15 @@ DefineLanguageNoun("Adel", {
 	PrefixTypeName = {"settlement"} -- example: "Adelsberg"
 })
 
+DefineLanguageNoun("Amboss", {
+	Civilization = "teuton",
+	Meaning = "Anvil",
+	SingularNominative = "Amboss",
+	Gender = "Masculine",
+	SuffixSingular = true,
+	SuffixTypeName = {"unit-teuton-smithy"} -- seems sensible
+})
+
 DefineLanguageNoun("Arl", {
 	Civilization = "teuton",
 	Meaning = "?",
@@ -230,6 +239,22 @@ DefineLanguageNoun("Erz", {
 	SuffixTypeName = {"settlement"} -- example: "Eisenerz"
 })
 
+DefineLanguageNoun("Esse", {
+	Civilization = "teuton",
+	Meaning = "Forge",
+	SingularNominative = "Esse",
+	SingularAccusative = "Esse",
+	SingularDative = "Esse",
+	SingularGenitive = "Esse",
+	PluralNominative = "Essen",
+	PluralAccusative = "Essen",
+	PluralDative = "Essen",
+	PluralGenitive = "Essen",
+	Gender = "Feminine",
+	SuffixSingular = true,
+	SuffixTypeName = {"unit-teuton-smithy"} -- seems sensible
+})
+
 DefineLanguageNoun("Franz", {
 	Civilization = "teuton",
 	Meaning = "?",
@@ -337,6 +362,22 @@ DefineLanguageNoun("Hagen", { -- Source: http://www.duden.de/rechtschreibung/Hag
 	Gender = "Masculine",
 	NameSingular = true,
 	TypeName = {"person"}
+})
+
+DefineLanguageNoun("Hammer", {
+	Civilization = "teuton",
+	Meaning = "Hammer",
+	SingularNominative = "Hammer",
+	SingularAccusative = "Hammer",
+	SingularDative = "Hammer",
+	SingularGenitive = "Hammers",
+	PluralNominative = "Hämmer",
+	PluralAccusative = "Hämmer",
+	PluralDative = "Hämmern",
+	PluralGenitive = "Hämmer",
+	Gender = "Masculine",
+	SuffixSingular = true,
+	SuffixTypeName = {"unit-teuton-smithy"} -- seems sensible
 })
 
 DefineLanguageNoun("Hans", {
@@ -747,6 +788,22 @@ DefineLanguageNoun("Schlossberg", { -- Source: http://www.duden.de/rechtschreibu
 	TypeName = {"terrain-hills"} -- example: "Schlossberg" (Graz)
 })
 
+DefineLanguageNoun("Schmiede", {
+	Civilization = "teuton",
+	Meaning = "Smithy",
+	SingularNominative = "Schmiede",
+	SingularAccusative = "Schmiede",
+	SingularDative = "Schmiede",
+	SingularGenitive = "Schmiede",
+	PluralNominative = "Schmieden",
+	PluralAccusative = "Schmieden",
+	PluralDative = "Schmieden",
+	PluralGenitive = "Schmieden",
+	Gender = "Feminine",
+	SuffixSingular = true,
+	SuffixTypeName = {"unit-teuton-smithy"} -- seems sensible
+})
+
 DefineLanguageNoun("Schnee", {
 	Civilization = "teuton",
 	Meaning = "Snow",
@@ -930,6 +987,22 @@ DefineLanguageAdjective("Alt", {
 	PrefixTypeName = {"settlement"} -- example: "Altsohl"
 })
 
+DefineLanguageAdjective("Brennend", {
+	Civilization = "teuton",
+	Meaning = "Burning",
+	PrefixTypeName = {
+		"unit-teuton-smithy" -- seems sensible
+	}
+})
+
+DefineLanguageAdjective("Feurig", {
+	Civilization = "teuton",
+	Meaning = "Fiery",
+	PrefixTypeName = {
+		"unit-teuton-smithy" -- seems sensible
+	}
+})
+
 DefineLanguageAdjective("Hart", { -- Source: http://www.duden.de/rechtschreibung/hart
 	Civilization = "teuton",
 	Meaning = "Hard",
@@ -941,7 +1014,18 @@ DefineLanguageAdjective("Hart", { -- Source: http://www.duden.de/rechtschreibung
 DefineLanguageAdjective("Neu", {
 	Civilization = "teuton",
 	Meaning = "New",
-	PrefixTypeName = {"settlement"} -- example: "Neusohl"
+	PrefixTypeName = {
+		"settlement",
+		"unit-teuton-smithy" -- seems sensible
+	} -- example: "Neusohl"
+})
+
+DefineLanguageAdjective("Schwartz", {
+	Civilization = "teuton",
+	Meaning = "Black",
+	PrefixTypeName = {
+		"unit-teuton-smithy" -- seems sensible
+	}
 })
 
 DefineLanguageAdjective("Weiß", {
@@ -949,7 +1033,8 @@ DefineLanguageAdjective("Weiß", {
 	Meaning = "White",
 	PrefixTypeName = {
 		"settlement", -- example: "Weisskirchen"
-		"terrain-mountains" -- example: "Weißkugel"
+		"terrain-mountains", -- example: "Weißkugel"
+		"unit-teuton-smithy" -- seems sensible
 	}
 })
 

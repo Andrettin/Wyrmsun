@@ -234,7 +234,7 @@ https://github.com/Andrettin/Wyrmsun
 -----------------------------------------------------------------------
 
 * Buildings
-- Germanic smithies are now generated with proper names.
+- Germanic and Teuton smithies now have proper names generated for them.
 
 * Items
 - Added "Frail" magic prefix for armor items and buildings.
@@ -246,9 +246,11 @@ https://github.com/Andrettin/Wyrmsun
 - The loading screen now has a background.
 - Loading screen tips and backgrounds now appear when loading a grand strategy map as well.
 - Fixed sluggish sound issue which happened on some systems (thanks to marcelofg55).
+- Fixed crash which could happen when the player was allied to an AI.
 
 * Quests
 - Instead of the Chieftain's Hall stats having lower armor for the On the Vanaquisl mission (germanic), the Vana Chieftain's Hall now has the "Frail" and "of Vulnerability" affixes on Easy and Normal difficulties.
+- Fixed the AI ally in the Battle of Magetobria quest (teuton), so that it is passive (doesn't train troops and attack the enemy), as it should.
 
 -----------------------------------------------------------------------
 - 1.9.6
