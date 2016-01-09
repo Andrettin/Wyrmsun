@@ -242,6 +242,7 @@ https://github.com/Andrettin/Wyrmsun
 * Miscellaneous
 - The loading screen now has a background.
 - Loading screen tips and backgrounds now appear when loading a grand strategy map as well.
+- Fixed sluggish sound issue which happened on some systems (thanks to marcelofg55).
 
 * Quests
 - Instead of the Chieftain's Hall stats having lower armor for the On the Vanaquisl mission (germanic), the Vana Chieftain's Hall now has the "Frail" and "of Vulnerability" affixes on Easy and Normal difficulties.

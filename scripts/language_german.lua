@@ -40,7 +40,7 @@ DefineLanguageNoun("Arl", {
 	Meaning = "?",
 	SingularNominative = "Arl",
 	PrefixSingular = true,
-	PrefixTerrainName = {"Mountains", true} -- example: "Arlberg"
+	PrefixTypeName = {"terrain-mountains"} -- example: "Arlberg"
 })
 
 DefineLanguageNoun("Au", { -- Source: http://www.duden.de/rechtschreibung/Au_feuchte_Niederung
@@ -104,7 +104,7 @@ DefineLanguageNoun("Bär", { -- Source: http://www.duden.de/rechtschreibung/Baer
 	PluralGenitive = "Bären",
 	Gender = "Masculine",
 	PrefixSingular = true,
-	PrefixTerrainName = {"Hills", true}, -- example: "Bärenberg"
+	PrefixTypeName = {"terrain-hills"}, -- example: "Bärenberg"
 })
 
 DefineLanguageNoun("Berg", {
@@ -116,9 +116,9 @@ DefineLanguageNoun("Berg", {
 	SuffixSingular = true,
 	SuffixProvinceName = true, -- example: "Vorarlberg" (Vorarlberg is a special case, however - ideally we should generate mountain names like "Arlberg", and then have the possibility of adding the prefix "Vor" regarding the mountain, if it is on the edge of the province
 	SuffixSettlementName = true, -- examples: "Adelsberg", "Lemberg", "Königsberg", "Spielberg"
-	SuffixTerrainName = {
-		"Hills", true, -- examples: "Bärenberg", "Hackenberg"
-		"Mountains", true -- example: "Arlberg", "Schneeberg"
+	SuffixTypeName = {
+		"terrain-hills", -- examples: "Bärenberg", "Hackenberg"
+		"terrain-mountains" -- example: "Arlberg", "Schneeberg"
 	}
 })
 
@@ -183,7 +183,7 @@ DefineLanguageNoun("Drasch", {
 	Gender = "Masculine",
 	Uncountable = true,
 	PrefixSingular = true,
-	PrefixTerrainName = {"Mountains", true} -- example: "Draschturm"
+	PrefixTypeName = {"terrain-mountains"} -- example: "Draschturm"
 })
 
 DefineLanguageNoun("Eisen", {
@@ -250,7 +250,7 @@ DefineLanguageNoun("Hacken", {
 	PluralGenitive = "Hacken",
 	Gender = "Masculine",
 	PrefixPlural = true, -- should it really be so? at least this makes the correct form of the name be preserved
-	PrefixTerrainName = {"Hills", true} -- example: "Hackenberg"
+	PrefixTypeName = {"terrain-hills"} -- example: "Hackenberg"
 })
 
 DefineLanguageNoun("Hagen", { -- Source: http://www.duden.de/rechtschreibung/Hagen
@@ -283,7 +283,7 @@ DefineLanguageNoun("Horn", {
 	PluralNominative = "Hörner",
 	Gender = "Neuter",
 	SuffixSingular = true,
-	SuffixTerrainName = {"Mountains", true} -- example: "Teufelshorn"
+	SuffixTypeName = {"terrain-mountains"} -- example: "Teufelshorn"
 })
 
 DefineLanguageNoun("Huhn", {
@@ -308,7 +308,7 @@ DefineLanguageNoun("Hunger", { -- Source: http://www.duden.de/rechtschreibung/Hu
 	Gender = "Masculine",
 	Uncountable = true,
 	PrefixSingular = true,
-	PrefixTerrainName = {"Hills", true} -- example: "Hungerberg"
+	PrefixTypeName = {"terrain-hills"} -- example: "Hungerberg"
 })
 
 DefineLanguageNoun("Hügel", {
@@ -324,7 +324,7 @@ DefineLanguageNoun("Hügel", {
 	PluralGenitive = "Hügel",
 	Gender = "Masculine",
 	SuffixPlural = true,
-	SuffixTerrainName = {"Hills", true} -- example: "Konstantinhügel" (http://www.wien.gv.at/umwelt/parks/anlagen/prater.html)
+	SuffixTypeName = {"terrain-hills"} -- example: "Konstantinhügel" (http://www.wien.gv.at/umwelt/parks/anlagen/prater.html)
 })
 
 DefineLanguageNoun("Kirche", {
@@ -404,7 +404,7 @@ DefineLanguageNoun("Kugel", {
 	PluralGenitive = "Kugeln",
 	Gender = "Feminine",
 	SuffixSingular = true,
-	SuffixTerrainName = {"Mountains", true} -- example: "Weißkugel"
+	SuffixTypeName = {"terrain-mountains"} -- example: "Weißkugel"
 })
 
 DefineLanguageNoun("Lai", { -- Source: http://www.duden.de/rechtschreibung/Lai
@@ -489,7 +489,7 @@ DefineLanguageNoun("Nuss", { -- Source: http://www.duden.de/rechtschreibung/Nuss
 	PluralGenitive = "Nüsse",
 	Gender = "Feminine",
 	PrefixSingular = true,
-	PrefixTerrainName = {"Hills", true} -- example: "Nussberg"
+	PrefixTypeName = {"terrain-hills"} -- example: "Nussberg"
 })
 
 DefineLanguageNoun("Ost", {
@@ -515,7 +515,7 @@ DefineLanguageNoun("Rose", { -- Source: http://www.duden.de/rechtschreibung/Rose
 	PluralGenitive = "Rosen",
 	Gender = "Feminine",
 	PrefixPlural = true,
-	PrefixTerrainName = {"Hills", true} -- example: "Rosenhügel"
+	PrefixTypeName = {"terrain-hills"} -- example: "Rosenhügel"
 })
 
 DefineLanguageNoun("Salz", {
@@ -541,7 +541,7 @@ DefineLanguageNoun("Schaf", {
 	PluralGenitive = "Schafe",
 	Gender = "Neuter",
 	PrefixSingular = true,
-	PrefixTerrainName = {"Hills", true} -- example: "Schafberg"
+	PrefixTypeName = {"terrain-hills"} -- example: "Schafberg"
 })
 
 DefineLanguageNoun("Schloss", { -- Source: http://www.duden.de/rechtschreibung/Schloss
@@ -564,7 +564,7 @@ DefineLanguageNoun("Schlossberg", { -- Source: http://www.duden.de/rechtschreibu
 	SingularNominative = "Schlossberg",
 	Gender = "Masculine",
 	NameSingular = true,
-	TerrainName = {"Hills", true} -- example: "Schlossberg" (Graz)
+	TypeName = {"terrain-hills"} -- example: "Schlossberg" (Graz)
 })
 
 DefineLanguageNoun("Schnee", {
@@ -574,7 +574,7 @@ DefineLanguageNoun("Schnee", {
 	Gender = "Masculine",
 	Uncountable = true,
 	PrefixSingular = true,
-	PrefixTerrainName = {"Mountains", true} -- example: "Schneeberg"
+	PrefixTypeName = {"terrain-mountains"} -- example: "Schneeberg"
 })
 
 DefineLanguageNoun("Sieg", {
@@ -600,7 +600,7 @@ DefineLanguageNoun("Spitze", {
 	PluralGenitive = "Spitzen",
 	Gender = "Feminine",
 	SuffixSingular = true,
-	SuffixTerrainName = {"Mountains", true} -- example: "Wildspitze"
+	SuffixTypeName = {"terrain-mountains"} -- example: "Wildspitze"
 })
 
 DefineLanguageNoun("Stadt", {
@@ -645,7 +645,7 @@ DefineLanguageNoun("Teufel", {
 	PluralGenitive = "Teufel",
 	Gender = "Masculine",
 	PrefixSingular = true,
-	PrefixTerrainName = {"Mountains", true} -- example: "Teufelshorn"
+	PrefixTypeName = {"terrain-mountains"} -- example: "Teufelshorn"
 })
 
 DefineLanguageNoun("Turm", {
@@ -661,7 +661,7 @@ DefineLanguageNoun("Turm", {
 	PluralGenitive = "Türme",
 	Gender = "Masculine",
 	SuffixSingular = true,
-	SuffixTerrainName = {"Mountains", true} -- example: "Draschturm"
+	SuffixTypeName = {"terrain-mountains"} -- example: "Draschturm"
 })
 
 DefineLanguageNoun("Waid", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 4.
@@ -744,13 +744,13 @@ DefineLanguageAdjective("Weiß", {
 	Civilization = "teuton",
 	Meaning = "White",
 	PrefixSettlementName = true, -- example: "Weisskirchen"
-	PrefixTerrainName = {"Mountains", true} -- example: "Weißkugel"
+	PrefixTypeName = {"terrain-mountains"} -- example: "Weißkugel"
 })
 
 DefineLanguageAdjective("Wild", {
 	Civilization = "teuton",
 	Meaning = "Wild",
-	PrefixTerrainName = {"Mountains", true} -- example: "Wildspitze"
+	PrefixTypeName = {"terrain-mountains"} -- example: "Wildspitze"
 })
 
 DefineLanguageAdverb("Mehr", {

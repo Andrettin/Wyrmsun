@@ -278,7 +278,7 @@ DefineUniqueItem("Cernin Palace", { -- Alena Ježková, "77 Prague Legends", 200
 -- Karoliny Světle Street; Source: Alena Ježková, "77 Prague Legends", 2006, p. 58.
 -- Nerudova Street; Source: Alena Ježková, "77 Prague Legends", 2006, p. 62.
 -- Ostruhová Street; Source: Alena Ježková, "77 Prague Legends", 2006, p. 62.
--- Golden Lane (called Zlatá - "golden"); Source: Alena Ježková, "77 Prague Legends", 2006, p. 92.
+-- Golden Lane (called "Zlatá" - "golden"); Source: Alena Ježková, "77 Prague Legends", 2006, p. 92.
 
 -- Unique squares in Prague
 -- Malé náměstí ("Small Square"); Source: Alena Ježková, "77 Prague Legends", 2006, p. 19.
