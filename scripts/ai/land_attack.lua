@@ -218,8 +218,8 @@ function AiLandAttack()
 				else
 					AiForce(1, {GetAiUnitType("infantry"), 3, GetAiUnitType("transport-ship"), 1})
 				end
-				AiSet(GetAiUnitType("infantry"), 0)
 				AiAttackWithForce(1)
+				AiSet(GetAiUnitType("infantry"), 0)
 				force_attacking[AiPlayer()] = true
 			end
 		elseif (CheckDependency(AiPlayer(), GetAiUnitType("infantry")) and CheckDependency(AiPlayer(), GetAiUnitType("shooter")) and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("barracks")) >= 1 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("barracks")) < 2 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("lumber-mill")) >= 1) then
@@ -238,9 +238,9 @@ function AiLandAttack()
 				else
 					AiForce(1, {GetAiUnitType("infantry"), 3, GetAiUnitType("shooter"), 1, GetAiUnitType("transport-ship"), 1})
 				end
+				AiAttackWithForce(1)
 				AiSet(GetAiUnitType("infantry"), 0)
 				AiSet(GetAiUnitType("shooter"), 0)
-				AiAttackWithForce(1)
 				force_attacking[AiPlayer()] = true
 			end
 		elseif (CheckDependency(AiPlayer(), GetAiUnitType("infantry")) and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("barracks")) >= 2 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("lumber-mill")) < 1) then
@@ -256,8 +256,8 @@ function AiLandAttack()
 				else
 					AiForce(1, {GetAiUnitType("infantry"), 6, GetAiUnitType("transport-ship"), 2})
 				end
-				AiSet(GetAiUnitType("infantry"), 0)
 				AiAttackWithForce(1)
+				AiSet(GetAiUnitType("infantry"), 0)
 				force_attacking[AiPlayer()] = true
 			end
 		elseif (CheckDependency(AiPlayer(), GetAiUnitType("infantry")) and CheckDependency(AiPlayer(), GetAiUnitType("shooter")) and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("barracks")) >= 2 and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("lumber-mill")) >= 1 and (GetAiUnitType("stronghold") == nil or GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("stronghold")) < 1)) then
@@ -276,9 +276,9 @@ function AiLandAttack()
 				else
 					AiForce(1, {GetAiUnitType("infantry"), 6, GetAiUnitType("shooter"), 3, GetAiUnitType("transport-ship"), 3})
 				end
+				AiAttackWithForce(1)
 				AiSet(GetAiUnitType("infantry"), 0)
 				AiSet(GetAiUnitType("shooter"), 0)
-				AiAttackWithForce(1)
 				force_attacking[AiPlayer()] = true
 			end
 		elseif (
@@ -309,10 +309,10 @@ function AiLandAttack()
 				else
 					AiForce(1, {GetAiUnitType("infantry"), 12, GetAiUnitType("shooter"), 6, GetAiUnitType("siege-engine"), 2, GetAiUnitType("transport-ship"), 7})
 				end
+				AiAttackWithForce(1)
 				AiSet(GetAiUnitType("infantry"), 0)
 				AiSet(GetAiUnitType("shooter"), 0)
 				AiSet(GetAiUnitType("siege-engine"), 0)
-				AiAttackWithForce(1)
 				force_attacking[AiPlayer()] = true
 			end
 		elseif (
@@ -350,11 +350,11 @@ function AiLandAttack()
 				else
 					AiForce(1, {GetAiUnitType("infantry"), 12, GetAiUnitType("shooter"), 12, GetAiUnitType("siege-engine"), 3, GetAiUnitType("cavalry"), 9, GetAiUnitType("transport-ship"), 12})
 				end
+				AiAttackWithForce(1)
 				AiSet(GetAiUnitType("infantry"), 0)
 				AiSet(GetAiUnitType("shooter"), 0)
 				AiSet(GetAiUnitType("siege-engine"), 0)
 				AiSet(GetAiUnitType("cavalry"), 0)
-				AiAttackWithForce(1)
 				force_attacking[AiPlayer()] = true
 			end
 		elseif (
@@ -395,12 +395,12 @@ function AiLandAttack()
 				else
 					AiForce(1, {GetAiUnitType("infantry"), 12, GetAiUnitType("shooter"), 12, GetAiUnitType("siege-engine"), 3, GetAiUnitType("cavalry"), 9, GetAiUnitType("flying-rider"), 3, GetAiUnitType("transport-ship"), 12})
 				end
+				AiAttackWithForce(1)
 				AiSet(GetAiUnitType("infantry"), 0)
 				AiSet(GetAiUnitType("shooter"), 0)
 				AiSet(GetAiUnitType("siege-engine"), 0)
 				AiSet(GetAiUnitType("cavalry"), 0)
 				AiSet(GetAiUnitType("flying-rider"), 0)
-				AiAttackWithForce(1)
 				force_attacking[AiPlayer()] = true
 			end
 		end
