@@ -63,7 +63,7 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if ((PlayerHasObjective(GetThisPlayer(), "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall") or PlayerHasObjective(GetThisPlayer(), "- Find Thursagan and bring him to your Mead Hall") or PlayerHasObjective(GetThisPlayer(), "- Defeat Glonoin, the Shorbear Clan leader") or PlayerHasObjective(GetThisPlayer(), "- Have all heroes in the Shorbear caves while no enemies are in the caves") or PlayerHasObjective(GetThisPlayer(), "- Move the Gnomish Envoy to the southern border east of the river")) and GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-gnomish-recruit") < 1) then
+		if ((PlayerHasObjective(GetThisPlayer(), "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall") or PlayerHasObjective(GetThisPlayer(), "- Find Thursagan and bring him to your Mead Hall") or PlayerHasObjective(GetThisPlayer(), "- Defeat Glonoin, the Shorbear Clan leader") or PlayerHasObjective(GetThisPlayer(), "- Have all heroes in the Shorbear caves while no enemies are in the caves") or PlayerHasObjective(GetThisPlayer(), "- Move the Gnomish Envoy to the southern border east of the river")) and GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-gnomish-duelist") < 1) then
 			player = GetThisPlayer()
 			return true
 		end
@@ -184,9 +184,7 @@ AddTrigger(
 									{"~!Continue"},
 									{function(s)
 										if (GrandStrategy == false) then
-											unit = CreateUnit("unit-gnomish-recruit", 0, {8, 60}) -- gnomish envoy
-											IncreaseUnitLevel(unit, 1)
-											AcquireAbility(unit, "upgrade-sword-mastery")
+											unit = CreateUnit("unit-gnomish-duelist", 0, {8, 60}) -- gnomish envoy
 											SetUnitVariable(unit, "Active", false)
 										end
 										if (mapinfo.description == "Northern Wastelands") then
@@ -198,7 +196,7 @@ AddTrigger(
 									"dwarf/icons/baglur.png"
 								)
 								end},
-								"gnome/icons/gnomish_recruit.png"
+								"gnome/icons/duelist.png"
 							)
 							end},
 							"dwarf/icons/baglur.png"
@@ -210,7 +208,7 @@ AddTrigger(
 					"dwarf/icons/baglur.png"
 				)
 				end},
-				"gnome/icons/gnomish_recruit.png"
+				"gnome/icons/duelist.png"
 			)
 			end},
 			nil,
@@ -367,7 +365,7 @@ AddTrigger(
 					"dwarf/icons/baglur.png"
 				)
 				end},
-				"gnome/icons/gnomish_recruit.png"
+				"gnome/icons/duelist.png"
 			)
 			end},
 			"dwarf/icons/gryphon_rider.png"

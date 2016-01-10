@@ -192,7 +192,7 @@ if (GrandStrategyYear > 25) then
 	GrandStrategyEvents.ABargainIsStruckShinsplitterClan = nil
 	GrandStrategyEvents.ClosingTheGates = nil
 	GrandStrategyEvents.ClosingTheGatesShinsplitterClan = nil
-	SetProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-recruit", 1)
+	SetProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-duelist", 1)
 	SetFactionDiplomacyState("dwarf", "Norlund Clan", "dwarf", "Shinsplitter Clan", "war")
 	ChangeFactionResource("gnome", "Untersberg", "gold", -2500) -- decrease gnomish treasury by 5000 silver (considering for our purposes silver to be worth half as much as gold)
 	ChangeFactionResource("dwarf", "Norlund Clan", "gold", 2500) -- 5000 silver, and for our purposes silver is considered to be worth half of what gold is
@@ -244,7 +244,7 @@ if (GrandStrategyYear >= 35) then
 	SetProvinceHero("Shorbear Hills", "Durstorn", 0) -- Durstorn is killed in a conflict between him and other members of the clan
 	SetProvinceSettlementBuilding("Southern Tunnels", "unit-mercenary-camp", true) -- at some point between 35 and 40 AD the Shinsplitters had the capacity to recruit mercenaries, as shown by them having hired the Surghan Mercenaries
 	MercenaryGroups.unit_surghan_mercenary_steelclad = nil
-	SetProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-recruit", 0) -- gnomish recruit returns to Untersberg
+	SetProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-duelist", 0) -- gnomish recruit returns to Untersberg
 	SetProvinceUnitQuantity("Caverns of Chaincolt", "unit-dwarven-gryphon-rider", 0) -- gryphon riders return to the Northern Wastelands
 end
 
@@ -276,7 +276,7 @@ if (GrandStrategyYear >= 400) then
 	SetProvinceOwner("Kal Kartha", "dwarf", "Kal Kartha") -- The Lordship of Kal Kartha was founded around 400 AD
 	SetProvinceSettlementBuilding("Kal Kartha", "unit-dwarven-town-hall", true)
 	SetProvinceSettlementBuilding("Kal Kartha", "unit-dwarven-barracks", true)
-	SetProvinceUnitQuantity("Kal Kartha", "unit-gnomish-recruit", 0)
+	SetProvinceUnitQuantity("Kal Kartha", "unit-gnomish-duelist", 0)
 	SetWorldMapResourceProspected("gold", 46, 5, true)
 	SetProvinceUnitQuantity("Kal Kartha", "unit-dwarven-miner", 4)
 	SetFactionTechnology("dwarf", "Kal Kartha", "upgrade-dwarven-runewriting", true) -- polities require writing

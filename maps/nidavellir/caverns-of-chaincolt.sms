@@ -226,7 +226,7 @@ elseif (GrandStrategyEventMap) then
 	for i, unitName in ipairs(Units) do
 		if (IsMilitaryUnit(unitName)) then
 			units_to_be_created[string.gsub(unitName, "-", "_")] = 0
-			if (unitName ~= "unit-gnomish-recruit") then -- the gnomish recruit doesn't appear in this mission
+			if (unitName ~= "unit-gnomish-duelist") then -- the gnomish recruit doesn't appear in this mission
 				units_to_be_created[string.gsub(unitName, "-", "_")] = math.floor(GetProvinceUnitQuantity("Caverns of Chaincolt", unitName)) -- must have every unit in there, since otherwise it will be impossible to win
 			end
 			ChangeProvinceUnitQuantity("Caverns of Chaincolt", unitName, - units_to_be_created[string.gsub(unitName, "-", "_")])

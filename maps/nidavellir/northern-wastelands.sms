@@ -163,7 +163,7 @@ if (GrandStrategyEventMap) then
 	for i, unitName in ipairs(Units) do
 		if (IsMilitaryUnit(unitName) and GetUnitTypeData(unitName, "Class") ~= "militia") then
 			units_to_be_created[string.gsub(unitName, "-", "_")] = 0
-			if (unitName ~= "unit-gnomish-recruit") then
+			if (unitName ~= "unit-gnomish-duelist") then
 				units_to_be_created[string.gsub(unitName, "-", "_")] = math.floor(GetProvinceUnitQuantity("Caverns of Chaincolt", unitName) / 2) -- half of Norlund forces in the Cavern of Chaincolt sent to the mission
 			else -- special case for the gnomish recruit which must always be present
 				units_to_be_created[string.gsub(unitName, "-", "_")] = 1

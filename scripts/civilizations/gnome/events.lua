@@ -35,7 +35,7 @@ AddTrigger(
 			return false
 		end
 		for i=0,14 do
-			if (GetPlayerData(i, "RaceName") == "gnome" and GetPlayerData(i, "UnitTypesCount", "unit-gnomish-recruit") >= 1) then
+			if (GetPlayerData(i, "RaceName") == "gnome" and GetPlayerData(i, "UnitTypesCount", "unit-gnomish-duelist") >= 1) then
 				player = i
 				return true
 			end
@@ -139,13 +139,13 @@ AddTrigger(
 																		AddPlayerObjective(player, "- Prepare your forces for a showdown with the dwarves")
 																		AddPlayerObjective(player, "- Pypo I must survive")
 																	end},
-																	"gnome/icons/gnomish_recruit.png"
+																	"gnome/icons/duelist.png"
 																)
 																end},
-																"gnome/icons/gnomish_recruit.png"
+																"gnome/icons/duelist.png"
 															)
 															end},
-															"gnome/icons/gnomish_recruit.png"
+															"gnome/icons/duelist.png"
 														)
 														end},
 														"dwarf/icons/dwarven_steelclad.png"
@@ -153,31 +153,31 @@ AddTrigger(
 													end}
 												)
 												end},
-												"gnome/icons/gnomish_recruit.png"
+												"gnome/icons/duelist.png"
 											)
 											end},
 											"dwarf/icons/dwarven_steelclad.png"
 										)
 										end},
-										"gnome/icons/gnomish_recruit.png"
+										"gnome/icons/duelist.png"
 									)
 									end},
 									"dwarf/icons/dwarven_steelclad.png"
 								)
 								end},
-								"gnome/icons/gnomish_recruit.png"
+								"gnome/icons/duelist.png"
 							)
 							end},
 							"dwarf/icons/dwarven_steelclad.png"
 						)
 						end},
-						"gnome/icons/gnomish_recruit.png"
+						"gnome/icons/duelist.png"
 					)
 					end},
 					"dwarf/icons/dwarven_steelclad.png"
 				)
 				end},
-				"gnome/icons/gnomish_recruit.png"
+				"gnome/icons/duelist.png"
 			)
 			end},
 			"dwarf/icons/dwarven_steelclad.png"

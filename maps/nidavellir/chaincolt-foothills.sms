@@ -169,8 +169,8 @@ if (GrandStrategy == false) then
 	unit = CreateUnit("unit-gnomish-farm", 1, {6, 65})
 	if (GetPlayerData(1, "RaceName") == "gnome") then -- only create the gnomish king if player 1 actually are gnomes
 		-- Gnomish king
-		unit = CreateUnit("unit-gnomish-recruit", 1, {8, 58})
-		IncreaseUnitLevel(unit, 2)
+		unit = CreateUnit("unit-gnomish-duelist", 1, {8, 58})
+		IncreaseUnitLevel(unit, 1)
 		SetUnitVariable(unit, "Name", "Pypo I")
 		SetUnitVariable(unit, "Active", false)
 	end
@@ -247,8 +247,8 @@ elseif (GrandStrategyEventMap) then
 	unit = CreateUnit("unit-gnomish-farm", 1, {6, 65})
 
 	-- Gnomish king
---	unit = CreateUnit("unit-gnomish-recruit", 1, {8, 58})
---	IncreaseUnitLevel(unit, 2)
+--	unit = CreateUnit("unit-gnomish-duelist", 1, {8, 58})
+--	IncreaseUnitLevel(unit, 1)
 
 	CreateProvinceUnits("Brown Hills", 1, 5)
 	CreateProvinceCustomHero("Brown Hills", 1)

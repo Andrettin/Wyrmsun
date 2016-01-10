@@ -10,7 +10,7 @@
 --
 --      buttons.ccl - Define the unit-buttons of the gnomish civilization.
 --
---      (c) Copyright 2014 by Andrettin
+--      (c) Copyright 2014-2015 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -37,26 +37,32 @@
 -- general commands -------------------------------
 
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-gnomish-boots",
-  Action = "move",
-  Key = "m", Hint = _("~!Move"), Popup = "popup-commands",
-  ForUnit = {
-	"unit-gnomish-worker", "unit-gnomish-recruit", "unit-gnomish-herbalist", "unit-gnomish-caravan",
-	"gnome-group"} } )
+	Action = "move",
+	Key = "m", Hint = _("~!Move"), Popup = "popup-commands",
+	ForUnit = {
+		"unit-gnomish-worker", "unit-gnomish-recruit", "unit-gnomish-duelist",
+		"unit-gnomish-herbalist", "unit-gnomish-caravan",
+		"gnome-group"
+	}
+} )
 
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-gnomish-thrusting-sword-1",
-  Action = "attack",
-  Key = "a", Hint = _("~!Attack"), Popup = "popup-commands",
-  ForUnit = {
-	"unit-gnomish-worker", "unit-gnomish-recruit", "unit-gnomish-herbalist",
-	"gnome-group"} } )
+	Action = "attack",
+	Key = "a", Hint = _("~!Attack"), Popup = "popup-commands",
+	ForUnit = {
+		"unit-gnomish-worker", "unit-gnomish-recruit", "unit-gnomish-duelist", "unit-gnomish-herbalist",
+		"gnome-group"
+	}
+} )
 
 DefineButton( { Pos = 4, Level = 0, Icon = "icon-gnomish-patrol-land",
-  Action = "patrol",
-  Key = "p", Hint = _("~!Patrol"), Popup = "popup-commands",
-  ForUnit = {
-	"unit-gnomish-recruit", 
-	"gnome-group"
-  } } )
+	Action = "patrol",
+	Key = "p", Hint = _("~!Patrol"), Popup = "popup-commands",
+	ForUnit = {
+		"unit-gnomish-recruit", "unit-gnomish-duelist", 
+		"gnome-group"
+	}
+} )
 
 -- worker specific actions ---------------------------------------------------
 
@@ -164,3 +170,32 @@ DefineButton( { Pos = 4, Level = 0, Icon = "icon-gnomish-herbalist",
   Key = "h", Hint = _("Train ~!Herbalist"), Popup = "popup-unit",
   ForUnit = {"unit-gnomish-barracks"} } )
   
+-- Upgrades ---------------------------------------------------------
+
+DefineButton( { Pos = 1, Level = 1, Icon = "icon-gnomish-duelist",
+	Action = "experience-upgrade-to", Value = "unit-gnomish-duelist",
+	Allowed = "check-unit-variable", AllowArg = {"Variation", "Value", "==", "0"},
+	Key = "u", Hint = _("~!Upgrade to Duelist"), Popup = "popup-unit",
+	ForUnit = {"unit-gnomish-recruit"}
+} )
+
+DefineButton( { Pos = 1, Level = 1, Icon = "icon-gnomish-duelist-gray-hair",
+	Action = "experience-upgrade-to", Value = "unit-gnomish-duelist",
+	Allowed = "check-unit-variable", AllowArg = {"Variation", "Value", "==", "1"},
+	Key = "u", Hint = _("~!Upgrade to Duelist"), Popup = "popup-unit",
+	ForUnit = {"unit-gnomish-recruit"}
+} )
+
+DefineButton( { Pos = 1, Level = 1, Icon = "icon-gnomish-duelist",
+	Action = "experience-upgrade-to", Value = "unit-gnomish-duelist",
+	Allowed = "check-unit-variable", AllowArg = {"Variation", "Value", "==", "2"},
+	Key = "u", Hint = _("~!Upgrade to Duelist"), Popup = "popup-unit",
+	ForUnit = {"unit-gnomish-recruit"}
+} )
+
+DefineButton( { Pos = 1, Level = 1, Icon = "icon-gnomish-duelist-gray-hair",
+	Action = "experience-upgrade-to", Value = "unit-gnomish-duelist",
+	Allowed = "check-unit-variable", AllowArg = {"Variation", "Value", "==", "3"},
+	Key = "u", Hint = _("~!Upgrade to Duelist"), Popup = "popup-unit",
+	ForUnit = {"unit-gnomish-recruit"}
+} )

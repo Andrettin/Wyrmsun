@@ -982,6 +982,18 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-gnomish-duelist",
+	Size = {46, 38},
+	File = "gnome/icons/duelist.png"
+})
+
+DefineIcon({
+	Name = "icon-gnomish-duelist-gray-hair",
+	Size = {46, 38},
+	File = "gnome/icons/duelist_gray_hair.png"
+})
+
+DefineIcon({
 	Name = "icon-gnomish-herbalist",
 	Size = {46, 38},
 	File = "gnome/icons/gnomish_herbalist.png"

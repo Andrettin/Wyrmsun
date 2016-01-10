@@ -73,7 +73,7 @@ Units = {
 	"upgrade-dwarven-masonry",
 	"upgrade-dwarven-coinage", "upgrade-dwarven-runewriting", "upgrade-dwarven-alchemy",
 	"upgrade-eikinskjaldi-clan-faction", "upgrade-modsogning-clan-faction", "upgrade-norlund-clan-faction", "upgrade-shinsplitter-clan-faction", "upgrade-shorbear-clan-faction", "upgrade-joruvellir-faction", "upgrade-kal-kartha-faction", "upgrade-knalga-faction", "upgrade-lyr-faction",
-	"unit-gnomish-worker", "unit-gnomish-recruit", "unit-gnomish-herbalist", "unit-gnomish-caravan",
+	"unit-gnomish-worker", "unit-gnomish-recruit", "unit-gnomish-duelist", "unit-gnomish-herbalist", "unit-gnomish-caravan",
 	"unit-gnomish-town-hall", "unit-gnomish-farm", "unit-gnomish-barracks",
 	"unit-goblin-worker", "unit-goblin-spearman", "unit-goblin-archer", "unit-goblin-thief",
 	"unit-goblin-war-machine", "unit-goblin-glider",

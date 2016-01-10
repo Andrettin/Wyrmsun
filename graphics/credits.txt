@@ -1068,6 +1068,8 @@ Leo:
 /graphics/germanic/ui/cursors/germanic_hand.png
 /graphics/gnome/icons/boots.png
 /graphics/gnome/icons/boots_fur.png
+/graphics/gnome/icons/duelist.png (based on Jinn's Gnomish Recruit icon)
+/graphics/gnome/icons/duelist_gray_hair.png (based on Jinn's Gnomish Recruit icon)
 /graphics/gnome/icons/gnomish_herbalist.png
 /graphics/gnome/icons/thrusting_sword_1.png
 /graphics/gnome/icons/thrusting_sword_1_extra_1.png

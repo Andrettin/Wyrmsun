@@ -236,6 +236,9 @@ https://github.com/Andrettin/Wyrmsun
 * AI
 - The AI now explores the map, and is not prescient to the location of the player or of resources.
 
+* Units
+- Added Gnomish Duelist, an experience upgrade of the Gnomish Recruit (icon by Leo, based on Jinn's Gnomish Recruit icon).
+
 -----------------------------------------------------------------------
 - 1.9.7
 -----------------------------------------------------------------------

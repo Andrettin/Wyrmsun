@@ -438,9 +438,9 @@ elseif (GrandStrategyEventMap) then
 	end
 	
 	-- Gnomish Envoy
-	if (GetProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-recruit") >= 1) then
-		unit = OldCreateUnit("unit-gnomish-recruit", 0, {6, 5})
-		ChangeProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-recruit", -1)
+	if (GetProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-duelist") >= 1) then
+		unit = OldCreateUnit("unit-gnomish-duelist", 0, {6, 5})
+		ChangeProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-duelist", -1)
 	end
 	
 	-- Norlund units

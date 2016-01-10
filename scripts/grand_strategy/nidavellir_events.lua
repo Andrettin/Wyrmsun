@@ -463,7 +463,7 @@ local NidavellirEvents = {
 				SetFactionDiplomacyState("dwarf", "Norlund Clan", "dwarf", "Shinsplitter Clan", "war") -- begin war between Norlund Clan and Shinsplitter Clan
 				ChangeFactionResource("gnome", "Untersberg", "gold", -2500) -- decrease gnomish treasury by 5000 silver (considering for our purposes silver to be worth half as much as gold)
 				ChangeFactionResource("dwarf", "Norlund Clan", "gold", 2500) -- 5000 silver, and for our purposes silver is considered to be worth half of what gold is
-				ChangeProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-recruit", 1)
+				ChangeProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-duelist", 1)
 				ChangeProvinceUnitQuantity("Southern Tunnels", "unit-dwarven-steelclad", -1)
 			end
 			if (GrandStrategyFaction.Name == "Norlund Clan" and wyr.preferences.AutomaticBattles) then
@@ -500,7 +500,7 @@ local NidavellirEvents = {
 			if (GrandStrategyFaction.Name == "Shinsplitter Clan" and wyr.preferences.AutomaticBattles) then
 				GenericDialog("A Bargain is Struck", "The Norlund Clan refused to pay the toll! We tried to intercept the caravans and the envoy who carried the gnomish Ruby of Fire, but we failed...")
 			end
-			if (GetProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-recruit") >= 1) then -- way to check if Norlund Clan successfully transported the caravans
+			if (GetProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-duelist") >= 1) then -- way to check if Norlund Clan successfully transported the caravans
 				GrandStrategyEvent(Factions.NorlundClan, GrandStrategyEvents.ClosingTheGates)
 			end
 		end}
@@ -593,7 +593,7 @@ local NidavellirEvents = {
 			CavernsOfChaincolt = true
 		},
 		Units = {
-			unit_gnomish_recruit = 1 -- must have a gnomish recruit in the Caverns of Chaincolt
+			unit_gnomish_duelist = 1 -- must have a gnomish duelist in the Caverns of Chaincolt
 		},
 		Heroes = {
 			Rugnur = true,
@@ -632,7 +632,7 @@ local NidavellirEvents = {
 			CavernsOfChaincolt = true
 		},
 		Units = {
-			unit_gnomish_recruit = 1 -- must have a gnomish recruit in the Caverns of Chaincolt
+			unit_gnomish_duelist = 1 -- must have a gnomish duelist in the Caverns of Chaincolt
 		},
 		Heroes = {
 			Rugnur = true,
@@ -670,7 +670,7 @@ local NidavellirEvents = {
 			CavernsOfChaincolt = true
 		},
 		Units = {
-			unit_gnomish_recruit = 1 -- must have a gnomish recruit in the Caverns of Chaincolt
+			unit_gnomish_duelist = 1 -- must have a gnomish duelist in the Caverns of Chaincolt
 		},
 		Heroes = {
 			Rugnur = true,
@@ -694,8 +694,8 @@ local NidavellirEvents = {
 				RestoreScenarioUnitsToProvince({ProvinceName = "Caverns of Chaincolt", FactionName = "Norlund Clan", Heroes = {"Rugnur", "Baglur", "Thursagan", "Durstorn"}})
 				RestoreScenarioUnitsToProvince({ProvinceName = "Southern Tunnels", FactionName = "Shinsplitter Clan"})
 				RestoreScenarioUnitsToProvince({ProvinceName = "Shorbear Hills", FactionName = "Shorbear Clan"})
-				if (GetProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-recruit") >= 1) then
-					ChangeProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-recruit", -1)
+				if (GetProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-duelist") >= 1) then
+					ChangeProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-duelist", -1)
 				end
 				
 				if (GameResult == GameVictory) then
@@ -719,8 +719,8 @@ local NidavellirEvents = {
 				KillGrandStrategyHero("Glonoin")
 				
 				SetProvinceHero("Caverns of Chaincolt", "Durstorn", 0) -- Durstorn is killed in a conflict between him and other members of the clan
-				ChangeProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-recruit", -1) -- the gnomish envoy returns south
-				ChangeProvinceUnitQuantity("Brown Hills", "unit-gnomish-recruit", 1)
+				ChangeProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-duelist", -1) -- the gnomish envoy returns south
+				ChangeProvinceUnitQuantity("Brown Hills", "unit-gnomish-duelist", 1)
 	
 				AcquireProvince(WorldMapProvinces.ShorbearHills, "Shinsplitter Clan")
 				if (GrandStrategyFaction.Name == "Norlund Clan" and wyr.preferences.AutomaticBattles) then
@@ -751,8 +751,8 @@ local NidavellirEvents = {
 				RestoreScenarioUnitsToProvince({ProvinceName = "Caverns of Chaincolt", FactionName = "Norlund Clan", Heroes = {"Rugnur", "Baglur", "Thursagan", "Durstorn"}})
 				RestoreScenarioUnitsToProvince({ProvinceName = "Southern Tunnels", FactionName = "Shinsplitter Clan"})
 				RestoreScenarioUnitsToProvince({ProvinceName = "Shorbear Hills", FactionName = "Shorbear Clan"})
-				if (GetProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-recruit") >= 1) then
-					ChangeProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-recruit", -1)
+				if (GetProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-duelist") >= 1) then
+					ChangeProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-duelist", -1)
 				end
 
 				if (GameResult ~= GameVictory and GetProvinceHero("Caverns of Chaincolt", "Rugnur") == 2 and GetProvinceHero("Caverns of Chaincolt", "Baglur") == 2 and GetProvinceHero("Caverns of Chaincolt", "Thursagan") == 2) then
@@ -784,8 +784,8 @@ local NidavellirEvents = {
 				RestoreScenarioUnitsToProvince({ProvinceName = "Caverns of Chaincolt", FactionName = "Norlund Clan", Heroes = {"Rugnur", "Baglur", "Thursagan", "Durstorn"}})
 				RestoreScenarioUnitsToProvince({ProvinceName = "Southern Tunnels", FactionName = "Shinsplitter Clan"})
 				RestoreScenarioUnitsToProvince({ProvinceName = "Shorbear Hills", FactionName = "Shorbear Clan"})
-				if (GetProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-recruit") >= 1) then
-					ChangeProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-recruit", -1)
+				if (GetProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-duelist") >= 1) then
+					ChangeProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-duelist", -1)
 				end
 			end
 			if (GrandStrategyFaction.Name == EventFaction.Name and wyr.preferences.AutomaticBattles) then

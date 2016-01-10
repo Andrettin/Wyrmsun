@@ -69,7 +69,7 @@ AddTrigger(
 	function() 
 		local gnomish_monarch_player = GetCivilizationPlayer("gnome")
 		local rugnur = FindHero("Rugnur")
-		local pypo_i = FindUnit("unit-gnomish-recruit", gnomish_monarch_player)
+		local pypo_i = FindUnit("unit-gnomish-duelist", gnomish_monarch_player)
 		unit = CreateUnit("unit-revealer", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y})
 		Event(
 			"",
@@ -239,13 +239,11 @@ AddTrigger(
 																														player,
 																														{"~!Continue"},
 																														{function(s)
-																															unit = CreateUnit("unit-gnomish-recruit", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y}) -- gnomish envoy who holds the ruby
-																															IncreaseUnitLevel(unit, 1)
-																															AcquireAbility(unit, "upgrade-sword-mastery")
+																															unit = CreateUnit("unit-gnomish-duelist", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y}) -- gnomish envoy who holds the ruby
 																															SetUnitVariable(unit, "Active", false)
 																															if (GetThisPlayer() == GetFactionPlayer("Shinsplitter Clan")) then
 																																-- if human-controlled player is Shinsplitter Clan, then tell the caravans to move
-																																OrderUnit(player, "unit-gnomish-recruit", {GetUnitVariable(unit,"PosX"), GetUnitVariable(unit,"PosY")}, {47, 8}, "move")
+																																OrderUnit(player, "unit-gnomish-duelist", {GetUnitVariable(unit,"PosX"), GetUnitVariable(unit,"PosY")}, {47, 8}, "move")
 																															end
 																															unit = CreateUnit("unit-gnomish-caravan", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y})
 																															if (GetThisPlayer() == GetFactionPlayer("Shinsplitter Clan")) then
@@ -549,7 +547,7 @@ AddTrigger(
 						end}
 					)
 					end},
-					"gnome/icons/gnomish_recruit.png"
+					"gnome/icons/duelist.png"
 				)
 				return false
 			end
@@ -569,8 +567,8 @@ AddTrigger(
 				PlayerHasObjective(i, "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall")
 				and GetPlayerData(i, "RaceName") == "dwarf"
 				and FindHero("Rugnur", i) ~= nil
-				and (IfNearUnit(i, ">=", 1, "unit-gnomish-recruit", "unit-dwarven-town-hall") or IfNearUnit(i, ">=", 1, "unit-gnomish-recruit", "unit-dwarven-stronghold"))
-				and (IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-recruit") or IfNearUnit(i, ">=", 1, "unit-dwarven-stronghold", "unit-gnomish-recruit"))
+				and (IfNearUnit(i, ">=", 1, "unit-gnomish-duelist", "unit-dwarven-town-hall") or IfNearUnit(i, ">=", 1, "unit-gnomish-duelist", "unit-dwarven-stronghold"))
+				and (IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-duelist") or IfNearUnit(i, ">=", 1, "unit-dwarven-stronghold", "unit-gnomish-duelist"))
 			) then
 				player = i
 				return true
@@ -599,7 +597,7 @@ AddTrigger(
 					and (IfNearUnit(player, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-caravan") or IfNearUnit(player, ">=", 1, "unit-dwarven-stronghold", "unit-gnomish-caravan"))
 					and caravans_loaded) then
 					Event(
-						FindUnit("unit-gnomish-recruit", gnomish_monarch_player),
+						FindUnit("unit-gnomish-duelist", gnomish_monarch_player),
 						"All the silver is there too. Proceed with the task, Rugnur!",
 						player,
 						{"~!Continue"},
@@ -625,7 +623,7 @@ AddTrigger(
 					)
 				end
 			end},
-			"gnome/icons/gnomish_recruit.png"
+			"gnome/icons/duelist.png"
 		)
 		return false
 	end
@@ -664,8 +662,8 @@ AddTrigger(
 	end,
 	function() 
 		if (
-			(IfNearUnit(player, ">=", 1, "unit-gnomish-recruit", "unit-dwarven-town-hall") or IfNearUnit(player, ">=", 1, "unit-gnomish-recruit", "unit-dwarven-stronghold"))
-			and (IfNearUnit(player, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-recruit") or IfNearUnit(player, ">=", 1, "unit-dwarven-stronghold", "unit-gnomish-recruit"))
+			(IfNearUnit(player, ">=", 1, "unit-gnomish-duelist", "unit-dwarven-town-hall") or IfNearUnit(player, ">=", 1, "unit-gnomish-duelist", "unit-dwarven-stronghold"))
+			and (IfNearUnit(player, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-duelist") or IfNearUnit(player, ">=", 1, "unit-dwarven-stronghold", "unit-gnomish-duelist"))
 		) then
 			Event(
 				FindHero("Rugnur"),
@@ -721,8 +719,8 @@ AddTrigger(
 				and FindHero("Rugnur", i) ~= nil
 				and (IfNearUnit(i, ">=", 4, "unit-gnomish-caravan", "unit-dwarven-town-hall") or IfNearUnit(i, ">=", 4, "unit-gnomish-caravan", "unit-dwarven-stronghold"))
 				and (IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-caravan") or IfNearUnit(i, ">=", 1, "unit-dwarven-stronghold", "unit-gnomish-caravan"))
-				and (IfNearUnit(i, ">=", 1, "unit-gnomish-recruit", "unit-dwarven-town-hall") or IfNearUnit(i, ">=", 1, "unit-gnomish-recruit", "unit-dwarven-stronghold"))
-				and (IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-recruit") or IfNearUnit(i, ">=", 1, "unit-dwarven-stronghold", "unit-gnomish-recruit"))
+				and (IfNearUnit(i, ">=", 1, "unit-gnomish-duelist", "unit-dwarven-town-hall") or IfNearUnit(i, ">=", 1, "unit-gnomish-duelist", "unit-dwarven-stronghold"))
+				and (IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-duelist") or IfNearUnit(i, ">=", 1, "unit-dwarven-stronghold", "unit-gnomish-duelist"))
 			) then
 				local caravans_loaded = true -- are all caravans loaded?
 				local uncount = 0
@@ -783,7 +781,7 @@ AddTrigger(
 			event_player = GetFactionPlayer("Shinsplitter Clan")
 		end
 		Event(
-			FindUnit("unit-gnomish-recruit", gnomish_monarch_player),
+			FindUnit("unit-gnomish-duelist", gnomish_monarch_player),
 			"You just let a caravan, with ~<my~> money loaded in it, get captured! If I can't trust you to keep my property secure, the deal's off.",
 			event_player,
 			{"~!Continue"},
@@ -830,7 +828,7 @@ AddTrigger(
 			event_player = GetFactionPlayer("Shinsplitter Clan")
 		end
 		Event(
-			FindUnit("unit-gnomish-recruit", gnomish_monarch_player),
+			FindUnit("unit-gnomish-duelist", gnomish_monarch_player),
 			"Rugnur, you fool! You just let a caravan's cargo fall away! If I can't trust you to keep my property secure, the deal's off.",
 			event_player,
 			{"~!Continue"},
@@ -899,7 +897,7 @@ AddTrigger(
 						ChangeFactionResource("dwarf", "Norlund Clan", "gold", -2500)
 						ChangeFactionResource("dwarf", "Shinsplitter Clan", "gold", 2500)
 						-- if defenses have been breached, then the Shinsplitter Clan conquers the province
-						SetProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-recruit", 0) -- kill off the gnomish envoy if the province has been conquered
+						SetProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-duelist", 0) -- kill off the gnomish envoy if the province has been conquered
 						AcquireProvince(WorldMapProvinces.CavernsOfChaincolt, "Shinsplitter Clan")
 					end
 				end
@@ -915,7 +913,7 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if ((PlayerHasObjective(GetThisPlayer(), "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall") or PlayerHasObjective(GetThisPlayer(), "- Find Thursagan and bring him to your Mead Hall") or PlayerHasObjective(GetThisPlayer(), "- Defeat Glonoin, the Shorbear Clan leader") or PlayerHasObjective(GetThisPlayer(), "- Have all heroes in the Shorbear caves while no enemies are in the caves") or PlayerHasObjective(GetThisPlayer(), "- Move the Gnomish Envoy to the southern border east of the river")) and GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-gnomish-recruit") < 1) then
+		if ((PlayerHasObjective(GetThisPlayer(), "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall") or PlayerHasObjective(GetThisPlayer(), "- Find Thursagan and bring him to your Mead Hall") or PlayerHasObjective(GetThisPlayer(), "- Defeat Glonoin, the Shorbear Clan leader") or PlayerHasObjective(GetThisPlayer(), "- Have all heroes in the Shorbear caves while no enemies are in the caves") or PlayerHasObjective(GetThisPlayer(), "- Move the Gnomish Envoy to the southern border east of the river")) and GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-gnomish-duelist") < 1) then
 			player = GetThisPlayer()
 			return true
 		end
@@ -944,7 +942,7 @@ AddTrigger(
 --		end
 --		for i=0,14 do
 --			-- maybe could check here if the gnomish player has a gnomish recruit with level 3 instead (although perhaps it could be bad for performance)?
---			if (PlayerHasObjective(i, "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall") and GetPlayerData(GetCivilizationPlayer("gnome"), "UnitTypesCount", "unit-gnomish-recruit") < 1) then
+--			if (PlayerHasObjective(i, "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall") and GetPlayerData(GetCivilizationPlayer("gnome"), "UnitTypesCount", "unit-gnomish-duelist") < 1) then
 --				player = i
 --				return true
 --			end

@@ -70,7 +70,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-shield-1",
 		"unit-dwarven-miner", "unit-dwarven-militia",
 		"unit-dwarven-yale-rider",
 		"unit-dwarven-ballista", "unit-dwarven-gryphon-rider",
-		"unit-gnomish-worker", "unit-gnomish-recruit", "unit-gnomish-herbalist", "unit-gnomish-caravan",
+		"unit-gnomish-worker", "unit-gnomish-recruit", "unit-gnomish-duelist", "unit-gnomish-herbalist", "unit-gnomish-caravan",
 		"unit-goblin-worker", "unit-goblin-thief", "unit-goblin-spearman", "unit-goblin-archer",
 		"unit-goblin-war-machine", "unit-goblin-glider",
 		"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
@@ -219,7 +219,7 @@ DefineButton( { Pos = 5, Level = 0, Icon = "icon-dwarven-stand-ground",
 		"unit-dwarven-scout", "unit-dwarven-pathfinder",
 		"unit-dwarven-yale-rider",
 		"unit-dwarven-ballista", "unit-dwarven-gryphon-rider",
-		"unit-gnomish-recruit", 
+		"unit-gnomish-recruit", "unit-gnomish-duelist", 
 		"unit-goblin-thief", "unit-goblin-spearman", "unit-goblin-archer", "unit-goblin-war-machine",
 		"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
 		"dwarf-group"
@@ -732,13 +732,6 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-guard-tower",
 	Key = "g", Hint = _("Upgrade to ~!Guard Tower"), Popup = "popup-building",
 	ForUnit = {"unit-dwarven-sentry-tower"}
 } )
-
--- Items ---------------------------------------------------------
-
---DefineButton( { Pos = 7, Level = 0, Icon = "icon-build-basic-structure",
---  Action = "button", Value = 1,
---  Key = "o", Hint = _("~!Open Inventory"), Popup = "popup-commands",
---  ForUnit = {"unit-hero-rugnur", "unit-hero-rugnur-steelclad", "unit-hero-rugnur-thane"} } )
 
 -- Special Abilities ------------------------------------------------------
 

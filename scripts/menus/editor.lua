@@ -71,6 +71,7 @@ editor_types = {
 
 	"unit-gnomish-worker",
 	"unit-gnomish-recruit",
+	"unit-gnomish-duelist",
 	"unit-gnomish-herbalist",
 	"unit-gnomish-caravan",
 

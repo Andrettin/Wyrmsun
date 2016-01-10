@@ -60,7 +60,7 @@ AddTrigger(
 						ChangeFactionResource("dwarf", "Norlund Clan", "gold", -2500)
 						ChangeFactionResource("dwarf", "Shinsplitter Clan", "gold", 2500)
 						-- if defenses have been breached, then the Shinsplitter Clan conquers the province
-						SetProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-recruit", 0) -- kill off the gnomish envoy if the province has been conquered
+						SetProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-duelist", 0) -- kill off the gnomish envoy if the province has been conquered
 						AcquireProvince(WorldMapProvinces.CavernsOfChaincolt, "Shinsplitter Clan")
 					end
 				end
@@ -254,7 +254,7 @@ AddTrigger(
 																	ChangeFactionResource("dwarf", "Norlund Clan", "gold", -2500)
 																	ChangeFactionResource("dwarf", "Shinsplitter Clan", "gold", 2500)
 																	-- if defenses have been breached, then the Shinsplitter Clan conquers the province
-																	SetProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-recruit", 0) -- kill off the gnomish envoy if the province has been conquered
+																	SetProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-duelist", 0) -- kill off the gnomish envoy if the province has been conquered
 																	AcquireProvince(WorldMapProvinces.CavernsOfChaincolt, "Shinsplitter Clan")
 																end
 																ActionDefeat()
@@ -279,7 +279,7 @@ AddTrigger(
 						end}
 					)
 					end},
-					"gnome/icons/gnomish_recruit.png"
+					"gnome/icons/duelist.png"
 				)
 				end}
 			)
@@ -522,7 +522,7 @@ AddTrigger(
 																																		"dwarf/icons/durstorn.png"
 																																	)
 																																	end},
-																																	"gnome/icons/gnomish_recruit.png"
+																																	"gnome/icons/duelist.png"
 																																)
 																																end}
 																															)
@@ -620,7 +620,7 @@ AddTrigger(
 				ChangeFactionResource("dwarf", "Norlund Clan", "gold", -2500)
 				ChangeFactionResource("dwarf", "Shinsplitter Clan", "gold", 2500)
 				-- if defenses have been breached, then the Shinsplitter Clan conquers the province
-				SetProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-recruit", 0) -- kill off the gnomish envoy if the province has been conquered
+				SetProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-duelist", 0) -- kill off the gnomish envoy if the province has been conquered
 				AcquireProvince(WorldMapProvinces.CavernsOfChaincolt, "Shinsplitter Clan")
 			end
 			ActionVictory()
@@ -670,7 +670,7 @@ AddTrigger(
 					ChangeFactionResource("dwarf", "Norlund Clan", "gold", -2500)
 					ChangeFactionResource("dwarf", "Shinsplitter Clan", "gold", 2500)
 					-- if defenses have been breached, then the Shinsplitter Clan conquers the province
-					SetProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-recruit", 0) -- kill off the gnomish envoy if the province has been conquered
+					SetProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-duelist", 0) -- kill off the gnomish envoy if the province has been conquered
 					AcquireProvince(WorldMapProvinces.CavernsOfChaincolt, "Shinsplitter Clan")
 				end
 			end
