@@ -50,7 +50,7 @@ function HandleCheats(str)
 	AddMessage("Resources increased!")
 
   elseif (str == "showpath") then
-    RevealMap()
+    RevealMap(true)
 
   elseif (str == "fow on") then
     SetFogOfWar(true)

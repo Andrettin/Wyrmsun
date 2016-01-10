@@ -582,17 +582,6 @@ function StandardTriggers()
 						ChangeUnitOwner(uncount[unit1], 15)
 					end
 				end
-				
-				-- move AI gliders
-				if (GetPlayerData(GetUnitVariable(uncount[unit1], "Player"), "AiEnabled") and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Class") == "glider" and GetUnitVariable(uncount[unit1], "Idle")) then
-					if (SyncRand(100) < 33) then
-						local target_x = GetUnitVariable(uncount[unit1],"PosX") + SyncRand(33) - 16
-						local target_y = GetUnitVariable(uncount[unit1],"PosY") + SyncRand(33) - 16
-						if (target_x >= 0 and target_x < Map.Info.MapWidth and target_y >= 0 and target_y < Map.Info.MapHeight) then
-							OrderUnit(GetUnitVariable(uncount[unit1], "Player"), GetUnitVariable(uncount[unit1], "Ident"), {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {target_x, target_y}, "move")
-						end
-					end
-				end
 			end
 			return true
 		end
