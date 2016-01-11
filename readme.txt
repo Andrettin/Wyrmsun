@@ -238,6 +238,8 @@ https://github.com/Andrettin/Wyrmsun
 
 * Units
 - Added Gnomish Duelist, an experience upgrade of the Gnomish Recruit (icon by Leo, based on Jinn's Gnomish Recruit icon).
+- Improved XP required calculation.
+- Decreased the quantity of experience that the dwarven Gryphon Rider requires to level up and that it gives when killed.
 
 -----------------------------------------------------------------------
 - 1.9.7
