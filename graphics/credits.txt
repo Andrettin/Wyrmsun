@@ -379,6 +379,7 @@ João Victor G. Costa (Jinn):
 /graphics/dwarf/icons/gryphon_rider.png
 /graphics/dwarf/icons/gryphon_rider_brown_hair.png
 /graphics/dwarf/icons/gryphon_rider_red_hair.png
+/graphics/dwarf/icons/guard.png
 /graphics/dwarf/icons/militia.png
 /graphics/dwarf/icons/miner.png
 /graphics/dwarf/icons/miner_extra_1.png
