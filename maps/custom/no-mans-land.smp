@@ -1,5 +1,5 @@
 -- Stratagus Map Presentation
 -- File generated automatically from pudconvert.
 
-DefinePlayerTypes("person","computer","computer")
+DefinePlayerTypes("person","person","person")
 PresentMap("No Man's Land", 3, 128, 128, 1)

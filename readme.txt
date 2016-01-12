@@ -242,7 +242,7 @@ https://github.com/Andrettin/Wyrmsun
 - Stronghold class buildings now have 9 sight.
 
 * Maps
-- Added No Man's Land map, from the Stratagus Media Project.
+- Added No Man's Land map (custom), from the Stratagus Media Project.
 
 * Miscellaneous
 - Full screen can now be toggled from within a scenario (thanks to marcelofg55).
