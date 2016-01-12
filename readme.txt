@@ -234,7 +234,15 @@ https://github.com/Andrettin/Wyrmsun
 -----------------------------------------------------------------------
 
 * AI
-- The AI now explores the map, and is not prescient to the location of the player or of resources.
+- The AI now has to explore the map.
+- The AI now only harvests trees if no wood piles, tree stumps or logs are present nearby.
+
+* Buildings
+- Town hall class buildings now have 6 sight.
+- Stronghold class buildings now have 9 sight.
+
+* Maps
+- Added No Man's Land map, from the Stratagus Media Project.
 
 * Units
 - Added Gnomish Duelist, an experience upgrade of the Gnomish Recruit (icon by Leo, based on Jinn's Gnomish Recruit icon).
