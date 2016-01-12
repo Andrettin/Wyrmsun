@@ -108,7 +108,7 @@ function SetPlayerData(player, data, arg1, arg2)
 	local res = {arg2, arg2, arg2, arg2, arg2, arg2, arg2, arg2}
 
 	if (data == "RaceName") then
-		if (GameSettings.Presets[player].Race ~= -1) then
+		if (GameSettings.Presets[player].Race ~= -1 and GameSettings.Presets[player].Race < table.getn(GetCivilizations())) then
 			arg1 = GetCivilizations()[GameSettings.Presets[player].Race + 1]
 		end
 		
@@ -289,7 +289,9 @@ function LoadCivilizationUI(civilization)
 		end
 	
 	end
-	Load(ui_file)
+	if (CanAccessFile(ui_file)) then
+		Load(ui_file)
+	end
 	UI.GrandStrategyOKButton.Style = UI.MenuButton.Style
 	UI.GrandStrategyEndTurnButton.Style = UI.MenuButton.Style
 	UI.GrandStrategyShowHeroesButton.Style = UI.MenuButton.Style

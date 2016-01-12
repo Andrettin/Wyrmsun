@@ -594,5 +594,5 @@ function GetCivilizationID(civilization)
 			return i - 1
 		end
 	end
-	return nil
+	return -1
 end

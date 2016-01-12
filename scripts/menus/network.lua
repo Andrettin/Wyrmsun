@@ -156,6 +156,9 @@ function RunJoiningMapMenu(s)
 			chosen_civilization = string.lower(chosen_civilization)
 			GameSettings.Presets[NetLocalHostsSlot].Race = GetCivilizationID(chosen_civilization)
 			LocalSetupState.Race[NetLocalHostsSlot] = GetCivilizationID(chosen_civilization)
+	  else
+			GameSettings.Presets[NetLocalHostsSlot].Race = -1
+			LocalSetupState.Race[NetLocalHostsSlot] = -1
 	  end
     end)
   race:setSize(190, 20)
@@ -386,6 +389,9 @@ function RunServerMultiGameMenu(map, description, numplayers)
 			chosen_civilization = string.lower(chosen_civilization)
 			GameSettings.Presets[0].Race = GetCivilizationID(chosen_civilization)
 			ServerSetupState.Race[0] = GetCivilizationID(chosen_civilization)
+	  else
+			GameSettings.Presets[0].Race = -1
+			ServerSetupState.Race[0] = -1
 	  end
       NetworkServerResyncClients()
     end)
