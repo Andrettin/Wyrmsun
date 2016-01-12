@@ -37,6 +37,7 @@ function RunGameVideoOptionsMenu()
 	local resolution_height = Video.Height
 	local offx = 0
 	local offy = 0
+	local fullscreen = Video.FullScreen
 
 	menu:addLabel(_("Video Options"), 128, 11)
 
@@ -64,13 +65,23 @@ function RunGameVideoOptionsMenu()
 		end
 	end
 
+	full_screen_dd = menu:addImageCheckBox(_("Full Screen"), offx + (256 / 2 - (152 / 2)), offy + 90 + 26*2,
+	function()
+		fullscreen = full_screen_dd:isMarked()
+	end)
+	full_screen_dd:setMarked(fullscreen)
+
 	menu:addFullButton("~!OK", "o", 128 - (224 / 2), 288 - 40,
 	function()
 		if (resolution_width ~= Video.Width or resolution_height ~= Video.Height) then
 			LoadCivilizationUI(GetPlayerData(GetThisPlayer(), "RaceName"))
 			SetVideoSize(resolution_width, resolution_height)
-			LoadCivilizationUI(GetPlayerData(GetThisPlayer(), "RaceName"))
-			SetVideoSize(resolution_width, resolution_height)
+			SavePreferences()
+		end
+
+		if (fullscreen ~= Video.FullScreen) then
+			ToggleFullScreen()
+			wyr.preferences.VideoFullScreen = Video.FullScreen
 			SavePreferences()
 		end
 		menu:stop()
@@ -515,6 +526,7 @@ function RunVideoOptionsMenu()
   local resolution_height_dd
   local resolution_width = Video.Width
   local resolution_height = Video.Height
+  local fullscreen = Video.FullScreen
 
   menu:addLabel(_("~<Options~>"), offx + 176, offy + 1)
   menu:addLabel(_("Resolution Width:"), offx + 8, offy + 34, Fonts["game"], false)
@@ -611,15 +623,11 @@ function RunVideoOptionsMenu()
   musiccheckbox:setMarked(IsMusicEnabled())
   musiccheckbox:adjustSize();
 
-  b = menu:addImageCheckBox(_("Full Screen"), offx + 16, offy + 55 + 26*8 + 14,
+  full_screen_dd = menu:addImageCheckBox(_("Full Screen"), offx + 16, offy + 55 + 26*8 + 14,
     function()
-      ToggleFullScreen()
-      wyr.preferences.VideoFullScreen = Video.FullScreen
-      SavePreferences()
-      menu:stop()
-	  RunVideoOptionsMenu()
+      fullscreen = full_screen_dd:isMarked()
     end)
-  b:setMarked(Video.FullScreen)
+  full_screen_dd:setMarked(Video.FullScreen)
 
   checkTexture = menu:addImageCheckBox(_("Set Maximum OpenGL Texture to 256"), offx + 16, offy + 55 + 26*10 + 14,
     function()
@@ -651,6 +659,12 @@ function RunVideoOptionsMenu()
 	if (resolution_width ~= Video.Width or resolution_height ~= Video.Height) then
 		SetVideoSize(resolution_width, resolution_height)
 	end
+
+	if (fullscreen ~= Video.FullScreen) then
+		ToggleFullScreen()
+		wyr.preferences.VideoFullScreen = Video.FullScreen
+	end
+
 	SavePreferences()
   	menu:stop()
   end)
