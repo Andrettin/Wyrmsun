@@ -244,6 +244,9 @@ https://github.com/Andrettin/Wyrmsun
 * Maps
 - Added No Man's Land map, from the Stratagus Media Project.
 
+* Miscellaneous
+- Full screen can now be toggled from within a scenario (thanks to marcelofg55).
+
 * Units
 - Added Gnomish Duelist, an experience upgrade of the Gnomish Recruit (icon by Leo, based on Jinn's Gnomish Recruit icon).
 - Improved XP required calculation.
