@@ -38,6 +38,7 @@ function RunGameVideoOptionsMenu()
 	local offx = 0
 	local offy = 0
 	local fullscreen = Video.FullScreen
+	local fullscreen_dd
 
 	menu:addLabel(_("Video Options"), 128, 11)
 
@@ -526,6 +527,7 @@ function RunVideoOptionsMenu()
   local resolution_height_dd
   local resolution_width = Video.Width
   local resolution_height = Video.Height
+  local fullscreen_dd
   local fullscreen = Video.FullScreen
 
   menu:addLabel(_("~<Options~>"), offx + 176, offy + 1)
