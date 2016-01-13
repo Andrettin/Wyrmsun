@@ -247,6 +247,7 @@ https://github.com/Andrettin/Wyrmsun
 * Miscellaneous
 - Full screen can now be toggled from within a scenario (thanks to marcelofg55).
 - Fixed multiplayer loading screen crash.
+- Fixed a crash cause which could happen while selecting a faction.
 
 * Units
 - Added Gnomish Duelist, an experience upgrade of the Gnomish Recruit (icon by Leo, based on Jinn's Gnomish Recruit icon).
