@@ -287,7 +287,7 @@ DefineUnitType("unit-gnomish-duelist", { Name = _("Duelist"),
 DefineUnitType("unit-gnomish-master-at-arms", { Name = _("Master at Arms"),
 	Parent = "unit-template-heroic-infantry",
 	Civilization = "gnome",
-	Description = _("Deadly accurate, the gnomish master-at-arms is an extremely tough foe to defeat. Many a dwarven warrior has scorned the diminutive gnome's abilities, only to fail to deliver a single blow to the master-at-arms - with a fatal puncturing strike soon sealing the dwarf's fate."),
+	Description = _("Deadly accurate, the gnomish master at arms is an extremely tough foe to defeat. Many a dwarven warrior has scorned the diminutive gnome's abilities, only to fail to deliver a single blow to the master at arms - with a fatal puncturing strike soon sealing the dwarf's fate."),
 	Image = {"file", "gnome/units/body_warrior.png", "size", {72, 72}},
 	LayerImages = {
 		{"layer", "hair", "file", "gnome/units/blond_hair_warrior.png"},
