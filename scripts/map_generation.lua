@@ -2749,10 +2749,10 @@ function FindAppropriateNeutralBuildingSpawnPoint(building_type, min_x, max_x, m
 		if (in_buildable_land) then
 			local unit_quantity = 0
 			for i=0,14 do
-				unit_quantity = unit_quantity + GetNumUnitsAt(i, "any", {RandomX - 8, RandomY - 8}, {RandomX + (GetUnitTypeData(building_type, "TileWidth") - 1) + 8, RandomY + (GetUnitTypeData(building_type, "TileHeight") - 1) + 8})
+				unit_quantity = unit_quantity + GetNumUnitsAt(i, "any", {RandomX - 16, RandomY - 16}, {RandomX + (GetUnitTypeData(building_type, "TileWidth") - 1) + 16, RandomY + (GetUnitTypeData(building_type, "TileHeight") - 1) + 16})
 			end
 
-			unit_quantity = unit_quantity + GetNumUnitsAt(15, "buildings", {RandomX - 8, RandomY - 8}, {RandomX + (GetUnitTypeData(building_type, "TileWidth") - 1) + 8, RandomY + (GetUnitTypeData(building_type, "TileHeight") - 1) + 8}) + GetNumUnitsAt(15, building_type, {RandomX - 8, RandomY - 8}, {RandomX + (GetUnitTypeData(building_type, "TileWidth") - 1) + 8, RandomY + (GetUnitTypeData(building_type, "TileHeight") - 1) + 8})
+			unit_quantity = unit_quantity + GetNumUnitsAt(15, "buildings", {RandomX - 16, RandomY - 16}, {RandomX + (GetUnitTypeData(building_type, "TileWidth") - 1) + 16, RandomY + (GetUnitTypeData(building_type, "TileHeight") - 1) + 16}) + GetNumUnitsAt(15, building_type, {RandomX - 16, RandomY - 16}, {RandomX + (GetUnitTypeData(building_type, "TileWidth") - 1) + 16, RandomY + (GetUnitTypeData(building_type, "TileHeight") - 1) + 16})
 
 			if (unit_quantity < 1) then
 				location_found = true

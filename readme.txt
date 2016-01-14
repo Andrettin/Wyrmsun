@@ -240,6 +240,7 @@ https://github.com/Andrettin/Wyrmsun
 * Buildings
 - Town hall class buildings now have 6 sight.
 - Stronghold class buildings now have 9 sight.
+- Mercenary Camps are now never generated closer than 16 tiles to a player's starting location (previously that value was 8).
 
 * Maps
 - Added No Man's Land map (custom), from the Stratagus Media Project.
