@@ -994,6 +994,18 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-gnomish-master-at-arms",
+	Size = {46, 38},
+	File = "gnome/icons/master_at_arms.png"
+})
+
+DefineIcon({
+	Name = "icon-gnomish-master-at-arms-gray-hair",
+	Size = {46, 38},
+	File = "gnome/icons/master_at_arms_gray_hair.png"
+})
+
+DefineIcon({
 	Name = "icon-gnomish-herbalist",
 	Size = {46, 38},
 	File = "gnome/icons/gnomish_herbalist.png"

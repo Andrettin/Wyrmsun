@@ -41,11 +41,7 @@ function RunResultsMenu()
 		end
 	elseif (GameResult == GameDraw) then
 		result = "Draw!"
-		if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
-			background = ddefeat
-		else
-			background = ddefeat
-		end
+		background = GetBackground("ui/backgrounds/gullinburst.png")
 	else
 		return -- quit to menu
 	end

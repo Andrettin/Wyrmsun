@@ -102,6 +102,7 @@ local land_funcs = {
 	"unit-dwarven-gryphon-rider", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-dwarven-gryphon-rider"),
 	"unit-gnomish-recruit", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-gnomish-recruit"),
 	"unit-gnomish-duelist", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-gnomish-duelist"),
+	"unit-gnomish-master-at-arms", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-gnomish-master-at-arms"),
 	"unit-gnomish-herbalist", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-gnomish-herbalist"),
 	"unit-goblin-spearman", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-goblin-spearman"),
 	"unit-goblin-archer", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-goblin-archer"),

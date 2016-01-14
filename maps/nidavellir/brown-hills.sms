@@ -221,7 +221,7 @@ unit = CreateUnit("unit-gnomish-worker", 1, {13, 104})
 unit = CreateUnit("unit-gnomish-worker", 1, {13, 104})
 unit = CreateUnit("unit-gnomish-worker", 1, {13, 104})
 unit = CreateUnit("unit-gnomish-worker", 1, {13, 104})
-unit = CreateUnit("unit-gnomish-duelist", 1, {13, 104}) -- gnomish king
+unit = CreateUnit("unit-gnomish-master-at-arms", 1, {13, 104}) -- gnomish king
 SetUnitVariable(unit, "Name", "Pypo I")
 SetUnitVariable(unit, "Active", false)
 

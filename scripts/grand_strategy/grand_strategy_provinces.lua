@@ -3974,7 +3974,8 @@ function LoadProvinces(world)
 			},
 			Map = "maps/nidavellir/brown-hills.smp",
 			Units = {
-				unit_gnomish_duelist = 2 -- Pypo I and his envoy
+				unit_gnomish_master_at_arms = 1, -- Pypo I
+				unit_gnomish_duelist = 1 -- Pypo's envoy
 			},
 			SettlementTerrain = "Hills", -- should be DkPl?
 			Claims = {

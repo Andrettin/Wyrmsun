@@ -276,7 +276,7 @@ if (GrandStrategyYear >= 400) then
 	SetProvinceOwner("Kal Kartha", "dwarf", "Kal Kartha") -- The Lordship of Kal Kartha was founded around 400 AD
 	SetProvinceSettlementBuilding("Kal Kartha", "unit-dwarven-town-hall", true)
 	SetProvinceSettlementBuilding("Kal Kartha", "unit-dwarven-barracks", true)
-	SetProvinceUnitQuantity("Kal Kartha", "unit-gnomish-duelist", 0)
+	SetProvinceUnitQuantity("Kal Kartha", "unit-gnomish-recruit", 0)
 	SetWorldMapResourceProspected("gold", 46, 5, true)
 	SetProvinceUnitQuantity("Kal Kartha", "unit-dwarven-miner", 4)
 	SetFactionTechnology("dwarf", "Kal Kartha", "upgrade-dwarven-runewriting", true) -- polities require writing

@@ -35,7 +35,7 @@ AddTrigger(
 			return false
 		end
 		for i=0,14 do
-			if (GetPlayerData(i, "RaceName") == "gnome" and GetPlayerData(i, "UnitTypesCount", "unit-gnomish-duelist") >= 1) then
+			if (GetPlayerData(i, "RaceName") == "gnome" and GetPlayerData(i, "UnitTypesCount", "unit-gnomish-master-at-arms") >= 1) then
 				player = i
 				return true
 			end

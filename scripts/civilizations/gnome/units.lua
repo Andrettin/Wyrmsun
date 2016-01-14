@@ -202,7 +202,7 @@ DefineUnitType("unit-gnomish-duelist", { Name = _("Duelist"),
 		{"layer", "weapon", "file", "gnome/units/thrusting_sword.png"}
 	},
 	Animations = "animations-gnomish-recruit", Icon = "icon-gnomish-duelist",
-	HitPoints = 65,
+	HitPoints = 60,
 	Accuracy = 14,
 	Evasion = 14,
 	Corpse = "unit-gnomish-dead-body",
@@ -211,7 +211,6 @@ DefineUnitType("unit-gnomish-duelist", { Name = _("Duelist"),
 	DropAffixes = {"upgrade-item-prefix-jinns", "upgrade-item-prefix-storm", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-the-jinn", "upgrade-item-suffix-of-lightning", "upgrade-item-suffix-of-the-snigill", "upgrade-item-suffix-of-trickery"},
 	PierceDamage = true,
 	InvertedSoutheastArms = true,
-	Mana = {Enable = true, Max = 150, Value = 150, Increase = 1},
 	Variations = {
 		{
 			"variation-id", "blond-hair",
@@ -237,6 +236,99 @@ DefineUnitType("unit-gnomish-duelist", { Name = _("Duelist"),
 		{
 			"variation-id", "gray-hair",
 			"icon", "icon-gnomish-duelist-gray-hair",
+			"file", "gnome/units/body_warrior_slash.png",
+			"layer-file", "hair", "gnome/units/gray_hair_warrior_slash.png",
+			"item-equipped", "unit-hammer",
+			"item-equipped", "unit-mining-pick"
+		},
+		{
+			"layer", "right-arm",
+			"variation-id", "right-arm",
+			"item-not-equipped", "unit-hammer",
+			"item-not-equipped", "unit-mining-pick"
+		},
+		{
+			"layer", "right-arm",
+			"variation-id", "right-arm-slash",
+			"file", "gnome/units/right_arm_warrior_slash.png",
+			"item-equipped", "unit-hammer",
+			"item-equipped", "unit-mining-pick"
+		},
+		{
+			"layer", "weapon",
+			"variation-id", "sword",
+			"item-not-equipped", "unit-hammer",
+			"item-not-equipped", "unit-mining-pick"
+		},
+		{
+			"layer", "weapon",
+			"variation-id", "hammer",
+			"file", "gnome/units/hammer_warrior.png",
+			"item-equipped", "unit-hammer"
+		},
+		{
+			"layer", "weapon",
+			"variation-id", "mining-pick",
+			"file", "gnome/units/mining_pick_warrior.png",
+			"item-equipped", "unit-mining-pick"
+		}
+	},
+	Sounds = {
+		"selected", "gnomish-recruit-selected-group",
+		"acknowledge", "basic-gnome-voices-acknowledge",
+		"attack", "basic-gnome-voices-attack",
+		"help", "basic-gnome-voices-help",
+		"dead", "basic-gnome-voices-dead",
+		"hit", "sword-attack",
+		"miss", "attack-miss"
+	}
+} )
+
+DefineUnitType("unit-gnomish-master-at-arms", { Name = _("Master-at-Arms"),
+	Parent = "unit-template-heroic-infantry",
+	Civilization = "gnome",
+	Description = _("Deadly accurate, the gnomish master-at-arms is an extremely tough foe to defeat. Many a dwarven warrior has scorned the diminutive gnome's abilities, only to fail to deliver a single blow to the master-at-arms - with a fatal puncturing strike soon sealing the dwarf's fate."),
+	Image = {"file", "gnome/units/body_warrior.png", "size", {72, 72}},
+	LayerImages = {
+		{"layer", "hair", "file", "gnome/units/blond_hair_warrior.png"},
+		{"layer", "right-arm", "file", "gnome/units/right_arm_warrior.png"},
+		{"layer", "weapon", "file", "gnome/units/thrusting_sword.png"}
+	},
+	Animations = "animations-gnomish-recruit", Icon = "icon-gnomish-master-at-arms",
+	HitPoints = 75,
+	Accuracy = 15,
+	Evasion = 15,
+	Corpse = "unit-gnomish-dead-body",
+	WeaponClasses = {"thrusting-sword", "sword", "mace"},
+	AiDrops = {"unit-thrusting-sword", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-wool-shoes", "unit-furry-wool-shoes", "unit-cheese", "unit-potion-of-healing"},
+	DropAffixes = {"upgrade-item-prefix-jinns", "upgrade-item-prefix-storm", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-the-jinn", "upgrade-item-suffix-of-lightning", "upgrade-item-suffix-of-the-snigill", "upgrade-item-suffix-of-trickery"},
+	PierceDamage = true,
+	InvertedSoutheastArms = true,
+	Variations = {
+		{
+			"variation-id", "blond-hair",
+			"upgrade-forbidden", "upgrade-old",
+			"item-not-equipped", "unit-hammer",
+			"item-not-equipped", "unit-mining-pick"
+		},
+		{
+			"variation-id", "gray-hair",
+			"icon", "icon-gnomish-master-at-arms-gray-hair",
+			"layer-file", "hair", "gnome/units/gray_hair_warrior.png",
+			"item-not-equipped", "unit-hammer",
+			"item-not-equipped", "unit-mining-pick"
+		},
+		{
+			"variation-id", "blond-hair",
+			"file", "gnome/units/body_warrior_slash.png",
+			"layer-file", "hair", "gnome/units/blond_hair_warrior_slash.png",
+			"upgrade-forbidden", "upgrade-old",
+			"item-equipped", "unit-hammer",
+			"item-equipped", "unit-mining-pick"
+		},
+		{
+			"variation-id", "gray-hair",
+			"icon", "icon-gnomish-master-at-arms-gray-hair",
 			"file", "gnome/units/body_warrior_slash.png",
 			"layer-file", "hair", "gnome/units/gray_hair_warrior_slash.png",
 			"item-equipped", "unit-hammer",

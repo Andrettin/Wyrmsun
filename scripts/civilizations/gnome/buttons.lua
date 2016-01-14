@@ -40,7 +40,7 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-gnomish-boots",
 	Action = "move",
 	Key = "m", Hint = _("~!Move"), Popup = "popup-commands",
 	ForUnit = {
-		"unit-gnomish-worker", "unit-gnomish-recruit", "unit-gnomish-duelist",
+		"unit-gnomish-worker", "unit-gnomish-recruit", "unit-gnomish-duelist", "unit-gnomish-master-at-arms",
 		"unit-gnomish-herbalist", "unit-gnomish-caravan",
 		"gnome-group"
 	}
@@ -50,7 +50,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-gnomish-thrusting-sword-1",
 	Action = "attack",
 	Key = "a", Hint = _("~!Attack"), Popup = "popup-commands",
 	ForUnit = {
-		"unit-gnomish-worker", "unit-gnomish-recruit", "unit-gnomish-duelist", "unit-gnomish-herbalist",
+		"unit-gnomish-worker", "unit-gnomish-recruit", "unit-gnomish-duelist", "unit-gnomish-master-at-arms", "unit-gnomish-herbalist",
 		"gnome-group"
 	}
 } )
@@ -59,7 +59,7 @@ DefineButton( { Pos = 4, Level = 0, Icon = "icon-gnomish-patrol-land",
 	Action = "patrol",
 	Key = "p", Hint = _("~!Patrol"), Popup = "popup-commands",
 	ForUnit = {
-		"unit-gnomish-recruit", "unit-gnomish-duelist", 
+		"unit-gnomish-recruit", "unit-gnomish-duelist", "unit-gnomish-master-at-arms", 
 		"gnome-group"
 	}
 } )
@@ -198,4 +198,32 @@ DefineButton( { Pos = 1, Level = 1, Icon = "icon-gnomish-duelist-gray-hair",
 	Allowed = "check-unit-variable", AllowArg = {"Variation", "Value", "==", "3"},
 	Key = "u", Hint = _("~!Upgrade to Duelist"), Popup = "popup-unit",
 	ForUnit = {"unit-gnomish-recruit"}
+} )
+
+DefineButton( { Pos = 1, Level = 1, Icon = "icon-gnomish-master-at-arms",
+	Action = "experience-upgrade-to", Value = "unit-gnomish-master-at-arms",
+	Allowed = "check-unit-variable", AllowArg = {"Variation", "Value", "==", "0"},
+	Key = "u", Hint = _("~!Upgrade to Master-at-Arms"), Popup = "popup-unit",
+	ForUnit = {"unit-gnomish-duelist"}
+} )
+
+DefineButton( { Pos = 1, Level = 1, Icon = "icon-gnomish-master-at-arms-gray-hair",
+	Action = "experience-upgrade-to", Value = "unit-gnomish-master-at-arms",
+	Allowed = "check-unit-variable", AllowArg = {"Variation", "Value", "==", "1"},
+	Key = "u", Hint = _("~!Upgrade to Master-at-Arms"), Popup = "popup-unit",
+	ForUnit = {"unit-gnomish-duelist"}
+} )
+
+DefineButton( { Pos = 1, Level = 1, Icon = "icon-gnomish-master-at-arms",
+	Action = "experience-upgrade-to", Value = "unit-gnomish-master-at-arms",
+	Allowed = "check-unit-variable", AllowArg = {"Variation", "Value", "==", "2"},
+	Key = "u", Hint = _("~!Upgrade to Master-at-Arms"), Popup = "popup-unit",
+	ForUnit = {"unit-gnomish-duelist"}
+} )
+
+DefineButton( { Pos = 1, Level = 1, Icon = "icon-gnomish-master-at-arms-gray-hair",
+	Action = "experience-upgrade-to", Value = "unit-gnomish-master-at-arms",
+	Allowed = "check-unit-variable", AllowArg = {"Variation", "Value", "==", "3"},
+	Key = "u", Hint = _("~!Upgrade to Master-at-Arms"), Popup = "popup-unit",
+	ForUnit = {"unit-gnomish-duelist"}
 } )

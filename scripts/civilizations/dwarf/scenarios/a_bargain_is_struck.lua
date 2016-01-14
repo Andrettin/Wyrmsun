@@ -69,7 +69,7 @@ AddTrigger(
 	function() 
 		local gnomish_monarch_player = GetCivilizationPlayer("gnome")
 		local rugnur = FindHero("Rugnur")
-		local pypo_i = FindUnit("unit-gnomish-duelist", gnomish_monarch_player)
+		local pypo_i = FindUnit("unit-gnomish-master-at-arms", gnomish_monarch_player)
 		unit = CreateUnit("unit-revealer", player, {Players[gnomish_monarch_player].StartPos.x, Players[gnomish_monarch_player].StartPos.y})
 		Event(
 			"",
@@ -597,7 +597,7 @@ AddTrigger(
 					and (IfNearUnit(player, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-caravan") or IfNearUnit(player, ">=", 1, "unit-dwarven-stronghold", "unit-gnomish-caravan"))
 					and caravans_loaded) then
 					Event(
-						FindUnit("unit-gnomish-duelist", gnomish_monarch_player),
+						FindUnit("unit-gnomish-master-at-arms", gnomish_monarch_player),
 						"All the silver is there too. Proceed with the task, Rugnur!",
 						player,
 						{"~!Continue"},
@@ -781,7 +781,7 @@ AddTrigger(
 			event_player = GetFactionPlayer("Shinsplitter Clan")
 		end
 		Event(
-			FindUnit("unit-gnomish-duelist", gnomish_monarch_player),
+			FindUnit("unit-gnomish-master-at-arms", gnomish_monarch_player),
 			"You just let a caravan, with ~<my~> money loaded in it, get captured! If I can't trust you to keep my property secure, the deal's off.",
 			event_player,
 			{"~!Continue"},
@@ -828,7 +828,7 @@ AddTrigger(
 			event_player = GetFactionPlayer("Shinsplitter Clan")
 		end
 		Event(
-			FindUnit("unit-gnomish-duelist", gnomish_monarch_player),
+			FindUnit("unit-gnomish-master-at-arms", gnomish_monarch_player),
 			"Rugnur, you fool! You just let a caravan's cargo fall away! If I can't trust you to keep my property secure, the deal's off.",
 			event_player,
 			{"~!Continue"},

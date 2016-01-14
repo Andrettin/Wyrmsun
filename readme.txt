@@ -237,8 +237,13 @@ https://github.com/Andrettin/Wyrmsun
 - Mercenary Camps now keep a "stock" of 6 Goblin Thieves, which is depleted when they are hired, and is replenished over time.
 - Potions of Healing are now kept in stocks of 6 by stronghold-type buildings.
 
+* Miscellaneous
+- The correct background is now shown when a match ends in a draw.
+
 * Units
 - Removed cap of Goblin Thieves a player can have at a single time, as its purpose has been replaced by its hiring cooldown.
+- Added Gnomish Master-at-Arms, an experience upgrade of the Gnomish Duelist (icon by Leo, based on Jinn's Gnomish Recruit icon).
+- Decreased Gnomish Duelist HP from 65 to 60.
 
 -----------------------------------------------------------------------
 - 1.9.8

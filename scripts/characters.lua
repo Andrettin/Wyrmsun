@@ -38,7 +38,7 @@ Load("scripts/civilizations/teuton/characters.lua")
 DefineCharacter("Pypo", {
 	Name = "Pypo",
 	Gender = "male",
-	Type = "unit-gnomish-duelist",
+	Type = "unit-gnomish-master-at-arms",
 	Civilization = "gnome",
 	ProvinceOfOrigin = "Brown Hills",
 	Year = -1,

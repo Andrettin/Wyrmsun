@@ -62,7 +62,7 @@ AddTrigger(
 		local uncount = 0
 		uncount = GetUnits(GetFactionPlayer("Raiders"))
 		for unit1 = 1,table.getn(uncount) do 
-			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-gnomish-recruit" or GetUnitVariable(uncount[unit1], "Ident") == "unit-gnomish-duelist") then
+			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-gnomish-recruit" or GetUnitVariable(uncount[unit1], "Ident") == "unit-gnomish-duelist" or GetUnitVariable(uncount[unit1], "Ident") == "unit-gnomish-master-at-arms") then
 				local unit_quantity = GetNumUnitsAt(GetThisPlayer(), "units", {GetUnitVariable(uncount[unit1],"PosX") - 2, GetUnitVariable(uncount[unit1],"PosY") - 2}, {GetUnitVariable(uncount[unit1],"PosX") + 2, GetUnitVariable(uncount[unit1],"PosY") + 2})
 				if (unit_quantity > 0) then
 					player = GetThisPlayer()
@@ -179,7 +179,7 @@ AddTrigger(
 			local uncount = 0
 			uncount = GetUnits(GetFactionPlayer("Raiders"))
 			for unit1 = 1,table.getn(uncount) do 
-				if (GetUnitVariable(uncount[unit1], "Ident") == "unit-gnomish-duelist" and GetUnitVariable(uncount[unit1], "Level") == 4) then
+				if (GetUnitVariable(uncount[unit1], "Ident") == "unit-gnomish-master-at-arms" and GetUnitVariable(uncount[unit1], "Level") == 4) then
 					local unit_quantity = GetNumUnitsAt(GetThisPlayer(), "units", {GetUnitVariable(uncount[unit1],"PosX") - 1, GetUnitVariable(uncount[unit1],"PosY") - 1}, {GetUnitVariable(uncount[unit1],"PosX") + 1, GetUnitVariable(uncount[unit1],"PosY") + 1})
 					if (unit_quantity > 0) then
 						player = GetThisPlayer()
@@ -195,7 +195,7 @@ AddTrigger(
 		local uncount = 0
 		uncount = GetUnits(GetFactionPlayer("Raiders"))
 		for unit1 = 1,table.getn(uncount) do 
-			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-gnomish-duelist" and GetUnitVariable(uncount[unit1], "Level") == 4) then
+			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-gnomish-master-at-arms" and GetUnitVariable(uncount[unit1], "Level") == 4) then
 				gnomish_raider = uncount[unit1]
 			end
 		end
