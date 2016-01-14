@@ -203,27 +203,27 @@ DefineButton( { Pos = 1, Level = 1, Icon = "icon-gnomish-duelist-gray-hair",
 DefineButton( { Pos = 1, Level = 1, Icon = "icon-gnomish-master-at-arms",
 	Action = "experience-upgrade-to", Value = "unit-gnomish-master-at-arms",
 	Allowed = "check-unit-variable", AllowArg = {"Variation", "Value", "==", "0"},
-	Key = "u", Hint = _("~!Upgrade to Master-at-Arms"), Popup = "popup-unit",
+	Key = "u", Hint = _("~!Upgrade to Master at Arms"), Popup = "popup-unit",
 	ForUnit = {"unit-gnomish-duelist"}
 } )
 
 DefineButton( { Pos = 1, Level = 1, Icon = "icon-gnomish-master-at-arms-gray-hair",
 	Action = "experience-upgrade-to", Value = "unit-gnomish-master-at-arms",
 	Allowed = "check-unit-variable", AllowArg = {"Variation", "Value", "==", "1"},
-	Key = "u", Hint = _("~!Upgrade to Master-at-Arms"), Popup = "popup-unit",
+	Key = "u", Hint = _("~!Upgrade to Master at Arms"), Popup = "popup-unit",
 	ForUnit = {"unit-gnomish-duelist"}
 } )
 
 DefineButton( { Pos = 1, Level = 1, Icon = "icon-gnomish-master-at-arms",
 	Action = "experience-upgrade-to", Value = "unit-gnomish-master-at-arms",
 	Allowed = "check-unit-variable", AllowArg = {"Variation", "Value", "==", "2"},
-	Key = "u", Hint = _("~!Upgrade to Master-at-Arms"), Popup = "popup-unit",
+	Key = "u", Hint = _("~!Upgrade to Master at Arms"), Popup = "popup-unit",
 	ForUnit = {"unit-gnomish-duelist"}
 } )
 
 DefineButton( { Pos = 1, Level = 1, Icon = "icon-gnomish-master-at-arms-gray-hair",
 	Action = "experience-upgrade-to", Value = "unit-gnomish-master-at-arms",
 	Allowed = "check-unit-variable", AllowArg = {"Variation", "Value", "==", "3"},
-	Key = "u", Hint = _("~!Upgrade to Master-at-Arms"), Popup = "popup-unit",
+	Key = "u", Hint = _("~!Upgrade to Master at Arms"), Popup = "popup-unit",
 	ForUnit = {"unit-gnomish-duelist"}
 } )
