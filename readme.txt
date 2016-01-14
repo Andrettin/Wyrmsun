@@ -230,6 +230,17 @@ https://github.com/Andrettin/Wyrmsun
 ############################################################
 
 -----------------------------------------------------------------------
+- 1.9.9
+-----------------------------------------------------------------------
+
+* Buildings
+- Mercenary Camps now keep a "stock" of 6 Goblin Thieves, which is depleted when they are hired, and is replenished over time.
+- Potions of Healing are now kept in stocks of 6 by stronghold-type buildings.
+
+* Units
+- Removed cap of Goblin Thieves a player can have at a single time, as its purpose has been replaced by its hiring cooldown.
+
+-----------------------------------------------------------------------
 - 1.9.8
 -----------------------------------------------------------------------
 

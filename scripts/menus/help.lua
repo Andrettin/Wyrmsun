@@ -123,7 +123,7 @@ local tips = {
 	"Ranged units can shoot from within towers, strongholds and transport ships, with extra range.",
 
 	-- Technology-related tips
-	"Researching Writing will allow your faction to advance from a tribal one to a polity.",
+	"Researching a Writing upgrade will allow your faction to advance from a tribal one to a polity.",
 	
 	-- Levelling-related tips
 	"Your organic units can level up.",

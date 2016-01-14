@@ -1775,42 +1775,6 @@ DefineUnitType("unit-wood-pile", { Name = _("Wood Pile"),
 	}
 } )
 
-DefineUnitType("unit-mercenary-camp", { Name = _("Mercenary Camp"),
-	Class = "mercenary-camp",
-	Description = _("This camp houses a number of mercenary groups, who will offer their talents for hire."),
-	Image = {"file", "neutral/buildings/mercenary_camp.png", "size", {96, 99}},
-	Shadow = {"file", "neutral/buildings/mercenary_camp_shadow.png", "size", {96, 99}},
-	NeutralMinimapColor = {192, 192, 192},
-	Animations = "animations-mercenary-camp", Icon = "icon-mercenary-camp",
-	Costs = {"time", 200, "gold", 700, "lumber", 450},
-	RepairHp = 4,
-	RepairCosts = {"gold", 1, "lumber", 1},
-	Construction = "construction-land",
-	Speed = 0,
-	HitPoints = 800,
-	DrawLevel = 40,
-	TileSize = {3, 3}, BoxSize = {95, 95},
-	SightRange = 1,
-	Armor = 20, BasicDamage = 0, Missile = "missile-none",
-	Accuracy = 0,
-	Evasion = 0,
-	Priority = 30, AnnoyComputerFactor = 35,
-	Corpse = "unit-destroyed-3x3-place",
-	ExplodeWhenKilled = "missile-explosion",
-	Type = "land",
-	Building = true, VisibleUnderFog = true,
-	Drops = {"unit-wood-pile"},
-	RightMouseAction = "rally-point",
-	BurnPercent = 50,
-	BurnDamageRate = 1,
-	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
-	Sounds = {
-		"selected", "click",
---		"acknowledge", "barracks-acknowledge",
---		"ready", "barracks-ready",
---		"help", "basic-dwarf-voices-help",
-		"dead", "building-destroyed"} } )
-
 DefineUnitType("unit-tree-stump", { Name = _("Tree Stump"),
 	Image = {"file", "neutral/buildings/tree_stump.png", "size", {72, 72}},
 	NeutralMinimapColor = {128, 128, 0},
@@ -4394,6 +4358,7 @@ DefineUnitType("unit-template-stronghold", { Name = _("Stronghold"),
 	AttackFromTransporter = true,
 	SaveCargo = true,
 	AiDrops = {}, -- worker-related items, as well as those we would expect a center of administration to have; and military ones, since this is a stronghold
+	UnitStock = {"unit-potion-of-healing", 6},
 	Affixes = {"upgrade-item-suffix-of-the-colossus"},
 	DropAffixes = {"upgrade-item-suffix-of-slaughter", "upgrade-item-suffix-of-victory"},
 	Sounds = {
@@ -4904,6 +4869,47 @@ Load("scripts/civilizations/gnome/units.lua")
 Load("scripts/civilizations/goblin/units.lua")
 Load("scripts/civilizations/kobold/units.lua")
 Load("scripts/civilizations/teuton/units.lua")
+
+-- define the mercenary camp after the rest because it refers to unit types of the civilizations
+DefineUnitType("unit-mercenary-camp", { Name = _("Mercenary Camp"),
+	Class = "mercenary-camp",
+	Description = _("This camp houses a number of mercenary groups, who offer their talents for hire."),
+	Image = {"file", "neutral/buildings/mercenary_camp.png", "size", {96, 99}},
+	Shadow = {"file", "neutral/buildings/mercenary_camp_shadow.png", "size", {96, 99}},
+	NeutralMinimapColor = {192, 192, 192},
+	Animations = "animations-mercenary-camp", Icon = "icon-mercenary-camp",
+	Costs = {"time", 200, "gold", 700, "lumber", 450},
+	RepairHp = 4,
+	RepairCosts = {"gold", 1, "lumber", 1},
+	Construction = "construction-land",
+	Speed = 0,
+	HitPoints = 800,
+	DrawLevel = 40,
+	TileSize = {3, 3}, BoxSize = {95, 95},
+	SightRange = 1,
+	Armor = 20, BasicDamage = 0, Missile = "missile-none",
+	Accuracy = 0,
+	Evasion = 0,
+	Priority = 30, AnnoyComputerFactor = 35,
+	Corpse = "unit-destroyed-3x3-place",
+	ExplodeWhenKilled = "missile-explosion",
+	Type = "land",
+	Building = true, VisibleUnderFog = true,
+	Drops = {"unit-wood-pile"},
+	RightMouseAction = "rally-point",
+	BurnPercent = 50,
+	BurnDamageRate = 1,
+	UnitStock = {"unit-goblin-thief", 6},
+	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
+	Sounds = {
+		"selected", "click",
+--		"acknowledge", "barracks-acknowledge",
+--		"ready", "barracks-ready",
+--		"help", "basic-dwarf-voices-help",
+		"dead", "building-destroyed"
+	}
+} )
+
 
 DefineUnitType("unit-human-wall", { Name = _("Wall"),
 	Image = {"file", "neutral/buildings/glyph.png", "size", {32, 32}},

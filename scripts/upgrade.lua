@@ -311,11 +311,6 @@ function DefineAllowNormalUnits(flags)
 			end
 			flags = PlayerUnitFlag[0] .. PlayerUnitFlag[1] .. PlayerUnitFlag[2] .. PlayerUnitFlag[3] .. PlayerUnitFlag[4] .. PlayerUnitFlag[5] .. PlayerUnitFlag[6] .. PlayerUnitFlag[7] .. PlayerUnitFlag[8] .. PlayerUnitFlag[9] .. PlayerUnitFlag[10] .. PlayerUnitFlag[11] .. PlayerUnitFlag[12] .. PlayerUnitFlag[13] .. PlayerUnitFlag[14] .. PlayerUnitFlag[15]
 			DefineAllow(unitName, flags)
-			if (string.find(unitName, "upgrade-") == nil) then
-				if (GetUnitTypeData(unitName, "Class") == "thief") then
-					DefineUnitAllow(unitName, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6)
-				end
-			end
 		end
 	else
 		for i, unitName in ipairs(Units) do
@@ -323,13 +318,6 @@ function DefineAllowNormalUnits(flags)
 				DefineAllow(unitName, "AAAAAAAAAAAAAAAA")
 			else
 				DefineAllow(unitName, flags)
-			end
-			if (string.find(unitName, "upgrade-") == nil and GetUnitTypeData(unitName, "Class") == "thief") then
-				if (flags == "AAAAAAAAAAAAAAAA" or flags == "RRRRRRRRRRRRRRRR") then
-					DefineUnitAllow(unitName, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6)
-				else
-					DefineUnitAllow(unitName, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
-				end
 			end
 		end
 	end
