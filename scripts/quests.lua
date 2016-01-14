@@ -238,7 +238,7 @@ DefineQuest("The Binding of Grafvitnir", {
 DefineQuest("The Tomb of Durahn Eikinskjaldi", {
 	Icon = "icon-dwarven-shield-3",
 	Description = "The dwarves of the Eikinskjaldi Clan need to recover Durahn Eikinskjaldi's skull to prove their claim in the lordship of Joruvellir, but Durahn's tomb has fallen prey to a band of gnomish raiders...\n\nMap: Tomb of Durahn Eikinskjaldi",
-	RequiredQuest = "The Necklace of the Brisings",
+	RequiredQuest = "The Binding of Grafvitnir",
 	World = "Nidavellir",
 	Civilization = "dwarf",
 	TechnologyPoints = 1,
@@ -252,7 +252,7 @@ DefineQuest("The Tomb of Durahn Eikinskjaldi", {
 DefineQuest("A Bargain is Struck", {
 	Icon = "icon-rugnur",
 	Description = "A gnomish monarch arrives at a small border outpost led by Rugnur, asking that his clan craft a special scepter for him.\n\nMap: Chaincolt Foothills",
-	RequiredQuest = "The Mead of Wisdom",
+	RequiredQuest = "The Tomb of Durahn Eikinskjaldi",
 	World = "Nidavellir",
 	Civilization = "dwarf",
 	TechnologyPoints = 2,
