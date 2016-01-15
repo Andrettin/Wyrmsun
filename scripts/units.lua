@@ -4253,6 +4253,7 @@ DefineUnitType("unit-template-siege-engine", { Name = _("Siege Engine"),
 	CanAttack = true,
 	CanTargetLand = true, CanTargetSea = true,
 	SelectableByRectangle = true,
+	NoFriendlyFire = true, -- don't attack a target if friendly units would get hurt too
 	Sounds = {
 		"selected", "click",
 		"step", "step-dirt",
