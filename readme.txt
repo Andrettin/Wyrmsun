@@ -239,6 +239,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Miscellaneous
 - The correct background is now shown when a match ends in a draw.
+- Update to the Germanic cursor (by Leo).
 
 * Units
 - Removed cap of Goblin Thieves a player can have at a single time, as its purpose has been replaced by its hiring cooldown.
