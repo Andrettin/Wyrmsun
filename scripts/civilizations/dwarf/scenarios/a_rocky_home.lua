@@ -32,7 +32,7 @@ if (LoadedGame == false) then
 	SetPlayerData(0, "Resources", "stone", 0)
 	SetPlayerData(0, "Resources", "oil", 0)
 	SetPlayerData(0, "RaceName", "dwarf")
-	SetPlayerData(0, "Faction", "Modsogning Clan")
+	SetPlayerData(0, "Faction", "Brising Clan")
 	
 	if not (GrandStrategy) then
 		unit = CreateUnit("unit-dwarven-axefighter", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
@@ -44,11 +44,11 @@ if (LoadedGame == false) then
 		CreateProvinceUnits("Svarinshaug", 0, 1, false, false)
 		CreateProvinceCustomHero("Svarinshaug", 0)
 	
-		if (FactionHasHero("dwarf", "Modsogning Clan", "Modsognir")) then
+		if (FactionHasHero("dwarf", "Brising Clan", "Modsognir")) then
 			unit = CreateUnit(GetGrandStrategyHeroUnitType("Modsognir"), 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 			SetUnitVariable(unit, "Character", "Modsognir")
 		end
-		if (FactionHasHero("dwarf", "Modsogning Clan", "Durin")) then
+		if (FactionHasHero("dwarf", "Brising Clan", "Durin")) then
 			unit = CreateUnit(GetGrandStrategyHeroUnitType("Durin"), 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 			SetUnitVariable(unit, "Character", "Durin")
 		end
@@ -72,15 +72,15 @@ if (LoadedGame == false) then
 	GameTimeOfDay = 2
 end
 
-RemovePlayerObjective(GetFactionPlayer("Modsogning Clan"), "- Defeat your enemies")
+RemovePlayerObjective(GetFactionPlayer("Brising Clan"), "- Defeat your enemies")
 
 AddTrigger(
 	function()
 		if (GameCycle == 0) then
 			return false
 		end
-		if (GetFactionExists("Modsogning Clan") and not PlayerHasObjective(GetFactionPlayer("Modsogning Clan"), "- Kill 8 Yales")) then
-			player = GetFactionPlayer("Modsogning Clan")
+		if (GetFactionExists("Brising Clan") and not PlayerHasObjective(GetFactionPlayer("Brising Clan"), "- Kill 8 Yales")) then
+			player = GetFactionPlayer("Brising Clan")
 			return true
 		end
 		return false

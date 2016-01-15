@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 if (LoadedGame == false) then
-	SetPlayerData(0, "Faction", "Modsogning Clan")
+	SetPlayerData(0, "Faction", "Brising Clan")
 	SetPlayerData(0, "Allow", "upgrade-dwarven-runewriting", "F")
 	Map.Info.PlayerType[1] = PlayerNobody
 	Map.Info.PlayerType[2] = PlayerNobody
@@ -78,15 +78,15 @@ if (LoadedGame == false) then
 	end
 end
 
-RemovePlayerObjective(GetFactionPlayer("Modsogning Clan"), "- Defeat your enemies")
+RemovePlayerObjective(GetFactionPlayer("Brising Clan"), "- Defeat your enemies")
 
 AddTrigger(
 	function()
 		if (GameCycle == 0) then
 			return false
 		end
-		if (GetFactionExists("Modsogning Clan") and not PlayerHasObjective(GetFactionPlayer("Modsogning Clan"), "- Collect 8000 gold")) then
-			player = GetFactionPlayer("Modsogning Clan")
+		if (GetFactionExists("Brising Clan") and not PlayerHasObjective(GetFactionPlayer("Brising Clan"), "- Collect 8000 gold")) then
+			player = GetFactionPlayer("Brising Clan")
 			return true
 		end
 		return false
@@ -94,7 +94,7 @@ AddTrigger(
 	function() 
 		local brokk = nil
 		local eitri = nil
-		local uncount = GetUnits(GetFactionPlayer("Modsogning Clan"))
+		local uncount = GetUnits(GetFactionPlayer("Brising Clan"))
 		for unit1 = 1,table.getn(uncount) do 
 			if ((GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-steelclad" or GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-thane") and GetUnitVariable(uncount[unit1], "Name") == "Brokk") then
 				brokk = uncount[unit1]
@@ -151,7 +151,7 @@ AddTrigger(
 	function()
 		local brokk = nil
 		local eitri = nil
-		local uncount = GetUnits(GetFactionPlayer("Modsogning Clan"))
+		local uncount = GetUnits(GetFactionPlayer("Brising Clan"))
 		for unit1 = 1,table.getn(uncount) do 
 			if ((GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-steelclad" or GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-thane") and GetUnitVariable(uncount[unit1], "Name") == "Brokk") then
 				brokk = uncount[unit1]
@@ -221,10 +221,10 @@ AddTrigger(
 		local uncount = GetUnits(15)
 		for unit1 = 1,table.getn(uncount) do 
 			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-blood-bat" or GetUnitVariable(uncount[unit1], "Ident") == "unit-dread-bat" or GetUnitVariable(uncount[unit1], "Ident") == "unit-slime") then
-				if (GetNumUnitsAt(GetFactionPlayer("Modsogning Clan"), "units", {GetUnitVariable(uncount[unit1],"PosX") - 4, GetUnitVariable(uncount[unit1],"PosY") - 4}, {GetUnitVariable(uncount[unit1],"PosX") + 4, GetUnitVariable(uncount[unit1],"PosY") + 4}) > 0) then -- if there are units from Brokk and Eitri's entourage near the beast
+				if (GetNumUnitsAt(GetFactionPlayer("Brising Clan"), "units", {GetUnitVariable(uncount[unit1],"PosX") - 4, GetUnitVariable(uncount[unit1],"PosY") - 4}, {GetUnitVariable(uncount[unit1],"PosX") + 4, GetUnitVariable(uncount[unit1],"PosY") + 4}) > 0) then -- if there are units from Brokk and Eitri's entourage near the beast
 					local nearby_uncount = GetUnitsAroundUnit(uncount[unit1], 4, true)
 					for unit2 = 1,table.getn(nearby_uncount) do 
-						if (nearby_uncount[unit2] and GetUnitVariable(nearby_uncount[unit2], "Player") == GetFactionPlayer("Modsogning Clan") and GetUnitTypeData(GetUnitVariable(nearby_uncount[unit2], "Ident"), "organic")) then
+						if (nearby_uncount[unit2] and GetUnitVariable(nearby_uncount[unit2], "Player") == GetFactionPlayer("Brising Clan") and GetUnitTypeData(GetUnitVariable(nearby_uncount[unit2], "Ident"), "organic")) then
 							OrderUnit(15, GetUnitVariable(uncount[unit1],"Ident"), {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, {GetUnitVariable(nearby_uncount[unit2],"PosX"), GetUnitVariable(nearby_uncount[unit2],"PosY")}, "attack")
 						end
 					end
@@ -234,7 +234,7 @@ AddTrigger(
 		
 		local brokk_found = false
 		local eitri_found = false
-		local uncount = GetUnits(GetFactionPlayer("Modsogning Clan"))
+		local uncount = GetUnits(GetFactionPlayer("Brising Clan"))
 		for unit1 = 1,table.getn(uncount) do 
 			if ((GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-steelclad" or GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-thane") and GetUnitVariable(uncount[unit1], "Name") == "Brokk") then
 				brokk_found = true

@@ -37,7 +37,7 @@ local NidavellirEvents = {
 		},
 		Conditions = function(s)
 			if (
-				EventFaction.Name == "Modsogning Clan"
+				EventFaction.Name == "Brising Clan"
 			) then
 				return true
 			else
@@ -47,7 +47,7 @@ local NidavellirEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Modsogning Clan" and wyr.preferences.AutomaticBattles == false) then
+				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Brising Clan" and wyr.preferences.AutomaticBattles == false) then
 					SetProvinceHero("Svarinshaug", "Modsognir", 2)
 					SetProvinceHero("Svarinshaug", "Durin", 2)
 
@@ -57,21 +57,21 @@ local NidavellirEvents = {
 					RunMap("maps/nidavellir/svarinshaug.smp")
 					GrandStrategyEventMap = false
 					
-					RestoreScenarioUnitsToProvince({ProvinceName = "Svarinshaug", FactionName = "Modsogning Clan", Heroes = {"Modsognir", "Durin"}})
+					RestoreScenarioUnitsToProvince({ProvinceName = "Svarinshaug", FactionName = "Brising Clan", Heroes = {"Modsognir", "Durin"}})
 					
 					if (GameResult == GameVictory) then
-						ChangeFactionResource("dwarf", "Modsogning Clan", "prestige", 5) -- prestige for successfully settling Svarinshaug
-						ChangeFactionResource("dwarf", "Modsogning Clan", "gold", 800) -- food gained from the yales
-						ChangeFactionResource("dwarf", "Modsogning Clan", "lumber", 400) -- lumber gained from the mission
-						ChangeFactionResource("dwarf", "Modsogning Clan", "stone", 200) -- stone gained from the mission
+						ChangeFactionResource("dwarf", "Brising Clan", "prestige", 5) -- prestige for successfully settling Svarinshaug
+						ChangeFactionResource("dwarf", "Brising Clan", "gold", 800) -- food gained from the yales
+						ChangeFactionResource("dwarf", "Brising Clan", "lumber", 400) -- lumber gained from the mission
+						ChangeFactionResource("dwarf", "Brising Clan", "stone", 200) -- stone gained from the mission
 					elseif (GameResult == GameDefeat) then
 						AcquireProvince(WorldMapProvinces.Svarinshaug, "")
 					end
-				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "Modsogning Clan" or wyr.preferences.AutomaticBattles)) then
-					ChangeFactionResource("dwarf", "Modsogning Clan", "prestige", 5) -- prestige for successfully settling Svarinshaug
-					ChangeFactionResource("dwarf", "Modsogning Clan", "gold", 800) -- food gained from the yales
-					ChangeFactionResource("dwarf", "Modsogning Clan", "lumber", 400) -- lumber gained from the mission
-					ChangeFactionResource("dwarf", "Modsogning Clan", "stone", 200) -- stone gained from the mission
+				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "Brising Clan" or wyr.preferences.AutomaticBattles)) then
+					ChangeFactionResource("dwarf", "Brising Clan", "prestige", 5) -- prestige for successfully settling Svarinshaug
+					ChangeFactionResource("dwarf", "Brising Clan", "gold", 800) -- food gained from the yales
+					ChangeFactionResource("dwarf", "Brising Clan", "lumber", 400) -- lumber gained from the mission
+					ChangeFactionResource("dwarf", "Brising Clan", "stone", 200) -- stone gained from the mission
 					if (GrandStrategyFaction.Name == EventFaction.Name) then
 						CenterGrandStrategyMapOnTile(WorldMapProvinces.Svarinshaug.SettlementLocation[1], WorldMapProvinces.Svarinshaug.SettlementLocation[2])
 						GenericDialog("A Rocky Home", "We have successfully hunted enough yales and gathered enough lumber and stone to survive our early days in Svarinshaug.")
@@ -93,7 +93,7 @@ local NidavellirEvents = {
 		},
 		Conditions = function(s)
 			if (
-				EventFaction.Name == "Modsogning Clan"
+				EventFaction.Name == "Brising Clan"
 				and SyncRand(100) < 20
 			) then
 				return true
@@ -104,7 +104,7 @@ local NidavellirEvents = {
 		Options = {"Send ~!Durin", "Do ~!nothing"},
 		OptionEffects = {
 			function(s)
-				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Modsogning Clan" and wyr.preferences.AutomaticBattles == false) then
+				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Brising Clan" and wyr.preferences.AutomaticBattles == false) then
 					SetProvinceHero("Svarinshaug", "Durin", 2)
 
 					GrandStrategyEventMap = true
@@ -113,13 +113,13 @@ local NidavellirEvents = {
 					RunMap("maps/nidavellir/fjalars-and-galars-hall.smp")
 					GrandStrategyEventMap = false
 					
-					RestoreScenarioUnitsToProvince({ProvinceName = "Svarinshaug", FactionName = "Modsogning Clan", Heroes = {"Durin"}})
+					RestoreScenarioUnitsToProvince({ProvinceName = "Svarinshaug", FactionName = "Brising Clan", Heroes = {"Durin"}})
 					
 					if (GameResult == GameVictory) then
-						ChangeFactionResource("dwarf", "Modsogning Clan", "prestige", 10) -- prestige for punishing the evil doers and recovering the sage's remains
+						ChangeFactionResource("dwarf", "Brising Clan", "prestige", 10) -- prestige for punishing the evil doers and recovering the sage's remains
 					end
-				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "Modsogning Clan" or wyr.preferences.AutomaticBattles)) then
-					ChangeFactionResource("dwarf", "Modsogning Clan", "prestige", 10) -- prestige for punishing the evil doers and recovering the sage's remains
+				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "Brising Clan" or wyr.preferences.AutomaticBattles)) then
+					ChangeFactionResource("dwarf", "Brising Clan", "prestige", 10) -- prestige for punishing the evil doers and recovering the sage's remains
 					if (GrandStrategyFaction.Name == EventFaction.Name) then
 						GenericDialog("The Mead of Wisdom", "Fjalar and Galar had brewn Thjodrorir's remains into mead, gloating that drink it had made them wiser. Durin survived the encounter with them, and brought the mead to be buried in Thjodrorir's tomb.")
 					end
@@ -127,7 +127,7 @@ local NidavellirEvents = {
 				KillGrandStrategyHero("Thjodrorir")
 			end,
 			function(s)
-				ChangeFactionResource("dwarf", "Modsogning Clan", "prestige", -10) -- doing nothing in such a situation would be dishonorable
+				ChangeFactionResource("dwarf", "Brising Clan", "prestige", -10) -- doing nothing in such a situation would be dishonorable
 				KillGrandStrategyHero("Thjodrorir")
 			end
 		},
@@ -145,7 +145,7 @@ local NidavellirEvents = {
 		},
 		Conditions = function(s)
 			if (
-				EventFaction.Name == "Modsogning Clan"
+				EventFaction.Name == "Brising Clan"
 				and SyncRand(100) < 20
 			) then
 				return true
@@ -156,21 +156,21 @@ local NidavellirEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Modsogning Clan" and wyr.preferences.AutomaticBattles == false) then
+				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Brising Clan" and wyr.preferences.AutomaticBattles == false) then
 					GrandStrategyEventMap = true
 					GetMapInfo("maps/nidavellir/eastern-mines.smp")
 					CurrentQuest = "The Treasures of Svarinshaug"
 					RunMap("maps/nidavellir/eastern-mines.smp")
 					GrandStrategyEventMap = false
 					
-					RestoreScenarioUnitsToProvince({ProvinceName = "Svarinshaug", FactionName = "Modsogning Clan"})
+					RestoreScenarioUnitsToProvince({ProvinceName = "Svarinshaug", FactionName = "Brising Clan"})
 					if (GameResult == GameVictory) then
-						ChangeFactionResource("dwarf", "Modsogning Clan", "prestige", 30) -- prestige for obtaining the wondrous artifacts
-						ChangeFactionResource("dwarf", "Modsogning Clan", "gold", 1000) -- gold value of Draupnir
+						ChangeFactionResource("dwarf", "Brising Clan", "prestige", 30) -- prestige for obtaining the wondrous artifacts
+						ChangeFactionResource("dwarf", "Brising Clan", "gold", 1000) -- gold value of Draupnir
 					end
-				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "Modsogning Clan" or wyr.preferences.AutomaticBattles)) then
-					ChangeFactionResource("dwarf", "Modsogning Clan", "prestige", 30) -- prestige for obtaining the wondrous artifacts
-					ChangeFactionResource("dwarf", "Modsogning Clan", "gold", 1000) -- gold value of Draupnir
+				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "Brising Clan" or wyr.preferences.AutomaticBattles)) then
+					ChangeFactionResource("dwarf", "Brising Clan", "prestige", 30) -- prestige for obtaining the wondrous artifacts
+					ChangeFactionResource("dwarf", "Brising Clan", "gold", 1000) -- gold value of Draupnir
 					if (GrandStrategyFaction.Name == EventFaction.Name) then
 						GenericDialog("The Treasures of Svarinshaug", "Having gathered the necessary resources, Brokk and Eitri crafted their gifts for Modsognir. The sons of Ivaldi had presented the chieftain with a magnificent throwing spear, Gungnir, and a sleek ship, Skidbladnir. But Modsognir judged Brokk and Eitri's artifacts to be the better ones: they gave him a solid gold arm-ring, Draupnir, and a mighty hammer, Mjollnir.")
 					end
@@ -181,7 +181,7 @@ local NidavellirEvents = {
 	},
 	TheNecklaceOfTheBrisings = {
 		Name = "The Necklace of the Brisings",
-		Description = "The necklace made for Modsognir's wife by the Brisings - a group of four dwarven smiths - has been stolen! The culprits, a band of local dwarven thieves, sneaked away with the necklace last night, going back to their hideout. We must avenge this dishonor to our clan, and recover the necklace from these bandits!",
+		Description = "The necklace made for Modsognir's wife by a group of four dwarven smiths has been stolen! The culprits, a band of local dwarven thieves, sneaked away with the necklace last night, going back to their hideout. We must avenge this dishonor to our clan, and recover the necklace from these bandits!",
 		Heroes = {
 			Modsognir = true,
 			Durin = true
@@ -191,7 +191,7 @@ local NidavellirEvents = {
 		},
 		Conditions = function(s)
 			if (
-				EventFaction.Name == "Modsogning Clan"
+				EventFaction.Name == "Brising Clan"
 				and GetProvinceOwner("Aurvang") == ""
 				and SyncRand(100) < 20
 			) then
@@ -203,7 +203,7 @@ local NidavellirEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Modsogning Clan" and wyr.preferences.AutomaticBattles == false) then
+				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Brising Clan" and wyr.preferences.AutomaticBattles == false) then
 					SetProvinceHero("Svarinshaug", "Modsognir", 2)
 					SetProvinceHero("Svarinshaug", "Durin", 2)
 
@@ -213,20 +213,20 @@ local NidavellirEvents = {
 					RunMap("maps/nidavellir/aurvang.smp")
 					GrandStrategyEventMap = false
 					
-					RestoreScenarioUnitsToProvince({ProvinceName = "Svarinshaug", FactionName = "Modsogning Clan", Heroes = {"Modsognir", "Durin"}})
+					RestoreScenarioUnitsToProvince({ProvinceName = "Svarinshaug", FactionName = "Brising Clan", Heroes = {"Modsognir", "Durin"}})
 					
 					if (GameResult == GameVictory) then
-						ChangeFactionResource("dwarf", "Modsogning Clan", "prestige", 5) -- prestige for rooting out the bandits
-						ChangeFactionResource("dwarf", "Modsogning Clan", "gold", 1000) -- gold value of the Necklace
+						ChangeFactionResource("dwarf", "Brising Clan", "prestige", 5) -- prestige for rooting out the bandits
+						ChangeFactionResource("dwarf", "Brising Clan", "gold", 1000) -- gold value of the Necklace
 						-- place some goblins in Aurvang after the dwarven bandits are gone
 						SetProvinceUnitQuantity("Aurvang", "unit-goblin-spearman", 6)
 						SetProvinceUnitQuantity("Aurvang", "unit-goblin-archer", 3)
 					end
-				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "Modsogning Clan" or wyr.preferences.AutomaticBattles)) then
+				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "Brising Clan" or wyr.preferences.AutomaticBattles)) then
 					SetProvinceUnitQuantity("Aurvang", "unit-dwarven-steelclad", 0) -- bandits rooted out
 					SetProvinceUnitQuantity("Aurvang", "unit-dwarven-axefighter", 0)
-					ChangeFactionResource("dwarf", "Modsogning Clan", "prestige", 5) -- prestige for rooting out the bandits
-					ChangeFactionResource("dwarf", "Modsogning Clan", "gold", 1000) -- gold value of the Necklace
+					ChangeFactionResource("dwarf", "Brising Clan", "prestige", 5) -- prestige for rooting out the bandits
+					ChangeFactionResource("dwarf", "Brising Clan", "gold", 1000) -- gold value of the Necklace
 					
 					-- place some goblins in Aurvang after the dwarven bandits are gone
 					SetProvinceUnitQuantity("Aurvang", "unit-goblin-spearman", 6)
@@ -252,7 +252,7 @@ local NidavellirEvents = {
 		},
 		Conditions = function(s)
 			if (
-				EventFaction.Name == "Modsogning Clan"
+				EventFaction.Name == "Brising Clan"
 				and SyncRand(100) < 20
 			) then
 				return true
@@ -263,7 +263,7 @@ local NidavellirEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Modsogning Clan" and wyr.preferences.AutomaticBattles == false) then
+				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Brising Clan" and wyr.preferences.AutomaticBattles == false) then
 					SetProvinceHero("Svarinshaug", "Modsognir", 2)
 					SetProvinceHero("Svarinshaug", "Durin", 2)
 					
@@ -273,13 +273,13 @@ local NidavellirEvents = {
 					RunMap(GetQuestData("The Binding of Grafvitnir", "Map"))
 					GrandStrategyEventMap = false
 					
-					RestoreScenarioUnitsToProvince({ProvinceName = "Svarinshaug", FactionName = "Modsogning Clan", Heroes = {"Modsognir", "Durin"}})
+					RestoreScenarioUnitsToProvince({ProvinceName = "Svarinshaug", FactionName = "Brising Clan", Heroes = {"Modsognir", "Durin"}})
 					
 					if (GameResult == GameVictory) then
-						ChangeFactionResource("dwarf", "Modsogning Clan", "prestige", 25) -- prestige for chaining the beast
+						ChangeFactionResource("dwarf", "Brising Clan", "prestige", 25) -- prestige for chaining the beast
 					end
-				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "Modsogning Clan" or wyr.preferences.AutomaticBattles)) then
-					ChangeFactionResource("dwarf", "Modsogning Clan", "prestige", 25) -- prestige for chaining the beast
+				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "Brising Clan" or wyr.preferences.AutomaticBattles)) then
+					ChangeFactionResource("dwarf", "Brising Clan", "prestige", 25) -- prestige for chaining the beast
 					if (GrandStrategyFaction.Name == EventFaction.Name) then
 						GenericDialog("The Binding of Grafvitnir", "Modsognir successfully entered Grafvitnir's lair and chained the beast. With much effort, the enormous Grafvitnir was brought to Svarinshaug by the dwarves. The monster's fetters were bound to the walls of a nearby cave, and the entrance destroyed. Little is known of what ultimately became of the wyrm. What is certain is that the creature never bothered our clan again.")
 					end

@@ -32,7 +32,7 @@ DefineCharacter("Modsognir", { -- one of the earliest dwarven leaders; in Norse 
 	Gender = "male",
 	Type = "unit-dwarven-steelclad",
 	Civilization = "dwarf",
-	Faction = "Modsogning Clan",
+	Faction = "Brising Clan",
 	Description = _("The leader of one of the first dwarven tribes, Modsognir is a mighty warrior."),
 	Background = _("In Norse mythology, Modsognir appears in the ~<Voluspo~> as the first and mightiest of the dwarves."),
 	Icon = "icon-modsognir",
@@ -50,7 +50,7 @@ DefineCharacter("Durin", { -- deputy of Modsognir
 	Gender = "male",
 	Type = "unit-dwarven-steelclad",
 	Civilization = "dwarf",
-	Faction = "Modsogning Clan",
+	Faction = "Brising Clan",
 	Description = _("Durin is a valiant dwarven warrior and loyal vassal of chieftain Modsognir."),
 	Background = _("In Norse mythology, Durin appears in the ~<Voluspo~> as one of the first dwarves."),
 	Icon = "icon-durin",
@@ -67,7 +67,7 @@ DefineCharacter("Thjodrorir", { -- dwarven sage of Modsognir's clan; in Norse my
 	Name = "Thjodrorir",
 	Type = "unit-dwarven-steelclad", -- should be a priest
 	Civilization = "dwarf",
-	Faction = "Modsogning Clan",
+	Faction = "Brising Clan",
 	ProvinceOfOrigin = "Svarinshaug",
 	Year = -3000,
 	DeathYear = -3000 + 30 -- estimated

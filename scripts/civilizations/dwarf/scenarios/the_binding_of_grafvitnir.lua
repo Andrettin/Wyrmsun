@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 if (LoadedGame == false) then
-	SetPlayerData(0, "Faction", "Modsogning Clan")
+	SetPlayerData(0, "Faction", "Brising Clan")
 	SetPlayerData(0, "Resources", "gold", 5000)
 	SetPlayerData(0, "Resources", "lumber", 1500)
 	SetPlayerData(0, "Resources", "stone", 1000)
@@ -49,11 +49,11 @@ if (LoadedGame == false) then
 		CreateProvinceUnits("Svarinshaug", 0, 1, false, true)
 		CreateProvinceCustomHero("Svarinshaug", 0)
 
-		if (FactionHasHero("dwarf", "Modsogning Clan", "Modsognir")) then
+		if (FactionHasHero("dwarf", "Brising Clan", "Modsognir")) then
 			unit = CreateUnit(GetGrandStrategyHeroUnitType("Modsognir"), 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 			SetUnitVariable(unit, "Character", "Modsognir")
 		end
-		if (FactionHasHero("dwarf", "Modsogning Clan", "Durin")) then
+		if (FactionHasHero("dwarf", "Brising Clan", "Durin")) then
 			unit = CreateUnit(GetGrandStrategyHeroUnitType("Durin"), 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 			SetUnitVariable(unit, "Character", "Durin")
 		end
@@ -100,15 +100,15 @@ if (LoadedGame == false) then
 	end
 end
 
-RemovePlayerObjective(GetFactionPlayer("Modsogning Clan"), "- Defeat your enemies")
+RemovePlayerObjective(GetFactionPlayer("Brising Clan"), "- Defeat your enemies")
 
 AddTrigger(
 	function()
 		if (GameCycle == 0) then
 			return false
 		end
-		if (GetFactionExists("Modsogning Clan") and not PlayerHasObjective(GetFactionPlayer("Modsogning Clan"), "- Get Modsognir close to Grafvitnir")) then
-			player = GetFactionPlayer("Modsogning Clan")
+		if (GetFactionExists("Brising Clan") and not PlayerHasObjective(GetFactionPlayer("Brising Clan"), "- Get Modsognir close to Grafvitnir")) then
+			player = GetFactionPlayer("Brising Clan")
 			return true
 		end
 		return false
@@ -186,14 +186,14 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if (PlayerHasObjective(GetFactionPlayer("Modsogning Clan"), "- Get Modsognir close to Grafvitnir")) then
+		if (PlayerHasObjective(GetFactionPlayer("Brising Clan"), "- Get Modsognir close to Grafvitnir")) then
 			local uncount = 0
 			uncount = GetUnits(GetFactionPlayer("Grafvitnir"))
 			for unit1 = 1,table.getn(uncount) do 
 				if (GetUnitVariable(uncount[unit1], "Ident") == "unit-wyrm") then
-					local unit_quantity = GetNumUnitsAt(GetFactionPlayer("Modsogning Clan"), "units", {GetUnitVariable(uncount[unit1],"PosX") - 4, GetUnitVariable(uncount[unit1],"PosY") - 4}, {GetUnitVariable(uncount[unit1],"PosX") + 1 + 4, GetUnitVariable(uncount[unit1],"PosY") + 1 + 4})
+					local unit_quantity = GetNumUnitsAt(GetFactionPlayer("Brising Clan"), "units", {GetUnitVariable(uncount[unit1],"PosX") - 4, GetUnitVariable(uncount[unit1],"PosY") - 4}, {GetUnitVariable(uncount[unit1],"PosX") + 1 + 4, GetUnitVariable(uncount[unit1],"PosY") + 1 + 4})
 					if (unit_quantity > 0) then
-						player = GetFactionPlayer("Modsogning Clan")
+						player = GetFactionPlayer("Brising Clan")
 						return true
 					end
 				end
@@ -202,7 +202,7 @@ AddTrigger(
 		return false
 	end,
 	function()
-		local modsogning_unit
+		local brising_unit
 		
 		local uncount = 0
 		uncount = GetUnits(GetFactionPlayer("Grafvitnir"))
@@ -211,20 +211,20 @@ AddTrigger(
 				local nearby_uncount = 0
 				nearby_uncount = GetUnitsAroundUnit(uncount[unit1], 4, true)
 				for unit2 = 1,table.getn(nearby_uncount) do 
-					if (GetUnitVariable(nearby_uncount[unit2], "Player") == GetFactionPlayer("Modsogning Clan")) then
-						modsogning_unit = nearby_uncount[unit2]
+					if (GetUnitVariable(nearby_uncount[unit2], "Player") == GetFactionPlayer("Brising Clan")) then
+						brising_unit = nearby_uncount[unit2]
 						break
 					end
 				end
 			end
 		end
 		
-		if (not modsogning_unit) then
+		if (not brising_unit) then
 			return true
 		end
 			
 		Event(
-			modsogning_unit,
+			brising_unit,
 			"I've found Grafvitnir...!",
 			player,
 			{"~!Continue"},

@@ -33,12 +33,12 @@ DefineFaction("Eikinskjaldi Clan", { -- originally Oakenshield (from Dyson Logos
 	FactionUpgrade = "upgrade-eikinskjaldi-clan-faction"
 })
 
-DefineFaction("Modsogning Clan", { -- clan of Modsognir
+DefineFaction("Brising Clan", { -- clan of Modsognir
 	Civilization = "dwarf",
 	Type = "tribe",
 	Colors = {"white"},
 	DevelopsTo = {"Joruvellir", "Kal Kartha", "Knalga", "Lyr"},
-	FactionUpgrade = "upgrade-modsogning-clan-faction"
+	FactionUpgrade = "upgrade-brising-clan-faction"
 })
 
 DefineFaction("Norlund Clan", {

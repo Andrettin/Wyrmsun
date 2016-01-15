@@ -94,7 +94,7 @@ DefineUniqueItem("Brisingamen", { -- Source: Henry Adams Bellows (transl.), "The
 	Type = "unit-amulet",
 	Prefix = "upgrade-item-prefix-flaming",
 	Suffix = "upgrade-item-suffix-of-swiftness",
-	Background = "In Norse mythology, Brisingamen (\"The Necklace of the Brisings\") was a golden necklace crafted by the four dwarven smiths known as the Brisings for the goddess Freyja.",
+	Background = "In Norse mythology, Brisingamen (\"The Necklace of the Brisings\") was a golden necklace crafted by four dwarven smiths for the goddess Freyja.",
 	Quote = "\"The dwelling great | of the dwarves was shaken, / And burst was the mighty | Brisings' necklace.\" - Dwarven Traditional Poetry"
 } )
 

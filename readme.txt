@@ -237,6 +237,9 @@ https://github.com/Andrettin/Wyrmsun
 - Mercenary Camps now keep a "stock" of 6 Goblin Thieves, which is depleted when they are hired, and is replenished over time.
 - Potions of Healing are now kept in stocks of 6 by stronghold-type buildings.
 
+* Factions
+- Renamed the Modsogning Clan (dwarf) to Brising Clan.
+
 * Miscellaneous
 - The correct background is now shown when a match ends in a draw.
 - Update to the Germanic cursor (by Leo).

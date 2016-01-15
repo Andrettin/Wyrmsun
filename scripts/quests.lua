@@ -209,7 +209,7 @@ DefineQuest("The Treasures of Svarinshaug", {
 
 DefineQuest("The Necklace of the Brisings", {
 	Icon = "icon-dwarven-steelclad",
-	Description = "The necklace made for Modsognir's wife by the Brisings - a group of four dwarven smiths - has been stolen! The culprits, a band of local dwarven thieves, sneaked away with the necklace last night, going back to their hideout. We must recover the necklace from these bandits!\n\nMap: Aurvang",
+	Description = "The necklace made for Modsognir's wife by a group of four dwarven smiths has been stolen! The culprits, a band of local dwarven thieves, sneaked away with the necklace last night, going back to their hideout. We must recover the necklace from these bandits!\n\nMap: Aurvang",
 	RequiredQuest = "The Treasures of Svarinshaug",
 	World = "Nidavellir",
 	Civilization = "dwarf",

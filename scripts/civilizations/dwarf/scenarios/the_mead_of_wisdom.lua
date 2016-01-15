@@ -28,7 +28,7 @@
 --
 
 if (LoadedGame == false) then
-	SetPlayerData(0, "Faction", "Modsogning Clan")
+	SetPlayerData(0, "Faction", "Brising Clan")
 	SetPlayerData(2, "Name", "Fjalar and Galar")
 
 	if (GrandStrategy == false) then
@@ -122,8 +122,8 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if (GetFactionExists("Fjalar and Galar") and GetFactionExists("Modsogning Clan") and PlayerHasObjective(GetThisPlayer(), "- Bring Fjalar and Galar to the clan's justice") == false) then
-			player = GetFactionPlayer("Modsogning Clan")
+		if (GetFactionExists("Fjalar and Galar") and GetFactionExists("Brising Clan") and PlayerHasObjective(GetThisPlayer(), "- Bring Fjalar and Galar to the clan's justice") == false) then
+			player = GetFactionPlayer("Brising Clan")
 			return true
 		end
 		return false

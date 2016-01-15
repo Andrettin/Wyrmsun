@@ -653,7 +653,7 @@ SetWorldMapTileTerrain(47, 8, dark_plains_id)
 SetWorldMapTileTerrain(47, 9, dark_plains_id)
 SetWorldMapTileTerrain(47, 10, hills_id)
 SetWorldMapTileTerrain(47, 11, hills_id)
-AddWorldMapResource("gold", 47, 11, true) -- to give the Modsogning clan a proper start
+AddWorldMapResource("gold", 47, 11, true) -- to give the Brising clan a proper start
 SetWorldMapTileTerrain(47, 12, hills_id)
 SetWorldMapTileTerrain(47, 13, hills_id)
 SetWorldMapTileTerrain(47, 14, dark_plains_id)

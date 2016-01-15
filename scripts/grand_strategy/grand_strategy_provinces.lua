@@ -4296,7 +4296,7 @@ function LoadProvinces(world)
 		Svarinshaug = {
 			Name = "Svarinshaug",
 			Tiles = { {40, 13}, {40, 14}, {41, 13}, {41, 14}, {42, 12}, {42, 13}, {42, 14}, {43, 11}, {43, 12}, {43, 13}, {43, 14}, {44, 9}, {44, 10}, {44, 11}, {44, 12}, {44, 13}, {44, 14}, {45, 9}, {45, 10}, {45, 11}, {45, 12}, {45, 13}, {45, 14}, {46, 9}, {46, 10}, {46, 11}, {46, 12}, {46, 13}, {46, 14}, {47, 10}, {47, 11}, {47, 12}, {48, 10}, {48, 11}, {48, 12}, {49, 11} },
-			Owner = "Modsogning Clan",
+			Owner = "Brising Clan",
 			Civilization = "dwarf",
 			CulturalNames = {
 				dwarf = "Svarinshaug"
@@ -4311,7 +4311,7 @@ function LoadProvinces(world)
 			Map = "maps/nidavellir/svarinshaug.smp",
 			SettlementTerrain = "Hills",
 			Claims = {
-				"dwarf", "Modsogning Clan"
+				"dwarf", "Brising Clan"
 			}
 		}
 	}

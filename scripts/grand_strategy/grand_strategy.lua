@@ -404,7 +404,7 @@ function RunGrandStrategyGameSetupMenu()
 					end
 				end
 			else
-				faction_list = {"Asa Tribe", "Modsogning Clan"}
+				faction_list = {"Asa Tribe", "Brising Clan"}
 				faction_civilization_list = {"germanic", "dwarf"}
 			end
 

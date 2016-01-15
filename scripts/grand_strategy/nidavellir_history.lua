@@ -69,12 +69,12 @@ LoadEvents("Nidavellir")
 
 if (GrandStrategyYear >= -3000) then
 	SetProvinceHero("Svarinshaug", "Modsognir", 2) 
-	SetFactionRuler("dwarf", "Modsogning Clan", "Modsognir")
+	SetFactionRuler("dwarf", "Brising Clan", "Modsognir")
 	SetProvinceHero("Svarinshaug", "Durin", 2)
 	SetProvinceUnitQuantity("Svarinshaug", "unit-dwarven-miner", 4)
 	
 	-- give plow technology to the dwarven factions
-	SetFactionTechnology("dwarf", "Modsogning Clan", "upgrade-dwarven-wood-plow", true)
+	SetFactionTechnology("dwarf", "Brising Clan", "upgrade-dwarven-wood-plow", true)
 	SetFactionTechnology("dwarf", "Norlund Clan", "upgrade-dwarven-wood-plow", true)
 	SetFactionTechnology("dwarf", "Shinsplitter Clan", "upgrade-dwarven-wood-plow", true)
 	SetFactionTechnology("dwarf", "Shorbear Clan", "upgrade-dwarven-wood-plow", true)
@@ -135,9 +135,9 @@ if (GrandStrategyYear >= -1) then
 	SetWorldMapResourceProspected("gold", 32, 13, true)
 
 	-- bronze age technologies had already been obtained by the dwarves by this point
-	SetFactionTechnology("dwarf", "Modsogning Clan", "upgrade-dwarven-broad-axe", true)
-	SetFactionTechnology("dwarf", "Modsogning Clan", "upgrade-dwarven-shield-1", true)
-	SetFactionTechnology("dwarf", "Modsogning Clan", "upgrade-dwarven-sharp-throwing-axe", true)
+	SetFactionTechnology("dwarf", "Brising Clan", "upgrade-dwarven-broad-axe", true)
+	SetFactionTechnology("dwarf", "Brising Clan", "upgrade-dwarven-shield-1", true)
+	SetFactionTechnology("dwarf", "Brising Clan", "upgrade-dwarven-sharp-throwing-axe", true)
 	SetFactionTechnology("dwarf", "Norlund Clan", "upgrade-dwarven-broad-axe", true)
 	SetFactionTechnology("dwarf", "Norlund Clan", "upgrade-dwarven-shield-1", true)
 	SetFactionTechnology("dwarf", "Norlund Clan", "upgrade-dwarven-sharp-throwing-axe", true)
@@ -177,7 +177,7 @@ if (GrandStrategyYear >= 25) then -- at this time Rugnur was already in charge o
 	SetProvinceSettlementBuilding("Southern Tunnels", "unit-dwarven-lumber-mill", true) -- had capability to train scouts by then
 
 	-- dwarves already had castles built of stone masonry by then
-	SetFactionTechnology("dwarf", "Modsogning Clan", "upgrade-dwarven-masonry", true)
+	SetFactionTechnology("dwarf", "Brising Clan", "upgrade-dwarven-masonry", true)
 	SetFactionTechnology("dwarf", "Norlund Clan", "upgrade-dwarven-masonry", true)
 	SetFactionTechnology("dwarf", "Shinsplitter Clan", "upgrade-dwarven-masonry", true)
 	SetFactionTechnology("dwarf", "Shorbear Clan", "upgrade-dwarven-masonry", true)
@@ -296,7 +296,7 @@ if (GrandStrategyYear >= 400) then
 	SetProvinceUnitQuantity("Joruvellir", "unit-goblin-archer", 0)
 
 	-- The Dwarves should already have Coinage technology by then
-	SetFactionTechnology("dwarf", "Modsogning Clan", "upgrade-dwarven-coinage", true)
+	SetFactionTechnology("dwarf", "Brising Clan", "upgrade-dwarven-coinage", true)
 	SetFactionTechnology("dwarf", "Norlund Clan", "upgrade-dwarven-coinage", true)
 	SetFactionTechnology("dwarf", "Shinsplitter Clan", "upgrade-dwarven-coinage", true)
 	SetFactionTechnology("dwarf", "Shorbear Clan", "upgrade-dwarven-coinage", true)
@@ -341,10 +341,10 @@ if (GrandStrategyYear >= 550) then
 	SetProvinceUnitQuantity("Kal Kartha", "unit-dwarven-thane", 4) -- Karrag
 	
 	-- late iron age technologies already obtained by the dwarves by this point
-	SetFactionTechnology("dwarf", "Modsogning Clan", "upgrade-dwarven-great-axe", true)
-	SetFactionTechnology("dwarf", "Modsogning Clan", "upgrade-dwarven-shield-2", true)
-	SetFactionTechnology("dwarf", "Modsogning Clan", "upgrade-dwarven-bearded-throwing-axe", true)
-	SetFactionTechnology("dwarf", "Modsogning Clan", "upgrade-dwarven-ballista-bolt-1", true)
+	SetFactionTechnology("dwarf", "Brising Clan", "upgrade-dwarven-great-axe", true)
+	SetFactionTechnology("dwarf", "Brising Clan", "upgrade-dwarven-shield-2", true)
+	SetFactionTechnology("dwarf", "Brising Clan", "upgrade-dwarven-bearded-throwing-axe", true)
+	SetFactionTechnology("dwarf", "Brising Clan", "upgrade-dwarven-ballista-bolt-1", true)
 	SetFactionTechnology("dwarf", "Norlund Clan", "upgrade-dwarven-great-axe", true)
 	SetFactionTechnology("dwarf", "Norlund Clan", "upgrade-dwarven-shield-2", true)
 	SetFactionTechnology("dwarf", "Norlund Clan", "upgrade-dwarven-bearded-throwing-axe", true)

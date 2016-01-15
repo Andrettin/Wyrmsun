@@ -172,8 +172,8 @@ DefineUpgrade("upgrade-eikinskjaldi-clan-faction", {
 	Name = _("Eikinskjaldi Clan Faction")
 })
 
-DefineUpgrade("upgrade-modsogning-clan-faction", {
-	Name = _("Modsogning Clan Faction")
+DefineUpgrade("upgrade-brising-clan-faction", {
+	Name = _("Brising Clan Faction")
 })
 
 DefineUpgrade("upgrade-norlund-clan-faction", {
@@ -311,7 +311,7 @@ DefineModifier("upgrade-eikinskjaldi-clan-faction",
 	{"apply-to", "unit-dwarven-axefighter"}, {"apply-to", "unit-dwarven-steelclad"}, {"apply-to", "unit-dwarven-thane"}
 )
 
-DefineModifier("upgrade-modsogning-clan-faction",
+DefineModifier("upgrade-brising-clan-faction",
 	{"BasicDamage", 2},
 	{"Points", 10},
 	{"apply-to", "unit-dwarven-axefighter"}, {"apply-to", "unit-dwarven-steelclad"}, {"apply-to", "unit-dwarven-thane"}
