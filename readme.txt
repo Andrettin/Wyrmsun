@@ -243,6 +243,7 @@ https://github.com/Andrettin/Wyrmsun
 * Miscellaneous
 - The correct background is now shown when a match ends in a draw.
 - Update to the Germanic cursor (by Leo).
+- Added a cursor for the Teutons (by Leo).
 
 * Units
 - Removed cap of Goblin Thieves a player can have at a single time, as its purpose has been replaced by its hiring cooldown.
@@ -250,6 +251,7 @@ https://github.com/Andrettin/Wyrmsun
 - Decreased Gnomish Duelist HP from 65 to 60.
 - Siege engines are now more cautious about attacking a target if that will hurt a friendly unit.
 - Fixed crash which could happen if a unit was already dead when the raft under it was destroyed.
+- Added portrait for the Suebi Krieger (by Leo).
 
 -----------------------------------------------------------------------
 - 1.9.8

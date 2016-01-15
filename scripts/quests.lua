@@ -83,7 +83,7 @@ DefineQuest("Gylve's Realm", {
 })
 
 DefineQuest("The Battle of Magetobria", {
-	Icon = "icon-germanic-broad-sword",
+	Icon = "icon-suebi-swordsman",
 	Description = "Under the leadership of Ariovistus, we have crossed the Rhine to aid the Sequani and the Arverni in defeating the Aedui, and now an Aedui army approaches the Sequani settlement of Magetobria...\n\nMap: Belfort",
 	RequiredQuest = "Gylve's Realm",
 	World = "Earth",

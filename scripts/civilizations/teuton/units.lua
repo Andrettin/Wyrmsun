@@ -219,7 +219,7 @@ DefineUnitType("unit-suebi-swordsman", { Name = _("Krieger"),
 		{"layer", "helmet", "file", ""},
 		{"layer", "weapon", "file", "teuton/units/long_iron_sword.png"}
 	},
-	Icon = "icon-teuton-swordsman",
+	Icon = "icon-suebi-swordsman",
 	Armor = 0, BasicDamage = 11, Accuracy = 12, -- -2 armor, +2 damage, +2 accuracy
 	Points = 60, -- +10 points
 	Variations = {
