@@ -244,7 +244,8 @@ https://github.com/Andrettin/Wyrmsun
 - Removed cap of Goblin Thieves a player can have at a single time, as its purpose has been replaced by its hiring cooldown.
 - Added Gnomish Master at Arms, an experience upgrade of the Gnomish Duelist (icon by Leo, based on Jinn's Gnomish Recruit icon).
 - Decreased Gnomish Duelist HP from 65 to 60.
-- Siege engines no longer attack a target if that will hurt a friendly unit.
+- Siege engines are now more cautious about attacking a target if that will hurt a friendly unit.
+- Fixed crash which could happen if a unit was already dead when the raft under it was destroyed.
 
 -----------------------------------------------------------------------
 - 1.9.8
