@@ -3,6 +3,7 @@
 #################
 ## Ignore temporary files and user data
 conversion_maps/
+dlcs/
 mods/
 wyr/
 crash.dmp

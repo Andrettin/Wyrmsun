@@ -252,6 +252,9 @@ https://github.com/Andrettin/Wyrmsun
 - Siege engines are now more cautious about attacking a target if that will hurt a friendly unit.
 - Fixed crash which could happen if a unit was already dead when the raft under it was destroyed.
 - Added portrait for the Suebi Krieger (by Leo).
+- Dwarven Yale Riders now cost a bit of lumber, and their gold cost has been slightly decreased.
+- Decreased starting damage for siege engines by 5.
+- Added brown and blond hair variations for Teuton Kriegers.
 
 -----------------------------------------------------------------------
 - 1.9.8
