@@ -1954,7 +1954,8 @@ local defaultPreferences = {
 	TipsShown = {},
 	LastVersionPlayed = "0.0.0",
 	EnabledMods = {},
-	GrandStrategySaveGames = {}
+	GrandStrategySaveGames = {},
+	SortSaveGamesByTime = false
 }
 
 CompleteMissingValues(wyr.preferences, defaultPreferences)
