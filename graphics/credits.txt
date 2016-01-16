@@ -23,7 +23,6 @@ b_o:
 /graphics/dwarf/units/dwarven_axefighter_blond_hair.png
 /graphics/dwarf/units/dwarven_axefighter_brown_hair.png
 /graphics/dwarf/units/dwarven_axefighter_gray_hair.png
-/graphics/dwarf/units/dwarven_axefighter_no_shield.png
 /graphics/dwarf/units/dwarven_axefighter_orange_hair.png
 /graphics/dwarf/units/dwarven_ballista.png
 /graphics/dwarf/units/dwarven_scout.png
@@ -749,6 +748,7 @@ João Victor G. Costa (Jinn):
 /graphics/teuton/icons/saxon_swordsman_black_hair.png
 /graphics/teuton/icons/saxon_swordsman_blond_hair.png
 /graphics/teuton/icons/saxon_swordsman_brown_hair.png
+/graphics/teuton/icons/spearman.png
 /graphics/teuton/units/kogge.png
 /graphics/teuton/units/kogge_water.png
 /graphics/teuton/units/suebi_shield.png
