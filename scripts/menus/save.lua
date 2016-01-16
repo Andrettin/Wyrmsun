@@ -91,7 +91,7 @@ function RunSaveMenu()
       end
     end)
 
-	sortByCheckBox = menu:addImageCheckBox(_("Show latest savegames first"), (384 - 300 - 18) / 2, 256 - 16 - 27 - 25,
+	local sortByCheckBox = menu:addImageCheckBox(_("Show Latest Save Games First"), (384 - 300 - 18) / 2, 256 - 16 - 27 - 25,
 	function()
 		wyr.preferences.SortSaveGamesByTime = sortByCheckBox:isMarked()
 		SavePreferences()

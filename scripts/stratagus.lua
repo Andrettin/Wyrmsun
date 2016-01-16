@@ -1954,7 +1954,6 @@ local defaultPreferences = {
 	TipsShown = {},
 	LastVersionPlayed = "0.0.0",
 	EnabledMods = {},
-	GrandStrategySaveGames = {},
 	SortSaveGamesByTime = false
 }
 
