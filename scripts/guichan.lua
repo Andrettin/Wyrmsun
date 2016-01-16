@@ -862,40 +862,57 @@ function GetMapInfo(mapname)
 end
 
 function RunSelectScenarioMenu()
-  buttonStatut = 0
-  local menu = WarMenu(nil, panel(5), false)
-  menu:setSize(352, 352)
-  menu:setPosition((Video.Width - 352) / 2, (Video.Height - 352) / 2)
-  menu:setDrawMenusUnder(true)
+	buttonStatut = 0
+	local menu = WarMenu(nil, panel(5), false)
+	menu:setSize(352, 352)
+	menu:setPosition((Video.Width - 352) / 2, (Video.Height - 352) / 2)
+	menu:setDrawMenusUnder(true)
 
-  menu:addLabel(_("Select Map"), 176, 8)
+	menu:addLabel(_("Select Map"), 176, 8)
 
-  local browser = menu:addBrowser(MapDirectories[1], "^.*%.smp%.?g?z?$",
-    24, 140, 300, 108, mapname)
+	local browser = menu:addBrowser(MapDirectories[1], "^.*%.smp%.?g?z?$",
+		24, 88, 300, 108, mapname)
 
-  local l = menu:addLabel(browser:getSelectedItem(), 24, 260, Fonts["game"], false)
+	local l = menu:addLabel(browser:getSelectedItem(), 24, 208, Fonts["game"], false)
 
-  local function cb(s)
-    l:setCaption(browser:getSelectedItem())
-    l:adjustSize()
-  end
-  browser:setActionCallback(cb)
+	local function cb(s)
+		l:setCaption(browser:getSelectedItem())
+		l:adjustSize()
+	end
+	browser:setActionCallback(cb)
 
-  menu:addHalfButton(_("~!OK"), "o", 48, 318,
-    function()
-      local cap = l:getCaption()
+	menu:addHalfButton(_("~!OK"), "o", 48, 318,
+		function()
+			local cap = l:getCaption()
 
-      if (browser:getSelected() < 0) then
-        return
-      end
-      buttonStatut = 1
-      mapname = browser.path .. cap
-      menu:stop()
-    end)
-  menu:addHalfButton(_("~!Cancel"), "c", 198, 318,
-    function() buttonStatut = 2; menu:stop() end)
+			if (browser:getSelected() < 0) then
+				return
+			end
+			buttonStatut = 1
+			mapname = browser.path .. cap
+			menu:stop()
+		end)
+	menu:addHalfButton(_("~!Cancel"), "c", 198, 318,
+		function() buttonStatut = 2; menu:stop() end)
+	
+	local sortByCheckBox
+	sortByCheckBox = menu:addImageCheckBox(_("Show Latest First"), (352 - 300 - 18) / 2, 352 - 16 - 27 - 25,
+	function()
+		wyr.preferences.SortSaveGamesByTime = sortByCheckBox:isMarked()
+		SavePreferences()
 
-  menu:run()
+		if (wyr.preferences.SortSaveGamesByTime) then
+			browser:sortByTime()
+		else
+			browser:sortByName()
+		end
+	end)
+	sortByCheckBox:setMarked(wyr.preferences.SortSaveGamesByTime)
+	if (wyr.preferences.SortSaveGamesByTime) then
+		browser:sortByTime()
+	end
+	
+	menu:run()
 end
 
 function RunSinglePlayerGameMenu()

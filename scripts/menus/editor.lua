@@ -370,10 +370,10 @@ function RunEditorSaveMenu()
 	menu:addLabel("Save Map", 384 / 2, 11)
 
 	local t = menu:addTextInputField("map.smp",
-		(384 - 300 - 18) / 2, 11 + 36, 318)
+		(384 - 300 - 18) / 2, 11 + 24, 318)
 
 	local browser = menu:addBrowser(MapDirectories[1], ".smp$",
-		(384 - 300 - 18) / 2, 11 + 36 + 22, 318, 126)
+		(384 - 300 - 18) / 2, 11 + 24 + 22, 318, 126)
 		local function cb(s)
 			t:setText(browser:getSelectedItem())
 		end
@@ -416,6 +416,23 @@ function RunEditorSaveMenu()
 			RunEditorSaveMap(browser, name, menu)
 		end
 	end)
+	
+	local sortByCheckBox
+	sortByCheckBox = menu:addImageCheckBox(_("Show Latest First"), (384 - 300 - 18) / 2, 256 - 16 - 27 - 25,
+	function()
+		wyr.preferences.SortSaveGamesByTime = sortByCheckBox:isMarked()
+		SavePreferences()
+
+		if (wyr.preferences.SortSaveGamesByTime) then
+			browser:sortByTime()
+		else
+			browser:sortByName()
+		end
+	end)
+	sortByCheckBox:setMarked(wyr.preferences.SortSaveGamesByTime)
+	if (wyr.preferences.SortSaveGamesByTime) then
+		browser:sortByTime()
+	end
 
 	menu:run(false)
 end

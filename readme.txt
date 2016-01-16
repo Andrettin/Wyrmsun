@@ -244,6 +244,7 @@ https://github.com/Andrettin/Wyrmsun
 - The correct background is now shown when a match ends in a draw.
 - Update to the Germanic cursor (by Leo).
 - Added a cursor for the Teutons (by Leo).
+- When loading or saving a game or a map, files can now be sorted by date (thanks to marcelofg55).
 
 * Units
 - Removed cap of Goblin Thieves a player can have at a single time, as its purpose has been replaced by its hiring cooldown.
