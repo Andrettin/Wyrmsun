@@ -27,7 +27,7 @@ end
 function AddLoadGameItems(menu)
 	menu:addLabel(_("Load Game"), 384 / 2, 11)
 	local browser = menu:addBrowser("~save", "^.*%.sav%.?g?z?$",
-		(384 - 300 - 18) / 2, 11 + (36 * 1.5), 318, 126)
+		(384 - 300 - 18) / 2, 11 + 36, 318, 126)
 
 	menu:addHalfButton(_("~!Load"), "l", (384 - 300 - 18) / 2, 256 - 16 - 27,
 	function()
@@ -42,6 +42,21 @@ function AddLoadGameItems(menu)
 			menu:stop()
 		end
 	end)
+	sortByCheckBox = menu:addImageCheckBox(_("Show latest savegames first"), (384 - 300 - 18) / 2, 256 - 16 - 27 - 25,
+	function()
+		wyr.preferences.SortSaveGamesByTime = sortByCheckBox:isMarked()
+		SavePreferences()
+
+		if (wyr.preferences.SortSaveGamesByTime) then
+			browser:sortByTime()
+		else
+			browser:sortByName()
+		end
+	end)
+	sortByCheckBox:setMarked(wyr.preferences.SortSaveGamesByTime)
+	if (wyr.preferences.SortSaveGamesByTime) then
+		browser:sortByTime()
+	end
 	menu:addHalfButton(_("~!Cancel"), "c", 384 - ((384 - 300 - 18) / 2) - 106, 256 - 16 - 27,
 	function() menu:stop() end)
 end

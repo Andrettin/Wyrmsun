@@ -357,7 +357,8 @@ function AddMenuHelpers(menu)
   end
 
   function menu:addBrowser(path, filter, x, y, w, h, default, show_subfolders)
-    
+    local sortMode = 0
+
     -- Andrettin: make it so that it is possible to have a browser without showing subfolders
     if (show_subfolders == nil) then
     	show_subfolders = true
@@ -378,7 +379,12 @@ function AddMenuHelpers(menu)
         end
       end
 
-      local fileslist = ListFilesInDirectory(path)
+      local fileslist
+      if (sortMode == 0) then
+        fileslist = ListFilesInDirectory(path)
+      else
+        fileslist = ListFilesInDirectorySortByTime(path)
+      end
       for i,f in ipairs(fileslist) do
         if (string.find(f, filter)) then
           dirlist[u] = f
@@ -472,6 +478,16 @@ function AddMenuHelpers(menu)
     bq.oldSetActionCallback = bq.setActionCallback
     function bq:setActionCallback(cb)
       bq.actioncb = cb
+    end
+
+    function bq:sortByName()
+      sortMode = 0
+      updatelist()
+    end
+
+    function bq:sortByTime()
+      sortMode = 1
+      updatelist()
     end
 
     return bq

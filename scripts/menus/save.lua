@@ -56,10 +56,10 @@ function RunSaveMenu()
   menu:addLabel("Save Game", 384 / 2, 11)
 
   local t = menu:addTextInputField("game.sav",
-    (384 - 300 - 18) / 2, 11 + 36, 318)
+    (384 - 300 - 18) / 2, 11 + 24, 318)
 
   local browser = menu:addBrowser("~save", ".sav.gz$",
-    (384 - 300 - 18) / 2, 11 + 36 + 22, 318, 126)
+    (384 - 300 - 18) / 2, 11 + 24 + 22, 318, 126)
   local function cb(s)
     t:setText(browser:getSelectedItem())
   end
@@ -90,6 +90,22 @@ function RunSaveMenu()
         RunSaveGame(name, menu)
       end
     end)
+
+	sortByCheckBox = menu:addImageCheckBox(_("Show latest savegames first"), (384 - 300 - 18) / 2, 256 - 16 - 27 - 25,
+	function()
+		wyr.preferences.SortSaveGamesByTime = sortByCheckBox:isMarked()
+		SavePreferences()
+
+		if (wyr.preferences.SortSaveGamesByTime) then
+			browser:sortByTime()
+		else
+			browser:sortByName()
+		end
+	end)
+	sortByCheckBox:setMarked(wyr.preferences.SortSaveGamesByTime)
+	if (wyr.preferences.SortSaveGamesByTime) then
+		browser:sortByTime()
+	end
 
   menu:addHalfButton(_("~!Cancel"), "c", 384 - ((384 - 300 - 18) / 2) - 106, 256 - 16 - 27,
     function() menu:stop() end)
