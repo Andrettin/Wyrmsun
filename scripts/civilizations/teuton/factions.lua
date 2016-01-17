@@ -38,7 +38,7 @@ DefineFaction("Frank Tribe", {
 	Civilization = "teuton",
 	Type = "tribe",
 	Colors = {"green", "orange"},
-	DevelopsTo = {"Francia", "Netherlands"},
+	DevelopsTo = {"Francia", "Franconia", "Netherlands"},
 	FactionUpgrade = "upgrade-frank-tribe-faction"
 })
 
@@ -62,7 +62,7 @@ DefineFaction("Alamanni Tribe", {
 --	ParentFaction = "Suebi Tribe",
 	Type = "tribe",
 	Colors = {"blue"},
-	DevelopsTo = {"Baden", "Switzerland", "Wurtemberg"},
+	DevelopsTo = {"Baden", "Swabia", "Switzerland", "Wurtemberg"},
 	FactionUpgrade = "upgrade-alamanni-tribe-faction"
 })
 
@@ -227,27 +227,17 @@ DefineFaction("Varini Tribe", {
 
 -- Teuton polities
 
-DefineFaction("Baden", {
-	Civilization = "teuton",
-	ParentFaction = "Alamanni Tribe",
-	Type = "polity",
-	Colors = {"black"},
-	DefaultTier = "grand duchy",
-	Titles = {
-		"monarchy", "grand duchy", "Grand Duchy"
-	}
-})
-
 DefineFaction("Bavaria", {
 	Civilization = "teuton",
 	ParentFaction = "Bavarian Tribe",
 	Type = "polity",
 	Colors = {"cyan", "white"},
-	DefaultTier = "duchy",
+	DefaultTier = "duchy", -- Bavaria was a duchy in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 	Titles = {
 		"monarchy", "duchy", "Duchy",
 		"monarchy", "kingdom", "Kingdom"
-	}
+	},
+	DevelopsTo = {"Holy Rome"} -- Bavaria was a part of the Holy Roman Empire in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 })
 
 DefineFaction("Saxony", {
@@ -255,11 +245,21 @@ DefineFaction("Saxony", {
 	ParentFaction = "Saxon Tribe",
 	Type = "polity",
 	Colors = {"pink"},
-	DefaultTier = "duchy",
+	DefaultTier = "duchy", -- Saxony was a duchy in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 	Titles = {
 		"monarchy", "duchy", "Duchy",
 		"monarchy", "kingdom", "Kingdom"
-	}
+	},
+	DevelopsTo = {"Holy Rome"} -- Saxony was a part of the Holy Roman Empire in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+})
+
+DefineFaction("Swabia", {
+	Civilization = "teuton",
+	ParentFaction = "Alamanni Tribe",
+	Type = "polity",
+	Colors = {"orange"},
+	DefaultTier = "duchy", -- Swabia was a duchy in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+	DevelopsTo = {"Holy Rome"} -- Swabia was a part of the Holy Roman Empire in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 })
 
 DefineFaction("Austria", {
@@ -271,6 +271,17 @@ DefineFaction("Austria", {
 	Titles = {
 		"monarchy", "duchy", "Duchy",
 		"monarchy", "grand duchy", "Archduchy"
+	}
+})
+
+DefineFaction("Baden", {
+	Civilization = "teuton",
+	ParentFaction = "Swabia",
+	Type = "polity",
+	Colors = {"black"},
+	DefaultTier = "grand duchy",
+	Titles = {
+		"monarchy", "grand duchy", "Grand Duchy"
 	}
 })
 
@@ -351,6 +362,15 @@ DefineFaction("England", {
 	}
 })
 
+DefineFaction("Franconia", {
+	Civilization = "teuton",
+	ParentFaction = "Francia",
+	Type = "polity",
+	Colors = {"blue"},
+	DefaultTier = "duchy", -- Franconia was a duchy in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+	DevelopsTo = {"Holy Rome", "Francia"} -- Franconia was a part of the Holy Roman Empire in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+})
+
 DefineFaction("Friesland", {
 	Civilization = "teuton",
 	ParentFaction = "Frisian Tribe",
@@ -392,6 +412,14 @@ DefineFaction("Holland", {
 	Colors = {"red"},
 	DefaultTier = "county", -- Holland was a county in 1559-1600; Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
 	DevelopsTo = {"Netherlands"}
+})
+
+DefineFaction("Holy Rome", {
+	Civilization = "teuton",
+	ParentFaction = "Francia",
+	Type = "polity",
+	Colors = {"yellow"},
+	DefaultTier = "empire"
 })
 
 DefineFaction("Jutland", {
@@ -462,7 +490,7 @@ DefineFaction("Scotland", {
 
 DefineFaction("Switzerland", {
 	Civilization = "teuton",
-	ParentFaction = "Alamanni Tribe",
+	ParentFaction = "Swabia",
 	Type = "polity",
 	Colors = {"red", "white"},
 	DefaultTier = "kingdom",
@@ -495,7 +523,7 @@ DefineFaction("Westphalia", {
 
 DefineFaction("Wurtemberg", {
 	Civilization = "teuton",
-	ParentFaction = "Alamanni Tribe",
+	ParentFaction = "Swabia",
 	Type = "polity",
 	Colors = {"red"},
 	DefaultTier = "kingdom",

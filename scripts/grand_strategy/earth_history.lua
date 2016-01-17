@@ -2264,6 +2264,109 @@ if (GrandStrategyYear >= 911) then
 	-- Scandinavian warlord Rollo converted to Christianity and was granted the estuary of the Seine as a fiefdom (which would be later known as Normandy), becoming the first duke of Normandy; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 233.
 end
 
+if (GrandStrategyYear >= 919) then
+	-- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+	
+	AcquireFactionTechnologies("teuton", "Francia", "teuton", "Holy Rome")
+	
+	-- Duchy of Bavaria
+	SetProvinceOwner("Bavaria", "teuton", "Holy Rome")
+	AddProvinceClaim("Bavaria", "teuton", "Bavaria")
+	SetProvinceOwner("Austria", "teuton", "Holy Rome") -- Bavarian East March
+	AddProvinceClaim("Austria", "teuton", "Bavaria")
+	
+	-- Duchy of Bohemia
+	SetProvinceOwner("Bohemia", "teuton", "Holy Rome")
+	SetProvinceOwner("Moravia", "teuton", "Holy Rome")
+	
+	-- Duchy of Carinthia
+	SetProvinceOwner("Carniola", "teuton", "Holy Rome")
+	SetProvinceOwner("Istria", "teuton", "Holy Rome") -- March of Istria
+	
+	-- Duchy of Franconia
+	SetProvinceOwner("Franconia", "teuton", "Holy Rome")
+	SetProvinceOwner("Hesse", "teuton", "Holy Rome")
+	SetProvinceOwner("Palatinate", "teuton", "Holy Rome")
+	SetProvinceCivilization("Palatinate", "teuton")
+	
+	-- Duchy of Lower Lorraine
+	SetProvinceOwner("Belgium", "teuton", "Holy Rome")
+	SetProvinceOwner("Lower Rhine", "teuton", "Holy Rome")
+	
+	-- Duchy of Saxony
+	SetProvinceOwner("Bremen", "teuton", "Holy Rome")
+	AddProvinceClaim("Bremen", "teuton", "Saxony")
+	SetProvinceOwner("Brunswick", "teuton", "Holy Rome")
+	AddProvinceClaim("Brunswick", "teuton", "Saxony")
+	SetProvinceOwner("Hanover", "teuton", "Holy Rome")
+	AddProvinceClaim("Hanover", "teuton", "Saxony")
+	SetProvinceOwner("Holstein", "teuton", "Holy Rome")
+	AddProvinceClaim("Holstein", "teuton", "Saxony")
+	SetProvinceOwner("Lauenburg", "teuton", "Holy Rome")
+	AddProvinceClaim("Lauenburg", "teuton", "Saxony")
+	SetProvinceOwner("Magdeburg", "teuton", "Holy Rome")
+	AddProvinceClaim("Magdeburg", "teuton", "Saxony")
+	SetProvinceOwner("Oldenburg", "teuton", "Holy Rome")
+	AddProvinceClaim("Oldenburg", "teuton", "Saxony")
+	SetProvinceOwner("Westphalia", "teuton", "Holy Rome")
+	AddProvinceClaim("Westphalia", "teuton", "Saxony")
+	
+	-- Duchy of Swabia
+	SetProvinceOwner("Alsace", "teuton", "Holy Rome")
+	SetProvinceCivilization("Alsace", "teuton")
+	SetProvinceOwner("Augsburg", "teuton", "Holy Rome")
+	SetProvinceCivilization("Augsburg", "teuton")
+	SetProvinceOwner("Baden", "teuton", "Holy Rome")
+	SetProvinceCivilization("Baden", "teuton")
+	SetProvinceOwner("Wurtemberg", "teuton", "Holy Rome")
+	SetProvinceCivilization("Wurtemberg", "teuton")
+	
+	-- Duchy of Upper Lorraine
+	SetProvinceOwner("Lorraine", "teuton", "Holy Rome")
+	SetProvinceOwner("Moselle", "teuton", "Holy Rome")
+	
+	-- Friesland
+	SetProvinceOwner("Drenthe", "teuton", "Holy Rome")
+	SetProvinceOwner("East Friesland", "teuton", "Holy Rome")
+	SetProvinceOwner("Friesland", "teuton", "Holy Rome")
+	SetProvinceOwner("Holland", "teuton", "Holy Rome")
+	SetProvinceOwner("Overijssel", "teuton", "Holy Rome")
+	
+	-- Thuringia
+	SetProvinceOwner("Thuringia", "teuton", "Holy Rome")
+	
+	SetProvinceOwner("Upper Saxony", "teuton", "Holy Rome")
+	SetProvinceOwner("Upper Lusatia", "teuton", "Holy Rome")
+	SetProvinceCivilization("Upper Lusatia", "teuton")
+	SetProvinceSettlementBuilding("Upper Lusatia", "unit-teuton-town-hall", true)
+	SetProvinceOwner("Lower Lusatia", "teuton", "Holy Rome")
+	SetProvinceCivilization("Lower Lusatia", "teuton")
+	SetProvinceSettlementBuilding("Lower Lusatia", "unit-teuton-town-hall", true)
+	
+	-- Duchy of Venice
+	SetProvinceOwner("Venetia", "latin", "Venice")
+	
+	SetProvinceOwner("Schleswig", "norse", "Denmark")
+	SetProvinceOwner("Zealand", "norse", "Denmark")
+	SetProvinceOwner("Burgundy", "latin", "France")
+	SetProvinceOwner("France", "latin", "France")
+	SetProvinceOwner("Croatia", "slav", "Croatia")
+	SetProvinceCivilization("Croatia", "slav")
+	SetProvinceOwner("Pannonia", "teuton", "Hungary")
+	SetProvinceOwner("Hungary", "teuton", "Hungary")
+	SetProvinceOwner("Slovakia", "teuton", "Hungary")
+	SetProvinceOwner("Galicia", "slav", "Poland")
+	SetProvinceCivilization("Galicia", "slav")
+	SetProvinceOwner("Mazovia", "slav", "Poland")
+	SetProvinceCivilization("Mazovia", "slav")
+	SetProvinceOwner("Posen", "slav", "Poland")
+	SetProvinceCivilization("Posen", "slav")
+	SetProvinceOwner("Silesia", "slav", "Poland")
+	SetProvinceCivilization("Silesia", "slav")
+	SetProvinceOwner("West Galicia", "slav", "Poland")
+	SetProvinceCivilization("West Galicia", "slav")
+end
+
 if (GrandStrategyYear >= 965) then
 	-- Bishop Dietrich of Metz ordained in 965 AD; Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 321.
 end
@@ -2432,8 +2535,6 @@ if (GrandStrategyYear >= 1560) then -- Political situation in Europe in 1560 AD;
 
 	SetProvinceOwner("Aquitaine", "latin", "France")
 	SetProvinceOwner("Brittany", "latin", "France")
-	SetProvinceOwner("Burgundy", "latin", "France")
-	SetProvinceOwner("France", "latin", "France")
 	SetProvinceOwner("Normandy", "latin", "France")
 	SetProvinceOwner("Provence", "latin", "France")
 	
@@ -2453,9 +2554,7 @@ if (GrandStrategyYear >= 1560) then -- Political situation in Europe in 1560 AD;
 	SetProvinceOwner("Switzerland", "teuton", "Switzerland")
 	SetFactionGovernmentType("teuton", "Switzerland", "republic")	
 	
-	SetProvinceOwner("Zealand", "norse", "Denmark")
 	SetProvinceOwner("Jutland", "norse", "Denmark")
-	SetProvinceOwner("Schleswig", "norse", "Denmark")
 	SetProvinceOwner("Holstein", "norse", "Denmark")
 	SetProvinceOwner("Scania", "norse", "Denmark")
 	SetProvinceOwner("Gotaland", "norse", "Sweden")

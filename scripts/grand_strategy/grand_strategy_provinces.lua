@@ -142,7 +142,9 @@ function LoadProvinces(world)
 			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
-				"teuton", "Alamanni Tribe"
+				"teuton", "Alamanni Tribe",
+				"teuton", "Swabia", -- Part of the Duchy of Swabia in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+				"teuton", "Holy Rome"				
 			}
 		},
 		Andalusia = {
@@ -408,7 +410,9 @@ function LoadProvinces(world)
 			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
-				"teuton", "Alamanni Tribe"
+				"teuton", "Alamanni Tribe",
+				"teuton", "Swabia", -- Part of the Duchy of Swabia in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+				"teuton", "Holy Rome"
 			}
 		},
 		Austria = {
@@ -455,7 +459,8 @@ function LoadProvinces(world)
 			Claims = {
 				"basque", "Linearware Tribe",
 				"celt", "Norici Tribe",
-				"teuton", "Austria"
+				"teuton", "Austria",
+				"teuton", "Holy Rome"
 			}
 		},
 		Baden = {
@@ -481,7 +486,9 @@ function LoadProvinces(world)
 			SettlementTerrain = "Plains",
 			Claims = {
 				"teuton", "Alamanni Tribe",
-				"teuton", "Baden"
+				"teuton", "Baden",
+				"teuton", "Swabia", -- Part of the Duchy of Swabia in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+				"teuton", "Holy Rome"
 			}
 		},
 		Bavaria = {
@@ -512,7 +519,8 @@ function LoadProvinces(world)
 			Map = "maps/earth/regensburg.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
-				"teuton", "Bavarian Tribe"
+				"teuton", "Bavarian Tribe",
+				"teuton", "Holy Rome"
 			}
 		},
 		Belgium = {
@@ -630,7 +638,8 @@ function LoadProvinces(world)
 			Claims = {
 				"basque", "Linearware Tribe",
 				"celt", "Boii Tribe",
-				"teuton", "Marcomanni Tribe"
+				"teuton", "Marcomanni Tribe",
+				"teuton", "Holy Rome"
 			}
 		},
 		Bornholm = {
@@ -725,7 +734,8 @@ function LoadProvinces(world)
 			Claims = {
 				"basque", "Funnelbeaker Tribe",
 				"teuton", "Chauci Tribe",
-				"teuton", "Bremen"
+				"teuton", "Bremen",
+				"teuton", "Holy Rome"
 			},
 			Coastal = true
 		},
@@ -775,7 +785,8 @@ function LoadProvinces(world)
 			SettlementTerrain = "Plains",
 			Claims = {
 				"teuton", "Cherusci Tribe",
-				"teuton", "Brunswick"
+				"teuton", "Brunswick",
+				"teuton", "Holy Rome"
 			}
 		},
 		Bukowina = {
@@ -1234,7 +1245,8 @@ function LoadProvinces(world)
 				"basque", "Funnelbeaker Tribe",
 				"teuton", "Ampsivarii Tribe",
 				"teuton", "Drenthe",
-				"teuton", "Netherlands"
+				"teuton", "Netherlands",
+				"teuton", "Holy Rome"
 			}
 		},
 		EastFriesland = { -- also includes Osnabrück
@@ -1257,7 +1269,8 @@ function LoadProvinces(world)
 			SettlementTerrain = "Plains",
 			Claims = {
 				"basque", "Funnelbeaker Tribe",
-				"teuton", "Frisian Tribe"
+				"teuton", "Frisian Tribe",
+				"teuton", "Holy Rome"
 			},
 			Coastal = true
 		},
@@ -1513,7 +1526,9 @@ function LoadProvinces(world)
 				"basque", "Linearware Tribe",
 				"celt", "Turone Tribe",
 				"teuton", "Hermunduri Tribe",
-				"teuton", "Thuringian Tribe"
+				"teuton", "Thuringian Tribe",
+				"teuton", "Franconia", -- Part of the Duchy of Franconia in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+				"teuton", "Holy Rome"
 			}
 		},
 		Friesland = {
@@ -1540,7 +1555,8 @@ function LoadProvinces(world)
 				"basque", "Funnelbeaker Tribe",
 				"teuton", "Frisian Tribe",
 				"teuton", "Friesland",
-				"teuton", "Netherlands"
+				"teuton", "Netherlands",
+				"teuton", "Holy Rome"
 			}
 		},
 		Galicia = {
@@ -1692,7 +1708,8 @@ function LoadProvinces(world)
 			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
-				"teuton", "Lombard Tribe"
+				"teuton", "Lombard Tribe",
+				"teuton", "Holy Rome"
 			}
 		},
 		Hesse = {
@@ -1718,7 +1735,9 @@ function LoadProvinces(world)
 			SettlementTerrain = "Plains",
 			Claims = {
 				"teuton", "Chatti Tribe",
-				"teuton", "Hesse"
+				"teuton", "Franconia", -- Part of the Duchy of Franconia in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+				"teuton", "Hesse",
+				"teuton", "Holy Rome"
 			}
 		},
 		HighlandScotland = {
@@ -1817,7 +1836,8 @@ function LoadProvinces(world)
 				"teuton", "Batavian Tribe",
 				"teuton", "Frank Tribe",
 				"teuton", "Holland",
-				"teuton", "Netherlands"
+				"teuton", "Netherlands",
+				"teuton", "Holy Rome"
 			}
 		},
 		Holstein = {
@@ -1842,7 +1862,8 @@ function LoadProvinces(world)
 			SettlementTerrain = "Plains",
 			Claims = {
 				"basque", "Funnelbeaker Tribe",
-				"teuton", "Saxon Tribe"
+				"teuton", "Saxon Tribe",
+				"teuton", "Holy Rome"
 			},
 			Coastal = true
 		},
@@ -2123,7 +2144,8 @@ function LoadProvinces(world)
 			Coastal = true,
 			Claims = {
 				"basque", "Funnelbeaker Tribe",
-				"teuton", "Saxon Tribe"
+				"teuton", "Saxon Tribe",
+				"teuton", "Holy Rome"
 			}
 		},
 		Liguria = {
@@ -2229,6 +2251,7 @@ function LoadProvinces(world)
 			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
+				"teuton", "Holy Rome"
 			}
 		},
 		LowerLusatia = {
@@ -2274,6 +2297,7 @@ function LoadProvinces(world)
 			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
+				"teuton", "Holy Rome"
 			}
 		},
 		LowlandScotland = {
@@ -2361,7 +2385,8 @@ function LoadProvinces(world)
 			SettlementTerrain = "Plains",
 			Claims = {
 				"teuton", "Cherusci Tribe",
-				"teuton", "Magdeburg"
+				"teuton", "Magdeburg",
+				"teuton", "Holy Rome"
 			}
 		},
 		Malta = {
@@ -2530,7 +2555,8 @@ function LoadProvinces(world)
 			Claims = {
 				"basque", "Linearware Tribe",
 				"teuton", "Buri Tribe",
-				"teuton", "Quadi Tribe"
+				"teuton", "Quadi Tribe",
+				"teuton", "Holy Rome"
 			}
 		},
 		Moselle = {
@@ -2550,6 +2576,7 @@ function LoadProvinces(world)
 			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
+				"teuton", "Holy Rome"
 			}
 		},
 		Naples = {
@@ -2646,7 +2673,8 @@ function LoadProvinces(world)
 			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
-				"basque", "Funnelbeaker Tribe"
+				"basque", "Funnelbeaker Tribe",
+				"teuton", "Holy Rome"
 			},
 			Coastal = true
 		},
@@ -2686,7 +2714,8 @@ function LoadProvinces(world)
 			Claims = {
 				"teuton", "Chamavi Tribe",
 				"teuton", "Overijssel",
-				"teuton", "Netherlands"
+				"teuton", "Netherlands",
+				"teuton", "Holy Rome"
 			}
 		},
 		Palatinate = {
@@ -2708,6 +2737,8 @@ function LoadProvinces(world)
 			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
+				"teuton", "Franconia", -- Part of the Duchy of Franconia in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+				"teuton", "Holy Rome"
 			}
 		},
 		Palermo = {
@@ -3390,7 +3421,8 @@ function LoadProvinces(world)
 			SettlementTerrain = "Mountains",
 			Claims = {
 				"celt", "Helvetii Tribe",
-				"teuton", "Switzerland"
+				"teuton", "Switzerland",
+				"teuton", "Holy Rome"
 			}
 		},
 		Syracuse = {
@@ -3490,7 +3522,8 @@ function LoadProvinces(world)
 			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
-				"teuton", "Hermunduri Tribe"
+				"teuton", "Hermunduri Tribe",
+				"teuton", "Holy Rome"
 			}
 		},
 		Transylvania = {
@@ -3692,7 +3725,8 @@ function LoadProvinces(world)
 			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
-				"teuton", "Hermunduri Tribe"
+				"teuton", "Hermunduri Tribe",
+				"teuton", "Holy Rome"
 			}
 		},
 		Venetia = {
@@ -3834,7 +3868,8 @@ function LoadProvinces(world)
 			SettlementTerrain = "Plains",
 			Claims = {
 				"teuton", "Sugambri Tribe",
-				"teuton", "Westphalia"
+				"teuton", "Westphalia",
+				"teuton", "Holy Rome"
 			}
 		},
 		WhiteRussia = {
@@ -3908,7 +3943,9 @@ function LoadProvinces(world)
 			SettlementTerrain = "Plains",
 			Claims = {
 				"teuton", "Alamanni Tribe",
-				"teuton", "Wurtemberg"
+				"teuton", "Swabia", -- Part of the Duchy of Swabia in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+				"teuton", "Wurtemberg",
+				"teuton", "Holy Rome"
 			}
 		},
 		Zealand = {

@@ -216,7 +216,7 @@ DefineFaction("Venice", {
 	Civilization = "latin",
 	Type = "polity",
 	Colors = {"red"},
-	DefaultTier = "duchy",
+	DefaultTier = "duchy", -- Venice was a duchy in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 	Titles = {
 		"republic", "duchy", "Republic"
 	}

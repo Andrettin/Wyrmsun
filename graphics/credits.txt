@@ -1122,6 +1122,7 @@ TaShadan:
 /graphics/neutral/units/long_swordsman.png (licensed under the GPL 2.0)
 
 Vladislav "iDreamRunner":
+/graphics/gnome/ui/cursors/gnomish_glove.png (licensed under the CC0)
 /graphics/missiles/catapult_sandstone_rock.png (licensed under the CC0)
 /graphics/missiles/flaming_arrow.png (modified from b_o's arrow) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 /graphics/missiles/flaming_dwarven_ballista_bolt.png (modified from b_o's dwarven ballista bolt) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
