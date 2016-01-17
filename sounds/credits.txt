@@ -1,494 +1,494 @@
 Battle for Wesnoth Team:
-/sounds/dwarf/basic_voices/dead-1.wav
-/sounds/dwarf/basic_voices/dead-2.wav
-/sounds/goblin/basic_voices/goblin-die-1.wav
-/sounds/goblin/basic_voices/goblin-die-2.wav
-/sounds/human/basic_voices/human-die-1.wav
-/sounds/human/basic_voices/human-die-2.wav
-/sounds/human/basic_voices/human-die-3.wav
-/sounds/misc/explosion.wav
-/sounds/misc/fanfare_short.wav
-/sounds/misc/gold_coins.wav
-/sounds/misc/heal.wav
-/sounds/misc/magic-holy-1.wav
-/sounds/misc/magic-holy-2.wav
-/sounds/misc/magic-holy-3.wav
-/sounds/misc/magic-holy-4.wav
-/sounds/misc/open_chest.wav
-/sounds/misc/potion.wav
-/sounds/misc/rumble.wav
-/sounds/missiles/axe.wav
-/sounds/missiles/bite.wav
-/sounds/missiles/bow.wav
-/sounds/missiles/bow_hit.wav
-/sounds/missiles/claws.wav
-/sounds/missiles/club.wav
-/sounds/missiles/dagger.wav
-/sounds/missiles/dart.wav
-/sounds/missiles/fist.wav
-/sounds/missiles/mace.wav
-/sounds/missiles/miss-1.wav
-/sounds/missiles/miss-2.wav
-/sounds/missiles/miss-3.wav
-/sounds/missiles/spear-1.wav
-/sounds/missiles/spear-2.wav
-/sounds/missiles/spear-miss.wav
-/sounds/missiles/squishy_hit.wav
-/sounds/missiles/squishy_miss.wav
-/sounds/missiles/squishy_strike.wav
-/sounds/missiles/throwing_axe_hit.wav
-/sounds/neutral/bird/birds1.wav
-/sounds/neutral/bird/birds2.wav
-/sounds/neutral/bird/birds3.wav
-/sounds/neutral/gryphon/gryphon_death_1.wav
-/sounds/neutral/gryphon/gryphon_death_2.wav
-/sounds/neutral/gryphon/gryphon_shriek_1.wav
-/sounds/neutral/gryphon/gryphon_shriek_2.wav
-/sounds/neutral/bat_flapping.wav
-/sounds/neutral/drake_death.wav
-/sounds/neutral/hiss_death.wav
-/sounds/neutral/squishy_death.wav
-/sounds/ui/click.wav
+/sounds/dwarf/basic_voices/dead-1.wav (licensed under the GPL 2.0)
+/sounds/dwarf/basic_voices/dead-2.wav (licensed under the GPL 2.0)
+/sounds/goblin/basic_voices/goblin-die-1.wav (licensed under the GPL 2.0)
+/sounds/goblin/basic_voices/goblin-die-2.wav (licensed under the GPL 2.0)
+/sounds/human/basic_voices/human-die-1.wav (licensed under the GPL 2.0)
+/sounds/human/basic_voices/human-die-2.wav (licensed under the GPL 2.0)
+/sounds/human/basic_voices/human-die-3.wav (licensed under the GPL 2.0)
+/sounds/misc/explosion.wav (licensed under the GPL 2.0)
+/sounds/misc/fanfare_short.wav (licensed under the GPL 2.0)
+/sounds/misc/gold_coins.wav (licensed under the GPL 2.0)
+/sounds/misc/heal.wav (licensed under the GPL 2.0)
+/sounds/misc/magic-holy-1.wav (licensed under the GPL 2.0)
+/sounds/misc/magic-holy-2.wav (licensed under the GPL 2.0)
+/sounds/misc/magic-holy-3.wav (licensed under the GPL 2.0)
+/sounds/misc/magic-holy-4.wav (licensed under the GPL 2.0)
+/sounds/misc/open_chest.wav (licensed under the GPL 2.0)
+/sounds/misc/potion.wav (licensed under the GPL 2.0)
+/sounds/misc/rumble.wav (licensed under the GPL 2.0)
+/sounds/missiles/axe.wav (licensed under the GPL 2.0)
+/sounds/missiles/bite.wav (licensed under the GPL 2.0)
+/sounds/missiles/bow.wav (licensed under the GPL 2.0)
+/sounds/missiles/bow_hit.wav (licensed under the GPL 2.0)
+/sounds/missiles/claws.wav (licensed under the GPL 2.0)
+/sounds/missiles/club.wav (licensed under the GPL 2.0)
+/sounds/missiles/dagger.wav (licensed under the GPL 2.0)
+/sounds/missiles/dart.wav (licensed under the GPL 2.0)
+/sounds/missiles/fist.wav (licensed under the GPL 2.0)
+/sounds/missiles/mace.wav (licensed under the GPL 2.0)
+/sounds/missiles/miss-1.wav (licensed under the GPL 2.0)
+/sounds/missiles/miss-2.wav (licensed under the GPL 2.0)
+/sounds/missiles/miss-3.wav (licensed under the GPL 2.0)
+/sounds/missiles/spear-1.wav (licensed under the GPL 2.0)
+/sounds/missiles/spear-2.wav (licensed under the GPL 2.0)
+/sounds/missiles/spear-miss.wav (licensed under the GPL 2.0)
+/sounds/missiles/squishy_hit.wav (licensed under the GPL 2.0)
+/sounds/missiles/squishy_miss.wav (licensed under the GPL 2.0)
+/sounds/missiles/squishy_strike.wav (licensed under the GPL 2.0)
+/sounds/missiles/throwing_axe_hit.wav (licensed under the GPL 2.0)
+/sounds/neutral/bird/birds1.wav (licensed under the GPL 2.0)
+/sounds/neutral/bird/birds2.wav (licensed under the GPL 2.0)
+/sounds/neutral/bird/birds3.wav (licensed under the GPL 2.0)
+/sounds/neutral/gryphon/gryphon_death_1.wav (licensed under the GPL 2.0)
+/sounds/neutral/gryphon/gryphon_death_2.wav (licensed under the GPL 2.0)
+/sounds/neutral/gryphon/gryphon_shriek_1.wav (licensed under the GPL 2.0)
+/sounds/neutral/gryphon/gryphon_shriek_2.wav (licensed under the GPL 2.0)
+/sounds/neutral/bat_flapping.wav (licensed under the GPL 2.0)
+/sounds/neutral/drake_death.wav (licensed under the GPL 2.0)
+/sounds/neutral/hiss_death.wav (licensed under the GPL 2.0)
+/sounds/neutral/squishy_death.wav (licensed under the GPL 2.0)
+/sounds/ui/click.wav (licensed under the GPL 2.0)
 
 b_o:
-/sounds/buildings/yalepen.wav (modified from the U.S. Fish and Wildlife Service's sound)
-/sounds/dwarf/axefighter/axefighter-ready.wav
-/sounds/dwarf/ballista/ballista-ready.wav
-/sounds/dwarf/basic_voices/acknowledge-1.wav
-/sounds/dwarf/basic_voices/acknowledge-2.wav
-/sounds/dwarf/basic_voices/acknowledge-3.wav
-/sounds/dwarf/basic_voices/acknowledge-4.wav
-/sounds/dwarf/basic_voices/acknowledge-5.wav
-/sounds/dwarf/basic_voices/acknowledge-6.wav
-/sounds/dwarf/basic_voices/acknowledge-7.wav
-/sounds/dwarf/basic_voices/annoy1.wav
-/sounds/dwarf/basic_voices/annoy2.wav
-/sounds/dwarf/basic_voices/annoy3.wav
-/sounds/dwarf/basic_voices/annoy4.wav
-/sounds/dwarf/basic_voices/attack-01.wav
-/sounds/dwarf/basic_voices/attack-02.wav
-/sounds/dwarf/basic_voices/help-01.wav
-/sounds/dwarf/basic_voices/help-02.wav
-/sounds/dwarf/basic_voices/move-01.wav
-/sounds/dwarf/basic_voices/move-02.wav
-/sounds/dwarf/basic_voices/need-coal.wav
-/sounds/dwarf/basic_voices/need-farms.wav
-/sounds/dwarf/basic_voices/need-gold.wav
-/sounds/dwarf/basic_voices/need-stone.wav
-/sounds/dwarf/basic_voices/need-wood.wav
-/sounds/dwarf/basic_voices/ready.wav
-/sounds/dwarf/basic_voices/selected-1.wav
-/sounds/dwarf/basic_voices/selected-2.wav
-/sounds/dwarf/basic_voices/selected-3.wav
-/sounds/dwarf/basic_voices/selected-4.wav
-/sounds/dwarf/basic_voices/selected-5.wav
-/sounds/dwarf/basic_voices/ship1-ready.wav
-/sounds/dwarf/basic_voices/town-attack.wav
-/sounds/dwarf/gryphon_rider/gryphon-rider-ready.wav
-/sounds/dwarf/miner/miner-acknowledge-1.wav
-/sounds/dwarf/miner/miner-acknowledge-2.wav
-/sounds/dwarf/miner/miner-acknowledge-3.wav
-/sounds/dwarf/miner/miner-acknowledge-4.wav
-/sounds/dwarf/miner/miner-acknowledge-5.wav
-/sounds/dwarf/miner/miner-acknowledge-6.wav
-/sounds/dwarf/miner/miner-acknowledge-7.wav
-/sounds/dwarf/miner/miner-ready.wav
-/sounds/dwarf/miner/work-done.wav
-/sounds/dwarf/scout/scout-ready.wav
-/sounds/dwarf/steelclad/steelclad-ready.wav
-/sounds/dwarf/yale_rider/yale-rider-ready.wav
-/sounds/goblin/archer/goblin-archer-ready.wav
-/sounds/goblin/basic_voices/acknowledge-01.wav
-/sounds/goblin/basic_voices/acknowledge-02.wav
-/sounds/goblin/basic_voices/acknowledge-03.wav
-/sounds/goblin/basic_voices/acknowledge-04.wav
-/sounds/goblin/basic_voices/acknowledge-05.wav
-/sounds/goblin/basic_voices/acknowledge-06.wav
-/sounds/goblin/basic_voices/acknowledge-07.wav
-/sounds/goblin/basic_voices/acknowledge-08.wav
-/sounds/goblin/basic_voices/acknowledge-09.wav
-/sounds/goblin/basic_voices/acknowledge-10.wav
-/sounds/goblin/basic_voices/acknowledge-11.wav
-/sounds/goblin/basic_voices/annoy-01.wav
-/sounds/goblin/basic_voices/annoy-02.wav
-/sounds/goblin/basic_voices/annoy-03.wav
-/sounds/goblin/basic_voices/annoy-04.wav
-/sounds/goblin/basic_voices/annoy-05.wav
-/sounds/goblin/basic_voices/annoy-06.wav
-/sounds/goblin/basic_voices/attack-1.wav
-/sounds/goblin/basic_voices/attack-2.wav
-/sounds/goblin/basic_voices/attack-3.wav
-/sounds/goblin/basic_voices/attack-4.wav
-/sounds/goblin/basic_voices/selected-01.wav
-/sounds/goblin/basic_voices/selected-02.wav
-/sounds/goblin/basic_voices/selected-03.wav
-/sounds/goblin/basic_voices/selected-04.wav
-/sounds/goblin/basic_voices/selected-05.wav
-/sounds/goblin/basic_voices/selected-06.wav
-/sounds/goblin/basic_voices/selected-07.wav
-/sounds/goblin/basic_voices/selected-08.wav
-/sounds/goblin/basic_voices/selected-09.wav
-/sounds/goblin/basic_voices/selected-10.wav
-/sounds/goblin/basic_voices/selected-11.wav
-/sounds/goblin/basic_voices/selected-12.wav
-/sounds/goblin/basic_voices/need-coal.wav
-/sounds/goblin/basic_voices/need-farms.wav
-/sounds/goblin/basic_voices/need-gold.wav
-/sounds/goblin/basic_voices/need-stone.wav
-/sounds/goblin/basic_voices/need-wood.wav
-/sounds/goblin/basic_voices/repair.wav
-/sounds/goblin/basic_voices/town-attack.wav
-/sounds/goblin/basic_voices/under-attack.wav
-/sounds/goblin/glider/glider-flying.wav
-/sounds/goblin/glider/glider-ready.wav
-/sounds/goblin/impaler/goblin-impaler-ready.wav
-/sounds/goblin/shaman/gobchant.wav
-/sounds/goblin/shaman/goblin-shaman-ready.wav
-/sounds/goblin/worker/built.wav
-/sounds/goblin/worker/goblin-worker-ready-1.wav
-/sounds/goblin/worker/goblin-worker-ready-2.wav
-/sounds/misc/eat.wav
-/sounds/misc/rescue.wav
-/sounds/missiles/throwing_axe.wav
-/sounds/neutral/yale/yale_ack01.wav (modified from the U.S. Fish and Wildlife Service's sound)
-/sounds/neutral/yale/yale_ack02.wav (modified from the U.S. Fish and Wildlife Service's sound)
-/sounds/neutral/yale/yale_ack03.wav (modified from the U.S. Fish and Wildlife Service's sound)
-/sounds/neutral/yale/yale_select01.wav (modified from the U.S. Fish and Wildlife Service's sound)
-/sounds/neutral/yale/yale_select02.wav (modified from the U.S. Fish and Wildlife Service's sound)
-/sounds/neutral/yale/yaledead.wav (modified from the U.S. Fish and Wildlife Service's sound)
-/sounds/neutral/frog.wav
+/sounds/buildings/yalepen.wav (modified from the U.S. Fish and Wildlife Service's sound) (Public Domain)
+/sounds/dwarf/axefighter/axefighter-ready.wav (licensed under the GPL 2.0)
+/sounds/dwarf/ballista/ballista-ready.wav (licensed under the GPL 2.0)
+/sounds/dwarf/basic_voices/acknowledge-1.wav (licensed under the GPL 2.0)
+/sounds/dwarf/basic_voices/acknowledge-2.wav (licensed under the GPL 2.0)
+/sounds/dwarf/basic_voices/acknowledge-3.wav (licensed under the GPL 2.0)
+/sounds/dwarf/basic_voices/acknowledge-4.wav (licensed under the GPL 2.0)
+/sounds/dwarf/basic_voices/acknowledge-5.wav (licensed under the GPL 2.0)
+/sounds/dwarf/basic_voices/acknowledge-6.wav (licensed under the GPL 2.0)
+/sounds/dwarf/basic_voices/acknowledge-7.wav (licensed under the GPL 2.0)
+/sounds/dwarf/basic_voices/annoy1.wav (licensed under the GPL 2.0)
+/sounds/dwarf/basic_voices/annoy2.wav (licensed under the GPL 2.0)
+/sounds/dwarf/basic_voices/annoy3.wav (licensed under the GPL 2.0)
+/sounds/dwarf/basic_voices/annoy4.wav (licensed under the GPL 2.0)
+/sounds/dwarf/basic_voices/attack-01.wav (licensed under the GPL 2.0)
+/sounds/dwarf/basic_voices/attack-02.wav (licensed under the GPL 2.0)
+/sounds/dwarf/basic_voices/help-01.wav (licensed under the GPL 2.0)
+/sounds/dwarf/basic_voices/help-02.wav (licensed under the GPL 2.0)
+/sounds/dwarf/basic_voices/move-01.wav (licensed under the GPL 2.0)
+/sounds/dwarf/basic_voices/move-02.wav (licensed under the GPL 2.0)
+/sounds/dwarf/basic_voices/need-coal.wav (licensed under the GPL 2.0)
+/sounds/dwarf/basic_voices/need-farms.wav (licensed under the GPL 2.0)
+/sounds/dwarf/basic_voices/need-gold.wav (licensed under the GPL 2.0)
+/sounds/dwarf/basic_voices/need-stone.wav (licensed under the GPL 2.0)
+/sounds/dwarf/basic_voices/need-wood.wav (licensed under the GPL 2.0)
+/sounds/dwarf/basic_voices/ready.wav (licensed under the GPL 2.0)
+/sounds/dwarf/basic_voices/selected-1.wav (licensed under the GPL 2.0)
+/sounds/dwarf/basic_voices/selected-2.wav (licensed under the GPL 2.0)
+/sounds/dwarf/basic_voices/selected-3.wav (licensed under the GPL 2.0)
+/sounds/dwarf/basic_voices/selected-4.wav (licensed under the GPL 2.0)
+/sounds/dwarf/basic_voices/selected-5.wav (licensed under the GPL 2.0)
+/sounds/dwarf/basic_voices/ship1-ready.wav (licensed under the GPL 2.0)
+/sounds/dwarf/basic_voices/town-attack.wav (licensed under the GPL 2.0)
+/sounds/dwarf/gryphon_rider/gryphon-rider-ready.wav (licensed under the GPL 2.0)
+/sounds/dwarf/miner/miner-acknowledge-1.wav (licensed under the GPL 2.0)
+/sounds/dwarf/miner/miner-acknowledge-2.wav (licensed under the GPL 2.0)
+/sounds/dwarf/miner/miner-acknowledge-3.wav (licensed under the GPL 2.0)
+/sounds/dwarf/miner/miner-acknowledge-4.wav (licensed under the GPL 2.0)
+/sounds/dwarf/miner/miner-acknowledge-5.wav (licensed under the GPL 2.0)
+/sounds/dwarf/miner/miner-acknowledge-6.wav (licensed under the GPL 2.0)
+/sounds/dwarf/miner/miner-acknowledge-7.wav (licensed under the GPL 2.0)
+/sounds/dwarf/miner/miner-ready.wav (licensed under the GPL 2.0)
+/sounds/dwarf/miner/work-done.wav (licensed under the GPL 2.0)
+/sounds/dwarf/scout/scout-ready.wav (licensed under the GPL 2.0)
+/sounds/dwarf/steelclad/steelclad-ready.wav (licensed under the GPL 2.0)
+/sounds/dwarf/yale_rider/yale-rider-ready.wav (licensed under the GPL 2.0)
+/sounds/goblin/archer/goblin-archer-ready.wav (licensed under the GPL 2.0)
+/sounds/goblin/basic_voices/acknowledge-01.wav (licensed under the GPL 2.0)
+/sounds/goblin/basic_voices/acknowledge-02.wav (licensed under the GPL 2.0)
+/sounds/goblin/basic_voices/acknowledge-03.wav (licensed under the GPL 2.0)
+/sounds/goblin/basic_voices/acknowledge-04.wav (licensed under the GPL 2.0)
+/sounds/goblin/basic_voices/acknowledge-05.wav (licensed under the GPL 2.0)
+/sounds/goblin/basic_voices/acknowledge-06.wav (licensed under the GPL 2.0)
+/sounds/goblin/basic_voices/acknowledge-07.wav (licensed under the GPL 2.0)
+/sounds/goblin/basic_voices/acknowledge-08.wav (licensed under the GPL 2.0)
+/sounds/goblin/basic_voices/acknowledge-09.wav (licensed under the GPL 2.0)
+/sounds/goblin/basic_voices/acknowledge-10.wav (licensed under the GPL 2.0)
+/sounds/goblin/basic_voices/acknowledge-11.wav (licensed under the GPL 2.0)
+/sounds/goblin/basic_voices/annoy-01.wav (licensed under the GPL 2.0)
+/sounds/goblin/basic_voices/annoy-02.wav (licensed under the GPL 2.0)
+/sounds/goblin/basic_voices/annoy-03.wav (licensed under the GPL 2.0)
+/sounds/goblin/basic_voices/annoy-04.wav (licensed under the GPL 2.0)
+/sounds/goblin/basic_voices/annoy-05.wav (licensed under the GPL 2.0)
+/sounds/goblin/basic_voices/annoy-06.wav (licensed under the GPL 2.0)
+/sounds/goblin/basic_voices/attack-1.wav (licensed under the GPL 2.0)
+/sounds/goblin/basic_voices/attack-2.wav (licensed under the GPL 2.0)
+/sounds/goblin/basic_voices/attack-3.wav (licensed under the GPL 2.0)
+/sounds/goblin/basic_voices/attack-4.wav (licensed under the GPL 2.0)
+/sounds/goblin/basic_voices/selected-01.wav (licensed under the GPL 2.0)
+/sounds/goblin/basic_voices/selected-02.wav (licensed under the GPL 2.0)
+/sounds/goblin/basic_voices/selected-03.wav (licensed under the GPL 2.0)
+/sounds/goblin/basic_voices/selected-04.wav (licensed under the GPL 2.0)
+/sounds/goblin/basic_voices/selected-05.wav (licensed under the GPL 2.0)
+/sounds/goblin/basic_voices/selected-06.wav (licensed under the GPL 2.0)
+/sounds/goblin/basic_voices/selected-07.wav (licensed under the GPL 2.0)
+/sounds/goblin/basic_voices/selected-08.wav (licensed under the GPL 2.0)
+/sounds/goblin/basic_voices/selected-09.wav (licensed under the GPL 2.0)
+/sounds/goblin/basic_voices/selected-10.wav (licensed under the GPL 2.0)
+/sounds/goblin/basic_voices/selected-11.wav (licensed under the GPL 2.0)
+/sounds/goblin/basic_voices/selected-12.wav (licensed under the GPL 2.0)
+/sounds/goblin/basic_voices/need-coal.wav (licensed under the GPL 2.0)
+/sounds/goblin/basic_voices/need-farms.wav (licensed under the GPL 2.0)
+/sounds/goblin/basic_voices/need-gold.wav (licensed under the GPL 2.0)
+/sounds/goblin/basic_voices/need-stone.wav (licensed under the GPL 2.0)
+/sounds/goblin/basic_voices/need-wood.wav (licensed under the GPL 2.0)
+/sounds/goblin/basic_voices/repair.wav (licensed under the GPL 2.0)
+/sounds/goblin/basic_voices/town-attack.wav (licensed under the GPL 2.0)
+/sounds/goblin/basic_voices/under-attack.wav (licensed under the GPL 2.0)
+/sounds/goblin/glider/glider-flying.wav (licensed under the GPL 2.0)
+/sounds/goblin/glider/glider-ready.wav (licensed under the GPL 2.0)
+/sounds/goblin/impaler/goblin-impaler-ready.wav (licensed under the GPL 2.0)
+/sounds/goblin/shaman/gobchant.wav (licensed under the GPL 2.0)
+/sounds/goblin/shaman/goblin-shaman-ready.wav (licensed under the GPL 2.0)
+/sounds/goblin/worker/built.wav (licensed under the GPL 2.0)
+/sounds/goblin/worker/goblin-worker-ready-1.wav (licensed under the GPL 2.0)
+/sounds/goblin/worker/goblin-worker-ready-2.wav (licensed under the GPL 2.0)
+/sounds/misc/eat.wav (licensed under the GPL 2.0)
+/sounds/misc/rescue.wav (licensed under the GPL 2.0)
+/sounds/missiles/throwing_axe.wav (licensed under the GPL 2.0)
+/sounds/neutral/yale/yale_ack01.wav (modified from the U.S. Fish and Wildlife Service's sound) (Public Domain)
+/sounds/neutral/yale/yale_ack02.wav (modified from the U.S. Fish and Wildlife Service's sound) (Public Domain)
+/sounds/neutral/yale/yale_ack03.wav (modified from the U.S. Fish and Wildlife Service's sound) (Public Domain)
+/sounds/neutral/yale/yale_select01.wav (modified from the U.S. Fish and Wildlife Service's sound) (Public Domain)
+/sounds/neutral/yale/yale_select02.wav (modified from the U.S. Fish and Wildlife Service's sound) (Public Domain)
+/sounds/neutral/yale/yaledead.wav (modified from the U.S. Fish and Wildlife Service's sound) (Public Domain)
+/sounds/neutral/frog.wav (licensed under the GPL 2.0)
 
 Brian Brickwagon Jennings:
-/sounds/gnome/basic_voices/acknowledge-01.wav
-/sounds/gnome/basic_voices/acknowledge-02.wav
-/sounds/gnome/basic_voices/acknowledge-03.wav
-/sounds/gnome/basic_voices/acknowledge-04.wav
-/sounds/gnome/basic_voices/acknowledge-05.wav
-/sounds/gnome/basic_voices/acknowledge-06.wav
-/sounds/gnome/basic_voices/annoy-1.wav
-/sounds/gnome/basic_voices/annoy-2.wav
-/sounds/gnome/basic_voices/attack1.wav
-/sounds/gnome/basic_voices/attack2.wav
-/sounds/gnome/basic_voices/deal-1.wav
-/sounds/gnome/basic_voices/deal-2.wav
-/sounds/gnome/basic_voices/deal-3.wav
-/sounds/gnome/basic_voices/deal-4.wav
-/sounds/gnome/basic_voices/deal-5.wav
-/sounds/gnome/basic_voices/death-1.wav
-/sounds/gnome/basic_voices/death-2.wav
-/sounds/gnome/basic_voices/death-3.wav
-/sounds/gnome/basic_voices/death-4.wav
-/sounds/gnome/basic_voices/death-5.wav
-/sounds/gnome/basic_voices/discover-1.wav
-/sounds/gnome/basic_voices/done-01.wav
-/sounds/gnome/basic_voices/end-invisible-1.wav
-/sounds/gnome/basic_voices/end-invisible-2.wav
-/sounds/gnome/basic_voices/fatalwound-1.wav
-/sounds/gnome/basic_voices/fatalwound-2.wav
-/sounds/gnome/basic_voices/fully-repaired-1.wav
-/sounds/gnome/basic_voices/help-1.wav
-/sounds/gnome/basic_voices/help-2.wav
-/sounds/gnome/basic_voices/help-3.wav
-/sounds/gnome/basic_voices/help-4.wav
-/sounds/gnome/basic_voices/helptown-1.wav
-/sounds/gnome/basic_voices/helptown-2.wav
-/sounds/gnome/basic_voices/need-coal.wav
-/sounds/gnome/basic_voices/need-farms.wav
-/sounds/gnome/basic_voices/need-gold.wav
-/sounds/gnome/basic_voices/need-stone.wav
-/sounds/gnome/basic_voices/need-wood.wav
-/sounds/gnome/basic_voices/ranged-attack1.wav
-/sounds/gnome/basic_voices/ranged-attack2.wav
-/sounds/gnome/basic_voices/ready-1.wav
-/sounds/gnome/basic_voices/ready-2.wav
-/sounds/gnome/basic_voices/research-done-1.wav
-/sounds/gnome/basic_voices/selected-2.wav
-/sounds/gnome/basic_voices/selected-3.wav
-/sounds/gnome/basic_voices/selected-4.wav
-/sounds/gnome/basic_voices/selected-5.wav
-/sounds/gnome/basic_voices/selected-7.wav
-/sounds/gnome/basic_voices/tame-animal-1.wav
-/sounds/gnome/basic_voices/tame-animal-2.wav
-/sounds/gnome/basic_voices/tame-animal-3.wav
-/sounds/gnome/caravan/caravan-ready-1.wav
-/sounds/gnome/caravan/caravan-ready-2.wav
-/sounds/gnome/caravan/caravan-ready-3.wav
-/sounds/gnome/caravan/caravan-ready-4.wav
-/sounds/gnome/crossbowman/ready-1.wav
-/sounds/gnome/herbalist/annoy-1.wav
-/sounds/gnome/herbalist/annoy-2.wav
-/sounds/gnome/herbalist/annoy-3.wav
-/sounds/gnome/herbalist/annoy-4.wav
-/sounds/gnome/herbalist/heal-1.wav
-/sounds/gnome/herbalist/heal-2.wav
-/sounds/gnome/herbalist/heal-3.wav
-/sounds/gnome/herbalist/heal-done-1.wav
-/sounds/gnome/herbalist/heal-done-2.wav
-/sounds/gnome/herbalist/heal-done-3.wav
-/sounds/gnome/herbalist/herbalist-ready-1.wav
-/sounds/gnome/herbalist/herbalist-ready-2.wav
-/sounds/gnome/herbalist/herb-need-1.wav
-/sounds/gnome/herbalist/herb-need-2.wav
-/sounds/gnome/herbalist/herb-need-3.wav
-/sounds/gnome/herbalist/portent-1.wav
-/sounds/gnome/herbalist/portent-2.wav
-/sounds/gnome/recruit/annoy-1.wav
-/sounds/gnome/recruit/annoy-2.wav
-/sounds/gnome/recruit/annoy-3.wav
-/sounds/gnome/recruit/recruit-ready-1.wav
-/sounds/gnome/scavenger/repair-acknowledge.wav
-/sounds/gnome/scavenger/scavenger-annoyed-1.wav
-/sounds/gnome/scavenger/scavenger-annoyed-2.wav
-/sounds/gnome/scavenger/scavenger-annoyed-3.wav
-/sounds/gnome/scavenger/scavenger-annoyed-4.wav
-/sounds/gnome/scavenger/scavenger-ready-1.wav
-/sounds/gnome/scavenger/scavenger-ready-2.wav
-/sounds/gnome/scavenger/worker-need-1.wav
-/sounds/gnome/scavenger/worker-need-2.wav
-/sounds/gnome/snigill_rider/annoy-1.wav
-/sounds/gnome/snigill_rider/annoy-2.wav
-/sounds/gnome/snigill_rider/annoy-3.wav
-/sounds/gnome/snigill_rider/move-1.wav
-/sounds/gnome/snigill_rider/move-2.wav
-/sounds/gnome/snigill_rider/move-3.wav
-/sounds/gnome/snigill_rider/ready-1.wav
+/sounds/gnome/basic_voices/acknowledge-01.wav (licensed under the GPL 2.0)
+/sounds/gnome/basic_voices/acknowledge-02.wav (licensed under the GPL 2.0)
+/sounds/gnome/basic_voices/acknowledge-03.wav (licensed under the GPL 2.0)
+/sounds/gnome/basic_voices/acknowledge-04.wav (licensed under the GPL 2.0)
+/sounds/gnome/basic_voices/acknowledge-05.wav (licensed under the GPL 2.0)
+/sounds/gnome/basic_voices/acknowledge-06.wav (licensed under the GPL 2.0)
+/sounds/gnome/basic_voices/annoy-1.wav (licensed under the GPL 2.0)
+/sounds/gnome/basic_voices/annoy-2.wav (licensed under the GPL 2.0)
+/sounds/gnome/basic_voices/attack1.wav (licensed under the GPL 2.0)
+/sounds/gnome/basic_voices/attack2.wav (licensed under the GPL 2.0)
+/sounds/gnome/basic_voices/deal-1.wav (licensed under the GPL 2.0)
+/sounds/gnome/basic_voices/deal-2.wav (licensed under the GPL 2.0)
+/sounds/gnome/basic_voices/deal-3.wav (licensed under the GPL 2.0)
+/sounds/gnome/basic_voices/deal-4.wav (licensed under the GPL 2.0)
+/sounds/gnome/basic_voices/deal-5.wav (licensed under the GPL 2.0)
+/sounds/gnome/basic_voices/death-1.wav (licensed under the GPL 2.0)
+/sounds/gnome/basic_voices/death-2.wav (licensed under the GPL 2.0)
+/sounds/gnome/basic_voices/death-3.wav (licensed under the GPL 2.0)
+/sounds/gnome/basic_voices/death-4.wav (licensed under the GPL 2.0)
+/sounds/gnome/basic_voices/death-5.wav (licensed under the GPL 2.0)
+/sounds/gnome/basic_voices/discover-1.wav (licensed under the GPL 2.0)
+/sounds/gnome/basic_voices/done-01.wav (licensed under the GPL 2.0)
+/sounds/gnome/basic_voices/end-invisible-1.wav (licensed under the GPL 2.0)
+/sounds/gnome/basic_voices/end-invisible-2.wav (licensed under the GPL 2.0)
+/sounds/gnome/basic_voices/fatalwound-1.wav (licensed under the GPL 2.0)
+/sounds/gnome/basic_voices/fatalwound-2.wav (licensed under the GPL 2.0)
+/sounds/gnome/basic_voices/fully-repaired-1.wav (licensed under the GPL 2.0)
+/sounds/gnome/basic_voices/help-1.wav (licensed under the GPL 2.0)
+/sounds/gnome/basic_voices/help-2.wav (licensed under the GPL 2.0)
+/sounds/gnome/basic_voices/help-3.wav (licensed under the GPL 2.0)
+/sounds/gnome/basic_voices/help-4.wav (licensed under the GPL 2.0)
+/sounds/gnome/basic_voices/helptown-1.wav (licensed under the GPL 2.0)
+/sounds/gnome/basic_voices/helptown-2.wav (licensed under the GPL 2.0)
+/sounds/gnome/basic_voices/need-coal.wav (licensed under the GPL 2.0)
+/sounds/gnome/basic_voices/need-farms.wav (licensed under the GPL 2.0)
+/sounds/gnome/basic_voices/need-gold.wav (licensed under the GPL 2.0)
+/sounds/gnome/basic_voices/need-stone.wav (licensed under the GPL 2.0)
+/sounds/gnome/basic_voices/need-wood.wav (licensed under the GPL 2.0)
+/sounds/gnome/basic_voices/ranged-attack1.wav (licensed under the GPL 2.0)
+/sounds/gnome/basic_voices/ranged-attack2.wav (licensed under the GPL 2.0)
+/sounds/gnome/basic_voices/ready-1.wav (licensed under the GPL 2.0)
+/sounds/gnome/basic_voices/ready-2.wav (licensed under the GPL 2.0)
+/sounds/gnome/basic_voices/research-done-1.wav (licensed under the GPL 2.0)
+/sounds/gnome/basic_voices/selected-2.wav (licensed under the GPL 2.0)
+/sounds/gnome/basic_voices/selected-3.wav (licensed under the GPL 2.0)
+/sounds/gnome/basic_voices/selected-4.wav (licensed under the GPL 2.0)
+/sounds/gnome/basic_voices/selected-5.wav (licensed under the GPL 2.0)
+/sounds/gnome/basic_voices/selected-7.wav (licensed under the GPL 2.0)
+/sounds/gnome/basic_voices/tame-animal-1.wav (licensed under the GPL 2.0)
+/sounds/gnome/basic_voices/tame-animal-2.wav (licensed under the GPL 2.0)
+/sounds/gnome/basic_voices/tame-animal-3.wav (licensed under the GPL 2.0)
+/sounds/gnome/caravan/caravan-ready-1.wav (licensed under the GPL 2.0)
+/sounds/gnome/caravan/caravan-ready-2.wav (licensed under the GPL 2.0)
+/sounds/gnome/caravan/caravan-ready-3.wav (licensed under the GPL 2.0)
+/sounds/gnome/caravan/caravan-ready-4.wav (licensed under the GPL 2.0)
+/sounds/gnome/crossbowman/ready-1.wav (licensed under the GPL 2.0)
+/sounds/gnome/herbalist/annoy-1.wav (licensed under the GPL 2.0)
+/sounds/gnome/herbalist/annoy-2.wav (licensed under the GPL 2.0)
+/sounds/gnome/herbalist/annoy-3.wav (licensed under the GPL 2.0)
+/sounds/gnome/herbalist/annoy-4.wav (licensed under the GPL 2.0)
+/sounds/gnome/herbalist/heal-1.wav (licensed under the GPL 2.0)
+/sounds/gnome/herbalist/heal-2.wav (licensed under the GPL 2.0)
+/sounds/gnome/herbalist/heal-3.wav (licensed under the GPL 2.0)
+/sounds/gnome/herbalist/heal-done-1.wav (licensed under the GPL 2.0)
+/sounds/gnome/herbalist/heal-done-2.wav (licensed under the GPL 2.0)
+/sounds/gnome/herbalist/heal-done-3.wav (licensed under the GPL 2.0)
+/sounds/gnome/herbalist/herbalist-ready-1.wav (licensed under the GPL 2.0)
+/sounds/gnome/herbalist/herbalist-ready-2.wav (licensed under the GPL 2.0)
+/sounds/gnome/herbalist/herb-need-1.wav (licensed under the GPL 2.0)
+/sounds/gnome/herbalist/herb-need-2.wav (licensed under the GPL 2.0)
+/sounds/gnome/herbalist/herb-need-3.wav (licensed under the GPL 2.0)
+/sounds/gnome/herbalist/portent-1.wav (licensed under the GPL 2.0)
+/sounds/gnome/herbalist/portent-2.wav (licensed under the GPL 2.0)
+/sounds/gnome/recruit/annoy-1.wav (licensed under the GPL 2.0)
+/sounds/gnome/recruit/annoy-2.wav (licensed under the GPL 2.0)
+/sounds/gnome/recruit/annoy-3.wav (licensed under the GPL 2.0)
+/sounds/gnome/recruit/recruit-ready-1.wav (licensed under the GPL 2.0)
+/sounds/gnome/scavenger/repair-acknowledge.wav (licensed under the GPL 2.0)
+/sounds/gnome/scavenger/scavenger-annoyed-1.wav (licensed under the GPL 2.0)
+/sounds/gnome/scavenger/scavenger-annoyed-2.wav (licensed under the GPL 2.0)
+/sounds/gnome/scavenger/scavenger-annoyed-3.wav (licensed under the GPL 2.0)
+/sounds/gnome/scavenger/scavenger-annoyed-4.wav (licensed under the GPL 2.0)
+/sounds/gnome/scavenger/scavenger-ready-1.wav (licensed under the GPL 2.0)
+/sounds/gnome/scavenger/scavenger-ready-2.wav (licensed under the GPL 2.0)
+/sounds/gnome/scavenger/worker-need-1.wav (licensed under the GPL 2.0)
+/sounds/gnome/scavenger/worker-need-2.wav (licensed under the GPL 2.0)
+/sounds/gnome/snigill_rider/annoy-1.wav (licensed under the GPL 2.0)
+/sounds/gnome/snigill_rider/annoy-2.wav (licensed under the GPL 2.0)
+/sounds/gnome/snigill_rider/annoy-3.wav (licensed under the GPL 2.0)
+/sounds/gnome/snigill_rider/move-1.wav (licensed under the GPL 2.0)
+/sounds/gnome/snigill_rider/move-2.wav (licensed under the GPL 2.0)
+/sounds/gnome/snigill_rider/move-3.wav (licensed under the GPL 2.0)
+/sounds/gnome/snigill_rider/ready-1.wav (licensed under the GPL 2.0)
 
 David Slimp:
-/sounds/buildings/gold_mine.wav
+/sounds/buildings/gold_mine.wav (licensed under the GPL 2.0)
 
 Jute:
-/sounds/movement/step_dirt/stepdirt_1.wav
-/sounds/movement/step_dirt/stepdirt_2.wav
-/sounds/movement/step_dirt/stepdirt_3.wav
-/sounds/movement/step_dirt/stepdirt_4.wav
-/sounds/movement/step_dirt/stepdirt_5.wav
-/sounds/movement/step_dirt/stepdirt_6.wav
-/sounds/movement/step_dirt/stepdirt_7.wav
-/sounds/movement/step_dirt/stepdirt_8.wav
-/sounds/movement/step_stone/stepstone_1.wav
-/sounds/movement/step_stone/stepstone_2.wav
-/sounds/movement/step_stone/stepstone_3.wav
-/sounds/movement/step_stone/stepstone_4.wav
-/sounds/movement/step_stone/stepstone_5.wav
-/sounds/movement/step_stone/stepstone_6.wav
-/sounds/movement/step_stone/stepstone_7.wav
-/sounds/movement/step_stone/stepstone_8.wav
+/sounds/movement/step_dirt/stepdirt_1.wav (licensed under the GPL 2.0)
+/sounds/movement/step_dirt/stepdirt_2.wav (licensed under the GPL 2.0)
+/sounds/movement/step_dirt/stepdirt_3.wav (licensed under the GPL 2.0)
+/sounds/movement/step_dirt/stepdirt_4.wav (licensed under the GPL 2.0)
+/sounds/movement/step_dirt/stepdirt_5.wav (licensed under the GPL 2.0)
+/sounds/movement/step_dirt/stepdirt_6.wav (licensed under the GPL 2.0)
+/sounds/movement/step_dirt/stepdirt_7.wav (licensed under the GPL 2.0)
+/sounds/movement/step_dirt/stepdirt_8.wav (licensed under the GPL 2.0)
+/sounds/movement/step_stone/stepstone_1.wav (licensed under the GPL 2.0)
+/sounds/movement/step_stone/stepstone_2.wav (licensed under the GPL 2.0)
+/sounds/movement/step_stone/stepstone_3.wav (licensed under the GPL 2.0)
+/sounds/movement/step_stone/stepstone_4.wav (licensed under the GPL 2.0)
+/sounds/movement/step_stone/stepstone_5.wav (licensed under the GPL 2.0)
+/sounds/movement/step_stone/stepstone_6.wav (licensed under the GPL 2.0)
+/sounds/movement/step_stone/stepstone_7.wav (licensed under the GPL 2.0)
+/sounds/movement/step_stone/stepstone_8.wav (licensed under the GPL 2.0)
 
 Manuel Senfft:
-/sounds/germanic/basic_voices/acknowledge_01.wav
-/sounds/germanic/basic_voices/acknowledge_02.wav
-/sounds/germanic/basic_voices/acknowledge_03.wav
-/sounds/germanic/basic_voices/acknowledge_04.wav
-/sounds/germanic/basic_voices/annoyed_01.wav
-/sounds/germanic/basic_voices/annoyed_02.wav
-/sounds/germanic/basic_voices/attack_01.wav
-/sounds/germanic/basic_voices/attack_02.wav
-/sounds/germanic/basic_voices/attack_03.wav
-/sounds/germanic/basic_voices/ready.wav
-/sounds/germanic/basic_voices/selected_01.wav
-/sounds/germanic/basic_voices/selected_02.wav
-/sounds/germanic/bura/work_complete.wav
-/sounds/teuton/basic_voices/acknowledge_01.wav
-/sounds/teuton/basic_voices/acknowledge_02.wav
-/sounds/teuton/basic_voices/acknowledge_03.wav
-/sounds/teuton/basic_voices/acknowledge_04.wav
-/sounds/teuton/basic_voices/annoyed_01.wav
-/sounds/teuton/basic_voices/annoyed_02.wav
-/sounds/teuton/basic_voices/annoyed_03.wav
-/sounds/teuton/basic_voices/help.wav
-/sounds/teuton/basic_voices/not_enough_coal.wav
-/sounds/teuton/basic_voices/not_enough_food.wav
-/sounds/teuton/basic_voices/not_enough_gold.wav
-/sounds/teuton/basic_voices/not_enough_lumber.wav
-/sounds/teuton/basic_voices/not_enough_stone.wav
-/sounds/teuton/basic_voices/ready.wav
-/sounds/teuton/basic_voices/selected_01.wav
-/sounds/teuton/basic_voices/selected_02.wav
-/sounds/teuton/basic_voices/selected_03.wav
-/sounds/teuton/basic_voices/selected_04.wav
-/sounds/teuton/basic_voices/town_help.wav
-/sounds/teuton/bauer/bauer_ready.wav
-/sounds/teuton/bauer/work_complete.wav
-/sounds/teuton/bauer/work_complete_extra_1.wav
+/sounds/germanic/basic_voices/acknowledge_01.wav (licensed under the CC0)
+/sounds/germanic/basic_voices/acknowledge_02.wav (licensed under the CC0)
+/sounds/germanic/basic_voices/acknowledge_03.wav (licensed under the CC0)
+/sounds/germanic/basic_voices/acknowledge_04.wav (licensed under the CC0)
+/sounds/germanic/basic_voices/annoyed_01.wav (licensed under the CC0)
+/sounds/germanic/basic_voices/annoyed_02.wav (licensed under the CC0)
+/sounds/germanic/basic_voices/attack_01.wav (licensed under the CC0)
+/sounds/germanic/basic_voices/attack_02.wav (licensed under the CC0)
+/sounds/germanic/basic_voices/attack_03.wav (licensed under the CC0)
+/sounds/germanic/basic_voices/ready.wav (licensed under the CC0)
+/sounds/germanic/basic_voices/selected_01.wav (licensed under the CC0)
+/sounds/germanic/basic_voices/selected_02.wav (licensed under the CC0)
+/sounds/germanic/bura/work_complete.wav (licensed under the CC0)
+/sounds/teuton/basic_voices/acknowledge_01.wav (licensed under the CC0)
+/sounds/teuton/basic_voices/acknowledge_02.wav (licensed under the CC0)
+/sounds/teuton/basic_voices/acknowledge_03.wav (licensed under the CC0)
+/sounds/teuton/basic_voices/acknowledge_04.wav (licensed under the CC0)
+/sounds/teuton/basic_voices/annoyed_01.wav (licensed under the CC0)
+/sounds/teuton/basic_voices/annoyed_02.wav (licensed under the CC0)
+/sounds/teuton/basic_voices/annoyed_03.wav (licensed under the CC0)
+/sounds/teuton/basic_voices/help.wav (licensed under the CC0)
+/sounds/teuton/basic_voices/not_enough_coal.wav (licensed under the CC0)
+/sounds/teuton/basic_voices/not_enough_food.wav (licensed under the CC0)
+/sounds/teuton/basic_voices/not_enough_gold.wav (licensed under the CC0)
+/sounds/teuton/basic_voices/not_enough_lumber.wav (licensed under the CC0)
+/sounds/teuton/basic_voices/not_enough_stone.wav (licensed under the CC0)
+/sounds/teuton/basic_voices/ready.wav (licensed under the CC0)
+/sounds/teuton/basic_voices/selected_01.wav (licensed under the CC0)
+/sounds/teuton/basic_voices/selected_02.wav (licensed under the CC0)
+/sounds/teuton/basic_voices/selected_03.wav (licensed under the CC0)
+/sounds/teuton/basic_voices/selected_04.wav (licensed under the CC0)
+/sounds/teuton/basic_voices/town_help.wav (licensed under the CC0)
+/sounds/teuton/bauer/bauer_ready.wav (licensed under the CC0)
+/sounds/teuton/bauer/work_complete.wav (licensed under the CC0)
+/sounds/teuton/bauer/work_complete_extra_1.wav (licensed under the CC0)
 
 TinyWorlds:
-/sounds/movement/step_gravel/step_gravel.wav
-/sounds/movement/step_leaves/step_leaves_1.wav
-/sounds/movement/step_leaves/step_leaves_2.wav
-/sounds/movement/step_mud/step_mud.wav
+/sounds/movement/step_gravel/step_gravel.wav (licensed under the CC0)
+/sounds/movement/step_leaves/step_leaves_1.wav (licensed under the CC0)
+/sounds/movement/step_leaves/step_leaves_2.wav (licensed under the CC0)
+/sounds/movement/step_mud/step_mud.wav (licensed under the CC0)
 
 U.S. Fish and Wildlife Service (Public Domain) (http://www.fws.gov/video/sound.htm):
-/sounds/buildings/yalepen.wav (later modified by b_o)
-/sounds/neutral/bird/deadbird.wav (later modified by b_o)
-/sounds/neutral/bird/deadbird2.wav (later modified by b_o)
-/sounds/neutral/yale/yale_ack01.wav (later modified by b_o)
-/sounds/neutral/yale/yale_ack02.wav (later modified by b_o)
-/sounds/neutral/yale/yale_ack03.wav (later modified by b_o)
-/sounds/neutral/yale/yale_select01.wav (later modified by b_o)
-/sounds/neutral/yale/yale_select02.wav (later modified by b_o)
-/sounds/neutral/yale/yaledead.wav (later modified by b_o)
+/sounds/buildings/yalepen.wav (later modified by b_o) (Public Domain)
+/sounds/neutral/bird/deadbird.wav (later modified by b_o) (Public Domain)
+/sounds/neutral/bird/deadbird2.wav (later modified by b_o) (Public Domain)
+/sounds/neutral/yale/yale_ack01.wav (later modified by b_o) (Public Domain)
+/sounds/neutral/yale/yale_ack02.wav (later modified by b_o) (Public Domain)
+/sounds/neutral/yale/yale_ack03.wav (later modified by b_o) (Public Domain)
+/sounds/neutral/yale/yale_select01.wav (later modified by b_o) (Public Domain)
+/sounds/neutral/yale/yale_select02.wav (later modified by b_o) (Public Domain)
+/sounds/neutral/yale/yaledead.wav (later modified by b_o) (Public Domain)
 
 Wildfire Games (http://www.wildfiregames.com/):
-/sounds/buildings/complete_barracks.wav
-/sounds/buildings/complete_blacksmith.wav
-/sounds/buildings/complete_cavalry_stables.wav
-/sounds/buildings/complete_civ_center.wav
-/sounds/buildings/complete_corral.wav
-/sounds/buildings/complete_farmstead.wav
-/sounds/buildings/complete_fortress.wav
-/sounds/buildings/complete_storehouse.wav
-/sounds/buildings/complete_tower.wav
-/sounds/buildings/sel_barracks.wav
-/sounds/buildings/sel_blacksmith.wav
-/sounds/buildings/sel_cavalry_stables.wav
-/sounds/buildings/sel_civ_center.wav
-/sounds/buildings/sel_corral.wav
-/sounds/buildings/sel_farmstead.wav
-/sounds/buildings/sel_fortress.wav
-/sounds/buildings/sel_tower.wav
-/sounds/misc/construction/con_stone_10.wav
-/sounds/misc/construction/con_stone_11.wav
-/sounds/misc/construction/con_wood_10.wav
-/sounds/misc/construction/con_wood_11.wav
-/sounds/misc/construction/con_wood_12.wav
-/sounds/misc/construction/con_wood_13.wav
-/sounds/misc/construction/con_wood_14.wav
-/sounds/misc/construction/con_wood_15.wav
-/sounds/misc/construction/con_wood_16.wav
-/sounds/misc/construction/con_wood_17.wav
-/sounds/misc/construction/con_wood_18.wav
-/sounds/misc/foraging/leaves_1a.wav
-/sounds/misc/foraging/leaves_10.wav
-/sounds/misc/foraging/leaves_11.wav
-/sounds/misc/foraging/leaves_12.wav
-/sounds/misc/foraging/leaves_13.wav
-/sounds/misc/foraging/leaves_14.wav
-/sounds/misc/foraging/leaves_15.wav
-/sounds/misc/foraging/leaves_16.wav
-/sounds/misc/foraging/leaves_17.wav
-/sounds/misc/foraging/leaves_18.wav
-/sounds/misc/foraging/leaves_19.wav
-/sounds/misc/metal_mining/mine_metal_01.wav
-/sounds/misc/metal_mining/mine_metal_02.wav
-/sounds/misc/metal_mining/mine_metal_03.wav
-/sounds/misc/metal_mining/mine_metal_04.wav
-/sounds/misc/metal_mining/mine_metal_05.wav
-/sounds/misc/metal_mining/mine_metal_06.wav
-/sounds/misc/metal_mining/mine_metal_07.wav
-/sounds/misc/metal_mining/mine_metal_08.wav
-/sounds/misc/metal_mining/mine_metal_09.wav
-/sounds/misc/metal_mining/mine_metal_10.wav
-/sounds/misc/metal_mining/mine_metal_11.wav
-/sounds/misc/metal_mining/mine_metal_12.wav
-/sounds/misc/metal_mining/mine_metal_13.wav
-/sounds/misc/metal_mining/mine_metal_14.wav
-/sounds/misc/metal_mining/mine_metal_15.wav
-/sounds/misc/metal_mining/mine_metal_16.wav
-/sounds/misc/metal_mining/mine_metal_17.wav
-/sounds/misc/metal_mining/mine_metal_18.wav
-/sounds/misc/metal_mining/mine_metal_19.wav
-/sounds/misc/metal_mining/mine_metal_20.wav
-/sounds/misc/metal_mining/mine_metal_21.wav
-/sounds/misc/metal_mining/mine_metal_22.wav
-/sounds/misc/metal_mining/mine_metal_23.wav
-/sounds/misc/metal_mining/mine_metal_24.wav
-/sounds/misc/sel_metal_01.wav
-/sounds/misc/sel_tree_01.wav
-/sounds/misc/ship_move.wav
-/sounds/misc/ship_selected.wav
-/sounds/misc/stone_mining/mine_stone_01.wav
-/sounds/misc/stone_mining/mine_stone_02.wav
-/sounds/misc/stone_mining/mine_stone_03.wav
-/sounds/misc/stone_mining/mine_stone_04.wav
-/sounds/misc/stone_mining/mine_stone_05.wav
-/sounds/misc/stone_mining/mine_stone_06.wav
-/sounds/misc/stone_mining/mine_stone_07.wav
-/sounds/misc/stone_mining/mine_stone_08.wav
-/sounds/misc/stone_mining/mine_stone_09.wav
-/sounds/misc/stone_mining/mine_stone_10.wav
-/sounds/misc/stone_mining/mine_stone_11.wav
-/sounds/misc/stone_mining/mine_stone_12.wav
-/sounds/misc/stone_mining/mine_stone_13.wav
-/sounds/misc/stone_mining/mine_stone_14.wav
-/sounds/misc/stone_mining/mine_stone_15.wav
-/sounds/misc/stone_mining/mine_stone_16.wav
-/sounds/misc/stone_mining/mine_stone_17.wav
-/sounds/misc/stone_mining/mine_stone_18.wav
-/sounds/misc/stone_mining/mine_stone_19.wav
-/sounds/misc/stone_mining/mine_stone_20.wav
-/sounds/misc/stone_mining/mine_stone_21.wav
-/sounds/misc/stone_mining/mine_stone_22.wav
-/sounds/misc/stone_mining/mine_stone_23.wav
-/sounds/misc/stone_mining/mine_stone_24.wav
-/sounds/misc/stone_mining/mine_stone_25.wav
-/sounds/misc/warship_death_01.wav
-/sounds/misc/warship_death_02.wav
-/sounds/missiles/sword/swordhit_10.wav
-/sounds/missiles/sword/swordhit_10a.wav
-/sounds/missiles/sword/swordhit_11.wav
-/sounds/missiles/sword/swordhit_11a.wav
-/sounds/missiles/sword/swordhit_11b.wav
-/sounds/missiles/sword/swordhit_12.wav
-/sounds/missiles/sword/swordhit_12a.wav
-/sounds/missiles/sword/swordhit_12b.wav
-/sounds/missiles/sword/swordhit_13.wav
-/sounds/missiles/sword/swordhit_13a.wav
-/sounds/missiles/sword/swordhit_13b.wav
-/sounds/missiles/sword/swordhit_14.wav
-/sounds/missiles/sword/swordhit_14a.wav
-/sounds/missiles/sword/swordhit_14b.wav
-/sounds/missiles/sword/swordhit_15.wav
-/sounds/missiles/sword/swordhit_15a.wav
-/sounds/missiles/sword/swordhit_15b.wav
-/sounds/missiles/sword/swordhit_16.wav
-/sounds/missiles/sword/swordhit_16a.wav
-/sounds/missiles/sword/swordhit_16b.wav
-/sounds/missiles/sword/swordhit_17.wav
-/sounds/missiles/sword/swordhit_17a.wav
-/sounds/missiles/sword/swordhit_17b.wav
-/sounds/missiles/sword/swordhit_18.wav
-/sounds/missiles/sword/swordhit_18a.wav
-/sounds/missiles/sword/swordhit_19.wav
-/sounds/missiles/sword/swordhit_19a.wav
-/sounds/missiles/shield_metal/shieldimpmetal_21.wav
-/sounds/missiles/shield_metal/shieldimpmetal_22.wav
-/sounds/missiles/shield_metal/shieldimpmetal_23.wav
-/sounds/missiles/shield_metal/shieldimpmetal_24.wav
-/sounds/missiles/shield_metal/shieldimpmetal_25.wav
-/sounds/missiles/shield_metal/shieldimpmetal_26.wav
-/sounds/missiles/shield_metal/shieldimpmetal_27.wav
-/sounds/missiles/shield_metal/shieldimpmetal_28.wav
-/sounds/missiles/shield_metal/shieldimpmetal_29.wav
-/sounds/missiles/shield_metal/shieldimpmetal_210.wav
-/sounds/missiles/shield_metal/shieldimpmetal_211.wav
-/sounds/missiles/shield_metal/shieldimpmetal_212.wav
-/sounds/missiles/shield_metal/shieldimpmetal_213.wav
-/sounds/missiles/shield_metal/shieldimpmetal_214.wav
-/sounds/missiles/shield_metal/shieldimpmetal_215.wav
-/sounds/neutral/horse/horse_11.wav
-/sounds/neutral/horse/horse_attack1.wav
-/sounds/neutral/horse/horse_attack2.wav
-/sounds/neutral/horse/horse_attack3.wav
-/sounds/neutral/horse/horse_death1.wav
-/sounds/neutral/horse/horse_death2.wav
-/sounds/neutral/horse/horse_death3.wav
-/sounds/neutral/horse/horse_death4.wav
-/sounds/neutral/horse/horse_idle1.wav
-/sounds/neutral/horse/horse_idle2.wav
-/sounds/neutral/horse/horse_idle3.wav
-/sounds/neutral/horse/horse_select1.wav
-/sounds/neutral/horse/horse_select2.wav
-/sounds/neutral/horse/horse_select3.wav
-/sounds/neutral/onager_shooting.wav
+/sounds/buildings/complete_barracks.wav (licensed under the CC-BY-SA 3.0)
+/sounds/buildings/complete_blacksmith.wav (licensed under the CC-BY-SA 3.0)
+/sounds/buildings/complete_cavalry_stables.wav (licensed under the CC-BY-SA 3.0)
+/sounds/buildings/complete_civ_center.wav (licensed under the CC-BY-SA 3.0)
+/sounds/buildings/complete_corral.wav (licensed under the CC-BY-SA 3.0)
+/sounds/buildings/complete_farmstead.wav (licensed under the CC-BY-SA 3.0)
+/sounds/buildings/complete_fortress.wav (licensed under the CC-BY-SA 3.0)
+/sounds/buildings/complete_storehouse.wav (licensed under the CC-BY-SA 3.0)
+/sounds/buildings/complete_tower.wav (licensed under the CC-BY-SA 3.0)
+/sounds/buildings/sel_barracks.wav (licensed under the CC-BY-SA 3.0)
+/sounds/buildings/sel_blacksmith.wav (licensed under the CC-BY-SA 3.0)
+/sounds/buildings/sel_cavalry_stables.wav (licensed under the CC-BY-SA 3.0)
+/sounds/buildings/sel_civ_center.wav (licensed under the CC-BY-SA 3.0)
+/sounds/buildings/sel_corral.wav (licensed under the CC-BY-SA 3.0)
+/sounds/buildings/sel_farmstead.wav (licensed under the CC-BY-SA 3.0)
+/sounds/buildings/sel_fortress.wav (licensed under the CC-BY-SA 3.0)
+/sounds/buildings/sel_tower.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/construction/con_stone_10.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/construction/con_stone_11.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/construction/con_wood_10.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/construction/con_wood_11.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/construction/con_wood_12.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/construction/con_wood_13.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/construction/con_wood_14.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/construction/con_wood_15.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/construction/con_wood_16.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/construction/con_wood_17.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/construction/con_wood_18.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/foraging/leaves_1a.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/foraging/leaves_10.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/foraging/leaves_11.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/foraging/leaves_12.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/foraging/leaves_13.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/foraging/leaves_14.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/foraging/leaves_15.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/foraging/leaves_16.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/foraging/leaves_17.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/foraging/leaves_18.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/foraging/leaves_19.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/metal_mining/mine_metal_01.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/metal_mining/mine_metal_02.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/metal_mining/mine_metal_03.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/metal_mining/mine_metal_04.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/metal_mining/mine_metal_05.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/metal_mining/mine_metal_06.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/metal_mining/mine_metal_07.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/metal_mining/mine_metal_08.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/metal_mining/mine_metal_09.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/metal_mining/mine_metal_10.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/metal_mining/mine_metal_11.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/metal_mining/mine_metal_12.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/metal_mining/mine_metal_13.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/metal_mining/mine_metal_14.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/metal_mining/mine_metal_15.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/metal_mining/mine_metal_16.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/metal_mining/mine_metal_17.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/metal_mining/mine_metal_18.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/metal_mining/mine_metal_19.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/metal_mining/mine_metal_20.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/metal_mining/mine_metal_21.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/metal_mining/mine_metal_22.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/metal_mining/mine_metal_23.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/metal_mining/mine_metal_24.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/sel_metal_01.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/sel_tree_01.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/ship_move.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/ship_selected.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/stone_mining/mine_stone_01.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/stone_mining/mine_stone_02.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/stone_mining/mine_stone_03.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/stone_mining/mine_stone_04.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/stone_mining/mine_stone_05.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/stone_mining/mine_stone_06.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/stone_mining/mine_stone_07.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/stone_mining/mine_stone_08.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/stone_mining/mine_stone_09.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/stone_mining/mine_stone_10.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/stone_mining/mine_stone_11.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/stone_mining/mine_stone_12.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/stone_mining/mine_stone_13.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/stone_mining/mine_stone_14.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/stone_mining/mine_stone_15.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/stone_mining/mine_stone_16.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/stone_mining/mine_stone_17.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/stone_mining/mine_stone_18.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/stone_mining/mine_stone_19.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/stone_mining/mine_stone_20.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/stone_mining/mine_stone_21.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/stone_mining/mine_stone_22.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/stone_mining/mine_stone_23.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/stone_mining/mine_stone_24.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/stone_mining/mine_stone_25.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/warship_death_01.wav (licensed under the CC-BY-SA 3.0)
+/sounds/misc/warship_death_02.wav (licensed under the CC-BY-SA 3.0)
+/sounds/missiles/sword/swordhit_10.wav (licensed under the CC-BY-SA 3.0)
+/sounds/missiles/sword/swordhit_10a.wav (licensed under the CC-BY-SA 3.0)
+/sounds/missiles/sword/swordhit_11.wav (licensed under the CC-BY-SA 3.0)
+/sounds/missiles/sword/swordhit_11a.wav (licensed under the CC-BY-SA 3.0)
+/sounds/missiles/sword/swordhit_11b.wav (licensed under the CC-BY-SA 3.0)
+/sounds/missiles/sword/swordhit_12.wav (licensed under the CC-BY-SA 3.0)
+/sounds/missiles/sword/swordhit_12a.wav (licensed under the CC-BY-SA 3.0)
+/sounds/missiles/sword/swordhit_12b.wav (licensed under the CC-BY-SA 3.0)
+/sounds/missiles/sword/swordhit_13.wav (licensed under the CC-BY-SA 3.0)
+/sounds/missiles/sword/swordhit_13a.wav (licensed under the CC-BY-SA 3.0)
+/sounds/missiles/sword/swordhit_13b.wav (licensed under the CC-BY-SA 3.0)
+/sounds/missiles/sword/swordhit_14.wav (licensed under the CC-BY-SA 3.0)
+/sounds/missiles/sword/swordhit_14a.wav (licensed under the CC-BY-SA 3.0)
+/sounds/missiles/sword/swordhit_14b.wav (licensed under the CC-BY-SA 3.0)
+/sounds/missiles/sword/swordhit_15.wav (licensed under the CC-BY-SA 3.0)
+/sounds/missiles/sword/swordhit_15a.wav (licensed under the CC-BY-SA 3.0)
+/sounds/missiles/sword/swordhit_15b.wav (licensed under the CC-BY-SA 3.0)
+/sounds/missiles/sword/swordhit_16.wav (licensed under the CC-BY-SA 3.0)
+/sounds/missiles/sword/swordhit_16a.wav (licensed under the CC-BY-SA 3.0)
+/sounds/missiles/sword/swordhit_16b.wav (licensed under the CC-BY-SA 3.0)
+/sounds/missiles/sword/swordhit_17.wav (licensed under the CC-BY-SA 3.0)
+/sounds/missiles/sword/swordhit_17a.wav (licensed under the CC-BY-SA 3.0)
+/sounds/missiles/sword/swordhit_17b.wav (licensed under the CC-BY-SA 3.0)
+/sounds/missiles/sword/swordhit_18.wav (licensed under the CC-BY-SA 3.0)
+/sounds/missiles/sword/swordhit_18a.wav (licensed under the CC-BY-SA 3.0)
+/sounds/missiles/sword/swordhit_19.wav (licensed under the CC-BY-SA 3.0)
+/sounds/missiles/sword/swordhit_19a.wav (licensed under the CC-BY-SA 3.0)
+/sounds/missiles/shield_metal/shieldimpmetal_21.wav (licensed under the CC-BY-SA 3.0)
+/sounds/missiles/shield_metal/shieldimpmetal_22.wav (licensed under the CC-BY-SA 3.0)
+/sounds/missiles/shield_metal/shieldimpmetal_23.wav (licensed under the CC-BY-SA 3.0)
+/sounds/missiles/shield_metal/shieldimpmetal_24.wav (licensed under the CC-BY-SA 3.0)
+/sounds/missiles/shield_metal/shieldimpmetal_25.wav (licensed under the CC-BY-SA 3.0)
+/sounds/missiles/shield_metal/shieldimpmetal_26.wav (licensed under the CC-BY-SA 3.0)
+/sounds/missiles/shield_metal/shieldimpmetal_27.wav (licensed under the CC-BY-SA 3.0)
+/sounds/missiles/shield_metal/shieldimpmetal_28.wav (licensed under the CC-BY-SA 3.0)
+/sounds/missiles/shield_metal/shieldimpmetal_29.wav (licensed under the CC-BY-SA 3.0)
+/sounds/missiles/shield_metal/shieldimpmetal_210.wav (licensed under the CC-BY-SA 3.0)
+/sounds/missiles/shield_metal/shieldimpmetal_211.wav (licensed under the CC-BY-SA 3.0)
+/sounds/missiles/shield_metal/shieldimpmetal_212.wav (licensed under the CC-BY-SA 3.0)
+/sounds/missiles/shield_metal/shieldimpmetal_213.wav (licensed under the CC-BY-SA 3.0)
+/sounds/missiles/shield_metal/shieldimpmetal_214.wav (licensed under the CC-BY-SA 3.0)
+/sounds/missiles/shield_metal/shieldimpmetal_215.wav (licensed under the CC-BY-SA 3.0)
+/sounds/neutral/horse/horse_11.wav (licensed under the CC-BY-SA 3.0)
+/sounds/neutral/horse/horse_attack1.wav (licensed under the CC-BY-SA 3.0)
+/sounds/neutral/horse/horse_attack2.wav (licensed under the CC-BY-SA 3.0)
+/sounds/neutral/horse/horse_attack3.wav (licensed under the CC-BY-SA 3.0)
+/sounds/neutral/horse/horse_death1.wav (licensed under the CC-BY-SA 3.0)
+/sounds/neutral/horse/horse_death2.wav (licensed under the CC-BY-SA 3.0)
+/sounds/neutral/horse/horse_death3.wav (licensed under the CC-BY-SA 3.0)
+/sounds/neutral/horse/horse_death4.wav (licensed under the CC-BY-SA 3.0)
+/sounds/neutral/horse/horse_idle1.wav (licensed under the CC-BY-SA 3.0)
+/sounds/neutral/horse/horse_idle2.wav (licensed under the CC-BY-SA 3.0)
+/sounds/neutral/horse/horse_idle3.wav (licensed under the CC-BY-SA 3.0)
+/sounds/neutral/horse/horse_select1.wav (licensed under the CC-BY-SA 3.0)
+/sounds/neutral/horse/horse_select2.wav (licensed under the CC-BY-SA 3.0)
+/sounds/neutral/horse/horse_select3.wav (licensed under the CC-BY-SA 3.0)
+/sounds/neutral/onager_shooting.wav (licensed under the CC-BY-SA 3.0)
 
 Wolfgang Kohler:
-/sounds/buildings/lumbermill.wav
-/sounds/misc/building_construction.wav
-/sounds/misc/burning.wav
-/sounds/misc/building_explosion/1.wav
-/sounds/misc/building_explosion/2.wav
-/sounds/ui/placement_error.wav
-/sounds/ui/placement_success.wav
+/sounds/buildings/lumbermill.wav (licensed under the GPL 2.0)
+/sounds/misc/building_construction.wav (licensed under the GPL 2.0)
+/sounds/misc/burning.wav (licensed under the GPL 2.0)
+/sounds/misc/building_explosion/1.wav (licensed under the GPL 2.0)
+/sounds/misc/building_explosion/2.wav (licensed under the GPL 2.0)
+/sounds/ui/placement_error.wav (licensed under the GPL 2.0)
+/sounds/ui/placement_success.wav (licensed under the GPL 2.0)
 
 Sounds in the Public Domain:
 /sounds/misc/tree_chopping/tree-chopping-1.wav

@@ -193,7 +193,6 @@ editor_types = {
 	"unit-table",
 	"unit-alchemy-bench",
 	"unit-bed",
-	"unit-runestone",
 	"unit-stairs",
 	"unit-mushroom",
 	"unit-mushroom-patch",

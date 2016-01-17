@@ -1,1154 +1,1144 @@
 2D-Retroperspectives:
-/graphics/human/units/spear.png
+/graphics/human/units/spear.png (licensed under the CC0)
 
 b_o:
-/graphics/dwarf/items/dwarven_helmet.png
-/graphics/dwarf/icons/dwarven_axefighter_black_hair.png (modified by b_o from the icon made by Jinn, and later reworked by Jinn as well)
-/graphics/dwarf/icons/dwarven_axefighter_blond_hair.png (modified by b_o from the icon made by Jinn, and later reworked by Jinn as well)
-/graphics/dwarf/icons/dwarven_axefighter_gray_hair.png (modified by b_o from the icon made by Jinn, and later reworked by Jinn as well)
-/graphics/dwarf/icons/dwarven_scout_blond_hair.png (modified by b_o from the icon made by Jinn, and later reworked by Jinn as well)
-/graphics/dwarf/icons/dwarven_scout_blond_hair_braided_beard.png (modified by b_o from the icon made by Jinn, and later reworked by Jinn as well)
-/graphics/dwarf/icons/dwarven_scout_gray_hair.png (modified by b_o from the icon made by Jinn, and later reworked by Jinn as well)
-/graphics/dwarf/icons/dwarven_scout_gray_hair_braided_beard.png (modified by b_o from the icon made by Jinn, and later reworked by Jinn as well)
-/graphics/dwarf/icons/dwarven_steelclad_black_hair.png (modified by b_o from the icon made by Jinn, and later reworked by Jinn as well)
-/graphics/dwarf/icons/dwarven_steelclad_blond_hair.png (modified by b_o from the icon made by Jinn, and later reworked by Jinn as well)
-/graphics/dwarf/icons/dwarven_steelclad_gray_hair.png (modified by b_o from the icon made by Jinn, and later reworked by Jinn as well)
-/graphics/dwarf/icons/thane_black_hair.png (modified by b_o from the icon made by Jinn, and later reworked by Jinn as well)
-/graphics/dwarf/icons/thane_blond_hair.png (modified by b_o from the icon made by Jinn, and later reworked by Jinn as well)
-/graphics/dwarf/icons/thane_gray_hair.png (modified by b_o from the icon made by Jinn, and later reworked by Jinn as well)
+/graphics/dwarf/items/dwarven_helmet.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/icons/dwarven_axefighter_black_hair.png (modified from the icon made by Jinn, and later reworked by Jinn as well) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/icons/dwarven_axefighter_blond_hair.png (modified from the icon made by Jinn, and later reworked by Jinn as well) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/icons/dwarven_axefighter_gray_hair.png (modified from the icon made by Jinn, and later reworked by Jinn as well) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/icons/dwarven_scout_blond_hair.png (modified from the icon made by Jinn, and later reworked by Jinn as well) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/icons/dwarven_scout_blond_hair_braided_beard.png (modified from the icon made by Jinn, and later reworked by Jinn as well) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/icons/dwarven_scout_gray_hair.png (modified from the icon made by Jinn, and later reworked by Jinn as well) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/icons/dwarven_scout_gray_hair_braided_beard.png (modified from the icon made by Jinn, and later reworked by Jinn as well) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/icons/dwarven_steelclad_black_hair.png (modified from the icon made by Jinn, and later reworked by Jinn as well) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/icons/dwarven_steelclad_blond_hair.png (modified from the icon made by Jinn, and later reworked by Jinn as well) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/icons/dwarven_steelclad_gray_hair.png (modified from the icon made by Jinn, and later reworked by Jinn as well) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/icons/thane_black_hair.png (modified from the icon made by Jinn, and later reworked by Jinn as well) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/icons/thane_blond_hair.png (modified from the icon made by Jinn, and later reworked by Jinn as well) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/icons/thane_gray_hair.png (modified from the icon made by Jinn, and later reworked by Jinn as well) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 /graphics/dwarf/ui/resource_1366.png (modified from the resource bar graphics made by Jinn)
 /graphics/dwarf/ui/statusline_1366.png (modified from the statusline bar graphics made by Jinn)
-/graphics/dwarf/units/dwarven_axefighter.png
-/graphics/dwarf/units/dwarven_axefighter_black_hair.png
-/graphics/dwarf/units/dwarven_axefighter_blond_hair.png
-/graphics/dwarf/units/dwarven_axefighter_brown_hair.png
-/graphics/dwarf/units/dwarven_axefighter_gray_hair.png
-/graphics/dwarf/units/dwarven_axefighter_orange_hair.png
-/graphics/dwarf/units/dwarven_ballista.png
-/graphics/dwarf/units/dwarven_scout.png
-/graphics/dwarf/units/dwarven_scout_blond_hair.png
-/graphics/dwarf/units/dwarven_scout_gray_hair.png
-/graphics/dwarf/units/dwarven_steelclad.png
-/graphics/dwarf/units/dwarven_steelclad_black_hair.png
-/graphics/dwarf/units/dwarven_steelclad_black_hair_great_axe.png
-/graphics/dwarf/units/dwarven_steelclad_blond_hair.png
-/graphics/dwarf/units/dwarven_steelclad_blond_hair_great_axe.png
-/graphics/dwarf/units/dwarven_steelclad_brown_hair.png
-/graphics/dwarf/units/dwarven_steelclad_brown_hair_great_axe.png
-/graphics/dwarf/units/dwarven_steelclad_gray_hair.png
-/graphics/dwarf/units/dwarven_steelclad_gray_hair_great_axe.png
-/graphics/dwarf/units/dwarven_steelclad_great_axe.png
-/graphics/dwarf/units/dwarven_steelclad_orange_hair.png
-/graphics/dwarf/units/dwarven_steelclad_orange_hair_great_axe.png
-/graphics/dwarf/units/gryphon_rider.png
-/graphics/dwarf/units/gryphon_rider_brown_hair_blue_feathers.png
-/graphics/dwarf/units/gryphon_rider_gray_hair_brown_feathers.png
-/graphics/dwarf/units/gryphon_rider_red_hair_gray_feathers.png
-/graphics/dwarf/units/militia.png
-/graphics/dwarf/units/miner.png
-/graphics/dwarf/units/miner_with_gold.png
-/graphics/dwarf/units/miner_with_lumber.png
-/graphics/dwarf/units/rugnur.png
-/graphics/dwarf/units/thane.png
-/graphics/dwarf/units/thane_black_hair.png
-/graphics/dwarf/units/thane_blond_hair.png
-/graphics/dwarf/units/thane_brown_hair.png
-/graphics/dwarf/units/thane_gray_hair.png
-/graphics/dwarf/units/thane_orange_hair.png
-/graphics/dwarf/units/yale_rider_black_hair_brown_fur.png
-/graphics/dwarf/units/yale_rider_black_hair_gray_brown_fur.png
-/graphics/dwarf/units/yale_rider_blond_hair_brown_fur.png
-/graphics/dwarf/units/yale_rider_brown_hair_brown_fur.png
-/graphics/dwarf/units/yale_rider_brown_hair_white_fur.png
-/graphics/dwarf/units/yale_rider_gray_hair_gray_brown_fur.png
-/graphics/dwarf/units/yale_rider_orange_hair_brown_fur.png
-/graphics/dwarf/units/yale_rider_orange_hair_white_fur.png
-/graphics/dwarf/units/yale_rider_red_hair_brown_fur.png
-/graphics/dwarf/units/yale_rider_red_hair_gray_fur.png
-/graphics/germanic/buildings/town_hall.png (modified from the building made by Jinn to add the fire animation)
-/graphics/germanic/icons/archer_blond_hair.png (modified from the Skutan icon made by Leo)
-/graphics/germanic/icons/archer_gray_hair.png (modified from the Skutan icon made by Leo)
-/graphics/germanic/icons/old_man.png
-/graphics/germanic/units/archer.png
-/graphics/germanic/units/archer_blond_hair.png
-/graphics/germanic/units/archer_gray_hair.png
-/graphics/germanic/units/broad_bronze_sword.png
-/graphics/germanic/units/bronze_helmet.png
-/graphics/germanic/units/bronze_shield.png
-/graphics/germanic/units/builder.png
-/graphics/germanic/units/builder_red_hair.png
-/graphics/germanic/units/coat.png
-/graphics/germanic/units/coat_left_arm.png
-/graphics/germanic/units/coat_right_arm.png
-/graphics/germanic/units/coat_warrior.png
-/graphics/germanic/units/militia.png
-/graphics/germanic/units/old_man.png
-/graphics/germanic/units/warrior.png
-/graphics/germanic/units/warrior_bronze_shield.png
-/graphics/germanic/units/worker.png
-/graphics/germanic/units/worker_with_gold.png
-/graphics/germanic/units/worker_with_lumber.png
-/graphics/germanic/units/young_warrior.png
-/graphics/gnome/icons/gnomish_worker_gray_hair.png (modified by b_o from the icon made by Jinn, and later reworked by Jinn as well)
-/graphics/gnome/units/gnomish_caravan.png
-/graphics/gnome/units/gnomish_caravan_extra_1.png
-/graphics/gnome/units/gnomish_herbalist.png
-/graphics/gnome/units/gnomish_herbalist_gray_hair.png
-/graphics/gnome/units/gnomish_recruit.png
-/graphics/gnome/units/gnomish_recruit_gray_hair.png
-/graphics/gnome/units/gnomish_worker.png
-/graphics/gnome/units/gnomish_worker_gray_hair.png
-/graphics/gnome/units/gnomish_worker_with_gold.png
-/graphics/gnome/units/gnomish_worker_with_gold_gray_hair.png
-/graphics/gnome/units/gnomish_worker_with_lumber.png
-/graphics/gnome/units/gnomish_worker_with_lumber_gray_hair.png
-/graphics/goblin/decorations/goblin_banner.png
-/graphics/goblin/icons/greebo.png (later modified by Leo)
-/graphics/goblin/icons/spear_1.png (modified from the icon made by the Battle for Wesnoth team, later modified by Jinn)
-/graphics/goblin/units/glider.png
-/graphics/goblin/units/goblin_archer.png
-/graphics/goblin/units/goblin_archer_unarmed_secondary_attack.png
-/graphics/goblin/units/goblin_spearman.png
-/graphics/goblin/units/goblin_spearman_no_shield.png
-/graphics/goblin/units/goblin_swordsman.png
-/graphics/goblin/units/goblin_thief.png
-/graphics/goblin/units/goblin_war_machine.png
-/graphics/goblin/units/goblin_worker.png
-/graphics/goblin/units/goblin_worker_spiky_hair.png
-/graphics/goblin/units/goblin_worker_with_gold.png
-/graphics/goblin/units/goblin_worker_with_gold_spiky_hair.png
-/graphics/goblin/units/goblin_worker_with_lumber.png
-/graphics/goblin/units/goblin_worker_with_lumber_spiky_hair.png
-/graphics/goblin/units/rogue.png
-/graphics/goblin/units/shaman.png
-/graphics/human/units/human_body.png
-/graphics/human/units/human_body_warrior.png
-/graphics/human/units/human_left_arm.png
-/graphics/human/units/human_left_arm_shield.png
-/graphics/human/units/human_right_arm.png
-/graphics/human/units/human_shadow.png
-/graphics/human/units/pants.png
-/graphics/human/units/shoes.png
-/graphics/kobold/units/kobold_footpad.png
-/graphics/kobold/units/kobold_footpad_blue_scales.png
-/graphics/kobold/units/kobold_footpad_purple_scales.png
-/graphics/kobold/units/kobold_footpad_red_scales.png
-/graphics/kobold/units/kobold_footpad_thrusting_sword.png
-/graphics/kobold/units/kobold_footpad_yellow_scales.png
-/graphics/missiles/arrow.png
-/graphics/missiles/axe_twirl.png
-/graphics/missiles/catapult_flaming_rock.png
-/graphics/missiles/dart.png (modified from the graphics found here: http://opengameart.org/content/dungeon-crawl-32x32-tiles)
-/graphics/missiles/dwarven_ballista_bolt.png
-/graphics/missiles/goblin_arrow.png
-/graphics/missiles/gobtoss.png
-/graphics/missiles/javelin.png (modified from the graphics found here: http://opengameart.org/content/dungeon-crawl-32x32-tiles)
-/graphics/missiles/magic.png (modified from the graphics found here: http://opengameart.org/content/dungeon-crawl-32x32-tiles)
-/graphics/missiles/metal_arrow.png (modified from the graphics found here: http://opengameart.org/content/dungeon-crawl-32x32-tiles)
-/graphics/missiles/slime_glob.png
-/graphics/missiles/throwing_axe.png
-/graphics/missiles/throwing_dagger.png
-/graphics/missiles/wood_arrow.png (modified from the graphics found here: http://opengameart.org/content/dungeon-crawl-32x32-tiles)
-/graphics/neutral/buildings/mercenary_camp.png (modified from the building made by Jinn to add the fire animation)
-/graphics/neutral/buildings/stairs.png (modified from the tiles found here: http://opengameart.org/content/dungeon-crawl-32x32-tiles)
-/graphics/neutral/buildings/tree_stump.png
-/graphics/neutral/buildings/tree_stump_2.png
-/graphics/neutral/buildings/tree_stump_3.png
-/graphics/neutral/buildings/tree_stump_4.png
-/graphics/neutral/buildings/tree_stump_5.png
-/graphics/neutral/decorations/bed.png
-/graphics/neutral/decorations/bones.png
-/graphics/neutral/decorations/chair.png
-/graphics/neutral/decorations/floor_decoration.png (modified from the tiles found here: http://opengameart.org/content/dungeon-crawl-32x32-tiles)
-/graphics/neutral/decorations/inner_wall_decoration.png (modified from the tiles found here: http://opengameart.org/content/dungeon-crawl-32x32-tiles)
-/graphics/neutral/decorations/log.png
-/graphics/neutral/decorations/miasma.png
-/graphics/neutral/decorations/mushroom.png
-/graphics/neutral/decorations/mushrooms.png
-/graphics/neutral/decorations/outer_wall_decoration.png (modified from the tiles found here: http://opengameart.org/content/dungeon-crawl-32x32-tiles)
-/graphics/neutral/decorations/roaming_fog.png
-/graphics/neutral/decorations/shelf.png
-/graphics/neutral/decorations/small_rocks.png
-/graphics/neutral/decorations/stalagmites.png
-/graphics/neutral/decorations/table.png
-/graphics/neutral/decorations/twigs.png
-/graphics/neutral/decorations/wyrm_skeleton.png
-/graphics/neutral/decorations/wyrm_skeleton_horned.png
-/graphics/neutral/decorations/yale_excrement.png
-/graphics/neutral/decorations/yale_excrement_extra_1.png
-/graphics/neutral/decorations/yale_excrement_green.png
-/graphics/neutral/icons/cyclops.png (modified by b_o from an ogre icon made by Jinn)
-/graphics/neutral/icons/gryphon_blue_feathers.png (modified by b_o from the gryphon icon made by Jinn, and later reworked by Jinn as well)
-/graphics/neutral/icons/gryphon_gray_feathers.png (modified by b_o from the gryphon icon made by Jinn)
-/graphics/neutral/items/alchemy_bench.png
-/graphics/neutral/items/axe.png
-/graphics/neutral/items/barrel.png
-/graphics/neutral/items/barrel_2.png
-/graphics/neutral/items/barrel_3.png
-/graphics/neutral/items/caltrops.png
-/graphics/neutral/items/carrots.png
-/graphics/neutral/items/cheese.png
-/graphics/neutral/items/chest.png
-/graphics/neutral/items/crown.png
-/graphics/neutral/items/double_axe.png
-/graphics/neutral/items/goblet.png
-/graphics/neutral/items/gold_coins.png
-/graphics/neutral/items/gold_sack.png
-/graphics/neutral/items/gryphon_feather.png
-/graphics/neutral/items/key.png
-/graphics/neutral/items/potion_blue.png
-/graphics/neutral/items/potion_green.png
-/graphics/neutral/items/potion_orange.png
-/graphics/neutral/items/potion_purple.png
-/graphics/neutral/items/potion_red.png
-/graphics/neutral/items/potion_teal.png
-/graphics/neutral/items/scepter.png
-/graphics/neutral/items/trap.png
-/graphics/neutral/units/bat.png
-/graphics/neutral/units/bee.png
-/graphics/neutral/units/bird_black.png
-/graphics/neutral/units/bird_brown.png
-/graphics/neutral/units/bird_gray.png
-/graphics/neutral/units/bird_white.png
-/graphics/neutral/units/blood_bat.png
-/graphics/neutral/units/bug.png
-/graphics/neutral/units/dread_bat.png
-/graphics/neutral/units/fly.png
-/graphics/neutral/units/fly_extra_1.png
-/graphics/neutral/units/frog.png
-/graphics/neutral/units/frog_blue.png
-/graphics/neutral/units/frog_brown.png
-/graphics/neutral/units/frog_purple.png
-/graphics/neutral/units/frog_red.png
-/graphics/neutral/units/frog_teal.png
-/graphics/neutral/units/frog_yellow.png
-/graphics/neutral/units/gryphon.png
-/graphics/neutral/units/gryphon_blue_feathers.png
-/graphics/neutral/units/gryphon_gray_feathers.png
-/graphics/neutral/units/gryphon_young.png
-/graphics/neutral/units/horse_black_skin_brown_hair_brown_eyes.png
-/graphics/neutral/units/horse_brown_skin_brown_hair_brown_eyes.png
-/graphics/neutral/units/horse_brown_skin_tan_hair_blue_eyes.png
-/graphics/neutral/units/horse_brown_skin_tan_hair_brown_eyes.png
-/graphics/neutral/units/raft.png
-/graphics/neutral/units/rat.png
-/graphics/neutral/units/rat_black_fur.png
-/graphics/neutral/units/rat_light_gray_fur.png
-/graphics/neutral/units/slime_baby.png
-/graphics/neutral/units/slime_baby_blue.png
-/graphics/neutral/units/slime_baby_brown.png
-/graphics/neutral/units/slime_baby_red.png
-/graphics/neutral/units/slime_baby_teal.png
-/graphics/neutral/units/slime_big.png
-/graphics/neutral/units/slime_small.png
-/graphics/neutral/units/slime_small_blue.png
-/graphics/neutral/units/slime_small_brown.png
-/graphics/neutral/units/slime_small_red.png
-/graphics/neutral/units/slime_small_teal.png
-/graphics/neutral/units/slug.png
-/graphics/neutral/units/slug_blue.png
-/graphics/neutral/units/slug_brown.png
-/graphics/neutral/units/slug_player_color.png
-/graphics/neutral/units/slug_purple.png
-/graphics/neutral/units/slug_teal.png
-/graphics/neutral/units/slug_violet.png
-/graphics/neutral/units/slug_yellow.png
-/graphics/neutral/units/snail.png
-/graphics/neutral/units/snail_blue_purple_shell.png
-/graphics/neutral/units/snail_green_purple_shell.png
-/graphics/neutral/units/snail_green_teal_shell.png
-/graphics/neutral/units/snail_purple_blue_shell.png
-/graphics/neutral/units/snail_purple_brown_shell.png
-/graphics/neutral/units/snail_teal_green_shell.png
-/graphics/neutral/units/worm.png
-/graphics/neutral/units/wyrm.png
-/graphics/neutral/units/wyrm_blue_scales.png
-/graphics/neutral/units/wyrm_cyan_scales.png
-/graphics/neutral/units/wyrm_purple_scales.png
-/graphics/neutral/units/wyrm_red_scales.png
-/graphics/neutral/units/wyrm_yellow_scales.png
-/graphics/neutral/units/wyrm_young.png
-/graphics/neutral/units/yale.png
-/graphics/neutral/units/yale_gray_brown_fur.png
-/graphics/neutral/units/yale_gray_fur.png
-/graphics/neutral/units/yale_white_fur.png
-/graphics/neutral/units/yale_young.png
-/graphics/orc/units/spearthrower.png
-/graphics/teuton/units/catapult.png
-/graphics/teuton/units/chainmail.png
-/graphics/teuton/units/chainmail_left_arm.png
-/graphics/teuton/units/chainmail_right_arm.png
-/graphics/teuton/units/iron_helm.png
-/graphics/teuton/units/leather_shoes.png
-/graphics/teuton/units/long_iron_sword.png
-/graphics/teuton/units/old_man.png
-/graphics/teuton/units/saxon_shield.png
-/graphics/teuton/units/saxon_swordsman.png
-/graphics/teuton/units/suebi_hair.png
-/graphics/teuton/units/suebi_warrior.png
-/graphics/tilesets/cave/neutral/buildings/hole.png (modified from Leo's volcanic crater)
-/graphics/tilesets/dungeon/neutral/decorations/door_left.png
-/graphics/tilesets/dungeon/neutral/decorations/door_right.png
-/graphics/tilesets/dungeon/terrain/dungeon.png (floor, rug and wall tiles modified from the tiles found here: http://opengameart.org/content/dungeon-crawl-32x32-tiles)
-/graphics/tilesets/fairlimbed_forest/terrain/fairlimbed_tree.png
-/graphics/tilesets/forest/neutral/decorations/fern.png
-/graphics/tilesets/forest/neutral/decorations/flowers.png
-/graphics/tilesets/forest/neutral/decorations/large_flower.png
-/graphics/tilesets/forest/terrain/deciduous_tree_autumn.png
-/graphics/tilesets/forest/terrain/forest.png (dark dirt, dark grass, grass, grass-dirt transition and tree tiles)
-/graphics/tilesets/forest/terrain/pine_tree_autumn.png
-/graphics/tilesets/swamp/neutral/decorations/fern.png
-/graphics/tilesets/swamp/neutral/decorations/flowers.png
-/graphics/tilesets/swamp/neutral/decorations/large_flower.png
-/graphics/ui/slow.png
-/graphics/ui/status_effect_icons.png
+/graphics/dwarf/units/dwarven_axefighter.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/units/dwarven_axefighter_black_hair.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/units/dwarven_axefighter_blond_hair.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/units/dwarven_axefighter_brown_hair.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/units/dwarven_axefighter_gray_hair.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/units/dwarven_axefighter_orange_hair.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/units/dwarven_ballista.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/units/dwarven_scout.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/units/dwarven_scout_blond_hair.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/units/dwarven_scout_gray_hair.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/units/dwarven_steelclad.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/units/dwarven_steelclad_black_hair.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/units/dwarven_steelclad_black_hair_great_axe.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/units/dwarven_steelclad_blond_hair.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/units/dwarven_steelclad_blond_hair_great_axe.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/units/dwarven_steelclad_brown_hair.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/units/dwarven_steelclad_brown_hair_great_axe.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/units/dwarven_steelclad_gray_hair.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/units/dwarven_steelclad_gray_hair_great_axe.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/units/dwarven_steelclad_great_axe.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/units/dwarven_steelclad_orange_hair.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/units/dwarven_steelclad_orange_hair_great_axe.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/units/gryphon_rider.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/units/gryphon_rider_brown_hair_blue_feathers.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/units/gryphon_rider_gray_hair_brown_feathers.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/units/gryphon_rider_red_hair_gray_feathers.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/units/militia.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/units/miner.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/units/miner_with_gold.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/units/miner_with_lumber.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/units/rugnur.png (licensed under the GPL 2.0)
+/graphics/dwarf/units/thane.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/units/thane_black_hair.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/units/thane_blond_hair.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/units/thane_brown_hair.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/units/thane_gray_hair.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/units/thane_orange_hair.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/units/yale_rider_black_hair_brown_fur.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/units/yale_rider_black_hair_gray_brown_fur.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/units/yale_rider_blond_hair_brown_fur.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/units/yale_rider_brown_hair_brown_fur.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/units/yale_rider_brown_hair_white_fur.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/units/yale_rider_gray_hair_gray_brown_fur.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/units/yale_rider_orange_hair_brown_fur.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/units/yale_rider_orange_hair_white_fur.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/units/yale_rider_red_hair_brown_fur.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/units/yale_rider_red_hair_gray_fur.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/germanic/buildings/town_hall.png (modified from the building made by Jinn to add the fire animation) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/germanic/icons/archer_blond_hair.png (modified from the Skutan icon made by Leo) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/germanic/icons/archer_gray_hair.png (modified from the Skutan icon made by Leo) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/germanic/icons/old_man.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/germanic/units/archer.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/germanic/units/archer_blond_hair.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/germanic/units/archer_gray_hair.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/germanic/units/broad_bronze_sword.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/germanic/units/bronze_helmet.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/germanic/units/bronze_shield.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/germanic/units/builder.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/germanic/units/builder_red_hair.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/germanic/units/coat.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/germanic/units/coat_left_arm.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/germanic/units/coat_right_arm.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/germanic/units/coat_warrior.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/germanic/units/militia.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/germanic/units/old_man.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/germanic/units/warrior.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/germanic/units/warrior_bronze_shield.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/germanic/units/worker.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/germanic/units/worker_with_gold.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/germanic/units/worker_with_lumber.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/germanic/units/young_warrior.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/gnome/icons/gnomish_worker_gray_hair.png (modified from the icon made by Jinn, and later reworked by Jinn as well) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/gnome/units/gnomish_caravan.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/gnome/units/gnomish_caravan_extra_1.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/gnome/units/gnomish_herbalist.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/gnome/units/gnomish_herbalist_gray_hair.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/gnome/units/gnomish_recruit.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/gnome/units/gnomish_recruit_gray_hair.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/gnome/units/gnomish_worker.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/gnome/units/gnomish_worker_gray_hair.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/gnome/units/gnomish_worker_with_gold.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/gnome/units/gnomish_worker_with_gold_gray_hair.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/gnome/units/gnomish_worker_with_lumber.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/gnome/units/gnomish_worker_with_lumber_gray_hair.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/goblin/decorations/goblin_banner.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/goblin/icons/greebo.png (later modified by Leo) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/goblin/icons/spear_1.png (modified from the icon made by the Battle for Wesnoth team, later modified by Jinn) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/goblin/units/glider.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/goblin/units/goblin_archer.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/goblin/units/goblin_archer_unarmed_secondary_attack.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/goblin/units/goblin_spearman.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/goblin/units/goblin_spearman_no_shield.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/goblin/units/goblin_swordsman.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/goblin/units/goblin_thief.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/goblin/units/goblin_war_machine.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/goblin/units/goblin_worker.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/goblin/units/goblin_worker_spiky_hair.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/goblin/units/goblin_worker_with_gold.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/goblin/units/goblin_worker_with_gold_spiky_hair.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/goblin/units/goblin_worker_with_lumber.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/goblin/units/goblin_worker_with_lumber_spiky_hair.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/goblin/units/rogue.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/goblin/units/shaman.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/human/units/human_body.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/human/units/human_body_warrior.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/human/units/human_left_arm.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/human/units/human_left_arm_shield.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/human/units/human_right_arm.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/human/units/human_shadow.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/human/units/pants.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/human/units/shoes.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/kobold/units/kobold_footpad.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/kobold/units/kobold_footpad_blue_scales.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/kobold/units/kobold_footpad_purple_scales.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/kobold/units/kobold_footpad_red_scales.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/kobold/units/kobold_footpad_thrusting_sword.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/kobold/units/kobold_footpad_yellow_scales.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/missiles/arrow.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/missiles/axe_twirl.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/missiles/catapult_flaming_rock.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/missiles/dart.png (modified from the graphics found here: http://opengameart.org/content/dungeon-crawl-32x32-tiles) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/missiles/dwarven_ballista_bolt.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/missiles/goblin_arrow.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/missiles/gobtoss.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/missiles/javelin.png (modified from the graphics found here: http://opengameart.org/content/dungeon-crawl-32x32-tiles) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/missiles/magic.png (modified from the graphics found here: http://opengameart.org/content/dungeon-crawl-32x32-tiles) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/missiles/metal_arrow.png (modified from the graphics found here: http://opengameart.org/content/dungeon-crawl-32x32-tiles) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/missiles/slime_glob.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/missiles/throwing_axe.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/missiles/throwing_dagger.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/missiles/wood_arrow.png (modified from the graphics found here: http://opengameart.org/content/dungeon-crawl-32x32-tiles) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/buildings/mercenary_camp.png (modified from the building made by Jinn to add the fire animation) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/buildings/stairs.png (modified from the tiles found here: http://opengameart.org/content/dungeon-crawl-32x32-tiles) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/buildings/tree_stump.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/buildings/tree_stump_2.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/buildings/tree_stump_3.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/buildings/tree_stump_4.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/buildings/tree_stump_5.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/decorations/bed.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/decorations/bones.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/decorations/chair.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/decorations/floor_decoration.png (modified from the tiles found here: http://opengameart.org/content/dungeon-crawl-32x32-tiles) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/decorations/inner_wall_decoration.png (modified from the tiles found here: http://opengameart.org/content/dungeon-crawl-32x32-tiles) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/decorations/log.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/decorations/miasma.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/decorations/mushroom.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/decorations/mushrooms.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/decorations/outer_wall_decoration.png (modified from the tiles found here: http://opengameart.org/content/dungeon-crawl-32x32-tiles) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/decorations/roaming_fog.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/decorations/shelf.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/decorations/small_rocks.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/decorations/stalagmites.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/decorations/table.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/decorations/twigs.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/decorations/wyrm_skeleton.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/decorations/wyrm_skeleton_horned.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/decorations/yale_excrement.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/decorations/yale_excrement_extra_1.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/decorations/yale_excrement_green.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/icons/cyclops.png (modified from an ogre icon made by Jinn) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/icons/gryphon_blue_feathers.png (modified from the gryphon icon made by Jinn, and later reworked by Jinn as well) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/icons/gryphon_gray_feathers.png (modified from the gryphon icon made by Jinn) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/items/alchemy_bench.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/items/axe.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/items/barrel.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/items/barrel_2.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/items/barrel_3.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/items/caltrops.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/items/carrots.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/items/cheese.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/items/chest.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/items/crown.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/items/double_axe.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/items/goblet.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/items/gold_coins.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/items/gold_sack.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/items/gryphon_feather.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/items/key.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/items/potion_blue.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/items/potion_green.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/items/potion_orange.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/items/potion_purple.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/items/potion_red.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/items/potion_teal.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/items/scepter.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/items/trap.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/units/bat.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/units/bee.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/units/bird_black.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/units/bird_brown.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/units/bird_gray.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/units/bird_white.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/units/blood_bat.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/units/bug.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/units/dread_bat.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/units/fly.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/units/fly_extra_1.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/units/frog.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/units/frog_blue.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/units/frog_brown.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/units/frog_purple.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/units/frog_red.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/units/frog_teal.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/units/frog_yellow.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/units/gryphon.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/units/gryphon_blue_feathers.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/units/gryphon_gray_feathers.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/units/gryphon_young.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/units/horse_black_skin_brown_hair_brown_eyes.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/units/horse_brown_skin_brown_hair_brown_eyes.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/units/horse_brown_skin_tan_hair_blue_eyes.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/units/horse_brown_skin_tan_hair_brown_eyes.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/units/raft.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/units/rat.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/units/rat_black_fur.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/units/rat_light_gray_fur.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/units/slime_baby.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/units/slime_baby_blue.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/units/slime_baby_brown.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/units/slime_baby_red.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/units/slime_baby_teal.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/units/slime_big.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/units/slime_small.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/units/slime_small_blue.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/units/slime_small_brown.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/units/slime_small_red.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/units/slime_small_teal.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/units/slug.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/units/slug_blue.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/units/slug_brown.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/units/slug_player_color.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/units/slug_purple.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/units/slug_teal.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/units/slug_violet.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/units/slug_yellow.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/units/snail.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/units/snail_blue_purple_shell.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/units/snail_green_purple_shell.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/units/snail_green_teal_shell.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/units/snail_purple_blue_shell.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/units/snail_purple_brown_shell.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/units/snail_teal_green_shell.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/units/worm.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/units/wyrm.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/units/wyrm_blue_scales.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/units/wyrm_cyan_scales.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/units/wyrm_purple_scales.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/units/wyrm_red_scales.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/units/wyrm_yellow_scales.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/units/wyrm_young.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/units/yale.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/units/yale_gray_brown_fur.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/units/yale_gray_fur.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/units/yale_white_fur.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/units/yale_young.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/orc/units/spearthrower.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/teuton/units/catapult.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/teuton/units/chainmail.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/teuton/units/chainmail_left_arm.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/teuton/units/chainmail_right_arm.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/teuton/units/iron_helm.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/teuton/units/leather_shoes.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/teuton/units/long_iron_sword.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/teuton/units/old_man.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/teuton/units/saxon_shield.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/teuton/units/saxon_swordsman.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/teuton/units/suebi_hair.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/teuton/units/suebi_warrior.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/tilesets/cave/neutral/buildings/hole.png (modified from Leo's volcanic crater) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/tilesets/dungeon/neutral/decorations/door_left.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/tilesets/dungeon/neutral/decorations/door_right.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/tilesets/dungeon/terrain/dungeon.png (floor, rug and wall tiles modified from the tiles found here: http://opengameart.org/content/dungeon-crawl-32x32-tiles) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/tilesets/fairlimbed_forest/terrain/fairlimbed_tree.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/tilesets/forest/neutral/decorations/fern.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/tilesets/forest/neutral/decorations/flowers.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/tilesets/forest/neutral/decorations/large_flower.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/tilesets/forest/terrain/deciduous_tree_autumn.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/tilesets/forest/terrain/forest.png (dark dirt, dark grass, grass, grass-dirt transition and tree tiles) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/tilesets/forest/terrain/pine_tree_autumn.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/tilesets/swamp/neutral/decorations/fern.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/tilesets/swamp/neutral/decorations/flowers.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/tilesets/swamp/neutral/decorations/large_flower.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/ui/slow.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/ui/status_effect_icons.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 
 badbuckle (Cenk Açan):
-/graphics/teuton/units/ritter.png (uses b_o's horse)
+/graphics/teuton/units/ritter.png (uses b_o's horse) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 
 Bos Wars Team:
-/graphics/missiles/green_cross.png
-/graphics/missiles/red_cross.png
-/graphics/ui/cursors/arrow_E.png
-/graphics/ui/cursors/arrow_N.png
-/graphics/ui/cursors/arrow_NE.png
-/graphics/ui/cursors/arrow_NW.png
-/graphics/ui/cursors/arrow_S.png
-/graphics/ui/cursors/arrow_SE.png
-/graphics/ui/cursors/arrow_SW.png
-/graphics/ui/cursors/arrow_W.png
-/graphics/ui/cursors/green.png
-/graphics/ui/cursors/red.png
-/graphics/ui/cursors/small_green_cross.png
-/graphics/ui/cursors/yellow.png
+/graphics/missiles/green_cross.png (licensed under the GPL 2.0)
+/graphics/missiles/red_cross.png (licensed under the GPL 2.0)
+/graphics/ui/cursors/arrow_E.png (licensed under the GPL 2.0)
+/graphics/ui/cursors/arrow_N.png (licensed under the GPL 2.0)
+/graphics/ui/cursors/arrow_NE.png (licensed under the GPL 2.0)
+/graphics/ui/cursors/arrow_NW.png (licensed under the GPL 2.0)
+/graphics/ui/cursors/arrow_S.png (licensed under the GPL 2.0)
+/graphics/ui/cursors/arrow_SE.png (licensed under the GPL 2.0)
+/graphics/ui/cursors/arrow_SW.png (licensed under the GPL 2.0)
+/graphics/ui/cursors/arrow_W.png (licensed under the GPL 2.0)
+/graphics/ui/cursors/green.png (licensed under the GPL 2.0)
+/graphics/ui/cursors/red.png (licensed under the GPL 2.0)
+/graphics/ui/cursors/small_green_cross.png (licensed under the GPL 2.0)
+/graphics/ui/cursors/yellow.png (licensed under the GPL 2.0)
 
 Brian Brickwagon Jennings:
-/graphics/dwarf/ui/the_first_dwarves.png
+/graphics/dwarf/ui/the_first_dwarves.png (licensed under the GPL 2.0)
 
 Cuzco:
-/graphics/missiles/siege_projectile_impact.png (later modified by Jinn)
-/graphics/ui/Menu_background_with_title.png
+/graphics/missiles/siege_projectile_impact.png (later modified by Jinn) (licensed under the CC0)
+/graphics/ui/Menu_background_with_title.png (licensed under the CC0)
 
 igoku:
-/graphics/dwarf/icons/boots.png (later modified by Jinn)
-/graphics/dwarf/icons/shield_1.png (later modified by Jinn)
+/graphics/dwarf/icons/boots.png (later modified by Jinn) (licensed under the GPL 2.0)
+/graphics/dwarf/icons/shield_1.png (later modified by Jinn) (licensed under the GPL 2.0)
 
 João Victor G. Costa (Jinn):
-/graphics/celt/buildings/farm.png
-/graphics/dwarf/buildings/barracks.png
-/graphics/dwarf/buildings/barracks_shadow.png
-/graphics/dwarf/buildings/dock.png
-/graphics/dwarf/buildings/dock_shadow.png
-/graphics/dwarf/buildings/guard_tower.png
-/graphics/dwarf/buildings/guard_tower_shadow.png
-/graphics/dwarf/buildings/lumber_mill.png
-/graphics/dwarf/buildings/lumber_mill_shadow.png
-/graphics/dwarf/buildings/mushroom_farm.png
-/graphics/dwarf/buildings/mushroom_farm_shadow.png
-/graphics/dwarf/buildings/sentry_tower.png
-/graphics/dwarf/buildings/sentry_tower_shadow.png
-/graphics/dwarf/buildings/smithy_shadow.png
-/graphics/dwarf/buildings/stronghold.png
-/graphics/dwarf/buildings/stronghold_shadow.png
-/graphics/dwarf/buildings/town_hall.png
-/graphics/dwarf/buildings/town_hall_shadow.png
-/graphics/dwarf/buildings/yale_pen.png
-/graphics/dwarf/buildings/yale_pen_shadow.png
-/graphics/dwarf/icons/axe_2.png (modified from Ransom.00's icon)
-/graphics/dwarf/icons/baglur.png
-/graphics/dwarf/icons/boots.png (modified from igoku's icon)
-/graphics/dwarf/icons/coinage.png
-/graphics/dwarf/icons/durin.png
-/graphics/dwarf/icons/dwarven_axefighter.png
-/graphics/dwarf/icons/dwarven_axefighter_black_hair.png (modified by b_o from the icon made by Jinn, and later reworked by Jinn as well)
-/graphics/dwarf/icons/dwarven_axefighter_blond_hair.png (modified by b_o from the icon made by Jinn, and later reworked by Jinn as well)
-/graphics/dwarf/icons/dwarven_axefighter_brown_hair.png
-/graphics/dwarf/icons/dwarven_axefighter_gray_hair.png (modified by b_o from the icon made by Jinn, and later reworked by Jinn as well)
-/graphics/dwarf/icons/dwarven_scout.png
-/graphics/dwarf/icons/dwarven_scout_blond_hair.png (modified by b_o from the icon made by Jinn, and later reworked by Jinn as well)
-/graphics/dwarf/icons/dwarven_scout_blond_hair_braided_beard.png (modified by b_o from the icon made by Jinn, and later reworked by Jinn as well)
-/graphics/dwarf/icons/dwarven_scout_braided_beard.png
-/graphics/dwarf/icons/dwarven_scout_gray_hair.png (modified by b_o from the icon made by Jinn, and later reworked by Jinn as well)
-/graphics/dwarf/icons/dwarven_scout_gray_hair_braided_beard.png (modified by b_o from the icon made by Jinn, and later reworked by Jinn as well)
-/graphics/dwarf/icons/dwarven_steelclad.png
-/graphics/dwarf/icons/dwarven_steelclad_black_hair.png (modified by b_o from the icon made by Jinn, and later reworked by Jinn as well)
-/graphics/dwarf/icons/dwarven_steelclad_blond_hair.png (modified by b_o from the icon made by Jinn, and later reworked by Jinn as well)
-/graphics/dwarf/icons/dwarven_steelclad_brown_hair.png
-/graphics/dwarf/icons/dwarven_steelclad_gray_hair.png (modified by b_o from the icon made by Jinn, and later reworked by Jinn as well)
-/graphics/dwarf/icons/gryphon_rider.png
-/graphics/dwarf/icons/gryphon_rider_brown_hair.png
-/graphics/dwarf/icons/gryphon_rider_red_hair.png
-/graphics/dwarf/icons/guard.png
-/graphics/dwarf/icons/militia.png
-/graphics/dwarf/icons/miner.png
-/graphics/dwarf/icons/miner_extra_1.png
-/graphics/dwarf/icons/pathfinder.png
-/graphics/dwarf/icons/pathfinder_black_hair.png
-/graphics/dwarf/icons/pathfinder_blond_hair.png
-/graphics/dwarf/icons/pathfinder_gray_hair.png
-/graphics/dwarf/icons/patrol_land.png
-/graphics/dwarf/icons/return_goods.png
-/graphics/dwarf/icons/rugnur.png
-/graphics/dwarf/icons/rugnur_older.png
-/graphics/dwarf/icons/shield_1.png (modified from igoku's icon)
-/graphics/dwarf/icons/stand_ground.png
-/graphics/dwarf/icons/thane.png
-/graphics/dwarf/icons/thane_black_hair.png (modified by b_o from the icon made by Jinn, and later reworked by Jinn as well)
-/graphics/dwarf/icons/thane_blond_hair.png (modified by b_o from the icon made by Jinn, and later reworked by Jinn as well)
-/graphics/dwarf/icons/thane_brown_hair.png
-/graphics/dwarf/icons/thane_gray_hair.png (modified by b_o from the icon made by Jinn, and later reworked by Jinn as well)
-/graphics/dwarf/icons/throwing_axe_1.png
-/graphics/dwarf/icons/throwing_axe_2.png
-/graphics/dwarf/icons/throwing_axe_3.png
-/graphics/dwarf/ui/buttonpanel.png
-/graphics/dwarf/ui/buttonpanel_480.png
-/graphics/dwarf/ui/buttonpanel_600.png
-/graphics/dwarf/ui/buttonpanel_768.png
-/graphics/dwarf/ui/buttonpanel_800.png
-/graphics/dwarf/ui/buttonpanel_960.png
-/graphics/dwarf/ui/buttonpanel_1024.png
-/graphics/dwarf/ui/buttonpanel_1050.png
-/graphics/dwarf/ui/buttonpanel_1200.png
-/graphics/dwarf/ui/filler_bottom.png
-/graphics/dwarf/ui/filler-left_480.png
-/graphics/dwarf/ui/filler-left_600.png
-/graphics/dwarf/ui/filler-left_768.png
-/graphics/dwarf/ui/filler-left_800.png
-/graphics/dwarf/ui/filler-left_960.png
-/graphics/dwarf/ui/filler-left_1024.png
-/graphics/dwarf/ui/filler-left_1050.png
-/graphics/dwarf/ui/filler-left_1200.png
-/graphics/dwarf/ui/infopanel.png
-/graphics/dwarf/ui/infopanel_old.png
-/graphics/dwarf/ui/menubutton.png
-/graphics/dwarf/ui/minimap.png
-/graphics/dwarf/ui/panel_1.png
-/graphics/dwarf/ui/panel_2.png
-/graphics/dwarf/ui/panel_3.png
-/graphics/dwarf/ui/panel_4.png
-/graphics/dwarf/ui/panel_5.png
-/graphics/dwarf/ui/resource.png
-/graphics/dwarf/ui/resource_640.png
-/graphics/dwarf/ui/resource_800.png
-/graphics/dwarf/ui/resource_1024.png
-/graphics/dwarf/ui/resource_1280.png
-/graphics/dwarf/ui/resource_1360.png
-/graphics/dwarf/ui/resource_1400.png
-/graphics/dwarf/ui/resource_1600.png
-/graphics/dwarf/ui/resource_1680.png
-/graphics/dwarf/ui/statusline_640.png
-/graphics/dwarf/ui/statusline_800.png
-/graphics/dwarf/ui/statusline_1024.png
-/graphics/dwarf/ui/statusline_1280.png
-/graphics/dwarf/ui/statusline_1360.png
-/graphics/dwarf/ui/statusline_1400.png
-/graphics/dwarf/ui/statusline_1600.png
-/graphics/dwarf/ui/statusline_1680.png
-/graphics/dwarf/ui/cursors/dwarven_gauntlet.png
-/graphics/dwarf/ui/cursors/dwarven_gauntlet_extra_1.png
-/graphics/dwarf/ui/cursors/dwarven_gauntlet_extra_2.png
-/graphics/dwarf/ui/cursors/dwarven_gauntlet_extra_3.png
-/graphics/dwarf/ui/cursors/dwarven_gauntlet_extra_4.png
-/graphics/dwarf/ui/cursors/dwarven_gauntlet_extra_5.png
-/graphics/dwarf/ui/cursors/dwarven_gauntlet_extra_6.png
-/graphics/dwarf/ui/cursors/dwarven_gauntlet_extra_7.png
-/graphics/dwarf/ui/cursors/dwarven_gauntlet_extra_8.png
-/graphics/dwarf/ui/cursors/dwarven_gauntlet_extra_9.png
-/graphics/dwarf/ui/cursors/dwarven_gauntlet_extra_10.png
-/graphics/dwarf/ui/widgets/button-large-grayed.png
-/graphics/dwarf/ui/widgets/button-large-normal.png
-/graphics/dwarf/ui/widgets/button-large-pressed.png
-/graphics/dwarf/ui/widgets/button-small-grayed.png
-/graphics/dwarf/ui/widgets/button-small-normal.png
-/graphics/dwarf/ui/widgets/button-small-pressed.png
-/graphics/dwarf/ui/widgets/button-thin-medium-normal.png
-/graphics/dwarf/ui/widgets/button-thin-medium-pressed.png
-/graphics/dwarf/ui/widgets/button-thin-small-normal.png
-/graphics/dwarf/ui/widgets/button-thin-small-pressed.png
-/graphics/dwarf/ui/widgets/button-thinest-medium-normal.png
-/graphics/dwarf/ui/widgets/button-thinest-medium-pressed.png
-/graphics/dwarf/ui/widgets/down-arrow-normal.png
-/graphics/dwarf/ui/widgets/down-arrow-pressed.png
-/graphics/dwarf/ui/widgets/down-arrow-normal-slider.png
-/graphics/dwarf/ui/widgets/down-arrow-pressed-slider.png
-/graphics/dwarf/ui/widgets/left-arrow-normal.png
-/graphics/dwarf/ui/widgets/left-arrow-pressed.png
-/graphics/dwarf/ui/widgets/pulldown-bar-normal.png
-/graphics/dwarf/ui/widgets/right-arrow-normal.png
-/graphics/dwarf/ui/widgets/right-arrow-pressed.png
-/graphics/dwarf/ui/widgets/radio-normal-selected.png
-/graphics/dwarf/ui/widgets/radio-normal-unselected.png
-/graphics/dwarf/ui/widgets/radio-pressed-selected.png
-/graphics/dwarf/ui/widgets/radio-pressed-unselected.png
-/graphics/dwarf/ui/widgets/slider-bar-normal.png
-/graphics/dwarf/ui/widgets/slider-knob.png
-/graphics/dwarf/ui/widgets/up-arrow-normal.png
-/graphics/dwarf/ui/widgets/up-arrow-pressed.png
-/graphics/dwarf/ui/widgets/up-arrow-normal-slider.png
-/graphics/dwarf/ui/widgets/up-arrow-pressed-slider.png
-/graphics/dwarf/units/miner_with_coal.png (modified from b_o's dwarven miner unit graphics)
-/graphics/dwarf/units/transport_ship.png
-/graphics/dwarf/units/transport_ship_water.png
-/graphics/elf/icons/elven_swordsman.png
-/graphics/germanic/buildings/barracks.png
-/graphics/germanic/buildings/barracks_shadow.png
-/graphics/germanic/buildings/carpenters_shop_shadow.png
-/graphics/germanic/buildings/farm.png
-/graphics/germanic/buildings/farm_shadow.png
-/graphics/germanic/buildings/farm_extra_1.png
-/graphics/germanic/buildings/smithy_shadow.png
-/graphics/germanic/buildings/town_hall.png (modified by b_o to add the fire animation)
-/graphics/germanic/buildings/town_hall_shadow.png
-/graphics/germanic/icons/warrior.png
-/graphics/germanic/icons/warrior_black_hair.png
-/graphics/germanic/icons/warrior_brown_hair.png
-/graphics/germanic/icons/warrior_gray_hair.png
-/graphics/germanic/icons/warrior_red_hair.png
-/graphics/germanic/ui/buttonpanel.png
-/graphics/germanic/ui/buttonpanel_480.png
-/graphics/germanic/ui/buttonpanel_600.png
-/graphics/germanic/ui/buttonpanel_768.png
-/graphics/germanic/ui/buttonpanel_800.png
-/graphics/germanic/ui/buttonpanel_960.png
-/graphics/germanic/ui/buttonpanel_1024.png
-/graphics/germanic/ui/buttonpanel_1050.png
-/graphics/germanic/ui/buttonpanel_1200.png
-/graphics/germanic/ui/filler_bottom.png
-/graphics/germanic/ui/filler-left_480.png
-/graphics/germanic/ui/filler-left_600.png
-/graphics/germanic/ui/filler-left_768.png
-/graphics/germanic/ui/filler-left_800.png
-/graphics/germanic/ui/filler-left_960.png
-/graphics/germanic/ui/filler-left_1024.png
-/graphics/germanic/ui/filler-left_1050.png
-/graphics/germanic/ui/filler-left_1200.png
-/graphics/germanic/ui/infopanel.png
-/graphics/germanic/ui/infopanel_old.png
-/graphics/germanic/ui/menubutton.png
-/graphics/germanic/ui/minimap.png
-/graphics/germanic/ui/panel_1.png
-/graphics/germanic/ui/panel_2.png
-/graphics/germanic/ui/panel_3.png
-/graphics/germanic/ui/panel_4.png
-/graphics/germanic/ui/panel_5.png
-/graphics/germanic/ui/resource.png
-/graphics/germanic/ui/resource_640.png
-/graphics/germanic/ui/resource_800.png
-/graphics/germanic/ui/resource_1024.png
-/graphics/germanic/ui/resource_1280.png
-/graphics/germanic/ui/resource_1360.png
-/graphics/germanic/ui/resource_1400.png
-/graphics/germanic/ui/resource_1600.png
-/graphics/germanic/ui/resource_1680.png
-/graphics/germanic/ui/statusline_640.png
-/graphics/germanic/ui/statusline_800.png
-/graphics/germanic/ui/statusline_1024.png
-/graphics/germanic/ui/statusline_1280.png
-/graphics/germanic/ui/statusline_1360.png
-/graphics/germanic/ui/statusline_1400.png
-/graphics/germanic/ui/statusline_1600.png
-/graphics/germanic/ui/statusline_1680.png
-/graphics/germanic/ui/widgets/button-large-grayed.png
-/graphics/germanic/ui/widgets/button-large-normal.png
-/graphics/germanic/ui/widgets/button-large-pressed.png
-/graphics/germanic/ui/widgets/button-small-grayed.png
-/graphics/germanic/ui/widgets/button-small-normal.png
-/graphics/germanic/ui/widgets/button-small-pressed.png
-/graphics/germanic/ui/widgets/button-thin-medium-normal.png
-/graphics/germanic/ui/widgets/button-thin-medium-pressed.png
-/graphics/germanic/ui/widgets/button-thin-small-normal.png
-/graphics/germanic/ui/widgets/button-thin-small-pressed.png
-/graphics/germanic/ui/widgets/button-thinest-medium-normal.png
-/graphics/germanic/ui/widgets/button-thinest-medium-pressed.png
-/graphics/germanic/ui/widgets/down-arrow-normal.png
-/graphics/germanic/ui/widgets/down-arrow-pressed.png
-/graphics/germanic/ui/widgets/down-arrow-normal-slider.png
-/graphics/germanic/ui/widgets/down-arrow-pressed-slider.png
-/graphics/germanic/ui/widgets/left-arrow-normal.png
-/graphics/germanic/ui/widgets/left-arrow-pressed.png
-/graphics/germanic/ui/widgets/pulldown-bar-normal.png
-/graphics/germanic/ui/widgets/right-arrow-normal.png
-/graphics/germanic/ui/widgets/right-arrow-pressed.png
-/graphics/germanic/ui/widgets/radio-normal-selected.png
-/graphics/germanic/ui/widgets/radio-normal-unselected.png
-/graphics/germanic/ui/widgets/radio-pressed-selected.png
-/graphics/germanic/ui/widgets/radio-pressed-unselected.png
-/graphics/germanic/ui/widgets/slider-bar-normal.png
-/graphics/germanic/ui/widgets/slider-knob.png
-/graphics/germanic/ui/widgets/up-arrow-normal.png
-/graphics/germanic/ui/widgets/up-arrow-pressed.png
-/graphics/germanic/ui/widgets/up-arrow-normal-slider.png
-/graphics/germanic/ui/widgets/up-arrow-pressed-slider.png
-/graphics/gnome/buildings/barracks.png
-/graphics/gnome/buildings/barracks_shadow.png
-/graphics/gnome/buildings/farm.png
-/graphics/gnome/buildings/farm_shadow.png
-/graphics/gnome/buildings/town_hall.png
-/graphics/gnome/buildings/town_hall_shadow.png
-/graphics/gnome/icons/gnomish_recruit.png
-/graphics/gnome/icons/gnomish_worker.png
-/graphics/gnome/icons/gnomish_worker_black_hair.png
-/graphics/gnome/icons/gnomish_worker_gray_hair.png (modified by b_o from the icon made by Jinn, and later reworked by Jinn as well)
-/graphics/gnome/icons/herbal_cure.png (modified from J. W. Bjerk's icon)
-/graphics/gnome/icons/patrol_land.png
-/graphics/gnome/icons/patrol_land_extra_1.png
-/graphics/gnome/icons/portent.png (modified from J. W. Bjerk's icon)
-/graphics/gnome/ui/widgets/button-large-grayed.png
-/graphics/gnome/ui/widgets/button-large-normal.png
-/graphics/gnome/ui/widgets/button-large-pressed.png
-/graphics/gnome/ui/widgets/button-small-grayed.png
-/graphics/gnome/ui/widgets/button-small-normal.png
-/graphics/gnome/ui/widgets/button-small-pressed.png
-/graphics/gnome/ui/widgets/button-thin-medium-normal.png
-/graphics/gnome/ui/widgets/button-thin-medium-pressed.png
-/graphics/gnome/ui/widgets/button-thin-small-normal.png
-/graphics/gnome/ui/widgets/button-thin-small-pressed.png
-/graphics/goblin/buildings/farm_shadow.png
-/graphics/goblin/buildings/lumber_mill_shadow.png
-/graphics/goblin/buildings/mess_hall_shadow.png
-/graphics/goblin/buildings/smithy.png
-/graphics/goblin/buildings/smithy_shadow.png
-/graphics/goblin/buildings/town_hall_shadow.png
-/graphics/goblin/icons/goblin_archer.png
-/graphics/goblin/icons/goblin_assassin.png
-/graphics/goblin/icons/goblin_spearman.png
-/graphics/goblin/icons/goblin_worker.png
-/graphics/goblin/icons/spear_1.png (modified from the icon made by the Battle for Wesnoth team, which had been later modified by b_o)
-/graphics/missiles/big_fire.png (modified from Mikodrak's graphics)
-/graphics/missiles/big_fire_extra_1.png (modified from Mikodrak's graphics)
-/graphics/missiles/explosion.png (modified from StumpyStrust's graphics)
-/graphics/missiles/siege_projectile_impact.png (modified from Cuzco's graphics)
-/graphics/missiles/small_fire.png (modified from Mikodrak's graphics)
-/graphics/neutral/buildings/coal_mine.png
-/graphics/neutral/buildings/copper_deposit.png
-/graphics/neutral/buildings/copper_deposit_shadow.png
-/graphics/neutral/buildings/copper_mine.png
-/graphics/neutral/buildings/copper_mine_light.png
-/graphics/neutral/buildings/copper_mine_shadow.png
-/graphics/neutral/buildings/copper_rock_1.png
-/graphics/neutral/buildings/copper_rock_1_shadow.png
-/graphics/neutral/buildings/copper_rock_2.png
-/graphics/neutral/buildings/copper_rock_2_shadow.png
-/graphics/neutral/buildings/copper_rock_3.png
-/graphics/neutral/buildings/copper_rock_3_shadow.png
-/graphics/neutral/buildings/copper_rock_4.png
-/graphics/neutral/buildings/copper_rock_4_shadow.png
-/graphics/neutral/buildings/glyph.png
-/graphics/neutral/buildings/glyph_player_color.png
-/graphics/neutral/buildings/gold_deposit.png
-/graphics/neutral/buildings/gold_deposit_shadow.png
-/graphics/neutral/buildings/gold_mine.png
-/graphics/neutral/buildings/gold_mine_light.png
-/graphics/neutral/buildings/gold_mine_rail.png
-/graphics/neutral/buildings/gold_mine_shadow.png
-/graphics/neutral/buildings/gold_rock_1.png
-/graphics/neutral/buildings/gold_rock_1_shadow.png
-/graphics/neutral/buildings/gold_rock_2.png
-/graphics/neutral/buildings/gold_rock_2_shadow.png
-/graphics/neutral/buildings/gold_rock_3.png
-/graphics/neutral/buildings/gold_rock_3_shadow.png
-/graphics/neutral/buildings/gold_rock_4.png
-/graphics/neutral/buildings/gold_rock_4_shadow.png
-/graphics/neutral/buildings/land_construction_site.png
-/graphics/neutral/buildings/mercenary_camp.png (later modified by b_o to add the fire animation)
-/graphics/neutral/buildings/mercenary_camp_shadow.png
-/graphics/neutral/buildings/silver_deposit.png
-/graphics/neutral/buildings/silver_deposit_shadow.png
-/graphics/neutral/buildings/silver_mine.png
-/graphics/neutral/buildings/silver_mine_light.png
-/graphics/neutral/buildings/silver_mine_shadow.png
-/graphics/neutral/buildings/silver_rock_1.png
-/graphics/neutral/buildings/silver_rock_1_shadow.png
-/graphics/neutral/buildings/silver_rock_2.png
-/graphics/neutral/buildings/silver_rock_2_shadow.png
-/graphics/neutral/buildings/silver_rock_3.png
-/graphics/neutral/buildings/silver_rock_3_shadow.png
-/graphics/neutral/buildings/silver_rock_4.png
-/graphics/neutral/buildings/silver_rock_4_shadow.png
-/graphics/neutral/buildings/wood_pile.png
-/graphics/neutral/icons/attack_ground.png
-/graphics/neutral/icons/axe_mastery.png
-/graphics/neutral/icons/bodkin_arrow.png
-/graphics/neutral/icons/build_basic_structure.png
-/graphics/neutral/icons/cancel.png
-/graphics/neutral/icons/cancel_extra_1.png
-/graphics/neutral/icons/cancel_extra_2.png
-/graphics/neutral/icons/catapult_projectile_granite.png
-/graphics/neutral/icons/catapult_projectile_metal.png
-/graphics/neutral/icons/catapult_projectile_sandstone.png
-/graphics/neutral/icons/catapult_projectile_sandstone_extra_1.png
-/graphics/neutral/icons/critical_strike.png
-/graphics/neutral/icons/cyclops.png (modified by b_o from an ogre icon made by Jinn)
-/graphics/neutral/icons/deadly_precision.png
-/graphics/neutral/icons/eagle_eye.png
-/graphics/neutral/icons/food.png
-/graphics/neutral/icons/gold.png
-/graphics/neutral/icons/gryphon.png
-/graphics/neutral/icons/gryphon_blue_feathers.png (modified by b_o from the gryphon icon made by Jinn, and later reworked by Jinn as well)
-/graphics/neutral/icons/gryphon_white_feathers.png
-/graphics/neutral/icons/harvest.png
-/graphics/neutral/icons/heater_shield.png
-/graphics/neutral/icons/horse.png
-/graphics/neutral/icons/horse_trained.png
-/graphics/neutral/icons/inventory.png
-/graphics/neutral/icons/iron_edged_wood_plow.png
-/graphics/neutral/icons/iron_plow.png
-/graphics/neutral/icons/iron_plow_extra_1.png
-/graphics/neutral/icons/labor.png
-/graphics/neutral/icons/level_up.png
-/graphics/neutral/icons/long_swordsman.png
-/graphics/neutral/icons/potion_red.png
-/graphics/neutral/icons/rally_point.png
-/graphics/neutral/icons/repair.png
-/graphics/neutral/icons/repair_extra_1.png
-/graphics/neutral/icons/repair_extra_2.png
-/graphics/neutral/icons/research.png
-/graphics/neutral/icons/sword_mastery.png
-/graphics/neutral/icons/sword_mastery_bronze.png
-/graphics/neutral/icons/water_elemental.png
-/graphics/neutral/icons/wood_plow.png
-/graphics/neutral/icons/yale.png
-/graphics/neutral/icons/yale_gray_brown_fur.png
-/graphics/neutral/icons/yale_gray_fur.png
-/graphics/neutral/icons/yale_white_fur.png
-/graphics/neutral/units/dwarven_corpse.png
-/graphics/neutral/units/gnomish_goblin_and_kobold_corpses.png
-/graphics/neutral/units/human_corpse.png
-/graphics/norse/icons/runewriting.png
-/graphics/orc/icons/sea_orc.png
-/graphics/orc/icons/shaman.png
-/graphics/orc/icons/spearthrower.png
-/graphics/orc/icons/warrior.png
-/graphics/teuton/buildings/barracks.png
-/graphics/teuton/buildings/barracks_shadow.png
-/graphics/teuton/buildings/dock.png
-/graphics/teuton/buildings/dock_shadow.png
-/graphics/teuton/buildings/farm.png
-/graphics/teuton/buildings/farm_shadow.png
-/graphics/teuton/buildings/guard_tower.png
-/graphics/teuton/buildings/guard_tower_shadow.png
-/graphics/teuton/buildings/lumber_mill.png
-/graphics/teuton/buildings/lumber_mill_shadow.png
-/graphics/teuton/buildings/smithy.png
-/graphics/teuton/buildings/smithy_shadow.png
-/graphics/teuton/buildings/stables.png
-/graphics/teuton/buildings/stables_shadow.png
-/graphics/teuton/buildings/stronghold.png
-/graphics/teuton/buildings/stronghold_shadow.png
-/graphics/teuton/buildings/town_hall.png
-/graphics/teuton/buildings/town_hall_shadow.png
-/graphics/teuton/buildings/watch_tower.png
-/graphics/teuton/buildings/watch_tower_shadow.png
-/graphics/teuton/icons/coinage.png
-/graphics/teuton/icons/iron_shield.png
-/graphics/teuton/icons/iron_shield_extra_1.png
-/graphics/teuton/icons/marbod.png
-/graphics/teuton/icons/ritter.png
-/graphics/teuton/icons/saxon_swordsman.png
-/graphics/teuton/icons/saxon_swordsman_black_hair.png
-/graphics/teuton/icons/saxon_swordsman_blond_hair.png
-/graphics/teuton/icons/saxon_swordsman_brown_hair.png
-/graphics/teuton/icons/spearman.png
-/graphics/teuton/units/kogge.png
-/graphics/teuton/units/kogge_water.png
-/graphics/teuton/units/suebi_shield.png
-/graphics/tilesets/cave/terrain/cave.png
-/graphics/tilesets/cave/terrain/rock.png
-/graphics/tilesets/dungeon/terrain/dungeon.png (rockbound cave floor and cave wall tiles)
-/graphics/tilesets/forest/neutral/icons/rat.png
-/graphics/tilesets/forest/terrain/forest.png (dirt and water tiles)
-/graphics/tilesets/forest/terrain/rock.png
-/graphics/tilesets/swamp/neutral/buildings/destroyed_site.png
-/graphics/tilesets/swamp/neutral/icons/rat.png
-/graphics/tilesets/swamp/terrain/rock.png
-/graphics/tilesets/swamp/terrain/swamp.png
-/graphics/tilesets/world/sites/dwarf_barracks.png
-/graphics/tilesets/world/sites/dwarf_settlement.png
-/graphics/tilesets/world/sites/germanic_barracks.png
-/graphics/tilesets/world/sites/germanic_settlement.png
-/graphics/tilesets/world/sites/gnome_barracks.png
-/graphics/tilesets/world/sites/gnome_settlement.png
-/graphics/tilesets/world/sites/goblin_barracks.png (based on the goblin mess hall made by Leo)
-/graphics/tilesets/world/sites/goblin_settlement.png (based on the goblin buildings made by Leo)
-/graphics/tilesets/world/sites/kal_karthan_settlement.png
-/graphics/tilesets/world/sites/resource_building_copper.png
-/graphics/tilesets/world/sites/resource_building_copper_player_color.png
-/graphics/tilesets/world/sites/resource_building_gold.png
-/graphics/tilesets/world/sites/resource_building_gold_player_color.png
-/graphics/tilesets/world/sites/resource_building_gold_mountains.png
-/graphics/tilesets/world/sites/resource_building_gold_mountains_player_color.png
-/graphics/tilesets/world/sites/resource_building_grain_1.png
-/graphics/tilesets/world/sites/resource_building_grain_2.png
-/graphics/tilesets/world/sites/resource_building_grain_3.png
-/graphics/tilesets/world/sites/resource_building_grain_4.png
-/graphics/tilesets/world/sites/resource_building_lumber.png
-/graphics/tilesets/world/sites/resource_building_lumber_conifer_forest.png
-/graphics/tilesets/world/sites/resource_building_mushrooms_1.png
-/graphics/tilesets/world/sites/resource_building_mushrooms_2.png
-/graphics/tilesets/world/sites/resource_building_mushrooms_3.png
-/graphics/tilesets/world/sites/resource_building_mushrooms_4.png
-/graphics/tilesets/world/sites/resource_building_mushrooms_hills.png
-/graphics/tilesets/world/sites/resource_building_mushrooms_mountains.png
-/graphics/tilesets/world/sites/resource_building_silver.png
-/graphics/tilesets/world/sites/resource_building_silver_player_color.png
-/graphics/tilesets/world/sites/resource_building_stone.png
-/graphics/tilesets/world/sites/resource_building_stone_mountains.png
-/graphics/tilesets/world/sites/resource_not_worked.png
-/graphics/tilesets/world/sites/teuton_settlement_masonry.png
-/graphics/tilesets/world/terrain/conifer_forest/conifer_forest_east_1.png
-/graphics/tilesets/world/terrain/conifer_forest/conifer_forest_east_2.png
-/graphics/tilesets/world/terrain/conifer_forest/conifer_forest_inner.png
-/graphics/tilesets/world/terrain/conifer_forest/conifer_forest_north_1.png
-/graphics/tilesets/world/terrain/conifer_forest/conifer_forest_north_2.png
-/graphics/tilesets/world/terrain/conifer_forest/conifer_forest_northeast_inner_1.png
-/graphics/tilesets/world/terrain/conifer_forest/conifer_forest_northeast_outer_1.png
-/graphics/tilesets/world/terrain/conifer_forest/conifer_forest_northeast_outer_2.png
-/graphics/tilesets/world/terrain/conifer_forest/conifer_forest_northeast_southwest_inner_1.png
-/graphics/tilesets/world/terrain/conifer_forest/conifer_forest_northwest_inner_1.png
-/graphics/tilesets/world/terrain/conifer_forest/conifer_forest_northwest_outer_1.png
-/graphics/tilesets/world/terrain/conifer_forest/conifer_forest_northwest_outer_2.png
-/graphics/tilesets/world/terrain/conifer_forest/conifer_forest_northwest_southeast_inner_1.png
-/graphics/tilesets/world/terrain/conifer_forest/conifer_forest_south_1.png
-/graphics/tilesets/world/terrain/conifer_forest/conifer_forest_south_2.png
-/graphics/tilesets/world/terrain/conifer_forest/conifer_forest_southeast_inner_1.png
-/graphics/tilesets/world/terrain/conifer_forest/conifer_forest_southeast_outer_1.png
-/graphics/tilesets/world/terrain/conifer_forest/conifer_forest_southeast_outer_2.png
-/graphics/tilesets/world/terrain/conifer_forest/conifer_forest_southwest_inner_1.png
-/graphics/tilesets/world/terrain/conifer_forest/conifer_forest_southwest_outer_1.png
-/graphics/tilesets/world/terrain/conifer_forest/conifer_forest_southwest_outer_2.png
-/graphics/tilesets/world/terrain/conifer_forest/conifer_forest_outer.png
-/graphics/tilesets/world/terrain/conifer_forest/conifer_forest_outer_extra_1.png
-/graphics/tilesets/world/terrain/conifer_forest/conifer_forest_west_1.png
-/graphics/tilesets/world/terrain/conifer_forest/conifer_forest_west_2.png
-/graphics/tilesets/world/terrain/dark_plains_1.png
-/graphics/tilesets/world/terrain/dark_plains_2.png
-/graphics/tilesets/world/terrain/dark_plains_3.png
-/graphics/tilesets/world/terrain/dark_plains_4.png
-/graphics/tilesets/world/terrain/dark_plains_5.png
-/graphics/tilesets/world/terrain/dark_plains_extra_1.png
-/graphics/tilesets/world/terrain/hills/hills_east_1.png
-/graphics/tilesets/world/terrain/hills/hills_inner.png
-/graphics/tilesets/world/terrain/hills/hills_north_1.png
-/graphics/tilesets/world/terrain/hills/hills_northeast_inner_1.png
-/graphics/tilesets/world/terrain/hills/hills_northeast_inner_southwest_inner_1.png
-/graphics/tilesets/world/terrain/hills/hills_northeast_outer_1.png
-/graphics/tilesets/world/terrain/hills/hills_northwest_inner_1.png
-/graphics/tilesets/world/terrain/hills/hills_northwest_inner_southeast_inner_1.png
-/graphics/tilesets/world/terrain/hills/hills_northwest_outer_1.png
-/graphics/tilesets/world/terrain/hills/hills_outer_1.png
-/graphics/tilesets/world/terrain/hills/hills_outer_2.png
-/graphics/tilesets/world/terrain/hills/hills_outer_3.png
-/graphics/tilesets/world/terrain/hills/hills_outer_4.png
-/graphics/tilesets/world/terrain/hills/hills_outer_5.png
-/graphics/tilesets/world/terrain/hills/hills_outer_extra_1.png
-/graphics/tilesets/world/terrain/hills/hills_south_1.png
-/graphics/tilesets/world/terrain/hills/hills_southeast_inner_1.png
-/graphics/tilesets/world/terrain/hills/hills_southeast_outer_1.png
-/graphics/tilesets/world/terrain/hills/hills_southwest_inner_1.png
-/graphics/tilesets/world/terrain/hills/hills_southwest_outer_1.png
-/graphics/tilesets/world/terrain/hills/hills_west_1.png
-/graphics/tilesets/world/terrain/mountains/mountains_east_1.png
-/graphics/tilesets/world/terrain/mountains/mountains_inner.png
-/graphics/tilesets/world/terrain/mountains/mountains_north_1.png
-/graphics/tilesets/world/terrain/mountains/mountains_northeast_inner_1.png
-/graphics/tilesets/world/terrain/mountains/mountains_northeast_outer_1.png
-/graphics/tilesets/world/terrain/mountains/mountains_northeast_southwest_inner_1.png
-/graphics/tilesets/world/terrain/mountains/mountains_northwest_inner_1.png
-/graphics/tilesets/world/terrain/mountains/mountains_northwest_outer_1.png
-/graphics/tilesets/world/terrain/mountains/mountains_northwest_southeast_inner_1.png
-/graphics/tilesets/world/terrain/mountains/mountains_outer.png
-/graphics/tilesets/world/terrain/mountains/mountains_south_1.png
-/graphics/tilesets/world/terrain/mountains/mountains_southeast_inner_1.png
-/graphics/tilesets/world/terrain/mountains/mountains_southeast_outer_1.png
-/graphics/tilesets/world/terrain/mountains/mountains_southwest_inner_1.png
-/graphics/tilesets/world/terrain/mountains/mountains_southwest_outer_1.png
-/graphics/tilesets/world/terrain/mountains/mountains_west_1.png
-/graphics/tilesets/world/terrain/ocean/ocean_east_1.png
-/graphics/tilesets/world/terrain/ocean/ocean_east_2.png
-/graphics/tilesets/world/terrain/ocean/ocean_east_3.png
-/graphics/tilesets/world/terrain/ocean/ocean_east_4.png
-/graphics/tilesets/world/terrain/ocean/ocean_inner.png
-/graphics/tilesets/world/terrain/ocean/ocean_north_1.png
-/graphics/tilesets/world/terrain/ocean/ocean_north_2.png
-/graphics/tilesets/world/terrain/ocean/ocean_north_3.png
-/graphics/tilesets/world/terrain/ocean/ocean_north_4.png
-/graphics/tilesets/world/terrain/ocean/ocean_northeast_inner_1.png
-/graphics/tilesets/world/terrain/ocean/ocean_northeast_inner_2.png
-/graphics/tilesets/world/terrain/ocean/ocean_northeast_outer_1.png
-/graphics/tilesets/world/terrain/ocean/ocean_northeast_outer_2.png
-/graphics/tilesets/world/terrain/ocean/ocean_northeast_outer_3.png
-/graphics/tilesets/world/terrain/ocean/ocean_northeast_outer_4.png
-/graphics/tilesets/world/terrain/ocean/ocean_northeast_southwest_inner_1.png
-/graphics/tilesets/world/terrain/ocean/ocean_northeast_southwest_inner_2.png
-/graphics/tilesets/world/terrain/ocean/ocean_northwest_inner_1.png
-/graphics/tilesets/world/terrain/ocean/ocean_northwest_inner_2.png
-/graphics/tilesets/world/terrain/ocean/ocean_northwest_outer_1.png
-/graphics/tilesets/world/terrain/ocean/ocean_northwest_outer_2.png
-/graphics/tilesets/world/terrain/ocean/ocean_northwest_outer_3.png
-/graphics/tilesets/world/terrain/ocean/ocean_northwest_outer_4.png
-/graphics/tilesets/world/terrain/ocean/ocean_northwest_southeast_inner_1.png
-/graphics/tilesets/world/terrain/ocean/ocean_northwest_southeast_inner_2.png
-/graphics/tilesets/world/terrain/ocean/ocean_south_1.png
-/graphics/tilesets/world/terrain/ocean/ocean_south_2.png
-/graphics/tilesets/world/terrain/ocean/ocean_south_3.png
-/graphics/tilesets/world/terrain/ocean/ocean_south_4.png
-/graphics/tilesets/world/terrain/ocean/ocean_southeast_inner_1.png
-/graphics/tilesets/world/terrain/ocean/ocean_southeast_inner_2.png
-/graphics/tilesets/world/terrain/ocean/ocean_southeast_outer_1.png
-/graphics/tilesets/world/terrain/ocean/ocean_southeast_outer_2.png
-/graphics/tilesets/world/terrain/ocean/ocean_southeast_outer_3.png
-/graphics/tilesets/world/terrain/ocean/ocean_southeast_outer_4.png
-/graphics/tilesets/world/terrain/ocean/ocean_southwest_inner_1.png
-/graphics/tilesets/world/terrain/ocean/ocean_southwest_inner_2.png
-/graphics/tilesets/world/terrain/ocean/ocean_southwest_outer_1.png
-/graphics/tilesets/world/terrain/ocean/ocean_southwest_outer_2.png
-/graphics/tilesets/world/terrain/ocean/ocean_southwest_outer_3.png
-/graphics/tilesets/world/terrain/ocean/ocean_southwest_outer_4.png
-/graphics/tilesets/world/terrain/ocean/ocean_west_1.png
-/graphics/tilesets/world/terrain/ocean/ocean_west_2.png
-/graphics/tilesets/world/terrain/ocean/ocean_west_3.png
-/graphics/tilesets/world/terrain/ocean/ocean_west_4.png
-/graphics/tilesets/world/terrain/plains_1.png
-/graphics/tilesets/world/terrain/plains_2.png
-/graphics/tilesets/world/terrain/plains_3.png
-/graphics/tilesets/world/terrain/plains_4.png
-/graphics/tilesets/world/terrain/plains_5.png
-/graphics/tilesets/world/terrain/plains_extra_1.png
-/graphics/tilesets/world/terrain/province_border_east.png
-/graphics/tilesets/world/terrain/province_border_north.png
-/graphics/tilesets/world/terrain/province_border_northeast_inner.png
-/graphics/tilesets/world/terrain/province_border_northeast_outer.png
-/graphics/tilesets/world/terrain/province_border_northwest_inner.png
-/graphics/tilesets/world/terrain/province_border_northwest_outer.png
-/graphics/tilesets/world/terrain/province_border_south.png
-/graphics/tilesets/world/terrain/province_border_southeast_inner.png
-/graphics/tilesets/world/terrain/province_border_southeast_outer.png
-/graphics/tilesets/world/terrain/province_border_southwest_inner.png
-/graphics/tilesets/world/terrain/province_border_southwest_outer.png
-/graphics/tilesets/world/terrain/province_border_west.png
-/graphics/tilesets/world/terrain/province_national_border_east.png
-/graphics/tilesets/world/terrain/province_national_border_north.png
-/graphics/tilesets/world/terrain/province_national_border_northeast_inner.png
-/graphics/tilesets/world/terrain/province_national_border_northeast_outer.png
-/graphics/tilesets/world/terrain/province_national_border_northwest_inner.png
-/graphics/tilesets/world/terrain/province_national_border_northwest_outer.png
-/graphics/tilesets/world/terrain/province_national_border_south.png
-/graphics/tilesets/world/terrain/province_national_border_southeast_inner.png
-/graphics/tilesets/world/terrain/province_national_border_southeast_outer.png
-/graphics/tilesets/world/terrain/province_national_border_southwest_inner.png
-/graphics/tilesets/world/terrain/province_national_border_southwest_outer.png
-/graphics/tilesets/world/terrain/province_national_border_west.png
-/graphics/tilesets/world/terrain/scrub_forest_1.png
-/graphics/tilesets/world/terrain/scrub_forest_2.png
-/graphics/tilesets/world/terrain/scrub_forest_3.png
-/graphics/tilesets/world/terrain/scrub_forest_4.png
-/graphics/tilesets/fogofwar.png
-/graphics/ui/backgrounds/gnashorn.png (modified from Tanja Nov.'s drawing)
-/graphics/ui/backgrounds/gnashorn_profile.png (modified from Tanja Nov.'s drawing)
-/graphics/ui/backgrounds/gnashorn_small.png (modified from Tanja Nov.'s drawing)
-/graphics/ui/backgrounds/gryphon.png (modified from Tanja Nov.'s drawing)
-/graphics/ui/backgrounds/gryphon_profile.png (modified from Tanja Nov.'s drawing)
-/graphics/ui/backgrounds/gryphon_small.png (modified from Tanja Nov.'s drawing)
-/graphics/ui/backgrounds/gullinburst.png (modified from Tanja Nov.'s drawing)
-/graphics/ui/backgrounds/gullinburst_profile.png (modified from Tanja Nov.'s drawing)
-/graphics/ui/backgrounds/gullinburst_small.png (modified from Tanja Nov.'s drawing)
-/graphics/ui/backgrounds/wyrm.png (modified from Tanja Nov.'s drawing)
-/graphics/ui/backgrounds/wyrm_profile.png (modified from Tanja Nov.'s drawing)
-/graphics/ui/backgrounds/wyrm_small.png (modified from Tanja Nov.'s drawing)
-/graphics/ui/backgrounds/yale.png (modified from Tanja Nov.'s drawing)
-/graphics/ui/backgrounds/yale_profile.png (modified from Tanja Nov.'s drawing)
-/graphics/ui/backgrounds/yale_small.png (modified from Tanja Nov.'s drawing)
-/graphics/ui/cursors/magnifying_glass.png
-/graphics/ui/fonts/small.png
-/graphics/ui/icons/badge_bronze.png
-/graphics/ui/icons/badge_cracked.png
-/graphics/ui/icons/badge_foil.png
-/graphics/ui/icons/badge_glow.png
-/graphics/ui/icons/badge_gold.png
-/graphics/ui/icons/badge_silver.png
-/graphics/ui/icons/food.png
-/graphics/ui/icons/food_small.png
-/graphics/ui/icons/gold.png
-/graphics/ui/icons/gold_small.png
-/graphics/ui/icons/labor.png
-/graphics/ui/icons/labor_small.png
-/graphics/ui/icons/prestige.png
-/graphics/ui/icons/prestige_small.png
-/graphics/ui/icons/research.png
-/graphics/ui/icons/research_small.png
-/graphics/ui/icons/wyrm_egg_foil.png
-/graphics/ui/icons/wyrm_egg_foil_without_effect.png
-/graphics/ui/icons/wyrm_egg_level_1.png
-/graphics/ui/icons/wyrm_egg_level_2.png
-/graphics/ui/icons/wyrm_egg_level_3.png
-/graphics/ui/icons/wyrm_egg_level_4.png
-/graphics/ui/icons/wyrm_egg_level_5.png
-/graphics/ui/icons/wyrmsun_icon_32.png
-/graphics/ui/icons/wyrmsun_icon_128.png
-/graphics/ui/icons/wyrmsun_icon_128_background.png
-/graphics/ui/bar_frame.png
-/graphics/ui/coal.png
-/graphics/ui/coal_extra_1.png
-/graphics/ui/command_button_frame.png
-/graphics/ui/copper.png
-/graphics/ui/fish.png
-/graphics/ui/food.png
-/graphics/ui/fuel.png
-/graphics/ui/gold.png
-/graphics/ui/gold_ore.png
-/graphics/ui/grain.png
-/graphics/ui/housing.png
-/graphics/ui/icon_frame.png
-/graphics/ui/icon_frame_pressed.png
-/graphics/ui/infopanel_frame.png
-/graphics/ui/labor.png
-/graphics/ui/labor_extra_1.png
-/graphics/ui/lumber.png
-/graphics/ui/mushrooms.png
-/graphics/ui/oil.png
-/graphics/ui/potion.png
-/graphics/ui/prestige.png
-/graphics/ui/prestige_extra_1.png
-/graphics/ui/progress_bar.png
-/graphics/ui/research.png
-/graphics/ui/score.png
-/graphics/ui/score_extra_1.png
-/graphics/ui/silver.png
-/graphics/ui/stone.png
-/graphics/ui/timber.png
-/graphics/ui/wyrmsun_logo.png
-/graphics/ui/wyrmsun_logo_monochromatic.png
+/graphics/celt/buildings/farm.png (licensed under the CC0)
+/graphics/dwarf/buildings/barracks.png (licensed under the CC0)
+/graphics/dwarf/buildings/barracks_shadow.png (licensed under the CC0)
+/graphics/dwarf/buildings/dock.png (licensed under the CC0)
+/graphics/dwarf/buildings/dock_shadow.png (licensed under the CC0)
+/graphics/dwarf/buildings/guard_tower.png (licensed under the CC0)
+/graphics/dwarf/buildings/guard_tower_shadow.png (licensed under the CC0)
+/graphics/dwarf/buildings/lumber_mill.png (licensed under the CC0)
+/graphics/dwarf/buildings/lumber_mill_shadow.png (licensed under the CC0)
+/graphics/dwarf/buildings/mushroom_farm.png (licensed under the CC0)
+/graphics/dwarf/buildings/mushroom_farm_shadow.png (licensed under the CC0)
+/graphics/dwarf/buildings/sentry_tower.png (licensed under the CC0)
+/graphics/dwarf/buildings/sentry_tower_shadow.png (licensed under the CC0)
+/graphics/dwarf/buildings/smithy_shadow.png (licensed under the CC0)
+/graphics/dwarf/buildings/stronghold.png (licensed under the CC0)
+/graphics/dwarf/buildings/stronghold_shadow.png (licensed under the CC0)
+/graphics/dwarf/buildings/town_hall.png (licensed under the CC0)
+/graphics/dwarf/buildings/town_hall_shadow.png (licensed under the CC0)
+/graphics/dwarf/buildings/yale_pen.png (licensed under the CC0)
+/graphics/dwarf/buildings/yale_pen_shadow.png (licensed under the CC0)
+/graphics/dwarf/icons/bearded_throwing_axe.png (licensed under the CC0)
+/graphics/dwarf/icons/baglur.png (licensed under the GPL 2.0)
+/graphics/dwarf/icons/boots.png (modified from igoku's icon) (licensed under the GPL 2.0)
+/graphics/dwarf/icons/broad_axe.png (modified from Ransom.00's icon) (licensed under the GPL 2.0)
+/graphics/dwarf/icons/coinage.png (licensed under the CC0)
+/graphics/dwarf/icons/durin.png (licensed under the CC0)
+/graphics/dwarf/icons/dwarven_axefighter.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/icons/dwarven_axefighter_black_hair.png (modified by b_o from the icon made by Jinn, and later reworked by Jinn as well) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/icons/dwarven_axefighter_blond_hair.png (modified by b_o from the icon made by Jinn, and later reworked by Jinn as well) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/icons/dwarven_axefighter_brown_hair.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/icons/dwarven_axefighter_gray_hair.png (modified by b_o from the icon made by Jinn, and later reworked by Jinn as well) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/icons/dwarven_scout.png (licensed under the CC0)
+/graphics/dwarf/icons/dwarven_scout_blond_hair.png (modified by b_o from the icon made by Jinn, and later reworked by Jinn as well) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/icons/dwarven_scout_blond_hair_braided_beard.png (modified from the icon made by Jinn, and later reworked by Jinn as well) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/icons/dwarven_scout_braided_beard.png (licensed under the CC0)
+/graphics/dwarf/icons/dwarven_scout_gray_hair.png (modified by b_o from the icon made by Jinn, and later reworked by Jinn as well) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/icons/dwarven_scout_gray_hair_braided_beard.png (modified by b_o from the icon made by Jinn, and later reworked by Jinn as well) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/icons/dwarven_steelclad.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/icons/dwarven_steelclad_black_hair.png (modified by b_o from the icon made by Jinn, and later reworked by Jinn as well) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/icons/dwarven_steelclad_blond_hair.png (modified by b_o from the icon made by Jinn, and later reworked by Jinn as well) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/icons/dwarven_steelclad_brown_hair.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/icons/dwarven_steelclad_gray_hair.png (modified by b_o from the icon made by Jinn, and later reworked by Jinn as well) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/icons/gryphon_rider.png (licensed under the CC0)
+/graphics/dwarf/icons/gryphon_rider_brown_hair.png (licensed under the CC0)
+/graphics/dwarf/icons/gryphon_rider_red_hair.png (licensed under the CC0)
+/graphics/dwarf/icons/guard.png (licensed under the GPL 2.0)
+/graphics/dwarf/icons/militia.png (licensed under the CC0)
+/graphics/dwarf/icons/miner.png (licensed under the CC0)
+/graphics/dwarf/icons/miner_extra_1.png (licensed under the CC0)
+/graphics/dwarf/icons/pathfinder.png (licensed under the CC0)
+/graphics/dwarf/icons/pathfinder_black_hair.png (licensed under the CC0)
+/graphics/dwarf/icons/pathfinder_blond_hair.png (licensed under the CC0)
+/graphics/dwarf/icons/pathfinder_gray_hair.png (licensed under the CC0)
+/graphics/dwarf/icons/patrol_land.png (licensed under the CC0)
+/graphics/dwarf/icons/return_goods.png (licensed under the CC0)
+/graphics/dwarf/icons/rugnur.png (licensed under the GPL 2.0)
+/graphics/dwarf/icons/rugnur_older.png (licensed under the GPL 2.0)
+/graphics/dwarf/icons/sharp_throwing_axe.png (licensed under the CC0)
+/graphics/dwarf/icons/shield_1.png (modified from igoku's icon) (licensed under the GPL 2.0)
+/graphics/dwarf/icons/stand_ground.png (licensed under the CC0)
+/graphics/dwarf/icons/thane.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/icons/thane_black_hair.png (modified by b_o from the icon made by Jinn, and later reworked by Jinn as well) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/icons/thane_blond_hair.png (modified by b_o from the icon made by Jinn, and later reworked by Jinn as well) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/icons/thane_brown_hair.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/icons/thane_gray_hair.png (modified by b_o from the icon made by Jinn, and later reworked by Jinn as well) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/icons/throwing_axe.png (licensed under the CC0)
+/graphics/dwarf/ui/buttonpanel.png (licensed under the CC0)
+/graphics/dwarf/ui/buttonpanel_480.png (licensed under the CC0)
+/graphics/dwarf/ui/buttonpanel_600.png (licensed under the CC0)
+/graphics/dwarf/ui/buttonpanel_768.png (licensed under the CC0)
+/graphics/dwarf/ui/buttonpanel_800.png (licensed under the CC0)
+/graphics/dwarf/ui/buttonpanel_960.png (licensed under the CC0)
+/graphics/dwarf/ui/buttonpanel_1024.png (licensed under the CC0)
+/graphics/dwarf/ui/buttonpanel_1050.png (licensed under the CC0)
+/graphics/dwarf/ui/buttonpanel_1200.png (licensed under the CC0)
+/graphics/dwarf/ui/filler_bottom.png (licensed under the CC0)
+/graphics/dwarf/ui/filler-left_480.png (licensed under the CC0)
+/graphics/dwarf/ui/filler-left_600.png (licensed under the CC0)
+/graphics/dwarf/ui/filler-left_768.png (licensed under the CC0)
+/graphics/dwarf/ui/filler-left_800.png (licensed under the CC0)
+/graphics/dwarf/ui/filler-left_960.png (licensed under the CC0)
+/graphics/dwarf/ui/filler-left_1024.png (licensed under the CC0)
+/graphics/dwarf/ui/filler-left_1050.png (licensed under the CC0)
+/graphics/dwarf/ui/filler-left_1200.png (licensed under the CC0)
+/graphics/dwarf/ui/infopanel.png (licensed under the CC0)
+/graphics/dwarf/ui/infopanel_old.png (licensed under the CC0)
+/graphics/dwarf/ui/menubutton.png (licensed under the CC0)
+/graphics/dwarf/ui/minimap.png (licensed under the CC0)
+/graphics/dwarf/ui/panel_1.png (licensed under the CC0)
+/graphics/dwarf/ui/panel_2.png (licensed under the CC0)
+/graphics/dwarf/ui/panel_3.png (licensed under the CC0)
+/graphics/dwarf/ui/panel_4.png (licensed under the CC0)
+/graphics/dwarf/ui/panel_5.png (licensed under the CC0)
+/graphics/dwarf/ui/resource.png (licensed under the CC0)
+/graphics/dwarf/ui/resource_640.png (licensed under the CC0)
+/graphics/dwarf/ui/resource_800.png (licensed under the CC0)
+/graphics/dwarf/ui/resource_1024.png (licensed under the CC0)
+/graphics/dwarf/ui/resource_1280.png (licensed under the CC0)
+/graphics/dwarf/ui/resource_1360.png (licensed under the CC0)
+/graphics/dwarf/ui/resource_1400.png (licensed under the CC0)
+/graphics/dwarf/ui/resource_1600.png (licensed under the CC0)
+/graphics/dwarf/ui/resource_1680.png (licensed under the CC0)
+/graphics/dwarf/ui/statusline_640.png (licensed under the CC0)
+/graphics/dwarf/ui/statusline_800.png (licensed under the CC0)
+/graphics/dwarf/ui/statusline_1024.png (licensed under the CC0)
+/graphics/dwarf/ui/statusline_1280.png (licensed under the CC0)
+/graphics/dwarf/ui/statusline_1360.png (licensed under the CC0)
+/graphics/dwarf/ui/statusline_1400.png (licensed under the CC0)
+/graphics/dwarf/ui/statusline_1600.png (licensed under the CC0)
+/graphics/dwarf/ui/statusline_1680.png (licensed under the CC0)
+/graphics/dwarf/ui/cursors/dwarven_gauntlet.png (licensed under the CC0)
+/graphics/dwarf/ui/cursors/dwarven_gauntlet_extra_1.png (licensed under the CC0)
+/graphics/dwarf/ui/cursors/dwarven_gauntlet_extra_2.png (licensed under the CC0)
+/graphics/dwarf/ui/cursors/dwarven_gauntlet_extra_3.png (licensed under the CC0)
+/graphics/dwarf/ui/cursors/dwarven_gauntlet_extra_4.png (licensed under the CC0)
+/graphics/dwarf/ui/cursors/dwarven_gauntlet_extra_5.png (licensed under the CC0)
+/graphics/dwarf/ui/cursors/dwarven_gauntlet_extra_6.png (licensed under the CC0)
+/graphics/dwarf/ui/cursors/dwarven_gauntlet_extra_7.png (licensed under the CC0)
+/graphics/dwarf/ui/cursors/dwarven_gauntlet_extra_8.png (licensed under the CC0)
+/graphics/dwarf/ui/cursors/dwarven_gauntlet_extra_9.png (licensed under the CC0)
+/graphics/dwarf/ui/cursors/dwarven_gauntlet_extra_10.png (licensed under the CC0)
+/graphics/dwarf/ui/widgets/button-large-grayed.png (licensed under the CC0)
+/graphics/dwarf/ui/widgets/button-large-normal.png (licensed under the CC0)
+/graphics/dwarf/ui/widgets/button-large-pressed.png (licensed under the CC0)
+/graphics/dwarf/ui/widgets/button-small-grayed.png (licensed under the CC0)
+/graphics/dwarf/ui/widgets/button-small-normal.png (licensed under the CC0)
+/graphics/dwarf/ui/widgets/button-small-pressed.png (licensed under the CC0)
+/graphics/dwarf/ui/widgets/button-thin-medium-normal.png (licensed under the CC0)
+/graphics/dwarf/ui/widgets/button-thin-medium-pressed.png (licensed under the CC0)
+/graphics/dwarf/ui/widgets/button-thin-small-normal.png (licensed under the CC0)
+/graphics/dwarf/ui/widgets/button-thin-small-pressed.png (licensed under the CC0)
+/graphics/dwarf/ui/widgets/button-thinest-medium-normal.png (licensed under the CC0)
+/graphics/dwarf/ui/widgets/button-thinest-medium-pressed.png (licensed under the CC0)
+/graphics/dwarf/ui/widgets/down-arrow-normal.png (licensed under the CC0)
+/graphics/dwarf/ui/widgets/down-arrow-pressed.png (licensed under the CC0)
+/graphics/dwarf/ui/widgets/down-arrow-normal-slider.png (licensed under the CC0)
+/graphics/dwarf/ui/widgets/down-arrow-pressed-slider.png (licensed under the CC0)
+/graphics/dwarf/ui/widgets/left-arrow-normal.png (licensed under the CC0)
+/graphics/dwarf/ui/widgets/left-arrow-pressed.png (licensed under the CC0)
+/graphics/dwarf/ui/widgets/pulldown-bar-normal.png (licensed under the CC0)
+/graphics/dwarf/ui/widgets/right-arrow-normal.png (licensed under the CC0)
+/graphics/dwarf/ui/widgets/right-arrow-pressed.png (licensed under the CC0)
+/graphics/dwarf/ui/widgets/radio-normal-selected.png (licensed under the CC0)
+/graphics/dwarf/ui/widgets/radio-normal-unselected.png (licensed under the CC0)
+/graphics/dwarf/ui/widgets/radio-pressed-selected.png (licensed under the CC0)
+/graphics/dwarf/ui/widgets/radio-pressed-unselected.png (licensed under the CC0)
+/graphics/dwarf/ui/widgets/slider-bar-normal.png (licensed under the CC0)
+/graphics/dwarf/ui/widgets/slider-knob.png (licensed under the CC0)
+/graphics/dwarf/ui/widgets/up-arrow-normal.png (licensed under the CC0)
+/graphics/dwarf/ui/widgets/up-arrow-pressed.png (licensed under the CC0)
+/graphics/dwarf/ui/widgets/up-arrow-normal-slider.png (licensed under the CC0)
+/graphics/dwarf/ui/widgets/up-arrow-pressed-slider.png (licensed under the CC0)
+/graphics/dwarf/units/miner_with_coal.png (modified from b_o's dwarven miner unit graphics) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/units/transport_ship.png (licensed under the CC0)
+/graphics/dwarf/units/transport_ship_water.png (licensed under the CC0)
+/graphics/elf/icons/elven_swordsman.png (licensed under the CC0)
+/graphics/germanic/buildings/barracks.png (licensed under the CC0)
+/graphics/germanic/buildings/barracks_shadow.png (licensed under the CC0)
+/graphics/germanic/buildings/carpenters_shop_shadow.png (licensed under the CC0)
+/graphics/germanic/buildings/farm.png (licensed under the CC0)
+/graphics/germanic/buildings/farm_shadow.png (licensed under the CC0)
+/graphics/germanic/buildings/farm_extra_1.png (licensed under the CC0)
+/graphics/germanic/buildings/smithy_shadow.png (licensed under the CC0)
+/graphics/germanic/buildings/town_hall.png (modified to add the fire animation) (licensed under the CC0)
+/graphics/germanic/buildings/town_hall_shadow.png (licensed under the CC0)
+/graphics/germanic/icons/warrior.png (licensed under the CC0)
+/graphics/germanic/icons/warrior_black_hair.png (licensed under the CC0)
+/graphics/germanic/icons/warrior_brown_hair.png (licensed under the CC0)
+/graphics/germanic/icons/warrior_gray_hair.png (licensed under the CC0)
+/graphics/germanic/icons/warrior_red_hair.png (licensed under the CC0)
+/graphics/germanic/ui/buttonpanel.png (licensed under the CC0)
+/graphics/germanic/ui/buttonpanel_480.png (licensed under the CC0)
+/graphics/germanic/ui/buttonpanel_600.png (licensed under the CC0)
+/graphics/germanic/ui/buttonpanel_768.png (licensed under the CC0)
+/graphics/germanic/ui/buttonpanel_800.png (licensed under the CC0)
+/graphics/germanic/ui/buttonpanel_960.png (licensed under the CC0)
+/graphics/germanic/ui/buttonpanel_1024.png (licensed under the CC0)
+/graphics/germanic/ui/buttonpanel_1050.png (licensed under the CC0)
+/graphics/germanic/ui/buttonpanel_1200.png (licensed under the CC0)
+/graphics/germanic/ui/filler_bottom.png (licensed under the CC0)
+/graphics/germanic/ui/filler-left_480.png (licensed under the CC0)
+/graphics/germanic/ui/filler-left_600.png (licensed under the CC0)
+/graphics/germanic/ui/filler-left_768.png (licensed under the CC0)
+/graphics/germanic/ui/filler-left_800.png (licensed under the CC0)
+/graphics/germanic/ui/filler-left_960.png (licensed under the CC0)
+/graphics/germanic/ui/filler-left_1024.png (licensed under the CC0)
+/graphics/germanic/ui/filler-left_1050.png (licensed under the CC0)
+/graphics/germanic/ui/filler-left_1200.png (licensed under the CC0)
+/graphics/germanic/ui/infopanel.png (licensed under the CC0)
+/graphics/germanic/ui/infopanel_old.png (licensed under the CC0)
+/graphics/germanic/ui/menubutton.png (licensed under the CC0)
+/graphics/germanic/ui/minimap.png (licensed under the CC0)
+/graphics/germanic/ui/panel_1.png (licensed under the CC0)
+/graphics/germanic/ui/panel_2.png (licensed under the CC0)
+/graphics/germanic/ui/panel_3.png (licensed under the CC0)
+/graphics/germanic/ui/panel_4.png (licensed under the CC0)
+/graphics/germanic/ui/panel_5.png (licensed under the CC0)
+/graphics/germanic/ui/resource.png (licensed under the CC0)
+/graphics/germanic/ui/resource_640.png (licensed under the CC0)
+/graphics/germanic/ui/resource_800.png (licensed under the CC0)
+/graphics/germanic/ui/resource_1024.png (licensed under the CC0)
+/graphics/germanic/ui/resource_1280.png (licensed under the CC0)
+/graphics/germanic/ui/resource_1360.png (licensed under the CC0)
+/graphics/germanic/ui/resource_1400.png (licensed under the CC0)
+/graphics/germanic/ui/resource_1600.png (licensed under the CC0)
+/graphics/germanic/ui/resource_1680.png (licensed under the CC0)
+/graphics/germanic/ui/statusline_640.png (licensed under the CC0)
+/graphics/germanic/ui/statusline_800.png (licensed under the CC0)
+/graphics/germanic/ui/statusline_1024.png (licensed under the CC0)
+/graphics/germanic/ui/statusline_1280.png (licensed under the CC0)
+/graphics/germanic/ui/statusline_1360.png (licensed under the CC0)
+/graphics/germanic/ui/statusline_1400.png (licensed under the CC0)
+/graphics/germanic/ui/statusline_1600.png (licensed under the CC0)
+/graphics/germanic/ui/statusline_1680.png (licensed under the CC0)
+/graphics/germanic/ui/widgets/button-large-grayed.png (licensed under the CC0)
+/graphics/germanic/ui/widgets/button-large-normal.png (licensed under the CC0)
+/graphics/germanic/ui/widgets/button-large-pressed.png (licensed under the CC0)
+/graphics/germanic/ui/widgets/button-small-grayed.png (licensed under the CC0)
+/graphics/germanic/ui/widgets/button-small-normal.png (licensed under the CC0)
+/graphics/germanic/ui/widgets/button-small-pressed.png (licensed under the CC0)
+/graphics/germanic/ui/widgets/button-thin-medium-normal.png (licensed under the CC0)
+/graphics/germanic/ui/widgets/button-thin-medium-pressed.png (licensed under the CC0)
+/graphics/germanic/ui/widgets/button-thin-small-normal.png (licensed under the CC0)
+/graphics/germanic/ui/widgets/button-thin-small-pressed.png (licensed under the CC0)
+/graphics/germanic/ui/widgets/button-thinest-medium-normal.png (licensed under the CC0)
+/graphics/germanic/ui/widgets/button-thinest-medium-pressed.png (licensed under the CC0)
+/graphics/germanic/ui/widgets/down-arrow-normal.png (licensed under the CC0)
+/graphics/germanic/ui/widgets/down-arrow-pressed.png (licensed under the CC0)
+/graphics/germanic/ui/widgets/down-arrow-normal-slider.png (licensed under the CC0)
+/graphics/germanic/ui/widgets/down-arrow-pressed-slider.png (licensed under the CC0)
+/graphics/germanic/ui/widgets/left-arrow-normal.png (licensed under the CC0)
+/graphics/germanic/ui/widgets/left-arrow-pressed.png (licensed under the CC0)
+/graphics/germanic/ui/widgets/pulldown-bar-normal.png (licensed under the CC0)
+/graphics/germanic/ui/widgets/right-arrow-normal.png (licensed under the CC0)
+/graphics/germanic/ui/widgets/right-arrow-pressed.png (licensed under the CC0)
+/graphics/germanic/ui/widgets/radio-normal-selected.png (licensed under the CC0)
+/graphics/germanic/ui/widgets/radio-normal-unselected.png (licensed under the CC0)
+/graphics/germanic/ui/widgets/radio-pressed-selected.png (licensed under the CC0)
+/graphics/germanic/ui/widgets/radio-pressed-unselected.png (licensed under the CC0)
+/graphics/germanic/ui/widgets/slider-bar-normal.png (licensed under the CC0)
+/graphics/germanic/ui/widgets/slider-knob.png (licensed under the CC0)
+/graphics/germanic/ui/widgets/up-arrow-normal.png (licensed under the CC0)
+/graphics/germanic/ui/widgets/up-arrow-pressed.png (licensed under the CC0)
+/graphics/germanic/ui/widgets/up-arrow-normal-slider.png (licensed under the CC0)
+/graphics/germanic/ui/widgets/up-arrow-pressed-slider.png (licensed under the CC0)
+/graphics/gnome/buildings/barracks.png (licensed under the CC0)
+/graphics/gnome/buildings/barracks_shadow.png (licensed under the CC0)
+/graphics/gnome/buildings/farm.png (licensed under the CC0)
+/graphics/gnome/buildings/farm_shadow.png (licensed under the CC0)
+/graphics/gnome/buildings/town_hall.png (licensed under the CC0)
+/graphics/gnome/buildings/town_hall_shadow.png (licensed under the CC0)
+/graphics/gnome/icons/gnomish_recruit.png (licensed under the CC0)
+/graphics/gnome/icons/gnomish_worker.png (licensed under the CC0)
+/graphics/gnome/icons/gnomish_worker_black_hair.png (licensed under the CC0)
+/graphics/gnome/icons/gnomish_worker_gray_hair.png (modified by b_o from the icon made by Jinn, and later reworked by Jinn as well) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/gnome/icons/herbal_cure.png (modified from J. W. Bjerk's icon) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/gnome/icons/patrol_land.png (licensed under the CC0)
+/graphics/gnome/icons/patrol_land_extra_1.png (licensed under the CC0)
+/graphics/gnome/icons/portent.png (modified from J. W. Bjerk's icon) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/gnome/ui/widgets/button-large-grayed.png (licensed under the CC0)
+/graphics/gnome/ui/widgets/button-large-normal.png (licensed under the CC0)
+/graphics/gnome/ui/widgets/button-large-pressed.png (licensed under the CC0)
+/graphics/gnome/ui/widgets/button-small-grayed.png (licensed under the CC0)
+/graphics/gnome/ui/widgets/button-small-normal.png (licensed under the CC0)
+/graphics/gnome/ui/widgets/button-small-pressed.png (licensed under the CC0)
+/graphics/gnome/ui/widgets/button-thin-medium-normal.png (licensed under the CC0)
+/graphics/gnome/ui/widgets/button-thin-medium-pressed.png (licensed under the CC0)
+/graphics/gnome/ui/widgets/button-thin-small-normal.png (licensed under the CC0)
+/graphics/gnome/ui/widgets/button-thin-small-pressed.png (licensed under the CC0)
+/graphics/goblin/buildings/farm_shadow.png (licensed under the CC0)
+/graphics/goblin/buildings/lumber_mill_shadow.png (licensed under the CC0)
+/graphics/goblin/buildings/mess_hall_shadow.png (licensed under the CC0)
+/graphics/goblin/buildings/smithy.png (licensed under the CC0)
+/graphics/goblin/buildings/smithy_shadow.png (licensed under the CC0)
+/graphics/goblin/buildings/town_hall_shadow.png (licensed under the CC0)
+/graphics/goblin/icons/goblin_archer.png (licensed under the CC0)
+/graphics/goblin/icons/goblin_assassin.png (licensed under the CC0)
+/graphics/goblin/icons/goblin_spearman.png (licensed under the CC0)
+/graphics/goblin/icons/goblin_worker.png (licensed under the CC0)
+/graphics/missiles/big_fire.png (modified from Mikodrak's graphics) (licensed under the CC0)
+/graphics/missiles/big_fire_extra_1.png (modified from Mikodrak's graphics) (licensed under the CC0)
+/graphics/missiles/explosion.png (modified from StumpyStrust's graphics) (licensed under the CC0)
+/graphics/missiles/siege_projectile_impact.png (modified from Cuzco's graphics) (licensed under the CC0)
+/graphics/missiles/small_fire.png (modified from Mikodrak's graphics) (licensed under the CC0)
+/graphics/neutral/buildings/coal_mine.png (licensed under the CC0)
+/graphics/neutral/buildings/copper_deposit.png (licensed under the CC0)
+/graphics/neutral/buildings/copper_deposit_shadow.png (licensed under the CC0)
+/graphics/neutral/buildings/copper_mine.png (licensed under the CC0)
+/graphics/neutral/buildings/copper_mine_light.png (licensed under the CC0)
+/graphics/neutral/buildings/copper_mine_shadow.png (licensed under the CC0)
+/graphics/neutral/buildings/copper_rock_1.png (licensed under the CC0)
+/graphics/neutral/buildings/copper_rock_1_shadow.png (licensed under the CC0)
+/graphics/neutral/buildings/copper_rock_2.png (licensed under the CC0)
+/graphics/neutral/buildings/copper_rock_2_shadow.png (licensed under the CC0)
+/graphics/neutral/buildings/copper_rock_3.png (licensed under the CC0)
+/graphics/neutral/buildings/copper_rock_3_shadow.png (licensed under the CC0)
+/graphics/neutral/buildings/copper_rock_4.png (licensed under the CC0)
+/graphics/neutral/buildings/copper_rock_4_shadow.png (licensed under the CC0)
+/graphics/neutral/buildings/glyph.png (licensed under the CC0)
+/graphics/neutral/buildings/glyph_player_color.png (licensed under the CC0)
+/graphics/neutral/buildings/gold_deposit.png (licensed under the CC0)
+/graphics/neutral/buildings/gold_deposit_shadow.png (licensed under the CC0)
+/graphics/neutral/buildings/gold_mine.png (licensed under the CC0)
+/graphics/neutral/buildings/gold_mine_light.png (licensed under the CC0)
+/graphics/neutral/buildings/gold_mine_rail.png (licensed under the CC0)
+/graphics/neutral/buildings/gold_mine_shadow.png (licensed under the CC0)
+/graphics/neutral/buildings/gold_rock_1.png (licensed under the CC0)
+/graphics/neutral/buildings/gold_rock_1_shadow.png (licensed under the CC0)
+/graphics/neutral/buildings/gold_rock_2.png (licensed under the CC0)
+/graphics/neutral/buildings/gold_rock_2_shadow.png (licensed under the CC0)
+/graphics/neutral/buildings/gold_rock_3.png (licensed under the CC0)
+/graphics/neutral/buildings/gold_rock_3_shadow.png (licensed under the CC0)
+/graphics/neutral/buildings/gold_rock_4.png (licensed under the CC0)
+/graphics/neutral/buildings/gold_rock_4_shadow.png (licensed under the CC0)
+/graphics/neutral/buildings/land_construction_site.png (licensed under the CC0)
+/graphics/neutral/buildings/mercenary_camp.png (later modified by b_o to add the fire animation) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/buildings/mercenary_camp_shadow.png (licensed under the CC0)
+/graphics/neutral/buildings/silver_deposit.png (licensed under the CC0)
+/graphics/neutral/buildings/silver_deposit_shadow.png (licensed under the CC0)
+/graphics/neutral/buildings/silver_mine.png (licensed under the CC0)
+/graphics/neutral/buildings/silver_mine_light.png (licensed under the CC0)
+/graphics/neutral/buildings/silver_mine_shadow.png (licensed under the CC0)
+/graphics/neutral/buildings/silver_rock_1.png (licensed under the CC0)
+/graphics/neutral/buildings/silver_rock_1_shadow.png (licensed under the CC0)
+/graphics/neutral/buildings/silver_rock_2.png (licensed under the CC0)
+/graphics/neutral/buildings/silver_rock_2_shadow.png (licensed under the CC0)
+/graphics/neutral/buildings/silver_rock_3.png (licensed under the CC0)
+/graphics/neutral/buildings/silver_rock_3_shadow.png (licensed under the CC0)
+/graphics/neutral/buildings/silver_rock_4.png (licensed under the CC0)
+/graphics/neutral/buildings/silver_rock_4_shadow.png (licensed under the CC0)
+/graphics/neutral/buildings/wood_pile.png (licensed under the CC0)
+/graphics/neutral/icons/attack_ground.png (licensed under the CC0)
+/graphics/neutral/icons/axe_mastery.png (licensed under the CC0)
+/graphics/neutral/icons/bodkin_arrow.png (licensed under the CC0)
+/graphics/neutral/icons/build_basic_structure.png (licensed under the CC0)
+/graphics/neutral/icons/cancel.png (licensed under the CC0)
+/graphics/neutral/icons/cancel_extra_1.png (licensed under the CC0)
+/graphics/neutral/icons/cancel_extra_2.png (licensed under the CC0)
+/graphics/neutral/icons/catapult_projectile_granite.png (licensed under the CC0)
+/graphics/neutral/icons/catapult_projectile_metal.png (licensed under the CC0)
+/graphics/neutral/icons/catapult_projectile_sandstone.png (licensed under the CC0)
+/graphics/neutral/icons/catapult_projectile_sandstone_extra_1.png (licensed under the CC0)
+/graphics/neutral/icons/critical_strike.png (licensed under the CC0)
+/graphics/neutral/icons/cyclops.png (modified by b_o from an ogre icon made by Jinn) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/icons/deadly_precision.png (licensed under the CC0)
+/graphics/neutral/icons/eagle_eye.png (licensed under the CC0)
+/graphics/neutral/icons/food.png (licensed under the CC0)
+/graphics/neutral/icons/gold.png (licensed under the CC0)
+/graphics/neutral/icons/gryphon.png (licensed under the CC0)
+/graphics/neutral/icons/gryphon_blue_feathers.png (modified by b_o from the gryphon icon made by Jinn, and later reworked by Jinn as well) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/icons/gryphon_white_feathers.png (licensed under the CC0)
+/graphics/neutral/icons/harvest.png (licensed under the CC0)
+/graphics/neutral/icons/heater_shield.png (licensed under the CC0)
+/graphics/neutral/icons/horse.png (licensed under the CC0)
+/graphics/neutral/icons/horse_trained.png (licensed under the CC0)
+/graphics/neutral/icons/inventory.png (licensed under the CC0)
+/graphics/neutral/icons/iron_edged_wood_plow.png (licensed under the CC0)
+/graphics/neutral/icons/iron_plow.png (licensed under the CC0)
+/graphics/neutral/icons/iron_plow_extra_1.png (licensed under the CC0)
+/graphics/neutral/icons/labor.png (licensed under the CC0)
+/graphics/neutral/icons/level_up.png (licensed under the CC0)
+/graphics/neutral/icons/long_swordsman.png (licensed under the CC0)
+/graphics/neutral/icons/potion_red.png (licensed under the CC0)
+/graphics/neutral/icons/rally_point.png (licensed under the CC0)
+/graphics/neutral/icons/repair.png (licensed under the CC0)
+/graphics/neutral/icons/repair_extra_1.png (licensed under the CC0)
+/graphics/neutral/icons/repair_extra_2.png (licensed under the CC0)
+/graphics/neutral/icons/research.png (licensed under the CC0)
+/graphics/neutral/icons/sword_mastery.png (licensed under the CC0)
+/graphics/neutral/icons/sword_mastery_bronze.png (licensed under the CC0)
+/graphics/neutral/icons/water_elemental.png (licensed under the CC0)
+/graphics/neutral/icons/wood_plow.png (licensed under the CC0)
+/graphics/neutral/icons/yale.png (licensed under the CC0)
+/graphics/neutral/icons/yale_gray_brown_fur.png (licensed under the CC0)
+/graphics/neutral/icons/yale_gray_fur.png (licensed under the CC0)
+/graphics/neutral/icons/yale_white_fur.png (licensed under the CC0)
+/graphics/neutral/units/dwarven_corpse.png (licensed under the CC0)
+/graphics/neutral/units/gnomish_goblin_and_kobold_corpses.png (licensed under the CC0)
+/graphics/neutral/units/human_corpse.png (licensed under the CC0)
+/graphics/norse/icons/runewriting.png (licensed under the CC0)
+/graphics/orc/icons/sea_orc.png (licensed under the CC0)
+/graphics/orc/icons/shaman.png (licensed under the CC0)
+/graphics/orc/icons/spearthrower.png (licensed under the CC0)
+/graphics/orc/icons/warrior.png (licensed under the CC0)
+/graphics/teuton/buildings/barracks.png (licensed under the CC0)
+/graphics/teuton/buildings/barracks_shadow.png (licensed under the CC0)
+/graphics/teuton/buildings/dock.png (licensed under the CC0)
+/graphics/teuton/buildings/dock_shadow.png (licensed under the CC0)
+/graphics/teuton/buildings/farm.png (licensed under the CC0)
+/graphics/teuton/buildings/farm_shadow.png (licensed under the CC0)
+/graphics/teuton/buildings/guard_tower.png (licensed under the CC0)
+/graphics/teuton/buildings/guard_tower_shadow.png (licensed under the CC0)
+/graphics/teuton/buildings/lumber_mill.png (licensed under the CC0)
+/graphics/teuton/buildings/lumber_mill_shadow.png (licensed under the CC0)
+/graphics/teuton/buildings/smithy.png (licensed under the CC0)
+/graphics/teuton/buildings/smithy_shadow.png (licensed under the CC0)
+/graphics/teuton/buildings/stables.png (licensed under the CC0)
+/graphics/teuton/buildings/stables_shadow.png (licensed under the CC0)
+/graphics/teuton/buildings/stronghold.png (licensed under the CC0)
+/graphics/teuton/buildings/stronghold_shadow.png (licensed under the CC0)
+/graphics/teuton/buildings/town_hall.png (licensed under the CC0)
+/graphics/teuton/buildings/town_hall_shadow.png (licensed under the CC0)
+/graphics/teuton/buildings/watch_tower.png (licensed under the CC0)
+/graphics/teuton/buildings/watch_tower_shadow.png (licensed under the CC0)
+/graphics/teuton/icons/coinage.png (licensed under the CC0)
+/graphics/teuton/icons/iron_shield.png (licensed under the CC0)
+/graphics/teuton/icons/iron_shield_extra_1.png (licensed under the CC0)
+/graphics/teuton/icons/marbod.png (licensed under the CC0)
+/graphics/teuton/icons/ritter.png (licensed under the CC0)
+/graphics/teuton/icons/saxon_swordsman.png (licensed under the CC0)
+/graphics/teuton/icons/saxon_swordsman_black_hair.png (licensed under the CC0)
+/graphics/teuton/icons/saxon_swordsman_blond_hair.png (licensed under the CC0)
+/graphics/teuton/icons/saxon_swordsman_brown_hair.png (licensed under the CC0)
+/graphics/teuton/icons/spearman.png (licensed under the CC0)
+/graphics/teuton/units/kogge.png (licensed under the CC0)
+/graphics/teuton/units/kogge_water.png (licensed under the CC0)
+/graphics/teuton/units/suebi_shield.png (licensed under the CC0)
+/graphics/tilesets/cave/terrain/cave.png (licensed under the CC0)
+/graphics/tilesets/cave/terrain/rock.png (licensed under the CC0)
+/graphics/tilesets/dungeon/terrain/dungeon.png (rockbound cave floor and cave wall tiles) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/tilesets/forest/neutral/icons/rat.png (licensed under the CC0)
+/graphics/tilesets/forest/terrain/forest.png (dirt and water tiles) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/tilesets/forest/terrain/rock.png (licensed under the CC0)
+/graphics/tilesets/swamp/neutral/buildings/destroyed_site.png (licensed under the CC0)
+/graphics/tilesets/swamp/neutral/icons/rat.png (licensed under the CC0)
+/graphics/tilesets/swamp/terrain/rock.png (licensed under the CC0)
+/graphics/tilesets/swamp/terrain/swamp.png (licensed under the CC0)
+/graphics/tilesets/world/sites/dwarf_barracks.png (licensed under the CC0)
+/graphics/tilesets/world/sites/dwarf_settlement.png (licensed under the CC0)
+/graphics/tilesets/world/sites/germanic_barracks.png (licensed under the CC0)
+/graphics/tilesets/world/sites/germanic_settlement.png (licensed under the CC0)
+/graphics/tilesets/world/sites/gnome_barracks.png (licensed under the CC0)
+/graphics/tilesets/world/sites/gnome_settlement.png (licensed under the CC0)
+/graphics/tilesets/world/sites/goblin_barracks.png (based on the goblin mess hall made by Leo) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/tilesets/world/sites/goblin_settlement.png (based on the goblin buildings made by Leo) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/tilesets/world/sites/kal_karthan_settlement.png (licensed under the CC0)
+/graphics/tilesets/world/sites/resource_building_copper.png (licensed under the CC0)
+/graphics/tilesets/world/sites/resource_building_copper_player_color.png (licensed under the CC0)
+/graphics/tilesets/world/sites/resource_building_gold.png (licensed under the CC0)
+/graphics/tilesets/world/sites/resource_building_gold_player_color.png (licensed under the CC0)
+/graphics/tilesets/world/sites/resource_building_gold_mountains.png (licensed under the CC0)
+/graphics/tilesets/world/sites/resource_building_gold_mountains_player_color.png (licensed under the CC0)
+/graphics/tilesets/world/sites/resource_building_grain_1.png (licensed under the CC0)
+/graphics/tilesets/world/sites/resource_building_grain_2.png (licensed under the CC0)
+/graphics/tilesets/world/sites/resource_building_grain_3.png (licensed under the CC0)
+/graphics/tilesets/world/sites/resource_building_grain_4.png (licensed under the CC0)
+/graphics/tilesets/world/sites/resource_building_lumber.png (licensed under the CC0)
+/graphics/tilesets/world/sites/resource_building_lumber_conifer_forest.png (licensed under the CC0)
+/graphics/tilesets/world/sites/resource_building_mushrooms_1.png (licensed under the CC0)
+/graphics/tilesets/world/sites/resource_building_mushrooms_2.png (licensed under the CC0)
+/graphics/tilesets/world/sites/resource_building_mushrooms_3.png (licensed under the CC0)
+/graphics/tilesets/world/sites/resource_building_mushrooms_4.png (licensed under the CC0)
+/graphics/tilesets/world/sites/resource_building_mushrooms_hills.png (licensed under the CC0)
+/graphics/tilesets/world/sites/resource_building_mushrooms_mountains.png (licensed under the CC0)
+/graphics/tilesets/world/sites/resource_building_silver.png (licensed under the CC0)
+/graphics/tilesets/world/sites/resource_building_silver_player_color.png (licensed under the CC0)
+/graphics/tilesets/world/sites/resource_building_stone.png (licensed under the CC0)
+/graphics/tilesets/world/sites/resource_building_stone_mountains.png (licensed under the CC0)
+/graphics/tilesets/world/sites/resource_not_worked.png (licensed under the CC0)
+/graphics/tilesets/world/sites/teuton_settlement_masonry.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/conifer_forest/conifer_forest_east_1.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/conifer_forest/conifer_forest_east_2.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/conifer_forest/conifer_forest_inner.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/conifer_forest/conifer_forest_north_1.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/conifer_forest/conifer_forest_north_2.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/conifer_forest/conifer_forest_northeast_inner_1.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/conifer_forest/conifer_forest_northeast_outer_1.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/conifer_forest/conifer_forest_northeast_outer_2.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/conifer_forest/conifer_forest_northeast_southwest_inner_1.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/conifer_forest/conifer_forest_northwest_inner_1.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/conifer_forest/conifer_forest_northwest_outer_1.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/conifer_forest/conifer_forest_northwest_outer_2.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/conifer_forest/conifer_forest_northwest_southeast_inner_1.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/conifer_forest/conifer_forest_south_1.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/conifer_forest/conifer_forest_south_2.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/conifer_forest/conifer_forest_southeast_inner_1.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/conifer_forest/conifer_forest_southeast_outer_1.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/conifer_forest/conifer_forest_southeast_outer_2.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/conifer_forest/conifer_forest_southwest_inner_1.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/conifer_forest/conifer_forest_southwest_outer_1.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/conifer_forest/conifer_forest_southwest_outer_2.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/conifer_forest/conifer_forest_outer.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/conifer_forest/conifer_forest_outer_extra_1.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/conifer_forest/conifer_forest_west_1.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/conifer_forest/conifer_forest_west_2.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/dark_plains_1.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/dark_plains_2.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/dark_plains_3.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/dark_plains_4.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/dark_plains_5.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/dark_plains_extra_1.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/hills/hills_east_1.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/hills/hills_inner.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/hills/hills_north_1.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/hills/hills_northeast_inner_1.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/hills/hills_northeast_inner_southwest_inner_1.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/hills/hills_northeast_outer_1.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/hills/hills_northwest_inner_1.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/hills/hills_northwest_inner_southeast_inner_1.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/hills/hills_northwest_outer_1.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/hills/hills_outer_1.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/hills/hills_outer_2.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/hills/hills_outer_3.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/hills/hills_outer_4.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/hills/hills_outer_5.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/hills/hills_outer_extra_1.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/hills/hills_south_1.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/hills/hills_southeast_inner_1.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/hills/hills_southeast_outer_1.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/hills/hills_southwest_inner_1.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/hills/hills_southwest_outer_1.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/hills/hills_west_1.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/mountains/mountains_east_1.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/mountains/mountains_inner.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/mountains/mountains_north_1.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/mountains/mountains_northeast_inner_1.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/mountains/mountains_northeast_outer_1.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/mountains/mountains_northeast_southwest_inner_1.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/mountains/mountains_northwest_inner_1.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/mountains/mountains_northwest_outer_1.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/mountains/mountains_northwest_southeast_inner_1.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/mountains/mountains_outer.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/mountains/mountains_south_1.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/mountains/mountains_southeast_inner_1.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/mountains/mountains_southeast_outer_1.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/mountains/mountains_southwest_inner_1.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/mountains/mountains_southwest_outer_1.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/mountains/mountains_west_1.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/ocean/ocean_east_1.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/ocean/ocean_east_2.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/ocean/ocean_east_3.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/ocean/ocean_east_4.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/ocean/ocean_inner.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/ocean/ocean_north_1.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/ocean/ocean_north_2.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/ocean/ocean_north_3.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/ocean/ocean_north_4.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/ocean/ocean_northeast_inner_1.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/ocean/ocean_northeast_inner_2.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/ocean/ocean_northeast_outer_1.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/ocean/ocean_northeast_outer_2.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/ocean/ocean_northeast_outer_3.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/ocean/ocean_northeast_outer_4.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/ocean/ocean_northeast_southwest_inner_1.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/ocean/ocean_northeast_southwest_inner_2.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/ocean/ocean_northwest_inner_1.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/ocean/ocean_northwest_inner_2.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/ocean/ocean_northwest_outer_1.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/ocean/ocean_northwest_outer_2.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/ocean/ocean_northwest_outer_3.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/ocean/ocean_northwest_outer_4.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/ocean/ocean_northwest_southeast_inner_1.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/ocean/ocean_northwest_southeast_inner_2.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/ocean/ocean_south_1.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/ocean/ocean_south_2.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/ocean/ocean_south_3.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/ocean/ocean_south_4.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/ocean/ocean_southeast_inner_1.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/ocean/ocean_southeast_inner_2.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/ocean/ocean_southeast_outer_1.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/ocean/ocean_southeast_outer_2.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/ocean/ocean_southeast_outer_3.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/ocean/ocean_southeast_outer_4.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/ocean/ocean_southwest_inner_1.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/ocean/ocean_southwest_inner_2.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/ocean/ocean_southwest_outer_1.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/ocean/ocean_southwest_outer_2.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/ocean/ocean_southwest_outer_3.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/ocean/ocean_southwest_outer_4.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/ocean/ocean_west_1.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/ocean/ocean_west_2.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/ocean/ocean_west_3.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/ocean/ocean_west_4.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/plains_1.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/plains_2.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/plains_3.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/plains_4.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/plains_5.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/plains_extra_1.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/province_border_east.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/province_border_north.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/province_border_northeast_inner.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/province_border_northeast_outer.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/province_border_northwest_inner.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/province_border_northwest_outer.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/province_border_south.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/province_border_southeast_inner.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/province_border_southeast_outer.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/province_border_southwest_inner.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/province_border_southwest_outer.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/province_border_west.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/province_national_border_east.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/province_national_border_north.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/province_national_border_northeast_inner.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/province_national_border_northeast_outer.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/province_national_border_northwest_inner.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/province_national_border_northwest_outer.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/province_national_border_south.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/province_national_border_southeast_inner.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/province_national_border_southeast_outer.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/province_national_border_southwest_inner.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/province_national_border_southwest_outer.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/province_national_border_west.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/scrub_forest_1.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/scrub_forest_2.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/scrub_forest_3.png (licensed under the CC0)
+/graphics/tilesets/world/terrain/scrub_forest_4.png (licensed under the CC0)
+/graphics/tilesets/fogofwar.png (licensed under the CC0)
+/graphics/ui/backgrounds/gnashorn.png (modified from Tanja Nov.'s drawing) (proprietary and used for Wyrmsun with permission)
+/graphics/ui/backgrounds/gnashorn_profile.png (modified from Tanja Nov.'s drawing) (proprietary and used for Wyrmsun with permission)
+/graphics/ui/backgrounds/gnashorn_small.png (modified from Tanja Nov.'s drawing) (proprietary and used for Wyrmsun with permission)
+/graphics/ui/backgrounds/gryphon.png (modified from Tanja Nov.'s drawing) (proprietary and used for Wyrmsun with permission)
+/graphics/ui/backgrounds/gryphon_profile.png (modified from Tanja Nov.'s drawing) (proprietary and used for Wyrmsun with permission)
+/graphics/ui/backgrounds/gryphon_small.png (modified from Tanja Nov.'s drawing) (proprietary and used for Wyrmsun with permission)
+/graphics/ui/backgrounds/gullinburst.png (modified from Tanja Nov.'s drawing) (proprietary and used for Wyrmsun with permission)
+/graphics/ui/backgrounds/gullinburst_profile.png (modified from Tanja Nov.'s drawing) (proprietary and used for Wyrmsun with permission)
+/graphics/ui/backgrounds/gullinburst_small.png (modified from Tanja Nov.'s drawing) (proprietary and used for Wyrmsun with permission)
+/graphics/ui/backgrounds/wyrm.png (modified from Tanja Nov.'s drawing) (proprietary and used for Wyrmsun with permission)
+/graphics/ui/backgrounds/wyrm_profile.png (modified from Tanja Nov.'s drawing) (proprietary and used for Wyrmsun with permission)
+/graphics/ui/backgrounds/wyrm_small.png (modified from Tanja Nov.'s drawing) (proprietary and used for Wyrmsun with permission)
+/graphics/ui/backgrounds/yale.png (modified from Tanja Nov.'s drawing) (proprietary and used for Wyrmsun with permission)
+/graphics/ui/backgrounds/yale_profile.png (modified from Tanja Nov.'s drawing) (proprietary and used for Wyrmsun with permission)
+/graphics/ui/backgrounds/yale_small.png (modified from Tanja Nov.'s drawing) (proprietary and used for Wyrmsun with permission)
+/graphics/ui/cursors/magnifying_glass.png (licensed under the CC0)
+/graphics/ui/fonts/small.png (licensed under the CC0)
+/graphics/ui/icons/badge_bronze.png (licensed under the CC0)
+/graphics/ui/icons/badge_cracked.png (licensed under the CC0)
+/graphics/ui/icons/badge_foil.png (licensed under the CC0)
+/graphics/ui/icons/badge_glow.png (licensed under the CC0)
+/graphics/ui/icons/badge_gold.png (licensed under the CC0)
+/graphics/ui/icons/badge_silver.png (licensed under the CC0)
+/graphics/ui/icons/food.png (licensed under the CC0)
+/graphics/ui/icons/food_small.png (licensed under the CC0)
+/graphics/ui/icons/gold.png (licensed under the CC0)
+/graphics/ui/icons/gold_small.png (licensed under the CC0)
+/graphics/ui/icons/labor.png (licensed under the CC0)
+/graphics/ui/icons/labor_small.png (licensed under the CC0)
+/graphics/ui/icons/prestige.png (licensed under the CC0)
+/graphics/ui/icons/prestige_small.png (licensed under the CC0)
+/graphics/ui/icons/research.png (licensed under the CC0)
+/graphics/ui/icons/research_small.png (licensed under the CC0)
+/graphics/ui/icons/wyrm_egg_foil.png (licensed under the CC0)
+/graphics/ui/icons/wyrm_egg_foil_without_effect.png (licensed under the CC0)
+/graphics/ui/icons/wyrm_egg_level_1.png (licensed under the CC0)
+/graphics/ui/icons/wyrm_egg_level_2.png (licensed under the CC0)
+/graphics/ui/icons/wyrm_egg_level_3.png (licensed under the CC0)
+/graphics/ui/icons/wyrm_egg_level_4.png (licensed under the CC0)
+/graphics/ui/icons/wyrm_egg_level_5.png (licensed under the CC0)
+/graphics/ui/icons/wyrmsun_icon_32.png (licensed under the CC0)
+/graphics/ui/icons/wyrmsun_icon_128.png (licensed under the CC0)
+/graphics/ui/icons/wyrmsun_icon_128_background.png (licensed under the CC0)
+/graphics/ui/bar_frame.png (licensed under the CC0)
+/graphics/ui/coal.png (licensed under the CC0)
+/graphics/ui/coal_extra_1.png (licensed under the CC0)
+/graphics/ui/command_button_frame.png (licensed under the CC0)
+/graphics/ui/copper.png (licensed under the CC0)
+/graphics/ui/fish.png (licensed under the CC0)
+/graphics/ui/food.png (licensed under the CC0)
+/graphics/ui/fuel.png (licensed under the CC0)
+/graphics/ui/gold.png (licensed under the CC0)
+/graphics/ui/gold_ore.png (licensed under the CC0)
+/graphics/ui/grain.png (licensed under the CC0)
+/graphics/ui/housing.png (licensed under the CC0)
+/graphics/ui/icon_frame.png (licensed under the CC0)
+/graphics/ui/icon_frame_pressed.png (licensed under the CC0)
+/graphics/ui/infopanel_frame.png (licensed under the CC0)
+/graphics/ui/labor.png (licensed under the CC0)
+/graphics/ui/labor_extra_1.png (licensed under the CC0)
+/graphics/ui/lumber.png (licensed under the CC0)
+/graphics/ui/mushrooms.png (licensed under the CC0)
+/graphics/ui/oil.png (licensed under the CC0)
+/graphics/ui/potion.png (licensed under the CC0)
+/graphics/ui/prestige.png (licensed under the CC0)
+/graphics/ui/prestige_extra_1.png (licensed under the CC0)
+/graphics/ui/progress_bar.png (licensed under the CC0)
+/graphics/ui/research.png (licensed under the CC0)
+/graphics/ui/score.png (licensed under the CC0)
+/graphics/ui/score_extra_1.png (licensed under the CC0)
+/graphics/ui/silver.png (licensed under the CC0)
+/graphics/ui/stone.png (licensed under the CC0)
+/graphics/ui/timber.png (licensed under the CC0)
+/graphics/ui/wyrmsun_logo.png (licensed under the CC0)
+/graphics/ui/wyrmsun_logo_monochromatic.png (licensed under the CC0)
 
 J. W. Bjerk (eleazzaar):
-/graphics/gnome/icons/herbal_cure.png (later modified by Jinn)
-/graphics/gnome/icons/portent.png (later modified by Jinn)
-
-Jim16:
-/graphics/neutral/buildings/runestone.png (later modified by Nikita_Sadkov)
-
-KPJ:
-/graphics/ui/fonts/KPJsWyrmSunFont.png
+/graphics/gnome/icons/herbal_cure.png (later modified by Jinn) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/gnome/icons/portent.png (later modified by Jinn) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 
 Leo:
-/graphics/dwarf/buildings/smithy.png
-/graphics/dwarf/icons/axe_1.png
-/graphics/dwarf/icons/axe_3.png
-/graphics/dwarf/icons/ballista_bolt_1.png
-/graphics/dwarf/icons/ballista_bolt_2.png
-/graphics/dwarf/icons/ballista_bolt_3.png
-/graphics/dwarf/icons/durstorn.png
-/graphics/dwarf/icons/kobold_footpad.png
-/graphics/dwarf/icons/shield_2.png
-/graphics/dwarf/icons/shield_3.png
-/graphics/dwarf/icons/shield_3_extra_1.png
-/graphics/dwarf/icons/shield_3_extra_2.png
-/graphics/dwarf/icons/slime.png
-/graphics/dwarf/icons/slime_blue.png
-/graphics/dwarf/icons/slime_brown.png
-/graphics/dwarf/icons/slime_red.png
-/graphics/dwarf/icons/slime_teal.png
-/graphics/dwarf/icons/surghan_mercenary_steelclad.png
-/graphics/dwarf/icons/surghan_mercenary_thane.png
-/graphics/dwarf/icons/thursagan.png
-/graphics/germanic/buildings/carpenters_shop.png
-/graphics/germanic/buildings/smithy.png
-/graphics/germanic/icons/archer.png
-/graphics/germanic/icons/arrow.png
-/graphics/germanic/icons/barbed_arrow.png
-/graphics/germanic/icons/broad_sword.png
-/graphics/germanic/icons/bronze_shield.png
-/graphics/germanic/icons/patrol_land.png
-/graphics/germanic/icons/return_goods.png
-/graphics/germanic/icons/return_goods_extra_1.png
-/graphics/germanic/icons/short_sword.png
-/graphics/germanic/icons/short_sword_extra_1.png
-/graphics/germanic/icons/short_sword_extra_2.png
-/graphics/germanic/icons/stand_ground.png
-/graphics/germanic/icons/wooden_oblong_shield.png
-/graphics/germanic/icons/worker.png
-/graphics/germanic/ui/cursors/germanic_hand.png
-/graphics/gnome/icons/boots.png
-/graphics/gnome/icons/boots_fur.png
-/graphics/gnome/icons/duelist.png (based on Jinn's Gnomish Recruit icon)
-/graphics/gnome/icons/duelist_gray_hair.png (based on Jinn's Gnomish Recruit icon)
-/graphics/gnome/icons/gnomish_herbalist.png
-/graphics/gnome/icons/master_at_arms.png (based on Jinn's Gnomish Recruit icon)
-/graphics/gnome/icons/master_at_arms_gray_hair.png (based on Jinn's Gnomish Recruit icon)
-/graphics/gnome/icons/thrusting_sword_1.png
-/graphics/gnome/icons/thrusting_sword_1_extra_1.png
-/graphics/gnome/icons/thrusting_sword_1_extra_2.png
-/graphics/goblin/buildings/farm.png
-/graphics/goblin/buildings/lumber_mill.png
-/graphics/goblin/buildings/mess_hall.png
-/graphics/goblin/buildings/town_hall.png
-/graphics/goblin/icons/glider.png
-/graphics/goblin/icons/goblin_thief.png
-/graphics/goblin/icons/greebo.png (modified from b_o's icon)
-/graphics/neutral/decorations/volcanic_crater.png
-/graphics/neutral/icons/masonry.png
-/graphics/neutral/icons/wyrm.png
-/graphics/neutral/icons/wyrm_blue_scales.png
-/graphics/neutral/icons/wyrm_cyan_scales.png
-/graphics/neutral/icons/wyrm_purple_scales.png
-/graphics/neutral/icons/wyrm_red_scales.png
-/graphics/neutral/icons/wyrm_vicious.png
-/graphics/neutral/icons/wyrm_vicious_light_green_scales.png
-/graphics/neutral/icons/wyrm_yellow_scales.png
-/graphics/teuton/icons/spatha.png
-/graphics/teuton/icons/suebi_swordsman.png
-/graphics/teuton/icons/suebi_swordsman_gray_hair.png
-/graphics/teuton/ui/cursors/teuton_gauntlet.png
+/graphics/dwarf/buildings/smithy.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/icons/ballista_bolt_1.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/icons/ballista_bolt_2.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/icons/ballista_bolt_3.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/icons/battle_axe.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/icons/durstorn.png (licensed under the GPL 2.0)
+/graphics/dwarf/icons/great_axe.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/icons/kobold_footpad.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/icons/shield_2.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/icons/shield_3.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/icons/shield_3_extra_1.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/icons/shield_3_extra_2.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/icons/slime.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/icons/slime_blue.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/icons/slime_brown.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/icons/slime_red.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/icons/slime_teal.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/icons/surghan_mercenary_steelclad.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/icons/surghan_mercenary_thane.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/icons/thursagan.png (licensed under the GPL 2.0)
+/graphics/germanic/buildings/carpenters_shop.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/germanic/buildings/smithy.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/germanic/icons/archer.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/germanic/icons/arrow.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/germanic/icons/barbed_arrow.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/germanic/icons/broad_sword.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/germanic/icons/bronze_shield.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/germanic/icons/patrol_land.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/germanic/icons/return_goods.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/germanic/icons/return_goods_extra_1.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/germanic/icons/short_sword.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/germanic/icons/short_sword_extra_1.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/germanic/icons/short_sword_extra_2.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/germanic/icons/stand_ground.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/germanic/icons/wooden_oblong_shield.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/germanic/icons/worker.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/germanic/ui/cursors/germanic_hand.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/gnome/icons/boots.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/gnome/icons/boots_fur.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/gnome/icons/duelist.png (based on Jinn's Gnomish Recruit icon) (licensed under the CC0)
+/graphics/gnome/icons/duelist_gray_hair.png (based on Jinn's Gnomish Recruit icon) (licensed under the CC0)
+/graphics/gnome/icons/gnomish_herbalist.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/gnome/icons/master_at_arms.png (based on Jinn's Gnomish Recruit icon) (licensed under the CC0)
+/graphics/gnome/icons/master_at_arms_gray_hair.png (based on Jinn's Gnomish Recruit icon) (licensed under the CC0)
+/graphics/gnome/icons/thrusting_sword_1.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/gnome/icons/thrusting_sword_1_extra_1.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/gnome/icons/thrusting_sword_1_extra_2.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/goblin/buildings/farm.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/goblin/buildings/lumber_mill.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/goblin/buildings/mess_hall.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/goblin/buildings/town_hall.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/goblin/icons/glider.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/goblin/icons/goblin_thief.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/goblin/icons/greebo.png (modified from b_o's icon) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/decorations/volcanic_crater.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/icons/masonry.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/icons/wyrm.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/icons/wyrm_blue_scales.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/icons/wyrm_cyan_scales.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/icons/wyrm_purple_scales.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/icons/wyrm_red_scales.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/icons/wyrm_vicious.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/icons/wyrm_vicious_light_green_scales.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/icons/wyrm_yellow_scales.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/teuton/icons/spatha.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/teuton/icons/suebi_swordsman.png (licensed under the CC0)
+/graphics/teuton/icons/suebi_swordsman_gray_hair.png (licensed under the CC0)
+/graphics/teuton/ui/cursors/teuton_gauntlet.png (licensed under the CC0)
 
 Mikodrak:
-/graphics/missiles/big_fire.png (later modified by Jinn)
-/graphics/missiles/big_fire_extra_1.png (later modified by Jinn)
-/graphics/missiles/small_fire.png (later modified by Jinn)
-
-Nikita_Sadkov:
-/graphics/neutral/buildings/runestone.png (modified from Jim16's runestone)
+/graphics/missiles/big_fire.png (later modified by Jinn) (licensed under the CC0)
+/graphics/missiles/big_fire_extra_1.png (later modified by Jinn) (licensed under the CC0)
+/graphics/missiles/small_fire.png (later modified by Jinn) (licensed under the CC0)
 
 Oray Studios:
-/graphics/ui/gold_extra_1.png
-/graphics/ui/mana_icon.png
-/graphics/ui/timber_extra_1.png
+/graphics/ui/gold_extra_1.png (licensed under the GPL 2.0)
+/graphics/ui/mana_icon.png (licensed under the GPL 2.0)
+/graphics/ui/timber_extra_1.png (licensed under the GPL 2.0)
 
 Ransom.00:
-/graphics/dwarf/icons/axe_2.png (later modified by Jinn)
+/graphics/dwarf/icons/broad_axe.png (later modified by Jinn) (licensed under the GPL 2.0)
 
 Rick Elliot:
-/graphics/ui/cursors/cross.png
+/graphics/ui/cursors/cross.png (licensed under the GPL 2.0)
 
 StumpyStrust:
-/graphics/missiles/explosion.png (later modified by Jinn)
+/graphics/missiles/explosion.png (later modified by Jinn) (licensed under the CC0)
 
 Tanja Nov.:
-/graphics/ui/backgrounds/gnashorn.png (later modified by Jinn)
-/graphics/ui/backgrounds/gryphon.png (later modified by Jinn)
-/graphics/ui/backgrounds/gullinburst.png (later modified by Jinn)
-/graphics/ui/backgrounds/wyrm.png (later modified by Jinn)
-/graphics/ui/backgrounds/yale.png (later modified by Jinn)
+/graphics/ui/backgrounds/gnashorn.png (later modified by Jinn) (proprietary and used for Wyrmsun with permission)
+/graphics/ui/backgrounds/gryphon.png (later modified by Jinn) (proprietary and used for Wyrmsun with permission)
+/graphics/ui/backgrounds/gullinburst.png (later modified by Jinn) (proprietary and used for Wyrmsun with permission)
+/graphics/ui/backgrounds/wyrm.png (later modified by Jinn) (proprietary and used for Wyrmsun with permission)
+/graphics/ui/backgrounds/yale.png (later modified by Jinn) (proprietary and used for Wyrmsun with permission)
 
 TaShadan:
-/graphics/neutral/units/long_swordsman.png
+/graphics/neutral/units/long_swordsman.png (licensed under the GPL 2.0)
 
 Vladislav "iDreamRunner":
-/graphics/missiles/catapult_sandstone_rock.png
-/graphics/missiles/flaming_arrow.png (modified from b_o's arrow)
-/graphics/missiles/flaming_dwarven_ballista_bolt.png (modified from b_o's dwarven ballista bolt)
-/graphics/missiles/flaming_goblin_arrow.png (modified from b_o's goblin arrow)
-/graphics/missiles/flaming_throwing_axe.png (modified from b_o's throwing axe)
-/graphics/neutral/icons/amulet.png
-/graphics/neutral/icons/carrots.png
-/graphics/neutral/icons/cauldron.png
-/graphics/neutral/icons/cheese.png
-/graphics/neutral/icons/chest.png
-/graphics/neutral/icons/halberd.png
-/graphics/neutral/icons/longspear.png
-/graphics/neutral/icons/mace_mastery.png (modified from Jinn's axe mastery icon)
-/graphics/neutral/icons/ring.png
-/graphics/neutral/icons/spear.png
-/graphics/neutral/icons/spear_mastery.png (modified from Jinn's axe mastery icon)
-/graphics/neutral/icons/stun.png
-/graphics/neutral/items/amulet.png
-/graphics/neutral/items/boots.png
-/graphics/teuton/units/cherusci_shield.png
+/graphics/missiles/catapult_sandstone_rock.png (licensed under the CC0)
+/graphics/missiles/flaming_arrow.png (modified from b_o's arrow) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/missiles/flaming_dwarven_ballista_bolt.png (modified from b_o's dwarven ballista bolt) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/missiles/flaming_goblin_arrow.png (modified from b_o's goblin arrow) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/missiles/flaming_throwing_axe.png (modified from b_o's throwing axe) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/neutral/icons/amulet.png (licensed under the CC0)
+/graphics/neutral/icons/carrots.png (licensed under the CC0)
+/graphics/neutral/icons/cauldron.png (licensed under the CC0)
+/graphics/neutral/icons/cheese.png (licensed under the CC0)
+/graphics/neutral/icons/chest.png (licensed under the CC0)
+/graphics/neutral/icons/halberd.png (licensed under the CC0)
+/graphics/neutral/icons/longspear.png (licensed under the CC0)
+/graphics/neutral/icons/mace_mastery.png (modified from Jinn's axe mastery icon) (licensed under the CC0)
+/graphics/neutral/icons/ring.png (licensed under the CC0)
+/graphics/neutral/icons/spear.png (licensed under the CC0)
+/graphics/neutral/icons/spear_mastery.png (modified from Jinn's axe mastery icon) (licensed under the CC0)
+/graphics/neutral/icons/stun.png (licensed under the CC0)
+/graphics/neutral/items/amulet.png (licensed under the CC0)
+/graphics/neutral/items/boots.png (licensed under the CC0)
+/graphics/teuton/units/cherusci_shield.png (licensed under the CC0)
