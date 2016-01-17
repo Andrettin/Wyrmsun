@@ -91,7 +91,6 @@ function CustomHeroCreationMenu(world, quest_menu)
 			if (
 				string.find(unitName, "upgrade-") == nil
 				and GetUnitTypeData(unitName, "Civilization") == string.lower(hero_civilization_list[hero_civilization:getSelected() + 1])
-				and GetUnitTypeData(unitName, "Faction") == ""
 				and GetUnitTypeData(unitName, "Class") ~= "worker"
 				and GetUnitTypeData(unitName, "Class") ~= "militia"
 				and GetUnitTypeData(unitName, "Class") ~= "spearman"
@@ -100,7 +99,11 @@ function CustomHeroCreationMenu(world, quest_menu)
 				and GetUnitTypeData(unitName, "organic")
 			) then
 				table.insert(hero_class_ident_list, unitName)
-				table.insert(hero_class_list, GetUnitTypeData(unitName, "Name"))
+				if (GetUnitTypeData(unitName, "Faction") ~= "") then
+					table.insert(hero_class_list, GetUnitTypeData(unitName, "Name") .. " (" .. GetUnitTypeData(unitName, "Faction") .. ")")
+				else
+					table.insert(hero_class_list, GetUnitTypeData(unitName, "Name"))
+				end
 			end
 		end
 		hero_class:setList(hero_class_list)

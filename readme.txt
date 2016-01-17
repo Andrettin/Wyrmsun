@@ -71,6 +71,9 @@ https://github.com/Andrettin/Wyrmsun
 * Factions
 - Renamed the Modsogning Clan (dwarf) to Brising Clan.
 
+* Heroes
+- It is now possible to create custom heroes with faction-specific versions of units.
+
 * Miscellaneous
 - The correct background is now shown when a match ends in a draw.
 - Update to the Germanic cursor (by Leo).
