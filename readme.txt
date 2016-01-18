@@ -79,6 +79,10 @@ https://github.com/Andrettin/Wyrmsun
 - Update to the Germanic cursor (by Leo).
 - Added a cursor for the Teutons (by Leo).
 - When loading or saving a game or a map, files can now be sorted by date (thanks to marcelofg55).
+- Added loading screen tip about time efficiency bonuses.
+
+* Technologies
+- Writing technologies now provide a 10% boost to buildings' time efficiency, rather than research speed. Time efficiency bonuses affect not only the speed at which the building researches, but also the speed at which it trains and upgrades.
 
 * Units
 - Removed cap of Goblin Thieves a player can have at a single time, as its purpose has been replaced by its hiring cooldown.

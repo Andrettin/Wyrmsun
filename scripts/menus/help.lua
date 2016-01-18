@@ -152,6 +152,7 @@ local tips = {
 	"Thieves deal bonus damage when attacking from the back.",
 	"Fire damage ignores armor.",
 --	"Each mercenary group can only be hired once per game.",
+	"Time efficiency bonus makes a building train, research and upgrade faster. If it is a resource building, then harvesting from it will also proceed faster."
 }
 
 LoadingBarSetTips(tips)

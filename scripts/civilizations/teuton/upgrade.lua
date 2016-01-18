@@ -221,8 +221,13 @@ DefineModifier("upgrade-teuton-coinage",
 )
 
 DefineModifier("upgrade-teuton-writing",
-	{"research-speed", 10}
---	{"apply-to", "unit-teuton-town-hall"}, {"apply-to", "unit-teuton-stronghold"}
+	{"TimeEfficiencyBonus", 10},
+	{"apply-to", "unit-teuton-town-hall"}, {"apply-to", "unit-teuton-stronghold"},
+	{"apply-to", "unit-teuton-farm"}, {"apply-to", "unit-teuton-barracks"},
+	{"apply-to", "unit-teuton-lumber-mill"}, {"apply-to", "unit-teuton-smithy"},
+--	{"apply-to", "unit-teuton-stables"},
+	{"apply-to", "unit-teuton-watch-tower"}, {"apply-to", "unit-teuton-guard-tower"},
+	{"apply-to", "unit-teuton-dock"}
 )
 
 DefineModifier("upgrade-teuton-alchemy",

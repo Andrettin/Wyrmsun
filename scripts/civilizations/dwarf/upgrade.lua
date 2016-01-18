@@ -155,7 +155,7 @@ DefineUpgrade("upgrade-dwarven-runewriting", {
 	Name = _("Dvalic Runewriting"),
 	Parent = "upgrade-writing",
 	Civilization = "dwarf",
-	Description = _("The dwarven system of runewriting is said to have been invented by the dwarven scholar, Dvalin.\n\nEffect: +10% Research Speed, changes faction from tribe to polity."),
+	Description = _("The dwarven system of runewriting is said to have been invented by the dwarven scholar, Dvalin.\n\nEffect: +10% Time Efficiency for all buildings, changes faction from tribe to polity."),
 	Background = _("In the Poetic Edda's ~<Hovamol~>, Dvalin is mentioned as the one who bestowed the knowledge of runes upon the dwarves."),
 	Icon = "icon-norse-runewriting",
 	TechnologyPointCost = 1
@@ -289,8 +289,13 @@ DefineModifier("upgrade-dwarven-coinage",
 )
 
 DefineModifier("upgrade-dwarven-runewriting",
-	{"research-speed", 10}
---	{"apply-to", "unit-dwarven-town-hall"}, {"apply-to", "unit-dwarven-stronghold"}
+	{"TimeEfficiencyBonus", 10},
+	{"apply-to", "unit-dwarven-town-hall"}, {"apply-to", "unit-dwarven-stronghold"},
+	{"apply-to", "unit-dwarven-mushroom-farm"}, {"apply-to", "unit-dwarven-barracks"},
+	{"apply-to", "unit-dwarven-lumber-mill"}, {"apply-to", "unit-dwarven-smithy"},
+--	{"apply-to", "unit-dwarven-yale-pen"},
+	{"apply-to", "unit-dwarven-sentry-tower"}, {"apply-to", "unit-dwarven-guard-tower"},
+	{"apply-to", "unit-dwarven-dock"}
 )
 
 DefineModifier("upgrade-dwarven-alchemy",
