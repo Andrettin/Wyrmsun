@@ -67,12 +67,16 @@ https://github.com/Andrettin/Wyrmsun
 * Buildings
 - Mercenary Camps now keep a "stock" of 6 Goblin Thieves, which is depleted when they are hired, and is replenished over time.
 - Potions of Healing are now kept in stocks of 6 by stronghold-type buildings.
+- Building unit stocks now always begin at 0, instead of starting at max.
 
 * Factions
 - Renamed the Modsogning Clan (dwarf) to Brising Clan.
 
 * Heroes
 - It is now possible to create custom heroes with faction-specific versions of units (such as the Suebi Krieger).
+
+* Items
+- Cheese and carrots are now buyable at farms (each having a stock of 3).
 
 * Miscellaneous
 - The correct background is now shown when a match ends in a draw.

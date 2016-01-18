@@ -4046,6 +4046,7 @@ DefineUnitType("unit-template-farm", { Name = _("Farm"),
 	BurnPercent = 50,
 	BurnDamageRate = 1,
 	SelectableByRectangle = true,
+	UnitStock = {"unit-cheese", 3, "unit-carrots", 3},
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	Sounds = {
 		"selected", "farm-selected",

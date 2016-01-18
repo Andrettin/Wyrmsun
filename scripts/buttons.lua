@@ -278,6 +278,18 @@ DefineButton( { Pos = 16, Level = 2, Icon = "icon-cancel",
 
 -- Purchasable Items ------------------------------------------------------
 
+DefineButton( { Pos = 1, Level = 0, Icon = "icon-cheese",
+	Action = "train-unit", Value = "unit-cheese",
+	Key = "c", Hint = _("Buy ~!Cheese"), Popup = "popup-item",
+	ForUnit = {"unit-germanic-farm", "unit-teuton-farm", "unit-celt-farm", "unit-dwarven-mushroom-farm", "unit-gnomish-farm", "unit-goblin-farm"}
+} )
+
+DefineButton( { Pos = 2, Level = 0, Icon = "icon-carrots",
+	Action = "train-unit", Value = "unit-carrots",
+	Key = "r", Hint = _("Buy Ca~!rrots"), Popup = "popup-item",
+	ForUnit = {"unit-germanic-farm", "unit-teuton-farm", "unit-celt-farm", "unit-gnomish-farm", "unit-goblin-farm"}
+} )
+
 DefineButton( { Pos = 4, Level = 0, Icon = "icon-red-potion",
 	Action = "train-unit", Value = "unit-potion-of-healing",
 	Key = "h", Hint = _("Buy Potion of ~!Healing"), Popup = "popup-item",

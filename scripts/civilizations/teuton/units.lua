@@ -305,7 +305,7 @@ DefineUnitType("unit-suebi-swordsman", { Name = _("Krieger"),
 	}
 } )
 
-DefineUnitType("unit-teuton-spearman", { Name = _("Spearman"),
+DefineUnitType("unit-teuton-spearman", { Name = _("Speerkampfer"),
 	Parent = "unit-template-spearman",
 	Civilization = "teuton",
 --	Description = _("Germanic tribes are known for their fierceness in combat, and these sword-wielding warriors act accordingly."),
