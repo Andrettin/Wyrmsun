@@ -98,6 +98,7 @@ https://github.com/Andrettin/Wyrmsun
 - Dwarven Yale Riders now cost a bit of lumber, and their gold cost has been slightly decreased.
 - Decreased starting damage for siege engines by 5.
 - Added brown and blond hair variations for Teuton Kriegers.
+- Gnomish Recruits are now cheaper, grant less experience when killed, need less experience to level up, and have a bonus to accuracy and evasion of +1 instead of +2.
 
 -----------------------------------------------------------------------
 - 1.9.8

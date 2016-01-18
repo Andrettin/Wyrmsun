@@ -1091,6 +1091,7 @@ Leo:
 /graphics/teuton/icons/suebi_swordsman.png (licensed under the CC0)
 /graphics/teuton/icons/suebi_swordsman_gray_hair.png (licensed under the CC0)
 /graphics/teuton/ui/cursors/teuton_gauntlet.png (licensed under the CC0)
+/graphics/ui/bleeding.png (licensed under the CC0)
 
 Mikodrak:
 /graphics/missiles/big_fire.png (later modified by Jinn) (licensed under the CC0)
