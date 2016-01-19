@@ -137,7 +137,7 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if (PlayerHasObjective(GetThisPlayer(), "- Kill 8 Yales") and GetPlayerData(15, "UnitTypesCount", "unit-yale") <= 4) then
+		if (PlayerHasObjective(GetThisPlayer(), "- Kill 8 Yales") and GetPlayerData(GetThisPlayer(), "UnitTypeKills", "unit-yale") >= 8) then
 			player = GetThisPlayer()
 			return true
 		end
@@ -178,7 +178,7 @@ AddTrigger(
 	end,
 	function()
 		local modsognir_text = "The materials we need have been collected."
-		if (GetPlayerData(15, "UnitTypesCount", "unit-yale") <= 4) then
+		if (GetPlayerData(GetThisPlayer(), "UnitTypeKills", "unit-yale") >= 8) then
 			modsognir_text = "The materials we need have been collected. It is time to build our new homes by these rocks!"
 		end
 		Event(
@@ -187,7 +187,7 @@ AddTrigger(
 			player,
 			{"~!Continue"},
 			{function(s)
-				if (player == GetThisPlayer() and GetPlayerData(15, "UnitTypesCount", "unit-yale") <= 4) then
+				if (player == GetThisPlayer() and GetPlayerData(GetThisPlayer(), "UnitTypeKills", "unit-yale") >= 8) then
 					if (GrandStrategy == false) then
 						if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "A Rocky Home") == false) then
 							table.insert(wyr.preferences.QuestsCompleted, "A Rocky Home")
