@@ -77,6 +77,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Items
 - Cheese and carrots are now buyable at farms (each having a stock of 3).
+- Fixed issue which caused the Potion of Decay to not work properly.
 
 * Miscellaneous
 - The correct background is now shown when a match ends in a draw.
