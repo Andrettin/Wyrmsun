@@ -1,6 +1,8 @@
 -- Stratagus Map Presentation
 
-if (GrandStrategy == false) then
+if (CurrentQuest == "The Treasures of Svarinshaug") then
+	DefinePlayerTypes("person")
+elseif (GrandStrategy == false) then
 	DefinePlayerTypes("person", "computer", "computer", "computer")
 else
 	DefinePlayerTypes("person", "person", "person", "person")

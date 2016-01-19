@@ -279,6 +279,7 @@ function addQuestIcon(quest, menu, x, y)
 				quest_menu:addFullButton("~!Play Quest", "p", 176 - (224 / 2), 352 - 40 * 2,
 					function()
 						RunningScenario = true
+						CurrentQuest = quest
 						GetMapInfo(GetQuestData(quest, "Map"))
 						for i=1,mapinfo.nplayers do
 							if ((i - 1) ~= MapPersonPlayer and mapinfo.playertypes[i] == "person") then
@@ -287,7 +288,6 @@ function addQuestIcon(quest, menu, x, y)
 						end
 						GameSettings.NoRandomness = wyr.preferences.NoRandomness
 						GameSettings.Difficulty = wyr.preferences.Difficulty
-						CurrentQuest = quest
 						if (GetQuestData(quest, "Briefing") ~= "") then
 							Briefing(quest)
 						end
