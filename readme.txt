@@ -78,6 +78,7 @@ https://github.com/Andrettin/Wyrmsun
 * Items
 - Cheese and carrots are now buyable at farms (each having a stock of 3).
 - Fixed issue which caused the Potion of Decay to not work properly.
+- Magic items now disappear after a long time if left in the ground (they take four times what it takes a normal item to disappear).
 
 * Miscellaneous
 - The correct background is now shown when a match ends in a draw.
