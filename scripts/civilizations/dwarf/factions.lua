@@ -25,20 +25,20 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineFaction("Brising Clan", {
+	Civilization = "dwarf",
+	Type = "tribe",
+	Colors = {"red", "orange", "fire"},
+	DevelopsTo = {"Joruvellir", "Kal Kartha", "Knalga", "Lyr"},
+	FactionUpgrade = "upgrade-brising-clan-faction"
+})
+
 DefineFaction("Eikinskjaldi Clan", { -- originally Oakenshield (from Dyson Logos' The Tomb of Durahn Oakenshield), translated into Norse to make it seem more dwarvish
 	Civilization = "dwarf",
 	Type = "tribe",
 	Colors = {"brown"},
 	DevelopsTo = {"Joruvellir", "Kal Kartha", "Knalga", "Lyr"},
 	FactionUpgrade = "upgrade-eikinskjaldi-clan-faction"
-})
-
-DefineFaction("Brising Clan", { -- clan of Modsognir
-	Civilization = "dwarf",
-	Type = "tribe",
-	Colors = {"white"},
-	DevelopsTo = {"Joruvellir", "Kal Kartha", "Knalga", "Lyr"},
-	FactionUpgrade = "upgrade-brising-clan-faction"
 })
 
 DefineFaction("Norlund Clan", {
