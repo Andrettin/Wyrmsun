@@ -87,6 +87,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added a cursor for the Teutons (by Leo).
 - When loading or saving a game or a map, files can now be sorted by date (thanks to marcelofg55).
 - Added loading screen tip about time efficiency bonuses.
+- Improved "Experience" popup tip to say that units receive +15 HP after leveling up if they have exhausted the level up upgrade possibilities, and added a new loading screen tip with the same information.
 
 * Technologies
 - Writing technologies now provide a 10% boost to buildings' time efficiency, rather than research speed. Time efficiency bonuses affect not only the speed at which the building researches, but also the speed at which it trains and upgrades.

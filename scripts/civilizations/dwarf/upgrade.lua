@@ -317,9 +317,14 @@ DefineModifier("upgrade-eikinskjaldi-clan-faction",
 )
 
 DefineModifier("upgrade-brising-clan-faction",
-	{"BasicDamage", 2},
-	{"Points", 10},
+	{"BasicDamage", 1},
+	{"Points", 5},
 	{"apply-to", "unit-dwarven-axefighter"}, {"apply-to", "unit-dwarven-steelclad"}, {"apply-to", "unit-dwarven-thane"}
+)
+
+DefineModifier("upgrade-brising-clan-faction",
+	{"TimeEfficiencyBonus", 50},
+	{"apply-to", "unit-dwarven-smithy"}
 )
 
 DefineModifier("upgrade-norlund-clan-faction",
