@@ -3982,8 +3982,9 @@ DefineUnitType("unit-template-town-hall", { Name = _("Town Hall"),
 	BurnDamageRate = 1,
 	SelectableByRectangle = true,
 	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
-	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-amulet", "unit-ring"}, -- worker-related items, as well as those we would expect a center of administration to have
+	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-amulet", "unit-ring", "unit-scroll"}, -- worker-related items, as well as those we would expect a center of administration to have
 	DropAffixes = {"upgrade-item-prefix-accurate", "upgrade-item-prefix-cruel", "upgrade-item-prefix-frail", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-swift", "upgrade-item-prefix-vulnerable", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-accuracy", "upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-power", "upgrade-item-suffix-of-regeneration", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-thorns", "upgrade-item-suffix-of-vision", "upgrade-item-suffix-of-vulnerability"},
+	DropSpells = {"spell-detachment", "spell-forgetfulness"},
 	Sounds = {
 		"selected", "town-hall-selected",
 --		"acknowledge", "town-hall-acknowledge",

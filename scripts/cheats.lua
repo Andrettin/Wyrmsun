@@ -37,7 +37,6 @@ function HandleCheats(str)
 
   if (str == "im a lumberjack and its ok") then
     SetSpeedResourcesHarvest("lumber", 25)
---    AddMessage("Wow -- I got jigsaw!")
 
   elseif (str == "otters ransom") then
 	for i = 0,PlayerMax - 1 do

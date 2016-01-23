@@ -129,6 +129,7 @@ DefineSpell("spell-forgetfulness",
 	"range", 0,
 	"target", "self",
 	"action", {
+		{"spawn-missile", "missile", "missile-magic-effect", "start-point", {"base", "target"}},
 		{"retrain"}
 	},
 	"sound-when-cast", "magic-holy"
@@ -151,4 +152,31 @@ DefineSpell("spell-stun",
 	"autocast", {"range", 6, "combat", "only", "condition", {"Coward", "false", "opponent", "only", "Stun", {ExactValue = 0}}},
 	"ai-cast", {"range", 6, "combat", "only", "condition", {"Coward", "false", "opponent", "only", "Stun", {ExactValue = 0}}},
 	"depend-upgrade", "upgrade-stun"
+)
+
+-- spells to change units to their faction equivalents
+DefineSpell("spell-suebi-allegiance",
+	"showname", _("Suebi Allegiance"),
+	"manacost", 0,
+	"range", 0,
+	"target", "self",
+	"action", {
+		{"spawn-missile", "missile", "missile-magic-effect", "start-point", {"base", "target"}},
+		{"polymorph", "civilization", "teuton", "faction", "Suebi Tribe"}
+	},
+	"item-spell", "scroll",
+	"sound-when-cast", "magic-holy"
+)
+
+DefineSpell("spell-detachment",
+	"showname", _("Detachment"),
+	"manacost", 0,
+	"range", 0,
+	"target", "self",
+	"action", {
+		{"spawn-missile", "missile", "missile-magic-effect", "start-point", {"base", "target"}},
+		{"polymorph", "detachment"}
+	},
+	"item-spell", "scroll",
+	"sound-when-cast", "magic-holy"
 )

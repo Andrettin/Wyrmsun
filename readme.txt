@@ -61,6 +61,17 @@ https://github.com/Andrettin/Wyrmsun
 ############################################################
 
 -----------------------------------------------------------------------
+- 2.0.0
+-----------------------------------------------------------------------
+
+* Items
+- Scrolls can now drop from town hall and stronghold type buildings (scrolls always have a property associated with them).
+- Added "Suebi Allegiance" spell for scrolls, which allows Teuton Kriegers to transform into Suebi Kriegers.
+- Added "Detachment" spell for scrolls, which allows a faction-specific unit to transform into its civilization's equivalent unit.
+- Added "Forgetfulness" spell for scrolls, which allows retraining a unit.
+- Rings and amulets now always have a property.
+
+-----------------------------------------------------------------------
 - 1.9.9
 -----------------------------------------------------------------------
 
