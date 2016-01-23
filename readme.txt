@@ -89,6 +89,9 @@ https://github.com/Andrettin/Wyrmsun
 - Added loading screen tip about time efficiency bonuses.
 - Improved "Experience" popup tip to say that units receive +15 HP after leveling up if they have exhausted the level up upgrade possibilities, and added a new loading screen tip with the same information.
 
+* Quests
+- Fixed issue which caused The Tomb of Durahn Eikinskjaldi (Dwarf) quest to hang on loading.
+
 * Technologies
 - Writing technologies now provide a 10% boost to buildings' time efficiency, rather than research speed. Time efficiency bonuses affect not only the speed at which the building researches, but also the speed at which it trains and upgrades.
 

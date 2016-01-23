@@ -325,6 +325,7 @@ end
 
 InitFuncs:add(function()
 	DefineAllowNormalUnits("FFFFFFFFFFFFFFFF")
+	DefineAllowNormalUnits("AAAAAAAAAAAAAAAA")
 end)
 
 function ApplyTechLevels()

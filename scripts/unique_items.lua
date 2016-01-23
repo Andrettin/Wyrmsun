@@ -254,6 +254,20 @@ DefineUniqueItem("Cernin Palace", { -- Alena Ježková, "77 Prague Legends", 200
 	Suffix = ?,
 	Background = "The Černín Palace was built in the Loretánské Square in Prague for Humprecht Černín of Chudenice, the Holy Roman Empire's envoy to Venice."
 } )
+
+DefineUniqueItem("The Old New Synanogue", { -- Alena Ježková, "77 Prague Legends", 2006, p. 103.
+	Type = "unit-teuton-temple",
+	Prefix = ?,
+	Suffix = ?,
+	Background = "The Old New Synanogue lies in Prague."
+} )
+
+DefineUniqueItem("Na Slovanech Monastery", { -- Alena Ježková, "77 Prague Legends", 2006, pp. 126, 130.
+	Type = "unit-teuton-temple", -- previously known as Emmaeus Monastery
+	Prefix = ?,
+	Suffix = ?,
+	Background = ?
+} )
 --]]
 
 -- Unique houses in Prague
@@ -262,6 +276,8 @@ DefineUniqueItem("Cernin Palace", { -- Alena Ježková, "77 Prague Legends", 200
 -- "House at the Three Bells"; Source: Alena Ježková, "77 Prague Legends", 2006, p. 71.
 -- "House at the Three White Roses"; also known as House U Rotta (because of the Rott ironmonger's shop); Source: Alena Ježková, "77 Prague Legends", 2006, p. 19.
 -- "The Chateau"; smallest house in the Golden Lane, which had once been inhabited by an elderly nobleman; Source: Alena Ježková, "77 Prague Legends", 2006, p. 93.
+-- Faust's House; Source: Alena Ježková, "77 Prague Legends", 2006, p. 126.
+-- U Myslíků ("At the Myslíks"); the protestant owner of this house and his family had to flee Prague after the Battle of the White Mountain in 1620; Source: Alena Ježková, "77 Prague Legends", 2006, pp. 131-132.
 
 -- Unique streets in Prague
 -- Tomášská Street; Source: Alena Ježková, "77 Prague Legends", 2006, p. 70.
@@ -278,12 +294,22 @@ DefineUniqueItem("Cernin Palace", { -- Alena Ježková, "77 Prague Legends", 200
 -- Karoliny Světle Street; Source: Alena Ježková, "77 Prague Legends", 2006, p. 58.
 -- Nerudova Street; Source: Alena Ježková, "77 Prague Legends", 2006, p. 62.
 -- Ostruhová Street; Source: Alena Ježková, "77 Prague Legends", 2006, p. 62.
--- Golden Lane (called "Zlatá" - "golden"); Source: Alena Ježková, "77 Prague Legends", 2006, p. 92.
+-- Golden Lane (called "Zlatá" - "golden"); Source: Alena Ježková, "77 Prague Legends", 2006, pp. 92, 117.
+-- Široká Street; Source: Alena Ježková, "77 Prague Legends", 2006, p. 105.
+-- Nekázanka (street); Source: Alena Ježková, "77 Prague Legends", 2006, p. 125.
+-- Jindřišská Street; Source: Alena Ježková, "77 Prague Legends", 2006, p. 125.
+-- Myslíkova Street; Source: Alena Ježková, "77 Prague Legends", 2006, p. 131.
+-- Spálená Street; Source: Alena Ježková, "77 Prague Legends", 2006, p. 131.
 
 -- Unique squares in Prague
 -- Malé náměstí ("Small Square"); Source: Alena Ježková, "77 Prague Legends", 2006, p. 19.
 -- Mariánské Square; Source: Alena Ježková, "77 Prague Legends", 2006, p. 26.
 -- Loretánské Square; the Černín Palace was located in it; Source: Alena Ježková, "77 Prague Legends", 2006, p. 94.
+-- Karlova náměstí ("Charles Square"); Source: Alena Ježková, "77 Prague Legends", 2006, p. 126.
+
+-- Nový svět ("New World"); district in Hradčany (in or nearby Prague); Source: Alena Ježková, "77 Prague Legends", 2006, p. 98.
+-- Josefo; Jewish quarter in Prague; Source: Alena Ježková, "77 Prague Legends", 2006, p. 101.
+-- Malá Strana ("Lesser Town") (in or nearby Prague); Source: Alena Ježková, "77 Prague Legends", 2006, p. 124.
 
 -- Judita Bridge, unique bridge; first stone bridge built across the Vltava in Prague (built in 1158 at the orders of Judita, wife of Vladislav II); the bridge was 500m long, being the largest in Central Europe when built; the bridge was destroyed by a great flood in 1342; Source: Alena Ježková, "77 Prague Legends", 2006, p. 45.
 -- Charles Bridge: built to replace Judita Bridge, had its foundation stone laid by Emperor and King Charles IV in the 9th of July 1357; its construction was entrusted to Petr Parléř, who had built St Vitus' Cathedral; the bridge had wine, raw eggs and cream cheese added to the mortar; Source: Alena Ježková, "77 Prague Legends", 2006, pp. 45-46.
@@ -300,3 +326,5 @@ DefineUniqueItem("Cernin Palace", { -- Alena Ježková, "77 Prague Legends", 200
 -- The Hunger Wall (wall in Prague); Source: Alena Ježková, "77 Prague Legends", 2006, p. 61.
 
 -- Zikmund (unique bell in Prague); Source: Alena Ježková, "77 Prague Legends", 2006, p. 84.
+
+-- Josef (legendary golem from Prague); Source: Alena Ježková, "77 Prague Legends", 2006, p. 107.

@@ -313,3 +313,5 @@ DefineUnitType("unit-carrots", { Name = _("Carrots"),
 		"used", "eat"
 	} 
 } )
+
+-- Shem (piece of parchment with secret symbols used to animate golems); according to Prague legends, used to animate the golem Josef; Source: Alena Ježková, "77 Prague Legends", 2006, pp. 107-109.
