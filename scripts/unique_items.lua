@@ -30,7 +30,7 @@ DefineUniqueItem("Brimir", { -- Source: Henry Adams Bellows (transl.), "The Poet
 	Prefix = "upgrade-item-prefix-penetrating",
 	Suffix = "upgrade-item-suffix-of-victory",
 	Background = "Brimir was described in Norse mythology as being the best of swords.",
-	Quote = "\"Of all the gods | is Odin the greatest, / And Sleipnir the best of steeds; / Bifrost of bridges, | Bragi of skalds, / Hobrok of hawks, | Garm of hounds, / and Brimir of swords.\" - Grimnismol"
+	Quote = "\"Of all the gods | is Odin the greatest, / And Sleipnir the best of steeds; / Bifrost of bridges, | Bragi of skalds, / Hobrok of hawks, | Garm of hounds, / and Brimir of swords.\" - Grimnismol (Grimnir)"
 } )
 
 DefineUniqueItem("Laevatein", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 124; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 245.
@@ -38,7 +38,7 @@ DefineUniqueItem("Laevatein", { -- Source: Kevin Crossley-Holland, "The Norse My
 	Prefix = "upgrade-item-prefix-wounding",
 	Suffix = "upgrade-item-suffix-of-slaughter",
 	Background = "In Norse mythology, Laevatein (\"the Wounding Wand\") was a sword forged by Loki with runes at the doors of Niflheim, and was placed under nine locks in Laegjarn's chest, with Sinmora guarding over it.",
-	Quote = "\"Laevatein is there | that Lopt with runes / Once made by the doors of death; / In Laegjarn's chest | by Sinmora lies it, / And nine locks fasten it firm.\" - Svipdagsmol"
+	Quote = "\"Laevatein is there | that Lopt with runes / Once made by the doors of death; / In Laegjarn's chest | by Sinmora lies it, / And nine locks fasten it firm.\" - Svipdagsmol (Fjolsvith)"
 } )
 
 DefineUniqueItem("Gram", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", pp. 351, 365.
@@ -46,8 +46,8 @@ DefineUniqueItem("Gram", { -- Source: Henry Adams Bellows (transl.), "The Poetic
 	Prefix = "upgrade-item-prefix-wounding",
 	Suffix = "upgrade-item-suffix-of-victory",
 	Background = "In Norse mythology, Gram was the sword given by Odin to Sigmund. Being later broken into pieces, the sword was reforged by Regin for Sigurd.",
---	Quote = "\"My kin, methinks, | is unknown to thee, / And so am I myself; / Sigurd my name, | and Sigmund's son, / Who smote thee thus with the sword.\" - Fafnismol"
-	Quote = "\"With thy sword between, | three nights thou sleepest / With her thou winnest | for Gunnar's wife.\" - Gripisspo"
+--	Quote = "\"My kin, methinks, | is unknown to thee, / And so am I myself; / Sigurd my name, | and Sigmund's son, / Who smote thee thus with the sword.\" - Fafnismol (Sigurd)"
+	Quote = "\"With thy sword between, | three nights thou sleepest / With her thou winnest | for Gunnar's wife.\" - Gripisspo (Gripir)"
 } )
 
 DefineUniqueItem("Hrotti", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 385.
@@ -56,6 +56,7 @@ DefineUniqueItem("Hrotti", { -- Source: Henry Adams Bellows (transl.), "The Poet
 	Suffix = "upgrade-item-suffix-of-perfuration",
 	Background = "In Norse mythology, Hrotti (\"Thruster\") was Fafnir's sword, which was taken by Sigurd.",
 	Quote = "\"There he found a mighty store of gold, and he filled two chests full thereof; he took the fear-helm and a golden mail-coat and the sword Hrotti, and many other precious things.\" - Fafnismol"
+--	Quote = "\"There Sigurd found a mighty store of gold, and he filled two chests full thereof; he took the fear-helm and a golden mail-coat and the sword Hrotti, and many other precious things.\" - Fafnismol" -- original
 } )
 
 DefineUniqueItem("Rithil", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 380.
@@ -87,7 +88,7 @@ DefineUniqueItem("Svalin", { -- Source: Kevin Crossley-Holland, "The Norse Myths
 	Prefix = "upgrade-item-prefix-impregnable",
 	Suffix = "upgrade-item-suffix-of-extinguishment",
 	Background = "In Norse mythology, Svalin (\"the Cooling\") was the shield which stood in front of the sun, protecting the mountains and the sea from burning in flames.",
-	Quote = "\"In front of the sun | does Svalin stand, / The shield for the shining god; / Mountains and sea | would be set in flames / If it fell from before the sun.\" - Grimnismol"
+	Quote = "\"In front of the sun | does Svalin stand, / The shield for the shining god; / Mountains and sea | would be set in flames / If it fell from before the sun.\" - Grimnismol (Grimnir)"
 } )
 
 DefineUniqueItem("Brisingamen", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", pp. 177.
@@ -103,7 +104,7 @@ DefineUniqueItem("Andvaranaut", { -- Source: Henry Adams Bellows (transl.), "The
 	Prefix = "upgrade-item-prefix-vicious",
 	Suffix = "upgrade-item-suffix-of-betrayal",
 	Background = "In Norse mythology, Andvaranaut (\"Andvari's Booty\") was a gold ring owned by Andvari and forcibly taken from him by Loki. Upon the ring's theft, Andvari cursed whoever would come to own it. The ring had the power to make gold.",
-	Quote = "\"Now shall the gold | that I once had / Bring their death | to warriors twain, / And evil be | for heroes eight; / Joy of my wealth | shall no dwarf win.\" - Reginsmol"
+	Quote = "\"Now shall the gold | that I once had / Bring their death | to warriors twain, / And evil be | for heroes eight; / Joy of my wealth | shall no dwarf win.\" - Reginsmol (Andvari)"
 } )
 
 DefineUniqueItem("Draupnir", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 241; Source: Henry Adams Bellows (transl.), "The Poetic Edda", pp. 114.

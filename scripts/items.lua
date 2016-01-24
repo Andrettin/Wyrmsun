@@ -285,7 +285,10 @@ DefineUnitType("unit-scroll", { Name = _("Scroll"),
 	Parent = "unit-template-item",
 	Image = {"file", "neutral/items/scroll.png", "size", {32, 32}},
 	Icon = "icon-scroll",
-	ItemClass = "scroll"
+	ItemClass = "scroll",
+	Sounds = {
+		"used", "scroll"
+	} 
 } )
 
 DefineUnitType("unit-cheese", { Name = _("Cheese"),

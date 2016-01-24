@@ -115,8 +115,8 @@ DefineCharacter("Baglur", {
 	Civilization = "dwarf",
 	Faction = "Norlund Clan",
 	Description = _("Baglur is an old and well-experienced warrior. He came back from retirement to help Rugnur defend their homeland against an attack from the Shinsplitter Clan."),
---	Quote = _("\"Argh! I'm a retired warrior... it looks like I'll ha' to come out and help ye, else we'll be overrun by these damn raiders...\" - Baglur"), -- repeats information already given
-	Icon = "icon-baglur",
+	Quote = _("\"Argh! I'm a retired warrior... it looks like I'll ha' to come out and help ye, else we'll be overrun by these damn raiders...\" - Baglur"),
+ 	Icon = "icon-baglur",
 	Trait = "upgrade-resilient",
 	HairVariation = "gray-hair",
 	ProvinceOfOrigin = "Caverns of Chaincolt",

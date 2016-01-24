@@ -648,7 +648,7 @@ DefineUnitType("unit-dwarven-town-hall", { Name = _("Mead Hall"),
 	RepairCosts = {"gold", 1, "lumber", 1, "stone", 1},
 	FireResistance = 20,
 	AiDrops = {"unit-boots"},
-	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-glacial", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-the-snigill"},
+	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-glacial", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-the-snigill", "upgrade-work-fafnismol", "upgrade-work-reginsmol"},
 	Sounds = {
 		"help", "basic-dwarf-voices-help-town"
 	}
@@ -658,7 +658,7 @@ DefineUnitType("unit-dwarven-stronghold", { Name = _("Bastion"),
 	Parent = "unit-template-stronghold",
 	Civilization = "dwarf",
 	Description = _("A dwarven settlement that has reached a certain status will often oversee the construction of a bastion, enhancing its defensive capabilities."),
-	Quote = _("\"Durin spake: 'Now answer me, warder, | the question I ask, / For now the truth would I know: / What call they the hall, | encompassed here / With flickering magic flames?'\" - Dwarven Traditional Poetry"),
+	Quote = _("\"Now answer me, warder, | the question I ask, / For now the truth would I know: / What call they the hall, | encompassed here / With flickering magic flames?\" - Dwarven Traditional Poetry (Durin)"),
 	Image = {"file", "dwarf/buildings/stronghold.png", "size", {128, 128}},
 	Shadow = {"file", "dwarf/buildings/stronghold_shadow.png", "size", {128, 128}},
 	Icon = "icon-dwarven-stronghold",
@@ -667,7 +667,7 @@ DefineUnitType("unit-dwarven-stronghold", { Name = _("Bastion"),
 	FireResistance = 20,
 	TechnologyPointCost = 1,
 	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots"},
-	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-glacial", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-the-snigill"},
+	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-glacial", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-the-snigill", "upgrade-work-fafnismol", "upgrade-work-reginsmol"},
 	Sounds = {
 		"help", "basic-dwarf-voices-help-town"
 	}

@@ -70,6 +70,12 @@ https://github.com/Andrettin/Wyrmsun
 - Added "Detachment" spell for scrolls, which allows a faction-specific unit to transform into its civilization's equivalent unit.
 - Added "Forgetfulness" spell for scrolls, which allows retraining a unit.
 - Rings and amulets now always have a property.
+- Scrolls can be generated with literary works inscribed on them. Reading these will provide a very small (but persistent) bonus to your character.
+- Added Fafnismol (literary work, scroll) (+1% damage bonus vs. dragons) (dropped by dwarven Mead Halls and Bastions).
+- Added Reginsmol (literary work, scroll) (+1% backstab bonus) (dropped by dwarven Mead Halls and Bastions).
+
+* Miscellaneous
+- Added support for damage bonus vs. dragons. This damage bonus affects wyrms, and will affect any other draconic creatures added later to the game.
 
 -----------------------------------------------------------------------
 - 1.9.9

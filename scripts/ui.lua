@@ -1086,6 +1086,9 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {BonusAgainstGiants = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Bonus vs. Giants: "), String(TypeVar("BonusAgainstGiants","Value")), "%"), Font = wyr.preferences.PopupDescriptionFont}}
 				},
+				{ 	Condition = {BonusAgainstDragons = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = Concat(_("Bonus vs. Dragons: "), String(TypeVar("BonusAgainstDragons","Value")), "%"), Font = wyr.preferences.PopupDescriptionFont}}
+				},
 				{ 	Condition = {BonusAgainstBuildings = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Bonus vs. Buildings: "), String(TypeVar("BonusAgainstBuildings","Value")), "%"), Font = wyr.preferences.PopupDescriptionFont}}
 				},
@@ -1245,8 +1248,14 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {Equipped = "only"}, TextColor = "white", HighlightColor = "yellow",
 					More = {"Text", {Text = _("Right-click to de-equip"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 				},
-				{ 	Condition = {Consumable = "only"}, TextColor = "white", HighlightColor = "yellow",
+				{ 	Condition = {Consumable = "only", Work = "false"}, TextColor = "white", HighlightColor = "yellow",
 					More = {"Text", {Text = _("Right-click to use"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {Work = "only", ReadWork = "false"}, TextColor = "white", HighlightColor = "yellow",
+					More = {"Text", {Text = _("Right-click to read"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {Work = "only", ReadWork = "only"}, TextColor = "white", HighlightColor = "yellow",
+					More = {"Text", {Text = _("Already read"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {Bound = "false"}, TextColor = "white", HighlightColor = "yellow",
 					More = {"Text", {Text = _("Left-click to drop"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
@@ -1274,6 +1283,9 @@ if not (ui_loaded_first_time) then
 				},
 				{ 	Condition = {Unique = "only"}, HighlightColor = "yellow",
 					More = {"Text", {Text = _("Unique Item"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {Work = "only"}, HighlightColor = "yellow",
+					More = {"Text", {Text = _("Literary Work"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {Spell = "only"}, HighlightColor = "yellow",
 					More = {"Text", {Text = Concat(_("Casts "), UnitSpell("Unit")), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
@@ -1328,10 +1340,78 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {Backstab = "only"}, HighlightColor = "yellow",
 					More = {"Text", {Text = Concat(
 							Concat(
-								_("Backstab Bonus: "),
-								If(GreaterThan(UnitVar("Backstab", "Change"), 0), "+", "")
+								Concat(
+									_("Backstab Bonus: "),
+									If(GreaterThan(UnitVar("Backstab", "Change"), 0), "+", "")
+								),
+								String(UnitVar("Backstab", "Change"))
 							),
-							String(UnitVar("Backstab", "Change"))
+							"%"
+						),
+						Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {BonusAgainstMounted = "only"}, HighlightColor = "yellow",
+					More = {"Text", {Text = Concat(
+							Concat(
+								Concat(
+									_("Bonus vs. Mounted: "),
+									If(GreaterThan(UnitVar("BonusAgainstMounted", "Change"), 0), "+", "")
+								),
+								String(UnitVar("BonusAgainstMounted", "Change"))
+							),
+							"%"
+						),
+						Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {BonusAgainstAir = "only"}, HighlightColor = "yellow",
+					More = {"Text", {Text = Concat(
+							Concat(
+								Concat(
+									_("Bonus vs. Air: "),
+									If(GreaterThan(UnitVar("BonusAgainstAir", "Change"), 0), "+", "")
+								),
+								String(UnitVar("BonusAgainstAir", "Change"))
+							),
+							"%"
+						),
+						Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {BonusAgainstGiants = "only"}, HighlightColor = "yellow",
+					More = {"Text", {Text = Concat(
+							Concat(
+								Concat(
+									_("Bonus vs. Giants: "),
+									If(GreaterThan(UnitVar("BonusAgainstGiants", "Change"), 0), "+", "")
+								),
+								String(UnitVar("BonusAgainstGiants", "Change"))
+							),
+							"%"
+						),
+						Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {BonusAgainstDragons = "only"}, HighlightColor = "yellow",
+					More = {"Text", {Text = Concat(
+							Concat(
+								Concat(
+									_("Bonus vs. Dragons: "),
+									If(GreaterThan(UnitVar("BonusAgainstDragons", "Change"), 0), "+", "")
+								),
+								String(UnitVar("BonusAgainstDragons", "Change"))
+							),
+							"%"
+						),
+						Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {BonusAgainstBuildings = "only"}, HighlightColor = "yellow",
+					More = {"Text", {Text = Concat(
+							Concat(
+								Concat(
+									_("Bonus vs. Buildings: "),
+									If(GreaterThan(UnitVar("BonusAgainstBuildings", "Change"), 0), "+", "")
+								),
+								String(UnitVar("BonusAgainstBuildings", "Change"))
+							),
+							"%"
 						),
 						Font = wyr.preferences.PopupDescriptionFont}}
 				},
@@ -1347,100 +1427,130 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {FireResistance = "only"}, HighlightColor = "yellow",
 					More = {"Text", {Text = Concat(
 							Concat(
-								_("Fire Resistance: "),
-								If(GreaterThan(UnitVar("FireResistance", "Change"), 0), "+", "")
+								Concat(
+									_("Fire Resistance: "),
+									If(GreaterThan(UnitVar("FireResistance", "Change"), 0), "+", "")
+								),
+								String(UnitVar("FireResistance", "Change"))
 							),
-							String(UnitVar("FireResistance", "Change"))
+							"%"
 						),
 						Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {ColdResistance = "only"}, HighlightColor = "yellow",
 					More = {"Text", {Text = Concat(
 							Concat(
-								_("Cold Resistance: "),
-								If(GreaterThan(UnitVar("ColdResistance", "Change"), 0), "+", "")
+								Concat(
+									_("Cold Resistance: "),
+									If(GreaterThan(UnitVar("ColdResistance", "Change"), 0), "+", "")
+								),
+								String(UnitVar("ColdResistance", "Change"))
 							),
-							String(UnitVar("ColdResistance", "Change"))
+							"%"
 						),
 						Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {ArcaneResistance = "only"}, HighlightColor = "yellow",
 					More = {"Text", {Text = Concat(
 							Concat(
-								_("Arcane Resistance: "),
-								If(GreaterThan(UnitVar("ArcaneResistance", "Change"), 0), "+", "")
+								Concat(
+									_("Arcane Resistance: "),
+									If(GreaterThan(UnitVar("ArcaneResistance", "Change"), 0), "+", "")
+								),
+								String(UnitVar("ArcaneResistance", "Change"))
 							),
-							String(UnitVar("ArcaneResistance", "Change"))
+							"%"
 						),
 						Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {LightningResistance = "only"}, HighlightColor = "yellow",
 					More = {"Text", {Text = Concat(
 							Concat(
-								_("Lightning Resistance: "),
-								If(GreaterThan(UnitVar("LightningResistance", "Change"), 0), "+", "")
+								Concat(
+									_("Lightning Resistance: "),
+									If(GreaterThan(UnitVar("LightningResistance", "Change"), 0), "+", "")
+								),
+								String(UnitVar("LightningResistance", "Change"))
 							),
-							String(UnitVar("LightningResistance", "Change"))
+							"%"
 						),
 						Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {AirResistance = "only"}, HighlightColor = "yellow",
 					More = {"Text", {Text = Concat(
 							Concat(
-								_("Air Resistance: "),
-								If(GreaterThan(UnitVar("AirResistance", "Change"), 0), "+", "")
+								Concat(
+									_("Air Resistance: "),
+									If(GreaterThan(UnitVar("AirResistance", "Change"), 0), "+", "")
+								),
+								String(UnitVar("AirResistance", "Change"))
 							),
-							String(UnitVar("AirResistance", "Change"))
+							"%"
 						),
 						Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {EarthResistance = "only"}, HighlightColor = "yellow",
 					More = {"Text", {Text = Concat(
 							Concat(
-								_("Earth Resistance: "),
-								If(GreaterThan(UnitVar("EarthResistance", "Change"), 0), "+", "")
+								Concat(
+									_("Earth Resistance: "),
+									If(GreaterThan(UnitVar("EarthResistance", "Change"), 0), "+", "")
+								),
+								String(UnitVar("EarthResistance", "Change"))
 							),
-							String(UnitVar("EarthResistance", "Change"))
+							"%"
 						),
 						Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {WaterResistance = "only"}, HighlightColor = "yellow",
 					More = {"Text", {Text = Concat(
 							Concat(
-								_("Water Resistance: "),
-								If(GreaterThan(UnitVar("WaterResistance", "Change"), 0), "+", "")
+								Concat(
+									_("Water Resistance: "),
+									If(GreaterThan(UnitVar("WaterResistance", "Change"), 0), "+", "")
+								),
+								String(UnitVar("WaterResistance", "Change"))
 							),
-							String(UnitVar("WaterResistance", "Change"))
+							"%"
 						),
 						Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {HackResistance = "only"}, HighlightColor = "yellow",
 					More = {"Text", {Text = Concat(
 							Concat(
-								_("Hack Resistance: "),
-								If(GreaterThan(UnitVar("HackResistance", "Change"), 0), "+", "")
+								Concat(
+									_("Hack Resistance: "),
+									If(GreaterThan(UnitVar("HackResistance", "Change"), 0), "+", "")
+								),
+								String(UnitVar("HackResistance", "Change"))
 							),
-							String(UnitVar("HackResistance", "Change"))
+							"%"
 						),
 						Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {PierceResistance = "only"}, HighlightColor = "yellow",
 					More = {"Text", {Text = Concat(
 							Concat(
-								_("Pierce Resistance: "),
-								If(GreaterThan(UnitVar("PierceResistance", "Change"), 0), "+", "")
+								Concat(
+									_("Pierce Resistance: "),
+									If(GreaterThan(UnitVar("PierceResistance", "Change"), 0), "+", "")
+								),
+								String(UnitVar("PierceResistance", "Change"))
 							),
-							String(UnitVar("PierceResistance", "Change"))
+							"%"
 						),
 						Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {BluntResistance = "only"}, HighlightColor = "yellow",
 					More = {"Text", {Text = Concat(
 							Concat(
-								_("Blunt Resistance: "),
-								If(GreaterThan(UnitVar("BluntResistance", "Change"), 0), "+", "")
+								Concat(
+									_("Blunt Resistance: "),
+									If(GreaterThan(UnitVar("BluntResistance", "Change"), 0), "+", "")
+								),
+								String(UnitVar("BluntResistance", "Change"))
 							),
-							String(UnitVar("BluntResistance", "Change"))
+							"%"
 						),
 						Font = wyr.preferences.PopupDescriptionFont}}
 				},
@@ -1463,7 +1573,13 @@ if not (ui_loaded_first_time) then
 				{ 	Margin = {1, 1}, Condition = {Unique = "only", Quote = true},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				}, 
+				{ 	Margin = {1, 1}, Condition = {Work = "only", Quote = true},
+					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
+				}, 
 				{ 	Condition = {Unique = "only", Quote = true}, HighlightColor = "yellow",
+					More = {"Text", {Text = UnitQuote("Unit"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {Work = "only", Quote = true}, HighlightColor = "yellow",
 					More = {"Text", {Text = UnitQuote("Unit"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 				},
 		}	

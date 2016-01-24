@@ -275,7 +275,7 @@ DefineUnitType("unit-rat", { Name = "Rat",
 DefineUnitType("unit-horse", { Name = "Horse",
 	Class = "grazer",
 	Description = _("Horses are valuable for their speed as well as their endurance, making excellent mounts. The creatures were a vital component of any army, and was an essential part of the lifestyle of the peoples of the Eurasian steppes."),
-	Quote = _("\"Glath and Gyllir, | Gler and Skeithbrimir, / Silfrintopp and Sinir, / Gisl and Falhofnir, | Golltopp and Lettfeti, / On these steeds the gods shall go / When dooms to give | each day they ride / To the ash-tree Yggdrasil.\" - Grimnismol"), -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 96.
+	Quote = _("\"Glath and Gyllir, | Gler and Skeithbrimir, / Silfrintopp and Sinir, / Gisl and Falhofnir, | Golltopp and Lettfeti, / On these steeds the gods shall go / When dooms to give | each day they ride / To the ash-tree Yggdrasil.\" - Grimnismol (Grimnir)"), -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 96.
 	Image = {"file", "neutral/units/horse_brown_skin_brown_hair_brown_eyes.png", "size", {72, 72}},
 	Animations = "animations-yale", Icon = "icon-horse",
 	NeutralMinimapColor = {192, 192, 192},
@@ -575,6 +575,7 @@ DefineUnitType("unit-wyrm", { Name = _("Wyrm"),
 	Predator = true,
 	Flesh = true,
 	Carnivore = true,
+	Dragon = true,
 	ChildUpgrade = "upgrade-wyrm-child",
 	PersonalNames = {"Goin", "Jormungand", "Ladon", "Moin", "Ofnir", "Svafnir"}, -- Grabak = Gray-Back, Midgardsorm = Midgard Serpent, Nidhogg = Corpse Tearer / The Dread Biter, Ofnir = The Bewilderer, Svafnir = The Sleep-Bringer
 	PersonalNamePrefixes = {"Gra", "Graf", "Nid"}, -- Gra = Gray, Graf = Gnawer / Gnawing, Nid = Corpse / Dread

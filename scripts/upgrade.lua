@@ -55,6 +55,7 @@ function DefineUpgrade(upgrade_ident, data)
 		upgrade.MagicPrefix = CUpgrade:Get(data.Parent).MagicPrefix
 		upgrade.MagicSuffix = CUpgrade:Get(data.Parent).MagicSuffix
 		upgrade.RunicAffix = CUpgrade:Get(data.Parent).RunicAffix
+		upgrade.Work = CUpgrade:Get(data.Parent).Work
 	end
 	if (data.Name ~= nil) then
 		upgrade.Name = data.Name
@@ -120,6 +121,9 @@ function DefineUpgrade(upgrade_ident, data)
 	end
 	if (data.RunicAffix ~= nil) then
 		upgrade.RunicAffix = data.RunicAffix
+	end
+	if (data.Work ~= nil) then
+		upgrade.Work = GetItemClassIdByName(data.Work)
 	end
 	if (data.ItemPrefix ~= nil) then
 		for i = 1,table.getn(data.ItemPrefix),2 do
@@ -656,3 +660,4 @@ DefineModifier("upgrade-wyrm-child",
 Load("scripts/item_prefixes.lua")
 Load("scripts/item_suffixes.lua")
 Load("scripts/item_suffixes_runic.lua")
+Load("scripts/works.lua")

@@ -99,7 +99,7 @@ DefineUpgrade("upgrade-dwarven-shield-2", {
 	Civilization = "dwarf",
 	Description = _("As shield-making techniques improved, the creation of thrymgjol shields became possible. These shields receive their name from the impregnable gate crafted by the sons of the dwarf Solblindi, due to the mighty protection they give their users.\n\nEffect: +2 Armor for Axefighters, Steelclads, Stonelords and Yale Riders."),
 	Background = _("The Thrymgjol gate and its makers, the sons of the dwarf Solblindi, are mentioned in the ~<Svipdagsmol~> of Norse mythology. The name \"Thrymgjol\" means \"loud-clanging\"."),
-	Quote = _("The Warder: \"Thrymgjol they call it; | 'twas made by the three, / The sons of Solblindi; / And fast as a fetter | the farer it holds, / Whoever shall lift the latch.\" - Dwarven Traditional Poetry"),
+	Quote = _("\"Thrymgjol they call it; | 'twas made by the three, / The sons of Solblindi; / And fast as a fetter | the farer it holds, / Whoever shall lift the latch.\" - Dwarven Traditional Poetry (The Warder)"),
 	TechnologyPointCost = 1
 })
 
