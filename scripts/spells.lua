@@ -38,6 +38,7 @@ DefineUnitType("unit-revealer", {})
 -- And declare upgrade for dependency...
 CUpgrade:New("upgrade-portent")
 CUpgrade:New("upgrade-stun")
+CUpgrade:New("upgrade-puncture")
 
 DefineSpell("spell-herbal-cure",
 	"showname", _("Herbal Cure"),
@@ -152,6 +153,26 @@ DefineSpell("spell-stun",
 	"autocast", {"range", 6, "combat", "only", "condition", {"Coward", "false", "opponent", "only", "Stun", {ExactValue = 0}}},
 	"ai-cast", {"range", 6, "combat", "only", "condition", {"Coward", "false", "opponent", "only", "Stun", {ExactValue = 0}}},
 	"depend-upgrade", "upgrade-stun"
+)
+
+DefineSpell("spell-puncture",
+	"showname", _("Puncture"),
+	"manacost", 50,
+	"range", 1,
+	"target", "unit",
+	"action", {
+		{"adjust-variable", {Bleeding = 1000}},
+		{"spawn-missile", "missile", "missile-magic-effect", "start-point", {"base", "target"}},
+		{"spawn-missile", "missile", "missile-always-hits", "start-point", {"base", "target"}, "use-unit-var"}
+	},
+	"condition", {
+		"organic", "only",
+		"Building", "false",
+		"thrusting-weapon", "only"
+	},
+	"autocast", {"range", 6, "combat", "only", "condition", {"Coward", "false", "opponent", "only", "Bleeding", {ExactValue = 0}}},
+	"ai-cast", {"range", 6, "combat", "only", "condition", {"Coward", "false", "opponent", "only", "Bleeding", {ExactValue = 0}}},
+	"depend-upgrade", "upgrade-puncture"
 )
 
 -- spells to change units to their faction equivalents

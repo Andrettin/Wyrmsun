@@ -226,6 +226,18 @@ DefineButton( { Pos = 7, Level = 1, Icon = "icon-stun",
 	}
 } )
 
+DefineButton( { Pos = 8, Level = 1, Icon = "icon-puncture",
+	Action = "learn-ability", Value = "upgrade-puncture",
+	Key = "r", Hint = "Learn Punctu~!re", Popup = "popup-commands",
+	Description = "Puncture is an active ability which makes the target bleed for a certain duration. Only usable with melee weapons capable of doing thrusting attacks.",
+	ForUnit = {
+		"unit-germanic-warrior", "unit-germanic-spearman",
+		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-teuton-spearman",
+		"unit-gnomish-master-at-arms",
+		"unit-goblin-thief", "unit-goblin-spearman"
+	}
+} )
+
 DefineButton( { Pos = 16, Level = 1, Icon = "icon-cancel",
 	Action = "button", Value = 0,
 	Key = "escape", Hint = "Cancel (~<Esc~>)", Popup = "popup-commands",
@@ -309,5 +321,17 @@ DefineButton( { Pos = 6, Level = 0, Icon = "icon-stun",
 		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-teuton-ritter",
 		"unit-gnomish-master-at-arms",
 		"unit-surghan-mercenary-thane"
+	}
+})
+
+DefineButton( { Pos = 7, Level = 0, Icon = "icon-puncture",
+	Action = "cast-spell", Value = "spell-puncture",
+	Description = "Makes the target bleed for a certain duration. Only usable with melee weapons capable of doing thrusting attacks.",
+	Key = "r", Hint = _("Punctu~!re"), Popup = "popup-research",
+	ForUnit = {
+		"unit-germanic-warrior", "unit-germanic-spearman",
+		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-teuton-spearman",
+		"unit-gnomish-master-at-arms",
+		"unit-goblin-thief", "unit-goblin-spearman"
 	}
 })

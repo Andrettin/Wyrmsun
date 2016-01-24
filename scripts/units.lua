@@ -3658,6 +3658,8 @@ DefineUnitType("unit-template-spearman", { Name = _("Spearman"),
 	WeaponClasses = {"spear"},
 	PierceDamage = true,
 	DropAffixes = {},
+	CanCastSpell = {"spell-puncture"},
+	AutoCastActive = {"spell-puncture"},
 	Sounds = {
 		"hit", "spear-attack",
 		"miss", "spear-miss"
@@ -3744,6 +3746,8 @@ DefineUnitType("unit-template-thief", { Name = _("Thief"),
 	organic = true,
 	Flesh = true,
 	SelectableByRectangle = true,
+	CanCastSpell = {"spell-puncture"},
+	AutoCastActive = {"spell-puncture"},
 	Traits = {"upgrade-mighty", "upgrade-strong", "upgrade-weak", "upgrade-dextrous", "upgrade-clumsy", "upgrade-reckless", "upgrade-near-sighted", "upgrade-keen", "upgrade-limping", "upgrade-old", "upgrade-quick", "upgrade-resilient", "upgrade-slow", "upgrade-cruel"},
 	DropAffixes = {"upgrade-item-prefix-accurate", "upgrade-item-prefix-cruel", "upgrade-item-prefix-frail", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-swift", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-accuracy", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
 	Sounds = {

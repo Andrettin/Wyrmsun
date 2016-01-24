@@ -1084,6 +1084,12 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-puncture",
+	Size = {46, 38},
+	File = "neutral/icons/puncture.png"
+})
+
+DefineIcon({
 	Name = "icon-goblin-town-hall",
 	Size = {46, 38},
 	File = "goblin/icons/town_hall.png"

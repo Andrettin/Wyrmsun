@@ -10,7 +10,7 @@
 --
 --      units.ccl - Define the gnomish unit-types.
 --
---      (c) Copyright 2014-2015 by Andrettin
+--      (c) Copyright 2014-2016 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -303,6 +303,8 @@ DefineUnitType("unit-gnomish-master-at-arms", { Name = _("Master at Arms"),
 	Evasion = 15,
 	Corpse = "unit-gnomish-dead-body",
 	WeaponClasses = {"thrusting-sword", "sword", "mace"},
+	CanCastSpell = {"spell-puncture"},
+	AutoCastActive = {"spell-puncture"},
 	AiDrops = {"unit-thrusting-sword", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-wool-shoes", "unit-furry-wool-shoes", "unit-cheese", "unit-potion-of-healing"},
 	DropAffixes = {"upgrade-item-prefix-jinns", "upgrade-item-prefix-storm", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-the-jinn", "upgrade-item-suffix-of-lightning", "upgrade-item-suffix-of-the-snigill", "upgrade-item-suffix-of-trickery"},
 	PierceDamage = true,

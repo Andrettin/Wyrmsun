@@ -461,6 +461,12 @@ DefineUpgrade("upgrade-portent", {
 	Ability = true
 })
 
+DefineUpgrade("upgrade-puncture", {
+	Name = _("Puncture"),
+	Icon = "icon-puncture",
+	Ability = true
+})
+
 DefineUpgrade("upgrade-spear-mastery", {
 	Name = _("spear Mastery"),
 	Icon = "icon-spear-mastery",

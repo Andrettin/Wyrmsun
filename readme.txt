@@ -64,6 +64,9 @@ https://github.com/Andrettin/Wyrmsun
 - 2.0.0
 -----------------------------------------------------------------------
 
+* Abilities
+- Added "Puncture" learnable active ability (icon by Leo), available for units capable of making melee thrusting attacks.
+
 * Items
 - Scrolls can now drop from town hall and stronghold type buildings (scrolls always have a property associated with them).
 - Added "Suebi Allegiance" spell for scrolls, which allows Teuton Kriegers to transform into Suebi Kriegers.
