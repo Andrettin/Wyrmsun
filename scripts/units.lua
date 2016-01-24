@@ -3828,7 +3828,7 @@ DefineUnitType("unit-template-priest", { Name = _("Priest"),
 	SelectableByRectangle = true,
 	Mana = {Enable = true, Max = 190, Value = 190, Increase = 1},
 	Traits = {"upgrade-mighty", "upgrade-strong", "upgrade-weak", "upgrade-dextrous", "upgrade-clumsy", "upgrade-reckless", "upgrade-near-sighted", "upgrade-keen", "upgrade-limping", "upgrade-old", "upgrade-quick", "upgrade-resilient", "upgrade-slow", "upgrade-cruel"},
-	AiDrops = {"unit-amulet", "unit-ring"},
+	AiDrops = {"unit-amulet", "unit-ring", "unit-scroll"},
 	DropAffixes = {"upgrade-item-prefix-accurate", "upgrade-item-prefix-cruel", "upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-penetrating", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-swift", "upgrade-item-prefix-vicious", "upgrade-item-prefix-vulnerable", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-accuracy", "upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-thorns", "upgrade-item-suffix-of-vulnerability"},
 	Sounds = {
 		"step", "step-dirt",

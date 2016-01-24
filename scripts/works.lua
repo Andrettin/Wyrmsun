@@ -46,6 +46,12 @@ DefineUpgrade("upgrade-work-reginsmol", {
 --	Quote = "\"Here shall I foster | the fearless prince, / Now Yngvi's heir | to us is come; / The noblest hero | beneath the sun, / The threads of his fate | all lands enfold.\" - Reginsmol (Regin)" -- original
 })
 
+DefineUpgrade("upgrade-work-the-scepter-of-fire", {
+	Name = _("The Scepter of Fire"), -- from Wesnoth
+	Work = "scroll",
+	Quote = "The land of Untersberg's banner bold / Comes not from its own land; / It comes from Dwarfdom, grim and old / Made by a runesmith's hand.\" - The Scepter of Fire"
+})
+
 DefineModifier("upgrade-work-alvissmol",
 	{"Mana", 1}
 )
@@ -56,4 +62,8 @@ DefineModifier("upgrade-work-fafnismol",
 
 DefineModifier("upgrade-work-reginsmol",
 	{"Backstab", 1}
+)
+
+DefineModifier("upgrade-work-the-scepter-of-fire",
+	{"FireResistance", 1}
 )
