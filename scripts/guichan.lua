@@ -789,7 +789,9 @@ function RunMap(map, objective, fow, revealmap)
 	end
 
 	InitGameSettings()
-	SetPlayerData(GetThisPlayer(), "RaceName", "dwarf")
+	if not (GrandStrategy) then
+		SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
+	end
 	
 	CurrentQuest = ""
 end

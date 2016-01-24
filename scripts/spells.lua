@@ -181,6 +181,11 @@ DefineSpell("spell-suebi-allegiance",
 	"manacost", 0,
 	"range", 0,
 	"target", "self",
+	"condition", {
+		"organic", "only",
+		"Building", "false",
+		"faction-equivalent", "teuton", "Suebi Tribe"
+	},
 	"action", {
 		{"spawn-missile", "missile", "missile-magic-effect", "start-point", {"base", "target"}},
 		{"polymorph", "civilization", "teuton", "faction", "Suebi Tribe"}
@@ -194,6 +199,11 @@ DefineSpell("spell-detachment",
 	"manacost", 0,
 	"range", 0,
 	"target", "self",
+	"condition", {
+		"organic", "only",
+		"Building", "false",
+		"faction-unit", "only"
+	},
 	"action", {
 		{"spawn-missile", "missile", "missile-magic-effect", "start-point", {"base", "target"}},
 		{"polymorph", "detachment"}
