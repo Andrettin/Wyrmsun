@@ -1303,6 +1303,9 @@ if not (ui_loaded_first_time) then
 						),
 						Font = wyr.preferences.PopupDescriptionFont}}
 				},
+				{ 	Condition = {Mana = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Mana: "), Variable = "Mana", Font = wyr.preferences.PopupDescriptionFont}}
+				},
 				{ 	Condition = {BasicDamage = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(
 						Concat(

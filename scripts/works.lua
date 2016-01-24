@@ -25,6 +25,13 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineUpgrade("upgrade-work-alvissmol", {
+	Name = _("Alvissmol"), -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", pp. 183-194.
+	Work = "scroll",
+	Quote = "\"Alvis am I, | and under the earth / My home 'neath the rocks I have; / With the thunder-thrower | a word do I seek, / Let the gods their bond not break.\" - Alvissmol (Alvis)"
+--	Quote = "\"Alvis am I, | and under the earth / My home 'neath the rocks I have; / With the wagon-guider | a word do I seek, / Let the gods their bond not break.\" - Alvissmol (Alvis)" -- original
+})
+
 DefineUpgrade("upgrade-work-fafnismol", {
 	Name = _("Fafnismol"), -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", pp. 370-385.
 	Work = "scroll",
@@ -38,6 +45,10 @@ DefineUpgrade("upgrade-work-reginsmol", {
 	Quote = "\"Here shall I foster | the fearless prince, / Now Modsognir's heir | to us is come; / The noblest hero | under the mountains, / The threads of his fate | all lands enfold.\" - Reginsmol (Regin)"
 --	Quote = "\"Here shall I foster | the fearless prince, / Now Yngvi's heir | to us is come; / The noblest hero | beneath the sun, / The threads of his fate | all lands enfold.\" - Reginsmol (Regin)" -- original
 })
+
+DefineModifier("upgrade-work-alvissmol",
+	{"Mana", 1}
+)
 
 DefineModifier("upgrade-work-fafnismol",
 	{"BonusAgainstDragons", 1}
