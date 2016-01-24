@@ -65,7 +65,7 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if ((PlayerHasObjective(GetThisPlayer(), "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall") or PlayerHasObjective(GetThisPlayer(), "- Find Thursagan and bring him to your Mead Hall") or PlayerHasObjective(GetThisPlayer(), "- Defeat Glonoin, the Shorbear Clan leader") or PlayerHasObjective(GetThisPlayer(), "- Have all heroes in the Shorbear caves while no enemies are in the caves") or PlayerHasObjective(GetThisPlayer(), "- Move the Gnomish Envoy to the southern border east of the river")) and GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-gnomish-duelist") < 1) then
+		if ((PlayerHasObjective(GetThisPlayer(), "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall") or PlayerHasObjective(GetThisPlayer(), "- Find Thursagan and bring him to your Mead Hall") or PlayerHasObjective(GetThisPlayer(), "- Defeat Glonoin, the Shorbear Clan leader") or PlayerHasObjective(GetThisPlayer(), "- Have all heroes in the Shorbear caves while no enemies are in the caves") or PlayerHasObjective(GetThisPlayer(), "- Move the Gnomish Envoy to the southern border east of the river")) and GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-gnomish-duelist") < 1 and GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-gnomish-master-at-arms") < 1) then
 			player = GetThisPlayer()
 			return true
 		end
@@ -565,7 +565,6 @@ AddTrigger(
 												event_player,
 												{"~!Continue"},
 												{function(s)
-													AddPlayerObjective(player, "- Have all heroes in the Shorbear caves while no enemies are in the caves")
 													RemovePlayerObjective(GetFactionPlayer("Shinsplitter Clan"), "- Defeat your enemies")
 													AddPlayerObjective(GetFactionPlayer("Shinsplitter Clan"), "- Defeat the Norlunds")
 												end},
@@ -606,7 +605,7 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if (PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Defeat Glonoin, the Shorbear Clan leader") and GetPlayerData(1, "UnitTypesCount", "unit-dwarven-thane") < 1) then
+		if (PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Defeat Glonoin, the Shorbear Clan leader") and FindHero("Glonoin", GetFactionPlayer("Shorbear Clan")) == nil) then
 			player = GetFactionPlayer("Norlund Clan")
 			return true
 		end
@@ -636,7 +635,7 @@ AddTrigger(
 					{"~!Continue"},
 					{function(s)
 					if (GetNumUnitsAt(1, "units", {26, 23}, {51, 44}) + GetNumUnitsAt(2, "units", {26, 23}, {51, 44}) >= 1) then
-						if (UnitIsAt(FindHero("Rugnur"), {26, 23}, {51, 44}) and UnitIsAt(FindHero("Baglur"), {26, 23}, {51, 44}) and UnitIsAt(FindHero("Thursagan"), {26, 23}, {51, 44}) and UnitIsAt(FindHero("Durstorn"), {26, 23}, {51, 44}) and GetNumUnitsAt(player, "unit-gnomish-duelist", {26, 23}, {51, 44}) >= 1) then
+						if (UnitIsAt(FindHero("Rugnur"), {26, 23}, {51, 44}) and UnitIsAt(FindHero("Baglur"), {26, 23}, {51, 44}) and UnitIsAt(FindHero("Thursagan"), {26, 23}, {51, 44}) and UnitIsAt(FindHero("Durstorn"), {26, 23}, {51, 44}) and (GetNumUnitsAt(player, "unit-gnomish-duelist", {26, 23}, {51, 44}) + GetNumUnitsAt(player, "unit-gnomish-master-at-arms", {26, 23}, {51, 44})) >= 1) then
 							Event(
 								FindHero("Thursagan"),
 								"Well, back to the battle - we are all in the caves, but there are still enemies in here also!",
@@ -673,7 +672,7 @@ AddTrigger(
 								"dwarf/icons/thursagan.png"
 							)
 						end
-					elseif ((UnitIsAt(FindHero("Rugnur"), {26, 23}, {51, 44}) and UnitIsAt(FindHero("Baglur"), {26, 23}, {51, 44}) and UnitIsAt(FindHero("Thursagan"), {26, 23}, {51, 44}) and UnitIsAt(FindHero("Durstorn"), {26, 23}, {51, 44}) and GetNumUnitsAt(player, "unit-gnomish-duelist", {26, 23}, {51, 44}) >= 1) == false) then
+					elseif ((UnitIsAt(FindHero("Rugnur"), {26, 23}, {51, 44}) and UnitIsAt(FindHero("Baglur"), {26, 23}, {51, 44}) and UnitIsAt(FindHero("Thursagan"), {26, 23}, {51, 44}) and UnitIsAt(FindHero("Durstorn"), {26, 23}, {51, 44}) and (GetNumUnitsAt(player, "unit-gnomish-duelist", {26, 23}, {51, 44}) + GetNumUnitsAt(player, "unit-gnomish-master-at-arms", {26, 23}, {51, 44})) >= 1) == false) then
 						Event(
 							FindHero("Thursagan"),
 							"Well, back to the battle - we need everyone to get into the Shorbear caves. And then stop any enemies from coming in here.",
@@ -692,6 +691,7 @@ AddTrigger(
 							"dwarf/icons/thursagan.png"
 						)
 					end
+					AddPlayerObjective(player, "- Have all heroes in the Shorbear caves while no enemies are in the caves")
 					end}
 				)
 				end},
@@ -711,7 +711,7 @@ AddTrigger(
 		end
 		if (PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have all heroes in the Shorbear caves while no enemies are in the caves")) then
 			if (GetNumUnitsAt(1, "any", {26, 23}, {51, 44}) + GetNumUnitsAt(2, "any", {26, 23}, {51, 44}) < 1) then
-				if (UnitIsAt(FindHero("Rugnur"), {26, 23}, {51, 44}) and UnitIsAt(FindHero("Baglur"), {26, 23}, {51, 44}) and UnitIsAt(FindHero("Thursagan"), {26, 23}, {51, 44}) and UnitIsAt(FindHero("Durstorn"), {26, 23}, {51, 44}) and GetNumUnitsAt(GetFactionPlayer("Norlund Clan"), "unit-gnomish-duelist", {26, 23}, {51, 44}) >= 1) then
+				if (UnitIsAt(FindHero("Rugnur"), {26, 23}, {51, 44}) and UnitIsAt(FindHero("Baglur"), {26, 23}, {51, 44}) and UnitIsAt(FindHero("Thursagan"), {26, 23}, {51, 44}) and UnitIsAt(FindHero("Durstorn"), {26, 23}, {51, 44}) and (GetNumUnitsAt(GetFactionPlayer("Norlund Clan"), "unit-gnomish-duelist", {26, 23}, {51, 44}) + GetNumUnitsAt(GetFactionPlayer("Norlund Clan"), "unit-gnomish-master-at-arms", {26, 23}, {51, 44})) >= 1) then
 					player = GetFactionPlayer("Norlund Clan")
 					return true
 				end
@@ -732,7 +732,7 @@ AddTrigger(
 				uncount = GetUnits(0)
 				local units_to_die = {}
 				for unit1 = 1,table.getn(uncount) do 
-					if (GetUnitVariable(uncount[unit1], "Character") ~= "" or GetUnitVariable(uncount[unit1], "Ident") == "unit-gnomish-duelist" or GetUnitVariable(uncount[unit1], "Ident") == "unit-gryphon-rider") then
+					if (GetUnitVariable(uncount[unit1], "Character") ~= "" or GetUnitVariable(uncount[unit1], "Ident") == "unit-gnomish-duelist" or GetUnitVariable(uncount[unit1], "Ident") == "unit-gnomish-master-at-arms" or GetUnitVariable(uncount[unit1], "Ident") == "unit-gryphon-rider") then
 						if (GetUnitVariable(uncount[unit1],"PosX") >= 26 and GetUnitVariable(uncount[unit1],"PosX") <= 51 and GetUnitVariable(uncount[unit1],"PosY") >= 23 and GetUnitVariable(uncount[unit1],"PosY") <= 44) then
 --							MoveUnit(uncount[unit1], {41, 41}) -- move all units to this spot to open up place for buildings -- the "MoveUnit" is not working properly for some reason: buildings will still be blocked from being created at the unit's original location, and when Durstorn dies, after his corpse disappears the game crashes
 							SetUnitVariable(uncount[unit1], "HitPoints", GetUnitVariable(uncount[unit1], "HitPoints", "Max")) -- heal the heroes
@@ -1092,7 +1092,7 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if (PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Move Rugnur to the northeast cave entrance") and GetNumUnitsAt(GetFactionPlayer("Norlund Clan"), "unit-gnomish-duelist", {44, 76}, {256, 256}) >= 1) then
+		if (PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Move Rugnur to the northeast cave entrance") and (GetNumUnitsAt(GetFactionPlayer("Norlund Clan"), "unit-gnomish-duelist", {44, 76}, {256, 256}) + GetNumUnitsAt(GetFactionPlayer("Norlund Clan"), "unit-gnomish-duelist", {44, 76}, {256, 256})) >= 1) then
 			player = GetFactionPlayer("Norlund Clan")
 			return true
 		end
@@ -1142,7 +1142,7 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if (PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Move Rugnur to the northeast cave entrance") and UnitIsAt(FindHero("Rugnur"), {69, 14}, {69, 14}) and GetNumUnitsAt(GetFactionPlayer("Norlund Clan"), "unit-gnomish-duelist", {44, 76}, {256, 256}) >= 1) then
+		if (PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Move Rugnur to the northeast cave entrance") and UnitIsAt(FindHero("Rugnur"), {69, 14}, {69, 14}) and (GetNumUnitsAt(GetFactionPlayer("Norlund Clan"), "unit-gnomish-duelist", {44, 76}, {256, 256}) + GetNumUnitsAt(GetFactionPlayer("Norlund Clan"), "unit-gnomish-master-at-arms", {44, 76}, {256, 256})) >= 1) then
 			player = GetFactionPlayer("Norlund Clan")
 			return true
 		end

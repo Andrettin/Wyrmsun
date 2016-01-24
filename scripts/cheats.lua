@@ -108,7 +108,7 @@ function HandleCheats(str)
       AddMessage(_("Faster enabled!"))
     end
 
-  elseif (str == "hold off the goblin hordes") then
+  elseif (str == "valhalla") then
     ActionVictory()
 
   elseif (str == "ragnarok") then
@@ -117,7 +117,7 @@ function HandleCheats(str)
   elseif (str == "fenrir") then
 	KillUnitAt("any", GetThisPlayer(), GetPlayerData(GetThisPlayer(), "TotalNumUnits"), {0, 0}, {256, 256})
   
-  elseif (str == "scepter of fire") then
+  elseif (str == "hroptatyr") then
     if (godcheat) then
       godcheat = false
       SetGodMode(false)
