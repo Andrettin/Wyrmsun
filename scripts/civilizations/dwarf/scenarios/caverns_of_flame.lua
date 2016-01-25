@@ -133,16 +133,8 @@ AddTrigger(
 		return false
 	end,
 	function() 
-		RemovePlayerObjective(player, "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall")
-		RemovePlayerObjective(player, "- Have one unit standing on each glyph at the same time")
-		RemovePlayerObjective(player, "- Find Thursagan and bring him to your Mead Hall")
-		RemovePlayerObjective(player, "- Mine 10000 gold and 20000 coal")
-		RemovePlayerObjective(player, "- Defeat Glonoin, the Shorbear Clan leader")
-		RemovePlayerObjective(player, "- Have all heroes in the Shorbear caves while no enemies are in the caves")
-		if (mapinfo.description == "Chaincolt Foothills" or mapinfo.description == "Caverns of Chaincolt" or mapinfo.description == "Northern Wastelands" or mapinfo.description == "Eastern Mines" or mapinfo.description == "Shorbear Hills" or mapinfo.description == "Svafnir's Lair" or mapinfo.description == "Caverns of Flame") then
-			if (GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
-				ActionDefeat()
-			end
+		if (GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
+			ActionDefeat()
 		end
 		return false
 	end
@@ -761,7 +753,7 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if ((GameCycle - GetUnitVariable(FindHero("Thursagan", GetFactionPlayer("Norlund Clan")), "LastCycle")) > 3000 and PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Distract the Shinsplitters until the volcano erupts and kills them")) then
+		if (PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Distract the Shinsplitters until the volcano erupts and kills them") and FindHero("Thursagan", GetFactionPlayer("Norlund Clan")) ~= nil and (GameCycle - GetUnitVariable(FindHero("Thursagan", GetFactionPlayer("Norlund Clan")), "LastCycle")) > 3000) then
 			player = GetFactionPlayer("Norlund Clan")
 			return true
 		end
