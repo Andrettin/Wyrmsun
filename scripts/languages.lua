@@ -276,7 +276,7 @@ DefineCivilizationLanguage("old-high-german", -- Old High German
 	}
 )
 
-DefineLanguageNoun("Hagazussa", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 200.
+DefineLanguageWord("Hagazussa", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 200.
 	Civilization = "old-high-german",
 	Meaning = "Travelling Actor or Minstrel who Performs in Women's Clothing",
 	SingularNominative = "Hagazussa",

@@ -27,33 +27,33 @@
 
 -- Greek
 
-DefineLanguageNoun("Κώνωπες", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 101.
+DefineLanguageWord("Κώνωπες", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 101.
 	Civilization = "greek",
 	Meaning = "Gnats",
 	PluralNominative = "Κώνωπες"
 })
 
-DefineLanguageNoun("Μισθός", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 7.
+DefineLanguageWord("Μισθός", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 7.
 	Civilization = "greek",
 	Meaning = "Reward, Payment of a Soldier",
 	SingularNominative = "Μισθός",
 	Gender = "Masculine"
 })
 
-DefineLanguageNoun("Χέσ-χιον", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
+DefineLanguageWord("Χέσ-χιον", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
 	Civilization = "greek",
 	Meaning = "Oakum", -- source gives the German word "Werg" as the meaning
 	SingularNominative = "Χέσ-χιον" -- is this really an hyphen in the word, or are these two forms of the word?
 })
 
-DefineLanguageNoun("Χύσθος", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
+DefineLanguageWord("Χύσθος", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
 	Civilization = "greek",
 	Meaning = "Cavity, Vulva",
 	SingularNominative = "Χύσθος",
 	Gender = "Masculine"
 })
 
-DefineLanguageNoun("Abdera", { -- should be written as the original Greek name (with Greek characters)
+DefineLanguageWord("Abdera", { -- should be written as the original Greek name (with Greek characters)
 	Civilization = "greek",
 	Meaning = "?",
 	SingularNominative = "Abdera",
@@ -61,7 +61,7 @@ DefineLanguageNoun("Abdera", { -- should be written as the original Greek name (
 	TypeName = {"settlement"} -- example: "Abdera"
 })
 
-DefineLanguageNoun("Abydus", { -- should be written as the original Greek name (with Greek characters)
+DefineLanguageWord("Abydus", { -- should be written as the original Greek name (with Greek characters)
 	Civilization = "greek",
 	Meaning = "?",
 	SingularNominative = "Abydus",
@@ -69,7 +69,7 @@ DefineLanguageNoun("Abydus", { -- should be written as the original Greek name (
 	TypeName = {"settlement"} -- example: "Abydus"
 })
 
-DefineLanguageNoun("Acragas", { -- should be written as the original Greek name (with Greek characters)
+DefineLanguageWord("Acragas", { -- should be written as the original Greek name (with Greek characters)
 	Civilization = "greek",
 	Meaning = "?",
 	SingularNominative = "Acragas",
@@ -77,7 +77,7 @@ DefineLanguageNoun("Acragas", { -- should be written as the original Greek name 
 	TypeName = {"settlement"} -- example: "Acragas" (Agrigentum)
 })
 
-DefineLanguageNoun("Agathe", { -- should be written as the original Greek name (with Greek characters)
+DefineLanguageWord("Agathe", { -- should be written as the original Greek name (with Greek characters)
 	Civilization = "greek",
 	Meaning = "?",
 	SingularNominative = "Agathe",
@@ -85,7 +85,7 @@ DefineLanguageNoun("Agathe", { -- should be written as the original Greek name (
 	TypeName = {"settlement"} -- example: "Agathe"
 })
 
-DefineLanguageNoun("Ainos", { -- should be written as the original Greek name (with Greek characters)
+DefineLanguageWord("Ainos", { -- should be written as the original Greek name (with Greek characters)
 	Civilization = "greek",
 	Meaning = "?",
 	SingularNominative = "Ainos",
@@ -93,7 +93,7 @@ DefineLanguageNoun("Ainos", { -- should be written as the original Greek name (w
 	TypeName = {"settlement"} -- example: "Ainos"
 })
 
-DefineLanguageNoun("Alalia", { -- should be written as the original Greek name (with Greek characters)
+DefineLanguageWord("Alalia", { -- should be written as the original Greek name (with Greek characters)
 	Civilization = "greek",
 	Meaning = "?",
 	SingularNominative = "Alalia",
@@ -101,7 +101,7 @@ DefineLanguageNoun("Alalia", { -- should be written as the original Greek name (
 	TypeName = {"settlement"} -- example: "Alalia" (Aleria)
 })
 
-DefineLanguageNoun("Alonae", { -- should be written as the original Greek name (with Greek characters)
+DefineLanguageWord("Alonae", { -- should be written as the original Greek name (with Greek characters)
 	Civilization = "greek",
 	Meaning = "?",
 	SingularNominative = "Alonae",
@@ -109,7 +109,7 @@ DefineLanguageNoun("Alonae", { -- should be written as the original Greek name (
 	TypeName = {"settlement"} -- example: "Alonae"
 })
 
-DefineLanguageNoun("Amisus", { -- should be written as the original Greek name (with Greek characters)
+DefineLanguageWord("Amisus", { -- should be written as the original Greek name (with Greek characters)
 	Civilization = "greek",
 	Meaning = "?",
 	SingularNominative = "Amisus",
@@ -117,7 +117,7 @@ DefineLanguageNoun("Amisus", { -- should be written as the original Greek name (
 	TypeName = {"settlement"} -- example: "Amisus"
 })
 
-DefineLanguageNoun("Amphi", { -- should be written as the original Greek name (with Greek characters)
+DefineLanguageWord("Amphi", { -- should be written as the original Greek name (with Greek characters)
 	Civilization = "greek",
 	Meaning = "?",
 	SingularNominative = "Amphi",
@@ -125,7 +125,7 @@ DefineLanguageNoun("Amphi", { -- should be written as the original Greek name (w
 	PrefixTypeName = {"settlement"} -- example: "Amphipolis"
 })
 
-DefineLanguageNoun("Calli", { -- should be written as the original Greek name (with Greek characters)
+DefineLanguageWord("Calli", { -- should be written as the original Greek name (with Greek characters)
 	Civilization = "greek",
 	Meaning = "?",
 	SingularNominative = "Calli",
@@ -133,7 +133,7 @@ DefineLanguageNoun("Calli", { -- should be written as the original Greek name (w
 	PrefixTypeName = {"settlement"} -- example: "Callipolis"
 })
 
-DefineLanguageNoun("Polis", { -- should be written as the original Greek name (with Greek characters)
+DefineLanguageWord("Polis", { -- should be written as the original Greek name (with Greek characters)
 	Civilization = "greek",
 	Meaning = "City",
 	SingularNominative = "Polis",

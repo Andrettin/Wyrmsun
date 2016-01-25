@@ -168,7 +168,7 @@ DefineCivilizationLanguage("norse", -- Old Norse
 	}
 )
 
-DefineLanguageNoun("Síði", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 118.
+DefineLanguageWord("Síði", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 118.
 	Civilization = "norse",
 	Meaning = "Magic-Worker",
 	SingularNominative = "Síði"

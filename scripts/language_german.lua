@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageNoun("Adel", {
+DefineLanguageWord("Adel", {
 	Civilization = "teuton",
 	Meaning = "Noble",
 	SingularNominative = "Adel",
@@ -35,7 +35,7 @@ DefineLanguageNoun("Adel", {
 	PrefixTypeName = {"settlement"} -- example: "Adelsberg"
 })
 
-DefineLanguageNoun("Amboss", {
+DefineLanguageWord("Amboss", {
 	Civilization = "teuton",
 	Meaning = "Anvil",
 	SingularNominative = "Amboss",
@@ -44,7 +44,7 @@ DefineLanguageNoun("Amboss", {
 	SuffixTypeName = {"unit-teuton-smithy"} -- seems sensible
 })
 
-DefineLanguageNoun("Arl", {
+DefineLanguageWord("Arl", {
 	Civilization = "teuton",
 	Meaning = "?",
 	SingularNominative = "Arl",
@@ -52,7 +52,7 @@ DefineLanguageNoun("Arl", {
 	PrefixTypeName = {"terrain-mountains"} -- example: "Arlberg"
 })
 
-DefineLanguageNoun("Arnulf", {
+DefineLanguageWord("Arnulf", {
 	Civilization = "teuton",
 	Meaning = "?",
 	SingularNominative = "Arnulf",
@@ -60,7 +60,7 @@ DefineLanguageNoun("Arnulf", {
 	TypeName = {"person"}
 })
 
-DefineLanguageNoun("Au", { -- Source: http://www.duden.de/rechtschreibung/Au_feuchte_Niederung
+DefineLanguageWord("Au", { -- Source: http://www.duden.de/rechtschreibung/Au_feuchte_Niederung
 	Civilization = "teuton",
 	Meaning = "Flat Terrain with Lush Meadows",
 	SingularNominative = "Au",
@@ -76,7 +76,7 @@ DefineLanguageNoun("Au", { -- Source: http://www.duden.de/rechtschreibung/Au_feu
 	SuffixTypeName = {"settlement"} -- example: "Blumenau"
 })
 
-DefineLanguageNoun("Bach", { -- Source: http://www.duden.de/rechtschreibung/Bach_Wasserlauf
+DefineLanguageWord("Bach", { -- Source: http://www.duden.de/rechtschreibung/Bach_Wasserlauf
 	Civilization = "teuton",
 	Meaning = "Stream",
 	SingularNominative = "Bach",
@@ -92,7 +92,7 @@ DefineLanguageNoun("Bach", { -- Source: http://www.duden.de/rechtschreibung/Bach
 	SuffixTypeName = {"settlement"} -- example: "Mühlenbach"
 })
 
-DefineLanguageNoun("Bad", { -- Source: http://www.duden.de/rechtschreibung/Bad
+DefineLanguageWord("Bad", { -- Source: http://www.duden.de/rechtschreibung/Bad
 	Civilization = "teuton",
 	Meaning = "Baths",
 	SingularNominative = "Bad",
@@ -108,7 +108,7 @@ DefineLanguageNoun("Bad", { -- Source: http://www.duden.de/rechtschreibung/Bad
 	SuffixTypeName = {"settlement"} -- example: "Karlsbad"
 })
 
-DefineLanguageNoun("Bär", { -- Source: http://www.duden.de/rechtschreibung/Baer_Raubtier
+DefineLanguageWord("Bär", { -- Source: http://www.duden.de/rechtschreibung/Baer_Raubtier
 	Civilization = "teuton",
 	Meaning = "Bear",
 	SingularNominative = "Bär",
@@ -124,7 +124,7 @@ DefineLanguageNoun("Bär", { -- Source: http://www.duden.de/rechtschreibung/Baer
 	PrefixTypeName = {"terrain-hills"}, -- example: "Bärenberg"
 })
 
-DefineLanguageNoun("Berg", {
+DefineLanguageWord("Berg", {
 	Civilization = "teuton",
 	Meaning = "Mountain, Hill",
 	SingularNominative = "Berg",
@@ -139,7 +139,7 @@ DefineLanguageNoun("Berg", {
 	}
 })
 
-DefineLanguageNoun("Bernhard", {
+DefineLanguageWord("Bernhard", {
 	Civilization = "teuton",
 	Meaning = "?",
 	SingularNominative = "Bernhard",
@@ -147,7 +147,7 @@ DefineLanguageNoun("Bernhard", {
 	TypeName = {"person"}
 })
 
-DefineLanguageNoun("Blume", { -- Source: http://www.duden.de/rechtschreibung/Blume
+DefineLanguageWord("Blume", { -- Source: http://www.duden.de/rechtschreibung/Blume
 	Civilization = "teuton",
 	Meaning = "Flower",
 	SingularNominative = "Blume",
@@ -163,7 +163,7 @@ DefineLanguageNoun("Blume", { -- Source: http://www.duden.de/rechtschreibung/Blu
 	PrefixTypeName = {"settlement"} -- example: "Blumenau"
 })
 
-DefineLanguageNoun("Bruck", {
+DefineLanguageWord("Bruck", {
 	Civilization = "teuton",
 	Meaning = "Bridge",
 	SingularNominative = "Bruck",
@@ -175,7 +175,7 @@ DefineLanguageNoun("Bruck", {
 	SuffixTypeName = {"settlement"} -- example: "Innsbruck"
 })
 
-DefineLanguageNoun("Burg", {
+DefineLanguageWord("Burg", {
 	Civilization = "teuton",
 	Meaning = "Castle",
 	SingularNominative = "Burg",
@@ -190,7 +190,7 @@ DefineLanguageNoun("Burg", {
 	}
 })
 
-DefineLanguageNoun("Dorf", {
+DefineLanguageWord("Dorf", {
 	Civilization = "teuton",
 	Meaning = "Village",
 	SingularNominative = "Dorf",
@@ -200,7 +200,7 @@ DefineLanguageNoun("Dorf", {
 	SuffixTypeName = {"settlement"} -- examples: Frohsdorf, Gänserndorf
 })
 
-DefineLanguageNoun("Drasch", {
+DefineLanguageWord("Drasch", {
 	Civilization = "teuton",
 	Meaning = "Precipitation",
 	SingularNominative = "Drasch",
@@ -213,7 +213,7 @@ DefineLanguageNoun("Drasch", {
 	PrefixTypeName = {"terrain-mountains"} -- example: "Draschturm"
 })
 
-DefineLanguageNoun("Eisen", {
+DefineLanguageWord("Eisen", {
 	Civilization = "teuton",
 	Meaning = "Iron",
 	SingularNominative = "Eisen",
@@ -223,7 +223,7 @@ DefineLanguageNoun("Eisen", {
 	PrefixTypeName = {"settlement"} -- examples: "Eisenerz", "Eisenstadt"
 })
 
-DefineLanguageNoun("Erz", {
+DefineLanguageWord("Erz", {
 	Civilization = "teuton",
 	Meaning = "Ore",
 	SingularNominative = "Erz",
@@ -239,7 +239,7 @@ DefineLanguageNoun("Erz", {
 	SuffixTypeName = {"settlement"} -- example: "Eisenerz"
 })
 
-DefineLanguageNoun("Esse", {
+DefineLanguageWord("Esse", {
 	Civilization = "teuton",
 	Meaning = "Forge",
 	SingularNominative = "Esse",
@@ -255,7 +255,7 @@ DefineLanguageNoun("Esse", {
 	SuffixTypeName = {"unit-teuton-smithy"} -- seems sensible
 })
 
-DefineLanguageNoun("Franz", {
+DefineLanguageWord("Franz", {
 	Civilization = "teuton",
 	Meaning = "?",
 	SingularNominative = "Franz",
@@ -263,7 +263,7 @@ DefineLanguageNoun("Franz", {
 	TypeName = {"person"}
 })
 
-DefineLanguageNoun("Fried", {
+DefineLanguageWord("Fried", {
 	Civilization = "teuton",
 	Meaning = "?",
 	SingularNominative = "Fried",
@@ -271,7 +271,7 @@ DefineLanguageNoun("Fried", {
 	SuffixTypeName = {"person"}
 })
 
-DefineLanguageNoun("Friedrich", {
+DefineLanguageWord("Friedrich", {
 	Civilization = "teuton",
 	Meaning = "?",
 	SingularNominative = "Friedrich",
@@ -279,7 +279,7 @@ DefineLanguageNoun("Friedrich", {
 	TypeName = {"person"}
 })
 
-DefineLanguageNoun("Furt", { -- Source: http://www.duden.de/rechtschreibung/Furt
+DefineLanguageWord("Furt", { -- Source: http://www.duden.de/rechtschreibung/Furt
 	Civilization = "teuton",
 	Meaning = "Ford",
 	SingularNominative = "Furt",
@@ -295,7 +295,7 @@ DefineLanguageNoun("Furt", { -- Source: http://www.duden.de/rechtschreibung/Furt
 	SuffixTypeName = {"settlement"} -- example: "Klagenfurt"
 })
 
-DefineLanguageNoun("Gang", {
+DefineLanguageWord("Gang", {
 	Civilization = "teuton",
 	Meaning = "?",
 	SingularNominative = "Gang",
@@ -303,7 +303,7 @@ DefineLanguageNoun("Gang", {
 	SuffixTypeName = {"person"}
 })
 
-DefineLanguageNoun("Gerhard", {
+DefineLanguageWord("Gerhard", {
 	Civilization = "teuton",
 	Meaning = "?",
 	SingularNominative = "Gerhard",
@@ -311,7 +311,7 @@ DefineLanguageNoun("Gerhard", {
 	TypeName = {"person"}
 })
 
-DefineLanguageNoun("Gott", {
+DefineLanguageWord("Gott", {
 	Civilization = "teuton",
 	Meaning = "God",
 	SingularNominative = "Gott",
@@ -320,7 +320,7 @@ DefineLanguageNoun("Gott", {
 	PrefixTypeName = {"person"} -- example: Gottfried
 })
 
-DefineLanguageNoun("Gunther", {
+DefineLanguageWord("Gunther", {
 	Civilization = "teuton",
 	Meaning = "?",
 	SingularNominative = "Gunther",
@@ -328,7 +328,7 @@ DefineLanguageNoun("Gunther", {
 	TypeName = {"person"}
 })
 
-DefineLanguageNoun("Gustav", {
+DefineLanguageWord("Gustav", {
 	Civilization = "teuton",
 	Meaning = "?",
 	SingularNominative = "Gustav",
@@ -336,7 +336,7 @@ DefineLanguageNoun("Gustav", {
 	TypeName = {"person"}
 })
 
-DefineLanguageNoun("Hacken", {
+DefineLanguageWord("Hacken", {
 	Civilization = "teuton",
 	Meaning = "Heel",
 	SingularNominative = "Hacken",
@@ -352,7 +352,7 @@ DefineLanguageNoun("Hacken", {
 	PrefixTypeName = {"terrain-hills"} -- example: "Hackenberg"
 })
 
-DefineLanguageNoun("Hagen", { -- Source: http://www.duden.de/rechtschreibung/Hagen
+DefineLanguageWord("Hagen", { -- Source: http://www.duden.de/rechtschreibung/Hagen
 	Civilization = "teuton",
 	Meaning = "?", -- personal name
 	SingularNominative = "Hagen",
@@ -364,7 +364,7 @@ DefineLanguageNoun("Hagen", { -- Source: http://www.duden.de/rechtschreibung/Hag
 	TypeName = {"person"}
 })
 
-DefineLanguageNoun("Hammer", {
+DefineLanguageWord("Hammer", {
 	Civilization = "teuton",
 	Meaning = "Hammer",
 	SingularNominative = "Hammer",
@@ -380,7 +380,7 @@ DefineLanguageNoun("Hammer", {
 	SuffixTypeName = {"unit-teuton-smithy"} -- seems sensible
 })
 
-DefineLanguageNoun("Hans", {
+DefineLanguageWord("Hans", {
 	Civilization = "teuton",
 	Meaning = "?",
 	SingularNominative = "Hans",
@@ -388,7 +388,7 @@ DefineLanguageNoun("Hans", {
 	TypeName = {"person"}
 })
 
-DefineLanguageNoun("Heinrich", {
+DefineLanguageWord("Heinrich", {
 	Civilization = "teuton",
 	Meaning = "?",
 	SingularNominative = "Heinrich",
@@ -396,7 +396,7 @@ DefineLanguageNoun("Heinrich", {
 	TypeName = {"person"}
 })
 
-DefineLanguageNoun("Hel", {
+DefineLanguageWord("Hel", {
 	Civilization = "teuton",
 	Meaning = "?",
 	SingularNominative = "Hel",
@@ -404,7 +404,7 @@ DefineLanguageNoun("Hel", {
 	PrefixTypeName = {"person"}
 })
 
-DefineLanguageNoun("Hermann", {
+DefineLanguageWord("Hermann", {
 	Civilization = "teuton",
 	Meaning = "?",
 	SingularNominative = "Hermann",
@@ -412,7 +412,7 @@ DefineLanguageNoun("Hermann", {
 	TypeName = {"person"}
 })
 
-DefineLanguageNoun("Hof", {
+DefineLanguageWord("Hof", {
 	Civilization = "teuton",
 	Meaning = "Court",
 	SingularNominative = "Hof",
@@ -422,7 +422,7 @@ DefineLanguageNoun("Hof", {
 	SuffixTypeName = {"settlement"} -- example: "Königinhof"
 })
 
-DefineLanguageNoun("Horn", {
+DefineLanguageWord("Horn", {
 	Civilization = "teuton",
 	Meaning = "Horn",
 	SingularNominative = "Horn",
@@ -433,7 +433,7 @@ DefineLanguageNoun("Horn", {
 	SuffixTypeName = {"terrain-mountains"} -- example: "Teufelshorn"
 })
 
-DefineLanguageNoun("Huhn", {
+DefineLanguageWord("Huhn", {
 	Civilization = "teuton",
 	Meaning = "Chicken",
 	SingularNominative = "Huhn",
@@ -445,7 +445,7 @@ DefineLanguageNoun("Huhn", {
 	PrefixTypeName = {"settlement"} -- example: "Hühnerwasser"
 })
 
-DefineLanguageNoun("Hunger", { -- Source: http://www.duden.de/rechtschreibung/Hunger
+DefineLanguageWord("Hunger", { -- Source: http://www.duden.de/rechtschreibung/Hunger
 	Civilization = "teuton",
 	Meaning = "Hunger",
 	SingularNominative = "Hunger",
@@ -458,7 +458,7 @@ DefineLanguageNoun("Hunger", { -- Source: http://www.duden.de/rechtschreibung/Hu
 	PrefixTypeName = {"terrain-hills"} -- example: "Hungerberg"
 })
 
-DefineLanguageNoun("Hügel", {
+DefineLanguageWord("Hügel", {
 	Civilization = "teuton",
 	Meaning = "Hill",
 	SingularNominative = "Hügel",
@@ -474,7 +474,7 @@ DefineLanguageNoun("Hügel", {
 	SuffixTypeName = {"terrain-hills"} -- example: "Konstantinhügel" (http://www.wien.gv.at/umwelt/parks/anlagen/prater.html)
 })
 
-DefineLanguageNoun("Johann", {
+DefineLanguageWord("Johann", {
 	Civilization = "teuton",
 	Meaning = "?",
 	SingularNominative = "Johann",
@@ -482,7 +482,7 @@ DefineLanguageNoun("Johann", {
 	TypeName = {"person"}
 })
 
-DefineLanguageNoun("Karl", {
+DefineLanguageWord("Karl", {
 	Civilization = "teuton",
 	Meaning = "?",
 	SingularNominative = "Karl",
@@ -492,7 +492,7 @@ DefineLanguageNoun("Karl", {
 	PrefixTypeName = {"person"}
 })
 
-DefineLanguageNoun("Kirche", {
+DefineLanguageWord("Kirche", {
 	Civilization = "teuton",
 	Meaning = "Church",
 	SingularNominative = "Kirche",
@@ -502,7 +502,7 @@ DefineLanguageNoun("Kirche", {
 	SuffixTypeName = {"settlement"} -- examples: "Fünfkirchen", "Weisskirchen"
 })
 
-DefineLanguageNoun("Klage", { -- Source: http://www.duden.de/rechtschreibung/Klage
+DefineLanguageWord("Klage", { -- Source: http://www.duden.de/rechtschreibung/Klage
 	Civilization = "teuton",
 	Meaning = "Complaint",
 	SingularNominative = "Klage",
@@ -518,7 +518,7 @@ DefineLanguageNoun("Klage", { -- Source: http://www.duden.de/rechtschreibung/Kla
 	PrefixTypeName = {"settlement"} -- example: "Klagenfurt"
 })
 
-DefineLanguageNoun("Klaus", {
+DefineLanguageWord("Klaus", {
 	Civilization = "teuton",
 	Meaning = "?",
 	SingularNominative = "Klaus",
@@ -526,7 +526,7 @@ DefineLanguageNoun("Klaus", {
 	TypeName = {"person"}
 })
 
-DefineLanguageNoun("Klause", { -- Source: http://www.duden.de/rechtschreibung/Klause
+DefineLanguageWord("Klause", { -- Source: http://www.duden.de/rechtschreibung/Klause
 	Civilization = "teuton",
 	Meaning = "Cloister",
 	SingularNominative = "Klause",
@@ -542,7 +542,7 @@ DefineLanguageNoun("Klause", { -- Source: http://www.duden.de/rechtschreibung/Kl
 	PrefixTypeName = {"settlement"} -- example: "Klausenburg"
 })
 
-DefineLanguageNoun("König", {
+DefineLanguageWord("König", {
 	Civilization = "teuton",
 	Meaning = "King",
 	SingularNominative = "König",
@@ -553,7 +553,7 @@ DefineLanguageNoun("König", {
 	PrefixTypeName = {"settlement"} -- examples: "Königgrätz", "Königsberg"
 })
 
-DefineLanguageNoun("Königin", {
+DefineLanguageWord("Königin", {
 	Civilization = "teuton",
 	Meaning = "Queen",
 	SingularNominative = "Königin",
@@ -564,7 +564,7 @@ DefineLanguageNoun("Königin", {
 	PrefixTypeName = {"settlement"} -- example: "Königinhof"
 })
 
-DefineLanguageNoun("Kugel", {
+DefineLanguageWord("Kugel", {
 	Civilization = "teuton",
 	Meaning = "Ball, Globe",
 	SingularNominative = "Kugel",
@@ -580,7 +580,7 @@ DefineLanguageNoun("Kugel", {
 	SuffixTypeName = {"terrain-mountains"} -- example: "Weißkugel"
 })
 
-DefineLanguageNoun("Kurt", {
+DefineLanguageWord("Kurt", {
 	Civilization = "teuton",
 	Meaning = "?",
 	SingularNominative = "Kurt",
@@ -588,7 +588,7 @@ DefineLanguageNoun("Kurt", {
 	TypeName = {"person"}
 })
 
-DefineLanguageNoun("Lai", { -- Source: http://www.duden.de/rechtschreibung/Lai
+DefineLanguageWord("Lai", { -- Source: http://www.duden.de/rechtschreibung/Lai
 	Civilization = "teuton",
 	Meaning = "Old French Poetry",
 	SingularNominative = "Lai",
@@ -599,7 +599,7 @@ DefineLanguageNoun("Lai", { -- Source: http://www.duden.de/rechtschreibung/Lai
 	PrefixTypeName = {"settlement"} -- example: "Laibach"
 })
 
-DefineLanguageNoun("Land", {
+DefineLanguageWord("Land", {
 	Civilization = "teuton",
 	Meaning = "Country",
 	SingularNominative = "Land",
@@ -611,7 +611,7 @@ DefineLanguageNoun("Land", {
 	SuffixTypeName = {"province"} -- example: "Burgenland"
 })
 
-DefineLanguageNoun("Lothar", {
+DefineLanguageWord("Lothar", {
 	Civilization = "teuton",
 	Meaning = "?",
 	SingularNominative = "Lothar",
@@ -619,7 +619,7 @@ DefineLanguageNoun("Lothar", {
 	TypeName = {"person"}
 })
 
-DefineLanguageNoun("Ludwig", {
+DefineLanguageWord("Ludwig", {
 	Civilization = "teuton",
 	Meaning = "?",
 	SingularNominative = "Ludwig",
@@ -627,7 +627,7 @@ DefineLanguageNoun("Ludwig", {
 	TypeName = {"person"}
 })
 
-DefineLanguageNoun("Manfred", {
+DefineLanguageWord("Manfred", {
 	Civilization = "teuton",
 	Meaning = "?",
 	SingularNominative = "Manfred",
@@ -635,7 +635,7 @@ DefineLanguageNoun("Manfred", {
 	TypeName = {"person"}
 })
 
-DefineLanguageNoun("Mann", {
+DefineLanguageWord("Mann", {
 	Civilization = "teuton",
 	Meaning = "Man",
 	SingularNominative = "Mann",
@@ -645,7 +645,7 @@ DefineLanguageNoun("Mann", {
 	SuffixTypeName = {"person"} -- example: Hermann, Karlmann
 })
 
-DefineLanguageNoun("Mark", {
+DefineLanguageWord("Mark", {
 	Civilization = "teuton",
 	Meaning = "March",
 	SingularNominative = "Mark",
@@ -655,7 +655,7 @@ DefineLanguageNoun("Mark", {
 	SuffixTypeName = {"province"} -- example: "Steiermark" (Styria)
 })
 
-DefineLanguageNoun("Mühle", { -- Source: http://www.duden.de/rechtschreibung/Muehle
+DefineLanguageWord("Mühle", { -- Source: http://www.duden.de/rechtschreibung/Muehle
 	Civilization = "teuton",
 	Meaning = "Mill",
 	SingularNominative = "Mühle",
@@ -671,7 +671,7 @@ DefineLanguageNoun("Mühle", { -- Source: http://www.duden.de/rechtschreibung/Mu
 	PrefixTypeName = {"settlement"} -- example: "Mühlenbach"
 })
 
-DefineLanguageNoun("Mut", {
+DefineLanguageWord("Mut", {
 	Civilization = "teuton",
 	Meaning = "Courage",
 	SingularNominative = "Mut",
@@ -681,7 +681,7 @@ DefineLanguageNoun("Mut", {
 	SuffixTypeName = {"person"}
 })
 
-DefineLanguageNoun("Nuss", { -- Source: http://www.duden.de/rechtschreibung/Nuss
+DefineLanguageWord("Nuss", { -- Source: http://www.duden.de/rechtschreibung/Nuss
 	Civilization = "teuton",
 	Meaning = "Nut",
 	SingularNominative = "Nuss",
@@ -697,7 +697,7 @@ DefineLanguageNoun("Nuss", { -- Source: http://www.duden.de/rechtschreibung/Nuss
 	PrefixTypeName = {"terrain-hills"} -- example: "Nussberg"
 })
 
-DefineLanguageNoun("Ost", {
+DefineLanguageWord("Ost", {
 	Civilization = "teuton",
 	Meaning = "Ost",
 	SingularNominative = "Ost",
@@ -707,7 +707,7 @@ DefineLanguageNoun("Ost", {
 	PrefixTypeName = {"province"} -- example: "Ostmark"
 })
 
-DefineLanguageNoun("Otto", {
+DefineLanguageWord("Otto", {
 	Civilization = "teuton",
 	Meaning = "?",
 	SingularNominative = "Otto",
@@ -715,7 +715,7 @@ DefineLanguageNoun("Otto", {
 	TypeName = {"person"}
 })
 
-DefineLanguageNoun("Pippin", {
+DefineLanguageWord("Pippin", {
 	Civilization = "teuton",
 	Meaning = "?",
 	SingularNominative = "Pippin",
@@ -723,7 +723,7 @@ DefineLanguageNoun("Pippin", {
 	TypeName = {"person"}
 })
 
-DefineLanguageNoun("Rose", { -- Source: http://www.duden.de/rechtschreibung/Rose_Pflanze_Bluete_Verdickung
+DefineLanguageWord("Rose", { -- Source: http://www.duden.de/rechtschreibung/Rose_Pflanze_Bluete_Verdickung
 	Civilization = "teuton",
 	Meaning = "Rose",
 	SingularNominative = "Rose",
@@ -739,7 +739,7 @@ DefineLanguageNoun("Rose", { -- Source: http://www.duden.de/rechtschreibung/Rose
 	PrefixTypeName = {"terrain-hills"} -- example: "Rosenhügel"
 })
 
-DefineLanguageNoun("Salz", {
+DefineLanguageWord("Salz", {
 	Civilization = "teuton",
 	Meaning = "Salt",
 	SingularNominative = "Salz",
@@ -749,7 +749,7 @@ DefineLanguageNoun("Salz", {
 	PrefixTypeName = {"settlement"} -- example: Salzburg
 })
 
-DefineLanguageNoun("Schaf", {
+DefineLanguageWord("Schaf", {
 	Civilization = "teuton",
 	Meaning = "Sheep",
 	SingularNominative = "Schaf",
@@ -765,7 +765,7 @@ DefineLanguageNoun("Schaf", {
 	PrefixTypeName = {"terrain-hills"} -- example: "Schafberg"
 })
 
-DefineLanguageNoun("Schloss", { -- Source: http://www.duden.de/rechtschreibung/Schloss
+DefineLanguageWord("Schloss", { -- Source: http://www.duden.de/rechtschreibung/Schloss
 	Civilization = "teuton",
 	Meaning = "Castle, Palace",
 	SingularNominative = "Schloss",
@@ -779,7 +779,7 @@ DefineLanguageNoun("Schloss", { -- Source: http://www.duden.de/rechtschreibung/S
 	Gender = "Neuter",
 })
 
-DefineLanguageNoun("Schlossberg", { -- Source: http://www.duden.de/rechtschreibung/Schlossberg
+DefineLanguageWord("Schlossberg", { -- Source: http://www.duden.de/rechtschreibung/Schlossberg
 	Civilization = "teuton",
 	Meaning = "Hill under a Castle, Hill under a Palace, Mountain under a Castle, Mountain under a Palace",
 	SingularNominative = "Schlossberg",
@@ -788,7 +788,7 @@ DefineLanguageNoun("Schlossberg", { -- Source: http://www.duden.de/rechtschreibu
 	TypeName = {"terrain-hills"} -- example: "Schlossberg" (Graz)
 })
 
-DefineLanguageNoun("Schmiede", {
+DefineLanguageWord("Schmiede", {
 	Civilization = "teuton",
 	Meaning = "Smithy",
 	SingularNominative = "Schmiede",
@@ -804,7 +804,7 @@ DefineLanguageNoun("Schmiede", {
 	SuffixTypeName = {"unit-teuton-smithy"} -- seems sensible
 })
 
-DefineLanguageNoun("Schnee", {
+DefineLanguageWord("Schnee", {
 	Civilization = "teuton",
 	Meaning = "Snow",
 	SingularNominative = "Schnee",
@@ -814,7 +814,7 @@ DefineLanguageNoun("Schnee", {
 	PrefixTypeName = {"terrain-mountains"} -- example: "Schneeberg"
 })
 
-DefineLanguageNoun("Sieg", {
+DefineLanguageWord("Sieg", {
 	Civilization = "teuton",
 	Meaning = "Victory",
 	SingularNominative = "Sieg",
@@ -824,7 +824,7 @@ DefineLanguageNoun("Sieg", {
 	PrefixTypeName = {"person"}
 })
 
-DefineLanguageNoun("Spitze", {
+DefineLanguageWord("Spitze", {
 	Civilization = "teuton",
 	Meaning = "Tip, Peak",
 	SingularNominative = "Spitze",
@@ -840,7 +840,7 @@ DefineLanguageNoun("Spitze", {
 	SuffixTypeName = {"terrain-mountains"} -- example: "Wildspitze"
 })
 
-DefineLanguageNoun("Stadt", {
+DefineLanguageWord("Stadt", {
 	Civilization = "teuton",
 	Meaning = "City",
 	SingularNominative = "Stadt",
@@ -850,7 +850,7 @@ DefineLanguageNoun("Stadt", {
 	SuffixTypeName = {"settlement"} -- examples: "Eisenstadt", "Josefstadt", "Kronstadt", "Leopoldstadt"
 })
 
-DefineLanguageNoun("Stuhl", {
+DefineLanguageWord("Stuhl", {
 	Civilization = "teuton",
 	Meaning = "Chair",
 	SingularNominative = "Stuhl",
@@ -859,7 +859,7 @@ DefineLanguageNoun("Stuhl", {
 	-- Stuhlweissenburg uses as a prefix, but without being genitive?
 })
 
-DefineLanguageNoun("Tal", {
+DefineLanguageWord("Tal", {
 	Civilization = "teuton",
 	Meaning = "Valley",
 	SingularNominative = "Tal",
@@ -869,7 +869,7 @@ DefineLanguageNoun("Tal", {
 	SuffixTypeName = {"settlement"} -- examples: "Zillertal"
 })
 
-DefineLanguageNoun("Teufel", {
+DefineLanguageWord("Teufel", {
 	Civilization = "teuton",
 	Meaning = "Devil",
 	SingularNominative = "Teufel",
@@ -885,7 +885,7 @@ DefineLanguageNoun("Teufel", {
 	PrefixTypeName = {"terrain-mountains"} -- example: "Teufelshorn"
 })
 
-DefineLanguageNoun("Turm", {
+DefineLanguageWord("Turm", {
 	Civilization = "teuton",
 	Meaning = "Tower",
 	SingularNominative = "Turm",
@@ -901,13 +901,13 @@ DefineLanguageNoun("Turm", {
 	SuffixTypeName = {"terrain-mountains"} -- example: "Draschturm"
 })
 
-DefineLanguageNoun("Waid", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 4.
+DefineLanguageWord("Waid", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 4.
 	Civilization = "teuton",
 	Meaning = "Woad",
 	SingularNominative = "Waid"
 })
 
-DefineLanguageNoun("Walter", {
+DefineLanguageWord("Walter", {
 	Civilization = "teuton",
 	Meaning = "?",
 	SingularNominative = "Walter",
@@ -915,7 +915,7 @@ DefineLanguageNoun("Walter", {
 	TypeName = {"person"}
 })
 
-DefineLanguageNoun("Wasser", {
+DefineLanguageWord("Wasser", {
 	Civilization = "teuton",
 	Meaning = "Water",
 	SingularNominative = "Wasser",
@@ -925,7 +925,7 @@ DefineLanguageNoun("Wasser", {
 	SuffixTypeName = {"settlement"} -- example: "Hühnerwasser"
 })
 
-DefineLanguageNoun("Werner", {
+DefineLanguageWord("Werner", {
 	Civilization = "teuton",
 	Meaning = "?",
 	SingularNominative = "Werner",
@@ -933,7 +933,7 @@ DefineLanguageNoun("Werner", {
 	TypeName = {"person"}
 })
 
-DefineLanguageNoun("West", {
+DefineLanguageWord("West", {
 	Civilization = "teuton",
 	Meaning = "West",
 	SingularNominative = "West",
@@ -943,7 +943,7 @@ DefineLanguageNoun("West", {
 	PrefixTypeName = {"province"} -- example: "Westphalien"
 })
 
-DefineLanguageNoun("Wilhelm", {
+DefineLanguageWord("Wilhelm", {
 	Civilization = "teuton",
 	Meaning = "?",
 	SingularNominative = "Wilhelm",
@@ -951,7 +951,7 @@ DefineLanguageNoun("Wilhelm", {
 	TypeName = {"person"}
 })
 
-DefineLanguageNoun("Wolf", {
+DefineLanguageWord("Wolf", {
 	Civilization = "teuton",
 	Meaning = "Wolf",
 	SingularNominative = "Wolf",

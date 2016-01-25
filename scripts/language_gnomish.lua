@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageNoun("Bimbam", {
+DefineLanguageWord("Bimbam", {
 	Civilization = "gnome",
 	Meaning = "?",
 	SingularNominative = "Bimbam",
@@ -34,7 +34,7 @@ DefineLanguageNoun("Bimbam", {
 	TypeName = {"person"}
 })
 
-DefineLanguageNoun("Clavo", {
+DefineLanguageWord("Clavo", {
 	Civilization = "gnome",
 	Meaning = "?",
 	SingularNominative = "Clavo",
@@ -43,7 +43,7 @@ DefineLanguageNoun("Clavo", {
 	TypeName = {"person"}
 })
 
-DefineLanguageNoun("Cravatu", {
+DefineLanguageWord("Cravatu", {
 	Civilization = "gnome",
 	Meaning = "?",
 	SingularNominative = "Cravatu",
@@ -52,7 +52,7 @@ DefineLanguageNoun("Cravatu", {
 	TypeName = {"person"}
 })
 
-DefineLanguageNoun("Kalutho", {
+DefineLanguageWord("Kalutho", {
 	Civilization = "gnome",
 	Meaning = "?",
 	SingularNominative = "Kalutho",
@@ -61,13 +61,13 @@ DefineLanguageNoun("Kalutho", {
 	TypeName = {"person"}
 })
 
-DefineLanguageNoun("Leffas", {
+DefineLanguageWord("Leffas", {
 	Civilization = "gnome",
 	Meaning = "Soul of a Plant, Stone or Tree",
 	SingularNominative = "Leffas"
 })
 
-DefineLanguageNoun("Pypo", {
+DefineLanguageWord("Pypo", {
 	Civilization = "gnome",
 	Meaning = "?",
 	SingularNominative = "Pypo",
@@ -76,7 +76,7 @@ DefineLanguageNoun("Pypo", {
 	TypeName = {"person"}
 })
 
-DefineLanguageNoun("Rubezahl", {
+DefineLanguageWord("Rubezahl", {
 	Civilization = "gnome",
 	Meaning = "?",
 	SingularNominative = "Rubezahl",
