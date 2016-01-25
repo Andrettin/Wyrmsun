@@ -1,0 +1,94 @@
+--       _________ __                 __
+--      /   _____//  |_____________ _/  |______     ____  __ __  ______
+--      \_____  \\   __\_  __ \__  \\   __\__  \   / ___\|  |  \/  ___/
+--      /        \|  |  |  | \// __ \|  |  / __ \_/ /_/  >  |  /\___ \
+--     /_______  /|__|  |__|  (____  /__| (____  /\___  /|____//____  >
+--             \/                  \/          \//_____/            \/
+--  ______________________                           ______________________
+--                        T H E   W A R   B E G I N S
+--         Stratagus - A free fantasy real time strategy game engine
+--
+--      (c) Copyright 2015-2016 by Andrettin
+--
+--      This program is free software; you can redistribute it and/or modify
+--      it under the terms of the GNU General Public License as published by
+--      the Free Software Foundation; either version 2 of the License, or
+--      (at your option) any later version.
+--
+--      This program is distributed in the hope that it will be useful,
+--      but WITHOUT ANY WARRANTY; without even the implied warranty of
+--      MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+--      GNU General Public License for more details.
+--
+--      You should have received a copy of the GNU General Public License
+--      along with this program; if not, write to the Free Software
+--      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+--
+
+DefineLanguageWord("Gart", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
+	Civilization = "middle-high-german",
+	Meaning = "Prickle, Stick for Driving Animals",
+	SingularNominative = "Gart",
+	Gender = "Masculine"
+})
+			
+DefineLanguageWord("Hort", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
+	Civilization = "middle-high-german",
+	Meaning = "Treasure",
+	SingularNominative = "Hort"
+})
+
+DefineLanguageWord("Kien", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 4, 7.
+	Civilization = "middle-high-german",
+	Meaning = "Fir, Spruce, Fir Splinter, Fir Torch, Spruce Splinter, Spruce Torch",
+	SingularNominative = "Kien",
+	Gender = "Masculine"
+})
+
+DefineLanguageWord("Marc", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
+	Civilization = "middle-high-german",
+	Meaning = "Marrow",
+	SingularNominative = "Marc",
+	SingularGenitive = "Marges"
+})
+
+DefineLanguageWord("Miete", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 7.
+	Civilization = "middle-high-german",
+	Meaning = "Payment, Reward, Bribe",
+	SingularNominative = "Miete",
+	Gender = "Feminine"
+})
+
+DefineLanguageWord("Nare", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
+	Civilization = "middle-high-german",
+	Meaning = "Salvation, Rescue, Nourishment, Sustenance",
+	SingularNominative = "Nare",
+	Gender = "Feminine"
+})
+
+DefineLanguageWord("Ort", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.
+	Civilization = "middle-high-german",
+	Meaning = "Point, Corner, Edge of a Part, Edge of a Piece, Edge of a Small Coin",
+	SingularNominative = "Ort",
+	Gender = "Masculine"
+})
+
+DefineLanguageWord("Rünne", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
+	Civilization = "middle-high-german",
+	Meaning = "Storm Surge",
+	SingularNominative = "Rünne",
+	Gender = "Feminine"
+})
+
+DefineLanguageWord("Weit", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 4, 7.
+	Civilization = "middle-high-german",
+	Meaning = "Woad",
+	SingularNominative = "Weit",
+	Gender = "Masculine"
+})
+
+DefineLanguageWord("Zwirn", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1-2, 6.
+	Civilization = "middle-high-german",
+	Meaning = "Doubly Spun Twine",
+	SingularNominative = "Zwirn"
+})

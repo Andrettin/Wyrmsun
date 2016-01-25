@@ -37,138 +37,31 @@ Load("scripts/language_goblin.lua")
 Load("scripts/language_kobold.lua")
 
 -- these are kept for reference, but not used
+--Load("scripts/language_avestan.lua")
 --Load("scripts/language_english.lua")
 --Load("scripts/language_finnish.lua")
+--Load("scripts/language_irish.lua")
 --Load("scripts/language_lithuanian.lua")
 --Load("scripts/language_middle_english.lua")
 --Load("scripts/language_old_english.lua")
+--Load("scripts/language_old_high_german.lua")
+--Load("scripts/language_middle_high_german.lua")
+--Load("scripts/language_middle_low_german.lua")
+--Load("scripts/language_middle_dutch.lua")
+--Load("scripts/language_norwegian.lua")
+--Load("scripts/language_old_frisian.lua")
+--Load("scripts/language_old_icelandic.lua")
+--Load("scripts/language_old_irish.lua")
+--Load("scripts/language_old_saxon.lua")
+--Load("scripts/language_old_slavic.lua")
+--Load("scripts/language_old_swedish.lua")
+--Load("scripts/language_russian.lua")
+--Load("scripts/language_sanskrit.lua")
+--Load("scripts/language_ukrainian.lua")
 --Load("scripts/language_welsh.lua")
 --Load("scripts/language_west_germanic.lua")
 
 DefineCivilizationLanguage("old-high-german", -- Old High German
-	"nouns", {
-		"Brart", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
-			"meaning", "Edge, Forepart of a Ship",
-			"singular-nominative", "Brart",
-			"gender", "Masculine"
-		},
-		"Brort", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 9.
-			"meaning", "Skewer, Projectile, Edge, Rim, Forepart of a Ship",
-			"singular-nominative", "Brort",
-			"gender", "Masculine"
-		},
-		"Chien", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 4.
-			"meaning", "Resinous Wood",
-			"singular-nominative", "Chien" -- source also gives alternative forms "Kien" and "Kên"
-		},
-		"Ēht", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
-			"meaning", "Property", -- source gives the German "Besitz"
-			"singular-nominative", "Ēht"
-		},
-		"Fisk", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
-			"meaning", "Fish",
-			"singular-nominative", "Fisk"
-		},
-		"Gart", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
-			"meaning", "Rod, Prickle",
-			"singular-nominative", "Gart"
-		},
-		"Herza", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
-			"meaning", "Heart",
-			"singular-nominative", "Herza"
-		},
-		"Hleib", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
-			"meaning", "Bread",
-			"singular-nominative", "Hleib"
-		},
-		"Hort", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.
-			"meaning", "Treasure",
-			"singular-nominative", "Hort"
-		},
-		"Houbit", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
-			"meaning", "Main", -- source gives German noun "Haupt" as transation
-			"singular-nominative", "Houbit"
-		},
-		"Hunt", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
-			"meaning", "Dog",
-			"singular-nominative", "Hunt"
-		},
-		"Kōl", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
-			"meaning", "Cabbage",
-			"singular-nominative", "Kōl"
-		},
-		"Lōn", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
-			"meaning", "Pay", -- source gives German word "Lohn" as transation
-			"singular-nominative", "Lōn"
-		},
-		"Marc", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 9.
-			"meaning", "Marrow",
-			"singular-nominative", "Marc",
-			"singular-genitive", "Marges" -- source also gives "Marages" as a possible genitive
-		},
-		"Mēta", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
-			"meaning", "Reward, Payment",
-			"singular-nominative", "Mēta" -- source also gives as alternatives the forms "Miata" and "Mieta"
-		},
-		"Nara", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
-			"meaning", "Salvation, Rescue, Nourishment, Sustenance", -- meaning given for Middle High German, but not for Old High German, presumably because both are the same
-			"singular-nominative", "Nara",
-			"gender", "Feminine"
-		},
-		"Orlac", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 10.
-			"meaning", "Fate",
-			"singular-nominative", "Orlac",
-			"gender", "Masculine"
-		},
-		"Ort", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.
-			"meaning", "Point, Corner, Edge of a Part, Edge of a Piece, Edge of a Small Coin",
-			"singular-nominative", "Ort",
-			"gender", "Masculine"
-		},
-		"Ouga", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
-			"meaning", "Eye",
-			"singular-nominative", "Ouga"
-		},
-		"Rarta", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 10.
-			"meaning", "Voice, Modulation",
-			"singular-nominative", "Rarta",
-			"gender", "Feminine"
-		},
-		"Sēula", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
-			"meaning", "Soul",
-			"singular-nominative", "Sēula" -- source also gives "Sēla"
-		},
-		"Suht", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
-			"meaning", "Sickness",
-			"singular-nominative", "Suht"
-		},
-		"Teil", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
-			"meaning", "Part",
-			"singular-nominative", "Teil"
-		},
-		"Tōd", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
-			"meaning", "Death",
-			"singular-nominative", "Tōd"
-		},
-		"Urlaga", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 10.
-			"meaning", "Fate",
-			"singular-nominative", "Urlaga",
-			"gender", "Feminine"
-		},
-		"Weg", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
-			"meaning", "Way",
-			"singular-nominative", "Weg"
-		},
-		"Weit", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 4, 7.
-			"meaning", "Woad",
-			"singular-nominative", "Weit",
-			"gender", "Masculine"
-		},
-		"Wurm", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
-			"meaning", "Worm, Serpent", -- probably could be extended to mean "wyrm" as well
-			"singular-nominative", "Wurm"
-		}
-	},
 	"verbs", {
 		"Birit", { -- should be infinitive form; Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
 			"meaning", "Bears",
@@ -276,65 +169,7 @@ DefineCivilizationLanguage("old-high-german", -- Old High German
 	}
 )
 
-DefineLanguageWord("Hagazussa", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 200.
-	Civilization = "old-high-german",
-	Meaning = "Travelling Actor or Minstrel who Performs in Women's Clothing",
-	SingularNominative = "Hagazussa",
-	PluralNominative = "Hagazussan"
-})
-
-
 DefineCivilizationLanguage("middle-high-german", -- Middle High German
-	"nouns", {
-		"Gart", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
-			"meaning", "Prickle, Stick for Driving Animals",
-			"singular-nominative", "Gart",
-			"gender", "Masculine"
-		},
-		"Hort", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
-			"meaning", "Treasure",
-			"singular-nominative", "Hort"
-		},
-		"Kien", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 4, 7.
-			"meaning", "Fir, Spruce, Fir Splinter, Fir Torch, Spruce Splinter, Spruce Torch",
-			"singular-nominative", "Kien",
-			"gender", "Masculine"
-		},
-		"Marc", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
-			"meaning", "Marrow",
-			"singular-nominative", "Marc",
-			"singular-genitive", "Marges"
-		},
-		"Miete", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 7.
-			"meaning", "Payment, Reward, Bribe",
-			"singular-nominative", "Miete",
-			"gender", "Feminine"
-		},
-		"Nare", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
-			"meaning", "Salvation, Rescue, Nourishment, Sustenance",
-			"singular-nominative", "Nare",
-			"gender", "Feminine"
-		},
-		"Ort", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.
-			"meaning", "Point, Corner, Edge of a Part, Edge of a Piece, Edge of a Small Coin",
-			"singular-nominative", "Ort",
-			"gender", "Masculine"
-		},
-		"Rünne", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
-			"meaning", "Storm Surge",
-			"singular-nominative", "Rünne",
-			"gender", "Feminine"
-		},
-		"Weit", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 4, 7.
-			"meaning", "Woad",
-			"singular-nominative", "Weit",
-			"gender", "Masculine"
-		},
-		"Zwirn", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1-2, 6.
-			"meaning", "Doubly Spun Twine",
-			"singular-nominative", "Zwirn"
-		}
-	},
 	"verbs", {
 		"Lēren", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 5.
 			"meaning", "Teach",
@@ -355,65 +190,7 @@ DefineCivilizationLanguage("middle-high-german", -- Middle High German
 	}
 )
 
-
 DefineCivilizationLanguage("saxon", -- Old Saxon
-	"nouns", {
-		"Fisc", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
-			"meaning", "Fish",
-			"singular-nominative", "Fisc"
-		},
-		"Gard", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.
-			"meaning", "Staff, Rod",
-			"singular-nominative", "Gard"
-		},
-		"Herta", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
-			"meaning", "Heart",
-			"singular-nominative", "Herta"
-		},
-		"Hord", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.
-			"meaning", "Treasure, Closed Interior, Hidden Interior",
-			"singular-nominative", "Hord"
-		},
-		"Hund", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
-			"meaning", "Dog",
-			"singular-nominative", "Hund"
-		},
-		"Līfnara", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
-			"meaning", "Food, Nourishment",
-			"singular-nominative", "Līfnara",
-			"gender", "Feminine"
-		},
-		"Merg", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
-			"meaning", "Marrow",
-			"singular-nominative", "Merg"
-		},
-		"Mēda", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 7.
-			"meaning", "Payment",
-			"singular-nominative", "Mēda", -- source also gives as an alternatives the form "Mieda"
-			"gender", "Feminine"
-		},
-		"Ord", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
-			"meaning", "Point, Edge of a Blade",
-			"singular-nominative", "Ord",
-			"gender", "Masculine"
-		},
-		"Orlag", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 10.
-			"meaning", "Fate",
-			"singular-nominative", "Orlag" -- source also gives the alternative form "Orlagi"
-		},
-		"Suht", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
-			"meaning", "Sickness",
-			"singular-nominative", "Suht"
-		},
-		"Weg", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
-			"meaning", "Way",
-			"singular-nominative", "Weg"
-		},
-		"Wurm", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
-			"meaning", "Worm, Serpent", -- probably could be extended to mean "wyrm" as well
-			"singular-nominative", "Wurm"
-		}
-	},
 	"verbs", {
 		"Birid", { -- should be infinitive form; Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
 			"meaning", "Bears",
@@ -484,24 +261,6 @@ DefineCivilizationLanguage("saxon", -- Old Saxon
 )
 
 DefineCivilizationLanguage("old-icelandic", -- Old Icelandic
-	"nouns", {
-		"Eyra", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
-			"meaning", "Ear",
-			"singular-nominative", "Eyra"
-		},
-		"Ker", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
-			"meaning", "Container",
-			"singular-nominative", "Ker"
-		},
-		"Reyrr", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
-			"meaning", "Tube",
-			"singular-nominative", "Reyrr"
-		},
-		"Sár", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 3.
-			"meaning", "Wound",
-			"singular-nominative", "Sár"
-		}
-	},
 	"adjectives", {
 		"Meiri", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 3.
 			"meaning", "More" -- perhaps a "determiner" class of words should be added?
@@ -515,12 +274,6 @@ DefineCivilizationLanguage("old-icelandic", -- Old Icelandic
 )
 
 DefineCivilizationLanguage("old-swedish", -- Old Swedish
-	"nouns", {
-		"Ēr", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
-			"meaning", "Bronze",
-			"singular-nominative", "Ēr"
-		}
-	},
 	"adjectives", {
 		"Mēre", { -- is comparative, but shouldn't be; Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
 			"meaning", "Larger", -- this is the meaning for the comparative, should be replaced when we got hold of the normal version of the adjective
@@ -541,34 +294,6 @@ DefineCivilizationLanguage("old-swedish", -- Old Swedish
 )
 
 DefineCivilizationLanguage("old-frisian", -- Old Frisian
-	"nouns", {
-		"Hēde", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
-			"meaning", "Flax Fiber",
-			"singular-nominative", "Hēde",
-			"uncountable", true -- as a material, it is likely to be uncountable
-		},
-		"Marg", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
-			"meaning", "Marrow",
-			"singular-nominative", "Marg"
-		},
-		"Mēde", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 7.
-			"meaning", "Reward, Rental, Payment, Gift",
-			"singular-nominative", "Mēde", -- source also gives as alternatives the forms "Mīde", "Meide" and "Hēde"
-			"gender", "Feminine"
-		},
-		"Ord", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
-			"meaning", "Point, Place", -- source gives the meaning as "(spear)point, place"
-			"singular-nominative", "Ord"
-		},
-		"Ransa", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
-			"meaning", "House",
-			"singular-nominative", "Ransa"
-		},
-		"Wêd", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 4.
-			"meaning", "Woad",
-			"singular-nominative", "Wêd"
-		}
-	},
 	"verbs", {
 		"Lēra", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 5.
 			"meaning", "Teach",
@@ -604,26 +329,6 @@ DefineCivilizationLanguage("old-frisian", -- Old Frisian
 )
 
 DefineCivilizationLanguage("middle-low-german", -- Middle Low German
-	"nouns", {
-		"Hēde", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 7.
-			"meaning", "Flax Fiber",
-			"singular-nominative", "Hēde",
-			"uncountable", true, -- as a material, it is likely to be uncountable
-			"gender", "Feminine"
-		},
-		"Kên", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 4.
-			"meaning", "Resinous Wood",
-			"singular-nominative", "Kên"
-		},
-		"Twern", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
-			"meaning", "Doubly Spun Twine",
-			"singular-nominative", "Twern"
-		},
-		"Wêt", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 4.
-			"meaning", "Woad",
-			"singular-nominative", "Wêt" -- source also gives the alternative form "Wêde"
-		}
-	},
 	"verbs", {
 		"Twernen", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
 			"meaning", "Twine",
@@ -632,49 +337,7 @@ DefineCivilizationLanguage("middle-low-german", -- Middle Low German
 	}
 )
 
-DefineCivilizationLanguage("old-irish", -- Old Irish
-	"nouns", {
-		"Giús", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 4.
-			"meaning", "Fir",
-			"singular-nominative", "Giús"
-		}
-	}
-)
-
 DefineCivilizationLanguage("irish", -- Irish
-	"nouns", {
-		"Árus", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
-			"meaning", "Dwelling",
-			"singular-nominative", "Árus"
-		},
-		"Brot", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
-			"meaning", "Prickle",
-			"singular-nominative", "Brot",
-			"gender", "Masculine"
-		},
-		"Gas", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
-			"meaning", "Sapling, Sprout, Shoot",
-			"singular-nominative", "Gas",
-			"gender", "Feminine"
-		},
-		"Gat", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
-			"meaning", "Rod",
-			"singular-nominative", "Gat"
-		},
-		"Gius", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 7.
-			"meaning", "Fir, Spruce",
-			"singular-nominative", "Gius"
-		},
-		"Kass", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
-			"meaning", "Curl, Tress",
-			"singular-nominative", "Kass"
-		},
-		"Medg", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
-			"meaning", "Whey",
-			"singular-nominative", "Medg",
-			"gender", "Feminine"
-		}
-	},
 	"adjectives", {
 		"Máo", { -- this is the comparative, what is the normal version of the word? Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
 			"meaning", "More", -- "Máo" actually means "größer"
@@ -684,28 +347,6 @@ DefineCivilizationLanguage("irish", -- Irish
 )
 
 DefineCivilizationLanguage("sanskrit", -- Sanskrit
-	"nouns", {
-		"Késara", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 7.
-			"meaning", "Hair, Mane",
-			"singular-nominative", "Késara",
-			"gender", "Masculine"
-		},
-		"Majjá", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
-			"meaning", "Marrow",
-			"singular-nominative", "Majjá", -- the accent in the source was different, but I could not identify the accent to reproduce it here
-			"gender", "Feminine"
-		},
-		"Majján", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
-			"meaning", "Marrow",
-			"singular-nominative", "Majján",
-			"gender", "Masculine"
-		},
-		"Mīḍhá", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 7.
-			"meaning", "Reward from a Battle, Reward from a Competition",
-			"singular-nominative", "Mīḍhá",
-			"gender", "Neuter"
-		}
-	},
 	"pronouns", {
 		"Vayim", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 5.
 			"meaning", "We",
@@ -714,92 +355,10 @@ DefineCivilizationLanguage("sanskrit", -- Sanskrit
 	}
 )
 
-DefineCivilizationLanguage("old-slavic", -- Old Slavic / Old Church Slavonic
-	"nouns", {
-		"Kosa", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
-			"meaning", "Hair",
-			"singular-nominative", "Kosa"
-		},
-		"Kosmŭ", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
-			"meaning", "Head Hair",
-			"singular-nominative", "Kosmŭ"
-		},
-		"Mězga", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
-			"meaning", "Sap, Juice",
-			"singular-nominative", "Mězga"
-		},
-		"Mĭzda", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 7.
-			"meaning", "Reward",
-			"singular-nominative", "Mĭzda"
-		},
-		"Mozgŭ", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
-			"meaning", "Brain",
-			"singular-nominative", "Mozgŭ"
-		},
-		"Žrudŭ", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
-			"meaning", "Flimsy Pole",
-			"singular-nominative", "Žrudŭ"
-		}
-	}
-)
+-- North Slavic (did this really exist?)
+DefineLanguageWord("Kosem", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
+	Civilization = "north-slavic",
+	Meaning = "Bundle of Flax",
+	SingularNominative = "Kosem"
+})
 
-DefineCivilizationLanguage("north-slavic", -- North Slavic (did this really exist?)
-	"nouns", {
-		"Kosem", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
-			"meaning", "Bundle of Flax",
-			"singular-nominative", "Kosem"
-		}
-	}
-)
-
-DefineCivilizationLanguage("russian",
-	"nouns", {
-		"Mozga", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
-			"meaning", "Blood",
-			"singular-nominative", "Mozga"
-		}
-	}
-)
-
-DefineCivilizationLanguage("ukrainian",
-	"nouns", {
-		"Mjazka", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
-			"meaning", "Tree Sap",
-			"singular-nominative", "Mjazka"
-		},
-		"Mjazok", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
-			"meaning", "Marrow",
-			"singular-nominative", "Mjazok"
-		}
-	}
-)
-
-DefineCivilizationLanguage("avestan", -- Avestan
-	"nouns", {
-		"Mīzhda", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 7.
-			"meaning", "Reward",
-			"singular-nominative", "Mīzhda",
-			"gender", "Neuter"
-		}
-	}
-)
-
-DefineCivilizationLanguage("middle-dutch", -- Middle Dutch
-	"nouns", {
-		"Herde", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
-			"meaning", "Flax Fiber",
-			"singular-nominative", "Herde",
-			"uncountable", true -- as a material, it is likely to be uncountable
-		}
-	}
-)
-
-DefineCivilizationLanguage("norwegian", -- Norwegian
-	"nouns", {
-		"Bradd", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
-			"meaning", "Shore, Edge",
-			"singular-nominative", "Bradd",
-			"gender", "Masculine"
-		}
-	}
-)

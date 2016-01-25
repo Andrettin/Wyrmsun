@@ -26,90 +26,6 @@
 --
 
 DefineCivilizationLanguage("norse", -- Old Norse
-	"nouns", {
-		"Aldr", { -- Source: Geir T. Zoëga, "A Concise Dictionary of Old Icelandic", 1910, p. 8.
-			"meaning", "Age, Lifetime",
-			"singular-nominative", "Aldr",
-			"singular-genitive", "Aldrs",
-			"gender", "Masculine"
-		},
-		"Aldrnari", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
-			"meaning", "Fire",
-			"singular-nominative", "Aldrnari", -- Compound of the words "Aldr" and "Nari", literally "life-sustainer"
-			"gender", "Masculine"
-		},
-		"Broddr", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 9.
-			"meaning", "Point, Sprout",
-			"singular-nominative", "Broddr",
-			"gender", "Masculine"
-		},
-		"Fiskr", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
-			"meaning", "Fish",
-			"singular-nominative", "Fiskr"
-		},
-		"Gaddr", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
-			"meaning", "Prickle",
-			"singular-nominative", "Gaddr",
-			"gender", "Masculine"
-		},
-		"Greddir", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 10.
-			"meaning", "Feeder, Satisfier",
-			"singular-nominative", "Greddir"
-		},
-		"Haddr", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 3, 8.
-			"meaning", "Woman's Long Hair",
-			"singular-nominative", "Haddr",
-			"gender", "Masculine"
-		},
-		"Hodd", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.
-			"meaning", "Treasure",
-			"singular-nominative", "Hodd"
-		},
-		"Hrǫnn", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.
-			"meaning", "Wave",
-			"singular-nominative", "Hrǫnn",
-			"gender", "Feminine"
-		},
-		"Hundr", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
-			"meaning", "Dog",
-			"singular-nominative", "Hundr"
-		},
-		"Mergr", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 9.
-			"meaning", "Marrow in a Bone",
-			"singular-nominative", "Mergr",
-			"singular-genitive", "Mergjar",
-			"gender", "Masculine"
-		},
-		"Oddr", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 7.
-			"meaning", "Point, Place",
-			"singular-nominative", "Oddr",
-			"singular-genitive", "Odds",
-			"gender", "Masculine"
-		},
-		"Orlǫg", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 10.
-			"meaning", "Fate",
-			"singular-nominative", "Orlǫg" -- is singular or plural?
-		},
-		"Rann", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
-			"meaning", "House",
-			"singular-nominative", "Rann",
-			"gender", "Neuter"
-		},
-		"Rǫdd", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 9.
-			"meaning", "Sound, Voice, Vowel",
-			"singular-nominative", "Rǫdd",
-			"gender", "Feminine"
-		},
-		"Valkyrja", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 10.
-			"meaning", "Valkyrie",
-			"singular-nominative", "Valkyrja",
-			"gender", "feminine"
-		},
-		"Vegr", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
-			"meaning", "Way",
-			"singular-nominative", "Vegr"
-		}
-	},
 	"verbs", {
 		"Eta", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
 			"meaning", "Eat",
@@ -168,6 +84,109 @@ DefineCivilizationLanguage("norse", -- Old Norse
 	}
 )
 
+DefineLanguageWord("Aldr", { -- Source: Geir T. Zoëga, "A Concise Dictionary of Old Icelandic", 1910, p. 8.
+	Civilization = "norse",
+	Meaning = "Age, Lifetime",
+	SingularNominative = "Aldr",
+	SingularGenitive = "Aldrs",
+	Gender = "Masculine"
+})
+
+DefineLanguageWord("Aldrnari", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
+	Civilization = "norse",
+	Meaning = "Fire",
+	SingularNominative = "Aldrnari", -- Compound of the words "Aldr" and "Nari", literally "life-sustainer"
+	Gender = "Masculine"
+})
+
+DefineLanguageWord("Broddr", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 9.
+	Civilization = "norse",
+	Meaning = "Point, Sprout",
+	SingularNominative = "Broddr",
+	Gender = "Masculine"
+})
+
+DefineLanguageWord("Fiskr", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
+	Civilization = "norse",
+	Meaning = "Fish",
+	SingularNominative = "Fiskr"
+})
+
+DefineLanguageWord("Gaddr", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
+	Civilization = "norse",
+	Meaning = "Prickle",
+	SingularNominative = "Gaddr",
+	Gender = "Masculine"
+})
+
+DefineLanguageWord("Greddir", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 10.
+	Civilization = "norse",
+	Meaning = "Feeder, Satisfier",
+	SingularNominative = "Greddir"
+})
+
+DefineLanguageWord("Haddr", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 3, 8.
+	Civilization = "norse",
+	Meaning = "Woman's Long Hair",
+	SingularNominative = "Haddr",
+	Gender = "Masculine"
+})
+
+DefineLanguageWord("Hodd", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.
+	Civilization = "norse",
+	Meaning = "Treasure",
+	SingularNominative = "Hodd"
+})
+
+DefineLanguageWord("Hrǫnn", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.
+	Civilization = "norse",
+	Meaning = "Wave",
+	SingularNominative = "Hrǫnn",
+	Gender = "Feminine"
+})
+
+DefineLanguageWord("Hundr", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
+	Civilization = "norse",
+	Meaning = "Dog",
+	SingularNominative = "Hundr"
+})
+
+DefineLanguageWord("Mergr", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 9.
+	Civilization = "norse",
+	Meaning = "Marrow in a Bone",
+	SingularNominative = "Mergr",
+	SingularGenitive = "Mergjar",
+	Gender = "Masculine"
+})
+
+DefineLanguageWord("Oddr", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 7.
+	Civilization = "norse",
+	Meaning = "Point, Place",
+	SingularNominative = "Oddr",
+	SingularGenitive = "Odds",
+	Gender = "Masculine"
+})
+
+DefineLanguageWord("Orlǫg", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 10.
+	Civilization = "norse",
+	Meaning = "Fate",
+	SingularNominative = "Orlǫg" -- is singular or plural?
+})
+
+DefineLanguageWord("Rann", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
+	Civilization = "norse",
+	Meaning = "House",
+	SingularNominative = "Rann",
+	Gender = "Neuter"
+})
+
+DefineLanguageWord("Rǫdd", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 9.
+	Civilization = "norse",
+	Meaning = "Sound, Voice, Vowel",
+	SingularNominative = "Rǫdd",
+	Gender = "Feminine"
+})
+
 DefineLanguageWord("Síði", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 118.
 	Civilization = "norse",
 	Meaning = "Magic-Worker",
@@ -178,6 +197,19 @@ DefineLanguageVerb("Síða", { -- Source: Alaric Hall, "The Meanings of Elf and 
 	Civilization = "norse",
 	Meaning = "Work Magic",
 	Infinitive = "Síða"
+})
+
+DefineLanguageWord("Valkyrja", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 10.
+	Civilization = "norse",
+	Meaning = "Valkyrie",
+	SingularNominative = "Valkyrja",
+	Gender = "feminine"
+})
+
+DefineLanguageWord("Vegr", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
+	Civilization = "norse",
+	Meaning = "Way",
+	SingularNominative = "Vegr"
 })
 
 DefineLanguageAdjective("Seiðr", { -- maybe is the past participle of Síði instead? Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 118.
