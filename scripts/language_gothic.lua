@@ -137,161 +137,161 @@ DefineCivilizationLanguage("goth", -- Gothic
 	}
 )
 
-DefineLanguageWord("Aihts", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
+DefineLanguageNoun("Aihts", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
 	Civilization = "goth",
 	Meaning = "Property", -- source gives the German "Besitz"
 	SingularNominative = "Aihts"
 })
 
-DefineLanguageWord("Aiweins", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
+DefineLanguageNoun("Aiweins", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
 	Civilization = "goth",
 	Meaning = "Lifetime", -- seemingly etymologically, if not actually
 	SingularNominative = "Aiweins"
 })
 
-DefineLanguageWord("Aiz", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
+DefineLanguageNoun("Aiz", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
 	Civilization = "goth",
 	Meaning = "Bronze",
 	SingularNominative = "Aiz"
 })
 
-DefineLanguageWord("Augo", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
+DefineLanguageNoun("Augo", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
 	Civilization = "goth",
 	Meaning = "Eye",
 	SingularNominative = "Augo"
 })
 
-DefineLanguageWord("Auso", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
+DefineLanguageNoun("Auso", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
 	Civilization = "goth",
 	Meaning = "Ear", -- seemingly etymologically, if not actually
 	SingularNominative = "Auso"
 })
 
-DefineLanguageWord("Dails", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
+DefineLanguageNoun("Dails", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
 	Civilization = "goth",
 	Meaning = "Part",
 	SingularNominative = "Dails"
 })
 
-DefineLanguageWord("Dauþus", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
+DefineLanguageNoun("Dauþus", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
 	Civilization = "goth",
 	Meaning = "Death",
 	SingularNominative = "Dauþus"
 })
 
-DefineLanguageWord("Dius", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
+DefineLanguageNoun("Dius", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
 	Civilization = "goth",
 	Meaning = "Animal",
 	SingularNominative = "Dius"
 })
 
-DefineLanguageWord("Fisks", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
+DefineLanguageNoun("Fisks", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
 	Civilization = "goth",
 	Meaning = "Fish",
 	SingularNominative = "Fisks"
 })
 
-DefineLanguageWord("Gazds", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.
+DefineLanguageNoun("Gazds", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.
 	Civilization = "goth",
 	Meaning = "Prickle",
 	SingularNominative = "Gazds",
 	Gender = "Masculine"
 })
 
-DefineLanguageWord("Hairto", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
+DefineLanguageNoun("Hairto", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
 	Civilization = "goth",
 	Meaning = "Heart",
 	SingularNominative = "Hairto"
 })
 
-DefineLanguageWord("Haubiþ", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
+DefineLanguageNoun("Haubiþ", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
 	Civilization = "goth",
 	Meaning = "Main", -- source gives German noun "Haupt" as transation
 	SingularNominative = "Haubiþ"
 })
 
-DefineLanguageWord("Hlaifs", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
+DefineLanguageNoun("Hlaifs", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
 	Civilization = "goth",
 	Meaning = "Bread",
 	SingularNominative = "Hlaifs"
 })
 
-DefineLanguageWord("Hunds", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
+DefineLanguageNoun("Hunds", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
 	Civilization = "goth",
 	Meaning = "Dog",
 	SingularNominative = "Hunds"
 })
 
-DefineLanguageWord("Huzd", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.
+DefineLanguageNoun("Huzd", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.
 	Civilization = "goth",
 	Meaning = "Treasure",
 	SingularNominative = "Huzd"
 })
 
-DefineLanguageWord("Kas", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
+DefineLanguageNoun("Kas", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
 	Civilization = "goth",
 	Meaning = "Container",
 	SingularNominative = "Kas"
 })
 
-DefineLanguageWord("Laun", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
+DefineLanguageNoun("Laun", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
 	Civilization = "goth",
 	Meaning = "Pay", -- source gives German word "Lohn" as transation
 	SingularNominative = "Laun"
 })
 
-DefineLanguageWord("Mizdon", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 7.
+DefineLanguageNoun("Mizdon", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 7.
 	Civilization = "goth",
 	Meaning = "Reward",
 	SingularNominative = "Mizdon",
 	Gender = "Feminine"
 })
 
-DefineLanguageWord("Raus", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
+DefineLanguageNoun("Raus", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
 	Civilization = "goth",
 	Meaning = "Tube", -- seemingly etymologically, if not actually
 	SingularNominative = "Raus"
 })
 
-DefineLanguageWord("Razda", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 9.
+DefineLanguageNoun("Razda", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 9.
 	Civilization = "goth",
 	Meaning = "Voice, Pronunciation, Speech",
 	SingularNominative = "Razda",
 	Gender = "Feminine"
 })
 
-DefineLanguageWord("Razn", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
+DefineLanguageNoun("Razn", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Civilization = "goth",
 	Meaning = "House",
 	SingularNominative = "Razn",
 	Gender = "Neuter"
 })
 
-DefineLanguageWord("Sair", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
+DefineLanguageNoun("Sair", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
 	Civilization = "goth",
 	Meaning = "Wound",
 	SingularNominative = "Sair"
 })
 
-DefineLanguageWord("Saiwala", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
+DefineLanguageNoun("Saiwala", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
 	Civilization = "goth",
 	Meaning = "Soul",
 	SingularNominative = "Saiwala"
 })
 
-DefineLanguageWord("Sauhts", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
+DefineLanguageNoun("Sauhts", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
 	Civilization = "goth",
 	Meaning = "Sickness",
 	SingularNominative = "Sauhts"
 })
 
-DefineLanguageWord("Waurms", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
+DefineLanguageNoun("Waurms", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
 	Civilization = "goth",
 	Meaning = "Worm, Serpent", -- probably could be extended to mean "wyrm" as well
 	SingularNominative = "Waurms"
 })
 
-DefineLanguageWord("Wigs", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
+DefineLanguageNoun("Wigs", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
 	Civilization = "goth",
 	Meaning = "Way",
 	SingularNominative = "Wigs"

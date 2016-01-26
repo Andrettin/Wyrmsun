@@ -25,50 +25,50 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageWord("Alucitae", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 101.
+DefineLanguageNoun("Alucitae", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 101.
 	Civilization = "latin",
 	Meaning = "Gnats, Mosquitos",
 	PluralNominative = "Alucitae"
 })
 
-DefineLanguageWord("Caesaries", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 7.
+DefineLanguageNoun("Caesaries", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 7.
 	Civilization = "latin",
 	Meaning = "Head Hair",
 	SingularNominative = "Caesaries"
 })
 
-DefineLanguageWord("Conopes", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 101.
+DefineLanguageNoun("Conopes", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 101.
 	Civilization = "latin",
 	Meaning = "Gnats",
 	PluralNominative = "Conopes"
 })
 
-DefineLanguageWord("Conopeum", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 102.
+DefineLanguageNoun("Conopeum", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 102.
 	Civilization = "latin",
 	Meaning = "Mosquito Net",
 	SingularNominative = "Conopeum"
 })
 
-DefineLanguageWord("Custos", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
+DefineLanguageNoun("Custos", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
 	Civilization = "latin",
 	Meaning = "Guard", -- source gives meaning as "a Guard"
 	SingularNominative = "Custos"
 })
 
-DefineLanguageWord("Gallus", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 101.
+DefineLanguageNoun("Gallus", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 101.
 	Civilization = "latin",
 	Meaning = "Eunuch",
 	SingularNominative = "Gallus",
 	PluralNominative = "Galli"
 })
 
-DefineLanguageWord("Hasta", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
+DefineLanguageNoun("Hasta", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
 	Civilization = "latin",
 	Meaning = "Rod, Shaft, Spear",
 	SingularNominative = "Hasta"
 })
 
-DefineLanguageWord("Sūs", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
+DefineLanguageNoun("Sūs", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
 	Civilization = "latin",
 	Meaning = "Sow",
 	SingularNominative = "Sūs"

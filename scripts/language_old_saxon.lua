@@ -25,82 +25,82 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageWord("Fisc", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
+DefineLanguageNoun("Fisc", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
 	Civilization = "old-saxon",
 	Meaning = "Fish",
 	SingularNominative = "Fisc"
 })
 
-DefineLanguageWord("Gard", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.
+DefineLanguageNoun("Gard", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.
 	Civilization = "old-saxon",
 	Meaning = "Staff, Rod",
 	SingularNominative = "Gard"
 })
 
-DefineLanguageWord("Herta", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
+DefineLanguageNoun("Herta", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
 	Civilization = "old-saxon",
 	Meaning = "Heart",
 	SingularNominative = "Herta"
 })
 
-DefineLanguageWord("Hord", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.
+DefineLanguageNoun("Hord", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.
 	Civilization = "old-saxon",
 	Meaning = "Treasure, Closed Interior, Hidden Interior",
 	SingularNominative = "Hord"
 })
 
-DefineLanguageWord("Hund", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
+DefineLanguageNoun("Hund", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
 	Civilization = "old-saxon",
 	Meaning = "Dog",
 	SingularNominative = "Hund"
 })
 
-DefineLanguageWord("Līfnara", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
+DefineLanguageNoun("Līfnara", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Civilization = "old-saxon",
 	Meaning = "Food, Nourishment",
 	SingularNominative = "Līfnara",
 	Gender = "Feminine"
 })
 
-DefineLanguageWord("Merg", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
+DefineLanguageNoun("Merg", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
 	Civilization = "old-saxon",
 	Meaning = "Marrow",
 	SingularNominative = "Merg"
 })
 
-DefineLanguageWord("Mēda", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 7.
+DefineLanguageNoun("Mēda", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 7.
 	Civilization = "old-saxon",
 	Meaning = "Payment",
 	SingularNominative = "Mēda", -- source also gives as an alternatives the form "Mieda"
 	Gender = "Feminine"
 })
 
-DefineLanguageWord("Ord", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
+DefineLanguageNoun("Ord", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
 	Civilization = "old-saxon",
 	Meaning = "Point, Edge of a Blade",
 	SingularNominative = "Ord",
 	Gender = "Masculine"
 })
 
-DefineLanguageWord("Orlag", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 10.
+DefineLanguageNoun("Orlag", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 10.
 	Civilization = "old-saxon",
 	Meaning = "Fate",
 	SingularNominative = "Orlag" -- source also gives the alternative form "Orlagi"
 })
 
-DefineLanguageWord("Suht", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
+DefineLanguageNoun("Suht", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
 	Civilization = "old-saxon",
 	Meaning = "Sickness",
 	SingularNominative = "Suht"
 })
 
-DefineLanguageWord("Weg", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
+DefineLanguageNoun("Weg", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
 	Civilization = "old-saxon",
 	Meaning = "Way",
 	SingularNominative = "Weg"
 })
 
-DefineLanguageWord("Wurm", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
+DefineLanguageNoun("Wurm", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
 	Civilization = "old-saxon",
 	Meaning = "Worm, Serpent", -- probably could be extended to mean "wyrm" as well
 	SingularNominative = "Wurm"

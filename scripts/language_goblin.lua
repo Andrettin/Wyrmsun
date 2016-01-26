@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageWord("Bag", { -- from Mike Anderson's Tyrant
+DefineLanguageNoun("Bag", { -- from Mike Anderson's Tyrant
 	Civilization = "goblin",
 	Meaning = "?",
 	SingularNominative = "Bag",
@@ -33,7 +33,7 @@ DefineLanguageWord("Bag", { -- from Mike Anderson's Tyrant
 	SuffixTypeName = {"person"}
 })
 
-DefineLanguageWord("Dag", { -- from Mike Anderson's Tyrant
+DefineLanguageNoun("Dag", { -- from Mike Anderson's Tyrant
 	Civilization = "goblin",
 	Meaning = "?",
 	SingularNominative = "Dag",
@@ -41,7 +41,7 @@ DefineLanguageWord("Dag", { -- from Mike Anderson's Tyrant
 	SuffixTypeName = {"person"}
 })
 
-DefineLanguageWord("Dran", {
+DefineLanguageNoun("Dran", {
 	Civilization = "goblin",
 	Meaning = "?",
 	SingularNominative = "Dran",
@@ -49,7 +49,7 @@ DefineLanguageWord("Dran", {
 	TypeName = {"person"}
 })
 
-DefineLanguageWord("Erdog", {
+DefineLanguageNoun("Erdog", {
 	Civilization = "goblin",
 	Meaning = "?",
 	SingularNominative = "Erdog",
@@ -57,7 +57,7 @@ DefineLanguageWord("Erdog", {
 	TypeName = {"person"}
 })
 
-DefineLanguageWord("Fal Khag", {
+DefineLanguageNoun("Fal Khag", {
 	Civilization = "goblin",
 	Meaning = "?",
 	SingularNominative = "Fal Khag",
@@ -65,7 +65,7 @@ DefineLanguageWord("Fal Khag", {
 	TypeName = {"person"}
 })
 
-DefineLanguageWord("Gashnok", {
+DefineLanguageNoun("Gashnok", {
 	Civilization = "goblin",
 	Meaning = "?",
 	SingularNominative = "Gashnok",
@@ -73,7 +73,7 @@ DefineLanguageWord("Gashnok", {
 	TypeName = {"person"}
 })
 
-DefineLanguageWord("Gatrakh", {
+DefineLanguageNoun("Gatrakh", {
 	Civilization = "goblin",
 	Meaning = "?",
 	SingularNominative = "Gatrakh",
@@ -81,7 +81,7 @@ DefineLanguageWord("Gatrakh", {
 	TypeName = {"person"}
 })
 
-DefineLanguageWord("Gom", { -- from Mike Anderson's Tyrant
+DefineLanguageNoun("Gom", { -- from Mike Anderson's Tyrant
 	Civilization = "goblin",
 	Meaning = "?",
 	SingularNominative = "Gom",
@@ -89,7 +89,7 @@ DefineLanguageWord("Gom", { -- from Mike Anderson's Tyrant
 	PrefixTypeName = {"person"}
 })
 
-DefineLanguageWord("Gorokh", {
+DefineLanguageNoun("Gorokh", {
 	Civilization = "goblin",
 	Meaning = "?",
 	SingularNominative = "Gorokh",
@@ -97,7 +97,7 @@ DefineLanguageWord("Gorokh", {
 	TypeName = {"person"}
 })
 
-DefineLanguageWord("Grash", { -- from Mike Anderson's Tyrant
+DefineLanguageNoun("Grash", { -- from Mike Anderson's Tyrant
 	Civilization = "goblin",
 	Meaning = "?",
 	SingularNominative = "Grash",
@@ -105,7 +105,7 @@ DefineLanguageWord("Grash", { -- from Mike Anderson's Tyrant
 	PrefixTypeName = {"person"}
 })
 
-DefineLanguageWord("Greebo", {
+DefineLanguageNoun("Greebo", {
 	Civilization = "goblin",
 	Meaning = "?",
 	SingularNominative = "Greebo",
@@ -113,7 +113,7 @@ DefineLanguageWord("Greebo", {
 	TypeName = {"person"}
 })
 
-DefineLanguageWord("Grogor-Tuk", {
+DefineLanguageNoun("Grogor-Tuk", {
 	Civilization = "goblin",
 	Meaning = "?",
 	SingularNominative = "Grogor-Tuk",
@@ -121,7 +121,7 @@ DefineLanguageWord("Grogor-Tuk", {
 	TypeName = {"person"}
 })
 
-DefineLanguageWord("Grut", { -- from Mike Anderson's Tyrant
+DefineLanguageNoun("Grut", { -- from Mike Anderson's Tyrant
 	Civilization = "goblin",
 	Meaning = "?",
 	SingularNominative = "Grut",
@@ -129,7 +129,7 @@ DefineLanguageWord("Grut", { -- from Mike Anderson's Tyrant
 	PrefixTypeName = {"person"}
 })
 
-DefineLanguageWord("Gum", { -- from Mike Anderson's Tyrant
+DefineLanguageNoun("Gum", { -- from Mike Anderson's Tyrant
 	Civilization = "goblin",
 	Meaning = "?",
 	SingularNominative = "Gum",
@@ -137,7 +137,7 @@ DefineLanguageWord("Gum", { -- from Mike Anderson's Tyrant
 	PrefixTypeName = {"person"}
 })
 
-DefineLanguageWord("Hrugt", {
+DefineLanguageNoun("Hrugt", {
 	Civilization = "goblin",
 	Meaning = "?",
 	SingularNominative = "Hrugt",
@@ -145,7 +145,7 @@ DefineLanguageWord("Hrugt", {
 	TypeName = {"person"}
 })
 
-DefineLanguageWord("Kar", { -- from Mike Anderson's Tyrant
+DefineLanguageNoun("Kar", { -- from Mike Anderson's Tyrant
 	Civilization = "goblin",
 	Meaning = "?",
 	SingularNominative = "Kar",
@@ -153,7 +153,7 @@ DefineLanguageWord("Kar", { -- from Mike Anderson's Tyrant
 	PrefixTypeName = {"person"}
 })
 
-DefineLanguageWord("Kardur", {
+DefineLanguageNoun("Kardur", {
 	Civilization = "goblin",
 	Meaning = "?",
 	SingularNominative = "Kardur",
@@ -161,7 +161,7 @@ DefineLanguageWord("Kardur", {
 	TypeName = {"person"}
 })
 
-DefineLanguageWord("Kartrog", {
+DefineLanguageNoun("Kartrog", {
 	Civilization = "goblin",
 	Meaning = "?",
 	SingularNominative = "Kartrog",
@@ -169,7 +169,7 @@ DefineLanguageWord("Kartrog", {
 	TypeName = {"person"}
 })
 
-DefineLanguageWord("Kret", { -- from Mike Anderson's Tyrant
+DefineLanguageNoun("Kret", { -- from Mike Anderson's Tyrant
 	Civilization = "goblin",
 	Meaning = "?",
 	SingularNominative = "Kret",
@@ -177,7 +177,7 @@ DefineLanguageWord("Kret", { -- from Mike Anderson's Tyrant
 	PrefixTypeName = {"person"}
 })
 
-DefineLanguageWord("Krom", { -- from Mike Anderson's Tyrant
+DefineLanguageNoun("Krom", { -- from Mike Anderson's Tyrant
 	Civilization = "goblin",
 	Meaning = "?",
 	SingularNominative = "Krom",
@@ -185,7 +185,7 @@ DefineLanguageWord("Krom", { -- from Mike Anderson's Tyrant
 	PrefixTypeName = {"person"}
 })
 
-DefineLanguageWord("Krung", {
+DefineLanguageNoun("Krung", {
 	Civilization = "goblin",
 	Meaning = "?",
 	SingularNominative = "Krung",
@@ -193,7 +193,7 @@ DefineLanguageWord("Krung", {
 	TypeName = {"person"}
 })
 
-DefineLanguageWord("Lig", { -- from Mike Anderson's Tyrant
+DefineLanguageNoun("Lig", { -- from Mike Anderson's Tyrant
 	Civilization = "goblin",
 	Meaning = "?",
 	SingularNominative = "Lig",
@@ -201,7 +201,7 @@ DefineLanguageWord("Lig", { -- from Mike Anderson's Tyrant
 	SuffixTypeName = {"person"}
 })
 
-DefineLanguageWord("Lug", { -- from Mike Anderson's Tyrant
+DefineLanguageNoun("Lug", { -- from Mike Anderson's Tyrant
 	Civilization = "goblin",
 	Meaning = "?",
 	SingularNominative = "Lug",
@@ -209,7 +209,7 @@ DefineLanguageWord("Lug", { -- from Mike Anderson's Tyrant
 	SuffixTypeName = {"person"}
 })
 
-DefineLanguageWord("Nak", { -- from Mike Anderson's Tyrant
+DefineLanguageNoun("Nak", { -- from Mike Anderson's Tyrant
 	Civilization = "goblin",
 	Meaning = "?",
 	SingularNominative = "Nak",
@@ -217,7 +217,7 @@ DefineLanguageWord("Nak", { -- from Mike Anderson's Tyrant
 	SuffixTypeName = {"person"}
 })
 
-DefineLanguageWord("Nark", { -- from Mike Anderson's Tyrant
+DefineLanguageNoun("Nark", { -- from Mike Anderson's Tyrant
 	Civilization = "goblin",
 	Meaning = "?",
 	SingularNominative = "Nark",
@@ -225,7 +225,7 @@ DefineLanguageWord("Nark", { -- from Mike Anderson's Tyrant
 	SuffixTypeName = {"person"}
 })
 
-DefineLanguageWord("Odrun", {
+DefineLanguageNoun("Odrun", {
 	Civilization = "goblin",
 	Meaning = "?",
 	SingularNominative = "Odrun",
@@ -233,7 +233,7 @@ DefineLanguageWord("Odrun", {
 	TypeName = {"person"}
 })
 
-DefineLanguageWord("Orhtib", {
+DefineLanguageNoun("Orhtib", {
 	Civilization = "goblin",
 	Meaning = "?",
 	SingularNominative = "Orhtib",
@@ -241,7 +241,7 @@ DefineLanguageWord("Orhtib", {
 	TypeName = {"person"}
 })
 
-DefineLanguageWord("Ozdul", {
+DefineLanguageNoun("Ozdul", {
 	Civilization = "goblin",
 	Meaning = "?",
 	SingularNominative = "Ozdul",
@@ -249,7 +249,7 @@ DefineLanguageWord("Ozdul", {
 	TypeName = {"person"}
 })
 
-DefineLanguageWord("Panok", {
+DefineLanguageNoun("Panok", {
 	Civilization = "goblin",
 	Meaning = "?",
 	SingularNominative = "Panok",
@@ -257,7 +257,7 @@ DefineLanguageWord("Panok", {
 	TypeName = {"person"}
 })
 
-DefineLanguageWord("Pruol", {
+DefineLanguageNoun("Pruol", {
 	Civilization = "goblin",
 	Meaning = "?",
 	SingularNominative = "Pruol",
@@ -265,7 +265,7 @@ DefineLanguageWord("Pruol", {
 	TypeName = {"person"}
 })
 
-DefineLanguageWord("Rat", { -- from Mike Anderson's Tyrant
+DefineLanguageNoun("Rat", { -- from Mike Anderson's Tyrant
 	Civilization = "goblin",
 	Meaning = "?",
 	SingularNominative = "Rat",
@@ -273,7 +273,7 @@ DefineLanguageWord("Rat", { -- from Mike Anderson's Tyrant
 	SuffixTypeName = {"person"}
 })
 
-DefineLanguageWord("Sbrak", {
+DefineLanguageNoun("Sbrak", {
 	Civilization = "goblin",
 	Meaning = "?",
 	SingularNominative = "Sbrak",
@@ -281,7 +281,7 @@ DefineLanguageWord("Sbrak", {
 	TypeName = {"person"}
 })
 
-DefineLanguageWord("Sdrul", {
+DefineLanguageNoun("Sdrul", {
 	Civilization = "goblin",
 	Meaning = "?",
 	SingularNominative = "Sdrul",
@@ -289,7 +289,7 @@ DefineLanguageWord("Sdrul", {
 	TypeName = {"person"}
 })
 
-DefineLanguageWord("Stug", { -- from Mike Anderson's Tyrant
+DefineLanguageNoun("Stug", { -- from Mike Anderson's Tyrant
 	Civilization = "goblin",
 	Meaning = "?",
 	SingularNominative = "Stug",
@@ -297,7 +297,7 @@ DefineLanguageWord("Stug", { -- from Mike Anderson's Tyrant
 	PrefixTypeName = {"person"}
 })
 
-DefineLanguageWord("Thurg", {
+DefineLanguageNoun("Thurg", {
 	Civilization = "goblin",
 	Meaning = "?",
 	SingularNominative = "Thurg",
@@ -305,7 +305,7 @@ DefineLanguageWord("Thurg", {
 	TypeName = {"person"}
 })
 
-DefineLanguageWord("T'shar Lggi", {
+DefineLanguageNoun("T'shar Lggi", {
 	Civilization = "goblin",
 	Meaning = "?",
 	SingularNominative = "T'shar Lggi",
@@ -313,7 +313,7 @@ DefineLanguageWord("T'shar Lggi", {
 	TypeName = {"person"}
 })
 
-DefineLanguageWord("Tug", { -- from Mike Anderson's Tyrant
+DefineLanguageNoun("Tug", { -- from Mike Anderson's Tyrant
 	Civilization = "goblin",
 	Meaning = "?",
 	SingularNominative = "Tug",
@@ -321,7 +321,7 @@ DefineLanguageWord("Tug", { -- from Mike Anderson's Tyrant
 	SuffixTypeName = {"person"}
 })
 
-DefineLanguageWord("Uhmit", {
+DefineLanguageNoun("Uhmit", {
 	Civilization = "goblin",
 	Meaning = "?",
 	SingularNominative = "Uhmit",
@@ -329,7 +329,7 @@ DefineLanguageWord("Uhmit", {
 	TypeName = {"person"}
 })
 
-DefineLanguageWord("Urdum", {
+DefineLanguageNoun("Urdum", {
 	Civilization = "goblin",
 	Meaning = "?",
 	SingularNominative = "Urdum",
@@ -337,7 +337,7 @@ DefineLanguageWord("Urdum", {
 	TypeName = {"person"}
 })
 
-DefineLanguageWord("Utrub", {
+DefineLanguageNoun("Utrub", {
 	Civilization = "goblin",
 	Meaning = "?",
 	SingularNominative = "Utrub",
@@ -345,7 +345,7 @@ DefineLanguageWord("Utrub", {
 	TypeName = {"person"}
 })
 
-DefineLanguageWord("Vrag", {
+DefineLanguageNoun("Vrag", {
 	Civilization = "goblin",
 	Meaning = "?",
 	SingularNominative = "Vrag",
@@ -353,7 +353,7 @@ DefineLanguageWord("Vrag", {
 	TypeName = {"person"}
 })
 
-DefineLanguageWord("Vrunt", {
+DefineLanguageNoun("Vrunt", {
 	Civilization = "goblin",
 	Meaning = "?",
 	SingularNominative = "Vrunt",
@@ -361,7 +361,7 @@ DefineLanguageWord("Vrunt", {
 	TypeName = {"person"}
 })
 
-DefineLanguageWord("Zhuk", {
+DefineLanguageNoun("Zhuk", {
 	Civilization = "goblin",
 	Meaning = "?",
 	SingularNominative = "Zhuk",
@@ -369,7 +369,7 @@ DefineLanguageWord("Zhuk", {
 	TypeName = {"person"}
 })
 
-DefineLanguageWord("Zuzerd", {
+DefineLanguageNoun("Zuzerd", {
 	Civilization = "goblin",
 	Meaning = "?",
 	SingularNominative = "Zuzerd",

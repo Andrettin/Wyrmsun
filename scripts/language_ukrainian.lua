@@ -25,13 +25,13 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageWord("Mjazka", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
+DefineLanguageNoun("Mjazka", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Civilization = "ukrainian",
 	Meaning = "Tree Sap",
 	SingularNominative = "Mjazka"
 })
 
-DefineLanguageWord("Mjazok", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
+DefineLanguageNoun("Mjazok", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Civilization = "ukrainian",
 	Meaning = "Marrow",
 	SingularNominative = "Mjazok"

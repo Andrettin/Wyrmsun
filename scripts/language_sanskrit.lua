@@ -25,28 +25,28 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageWord("Késara", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 7.
+DefineLanguageNoun("Késara", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 7.
 	Civilization = "sanskrit",
 	Meaning = "Hair, Mane",
 	SingularNominative = "Késara",
 	Gender = "Masculine"
 })
 
-DefineLanguageWord("Majjá", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
+DefineLanguageNoun("Majjá", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Civilization = "sanskrit",
 	Meaning = "Marrow",
 	SingularNominative = "Majjá", -- the accent in the source was different, but I could not identify the accent to reproduce it here
 	Gender = "Feminine"
 })
 
-DefineLanguageWord("Majján", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
+DefineLanguageNoun("Majján", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Civilization = "sanskrit",
 	Meaning = "Marrow",
 	SingularNominative = "Majján",
 	Gender = "Masculine"
 })
 
-DefineLanguageWord("Mīḍhá", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 7.
+DefineLanguageNoun("Mīḍhá", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 7.
 	Civilization = "sanskrit",
 	Meaning = "Reward from a Battle, Reward from a Competition",
 	SingularNominative = "Mīḍhá",

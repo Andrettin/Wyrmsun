@@ -356,7 +356,7 @@ DefineCivilizationLanguage("sanskrit", -- Sanskrit
 )
 
 -- North Slavic (did this really exist?)
-DefineLanguageWord("Kosem", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
+DefineLanguageNoun("Kosem", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
 	Civilization = "north-slavic",
 	Meaning = "Bundle of Flax",
 	SingularNominative = "Kosem"

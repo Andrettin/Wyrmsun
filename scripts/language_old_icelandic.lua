@@ -25,25 +25,25 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageWord("Eyra", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
+DefineLanguageNoun("Eyra", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
 	Civilization = "old-icelandic",
 	Meaning = "Ear",
 	SingularNominative = "Eyra"
 })
 
-DefineLanguageWord("Ker", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
+DefineLanguageNoun("Ker", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
 	Civilization = "old-icelandic",
 	Meaning = "Container",
 	SingularNominative = "Ker"
 })
 
-DefineLanguageWord("Reyrr", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
+DefineLanguageNoun("Reyrr", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
 	Civilization = "old-icelandic",
 	Meaning = "Tube",
 	SingularNominative = "Reyrr"
 })
 
-DefineLanguageWord("Sár", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 3.
+DefineLanguageNoun("Sár", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 3.
 	Civilization = "old-icelandic",
 	Meaning = "Wound",
 	SingularNominative = "Sár"

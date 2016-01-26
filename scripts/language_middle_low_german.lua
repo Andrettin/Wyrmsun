@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageWord("Hēde", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 7.
+DefineLanguageNoun("Hēde", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 7.
 	Civilization = "middle-low-german",
 	Meaning = "Flax Fiber",
 	SingularNominative = "Hēde",
@@ -33,19 +33,19 @@ DefineLanguageWord("Hēde", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Gender = "Feminine"
 })
 
-DefineLanguageWord("Kên", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 4.
+DefineLanguageNoun("Kên", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 4.
 	Civilization = "middle-low-german",
 	Meaning = "Resinous Wood",
 	SingularNominative = "Kên"
 })
 
-DefineLanguageWord("Twern", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
+DefineLanguageNoun("Twern", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
 	Civilization = "middle-low-german",
 	Meaning = "Doubly Spun Twine",
 	SingularNominative = "Twern"
 })
 
-DefineLanguageWord("Wêt", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 4.
+DefineLanguageNoun("Wêt", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 4.
 	Civilization = "middle-low-german",
 	Meaning = "Woad",
 	SingularNominative = "Wêt" -- source also gives the alternative form "Wêde"

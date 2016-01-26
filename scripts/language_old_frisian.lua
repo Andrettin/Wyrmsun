@@ -25,39 +25,39 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageWord("Hēde", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
+DefineLanguageNoun("Hēde", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
 	Civilization = "old-frisian",
 	Meaning = "Flax Fiber",
 	SingularNominative = "Hēde",
 	Uncountable = true -- as a material, it is likely to be uncountable
 })
 
-DefineLanguageWord("Marg", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
+DefineLanguageNoun("Marg", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
 	Civilization = "old-frisian",
 	Meaning = "Marrow",
 	SingularNominative = "Marg"
 })
 
-DefineLanguageWord("Mēde", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 7.
+DefineLanguageNoun("Mēde", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 7.
 	Civilization = "old-frisian",
 	Meaning = "Reward, Rental, Payment, Gift",
 	SingularNominative = "Mēde", -- source also gives as alternatives the forms "Mīde", "Meide" and "Hēde"
 	Gender = "Feminine"
 })
 
-DefineLanguageWord("Ord", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
+DefineLanguageNoun("Ord", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
 	Civilization = "old-frisian",
 	Meaning = "Point, Place", -- source gives the meaning as "(spear)point, place"
 	SingularNominative = "Ord"
 })
 
-DefineLanguageWord("Ransa", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
+DefineLanguageNoun("Ransa", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Civilization = "old-frisian",
 	Meaning = "House",
 	SingularNominative = "Ransa"
 })
 
-DefineLanguageWord("Wêd", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 4.
+DefineLanguageNoun("Wêd", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 4.
 	Civilization = "old-frisian",
 	Meaning = "Woad",
 	SingularNominative = "Wêd"

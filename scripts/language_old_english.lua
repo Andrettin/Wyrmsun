@@ -25,106 +25,106 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageWord("Ærn", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
+DefineLanguageNoun("Ærn", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Civilization = "old-english",
 	Meaning = "House",
 	SingularNominative = "Ærn",
 	Gender = "Neuter"
 })
 
-DefineLanguageWord("Adl", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 114.
+DefineLanguageNoun("Adl", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 114.
 	Civilization = "old-english",
 	Meaning = "Illness",
 	SingularNominative = "Adl"
 })
 
-DefineLanguageWord("Bearn", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 238.
+DefineLanguageNoun("Bearn", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 238.
 	Civilization = "old-english",
 	Meaning = "Child",
 	SingularNominative = "Bearn"
 })
 
-DefineLanguageWord("Breord", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
+DefineLanguageNoun("Breord", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Civilization = "old-english",
 	Meaning = "Shore, Edge",
 	SingularNominative = "Breord"
 })
 
-DefineLanguageWord("Brord", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 9.
+DefineLanguageNoun("Brord", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 9.
 	Civilization = "old-english",
 	Meaning = "Point, Sprout",
 	SingularNominative = "Brord",
 	Gender = "Masculine"
 })
 
-DefineLanguageWord("Cên", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 4-7.
+DefineLanguageNoun("Cên", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 4-7.
 	Civilization = "old-english",
 	Meaning = "Pine, Fir, Spruce",
 	SingularNominative = "Cên",
 	Gender = "Masculine"
 })
 
-DefineLanguageWord("Ealdorneru", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
+DefineLanguageNoun("Ealdorneru", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Civilization = "old-english",
 	Meaning = "Saving of a Life",
 	SingularNominative = "Ealdorneru",
 	Gender = "Feminine"
 })
 
-DefineLanguageWord("Eorþe", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 238.
+DefineLanguageNoun("Eorþe", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 238.
 	Civilization = "old-english",
 	Meaning = "Earth",
 	SingularNominative = "Eorþe",
 	Uncountable = true
 })
 
-DefineLanguageWord("Feoh", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 238.
+DefineLanguageNoun("Feoh", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 238.
 	Civilization = "old-english",
 	Meaning = "Cattle",
 	SingularNominative = "Feoh"
 })
 
-DefineLanguageWord("Fiðelestre", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 77.
+DefineLanguageNoun("Fiðelestre", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 77.
 	Civilization = "old-english",
 	Meaning = "Fiddler",
 	SingularNominative = "Fiðelestre",
 	Gender = "Feminine" -- presumably, given the source is talking about occupations for women
 })
 
-DefineLanguageWord("Fisc", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
+DefineLanguageNoun("Fisc", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
 	Civilization = "old-english",
 	Meaning = "Fish",
 	SingularNominative = "Fisc"
 })
 
-DefineLanguageWord("Gereord", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 10.
+DefineLanguageNoun("Gereord", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 10.
 	Civilization = "old-english",
 	Meaning = "Meal, Feast, Food",
 	SingularNominative = "Gereord",
 	Gender = "Neuter"
 })
 
-DefineLanguageWord("Gierd", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
+DefineLanguageNoun("Gierd", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
 	Civilization = "old-english",
 	Meaning = "Rod, Prickle",
 	SingularNominative = "Gierd"
 })
 
-DefineLanguageWord("Glīwmǣden", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 77.
+DefineLanguageNoun("Glīwmǣden", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 77.
 	Civilization = "old-english",
 	Meaning = "Musician",
 	SingularNominative = "Glīwmǣden",
 	Gender = "Feminine" -- presumably, given the source is talking about occupations for women
 })
 
-DefineLanguageWord("God", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 89.
+DefineLanguageNoun("God", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 89.
 	Civilization = "old-english",
 	Meaning = "God",
 	SingularNominative = "God",
 	Gender = "Masculine"
 })
 
-DefineLanguageWord("Gyden", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 89.
+DefineLanguageNoun("Gyden", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 89.
 	Civilization = "old-english",
 	Meaning = "Goddess",
 	SingularNominative = "Gyden",
@@ -132,84 +132,84 @@ DefineLanguageWord("Gyden", { -- Source: Alaric Hall, "The Meanings of Elf and E
 	Gender = "Feminine"
 })
 
-DefineLanguageWord("Hād", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 3.
+DefineLanguageNoun("Hād", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 3.
 	Civilization = "old-english",
 	Meaning = "Hair",
 	SingularNominative = "Hād"
 })
 
-DefineLanguageWord("Hearpestre", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, pp. 77-78.
+DefineLanguageNoun("Hearpestre", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, pp. 77-78.
 	Civilization = "old-english",
 	Meaning = "Harp Player",
 	SingularNominative = "Hearpestre",
 	Gender = "Feminine" -- presumably, given the source is talking about occupations for women
 })
 
-DefineLanguageWord("Heordan", { -- this is the plural, what is the singular? Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
+DefineLanguageNoun("Heordan", { -- this is the plural, what is the singular? Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
 	Civilization = "old-english",
 	Meaning = "Hards of Flax",
 	PluralNominative = "Heordan"
 })
 
-DefineLanguageWord("Heorde", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
+DefineLanguageNoun("Heorde", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
 	Civilization = "old-english",
 	Meaning = "Flax Fiber",
 	SingularNominative = "Heorde",
 	Uncountable = true -- as a material, it is likely to be uncountable, specially since there is a word for "hards of flax"
 })
 
-DefineLanguageWord("Hlēapestre", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, pp. 77-78.
+DefineLanguageNoun("Hlēapestre", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, pp. 77-78.
 	Civilization = "old-english",
 	Meaning = "Dancer",
 	SingularNominative = "Hlēapestre",
 	Gender = "Feminine" -- presumably, given the source is talking about occupations for women
 })
 
-DefineLanguageWord("Hoppestre", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, pp. 77-78.
+DefineLanguageNoun("Hoppestre", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, pp. 77-78.
 	Civilization = "old-english",
 	Meaning = "Dancer",
 	SingularNominative = "Hoppestre",
 	Gender = "Feminine" -- presumably, given the source is talking about occupations for women
 })
 
-DefineLanguageWord("Hræn", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.
+DefineLanguageNoun("Hræn", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.
 	Civilization = "old-english",
 	Meaning = "Wave, Sea",
 	SingularNominative = "Hræn", -- source also gives the alternative form "Hærn"
 	Gender = "Feminine"
 })
 
-DefineLanguageWord("Hweowol", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 238.
+DefineLanguageNoun("Hweowol", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 238.
 	Civilization = "old-english",
 	Meaning = "Wheel",
 	SingularNominative = "Hweowol"
 })
 
-DefineLanguageWord("Hléor", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
+DefineLanguageNoun("Hléor", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
 	Civilization = "old-english",
 	Meaning = "Cheek",
 	SingularNominative = "Hléor"
 })
 
-DefineLanguageWord("Hord", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.
+DefineLanguageNoun("Hord", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.
 	Civilization = "old-english",
 	Meaning = "Treasure, Amassed Wealth",
 	SingularNominative = "Hord"
 })
 
-DefineLanguageWord("Hund", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
+DefineLanguageNoun("Hund", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
 	Civilization = "old-english",
 	Meaning = "Dog",
 	SingularNominative = "Hund"
 })
 
-DefineLanguageWord("Leoðurun", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 124.
+DefineLanguageNoun("Leoðurun", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 124.
 	Civilization = "old-english",
 	Meaning = "Sung Mistery",
 	SingularNominative = "Leoðurun"
 })
 
-DefineLanguageWord("Mann", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, pp. 85-86, 89.
+DefineLanguageNoun("Mann", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, pp. 85-86, 89.
 	Civilization = "old-english",
 	Meaning = "Person",
 	SingularNominative = "Mann",
@@ -217,165 +217,165 @@ DefineLanguageWord("Mann", { -- Source: Alaric Hall, "The Meanings of Elf and El
 	Gender = "Masculine"
 })
 
-DefineLanguageWord("Mearg", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
+DefineLanguageNoun("Mearg", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
 	Civilization = "old-english",
 	Meaning = "Marrow",
 	SingularNominative = "Mearg"
 })
 
-DefineLanguageWord("Mēd", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 7.
+DefineLanguageNoun("Mēd", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 7.
 	Civilization = "old-english",
 	Meaning = "Reward, Payment",
 	SingularNominative = "Mēd", -- source also gives as an alternative the form "Meord"
 	Gender = "Feminine"
 })
 
-DefineLanguageWord("Mennen", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 89.
+DefineLanguageNoun("Mennen", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 89.
 	Civilization = "old-english",
 	Meaning = "Handmaid, Female Slave",
 	SingularNominative = "Mennen",
 	Gender = "Feminine"
 })
 
-DefineLanguageWord("Munuc", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 89.
+DefineLanguageNoun("Munuc", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 89.
 	Civilization = "old-english",
 	Meaning = "Monk",
 	SingularNominative = "Munuc",
 	Gender = "Masculine"
 })
 
-DefineLanguageWord("Mynecenu", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 89.
+DefineLanguageNoun("Mynecenu", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 89.
 	Civilization = "old-english",
 	Meaning = "Nun",
 	SingularNominative = "Mynecenu",
 	Gender = "Feminine"
 })
 
-DefineLanguageWord("Neaht", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 238.
+DefineLanguageNoun("Neaht", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 238.
 	Civilization = "old-english",
 	Meaning = "Night",
 	SingularNominative = "Neaht"
 })
 
-DefineLanguageWord("Ord", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.
+DefineLanguageNoun("Ord", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.
 	Civilization = "old-english",
 	Meaning = "Point, Spearpoint",
 	SingularNominative = "Ord",
 	Gender = "Masculine"
 })
 
-DefineLanguageWord("Orlæg", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 10.
+DefineLanguageNoun("Orlæg", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 10.
 	Civilization = "old-english",
 	Meaning = "Fate",
 	SingularNominative = "Orlæg",
 	Gender = "Neuter"
 })
 
-DefineLanguageWord("Plegestre", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, pp. 77-78.
+DefineLanguageNoun("Plegestre", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, pp. 77-78.
 	Civilization = "old-english",
 	Meaning = "Athlete",
 	SingularNominative = "Plegestre",
 	Gender = "Feminine" -- presumably, given the source is talking about occupations for women
 })
 
-DefineLanguageWord("Ræsn", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
+DefineLanguageNoun("Ræsn", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Civilization = "old-english",
 	Meaning = "Plank, Ceiling",
 	SingularNominative = "Ræsn",
 	Gender = "Neuter"
 })
 
-DefineLanguageWord("Reord", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 9.
+DefineLanguageNoun("Reord", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 9.
 	Civilization = "old-english",
 	Meaning = "Voice, Sound, Speech",
 	SingularNominative = "Reord",
 	Gender = "Feminine"
 })
 
-DefineLanguageWord("Sangestre", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, pp. 77-78.
+DefineLanguageNoun("Sangestre", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, pp. 77-78.
 	Civilization = "old-english",
 	Meaning = "Singer",
 	SingularNominative = "Sangestre",
 	Gender = "Feminine" -- presumably, given the source is talking about occupations for women
 })
 
-DefineLanguageWord("Scernicge", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, pp. 77-78.
+DefineLanguageNoun("Scernicge", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, pp. 77-78.
 	Civilization = "old-english",
 	Meaning = "Actress",
 	SingularNominative = "Scernicge",
 	Gender = "Feminine"
 })
 
-DefineLanguageWord("Sealticge", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, pp. 77-78.
+DefineLanguageNoun("Sealticge", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, pp. 77-78.
 	Civilization = "old-english",
 	Meaning = "Dancer",
 	SingularNominative = "Sealticge",
 	Gender = "Feminine" -- presumably, given the source is talking about occupations for women
 })
 
-DefineLanguageWord("Sperehealf", { -- also given as Sperehand; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 197.
+DefineLanguageNoun("Sperehealf", { -- also given as Sperehand; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 197.
 	Civilization = "old-english",
 	Meaning = "Spear-Side, Patrilineal Ancestry",
 	SingularNominative = "Sperehealf"
 })
 
-DefineLanguageWord("Spinelhealf", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 197.
+DefineLanguageNoun("Spinelhealf", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 197.
 	Civilization = "old-english",
 	Meaning = "Spindle-Side",
 	SingularNominative = "Spinelhealf"
 })
 
-DefineLanguageWord("Þunorrad", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 169.
+DefineLanguageNoun("Þunorrad", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 169.
 	Civilization = "old-english",
 	Meaning = "Peal of Thunder", -- literally: "thunder-ride" or "Thunor-ride"
 	SingularNominative = "Þunorrad"
 })
 
-DefineLanguageWord("Twīn", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 6.
+DefineLanguageNoun("Twīn", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 6.
 	Civilization = "old-english",
 	Meaning = "Canvas, Screen",
 	SingularNominative = "Twīn"
 })
 
-DefineLanguageWord("Wâd", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 4.
+DefineLanguageNoun("Wâd", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 4.
 	Civilization = "old-english",
 	Meaning = "Woad",
 	SingularNominative = "Wâd"
 })
 
-DefineLanguageWord("Wælcyrige", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 10.
+DefineLanguageNoun("Wælcyrige", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 10.
 	Civilization = "old-english",
 	Meaning = "Sorceress",
 	SingularNominative = "Wælcyrige",
 	Gender = "feminine"
 })
 
-DefineLanguageWord("Wæpnedmann", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 197.
+DefineLanguageNoun("Wæpnedmann", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 197.
 	Civilization = "old-english",
 	Meaning = "Armed Person",
 	SingularNominative = "Wæpnedmann"
 })
 
-DefineLanguageWord("Weg", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
+DefineLanguageNoun("Weg", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
 	Civilization = "old-english",
 	Meaning = "Way",
 	SingularNominative = "Weg"
 })
 
-DefineLanguageWord("Wif", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 85.
+DefineLanguageNoun("Wif", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 85.
 	Civilization = "old-english",
 	Meaning = "Woman",
 	SingularNominative = "Wif",
 	Gender = "Neuter"
 })
 
-DefineLanguageWord("Wifmann", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 197.
+DefineLanguageNoun("Wifmann", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 197.
 	Civilization = "old-english",
 	Meaning = "Woman-Person",
 	SingularNominative = "Wifmann"
 })
 
-DefineLanguageWord("Wihte", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 102.
+DefineLanguageNoun("Wihte", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 102.
 	Civilization = "old-english",
 	Meaning = "Being",
 	PluralNominative = "Wihte"

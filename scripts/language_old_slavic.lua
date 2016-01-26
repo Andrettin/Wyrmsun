@@ -27,37 +27,37 @@
 
 -- Old Slavic / Old Church Slavonic
 
-DefineLanguageWord("Kosa", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
+DefineLanguageNoun("Kosa", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
 	Civilization = "old-slavic",
 	Meaning = "Hair",
 	SingularNominative = "Kosa"
 })
 
-DefineLanguageWord("Kosmŭ", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
+DefineLanguageNoun("Kosmŭ", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
 	Civilization = "old-slavic",
 	Meaning = "Head Hair",
 	SingularNominative = "Kosmŭ"
 })
 
-DefineLanguageWord("Mězga", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
+DefineLanguageNoun("Mězga", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Civilization = "old-slavic",
 	Meaning = "Sap, Juice",
 	SingularNominative = "Mězga"
 })
 
-DefineLanguageWord("Mĭzda", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 7.
+DefineLanguageNoun("Mĭzda", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 7.
 	Civilization = "old-slavic",
 	Meaning = "Reward",
 	SingularNominative = "Mĭzda"
 })
 
-DefineLanguageWord("Mozgŭ", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
+DefineLanguageNoun("Mozgŭ", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Civilization = "old-slavic",
 	Meaning = "Brain",
 	SingularNominative = "Mozgŭ"
 })
 
-DefineLanguageWord("Žrudŭ", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
+DefineLanguageNoun("Žrudŭ", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
 	Civilization = "old-slavic",
 	Meaning = "Flimsy Pole",
 	SingularNominative = "Žrudŭ"

@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageWord("Charles", {
+DefineLanguageNoun("Charles", {
 	Civilization = "english",
 	Meaning = "?",
 	SingularNominative = "Charles",
@@ -34,7 +34,7 @@ DefineLanguageWord("Charles", {
 	TypeName = {"person"}
 })
 
-DefineLanguageWord("Francis", {
+DefineLanguageNoun("Francis", {
 	Civilization = "english",
 	Meaning = "?",
 	SingularNominative = "Francis",
@@ -43,7 +43,7 @@ DefineLanguageWord("Francis", {
 	TypeName = {"person"}
 })
 
-DefineLanguageWord("Henry", {
+DefineLanguageNoun("Henry", {
 	Civilization = "english",
 	Meaning = "?",
 	SingularNominative = "Henry",
@@ -52,7 +52,7 @@ DefineLanguageWord("Henry", {
 	TypeName = {"person"}
 })
 
-DefineLanguageWord("John", {
+DefineLanguageNoun("John", {
 	Civilization = "english",
 	Meaning = "?",
 	SingularNominative = "John",
@@ -61,7 +61,7 @@ DefineLanguageWord("John", {
 	TypeName = {"person"}
 })
 
-DefineLanguageWord("Lewis", {
+DefineLanguageNoun("Lewis", {
 	Civilization = "english",
 	Meaning = "?",
 	SingularNominative = "Lewis",
@@ -70,7 +70,7 @@ DefineLanguageWord("Lewis", {
 	TypeName = {"person"}
 })
 
-DefineLanguageWord("William", {
+DefineLanguageNoun("William", {
 	Civilization = "english",
 	Meaning = "?",
 	SingularNominative = "William",
@@ -79,7 +79,7 @@ DefineLanguageWord("William", {
 	TypeName = {"person"}
 })
 
-DefineLanguageWord("House", {
+DefineLanguageNoun("House", {
 	Civilization = "english",
 	Meaning = "House",
 	SingularNominative = "House",
@@ -88,7 +88,7 @@ DefineLanguageWord("House", {
 	SuffixTypeName = {"settlement"} -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 336.
 })
 
-DefineLanguageWord("Hyrst", {
+DefineLanguageNoun("Hyrst", {
 	Civilization = "english",
 	Meaning = "?",
 	SingularNominative = "Hyrst",
@@ -97,7 +97,7 @@ DefineLanguageWord("Hyrst", {
 	SuffixTypeName = {"settlement"} -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 336.
 })
 
-DefineLanguageWord("Ing", {
+DefineLanguageNoun("Ing", {
 	Civilization = "english",
 	Meaning = "?",
 	SingularNominative = "Ing",
@@ -106,7 +106,7 @@ DefineLanguageWord("Ing", {
 	SuffixTypeName = {"settlement"} -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 336.
 })
 
-DefineLanguageWord("Mouth", {
+DefineLanguageNoun("Mouth", {
 	Civilization = "english",
 	Meaning = "Mouth",
 	SingularNominative = "Mouth",
@@ -115,7 +115,7 @@ DefineLanguageWord("Mouth", {
 	SuffixTypeName = {"settlement"} -- example: "Plymouth"
 })
 
-DefineLanguageWord("Ply", {
+DefineLanguageNoun("Ply", {
 	Civilization = "english",
 	Meaning = "?",
 	SingularNominative = "Ply",
@@ -124,7 +124,7 @@ DefineLanguageWord("Ply", {
 	PrefixTypeName = {"settlement"} -- example: "Plymouth"
 })
 
-DefineLanguageWord("Town", {
+DefineLanguageNoun("Town", {
 	Civilization = "english",
 	Meaning = "Town",
 	SingularNominative = "Town",
@@ -133,7 +133,7 @@ DefineLanguageWord("Town", {
 	SuffixTypeName = {"settlement"} -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 336.
 })
 
-DefineLanguageWord("Tree", {
+DefineLanguageNoun("Tree", {
 	Civilization = "english",
 	Meaning = "Tree",
 	SingularNominative = "Tree",
@@ -142,7 +142,7 @@ DefineLanguageWord("Tree", {
 	SuffixTypeName = {"settlement"} -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 336.
 })
 
-DefineLanguageWord("Wich", {
+DefineLanguageNoun("Wich", {
 	Civilization = "english",
 	Meaning = "?",
 	SingularNominative = "Wich",
