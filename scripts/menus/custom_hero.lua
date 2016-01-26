@@ -56,6 +56,8 @@ function CustomHeroCreationMenu(world, quest_menu)
 	local hero_class
 	local trait
 	local variation
+	
+	local language
 
 	local function ClassChanged()
 		trait_ident_list = nil
@@ -80,6 +82,20 @@ function CustomHeroCreationMenu(world, quest_menu)
 		variation:setList(variation_list)
 		variation:setSize(236, 20)
 		variation:setSelected(0)
+		
+		local new_language = GetCivilizationData(string.lower(hero_civilization_list[hero_civilization:getSelected() + 1]), "Language")
+		if (GetUnitTypeData(hero_class_ident_list[hero_class:getSelected() + 1], "Faction") ~= "") then
+			new_language = GetFactionData(string.lower(hero_civilization_list[hero_civilization:getSelected() + 1]), GetUnitTypeData(hero_class_ident_list[hero_class:getSelected() + 1], "Faction"), "Language")
+		end
+		
+		if (new_language ~= language) then -- if the language changed, generate a new name for the hero
+			language = new_language
+			local generated_personal_name = ""
+			while (generated_personal_name == "" or GetArrayIncludes(GetCustomHeroes(), generated_personal_name)) do
+				generated_personal_name = GeneratePersonalName(language, hero_class_ident_list[hero_class:getSelected() + 1])
+			end
+			hero_name:setText(generated_personal_name)
+		end
 	end
 	
 	local function CivilizationChanged()
@@ -111,16 +127,6 @@ function CustomHeroCreationMenu(world, quest_menu)
 		
 		hero_class:setSelected(0)
 		ClassChanged()
-	
-		local generated_personal_name = ""
-		while (generated_personal_name == "" or GetArrayIncludes(GetCustomHeroes(), generated_personal_name)) do
-			local language = GetCivilizationData(string.lower(hero_civilization_list[hero_civilization:getSelected() + 1]), "Language")
-			if (GetUnitTypeData(hero_class_ident_list[hero_class:getSelected() + 1], "Faction") ~= "") then
-				language = GetFactionData(string.lower(hero_civilization_list[hero_civilization:getSelected() + 1]), GetUnitTypeData(hero_class_ident_list[hero_class:getSelected() + 1], "Faction"), "Language")
-			end
-			generated_personal_name = GeneratePersonalName(language, hero_class_ident_list[hero_class:getSelected() + 1])
-		end
-		hero_name:setText(generated_personal_name)
 	end
 	
 	menu:addLabel(_("Name:"), 10, 12 + 36 * 1, Fonts["game"], false)
@@ -188,7 +194,7 @@ function CustomHeroCivilizationAdvancementMenu(world, quest_menu)
 	local menu = WarGameMenu(panel(5))
 	menu:setSize(352, 352)
     menu:setPosition((Video.Width - menu:getWidth()) / 2, (Video.Height - menu:getHeight()) / 2)
-	menu:addLabel(_("Create Custom Hero"), 176, 11)
+	menu:addLabel(_("Advance Hero Civilization"), 176, 11)
 	
 	local sizeX = 352
 	local sizeY = 352
