@@ -26,25 +26,25 @@
 --
 
 DefineLanguageNoun("Eyra", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
-	Civilization = "old-icelandic",
+	Language = "old-icelandic",
 	Meaning = "Ear",
 	SingularNominative = "Eyra"
 })
 
 DefineLanguageNoun("Ker", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
-	Civilization = "old-icelandic",
+	Language = "old-icelandic",
 	Meaning = "Container",
 	SingularNominative = "Ker"
 })
 
 DefineLanguageNoun("Reyrr", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
-	Civilization = "old-icelandic",
+	Language = "old-icelandic",
 	Meaning = "Tube",
 	SingularNominative = "Reyrr"
 })
 
 DefineLanguageNoun("Sár", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 3.
-	Civilization = "old-icelandic",
+	Language = "old-icelandic",
 	Meaning = "Wound",
 	SingularNominative = "Sár"
 })

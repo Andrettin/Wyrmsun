@@ -26,7 +26,7 @@
 --
 
 DefineLanguageNoun("Hēde", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 7.
-	Civilization = "middle-low-german",
+	Language = "middle-low-german",
 	Meaning = "Flax Fiber",
 	SingularNominative = "Hēde",
 	Uncountable = true, -- as a material, it is likely to be uncountable
@@ -34,19 +34,19 @@ DefineLanguageNoun("Hēde", { -- Source: Sean Crist, "An Analysis of *z loss in 
 })
 
 DefineLanguageNoun("Kên", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 4.
-	Civilization = "middle-low-german",
+	Language = "middle-low-german",
 	Meaning = "Resinous Wood",
 	SingularNominative = "Kên"
 })
 
 DefineLanguageNoun("Twern", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
-	Civilization = "middle-low-german",
+	Language = "middle-low-german",
 	Meaning = "Doubly Spun Twine",
 	SingularNominative = "Twern"
 })
 
 DefineLanguageNoun("Wêt", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 4.
-	Civilization = "middle-low-german",
+	Language = "middle-low-german",
 	Meaning = "Woad",
 	SingularNominative = "Wêt" -- source also gives the alternative form "Wêde"
 })

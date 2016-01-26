@@ -26,7 +26,7 @@
 --
 
 DefineLanguageNoun("Giús", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 4.
-	Civilization = "old-irish",
+	Language = "old-irish",
 	Meaning = "Fir",
 	SingularNominative = "Giús"
 })

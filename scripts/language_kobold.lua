@@ -28,7 +28,7 @@
 -- Sources for Kobold names: Hodeke (Jacob Grimm, "Deutsche Mythologie", pp. 392, 1049, 1080), Hoidike (Jacob Grimm, "Deutsche Mythologie", p. 392), Napfhans (Jacob Grimm, "Deutsche Mythologie", p. 393), Pumphut (Jacob Grimm, "Deutsche Mythologie", p. 1049), Shellycoat (Jacob Grimm, "Deutsche Mythologie", p. 394)
 
 DefineLanguageNoun("Coat", { -- Source: Jacob Grimm, "Deutsche Mythologie", p. 394.
-	Civilization = "kobold",
+	Language = "kobold",
 	Meaning = "?",
 	SingularNominative = "Coat",
 	SuffixSingular = true,
@@ -36,7 +36,7 @@ DefineLanguageNoun("Coat", { -- Source: Jacob Grimm, "Deutsche Mythologie", p. 3
 })
 
 DefineLanguageNoun("Eke", { -- Source: Jacob Grimm, "Deutsche Mythologie", pp. 392, 1049, 1080.
-	Civilization = "kobold",
+	Language = "kobold",
 	Meaning = "?",
 	SingularNominative = "Eke",
 	SuffixSingular = true,
@@ -44,7 +44,7 @@ DefineLanguageNoun("Eke", { -- Source: Jacob Grimm, "Deutsche Mythologie", pp. 3
 })
 
 DefineLanguageNoun("Hod", { -- Source: Jacob Grimm, "Deutsche Mythologie", pp. 392, 1049, 1080.
-	Civilization = "kobold",
+	Language = "kobold",
 	Meaning = "?",
 	SingularNominative = "Hod",
 	PrefixSingular = true,
@@ -52,7 +52,7 @@ DefineLanguageNoun("Hod", { -- Source: Jacob Grimm, "Deutsche Mythologie", pp. 3
 })
 
 DefineLanguageNoun("Hoid", { -- Source: Jacob Grimm, "Deutsche Mythologie", p. 392.
-	Civilization = "kobold",
+	Language = "kobold",
 	Meaning = "?",
 	SingularNominative = "Hoid",
 	PrefixSingular = true,
@@ -60,7 +60,7 @@ DefineLanguageNoun("Hoid", { -- Source: Jacob Grimm, "Deutsche Mythologie", p. 3
 })
 
 DefineLanguageNoun("Hut", { -- Source: Jacob Grimm, "Deutsche Mythologie", p. 1049.
-	Civilization = "kobold",
+	Language = "kobold",
 	Meaning = "Hat",
 	SingularNominative = "Hut",
 	SuffixSingular = true,
@@ -68,7 +68,7 @@ DefineLanguageNoun("Hut", { -- Source: Jacob Grimm, "Deutsche Mythologie", p. 10
 })
 
 DefineLanguageNoun("Ike", { -- Source: Jacob Grimm, "Deutsche Mythologie", p. 392.
-	Civilization = "kobold",
+	Language = "kobold",
 	Meaning = "?",
 	SingularNominative = "Ike",
 	SuffixSingular = true,
@@ -76,7 +76,7 @@ DefineLanguageNoun("Ike", { -- Source: Jacob Grimm, "Deutsche Mythologie", p. 39
 })
 
 DefineLanguageNoun("Napf", { -- Source: Jacob Grimm, "Deutsche Mythologie", p. 393.
-	Civilization = "kobold",
+	Language = "kobold",
 	Meaning = "?",
 	SingularNominative = "Napf",
 	PrefixSingular = true,
@@ -84,7 +84,7 @@ DefineLanguageNoun("Napf", { -- Source: Jacob Grimm, "Deutsche Mythologie", p. 3
 })
 
 DefineLanguageNoun("Pump", { -- Source: Jacob Grimm, "Deutsche Mythologie", p. 1049.
-	Civilization = "kobold",
+	Language = "kobold",
 	Meaning = "?",
 	SingularNominative = "Pump",
 	PrefixSingular = true,

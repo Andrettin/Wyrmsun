@@ -26,7 +26,7 @@
 --
 
 DefineLanguageNoun("Herde", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
-	Civilization = "middle-dutch",
+	Language = "middle-dutch",
 	Meaning = "Reward",
 	SingularNominative = "Herde",
 	Uncountable = true -- as a material, it is likely to be uncountable

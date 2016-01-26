@@ -114,7 +114,11 @@ function CustomHeroCreationMenu(world, quest_menu)
 	
 		local generated_personal_name = ""
 		while (generated_personal_name == "" or GetArrayIncludes(GetCustomHeroes(), generated_personal_name)) do
-			generated_personal_name = GeneratePersonalName(string.lower(hero_civilization_list[hero_civilization:getSelected() + 1]), hero_class_ident_list[hero_class:getSelected() + 1])
+			local language = GetCivilizationData(string.lower(hero_civilization_list[hero_civilization:getSelected() + 1]), "Language")
+			if (GetUnitTypeData(hero_class_ident_list[hero_class:getSelected() + 1], "Faction") ~= "") then
+				language = GetFactionData(string.lower(hero_civilization_list[hero_civilization:getSelected() + 1]), GetUnitTypeData(hero_class_ident_list[hero_class:getSelected() + 1], "Faction"), "Language")
+			end
+			generated_personal_name = GeneratePersonalName(language, hero_class_ident_list[hero_class:getSelected() + 1])
 		end
 		hero_name:setText(generated_personal_name)
 	end
@@ -201,7 +205,12 @@ function CustomHeroCivilizationAdvancementMenu(world, quest_menu)
 	local function CivilizationChanged()
 		local generated_personal_name = ""
 		while (generated_personal_name == "" or GetArrayIncludes(GetCustomHeroes(), generated_personal_name)) do
-			generated_personal_name = GeneratePersonalName(string.lower(hero_civilization_list[hero_civilization:getSelected() + 1]), GetCivilizationClassUnitType(GetUnitTypeData(GetCustomHeroData(GetCurrentCustomHero(), "Type"), "Class"), string.lower(hero_civilization_list[hero_civilization:getSelected() + 1])))
+			local hero_type = GetCivilizationClassUnitType(GetUnitTypeData(GetCustomHeroData(GetCurrentCustomHero(), "Type"), "Class"), string.lower(hero_civilization_list[hero_civilization:getSelected() + 1]))
+			local language = GetCivilizationData(string.lower(hero_civilization_list[hero_civilization:getSelected() + 1]), "Language")
+			if (GetUnitTypeData(hero_type, "Faction") ~= "") then
+				language = GetFactionData(string.lower(hero_civilization_list[hero_civilization:getSelected() + 1]), GetUnitTypeData(hero_type, "Faction"), "Language")
+			end
+			generated_personal_name = GeneratePersonalName(language, hero_type)
 		end
 		hero_name:setText(generated_personal_name)
 	end

@@ -26,7 +26,7 @@
 --
 
 DefineLanguageVerb("Soida", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 121.
-	Civilization = "finnish",
+	Language = "finnish",
 	Meaning = "Ring, Jingle, Make a Sound",
 	Infinitive = "Soida"
 })

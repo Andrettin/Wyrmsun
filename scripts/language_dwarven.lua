@@ -28,7 +28,7 @@
  -- Dwarven; mix of Norse and German words used in dwarven contexts (ethnonyms, personal names or place names), as well as dwarven fantasy names
 
 DefineLanguageNoun("Ai", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "Great-Grandfather", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 41.
 	SingularNominative = "Ai",
 	Gender = "Masculine", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 41.
@@ -37,7 +37,7 @@ DefineLanguageNoun("Ai", {
 })
 
 DefineLanguageNoun("Aig", { -- prefix used by Wesnoth's dwarven names; not necessarily a noun
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Aig",
 	PrefixSingular = true,
@@ -45,7 +45,7 @@ DefineLanguageNoun("Aig", { -- prefix used by Wesnoth's dwarven names; not neces
 })
 
 DefineLanguageNoun("Aiglondur", { -- "Aig-lon-dur"? seems to follow similar naming conventions as the three-element names of the dwarven name list
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Aiglondur",
 	NameSingular = true,
@@ -53,7 +53,7 @@ DefineLanguageNoun("Aiglondur", { -- "Aig-lon-dur"? seems to follow similar nami
 })
 
 DefineLanguageNoun("Aith", { -- infix used by Wesnoth's dwarven names; not necessarily a noun
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Aith",
 	InfixSingular = true,
@@ -61,7 +61,7 @@ DefineLanguageNoun("Aith", { -- infix used by Wesnoth's dwarven names; not neces
 })
 
 DefineLanguageNoun("Alberich", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Alberich",
 	NameSingular = true,
@@ -69,7 +69,7 @@ DefineLanguageNoun("Alberich", {
 })
 
 DefineLanguageNoun("Alf", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "Elf",
 	SingularNominative = "Alf",
 	NameSingular = true,
@@ -80,7 +80,7 @@ DefineLanguageNoun("Alf", {
 })
 
 DefineLanguageNoun("Alfrigg", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Alfrigg",
 	NameSingular = true,
@@ -88,7 +88,7 @@ DefineLanguageNoun("Alfrigg", {
 })
 
 DefineLanguageNoun("An", { -- prefix used by Wesnoth's dwarven names; not necessarily a noun
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "An",
 	PrefixSingular = true,
@@ -96,7 +96,7 @@ DefineLanguageNoun("An", { -- prefix used by Wesnoth's dwarven names; not necess
 })
 
 DefineLanguageNoun("Andvari", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "Fish of Prey, Gurnard", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 21.
 	SingularNominative = "Andvari",
 	SingularGenitive = "Andvara", -- as in "Andvaranaut"
@@ -106,7 +106,7 @@ DefineLanguageNoun("Andvari", {
 })
 
 DefineLanguageNoun("Angarthing", { -- "An-garth-ing"? seems to follow similar naming conventions as the three-element names of the dwarven name list
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Angarthing",
 	NameSingular = true,
@@ -114,7 +114,7 @@ DefineLanguageNoun("Angarthing", { -- "An-garth-ing"? seems to follow similar na
 })
 
 DefineLanguageNoun("As", { -- suffix used by Wesnoth's dwarven names; not necessarily a noun
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "As",
 	SuffixSingular = true,
@@ -122,7 +122,7 @@ DefineLanguageNoun("As", { -- suffix used by Wesnoth's dwarven names; not necess
 })
 
 DefineLanguageNoun("At", { -- infix used by Wesnoth's dwarven names; not necessarily a noun
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "At",
 	InfixSingular = true,
@@ -130,7 +130,7 @@ DefineLanguageNoun("At", { -- infix used by Wesnoth's dwarven names; not necessa
 })
 
 DefineLanguageNoun("Aug", { -- prefix used by Wesnoth's dwarven names; not necessarily a noun
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Aug",
 	PrefixSingular = true,
@@ -138,7 +138,7 @@ DefineLanguageNoun("Aug", { -- prefix used by Wesnoth's dwarven names; not neces
 })
 
 DefineLanguageNoun("Aur", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 34.
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "Wet Clay, Loam",
 	SingularNominative = "Aur", -- "Aurr" in Old Icelandic
 	Gender = "Masculine",
@@ -152,7 +152,7 @@ DefineLanguageNoun("Aur", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "
 })
 
 DefineLanguageNoun("Austri", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "Eastern", -- source gives meaning as "the Eastern"; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 771.
 	SingularNominative = "Austri",
 	Gender = "Masculine", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 771.
@@ -161,7 +161,7 @@ DefineLanguageNoun("Austri", {
 })
 
 DefineLanguageNoun("Bafur", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Bafur",
 	NameSingular = true,
@@ -169,7 +169,7 @@ DefineLanguageNoun("Bafur", {
 })
 
 DefineLanguageNoun("Baglur", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Baglur",
 	NameSingular = true,
@@ -177,7 +177,7 @@ DefineLanguageNoun("Baglur", {
 })
 
 DefineLanguageNoun("Bari", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Bari",
 	NameSingular = true,
@@ -185,7 +185,7 @@ DefineLanguageNoun("Bari", {
 })
 
 DefineLanguageNoun("Berling", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Berling",
 	NameSingular = true,
@@ -193,7 +193,7 @@ DefineLanguageNoun("Berling", {
 })
 
 DefineLanguageNoun("Bibung", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Bibung",
 	NameSingular = true,
@@ -201,7 +201,7 @@ DefineLanguageNoun("Bibung", {
 })
 
 DefineLanguageNoun("Bifur", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Bifur",
 	NameSingular = true,
@@ -209,7 +209,7 @@ DefineLanguageNoun("Bifur", {
 })
 
 DefineLanguageNoun("Bodn", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Bodn",
 	NameSingular = true,
@@ -217,7 +217,7 @@ DefineLanguageNoun("Bodn", {
 })
 
 DefineLanguageNoun("Bombor", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Bombor",
 	NameSingular = true,
@@ -225,7 +225,7 @@ DefineLanguageNoun("Bombor", {
 })
 
 DefineLanguageNoun("Brising", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "Flame", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 772.
 	SingularNominative = "Brising", -- also name of a group of four dwarves, the Brisings
 	SingularGenitive = "Brisinga", -- as in "Brisingamen"
@@ -241,7 +241,7 @@ DefineLanguageNoun("Brising", {
 })
 
 DefineLanguageNoun("Brokk", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "Badger, Trotter of a Horse", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 81.
 	SingularNominative = "Brokk",
 	Gender = "Masculine", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 81.
@@ -250,7 +250,7 @@ DefineLanguageNoun("Brokk", {
 })
 
 DefineLanguageNoun("Burin", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Burin",
 	NameSingular = true,
@@ -258,7 +258,7 @@ DefineLanguageNoun("Burin", {
 })
 
 DefineLanguageNoun("Cat", { -- infix used by Wesnoth's dwarven names; not necessarily a noun
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Cat",
 	InfixSingular = true,
@@ -266,7 +266,7 @@ DefineLanguageNoun("Cat", { -- infix used by Wesnoth's dwarven names; not necess
 })
 
 DefineLanguageNoun("Dain", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "Dead, Deceased", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 97.
 	SingularNominative = "Dain",
 	SingularGenitive = "Dains", -- as in "Dainsleif"
@@ -278,7 +278,7 @@ DefineLanguageNoun("Dain", {
 })
 
 DefineLanguageNoun("Delling", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Delling",
 	NameSingular = true,
@@ -286,7 +286,7 @@ DefineLanguageNoun("Delling", {
 })
 
 DefineLanguageNoun("Dolgthvari", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Dolgthvari",
 	NameSingular = true,
@@ -294,7 +294,7 @@ DefineLanguageNoun("Dolgthvari", {
 })
 
 DefineLanguageNoun("Dori", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Dori",
 	NameSingular = true,
@@ -302,7 +302,7 @@ DefineLanguageNoun("Dori", {
 })
 
 DefineLanguageNoun("Dr", { -- infix used by Wesnoth's dwarven names; not necessarily a noun
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Dr",
 	InfixSingular = true,
@@ -310,7 +310,7 @@ DefineLanguageNoun("Dr", { -- infix used by Wesnoth's dwarven names; not necessa
 })
 
 DefineLanguageNoun("Draupnir", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "Dropper",
 	SingularNominative = "Draupnir",
 	Gender = "Masculine", -- presumably, since it's the name of a male dwarf?
@@ -322,7 +322,7 @@ DefineLanguageNoun("Draupnir", {
 })
 
 DefineLanguageNoun("Duf", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Duf",
 	NameSingular = true,
@@ -330,7 +330,7 @@ DefineLanguageNoun("Duf", {
 })
 
 DefineLanguageNoun("Dul", { -- prefix used by Wesnoth's dwarven names
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Dul",
 	PrefixSingular = true,
@@ -338,7 +338,7 @@ DefineLanguageNoun("Dul", { -- prefix used by Wesnoth's dwarven names
 })
 
 DefineLanguageNoun("Dulcatulos", { -- "Dul-catu-los", or "Dul-cat-ulos"? seems to follow similar naming conventions as the three-element names of the dwarven name list
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Dulcatulos",
 	NameSingular = true,
@@ -346,7 +346,7 @@ DefineLanguageNoun("Dulcatulos", { -- "Dul-catu-los", or "Dul-cat-ulos"? seems t
 })
 
 DefineLanguageNoun("Dulsi", { -- not entirely clear if this is the name of a particular dwarf, or if it can also mean "dwarf"; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 109.
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "Poet",
 	SingularNominative = "Dulsi",
 	Gender = "Masculine",
@@ -355,7 +355,7 @@ DefineLanguageNoun("Dulsi", { -- not entirely clear if this is the name of a par
 })
 
 DefineLanguageNoun("Dur", { -- infix used by Wesnoth's dwarven names; not necessarily a noun
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Dur",
 	PrefixSingular = true,
@@ -365,7 +365,7 @@ DefineLanguageNoun("Dur", { -- infix used by Wesnoth's dwarven names; not necess
 })
 
 DefineLanguageNoun("Durahn", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Durahn",
 	Gender = "Masculine",
@@ -374,7 +374,7 @@ DefineLanguageNoun("Durahn", {
 })
 
 DefineLanguageNoun("Durin", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Durin",
 	NameSingular = true,
@@ -382,7 +382,7 @@ DefineLanguageNoun("Durin", {
 })
 
 DefineLanguageNoun("Durstorn", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Durstorn",
 	NameSingular = true,
@@ -390,7 +390,7 @@ DefineLanguageNoun("Durstorn", {
 })
 
 DefineLanguageNoun("Dvalin", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?", -- maybe "Delayer" or "Delayed"?; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 110.
 	SingularNominative = "Dvalin",
 	NameSingular = true,
@@ -400,21 +400,21 @@ DefineLanguageNoun("Dvalin", {
 })
 
 DefineLanguageNoun("Dverg", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 110.
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "Dwarf",
 	SingularNominative = "Dverg",
 	Gender = "Masculine"
 })
 
 DefineLanguageNoun("Dyrgja", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 111.
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "Female Dwarf",
 	SingularNominative = "Dyrgja",
 	Gender = "Feminine"
 })
 
 DefineLanguageNoun("Eggerich", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Eggerich",
 	NameSingular = true,
@@ -422,7 +422,7 @@ DefineLanguageNoun("Eggerich", {
 })
 
 DefineLanguageNoun("Fal", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Fal",
 	NameSingular = true,
@@ -430,7 +430,7 @@ DefineLanguageNoun("Fal", {
 })
 
 DefineLanguageNoun("Fid", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Fid",
 	NameSingular = true,
@@ -438,7 +438,7 @@ DefineLanguageNoun("Fid", {
 })
 
 DefineLanguageNoun("Fili", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Fili",
 	NameSingular = true,
@@ -446,7 +446,7 @@ DefineLanguageNoun("Fili", {
 })
 
 DefineLanguageNoun("Fjalar", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Fjalar",
 	NameSingular = true,
@@ -454,7 +454,7 @@ DefineLanguageNoun("Fjalar", {
 })
 
 DefineLanguageNoun("Frag", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Frag",
 	NameSingular = true,
@@ -462,7 +462,7 @@ DefineLanguageNoun("Frag", {
 })
 
 DefineLanguageNoun("Frar", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Frar",
 	NameSingular = true,
@@ -470,7 +470,7 @@ DefineLanguageNoun("Frar", {
 })
 
 DefineLanguageNoun("Frosti", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Frosti",
 	NameSingular = true,
@@ -478,7 +478,7 @@ DefineLanguageNoun("Frosti", {
 })
 
 DefineLanguageNoun("Fundin", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Fundin",
 	NameSingular = true,
@@ -486,7 +486,7 @@ DefineLanguageNoun("Fundin", {
 })
 
 DefineLanguageNoun("Galar", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "Enchanter", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 187.
 	SingularNominative = "Galar",
 	Gender = "Masculine", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 187.
@@ -495,7 +495,7 @@ DefineLanguageNoun("Galar", {
 })
 
 DefineLanguageNoun("Ginnar", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Ginnar",
 	NameSingular = true,
@@ -503,7 +503,7 @@ DefineLanguageNoun("Ginnar", {
 })
 
 DefineLanguageNoun("Glam", { -- prefix used by Wesnoth's dwarven names; not necessarily a noun
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Glam",
 	PrefixSingular = true,
@@ -511,14 +511,14 @@ DefineLanguageNoun("Glam", { -- prefix used by Wesnoth's dwarven names; not nece
 })
 
 DefineLanguageNoun("Gleipnir", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Gleipnir"
 	-- example: "Gleipnir" (fetter made by dwarves to bind the wolf Fenrir)
 })
 
 DefineLanguageNoun("Glinar", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Glinar",
 	NameSingular = true,
@@ -526,7 +526,7 @@ DefineLanguageNoun("Glinar", {
 })
 
 DefineLanguageNoun("Gloin", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "Light-Colored Dog", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 205.
 	SingularNominative = "Gloin", -- given by Cleasby and Vigfusson as "Glói", but elsewhere given as "Gloin"/"Glóin"
 	Gender = "Masculine", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 205.
@@ -535,7 +535,7 @@ DefineLanguageNoun("Gloin", {
 })
 
 DefineLanguageNoun("Glomin", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Glomin",
 	NameSingular = true,
@@ -543,7 +543,7 @@ DefineLanguageNoun("Glomin", {
 })
 
 DefineLanguageNoun("Glonoin", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Glonoin",
 	NameSingular = true,
@@ -551,7 +551,7 @@ DefineLanguageNoun("Glonoin", {
 })
 
 DefineLanguageNoun("Gneissus", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Gneissus",
 	Gender = "Feminine",
@@ -560,7 +560,7 @@ DefineLanguageNoun("Gneissus", {
 })
 
 DefineLanguageNoun("Goldemar", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Goldemar",
 	NameSingular = true,
@@ -568,7 +568,7 @@ DefineLanguageNoun("Goldemar", {
 })
 
 DefineLanguageNoun("Gom", { -- prefix used by Wesnoth's dwarven names; not necessarily a noun
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Gom",
 	PrefixSingular = true,
@@ -576,7 +576,7 @@ DefineLanguageNoun("Gom", { -- prefix used by Wesnoth's dwarven names; not neces
 })
 
 DefineLanguageNoun("Gram", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Gram",
 	NameSingular = true,
@@ -584,7 +584,7 @@ DefineLanguageNoun("Gram", {
 })
 
 DefineLanguageNoun("Grerr", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Grerr",
 	NameSingular = true,
@@ -592,7 +592,7 @@ DefineLanguageNoun("Grerr", {
 })
 
 DefineLanguageNoun("Grimnir", { -- meaning is from Old Norse, while the occurrence of the name is from Wesnoth (but it seems clear that the Wesnoth name was based on the Old Norse one)
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "Hooded One", -- Source: Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 85.
 	SingularNominative = "Grimnir",
 	Gender = "Masculine",
@@ -601,7 +601,7 @@ DefineLanguageNoun("Grimnir", { -- meaning is from Old Norse, while the occurren
 })
 
 DefineLanguageNoun("Gungnir", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Gungnir",
 	NameSingular = true,
@@ -609,7 +609,7 @@ DefineLanguageNoun("Gungnir", {
 })
 
 DefineLanguageNoun("Hamel", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Hamel",
 	NameSingular = true,
@@ -617,7 +617,7 @@ DefineLanguageNoun("Hamel", {
 })
 
 DefineLanguageNoun("Hannar", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 239.
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "Skillful, Artist", -- source gives meaning as "the Skillful, the Artist"
 	SingularNominative = "Hannar", -- source gives name as "Hannarr"
 	Gender = "Masculine",
@@ -626,7 +626,7 @@ DefineLanguageNoun("Hannar", { -- Source: Richard Cleasby and Gudbrand Vigfusson
 })
 
 DefineLanguageNoun("Har", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Har",
 	NameSingular = true,
@@ -634,7 +634,7 @@ DefineLanguageNoun("Har", {
 })
 
 DefineLanguageNoun("Haug", { -- from Norse mythology, "Svarinshaug" = "Svarin's Mound", "haug" = "mound"
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "Mound",
 	SingularNominative = "Haug",
 	SuffixSingular = true,
@@ -647,7 +647,7 @@ DefineLanguageNoun("Haug", { -- from Norse mythology, "Svarinshaug" = "Svarin's 
 })
 
 DefineLanguageNoun("Haur", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Haur",
 	NameSingular = true,
@@ -655,7 +655,7 @@ DefineLanguageNoun("Haur", {
 })
 
 DefineLanguageNoun("Heptifili", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Heptifili",
 	NameSingular = true,
@@ -663,7 +663,7 @@ DefineLanguageNoun("Heptifili", {
 })
 
 DefineLanguageNoun("Hledj", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "Sound, Silence, Hearing, Listening", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, pp. 271-272.
 	SingularNominative = "Hledj",
 	Gender = "Neuter",
@@ -676,7 +676,7 @@ DefineLanguageNoun("Hledj", {
 })
 
 DefineLanguageNoun("Hornbori", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Hornbori",
 	NameSingular = true,
@@ -684,7 +684,7 @@ DefineLanguageNoun("Hornbori", {
 })
 
 DefineLanguageNoun("Hugstari", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Hugstari",
 	NameSingular = true,
@@ -692,7 +692,7 @@ DefineLanguageNoun("Hugstari", {
 })
 
 DefineLanguageNoun("Il", { -- suffix used by Wesnoth's dwarven names; not necessarily a noun
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Il",
 	SuffixSingular = true,
@@ -700,7 +700,7 @@ DefineLanguageNoun("Il", { -- suffix used by Wesnoth's dwarven names; not necess
 })
 
 DefineLanguageNoun("Ing", { -- suffix used by Wesnoth's dwarven names; not necessarily a noun
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Ing",
 	SuffixSingular = true,
@@ -708,7 +708,7 @@ DefineLanguageNoun("Ing", { -- suffix used by Wesnoth's dwarven names; not neces
 })
 
 DefineLanguageNoun("Ingi", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Ingi",
 	NameSingular = true,
@@ -716,7 +716,7 @@ DefineLanguageNoun("Ingi", {
 })
 
 DefineLanguageNoun("Iri", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Iri",
 	NameSingular = true,
@@ -724,7 +724,7 @@ DefineLanguageNoun("Iri", {
 })
 
 DefineLanguageNoun("Is", { -- suffix used by Wesnoth's dwarven names; not necessarily a noun
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Is",
 	SuffixSingular = true,
@@ -732,7 +732,7 @@ DefineLanguageNoun("Is", { -- suffix used by Wesnoth's dwarven names; not necess
 })
 
 DefineLanguageNoun("Isuldan", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Isuldan",
 	Gender = "Masculine",
@@ -741,7 +741,7 @@ DefineLanguageNoun("Isuldan", {
 })
 
 DefineLanguageNoun("Ivaldi", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "Mighty", -- source gives meaning as "the Mighty"; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 101.
 	SingularNominative = "Ivaldi",
 	Gender = "Masculine", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 319.
@@ -750,7 +750,7 @@ DefineLanguageNoun("Ivaldi", {
 })
 
 DefineLanguageNoun("Jari", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Jari",
 	NameSingular = true,
@@ -758,7 +758,7 @@ DefineLanguageNoun("Jari", {
 })
 
 DefineLanguageNoun("Joru", { -- from Norse mythology, "Joruvellir" = "Fields of Sand", "Joru" = "Sand"
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "Sand",
 	SingularNominative = "Joru",
 	Uncountable = true,
@@ -772,7 +772,7 @@ DefineLanguageNoun("Joru", { -- from Norse mythology, "Joruvellir" = "Fields of 
 })
 
 DefineLanguageNoun("Kal Kartha", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Kal Kartha", -- "Kal" maybe should become a (separated) prefix for settlement names?
 	NameSingular = true,
@@ -780,7 +780,7 @@ DefineLanguageNoun("Kal Kartha", {
 })
 
 DefineLanguageNoun("Karrag", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Karrag",
 	NameSingular = true,
@@ -788,7 +788,7 @@ DefineLanguageNoun("Karrag", {
 })
 
 DefineLanguageNoun("Kili", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Kili",
 	NameSingular = true,
@@ -796,7 +796,7 @@ DefineLanguageNoun("Kili", {
 })
 
 DefineLanguageNoun("Kinan", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Kinan",
 	NameSingular = true,
@@ -804,7 +804,7 @@ DefineLanguageNoun("Kinan", {
 })
 
 DefineLanguageNoun("Knalga", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Knalga",
 	NameSingular = true,
@@ -812,7 +812,7 @@ DefineLanguageNoun("Knalga", {
 })
 
 DefineLanguageNoun("Kuhnar", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Kuhnar",
 	NameSingular = true,
@@ -820,7 +820,7 @@ DefineLanguageNoun("Kuhnar", {
 })
 
 DefineLanguageNoun("Laurin", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Laurin",
 	NameSingular = true,
@@ -828,7 +828,7 @@ DefineLanguageNoun("Laurin", {
 })
 
 DefineLanguageNoun("Leif", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "Patrimony", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 381.
 	SingularNominative = "Leif",
 	Gender = "Feminine", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 381.
@@ -837,7 +837,7 @@ DefineLanguageNoun("Leif", {
 })
 
 DefineLanguageNoun("Lit", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Lit",
 	NameSingular = true,
@@ -845,7 +845,7 @@ DefineLanguageNoun("Lit", {
 })
 
 DefineLanguageNoun("Lofar", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 397.
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Lofar",
 	Gender = "Masculine",
@@ -854,7 +854,7 @@ DefineLanguageNoun("Lofar", { -- Source: Richard Cleasby and Gudbrand Vigfusson,
 })
 
 DefineLanguageNoun("Loni", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Loni",
 	NameSingular = true,
@@ -862,7 +862,7 @@ DefineLanguageNoun("Loni", {
 })
 
 DefineLanguageNoun("Los", { -- suffix used by Wesnoth's dwarven names; not necessarily a noun
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Los",
 	SuffixSingular = true,
@@ -870,7 +870,7 @@ DefineLanguageNoun("Los", { -- suffix used by Wesnoth's dwarven names; not neces
 })
 
 DefineLanguageNoun("Men", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "Necklace", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 772.
 	SingularNominative = "Men",
 	Gender = "Neuter", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 772.
@@ -879,7 +879,7 @@ DefineLanguageNoun("Men", {
 })
 
 DefineLanguageNoun("Mjod", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "Mead",
 	SingularNominative = "Mjod",
 	Uncountable = true,
@@ -895,7 +895,7 @@ DefineLanguageNoun("Mjod", {
 })
 
 DefineLanguageNoun("Mjollnir", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Mjollnir",
 	NameSingular = true,
@@ -903,7 +903,7 @@ DefineLanguageNoun("Mjollnir", {
 })
 
 DefineLanguageNoun("Modsognir", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Modsognir",
 	NameSingular = true,
@@ -911,7 +911,7 @@ DefineLanguageNoun("Modsognir", {
 })
 
 DefineLanguageNoun("Nabbi", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 445.
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "Small Protuberance on the Skin, Small Protuberance on Greensward",
 	SingularNominative = "Nabbi",
 	Gender = "Masculine",
@@ -920,7 +920,7 @@ DefineLanguageNoun("Nabbi", { -- Source: Richard Cleasby and Gudbrand Vigfusson,
 })
 
 DefineLanguageNoun("Naglering", { -- possibly "Nagle-ring"?
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Naglering",
 	NameSingular = true,
@@ -928,7 +928,7 @@ DefineLanguageNoun("Naglering", { -- possibly "Nagle-ring"?
 })
 
 DefineLanguageNoun("Nar", { -- prefix used by Wesnoth's dwarven names; not necessarily a noun
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Nar",
 	TypeName = {"person"}, -- example: "Nar" (dwarf from Norse mythology)
@@ -937,7 +937,7 @@ DefineLanguageNoun("Nar", { -- prefix used by Wesnoth's dwarven names; not neces
 })
 
 DefineLanguageNoun("Naut", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "A Gift or Booty from a Person", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 447.
 	SingularNominative = "Naut",
 	Gender = "Masculine", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 447.
@@ -946,7 +946,7 @@ DefineLanguageNoun("Naut", {
 })
 
 DefineLanguageNoun("Nefi", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 450.
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "Cognate Kinsman",
 	SingularNominative = "Nefi",
 	Gender = "Masculine",
@@ -955,7 +955,7 @@ DefineLanguageNoun("Nefi", { -- Source: Richard Cleasby and Gudbrand Vigfusson, 
 })
 
 DefineLanguageNoun("Neglur", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Neglur",
 	NameSingular = true,
@@ -963,7 +963,7 @@ DefineLanguageNoun("Neglur", {
 })
 
 DefineLanguageNoun("Nid", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 454.
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "Wane of the Moon, No Moon",
 	SingularNominative = "Nid",
 	Gender = "Feminine",
@@ -978,7 +978,7 @@ DefineLanguageNoun("Nid", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "
 })
 
 DefineLanguageNoun("Nidi", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 454.
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "Wane of the Moon, No Moon", -- approximately, from "Nid"
 	SingularNominative = "Nidi",
 	Gender = "Masculine",
@@ -987,7 +987,7 @@ DefineLanguageNoun("Nidi", { -- Source: Richard Cleasby and Gudbrand Vigfusson, 
 })
 
 DefineLanguageNoun("Niping", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Niping",
 	NameSingular = true,
@@ -995,7 +995,7 @@ DefineLanguageNoun("Niping", {
 })
 
 DefineLanguageNoun("Noiraran", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Noiraran",
 	NameSingular = true,
@@ -1003,7 +1003,7 @@ DefineLanguageNoun("Noiraran", {
 })
 
 DefineLanguageNoun("Nordri", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "Northern", -- source gives meaning as "the Northern"; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 457.
 	SingularNominative = "Nordri",
 	Gender = "Masculine",
@@ -1012,7 +1012,7 @@ DefineLanguageNoun("Nordri", {
 })
 
 DefineLanguageNoun("Nori", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Nori",
 	NameSingular = true,
@@ -1020,7 +1020,7 @@ DefineLanguageNoun("Nori", {
 })
 
 DefineLanguageNoun("Nyi", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 459.
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "Moon",
 	SingularNominative = "Nyi",
 	Gender = "Masculine",
@@ -1029,7 +1029,7 @@ DefineLanguageNoun("Nyi", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "
 })
 
 DefineLanguageNoun("Nyrad", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Nyrad",
 	NameSingular = true,
@@ -1037,7 +1037,7 @@ DefineLanguageNoun("Nyrad", {
 })
 
 DefineLanguageNoun("Odrorir", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Odrorir",
 	NameSingular = true,
@@ -1045,7 +1045,7 @@ DefineLanguageNoun("Odrorir", {
 })
 
 DefineLanguageNoun("Oin", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Oin",
 	NameSingular = true,
@@ -1053,7 +1053,7 @@ DefineLanguageNoun("Oin", {
 })
 
 DefineLanguageNoun("Ol", { -- suffix used by Wesnoth's dwarven names; not necessarily a noun
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Ol",
 	SuffixSingular = true,
@@ -1061,7 +1061,7 @@ DefineLanguageNoun("Ol", { -- suffix used by Wesnoth's dwarven names; not necess
 })
 
 DefineLanguageNoun("Olurf", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Olurf",
 	NameSingular = true,
@@ -1069,7 +1069,7 @@ DefineLanguageNoun("Olurf", {
 })
 
 DefineLanguageNoun("Ori", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Ori",
 	NameSingular = true,
@@ -1077,7 +1077,7 @@ DefineLanguageNoun("Ori", {
 })
 
 DefineLanguageNoun("Pel", { -- prefix used by Wesnoth's dwarven names; not necessarily a noun
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Pel",
 	PrefixSingular = true,
@@ -1085,14 +1085,14 @@ DefineLanguageNoun("Pel", { -- prefix used by Wesnoth's dwarven names; not neces
 })
 
 DefineLanguageNoun("Regin", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "Counsel-Giver",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Regin" (dwarven smith from Norse mythology who was the brother of the dragon Fafnir)
 })
 
 DefineLanguageNoun("Rekk", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Rekk",
 	NameSingular = true,
@@ -1100,7 +1100,7 @@ DefineLanguageNoun("Rekk", {
 })
 
 DefineLanguageNoun("Relgorn", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Relgorn",
 	NameSingular = true,
@@ -1108,7 +1108,7 @@ DefineLanguageNoun("Relgorn", {
 })
 
 DefineLanguageNoun("Rorir", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 739.
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "Rearer of Charms",
 	SingularNominative = "Rorir", -- alternative spelling given by Cleasby and Vigfusson: "Reyrir"
 	Gender = "Masculine",
@@ -1117,7 +1117,7 @@ DefineLanguageNoun("Rorir", { -- Source: Richard Cleasby and Gudbrand Vigfusson,
 })
 
 DefineLanguageNoun("Rugnur", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Rugnur",
 	NameSingular = true,
@@ -1125,7 +1125,7 @@ DefineLanguageNoun("Rugnur", {
 })
 
 DefineLanguageNoun("Rynan", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Rynan",
 	NameSingular = true,
@@ -1133,7 +1133,7 @@ DefineLanguageNoun("Rynan", {
 })
 
 DefineLanguageNoun("Sil", { -- suffix used by Wesnoth's dwarven names; not necessarily a noun
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Sil",
 	SuffixSingular = true,
@@ -1141,7 +1141,7 @@ DefineLanguageNoun("Sil", { -- suffix used by Wesnoth's dwarven names; not neces
 })
 
 DefineLanguageNoun("Sindri", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 529.
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "Forger",
 	SingularNominative = "Eitri", -- can also be spelled as "Sindri"
 	Gender = "Masculine",
@@ -1150,7 +1150,7 @@ DefineLanguageNoun("Sindri", { -- Source: Richard Cleasby and Gudbrand Vigfusson
 })
 
 DefineLanguageNoun("Skavid", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Skavid",
 	NameSingular = true,
@@ -1158,7 +1158,7 @@ DefineLanguageNoun("Skavid", {
 })
 
 DefineLanguageNoun("Skid", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "Wood",
 	SingularNominative = "Skid",
 	Gender = "Neuter", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 550.
@@ -1167,7 +1167,7 @@ DefineLanguageNoun("Skid", {
 })
 
 DefineLanguageNoun("Skirvir", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 550.
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?", -- maybe related to Old Norse "Skirra"?
 	SingularNominative = "Skirvir", -- alternatively spelled as "Skirfir"
 	Gender = "Masculine",
@@ -1176,7 +1176,7 @@ DefineLanguageNoun("Skirvir", { -- Source: Richard Cleasby and Gudbrand Vigfusso
 })
 
 DefineLanguageNoun("Skjaldi", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "Shield",
 	SingularNominative = "Skjaldi",
 	SuffixSingular = true,
@@ -1184,7 +1184,7 @@ DefineLanguageNoun("Skjaldi", {
 })
 
 DefineLanguageNoun("Sol", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "Sun",
 	SingularNominative = "Sol",
 	PrefixSingular = true,
@@ -1199,7 +1199,7 @@ DefineLanguageNoun("Sol", {
 })
 
 DefineLanguageNoun("Son", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Son",
 	NameSingular = true,
@@ -1207,7 +1207,7 @@ DefineLanguageNoun("Son", {
 })
 
 DefineLanguageNoun("Sudri", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, pp. 457, 603.
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "Southern", -- "the Southern"
 	SingularNominative = "Sudri",
 	Gender = "Masculine",
@@ -1216,7 +1216,7 @@ DefineLanguageNoun("Sudri", { -- Source: Richard Cleasby and Gudbrand Vigfusson,
 })
 
 DefineLanguageNoun("Svarin", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 606.
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Svarin",
 	SingularGenitive = "Svarins", -- as in "Svarinshaug"
@@ -1226,7 +1226,7 @@ DefineLanguageNoun("Svarin", { -- Source: Richard Cleasby and Gudbrand Vigfusson
 })
 
 DefineLanguageNoun("Sviar", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "Forger, Smith", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 612.
 	SingularNominative = "Sviar",
 	Gender = "Masculine", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 612.
@@ -1235,7 +1235,7 @@ DefineLanguageNoun("Sviar", {
 })
 
 DefineLanguageNoun("Sviur", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Sviur",
 	NameSingular = true,
@@ -1243,7 +1243,7 @@ DefineLanguageNoun("Sviur", {
 })
 
 DefineLanguageNoun("Tha", { -- infix used by Wesnoth's dwarven names; not necessarily a noun
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Tha",
 	InfixSingular = true,
@@ -1251,7 +1251,7 @@ DefineLanguageNoun("Tha", { -- infix used by Wesnoth's dwarven names; not necess
 })
 
 DefineLanguageNoun("Theganli", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Theganli",
 	NameSingular = true,
@@ -1259,7 +1259,7 @@ DefineLanguageNoun("Theganli", {
 })
 
 DefineLanguageNoun("Thekk", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Thekk",
 	NameSingular = true,
@@ -1267,7 +1267,7 @@ DefineLanguageNoun("Thekk", {
 })
 
 DefineLanguageNoun("Thjof", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "Thief",
 	SingularNominative = "Thjof",
 	SuffixSingular = true,
@@ -1275,7 +1275,7 @@ DefineLanguageNoun("Thjof", {
 })
 
 DefineLanguageNoun("Thorin", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Thorin",
 	NameSingular = true,
@@ -1283,7 +1283,7 @@ DefineLanguageNoun("Thorin", {
 })
 
 DefineLanguageNoun("Thrain", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Thrain",
 	NameSingular = true,
@@ -1291,7 +1291,7 @@ DefineLanguageNoun("Thrain", {
 })
 
 DefineLanguageNoun("Thror", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Thror",
 	NameSingular = true,
@@ -1299,14 +1299,14 @@ DefineLanguageNoun("Thror", {
 })
 
 DefineLanguageNoun("Thrymgjol", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Thrymgjol"
 	-- example: "Thrymgjol" (extraordinary gate crafted by the sons of the sun-blinded dwarf Solblindi)
 })
 
 DefineLanguageNoun("Thursagan", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Thursagan",
 	NameSingular = true,
@@ -1314,7 +1314,7 @@ DefineLanguageNoun("Thursagan", {
 })
 
 DefineLanguageNoun("Trith", { -- prefix used by Wesnoth's dwarven names; not necessarily a noun
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Trith",
 	PrefixSingular = true,
@@ -1322,7 +1322,7 @@ DefineLanguageNoun("Trith", { -- prefix used by Wesnoth's dwarven names; not nec
 })
 
 DefineLanguageNoun("Tuta", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 645.
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "Teat-Like Prominence",
 	SingularNominative = "Tuta",
 	Gender = "Feminine",
@@ -1331,7 +1331,7 @@ DefineLanguageNoun("Tuta", { -- Source: Richard Cleasby and Gudbrand Vigfusson, 
 })
 
 DefineLanguageNoun("Olf", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 668.
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "Wolf",
 	SingularNominative = "Olf", -- in Old Norse Ulf, but used in suffixes as "-olf"
 	Gender = "Masculine",
@@ -1340,7 +1340,7 @@ DefineLanguageNoun("Olf", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "
 })
 
 DefineLanguageNoun("Ulrek", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Ulrek",
 	NameSingular = true,
@@ -1348,7 +1348,7 @@ DefineLanguageNoun("Ulrek", {
 })
 
 DefineLanguageNoun("Uni", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Uni",
 	NameSingular = true,
@@ -1356,7 +1356,7 @@ DefineLanguageNoun("Uni", {
 })
 
 DefineLanguageNoun("Us", { -- suffix used by Wesnoth's dwarven names; not necessarily a noun
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Us",
 	SuffixSingular = true,
@@ -1364,7 +1364,7 @@ DefineLanguageNoun("Us", { -- suffix used by Wesnoth's dwarven names; not necess
 })
 
 DefineLanguageNoun("Vang", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 678.
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "Garden, Green Home-Field",
 	SingularNominative = "Vang", -- "Vangr" in Old Icelandic
 	Gender = "Masculine",
@@ -1377,7 +1377,7 @@ DefineLanguageNoun("Vang", { -- Source: Richard Cleasby and Gudbrand Vigfusson, 
 })
 
 DefineLanguageNoun("Vali", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Vali",
 	NameSingular = true,
@@ -1385,7 +1385,7 @@ DefineLanguageNoun("Vali", {
 })
 
 DefineLanguageNoun("Var", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Var",
 	NameSingular = true,
@@ -1393,7 +1393,7 @@ DefineLanguageNoun("Var", {
 })
 
 DefineLanguageNoun("Vegdrasil", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Vegdrasil",
 	NameSingular = true,
@@ -1401,7 +1401,7 @@ DefineLanguageNoun("Vegdrasil", {
 })
 
 DefineLanguageNoun("Vestri", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, pp. 457, 603.
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "Western", -- "the Western"
 	SingularNominative = "Vestri",
 	Gender = "Masculine",
@@ -1410,7 +1410,7 @@ DefineLanguageNoun("Vestri", { -- Source: Richard Cleasby and Gudbrand Vigfusson
 })
 
 DefineLanguageNoun("Vellir", { -- from Norse mythology, "Joruvellir" = "Fields of Sand", "vellir" = "fields"
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "Fields",
 	-- what is the singular form?
 	PluralNominative = "Vellir",
@@ -1419,7 +1419,7 @@ DefineLanguageNoun("Vellir", { -- from Norse mythology, "Joruvellir" = "Fields o
 })
 
 DefineLanguageNoun("Vig", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 715.
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "Fight, Battle",
 	SingularNominative = "Vig",
 	Gender = "Neuter",
@@ -1436,7 +1436,7 @@ DefineLanguageNoun("Vig", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "
 })
 
 DefineLanguageNoun("Vind", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "Wind",
 	SingularNominative = "Vind",
 	Uncountable = true,
@@ -1451,7 +1451,7 @@ DefineLanguageNoun("Vind", {
 })
 
 DefineLanguageNoun("Virfir", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Virfir",
 	NameSingular = true,
@@ -1459,7 +1459,7 @@ DefineLanguageNoun("Virfir", {
 })
 
 DefineLanguageNoun("Vit", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "?",
 	SingularNominative = "Vit",
 	NameSingular = true,
@@ -1467,7 +1467,7 @@ DefineLanguageNoun("Vit", {
 })
 
 DefineLanguageNoun("Vitnir", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "Wolf",
 	SingularNominative = "Vitnir",
 	SuffixSingular = true,
@@ -1475,7 +1475,7 @@ DefineLanguageNoun("Vitnir", {
 })
 
 DefineLanguageVerb("Blindi", { -- should be infinitive form
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "Blinded",
 	-- infinitive form?
 	ParticiplePast = "Blindi",
@@ -1483,7 +1483,7 @@ DefineLanguageVerb("Blindi", { -- should be infinitive form
 })
 
 DefineLanguageAdjective("Al", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 771.
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "Mighty, All", -- meaning from Old Norse, but is also a prefix and infix used by Wesnoth's dwarven names
 	PrefixTypeName = {
 		"person", -- examples from Norse mythology: "Alvis" ("all-knowing"/"all-wise"), "Althjof" (mighty thief); examples from Wesnoth: "Alaithas", "Alaithis", "Alaithlos", "Alaithol", "Alaithsol", "Alaithus", "Alalas", "Alalil", "Alalol", "Alalsol", "Alalus", "Alatas", "Alatil", "Alating", "Alatlos", "Alatsil", "Alcatil", "Alcatis", "Alcatlos", "Alcatsil", "Aldras", "Aldril", "Aldring", "Aldris", "Aldrlos", "Aldrol", "Aldrsol", "Alduras", "Aldurlos", "Aldurol", "Althaas", "Althail", "Althalos", "Althaol", "Althasil", "Althasol", "Althaus"
@@ -1496,7 +1496,7 @@ DefineLanguageAdjective("Al", { -- Source: Richard Cleasby and Gudbrand Vigfusso
 })
 
 DefineLanguageAdjective("Bladnir", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "Bladed",
 	-- example: "Skidbladnir" (ship made by the sons of Ivaldi, name means "Wooden-Bladed")
 	-- should add a category for ship name suffixes
@@ -1509,7 +1509,7 @@ DefineLanguageAdjective("Bladnir", {
 })
 
 DefineLanguageAdjective("Eikin", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "Oaken",
 	PrefixTypeName = {
 		"person", -- example: "Eikinskjaldi" (Norse mythology)
@@ -1519,7 +1519,7 @@ DefineLanguageAdjective("Eikin", {
 })
 
 DefineLanguageAdjective("Gand", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "Magic",
 	PrefixTypeName = {
 		"person", -- example: "Gandalf" (Norse mythology)
@@ -1531,25 +1531,25 @@ DefineLanguageAdjective("Gand", {
 })
 
 DefineLanguageAdjective("Jung", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 327.
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "Young",
 	SuffixTypeName = {"person"} -- example: "Nidjung" (Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 454)
 })
 
 DefineLanguageAdjective("Lyr", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 247.
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "Heat-Holding",
 	TypeName = {"settlement"} -- example: "Lyr" (hall built by dwarves in Norse mythology)
 })
 
 DefineLanguageAdjective("Nain", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "Near To, Closely Related, Near Kinsman Of", -- Old Norse "Náinn"; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 448.
 	TypeName = {"person"} -- example: "Nain" (dwarf from Norse mythology)
 })
 
 DefineLanguageAdjective("Nyr", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "New", -- spelled as "Nýr" in Old Icelandic; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 459.
 	TypeName = {"person"}, -- example: "Nyr" (dwarf from Norse mythology)
 	PrefixTypeName = {
@@ -1561,7 +1561,7 @@ DefineLanguageAdjective("Nyr", {
 })
 
 DefineLanguageAdjective("Rad", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "Counsel", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 485.
 	PrefixTypeName = {
 		"person", -- example: "Radsvid" (Norse mythology)
@@ -1571,19 +1571,19 @@ DefineLanguageAdjective("Rad", {
 })
 
 DefineLanguageAdjective("Rithil", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "Swift-Moving",
 	TypeName = {"item-sword"} -- example: "Rithil" (the dwarf Regin's sword)
 })
 
 DefineLanguageAdjective("Svid", {
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "Swift, Wise", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 611.
 	SuffixTypeName = {"person"} -- example: "Alsvid" ("All-Wise"; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 611.), "Radsvid" (Norse mythology; "Swift in Counsel")
 })
 
 DefineLanguageAdjective("Thjod", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 739.
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "Great",
 	PrefixTypeName = {
 		"person", -- example: "Thjodrorir"/"þjóð-reyrir" ("The Great Rearer of Charms"; dwarven sage from Norse mythology)
@@ -1595,7 +1595,7 @@ DefineLanguageAdjective("Thjod", { -- Source: Richard Cleasby and Gudbrand Vigfu
 })
 
 DefineLanguageAdjective("Vis", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 771.
-	Civilization = "dwarf",
+	Language = "dwarven",
 	Meaning = "Wise",
 	SuffixTypeName = {"person"} -- example: "Alvis" ("all-knowing"/"all-wise"; from Norse mythology)
 })

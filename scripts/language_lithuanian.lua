@@ -26,7 +26,7 @@
 --
 
 DefineLanguageVerb("Saĩsti", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 121.
-	Civilization = "lithuanian",
+	Language = "lithuanian",
 	Meaning = "Interpret a Sign or Prophesy",
 	Infinitive = "Saĩsti"
 })

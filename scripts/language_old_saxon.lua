@@ -26,82 +26,82 @@
 --
 
 DefineLanguageNoun("Fisc", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
-	Civilization = "old-saxon",
+	Language = "old-saxon",
 	Meaning = "Fish",
 	SingularNominative = "Fisc"
 })
 
 DefineLanguageNoun("Gard", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.
-	Civilization = "old-saxon",
+	Language = "old-saxon",
 	Meaning = "Staff, Rod",
 	SingularNominative = "Gard"
 })
 
 DefineLanguageNoun("Herta", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
-	Civilization = "old-saxon",
+	Language = "old-saxon",
 	Meaning = "Heart",
 	SingularNominative = "Herta"
 })
 
 DefineLanguageNoun("Hord", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.
-	Civilization = "old-saxon",
+	Language = "old-saxon",
 	Meaning = "Treasure, Closed Interior, Hidden Interior",
 	SingularNominative = "Hord"
 })
 
 DefineLanguageNoun("Hund", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
-	Civilization = "old-saxon",
+	Language = "old-saxon",
 	Meaning = "Dog",
 	SingularNominative = "Hund"
 })
 
 DefineLanguageNoun("Līfnara", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
-	Civilization = "old-saxon",
+	Language = "old-saxon",
 	Meaning = "Food, Nourishment",
 	SingularNominative = "Līfnara",
 	Gender = "Feminine"
 })
 
 DefineLanguageNoun("Merg", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
-	Civilization = "old-saxon",
+	Language = "old-saxon",
 	Meaning = "Marrow",
 	SingularNominative = "Merg"
 })
 
 DefineLanguageNoun("Mēda", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 7.
-	Civilization = "old-saxon",
+	Language = "old-saxon",
 	Meaning = "Payment",
 	SingularNominative = "Mēda", -- source also gives as an alternatives the form "Mieda"
 	Gender = "Feminine"
 })
 
 DefineLanguageNoun("Ord", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
-	Civilization = "old-saxon",
+	Language = "old-saxon",
 	Meaning = "Point, Edge of a Blade",
 	SingularNominative = "Ord",
 	Gender = "Masculine"
 })
 
 DefineLanguageNoun("Orlag", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 10.
-	Civilization = "old-saxon",
+	Language = "old-saxon",
 	Meaning = "Fate",
 	SingularNominative = "Orlag" -- source also gives the alternative form "Orlagi"
 })
 
 DefineLanguageNoun("Suht", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
-	Civilization = "old-saxon",
+	Language = "old-saxon",
 	Meaning = "Sickness",
 	SingularNominative = "Suht"
 })
 
 DefineLanguageNoun("Weg", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
-	Civilization = "old-saxon",
+	Language = "old-saxon",
 	Meaning = "Way",
 	SingularNominative = "Weg"
 })
 
 DefineLanguageNoun("Wurm", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
-	Civilization = "old-saxon",
+	Language = "old-saxon",
 	Meaning = "Worm, Serpent", -- probably could be extended to mean "wyrm" as well
 	SingularNominative = "Wurm"
 })

@@ -26,7 +26,7 @@
 --
 
 DefineLanguageNoun("Adel", {
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "Noble",
 	SingularNominative = "Adel",
 	SingularGenitive = "Adels",
@@ -36,7 +36,7 @@ DefineLanguageNoun("Adel", {
 })
 
 DefineLanguageNoun("Amboss", {
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "Anvil",
 	SingularNominative = "Amboss",
 	Gender = "Masculine",
@@ -45,7 +45,7 @@ DefineLanguageNoun("Amboss", {
 })
 
 DefineLanguageNoun("Arl", {
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "?",
 	SingularNominative = "Arl",
 	PrefixSingular = true,
@@ -53,7 +53,7 @@ DefineLanguageNoun("Arl", {
 })
 
 DefineLanguageNoun("Arnulf", {
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "?",
 	SingularNominative = "Arnulf",
 	NameSingular = true,
@@ -61,7 +61,7 @@ DefineLanguageNoun("Arnulf", {
 })
 
 DefineLanguageNoun("Au", { -- Source: http://www.duden.de/rechtschreibung/Au_feuchte_Niederung
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "Flat Terrain with Lush Meadows",
 	SingularNominative = "Au",
 	SingularAccusative = "Au",
@@ -77,7 +77,7 @@ DefineLanguageNoun("Au", { -- Source: http://www.duden.de/rechtschreibung/Au_feu
 })
 
 DefineLanguageNoun("Bach", { -- Source: http://www.duden.de/rechtschreibung/Bach_Wasserlauf
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "Stream",
 	SingularNominative = "Bach",
 	SingularAccusative = "Bach",
@@ -93,7 +93,7 @@ DefineLanguageNoun("Bach", { -- Source: http://www.duden.de/rechtschreibung/Bach
 })
 
 DefineLanguageNoun("Bad", { -- Source: http://www.duden.de/rechtschreibung/Bad
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "Baths",
 	SingularNominative = "Bad",
 	SingularAccusative = "Bad",
@@ -109,7 +109,7 @@ DefineLanguageNoun("Bad", { -- Source: http://www.duden.de/rechtschreibung/Bad
 })
 
 DefineLanguageNoun("Bär", { -- Source: http://www.duden.de/rechtschreibung/Baer_Raubtier
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "Bear",
 	SingularNominative = "Bär",
 	SingularAccusative = "Bären",
@@ -125,7 +125,7 @@ DefineLanguageNoun("Bär", { -- Source: http://www.duden.de/rechtschreibung/Baer
 })
 
 DefineLanguageNoun("Berg", {
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "Mountain, Hill",
 	SingularNominative = "Berg",
 	PluralNominative = "Berge",
@@ -140,7 +140,7 @@ DefineLanguageNoun("Berg", {
 })
 
 DefineLanguageNoun("Bernhard", {
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "?",
 	SingularNominative = "Bernhard",
 	NameSingular = true,
@@ -148,7 +148,7 @@ DefineLanguageNoun("Bernhard", {
 })
 
 DefineLanguageNoun("Blume", { -- Source: http://www.duden.de/rechtschreibung/Blume
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "Flower",
 	SingularNominative = "Blume",
 	SingularAccusative = "Blume",
@@ -164,7 +164,7 @@ DefineLanguageNoun("Blume", { -- Source: http://www.duden.de/rechtschreibung/Blu
 })
 
 DefineLanguageNoun("Bruck", {
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "Bridge",
 	SingularNominative = "Bruck",
 	PluralNominative = "Brucken",
@@ -176,7 +176,7 @@ DefineLanguageNoun("Bruck", {
 })
 
 DefineLanguageNoun("Burg", {
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "Castle",
 	SingularNominative = "Burg",
 	PluralNominative = "Burgen",
@@ -191,7 +191,7 @@ DefineLanguageNoun("Burg", {
 })
 
 DefineLanguageNoun("Dorf", {
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "Village",
 	SingularNominative = "Dorf",
 	PluralNominative = "Dörfer",
@@ -201,7 +201,7 @@ DefineLanguageNoun("Dorf", {
 })
 
 DefineLanguageNoun("Drasch", {
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "Precipitation",
 	SingularNominative = "Drasch",
 	SingularAccusative = "Drasch",
@@ -214,7 +214,7 @@ DefineLanguageNoun("Drasch", {
 })
 
 DefineLanguageNoun("Eisen", {
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "Iron",
 	SingularNominative = "Eisen",
 	Gender = "Neuter",
@@ -224,7 +224,7 @@ DefineLanguageNoun("Eisen", {
 })
 
 DefineLanguageNoun("Erz", {
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "Ore",
 	SingularNominative = "Erz",
 	SingularAccusative = "Erz",
@@ -240,7 +240,7 @@ DefineLanguageNoun("Erz", {
 })
 
 DefineLanguageNoun("Esse", {
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "Forge",
 	SingularNominative = "Esse",
 	SingularAccusative = "Esse",
@@ -256,7 +256,7 @@ DefineLanguageNoun("Esse", {
 })
 
 DefineLanguageNoun("Franz", {
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "?",
 	SingularNominative = "Franz",
 	NameSingular = true,
@@ -264,7 +264,7 @@ DefineLanguageNoun("Franz", {
 })
 
 DefineLanguageNoun("Fried", {
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "?",
 	SingularNominative = "Fried",
 	SuffixSingular = true,
@@ -272,7 +272,7 @@ DefineLanguageNoun("Fried", {
 })
 
 DefineLanguageNoun("Friedrich", {
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "?",
 	SingularNominative = "Friedrich",
 	NameSingular = true,
@@ -280,7 +280,7 @@ DefineLanguageNoun("Friedrich", {
 })
 
 DefineLanguageNoun("Furt", { -- Source: http://www.duden.de/rechtschreibung/Furt
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "Ford",
 	SingularNominative = "Furt",
 	SingularAccusative = "Furt",
@@ -296,7 +296,7 @@ DefineLanguageNoun("Furt", { -- Source: http://www.duden.de/rechtschreibung/Furt
 })
 
 DefineLanguageNoun("Gang", {
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "?",
 	SingularNominative = "Gang",
 	SuffixSingular = true,
@@ -304,7 +304,7 @@ DefineLanguageNoun("Gang", {
 })
 
 DefineLanguageNoun("Gerhard", {
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "?",
 	SingularNominative = "Gerhard",
 	NameSingular = true,
@@ -312,7 +312,7 @@ DefineLanguageNoun("Gerhard", {
 })
 
 DefineLanguageNoun("Gott", {
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "God",
 	SingularNominative = "Gott",
 	Gender = "Masculine",
@@ -321,7 +321,7 @@ DefineLanguageNoun("Gott", {
 })
 
 DefineLanguageNoun("Gunther", {
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "?",
 	SingularNominative = "Gunther",
 	NameSingular = true,
@@ -329,7 +329,7 @@ DefineLanguageNoun("Gunther", {
 })
 
 DefineLanguageNoun("Gustav", {
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "?",
 	SingularNominative = "Gustav",
 	NameSingular = true,
@@ -337,7 +337,7 @@ DefineLanguageNoun("Gustav", {
 })
 
 DefineLanguageNoun("Hacken", {
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "Heel",
 	SingularNominative = "Hacken",
 	SingularAccusative = "Hacken",
@@ -353,7 +353,7 @@ DefineLanguageNoun("Hacken", {
 })
 
 DefineLanguageNoun("Hagen", { -- Source: http://www.duden.de/rechtschreibung/Hagen
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "?", -- personal name
 	SingularNominative = "Hagen",
 	SingularAccusative = "Hagen", -- source also gives the alternative form "Hagens"
@@ -365,7 +365,7 @@ DefineLanguageNoun("Hagen", { -- Source: http://www.duden.de/rechtschreibung/Hag
 })
 
 DefineLanguageNoun("Hammer", {
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "Hammer",
 	SingularNominative = "Hammer",
 	SingularAccusative = "Hammer",
@@ -381,7 +381,7 @@ DefineLanguageNoun("Hammer", {
 })
 
 DefineLanguageNoun("Hans", {
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "?",
 	SingularNominative = "Hans",
 	NameSingular = true,
@@ -389,7 +389,7 @@ DefineLanguageNoun("Hans", {
 })
 
 DefineLanguageNoun("Heinrich", {
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "?",
 	SingularNominative = "Heinrich",
 	NameSingular = true,
@@ -397,7 +397,7 @@ DefineLanguageNoun("Heinrich", {
 })
 
 DefineLanguageNoun("Hel", {
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "?",
 	SingularNominative = "Hel",
 	PrefixSingular = true,
@@ -405,7 +405,7 @@ DefineLanguageNoun("Hel", {
 })
 
 DefineLanguageNoun("Hermann", {
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "?",
 	SingularNominative = "Hermann",
 	NameSingular = true,
@@ -413,7 +413,7 @@ DefineLanguageNoun("Hermann", {
 })
 
 DefineLanguageNoun("Hof", {
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "Court",
 	SingularNominative = "Hof",
 	PluralNominative = "Höfe",
@@ -423,7 +423,7 @@ DefineLanguageNoun("Hof", {
 })
 
 DefineLanguageNoun("Horn", {
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "Horn",
 	SingularNominative = "Horn",
 	SingularGenitive = "Horns",
@@ -434,7 +434,7 @@ DefineLanguageNoun("Horn", {
 })
 
 DefineLanguageNoun("Huhn", {
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "Chicken",
 	SingularNominative = "Huhn",
 	SingularGenitive = "Huhns", -- could also be "Huhnes"
@@ -446,7 +446,7 @@ DefineLanguageNoun("Huhn", {
 })
 
 DefineLanguageNoun("Hunger", { -- Source: http://www.duden.de/rechtschreibung/Hunger
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "Hunger",
 	SingularNominative = "Hunger",
 	SingularAccusative = "Hunger",
@@ -459,7 +459,7 @@ DefineLanguageNoun("Hunger", { -- Source: http://www.duden.de/rechtschreibung/Hu
 })
 
 DefineLanguageNoun("Hügel", {
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "Hill",
 	SingularNominative = "Hügel",
 	SingularAccusative = "Hügel",
@@ -475,7 +475,7 @@ DefineLanguageNoun("Hügel", {
 })
 
 DefineLanguageNoun("Johann", {
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "?",
 	SingularNominative = "Johann",
 	NameSingular = true,
@@ -483,7 +483,7 @@ DefineLanguageNoun("Johann", {
 })
 
 DefineLanguageNoun("Karl", {
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "?",
 	SingularNominative = "Karl",
 	NameSingular = true,
@@ -493,7 +493,7 @@ DefineLanguageNoun("Karl", {
 })
 
 DefineLanguageNoun("Kirche", {
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "Church",
 	SingularNominative = "Kirche",
 	PluralNominative = "Kirchen",
@@ -503,7 +503,7 @@ DefineLanguageNoun("Kirche", {
 })
 
 DefineLanguageNoun("Klage", { -- Source: http://www.duden.de/rechtschreibung/Klage
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "Complaint",
 	SingularNominative = "Klage",
 	SingularAccusative = "Klage",
@@ -519,7 +519,7 @@ DefineLanguageNoun("Klage", { -- Source: http://www.duden.de/rechtschreibung/Kla
 })
 
 DefineLanguageNoun("Klaus", {
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "?",
 	SingularNominative = "Klaus",
 	NameSingular = true,
@@ -527,7 +527,7 @@ DefineLanguageNoun("Klaus", {
 })
 
 DefineLanguageNoun("Klause", { -- Source: http://www.duden.de/rechtschreibung/Klause
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "Cloister",
 	SingularNominative = "Klause",
 	SingularAccusative = "Klause",
@@ -543,7 +543,7 @@ DefineLanguageNoun("Klause", { -- Source: http://www.duden.de/rechtschreibung/Kl
 })
 
 DefineLanguageNoun("König", {
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "King",
 	SingularNominative = "König",
 	SingularGenitive = "Königs",
@@ -554,7 +554,7 @@ DefineLanguageNoun("König", {
 })
 
 DefineLanguageNoun("Königin", {
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "Queen",
 	SingularNominative = "Königin",
 	SingularGenitive = "Königin",
@@ -565,7 +565,7 @@ DefineLanguageNoun("Königin", {
 })
 
 DefineLanguageNoun("Kugel", {
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "Ball, Globe",
 	SingularNominative = "Kugel",
 	SingularAccusative = "Kugel",
@@ -581,7 +581,7 @@ DefineLanguageNoun("Kugel", {
 })
 
 DefineLanguageNoun("Kurt", {
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "?",
 	SingularNominative = "Kurt",
 	NameSingular = true,
@@ -589,7 +589,7 @@ DefineLanguageNoun("Kurt", {
 })
 
 DefineLanguageNoun("Lai", { -- Source: http://www.duden.de/rechtschreibung/Lai
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "Old French Poetry",
 	SingularNominative = "Lai",
 	SingularGenitive = "Lai", -- source also gives alternative form "Lais"
@@ -600,7 +600,7 @@ DefineLanguageNoun("Lai", { -- Source: http://www.duden.de/rechtschreibung/Lai
 })
 
 DefineLanguageNoun("Land", {
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "Country",
 	SingularNominative = "Land",
 	SingularGenitive = "Landes",
@@ -612,7 +612,7 @@ DefineLanguageNoun("Land", {
 })
 
 DefineLanguageNoun("Lothar", {
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "?",
 	SingularNominative = "Lothar",
 	NameSingular = true,
@@ -620,7 +620,7 @@ DefineLanguageNoun("Lothar", {
 })
 
 DefineLanguageNoun("Ludwig", {
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "?",
 	SingularNominative = "Ludwig",
 	NameSingular = true,
@@ -628,7 +628,7 @@ DefineLanguageNoun("Ludwig", {
 })
 
 DefineLanguageNoun("Manfred", {
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "?",
 	SingularNominative = "Manfred",
 	NameSingular = true,
@@ -636,7 +636,7 @@ DefineLanguageNoun("Manfred", {
 })
 
 DefineLanguageNoun("Mann", {
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "Man",
 	SingularNominative = "Mann",
 	PluralNominative = "Männer",
@@ -646,7 +646,7 @@ DefineLanguageNoun("Mann", {
 })
 
 DefineLanguageNoun("Mark", {
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "March",
 	SingularNominative = "Mark",
 	PluralNominative = "Marken",
@@ -656,7 +656,7 @@ DefineLanguageNoun("Mark", {
 })
 
 DefineLanguageNoun("Mühle", { -- Source: http://www.duden.de/rechtschreibung/Muehle
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "Mill",
 	SingularNominative = "Mühle",
 	SingularAccusative = "Mühle",
@@ -672,7 +672,7 @@ DefineLanguageNoun("Mühle", { -- Source: http://www.duden.de/rechtschreibung/Mu
 })
 
 DefineLanguageNoun("Mut", {
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "Courage",
 	SingularNominative = "Mut",
 	Gender = "Masculine",
@@ -682,7 +682,7 @@ DefineLanguageNoun("Mut", {
 })
 
 DefineLanguageNoun("Nuss", { -- Source: http://www.duden.de/rechtschreibung/Nuss
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "Nut",
 	SingularNominative = "Nuss",
 	SingularAccusative = "Nuss",
@@ -698,7 +698,7 @@ DefineLanguageNoun("Nuss", { -- Source: http://www.duden.de/rechtschreibung/Nuss
 })
 
 DefineLanguageNoun("Ost", {
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "Ost",
 	SingularNominative = "Ost",
 	SingularGenitive = "Ost",
@@ -708,7 +708,7 @@ DefineLanguageNoun("Ost", {
 })
 
 DefineLanguageNoun("Otto", {
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "?",
 	SingularNominative = "Otto",
 	NameSingular = true,
@@ -716,7 +716,7 @@ DefineLanguageNoun("Otto", {
 })
 
 DefineLanguageNoun("Pippin", {
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "?",
 	SingularNominative = "Pippin",
 	NameSingular = true,
@@ -724,7 +724,7 @@ DefineLanguageNoun("Pippin", {
 })
 
 DefineLanguageNoun("Rose", { -- Source: http://www.duden.de/rechtschreibung/Rose_Pflanze_Bluete_Verdickung
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "Rose",
 	SingularNominative = "Rose",
 	SingularAccusative = "Rose",
@@ -740,7 +740,7 @@ DefineLanguageNoun("Rose", { -- Source: http://www.duden.de/rechtschreibung/Rose
 })
 
 DefineLanguageNoun("Salz", {
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "Salt",
 	SingularNominative = "Salz",
 	Gender = "Masculine",
@@ -750,7 +750,7 @@ DefineLanguageNoun("Salz", {
 })
 
 DefineLanguageNoun("Schaf", {
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "Sheep",
 	SingularNominative = "Schaf",
 	SingularAccusative = "Schaf",
@@ -766,7 +766,7 @@ DefineLanguageNoun("Schaf", {
 })
 
 DefineLanguageNoun("Schloss", { -- Source: http://www.duden.de/rechtschreibung/Schloss
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "Castle, Palace",
 	SingularNominative = "Schloss",
 	SingularAccusative = "Schloss",
@@ -780,7 +780,7 @@ DefineLanguageNoun("Schloss", { -- Source: http://www.duden.de/rechtschreibung/S
 })
 
 DefineLanguageNoun("Schlossberg", { -- Source: http://www.duden.de/rechtschreibung/Schlossberg
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "Hill under a Castle, Hill under a Palace, Mountain under a Castle, Mountain under a Palace",
 	SingularNominative = "Schlossberg",
 	Gender = "Masculine",
@@ -789,7 +789,7 @@ DefineLanguageNoun("Schlossberg", { -- Source: http://www.duden.de/rechtschreibu
 })
 
 DefineLanguageNoun("Schmiede", {
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "Smithy",
 	SingularNominative = "Schmiede",
 	SingularAccusative = "Schmiede",
@@ -805,7 +805,7 @@ DefineLanguageNoun("Schmiede", {
 })
 
 DefineLanguageNoun("Schnee", {
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "Snow",
 	SingularNominative = "Schnee",
 	Gender = "Masculine",
@@ -815,7 +815,7 @@ DefineLanguageNoun("Schnee", {
 })
 
 DefineLanguageNoun("Sieg", {
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "Victory",
 	SingularNominative = "Sieg",
 	PluralNominative = "Siege",
@@ -825,7 +825,7 @@ DefineLanguageNoun("Sieg", {
 })
 
 DefineLanguageNoun("Spitze", {
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "Tip, Peak",
 	SingularNominative = "Spitze",
 	SingularAccusative = "Spitze",
@@ -841,7 +841,7 @@ DefineLanguageNoun("Spitze", {
 })
 
 DefineLanguageNoun("Stadt", {
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "City",
 	SingularNominative = "Stadt",
 	PluralNominative = "Städte",
@@ -851,7 +851,7 @@ DefineLanguageNoun("Stadt", {
 })
 
 DefineLanguageNoun("Stuhl", {
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "Chair",
 	SingularNominative = "Stuhl",
 	SingularGenitive = "Stuhls",
@@ -860,7 +860,7 @@ DefineLanguageNoun("Stuhl", {
 })
 
 DefineLanguageNoun("Tal", {
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "Valley",
 	SingularNominative = "Tal",
 	PluralNominative = "Täler",
@@ -870,7 +870,7 @@ DefineLanguageNoun("Tal", {
 })
 
 DefineLanguageNoun("Teufel", {
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "Devil",
 	SingularNominative = "Teufel",
 	SingularAccusative = "Teufel",
@@ -886,7 +886,7 @@ DefineLanguageNoun("Teufel", {
 })
 
 DefineLanguageNoun("Turm", {
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "Tower",
 	SingularNominative = "Turm",
 	SingularAccusative = "Turm",
@@ -902,13 +902,13 @@ DefineLanguageNoun("Turm", {
 })
 
 DefineLanguageNoun("Waid", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 4.
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "Woad",
 	SingularNominative = "Waid"
 })
 
 DefineLanguageNoun("Walter", {
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "?",
 	SingularNominative = "Walter",
 	NameSingular = true,
@@ -916,7 +916,7 @@ DefineLanguageNoun("Walter", {
 })
 
 DefineLanguageNoun("Wasser", {
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "Water",
 	SingularNominative = "Wasser",
 	Gender = "Neuter",
@@ -926,7 +926,7 @@ DefineLanguageNoun("Wasser", {
 })
 
 DefineLanguageNoun("Werner", {
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "?",
 	SingularNominative = "Werner",
 	NameSingular = true,
@@ -934,7 +934,7 @@ DefineLanguageNoun("Werner", {
 })
 
 DefineLanguageNoun("West", {
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "West",
 	SingularNominative = "West",
 	SingularGenitive = "West",
@@ -944,7 +944,7 @@ DefineLanguageNoun("West", {
 })
 
 DefineLanguageNoun("Wilhelm", {
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "?",
 	SingularNominative = "Wilhelm",
 	NameSingular = true,
@@ -952,7 +952,7 @@ DefineLanguageNoun("Wilhelm", {
 })
 
 DefineLanguageNoun("Wolf", {
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "Wolf",
 	SingularNominative = "Wolf",
 	PluralNominative = "Wölfe",
@@ -962,7 +962,7 @@ DefineLanguageNoun("Wolf", {
 })
 
 DefineLanguageVerb("Hacken", {
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "Chop",
 	Infinitive = "Hacken",
 	SingularFirstPersonPresent = "Hacke",
@@ -982,13 +982,13 @@ DefineLanguageVerb("Hacken", {
 })
 
 DefineLanguageAdjective("Alt", {
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "Old",
 	PrefixTypeName = {"settlement"} -- example: "Altsohl"
 })
 
 DefineLanguageAdjective("Brennend", {
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "Burning",
 	PrefixTypeName = {
 		"unit-teuton-smithy" -- seems sensible
@@ -996,7 +996,7 @@ DefineLanguageAdjective("Brennend", {
 })
 
 DefineLanguageAdjective("Feurig", {
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "Fiery",
 	PrefixTypeName = {
 		"unit-teuton-smithy" -- seems sensible
@@ -1004,7 +1004,7 @@ DefineLanguageAdjective("Feurig", {
 })
 
 DefineLanguageAdjective("Hart", { -- Source: http://www.duden.de/rechtschreibung/hart
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "Hard",
 	Comparative = "Härter",
 	Superlative = "Härteste",
@@ -1012,7 +1012,7 @@ DefineLanguageAdjective("Hart", { -- Source: http://www.duden.de/rechtschreibung
 })
 
 DefineLanguageAdjective("Neu", {
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "New",
 	PrefixTypeName = {
 		"settlement",
@@ -1021,7 +1021,7 @@ DefineLanguageAdjective("Neu", {
 })
 
 DefineLanguageAdjective("Schwartz", {
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "Black",
 	PrefixTypeName = {
 		"unit-teuton-smithy" -- seems sensible
@@ -1029,7 +1029,7 @@ DefineLanguageAdjective("Schwartz", {
 })
 
 DefineLanguageAdjective("Weiß", {
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "White",
 	PrefixTypeName = {
 		"settlement", -- example: "Weisskirchen"
@@ -1039,13 +1039,13 @@ DefineLanguageAdjective("Weiß", {
 })
 
 DefineLanguageAdjective("Wild", {
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "Wild",
 	PrefixTypeName = {"terrain-mountains"} -- example: "Wildspitze"
 })
 
 DefineLanguageAdverb("Mehr", {
-	Civilization = "teuton",
+	Language = "high-german",
 	Meaning = "More"
 })
 

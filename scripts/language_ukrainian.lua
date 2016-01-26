@@ -26,13 +26,13 @@
 --
 
 DefineLanguageNoun("Mjazka", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
-	Civilization = "ukrainian",
+	Language = "ukrainian",
 	Meaning = "Tree Sap",
 	SingularNominative = "Mjazka"
 })
 
 DefineLanguageNoun("Mjazok", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
-	Civilization = "ukrainian",
+	Language = "ukrainian",
 	Meaning = "Marrow",
 	SingularNominative = "Mjazok"
 })

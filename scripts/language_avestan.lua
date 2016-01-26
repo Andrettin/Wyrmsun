@@ -26,7 +26,7 @@
 --
 
 DefineLanguageNoun("Mīzhda", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 7.
-	Civilization = "avestan",
+	Language = "avestan",
 	Meaning = "Reward",
 	SingularNominative = "Mīzhda",
 	Gender = "Neuter"

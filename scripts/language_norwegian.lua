@@ -26,7 +26,7 @@
 --
 
 DefineLanguageNoun("Bradd", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
-	Civilization = "norwegian",
+	Language = "norwegian",
 	Meaning = "Shore, Edge",
 	SingularNominative = "Bradd",
 	Gender = "Masculine"

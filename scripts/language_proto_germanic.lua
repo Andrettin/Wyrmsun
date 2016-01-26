@@ -28,7 +28,7 @@
 -- Proto-Germanic
 
 DefineLanguageNoun("Aiza", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 11.
-	Civilization = "germanic",
+	Language = "proto-germanic",
 	Meaning = "Ore", -- source gives "Erz" as the meaning
 	SingularNominative = "Aiza", -- source also gives the alternative form "Skara"
 	Gender = "Neuter",
@@ -41,7 +41,7 @@ DefineLanguageNoun("Aiza", { -- Source: August Fick and Alf Torp, "Wortschatz de
 })
 
 DefineLanguageNoun("Ansu", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 16.
-	Civilization = "germanic",
+	Language = "proto-germanic",
 	Meaning = "God",
 	SingularNominative = "Ansu",
 	Gender = "Masculine",
@@ -50,7 +50,7 @@ DefineLanguageNoun("Ansu", { -- Source: August Fick and Alf Torp, "Wortschatz de
 })
 
 DefineLanguageNoun("Asjôn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 20.
-	Civilization = "germanic",
+	Language = "proto-germanic",
 	Meaning = "Forge", -- source gives the German "Esse" as the meaning
 	Gender = "Feminine",
 	SingularNominative = "Asjôn",
@@ -59,7 +59,7 @@ DefineLanguageNoun("Asjôn", { -- Source: August Fick and Alf Torp, "Wortschatz 
 })
 
 DefineLanguageNoun("Austa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 12.
-	Civilization = "germanic",
+	Language = "proto-germanic",
 	Meaning = "East",
 	SingularNominative = "Austa", -- source also gives the form "Austra"
 	PrefixSingular = true,
@@ -70,7 +70,7 @@ DefineLanguageNoun("Austa", { -- Source: August Fick and Alf Torp, "Wortschatz d
 })
 
 DefineLanguageNoun("Austrôn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 12.
-	Civilization = "germanic",
+	Language = "proto-germanic",
 	Meaning = "a Spring Goddess",
 	SingularNominative = "Austrôn",
 	Gender = "Feminine",
@@ -79,7 +79,7 @@ DefineLanguageNoun("Austrôn", { -- Source: August Fick and Alf Torp, "Wortschat
 })
 
 DefineLanguageNoun("Berga", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
-	Civilization = "germanic",
+	Language = "proto-germanic",
 	Meaning = "Mountain, Hill",
 	SingularNominative = "Berga",
 	SuffixSingular = true,
@@ -90,21 +90,21 @@ DefineLanguageNoun("Berga", { -- Source: August Fick and Alf Torp, "Wortschatz d
 })
 
 DefineLanguageNoun("Brazda", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
-	Civilization = "germanic",
+	Language = "proto-germanic",
 	Meaning = "Edge",
 	SingularNominative = "Brazda", -- source also gives the alternative form "Brezda"
 	Gender = "Masculine"
 })
 
 DefineLanguageNoun("Bruzdaz", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 9.
-	Civilization = "germanic",
+	Language = "proto-germanic",
 	Meaning = "Blade, Edge",
 	SingularNominative = "Bruzdaz",
 	Gender = "Masculine"
 })
 
 DefineLanguageNoun("Burg", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
-	Civilization = "germanic",
+	Language = "proto-germanic",
 	Meaning = "Castle, City",
 	SingularNominative = "Burg",
 	Gender = "Feminine",
@@ -116,28 +116,28 @@ DefineLanguageNoun("Burg", { -- Source: August Fick and Alf Torp, "Wortschatz de
 })
 
 DefineLanguageNoun("Bûra", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 141.
-	Civilization = "germanic",
+	Language = "proto-germanic",
 	Meaning = "Farmer, Peasant",
 	SingularNominative = "Bûra",
 	Gender = "Masculine"
 })
 
 DefineLanguageNoun("Dverga", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 113.
-	Civilization = "germanic",
+	Language = "proto-germanic",
 	Meaning = "Dwarf",
 	SingularNominative = "Dverga",
 	Gender = "Masculine"
 })
 
 DefineLanguageNoun("Erala", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 22.
-	Civilization = "germanic",
+	Language = "proto-germanic",
 	Meaning = "Man, Warrior",
 	SingularNominative = "Erala",
 	Gender = "Masculine"
 })
 
 DefineLanguageNoun("Garda", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 72.
-	Civilization = "germanic",
+	Language = "proto-germanic",
 	Meaning = "Enclosure, Court, Garden", -- source gives "Geheg, Hof, Garten" as the meaning
 	SingularNominative = "Garda", -- source also gives the alternate forms "Gardi" and "Gardan"
 	Gender = "Masculine",
@@ -148,7 +148,7 @@ DefineLanguageNoun("Garda", { -- Source: August Fick and Alf Torp, "Wortschatz d
 })
 
 DefineLanguageNoun("Gastiz", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 74; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2007, 3.3.5.
-	Civilization = "germanic",
+	Language = "proto-germanic",
 	Meaning = "Guest",
 	SingularNominative = "Gastiz",
 	Gender = "Masculine",
@@ -157,7 +157,7 @@ DefineLanguageNoun("Gastiz", { -- Source: August Fick and Alf Torp, "Wortschatz 
 })
 
 DefineLanguageNoun("Gavja", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 68.
-	Civilization = "germanic",
+	Language = "proto-germanic",
 	Meaning = "District", -- source gives "Gau" as the meaning
 	SingularNominative = "Gavja",
 	Gender = "Neuter",
@@ -166,14 +166,14 @@ DefineLanguageNoun("Gavja", { -- Source: August Fick and Alf Torp, "Wortschatz d
 })
 
 DefineLanguageNoun("Gazdaz", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.
-	Civilization = "germanic",
+	Language = "proto-germanic",
 	Meaning = "Rod, Prickle, Point",
 	SingularNominative = "Gazdaz",
 	Gender = "Masculine"
 })
 
 DefineLanguageNoun("Glôdi", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 82.
-	Civilization = "germanic",
+	Language = "proto-germanic",
 	Meaning = "Ember", -- source gives the German "Glut" as the meaning
 	Gender = "Feminine",
 	SingularNominative = "Glôdi",
@@ -182,13 +182,13 @@ DefineLanguageNoun("Glôdi", { -- Source: August Fick and Alf Torp, "Wortschatz 
 })
 
 DefineLanguageNoun("Gôm", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 71.
-	Civilization = "germanic",
+	Language = "proto-germanic",
 	Meaning = "Winter",
 	SingularNominative = "Gôm" -- source also gives the forms "Gam" and "Gim"
 })
 
 DefineLanguageNoun("Haima", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 52.
-	Civilization = "germanic",
+	Language = "proto-germanic",
 	Meaning = "Village, Home", -- source gives "Dorf, Heim, Heimat" as the meaning
 	SingularNominative = "Haima",
 	SingularAccusative = "Haima",
@@ -201,7 +201,7 @@ DefineLanguageNoun("Haima", { -- Source: August Fick and Alf Torp, "Wortschatz d
 })
 
 DefineLanguageNoun("Hamara", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 46.
-	Civilization = "germanic",
+	Language = "proto-germanic",
 	Meaning = "Stone, Hammer", -- source gives the German "Stein, Hammer"
 	Gender = "Masculine",
 	SingularNominative = "Hamara",
@@ -210,41 +210,41 @@ DefineLanguageNoun("Hamara", { -- Source: August Fick and Alf Torp, "Wortschatz 
 })
 
 DefineLanguageNoun("Hazdaz", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
-	Civilization = "germanic",
+	Language = "proto-germanic",
 	Meaning = "Head Hair",
 	SingularNominative = "Hazdaz",
 	Gender = "Masculine"
 })
 
 DefineLanguageNoun("Hezdōn", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
-	Civilization = "germanic",
+	Language = "proto-germanic",
 	Meaning = "Flax Fiber",
 	SingularNominative = "Hezdōn",
 	Uncountable = true -- as a material, it is likely to be uncountable
 })
 
 DefineLanguageNoun("Hraznō", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.
-	Civilization = "germanic",
+	Language = "proto-germanic",
 	Meaning = "Wave",
 	SingularNominative = "Hraznō",
 	Gender = "Feminine"
 })
 
 DefineLanguageNoun("Huzda", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.
-	Civilization = "germanic",
+	Language = "proto-germanic",
 	Meaning = "Hidden Treasure",
 	SingularNominative = "Huzda"
 })
 
 DefineLanguageNoun("Kizna", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 4, 7.
-	Civilization = "germanic",
+	Language = "proto-germanic",
 	Meaning = "Resinous Wood",
 	SingularNominative = "Kizna",
 	Gender = "Masculine"
 })
 
 DefineLanguageNoun("Landa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 184.
-	Civilization = "germanic",
+	Language = "proto-germanic",
 	Meaning = "Terra Firma, Land, Country", -- source gives the German words "terra firma, Land"
 	SingularNominative = "Landa",
 	Gender = "Neuter",
@@ -253,7 +253,7 @@ DefineLanguageNoun("Landa", { -- Source: August Fick and Alf Torp, "Wortschatz d
 })
 
 DefineLanguageNoun("Lauda", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 181.
-	Civilization = "germanic",
+	Language = "proto-germanic",
 	Meaning = "Metal, Lead",
 	SingularNominative = "Lauda",
 	Gender = "Neuter",
@@ -267,14 +267,14 @@ DefineLanguageNoun("Lauda", { -- Source: August Fick and Alf Torp, "Wortschatz d
 })
 
 DefineLanguageNoun("Maitila", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 164.
-	Civilization = "germanic",
+	Language = "proto-germanic",
 	Meaning = "Chisel", -- source gives meaning as "Meißel"
 	SingularNominative = "Maitila",
 	Gender = "Masculine"
 })
 
 DefineLanguageNoun("Mark", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 160.
-	Civilization = "germanic",
+	Language = "proto-germanic",
 	Meaning = "March, Border, Borderland",
 	SingularNominative = "Mark", -- source also gives the form "Markô"
 	Gender = "Feminine",
@@ -283,55 +283,55 @@ DefineLanguageNoun("Mark", { -- Source: August Fick and Alf Torp, "Wortschatz de
 })
 
 DefineLanguageNoun("Mazgaz", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 9.
-	Civilization = "germanic",
+	Language = "proto-germanic",
 	Meaning = "Marrow",
 	SingularNominative = "Mazgaz",
 	Gender = "Masculine"
 })
 
 DefineLanguageNoun("Mizdō", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 7.
-	Civilization = "germanic",
+	Language = "proto-germanic",
 	Meaning = "Reward, Payment, Fee",
 	SingularNominative = "Mizdō",
 	Gender = "Feminine"
 })
 
 DefineLanguageNoun("Razdō", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 9.
-	Civilization = "germanic",
+	Language = "proto-germanic",
 	Meaning = "Voice, Sound",
 	SingularNominative = "Razdō",
 	Gender = "Feminine"
 })
 
 DefineLanguageNoun("Razdō", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 10.
-	Civilization = "germanic",
+	Language = "proto-germanic",
 	Meaning = "Food, Meal",
 	SingularNominative = "Razdō",
 	Gender = "Feminine"
 })
 
 DefineLanguageNoun("Razna", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
-	Civilization = "germanic",
+	Language = "proto-germanic",
 	Meaning = "House",
 	SingularNominative = "Razna",
 	Gender = "Neuter"
 })
 
 DefineLanguageNoun("Reupôn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 169.
-	Civilization = "germanic",
+	Language = "proto-germanic",
 	Meaning = "Ptarmigan", -- source gives meaning as "Schneehuhn (tetrao lagopus)"
 	SingularNominative = "Reupôn" -- source also gives the forms "Gam" and "Gim"
 })
 
 DefineLanguageNoun("Ristila", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 176.
-	Civilization = "germanic",
+	Language = "proto-germanic",
 	Meaning = "Plowshare", -- source gives meaning as "Sech, Pflugeisen"
 	SingularNominative = "Ristila",
 	Gender = "Masculine"
 })
 
 DefineLanguageNoun("Rîkia", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
-	Civilization = "germanic",
+	Language = "proto-germanic",
 	Meaning = "Power, Dominion, Realm", -- source gives meaning as "Macht, Herrschaft, Reich"
 	SingularNominative = "Rîkia",
 	Gender = "Neuter",
@@ -340,7 +340,7 @@ DefineLanguageNoun("Rîkia", { -- Source: August Fick and Alf Torp, "Wortschatz 
 })
 
 DefineLanguageNoun("Rîþa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
-	Civilization = "germanic",
+	Language = "proto-germanic",
 	Meaning = "Current, Stream", -- source gives meaning as "Strom, Bach"
 	SingularNominative = "Rîþa",
 	SuffixSingular = true,
@@ -348,7 +348,7 @@ DefineLanguageNoun("Rîþa", { -- Source: August Fick and Alf Torp, "Wortschatz 
 })
 
 DefineLanguageNoun("Saiþa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 221.
-	Civilization = "germanic",
+	Language = "proto-germanic",
 	Meaning = "Magic", -- source gives the German "Zauber"
 	Gender = "Masculine",
 	SingularNominative = "Saiþa",
@@ -357,13 +357,13 @@ DefineLanguageNoun("Saiþa", { -- Source: August Fick and Alf Torp, "Wortschatz 
 })
 
 DefineLanguageNoun("Skaran", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 227.
-	Civilization = "germanic",
+	Language = "proto-germanic",
 	Meaning = "Plowshare", -- source gives "Schar, Pflugeisen" as the meaning
 	SingularNominative = "Skaran" -- source also gives the alternative form "Skara"
 })
 
 DefineLanguageNoun("Smiþjôn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 264.
-	Civilization = "germanic",
+	Language = "proto-germanic",
 	Meaning = "Smithy", -- source gives "Schmiede" as the meaning
 	Gender = "Feminine",
 	SingularNominative = "Smiþjôn",
@@ -372,14 +372,14 @@ DefineLanguageNoun("Smiþjôn", { -- Source: August Fick and Alf Torp, "Wortscha
 })
 
 DefineLanguageNoun("Smiþu", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 263.
-	Civilization = "germanic",
+	Language = "proto-germanic",
 	Meaning = "Smith, Master Craftsman", -- source gives "Schmied, Werkmeister" as the meaning
 	Gender = "Masculine",
 	SingularNominative = "Smiþu" -- source also gives the alternative form "Smiþa"
 })
 
 DefineLanguageNoun("Snaigva", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 260.
-	Civilization = "germanic",
+	Language = "proto-germanic",
 	Meaning = "Snow",
 	SingularNominative = "Snaigva", -- source also gives the forms "Snaiva", "Snaigvi" and "Snaigi"
 	Gender = "Masculine",
@@ -389,7 +389,7 @@ DefineLanguageNoun("Snaigva", { -- Source: August Fick and Alf Torp, "Wortschatz
 })
 
 DefineLanguageNoun("Tandran", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 84.
-	Civilization = "germanic",
+	Language = "proto-germanic",
 	Meaning = "Fire, Burning Coal", -- source gives the German "Feuer, glühende Kohle" as the meaning
 	Gender = "Masculine",
 	SingularNominative = "Tandran",
@@ -398,7 +398,7 @@ DefineLanguageNoun("Tandran", { -- Source: August Fick and Alf Torp, "Wortschatz
 })
 
 DefineLanguageNoun("Tîva", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 88.
-	Civilization = "germanic",
+	Language = "proto-germanic",
 	Meaning = "God", -- can also mean the name of a particular god
 	SingularNominative = "Tîva",
 	Gender = "Masculine",
@@ -407,7 +407,7 @@ DefineLanguageNoun("Tîva", { -- Source: August Fick and Alf Torp, "Wortschatz d
 })
 
 DefineLanguageNoun("Þurpa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 100.
-	Civilization = "germanic",
+	Language = "proto-germanic",
 	Meaning = "Crowd, Village", -- source gives "Schar, Menschenhaufen, Dorf" as the meaning
 	SingularNominative = "Þurpa",
 	Gender = "Neuter",
@@ -416,20 +416,20 @@ DefineLanguageNoun("Þurpa", { -- Source: August Fick and Alf Torp, "Wortschatz 
 })
 
 DefineLanguageNoun("Uzdaz", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 7.
-	Civilization = "germanic",
+	Language = "proto-germanic",
 	Meaning = "Point, Place",
 	SingularNominative = "Uzdaz",
 	Gender = "Masculine"
 })
 
 DefineLanguageNoun("Uzlaga", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 10.
-	Civilization = "germanic",
+	Language = "proto-germanic",
 	Meaning = "Fate",
 	SingularNominative = "Uzlaga"
 })
 
 DefineLanguageNoun("Vîhsa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 206.
-	Civilization = "germanic",
+	Language = "proto-germanic",
 	Meaning = "Village", -- source gives "Flecken, Dorf" as the meaning
 	SingularNominative = "Vîhsa",
 	Gender = "Neuter",
@@ -438,88 +438,88 @@ DefineLanguageNoun("Vîhsa", { -- Source: August Fick and Alf Torp, "Wortschatz 
 })
 
 DefineLanguageNoun("Vikkan", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 206.
-	Civilization = "germanic",
+	Language = "proto-germanic",
 	Meaning = "Sorcerer",
 	SingularNominative = "Vikkan",
 	Gender = "Masculine"
 })
 
 DefineLanguageNoun("Waida", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 4.
-	Civilization = "germanic",
+	Language = "proto-germanic",
 	Meaning = "Woad",
 	SingularNominative = "Waida" -- source also gives alternative form "Waizda"
 })
 
 DefineLanguageNoun("Walakuzjōn", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 10.
-	Civilization = "germanic",
+	Language = "proto-germanic",
 	Meaning = "Valkyrie",
 	SingularNominative = "Walakuzjōn",
 	Gender = "feminine"
 })
 
 DefineLanguageVerb("Laizijanã", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 4-5.
-	Civilization = "germanic",
+	Language = "proto-germanic",
 	Meaning = "Teach",
 	Infinitive = "Laizijanã" -- causative verb
 })
 
 DefineLanguageVerb("Liznōn", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
-	Civilization = "germanic",
+	Language = "proto-germanic",
 	Meaning = "Learn",
 	Infinitive = "Liznōn"
 })
 
 DefineLanguageVerb("Nazjan", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
-	Civilization = "germanic",
+	Language = "proto-germanic",
 	Meaning = "Heal, Rescue, Sustain",
 	Infinitive = "Nazjan"
 })
 
 DefineLanguageVerb("Twiznōn", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
-	Civilization = "germanic",
+	Language = "proto-germanic",
 	Meaning = "Twine",
 	Infinitive = "Twiznōn"
 })
 
 DefineLanguageAdjective("Mēria", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
-	Civilization = "germanic",
+	Language = "proto-germanic",
 	Meaning = "More",
 	Comparative = "Maizan",
 	Superlative = "Maista"
 })
 
 DefineLanguageAdjective("Twiznaz", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 6.
-	Civilization = "germanic",
+	Language = "proto-germanic",
 	Meaning = "Twofold" -- source actually gives "two each" (je zwei) as the meaning in p. 6, but later there is an equivalent Proto-Germanic word for "threefold" which is noted as "je drei"; and besides, in p. 1 "Twofold" is given as a possible meaning
 	 -- maybe is an adverb instead?
 })
 
 DefineLanguageAdjective("Þrizna", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
-	Civilization = "germanic",
+	Language = "proto-germanic",
 	Meaning = "Threefold" -- source gives the meaning as "threefold, the three (je drei)"
 	 -- maybe is an adverb instead?
 })
 
 DefineLanguageAdjective("Vîha", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 206.
-	Civilization = "germanic",
+	Language = "proto-germanic",
 	Meaning = "Holy",
 	PrefixTypeName = {"settlement", "unit-germanic-smithy"}, -- seems sensible in face of a lack of examples
 })
 
 DefineLanguagePronoun("Miz", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
-	Civilization = "germanic",
+	Language = "proto-germanic",
 	Meaning = "Me", -- dative
 	Dative = "Miz"
 })
 
 DefineLanguagePronoun("Wīz", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 5.
-	Civilization = "germanic",
+	Language = "proto-germanic",
 	Meaning = "We",
 	Nominative = "Wīz"
 })
 
 DefineLanguageAdverb("Maiz", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
-	Civilization = "germanic",
+	Language = "proto-germanic",
 	Meaning = "More"
 })
 
@@ -528,7 +528,7 @@ DefineLanguageAdverb("Maiz", { -- Source: Sean Crist, "An Analysis of *z loss in
 -- Must re-check to see if actually correct
 
 DefineLanguageNoun("Godagaz", {
-	Civilization = "germanic",
+	Language = "proto-germanic",
 	Meaning = "Goody, Good One",
 	SingularNominative = "Godagaz",
 	NameSingular = true,
@@ -536,7 +536,7 @@ DefineLanguageNoun("Godagaz", {
 })
 
 DefineLanguageNoun("Hadu", {
-	Civilization = "germanic",
+	Language = "proto-germanic",
 	Meaning = "Battle",
 	SingularNominative = "Hadu",
 	PrefixSingular = true,
@@ -544,7 +544,7 @@ DefineLanguageNoun("Hadu", {
 })
 
 DefineLanguageNoun("Hagu", {
-	Civilization = "germanic",
+	Language = "proto-germanic",
 	Meaning = "Small Property",
 	SingularNominative = "Hadu",
 	PrefixSingular = true,
@@ -552,7 +552,7 @@ DefineLanguageNoun("Hagu", {
 })
 
 DefineLanguageNoun("Hlewa", {
-	Civilization = "germanic",
+	Language = "proto-germanic",
 	Meaning = "Glory",
 	SingularNominative = "Hlewa",
 	PrefixSingular = true,
@@ -560,7 +560,7 @@ DefineLanguageNoun("Hlewa", {
 })
 
 DefineLanguageNoun("Holta", {
-	Civilization = "germanic",
+	Language = "proto-germanic",
 	Meaning = "Wood",
 	SingularNominative = "Holta",
 	PrefixSingular = true,
@@ -568,7 +568,7 @@ DefineLanguageNoun("Holta", {
 })
 
 DefineLanguageNoun("Laikaz", {
-	Civilization = "germanic",
+	Language = "proto-germanic",
 	Meaning = "Dancer",
 	SingularNominative = "Laikaz",
 	SuffixSingular = true,
@@ -576,7 +576,7 @@ DefineLanguageNoun("Laikaz", {
 })
 
 DefineLanguageNoun("Ridaz", {
-	Civilization = "germanic",
+	Language = "proto-germanic",
 	Meaning = "Rider",
 	SingularNominative = "Ridaz",
 	SuffixSingular = true,
@@ -584,7 +584,7 @@ DefineLanguageNoun("Ridaz", {
 })
 
 DefineLanguageNoun("Riks", {
-	Civilization = "germanic",
+	Language = "proto-germanic",
 	Meaning = "Ruler",
 	SingularNominative = "Riks",
 	SuffixSingular = true,
@@ -592,7 +592,7 @@ DefineLanguageNoun("Riks", {
 })
 
 DefineLanguageNoun("Staldaz", {
-	Civilization = "germanic",
+	Language = "proto-germanic",
 	Meaning = "Owner",
 	SingularNominative = "Staldaz",
 	SuffixSingular = true,
@@ -600,7 +600,7 @@ DefineLanguageNoun("Staldaz", {
 })
 
 DefineLanguageNoun("Theuda", {
-	Civilization = "germanic",
+	Language = "proto-germanic",
 	Meaning = "People",
 	SingularNominative = "Theuda",
 	PrefixSingular = true,
@@ -608,7 +608,7 @@ DefineLanguageNoun("Theuda", {
 })
 
 DefineLanguageNoun("Wagigaz", {
-	Civilization = "germanic",
+	Language = "proto-germanic",
 	Meaning = "One Who Moves Along Impetuously",
 	SingularNominative = "Wagigaz",
 	NameSingular = true,
@@ -616,7 +616,7 @@ DefineLanguageNoun("Wagigaz", {
 })
 
 DefineLanguageNoun("Wiwaz", {
-	Civilization = "germanic",
+	Language = "proto-germanic",
 	Meaning = "Darter",
 	SingularNominative = "Wiwaz",
 	NameSingular = true,
@@ -624,7 +624,7 @@ DefineLanguageNoun("Wiwaz", {
 })
 
 DefineLanguageNoun("Wodu", {
-	Civilization = "germanic",
+	Language = "proto-germanic",
 	Meaning = "Fury",
 	SingularNominative = "Wodu",
 	PrefixSingular = true,

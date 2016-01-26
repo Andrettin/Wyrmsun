@@ -26,185 +26,185 @@
 --
 
 DefineLanguageNoun("Brart", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
-	Civilization = "old-high-german",
+	Language = "old-high-german",
 	Meaning = "Edge, Forepart of a Ship",
 	SingularNominative = "Brart",
 	Gender = "Masculine"
 })
 
 DefineLanguageNoun("Brort", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 9.
-	Civilization = "old-high-german",
+	Language = "old-high-german",
 	Meaning = "Skewer, Projectile, Edge, Rim, Forepart of a Ship",
 	SingularNominative = "Brort",
 	Gender = "Masculine"
 })
 
 DefineLanguageNoun("Chien", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 4.
-	Civilization = "old-high-german",
+	Language = "old-high-german",
 	Meaning = "Resinous Wood",
 	SingularNominative = "Chien" -- source also gives alternative forms "Kien" and "Kên"
 })
 
 DefineLanguageNoun("Ēht", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
-	Civilization = "old-high-german",
+	Language = "old-high-german",
 	Meaning = "Property", -- source gives the German "Besitz"
 	SingularNominative = "Ēht"
 })
 
 DefineLanguageNoun("Fisk", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
-	Civilization = "old-high-german",
+	Language = "old-high-german",
 	Meaning = "Fish",
 	SingularNominative = "Fisk"
 })
 
 DefineLanguageNoun("Gart", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
-	Civilization = "old-high-german",
+	Language = "old-high-german",
 	Meaning = "Rod, Prickle",
 	SingularNominative = "Gart"
 })
 
 DefineLanguageNoun("Hagazussa", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 200.
-	Civilization = "old-high-german",
+	Language = "old-high-german",
 	Meaning = "Travelling Actor or Minstrel who Performs in Women's Clothing",
 	SingularNominative = "Hagazussa",
 	PluralNominative = "Hagazussan"
 })
 
 DefineLanguageNoun("Herza", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
-	Civilization = "old-high-german",
+	Language = "old-high-german",
 	Meaning = "Heart",
 	SingularNominative = "Herza"
 })
 
 DefineLanguageNoun("Hleib", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
-	Civilization = "old-high-german",
+	Language = "old-high-german",
 	Meaning = "Bread",
 	SingularNominative = "Hleib"
 })
 
 DefineLanguageNoun("Hort", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.
-	Civilization = "old-high-german",
+	Language = "old-high-german",
 	Meaning = "Treasure",
 	SingularNominative = "Hort"
 })
 
 DefineLanguageNoun("Houbit", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
-	Civilization = "old-high-german",
+	Language = "old-high-german",
 	Meaning = "Main", -- source gives German noun "Haupt" as transation
 	SingularNominative = "Houbit"
 })
 
 DefineLanguageNoun("Hunt", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
-	Civilization = "old-high-german",
+	Language = "old-high-german",
 	Meaning = "Dog",
 	SingularNominative = "Hunt"
 })
 
 DefineLanguageNoun("Kōl", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
-	Civilization = "old-high-german",
+	Language = "old-high-german",
 	Meaning = "Cabbage",
 	SingularNominative = "Kōl"
 })
 
 DefineLanguageNoun("Lōn", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
-	Civilization = "old-high-german",
+	Language = "old-high-german",
 	Meaning = "Pay", -- source gives German word "Lohn" as transation
 	SingularNominative = "Lōn"
 })
 
 DefineLanguageNoun("Marc", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 9.
-	Civilization = "old-high-german",
+	Language = "old-high-german",
 	Meaning = "Marrow",
 	SingularNominative = "Marc",
 	SingularGenitive = "Marges" -- source also gives "Marages" as a possible genitive
 })
 
 DefineLanguageNoun("Mēta", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
-	Civilization = "old-high-german",
+	Language = "old-high-german",
 	Meaning = "Reward, Payment",
 	SingularNominative = "Mēta" -- source also gives as alternatives the forms "Miata" and "Mieta"
 })
 
 DefineLanguageNoun("Nara", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
-	Civilization = "old-high-german",
+	Language = "old-high-german",
 	Meaning = "Salvation, Rescue, Nourishment, Sustenance", -- meaning given for Middle High German, but not for Old High German, presumably because both are the same
 	SingularNominative = "Nara",
 	Gender = "Feminine"
 })
 
 DefineLanguageNoun("Orlac", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 10.
-	Civilization = "old-high-german",
+	Language = "old-high-german",
 	Meaning = "Fate",
 	SingularNominative = "Orlac",
 	Gender = "Masculine"
 })
 
 DefineLanguageNoun("Ort", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.
-	Civilization = "old-high-german",
+	Language = "old-high-german",
 	Meaning = "Point, Corner, Edge of a Part, Edge of a Piece, Edge of a Small Coin",
 	SingularNominative = "Ort",
 	Gender = "Masculine"
 })
 
 DefineLanguageNoun("Ouga", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
-	Civilization = "old-high-german",
+	Language = "old-high-german",
 	Meaning = "Eye",
 	SingularNominative = "Ouga"
 })
 
 DefineLanguageNoun("Rarta", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 10.
-	Civilization = "old-high-german",
+	Language = "old-high-german",
 	Meaning = "Voice, Modulation",
 	SingularNominative = "Rarta",
 	Gender = "Feminine"
 })
 
 DefineLanguageNoun("Sēula", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
-	Civilization = "old-high-german",
+	Language = "old-high-german",
 	Meaning = "Soul",
 	SingularNominative = "Sēula" -- source also gives "Sēla"
 })
 
 DefineLanguageNoun("Suht", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
-	Civilization = "old-high-german",
+	Language = "old-high-german",
 	Meaning = "Sickness",
 	SingularNominative = "Suht"
 })
 
 DefineLanguageNoun("Teil", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
-	Civilization = "old-high-german",
+	Language = "old-high-german",
 	Meaning = "Part",
 	SingularNominative = "Teil"
 })
 
 DefineLanguageNoun("Tōd", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
-	Civilization = "old-high-german",
+	Language = "old-high-german",
 	Meaning = "Death",
 	SingularNominative = "Tōd"
 })
 
 DefineLanguageNoun("Urlaga", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 10.
-	Civilization = "old-high-german",
+	Language = "old-high-german",
 	Meaning = "Fate",
 	SingularNominative = "Urlaga",
 	Gender = "Feminine"
 })
 
 DefineLanguageNoun("Weg", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
-	Civilization = "old-high-german",
+	Language = "old-high-german",
 	Meaning = "Way",
 	SingularNominative = "Weg"
 })
 
 DefineLanguageNoun("Weit", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 4, 7.
-	Civilization = "old-high-german",
+	Language = "old-high-german",
 	Meaning = "Woad",
 	SingularNominative = "Weit",
 	Gender = "Masculine"
 })
 
 DefineLanguageNoun("Wurm", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
-	Civilization = "old-high-german",
+	Language = "old-high-german",
 	Meaning = "Worm, Serpent", -- probably could be extended to mean "wyrm" as well
 	SingularNominative = "Wurm"
 })

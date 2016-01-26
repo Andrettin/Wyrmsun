@@ -26,7 +26,7 @@
 --
 
 DefineLanguageNoun("Ēr", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
-	Civilization = "old-swedish",
+	Language = "old-swedish",
 	Meaning = "Bronze",
 	SingularNominative = "Ēr"
 })

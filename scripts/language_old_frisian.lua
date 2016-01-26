@@ -26,39 +26,39 @@
 --
 
 DefineLanguageNoun("Hēde", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
-	Civilization = "old-frisian",
+	Language = "old-frisian",
 	Meaning = "Flax Fiber",
 	SingularNominative = "Hēde",
 	Uncountable = true -- as a material, it is likely to be uncountable
 })
 
 DefineLanguageNoun("Marg", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
-	Civilization = "old-frisian",
+	Language = "old-frisian",
 	Meaning = "Marrow",
 	SingularNominative = "Marg"
 })
 
 DefineLanguageNoun("Mēde", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 7.
-	Civilization = "old-frisian",
+	Language = "old-frisian",
 	Meaning = "Reward, Rental, Payment, Gift",
 	SingularNominative = "Mēde", -- source also gives as alternatives the forms "Mīde", "Meide" and "Hēde"
 	Gender = "Feminine"
 })
 
 DefineLanguageNoun("Ord", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
-	Civilization = "old-frisian",
+	Language = "old-frisian",
 	Meaning = "Point, Place", -- source gives the meaning as "(spear)point, place"
 	SingularNominative = "Ord"
 })
 
 DefineLanguageNoun("Ransa", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
-	Civilization = "old-frisian",
+	Language = "old-frisian",
 	Meaning = "House",
 	SingularNominative = "Ransa"
 })
 
 DefineLanguageNoun("Wêd", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 4.
-	Civilization = "old-frisian",
+	Language = "old-frisian",
 	Meaning = "Woad",
 	SingularNominative = "Wêd"
 })

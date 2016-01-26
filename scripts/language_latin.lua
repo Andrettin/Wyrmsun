@@ -26,61 +26,61 @@
 --
 
 DefineLanguageNoun("Alucitae", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 101.
-	Civilization = "latin",
+	Language = "latin",
 	Meaning = "Gnats, Mosquitos",
 	PluralNominative = "Alucitae"
 })
 
 DefineLanguageNoun("Caesaries", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 7.
-	Civilization = "latin",
+	Language = "latin",
 	Meaning = "Head Hair",
 	SingularNominative = "Caesaries"
 })
 
 DefineLanguageNoun("Conopes", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 101.
-	Civilization = "latin",
+	Language = "latin",
 	Meaning = "Gnats",
 	PluralNominative = "Conopes"
 })
 
 DefineLanguageNoun("Conopeum", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 102.
-	Civilization = "latin",
+	Language = "latin",
 	Meaning = "Mosquito Net",
 	SingularNominative = "Conopeum"
 })
 
 DefineLanguageNoun("Custos", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
-	Civilization = "latin",
+	Language = "latin",
 	Meaning = "Guard", -- source gives meaning as "a Guard"
 	SingularNominative = "Custos"
 })
 
 DefineLanguageNoun("Gallus", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 101.
-	Civilization = "latin",
+	Language = "latin",
 	Meaning = "Eunuch",
 	SingularNominative = "Gallus",
 	PluralNominative = "Galli"
 })
 
 DefineLanguageNoun("Hasta", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
-	Civilization = "latin",
+	Language = "latin",
 	Meaning = "Rod, Shaft, Spear",
 	SingularNominative = "Hasta"
 })
 
 DefineLanguageNoun("Sūs", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
-	Civilization = "latin",
+	Language = "latin",
 	Meaning = "Sow",
 	SingularNominative = "Sūs"
 })
 
 DefineLanguageVerb("Alucinare", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 101.
-	Civilization = "latin",
+	Language = "latin",
 	Meaning = "To Wander in Mind, Speak while in such a State",
 	Infinitive = "Alucinare" -- presumably it is the infinitive
 })
 
 DefineLanguageAdjective("Verus", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 99.
-	Civilization = "latin",
+	Language = "latin",
 	Meaning = "True, Real"
 })

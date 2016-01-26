@@ -26,28 +26,28 @@
 --
 
 DefineLanguageNoun("Késara", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 7.
-	Civilization = "sanskrit",
+	Language = "sanskrit",
 	Meaning = "Hair, Mane",
 	SingularNominative = "Késara",
 	Gender = "Masculine"
 })
 
 DefineLanguageNoun("Majjá", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
-	Civilization = "sanskrit",
+	Language = "sanskrit",
 	Meaning = "Marrow",
 	SingularNominative = "Majjá", -- the accent in the source was different, but I could not identify the accent to reproduce it here
 	Gender = "Feminine"
 })
 
 DefineLanguageNoun("Majján", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
-	Civilization = "sanskrit",
+	Language = "sanskrit",
 	Meaning = "Marrow",
 	SingularNominative = "Majján",
 	Gender = "Masculine"
 })
 
 DefineLanguageNoun("Mīḍhá", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 7.
-	Civilization = "sanskrit",
+	Language = "sanskrit",
 	Meaning = "Reward from a Battle, Reward from a Competition",
 	SingularNominative = "Mīḍhá",
 	Gender = "Neuter"

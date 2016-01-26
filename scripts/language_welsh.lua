@@ -26,19 +26,19 @@
 --
 
 DefineLanguageNoun("Hud", { -- presumably a noun; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 121.
-	Civilization = "welsh",
+	Language = "welsh",
 	Meaning = "Magic",
 	SingularNominative = "Hud"
 })
 
 DefineLanguageVerb("Brathu", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
-	Civilization = "welsh",
+	Language = "welsh",
 	Meaning = "Prick, Bite",
 	Infinitive = "Brathu"
 })
 
 DefineLanguageVerb("Hudo", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 121.
-	Civilization = "welsh",
+	Language = "welsh",
 	Meaning = "Work Magic, Work by Magic",
 	Infinitive = "Hudo"
 })

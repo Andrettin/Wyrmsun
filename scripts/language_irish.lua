@@ -26,45 +26,45 @@
 --
 
 DefineLanguageNoun("Árus", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
-	Civilization = "irish",
+	Language = "irish",
 	Meaning = "Dwelling",
 	SingularNominative = "Árus"
 })
 
 DefineLanguageNoun("Brot", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
-	Civilization = "irish",
+	Language = "irish",
 	Meaning = "Prickle",
 	SingularNominative = "Brot",
 	Gender = "Masculine"
 })
 
 DefineLanguageNoun("Gas", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
-	Civilization = "irish",
+	Language = "irish",
 	Meaning = "Sapling, Sprout, Shoot",
 	SingularNominative = "Gas",
 	Gender = "Feminine"
 })
 
 DefineLanguageNoun("Gat", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
-	Civilization = "irish",
+	Language = "irish",
 	Meaning = "Rod",
 	SingularNominative = "Gat"
 })
 
 DefineLanguageNoun("Gius", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 7.
-	Civilization = "irish",
+	Language = "irish",
 	Meaning = "Fir, Spruce",
 	SingularNominative = "Gius"
 })
 
 DefineLanguageNoun("Kass", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
-	Civilization = "irish",
+	Language = "irish",
 	Meaning = "Curl, Tress",
 	SingularNominative = "Kass"
 })
 
 DefineLanguageNoun("Medg", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
-	Civilization = "irish",
+	Language = "irish",
 	Meaning = "Whey",
 	SingularNominative = "Medg",
 	Gender = "Feminine"
