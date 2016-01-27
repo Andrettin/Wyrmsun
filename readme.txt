@@ -73,9 +73,10 @@ https://github.com/Andrettin/Wyrmsun
 
 * Items
 - Scrolls can now drop from town hall and stronghold type buildings (scrolls always have a property associated with them).
-- Added "Suebi Allegiance" spell for scrolls, which allows Teuton Kriegers to transform into Suebi Kriegers.
+- Added "Suebi Allegiance" spell for scrolls, which allows Teuton units to transform into their Suebi faction-specific equivalents (if any).
 - Added "Detachment" spell for scrolls, which allows a faction-specific unit to transform into its civilization's equivalent unit.
 - Added "Forgetfulness" spell for scrolls, which allows retraining a unit.
+- Added "Frank Allegiance" spell for scrolls, which allows Teuton units to transform into their Frank faction-specific equivalents (if any).
 - Rings and amulets now always have a property.
 - Scrolls can be generated with literary works inscribed on them. Reading these will provide a very small (but persistent) bonus to your character.
 - Added Fafnismol (literary work, scroll) (+1% damage bonus vs. dragons) (dropped by dwarven Mead Halls and Bastions).

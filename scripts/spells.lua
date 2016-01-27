@@ -176,6 +176,24 @@ DefineSpell("spell-puncture",
 )
 
 -- spells to change units to their faction equivalents
+DefineSpell("spell-frank-allegiance",
+	"showname", _("Frank Allegiance"),
+	"manacost", 0,
+	"range", 0,
+	"target", "self",
+	"condition", {
+		"organic", "only",
+		"Building", "false",
+		"faction-equivalent", "teuton", "Frank Tribe"
+	},
+	"action", {
+		{"spawn-missile", "missile", "missile-magic-effect", "start-point", {"base", "target"}},
+		{"polymorph", "civilization", "teuton", "faction", "Frank Tribe"}
+	},
+	"item-spell", "scroll",
+	"sound-when-cast", "magic-holy"
+)
+
 DefineSpell("spell-suebi-allegiance",
 	"showname", _("Suebi Allegiance"),
 	"manacost", 0,
