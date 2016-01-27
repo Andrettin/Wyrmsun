@@ -89,6 +89,7 @@ https://github.com/Andrettin/Wyrmsun
 * Units
 - When right-clicking on a tile-based resource, workers who are already carrying the resource at maximum capacity will now return goods and then begin harvesting.
 - When right-clicking on a unit-based resource, workers who are already carrying the resource at maximum capacity will now begin harvesting after returning goods.
+- Frank Ritters now have their own portrait (if the player has the Frank Faction Flair DLC).
 
 -----------------------------------------------------------------------
 - 1.9.9
