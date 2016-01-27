@@ -1100,6 +1100,9 @@ Mikodrak:
 /graphics/missiles/big_fire_extra_1.png (later modified by Jinn) (licensed under the CC0)
 /graphics/missiles/small_fire.png (later modified by Jinn) (licensed under the CC0)
 
+Mrmo Tarius:
+/graphics/neutral/icons/serfdom.png (licensed under the CC0)
+
 Oray Studios:
 /graphics/ui/gold_extra_1.png (licensed under the GPL 2.0)
 /graphics/ui/mana_icon.png (licensed under the GPL 2.0)

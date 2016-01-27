@@ -130,6 +130,12 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-serfdom",
+	Size = {46, 38},
+	File = "neutral/icons/serfdom.png"
+})
+
+DefineIcon({
 	Name = "icon-level-up",
 	Size = {46, 38},
 	File = "neutral/icons/level_up.png"
