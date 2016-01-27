@@ -1451,7 +1451,8 @@ Load("scripts/menus/custom_hero.lua")
 
 SetGrabMouse(wyr.preferences.GrabMouse)
 
--- load mods now
+-- load DLCs and mods now
+LoadDLCs()
 LoadMods()
 
 function GameStarting()

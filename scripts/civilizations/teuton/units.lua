@@ -482,6 +482,14 @@ DefineUnitType("unit-teuton-ritter", { Name = _("Ritter"),
 	}
 } )
 
+DefineUnitType("unit-frank-horseman", { Name = _("Ritter"),
+	Parent = "unit-teuton-ritter",
+	Civilization = "teuton",
+	Faction = "Frank Tribe",
+	Armor = 4, BasicDamage = 14, -- +1 armor, +1 damage
+	Points = 60 -- +10 points
+} )
+
 DefineUnitType("unit-teuton-catapult", { Name = _("Catapult"),
 	Parent = "unit-template-siege-engine",
 	Civilization = "teuton",

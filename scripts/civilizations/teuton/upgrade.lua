@@ -171,14 +171,14 @@ DefineModifier("upgrade-teuton-spatha",
 	{"BasicDamage", 2},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-suebi-swordsman"}, {"apply-to", "unit-teuton-spearman"},
-	{"apply-to", "unit-teuton-ritter"}
+	{"apply-to", "unit-teuton-ritter"}, {"apply-to", "unit-frank-horseman"}
 )
 
 DefineModifier("upgrade-teuton-iron-shield",
 	{"Armor", 2},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-suebi-swordsman"}, {"apply-to", "unit-teuton-spearman"},
-	{"apply-to", "unit-teuton-ritter"}
+	{"apply-to", "unit-teuton-ritter"}, {"apply-to", "unit-frank-horseman"}
 )
 
 DefineModifier("upgrade-teuton-bodkin-arrow",
@@ -298,10 +298,7 @@ DefineModifier("upgrade-bavarian-tribe-faction",
 )
 
 DefineModifier("upgrade-frank-tribe-faction",
-	{"BasicDamage", 1},
-	{"Armor", 1},
-	{"Points", 10},
-	{"apply-to", "unit-teuton-ritter"}
+	{"apply-to", "unit-teuton-ritter"}, {"convert-to", "unit-frank-horseman"}
 )
 
 DefineModifier("upgrade-frisian-tribe-faction",
@@ -394,6 +391,10 @@ DefineDependency("unit-teuton-stables",
 
 DefineDependency("unit-teuton-ritter",
 	{"unit-teuton-smithy", "unit-teuton-stables"}
+)
+
+DefineDependency("unit-frank-horseman",
+	{"unit-teuton-smithy", "unit-teuton-stables", "upgrade-frank-tribe-faction"}
 )
 
 DefineDependency("unit-suebi-swordsman",

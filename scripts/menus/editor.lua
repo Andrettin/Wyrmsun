@@ -22,6 +22,7 @@ editor_types = {
 	"unit-teuton-spearman",
 	"unit-teuton-archer",
 	"unit-teuton-ritter",
+	"unit-frank-horseman",
 	"unit-teuton-catapult",
 	"unit-teuton-kogge",
 	"unit-teuton-town-hall",

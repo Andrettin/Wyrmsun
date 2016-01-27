@@ -39,7 +39,7 @@ Units = {
 	"upgrade-asa-tribe-faction", "upgrade-skjoldung-tribe-faction", "upgrade-volsung-tribe-faction", "upgrade-yngling-tribe-faction",
 	"upgrade-teuton-civilization",
 	"unit-teuton-worker", "unit-teuton-swordsman", "unit-suebi-swordsman", "unit-teuton-spearman", "unit-teuton-archer",
-	"unit-teuton-ritter",
+	"unit-teuton-ritter", "unit-frank-horseman",
 	"unit-teuton-catapult",
 	"unit-teuton-kogge",
 	"unit-teuton-town-hall", "unit-teuton-stronghold",

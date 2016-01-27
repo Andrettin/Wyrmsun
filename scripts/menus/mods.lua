@@ -191,3 +191,34 @@ function LoadMods()
 	
 	ModPath = ""
 end
+
+function LoadDLCs()
+	ModPath = ""
+	
+	local i
+	local f
+	local u = 1
+
+	-- list the subdirectories in the dlcs folder
+	local dirlist = {}
+	local dirs = ListDirsInDirectory("dlcs/")
+	for i,f in ipairs(dirs) do
+		dirlist[u] = f .. "/"
+		u = u + 1
+	end
+
+	u = 1
+	-- get dlcs in the subdirectories of the dlcs folder
+	for j=1,table.getn(dirlist) do
+		local fileslist = ListFilesInDirectory("dlcs/" .. dirlist[j])
+		for i,f in ipairs(fileslist) do
+			if (string.find(f, "main.lua")) then
+				ModPath = "dlcs/" .. dirlist[j]
+				Load(ModPath .. f)
+				u = u + 1
+			end
+		end
+	end
+	
+	ModPath = ""
+end

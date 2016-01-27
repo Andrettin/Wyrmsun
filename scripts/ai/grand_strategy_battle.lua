@@ -91,6 +91,7 @@ local land_funcs = {
 	"unit-teuton-archer", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-teuton-archer"),
 	"unit-teuton-catapult", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-teuton-catapult"),
 	"unit-teuton-ritter", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-teuton-ritter"),
+	"unit-frank-horseman", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-frank-horseman"),
 	"unit-dwarven-militia", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-dwarven-militia"),
 	"unit-dwarven-axefighter", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-dwarven-axefighter"),
 	"unit-dwarven-steelclad", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-dwarven-steelclad"),
