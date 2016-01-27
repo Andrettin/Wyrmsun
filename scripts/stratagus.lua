@@ -58,13 +58,13 @@ LoadedGame = false
 
 InitFuncs = {}
 function InitFuncs:add(f)
-  table.insert(self, f)
+	table.insert(self, f)
 end
 
 function InitGameVariables()
-  for i=1,table.getn(InitFuncs) do
-    InitFuncs[i]()
-  end
+	for i=1,table.getn(InitFuncs) do
+		InitFuncs[i]()
+	end
 end
 
 DefineBoolFlags("Center", "LumberImprove", "OilImprove", "StoneImprove")
@@ -221,7 +221,7 @@ AddColorCyclingRange(38, 47) -- water
 
 --  You can do all the above with this
 InitFuncs:add(function()
-  SetSpeeds(1)
+	SetSpeeds(1)
 end)
 
 -------------------------------------------------------------------------------
@@ -333,16 +333,16 @@ function SinglePlayerTriggers()
 			end
 		end
 	end
-
-	CreateDecorations()
-
-	StandardTriggers()
-
+	
 	if (not IsNetworkGame() and GrandStrategy == false) then
 		if (PlayerFaction ~= "") then
 			SetPlayerData(GetThisPlayer(), "Faction", PlayerFaction)
 		end
 	end
+
+	CreateDecorations()
+
+	StandardTriggers()
 
 	-- make players have the correct names in grand strategy mode
 	for i=0,14 do

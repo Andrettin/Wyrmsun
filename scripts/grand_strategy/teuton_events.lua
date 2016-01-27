@@ -226,7 +226,7 @@ local TeutonEvents = {
 			function(s)
 				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Suebi Tribe" and wyr.preferences.AutomaticBattles == false) then
 					GrandStrategyFaction = Factions.MarcomanniTribe
-					SetPlayerFaction("teuton", "Marcomanni Clan")
+					SetPlayerFaction("teuton", "Marcomanni Tribe")
 					GrandStrategyEventMap = true
 					GetMapInfo("maps/earth/prague.smp")
 					CurrentQuest = "The Home of the Boii"
