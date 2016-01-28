@@ -50,3 +50,9 @@ DefineLanguageNoun("Wêt", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Meaning = "Woad",
 	SingularNominative = "Wêt" -- source also gives the alternative form "Wêde"
 })
+
+DefineLanguageVerb("Twernen", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
+	Language = "middle-low-german",
+	Meaning = "Twine",
+	Infinitive = "Twernen"
+})

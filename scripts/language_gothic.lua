@@ -26,83 +26,6 @@
 --
 
 DefineCivilizationLanguage("goth", -- Gothic
-	"verbs", {
-		"Bairiþ", { -- should be infinitive form; Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
-			"meaning", "Bears",
-			-- infinitive form?
-			"singular-third-person-present", "Bairiþ"
-		},
-		"Hausjan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
-			"meaning", "Hear",
-			"infinitive", "Hausjan"
-		},
-		"Hilpan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
-			"meaning", "Help",
-			"infinitive", "Hilpan"
-		},
-		"Hlaupan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
-			"meaning", "Run",
-			"infinitive", "Hlaupan"
-		},
-		"Itan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
-			"meaning", "Eat",
-			"infinitive", "Itan"
-		},
-		"Laihun", { -- should be infinitive form; Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
-			"meaning", "Lent", -- "we lent"
-			-- infinitive form?
-			"plural-first-person-past", "Laihun"
-		},
-		"Laisjan", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 4-5.
-			"meaning", "Teach",
-			"infinitive", "Laisjan" -- causative verb
-		},
-		"Ganasjan", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
-			"meaning", "Make Healthy, Heal, Rescue",
-			"infinitive", "Ganasjan" -- source gives "(ga)nasjan"
-		},
-		"Saihan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
-			"meaning", "See",
-			"infinitive", "Saihan"
-		},
-		"Stautan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
-			"meaning", "Push", -- source gives translation as the German word "stoßen"
-			"infinitive", "Stautan"
-		},
-		"Wairþan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
-			"meaning", "Become",
-			"infinitive", "Wairþan"
-		},
-		"Witan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
-			"meaning", "Know",
-			"infinitive", "Witan"
-		}
-	},
-	"adjectives", {
-		"Faihs", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
-			"meaning", "Shining"
-		},
-		"Hauhs", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
-			"meaning", "High" -- source gives translation as the German word "hoch"
-		},
-		"Juggs", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
-			"meaning", "Young"
-		},
-		"Laus", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
-			"meaning", "Empty" -- source gives translation as the German words "los" and "leer"
-		},
-		"Laus", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
-			"meaning", "Loose" -- source gives translation as the German words "los" and "leer"
-		},
-		"Maiza", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
-			"meaning", "More", -- perhaps a "determiner" class of words should be added?
-			"comparative", "Maiza", -- Richard M. Runge gives meaning as "larger", Sean Crist indicates that it is the comparative of "Maiza" (More); Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242; Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
-			"superlative", "Maists" -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
-		},
-		"Rauþs", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
-			"meaning", "Red"
-		}
-	},
 	"pronouns", {
 		"Mis", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
 			"meaning", "Me", -- dative
@@ -185,6 +108,12 @@ DefineLanguageNoun("Dius", { -- Source: Richard M. Runge, "The Phonetic Realizat
 	SingularNominative = "Dius"
 })
 
+DefineLanguageNoun("Faíhu", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
+	Language = "gothic",
+	Meaning = "Cattle",
+	SingularNominative = "Faíhu"
+})
+
 DefineLanguageNoun("Fisks", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
 	Language = "gothic",
 	Meaning = "Fish",
@@ -238,6 +167,12 @@ DefineLanguageNoun("Laun", { -- Source: Richard M. Runge, "The Phonetic Realizat
 	Language = "gothic",
 	Meaning = "Pay", -- source gives German word "Lohn" as transation
 	SingularNominative = "Laun"
+})
+
+DefineLanguageNoun("Lein", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
+	Language = "gothic",
+	Meaning = "Linen",
+	SingularNominative = "Lein"
 })
 
 DefineLanguageNoun("Mizdon", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 7.
@@ -295,4 +230,134 @@ DefineLanguageNoun("Wigs", { -- Source: Richard M. Runge, "The Phonetic Realizat
 	Language = "gothic",
 	Meaning = "Way",
 	SingularNominative = "Wigs"
+})
+
+DefineLanguageVerb("Andbeitan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
+	Language = "gothic",
+	Meaning = "?", -- cognates have "bite" as their meaning
+	Infinitive = "Andbeitan",
+	SingularThirdPersonPast = "Andbait",
+	PluralThirdPersonPast = "Andbitan",
+	ParticiplePast = "Andbitans"
+})
+
+DefineLanguageVerb("Bairan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
+	Language = "gothic",
+	Meaning = "?",
+	Infinitive = "Bairan",
+	SingularThirdPersonPast = "Bar", -- correct?
+	PluralThirdPersonPast = "Baurun", -- correct?
+	ParticiplePast = "Baurans" -- correct?
+})
+
+DefineLanguageVerb("Bairiþ", { -- should be infinitive form; Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
+	Language = "gothic",
+	Meaning = "Bears",
+	-- infinitive form? maybe is the same word as "bairan", since the Latin cognate of "bairan", "ferō", means "I bear"
+	SingularThirdPersonPresent = "Bairiþ"
+})
+
+DefineLanguageVerb("Hausjan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
+	Language = "gothic",
+	Meaning = "Hear",
+	Infinitive = "Hausjan"
+})
+
+DefineLanguageVerb("Hilpan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
+	Language = "gothic",
+	Meaning = "Help",
+	Infinitive = "Hilpan"
+})
+
+DefineLanguageVerb("Hlaupan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
+	Language = "gothic",
+	Meaning = "Run",
+	Infinitive = "Hlaupan"
+})
+
+DefineLanguageVerb("Itan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
+	Language = "gothic",
+	Meaning = "Eat",
+	Infinitive = "Itan"
+})
+
+DefineLanguageVerb("Laihun", { -- should be infinitive form; Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
+	Language = "gothic",
+	Meaning = "Lent", -- "we lent"
+	-- infinitive form?
+	PluralFirstPersonPast = "Laihun"
+})
+
+DefineLanguageVerb("Laisjan", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 4-5.
+	Language = "gothic",
+	Meaning = "Teach",
+	Infinitive = "Laisjan" -- causative verb
+})
+
+DefineLanguageVerb("Ganasjan", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
+	Language = "gothic",
+	Meaning = "Make Healthy, Heal, Rescue",
+	Infinitive = "Ganasjan" -- source gives "(ga)nasjan"
+})
+
+DefineLanguageVerb("Saihan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
+	Language = "gothic",
+	Meaning = "See",
+	Infinitive = "Saihan"
+})
+
+DefineLanguageVerb("Stautan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
+	Language = "gothic",
+	Meaning = "Push", -- source gives translation as the German word "stoßen"
+	Infinitive = "Stautan"
+})
+
+DefineLanguageVerb("Wairþan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
+	Language = "gothic",
+	Meaning = "Become",
+	Infinitive = "Wairþan"
+})
+
+DefineLanguageVerb("Witan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
+	Language = "gothic",
+	Meaning = "Know",
+	Infinitive = "Witan"
+})
+
+DefineLanguageAdjective("Faihs", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
+	Language = "gothic",
+	Meaning = "Shining",
+	Positive = "Faihs"
+})
+
+DefineLanguageAdjective("Hauhs", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
+	Language = "gothic",
+	Meaning = "High", -- source gives translation as the German word "hoch"
+	Positive = "Hauhs"
+})
+
+DefineLanguageAdjective("Juggs", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
+	Language = "gothic",
+	Meaning = "Young",
+	Positive = "Juggs"
+})
+
+DefineLanguageAdjective("Laus", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
+	Language = "gothic",
+	Meaning = "Empty, Loose", -- source gives translation as the German words "los" and "leer"
+	Positive = "Laus"
+})
+
+DefineLanguageAdjective("Maiza", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, pp. 236, 242; Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
+	Language = "gothic",
+	Meaning = "More", -- perhaps a "determiner" class of words should be added?
+	Positive = "Maiza", -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, pp. 236;
+	Comparative = "Maiza", -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242; Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
+	Superlative = "Maists" -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
+})
+
+DefineLanguageAdjective("Rauþs", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
+	Language = "gothic",
+	Meaning = "Red",
+	Positive = "Rauþs"
 })

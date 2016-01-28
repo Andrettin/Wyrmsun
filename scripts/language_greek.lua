@@ -144,5 +144,12 @@ DefineLanguageNoun("Polis", { -- should be written as the original Greek name (w
 DefineLanguageAdjective("Nea", { -- should be written as the original Greek name (with Greek characters)
 	Language = "greek",
 	Meaning = "New",
+	Positive = "Nea",
 	PrefixTypeName = {"settlement"} -- example: "Neapolis" (Naples)
+})
+
+DefineLanguageVerb("Pheídomai", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
+	Language = "greek",
+	Meaning = "Separate",
+	SingularFirstPersonPresent = "Pheídomai"
 })

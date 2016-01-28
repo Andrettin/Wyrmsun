@@ -26,47 +26,6 @@
 --
 
 DefineCivilizationLanguage("old-norse", -- Old Norse
-	"verbs", {
-		"Eta", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
-			"meaning", "Eat",
-			"infinitive", "Eta"
-		},
-		"Grenna", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 10.
-			"meaning", "Feed",
-			"infinitive", "Grenna"
-		},
-		"Nara", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
-			"meaning", "Live",
-			"infinitive", "Nara"
-		},
-		"Tvinna", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
-			"meaning", "Double", -- source gives meaning as "Double, Duplicate"
-			"infinitive", "Tvinna"
-		},
-		"Verða", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
-			"meaning", "Become",
-			"infinitive", "Verða"
-		},
-		"Vita", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
-			"meaning", "Know",
-			"infinitive", "Vita"
-		}
-	},
-	"adjectives", {
-		"Meiri", { -- this is the comparative, what is the normal version of the word? Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
-			"meaning", "More",
-			"comparative", "Meiri",
-			"superlative", "Mestr"
-		},
-		"Tvennr", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 6.
-			"meaning", "Twofold" -- maybe is an adverb instead?
-			-- source also gives "Tvinnr" as an alternative form
-		},
-		"Þrennr", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
-			"meaning", "Threefold" -- maybe is an adverb instead?
-			-- source also gives "Þrinnr" as an alternative form
-		}
-	},
 	"pronouns", {
 		"Mēr", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
 			"meaning", "Me", -- dative
@@ -106,6 +65,12 @@ DefineLanguageNoun("Broddr", { -- Source: Sean Crist, "An Analysis of *z loss in
 	Gender = "Masculine"
 })
 
+DefineLanguageNoun("Fé", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
+	Language = "old-norse",
+	Meaning = "Cattle",
+	SingularNominative = "Fé"
+})
+
 DefineLanguageNoun("Fiskr", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
 	Language = "old-norse",
 	Meaning = "Fish",
@@ -130,6 +95,12 @@ DefineLanguageNoun("Haddr", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Meaning = "Woman's Long Hair",
 	SingularNominative = "Haddr",
 	Gender = "Masculine"
+})
+
+DefineLanguageNoun("Hane", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
+	Language = "old-norse",
+	Meaning = "Rooster",
+	SingularNominative = "Hane"
 })
 
 DefineLanguageNoun("Hodd", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.
@@ -212,7 +183,77 @@ DefineLanguageNoun("Vegr", { -- Source: Richard M. Runge, "The Phonetic Realizat
 	SingularNominative = "Vegr"
 })
 
+DefineLanguageVerb("Bera", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
+	Language = "old-norse",
+	Meaning = "?",
+	Infinitive = "Bera"
+})
+
+DefineLanguageVerb("Bīta", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
+	Language = "old-norse",
+	Meaning = "Bite",
+	Infinitive = "Bīta"
+})
+
+DefineLanguageVerb("Eta", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
+	Language = "old-norse",
+	Meaning = "Eat",
+	Infinitive = "Eta"
+})
+
+DefineLanguageVerb("Grenna", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 10.
+	Language = "old-norse",
+	Meaning = "Feed",
+	Infinitive = "Grenna"
+})
+
+DefineLanguageVerb("Nara", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
+	Language = "old-norse",
+	Meaning = "Live",
+	Infinitive = "Nara"
+})
+
+DefineLanguageVerb("Tvinna", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
+	Language = "old-norse",
+	Meaning = "Double", -- source gives meaning as "Double, Duplicate"
+	Infinitive = "Tvinna"
+})
+
+DefineLanguageVerb("Verða", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
+	Language = "old-norse",
+	Meaning = "Become",
+	Infinitive = "Verða"
+})
+
+DefineLanguageVerb("Vita", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
+	Language = "old-norse",
+	Meaning = "Know",
+	Infinitive = "Vita"
+})
+
+DefineLanguageAdjective("Meiri", { -- this is the comparative, what is the normal version of the word? Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
+	Language = "old-norse",
+	Meaning = "More",
+	Comparative = "Meiri",
+	Superlative = "Mestr"
+})
+
 DefineLanguageAdjective("Seiðr", { -- maybe is the past participle of Síði instead? Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 118.
 	Language = "old-norse",
-	Meaning = "Magic Worked"
+	Meaning = "Magic Worked",
+	Positive = "Seiðr"
+})
+
+DefineLanguageAdjective("Tvennr", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 6.
+	Language = "old-norse",
+	Meaning = "Twofold", -- maybe is an adverb instead?
+	-- source also gives "Tvinnr" as an alternative form
+	Positive = "Tvennr"
+})
+
+DefineLanguageAdjective("Þrennr", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
+	Language = "old-norse",
+	Meaning = "Threefold", -- maybe is an adverb instead?
+	-- source also gives "Þrinnr" as an alternative form
+	Positive = "Þrennr"
 })

@@ -92,3 +92,27 @@ DefineLanguageNoun("Zwirn", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Meaning = "Doubly Spun Twine",
 	SingularNominative = "Zwirn"
 })
+
+DefineLanguageVerb("Lēren", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 5.
+	Language = "middle-high-german",
+	Meaning = "Teach",
+	Infinitive = "Lēren" -- causative verb
+})
+
+DefineLanguageVerb("Lernen", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 5.
+	Language = "middle-high-german",
+	Meaning = "Learn",
+	Infinitive = "Lernen"
+})
+
+DefineLanguageVerb("Nerigen", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
+	Language = "middle-high-german",
+	Meaning = "Heal, Sustain the Life of, Save, Protect, Nourish",
+	Infinitive = "Nerigen" -- source also gives alternative forms "Neren" and "Nern"
+})
+
+DefineLanguageVerb("Zwirnen", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
+	Language = "middle-high-german",
+	Meaning = "Twist Together Twice, Twine",
+	Infinitive = "Zwirnen"
+})

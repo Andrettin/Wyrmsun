@@ -25,6 +25,33 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineCivilizationLanguage("old-saxon", -- Old Saxon
+	"pronouns", {
+		"Mī", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
+			"meaning", "Me", -- dative
+			"dative", "Mī"
+		},
+		"Wī", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
+			"meaning", "We",
+			"nominative", "Wī" -- source also gives "We" as alternative
+		}
+	},
+	"adverbs", {
+		"Mēr", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
+			"meaning", "More"
+		},
+		"Wel", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
+			"meaning", "Well"
+		}
+	}
+)
+
+DefineLanguageNoun("Fehu", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
+	Language = "old-saxon",
+	Meaning = "Cattle",
+	SingularNominative = "Fehu"
+})
+
 DefineLanguageNoun("Fisc", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
 	Language = "old-saxon",
 	Meaning = "Fish",
@@ -104,4 +131,90 @@ DefineLanguageNoun("Wurm", { -- Source: Richard M. Runge, "The Phonetic Realizat
 	Language = "old-saxon",
 	Meaning = "Worm, Serpent", -- probably could be extended to mean "wyrm" as well
 	SingularNominative = "Wurm"
+})
+
+DefineLanguageVerb("Beran", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
+	Language = "old-saxon",
+	Meaning = "?",
+	Infinitive = "Beran"
+})
+
+DefineLanguageVerb("Birid", { -- should be infinitive form; Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
+	Language = "old-saxon",
+	Meaning = "Bears",
+	-- infinitive form? maybe is the same word as "beran", since the Latin cognate of "beran", "ferō", means "I bear"
+	SingularThirdPersonPresent = "Birid"
+})
+
+DefineLanguageVerb("Bītan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
+	Language = "old-saxon",
+	Meaning = "Bite",
+	Infinitive = "Bītan"
+})
+
+DefineLanguageVerb("Etan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
+	Language = "old-saxon",
+	Meaning = "Eat",
+	Infinitive = "Etan"
+})
+
+DefineLanguageVerb("Helpan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
+	Language = "old-saxon",
+	Meaning = "Help",
+	Infinitive = "Helpan"
+})
+
+DefineLanguageVerb("Lērian", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 5.
+	Language = "old-saxon",
+	Meaning = "Teach",
+	Infinitive = "Lērian" -- causative verb
+})
+
+DefineLanguageVerb("Līnōn", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
+	Language = "old-saxon",
+	Meaning = "Learn",
+	Infinitive = "Līnōn"
+})
+
+DefineLanguageVerb("Nerian", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
+	Language = "old-saxon",
+	Meaning = "Save",
+	Infinitive = "Nerian"
+})
+
+DefineLanguageVerb("Scrīban", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
+	Language = "old-saxon",
+	Meaning = "Write",
+	Infinitive = "Scrīban"
+})
+
+DefineLanguageVerb("Sehan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
+	Language = "old-saxon",
+	Meaning = "See",
+	Infinitive = "Sehan"
+})
+
+DefineLanguageVerb("Werthan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
+	Language = "old-saxon",
+	Meaning = "Become",
+	Infinitive = "Werthan"
+})
+
+DefineLanguageVerb("Witan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
+	Language = "old-saxon",
+	Meaning = "Know",
+	Infinitive = "Witan"
+})
+
+DefineLanguageAdjective("Jung", {
+	Language = "old-saxon",
+	Meaning = "Young", -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
+	Positive = "Jung"
+})
+
+DefineLanguageAdjective("Mēro", { -- this is the comparative, what is the normal version of the word? Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
+	Language = "old-saxon",
+	Meaning = "More",
+	Comparative = "Mēro",
+	Superlative = "Mēst"
 })

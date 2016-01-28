@@ -579,6 +579,8 @@ if (GrandStrategyYear >= -2500) then
 	-- Plowing well-disseminated in Europe by 2500 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 329.
 	
 	-- Around 2500 BC the star Thuban in the constellation of Draco was the pole star; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 5.
+	
+	-- The Proto-Germanic language appears c. 2500 BC; Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 1.
 end
 
 if (GrandStrategyYear >= -2400) then

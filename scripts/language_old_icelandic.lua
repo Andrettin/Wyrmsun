@@ -25,6 +25,12 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineLanguageNoun("Drósir", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
+	Language = "old-icelandic",
+	Meaning = "Women",
+	PluralNominative = "Drósir"
+})
+
 DefineLanguageNoun("Eyra", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
 	Language = "old-icelandic",
 	Meaning = "Ear",
@@ -37,6 +43,12 @@ DefineLanguageNoun("Ker", { -- Source: Richard M. Runge, "The Phonetic Realizati
 	SingularNominative = "Ker"
 })
 
+DefineLanguageNoun("Lín", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
+	Language = "old-icelandic",
+	Meaning = "Linen",
+	PluralNominative = "Lín"
+})
+
 DefineLanguageNoun("Reyrr", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
 	Language = "old-icelandic",
 	Meaning = "Tube",
@@ -47,4 +59,28 @@ DefineLanguageNoun("Sár", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Language = "old-icelandic",
 	Meaning = "Wound",
 	SingularNominative = "Sár"
+})
+
+DefineLanguageVerb("Spunno", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
+	Language = "old-icelandic",
+	Meaning = "Spun",
+	PluralThirdPersonPast = "Spunno"
+})
+
+DefineLanguageAdjective("Dýrt", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
+	Language = "old-icelandic",
+	Meaning = "Dear, Expensive",
+	Positive = "Dýrt"
+})
+
+DefineLanguageAdjective("Meiri", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 3.
+	Language = "old-icelandic",
+	Meaning = "More", -- perhaps a "determiner" class of words should be added?
+	Positive = "Meiri"
+})
+
+DefineLanguageAdjective("Suðrœnar", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
+	Language = "old-icelandic",
+	Meaning = "Southern",
+	PositivePlural = "Suðrœnar"
 })

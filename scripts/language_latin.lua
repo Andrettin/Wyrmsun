@@ -37,6 +37,12 @@ DefineLanguageNoun("Caesaries", { -- Source: Sean Crist, "An Analysis of *z loss
 	SingularNominative = "Caesaries"
 })
 
+DefineLanguageNoun("Caulis", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
+	Language = "latin",
+	Meaning = "?", -- words derived from it mean (in German) "Kohl"
+	SingularNominative = "Caulis"
+})
+
 DefineLanguageNoun("Conopes", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 101.
 	Language = "latin",
 	Meaning = "Gnats",
@@ -68,6 +74,12 @@ DefineLanguageNoun("Hasta", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	SingularNominative = "Hasta"
 })
 
+DefineLanguageNoun("Pecu", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
+	Language = "latin",
+	Meaning = "Herd",
+	SingularNominative = "Pecu"
+})
+
 DefineLanguageNoun("Sūs", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
 	Language = "latin",
 	Meaning = "Sow",
@@ -80,7 +92,20 @@ DefineLanguageVerb("Alucinare", { -- Source: Alaric Hall, "The Meanings of Elf a
 	Infinitive = "Alucinare" -- presumably it is the infinitive
 })
 
+DefineLanguageVerb("Ferō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
+	Language = "latin",
+	Meaning = "Bear",
+	SingularFirstPersonPresent = "Ferō"
+})
+
+DefineLanguageVerb("Scrībere", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
+	Language = "latin",
+	Meaning = "?", -- cognates have "write" as the meaning
+	Infinitive = "Scrībere"
+})
+
 DefineLanguageAdjective("Verus", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 99.
 	Language = "latin",
-	Meaning = "True, Real"
+	Meaning = "True, Real",
+	Positive = "Verus"
 })

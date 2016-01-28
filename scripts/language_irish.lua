@@ -69,3 +69,9 @@ DefineLanguageNoun("Medg", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	SingularNominative = "Medg",
 	Gender = "Feminine"
 })
+
+DefineLanguageAdjective("Máo", { -- this is the comparative, what is the normal version of the word? Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
+	Language = "irish",
+	Meaning = "More", -- "Máo" actually means "größer"
+	Comparative = "Máo" -- source also gives alternative form "Móo"
+})

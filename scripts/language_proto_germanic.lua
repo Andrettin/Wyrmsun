@@ -136,6 +136,12 @@ DefineLanguageNoun("Erala", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Gender = "Masculine"
 })
 
+DefineLanguageNoun("Fehu", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
+	Language = "proto-germanic",
+	Meaning = "Cattle",
+	SingularNominative = "Fehu"
+})
+
 DefineLanguageNoun("Garda", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 72.
 	Language = "proto-germanic",
 	Meaning = "Enclosure, Court, Garden", -- source gives "Geheg, Hof, Garten" as the meaning
@@ -221,6 +227,20 @@ DefineLanguageNoun("Hezdōn", { -- Source: Sean Crist, "An Analysis of *z loss i
 	Meaning = "Flax Fiber",
 	SingularNominative = "Hezdōn",
 	Uncountable = true -- as a material, it is likely to be uncountable
+})
+
+DefineLanguageNoun("Hlewa", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
+	Language = "proto-germanic", -- from the Gallehus inscription, is it really Proto-Germanic?
+	Meaning = "Glory", -- meaning given in another source, which I have lost the reference to
+	SingularNominative = "Hlewa",
+	PrefixSingular = true,
+	PrefixTypeName = {"person"} -- example: "Hlewagastiz"
+})
+
+DefineLanguageNoun("Horna", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
+	Language = "proto-germanic", -- from the Gallehus inscription, is it really Proto-Germanic?
+	Meaning = "Horn",
+	SingularNominative = "Horna"
 })
 
 DefineLanguageNoun("Hraznō", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.
@@ -463,6 +483,18 @@ DefineLanguageNoun("Walakuzjōn", { -- Source: Sean Crist, "An Analysis of *z lo
 	Gender = "feminine"
 })
 
+DefineLanguageVerb("Beran", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
+	Language = "proto-germanic",
+	Meaning = "?",
+	Infinitive = "Beran"
+})
+
+DefineLanguageVerb("Bītan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
+	Language = "proto-germanic",
+	Meaning = "?", -- reflexes have "bite" as their meaning
+	Infinitive = "Bītan"
+})
+
 DefineLanguageVerb("Laizijanã", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 4-5.
 	Language = "proto-germanic",
 	Meaning = "Teach",
@@ -481,6 +513,12 @@ DefineLanguageVerb("Nazjan", { -- Source: Sean Crist, "An Analysis of *z loss in
 	Infinitive = "Nazjan"
 })
 
+DefineLanguageVerb("Tawido", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
+	Language = "proto-germanic", -- from the Gallehus inscription, is it really Proto-Germanic?
+	Meaning = "Made",
+	SingularFirstPersonPast = "Tawido"
+})
+
 DefineLanguageVerb("Twiznōn", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
 	Language = "proto-germanic",
 	Meaning = "Twine",
@@ -490,26 +528,36 @@ DefineLanguageVerb("Twiznōn", { -- Source: Sean Crist, "An Analysis of *z loss 
 DefineLanguageAdjective("Mēria", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
 	Language = "proto-germanic",
 	Meaning = "More",
+	Positive = "Mēria",
 	Comparative = "Maizan",
 	Superlative = "Maista"
 })
 
 DefineLanguageAdjective("Twiznaz", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 6.
 	Language = "proto-germanic",
-	Meaning = "Twofold" -- source actually gives "two each" (je zwei) as the meaning in p. 6, but later there is an equivalent Proto-Germanic word for "threefold" which is noted as "je drei"; and besides, in p. 1 "Twofold" is given as a possible meaning
+	Meaning = "Twofold", -- source actually gives "two each" (je zwei) as the meaning in p. 6, but later there is an equivalent Proto-Germanic word for "threefold" which is noted as "je drei"; and besides, in p. 1 "Twofold" is given as a possible meaning
 	 -- maybe is an adverb instead?
+	Positive = "Twiznaz"
 })
 
 DefineLanguageAdjective("Þrizna", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
 	Language = "proto-germanic",
-	Meaning = "Threefold" -- source gives the meaning as "threefold, the three (je drei)"
+	Meaning = "Threefold", -- source gives the meaning as "threefold, the three (je drei)"
 	 -- maybe is an adverb instead?
+	Positive = "Þrizna"
 })
 
 DefineLanguageAdjective("Vîha", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 206.
 	Language = "proto-germanic",
 	Meaning = "Holy",
+	Positive = "Vîha",
 	PrefixTypeName = {"settlement", "unit-germanic-smithy"}, -- seems sensible in face of a lack of examples
+})
+
+DefineLanguagePronoun("Ek", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
+	Language = "proto-germanic", -- from the Gallehus inscription, is it really Proto-Germanic?
+	Meaning = "I",
+	Nominative = "Ek"
 })
 
 DefineLanguagePronoun("Miz", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
@@ -555,14 +603,6 @@ DefineLanguageNoun("Hagu", {
 	SingularNominative = "Hadu",
 	PrefixSingular = true,
 	PrefixTypeName = {"person"} -- example: "Hagustaldaz"
-})
-
-DefineLanguageNoun("Hlewa", {
-	Language = "proto-germanic",
-	Meaning = "Glory",
-	SingularNominative = "Hlewa",
-	PrefixSingular = true,
-	PrefixTypeName = {"person"} -- example: "Hlewagastiz"
 })
 
 DefineLanguageNoun("Holta", {

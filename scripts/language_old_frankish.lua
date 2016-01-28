@@ -44,14 +44,15 @@ DefineLanguageNoun("Scramasacs", { -- Source: August Fick and Alf Torp, "Wortsch
 	SingularNominative = "Scramasacs"
 })
 
-DefineLanguageAdjective("Sinigus", { -- source also gives the alternative form "Seniscalcus"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 215.
-	Language = "old-frankish",
-	Meaning = "Old" -- presumably (this is the meaning given to the Proto-Germanic original word, and no meaning is specifically given to this one)
-})
-
 DefineLanguageNoun("Sworga", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.
 	Language = "old-frankish",
 	Meaning = "Worry", -- presumably (this is the meaning given to the Proto-Germanic original word, and no meaning is specifically given to this one)
 	SingularNominative = "Sworga",
 	Gender = "Feminine"
+})
+
+DefineLanguageAdjective("Sinigus", { -- source also gives the alternative form "Seniscalcus"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 215.
+	Language = "old-frankish",
+	Meaning = "Old", -- presumably (this is the meaning given to the Proto-Germanic original word, and no meaning is specifically given to this one)
+	Positive = "Sinigus"
 })

@@ -25,6 +25,20 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineCivilizationLanguage("old-frisian", -- Old Frisian
+	"pronouns", {
+		"Wi", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 5.
+			"meaning", "We",
+			"nominative", "Wi"
+		}
+	},
+	"adverbs", {
+		"Mēr", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
+			"meaning", "More"
+		}
+	}
+)
+
 DefineLanguageNoun("Hēde", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
 	Language = "old-frisian",
 	Meaning = "Flax Fiber",
@@ -61,4 +75,29 @@ DefineLanguageNoun("Wêd", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Language = "old-frisian",
 	Meaning = "Woad",
 	SingularNominative = "Wêd"
+})
+
+DefineLanguageVerb("Lēra", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 5.
+	Language = "old-frisian",
+	Meaning = "Teach",
+	Infinitive = "Lēra" -- causative verb
+})
+
+DefineLanguageVerb("Lernēn", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
+	Language = "old-frisian",
+	Meaning = "Learn",
+	Infinitive = "Lernēn" -- source also gives "Lirnēn" as an alternative
+})
+
+DefineLanguageVerb("Nera", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
+	Language = "old-frisian",
+	Meaning = "Nurture",
+	Infinitive = "Nera"
+})
+
+DefineLanguageAdjective("Māra", { -- this is the comparative, what is the normal version of the word? Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
+	Language = "old-frisian",
+	Meaning = "More",
+	Comparative = "Māra",
+	Superlative = "Māst"
 })

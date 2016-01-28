@@ -25,6 +25,12 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineLanguageNoun("Pẽkus", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
+	Language = "lithuanian",
+	Meaning = "?",
+	SingularNominative = "Pẽkus"
+})
+
 DefineLanguageVerb("Saĩsti", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 121.
 	Language = "lithuanian",
 	Meaning = "Interpret a Sign or Prophesy",

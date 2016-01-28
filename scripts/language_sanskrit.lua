@@ -52,3 +52,9 @@ DefineLanguageNoun("Mīḍhá", { -- Source: Sean Crist, "An Analysis of *z loss
 	SingularNominative = "Mīḍhá",
 	Gender = "Neuter"
 })
+
+DefineLanguageNoun("Páśu", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
+	Language = "sanskrit",
+	Meaning = "?",
+	SingularNominative = "Páśu"
+})

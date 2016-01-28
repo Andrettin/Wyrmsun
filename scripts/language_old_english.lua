@@ -78,7 +78,7 @@ DefineLanguageNoun("Eorþe", { -- Source: Richard M. Runge, "The Phonetic Realiz
 	Uncountable = true
 })
 
-DefineLanguageNoun("Feoh", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 238.
+DefineLanguageNoun("Feoh", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 238; Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2..
 	Language = "old-english",
 	Meaning = "Cattle",
 	SingularNominative = "Feoh"
@@ -388,6 +388,18 @@ DefineLanguageVerb("Aseowen", { -- Source: Richard M. Runge, "The Phonetic Reali
 	ParticiplePast = "Aseowen"
 })
 
+DefineLanguageVerb("Beran", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
+	Language = "old-english",
+	Meaning = "?",
+	Infinitive = "Beran"
+})
+
+DefineLanguageVerb("Bītan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
+	Language = "old-english",
+	Meaning = "Bite",
+	Infinitive = "Bītan"
+})
+
 DefineLanguageVerb("Etan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
 	Language = "old-english",
 	Meaning = "Eat",
@@ -437,6 +449,12 @@ DefineLanguageVerb("Nerian", { -- Source: Sean Crist, "An Analysis of *z loss in
 	Infinitive = "Nerian"
 })
 
+DefineLanguageVerb("Scrīfan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
+	Language = "old-english",
+	Meaning = "Write",
+	Infinitive = "Scrīfan"
+})
+
 DefineLanguageVerb("Seah", { -- should be infinitive form; Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 238.
 	Language = "old-english",
 	Meaning = "Saw",
@@ -465,49 +483,58 @@ DefineLanguageVerb("Witan", { -- Source: Richard M. Runge, "The Phonetic Realiza
 
 DefineLanguageAdjective("Ceorlisc", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 100.
 	Language = "old-english",
-	Meaning = "Of a Churl, Common"
+	Meaning = "Of a Churl, Common",
+	Positive = "Ceorlisc"
 })
 
 DefineLanguageAdjective("Cildisc", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 100.
 	Language = "old-english",
-	Meaning = "Childish"
+	Meaning = "Childish",
+	Positive = "Cildisc"
 })
 
 DefineLanguageAdjective("Denisc", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 100.
 	Language = "old-english",
-	Meaning = "Danish"
+	Meaning = "Danish",
+	Positive = "Denisc"
 })
 
 DefineLanguageAdjective("Gydig", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 94.
 	Language = "old-english",
-	Meaning = "Possessed (by a God)"
+	Meaning = "Possessed (by a God)",
+	Positive = "Gydig"
 })
 
 DefineLanguageAdjective("Māra", { -- this is the comparative, what is the normal version of the word? Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
 	Language = "old-english",
 	Meaning = "More",
+	Positive = "Māra",
 	Comparative = "Māra",
 	Superlative = "Māst"
 })
 
 DefineLanguageAdjective("Mennisc", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 100.
 	Language = "old-english",
-	Meaning = "Human"
+	Meaning = "Human",
+	Positive = "Mennisc"
 })
 
 DefineLanguageAdjective("Sælig", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 94.
 	Language = "old-english",
-	Meaning = "Happy, Prosperous"
+	Meaning = "Happy, Prosperous",
+	Positive = "Sælig"
 })
 
 DefineLanguageAdjective("Werig", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 94.
 	Language = "old-english",
-	Meaning = "Weary, Tired, Exhausted"
+	Meaning = "Weary, Tired, Exhausted",
+	Positive = "Werig"
 })
 
 DefineLanguageAdjective("Wod", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 96.
 	Language = "old-english",
-	Meaning = "Frenzied, Enraged, Mad"
+	Meaning = "Frenzied, Enraged, Mad",
+	Positive = "Wod"
 })
 
 DefineLanguagePronoun("Mē", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.

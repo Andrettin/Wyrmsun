@@ -984,12 +984,14 @@ DefineLanguageVerb("Hacken", {
 DefineLanguageAdjective("Alt", {
 	Language = "high-german",
 	Meaning = "Old",
+	Positive = "Alt",
 	PrefixTypeName = {"settlement"} -- example: "Altsohl"
 })
 
 DefineLanguageAdjective("Brennend", {
 	Language = "high-german",
 	Meaning = "Burning",
+	Positive = "Brennend",
 	PrefixTypeName = {
 		"unit-teuton-smithy" -- seems sensible
 	}
@@ -998,6 +1000,7 @@ DefineLanguageAdjective("Brennend", {
 DefineLanguageAdjective("Feurig", {
 	Language = "high-german",
 	Meaning = "Fiery",
+	Positive = "Feurig",
 	PrefixTypeName = {
 		"unit-teuton-smithy" -- seems sensible
 	}
@@ -1006,6 +1009,7 @@ DefineLanguageAdjective("Feurig", {
 DefineLanguageAdjective("Hart", { -- Source: http://www.duden.de/rechtschreibung/hart
 	Language = "high-german",
 	Meaning = "Hard",
+	Positive = "Hart",
 	Comparative = "Härter",
 	Superlative = "Härteste",
 	SuffixTypeName = {"person"} -- examples: "Alphart", "Wolfhart"
@@ -1014,6 +1018,7 @@ DefineLanguageAdjective("Hart", { -- Source: http://www.duden.de/rechtschreibung
 DefineLanguageAdjective("Neu", {
 	Language = "high-german",
 	Meaning = "New",
+	Positive = "Neu",
 	PrefixTypeName = {
 		"settlement",
 		"unit-teuton-smithy" -- seems sensible
@@ -1023,6 +1028,7 @@ DefineLanguageAdjective("Neu", {
 DefineLanguageAdjective("Schwartz", {
 	Language = "high-german",
 	Meaning = "Black",
+	Positive = "Schwartz",
 	PrefixTypeName = {
 		"unit-teuton-smithy" -- seems sensible
 	}
@@ -1031,6 +1037,7 @@ DefineLanguageAdjective("Schwartz", {
 DefineLanguageAdjective("Weiß", {
 	Language = "high-german",
 	Meaning = "White",
+	Positive = "Weiß",
 	PrefixTypeName = {
 		"settlement", -- example: "Weisskirchen"
 		"terrain-mountains", -- example: "Weißkugel"
@@ -1041,6 +1048,7 @@ DefineLanguageAdjective("Weiß", {
 DefineLanguageAdjective("Wild", {
 	Language = "high-german",
 	Meaning = "Wild",
+	Positive = "Wild",
 	PrefixTypeName = {"terrain-mountains"} -- example: "Wildspitze"
 })
 
