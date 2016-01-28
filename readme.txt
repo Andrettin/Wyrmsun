@@ -85,6 +85,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Miscellaneous
 - Added support for damage bonus vs. dragons. This damage bonus affects wyrms, and will affect any other draconic creatures added later to the game.
+- Fixed an issue which caused unit/building proper names to overlap with other parts of the interface if a word in them was too long.
 
 * Units
 - When right-clicking on a tile-based resource, workers who are already carrying the resource at maximum capacity will now return goods and then begin harvesting.
