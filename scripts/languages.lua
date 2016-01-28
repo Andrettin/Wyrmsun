@@ -101,6 +101,10 @@ DefineLanguage("old-english", {
 	Name = "Old English"
 })
 
+DefineLanguage("old-frankish", {
+	Name = "Old Frankish"
+})
+
 DefineLanguage("old-frisian", {
 	Name = "Old Frisian"
 })
@@ -157,12 +161,15 @@ DefineLanguage("west-germanic", {
 	Name = "West Germanic"
 })
 
-Load("scripts/language_proto_germanic.lua")
-Load("scripts/language_old_norse.lua")
-Load("scripts/language_high_german.lua")
 Load("scripts/language_gothic.lua")
-Load("scripts/language_latin.lua")
 Load("scripts/language_greek.lua")
+Load("scripts/language_high_german.lua")
+Load("scripts/language_latin.lua")
+Load("scripts/language_proto_germanic.lua")
+Load("scripts/language_old_frankish.lua")
+Load("scripts/language_old_norse.lua")
+
+-- fictional languages
 Load("scripts/language_dwarven.lua")
 Load("scripts/language_gnomish.lua")
 Load("scripts/language_goblin.lua")

@@ -296,6 +296,12 @@ DefineLanguageNoun("Mizdō", { -- Source: Sean Crist, "An Analysis of *z loss in
 	Gender = "Feminine"
 })
 
+DefineLanguageNoun("Nemida", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 151.
+	Language = "proto-germanic",
+	Meaning = "Holy Pasture", -- source gives (in German) "heiliger Weideplatz" as the meaning
+	SingularNominative = "Nemida"
+})
+
 DefineLanguageNoun("Razdō", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 9.
 	Language = "proto-germanic",
 	Meaning = "Voice, Sound",
