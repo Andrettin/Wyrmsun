@@ -110,6 +110,12 @@ DefineLanguageNoun("Fisks", { -- Source: Richard M. Runge, "The Phonetic Realiza
 	SingularNominative = "Fisks"
 })
 
+DefineLanguageNoun("Gaits", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
+	Language = "gothic",
+	Meaning = "Goat",
+	SingularNominative = "Gaits"
+})
+
 DefineLanguageNoun("Gazds", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.
 	Language = "gothic",
 	Meaning = "Prickle",
@@ -390,4 +396,14 @@ DefineLanguagePronoun("Izwis", { -- should be the nominative form; Source: Winfr
 	-- what is the nominative form?
 	Accusative = "Izwis",
 	Dative = "Izwis"
+})
+
+DefineLanguageNumeral("Ainlif", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
+	Language = "gothic",
+	Number = 11
+})
+
+DefineLanguageNumeral("Twalif", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
+	Language = "gothic",
+	Number = 12
 })

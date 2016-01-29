@@ -65,6 +65,10 @@ DefineLanguage("irish", {
 	Name = "Irish"
 })
 
+DefineLanguage("japanese", {
+	Name = "Japanese"
+})
+
 DefineLanguage("kobold", {
 	Name = "Kobold"
 })

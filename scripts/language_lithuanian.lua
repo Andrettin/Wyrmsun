@@ -36,3 +36,19 @@ DefineLanguageVerb("Saĩsti", { -- Source: Alaric Hall, "The Meanings of Elf and
 	Meaning = "Interpret a Sign or Prophesy",
 	Infinitive = "Saĩsti"
 })
+
+DefineLanguageVerb("Źengiù", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
+	Language = "lithuanian",
+	Meaning = "Go, Stride",
+	Infinitive = "Źengiù"
+})
+
+DefineLanguageNumeral("Vienúolika", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
+	Language = "lithuanian",
+	Number = 11
+})
+
+DefineLanguageNumeral("Dvýlika", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
+	Language = "lithuanian",
+	Number = 12
+})

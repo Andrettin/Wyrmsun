@@ -1058,11 +1058,13 @@ DefineLanguageAdverb("Mehr", {
 })
 
 DefineLanguageNumeral("Fünf", {
+	Language = "high-german",
 	Number = 5,
 	PrefixTypeName = {"settlement"} -- example: "Fünfkirchen"
 })
 
 DefineLanguageNumeral("Sieben", {
+	Language = "high-german",
 	Number = 7,
 	PrefixTypeName = {"province"} -- example: "Siebenbürgen"
 })

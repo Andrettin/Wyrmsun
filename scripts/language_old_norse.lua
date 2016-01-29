@@ -58,6 +58,12 @@ DefineLanguageNoun("Aldrnari", { -- Source: Sean Crist, "An Analysis of *z loss 
 	Gender = "Masculine"
 })
 
+DefineLanguageNoun("Bǫrr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
+	Language = "old-norse",
+	Meaning = "Wheat or Spelt", -- the word means one of these, not both
+	SingularNominative = "Bǫrr"
+})
+
 DefineLanguageNoun("Broddr", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 9.
 	Language = "old-norse",
 	Meaning = "Point, Sprout",
@@ -95,6 +101,12 @@ DefineLanguageNoun("Haddr", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Meaning = "Woman's Long Hair",
 	SingularNominative = "Haddr",
 	Gender = "Masculine"
+})
+
+DefineLanguageNoun("Hafr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
+	Language = "old-norse",
+	Meaning = "Male Goat",
+	SingularNominative = "Hafr"
 })
 
 DefineLanguageNoun("Hane", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
@@ -168,6 +180,12 @@ DefineLanguageVerb("Síða", { -- Source: Alaric Hall, "The Meanings of Elf and 
 	Language = "old-norse",
 	Meaning = "Work Magic",
 	Infinitive = "Síða"
+})
+
+DefineLanguageNoun("Vagn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
+	Language = "old-norse",
+	Meaning = "Wagon",
+	SingularNominative = "Vagn"
 })
 
 DefineLanguageNoun("Valkyrja", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 10.

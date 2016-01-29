@@ -37,6 +37,12 @@ DefineLanguageNoun("Caesaries", { -- Source: Sean Crist, "An Analysis of *z loss
 	SingularNominative = "Caesaries"
 })
 
+DefineLanguageNoun("Caper", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
+	Language = "latin",
+	Meaning = "Male Goat",
+	SingularNominative = "Caper"
+})
+
 DefineLanguageNoun("Caulis", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
 	Language = "latin",
 	Meaning = "?", -- words derived from it mean (in German) "Kohl"
@@ -61,11 +67,23 @@ DefineLanguageNoun("Custos", { -- Source: Sean Crist, "An Analysis of *z loss in
 	SingularNominative = "Custos"
 })
 
+DefineLanguageNoun("Far", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
+	Language = "latin",
+	Meaning = "Wheat or Spelt", -- the word means one of these, not both
+	SingularNominative = "Far"
+})
+
 DefineLanguageNoun("Gallus", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 101.
 	Language = "latin",
 	Meaning = "Eunuch",
 	SingularNominative = "Gallus",
 	PluralNominative = "Galli"
+})
+
+DefineLanguageNoun("Haedus", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
+	Language = "latin",
+	Meaning = "Goat",
+	SingularNominative = "Haedus"
 })
 
 DefineLanguageNoun("Hasta", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.

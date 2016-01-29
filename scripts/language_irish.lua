@@ -70,6 +70,12 @@ DefineLanguageNoun("Medg", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Gender = "Feminine"
 })
 
+DefineLanguageVerb("Rīadaim", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
+	Language = "irish",
+	Meaning = "Travel",
+	Infinitive = "Rīadaim"
+})
+
 DefineLanguageAdjective("Máo", { -- this is the comparative, what is the normal version of the word? Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
 	Language = "irish",
 	Meaning = "More", -- "Máo" actually means "größer"

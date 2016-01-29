@@ -432,6 +432,12 @@ DefineLanguageVerb("Etan", { -- Source: Richard M. Runge, "The Phonetic Realizat
 	Infinitive = "Etan"
 })
 
+DefineLanguageVerb("Gengan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
+	Language = "old-english",
+	Meaning = "Go, Stride",
+	Infinitive = "Gengan"
+})
+
 DefineLanguageVerb("Gereordian", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 10.
 	Language = "old-english",
 	Meaning = "Feed, Entertain, Feast",
@@ -480,6 +486,12 @@ DefineLanguageVerb("Nerian", { -- Source: Sean Crist, "An Analysis of *z loss in
 	Language = "old-english",
 	Meaning = "Save, Protect",
 	Infinitive = "Nerian"
+})
+
+DefineLanguageVerb("Rīdan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
+	Language = "old-english",
+	Meaning = "Travel",
+	Infinitive = "Rīdan"
 })
 
 DefineLanguageVerb("Scrīfan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
