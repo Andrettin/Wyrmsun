@@ -290,6 +290,10 @@ function CleanRawTiles()
 end
 
 function GenerateRocks(rock_seed_number, rock_expansions_number, base_tile_type, min_x, max_x, min_y, max_y)
+	if (LoadedGame) then
+		return
+	end
+
 	local RandomNumber = 0
 	local RandomX = 0
 	local RandomY = 0
@@ -379,6 +383,10 @@ function GenerateRocks(rock_seed_number, rock_expansions_number, base_tile_type,
 end
 
 function GenerateWater(water_seed_number, water_expansions_number, min_x, max_x, min_y, max_y)
+	if (LoadedGame) then
+		return
+	end
+
 	local RandomNumber = 0
 	local RandomX = 0
 	local RandomY = 0
@@ -468,6 +476,10 @@ function GenerateWater(water_seed_number, water_expansions_number, min_x, max_x,
 end
 
 function GenerateRoughLand(rough_land_seed_number, rough_land_expansions_number)
+	if (LoadedGame) then
+		return
+	end
+
 	local RandomNumber = 0
 	local RandomX = 0
 	local RandomY = 0
@@ -546,6 +558,10 @@ function GenerateRoughLand(rough_land_seed_number, rough_land_expansions_number)
 end
 
 function GenerateTrees(tree_seed_number, tree_expansions_number, min_x, max_x, min_y, max_y)
+	if (LoadedGame) then
+		return
+	end
+
 	local RandomNumber = 0
 	local RandomX = 0
 	local RandomY = 0
@@ -632,6 +648,10 @@ function GenerateTrees(tree_seed_number, tree_expansions_number, min_x, max_x, m
 end
 
 function GenerateDarkLand(dark_land_seed_number, dark_land_expansions_number, min_x, max_x, min_y, max_y)
+	if (LoadedGame) then
+		return
+	end
+
 	local RandomNumber = 0
 	local RandomX = 0
 	local RandomY = 0
@@ -710,6 +730,10 @@ function GenerateDarkLand(dark_land_seed_number, dark_land_expansions_number, mi
 end
 
 function GenerateDarkRoughLand(dark_rough_land_seed_number, dark_rough_land_expansions_number, min_x, max_x, min_y, max_y, base_tile_type)
+	if (LoadedGame) then
+		return
+	end
+
 	local RandomNumber = 0
 	local RandomX = 0
 	local RandomY = 0
@@ -868,6 +892,10 @@ function GenerateDarkRoughLand(dark_rough_land_seed_number, dark_rough_land_expa
 end
 
 function GenerateDarkWater(dark_water_seed_number, dark_water_expansions_number, min_x, max_x, min_y, max_y)
+	if (LoadedGame) then
+		return
+	end
+
 	local RandomNumber = 0
 	local RandomX = 0
 	local RandomY = 0

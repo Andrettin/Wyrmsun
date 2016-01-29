@@ -20,6 +20,7 @@ editor_types = {
 	"unit-teuton-swordsman",
 	"unit-suebi-swordsman",
 	"unit-teuton-spearman",
+	"unit-frank-spearman",
 	"unit-teuton-archer",
 	"unit-teuton-ritter",
 	"unit-frank-horseman",

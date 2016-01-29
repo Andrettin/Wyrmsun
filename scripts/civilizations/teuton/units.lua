@@ -398,6 +398,14 @@ DefineUnitType("unit-teuton-spearman", { Name = _("Speerkampfer"),
 	}
 } )
 
+DefineUnitType("unit-frank-spearman", { Name = _("Speerkampfer"),
+	Parent = "unit-teuton-spearman",
+	Civilization = "teuton",
+	Faction = "Frank Tribe",
+	Armor = 3, -- +1 armor
+	Points = 55 -- +5 points
+} )
+
 DefineUnitType("unit-teuton-archer", { Name = _("Skutan"),
 	Parent = "unit-template-archer",
 	Civilization = "teuton",

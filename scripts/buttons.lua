@@ -53,7 +53,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-spear",
 	Key = "a", Hint = _("~!Attack"), Popup = "popup-commands",
 	ForUnit = {
 		"unit-goblin-worker", "unit-goblin-thief", "unit-goblin-spearman",
-		"unit-germanic-spearman", "unit-teuton-spearman",
+		"unit-germanic-spearman", "unit-teuton-spearman", "unit-frank-spearman",
 		"goblin-group"
 	}
 })
@@ -103,7 +103,7 @@ DefineButton( { Pos = 13, Level = 0, Icon = "icon-level-up",
 		"unit-dwarven-scout", "unit-dwarven-pathfinder", "unit-dwarven-gryphon-rider",
 		"unit-dwarven-yale-rider",
 		"unit-germanic-warrior", "unit-germanic-spearman", "unit-germanic-archer",
-		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-teuton-spearman", "unit-teuton-archer",
+		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-teuton-spearman", "unit-frank-spearman", "unit-teuton-archer",
 		"unit-teuton-ritter", "unit-frank-horseman",
 		"unit-gnomish-recruit", "unit-gnomish-duelist", "unit-gnomish-master-at-arms", "unit-gnomish-herbalist",
 		"unit-goblin-thief", "unit-goblin-spearman", "unit-goblin-archer",
@@ -161,7 +161,7 @@ DefineButton( { Pos = 4, Level = 1, Icon = "icon-spear-mastery",
 	Description = "Spear Mastery is a passive ability that increases damage with spears by 2.",
 	ForUnit = {
 		"unit-goblin-spearman",
-		"unit-germanic-spearman", "unit-teuton-spearman"
+		"unit-germanic-spearman", "unit-teuton-spearman", "unit-frank-spearman"
 	}
 } )
 
@@ -174,7 +174,8 @@ DefineButton( { Pos = 5, Level = 1, Icon = "icon-critical-strike",
 		"unit-dwarven-yale-rider",
 		"unit-dwarven-pathfinder", "unit-dwarven-gryphon-rider",
 		"unit-germanic-warrior", "unit-germanic-spearman", "unit-germanic-archer",
-		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-teuton-spearman", "unit-teuton-archer", "unit-teuton-ritter", "unit-frank-horseman",
+		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-teuton-spearman", "unit-frank-spearman",
+		"unit-teuton-archer", "unit-teuton-ritter", "unit-frank-horseman",
 		"unit-gnomish-master-at-arms",
 		"unit-goblin-thief", "unit-goblin-spearman", "unit-goblin-archer",
 		"unit-surghan-mercenary-thane"
@@ -190,7 +191,8 @@ DefineButton( { Pos = 5, Level = 1, Icon = "icon-deadly-precision",
 		"unit-dwarven-yale-rider",
 		"unit-dwarven-pathfinder", "unit-dwarven-gryphon-rider",
 		"unit-germanic-warrior", "unit-germanic-spearman", "unit-germanic-archer",
-		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-teuton-spearman", "unit-teuton-archer", "unit-teuton-ritter", "unit-frank-horseman",
+		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-teuton-spearman", "unit-frank-spearman",
+		"unit-teuton-archer", "unit-teuton-ritter", "unit-frank-horseman",
 		"unit-gnomish-master-at-arms",
 		"unit-goblin-thief", "unit-goblin-spearman", "unit-goblin-archer",
 		"unit-surghan-mercenary-thane"
@@ -206,7 +208,8 @@ DefineButton( { Pos = 6, Level = 1, Icon = "icon-eagle-eye",
 		"unit-dwarven-yale-rider",
 		"unit-dwarven-pathfinder", "unit-dwarven-gryphon-rider",
 		"unit-germanic-warrior", "unit-germanic-spearman", "unit-germanic-archer",
-		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-teuton-spearman", "unit-teuton-archer", "unit-teuton-ritter", "unit-frank-horseman",
+		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-teuton-spearman", "unit-frank-spearman",
+		"unit-teuton-archer", "unit-teuton-ritter", "unit-frank-horseman",
 		"unit-gnomish-master-at-arms",
 		"unit-goblin-thief", "unit-goblin-spearman", "unit-goblin-archer",
 		"unit-surghan-mercenary-thane"
@@ -233,7 +236,7 @@ DefineButton( { Pos = 8, Level = 1, Icon = "icon-puncture",
 	Description = "Puncture is an active ability which makes the target bleed for a certain duration. Only usable with melee weapons capable of doing thrusting attacks.",
 	ForUnit = {
 		"unit-germanic-warrior", "unit-germanic-spearman",
-		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-teuton-spearman",
+		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-teuton-spearman", "unit-frank-spearman",
 		"unit-gnomish-master-at-arms",
 		"unit-goblin-thief", "unit-goblin-spearman"
 	}
@@ -247,7 +250,8 @@ DefineButton( { Pos = 16, Level = 1, Icon = "icon-cancel",
 		"unit-dwarven-scout", "unit-dwarven-pathfinder", "unit-dwarven-gryphon-rider",
 		"unit-dwarven-yale-rider",
 		"unit-germanic-warrior", "unit-germanic-spearman", "unit-germanic-archer",
-		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-teuton-spearman", "unit-teuton-archer", "unit-teuton-ritter", "unit-frank-horseman",
+		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-teuton-spearman", "unit-frank-spearman",
+		"unit-teuton-archer", "unit-teuton-ritter", "unit-frank-horseman",
 		"unit-gnomish-recruit", "unit-gnomish-duelist", "unit-gnomish-master-at-arms", "unit-gnomish-herbalist",
 		"unit-goblin-thief", "unit-goblin-spearman", "unit-goblin-archer",
 		"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane"
@@ -266,7 +270,8 @@ DefineButton( { Pos = 14, Level = 0, Icon = "icon-inventory",
 		"unit-dwarven-yale-rider",
 		"unit-dwarven-gryphon-rider",
 		"unit-germanic-warrior", "unit-germanic-spearman", "unit-germanic-archer",
-		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-teuton-spearman", "unit-teuton-archer", "unit-teuton-ritter", "unit-frank-horseman",
+		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-teuton-spearman", "unit-frank-spearman",
+		"unit-teuton-archer", "unit-teuton-ritter", "unit-frank-horseman",
 		"unit-gnomish-recruit", "unit-gnomish-duelist", "unit-gnomish-master-at-arms", "unit-gnomish-herbalist",
 		"unit-goblin-thief", "unit-goblin-spearman", "unit-goblin-archer",
 		"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane"
@@ -282,7 +287,8 @@ DefineButton( { Pos = 16, Level = 2, Icon = "icon-cancel",
 		"unit-dwarven-yale-rider",
 		"unit-dwarven-gryphon-rider",
 		"unit-germanic-warrior", "unit-germanic-spearman", "unit-germanic-archer",
-		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-teuton-spearman", "unit-teuton-archer", "unit-teuton-ritter", "unit-frank-horseman",
+		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-teuton-spearman", "unit-frank-spearman",
+		"unit-teuton-archer", "unit-teuton-ritter", "unit-frank-horseman",
 		"unit-gnomish-recruit", "unit-gnomish-duelist", "unit-gnomish-master-at-arms", "unit-gnomish-herbalist",
 		"unit-goblin-thief", "unit-goblin-spearman", "unit-goblin-archer",
 		"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane"
@@ -331,7 +337,7 @@ DefineButton( { Pos = 7, Level = 0, Icon = "icon-puncture",
 	Key = "r", Hint = _("Punctu~!re"), Popup = "popup-research",
 	ForUnit = {
 		"unit-germanic-warrior", "unit-germanic-spearman",
-		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-teuton-spearman",
+		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-teuton-spearman", "unit-frank-spearman",
 		"unit-gnomish-master-at-arms",
 		"unit-goblin-thief", "unit-goblin-spearman"
 	}

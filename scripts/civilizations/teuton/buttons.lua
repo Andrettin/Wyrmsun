@@ -51,7 +51,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-teuton-iron-shield",
 	Allowed = "check-upgrade", AllowArg = {"upgrade-teuton-iron-shield"},
 	Key = "s", Hint = _("~!Stop"), Popup = "popup-commands",
 	ForUnit = {
-		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-teuton-spearman", "unit-teuton-ritter", "unit-frank-horseman",
+		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-teuton-spearman", "unit-frank-spearman", "unit-teuton-ritter", "unit-frank-horseman",
 		"germanic-group", "teuton-group"
 	}
 } )
@@ -215,33 +215,37 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-suebi-swordsman",
 	ForUnit = {"unit-teuton-barracks"}
 } )
 
---[[
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-teuton-spearman",
 	Action = "train-unit", Value = "unit-teuton-spearman",
-	Key = "s", Hint = _("Train ~!Spearman"), Popup = "popup-unit",
+	Key = "e", Hint = _("Train Sp~!eerkampfer"), Popup = "popup-unit",
 	ForUnit = {"unit-teuton-barracks"}
 } )
---]]
 
-DefineButton( { Pos = 2, Level = 0, Icon = "icon-germanic-archer",
+DefineButton( { Pos = 2, Level = 0, Icon = "icon-teuton-spearman",
+	Action = "train-unit", Value = "unit-frank-spearman",
+	Key = "e", Hint = _("Train Sp~!eerkampfer"), Popup = "popup-unit",
+	ForUnit = {"unit-teuton-barracks"}
+} )
+
+DefineButton( { Pos = 3, Level = 0, Icon = "icon-germanic-archer",
 	Action = "train-unit", Value = "unit-teuton-archer",
 	Key = "s", Hint = _("Train ~!Skutan"), Popup = "popup-unit",
 	ForUnit = {"unit-teuton-barracks"}
 } )
   
-DefineButton( { Pos = 3, Level = 0, Icon = "icon-teuton-ritter",
+DefineButton( { Pos = 4, Level = 0, Icon = "icon-teuton-ritter",
 	Action = "train-unit", Value = "unit-teuton-ritter",
 	Key = "r", Hint = _("Train ~!Ritter"), Popup = "popup-unit",
 	ForUnit = {"unit-teuton-barracks"}
 } )
 
-DefineButton( { Pos = 3, Level = 0, Icon = "icon-teuton-ritter",
+DefineButton( { Pos = 4, Level = 0, Icon = "icon-teuton-ritter",
 	Action = "train-unit", Value = "unit-frank-horseman",
 	Key = "r", Hint = _("Train ~!Ritter"), Popup = "popup-unit",
 	ForUnit = {"unit-teuton-barracks"}
 } )
 
-DefineButton( { Pos = 4, Level = 0, Icon = "icon-teuton-catapult",
+DefineButton( { Pos = 5, Level = 0, Icon = "icon-teuton-catapult",
 	Action = "train-unit", Value = "unit-teuton-catapult",
 	Key = "c", Hint = _("Build ~!Catapult"), Popup = "popup-unit",
 	ForUnit = {"unit-teuton-barracks"}

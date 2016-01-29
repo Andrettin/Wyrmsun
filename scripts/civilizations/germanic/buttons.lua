@@ -67,7 +67,8 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-germanic-wooden-oblong-shield",
 		"unit-germanic-worker",
 		"unit-germanic-warrior", "unit-germanic-spearman", "unit-germanic-archer",
 		"unit-teuton-worker",
-		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-teuton-spearman", "unit-teuton-archer", "unit-teuton-ritter", "unit-frank-horseman",
+		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-teuton-spearman", "unit-frank-spearman",
+		"unit-teuton-archer", "unit-teuton-ritter", "unit-frank-horseman",
 		"unit-teuton-catapult",
 		"unit-teuton-kogge",
 		"germanic-group", "teuton-group"
@@ -80,7 +81,8 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-germanic-bronze-shield",
 	Key = "s", Hint = _("~!Stop"), Popup = "popup-commands",
 	ForUnit = {
 		"unit-germanic-warrior", "unit-germanic-spearman",
-		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-teuton-spearman", "unit-teuton-ritter", "unit-frank-horseman",
+		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-teuton-spearman", "unit-frank-spearman",
+		"unit-teuton-ritter", "unit-frank-horseman",
 		"germanic-group", "teuton-group"
 	}
 })
@@ -106,7 +108,8 @@ DefineButton( { Pos = 4, Level = 0, Icon = "icon-germanic-patrol-land",
 	Key = "p", Hint = _("~!Patrol"), Popup = "popup-commands",
 	ForUnit = {
 		"unit-germanic-warrior", "unit-germanic-spearman", "unit-germanic-archer",
-		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-teuton-spearman", "unit-teuton-archer", "unit-teuton-ritter", "unit-frank-horseman",
+		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-teuton-spearman", "unit-frank-spearman",
+		"unit-teuton-archer", "unit-teuton-ritter", "unit-frank-horseman",
 		"unit-teuton-catapult",
 --		"unit-teuton-kogge",
 		"germanic-group", "teuton-group"
@@ -118,7 +121,8 @@ DefineButton( { Pos = 5, Level = 0, Icon = "icon-germanic-stand-ground",
   Key = "t", Hint = _("S~!tand Ground"), Popup = "popup-commands",
   ForUnit = {
     "unit-germanic-warrior", "unit-germanic-spearman", "unit-germanic-archer",
-	"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-teuton-spearman", "unit-teuton-archer", "unit-teuton-ritter", "unit-frank-horseman",
+	"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-teuton-spearman", "unit-frank-spearman",
+	"unit-teuton-archer", "unit-teuton-ritter", "unit-frank-horseman",
 	"unit-teuton-catapult",
 	"germanic-group", "teuton-group"
 } } )
