@@ -26,16 +26,6 @@
 --
 
 DefineCivilizationLanguage("goth", -- Gothic
-	"pronouns", {
-		"Mis", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
-			"meaning", "Me", -- dative
-			"dative", "Mis"
-		},
-		"Weis", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
-			"meaning", "We",
-			"nominative", "Weis"
-		}
-	},
 	"adverbs", {
 		"Aufto", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
 			"meaning", "Perhaps"
@@ -127,7 +117,7 @@ DefineLanguageNoun("Gazds", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Gender = "Masculine"
 })
 
-DefineLanguageNoun("Hairto", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
+DefineLanguageNoun("Hairto", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 3, Subsection 1.
 	Language = "gothic",
 	Meaning = "Heart",
 	SingularNominative = "Hairto"
@@ -275,7 +265,7 @@ DefineLanguageVerb("Hlaupan", { -- Source: Richard M. Runge, "The Phonetic Reali
 	Infinitive = "Hlaupan"
 })
 
-DefineLanguageVerb("Itan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
+DefineLanguageVerb("Itan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 3, Subsection 1.
 	Language = "gothic",
 	Meaning = "Eat",
 	Infinitive = "Itan"
@@ -306,10 +296,28 @@ DefineLanguageVerb("Saihan", { -- Source: Richard M. Runge, "The Phonetic Realiz
 	Infinitive = "Saihan"
 })
 
+DefineLanguageVerb("Standan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 3, Subsection 1.
+	Language = "gothic",
+	Meaning = "Stand",
+	Infinitive = "Standan"
+})
+
 DefineLanguageVerb("Stautan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
 	Language = "gothic",
 	Meaning = "Push", -- source gives translation as the German word "stoßen"
 	Infinitive = "Stautan"
+})
+
+DefineLanguageVerb("Tagr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 3, Subsection 1.
+	Language = "gothic",
+	Meaning = "Tear",
+	Infinitive = "Tagr"
+})
+
+DefineLanguageVerb("Trauan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 3, Subsection 1.
+	Language = "gothic",
+	Meaning = "Trust",
+	Infinitive = "Trauan"
 })
 
 DefineLanguageVerb("Wairþan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
@@ -318,10 +326,12 @@ DefineLanguageVerb("Wairþan", { -- Source: Richard M. Runge, "The Phonetic Real
 	Infinitive = "Wairþan"
 })
 
-DefineLanguageVerb("Witan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
+DefineLanguageVerb("Witan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241; Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 3, Subsection 3.
 	Language = "gothic",
-	Meaning = "Know",
-	Infinitive = "Witan"
+	Meaning = "Know, Keep Watch Over",
+	Infinitive = "Witan",
+	SingularFirstPersonPresent = "Wait",
+	PluralFirstPersonPresent = "Witum"
 })
 
 DefineLanguageAdjective("Faihs", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
@@ -360,4 +370,24 @@ DefineLanguageAdjective("Rauþs", { -- Source: Richard M. Runge, "The Phonetic R
 	Language = "gothic",
 	Meaning = "Red",
 	Positive = "Rauþs"
+})
+
+DefineLanguagePronoun("Mis", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
+	Language = "gothic",
+	Meaning = "Me", -- dative
+	Dative = "Mis"
+})
+
+DefineLanguagePronoun("Weis", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 5, Subsection 1.
+	Language = "gothic",
+	Meaning = "We",
+	Nominative = "Weis"
+})
+
+DefineLanguagePronoun("Izwis", { -- should be the nominative form; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 5, Subsection 1.
+	Language = "gothic",
+	Meaning = "You", -- second person plural
+	-- what is the nominative form?
+	Accusative = "Izwis",
+	Dative = "Izwis"
 })

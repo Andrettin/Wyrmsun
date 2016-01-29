@@ -64,6 +64,12 @@ DefineLanguageNoun("Cên", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Gender = "Masculine"
 })
 
+DefineLanguageNoun("Cost", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 3, Subsection 2.
+	Language = "old-english",
+	Meaning = "Object of Choice",
+	SingularNominative = "Cost"
+})
+
 DefineLanguageNoun("Ealdorneru", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "old-english",
 	Meaning = "Saving of a Life",
@@ -156,6 +162,12 @@ DefineLanguageNoun("Heorde", { -- Source: Sean Crist, "An Analysis of *z loss in
 	Meaning = "Flax Fiber",
 	SingularNominative = "Heorde",
 	Uncountable = true -- as a material, it is likely to be uncountable, specially since there is a word for "hards of flax"
+})
+
+DefineLanguageNoun("Heorte", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 3, Subsection 1.
+	Language = "old-english",
+	Meaning = "Heart",
+	SingularNominative = "Heorte"
 })
 
 DefineLanguageNoun("Hlēapestre", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, pp. 77-78.
@@ -400,7 +412,21 @@ DefineLanguageVerb("Bītan", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Infinitive = "Bītan"
 })
 
-DefineLanguageVerb("Etan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
+DefineLanguageVerb("Cēosan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 3, Subsection 2.
+	Language = "old-english",
+	Meaning = "Choose",
+	Infinitive = "Cēosan"
+	-- source also gives the forms "cēas", "curon" and "coren" (presumably conjugations of the verb)
+})
+
+DefineLanguageVerb("Cēowan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 3, Subsection 2.
+	Language = "old-english",
+	Meaning = "Chew",
+	Infinitive = "Cēowan"
+	-- source also gives the forms "cēaw", "cuwon" and "cowen" (presumably conjugations of the verb)
+})
+
+DefineLanguageVerb("Etan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 3, Subsection 1.
 	Language = "old-english",
 	Meaning = "Eat",
 	Infinitive = "Etan"
@@ -410,6 +436,13 @@ DefineLanguageVerb("Gereordian", { -- Source: Sean Crist, "An Analysis of *z los
 	Language = "old-english",
 	Meaning = "Feed, Entertain, Feast",
 	Infinitive = "Gereordian"
+})
+
+DefineLanguageVerb("Grīpan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 3, Subsection 2.
+	Language = "old-english",
+	Meaning = "Grab",
+	Infinitive = "Grīpan"
+	-- source also gives the forms "grāp", "gripon" and "gripen" (presumably conjugations of the verb)
 })
 
 DefineLanguageVerb("Healdan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 238.
@@ -462,10 +495,35 @@ DefineLanguageVerb("Seah", { -- should be infinitive form; Source: Richard M. Ru
 	SingularThirdPersonPast = "Seah"
 })
 
+DefineLanguageVerb("Sēoðan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 3, Subsection 2.
+	Language = "old-english",
+	Meaning = "Boil",
+	Infinitive = "Sēoðan"
+	-- source also gives the forms "sēað", "sudon" and "sodden" (presumably conjugations of the verb)
+})
+
+DefineLanguageVerb("Standan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 3, Subsection 1.
+	Language = "old-english",
+	Meaning = "Stand",
+	Infinitive = "Standan"
+})
+
+DefineLanguageVerb("Tēar", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 3, Subsection 1.
+	Language = "old-english",
+	Meaning = "Tear",
+	Infinitive = "Tēar"
+})
+
 DefineLanguageVerb("Tiohhian", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 239.
 	Language = "old-english",
 	Meaning = "Consider",
 	Infinitive = "Tiohhian"
+})
+
+DefineLanguageVerb("Trūwian", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 3, Subsection 1.
+	Language = "old-english",
+	Meaning = "Trust",
+	Infinitive = "Trūwian"
 })
 
 DefineLanguageVerb("Wesan", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 110.

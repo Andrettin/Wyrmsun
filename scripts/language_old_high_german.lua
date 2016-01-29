@@ -105,7 +105,7 @@ DefineLanguageNoun("Hagazussa", { -- Source: Alaric Hall, "The Meanings of Elf a
 	PluralNominative = "Hagazussan"
 })
 
-DefineLanguageNoun("Herza", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
+DefineLanguageNoun("Herza", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 3, Subsection 1.
 	Language = "old-high-german",
 	Meaning = "Heart",
 	SingularNominative = "Herza"
@@ -263,7 +263,7 @@ DefineLanguageVerb("Bītan", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Infinitive = "Bītan"
 })
 
-DefineLanguageVerb("Ezzan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
+DefineLanguageVerb("Ezzan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 3, Subsection 1.
 	Language = "old-high-german",
 	Meaning = "Eat",
 	Infinitive = "Ezzan"
@@ -324,10 +324,28 @@ DefineLanguageVerb("Sehan", { -- Source: Richard M. Runge, "The Phonetic Realiza
 	Infinitive = "Sehan"
 })
 
+DefineLanguageVerb("Standan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 3, Subsection 1.
+	Language = "old-high-german",
+	Meaning = "Stand",
+	Infinitive = "Standan"
+})
+
 DefineLanguageVerb("Stōzan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
 	Language = "old-high-german",
 	Meaning = "Push", -- source gives translation as the German word "stoßen"
 	Infinitive = "Stōzan"
+})
+
+DefineLanguageVerb("Trūēn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 3, Subsection 1.
+	Language = "old-high-german",
+	Meaning = "Trust",
+	Infinitive = "Trūēn"
+})
+
+DefineLanguageVerb("Zahar", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 3, Subsection 1.
+	Language = "old-high-german",
+	Meaning = "Tear",
+	Infinitive = "Zahar"
 })
 
 DefineLanguageVerb("Werdan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.

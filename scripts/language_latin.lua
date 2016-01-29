@@ -109,3 +109,9 @@ DefineLanguageAdjective("Verus", { -- Source: Alaric Hall, "The Meanings of Elf 
 	Meaning = "True, Real",
 	Positive = "Verus"
 })
+
+DefineLanguagePronoun("Vōs", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 5, Subsection 1.
+	Language = "latin",
+	Meaning = "You", -- second person plural
+	Nominative = "Vōs"
+})
