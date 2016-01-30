@@ -82,6 +82,12 @@ DefineLanguageNoun("Hund", { -- Source: Richard M. Runge, "The Phonetic Realizat
 	SingularNominative = "Hund"
 })
 
+DefineLanguageNoun("Hurth", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+	Language = "old-saxon",
+	Meaning = "Wattle", -- derived from Proto-Germanic "Χŕdiz", which has the meaning of "wattle"
+	SingularNominative = "Hurth"
+})
+
 DefineLanguageNoun("Līfnara", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "old-saxon",
 	Meaning = "Food, Nourishment",
@@ -217,4 +223,10 @@ DefineLanguageAdjective("Mēro", { -- this is the comparative, what is the norma
 	Meaning = "More",
 	Comparative = "Mēro",
 	Superlative = "Mēst"
+})
+
+DefineLanguageAdjective("Reht", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+	Language = "old-saxon",
+	Meaning = "Right, Straight", -- derived from Proto-Germanic "Reχtaz", which means "Right, Straight"
+	Positive = "Reht"
 })

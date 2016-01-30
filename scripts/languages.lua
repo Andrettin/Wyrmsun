@@ -29,6 +29,10 @@ DefineLanguage("avestan", {
 	Name = "Avestan"
 })
 
+DefineLanguage("crimean-gothic", {
+	Name = "Crimean Gothic"
+})
+
 DefineLanguage("dwarven", {
 	Name = "Dwarven"
 })

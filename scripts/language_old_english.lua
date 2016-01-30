@@ -44,6 +44,12 @@ DefineLanguageNoun("Bearn", { -- Source: Richard M. Runge, "The Phonetic Realiza
 	SingularNominative = "Bearn"
 })
 
+DefineLanguageNoun("Bōc", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+	Language = "old-english",
+	Meaning = "Book", -- derived from Proto-Germanic "Bōks"; the source has the meaning for that word as "'tablet' > 'book'", but it is not clear if it means that the meaning became book in the child languages of Proto-Germanic, or within the timespan of the language itself
+	SingularNominative = "Bōc"
+})
+
 DefineLanguageNoun("Breord", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "old-english",
 	Meaning = "Shore, Edge",
@@ -64,10 +70,22 @@ DefineLanguageNoun("Cên", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Gender = "Masculine"
 })
 
+DefineLanguageNoun("Corn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+	Language = "old-english",
+	Meaning = "Grain", -- derived from Proto-Germanic "Kŕnam", which has the meaning of "grain"
+	SingularNominative = "Corn"
+})
+
 DefineLanguageNoun("Cost", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 3, Subsection 2.
 	Language = "old-english",
 	Meaning = "Object of Choice",
 	SingularNominative = "Cost"
+})
+
+DefineLanguageNoun("Duru", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+	Language = "proto-germanic",
+	Meaning = "Door", -- derived from Proto-Germanic "Durez", which has the meaning of "door"
+	SingularNominative = "Duru"
 })
 
 DefineLanguageNoun("Ealdorneru", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
@@ -77,10 +95,10 @@ DefineLanguageNoun("Ealdorneru", { -- Source: Sean Crist, "An Analysis of *z los
 	Gender = "Feminine"
 })
 
-DefineLanguageNoun("Eorþe", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 238.
+DefineLanguageNoun("Eorþe", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 238; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-english",
 	Meaning = "Earth",
-	SingularNominative = "Eorþe",
+	SingularNominative = "Eorþe", -- Runge gives "Eorþe", while Lehmann gives "Eorþ"
 	Uncountable = true
 })
 
@@ -101,6 +119,24 @@ DefineLanguageNoun("Fisc", { -- Source: Richard M. Runge, "The Phonetic Realizat
 	Language = "old-english",
 	Meaning = "Fish",
 	SingularNominative = "Fisc"
+})
+
+DefineLanguageNoun("Fōt", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+	Language = "old-english",
+	Meaning = "Foot", -- derived from Proto-Germanic "Fōts", which has the meaning of "foot"
+	SingularNominative = "Fōt"
+})
+
+DefineLanguageNoun("Gēar", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+	Language = "old-english",
+	Meaning = "Year", -- derived from Proto-Germanic "Yēra", which means "Year"
+	SingularNominative = "Gēar"
+})
+
+DefineLanguageNoun("Geard", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+	Language = "old-english",
+	Meaning = "Garden", -- derived from Proto-Germanic "Gárdiz", which has the meaning of "garden"
+	SingularNominative = "Geard"
 })
 
 DefineLanguageNoun("Gereord", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 10.
@@ -229,6 +265,12 @@ DefineLanguageNoun("Mann", { -- Source: Alaric Hall, "The Meanings of Elf and El
 	Gender = "Masculine"
 })
 
+DefineLanguageNoun("Meaht", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+	Language = "old-english",
+	Meaning = "Might", -- derived from Proto-Germanic "Maχtiz", which has the meaning of "Might"
+	SingularNominative = "Meaht"
+})
+
 DefineLanguageNoun("Mearg", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
 	Language = "old-english",
 	Meaning = "Marrow",
@@ -263,7 +305,7 @@ DefineLanguageNoun("Mynecenu", { -- Source: Alaric Hall, "The Meanings of Elf an
 	Gender = "Feminine"
 })
 
-DefineLanguageNoun("Neaht", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 238.
+DefineLanguageNoun("Neaht", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 238; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-english",
 	Meaning = "Night",
 	SingularNominative = "Neaht"
@@ -304,6 +346,12 @@ DefineLanguageNoun("Reord", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Gender = "Feminine"
 })
 
+DefineLanguageNoun("Sǣd", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+	Language = "old-english",
+	Meaning = "Seed", -- derived from the Proto-Germanic "Sēþiz", which means "Seed"
+	SingularNominative = "Sǣd"
+})
+
 DefineLanguageNoun("Sangestre", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, pp. 77-78.
 	Language = "old-english",
 	Meaning = "Singer",
@@ -337,10 +385,16 @@ DefineLanguageNoun("Spinelhealf", { -- Source: Alaric Hall, "The Meanings of Elf
 	SingularNominative = "Spinelhealf"
 })
 
-DefineLanguageNoun("Þunorrad", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 169.
+DefineLanguageNoun("Sunna", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-english",
-	Meaning = "Peal of Thunder", -- literally: "thunder-ride" or "Thunor-ride"
-	SingularNominative = "Þunorrad"
+	Meaning = "Sun", -- derived from Proto-Germanic "Sunōn", which has the meaning of "Sun"
+	SingularNominative = "Sunna"
+})
+
+DefineLanguageNoun("Swīn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+	Language = "old-english",
+	Meaning = "Pig", -- derived from the Proto-Germanic "Swīnaz", which means "Pig"
+	SingularNominative = "Swīn"
 })
 
 DefineLanguageNoun("Twīn", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 6.
@@ -349,10 +403,22 @@ DefineLanguageNoun("Twīn", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	SingularNominative = "Twīn"
 })
 
+DefineLanguageNoun("Þunorrad", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 169.
+	Language = "old-english",
+	Meaning = "Peal of Thunder", -- literally: "thunder-ride" or "Thunor-ride"
+	SingularNominative = "Þunorrad"
+})
+
 DefineLanguageNoun("Wâd", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 4.
 	Language = "old-english",
 	Meaning = "Woad",
 	SingularNominative = "Wâd"
+})
+
+DefineLanguageNoun("Wægn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+	Language = "old-english",
+	Meaning = "Wagon", -- derived from Proto-Germanic "Waganaz", which means "Wagon"
+	SingularNominative = "Wægn"
 })
 
 DefineLanguageNoun("Wælcyrige", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 10.
@@ -398,6 +464,12 @@ DefineLanguageVerb("Aseowen", { -- Source: Richard M. Runge, "The Phonetic Reali
 	Meaning = "Sifted", -- it seems like Aseowen corresponds to the English past participle of "sift" (the source says simply Aseowen = Sifted); maybe it is an adjective instead?
 	-- infinitive form?
 	ParticiplePast = "Aseowen"
+})
+
+DefineLanguageVerb("Bēodan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+	Language = "old-english",
+	Meaning = "Bid, Offer, Order",
+	Infinitive = "Bēodan"
 })
 
 DefineLanguageVerb("Beran", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
@@ -520,10 +592,22 @@ DefineLanguageVerb("Standan", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Infinitive = "Standan"
 })
 
+DefineLanguageVerb("Stīgan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+	Language = "old-english",
+	Meaning = "Climb",
+	Infinitive = "Stīgan"
+})
+
 DefineLanguageVerb("Tēar", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 3, Subsection 1.
 	Language = "old-english",
 	Meaning = "Tear",
 	Infinitive = "Tēar"
+})
+
+DefineLanguageVerb("Tēon", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+	Language = "old-english",
+	Meaning = "Push", -- derived from Proto-Germanic "Téuχanan", which has the meaning of "push"
+	Infinitive = "Tēon"
 })
 
 DefineLanguageVerb("Tiohhian", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 239.
@@ -548,7 +632,8 @@ DefineLanguageVerb("Wesan", { -- Source: Alaric Hall, "The Meanings of Elf and E
 DefineLanguageVerb("Witan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
 	Language = "old-english",
 	Meaning = "Know",
-	Infinitive = "Witan"
+	Infinitive = "Witan",
+	PluralFirstPersonPresent = "Witom" -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 })
 
 DefineLanguageAdjective("Ceorlisc", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 100.
@@ -569,13 +654,31 @@ DefineLanguageAdjective("Denisc", { -- Source: Alaric Hall, "The Meanings of Elf
 	Positive = "Denisc"
 })
 
+DefineLanguageAdjective("Dēop", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+	Language = "old-english",
+	Meaning = "Deep", -- derived from Proto-Germanic "Déwpaz", which has the meaning of "deep"
+	Positive = "Dēop"
+})
+
+DefineLanguageAdjective("Fūl", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+	Language = "old-english",
+	Meaning = "Foul", -- derived from the Proto-Germanic "Fūla", which means "Foul"
+	Positive = "Fūl"
+})
+
 DefineLanguageAdjective("Gydig", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 94.
 	Language = "old-english",
 	Meaning = "Possessed (by a God)",
 	Positive = "Gydig"
 })
 
-DefineLanguageAdjective("Māra", { -- this is the comparative, what is the normal version of the word? Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
+DefineLanguageAdjective("Long", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+	Language = "old-english",
+	Meaning = "Long", -- derived from Proto-Germanic "Langaz", which means "Long"
+	Positive = "Long"
+})
+
+DefineLanguageAdjective("Māra", { -- this is the comparative, what is the normal version of the word? Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-english",
 	Meaning = "More",
 	Positive = "Māra",
@@ -593,6 +696,12 @@ DefineLanguageAdjective("Sælig", { -- Source: Alaric Hall, "The Meanings of Elf
 	Language = "old-english",
 	Meaning = "Happy, Prosperous",
 	Positive = "Sælig"
+})
+
+DefineLanguageAdjective("Þyrre", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+	Language = "old-english",
+	Meaning = "Dry", -- derived from Proto-Germanic "Þrsúz", which has the meaning of "dry"
+	Positive = "Þyrre"
 })
 
 DefineLanguageAdjective("Werig", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 94.
@@ -632,4 +741,14 @@ DefineLanguageAdverb("Wel", { -- Source: Richard M. Runge, "The Phonetic Realiza
 DefineLanguageConjunction("Eþþa", { -- Also given as "Oþþe", are Eþþa and Oþþe two forms of "or" in Old English, or are they just different ways to write the same word in that language?; Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
 	Language = "old-english",
 	Meaning = "Or"
+})
+
+DefineLanguageAdposition("Of", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+	Language = "old-english",
+	Meaning = "From" -- derived from Proto-Germanic "Af", which means "From"
+})
+
+DefineLanguageAdposition("Ofer", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+	Language = "old-english",
+	Meaning = "Over" -- derived from the Proto-Germanic "Ufar", which means "Over"
 })

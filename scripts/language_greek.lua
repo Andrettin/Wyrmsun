@@ -153,3 +153,9 @@ DefineLanguageVerb("Pheídomai", { -- Source: Winfred P. Lehmann, "A Grammar of 
 	Meaning = "Separate",
 	SingularFirstPersonPresent = "Pheídomai"
 })
+
+DefineLanguagePronoun("Égō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 1.
+	Language = "greek",
+	Meaning = "I", -- is a cognate of Proto-Germanic "eka"/"ek", so possibly has the same meaning
+	Nominative = "Égō"
+})

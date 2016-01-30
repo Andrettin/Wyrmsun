@@ -89,6 +89,12 @@ DefineLanguageNoun("Berga", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	}
 })
 
+DefineLanguageNoun("Bōks", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+	Language = "proto-germanic",
+	Meaning = "Tablet, Book", -- the source has the meaning as "'tablet' > 'book'", but it is not clear if it means that the meaning became book in the child languages of Proto-Germanic, or within the timespan of the language itself
+	SingularNominative = "Bōks"
+})
+
 DefineLanguageNoun("Brazda", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "proto-germanic",
 	Meaning = "Edge",
@@ -122,6 +128,18 @@ DefineLanguageNoun("Bûra", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Gender = "Masculine"
 })
 
+DefineLanguageNoun("Χŕdiz", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+	Language = "proto-germanic",
+	Meaning = "Wattle",
+	SingularNominative = "Χŕdiz"
+})
+
+DefineLanguageNoun("Durez", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+	Language = "proto-germanic",
+	Meaning = "Door",
+	PluralNominative = "Durez"
+})
+
 DefineLanguageNoun("Dverga", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 113.
 	Language = "proto-germanic",
 	Meaning = "Dwarf",
@@ -136,16 +154,34 @@ DefineLanguageNoun("Erala", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Gender = "Masculine"
 })
 
+DefineLanguageNoun("Erþō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+	Language = "proto-germanic",
+	Meaning = "Earth",
+	SingularNominative = "Erþō"
+})
+
 DefineLanguageNoun("Fehu", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "proto-germanic",
 	Meaning = "Cattle",
 	SingularNominative = "Fehu"
 })
 
-DefineLanguageNoun("Garda", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 72.
+DefineLanguageNoun("Flōduz", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "proto-germanic",
-	Meaning = "Enclosure, Court, Garden", -- source gives "Geheg, Hof, Garten" as the meaning
-	SingularNominative = "Garda", -- source also gives the alternate forms "Gardi" and "Gardan"
+	Meaning = "Flood",
+	SingularNominative = "Flōduz"
+})
+
+DefineLanguageNoun("Fōts", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+	Language = "proto-germanic",
+	Meaning = "Foot",
+	SingularNominative = "Fōts"
+})
+
+DefineLanguageNoun("Gárdiz", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 72.
+	Language = "proto-germanic",
+	Meaning = "Enclosure, Court, Garden", -- Fick and Torp give "Geheg, Hof, Garten" as the meaning; Lehmann gives the meaning as "Garden"
+	SingularNominative = "Gárdiz", -- Fick and Torp spell the word as "Garda"/"Gardi"/"Gardan"
 	Gender = "Masculine",
 	PrefixSingular = true,
 	PrefixTypeName = {"province"}, -- seems sensible in face of a lack of examples, specially since is a cognate of the prefix in "Gardarike"
@@ -263,6 +299,12 @@ DefineLanguageNoun("Kizna", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Gender = "Masculine"
 })
 
+DefineLanguageNoun("Kŕnam", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+	Language = "proto-germanic",
+	Meaning = "Grain",
+	SingularNominative = "Kŕnam"
+})
+
 DefineLanguageNoun("Landa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 184.
 	Language = "proto-germanic",
 	Meaning = "Terra Firma, Land, Country", -- source gives the German words "terra firma, Land"
@@ -284,6 +326,12 @@ DefineLanguageNoun("Lauda", { -- Source: August Fick and Alf Torp, "Wortschatz d
 		"terrain-mountains", -- seems sensible in face of a lack of examples
 		"terrain-hills" -- seems sensible in face of a lack of examples
 	}
+})
+
+DefineLanguageNoun("Maχtiz", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+	Language = "proto-germanic",
+	Meaning = "Might",
+	SingularNominative = "Maχtiz"
 })
 
 DefineLanguageNoun("Maitila", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 164.
@@ -314,6 +362,12 @@ DefineLanguageNoun("Mizdō", { -- Source: Sean Crist, "An Analysis of *z loss in
 	Meaning = "Reward, Payment, Fee",
 	SingularNominative = "Mizdō",
 	Gender = "Feminine"
+})
+
+DefineLanguageNoun("Naχts", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+	Language = "proto-germanic",
+	Meaning = "Night",
+	SingularNominative = "Naχts"
 })
 
 DefineLanguageNoun("Nemida", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 151.
@@ -414,6 +468,24 @@ DefineLanguageNoun("Snaigva", { -- Source: August Fick and Alf Torp, "Wortschatz
 	PrefixTypeName = {"terrain-mountains"} -- seems sensible in face of a lack of examples, specially since in German there is the "Schneeberg"
 })
 
+DefineLanguageNoun("Sēþiz", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+	Language = "proto-germanic",
+	Meaning = "Seed",
+	SingularNominative = "Sēþiz"
+})
+
+DefineLanguageNoun("Sunōn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+	Language = "proto-germanic",
+	Meaning = "Sun",
+	SingularNominative = "Sunōn"
+})
+
+DefineLanguageNoun("Swīnaz", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+	Language = "proto-germanic",
+	Meaning = "Pig",
+	SingularNominative = "Swīnaz"
+})
+
 DefineLanguageNoun("Tandran", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 84.
 	Language = "proto-germanic",
 	Meaning = "Fire, Burning Coal", -- source gives the German "Feuer, glühende Kohle" as the meaning
@@ -470,6 +542,12 @@ DefineLanguageNoun("Vikkan", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Gender = "Masculine"
 })
 
+DefineLanguageNoun("Waganaz", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+	Language = "proto-germanic",
+	Meaning = "Wagon",
+	SingularNominative = "Waganaz"
+})
+
 DefineLanguageNoun("Waida", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 4.
 	Language = "proto-germanic",
 	Meaning = "Woad",
@@ -483,10 +561,23 @@ DefineLanguageNoun("Walakuzjōn", { -- Source: Sean Crist, "An Analysis of *z lo
 	Gender = "feminine"
 })
 
+DefineLanguageNoun("Yēra", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+	Language = "proto-germanic",
+	Meaning = "Year",
+	SingularNominative = "Yēra"
+})
+
 DefineLanguageVerb("Beran", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "proto-germanic",
 	Meaning = "?",
 	Infinitive = "Beran"
+})
+
+DefineLanguageVerb("Beud", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+	Language = "proto-germanic",
+	Meaning = "Bid, Offer, Order",
+	Infinitive = "Beud",
+	ParticiplePast = "Baud" -- "offered"
 })
 
 DefineLanguageVerb("Bītan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
@@ -513,10 +604,23 @@ DefineLanguageVerb("Nazjan", { -- Source: Sean Crist, "An Analysis of *z loss in
 	Infinitive = "Nazjan"
 })
 
+DefineLanguageVerb("Steig", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+	Language = "proto-germanic",
+	Meaning = "Climb",
+	Infinitive = "Steig",
+	ParticiplePast = "Staig"
+})
+
 DefineLanguageVerb("Tawido", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "proto-germanic", -- from the Gallehus inscription, is it really Proto-Germanic?
 	Meaning = "Made",
 	SingularFirstPersonPast = "Tawido"
+})
+
+DefineLanguageVerb("Téuχanan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+	Language = "proto-germanic",
+	Meaning = "Push",
+	Infinitive = "Téuχanan"
 })
 
 DefineLanguageVerb("Twiznōn", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
@@ -525,12 +629,42 @@ DefineLanguageVerb("Twiznōn", { -- Source: Sean Crist, "An Analysis of *z loss 
 	Infinitive = "Twiznōn"
 })
 
-DefineLanguageAdjective("Mēria", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
+DefineLanguageVerb("Witum", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+	Language = "proto-germanic",
+	Meaning = "Know",
+	PluralFirstPersonPresent = "Witum" -- "we know"
+})
+
+DefineLanguageAdjective("Déwpaz", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+	Language = "proto-germanic",
+	Meaning = "Deep",
+	Positive = "Déwpaz"
+})
+
+DefineLanguageAdjective("Fūla", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+	Language = "proto-germanic",
+	Meaning = "Foul",
+	Positive = "Fūla"
+})
+
+DefineLanguageAdjective("Langaz", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+	Language = "proto-germanic",
+	Meaning = "Long",
+	Positive = "Langaz"
+})
+
+DefineLanguageAdjective("Mēria", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "proto-germanic",
 	Meaning = "More",
-	Positive = "Mēria",
+	Positive = "Mēria", -- Crist gives "Mēria", while Lehmann gives "Méyzaz"
 	Comparative = "Maizan",
 	Superlative = "Maista"
+})
+
+DefineLanguageAdjective("Reχtaz", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+	Language = "proto-germanic",
+	Meaning = "Right, Straight",
+	Positive = "Reχtaz"
 })
 
 DefineLanguageAdjective("Twiznaz", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 6.
@@ -545,6 +679,12 @@ DefineLanguageAdjective("Þrizna", { -- Source: Sean Crist, "An Analysis of *z l
 	Meaning = "Threefold", -- source gives the meaning as "threefold, the three (je drei)"
 	 -- maybe is an adverb instead?
 	Positive = "Þrizna"
+})
+
+DefineLanguageAdjective("Þrsúz", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+	Language = "proto-germanic",
+	Meaning = "Dry",
+	Positive = "Þrsúz"
 })
 
 DefineLanguageAdjective("Vîha", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 206.
@@ -577,7 +717,15 @@ DefineLanguageAdverb("Maiz", { -- Source: Sean Crist, "An Analysis of *z loss in
 	Meaning = "More"
 })
 
+DefineLanguageAdposition("Af", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+	Language = "proto-germanic",
+	Meaning = "From"
+})
 
+DefineLanguageAdposition("Ufar", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+	Language = "proto-germanic",
+	Meaning = "Over"
+})
 
 -- Must re-check to see if actually correct
 

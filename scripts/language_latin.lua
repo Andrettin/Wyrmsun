@@ -128,6 +128,12 @@ DefineLanguageAdjective("Verus", { -- Source: Alaric Hall, "The Meanings of Elf 
 	Positive = "Verus"
 })
 
+DefineLanguagePronoun("Egō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 1.
+	Language = "latin",
+	Meaning = "I", -- is a cognate of Proto-Germanic "eka"/"ek", so possibly has the same meaning
+	Nominative = "Egō"
+})
+
 DefineLanguagePronoun("Vōs", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 5, Subsection 1.
 	Language = "latin",
 	Meaning = "You", -- second person plural
