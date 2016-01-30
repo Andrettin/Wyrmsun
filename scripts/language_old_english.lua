@@ -83,7 +83,7 @@ DefineLanguageNoun("Cost", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 })
 
 DefineLanguageNoun("Duru", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
-	Language = "proto-germanic",
+	Language = "old-english",
 	Meaning = "Door", -- derived from Proto-Germanic "Durez", which has the meaning of "door"
 	SingularNominative = "Duru"
 })

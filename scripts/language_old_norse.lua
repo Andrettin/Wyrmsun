@@ -84,7 +84,7 @@ DefineLanguageNoun("Broddr", { -- Source: Sean Crist, "An Analysis of *z loss in
 })
 
 DefineLanguageNoun("Dyrr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
-	Language = "proto-germanic",
+	Language = "old-norse",
 	Meaning = "Door", -- derived from Proto-Germanic "Durez", which has the meaning of "door"
 	PluralNominative = "Dyrr"
 })

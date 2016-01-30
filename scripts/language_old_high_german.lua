@@ -117,7 +117,7 @@ DefineLanguageNoun("Fluot", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 })
 
 DefineLanguageNoun("Fuoz", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
-	Language = "proto-germanic",
+	Language = "old-high-german",
 	Meaning = "Foot", -- derived from Proto-Germanic "Fōts", which has the meaning of "foot"
 	SingularNominative = "Fuoz"
 })
