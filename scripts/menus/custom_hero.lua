@@ -109,7 +109,7 @@ function CustomHeroCreationMenu(world, quest_menu)
 				and GetUnitTypeData(unitName, "Civilization") == string.lower(hero_civilization_list[hero_civilization:getSelected() + 1])
 				and GetUnitTypeData(unitName, "Class") ~= "worker"
 				and GetUnitTypeData(unitName, "Class") ~= "militia"
-				and GetUnitTypeData(unitName, "Class") ~= "spearman"
+				and unitName ~= "unit-germanic-spearman"
 				and GetUnitTypeData(unitName, "Class") ~= "priest"
 				and GetUnitTypeData(unitName, "Level") == 1
 				and GetUnitTypeData(unitName, "organic")
