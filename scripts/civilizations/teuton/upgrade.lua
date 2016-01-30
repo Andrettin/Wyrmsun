@@ -405,6 +405,10 @@ DefineDependency("unit-suebi-swordsman",
 	{"upgrade-suebi-tribe-faction"}
 )
 
+DefineDependency("unit-frank-spearman",
+	{"upgrade-frank-tribe-faction"}
+)
+
 DefineDependency("unit-teuton-dock",
 	{"unit-teuton-lumber-mill"}
 )
