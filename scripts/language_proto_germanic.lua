@@ -89,9 +89,9 @@ DefineLanguageNoun("Berga", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	}
 })
 
-DefineLanguageNoun("Bōks", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+DefineLanguageNoun("Bōks", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Sections 2-3.
 	Language = "proto-germanic",
-	Meanings = {"Tablet", "Book"}, -- the source has the meaning as "'tablet' > 'book'", but it is not clear if it means that the meaning became book in the child languages of Proto-Germanic, or within the timespan of the language itself
+	Meanings = {"Tablet"},
 	SingularNominative = "Bōks"
 })
 
@@ -100,6 +100,12 @@ DefineLanguageNoun("Brazda", { -- Source: Sean Crist, "An Analysis of *z loss in
 	Meanings = {"Edge"},
 	SingularNominative = "Brazda", -- source also gives the alternative form "Brezda"
 	Gender = "Masculine"
+})
+
+DefineLanguageNoun("Brōþar", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "proto-germanic",
+	Meanings = {"Brother"},
+	SingularNominative = "Brōþar"
 })
 
 DefineLanguageNoun("Bruzdaz", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 9.
@@ -158,6 +164,12 @@ DefineLanguageNoun("Erþō", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Language = "proto-germanic",
 	Meanings = {"Earth"},
 	SingularNominative = "Erþō"
+})
+
+DefineLanguageNoun("Fadēr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "proto-germanic",
+	Meanings = {"Father"},
+	SingularNominative = "Fadēr"
 })
 
 DefineLanguageNoun("Fehu", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
@@ -573,17 +585,23 @@ DefineLanguageVerb("Beran", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Infinitive = "Beran"
 })
 
-DefineLanguageVerb("Beud", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+DefineLanguageVerb("Beud", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Sections 2-3.
 	Language = "proto-germanic",
 	Meanings = {"Bid", "Offer", "Order"},
 	Infinitive = "Beud",
-	ParticiplePast = "Baud" -- "offered"
+	ParticiplePast = "Baud" -- "offered" / "ordered"
 })
 
 DefineLanguageVerb("Bītan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "proto-germanic",
-	Meanings = {"?"}, -- reflexes have "bite" as their meaning
+	Meanings = {"Bite"}, -- reflexes have "bite" as their meaning
 	Infinitive = "Bītan"
+})
+
+DefineLanguageVerb("Kwemanan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "proto-germanic",
+	Meanings = {"Come"},
+	Infinitive = "Kwemanan"
 })
 
 DefineLanguageVerb("Laizijanã", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 4-5.
@@ -598,10 +616,22 @@ DefineLanguageVerb("Liznōn", { -- Source: Sean Crist, "An Analysis of *z loss i
 	Infinitive = "Liznōn"
 })
 
+DefineLanguageVerb("Malanan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "proto-germanic",
+	Meanings = {"Grind"},
+	Infinitive = "Malanan"
+})
+
 DefineLanguageVerb("Nazjan", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "proto-germanic",
 	Meanings = {"Heal", "Rescue", "Sustain"},
 	Infinitive = "Nazjan"
+})
+
+DefineLanguageVerb("Singwanan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "proto-germanic",
+	Meanings = {"Sing"},
+	Infinitive = "Singwanan"
 })
 
 DefineLanguageVerb("Steig", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
@@ -617,9 +647,9 @@ DefineLanguageVerb("Tawido", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	SingularFirstPersonPast = "Tawido"
 })
 
-DefineLanguageVerb("Téuχanan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+DefineLanguageVerb("Téuχanan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Sections 2-3.
 	Language = "proto-germanic",
-	Meanings = {"Push"},
+	Meanings = {"Push"}, -- but later the same source gives the meaning as "Pull" (though it does write the word as "Teuχanan" instead in that instance)
 	Infinitive = "Téuχanan"
 })
 
@@ -694,6 +724,12 @@ DefineLanguageAdjective("Vîha", { -- Source: August Fick and Alf Torp, "Wortsch
 	PrefixTypeName = {"settlement", "unit-germanic-smithy"}, -- seems sensible in face of a lack of examples
 })
 
+DefineLanguagePronoun("Χwat", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "proto-germanic",
+	Meanings = {"What"},
+	Nominative = "Χwat"
+})
+
 DefineLanguagePronoun("Ek", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "proto-germanic", -- from the Gallehus inscription, is it really Proto-Germanic?
 	Meanings = {"I"},
@@ -725,6 +761,11 @@ DefineLanguageAdposition("Af", { -- Source: Winfred P. Lehmann, "A Grammar of Pr
 DefineLanguageAdposition("Ufar", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "proto-germanic",
 	Meanings = {"Over"}
+})
+
+DefineLanguageNumeral("Aχtō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "proto-germanic",
+	Number = 8
 })
 
 -- Must re-check to see if actually correct

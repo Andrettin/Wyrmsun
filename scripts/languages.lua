@@ -45,6 +45,10 @@ DefineLanguage("finnish", {
 	Name = "Finnish"
 })
 
+DefineLanguage("gaulish", {
+	Name = "Gaulish"
+})
+
 DefineLanguage("gnomish", {
 	Name = "Gnomish"
 })
@@ -129,8 +133,16 @@ DefineLanguage("old-irish", {
 	Name = "Old Irish"
 })
 
+DefineLanguage("old-latin", {
+	Name = "Old Latin"
+})
+
 DefineLanguage("old-norse", {
 	Name = "Old Norse"
+})
+
+DefineLanguage("old-prussian", {
+	Name = "Old Prussian"
 })
 
 DefineLanguage("old-saxon", {
@@ -187,6 +199,7 @@ Load("scripts/language_kobold.lua")
 Load("scripts/language_avestan.lua")
 Load("scripts/language_english.lua")
 Load("scripts/language_finnish.lua")
+Load("scripts/language_gaulish.lua")
 Load("scripts/language_irish.lua")
 Load("scripts/language_lithuanian.lua")
 Load("scripts/language_middle_dutch.lua")
@@ -199,6 +212,8 @@ Load("scripts/language_old_frisian.lua")
 Load("scripts/language_old_high_german.lua")
 Load("scripts/language_old_icelandic.lua")
 Load("scripts/language_old_irish.lua")
+Load("scripts/language_old_latin.lua")
+Load("scripts/language_old_prussian.lua")
 Load("scripts/language_old_saxon.lua")
 Load("scripts/language_old_slavic.lua")
 Load("scripts/language_old_swedish.lua")

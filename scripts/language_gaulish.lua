@@ -25,27 +25,14 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageNoun("Erw", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
-	Language = "welsh",
-	Meanings = {"Field"},
-	SingularGenitive = "Erw"
+DefineLanguageAdjective("Dubnorix", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "gaulish",
+	Meanings = {"Deep"}, -- cognate of Proto-Germanic "Déwpaz" and Lithuanian "Dubùs", both of which mean "Deep"; the meaning for the Gaulish word isn't given by the source, so the meaning of the cognates is the closest we have
+	Positive = "Dubùs"
 })
 
-DefineLanguageNoun("Hud", { -- presumably a noun; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 121.
-	Language = "welsh",
-	Meanings = {"Magic"},
-	SingularNominative = "Hud"
+DefineLanguageAdjective("Longo", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "gaulish",
+	Meanings = {"Long"},
+	Positive = "Longo"
 })
-
-DefineLanguageVerb("Brathu", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
-	Language = "welsh",
-	Meanings = {"Prick", "Bite"},
-	Infinitive = "Brathu"
-})
-
-DefineLanguageVerb("Hudo", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 121.
-	Language = "welsh",
-	Meanings = {"Work Magic", "Work by Magic"},
-	Infinitive = "Hudo"
-})
-

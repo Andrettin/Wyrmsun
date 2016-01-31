@@ -161,7 +161,7 @@ DefineLanguageNoun("Hort", { -- Source: Sean Crist, "An Analysis of *z loss in W
 
 DefineLanguageNoun("Houbit", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
 	Language = "old-high-german",
-	Meanings = {"Main"}, -- source gives German noun "Haupt" as transation
+	Meanings = {"Main"}, -- source gives German noun "Haupt" as the translation
 	SingularNominative = "Houbit"
 })
 
@@ -173,7 +173,7 @@ DefineLanguageNoun("Hunt", { -- Source: Richard M. Runge, "The Phonetic Realizat
 
 DefineLanguageNoun("Hurd", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-high-german",
-	Meanings = {"Wattle"}, -- derived from Proto-Germanic "Χŕdiz", which has the meaning of "wattle"
+	Meanings = {"Wattle"}, -- derived from Proto-Germanic "Χŕdiz", which means "wattle"
 	SingularNominative = "Hurd"
 })
 
@@ -245,6 +245,12 @@ DefineLanguageNoun("Ouga", { -- Source: Richard M. Runge, "The Phonetic Realizat
 	Language = "old-high-german",
 	Meanings = {"Eye"},
 	SingularNominative = "Ouga"
+})
+
+DefineLanguageNoun("Pfeife", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "old-high-german",
+	Meanings = {"Pipe"},
+	SingularNominative = "Pfeife"
 })
 
 DefineLanguageNoun("Rarta", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 10.
@@ -363,6 +369,12 @@ DefineLanguageVerb("Hōren", { -- Source: Richard M. Runge, "The Phonetic Realiz
 	Language = "old-high-german",
 	Meanings = {"Hear"},
 	Infinitive = "Hōren"
+})
+
+DefineLanguageVerb("Kweman", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "old-high-german",
+	Meanings = {"Come"}, -- apparently, but not entirely clear from source
+	Infinitive = "Kweman"
 })
 
 DefineLanguageVerb("Lēren", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 4.

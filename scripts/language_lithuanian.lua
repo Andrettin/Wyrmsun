@@ -25,10 +25,27 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineLanguageNoun("Jéras", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "lithuanian",
+	Meanings = {"Yearling Lamb"},
+	SingularNominative = "Jéras"
+})
 DefineLanguageNoun("Pẽkus", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "lithuanian",
 	Meanings = {"?"},
 	SingularNominative = "Pẽkus"
+})
+
+DefineLanguageNoun("Pū́lias", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "lithuanian",
+	Meanings = {"Pus"},
+	PluralNominative = "Pū́lias"
+})
+
+DefineLanguageNoun("Žìrnis", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "lithuanian",
+	Meanings = {"Pea"},
+	SingularNominative = "Žìrnis"
 })
 
 DefineLanguageVerb("Saĩsti", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 121.
@@ -41,6 +58,12 @@ DefineLanguageVerb("Źengiù", { -- Source: Winfred P. Lehmann, "A Grammar of Pr
 	Language = "lithuanian",
 	Meanings = {"Go", "Stride"},
 	Infinitive = "Źengiù"
+})
+
+DefineLanguageAdjective("Dubùs", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "lithuanian",
+	Meanings = {"Deep"},
+	Positive = "Dubùs"
 })
 
 DefineLanguageNumeral("Vienúolika", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.

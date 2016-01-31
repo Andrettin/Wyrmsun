@@ -61,10 +61,22 @@ DefineLanguageNoun("Conopeum", { -- Source: Alaric Hall, "The Meanings of Elf an
 	SingularNominative = "Conopeum"
 })
 
+DefineLanguageNoun("Crātis", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "latin",
+	Meanings = {"Wicker-Work"},
+	SingularNominative = "Crātis"
+})
+
 DefineLanguageNoun("Custos", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
 	Language = "latin",
 	Meanings = {"Guard"}, -- source gives meaning as "a Guard"
 	SingularNominative = "Custos"
+})
+
+DefineLanguageNoun("Fāgus", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "latin",
+	Meanings = {"Beech"},
+	SingularNominative = "Fāgus"
 })
 
 DefineLanguageNoun("Far", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
@@ -73,11 +85,29 @@ DefineLanguageNoun("Far", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-G
 	SingularNominative = "Far"
 })
 
+DefineLanguageNoun("Foris", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "latin",
+	Meanings = {"Door"},
+	SingularNominative = "Foris"
+})
+
+DefineLanguageNoun("Frāter", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "latin",
+	Meanings = {"Brother"},
+	SingularNominative = "Frāter"
+})
+
 DefineLanguageNoun("Gallus", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 101.
 	Language = "latin",
 	Meanings = {"Eunuch"},
 	SingularNominative = "Gallus",
 	PluralNominative = "Galli"
+})
+
+DefineLanguageNoun("Grānum", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "latin",
+	Meanings = {"Grain"},
+	SingularNominative = "Grānum"
 })
 
 DefineLanguageNoun("Haedus", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
@@ -92,10 +122,34 @@ DefineLanguageNoun("Hasta", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	SingularNominative = "Hasta"
 })
 
+DefineLanguageNoun("Hortus", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "latin",
+	Meanings = {"Garden"},
+	SingularNominative = "Hortus"
+})
+
+DefineLanguageNoun("Pater", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "latin",
+	Meanings = {"Father"},
+	SingularNominative = "Pater"
+})
+
 DefineLanguageNoun("Pecu", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "latin",
 	Meanings = {"Herd"},
 	SingularNominative = "Pecu"
+})
+
+DefineLanguageNoun("Sēmen", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "latin",
+	Meanings = {"Seed"},
+	SingularNominative = "Sēmen"
+})
+
+DefineLanguageNoun("Sōl", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "latin",
+	Meanings = {"Sun"},
+	SingularNominative = "Sōl"
 })
 
 DefineLanguageNoun("Sūs", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
@@ -110,16 +164,58 @@ DefineLanguageVerb("Alucinare", { -- Source: Alaric Hall, "The Meanings of Elf a
 	Infinitive = "Alucinare" -- presumably it is the infinitive
 })
 
+DefineLanguageVerb("Dūcō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "latin",
+	Meanings = {"Lead"},
+	SingularFirstPersonPresent = "Dūcō"
+})
+
 DefineLanguageVerb("Ferō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "latin",
 	Meanings = {"Bear"},
 	SingularFirstPersonPresent = "Ferō"
 })
 
+DefineLanguageVerb("Molere", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "latin",
+	Meanings = {"Grind"}, -- presumably, but it is not entirely clear from the source
+	Infinitive = "Molere"
+})
+
 DefineLanguageVerb("Scrībere", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "latin",
 	Meanings = {"?"}, -- cognates have "write" as the meaning
 	Infinitive = "Scrībere"
+})
+
+DefineLanguageVerb("Venio", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "latin",
+	Meanings = {"Come"}, -- apparently, but not entirely clear from source
+	Infinitive = "Venio"
+})
+
+DefineLanguageAdjective("Longus", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "latin",
+	Meanings = {"Long"}, -- presumably, but it is not entirely clear from the source
+	Positive = "Longus"
+})
+
+DefineLanguageAdjective("Rectus", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "latin",
+	Meanings = {"Straight"}, -- presumably, but it is not entirely clear from the source
+	Positive = "Rectus"
+})
+
+DefineLanguageAdjective("Suīnus", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "latin",
+	Meanings = {"of Pig"},
+	Positive = "Suīnus"
+})
+
+DefineLanguageAdjective("Torrus", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "latin",
+	Meanings = {"Dry"},
+	Positive = "Torrus"
 })
 
 DefineLanguageAdjective("Verus", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 99.
@@ -134,8 +230,24 @@ DefineLanguagePronoun("Egō", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Nominative = "Egō"
 })
 
+DefineLanguagePronoun("Quod", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "latin",
+	Meanings = {"What"},
+	Nominative = "Quod"
+})
+
 DefineLanguagePronoun("Vōs", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 5, Subsection 1.
 	Language = "latin",
 	Meanings = {"You"}, -- second person plural
 	Nominative = "Vōs"
+})
+
+DefineLanguageAdposition("Super", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "latin",
+	Meanings = {"Over"}
+})
+
+DefineLanguageNumeral("Octō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "latin",
+	Number = 8
 })

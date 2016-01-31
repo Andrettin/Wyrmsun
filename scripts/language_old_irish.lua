@@ -36,3 +36,9 @@ DefineLanguageNoun("Giús", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Meanings = {"Fir"},
 	SingularNominative = "Giús"
 })
+
+DefineLanguageAdjective("Tur", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "old-irish",
+	Meanings = {"Dry"},
+	Positive = "Tur"
+})

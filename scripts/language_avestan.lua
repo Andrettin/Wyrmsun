@@ -31,3 +31,9 @@ DefineLanguageNoun("Mīzhda", { -- Source: Sean Crist, "An Analysis of *z loss i
 	SingularNominative = "Mīzhda",
 	Gender = "Neuter"
 })
+
+DefineLanguageNoun("Yārə", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "avestan",
+	Meanings = {"Year"},
+	SingularNominative = "Yārə"
+})

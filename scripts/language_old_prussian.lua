@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2015 by Andrettin
+--      (c) Copyright 2016 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -25,27 +25,9 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageNoun("Erw", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
-	Language = "welsh",
-	Meanings = {"Field"},
-	SingularGenitive = "Erw"
-})
-
-DefineLanguageNoun("Hud", { -- presumably a noun; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 121.
-	Language = "welsh",
-	Meanings = {"Magic"},
-	SingularNominative = "Hud"
-})
-
-DefineLanguageVerb("Brathu", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
-	Language = "welsh",
-	Meanings = {"Prick", "Bite"},
-	Infinitive = "Brathu"
-})
-
-DefineLanguageVerb("Hudo", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 121.
-	Language = "welsh",
-	Meanings = {"Work Magic", "Work by Magic"},
-	Infinitive = "Hudo"
+DefineLanguageNoun("Semen", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "old-prussian",
+	Meanings = {"Seed"},
+	SingularNominative = "Semen"
 })
 

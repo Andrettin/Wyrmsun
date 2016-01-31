@@ -133,12 +133,108 @@ DefineLanguageNoun("Calli", { -- should be written as the original Greek name (w
 	PrefixTypeName = {"settlement"} -- example: "Callipolis"
 })
 
+DefineLanguageNoun("Χórtos", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "greek",
+	Meanings = {"Garden"},
+	SingularNominative = "Χórtos"
+})
+
+DefineLanguageNoun("Érā", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "greek",
+	Meanings = {"Earth"},
+	SingularGenitive = "Érā"
+})
+
+DefineLanguageNoun("Kúrtos", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "greek",
+	Meanings = {"Cage"},
+	SingularNominative = "Kúrtos"
+})
+
+DefineLanguageNoun("Nuktós", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "greek",
+	Meanings = {"Night"}, -- presumably, but is not entirely clear from source
+	SingularGenitive = "Nuktós"
+})
+
+DefineLanguageNoun("Óχos", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "greek",
+	Meanings = {"Wagon"},
+	SingularNominative = "Óχos"
+})
+
+DefineLanguageNoun("Omφḗ", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "greek",
+	Meanings = {"Oracle"},
+	SingularNominative = "Omφḗ"
+})
+
+DefineLanguageNoun("Patḗr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "greek",
+	Meanings = {"Father"},
+	SingularNominative = "Patḗr"
+})
+
+DefineLanguageNoun("Phāgós", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "greek",
+	Meanings = {"Oak"},
+	SingularNominative = "Phāgós"
+})
+
+DefineLanguageNoun("Podós", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "greek",
+	Meanings = {"Foot"}, -- meaning not explicitly given in source, but Proto-Germanic cognate "Fōts" means "Foot"
+	SingularGenitive = "Podós"
+})
+
 DefineLanguageNoun("Polis", { -- should be written as the original Greek name (with Greek characters)
 	Language = "greek",
 	Meanings = {"City"},
 	SingularNominative = "Polis",
 	SuffixSingular = true,
 	SuffixTypeName = {"settlement"} -- examples: "Amphipolis", "Callipolis", "Neapolis" (Naples)
+})
+
+DefineLanguageNoun("Thúrā", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "greek",
+	Meanings = {"Door"},
+	SingularNominative = "Thúrā"
+})
+
+DefineLanguageVerb("Baínō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "greek",
+	Meanings = {"Come"}, -- apparently, but not entirely clear from source
+	Infinitive = "Baínō"
+})
+
+DefineLanguageVerb("Ídmen", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "greek",
+	Meanings = {"Know"},
+	PluralFirstPersonPresent = "Ídmen"
+})
+
+DefineLanguageVerb("Pheídomai", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
+	Language = "greek",
+	Meanings = {"Separate"},
+	SingularFirstPersonPresent = "Pheídomai"
+})
+
+DefineLanguageVerb("Peúthomai", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "greek",
+	Meanings = {"Examine"},
+	Infinitive = "Peúthomai"
+})
+
+DefineLanguageVerb("Steíkhō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "greek",
+	Meanings = {"Climb"},
+	Infinitive = "Steíkhō"
+})
+
+DefineLanguageAdjective("Meízōn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "greek",
+	Meanings = {"More"},
+	Positive = "Meízōn"
 })
 
 DefineLanguageAdjective("Nea", { -- should be written as the original Greek name (with Greek characters)
@@ -148,14 +244,25 @@ DefineLanguageAdjective("Nea", { -- should be written as the original Greek name
 	PrefixTypeName = {"settlement"} -- example: "Neapolis" (Naples)
 })
 
-DefineLanguageVerb("Pheídomai", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
+DefineLanguageAdjective("Orektós", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "greek",
-	Meanings = {"Separate"},
-	SingularFirstPersonPresent = "Pheídomai"
+	Meanings = {"Straight"},
+	Positive = "Orektós"
+})
+
+DefineLanguageAdjective("Plōtós", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "greek",
+	Meanings = {"Floating"},
+	Positive = "Plōtós"
 })
 
 DefineLanguagePronoun("Égō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 1.
 	Language = "greek",
 	Meanings = {"I"}, -- is a cognate of Proto-Germanic "eka"/"ek", so possibly has the same meaning
 	Nominative = "Égō"
+})
+
+DefineLanguageNumeral("Oktṓ", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "greek",
+	Number = 8
 })

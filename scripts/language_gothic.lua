@@ -337,11 +337,11 @@ DefineLanguageVerb("Bairiþ", { -- should be infinitive form; Source: Richard M.
 	SingularThirdPersonPresent = "Bairiþ"
 })
 
-DefineLanguageVerb("Biudan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+DefineLanguageVerb("Biudan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Sections 2-3.
 	Language = "gothic",
 	Meanings = {"Bid", "Offer", "Order"},
 	Infinitive = "Biudan",
-	ParticiplePast = "Báuþ" -- "offered"
+	ParticiplePast = "Báuþ" -- "offered" / "ordered"
 })
 
 DefineLanguageVerb("Hausjan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
@@ -391,6 +391,12 @@ DefineLanguageVerb("Saihan", { -- Source: Richard M. Runge, "The Phonetic Realiz
 	Language = "gothic",
 	Meanings = {"See"},
 	Infinitive = "Saihan"
+})
+
+DefineLanguageVerb("Siggwan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "gothic",
+	Meanings = {"Sing"}, -- apparently, but not entirely clear from source
+	Infinitive = "Siggwan"
 })
 
 DefineLanguageVerb("Standan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 3, Subsection 1.

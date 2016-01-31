@@ -25,6 +25,12 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineLanguageNoun("Bhrā́tā", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "sanskrit",
+	Meanings = {"Brother"},
+	SingularNominative = "Bhrā́tā"
+})
+
 DefineLanguageNoun("Késara", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 7.
 	Language = "sanskrit",
 	Meanings = {"Hair", "Mane"},
@@ -53,8 +59,43 @@ DefineLanguageNoun("Mīḍhá", { -- Source: Sean Crist, "An Analysis of *z loss
 	Gender = "Neuter"
 })
 
+DefineLanguageNoun("Náktam", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "sanskrit",
+	Meanings = {"Night"}, -- presumably, but is not entirely clear from source
+	SingularNominative = "Náktam"
+})
+
+DefineLanguageNoun("Pā́dam", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "sanskrit",
+	Meanings = {"Foot"}, -- meaning not explicitly given in source, but Proto-Germanic cognate "Fōts" means "Foot"
+	SingularAccusative = "Pā́dam"
+})
+
 DefineLanguageNoun("Páśu", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "sanskrit",
 	Meanings = {"?"},
 	SingularNominative = "Páśu"
+})
+
+DefineLanguageNoun("Váhanam", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "sanskrit",
+	Meanings = {"Vehicle"},
+	SingularNominative = "Váhanam"
+})
+
+DefineLanguageVerb("Vidma", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "sanskrit",
+	Meanings = {"Know"},
+	PluralFirstPersonPresent = "Vidma"
+})
+
+DefineLanguageAdjective("Pū́tis", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "sanskrit",
+	Meanings = {"Foul"},
+	Positive = "Pū́tis"
+})
+
+DefineLanguageAdposition("Upári", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "sanskrit",
+	Meanings = {"Over"}
 })

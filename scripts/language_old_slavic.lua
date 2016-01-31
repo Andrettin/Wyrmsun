@@ -62,3 +62,9 @@ DefineLanguageNoun("Žrudŭ", { -- Source: Sean Crist, "An Analysis of *z loss i
 	Meanings = {"Flimsy Pole"},
 	SingularNominative = "Žrudŭ"
 })
+
+DefineLanguageAdjective("Svins", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "old-slavic",
+	Meanings = {"of Pig"},
+	Positive = "Svins"
+})
