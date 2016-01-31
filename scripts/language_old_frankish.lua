@@ -27,32 +27,32 @@
 
 DefineLanguageNoun("Laisius", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 181.
 	Language = "old-frankish",
-	Meaning = "Womb", -- source gives (in German) "Schoß" as the meaning
+	Meanings = {"Womb"}, -- source gives (in German) "Schoß" as the meaning
 	SingularNominative = "Laisius"
 })
 
 DefineLanguageNoun("Nimid", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 151.
 	Language = "old-frankish",
-	Meaning = "Holy Pasture", -- source gives (in German) "heiliger, gehegter Waldplatz, Weideplatz für die gehegten Opfertiere" as the meaning
+	Meanings = {"Holy Pasture"}, -- source gives (in German) "heiliger, gehegter Waldplatz, Weideplatz für die gehegten Opfertiere" as the meaning
 	SingularNominative = "Nimid",
 	Gender = "Masculine"
 })
 
 DefineLanguageNoun("Scramasacs", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 235.
 	Language = "old-frankish",
-	Meaning = "Knife-like Sword", -- source gives (in German) "messerartiges Schwert" as the meaning
+	Meanings = {"Knife-like Sword"}, -- source gives (in German) "messerartiges Schwert" as the meaning
 	SingularNominative = "Scramasacs"
 })
 
 DefineLanguageNoun("Sworga", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.
 	Language = "old-frankish",
-	Meaning = "Worry", -- presumably (this is the meaning given to the Proto-Germanic original word, and no meaning is specifically given to this one)
+	Meanings = {"Worry"}, -- presumably (this is the meaning given to the Proto-Germanic original word, and no meaning is specifically given to this one)
 	SingularNominative = "Sworga",
 	Gender = "Feminine"
 })
 
 DefineLanguageAdjective("Sinigus", { -- source also gives the alternative form "Seniscalcus"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 215.
 	Language = "old-frankish",
-	Meaning = "Old", -- presumably (this is the meaning given to the Proto-Germanic original word, and no meaning is specifically given to this one)
+	Meanings = {"Old"}, -- presumably (this is the meaning given to the Proto-Germanic original word, and no meaning is specifically given to this one)
 	Positive = "Sinigus"
 })

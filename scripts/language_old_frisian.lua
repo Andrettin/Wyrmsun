@@ -41,63 +41,63 @@ DefineCivilizationLanguage("old-frisian", -- Old Frisian
 
 DefineLanguageNoun("Hēde", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
 	Language = "old-frisian",
-	Meaning = "Flax Fiber",
+	Meanings = {"Flax Fiber"},
 	SingularNominative = "Hēde",
 	Uncountable = true -- as a material, it is likely to be uncountable
 })
 
 DefineLanguageNoun("Marg", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
 	Language = "old-frisian",
-	Meaning = "Marrow",
+	Meanings = {"Marrow"},
 	SingularNominative = "Marg"
 })
 
 DefineLanguageNoun("Mēde", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 7.
 	Language = "old-frisian",
-	Meaning = "Reward, Rental, Payment, Gift",
+	Meanings = {"Reward", "Rental", "Payment", "Gift"},
 	SingularNominative = "Mēde", -- source also gives as alternatives the forms "Mīde", "Meide" and "Hēde"
 	Gender = "Feminine"
 })
 
 DefineLanguageNoun("Ord", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
 	Language = "old-frisian",
-	Meaning = "Point, Place", -- source gives the meaning as "(spear)point, place"
+	Meanings = {"Point", "Place"}, -- source gives the meaning as "(spear)point, place"
 	SingularNominative = "Ord"
 })
 
 DefineLanguageNoun("Ransa", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "old-frisian",
-	Meaning = "House",
+	Meanings = {"House"},
 	SingularNominative = "Ransa"
 })
 
 DefineLanguageNoun("Wêd", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 4.
 	Language = "old-frisian",
-	Meaning = "Woad",
+	Meanings = {"Woad"},
 	SingularNominative = "Wêd"
 })
 
 DefineLanguageVerb("Lēra", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 5.
 	Language = "old-frisian",
-	Meaning = "Teach",
+	Meanings = {"Teach"},
 	Infinitive = "Lēra" -- causative verb
 })
 
 DefineLanguageVerb("Lernēn", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
 	Language = "old-frisian",
-	Meaning = "Learn",
+	Meanings = {"Learn"},
 	Infinitive = "Lernēn" -- source also gives "Lirnēn" as an alternative
 })
 
 DefineLanguageVerb("Nera", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "old-frisian",
-	Meaning = "Nurture",
+	Meanings = {"Nurture"},
 	Infinitive = "Nera"
 })
 
 DefineLanguageAdjective("Māra", { -- this is the comparative, what is the normal version of the word? Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
 	Language = "old-frisian",
-	Meaning = "More",
+	Meanings = {"More"},
 	Comparative = "Māra",
 	Superlative = "Māst"
 })

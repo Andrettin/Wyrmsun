@@ -27,60 +27,60 @@
 
 DefineLanguageNoun("Drósir", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "old-icelandic",
-	Meaning = "Women",
+	Meanings = {"Women"},
 	PluralNominative = "Drósir"
 })
 
 DefineLanguageNoun("Eyra", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
 	Language = "old-icelandic",
-	Meaning = "Ear",
+	Meanings = {"Ear"},
 	SingularNominative = "Eyra"
 })
 
 DefineLanguageNoun("Ker", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
 	Language = "old-icelandic",
-	Meaning = "Container",
+	Meanings = {"Container"},
 	SingularNominative = "Ker"
 })
 
 DefineLanguageNoun("Lín", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "old-icelandic",
-	Meaning = "Linen",
+	Meanings = {"Linen"},
 	PluralNominative = "Lín"
 })
 
 DefineLanguageNoun("Reyrr", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
 	Language = "old-icelandic",
-	Meaning = "Tube",
+	Meanings = {"Tube"},
 	SingularNominative = "Reyrr"
 })
 
 DefineLanguageNoun("Sár", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 3.
 	Language = "old-icelandic",
-	Meaning = "Wound",
+	Meanings = {"Wound"},
 	SingularNominative = "Sár"
 })
 
 DefineLanguageVerb("Spunno", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "old-icelandic",
-	Meaning = "Spun",
+	Meanings = {"Spun"},
 	PluralThirdPersonPast = "Spunno"
 })
 
 DefineLanguageAdjective("Dýrt", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "old-icelandic",
-	Meaning = "Dear, Expensive",
+	Meanings = {"Dear", "Expensive"},
 	Positive = "Dýrt"
 })
 
 DefineLanguageAdjective("Meiri", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 3.
 	Language = "old-icelandic",
-	Meaning = "More", -- perhaps a "determiner" class of words should be added?
+	Meanings = {"More"}, -- perhaps a "determiner" class of words should be added?
 	Positive = "Meiri"
 })
 
 DefineLanguageAdjective("Suðrœnar", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "old-icelandic",
-	Meaning = "Southern",
+	Meanings = {"Southern"},
 	PositivePlural = "Suðrœnar"
 })

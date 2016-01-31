@@ -27,7 +27,7 @@
 
 DefineLanguageNoun("Bag", { -- from Mike Anderson's Tyrant
 	Language = "goblin",
-	Meaning = "?",
+	Meanings = {"?"},
 	SingularNominative = "Bag",
 	SuffixSingular = true,
 	SuffixTypeName = {"person"}
@@ -35,7 +35,7 @@ DefineLanguageNoun("Bag", { -- from Mike Anderson's Tyrant
 
 DefineLanguageNoun("Dag", { -- from Mike Anderson's Tyrant
 	Language = "goblin",
-	Meaning = "?",
+	Meanings = {"?"},
 	SingularNominative = "Dag",
 	SuffixSingular = true,
 	SuffixTypeName = {"person"}
@@ -43,7 +43,7 @@ DefineLanguageNoun("Dag", { -- from Mike Anderson's Tyrant
 
 DefineLanguageNoun("Dran", {
 	Language = "goblin",
-	Meaning = "?",
+	Meanings = {"?"},
 	SingularNominative = "Dran",
 	NameSingular = true,
 	TypeName = {"person"}
@@ -51,7 +51,7 @@ DefineLanguageNoun("Dran", {
 
 DefineLanguageNoun("Erdog", {
 	Language = "goblin",
-	Meaning = "?",
+	Meanings = {"?"},
 	SingularNominative = "Erdog",
 	NameSingular = true,
 	TypeName = {"person"}
@@ -59,7 +59,7 @@ DefineLanguageNoun("Erdog", {
 
 DefineLanguageNoun("Fal Khag", {
 	Language = "goblin",
-	Meaning = "?",
+	Meanings = {"?"},
 	SingularNominative = "Fal Khag",
 	NameSingular = true,
 	TypeName = {"person"}
@@ -67,7 +67,7 @@ DefineLanguageNoun("Fal Khag", {
 
 DefineLanguageNoun("Gashnok", {
 	Language = "goblin",
-	Meaning = "?",
+	Meanings = {"?"},
 	SingularNominative = "Gashnok",
 	NameSingular = true,
 	TypeName = {"person"}
@@ -75,7 +75,7 @@ DefineLanguageNoun("Gashnok", {
 
 DefineLanguageNoun("Gatrakh", {
 	Language = "goblin",
-	Meaning = "?",
+	Meanings = {"?"},
 	SingularNominative = "Gatrakh",
 	NameSingular = true,
 	TypeName = {"person"}
@@ -83,7 +83,7 @@ DefineLanguageNoun("Gatrakh", {
 
 DefineLanguageNoun("Gom", { -- from Mike Anderson's Tyrant
 	Language = "goblin",
-	Meaning = "?",
+	Meanings = {"?"},
 	SingularNominative = "Gom",
 	PrefixSingular = true,
 	PrefixTypeName = {"person"}
@@ -91,7 +91,7 @@ DefineLanguageNoun("Gom", { -- from Mike Anderson's Tyrant
 
 DefineLanguageNoun("Gorokh", {
 	Language = "goblin",
-	Meaning = "?",
+	Meanings = {"?"},
 	SingularNominative = "Gorokh",
 	NameSingular = true,
 	TypeName = {"person"}
@@ -99,7 +99,7 @@ DefineLanguageNoun("Gorokh", {
 
 DefineLanguageNoun("Grash", { -- from Mike Anderson's Tyrant
 	Language = "goblin",
-	Meaning = "?",
+	Meanings = {"?"},
 	SingularNominative = "Grash",
 	PrefixSingular = true,
 	PrefixTypeName = {"person"}
@@ -107,7 +107,7 @@ DefineLanguageNoun("Grash", { -- from Mike Anderson's Tyrant
 
 DefineLanguageNoun("Greebo", {
 	Language = "goblin",
-	Meaning = "?",
+	Meanings = {"?"},
 	SingularNominative = "Greebo",
 	NameSingular = true,
 	TypeName = {"person"}
@@ -115,7 +115,7 @@ DefineLanguageNoun("Greebo", {
 
 DefineLanguageNoun("Grogor-Tuk", {
 	Language = "goblin",
-	Meaning = "?",
+	Meanings = {"?"},
 	SingularNominative = "Grogor-Tuk",
 	NameSingular = true,
 	TypeName = {"person"}
@@ -123,7 +123,7 @@ DefineLanguageNoun("Grogor-Tuk", {
 
 DefineLanguageNoun("Grut", { -- from Mike Anderson's Tyrant
 	Language = "goblin",
-	Meaning = "?",
+	Meanings = {"?"},
 	SingularNominative = "Grut",
 	PrefixSingular = true,
 	PrefixTypeName = {"person"}
@@ -131,7 +131,7 @@ DefineLanguageNoun("Grut", { -- from Mike Anderson's Tyrant
 
 DefineLanguageNoun("Gum", { -- from Mike Anderson's Tyrant
 	Language = "goblin",
-	Meaning = "?",
+	Meanings = {"?"},
 	SingularNominative = "Gum",
 	PrefixSingular = true,
 	PrefixTypeName = {"person"}
@@ -139,7 +139,7 @@ DefineLanguageNoun("Gum", { -- from Mike Anderson's Tyrant
 
 DefineLanguageNoun("Hrugt", {
 	Language = "goblin",
-	Meaning = "?",
+	Meanings = {"?"},
 	SingularNominative = "Hrugt",
 	NameSingular = true,
 	TypeName = {"person"}
@@ -147,7 +147,7 @@ DefineLanguageNoun("Hrugt", {
 
 DefineLanguageNoun("Kar", { -- from Mike Anderson's Tyrant
 	Language = "goblin",
-	Meaning = "?",
+	Meanings = {"?"},
 	SingularNominative = "Kar",
 	PrefixSingular = true,
 	PrefixTypeName = {"person"}
@@ -155,7 +155,7 @@ DefineLanguageNoun("Kar", { -- from Mike Anderson's Tyrant
 
 DefineLanguageNoun("Kardur", {
 	Language = "goblin",
-	Meaning = "?",
+	Meanings = {"?"},
 	SingularNominative = "Kardur",
 	NameSingular = true,
 	TypeName = {"person"}
@@ -163,7 +163,7 @@ DefineLanguageNoun("Kardur", {
 
 DefineLanguageNoun("Kartrog", {
 	Language = "goblin",
-	Meaning = "?",
+	Meanings = {"?"},
 	SingularNominative = "Kartrog",
 	NameSingular = true,
 	TypeName = {"person"}
@@ -171,7 +171,7 @@ DefineLanguageNoun("Kartrog", {
 
 DefineLanguageNoun("Kret", { -- from Mike Anderson's Tyrant
 	Language = "goblin",
-	Meaning = "?",
+	Meanings = {"?"},
 	SingularNominative = "Kret",
 	PrefixSingular = true,
 	PrefixTypeName = {"person"}
@@ -179,7 +179,7 @@ DefineLanguageNoun("Kret", { -- from Mike Anderson's Tyrant
 
 DefineLanguageNoun("Krom", { -- from Mike Anderson's Tyrant
 	Language = "goblin",
-	Meaning = "?",
+	Meanings = {"?"},
 	SingularNominative = "Krom",
 	PrefixSingular = true,
 	PrefixTypeName = {"person"}
@@ -187,7 +187,7 @@ DefineLanguageNoun("Krom", { -- from Mike Anderson's Tyrant
 
 DefineLanguageNoun("Krung", {
 	Language = "goblin",
-	Meaning = "?",
+	Meanings = {"?"},
 	SingularNominative = "Krung",
 	NameSingular = true,
 	TypeName = {"person"}
@@ -195,7 +195,7 @@ DefineLanguageNoun("Krung", {
 
 DefineLanguageNoun("Lig", { -- from Mike Anderson's Tyrant
 	Language = "goblin",
-	Meaning = "?",
+	Meanings = {"?"},
 	SingularNominative = "Lig",
 	SuffixSingular = true,
 	SuffixTypeName = {"person"}
@@ -203,7 +203,7 @@ DefineLanguageNoun("Lig", { -- from Mike Anderson's Tyrant
 
 DefineLanguageNoun("Lug", { -- from Mike Anderson's Tyrant
 	Language = "goblin",
-	Meaning = "?",
+	Meanings = {"?"},
 	SingularNominative = "Lug",
 	SuffixSingular = true,
 	SuffixTypeName = {"person"}
@@ -211,7 +211,7 @@ DefineLanguageNoun("Lug", { -- from Mike Anderson's Tyrant
 
 DefineLanguageNoun("Nak", { -- from Mike Anderson's Tyrant
 	Language = "goblin",
-	Meaning = "?",
+	Meanings = {"?"},
 	SingularNominative = "Nak",
 	SuffixSingular = true,
 	SuffixTypeName = {"person"}
@@ -219,7 +219,7 @@ DefineLanguageNoun("Nak", { -- from Mike Anderson's Tyrant
 
 DefineLanguageNoun("Nark", { -- from Mike Anderson's Tyrant
 	Language = "goblin",
-	Meaning = "?",
+	Meanings = {"?"},
 	SingularNominative = "Nark",
 	SuffixSingular = true,
 	SuffixTypeName = {"person"}
@@ -227,7 +227,7 @@ DefineLanguageNoun("Nark", { -- from Mike Anderson's Tyrant
 
 DefineLanguageNoun("Odrun", {
 	Language = "goblin",
-	Meaning = "?",
+	Meanings = {"?"},
 	SingularNominative = "Odrun",
 	NameSingular = true,
 	TypeName = {"person"}
@@ -235,7 +235,7 @@ DefineLanguageNoun("Odrun", {
 
 DefineLanguageNoun("Orhtib", {
 	Language = "goblin",
-	Meaning = "?",
+	Meanings = {"?"},
 	SingularNominative = "Orhtib",
 	NameSingular = true,
 	TypeName = {"person"}
@@ -243,7 +243,7 @@ DefineLanguageNoun("Orhtib", {
 
 DefineLanguageNoun("Ozdul", {
 	Language = "goblin",
-	Meaning = "?",
+	Meanings = {"?"},
 	SingularNominative = "Ozdul",
 	NameSingular = true,
 	TypeName = {"person"}
@@ -251,7 +251,7 @@ DefineLanguageNoun("Ozdul", {
 
 DefineLanguageNoun("Panok", {
 	Language = "goblin",
-	Meaning = "?",
+	Meanings = {"?"},
 	SingularNominative = "Panok",
 	NameSingular = true,
 	TypeName = {"person"}
@@ -259,7 +259,7 @@ DefineLanguageNoun("Panok", {
 
 DefineLanguageNoun("Pruol", {
 	Language = "goblin",
-	Meaning = "?",
+	Meanings = {"?"},
 	SingularNominative = "Pruol",
 	NameSingular = true,
 	TypeName = {"person"}
@@ -267,7 +267,7 @@ DefineLanguageNoun("Pruol", {
 
 DefineLanguageNoun("Rat", { -- from Mike Anderson's Tyrant
 	Language = "goblin",
-	Meaning = "?",
+	Meanings = {"?"},
 	SingularNominative = "Rat",
 	SuffixSingular = true,
 	SuffixTypeName = {"person"}
@@ -275,7 +275,7 @@ DefineLanguageNoun("Rat", { -- from Mike Anderson's Tyrant
 
 DefineLanguageNoun("Sbrak", {
 	Language = "goblin",
-	Meaning = "?",
+	Meanings = {"?"},
 	SingularNominative = "Sbrak",
 	NameSingular = true,
 	TypeName = {"person"}
@@ -283,7 +283,7 @@ DefineLanguageNoun("Sbrak", {
 
 DefineLanguageNoun("Sdrul", {
 	Language = "goblin",
-	Meaning = "?",
+	Meanings = {"?"},
 	SingularNominative = "Sdrul",
 	NameSingular = true,
 	TypeName = {"person"}
@@ -291,7 +291,7 @@ DefineLanguageNoun("Sdrul", {
 
 DefineLanguageNoun("Stug", { -- from Mike Anderson's Tyrant
 	Language = "goblin",
-	Meaning = "?",
+	Meanings = {"?"},
 	SingularNominative = "Stug",
 	PrefixSingular = true,
 	PrefixTypeName = {"person"}
@@ -299,7 +299,7 @@ DefineLanguageNoun("Stug", { -- from Mike Anderson's Tyrant
 
 DefineLanguageNoun("Thurg", {
 	Language = "goblin",
-	Meaning = "?",
+	Meanings = {"?"},
 	SingularNominative = "Thurg",
 	NameSingular = true,
 	TypeName = {"person"}
@@ -307,7 +307,7 @@ DefineLanguageNoun("Thurg", {
 
 DefineLanguageNoun("T'shar Lggi", {
 	Language = "goblin",
-	Meaning = "?",
+	Meanings = {"?"},
 	SingularNominative = "T'shar Lggi",
 	NameSingular = true,
 	TypeName = {"person"}
@@ -315,7 +315,7 @@ DefineLanguageNoun("T'shar Lggi", {
 
 DefineLanguageNoun("Tug", { -- from Mike Anderson's Tyrant
 	Language = "goblin",
-	Meaning = "?",
+	Meanings = {"?"},
 	SingularNominative = "Tug",
 	SuffixSingular = true,
 	SuffixTypeName = {"person"}
@@ -323,7 +323,7 @@ DefineLanguageNoun("Tug", { -- from Mike Anderson's Tyrant
 
 DefineLanguageNoun("Uhmit", {
 	Language = "goblin",
-	Meaning = "?",
+	Meanings = {"?"},
 	SingularNominative = "Uhmit",
 	NameSingular = true,
 	TypeName = {"person"}
@@ -331,7 +331,7 @@ DefineLanguageNoun("Uhmit", {
 
 DefineLanguageNoun("Urdum", {
 	Language = "goblin",
-	Meaning = "?",
+	Meanings = {"?"},
 	SingularNominative = "Urdum",
 	NameSingular = true,
 	TypeName = {"person"}
@@ -339,7 +339,7 @@ DefineLanguageNoun("Urdum", {
 
 DefineLanguageNoun("Utrub", {
 	Language = "goblin",
-	Meaning = "?",
+	Meanings = {"?"},
 	SingularNominative = "Utrub",
 	NameSingular = true,
 	TypeName = {"person"}
@@ -347,7 +347,7 @@ DefineLanguageNoun("Utrub", {
 
 DefineLanguageNoun("Vrag", {
 	Language = "goblin",
-	Meaning = "?",
+	Meanings = {"?"},
 	SingularNominative = "Vrag",
 	NameSingular = true,
 	TypeName = {"person"}
@@ -355,7 +355,7 @@ DefineLanguageNoun("Vrag", {
 
 DefineLanguageNoun("Vrunt", {
 	Language = "goblin",
-	Meaning = "?",
+	Meanings = {"?"},
 	SingularNominative = "Vrunt",
 	NameSingular = true,
 	TypeName = {"person"}
@@ -363,7 +363,7 @@ DefineLanguageNoun("Vrunt", {
 
 DefineLanguageNoun("Zhuk", {
 	Language = "goblin",
-	Meaning = "?",
+	Meanings = {"?"},
 	SingularNominative = "Zhuk",
 	NameSingular = true,
 	TypeName = {"person"}
@@ -371,7 +371,7 @@ DefineLanguageNoun("Zhuk", {
 
 DefineLanguageNoun("Zuzerd", {
 	Language = "goblin",
-	Meaning = "?",
+	Meanings = {"?"},
 	SingularNominative = "Zuzerd",
 	NameSingular = true,
 	TypeName = {"person"}

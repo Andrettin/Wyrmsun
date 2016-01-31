@@ -27,6 +27,6 @@
 
 DefineLanguageNoun("Mozga", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "russian",
-	Meaning = "Blood",
+	Meanings = {"Blood"},
 	SingularNominative = "Mozga"
 })

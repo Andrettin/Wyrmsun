@@ -27,12 +27,12 @@
 
 DefineLanguageNoun("Fēn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
 	Language = "old-irish",
-	Meaning = "Wagon",
+	Meanings = {"Wagon"},
 	SingularNominative = "Fēn"
 })
 
 DefineLanguageNoun("Giús", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 4.
 	Language = "old-irish",
-	Meaning = "Fir",
+	Meanings = {"Fir"},
 	SingularNominative = "Giús"
 })

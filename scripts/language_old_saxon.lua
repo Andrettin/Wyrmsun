@@ -48,185 +48,185 @@ DefineCivilizationLanguage("old-saxon", -- Old Saxon
 
 DefineLanguageNoun("Fehu", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "old-saxon",
-	Meaning = "Cattle",
+	Meanings = {"Cattle"},
 	SingularNominative = "Fehu"
 })
 
 DefineLanguageNoun("Fisc", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
 	Language = "old-saxon",
-	Meaning = "Fish",
+	Meanings = {"Fish"},
 	SingularNominative = "Fisc"
 })
 
 DefineLanguageNoun("Gard", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.
 	Language = "old-saxon",
-	Meaning = "Staff, Rod",
+	Meanings = {"Staff", "Rod"},
 	SingularNominative = "Gard"
 })
 
 DefineLanguageNoun("Herta", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
 	Language = "old-saxon",
-	Meaning = "Heart",
+	Meanings = {"Heart"},
 	SingularNominative = "Herta"
 })
 
 DefineLanguageNoun("Hord", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.
 	Language = "old-saxon",
-	Meaning = "Treasure, Closed Interior, Hidden Interior",
+	Meanings = {"Treasure", "Closed Interior", "Hidden Interior"},
 	SingularNominative = "Hord"
 })
 
 DefineLanguageNoun("Hund", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
 	Language = "old-saxon",
-	Meaning = "Dog",
+	Meanings = {"Dog"},
 	SingularNominative = "Hund"
 })
 
 DefineLanguageNoun("Hurth", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-saxon",
-	Meaning = "Wattle", -- derived from Proto-Germanic "Χŕdiz", which has the meaning of "wattle"
+	Meanings = {"Wattle"}, -- derived from Proto-Germanic "Χŕdiz", which has the meaning of "wattle"
 	SingularNominative = "Hurth"
 })
 
 DefineLanguageNoun("Līfnara", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "old-saxon",
-	Meaning = "Food, Nourishment",
+	Meanings = {"Food", "Nourishment"},
 	SingularNominative = "Līfnara",
 	Gender = "Feminine"
 })
 
 DefineLanguageNoun("Merg", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
 	Language = "old-saxon",
-	Meaning = "Marrow",
+	Meanings = {"Marrow"},
 	SingularNominative = "Merg"
 })
 
 DefineLanguageNoun("Mēda", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 7.
 	Language = "old-saxon",
-	Meaning = "Payment",
+	Meanings = {"Payment"},
 	SingularNominative = "Mēda", -- source also gives as an alternatives the form "Mieda"
 	Gender = "Feminine"
 })
 
 DefineLanguageNoun("Ord", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
 	Language = "old-saxon",
-	Meaning = "Point, Edge of a Blade",
+	Meanings = {"Point", "Edge of a Blade"},
 	SingularNominative = "Ord",
 	Gender = "Masculine"
 })
 
 DefineLanguageNoun("Orlag", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 10.
 	Language = "old-saxon",
-	Meaning = "Fate",
+	Meanings = {"Fate"},
 	SingularNominative = "Orlag" -- source also gives the alternative form "Orlagi"
 })
 
 DefineLanguageNoun("Suht", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
 	Language = "old-saxon",
-	Meaning = "Sickness",
+	Meanings = {"Sickness"},
 	SingularNominative = "Suht"
 })
 
 DefineLanguageNoun("Weg", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
 	Language = "old-saxon",
-	Meaning = "Way",
+	Meanings = {"Way"},
 	SingularNominative = "Weg"
 })
 
 DefineLanguageNoun("Wurm", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
 	Language = "old-saxon",
-	Meaning = "Worm, Serpent", -- probably could be extended to mean "wyrm" as well
+	Meanings = {"Worm", "Serpent"}, -- probably could be extended to mean "wyrm" as well
 	SingularNominative = "Wurm"
 })
 
 DefineLanguageVerb("Beran", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "old-saxon",
-	Meaning = "?",
+	Meanings = {"?"},
 	Infinitive = "Beran"
 })
 
 DefineLanguageVerb("Birid", { -- should be infinitive form; Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
 	Language = "old-saxon",
-	Meaning = "Bears",
+	Meanings = {"Bears"},
 	-- infinitive form? maybe is the same word as "beran", since the Latin cognate of "beran", "ferō", means "I bear"
 	SingularThirdPersonPresent = "Birid"
 })
 
 DefineLanguageVerb("Bītan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "old-saxon",
-	Meaning = "Bite",
+	Meanings = {"Bite"},
 	Infinitive = "Bītan"
 })
 
 DefineLanguageVerb("Etan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
 	Language = "old-saxon",
-	Meaning = "Eat",
+	Meanings = {"Eat"},
 	Infinitive = "Etan"
 })
 
 DefineLanguageVerb("Helpan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
 	Language = "old-saxon",
-	Meaning = "Help",
+	Meanings = {"Help"},
 	Infinitive = "Helpan"
 })
 
 DefineLanguageVerb("Lērian", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 5.
 	Language = "old-saxon",
-	Meaning = "Teach",
+	Meanings = {"Teach"},
 	Infinitive = "Lērian" -- causative verb
 })
 
 DefineLanguageVerb("Līnōn", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
 	Language = "old-saxon",
-	Meaning = "Learn",
+	Meanings = {"Learn"},
 	Infinitive = "Līnōn"
 })
 
 DefineLanguageVerb("Nerian", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "old-saxon",
-	Meaning = "Save",
+	Meanings = {"Save"},
 	Infinitive = "Nerian"
 })
 
 DefineLanguageVerb("Scrīban", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "old-saxon",
-	Meaning = "Write",
+	Meanings = {"Write"},
 	Infinitive = "Scrīban"
 })
 
 DefineLanguageVerb("Sehan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
 	Language = "old-saxon",
-	Meaning = "See",
+	Meanings = {"See"},
 	Infinitive = "Sehan"
 })
 
 DefineLanguageVerb("Werthan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
 	Language = "old-saxon",
-	Meaning = "Become",
+	Meanings = {"Become"},
 	Infinitive = "Werthan"
 })
 
 DefineLanguageVerb("Witan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
 	Language = "old-saxon",
-	Meaning = "Know",
+	Meanings = {"Know"},
 	Infinitive = "Witan"
 })
 
 DefineLanguageAdjective("Jung", {
 	Language = "old-saxon",
-	Meaning = "Young", -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
+	Meanings = {"Young"}, -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
 	Positive = "Jung"
 })
 
 DefineLanguageAdjective("Mēro", { -- this is the comparative, what is the normal version of the word? Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
 	Language = "old-saxon",
-	Meaning = "More",
+	Meanings = {"More"},
 	Comparative = "Mēro",
 	Superlative = "Mēst"
 })
 
 DefineLanguageAdjective("Reht", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-saxon",
-	Meaning = "Right, Straight", -- derived from Proto-Germanic "Reχtaz", which means "Right, Straight"
+	Meanings = {"Right", "Straight"}, -- derived from Proto-Germanic "Reχtaz", which means "Right, Straight"
 	Positive = "Reht"
 })

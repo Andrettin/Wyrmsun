@@ -27,34 +27,34 @@
 
 DefineLanguageNoun("Késara", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 7.
 	Language = "sanskrit",
-	Meaning = "Hair, Mane",
+	Meanings = {"Hair", "Mane"},
 	SingularNominative = "Késara",
 	Gender = "Masculine"
 })
 
 DefineLanguageNoun("Majjá", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "sanskrit",
-	Meaning = "Marrow",
+	Meanings = {"Marrow"},
 	SingularNominative = "Majjá", -- the accent in the source was different, but I could not identify the accent to reproduce it here
 	Gender = "Feminine"
 })
 
 DefineLanguageNoun("Majján", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "sanskrit",
-	Meaning = "Marrow",
+	Meanings = {"Marrow"},
 	SingularNominative = "Majján",
 	Gender = "Masculine"
 })
 
 DefineLanguageNoun("Mīḍhá", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 7.
 	Language = "sanskrit",
-	Meaning = "Reward from a Battle, Reward from a Competition",
+	Meanings = {"Reward from a Battle", "Reward from a Competition"},
 	SingularNominative = "Mīḍhá",
 	Gender = "Neuter"
 })
 
 DefineLanguageNoun("Páśu", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "sanskrit",
-	Meaning = "?",
+	Meanings = {"?"},
 	SingularNominative = "Páśu"
 })

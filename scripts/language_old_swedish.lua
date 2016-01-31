@@ -27,12 +27,12 @@
 
 DefineLanguageNoun("Ēr", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
 	Language = "old-swedish",
-	Meaning = "Bronze",
+	Meanings = {"Bronze"},
 	SingularNominative = "Ēr"
 })
 
 DefineLanguageAdjective("Mēre", { -- this is the comparative, what is the normal version of the word? Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
 	Language = "old-swedish",
-	Meaning = "Larger", -- this is the meaning for the comparative, should be replaced when we got hold of the normal version of the adjective
+	Meanings = {"Larger"}, -- this is the meaning for the comparative, should be replaced when we got hold of the normal version of the adjective
 	Comparative = "Mēre"
 })

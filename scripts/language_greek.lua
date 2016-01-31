@@ -29,33 +29,33 @@
 
 DefineLanguageNoun("Κώνωπες", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 101.
 	Language = "greek",
-	Meaning = "Gnats",
+	Meanings = {"Gnats"},
 	PluralNominative = "Κώνωπες"
 })
 
 DefineLanguageNoun("Μισθός", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 7.
 	Language = "greek",
-	Meaning = "Reward, Payment of a Soldier",
+	Meanings = {"Reward", "Payment of a Soldier"},
 	SingularNominative = "Μισθός",
 	Gender = "Masculine"
 })
 
 DefineLanguageNoun("Χέσ-χιον", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
 	Language = "greek",
-	Meaning = "Oakum", -- source gives the German word "Werg" as the meaning
+	Meanings = {"Oakum"}, -- source gives the German word "Werg" as the meaning
 	SingularNominative = "Χέσ-χιον" -- is this really an hyphen in the word, or are these two forms of the word?
 })
 
 DefineLanguageNoun("Χύσθος", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
 	Language = "greek",
-	Meaning = "Cavity, Vulva",
+	Meanings = {"Cavity", "Vulva"},
 	SingularNominative = "Χύσθος",
 	Gender = "Masculine"
 })
 
 DefineLanguageNoun("Abdera", { -- should be written as the original Greek name (with Greek characters)
 	Language = "greek",
-	Meaning = "?",
+	Meanings = {"?"},
 	SingularNominative = "Abdera",
 	NameSingular = true,
 	TypeName = {"settlement"} -- example: "Abdera"
@@ -63,7 +63,7 @@ DefineLanguageNoun("Abdera", { -- should be written as the original Greek name (
 
 DefineLanguageNoun("Abydus", { -- should be written as the original Greek name (with Greek characters)
 	Language = "greek",
-	Meaning = "?",
+	Meanings = {"?"},
 	SingularNominative = "Abydus",
 	NameSingular = true,
 	TypeName = {"settlement"} -- example: "Abydus"
@@ -71,7 +71,7 @@ DefineLanguageNoun("Abydus", { -- should be written as the original Greek name (
 
 DefineLanguageNoun("Acragas", { -- should be written as the original Greek name (with Greek characters)
 	Language = "greek",
-	Meaning = "?",
+	Meanings = {"?"},
 	SingularNominative = "Acragas",
 	NameSingular = true,
 	TypeName = {"settlement"} -- example: "Acragas" (Agrigentum)
@@ -79,7 +79,7 @@ DefineLanguageNoun("Acragas", { -- should be written as the original Greek name 
 
 DefineLanguageNoun("Agathe", { -- should be written as the original Greek name (with Greek characters)
 	Language = "greek",
-	Meaning = "?",
+	Meanings = {"?"},
 	SingularNominative = "Agathe",
 	NameSingular = true,
 	TypeName = {"settlement"} -- example: "Agathe"
@@ -87,7 +87,7 @@ DefineLanguageNoun("Agathe", { -- should be written as the original Greek name (
 
 DefineLanguageNoun("Ainos", { -- should be written as the original Greek name (with Greek characters)
 	Language = "greek",
-	Meaning = "?",
+	Meanings = {"?"},
 	SingularNominative = "Ainos",
 	NameSingular = true,
 	TypeName = {"settlement"} -- example: "Ainos"
@@ -95,7 +95,7 @@ DefineLanguageNoun("Ainos", { -- should be written as the original Greek name (w
 
 DefineLanguageNoun("Alalia", { -- should be written as the original Greek name (with Greek characters)
 	Language = "greek",
-	Meaning = "?",
+	Meanings = {"?"},
 	SingularNominative = "Alalia",
 	NameSingular = true,
 	TypeName = {"settlement"} -- example: "Alalia" (Aleria)
@@ -103,7 +103,7 @@ DefineLanguageNoun("Alalia", { -- should be written as the original Greek name (
 
 DefineLanguageNoun("Alonae", { -- should be written as the original Greek name (with Greek characters)
 	Language = "greek",
-	Meaning = "?",
+	Meanings = {"?"},
 	SingularNominative = "Alonae",
 	NameSingular = true,
 	TypeName = {"settlement"} -- example: "Alonae"
@@ -111,7 +111,7 @@ DefineLanguageNoun("Alonae", { -- should be written as the original Greek name (
 
 DefineLanguageNoun("Amisus", { -- should be written as the original Greek name (with Greek characters)
 	Language = "greek",
-	Meaning = "?",
+	Meanings = {"?"},
 	SingularNominative = "Amisus",
 	NameSingular = true,
 	TypeName = {"settlement"} -- example: "Amisus"
@@ -119,7 +119,7 @@ DefineLanguageNoun("Amisus", { -- should be written as the original Greek name (
 
 DefineLanguageNoun("Amphi", { -- should be written as the original Greek name (with Greek characters)
 	Language = "greek",
-	Meaning = "?",
+	Meanings = {"?"},
 	SingularNominative = "Amphi",
 	PrefixSingular = true,
 	PrefixTypeName = {"settlement"} -- example: "Amphipolis"
@@ -127,7 +127,7 @@ DefineLanguageNoun("Amphi", { -- should be written as the original Greek name (w
 
 DefineLanguageNoun("Calli", { -- should be written as the original Greek name (with Greek characters)
 	Language = "greek",
-	Meaning = "?",
+	Meanings = {"?"},
 	SingularNominative = "Calli",
 	PrefixSingular = true,
 	PrefixTypeName = {"settlement"} -- example: "Callipolis"
@@ -135,7 +135,7 @@ DefineLanguageNoun("Calli", { -- should be written as the original Greek name (w
 
 DefineLanguageNoun("Polis", { -- should be written as the original Greek name (with Greek characters)
 	Language = "greek",
-	Meaning = "City",
+	Meanings = {"City"},
 	SingularNominative = "Polis",
 	SuffixSingular = true,
 	SuffixTypeName = {"settlement"} -- examples: "Amphipolis", "Callipolis", "Neapolis" (Naples)
@@ -143,19 +143,19 @@ DefineLanguageNoun("Polis", { -- should be written as the original Greek name (w
 
 DefineLanguageAdjective("Nea", { -- should be written as the original Greek name (with Greek characters)
 	Language = "greek",
-	Meaning = "New",
+	Meanings = {"New"},
 	Positive = "Nea",
 	PrefixTypeName = {"settlement"} -- example: "Neapolis" (Naples)
 })
 
 DefineLanguageVerb("Pheídomai", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "greek",
-	Meaning = "Separate",
+	Meanings = {"Separate"},
 	SingularFirstPersonPresent = "Pheídomai"
 })
 
 DefineLanguagePronoun("Égō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 1.
 	Language = "greek",
-	Meaning = "I", -- is a cognate of Proto-Germanic "eka"/"ek", so possibly has the same meaning
+	Meanings = {"I"}, -- is a cognate of Proto-Germanic "eka"/"ek", so possibly has the same meaning
 	Nominative = "Égō"
 })

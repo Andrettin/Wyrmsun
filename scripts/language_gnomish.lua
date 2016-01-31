@@ -27,7 +27,7 @@
 
 DefineLanguageNoun("Bimbam", {
 	Language = "gnomish",
-	Meaning = "?",
+	Meanings = {"?"},
 	SingularNominative = "Bimbam",
 	Gender = "Masculine", -- presumably, since it is a masculine personal name
 	NameSingular = true,
@@ -36,7 +36,7 @@ DefineLanguageNoun("Bimbam", {
 
 DefineLanguageNoun("Clavo", {
 	Language = "gnomish",
-	Meaning = "?",
+	Meanings = {"?"},
 	SingularNominative = "Clavo",
 	Gender = "Masculine", -- presumably, since it is a masculine personal name
 	NameSingular = true,
@@ -45,7 +45,7 @@ DefineLanguageNoun("Clavo", {
 
 DefineLanguageNoun("Cravatu", {
 	Language = "gnomish",
-	Meaning = "?",
+	Meanings = {"?"},
 	SingularNominative = "Cravatu",
 	Gender = "Masculine", -- presumably, since it is a masculine personal name
 	NameSingular = true,
@@ -54,7 +54,7 @@ DefineLanguageNoun("Cravatu", {
 
 DefineLanguageNoun("Kalutho", {
 	Language = "gnomish",
-	Meaning = "?",
+	Meanings = {"?"},
 	SingularNominative = "Kalutho",
 	Gender = "Masculine", -- presumably, since it is a masculine personal name
 	NameSingular = true,
@@ -63,13 +63,13 @@ DefineLanguageNoun("Kalutho", {
 
 DefineLanguageNoun("Leffas", {
 	Language = "gnomish",
-	Meaning = "Soul of a Plant, Stone or Tree",
+	Meanings = {"Soul of a Plant, Stone or Tree"},
 	SingularNominative = "Leffas"
 })
 
 DefineLanguageNoun("Pypo", {
 	Language = "gnomish",
-	Meaning = "?",
+	Meanings = {"?"},
 	SingularNominative = "Pypo",
 	Gender = "Masculine", -- presumably, since it is a masculine personal name
 	NameSingular = true,
@@ -78,7 +78,7 @@ DefineLanguageNoun("Pypo", {
 
 DefineLanguageNoun("Rubezahl", {
 	Language = "gnomish",
-	Meaning = "?",
+	Meanings = {"?"},
 	SingularNominative = "Rubezahl",
 	Gender = "Masculine", -- presumably, since it is a masculine personal name
 	NameSingular = true,

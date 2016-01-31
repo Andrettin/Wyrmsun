@@ -27,7 +27,7 @@
 
 DefineLanguageNoun("Charles", {
 	Language = "english",
-	Meaning = "?",
+	Meanings = {"?"},
 	SingularNominative = "Charles",
 	Gender = "Masculine",
 	NameSingular = true,
@@ -36,7 +36,7 @@ DefineLanguageNoun("Charles", {
 
 DefineLanguageNoun("Francis", {
 	Language = "english",
-	Meaning = "?",
+	Meanings = {"?"},
 	SingularNominative = "Francis",
 	Gender = "Masculine",
 	NameSingular = true,
@@ -45,7 +45,7 @@ DefineLanguageNoun("Francis", {
 
 DefineLanguageNoun("Henry", {
 	Language = "english",
-	Meaning = "?",
+	Meanings = {"?"},
 	SingularNominative = "Henry",
 	Gender = "Masculine",
 	NameSingular = true,
@@ -54,7 +54,7 @@ DefineLanguageNoun("Henry", {
 
 DefineLanguageNoun("John", {
 	Language = "english",
-	Meaning = "?",
+	Meanings = {"?"},
 	SingularNominative = "John",
 	Gender = "Masculine",
 	NameSingular = true,
@@ -63,7 +63,7 @@ DefineLanguageNoun("John", {
 
 DefineLanguageNoun("Lewis", {
 	Language = "english",
-	Meaning = "?",
+	Meanings = {"?"},
 	SingularNominative = "Lewis",
 	Gender = "Masculine",
 	NameSingular = true,
@@ -72,7 +72,7 @@ DefineLanguageNoun("Lewis", {
 
 DefineLanguageNoun("William", {
 	Language = "english",
-	Meaning = "?",
+	Meanings = {"?"},
 	SingularNominative = "William",
 	Gender = "Masculine",
 	NameSingular = true,
@@ -81,7 +81,7 @@ DefineLanguageNoun("William", {
 
 DefineLanguageNoun("House", {
 	Language = "english",
-	Meaning = "House",
+	Meanings = {"House"},
 	SingularNominative = "House",
 	Gender = "Neuter",
 	SuffixSingular = true,
@@ -90,7 +90,7 @@ DefineLanguageNoun("House", {
 
 DefineLanguageNoun("Hyrst", {
 	Language = "english",
-	Meaning = "?",
+	Meanings = {"?"},
 	SingularNominative = "Hyrst",
 	Gender = "Neuter",
 	SuffixSingular = true,
@@ -99,7 +99,7 @@ DefineLanguageNoun("Hyrst", {
 
 DefineLanguageNoun("Ing", {
 	Language = "english",
-	Meaning = "?",
+	Meanings = {"?"},
 	SingularNominative = "Ing",
 --	Gender = "?",
 	SuffixSingular = true,
@@ -108,7 +108,7 @@ DefineLanguageNoun("Ing", {
 
 DefineLanguageNoun("Mouth", {
 	Language = "english",
-	Meaning = "Mouth",
+	Meanings = {"Mouth"},
 	SingularNominative = "Mouth",
 	Gender = "Neuter",
 	SuffixSingular = true,
@@ -117,7 +117,7 @@ DefineLanguageNoun("Mouth", {
 
 DefineLanguageNoun("Ply", {
 	Language = "english",
-	Meaning = "?",
+	Meanings = {"?"},
 	SingularNominative = "Ply",
 --	Gender = "?",
 	PrefixSingular = true,
@@ -126,7 +126,7 @@ DefineLanguageNoun("Ply", {
 
 DefineLanguageNoun("Town", {
 	Language = "english",
-	Meaning = "Town",
+	Meanings = {"Town"},
 	SingularNominative = "Town",
 	Gender = "Neuter",
 	SuffixSingular = true,
@@ -135,7 +135,7 @@ DefineLanguageNoun("Town", {
 
 DefineLanguageNoun("Tree", {
 	Language = "english",
-	Meaning = "Tree",
+	Meanings = {"Tree"},
 	SingularNominative = "Tree",
 	Gender = "Neuter",
 	SuffixSingular = true,
@@ -144,7 +144,7 @@ DefineLanguageNoun("Tree", {
 
 DefineLanguageNoun("Wich", {
 	Language = "english",
-	Meaning = "?",
+	Meanings = {"?"},
 	SingularNominative = "Wich",
 	Gender = "Neuter",
 	SuffixSingular = true,

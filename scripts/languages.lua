@@ -243,7 +243,7 @@ DefineCivilizationLanguage("sanskrit", -- Sanskrit
 --[[
 DefineLanguageNoun("Kosem", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
 	Language = "north-slavic",
-	Meaning = "Bundle of Flax",
+	Meanings = {"Bundle of Flax"},
 	SingularNominative = "Kosem"
 })
 --]]

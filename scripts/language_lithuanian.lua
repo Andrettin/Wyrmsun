@@ -27,19 +27,19 @@
 
 DefineLanguageNoun("Pẽkus", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "lithuanian",
-	Meaning = "?",
+	Meanings = {"?"},
 	SingularNominative = "Pẽkus"
 })
 
 DefineLanguageVerb("Saĩsti", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 121.
 	Language = "lithuanian",
-	Meaning = "Interpret a Sign or Prophesy",
+	Meanings = {"Interpret a Sign or Prophesy"},
 	Infinitive = "Saĩsti"
 })
 
 DefineLanguageVerb("Źengiù", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
 	Language = "lithuanian",
-	Meaning = "Go, Stride",
+	Meanings = {"Go", "Stride"},
 	Infinitive = "Źengiù"
 })
 

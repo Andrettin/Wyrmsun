@@ -27,92 +27,92 @@
 
 DefineLanguageNoun("Gart", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
 	Language = "middle-high-german",
-	Meaning = "Prickle, Stick for Driving Animals",
+	Meanings = {"Prickle", "Stick for Driving Animals"},
 	SingularNominative = "Gart",
 	Gender = "Masculine"
 })
 			
 DefineLanguageNoun("Hort", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
 	Language = "middle-high-german",
-	Meaning = "Treasure",
+	Meanings = {"Treasure"},
 	SingularNominative = "Hort"
 })
 
 DefineLanguageNoun("Kien", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 4, 7.
 	Language = "middle-high-german",
-	Meaning = "Fir, Spruce, Fir Splinter, Fir Torch, Spruce Splinter, Spruce Torch",
+	Meanings = {"Fir", "Spruce"," Fir Splinter", "Fir Torch", "Spruce Splinter", "Spruce Torch"},
 	SingularNominative = "Kien",
 	Gender = "Masculine"
 })
 
 DefineLanguageNoun("Marc", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "middle-high-german",
-	Meaning = "Marrow",
+	Meanings = {"Marrow"},
 	SingularNominative = "Marc",
 	SingularGenitive = "Marges"
 })
 
 DefineLanguageNoun("Miete", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 7.
 	Language = "middle-high-german",
-	Meaning = "Payment, Reward, Bribe",
+	Meanings = {"Payment", "Reward", "Bribe"},
 	SingularNominative = "Miete",
 	Gender = "Feminine"
 })
 
 DefineLanguageNoun("Nare", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "middle-high-german",
-	Meaning = "Salvation, Rescue, Nourishment, Sustenance",
+	Meanings = {"Salvation", "Rescue", "Nourishment", "Sustenance"},
 	SingularNominative = "Nare",
 	Gender = "Feminine"
 })
 
 DefineLanguageNoun("Ort", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.
 	Language = "middle-high-german",
-	Meaning = "Point, Corner, Edge of a Part, Edge of a Piece, Edge of a Small Coin",
+	Meanings = {"Point", "Corner", "Edge of a Part", "Edge of a Piece", "Edge of a Small Coin"},
 	SingularNominative = "Ort",
 	Gender = "Masculine"
 })
 
 DefineLanguageNoun("Rünne", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
 	Language = "middle-high-german",
-	Meaning = "Storm Surge",
+	Meanings = {"Storm Surge"},
 	SingularNominative = "Rünne",
 	Gender = "Feminine"
 })
 
 DefineLanguageNoun("Weit", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 4, 7.
 	Language = "middle-high-german",
-	Meaning = "Woad",
+	Meanings = {"Woad"},
 	SingularNominative = "Weit",
 	Gender = "Masculine"
 })
 
 DefineLanguageNoun("Zwirn", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1-2, 6.
 	Language = "middle-high-german",
-	Meaning = "Doubly Spun Twine",
+	Meanings = {"Doubly Spun Twine"},
 	SingularNominative = "Zwirn"
 })
 
 DefineLanguageVerb("Lēren", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 5.
 	Language = "middle-high-german",
-	Meaning = "Teach",
+	Meanings = {"Teach"},
 	Infinitive = "Lēren" -- causative verb
 })
 
 DefineLanguageVerb("Lernen", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 5.
 	Language = "middle-high-german",
-	Meaning = "Learn",
+	Meanings = {"Learn"},
 	Infinitive = "Lernen"
 })
 
 DefineLanguageVerb("Nerigen", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "middle-high-german",
-	Meaning = "Heal, Sustain the Life of, Save, Protect, Nourish",
+	Meanings = {"Heal", "Sustain the Life of", "Save", "Protect", "Nourish"},
 	Infinitive = "Nerigen" -- source also gives alternative forms "Neren" and "Nern"
 })
 
 DefineLanguageVerb("Zwirnen", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
 	Language = "middle-high-german",
-	Meaning = "Twist Together Twice, Twine",
+	Meanings = {"Twist Together Twice", "Twine"},
 	Infinitive = "Zwirnen"
 })

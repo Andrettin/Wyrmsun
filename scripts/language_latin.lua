@@ -27,115 +27,115 @@
 
 DefineLanguageNoun("Alucitae", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 101.
 	Language = "latin",
-	Meaning = "Gnats, Mosquitos",
+	Meanings = {"Gnats", "Mosquitos"},
 	PluralNominative = "Alucitae"
 })
 
 DefineLanguageNoun("Caesaries", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 7.
 	Language = "latin",
-	Meaning = "Head Hair",
+	Meanings = {"Head Hair"},
 	SingularNominative = "Caesaries"
 })
 
 DefineLanguageNoun("Caper", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
 	Language = "latin",
-	Meaning = "Male Goat",
+	Meanings = {"Male Goat"},
 	SingularNominative = "Caper"
 })
 
 DefineLanguageNoun("Caulis", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
 	Language = "latin",
-	Meaning = "?", -- words derived from it mean (in German) "Kohl"
+	Meanings = {"?"}, -- words derived from it mean (in German) "Kohl"
 	SingularNominative = "Caulis"
 })
 
 DefineLanguageNoun("Conopes", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 101.
 	Language = "latin",
-	Meaning = "Gnats",
+	Meanings = {"Gnats"},
 	PluralNominative = "Conopes"
 })
 
 DefineLanguageNoun("Conopeum", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 102.
 	Language = "latin",
-	Meaning = "Mosquito Net",
+	Meanings = {"Mosquito Net"},
 	SingularNominative = "Conopeum"
 })
 
 DefineLanguageNoun("Custos", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
 	Language = "latin",
-	Meaning = "Guard", -- source gives meaning as "a Guard"
+	Meanings = {"Guard"}, -- source gives meaning as "a Guard"
 	SingularNominative = "Custos"
 })
 
 DefineLanguageNoun("Far", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
 	Language = "latin",
-	Meaning = "Wheat or Spelt", -- the word means one of these, not both
+	Meanings = {"Wheat", "Spelt"}, -- the word means one of these, not both
 	SingularNominative = "Far"
 })
 
 DefineLanguageNoun("Gallus", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 101.
 	Language = "latin",
-	Meaning = "Eunuch",
+	Meanings = {"Eunuch"},
 	SingularNominative = "Gallus",
 	PluralNominative = "Galli"
 })
 
 DefineLanguageNoun("Haedus", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
 	Language = "latin",
-	Meaning = "Goat",
+	Meanings = {"Goat"},
 	SingularNominative = "Haedus"
 })
 
 DefineLanguageNoun("Hasta", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
 	Language = "latin",
-	Meaning = "Rod, Shaft, Spear",
+	Meanings = {"Rod", "Shaft", "Spear"},
 	SingularNominative = "Hasta"
 })
 
 DefineLanguageNoun("Pecu", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "latin",
-	Meaning = "Herd",
+	Meanings = {"Herd"},
 	SingularNominative = "Pecu"
 })
 
 DefineLanguageNoun("Sūs", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
 	Language = "latin",
-	Meaning = "Sow",
+	Meanings = {"Sow"},
 	SingularNominative = "Sūs"
 })
 
 DefineLanguageVerb("Alucinare", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 101.
 	Language = "latin",
-	Meaning = "To Wander in Mind, Speak while in such a State",
+	Meanings = {"To Wander in Mind", "Speak while in such a State"},
 	Infinitive = "Alucinare" -- presumably it is the infinitive
 })
 
 DefineLanguageVerb("Ferō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "latin",
-	Meaning = "Bear",
+	Meanings = {"Bear"},
 	SingularFirstPersonPresent = "Ferō"
 })
 
 DefineLanguageVerb("Scrībere", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "latin",
-	Meaning = "?", -- cognates have "write" as the meaning
+	Meanings = {"?"}, -- cognates have "write" as the meaning
 	Infinitive = "Scrībere"
 })
 
 DefineLanguageAdjective("Verus", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 99.
 	Language = "latin",
-	Meaning = "True, Real",
+	Meanings = {"True", "Real"},
 	Positive = "Verus"
 })
 
 DefineLanguagePronoun("Egō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 1.
 	Language = "latin",
-	Meaning = "I", -- is a cognate of Proto-Germanic "eka"/"ek", so possibly has the same meaning
+	Meanings = {"I"}, -- is a cognate of Proto-Germanic "eka"/"ek", so possibly has the same meaning
 	Nominative = "Egō"
 })
 
 DefineLanguagePronoun("Vōs", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 5, Subsection 1.
 	Language = "latin",
-	Meaning = "You", -- second person plural
+	Meanings = {"You"}, -- second person plural
 	Nominative = "Vōs"
 })

@@ -45,7 +45,7 @@ DefineCivilizationLanguage("old-norse", -- Old Norse
 
 DefineLanguageNoun("Aldr", { -- Source: Geir T. Zoëga, "A Concise Dictionary of Old Icelandic", 1910, p. 8.
 	Language = "old-norse",
-	Meaning = "Age, Lifetime",
+	Meanings = {"Age", "Lifetime"},
 	SingularNominative = "Aldr",
 	SingularGenitive = "Aldrs",
 	Gender = "Masculine"
@@ -53,144 +53,144 @@ DefineLanguageNoun("Aldr", { -- Source: Geir T. Zoëga, "A Concise Dictionary of
 
 DefineLanguageNoun("Aldrnari", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "old-norse",
-	Meaning = "Fire",
+	Meanings = {"Fire"},
 	SingularNominative = "Aldrnari", -- Compound of the words "Aldr" and "Nari", literally "life-sustainer"
 	Gender = "Masculine"
 })
 
 DefineLanguageNoun("Ār", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-norse",
-	Meaning = "Year", -- derived from Proto-Germanic "Yēra", which means "Year"
+	Meanings = {"Year"}, -- derived from Proto-Germanic "Yēra", which means "Year"
 	SingularNominative = "Ār"
 })
 
 DefineLanguageNoun("Bōk", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-norse",
-	Meaning = "Book", -- derived from Proto-Germanic "Bōks"; the source has the meaning for that word as "'tablet' > 'book'", but it is not clear if it means that the meaning became book in the child languages of Proto-Germanic, or within the timespan of the language itself
+	Meanings = {"Book"}, -- derived from Proto-Germanic "Bōks"; the source has the meaning for that word as "'tablet' > 'book'", but it is not clear if it means that the meaning became book in the child languages of Proto-Germanic, or within the timespan of the language itself
 	SingularNominative = "Bōk"
 })
 
 DefineLanguageNoun("Bǫrr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
 	Language = "old-norse",
-	Meaning = "Wheat or Spelt", -- the word means one of these, not both
+	Meanings = {"Wheat", "Spelt"}, -- the word means one of these, not both
 	SingularNominative = "Bǫrr"
 })
 
 DefineLanguageNoun("Broddr", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 9.
 	Language = "old-norse",
-	Meaning = "Point, Sprout",
+	Meanings = {"Point", "Sprout"},
 	SingularNominative = "Broddr",
 	Gender = "Masculine"
 })
 
 DefineLanguageNoun("Dyrr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-norse",
-	Meaning = "Door", -- derived from Proto-Germanic "Durez", which has the meaning of "door"
+	Meanings = {"Door"}, -- derived from Proto-Germanic "Durez", which has the meaning of "door"
 	PluralNominative = "Dyrr"
 })
 
 DefineLanguageNoun("Fé", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "old-norse",
-	Meaning = "Cattle",
+	Meanings = {"Cattle"},
 	SingularNominative = "Fé"
 })
 
 DefineLanguageNoun("Fiskr", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
 	Language = "old-norse",
-	Meaning = "Fish",
+	Meanings = {"Fish"},
 	SingularNominative = "Fiskr"
 })
 
 DefineLanguageNoun("Flōđ", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-norse",
-	Meaning = "Flood", -- derived from the Proto-Germanic "Flōduz", which means "Flood"
+	Meanings = {"Flood"}, -- derived from the Proto-Germanic "Flōduz", which means "Flood"
 	SingularNominative = "Flōđ"
 })
 
 DefineLanguageNoun("Fōtr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-norse",
-	Meaning = "Foot", -- derived from Proto-Germanic "Fōts", which has the meaning of "foot"
+	Meanings = {"Foot"}, -- derived from Proto-Germanic "Fōts", which has the meaning of "foot"
 	SingularNominative = "Fōtr"
 })
 
 DefineLanguageNoun("Gaddr", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
 	Language = "old-norse",
-	Meaning = "Prickle",
+	Meanings = {"Prickle"},
 	SingularNominative = "Gaddr",
 	Gender = "Masculine"
 })
 
 DefineLanguageNoun("Garđr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-norse",
-	Meaning = "Garden", -- derived from Proto-Germanic "Gárdiz", which has the meaning of "garden"
+	Meanings = {"Garden"}, -- derived from Proto-Germanic "Gárdiz", which has the meaning of "garden"
 	SingularNominative = "Garđr"
 })
 
 DefineLanguageNoun("Greddir", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 10.
 	Language = "old-norse",
-	Meaning = "Feeder, Satisfier",
+	Meanings = {"Feeder", "Satisfier"},
 	SingularNominative = "Greddir"
 })
 
 DefineLanguageNoun("Haddr", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 3, 8.
 	Language = "old-norse",
-	Meaning = "Woman's Long Hair",
+	Meanings = {"Woman's Long Hair"},
 	SingularNominative = "Haddr",
 	Gender = "Masculine"
 })
 
 DefineLanguageNoun("Hafr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
 	Language = "old-norse",
-	Meaning = "Male Goat",
+	Meanings = {"Male Goat"},
 	SingularNominative = "Hafr"
 })
 
 DefineLanguageNoun("Hane", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "old-norse",
-	Meaning = "Rooster",
+	Meanings = {"Rooster"},
 	SingularNominative = "Hane"
 })
 
 DefineLanguageNoun("Hodd", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.
 	Language = "old-norse",
-	Meaning = "Treasure",
+	Meanings = {"Treasure"},
 	SingularNominative = "Hodd"
 })
 
 DefineLanguageNoun("Hrǫnn", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.
 	Language = "old-norse",
-	Meaning = "Wave",
+	Meanings = {"Wave"},
 	SingularNominative = "Hrǫnn",
 	Gender = "Feminine"
 })
 
 DefineLanguageNoun("Hundr", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
 	Language = "old-norse",
-	Meaning = "Dog",
+	Meanings = {"Dog"},
 	SingularNominative = "Hundr"
 })
 
 DefineLanguageNoun("Hurđ", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-norse",
-	Meaning = "Wattle", -- derived from Proto-Germanic "Χŕdiz", which has the meaning of "wattle"
+	Meanings = {"Wattle"}, -- derived from Proto-Germanic "Χŕdiz", which has the meaning of "wattle"
 	SingularNominative = "Hurđ"
 })
 
 DefineLanguageNoun("Korn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-norse",
-	Meaning = "Grain", -- derived from Proto-Germanic "Kŕnam", which has the meaning of "grain"
+	Meanings = {"Grain"}, -- derived from Proto-Germanic "Kŕnam", which has the meaning of "grain"
 	SingularNominative = "Korn"
 })
 
 DefineLanguageNoun("Māttr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-norse",
-	Meaning = "Might", -- derived from Proto-Germanic "Maχtiz", which has the meaning of "Might"
+	Meanings = {"Might"}, -- derived from Proto-Germanic "Maχtiz", which has the meaning of "Might"
 	SingularNominative = "Māttr"
 })
 
 DefineLanguageNoun("Mergr", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 9.
 	Language = "old-norse",
-	Meaning = "Marrow in a Bone",
+	Meanings = {"Marrow in a Bone"},
 	SingularNominative = "Mergr",
 	SingularGenitive = "Mergjar",
 	Gender = "Masculine"
@@ -198,13 +198,13 @@ DefineLanguageNoun("Mergr", { -- Source: Sean Crist, "An Analysis of *z loss in 
 
 DefineLanguageNoun("Nātt", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-norse",
-	Meaning = "Night", -- derived from Proto-Germanic "Naχts", which means "Night"
+	Meanings = {"Night"}, -- derived from Proto-Germanic "Naχts", which means "Night"
 	SingularNominative = "Nātt"
 })
 
 DefineLanguageNoun("Oddr", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 7.
 	Language = "old-norse",
-	Meaning = "Point, Place",
+	Meanings = {"Point", "Place"},
 	SingularNominative = "Oddr",
 	SingularGenitive = "Odds",
 	Gender = "Masculine"
@@ -212,155 +212,155 @@ DefineLanguageNoun("Oddr", { -- Source: Sean Crist, "An Analysis of *z loss in W
 
 DefineLanguageNoun("Orlǫg", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 10.
 	Language = "old-norse",
-	Meaning = "Fate",
+	Meanings = {"Fate"},
 	SingularNominative = "Orlǫg" -- is singular or plural?
 })
 
 DefineLanguageNoun("Rann", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "old-norse",
-	Meaning = "House",
+	Meanings = {"House"},
 	SingularNominative = "Rann",
 	Gender = "Neuter"
 })
 
 DefineLanguageNoun("Rǫdd", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 9.
 	Language = "old-norse",
-	Meaning = "Sound, Voice, Vowel",
+	Meanings = {"Sound", "Voice", "Vowel"},
 	SingularNominative = "Rǫdd",
 	Gender = "Feminine"
 })
 
 DefineLanguageNoun("Sāđ", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-norse",
-	Meaning = "Seed", -- derived from the Proto-Germanic "Sēþiz", which means "Seed"
+	Meanings = {"Seed"}, -- derived from the Proto-Germanic "Sēþiz", which means "Seed"
 	SingularNominative = "Sāđ"
 })
 
 DefineLanguageNoun("Síði", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 118.
 	Language = "old-norse",
-	Meaning = "Magic-Worker",
+	Meanings = {"Magic-Worker"},
 	SingularNominative = "Síði"
 })
 
 DefineLanguageVerb("Síða", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 118.
 	Language = "old-norse",
-	Meaning = "Work Magic",
+	Meanings = {"Work Magic"},
 	Infinitive = "Síða"
 })
 
 DefineLanguageNoun("Sunna", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-norse",
-	Meaning = "Sun", -- derived from Proto-Germanic "Sunōn", which has the meaning of "Sun"
+	Meanings = {"Sun"}, -- derived from Proto-Germanic "Sunōn", which has the meaning of "Sun"
 	SingularNominative = "Sunna"
 })
 
 DefineLanguageNoun("Svīn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-norse",
-	Meaning = "Pig", -- derived from the Proto-Germanic "Swīnaz", which means "Pig"
+	Meanings = {"Pig"}, -- derived from the Proto-Germanic "Swīnaz", which means "Pig"
 	SingularNominative = "Svīn"
 })
 
 DefineLanguageNoun("Vagn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
 	Language = "old-norse",
-	Meaning = "Wagon",
+	Meanings = {"Wagon"},
 	SingularNominative = "Vagn"
 })
 
 DefineLanguageNoun("Valkyrja", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 10.
 	Language = "old-norse",
-	Meaning = "Valkyrie",
+	Meanings = {"Valkyrie"},
 	SingularNominative = "Valkyrja",
 	Gender = "feminine"
 })
 
 DefineLanguageNoun("Vegr", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
 	Language = "old-norse",
-	Meaning = "Way",
+	Meanings = {"Way"},
 	SingularNominative = "Vegr"
 })
 
 DefineLanguageVerb("Bauþ", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-norse",
-	Meaning = "Offered",
+	Meanings = {"Offered"},
 	ParticiplePast = "Bauþ" -- "offered"
 })
 
 DefineLanguageVerb("Bera", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "old-norse",
-	Meaning = "?",
+	Meanings = {"?"},
 	Infinitive = "Bera"
 })
 
 DefineLanguageVerb("Bīta", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "old-norse",
-	Meaning = "Bite",
+	Meanings = {"Bite"},
 	Infinitive = "Bīta"
 })
 
 DefineLanguageVerb("Eta", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
 	Language = "old-norse",
-	Meaning = "Eat",
+	Meanings = {"Eat"},
 	Infinitive = "Eta"
 })
 
 DefineLanguageVerb("Grenna", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 10.
 	Language = "old-norse",
-	Meaning = "Feed",
+	Meanings = {"Feed"},
 	Infinitive = "Grenna"
 })
 
 DefineLanguageVerb("Nara", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "old-norse",
-	Meaning = "Live",
+	Meanings = {"Live"},
 	Infinitive = "Nara"
 })
 
 DefineLanguageVerb("Stīga", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-norse",
-	Meaning = "Climb",
+	Meanings = {"Climb"},
 	Infinitive = "Stīga"
 })
 
 DefineLanguageVerb("Tvinna", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
 	Language = "old-norse",
-	Meaning = "Double", -- source gives meaning as "Double, Duplicate"
+	Meanings = {"Double", "Duplicate"},
 	Infinitive = "Tvinna"
 })
 
 DefineLanguageVerb("Verða", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
 	Language = "old-norse",
-	Meaning = "Become",
+	Meanings = {"Become"},
 	Infinitive = "Verða"
 })
 
 DefineLanguageVerb("Vita", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
 	Language = "old-norse",
-	Meaning = "Know",
+	Meanings = {"Know"},
 	Infinitive = "Vita",
 	PluralFirstPersonPresent = "Vitom" -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 })
 
 DefineLanguageAdjective("Djūpr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-norse",
-	Meaning = "Deep", -- derived from Proto-Germanic "Déwpaz", which has the meaning of "deep"
+	Meanings = {"Deep"}, -- derived from Proto-Germanic "Déwpaz", which has the meaning of "deep"
 	Positive = "Djūpr"
 })
 
 DefineLanguageAdjective("Fūll", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-norse",
-	Meaning = "Foul", -- derived from the Proto-Germanic "Fūla", which means "Foul"
+	Meanings = {"Foul"}, -- derived from the Proto-Germanic "Fūla", which means "Foul"
 	Positive = "Fūll"
 })
 
 DefineLanguageAdjective("Langr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-norse",
-	Meaning = "Long", -- derived from Proto-Germanic "Langaz", which means "Long"
+	Meanings = {"Long"}, -- derived from Proto-Germanic "Langaz", which means "Long"
 	Positive = "Langr"
 })
 
 DefineLanguageAdjective("Meiri", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-norse",
-	Meaning = "More",
+	Meanings = {"More"},
 	Positive = "Meiri", -- given by Lehmann, but it is not entirely clear if he meant that this is the positive version of the word
 	Comparative = "Meiri",
 	Superlative = "Mestr"
@@ -368,42 +368,42 @@ DefineLanguageAdjective("Meiri", { -- Source: Sean Crist, "An Analysis of *z los
 
 DefineLanguageAdjective("Rēttr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-norse",
-	Meaning = "Right, Straight", -- derived from Proto-Germanic "Reχtaz", which means "Right, Straight"
+	Meanings = {"Right", "Straight"}, -- derived from Proto-Germanic "Reχtaz", which means "Right, Straight"
 	Positive = "Rēttr"
 })
 
 DefineLanguageAdjective("Seiðr", { -- maybe is the past participle of Síði instead? Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 118.
 	Language = "old-norse",
-	Meaning = "Magic Worked",
+	Meanings = {"Magic Worked"},
 	Positive = "Seiðr"
 })
 
 DefineLanguageAdjective("Tvennr", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 6.
 	Language = "old-norse",
-	Meaning = "Twofold", -- maybe is an adverb instead?
+	Meanings = {"Twofold"}, -- maybe is an adverb instead?
 	-- source also gives "Tvinnr" as an alternative form
 	Positive = "Tvennr"
 })
 
 DefineLanguageAdjective("Þrennr", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
 	Language = "old-norse",
-	Meaning = "Threefold", -- maybe is an adverb instead?
+	Meanings = {"Threefold"}, -- maybe is an adverb instead?
 	-- source also gives "Þrinnr" as an alternative form
 	Positive = "Þrennr"
 })
 
 DefineLanguageAdjective("Þurr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-norse",
-	Meaning = "Dry", -- derived from Proto-Germanic "Þrsúz", which has the meaning of "dry"
+	Meanings = {"Dry"}, -- derived from Proto-Germanic "Þrsúz", which has the meaning of "dry"
 	Positive = "Þurr"
 })
 
 DefineLanguageAdposition("Af", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-norse",
-	Meaning = "From" -- derived from Proto-Germanic "Af", which means "From"
+	Meanings = {"From"} -- derived from Proto-Germanic "Af", which means "From"
 })
 
 DefineLanguageAdposition("Yfir", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-norse",
-	Meaning = "Over" -- derived from the Proto-Germanic "Ufar", which means "Over"
+	Meanings = {"Over"} -- derived from the Proto-Germanic "Ufar", which means "Over"
 })

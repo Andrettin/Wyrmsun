@@ -27,57 +27,57 @@
 
 DefineLanguageNoun("Árus", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "irish",
-	Meaning = "Dwelling",
+	Meanings = {"Dwelling"},
 	SingularNominative = "Árus"
 })
 
 DefineLanguageNoun("Brot", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "irish",
-	Meaning = "Prickle",
+	Meanings = {"Prickle"},
 	SingularNominative = "Brot",
 	Gender = "Masculine"
 })
 
 DefineLanguageNoun("Gas", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
 	Language = "irish",
-	Meaning = "Sapling, Sprout, Shoot",
+	Meanings = {"Sapling", "Sprout", "Shoot"},
 	SingularNominative = "Gas",
 	Gender = "Feminine"
 })
 
 DefineLanguageNoun("Gat", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
 	Language = "irish",
-	Meaning = "Rod",
+	Meanings = {"Rod"},
 	SingularNominative = "Gat"
 })
 
 DefineLanguageNoun("Gius", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 7.
 	Language = "irish",
-	Meaning = "Fir, Spruce",
+	Meanings = {"Fir", "Spruce"},
 	SingularNominative = "Gius"
 })
 
 DefineLanguageNoun("Kass", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
 	Language = "irish",
-	Meaning = "Curl, Tress",
+	Meanings = {"Curl", "Tress"},
 	SingularNominative = "Kass"
 })
 
 DefineLanguageNoun("Medg", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "irish",
-	Meaning = "Whey",
+	Meanings = {"Whey"},
 	SingularNominative = "Medg",
 	Gender = "Feminine"
 })
 
 DefineLanguageVerb("Rīadaim", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
 	Language = "irish",
-	Meaning = "Travel",
+	Meanings = {"Travel"},
 	Infinitive = "Rīadaim"
 })
 
 DefineLanguageAdjective("Máo", { -- this is the comparative, what is the normal version of the word? Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
 	Language = "irish",
-	Meaning = "More", -- "Máo" actually means "größer"
+	Meanings = {"More"}, -- "Máo" actually means "größer"
 	Comparative = "Máo" -- source also gives alternative form "Móo"
 })

@@ -27,18 +27,18 @@
 
 DefineLanguageNoun("Kana", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "finnish",
-	Meaning = "?", -- could have been derived from a Proto-Germanic ancestor word for Old Norse "hane" (which means "rooster")
+	Meanings = {"?"}, -- could have been derived from a Proto-Germanic ancestor word for Old Norse "hane" (which means "rooster")
 	SingularNominative = "Kana"
 })
 
 DefineLanguageNoun("Kuningas", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "finnish",
-	Meaning = "King",
+	Meanings = {"King"},
 	SingularNominative = "Kuningas"
 })
 
 DefineLanguageVerb("Soida", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 121.
 	Language = "finnish",
-	Meaning = "Ring, Jingle, Make a Sound",
+	Meanings = {"Ring", "Jingle", "Make a Sound"},
 	Infinitive = "Soida"
 })
