@@ -48,48 +48,6 @@ DefineRaceNames(
 			"Amsterdam",
 			"Rotterdam"
 		},
-		"settlement-name-prefixes", {
-			"Stap", -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
-		},
-		"settlement-name-suffixes", {
-			"aha", -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
-			"apa", -- Characteristic of the influence of the Carolingian realm; Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
-			"braak", -- Appears in the eastern Netherlands. Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
-			"breede", -- Appears in the eastern Netherlands. Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
-			"berg", -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
-			"borg", -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
-			"ede", -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
-			"geer", -- Appears in the eastern Netherlands. Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
-			"goor", -- Appears in the eastern Netherlands. Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
-			"haar", -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
-			"heim", -- Characteristic of the influence of the Carolingian realm; Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
-			"heuvel", -- Appears in the eastern Netherlands. Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
-			"ho", -- Appears in the eastern Netherlands. Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
-			"hoop", -- Appears in the eastern Netherlands. Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
-			"horst", -- "horst" means "hyrst". Appears in the eastern Netherlands. Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
-			"huis", -- "huis" means "house". Appears in the eastern Netherlands. Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
---			"ing", -- Used for farms. Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, pp. 331, 335.
---			"ingakker", -- Used for farms. Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
---			"inggoed", -- Used for farms. Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
---			"ingheim", -- Used for farms. Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
---			"inghuis", -- Used for farms. Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
---			"ingen", -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
-			"kote", -- Appears in the eastern Netherlands. Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
-			"laar", -- Characteristic of the influence of the Carolingian realm; Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
-			"lo", -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
-			"molen", -- "molen" means "mill". Appears in the eastern Netherlands. Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
-			"oever", -- "oever" means the bank of a river. Appears in the eastern Netherlands. Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
-			"roden", -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
-			"sol", -- Appears in the eastern Netherlands. Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
-			"stege", -- Appears in the eastern Netherlands. Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
-			"tere", -- Appears in the eastern Netherlands. Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, pp. 331, 335.
-			"tuin", -- Appears in the eastern Netherlands. "tuin" can mean "town", but usually means "garden". Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
-			"tye", -- Appears in the eastern Netherlands. Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
-			"veld", -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
-			"voorde", -- Characteristic of the influence of the Carolingian realm; Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
-			"wede", -- Appears in the eastern Netherlands. Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
-			"wijk" -- Appears in the eastern Netherlands. Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
-		},
 		"river-names", {
 			"Ijssel" -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
 		}
@@ -126,10 +84,6 @@ DefineRaceNames(
 		"species", "human",
 		"parent-civilization", "teuton",
 		"language", "english",
-		"name-translations", {
-			"Lisboa", "Lisbon",
-			"Wien", "Vienna"
-		},
 		"default-color", "red"
 	},
 	--]]
@@ -146,6 +100,7 @@ DefineRaceNames(
 		"display", "Celt",
 		"visible",
 		"species", "human",
+		"language", "proto-celtic",
 		"parent-civilization", "germanic",
 		"playable", false,
 		"default-color", "green"
@@ -276,29 +231,6 @@ DefineRaceNames(
 			"sohl", -- examples: "Altsohl", "Neusohl"
 			"weissenburg" -- "weissenburg" = "white castle"; example: "Stuhlweissenburg"
 		},
-		"name-translations", {
-			"Aiza", "Erz", -- from Proto-Germanic to German
-			"Austa", "Ost", -- from Proto-Germanic to German
-			"Berga", "Berg", -- from Proto-Germanic to German
-			"Burg", "Burg", -- from Proto-Germanic to German
-			"Bûra", "Bauer", -- from Proto-Germanic to German
-			"Dverga", "Zwerg", -- from Proto-Germanic to German
-			"Gastiz", "Gast", -- from Proto-Germanic to German
-			"Haima", "Heim", -- from Proto-Germanic to German
-			"Landa", "Land", -- from Proto-Germanic to German
-			"Lanum", "Land", -- example: "Mediolanum" -> "Mailand" (Milan)
-			"Mark", "Mark", -- from Proto-Germanic to German
-			"Medio", "Mai", -- example: "Mediolanum" -> "Mailand" (Milan)
-			"Rikia", "Reich", -- from Proto-Germanic to German
-			"Snaigva", "Schnee", -- from Proto-Germanic to German
-			"Þurpa", "Dorf", -- from Proto-Germanic to German
-			"Uzdaz", "Ort", -- from Proto-Germanic to German
-			"Vindobona", "Wien", -- "Wien" = "Vienna"; from the Latin name "Vindobona"
-			"Waida", "Waid", -- from Proto-Germanic to German
-			"Walakuzjōn", "Walküre", -- from Proto-Germanic to German
-			"Ermanaric", "Ermenrich", -- "Ermenrich" is the German form of the Gothic name Ermanaric
-			"Theodoric", "Dietrich" -- "Dietrich" is the German form of the Gothic name Theodoric
-		},
 		"default-color", "yellow"
 	},
 	"race", {
@@ -315,6 +247,7 @@ DefineRaceNames(
 		"display", "Basque",
 		"visible",
 		"species", "human",
+		"language", "basque",
 		"parent-civilization", "germanic",
 		"playable", false
 	},
@@ -323,6 +256,7 @@ DefineRaceNames(
 		"display", "Etruscan",
 		"visible",
 		"species", "human",
+		"language", "etruscan",
 		"parent-civilization", "teuton",
 		"playable", false
 	},
@@ -430,6 +364,7 @@ DefineRaceNames(
 		"display", "Illyrian",
 		"visible",
 		"species", "human",
+		"language", "illyrian",
 		"parent-civilization", "teuton",
 		"playable", false
 	},
@@ -528,17 +463,14 @@ DefineRaceNames(
 			"augusta", -- example: Caesaraugusta
 			"bona", -- example: "Vindobona" (Vienna)
 			"lanum" -- example: "Mediolanum" (Milan)
-		},
-		"name-translations", {
-			"Nea", "Nea", -- example: "Neapolis" -> "Neapolis" (Naples); name remained with no change
-			"Polis", "Polis" -- example: "Neapolis" -> "Neapolis" (Naples); name remained with no change
-		},
+		}
 	},
 	"race", {
 		"name", "minoan",
 		"display", "Minoan",
 		"visible",
 		"species", "human",
+		"language", "minoan",
 		"parent-civilization", "teuton",
 		"playable", false
 	},
@@ -573,6 +505,7 @@ DefineRaceNames(
 		"display", "Phrygian",
 		"visible",
 		"species", "human",
+		"language", "phrygian",
 		"parent-civilization", "teuton",
 		"playable", false
 	},
@@ -591,6 +524,7 @@ DefineRaceNames(
 		"display", "Thracian",
 		"visible",
 		"species", "human",
+		"language", "thracian",
 		"parent-civilization", "teuton",
 		"playable", false
 	}

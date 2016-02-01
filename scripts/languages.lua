@@ -29,8 +29,16 @@ DefineLanguage("avestan", {
 	Name = "Avestan"
 })
 
+DefineLanguage("basque", {
+	Name = "Basque"
+})
+
 DefineLanguage("crimean-gothic", {
 	Name = "Crimean Gothic"
+})
+
+DefineLanguage("dutch", {
+	Name = "Dutch"
 })
 
 DefineLanguage("dwarven", {
@@ -38,7 +46,15 @@ DefineLanguage("dwarven", {
 })
 
 DefineLanguage("english", {
-	Name = "English"
+	Name = "English",
+	NameTranslations = {
+		"Lisboa", "Lisbon",
+		"Wien", "Vienna"
+	}
+})
+
+DefineLanguage("etruscan", {
+	Name = "Etruscan"
 })
 
 DefineLanguage("finnish", {
@@ -66,7 +82,38 @@ DefineLanguage("greek", {
 })
 
 DefineLanguage("high-german", {
-	Name = "High German"
+	Name = "High German",
+	NameTranslations = {
+		"Aiza", "Erz", -- from Proto-Germanic to German
+		"Asjôn", "Esse", -- from Proto-Germanic to German
+		"Austa", "Ost", -- from Proto-Germanic to German
+		"Berga", "Berg", -- from Proto-Germanic to German
+		"Burg", "Burg", -- from Proto-Germanic to German
+		"Bûra", "Bauer", -- from Proto-Germanic to German
+		"Dverga", "Zwerg", -- from Proto-Germanic to German
+		"Gastiz", "Gast", -- from Proto-Germanic to German
+		"Gavja", "Gau", -- from Proto-Germanic to German
+		"Haima", "Heim", -- from Proto-Germanic to German
+		"Landa", "Land", -- from Proto-Germanic to German
+		"Lanum", "Land", -- example: "Mediolanum" -> "Mailand" (Milan)
+		"Mark", "Mark", -- from Proto-Germanic to German
+		"Medio", "Mai", -- example: "Mediolanum" -> "Mailand" (Milan)
+		"Rikia", "Reich", -- from Proto-Germanic to German
+		"Smiþjôn", "Schmiede", -- from Proto-Germanic to German
+		"Smiþu", "Schmied", -- from Proto-Germanic to German
+		"Snaigva", "Schnee", -- from Proto-Germanic to German
+		"Þurpa", "Dorf", -- from Proto-Germanic to German
+		"Uzdaz", "Ort", -- from Proto-Germanic to German
+		"Vindobona", "Wien", -- "Wien" = "Vienna"; from the Latin name "Vindobona"
+		"Waida", "Waid", -- from Proto-Germanic to German
+		"Walakuzjōn", "Walküre", -- from Proto-Germanic to German
+		"Ermanaric", "Ermenrich", -- "Ermenrich" is the German form of the Gothic name Ermanaric
+		"Theodoric", "Dietrich" -- "Dietrich" is the German form of the Gothic name Theodoric
+	}
+})
+
+DefineLanguage("illyrian", {
+	Name = "Illyrian"
 })
 
 DefineLanguage("irish", {
@@ -82,7 +129,11 @@ DefineLanguage("kobold", {
 })
 
 DefineLanguage("latin", {
-	Name = "Latin"
+	Name = "Latin",
+	NameTranslations = {
+		"Nea", "Nea", -- example: "Neapolis" -> "Neapolis" (Naples); name remained with no change
+		"Polis", "Polis" -- example: "Neapolis" -> "Neapolis" (Naples); name remained with no change
+	}
 })
 
 DefineLanguage("lithuanian", {
@@ -103,6 +154,10 @@ DefineLanguage("middle-high-german", {
 
 DefineLanguage("middle-low-german", {
 	Name = "Middle Low German"
+})
+
+DefineLanguage("minoan", {
+	Name = "Minoan"
 })
 
 DefineLanguage("norwegian", {
@@ -157,6 +212,14 @@ DefineLanguage("old-swedish", {
 	Name = "Old Swedish"
 })
 
+DefineLanguage("phrygian", {
+	Name = "Phrygian"
+})
+
+DefineLanguage("proto-celtic", {
+	Name = "Proto-Celtic"
+})
+
 DefineLanguage("proto-germanic", {
 	Name = "Proto-Germanic"
 })
@@ -167,6 +230,10 @@ DefineLanguage("russian", {
 
 DefineLanguage("sanskrit", {
 	Name = "Sanskrit"
+})
+
+DefineLanguage("thracian", {
+	Name = "Thracian"
 })
 
 DefineLanguage("ukrainian", {
@@ -197,6 +264,7 @@ Load("scripts/language_kobold.lua")
 
 -- these are kept for reference, but not used
 Load("scripts/language_avestan.lua")
+Load("scripts/language_dutch.lua")
 Load("scripts/language_english.lua")
 Load("scripts/language_finnish.lua")
 Load("scripts/language_gaulish.lua")

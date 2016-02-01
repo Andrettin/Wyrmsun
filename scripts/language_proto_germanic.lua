@@ -37,6 +37,10 @@ DefineLanguageNoun("Aiza", { -- Source: August Fick and Alf Torp, "Wortschatz de
 		"settlement", -- seems sensible in face of a lack of examples
 		"terrain-mountains", -- seems sensible in face of a lack of examples
 		"terrain-hills" -- seems sensible in face of a lack of examples
+	},
+	SuffixSingular = true,
+	SuffixTypeName = {
+		"settlement", -- reflex example: "Eisenerz"
 	}
 })
 
@@ -65,7 +69,7 @@ DefineLanguageNoun("Austa", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	PrefixSingular = true,
 	PrefixTypeName = {
 		"settlement",  -- seems sensible in face of a lack of examples
-		"province" -- seems sensible in face of a lack of examples
+		"province" -- reflex example: "Ostmark"
 	}
 })
 
@@ -84,8 +88,10 @@ DefineLanguageNoun("Berga", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	SingularNominative = "Berga",
 	SuffixSingular = true,
 	SuffixTypeName = {
-		"terrain-mountains", -- seems rather sensible in face of a lack of examples and given the word's meaning
-		"terrain-hills" -- seems rather sensible in face of a lack of examples and given the word's meaning
+		"settlement", -- reflex examples: "Adelsberg", "Lemberg", "Königsberg", "Spielberg"
+		"province", -- reflex example: "Vorarlberg" (Vorarlberg is a special case, however - ideally we should generate mountain names like "Arlberg", and then have the possibility of adding the prefix "Vor" regarding the mountain, if it is on the edge of the province
+		"terrain-hills", -- reflex examples: "Bärenberg", "Hackenberg"
+		"terrain-mountains" -- reflex example: "Arlberg", "Schneeberg"
 	}
 })
 
@@ -122,8 +128,8 @@ DefineLanguageNoun("Burg", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Gender = "Feminine",
 	SuffixSingular = true,
 	SuffixTypeName = {
-		"settlement",  -- seems sensible in face of a lack of examples
-		"province" -- seems sensible in face of a lack of examples
+		"settlement", -- reflex examples: "Hamburg", "Klausenburg", "Marburg", "Nikolsburg", "Ödenburg", "Regensburg", "Salzburg", "Schässburg"
+		"province" -- reflex example: "Brandenburg"
 	}
 })
 
@@ -323,7 +329,7 @@ DefineLanguageNoun("Landa", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	SingularNominative = "Landa",
 	Gender = "Neuter",
 	SuffixSingular = true,
-	SuffixTypeName = {"province"} -- seems sensible in face of a lack of examples
+	SuffixTypeName = {"province"} -- reflex example: "Burgenland"
 })
 
 DefineLanguageNoun("Lauda", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 181.
@@ -359,7 +365,7 @@ DefineLanguageNoun("Mark", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	SingularNominative = "Mark", -- source also gives the form "Markô"
 	Gender = "Feminine",
 	SuffixSingular = true,
-	SuffixTypeName = {"province"} -- seems sensible in face of a lack of examples
+	SuffixTypeName = {"province"} -- reflex example: "Steiermark" (Styria)
 })
 
 DefineLanguageNoun("Mazgaz", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 9.
@@ -477,7 +483,7 @@ DefineLanguageNoun("Snaigva", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Gender = "Masculine",
 	Uncountable = true, -- seems likely to be uncountable
 	PrefixSingular = true,
-	PrefixTypeName = {"terrain-mountains"} -- seems sensible in face of a lack of examples, specially since in German there is the "Schneeberg"
+	PrefixTypeName = {"terrain-mountains"} -- reflex example: "Schneeberg"
 })
 
 DefineLanguageNoun("Sēþiz", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
@@ -522,7 +528,7 @@ DefineLanguageNoun("Þurpa", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	SingularNominative = "Þurpa",
 	Gender = "Neuter",
 	SuffixSingular = true,
-	SuffixTypeName = {"settlement"} -- seems sensible in face of a lack of examples
+	SuffixTypeName = {"settlement"} -- reflex examples: "Frohsdorf", "Gänserndorf"
 })
 
 DefineLanguageNoun("Uzdaz", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 7.

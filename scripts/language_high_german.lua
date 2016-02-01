@@ -185,7 +185,7 @@ DefineLanguageNoun("Burg", {
 	PrefixTypeName = {"province"}, -- example: "Burgenland"
 	SuffixSingular = true,
 	SuffixTypeName = {
-		"settlement", -- examples: Hamburg, Klausenburg, Marburg, Nikolsburg, Ödenburg, Regensburg, Salzburg, Schässburg
+		"settlement", -- examples: "Hamburg", "Klausenburg", "Marburg", "Nikolsburg", "Ödenburg", "Regensburg", "Salzburg", "Schässburg"
 		"province" -- example: "Brandenburg"
 	}
 })
@@ -197,7 +197,7 @@ DefineLanguageNoun("Dorf", {
 	PluralNominative = "Dörfer",
 	Gender = "Neuter",
 	SuffixSingular = true,
-	SuffixTypeName = {"settlement"} -- examples: Frohsdorf, Gänserndorf
+	SuffixTypeName = {"settlement"} -- examples: "Frohsdorf", "Gänserndorf"
 })
 
 DefineLanguageNoun("Drasch", {
