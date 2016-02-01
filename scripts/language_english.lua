@@ -36,6 +36,26 @@ DefineLanguageNoun("Alf", { -- archaic
 	PrefixTypeName = {"person"} -- example: "Alfred"
 })
 
+DefineLanguageNoun("Anvil", {
+	Language = "english",
+	Meanings = {"Anvil"},
+	SingularNominative = "Anvil",
+	PluralNominative = "Anvils",
+	Gender = "Neuter",
+	SuffixSingular = true,
+	SeparateSuffixTypeName = {"unit-teuton-smithy"} -- seems sensible
+})
+
+DefineLanguageNoun("Brass", {
+	Language = "english",
+	Meanings = {"Brass"},
+	SingularNominative = "Brass",
+	Gender = "Neuter",
+	Uncountable = true,
+	PrefixSingular = true,
+	SeparatePrefixTypeName = {"unit-teuton-smithy"} -- seems sensible
+})
+
 DefineLanguageNoun("Charles", {
 	Language = "english",
 	Meanings = {},
@@ -45,6 +65,16 @@ DefineLanguageNoun("Charles", {
 	TypeName = {"person"}
 })
 
+DefineLanguageNoun("Forge", {
+	Language = "english",
+	Meanings = {"Forge"},
+	SingularNominative = "Forge",
+	PluralNominative = "Forges",
+	Gender = "Neuter",
+	SuffixSingular = true,
+	SeparateSuffixTypeName = {"unit-teuton-smithy"} -- seems sensible
+})
+
 DefineLanguageNoun("Francis", {
 	Language = "english",
 	Meanings = {},
@@ -52,6 +82,16 @@ DefineLanguageNoun("Francis", {
 	Gender = "Masculine",
 	NameSingular = true,
 	TypeName = {"person"}
+})
+
+DefineLanguageNoun("Hammer", {
+	Language = "english",
+	Meanings = {"Hammer"},
+	SingularNominative = "Hammer",
+	PluralNominative = "Hammers",
+	Gender = "Neuter",
+	SuffixSingular = true,
+	SeparateSuffixTypeName = {"unit-teuton-smithy"} -- seems sensible
 })
 
 DefineLanguageNoun("Henry", {
@@ -88,6 +128,25 @@ DefineLanguageNoun("Lewis", {
 	Gender = "Masculine",
 	NameSingular = true,
 	TypeName = {"person"}
+})
+
+DefineLanguageNoun("Peter", {
+	Language = "english",
+	Meanings = {},
+	SingularNominative = "Peter",
+	Gender = "Masculine",
+	NameSingular = true,
+	TypeName = {"person"}
+})
+
+DefineLanguageNoun("Smithy", {
+	Language = "english",
+	Meanings = {"Smithy"},
+	SingularNominative = "Smithy",
+	PluralNominative = "Smithies",
+	Gender = "Neuter",
+	SuffixSingular = true,
+	SeparateSuffixTypeName = {"unit-teuton-smithy"} -- seems sensible
 })
 
 DefineLanguageNoun("William", {
@@ -188,4 +247,35 @@ DefineLanguageNoun("Wich", {
 	Gender = "Neuter",
 	SuffixSingular = true,
 	SuffixTypeName = {"settlement"} -- example: "Norwich"; Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 336.
+})
+
+DefineLanguageAdjective("Black", {
+	Language = "english",
+	Meanings = {"Black"},
+	Positive = "Black",
+	SeparatePrefixTypeName = {"unit-teuton-smithy"} -- seems sensible
+})
+
+DefineLanguageAdjective("Fiery", {
+	Language = "english",
+	Meanings = {"Fiery"},
+	Positive = "Fiery",
+	SeparatePrefixTypeName = {"unit-teuton-smithy"} -- seems sensible
+})
+
+DefineLanguageAdjective("Smoldering", {
+	Language = "english",
+	Meanings = {"Smoldering"},
+	Positive = "Smoldering",
+	SeparatePrefixTypeName = {"unit-teuton-smithy"} -- seems sensible
+})
+
+DefineLanguageArticle("The", {
+	Language = "english",
+	Meanings = {"The"},
+	Nominative = "The",
+	Accusative = "The",
+	Dative = "The",
+	Genitive = "The",
+	Definite = true
 })
