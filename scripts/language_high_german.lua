@@ -46,7 +46,7 @@ DefineLanguageNoun("Amboss", {
 
 DefineLanguageNoun("Arl", {
 	Language = "high-german",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Arl",
 	PrefixSingular = true,
 	PrefixTypeName = {"terrain-mountains"} -- example: "Arlberg"
@@ -54,7 +54,7 @@ DefineLanguageNoun("Arl", {
 
 DefineLanguageNoun("Arnulf", {
 	Language = "high-german",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Arnulf",
 	NameSingular = true,
 	TypeName = {"person"}
@@ -141,7 +141,7 @@ DefineLanguageNoun("Berg", {
 
 DefineLanguageNoun("Bernhard", {
 	Language = "high-german",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Bernhard",
 	NameSingular = true,
 	TypeName = {"person"}
@@ -257,7 +257,7 @@ DefineLanguageNoun("Esse", {
 
 DefineLanguageNoun("Franz", {
 	Language = "high-german",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Franz",
 	NameSingular = true,
 	TypeName = {"person"}
@@ -265,7 +265,7 @@ DefineLanguageNoun("Franz", {
 
 DefineLanguageNoun("Fried", {
 	Language = "high-german",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Fried",
 	SuffixSingular = true,
 	SuffixTypeName = {"person"}
@@ -273,7 +273,7 @@ DefineLanguageNoun("Fried", {
 
 DefineLanguageNoun("Friedrich", {
 	Language = "high-german",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Friedrich",
 	NameSingular = true,
 	TypeName = {"person"}
@@ -297,7 +297,7 @@ DefineLanguageNoun("Furt", { -- Source: http://www.duden.de/rechtschreibung/Furt
 
 DefineLanguageNoun("Gang", {
 	Language = "high-german",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Gang",
 	SuffixSingular = true,
 	SuffixTypeName = {"person"}
@@ -305,7 +305,7 @@ DefineLanguageNoun("Gang", {
 
 DefineLanguageNoun("Gerhard", {
 	Language = "high-german",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Gerhard",
 	NameSingular = true,
 	TypeName = {"person"}
@@ -322,7 +322,7 @@ DefineLanguageNoun("Gott", {
 
 DefineLanguageNoun("Gunther", {
 	Language = "high-german",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Gunther",
 	NameSingular = true,
 	TypeName = {"person"}
@@ -330,7 +330,7 @@ DefineLanguageNoun("Gunther", {
 
 DefineLanguageNoun("Gustav", {
 	Language = "high-german",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Gustav",
 	NameSingular = true,
 	TypeName = {"person"}
@@ -354,7 +354,7 @@ DefineLanguageNoun("Hacken", {
 
 DefineLanguageNoun("Hagen", { -- Source: http://www.duden.de/rechtschreibung/Hagen
 	Language = "high-german",
-	Meanings = {"?"}, -- personal name
+	Meanings = {}, -- personal name
 	SingularNominative = "Hagen",
 	SingularAccusative = "Hagen", -- source also gives the alternative form "Hagens"
 	SingularDative = "Hagen",
@@ -382,7 +382,7 @@ DefineLanguageNoun("Hammer", {
 
 DefineLanguageNoun("Hans", {
 	Language = "high-german",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Hans",
 	NameSingular = true,
 	TypeName = {"person"}
@@ -390,7 +390,7 @@ DefineLanguageNoun("Hans", {
 
 DefineLanguageNoun("Heinrich", {
 	Language = "high-german",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Heinrich",
 	NameSingular = true,
 	TypeName = {"person"}
@@ -398,7 +398,7 @@ DefineLanguageNoun("Heinrich", {
 
 DefineLanguageNoun("Hel", {
 	Language = "high-german",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Hel",
 	PrefixSingular = true,
 	PrefixTypeName = {"person"}
@@ -406,7 +406,7 @@ DefineLanguageNoun("Hel", {
 
 DefineLanguageNoun("Hermann", {
 	Language = "high-german",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Hermann",
 	NameSingular = true,
 	TypeName = {"person"}
@@ -476,7 +476,7 @@ DefineLanguageNoun("Hügel", {
 
 DefineLanguageNoun("Johann", {
 	Language = "high-german",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Johann",
 	NameSingular = true,
 	TypeName = {"person"}
@@ -484,7 +484,7 @@ DefineLanguageNoun("Johann", {
 
 DefineLanguageNoun("Karl", {
 	Language = "high-german",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Karl",
 	NameSingular = true,
 	TypeName = {"person"},
@@ -520,7 +520,7 @@ DefineLanguageNoun("Klage", { -- Source: http://www.duden.de/rechtschreibung/Kla
 
 DefineLanguageNoun("Klaus", {
 	Language = "high-german",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Klaus",
 	NameSingular = true,
 	TypeName = {"person"}
@@ -582,7 +582,7 @@ DefineLanguageNoun("Kugel", {
 
 DefineLanguageNoun("Kurt", {
 	Language = "high-german",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Kurt",
 	NameSingular = true,
 	TypeName = {"person"}
@@ -613,7 +613,7 @@ DefineLanguageNoun("Land", {
 
 DefineLanguageNoun("Lothar", {
 	Language = "high-german",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Lothar",
 	NameSingular = true,
 	TypeName = {"person"}
@@ -621,7 +621,7 @@ DefineLanguageNoun("Lothar", {
 
 DefineLanguageNoun("Ludwig", {
 	Language = "high-german",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Ludwig",
 	NameSingular = true,
 	TypeName = {"person"}
@@ -629,7 +629,7 @@ DefineLanguageNoun("Ludwig", {
 
 DefineLanguageNoun("Manfred", {
 	Language = "high-german",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Manfred",
 	NameSingular = true,
 	TypeName = {"person"}
@@ -709,7 +709,7 @@ DefineLanguageNoun("Ost", {
 
 DefineLanguageNoun("Otto", {
 	Language = "high-german",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Otto",
 	NameSingular = true,
 	TypeName = {"person"}
@@ -717,7 +717,7 @@ DefineLanguageNoun("Otto", {
 
 DefineLanguageNoun("Pippin", {
 	Language = "high-german",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Pippin",
 	NameSingular = true,
 	TypeName = {"person"}
@@ -909,7 +909,7 @@ DefineLanguageNoun("Waid", { -- Source: Sean Crist, "An Analysis of *z loss in W
 
 DefineLanguageNoun("Walter", {
 	Language = "high-german",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Walter",
 	NameSingular = true,
 	TypeName = {"person"}
@@ -927,7 +927,7 @@ DefineLanguageNoun("Wasser", {
 
 DefineLanguageNoun("Werner", {
 	Language = "high-german",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Werner",
 	NameSingular = true,
 	TypeName = {"person"}
@@ -945,7 +945,7 @@ DefineLanguageNoun("West", {
 
 DefineLanguageNoun("Wilhelm", {
 	Language = "high-german",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Wilhelm",
 	NameSingular = true,
 	TypeName = {"person"}

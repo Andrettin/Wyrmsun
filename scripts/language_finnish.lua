@@ -27,7 +27,7 @@
 
 DefineLanguageNoun("Kana", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "finnish",
-	Meanings = {"?"}, -- could have been derived from a Proto-Germanic ancestor word for Old Norse "hane" (which means "rooster")
+	Meanings = {}, -- could have been derived from a Proto-Germanic ancestor word for Old Norse "hane" (which means "rooster")
 	SingularNominative = "Kana"
 })
 

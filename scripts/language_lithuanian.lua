@@ -32,7 +32,7 @@ DefineLanguageNoun("Jéras", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 })
 DefineLanguageNoun("Pẽkus", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "lithuanian",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Pẽkus"
 })
 

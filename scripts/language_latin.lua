@@ -45,7 +45,7 @@ DefineLanguageNoun("Caper", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 
 DefineLanguageNoun("Caulis", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
 	Language = "latin",
-	Meanings = {"?"}, -- words derived from it mean (in German) "Kohl"
+	Meanings = {}, -- words derived from it mean (in German) "Kohl"
 	SingularNominative = "Caulis"
 })
 
@@ -184,7 +184,7 @@ DefineLanguageVerb("Molere", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 
 DefineLanguageVerb("Scrībere", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "latin",
-	Meanings = {"?"}, -- cognates have "write" as the meaning
+	Meanings = {}, -- cognates have "write" as the meaning
 	Infinitive = "Scrībere"
 })
 

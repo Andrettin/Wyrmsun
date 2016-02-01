@@ -233,7 +233,7 @@ DefineLanguageNoun("Mahts", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 
 DefineLanguageNoun("Manasēþs", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "gothic",
-	Meanings = {"?"}, -- the "Sēþiz" Proto-Germanic word from which the "-sēþs" element in this word originates means "Seed"
+	Meanings = {}, -- the "Sēþiz" Proto-Germanic word from which the "-sēþs" element in this word originates means "Seed"
 	SingularNominative = "Manasēþs"
 })
 
@@ -314,7 +314,7 @@ DefineLanguageNoun("Wigs", { -- Source: Richard M. Runge, "The Phonetic Realizat
 
 DefineLanguageVerb("Andbeitan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "gothic",
-	Meanings = {"?"}, -- cognates have "bite" as their meaning
+	Meanings = {}, -- cognates have "bite" as their meaning
 	Infinitive = "Andbeitan",
 	SingularThirdPersonPast = "Andbait",
 	PluralThirdPersonPast = "Andbitan",
@@ -323,7 +323,7 @@ DefineLanguageVerb("Andbeitan", { -- Source: Winfred P. Lehmann, "A Grammar of P
 
 DefineLanguageVerb("Bairan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "gothic",
-	Meanings = {"?"},
+	Meanings = {},
 	Infinitive = "Bairan",
 	SingularThirdPersonPast = "Bar", -- correct?
 	PluralThirdPersonPast = "Baurun", -- correct?

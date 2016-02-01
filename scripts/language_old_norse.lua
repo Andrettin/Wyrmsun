@@ -287,7 +287,7 @@ DefineLanguageVerb("Bauþ", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 
 DefineLanguageVerb("Bera", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "old-norse",
-	Meanings = {"?"},
+	Meanings = {},
 	Infinitive = "Bera"
 })
 

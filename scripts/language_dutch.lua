@@ -55,6 +55,16 @@ DefineLanguageNoun("Berg", { -- is this really a noun? Source: B. H. Slicher van
 	}
 })
 
+DefineLanguageNoun("Bever", {
+	Language = "dutch",
+	Meanings = {"Beaver"}, -- Source: http://www.vandale.nl/opzoeken?pattern=Bever&lang=ne
+	SingularNominative = "Bever",
+	PrefixSingular = true,
+	PrefixTypeName = {
+		"settlement" -- example: "Beverwijk"
+	}
+})
+
 DefineLanguageNoun("Borg", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
 	Language = "dutch",
 	Meanings = {},
@@ -82,6 +92,16 @@ DefineLanguageNoun("Breede", { -- is this really a noun? Source: B. H. Slicher v
 	SuffixSingular = true,
 	SuffixTypeName = {
 		"settlement" -- Appears in the eastern Netherlands. Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
+	}
+})
+
+DefineLanguageNoun("Dam", {
+	Language = "dutch",
+	Meanings = {"Dam"}, -- Source: http://www.vandale.nl/opzoeken?pattern=Dam&lang=ne
+	SingularNominative = "Dam",
+	SuffixSingular = true,
+	SuffixTypeName = {
+		"settlement" -- examples: "Amsterdam", "Rotterdam"
 	}
 })
 
@@ -265,6 +285,16 @@ DefineLanguageNoun("Laar", { -- is this really a noun? Source: B. H. Slicher van
 	}
 })
 
+DefineLanguageNoun("Land", {
+	Language = "dutch",
+	Meanings = {"Land", "Country"}, -- Source: http://www.vandale.nl/opzoeken?pattern=Land&lang=ne
+	SingularNominative = "Land",
+	SuffixSingular = true,
+	SuffixTypeName = {
+		"province" -- examples: "Flevoland", "Friesland", "Gelderland"
+	}
+})
+
 DefineLanguageNoun("Lo", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
 	Language = "dutch",
 	Meanings = {},
@@ -315,9 +345,9 @@ DefineLanguageNoun("Sol", { -- is this really a noun? Source: B. H. Slicher van 
 	}
 })
 
-DefineLanguageNoun("Stap", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
+DefineLanguageNoun("Stap", { -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
 	Language = "dutch",
-	Meanings = {},
+	Meanings = {"Step", "Footstep", "Pace", "Stride"}, -- Source: http://www.vandale.nl/opzoeken?pattern=Stap&lang=ne
 	SingularNominative = "Stap",
 	PrefixSingular = true,
 	PrefixTypeName = {
@@ -385,6 +415,15 @@ DefineLanguageNoun("Voorde", { -- is this really a noun? Source: B. H. Slicher v
 	}
 })
 
+DefineLanguageNoun("Waal", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
+	Language = "dutch",
+	Meanings = {"Walloon"}, -- Source: http://www.vandale.nl/opzoeken?pattern=Waal&lang=ne
+	SingularNominative = "Waal",
+	PrefixSingular = true,
+	PrefixTypeName = {
+		"settlement" -- example: "Waalwijk"
+	}
+})
 DefineLanguageNoun("Wede", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
 	Language = "dutch",
 	Meanings = {},
@@ -395,13 +434,12 @@ DefineLanguageNoun("Wede", { -- is this really a noun? Source: B. H. Slicher van
 	}
 })
 
-DefineLanguageNoun("Wijk", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
+DefineLanguageNoun("Wijk", { -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
 	Language = "dutch",
-	Meanings = {},
+	Meanings = {"District", "Area"}, -- Source: http://www.vandale.nl/opzoeken?pattern=Wijk&lang=ne
 	SingularNominative = "Wijk",
 	SuffixSingular = true,
 	SuffixTypeName = {
-		"settlement" -- Appears in the eastern Netherlands. Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
+		"settlement" -- examples: "Beverwijk", "Waalwijk"
 	}
 })
-

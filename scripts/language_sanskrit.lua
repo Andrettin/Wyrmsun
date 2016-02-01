@@ -73,7 +73,7 @@ DefineLanguageNoun("Pā́dam", { -- Source: Winfred P. Lehmann, "A Grammar of Pr
 
 DefineLanguageNoun("Páśu", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "sanskrit",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Páśu"
 })
 

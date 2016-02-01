@@ -38,7 +38,7 @@ DefineLanguageNoun("Ai", {
 
 DefineLanguageNoun("Aig", { -- prefix used by Wesnoth's dwarven names; not necessarily a noun
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Aig",
 	PrefixSingular = true,
 	PrefixTypeName = {"person"} -- examples: "Aiglondur" (dwarven hero in The Hammer of Thursagan), "Aigaithas", "Aigaithil", "Aigaithing", "Aigaithol", "Aigalas", "Aigaling", "Aigalis", "Aigalol", "Aigalsil", "Aigatas", "Aigatis", "Aigatlos", "Aigatsil", "Aigatsol", "Aigatus", "Aigcatas", "Aigcatil", "Aigcating", "Aigcatis", "Aigcatsil", "Aigcatsol", "Aigcatus", "Aigdring", "Aigdris", "Aigdrlos", "Aigdrsil", "Aigdrsol", "Aigduras", "Aigdurlos", "Aigdursol", "Aigthaing", "Aigthais", "Aigthasil", "Aigthaus"
@@ -46,7 +46,7 @@ DefineLanguageNoun("Aig", { -- prefix used by Wesnoth's dwarven names; not neces
 
 DefineLanguageNoun("Aiglondur", { -- "Aig-lon-dur"? seems to follow similar naming conventions as the three-element names of the dwarven name list
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Aiglondur",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Aiglondur" (from Wesnoth, dwarven hero in The Hammer of Thursagan)
@@ -54,7 +54,7 @@ DefineLanguageNoun("Aiglondur", { -- "Aig-lon-dur"? seems to follow similar nami
 
 DefineLanguageNoun("Aith", { -- infix used by Wesnoth's dwarven names; not necessarily a noun
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Aith",
 	InfixSingular = true,
 	InfixTypeName = {"person"} -- examples: "Aigaithas", "Aigaithil", "Aigaithing", "Aigaithol", "Alaithas", "Alaithis", "Alaithlos", "Alaithol", "Alaithsol", "Alaithus", "Anaithas", "Anaithil", "Anaithis", "Anaithing", "Anaithsil", "Anaithus", "Augaithas", "Augaithing", "Augaithsil", "Augaithus", "Dulaithil", "Dulaithing", "Dulaithlos", "Dulaithsil", "Dulaithsol", "Glamaithil", "Glamaithis", "Glamaithol", "Glamaithsol", "Gomaithas", "Gomaithil", "Gomaithol", "Gomaithsol", "Naraithil", "Naraithing", "Naraithol", "Naraithsil", "Naraithsol", "Naraithus", "Pelaithas", "Pelaithil", "Pelaithing", "Pelaithis", "Pelaithlos", "Pelaithol", "Pelaithsil", "Pelaithsol", "Trithaithas", "Trithaithil", "Trithaithis", "Trithaithlos", "Trithaithol", "Trithaithsil", "Trithaithsol", "Trithaithus"
@@ -62,7 +62,7 @@ DefineLanguageNoun("Aith", { -- infix used by Wesnoth's dwarven names; not neces
 
 DefineLanguageNoun("Alberich", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Alberich",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Alberich" (dwarf from German sagas)
@@ -81,7 +81,7 @@ DefineLanguageNoun("Alf", {
 
 DefineLanguageNoun("Alfrigg", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Alfrigg",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Alfrigg" (dwarf from Norse mythology)
@@ -89,7 +89,7 @@ DefineLanguageNoun("Alfrigg", {
 
 DefineLanguageNoun("An", { -- prefix used by Wesnoth's dwarven names; not necessarily a noun
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "An",
 	PrefixSingular = true,
 	PrefixTypeName = {"person"} -- examples: "Anaithas", "Anaithil", "Anaithing", "Anaithis", "Anaithsil", "Anaithus", "Analil", "Anallos", "Analol", "Analsil", "Analus", "Anatas", "Anating", "Anatis", "Anatol", "Anatsol", "Ancatas", "Ancatil", "Ancatol", "Ancatus", "Andril", "Andris", "Andrlos", "Andrus", "Anduril", "Andurol", "Andursol", "Andurus", "Anthaas", "Anthaing", "Anthais", "Anthaol", "Anthasil", "Anthasol", "Anthaus"
@@ -107,7 +107,7 @@ DefineLanguageNoun("Andvari", {
 
 DefineLanguageNoun("Angarthing", { -- "An-garth-ing"? seems to follow similar naming conventions as the three-element names of the dwarven name list
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Angarthing",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Angarthing" (from Wesnoth, The Hammer of Thursagan)
@@ -115,7 +115,7 @@ DefineLanguageNoun("Angarthing", { -- "An-garth-ing"? seems to follow similar na
 
 DefineLanguageNoun("As", { -- suffix used by Wesnoth's dwarven names; not necessarily a noun
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "As",
 	SuffixSingular = true,
 	SuffixTypeName = {"person"} -- examples: "Aigaithas", "Aigalas", "Aigatas", "Aigcatas", "Aigduras", "Alaithas", "Alalas", "Alatas", "Aldras", "Alduras", "Althaas", "Anaithas", "Anatas", "Ancatas", "Anthaas", "Augaithas", "Augalas", "Augcatas", "Augdras", "Augduras", "Dulalas", "Dulduras", "Glamcatas", "Glamdras", "Glamduras", "Glamthaas", "Gomaithas", "Gomatas", "Gomdras", "Gomthaas", "Naralas", "Nardras", "Narduras", "Pelaithas", "Peldras", "Pelthaas", "Trithaithas", "Trithatas", "Triththaas"
@@ -123,7 +123,7 @@ DefineLanguageNoun("As", { -- suffix used by Wesnoth's dwarven names; not necess
 
 DefineLanguageNoun("At", { -- infix used by Wesnoth's dwarven names; not necessarily a noun
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "At",
 	InfixSingular = true,
 	InfixTypeName = {"person"} -- examples: "Aigatas", "Aigatis", "Aigatlos", "Aigatsil", "Aigatsol", "Aigatus", "Alatas", "Alatil", "Alating", "Alatlos", "Alatsil", "Anatas", "Anating", "Anatis", "Anatol", "Anatsol", "Augating", "Augatlos", "Augatol", "Augatsil", "Augatsol", "Dulatil", "Dulating", "Dulatol", "Dulatsol", "Dulatus", "Glamatil", "Glamatus", "Gomatas", "Gomatil", "Gomating", "Gomatis", "Gomatlos", "Gomatol", "Naratlos", "Naratol", "Naratsil", "Pelatil", "Pelating", "Pelatis", "Pelatol", "Pelatsil", "Pelatus", "Trithatas", "Trithatil", "Trithatlos", "Trithatsol"
@@ -131,7 +131,7 @@ DefineLanguageNoun("At", { -- infix used by Wesnoth's dwarven names; not necessa
 
 DefineLanguageNoun("Aug", { -- prefix used by Wesnoth's dwarven names; not necessarily a noun
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Aug",
 	PrefixSingular = true,
 	PrefixTypeName = {"person"} -- examples: "Augaithas", "Augaithing", "Augaithsil", "Augaithus", "Augalas", "Augaling", "Augalol", "Augating", "Augatlos", "Augatol", "Augatsil", "Augatsol", "Augcatas", "Augcatil", "Augcatis", "Augcatol", "Augcatsil", "Augcatus", "Augdras", "Augdris", "Augdrsil", "Augdrus", "Augduras", "Augduril", "Augduring", "Augdurol", "Augdursol", "Augdurus", "Augthail", "Augthais", "Augthalos", "Augthaol"
@@ -162,7 +162,7 @@ DefineLanguageNoun("Austri", {
 
 DefineLanguageNoun("Bafur", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Bafur",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Bafur" (dwarf from Norse mythology)
@@ -170,7 +170,7 @@ DefineLanguageNoun("Bafur", {
 
 DefineLanguageNoun("Baglur", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Baglur",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Baglur" (from Wesnoth, The Scepter of Fire; veteran warrior and member of the party of dwarves who handled the crafting of the Sceptre of Fire)
@@ -178,7 +178,7 @@ DefineLanguageNoun("Baglur", {
 
 DefineLanguageNoun("Bari", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Bari",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Bari" (dwarf from Norse mythology)
@@ -186,7 +186,7 @@ DefineLanguageNoun("Bari", {
 
 DefineLanguageNoun("Berling", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Berling",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Berling" (dwarf from Norse mythology)
@@ -194,7 +194,7 @@ DefineLanguageNoun("Berling", {
 
 DefineLanguageNoun("Bibung", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Bibung",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Bibung" (dwarf from Norse mythology)
@@ -202,7 +202,7 @@ DefineLanguageNoun("Bibung", {
 
 DefineLanguageNoun("Bifur", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Bifur",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Bifur" (dwarf from Norse mythology)
@@ -210,7 +210,7 @@ DefineLanguageNoun("Bifur", {
 
 DefineLanguageNoun("Bodn", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Bodn",
 	NameSingular = true,
 	TypeName = {"item-potion"} -- example: "Bodn" (jar which contained some of the mead of poetry)
@@ -218,7 +218,7 @@ DefineLanguageNoun("Bodn", {
 
 DefineLanguageNoun("Bombor", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Bombor",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Bombor" (dwarf from Norse mythology)
@@ -251,7 +251,7 @@ DefineLanguageNoun("Brokk", {
 
 DefineLanguageNoun("Burin", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Burin",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Burin" (from Wesnoth, The Rise of Wesnoth)
@@ -259,7 +259,7 @@ DefineLanguageNoun("Burin", {
 
 DefineLanguageNoun("Cat", { -- infix used by Wesnoth's dwarven names; not necessarily a noun
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Cat",
 	InfixSingular = true,
 	InfixTypeName = {"person"} -- examples: "Aigcatas", "Aigcatil", "Aigcating", "Aigcatis", "Aigcatsil", "Aigcatsol", "Aigcatus", "Alcatil", "Alcatis", "Alcatlos", "Alcatsil", "Ancatas", "Ancatil", "Ancatol", "Ancatus", "Augcatas", "Augcatil", "Augcatis", "Augcatol", "Augcatsil", "Augcatus", "Dulcatil", "Dulcating", "Dulcatlos", "Dulcatol", "Dulcatsil", "Dulcatsol", "Glamcatas", "Glamcatil", "Glamcating", "Glamcatsil", "Glamcatus", "Gomcatil", "Gomcatis", "Gomcatlos", "Narcating", "Narcatis", "Narcatol", "Narcatsil", "Narcatsol", "Pelcating", "Pelcatlos", "Pelcatol", "Pelcatsil", "Trithcatlos", "Trithcatsol", "Trithcatus"
@@ -279,7 +279,7 @@ DefineLanguageNoun("Dain", {
 
 DefineLanguageNoun("Delling", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Delling",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Delling" (dwarf from Norse mythology)
@@ -287,7 +287,7 @@ DefineLanguageNoun("Delling", {
 
 DefineLanguageNoun("Dolgthvari", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Dolgthvari",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Dolgthvari" (dwarf from Norse mythology)
@@ -295,7 +295,7 @@ DefineLanguageNoun("Dolgthvari", {
 
 DefineLanguageNoun("Dori", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Dori",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Dori" (dwarf from Norse mythology)
@@ -303,7 +303,7 @@ DefineLanguageNoun("Dori", {
 
 DefineLanguageNoun("Dr", { -- infix used by Wesnoth's dwarven names; not necessarily a noun
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Dr",
 	InfixSingular = true,
 	InfixTypeName = {"person"} -- examples: "Aigdring", "Aigdris", "Aigdrlos", "Aigdrsil", "Aigdrsol", "Aldras", "Aldril", "Aldris", "Aldring", "Aldrlos", "Aldrol", "Aldrsol", "Andril", "Andris", "Andrlos", "Andrus", "Augdras", "Augdris", "Augdrsil", "Augdrus", "Duldril", "Duldris", "Duldrlos", "Duldrol", "Duldrsil", "Duldrus", "Glamdras", "Glamdril", "Glamdrlos", "Glamdrsol", "Gomdras", "Gomdril", "Gomdring", "Gomdris", "Gomdrol", "Gomdrsil", "Nardras", "Nardril", "Nardring", "Nardris", "Nardrol", "Nardrsil", "Nardrsol", "Nardrus", "Peldras", "Peldril", "Peldrsol", "Peldrus", "Trithdril", "Trithdring", "Trithdrlos", "Trithdris", "Trithdrol", "Trithdrsol", "Trithdrus"
@@ -323,7 +323,7 @@ DefineLanguageNoun("Draupnir", {
 
 DefineLanguageNoun("Duf", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Duf",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Duf" (dwarf from Norse mythology)
@@ -331,7 +331,7 @@ DefineLanguageNoun("Duf", {
 
 DefineLanguageNoun("Dul", { -- prefix used by Wesnoth's dwarven names
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Dul",
 	PrefixSingular = true,
 	PrefixTypeName = {"person"} -- examples: "Dulaithil", "Dulaithing", "Dulaithlos", "Dulaithsil", "Dulaithsol", "Dulalas", "Dulaling", "Dulalis", "Dulalsil", "Dulatil", "Dulating", "Dulatol", "Dulatsol", "Dulatus", "Dulcatil", "Dulcating", "Dulcatlos", "Dulcatol", "Dulcatsil", "Dulcatsol", "Duldril", "Duldris", "Duldrlos", "Duldrol", "Duldrsil", "Duldrus", "Dulduras", "Dulduring", "Duldursil", "Duldurus", "Dulthalos", "Dulthasil", "Dulthasol", "Dulthaus"
@@ -339,7 +339,7 @@ DefineLanguageNoun("Dul", { -- prefix used by Wesnoth's dwarven names
 
 DefineLanguageNoun("Dulcatulos", { -- "Dul-catu-los", or "Dul-cat-ulos"? seems to follow similar naming conventions as the three-element names of the dwarven name list
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Dulcatulos",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Dulcatulos" (from Wesnoth, The Hammer of Thursagan)
@@ -356,7 +356,7 @@ DefineLanguageNoun("Dulsi", { -- not entirely clear if this is the name of a par
 
 DefineLanguageNoun("Dur", { -- infix used by Wesnoth's dwarven names; not necessarily a noun
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Dur",
 	PrefixSingular = true,
 	PrefixTypeName = {"person"}, -- example: "Dursil" (from Wesnoth, The Rise of Wesnoth)
@@ -366,7 +366,7 @@ DefineLanguageNoun("Dur", { -- infix used by Wesnoth's dwarven names; not necess
 
 DefineLanguageNoun("Durahn", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Durahn",
 	Gender = "Masculine",
 	NameSingular = true,
@@ -375,7 +375,7 @@ DefineLanguageNoun("Durahn", {
 
 DefineLanguageNoun("Durin", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Durin",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Durin" (dwarf from Norse mythology who was Modsognir's deputy)
@@ -383,7 +383,7 @@ DefineLanguageNoun("Durin", {
 
 DefineLanguageNoun("Durstorn", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Durstorn",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Durstorn" (from Wesnoth, The Scepter of Fire; chieftain of Rugnur's tribe)
@@ -391,7 +391,7 @@ DefineLanguageNoun("Durstorn", {
 
 DefineLanguageNoun("Dvalin", {
 	Language = "dwarven",
-	Meanings = {"?"}, -- maybe "Delayer" or "Delayed"?; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 110.
+	Meanings = {}, -- maybe "Delayer" or "Delayed"?; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 110.
 	SingularNominative = "Dvalin",
 	NameSingular = true,
 	TypeName = {"person"}, -- example: "Dvalin" (dwarf from Norse mythology; gave the knowledge of runes to the dwarves; one of the four who crafted the Necklace of the Brisings)
@@ -415,7 +415,7 @@ DefineLanguageNoun("Dyrgja", { -- Source: Richard Cleasby and Gudbrand Vigfusson
 
 DefineLanguageNoun("Eggerich", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Eggerich",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Eggerich" (dwarf from German sagas)
@@ -423,7 +423,7 @@ DefineLanguageNoun("Eggerich", {
 
 DefineLanguageNoun("Fal", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Fal",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Fal" (dwarf from Norse mythology)
@@ -431,7 +431,7 @@ DefineLanguageNoun("Fal", {
 
 DefineLanguageNoun("Fid", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Fid",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Fid" (dwarf from Norse mythology)
@@ -439,7 +439,7 @@ DefineLanguageNoun("Fid", {
 
 DefineLanguageNoun("Fili", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Fili",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Fili" (dwarf from Norse mythology)
@@ -447,7 +447,7 @@ DefineLanguageNoun("Fili", {
 
 DefineLanguageNoun("Fjalar", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Fjalar",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Fjalar" (dwarf from Norse mythology who, with the help of his brother Galar, brew Kvasir's remains into the Mead of Poetry)
@@ -455,7 +455,7 @@ DefineLanguageNoun("Fjalar", {
 
 DefineLanguageNoun("Frag", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Frag",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Frag" (dwarf from Norse mythology)
@@ -463,7 +463,7 @@ DefineLanguageNoun("Frag", {
 
 DefineLanguageNoun("Frar", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Frar",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Frar" (dwarf from Norse mythology)
@@ -471,7 +471,7 @@ DefineLanguageNoun("Frar", {
 
 DefineLanguageNoun("Frosti", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Frosti",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Frosti" (dwarf from Norse mythology)
@@ -479,7 +479,7 @@ DefineLanguageNoun("Frosti", {
 
 DefineLanguageNoun("Fundin", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Fundin",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Fundin" (dwarf from Norse mythology)
@@ -496,7 +496,7 @@ DefineLanguageNoun("Galar", {
 
 DefineLanguageNoun("Ginnar", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Ginnar",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Ginnar" (dwarf from Norse mythology)
@@ -504,7 +504,7 @@ DefineLanguageNoun("Ginnar", {
 
 DefineLanguageNoun("Glam", { -- prefix used by Wesnoth's dwarven names; not necessarily a noun
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Glam",
 	PrefixSingular = true,
 	PrefixTypeName = {"person"} -- examples: "Glamaithil", "Glamaithis", "Glamaithol", "Glamaithsol", "Glamalil", "Glamaling", "Glamalis", "Glamallos", "Glamalsil", "Glamalus", "Glamatil", "Glamatus", "Glamcatas", "Glamcatil", "Glamcating", "Glamcatsil", "Glamcatus", "Glamdras", "Glamdril", "Glamdrlos", "Glamdrsol", "Glamduras", "Glamduril", "Glamduring", "Glamduris", "Glamdursol", "Glamthaas", "Glamthaol", "Glamthasil", "Glamthasol", "Glamthaus"
@@ -512,14 +512,14 @@ DefineLanguageNoun("Glam", { -- prefix used by Wesnoth's dwarven names; not nece
 
 DefineLanguageNoun("Gleipnir", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Gleipnir"
 	-- example: "Gleipnir" (fetter made by dwarves to bind the wolf Fenrir)
 })
 
 DefineLanguageNoun("Glinar", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Glinar",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Glinar" (from Wesnoth, The Scepter of Fire)
@@ -536,7 +536,7 @@ DefineLanguageNoun("Gloin", {
 
 DefineLanguageNoun("Glomin", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Glomin",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Glomin" (from Wesnoth; the only name in Wesnoth's dwarven name list to not obbey the three-part compound pattern)
@@ -544,7 +544,7 @@ DefineLanguageNoun("Glomin", {
 
 DefineLanguageNoun("Glonoin", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Glonoin",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Glonoin" (from Wesnoth, The Scepter of Fire; chieftain of the Shorbear clan)
@@ -552,7 +552,7 @@ DefineLanguageNoun("Glonoin", {
 
 DefineLanguageNoun("Gneissus", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Gneissus",
 	Gender = "Feminine",
 --	NameSingular = true,
@@ -561,7 +561,7 @@ DefineLanguageNoun("Gneissus", {
 
 DefineLanguageNoun("Goldemar", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Goldemar",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Goldemar" (dwarf from German sagas)
@@ -569,7 +569,7 @@ DefineLanguageNoun("Goldemar", {
 
 DefineLanguageNoun("Gom", { -- prefix used by Wesnoth's dwarven names; not necessarily a noun
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Gom",
 	PrefixSingular = true,
 	PrefixTypeName = {"person"} -- examples: "Gomaithas", "Gomaithil", "Gomaithol", "Gomaithsol", "Gomalil", "Gomalis", "Gomalus", "Gomatas", "Gomatil", "Gomating", "Gomatis", "Gomatlos", "Gomatol", "Gomcatil", "Gomcatis", "Gomcatlos", "Gomdras", "Gomdril", "Gomdring", "Gomdris", "Gomdrol", "Gomdrsil", "Gomduris", "Gomdurlos", "Gomdursil", "Gomdursol", "Gomdurus", "Gomthaas", "Gomthalos", "Gomthasol"
@@ -577,7 +577,7 @@ DefineLanguageNoun("Gom", { -- prefix used by Wesnoth's dwarven names; not neces
 
 DefineLanguageNoun("Gram", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Gram",
 	NameSingular = true,
 	TypeName = {"item-sword"} -- example: "Gram" (sword made by the dwarf Regin)
@@ -585,7 +585,7 @@ DefineLanguageNoun("Gram", {
 
 DefineLanguageNoun("Grerr", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Grerr",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Grerr" (dwarf from Norse mythology)
@@ -602,7 +602,7 @@ DefineLanguageNoun("Grimnir", { -- meaning is from Old Norse, while the occurren
 
 DefineLanguageNoun("Gungnir", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Gungnir",
 	NameSingular = true,
 	TypeName = {"item-javelin"} -- example: "Gungnir" (throwing spear made by the sons of Ivaldi)
@@ -610,7 +610,7 @@ DefineLanguageNoun("Gungnir", {
 
 DefineLanguageNoun("Hamel", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Hamel",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Hamel" (from Wesnoth, Northern Rebirth and The Hammer of Thursagan)
@@ -627,7 +627,7 @@ DefineLanguageNoun("Hannar", { -- Source: Richard Cleasby and Gudbrand Vigfusson
 
 DefineLanguageNoun("Har", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Har",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Har" (dwarf from Norse mythology)
@@ -648,7 +648,7 @@ DefineLanguageNoun("Haug", { -- from Norse mythology, "Svarinshaug" = "Svarin's 
 
 DefineLanguageNoun("Haur", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Haur",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Haur" (dwarf from Norse mythology)
@@ -656,7 +656,7 @@ DefineLanguageNoun("Haur", {
 
 DefineLanguageNoun("Heptifili", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Heptifili",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Heptifili" (dwarf from Norse mythology)
@@ -677,7 +677,7 @@ DefineLanguageNoun("Hledj", {
 
 DefineLanguageNoun("Hornbori", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Hornbori",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Hornbori" (dwarf from Norse mythology)
@@ -685,7 +685,7 @@ DefineLanguageNoun("Hornbori", {
 
 DefineLanguageNoun("Hugstari", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Hugstari",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Hugstari" (dwarf from Norse mythology)
@@ -693,7 +693,7 @@ DefineLanguageNoun("Hugstari", {
 
 DefineLanguageNoun("Il", { -- suffix used by Wesnoth's dwarven names; not necessarily a noun
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Il",
 	SuffixSingular = true,
 	SuffixTypeName = {"person"} -- examples: "Aigaithil", "Aigcatil", "Alalil", "Alatil", "Alcatil", "Aldril", "Althail", "Anaithil", "Analil", "Ancatil", "Andril", "Anduril", "Augcatil", "Augduril", "Augthail", "Dulaithil", "Dulatil", "Dulcatil", "Duldril", "Glamaithil", "Glamalil", "Glamatil", "Glamcatil", "Glamdril", "Glamduril", "Gomaithil", "Gomalil", "Gomatil", "Gomcatil", "Gomdril", "Naraithil", "Naralil", "Nardril", "Narduril", "Pelaithil", "Pelalil", "Pelatil", "Peldril", "Pelduril", "Pelthail", "Trithaithil", "Trithatil", "Trithdril", "Trithduril", "Triththail"
@@ -701,7 +701,7 @@ DefineLanguageNoun("Il", { -- suffix used by Wesnoth's dwarven names; not necess
 
 DefineLanguageNoun("Ing", { -- suffix used by Wesnoth's dwarven names; not necessarily a noun
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Ing",
 	SuffixSingular = true,
 	SuffixTypeName = {"person"} -- examples: "Aigaithing", "Aigaling", "Aigcating", "Aigdring", "Aigthaing", "Alating", "Aldring", "Anaithing", "Anating", "Anthaing", "Augaithing", "Augaling", "Augating", "Augduring", "Dulaithing", "Dulaling", "Dulating", "Dulcating", "Dulduring", "Glamaling", "Glamcating", "Glamduring", "Gomating", "Gomdring", "Naraithing", "Narcating", "Nardring", "Pelaithing", "Pelaling", "Pelating", "Pelcating", "Pelduring", "Trithdring", "Trithduring", "Triththaing"
@@ -709,7 +709,7 @@ DefineLanguageNoun("Ing", { -- suffix used by Wesnoth's dwarven names; not neces
 
 DefineLanguageNoun("Ingi", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Ingi",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Ingi" (dwarf from Norse mythology)
@@ -717,7 +717,7 @@ DefineLanguageNoun("Ingi", {
 
 DefineLanguageNoun("Iri", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Iri",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Iri" (dwarf from Norse mythology)
@@ -725,7 +725,7 @@ DefineLanguageNoun("Iri", {
 
 DefineLanguageNoun("Is", { -- suffix used by Wesnoth's dwarven names; not necessarily a noun
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Is",
 	SuffixSingular = true,
 	SuffixTypeName = {"person"} -- examples: "Aigalis", "Aigatis", "Aigcatis", "Aigdris", "Aigthais", "Alaithis", "Alcatis", "Aldris", "Anaithis", "Anatis", "Andris", "Anthais", "Augcatis", "Augdris", "Augthais", "Dulalis", "Duldris", "Glamaithis", "Glamalis", "Glamduris", "Gomalis", "Gomatis", "Gomcatis", "Gomdris", "Gomduris", "Narcatis", "Nardris", "Pelaithis", "Pelalis", "Pelatis", "Pelduris", "Trithaithis", "Trithalis", "Trithdris"
@@ -733,7 +733,7 @@ DefineLanguageNoun("Is", { -- suffix used by Wesnoth's dwarven names; not necess
 
 DefineLanguageNoun("Isuldan", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Isuldan",
 	Gender = "Masculine",
 	NameSingular = true,
@@ -751,7 +751,7 @@ DefineLanguageNoun("Ivaldi", {
 
 DefineLanguageNoun("Jari", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Jari",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Jari" (dwarf from Norse mythology)
@@ -773,7 +773,7 @@ DefineLanguageNoun("Joru", { -- from Norse mythology, "Joruvellir" = "Fields of 
 
 DefineLanguageNoun("Kal Kartha", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Kal Kartha", -- "Kal" maybe should become a (separated) prefix for settlement names?
 	NameSingular = true,
 	TypeName = {"settlement"} -- example: "Kal Kartha" (from Wesnoth)
@@ -781,7 +781,7 @@ DefineLanguageNoun("Kal Kartha", {
 
 DefineLanguageNoun("Karrag", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Karrag",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Karrag" (from Wesnoth, The Hammer of Thursagan)
@@ -789,7 +789,7 @@ DefineLanguageNoun("Karrag", {
 
 DefineLanguageNoun("Kili", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Kili",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Kili" (dwarf from Norse mythology)
@@ -797,7 +797,7 @@ DefineLanguageNoun("Kili", {
 
 DefineLanguageNoun("Kinan", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Kinan",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Kinan" (from Wesnoth, The Scepter of Fire)
@@ -805,7 +805,7 @@ DefineLanguageNoun("Kinan", {
 
 DefineLanguageNoun("Knalga", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Knalga",
 	NameSingular = true,
 	TypeName = {"settlement"} -- example: "Knalga" (from Wesnoth)
@@ -813,7 +813,7 @@ DefineLanguageNoun("Knalga", {
 
 DefineLanguageNoun("Kuhnar", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Kuhnar",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Kuhnar" (from Wesnoth, The Scepter of Fire)
@@ -821,7 +821,7 @@ DefineLanguageNoun("Kuhnar", {
 
 DefineLanguageNoun("Laurin", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Laurin",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Laurin" (dwarf from German sagas)
@@ -838,7 +838,7 @@ DefineLanguageNoun("Leif", {
 
 DefineLanguageNoun("Lit", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Lit",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Lit" (dwarf from Norse mythology)
@@ -846,7 +846,7 @@ DefineLanguageNoun("Lit", {
 
 DefineLanguageNoun("Lofar", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 397.
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Lofar",
 	Gender = "Masculine",
 	NameSingular = true,
@@ -855,7 +855,7 @@ DefineLanguageNoun("Lofar", { -- Source: Richard Cleasby and Gudbrand Vigfusson,
 
 DefineLanguageNoun("Loni", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Loni",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Loni" (dwarf from Norse mythology)
@@ -863,7 +863,7 @@ DefineLanguageNoun("Loni", {
 
 DefineLanguageNoun("Los", { -- suffix used by Wesnoth's dwarven names; not necessarily a noun
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Los",
 	SuffixSingular = true,
 	SuffixTypeName = {"person"} -- examples: "Aigatlos", "Aigdrlos", "Aigdurlos", "Alaithlos", "Alatlos", "Alcatlos", "Aldrlos", "Anallos", "Andrlos", "Aldurlos", "Althalos", "Augatlos", "Augthalos", "Dulaithlos", "Dulcatlos", "Duldrlos", "Dulthalos", "Glamallos", "Glamdrlos", "Gomatlos", "Gomcatlos", "Gomdurlos", "Gomthalos", "Naratlos", "Narthalos", "Pelaithlos", "Pelcatlos", "Trithaithlos", "Trithatlos", "Trithcatlos", "Trithdrlos", "Trithdurlos"
@@ -896,7 +896,7 @@ DefineLanguageNoun("Mjod", {
 
 DefineLanguageNoun("Mjollnir", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Mjollnir",
 	NameSingular = true,
 	TypeName = {"item-mace"} -- example: "Mjollnir" (iron hammer made by the dwarven brothers Brokk and Eitri)
@@ -904,7 +904,7 @@ DefineLanguageNoun("Mjollnir", {
 
 DefineLanguageNoun("Modsognir", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Modsognir",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Modsognir" (the first and mightiest of the dwarves in Norse mythology)
@@ -921,7 +921,7 @@ DefineLanguageNoun("Nabbi", { -- Source: Richard Cleasby and Gudbrand Vigfusson,
 
 DefineLanguageNoun("Naglering", { -- possibly "Nagle-ring"?
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Naglering",
 	NameSingular = true,
 	TypeName = {"item-sword"} -- example: "Naglering" (sword forged by the dwarf Alberich)
@@ -929,7 +929,7 @@ DefineLanguageNoun("Naglering", { -- possibly "Nagle-ring"?
 
 DefineLanguageNoun("Nar", { -- prefix used by Wesnoth's dwarven names; not necessarily a noun
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Nar",
 	TypeName = {"person"}, -- example: "Nar" (dwarf from Norse mythology)
 	PrefixSingular = true,
@@ -956,7 +956,7 @@ DefineLanguageNoun("Nefi", { -- Source: Richard Cleasby and Gudbrand Vigfusson, 
 
 DefineLanguageNoun("Neglur", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Neglur",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Neglur" (from Wesnoth, The Scepter of Fire)
@@ -988,7 +988,7 @@ DefineLanguageNoun("Nidi", { -- Source: Richard Cleasby and Gudbrand Vigfusson, 
 
 DefineLanguageNoun("Niping", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Niping",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Niping" (dwarf from Norse mythology)
@@ -996,7 +996,7 @@ DefineLanguageNoun("Niping", {
 
 DefineLanguageNoun("Noiraran", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Noiraran",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Noiraran" (from Wesnoth, The Scepter of Fire)
@@ -1013,7 +1013,7 @@ DefineLanguageNoun("Nordri", {
 
 DefineLanguageNoun("Nori", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Nori",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Nori" (dwarf from Norse mythology)
@@ -1030,7 +1030,7 @@ DefineLanguageNoun("Nyi", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "
 
 DefineLanguageNoun("Nyrad", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Nyrad",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Nyrad" (dwarf from Norse mythology)
@@ -1038,7 +1038,7 @@ DefineLanguageNoun("Nyrad", {
 
 DefineLanguageNoun("Odrorir", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Odrorir",
 	NameSingular = true,
 	TypeName = {"item-potion"} -- example: "Odrorir" (cauldron which contained some of the mead of poetry)
@@ -1046,7 +1046,7 @@ DefineLanguageNoun("Odrorir", {
 
 DefineLanguageNoun("Oin", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Oin",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Oin" (dwarf from Norse mythology who was the father of Andvari)
@@ -1054,7 +1054,7 @@ DefineLanguageNoun("Oin", {
 
 DefineLanguageNoun("Ol", { -- suffix used by Wesnoth's dwarven names; not necessarily a noun
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Ol",
 	SuffixSingular = true,
 	SuffixTypeName = {"person"} -- examples: "Aigaithol", "Aigalol", "Alaithol", "Alalol", "Aldrol", "Aldurol", "Althaol", "Analol", "Anatol", "Ancatol", "Andurol", "Anthaol", "Augalol", "Augatol", "Augcatol", "Augdurol", "Augthaol", "Dulatol", "Dulcatol", "Duldrol", "Glamaithol", "Glamthaol", "Gomaithol", "Gomatol", "Gomdrol", "Naraithol", "Naratol", "Narcatol", "Nardrol", "Nardurol", "Narthaol", "Pelaithol", "Pelatol", "Pelcatol", "Peldurol", "Trithaithol", "Trithalol", "Trithdrol", "Trithdurol"
@@ -1062,7 +1062,7 @@ DefineLanguageNoun("Ol", { -- suffix used by Wesnoth's dwarven names; not necess
 
 DefineLanguageNoun("Olurf", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Olurf",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Olurf" (from Wesnoth, The Legend of Wesmere)
@@ -1070,7 +1070,7 @@ DefineLanguageNoun("Olurf", {
 
 DefineLanguageNoun("Ori", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Ori",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Ori" (dwarf from Norse mythology)
@@ -1078,7 +1078,7 @@ DefineLanguageNoun("Ori", {
 
 DefineLanguageNoun("Pel", { -- prefix used by Wesnoth's dwarven names; not necessarily a noun
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Pel",
 	PrefixSingular = true,
 	PrefixTypeName = {"person"} -- examples: "Pelaithas", "Pelaithil", "Pelaithing", "Pelaithis", "Pelaithlos", "Pelaithol", "Pelaithsil", "Pelaithsol", "Pelalil", "Pelaling", "Pelalis", "Pelalsil", "Pelalsol", "Pelalus", "Pelatil", "Pelating", "Pelatis", "Pelatol", "Pelatsil", "Pelatus", "Pelcating", "Pelcatlos", "Pelcatol", "Pelcatsil", "Peldras", "Peldril", "Peldrsol", "Peldrus", "Pelduril", "Pelduring", "Pelduris", "Peldurol", "Peldursol", "Peldurus", "Pelthaas", "Pelthail", "Pelthasil"
@@ -1093,7 +1093,7 @@ DefineLanguageNoun("Regin", {
 
 DefineLanguageNoun("Rekk", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Rekk",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Rekk" (dwarf from Norse mythology)
@@ -1101,7 +1101,7 @@ DefineLanguageNoun("Rekk", {
 
 DefineLanguageNoun("Relgorn", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Relgorn",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Relgorn" (from Wesnoth, Heir to the Throne and Delfador's Memoirs)
@@ -1118,7 +1118,7 @@ DefineLanguageNoun("Rorir", { -- Source: Richard Cleasby and Gudbrand Vigfusson,
 
 DefineLanguageNoun("Rugnur", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Rugnur",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Rugnur" (from Wesnoth, The Scepter of Fire; leader of the party of dwarves who handled the crafting of the Sceptre of Fire)
@@ -1126,7 +1126,7 @@ DefineLanguageNoun("Rugnur", {
 
 DefineLanguageNoun("Rynan", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Rynan",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Rynan" (from Wesnoth, The Scepter of Fire)
@@ -1134,7 +1134,7 @@ DefineLanguageNoun("Rynan", {
 
 DefineLanguageNoun("Sil", { -- suffix used by Wesnoth's dwarven names; not necessarily a noun
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Sil",
 	SuffixSingular = true,
 	SuffixTypeName = {"person"} -- examples: "Dursil" (Battle for Wesnoth, The Rise of Wesnoth), "Aigalsil", "Aigatsil", "Aigcatsil", "Aigdrsil", "Aigthasil", "Alatsil", "Alcatsil", "Althasil", "Anaithsil", "Analsil", "Anthasil", "Augaithsil", "Augatsil", "Augcatsil", "Augdrsil", "Dulaithsil", "Dulalsil", "Dulcatsil", "Duldrsil", "Duldursil", "Dulthasil", "Glamalsil", "Glamcatsil", "Glamthasil", "Gomdrsil", "Gomdursil", "Naraithsil", "Naralsil", "Naratsil", "Narcatsil", "Nardrsil", "Pelaithsil", "Pelalsil", "Pelatsil", "Pelcatsil", "Pelthasil", "Trithaithsil", "Trithdursil"
@@ -1151,7 +1151,7 @@ DefineLanguageNoun("Sindri", { -- Source: Richard Cleasby and Gudbrand Vigfusson
 
 DefineLanguageNoun("Skavid", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Skavid",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Skavid" (dwarf from Norse mythology)
@@ -1168,7 +1168,7 @@ DefineLanguageNoun("Skid", {
 
 DefineLanguageNoun("Skirvir", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 550.
 	Language = "dwarven",
-	Meanings = {"?"}, -- maybe related to Old Norse "Skirra"?
+	Meanings = {}, -- maybe related to Old Norse "Skirra"?
 	SingularNominative = "Skirvir", -- alternatively spelled as "Skirfir"
 	Gender = "Masculine",
 	NameSingular = true,
@@ -1200,7 +1200,7 @@ DefineLanguageNoun("Sol", {
 
 DefineLanguageNoun("Son", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Son",
 	NameSingular = true,
 	TypeName = {"item-potion"} -- example: "Son" (jar which contained some of the mead of poetry)
@@ -1217,7 +1217,7 @@ DefineLanguageNoun("Sudri", { -- Source: Richard Cleasby and Gudbrand Vigfusson,
 
 DefineLanguageNoun("Svarin", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 606.
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Svarin",
 	SingularGenitive = "Svarins", -- as in "Svarinshaug"
 	Gender = "Masculine",
@@ -1236,7 +1236,7 @@ DefineLanguageNoun("Sviar", {
 
 DefineLanguageNoun("Sviur", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Sviur",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Sviur" (dwarf from Norse mythology)
@@ -1244,7 +1244,7 @@ DefineLanguageNoun("Sviur", {
 
 DefineLanguageNoun("Tha", { -- infix used by Wesnoth's dwarven names; not necessarily a noun
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Tha",
 	InfixSingular = true,
 	InfixTypeName = {"person"} -- examples: "Aigthaing", "Aigthais", "Aigthasil", "Aigthaus", "Althaas", "Althail", "Althalos", "Althaol", "Althasil", "Althasol", "Althaus", "Anthaas", "Anthaing", "Anthais", "Anthaol", "Anthasil", "Anthasol", "Anthaus", "Augthail", "Augthais", "Augthalos", "Augthaol", "Dulthalos", "Dulthasil", "Dulthasol", "Dulthaus", "Glamthaas", "Glamthaol", "Glamthasil", "Glamthasol", "Glamthaus", "Gomthaas", "Gomthalos", "Gomthasol", "Narthalos", "Narthaol", "Pelthaas", "Pelthail", "Pelthasil", "Triththaas", "Triththail", "Triththaing", "Triththasol", "Triththaus"
@@ -1252,7 +1252,7 @@ DefineLanguageNoun("Tha", { -- infix used by Wesnoth's dwarven names; not necess
 
 DefineLanguageNoun("Theganli", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Theganli",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Theganli" (from Wesnoth, The Scepter of Fire; jeweler of Durstorn's clan)
@@ -1260,7 +1260,7 @@ DefineLanguageNoun("Theganli", {
 
 DefineLanguageNoun("Thekk", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Thekk",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Thekk" (dwarf from Norse mythology)
@@ -1276,7 +1276,7 @@ DefineLanguageNoun("Thjof", {
 
 DefineLanguageNoun("Thorin", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Thorin",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Thorin" (dwarf from Norse mythology)
@@ -1284,7 +1284,7 @@ DefineLanguageNoun("Thorin", {
 
 DefineLanguageNoun("Thrain", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Thrain",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Thrain" (dwarf from Norse mythology)
@@ -1292,7 +1292,7 @@ DefineLanguageNoun("Thrain", {
 
 DefineLanguageNoun("Thror", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Thror",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Thror" (dwarf from Norse mythology)
@@ -1300,14 +1300,14 @@ DefineLanguageNoun("Thror", {
 
 DefineLanguageNoun("Thrymgjol", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Thrymgjol"
 	-- example: "Thrymgjol" (extraordinary gate crafted by the sons of the sun-blinded dwarf Solblindi)
 })
 
 DefineLanguageNoun("Thursagan", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Thursagan",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Thursagan" (Battle for Wesnoth, The Sceptre of Fire; master runesmith who crafted the Sceptre of Fire)
@@ -1315,7 +1315,7 @@ DefineLanguageNoun("Thursagan", {
 
 DefineLanguageNoun("Trith", { -- prefix used by Wesnoth's dwarven names; not necessarily a noun
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Trith",
 	PrefixSingular = true,
 	PrefixTypeName = {"person"} -- examples: "Trithaithas", "Trithaithil", "Trithaithis", "Trithaithlos", "Trithaithol", "Trithaithsil", "Trithaithsol", "Trithaithus", "Trithalis", "Trithalol", "Trithatas", "Trithatil", "Trithatlos", "Trithatsol", "Trithcatlos", "Trithcatsol", "Trithcatus", "Trithdril", "Trithdring", "Trithdris", "Trithdrlos", "Trithdrol", "Trithdrsol", "Trithdrus", "Trithduril", "Trithduring", "Trithdurlos", "Trithdurol", "Trithdursil", "Trithdurus", "Triththaas", "Triththail", "Triththaing", "Triththasol", "Triththaus"
@@ -1341,7 +1341,7 @@ DefineLanguageNoun("Olf", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "
 
 DefineLanguageNoun("Ulrek", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Ulrek",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Ulrek" (from Wesnoth, Delfador's Memoirs)
@@ -1349,7 +1349,7 @@ DefineLanguageNoun("Ulrek", {
 
 DefineLanguageNoun("Uni", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Uni",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Uni" (dwarf from Norse mythology)
@@ -1357,7 +1357,7 @@ DefineLanguageNoun("Uni", {
 
 DefineLanguageNoun("Us", { -- suffix used by Wesnoth's dwarven names; not necessarily a noun
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Us",
 	SuffixSingular = true,
 	SuffixTypeName = {"person"} -- examples: "Aigatus", "Aigcatus", "Aigthaus", "Alaithus", "Alalus", "Althaus", "Anaithus", "Analus", "Ancatus", "Andrus", "Andurus", "Anthaus", "Augaithus", "Augcatus", "Augdrus", "Augdurus", "Dulatus", "Duldrus", "Duldurus", "Dulthaus", "Glamalus", "Glamatus", "Glamcatus", "Glamthaus", "Gomalus", "Gomdurus", "Naraithus", "Naralus", "Nardrus", "Pelalus", "Pelatus", "Peldrus", "Peldurus", "Trithaithus", "Trithcatus", "Trithdrus", "Trithdurus", "Triththaus"
@@ -1378,7 +1378,7 @@ DefineLanguageNoun("Vang", { -- Source: Richard Cleasby and Gudbrand Vigfusson, 
 
 DefineLanguageNoun("Vali", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Vali",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Vali" (dwarf from Norse mythology)
@@ -1386,7 +1386,7 @@ DefineLanguageNoun("Vali", {
 
 DefineLanguageNoun("Var", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Var",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Var" (dwarf from Norse mythology)
@@ -1394,7 +1394,7 @@ DefineLanguageNoun("Var", {
 
 DefineLanguageNoun("Vegdrasil", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Vegdrasil",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Vegdrasil" (dwarf from Norse mythology)
@@ -1452,7 +1452,7 @@ DefineLanguageNoun("Vind", {
 
 DefineLanguageNoun("Virfir", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Virfir",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Virfir" (dwarf from Norse mythology)
@@ -1460,7 +1460,7 @@ DefineLanguageNoun("Virfir", {
 
 DefineLanguageNoun("Vit", {
 	Language = "dwarven",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Vit",
 	NameSingular = true,
 	TypeName = {"person"} -- example: "Vit" (dwarf from Norse mythology)

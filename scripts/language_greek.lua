@@ -55,7 +55,7 @@ DefineLanguageNoun("Χύσθος", { -- Source: Sean Crist, "An Analysis of *z l
 
 DefineLanguageNoun("Abdera", { -- should be written as the original Greek name (with Greek characters)
 	Language = "greek",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Abdera",
 	NameSingular = true,
 	TypeName = {"settlement"} -- example: "Abdera"
@@ -63,7 +63,7 @@ DefineLanguageNoun("Abdera", { -- should be written as the original Greek name (
 
 DefineLanguageNoun("Abydus", { -- should be written as the original Greek name (with Greek characters)
 	Language = "greek",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Abydus",
 	NameSingular = true,
 	TypeName = {"settlement"} -- example: "Abydus"
@@ -71,7 +71,7 @@ DefineLanguageNoun("Abydus", { -- should be written as the original Greek name (
 
 DefineLanguageNoun("Acragas", { -- should be written as the original Greek name (with Greek characters)
 	Language = "greek",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Acragas",
 	NameSingular = true,
 	TypeName = {"settlement"} -- example: "Acragas" (Agrigentum)
@@ -79,7 +79,7 @@ DefineLanguageNoun("Acragas", { -- should be written as the original Greek name 
 
 DefineLanguageNoun("Agathe", { -- should be written as the original Greek name (with Greek characters)
 	Language = "greek",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Agathe",
 	NameSingular = true,
 	TypeName = {"settlement"} -- example: "Agathe"
@@ -87,7 +87,7 @@ DefineLanguageNoun("Agathe", { -- should be written as the original Greek name (
 
 DefineLanguageNoun("Ainos", { -- should be written as the original Greek name (with Greek characters)
 	Language = "greek",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Ainos",
 	NameSingular = true,
 	TypeName = {"settlement"} -- example: "Ainos"
@@ -95,7 +95,7 @@ DefineLanguageNoun("Ainos", { -- should be written as the original Greek name (w
 
 DefineLanguageNoun("Alalia", { -- should be written as the original Greek name (with Greek characters)
 	Language = "greek",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Alalia",
 	NameSingular = true,
 	TypeName = {"settlement"} -- example: "Alalia" (Aleria)
@@ -103,7 +103,7 @@ DefineLanguageNoun("Alalia", { -- should be written as the original Greek name (
 
 DefineLanguageNoun("Alonae", { -- should be written as the original Greek name (with Greek characters)
 	Language = "greek",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Alonae",
 	NameSingular = true,
 	TypeName = {"settlement"} -- example: "Alonae"
@@ -111,7 +111,7 @@ DefineLanguageNoun("Alonae", { -- should be written as the original Greek name (
 
 DefineLanguageNoun("Amisus", { -- should be written as the original Greek name (with Greek characters)
 	Language = "greek",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Amisus",
 	NameSingular = true,
 	TypeName = {"settlement"} -- example: "Amisus"
@@ -119,7 +119,7 @@ DefineLanguageNoun("Amisus", { -- should be written as the original Greek name (
 
 DefineLanguageNoun("Amphi", { -- should be written as the original Greek name (with Greek characters)
 	Language = "greek",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Amphi",
 	PrefixSingular = true,
 	PrefixTypeName = {"settlement"} -- example: "Amphipolis"
@@ -127,7 +127,7 @@ DefineLanguageNoun("Amphi", { -- should be written as the original Greek name (w
 
 DefineLanguageNoun("Calli", { -- should be written as the original Greek name (with Greek characters)
 	Language = "greek",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Calli",
 	PrefixSingular = true,
 	PrefixTypeName = {"settlement"} -- example: "Callipolis"

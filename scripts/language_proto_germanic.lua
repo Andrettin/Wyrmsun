@@ -587,7 +587,7 @@ DefineLanguageNoun("Yēra", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 
 DefineLanguageVerb("Beran", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "proto-germanic",
-	Meanings = {"?"},
+	Meanings = {},
 	Infinitive = "Beran"
 })
 

@@ -355,6 +355,7 @@ DefineFaction("England", {
 	Civilization = "teuton",
 	ParentFaction = "Angle Tribe",
 	Type = "polity",
+	Language = "english",
 	Colors = {"red", "white"},
 	DefaultTier = "kingdom",
 	Titles = {
@@ -481,6 +482,7 @@ DefineFaction("Scotland", {
 	Civilization = "teuton",
 	ParentFaction = "England",
 	Type = "polity",
+	Language = "english",
 	Colors = {"blue", "white"},
 	DefaultTier = "kingdom",
 	Titles = {

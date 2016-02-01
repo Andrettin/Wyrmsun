@@ -474,7 +474,7 @@ DefineLanguageVerb("Bēodan", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 
 DefineLanguageVerb("Beran", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "old-english",
-	Meanings = {"?"},
+	Meanings = {},
 	Infinitive = "Beran"
 })
 

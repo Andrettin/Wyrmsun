@@ -330,7 +330,7 @@ DefineLanguageNoun("Wurm", { -- Source: Richard M. Runge, "The Phonetic Realizat
 
 DefineLanguageVerb("Beran", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "old-high-german",
-	Meanings = {"?"},
+	Meanings = {},
 	Infinitive = "Beran"
 })
 

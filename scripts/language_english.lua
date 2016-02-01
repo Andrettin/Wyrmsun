@@ -25,9 +25,20 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineLanguageNoun("Alf", { -- archaic
+	Language = "english",
+	Meanings = {"Elf"},
+	SingularNominative = "Alf",
+	Gender = "Masculine",
+	NameSingular = true,
+	TypeName = {"person"},
+	PrefixSingular = true,
+	PrefixTypeName = {"person"} -- example: "Alfred"
+})
+
 DefineLanguageNoun("Charles", {
 	Language = "english",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Charles",
 	Gender = "Masculine",
 	NameSingular = true,
@@ -36,7 +47,7 @@ DefineLanguageNoun("Charles", {
 
 DefineLanguageNoun("Francis", {
 	Language = "english",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Francis",
 	Gender = "Masculine",
 	NameSingular = true,
@@ -45,8 +56,17 @@ DefineLanguageNoun("Francis", {
 
 DefineLanguageNoun("Henry", {
 	Language = "english",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Henry",
+	Gender = "Masculine",
+	NameSingular = true,
+	TypeName = {"person"}
+})
+
+DefineLanguageNoun("James", {
+	Language = "english",
+	Meanings = {},
+	SingularNominative = "James",
 	Gender = "Masculine",
 	NameSingular = true,
 	TypeName = {"person"}
@@ -54,7 +74,7 @@ DefineLanguageNoun("Henry", {
 
 DefineLanguageNoun("John", {
 	Language = "english",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "John",
 	Gender = "Masculine",
 	NameSingular = true,
@@ -63,7 +83,7 @@ DefineLanguageNoun("John", {
 
 DefineLanguageNoun("Lewis", {
 	Language = "english",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Lewis",
 	Gender = "Masculine",
 	NameSingular = true,
@@ -72,7 +92,7 @@ DefineLanguageNoun("Lewis", {
 
 DefineLanguageNoun("William", {
 	Language = "english",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "William",
 	Gender = "Masculine",
 	NameSingular = true,
@@ -90,7 +110,7 @@ DefineLanguageNoun("House", {
 
 DefineLanguageNoun("Hyrst", {
 	Language = "english",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Hyrst",
 	Gender = "Neuter",
 	SuffixSingular = true,
@@ -99,7 +119,7 @@ DefineLanguageNoun("Hyrst", {
 
 DefineLanguageNoun("Ing", {
 	Language = "english",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Ing",
 --	Gender = "?",
 	SuffixSingular = true,
@@ -112,16 +132,35 @@ DefineLanguageNoun("Mouth", {
 	SingularNominative = "Mouth",
 	Gender = "Neuter",
 	SuffixSingular = true,
-	SuffixTypeName = {"settlement"} -- example: "Plymouth"
+	SuffixTypeName = {"settlement"} -- examples: "Plymouth", "Portsmouth"
 })
 
 DefineLanguageNoun("Ply", {
 	Language = "english",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Ply",
 --	Gender = "?",
 	PrefixSingular = true,
 	PrefixTypeName = {"settlement"} -- example: "Plymouth"
+})
+
+DefineLanguageNoun("Port", {
+	Language = "english",
+	Meanings = {"Port"},
+	SingularNominative = "Port",
+	SingularGenitive = "Ports",
+	Gender = "Neuter",
+	PrefixSingular = true,
+	PrefixTypeName = {"settlement"} -- example: "Portsmouth"
+})
+
+DefineLanguageNoun("Red", { -- archaic
+	Language = "english",
+	Meanings = {"Counsel", "Advice", "Account", "Story"},
+	SingularNominative = "Red",
+	Gender = "Neuter",
+	SuffixSingular = true,
+	SuffixTypeName = {"person"} -- example: "Alfred"
 })
 
 DefineLanguageNoun("Town", {
@@ -144,9 +183,9 @@ DefineLanguageNoun("Tree", {
 
 DefineLanguageNoun("Wich", {
 	Language = "english",
-	Meanings = {"?"},
+	Meanings = {},
 	SingularNominative = "Wich",
 	Gender = "Neuter",
 	SuffixSingular = true,
-	SuffixTypeName = {"settlement"} -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 336.
+	SuffixTypeName = {"settlement"} -- example: "Norwich"; Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 336.
 })
