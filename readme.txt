@@ -98,6 +98,7 @@ https://github.com/Andrettin/Wyrmsun
 - Frank Speerkampfers have their own portrait (if the player has the Frank Faction Flair DLC).
 - Frank Kriegers have their own portrait (if the player has the Frank Faction Flair DLC).
 - Brising Miners have their own portrait (if the player has the Brising Faction Flair DLC).
+- Workers will now look to see if any trees have regrown closer to their drop-off point when going to harvest lumber.
 
 -----------------------------------------------------------------------
 - 1.9.9
