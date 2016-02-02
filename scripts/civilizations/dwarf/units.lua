@@ -87,37 +87,24 @@ DefineUnitType("unit-dwarven-miner", { Name = _("Miner"),
 	}
 } )
 
+DefineUnitType("unit-brising-miner", { Name = _("Miner"),
+	Parent = "unit-dwarven-miner",
+	Civilization = "dwarf",
+	Faction = "Brising Clan",
+	HitPoints = 40, -- +10 HP
+	Points = 35 -- +5 points
+} )
+
 DefineUnitType("unit-dwarven-militia", { Name = _("Militia"),
-	Class = "militia",
+	Parent = "unit-template-militia",
 	Civilization = "dwarf",
 	Description = _("When enemies approach, dwarven miners pick up arms from the nearest storage center in defense of their homelands."),
 	Image = {"file", "dwarf/units/militia.png", "size", {72, 72}},
 	Animations = "animations-dwarven-militia", Icon = "icon-dwarven-militia",
-	Intelligence = 10,
-	Speed = 10,
-	HitPoints = 30,
-	DrawLevel = 40,
-	TileSize = {1, 1}, BoxSize = {31, 31},
-	SightRange = 4,
-	Armor = 1, BasicDamage = 6, Missile = "missile-none",
-	MaxAttackRange = 1,
-	Accuracy = 10,
-	Evasion = 10,
-	Priority = 50,
-	Points = 30,
-	Demand = 1,
 	Corpse = "unit-dwarven-dead-body",
-	Type = "land",
-	RightMouseAction = "attack",
-	CanAttack = true,
-	CanTargetLand = true,
-	organic = true,
-	Flesh = true,
-	SelectableByRectangle = true,
 	WeaponClasses = {"axe"},
 	HackDamage = true,
 	AiDrops = {"unit-battle-axe", "unit-round-shield", "unit-boots", "unit-cheese"},
-	Traits = {"upgrade-mighty", "upgrade-strong", "upgrade-weak", "upgrade-dextrous", "upgrade-clumsy", "upgrade-reckless", "upgrade-near-sighted", "upgrade-keen", "upgrade-limping", "upgrade-old", "upgrade-quick", "upgrade-resilient", "upgrade-slow", "upgrade-cruel"},
 	Sounds = {
 		"selected", "basic-dwarf-voices-selected-group",
 		"acknowledge", "dwarven-miner-acknowledge",
@@ -126,14 +113,16 @@ DefineUnitType("unit-dwarven-militia", { Name = _("Militia"),
 		"help", "basic-dwarf-voices-help",
 		"dead", "basic-dwarf-voices-dead",
 		"hit", "axe-attack",
-		"miss", "attack-miss",
-		"step", "step-dirt",
-		"step-dirt", "step-dirt",
-		"step-grass", "step-leaves",
-		"step-gravel", "step-gravel",
-		"step-mud", "step-mud",
-		"step-stone", "step-stone"
+		"miss", "attack-miss"
 	}
+} )
+
+DefineUnitType("unit-brising-militia", { Name = _("Militia"),
+	Parent = "unit-dwarven-militia",
+	Civilization = "dwarf",
+	Faction = "Brising Clan",
+	HitPoints = 40, -- +10 HP
+	Points = 35 -- +5 points
 } )
 
 DefineUnitType("unit-dwarven-axefighter", { Name = _("Axefighter"),

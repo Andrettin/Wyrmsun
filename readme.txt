@@ -93,7 +93,11 @@ https://github.com/Andrettin/Wyrmsun
 - Frank Ritters now have their own portrait (if the player has the Frank Faction Flair DLC).
 - Added Teuton Speerkampfer (icon by Jinn).
 - Added a Frank-specific version of the Teuton Speerkampfer.
+- Added a Frank-specific version of the Teuton Krieger.
+- Added a Brising-specific version of the Dwarven Miner.
 - Frank Speerkampfers have their own portrait (if the player has the Frank Faction Flair DLC).
+- Frank Kriegers have their own portrait (if the player has the Frank Faction Flair DLC).
+- Brising Miners have their own portrait (if the player has the Brising Faction Flair DLC).
 
 -----------------------------------------------------------------------
 - 1.9.9

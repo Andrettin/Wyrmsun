@@ -71,7 +71,7 @@ if (GrandStrategyYear >= -3000) then
 	SetProvinceHero("Svarinshaug", "Modsognir", 2) 
 	SetFactionRuler("dwarf", "Brising Clan", "Modsognir")
 	SetProvinceHero("Svarinshaug", "Durin", 2)
-	SetProvinceUnitQuantity("Svarinshaug", "unit-dwarven-miner", 4)
+	SetProvinceUnitQuantity("Svarinshaug", "unit-brising-miner", 4)
 	
 	-- give plow technology to the dwarven factions
 	SetFactionTechnology("dwarf", "Brising Clan", "upgrade-dwarven-wood-plow", true)

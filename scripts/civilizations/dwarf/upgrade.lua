@@ -208,7 +208,7 @@ DefineModifier("upgrade-dwarven-broad-axe",
 	{"BasicDamage", 2},
 	{"Points", 10},
 	{"apply-to", "unit-dwarven-axefighter"}, {"apply-to", "unit-dwarven-steelclad"}, {"apply-to", "unit-dwarven-thane"},
-	{"apply-to", "unit-dwarven-militia"},
+	{"apply-to", "unit-dwarven-militia"}, {"apply-to", "unit-brising-militia"},
 	{"apply-to", "unit-dwarven-yale-rider"},
 	{"apply-to", "unit-surghan-mercenary-steelclad"}, {"apply-to", "unit-surghan-mercenary-thane"}
 )
@@ -217,7 +217,7 @@ DefineModifier("upgrade-dwarven-great-axe",
 	{"BasicDamage", 2},
 	{"Points", 10},
 	{"apply-to", "unit-dwarven-axefighter"}, {"apply-to", "unit-dwarven-steelclad"}, {"apply-to", "unit-dwarven-thane"},
-	{"apply-to", "unit-dwarven-militia"},
+	{"apply-to", "unit-dwarven-militia"}, {"apply-to", "unit-brising-militia"},
 	{"apply-to", "unit-dwarven-yale-rider"},
 	{"apply-to", "unit-surghan-mercenary-steelclad"}, {"apply-to", "unit-surghan-mercenary-thane"}
 )
@@ -226,7 +226,7 @@ DefineModifier("upgrade-dwarven-shield-1",
 	{"Armor", 2},
 	{"Points", 10},
 	{"apply-to", "unit-dwarven-axefighter"}, {"apply-to", "unit-dwarven-steelclad"}, {"apply-to", "unit-dwarven-thane"},
-	{"apply-to", "unit-dwarven-militia"},
+	{"apply-to", "unit-dwarven-militia"}, {"apply-to", "unit-brising-militia"},
 	{"apply-to", "unit-dwarven-yale-rider"},
 	{"apply-to", "unit-surghan-mercenary-steelclad"}, {"apply-to", "unit-surghan-mercenary-thane"}
 )
@@ -235,7 +235,7 @@ DefineModifier("upgrade-dwarven-shield-2",
 	{"Armor", 2},
 	{"Points", 10},
 	{"apply-to", "unit-dwarven-axefighter"}, {"apply-to", "unit-dwarven-steelclad"}, {"apply-to", "unit-dwarven-thane"},
-	{"apply-to", "unit-dwarven-militia"},
+	{"apply-to", "unit-dwarven-militia"}, {"apply-to", "unit-brising-militia"},
 	{"apply-to", "unit-dwarven-yale-rider"},
 	{"apply-to", "unit-surghan-mercenary-steelclad"}, {"apply-to", "unit-surghan-mercenary-thane"}
 )
@@ -325,6 +325,14 @@ DefineModifier("upgrade-brising-clan-faction",
 DefineModifier("upgrade-brising-clan-faction",
 	{"TimeEfficiencyBonus", 50},
 	{"apply-to", "unit-dwarven-smithy"}
+)
+
+DefineModifier("upgrade-brising-clan-faction",
+	{"apply-to", "unit-dwarven-miner"}, {"convert-to", "unit-brising-miner"}
+)
+
+DefineModifier("upgrade-brising-clan-faction",
+	{"apply-to", "unit-dwarven-militia"}, {"convert-to", "unit-brising-militia"}
 )
 
 DefineModifier("upgrade-norlund-clan-faction",
@@ -438,4 +446,12 @@ DefineDependency("unit-dwarven-transport-ship",
 
 DefineDependency("unit-dwarven-gryphon-rider",
 	{"unit-dwarven-stronghold", "unit-dwarven-lumber-mill"}
+)
+
+DefineDependency("unit-brising-miner",
+	{"upgrade-brising-clan-faction"}
+)
+
+DefineDependency("unit-brising-militia",
+	{"upgrade-brising-clan-faction"}
 )

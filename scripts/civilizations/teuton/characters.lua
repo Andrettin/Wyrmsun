@@ -57,7 +57,7 @@ DefineCharacter("Marbod", {
 DefineCharacter("Volsung", { -- Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 3; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 226.
 	Name = "Volsung",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-frank-swordsman",
 	Civilization = "teuton",
 --	ProvinceOfOrigin = "?",
 	Year = 437 - (30 * 3),
@@ -91,7 +91,7 @@ DefineCharacter("Signy Volsung", { -- Source: C. Scott Littleton, "The Germanic 
 DefineCharacter("Siggeir", { -- Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, pp. 2-3.
 	Name = "Siggeir",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-frank-swordsman",
 	Civilization = "teuton",
 --	ProvinceOfOrigin = "?",
 	Year = 437 - (30 * 2),
@@ -103,7 +103,7 @@ DefineCharacter("Siegmund Volsung", { -- Source: Norman Davies, "Vanished Kingdo
 	Name = "Siegmund", -- also known as Sigmund in the Norse myths; tenth and youngest son of Volsung
 	Dynasty = "Volsung",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-frank-swordsman",
 	Civilization = "teuton",
 --	ProvinceOfOrigin = "?",
 	Year = 437 - (30 * 2),
@@ -127,7 +127,7 @@ DefineCharacter("Sinfiotli Volsung", { -- Source: C. Scott Littleton, "The Germa
 	Name = "Sinfiotli", -- born out of the incestuous relationship between Siegmund and his sister Signy
 	Dynasty = "Volsung",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-frank-swordsman",
 	Civilization = "teuton",
 --	ProvinceOfOrigin = "?",
 	Year = 437 - (30 * 1),
@@ -140,7 +140,7 @@ DefineCharacter("Siegfried Volsung", { -- Source: Norman Davies, "Vanished Kingd
 	Name = "Siegfried", -- Son of Siegmund and Sieglind; Gudrun's husband
 	Dynasty = "Volsung",
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-frank-swordsman",
 	Civilization = "teuton",
 --	ProvinceOfOrigin = "?",
 	Year = 437 - (30 * 1),
@@ -175,7 +175,7 @@ DefineCharacter("Ricimer", { -- Source: Norman Davies, "Vanished Kingdoms", 2012
 DefineCharacter("Clovis", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 97, 99.
 	Name = "Clovis", -- Frankish king and husband of Clothilda (daughter of the Burgundian king Chilperic); converted to Catholic Christianity
 	Gender = "male",
-	Type = "unit-teuton-swordsman",
+	Type = "unit-frank-swordsman",
 	Civilization = "teuton",
 --	ProvinceOfOrigin = "?",
 	Year = 511 - 30, -- estimated

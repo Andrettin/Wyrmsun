@@ -19,6 +19,7 @@ editor_types = {
 	"unit-teuton-worker",
 	"unit-teuton-swordsman",
 	"unit-suebi-swordsman",
+	"unit-frank-swordsman",
 	"unit-teuton-spearman",
 	"unit-frank-spearman",
 	"unit-teuton-archer",
@@ -45,6 +46,8 @@ editor_types = {
 
 	"unit-dwarven-miner",
 	"unit-dwarven-militia",
+	"unit-brising-miner",
+	"unit-brising-militia",
 	"unit-dwarven-axefighter",
 	"unit-dwarven-steelclad",
 	"unit-dwarven-thane",

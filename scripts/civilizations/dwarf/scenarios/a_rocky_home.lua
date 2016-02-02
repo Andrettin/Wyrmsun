@@ -53,9 +53,9 @@ if (LoadedGame == false) then
 			SetUnitVariable(unit, "Character", "Durin")
 		end
 		
-		unit = OldCreateUnit("unit-dwarven-miner", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		unit = OldCreateUnit("unit-dwarven-miner", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		unit = OldCreateUnit("unit-dwarven-miner", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		unit = OldCreateUnit("unit-brising-miner", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		unit = OldCreateUnit("unit-brising-miner", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		unit = OldCreateUnit("unit-brising-miner", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 	end
 
 	SetPlayerData(0, "Allow", "unit-dwarven-town-hall", "F")
@@ -67,7 +67,7 @@ if (LoadedGame == false) then
 	SetPlayerData(0, "Allow", "unit-gold-mine", "F")
 	SetPlayerData(0, "Allow", "unit-silver-mine", "F")
 	SetPlayerData(0, "Allow", "unit-copper-mine", "F")
-	SetPlayerData(0, "Allow", "unit-dwarven-miner", "F")
+	SetPlayerData(0, "Allow", "unit-brising-miner", "F")
 	
 	GameTimeOfDay = 2
 end

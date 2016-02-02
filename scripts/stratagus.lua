@@ -802,6 +802,7 @@ function StandardTriggers()
 						and (
 							GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-teuton-swordsman"
 							or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-suebi-swordsman"
+							or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-frank-swordsman"
 						)
 					) then
 						return true
@@ -867,7 +868,13 @@ function StandardTriggers()
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Miner") == false) then
 			AddTrigger(
 				function()
-					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-dwarven-miner") then
+					if (
+						table.getn(GetSelectedUnits()) > 0
+						and (
+							GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-dwarven-miner"
+							or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-brising-miner"
+						)
+					) then
 						return true
 					else
 						return false

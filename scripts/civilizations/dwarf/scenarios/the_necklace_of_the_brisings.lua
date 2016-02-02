@@ -47,11 +47,11 @@ if (LoadedGame == false) then
 		SetUnitVariable(unit, "Character", "Modsognir")
 		unit = CreateUnit("unit-dwarven-axefighter", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 		SetUnitVariable(unit, "Character", "Durin")
-		unit = CreateUnit("unit-dwarven-miner", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		unit = CreateUnit("unit-dwarven-miner", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		unit = CreateUnit("unit-dwarven-miner", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		unit = CreateUnit("unit-dwarven-miner", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		unit = CreateUnit("unit-dwarven-miner", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		unit = CreateUnit("unit-brising-miner", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		unit = CreateUnit("unit-brising-miner", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		unit = CreateUnit("unit-brising-miner", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		unit = CreateUnit("unit-brising-miner", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		unit = CreateUnit("unit-brising-miner", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 		unit = CreateUnit("unit-dwarven-steelclad", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
 		SetUnitVariable(unit, "Active", false)
 	elseif (GrandStrategyEventMap) then
@@ -70,7 +70,7 @@ if (LoadedGame == false) then
 		CreateProvinceUnits("Aurvang", 1, 1)
 		
 		-- don't allow the player to build/train units if in grand strategy mode
-		SetPlayerData(0, "Allow", "unit-dwarven-miner", "F")
+		SetPlayerData(0, "Allow", "unit-brising-miner", "F")
 		SetPlayerData(0, "Allow", "unit-dwarven-town-hall", "F")
 		SetPlayerData(0, "Allow", "unit-dwarven-mushroom-farm", "F")
 		SetPlayerData(0, "Allow", "unit-dwarven-barracks", "F")
@@ -120,7 +120,7 @@ AddTrigger(
 				{"~!Continue"},
 				{function(s)
 				Event(
-					FindUnit("unit-dwarven-miner", GetFactionPlayer("Brising Clan")),
+					FindUnit("unit-brising-miner", GetFactionPlayer("Brising Clan")),
 					"All of this for a necklace...",
 					player,
 					{"~!Continue"},

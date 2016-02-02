@@ -41,7 +41,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-teuton-spatha",
 	Allowed = "check-upgrade", AllowArg = {"upgrade-teuton-spatha"},
 	Key = "a", Hint = _("~!Attack"), Popup = "popup-commands",
 	ForUnit = {
-		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-teuton-ritter", "unit-frank-horseman",
+		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-frank-swordsman", "unit-teuton-ritter", "unit-frank-horseman",
 		"germanic-group", "teuton-group"
 	}
 } )
@@ -51,7 +51,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-teuton-iron-shield",
 	Allowed = "check-upgrade", AllowArg = {"upgrade-teuton-iron-shield"},
 	Key = "s", Hint = _("~!Stop"), Popup = "popup-commands",
 	ForUnit = {
-		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-teuton-spearman", "unit-frank-spearman", "unit-teuton-ritter", "unit-frank-horseman",
+		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-frank-swordsman", "unit-teuton-spearman", "unit-frank-spearman", "unit-teuton-ritter", "unit-frank-horseman",
 		"germanic-group", "teuton-group"
 	}
 } )
@@ -215,6 +215,12 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-suebi-swordsman",
 	ForUnit = {"unit-teuton-barracks"}
 } )
 
+DefineButton( { Pos = 1, Level = 0, Icon = "icon-teuton-swordsman",
+	Action = "train-unit", Value = "unit-frank-swordsman",
+	Key = "k", Hint = _("Train ~!Krieger"), Popup = "popup-unit",
+	ForUnit = {"unit-teuton-barracks"}
+} )
+
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-teuton-spearman",
 	Action = "train-unit", Value = "unit-teuton-spearman",
 	Key = "e", Hint = _("Train Sp~!eerkampfer"), Popup = "popup-unit",
@@ -356,6 +362,6 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-teuton-stronghold",
 DefineButton( { Pos = 2, Level = 1, Icon = "icon-teuton-ritter",
 	Action = "experience-upgrade-to", Value = "unit-teuton-ritter",
 	Key = "r", Hint = _("Upgrade to ~!Ritter"), Popup = "popup-unit",
-	ForUnit = {"unit-teuton-swordsman", "unit-suebi-swordsman"}
+	ForUnit = {"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-frank-swordsman"}
 } )
 --]]
