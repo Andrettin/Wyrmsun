@@ -70,6 +70,7 @@ https://github.com/Andrettin/Wyrmsun
 * Grand Strategy
 - Fixed issue which caused custom heroes to not be placed in the province properly after the "On the Vanaquisl" event mission.
 - Fixed issue which caused the screen to be partially blackened after certain event missions.
+- Fixed issue which allow players to save/load scenarios from within a grand strategy battle by using the save/load hotkeys.
 
 * Items
 - Scrolls can now drop from town hall and stronghold type buildings (scrolls always have a property associated with them).
@@ -83,10 +84,12 @@ https://github.com/Andrettin/Wyrmsun
 - Added Reginsmol (literary work, scroll) (+1% backstab bonus) (dropped by dwarven Mead Halls and Bastions).
 - Added Alvissmol (literary work, scroll) (+1 mana) (dropped by dwarven Mead Halls and Bastions).
 - "Right-click to use" no longer appears in an item's popup if the item cannot be currently used (i.e. if the unit doesn't fulfill the conditions for a scroll to be used).
+- Fixed issue which caused the stats change of one of the equipped rings to not be displayed properly when two rings are equipped.
 
 * Miscellaneous
 - Added support for damage bonus vs. dragons. This damage bonus affects wyrms, and will affect any other draconic creatures added later to the game.
 - Fixed an issue which caused unit/building proper names to overlap with other parts of the interface if a word in them was too long.
+- Fixed an issue which caused the player to be able to see others' buildings on the minimap if the player destroyed their own town hall.
 
 * Units
 - When right-clicking on a tile-based resource, workers who are already carrying the resource at maximum capacity will now return goods and then begin harvesting.

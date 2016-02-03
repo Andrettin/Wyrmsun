@@ -1,44 +1,48 @@
 local function HandleIngameCommandKey(key, ctrl, alt, shift)
-  if ((key == "h" and (ctrl or alt)) or key == "f1") then
-    if (not IsNetworkGame()) then SetGamePaused(true) end
-    RunHelpMenu()
-  elseif (key == "f5") then
-    if (not IsNetworkGame()) then SetGamePaused(true) end
-    RunGameOptionsMenu()
-  elseif (key == "f7") then
-    if (not IsNetworkGame()) then SetGamePaused(true) end
-    RunGameSoundOptionsMenu()
-  elseif (key == "f8") then
-    if (not IsNetworkGame()) then SetGamePaused(true) end
-    RunPreferencesMenu()
-  elseif (key == "f9") then
-    if (not IsNetworkGame()) then SetGamePaused(true) end
-    RunDiplomacyMenu()
-  elseif ((key == "g" and alt)) then
-	wyr.preferences.GrabMouse = GetGrabMouse()
-	SavePreferences()
-  elseif ((key == "m" and alt) or key == "f10" or key == "backspace") then
-    if (not IsNetworkGame()) then SetGamePaused(true) end
-    RunGameMenu()
-  elseif ((key == "s" and alt) or key == "f11") then
-    if (not IsNetworkGame()) then SetGamePaused(true) end
-    RunSaveMenu()
-  elseif ((key == "l" and alt) or key == "f12") then
-    if (not IsNetworkGame()) then SetGamePaused(true) end
-    RunGameLoadGameMenu()
-  elseif (key == "q" and (ctrl or alt)) then
-    if (not IsNetworkGame()) then SetGamePaused(true) end
-    RunQuitToMenuConfirmMenu()
-  elseif (key == "r" and (ctrl or alt)) then
-    if (not IsNetworkGame()) then SetGamePaused(true) end
-    RunRestartConfirmMenu()
-  elseif (key == "x" and (ctrl or alt)) then
-    if (not IsNetworkGame()) then SetGamePaused(true) end
-    RunExitConfirmMenu()
-  else
-    return false
-  end
-  return true
+	if ((key == "h" and (ctrl or alt)) or key == "f1") then
+		if (not IsNetworkGame()) then SetGamePaused(true) end
+		RunHelpMenu()
+	elseif (key == "f5") then
+		if (not IsNetworkGame()) then SetGamePaused(true) end
+		RunGameOptionsMenu()
+	elseif (key == "f7") then
+		if (not IsNetworkGame()) then SetGamePaused(true) end
+		RunGameSoundOptionsMenu()
+	elseif (key == "f8") then
+		if (not IsNetworkGame()) then SetGamePaused(true) end
+		RunPreferencesMenu()
+	elseif (key == "f9") then
+		if (not IsNetworkGame()) then SetGamePaused(true) end
+		RunDiplomacyMenu()
+	elseif ((key == "g" and alt)) then
+		wyr.preferences.GrabMouse = GetGrabMouse()
+		SavePreferences()
+	elseif ((key == "m" and alt) or key == "f10" or key == "backspace") then
+		if (not IsNetworkGame()) then SetGamePaused(true) end
+		RunGameMenu()
+	elseif ((key == "s" and alt) or key == "f11") then
+		if (GrandStrategy == false) then
+			if (not IsNetworkGame()) then SetGamePaused(true) end
+			RunSaveMenu()
+		end
+	elseif ((key == "l" and alt) or key == "f12") then
+		if (GrandStrategy == false) then
+			if (not IsNetworkGame()) then SetGamePaused(true) end
+			RunGameLoadGameMenu()
+		end
+	elseif (key == "q" and (ctrl or alt)) then
+		if (not IsNetworkGame()) then SetGamePaused(true) end
+		RunQuitToMenuConfirmMenu()
+	elseif (key == "r" and (ctrl or alt)) then
+		if (not IsNetworkGame()) then SetGamePaused(true) end
+		RunRestartConfirmMenu()
+	elseif (key == "x" and (ctrl or alt)) then
+		if (not IsNetworkGame()) then SetGamePaused(true) end
+		RunExitConfirmMenu()
+	else
+		return false
+	end
+	return true
 end
 
 local function HandleIneditorCommandKey(key, ctrl, alt, shift)
