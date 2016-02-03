@@ -67,6 +67,10 @@ https://github.com/Andrettin/Wyrmsun
 * Abilities
 - Added "Puncture" learnable active ability (icon by Leo), available for units capable of making melee thrusting attacks.
 
+* Factions
+- Added support for factions using a different language than their civilizations.
+- The England and Scotland factions now use English for proper name generation.
+
 * Grand Strategy
 - Fixed issue which caused custom heroes to not be placed in the province properly after the "On the Vanaquisl" event mission.
 - Fixed issue which caused the screen to be partially blackened after certain event missions.

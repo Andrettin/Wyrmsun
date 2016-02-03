@@ -48,8 +48,24 @@ DefineLanguage("dwarven", {
 DefineLanguage("english", {
 	Name = "English",
 	NameTranslations = {
-		"Lisboa", "Lisbon",
-		"Wien", "Vienna"
+		-- German to English
+		"Bernhard", "Bernard",
+		"Franz", "Francis",
+		"Friedrich", "Frederick",
+		"Hannover", "Hanover",
+		"Heinrich", "Henry",
+		"Hessen", "Hesse",
+		"Johann", "John",
+		"Karl", "Charles",
+		"Ludwig", "Lewis",
+		"Peter", "Peter",
+		"Thuringen", "Thuringia",
+		"Westphalien", "Westphalia",
+		"Wien", "Vienna",
+		"Wilhelm", "William",
+		"Württemberg", "Wurtemberg",
+		-- Portuguese to English
+		"Lisboa", "Lisbon"
 	}
 })
 

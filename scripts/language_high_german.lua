@@ -642,7 +642,7 @@ DefineLanguageNoun("Mann", {
 	PluralNominative = "Männer",
 	Gender = "Masculine",
 	SuffixSingular = true,
-	SuffixTypeName = {"person"} -- example: Hermann, Karlmann
+	SuffixTypeName = {"person"} -- examples: Hermann, Karlmann
 })
 
 DefineLanguageNoun("Mark", {
@@ -711,6 +711,14 @@ DefineLanguageNoun("Otto", {
 	Language = "high-german",
 	Meanings = {},
 	SingularNominative = "Otto",
+	NameSingular = true,
+	TypeName = {"person"}
+})
+
+DefineLanguageNoun("Peter", {
+	Language = "high-german",
+	Meanings = {},
+	SingularNominative = "Peter",
 	NameSingular = true,
 	TypeName = {"person"}
 })
