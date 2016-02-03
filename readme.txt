@@ -72,6 +72,9 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed issue which caused the screen to be partially blackened after certain event missions.
 - Fixed issue which allow players to save/load scenarios from within a grand strategy battle by using the save/load hotkeys.
 
+* Heroes
+- An error message is now given when an invalid character is entered for a custom hero's name.
+
 * Items
 - Scrolls can now drop from town hall and stronghold type buildings (scrolls always have a property associated with them).
 - Added "Suebi Allegiance" spell for scrolls, which allows Teuton units to transform into their Suebi faction-specific equivalents (if any).

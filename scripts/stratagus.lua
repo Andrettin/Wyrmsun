@@ -1751,10 +1751,16 @@ end
 -------------------------------------------------------------------------------
 
 -- Andrettin: new function for checking whether array include a certain value or not
-function GetArrayIncludes(array, item)
+function GetArrayIncludes(array, item, ignore_case)
     for key, value in pairs(array) do
-        if (value == item) then
-        	return true
+		if (type(item) == "string" and type(value) == "string" and ignore_case) then
+			if (string.lower(value) == string.lower(item)) then
+				return true
+			end
+		else
+			if (value == item) then
+				return true
+			end
         end
     end
     return false

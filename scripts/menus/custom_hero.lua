@@ -164,8 +164,10 @@ function CustomHeroCreationMenu(world, quest_menu)
 			
 			if (hero_name:getText() == "") then
 				GenericDialog("Error", "The hero's name cannot be empty.")
-			elseif (GetArrayIncludes(GetCustomHeroes(), hero_full_name)) then
-				GenericDialog("Error", "There is already a custom hero with that combination of name and surname.")
+			elseif (GetArrayIncludes(GetCustomHeroes(), hero_full_name, true)) then
+				GenericDialog("Error", "There is already another custom hero with that combination of name and surname.")
+			elseif (IsNameValidForCustomHero(hero_full_name) == false) then
+				GenericDialog("Error", "The custom hero's name contains an invalid character.")
 			else
 				DefineCustomHero(hero_full_name, {
 					Name = hero_name:getText(),
@@ -251,8 +253,10 @@ function CustomHeroCivilizationAdvancementMenu(world, quest_menu)
 			
 			if (hero_name:getText() == "") then
 				GenericDialog("Error", "The hero's name cannot be empty.")
-			elseif (GetArrayIncludes(non_current_custom_heroes, hero_full_name)) then
+			elseif (GetArrayIncludes(non_current_custom_heroes, hero_full_name, true)) then
 				GenericDialog("Error", "There is already another custom hero with that combination of name and surname.")
+			elseif (IsNameValidForCustomHero(hero_full_name) == false) then
+				GenericDialog("Error", "The custom hero's name contains an invalid character.")
 			else
 				ChangeCustomHeroCivilization(GetCurrentCustomHero(), string.lower(hero_civilization_list[hero_civilization:getSelected() + 1]), hero_name:getText(), hero_family_name:getText())
 				menu:stop()
