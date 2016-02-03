@@ -73,7 +73,7 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed issue which allow players to save/load scenarios from within a grand strategy battle by using the save/load hotkeys.
 
 * Heroes
-- An error message is now given when an invalid character is entered for a custom hero's name.
+- An error message is now given when an invalid custom hero name is entered (if it has an invalid character or contains only spaces).
 
 * Items
 - Scrolls can now drop from town hall and stronghold type buildings (scrolls always have a property associated with them).
