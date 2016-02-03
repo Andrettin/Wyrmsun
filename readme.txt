@@ -82,6 +82,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added Fafnismol (literary work, scroll) (+1% damage bonus vs. dragons) (dropped by dwarven Mead Halls and Bastions).
 - Added Reginsmol (literary work, scroll) (+1% backstab bonus) (dropped by dwarven Mead Halls and Bastions).
 - Added Alvissmol (literary work, scroll) (+1 mana) (dropped by dwarven Mead Halls and Bastions).
+- "Right-click to use" no longer appears in an item's popup if the item cannot be currently used (i.e. if the unit doesn't fulfill the conditions for a scroll to be used).
 
 * Miscellaneous
 - Added support for damage bonus vs. dragons. This damage bonus affects wyrms, and will affect any other draconic creatures added later to the game.

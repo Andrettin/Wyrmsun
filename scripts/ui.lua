@@ -1248,10 +1248,10 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {Equipped = "only"}, TextColor = "white", HighlightColor = "yellow",
 					More = {"Text", {Text = _("Right-click to de-equip"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 				},
-				{ 	Condition = {Consumable = "only", Work = "false"}, TextColor = "white", HighlightColor = "yellow",
+				{ 	Condition = {Consumable = "only", CanUse = "only", Work = "false"}, TextColor = "white", HighlightColor = "yellow",
 					More = {"Text", {Text = _("Right-click to use"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 				},
-				{ 	Condition = {Work = "only", ReadWork = "false"}, TextColor = "white", HighlightColor = "yellow",
+				{ 	Condition = {Work = "only", CanUse = "only", ReadWork = "false"}, TextColor = "white", HighlightColor = "yellow",
 					More = {"Text", {Text = _("Right-click to read"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {Work = "only", ReadWork = "only"}, TextColor = "white", HighlightColor = "yellow",
