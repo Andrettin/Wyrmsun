@@ -98,6 +98,9 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed an issue which caused unit/building proper names to overlap with other parts of the interface if a word in them was too long.
 - Fixed an issue which caused the player to be able to see others' buildings on the minimap if the player destroyed their own town hall.
 
+* Modding
+- Added support for redefining civilizations and factions.
+
 * Units
 - When right-clicking on a tile-based resource, workers who are already carrying the resource at maximum capacity will now return goods and then begin harvesting.
 - When right-clicking on a unit-based resource, workers who are already carrying the resource at maximum capacity will now begin harvesting after returning goods.
