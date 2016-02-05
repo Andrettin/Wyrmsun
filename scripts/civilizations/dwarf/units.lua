@@ -129,8 +129,11 @@ DefineUnitType("unit-dwarven-axefighter", { Name = _("Axefighter"),
 	Parent = "unit-template-infantry",
 	Civilization = "dwarf",
 	Description = _("Dwarven axefighters wield mighty battle axes, which make them feared opponents in close-range combat. Veteran axefighters often use the pay they've managed to spare to purchase steel armor for themselves at the local smithy."),
-	Image = {"file", "dwarf/units/dwarven_axefighter_unarmed.png", "size", {72, 72}},
+	Image = {"file", "dwarf/units/dwarf_body_warrior_shield.png", "size", {72, 72}},
 	LayerImages = {
+		{"layer", "right-arm", "file", "dwarf/units/dwarf_right_arm_warrior.png"},
+--		{"layer", "clothing-right-arm", "file", "dwarf/units/shoulder_pad_right_arm_warrior.png"},
+--		{"layer", "clothing-left-arm", "file", "dwarf/units/shoulder_pad_left_arm.png"},
 		{"layer", "weapon", "file", "dwarf/units/axe.png"},
 		{"layer", "shield", "file", "dwarf/units/round_shield.png"}
 	},
@@ -146,8 +149,9 @@ DefineUnitType("unit-dwarven-axefighter", { Name = _("Axefighter"),
 	Variations = {
 		{
 			"variation-id", "red-hair",
-			"upgrade-forbidden", "upgrade-old"
+--			"upgrade-forbidden", "upgrade-old"
 		},
+		--[[
 		{
 			"variation-id", "gray-hair",
 			"file", "dwarf/units/dwarven_axefighter_gray_hair.png",
@@ -176,6 +180,7 @@ DefineUnitType("unit-dwarven-axefighter", { Name = _("Axefighter"),
 			"icon", "icon-dwarven-axefighter-brown-hair",
 			"upgrade-forbidden", "upgrade-old"
 		}
+		--]]
 	},
 	Sounds = {
 		"selected", "basic-dwarf-voices-selected-group",
