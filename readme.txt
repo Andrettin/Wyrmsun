@@ -114,6 +114,9 @@ https://github.com/Andrettin/Wyrmsun
 - Brising Miners have their own portrait (if the player has the Brising Faction Flair DLC).
 - Workers will now look to see if any trees have regrown closer to their drop-off point when going to harvest lumber.
 
+* Upgrades
+- Update to the Spatha's icon (by Leo).
+
 -----------------------------------------------------------------------
 - 1.9.9
 -----------------------------------------------------------------------
