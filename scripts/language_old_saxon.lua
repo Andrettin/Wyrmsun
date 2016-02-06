@@ -194,10 +194,14 @@ DefineLanguageVerb("Scrīban", { -- Source: Winfred P. Lehmann, "A Grammar of Pr
 	Infinitive = "Scrīban"
 })
 
-DefineLanguageVerb("Sehan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
+DefineLanguageVerb("Sehan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5; Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
 	Language = "old-saxon",
 	Meanings = {"See"},
-	Infinitive = "Sehan"
+	Infinitive = "Sehan",
+	SingularFirstPersonPast = "Sah",
+	SingularThirdPersonPast = "Sah",
+	PluralFirstPersonPast = "Sāwum",
+	ParticiplePast = "Gisewan"
 })
 
 DefineLanguageVerb("Werthan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.

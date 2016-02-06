@@ -176,6 +176,12 @@ DefineLanguageNoun("Hurđ", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	SingularNominative = "Hurđ"
 })
 
+DefineLanguageNoun("Kona", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
+	Language = "old-norse",
+	Meanings = {"Woman"},
+	SingularNominative = "Kona"
+})
+
 DefineLanguageNoun("Korn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-norse",
 	Meanings = {"Grain"}, -- derived from Proto-Germanic "Kŕnam", which has the meaning of "grain"
@@ -309,6 +315,18 @@ DefineLanguageVerb("Grenna", { -- Source: Sean Crist, "An Analysis of *z loss in
 	Infinitive = "Grenna"
 })
 
+DefineLanguageVerb("Koma", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
+	Language = "old-norse",
+	Meanings = {"Come"},
+	Infinitive = "Koma"
+})
+
+DefineLanguageVerb("Hnīga", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
+	Language = "old-norse",
+	Meanings = {"Bow"},
+	Infinitive = "Hnīga"
+})
+
 DefineLanguageVerb("Nara", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "old-norse",
 	Meanings = {"Live"},
@@ -350,6 +368,18 @@ DefineLanguageAdjective("Fūll", { -- Source: Winfred P. Lehmann, "A Grammar of 
 	Language = "old-norse",
 	Meanings = {"Foul"}, -- derived from the Proto-Germanic "Fūla", which means "Foul"
 	Positive = "Fūll"
+})
+
+DefineLanguageAdjective("Hvītr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
+	Language = "old-norse",
+	Meanings = {"White"},
+	Positive = "Hvītr"
+})
+
+DefineLanguageAdjective("Kvikr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
+	Language = "old-norse",
+	Meanings = {"Alive"},
+	Positive = "Kvikr"
 })
 
 DefineLanguageAdjective("Langr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.

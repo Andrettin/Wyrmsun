@@ -145,6 +145,12 @@ DefineLanguageNoun("Érā", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	SingularGenitive = "Érā"
 })
 
+DefineLanguageNoun("Híppos", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
+	Language = "greek",
+	Meanings = {"Horse"},
+	SingularNominative = "Híppos"
+})
+
 DefineLanguageNoun("Kúrtos", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "greek",
 	Meanings = {"Cage"},
@@ -223,6 +229,12 @@ DefineLanguageVerb("Baínō", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Language = "greek",
 	Meanings = {"Come"}, -- apparently, but not entirely clear from source
 	Infinitive = "Baínō"
+})
+
+DefineLanguageVerb("Hépomai", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
+	Language = "greek",
+	Meanings = {"Follow"},
+	Infinitive = "Hépomai"
 })
 
 DefineLanguageVerb("Ídmen", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.

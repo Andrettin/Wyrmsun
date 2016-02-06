@@ -56,6 +56,12 @@ DefineLanguageNoun("Aihts", { -- Source: Richard M. Runge, "The Phonetic Realiza
 	SingularNominative = "Aihts"
 })
 
+DefineLanguageNoun("Aihʷa", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
+	Language = "gothic",
+	Meanings = {"Horse"},
+	SingularNominative = "Aihʷa"
+})
+
 DefineLanguageNoun("Aírþa", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "gothic",
 	Meanings = {"Earth"}, -- derived from Proto-Germanic "Erþō", which means "Earth"
@@ -262,6 +268,12 @@ DefineLanguageNoun("Nahts", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	SingularNominative = "Nahts"
 })
 
+DefineLanguageNoun("Qino", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
+	Language = "gothic",
+	Meanings = {"Woman"},
+	SingularNominative = "Qino"
+})
+
 DefineLanguageNoun("Raus", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
 	Language = "gothic",
 	Meanings = {"Tube"}, -- seemingly etymologically, if not actually
@@ -298,6 +310,12 @@ DefineLanguageNoun("Sauhts", { -- Source: Richard M. Runge, "The Phonetic Realiz
 	Language = "gothic",
 	Meanings = {"Sickness"},
 	SingularNominative = "Sauhts"
+})
+
+DefineLanguageNoun("Siuns", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
+	Language = "gothic",
+	Meanings = {"Face"},
+	SingularNominative = "Siuns"
 })
 
 DefineLanguageNoun("Sunnō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
@@ -356,6 +374,12 @@ DefineLanguageVerb("Biudan", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	ParticiplePast = "Báuþ" -- "offered" / "ordered"
 })
 
+DefineLanguageVerb("Ganasjan", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
+	Language = "gothic",
+	Meanings = {"Make Healthy", "Heal", "Rescue"},
+	Infinitive = "Ganasjan" -- source gives "(ga)nasjan"
+})
+
 DefineLanguageVerb("Hausjan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
 	Language = "gothic",
 	Meanings = {"Hear"},
@@ -372,6 +396,12 @@ DefineLanguageVerb("Hlaupan", { -- Source: Richard M. Runge, "The Phonetic Reali
 	Language = "gothic",
 	Meanings = {"Run"},
 	Infinitive = "Hlaupan"
+})
+
+DefineLanguageVerb("Hneiwan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
+	Language = "gothic",
+	Meanings = {"Bow"},
+	Infinitive = "Hneiwan"
 })
 
 DefineLanguageVerb("Itan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 3, Subsection 1.
@@ -393,10 +423,10 @@ DefineLanguageVerb("Laisjan", { -- Source: Sean Crist, "An Analysis of *z loss i
 	Infinitive = "Laisjan" -- causative verb
 })
 
-DefineLanguageVerb("Ganasjan", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
+DefineLanguageVerb("Qiman", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 	Language = "gothic",
-	Meanings = {"Make Healthy", "Heal", "Rescue"},
-	Infinitive = "Ganasjan" -- source gives "(ga)nasjan"
+	Meanings = {"Come"},
+	Infinitive = "Qiman"
 })
 
 DefineLanguageVerb("Saihan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
@@ -504,6 +534,12 @@ DefineLanguageAdjective("Hauhs", { -- Source: Richard M. Runge, "The Phonetic Re
 	Positive = "Hauhs"
 })
 
+DefineLanguageAdjective("Hʷeits", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
+	Language = "gothic",
+	Meanings = {"White"},
+	Positive = "Hʷeits"
+})
+
 DefineLanguageAdjective("Juggs", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
 	Language = "gothic",
 	Meanings = {"Young"},
@@ -528,6 +564,12 @@ DefineLanguageAdjective("Maiza", { -- Source: Richard M. Runge, "The Phonetic Re
 	Positive = "Maiza", -- Lehmann gives "Máiza", while Runge gives "Maiza"
 	Comparative = "Maiza", -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242; Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
 	Superlative = "Maists" -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
+})
+
+DefineLanguageAdjective("Qius", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
+	Language = "gothic",
+	Meanings = {"Alive"},
+	Positive = "Qius"
 })
 
 DefineLanguageAdjective("Raíhts", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.

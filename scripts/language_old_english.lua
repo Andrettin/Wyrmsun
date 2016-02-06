@@ -82,6 +82,12 @@ DefineLanguageNoun("Cost", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	SingularNominative = "Cost"
 })
 
+DefineLanguageNoun("Cwene", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
+	Language = "old-english",
+	Meanings = {"Woman"},
+	SingularNominative = "Cwene"
+})
+
 DefineLanguageNoun("Duru", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-english",
 	Meanings = {"Door"}, -- derived from Proto-Germanic "Durez", which has the meaning of "door"
@@ -93,6 +99,12 @@ DefineLanguageNoun("Ealdorneru", { -- Source: Sean Crist, "An Analysis of *z los
 	Meanings = {"Saving of a Life"},
 	SingularNominative = "Ealdorneru",
 	Gender = "Feminine"
+})
+
+DefineLanguageNoun("Eoh", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
+	Language = "old-english",
+	Meanings = {"Horse"},
+	SingularNominative = "Eoh"
 })
 
 DefineLanguageNoun("Eorþe", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 238; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
@@ -144,6 +156,12 @@ DefineLanguageNoun("Gereord", { -- Source: Sean Crist, "An Analysis of *z loss i
 	Meanings = {"Meal", "Feast", "Food"},
 	SingularNominative = "Gereord",
 	Gender = "Neuter"
+})
+
+DefineLanguageNoun("Gesihþ", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
+	Language = "old-english",
+	Meanings = {"Sight"},
+	SingularNominative = "Gesihþ"
 })
 
 DefineLanguageNoun("Gierd", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
@@ -510,6 +528,12 @@ DefineLanguageVerb("Cēowan", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	-- source also gives the forms "cēaw", "cuwon" and "cowen" (presumably conjugations of the verb)
 })
 
+DefineLanguageVerb("Cuman", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
+	Language = "old-english",
+	Meanings = {"Come"},
+	Infinitive = "Cuman"
+})
+
 DefineLanguageVerb("Etan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 3, Subsection 1.
 	Language = "old-english",
 	Meanings = {"Eat"},
@@ -545,6 +569,12 @@ DefineLanguageVerb("Helpan", { -- Source: Richard M. Runge, "The Phonetic Realiz
 	Language = "old-english",
 	Meanings = {"Help"},
 	Infinitive = "Helpan"
+})
+
+DefineLanguageVerb("Hnīgan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
+	Language = "old-english",
+	Meanings = {"Bow"},
+	Infinitive = "Hnīgan"
 })
 
 DefineLanguageVerb("Leornian", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
@@ -584,18 +614,23 @@ DefineLanguageVerb("Scrīfan", { -- Source: Winfred P. Lehmann, "A Grammar of Pr
 	Infinitive = "Scrīfan"
 })
 
-DefineLanguageVerb("Seah", { -- should be infinitive form; Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 238.
-	Language = "old-english",
-	Meanings = {"Saw"},
-	-- infinitive form?
-	SingularThirdPersonPast = "Seah"
-})
-
 DefineLanguageVerb("Sēoðan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 3, Subsection 2.
 	Language = "old-english",
 	Meanings = {"Boil"},
 	Infinitive = "Sēoðan"
 	-- source also gives the forms "sēað", "sudon" and "sodden" (presumably conjugations of the verb)
+})
+
+DefineLanguageVerb("Sēon", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5; Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 238.
+	Language = "old-english",
+	Meanings = {"See"},
+	Infinitive = "Sēon",
+	SingularFirstPersonPast = "Sēah",
+	SingularThirdPersonPast = "Sēah", -- Runge gives "Seah" instead
+	PluralFirstPersonPast = "Sēgon", -- in the Anglian variety of Old English
+	ParticiplePast = "Gesegen", -- in the Anglian variety of Old English
+--	PluralFirstPersonPast = "Sāwon", -- in the West Saxon variety of Old English
+--	ParticiplePast = "Sewen" -- in the West Saxon variety of Old English
 })
 
 DefineLanguageVerb("Standan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 3, Subsection 1.
@@ -669,6 +704,12 @@ DefineLanguageAdjective("Cildisc", { -- Source: Alaric Hall, "The Meanings of El
 	Positive = "Cildisc"
 })
 
+DefineLanguageAdjective("Cwic", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
+	Language = "old-english",
+	Meanings = {"Alive"},
+	Positive = "Cwic" -- source gives the word as "Cwic(u)"
+})
+
 DefineLanguageAdjective("Denisc", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 100.
 	Language = "old-english",
 	Meanings = {"Danish"},
@@ -691,6 +732,12 @@ DefineLanguageAdjective("Gydig", { -- Source: Alaric Hall, "The Meanings of Elf 
 	Language = "old-english",
 	Meanings = {"Possessed (by a God)"},
 	Positive = "Gydig"
+})
+
+DefineLanguageAdjective("Hwīt", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
+	Language = "old-english",
+	Meanings = {"White"},
+	Positive = "Hwīt"
 })
 
 DefineLanguageAdjective("Long", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.

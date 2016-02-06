@@ -240,6 +240,10 @@ DefineLanguage("proto-germanic", {
 	Name = "Proto-Germanic"
 })
 
+DefineLanguage("proto-indo-european", {
+	Name = "Proto-Indo-European"
+})
+
 DefineLanguage("russian", {
 	Name = "Russian"
 })
@@ -301,6 +305,7 @@ Load("scripts/language_old_prussian.lua")
 Load("scripts/language_old_saxon.lua")
 Load("scripts/language_old_slavic.lua")
 Load("scripts/language_old_swedish.lua")
+Load("scripts/language_proto_indo_european.lua")
 Load("scripts/language_russian.lua")
 Load("scripts/language_sanskrit.lua")
 Load("scripts/language_ukrainian.lua")

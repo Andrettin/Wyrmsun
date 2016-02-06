@@ -25,6 +25,12 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineLanguageNoun("Áśvas", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
+	Language = "sanskrit",
+	Meanings = {"Horse"},
+	SingularNominative = "Áśvas"
+})
+
 DefineLanguageNoun("Bhrā́tā", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "sanskrit",
 	Meanings = {"Brother"},
@@ -113,6 +119,12 @@ DefineLanguageVerb("Bódhati", { -- Source: Winfred P. Lehmann, "A Grammar of Pr
 	Infinitive = "Bódhati"
 })
 
+DefineLanguageVerb("Gámati", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
+	Language = "sanskrit",
+	Meanings = {"Go"},
+	Infinitive = "Gámati"
+})
+
 DefineLanguageVerb("Stighnoti", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
 	Language = "sanskrit",
 	Meanings = {"Climb"},
@@ -129,6 +141,12 @@ DefineLanguageAdjective("Pū́tis", { -- Source: Winfred P. Lehmann, "A Grammar 
 	Language = "sanskrit",
 	Meanings = {"Foul"},
 	Positive = "Pū́tis"
+})
+
+DefineLanguageAdjective("Śvetá", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
+	Language = "sanskrit",
+	Meanings = {"White"},
+	Positive = "Śvetá"
 })
 
 DefineLanguageAdposition("Upári", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.

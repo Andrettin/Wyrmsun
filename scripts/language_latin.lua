@@ -164,6 +164,12 @@ DefineLanguageVerb("Alucinare", { -- Source: Alaric Hall, "The Meanings of Elf a
 	Infinitive = "Alucinare" -- presumably it is the infinitive
 })
 
+DefineLanguageVerb("Cōnīveō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
+	Language = "latin",
+	Meanings = {"Shut the Eyes"},
+	Infinitive = "Cōnīveō"
+})
+
 DefineLanguageVerb("Dūcō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Sections 3-4.
 	Language = "latin",
 	Meanings = {"Lead"},
@@ -188,16 +194,22 @@ DefineLanguageVerb("Scrībere", { -- Source: Winfred P. Lehmann, "A Grammar of P
 	Infinitive = "Scrībere"
 })
 
+DefineLanguageVerb("Sequor", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
+	Language = "latin",
+	Meanings = {"Follow"},
+	Infinitive = "Sequor"
+})
+
 DefineLanguageVerb("Spuō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
 	Language = "latin",
 	Meanings = {"Spit"},
 	Infinitive = "Spuō"
 })
 
-DefineLanguageVerb("Venio", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+DefineLanguageVerb("Veniō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Sections 3, 5.
 	Language = "latin",
 	Meanings = {"Come"}, -- apparently, but not entirely clear from source
-	Infinitive = "Venio"
+	Infinitive = "Veniō" -- alternatively written as "Venio" by the source
 })
 
 DefineLanguageAdjective("Captus", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.

@@ -25,21 +25,20 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageNoun("Mīzhda", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 7.
-	Language = "avestan",
-	Meanings = {"Reward"},
-	SingularNominative = "Mīzhda",
-	Gender = "Neuter"
+DefineLanguageNoun("Gʷen", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
+	Language = "proto-indo-european",
+	Meanings = {"Woman"},
+	SingularNominative = "Gʷen"
 })
 
-DefineLanguageNoun("Yārə", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
-	Language = "avestan",
-	Meanings = {"Year"},
-	SingularNominative = "Yārə"
+DefineLanguageVerb("Kneygʷh", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
+	Language = "proto-indo-european",
+	Meanings = {"Bow"},
+	Infinitive = "Kneygʷh"
 })
 
-DefineLanguageAdjective("Spaetō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
-	Language = "avestan",
-	Meanings = {"White"},
-	Positive = "Spaetō"
+DefineLanguageAdjective("Gʷīwos", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
+	Language = "proto-indo-european",
+	Meanings = {"Alive"},
+	Positive = "Gʷīwos"
 })

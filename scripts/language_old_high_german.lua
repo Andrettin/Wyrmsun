@@ -134,6 +134,12 @@ DefineLanguageNoun("Gart", { -- is this the same word as the "Gart" which has an
 	SingularNominative = "Gart"
 })
 
+DefineLanguageNoun("Gisiht", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
+	Language = "old-english",
+	Meanings = {"Sight"},
+	SingularNominative = "Gisiht"
+})
+
 DefineLanguageNoun("Hagazussa", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 200.
 	Language = "old-high-german",
 	Meanings = {"Travelling Actor or Minstrel who Performs in Women's Clothing"},
@@ -377,6 +383,12 @@ DefineLanguageVerb("Helfan", { -- Source: Richard M. Runge, "The Phonetic Realiz
 	Infinitive = "Helfan"
 })
 
+DefineLanguageVerb("Hnīgan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
+	Language = "old-high-german",
+	Meanings = {"Bow"},
+	Infinitive = "Hnīgan"
+})
+
 DefineLanguageVerb("Hōren", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
 	Language = "old-high-german",
 	Meanings = {"Hear"},
@@ -420,16 +432,26 @@ DefineLanguageVerb("Nerjan", { -- Source: Sean Crist, "An Analysis of *z loss in
 	Infinitive = "Nerjan" -- source also gives alternative forms "Nerren" and "Neren"
 })
 
+DefineLanguageVerb("Queman", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
+	Language = "old-high-german",
+	Meanings = {"Come"},
+	Infinitive = "Queman"
+})
+
 DefineLanguageVerb("Scrīban", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "old-high-german",
 	Meanings = {"Write"},
 	Infinitive = "Scrīban"
 })
 
-DefineLanguageVerb("Sehan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
+DefineLanguageVerb("Sehan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 	Language = "old-high-german",
 	Meanings = {"See"},
-	Infinitive = "Sehan"
+	Infinitive = "Sehan",
+	SingularFirstPersonPast = "Sah",
+	SingularThirdPersonPast = "Sah",
+	PluralFirstPersonPast = "Sāhum",
+	ParticiplePast = "Gisewan"
 })
 
 DefineLanguageVerb("Standan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 3, Subsection 1.
