@@ -31,6 +31,24 @@ DefineLanguageNoun("Bhrā́tā", { -- Source: Winfred P. Lehmann, "A Grammar of 
 	SingularNominative = "Bhrā́tā"
 })
 
+DefineLanguageNoun("Dāhas", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
+	Language = "sanskrit",
+	Meanings = {"Heat"},
+	SingularNominative = "Dāhas"
+})
+
+DefineLanguageNoun("Duhitā́", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
+	Language = "sanskrit",
+	Meanings = {"Daughter"},
+	SingularNominative = "Duhitā́"
+})
+
+DefineLanguageNoun("Gardhas", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
+	Language = "sanskrit",
+	Meanings = {"Greed"},
+	SingularNominative = "Gardhas"
+})
+
 DefineLanguageNoun("Késara", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 7.
 	Language = "sanskrit",
 	Meanings = {"Hair", "Mane"},
@@ -77,10 +95,28 @@ DefineLanguageNoun("Páśu", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	SingularNominative = "Páśu"
 })
 
+DefineLanguageNoun("Snuṣā́", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
+	Language = "sanskrit",
+	Meanings = {"Daughter-in-Law"},
+	SingularNominative = "Snuṣā́"
+})
+
 DefineLanguageNoun("Váhanam", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "sanskrit",
 	Meanings = {"Vehicle"},
 	SingularNominative = "Váhanam"
+})
+
+DefineLanguageVerb("Bódhati", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
+	Language = "sanskrit",
+	Meanings = {"Observe"},
+	Infinitive = "Bódhati"
+})
+
+DefineLanguageVerb("Stighnoti", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
+	Language = "sanskrit",
+	Meanings = {"Climb"},
+	Infinitive = "Stighnoti"
 })
 
 DefineLanguageVerb("Vidma", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
@@ -98,4 +134,9 @@ DefineLanguageAdjective("Pū́tis", { -- Source: Winfred P. Lehmann, "A Grammar 
 DefineLanguageAdposition("Upári", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "sanskrit",
 	Meanings = {"Over"}
+})
+
+DefineLanguageNumeral("Saptá", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
+	Language = "sanskrit",
+	Number = 7
 })

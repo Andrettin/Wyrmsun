@@ -164,7 +164,7 @@ DefineLanguageVerb("Alucinare", { -- Source: Alaric Hall, "The Meanings of Elf a
 	Infinitive = "Alucinare" -- presumably it is the infinitive
 })
 
-DefineLanguageVerb("Dūcō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+DefineLanguageVerb("Dūcō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Sections 3-4.
 	Language = "latin",
 	Meanings = {"Lead"},
 	SingularFirstPersonPresent = "Dūcō"
@@ -188,10 +188,22 @@ DefineLanguageVerb("Scrībere", { -- Source: Winfred P. Lehmann, "A Grammar of P
 	Infinitive = "Scrībere"
 })
 
+DefineLanguageVerb("Spuō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
+	Language = "latin",
+	Meanings = {"Spit"},
+	Infinitive = "Spuō"
+})
+
 DefineLanguageVerb("Venio", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "latin",
 	Meanings = {"Come"}, -- apparently, but not entirely clear from source
 	Infinitive = "Venio"
+})
+
+DefineLanguageAdjective("Captus", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
+	Language = "latin",
+	Meanings = {"Captured"},
+	Positive = "Captus"
 })
 
 DefineLanguageAdjective("Longus", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.

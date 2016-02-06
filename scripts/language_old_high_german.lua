@@ -272,6 +272,12 @@ DefineLanguageNoun("Sēula", { -- Source: Richard M. Runge, "The Phonetic Realiz
 	SingularNominative = "Sēula" -- source also gives "Sēla"
 })
 
+DefineLanguageNoun("Snura", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
+	Language = "old-high-german",
+	Meanings = {"Daughter-in-Law"},
+	SingularNominative = "Snura"
+})
+
 DefineLanguageNoun("Suht", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
 	Language = "old-high-german",
 	Meanings = {"Sickness"},
@@ -282,6 +288,12 @@ DefineLanguageNoun("Sunno", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Language = "old-high-german",
 	Meanings = {"Sun"}, -- derived from Proto-Germanic "Sunōn", which has the meaning of "Sun"
 	SingularNominative = "Sunno"
+})
+
+DefineLanguageNoun("Swigar", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
+	Language = "old-high-german",
+	Meanings = {"Mother-in-Law"},
+	SingularNominative = "Swigar"
 })
 
 DefineLanguageNoun("Swīn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
@@ -464,9 +476,16 @@ DefineLanguageVerb("Zahar", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Infinitive = "Zahar"
 })
 
+DefineLanguageVerb("Zeh", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
+	Language = "old-high-german",
+	Meanings = {"Accuse"},
+	SingularFirstPersonPast = "Zeh",
+	PluralFirstPersonPast = "Zigum"
+})
+
 DefineLanguageVerb("Ziohan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-high-german",
-	Meanings = {"Push"}, -- derived from Proto-Germanic "Téuχanan", which has the meaning of "push"
+	Meanings = {"Pull"}, -- derived from Proto-Germanic "Téuχanan", which has the meaning of "pull"
 	Infinitive = "Ziohan"
 })
 
@@ -546,4 +565,9 @@ DefineLanguageAdposition("Aba", { -- Lehmann also gives the alternative form "ab
 DefineLanguageAdposition("Ubir", { -- Lehmann also gives the alternative form "ubar"; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-high-german",
 	Meanings = {"Over"} -- derived from the Proto-Germanic "Ufar", which means "Over"
+})
+
+DefineLanguageNumeral("Sibun", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
+	Language = "old-high-german",
+	Number = 7
 })

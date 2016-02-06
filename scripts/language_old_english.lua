@@ -373,6 +373,12 @@ DefineLanguageNoun("Sealticge", { -- Source: Alaric Hall, "The Meanings of Elf a
 	Gender = "Feminine" -- presumably, given the source is talking about occupations for women
 })
 
+DefineLanguageNoun("Snoru", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
+	Language = "old-english",
+	Meanings = {"Daughter-in-Law"},
+	SingularNominative = "Snoru"
+})
+
 DefineLanguageNoun("Sperehealf", { -- also given as Sperehand; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 197.
 	Language = "old-english",
 	Meanings = {"Spear-Side", "Patrilineal Ancestry"},
@@ -389,6 +395,12 @@ DefineLanguageNoun("Sunna", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Language = "old-english",
 	Meanings = {"Sun"}, -- derived from Proto-Germanic "Sunōn", which has the meaning of "Sun"
 	SingularNominative = "Sunna"
+})
+
+DefineLanguageNoun("Swæger", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
+	Language = "old-english",
+	Meanings = {"Mother-in-Law"},
+	SingularNominative = "Swæger"
 })
 
 DefineLanguageNoun("Swīn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
@@ -466,7 +478,7 @@ DefineLanguageVerb("Aseowen", { -- Source: Richard M. Runge, "The Phonetic Reali
 	ParticiplePast = "Aseowen"
 })
 
-DefineLanguageVerb("Bēodan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+DefineLanguageVerb("Bēodan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Sections 2, 4.
 	Language = "old-english",
 	Meanings = {"Bid", "Offer", "Order"},
 	Infinitive = "Bēodan"
@@ -598,6 +610,13 @@ DefineLanguageVerb("Stīgan", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Infinitive = "Stīgan"
 })
 
+DefineLanguageVerb("Táh", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
+	Language = "old-english",
+	Meanings = {"Accuse"},
+	SingularFirstPersonPast = "Táh",
+	PluralFirstPersonPast = "Tigon"
+})
+
 DefineLanguageVerb("Tēar", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 3, Subsection 1.
 	Language = "old-english",
 	Meanings = {"Tear"},
@@ -606,8 +625,10 @@ DefineLanguageVerb("Tēar", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 
 DefineLanguageVerb("Tēon", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-english",
-	Meanings = {"Push"}, -- derived from Proto-Germanic "Téuχanan", which has the meaning of "push"
-	Infinitive = "Tēon"
+	Meanings = {"Pull"}, -- derived from Proto-Germanic "Téuχanan", which has the meaning of "pull"
+	Infinitive = "Tēon",
+	SingularThirdPersonPast = "Tēah", -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
+	PluralThirdPersonPast = "Tugon" -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
 })
 
 DefineLanguageVerb("Tiohhian", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 239.

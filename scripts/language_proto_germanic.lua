@@ -655,7 +655,7 @@ DefineLanguageVerb("Tawido", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 
 DefineLanguageVerb("Téuχanan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Sections 2-3.
 	Language = "proto-germanic",
-	Meanings = {"Push"}, -- but later the same source gives the meaning as "Pull" (though it does write the word as "Teuχanan" instead in that instance)
+	Meanings = {"Pull"}, -- the same source gives the meaning as "Push" previously (though when it gives the meaning as "Pull" it writes the word as "Teuχanan" instead in that instance), but the meaning of "Pull" given later seems correct, since it is repeated later on as well
 	Infinitive = "Téuχanan"
 })
 

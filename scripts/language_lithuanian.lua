@@ -54,6 +54,12 @@ DefineLanguageVerb("Saĩsti", { -- Source: Alaric Hall, "The Meanings of Elf and
 	Infinitive = "Saĩsti"
 })
 
+DefineLanguageVerb("Spiáuju", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
+	Language = "lithuanian",
+	Meanings = {"Spit"},
+	Infinitive = "Spiáuju"
+})
+
 DefineLanguageVerb("Źengiù", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
 	Language = "lithuanian",
 	Meanings = {"Go", "Stride"},

@@ -92,10 +92,22 @@ DefineLanguageNoun("Bōka", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	SingularNominative = "Bōka"
 })
 
+DefineLanguageNoun("Dags", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
+	Language = "gothic",
+	Meanings = {"Day"},
+	SingularNominative = "Dags"
+})
+
 DefineLanguageNoun("Dails", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
 	Language = "gothic",
 	Meanings = {"Part"},
 	SingularNominative = "Dails"
+})
+
+DefineLanguageNoun("Dauhtar", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
+	Language = "gothic",
+	Meanings = {"Daughter"},
+	SingularNominative = "Dauhtar"
 })
 
 DefineLanguageNoun("Daúr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
@@ -399,6 +411,18 @@ DefineLanguageVerb("Siggwan", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Infinitive = "Siggwan"
 })
 
+DefineLanguageVerb("Skeinan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
+	Language = "gothic",
+	Meanings = {"Shine"},
+	Infinitive = "Skeinan"
+})
+
+DefineLanguageVerb("Speiwan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
+	Language = "gothic",
+	Meanings = {"Spit"},
+	Infinitive = "Speiwan"
+})
+
 DefineLanguageVerb("Standan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 3, Subsection 1.
 	Language = "gothic",
 	Meanings = {"Stand"},
@@ -411,7 +435,7 @@ DefineLanguageVerb("Stautan", { -- Source: Richard M. Runge, "The Phonetic Reali
 	Infinitive = "Stautan"
 })
 
-DefineLanguageVerb("Steigan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+DefineLanguageVerb("Steigan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Sections 2, 4.
 	Language = "gothic",
 	Meanings = {"Climb"},
 	Infinitive = "Steigan",
@@ -426,7 +450,7 @@ DefineLanguageVerb("Tagr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 
 DefineLanguageVerb("Tiuhan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "gothic",
-	Meanings = {"Push"}, -- derived from Proto-Germanic "Téuχanan", which has the meaning of "push"
+	Meanings = {"Pull"}, -- derived from Proto-Germanic "Téuχanan", which has the meaning of "pull"
 	Infinitive = "Tiuhan"
 })
 
@@ -466,6 +490,12 @@ DefineLanguageAdjective("Fūls", { -- Source: Winfred P. Lehmann, "A Grammar of 
 	Language = "gothic",
 	Meanings = {"Foul"}, -- derived from the Proto-Germanic "Fūla", which means "Foul"
 	Positive = "Fūls"
+})
+
+DefineLanguageAdjective("Grēdags", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
+	Language = "gothic",
+	Meanings = {"Hungry"},
+	Positive = "Grēdags"
 })
 
 DefineLanguageAdjective("Hauhs", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
@@ -546,6 +576,11 @@ DefineLanguageAdposition("Af", { -- Source: Winfred P. Lehmann, "A Grammar of Pr
 DefineLanguageAdposition("Ufar", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "gothic",
 	Meanings = {"Over"} -- derived from the Proto-Germanic "Ufar", which means "Over"
+})
+
+DefineLanguageNumeral("Sibun", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
+	Language = "gothic",
+	Number = 7
 })
 
 DefineLanguageNumeral("Ainlif", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.

@@ -195,6 +195,24 @@ DefineLanguageNoun("Polis", { -- should be written as the original Greek name (w
 	SuffixTypeName = {"settlement"} -- examples: "Amphipolis", "Callipolis", "Neapolis" (Naples)
 })
 
+DefineLanguageNoun("Skiá", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
+	Language = "greek",
+	Meanings = {"Shadow"},
+	SingularNominative = "Skiá"
+})
+
+DefineLanguageNoun("Téphra", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
+	Language = "greek",
+	Meanings = {"Ashes"},
+	SingularNominative = "Téphra" -- is this the plural form?
+})
+
+DefineLanguageNoun("Thugátēr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
+	Language = "sanskrit",
+	Meanings = {"Daughter"},
+	SingularNominative = "Thugátēr"
+})
+
 DefineLanguageNoun("Thúrā", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "greek",
 	Meanings = {"Door"},
@@ -219,13 +237,13 @@ DefineLanguageVerb("Pheídomai", { -- Source: Winfred P. Lehmann, "A Grammar of 
 	SingularFirstPersonPresent = "Pheídomai"
 })
 
-DefineLanguageVerb("Peúthomai", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+DefineLanguageVerb("Peúthomai", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Sections 3-4.
 	Language = "greek",
 	Meanings = {"Examine"},
 	Infinitive = "Peúthomai"
 })
 
-DefineLanguageVerb("Steíkhō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+DefineLanguageVerb("Steíkhō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Sections 3-4.
 	Language = "greek",
 	Meanings = {"Climb"},
 	Infinitive = "Steíkhō"
@@ -260,6 +278,11 @@ DefineLanguagePronoun("Égō", { -- Source: Winfred P. Lehmann, "A Grammar of Pr
 	Language = "greek",
 	Meanings = {"I"}, -- is a cognate of Proto-Germanic "eka"/"ek", so possibly has the same meaning
 	Nominative = "Égō"
+})
+
+DefineLanguageNumeral("Heptá", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
+	Language = "greek",
+	Number = 7
 })
 
 DefineLanguageNumeral("Oktṓ", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
