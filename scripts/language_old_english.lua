@@ -88,6 +88,12 @@ DefineLanguageNoun("Cwene", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	SingularNominative = "Cwene"
 })
 
+DefineLanguageNoun("Cynn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
+	Language = "old-english",
+	Meanings = {"Race"},
+	SingularNominative = "Cynn"
+})
+
 DefineLanguageNoun("Duru", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-english",
 	Meanings = {"Door"}, -- derived from Proto-Germanic "Durez", which has the meaning of "door"
@@ -377,6 +383,12 @@ DefineLanguageNoun("Sangestre", { -- Source: Alaric Hall, "The Meanings of Elf a
 	Gender = "Feminine" -- presumably, given the source is talking about occupations for women
 })
 
+DefineLanguageNoun("Sceadu", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
+	Language = "old-english",
+	Meanings = {"Shadow"},
+	SingularNominative = "Sceadu"
+})
+
 DefineLanguageNoun("Scernicge", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, pp. 77-78.
 	Language = "old-english",
 	Meanings = {"Actress"},
@@ -468,6 +480,12 @@ DefineLanguageNoun("Weg", { -- Source: Richard M. Runge, "The Phonetic Realizati
 	Language = "old-english",
 	Meanings = {"Way"},
 	SingularNominative = "Weg"
+})
+
+DefineLanguageNoun("Wer", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
+	Language = "old-english",
+	Meanings = {"Man"},
+	SingularNominative = "Wer"
 })
 
 DefineLanguageNoun("Wif", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 85.
@@ -589,23 +607,35 @@ DefineLanguageVerb("Lǣran", { -- Source: Sean Crist, "An Analysis of *z loss in
 	Infinitive = "Lǣran" -- causative verb
 })
 
-DefineLanguageVerb("Ligon", { -- should be infinitive form; Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
-	Language = "old-english",
-	Meanings = {"Lent"}, -- "we lent"
-	-- infinitive form?
-	PluralFirstPersonPast = "Ligon" -- source actually gives "-ligon"
-})
-
 DefineLanguageVerb("Nerian", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "old-english",
 	Meanings = {"Save", "Protect"},
 	Infinitive = "Nerian"
 })
 
+DefineLanguageVerb("Niman", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
+	Language = "old-english",
+	Meanings = {"Take", "Accept"},
+	Infinitive = "Niman"
+})
+
+DefineLanguageVerb("Onlēon", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
+	Language = "old-english",
+	Meanings = {"Lend"},
+	Infinitive = "Onlēon",
+	PluralFirstPersonPast = "Ligon" -- source actually gives "-ligon"; Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
+})
+
 DefineLanguageVerb("Rīdan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
 	Language = "old-english",
 	Meanings = {"Travel"},
 	Infinitive = "Rīdan"
+})
+
+DefineLanguageVerb("Sceadwian", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
+	Language = "old-english",
+	Meanings = {"Shadow"}, -- "to shadow"
+	Infinitive = "Sceadwian"
 })
 
 DefineLanguageVerb("Scrīfan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
@@ -728,6 +758,12 @@ DefineLanguageAdjective("Fūl", { -- Source: Winfred P. Lehmann, "A Grammar of P
 	Positive = "Fūl"
 })
 
+DefineLanguageAdjective("Geong", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
+	Language = "old-english",
+	Meanings = {"Young"},
+	Positive = "Geong"
+})
+
 DefineLanguageAdjective("Gydig", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 94.
 	Language = "old-english",
 	Meanings = {"Possessed (by a God)"},
@@ -758,6 +794,12 @@ DefineLanguageAdjective("Mennisc", { -- Source: Alaric Hall, "The Meanings of El
 	Language = "old-english",
 	Meanings = {"Human"},
 	Positive = "Mennisc"
+})
+
+DefineLanguageAdjective("Rēad", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
+	Language = "old-english",
+	Meanings = {"Red"},
+	Positive = "Rēad"
 })
 
 DefineLanguageAdjective("Sælig", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 94.

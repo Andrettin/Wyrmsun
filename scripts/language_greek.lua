@@ -243,6 +243,12 @@ DefineLanguageVerb("Ídmen", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	PluralFirstPersonPresent = "Ídmen"
 })
 
+DefineLanguageVerb("Némō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
+	Language = "greek",
+	Meanings = {"Distribute"},
+	Infinitive = "Némō"
+})
+
 DefineLanguageVerb("Pheídomai", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "greek",
 	Meanings = {"Separate"},

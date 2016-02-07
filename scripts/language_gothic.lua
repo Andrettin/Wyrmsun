@@ -231,6 +231,12 @@ DefineLanguageNoun("Kaúrn", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	SingularNominative = "Kaúrn"
 })
 
+DefineLanguageNoun("Kuni", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
+	Language = "gothic",
+	Meanings = {"Race"},
+	SingularNominative = "Kuni"
+})
+
 DefineLanguageNoun("Laun", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
 	Language = "gothic",
 	Meanings = {"Pay"}, -- source gives German word "Lohn" as transation
@@ -318,6 +324,12 @@ DefineLanguageNoun("Siuns", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	SingularNominative = "Siuns"
 })
 
+DefineLanguageNoun("Skadus", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
+	Language = "gothic",
+	Meanings = {"Shadow"},
+	SingularNominative = "Skadus"
+})
+
 DefineLanguageNoun("Sunnō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "gothic",
 	Meanings = {"Sun"}, -- derived from Proto-Germanic "Sunōn", which means "Sun"
@@ -328,6 +340,12 @@ DefineLanguageNoun("Swein", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Language = "gothic",
 	Meanings = {"Pig"}, -- derived from the Proto-Germanic "Swīnaz", which means "Pig"
 	SingularNominative = "Swein"
+})
+
+DefineLanguageNoun("Wair", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
+	Language = "gothic",
+	Meanings = {"Man"},
+	SingularNominative = "Wair"
 })
 
 DefineLanguageNoun("Waurms", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
@@ -410,17 +428,29 @@ DefineLanguageVerb("Itan", { -- Source: Richard M. Runge, "The Phonetic Realizat
 	Infinitive = "Itan"
 })
 
-DefineLanguageVerb("Laihun", { -- should be infinitive form; Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
-	Language = "gothic",
-	Meanings = {"Lent"}, -- "we lent"
-	-- infinitive form?
-	PluralFirstPersonPast = "Laihun"
-})
-
 DefineLanguageVerb("Laisjan", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 4-5.
 	Language = "gothic",
 	Meanings = {"Teach"},
 	Infinitive = "Laisjan" -- causative verb
+})
+
+DefineLanguageVerb("Leihʷan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
+	Language = "gothic",
+	Meanings = {"Lent"},
+	Infinitive = "Leihʷan",
+	PluralFirstPersonPast = "Laihun" -- should be infinitive form; Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
+})
+
+DefineLanguageVerb("Malan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
+	Language = "gothic",
+	Meanings = {"Grind"},
+	Infinitive = "Malan"
+})
+
+DefineLanguageVerb("Niman", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
+	Language = "gothic",
+	Meanings = {"Take", "Accept"},
+	Infinitive = "Niman"
 })
 
 DefineLanguageVerb("Qiman", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
@@ -500,7 +530,7 @@ DefineLanguageVerb("Witan", { -- Source: Richard M. Runge, "The Phonetic Realiza
 	Language = "gothic",
 	Meanings = {"Know", "Keep Watch Over"},
 	Infinitive = "Witan",
-	SingularFirstPersonPresent = "Wait",
+	SingularFirstPersonPresent = "Wáit", -- Lehmann 1.3.3 gives "Wait", while 2.6 in that same source gives "Wáit"; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
 	PluralFirstPersonPresent = "Witum"
 })
 
@@ -540,10 +570,10 @@ DefineLanguageAdjective("Hʷeits", { -- Source: Winfred P. Lehmann, "A Grammar o
 	Positive = "Hʷeits"
 })
 
-DefineLanguageAdjective("Juggs", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
+DefineLanguageAdjective("Juggs", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
 	Language = "gothic",
 	Meanings = {"Young"},
-	Positive = "Juggs"
+	Positive = "Juggs" -- Lehmann gives "Jugga-" instead
 })
 
 DefineLanguageAdjective("Lagg", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
@@ -576,6 +606,12 @@ DefineLanguageAdjective("Raíhts", { -- Source: Winfred P. Lehmann, "A Grammar o
 	Language = "gothic",
 	Meanings = {"Right", "Straight"}, -- derived from Proto-Germanic "Reχtaz", which means "Right, Straight"
 	Positive = "Raíhts"
+})
+
+DefineLanguageAdjective("Ráudái", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
+	Language = "gothic",
+	Meanings = {"Red"},
+	Positive = "Ráudái"
 })
 
 DefineLanguageAdjective("Rauþs", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.

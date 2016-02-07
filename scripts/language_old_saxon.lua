@@ -88,6 +88,12 @@ DefineLanguageNoun("Hurth", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	SingularNominative = "Hurth"
 })
 
+DefineLanguageNoun("Kunni", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
+	Language = "old-saxon",
+	Meanings = {"Race"},
+	SingularNominative = "Kunni"
+})
+
 DefineLanguageNoun("Līfnara", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "old-saxon",
 	Meanings = {"Food", "Nourishment"},

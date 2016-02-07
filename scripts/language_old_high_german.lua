@@ -80,6 +80,12 @@ DefineLanguageNoun("Chien", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	SingularNominative = "Chien" -- source also gives alternative forms "Kien" and "Kên"
 })
 
+DefineLanguageNoun("Chunni", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
+	Language = "old-high-german",
+	Meanings = {"Race"},
+	SingularNominative = "Chunni"
+})
+
 DefineLanguageNoun("Corn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-high-german",
 	Meanings = {"Grain"}, -- derived from Proto-Germanic "Kŕnam", which has the meaning of "grain"
@@ -278,6 +284,12 @@ DefineLanguageNoun("Sēula", { -- Source: Richard M. Runge, "The Phonetic Realiz
 	SingularNominative = "Sēula" -- source also gives "Sēla"
 })
 
+DefineLanguageNoun("Skato", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
+	Language = "old-high-german",
+	Meanings = {"Shadow"},
+	SingularNominative = "Skato"
+})
+
 DefineLanguageNoun("Snura", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
 	Language = "old-high-german",
 	Meanings = {"Daughter-in-Law"},
@@ -338,6 +350,12 @@ DefineLanguageNoun("Weit", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Meanings = {"Woad"},
 	SingularNominative = "Weit",
 	Gender = "Masculine"
+})
+
+DefineLanguageNoun("Wer", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
+	Language = "old-high-german",
+	Meanings = {"Man"},
+	SingularNominative = "Wer"
 })
 
 DefineLanguageNoun("Wurm", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
@@ -413,17 +431,23 @@ DefineLanguageVerb("Lernēn", { -- Source: Sean Crist, "An Analysis of *z loss i
 	Infinitive = "Lernēn" -- source also gives "Lirnēn" as an alternative
 })
 
+DefineLanguageVerb("Līhan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
+	Language = "old-high-german",
+	Meanings = {"Lend"},
+	Infinitive = "Līhan",
+	PluralFirstPersonPast = "Liwum" -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
+})
+
 DefineLanguageVerb("Loufan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
 	Language = "old-high-german",
 	Meanings = {"Run"},
 	Infinitive = "Loufan"
 })
 
-DefineLanguageVerb("Liwum", { -- should be infinitive form; Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
+DefineLanguageVerb("Malan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
 	Language = "old-high-german",
-	Meanings = {"Lent"}, -- "we lent"
-	-- infinitive form?
-	PluralFirstPersonPast = "Liwum"
+	Meanings = {"Grind"},
+	Infinitive = "Malan"
 })
 
 DefineLanguageVerb("Nerjan", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
@@ -442,6 +466,12 @@ DefineLanguageVerb("Scrīban", { -- Source: Winfred P. Lehmann, "A Grammar of Pr
 	Language = "old-high-german",
 	Meanings = {"Write"},
 	Infinitive = "Scrīban"
+})
+
+DefineLanguageVerb("Skatewen", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
+	Language = "old-high-german",
+	Meanings = {"Shadow"}, -- "to shadow"
+	Infinitive = "Skatewen"
 })
 
 DefineLanguageVerb("Sehan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
@@ -535,7 +565,7 @@ DefineLanguageAdjective("Hōh", { -- Source: Richard M. Runge, "The Phonetic Rea
 	Positive = "Hōh"
 })
 
-DefineLanguageAdjective("Jung", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
+DefineLanguageAdjective("Jung", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
 	Language = "old-high-german",
 	Meanings = {"Young"},
 	Positive = "Jung"

@@ -49,3 +49,9 @@ DefineLanguageVerb("Hudo", { -- Source: Alaric Hall, "The Meanings of Elf and El
 	Infinitive = "Hudo"
 })
 
+DefineLanguageAdjective("Ieu", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
+	Language = "welsh",
+	Meanings = {"Younger"},
+	Comparative = "Ieu" -- "younger"
+})
+

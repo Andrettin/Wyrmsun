@@ -323,6 +323,12 @@ DefineLanguageNoun("Kŕnam", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	SingularNominative = "Kŕnam"
 })
 
+DefineLanguageNoun("Kuni", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
+	Language = "proto-germanic",
+	Meanings = {"Race"},
+	SingularNominative = "Kuni"
+})
+
 DefineLanguageNoun("Landa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 184.
 	Language = "proto-germanic",
 	Meanings = {"Terra Firma", "Land", "Country"}, -- source gives the German words "terra firma, Land"
@@ -490,6 +496,12 @@ DefineLanguageNoun("Sēþiz", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Language = "proto-germanic",
 	Meanings = {"Seed"},
 	SingularNominative = "Sēþiz"
+})
+
+DefineLanguageNoun("Skadwas", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
+	Language = "proto-germanic",
+	Meanings = {"Shadow"},
+	SingularNominative = "Skadwas"
 })
 
 DefineLanguageNoun("Sunōn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.

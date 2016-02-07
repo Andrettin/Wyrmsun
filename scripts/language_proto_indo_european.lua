@@ -31,14 +31,50 @@ DefineLanguageNoun("Gʷen", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	SingularNominative = "Gʷen"
 })
 
+DefineLanguageNoun("Swīnos", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
+	Language = "proto-indo-european", -- late Proto-Indo-European
+	Meanings = {"Pig"},
+	SingularNominative = "Swīnos"
+})
+
+DefineLanguageNoun("Wiros", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
+	Language = "proto-indo-european",
+	Meanings = {"Man"},
+	SingularNominative = "Wiros"
+})
+
 DefineLanguageVerb("Kneygʷh", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 	Language = "proto-indo-european",
 	Meanings = {"Bow"},
 	Infinitive = "Kneygʷh"
 })
 
+DefineLanguageVerb("Leykʷ", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
+	Language = "proto-indo-european",
+	Meanings = {"Leave"},
+	Infinitive = "Leykʷ"
+})
+
+DefineLanguageVerb("Mel", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
+	Language = "proto-indo-european",
+	Meanings = {"Grind"},
+	Infinitive = "Mel"
+})
+
+DefineLanguageVerb("Nem", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
+	Language = "proto-indo-european",
+	Meanings = {"Take"},
+	Infinitive = "Nem"
+})
+
 DefineLanguageAdjective("Gʷīwos", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 	Language = "proto-indo-european",
 	Meanings = {"Alive"},
 	Positive = "Gʷīwos"
+})
+
+DefineLanguageAdjective("Rowdho", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
+	Language = "proto-indo-european",
+	Meanings = {"Red"},
+	Positive = "Rowdho"
 })

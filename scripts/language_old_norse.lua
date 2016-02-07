@@ -188,6 +188,12 @@ DefineLanguageNoun("Korn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	SingularNominative = "Korn"
 })
 
+DefineLanguageNoun("Kyn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
+	Language = "old-norse",
+	Meanings = {"Race"},
+	SingularNominative = "Kyn"
+})
+
 DefineLanguageNoun("Māttr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-norse",
 	Meanings = {"Might"}, -- derived from Proto-Germanic "Maχtiz", which has the meaning of "Might"
@@ -285,6 +291,12 @@ DefineLanguageNoun("Vegr", { -- Source: Richard M. Runge, "The Phonetic Realizat
 	SingularNominative = "Vegr"
 })
 
+DefineLanguageNoun("Verr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
+	Language = "old-norse",
+	Meanings = {"Man"},
+	SingularNominative = "Verr"
+})
+
 DefineLanguageVerb("Bauþ", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-norse",
 	Meanings = {"Offered"},
@@ -315,22 +327,40 @@ DefineLanguageVerb("Grenna", { -- Source: Sean Crist, "An Analysis of *z loss in
 	Infinitive = "Grenna"
 })
 
-DefineLanguageVerb("Koma", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
-	Language = "old-norse",
-	Meanings = {"Come"},
-	Infinitive = "Koma"
-})
-
 DefineLanguageVerb("Hnīga", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 	Language = "old-norse",
 	Meanings = {"Bow"},
 	Infinitive = "Hnīga"
 })
 
+DefineLanguageVerb("Koma", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
+	Language = "old-norse",
+	Meanings = {"Come"},
+	Infinitive = "Koma"
+})
+
+DefineLanguageVerb("Ljā", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
+	Language = "old-norse",
+	Meanings = {"Lend"},
+	Infinitive = "Ljā"
+})
+
+DefineLanguageVerb("Mala", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
+	Language = "old-norse",
+	Meanings = {"Grind"},
+	Infinitive = "Mala"
+})
+
 DefineLanguageVerb("Nara", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "old-norse",
 	Meanings = {"Live"},
 	Infinitive = "Nara"
+})
+
+DefineLanguageVerb("Nema", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
+	Language = "old-norse",
+	Meanings = {"Take", "Accept"},
+	Infinitive = "Nema"
 })
 
 DefineLanguageVerb("Stīga", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
@@ -394,6 +424,12 @@ DefineLanguageAdjective("Meiri", { -- Source: Sean Crist, "An Analysis of *z los
 	Positive = "Meiri", -- given by Lehmann, but it is not entirely clear if he meant that this is the positive version of the word
 	Comparative = "Meiri",
 	Superlative = "Mestr"
+})
+
+DefineLanguageAdjective("Rauðr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
+	Language = "old-norse",
+	Meanings = {"Red"},
+	Positive = "Rauðr"
 })
 
 DefineLanguageAdjective("Rēttr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
