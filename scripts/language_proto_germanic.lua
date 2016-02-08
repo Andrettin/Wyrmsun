@@ -895,6 +895,7 @@ DefineLanguageWord("Aχtō", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 
 DefineLanguageWord("Godagaz", {
 	Language = "proto-germanic",
+	Type = "noun",
 	Meanings = {"Goody", "Good One"},
 	SingularNominative = "Godagaz",
 	NameSingular = true,
@@ -903,6 +904,7 @@ DefineLanguageWord("Godagaz", {
 
 DefineLanguageWord("Hadu", {
 	Language = "proto-germanic",
+	Type = "noun",
 	Meanings = {"Battle"},
 	SingularNominative = "Hadu",
 	PrefixSingular = true,
@@ -911,6 +913,7 @@ DefineLanguageWord("Hadu", {
 
 DefineLanguageWord("Hagu", {
 	Language = "proto-germanic",
+	Type = "noun",
 	Meanings = {"Small Property"},
 	SingularNominative = "Hadu",
 	PrefixSingular = true,
@@ -919,6 +922,7 @@ DefineLanguageWord("Hagu", {
 
 DefineLanguageWord("Holta", {
 	Language = "proto-germanic",
+	Type = "noun",
 	Meanings = {"Wood"},
 	SingularNominative = "Holta",
 	PrefixSingular = true,
@@ -927,6 +931,7 @@ DefineLanguageWord("Holta", {
 
 DefineLanguageWord("Laikaz", {
 	Language = "proto-germanic",
+	Type = "noun",
 	Meanings = {"Dancer"},
 	SingularNominative = "Laikaz",
 	SuffixSingular = true,
@@ -935,6 +940,7 @@ DefineLanguageWord("Laikaz", {
 
 DefineLanguageWord("Ridaz", {
 	Language = "proto-germanic",
+	Type = "noun",
 	Meanings = {"Rider"},
 	SingularNominative = "Ridaz",
 	SuffixSingular = true,
@@ -943,6 +949,7 @@ DefineLanguageWord("Ridaz", {
 
 DefineLanguageWord("Riks", {
 	Language = "proto-germanic",
+	Type = "noun",
 	Meanings = {"Ruler"},
 	SingularNominative = "Riks",
 	SuffixSingular = true,
@@ -951,6 +958,7 @@ DefineLanguageWord("Riks", {
 
 DefineLanguageWord("Staldaz", {
 	Language = "proto-germanic",
+	Type = "noun",
 	Meanings = {"Owner"},
 	SingularNominative = "Staldaz",
 	SuffixSingular = true,
@@ -959,6 +967,7 @@ DefineLanguageWord("Staldaz", {
 
 DefineLanguageWord("Theuda", {
 	Language = "proto-germanic",
+	Type = "noun",
 	Meanings = {"People"},
 	SingularNominative = "Theuda",
 	PrefixSingular = true,
@@ -967,6 +976,7 @@ DefineLanguageWord("Theuda", {
 
 DefineLanguageWord("Wagigaz", {
 	Language = "proto-germanic",
+	Type = "noun",
 	Meanings = {"One Who Moves Along Impetuously"},
 	SingularNominative = "Wagigaz",
 	NameSingular = true,
@@ -975,6 +985,7 @@ DefineLanguageWord("Wagigaz", {
 
 DefineLanguageWord("Wiwaz", {
 	Language = "proto-germanic",
+	Type = "noun",
 	Meanings = {"Darter"},
 	SingularNominative = "Wiwaz",
 	NameSingular = true,
@@ -983,6 +994,7 @@ DefineLanguageWord("Wiwaz", {
 
 DefineLanguageWord("Wodu", {
 	Language = "proto-germanic",
+	Type = "noun",
 	Meanings = {"Fury"},
 	SingularNominative = "Wodu",
 	PrefixSingular = true,
