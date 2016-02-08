@@ -57,6 +57,7 @@ DefineLanguageWord("Ieu", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-G
 	Language = "welsh",
 	Type = "adjective",
 	Meanings = {"Younger"},
+	DerivesFrom = {"proto-indo-european", "adjective", "Yehw"},
 	Comparative = "Ieu" -- "younger"
 })
 

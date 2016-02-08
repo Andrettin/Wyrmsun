@@ -78,6 +78,7 @@ DefineLanguageWord("Hurth", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Language = "old-saxon",
 	Type = "noun",
 	Meanings = {"Wattle"}, -- derived from Proto-Germanic "Χŕdiz", which has the meaning of "wattle"
+	DerivesFrom = {"proto-germanic", "noun", "Χŕdiz"},
 	SingularNominative = "Hurth"
 })
 
@@ -85,6 +86,7 @@ DefineLanguageWord("Kunni", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Language = "old-saxon",
 	Type = "noun",
 	Meanings = {"Race"},
+	DerivesFrom = {"proto-germanic", "noun", "Kuni"},
 	SingularNominative = "Kunni"
 })
 
@@ -177,6 +179,7 @@ DefineLanguageWord("Beran", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Language = "old-saxon",
 	Type = "verb",
 	Meanings = {},
+	DerivesFrom = {"proto-germanic", "verb", "Beran"},
 	Infinitive = "Beran"
 })
 
@@ -192,6 +195,7 @@ DefineLanguageWord("Bītan", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Language = "old-saxon",
 	Type = "verb",
 	Meanings = {"Bite"},
+	DerivesFrom = {"proto-germanic", "verb", "Bītan"},
 	Infinitive = "Bītan"
 })
 
@@ -281,5 +285,6 @@ DefineLanguageWord("Reht", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Language = "old-saxon",
 	Type = "adjective",
 	Meanings = {"Right", "Straight"}, -- derived from Proto-Germanic "Reχtaz", which means "Right, Straight"
+	DerivesFrom = {"proto-germanic", "adjective", "Reχtaz"},
 	Positive = "Reht"
 })

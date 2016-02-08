@@ -29,6 +29,7 @@ DefineLanguageWord("Áśvas", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Language = "sanskrit",
 	Type = "noun",
 	Meanings = {"Horse"},
+	DerivesFrom = {"proto-indo-european", "noun", "Éḱwos"},
 	SingularNominative = "Áśvas"
 })
 
@@ -43,6 +44,7 @@ DefineLanguageWord("Bódhati", { -- Source: Winfred P. Lehmann, "A Grammar of Pr
 	Language = "sanskrit",
 	Type = "verb",
 	Meanings = {"Observe"},
+	DerivesFrom = {"proto-indo-european", "verb", "Bhewdh"},
 	Infinitive = "Bódhati"
 })
 
@@ -50,6 +52,7 @@ DefineLanguageWord("Dāhas", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Language = "sanskrit",
 	Type = "noun",
 	Meanings = {"Heat"},
+	DerivesFrom = {"proto-indo-european", "noun", "Dhagh"},
 	SingularNominative = "Dāhas"
 })
 
@@ -64,6 +67,7 @@ DefineLanguageWord("Gámati", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Language = "sanskrit",
 	Type = "verb",
 	Meanings = {"Go"},
+	DerivesFrom = {"proto-indo-european", "verb", "Gʷem"},
 	Infinitive = "Gámati"
 })
 
@@ -71,6 +75,7 @@ DefineLanguageWord("Gardhas", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Language = "sanskrit",
 	Type = "noun",
 	Meanings = {"Greed"},
+	DerivesFrom = {"proto-indo-european", "noun", "Ghredh"},
 	SingularNominative = "Gardhas"
 })
 
@@ -158,6 +163,7 @@ DefineLanguageWord("Śvetá", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Language = "sanskrit",
 	Type = "adjective",
 	Meanings = {"White"},
+	DerivesFrom = {"proto-indo-european", "adjective", "Ḱweyt"},
 	Positive = "Śvetá"
 })
 

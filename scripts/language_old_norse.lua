@@ -46,6 +46,7 @@ DefineLanguageWord("Ār", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-G
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Year"}, -- derived from Proto-Germanic "Yēra", which means "Year"
+	DerivesFrom = {"proto-germanic", "noun", "Yēra"},
 	SingularNominative = "Ār"
 })
 
@@ -53,6 +54,7 @@ DefineLanguageWord("Bōk", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Book"}, -- derived from Proto-Germanic "Bōks"; the source has the meaning for that word as "'tablet' > 'book'", but it is not clear if it means that the meaning became book in the child languages of Proto-Germanic, or within the timespan of the language itself
+	DerivesFrom = {"proto-germanic", "noun", "Bōks"},
 	SingularNominative = "Bōk"
 })
 
@@ -75,6 +77,7 @@ DefineLanguageWord("Dyrr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Door"}, -- derived from Proto-Germanic "Durez", which has the meaning of "door"
+	DerivesFrom = {"proto-germanic", "noun", "Durez"},
 	PluralNominative = "Dyrr"
 })
 
@@ -82,6 +85,7 @@ DefineLanguageWord("Fé", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-G
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Cattle"},
+	DerivesFrom = {"proto-germanic", "noun", "Fehu"},
 	SingularNominative = "Fé"
 })
 
@@ -96,6 +100,7 @@ DefineLanguageWord("Flōđ", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Flood"}, -- derived from the Proto-Germanic "Flōduz", which means "Flood"
+	DerivesFrom = {"proto-germanic", "noun", "Flōdus"},
 	SingularNominative = "Flōđ"
 })
 
@@ -103,6 +108,7 @@ DefineLanguageWord("Fōtr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Foot"}, -- derived from Proto-Germanic "Fōts", which has the meaning of "foot"
+	DerivesFrom = {"proto-germanic", "noun", "Fōts"},
 	SingularNominative = "Fōtr"
 })
 
@@ -118,6 +124,7 @@ DefineLanguageWord("Garđr", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Garden"}, -- derived from Proto-Germanic "Gárdiz", which has the meaning of "garden"
+	DerivesFrom = {"proto-germanic", "noun", "Gárdiz"},
 	SingularNominative = "Garđr"
 })
 
@@ -176,6 +183,7 @@ DefineLanguageWord("Hurđ", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Wattle"}, -- derived from Proto-Germanic "Χŕdiz", which has the meaning of "wattle"
+	DerivesFrom = {"proto-germanic", "noun", "Χŕdiz"},
 	SingularNominative = "Hurđ"
 })
 
@@ -183,6 +191,7 @@ DefineLanguageWord("Kona", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Woman"},
+	DerivesFrom = {"proto-indo-european", "noun", "Gʷen"},
 	SingularNominative = "Kona"
 })
 
@@ -190,6 +199,7 @@ DefineLanguageWord("Korn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Grain"}, -- derived from Proto-Germanic "Kŕnam", which has the meaning of "grain"
+	DerivesFrom = {"proto-germanic", "noun", "Kŕnam"},
 	SingularNominative = "Korn"
 })
 
@@ -197,6 +207,7 @@ DefineLanguageWord("Kyn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-G
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Race"},
+	DerivesFrom = {"proto-germanic", "noun", "Kuni"},
 	SingularNominative = "Kyn"
 })
 
@@ -204,6 +215,7 @@ DefineLanguageWord("Māttr", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Might"}, -- derived from Proto-Germanic "Maχtiz", which has the meaning of "Might"
+	DerivesFrom = {"proto-germanic", "noun", "Maχtiz"},
 	SingularNominative = "Māttr"
 })
 
@@ -233,6 +245,7 @@ DefineLanguageWord("Nātt", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Night"}, -- derived from Proto-Germanic "Naχts", which means "Night"
+	DerivesFrom = {"proto-germanic", "noun", "Naχts"},
 	SingularNominative = "Nātt"
 })
 
@@ -272,6 +285,7 @@ DefineLanguageWord("Sāđ", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Seed"}, -- derived from the Proto-Germanic "Sēþiz", which means "Seed"
+	DerivesFrom = {"proto-germanic", "noun", "Sēþiz"},
 	SingularNominative = "Sāđ"
 })
 
@@ -293,6 +307,7 @@ DefineLanguageWord("Sunna", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Sun"}, -- derived from Proto-Germanic "Sunōn", which has the meaning of "Sun"
+	DerivesFrom = {"proto-germanic", "noun", "Sunōn"},
 	SingularNominative = "Sunna"
 })
 
@@ -300,6 +315,7 @@ DefineLanguageWord("Svīn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Pig"}, -- derived from the Proto-Germanic "Swīnaz", which means "Pig"
+	DerivesFrom = {"proto-germanic", "noun", "Swīnaz"},
 	SingularNominative = "Svīn"
 })
 
@@ -307,6 +323,7 @@ DefineLanguageWord("Vagn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Wagon"},
+	DerivesFrom = {"proto-germanic", "noun", "Waganaz"}, -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	SingularNominative = "Vagn"
 })
 
@@ -336,6 +353,7 @@ DefineLanguageWord("Verr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Man"},
+	DerivesFrom = {"proto-indo-european", "noun", "Wiros"},
 	SingularNominative = "Verr"
 })
 
@@ -343,6 +361,7 @@ DefineLanguageWord("Bauþ", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Language = "old-norse",
 	Type = "verb",
 	Meanings = {"Offered"},
+	DerivesFrom = {"proto-germanic", "verb", "Beud"},
 	ParticiplePast = "Bauþ" -- "offered"
 })
 
@@ -350,6 +369,7 @@ DefineLanguageWord("Bera", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Language = "old-norse",
 	Type = "verb",
 	Meanings = {},
+	DerivesFrom = {"proto-germanic", "verb", "Beran"},
 	Infinitive = "Bera"
 })
 
@@ -357,6 +377,7 @@ DefineLanguageWord("Bīta", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Language = "old-norse",
 	Type = "verb",
 	Meanings = {"Bite"},
+	DerivesFrom = {"proto-germanic", "verb", "Bītan"},
 	Infinitive = "Bīta"
 })
 
@@ -378,6 +399,7 @@ DefineLanguageWord("Hnīga", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Language = "old-norse",
 	Type = "verb",
 	Meanings = {"Bow"},
+	DerivesFrom = {"proto-indo-european", "verb", "Kneygʷh"},
 	Infinitive = "Hnīga"
 })
 
@@ -385,6 +407,7 @@ DefineLanguageWord("Koma", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Language = "old-norse",
 	Type = "verb",
 	Meanings = {"Come"},
+	DerivesFrom = {"proto-indo-european", "verb", "Gʷem"},
 	Infinitive = "Koma"
 })
 
@@ -392,6 +415,7 @@ DefineLanguageWord("Ljā", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Language = "old-norse",
 	Type = "verb",
 	Meanings = {"Lend"},
+	DerivesFrom = {"proto-indo-european", "verb", "Leykʷ"},
 	Infinitive = "Ljā"
 })
 
@@ -399,6 +423,7 @@ DefineLanguageWord("Mala", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Language = "old-norse",
 	Type = "verb",
 	Meanings = {"Grind"},
+	DerivesFrom = {"proto-indo-european", "verb", "Mel"},
 	Infinitive = "Mala"
 })
 
@@ -413,6 +438,7 @@ DefineLanguageWord("Nema", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Language = "old-norse",
 	Type = "verb",
 	Meanings = {"Take", "Accept"},
+	DerivesFrom = {"proto-indo-european", "verb", "Nem"},
 	Infinitive = "Nema"
 })
 
@@ -420,6 +446,7 @@ DefineLanguageWord("Stīga", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Language = "old-norse",
 	Type = "verb",
 	Meanings = {"Climb"},
+	DerivesFrom = {"proto-germanic", "verb", "Steig"},
 	Infinitive = "Stīga"
 })
 
@@ -441,6 +468,7 @@ DefineLanguageWord("Vita", { -- Source: Richard M. Runge, "The Phonetic Realizat
 	Language = "old-norse",
 	Type = "verb",
 	Meanings = {"Know"},
+	DerivesFrom = {"proto-germanic", "verb", "Witum"},
 	Infinitive = "Vita",
 	PluralFirstPersonPresent = "Vitom" -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 })
@@ -449,6 +477,7 @@ DefineLanguageWord("Djūpr", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Language = "old-norse",
 	Type = "adjective",
 	Meanings = {"Deep"}, -- derived from Proto-Germanic "Déwpaz", which has the meaning of "deep"
+	DerivesFrom = {"proto-germanic", "adjective", "Déwpaz"},
 	Positive = "Djūpr"
 })
 
@@ -456,6 +485,7 @@ DefineLanguageWord("Fūll", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Language = "old-norse",
 	Type = "adjective",
 	Meanings = {"Foul"}, -- derived from the Proto-Germanic "Fūla", which means "Foul"
+	DerivesFrom = {"proto-germanic", "adjective", "Fūla"},
 	Positive = "Fūll"
 })
 
@@ -463,6 +493,7 @@ DefineLanguageWord("Hvītr", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Language = "old-norse",
 	Type = "adjective",
 	Meanings = {"White"},
+	DerivesFrom = {"proto-indo-european", "adjective", "Ḱweyt"},
 	Positive = "Hvītr"
 })
 
@@ -470,6 +501,7 @@ DefineLanguageWord("Kvikr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Language = "old-norse",
 	Type = "adjective",
 	Meanings = {"Alive"},
+	DerivesFrom = {"proto-indo-european", "adjective", "Gʷīwos"},
 	Positive = "Kvikr"
 })
 
@@ -477,6 +509,7 @@ DefineLanguageWord("Langr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Language = "old-norse",
 	Type = "adjective",
 	Meanings = {"Long"}, -- derived from Proto-Germanic "Langaz", which means "Long"
+	DerivesFrom = {"proto-germanic", "adjective", "Langaz"},
 	Positive = "Langr"
 })
 
@@ -484,6 +517,7 @@ DefineLanguageWord("Meiri", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Language = "old-norse",
 	Type = "adjective",
 	Meanings = {"More"},
+	DerivesFrom = {"proto-germanic", "adjective", "Mēria"},
 	Positive = "Meiri", -- given by Lehmann, but it is not entirely clear if he meant that this is the positive version of the word
 	Comparative = "Meiri",
 	Superlative = "Mestr"
@@ -493,6 +527,7 @@ DefineLanguageWord("Rauðr", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Language = "old-norse",
 	Type = "adjective",
 	Meanings = {"Red"},
+	DerivesFrom = {"proto-indo-european", "adjective", "Rowdho"},
 	Positive = "Rauðr"
 })
 
@@ -500,6 +535,7 @@ DefineLanguageWord("Rēttr", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Language = "old-norse",
 	Type = "adjective",
 	Meanings = {"Right", "Straight"}, -- derived from Proto-Germanic "Reχtaz", which means "Right, Straight"
+	DerivesFrom = {"proto-germanic", "adjective", "Reχtaz"},
 	Positive = "Rēttr"
 })
 
@@ -530,17 +566,20 @@ DefineLanguageWord("Þurr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Language = "old-norse",
 	Type = "adjective",
 	Meanings = {"Dry"}, -- derived from Proto-Germanic "Þrsúz", which has the meaning of "dry"
+	DerivesFrom = {"proto-germanic", "adjective", "Durez"},
 	Positive = "Þurr"
 })
 
 DefineLanguageWord("Af", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-norse",
 	Type = "adposition",
-	Meanings = {"From"} -- derived from Proto-Germanic "Af", which means "From"
+	Meanings = {"From"}, -- derived from Proto-Germanic "Af", which means "From"
+	DerivesFrom = {"proto-germanic", "adposition", "Af"}
 })
 
 DefineLanguageWord("Yfir", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-norse",
 	Type = "adposition",
-	Meanings = {"Over"} -- derived from the Proto-Germanic "Ufar", which means "Over"
+	Meanings = {"Over"}, -- derived from the Proto-Germanic "Ufar", which means "Over"
+	DerivesFrom = {"proto-germanic", "adposition", "Ufar"}
 })

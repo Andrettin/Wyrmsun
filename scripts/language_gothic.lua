@@ -36,6 +36,7 @@ DefineLanguageWord("Aihʷa", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Language = "gothic",
 	Type = "noun",
 	Meanings = {"Horse"},
+	DerivesFrom = {"proto-indo-european", "noun", "Éḱwos"},
 	SingularNominative = "Aihʷa"
 })
 
@@ -43,6 +44,7 @@ DefineLanguageWord("Aírþa", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Language = "gothic",
 	Type = "noun",
 	Meanings = {"Earth"}, -- derived from Proto-Germanic "Erþō", which means "Earth"
+	DerivesFrom = {"proto-germanic", "noun", "Erþō"},
 	SingularNominative = "Aírþa"
 })
 
@@ -96,6 +98,7 @@ DefineLanguageWord("Bōka", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Language = "gothic",
 	Type = "noun",
 	Meanings = {"Book"}, -- derived from Proto-Germanic "Bōks"; the source has the meaning for that word as "'tablet' > 'book'", but it is not clear if it means that the meaning became book in the child languages of Proto-Germanic, or within the timespan of the language itself
+	DerivesFrom = {"proto-germanic", "noun", "Bōks"},
 	SingularNominative = "Bōka"
 })
 
@@ -103,6 +106,7 @@ DefineLanguageWord("Dags", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Language = "gothic",
 	Type = "noun",
 	Meanings = {"Day"},
+	DerivesFrom = {"proto-germanic", "noun", "Dag"},
 	SingularNominative = "Dags"
 })
 
@@ -124,6 +128,7 @@ DefineLanguageWord("Daúr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Language = "gothic",
 	Type = "noun",
 	Meanings = {"Door"}, -- derived from Proto-Germanic "Durez", which has the meaning of "door"
+	DerivesFrom = {"proto-germanic", "noun", "Durez"},
 	SingularNominative = "Daúr"
 })
 
@@ -145,6 +150,7 @@ DefineLanguageWord("Faíhu", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Language = "gothic",
 	Type = "noun",
 	Meanings = {"Cattle"},
+	DerivesFrom = {"proto-germanic", "noun", "Fehu"},
 	SingularNominative = "Faíhu"
 })
 
@@ -159,6 +165,7 @@ DefineLanguageWord("Flōdus", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Language = "gothic",
 	Type = "noun",
 	Meanings = {"Flood"}, -- derived from the Proto-Germanic "Flōduz", which means "Flood"
+	DerivesFrom = {"proto-germanic", "noun", "Flōdus"},
 	SingularNominative = "Flōdus"
 })
 
@@ -173,6 +180,7 @@ DefineLanguageWord("Gards", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Language = "gothic",
 	Type = "noun",
 	Meanings = {"Garden"}, -- derived from Proto-Germanic "Gárdiz", which has the meaning of "garden"
+	DerivesFrom = {"proto-germanic", "noun", "Gárdiz"},
 	SingularNominative = "Gards"
 })
 
@@ -202,6 +210,7 @@ DefineLanguageWord("Haúrds", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Language = "gothic",
 	Type = "noun",
 	Meanings = {"Wattle"}, -- derived from Proto-Germanic "Χŕdiz", which has the meaning of "wattle"
+	DerivesFrom = {"proto-germanic", "noun", "Χŕdiz"},
 	SingularNominative = "Haúrds"
 })
 
@@ -237,6 +246,7 @@ DefineLanguageWord("Jēr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Language = "gothic",
 	Type = "noun",
 	Meanings = {"Year"}, -- derived from Proto-Germanic "Yēra", which means "Year"
+	DerivesFrom = {"proto-germanic", "noun", "Yēra"},
 	SingularNominative = "Jēr"
 })
 
@@ -251,6 +261,7 @@ DefineLanguageWord("Kaúrn", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Language = "gothic",
 	Type = "noun",
 	Meanings = {"Grain"}, -- derived from Proto-Germanic "Kŕnam", which has the meaning of "grain"
+	DerivesFrom = {"proto-germanic", "noun", "Kŕnam"},
 	SingularNominative = "Kaúrn"
 })
 
@@ -258,6 +269,7 @@ DefineLanguageWord("Kuni", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Language = "gothic",
 	Type = "noun",
 	Meanings = {"Race"},
+	DerivesFrom = {"proto-germanic", "noun", "Kuni"},
 	SingularNominative = "Kuni"
 })
 
@@ -279,6 +291,7 @@ DefineLanguageWord("Mahts", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Language = "gothic",
 	Type = "noun",
 	Meanings = {"Might"}, -- derived from Proto-Germanic "Maχtiz", which has the meaning of "Might"
+	DerivesFrom = {"proto-germanic", "noun", "Maχtiz"},
 	SingularNominative = "Mahts"
 })
 
@@ -307,6 +320,7 @@ DefineLanguageWord("Nahts", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Language = "gothic",
 	Type = "noun",
 	Meanings = {"Night"}, -- derived from Proto-Germanic "Naχts", which means "Night"
+	DerivesFrom = {"proto-germanic", "noun", "Naχts"},
 	SingularNominative = "Nahts"
 })
 
@@ -314,6 +328,7 @@ DefineLanguageWord("Qino", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Language = "gothic",
 	Type = "noun",
 	Meanings = {"Woman"},
+	DerivesFrom = {"proto-indo-european", "noun", "Gʷen"},
 	SingularNominative = "Qino"
 })
 
@@ -365,6 +380,7 @@ DefineLanguageWord("Siuns", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Language = "gothic",
 	Type = "noun",
 	Meanings = {"Face"},
+	DerivesFrom = {"proto-indo-european", "verb", "Sekʷ"},
 	SingularNominative = "Siuns"
 })
 
@@ -372,6 +388,7 @@ DefineLanguageWord("Skadus", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Language = "gothic",
 	Type = "noun",
 	Meanings = {"Shadow"},
+	DerivesFrom = {"proto-germanic", "noun", "Skadwas"},
 	SingularNominative = "Skadus"
 })
 
@@ -379,6 +396,7 @@ DefineLanguageWord("Sunnō", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Language = "gothic",
 	Type = "noun",
 	Meanings = {"Sun"}, -- derived from Proto-Germanic "Sunōn", which means "Sun"
+	DerivesFrom = {"proto-germanic", "noun", "Sunōn"},
 	SingularNominative = "Sunnō"
 })
 
@@ -386,6 +404,7 @@ DefineLanguageWord("Swein", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Language = "gothic",
 	Type = "noun",
 	Meanings = {"Pig"}, -- derived from the Proto-Germanic "Swīnaz", which means "Pig"
+	DerivesFrom = {"proto-germanic", "noun", "Swīnaz"},
 	SingularNominative = "Swein"
 })
 
@@ -405,6 +424,7 @@ DefineLanguageWord("Wair", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Language = "gothic",
 	Type = "noun",
 	Meanings = {"Man"},
+	DerivesFrom = {"proto-indo-european", "noun", "Wiros"},
 	SingularNominative = "Wair"
 })
 
@@ -422,11 +442,12 @@ DefineLanguageWord("Wigs", { -- Source: Richard M. Runge, "The Phonetic Realizat
 	SingularNominative = "Wigs"
 })
 
-DefineLanguageWord("Andbeitan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
+DefineLanguageWord("Beitan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "gothic",
 	Type = "verb",
 	Meanings = {}, -- cognates have "bite" as their meaning
-	Infinitive = "Andbeitan",
+	DerivesFrom = {"proto-germanic", "verb", "Bītan"},
+	Infinitive = "Beitan", -- source gives ("(and-)beitan")
 	SingularThirdPersonPast = "Andbait",
 	PluralThirdPersonPast = "Andbitan",
 	ParticiplePast = "Andbitans"
@@ -436,6 +457,7 @@ DefineLanguageWord("Bairan", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Language = "gothic",
 	Type = "verb",
 	Meanings = {},
+	DerivesFrom = {"proto-germanic", "verb", "Beran"},
 	Infinitive = "Bairan",
 	SingularThirdPersonPast = "Bar", -- correct?
 	PluralThirdPersonPast = "Baurun", -- correct?
@@ -454,6 +476,7 @@ DefineLanguageWord("Biudan", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Language = "gothic",
 	Type = "verb",
 	Meanings = {"Bid", "Offer", "Order"},
+	DerivesFrom = {"proto-germanic", "verb", "Beud"},
 	Infinitive = "Biudan",
 	ParticiplePast = "Báuþ" -- "offered" / "ordered"
 })
@@ -490,6 +513,7 @@ DefineLanguageWord("Hneiwan", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Language = "gothic",
 	Type = "verb",
 	Meanings = {"Bow"},
+	DerivesFrom = {"proto-indo-european", "verb", "Kneygʷh"},
 	Infinitive = "Hneiwan"
 })
 
@@ -511,14 +535,16 @@ DefineLanguageWord("Leihʷan", { -- Source: Winfred P. Lehmann, "A Grammar of Pr
 	Language = "gothic",
 	Type = "verb",
 	Meanings = {"Lent"},
+	DerivesFrom = {"proto-indo-european", "verb", "Leykʷ"},
 	Infinitive = "Leihʷan",
-	PluralFirstPersonPast = "Laihun" -- should be infinitive form; Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
+	PluralFirstPersonPast = "Laihun" -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
 })
 
 DefineLanguageWord("Malan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
 	Language = "gothic",
 	Type = "verb",
 	Meanings = {"Grind"},
+	DerivesFrom = {"proto-indo-european", "verb", "Mel"},
 	Infinitive = "Malan"
 })
 
@@ -526,6 +552,7 @@ DefineLanguageWord("Niman", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Language = "gothic",
 	Type = "verb",
 	Meanings = {"Take", "Accept"},
+	DerivesFrom = {"proto-indo-european", "verb", "Nem"},
 	Infinitive = "Niman"
 })
 
@@ -533,20 +560,23 @@ DefineLanguageWord("Qiman", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Language = "gothic",
 	Type = "verb",
 	Meanings = {"Come"},
+	DerivesFrom = {"proto-indo-european", "verb", "Gʷem"},
 	Infinitive = "Qiman"
 })
 
-DefineLanguageWord("Saihan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
+DefineLanguageWord("Saihan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241; Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 	Language = "gothic",
 	Type = "verb",
 	Meanings = {"See"},
-	Infinitive = "Saihan"
+	DerivesFrom = {"proto-indo-european", "verb", "Sekʷ"},
+	Infinitive = "Saihan" -- Runge gives "Saihan", while Lehmann gives "Saíhʷan"
 })
 
 DefineLanguageWord("Siggwan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "gothic",
 	Type = "verb",
 	Meanings = {"Sing"}, -- apparently, but not entirely clear from source
+	DerivesFrom = {"proto-germanic", "verb", "Siggwan"},
 	Infinitive = "Siggwan"
 })
 
@@ -582,6 +612,7 @@ DefineLanguageWord("Steigan", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Language = "gothic",
 	Type = "verb",
 	Meanings = {"Climb"},
+	DerivesFrom = {"proto-germanic", "verb", "Steig"},
 	Infinitive = "Steigan",
 	ParticiplePast = "Stáig"
 })
@@ -597,6 +628,7 @@ DefineLanguageWord("Tiuhan", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Language = "gothic",
 	Type = "verb",
 	Meanings = {"Pull"}, -- derived from Proto-Germanic "Téuχanan", which has the meaning of "pull"
+	DerivesFrom = {"proto-germanic", "verb", "Téuχanan"},
 	Infinitive = "Tiuhan"
 })
 
@@ -618,6 +650,7 @@ DefineLanguageWord("Witan", { -- Source: Richard M. Runge, "The Phonetic Realiza
 	Language = "gothic",
 	Type = "verb",
 	Meanings = {"Know", "Keep Watch Over"},
+	DerivesFrom = {"proto-germanic", "verb", "Witum"},
 	Infinitive = "Witan",
 	SingularFirstPersonPresent = "Wáit", -- Lehmann 1.3.3 gives "Wait", while 2.6 in that same source gives "Wáit"; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
 	PluralFirstPersonPresent = "Witum"
@@ -627,6 +660,7 @@ DefineLanguageWord("Diups", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Language = "gothic",
 	Type = "adjective",
 	Meanings = {"Deep"}, -- derived from Proto-Germanic "Déwpaz", which means "Deep"
+	DerivesFrom = {"proto-germanic", "adjective", "Déwpaz"},
 	Positive = "Diups"
 })
 
@@ -641,6 +675,7 @@ DefineLanguageWord("Fūls", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Language = "gothic",
 	Type = "adjective",
 	Meanings = {"Foul"}, -- derived from the Proto-Germanic "Fūla", which means "Foul"
+	DerivesFrom = {"proto-germanic", "adjective", "Fūla"},
 	Positive = "Fūls"
 })
 
@@ -648,6 +683,7 @@ DefineLanguageWord("Grēdags", { -- Source: Winfred P. Lehmann, "A Grammar of Pr
 	Language = "gothic",
 	Type = "adjective",
 	Meanings = {"Hungry"},
+	DerivesFrom = {"proto-germanic", "adjective", "Gred"},
 	Positive = "Grēdags"
 })
 
@@ -662,6 +698,7 @@ DefineLanguageWord("Hʷeits", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Language = "gothic",
 	Type = "adjective",
 	Meanings = {"White"},
+	DerivesFrom = {"proto-indo-european", "adjective", "Ḱweyt"},
 	Positive = "Hʷeits"
 })
 
@@ -669,6 +706,7 @@ DefineLanguageWord("Juggs", { -- Source: Richard M. Runge, "The Phonetic Realiza
 	Language = "gothic",
 	Type = "adjective",
 	Meanings = {"Young"},
+	DerivesFrom = {"proto-indo-european", "adjective", "Yehw"},
 	Positive = "Juggs" -- Lehmann gives "Jugga-" instead
 })
 
@@ -676,6 +714,7 @@ DefineLanguageWord("Lagg", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Language = "gothic",
 	Type = "adjective",
 	Meanings = {"Long"}, -- derived from Proto-Germanic "Langaz", which means "Long"
+	DerivesFrom = {"proto-germanic", "adjective", "Langaz"},
 	Positive = "Lagg"
 })
 
@@ -690,6 +729,7 @@ DefineLanguageWord("Maiza", { -- Source: Richard M. Runge, "The Phonetic Realiza
 	Language = "gothic",
 	Type = "adjective",
 	Meanings = {"More"}, -- perhaps a "determiner" class of words should be added?
+	DerivesFrom = {"proto-germanic", "adjective", "Mēria"},
 	Positive = "Maiza", -- Lehmann gives "Máiza", while Runge gives "Maiza"
 	Comparative = "Maiza", -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242; Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
 	Superlative = "Maists" -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
@@ -699,6 +739,7 @@ DefineLanguageWord("Qius", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Language = "gothic",
 	Type = "adjective",
 	Meanings = {"Alive"},
+	DerivesFrom = {"proto-indo-european", "adjective", "Gʷīwos"},
 	Positive = "Qius"
 })
 
@@ -706,6 +747,7 @@ DefineLanguageWord("Raíhts", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Language = "gothic",
 	Type = "adjective",
 	Meanings = {"Right", "Straight"}, -- derived from Proto-Germanic "Reχtaz", which means "Right, Straight"
+	DerivesFrom = {"proto-germanic", "adjective", "Reχtaz"},
 	Positive = "Raíhts"
 })
 
@@ -713,6 +755,7 @@ DefineLanguageWord("Ráudái", { -- Source: Winfred P. Lehmann, "A Grammar of Pr
 	Language = "gothic",
 	Type = "adjective",
 	Meanings = {"Red"},
+	DerivesFrom = {"proto-indo-european", "adjective", "Rowdho"},
 	Positive = "Ráudái"
 })
 
@@ -727,6 +770,7 @@ DefineLanguageWord("Þaúrsus", { -- Source: Winfred P. Lehmann, "A Grammar of P
 	Language = "gothic",
 	Type = "adjective",
 	Meanings = {"Dry"}, -- derived from Proto-Germanic "Þrsúz", which has the meaning of "dry"
+	DerivesFrom = {"proto-germanic", "adjective", "Durez"},
 	Positive = "Þaúrsus"
 })
 
@@ -756,13 +800,15 @@ DefineLanguageWord("Izwis", { -- should be the nominative form; Source: Winfred 
 DefineLanguageWord("Af", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "gothic",
 	Type = "adposition",
-	Meanings = {"From"} -- derived from Proto-Germanic "Af", which means "From"
+	Meanings = {"From"}, -- derived from Proto-Germanic "Af", which means "From"
+	DerivesFrom = {"proto-germanic", "adposition", "Af"}
 })
 
 DefineLanguageWord("Ufar", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "gothic",
 	Type = "adposition",
-	Meanings = {"Over"} -- derived from the Proto-Germanic "Ufar", which means "Over"
+	Meanings = {"Over"}, -- derived from the Proto-Germanic "Ufar", which means "Over"
+	DerivesFrom = {"proto-germanic", "adposition", "Ufar"}
 })
 
 DefineLanguageWord("Sibun", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.

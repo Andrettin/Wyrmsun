@@ -159,6 +159,14 @@ DefineLanguageWord("Χŕdiz", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	SingularNominative = "Χŕdiz"
 })
 
+DefineLanguageWord("Dag", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {},
+	DerivesFrom = {"proto-indo-european", "noun", "Dhagh"},
+	SingularNominative = "Dag"
+})
+
 DefineLanguageWord("Durez", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "proto-germanic",
 	Type = "noun",
@@ -272,6 +280,14 @@ DefineLanguageWord("Gôm", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Type = "noun",
 	Meanings = {"Winter"},
 	SingularNominative = "Gôm" -- source also gives the forms "Gam" and "Gim"
+})
+
+DefineLanguageWord("Gred", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
+	Language = "proto-germanic",
+	Type = "adjective",
+	Meanings = {},
+	DerivesFrom = {"proto-indo-european", "noun", "Ghredh"},
+	Positive = "Gred"
 })
 
 DefineLanguageWord("Haima", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 52.
@@ -678,10 +694,11 @@ DefineLanguageWord("Beran", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Infinitive = "Beran"
 })
 
-DefineLanguageWord("Beud", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Sections 2-3.
+DefineLanguageWord("Beud", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Sections 2-4.
 	Language = "proto-germanic",
 	Type = "verb",
 	Meanings = {"Bid", "Offer", "Order"},
+	DerivesFrom = {"proto-indo-european", "verb", "Bhewdh"},
 	Infinitive = "Beud",
 	ParticiplePast = "Baud" -- "offered" / "ordered"
 })

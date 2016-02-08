@@ -165,6 +165,7 @@ DefineLanguageWord("Híppos", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Language = "greek",
 	Type = "noun",
 	Meanings = {"Horse"},
+	DerivesFrom = {"proto-indo-european", "noun", "Éḱwos"},
 	SingularNominative = "Híppos"
 })
 
@@ -237,6 +238,7 @@ DefineLanguageWord("Téphra", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Language = "greek",
 	Type = "noun",
 	Meanings = {"Ashes"},
+	DerivesFrom = {"proto-indo-european", "noun", "Dhagh"},
 	SingularNominative = "Téphra" -- is this the plural form?
 })
 
@@ -265,6 +267,7 @@ DefineLanguageWord("Hépomai", { -- Source: Winfred P. Lehmann, "A Grammar of Pr
 	Language = "greek",
 	Type = "verb",
 	Meanings = {"Follow"},
+	DerivesFrom = {"proto-indo-european", "verb", "Sekʷ"},
 	Infinitive = "Hépomai"
 })
 
@@ -279,6 +282,7 @@ DefineLanguageWord("Némō", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Language = "greek",
 	Type = "verb",
 	Meanings = {"Distribute"},
+	DerivesFrom = {"proto-indo-european", "verb", "Nem"},
 	Infinitive = "Némō"
 })
 
@@ -293,6 +297,7 @@ DefineLanguageWord("Peúthomai", { -- Source: Winfred P. Lehmann, "A Grammar of 
 	Language = "greek",
 	Type = "verb",
 	Meanings = {"Examine"},
+	DerivesFrom = {"proto-indo-european", "verb", "Bhewdh"},
 	Infinitive = "Peúthomai"
 })
 

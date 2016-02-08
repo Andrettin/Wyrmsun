@@ -45,6 +45,7 @@ DefineLanguageWord("Buoh", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Book"}, -- derived from Proto-Germanic "Bōks"; the source has the meaning for that word as "'tablet' > 'book'", but it is not clear if it means that the meaning became book in the child languages of Proto-Germanic, or within the timespan of the language itself
+	DerivesFrom = {"proto-germanic", "noun", "Bōks"},
 	SingularNominative = "Buoh"
 })
 
@@ -59,6 +60,7 @@ DefineLanguageWord("Chunni", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Race"},
+	DerivesFrom = {"proto-germanic", "noun", "Kuni"},
 	SingularNominative = "Chunni"
 })
 
@@ -66,6 +68,7 @@ DefineLanguageWord("Corn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Grain"}, -- derived from Proto-Germanic "Kŕnam", which has the meaning of "grain"
+	DerivesFrom = {"proto-germanic", "noun", "Kŕnam"},
 	SingularNominative = "Corn"
 })
 
@@ -86,6 +89,7 @@ DefineLanguageWord("Erda", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Earth"}, -- derived from Proto-Germanic "Erþō", which means "Earth"
+	DerivesFrom = {"proto-germanic", "noun", "Erþō"},
 	SingularNominative = "Erda"
 })
 
@@ -93,6 +97,7 @@ DefineLanguageWord("Fehu", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Cattle"},
+	DerivesFrom = {"proto-germanic", "noun", "Fehu"},
 	SingularNominative = "Fehu"
 })
 
@@ -107,6 +112,7 @@ DefineLanguageWord("Fluot", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Flood"}, -- derived from the Proto-Germanic "Flōduz", which means "Flood"
+	DerivesFrom = {"proto-germanic", "noun", "Flōdus"},
 	SingularNominative = "Fluot"
 })
 
@@ -114,6 +120,7 @@ DefineLanguageWord("Fuoz", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Foot"}, -- derived from Proto-Germanic "Fōts", which has the meaning of "foot"
+	DerivesFrom = {"proto-germanic", "noun", "Fōts"},
 	SingularNominative = "Fuoz"
 })
 
@@ -128,6 +135,7 @@ DefineLanguageWord("Gart", { -- is this the same word as the "Gart" which has an
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Garden"}, -- derived from Proto-Germanic "Gárdiz", which has the meaning of "garden"
+	DerivesFrom = {"proto-germanic", "noun", "Gárdiz"},
 	SingularNominative = "Gart"
 })
 
@@ -135,6 +143,7 @@ DefineLanguageWord("Gisiht", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Language = "old-english",
 	Type = "noun",
 	Meanings = {"Sight"},
+	DerivesFrom = {"proto-indo-european", "verb", "Sekʷ"},
 	SingularNominative = "Gisiht"
 })
 
@@ -185,6 +194,7 @@ DefineLanguageWord("Hurd", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Wattle"}, -- derived from Proto-Germanic "Χŕdiz", which means "wattle"
+	DerivesFrom = {"proto-germanic", "noun", "Χŕdiz"},
 	SingularNominative = "Hurd"
 })
 
@@ -192,6 +202,7 @@ DefineLanguageWord("Jār", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Year"}, -- derived from Proto-Germanic "Yēra", which means "Year"
+	DerivesFrom = {"proto-germanic", "noun", "Yēra"},
 	SingularNominative = "Jār"
 })
 
@@ -213,6 +224,7 @@ DefineLanguageWord("Maht", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Might"}, -- derived from Proto-Germanic "Maχtiz", which means "Might"
+	DerivesFrom = {"proto-germanic", "noun", "Maχtiz"},
 	SingularNominative = "Maht"
 })
 
@@ -248,6 +260,7 @@ DefineLanguageWord("Naht", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Night"}, -- derived from Proto-Germanic "Naχts", which means "Night"
+	DerivesFrom = {"proto-germanic", "noun", "Naχts"},
 	SingularNominative = "Naht"
 })
 
@@ -307,6 +320,7 @@ DefineLanguageWord("Sāt", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Seed"}, -- derived from the Proto-Germanic "Sēþiz", which means "Seed"
+	DerivesFrom = {"proto-germanic", "noun", "Sēþiz"},
 	SingularNominative = "Sāt"
 })
 
@@ -321,6 +335,7 @@ DefineLanguageWord("Skato", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Shadow"},
+	DerivesFrom = {"proto-germanic", "noun", "Skadwas"},
 	SingularNominative = "Skato"
 })
 
@@ -342,6 +357,7 @@ DefineLanguageWord("Sunno", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Sun"}, -- derived from Proto-Germanic "Sunōn", which has the meaning of "Sun"
+	DerivesFrom = {"proto-germanic", "noun", "Sunōn"},
 	SingularNominative = "Sunno"
 })
 
@@ -356,6 +372,7 @@ DefineLanguageWord("Swīn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Pig"}, -- derived from the Proto-Germanic "Swīnaz", which means "Pig"
+	DerivesFrom = {"proto-germanic", "noun", "Swīnaz"},
 	SingularNominative = "Swīn"
 })
 
@@ -406,6 +423,7 @@ DefineLanguageWord("Wer", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-G
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Man"},
+	DerivesFrom = {"proto-indo-european", "noun", "Wiros"},
 	SingularNominative = "Wer"
 })
 
@@ -427,6 +445,7 @@ DefineLanguageWord("Beran", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Language = "old-high-german",
 	Type = "verb",
 	Meanings = {},
+	DerivesFrom = {"proto-germanic", "verb", "Beran"},
 	Infinitive = "Beran"
 })
 
@@ -434,6 +453,7 @@ DefineLanguageWord("Biotan", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Language = "old-high-german",
 	Type = "verb",
 	Meanings = {"Bid", "Offer", "Order"},
+	DerivesFrom = {"proto-germanic", "verb", "Beud"},
 	Infinitive = "Biotan"
 })
 
@@ -470,6 +490,7 @@ DefineLanguageWord("Hnīgan", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Language = "old-high-german",
 	Type = "verb",
 	Meanings = {"Bow"},
+	DerivesFrom = {"proto-indo-european", "verb", "Kneygʷh"},
 	Infinitive = "Hnīgan"
 })
 
@@ -484,6 +505,7 @@ DefineLanguageWord("Kweman", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Language = "old-high-german",
 	Type = "verb",
 	Meanings = {"Come"}, -- apparently, but not entirely clear from source
+	DerivesFrom = {"proto-germanic", "verb", "Kwemanan"},
 	Infinitive = "Kweman"
 })
 
@@ -505,6 +527,7 @@ DefineLanguageWord("Līhan", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Language = "old-high-german",
 	Type = "verb",
 	Meanings = {"Lend"},
+	DerivesFrom = {"proto-indo-european", "verb", "Leykʷ"},
 	Infinitive = "Līhan",
 	PluralFirstPersonPast = "Liwum" -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
 })
@@ -520,6 +543,7 @@ DefineLanguageWord("Malan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Language = "old-high-german",
 	Type = "verb",
 	Meanings = {"Grind"},
+	DerivesFrom = {"proto-indo-european", "verb", "Mel"},
 	Infinitive = "Malan"
 })
 
@@ -534,6 +558,7 @@ DefineLanguageWord("Queman", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Language = "old-high-german",
 	Type = "verb",
 	Meanings = {"Come"},
+	DerivesFrom = {"proto-indo-european", "verb", "Gʷem"},
 	Infinitive = "Queman"
 })
 
@@ -548,6 +573,7 @@ DefineLanguageWord("Skatewen", { -- Source: Winfred P. Lehmann, "A Grammar of Pr
 	Language = "old-high-german",
 	Type = "verb",
 	Meanings = {"Shadow"}, -- "to shadow"
+	DerivesFrom = {"proto-germanic", "noun", "Skadwas"},
 	Infinitive = "Skatewen"
 })
 
@@ -555,6 +581,7 @@ DefineLanguageWord("Sehan", { -- Source: Richard M. Runge, "The Phonetic Realiza
 	Language = "old-high-german",
 	Type = "verb",
 	Meanings = {"See"},
+	DerivesFrom = {"proto-indo-european", "verb", "Sekʷ"},
 	Infinitive = "Sehan",
 	SingularFirstPersonPast = "Sah",
 	SingularThirdPersonPast = "Sah",
@@ -573,6 +600,7 @@ DefineLanguageWord("Stīgan", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Language = "old-high-german",
 	Type = "verb",
 	Meanings = {"Climb"},
+	DerivesFrom = {"proto-germanic", "verb", "Steig"},
 	Infinitive = "Stīgan",
 	ParticiplePast = "Steig"
 })
@@ -602,6 +630,7 @@ DefineLanguageWord("Wizzan", { -- Source: Richard M. Runge, "The Phonetic Realiz
 	Language = "old-high-german",
 	Type = "verb",
 	Meanings = {"Know"},
+	DerivesFrom = {"proto-germanic", "verb", "Witum"},
 	Infinitive = "Wizzan",
 	PluralFirstPersonPresent = "Wizzum" -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 })
@@ -625,6 +654,7 @@ DefineLanguageWord("Ziohan", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Language = "old-high-german",
 	Type = "verb",
 	Meanings = {"Pull"}, -- derived from Proto-Germanic "Téuχanan", which has the meaning of "pull"
+	DerivesFrom = {"proto-germanic", "verb", "Téuχanan"},
 	Infinitive = "Ziohan"
 })
 
@@ -639,6 +669,7 @@ DefineLanguageWord("Durri", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Language = "old-high-german",
 	Type = "adjective",
 	Meanings = {"Dry"}, -- derived from Proto-Germanic "Þrsúz", which has the meaning of "dry"
+	DerivesFrom = {"proto-germanic", "adjective", "Durez"},
 	Positive = "Durri"
 })
 
@@ -646,6 +677,7 @@ DefineLanguageWord("Fūl", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Language = "old-high-german",
 	Type = "adjective",
 	Meanings = {"Foul"}, -- derived from the Proto-Germanic "Fūla", which means "Foul"
+	DerivesFrom = {"proto-germanic", "adjective", "Fūla"},
 	Positive = "Fūl"
 })
 
@@ -660,6 +692,7 @@ DefineLanguageWord("Jung", { -- Source: Richard M. Runge, "The Phonetic Realizat
 	Language = "old-high-german",
 	Type = "adjective",
 	Meanings = {"Young"},
+	DerivesFrom = {"proto-indo-european", "adjective", "Yehw"},
 	Positive = "Jung"
 })
 
@@ -667,6 +700,7 @@ DefineLanguageWord("Lang", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Language = "old-high-german",
 	Type = "adjective",
 	Meanings = {"Long"}, -- derived from Proto-Germanic "Langaz", which means "Long"
+	DerivesFrom = {"proto-germanic", "adjective", "Langaz"},
 	Positive = "Lang"
 })
 
@@ -681,6 +715,7 @@ DefineLanguageWord("Mēro", { -- Source: Richard M. Runge, "The Phonetic Realiza
 	Language = "old-high-german",
 	Type = "adjective",
 	Meanings = {"More"}, -- perhaps a "determiner" class of words should be added?
+	DerivesFrom = {"proto-germanic", "adjective", "Mēria"},
 	Positive = "Mēro", -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, pp. 236;
 	Comparative = "Mēro", -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
 	Superlative = "Mēst" -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
@@ -690,6 +725,7 @@ DefineLanguageWord("Reht", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Language = "old-high-german",
 	Type = "adjective",
 	Meanings = {"Right", "Straight"}, -- derived from Proto-Germanic "Reχtaz", which means "Right, Straight"
+	DerivesFrom = {"proto-germanic", "adjective", "Reχtaz"},
 	Positive = "Reht"
 })
 
@@ -704,19 +740,22 @@ DefineLanguageWord("Tiuf", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Language = "old-high-german",
 	Type = "adjective",
 	Meanings = {"Deep"}, -- derived from Proto-Germanic "Déwpaz", which has the meaning of "deep"
+	DerivesFrom = {"proto-germanic", "adjective", "Déwpaz"},
 	Positive = "Tiuf"
 })
 
 DefineLanguageWord("Aba", { -- Lehmann also gives the alternative form "ab"; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-high-german",
 	Type = "adposition",
-	Meanings = {"From"} -- derived from the Proto-Germanic "Af", which means "From"
+	Meanings = {"From"}, -- derived from the Proto-Germanic "Af", which means "From"
+	DerivesFrom = {"proto-germanic", "adposition", "Af"}
 })
 
 DefineLanguageWord("Ubir", { -- Lehmann also gives the alternative form "ubar"; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-high-german",
 	Type = "adposition",
-	Meanings = {"Over"} -- derived from the Proto-Germanic "Ufar", which means "Over"
+	Meanings = {"Over"}, -- derived from the Proto-Germanic "Ufar", which means "Over"
+	DerivesFrom = {"proto-germanic", "adposition", "Ufar"}
 })
 
 DefineLanguageWord("Sibun", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.

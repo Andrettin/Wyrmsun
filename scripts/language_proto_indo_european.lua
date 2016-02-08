@@ -25,6 +25,41 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineLanguageWord("Bhewdh", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
+	Language = "proto-indo-european",
+	Type = "verb",
+	Meanings = {},
+	Infinitive = "Bhewdh"
+})
+
+DefineLanguageWord("Dhagh", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
+	Language = "proto-indo-european",
+	Type = "noun",
+	Meanings = {},
+	SingularNominative = "Dhagh"
+})
+
+DefineLanguageWord("Éḱwos", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
+	Language = "proto-indo-european",
+	Type = "noun",
+	Meanings = {},
+	SingularNominative = "Éḱwos"
+})
+
+DefineLanguageWord("Ghredh", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
+	Language = "proto-indo-european",
+	Type = "noun",
+	Meanings = {},
+	SingularNominative = "Ghredh"
+})
+
+DefineLanguageWord("Gʷem", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
+	Language = "proto-indo-european",
+	Type = "verb",
+	Meanings = {},
+	Infinitive = "Gʷem"
+})
+
 DefineLanguageWord("Gʷen", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 	Language = "proto-indo-european",
 	Type = "noun",
@@ -32,18 +67,11 @@ DefineLanguageWord("Gʷen", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	SingularNominative = "Gʷen"
 })
 
-DefineLanguageWord("Swīnos", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
-	Language = "proto-indo-european", -- late Proto-Indo-European
-	Type = "noun",
-	Meanings = {"Pig"},
-	SingularNominative = "Swīnos"
-})
-
-DefineLanguageWord("Wiros", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
+DefineLanguageWord("Gʷīwos", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 	Language = "proto-indo-european",
-	Type = "noun",
-	Meanings = {"Man"},
-	SingularNominative = "Wiros"
+	Type = "adjective",
+	Meanings = {"Alive"},
+	Positive = "Gʷīwos"
 })
 
 DefineLanguageWord("Kneygʷh", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
@@ -51,6 +79,13 @@ DefineLanguageWord("Kneygʷh", { -- Source: Winfred P. Lehmann, "A Grammar of Pr
 	Type = "verb",
 	Meanings = {"Bow"},
 	Infinitive = "Kneygʷh"
+})
+
+DefineLanguageWord("Ḱweyt", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
+	Language = "proto-indo-european",
+	Type = "adjective",
+	Meanings = {},
+	Positive = "Ḱweyt" -- source gives "Ḱwey-t/d-"
 })
 
 DefineLanguageWord("Leykʷ", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
@@ -74,16 +109,37 @@ DefineLanguageWord("Nem", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-G
 	Infinitive = "Nem"
 })
 
-DefineLanguageWord("Gʷīwos", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
-	Language = "proto-indo-european",
-	Type = "adjective",
-	Meanings = {"Alive"},
-	Positive = "Gʷīwos"
-})
-
 DefineLanguageWord("Rowdho", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
 	Language = "proto-indo-european",
 	Type = "adjective",
 	Meanings = {"Red"},
 	Positive = "Rowdho"
+})
+
+DefineLanguageWord("Sekʷ", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
+	Language = "proto-indo-european",
+	Type = "verb",
+	Meanings = {},
+	Infinitive = "Sekʷ"
+})
+
+DefineLanguageWord("Swīnos", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
+	Language = "proto-indo-european", -- late Proto-Indo-European
+	Type = "noun",
+	Meanings = {"Pig"},
+	SingularNominative = "Swīnos"
+})
+
+DefineLanguageWord("Wiros", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
+	Language = "proto-indo-european",
+	Type = "noun",
+	Meanings = {"Man"},
+	SingularNominative = "Wiros"
+})
+
+DefineLanguageWord("Yehw", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
+	Language = "proto-indo-european",
+	Type = "adjective",
+	Meanings = {},
+	Positive = "Yehw" -- source gives "yeHw"
 })

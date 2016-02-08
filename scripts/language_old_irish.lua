@@ -39,6 +39,14 @@ DefineLanguageWord("Fēn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	SingularNominative = "Fēn"
 })
 
+DefineLanguageWord("Fer", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
+	Language = "old-irish",
+	Type = "noun",
+	Meanings = {},
+	DerivesFrom = {"proto-indo-european", "noun", "Wiros"},
+	SingularNominative = "Fer"
+})
+
 DefineLanguageWord("Giús", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 4.
 	Language = "old-irish",
 	Type = "noun",
