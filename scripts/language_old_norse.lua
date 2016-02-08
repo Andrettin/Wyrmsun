@@ -25,6 +25,33 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineLanguageWord("Ađal", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 14.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Nature", "Character"}, -- source gives "natura, indoles" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Aþala"},
+	SingularNominative = "Ađal",
+	Gender = "Neuter"
+})
+
+DefineLanguageWord("Ađalskâli", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 14.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Main Hall"}, -- source gives "Haupthalle" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Aþala"},
+	SingularNominative = "Ađalskâli",
+	Gender = "Masculine"
+})
+
+DefineLanguageWord("Ađili", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 14.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Him whom Befits to Take Charge of Something in a Tribunal"}, -- source gives "dem es zukommt, eine Sache, vor Gericht zu führen" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Aþala"},
+	SingularNominative = "Ađili",
+	Gender = "Masculine"
+})
+
 DefineLanguageWord("Aldr", { -- Source: Geir T. Zoëga, "A Concise Dictionary of Old Icelandic", 1910, p. 8.
 	Language = "old-norse",
 	Type = "noun",

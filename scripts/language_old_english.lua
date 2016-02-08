@@ -25,6 +25,13 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineLanguageWord("Adl", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 114.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Illness"},
+	SingularNominative = "Adl"
+})
+
 DefineLanguageWord("Ærn", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "old-english",
 	Type = "noun",
@@ -33,11 +40,13 @@ DefineLanguageWord("Ærn", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Gender = "Neuter"
 })
 
-DefineLanguageWord("Adl", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 114.
+DefineLanguageWord("Æþela", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 14.
 	Language = "old-english",
 	Type = "noun",
-	Meanings = {"Illness"},
-	SingularNominative = "Adl"
+	Meanings = {"Noble Birth"}, -- source gives "edle Geburt" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Aþala"},
+	SingularNominative = "Æþela",
+	Gender = "Feminine"
 })
 
 DefineLanguageWord("Bearn", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 238.

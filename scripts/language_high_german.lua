@@ -29,6 +29,7 @@ DefineLanguageWord("Adel", {
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"Noble"},
+	DerivesFrom = {"middle-high-german", "noun", "Adel"},
 	SingularNominative = "Adel",
 	SingularGenitive = "Adels",
 	Gender = "Masculine",

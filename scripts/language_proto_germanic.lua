@@ -61,6 +61,14 @@ DefineLanguageWord("Asjôn", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	SuffixTypeName = {"unit-class-smithy"} -- seems sensible
 })
 
+DefineLanguageWord("Aþala", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 14.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Kind", "Gender", "Lineage"}, -- source gives "Art, Geschlecht (innerstes Wesen)" as the meaning
+	SingularNominative = "Aþala",
+	Gender = "Neuter"
+})
+
 DefineLanguageWord("Austa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 12.
 	Language = "proto-germanic",
 	Type = "noun",

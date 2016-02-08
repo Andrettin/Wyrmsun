@@ -25,11 +25,13 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageWord("Fehu", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
+DefineLanguageWord("Athal", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 14.
 	Language = "old-saxon",
 	Type = "noun",
-	Meanings = {"Cattle"},
-	SingularNominative = "Fehu"
+	Meanings = {"Noble Lineage"}, -- source gives "edles Geschlecht" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Aþala"},
+	SingularNominative = "Athal",
+	Gender = "Neuter"
 })
 
 DefineLanguageWord("Fehu", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
