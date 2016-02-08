@@ -165,7 +165,7 @@ DefineLanguageWord("Flōdus", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Language = "gothic",
 	Type = "noun",
 	Meanings = {"Flood"}, -- derived from the Proto-Germanic "Flōduz", which means "Flood"
-	DerivesFrom = {"proto-germanic", "noun", "Flōdus"},
+	DerivesFrom = {"proto-germanic", "noun", "Flōduz"},
 	SingularNominative = "Flōdus"
 })
 
@@ -576,7 +576,7 @@ DefineLanguageWord("Siggwan", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Language = "gothic",
 	Type = "verb",
 	Meanings = {"Sing"}, -- apparently, but not entirely clear from source
-	DerivesFrom = {"proto-germanic", "verb", "Siggwan"},
+	DerivesFrom = {"proto-germanic", "verb", "Singwanan"},
 	Infinitive = "Siggwan"
 })
 
@@ -770,7 +770,7 @@ DefineLanguageWord("Þaúrsus", { -- Source: Winfred P. Lehmann, "A Grammar of P
 	Language = "gothic",
 	Type = "adjective",
 	Meanings = {"Dry"}, -- derived from Proto-Germanic "Þrsúz", which has the meaning of "dry"
-	DerivesFrom = {"proto-germanic", "adjective", "Durez"},
+	DerivesFrom = {"proto-germanic", "adjective", "Þrsúz"},
 	Positive = "Þaúrsus"
 })
 

@@ -100,7 +100,7 @@ DefineLanguageWord("Flōđ", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Flood"}, -- derived from the Proto-Germanic "Flōduz", which means "Flood"
-	DerivesFrom = {"proto-germanic", "noun", "Flōdus"},
+	DerivesFrom = {"proto-germanic", "noun", "Flōduz"},
 	SingularNominative = "Flōđ"
 })
 
@@ -566,7 +566,7 @@ DefineLanguageWord("Þurr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Language = "old-norse",
 	Type = "adjective",
 	Meanings = {"Dry"}, -- derived from Proto-Germanic "Þrsúz", which has the meaning of "dry"
-	DerivesFrom = {"proto-germanic", "adjective", "Durez"},
+	DerivesFrom = {"proto-germanic", "adjective", "Þrsúz"},
 	Positive = "Þurr"
 })
 

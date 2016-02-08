@@ -972,7 +972,7 @@ DefineLanguageWord("Þyrre", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Language = "old-english",
 	Type = "adjective",
 	Meanings = {"Dry"}, -- derived from Proto-Germanic "Þrsúz", which has the meaning of "dry"
-	DerivesFrom = {"proto-germanic", "adjective", "Durez"},
+	DerivesFrom = {"proto-germanic", "adjective", "Þrsúz"},
 	Positive = "Þyrre"
 })
 

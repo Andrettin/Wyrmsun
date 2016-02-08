@@ -112,7 +112,7 @@ DefineLanguageWord("Fluot", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Flood"}, -- derived from the Proto-Germanic "Flōduz", which means "Flood"
-	DerivesFrom = {"proto-germanic", "noun", "Flōdus"},
+	DerivesFrom = {"proto-germanic", "noun", "Flōduz"},
 	SingularNominative = "Fluot"
 })
 
@@ -669,7 +669,7 @@ DefineLanguageWord("Durri", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Language = "old-high-german",
 	Type = "adjective",
 	Meanings = {"Dry"}, -- derived from Proto-Germanic "Þrsúz", which has the meaning of "dry"
-	DerivesFrom = {"proto-germanic", "adjective", "Durez"},
+	DerivesFrom = {"proto-germanic", "adjective", "Þrsúz"},
 	Positive = "Durri"
 })
 
