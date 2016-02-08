@@ -256,6 +256,7 @@ DefineLanguageWord("Heordan", { -- this is the plural, what is the singular? Sou
 	Language = "old-english",
 	Type = "noun",
 	Meanings = {"Hards of Flax"},
+	DerivesFrom = {"proto-germanic", "noun", "Hazdaz"},
 	PluralNominative = "Heordan"
 })
 
@@ -282,12 +283,27 @@ DefineLanguageWord("Hlēapestre", { -- Source: Alaric Hall, "The Meanings of Elf
 	Gender = "Feminine" -- presumably, given the source is talking about occupations for women
 })
 
+DefineLanguageWord("Hléor", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Cheek"},
+	SingularNominative = "Hléor"
+})
+
 DefineLanguageWord("Hoppestre", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, pp. 77-78.
 	Language = "old-english",
 	Type = "noun",
 	Meanings = {"Dancer"},
 	SingularNominative = "Hoppestre",
 	Gender = "Feminine" -- presumably, given the source is talking about occupations for women
+})
+
+DefineLanguageWord("Hord", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Treasure", "Amassed Wealth"},
+	DerivesFrom = {"proto-germanic", "noun", "Huzda"},
+	SingularNominative = "Hord"
 })
 
 DefineLanguageWord("Hræn", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.
@@ -303,20 +319,6 @@ DefineLanguageWord("Hweowol", { -- Source: Richard M. Runge, "The Phonetic Reali
 	Type = "noun",
 	Meanings = {"Wheel"},
 	SingularNominative = "Hweowol"
-})
-
-DefineLanguageWord("Hléor", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
-	Language = "old-english",
-	Type = "noun",
-	Meanings = {"Cheek"},
-	SingularNominative = "Hléor"
-})
-
-DefineLanguageWord("Hord", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.
-	Language = "old-english",
-	Type = "noun",
-	Meanings = {"Treasure", "Amassed Wealth"},
-	SingularNominative = "Hord"
 })
 
 DefineLanguageWord("Hund", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
@@ -354,6 +356,7 @@ DefineLanguageWord("Mearg", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Language = "old-english",
 	Type = "noun",
 	Meanings = {"Marrow"},
+	DerivesFrom = {"proto-germanic", "noun", "Mazgaz"},
 	SingularNominative = "Mearg"
 })
 
@@ -361,6 +364,7 @@ DefineLanguageWord("Mēd", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Language = "old-english",
 	Type = "noun",
 	Meanings = {"Reward", "Payment"},
+	DerivesFrom = {"proto-germanic", "noun", "Mizdō"},
 	SingularNominative = "Mēd", -- source also gives as an alternative the form "Meord"
 	Gender = "Feminine"
 })

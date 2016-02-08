@@ -239,6 +239,7 @@ DefineLanguageWord("Huzd", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Language = "gothic",
 	Type = "noun",
 	Meanings = {"Treasure"},
+	DerivesFrom = {"proto-germanic", "noun", "Huzda"},
 	SingularNominative = "Huzd"
 })
 
@@ -312,6 +313,7 @@ DefineLanguageWord("Mizdon", { -- Source: Sean Crist, "An Analysis of *z loss in
 	Language = "gothic",
 	Type = "noun",
 	Meanings = {"Reward"},
+	DerivesFrom = {"proto-germanic", "noun", "Mizdō"},
 	SingularNominative = "Mizdon",
 	Gender = "Feminine"
 })

@@ -43,7 +43,7 @@ DefineLanguageWord("Amboss", {
 	SingularNominative = "Amboss",
 	Gender = "Masculine",
 	SuffixSingular = true,
-	SuffixTypeName = {"unit-teuton-smithy"} -- seems sensible
+	SuffixTypeName = {"unit-class-smithy"} -- seems sensible
 })
 
 DefineLanguageWord("Arl", {
@@ -136,6 +136,7 @@ DefineLanguageWord("Berg", {
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"Mountain", "Hill"},
+	DerivesFrom = {"proto-germanic", "noun", "Berga"},
 	SingularNominative = "Berg",
 	PluralNominative = "Berge",
 	Gender = "Masculine",
@@ -191,6 +192,7 @@ DefineLanguageWord("Burg", {
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"Castle"},
+	DerivesFrom = {"proto-germanic", "noun", "Burg"},
 	SingularNominative = "Burg",
 	PluralNominative = "Burgen",
 	Gender = "Feminine",
@@ -207,6 +209,7 @@ DefineLanguageWord("Dorf", {
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"Village"},
+	DerivesFrom = {"proto-germanic", "noun", "Þurpa"},
 	SingularNominative = "Dorf",
 	PluralNominative = "Dörfer",
 	Gender = "Neuter",
@@ -243,6 +246,7 @@ DefineLanguageWord("Erz", {
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"Ore"},
+	DerivesFrom = {"proto-germanic", "noun", "Aiza"},
 	SingularNominative = "Erz",
 	SingularAccusative = "Erz",
 	SingularDative = "Erz",
@@ -260,6 +264,7 @@ DefineLanguageWord("Esse", {
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"Forge"},
+	DerivesFrom = {"proto-germanic", "noun", "Asjôn"},
 	SingularNominative = "Esse",
 	SingularAccusative = "Esse",
 	SingularDative = "Esse",
@@ -270,7 +275,7 @@ DefineLanguageWord("Esse", {
 	PluralGenitive = "Essen",
 	Gender = "Feminine",
 	SuffixSingular = true,
-	SuffixTypeName = {"unit-teuton-smithy"} -- seems sensible
+	SuffixTypeName = {"unit-class-smithy"} -- seems sensible
 })
 
 DefineLanguageWord("Franz", {
@@ -407,7 +412,7 @@ DefineLanguageWord("Hammer", {
 	PluralGenitive = "Hämmer",
 	Gender = "Masculine",
 	SuffixSingular = true,
-	SuffixTypeName = {"unit-teuton-smithy"} -- seems sensible
+	SuffixTypeName = {"unit-class-smithy"} -- seems sensible
 })
 
 DefineLanguageWord("Hans", {
@@ -653,6 +658,7 @@ DefineLanguageWord("Land", {
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"Country"},
+	DerivesFrom = {"proto-germanic", "noun", "Landa"},
 	SingularNominative = "Land",
 	SingularGenitive = "Landes",
 	PluralNominative = "Länder",
@@ -704,6 +710,7 @@ DefineLanguageWord("Mark", {
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"March"},
+	DerivesFrom = {"proto-germanic", "noun", "Mark"},
 	SingularNominative = "Mark",
 	PluralNominative = "Marken",
 	Gender = "Feminine",
@@ -756,10 +763,19 @@ DefineLanguageWord("Nuss", { -- Source: http://www.duden.de/rechtschreibung/Nuss
 	PrefixTypeName = {"terrain-hills"} -- example: "Nussberg"
 })
 
+DefineLanguageWord("Ort", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"Place"},
+	DerivesFrom = {"middle-high-german", "noun", "Ort"},
+	SingularNominative = "Ort"
+})
+
 DefineLanguageWord("Ost", {
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"Ost"},
+	DerivesFrom = {"proto-germanic", "noun", "Austa"},
 	SingularNominative = "Ost",
 	SingularGenitive = "Ost",
 	Gender = "Masculine",
@@ -868,6 +884,7 @@ DefineLanguageWord("Schmiede", {
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"Smithy"},
+	DerivesFrom = {"proto-germanic", "noun", "Smiþjôn"},
 	SingularNominative = "Schmiede",
 	SingularAccusative = "Schmiede",
 	SingularDative = "Schmiede",
@@ -878,13 +895,14 @@ DefineLanguageWord("Schmiede", {
 	PluralGenitive = "Schmieden",
 	Gender = "Feminine",
 	SuffixSingular = true,
-	SuffixTypeName = {"unit-teuton-smithy"} -- seems sensible
+	SuffixTypeName = {"unit-class-smithy"} -- seems sensible
 })
 
 DefineLanguageWord("Schnee", {
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"Snow"},
+	DerivesFrom = {"proto-germanic", "noun", "Snaigva"},
 	SingularNominative = "Schnee",
 	Gender = "Masculine",
 	Uncountable = true,
@@ -990,6 +1008,7 @@ DefineLanguageWord("Waid", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"Woad"},
+	DerivesFrom = {"proto-germanic", "noun", "Waida"},
 	SingularNominative = "Waid"
 })
 
@@ -1088,7 +1107,7 @@ DefineLanguageWord("Brennend", {
 	Meanings = {"Burning"},
 	Positive = "Brennend",
 	PrefixTypeName = {
-		"unit-teuton-smithy" -- seems sensible
+		"unit-class-smithy" -- seems sensible
 	}
 })
 
@@ -1098,7 +1117,7 @@ DefineLanguageWord("Feurig", {
 	Meanings = {"Fiery"},
 	Positive = "Feurig",
 	PrefixTypeName = {
-		"unit-teuton-smithy" -- seems sensible
+		"unit-class-smithy" -- seems sensible
 	}
 })
 
@@ -1119,7 +1138,7 @@ DefineLanguageWord("Neu", {
 	Positive = "Neu",
 	PrefixTypeName = {
 		"settlement",
-		"unit-teuton-smithy" -- seems sensible
+		"unit-class-smithy" -- seems sensible
 	} -- example: "Neusohl"
 })
 
@@ -1129,7 +1148,7 @@ DefineLanguageWord("Schwartz", {
 	Meanings = {"Black"},
 	Positive = "Schwartz",
 	PrefixTypeName = {
-		"unit-teuton-smithy" -- seems sensible
+		"unit-class-smithy" -- seems sensible
 	}
 })
 
@@ -1141,7 +1160,7 @@ DefineLanguageWord("Weiß", {
 	PrefixTypeName = {
 		"settlement", -- example: "Weisskirchen"
 		"terrain-mountains", -- example: "Weißkugel"
-		"unit-teuton-smithy" -- seems sensible
+		"unit-class-smithy" -- seems sensible
 	}
 })
 

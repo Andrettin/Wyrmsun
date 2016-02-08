@@ -64,6 +64,7 @@ DefineLanguageWord("Hord", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Language = "old-saxon",
 	Type = "noun",
 	Meanings = {"Treasure", "Closed Interior", "Hidden Interior"},
+	DerivesFrom = {"proto-germanic", "noun", "Huzda"},
 	SingularNominative = "Hord"
 })
 
@@ -102,6 +103,8 @@ DefineLanguageWord("Merg", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Language = "old-saxon",
 	Type = "noun",
 	Meanings = {"Marrow"},
+	DerivesFrom = {"proto-germanic", "noun", "Mazgaz"},
+	DerivesFrom = {"proto-germanic", "noun", "Mazgaz"},
 	SingularNominative = "Merg"
 })
 

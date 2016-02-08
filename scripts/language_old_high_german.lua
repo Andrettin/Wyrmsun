@@ -173,6 +173,7 @@ DefineLanguageWord("Hort", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Treasure"},
+	DerivesFrom = {"proto-germanic", "noun", "Huzda"},
 	SingularNominative = "Hort"
 })
 
@@ -232,6 +233,7 @@ DefineLanguageWord("Marc", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Marrow"},
+	DerivesFrom = {"proto-germanic", "noun", "Mazgaz"},
 	SingularNominative = "Marc",
 	SingularGenitive = "Marges" -- source also gives "Marages" as a possible genitive
 })
@@ -246,6 +248,7 @@ DefineLanguageWord("Mēta", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Reward", "Payment"},
+	DerivesFrom = {"proto-germanic", "noun", "Mizdō"},
 	SingularNominative = "Mēta" -- source also gives as alternatives the forms "Miata" and "Mieta"
 })
 
@@ -284,6 +287,7 @@ DefineLanguageWord("Ort", { -- Source: Sean Crist, "An Analysis of *z loss in We
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Point", "Corner", "Edge of a Part", "Edge of a Piece", "Edge of a Small Coin"},
+	DerivesFrom = {"proto-germanic", "noun", "Uzdaz"},
 	SingularNominative = "Ort",
 	Gender = "Masculine"
 })

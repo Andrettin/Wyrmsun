@@ -59,6 +59,7 @@ DefineLanguageWord("Marg", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Language = "old-frisian",
 	Type = "noun",
 	Meanings = {"Marrow"},
+	DerivesFrom = {"proto-germanic", "noun", "Mazgaz"},
 	SingularNominative = "Marg"
 })
 
@@ -66,6 +67,7 @@ DefineLanguageWord("Mēde", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Language = "old-frisian",
 	Type = "noun",
 	Meanings = {"Reward", "Rental", "Payment", "Gift"},
+	DerivesFrom = {"proto-germanic", "noun", "Mizdō"},
 	SingularNominative = "Mēde", -- source also gives as alternatives the forms "Mīde", "Meide" and "Hēde"
 	Gender = "Feminine"
 })

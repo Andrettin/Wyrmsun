@@ -100,28 +100,16 @@ DefineLanguage("greek", {
 DefineLanguage("high-german", {
 	Name = "High German",
 	NameTranslations = {
-		"Aiza", "Erz", -- from Proto-Germanic to German
-		"Asjôn", "Esse", -- from Proto-Germanic to German
-		"Austa", "Ost", -- from Proto-Germanic to German
-		"Berga", "Berg", -- from Proto-Germanic to German
-		"Burg", "Burg", -- from Proto-Germanic to German
 		"Bûra", "Bauer", -- from Proto-Germanic to German
 		"Dverga", "Zwerg", -- from Proto-Germanic to German
 		"Gastiz", "Gast", -- from Proto-Germanic to German
 		"Gavja", "Gau", -- from Proto-Germanic to German
 		"Haima", "Heim", -- from Proto-Germanic to German
-		"Landa", "Land", -- from Proto-Germanic to German
 		"Lanum", "Land", -- example: "Mediolanum" -> "Mailand" (Milan)
-		"Mark", "Mark", -- from Proto-Germanic to German
 		"Medio", "Mai", -- example: "Mediolanum" -> "Mailand" (Milan)
 		"Rikia", "Reich", -- from Proto-Germanic to German
-		"Smiþjôn", "Schmiede", -- from Proto-Germanic to German
 		"Smiþu", "Schmied", -- from Proto-Germanic to German
-		"Snaigva", "Schnee", -- from Proto-Germanic to German
-		"Þurpa", "Dorf", -- from Proto-Germanic to German
-		"Uzdaz", "Ort", -- from Proto-Germanic to German
 		"Vindobona", "Wien", -- "Wien" = "Vienna"; from the Latin name "Vindobona"
-		"Waida", "Waid", -- from Proto-Germanic to German
 		"Walakuzjōn", "Walküre", -- from Proto-Germanic to German
 		"Ermanaric", "Ermenrich", -- "Ermenrich" is the German form of the Gothic name Ermanaric
 		"Theodoric", "Dietrich" -- "Dietrich" is the German form of the Gothic name Theodoric

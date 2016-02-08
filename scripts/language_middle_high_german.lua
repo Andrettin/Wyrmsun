@@ -37,6 +37,7 @@ DefineLanguageWord("Hort", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Language = "middle-high-german",
 	Type = "noun",
 	Meanings = {"Treasure"},
+	DerivesFrom = {"old-high-german", "noun", "Hort"},
 	SingularNominative = "Hort"
 })
 
@@ -52,6 +53,7 @@ DefineLanguageWord("Marc", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Language = "middle-high-german",
 	Type = "noun",
 	Meanings = {"Marrow"},
+	DerivesFrom = {"old-high-german", "noun", "Marc"},
 	SingularNominative = "Marc",
 	SingularGenitive = "Marges"
 })
@@ -60,6 +62,7 @@ DefineLanguageWord("Miete", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Language = "middle-high-german",
 	Type = "noun",
 	Meanings = {"Payment", "Reward", "Bribe"},
+	DerivesFrom = {"old-high-german", "noun", "Mēta"},
 	SingularNominative = "Miete",
 	Gender = "Feminine"
 })
@@ -76,6 +79,7 @@ DefineLanguageWord("Ort", { -- Source: Sean Crist, "An Analysis of *z loss in We
 	Language = "middle-high-german",
 	Type = "noun",
 	Meanings = {"Point", "Corner", "Edge of a Part", "Edge of a Piece", "Edge of a Small Coin"},
+	DerivesFrom = {"old-high-german", "noun", "Ort"},
 	SingularNominative = "Ort",
 	Gender = "Masculine"
 })

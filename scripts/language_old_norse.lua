@@ -139,6 +139,7 @@ DefineLanguageWord("Haddr", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Woman's Long Hair"},
+	DerivesFrom = {"proto-germanic", "noun", "Hazdaz"},
 	SingularNominative = "Haddr",
 	Gender = "Masculine"
 })
@@ -161,6 +162,7 @@ DefineLanguageWord("Hodd", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Treasure"},
+	DerivesFrom = {"proto-germanic", "noun", "Huzda"},
 	SingularNominative = "Hodd"
 })
 
@@ -236,6 +238,7 @@ DefineLanguageWord("Mergr", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Marrow in a Bone"},
+	DerivesFrom = {"proto-germanic", "noun", "Mazgaz"},
 	SingularNominative = "Mergr",
 	SingularGenitive = "Mergjar",
 	Gender = "Masculine"

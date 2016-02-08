@@ -45,7 +45,7 @@ DefineLanguageWord("Anvil", {
 	PluralNominative = "Anvils",
 	Gender = "Neuter",
 	SuffixSingular = true,
-	SeparateSuffixTypeName = {"unit-teuton-smithy"} -- seems sensible
+	SeparateSuffixTypeName = {"unit-class-smithy"} -- seems sensible
 })
 
 DefineLanguageWord("Ash", {
@@ -105,7 +105,7 @@ DefineLanguageWord("Brass", {
 	Gender = "Neuter",
 	Uncountable = true,
 	PrefixSingular = true,
-	SeparatePrefixTypeName = {"unit-teuton-smithy"} -- seems sensible
+	SeparatePrefixTypeName = {"unit-class-smithy"} -- seems sensible
 })
 
 DefineLanguageWord("Burn", { -- archaic
@@ -206,7 +206,7 @@ DefineLanguageWord("Forge", {
 	PluralNominative = "Forges",
 	Gender = "Neuter",
 	SuffixSingular = true,
-	SeparateSuffixTypeName = {"unit-teuton-smithy"} -- seems sensible
+	SeparateSuffixTypeName = {"unit-class-smithy"} -- seems sensible
 })
 
 DefineLanguageWord("Francis", {
@@ -257,7 +257,7 @@ DefineLanguageWord("Hammer", {
 	PluralNominative = "Hammers",
 	Gender = "Neuter",
 	SuffixSingular = true,
-	SeparateSuffixTypeName = {"unit-teuton-smithy"} -- seems sensible
+	SeparateSuffixTypeName = {"unit-class-smithy"} -- seems sensible
 })
 
 DefineLanguageWord("Haven", {
@@ -298,6 +298,15 @@ DefineLanguageWord("Henry", {
 	Gender = "Masculine",
 	NameSingular = true,
 	TypeName = {"person"}
+})
+
+DefineLanguageWord("Hoard", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Hoard"},
+	DerivesFrom = {"old-english", "noun", "Hord"}, -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
+	SingularNominative = "Hoard",
+	Gender = "Neuter"
 })
 
 DefineLanguageWord("House", {
@@ -551,7 +560,7 @@ DefineLanguageWord("Smithy", {
 	PluralNominative = "Smithies",
 	Gender = "Neuter",
 	SuffixSingular = true,
-	SeparateSuffixTypeName = {"unit-teuton-smithy"} -- seems sensible
+	SeparateSuffixTypeName = {"unit-class-smithy"} -- seems sensible
 })
 
 DefineLanguageWord("Staple", {
@@ -693,7 +702,7 @@ DefineLanguageWord("Black", {
 	Positive = "Black",
 	SeparatePrefixTypeName = {
 		"settlement", -- examples: "Blackburn", "Blackpool"; Source: "Philip's International School Atlas", 2006, p. 64.
-		"unit-teuton-smithy" -- seems sensible
+		"unit-class-smithy" -- seems sensible
 	}
 })
 
@@ -702,7 +711,7 @@ DefineLanguageWord("Fiery", {
 	Type = "adjective",
 	Meanings = {"Fiery"},
 	Positive = "Fiery",
-	SeparatePrefixTypeName = {"unit-teuton-smithy"} -- seems sensible
+	SeparatePrefixTypeName = {"unit-class-smithy"} -- seems sensible
 })
 
 DefineLanguageWord("New", {
@@ -720,7 +729,7 @@ DefineLanguageWord("Red", {
 	Positive = "Red",
 	SeparatePrefixTypeName = {
 		"settlement", -- example: "Redditch"; Source: "Philip's International School Atlas", 2006, p. 64.
-		"unit-teuton-smithy" -- seems sensible
+		"unit-class-smithy" -- seems sensible
 	}
 })
 
@@ -729,7 +738,7 @@ DefineLanguageWord("Smoldering", {
 	Type = "adjective",
 	Meanings = {"Smoldering"},
 	Positive = "Smoldering",
-	SeparatePrefixTypeName = {"unit-teuton-smithy"} -- seems sensible
+	SeparatePrefixTypeName = {"unit-class-smithy"} -- seems sensible
 })
 
 DefineLanguageWord("The", {
