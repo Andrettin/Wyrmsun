@@ -25,34 +25,39 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageNoun("Hēde", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 7.
+DefineLanguageWord("Hēde", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 7.
 	Language = "middle-low-german",
+	Type = "noun",
 	Meanings = {"Flax Fiber"},
 	SingularNominative = "Hēde",
 	Uncountable = true, -- as a material, it is likely to be uncountable
 	Gender = "Feminine"
 })
 
-DefineLanguageNoun("Kên", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 4.
+DefineLanguageWord("Kên", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 4.
 	Language = "middle-low-german",
+	Type = "noun",
 	Meanings = {"Resinous Wood"},
 	SingularNominative = "Kên"
 })
 
-DefineLanguageNoun("Twern", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
+DefineLanguageWord("Twern", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
 	Language = "middle-low-german",
+	Type = "noun",
 	Meanings = {"Doubly Spun Twine"},
 	SingularNominative = "Twern"
 })
 
-DefineLanguageNoun("Wêt", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 4.
+DefineLanguageWord("Wêt", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 4.
 	Language = "middle-low-german",
+	Type = "noun",
 	Meanings = {"Woad"},
 	SingularNominative = "Wêt" -- source also gives the alternative form "Wêde"
 })
 
-DefineLanguageVerb("Twernen", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
+DefineLanguageWord("Twernen", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
 	Language = "middle-low-german",
+	Type = "verb",
 	Meanings = {"Twine"},
 	Infinitive = "Twernen"
 })

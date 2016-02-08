@@ -27,283 +27,326 @@
 
 -- Greek
 
-DefineLanguageNoun("Κώνωπες", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 101.
+DefineLanguageWord("Κώνωπες", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 101.
 	Language = "greek",
+	Type = "noun",
 	Meanings = {"Gnats"},
 	PluralNominative = "Κώνωπες"
 })
 
-DefineLanguageNoun("Μισθός", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 7.
+DefineLanguageWord("Μισθός", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 7.
 	Language = "greek",
+	Type = "noun",
 	Meanings = {"Reward", "Payment of a Soldier"},
 	SingularNominative = "Μισθός",
 	Gender = "Masculine"
 })
 
-DefineLanguageNoun("Χέσ-χιον", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
+DefineLanguageWord("Χέσ-χιον", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
 	Language = "greek",
+	Type = "noun",
 	Meanings = {"Oakum"}, -- source gives the German word "Werg" as the meaning
 	SingularNominative = "Χέσ-χιον" -- is this really an hyphen in the word, or are these two forms of the word?
 })
 
-DefineLanguageNoun("Χύσθος", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
+DefineLanguageWord("Χύσθος", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
 	Language = "greek",
+	Type = "noun",
 	Meanings = {"Cavity", "Vulva"},
 	SingularNominative = "Χύσθος",
 	Gender = "Masculine"
 })
 
-DefineLanguageNoun("Abdera", { -- should be written as the original Greek name (with Greek characters)
+DefineLanguageWord("Abdera", { -- should be written as the original Greek name (with Greek characters)
 	Language = "greek",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Abdera",
 	NameSingular = true,
 	TypeName = {"settlement"} -- example: "Abdera"
 })
 
-DefineLanguageNoun("Abydus", { -- should be written as the original Greek name (with Greek characters)
+DefineLanguageWord("Abydus", { -- should be written as the original Greek name (with Greek characters)
 	Language = "greek",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Abydus",
 	NameSingular = true,
 	TypeName = {"settlement"} -- example: "Abydus"
 })
 
-DefineLanguageNoun("Acragas", { -- should be written as the original Greek name (with Greek characters)
+DefineLanguageWord("Acragas", { -- should be written as the original Greek name (with Greek characters)
 	Language = "greek",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Acragas",
 	NameSingular = true,
 	TypeName = {"settlement"} -- example: "Acragas" (Agrigentum)
 })
 
-DefineLanguageNoun("Agathe", { -- should be written as the original Greek name (with Greek characters)
+DefineLanguageWord("Agathe", { -- should be written as the original Greek name (with Greek characters)
 	Language = "greek",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Agathe",
 	NameSingular = true,
 	TypeName = {"settlement"} -- example: "Agathe"
 })
 
-DefineLanguageNoun("Ainos", { -- should be written as the original Greek name (with Greek characters)
+DefineLanguageWord("Ainos", { -- should be written as the original Greek name (with Greek characters)
 	Language = "greek",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Ainos",
 	NameSingular = true,
 	TypeName = {"settlement"} -- example: "Ainos"
 })
 
-DefineLanguageNoun("Alalia", { -- should be written as the original Greek name (with Greek characters)
+DefineLanguageWord("Alalia", { -- should be written as the original Greek name (with Greek characters)
 	Language = "greek",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Alalia",
 	NameSingular = true,
 	TypeName = {"settlement"} -- example: "Alalia" (Aleria)
 })
 
-DefineLanguageNoun("Alonae", { -- should be written as the original Greek name (with Greek characters)
+DefineLanguageWord("Alonae", { -- should be written as the original Greek name (with Greek characters)
 	Language = "greek",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Alonae",
 	NameSingular = true,
 	TypeName = {"settlement"} -- example: "Alonae"
 })
 
-DefineLanguageNoun("Amisus", { -- should be written as the original Greek name (with Greek characters)
+DefineLanguageWord("Amisus", { -- should be written as the original Greek name (with Greek characters)
 	Language = "greek",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Amisus",
 	NameSingular = true,
 	TypeName = {"settlement"} -- example: "Amisus"
 })
 
-DefineLanguageNoun("Amphi", { -- should be written as the original Greek name (with Greek characters)
+DefineLanguageWord("Amphi", { -- should be written as the original Greek name (with Greek characters)
 	Language = "greek",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Amphi",
 	PrefixSingular = true,
 	PrefixTypeName = {"settlement"} -- example: "Amphipolis"
 })
 
-DefineLanguageNoun("Calli", { -- should be written as the original Greek name (with Greek characters)
+DefineLanguageWord("Calli", { -- should be written as the original Greek name (with Greek characters)
 	Language = "greek",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Calli",
 	PrefixSingular = true,
 	PrefixTypeName = {"settlement"} -- example: "Callipolis"
 })
 
-DefineLanguageNoun("Χórtos", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+DefineLanguageWord("Χórtos", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "greek",
+	Type = "noun",
 	Meanings = {"Garden"},
 	SingularNominative = "Χórtos"
 })
 
-DefineLanguageNoun("Érā", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+DefineLanguageWord("Érā", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "greek",
+	Type = "noun",
 	Meanings = {"Earth"},
 	SingularGenitive = "Érā"
 })
 
-DefineLanguageNoun("Híppos", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
+DefineLanguageWord("Híppos", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 	Language = "greek",
+	Type = "noun",
 	Meanings = {"Horse"},
 	SingularNominative = "Híppos"
 })
 
-DefineLanguageNoun("Kúrtos", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+DefineLanguageWord("Kúrtos", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "greek",
+	Type = "noun",
 	Meanings = {"Cage"},
 	SingularNominative = "Kúrtos"
 })
 
-DefineLanguageNoun("Nuktós", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+DefineLanguageWord("Nuktós", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "greek",
+	Type = "noun",
 	Meanings = {"Night"}, -- presumably, but is not entirely clear from source
 	SingularGenitive = "Nuktós"
 })
 
-DefineLanguageNoun("Óχos", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+DefineLanguageWord("Óχos", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "greek",
+	Type = "noun",
 	Meanings = {"Wagon"},
 	SingularNominative = "Óχos"
 })
 
-DefineLanguageNoun("Omφḗ", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+DefineLanguageWord("Omφḗ", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "greek",
+	Type = "noun",
 	Meanings = {"Oracle"},
 	SingularNominative = "Omφḗ"
 })
 
-DefineLanguageNoun("Patḗr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+DefineLanguageWord("Patḗr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "greek",
+	Type = "noun",
 	Meanings = {"Father"},
 	SingularNominative = "Patḗr"
 })
 
-DefineLanguageNoun("Phāgós", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+DefineLanguageWord("Phāgós", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "greek",
+	Type = "noun",
 	Meanings = {"Oak"},
 	SingularNominative = "Phāgós"
 })
 
-DefineLanguageNoun("Podós", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+DefineLanguageWord("Podós", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "greek",
+	Type = "noun",
 	Meanings = {"Foot"}, -- meaning not explicitly given in source, but Proto-Germanic cognate "Fōts" means "Foot"
 	SingularGenitive = "Podós"
 })
 
-DefineLanguageNoun("Polis", { -- should be written as the original Greek name (with Greek characters)
+DefineLanguageWord("Polis", { -- should be written as the original Greek name (with Greek characters)
 	Language = "greek",
+	Type = "noun",
 	Meanings = {"City"},
 	SingularNominative = "Polis",
 	SuffixSingular = true,
 	SuffixTypeName = {"settlement"} -- examples: "Amphipolis", "Callipolis", "Neapolis" (Naples)
 })
 
-DefineLanguageNoun("Skiá", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
+DefineLanguageWord("Skiá", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
 	Language = "greek",
+	Type = "noun",
 	Meanings = {"Shadow"},
 	SingularNominative = "Skiá"
 })
 
-DefineLanguageNoun("Téphra", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
+DefineLanguageWord("Téphra", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
 	Language = "greek",
+	Type = "noun",
 	Meanings = {"Ashes"},
 	SingularNominative = "Téphra" -- is this the plural form?
 })
 
-DefineLanguageNoun("Thugátēr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
+DefineLanguageWord("Thugátēr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
 	Language = "sanskrit",
+	Type = "noun",
 	Meanings = {"Daughter"},
 	SingularNominative = "Thugátēr"
 })
 
-DefineLanguageNoun("Thúrā", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+DefineLanguageWord("Thúrā", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "greek",
+	Type = "noun",
 	Meanings = {"Door"},
 	SingularNominative = "Thúrā"
 })
 
-DefineLanguageVerb("Baínō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+DefineLanguageWord("Baínō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "greek",
+	Type = "verb",
 	Meanings = {"Come"}, -- apparently, but not entirely clear from source
 	Infinitive = "Baínō"
 })
 
-DefineLanguageVerb("Hépomai", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
+DefineLanguageWord("Hépomai", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 	Language = "greek",
+	Type = "verb",
 	Meanings = {"Follow"},
 	Infinitive = "Hépomai"
 })
 
-DefineLanguageVerb("Ídmen", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+DefineLanguageWord("Ídmen", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "greek",
+	Type = "verb",
 	Meanings = {"Know"},
 	PluralFirstPersonPresent = "Ídmen"
 })
 
-DefineLanguageVerb("Némō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
+DefineLanguageWord("Némō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
 	Language = "greek",
+	Type = "verb",
 	Meanings = {"Distribute"},
 	Infinitive = "Némō"
 })
 
-DefineLanguageVerb("Pheídomai", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
+DefineLanguageWord("Pheídomai", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "greek",
+	Type = "verb",
 	Meanings = {"Separate"},
 	SingularFirstPersonPresent = "Pheídomai"
 })
 
-DefineLanguageVerb("Peúthomai", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Sections 3-4.
+DefineLanguageWord("Peúthomai", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Sections 3-4.
 	Language = "greek",
+	Type = "verb",
 	Meanings = {"Examine"},
 	Infinitive = "Peúthomai"
 })
 
-DefineLanguageVerb("Steíkhō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Sections 3-4.
+DefineLanguageWord("Steíkhō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Sections 3-4.
 	Language = "greek",
+	Type = "verb",
 	Meanings = {"Climb"},
 	Infinitive = "Steíkhō"
 })
 
-DefineLanguageAdjective("Meízōn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+DefineLanguageWord("Meízōn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "greek",
+	Type = "adjective",
 	Meanings = {"More"},
 	Positive = "Meízōn"
 })
 
-DefineLanguageAdjective("Nea", { -- should be written as the original Greek name (with Greek characters)
+DefineLanguageWord("Nea", { -- should be written as the original Greek name (with Greek characters)
 	Language = "greek",
+	Type = "adjective",
 	Meanings = {"New"},
 	Positive = "Nea",
 	PrefixTypeName = {"settlement"} -- example: "Neapolis" (Naples)
 })
 
-DefineLanguageAdjective("Orektós", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+DefineLanguageWord("Orektós", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "greek",
+	Type = "adjective",
 	Meanings = {"Straight"},
 	Positive = "Orektós"
 })
 
-DefineLanguageAdjective("Plōtós", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+DefineLanguageWord("Plōtós", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "greek",
+	Type = "adjective",
 	Meanings = {"Floating"},
 	Positive = "Plōtós"
 })
 
-DefineLanguagePronoun("Égō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 1.
+DefineLanguageWord("Égō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 1.
 	Language = "greek",
+	Type = "pronoun",
 	Meanings = {"I"}, -- is a cognate of Proto-Germanic "eka"/"ek", so possibly has the same meaning
 	Nominative = "Égō"
 })
 
-DefineLanguageNumeral("Heptá", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
+DefineLanguageWord("Heptá", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
 	Language = "greek",
+	Type = "numeral",
 	Number = 7
 })
 
-DefineLanguageNumeral("Oktṓ", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+DefineLanguageWord("Oktṓ", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "greek",
+	Type = "numeral",
 	Number = 8
 })

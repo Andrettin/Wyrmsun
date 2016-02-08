@@ -25,8 +25,9 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageNoun("Aha", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
+DefineLanguageWord("Aha", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
 	Language = "dutch",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Aha",
 	SuffixSingular = true,
@@ -35,8 +36,9 @@ DefineLanguageNoun("Aha", { -- is this really a noun? Source: B. H. Slicher van 
 	}
 })
 
-DefineLanguageNoun("Apa", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
+DefineLanguageWord("Apa", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
 	Language = "dutch",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Apa",
 	SuffixSingular = true,
@@ -45,8 +47,9 @@ DefineLanguageNoun("Apa", { -- is this really a noun? Source: B. H. Slicher van 
 	}
 })
 
-DefineLanguageNoun("Berg", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
+DefineLanguageWord("Berg", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
 	Language = "dutch",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Berg",
 	SuffixSingular = true,
@@ -55,8 +58,9 @@ DefineLanguageNoun("Berg", { -- is this really a noun? Source: B. H. Slicher van
 	}
 })
 
-DefineLanguageNoun("Bever", {
+DefineLanguageWord("Bever", {
 	Language = "dutch",
+	Type = "noun",
 	Meanings = {"Beaver"}, -- Source: http://www.vandale.nl/opzoeken?pattern=Bever&lang=ne
 	SingularNominative = "Bever",
 	PrefixSingular = true,
@@ -65,8 +69,9 @@ DefineLanguageNoun("Bever", {
 	}
 })
 
-DefineLanguageNoun("Borg", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
+DefineLanguageWord("Borg", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
 	Language = "dutch",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Borg",
 	SuffixSingular = true,
@@ -75,8 +80,9 @@ DefineLanguageNoun("Borg", { -- is this really a noun? Source: B. H. Slicher van
 	}
 })
 
-DefineLanguageNoun("Braak", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
+DefineLanguageWord("Braak", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
 	Language = "dutch",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Braak",
 	SuffixSingular = true,
@@ -85,8 +91,9 @@ DefineLanguageNoun("Braak", { -- is this really a noun? Source: B. H. Slicher va
 	}
 })
 
-DefineLanguageNoun("Breede", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
+DefineLanguageWord("Breede", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
 	Language = "dutch",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Breede",
 	SuffixSingular = true,
@@ -95,8 +102,9 @@ DefineLanguageNoun("Breede", { -- is this really a noun? Source: B. H. Slicher v
 	}
 })
 
-DefineLanguageNoun("Dam", {
+DefineLanguageWord("Dam", {
 	Language = "dutch",
+	Type = "noun",
 	Meanings = {"Dam"}, -- Source: http://www.vandale.nl/opzoeken?pattern=Dam&lang=ne
 	SingularNominative = "Dam",
 	SuffixSingular = true,
@@ -105,8 +113,9 @@ DefineLanguageNoun("Dam", {
 	}
 })
 
-DefineLanguageNoun("Ede", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
+DefineLanguageWord("Ede", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
 	Language = "dutch",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Ede",
 	SuffixSingular = true,
@@ -115,8 +124,9 @@ DefineLanguageNoun("Ede", { -- is this really a noun? Source: B. H. Slicher van 
 	}
 })
 
-DefineLanguageNoun("Geer", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
+DefineLanguageWord("Geer", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
 	Language = "dutch",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Geer",
 	SuffixSingular = true,
@@ -125,8 +135,9 @@ DefineLanguageNoun("Geer", { -- is this really a noun? Source: B. H. Slicher van
 	}
 })
 
-DefineLanguageNoun("Goor", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
+DefineLanguageWord("Goor", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
 	Language = "dutch",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Goor",
 	SuffixSingular = true,
@@ -135,8 +146,9 @@ DefineLanguageNoun("Goor", { -- is this really a noun? Source: B. H. Slicher van
 	}
 })
 
-DefineLanguageNoun("Haar", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
+DefineLanguageWord("Haar", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
 	Language = "dutch",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Haar",
 	SuffixSingular = true,
@@ -145,8 +157,9 @@ DefineLanguageNoun("Haar", { -- is this really a noun? Source: B. H. Slicher van
 	}
 })
 
-DefineLanguageNoun("Heim", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
+DefineLanguageWord("Heim", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
 	Language = "dutch",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Heim",
 	SuffixSingular = true,
@@ -155,8 +168,9 @@ DefineLanguageNoun("Heim", { -- is this really a noun? Source: B. H. Slicher van
 	}
 })
 
-DefineLanguageNoun("Heuvel", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
+DefineLanguageWord("Heuvel", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
 	Language = "dutch",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Heuvel",
 	SuffixSingular = true,
@@ -165,8 +179,9 @@ DefineLanguageNoun("Heuvel", { -- is this really a noun? Source: B. H. Slicher v
 	}
 })
 
-DefineLanguageNoun("Ho", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
+DefineLanguageWord("Ho", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
 	Language = "dutch",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Ho",
 	SuffixSingular = true,
@@ -175,8 +190,9 @@ DefineLanguageNoun("Ho", { -- is this really a noun? Source: B. H. Slicher van B
 	}
 })
 
-DefineLanguageNoun("Hoop", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
+DefineLanguageWord("Hoop", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
 	Language = "dutch",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Hoop",
 	SuffixSingular = true,
@@ -185,8 +201,9 @@ DefineLanguageNoun("Hoop", { -- is this really a noun? Source: B. H. Slicher van
 	}
 })
 
-DefineLanguageNoun("Horst", { -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
+DefineLanguageWord("Horst", { -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
 	Language = "dutch",
+	Type = "noun",
 	Meanings = {"Hyrst"},
 	SingularNominative = "Horst",
 	SuffixSingular = true,
@@ -195,8 +212,9 @@ DefineLanguageNoun("Horst", { -- Source: B. H. Slicher van Bath, "Dutch Tribal P
 	}
 })
 
-DefineLanguageNoun("Huis", { -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
+DefineLanguageWord("Huis", { -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
 	Language = "dutch",
+	Type = "noun",
 	Meanings = {"House"},
 	SingularNominative = "Huis",
 	SuffixSingular = true,
@@ -205,8 +223,9 @@ DefineLanguageNoun("Huis", { -- Source: B. H. Slicher van Bath, "Dutch Tribal Pr
 	}
 })
 
-DefineLanguageNoun("Ing", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, pp. 331, 335.
+DefineLanguageWord("Ing", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, pp. 331, 335.
 	Language = "dutch",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Ing",
 	SuffixSingular = true,
@@ -215,8 +234,9 @@ DefineLanguageNoun("Ing", { -- is this really a noun? Source: B. H. Slicher van 
 	}
 })
 
-DefineLanguageNoun("Ingakker", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
+DefineLanguageWord("Ingakker", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
 	Language = "dutch",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Ingakker",
 	SuffixSingular = true,
@@ -225,8 +245,9 @@ DefineLanguageNoun("Ingakker", { -- is this really a noun? Source: B. H. Slicher
 	}
 })
 
-DefineLanguageNoun("Ingen", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
+DefineLanguageWord("Ingen", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
 	Language = "dutch",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Ingen",
 	SuffixSingular = true,
@@ -235,8 +256,9 @@ DefineLanguageNoun("Ingen", { -- is this really a noun? Source: B. H. Slicher va
 	}
 })
 
-DefineLanguageNoun("Inggoed", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
+DefineLanguageWord("Inggoed", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
 	Language = "dutch",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Inggoed",
 	SuffixSingular = true,
@@ -245,8 +267,9 @@ DefineLanguageNoun("Inggoed", { -- is this really a noun? Source: B. H. Slicher 
 	}
 })
 
-DefineLanguageNoun("Ingheim", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
+DefineLanguageWord("Ingheim", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
 	Language = "dutch",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Ingheim",
 	SuffixSingular = true,
@@ -255,8 +278,9 @@ DefineLanguageNoun("Ingheim", { -- is this really a noun? Source: B. H. Slicher 
 	}
 })
 
-DefineLanguageNoun("Inghuis", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
+DefineLanguageWord("Inghuis", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
 	Language = "dutch",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Inghuis",
 	SuffixSingular = true,
@@ -265,8 +289,9 @@ DefineLanguageNoun("Inghuis", { -- is this really a noun? Source: B. H. Slicher 
 	}
 })
 
-DefineLanguageNoun("Kote", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
+DefineLanguageWord("Kote", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
 	Language = "dutch",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Kote",
 	SuffixSingular = true,
@@ -275,8 +300,9 @@ DefineLanguageNoun("Kote", { -- is this really a noun? Source: B. H. Slicher van
 	}
 })
 
-DefineLanguageNoun("Laar", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
+DefineLanguageWord("Laar", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
 	Language = "dutch",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Laar",
 	SuffixSingular = true,
@@ -285,8 +311,9 @@ DefineLanguageNoun("Laar", { -- is this really a noun? Source: B. H. Slicher van
 	}
 })
 
-DefineLanguageNoun("Land", {
+DefineLanguageWord("Land", {
 	Language = "dutch",
+	Type = "noun",
 	Meanings = {"Land", "Country"}, -- Source: http://www.vandale.nl/opzoeken?pattern=Land&lang=ne
 	SingularNominative = "Land",
 	SuffixSingular = true,
@@ -295,8 +322,9 @@ DefineLanguageNoun("Land", {
 	}
 })
 
-DefineLanguageNoun("Lo", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
+DefineLanguageWord("Lo", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
 	Language = "dutch",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Lo",
 	SuffixSingular = true,
@@ -305,8 +333,9 @@ DefineLanguageNoun("Lo", { -- is this really a noun? Source: B. H. Slicher van B
 	}
 })
 
-DefineLanguageNoun("Molen", { -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
+DefineLanguageWord("Molen", { -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
 	Language = "dutch",
+	Type = "noun",
 	Meanings = {"Mill"},
 	SingularNominative = "Molen",
 	SuffixSingular = true,
@@ -315,8 +344,9 @@ DefineLanguageNoun("Molen", { -- Source: B. H. Slicher van Bath, "Dutch Tribal P
 	}
 })
 
-DefineLanguageNoun("Oever", { -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
+DefineLanguageWord("Oever", { -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
 	Language = "dutch",
+	Type = "noun",
 	Meanings = {"Bank of a River"},
 	SingularNominative = "Oever",
 	SuffixSingular = true,
@@ -325,8 +355,9 @@ DefineLanguageNoun("Oever", { -- Source: B. H. Slicher van Bath, "Dutch Tribal P
 	}
 })
 
-DefineLanguageNoun("Roden", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
+DefineLanguageWord("Roden", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
 	Language = "dutch",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Roden",
 	SuffixSingular = true,
@@ -335,8 +366,9 @@ DefineLanguageNoun("Roden", { -- is this really a noun? Source: B. H. Slicher va
 	}
 })
 
-DefineLanguageNoun("Sol", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
+DefineLanguageWord("Sol", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
 	Language = "dutch",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Sol",
 	SuffixSingular = true,
@@ -345,8 +377,9 @@ DefineLanguageNoun("Sol", { -- is this really a noun? Source: B. H. Slicher van 
 	}
 })
 
-DefineLanguageNoun("Stap", { -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
+DefineLanguageWord("Stap", { -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
 	Language = "dutch",
+	Type = "noun",
 	Meanings = {"Step", "Footstep", "Pace", "Stride"}, -- Source: http://www.vandale.nl/opzoeken?pattern=Stap&lang=ne
 	SingularNominative = "Stap",
 	PrefixSingular = true,
@@ -355,8 +388,9 @@ DefineLanguageNoun("Stap", { -- Source: B. H. Slicher van Bath, "Dutch Tribal Pr
 	}
 })
 
-DefineLanguageNoun("Stege", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
+DefineLanguageWord("Stege", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
 	Language = "dutch",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Stege",
 	SuffixSingular = true,
@@ -365,8 +399,9 @@ DefineLanguageNoun("Stege", { -- is this really a noun? Source: B. H. Slicher va
 	}
 })
 
-DefineLanguageNoun("Tere", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, pp. 331, 335.
+DefineLanguageWord("Tere", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, pp. 331, 335.
 	Language = "dutch",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Tere",
 	SuffixSingular = true,
@@ -375,8 +410,9 @@ DefineLanguageNoun("Tere", { -- is this really a noun? Source: B. H. Slicher van
 	}
 })
 
-DefineLanguageNoun("Tuin", { -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
+DefineLanguageWord("Tuin", { -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
 	Language = "dutch",
+	Type = "noun",
 	Meanings = {"Garden", "Town"},
 	SingularNominative = "Tuin",
 	SuffixSingular = true,
@@ -385,8 +421,9 @@ DefineLanguageNoun("Tuin", { -- Source: B. H. Slicher van Bath, "Dutch Tribal Pr
 	}
 })
 
-DefineLanguageNoun("Tye", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
+DefineLanguageWord("Tye", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
 	Language = "dutch",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Tye",
 	SuffixSingular = true,
@@ -395,8 +432,9 @@ DefineLanguageNoun("Tye", { -- is this really a noun? Source: B. H. Slicher van 
 	}
 })
 
-DefineLanguageNoun("Veld", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
+DefineLanguageWord("Veld", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
 	Language = "dutch",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Veld",
 	SuffixSingular = true,
@@ -405,8 +443,9 @@ DefineLanguageNoun("Veld", { -- is this really a noun? Source: B. H. Slicher van
 	}
 })
 
-DefineLanguageNoun("Voorde", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
+DefineLanguageWord("Voorde", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
 	Language = "dutch",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Voorde",
 	SuffixSingular = true,
@@ -415,8 +454,9 @@ DefineLanguageNoun("Voorde", { -- is this really a noun? Source: B. H. Slicher v
 	}
 })
 
-DefineLanguageNoun("Waal", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
+DefineLanguageWord("Waal", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
 	Language = "dutch",
+	Type = "noun",
 	Meanings = {"Walloon"}, -- Source: http://www.vandale.nl/opzoeken?pattern=Waal&lang=ne
 	SingularNominative = "Waal",
 	PrefixSingular = true,
@@ -424,8 +464,9 @@ DefineLanguageNoun("Waal", { -- is this really a noun? Source: B. H. Slicher van
 		"settlement" -- example: "Waalwijk"
 	}
 })
-DefineLanguageNoun("Wede", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
+DefineLanguageWord("Wede", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
 	Language = "dutch",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Wede",
 	SuffixSingular = true,
@@ -434,8 +475,9 @@ DefineLanguageNoun("Wede", { -- is this really a noun? Source: B. H. Slicher van
 	}
 })
 
-DefineLanguageNoun("Wijk", { -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
+DefineLanguageWord("Wijk", { -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
 	Language = "dutch",
+	Type = "noun",
 	Meanings = {"District", "Area"}, -- Source: http://www.vandale.nl/opzoeken?pattern=Wijk&lang=ne
 	SingularNominative = "Wijk",
 	SuffixSingular = true,

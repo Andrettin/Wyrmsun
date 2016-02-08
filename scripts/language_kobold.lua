@@ -27,64 +27,72 @@
 
 -- Sources for Kobold names: Hodeke (Jacob Grimm, "Deutsche Mythologie", pp. 392, 1049, 1080), Hoidike (Jacob Grimm, "Deutsche Mythologie", p. 392), Napfhans (Jacob Grimm, "Deutsche Mythologie", p. 393), Pumphut (Jacob Grimm, "Deutsche Mythologie", p. 1049), Shellycoat (Jacob Grimm, "Deutsche Mythologie", p. 394)
 
-DefineLanguageNoun("Coat", { -- Source: Jacob Grimm, "Deutsche Mythologie", p. 394.
+DefineLanguageWord("Coat", { -- Source: Jacob Grimm, "Deutsche Mythologie", p. 394.
 	Language = "kobold",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Coat",
 	SuffixSingular = true,
 	SuffixTypeName = {"person"} -- example: Shellycoat
 })
 
-DefineLanguageNoun("Eke", { -- Source: Jacob Grimm, "Deutsche Mythologie", pp. 392, 1049, 1080.
+DefineLanguageWord("Eke", { -- Source: Jacob Grimm, "Deutsche Mythologie", pp. 392, 1049, 1080.
 	Language = "kobold",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Eke",
 	SuffixSingular = true,
 	SuffixTypeName = {"person"} -- example: Hodeke
 })
 
-DefineLanguageNoun("Hod", { -- Source: Jacob Grimm, "Deutsche Mythologie", pp. 392, 1049, 1080.
+DefineLanguageWord("Hod", { -- Source: Jacob Grimm, "Deutsche Mythologie", pp. 392, 1049, 1080.
 	Language = "kobold",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Hod",
 	PrefixSingular = true,
 	PrefixTypeName = {"person"} -- example: Hodeke
 })
 
-DefineLanguageNoun("Hoid", { -- Source: Jacob Grimm, "Deutsche Mythologie", p. 392.
+DefineLanguageWord("Hoid", { -- Source: Jacob Grimm, "Deutsche Mythologie", p. 392.
 	Language = "kobold",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Hoid",
 	PrefixSingular = true,
 	PrefixTypeName = {"person"} -- example: Hoidike
 })
 
-DefineLanguageNoun("Hut", { -- Source: Jacob Grimm, "Deutsche Mythologie", p. 1049.
+DefineLanguageWord("Hut", { -- Source: Jacob Grimm, "Deutsche Mythologie", p. 1049.
 	Language = "kobold",
+	Type = "noun",
 	Meanings = {"Hat"},
 	SingularNominative = "Hut",
 	SuffixSingular = true,
 	SuffixTypeName = {"person"} -- example: Pumphut
 })
 
-DefineLanguageNoun("Ike", { -- Source: Jacob Grimm, "Deutsche Mythologie", p. 392.
+DefineLanguageWord("Ike", { -- Source: Jacob Grimm, "Deutsche Mythologie", p. 392.
 	Language = "kobold",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Ike",
 	SuffixSingular = true,
 	SuffixTypeName = {"person"} -- example: Hoidike
 })
 
-DefineLanguageNoun("Napf", { -- Source: Jacob Grimm, "Deutsche Mythologie", p. 393.
+DefineLanguageWord("Napf", { -- Source: Jacob Grimm, "Deutsche Mythologie", p. 393.
 	Language = "kobold",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Napf",
 	PrefixSingular = true,
 	PrefixTypeName = {"person"} -- example: Napfhans
 })
 
-DefineLanguageNoun("Pump", { -- Source: Jacob Grimm, "Deutsche Mythologie", p. 1049.
+DefineLanguageWord("Pump", { -- Source: Jacob Grimm, "Deutsche Mythologie", p. 1049.
 	Language = "kobold",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Pump",
 	PrefixSingular = true,

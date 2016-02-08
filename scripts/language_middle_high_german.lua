@@ -25,94 +25,108 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageNoun("Gart", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
+DefineLanguageWord("Gart", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
 	Language = "middle-high-german",
+	Type = "noun",
 	Meanings = {"Prickle", "Stick for Driving Animals"},
 	SingularNominative = "Gart",
 	Gender = "Masculine"
 })
 			
-DefineLanguageNoun("Hort", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
+DefineLanguageWord("Hort", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
 	Language = "middle-high-german",
+	Type = "noun",
 	Meanings = {"Treasure"},
 	SingularNominative = "Hort"
 })
 
-DefineLanguageNoun("Kien", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 4, 7.
+DefineLanguageWord("Kien", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 4, 7.
 	Language = "middle-high-german",
+	Type = "noun",
 	Meanings = {"Fir", "Spruce"," Fir Splinter", "Fir Torch", "Spruce Splinter", "Spruce Torch"},
 	SingularNominative = "Kien",
 	Gender = "Masculine"
 })
 
-DefineLanguageNoun("Marc", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
+DefineLanguageWord("Marc", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "middle-high-german",
+	Type = "noun",
 	Meanings = {"Marrow"},
 	SingularNominative = "Marc",
 	SingularGenitive = "Marges"
 })
 
-DefineLanguageNoun("Miete", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 7.
+DefineLanguageWord("Miete", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 7.
 	Language = "middle-high-german",
+	Type = "noun",
 	Meanings = {"Payment", "Reward", "Bribe"},
 	SingularNominative = "Miete",
 	Gender = "Feminine"
 })
 
-DefineLanguageNoun("Nare", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
+DefineLanguageWord("Nare", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "middle-high-german",
+	Type = "noun",
 	Meanings = {"Salvation", "Rescue", "Nourishment", "Sustenance"},
 	SingularNominative = "Nare",
 	Gender = "Feminine"
 })
 
-DefineLanguageNoun("Ort", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.
+DefineLanguageWord("Ort", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.
 	Language = "middle-high-german",
+	Type = "noun",
 	Meanings = {"Point", "Corner", "Edge of a Part", "Edge of a Piece", "Edge of a Small Coin"},
 	SingularNominative = "Ort",
 	Gender = "Masculine"
 })
 
-DefineLanguageNoun("Rünne", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
+DefineLanguageWord("Rünne", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
 	Language = "middle-high-german",
+	Type = "noun",
 	Meanings = {"Storm Surge"},
 	SingularNominative = "Rünne",
 	Gender = "Feminine"
 })
 
-DefineLanguageNoun("Weit", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 4, 7.
+DefineLanguageWord("Weit", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 4, 7.
 	Language = "middle-high-german",
+	Type = "noun",
 	Meanings = {"Woad"},
 	SingularNominative = "Weit",
 	Gender = "Masculine"
 })
 
-DefineLanguageNoun("Zwirn", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1-2, 6.
+DefineLanguageWord("Zwirn", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1-2, 6.
 	Language = "middle-high-german",
+	Type = "noun",
 	Meanings = {"Doubly Spun Twine"},
 	SingularNominative = "Zwirn"
 })
 
-DefineLanguageVerb("Lēren", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 5.
+DefineLanguageWord("Lēren", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 5.
 	Language = "middle-high-german",
+	Type = "verb",
 	Meanings = {"Teach"},
 	Infinitive = "Lēren" -- causative verb
 })
 
-DefineLanguageVerb("Lernen", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 5.
+DefineLanguageWord("Lernen", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 5.
 	Language = "middle-high-german",
+	Type = "verb",
 	Meanings = {"Learn"},
 	Infinitive = "Lernen"
 })
 
-DefineLanguageVerb("Nerigen", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
+DefineLanguageWord("Nerigen", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "middle-high-german",
+	Type = "verb",
 	Meanings = {"Heal", "Sustain the Life of", "Save", "Protect", "Nourish"},
 	Infinitive = "Nerigen" -- source also gives alternative forms "Neren" and "Nern"
 })
 
-DefineLanguageVerb("Zwirnen", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
+DefineLanguageWord("Zwirnen", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
 	Language = "middle-high-german",
+	Type = "verb",
 	Meanings = {"Twist Together Twice", "Twine"},
 	Infinitive = "Zwirnen"
 })

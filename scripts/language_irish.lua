@@ -25,59 +25,68 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageNoun("Árus", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
+DefineLanguageWord("Árus", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "irish",
+	Type = "noun",
 	Meanings = {"Dwelling"},
 	SingularNominative = "Árus"
 })
 
-DefineLanguageNoun("Brot", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
+DefineLanguageWord("Brot", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "irish",
+	Type = "noun",
 	Meanings = {"Prickle"},
 	SingularNominative = "Brot",
 	Gender = "Masculine"
 })
 
-DefineLanguageNoun("Gas", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
+DefineLanguageWord("Gas", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
 	Language = "irish",
+	Type = "noun",
 	Meanings = {"Sapling", "Sprout", "Shoot"},
 	SingularNominative = "Gas",
 	Gender = "Feminine"
 })
 
-DefineLanguageNoun("Gat", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
+DefineLanguageWord("Gat", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
 	Language = "irish",
+	Type = "noun",
 	Meanings = {"Rod"},
 	SingularNominative = "Gat"
 })
 
-DefineLanguageNoun("Gius", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 7.
+DefineLanguageWord("Gius", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 7.
 	Language = "irish",
+	Type = "noun",
 	Meanings = {"Fir", "Spruce"},
 	SingularNominative = "Gius"
 })
 
-DefineLanguageNoun("Kass", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
+DefineLanguageWord("Kass", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
 	Language = "irish",
+	Type = "noun",
 	Meanings = {"Curl", "Tress"},
 	SingularNominative = "Kass"
 })
 
-DefineLanguageNoun("Medg", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
+DefineLanguageWord("Medg", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "irish",
+	Type = "noun",
 	Meanings = {"Whey"},
 	SingularNominative = "Medg",
 	Gender = "Feminine"
 })
 
-DefineLanguageVerb("Rīadaim", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
+DefineLanguageWord("Rīadaim", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
 	Language = "irish",
+	Type = "verb",
 	Meanings = {"Travel"},
 	Infinitive = "Rīadaim"
 })
 
-DefineLanguageAdjective("Máo", { -- this is the comparative, what is the normal version of the word? Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
+DefineLanguageWord("Máo", { -- this is the comparative, what is the normal version of the word? Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
 	Language = "irish",
+	Type = "adjective",
 	Meanings = {"More"}, -- "Máo" actually means "größer"
 	Comparative = "Máo" -- source also gives alternative form "Móo"
 })

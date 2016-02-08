@@ -25,21 +25,24 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageNoun("Mīzhda", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 7.
+DefineLanguageWord("Mīzhda", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 7.
 	Language = "avestan",
+	Type = "noun",
 	Meanings = {"Reward"},
 	SingularNominative = "Mīzhda",
 	Gender = "Neuter"
 })
 
-DefineLanguageNoun("Yārə", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+DefineLanguageWord("Yārə", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "avestan",
+	Type = "noun",
 	Meanings = {"Year"},
 	SingularNominative = "Yārə"
 })
 
-DefineLanguageAdjective("Spaetō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
+DefineLanguageWord("Spaetō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 	Language = "avestan",
+	Type = "adjective",
 	Meanings = {"White"},
 	Positive = "Spaetō"
 })

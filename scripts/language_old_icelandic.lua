@@ -25,62 +25,79 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageNoun("Drósir", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
+DefineLanguageWord("Drósir", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "old-icelandic",
+	Type = "noun",
 	Meanings = {"Women"},
 	PluralNominative = "Drósir"
 })
 
-DefineLanguageNoun("Eyra", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
+DefineLanguageWord("Dýrt", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "old-icelandic",
-	Meanings = {"Ear"},
-	SingularNominative = "Eyra"
-})
-
-DefineLanguageNoun("Ker", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
-	Language = "old-icelandic",
-	Meanings = {"Container"},
-	SingularNominative = "Ker"
-})
-
-DefineLanguageNoun("Lín", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
-	Language = "old-icelandic",
-	Meanings = {"Linen"},
-	PluralNominative = "Lín"
-})
-
-DefineLanguageNoun("Reyrr", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
-	Language = "old-icelandic",
-	Meanings = {"Tube"},
-	SingularNominative = "Reyrr"
-})
-
-DefineLanguageNoun("Sár", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 3.
-	Language = "old-icelandic",
-	Meanings = {"Wound"},
-	SingularNominative = "Sár"
-})
-
-DefineLanguageVerb("Spunno", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
-	Language = "old-icelandic",
-	Meanings = {"Spun"},
-	PluralThirdPersonPast = "Spunno"
-})
-
-DefineLanguageAdjective("Dýrt", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
-	Language = "old-icelandic",
+	Type = "adjective",
 	Meanings = {"Dear", "Expensive"},
 	Positive = "Dýrt"
 })
 
-DefineLanguageAdjective("Meiri", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 3.
+DefineLanguageWord("Eyra", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
 	Language = "old-icelandic",
+	Type = "noun",
+	Meanings = {"Ear"},
+	SingularNominative = "Eyra"
+})
+
+DefineLanguageWord("Ker", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
+	Language = "old-icelandic",
+	Type = "noun",
+	Meanings = {"Container"},
+	SingularNominative = "Ker"
+})
+
+DefineLanguageWord("Lín", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
+	Language = "old-icelandic",
+	Type = "noun",
+	Meanings = {"Linen"},
+	PluralNominative = "Lín"
+})
+
+DefineLanguageWord("Meiri", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 3.
+	Language = "old-icelandic",
+	Type = "adjective",
 	Meanings = {"More"}, -- perhaps a "determiner" class of words should be added?
 	Positive = "Meiri"
 })
 
-DefineLanguageAdjective("Suðrœnar", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
+DefineLanguageWord("Reyrr", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
 	Language = "old-icelandic",
+	Type = "noun",
+	Meanings = {"Tube"},
+	SingularNominative = "Reyrr"
+})
+
+DefineLanguageWord("Sár", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 3.
+	Language = "old-icelandic",
+	Type = "noun",
+	Meanings = {"Wound"},
+	SingularNominative = "Sár"
+})
+
+DefineLanguageWord("Spunno", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
+	Language = "old-icelandic",
+	Type = "verb",
+	Meanings = {"Spun"},
+	PluralThirdPersonPast = "Spunno"
+})
+
+DefineLanguageWord("Suðrœnar", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
+	Language = "old-icelandic",
+	Type = "adjective",
 	Meanings = {"Southern"},
 	PositivePlural = "Suðrœnar"
+})
+
+DefineLanguageWord("Tuǽr", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
+	Language = "old-icelandic",
+	Type = "numeral",
+	Number = 2,
+	PositivePlural = "Tuǽr"
 })

@@ -25,14 +25,16 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageAdjective("Dubnorix", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+DefineLanguageWord("Dubnorix", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "gaulish",
+	Type = "adjective",
 	Meanings = {"Deep"}, -- cognate of Proto-Germanic "Déwpaz" and Lithuanian "Dubùs", both of which mean "Deep"; the meaning for the Gaulish word isn't given by the source, so the meaning of the cognates is the closest we have
 	Positive = "Dubùs"
 })
 
-DefineLanguageAdjective("Longo", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+DefineLanguageWord("Longo", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "gaulish",
+	Type = "adjective",
 	Meanings = {"Long"},
 	Positive = "Longo"
 })

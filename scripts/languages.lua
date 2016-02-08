@@ -312,41 +312,11 @@ Load("scripts/language_ukrainian.lua")
 Load("scripts/language_welsh.lua")
 Load("scripts/language_west_germanic.lua")
 
-DefineCivilizationLanguage("old-icelandic", -- Old Icelandic
-	"numerals", {
-		"Tuǽr", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
-			"number", 2
-		}
-	}
-)
-
-DefineCivilizationLanguage("old-swedish", -- Old Swedish
-	"pronouns", {
-		"Vīr", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 5.
-			"meaning", "We",
-			"nominative", "Vīr"
-		}
-	},
-	"numerals", {
-		"Tuar", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
-			"number", 2
-		}
-	}
-)
-
-DefineCivilizationLanguage("sanskrit", -- Sanskrit
-	"pronouns", {
-		"Vayim", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 5.
-			"meaning", "We",
-			"nominative", "Vayim"
-		}
-	}
-)
-
 -- North Slavic (did this really exist?)
 --[[
-DefineLanguageNoun("Kosem", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
+DefineLanguageWord("Kosem", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
 	Language = "north-slavic",
+	Type = "noun",
 	Meanings = {"Bundle of Flax"},
 	SingularNominative = "Kosem"
 })

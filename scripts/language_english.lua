@@ -25,8 +25,9 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageNoun("Alf", { -- archaic
+DefineLanguageWord("Alf", { -- archaic
 	Language = "english",
+	Type = "noun",
 	Meanings = {"Elf"},
 	SingularNominative = "Alf",
 	Gender = "Masculine",
@@ -36,8 +37,9 @@ DefineLanguageNoun("Alf", { -- archaic
 	PrefixTypeName = {"person"} -- example: "Alfred"
 })
 
-DefineLanguageNoun("Anvil", {
+DefineLanguageWord("Anvil", {
 	Language = "english",
+	Type = "noun",
 	Meanings = {"Anvil"},
 	SingularNominative = "Anvil",
 	PluralNominative = "Anvils",
@@ -46,8 +48,9 @@ DefineLanguageNoun("Anvil", {
 	SeparateSuffixTypeName = {"unit-teuton-smithy"} -- seems sensible
 })
 
-DefineLanguageNoun("Ash", {
+DefineLanguageWord("Ash", {
 	Language = "english",
+	Type = "noun",
 	Meanings = {"Ash"},
 	SingularNominative = "Ash",
 	Gender = "Neuter",
@@ -55,8 +58,9 @@ DefineLanguageNoun("Ash", {
 	PrefixTypeName = {"settlement"} -- example: "Ashford"; Source: "Philip's International School Atlas", 2006, p. 64.
 })
 
-DefineLanguageNoun("Barn", {
+DefineLanguageWord("Barn", {
 	Language = "english",
+	Type = "noun",
 	Meanings = {"Barn"},
 	SingularNominative = "Barn",
 	Gender = "Neuter",
@@ -64,8 +68,9 @@ DefineLanguageNoun("Barn", {
 	PrefixTypeName = {"settlement"} -- example: "Barnstaple"; Source: "Philip's International School Atlas", 2006, p. 64.
 })
 
-DefineLanguageNoun("Bay", {
+DefineLanguageWord("Bay", {
 	Language = "english",
+	Type = "noun",
 	Meanings = {"Bay"},
 	SingularNominative = "Bay",
 	Gender = "Neuter",
@@ -73,8 +78,9 @@ DefineLanguageNoun("Bay", {
 	SuffixTypeName = {"settlement"} -- example: "Torbay"; Source: "Philip's International School Atlas", 2006, p. 64.
 })
 
-DefineLanguageNoun("Bed", {
+DefineLanguageWord("Bed", {
 	Language = "english",
+	Type = "noun",
 	Meanings = {"Bed"},
 	SingularNominative = "Bed",
 	Gender = "Neuter",
@@ -82,16 +88,18 @@ DefineLanguageNoun("Bed", {
 	PrefixTypeName = {"settlement"} -- example: "Bedford"; Source: "Philip's International School Atlas", 2006, p. 64.
 })
 
-DefineLanguageNoun("Bernard", {
+DefineLanguageWord("Bernard", {
 	Language = "english",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Bernard",
 	NameSingular = true,
 	TypeName = {"person"}
 })
 
-DefineLanguageNoun("Brass", {
+DefineLanguageWord("Brass", {
 	Language = "english",
+	Type = "noun",
 	Meanings = {"Brass"},
 	SingularNominative = "Brass",
 	Gender = "Neuter",
@@ -100,8 +108,9 @@ DefineLanguageNoun("Brass", {
 	SeparatePrefixTypeName = {"unit-teuton-smithy"} -- seems sensible
 })
 
-DefineLanguageNoun("Burn", { -- archaic
+DefineLanguageWord("Burn", { -- archaic
 	Language = "english",
+	Type = "noun",
 	Meanings = {"Creek"},
 	SingularNominative = "Burn",
 	Gender = "Neuter",
@@ -109,8 +118,9 @@ DefineLanguageNoun("Burn", { -- archaic
 	SuffixTypeName = {"settlement"} -- example: "Blackburn"; Source: "Philip's International School Atlas", 2006, p. 64.
 })
 
-DefineLanguageNoun("Bury", { -- archaic
+DefineLanguageWord("Bury", { -- archaic
 	Language = "english",
+	Type = "noun",
 	Meanings = {"Bury"},
 	SingularNominative = "Bury",
 	Gender = "Neuter",
@@ -118,8 +128,9 @@ DefineLanguageNoun("Bury", { -- archaic
 	SuffixTypeName = {"settlement"} -- examples: "Newbury", "Salisbury", "Shrewsbury"; Source: "Philip's International School Atlas", 2006, p. 64.
 })
 
-DefineLanguageNoun("Charles", {
+DefineLanguageWord("Charles", {
 	Language = "english",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Charles",
 	Gender = "Masculine",
@@ -127,8 +138,9 @@ DefineLanguageNoun("Charles", {
 	TypeName = {"person"}
 })
 
-DefineLanguageNoun("Corn", {
+DefineLanguageWord("Corn", {
 	Language = "english",
+	Type = "noun",
 	Meanings = {"Corn"},
 	SingularNominative = "Corn",
 	Gender = "Neuter",
@@ -136,8 +148,9 @@ DefineLanguageNoun("Corn", {
 	PrefixTypeName = {"province"} -- example: "Cornwall"
 })
 
-DefineLanguageNoun("Ditch", {
+DefineLanguageWord("Ditch", {
 	Language = "english",
+	Type = "noun",
 	Meanings = {"Ditch"},
 	SingularNominative = "Ditch",
 	Gender = "Neuter",
@@ -145,8 +158,9 @@ DefineLanguageNoun("Ditch", {
 	SuffixTypeName = {"settlement"} -- example: "Redditch"; Source: "Philip's International School Atlas", 2006, p. 64.
 })
 
-DefineLanguageNoun("Es", { -- archaic
+DefineLanguageWord("Es", { -- archaic
 	Language = "english",
+	Type = "noun",
 	Meanings = {"East"},
 	SingularNominative = "Es",
 	Gender = "Neuter",
@@ -154,8 +168,9 @@ DefineLanguageNoun("Es", { -- archaic
 	PrefixTypeName = {"province"} -- example: "Essex"
 })
 
-DefineLanguageNoun("Fish", {
+DefineLanguageWord("Fish", {
 	Language = "english",
+	Type = "noun",
 	Meanings = {"Fish"},
 	SingularNominative = "Fish",
 	Gender = "Neuter",
@@ -163,8 +178,9 @@ DefineLanguageNoun("Fish", {
 	PrefixTypeName = {"settlement"} -- example: "Fishguard"; Source: "Philip's International School Atlas", 2006, p. 64.
 })
 
-DefineLanguageNoun("Folk", {
+DefineLanguageWord("Folk", {
 	Language = "english",
+	Type = "noun",
 	Meanings = {"Folk"},
 	SingularNominative = "Folk",
 	Gender = "Neuter",
@@ -172,8 +188,9 @@ DefineLanguageNoun("Folk", {
 	SuffixTypeName = {"province"} -- examples: "Norfolk", "Suffolk"
 })
 
-DefineLanguageNoun("Ford", {
+DefineLanguageWord("Ford", {
 	Language = "english",
+	Type = "noun",
 	Meanings = {"Ford"},
 	SingularNominative = "Ford",
 	Gender = "Neuter",
@@ -181,8 +198,9 @@ DefineLanguageNoun("Ford", {
 	SuffixTypeName = {"settlement"} -- examples: "Ashford", "Bedford", "Oxford"; Source: "Philip's International School Atlas", 2006, p. 64.
 })
 
-DefineLanguageNoun("Forge", {
+DefineLanguageWord("Forge", {
 	Language = "english",
+	Type = "noun",
 	Meanings = {"Forge"},
 	SingularNominative = "Forge",
 	PluralNominative = "Forges",
@@ -191,8 +209,9 @@ DefineLanguageNoun("Forge", {
 	SeparateSuffixTypeName = {"unit-teuton-smithy"} -- seems sensible
 })
 
-DefineLanguageNoun("Francis", {
+DefineLanguageWord("Francis", {
 	Language = "english",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Francis",
 	Gender = "Masculine",
@@ -200,16 +219,18 @@ DefineLanguageNoun("Francis", {
 	TypeName = {"person"}
 })
 
-DefineLanguageNoun("Frederick", {
+DefineLanguageWord("Frederick", {
 	Language = "english",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Frederick",
 	NameSingular = true,
 	TypeName = {"person"}
 })
 
-DefineLanguageNoun("Gate", {
+DefineLanguageWord("Gate", {
 	Language = "english",
+	Type = "noun",
 	Meanings = {"Gate"},
 	SingularNominative = "Gate",
 	SingularGenitive = "Gates",
@@ -218,8 +239,9 @@ DefineLanguageNoun("Gate", {
 	PrefixTypeName = {"settlement"} -- example: "Gateshead"; Source: "Philip's International School Atlas", 2006, p. 64.
 })
 
-DefineLanguageNoun("Guard", {
+DefineLanguageWord("Guard", {
 	Language = "english",
+	Type = "noun",
 	Meanings = {"Guard"},
 	SingularNominative = "Guard",
 	Gender = "Neuter",
@@ -227,8 +249,9 @@ DefineLanguageNoun("Guard", {
 	SuffixTypeName = {"settlement"} -- example: "Fishguard"; Source: "Philip's International School Atlas", 2006, p. 64.
 })
 
-DefineLanguageNoun("Hammer", {
+DefineLanguageWord("Hammer", {
 	Language = "english",
+	Type = "noun",
 	Meanings = {"Hammer"},
 	SingularNominative = "Hammer",
 	PluralNominative = "Hammers",
@@ -237,8 +260,9 @@ DefineLanguageNoun("Hammer", {
 	SeparateSuffixTypeName = {"unit-teuton-smithy"} -- seems sensible
 })
 
-DefineLanguageNoun("Haven", {
+DefineLanguageWord("Haven", {
 	Language = "english",
+	Type = "noun",
 	Meanings = {"Haven"},
 	SingularNominative = "Haven",
 	Gender = "Neuter",
@@ -246,8 +270,9 @@ DefineLanguageNoun("Haven", {
 	SuffixTypeName = {"settlement"} -- example: "Stonehaven"; Source: "Philip's International School Atlas", 2006, p. 64.
 })
 
-DefineLanguageNoun("Head", {
+DefineLanguageWord("Head", {
 	Language = "english",
+	Type = "noun",
 	Meanings = {"Head"},
 	SingularNominative = "Head",
 	Gender = "Neuter",
@@ -255,8 +280,9 @@ DefineLanguageNoun("Head", {
 	SuffixTypeName = {"settlement"} -- example: "Gateshead"; Source: "Philip's International School Atlas", 2006, p. 64.
 })
 
-DefineLanguageNoun("Hemp", {
+DefineLanguageWord("Hemp", {
 	Language = "english",
+	Type = "noun",
 	Meanings = {"Hemp"},
 	SingularNominative = "Hemp",
 	Gender = "Neuter",
@@ -264,8 +290,9 @@ DefineLanguageNoun("Hemp", {
 	PrefixTypeName = {"settlement"} -- example: "Hempstead"; Source: "Philip's International School Atlas", 2006, p. 64.
 })
 
-DefineLanguageNoun("Henry", {
+DefineLanguageWord("Henry", {
 	Language = "english",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Henry",
 	Gender = "Masculine",
@@ -273,8 +300,9 @@ DefineLanguageNoun("Henry", {
 	TypeName = {"person"}
 })
 
-DefineLanguageNoun("House", {
+DefineLanguageWord("House", {
 	Language = "english",
+	Type = "noun",
 	Meanings = {"House"},
 	SingularNominative = "House",
 	Gender = "Neuter",
@@ -282,8 +310,9 @@ DefineLanguageNoun("House", {
 	SuffixTypeName = {"settlement"} -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 336.
 })
 
-DefineLanguageNoun("Hyrst", {
+DefineLanguageWord("Hyrst", {
 	Language = "english",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Hyrst",
 	Gender = "Neuter",
@@ -291,8 +320,9 @@ DefineLanguageNoun("Hyrst", {
 	SuffixTypeName = {"settlement"} -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 336.
 })
 
-DefineLanguageNoun("Ing", {
+DefineLanguageWord("Ing", {
 	Language = "english",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Ing",
 --	Gender = "?",
@@ -300,8 +330,9 @@ DefineLanguageNoun("Ing", {
 	SuffixTypeName = {"settlement"} -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 336.
 })
 
-DefineLanguageNoun("James", {
+DefineLanguageWord("James", {
 	Language = "english",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "James",
 	Gender = "Masculine",
@@ -309,8 +340,9 @@ DefineLanguageNoun("James", {
 	TypeName = {"person"}
 })
 
-DefineLanguageNoun("John", {
+DefineLanguageWord("John", {
 	Language = "english",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "John",
 	Gender = "Masculine",
@@ -318,8 +350,9 @@ DefineLanguageNoun("John", {
 	TypeName = {"person"}
 })
 
-DefineLanguageNoun("Land", {
+DefineLanguageWord("Land", {
 	Language = "english",
+	Type = "noun",
 	Meanings = {"Land"},
 	SingularNominative = "Land",
 	Gender = "Neuter",
@@ -327,8 +360,9 @@ DefineLanguageNoun("Land", {
 	SuffixTypeName = {"province"} -- example: "Portland"
 })
 
-DefineLanguageNoun("Lewis", {
+DefineLanguageWord("Lewis", {
 	Language = "english",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Lewis",
 	Gender = "Masculine",
@@ -336,8 +370,9 @@ DefineLanguageNoun("Lewis", {
 	TypeName = {"person"}
 })
 
-DefineLanguageNoun("Maid", {
+DefineLanguageWord("Maid", {
 	Language = "english",
+	Type = "noun",
 	Meanings = {"Maid"},
 	SingularNominative = "Maid",
 	Gender = "Feminine",
@@ -345,8 +380,9 @@ DefineLanguageNoun("Maid", {
 	PrefixTypeName = {"settlement"} -- example: "Maidstone"; Source: "Philip's International School Atlas", 2006, p. 64.
 })
 
-DefineLanguageNoun("Middle", {
+DefineLanguageWord("Middle", {
 	Language = "english",
+	Type = "noun",
 	Meanings = {"Middle"},
 	SingularNominative = "Middle",
 	Gender = "Neuter",
@@ -354,8 +390,9 @@ DefineLanguageNoun("Middle", {
 	PrefixTypeName = {"province"} -- example: "Middlesex"
 })
 
-DefineLanguageNoun("Mouth", {
+DefineLanguageWord("Mouth", {
 	Language = "english",
+	Type = "noun",
 	Meanings = {"Mouth"},
 	SingularNominative = "Mouth",
 	Gender = "Neuter",
@@ -363,8 +400,9 @@ DefineLanguageNoun("Mouth", {
 	SuffixTypeName = {"settlement"} -- examples: "Plymouth", "Portsmouth"
 })
 
-DefineLanguageNoun("Nor", { -- archaic
+DefineLanguageWord("Nor", { -- archaic
 	Language = "english",
+	Type = "noun",
 	Meanings = {"North"},
 	SingularNominative = "Nor",
 	Gender = "Neuter",
@@ -375,8 +413,9 @@ DefineLanguageNoun("Nor", { -- archaic
 	}
 })
 
-DefineLanguageNoun("Ox", {
+DefineLanguageWord("Ox", {
 	Language = "english",
+	Type = "noun",
 	Meanings = {"Ox"},
 	SingularNominative = "Ox",
 	Gender = "Neuter",
@@ -384,8 +423,9 @@ DefineLanguageNoun("Ox", {
 	PrefixTypeName = {"settlement"} -- example: "Oxford"; Source: "Philip's International School Atlas", 2006, p. 64.
 })
 
-DefineLanguageNoun("Peter", {
+DefineLanguageWord("Peter", {
 	Language = "english",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Peter",
 	Gender = "Masculine",
@@ -393,8 +433,9 @@ DefineLanguageNoun("Peter", {
 	TypeName = {"person"}
 })
 
-DefineLanguageNoun("Ply", {
+DefineLanguageWord("Ply", {
 	Language = "english",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Ply",
 --	Gender = "?",
@@ -402,8 +443,9 @@ DefineLanguageNoun("Ply", {
 	PrefixTypeName = {"settlement"} -- example: "Plymouth"
 })
 
-DefineLanguageNoun("Pool", {
+DefineLanguageWord("Pool", {
 	Language = "english",
+	Type = "noun",
 	Meanings = {"Pool"},
 	SingularNominative = "Pool",
 	Gender = "Neuter",
@@ -411,8 +453,9 @@ DefineLanguageNoun("Pool", {
 	SuffixTypeName = {"settlement"} -- example: "Blackpool"; Source: "Philip's International School Atlas", 2006, p. 64.
 })
 
-DefineLanguageNoun("Port", {
+DefineLanguageWord("Port", {
 	Language = "english",
+	Type = "noun",
 	Meanings = {"Port"},
 	SingularNominative = "Port",
 	SingularGenitive = "Ports",
@@ -426,8 +469,9 @@ DefineLanguageNoun("Port", {
 	SuffixTypeName = {"settlement"} -- example: "Newport"; Source: "Philip's International School Atlas", 2006, p. 64.
 })
 
-DefineLanguageNoun("Quay", {
+DefineLanguageWord("Quay", {
 	Language = "english",
+	Type = "noun",
 	Meanings = {"Quay"},
 	SingularNominative = "Quay",
 	Gender = "Neuter",
@@ -435,8 +479,9 @@ DefineLanguageNoun("Quay", {
 	SuffixTypeName = {"settlement"} -- example: "Newquay"; Source: "Philip's International School Atlas", 2006, p. 64.
 })
 
-DefineLanguageNoun("Red", { -- archaic
+DefineLanguageWord("Red", { -- archaic
 	Language = "english",
+	Type = "noun",
 	Meanings = {"Counsel", "Advice", "Account", "Story"},
 	SingularNominative = "Red",
 	Gender = "Neuter",
@@ -444,8 +489,9 @@ DefineLanguageNoun("Red", { -- archaic
 	SuffixTypeName = {"person"} -- example: "Alfred"
 })
 
-DefineLanguageNoun("Richard", {
+DefineLanguageWord("Richard", {
 	Language = "english",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Richard",
 	Gender = "Masculine",
@@ -453,8 +499,9 @@ DefineLanguageNoun("Richard", {
 	TypeName = {"person"}
 })
 
-DefineLanguageNoun("Salt", {
+DefineLanguageWord("Salt", {
 	Language = "english",
+	Type = "noun",
 	Meanings = {"Salt"},
 	SingularNominative = "Salt",
 	SingularGenitive = "Salis", -- archaic
@@ -463,8 +510,9 @@ DefineLanguageNoun("Salt", {
 	PrefixTypeName = {"settlement"} -- example: "Salisbury"; Source: "Philip's International School Atlas", 2006, p. 64.
 })
 
-DefineLanguageNoun("Sea", {
+DefineLanguageWord("Sea", {
 	Language = "english",
+	Type = "noun",
 	Meanings = {"Sea"},
 	SingularNominative = "Sea",
 	Gender = "Neuter",
@@ -472,8 +520,9 @@ DefineLanguageNoun("Sea", {
 	SuffixTypeName = {"settlement"} -- example: "Swansea"; Source: "Philip's International School Atlas", 2006, p. 64.
 })
 
-DefineLanguageNoun("Sex", { -- archaic
+DefineLanguageWord("Sex", { -- archaic
 	Language = "english",
+	Type = "noun",
 	Meanings = {"Saxon"},
 	SingularNominative = "Sex",
 	Gender = "Neuter",
@@ -481,8 +530,9 @@ DefineLanguageNoun("Sex", { -- archaic
 	SuffixTypeName = {"province"} -- examples: "Essex", "Middlesex", "Sussex", "Wessex"
 })
 
-DefineLanguageNoun("Shrew", {
+DefineLanguageWord("Shrew", {
 	Language = "english",
+	Type = "noun",
 	Meanings = {"Shrew"},
 	SingularNominative = "Shrew",
 	SingularGenitive = "Shrews",
@@ -493,8 +543,9 @@ DefineLanguageNoun("Shrew", {
 	}
 })
 
-DefineLanguageNoun("Smithy", {
+DefineLanguageWord("Smithy", {
 	Language = "english",
+	Type = "noun",
 	Meanings = {"Smithy"},
 	SingularNominative = "Smithy",
 	PluralNominative = "Smithies",
@@ -503,8 +554,9 @@ DefineLanguageNoun("Smithy", {
 	SeparateSuffixTypeName = {"unit-teuton-smithy"} -- seems sensible
 })
 
-DefineLanguageNoun("Staple", {
+DefineLanguageWord("Staple", {
 	Language = "english",
+	Type = "noun",
 	Meanings = {"Staple"},
 	SingularNominative = "Staple",
 	Gender = "Neuter",
@@ -512,8 +564,9 @@ DefineLanguageNoun("Staple", {
 	SuffixTypeName = {"settlement"} -- example: "Barnstaple"; Source: "Philip's International School Atlas", 2006, p. 64.
 })
 
-DefineLanguageNoun("Stead", {
+DefineLanguageWord("Stead", {
 	Language = "english",
+	Type = "noun",
 	Meanings = {"Stead"},
 	SingularNominative = "Stead",
 	Gender = "Neuter",
@@ -521,8 +574,9 @@ DefineLanguageNoun("Stead", {
 	SuffixTypeName = {"settlement"} -- example: "Hempstead"; Source: "Philip's International School Atlas", 2006, p. 64.
 })
 
-DefineLanguageNoun("Stone", {
+DefineLanguageWord("Stone", {
 	Language = "english",
+	Type = "noun",
 	Meanings = {"Stone"},
 	SingularNominative = "Stone",
 	Gender = "Neuter",
@@ -532,8 +586,9 @@ DefineLanguageNoun("Stone", {
 	SuffixTypeName = {"settlement"} -- example: "Maidstone"; Source: "Philip's International School Atlas", 2006, p. 64.
 })
 
-DefineLanguageNoun("Suf", { -- archaic
+DefineLanguageWord("Suf", { -- archaic
 	Language = "english",
+	Type = "noun",
 	Meanings = {"South"},
 	SingularNominative = "Suf",
 	Gender = "Neuter",
@@ -541,8 +596,9 @@ DefineLanguageNoun("Suf", { -- archaic
 	PrefixTypeName = {"province"} -- example: "Suffolk"
 })
 
-DefineLanguageNoun("Sus", { -- archaic
+DefineLanguageWord("Sus", { -- archaic
 	Language = "english",
+	Type = "noun",
 	Meanings = {"South"},
 	SingularNominative = "Sus",
 	Gender = "Neuter",
@@ -550,8 +606,9 @@ DefineLanguageNoun("Sus", { -- archaic
 	PrefixTypeName = {"province"} -- example: "Sussex"
 })
 
-DefineLanguageNoun("Swan", {
+DefineLanguageWord("Swan", {
 	Language = "english",
+	Type = "noun",
 	Meanings = {"Swan"},
 	SingularNominative = "Swan",
 	Gender = "Neuter",
@@ -559,8 +616,9 @@ DefineLanguageNoun("Swan", {
 	PrefixTypeName = {"settlement"} -- example: "Swansea"; Source: "Philip's International School Atlas", 2006, p. 64.
 })
 
-DefineLanguageNoun("Tor", {
+DefineLanguageWord("Tor", {
 	Language = "english",
+	Type = "noun",
 	Meanings = {}, -- maybe comes from the name of the corresponding Anglo-Saxon God to Thor?
 	SingularNominative = "Tor",
 --	Gender = "Neuter",
@@ -568,8 +626,9 @@ DefineLanguageNoun("Tor", {
 	PrefixTypeName = {"settlement"} -- example: "Torbay"; Source: "Philip's International School Atlas", 2006, p. 64.
 })
 
-DefineLanguageNoun("Town", {
+DefineLanguageWord("Town", {
 	Language = "english",
+	Type = "noun",
 	Meanings = {"Town"},
 	SingularNominative = "Town",
 	Gender = "Neuter",
@@ -577,8 +636,9 @@ DefineLanguageNoun("Town", {
 	SuffixTypeName = {"settlement"} -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 336.
 })
 
-DefineLanguageNoun("Tree", {
+DefineLanguageWord("Tree", {
 	Language = "english",
+	Type = "noun",
 	Meanings = {"Tree"},
 	SingularNominative = "Tree",
 	Gender = "Neuter",
@@ -586,8 +646,9 @@ DefineLanguageNoun("Tree", {
 	SuffixTypeName = {"settlement"} -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 336.
 })
 
-DefineLanguageNoun("Wall", {
+DefineLanguageWord("Wall", {
 	Language = "english",
+	Type = "noun",
 	Meanings = {"Wall"},
 	SingularNominative = "Wall",
 	Gender = "Neuter",
@@ -595,8 +656,9 @@ DefineLanguageNoun("Wall", {
 	SuffixTypeName = {"province"} -- example: "Cornwall"
 })
 
-DefineLanguageNoun("Wes", { -- archaic
+DefineLanguageWord("Wes", { -- archaic
 	Language = "english",
+	Type = "noun",
 	Meanings = {"West"},
 	SingularNominative = "Wes",
 	Gender = "Neuter",
@@ -604,8 +666,9 @@ DefineLanguageNoun("Wes", { -- archaic
 	PrefixTypeName = {"province"} -- example: "Wessex"
 })
 
-DefineLanguageNoun("Wich", {
+DefineLanguageWord("Wich", {
 	Language = "english",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Wich",
 	Gender = "Neuter",
@@ -613,8 +676,9 @@ DefineLanguageNoun("Wich", {
 	SuffixTypeName = {"settlement"} -- example: "Norwich"; Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 336.
 })
 
-DefineLanguageNoun("William", {
+DefineLanguageWord("William", {
 	Language = "english",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "William",
 	Gender = "Masculine",
@@ -622,8 +686,9 @@ DefineLanguageNoun("William", {
 	TypeName = {"person"}
 })
 
-DefineLanguageAdjective("Black", {
+DefineLanguageWord("Black", {
 	Language = "english",
+	Type = "adjective",
 	Meanings = {"Black"},
 	Positive = "Black",
 	SeparatePrefixTypeName = {
@@ -632,22 +697,25 @@ DefineLanguageAdjective("Black", {
 	}
 })
 
-DefineLanguageAdjective("Fiery", {
+DefineLanguageWord("Fiery", {
 	Language = "english",
+	Type = "adjective",
 	Meanings = {"Fiery"},
 	Positive = "Fiery",
 	SeparatePrefixTypeName = {"unit-teuton-smithy"} -- seems sensible
 })
 
-DefineLanguageAdjective("New", {
+DefineLanguageWord("New", {
 	Language = "english",
+	Type = "adjective",
 	Meanings = {"New"},
 	Positive = "New",
 	SuffixTypeName = {"settlement"} -- examples: "Newbury", "Newport", "Newquay"; Source: "Philip's International School Atlas", 2006, p. 64.
 })
 
-DefineLanguageAdjective("Red", {
+DefineLanguageWord("Red", {
 	Language = "english",
+	Type = "adjective",
 	Meanings = {"Red"},
 	Positive = "Red",
 	SeparatePrefixTypeName = {
@@ -656,15 +724,17 @@ DefineLanguageAdjective("Red", {
 	}
 })
 
-DefineLanguageAdjective("Smoldering", {
+DefineLanguageWord("Smoldering", {
 	Language = "english",
+	Type = "adjective",
 	Meanings = {"Smoldering"},
 	Positive = "Smoldering",
 	SeparatePrefixTypeName = {"unit-teuton-smithy"} -- seems sensible
 })
 
-DefineLanguageArticle("The", {
+DefineLanguageWord("The", {
 	Language = "english",
+	Type = "article",
 	Meanings = {"The"},
 	Nominative = "The",
 	Accusative = "The",

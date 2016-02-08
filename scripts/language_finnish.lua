@@ -25,20 +25,23 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageNoun("Kana", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
+DefineLanguageWord("Kana", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "finnish",
+	Type = "noun",
 	Meanings = {}, -- could have been derived from a Proto-Germanic ancestor word for Old Norse "hane" (which means "rooster")
 	SingularNominative = "Kana"
 })
 
-DefineLanguageNoun("Kuningas", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
+DefineLanguageWord("Kuningas", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "finnish",
+	Type = "noun",
 	Meanings = {"King"},
 	SingularNominative = "Kuningas"
 })
 
-DefineLanguageVerb("Soida", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 121.
+DefineLanguageWord("Soida", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 121.
 	Language = "finnish",
+	Type = "verb",
 	Meanings = {"Ring", "Jingle", "Make a Sound"},
 	Infinitive = "Soida"
 })

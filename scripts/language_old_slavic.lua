@@ -27,44 +27,51 @@
 
 -- Old Slavic / Old Church Slavonic
 
-DefineLanguageNoun("Kosa", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
+DefineLanguageWord("Kosa", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
 	Language = "old-slavic",
+	Type = "noun",
 	Meanings = {"Hair"},
 	SingularNominative = "Kosa"
 })
 
-DefineLanguageNoun("Kosmŭ", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
+DefineLanguageWord("Kosmŭ", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
 	Language = "old-slavic",
+	Type = "noun",
 	Meanings = {"Head Hair"},
 	SingularNominative = "Kosmŭ"
 })
 
-DefineLanguageNoun("Mězga", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
+DefineLanguageWord("Mězga", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "old-slavic",
+	Type = "noun",
 	Meanings = {"Sap", "Juice"},
 	SingularNominative = "Mězga"
 })
 
-DefineLanguageNoun("Mĭzda", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 7.
+DefineLanguageWord("Mĭzda", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 7.
 	Language = "old-slavic",
+	Type = "noun",
 	Meanings = {"Reward"},
 	SingularNominative = "Mĭzda"
 })
 
-DefineLanguageNoun("Mozgŭ", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
+DefineLanguageWord("Mozgŭ", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "old-slavic",
+	Type = "noun",
 	Meanings = {"Brain"},
 	SingularNominative = "Mozgŭ"
 })
 
-DefineLanguageNoun("Žrudŭ", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
+DefineLanguageWord("Žrudŭ", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
 	Language = "old-slavic",
+	Type = "noun",
 	Meanings = {"Flimsy Pole"},
 	SingularNominative = "Žrudŭ"
 })
 
-DefineLanguageAdjective("Svins", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+DefineLanguageWord("Svins", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "old-slavic",
+	Type = "adjective",
 	Meanings = {"of Pig"},
 	Positive = "Svins"
 })

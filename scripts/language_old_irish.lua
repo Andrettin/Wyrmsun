@@ -25,26 +25,30 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageNoun("Cacht", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
+DefineLanguageWord("Cacht", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
 	Language = "old-irish",
+	Type = "noun",
 	Meanings = {"Female Slave"},
 	SingularNominative = "Cacht"
 })
 
-DefineLanguageNoun("Fēn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
+DefineLanguageWord("Fēn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
 	Language = "old-irish",
+	Type = "noun",
 	Meanings = {"Wagon"},
 	SingularNominative = "Fēn"
 })
 
-DefineLanguageNoun("Giús", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 4.
+DefineLanguageWord("Giús", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 4.
 	Language = "old-irish",
+	Type = "noun",
 	Meanings = {"Fir"},
 	SingularNominative = "Giús"
 })
 
-DefineLanguageAdjective("Tur", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+DefineLanguageWord("Tur", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "old-irish",
+	Type = "adjective",
 	Meanings = {"Dry"},
 	Positive = "Tur"
 })

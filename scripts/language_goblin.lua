@@ -25,352 +25,396 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageNoun("Bag", { -- from Mike Anderson's Tyrant
+DefineLanguageWord("Bag", { -- from Mike Anderson's Tyrant
 	Language = "goblin",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Bag",
 	SuffixSingular = true,
 	SuffixTypeName = {"person"}
 })
 
-DefineLanguageNoun("Dag", { -- from Mike Anderson's Tyrant
+DefineLanguageWord("Dag", { -- from Mike Anderson's Tyrant
 	Language = "goblin",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Dag",
 	SuffixSingular = true,
 	SuffixTypeName = {"person"}
 })
 
-DefineLanguageNoun("Dran", {
+DefineLanguageWord("Dran", {
 	Language = "goblin",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Dran",
 	NameSingular = true,
 	TypeName = {"person"}
 })
 
-DefineLanguageNoun("Erdog", {
+DefineLanguageWord("Erdog", {
 	Language = "goblin",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Erdog",
 	NameSingular = true,
 	TypeName = {"person"}
 })
 
-DefineLanguageNoun("Fal Khag", {
+DefineLanguageWord("Fal Khag", {
 	Language = "goblin",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Fal Khag",
 	NameSingular = true,
 	TypeName = {"person"}
 })
 
-DefineLanguageNoun("Gashnok", {
+DefineLanguageWord("Gashnok", {
 	Language = "goblin",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Gashnok",
 	NameSingular = true,
 	TypeName = {"person"}
 })
 
-DefineLanguageNoun("Gatrakh", {
+DefineLanguageWord("Gatrakh", {
 	Language = "goblin",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Gatrakh",
 	NameSingular = true,
 	TypeName = {"person"}
 })
 
-DefineLanguageNoun("Gom", { -- from Mike Anderson's Tyrant
+DefineLanguageWord("Gom", { -- from Mike Anderson's Tyrant
 	Language = "goblin",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Gom",
 	PrefixSingular = true,
 	PrefixTypeName = {"person"}
 })
 
-DefineLanguageNoun("Gorokh", {
+DefineLanguageWord("Gorokh", {
 	Language = "goblin",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Gorokh",
 	NameSingular = true,
 	TypeName = {"person"}
 })
 
-DefineLanguageNoun("Grash", { -- from Mike Anderson's Tyrant
+DefineLanguageWord("Grash", { -- from Mike Anderson's Tyrant
 	Language = "goblin",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Grash",
 	PrefixSingular = true,
 	PrefixTypeName = {"person"}
 })
 
-DefineLanguageNoun("Greebo", {
+DefineLanguageWord("Greebo", {
 	Language = "goblin",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Greebo",
 	NameSingular = true,
 	TypeName = {"person"}
 })
 
-DefineLanguageNoun("Grogor-Tuk", {
+DefineLanguageWord("Grogor-Tuk", {
 	Language = "goblin",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Grogor-Tuk",
 	NameSingular = true,
 	TypeName = {"person"}
 })
 
-DefineLanguageNoun("Grut", { -- from Mike Anderson's Tyrant
+DefineLanguageWord("Grut", { -- from Mike Anderson's Tyrant
 	Language = "goblin",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Grut",
 	PrefixSingular = true,
 	PrefixTypeName = {"person"}
 })
 
-DefineLanguageNoun("Gum", { -- from Mike Anderson's Tyrant
+DefineLanguageWord("Gum", { -- from Mike Anderson's Tyrant
 	Language = "goblin",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Gum",
 	PrefixSingular = true,
 	PrefixTypeName = {"person"}
 })
 
-DefineLanguageNoun("Hrugt", {
+DefineLanguageWord("Hrugt", {
 	Language = "goblin",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Hrugt",
 	NameSingular = true,
 	TypeName = {"person"}
 })
 
-DefineLanguageNoun("Kar", { -- from Mike Anderson's Tyrant
+DefineLanguageWord("Kar", { -- from Mike Anderson's Tyrant
 	Language = "goblin",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Kar",
 	PrefixSingular = true,
 	PrefixTypeName = {"person"}
 })
 
-DefineLanguageNoun("Kardur", {
+DefineLanguageWord("Kardur", {
 	Language = "goblin",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Kardur",
 	NameSingular = true,
 	TypeName = {"person"}
 })
 
-DefineLanguageNoun("Kartrog", {
+DefineLanguageWord("Kartrog", {
 	Language = "goblin",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Kartrog",
 	NameSingular = true,
 	TypeName = {"person"}
 })
 
-DefineLanguageNoun("Kret", { -- from Mike Anderson's Tyrant
+DefineLanguageWord("Kret", { -- from Mike Anderson's Tyrant
 	Language = "goblin",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Kret",
 	PrefixSingular = true,
 	PrefixTypeName = {"person"}
 })
 
-DefineLanguageNoun("Krom", { -- from Mike Anderson's Tyrant
+DefineLanguageWord("Krom", { -- from Mike Anderson's Tyrant
 	Language = "goblin",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Krom",
 	PrefixSingular = true,
 	PrefixTypeName = {"person"}
 })
 
-DefineLanguageNoun("Krung", {
+DefineLanguageWord("Krung", {
 	Language = "goblin",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Krung",
 	NameSingular = true,
 	TypeName = {"person"}
 })
 
-DefineLanguageNoun("Lig", { -- from Mike Anderson's Tyrant
+DefineLanguageWord("Lig", { -- from Mike Anderson's Tyrant
 	Language = "goblin",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Lig",
 	SuffixSingular = true,
 	SuffixTypeName = {"person"}
 })
 
-DefineLanguageNoun("Lug", { -- from Mike Anderson's Tyrant
+DefineLanguageWord("Lug", { -- from Mike Anderson's Tyrant
 	Language = "goblin",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Lug",
 	SuffixSingular = true,
 	SuffixTypeName = {"person"}
 })
 
-DefineLanguageNoun("Nak", { -- from Mike Anderson's Tyrant
+DefineLanguageWord("Nak", { -- from Mike Anderson's Tyrant
 	Language = "goblin",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Nak",
 	SuffixSingular = true,
 	SuffixTypeName = {"person"}
 })
 
-DefineLanguageNoun("Nark", { -- from Mike Anderson's Tyrant
+DefineLanguageWord("Nark", { -- from Mike Anderson's Tyrant
 	Language = "goblin",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Nark",
 	SuffixSingular = true,
 	SuffixTypeName = {"person"}
 })
 
-DefineLanguageNoun("Odrun", {
+DefineLanguageWord("Odrun", {
 	Language = "goblin",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Odrun",
 	NameSingular = true,
 	TypeName = {"person"}
 })
 
-DefineLanguageNoun("Orhtib", {
+DefineLanguageWord("Orhtib", {
 	Language = "goblin",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Orhtib",
 	NameSingular = true,
 	TypeName = {"person"}
 })
 
-DefineLanguageNoun("Ozdul", {
+DefineLanguageWord("Ozdul", {
 	Language = "goblin",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Ozdul",
 	NameSingular = true,
 	TypeName = {"person"}
 })
 
-DefineLanguageNoun("Panok", {
+DefineLanguageWord("Panok", {
 	Language = "goblin",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Panok",
 	NameSingular = true,
 	TypeName = {"person"}
 })
 
-DefineLanguageNoun("Pruol", {
+DefineLanguageWord("Pruol", {
 	Language = "goblin",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Pruol",
 	NameSingular = true,
 	TypeName = {"person"}
 })
 
-DefineLanguageNoun("Rat", { -- from Mike Anderson's Tyrant
+DefineLanguageWord("Rat", { -- from Mike Anderson's Tyrant
 	Language = "goblin",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Rat",
 	SuffixSingular = true,
 	SuffixTypeName = {"person"}
 })
 
-DefineLanguageNoun("Sbrak", {
+DefineLanguageWord("Sbrak", {
 	Language = "goblin",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Sbrak",
 	NameSingular = true,
 	TypeName = {"person"}
 })
 
-DefineLanguageNoun("Sdrul", {
+DefineLanguageWord("Sdrul", {
 	Language = "goblin",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Sdrul",
 	NameSingular = true,
 	TypeName = {"person"}
 })
 
-DefineLanguageNoun("Stug", { -- from Mike Anderson's Tyrant
+DefineLanguageWord("Stug", { -- from Mike Anderson's Tyrant
 	Language = "goblin",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Stug",
 	PrefixSingular = true,
 	PrefixTypeName = {"person"}
 })
 
-DefineLanguageNoun("Thurg", {
+DefineLanguageWord("Thurg", {
 	Language = "goblin",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Thurg",
 	NameSingular = true,
 	TypeName = {"person"}
 })
 
-DefineLanguageNoun("T'shar Lggi", {
+DefineLanguageWord("T'shar Lggi", {
 	Language = "goblin",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "T'shar Lggi",
 	NameSingular = true,
 	TypeName = {"person"}
 })
 
-DefineLanguageNoun("Tug", { -- from Mike Anderson's Tyrant
+DefineLanguageWord("Tug", { -- from Mike Anderson's Tyrant
 	Language = "goblin",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Tug",
 	SuffixSingular = true,
 	SuffixTypeName = {"person"}
 })
 
-DefineLanguageNoun("Uhmit", {
+DefineLanguageWord("Uhmit", {
 	Language = "goblin",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Uhmit",
 	NameSingular = true,
 	TypeName = {"person"}
 })
 
-DefineLanguageNoun("Urdum", {
+DefineLanguageWord("Urdum", {
 	Language = "goblin",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Urdum",
 	NameSingular = true,
 	TypeName = {"person"}
 })
 
-DefineLanguageNoun("Utrub", {
+DefineLanguageWord("Utrub", {
 	Language = "goblin",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Utrub",
 	NameSingular = true,
 	TypeName = {"person"}
 })
 
-DefineLanguageNoun("Vrag", {
+DefineLanguageWord("Vrag", {
 	Language = "goblin",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Vrag",
 	NameSingular = true,
 	TypeName = {"person"}
 })
 
-DefineLanguageNoun("Vrunt", {
+DefineLanguageWord("Vrunt", {
 	Language = "goblin",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Vrunt",
 	NameSingular = true,
 	TypeName = {"person"}
 })
 
-DefineLanguageNoun("Zhuk", {
+DefineLanguageWord("Zhuk", {
 	Language = "goblin",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Zhuk",
 	NameSingular = true,
 	TypeName = {"person"}
 })
 
-DefineLanguageNoun("Zuzerd", {
+DefineLanguageWord("Zuzerd", {
 	Language = "goblin",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Zuzerd",
 	NameSingular = true,

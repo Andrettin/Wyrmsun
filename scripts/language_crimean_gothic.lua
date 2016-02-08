@@ -25,8 +25,9 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageNoun("Waghen", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+DefineLanguageWord("Waghen", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "crimean-gothic",
+	Type = "noun",
 	Meanings = {"Wagon", -- derived from Proto-Germanic "Waganaz"}, which means "Wagon"
 	SingularNominative = "Waghen"
 })

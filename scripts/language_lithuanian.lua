@@ -25,59 +25,69 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageNoun("Jéras", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+DefineLanguageWord("Jéras", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "lithuanian",
+	Type = "noun",
 	Meanings = {"Yearling Lamb"},
 	SingularNominative = "Jéras"
 })
-DefineLanguageNoun("Pẽkus", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
+DefineLanguageWord("Pẽkus", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "lithuanian",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Pẽkus"
 })
 
-DefineLanguageNoun("Pū́lias", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+DefineLanguageWord("Pū́lias", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "lithuanian",
+	Type = "noun",
 	Meanings = {"Pus"},
 	PluralNominative = "Pū́lias"
 })
 
-DefineLanguageNoun("Žìrnis", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+DefineLanguageWord("Žìrnis", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "lithuanian",
+	Type = "noun",
 	Meanings = {"Pea"},
 	SingularNominative = "Žìrnis"
 })
 
-DefineLanguageVerb("Saĩsti", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 121.
+DefineLanguageWord("Saĩsti", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 121.
 	Language = "lithuanian",
+	Type = "verb",
 	Meanings = {"Interpret a Sign or Prophesy"},
 	Infinitive = "Saĩsti"
 })
 
-DefineLanguageVerb("Spiáuju", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
+DefineLanguageWord("Spiáuju", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
 	Language = "lithuanian",
+	Type = "verb",
 	Meanings = {"Spit"},
 	Infinitive = "Spiáuju"
 })
 
-DefineLanguageVerb("Źengiù", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
+DefineLanguageWord("Źengiù", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
 	Language = "lithuanian",
+	Type = "verb",
 	Meanings = {"Go", "Stride"},
 	Infinitive = "Źengiù"
 })
 
-DefineLanguageAdjective("Dubùs", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+DefineLanguageWord("Dubùs", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "lithuanian",
+	Type = "adjective",
 	Meanings = {"Deep"},
 	Positive = "Dubùs"
 })
 
-DefineLanguageNumeral("Vienúolika", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
+DefineLanguageWord("Vienúolika", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
 	Language = "lithuanian",
+	Type = "numeral",
 	Number = 11
 })
 
-DefineLanguageNumeral("Dvýlika", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
+DefineLanguageWord("Dvýlika", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
 	Language = "lithuanian",
+	Type = "numeral",
 	Number = 12
 })

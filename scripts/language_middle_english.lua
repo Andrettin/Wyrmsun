@@ -25,8 +25,9 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageAdjective("Sliper", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 103.
+DefineLanguageWord("Sliper", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 103.
 	Language = "middle-english",
+	Type = "adjective",
 	Meanings = {"Deceitful", "False", "Treacherous"},
 	Positive = "Sliper"
 })

@@ -25,8 +25,9 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageNoun("Bimbam", {
+DefineLanguageWord("Bimbam", {
 	Language = "gnomish",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Bimbam",
 	Gender = "Masculine", -- presumably, since it is a masculine personal name
@@ -34,8 +35,9 @@ DefineLanguageNoun("Bimbam", {
 	TypeName = {"person"}
 })
 
-DefineLanguageNoun("Clavo", {
+DefineLanguageWord("Clavo", {
 	Language = "gnomish",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Clavo",
 	Gender = "Masculine", -- presumably, since it is a masculine personal name
@@ -43,8 +45,9 @@ DefineLanguageNoun("Clavo", {
 	TypeName = {"person"}
 })
 
-DefineLanguageNoun("Cravatu", {
+DefineLanguageWord("Cravatu", {
 	Language = "gnomish",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Cravatu",
 	Gender = "Masculine", -- presumably, since it is a masculine personal name
@@ -52,8 +55,9 @@ DefineLanguageNoun("Cravatu", {
 	TypeName = {"person"}
 })
 
-DefineLanguageNoun("Kalutho", {
+DefineLanguageWord("Kalutho", {
 	Language = "gnomish",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Kalutho",
 	Gender = "Masculine", -- presumably, since it is a masculine personal name
@@ -61,14 +65,16 @@ DefineLanguageNoun("Kalutho", {
 	TypeName = {"person"}
 })
 
-DefineLanguageNoun("Leffas", {
+DefineLanguageWord("Leffas", {
 	Language = "gnomish",
+	Type = "noun",
 	Meanings = {"Soul of a Plant, Stone or Tree"},
 	SingularNominative = "Leffas"
 })
 
-DefineLanguageNoun("Pypo", {
+DefineLanguageWord("Pypo", {
 	Language = "gnomish",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Pypo",
 	Gender = "Masculine", -- presumably, since it is a masculine personal name
@@ -76,8 +82,9 @@ DefineLanguageNoun("Pypo", {
 	TypeName = {"person"}
 })
 
-DefineLanguageNoun("Rubezahl", {
+DefineLanguageWord("Rubezahl", {
 	Language = "gnomish",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Rubezahl",
 	Gender = "Masculine", -- presumably, since it is a masculine personal name

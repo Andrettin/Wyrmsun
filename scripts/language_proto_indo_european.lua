@@ -25,56 +25,65 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageNoun("Gʷen", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
+DefineLanguageWord("Gʷen", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 	Language = "proto-indo-european",
+	Type = "noun",
 	Meanings = {"Woman"},
 	SingularNominative = "Gʷen"
 })
 
-DefineLanguageNoun("Swīnos", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
+DefineLanguageWord("Swīnos", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
 	Language = "proto-indo-european", -- late Proto-Indo-European
+	Type = "noun",
 	Meanings = {"Pig"},
 	SingularNominative = "Swīnos"
 })
 
-DefineLanguageNoun("Wiros", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
+DefineLanguageWord("Wiros", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
 	Language = "proto-indo-european",
+	Type = "noun",
 	Meanings = {"Man"},
 	SingularNominative = "Wiros"
 })
 
-DefineLanguageVerb("Kneygʷh", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
+DefineLanguageWord("Kneygʷh", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 	Language = "proto-indo-european",
+	Type = "verb",
 	Meanings = {"Bow"},
 	Infinitive = "Kneygʷh"
 })
 
-DefineLanguageVerb("Leykʷ", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
+DefineLanguageWord("Leykʷ", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
 	Language = "proto-indo-european",
+	Type = "verb",
 	Meanings = {"Leave"},
 	Infinitive = "Leykʷ"
 })
 
-DefineLanguageVerb("Mel", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
+DefineLanguageWord("Mel", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
 	Language = "proto-indo-european",
+	Type = "verb",
 	Meanings = {"Grind"},
 	Infinitive = "Mel"
 })
 
-DefineLanguageVerb("Nem", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
+DefineLanguageWord("Nem", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
 	Language = "proto-indo-european",
+	Type = "verb",
 	Meanings = {"Take"},
 	Infinitive = "Nem"
 })
 
-DefineLanguageAdjective("Gʷīwos", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
+DefineLanguageWord("Gʷīwos", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 	Language = "proto-indo-european",
+	Type = "adjective",
 	Meanings = {"Alive"},
 	Positive = "Gʷīwos"
 })
 
-DefineLanguageAdjective("Rowdho", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
+DefineLanguageWord("Rowdho", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
 	Language = "proto-indo-european",
+	Type = "adjective",
 	Meanings = {"Red"},
 	Positive = "Rowdho"
 })

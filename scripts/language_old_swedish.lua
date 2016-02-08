@@ -25,14 +25,30 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageNoun("Ēr", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
+DefineLanguageWord("Ēr", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
 	Language = "old-swedish",
+	Type = "noun",
 	Meanings = {"Bronze"},
 	SingularNominative = "Ēr"
 })
 
-DefineLanguageAdjective("Mēre", { -- this is the comparative, what is the normal version of the word? Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
+DefineLanguageWord("Mēre", { -- this is the comparative, what is the normal version of the word? Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
 	Language = "old-swedish",
+	Type = "adjective",
 	Meanings = {"Larger"}, -- this is the meaning for the comparative, should be replaced when we got hold of the normal version of the adjective
 	Comparative = "Mēre"
+})
+
+DefineLanguageWord("Tuar", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
+	Language = "old-swedish",
+	Type = "numeral",
+	Number = 2,
+	PositivePlural = "Tuar"
+})
+
+DefineLanguageWord("Vīr", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 5.
+	Language = "old-swedish",
+	Type = "pronoun",
+	Meanings = {"We"},
+	Nominative = "Vīr"
 })

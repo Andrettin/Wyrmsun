@@ -25,136 +25,165 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageNoun("Áśvas", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
+DefineLanguageWord("Áśvas", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 	Language = "sanskrit",
+	Type = "noun",
 	Meanings = {"Horse"},
 	SingularNominative = "Áśvas"
 })
 
-DefineLanguageNoun("Bhrā́tā", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+DefineLanguageWord("Bhrā́tā", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "sanskrit",
+	Type = "noun",
 	Meanings = {"Brother"},
 	SingularNominative = "Bhrā́tā"
 })
 
-DefineLanguageNoun("Dāhas", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
+DefineLanguageWord("Bódhati", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
 	Language = "sanskrit",
+	Type = "verb",
+	Meanings = {"Observe"},
+	Infinitive = "Bódhati"
+})
+
+DefineLanguageWord("Dāhas", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
+	Language = "sanskrit",
+	Type = "noun",
 	Meanings = {"Heat"},
 	SingularNominative = "Dāhas"
 })
 
-DefineLanguageNoun("Duhitā́", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
+DefineLanguageWord("Duhitā́", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
 	Language = "sanskrit",
+	Type = "noun",
 	Meanings = {"Daughter"},
 	SingularNominative = "Duhitā́"
 })
 
-DefineLanguageNoun("Gardhas", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
+DefineLanguageWord("Gámati", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 	Language = "sanskrit",
+	Type = "verb",
+	Meanings = {"Go"},
+	Infinitive = "Gámati"
+})
+
+DefineLanguageWord("Gardhas", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
+	Language = "sanskrit",
+	Type = "noun",
 	Meanings = {"Greed"},
 	SingularNominative = "Gardhas"
 })
 
-DefineLanguageNoun("Késara", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 7.
+DefineLanguageWord("Késara", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 7.
 	Language = "sanskrit",
+	Type = "noun",
 	Meanings = {"Hair", "Mane"},
 	SingularNominative = "Késara",
 	Gender = "Masculine"
 })
 
-DefineLanguageNoun("Majjá", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
+DefineLanguageWord("Majjá", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "sanskrit",
+	Type = "noun",
 	Meanings = {"Marrow"},
 	SingularNominative = "Majjá", -- the accent in the source was different, but I could not identify the accent to reproduce it here
 	Gender = "Feminine"
 })
 
-DefineLanguageNoun("Majján", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
+DefineLanguageWord("Majján", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "sanskrit",
+	Type = "noun",
 	Meanings = {"Marrow"},
 	SingularNominative = "Majján",
 	Gender = "Masculine"
 })
 
-DefineLanguageNoun("Mīḍhá", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 7.
+DefineLanguageWord("Mīḍhá", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 7.
 	Language = "sanskrit",
+	Type = "noun",
 	Meanings = {"Reward from a Battle", "Reward from a Competition"},
 	SingularNominative = "Mīḍhá",
 	Gender = "Neuter"
 })
 
-DefineLanguageNoun("Náktam", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+DefineLanguageWord("Náktam", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "sanskrit",
+	Type = "noun",
 	Meanings = {"Night"}, -- presumably, but is not entirely clear from source
 	SingularNominative = "Náktam"
 })
 
-DefineLanguageNoun("Pā́dam", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+DefineLanguageWord("Pā́dam", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "sanskrit",
+	Type = "noun",
 	Meanings = {"Foot"}, -- meaning not explicitly given in source, but Proto-Germanic cognate "Fōts" means "Foot"
 	SingularAccusative = "Pā́dam"
 })
 
-DefineLanguageNoun("Páśu", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
+DefineLanguageWord("Páśu", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "sanskrit",
+	Type = "noun",
 	Meanings = {},
 	SingularNominative = "Páśu"
 })
 
-DefineLanguageNoun("Snuṣā́", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
+DefineLanguageWord("Pū́tis", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "sanskrit",
-	Meanings = {"Daughter-in-Law"},
-	SingularNominative = "Snuṣā́"
-})
-
-DefineLanguageNoun("Váhanam", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
-	Language = "sanskrit",
-	Meanings = {"Vehicle"},
-	SingularNominative = "Váhanam"
-})
-
-DefineLanguageVerb("Bódhati", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
-	Language = "sanskrit",
-	Meanings = {"Observe"},
-	Infinitive = "Bódhati"
-})
-
-DefineLanguageVerb("Gámati", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
-	Language = "sanskrit",
-	Meanings = {"Go"},
-	Infinitive = "Gámati"
-})
-
-DefineLanguageVerb("Stighnoti", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
-	Language = "sanskrit",
-	Meanings = {"Climb"},
-	Infinitive = "Stighnoti"
-})
-
-DefineLanguageVerb("Vidma", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
-	Language = "sanskrit",
-	Meanings = {"Know"},
-	PluralFirstPersonPresent = "Vidma"
-})
-
-DefineLanguageAdjective("Pū́tis", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
-	Language = "sanskrit",
+	Type = "adjective",
 	Meanings = {"Foul"},
 	Positive = "Pū́tis"
 })
 
-DefineLanguageAdjective("Śvetá", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
+DefineLanguageWord("Saptá", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
 	Language = "sanskrit",
+	Type = "numeral",
+	Number = 7
+})
+
+DefineLanguageWord("Snuṣā́", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
+	Language = "sanskrit",
+	Type = "noun",
+	Meanings = {"Daughter-in-Law"},
+	SingularNominative = "Snuṣā́"
+})
+
+DefineLanguageWord("Stighnoti", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
+	Language = "sanskrit",
+	Type = "verb",
+	Meanings = {"Climb"},
+	Infinitive = "Stighnoti"
+})
+
+DefineLanguageWord("Śvetá", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
+	Language = "sanskrit",
+	Type = "adjective",
 	Meanings = {"White"},
 	Positive = "Śvetá"
 })
 
-DefineLanguageAdposition("Upári", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+DefineLanguageWord("Upári", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "sanskrit",
+	Type = "adposition",
 	Meanings = {"Over"}
 })
 
-DefineLanguageNumeral("Saptá", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
+DefineLanguageWord("Váhanam", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "sanskrit",
-	Number = 7
+	Type = "noun",
+	Meanings = {"Vehicle"},
+	SingularNominative = "Váhanam"
+})
+
+DefineLanguageWord("Vayim", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 5.
+	Language = "sanskrit",
+	Type = "pronoun",
+	Meanings = {"We"},
+	Nominative = "Vayim"
+})
+
+DefineLanguageWord("Vidma", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "sanskrit",
+	Type = "verb",
+	Meanings = {"Know"},
+	PluralFirstPersonPresent = "Vidma"
 })

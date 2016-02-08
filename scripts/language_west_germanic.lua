@@ -25,8 +25,9 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageNoun("Alßinjō", { -- alternatively spelled "Alßnjō"; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 89.
+DefineLanguageWord("Alßinjō", { -- alternatively spelled "Alßnjō"; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 89.
 	Language = "west-germanic",
+	Type = "noun",
 	Meanings = {"Female Elf"},
 	SingularNominative = "Alßinjō",
 	Gender = "Feminine"
