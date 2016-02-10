@@ -67,6 +67,9 @@ https://github.com/Andrettin/Wyrmsun
 * Abilities
 - Added "Puncture" learnable active ability (icon by Leo), available for units capable of making melee thrusting attacks.
 
+* Buildings
+- Improved Teuton smithy name generation.
+
 * Factions
 - Added support for factions using a different language than their civilizations.
 - The England and Scotland factions now use English for proper name generation.
@@ -97,9 +100,13 @@ https://github.com/Andrettin/Wyrmsun
 - Added support for damage bonus vs. dragons. This damage bonus affects wyrms, and will affect any other draconic creatures added later to the game.
 - Fixed an issue which caused unit/building proper names to overlap with other parts of the interface if a word in them was too long.
 - Fixed an issue which caused the player to be able to see others' buildings on the minimap if the player destroyed their own town hall.
+- Add many new components for name generation.
 
 * Modding
 - Added support for redefining civilizations and factions.
+
+* Multiplayer
+- Fixed a desync cause due to units' facing being randomly set when created through a random number generating function that isn't synchronized.
 
 * Units
 - When right-clicking on a tile-based resource, workers who are already carrying the resource at maximum capacity will now return goods and then begin harvesting.

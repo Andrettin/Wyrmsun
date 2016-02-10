@@ -103,6 +103,7 @@ DefineLanguage("greek", {
 
 DefineLanguage("high-german", {
 	Name = "High German",
+	NominativeAdjectiveEndingAfterDefiniteArticle = "e",
 	NameTranslations = {
 		"Bûra", "Bauer", -- from Proto-Germanic to German
 		"Dverga", "Zwerg", -- from Proto-Germanic to German

@@ -161,8 +161,14 @@ DefineLanguageWord("Brass", {
 	Meanings = {"Brass"},
 	SingularNominative = "Brass",
 	Gender = "Neuter",
-	Uncountable = true,
-	PrefixSingular = true,
+	Uncountable = true
+})
+
+DefineLanguageWord("Brass", {
+	Language = "english",
+	Type = "adjective",
+	Meanings = {"Brass"},
+	Positive = "Brass",
 	SeparatePrefixTypeName = {"unit-class-smithy"} -- seems sensible
 })
 
@@ -172,8 +178,14 @@ DefineLanguageWord("Bronze", {
 	Meanings = {"Bronze"},
 	SingularNominative = "Bronze",
 	Gender = "Neuter",
-	Uncountable = true,
-	PrefixSingular = true,
+	Uncountable = true
+})
+
+DefineLanguageWord("Bronze", {
+	Language = "english",
+	Type = "adjective",
+	Meanings = {"Bronze"},
+	Positive = "Bronze",
 	SeparatePrefixTypeName = {"unit-class-smithy"} -- seems sensible
 })
 
@@ -213,8 +225,14 @@ DefineLanguageWord("Copper", {
 	Meanings = {"Copper"},
 	SingularNominative = "Copper",
 	Gender = "Neuter",
-	Uncountable = true,
-	PrefixSingular = true,
+	Uncountable = true
+})
+
+DefineLanguageWord("Copper", {
+	Language = "english",
+	Type = "adjective",
+	Meanings = {"Copper"},
+	Positive = "Copper",
 	SeparatePrefixTypeName = {"unit-class-smithy"} -- seems sensible
 })
 
@@ -354,8 +372,14 @@ DefineLanguageWord("Gold", {
 	Meanings = {"Gold"},
 	SingularNominative = "Gold",
 	Gender = "Neuter",
-	Uncountable = true,
-	PrefixSingular = true,
+	Uncountable = true
+})
+
+DefineLanguageWord("Golden", {
+	Language = "english",
+	Type = "adjective",
+	Meanings = {"Golden"},
+	Positive = "Golden",
 	SeparatePrefixTypeName = {"unit-class-smithy"} -- seems sensible
 })
 
@@ -438,6 +462,14 @@ DefineLanguageWord("Hoard", {
 	Gender = "Neuter"
 })
 
+DefineLanguageWord("Holy", {
+	Language = "english",
+	Type = "adjective",
+	Meanings = {"Holy"},
+	Positive = "Holy",
+	SeparatePrefixTypeName = {"unit-class-smithy"} -- seems sensible
+})
+
 DefineLanguageWord("House", {
 	Language = "english",
 	Type = "noun",
@@ -474,8 +506,14 @@ DefineLanguageWord("Iron", {
 	Meanings = {"Iron"},
 	SingularNominative = "Iron",
 	Gender = "Neuter",
-	Uncountable = true,
-	PrefixSingular = true,
+	Uncountable = true
+})
+
+DefineLanguageWord("Iron", {
+	Language = "english",
+	Type = "adjective",
+	Meanings = {"Iron"},
+	Positive = "Iron",
 	SeparatePrefixTypeName = {"unit-class-smithy"} -- seems sensible
 })
 
@@ -535,6 +573,16 @@ DefineLanguageWord("Maid", {
 	Gender = "Feminine",
 	PrefixSingular = true,
 	PrefixTypeName = {"settlement"} -- example: "Maidstone"; Source: "Philip's International School Atlas", 2006, p. 64.
+})
+
+DefineLanguageWord("Mail", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Mail"},
+	SingularNominative = "Mail",
+	Gender = "Neuter",
+	SuffixSingular = true,
+	SeparateSuffixTypeName = {"unit-class-smithy"} -- seems sensible
 })
 
 DefineLanguageWord("Middle", {
@@ -712,6 +760,16 @@ DefineLanguageWord("Sex", { -- archaic
 	Gender = "Neuter",
 	SuffixPlural = true,
 	SuffixTypeName = {"province"} -- examples: "Essex", "Middlesex", "Sussex", "Wessex"
+})
+
+DefineLanguageWord("Shield", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Shield"},
+	SingularNominative = "Shield",
+	Gender = "Neuter",
+	SuffixSingular = true,
+	SeparateSuffixTypeName = {"unit-class-smithy"} -- seems sensible
 })
 
 DefineLanguageWord("Shining", {

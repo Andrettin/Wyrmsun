@@ -42,9 +42,7 @@ DefineLanguageWord("Amboss", {
 	Type = "noun",
 	Meanings = {"Anvil"},
 	SingularNominative = "Amboss",
-	Gender = "Masculine",
-	SuffixSingular = true,
-	SuffixTypeName = {"unit-class-smithy"} -- seems sensible
+	Gender = "Masculine"
 })
 
 DefineLanguageWord("Arl", {
@@ -179,6 +177,21 @@ DefineLanguageWord("Blume", { -- Source: http://www.duden.de/rechtschreibung/Blu
 	PrefixTypeName = {"settlement"} -- example: "Blumenau"
 })
 
+DefineLanguageWord("Bronze", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"Bronze"},
+	SingularNominative = "Bronze",
+	Gender = "Feminine"
+})
+
+DefineLanguageWord("Bronzen", {
+	Language = "high-german",
+	Type = "adjective",
+	Meanings = {"Bronze"},
+	Positive = "Bronzen"
+})
+
 DefineLanguageWord("Bruck", {
 	Language = "high-german",
 	Type = "noun",
@@ -207,6 +220,42 @@ DefineLanguageWord("Burg", {
 		"settlement", -- examples: "Hamburg", "Klausenburg", "Marburg", "Nikolsburg", "Ödenburg", "Regensburg", "Salzburg", "Schässburg"
 		"province" -- example: "Brandenburg"
 	}
+})
+
+DefineLanguageWord("Das", {
+	Language = "high-german",
+	Type = "article",
+	Meanings = {"The"},
+	Nominative = "Das",
+	Accusative = "Das",
+	Dative = "Dem",
+	Genitive = "Des",
+	Definite = true,
+	Gender = "Neuter"
+})
+
+DefineLanguageWord("Der", {
+	Language = "high-german",
+	Type = "article",
+	Meanings = {"The"},
+	Nominative = "Der",
+	Accusative = "Den",
+	Dative = "Dem",
+	Genitive = "Des",
+	Definite = true,
+	Gender = "Masculine"
+})
+
+DefineLanguageWord("Die", {
+	Language = "high-german",
+	Type = "article",
+	Meanings = {"The"},
+	Nominative = "Die",
+	Accusative = "Die",
+	Dative = "Der",
+	Genitive = "Der",
+	Definite = true,
+	Gender = "Feminine"
 })
 
 DefineLanguageWord("Dorf", {
@@ -246,6 +295,13 @@ DefineLanguageWord("Eisen", {
 	PrefixTypeName = {"settlement"} -- examples: "Eisenerz", "Eisenstadt"
 })
 
+DefineLanguageWord("Eisern", {
+	Language = "high-german",
+	Type = "adjective",
+	Meanings = {"Iron"},
+	Positive = "Eisern"
+})
+
 DefineLanguageWord("Erz", {
 	Language = "high-german",
 	Type = "noun",
@@ -277,9 +333,7 @@ DefineLanguageWord("Esse", {
 	PluralAccusative = "Essen",
 	PluralDative = "Essen",
 	PluralGenitive = "Essen",
-	Gender = "Feminine",
-	SuffixSingular = true,
-	SuffixTypeName = {"unit-class-smithy"} -- seems sensible
+	Gender = "Feminine"
 })
 
 DefineLanguageWord("Feuer", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 127.
@@ -289,6 +343,13 @@ DefineLanguageWord("Feuer", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	DerivesFrom = {"middle-high-german", "noun", "Viur"},
 	SingularNominative = "Feuer",
 	Gender = "Neuter"
+})
+
+DefineLanguageWord("Feurig", {
+	Language = "high-german",
+	Type = "adjective",
+	Meanings = {"Fiery"},
+	Positive = "Feurig"
 })
 
 DefineLanguageWord("Fisch", { -- Source: http://www.duden.de/rechtschreibung/Fisch
@@ -371,6 +432,30 @@ DefineLanguageWord("Gerhard", {
 	TypeName = {"person"}
 })
 
+DefineLanguageWord("Glänzend", {
+	Language = "high-german",
+	Type = "adjective",
+	Meanings = {"Shining"},
+	Positive = "Glänzend",
+	Comparative = "Glänzender",
+	Superlative = "Glänzendsten"
+})
+
+DefineLanguageWord("Gold", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"Gold"},
+	SingularNominative = "Gold",
+	Gender = "Neuter"
+})
+
+DefineLanguageWord("Golden", {
+	Language = "high-german",
+	Type = "adjective",
+	Meanings = {"Golden"},
+	Positive = "Golden"
+})
+
 DefineLanguageWord("Gott", {
 	Language = "high-german",
 	Type = "noun",
@@ -442,9 +527,7 @@ DefineLanguageWord("Hammer", {
 	PluralAccusative = "Hämmer",
 	PluralDative = "Hämmern",
 	PluralGenitive = "Hämmer",
-	Gender = "Masculine",
-	SuffixSingular = true,
-	SuffixTypeName = {"unit-class-smithy"} -- seems sensible
+	Gender = "Masculine"
 })
 
 DefineLanguageWord("Hans", {
@@ -454,6 +537,13 @@ DefineLanguageWord("Hans", {
 	SingularNominative = "Hans",
 	NameSingular = true,
 	TypeName = {"person"}
+})
+
+DefineLanguageWord("Heilig", {
+	Language = "high-german",
+	Type = "adjective",
+	Meanings = {"Holy"},
+	Positive = "Heilig"
 })
 
 DefineLanguageWord("Heim", {
@@ -588,6 +678,14 @@ DefineLanguageWord("Karl", {
 	PrefixTypeName = {"person"}
 })
 
+DefineLanguageWord("Kettenhemd", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"Mail"},
+	SingularNominative = "Kettenhemd",
+	Gender = "Neuter"
+})
+
 DefineLanguageWord("Kirche", {
 	Language = "high-german",
 	Type = "noun",
@@ -683,6 +781,21 @@ DefineLanguageWord("Kugel", {
 	SuffixTypeName = {"terrain-mountains"} -- example: "Weißkugel"
 })
 
+DefineLanguageWord("Kupfer", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"Copper"},
+	SingularNominative = "Kupfer",
+	Gender = "Neuter"
+})
+
+DefineLanguageWord("Kupfern", {
+	Language = "high-german",
+	Type = "adjective",
+	Meanings = {"Copper"},
+	Positive = "Kupfern"
+})
+
 DefineLanguageWord("Kurt", {
 	Language = "high-german",
 	Type = "noun",
@@ -736,6 +849,13 @@ DefineLanguageWord("Ludwig", {
 	TypeName = {"person"}
 })
 
+DefineLanguageWord("Magisch", {
+	Language = "high-german",
+	Type = "adjective",
+	Meanings = {"Magic"},
+	Positive = "Magisch"
+})
+
 DefineLanguageWord("Manfred", {
 	Language = "high-german",
 	Type = "noun",
@@ -766,6 +886,21 @@ DefineLanguageWord("Mark", {
 	Gender = "Feminine",
 	SuffixSingular = true,
 	SuffixTypeName = {"province"} -- example: "Steiermark" (Styria)
+})
+
+DefineLanguageWord("Messing", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"Brass"},
+	SingularNominative = "Messing",
+	Gender = "Neuter"
+})
+
+DefineLanguageWord("Messingen", {
+	Language = "high-german",
+	Type = "adjective",
+	Meanings = {"Brass"},
+	Positive = "Messingen"
 })
 
 DefineLanguageWord("Mühle", { -- Source: http://www.duden.de/rechtschreibung/Muehle
@@ -886,6 +1021,13 @@ DefineLanguageWord("Rose", { -- Source: http://www.duden.de/rechtschreibung/Rose
 	PrefixTypeName = {"terrain-hills"} -- example: "Rosenhügel"
 })
 
+DefineLanguageWord("Rostig", {
+	Language = "high-german",
+	Type = "adjective",
+	Meanings = {"Rusty"},
+	Positive = "Rostig"
+})
+
 DefineLanguageWord("Salz", {
 	Language = "high-german",
 	Type = "noun",
@@ -912,6 +1054,14 @@ DefineLanguageWord("Schaf", {
 	Gender = "Neuter",
 	PrefixSingular = true,
 	PrefixTypeName = {"terrain-hills"} -- example: "Schafberg"
+})
+
+DefineLanguageWord("Schild", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"Shield"},
+	SingularNominative = "Schild",
+	Gender = "Masculine"
 })
 
 DefineLanguageWord("Schloss", { -- Source: http://www.duden.de/rechtschreibung/Schloss
@@ -952,9 +1102,7 @@ DefineLanguageWord("Schmiede", {
 	PluralAccusative = "Schmieden",
 	PluralDative = "Schmieden",
 	PluralGenitive = "Schmieden",
-	Gender = "Feminine",
-	SuffixSingular = true,
-	SuffixTypeName = {"unit-class-smithy"} -- seems sensible
+	Gender = "Feminine"
 })
 
 DefineLanguageWord("Schnee", {
@@ -1063,6 +1211,13 @@ DefineLanguageWord("Turm", {
 	SuffixTypeName = {"terrain-mountains"} -- example: "Draschturm"
 })
 
+DefineLanguageWord("Verrostet", {
+	Language = "high-german",
+	Type = "adjective",
+	Meanings = {"Rusty"},
+	Positive = "Verrostet"
+})
+
 DefineLanguageWord("Waid", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 4.
 	Language = "high-german",
 	Type = "noun",
@@ -1164,20 +1319,7 @@ DefineLanguageWord("Brennend", {
 	Language = "high-german",
 	Type = "adjective",
 	Meanings = {"Burning"},
-	Positive = "Brennend",
-	PrefixTypeName = {
-		"unit-class-smithy" -- seems sensible
-	}
-})
-
-DefineLanguageWord("Feurig", {
-	Language = "high-german",
-	Type = "adjective",
-	Meanings = {"Fiery"},
-	Positive = "Feurig",
-	PrefixTypeName = {
-		"unit-class-smithy" -- seems sensible
-	}
+	Positive = "Brennend"
 })
 
 DefineLanguageWord("Hart", { -- Source: http://www.duden.de/rechtschreibung/hart
@@ -1196,19 +1338,15 @@ DefineLanguageWord("Neu", {
 	Meanings = {"New"},
 	Positive = "Neu",
 	PrefixTypeName = {
-		"settlement",
-		"unit-class-smithy" -- seems sensible
-	} -- example: "Neusohl"
+		"settlement" -- example: "Neusohl"
+	}
 })
 
 DefineLanguageWord("Schwartz", {
 	Language = "high-german",
 	Type = "adjective",
 	Meanings = {"Black"},
-	Positive = "Schwartz",
-	PrefixTypeName = {
-		"unit-class-smithy" -- seems sensible
-	}
+	Positive = "Schwartz"
 })
 
 DefineLanguageWord("Weiß", {
@@ -1218,8 +1356,7 @@ DefineLanguageWord("Weiß", {
 	Positive = "Weiß",
 	PrefixTypeName = {
 		"settlement", -- example: "Weisskirchen"
-		"terrain-mountains", -- example: "Weißkugel"
-		"unit-class-smithy" -- seems sensible
+		"terrain-mountains" -- example: "Weißkugel"
 	}
 })
 
