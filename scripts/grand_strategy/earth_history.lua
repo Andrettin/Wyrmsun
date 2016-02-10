@@ -2729,3 +2729,21 @@ if (GrandStrategyYear >= 1865) then -- Source: "Ancient Europe 8000 B.C.-A.D. 10
 	GrandStrategyEvents.PrehistoricTimes = nil
 	GrandStrategyEvents.ArchivFuerAnthropologie = nil
 end
+
+-- for testing proto-germanic name generation
+--[[
+SetProvinceOwner("Russia", "germanic", "Asa Tribe")
+SetProvinceSettlementBuilding("Russia", "unit-germanic-town-hall", true)
+SetProvinceOwner("Ukraine", "germanic", "Asa Tribe")
+SetProvinceSettlementBuilding("Ukraine", "unit-germanic-town-hall", true)
+SetProvinceOwner("Crimea", "germanic", "Asa Tribe")
+SetProvinceSettlementBuilding("Crimea", "unit-germanic-town-hall", true)
+SetProvinceOwner("White Russia", "germanic", "Asa Tribe")
+SetProvinceSettlementBuilding("White Russia", "unit-germanic-town-hall", true)
+SetProvinceOwner("Silesia", "germanic", "Asa Tribe")
+SetProvinceCivilization("Silesia", "germanic")
+SetProvinceOwner("Bohemia", "germanic", "Asa Tribe")
+SetProvinceCivilization("Bohemia", "germanic")
+SetProvinceOwner("Moravia", "germanic", "Asa Tribe")
+SetProvinceCivilization("Moravia", "germanic")
+--]]

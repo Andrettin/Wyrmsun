@@ -25,6 +25,13 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineLanguageWord("Bheg", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 133.
+	Language = "proto-indo-european",
+	Type = "verb",
+	Meanings = {"Run"}, -- source gives the German "Laufen" as the meaning
+	Infinitive = "Bheg"
+})
+
 DefineLanguageWord("Bhewdh", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
 	Language = "proto-indo-european",
 	Type = "verb",

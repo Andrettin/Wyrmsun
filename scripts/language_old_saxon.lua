@@ -34,11 +34,56 @@ DefineLanguageWord("Athal", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Gender = "Neuter"
 })
 
+DefineLanguageWord("Bath", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 133.
+	Language = "old-saxon",
+	Type = "noun",
+	Meanings = {"Bath", "Baths"}, -- source gives the German "Bad" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Baþa"},
+	SingularNominative = "Bath",
+	Gender = "Neuter"
+})
+
+DefineLanguageWord("Beki", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 133.
+	Language = "old-saxon",
+	Type = "noun",
+	Meanings = {"Stream"}, -- source gives the German "Bach" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Baki"},
+	SingularNominative = "Beki",
+	Gender = "Masculine"
+})
+
+DefineLanguageWord("Berg", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
+	Language = "old-saxon",
+	Type = "noun",
+	Meanings = {"Mountain", "Hill", "Grave Mound"}, -- source gives "Berg, Hügel, Grabhügel" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Berga"},
+	SingularNominative = "Berg",
+	Gender = "Masculine"
+})
+
+DefineLanguageWord("Burg", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
+	Language = "old-saxon",
+	Type = "noun",
+	Meanings = {"Fortified Place", "City"}, -- source gives "befestigter Ort, Stadt" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Burg"},
+	SingularNominative = "Burg",
+	Gender = "Feminine"
+})
+
 DefineLanguageWord("Fehu", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "old-saxon",
 	Type = "noun",
 	Meanings = {"Cattle"},
 	SingularNominative = "Fehu"
+})
+
+DefineLanguageWord("Fiur", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 127.
+	Language = "old-saxon",
+	Type = "noun",
+	Meanings = {"Fire"}, -- source gives "Feuer" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Fûir"},
+	SingularNominative = "Fiur",
+	Gender = "Neuter"
 })
 
 DefineLanguageWord("Fisc", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
@@ -60,6 +105,15 @@ DefineLanguageWord("Herta", { -- Source: Richard M. Runge, "The Phonetic Realiza
 	Type = "noun",
 	Meanings = {"Heart"},
 	SingularNominative = "Herta"
+})
+
+DefineLanguageWord("Herth", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 46.
+	Language = "old-saxon",
+	Type = "noun",
+	Meanings = {"Fireplace", "Fire"}, -- source gives "Feuerstätte, Feuer" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Herþa"},
+	SingularNominative = "Herth",
+	Gender = "Masculine"
 })
 
 DefineLanguageWord("Hord", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.

@@ -49,11 +49,47 @@ DefineLanguageWord("Æþela", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Gender = "Feminine"
 })
 
+DefineLanguageWord("Bæþ", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 133.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Bath", "Baths"}, -- source gives the German "Bad" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Baþa"},
+	SingularNominative = "Bæþ",
+	Gender = "Neuter"
+})
+
 DefineLanguageWord("Bearn", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 238.
 	Language = "old-english",
 	Type = "noun",
 	Meanings = {"Child"},
 	SingularNominative = "Bearn"
+})
+
+DefineLanguageWord("Bece", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 133.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Stream"}, -- source gives the German "Bach" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Baki"},
+	SingularNominative = "Bece",
+	Gender = "Masculine"
+})
+
+DefineLanguageWord("Beorg", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Mountain", "Hill", "Grave Mound"}, -- source gives "Berg, Hügel, Grabhügel" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Berga"},
+	SingularNominative = "Beorg",
+	Gender = "Masculine"
+})
+
+DefineLanguageWord("Bera", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Bear"}, -- source gives the German "Bär" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Beran"},
+	SingularNominative = "Bera",
+	Gender = "Masculine"
 })
 
 DefineLanguageWord("Bōc", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
@@ -77,6 +113,16 @@ DefineLanguageWord("Brord", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Meanings = {"Point", "Sprout"},
 	SingularNominative = "Brord",
 	Gender = "Masculine"
+})
+
+DefineLanguageWord("Burg", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Fortified Place", "City"}, -- source gives "befestigter Ort, Stadt" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Burg"},
+	SingularNominative = "Burg", -- the source also gives the alternate form "Burh"
+	PluralNominative = "Byrig",
+	Gender = "Feminine"
 })
 
 DefineLanguageWord("Cên", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 4-7.
@@ -182,6 +228,15 @@ DefineLanguageWord("Fōt", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	SingularNominative = "Fōt"
 })
 
+DefineLanguageWord("Fŷr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 127.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Fire"}, -- source gives "Feuer" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Fûir"},
+	SingularNominative = "Fŷr",
+	Gender = "Neuter"
+})
+
 DefineLanguageWord("Gēar", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-english",
 	Type = "noun",
@@ -282,6 +337,15 @@ DefineLanguageWord("Heorte", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Type = "noun",
 	Meanings = {"Heart"},
 	SingularNominative = "Heorte"
+})
+
+DefineLanguageWord("Heorþ", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 46.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Fireplace", "Fire"}, -- source gives "Feuerstätte, Feuer" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Herþa"},
+	SingularNominative = "Heorþ",
+	Gender = "Masculine"
 })
 
 DefineLanguageWord("Hlēapestre", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, pp. 77-78.

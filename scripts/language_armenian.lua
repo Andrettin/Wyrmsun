@@ -25,33 +25,9 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageWord("Barez", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
-	Language = "avestan",
+DefineLanguageWord("Hur", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 127.
+	Language = "armenian",
 	Type = "noun",
-	Meanings = {"Height", "Altitude"}, -- source gives "Höhe" as the meaning
-	SingularNominative = "Barez", -- source also gives the alternative form "Bareza", and the other form (this one neuter) "Barezaṅh-"
-	Gender = "Feminine"
-})
-
-DefineLanguageWord("Mīzhda", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 7.
-	Language = "avestan",
-	Type = "noun",
-	Meanings = {"Reward"},
-	SingularNominative = "Mīzhda",
-	Gender = "Neuter"
-})
-
-DefineLanguageWord("Yārə", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
-	Language = "avestan",
-	Type = "noun",
-	Meanings = {"Year"},
-	SingularNominative = "Yārə"
-})
-
-DefineLanguageWord("Spaetō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
-	Language = "avestan",
-	Type = "adjective",
-	Meanings = {"White"},
-	DerivesFrom = {"proto-indo-european", "adjective", "Ḱweyt"},
-	Positive = "Spaetō"
+	Meanings = {"Torch"}, -- source gives "Fackel" as the meaning
+	SingularNominative = "Hur"
 })

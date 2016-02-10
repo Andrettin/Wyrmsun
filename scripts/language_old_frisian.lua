@@ -25,12 +25,48 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineLanguageWord("Berch", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
+	Language = "old-frisian",
+	Type = "noun",
+	Meanings = {"Mountain", "Hill", "Grave Mound"}, -- source gives "Berg, Hügel, Grabhügel" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Berga"},
+	SingularNominative = "Berch",
+	Gender = "Masculine"
+})
+
+DefineLanguageWord("Beth", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 133.
+	Language = "old-frisian",
+	Type = "noun",
+	Meanings = {"Bath", "Baths"}, -- source gives the German "Bad" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Baþa"},
+	SingularNominative = "Beth",
+	Gender = "Neuter"
+})
+
+DefineLanguageWord("Burch", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
+	Language = "old-frisian",
+	Type = "noun",
+	Meanings = {"Fortified Place", "City"}, -- source gives "befestigter Ort, Stadt" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Burg"},
+	SingularNominative = "Burch", -- the source gives "Bur(i)ch"
+	Gender = "Feminine"
+})
+
 DefineLanguageWord("Hēde", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
 	Language = "old-frisian",
 	Type = "noun",
 	Meanings = {"Flax Fiber"},
 	SingularNominative = "Hēde",
 	Uncountable = true -- as a material, it is likely to be uncountable
+})
+
+DefineLanguageWord("Herth", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 46.
+	Language = "old-frisian",
+	Type = "noun",
+	Meanings = {"Fireplace", "Fire"}, -- source gives "Feuerstätte, Feuer" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Herþa"},
+	SingularNominative = "Herth",
+	Gender = "Masculine"
 })
 
 DefineLanguageWord("Lēra", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 5.

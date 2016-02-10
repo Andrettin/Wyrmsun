@@ -25,6 +25,10 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineLanguage("armenian", {
+	Name = "Armenian"
+})
+
 DefineLanguage("avestan", {
 	Name = "Avestan"
 })
@@ -103,11 +107,8 @@ DefineLanguage("high-german", {
 		"Bûra", "Bauer", -- from Proto-Germanic to German
 		"Dverga", "Zwerg", -- from Proto-Germanic to German
 		"Gastiz", "Gast", -- from Proto-Germanic to German
-		"Gavja", "Gau", -- from Proto-Germanic to German
-		"Haima", "Heim", -- from Proto-Germanic to German
 		"Lanum", "Land", -- example: "Mediolanum" -> "Mailand" (Milan)
 		"Medio", "Mai", -- example: "Mediolanum" -> "Mailand" (Milan)
-		"Rikia", "Reich", -- from Proto-Germanic to German
 		"Smiþu", "Schmied", -- from Proto-Germanic to German
 		"Vindobona", "Wien", -- "Wien" = "Vienna"; from the Latin name "Vindobona"
 		"Walakuzjōn", "Walküre", -- from Proto-Germanic to German
@@ -258,6 +259,7 @@ DefineLanguage("west-germanic", {
 
 -- Indo-European languages
 Load("scripts/language_proto_indo_european.lua")
+Load("scripts/language_armenian.lua")
 Load("scripts/language_avestan.lua")
 Load("scripts/language_lithuanian.lua")
 Load("scripts/language_greek.lua")

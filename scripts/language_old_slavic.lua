@@ -27,6 +27,29 @@
 
 -- Old Slavic / Old Church Slavonic
 
+DefineLanguageWord("Běžą", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 133.
+	Language = "old-slavic",
+	Type = "verb", -- correct?
+	Meanings = {},
+	DerivesFrom = {"proto-indo-european", "verb", "Bheg"},
+	Infinitive = "Běžą" -- source also gives the alternate form "Běžati"
+})
+
+DefineLanguageWord("Brěga", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
+	Language = "old-slavic",
+	Type = "noun",
+	Meanings = {"Shore", "Riverbank"}, -- source gives "Ufer" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Berga"}, -- according to the source, borrowed from Germanic (or did it mean the Germanic languages?)
+	SingularNominative = "Brěga"
+})
+
+DefineLanguageWord("Brŭlogŭ", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
+	Language = "old-slavic",
+	Type = "noun",
+	Meanings = {"Wild Camp", "Bear Camp"}, -- source gives the German "Wildlager, Bärenlager" as the meaning
+	SingularNominative = "Brŭlogŭ"
+})
+
 DefineLanguageWord("Kosa", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
 	Language = "old-slavic",
 	Type = "noun",

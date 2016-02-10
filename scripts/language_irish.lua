@@ -32,12 +32,28 @@ DefineLanguageWord("Árus", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	SingularNominative = "Árus"
 })
 
+DefineLanguageWord("Bri", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
+	Language = "irish",
+	Type = "noun",
+	Meanings = {"Mountain", "Hill"}, -- source gives "Berg" as the meaning
+	SingularNominative = "Bri",
+	SingularGenitive = "Brig"
+})
+
 DefineLanguageWord("Brot", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "irish",
 	Type = "noun",
 	Meanings = {"Prickle"},
 	SingularNominative = "Brot",
 	Gender = "Masculine"
+})
+
+DefineLanguageWord("Búal", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 133.
+	Language = "irish",
+	Type = "noun",
+	Meanings = {"Water"}, -- source gives the German "Wasser" as the meaning
+	DerivesFrom = {"proto-indo-european", "verb", "Bheg"},
+	SingularNominative = "Búal"
 })
 
 DefineLanguageWord("Gas", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
@@ -69,6 +85,13 @@ DefineLanguageWord("Kass", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	SingularNominative = "Kass"
 })
 
+DefineLanguageWord("Máo", { -- this is the comparative, what is the normal version of the word? Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
+	Language = "irish",
+	Type = "adjective",
+	Meanings = {"More"}, -- "Máo" actually means "größer"
+	Comparative = "Máo" -- source also gives alternative form "Móo"
+})
+
 DefineLanguageWord("Medg", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "irish",
 	Type = "noun",
@@ -84,9 +107,9 @@ DefineLanguageWord("Rīadaim", { -- Source: Winfred P. Lehmann, "A Grammar of Pr
 	Infinitive = "Rīadaim"
 })
 
-DefineLanguageWord("Máo", { -- this is the comparative, what is the normal version of the word? Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
+DefineLanguageWord("Úr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 127.
 	Language = "irish",
-	Type = "adjective",
-	Meanings = {"More"}, -- "Máo" actually means "größer"
-	Comparative = "Máo" -- source also gives alternative form "Móo"
+	Type = "noun",
+	Meanings = {"Fire"}, -- source gives "Feuer" as the meaning
+	SingularNominative = "Úr"
 })

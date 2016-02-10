@@ -68,6 +68,24 @@ DefineLanguageWord("Barn", {
 	PrefixTypeName = {"settlement"} -- example: "Barnstaple"; Source: "Philip's International School Atlas", 2006, p. 64.
 })
 
+DefineLanguageWord("Barrow", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Barrow"},
+	DerivesFrom = {"old-english", "noun", "Beorg"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
+	SingularNominative = "Barrow",
+	Gender = "Neuter"
+})
+
+DefineLanguageWord("Bath", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Bath"},
+	DerivesFrom = {"old-english", "noun", "Bæþ"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 133.
+	SingularNominative = "Bath",
+	Gender = "Neuter"
+})
+
 DefineLanguageWord("Bay", {
 	Language = "english",
 	Type = "noun",
@@ -76,6 +94,24 @@ DefineLanguageWord("Bay", {
 	Gender = "Neuter",
 	SuffixSingular = true,
 	SuffixTypeName = {"settlement"} -- example: "Torbay"; Source: "Philip's International School Atlas", 2006, p. 64.
+})
+
+DefineLanguageWord("Bear", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Bear"},
+	DerivesFrom = {"old-english", "noun", "Bera"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
+	SingularNominative = "Bear",
+	Gender = "Neuter"
+})
+
+DefineLanguageWord("Beck", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Creek"},
+	DerivesFrom = {"old-norse", "noun", "Bekkr"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 133.
+	SingularNominative = "Beck",
+	Gender = "Neuter"
 })
 
 DefineLanguageWord("Bed", {
@@ -168,10 +204,20 @@ DefineLanguageWord("Es", { -- archaic
 	PrefixTypeName = {"province"} -- example: "Essex"
 })
 
+DefineLanguageWord("Fire", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Fire"},
+	DerivesFrom = {"old-english", "noun", "Fŷr"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 127.
+	SingularNominative = "Fire",
+	Gender = "Neuter"
+})
+
 DefineLanguageWord("Fish", {
 	Language = "english",
 	Type = "noun",
 	Meanings = {"Fish"},
+	DerivesFrom = {"old-english", "noun", "Fisc"},
 	SingularNominative = "Fish",
 	Gender = "Neuter",
 	PrefixSingular = true,
@@ -278,6 +324,15 @@ DefineLanguageWord("Head", {
 	Gender = "Neuter",
 	SuffixSingular = true,
 	SuffixTypeName = {"settlement"} -- example: "Gateshead"; Source: "Philip's International School Atlas", 2006, p. 64.
+})
+
+DefineLanguageWord("Hearth", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Hearth"},
+	DerivesFrom = {"old-english", "noun", "Heorþ"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 46.
+	SingularNominative = "Hearth",
+	Gender = "Neuter"
 })
 
 DefineLanguageWord("Hemp", {

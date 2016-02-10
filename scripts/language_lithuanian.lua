@@ -25,6 +25,21 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineLanguageWord("Bė́gu", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 133.
+	Language = "lithuanian",
+	Type = "verb", -- correct?
+	Meanings = {},
+	DerivesFrom = {"proto-indo-european", "verb", "Bheg"},
+	Infinitive = "Bė́gu" -- source also gives the alternate form "Bė́gti"
+})
+
+DefineLanguageWord("Bė́ras", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
+	Language = "lithuanian",
+	Type = "adjective",
+	Meanings = {"Brown"}, -- source gives the German "Braun" as the meaning
+	Positive = "Bė́ras"
+})
+
 DefineLanguageWord("Dubùs", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "lithuanian",
 	Type = "adjective",

@@ -34,6 +34,43 @@ DefineLanguageWord("Adel", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Gender = "Masculine"
 })
 
+DefineLanguageWord("Bach", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 133.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Stream"}, -- source gives the German "Bach" as the meaning
+	DerivesFrom = {"old-high-german", "noun", "Bah"},
+	SingularNominative = "Bach",
+	Gender = "Masculine"
+})
+
+DefineLanguageWord("Bat", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 133.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Bath", "Baths"}, -- source gives the German "Bad" as the meaning
+	DerivesFrom = {"old-high-german", "noun", "Bad"},
+	SingularNominative = "Bat",
+	Gender = "Neuter"
+})
+
+DefineLanguageWord("Berc", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Mountain", "Hill"}, -- source gives "Berg" as the meaning
+	DerivesFrom = {"old-high-german", "noun", "Berg"},
+	SingularNominative = "Berc",
+	SingularGenitive = "Berges",
+	Gender = "Masculine"
+})
+
+DefineLanguageWord("Burc", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Fortified Place", "Castle", "Palace", "City"}, -- source gives "befestigter Ort, Burg, Schloß, Stadt" as the meaning
+	DerivesFrom = {"old-high-german", "noun", "Burg"},
+	SingularNominative = "Burc",
+	Gender = "Feminine"
+})
+
 DefineLanguageWord("Gart", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
 	Language = "middle-high-german",
 	Type = "noun",
@@ -42,6 +79,16 @@ DefineLanguageWord("Gart", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Gender = "Masculine"
 })
 			
+DefineLanguageWord("Hert", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 46.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Stove"}, -- source gives "Herd" as the meaning
+	DerivesFrom = {"old-high-german", "noun", "Herd"},
+	SingularNominative = "Hert",
+	SingularGenitive = "Herdes",
+	Gender = "Masculine"
+})
+
 DefineLanguageWord("Hort", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
 	Language = "middle-high-german",
 	Type = "noun",
@@ -56,6 +103,20 @@ DefineLanguageWord("Kien", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Meanings = {"Fir", "Spruce"," Fir Splinter", "Fir Torch", "Spruce Splinter", "Spruce Torch"},
 	SingularNominative = "Kien",
 	Gender = "Masculine"
+})
+
+DefineLanguageWord("Lēren", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 5.
+	Language = "middle-high-german",
+	Type = "verb",
+	Meanings = {"Teach"},
+	Infinitive = "Lēren" -- causative verb
+})
+
+DefineLanguageWord("Lernen", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 5.
+	Language = "middle-high-german",
+	Type = "verb",
+	Meanings = {"Learn"},
+	Infinitive = "Lernen"
 })
 
 DefineLanguageWord("Marc", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
@@ -84,6 +145,13 @@ DefineLanguageWord("Nare", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Gender = "Feminine"
 })
 
+DefineLanguageWord("Nerigen", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
+	Language = "middle-high-german",
+	Type = "verb",
+	Meanings = {"Heal", "Sustain the Life of", "Save", "Protect", "Nourish"},
+	Infinitive = "Nerigen" -- source also gives alternative forms "Neren" and "Nern"
+})
+
 DefineLanguageWord("Ort", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.
 	Language = "middle-high-german",
 	Type = "noun",
@@ -101,6 +169,15 @@ DefineLanguageWord("Rünne", { -- Source: Sean Crist, "An Analysis of *z loss in
 	Gender = "Feminine"
 })
 
+DefineLanguageWord("Viur", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 127.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Fire"}, -- source gives "Feuer" as the meaning
+	DerivesFrom = {"old-high-german", "noun", "Fuir"},
+	SingularNominative = "Viur",
+	Gender = "Neuter"
+})
+
 DefineLanguageWord("Weit", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 4, 7.
 	Language = "middle-high-german",
 	Type = "noun",
@@ -114,27 +191,6 @@ DefineLanguageWord("Zwirn", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Type = "noun",
 	Meanings = {"Doubly Spun Twine"},
 	SingularNominative = "Zwirn"
-})
-
-DefineLanguageWord("Lēren", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 5.
-	Language = "middle-high-german",
-	Type = "verb",
-	Meanings = {"Teach"},
-	Infinitive = "Lēren" -- causative verb
-})
-
-DefineLanguageWord("Lernen", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 5.
-	Language = "middle-high-german",
-	Type = "verb",
-	Meanings = {"Learn"},
-	Infinitive = "Lernen"
-})
-
-DefineLanguageWord("Nerigen", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
-	Language = "middle-high-german",
-	Type = "verb",
-	Meanings = {"Heal", "Sustain the Life of", "Save", "Protect", "Nourish"},
-	Infinitive = "Nerigen" -- source also gives alternative forms "Neren" and "Nern"
 })
 
 DefineLanguageWord("Zwirnen", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.

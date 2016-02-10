@@ -94,6 +94,24 @@ DefineLanguageWord("Auso", { -- Source: Richard M. Runge, "The Phonetic Realizat
 	SingularNominative = "Auso"
 })
 
+DefineLanguageWord("Baírgahei", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
+	Language = "gothic",
+	Type = "noun",
+	Meanings = {"Mountainous Area"}, -- source gives "Berggegend" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Berga"},
+	SingularNominative = "Baírgahei",
+	Gender = "Feminine"
+})
+
+DefineLanguageWord("Baúrgs", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
+	Language = "gothic",
+	Type = "noun",
+	Meanings = {"City"}, -- source gives "Stadt" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Burg"},
+	SingularNominative = "Baúrgs",
+	Gender = "Feminine"
+})
+
 DefineLanguageWord("Bōka", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "gothic",
 	Type = "noun",

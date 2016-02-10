@@ -77,12 +77,65 @@ DefineLanguageWord("Ār", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-G
 	SingularNominative = "Ār"
 })
 
+DefineLanguageWord("Bađ", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 133.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Steam Bath"}, -- source gives the German "Dampfbad" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Baþa"},
+	SingularNominative = "Bađ",
+	Gender = "Neuter"
+})
+
+DefineLanguageWord("Bekkr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 133.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Stream"}, -- source gives the German "Bach" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Baki"},
+	SingularNominative = "Bekkr"
+})
+
+DefineLanguageWord("Bera", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Female Bear"}, -- source gives the German "Bärin" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Berôn"}, -- presumably from "Berôn", since that has the (apparently) same meaning and is also feminine, but the source is not entirely clear (it could be "Beran" instead)
+	SingularNominative = "Bera", -- source also gives alternative form "Birna"
+	Gender = "Feminine"
+})
+
+DefineLanguageWord("Bjarg", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Cliff", "Mountain"}, -- source gives "Fels, Berg" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Berga"},
+	SingularNominative = "Bjarg", -- source also gives the alternate form "Berg"
+	Gender = "Neuter"
+})
+
+DefineLanguageWord("Bjǫrn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Bear"}, -- source gives the German "Bär" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Beran"},
+	SingularNominative = "Bjǫrn",
+	Gender = "Masculine"
+})
+
 DefineLanguageWord("Bōk", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Book"}, -- derived from Proto-Germanic "Bōks"; the source has the meaning for that word as "'tablet' > 'book'", but it is not clear if it means that the meaning became book in the child languages of Proto-Germanic, or within the timespan of the language itself
 	DerivesFrom = {"proto-germanic", "noun", "Bōks"},
 	SingularNominative = "Bōk"
+})
+
+DefineLanguageWord("Borg", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Terrace", "Rampart", "Wall", "Castle", "City"}, -- source gives "Terrasse, Wall, Mauer, Burg, Stadt" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Burg"},
+	SingularNominative = "Borg",
+	Gender = "Feminine"
 })
 
 DefineLanguageWord("Bǫrr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
@@ -137,6 +190,15 @@ DefineLanguageWord("Fōtr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Meanings = {"Foot"}, -- derived from Proto-Germanic "Fōts", which has the meaning of "foot"
 	DerivesFrom = {"proto-germanic", "noun", "Fōts"},
 	SingularNominative = "Fōtr"
+})
+
+DefineLanguageWord("Fŷrr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 127.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Fire"}, -- source gives "Feuer" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Fûir"},
+	SingularNominative = "Fŷrr", -- source also gives the alternate form "Fûrr"
+	Gender = "Masculine"
 })
 
 DefineLanguageWord("Gaddr", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.

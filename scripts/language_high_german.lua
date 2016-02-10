@@ -72,7 +72,7 @@ DefineLanguageWord("Au", { -- Source: http://www.duden.de/rechtschreibung/Au_feu
 	SingularNominative = "Au",
 	SingularAccusative = "Au",
 	SingularDative = "Au",
-	SingularGenitive = "Au", -- source also gives alternative form "Bachs"
+	SingularGenitive = "Au",
 	PluralNominative = "Auen",
 	PluralAccusative = "Auen",
 	PluralDative = "Auen",
@@ -86,6 +86,7 @@ DefineLanguageWord("Bach", { -- Source: http://www.duden.de/rechtschreibung/Bach
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"Stream"},
+	DerivesFrom = {"middle-high-german", "noun", "Bach"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 133.
 	SingularNominative = "Bach",
 	SingularAccusative = "Bach",
 	SingularDative = "Bach",
@@ -102,7 +103,8 @@ DefineLanguageWord("Bach", { -- Source: http://www.duden.de/rechtschreibung/Bach
 DefineLanguageWord("Bad", { -- Source: http://www.duden.de/rechtschreibung/Bad
 	Language = "high-german",
 	Type = "noun",
-	Meanings = {"Baths"},
+	Meanings = {"Bath", "Baths"},
+	DerivesFrom = {"middle-high-german", "noun", "Bat"},
 	SingularNominative = "Bad",
 	SingularAccusative = "Bad",
 	SingularDative = "Bad",
@@ -120,6 +122,7 @@ DefineLanguageWord("Bär", { -- Source: http://www.duden.de/rechtschreibung/Baer
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"Bear"},
+	DerivesFrom = {"old-high-german", "noun", "Bero"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
 	SingularNominative = "Bär",
 	SingularAccusative = "Bären",
 	SingularDative = "Bären",
@@ -137,7 +140,7 @@ DefineLanguageWord("Berg", {
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"Mountain", "Hill"},
-	DerivesFrom = {"proto-germanic", "noun", "Berga"},
+	DerivesFrom = {"middle-high-german", "noun", "Berc"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
 	SingularNominative = "Berg",
 	PluralNominative = "Berge",
 	Gender = "Masculine",
@@ -193,7 +196,7 @@ DefineLanguageWord("Burg", {
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"Castle"},
-	DerivesFrom = {"proto-germanic", "noun", "Burg"},
+	DerivesFrom = {"middle-high-german", "noun", "Burc"},
 	SingularNominative = "Burg",
 	PluralNominative = "Burgen",
 	Gender = "Feminine",
@@ -279,6 +282,24 @@ DefineLanguageWord("Esse", {
 	SuffixTypeName = {"unit-class-smithy"} -- seems sensible
 })
 
+DefineLanguageWord("Feuer", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 127.
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"Fire"}, -- source gives "Feuer" as the meaning
+	DerivesFrom = {"middle-high-german", "noun", "Viur"},
+	SingularNominative = "Feuer",
+	Gender = "Neuter"
+})
+
+DefineLanguageWord("Fisch", { -- Source: http://www.duden.de/rechtschreibung/Fisch
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"Fish"},
+	DerivesFrom = {"old-high-german", "noun", "Fisk"},
+	SingularNominative = "Feuer",
+	Gender = "Masculine"
+})
+
 DefineLanguageWord("Franz", {
 	Language = "high-german",
 	Type = "noun",
@@ -330,6 +351,15 @@ DefineLanguageWord("Gang", {
 	SingularNominative = "Gang",
 	SuffixSingular = true,
 	SuffixTypeName = {"person"}
+})
+
+DefineLanguageWord("Gau", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"District"},
+	DerivesFrom = {"proto-germanic", "noun", "Gavja"},
+	SingularNominative = "Gau",
+	Gender = "Masculine"
 })
 
 DefineLanguageWord("Gerhard", {
@@ -403,6 +433,7 @@ DefineLanguageWord("Hammer", {
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"Hammer"},
+	DerivesFrom = {"proto-germanic", "noun", "Hamara"},
 	SingularNominative = "Hammer",
 	SingularAccusative = "Hammer",
 	SingularDative = "Hammer",
@@ -425,6 +456,15 @@ DefineLanguageWord("Hans", {
 	TypeName = {"person"}
 })
 
+DefineLanguageWord("Heim", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"Home"},
+	DerivesFrom = {"proto-germanic", "noun", "Haima"},
+	SingularNominative = "Heim",
+	Gender = "Neuter"
+})
+
 DefineLanguageWord("Heinrich", {
 	Language = "high-german",
 	Type = "noun",
@@ -441,6 +481,15 @@ DefineLanguageWord("Hel", {
 	SingularNominative = "Hel",
 	PrefixSingular = true,
 	PrefixTypeName = {"person"}
+})
+
+DefineLanguageWord("Herd", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 46.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Stove"}, -- source gives "Herd" as the meaning
+	DerivesFrom = {"middle-high-german", "noun", "Hert"},
+	SingularNominative = "Herd",
+	Gender = "Masculine"
 })
 
 DefineLanguageWord("Hermann", {
@@ -809,6 +858,15 @@ DefineLanguageWord("Pippin", {
 	SingularNominative = "Pippin",
 	NameSingular = true,
 	TypeName = {"person"}
+})
+
+DefineLanguageWord("Reich", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"Realm", "Empire"},
+	DerivesFrom = {"proto-germanic", "noun", "Rîkia"},
+	SingularNominative = "Reich",
+	Gender = "Neuter"
 })
 
 DefineLanguageWord("Rose", { -- Source: http://www.duden.de/rechtschreibung/Rose_Pflanze_Bluete_Verdickung

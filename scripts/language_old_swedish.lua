@@ -25,6 +25,17 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineLanguageWord("Biari", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
+	Language = "old-swedish",
+	Type = "noun",
+	Meanings = {"Bear"}, -- used as a personal name, the meaning is not current
+	DerivesFrom = {"old-norse", "noun", "Bjǫrn"},
+	SingularNominative = "Biari",
+	Gender = "Masculine",
+	NameSingular = true,
+	TypeName = {"person"}
+})
+
 DefineLanguageWord("Ēr", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
 	Language = "old-swedish",
 	Type = "noun",

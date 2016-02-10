@@ -25,6 +25,13 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineLanguageWord("Berlóga", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
+	Language = "russian",
+	Type = "noun",
+	Meanings = {"Wild Camp", "Bear Camp"}, -- source gives the German "Wildlager, Bärenlager" as the meaning
+	SingularNominative = "Berlóga"
+})
+
 DefineLanguageWord("Mozga", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "russian",
 	Type = "noun",

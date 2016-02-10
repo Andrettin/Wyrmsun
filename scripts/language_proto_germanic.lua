@@ -31,14 +31,8 @@ DefineLanguageWord("Aiza", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Ore"}, -- source gives "Erz" as the meaning
-	SingularNominative = "Aiza", -- source also gives the alternative form "Skara"
-	Gender = "Neuter",
-	PrefixSingular = true,
-	PrefixTypeName = {
-		"settlement", -- seems sensible in face of a lack of examples
-		"terrain-mountains", -- seems sensible in face of a lack of examples
-		"terrain-hills" -- seems sensible in face of a lack of examples
-	}
+	SingularNominative = "Aiza",
+	Gender = "Neuter"
 })
 
 DefineLanguageWord("Ansu", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 16.
@@ -48,7 +42,7 @@ DefineLanguageWord("Ansu", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	SingularNominative = "Ansu",
 	Gender = "Masculine",
 	PrefixSingular = true,
-	PrefixTypeName = {"settlement"} -- seems sensible in face of a lack of examples (cognate of the prefix in Asgard, and Asgard is the settlement in "Asia" in which Odin's people used to be center until they migrated to Scandinavia in the Ynglinga saga's story)
+--	PrefixTypeName = {"settlement"} -- seems sensible in face of a lack of examples (cognate of the prefix in Asgard, and Asgard is the settlement in "Asia" in which Odin's people used to be center until they migrated to Scandinavia in the Ynglinga saga's story)
 })
 
 DefineLanguageWord("Asjôn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 20.
@@ -56,9 +50,7 @@ DefineLanguageWord("Asjôn", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Type = "noun",
 	Meanings = {"Forge"}, -- source gives the German "Esse" as the meaning
 	Gender = "Feminine",
-	SingularNominative = "Asjôn",
-	SuffixSingular = true,
-	SuffixTypeName = {"unit-class-smithy"} -- seems sensible
+	SingularNominative = "Asjôn"
 })
 
 DefineLanguageWord("Aþala", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 14.
@@ -73,11 +65,7 @@ DefineLanguageWord("Austa", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"East"},
-	SingularNominative = "Austa", -- source also gives the form "Austra"
-	PrefixSingular = true,
-	PrefixTypeName = {
-		"settlement"  -- seems sensible in face of a lack of examples
-	}
+	SingularNominative = "Austa" -- source also gives the form "Austra"
 })
 
 DefineLanguageWord("Austrôn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 12.
@@ -85,16 +73,48 @@ DefineLanguageWord("Austrôn", { -- Source: August Fick and Alf Torp, "Wortschat
 	Type = "noun",
 	Meanings = {"a Spring Goddess"},
 	SingularNominative = "Austrôn",
-	Gender = "Feminine",
-	PrefixSingular = true,
-	PrefixTypeName = {"settlement"} -- seems sensible in face of a lack of examples
+	Gender = "Feminine"
+})
+
+DefineLanguageWord("Baki", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 133.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Stream"}, -- source gives the German "Bach" as the meaning
+	DerivesFrom = {"proto-indo-european", "verb", "Bheg"},
+	SingularNominative = "Baki",
+	Gender = "Masculine"
+})
+
+DefineLanguageWord("Baþa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 133.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Bath", "Baths"}, -- source gives the German "Bad" as the meaning
+	SingularNominative = "Baþa",
+	Gender = "Neuter"
+})
+
+DefineLanguageWord("Beran", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Bear"}, -- source gives the German "Bär" as the meaning
+	SingularNominative = "Beran",
+	Gender = "Masculine"
+})
+
+DefineLanguageWord("Berôn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Female Bear"},
+	SingularNominative = "Berôn", -- source also gives the alternative form "Berniôn"
+	Gender = "Feminine"
 })
 
 DefineLanguageWord("Berga", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Mountain", "Hill"},
-	SingularNominative = "Berga"
+	SingularNominative = "Berga",
+	Gender = "Neuter"
 })
 
 DefineLanguageWord("Bōks", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Sections 2-3.
@@ -130,7 +150,7 @@ DefineLanguageWord("Bruzdaz", { -- Source: Sean Crist, "An Analysis of *z loss i
 DefineLanguageWord("Burg", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
 	Language = "proto-germanic",
 	Type = "noun",
-	Meanings = {"Castle", "City"},
+	Meanings = {"Castle", "City"}, -- source gives "Burg, Stadt" as the meaning
 	SingularNominative = "Burg",
 	Gender = "Feminine"
 })
@@ -216,6 +236,14 @@ DefineLanguageWord("Fōts", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	SingularNominative = "Fōts"
 })
 
+DefineLanguageWord("Fûir", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 127.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Fire"}, -- source gives "Feuer" as the meaning
+	SingularNominative = "Fûir", -- source also gives the alternate form "Fûr"
+	Gender = "Neuter"
+})
+
 DefineLanguageWord("Gárdiz", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 72.
 	Language = "proto-germanic",
 	Type = "noun",
@@ -223,9 +251,9 @@ DefineLanguageWord("Gárdiz", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	SingularNominative = "Gárdiz", -- Fick and Torp spell the word as "Garda"/"Gardi"/"Gardan"
 	Gender = "Masculine",
 	PrefixSingular = true,
-	PrefixTypeName = {"province"}, -- seems sensible in face of a lack of examples, specially since is a cognate of the prefix in "Gardarike"
+--	PrefixTypeName = {"province"}, -- seems sensible in face of a lack of examples, specially since is a cognate of the prefix in "Gardarike"
 	SuffixSingular = true,
-	SuffixTypeName = {"settlement"} -- seems sensible in face of a lack of examples (cognate of the suffix in Asgard, and Asgard is the settlement in "Asia" in which Odin's people used to be center until they migrated to Scandinavia in the Ynglinga saga's story)
+--	SuffixTypeName = {"settlement"} -- seems sensible in face of a lack of examples (cognate of the suffix in Asgard, and Asgard is the settlement in "Asia" in which Odin's people used to be center until they migrated to Scandinavia in the Ynglinga saga's story)
 })
 
 DefineLanguageWord("Gastiz", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 74; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2007, 3.3.5.
@@ -243,9 +271,7 @@ DefineLanguageWord("Gavja", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Type = "noun",
 	Meanings = {"District"}, -- source gives "Gau" as the meaning
 	SingularNominative = "Gavja",
-	Gender = "Neuter",
-	SuffixSingular = true,
-	SuffixTypeName = {"province"} -- seems sensible in face of a lack of examples
+	Gender = "Neuter"
 })
 
 DefineLanguageWord("Gazdaz", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.
@@ -261,9 +287,7 @@ DefineLanguageWord("Glôdi", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Type = "noun",
 	Meanings = {"Ember"}, -- source gives the German "Glut" as the meaning
 	Gender = "Feminine",
-	SingularNominative = "Glôdi",
-	PrefixSingular = true,
-	PrefixTypeName = {"unit-class-smithy"} -- seems sensible
+	SingularNominative = "Glôdi"
 })
 
 DefineLanguageWord("Gôm", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 71.
@@ -287,12 +311,7 @@ DefineLanguageWord("Haima", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Meanings = {"Village", "Home"}, -- source gives "Dorf, Heim, Heimat" as the meaning
 	SingularNominative = "Haima",
 	SingularAccusative = "Haima",
-	Gender = "Masculine",
-	SuffixSingular = true,
-	SuffixTypeName = {
-		"province", -- seems sensible in face of a lack of examples (specially since in Old Norse there are many placenames ending in -heim)
-		"settlement" -- seems sensible in face of a lack of examples
-	}
+	Gender = "Masculine"
 })
 
 DefineLanguageWord("Hamara", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 46.
@@ -300,9 +319,7 @@ DefineLanguageWord("Hamara", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Type = "noun",
 	Meanings = {"Stone", "Hammer"}, -- source gives the German "Stein, Hammer"
 	Gender = "Masculine",
-	SingularNominative = "Hamara",
-	SuffixSingular = true,
-	SuffixTypeName = {"unit-class-smithy"} -- seems sensible
+	SingularNominative = "Hamara"
 })
 
 DefineLanguageWord("Hazdaz", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
@@ -310,6 +327,14 @@ DefineLanguageWord("Hazdaz", { -- Source: Sean Crist, "An Analysis of *z loss in
 	Type = "noun",
 	Meanings = {"Head Hair"},
 	SingularNominative = "Hazdaz",
+	Gender = "Masculine"
+})
+
+DefineLanguageWord("Herþa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 46.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Fireplace", "Fire"}, -- source gives "Feuerstätte, Feuer" as the meaning
+	SingularNominative = "Herþa",
 	Gender = "Masculine"
 })
 
@@ -388,13 +413,7 @@ DefineLanguageWord("Lauda", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Meanings = {"Metal", "Lead"},
 	SingularNominative = "Lauda",
 	Gender = "Neuter",
-	Uncountable = true, -- as a material, it is likely to be uncountable
-	PrefixSingular = true,
-	PrefixTypeName = {
-		"settlement", -- seems sensible in face of a lack of examples
-		"terrain-mountains", -- seems sensible in face of a lack of examples
-		"terrain-hills" -- seems sensible in face of a lack of examples
-	}
+	Uncountable = true -- as a material, it is likely to be uncountable
 })
 
 DefineLanguageWord("Maχtiz", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
@@ -496,16 +515,14 @@ DefineLanguageWord("Rîkia", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	SingularNominative = "Rîkia",
 	Gender = "Neuter",
 	SuffixSingular = true,
-	SuffixTypeName = {"province"} -- seems sensible in face of a lack of examples, specially since it is the etymological origin of the suffix in "Gardarike"
+--	SuffixTypeName = {"province"} -- seems sensible in face of a lack of examples, specially since it is the etymological origin of the suffix in "Gardarike"
 })
 
 DefineLanguageWord("Rîþa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Current", "Stream"}, -- source gives meaning as "Strom, Bach"
-	SingularNominative = "Rîþa",
-	SuffixSingular = true,
-	SuffixTypeName = {"settlement"} -- seems sensible in face of a lack of examples, specially since there are German settlement names which end in -bach
+	SingularNominative = "Rîþa"
 })
 
 DefineLanguageWord("Saiþa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 221.
@@ -513,9 +530,7 @@ DefineLanguageWord("Saiþa", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Type = "noun",
 	Meanings = {"Magic"}, -- source gives the German "Zauber"
 	Gender = "Masculine",
-	SingularNominative = "Saiþa",
-	PrefixSingular = true,
-	PrefixTypeName = {"unit-class-smithy"} -- seems sensible
+	SingularNominative = "Saiþa"
 })
 
 DefineLanguageWord("Skaran", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 227.
@@ -530,9 +545,7 @@ DefineLanguageWord("Smiþjôn", { -- Source: August Fick and Alf Torp, "Wortscha
 	Type = "noun",
 	Meanings = {"Smithy"}, -- source gives "Schmiede" as the meaning
 	Gender = "Feminine",
-	SingularNominative = "Smiþjôn",
-	SuffixSingular = true,
-	SuffixTypeName = {"unit-class-smithy"} -- seems sensible
+	SingularNominative = "Smiþjôn"
 })
 
 DefineLanguageWord("Smiþu", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 263.
@@ -585,9 +598,7 @@ DefineLanguageWord("Tandran", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Type = "noun",
 	Meanings = {"Fire", "Burning Coal"}, -- source gives the German "Feuer, glühende Kohle" as the meaning
 	Gender = "Masculine",
-	SingularNominative = "Tandran",
-	PrefixSingular = true,
-	PrefixTypeName = {"unit-class-smithy"} -- seems sensible
+	SingularNominative = "Tandran"
 })
 
 DefineLanguageWord("Tîva", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 88.
@@ -595,9 +606,7 @@ DefineLanguageWord("Tîva", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Type = "noun",
 	Meanings = {"God"}, -- can also mean the name of a particular god
 	SingularNominative = "Tîva",
-	Gender = "Masculine",
-	PrefixSingular = true,
-	PrefixTypeName = {"settlement"} -- seems sensible in face of a lack of examples
+	Gender = "Masculine"
 })
 
 DefineLanguageWord("Þurpa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 100.
@@ -628,9 +637,7 @@ DefineLanguageWord("Vîhsa", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Type = "noun",
 	Meanings = {"Village"}, -- source gives "Flecken, Dorf" as the meaning
 	SingularNominative = "Vîhsa",
-	Gender = "Neuter",
-	SuffixSingular = true,
-	SuffixTypeName = {"settlement"} -- seems sensible in face of a lack of examples
+	Gender = "Neuter"
 })
 
 DefineLanguageWord("Vikkan", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 206.
@@ -835,8 +842,7 @@ DefineLanguageWord("Vîha", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Language = "proto-germanic",
 	Type = "adjective",
 	Meanings = {"Holy"},
-	Positive = "Vîha",
-	PrefixTypeName = {"settlement", "unit-class-smithy"}, -- seems sensible in face of a lack of examples
+	Positive = "Vîha"
 })
 
 DefineLanguageWord("Χwat", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.

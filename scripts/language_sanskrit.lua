@@ -33,6 +33,13 @@ DefineLanguageWord("Áśvas", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	SingularNominative = "Áśvas"
 })
 
+DefineLanguageWord("Bhalla", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
+	Language = "sanskrit",
+	Type = "noun",
+	Meanings = {"Bear"}, -- source gives the German "Bär" as the meaning
+	SingularNominative = "Bhalla" -- source also gives the alternative form "Bhallaka"
+})
+
 DefineLanguageWord("Bhrā́tā", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "sanskrit",
 	Type = "noun",
@@ -46,6 +53,13 @@ DefineLanguageWord("Bódhati", { -- Source: Winfred P. Lehmann, "A Grammar of Pr
 	Meanings = {"Observe"},
 	DerivesFrom = {"proto-indo-european", "verb", "Bhewdh"},
 	Infinitive = "Bódhati"
+})
+
+DefineLanguageWord("Brhant", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
+	Language = "sanskrit",
+	Type = "adjective",
+	Meanings = {"High"}, -- source gives "Hoch" as the meaning
+	Positive = "Brhant"
 })
 
 DefineLanguageWord("Dāhas", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
