@@ -117,6 +117,14 @@ DefineLanguageWord("Berga", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Gender = "Neuter"
 })
 
+DefineLanguageWord("Blôma", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 146.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Flower"}, -- source gives the German "Blume" as the meaning
+	SingularNominative = "Blôma", -- source also gives the alternative (masculine) form "Blôman"
+	Gender = "Neuter"
+})
+
 DefineLanguageWord("Bōks", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Sections 2-3.
 	Language = "proto-germanic",
 	Type = "noun",

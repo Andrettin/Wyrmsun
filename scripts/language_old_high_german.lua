@@ -70,6 +70,15 @@ DefineLanguageWord("Bero", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Gender = "Masculine"
 })
 
+DefineLanguageWord("Bluomo", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 146.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Flower"}, -- source gives the German "Blume" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Blôma"},
+	SingularNominative = "Bluomo", -- source also gives the alternative form "Pluomo", and the (feminine) alternative form "Bluoma"
+	Gender = "Masculine"
+})
+
 DefineLanguageWord("Brart", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "old-high-german",
 	Type = "noun",

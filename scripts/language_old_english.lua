@@ -92,6 +92,15 @@ DefineLanguageWord("Bera", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Gender = "Masculine"
 })
 
+DefineLanguageWord("Blôstma", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 146.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Blossom"}, -- presumably, since it gave origin to the English term "Blossom", but the source doesn't specify the meaning precisely
+	DerivesFrom = {"proto-germanic", "noun", "Blôma"},
+	SingularNominative = "Blôstma", -- source also gives the alternative forms "Blôsma" and "Blôstm"
+	Gender = "Masculine"
+})
+
 DefineLanguageWord("Bōc", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-english",
 	Type = "noun",

@@ -121,6 +121,24 @@ DefineLanguageWord("Bjǫrn", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Gender = "Masculine"
 })
 
+DefineLanguageWord("Blômi", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 146.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Flower"}, -- source gives the German "Blume" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Blôma"},
+	SingularNominative = "Blômi",
+	Gender = "Masculine"
+})
+
+DefineLanguageWord("Blômstr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 146.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Blossom"}, -- apparently, but it is not clear from the source
+	DerivesFrom = {"proto-germanic", "noun", "Blôma"},
+	SingularNominative = "Blômstr",
+	Gender = "Neuter"
+})
+
 DefineLanguageWord("Bōk", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-norse",
 	Type = "noun",

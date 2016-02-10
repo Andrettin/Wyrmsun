@@ -106,7 +106,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added support for redefining civilizations and factions.
 
 * Multiplayer
-- Fixed a desync cause due to units' facing being randomly set when created through a random number generating function that isn't synchronized.
+- Fixed a potential desync cause due to units' facing being randomly set when created through a random number generating function that isn't synchronized.
 
 * Units
 - When right-clicking on a tile-based resource, workers who are already carrying the resource at maximum capacity will now return goods and then begin harvesting.

@@ -62,6 +62,24 @@ DefineLanguageWord("Berc", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Gender = "Masculine"
 })
 
+DefineLanguageWord("Bluome", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 146.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Flower"}, -- source gives the German "Blume" as the meaning
+	DerivesFrom = {"old-high-german", "noun", "Bluomo"},
+	SingularNominative = "Bluome",
+	Gender = "Masculine"
+})
+
+DefineLanguageWord("Bluost", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 146.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Blossom"}, -- apparently, but it is not clear from the source
+	DerivesFrom = {"proto-germanic", "noun", "Blôma"},
+	SingularNominative = "Bluost",
+	Gender = "Feminine"
+})
+
 DefineLanguageWord("Burc", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
 	Language = "middle-high-german",
 	Type = "noun",

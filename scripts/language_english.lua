@@ -155,6 +155,15 @@ DefineLanguageWord("Blade", {
 	SeparateSuffixTypeName = {"unit-class-smithy"} -- seems sensible
 })
 
+DefineLanguageWord("Blossom", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Blossom"},
+	DerivesFrom = {"old-english", "noun", "Blôstma"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 146.
+	SingularNominative = "Blossom",
+	Gender = "Neuter"
+})
+
 DefineLanguageWord("Brass", {
 	Language = "english",
 	Type = "noun",

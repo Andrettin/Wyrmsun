@@ -61,6 +61,15 @@ DefineLanguageWord("Berg", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Gender = "Masculine"
 })
 
+DefineLanguageWord("Blômo", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 146.
+	Language = "old-saxon",
+	Type = "noun",
+	Meanings = {"Flower"}, -- source gives the German "Blume" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Blôma"},
+	SingularNominative = "Blômo",
+	Gender = "Masculine"
+})
+
 DefineLanguageWord("Burg", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
 	Language = "old-saxon",
 	Type = "noun",

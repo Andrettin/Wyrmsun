@@ -25,6 +25,15 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineLanguageWord("Blôsem", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 146.
+	Language = "middle-low-german",
+	Type = "noun",
+	Meanings = {"Blossom"}, -- apparently, but it is not clear from the source
+	DerivesFrom = {"proto-germanic", "noun", "Blôma"},
+	SingularNominative = "Blôsem",
+	Gender = "Feminine"
+})
+
 DefineLanguageWord("Hēde", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 7.
 	Language = "middle-low-german",
 	Type = "noun",
@@ -48,16 +57,16 @@ DefineLanguageWord("Twern", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	SingularNominative = "Twern"
 })
 
-DefineLanguageWord("Wêt", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 4.
-	Language = "middle-low-german",
-	Type = "noun",
-	Meanings = {"Woad"},
-	SingularNominative = "Wêt" -- source also gives the alternative form "Wêde"
-})
-
 DefineLanguageWord("Twernen", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
 	Language = "middle-low-german",
 	Type = "verb",
 	Meanings = {"Twine"},
 	Infinitive = "Twernen"
+})
+
+DefineLanguageWord("Wêt", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 4.
+	Language = "middle-low-german",
+	Type = "noun",
+	Meanings = {"Woad"},
+	SingularNominative = "Wêt" -- source also gives the alternative form "Wêde"
 })

@@ -164,6 +164,7 @@ DefineLanguageWord("Blume", { -- Source: http://www.duden.de/rechtschreibung/Blu
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"Flower"},
+	DerivesFrom = {"middle-high-german", "noun", "Bluome"},
 	SingularNominative = "Blume",
 	SingularAccusative = "Blume",
 	SingularDative = "Blume",
