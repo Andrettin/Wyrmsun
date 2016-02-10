@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2015 by Andrettin
+--      (c) Copyright 2015-2016 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -133,11 +133,44 @@ DefineLanguageWord("Bernard", {
 	TypeName = {"person"}
 })
 
+DefineLanguageWord("Black", {
+	Language = "english",
+	Type = "adjective",
+	Meanings = {"Black"},
+	Positive = "Black",
+	SeparatePrefixTypeName = {
+		"settlement", -- examples: "Blackburn", "Blackpool"; Source: "Philip's International School Atlas", 2006, p. 64.
+		"unit-class-smithy" -- seems sensible
+	}
+})
+
+DefineLanguageWord("Blade", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Blade"},
+	SingularNominative = "Blade",
+	PluralNominative = "Blades",
+	Gender = "Neuter",
+	SuffixSingular = true,
+	SeparateSuffixTypeName = {"unit-class-smithy"} -- seems sensible
+})
+
 DefineLanguageWord("Brass", {
 	Language = "english",
 	Type = "noun",
 	Meanings = {"Brass"},
 	SingularNominative = "Brass",
+	Gender = "Neuter",
+	Uncountable = true,
+	PrefixSingular = true,
+	SeparatePrefixTypeName = {"unit-class-smithy"} -- seems sensible
+})
+
+DefineLanguageWord("Bronze", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Bronze"},
+	SingularNominative = "Bronze",
 	Gender = "Neuter",
 	Uncountable = true,
 	PrefixSingular = true,
@@ -174,6 +207,17 @@ DefineLanguageWord("Charles", {
 	TypeName = {"person"}
 })
 
+DefineLanguageWord("Copper", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Copper"},
+	SingularNominative = "Copper",
+	Gender = "Neuter",
+	Uncountable = true,
+	PrefixSingular = true,
+	SeparatePrefixTypeName = {"unit-class-smithy"} -- seems sensible
+})
+
 DefineLanguageWord("Corn", {
 	Language = "english",
 	Type = "noun",
@@ -202,6 +246,14 @@ DefineLanguageWord("Es", { -- archaic
 	Gender = "Neuter",
 	PrefixSingular = true,
 	PrefixTypeName = {"province"} -- example: "Essex"
+})
+
+DefineLanguageWord("Fiery", {
+	Language = "english",
+	Type = "adjective",
+	Meanings = {"Fiery"},
+	Positive = "Fiery",
+	SeparatePrefixTypeName = {"unit-class-smithy"} -- seems sensible
 })
 
 DefineLanguageWord("Fire", {
@@ -283,6 +335,28 @@ DefineLanguageWord("Gate", {
 	Gender = "Neuter",
 	PrefixSingular = true,
 	PrefixTypeName = {"settlement"} -- example: "Gateshead"; Source: "Philip's International School Atlas", 2006, p. 64.
+})
+
+DefineLanguageWord("Gauntlet", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Gauntlet"},
+	SingularNominative = "Gauntlet",
+	PluralNominative = "Gauntlets",
+	Gender = "Neuter",
+	SuffixSingular = true,
+	SeparateSuffixTypeName = {"unit-class-smithy"} -- seems sensible
+})
+
+DefineLanguageWord("Gold", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Gold"},
+	SingularNominative = "Gold",
+	Gender = "Neuter",
+	Uncountable = true,
+	PrefixSingular = true,
+	SeparatePrefixTypeName = {"unit-class-smithy"} -- seems sensible
 })
 
 DefineLanguageWord("Guard", {
@@ -394,6 +468,17 @@ DefineLanguageWord("Ing", {
 	SuffixTypeName = {"settlement"} -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 336.
 })
 
+DefineLanguageWord("Iron", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Iron"},
+	SingularNominative = "Iron",
+	Gender = "Neuter",
+	Uncountable = true,
+	PrefixSingular = true,
+	SeparatePrefixTypeName = {"unit-class-smithy"} -- seems sensible
+})
+
 DefineLanguageWord("James", {
 	Language = "english",
 	Type = "noun",
@@ -434,6 +519,14 @@ DefineLanguageWord("Lewis", {
 	TypeName = {"person"}
 })
 
+DefineLanguageWord("Magic", {
+	Language = "english",
+	Type = "adjective",
+	Meanings = {"Magic"},
+	Positive = "Magic",
+	SeparatePrefixTypeName = {"unit-class-smithy"} -- seems sensible
+})
+
 DefineLanguageWord("Maid", {
 	Language = "english",
 	Type = "noun",
@@ -462,6 +555,14 @@ DefineLanguageWord("Mouth", {
 	Gender = "Neuter",
 	SuffixSingular = true,
 	SuffixTypeName = {"settlement"} -- examples: "Plymouth", "Portsmouth"
+})
+
+DefineLanguageWord("New", {
+	Language = "english",
+	Type = "adjective",
+	Meanings = {"New"},
+	Positive = "New",
+	SuffixTypeName = {"settlement"} -- examples: "Newbury", "Newport", "Newquay"; Source: "Philip's International School Atlas", 2006, p. 64.
 })
 
 DefineLanguageWord("Nor", { -- archaic
@@ -553,6 +654,17 @@ DefineLanguageWord("Red", { -- archaic
 	SuffixTypeName = {"person"} -- example: "Alfred"
 })
 
+DefineLanguageWord("Red", {
+	Language = "english",
+	Type = "adjective",
+	Meanings = {"Red"},
+	Positive = "Red",
+	SeparatePrefixTypeName = {
+		"settlement", -- example: "Redditch"; Source: "Philip's International School Atlas", 2006, p. 64.
+		"unit-class-smithy" -- seems sensible
+	}
+})
+
 DefineLanguageWord("Richard", {
 	Language = "english",
 	Type = "noun",
@@ -561,6 +673,14 @@ DefineLanguageWord("Richard", {
 	Gender = "Masculine",
 	NameSingular = true,
 	TypeName = {"person"}
+})
+
+DefineLanguageWord("Rusty", {
+	Language = "english",
+	Type = "adjective",
+	Meanings = {"Rusty"},
+	Positive = "Rusty",
+	SeparatePrefixTypeName = {"unit-class-smithy"} -- seems sensible
 })
 
 DefineLanguageWord("Salt", {
@@ -594,6 +714,14 @@ DefineLanguageWord("Sex", { -- archaic
 	SuffixTypeName = {"province"} -- examples: "Essex", "Middlesex", "Sussex", "Wessex"
 })
 
+DefineLanguageWord("Shining", {
+	Language = "english",
+	Type = "adjective",
+	Meanings = {"Shining"},
+	Positive = "Shining",
+	SeparatePrefixTypeName = {"unit-class-smithy"} -- seems sensible
+})
+
 DefineLanguageWord("Shrew", {
 	Language = "english",
 	Type = "noun",
@@ -616,6 +744,14 @@ DefineLanguageWord("Smithy", {
 	Gender = "Neuter",
 	SuffixSingular = true,
 	SeparateSuffixTypeName = {"unit-class-smithy"} -- seems sensible
+})
+
+DefineLanguageWord("Smoldering", {
+	Language = "english",
+	Type = "adjective",
+	Meanings = {"Smoldering"},
+	Positive = "Smoldering",
+	SeparatePrefixTypeName = {"unit-class-smithy"} -- seems sensible
 })
 
 DefineLanguageWord("Staple", {
@@ -678,6 +814,17 @@ DefineLanguageWord("Swan", {
 	Gender = "Neuter",
 	PrefixSingular = true,
 	PrefixTypeName = {"settlement"} -- example: "Swansea"; Source: "Philip's International School Atlas", 2006, p. 64.
+})
+
+DefineLanguageWord("The", {
+	Language = "english",
+	Type = "article",
+	Meanings = {"The"},
+	Nominative = "The",
+	Accusative = "The",
+	Dative = "The",
+	Genitive = "The",
+	Definite = true
 })
 
 DefineLanguageWord("Tor", {
@@ -748,61 +895,4 @@ DefineLanguageWord("William", {
 	Gender = "Masculine",
 	NameSingular = true,
 	TypeName = {"person"}
-})
-
-DefineLanguageWord("Black", {
-	Language = "english",
-	Type = "adjective",
-	Meanings = {"Black"},
-	Positive = "Black",
-	SeparatePrefixTypeName = {
-		"settlement", -- examples: "Blackburn", "Blackpool"; Source: "Philip's International School Atlas", 2006, p. 64.
-		"unit-class-smithy" -- seems sensible
-	}
-})
-
-DefineLanguageWord("Fiery", {
-	Language = "english",
-	Type = "adjective",
-	Meanings = {"Fiery"},
-	Positive = "Fiery",
-	SeparatePrefixTypeName = {"unit-class-smithy"} -- seems sensible
-})
-
-DefineLanguageWord("New", {
-	Language = "english",
-	Type = "adjective",
-	Meanings = {"New"},
-	Positive = "New",
-	SuffixTypeName = {"settlement"} -- examples: "Newbury", "Newport", "Newquay"; Source: "Philip's International School Atlas", 2006, p. 64.
-})
-
-DefineLanguageWord("Red", {
-	Language = "english",
-	Type = "adjective",
-	Meanings = {"Red"},
-	Positive = "Red",
-	SeparatePrefixTypeName = {
-		"settlement", -- example: "Redditch"; Source: "Philip's International School Atlas", 2006, p. 64.
-		"unit-class-smithy" -- seems sensible
-	}
-})
-
-DefineLanguageWord("Smoldering", {
-	Language = "english",
-	Type = "adjective",
-	Meanings = {"Smoldering"},
-	Positive = "Smoldering",
-	SeparatePrefixTypeName = {"unit-class-smithy"} -- seems sensible
-})
-
-DefineLanguageWord("The", {
-	Language = "english",
-	Type = "article",
-	Meanings = {"The"},
-	Nominative = "The",
-	Accusative = "The",
-	Dative = "The",
-	Genitive = "The",
-	Definite = true
 })
