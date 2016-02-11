@@ -1103,7 +1103,7 @@ function CanAttackProvince(province, faction, province_from)
 		return false
 	end
 
-	if (ProvinceHasBorderWith(province_from, province) == false and (province.Coastal == false or ProvinceHasBuildingClass(province.Name, "dock") == false or ProvinceHasSecondaryBorderThroughWaterWith(province_from, province) == false)) then
+	if (ProvinceHasBorderWith(province_from, province) == false and (province.Coastal == false or ProvinceHasBuildingClass(province_from.Name, "dock") == false or ProvinceHasSecondaryBorderThroughWaterWith(province_from, province) == false)) then
 		return false
 	end
 
