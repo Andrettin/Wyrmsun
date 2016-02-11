@@ -53,6 +53,5 @@ DefineLanguageWord("Giús", { -- Source: Sean Crist, "An Analysis of *z loss in 
 DefineLanguageWord("Tur", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "old-irish",
 	Type = "adjective",
-	Meanings = {"Dry"},
-	Positive = "Tur"
+	Meanings = {"Dry"}
 })

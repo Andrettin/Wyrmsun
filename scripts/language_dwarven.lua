@@ -1507,7 +1507,6 @@ DefineLanguageWord("Al", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "A
 	Language = "dwarven",
 	Type = "adjective",
 	Meanings = {"Mighty", "All"}, -- meaning from Old Norse, but is also a prefix and infix used by Wesnoth's dwarven names
-	Positive = "Al",
 	PrefixTypeName = {
 		"person", -- examples from Norse mythology: "Alvis" ("all-knowing"/"all-wise"), "Althjof" (mighty thief); examples from Wesnoth: "Alaithas", "Alaithis", "Alaithlos", "Alaithol", "Alaithsol", "Alaithus", "Alalas", "Alalil", "Alalol", "Alalsol", "Alalus", "Alatas", "Alatil", "Alating", "Alatlos", "Alatsil", "Alcatil", "Alcatis", "Alcatlos", "Alcatsil", "Aldras", "Aldril", "Aldring", "Aldris", "Aldrlos", "Aldrol", "Aldrsol", "Alduras", "Aldurlos", "Aldurol", "Althaas", "Althail", "Althalos", "Althaol", "Althasil", "Althasol", "Althaus"
 		"province", -- no examples, but seems sensible in face of a general lack of examples
@@ -1522,7 +1521,6 @@ DefineLanguageWord("Bladnir", {
 	Language = "dwarven",
 	Type = "adjective",
 	Meanings = {"Bladed"},
-	Positive = "Bladnir",
 	-- example: "Skidbladnir" (ship made by the sons of Ivaldi, name means "Wooden-Bladed")
 	-- should add a category for ship name suffixes
 --	PrefixTypeName = {
@@ -1537,7 +1535,6 @@ DefineLanguageWord("Eikin", {
 	Language = "dwarven",
 	Type = "adjective",
 	Meanings = {"Oaken"},
-	Positive = "Eikin",
 	PrefixTypeName = {
 		"person", -- example: "Eikinskjaldi" (Norse mythology)
 		"settlement", -- no examples, but seems sensible in face of a general lack of examples
@@ -1549,7 +1546,6 @@ DefineLanguageWord("Gand", {
 	Language = "dwarven",
 	Type = "adjective",
 	Meanings = {"Magic"},
-	Positive = "Gand",
 	PrefixTypeName = {
 		"person", -- example: "Gandalf" (Norse mythology)
 		"province", -- no examples, but seems sensible in face of a general lack of examples
@@ -1563,7 +1559,6 @@ DefineLanguageWord("Jung", { -- Source: Richard Cleasby and Gudbrand Vigfusson, 
 	Language = "dwarven",
 	Type = "adjective",
 	Meanings = {"Young"},
-	Positive = "Jung",
 	SuffixTypeName = {"person"} -- example: "Nidjung" (Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 454)
 })
 
@@ -1571,7 +1566,6 @@ DefineLanguageWord("Lyr", { -- Source: Kevin Crossley-Holland, "The Norse Myths"
 	Language = "dwarven",
 	Type = "adjective",
 	Meanings = {"Heat-Holding"},
-	Positive = "Lyr",
 	TypeName = {"settlement"} -- example: "Lyr" (hall built by dwarves in Norse mythology)
 })
 
@@ -1579,7 +1573,6 @@ DefineLanguageWord("Nain", {
 	Language = "dwarven",
 	Type = "adjective",
 	Meanings = {"Near To", "Closely Related", "Near Kinsman Of"}, -- Old Norse "Náinn"; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 448.
-	Positive = "Nain",
 	TypeName = {"person"} -- example: "Nain" (dwarf from Norse mythology)
 })
 
@@ -1587,7 +1580,6 @@ DefineLanguageWord("Nyr", {
 	Language = "dwarven",
 	Type = "adjective",
 	Meanings = {"New"}, -- spelled as "Nýr" in Old Icelandic; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 459.
-	Positive = "Nyr",
 	TypeName = {"person"}, -- example: "Nyr" (dwarf from Norse mythology)
 	PrefixTypeName = {
 		"settlement", -- no examples, but seems sensible in face of a general lack of examples
@@ -1601,7 +1593,6 @@ DefineLanguageWord("Rad", {
 	Language = "dwarven",
 	Type = "adjective",
 	Meanings = {"Counsel"}, -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 485.
-	Positive = "Rad",
 	PrefixTypeName = {
 		"person", -- example: "Radsvid" (Norse mythology)
 		"settlement", -- no examples, but seems sensible in face of a general lack of examples
@@ -1613,7 +1604,6 @@ DefineLanguageWord("Rithil", {
 	Language = "dwarven",
 	Type = "adjective",
 	Meanings = {"Swift-Moving"},
-	Positive = "Rithil",
 	TypeName = {"item-sword"} -- example: "Rithil" (the dwarf Regin's sword)
 })
 
@@ -1621,7 +1611,6 @@ DefineLanguageWord("Svid", {
 	Language = "dwarven",
 	Type = "adjective",
 	Meanings = {"Swift", "Wise"}, -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 611.
-	Positive = "Svid",
 	SuffixTypeName = {"person"} -- example: "Alsvid" ("All-Wise"; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 611.), "Radsvid" (Norse mythology; "Swift in Counsel")
 })
 
@@ -1629,7 +1618,6 @@ DefineLanguageWord("Thjod", { -- Source: Richard Cleasby and Gudbrand Vigfusson,
 	Language = "dwarven",
 	Type = "adjective",
 	Meanings = {"Great"},
-	Positive = "Thjod",
 	PrefixTypeName = {
 		"person", -- example: "Thjodrorir"/"þjóð-reyrir" ("The Great Rearer of Charms"; dwarven sage from Norse mythology)
 		"settlement", -- no examples, but seems sensible in face of a general lack of examples
@@ -1643,6 +1631,5 @@ DefineLanguageWord("Vis", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "
 	Language = "dwarven",
 	Type = "adjective",
 	Meanings = {"Wise"},
-	Positive = "Vis",
 	SuffixTypeName = {"person"} -- example: "Alvis" ("all-knowing"/"all-wise"; from Norse mythology)
 })

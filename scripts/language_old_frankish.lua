@@ -54,6 +54,5 @@ DefineLanguageWord("Sworga", { -- Source: August Fick and Alf Torp, "Wortschatz 
 DefineLanguageWord("Sinigus", { -- source also gives the alternative form "Seniscalcus"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 215.
 	Language = "old-frankish",
 	Type = "adjective",
-	Meanings = {"Old"}, -- presumably (this is the meaning given to the Proto-Germanic original word, and no meaning is specifically given to this one)
-	Positive = "Sinigus"
+	Meanings = {"Old"} -- presumably (this is the meaning given to the Proto-Germanic original word, and no meaning is specifically given to this one)
 })

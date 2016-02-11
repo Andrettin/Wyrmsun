@@ -313,22 +313,22 @@ DefineLanguageWord("Witan", { -- Source: Richard M. Runge, "The Phonetic Realiza
 DefineLanguageWord("Jung", {
 	Language = "old-saxon",
 	Type = "adjective",
-	Meanings = {"Young"}, -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
-	Positive = "Jung"
+	Meanings = {"Young"} -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
 })
 
 DefineLanguageWord("Mēro", { -- this is the comparative, what is the normal version of the word? Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
 	Language = "old-saxon",
 	Type = "adjective",
 	Meanings = {"More"},
-	Comparative = "Mēro",
-	Superlative = "Mēst"
+	ComparisonDegreeInflections = {
+		"comparative", "Mēro",
+		"superlative", "Mēst"
+	}
 })
 
 DefineLanguageWord("Reht", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-saxon",
 	Type = "adjective",
 	Meanings = {"Right", "Straight"}, -- derived from Proto-Germanic "Reχtaz", which means "Right, Straight"
-	DerivesFrom = {"proto-germanic", "adjective", "Reχtaz"},
-	Positive = "Reht"
+	DerivesFrom = {"proto-germanic", "adjective", "Reχtaz"}
 })

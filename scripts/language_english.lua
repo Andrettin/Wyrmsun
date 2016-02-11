@@ -128,7 +128,6 @@ DefineLanguageWord("Black", {
 	Language = "english",
 	Type = "adjective",
 	Meanings = {"Black"},
-	Positive = "Black",
 	SeparatePrefixTypeName = {
 		"settlement", -- examples: "Blackburn", "Blackpool"; Source: "Philip's International School Atlas", 2006, p. 64.
 		"unit-class-smithy" -- seems sensible
@@ -167,7 +166,6 @@ DefineLanguageWord("Brass", {
 	Language = "english",
 	Type = "adjective",
 	Meanings = {"Brass"},
-	Positive = "Brass",
 	SeparatePrefixTypeName = {"unit-class-smithy"} -- seems sensible
 })
 
@@ -183,7 +181,6 @@ DefineLanguageWord("Bronze", {
 	Language = "english",
 	Type = "adjective",
 	Meanings = {"Bronze"},
-	Positive = "Bronze",
 	SeparatePrefixTypeName = {"unit-class-smithy"} -- seems sensible
 })
 
@@ -226,7 +223,6 @@ DefineLanguageWord("Copper", {
 	Language = "english",
 	Type = "adjective",
 	Meanings = {"Copper"},
-	Positive = "Copper",
 	SeparatePrefixTypeName = {"unit-class-smithy"} -- seems sensible
 })
 
@@ -261,7 +257,6 @@ DefineLanguageWord("Fiery", {
 	Language = "english",
 	Type = "adjective",
 	Meanings = {"Fiery"},
-	Positive = "Fiery",
 	SeparatePrefixTypeName = {"unit-class-smithy"} -- seems sensible
 })
 
@@ -366,7 +361,6 @@ DefineLanguageWord("Golden", {
 	Language = "english",
 	Type = "adjective",
 	Meanings = {"Golden"},
-	Positive = "Golden",
 	SeparatePrefixTypeName = {"unit-class-smithy"} -- seems sensible
 })
 
@@ -447,7 +441,6 @@ DefineLanguageWord("Holy", {
 	Language = "english",
 	Type = "adjective",
 	Meanings = {"Holy"},
-	Positive = "Holy",
 	SeparatePrefixTypeName = {"unit-class-smithy"} -- seems sensible
 })
 
@@ -490,7 +483,6 @@ DefineLanguageWord("Iron", {
 	Language = "english",
 	Type = "adjective",
 	Meanings = {"Iron"},
-	Positive = "Iron",
 	SeparatePrefixTypeName = {"unit-class-smithy"} -- seems sensible
 })
 
@@ -534,7 +526,6 @@ DefineLanguageWord("Magic", {
 	Language = "english",
 	Type = "adjective",
 	Meanings = {"Magic"},
-	Positive = "Magic",
 	SeparatePrefixTypeName = {"unit-class-smithy"} -- seems sensible
 })
 
@@ -578,7 +569,6 @@ DefineLanguageWord("New", {
 	Language = "english",
 	Type = "adjective",
 	Meanings = {"New"},
-	Positive = "New",
 	SuffixTypeName = {"settlement"} -- examples: "Newbury", "Newport", "Newquay"; Source: "Philip's International School Atlas", 2006, p. 64.
 })
 
@@ -669,7 +659,6 @@ DefineLanguageWord("Red", {
 	Language = "english",
 	Type = "adjective",
 	Meanings = {"Red"},
-	Positive = "Red",
 	SeparatePrefixTypeName = {
 		"settlement", -- example: "Redditch"; Source: "Philip's International School Atlas", 2006, p. 64.
 		"unit-class-smithy" -- seems sensible
@@ -689,7 +678,6 @@ DefineLanguageWord("Rusty", {
 	Language = "english",
 	Type = "adjective",
 	Meanings = {"Rusty"},
-	Positive = "Rusty",
 	SeparatePrefixTypeName = {"unit-class-smithy"} -- seems sensible
 })
 
@@ -736,7 +724,6 @@ DefineLanguageWord("Shining", {
 	Language = "english",
 	Type = "adjective",
 	Meanings = {"Shining"},
-	Positive = "Shining",
 	SeparatePrefixTypeName = {"unit-class-smithy"} -- seems sensible
 })
 
@@ -770,7 +757,6 @@ DefineLanguageWord("Smoldering", {
 	Language = "english",
 	Type = "adjective",
 	Meanings = {"Smoldering"},
-	Positive = "Smoldering",
 	SeparatePrefixTypeName = {"unit-class-smithy"} -- seems sensible
 })
 

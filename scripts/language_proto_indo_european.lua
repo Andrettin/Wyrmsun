@@ -73,8 +73,7 @@ DefineLanguageWord("Gʷen", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 DefineLanguageWord("Gʷīwos", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 	Language = "proto-indo-european",
 	Type = "adjective",
-	Meanings = {"Alive"},
-	Positive = "Gʷīwos"
+	Meanings = {"Alive"}
 })
 
 DefineLanguageWord("Kneygʷh", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
@@ -84,11 +83,10 @@ DefineLanguageWord("Kneygʷh", { -- Source: Winfred P. Lehmann, "A Grammar of Pr
 	Infinitive = "Kneygʷh"
 })
 
-DefineLanguageWord("Ḱweyt", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
+DefineLanguageWord("Ḱweyt", { -- source gives "Ḱwey-t/d-"; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 	Language = "proto-indo-european",
 	Type = "adjective",
-	Meanings = {},
-	Positive = "Ḱweyt" -- source gives "Ḱwey-t/d-"
+	Meanings = {}
 })
 
 DefineLanguageWord("Leykʷ", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
@@ -115,8 +113,7 @@ DefineLanguageWord("Nem", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-G
 DefineLanguageWord("Rowdho", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
 	Language = "proto-indo-european",
 	Type = "adjective",
-	Meanings = {"Red"},
-	Positive = "Rowdho"
+	Meanings = {"Red"}
 })
 
 DefineLanguageWord("Sekʷ", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
@@ -138,9 +135,8 @@ DefineLanguageWord("Wiros", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Meanings = {"Man"}
 })
 
-DefineLanguageWord("Yehw", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
+DefineLanguageWord("Yehw", { -- source gives "yeHw"; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
 	Language = "proto-indo-european",
 	Type = "adjective",
-	Meanings = {},
-	Positive = "Yehw" -- source gives "yeHw"
+	Meanings = {}
 })

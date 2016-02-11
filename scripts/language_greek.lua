@@ -294,30 +294,26 @@ DefineLanguageWord("Steíkhō", { -- Source: Winfred P. Lehmann, "A Grammar of P
 DefineLanguageWord("Meízōn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "greek",
 	Type = "adjective",
-	Meanings = {"More"},
-	Positive = "Meízōn"
+	Meanings = {"More"}
 })
 
 DefineLanguageWord("Nea", { -- should be written as the original Greek name (with Greek characters)
 	Language = "greek",
 	Type = "adjective",
 	Meanings = {"New"},
-	Positive = "Nea",
 	PrefixTypeName = {"settlement"} -- example: "Neapolis" (Naples)
 })
 
 DefineLanguageWord("Orektós", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "greek",
 	Type = "adjective",
-	Meanings = {"Straight"},
-	Positive = "Orektós"
+	Meanings = {"Straight"}
 })
 
 DefineLanguageWord("Plōtós", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "greek",
 	Type = "adjective",
-	Meanings = {"Floating"},
-	Positive = "Plōtós"
+	Meanings = {"Floating"}
 })
 
 DefineLanguageWord("Égō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 1.

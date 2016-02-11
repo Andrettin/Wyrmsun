@@ -82,8 +82,10 @@ DefineLanguageWord("Māra", { -- this is the comparative, what is the normal ver
 	Language = "old-frisian",
 	Type = "adjective",
 	Meanings = {"More"},
-	Comparative = "Māra",
-	Superlative = "Māst"
+	ComparisonDegreeInflections = {
+		"comparative", "Māra",
+		"superlative", "Māst"
+	}
 })
 
 DefineLanguageWord("Marg", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.

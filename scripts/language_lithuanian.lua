@@ -36,15 +36,13 @@ DefineLanguageWord("Bė́gu", { -- Source: August Fick and Alf Torp, "Wortschatz
 DefineLanguageWord("Bė́ras", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
 	Language = "lithuanian",
 	Type = "adjective",
-	Meanings = {"Brown"}, -- source gives the German "Braun" as the meaning
-	Positive = "Bė́ras"
+	Meanings = {"Brown"} -- source gives the German "Braun" as the meaning
 })
 
 DefineLanguageWord("Dubùs", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "lithuanian",
 	Type = "adjective",
-	Meanings = {"Deep"},
-	Positive = "Dubùs"
+	Meanings = {"Deep"}
 })
 
 DefineLanguageWord("Dvýlika", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
@@ -78,8 +76,7 @@ DefineLanguageWord("Raũdas", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Language = "lithuanian",
 	Type = "adjective",
 	Meanings = {},
-	DerivesFrom = {"proto-indo-european", "adjective", "Rowdho"},
-	Positive = "Raũdas"
+	DerivesFrom = {"proto-indo-european", "adjective", "Rowdho"}
 })
 
 DefineLanguageWord("Saĩsti", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 121.

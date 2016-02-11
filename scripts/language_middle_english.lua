@@ -28,6 +28,5 @@
 DefineLanguageWord("Sliper", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 103.
 	Language = "middle-english",
 	Type = "adjective",
-	Meanings = {"Deceitful", "False", "Treacherous"},
-	Positive = "Sliper"
+	Meanings = {"Deceitful", "False", "Treacherous"}
 })

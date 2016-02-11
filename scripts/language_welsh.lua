@@ -54,11 +54,13 @@ DefineLanguageWord("Hudo", { -- Source: Alaric Hall, "The Meanings of Elf and El
 	Infinitive = "Hudo"
 })
 
-DefineLanguageWord("Ieu", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
+DefineLanguageWord("Ieu", { -- this is the comparative; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
 	Language = "welsh",
 	Type = "adjective",
 	Meanings = {"Younger"},
 	DerivesFrom = {"proto-indo-european", "adjective", "Yehw"},
-	Comparative = "Ieu" -- "younger"
+	ComparisonDegreeInflections = {
+		"comparative", "Ieu"
+	}
 })
 

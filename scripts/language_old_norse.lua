@@ -545,97 +545,87 @@ DefineLanguageWord("Djūpr", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Language = "old-norse",
 	Type = "adjective",
 	Meanings = {"Deep"}, -- derived from Proto-Germanic "Déwpaz", which has the meaning of "deep"
-	DerivesFrom = {"proto-germanic", "adjective", "Déwpaz"},
-	Positive = "Djūpr"
+	DerivesFrom = {"proto-germanic", "adjective", "Déwpaz"}
 })
 
 DefineLanguageWord("Fūll", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-norse",
 	Type = "adjective",
 	Meanings = {"Foul"}, -- derived from the Proto-Germanic "Fūla", which means "Foul"
-	DerivesFrom = {"proto-germanic", "adjective", "Fūla"},
-	Positive = "Fūll"
+	DerivesFrom = {"proto-germanic", "adjective", "Fūla"}
 })
 
 DefineLanguageWord("Hvītr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 	Language = "old-norse",
 	Type = "adjective",
 	Meanings = {"White"},
-	DerivesFrom = {"proto-indo-european", "adjective", "Ḱweyt"},
-	Positive = "Hvītr"
+	DerivesFrom = {"proto-indo-european", "adjective", "Ḱweyt"}
 })
 
 DefineLanguageWord("Kvikr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 	Language = "old-norse",
 	Type = "adjective",
 	Meanings = {"Alive"},
-	DerivesFrom = {"proto-indo-european", "adjective", "Gʷīwos"},
-	Positive = "Kvikr"
+	DerivesFrom = {"proto-indo-european", "adjective", "Gʷīwos"}
 })
 
 DefineLanguageWord("Langr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-norse",
 	Type = "adjective",
 	Meanings = {"Long"}, -- derived from Proto-Germanic "Langaz", which means "Long"
-	DerivesFrom = {"proto-germanic", "adjective", "Langaz"},
-	Positive = "Langr"
+	DerivesFrom = {"proto-germanic", "adjective", "Langaz"}
 })
 
-DefineLanguageWord("Meiri", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+DefineLanguageWord("Meiri", { -- given by Lehmann, but it is not entirely clear if he meant that this is the positive version of the word; Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-norse",
 	Type = "adjective",
 	Meanings = {"More"},
 	DerivesFrom = {"proto-germanic", "adjective", "Mēria"},
-	Positive = "Meiri", -- given by Lehmann, but it is not entirely clear if he meant that this is the positive version of the word
-	Comparative = "Meiri",
-	Superlative = "Mestr"
+	ComparisonDegreeInflections = {
+		"comparative", "Meiri",
+		"superlative", "Mestr"
+	}
 })
 
 DefineLanguageWord("Rauðr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
 	Language = "old-norse",
 	Type = "adjective",
 	Meanings = {"Red"},
-	DerivesFrom = {"proto-indo-european", "adjective", "Rowdho"},
-	Positive = "Rauðr"
+	DerivesFrom = {"proto-indo-european", "adjective", "Rowdho"}
 })
 
 DefineLanguageWord("Rēttr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-norse",
 	Type = "adjective",
 	Meanings = {"Right", "Straight"}, -- derived from Proto-Germanic "Reχtaz", which means "Right, Straight"
-	DerivesFrom = {"proto-germanic", "adjective", "Reχtaz"},
-	Positive = "Rēttr"
+	DerivesFrom = {"proto-germanic", "adjective", "Reχtaz"}
 })
 
 DefineLanguageWord("Seiðr", { -- maybe is the past participle of Síði instead? Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 118.
 	Language = "old-norse",
 	Type = "adjective",
-	Meanings = {"Magic Worked"},
-	Positive = "Seiðr"
+	Meanings = {"Magic Worked"}
 })
 
 DefineLanguageWord("Tvennr", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 6.
 	Language = "old-norse",
 	Type = "adjective",
-	Meanings = {"Twofold"}, -- maybe is an adverb instead?
+	Meanings = {"Twofold"} -- maybe is an adverb instead?
 	-- source also gives "Tvinnr" as an alternative form
-	Positive = "Tvennr"
 })
 
 DefineLanguageWord("Þrennr", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
 	Language = "old-norse",
 	Type = "adjective",
-	Meanings = {"Threefold"}, -- maybe is an adverb instead?
+	Meanings = {"Threefold"} -- maybe is an adverb instead?
 	-- source also gives "Þrinnr" as an alternative form
-	Positive = "Þrennr"
 })
 
 DefineLanguageWord("Þurr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-norse",
 	Type = "adjective",
 	Meanings = {"Dry"}, -- derived from Proto-Germanic "Þrsúz", which has the meaning of "dry"
-	DerivesFrom = {"proto-germanic", "adjective", "Þrsúz"},
-	Positive = "Þurr"
+	DerivesFrom = {"proto-germanic", "adjective", "Þrsúz"}
 })
 
 DefineLanguageWord("Af", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.

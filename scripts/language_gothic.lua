@@ -635,118 +635,105 @@ DefineLanguageWord("Diups", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Language = "gothic",
 	Type = "adjective",
 	Meanings = {"Deep"}, -- derived from Proto-Germanic "Déwpaz", which means "Deep"
-	DerivesFrom = {"proto-germanic", "adjective", "Déwpaz"},
-	Positive = "Diups"
+	DerivesFrom = {"proto-germanic", "adjective", "Déwpaz"}
 })
 
 DefineLanguageWord("Faihs", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
 	Language = "gothic",
 	Type = "adjective",
-	Meanings = {"Shining"},
-	Positive = "Faihs"
+	Meanings = {"Shining"}
 })
 
 DefineLanguageWord("Fūls", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "gothic",
 	Type = "adjective",
 	Meanings = {"Foul"}, -- derived from the Proto-Germanic "Fūla", which means "Foul"
-	DerivesFrom = {"proto-germanic", "adjective", "Fūla"},
-	Positive = "Fūls"
+	DerivesFrom = {"proto-germanic", "adjective", "Fūla"}
 })
 
 DefineLanguageWord("Grēdags", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
 	Language = "gothic",
 	Type = "adjective",
 	Meanings = {"Hungry"},
-	DerivesFrom = {"proto-germanic", "adjective", "Gred"},
-	Positive = "Grēdags"
+	DerivesFrom = {"proto-germanic", "adjective", "Gred"}
 })
 
 DefineLanguageWord("Hauhs", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
 	Language = "gothic",
 	Type = "adjective",
-	Meanings = {"High"}, -- source gives translation as the German word "hoch"
-	Positive = "Hauhs"
+	Meanings = {"High"} -- source gives translation as the German word "hoch"
 })
 
 DefineLanguageWord("Hʷeits", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 	Language = "gothic",
 	Type = "adjective",
 	Meanings = {"White"},
-	DerivesFrom = {"proto-indo-european", "adjective", "Ḱweyt"},
-	Positive = "Hʷeits"
+	DerivesFrom = {"proto-indo-european", "adjective", "Ḱweyt"}
 })
 
-DefineLanguageWord("Juggs", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
+DefineLanguageWord("Juggs", { -- Lehmann gives "Jugga-" instead; Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
 	Language = "gothic",
 	Type = "adjective",
 	Meanings = {"Young"},
-	DerivesFrom = {"proto-indo-european", "adjective", "Yehw"},
-	Positive = "Juggs" -- Lehmann gives "Jugga-" instead
+	DerivesFrom = {"proto-indo-european", "adjective", "Yehw"}
 })
 
 DefineLanguageWord("Lagg", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "gothic",
 	Type = "adjective",
 	Meanings = {"Long"}, -- derived from Proto-Germanic "Langaz", which means "Long"
-	DerivesFrom = {"proto-germanic", "adjective", "Langaz"},
-	Positive = "Lagg"
+	DerivesFrom = {"proto-germanic", "adjective", "Langaz"}
 })
 
 DefineLanguageWord("Laus", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
 	Language = "gothic",
 	Type = "adjective",
-	Meanings = {"Empty", "Loose"}, -- source gives translation as the German words "los" and "leer"
-	Positive = "Laus"
+	Meanings = {"Empty", "Loose"} -- source gives translation as the German words "los" and "leer"
 })
 
-DefineLanguageWord("Maiza", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, pp. 236, 242; Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+DefineLanguageWord("Maiza", { -- Lehmann gives "Máiza", while Runge gives "Maiza"; Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, pp. 236, 242; Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "gothic",
 	Type = "adjective",
 	Meanings = {"More"}, -- perhaps a "determiner" class of words should be added?
 	DerivesFrom = {"proto-germanic", "adjective", "Mēria"},
-	Positive = "Maiza", -- Lehmann gives "Máiza", while Runge gives "Maiza"
-	Comparative = "Maiza", -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242; Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
-	Superlative = "Maists" -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
+	ComparisonDegreeInflections = {
+		"comparative", "Maiza", -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242; Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
+		"superlative", "Maists" -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
+	}
 })
 
 DefineLanguageWord("Qius", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 	Language = "gothic",
 	Type = "adjective",
 	Meanings = {"Alive"},
-	DerivesFrom = {"proto-indo-european", "adjective", "Gʷīwos"},
-	Positive = "Qius"
+	DerivesFrom = {"proto-indo-european", "adjective", "Gʷīwos"}
 })
 
 DefineLanguageWord("Raíhts", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "gothic",
 	Type = "adjective",
 	Meanings = {"Right", "Straight"}, -- derived from Proto-Germanic "Reχtaz", which means "Right, Straight"
-	DerivesFrom = {"proto-germanic", "adjective", "Reχtaz"},
-	Positive = "Raíhts"
+	DerivesFrom = {"proto-germanic", "adjective", "Reχtaz"}
 })
 
 DefineLanguageWord("Ráudái", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
 	Language = "gothic",
 	Type = "adjective",
 	Meanings = {"Red"},
-	DerivesFrom = {"proto-indo-european", "adjective", "Rowdho"},
-	Positive = "Ráudái"
+	DerivesFrom = {"proto-indo-european", "adjective", "Rowdho"}
 })
 
 DefineLanguageWord("Rauþs", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
 	Language = "gothic",
 	Type = "adjective",
-	Meanings = {"Red"},
-	Positive = "Rauþs"
+	Meanings = {"Red"}
 })
 
 DefineLanguageWord("Þaúrsus", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "gothic",
 	Type = "adjective",
 	Meanings = {"Dry"}, -- derived from Proto-Germanic "Þrsúz", which has the meaning of "dry"
-	DerivesFrom = {"proto-germanic", "adjective", "Þrsúz"},
-	Positive = "Þaúrsus"
+	DerivesFrom = {"proto-germanic", "adjective", "Þrsúz"}
 })
 
 DefineLanguageWord("Mis", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.

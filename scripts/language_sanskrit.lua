@@ -55,8 +55,7 @@ DefineLanguageWord("Bódhati", { -- Source: Winfred P. Lehmann, "A Grammar of Pr
 DefineLanguageWord("Brhant", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
 	Language = "sanskrit",
 	Type = "adjective",
-	Meanings = {"High"}, -- source gives "Hoch" as the meaning
-	Positive = "Brhant"
+	Meanings = {"High"} -- source gives "Hoch" as the meaning
 })
 
 DefineLanguageWord("Dāhas", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
@@ -136,8 +135,7 @@ DefineLanguageWord("Páśu", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 DefineLanguageWord("Pū́tis", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "sanskrit",
 	Type = "adjective",
-	Meanings = {"Foul"},
-	Positive = "Pū́tis"
+	Meanings = {"Foul"}
 })
 
 DefineLanguageWord("Saptá", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
@@ -163,8 +161,7 @@ DefineLanguageWord("Śvetá", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Language = "sanskrit",
 	Type = "adjective",
 	Meanings = {"White"},
-	DerivesFrom = {"proto-indo-european", "adjective", "Ḱweyt"},
-	Positive = "Śvetá"
+	DerivesFrom = {"proto-indo-european", "adjective", "Ḱweyt"}
 })
 
 DefineLanguageWord("Upári", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.

@@ -87,6 +87,5 @@ DefineLanguageWord("Žrudŭ", { -- Source: Sean Crist, "An Analysis of *z loss i
 DefineLanguageWord("Svins", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "old-slavic",
 	Type = "adjective",
-	Meanings = {"of Pig"},
-	Positive = "Svins"
+	Meanings = {"of Pig"}
 })

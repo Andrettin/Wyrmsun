@@ -877,131 +877,115 @@ DefineLanguageWord("Witan", { -- Source: Richard M. Runge, "The Phonetic Realiza
 DefineLanguageWord("Ceorlisc", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 100.
 	Language = "old-english",
 	Type = "adjective",
-	Meanings = {"Of a Churl", "Common"},
-	Positive = "Ceorlisc"
+	Meanings = {"Of a Churl", "Common"}
 })
 
 DefineLanguageWord("Cildisc", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 100.
 	Language = "old-english",
 	Type = "adjective",
-	Meanings = {"Childish"},
-	Positive = "Cildisc"
+	Meanings = {"Childish"}
 })
 
-DefineLanguageWord("Cwic", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
+DefineLanguageWord("Cwic", { -- source gives the word as "Cwic(u)"; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 	Language = "old-english",
 	Type = "adjective",
 	Meanings = {"Alive"},
-	DerivesFrom = {"proto-indo-european", "adjective", "Gʷīwos"},
-	Positive = "Cwic" -- source gives the word as "Cwic(u)"
+	DerivesFrom = {"proto-indo-european", "adjective", "Gʷīwos"}
 })
 
 DefineLanguageWord("Denisc", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 100.
 	Language = "old-english",
 	Type = "adjective",
-	Meanings = {"Danish"},
-	Positive = "Denisc"
+	Meanings = {"Danish"}
 })
 
 DefineLanguageWord("Dēop", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-english",
 	Type = "adjective",
 	Meanings = {"Deep"}, -- derived from Proto-Germanic "Déwpaz", which has the meaning of "deep"
-	DerivesFrom = {"proto-germanic", "adjective", "Déwpaz"},
-	Positive = "Dēop"
+	DerivesFrom = {"proto-germanic", "adjective", "Déwpaz"}
 })
 
 DefineLanguageWord("Fūl", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-english",
 	Type = "adjective",
 	Meanings = {"Foul"}, -- derived from the Proto-Germanic "Fūla", which means "Foul"
-	DerivesFrom = {"proto-germanic", "adjective", "Fūla"},
-	Positive = "Fūl"
+	DerivesFrom = {"proto-germanic", "adjective", "Fūla"}
 })
 
 DefineLanguageWord("Geong", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
 	Language = "old-english",
 	Type = "adjective",
 	Meanings = {"Young"},
-	DerivesFrom = {"proto-indo-european", "adjective", "Yehw"},
-	Positive = "Geong"
+	DerivesFrom = {"proto-indo-european", "adjective", "Yehw"}
 })
 
 DefineLanguageWord("Gydig", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 94.
 	Language = "old-english",
 	Type = "adjective",
-	Meanings = {"Possessed (by a God)"},
-	Positive = "Gydig"
+	Meanings = {"Possessed (by a God)"}
 })
 
 DefineLanguageWord("Hwīt", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 	Language = "old-english",
 	Type = "adjective",
 	Meanings = {"White"},
-	DerivesFrom = {"proto-indo-european", "adjective", "Ḱweyt"},
-	Positive = "Hwīt"
+	DerivesFrom = {"proto-indo-european", "adjective", "Ḱweyt"}
 })
 
 DefineLanguageWord("Long", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-english",
 	Type = "adjective",
 	Meanings = {"Long"}, -- derived from Proto-Germanic "Langaz", which means "Long"
-	DerivesFrom = {"proto-germanic", "adjective", "Langaz"},
-	Positive = "Long"
+	DerivesFrom = {"proto-germanic", "adjective", "Langaz"}
 })
 
-DefineLanguageWord("Māra", { -- this is the comparative, what is the normal version of the word? Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+DefineLanguageWord("Māra", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-english",
 	Type = "adjective",
 	Meanings = {"More"},
 	DerivesFrom = {"proto-germanic", "adjective", "Mēria"},
-	Positive = "Māra",
-	Comparative = "Māra",
-	Superlative = "Māst"
+	ComparisonDegreeInflections = {
+		"superlative", "Māst"
+	}
 })
 
 DefineLanguageWord("Mennisc", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 100.
 	Language = "old-english",
 	Type = "adjective",
-	Meanings = {"Human"},
-	Positive = "Mennisc"
+	Meanings = {"Human"}
 })
 
 DefineLanguageWord("Rēad", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
 	Language = "old-english",
 	Type = "adjective",
 	Meanings = {"Red"},
-	DerivesFrom = {"proto-indo-european", "adjective", "Rowdho"},
-	Positive = "Rēad"
+	DerivesFrom = {"proto-indo-european", "adjective", "Rowdho"}
 })
 
 DefineLanguageWord("Sælig", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 94.
 	Language = "old-english",
 	Type = "adjective",
-	Meanings = {"Happy", "Prosperous"},
-	Positive = "Sælig"
+	Meanings = {"Happy", "Prosperous"}
 })
 
 DefineLanguageWord("Þyrre", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-english",
 	Type = "adjective",
 	Meanings = {"Dry"}, -- derived from Proto-Germanic "Þrsúz", which has the meaning of "dry"
-	DerivesFrom = {"proto-germanic", "adjective", "Þrsúz"},
-	Positive = "Þyrre"
+	DerivesFrom = {"proto-germanic", "adjective", "Þrsúz"}
 })
 
 DefineLanguageWord("Werig", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 94.
 	Language = "old-english",
 	Type = "adjective",
-	Meanings = {"Weary", "Tired", "Exhausted"},
-	Positive = "Werig"
+	Meanings = {"Weary", "Tired", "Exhausted"}
 })
 
 DefineLanguageWord("Wod", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 96.
 	Language = "old-english",
 	Type = "adjective",
-	Meanings = {"Frenzied", "Enraged", "Mad"},
-	Positive = "Wod"
+	Meanings = {"Frenzied", "Enraged", "Mad"}
 })
 
 DefineLanguageWord("Mē", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.

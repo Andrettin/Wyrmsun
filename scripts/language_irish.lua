@@ -83,7 +83,9 @@ DefineLanguageWord("Máo", { -- this is the comparative, what is the normal vers
 	Language = "irish",
 	Type = "adjective",
 	Meanings = {"More"}, -- "Máo" actually means "größer"
-	Comparative = "Máo" -- source also gives alternative form "Móo"
+	ComparisonDegreeInflections = {
+		"comparative", "Máo" -- source also gives alternative form "Móo"
+	}
 })
 
 DefineLanguageWord("Medg", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.

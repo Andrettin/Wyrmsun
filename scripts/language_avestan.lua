@@ -49,6 +49,5 @@ DefineLanguageWord("Spaetō", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Language = "avestan",
 	Type = "adjective",
 	Meanings = {"White"},
-	DerivesFrom = {"proto-indo-european", "adjective", "Ḱweyt"},
-	Positive = "Spaetō"
+	DerivesFrom = {"proto-indo-european", "adjective", "Ḱweyt"}
 })

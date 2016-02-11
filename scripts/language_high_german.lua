@@ -181,8 +181,7 @@ DefineLanguageWord("Bronze", {
 DefineLanguageWord("Bronzen", {
 	Language = "high-german",
 	Type = "adjective",
-	Meanings = {"Bronze"},
-	Positive = "Bronzen"
+	Meanings = {"Bronze"}
 })
 
 DefineLanguageWord("Bruck", {
@@ -292,8 +291,7 @@ DefineLanguageWord("Eisen", {
 DefineLanguageWord("Eisern", {
 	Language = "high-german",
 	Type = "adjective",
-	Meanings = {"Iron"},
-	Positive = "Eisern"
+	Meanings = {"Iron"}
 })
 
 DefineLanguageWord("Erz", {
@@ -338,8 +336,7 @@ DefineLanguageWord("Feuer", { -- Source: August Fick and Alf Torp, "Wortschatz d
 DefineLanguageWord("Feurig", {
 	Language = "high-german",
 	Type = "adjective",
-	Meanings = {"Fiery"},
-	Positive = "Feurig"
+	Meanings = {"Fiery"}
 })
 
 DefineLanguageWord("Fisch", { -- Source: http://www.duden.de/rechtschreibung/Fisch
@@ -417,9 +414,10 @@ DefineLanguageWord("Glänzend", {
 	Language = "high-german",
 	Type = "adjective",
 	Meanings = {"Shining"},
-	Positive = "Glänzend",
-	Comparative = "Glänzender",
-	Superlative = "Glänzendsten"
+	ComparisonDegreeInflections = {
+		"comparative", "Glänzender",
+		"superlative", "Glänzendsten"
+	}
 })
 
 DefineLanguageWord("Gold", {
@@ -432,8 +430,7 @@ DefineLanguageWord("Gold", {
 DefineLanguageWord("Golden", {
 	Language = "high-german",
 	Type = "adjective",
-	Meanings = {"Golden"},
-	Positive = "Golden"
+	Meanings = {"Golden"}
 })
 
 DefineLanguageWord("Gott", {
@@ -506,11 +503,21 @@ DefineLanguageWord("Hans", {
 	TypeName = {"person"}
 })
 
+DefineLanguageWord("Hart", { -- Source: http://www.duden.de/rechtschreibung/hart
+	Language = "high-german",
+	Type = "adjective",
+	Meanings = {"Hard"},
+	ComparisonDegreeInflections = {
+		"comparative", "Härter",
+		"superlative", "Härteste"
+	},
+	SuffixTypeName = {"person"} -- examples: "Alphart", "Wolfhart"
+})
+
 DefineLanguageWord("Heilig", {
 	Language = "high-german",
 	Type = "adjective",
-	Meanings = {"Holy"},
-	Positive = "Heilig"
+	Meanings = {"Holy"}
 })
 
 DefineLanguageWord("Heim", {
@@ -743,8 +750,7 @@ DefineLanguageWord("Kupfer", {
 DefineLanguageWord("Kupfern", {
 	Language = "high-german",
 	Type = "adjective",
-	Meanings = {"Copper"},
-	Positive = "Kupfern"
+	Meanings = {"Copper"}
 })
 
 DefineLanguageWord("Kurt", {
@@ -802,8 +808,7 @@ DefineLanguageWord("Ludwig", {
 DefineLanguageWord("Magisch", {
 	Language = "high-german",
 	Type = "adjective",
-	Meanings = {"Magic"},
-	Positive = "Magisch"
+	Meanings = {"Magic"}
 })
 
 DefineLanguageWord("Manfred", {
@@ -849,8 +854,7 @@ DefineLanguageWord("Messing", {
 DefineLanguageWord("Messingen", {
 	Language = "high-german",
 	Type = "adjective",
-	Meanings = {"Brass"},
-	Positive = "Messingen"
+	Meanings = {"Brass"}
 })
 
 DefineLanguageWord("Mühle", { -- Source: http://www.duden.de/rechtschreibung/Muehle
@@ -960,8 +964,7 @@ DefineLanguageWord("Rose", { -- Source: http://www.duden.de/rechtschreibung/Rose
 DefineLanguageWord("Rostig", {
 	Language = "high-german",
 	Type = "adjective",
-	Meanings = {"Rusty"},
-	Positive = "Rostig"
+	Meanings = {"Rusty"}
 })
 
 DefineLanguageWord("Salz", {
@@ -1139,8 +1142,7 @@ DefineLanguageWord("Turm", {
 DefineLanguageWord("Verrostet", {
 	Language = "high-german",
 	Type = "adjective",
-	Meanings = {"Rusty"},
-	Positive = "Verrostet"
+	Meanings = {"Rusty"}
 })
 
 DefineLanguageWord("Waid", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 4.
@@ -1230,32 +1232,19 @@ DefineLanguageWord("Alt", {
 	Language = "high-german",
 	Type = "adjective",
 	Meanings = {"Old"},
-	Positive = "Alt",
 	PrefixTypeName = {"settlement"} -- example: "Altsohl"
 })
 
 DefineLanguageWord("Brennend", {
 	Language = "high-german",
 	Type = "adjective",
-	Meanings = {"Burning"},
-	Positive = "Brennend"
-})
-
-DefineLanguageWord("Hart", { -- Source: http://www.duden.de/rechtschreibung/hart
-	Language = "high-german",
-	Type = "adjective",
-	Meanings = {"Hard"},
-	Positive = "Hart",
-	Comparative = "Härter",
-	Superlative = "Härteste",
-	SuffixTypeName = {"person"} -- examples: "Alphart", "Wolfhart"
+	Meanings = {"Burning"}
 })
 
 DefineLanguageWord("Neu", {
 	Language = "high-german",
 	Type = "adjective",
 	Meanings = {"New"},
-	Positive = "Neu",
 	PrefixTypeName = {
 		"settlement" -- example: "Neusohl"
 	}
@@ -1264,15 +1253,13 @@ DefineLanguageWord("Neu", {
 DefineLanguageWord("Schwartz", {
 	Language = "high-german",
 	Type = "adjective",
-	Meanings = {"Black"},
-	Positive = "Schwartz"
+	Meanings = {"Black"}
 })
 
 DefineLanguageWord("Weiß", {
 	Language = "high-german",
 	Type = "adjective",
 	Meanings = {"White"},
-	Positive = "Weiß",
 	PrefixTypeName = {
 		"settlement", -- example: "Weisskirchen"
 		"terrain-mountains" -- example: "Weißkugel"
@@ -1283,7 +1270,6 @@ DefineLanguageWord("Wild", {
 	Language = "high-german",
 	Type = "adjective",
 	Meanings = {"Wild"},
-	Positive = "Wild",
 	PrefixTypeName = {"terrain-mountains"} -- example: "Wildspitze"
 })
 

@@ -252,43 +252,37 @@ DefineLanguageWord("Veniō", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 DefineLanguageWord("Captus", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
 	Language = "latin",
 	Type = "adjective",
-	Meanings = {"Captured"},
-	Positive = "Captus"
+	Meanings = {"Captured"}
 })
 
 DefineLanguageWord("Longus", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "latin",
 	Type = "adjective",
-	Meanings = {"Long"}, -- presumably, but it is not entirely clear from the source
-	Positive = "Longus"
+	Meanings = {"Long"} -- presumably, but it is not entirely clear from the source
 })
 
 DefineLanguageWord("Rectus", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "latin",
 	Type = "adjective",
-	Meanings = {"Straight"}, -- presumably, but it is not entirely clear from the source
-	Positive = "Rectus"
+	Meanings = {"Straight"} -- presumably, but it is not entirely clear from the source
 })
 
 DefineLanguageWord("Suīnus", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "latin",
 	Type = "adjective",
-	Meanings = {"of Pig"},
-	Positive = "Suīnus"
+	Meanings = {"of Pig"}
 })
 
 DefineLanguageWord("Torrus", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "latin",
 	Type = "adjective",
-	Meanings = {"Dry"},
-	Positive = "Torrus"
+	Meanings = {"Dry"}
 })
 
 DefineLanguageWord("Verus", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 99.
 	Language = "latin",
 	Type = "adjective",
-	Meanings = {"True", "Real"},
-	Positive = "Verus"
+	Meanings = {"True", "Real"}
 })
 
 DefineLanguageWord("Egō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 1.

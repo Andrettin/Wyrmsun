@@ -277,8 +277,7 @@ DefineLanguageWord("Gred", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Language = "proto-germanic",
 	Type = "adjective",
 	Meanings = {},
-	DerivesFrom = {"proto-indo-european", "noun", "Ghredh"},
-	Positive = "Gred"
+	DerivesFrom = {"proto-indo-european", "noun", "Ghredh"}
 })
 
 DefineLanguageWord("Haima", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 52.
@@ -708,68 +707,61 @@ DefineLanguageWord("Witum", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 DefineLanguageWord("Déwpaz", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "proto-germanic",
 	Type = "adjective",
-	Meanings = {"Deep"},
-	Positive = "Déwpaz"
+	Meanings = {"Deep"}
 })
 
 DefineLanguageWord("Fūla", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "proto-germanic",
 	Type = "adjective",
-	Meanings = {"Foul"},
-	Positive = "Fūla"
+	Meanings = {"Foul"}
 })
 
 DefineLanguageWord("Langaz", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "proto-germanic",
 	Type = "adjective",
-	Meanings = {"Long"},
-	Positive = "Langaz"
+	Meanings = {"Long"}
 })
 
-DefineLanguageWord("Mēria", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+DefineLanguageWord("Mēria", { -- Crist gives "Mēria", while Lehmann gives "Méyzaz"; Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "proto-germanic",
 	Type = "adjective",
 	Meanings = {"More"},
-	Positive = "Mēria", -- Crist gives "Mēria", while Lehmann gives "Méyzaz"
-	Comparative = "Maizan",
-	Superlative = "Maista"
+	ComparisonDegreeInflections = {
+		"comparative", "Maizan",
+		"superlative", "Maista"
+	}
 })
 
 DefineLanguageWord("Reχtaz", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "proto-germanic",
 	Type = "adjective",
-	Meanings = {"Right", "Straight"},
-	Positive = "Reχtaz"
+	Meanings = {"Right", "Straight"}
 })
 
 DefineLanguageWord("Twiznaz", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 6.
 	Language = "proto-germanic",
 	Type = "adjective",
-	Meanings = {"Twofold"}, -- source actually gives "two each" (je zwei) as the meaning in p. 6, but later there is an equivalent Proto-Germanic word for "threefold" which is noted as "je drei"; and besides, in p. 1 "Twofold" is given as a possible meaning
+	Meanings = {"Twofold"} -- source actually gives "two each" (je zwei) as the meaning in p. 6, but later there is an equivalent Proto-Germanic word for "threefold" which is noted as "je drei"; and besides, in p. 1 "Twofold" is given as a possible meaning
 	 -- maybe is an adverb instead?
-	Positive = "Twiznaz"
 })
 
 DefineLanguageWord("Þrizna", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
 	Language = "proto-germanic",
 	Type = "adjective",
-	Meanings = {"Threefold"}, -- source gives the meaning as "threefold, the three (je drei)"
+	Meanings = {"Threefold"} -- source gives the meaning as "threefold, the three (je drei)"
 	 -- maybe is an adverb instead?
-	Positive = "Þrizna"
 })
 
 DefineLanguageWord("Þrsúz", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "proto-germanic",
 	Type = "adjective",
-	Meanings = {"Dry"},
-	Positive = "Þrsúz"
+	Meanings = {"Dry"}
 })
 
 DefineLanguageWord("Vîha", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 206.
 	Language = "proto-germanic",
 	Type = "adjective",
-	Meanings = {"Holy"},
-	Positive = "Vîha"
+	Meanings = {"Holy"}
 })
 
 DefineLanguageWord("Χwat", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.

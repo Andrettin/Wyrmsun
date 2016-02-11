@@ -699,46 +699,40 @@ DefineLanguageWord("Durri", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Language = "old-high-german",
 	Type = "adjective",
 	Meanings = {"Dry"}, -- derived from Proto-Germanic "Þrsúz", which has the meaning of "dry"
-	DerivesFrom = {"proto-germanic", "adjective", "Þrsúz"},
-	Positive = "Durri"
+	DerivesFrom = {"proto-germanic", "adjective", "Þrsúz"}
 })
 
 DefineLanguageWord("Fūl", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-high-german",
 	Type = "adjective",
 	Meanings = {"Foul"}, -- derived from the Proto-Germanic "Fūla", which means "Foul"
-	DerivesFrom = {"proto-germanic", "adjective", "Fūla"},
-	Positive = "Fūl"
+	DerivesFrom = {"proto-germanic", "adjective", "Fūla"}
 })
 
 DefineLanguageWord("Hōh", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
 	Language = "old-high-german",
 	Type = "adjective",
-	Meanings = {"High"}, -- source gives translation as the German word "hoch"
-	Positive = "Hōh"
+	Meanings = {"High"} -- source gives translation as the German word "hoch"
 })
 
 DefineLanguageWord("Jung", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
 	Language = "old-high-german",
 	Type = "adjective",
 	Meanings = {"Young"},
-	DerivesFrom = {"proto-indo-european", "adjective", "Yehw"},
-	Positive = "Jung"
+	DerivesFrom = {"proto-indo-european", "adjective", "Yehw"}
 })
 
 DefineLanguageWord("Lang", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-high-german",
 	Type = "adjective",
 	Meanings = {"Long"}, -- derived from Proto-Germanic "Langaz", which means "Long"
-	DerivesFrom = {"proto-germanic", "adjective", "Langaz"},
-	Positive = "Lang"
+	DerivesFrom = {"proto-germanic", "adjective", "Langaz"}
 })
 
 DefineLanguageWord("Lōs", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
 	Language = "old-high-german",
 	Type = "adjective",
-	Meanings = {"Empty", "Loose"}, -- source gives translation as the German words "los" and "leer"
-	Positive = "Lōs"
+	Meanings = {"Empty", "Loose"} -- source gives translation as the German words "los" and "leer"
 })
 
 DefineLanguageWord("Mēro", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236; Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
@@ -746,32 +740,30 @@ DefineLanguageWord("Mēro", { -- Source: Richard M. Runge, "The Phonetic Realiza
 	Type = "adjective",
 	Meanings = {"More"}, -- perhaps a "determiner" class of words should be added?
 	DerivesFrom = {"proto-germanic", "adjective", "Mēria"},
-	Positive = "Mēro", -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, pp. 236;
-	Comparative = "Mēro", -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
-	Superlative = "Mēst" -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
+	ComparisonDegreeInflections = {
+		"comparative", "Mēro", -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
+		"superlative", "Mēst" -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
+	}
 })
 
 DefineLanguageWord("Reht", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-high-german",
 	Type = "adjective",
 	Meanings = {"Right", "Straight"}, -- derived from Proto-Germanic "Reχtaz", which means "Right, Straight"
-	DerivesFrom = {"proto-germanic", "adjective", "Reχtaz"},
-	Positive = "Reht"
+	DerivesFrom = {"proto-germanic", "adjective", "Reχtaz"}
 })
 
 DefineLanguageWord("Rōt", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
 	Language = "old-high-german",
 	Type = "adjective",
-	Meanings = {"Red"},
-	Positive = "Rōt"
+	Meanings = {"Red"}
 })
 
 DefineLanguageWord("Tiuf", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-high-german",
 	Type = "adjective",
 	Meanings = {"Deep"}, -- derived from Proto-Germanic "Déwpaz", which has the meaning of "deep"
-	DerivesFrom = {"proto-germanic", "adjective", "Déwpaz"},
-	Positive = "Tiuf"
+	DerivesFrom = {"proto-germanic", "adjective", "Déwpaz"}
 })
 
 DefineLanguageWord("Aba", { -- Lehmann also gives the alternative form "ab"; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
