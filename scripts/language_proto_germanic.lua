@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2015 by Andrettin
+--      (c) Copyright 2015-2016 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -39,7 +39,7 @@ DefineLanguageWord("Ansu", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Type = "noun",
 	Meanings = {"God"},
 	Gender = "Masculine",
---	AffixNameTypes = {"compound", "prefix", "singular", "settlement"} -- seems sensible in face of a lack of examples (cognate of the prefix in Asgard, and Asgard is the settlement in "Asia" in which Odin's people used to be center until they migrated to Scandinavia in the Ynglinga saga's story)
+	AffixNameTypes = {"compound", "prefix", "singular", "settlement"} -- seems sensible in face of a lack of examples (cognate of the prefix in Asgard, and Asgard is the settlement in "Asia" in which Odin's people used to be center until they migrated to Scandinavia in the Ynglinga saga's story)
 })
 
 DefineLanguageWord("Asjôn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 20.
@@ -231,8 +231,8 @@ DefineLanguageWord("Gárdiz", { -- Fick and Torp spell the word as "Garda"/"Gard
 	Meanings = {"Enclosure", "Court", "Garden"}, -- Fick and Torp give "Geheg, Hof, Garten" as the meaning; Lehmann gives the meaning as "Garden"
 	Gender = "Masculine",
 	AffixNameTypes = {
---		"compound", "suffix", "singular", "province" -- seems sensible in face of a lack of examples, specially since is a cognate of the prefix in "Gardarike"
---		"compound", "suffix", "singular", "settlement" -- seems sensible in face of a lack of examples (cognate of the suffix in Asgard, and Asgard is the settlement in "Asia" in which Odin's people used to be center until they migrated to Scandinavia in the Ynglinga saga's story)
+		"compound", "suffix", "singular", "province", -- seems sensible in face of a lack of examples, specially since is a cognate of the prefix in "Gardarike"
+		"compound", "suffix", "singular", "settlement" -- seems sensible in face of a lack of examples (cognate of the suffix in Asgard, and Asgard is the settlement in "Asia" in which Odin's people used to be center until they migrated to Scandinavia in the Ynglinga saga's story)
 	}
 })
 
@@ -458,7 +458,7 @@ DefineLanguageWord("Rîkia", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Type = "noun",
 	Meanings = {"Power", "Dominion", "Realm"}, -- source gives meaning as "Macht, Herrschaft, Reich"
 	Gender = "Neuter",
---	AffixNameTypes = {"compound", "suffix", "singular", "province"} -- seems sensible in face of a lack of examples, specially since it is the etymological origin of the suffix in "Gardarike"
+	AffixNameTypes = {"compound", "suffix", "singular", "province"} -- seems sensible in face of a lack of examples, specially since it is the etymological origin of the suffix in "Gardarike"
 })
 
 DefineLanguageWord("Rîþa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.

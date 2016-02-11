@@ -629,8 +629,7 @@ function LoadProvinces(world)
 			},
 			SettlementName = "Prague",
 			CulturalSettlementNames = {
-				germanic = "Bubienum", -- name of the Marcomannic capital; Source: Frederick Kohlrausch, "A History of Germany", 1844, p. 57.
-				teuton = "Bubienum"
+				MarcomanniTribe = "Bubienum" -- name of the Marcomannic capital; Source: Frederick Kohlrausch, "A History of Germany", 1844, p. 57.
 			},
 			SettlementLocation = {520, 113}, -- Prague
 			Map = "maps/earth/prague.smp",
@@ -4520,6 +4519,7 @@ function LoadProvinces(world)
 			ReferenceProvince = "Brandenburg", -- province used as a reference for this province's name
 			CulturalNames = {
 				MarcomanniTribe = "Suebic Sea",
+				QuadiTribe = "Suebic Sea",
 				SuebiTribe = "Suebic Sea"
 			},
 			Tiles = {
