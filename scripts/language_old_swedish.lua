@@ -31,8 +31,7 @@ DefineLanguageWord("Biari", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Meanings = {"Bear"}, -- used as a personal name, the meaning is not current
 	DerivesFrom = {"old-norse", "noun", "Bjǫrn"},
 	Gender = "Masculine",
-	NameSingular = true,
-	TypeName = {"person"}
+	NameTypes = {"person"}
 })
 
 DefineLanguageWord("Ēr", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.

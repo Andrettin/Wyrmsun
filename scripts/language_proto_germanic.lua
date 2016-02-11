@@ -39,8 +39,7 @@ DefineLanguageWord("Ansu", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Type = "noun",
 	Meanings = {"God"},
 	Gender = "Masculine",
-	PrefixSingular = true,
---	PrefixTypeName = {"settlement"} -- seems sensible in face of a lack of examples (cognate of the prefix in Asgard, and Asgard is the settlement in "Asia" in which Odin's people used to be center until they migrated to Scandinavia in the Ynglinga saga's story)
+--	AffixNameTypes = {"compound", "prefix", "singular", "settlement"} -- seems sensible in face of a lack of examples (cognate of the prefix in Asgard, and Asgard is the settlement in "Asia" in which Odin's people used to be center until they migrated to Scandinavia in the Ynglinga saga's story)
 })
 
 DefineLanguageWord("Asjôn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 20.
@@ -231,10 +230,10 @@ DefineLanguageWord("Gárdiz", { -- Fick and Torp spell the word as "Garda"/"Gard
 	Type = "noun",
 	Meanings = {"Enclosure", "Court", "Garden"}, -- Fick and Torp give "Geheg, Hof, Garten" as the meaning; Lehmann gives the meaning as "Garden"
 	Gender = "Masculine",
-	PrefixSingular = true,
---	PrefixTypeName = {"province"}, -- seems sensible in face of a lack of examples, specially since is a cognate of the prefix in "Gardarike"
-	SuffixSingular = true,
---	SuffixTypeName = {"settlement"} -- seems sensible in face of a lack of examples (cognate of the suffix in Asgard, and Asgard is the settlement in "Asia" in which Odin's people used to be center until they migrated to Scandinavia in the Ynglinga saga's story)
+	AffixNameTypes = {
+--		"compound", "suffix", "singular", "province" -- seems sensible in face of a lack of examples, specially since is a cognate of the prefix in "Gardarike"
+--		"compound", "suffix", "singular", "settlement" -- seems sensible in face of a lack of examples (cognate of the suffix in Asgard, and Asgard is the settlement in "Asia" in which Odin's people used to be center until they migrated to Scandinavia in the Ynglinga saga's story)
+	}
 })
 
 DefineLanguageWord("Gastiz", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 74; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2007, 3.3.5.
@@ -242,8 +241,7 @@ DefineLanguageWord("Gastiz", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Type = "noun",
 	Meanings = {"Guest"},
 	Gender = "Masculine",
-	SuffixSingular = true,
-	SuffixTypeName = {"person"} -- examples: "Hlewagastiz", "Holtagastiz"
+	AffixNameTypes = {"compound", "suffix", "singular", "person"} -- examples: "Hlewagastiz", "Holtagastiz"
 })
 
 DefineLanguageWord("Gavja", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 68.
@@ -319,8 +317,7 @@ DefineLanguageWord("Hlewa", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Language = "proto-germanic", -- from the Gallehus inscription, is it really Proto-Germanic?
 	Type = "noun",
 	Meanings = {"Glory"}, -- meaning given in another source, which I have lost the reference to
-	PrefixSingular = true,
-	PrefixTypeName = {"person"} -- example: "Hlewagastiz"
+	AffixNameTypes = {"compound", "prefix", "singular", "person"} -- example: "Hlewagastiz"
 })
 
 DefineLanguageWord("Horna", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
@@ -461,8 +458,7 @@ DefineLanguageWord("Rîkia", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Type = "noun",
 	Meanings = {"Power", "Dominion", "Realm"}, -- source gives meaning as "Macht, Herrschaft, Reich"
 	Gender = "Neuter",
-	SuffixSingular = true,
---	SuffixTypeName = {"province"} -- seems sensible in face of a lack of examples, specially since it is the etymological origin of the suffix in "Gardarike"
+--	AffixNameTypes = {"compound", "suffix", "singular", "province"} -- seems sensible in face of a lack of examples, specially since it is the etymological origin of the suffix in "Gardarike"
 })
 
 DefineLanguageWord("Rîþa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
@@ -818,94 +814,82 @@ DefineLanguageWord("Godagaz", {
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Goody", "Good One"},
-	NameSingular = true,
-	TypeName = {"person"}
+	NameTypes = {"person"}
 })
 
 DefineLanguageWord("Hadu", {
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Battle"},
-	PrefixSingular = true,
-	PrefixTypeName = {"person"} -- example: "Hadulaikaz"
+	AffixNameTypes = {"compound", "prefix", "singular", "person"} -- example: "Hadulaikaz"
 })
 
 DefineLanguageWord("Hagu", {
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Small Property"},
-	PrefixSingular = true,
-	PrefixTypeName = {"person"} -- example: "Hagustaldaz"
+	AffixNameTypes = {"compound", "prefix", "singular", "person"} -- example: "Hagustaldaz"
 })
 
 DefineLanguageWord("Holta", {
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Wood"},
-	PrefixSingular = true,
-	PrefixTypeName = {"person"} -- example: "Holtagastiz"
+	AffixNameTypes = {"compound", "prefix", "singular", "person"} -- example: "Holtagastiz"
 })
 
 DefineLanguageWord("Laikaz", {
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Dancer"},
-	SuffixSingular = true,
-	SuffixTypeName = {"person"} -- example: Hadulaikaz
+	AffixNameTypes = {"compound", "suffix", "singular", "person"} -- example: Hadulaikaz
 })
 
 DefineLanguageWord("Ridaz", {
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Rider"},
-	SuffixSingular = true,
-	SuffixTypeName = {"person"} -- example: Woduridaz
+	AffixNameTypes = {"compound", "suffix", "singular", "person"} -- example: Woduridaz
 })
 
 DefineLanguageWord("Riks", {
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Ruler"},
-	SuffixSingular = true,
-	SuffixTypeName = {"person"} -- example: Theudariks
+	AffixNameTypes = {"compound", "suffix", "singular", "person"} -- example: Theudariks
 })
 
 DefineLanguageWord("Staldaz", {
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Owner"},
-	SuffixSingular = true,
-	SuffixTypeName = {"person"} -- example: Hagustaldaz
+	AffixNameTypes = {"compound", "suffix", "singular", "person"} -- example: Hagustaldaz
 })
 
 DefineLanguageWord("Theuda", {
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"People"},
-	PrefixSingular = true,
-	PrefixTypeName = {"person"} -- example: "Theudariks"
+	AffixNameTypes = {"compound", "prefix", "singular", "person"} -- example: "Theudariks"
 })
 
 DefineLanguageWord("Wagigaz", {
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"One Who Moves Along Impetuously"},
-	NameSingular = true,
-	TypeName = {"person"}
+	NameTypes = {"person"}
 })
 
 DefineLanguageWord("Wiwaz", {
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Darter"},
-	NameSingular = true,
-	TypeName = {"person"}
+	NameTypes = {"person"}
 })
 
 DefineLanguageWord("Wodu", {
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Fury"},
-	PrefixSingular = true,
-	PrefixTypeName = {"person"} -- example: Woduridaz
+	AffixNameTypes = {"compound", "prefix", "singular", "person"} -- example: Woduridaz
 })

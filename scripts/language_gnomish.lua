@@ -30,8 +30,7 @@ DefineLanguageWord("Bimbam", {
 	Type = "noun",
 	Meanings = {},
 	Gender = "Masculine", -- presumably, since it is a masculine personal name
-	NameSingular = true,
-	TypeName = {"person"}
+	NameTypes = {"person"}
 })
 
 DefineLanguageWord("Clavo", {
@@ -39,8 +38,7 @@ DefineLanguageWord("Clavo", {
 	Type = "noun",
 	Meanings = {},
 	Gender = "Masculine", -- presumably, since it is a masculine personal name
-	NameSingular = true,
-	TypeName = {"person"}
+	NameTypes = {"person"}
 })
 
 DefineLanguageWord("Cravatu", {
@@ -48,8 +46,7 @@ DefineLanguageWord("Cravatu", {
 	Type = "noun",
 	Meanings = {},
 	Gender = "Masculine", -- presumably, since it is a masculine personal name
-	NameSingular = true,
-	TypeName = {"person"}
+	NameTypes = {"person"}
 })
 
 DefineLanguageWord("Kalutho", {
@@ -57,8 +54,7 @@ DefineLanguageWord("Kalutho", {
 	Type = "noun",
 	Meanings = {},
 	Gender = "Masculine", -- presumably, since it is a masculine personal name
-	NameSingular = true,
-	TypeName = {"person"}
+	NameTypes = {"person"}
 })
 
 DefineLanguageWord("Leffas", {
@@ -72,8 +68,7 @@ DefineLanguageWord("Pypo", {
 	Type = "noun",
 	Meanings = {},
 	Gender = "Masculine", -- presumably, since it is a masculine personal name
-	NameSingular = true,
-	TypeName = {"person"}
+	NameTypes = {"person"}
 })
 
 DefineLanguageWord("Rubezahl", {
@@ -81,6 +76,5 @@ DefineLanguageWord("Rubezahl", {
 	Type = "noun",
 	Meanings = {},
 	Gender = "Masculine", -- presumably, since it is a masculine personal name
-	NameSingular = true,
-	TypeName = {"person"}
+	NameTypes = {"person"}
 })

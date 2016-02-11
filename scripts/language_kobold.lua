@@ -31,62 +31,54 @@ DefineLanguageWord("Coat", { -- Source: Jacob Grimm, "Deutsche Mythologie", p. 3
 	Language = "kobold",
 	Type = "noun",
 	Meanings = {},
-	SuffixSingular = true,
-	SuffixTypeName = {"person"} -- example: Shellycoat
+	AffixNameTypes = {"compound", "suffix", "singular", "person"} -- example: Shellycoat
 })
 
 DefineLanguageWord("Eke", { -- Source: Jacob Grimm, "Deutsche Mythologie", pp. 392, 1049, 1080.
 	Language = "kobold",
 	Type = "noun",
 	Meanings = {},
-	SuffixSingular = true,
-	SuffixTypeName = {"person"} -- example: Hodeke
+	AffixNameTypes = {"compound", "suffix", "singular", "person"} -- example: Hodeke
 })
 
 DefineLanguageWord("Hod", { -- Source: Jacob Grimm, "Deutsche Mythologie", pp. 392, 1049, 1080.
 	Language = "kobold",
 	Type = "noun",
 	Meanings = {},
-	PrefixSingular = true,
-	PrefixTypeName = {"person"} -- example: Hodeke
+	AffixNameTypes = {"compound", "prefix", "singular", "person"} -- example: Hodeke
 })
 
 DefineLanguageWord("Hoid", { -- Source: Jacob Grimm, "Deutsche Mythologie", p. 392.
 	Language = "kobold",
 	Type = "noun",
 	Meanings = {},
-	PrefixSingular = true,
-	PrefixTypeName = {"person"} -- example: Hoidike
+	AffixNameTypes = {"compound", "prefix", "singular", "person"} -- example: Hoidike
 })
 
 DefineLanguageWord("Hut", { -- Source: Jacob Grimm, "Deutsche Mythologie", p. 1049.
 	Language = "kobold",
 	Type = "noun",
 	Meanings = {"Hat"},
-	SuffixSingular = true,
-	SuffixTypeName = {"person"} -- example: Pumphut
+	AffixNameTypes = {"compound", "suffix", "singular", "person"} -- example: Pumphut
 })
 
 DefineLanguageWord("Ike", { -- Source: Jacob Grimm, "Deutsche Mythologie", p. 392.
 	Language = "kobold",
 	Type = "noun",
 	Meanings = {},
-	SuffixSingular = true,
-	SuffixTypeName = {"person"} -- example: Hoidike
+	AffixNameTypes = {"compound", "suffix", "singular", "person"} -- example: Hoidike
 })
 
 DefineLanguageWord("Napf", { -- Source: Jacob Grimm, "Deutsche Mythologie", p. 393.
 	Language = "kobold",
 	Type = "noun",
 	Meanings = {},
-	PrefixSingular = true,
-	PrefixTypeName = {"person"} -- example: Napfhans
+	AffixNameTypes = {"compound", "prefix", "singular", "person"} -- example: Napfhans
 })
 
 DefineLanguageWord("Pump", { -- Source: Jacob Grimm, "Deutsche Mythologie", p. 1049.
 	Language = "kobold",
 	Type = "noun",
 	Meanings = {},
-	PrefixSingular = true,
-	PrefixTypeName = {"person"} -- example: Pumphut
+	AffixNameTypes = {"compound", "prefix", "singular", "person"} -- example: Pumphut
 })

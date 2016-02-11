@@ -60,80 +60,70 @@ DefineLanguageWord("Abdera", { -- should be written as the original Greek name (
 	Language = "greek",
 	Type = "noun",
 	Meanings = {},
-	NameSingular = true,
-	TypeName = {"settlement"} -- example: "Abdera"
+	NameTypes = {"settlement"} -- example: "Abdera"
 })
 
 DefineLanguageWord("Abydus", { -- should be written as the original Greek name (with Greek characters)
 	Language = "greek",
 	Type = "noun",
 	Meanings = {},
-	NameSingular = true,
-	TypeName = {"settlement"} -- example: "Abydus"
+	NameTypes = {"settlement"} -- example: "Abydus"
 })
 
 DefineLanguageWord("Acragas", { -- should be written as the original Greek name (with Greek characters)
 	Language = "greek",
 	Type = "noun",
 	Meanings = {},
-	NameSingular = true,
-	TypeName = {"settlement"} -- example: "Acragas" (Agrigentum)
+	NameTypes = {"settlement"} -- example: "Acragas" (Agrigentum)
 })
 
 DefineLanguageWord("Agathe", { -- should be written as the original Greek name (with Greek characters)
 	Language = "greek",
 	Type = "noun",
 	Meanings = {},
-	NameSingular = true,
-	TypeName = {"settlement"} -- example: "Agathe"
+	NameTypes = {"settlement"} -- example: "Agathe"
 })
 
 DefineLanguageWord("Ainos", { -- should be written as the original Greek name (with Greek characters)
 	Language = "greek",
 	Type = "noun",
 	Meanings = {},
-	NameSingular = true,
-	TypeName = {"settlement"} -- example: "Ainos"
+	NameTypes = {"settlement"} -- example: "Ainos"
 })
 
 DefineLanguageWord("Alalia", { -- should be written as the original Greek name (with Greek characters)
 	Language = "greek",
 	Type = "noun",
 	Meanings = {},
-	NameSingular = true,
-	TypeName = {"settlement"} -- example: "Alalia" (Aleria)
+	NameTypes = {"settlement"} -- example: "Alalia" (Aleria)
 })
 
 DefineLanguageWord("Alonae", { -- should be written as the original Greek name (with Greek characters)
 	Language = "greek",
 	Type = "noun",
 	Meanings = {},
-	NameSingular = true,
-	TypeName = {"settlement"} -- example: "Alonae"
+	NameTypes = {"settlement"} -- example: "Alonae"
 })
 
 DefineLanguageWord("Amisus", { -- should be written as the original Greek name (with Greek characters)
 	Language = "greek",
 	Type = "noun",
 	Meanings = {},
-	NameSingular = true,
-	TypeName = {"settlement"} -- example: "Amisus"
+	NameTypes = {"settlement"} -- example: "Amisus"
 })
 
 DefineLanguageWord("Amphi", { -- should be written as the original Greek name (with Greek characters)
 	Language = "greek",
 	Type = "noun",
 	Meanings = {},
-	PrefixSingular = true,
-	PrefixTypeName = {"settlement"} -- example: "Amphipolis"
+	AffixNameTypes = {"compound", "prefix", "singular", "settlement"} -- example: "Amphipolis"
 })
 
 DefineLanguageWord("Calli", { -- should be written as the original Greek name (with Greek characters)
 	Language = "greek",
 	Type = "noun",
 	Meanings = {},
-	PrefixSingular = true,
-	PrefixTypeName = {"settlement"} -- example: "Callipolis"
+	AffixNameTypes = {"compound", "prefix", "singular", "settlement"} -- example: "Callipolis"
 })
 
 DefineLanguageWord("Χórtos", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
@@ -219,8 +209,7 @@ DefineLanguageWord("Polis", { -- should be written as the original Greek name (w
 	Language = "greek",
 	Type = "noun",
 	Meanings = {"City"},
-	SuffixSingular = true,
-	SuffixTypeName = {"settlement"} -- examples: "Amphipolis", "Callipolis", "Neapolis" (Naples)
+	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- examples: "Amphipolis", "Callipolis", "Neapolis" (Naples)
 })
 
 DefineLanguageWord("Skiá", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
@@ -300,7 +289,7 @@ DefineLanguageWord("Nea", { -- should be written as the original Greek name (wit
 	Language = "greek",
 	Type = "adjective",
 	Meanings = {"New"},
-	PrefixTypeName = {"settlement"} -- example: "Neapolis" (Naples)
+	AffixNameTypes = {"compound", "prefix", "singular", "settlement"} -- example: "Neapolis" (Naples)
 })
 
 DefineLanguageWord("Orektós", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
