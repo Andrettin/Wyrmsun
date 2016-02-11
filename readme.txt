@@ -79,6 +79,7 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed issue which caused the screen to be partially blackened after certain event missions.
 - Fixed issue which allow players to save/load scenarios from within a grand strategy battle by using the save/load hotkeys.
 - Fixed issue which required the attacked province to have a dock in order to conduct an attack overseas, rather than requiring the province from which the troops were being sent to have a dock.
+- Fixed issue which caused workers to not generate labor after loading a saved game.
 
 * Heroes
 - An error message is now given when an invalid custom hero name is entered (if it has an invalid character or contains only spaces).

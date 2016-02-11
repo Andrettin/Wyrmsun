@@ -1429,6 +1429,8 @@ function RunGrandStrategyLoadGameMenu()
 			
 			InitializeGrandStrategyFactions()
 			
+			GrandStrategyGameInitialized = true
+			
 			menu:stop()
 			if (GrandStrategyMenu) then
 				ClearGrandStrategyUIVariables()
