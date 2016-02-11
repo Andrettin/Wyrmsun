@@ -64,18 +64,16 @@ DefineLanguageWord("Herth", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Gender = "Masculine"
 })
 
-DefineLanguageWord("Lēra", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 5.
+DefineLanguageWord("Lēra", { -- causative verb; Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 5.
 	Language = "old-frisian",
 	Type = "verb",
-	Meanings = {"Teach"},
-	Infinitive = "Lēra" -- causative verb
+	Meanings = {"Teach"}
 })
 
-DefineLanguageWord("Lernēn", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
+DefineLanguageWord("Lernēn", { -- source also gives "Lirnēn" as an alternative form; Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
 	Language = "old-frisian",
 	Type = "verb",
-	Meanings = {"Learn"},
-	Infinitive = "Lernēn" -- source also gives "Lirnēn" as an alternative
+	Meanings = {"Learn"}
 })
 
 DefineLanguageWord("Māra", { -- this is the comparative, what is the normal version of the word? Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
@@ -113,8 +111,7 @@ DefineLanguageWord("Mēr", { -- Source: Sean Crist, "An Analysis of *z loss in W
 DefineLanguageWord("Nera", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "old-frisian",
 	Type = "verb",
-	Meanings = {"Nurture"},
-	Infinitive = "Nera"
+	Meanings = {"Nurture"}
 })
 
 DefineLanguageWord("Ord", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.

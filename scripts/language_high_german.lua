@@ -1211,21 +1211,22 @@ DefineLanguageWord("Hacken", {
 	Language = "high-german",
 	Type = "verb",
 	Meanings = {"Chop"},
-	Infinitive = "Hacken",
-	SingularFirstPersonPresent = "Hacke",
-	SingularSecondPersonPresent = "Hackst",
-	SingularThirdPersonPresent = "Hackt",
-	PluralFirstPersonPresent = "Hacken",
-	PluralSecondPersonPresent = "Hackt",
-	PluralThirdPersonPresent = "Hacken",
-	SingularFirstPersonPast = "Hackte",
-	SingularSecondPersonPast = "Hacktest",
-	SingularThirdPersonPast = "Hackte",
-	PluralFirstPersonPast = "Hackten",
-	PluralSecondPersonPast = "Hacktet",
-	PluralThirdPersonPast = "Hackten",
-	ParticiplePresent = "Hackend",
-	ParticiplePast = "Gehackt"
+	NumberPersonTenseMoodInflections = {
+		"singular", "first-person", "present", "indicative", "Hacke",
+		"singular", "second-person", "present", "indicative", "Hackst",
+		"singular", "third-person", "present", "indicative", "Hackt",
+		"plural", "second-person", "present", "indicative", "Hackt",
+		"singular", "first-person", "past", "indicative", "Hackte",
+		"singular", "second-person", "past", "indicative", "Hacktest",
+		"singular", "third-person", "past", "indicative", "Hackte",
+		"plural", "first-person", "past", "indicative", "Hackten",
+		"plural", "second-person", "past", "indicative", "Hacktet",
+		"plural", "third-person", "past", "indicative", "Hackten"
+	},
+	Participles = {
+		"present", "Hackend",
+		"past", "Gehackt"
+	}
 })
 
 DefineLanguageWord("Alt", {

@@ -223,91 +223,86 @@ DefineLanguageWord("Beran", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Language = "old-saxon",
 	Type = "verb",
 	Meanings = {},
-	DerivesFrom = {"proto-germanic", "verb", "Beran"},
-	Infinitive = "Beran"
+	DerivesFrom = {"proto-germanic", "verb", "Beran"}
 })
 
-DefineLanguageWord("Birid", { -- should be infinitive form; Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
+DefineLanguageWord("Birid", { -- this is the singular third person present form; Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
 	Language = "old-saxon",
 	Type = "verb",
 	Meanings = {"Bears"},
 	-- infinitive form? maybe is the same word as "beran", since the Latin cognate of "beran", "ferō", means "I bear"
-	SingularThirdPersonPresent = "Birid"
+	NumberPersonTenseMoodInflections = {
+		"singular", "third-person", "present", "indicative", "Birid"
+	}
 })
 
 DefineLanguageWord("Bītan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "old-saxon",
 	Type = "verb",
 	Meanings = {"Bite"},
-	DerivesFrom = {"proto-germanic", "verb", "Bītan"},
-	Infinitive = "Bītan"
+	DerivesFrom = {"proto-germanic", "verb", "Bītan"}
 })
 
 DefineLanguageWord("Etan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
 	Language = "old-saxon",
 	Type = "verb",
-	Meanings = {"Eat"},
-	Infinitive = "Etan"
+	Meanings = {"Eat"}
 })
 
 DefineLanguageWord("Helpan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
 	Language = "old-saxon",
 	Type = "verb",
-	Meanings = {"Help"},
-	Infinitive = "Helpan"
+	Meanings = {"Help"}
 })
 
-DefineLanguageWord("Lērian", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 5.
+DefineLanguageWord("Lērian", { -- causative verb; Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 5.
 	Language = "old-saxon",
 	Type = "verb",
-	Meanings = {"Teach"},
-	Infinitive = "Lērian" -- causative verb
+	Meanings = {"Teach"}
 })
 
 DefineLanguageWord("Līnōn", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
 	Language = "old-saxon",
 	Type = "verb",
-	Meanings = {"Learn"},
-	Infinitive = "Līnōn"
+	Meanings = {"Learn"}
 })
 
 DefineLanguageWord("Nerian", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "old-saxon",
 	Type = "verb",
-	Meanings = {"Save"},
-	Infinitive = "Nerian"
+	Meanings = {"Save"}
 })
 
 DefineLanguageWord("Scrīban", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "old-saxon",
 	Type = "verb",
-	Meanings = {"Write"},
-	Infinitive = "Scrīban"
+	Meanings = {"Write"}
 })
 
 DefineLanguageWord("Sehan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5; Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
 	Language = "old-saxon",
 	Type = "verb",
 	Meanings = {"See"},
-	Infinitive = "Sehan",
-	SingularFirstPersonPast = "Sah",
-	SingularThirdPersonPast = "Sah",
-	PluralFirstPersonPast = "Sāwum",
-	ParticiplePast = "Gisewan"
+	NumberPersonTenseMoodInflections = {
+		"singular", "first-person", "past", "indicative", "Sah",
+		"singular", "third-person", "past", "indicative", "Sah",
+		"plural", "first-person", "past", "indicative", "Sāwum"
+	},
+	Participles = {
+		"past", "Gisewan"
+	}
 })
 
 DefineLanguageWord("Werthan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
 	Language = "old-saxon",
 	Type = "verb",
-	Meanings = {"Become"},
-	Infinitive = "Werthan"
+	Meanings = {"Become"}
 })
 
 DefineLanguageWord("Witan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
 	Language = "old-saxon",
 	Type = "verb",
-	Meanings = {"Know"},
-	Infinitive = "Witan"
+	Meanings = {"Know"}
 })
 
 DefineLanguageWord("Jung", {

@@ -28,15 +28,13 @@
 DefineLanguageWord("Bheg", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 133.
 	Language = "proto-indo-european",
 	Type = "verb",
-	Meanings = {"Run"}, -- source gives the German "Laufen" as the meaning
-	Infinitive = "Bheg"
+	Meanings = {"Run"} -- source gives the German "Laufen" as the meaning
 })
 
 DefineLanguageWord("Bhewdh", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
 	Language = "proto-indo-european",
 	Type = "verb",
-	Meanings = {},
-	Infinitive = "Bhewdh"
+	Meanings = {}
 })
 
 DefineLanguageWord("Dhagh", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
@@ -60,8 +58,7 @@ DefineLanguageWord("Ghredh", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 DefineLanguageWord("Gʷem", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 	Language = "proto-indo-european",
 	Type = "verb",
-	Meanings = {},
-	Infinitive = "Gʷem"
+	Meanings = {}
 })
 
 DefineLanguageWord("Gʷen", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
@@ -79,8 +76,7 @@ DefineLanguageWord("Gʷīwos", { -- Source: Winfred P. Lehmann, "A Grammar of Pr
 DefineLanguageWord("Kneygʷh", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 	Language = "proto-indo-european",
 	Type = "verb",
-	Meanings = {"Bow"},
-	Infinitive = "Kneygʷh"
+	Meanings = {"Bow"}
 })
 
 DefineLanguageWord("Ḱweyt", { -- source gives "Ḱwey-t/d-"; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
@@ -92,22 +88,19 @@ DefineLanguageWord("Ḱweyt", { -- source gives "Ḱwey-t/d-"; Source: Winfred P
 DefineLanguageWord("Leykʷ", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
 	Language = "proto-indo-european",
 	Type = "verb",
-	Meanings = {"Leave"},
-	Infinitive = "Leykʷ"
+	Meanings = {"Leave"}
 })
 
 DefineLanguageWord("Mel", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
 	Language = "proto-indo-european",
 	Type = "verb",
-	Meanings = {"Grind"},
-	Infinitive = "Mel"
+	Meanings = {"Grind"}
 })
 
 DefineLanguageWord("Nem", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
 	Language = "proto-indo-european",
 	Type = "verb",
-	Meanings = {"Take"},
-	Infinitive = "Nem"
+	Meanings = {"Take"}
 })
 
 DefineLanguageWord("Rowdho", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
@@ -119,8 +112,7 @@ DefineLanguageWord("Rowdho", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 DefineLanguageWord("Sekʷ", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 	Language = "proto-indo-european",
 	Type = "verb",
-	Meanings = {},
-	Infinitive = "Sekʷ"
+	Meanings = {}
 })
 
 DefineLanguageWord("Swīnos", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.

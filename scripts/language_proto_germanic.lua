@@ -606,8 +606,7 @@ DefineLanguageWord("Yēra", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 DefineLanguageWord("Beran", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "proto-germanic",
 	Type = "verb",
-	Meanings = {},
-	Infinitive = "Beran"
+	Meanings = {}
 })
 
 DefineLanguageWord("Beud", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Sections 2-4.
@@ -615,93 +614,90 @@ DefineLanguageWord("Beud", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Type = "verb",
 	Meanings = {"Bid", "Offer", "Order"},
 	DerivesFrom = {"proto-indo-european", "verb", "Bhewdh"},
-	Infinitive = "Beud",
-	ParticiplePast = "Baud" -- "offered" / "ordered"
+	Participles = {
+		"past", "Baud" -- "offered" / "ordered"
+	}
 })
 
 DefineLanguageWord("Bītan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "proto-germanic",
 	Type = "verb",
-	Meanings = {"Bite"}, -- reflexes have "bite" as their meaning
-	Infinitive = "Bītan"
+	Meanings = {"Bite"} -- reflexes have "bite" as their meaning
 })
 
 DefineLanguageWord("Kwemanan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "proto-germanic",
 	Type = "verb",
-	Meanings = {"Come"},
-	Infinitive = "Kwemanan"
+	Meanings = {"Come"}
 })
 
-DefineLanguageWord("Laizijanã", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 4-5.
+DefineLanguageWord("Laizijanã", { -- causative verb; Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 4-5.
 	Language = "proto-germanic",
 	Type = "verb",
-	Meanings = {"Teach"},
-	Infinitive = "Laizijanã" -- causative verb
+	Meanings = {"Teach"}
 })
 
 DefineLanguageWord("Liznōn", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
 	Language = "proto-germanic",
 	Type = "verb",
-	Meanings = {"Learn"},
-	Infinitive = "Liznōn"
+	Meanings = {"Learn"}
 })
 
 DefineLanguageWord("Malanan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "proto-germanic",
 	Type = "verb",
-	Meanings = {"Grind"},
-	Infinitive = "Malanan"
+	Meanings = {"Grind"}
 })
 
 DefineLanguageWord("Nazjan", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "proto-germanic",
 	Type = "verb",
-	Meanings = {"Heal", "Rescue", "Sustain"},
-	Infinitive = "Nazjan"
+	Meanings = {"Heal", "Rescue", "Sustain"}
 })
 
 DefineLanguageWord("Singwanan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "proto-germanic",
 	Type = "verb",
-	Meanings = {"Sing"},
-	Infinitive = "Singwanan"
+	Meanings = {"Sing"}
 })
 
 DefineLanguageWord("Steig", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "proto-germanic",
 	Type = "verb",
 	Meanings = {"Climb"},
-	Infinitive = "Steig",
-	ParticiplePast = "Staig"
+	Participles = {
+		"past", "Staig"
+	}
 })
 
-DefineLanguageWord("Tawido", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
+DefineLanguageWord("Tawido", { -- this is the singular first person past (apparently); Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "proto-germanic", -- from the Gallehus inscription, is it really Proto-Germanic?
 	Type = "verb",
 	Meanings = {"Made"},
-	SingularFirstPersonPast = "Tawido"
+	NumberPersonTenseMoodInflections = {
+		"singular", "first-person", "past", "indicative", "Tawido"
+	}
 })
 
 DefineLanguageWord("Téuχanan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Sections 2-3.
 	Language = "proto-germanic",
 	Type = "verb",
-	Meanings = {"Pull"}, -- the same source gives the meaning as "Push" previously (though when it gives the meaning as "Pull" it writes the word as "Teuχanan" instead in that instance), but the meaning of "Pull" given later seems correct, since it is repeated later on as well
-	Infinitive = "Téuχanan"
+	Meanings = {"Pull"} -- the same source gives the meaning as "Push" previously (though when it gives the meaning as "Pull" it writes the word as "Teuχanan" instead in that instance), but the meaning of "Pull" given later seems correct, since it is repeated later on as well
 })
 
 DefineLanguageWord("Twiznōn", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
 	Language = "proto-germanic",
 	Type = "verb",
-	Meanings = {"Twine"},
-	Infinitive = "Twiznōn"
+	Meanings = {"Twine"}
 })
 
-DefineLanguageWord("Witum", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+DefineLanguageWord("Witum", { -- this is the plural first person present; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "proto-germanic",
 	Type = "verb",
 	Meanings = {"Know"},
-	PluralFirstPersonPresent = "Witum" -- "we know"
+	NumberPersonTenseMoodInflections = {
+		"plural", "first-person", "present", "indicative", "Witum"
+	}
 })
 
 DefineLanguageWord("Déwpaz", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.

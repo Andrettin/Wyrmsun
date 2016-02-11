@@ -25,6 +25,12 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineLanguageWord("Brathu", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
+	Language = "welsh",
+	Type = "verb",
+	Meanings = {"Prick", "Bite"}
+})
+
 DefineLanguageWord("Erw", { -- this is the genitive; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "welsh",
 	Type = "noun",
@@ -40,18 +46,10 @@ DefineLanguageWord("Hud", { -- presumably a noun; Source: Alaric Hall, "The Mean
 	Meanings = {"Magic"}
 })
 
-DefineLanguageWord("Brathu", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
-	Language = "welsh",
-	Type = "verb",
-	Meanings = {"Prick", "Bite"},
-	Infinitive = "Brathu"
-})
-
 DefineLanguageWord("Hudo", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 121.
 	Language = "welsh",
 	Type = "verb",
-	Meanings = {"Work Magic", "Work by Magic"},
-	Infinitive = "Hudo"
+	Meanings = {"Work Magic", "Work by Magic"}
 })
 
 DefineLanguageWord("Ieu", { -- this is the comparative; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
@@ -63,4 +61,3 @@ DefineLanguageWord("Ieu", { -- this is the comparative; Source: Winfred P. Lehma
 		"comparative", "Ieu"
 	}
 })
-

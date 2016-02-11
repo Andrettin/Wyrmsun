@@ -40,6 +40,5 @@ DefineLanguageWord("Kuningas", { -- Source: Winfred P. Lehmann, "A Grammar of Pr
 DefineLanguageWord("Soida", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 121.
 	Language = "finnish",
 	Type = "verb",
-	Meanings = {"Ring", "Jingle", "Make a Sound"},
-	Infinitive = "Soida"
+	Meanings = {"Ring", "Jingle", "Make a Sound"}
 })

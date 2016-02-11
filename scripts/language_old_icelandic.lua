@@ -80,7 +80,9 @@ DefineLanguageWord("Spunno", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Language = "old-icelandic",
 	Type = "verb",
 	Meanings = {"Spun"},
-	PluralThirdPersonPast = "Spunno"
+	NumberPersonTenseMoodInflections = {
+		"plural", "third-person", "past", "indicative", "Spunno"
+	}
 })
 
 DefineLanguageWord("Suðrœnar", { -- is this the plural inflection of the adjective? Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.

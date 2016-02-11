@@ -56,8 +56,7 @@ DefineLanguageWord("Twern", { -- Source: Sean Crist, "An Analysis of *z loss in 
 DefineLanguageWord("Twernen", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
 	Language = "middle-low-german",
 	Type = "verb",
-	Meanings = {"Twine"},
-	Infinitive = "Twernen"
+	Meanings = {"Twine"}
 })
 
 DefineLanguageWord("Wêt", { -- source also gives the alternative form "Wêde"; Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 4.

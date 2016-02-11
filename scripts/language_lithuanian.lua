@@ -25,12 +25,11 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageWord("Bė́gu", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 133.
+DefineLanguageWord("Bė́gu", { -- source also gives the alternative form "Bė́gti"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 133.
 	Language = "lithuanian",
 	Type = "verb", -- correct?
 	Meanings = {},
-	DerivesFrom = {"proto-indo-european", "verb", "Bheg"},
-	Infinitive = "Bė́gu" -- source also gives the alternate form "Bė́gti"
+	DerivesFrom = {"proto-indo-european", "verb", "Bheg"}
 })
 
 DefineLanguageWord("Bė́ras", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
@@ -82,15 +81,13 @@ DefineLanguageWord("Raũdas", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 DefineLanguageWord("Saĩsti", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 121.
 	Language = "lithuanian",
 	Type = "verb",
-	Meanings = {"Interpret a Sign or Prophesy"},
-	Infinitive = "Saĩsti"
+	Meanings = {"Interpret a Sign or Prophesy"}
 })
 
 DefineLanguageWord("Spiáuju", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
 	Language = "lithuanian",
 	Type = "verb",
-	Meanings = {"Spit"},
-	Infinitive = "Spiáuju"
+	Meanings = {"Spit"}
 })
 
 DefineLanguageWord("Vienúolika", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
@@ -102,8 +99,7 @@ DefineLanguageWord("Vienúolika", { -- Source: Winfred P. Lehmann, "A Grammar of
 DefineLanguageWord("Źengiù", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
 	Language = "lithuanian",
 	Type = "verb",
-	Meanings = {"Go", "Stride"},
-	Infinitive = "Źengiù"
+	Meanings = {"Go", "Stride"}
 })
 
 DefineLanguageWord("Žìrnis", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.

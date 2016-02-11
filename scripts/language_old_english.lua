@@ -615,139 +615,124 @@ DefineLanguageWord("Wihte", { -- this is the plural; Source: Alaric Hall, "The M
 	}
 })
 
-DefineLanguageWord("Aseowen", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 239.
+DefineLanguageWord("Aseowen", { -- this is the past participle; Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 239.
 	Language = "old-english",
 	Type = "verb",
 	Meanings = {"Sifted"}, -- it seems like Aseowen corresponds to the English past participle of "sift" (the source says simply Aseowen = Sifted); maybe it is an adjective instead?
 	-- infinitive form?
-	ParticiplePast = "Aseowen"
+	Participles = {
+		"past", "Aseowen"
+	}
 })
 
 DefineLanguageWord("Bēodan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Sections 2, 4.
 	Language = "old-english",
 	Type = "verb",
 	Meanings = {"Bid", "Offer", "Order"},
-	DerivesFrom = {"proto-germanic", "verb", "Beud"},
-	Infinitive = "Bēodan"
+	DerivesFrom = {"proto-germanic", "verb", "Beud"}
 })
 
 DefineLanguageWord("Beran", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "old-english",
 	Type = "verb",
 	Meanings = {},
-	DerivesFrom = {"proto-germanic", "verb", "Beran"},
-	Infinitive = "Beran"
+	DerivesFrom = {"proto-germanic", "verb", "Beran"}
 })
 
 DefineLanguageWord("Bītan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "old-english",
 	Type = "verb",
 	Meanings = {"Bite"},
-	DerivesFrom = {"proto-germanic", "verb", "Bītan"},
-	Infinitive = "Bītan"
+	DerivesFrom = {"proto-germanic", "verb", "Bītan"}
 })
 
 DefineLanguageWord("Cēosan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 3, Subsection 2.
 	Language = "old-english",
 	Type = "verb",
-	Meanings = {"Choose"},
-	Infinitive = "Cēosan"
+	Meanings = {"Choose"}
 	-- source also gives the forms "cēas", "curon" and "coren" (presumably conjugations of the verb)
 })
 
 DefineLanguageWord("Cēowan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 3, Subsection 2.
 	Language = "old-english",
 	Type = "verb",
-	Meanings = {"Chew"},
-	Infinitive = "Cēowan"
+	Meanings = {"Chew"}
 	-- source also gives the forms "cēaw", "cuwon" and "cowen" (presumably conjugations of the verb)
 })
 
 DefineLanguageWord("Cuman", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 	Language = "old-english",
 	Type = "verb",
-	Meanings = {"Come"},
-	Infinitive = "Cuman"
+	Meanings = {"Come"}
 })
 
 DefineLanguageWord("Etan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 3, Subsection 1.
 	Language = "old-english",
 	Type = "verb",
-	Meanings = {"Eat"},
-	Infinitive = "Etan"
+	Meanings = {"Eat"}
 })
 
 DefineLanguageWord("Gengan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
 	Language = "old-english",
 	Type = "verb",
-	Meanings = {"Go", "Stride"},
-	Infinitive = "Gengan"
+	Meanings = {"Go", "Stride"}
 })
 
 DefineLanguageWord("Gereordian", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 10.
 	Language = "old-english",
 	Type = "verb",
-	Meanings = {"Feed", "Entertain", "Feast"},
-	Infinitive = "Gereordian"
+	Meanings = {"Feed", "Entertain", "Feast"}
 })
 
 DefineLanguageWord("Grīpan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 3, Subsection 2.
 	Language = "old-english",
 	Type = "verb",
-	Meanings = {"Grab"},
-	Infinitive = "Grīpan"
+	Meanings = {"Grab"}
 	-- source also gives the forms "grāp", "gripon" and "gripen" (presumably conjugations of the verb)
 })
 
 DefineLanguageWord("Healdan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 238.
 	Language = "old-english",
 	Type = "verb",
-	Meanings = {"Hold"},
-	Infinitive = "Healdan"
+	Meanings = {"Hold"}
 })
 
 DefineLanguageWord("Helpan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
 	Language = "old-english",
 	Type = "verb",
-	Meanings = {"Help"},
-	Infinitive = "Helpan"
+	Meanings = {"Help"}
 })
 
 DefineLanguageWord("Hnīgan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 	Language = "old-english",
 	Type = "verb",
 	Meanings = {"Bow"},
-	DerivesFrom = {"proto-indo-european", "verb", "Kneygʷh"},
-	Infinitive = "Hnīgan"
+	DerivesFrom = {"proto-indo-european", "verb", "Kneygʷh"}
 })
 
 DefineLanguageWord("Leornian", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
 	Language = "old-english",
 	Type = "verb",
-	Meanings = {"Learn"},
-	Infinitive = "Leornian"
+	Meanings = {"Learn"}
 })
 
-DefineLanguageWord("Lǣran", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 5.
+DefineLanguageWord("Lǣran", { -- causative verb; Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 5.
 	Language = "old-english",
 	Type = "verb",
-	Meanings = {"Teach"},
-	Infinitive = "Lǣran" -- causative verb
+	Meanings = {"Teach"}
 })
 
 DefineLanguageWord("Nerian", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "old-english",
 	Type = "verb",
-	Meanings = {"Save", "Protect"},
-	Infinitive = "Nerian"
+	Meanings = {"Save", "Protect"}
 })
 
 DefineLanguageWord("Niman", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
 	Language = "old-english",
 	Type = "verb",
 	Meanings = {"Take", "Accept"},
-	DerivesFrom = {"proto-indo-european", "verb", "Nem"},
-	Infinitive = "Niman"
+	DerivesFrom = {"proto-indo-european", "verb", "Nem"}
 })
 
 DefineLanguageWord("Onlēon", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
@@ -755,37 +740,34 @@ DefineLanguageWord("Onlēon", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Type = "verb",
 	Meanings = {"Lend"},
 	DerivesFrom = {"proto-indo-european", "verb", "Leykʷ"},
-	Infinitive = "Onlēon",
-	PluralFirstPersonPast = "Ligon" -- source actually gives "-ligon"; Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
+	NumberPersonTenseMoodInflections = {
+		"plural", "first-person", "past", "indicative", "Ligon" -- source actually gives "-ligon"; Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
+	}
 })
 
 DefineLanguageWord("Rīdan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
 	Language = "old-english",
 	Type = "verb",
-	Meanings = {"Travel"},
-	Infinitive = "Rīdan"
+	Meanings = {"Travel"}
 })
 
 DefineLanguageWord("Sceadwian", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
 	Language = "old-english",
 	Type = "verb",
 	Meanings = {"Shadow"}, -- "to shadow"
-	DerivesFrom = {"proto-germanic", "noun", "Skadwas"},
-	Infinitive = "Sceadwian"
+	DerivesFrom = {"proto-germanic", "noun", "Skadwas"}
 })
 
 DefineLanguageWord("Scrīfan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "old-english",
 	Type = "verb",
-	Meanings = {"Write"},
-	Infinitive = "Scrīfan"
+	Meanings = {"Write"}
 })
 
 DefineLanguageWord("Sēoðan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 3, Subsection 2.
 	Language = "old-english",
 	Type = "verb",
-	Meanings = {"Boil"},
-	Infinitive = "Sēoðan"
+	Meanings = {"Boil"}
 	-- source also gives the forms "sēað", "sudon" and "sodden" (presumably conjugations of the verb)
 })
 
@@ -794,43 +776,45 @@ DefineLanguageWord("Sēon", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Type = "verb",
 	Meanings = {"See"},
 	DerivesFrom = {"proto-indo-european", "verb", "Sekʷ"},
-	Infinitive = "Sēon",
-	SingularFirstPersonPast = "Sēah",
-	SingularThirdPersonPast = "Sēah", -- Runge gives "Seah" instead
-	PluralFirstPersonPast = "Sēgon", -- in the Anglian variety of Old English
-	ParticiplePast = "Gesegen", -- in the Anglian variety of Old English
---	PluralFirstPersonPast = "Sāwon", -- in the West Saxon variety of Old English
---	ParticiplePast = "Sewen" -- in the West Saxon variety of Old English
+	NumberPersonTenseMoodInflections = {
+		"singular", "first-person", "past", "indicative", "Sēah",
+		"singular", "third-person", "past", "indicative", "Sēah", -- Runge gives "Seah" instead
+		"plural", "first-person", "past", "indicative", "Sēgon" -- in the Anglian variety of Old English
+--		"plural", "first-person", "past", "indicative", "Sāwon" -- in the West Saxon variety of Old English
+	},
+	Participles = {
+		"past", "Gesegen" -- in the Anglian variety of Old English
+--		"past", "Sewen" -- in the West Saxon variety of Old English
+	}
 })
 
 DefineLanguageWord("Standan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 3, Subsection 1.
 	Language = "old-english",
 	Type = "verb",
-	Meanings = {"Stand"},
-	Infinitive = "Standan"
+	Meanings = {"Stand"}
 })
 
 DefineLanguageWord("Stīgan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-english",
 	Type = "verb",
 	Meanings = {"Climb"},
-	DerivesFrom = {"proto-germanic", "verb", "Steig"},
-	Infinitive = "Stīgan"
+	DerivesFrom = {"proto-germanic", "verb", "Steig"}
 })
 
-DefineLanguageWord("Táh", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
+DefineLanguageWord("Táh", { -- this is the singular first person past; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
 	Language = "old-english",
 	Type = "verb",
 	Meanings = {"Accuse"},
-	SingularFirstPersonPast = "Táh",
-	PluralFirstPersonPast = "Tigon"
+	NumberPersonTenseMoodInflections = {
+		"singular", "first-person", "past", "indicative", "Táh",
+		"plural", "first-person", "past", "indicative", "Tigon"
+	}
 })
 
 DefineLanguageWord("Tēar", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 3, Subsection 1.
 	Language = "old-english",
 	Type = "verb",
-	Meanings = {"Tear"},
-	Infinitive = "Tēar"
+	Meanings = {"Tear"}
 })
 
 DefineLanguageWord("Tēon", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
@@ -838,31 +822,31 @@ DefineLanguageWord("Tēon", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Type = "verb",
 	Meanings = {"Pull"}, -- derived from Proto-Germanic "Téuχanan", which has the meaning of "pull"
 	DerivesFrom = {"proto-germanic", "verb", "Téuχanan"},
-	Infinitive = "Tēon",
-	SingularThirdPersonPast = "Tēah", -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
-	PluralThirdPersonPast = "Tugon" -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
+	NumberPersonTenseMoodInflections = {
+		"singular", "third-person", "past", "indicative", "Tēah", -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
+		"plural", "third-person", "past", "indicative", "Tugon" -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
+	}
 })
 
 DefineLanguageWord("Tiohhian", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 239.
 	Language = "old-english",
 	Type = "verb",
-	Meanings = {"Consider"},
-	Infinitive = "Tiohhian"
+	Meanings = {"Consider"}
 })
 
 DefineLanguageWord("Trūwian", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 3, Subsection 1.
 	Language = "old-english",
 	Type = "verb",
-	Meanings = {"Trust"},
-	Infinitive = "Trūwian"
+	Meanings = {"Trust"}
 })
 
 DefineLanguageWord("Wesan", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 110.
 	Language = "old-english",
 	Type = "verb",
 	Meanings = {"Be"},
-	Infinitive = "Wesan",
-	SingularThirdPersonPresentSubjunctive = "Sy"
+	NumberPersonTenseMoodInflections = {
+		"singular", "third-person", "present", "subjunctive", "Sy"
+	}
 })
 
 DefineLanguageWord("Witan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
@@ -870,8 +854,9 @@ DefineLanguageWord("Witan", { -- Source: Richard M. Runge, "The Phonetic Realiza
 	Type = "verb",
 	Meanings = {"Know"},
 	DerivesFrom = {"proto-germanic", "verb", "Witum"},
-	Infinitive = "Witan",
-	PluralFirstPersonPresent = "Witom" -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+	NumberPersonTenseMoodInflections = {
+		"plural", "first-person", "present", "indicative", "Witom" -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+	}
 })
 
 DefineLanguageWord("Ceorlisc", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 100.

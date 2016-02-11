@@ -48,8 +48,7 @@ DefineLanguageWord("Bódhati", { -- Source: Winfred P. Lehmann, "A Grammar of Pr
 	Language = "sanskrit",
 	Type = "verb",
 	Meanings = {"Observe"},
-	DerivesFrom = {"proto-indo-european", "verb", "Bhewdh"},
-	Infinitive = "Bódhati"
+	DerivesFrom = {"proto-indo-european", "verb", "Bhewdh"}
 })
 
 DefineLanguageWord("Brhant", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
@@ -75,8 +74,7 @@ DefineLanguageWord("Gámati", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Language = "sanskrit",
 	Type = "verb",
 	Meanings = {"Go"},
-	DerivesFrom = {"proto-indo-european", "verb", "Gʷem"},
-	Infinitive = "Gámati"
+	DerivesFrom = {"proto-indo-european", "verb", "Gʷem"}
 })
 
 DefineLanguageWord("Gardhas", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
@@ -153,8 +151,7 @@ DefineLanguageWord("Snuṣā́", { -- Source: Winfred P. Lehmann, "A Grammar of 
 DefineLanguageWord("Stighnoti", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
 	Language = "sanskrit",
 	Type = "verb",
-	Meanings = {"Climb"},
-	Infinitive = "Stighnoti"
+	Meanings = {"Climb"}
 })
 
 DefineLanguageWord("Śvetá", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
@@ -187,5 +184,7 @@ DefineLanguageWord("Vidma", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Language = "sanskrit",
 	Type = "verb",
 	Meanings = {"Know"},
-	PluralFirstPersonPresent = "Vidma"
+	NumberPersonTenseMoodInflections = {
+		"plural", "first-person", "present", "indicative", "Vidma"
+	}
 })

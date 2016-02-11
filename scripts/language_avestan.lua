@@ -39,15 +39,15 @@ DefineLanguageWord("Mīzhda", { -- Source: Sean Crist, "An Analysis of *z loss i
 	Gender = "Neuter"
 })
 
-DefineLanguageWord("Yārə", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
-	Language = "avestan",
-	Type = "noun",
-	Meanings = {"Year"}
-})
-
 DefineLanguageWord("Spaetō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 	Language = "avestan",
 	Type = "adjective",
 	Meanings = {"White"},
 	DerivesFrom = {"proto-indo-european", "adjective", "Ḱweyt"}
+})
+
+DefineLanguageWord("Yārə", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "avestan",
+	Type = "noun",
+	Meanings = {"Year"}
 })

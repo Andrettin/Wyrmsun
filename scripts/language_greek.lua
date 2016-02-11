@@ -197,6 +197,15 @@ DefineLanguageWord("Phāgós", { -- Source: Winfred P. Lehmann, "A Grammar of Pr
 	Meanings = {"Oak"}
 })
 
+DefineLanguageWord("Pheídomai", { -- this is the singular first person present; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
+	Language = "greek",
+	Type = "verb",
+	Meanings = {"Separate"},
+	NumberPersonTenseMoodInflections = {
+		"singular", "first-person", "present", "indicative", "Pheídomai"
+	}
+})
+
 DefineLanguageWord("Podós", { -- this is the genitive; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "greek",
 	Type = "noun",
@@ -242,53 +251,43 @@ DefineLanguageWord("Thúrā", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 DefineLanguageWord("Baínō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "greek",
 	Type = "verb",
-	Meanings = {"Come"}, -- apparently, but not entirely clear from source
-	Infinitive = "Baínō"
+	Meanings = {"Come"} -- apparently, but not entirely clear from source
 })
 
 DefineLanguageWord("Hépomai", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 	Language = "greek",
 	Type = "verb",
 	Meanings = {"Follow"},
-	DerivesFrom = {"proto-indo-european", "verb", "Sekʷ"},
-	Infinitive = "Hépomai"
+	DerivesFrom = {"proto-indo-european", "verb", "Sekʷ"}
 })
 
-DefineLanguageWord("Ídmen", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+DefineLanguageWord("Ídmen", { -- this is the plural first person present; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "greek",
 	Type = "verb",
 	Meanings = {"Know"},
-	PluralFirstPersonPresent = "Ídmen"
+	NumberPersonTenseMoodInflections = {
+		"plural", "first-person", "present", "indicative", "Ídmen"
+	}
 })
 
 DefineLanguageWord("Némō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
 	Language = "greek",
 	Type = "verb",
 	Meanings = {"Distribute"},
-	DerivesFrom = {"proto-indo-european", "verb", "Nem"},
-	Infinitive = "Némō"
-})
-
-DefineLanguageWord("Pheídomai", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
-	Language = "greek",
-	Type = "verb",
-	Meanings = {"Separate"},
-	SingularFirstPersonPresent = "Pheídomai"
+	DerivesFrom = {"proto-indo-european", "verb", "Nem"}
 })
 
 DefineLanguageWord("Peúthomai", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Sections 3-4.
 	Language = "greek",
 	Type = "verb",
 	Meanings = {"Examine"},
-	DerivesFrom = {"proto-indo-european", "verb", "Bhewdh"},
-	Infinitive = "Peúthomai"
+	DerivesFrom = {"proto-indo-european", "verb", "Bhewdh"}
 })
 
 DefineLanguageWord("Steíkhō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Sections 3-4.
 	Language = "greek",
 	Type = "verb",
-	Meanings = {"Climb"},
-	Infinitive = "Steíkhō"
+	Meanings = {"Climb"}
 })
 
 DefineLanguageWord("Meízōn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.

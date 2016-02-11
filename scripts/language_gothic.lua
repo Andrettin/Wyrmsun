@@ -417,15 +417,18 @@ DefineLanguageWord("Wigs", { -- Source: Richard M. Runge, "The Phonetic Realizat
 	Meanings = {"Way"}
 })
 
-DefineLanguageWord("Beitan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
+DefineLanguageWord("Beitan", { -- source gives ("(and-)beitan"); Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "gothic",
 	Type = "verb",
 	Meanings = {}, -- cognates have "bite" as their meaning
 	DerivesFrom = {"proto-germanic", "verb", "Bītan"},
-	Infinitive = "Beitan", -- source gives ("(and-)beitan")
-	SingularThirdPersonPast = "Andbait",
-	PluralThirdPersonPast = "Andbitan",
-	ParticiplePast = "Andbitans"
+	NumberPersonTenseMoodInflections = {
+		"singular", "third-person", "past", "indicative", "Andbait",
+		"plural", "third-person", "past", "indicative", "Andbitan"
+	},
+	Participles = {
+		"past", "Andbitans"
+	}
 })
 
 DefineLanguageWord("Bairan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
@@ -433,18 +436,23 @@ DefineLanguageWord("Bairan", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Type = "verb",
 	Meanings = {},
 	DerivesFrom = {"proto-germanic", "verb", "Beran"},
-	Infinitive = "Bairan",
-	SingularThirdPersonPast = "Bar", -- correct?
-	PluralThirdPersonPast = "Baurun", -- correct?
-	ParticiplePast = "Baurans" -- correct?
+	NumberPersonTenseMoodInflections = {
+		"singular", "third-person", "past", "indicative", "Bar", -- correct?
+		"plural", "third-person", "past", "indicative", "Baurun" -- correct?
+	},
+	Participles = {
+		"past", "Baurans" -- correct?
+	}
 })
 
-DefineLanguageWord("Bairiþ", { -- should be infinitive form; Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
+DefineLanguageWord("Bairiþ", { -- this is the singular third person present; Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
 	Language = "gothic",
 	Type = "verb",
 	Meanings = {"Bears"},
 	-- infinitive form? maybe is the same word as "bairan", since the Latin cognate of "bairan", "ferō", means "I bear"
-	SingularThirdPersonPresent = "Bairiþ"
+	NumberPersonTenseMoodInflections = {
+		"singular", "third-person", "present", "indicative", "Bairiþ"
+	}
 })
 
 DefineLanguageWord("Biudan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Sections 2-3.
@@ -452,135 +460,121 @@ DefineLanguageWord("Biudan", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Type = "verb",
 	Meanings = {"Bid", "Offer", "Order"},
 	DerivesFrom = {"proto-germanic", "verb", "Beud"},
-	Infinitive = "Biudan",
-	ParticiplePast = "Báuþ" -- "offered" / "ordered"
+	Participles = {
+		"past", "Báuþ" -- "offered" / "ordered"
+	}
 })
 
-DefineLanguageWord("Ganasjan", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
+DefineLanguageWord("Ganasjan", { -- source gives "(ga)nasjan"; Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "gothic",
 	Type = "verb",
-	Meanings = {"Make Healthy", "Heal", "Rescue"},
-	Infinitive = "Ganasjan" -- source gives "(ga)nasjan"
+	Meanings = {"Make Healthy", "Heal", "Rescue"}
 })
 
 DefineLanguageWord("Hausjan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
 	Language = "gothic",
 	Type = "verb",
-	Meanings = {"Hear"},
-	Infinitive = "Hausjan"
+	Meanings = {"Hear"}
 })
 
 DefineLanguageWord("Hilpan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
 	Language = "gothic",
 	Type = "verb",
-	Meanings = {"Help"},
-	Infinitive = "Hilpan"
+	Meanings = {"Help"}
 })
 
 DefineLanguageWord("Hlaupan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
 	Language = "gothic",
 	Type = "verb",
-	Meanings = {"Run"},
-	Infinitive = "Hlaupan"
+	Meanings = {"Run"}
 })
 
 DefineLanguageWord("Hneiwan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 	Language = "gothic",
 	Type = "verb",
 	Meanings = {"Bow"},
-	DerivesFrom = {"proto-indo-european", "verb", "Kneygʷh"},
-	Infinitive = "Hneiwan"
+	DerivesFrom = {"proto-indo-european", "verb", "Kneygʷh"}
 })
 
 DefineLanguageWord("Itan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 3, Subsection 1.
 	Language = "gothic",
 	Type = "verb",
-	Meanings = {"Eat"},
-	Infinitive = "Itan"
+	Meanings = {"Eat"}
 })
 
-DefineLanguageWord("Laisjan", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 4-5.
+DefineLanguageWord("Laisjan", { -- causative verb; Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 4-5.
 	Language = "gothic",
 	Type = "verb",
-	Meanings = {"Teach"},
-	Infinitive = "Laisjan" -- causative verb
+	Meanings = {"Teach"}
 })
 
 DefineLanguageWord("Leihʷan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
 	Language = "gothic",
 	Type = "verb",
-	Meanings = {"Lent"},
+	Meanings = {"Lend"},
 	DerivesFrom = {"proto-indo-european", "verb", "Leykʷ"},
-	Infinitive = "Leihʷan",
-	PluralFirstPersonPast = "Laihun" -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
+	NumberPersonTenseMoodInflections = {
+		"plural", "first-person", "past", "indicative", "Laihun" -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
+	}
 })
 
 DefineLanguageWord("Malan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
 	Language = "gothic",
 	Type = "verb",
 	Meanings = {"Grind"},
-	DerivesFrom = {"proto-indo-european", "verb", "Mel"},
-	Infinitive = "Malan"
+	DerivesFrom = {"proto-indo-european", "verb", "Mel"}
 })
 
 DefineLanguageWord("Niman", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
 	Language = "gothic",
 	Type = "verb",
 	Meanings = {"Take", "Accept"},
-	DerivesFrom = {"proto-indo-european", "verb", "Nem"},
-	Infinitive = "Niman"
+	DerivesFrom = {"proto-indo-european", "verb", "Nem"}
 })
 
 DefineLanguageWord("Qiman", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 	Language = "gothic",
 	Type = "verb",
 	Meanings = {"Come"},
-	DerivesFrom = {"proto-indo-european", "verb", "Gʷem"},
-	Infinitive = "Qiman"
+	DerivesFrom = {"proto-indo-european", "verb", "Gʷem"}
 })
 
-DefineLanguageWord("Saihan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241; Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
+DefineLanguageWord("Saihan", { -- Runge gives "Saihan", while Lehmann gives "Saíhʷan"; Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241; Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 	Language = "gothic",
 	Type = "verb",
 	Meanings = {"See"},
-	DerivesFrom = {"proto-indo-european", "verb", "Sekʷ"},
-	Infinitive = "Saihan" -- Runge gives "Saihan", while Lehmann gives "Saíhʷan"
+	DerivesFrom = {"proto-indo-european", "verb", "Sekʷ"}
 })
 
 DefineLanguageWord("Siggwan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "gothic",
 	Type = "verb",
 	Meanings = {"Sing"}, -- apparently, but not entirely clear from source
-	DerivesFrom = {"proto-germanic", "verb", "Singwanan"},
-	Infinitive = "Siggwan"
+	DerivesFrom = {"proto-germanic", "verb", "Singwanan"}
 })
 
 DefineLanguageWord("Skeinan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
 	Language = "gothic",
 	Type = "verb",
-	Meanings = {"Shine"},
-	Infinitive = "Skeinan"
+	Meanings = {"Shine"}
 })
 
 DefineLanguageWord("Speiwan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
 	Language = "gothic",
 	Type = "verb",
-	Meanings = {"Spit"},
-	Infinitive = "Speiwan"
+	Meanings = {"Spit"}
 })
 
 DefineLanguageWord("Standan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 3, Subsection 1.
 	Language = "gothic",
 	Type = "verb",
-	Meanings = {"Stand"},
-	Infinitive = "Standan"
+	Meanings = {"Stand"}
 })
 
 DefineLanguageWord("Stautan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
 	Language = "gothic",
 	Type = "verb",
-	Meanings = {"Push"}, -- source gives translation as the German word "stoßen"
-	Infinitive = "Stautan"
+	Meanings = {"Push"} -- source gives translation as the German word "stoßen"
 })
 
 DefineLanguageWord("Steigan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Sections 2, 4.
@@ -588,37 +582,34 @@ DefineLanguageWord("Steigan", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Type = "verb",
 	Meanings = {"Climb"},
 	DerivesFrom = {"proto-germanic", "verb", "Steig"},
-	Infinitive = "Steigan",
-	ParticiplePast = "Stáig"
+	Participles = {
+		"past", "Stáig"
+	}
 })
 
 DefineLanguageWord("Tagr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 3, Subsection 1.
 	Language = "gothic",
 	Type = "verb",
-	Meanings = {"Tear"},
-	Infinitive = "Tagr"
+	Meanings = {"Tear"}
 })
 
 DefineLanguageWord("Tiuhan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "gothic",
 	Type = "verb",
 	Meanings = {"Pull"}, -- derived from Proto-Germanic "Téuχanan", which has the meaning of "pull"
-	DerivesFrom = {"proto-germanic", "verb", "Téuχanan"},
-	Infinitive = "Tiuhan"
+	DerivesFrom = {"proto-germanic", "verb", "Téuχanan"}
 })
 
 DefineLanguageWord("Trauan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 3, Subsection 1.
 	Language = "gothic",
 	Type = "verb",
-	Meanings = {"Trust"},
-	Infinitive = "Trauan"
+	Meanings = {"Trust"}
 })
 
 DefineLanguageWord("Wairþan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
 	Language = "gothic",
 	Type = "verb",
-	Meanings = {"Become"},
-	Infinitive = "Wairþan"
+	Meanings = {"Become"}
 })
 
 DefineLanguageWord("Witan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241; Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 3, Subsection 3.
@@ -626,9 +617,10 @@ DefineLanguageWord("Witan", { -- Source: Richard M. Runge, "The Phonetic Realiza
 	Type = "verb",
 	Meanings = {"Know", "Keep Watch Over"},
 	DerivesFrom = {"proto-germanic", "verb", "Witum"},
-	Infinitive = "Witan",
-	SingularFirstPersonPresent = "Wáit", -- Lehmann 1.3.3 gives "Wait", while 2.6 in that same source gives "Wáit"; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
-	PluralFirstPersonPresent = "Witum"
+	NumberPersonTenseMoodInflections = {
+		"singular", "first-person", "present", "indicative", "Wáit", -- Lehmann 1.3.3 gives "Wait", while 2.6 in that same source gives "Wáit"; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
+		"plural", "first-person", "present", "indicative", "Witum"
+	}
 })
 
 DefineLanguageWord("Diups", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.

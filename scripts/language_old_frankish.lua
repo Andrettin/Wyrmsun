@@ -44,15 +44,15 @@ DefineLanguageWord("Scramasacs", { -- Source: August Fick and Alf Torp, "Wortsch
 	Meanings = {"Knife-like Sword"} -- source gives (in German) "messerartiges Schwert" as the meaning
 })
 
+DefineLanguageWord("Sinigus", { -- source also gives the alternative form "Seniscalcus"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 215.
+	Language = "old-frankish",
+	Type = "adjective",
+	Meanings = {"Old"} -- presumably (this is the meaning given to the Proto-Germanic original word, and no meaning is specifically given to this one)
+})
+
 DefineLanguageWord("Sworga", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.
 	Language = "old-frankish",
 	Type = "noun",
 	Meanings = {"Worry"}, -- presumably (this is the meaning given to the Proto-Germanic original word, and no meaning is specifically given to this one)
 	Gender = "Feminine"
-})
-
-DefineLanguageWord("Sinigus", { -- source also gives the alternative form "Seniscalcus"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 215.
-	Language = "old-frankish",
-	Type = "adjective",
-	Meanings = {"Old"} -- presumably (this is the meaning given to the Proto-Germanic original word, and no meaning is specifically given to this one)
 })

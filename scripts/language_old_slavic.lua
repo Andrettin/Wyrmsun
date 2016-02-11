@@ -27,12 +27,11 @@
 
 -- Old Slavic / Old Church Slavonic
 
-DefineLanguageWord("Běžą", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 133.
+DefineLanguageWord("Běžą", { -- source also gives the alternate form "Běžati"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 133.
 	Language = "old-slavic",
 	Type = "verb", -- correct?
 	Meanings = {},
-	DerivesFrom = {"proto-indo-european", "verb", "Bheg"},
-	Infinitive = "Běžą" -- source also gives the alternate form "Běžati"
+	DerivesFrom = {"proto-indo-european", "verb", "Bheg"}
 })
 
 DefineLanguageWord("Brěga", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
@@ -78,14 +77,14 @@ DefineLanguageWord("Mozgŭ", { -- Source: Sean Crist, "An Analysis of *z loss in
 	Meanings = {"Brain"}
 })
 
-DefineLanguageWord("Žrudŭ", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
-	Language = "old-slavic",
-	Type = "noun",
-	Meanings = {"Flimsy Pole"}
-})
-
 DefineLanguageWord("Svins", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "old-slavic",
 	Type = "adjective",
 	Meanings = {"of Pig"}
+})
+
+DefineLanguageWord("Žrudŭ", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
+	Language = "old-slavic",
+	Type = "noun",
+	Meanings = {"Flimsy Pole"}
 })

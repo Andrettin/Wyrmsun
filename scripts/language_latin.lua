@@ -176,77 +176,74 @@ DefineLanguageWord("Vir", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-G
 DefineLanguageWord("Alucinare", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 101.
 	Language = "latin",
 	Type = "verb",
-	Meanings = {"To Wander in Mind", "Speak while in such a State"},
-	Infinitive = "Alucinare" -- presumably it is the infinitive
+	Meanings = {"To Wander in Mind", "Speak while in such a State"}
 })
 
 DefineLanguageWord("Cōnīveō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 	Language = "latin",
 	Type = "verb",
 	Meanings = {"Shut the Eyes"},
-	DerivesFrom = {"proto-indo-european", "verb", "Kneygʷh"},
-	Infinitive = "Cōnīveō"
+	DerivesFrom = {"proto-indo-european", "verb", "Kneygʷh"}
 })
 
-DefineLanguageWord("Dūcō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Sections 3-4.
+DefineLanguageWord("Dūcō", { -- this is the singular first person present; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Sections 3-4.
 	Language = "latin",
 	Type = "verb",
 	Meanings = {"Lead"},
 	DerivesFrom = {"old-latin", "verb", "Doucō"},
-	SingularFirstPersonPresent = "Dūcō"
+	NumberPersonTenseMoodInflections = {
+		"singular", "first-person", "present", "indicative", "Dūcō"
+	}
 })
 
-DefineLanguageWord("Ferō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
+DefineLanguageWord("Ferō", { -- this is the singular first person present; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "latin",
 	Type = "verb",
 	Meanings = {"Bear"},
-	SingularFirstPersonPresent = "Ferō"
+	NumberPersonTenseMoodInflections = {
+		"singular", "first-person", "present", "indicative", "Ferō"
+	}
 })
 
 DefineLanguageWord("Linquō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
 	Language = "latin",
 	Type = "verb",
 	Meanings = {},
-	DerivesFrom = {"proto-indo-european", "verb", "Leykʷ"},
-	Infinitive = "Linquō"
+	DerivesFrom = {"proto-indo-european", "verb", "Leykʷ"}
 })
 
 DefineLanguageWord("Molere", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "latin",
 	Type = "verb",
 	Meanings = {"Grind"}, -- presumably, but it is not entirely clear from the source
-	DerivesFrom = {"proto-indo-european", "verb", "Mel"},
-	Infinitive = "Molere" -- also given as "Molō" (if it is indeed the same word); Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
+	DerivesFrom = {"proto-indo-european", "verb", "Mel"}
+	-- also given as "Molō" (if it is indeed the same word); Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
 })
 
 DefineLanguageWord("Scrībere", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "latin",
 	Type = "verb",
-	Meanings = {}, -- cognates have "write" as the meaning
-	Infinitive = "Scrībere"
+	Meanings = {} -- cognates have "write" as the meaning
 })
 
 DefineLanguageWord("Sequor", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 	Language = "latin",
 	Type = "verb",
 	Meanings = {"Follow"},
-	DerivesFrom = {"proto-indo-european", "verb", "Sekʷ"},
-	Infinitive = "Sequor"
+	DerivesFrom = {"proto-indo-european", "verb", "Sekʷ"}
 })
 
 DefineLanguageWord("Spuō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
 	Language = "latin",
 	Type = "verb",
-	Meanings = {"Spit"},
-	Infinitive = "Spuō"
+	Meanings = {"Spit"}
 })
 
-DefineLanguageWord("Veniō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Sections 3, 5.
+DefineLanguageWord("Veniō", { -- alternatively written as "Venio" by the source; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Sections 3, 5.
 	Language = "latin",
 	Type = "verb",
 	Meanings = {"Come"},
-	DerivesFrom = {"proto-indo-european", "verb", "Gʷem"},
-	Infinitive = "Veniō" -- alternatively written as "Venio" by the source
+	DerivesFrom = {"proto-indo-european", "verb", "Gʷem"}
 })
 
 DefineLanguageWord("Captus", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.

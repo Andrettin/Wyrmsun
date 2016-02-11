@@ -373,8 +373,7 @@ DefineLanguageWord("Síði", { -- Source: Alaric Hall, "The Meanings of Elf and 
 DefineLanguageWord("Síða", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 118.
 	Language = "old-norse",
 	Type = "verb",
-	Meanings = {"Work Magic"},
-	Infinitive = "Síða"
+	Meanings = {"Work Magic"}
 })
 
 DefineLanguageWord("Sunna", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
@@ -430,106 +429,95 @@ DefineLanguageWord("Bauþ", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Type = "verb",
 	Meanings = {"Offered"},
 	DerivesFrom = {"proto-germanic", "verb", "Beud"},
-	ParticiplePast = "Bauþ" -- "offered"
+	Participles = {
+		"past", "Bauþ" -- "offered"
+	}
 })
 
 DefineLanguageWord("Bera", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "old-norse",
 	Type = "verb",
 	Meanings = {},
-	DerivesFrom = {"proto-germanic", "verb", "Beran"},
-	Infinitive = "Bera"
+	DerivesFrom = {"proto-germanic", "verb", "Beran"}
 })
 
 DefineLanguageWord("Bīta", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "old-norse",
 	Type = "verb",
 	Meanings = {"Bite"},
-	DerivesFrom = {"proto-germanic", "verb", "Bītan"},
-	Infinitive = "Bīta"
+	DerivesFrom = {"proto-germanic", "verb", "Bītan"}
 })
 
 DefineLanguageWord("Eta", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
 	Language = "old-norse",
 	Type = "verb",
-	Meanings = {"Eat"},
-	Infinitive = "Eta"
+	Meanings = {"Eat"}
 })
 
 DefineLanguageWord("Grenna", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 10.
 	Language = "old-norse",
 	Type = "verb",
-	Meanings = {"Feed"},
-	Infinitive = "Grenna"
+	Meanings = {"Feed"}
 })
 
 DefineLanguageWord("Hnīga", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 	Language = "old-norse",
 	Type = "verb",
 	Meanings = {"Bow"},
-	DerivesFrom = {"proto-indo-european", "verb", "Kneygʷh"},
-	Infinitive = "Hnīga"
+	DerivesFrom = {"proto-indo-european", "verb", "Kneygʷh"}
 })
 
 DefineLanguageWord("Koma", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 	Language = "old-norse",
 	Type = "verb",
 	Meanings = {"Come"},
-	DerivesFrom = {"proto-indo-european", "verb", "Gʷem"},
-	Infinitive = "Koma"
+	DerivesFrom = {"proto-indo-european", "verb", "Gʷem"}
 })
 
 DefineLanguageWord("Ljā", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
 	Language = "old-norse",
 	Type = "verb",
 	Meanings = {"Lend"},
-	DerivesFrom = {"proto-indo-european", "verb", "Leykʷ"},
-	Infinitive = "Ljā"
+	DerivesFrom = {"proto-indo-european", "verb", "Leykʷ"}
 })
 
 DefineLanguageWord("Mala", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
 	Language = "old-norse",
 	Type = "verb",
 	Meanings = {"Grind"},
-	DerivesFrom = {"proto-indo-european", "verb", "Mel"},
-	Infinitive = "Mala"
+	DerivesFrom = {"proto-indo-european", "verb", "Mel"}
 })
 
 DefineLanguageWord("Nara", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "old-norse",
 	Type = "verb",
-	Meanings = {"Live"},
-	Infinitive = "Nara"
+	Meanings = {"Live"}
 })
 
 DefineLanguageWord("Nema", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
 	Language = "old-norse",
 	Type = "verb",
 	Meanings = {"Take", "Accept"},
-	DerivesFrom = {"proto-indo-european", "verb", "Nem"},
-	Infinitive = "Nema"
+	DerivesFrom = {"proto-indo-european", "verb", "Nem"}
 })
 
 DefineLanguageWord("Stīga", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-norse",
 	Type = "verb",
 	Meanings = {"Climb"},
-	DerivesFrom = {"proto-germanic", "verb", "Steig"},
-	Infinitive = "Stīga"
+	DerivesFrom = {"proto-germanic", "verb", "Steig"}
 })
 
 DefineLanguageWord("Tvinna", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
 	Language = "old-norse",
 	Type = "verb",
-	Meanings = {"Double", "Duplicate"},
-	Infinitive = "Tvinna"
+	Meanings = {"Double", "Duplicate"}
 })
 
 DefineLanguageWord("Verða", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
 	Language = "old-norse",
 	Type = "verb",
-	Meanings = {"Become"},
-	Infinitive = "Verða"
+	Meanings = {"Become"}
 })
 
 DefineLanguageWord("Vita", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
@@ -537,8 +525,9 @@ DefineLanguageWord("Vita", { -- Source: Richard M. Runge, "The Phonetic Realizat
 	Type = "verb",
 	Meanings = {"Know"},
 	DerivesFrom = {"proto-germanic", "verb", "Witum"},
-	Infinitive = "Vita",
-	PluralFirstPersonPresent = "Vitom" -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+	NumberPersonTenseMoodInflections = {
+		"plural", "first-person", "present", "indicative", "Vitom" -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+	}
 })
 
 DefineLanguageWord("Djūpr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.

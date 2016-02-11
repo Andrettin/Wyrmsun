@@ -116,18 +116,16 @@ DefineLanguageWord("Kien", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Gender = "Masculine"
 })
 
-DefineLanguageWord("Lēren", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 5.
+DefineLanguageWord("Lēren", { -- causative verb; Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 5.
 	Language = "middle-high-german",
 	Type = "verb",
-	Meanings = {"Teach"},
-	Infinitive = "Lēren" -- causative verb
+	Meanings = {"Teach"}
 })
 
 DefineLanguageWord("Lernen", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 5.
 	Language = "middle-high-german",
 	Type = "verb",
-	Meanings = {"Learn"},
-	Infinitive = "Lernen"
+	Meanings = {"Learn"}
 })
 
 DefineLanguageWord("Marc", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
@@ -155,11 +153,10 @@ DefineLanguageWord("Nare", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Gender = "Feminine"
 })
 
-DefineLanguageWord("Nerigen", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
+DefineLanguageWord("Nerigen", { -- source also gives alternative forms "Neren" and "Nern"; Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "middle-high-german",
 	Type = "verb",
-	Meanings = {"Heal", "Sustain the Life of", "Save", "Protect", "Nourish"},
-	Infinitive = "Nerigen" -- source also gives alternative forms "Neren" and "Nern"
+	Meanings = {"Heal", "Sustain the Life of", "Save", "Protect", "Nourish"}
 })
 
 DefineLanguageWord("Ort", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.
@@ -201,6 +198,5 @@ DefineLanguageWord("Zwirn", { -- Source: Sean Crist, "An Analysis of *z loss in 
 DefineLanguageWord("Zwirnen", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
 	Language = "middle-high-german",
 	Type = "verb",
-	Meanings = {"Twist Together Twice", "Twine"},
-	Infinitive = "Zwirnen"
+	Meanings = {"Twist Together Twice", "Twine"}
 })

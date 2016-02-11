@@ -98,8 +98,7 @@ DefineLanguageWord("Medg", { -- Source: Sean Crist, "An Analysis of *z loss in W
 DefineLanguageWord("Rīadaim", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
 	Language = "irish",
 	Type = "verb",
-	Meanings = {"Travel"},
-	Infinitive = "Rīadaim"
+	Meanings = {"Travel"}
 })
 
 DefineLanguageWord("Úr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 127.
