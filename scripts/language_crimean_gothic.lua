@@ -29,6 +29,5 @@ DefineLanguageWord("Waghen", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Language = "crimean-gothic",
 	Type = "noun",
 	Meanings = {"Wagon"}, -- derived from Proto-Germanic "Waganaz", which means "Wagon"
-	DerivesFrom = {"proto-germanic", "noun", "Waganaz"},
-	SingularNominative = "Waghen"
+	DerivesFrom = {"proto-germanic", "noun", "Waganaz"}
 })

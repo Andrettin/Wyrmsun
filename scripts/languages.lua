@@ -325,8 +325,7 @@ Load("scripts/language_kobold.lua")
 DefineLanguageWord("Kosem", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
 	Language = "north-slavic",
 	Type = "noun",
-	Meanings = {"Bundle of Flax"},
-	SingularNominative = "Kosem"
+	Meanings = {"Bundle of Flax"}
 })
 --]]
 

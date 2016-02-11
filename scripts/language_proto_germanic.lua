@@ -31,7 +31,6 @@ DefineLanguageWord("Aiza", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Ore"}, -- source gives "Erz" as the meaning
-	SingularNominative = "Aiza",
 	Gender = "Neuter"
 })
 
@@ -39,7 +38,6 @@ DefineLanguageWord("Ansu", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"God"},
-	SingularNominative = "Ansu",
 	Gender = "Masculine",
 	PrefixSingular = true,
 --	PrefixTypeName = {"settlement"} -- seems sensible in face of a lack of examples (cognate of the prefix in Asgard, and Asgard is the settlement in "Asia" in which Odin's people used to be center until they migrated to Scandinavia in the Ynglinga saga's story)
@@ -49,30 +47,26 @@ DefineLanguageWord("Asjôn", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Forge"}, -- source gives the German "Esse" as the meaning
-	Gender = "Feminine",
-	SingularNominative = "Asjôn"
+	Gender = "Feminine"
 })
 
 DefineLanguageWord("Aþala", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 14.
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Kind", "Gender", "Lineage"}, -- source gives "Art, Geschlecht (innerstes Wesen)" as the meaning
-	SingularNominative = "Aþala",
 	Gender = "Neuter"
 })
 
-DefineLanguageWord("Austa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 12.
+DefineLanguageWord("Austa", { -- source also gives the alternative form "Austra"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 12.
 	Language = "proto-germanic",
 	Type = "noun",
-	Meanings = {"East"},
-	SingularNominative = "Austa" -- source also gives the form "Austra"
+	Meanings = {"East"}
 })
 
 DefineLanguageWord("Austrôn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 12.
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"a Spring Goddess"},
-	SingularNominative = "Austrôn",
 	Gender = "Feminine"
 })
 
@@ -81,7 +75,6 @@ DefineLanguageWord("Baki", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Type = "noun",
 	Meanings = {"Stream"}, -- source gives the German "Bach" as the meaning
 	DerivesFrom = {"proto-indo-european", "verb", "Bheg"},
-	SingularNominative = "Baki",
 	Gender = "Masculine"
 })
 
@@ -89,7 +82,6 @@ DefineLanguageWord("Baþa", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Bath", "Baths"}, -- source gives the German "Bad" as the meaning
-	SingularNominative = "Baþa",
 	Gender = "Neuter"
 })
 
@@ -97,15 +89,13 @@ DefineLanguageWord("Beran", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Bear"}, -- source gives the German "Bär" as the meaning
-	SingularNominative = "Beran",
 	Gender = "Masculine"
 })
 
-DefineLanguageWord("Berôn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
+DefineLanguageWord("Berôn", { -- source also gives the alternative form "Berniôn"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Female Bear"},
-	SingularNominative = "Berôn", -- source also gives the alternative form "Berniôn"
 	Gender = "Feminine"
 })
 
@@ -113,45 +103,39 @@ DefineLanguageWord("Berga", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Mountain", "Hill"},
-	SingularNominative = "Berga",
 	Gender = "Neuter"
 })
 
-DefineLanguageWord("Blôma", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 146.
+DefineLanguageWord("Blôma", { -- source also gives the alternative (masculine) form "Blôman"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 146.
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Flower"}, -- source gives the German "Blume" as the meaning
-	SingularNominative = "Blôma", -- source also gives the alternative (masculine) form "Blôman"
 	Gender = "Neuter"
 })
 
 DefineLanguageWord("Bōks", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Sections 2-3.
 	Language = "proto-germanic",
 	Type = "noun",
-	Meanings = {"Tablet"},
-	SingularNominative = "Bōks"
+	Meanings = {"Tablet"}
 })
 
-DefineLanguageWord("Brazda", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
+DefineLanguageWord("Brazda", { -- source also gives the alternative form "Brezda"; Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Edge"},
-	SingularNominative = "Brazda", -- source also gives the alternative form "Brezda"
 	Gender = "Masculine"
 })
 
 DefineLanguageWord("Brōþar", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "proto-germanic",
 	Type = "noun",
-	Meanings = {"Brother"},
-	SingularNominative = "Brōþar"
+	Meanings = {"Brother"}
 })
 
 DefineLanguageWord("Bruzdaz", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 9.
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Blade", "Edge"},
-	SingularNominative = "Bruzdaz",
 	Gender = "Masculine"
 })
 
@@ -159,7 +143,6 @@ DefineLanguageWord("Burg", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Castle", "City"}, -- source gives "Burg, Stadt" as the meaning
-	SingularNominative = "Burg",
 	Gender = "Feminine"
 })
 
@@ -167,37 +150,35 @@ DefineLanguageWord("Bûra", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Farmer", "Peasant"},
-	SingularNominative = "Bûra",
 	Gender = "Masculine"
 })
 
 DefineLanguageWord("Χŕdiz", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "proto-germanic",
 	Type = "noun",
-	Meanings = {"Wattle"},
-	SingularNominative = "Χŕdiz"
+	Meanings = {"Wattle"}
 })
 
 DefineLanguageWord("Dag", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {},
-	DerivesFrom = {"proto-indo-european", "noun", "Dhagh"},
-	SingularNominative = "Dag"
+	DerivesFrom = {"proto-indo-european", "noun", "Dhagh"}
 })
 
-DefineLanguageWord("Durez", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+DefineLanguageWord("Durez", { -- this is the nominative plural; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Door"},
-	PluralNominative = "Durez"
+	NumberCaseInflections = {
+		"plural", "nominative", "Durez"
+	}
 })
 
 DefineLanguageWord("Dverga", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 113.
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Dwarf"},
-	SingularNominative = "Dverga",
 	Gender = "Masculine"
 })
 
@@ -205,58 +186,50 @@ DefineLanguageWord("Erala", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Man", "Warrior"},
-	SingularNominative = "Erala",
 	Gender = "Masculine"
 })
 
 DefineLanguageWord("Erþō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "proto-germanic",
 	Type = "noun",
-	Meanings = {"Earth"},
-	SingularNominative = "Erþō"
+	Meanings = {"Earth"}
 })
 
 DefineLanguageWord("Fadēr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "proto-germanic",
 	Type = "noun",
-	Meanings = {"Father"},
-	SingularNominative = "Fadēr"
+	Meanings = {"Father"}
 })
 
 DefineLanguageWord("Fehu", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "proto-germanic",
 	Type = "noun",
-	Meanings = {"Cattle"},
-	SingularNominative = "Fehu"
+	Meanings = {"Cattle"}
 })
 
 DefineLanguageWord("Flōduz", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "proto-germanic",
 	Type = "noun",
-	Meanings = {"Flood"},
-	SingularNominative = "Flōduz"
+	Meanings = {"Flood"}
 })
 
 DefineLanguageWord("Fōts", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "proto-germanic",
 	Type = "noun",
-	Meanings = {"Foot"},
-	SingularNominative = "Fōts"
+	Meanings = {"Foot"}
 })
 
-DefineLanguageWord("Fûir", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 127.
+DefineLanguageWord("Fûir", { -- source also gives the alternate form "Fûr"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 127.
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Fire"}, -- source gives "Feuer" as the meaning
-	SingularNominative = "Fûir", -- source also gives the alternate form "Fûr"
 	Gender = "Neuter"
 })
 
-DefineLanguageWord("Gárdiz", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 72.
+DefineLanguageWord("Gárdiz", { -- Fick and Torp spell the word as "Garda"/"Gardi"/"Gardan"; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 72.
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Enclosure", "Court", "Garden"}, -- Fick and Torp give "Geheg, Hof, Garten" as the meaning; Lehmann gives the meaning as "Garden"
-	SingularNominative = "Gárdiz", -- Fick and Torp spell the word as "Garda"/"Gardi"/"Gardan"
 	Gender = "Masculine",
 	PrefixSingular = true,
 --	PrefixTypeName = {"province"}, -- seems sensible in face of a lack of examples, specially since is a cognate of the prefix in "Gardarike"
@@ -268,7 +241,6 @@ DefineLanguageWord("Gastiz", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Guest"},
-	SingularNominative = "Gastiz",
 	Gender = "Masculine",
 	SuffixSingular = true,
 	SuffixTypeName = {"person"} -- examples: "Hlewagastiz", "Holtagastiz"
@@ -278,7 +250,6 @@ DefineLanguageWord("Gavja", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"District"}, -- source gives "Gau" as the meaning
-	SingularNominative = "Gavja",
 	Gender = "Neuter"
 })
 
@@ -286,7 +257,6 @@ DefineLanguageWord("Gazdaz", { -- Source: Sean Crist, "An Analysis of *z loss in
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Rod", "Prickle", "Point"},
-	SingularNominative = "Gazdaz",
 	Gender = "Masculine"
 })
 
@@ -294,15 +264,13 @@ DefineLanguageWord("Glôdi", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Ember"}, -- source gives the German "Glut" as the meaning
-	Gender = "Feminine",
-	SingularNominative = "Glôdi"
+	Gender = "Feminine"
 })
 
-DefineLanguageWord("Gôm", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 71.
+DefineLanguageWord("Gôm", { -- source also gives the forms "Gam" and "Gim"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 71.
 	Language = "proto-germanic",
 	Type = "noun",
-	Meanings = {"Winter"},
-	SingularNominative = "Gôm" -- source also gives the forms "Gam" and "Gim"
+	Meanings = {"Winter"}
 })
 
 DefineLanguageWord("Gred", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
@@ -317,8 +285,6 @@ DefineLanguageWord("Haima", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Village", "Home"}, -- source gives "Dorf, Heim, Heimat" as the meaning
-	SingularNominative = "Haima",
-	SingularAccusative = "Haima",
 	Gender = "Masculine"
 })
 
@@ -326,15 +292,13 @@ DefineLanguageWord("Hamara", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Stone", "Hammer"}, -- source gives the German "Stein, Hammer"
-	Gender = "Masculine",
-	SingularNominative = "Hamara"
+	Gender = "Masculine"
 })
 
 DefineLanguageWord("Hazdaz", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Head Hair"},
-	SingularNominative = "Hazdaz",
 	Gender = "Masculine"
 })
 
@@ -342,7 +306,6 @@ DefineLanguageWord("Herþa", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Fireplace", "Fire"}, -- source gives "Feuerstätte, Feuer" as the meaning
-	SingularNominative = "Herþa",
 	Gender = "Masculine"
 })
 
@@ -350,7 +313,6 @@ DefineLanguageWord("Hezdōn", { -- Source: Sean Crist, "An Analysis of *z loss i
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Flax Fiber"},
-	SingularNominative = "Hezdōn",
 	Uncountable = true -- as a material, it is likely to be uncountable
 })
 
@@ -358,7 +320,6 @@ DefineLanguageWord("Hlewa", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Language = "proto-germanic", -- from the Gallehus inscription, is it really Proto-Germanic?
 	Type = "noun",
 	Meanings = {"Glory"}, -- meaning given in another source, which I have lost the reference to
-	SingularNominative = "Hlewa",
 	PrefixSingular = true,
 	PrefixTypeName = {"person"} -- example: "Hlewagastiz"
 })
@@ -366,52 +327,45 @@ DefineLanguageWord("Hlewa", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 DefineLanguageWord("Horna", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "proto-germanic", -- from the Gallehus inscription, is it really Proto-Germanic?
 	Type = "noun",
-	Meanings = {"Horn"},
-	SingularNominative = "Horna"
+	Meanings = {"Horn"}
 })
 
 DefineLanguageWord("Hraznō", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Wave"},
-	SingularNominative = "Hraznō",
 	Gender = "Feminine"
 })
 
 DefineLanguageWord("Huzda", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.
 	Language = "proto-germanic",
 	Type = "noun",
-	Meanings = {"Hidden Treasure"},
-	SingularNominative = "Huzda"
+	Meanings = {"Hidden Treasure"}
 })
 
 DefineLanguageWord("Kizna", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 4, 7.
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Resinous Wood"},
-	SingularNominative = "Kizna",
 	Gender = "Masculine"
 })
 
 DefineLanguageWord("Kŕnam", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "proto-germanic",
 	Type = "noun",
-	Meanings = {"Grain"},
-	SingularNominative = "Kŕnam"
+	Meanings = {"Grain"}
 })
 
 DefineLanguageWord("Kuni", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
 	Language = "proto-germanic",
 	Type = "noun",
-	Meanings = {"Race"},
-	SingularNominative = "Kuni"
+	Meanings = {"Race"}
 })
 
 DefineLanguageWord("Landa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 184.
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Terra Firma", "Land", "Country"}, -- source gives the German words "terra firma, Land"
-	SingularNominative = "Landa",
 	Gender = "Neuter"
 })
 
@@ -419,7 +373,6 @@ DefineLanguageWord("Lauda", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Metal", "Lead"},
-	SingularNominative = "Lauda",
 	Gender = "Neuter",
 	Uncountable = true -- as a material, it is likely to be uncountable
 })
@@ -427,23 +380,20 @@ DefineLanguageWord("Lauda", { -- Source: August Fick and Alf Torp, "Wortschatz d
 DefineLanguageWord("Maχtiz", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "proto-germanic",
 	Type = "noun",
-	Meanings = {"Might"},
-	SingularNominative = "Maχtiz"
+	Meanings = {"Might"}
 })
 
 DefineLanguageWord("Maitila", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 164.
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Chisel"}, -- source gives meaning as "Meißel"
-	SingularNominative = "Maitila",
 	Gender = "Masculine"
 })
 
-DefineLanguageWord("Mark", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 160.
+DefineLanguageWord("Mark", { -- source also gives the form "Markô"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 160.
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"March", "Border", "Borderland"},
-	SingularNominative = "Mark", -- source also gives the form "Markô"
 	Gender = "Feminine"
 })
 
@@ -451,7 +401,6 @@ DefineLanguageWord("Mazgaz", { -- Source: Sean Crist, "An Analysis of *z loss in
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Marrow"},
-	SingularNominative = "Mazgaz",
 	Gender = "Masculine"
 })
 
@@ -459,29 +408,25 @@ DefineLanguageWord("Mizdō", { -- Source: Sean Crist, "An Analysis of *z loss in
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Reward", "Payment", "Fee"},
-	SingularNominative = "Mizdō",
 	Gender = "Feminine"
 })
 
 DefineLanguageWord("Naχts", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "proto-germanic",
 	Type = "noun",
-	Meanings = {"Night"},
-	SingularNominative = "Naχts"
+	Meanings = {"Night"}
 })
 
 DefineLanguageWord("Nemida", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 151.
 	Language = "proto-germanic",
 	Type = "noun",
-	Meanings = {"Holy Pasture"}, -- source gives (in German) "heiliger Weideplatz" as the meaning
-	SingularNominative = "Nemida"
+	Meanings = {"Holy Pasture"} -- source gives (in German) "heiliger Weideplatz" as the meaning
 })
 
 DefineLanguageWord("Razdō", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 9.
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Voice", "Sound"},
-	SingularNominative = "Razdō",
 	Gender = "Feminine"
 })
 
@@ -489,7 +434,6 @@ DefineLanguageWord("Razdō", { -- Source: Sean Crist, "An Analysis of *z loss in
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Food", "Meal"},
-	SingularNominative = "Razdō",
 	Gender = "Feminine"
 })
 
@@ -497,22 +441,19 @@ DefineLanguageWord("Razna", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"House"},
-	SingularNominative = "Razna",
 	Gender = "Neuter"
 })
 
 DefineLanguageWord("Reupôn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 169.
 	Language = "proto-germanic",
 	Type = "noun",
-	Meanings = {"Ptarmigan"}, -- source gives meaning as "Schneehuhn (tetrao lagopus)"
-	SingularNominative = "Reupôn" -- source also gives the forms "Gam" and "Gim"
+	Meanings = {"Ptarmigan"} -- source gives meaning as "Schneehuhn (tetrao lagopus)"
 })
 
 DefineLanguageWord("Ristila", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 176.
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Plowshare"}, -- source gives meaning as "Sech, Pflugeisen"
-	SingularNominative = "Ristila",
 	Gender = "Masculine"
 })
 
@@ -520,7 +461,6 @@ DefineLanguageWord("Rîkia", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Power", "Dominion", "Realm"}, -- source gives meaning as "Macht, Herrschaft, Reich"
-	SingularNominative = "Rîkia",
 	Gender = "Neuter",
 	SuffixSingular = true,
 --	SuffixTypeName = {"province"} -- seems sensible in face of a lack of examples, specially since it is the etymological origin of the suffix in "Gardarike"
@@ -529,46 +469,40 @@ DefineLanguageWord("Rîkia", { -- Source: August Fick and Alf Torp, "Wortschatz 
 DefineLanguageWord("Rîþa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
 	Language = "proto-germanic",
 	Type = "noun",
-	Meanings = {"Current", "Stream"}, -- source gives meaning as "Strom, Bach"
-	SingularNominative = "Rîþa"
+	Meanings = {"Current", "Stream"} -- source gives meaning as "Strom, Bach"
 })
 
 DefineLanguageWord("Saiþa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 221.
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Magic"}, -- source gives the German "Zauber"
-	Gender = "Masculine",
-	SingularNominative = "Saiþa"
+	Gender = "Masculine"
 })
 
-DefineLanguageWord("Skaran", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 227.
+DefineLanguageWord("Skaran", { -- source also gives the alternative form "Skara"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 227.
 	Language = "proto-germanic",
 	Type = "noun",
-	Meanings = {"Plowshare"}, -- source gives "Schar, Pflugeisen" as the meaning
-	SingularNominative = "Skaran" -- source also gives the alternative form "Skara"
+	Meanings = {"Plowshare"} -- source gives "Schar, Pflugeisen" as the meaning
 })
 
 DefineLanguageWord("Smiþjôn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 264.
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Smithy"}, -- source gives "Schmiede" as the meaning
-	Gender = "Feminine",
-	SingularNominative = "Smiþjôn"
+	Gender = "Feminine"
 })
 
-DefineLanguageWord("Smiþu", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 263.
+DefineLanguageWord("Smiþu", { -- source also gives the alternative form "Smiþa"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 263.
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Smith", "Master Craftsman"}, -- source gives "Schmied, Werkmeister" as the meaning
-	Gender = "Masculine",
-	SingularNominative = "Smiþu" -- source also gives the alternative form "Smiþa"
+	Gender = "Masculine"
 })
 
-DefineLanguageWord("Snaigva", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 260.
+DefineLanguageWord("Snaigva", { -- source also gives the forms "Snaiva", "Snaigvi" and "Snaigi"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 260.
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Snow"},
-	SingularNominative = "Snaigva", -- source also gives the forms "Snaiva", "Snaigvi" and "Snaigi"
 	Gender = "Masculine",
 	Uncountable = true -- seems likely to be uncountable
 })
@@ -576,44 +510,38 @@ DefineLanguageWord("Snaigva", { -- Source: August Fick and Alf Torp, "Wortschatz
 DefineLanguageWord("Sēþiz", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "proto-germanic",
 	Type = "noun",
-	Meanings = {"Seed"},
-	SingularNominative = "Sēþiz"
+	Meanings = {"Seed"}
 })
 
 DefineLanguageWord("Skadwas", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
 	Language = "proto-germanic",
 	Type = "noun",
-	Meanings = {"Shadow"},
-	SingularNominative = "Skadwas"
+	Meanings = {"Shadow"}
 })
 
 DefineLanguageWord("Sunōn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "proto-germanic",
 	Type = "noun",
-	Meanings = {"Sun"},
-	SingularNominative = "Sunōn"
+	Meanings = {"Sun"}
 })
 
 DefineLanguageWord("Swīnaz", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "proto-germanic",
 	Type = "noun",
-	Meanings = {"Pig"},
-	SingularNominative = "Swīnaz"
+	Meanings = {"Pig"}
 })
 
 DefineLanguageWord("Tandran", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 84.
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Fire", "Burning Coal"}, -- source gives the German "Feuer, glühende Kohle" as the meaning
-	Gender = "Masculine",
-	SingularNominative = "Tandran"
+	Gender = "Masculine"
 })
 
 DefineLanguageWord("Tîva", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 88.
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"God"}, -- can also mean the name of a particular god
-	SingularNominative = "Tîva",
 	Gender = "Masculine"
 })
 
@@ -621,7 +549,6 @@ DefineLanguageWord("Þurpa", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Crowd", "Village"}, -- source gives "Schar, Menschenhaufen, Dorf" as the meaning
-	SingularNominative = "Þurpa",
 	Gender = "Neuter"
 })
 
@@ -629,22 +556,19 @@ DefineLanguageWord("Uzdaz", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Point", "Place"},
-	SingularNominative = "Uzdaz",
 	Gender = "Masculine"
 })
 
 DefineLanguageWord("Uzlaga", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 10.
 	Language = "proto-germanic",
 	Type = "noun",
-	Meanings = {"Fate"},
-	SingularNominative = "Uzlaga"
+	Meanings = {"Fate"}
 })
 
 DefineLanguageWord("Vîhsa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 206.
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Village"}, -- source gives "Flecken, Dorf" as the meaning
-	SingularNominative = "Vîhsa",
 	Gender = "Neuter"
 })
 
@@ -652,37 +576,32 @@ DefineLanguageWord("Vikkan", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Sorcerer"},
-	SingularNominative = "Vikkan",
 	Gender = "Masculine"
 })
 
 DefineLanguageWord("Waganaz", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "proto-germanic",
 	Type = "noun",
-	Meanings = {"Wagon"},
-	SingularNominative = "Waganaz"
+	Meanings = {"Wagon"}
 })
 
-DefineLanguageWord("Waida", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 4.
+DefineLanguageWord("Waida", { -- source also gives alternative form "Waizda"; Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 4.
 	Language = "proto-germanic",
 	Type = "noun",
-	Meanings = {"Woad"},
-	SingularNominative = "Waida" -- source also gives alternative form "Waizda"
+	Meanings = {"Woad"}
 })
 
 DefineLanguageWord("Walakuzjōn", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 10.
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Valkyrie"},
-	SingularNominative = "Walakuzjōn",
 	Gender = "feminine"
 })
 
 DefineLanguageWord("Yēra", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "proto-germanic",
 	Type = "noun",
-	Meanings = {"Year"},
-	SingularNominative = "Yēra"
+	Meanings = {"Year"}
 })
 
 DefineLanguageWord("Beran", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
@@ -911,7 +830,6 @@ DefineLanguageWord("Godagaz", {
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Goody", "Good One"},
-	SingularNominative = "Godagaz",
 	NameSingular = true,
 	TypeName = {"person"}
 })
@@ -920,7 +838,6 @@ DefineLanguageWord("Hadu", {
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Battle"},
-	SingularNominative = "Hadu",
 	PrefixSingular = true,
 	PrefixTypeName = {"person"} -- example: "Hadulaikaz"
 })
@@ -929,7 +846,6 @@ DefineLanguageWord("Hagu", {
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Small Property"},
-	SingularNominative = "Hadu",
 	PrefixSingular = true,
 	PrefixTypeName = {"person"} -- example: "Hagustaldaz"
 })
@@ -938,7 +854,6 @@ DefineLanguageWord("Holta", {
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Wood"},
-	SingularNominative = "Holta",
 	PrefixSingular = true,
 	PrefixTypeName = {"person"} -- example: "Holtagastiz"
 })
@@ -947,7 +862,6 @@ DefineLanguageWord("Laikaz", {
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Dancer"},
-	SingularNominative = "Laikaz",
 	SuffixSingular = true,
 	SuffixTypeName = {"person"} -- example: Hadulaikaz
 })
@@ -956,7 +870,6 @@ DefineLanguageWord("Ridaz", {
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Rider"},
-	SingularNominative = "Ridaz",
 	SuffixSingular = true,
 	SuffixTypeName = {"person"} -- example: Woduridaz
 })
@@ -965,7 +878,6 @@ DefineLanguageWord("Riks", {
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Ruler"},
-	SingularNominative = "Riks",
 	SuffixSingular = true,
 	SuffixTypeName = {"person"} -- example: Theudariks
 })
@@ -974,7 +886,6 @@ DefineLanguageWord("Staldaz", {
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Owner"},
-	SingularNominative = "Staldaz",
 	SuffixSingular = true,
 	SuffixTypeName = {"person"} -- example: Hagustaldaz
 })
@@ -983,7 +894,6 @@ DefineLanguageWord("Theuda", {
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"People"},
-	SingularNominative = "Theuda",
 	PrefixSingular = true,
 	PrefixTypeName = {"person"} -- example: "Theudariks"
 })
@@ -992,7 +902,6 @@ DefineLanguageWord("Wagigaz", {
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"One Who Moves Along Impetuously"},
-	SingularNominative = "Wagigaz",
 	NameSingular = true,
 	TypeName = {"person"}
 })
@@ -1001,7 +910,6 @@ DefineLanguageWord("Wiwaz", {
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Darter"},
-	SingularNominative = "Wiwaz",
 	NameSingular = true,
 	TypeName = {"person"}
 })
@@ -1010,7 +918,6 @@ DefineLanguageWord("Wodu", {
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Fury"},
-	SingularNominative = "Wodu",
 	PrefixSingular = true,
 	PrefixTypeName = {"person"} -- example: Woduridaz
 })

@@ -31,7 +31,6 @@ DefineLanguageWord("Coat", { -- Source: Jacob Grimm, "Deutsche Mythologie", p. 3
 	Language = "kobold",
 	Type = "noun",
 	Meanings = {},
-	SingularNominative = "Coat",
 	SuffixSingular = true,
 	SuffixTypeName = {"person"} -- example: Shellycoat
 })
@@ -40,7 +39,6 @@ DefineLanguageWord("Eke", { -- Source: Jacob Grimm, "Deutsche Mythologie", pp. 3
 	Language = "kobold",
 	Type = "noun",
 	Meanings = {},
-	SingularNominative = "Eke",
 	SuffixSingular = true,
 	SuffixTypeName = {"person"} -- example: Hodeke
 })
@@ -49,7 +47,6 @@ DefineLanguageWord("Hod", { -- Source: Jacob Grimm, "Deutsche Mythologie", pp. 3
 	Language = "kobold",
 	Type = "noun",
 	Meanings = {},
-	SingularNominative = "Hod",
 	PrefixSingular = true,
 	PrefixTypeName = {"person"} -- example: Hodeke
 })
@@ -58,7 +55,6 @@ DefineLanguageWord("Hoid", { -- Source: Jacob Grimm, "Deutsche Mythologie", p. 3
 	Language = "kobold",
 	Type = "noun",
 	Meanings = {},
-	SingularNominative = "Hoid",
 	PrefixSingular = true,
 	PrefixTypeName = {"person"} -- example: Hoidike
 })
@@ -67,7 +63,6 @@ DefineLanguageWord("Hut", { -- Source: Jacob Grimm, "Deutsche Mythologie", p. 10
 	Language = "kobold",
 	Type = "noun",
 	Meanings = {"Hat"},
-	SingularNominative = "Hut",
 	SuffixSingular = true,
 	SuffixTypeName = {"person"} -- example: Pumphut
 })
@@ -76,7 +71,6 @@ DefineLanguageWord("Ike", { -- Source: Jacob Grimm, "Deutsche Mythologie", p. 39
 	Language = "kobold",
 	Type = "noun",
 	Meanings = {},
-	SingularNominative = "Ike",
 	SuffixSingular = true,
 	SuffixTypeName = {"person"} -- example: Hoidike
 })
@@ -85,7 +79,6 @@ DefineLanguageWord("Napf", { -- Source: Jacob Grimm, "Deutsche Mythologie", p. 3
 	Language = "kobold",
 	Type = "noun",
 	Meanings = {},
-	SingularNominative = "Napf",
 	PrefixSingular = true,
 	PrefixTypeName = {"person"} -- example: Napfhans
 })
@@ -94,7 +87,6 @@ DefineLanguageWord("Pump", { -- Source: Jacob Grimm, "Deutsche Mythologie", p. 1
 	Language = "kobold",
 	Type = "noun",
 	Meanings = {},
-	SingularNominative = "Pump",
 	PrefixSingular = true,
 	PrefixTypeName = {"person"} -- example: Pumphut
 })

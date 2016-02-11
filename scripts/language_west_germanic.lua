@@ -29,6 +29,5 @@ DefineLanguageWord("Alßinjō", { -- alternatively spelled "Alßnjō"; Source: A
 	Language = "west-germanic",
 	Type = "noun",
 	Meanings = {"Female Elf"},
-	SingularNominative = "Alßinjō",
 	Gender = "Feminine"
 })

@@ -30,7 +30,6 @@ DefineLanguageWord("Adel", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Type = "noun",
 	Meanings = {"Lineage", "Noble Lineage", "Noble"}, -- source gives "Geschlecht, edles Geschlecht, Adel" as the meaning
 	DerivesFrom = {"old-high-german", "noun", "Adal"},
-	SingularNominative = "Adel",
 	Gender = "Masculine"
 })
 
@@ -39,7 +38,6 @@ DefineLanguageWord("Bach", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Type = "noun",
 	Meanings = {"Stream"}, -- source gives the German "Bach" as the meaning
 	DerivesFrom = {"old-high-german", "noun", "Bah"},
-	SingularNominative = "Bach",
 	Gender = "Masculine"
 })
 
@@ -48,7 +46,6 @@ DefineLanguageWord("Bat", { -- Source: August Fick and Alf Torp, "Wortschatz der
 	Type = "noun",
 	Meanings = {"Bath", "Baths"}, -- source gives the German "Bad" as the meaning
 	DerivesFrom = {"old-high-german", "noun", "Bad"},
-	SingularNominative = "Bat",
 	Gender = "Neuter"
 })
 
@@ -57,8 +54,9 @@ DefineLanguageWord("Berc", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Type = "noun",
 	Meanings = {"Mountain", "Hill"}, -- source gives "Berg" as the meaning
 	DerivesFrom = {"old-high-german", "noun", "Berg"},
-	SingularNominative = "Berc",
-	SingularGenitive = "Berges",
+	NumberCaseInflections = {
+		"singular", "genitive", "Berges"
+	},
 	Gender = "Masculine"
 })
 
@@ -67,7 +65,6 @@ DefineLanguageWord("Bluome", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Type = "noun",
 	Meanings = {"Flower"}, -- source gives the German "Blume" as the meaning
 	DerivesFrom = {"old-high-german", "noun", "Bluomo"},
-	SingularNominative = "Bluome",
 	Gender = "Masculine"
 })
 
@@ -76,7 +73,6 @@ DefineLanguageWord("Bluost", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Type = "noun",
 	Meanings = {"Blossom"}, -- apparently, but it is not clear from the source
 	DerivesFrom = {"proto-germanic", "noun", "Blôma"},
-	SingularNominative = "Bluost",
 	Gender = "Feminine"
 })
 
@@ -85,7 +81,6 @@ DefineLanguageWord("Burc", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Type = "noun",
 	Meanings = {"Fortified Place", "Castle", "Palace", "City"}, -- source gives "befestigter Ort, Burg, Schloß, Stadt" as the meaning
 	DerivesFrom = {"old-high-german", "noun", "Burg"},
-	SingularNominative = "Burc",
 	Gender = "Feminine"
 })
 
@@ -93,7 +88,6 @@ DefineLanguageWord("Gart", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Language = "middle-high-german",
 	Type = "noun",
 	Meanings = {"Prickle", "Stick for Driving Animals"},
-	SingularNominative = "Gart",
 	Gender = "Masculine"
 })
 			
@@ -102,8 +96,9 @@ DefineLanguageWord("Hert", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Type = "noun",
 	Meanings = {"Stove"}, -- source gives "Herd" as the meaning
 	DerivesFrom = {"old-high-german", "noun", "Herd"},
-	SingularNominative = "Hert",
-	SingularGenitive = "Herdes",
+	NumberCaseInflections = {
+		"singular", "genitive", "Herdes"
+	},
 	Gender = "Masculine"
 })
 
@@ -111,15 +106,13 @@ DefineLanguageWord("Hort", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Language = "middle-high-german",
 	Type = "noun",
 	Meanings = {"Treasure"},
-	DerivesFrom = {"old-high-german", "noun", "Hort"},
-	SingularNominative = "Hort"
+	DerivesFrom = {"old-high-german", "noun", "Hort"}
 })
 
 DefineLanguageWord("Kien", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 4, 7.
 	Language = "middle-high-german",
 	Type = "noun",
 	Meanings = {"Fir", "Spruce"," Fir Splinter", "Fir Torch", "Spruce Splinter", "Spruce Torch"},
-	SingularNominative = "Kien",
 	Gender = "Masculine"
 })
 
@@ -142,8 +135,9 @@ DefineLanguageWord("Marc", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Type = "noun",
 	Meanings = {"Marrow"},
 	DerivesFrom = {"old-high-german", "noun", "Marc"},
-	SingularNominative = "Marc",
-	SingularGenitive = "Marges"
+	NumberCaseInflections = {
+		"singular", "genitive", "Marges"
+	}
 })
 
 DefineLanguageWord("Miete", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 7.
@@ -151,7 +145,6 @@ DefineLanguageWord("Miete", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Type = "noun",
 	Meanings = {"Payment", "Reward", "Bribe"},
 	DerivesFrom = {"old-high-german", "noun", "Mēta"},
-	SingularNominative = "Miete",
 	Gender = "Feminine"
 })
 
@@ -159,7 +152,6 @@ DefineLanguageWord("Nare", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Language = "middle-high-german",
 	Type = "noun",
 	Meanings = {"Salvation", "Rescue", "Nourishment", "Sustenance"},
-	SingularNominative = "Nare",
 	Gender = "Feminine"
 })
 
@@ -175,7 +167,6 @@ DefineLanguageWord("Ort", { -- Source: Sean Crist, "An Analysis of *z loss in We
 	Type = "noun",
 	Meanings = {"Point", "Corner", "Edge of a Part", "Edge of a Piece", "Edge of a Small Coin"},
 	DerivesFrom = {"old-high-german", "noun", "Ort"},
-	SingularNominative = "Ort",
 	Gender = "Masculine"
 })
 
@@ -183,7 +174,6 @@ DefineLanguageWord("Rünne", { -- Source: Sean Crist, "An Analysis of *z loss in
 	Language = "middle-high-german",
 	Type = "noun",
 	Meanings = {"Storm Surge"},
-	SingularNominative = "Rünne",
 	Gender = "Feminine"
 })
 
@@ -192,7 +182,6 @@ DefineLanguageWord("Viur", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Type = "noun",
 	Meanings = {"Fire"}, -- source gives "Feuer" as the meaning
 	DerivesFrom = {"old-high-german", "noun", "Fuir"},
-	SingularNominative = "Viur",
 	Gender = "Neuter"
 })
 
@@ -200,15 +189,13 @@ DefineLanguageWord("Weit", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Language = "middle-high-german",
 	Type = "noun",
 	Meanings = {"Woad"},
-	SingularNominative = "Weit",
 	Gender = "Masculine"
 })
 
 DefineLanguageWord("Zwirn", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1-2, 6.
 	Language = "middle-high-german",
 	Type = "noun",
-	Meanings = {"Doubly Spun Twine"},
-	SingularNominative = "Zwirn"
+	Meanings = {"Doubly Spun Twine"}
 })
 
 DefineLanguageWord("Zwirnen", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.

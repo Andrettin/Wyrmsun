@@ -56,22 +56,22 @@ DefineLanguageWord("Dvýlika", { -- Source: Winfred P. Lehmann, "A Grammar of Pr
 DefineLanguageWord("Jéras", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "lithuanian",
 	Type = "noun",
-	Meanings = {"Yearling Lamb"},
-	SingularNominative = "Jéras"
+	Meanings = {"Yearling Lamb"}
 })
 
 DefineLanguageWord("Pẽkus", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "lithuanian",
 	Type = "noun",
-	Meanings = {},
-	SingularNominative = "Pẽkus"
+	Meanings = {}
 })
 
-DefineLanguageWord("Pū́lias", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+DefineLanguageWord("Pū́lias", { -- this is the plural; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "lithuanian",
 	Type = "noun",
 	Meanings = {"Pus"},
-	PluralNominative = "Pū́lias"
+	NumberCaseInflections = {
+		"plural", "nominative", "Pū́lias"
+	}
 })
 
 DefineLanguageWord("Raũdas", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
@@ -112,6 +112,5 @@ DefineLanguageWord("Źengiù", { -- Source: Winfred P. Lehmann, "A Grammar of Pr
 DefineLanguageWord("Žìrnis", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "lithuanian",
 	Type = "noun",
-	Meanings = {"Pea"},
-	SingularNominative = "Žìrnis"
+	Meanings = {"Pea"}
 })

@@ -28,30 +28,26 @@
 DefineLanguageWord("Laisius", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 181.
 	Language = "old-frankish",
 	Type = "noun",
-	Meanings = {"Womb"}, -- source gives (in German) "Schoß" as the meaning
-	SingularNominative = "Laisius"
+	Meanings = {"Womb"} -- source gives (in German) "Schoß" as the meaning
 })
 
 DefineLanguageWord("Nimid", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 151.
 	Language = "old-frankish",
 	Type = "noun",
 	Meanings = {"Holy Pasture"}, -- source gives (in German) "heiliger, gehegter Waldplatz, Weideplatz für die gehegten Opfertiere" as the meaning
-	SingularNominative = "Nimid",
 	Gender = "Masculine"
 })
 
 DefineLanguageWord("Scramasacs", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 235.
 	Language = "old-frankish",
 	Type = "noun",
-	Meanings = {"Knife-like Sword"}, -- source gives (in German) "messerartiges Schwert" as the meaning
-	SingularNominative = "Scramasacs"
+	Meanings = {"Knife-like Sword"} -- source gives (in German) "messerartiges Schwert" as the meaning
 })
 
 DefineLanguageWord("Sworga", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.
 	Language = "old-frankish",
 	Type = "noun",
 	Meanings = {"Worry"}, -- presumably (this is the meaning given to the Proto-Germanic original word, and no meaning is specifically given to this one)
-	SingularNominative = "Sworga",
 	Gender = "Feminine"
 })
 

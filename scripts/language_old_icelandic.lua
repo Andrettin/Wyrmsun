@@ -25,11 +25,13 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageWord("Drósir", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
+DefineLanguageWord("Drósir", { -- this is the plural; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "old-icelandic",
 	Type = "noun",
 	Meanings = {"Women"},
-	PluralNominative = "Drósir"
+	NumberCaseInflections = {
+		"plural", "nominative", "Drósir"
+	}
 })
 
 DefineLanguageWord("Dýrt", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
@@ -42,22 +44,19 @@ DefineLanguageWord("Dýrt", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 DefineLanguageWord("Eyra", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
 	Language = "old-icelandic",
 	Type = "noun",
-	Meanings = {"Ear"},
-	SingularNominative = "Eyra"
+	Meanings = {"Ear"}
 })
 
 DefineLanguageWord("Ker", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
 	Language = "old-icelandic",
 	Type = "noun",
-	Meanings = {"Container"},
-	SingularNominative = "Ker"
+	Meanings = {"Container"}
 })
 
 DefineLanguageWord("Lín", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "old-icelandic",
 	Type = "noun",
-	Meanings = {"Linen"},
-	PluralNominative = "Lín"
+	Meanings = {"Linen"}
 })
 
 DefineLanguageWord("Meiri", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 3.
@@ -70,15 +69,13 @@ DefineLanguageWord("Meiri", { -- Source: Sean Crist, "An Analysis of *z loss in 
 DefineLanguageWord("Reyrr", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
 	Language = "old-icelandic",
 	Type = "noun",
-	Meanings = {"Tube"},
-	SingularNominative = "Reyrr"
+	Meanings = {"Tube"}
 })
 
 DefineLanguageWord("Sár", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 3.
 	Language = "old-icelandic",
 	Type = "noun",
-	Meanings = {"Wound"},
-	SingularNominative = "Sár"
+	Meanings = {"Wound"}
 })
 
 DefineLanguageWord("Spunno", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.

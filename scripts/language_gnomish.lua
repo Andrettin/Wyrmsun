@@ -29,7 +29,6 @@ DefineLanguageWord("Bimbam", {
 	Language = "gnomish",
 	Type = "noun",
 	Meanings = {},
-	SingularNominative = "Bimbam",
 	Gender = "Masculine", -- presumably, since it is a masculine personal name
 	NameSingular = true,
 	TypeName = {"person"}
@@ -39,7 +38,6 @@ DefineLanguageWord("Clavo", {
 	Language = "gnomish",
 	Type = "noun",
 	Meanings = {},
-	SingularNominative = "Clavo",
 	Gender = "Masculine", -- presumably, since it is a masculine personal name
 	NameSingular = true,
 	TypeName = {"person"}
@@ -49,7 +47,6 @@ DefineLanguageWord("Cravatu", {
 	Language = "gnomish",
 	Type = "noun",
 	Meanings = {},
-	SingularNominative = "Cravatu",
 	Gender = "Masculine", -- presumably, since it is a masculine personal name
 	NameSingular = true,
 	TypeName = {"person"}
@@ -59,7 +56,6 @@ DefineLanguageWord("Kalutho", {
 	Language = "gnomish",
 	Type = "noun",
 	Meanings = {},
-	SingularNominative = "Kalutho",
 	Gender = "Masculine", -- presumably, since it is a masculine personal name
 	NameSingular = true,
 	TypeName = {"person"}
@@ -68,15 +64,13 @@ DefineLanguageWord("Kalutho", {
 DefineLanguageWord("Leffas", {
 	Language = "gnomish",
 	Type = "noun",
-	Meanings = {"Soul of a Plant, Stone or Tree"},
-	SingularNominative = "Leffas"
+	Meanings = {"Soul of a Plant, Stone or Tree"}
 })
 
 DefineLanguageWord("Pypo", {
 	Language = "gnomish",
 	Type = "noun",
 	Meanings = {},
-	SingularNominative = "Pypo",
 	Gender = "Masculine", -- presumably, since it is a masculine personal name
 	NameSingular = true,
 	TypeName = {"person"}
@@ -86,7 +80,6 @@ DefineLanguageWord("Rubezahl", {
 	Language = "gnomish",
 	Type = "noun",
 	Meanings = {},
-	SingularNominative = "Rubezahl",
 	Gender = "Masculine", -- presumably, since it is a masculine personal name
 	NameSingular = true,
 	TypeName = {"person"}

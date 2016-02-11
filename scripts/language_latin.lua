@@ -25,167 +25,152 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageWord("Alucitae", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 101.
+DefineLanguageWord("Alucitae", { -- this is the plural; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 101.
 	Language = "latin",
 	Type = "noun",
 	Meanings = {"Gnats", "Mosquitos"},
-	PluralNominative = "Alucitae"
+	NumberCaseInflections = {
+		"plural", "nominative", "Alucitae"
+	}
 })
 
 DefineLanguageWord("Caesaries", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 7.
 	Language = "latin",
 	Type = "noun",
-	Meanings = {"Head Hair"},
-	SingularNominative = "Caesaries"
+	Meanings = {"Head Hair"}
 })
 
 DefineLanguageWord("Caper", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
 	Language = "latin",
 	Type = "noun",
-	Meanings = {"Male Goat"},
-	SingularNominative = "Caper"
+	Meanings = {"Male Goat"}
 })
 
 DefineLanguageWord("Caulis", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
 	Language = "latin",
 	Type = "noun",
-	Meanings = {}, -- words derived from it mean (in German) "Kohl"
-	SingularNominative = "Caulis"
+	Meanings = {} -- words derived from it mean (in German) "Kohl"
 })
 
-DefineLanguageWord("Conopes", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 101.
+DefineLanguageWord("Conopes", { -- this is the plural; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 101.
 	Language = "latin",
 	Type = "noun",
 	Meanings = {"Gnats"},
-	PluralNominative = "Conopes"
+	NumberCaseInflections = {
+		"plural", "nominative", "Conopes"
+	}
 })
 
 DefineLanguageWord("Conopeum", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 102.
 	Language = "latin",
 	Type = "noun",
-	Meanings = {"Mosquito Net"},
-	SingularNominative = "Conopeum"
+	Meanings = {"Mosquito Net"}
 })
 
 DefineLanguageWord("Crātis", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "latin",
 	Type = "noun",
-	Meanings = {"Wicker-Work"},
-	SingularNominative = "Crātis"
+	Meanings = {"Wicker-Work"}
 })
 
 DefineLanguageWord("Custos", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
 	Language = "latin",
 	Type = "noun",
-	Meanings = {"Guard"}, -- source gives meaning as "a Guard"
-	SingularNominative = "Custos"
+	Meanings = {"Guard"} -- source gives meaning as "a Guard"
 })
 
 DefineLanguageWord("Fāgus", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "latin",
 	Type = "noun",
-	Meanings = {"Beech"},
-	SingularNominative = "Fāgus"
+	Meanings = {"Beech"}
 })
 
 DefineLanguageWord("Far", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
 	Language = "latin",
 	Type = "noun",
-	Meanings = {"Wheat", "Spelt"}, -- the word means one of these, not both
-	SingularNominative = "Far"
+	Meanings = {"Wheat", "Spelt"} -- the word means one of these, not both
 })
 
 DefineLanguageWord("Foris", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "latin",
 	Type = "noun",
-	Meanings = {"Door"},
-	SingularNominative = "Foris"
+	Meanings = {"Door"}
 })
 
 DefineLanguageWord("Frāter", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "latin",
 	Type = "noun",
-	Meanings = {"Brother"},
-	SingularNominative = "Frāter"
+	Meanings = {"Brother"}
 })
 
 DefineLanguageWord("Gallus", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 101.
 	Language = "latin",
 	Type = "noun",
 	Meanings = {"Eunuch"},
-	SingularNominative = "Gallus",
-	PluralNominative = "Galli"
+	NumberCaseInflections = {
+		"plural", "nominative", "Galli"
+	}
 })
 
 DefineLanguageWord("Grānum", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "latin",
 	Type = "noun",
-	Meanings = {"Grain"},
-	SingularNominative = "Grānum"
+	Meanings = {"Grain"}
 })
 
 DefineLanguageWord("Haedus", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
 	Language = "latin",
 	Type = "noun",
-	Meanings = {"Goat"},
-	SingularNominative = "Haedus"
+	Meanings = {"Goat"}
 })
 
 DefineLanguageWord("Hasta", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
 	Language = "latin",
 	Type = "noun",
-	Meanings = {"Rod", "Shaft", "Spear"},
-	SingularNominative = "Hasta"
+	Meanings = {"Rod", "Shaft", "Spear"}
 })
 
 DefineLanguageWord("Hortus", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "latin",
 	Type = "noun",
-	Meanings = {"Garden"},
-	SingularNominative = "Hortus"
+	Meanings = {"Garden"}
 })
 
 DefineLanguageWord("Pater", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "latin",
 	Type = "noun",
-	Meanings = {"Father"},
-	SingularNominative = "Pater"
+	Meanings = {"Father"}
 })
 
 DefineLanguageWord("Pecu", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "latin",
 	Type = "noun",
-	Meanings = {"Herd"},
-	SingularNominative = "Pecu"
+	Meanings = {"Herd"}
 })
 
 DefineLanguageWord("Sēmen", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "latin",
 	Type = "noun",
-	Meanings = {"Seed"},
-	SingularNominative = "Sēmen"
+	Meanings = {"Seed"}
 })
 
 DefineLanguageWord("Sōl", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "latin",
 	Type = "noun",
-	Meanings = {"Sun"},
-	SingularNominative = "Sōl"
+	Meanings = {"Sun"}
 })
 
 DefineLanguageWord("Sūs", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
 	Language = "latin",
 	Type = "noun",
-	Meanings = {"Sow"},
-	SingularNominative = "Sūs"
+	Meanings = {"Sow"}
 })
 
 DefineLanguageWord("Vir", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
 	Language = "latin",
 	Type = "noun",
 	Meanings = {},
-	DerivesFrom = {"proto-indo-european", "noun", "Wiros"},
-	SingularNominative = "Vir"
+	DerivesFrom = {"proto-indo-european", "noun", "Wiros"}
 })
 
 DefineLanguageWord("Alucinare", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 101.

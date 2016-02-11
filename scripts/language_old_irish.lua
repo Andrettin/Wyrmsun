@@ -28,30 +28,26 @@
 DefineLanguageWord("Cacht", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
 	Language = "old-irish",
 	Type = "noun",
-	Meanings = {"Female Slave"},
-	SingularNominative = "Cacht"
+	Meanings = {"Female Slave"}
 })
 
 DefineLanguageWord("Fēn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
 	Language = "old-irish",
 	Type = "noun",
-	Meanings = {"Wagon"},
-	SingularNominative = "Fēn"
+	Meanings = {"Wagon"}
 })
 
 DefineLanguageWord("Fer", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
 	Language = "old-irish",
 	Type = "noun",
 	Meanings = {},
-	DerivesFrom = {"proto-indo-european", "noun", "Wiros"},
-	SingularNominative = "Fer"
+	DerivesFrom = {"proto-indo-european", "noun", "Wiros"}
 })
 
 DefineLanguageWord("Giús", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 4.
 	Language = "old-irish",
 	Type = "noun",
-	Meanings = {"Fir"},
-	SingularNominative = "Giús"
+	Meanings = {"Fir"}
 })
 
 DefineLanguageWord("Tur", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.

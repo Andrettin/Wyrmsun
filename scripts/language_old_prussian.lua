@@ -28,7 +28,6 @@
 DefineLanguageWord("Semen", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "old-prussian",
 	Type = "noun",
-	Meanings = {"Seed"},
-	SingularNominative = "Semen"
+	Meanings = {"Seed"}
 })
 

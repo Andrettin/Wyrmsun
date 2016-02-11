@@ -30,6 +30,5 @@ DefineLanguageWord("Herde", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Type = "noun",
 	Meanings = {"Flax Fiber"},
 	DerivesFrom = {"proto-germanic", "noun", "Hazdaz"},
-	SingularNominative = "Herde",
 	Uncountable = true -- as a material, it is likely to be uncountable
 })

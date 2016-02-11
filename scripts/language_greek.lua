@@ -27,33 +27,32 @@
 
 -- Greek
 
-DefineLanguageWord("Κώνωπες", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 101.
+DefineLanguageWord("Κώνωπες", { -- this is the plural; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 101.
 	Language = "greek",
 	Type = "noun",
 	Meanings = {"Gnats"},
-	PluralNominative = "Κώνωπες"
+	NumberCaseInflections = {
+		"plural", "nominative", "Κώνωπες"
+	}
 })
 
 DefineLanguageWord("Μισθός", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 7.
 	Language = "greek",
 	Type = "noun",
 	Meanings = {"Reward", "Payment of a Soldier"},
-	SingularNominative = "Μισθός",
 	Gender = "Masculine"
 })
 
 DefineLanguageWord("Χέσ-χιον", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
 	Language = "greek",
 	Type = "noun",
-	Meanings = {"Oakum"}, -- source gives the German word "Werg" as the meaning
-	SingularNominative = "Χέσ-χιον" -- is this really an hyphen in the word, or are these two forms of the word?
+	Meanings = {"Oakum"} -- source gives the German word "Werg" as the meaning
 })
 
 DefineLanguageWord("Χύσθος", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
 	Language = "greek",
 	Type = "noun",
 	Meanings = {"Cavity", "Vulva"},
-	SingularNominative = "Χύσθος",
 	Gender = "Masculine"
 })
 
@@ -61,7 +60,6 @@ DefineLanguageWord("Abdera", { -- should be written as the original Greek name (
 	Language = "greek",
 	Type = "noun",
 	Meanings = {},
-	SingularNominative = "Abdera",
 	NameSingular = true,
 	TypeName = {"settlement"} -- example: "Abdera"
 })
@@ -70,7 +68,6 @@ DefineLanguageWord("Abydus", { -- should be written as the original Greek name (
 	Language = "greek",
 	Type = "noun",
 	Meanings = {},
-	SingularNominative = "Abydus",
 	NameSingular = true,
 	TypeName = {"settlement"} -- example: "Abydus"
 })
@@ -79,7 +76,6 @@ DefineLanguageWord("Acragas", { -- should be written as the original Greek name 
 	Language = "greek",
 	Type = "noun",
 	Meanings = {},
-	SingularNominative = "Acragas",
 	NameSingular = true,
 	TypeName = {"settlement"} -- example: "Acragas" (Agrigentum)
 })
@@ -88,7 +84,6 @@ DefineLanguageWord("Agathe", { -- should be written as the original Greek name (
 	Language = "greek",
 	Type = "noun",
 	Meanings = {},
-	SingularNominative = "Agathe",
 	NameSingular = true,
 	TypeName = {"settlement"} -- example: "Agathe"
 })
@@ -97,7 +92,6 @@ DefineLanguageWord("Ainos", { -- should be written as the original Greek name (w
 	Language = "greek",
 	Type = "noun",
 	Meanings = {},
-	SingularNominative = "Ainos",
 	NameSingular = true,
 	TypeName = {"settlement"} -- example: "Ainos"
 })
@@ -106,7 +100,6 @@ DefineLanguageWord("Alalia", { -- should be written as the original Greek name (
 	Language = "greek",
 	Type = "noun",
 	Meanings = {},
-	SingularNominative = "Alalia",
 	NameSingular = true,
 	TypeName = {"settlement"} -- example: "Alalia" (Aleria)
 })
@@ -115,7 +108,6 @@ DefineLanguageWord("Alonae", { -- should be written as the original Greek name (
 	Language = "greek",
 	Type = "noun",
 	Meanings = {},
-	SingularNominative = "Alonae",
 	NameSingular = true,
 	TypeName = {"settlement"} -- example: "Alonae"
 })
@@ -124,7 +116,6 @@ DefineLanguageWord("Amisus", { -- should be written as the original Greek name (
 	Language = "greek",
 	Type = "noun",
 	Meanings = {},
-	SingularNominative = "Amisus",
 	NameSingular = true,
 	TypeName = {"settlement"} -- example: "Amisus"
 })
@@ -133,7 +124,6 @@ DefineLanguageWord("Amphi", { -- should be written as the original Greek name (w
 	Language = "greek",
 	Type = "noun",
 	Meanings = {},
-	SingularNominative = "Amphi",
 	PrefixSingular = true,
 	PrefixTypeName = {"settlement"} -- example: "Amphipolis"
 })
@@ -142,7 +132,6 @@ DefineLanguageWord("Calli", { -- should be written as the original Greek name (w
 	Language = "greek",
 	Type = "noun",
 	Meanings = {},
-	SingularNominative = "Calli",
 	PrefixSingular = true,
 	PrefixTypeName = {"settlement"} -- example: "Callipolis"
 })
@@ -150,79 +139,77 @@ DefineLanguageWord("Calli", { -- should be written as the original Greek name (w
 DefineLanguageWord("Χórtos", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "greek",
 	Type = "noun",
-	Meanings = {"Garden"},
-	SingularNominative = "Χórtos"
+	Meanings = {"Garden"}
 })
 
-DefineLanguageWord("Érā", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+DefineLanguageWord("Érā", { -- this is the genitive; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "greek",
 	Type = "noun",
 	Meanings = {"Earth"},
-	SingularGenitive = "Érā"
+	NumberCaseInflections = {
+		"singular", "genitive", "Érā"
+	}
 })
 
 DefineLanguageWord("Híppos", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 	Language = "greek",
 	Type = "noun",
 	Meanings = {"Horse"},
-	DerivesFrom = {"proto-indo-european", "noun", "Éḱwos"},
-	SingularNominative = "Híppos"
+	DerivesFrom = {"proto-indo-european", "noun", "Éḱwos"}
 })
 
 DefineLanguageWord("Kúrtos", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "greek",
 	Type = "noun",
-	Meanings = {"Cage"},
-	SingularNominative = "Kúrtos"
+	Meanings = {"Cage"}
 })
 
-DefineLanguageWord("Nuktós", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+DefineLanguageWord("Nuktós", { -- this is the genitive; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "greek",
 	Type = "noun",
 	Meanings = {"Night"}, -- presumably, but is not entirely clear from source
-	SingularGenitive = "Nuktós"
+	NumberCaseInflections = {
+		"singular", "genitive", "Nuktós"
+	}
 })
 
 DefineLanguageWord("Óχos", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "greek",
 	Type = "noun",
-	Meanings = {"Wagon"},
-	SingularNominative = "Óχos"
+	Meanings = {"Wagon"}
 })
 
 DefineLanguageWord("Omφḗ", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "greek",
 	Type = "noun",
-	Meanings = {"Oracle"},
-	SingularNominative = "Omφḗ"
+	Meanings = {"Oracle"}
 })
 
 DefineLanguageWord("Patḗr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "greek",
 	Type = "noun",
-	Meanings = {"Father"},
-	SingularNominative = "Patḗr"
+	Meanings = {"Father"}
 })
 
 DefineLanguageWord("Phāgós", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "greek",
 	Type = "noun",
-	Meanings = {"Oak"},
-	SingularNominative = "Phāgós"
+	Meanings = {"Oak"}
 })
 
-DefineLanguageWord("Podós", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+DefineLanguageWord("Podós", { -- this is the genitive; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "greek",
 	Type = "noun",
 	Meanings = {"Foot"}, -- meaning not explicitly given in source, but Proto-Germanic cognate "Fōts" means "Foot"
-	SingularGenitive = "Podós"
+	NumberCaseInflections = {
+		"singular", "genitive", "Podós"
+	}
 })
 
 DefineLanguageWord("Polis", { -- should be written as the original Greek name (with Greek characters)
 	Language = "greek",
 	Type = "noun",
 	Meanings = {"City"},
-	SingularNominative = "Polis",
 	SuffixSingular = true,
 	SuffixTypeName = {"settlement"} -- examples: "Amphipolis", "Callipolis", "Neapolis" (Naples)
 })
@@ -230,30 +217,26 @@ DefineLanguageWord("Polis", { -- should be written as the original Greek name (w
 DefineLanguageWord("Skiá", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
 	Language = "greek",
 	Type = "noun",
-	Meanings = {"Shadow"},
-	SingularNominative = "Skiá"
+	Meanings = {"Shadow"}
 })
 
-DefineLanguageWord("Téphra", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
+DefineLanguageWord("Téphra", { -- is this the plural form? Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
 	Language = "greek",
 	Type = "noun",
 	Meanings = {"Ashes"},
-	DerivesFrom = {"proto-indo-european", "noun", "Dhagh"},
-	SingularNominative = "Téphra" -- is this the plural form?
+	DerivesFrom = {"proto-indo-european", "noun", "Dhagh"}
 })
 
 DefineLanguageWord("Thugátēr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
 	Language = "sanskrit",
 	Type = "noun",
-	Meanings = {"Daughter"},
-	SingularNominative = "Thugátēr"
+	Meanings = {"Daughter"}
 })
 
 DefineLanguageWord("Thúrā", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "greek",
 	Type = "noun",
-	Meanings = {"Door"},
-	SingularNominative = "Thúrā"
+	Meanings = {"Door"}
 })
 
 DefineLanguageWord("Baínō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.

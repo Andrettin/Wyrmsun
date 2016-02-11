@@ -30,7 +30,6 @@ DefineLanguageWord("Ađal", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Type = "noun",
 	Meanings = {"Nature", "Character"}, -- source gives "natura, indoles" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Aþala"},
-	SingularNominative = "Ađal",
 	Gender = "Neuter"
 })
 
@@ -39,7 +38,6 @@ DefineLanguageWord("Ađalskâli", { -- Source: August Fick and Alf Torp, "Wortsc
 	Type = "noun",
 	Meanings = {"Main Hall"}, -- source gives "Haupthalle" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Aþala"},
-	SingularNominative = "Ađalskâli",
 	Gender = "Masculine"
 })
 
@@ -48,7 +46,6 @@ DefineLanguageWord("Ađili", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Type = "noun",
 	Meanings = {"Him whom Befits to Take Charge of Something in a Tribunal"}, -- source gives "dem es zukommt, eine Sache, vor Gericht zu führen" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Aþala"},
-	SingularNominative = "Ađili",
 	Gender = "Masculine"
 })
 
@@ -56,16 +53,16 @@ DefineLanguageWord("Aldr", { -- Source: Geir T. Zoëga, "A Concise Dictionary of
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Age", "Lifetime"},
-	SingularNominative = "Aldr",
-	SingularGenitive = "Aldrs",
+	NumberCaseInflections = {
+		"singular", "genitive", "Aldrs"
+	},
 	Gender = "Masculine"
 })
 
-DefineLanguageWord("Aldrnari", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
+DefineLanguageWord("Aldrnari", { -- Compound of the words "Aldr" and "Nari", literally "life-sustainer"; Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Fire"},
-	SingularNominative = "Aldrnari", -- Compound of the words "Aldr" and "Nari", literally "life-sustainer"
 	Gender = "Masculine"
 })
 
@@ -73,8 +70,7 @@ DefineLanguageWord("Ār", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-G
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Year"}, -- derived from Proto-Germanic "Yēra", which means "Year"
-	DerivesFrom = {"proto-germanic", "noun", "Yēra"},
-	SingularNominative = "Ār"
+	DerivesFrom = {"proto-germanic", "noun", "Yēra"}
 })
 
 DefineLanguageWord("Bađ", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 133.
@@ -82,7 +78,6 @@ DefineLanguageWord("Bađ", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Type = "noun",
 	Meanings = {"Steam Bath"}, -- source gives the German "Dampfbad" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Baþa"},
-	SingularNominative = "Bađ",
 	Gender = "Neuter"
 })
 
@@ -90,25 +85,22 @@ DefineLanguageWord("Bekkr", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Stream"}, -- source gives the German "Bach" as the meaning
-	DerivesFrom = {"proto-germanic", "noun", "Baki"},
-	SingularNominative = "Bekkr"
+	DerivesFrom = {"proto-germanic", "noun", "Baki"}
 })
 
-DefineLanguageWord("Bera", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
+DefineLanguageWord("Bera", { -- source also gives alternative form "Birna"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Female Bear"}, -- source gives the German "Bärin" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Berôn"}, -- presumably from "Berôn", since that has the (apparently) same meaning and is also feminine, but the source is not entirely clear (it could be "Beran" instead)
-	SingularNominative = "Bera", -- source also gives alternative form "Birna"
 	Gender = "Feminine"
 })
 
-DefineLanguageWord("Bjarg", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
+DefineLanguageWord("Bjarg", { -- source also gives the alternate form "Berg"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Cliff", "Mountain"}, -- source gives "Fels, Berg" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Berga"},
-	SingularNominative = "Bjarg", -- source also gives the alternate form "Berg"
 	Gender = "Neuter"
 })
 
@@ -117,7 +109,6 @@ DefineLanguageWord("Bjǫrn", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Type = "noun",
 	Meanings = {"Bear"}, -- source gives the German "Bär" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Beran"},
-	SingularNominative = "Bjǫrn",
 	Gender = "Masculine"
 })
 
@@ -126,7 +117,6 @@ DefineLanguageWord("Blômi", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Type = "noun",
 	Meanings = {"Flower"}, -- source gives the German "Blume" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Blôma"},
-	SingularNominative = "Blômi",
 	Gender = "Masculine"
 })
 
@@ -135,7 +125,6 @@ DefineLanguageWord("Blômstr", { -- Source: August Fick and Alf Torp, "Wortschat
 	Type = "noun",
 	Meanings = {"Blossom"}, -- apparently, but it is not clear from the source
 	DerivesFrom = {"proto-germanic", "noun", "Blôma"},
-	SingularNominative = "Blômstr",
 	Gender = "Neuter"
 })
 
@@ -143,8 +132,7 @@ DefineLanguageWord("Bōk", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Book"}, -- derived from Proto-Germanic "Bōks"; the source has the meaning for that word as "'tablet' > 'book'", but it is not clear if it means that the meaning became book in the child languages of Proto-Germanic, or within the timespan of the language itself
-	DerivesFrom = {"proto-germanic", "noun", "Bōks"},
-	SingularNominative = "Bōk"
+	DerivesFrom = {"proto-germanic", "noun", "Bōks"}
 })
 
 DefineLanguageWord("Borg", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
@@ -152,70 +140,64 @@ DefineLanguageWord("Borg", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Type = "noun",
 	Meanings = {"Terrace", "Rampart", "Wall", "Castle", "City"}, -- source gives "Terrasse, Wall, Mauer, Burg, Stadt" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Burg"},
-	SingularNominative = "Borg",
 	Gender = "Feminine"
 })
 
 DefineLanguageWord("Bǫrr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
 	Language = "old-norse",
 	Type = "noun",
-	Meanings = {"Wheat", "Spelt"}, -- the word means one of these, not both
-	SingularNominative = "Bǫrr"
+	Meanings = {"Wheat", "Spelt"} -- the word means one of these, not both
 })
 
 DefineLanguageWord("Broddr", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 9.
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Point", "Sprout"},
-	SingularNominative = "Broddr",
 	Gender = "Masculine"
 })
 
-DefineLanguageWord("Dyrr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+DefineLanguageWord("Dyrr", { -- this is the nominative plural; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Door"}, -- derived from Proto-Germanic "Durez", which has the meaning of "door"
 	DerivesFrom = {"proto-germanic", "noun", "Durez"},
-	PluralNominative = "Dyrr"
+	NumberCaseInflections = {
+		"plural", "nominative", "Dyrr"
+	}
 })
 
 DefineLanguageWord("Fé", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Cattle"},
-	DerivesFrom = {"proto-germanic", "noun", "Fehu"},
-	SingularNominative = "Fé"
+	DerivesFrom = {"proto-germanic", "noun", "Fehu"}
 })
 
 DefineLanguageWord("Fiskr", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
 	Language = "old-norse",
 	Type = "noun",
-	Meanings = {"Fish"},
-	SingularNominative = "Fiskr"
+	Meanings = {"Fish"}
 })
 
 DefineLanguageWord("Flōđ", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Flood"}, -- derived from the Proto-Germanic "Flōduz", which means "Flood"
-	DerivesFrom = {"proto-germanic", "noun", "Flōduz"},
-	SingularNominative = "Flōđ"
+	DerivesFrom = {"proto-germanic", "noun", "Flōduz"}
 })
 
 DefineLanguageWord("Fōtr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Foot"}, -- derived from Proto-Germanic "Fōts", which has the meaning of "foot"
-	DerivesFrom = {"proto-germanic", "noun", "Fōts"},
-	SingularNominative = "Fōtr"
+	DerivesFrom = {"proto-germanic", "noun", "Fōts"}
 })
 
-DefineLanguageWord("Fŷrr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 127.
+DefineLanguageWord("Fŷrr", { -- source also gives the alternate form "Fûrr"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 127.
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Fire"}, -- source gives "Feuer" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Fûir"},
-	SingularNominative = "Fŷrr", -- source also gives the alternate form "Fûrr"
 	Gender = "Masculine"
 })
 
@@ -223,7 +205,6 @@ DefineLanguageWord("Gaddr", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Prickle"},
-	SingularNominative = "Gaddr",
 	Gender = "Masculine"
 })
 
@@ -231,15 +212,13 @@ DefineLanguageWord("Garđr", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Garden"}, -- derived from Proto-Germanic "Gárdiz", which has the meaning of "garden"
-	DerivesFrom = {"proto-germanic", "noun", "Gárdiz"},
-	SingularNominative = "Garđr"
+	DerivesFrom = {"proto-germanic", "noun", "Gárdiz"}
 })
 
 DefineLanguageWord("Greddir", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 10.
 	Language = "old-norse",
 	Type = "noun",
-	Meanings = {"Feeder", "Satisfier"},
-	SingularNominative = "Greddir"
+	Meanings = {"Feeder", "Satisfier"}
 })
 
 DefineLanguageWord("Haddr", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 3, 8.
@@ -247,85 +226,74 @@ DefineLanguageWord("Haddr", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Type = "noun",
 	Meanings = {"Woman's Long Hair"},
 	DerivesFrom = {"proto-germanic", "noun", "Hazdaz"},
-	SingularNominative = "Haddr",
 	Gender = "Masculine"
 })
 
 DefineLanguageWord("Hafr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
 	Language = "old-norse",
 	Type = "noun",
-	Meanings = {"Male Goat"},
-	SingularNominative = "Hafr"
+	Meanings = {"Male Goat"}
 })
 
 DefineLanguageWord("Hane", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "old-norse",
 	Type = "noun",
-	Meanings = {"Rooster"},
-	SingularNominative = "Hane"
+	Meanings = {"Rooster"}
 })
 
 DefineLanguageWord("Hodd", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Treasure"},
-	DerivesFrom = {"proto-germanic", "noun", "Huzda"},
-	SingularNominative = "Hodd"
+	DerivesFrom = {"proto-germanic", "noun", "Huzda"}
 })
 
 DefineLanguageWord("Hrǫnn", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Wave"},
-	SingularNominative = "Hrǫnn",
 	Gender = "Feminine"
 })
 
 DefineLanguageWord("Hundr", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
 	Language = "old-norse",
 	Type = "noun",
-	Meanings = {"Dog"},
-	SingularNominative = "Hundr"
+	Meanings = {"Dog"}
 })
 
 DefineLanguageWord("Hurđ", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Wattle"}, -- derived from Proto-Germanic "Χŕdiz", which has the meaning of "wattle"
-	DerivesFrom = {"proto-germanic", "noun", "Χŕdiz"},
-	SingularNominative = "Hurđ"
+	DerivesFrom = {"proto-germanic", "noun", "Χŕdiz"}
 })
 
 DefineLanguageWord("Kona", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Woman"},
-	DerivesFrom = {"proto-indo-european", "noun", "Gʷen"},
-	SingularNominative = "Kona"
+	DerivesFrom = {"proto-indo-european", "noun", "Gʷen"}
 })
 
 DefineLanguageWord("Korn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Grain"}, -- derived from Proto-Germanic "Kŕnam", which has the meaning of "grain"
-	DerivesFrom = {"proto-germanic", "noun", "Kŕnam"},
-	SingularNominative = "Korn"
+	DerivesFrom = {"proto-germanic", "noun", "Kŕnam"}
 })
 
 DefineLanguageWord("Kyn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Race"},
-	DerivesFrom = {"proto-germanic", "noun", "Kuni"},
-	SingularNominative = "Kyn"
+	DerivesFrom = {"proto-germanic", "noun", "Kuni"}
 })
 
 DefineLanguageWord("Māttr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Might"}, -- derived from Proto-Germanic "Maχtiz", which has the meaning of "Might"
-	DerivesFrom = {"proto-germanic", "noun", "Maχtiz"},
-	SingularNominative = "Māttr"
+	DerivesFrom = {"proto-germanic", "noun", "Maχtiz"}
 })
 
 DefineLanguageWord("Meir", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
@@ -346,8 +314,9 @@ DefineLanguageWord("Mergr", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Type = "noun",
 	Meanings = {"Marrow in a Bone"},
 	DerivesFrom = {"proto-germanic", "noun", "Mazgaz"},
-	SingularNominative = "Mergr",
-	SingularGenitive = "Mergjar",
+	NumberCaseInflections = {
+		"singular", "genitive", "Mergjar"
+	},
 	Gender = "Masculine"
 })
 
@@ -355,31 +324,29 @@ DefineLanguageWord("Nātt", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Night"}, -- derived from Proto-Germanic "Naχts", which means "Night"
-	DerivesFrom = {"proto-germanic", "noun", "Naχts"},
-	SingularNominative = "Nātt"
+	DerivesFrom = {"proto-germanic", "noun", "Naχts"}
 })
 
 DefineLanguageWord("Oddr", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 7.
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Point", "Place"},
-	SingularNominative = "Oddr",
-	SingularGenitive = "Odds",
+	NumberCaseInflections = {
+		"singular", "genitive", "Odds"
+	},
 	Gender = "Masculine"
 })
 
-DefineLanguageWord("Orlǫg", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 10.
+DefineLanguageWord("Orlǫg", { -- is singular or plural?; Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 10.
 	Language = "old-norse",
 	Type = "noun",
-	Meanings = {"Fate"},
-	SingularNominative = "Orlǫg" -- is singular or plural?
+	Meanings = {"Fate"}
 })
 
 DefineLanguageWord("Rann", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"House"},
-	SingularNominative = "Rann",
 	Gender = "Neuter"
 })
 
@@ -387,7 +354,6 @@ DefineLanguageWord("Rǫdd", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Sound", "Voice", "Vowel"},
-	SingularNominative = "Rǫdd",
 	Gender = "Feminine"
 })
 
@@ -395,15 +361,13 @@ DefineLanguageWord("Sāđ", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Seed"}, -- derived from the Proto-Germanic "Sēþiz", which means "Seed"
-	DerivesFrom = {"proto-germanic", "noun", "Sēþiz"},
-	SingularNominative = "Sāđ"
+	DerivesFrom = {"proto-germanic", "noun", "Sēþiz"}
 })
 
 DefineLanguageWord("Síði", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 118.
 	Language = "old-norse",
 	Type = "noun",
-	Meanings = {"Magic-Worker"},
-	SingularNominative = "Síði"
+	Meanings = {"Magic-Worker"}
 })
 
 DefineLanguageWord("Síða", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 118.
@@ -417,39 +381,34 @@ DefineLanguageWord("Sunna", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Sun"}, -- derived from Proto-Germanic "Sunōn", which has the meaning of "Sun"
-	DerivesFrom = {"proto-germanic", "noun", "Sunōn"},
-	SingularNominative = "Sunna"
+	DerivesFrom = {"proto-germanic", "noun", "Sunōn"}
 })
 
 DefineLanguageWord("Svīn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Pig"}, -- derived from the Proto-Germanic "Swīnaz", which means "Pig"
-	DerivesFrom = {"proto-germanic", "noun", "Swīnaz"},
-	SingularNominative = "Svīn"
+	DerivesFrom = {"proto-germanic", "noun", "Swīnaz"}
 })
 
 DefineLanguageWord("Vagn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Wagon"},
-	DerivesFrom = {"proto-germanic", "noun", "Waganaz"}, -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
-	SingularNominative = "Vagn"
+	DerivesFrom = {"proto-germanic", "noun", "Waganaz"} -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 })
 
 DefineLanguageWord("Valkyrja", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 10.
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Valkyrie"},
-	SingularNominative = "Valkyrja",
 	Gender = "feminine"
 })
 
 DefineLanguageWord("Vegr", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
 	Language = "old-norse",
 	Type = "noun",
-	Meanings = {"Way"},
-	SingularNominative = "Vegr"
+	Meanings = {"Way"}
 })
 
 DefineLanguageWord("Vēr", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
@@ -463,8 +422,7 @@ DefineLanguageWord("Verr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Man"},
-	DerivesFrom = {"proto-indo-european", "noun", "Wiros"},
-	SingularNominative = "Verr"
+	DerivesFrom = {"proto-indo-european", "noun", "Wiros"}
 })
 
 DefineLanguageWord("Bauþ", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.

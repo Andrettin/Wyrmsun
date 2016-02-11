@@ -28,23 +28,22 @@
 DefineLanguageWord("Árus", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "irish",
 	Type = "noun",
-	Meanings = {"Dwelling"},
-	SingularNominative = "Árus"
+	Meanings = {"Dwelling"}
 })
 
 DefineLanguageWord("Bri", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
 	Language = "irish",
 	Type = "noun",
 	Meanings = {"Mountain", "Hill"}, -- source gives "Berg" as the meaning
-	SingularNominative = "Bri",
-	SingularGenitive = "Brig"
+	NumberCaseInflections = {
+		"singular", "genitive", "Brig"
+	}
 })
 
 DefineLanguageWord("Brot", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "irish",
 	Type = "noun",
 	Meanings = {"Prickle"},
-	SingularNominative = "Brot",
 	Gender = "Masculine"
 })
 
@@ -52,37 +51,32 @@ DefineLanguageWord("Búal", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Language = "irish",
 	Type = "noun",
 	Meanings = {"Water"}, -- source gives the German "Wasser" as the meaning
-	DerivesFrom = {"proto-indo-european", "verb", "Bheg"},
-	SingularNominative = "Búal"
+	DerivesFrom = {"proto-indo-european", "verb", "Bheg"}
 })
 
 DefineLanguageWord("Gas", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
 	Language = "irish",
 	Type = "noun",
 	Meanings = {"Sapling", "Sprout", "Shoot"},
-	SingularNominative = "Gas",
 	Gender = "Feminine"
 })
 
 DefineLanguageWord("Gat", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
 	Language = "irish",
 	Type = "noun",
-	Meanings = {"Rod"},
-	SingularNominative = "Gat"
+	Meanings = {"Rod"}
 })
 
 DefineLanguageWord("Gius", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 7.
 	Language = "irish",
 	Type = "noun",
-	Meanings = {"Fir", "Spruce"},
-	SingularNominative = "Gius"
+	Meanings = {"Fir", "Spruce"}
 })
 
 DefineLanguageWord("Kass", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
 	Language = "irish",
 	Type = "noun",
-	Meanings = {"Curl", "Tress"},
-	SingularNominative = "Kass"
+	Meanings = {"Curl", "Tress"}
 })
 
 DefineLanguageWord("Máo", { -- this is the comparative, what is the normal version of the word? Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
@@ -96,7 +90,6 @@ DefineLanguageWord("Medg", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Language = "irish",
 	Type = "noun",
 	Meanings = {"Whey"},
-	SingularNominative = "Medg",
 	Gender = "Feminine"
 })
 
@@ -110,6 +103,5 @@ DefineLanguageWord("Rīadaim", { -- Source: Winfred P. Lehmann, "A Grammar of Pr
 DefineLanguageWord("Úr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 127.
 	Language = "irish",
 	Type = "noun",
-	Meanings = {"Fire"}, -- source gives "Feuer" as the meaning
-	SingularNominative = "Úr"
+	Meanings = {"Fire"} -- source gives "Feuer" as the meaning
 })

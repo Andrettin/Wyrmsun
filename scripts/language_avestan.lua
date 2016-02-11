@@ -25,11 +25,10 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageWord("Barez", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
+DefineLanguageWord("Barez", { -- source also gives the alternative form "Bareza", and the other form (this one neuter) "Barezaṅh-"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
 	Language = "avestan",
 	Type = "noun",
 	Meanings = {"Height", "Altitude"}, -- source gives "Höhe" as the meaning
-	SingularNominative = "Barez", -- source also gives the alternative form "Bareza", and the other form (this one neuter) "Barezaṅh-"
 	Gender = "Feminine"
 })
 
@@ -37,15 +36,13 @@ DefineLanguageWord("Mīzhda", { -- Source: Sean Crist, "An Analysis of *z loss i
 	Language = "avestan",
 	Type = "noun",
 	Meanings = {"Reward"},
-	SingularNominative = "Mīzhda",
 	Gender = "Neuter"
 })
 
 DefineLanguageWord("Yārə", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "avestan",
 	Type = "noun",
-	Meanings = {"Year"},
-	SingularNominative = "Yārə"
+	Meanings = {"Year"}
 })
 
 DefineLanguageWord("Spaetō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.

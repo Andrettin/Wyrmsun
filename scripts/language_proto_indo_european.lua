@@ -42,22 +42,19 @@ DefineLanguageWord("Bhewdh", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 DefineLanguageWord("Dhagh", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
 	Language = "proto-indo-european",
 	Type = "noun",
-	Meanings = {},
-	SingularNominative = "Dhagh"
+	Meanings = {}
 })
 
 DefineLanguageWord("Éḱwos", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 	Language = "proto-indo-european",
 	Type = "noun",
-	Meanings = {},
-	SingularNominative = "Éḱwos"
+	Meanings = {}
 })
 
 DefineLanguageWord("Ghredh", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
 	Language = "proto-indo-european",
 	Type = "noun",
-	Meanings = {},
-	SingularNominative = "Ghredh"
+	Meanings = {}
 })
 
 DefineLanguageWord("Gʷem", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
@@ -70,8 +67,7 @@ DefineLanguageWord("Gʷem", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 DefineLanguageWord("Gʷen", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 	Language = "proto-indo-european",
 	Type = "noun",
-	Meanings = {"Woman"},
-	SingularNominative = "Gʷen"
+	Meanings = {"Woman"}
 })
 
 DefineLanguageWord("Gʷīwos", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
@@ -133,15 +129,13 @@ DefineLanguageWord("Sekʷ", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 DefineLanguageWord("Swīnos", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
 	Language = "proto-indo-european", -- late Proto-Indo-European
 	Type = "noun",
-	Meanings = {"Pig"},
-	SingularNominative = "Swīnos"
+	Meanings = {"Pig"}
 })
 
 DefineLanguageWord("Wiros", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
 	Language = "proto-indo-european",
 	Type = "noun",
-	Meanings = {"Man"},
-	SingularNominative = "Wiros"
+	Meanings = {"Man"}
 })
 
 DefineLanguageWord("Yehw", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.

@@ -28,6 +28,5 @@
 DefineLanguageWord("Hur", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 127.
 	Language = "armenian",
 	Type = "noun",
-	Meanings = {"Torch"}, -- source gives "Fackel" as the meaning
-	SingularNominative = "Hur"
+	Meanings = {"Torch"} -- source gives "Fackel" as the meaning
 })

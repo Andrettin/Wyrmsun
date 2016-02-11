@@ -28,24 +28,21 @@
 DefineLanguageWord("Aihts", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
 	Language = "gothic",
 	Type = "noun",
-	Meanings = {"Property"}, -- source gives the German "Besitz"
-	SingularNominative = "Aihts"
+	Meanings = {"Property"} -- source gives the German "Besitz"
 })
 
 DefineLanguageWord("Aihʷa", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 	Language = "gothic",
 	Type = "noun",
 	Meanings = {"Horse"},
-	DerivesFrom = {"proto-indo-european", "noun", "Éḱwos"},
-	SingularNominative = "Aihʷa"
+	DerivesFrom = {"proto-indo-european", "noun", "Éḱwos"}
 })
 
 DefineLanguageWord("Aírþa", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "gothic",
 	Type = "noun",
 	Meanings = {"Earth"}, -- derived from Proto-Germanic "Erþō", which means "Earth"
-	DerivesFrom = {"proto-germanic", "noun", "Erþō"},
-	SingularNominative = "Aírþa"
+	DerivesFrom = {"proto-germanic", "noun", "Erþō"}
 })
 
 DefineLanguageWord("Aiþþau", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
@@ -57,15 +54,13 @@ DefineLanguageWord("Aiþþau", { -- Source: Richard M. Runge, "The Phonetic Real
 DefineLanguageWord("Aiweins", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
 	Language = "gothic",
 	Type = "noun",
-	Meanings = {"Lifetime"}, -- seemingly etymologically, if not actually
-	SingularNominative = "Aiweins"
+	Meanings = {"Lifetime"} -- seemingly etymologically, if not actually
 })
 
 DefineLanguageWord("Aiz", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
 	Language = "gothic",
 	Type = "noun",
-	Meanings = {"Bronze"},
-	SingularNominative = "Aiz"
+	Meanings = {"Bronze"}
 })
 
 DefineLanguageWord("Aufto", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
@@ -77,8 +72,7 @@ DefineLanguageWord("Aufto", { -- Source: Richard M. Runge, "The Phonetic Realiza
 DefineLanguageWord("Augo", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
 	Language = "gothic",
 	Type = "noun",
-	Meanings = {"Eye"},
-	SingularNominative = "Augo"
+	Meanings = {"Eye"}
 })
 
 DefineLanguageWord("Auk", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
@@ -90,8 +84,7 @@ DefineLanguageWord("Auk", { -- Source: Richard M. Runge, "The Phonetic Realizati
 DefineLanguageWord("Auso", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
 	Language = "gothic",
 	Type = "noun",
-	Meanings = {"Ear"}, -- seemingly etymologically, if not actually
-	SingularNominative = "Auso"
+	Meanings = {"Ear"} -- seemingly etymologically, if not actually
 })
 
 DefineLanguageWord("Baírgahei", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
@@ -99,7 +92,6 @@ DefineLanguageWord("Baírgahei", { -- Source: August Fick and Alf Torp, "Wortsch
 	Type = "noun",
 	Meanings = {"Mountainous Area"}, -- source gives "Berggegend" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Berga"},
-	SingularNominative = "Baírgahei",
 	Gender = "Feminine"
 })
 
@@ -108,7 +100,6 @@ DefineLanguageWord("Baúrgs", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Type = "noun",
 	Meanings = {"City"}, -- source gives "Stadt" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Burg"},
-	SingularNominative = "Baúrgs",
 	Gender = "Feminine"
 })
 
@@ -117,7 +108,6 @@ DefineLanguageWord("Blôma", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Type = "noun",
 	Meanings = {"Flower"}, -- source gives the German "Blume" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Blôma"},
-	SingularNominative = "Blôma",
 	Gender = "Masculine"
 })
 
@@ -125,202 +115,175 @@ DefineLanguageWord("Bōka", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Language = "gothic",
 	Type = "noun",
 	Meanings = {"Book"}, -- derived from Proto-Germanic "Bōks"; the source has the meaning for that word as "'tablet' > 'book'", but it is not clear if it means that the meaning became book in the child languages of Proto-Germanic, or within the timespan of the language itself
-	DerivesFrom = {"proto-germanic", "noun", "Bōks"},
-	SingularNominative = "Bōka"
+	DerivesFrom = {"proto-germanic", "noun", "Bōks"}
 })
 
 DefineLanguageWord("Dags", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
 	Language = "gothic",
 	Type = "noun",
 	Meanings = {"Day"},
-	DerivesFrom = {"proto-germanic", "noun", "Dag"},
-	SingularNominative = "Dags"
+	DerivesFrom = {"proto-germanic", "noun", "Dag"}
 })
 
 DefineLanguageWord("Dails", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
 	Language = "gothic",
 	Type = "noun",
-	Meanings = {"Part"},
-	SingularNominative = "Dails"
+	Meanings = {"Part"}
 })
 
 DefineLanguageWord("Dauhtar", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
 	Language = "gothic",
 	Type = "noun",
-	Meanings = {"Daughter"},
-	SingularNominative = "Dauhtar"
+	Meanings = {"Daughter"}
 })
 
 DefineLanguageWord("Daúr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "gothic",
 	Type = "noun",
 	Meanings = {"Door"}, -- derived from Proto-Germanic "Durez", which has the meaning of "door"
-	DerivesFrom = {"proto-germanic", "noun", "Durez"},
-	SingularNominative = "Daúr"
+	DerivesFrom = {"proto-germanic", "noun", "Durez"}
 })
 
 DefineLanguageWord("Dauþus", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
 	Language = "gothic",
 	Type = "noun",
-	Meanings = {"Death"},
-	SingularNominative = "Dauþus"
+	Meanings = {"Death"}
 })
 
 DefineLanguageWord("Dius", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
 	Language = "gothic",
 	Type = "noun",
-	Meanings = {"Animal"},
-	SingularNominative = "Dius"
+	Meanings = {"Animal"}
 })
 
 DefineLanguageWord("Faíhu", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "gothic",
 	Type = "noun",
 	Meanings = {"Cattle"},
-	DerivesFrom = {"proto-germanic", "noun", "Fehu"},
-	SingularNominative = "Faíhu"
+	DerivesFrom = {"proto-germanic", "noun", "Fehu"}
 })
 
 DefineLanguageWord("Fisks", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
 	Language = "gothic",
 	Type = "noun",
-	Meanings = {"Fish"},
-	SingularNominative = "Fisks"
+	Meanings = {"Fish"}
 })
 
 DefineLanguageWord("Flōdus", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "gothic",
 	Type = "noun",
 	Meanings = {"Flood"}, -- derived from the Proto-Germanic "Flōduz", which means "Flood"
-	DerivesFrom = {"proto-germanic", "noun", "Flōduz"},
-	SingularNominative = "Flōdus"
+	DerivesFrom = {"proto-germanic", "noun", "Flōduz"}
 })
 
 DefineLanguageWord("Gaits", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
 	Language = "gothic",
 	Type = "noun",
-	Meanings = {"Goat"},
-	SingularNominative = "Gaits"
+	Meanings = {"Goat"}
 })
 
 DefineLanguageWord("Gards", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "gothic",
 	Type = "noun",
 	Meanings = {"Garden"}, -- derived from Proto-Germanic "Gárdiz", which has the meaning of "garden"
-	DerivesFrom = {"proto-germanic", "noun", "Gárdiz"},
-	SingularNominative = "Gards"
+	DerivesFrom = {"proto-germanic", "noun", "Gárdiz"}
 })
 
 DefineLanguageWord("Gazds", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.
 	Language = "gothic",
 	Type = "noun",
 	Meanings = {"Prickle"},
-	SingularNominative = "Gazds",
 	Gender = "Masculine"
 })
 
 DefineLanguageWord("Hairto", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 3, Subsection 1.
 	Language = "gothic",
 	Type = "noun",
-	Meanings = {"Heart"},
-	SingularNominative = "Hairto"
+	Meanings = {"Heart"}
 })
 
 DefineLanguageWord("Haubiþ", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
 	Language = "gothic",
 	Type = "noun",
-	Meanings = {"Main"}, -- source gives German noun "Haupt" as transation
-	SingularNominative = "Haubiþ"
+	Meanings = {"Main"} -- source gives German noun "Haupt" as transation
 })
 
 DefineLanguageWord("Haúrds", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "gothic",
 	Type = "noun",
 	Meanings = {"Wattle"}, -- derived from Proto-Germanic "Χŕdiz", which has the meaning of "wattle"
-	DerivesFrom = {"proto-germanic", "noun", "Χŕdiz"},
-	SingularNominative = "Haúrds"
+	DerivesFrom = {"proto-germanic", "noun", "Χŕdiz"}
 })
 
 DefineLanguageWord("Haurn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "gothic",
 	Type = "noun",
-	Meanings = {"Horn"},
-	SingularNominative = "Haurn"
+	Meanings = {"Horn"}
 })
 
 DefineLanguageWord("Hlaifs", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
 	Language = "gothic",
 	Type = "noun",
-	Meanings = {"Bread"},
-	SingularNominative = "Hlaifs"
+	Meanings = {"Bread"}
 })
 
 DefineLanguageWord("Hunds", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
 	Language = "gothic",
 	Type = "noun",
-	Meanings = {"Dog"},
-	SingularNominative = "Hunds"
+	Meanings = {"Dog"}
 })
 
 DefineLanguageWord("Huzd", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.
 	Language = "gothic",
 	Type = "noun",
 	Meanings = {"Treasure"},
-	DerivesFrom = {"proto-germanic", "noun", "Huzda"},
-	SingularNominative = "Huzd"
+	DerivesFrom = {"proto-germanic", "noun", "Huzda"}
 })
 
 DefineLanguageWord("Jēr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "gothic",
 	Type = "noun",
 	Meanings = {"Year"}, -- derived from Proto-Germanic "Yēra", which means "Year"
-	DerivesFrom = {"proto-germanic", "noun", "Yēra"},
-	SingularNominative = "Jēr"
+	DerivesFrom = {"proto-germanic", "noun", "Yēra"}
 })
 
 DefineLanguageWord("Kas", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
 	Language = "gothic",
 	Type = "noun",
-	Meanings = {"Container"},
-	SingularNominative = "Kas"
+	Meanings = {"Container"}
 })
 
 DefineLanguageWord("Kaúrn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "gothic",
 	Type = "noun",
 	Meanings = {"Grain"}, -- derived from Proto-Germanic "Kŕnam", which has the meaning of "grain"
-	DerivesFrom = {"proto-germanic", "noun", "Kŕnam"},
-	SingularNominative = "Kaúrn"
+	DerivesFrom = {"proto-germanic", "noun", "Kŕnam"}
 })
 
 DefineLanguageWord("Kuni", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
 	Language = "gothic",
 	Type = "noun",
 	Meanings = {"Race"},
-	DerivesFrom = {"proto-germanic", "noun", "Kuni"},
-	SingularNominative = "Kuni"
+	DerivesFrom = {"proto-germanic", "noun", "Kuni"}
 })
 
 DefineLanguageWord("Laun", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
 	Language = "gothic",
 	Type = "noun",
-	Meanings = {"Pay"}, -- source gives German word "Lohn" as transation
-	SingularNominative = "Laun"
+	Meanings = {"Pay"} -- source gives German word "Lohn" as transation
 })
 
 DefineLanguageWord("Lein", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "gothic",
 	Type = "noun",
-	Meanings = {"Linen"},
-	SingularNominative = "Lein"
+	Meanings = {"Linen"}
 })
 
 DefineLanguageWord("Mahts", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "gothic",
 	Type = "noun",
 	Meanings = {"Might"}, -- derived from Proto-Germanic "Maχtiz", which has the meaning of "Might"
-	DerivesFrom = {"proto-germanic", "noun", "Maχtiz"},
-	SingularNominative = "Mahts"
+	DerivesFrom = {"proto-germanic", "noun", "Maχtiz"}
 })
 
 DefineLanguageWord("Mais", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
@@ -332,8 +295,7 @@ DefineLanguageWord("Mais", { -- Source: Sean Crist, "An Analysis of *z loss in W
 DefineLanguageWord("Manasēþs", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "gothic",
 	Type = "noun",
-	Meanings = {}, -- the "Sēþiz" Proto-Germanic word from which the "-sēþs" element in this word originates means "Seed"
-	SingularNominative = "Manasēþs"
+	Meanings = {} -- the "Sēþiz" Proto-Germanic word from which the "-sēþs" element in this word originates means "Seed"
 })
 
 DefineLanguageWord("Mizdon", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 7.
@@ -341,7 +303,6 @@ DefineLanguageWord("Mizdon", { -- Source: Sean Crist, "An Analysis of *z loss in
 	Type = "noun",
 	Meanings = {"Reward"},
 	DerivesFrom = {"proto-germanic", "noun", "Mizdō"},
-	SingularNominative = "Mizdon",
 	Gender = "Feminine"
 })
 
@@ -349,30 +310,26 @@ DefineLanguageWord("Nahts", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Language = "gothic",
 	Type = "noun",
 	Meanings = {"Night"}, -- derived from Proto-Germanic "Naχts", which means "Night"
-	DerivesFrom = {"proto-germanic", "noun", "Naχts"},
-	SingularNominative = "Nahts"
+	DerivesFrom = {"proto-germanic", "noun", "Naχts"}
 })
 
 DefineLanguageWord("Qino", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 	Language = "gothic",
 	Type = "noun",
 	Meanings = {"Woman"},
-	DerivesFrom = {"proto-indo-european", "noun", "Gʷen"},
-	SingularNominative = "Qino"
+	DerivesFrom = {"proto-indo-european", "noun", "Gʷen"}
 })
 
 DefineLanguageWord("Raus", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
 	Language = "gothic",
 	Type = "noun",
-	Meanings = {"Tube"}, -- seemingly etymologically, if not actually
-	SingularNominative = "Raus"
+	Meanings = {"Tube"} -- seemingly etymologically, if not actually
 })
 
 DefineLanguageWord("Razda", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 9.
 	Language = "gothic",
 	Type = "noun",
 	Meanings = {"Voice", "Pronunciation", "Speech"},
-	SingularNominative = "Razda",
 	Gender = "Feminine"
 })
 
@@ -380,61 +337,53 @@ DefineLanguageWord("Razn", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Language = "gothic",
 	Type = "noun",
 	Meanings = {"House"},
-	SingularNominative = "Razn",
 	Gender = "Neuter"
 })
 
 DefineLanguageWord("Sair", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
 	Language = "gothic",
 	Type = "noun",
-	Meanings = {"Wound"},
-	SingularNominative = "Sair"
+	Meanings = {"Wound"}
 })
 
 DefineLanguageWord("Saiwala", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
 	Language = "gothic",
 	Type = "noun",
-	Meanings = {"Soul"},
-	SingularNominative = "Saiwala"
+	Meanings = {"Soul"}
 })
 
 DefineLanguageWord("Sauhts", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
 	Language = "gothic",
 	Type = "noun",
-	Meanings = {"Sickness"},
-	SingularNominative = "Sauhts"
+	Meanings = {"Sickness"}
 })
 
 DefineLanguageWord("Siuns", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 	Language = "gothic",
 	Type = "noun",
 	Meanings = {"Face"},
-	DerivesFrom = {"proto-indo-european", "verb", "Sekʷ"},
-	SingularNominative = "Siuns"
+	DerivesFrom = {"proto-indo-european", "verb", "Sekʷ"}
 })
 
 DefineLanguageWord("Skadus", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
 	Language = "gothic",
 	Type = "noun",
 	Meanings = {"Shadow"},
-	DerivesFrom = {"proto-germanic", "noun", "Skadwas"},
-	SingularNominative = "Skadus"
+	DerivesFrom = {"proto-germanic", "noun", "Skadwas"}
 })
 
 DefineLanguageWord("Sunnō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "gothic",
 	Type = "noun",
 	Meanings = {"Sun"}, -- derived from Proto-Germanic "Sunōn", which means "Sun"
-	DerivesFrom = {"proto-germanic", "noun", "Sunōn"},
-	SingularNominative = "Sunnō"
+	DerivesFrom = {"proto-germanic", "noun", "Sunōn"}
 })
 
 DefineLanguageWord("Swein", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "gothic",
 	Type = "noun",
 	Meanings = {"Pig"}, -- derived from the Proto-Germanic "Swīnaz", which means "Pig"
-	DerivesFrom = {"proto-germanic", "noun", "Swīnaz"},
-	SingularNominative = "Swein"
+	DerivesFrom = {"proto-germanic", "noun", "Swīnaz"}
 })
 
 DefineLanguageWord("Us", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
@@ -453,22 +402,19 @@ DefineLanguageWord("Wair", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Language = "gothic",
 	Type = "noun",
 	Meanings = {"Man"},
-	DerivesFrom = {"proto-indo-european", "noun", "Wiros"},
-	SingularNominative = "Wair"
+	DerivesFrom = {"proto-indo-european", "noun", "Wiros"}
 })
 
 DefineLanguageWord("Waurms", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
 	Language = "gothic",
 	Type = "noun",
-	Meanings = {"Worm", "Serpent"}, -- probably could be extended to mean "wyrm" as well
-	SingularNominative = "Waurms"
+	Meanings = {"Worm", "Serpent"} -- probably could be extended to mean "wyrm" as well
 })
 
 DefineLanguageWord("Wigs", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
 	Language = "gothic",
 	Type = "noun",
-	Meanings = {"Way"},
-	SingularNominative = "Wigs"
+	Meanings = {"Way"}
 })
 
 DefineLanguageWord("Beitan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.

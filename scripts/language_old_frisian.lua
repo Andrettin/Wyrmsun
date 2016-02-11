@@ -30,7 +30,6 @@ DefineLanguageWord("Berch", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Type = "noun",
 	Meanings = {"Mountain", "Hill", "Grave Mound"}, -- source gives "Berg, Hügel, Grabhügel" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Berga"},
-	SingularNominative = "Berch",
 	Gender = "Masculine"
 })
 
@@ -39,16 +38,14 @@ DefineLanguageWord("Beth", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Type = "noun",
 	Meanings = {"Bath", "Baths"}, -- source gives the German "Bad" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Baþa"},
-	SingularNominative = "Beth",
 	Gender = "Neuter"
 })
 
-DefineLanguageWord("Burch", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
+DefineLanguageWord("Burch", { -- source gives "Bur(i)ch"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
 	Language = "old-frisian",
 	Type = "noun",
 	Meanings = {"Fortified Place", "City"}, -- source gives "befestigter Ort, Stadt" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Burg"},
-	SingularNominative = "Burch", -- the source gives "Bur(i)ch"
 	Gender = "Feminine"
 })
 
@@ -56,7 +53,6 @@ DefineLanguageWord("Hēde", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Language = "old-frisian",
 	Type = "noun",
 	Meanings = {"Flax Fiber"},
-	SingularNominative = "Hēde",
 	Uncountable = true -- as a material, it is likely to be uncountable
 })
 
@@ -65,7 +61,6 @@ DefineLanguageWord("Herth", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Type = "noun",
 	Meanings = {"Fireplace", "Fire"}, -- source gives "Feuerstätte, Feuer" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Herþa"},
-	SingularNominative = "Herth",
 	Gender = "Masculine"
 })
 
@@ -95,16 +90,14 @@ DefineLanguageWord("Marg", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Language = "old-frisian",
 	Type = "noun",
 	Meanings = {"Marrow"},
-	DerivesFrom = {"proto-germanic", "noun", "Mazgaz"},
-	SingularNominative = "Marg"
+	DerivesFrom = {"proto-germanic", "noun", "Mazgaz"}
 })
 
-DefineLanguageWord("Mēde", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 7.
+DefineLanguageWord("Mēde", { -- source also gives as alternatives the forms "Mīde", "Meide" and "Hēde"; Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 7.
 	Language = "old-frisian",
 	Type = "noun",
 	Meanings = {"Reward", "Rental", "Payment", "Gift"},
 	DerivesFrom = {"proto-germanic", "noun", "Mizdō"},
-	SingularNominative = "Mēde", -- source also gives as alternatives the forms "Mīde", "Meide" and "Hēde"
 	Gender = "Feminine"
 })
 
@@ -125,22 +118,19 @@ DefineLanguageWord("Nera", { -- Source: Sean Crist, "An Analysis of *z loss in W
 DefineLanguageWord("Ord", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
 	Language = "old-frisian",
 	Type = "noun",
-	Meanings = {"Point", "Place"}, -- source gives the meaning as "(spear)point, place"
-	SingularNominative = "Ord"
+	Meanings = {"Point", "Place"} -- source gives the meaning as "(spear)point, place"
 })
 
 DefineLanguageWord("Ransa", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "old-frisian",
 	Type = "noun",
-	Meanings = {"House"},
-	SingularNominative = "Ransa"
+	Meanings = {"House"}
 })
 
 DefineLanguageWord("Wêd", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 4.
 	Language = "old-frisian",
 	Type = "noun",
-	Meanings = {"Woad"},
-	SingularNominative = "Wêd"
+	Meanings = {"Woad"}
 })
 
 DefineLanguageWord("Wi", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 5.

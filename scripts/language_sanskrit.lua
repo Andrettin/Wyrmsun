@@ -29,22 +29,19 @@ DefineLanguageWord("Áśvas", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Language = "sanskrit",
 	Type = "noun",
 	Meanings = {"Horse"},
-	DerivesFrom = {"proto-indo-european", "noun", "Éḱwos"},
-	SingularNominative = "Áśvas"
+	DerivesFrom = {"proto-indo-european", "noun", "Éḱwos"}
 })
 
-DefineLanguageWord("Bhalla", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
+DefineLanguageWord("Bhalla", { -- source also gives the alternative form "Bhallaka"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
 	Language = "sanskrit",
 	Type = "noun",
-	Meanings = {"Bear"}, -- source gives the German "Bär" as the meaning
-	SingularNominative = "Bhalla" -- source also gives the alternative form "Bhallaka"
+	Meanings = {"Bear"} -- source gives the German "Bär" as the meaning
 })
 
 DefineLanguageWord("Bhrā́tā", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "sanskrit",
 	Type = "noun",
-	Meanings = {"Brother"},
-	SingularNominative = "Bhrā́tā"
+	Meanings = {"Brother"}
 })
 
 DefineLanguageWord("Bódhati", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
@@ -66,15 +63,13 @@ DefineLanguageWord("Dāhas", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Language = "sanskrit",
 	Type = "noun",
 	Meanings = {"Heat"},
-	DerivesFrom = {"proto-indo-european", "noun", "Dhagh"},
-	SingularNominative = "Dāhas"
+	DerivesFrom = {"proto-indo-european", "noun", "Dhagh"}
 })
 
 DefineLanguageWord("Duhitā́", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
 	Language = "sanskrit",
 	Type = "noun",
-	Meanings = {"Daughter"},
-	SingularNominative = "Duhitā́"
+	Meanings = {"Daughter"}
 })
 
 DefineLanguageWord("Gámati", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
@@ -89,23 +84,20 @@ DefineLanguageWord("Gardhas", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Language = "sanskrit",
 	Type = "noun",
 	Meanings = {"Greed"},
-	DerivesFrom = {"proto-indo-european", "noun", "Ghredh"},
-	SingularNominative = "Gardhas"
+	DerivesFrom = {"proto-indo-european", "noun", "Ghredh"}
 })
 
 DefineLanguageWord("Késara", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 7.
 	Language = "sanskrit",
 	Type = "noun",
 	Meanings = {"Hair", "Mane"},
-	SingularNominative = "Késara",
 	Gender = "Masculine"
 })
 
-DefineLanguageWord("Majjá", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
+DefineLanguageWord("Majjấ", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "sanskrit",
 	Type = "noun",
 	Meanings = {"Marrow"},
-	SingularNominative = "Majjá", -- the accent in the source was different, but I could not identify the accent to reproduce it here
 	Gender = "Feminine"
 })
 
@@ -113,7 +105,6 @@ DefineLanguageWord("Majján", { -- Source: Sean Crist, "An Analysis of *z loss i
 	Language = "sanskrit",
 	Type = "noun",
 	Meanings = {"Marrow"},
-	SingularNominative = "Majján",
 	Gender = "Masculine"
 })
 
@@ -121,29 +112,25 @@ DefineLanguageWord("Mīḍhá", { -- Source: Sean Crist, "An Analysis of *z loss
 	Language = "sanskrit",
 	Type = "noun",
 	Meanings = {"Reward from a Battle", "Reward from a Competition"},
-	SingularNominative = "Mīḍhá",
 	Gender = "Neuter"
 })
 
 DefineLanguageWord("Náktam", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "sanskrit",
 	Type = "noun",
-	Meanings = {"Night"}, -- presumably, but is not entirely clear from source
-	SingularNominative = "Náktam"
+	Meanings = {"Night"} -- presumably, but is not entirely clear from source
 })
 
 DefineLanguageWord("Pā́dam", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "sanskrit",
 	Type = "noun",
-	Meanings = {"Foot"}, -- meaning not explicitly given in source, but Proto-Germanic cognate "Fōts" means "Foot"
-	SingularAccusative = "Pā́dam"
+	Meanings = {"Foot"} -- meaning not explicitly given in source, but Proto-Germanic cognate "Fōts" means "Foot"
 })
 
 DefineLanguageWord("Páśu", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "sanskrit",
 	Type = "noun",
-	Meanings = {},
-	SingularNominative = "Páśu"
+	Meanings = {}
 })
 
 DefineLanguageWord("Pū́tis", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
@@ -162,8 +149,7 @@ DefineLanguageWord("Saptá", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 DefineLanguageWord("Snuṣā́", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
 	Language = "sanskrit",
 	Type = "noun",
-	Meanings = {"Daughter-in-Law"},
-	SingularNominative = "Snuṣā́"
+	Meanings = {"Daughter-in-Law"}
 })
 
 DefineLanguageWord("Stighnoti", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
@@ -190,8 +176,7 @@ DefineLanguageWord("Upári", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 DefineLanguageWord("Váhanam", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "sanskrit",
 	Type = "noun",
-	Meanings = {"Vehicle"},
-	SingularNominative = "Váhanam"
+	Meanings = {"Vehicle"}
 })
 
 DefineLanguageWord("Vayim", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 5.

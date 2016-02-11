@@ -30,16 +30,14 @@ DefineLanguageWord("Adal", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Type = "noun",
 	Meanings = {"Lineage", "Noble Lineage", "Noble"}, -- source gives "Geschlecht, edles Geschlecht, Adel" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Aþala"},
-	SingularNominative = "Adal",
 	Gender = "Masculine"
 })
 
-DefineLanguageWord("Bad", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 133.
+DefineLanguageWord("Bad", { -- source also gives the alternative form "Pad"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 133.
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Bath", "Baths"}, -- source gives the German "Bad" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Baþa"},
-	SingularNominative = "Bad", -- source also gives the alternative form "Pad"
 	Gender = "Neuter"
 })
 
@@ -48,34 +46,30 @@ DefineLanguageWord("Bah", { -- Source: August Fick and Alf Torp, "Wortschatz der
 	Type = "noun",
 	Meanings = {"Stream"}, -- source gives the German "Bach" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Baki"},
-	SingularNominative = "Bah",
 	Gender = "Masculine"
 })
 
-DefineLanguageWord("Berg", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
+DefineLanguageWord("Berg", { -- source also gives the alternative forms "Berc", "Perc", "Perag" and "Perac"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Mountain", "Hill"}, -- source gives "Berg" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Berga"},
-	SingularNominative = "Berg", -- source also gives the alternative forms "Berc", "Perc", "Perag" and "Perac"
 	Gender = "Masculine"
 })
 
-DefineLanguageWord("Bero", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
+DefineLanguageWord("Bero", { -- source also gives the alternative form "Pero"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Bear"}, -- source gives the German "Bär" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Beran"},
-	SingularNominative = "Bero", -- source also gives the alternative form "Pero"
 	Gender = "Masculine"
 })
 
-DefineLanguageWord("Bluomo", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 146.
+DefineLanguageWord("Bluomo", { -- source also gives the alternative form "Pluomo", and the (feminine) alternative form "Bluoma"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 146.
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Flower"}, -- source gives the German "Blume" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Blôma"},
-	SingularNominative = "Bluomo", -- source also gives the alternative form "Pluomo", and the (feminine) alternative form "Bluoma"
 	Gender = "Masculine"
 })
 
@@ -83,7 +77,6 @@ DefineLanguageWord("Brart", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Edge", "Forepart of a Ship"},
-	SingularNominative = "Brart",
 	Gender = "Masculine"
 })
 
@@ -91,7 +84,6 @@ DefineLanguageWord("Brort", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Skewer", "Projectile", "Edge", "Rim", "Forepart of a Ship"},
-	SingularNominative = "Brort",
 	Gender = "Masculine"
 })
 
@@ -99,40 +91,35 @@ DefineLanguageWord("Buoh", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Book"}, -- derived from Proto-Germanic "Bōks"; the source has the meaning for that word as "'tablet' > 'book'", but it is not clear if it means that the meaning became book in the child languages of Proto-Germanic, or within the timespan of the language itself
-	DerivesFrom = {"proto-germanic", "noun", "Bōks"},
-	SingularNominative = "Buoh"
+	DerivesFrom = {"proto-germanic", "noun", "Bōks"}
 })
 
-DefineLanguageWord("Burg", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
+DefineLanguageWord("Burg", { -- source also gives the alternative form "Purg"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Fortified Place", "Castle", "Palace", "City"}, -- source gives "befestigter Ort, Burg, Schloß, Stadt" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Burg"},
-	SingularNominative = "Burg", -- the source also gives the alternate form "Purg"
 	Gender = "Feminine"
 })
 
-DefineLanguageWord("Chien", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 4.
+DefineLanguageWord("Chien", { -- source also gives alternative forms "Kien" and "Kên"; Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 4.
 	Language = "old-high-german",
 	Type = "noun",
-	Meanings = {"Resinous Wood"},
-	SingularNominative = "Chien" -- source also gives alternative forms "Kien" and "Kên"
+	Meanings = {"Resinous Wood"}
 })
 
 DefineLanguageWord("Chunni", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Race"},
-	DerivesFrom = {"proto-germanic", "noun", "Kuni"},
-	SingularNominative = "Chunni"
+	DerivesFrom = {"proto-germanic", "noun", "Kuni"}
 })
 
 DefineLanguageWord("Corn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Grain"}, -- derived from Proto-Germanic "Kŕnam", which has the meaning of "grain"
-	DerivesFrom = {"proto-germanic", "noun", "Kŕnam"},
-	SingularNominative = "Corn"
+	DerivesFrom = {"proto-germanic", "noun", "Kŕnam"}
 })
 
 DefineLanguageWord("Eddo", { -- Also given as "Edo", are Eddo and Edo two forms of "or" in Old High German, or are they just different ways to write the same word in that language?; Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
@@ -144,47 +131,41 @@ DefineLanguageWord("Eddo", { -- Also given as "Edo", are Eddo and Edo two forms 
 DefineLanguageWord("Ēht", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
 	Language = "old-high-german",
 	Type = "noun",
-	Meanings = {"Property"}, -- source gives the German "Besitz"
-	SingularNominative = "Ēht"
+	Meanings = {"Property"} -- source gives the German "Besitz"
 })
 
 DefineLanguageWord("Erda", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Earth"}, -- derived from Proto-Germanic "Erþō", which means "Earth"
-	DerivesFrom = {"proto-germanic", "noun", "Erþō"},
-	SingularNominative = "Erda"
+	DerivesFrom = {"proto-germanic", "noun", "Erþō"}
 })
 
 DefineLanguageWord("Fehu", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Cattle"},
-	DerivesFrom = {"proto-germanic", "noun", "Fehu"},
-	SingularNominative = "Fehu"
+	DerivesFrom = {"proto-germanic", "noun", "Fehu"}
 })
 
 DefineLanguageWord("Fisk", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
 	Language = "old-high-german",
 	Type = "noun",
-	Meanings = {"Fish"},
-	SingularNominative = "Fisk"
+	Meanings = {"Fish"}
 })
 
 DefineLanguageWord("Fluot", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Flood"}, -- derived from the Proto-Germanic "Flōduz", which means "Flood"
-	DerivesFrom = {"proto-germanic", "noun", "Flōduz"},
-	SingularNominative = "Fluot"
+	DerivesFrom = {"proto-germanic", "noun", "Flōduz"}
 })
 
-DefineLanguageWord("Fuir", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 127.
+DefineLanguageWord("Fuir", { -- source also gives the alternate form "Fiur"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 127.
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Fire"}, -- source gives "Feuer" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Fûir"},
-	SingularNominative = "Fuir", -- source also gives the alternate form "Fiur"
 	Gender = "Neuter"
 })
 
@@ -192,39 +173,36 @@ DefineLanguageWord("Fuoz", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Foot"}, -- derived from Proto-Germanic "Fōts", which has the meaning of "foot"
-	DerivesFrom = {"proto-germanic", "noun", "Fōts"},
-	SingularNominative = "Fuoz"
+	DerivesFrom = {"proto-germanic", "noun", "Fōts"}
 })
 
 DefineLanguageWord("Gart", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
 	Language = "old-high-german",
 	Type = "noun",
-	Meanings = {"Rod", "Prickle"},
-	SingularNominative = "Gart"
+	Meanings = {"Rod", "Prickle"}
 })
 
 DefineLanguageWord("Gart", { -- is this the same word as the "Gart" which has another meaning detailed above? Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Garden"}, -- derived from Proto-Germanic "Gárdiz", which has the meaning of "garden"
-	DerivesFrom = {"proto-germanic", "noun", "Gárdiz"},
-	SingularNominative = "Gart"
+	DerivesFrom = {"proto-germanic", "noun", "Gárdiz"}
 })
 
 DefineLanguageWord("Gisiht", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Sight"},
-	DerivesFrom = {"proto-indo-european", "verb", "Sekʷ"},
-	SingularNominative = "Gisiht"
+	DerivesFrom = {"proto-indo-european", "verb", "Sekʷ"}
 })
 
 DefineLanguageWord("Hagazussa", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 200.
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Travelling Actor or Minstrel who Performs in Women's Clothing"},
-	SingularNominative = "Hagazussa",
-	PluralNominative = "Hagazussan"
+	NumberCaseInflections = {
+		"plural", "nominative", "Hagazussan"
+	}
 })
 
 DefineLanguageWord("Herd", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 46.
@@ -232,82 +210,71 @@ DefineLanguageWord("Herd", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Type = "noun",
 	Meanings = {"Stove"}, -- source gives "Herd" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Herþa"},
-	SingularNominative = "Herd",
 	Gender = "Masculine"
 })
 
 DefineLanguageWord("Herza", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 3, Subsection 1.
 	Language = "old-high-german",
 	Type = "noun",
-	Meanings = {"Heart"},
-	SingularNominative = "Herza"
+	Meanings = {"Heart"}
 })
 
 DefineLanguageWord("Hleib", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
 	Language = "old-high-german",
 	Type = "noun",
-	Meanings = {"Bread"},
-	SingularNominative = "Hleib"
+	Meanings = {"Bread"}
 })
 
 DefineLanguageWord("Hort", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Treasure"},
-	DerivesFrom = {"proto-germanic", "noun", "Huzda"},
-	SingularNominative = "Hort"
+	DerivesFrom = {"proto-germanic", "noun", "Huzda"}
 })
 
 DefineLanguageWord("Houbit", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
 	Language = "old-high-german",
 	Type = "noun",
-	Meanings = {"Main"}, -- source gives German noun "Haupt" as the translation
-	SingularNominative = "Houbit"
+	Meanings = {"Main"} -- source gives German noun "Haupt" as the translation
 })
 
 DefineLanguageWord("Hunt", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
 	Language = "old-high-german",
 	Type = "noun",
-	Meanings = {"Dog"},
-	SingularNominative = "Hunt"
+	Meanings = {"Dog"}
 })
 
 DefineLanguageWord("Hurd", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Wattle"}, -- derived from Proto-Germanic "Χŕdiz", which means "wattle"
-	DerivesFrom = {"proto-germanic", "noun", "Χŕdiz"},
-	SingularNominative = "Hurd"
+	DerivesFrom = {"proto-germanic", "noun", "Χŕdiz"}
 })
 
 DefineLanguageWord("Jār", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Year"}, -- derived from Proto-Germanic "Yēra", which means "Year"
-	DerivesFrom = {"proto-germanic", "noun", "Yēra"},
-	SingularNominative = "Jār"
+	DerivesFrom = {"proto-germanic", "noun", "Yēra"}
 })
 
 DefineLanguageWord("Kōl", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
 	Language = "old-high-german",
 	Type = "noun",
-	Meanings = {"Cabbage"},
-	SingularNominative = "Kōl"
+	Meanings = {"Cabbage"}
 })
 
 DefineLanguageWord("Lōn", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
 	Language = "old-high-german",
 	Type = "noun",
-	Meanings = {"Pay"}, -- source gives German word "Lohn" as transation
-	SingularNominative = "Lōn"
+	Meanings = {"Pay"} -- source gives German word "Lohn" as transation
 })
 
 DefineLanguageWord("Maht", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Might"}, -- derived from Proto-Germanic "Maχtiz", which means "Might"
-	DerivesFrom = {"proto-germanic", "noun", "Maχtiz"},
-	SingularNominative = "Maht"
+	DerivesFrom = {"proto-germanic", "noun", "Maχtiz"}
 })
 
 DefineLanguageWord("Marc", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 9.
@@ -315,8 +282,9 @@ DefineLanguageWord("Marc", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Type = "noun",
 	Meanings = {"Marrow"},
 	DerivesFrom = {"proto-germanic", "noun", "Mazgaz"},
-	SingularNominative = "Marc",
-	SingularGenitive = "Marges" -- source also gives "Marages" as a possible genitive
+	NumberCaseInflections = {
+		"singular", "genitive", "Marges" -- source also gives the alternative form "Marages"
+	}
 })
 
 DefineLanguageWord("Mēr", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
@@ -325,12 +293,11 @@ DefineLanguageWord("Mēr", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Meanings = {"More"}
 })
 
-DefineLanguageWord("Mēta", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
+DefineLanguageWord("Mēta", { -- source also gives as alternatives the forms "Miata" and "Mieta"; Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Reward", "Payment"},
-	DerivesFrom = {"proto-germanic", "noun", "Mizdō"},
-	SingularNominative = "Mēta" -- source also gives as alternatives the forms "Miata" and "Mieta"
+	DerivesFrom = {"proto-germanic", "noun", "Mizdō"}
 })
 
 DefineLanguageWord("Mir", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
@@ -344,15 +311,13 @@ DefineLanguageWord("Naht", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Night"}, -- derived from Proto-Germanic "Naχts", which means "Night"
-	DerivesFrom = {"proto-germanic", "noun", "Naχts"},
-	SingularNominative = "Naht"
+	DerivesFrom = {"proto-germanic", "noun", "Naχts"}
 })
 
 DefineLanguageWord("Nara", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Salvation", "Rescue", "Nourishment", "Sustenance"}, -- meaning given for Middle High German, but not for Old High German, presumably because both are the same
-	SingularNominative = "Nara",
 	Gender = "Feminine"
 })
 
@@ -360,7 +325,6 @@ DefineLanguageWord("Orlac", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Fate"},
-	SingularNominative = "Orlac",
 	Gender = "Masculine"
 })
 
@@ -369,15 +333,13 @@ DefineLanguageWord("Ort", { -- Source: Sean Crist, "An Analysis of *z loss in We
 	Type = "noun",
 	Meanings = {"Point", "Corner", "Edge of a Part", "Edge of a Piece", "Edge of a Small Coin"},
 	DerivesFrom = {"proto-germanic", "noun", "Uzdaz"},
-	SingularNominative = "Ort",
 	Gender = "Masculine"
 })
 
 DefineLanguageWord("Ouga", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
 	Language = "old-high-german",
 	Type = "noun",
-	Meanings = {"Eye"},
-	SingularNominative = "Ouga"
+	Meanings = {"Eye"}
 })
 
 DefineLanguageWord("Ouh", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
@@ -389,15 +351,13 @@ DefineLanguageWord("Ouh", { -- Source: Richard M. Runge, "The Phonetic Realizati
 DefineLanguageWord("Pfeife", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "old-high-german",
 	Type = "noun",
-	Meanings = {"Pipe"},
-	SingularNominative = "Pfeife"
+	Meanings = {"Pipe"}
 })
 
 DefineLanguageWord("Rarta", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 10.
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Voice", "Modulation"},
-	SingularNominative = "Rarta",
 	Gender = "Feminine"
 })
 
@@ -405,96 +365,83 @@ DefineLanguageWord("Sāt", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Seed"}, -- derived from the Proto-Germanic "Sēþiz", which means "Seed"
-	DerivesFrom = {"proto-germanic", "noun", "Sēþiz"},
-	SingularNominative = "Sāt"
+	DerivesFrom = {"proto-germanic", "noun", "Sēþiz"}
 })
 
-DefineLanguageWord("Sēula", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
+DefineLanguageWord("Sēula", { -- source also gives "Sēla"; Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
 	Language = "old-high-german",
 	Type = "noun",
-	Meanings = {"Soul"},
-	SingularNominative = "Sēula" -- source also gives "Sēla"
+	Meanings = {"Soul"}
 })
 
 DefineLanguageWord("Skato", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Shadow"},
-	DerivesFrom = {"proto-germanic", "noun", "Skadwas"},
-	SingularNominative = "Skato"
+	DerivesFrom = {"proto-germanic", "noun", "Skadwas"}
 })
 
 DefineLanguageWord("Snura", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
 	Language = "old-high-german",
 	Type = "noun",
-	Meanings = {"Daughter-in-Law"},
-	SingularNominative = "Snura"
+	Meanings = {"Daughter-in-Law"}
 })
 
 DefineLanguageWord("Suht", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
 	Language = "old-high-german",
 	Type = "noun",
-	Meanings = {"Sickness"},
-	SingularNominative = "Suht"
+	Meanings = {"Sickness"}
 })
 
 DefineLanguageWord("Sunno", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Sun"}, -- derived from Proto-Germanic "Sunōn", which has the meaning of "Sun"
-	DerivesFrom = {"proto-germanic", "noun", "Sunōn"},
-	SingularNominative = "Sunno"
+	DerivesFrom = {"proto-germanic", "noun", "Sunōn"}
 })
 
 DefineLanguageWord("Swigar", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
 	Language = "old-high-german",
 	Type = "noun",
-	Meanings = {"Mother-in-Law"},
-	SingularNominative = "Swigar"
+	Meanings = {"Mother-in-Law"}
 })
 
 DefineLanguageWord("Swīn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Pig"}, -- derived from the Proto-Germanic "Swīnaz", which means "Pig"
-	DerivesFrom = {"proto-germanic", "noun", "Swīnaz"},
-	SingularNominative = "Swīn"
+	DerivesFrom = {"proto-germanic", "noun", "Swīnaz"}
 })
 
 DefineLanguageWord("Teil", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
 	Language = "old-high-german",
 	Type = "noun",
-	Meanings = {"Part"},
-	SingularNominative = "Teil"
+	Meanings = {"Part"}
 })
 
 DefineLanguageWord("Tōd", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
 	Language = "old-high-german",
 	Type = "noun",
-	Meanings = {"Death"},
-	SingularNominative = "Tōd"
+	Meanings = {"Death"}
 })
 
 DefineLanguageWord("Urlaga", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 10.
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Fate"},
-	SingularNominative = "Urlaga",
 	Gender = "Feminine"
 })
 
 DefineLanguageWord("Weg", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
 	Language = "old-high-german",
 	Type = "noun",
-	Meanings = {"Way"},
-	SingularNominative = "Weg"
+	Meanings = {"Way"}
 })
 
 DefineLanguageWord("Weit", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 4, 7.
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Woad"},
-	SingularNominative = "Weit",
 	Gender = "Masculine"
 })
 
@@ -508,8 +455,7 @@ DefineLanguageWord("Wer", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-G
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Man"},
-	DerivesFrom = {"proto-indo-european", "noun", "Wiros"},
-	SingularNominative = "Wer"
+	DerivesFrom = {"proto-indo-european", "noun", "Wiros"}
 })
 
 DefineLanguageWord("Wī̆r", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
@@ -522,8 +468,7 @@ DefineLanguageWord("Wī̆r", { -- Source: Sean Crist, "An Analysis of *z loss in
 DefineLanguageWord("Wurm", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
 	Language = "old-high-german",
 	Type = "noun",
-	Meanings = {"Worm", "Serpent"}, -- probably could be extended to mean "wyrm" as well
-	SingularNominative = "Wurm"
+	Meanings = {"Worm", "Serpent"} -- probably could be extended to mean "wyrm" as well
 })
 
 DefineLanguageWord("Beran", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.

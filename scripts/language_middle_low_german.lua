@@ -30,7 +30,6 @@ DefineLanguageWord("Blôsem", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Type = "noun",
 	Meanings = {"Blossom"}, -- apparently, but it is not clear from the source
 	DerivesFrom = {"proto-germanic", "noun", "Blôma"},
-	SingularNominative = "Blôsem",
 	Gender = "Feminine"
 })
 
@@ -38,7 +37,6 @@ DefineLanguageWord("Hēde", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Language = "middle-low-german",
 	Type = "noun",
 	Meanings = {"Flax Fiber"},
-	SingularNominative = "Hēde",
 	Uncountable = true, -- as a material, it is likely to be uncountable
 	Gender = "Feminine"
 })
@@ -46,15 +44,13 @@ DefineLanguageWord("Hēde", { -- Source: Sean Crist, "An Analysis of *z loss in 
 DefineLanguageWord("Kên", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 4.
 	Language = "middle-low-german",
 	Type = "noun",
-	Meanings = {"Resinous Wood"},
-	SingularNominative = "Kên"
+	Meanings = {"Resinous Wood"}
 })
 
 DefineLanguageWord("Twern", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
 	Language = "middle-low-german",
 	Type = "noun",
-	Meanings = {"Doubly Spun Twine"},
-	SingularNominative = "Twern"
+	Meanings = {"Doubly Spun Twine"}
 })
 
 DefineLanguageWord("Twernen", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
@@ -64,9 +60,8 @@ DefineLanguageWord("Twernen", { -- Source: Sean Crist, "An Analysis of *z loss i
 	Infinitive = "Twernen"
 })
 
-DefineLanguageWord("Wêt", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 4.
+DefineLanguageWord("Wêt", { -- source also gives the alternative form "Wêde"; Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 4.
 	Language = "middle-low-german",
 	Type = "noun",
-	Meanings = {"Woad"},
-	SingularNominative = "Wêt" -- source also gives the alternative form "Wêde"
+	Meanings = {"Woad"} -- 
 })

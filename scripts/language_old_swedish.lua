@@ -30,7 +30,6 @@ DefineLanguageWord("Biari", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Type = "noun",
 	Meanings = {"Bear"}, -- used as a personal name, the meaning is not current
 	DerivesFrom = {"old-norse", "noun", "Bjǫrn"},
-	SingularNominative = "Biari",
 	Gender = "Masculine",
 	NameSingular = true,
 	TypeName = {"person"}
@@ -39,8 +38,7 @@ DefineLanguageWord("Biari", { -- Source: August Fick and Alf Torp, "Wortschatz d
 DefineLanguageWord("Ēr", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
 	Language = "old-swedish",
 	Type = "noun",
-	Meanings = {"Bronze"},
-	SingularNominative = "Ēr"
+	Meanings = {"Bronze"}
 })
 
 DefineLanguageWord("Mēre", { -- this is the comparative, what is the normal version of the word? Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.

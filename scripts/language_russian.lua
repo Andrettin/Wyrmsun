@@ -28,13 +28,11 @@
 DefineLanguageWord("Berlóga", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
 	Language = "russian",
 	Type = "noun",
-	Meanings = {"Wild Camp", "Bear Camp"}, -- source gives the German "Wildlager, Bärenlager" as the meaning
-	SingularNominative = "Berlóga"
+	Meanings = {"Wild Camp", "Bear Camp"} -- source gives the German "Wildlager, Bärenlager" as the meaning
 })
 
 DefineLanguageWord("Mozga", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "russian",
 	Type = "noun",
-	Meanings = {"Blood"},
-	SingularNominative = "Mozga"
+	Meanings = {"Blood"}
 })
