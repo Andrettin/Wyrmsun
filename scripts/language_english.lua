@@ -451,6 +451,7 @@ DefineLanguageWord("Iron", {
 	Language = "english",
 	Type = "noun",
 	Meanings = {"Iron"},
+	DerivesFrom = {"old-english", "noun", "Îsern"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 24.
 	Gender = "neuter",
 	Uncountable = true
 })
@@ -459,6 +460,7 @@ DefineLanguageWord("Iron", {
 	Language = "english",
 	Type = "adjective",
 	Meanings = {"Iron"},
+	DerivesFrom = {"old-english", "noun", "Îsern"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 24.
 	AffixNameTypes = {"separate", "prefix", "singular", "unit-class-smithy"} -- seems sensible
 })
 
@@ -484,6 +486,21 @@ DefineLanguageWord("Land", {
 	Meanings = {"Land"},
 	Gender = "neuter",
 	AffixNameTypes = {"compound", "suffix", "singular", "province"} -- example: "Portland"
+})
+
+DefineLanguageWord("Lead", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Lead"},
+	Gender = "neuter",
+	Uncountable = true
+})
+
+DefineLanguageWord("Lead", {
+	Language = "english",
+	Type = "adjective",
+	Meanings = {"Lead"},
+	AffixNameTypes = {"separate", "prefix", "singular", "unit-class-smithy"} -- seems sensible
 })
 
 DefineLanguageWord("Lewis", {

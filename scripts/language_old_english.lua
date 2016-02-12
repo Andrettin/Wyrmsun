@@ -388,6 +388,14 @@ DefineLanguageWord("Hund", { -- Source: Richard M. Runge, "The Phonetic Realizat
 	Meanings = {"Dog"}
 })
 
+DefineLanguageWord("Îsern", { -- source also gives the alternative form "Îsen" and "Îren"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 24.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Iron"}, -- source gives the German "Eisen" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Îsarna"},
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Leoðurun", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 124.
 	Language = "old-english",
 	Type = "noun",

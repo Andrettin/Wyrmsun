@@ -363,6 +363,13 @@ DefineLanguageWord("Huzda", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Meanings = {"Hidden Treasure"}
 })
 
+DefineLanguageWord("Îsarna", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 24.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Iron"}, -- source gives the German "Eisen" as the meaning
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Kizna", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 4, 7.
 	Language = "proto-germanic",
 	Type = "noun",

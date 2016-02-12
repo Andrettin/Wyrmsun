@@ -125,6 +125,14 @@ DefineLanguageWord("Hort", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	DerivesFrom = {"old-high-german", "noun", "Hort"}
 })
 
+DefineLanguageWord("Îsern", { -- source also gives the alternative form "Îsen"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 24.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Iron"}, -- source gives the German "Eisen" as the meaning
+	DerivesFrom = {"old-high-german", "noun", "Îsarn"},
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Kien", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 4, 7.
 	Language = "middle-high-german",
 	Type = "noun",

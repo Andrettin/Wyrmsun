@@ -141,6 +141,14 @@ DefineLanguageWord("Hurth", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	DerivesFrom = {"proto-germanic", "noun", "Χŕdiz"}
 })
 
+DefineLanguageWord("Îsarn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 24.
+	Language = "old-saxon",
+	Type = "noun",
+	Meanings = {"Iron"}, -- source gives the German "Eisen" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Îsarna"},
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Kunni", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
 	Language = "old-saxon",
 	Type = "noun",

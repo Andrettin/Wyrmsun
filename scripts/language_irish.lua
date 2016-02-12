@@ -73,6 +73,12 @@ DefineLanguageWord("Gius", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Meanings = {"Fir", "Spruce"}
 })
 
+DefineLanguageWord("Íarn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 24.
+	Language = "irish",
+	Type = "noun",
+	Meanings = {"Iron"} -- source gives the German "Eisen" as the meaning
+})
+
 DefineLanguageWord("Kass", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
 	Language = "irish",
 	Type = "noun",

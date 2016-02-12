@@ -295,6 +295,14 @@ DefineLanguageWord("Hurđ", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	DerivesFrom = {"proto-germanic", "noun", "Χŕdiz"}
 })
 
+DefineLanguageWord("Îsarn", { -- source also gives the alternative form "Jârn"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 24.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Iron"}, -- source gives the German "Eisen" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Îsarna"},
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Kona", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 	Language = "old-norse",
 	Type = "noun",

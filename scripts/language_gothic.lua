@@ -156,6 +156,21 @@ DefineLanguageWord("Dius", { -- Source: Richard M. Runge, "The Phonetic Realizat
 	Meanings = {"Animal"}
 })
 
+DefineLanguageWord("Eisarn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 24.
+	Language = "gothic",
+	Type = "noun",
+	Meanings = {"Iron"}, -- source gives the German "Eisen" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Îsarna"},
+	Gender = "neuter"
+})
+
+DefineLanguageWord("Eisarneins", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 24.
+	Language = "gothic",
+	Type = "adjective",
+	Meanings = {"Iron"}, -- source gives the German "Eisern" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Îsarna"}
+})
+
 DefineLanguageWord("Faíhu", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "gothic",
 	Type = "noun",

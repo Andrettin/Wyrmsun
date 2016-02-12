@@ -146,6 +146,19 @@ DefineLanguageWord("Bernhard", {
 	NameTypes = {"person"}
 })
 
+DefineLanguageWord("Blei", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"Lead"},
+	Gender = "neuter"
+})
+
+DefineLanguageWord("Bleiern", {
+	Language = "high-german",
+	Type = "adjective",
+	Meanings = {"Lead"}
+})
+
 DefineLanguageWord("Blume", { -- Source: http://www.duden.de/rechtschreibung/Blume
 	Language = "high-german",
 	Type = "noun",
@@ -281,15 +294,17 @@ DefineLanguageWord("Eisen", {
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"Iron"},
+	DerivesFrom = {"middle-high-german", "noun", "Îsern"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 24.
 	Gender = "neuter",
 	Uncountable = true,
 	AffixNameTypes = {"compound", "prefix", "singular", "settlement"} -- examples: "Eisenerz", "Eisenstadt"
 })
-
+	
 DefineLanguageWord("Eisern", {
 	Language = "high-german",
 	Type = "adjective",
-	Meanings = {"Iron"}
+	Meanings = {"Iron"},
+	DerivesFrom = {"middle-high-german", "noun", "Îsern"} -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 24.
 })
 
 DefineLanguageWord("Erz", {
