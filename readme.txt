@@ -70,9 +70,12 @@ https://github.com/Andrettin/Wyrmsun
 * Buildings
 - Improved Teuton smithy name generation.
 
+* Civilization
+- Added many new component words for Germanic settlement, province and smithy name generation.
+
 * Factions
 - Added support for factions using a different language than their civilizations.
-- The England and Scotland factions now use English for proper name generation.
+- The England and Scotland factions now use English for proper name generation (for units, settlements, provinces and smithies).
 
 * Grand Strategy
 - Fixed issue which caused custom heroes to not be placed in the province properly after the "On the Vanaquisl" event mission.
@@ -102,7 +105,6 @@ https://github.com/Andrettin/Wyrmsun
 - Added support for damage bonus vs. dragons. This damage bonus affects wyrms, and will affect any other draconic creatures added later to the game.
 - Fixed an issue which caused unit/building proper names to overlap with other parts of the interface if a word in them was too long.
 - Fixed an issue which caused the player to be able to see others' buildings on the minimap if the player destroyed their own town hall.
-- Add many new components for name generation.
 
 * Modding
 - Added support for redefining civilizations and factions.
