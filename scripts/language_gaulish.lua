@@ -25,6 +25,12 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineLanguageWord("Brîva", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 145.
+	Language = "gaulish",
+	Type = "noun",
+	Meanings = {"Bridge"} -- source gives the German "Brücke" as the meaning
+})
+
 DefineLanguageWord("Dubnorix", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "gaulish",
 	Type = "adjective",

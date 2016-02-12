@@ -45,6 +45,12 @@ DefineLanguageWord("Brŭlogŭ", { -- Source: August Fick and Alf Torp, "Wortscha
 	Meanings = {"Wild Camp", "Bear Camp"} -- source gives the German "Wildlager, Bärenlager" as the meaning
 })
 
+DefineLanguageWord("Brŭvĭ", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 145.
+	Language = "old-church-slavonic",
+	Type = "noun",
+	Meanings = {"Brow"} -- source gives the German "Braue" as the meaning
+})
+
 DefineLanguageWord("Kosa", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
 	Language = "old-church-slavonic",
 	Type = "noun",

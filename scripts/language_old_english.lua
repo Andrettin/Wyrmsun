@@ -112,6 +112,17 @@ DefineLanguageWord("Brord", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Brû", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 145.
+	Language = "old-norse",
+	Type = "noun",
+	Gender = "feminine",
+	Meanings = {"Eyebrow", "Eyelid", "Eyelash"}, -- source gives the German "Augenbraue, Augenlid, Wimper" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Brûvô"},
+	NumberCaseInflections = {
+		"plural", "genitive", "Brûna"
+	}
+})
+
 DefineLanguageWord("Brycg", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 145.
 	Language = "old-english",
 	Type = "noun",

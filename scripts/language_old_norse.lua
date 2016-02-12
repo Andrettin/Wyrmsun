@@ -156,6 +156,25 @@ DefineLanguageWord("Broddr", { -- Source: Sean Crist, "An Analysis of *z loss in
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Brû", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 145.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Bridge"}, -- source gives the German "Brücke" as the meaning
+	Gender = "feminine",
+	DerivesFrom = {"proto-germanic", "noun", "Brôvô"}
+})
+
+DefineLanguageWord("Brûn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 145.
+	Language = "old-norse",
+	Type = "noun",
+	Gender = "feminine",
+	Meanings = {"Brow", "Edge"}, -- source gives the German "Braue, Rand" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Brûvô"},
+	NumberCaseInflections = {
+		"plural", "nominative", "Brŷnn"
+	}
+})
+
 DefineLanguageWord("Bryggja", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 145.
 	Language = "old-norse",
 	Type = "noun",

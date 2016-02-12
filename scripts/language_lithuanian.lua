@@ -38,6 +38,13 @@ DefineLanguageWord("Bė́ras", { -- Source: August Fick and Alf Torp, "Wortschat
 	Meanings = {"Brown"} -- source gives the German "Braun" as the meaning
 })
 
+DefineLanguageWord("Bruvìs", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 145.
+	Language = "lithuanian",
+	Type = "noun",
+	Meanings = {"Eyebrow"}, -- source gives the German "Augenbraue" as the meaning
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Dubùs", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "lithuanian",
 	Type = "adjective",

@@ -44,6 +44,13 @@ DefineLanguageWord("Bhrā́tā", { -- Source: Winfred P. Lehmann, "A Grammar of 
 	Meanings = {"Brother"}
 })
 
+DefineLanguageWord("Bhrû", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 145.
+	Language = "sanskrit",
+	Type = "noun",
+	Meanings = {"Brow"}, -- source gives the German "Braue" as the meaning
+	Gender = "feminine"
+})
+
 DefineLanguageWord("Bódhati", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
 	Language = "sanskrit",
 	Type = "verb",
