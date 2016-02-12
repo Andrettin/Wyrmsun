@@ -488,6 +488,7 @@ DefineRaceNames(
 		"display", "Persian",
 		"visible",
 		"species", "human",
+		"language", "avestan",
 		"parent-civilization", "teuton",
 		"playable", false
 	},

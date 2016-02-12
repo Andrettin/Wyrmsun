@@ -1671,6 +1671,9 @@ function LoadProvinces(world)
 		},
 		Gotland = {
 			Name = "Gotland",
+			CulturalNames = {
+				goth = "Gotland"
+			},
 			Tiles = {
 --				{133, 23}, -- old map
 				{532, 92}, {532, 93},
