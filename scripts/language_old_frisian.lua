@@ -134,6 +134,13 @@ DefineLanguageWord("Ransa", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Meanings = {"House"}
 })
 
+DefineLanguageWord("Thorp", { -- source also gives the alternative form "Therp"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 100.
+	Language = "old-frisian",
+	Type = "noun",
+	Meanings = {"Village"}, -- source gives the German "Dorf" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Þurpa"}
+})
+
 DefineLanguageWord("Wêd", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 4.
 	Language = "old-frisian",
 	Type = "noun",

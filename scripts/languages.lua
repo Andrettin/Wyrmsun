@@ -218,6 +218,10 @@ DefineLanguage("old-swedish", {
 	Name = "Old Swedish"
 })
 
+DefineLanguage("oscan", {
+	Name = "Oscan"
+})
+
 DefineLanguage("phrygian", {
 	Name = "Phrygian"
 })
@@ -265,6 +269,7 @@ Load("scripts/language_avestan.lua")
 Load("scripts/language_lithuanian.lua")
 Load("scripts/language_greek.lua")
 Load("scripts/language_old_prussian.lua")
+Load("scripts/language_oscan.lua")
 Load("scripts/language_sanskrit.lua")
 
 -- Celtic languages (branch of the Indo-European family)

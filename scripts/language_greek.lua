@@ -27,35 +27,6 @@
 
 -- Greek
 
-DefineLanguageWord("Κώνωπες", { -- this is the plural; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 101.
-	Language = "greek",
-	Type = "noun",
-	Meanings = {"Gnats"},
-	NumberCaseInflections = {
-		"plural", "nominative", "Κώνωπες"
-	}
-})
-
-DefineLanguageWord("Μισθός", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 7.
-	Language = "greek",
-	Type = "noun",
-	Meanings = {"Reward", "Payment of a Soldier"},
-	Gender = "masculine"
-})
-
-DefineLanguageWord("Χέσ-χιον", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
-	Language = "greek",
-	Type = "noun",
-	Meanings = {"Oakum"} -- source gives the German word "Werg" as the meaning
-})
-
-DefineLanguageWord("Χύσθος", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
-	Language = "greek",
-	Type = "noun",
-	Meanings = {"Cavity", "Vulva"},
-	Gender = "masculine"
-})
-
 DefineLanguageWord("Abdera", { -- should be written as the original Greek name (with Greek characters)
 	Language = "greek",
 	Type = "noun",
@@ -119,6 +90,12 @@ DefineLanguageWord("Amphi", { -- should be written as the original Greek name (w
 	AffixNameTypes = {"compound", "prefix", "singular", "settlement"} -- example: "Amphipolis"
 })
 
+DefineLanguageWord("Baínō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "greek",
+	Type = "verb",
+	Meanings = {"Come"} -- apparently, but not entirely clear from source
+})
+
 DefineLanguageWord("Calli", { -- should be written as the original Greek name (with Greek characters)
 	Language = "greek",
 	Type = "noun",
@@ -126,10 +103,30 @@ DefineLanguageWord("Calli", { -- should be written as the original Greek name (w
 	AffixNameTypes = {"compound", "prefix", "singular", "settlement"} -- example: "Callipolis"
 })
 
+DefineLanguageWord("Χέσ-χιον", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
+	Language = "greek",
+	Type = "noun",
+	Meanings = {"Oakum"} -- source gives the German word "Werg" as the meaning
+})
+
 DefineLanguageWord("Χórtos", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "greek",
 	Type = "noun",
 	Meanings = {"Garden"}
+})
+
+DefineLanguageWord("Χύσθος", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
+	Language = "greek",
+	Type = "noun",
+	Meanings = {"Cavity", "Vulva"},
+	Gender = "masculine"
+})
+
+DefineLanguageWord("Égō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 1.
+	Language = "greek",
+	Type = "pronoun",
+	Meanings = {"I"}, -- is a cognate of Proto-Germanic "eka"/"ek", so possibly has the same meaning
+	Nominative = "Égō"
 })
 
 DefineLanguageWord("Érā", { -- this is the genitive; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
@@ -141,6 +138,13 @@ DefineLanguageWord("Érā", { -- this is the genitive; Source: Winfred P. Lehman
 	}
 })
 
+DefineLanguageWord("Hépomai", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
+	Language = "greek",
+	Type = "verb",
+	Meanings = {"Follow"},
+	DerivesFrom = {"proto-indo-european", "verb", "Sekʷ"}
+})
+
 DefineLanguageWord("Híppos", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 	Language = "greek",
 	Type = "noun",
@@ -148,10 +152,61 @@ DefineLanguageWord("Híppos", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	DerivesFrom = {"proto-indo-european", "noun", "Éḱwos"}
 })
 
+DefineLanguageWord("Heptá", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
+	Language = "greek",
+	Type = "numeral",
+	Number = 7
+})
+
+DefineLanguageWord("Ídmen", { -- this is the plural first person present; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "greek",
+	Type = "verb",
+	Meanings = {"Know"},
+	NumberPersonTenseMoodInflections = {
+		"plural", "first-person", "present", "indicative", "Ídmen"
+	}
+})
+
+DefineLanguageWord("Κώνωπες", { -- this is the plural; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 101.
+	Language = "greek",
+	Type = "noun",
+	Meanings = {"Gnats"},
+	NumberCaseInflections = {
+		"plural", "nominative", "Κώνωπες"
+	}
+})
+
 DefineLanguageWord("Kúrtos", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "greek",
 	Type = "noun",
 	Meanings = {"Cage"}
+})
+
+DefineLanguageWord("Meízōn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "greek",
+	Type = "adjective",
+	Meanings = {"More"}
+})
+
+DefineLanguageWord("Μισθός", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 7.
+	Language = "greek",
+	Type = "noun",
+	Meanings = {"Reward", "Payment of a Soldier"},
+	Gender = "masculine"
+})
+
+DefineLanguageWord("Nea", { -- should be written as the original Greek name (with Greek characters)
+	Language = "greek",
+	Type = "adjective",
+	Meanings = {"New"},
+	AffixNameTypes = {"compound", "prefix", "singular", "settlement"} -- example: "Neapolis" (Naples)
+})
+
+DefineLanguageWord("Némō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
+	Language = "greek",
+	Type = "verb",
+	Meanings = {"Distribute"},
+	DerivesFrom = {"proto-indo-european", "verb", "Nem"}
 })
 
 DefineLanguageWord("Nuktós", { -- this is the genitive; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
@@ -169,6 +224,12 @@ DefineLanguageWord("Óχos", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Meanings = {"Wagon"}
 })
 
+DefineLanguageWord("Oktṓ", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "greek",
+	Type = "numeral",
+	Number = 8
+})
+
 DefineLanguageWord("Omφḗ", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "greek",
 	Type = "noun",
@@ -182,10 +243,23 @@ DefineLanguageWord("Ὀφρύς", { -- Source: August Fick and Alf Torp, "Wortsc
 	Gender = "feminine"
 })
 
+DefineLanguageWord("Orektós", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "greek",
+	Type = "adjective",
+	Meanings = {"Straight"}
+})
+
 DefineLanguageWord("Patḗr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "greek",
 	Type = "noun",
 	Meanings = {"Father"}
+})
+
+DefineLanguageWord("Peúthomai", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Sections 3-4.
+	Language = "greek",
+	Type = "verb",
+	Meanings = {"Examine"},
+	DerivesFrom = {"proto-indo-european", "verb", "Bhewdh"}
 })
 
 DefineLanguageWord("Phāgós", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
@@ -201,6 +275,12 @@ DefineLanguageWord("Pheídomai", { -- this is the singular first person present;
 	NumberPersonTenseMoodInflections = {
 		"singular", "first-person", "present", "indicative", "Pheídomai"
 	}
+})
+
+DefineLanguageWord("Plōtós", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "greek",
+	Type = "adjective",
+	Meanings = {"Floating"}
 })
 
 DefineLanguageWord("Podós", { -- this is the genitive; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
@@ -225,6 +305,12 @@ DefineLanguageWord("Skiá", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Meanings = {"Shadow"}
 })
 
+DefineLanguageWord("Steíkhō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Sections 3-4.
+	Language = "greek",
+	Type = "verb",
+	Meanings = {"Climb"}
+})
+
 DefineLanguageWord("Téphra", { -- is this the plural form? Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
 	Language = "greek",
 	Type = "noun",
@@ -244,88 +330,14 @@ DefineLanguageWord("Thúrā", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Meanings = {"Door"}
 })
 
-DefineLanguageWord("Baínō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+DefineLanguageWord("Τύρβη", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 100.
 	Language = "greek",
-	Type = "verb",
-	Meanings = {"Come"} -- apparently, but not entirely clear from source
+	Type = "noun",
+	Meanings = {"Confusion", "Turmoil"} -- source gives the German "Verwirrung, Getümmel" as the meaning
 })
 
-DefineLanguageWord("Hépomai", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
-	Language = "greek",
-	Type = "verb",
-	Meanings = {"Follow"},
-	DerivesFrom = {"proto-indo-european", "verb", "Sekʷ"}
-})
-
-DefineLanguageWord("Ídmen", { -- this is the plural first person present; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
-	Language = "greek",
-	Type = "verb",
-	Meanings = {"Know"},
-	NumberPersonTenseMoodInflections = {
-		"plural", "first-person", "present", "indicative", "Ídmen"
-	}
-})
-
-DefineLanguageWord("Némō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
-	Language = "greek",
-	Type = "verb",
-	Meanings = {"Distribute"},
-	DerivesFrom = {"proto-indo-european", "verb", "Nem"}
-})
-
-DefineLanguageWord("Peúthomai", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Sections 3-4.
-	Language = "greek",
-	Type = "verb",
-	Meanings = {"Examine"},
-	DerivesFrom = {"proto-indo-european", "verb", "Bhewdh"}
-})
-
-DefineLanguageWord("Steíkhō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Sections 3-4.
-	Language = "greek",
-	Type = "verb",
-	Meanings = {"Climb"}
-})
-
-DefineLanguageWord("Meízōn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+DefineLanguageWord("Τύρβα", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 100.
 	Language = "greek",
 	Type = "adjective",
-	Meanings = {"More"}
-})
-
-DefineLanguageWord("Nea", { -- should be written as the original Greek name (with Greek characters)
-	Language = "greek",
-	Type = "adjective",
-	Meanings = {"New"},
-	AffixNameTypes = {"compound", "prefix", "singular", "settlement"} -- example: "Neapolis" (Naples)
-})
-
-DefineLanguageWord("Orektós", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
-	Language = "greek",
-	Type = "adjective",
-	Meanings = {"Straight"}
-})
-
-DefineLanguageWord("Plōtós", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
-	Language = "greek",
-	Type = "adjective",
-	Meanings = {"Floating"}
-})
-
-DefineLanguageWord("Égō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 1.
-	Language = "greek",
-	Type = "pronoun",
-	Meanings = {"I"}, -- is a cognate of Proto-Germanic "eka"/"ek", so possibly has the same meaning
-	Nominative = "Égō"
-})
-
-DefineLanguageWord("Heptá", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
-	Language = "greek",
-	Type = "numeral",
-	Number = 7
-})
-
-DefineLanguageWord("Oktṓ", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
-	Language = "greek",
-	Type = "numeral",
-	Number = 8
+	Meanings = {"Confused"} -- source gives the German "Durcheinander, Verwirrt" as the meaning
 })

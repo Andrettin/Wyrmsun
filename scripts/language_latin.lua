@@ -25,6 +25,12 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineLanguageWord("Alucinare", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 101.
+	Language = "latin",
+	Type = "verb",
+	Meanings = {"To Wander in Mind", "Speak while in such a State"}
+})
+
 DefineLanguageWord("Alucitae", { -- this is the plural; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 101.
 	Language = "latin",
 	Type = "noun",
@@ -46,10 +52,23 @@ DefineLanguageWord("Caper", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Meanings = {"Male Goat"}
 })
 
+DefineLanguageWord("Captus", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
+	Language = "latin",
+	Type = "adjective",
+	Meanings = {"Captured"}
+})
+
 DefineLanguageWord("Caulis", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
 	Language = "latin",
 	Type = "noun",
 	Meanings = {} -- words derived from it mean (in German) "Kohl"
+})
+
+DefineLanguageWord("Cōnīveō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
+	Language = "latin",
+	Type = "verb",
+	Meanings = {"Shut the Eyes"},
+	DerivesFrom = {"proto-indo-european", "verb", "Kneygʷh"}
 })
 
 DefineLanguageWord("Conopes", { -- this is the plural; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 101.
@@ -79,6 +98,23 @@ DefineLanguageWord("Custos", { -- Source: Sean Crist, "An Analysis of *z loss in
 	Meanings = {"Guard"} -- source gives meaning as "a Guard"
 })
 
+DefineLanguageWord("Dūcō", { -- this is the singular first person present; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Sections 3-4.
+	Language = "latin",
+	Type = "verb",
+	Meanings = {"Lead"},
+	DerivesFrom = {"old-latin", "verb", "Doucō"},
+	NumberPersonTenseMoodInflections = {
+		"singular", "first-person", "present", "indicative", "Dūcō"
+	}
+})
+
+DefineLanguageWord("Egō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 1.
+	Language = "latin",
+	Type = "pronoun",
+	Meanings = {"I"}, -- is a cognate of Proto-Germanic "eka"/"ek", so possibly has the same meaning
+	Nominative = "Egō"
+})
+
 DefineLanguageWord("Fāgus", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "latin",
 	Type = "noun",
@@ -89,6 +125,15 @@ DefineLanguageWord("Far", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-G
 	Language = "latin",
 	Type = "noun",
 	Meanings = {"Wheat", "Spelt"} -- the word means one of these, not both
+})
+
+DefineLanguageWord("Ferō", { -- this is the singular first person present; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
+	Language = "latin",
+	Type = "verb",
+	Meanings = {"Bear"},
+	NumberPersonTenseMoodInflections = {
+		"singular", "first-person", "present", "indicative", "Ferō"
+	}
 })
 
 DefineLanguageWord("Foris", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
@@ -136,6 +181,33 @@ DefineLanguageWord("Hortus", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Meanings = {"Garden"}
 })
 
+DefineLanguageWord("Linquō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
+	Language = "latin",
+	Type = "verb",
+	Meanings = {},
+	DerivesFrom = {"proto-indo-european", "verb", "Leykʷ"}
+})
+
+DefineLanguageWord("Longus", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "latin",
+	Type = "adjective",
+	Meanings = {"Long"} -- presumably, but it is not entirely clear from the source
+})
+
+DefineLanguageWord("Molere", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "latin",
+	Type = "verb",
+	Meanings = {"Grind"}, -- presumably, but it is not entirely clear from the source
+	DerivesFrom = {"proto-indo-european", "verb", "Mel"}
+	-- also given as "Molō" (if it is indeed the same word); Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
+})
+
+DefineLanguageWord("Octō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "latin",
+	Type = "numeral",
+	Number = 8
+})
+
 DefineLanguageWord("Pater", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "latin",
 	Type = "noun",
@@ -148,76 +220,17 @@ DefineLanguageWord("Pecu", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Meanings = {"Herd"}
 })
 
-DefineLanguageWord("Sēmen", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+DefineLanguageWord("Quod", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "latin",
-	Type = "noun",
-	Meanings = {"Seed"}
+	Type = "pronoun",
+	Meanings = {"What"},
+	Nominative = "Quod"
 })
 
-DefineLanguageWord("Sōl", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+DefineLanguageWord("Rectus", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "latin",
-	Type = "noun",
-	Meanings = {"Sun"}
-})
-
-DefineLanguageWord("Sūs", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
-	Language = "latin",
-	Type = "noun",
-	Meanings = {"Sow"}
-})
-
-DefineLanguageWord("Vir", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
-	Language = "latin",
-	Type = "noun",
-	Meanings = {},
-	DerivesFrom = {"proto-indo-european", "noun", "Wiros"}
-})
-
-DefineLanguageWord("Alucinare", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 101.
-	Language = "latin",
-	Type = "verb",
-	Meanings = {"To Wander in Mind", "Speak while in such a State"}
-})
-
-DefineLanguageWord("Cōnīveō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
-	Language = "latin",
-	Type = "verb",
-	Meanings = {"Shut the Eyes"},
-	DerivesFrom = {"proto-indo-european", "verb", "Kneygʷh"}
-})
-
-DefineLanguageWord("Dūcō", { -- this is the singular first person present; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Sections 3-4.
-	Language = "latin",
-	Type = "verb",
-	Meanings = {"Lead"},
-	DerivesFrom = {"old-latin", "verb", "Doucō"},
-	NumberPersonTenseMoodInflections = {
-		"singular", "first-person", "present", "indicative", "Dūcō"
-	}
-})
-
-DefineLanguageWord("Ferō", { -- this is the singular first person present; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
-	Language = "latin",
-	Type = "verb",
-	Meanings = {"Bear"},
-	NumberPersonTenseMoodInflections = {
-		"singular", "first-person", "present", "indicative", "Ferō"
-	}
-})
-
-DefineLanguageWord("Linquō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
-	Language = "latin",
-	Type = "verb",
-	Meanings = {},
-	DerivesFrom = {"proto-indo-european", "verb", "Leykʷ"}
-})
-
-DefineLanguageWord("Molere", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
-	Language = "latin",
-	Type = "verb",
-	Meanings = {"Grind"}, -- presumably, but it is not entirely clear from the source
-	DerivesFrom = {"proto-indo-european", "verb", "Mel"}
-	-- also given as "Molō" (if it is indeed the same word); Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
+	Type = "adjective",
+	Meanings = {"Straight"} -- presumably, but it is not entirely clear from the source
 })
 
 DefineLanguageWord("Scrībere", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
@@ -233,10 +246,58 @@ DefineLanguageWord("Sequor", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	DerivesFrom = {"proto-indo-european", "verb", "Sekʷ"}
 })
 
+DefineLanguageWord("Sēmen", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "latin",
+	Type = "noun",
+	Meanings = {"Seed"}
+})
+
+DefineLanguageWord("Sōl", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "latin",
+	Type = "noun",
+	Meanings = {"Sun"}
+})
+
 DefineLanguageWord("Spuō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
 	Language = "latin",
 	Type = "verb",
 	Meanings = {"Spit"}
+})
+
+DefineLanguageWord("Suīnus", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "latin",
+	Type = "adjective",
+	Meanings = {"of Pig"}
+})
+
+DefineLanguageWord("Super", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "latin",
+	Type = "adposition",
+	Meanings = {"Over"}
+})
+
+DefineLanguageWord("Sūs", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
+	Language = "latin",
+	Type = "noun",
+	Meanings = {"Sow"}
+})
+
+DefineLanguageWord("Torrus", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "latin",
+	Type = "adjective",
+	Meanings = {"Dry"}
+})
+
+DefineLanguageWord("Turba", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 100.
+	Language = "latin",
+	Type = "noun",
+	Meanings = {"Flock", "Crowd"} -- source gives the German "Schar" as the meaning
+})
+
+DefineLanguageWord("Turbâre", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 100.
+	Language = "latin",
+	Type = "verb",
+	Meanings = {"Confuse"} -- source gives the German "Verwirren" as the meaning
 })
 
 DefineLanguageWord("Veniō", { -- alternatively written as "Venio" by the source; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Sections 3, 5.
@@ -246,54 +307,17 @@ DefineLanguageWord("Veniō", { -- alternatively written as "Venio" by the source
 	DerivesFrom = {"proto-indo-european", "verb", "Gʷem"}
 })
 
-DefineLanguageWord("Captus", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
-	Language = "latin",
-	Type = "adjective",
-	Meanings = {"Captured"}
-})
-
-DefineLanguageWord("Longus", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
-	Language = "latin",
-	Type = "adjective",
-	Meanings = {"Long"} -- presumably, but it is not entirely clear from the source
-})
-
-DefineLanguageWord("Rectus", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
-	Language = "latin",
-	Type = "adjective",
-	Meanings = {"Straight"} -- presumably, but it is not entirely clear from the source
-})
-
-DefineLanguageWord("Suīnus", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
-	Language = "latin",
-	Type = "adjective",
-	Meanings = {"of Pig"}
-})
-
-DefineLanguageWord("Torrus", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
-	Language = "latin",
-	Type = "adjective",
-	Meanings = {"Dry"}
-})
-
 DefineLanguageWord("Verus", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 99.
 	Language = "latin",
 	Type = "adjective",
 	Meanings = {"True", "Real"}
 })
 
-DefineLanguageWord("Egō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 1.
+DefineLanguageWord("Vir", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
 	Language = "latin",
-	Type = "pronoun",
-	Meanings = {"I"}, -- is a cognate of Proto-Germanic "eka"/"ek", so possibly has the same meaning
-	Nominative = "Egō"
-})
-
-DefineLanguageWord("Quod", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
-	Language = "latin",
-	Type = "pronoun",
-	Meanings = {"What"},
-	Nominative = "Quod"
+	Type = "noun",
+	Meanings = {},
+	DerivesFrom = {"proto-indo-european", "noun", "Wiros"}
 })
 
 DefineLanguageWord("Vōs", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 5, Subsection 1.
@@ -301,16 +325,4 @@ DefineLanguageWord("Vōs", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Type = "pronoun",
 	Meanings = {"You"}, -- second person plural
 	Nominative = "Vōs"
-})
-
-DefineLanguageWord("Super", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
-	Language = "latin",
-	Type = "adposition",
-	Meanings = {"Over"}
-})
-
-DefineLanguageWord("Octō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
-	Language = "latin",
-	Type = "numeral",
-	Number = 8
 })

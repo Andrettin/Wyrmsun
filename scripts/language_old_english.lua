@@ -561,6 +561,14 @@ DefineLanguageWord("Swīn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	DerivesFrom = {"proto-germanic", "noun", "Swīnaz"}
 })
 
+DefineLanguageWord("Þorp", { -- source also gives the alternative form "Þrop"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 100.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Manor", "Village"}, -- source gives the German "Landgut, Dorf" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Þurpa"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Twīn", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 6.
 	Language = "old-english",
 	Type = "noun",

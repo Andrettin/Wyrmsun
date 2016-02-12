@@ -417,6 +417,21 @@ DefineLanguageWord("Svīn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	DerivesFrom = {"proto-germanic", "noun", "Swīnaz"}
 })
 
+DefineLanguageWord("Þorp", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 100.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Flock", "Crowd", "Farmstead"}, -- source gives the German "Schar, Menschenhaufen, kleineres Gehöft" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Þurpa"},
+	Gender = "neuter"
+})
+
+DefineLanguageWord("Þyrpast", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 100.
+	Language = "old-norse",
+	Type = "verb",
+	Meanings = {"Herd Together in Large Numbers"}, -- source gives the German "sich massenhaft zusammendrängen" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Þurpa"}
+})
+
 DefineLanguageWord("Vagn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
 	Language = "old-norse",
 	Type = "noun",

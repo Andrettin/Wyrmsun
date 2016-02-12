@@ -92,6 +92,14 @@ DefineLanguageWord("Burc", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Gender = "feminine"
 })
 
+DefineLanguageWord("Dorf", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 100.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Village"}, -- source gives the German "Dorf" as the meaning
+	DerivesFrom = {"old-high-german", "noun", "Dorf"},
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Gart", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
 	Language = "middle-high-german",
 	Type = "noun",

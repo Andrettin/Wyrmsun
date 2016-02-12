@@ -122,6 +122,14 @@ DefineLanguageWord("Corn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	DerivesFrom = {"proto-germanic", "noun", "Kŕnam"}
 })
 
+DefineLanguageWord("Dorf", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 100.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Village"}, -- source gives the German "Dorf" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Þurpa"},
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Eddo", { -- Also given as "Edo", are Eddo and Edo two forms of "or" in Old High German, or are they just different ways to write the same word in that language?; Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
 	Language = "old-high-german",
 	Type = "conjunction",

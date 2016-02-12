@@ -386,6 +386,14 @@ DefineLanguageWord("Swein", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	DerivesFrom = {"proto-germanic", "noun", "Swīnaz"}
 })
 
+DefineLanguageWord("Þaúrp", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 100.
+	Language = "gothic",
+	Type = "noun",
+	Meanings = {"Field"}, -- source gives the German "Feld" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Þurpa"},
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Us", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
 	Language = "gothic",
 	Type = "adverb",

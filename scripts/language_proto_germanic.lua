@@ -567,7 +567,7 @@ DefineLanguageWord("Tîva", { -- Source: August Fick and Alf Torp, "Wortschatz d
 DefineLanguageWord("Þurpa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 100.
 	Language = "proto-germanic",
 	Type = "noun",
-	Meanings = {"Crowd", "Village"}, -- source gives "Schar, Menschenhaufen, Dorf" as the meaning
+	Meanings = {"Flock", "Crowd", "Village"}, -- source gives the German "Schar, Menschenhaufen, Dorf" as the meaning
 	Gender = "neuter"
 })
 

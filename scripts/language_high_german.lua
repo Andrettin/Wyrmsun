@@ -257,11 +257,11 @@ DefineLanguageWord("Dorf", {
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"Village"},
-	DerivesFrom = {"proto-germanic", "noun", "Þurpa"},
+	DerivesFrom = {"middle-high-german", "noun", "Dorf"},
+	Gender = "neuter",
 	NumberCaseInflections = {
 		"plural", "nominative", "Dörfer"
 	},
-	Gender = "neuter",
 	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- examples: "Frohsdorf", "Gänserndorf"
 })
 

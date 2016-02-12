@@ -25,23 +25,8 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageWord("Bradd", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
-	Language = "norwegian",
+DefineLanguageWord("Trííbúm", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 100.
+	Language = "oscan",
 	Type = "noun",
-	Meanings = {"Shore", "Edge"},
-	Gender = "masculine"
-})
-
-DefineLanguageWord("Torp", { -- vernacular; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 100.
-	Language = "norwegian",
-	Type = "noun",
-	Meanings = {"Herd"}, -- source gives the German "Haufe (z. B. von Kühen)" as the meaning
-	DerivesFrom = {"old-norse", "noun", "Þorp"}
-})
-
-DefineLanguageWord("Torpast", { -- vernacular; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 100.
-	Language = "norwegian",
-	Type = "verb",
-	Meanings = {"Herd Together in Large Numbers"}, -- source gives the German "sich massenhaft zusammendrängen" as the meaning
-	DerivesFrom = {"old-norse", "verb", "Þyrpast"}
+	Meanings = {"House", "Building"} -- source gives the Latin "Domum, Aedificium" as the meaning
 })

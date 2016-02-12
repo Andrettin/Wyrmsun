@@ -202,6 +202,13 @@ DefineLanguageWord("Suht", { -- Source: Richard M. Runge, "The Phonetic Realizat
 	Meanings = {"Sickness"}
 })
 
+DefineLanguageWord("Thorp", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 100.
+	Language = "old-saxon",
+	Type = "noun",
+	Meanings = {"Village"}, -- source gives the German "Dorf" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Þurpa"}
+})
+
 DefineLanguageWord("Weg", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
 	Language = "old-saxon",
 	Type = "noun",
