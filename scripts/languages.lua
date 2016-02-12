@@ -210,8 +210,8 @@ DefineLanguage("old-saxon", {
 	Name = "Old Saxon"
 })
 
-DefineLanguage("old-slavic", {
-	Name = "Old Slavic"
+DefineLanguage("old-church-slavonic", {
+	Name = "Old Church Slavonic"
 })
 
 DefineLanguage("old-swedish", {
@@ -306,7 +306,7 @@ Load("scripts/language_old_latin.lua")
 Load("scripts/language_latin.lua")
 
 -- Slavic languages (branch of the Indo-European family)
-Load("scripts/language_old_slavic.lua")
+Load("scripts/language_old_church_slavonic.lua")
 Load("scripts/language_russian.lua")
 Load("scripts/language_ukrainian.lua")
 

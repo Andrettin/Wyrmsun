@@ -25,66 +25,64 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
--- Old Slavic / Old Church Slavonic
-
 DefineLanguageWord("Běžą", { -- source also gives the alternate form "Běžati"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 133.
-	Language = "old-slavic",
+	Language = "old-church-slavonic",
 	Type = "verb", -- correct?
 	Meanings = {},
 	DerivesFrom = {"proto-indo-european", "verb", "Bheg"}
 })
 
 DefineLanguageWord("Brěga", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
-	Language = "old-slavic",
+	Language = "old-church-slavonic",
 	Type = "noun",
 	Meanings = {"Shore", "Riverbank"}, -- source gives "Ufer" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Berga"} -- according to the source, borrowed from Germanic (or did it mean the Germanic languages?)
 })
 
 DefineLanguageWord("Brŭlogŭ", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
-	Language = "old-slavic",
+	Language = "old-church-slavonic",
 	Type = "noun",
 	Meanings = {"Wild Camp", "Bear Camp"} -- source gives the German "Wildlager, Bärenlager" as the meaning
 })
 
 DefineLanguageWord("Kosa", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
-	Language = "old-slavic",
+	Language = "old-church-slavonic",
 	Type = "noun",
 	Meanings = {"Hair"}
 })
 
 DefineLanguageWord("Kosmŭ", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
-	Language = "old-slavic",
+	Language = "old-church-slavonic",
 	Type = "noun",
 	Meanings = {"Head Hair"}
 })
 
 DefineLanguageWord("Mězga", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
-	Language = "old-slavic",
+	Language = "old-church-slavonic",
 	Type = "noun",
 	Meanings = {"Sap", "Juice"}
 })
 
 DefineLanguageWord("Mĭzda", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 7.
-	Language = "old-slavic",
+	Language = "old-church-slavonic",
 	Type = "noun",
 	Meanings = {"Reward"}
 })
 
 DefineLanguageWord("Mozgŭ", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
-	Language = "old-slavic",
+	Language = "old-church-slavonic",
 	Type = "noun",
 	Meanings = {"Brain"}
 })
 
 DefineLanguageWord("Svins", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
-	Language = "old-slavic",
+	Language = "old-church-slavonic",
 	Type = "adjective",
 	Meanings = {"of Pig"}
 })
 
 DefineLanguageWord("Žrudŭ", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
-	Language = "old-slavic",
+	Language = "old-church-slavonic",
 	Type = "noun",
 	Meanings = {"Flimsy Pole"}
 })

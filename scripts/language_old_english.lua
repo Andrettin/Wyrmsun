@@ -35,7 +35,7 @@ DefineLanguageWord("Ærn", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Language = "old-english",
 	Type = "noun",
 	Meanings = {"House"},
-	Gender = "Neuter"
+	Gender = "neuter"
 })
 
 DefineLanguageWord("Æþela", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 14.
@@ -43,7 +43,7 @@ DefineLanguageWord("Æþela", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Type = "noun",
 	Meanings = {"Noble Birth"}, -- source gives "edle Geburt" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Aþala"},
-	Gender = "Feminine"
+	Gender = "feminine"
 })
 
 DefineLanguageWord("Bæþ", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 133.
@@ -51,7 +51,7 @@ DefineLanguageWord("Bæþ", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Type = "noun",
 	Meanings = {"Bath", "Baths"}, -- source gives the German "Bad" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Baþa"},
-	Gender = "Neuter"
+	Gender = "neuter"
 })
 
 DefineLanguageWord("Bearn", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 238.
@@ -65,7 +65,7 @@ DefineLanguageWord("Bece", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Type = "noun",
 	Meanings = {"Stream"}, -- source gives the German "Bach" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Baki"},
-	Gender = "Masculine"
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Beorg", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
@@ -73,7 +73,7 @@ DefineLanguageWord("Beorg", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Type = "noun",
 	Meanings = {"Mountain", "Hill", "Grave Mound"}, -- source gives "Berg, Hügel, Grabhügel" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Berga"},
-	Gender = "Masculine"
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Bera", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
@@ -81,7 +81,7 @@ DefineLanguageWord("Bera", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Type = "noun",
 	Meanings = {"Bear"}, -- source gives the German "Bär" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Beran"},
-	Gender = "Masculine"
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Blôstma", { -- source also gives the alternative forms "Blôsma" and "Blôstm"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 146.
@@ -89,7 +89,7 @@ DefineLanguageWord("Blôstma", { -- source also gives the alternative forms "Bl�
 	Type = "noun",
 	Meanings = {"Blossom"}, -- presumably, since it gave origin to the English term "Blossom", but the source doesn't specify the meaning precisely
 	DerivesFrom = {"proto-germanic", "noun", "Blôma"}, 
-	Gender = "Masculine"
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Bōc", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
@@ -109,7 +109,15 @@ DefineLanguageWord("Brord", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Language = "old-english",
 	Type = "noun",
 	Meanings = {"Point", "Sprout"},
-	Gender = "Masculine"
+	Gender = "masculine"
+})
+
+DefineLanguageWord("Brycg", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 145.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Bridge"}, -- source gives the German "Brücke" as the meaning
+	Gender = "feminine",
+	DerivesFrom = {"proto-germanic", "noun", "Brugjô"}
 })
 
 DefineLanguageWord("Burg", { -- source also gives the alternate form "Burh"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
@@ -120,14 +128,14 @@ DefineLanguageWord("Burg", { -- source also gives the alternate form "Burh"; Sou
 	NumberCaseInflections = {
 		"plural", "nominative", "Byrig"
 	},
-	Gender = "Feminine"
+	Gender = "feminine"
 })
 
 DefineLanguageWord("Cên", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 4-7.
 	Language = "old-english",
 	Type = "noun",
 	Meanings = {"Pine", "Fir", "Spruce"},
-	Gender = "Masculine"
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Corn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
@@ -168,7 +176,7 @@ DefineLanguageWord("Ealdorneru", { -- Source: Sean Crist, "An Analysis of *z los
 	Language = "old-english",
 	Type = "noun",
 	Meanings = {"Saving of a Life"},
-	Gender = "Feminine"
+	Gender = "feminine"
 })
 
 DefineLanguageWord("Eoh", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
@@ -197,7 +205,7 @@ DefineLanguageWord("Fiðelestre", { -- Source: Alaric Hall, "The Meanings of Elf
 	Language = "old-english",
 	Type = "noun",
 	Meanings = {"Fiddler"},
-	Gender = "Feminine" -- presumably, given the source is talking about occupations for women
+	Gender = "feminine" -- presumably, given the source is talking about occupations for women
 })
 
 DefineLanguageWord("Fisc", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
@@ -218,7 +226,7 @@ DefineLanguageWord("Fŷr", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Type = "noun",
 	Meanings = {"Fire"}, -- source gives "Feuer" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Fûir"},
-	Gender = "Neuter"
+	Gender = "neuter"
 })
 
 DefineLanguageWord("Gēar", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
@@ -239,7 +247,7 @@ DefineLanguageWord("Gereord", { -- Source: Sean Crist, "An Analysis of *z loss i
 	Language = "old-english",
 	Type = "noun",
 	Meanings = {"Meal", "Feast", "Food"},
-	Gender = "Neuter"
+	Gender = "neuter"
 })
 
 DefineLanguageWord("Gesihþ", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
@@ -259,14 +267,14 @@ DefineLanguageWord("Glīwmǣden", { -- Source: Alaric Hall, "The Meanings of Elf
 	Language = "old-english",
 	Type = "noun",
 	Meanings = {"Musician"},
-	Gender = "Feminine" -- presumably, given the source is talking about occupations for women
+	Gender = "feminine" -- presumably, given the source is talking about occupations for women
 })
 
 DefineLanguageWord("God", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 89.
 	Language = "old-english",
 	Type = "noun",
 	Meanings = {"God"},
-	Gender = "Masculine"
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Gyden", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 89.
@@ -276,7 +284,7 @@ DefineLanguageWord("Gyden", { -- Source: Alaric Hall, "The Meanings of Elf and E
 	NumberCaseInflections = {
 		"plural", "nominative", "Gydena"
 	},
-	Gender = "Feminine"
+	Gender = "feminine"
 })
 
 DefineLanguageWord("Hād", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 3.
@@ -289,7 +297,7 @@ DefineLanguageWord("Hearpestre", { -- Source: Alaric Hall, "The Meanings of Elf 
 	Language = "old-english",
 	Type = "noun",
 	Meanings = {"Harp Player"},
-	Gender = "Feminine" -- presumably, given the source is talking about occupations for women
+	Gender = "feminine" -- presumably, given the source is talking about occupations for women
 })
 
 DefineLanguageWord("Heordan", { -- this is the plural, what is the singular? Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
@@ -320,14 +328,14 @@ DefineLanguageWord("Heorþ", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Type = "noun",
 	Meanings = {"Fireplace", "Fire"}, -- source gives "Feuerstätte, Feuer" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Herþa"},
-	Gender = "Masculine"
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Hlēapestre", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, pp. 77-78.
 	Language = "old-english",
 	Type = "noun",
 	Meanings = {"Dancer"},
-	Gender = "Feminine" -- presumably, given the source is talking about occupations for women
+	Gender = "feminine" -- presumably, given the source is talking about occupations for women
 })
 
 DefineLanguageWord("Hléor", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
@@ -340,7 +348,7 @@ DefineLanguageWord("Hoppestre", { -- Source: Alaric Hall, "The Meanings of Elf a
 	Language = "old-english",
 	Type = "noun",
 	Meanings = {"Dancer"},
-	Gender = "Feminine" -- presumably, given the source is talking about occupations for women
+	Gender = "feminine" -- presumably, given the source is talking about occupations for women
 })
 
 DefineLanguageWord("Hord", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.
@@ -354,7 +362,7 @@ DefineLanguageWord("Hræn", { -- source also gives the alternative form "Hærn";
 	Language = "old-english",
 	Type = "noun",
 	Meanings = {"Wave", "Sea"},
-	Gender = "Feminine"
+	Gender = "feminine"
 })
 
 DefineLanguageWord("Hweowol", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 238.
@@ -382,7 +390,7 @@ DefineLanguageWord("Mann", { -- Source: Alaric Hall, "The Meanings of Elf and El
 	NumberCaseInflections = {
 		"plural", "nominative", "Menn" -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 197.
 	},
-	Gender = "Masculine"
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Meaht", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
@@ -404,28 +412,28 @@ DefineLanguageWord("Mēd", { -- source also gives as an alternative the form "Me
 	Type = "noun",
 	Meanings = {"Reward", "Payment"},
 	DerivesFrom = {"proto-germanic", "noun", "Mizdō"},
-	Gender = "Feminine"
+	Gender = "feminine"
 })
 
 DefineLanguageWord("Mennen", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 89.
 	Language = "old-english",
 	Type = "noun",
 	Meanings = {"Handmaid", "Female Slave"},
-	Gender = "Feminine"
+	Gender = "feminine"
 })
 
 DefineLanguageWord("Munuc", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 89.
 	Language = "old-english",
 	Type = "noun",
 	Meanings = {"Monk"},
-	Gender = "Masculine"
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Mynecenu", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 89.
 	Language = "old-english",
 	Type = "noun",
 	Meanings = {"Nun"},
-	Gender = "Feminine"
+	Gender = "feminine"
 })
 
 DefineLanguageWord("Neaht", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 238; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
@@ -438,35 +446,35 @@ DefineLanguageWord("Ord", { -- Source: Sean Crist, "An Analysis of *z loss in We
 	Language = "old-english",
 	Type = "noun",
 	Meanings = {"Point", "Spearpoint"},
-	Gender = "Masculine"
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Orlæg", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 10.
 	Language = "old-english",
 	Type = "noun",
 	Meanings = {"Fate"},
-	Gender = "Neuter"
+	Gender = "neuter"
 })
 
 DefineLanguageWord("Plegestre", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, pp. 77-78.
 	Language = "old-english",
 	Type = "noun",
 	Meanings = {"Athlete"},
-	Gender = "Feminine" -- presumably, given the source is talking about occupations for women
+	Gender = "feminine" -- presumably, given the source is talking about occupations for women
 })
 
 DefineLanguageWord("Ræsn", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "old-english",
 	Type = "noun",
 	Meanings = {"Plank", "Ceiling"},
-	Gender = "Neuter"
+	Gender = "neuter"
 })
 
 DefineLanguageWord("Reord", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 9.
 	Language = "old-english",
 	Type = "noun",
 	Meanings = {"Voice", "Sound", "Speech"},
-	Gender = "Feminine"
+	Gender = "feminine"
 })
 
 DefineLanguageWord("Sǣd", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
@@ -480,7 +488,7 @@ DefineLanguageWord("Sangestre", { -- Source: Alaric Hall, "The Meanings of Elf a
 	Language = "old-english",
 	Type = "noun",
 	Meanings = {"Singer"},
-	Gender = "Feminine" -- presumably, given the source is talking about occupations for women
+	Gender = "feminine" -- presumably, given the source is talking about occupations for women
 })
 
 DefineLanguageWord("Sceadu", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
@@ -494,14 +502,14 @@ DefineLanguageWord("Scernicge", { -- Source: Alaric Hall, "The Meanings of Elf a
 	Language = "old-english",
 	Type = "noun",
 	Meanings = {"Actress"},
-	Gender = "Feminine"
+	Gender = "feminine"
 })
 
 DefineLanguageWord("Sealticge", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, pp. 77-78.
 	Language = "old-english",
 	Type = "noun",
 	Meanings = {"Dancer"},
-	Gender = "Feminine" -- presumably, given the source is talking about occupations for women
+	Gender = "feminine" -- presumably, given the source is talking about occupations for women
 })
 
 DefineLanguageWord("Snoru", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
@@ -597,7 +605,7 @@ DefineLanguageWord("Wif", { -- Source: Alaric Hall, "The Meanings of Elf and Elv
 	Language = "old-english",
 	Type = "noun",
 	Meanings = {"Woman"},
-	Gender = "Neuter"
+	Gender = "neuter"
 })
 
 DefineLanguageWord("Wifmann", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 197.

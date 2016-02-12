@@ -31,7 +31,7 @@ DefineLanguageWord("Ai", {
 	Language = "dwarven",
 	Type = "noun",
 	Meanings = {"Great-Grandfather"}, -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 41.
-	Gender = "Masculine", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 41.
+	Gender = "masculine", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 41.
 	NameTypes = {"person"} -- example: "Ai" (dwarf from Norse mythology who was a settler of Joruvellir)
 })
 
@@ -107,7 +107,7 @@ DefineLanguageWord("Andvari", {
 	NumberCaseInflections = {
 		"singular", "genitive", "Andvara" -- as in "Andvaranaut"
 	},
-	Gender = "Masculine", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 21.
+	Gender = "masculine", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 21.
 	NameTypes = {"person"} -- example: "Andvari" (gurnard-shaped dwarf from Norse mythology whose hoard and golden ring were stolen by Loki)
 })
 
@@ -143,7 +143,7 @@ DefineLanguageWord("Aur", { -- "Aurr" in Old Icelandic; Source: Richard Cleasby 
 	Language = "dwarven",
 	Type = "noun",
 	Meanings = {"Wet Clay", "Loam"},
-	Gender = "Masculine",
+	Gender = "masculine",
 	AffixNameTypes = {
 		"compound", "prefix", "singular", "person", -- example: "Aurvang" (dwarf from Norse mythology)
 		"compound", "prefix", "singular", "province", -- example: "Aurvang" (wetlands in Norse mythology, through which a group of dwarves passed to migrate to Joruvellir; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 771.)
@@ -156,7 +156,7 @@ DefineLanguageWord("Austri", {
 	Language = "dwarven",
 	Type = "noun",
 	Meanings = {"Eastern"}, -- source gives meaning as "the Eastern"; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 771.
-	Gender = "Masculine", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 771.
+	Gender = "masculine", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 771.
 	NameTypes = {"person"} -- example: "Austri" (dwarf from Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 101.)
 })
 
@@ -242,7 +242,7 @@ DefineLanguageWord("Brising", { -- also name of a group of four dwarves (or the 
 	NumberCaseInflections = {
 		"singular", "genitive", "Brisinga" -- as in "Brisingamen"
 	},
-	Gender = "Masculine", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 772.
+	Gender = "masculine", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 772.
 	AffixNameTypes = {
 		"compound", "prefix", "singular", "settlement", -- no examples, but seems sensible in face of a general lack of examples
 		"compound", "prefix", "singular", "province", -- no examples, but seems sensible in face of a general lack of examples
@@ -256,7 +256,7 @@ DefineLanguageWord("Brokk", {
 	Language = "dwarven",
 	Type = "noun",
 	Meanings = {"Badger", "Trotter of a Horse"}, -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 81.
-	Gender = "Masculine", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 81.
+	Gender = "masculine", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 81.
 	NameTypes = {"person"} -- example: "Brokk" (dwarf from Norse mythology who was an expert smith and brother of Eitri)
 })
 
@@ -281,7 +281,7 @@ DefineLanguageWord("Dain", {
 	NumberCaseInflections = {
 		"singular", "genitive", "Dains" -- as in "Dainsleif"
 	},
-	Gender = "Masculine", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 97.
+	Gender = "masculine", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 97.
 	NameTypes = {"person"}, -- example: "Dain" (dwarf from Norse mythology)
 	AffixNameTypes = {"compound", "prefix", "singular", "item-sword"} -- example: "Dainsleif"
 })
@@ -318,7 +318,7 @@ DefineLanguageWord("Draupnir", {
 	Language = "dwarven",
 	Type = "noun",
 	Meanings = {"Dropper"},
-	Gender = "Masculine", -- presumably, since it's the name of a male dwarf?
+	Gender = "masculine", -- presumably, since it's the name of a male dwarf?
 	NameTypes = {
 		"person", -- example: "Draupnir" (dwarf from Norse mythology)
 		"item-ring" -- example: "Draupnir" (solid gold arm-ring made by the dwarven brothers Brokk and Eitri; maybe should be a different item type than ring, as it is actually an arm-ring?)
@@ -350,7 +350,7 @@ DefineLanguageWord("Dulsi", { -- not entirely clear if this is the name of a par
 	Language = "dwarven",
 	Type = "noun",
 	Meanings = {"Poet"},
-	Gender = "Masculine",
+	Gender = "masculine",
 	NameTypes = {"person"} -- example: "Dulsi" (dwarf from Norse mythology)
 })
 
@@ -368,7 +368,7 @@ DefineLanguageWord("Durahn", {
 	Language = "dwarven",
 	Type = "noun",
 	Meanings = {},
-	Gender = "Masculine",
+	Gender = "masculine",
 	NameTypes = {"person"} -- example: "Durahn" (from Dyson Logos' The Tomb of Durâhn Oakenshield)
 })
 
@@ -398,14 +398,14 @@ DefineLanguageWord("Dverg", { -- Source: Richard Cleasby and Gudbrand Vigfusson,
 	Language = "dwarven",
 	Type = "noun",
 	Meanings = {"Dwarf"},
-	Gender = "Masculine"
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Dyrgja", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 111.
 	Language = "dwarven",
 	Type = "noun",
 	Meanings = {"Female Dwarf"},
-	Gender = "Feminine"
+	Gender = "feminine"
 })
 
 DefineLanguageWord("Eggerich", {
@@ -430,7 +430,7 @@ DefineLanguageWord("Eitri", { -- can also be spelled as "Sindri"; Source: Richar
 	Language = "dwarven",
 	Type = "noun",
 	Meanings = {"Forger"},
-	Gender = "Masculine",
+	Gender = "masculine",
 	NameTypes = {"person"} -- example: "Sindri"/"Eitri" (dwarf from Norse mythology; expert smith and brother of Brokk)
 })
 
@@ -494,7 +494,7 @@ DefineLanguageWord("Galar", {
 	Language = "dwarven",
 	Type = "noun",
 	Meanings = {"Enchanter"}, -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 187.
-	Gender = "Masculine", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 187.
+	Gender = "masculine", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 187.
 	NameTypes = {"person"} -- example: "Galar" (dwarf from Norse mythology who - with the help of his brother Fjalar - brew Kvasir's remains into the Mead of Poetry)
 })
 
@@ -543,7 +543,7 @@ DefineLanguageWord("Gloin", { -- given by Cleasby and Vigfusson as "Glói", but 
 	Language = "dwarven",
 	Type = "noun",
 	Meanings = {"Light-Colored Dog"}, -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 205.
-	Gender = "Masculine", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 205.
+	Gender = "masculine", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 205.
 	NameTypes = {"person"} -- example: "Gloin" (dwarf from Norse mythology)
 })
 
@@ -565,7 +565,7 @@ DefineLanguageWord("Gneissus", {
 	Language = "dwarven",
 	Type = "noun",
 	Meanings = {},
-	Gender = "Feminine",
+	Gender = "feminine",
 ----	NameTypes = {"person"} -- example: "Gneissus" (from Dyson Logos' The Tomb of Durâhn Oakenshield)
 })
 
@@ -601,7 +601,7 @@ DefineLanguageWord("Grimnir", { -- meaning is from Old Norse, while the occurren
 	Language = "dwarven",
 	Type = "noun",
 	Meanings = {"Hooded One"}, -- Source: Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 85.
-	Gender = "Masculine",
+	Gender = "masculine",
 	NameTypes = {"person"} -- example: "Grimnir" (dwarven pathfinder from Wesnoth, Under the Burning Suns)
 })
 
@@ -623,7 +623,7 @@ DefineLanguageWord("Hannar", { -- source gives name as "Hannarr"; Source: Richar
 	Language = "dwarven",
 	Type = "noun",
 	Meanings = {"Skillful", "Artist"}, -- source gives meaning as "the Skillful, the Artist"
-	Gender = "Masculine",
+	Gender = "masculine",
 	NameTypes = {"person"} -- example: "Hannar" (dwarf from Norse mythology; source indicates the dwarf being present in the Voluspo, but in other consulted translations of that text it was nowhere to be found)
 })
 
@@ -664,7 +664,7 @@ DefineLanguageWord("Hledj", {
 	Language = "dwarven",
 	Type = "noun",
 	Meanings = {"Sound", "Silence", "Hearing", "Listening"}, -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, pp. 271-272.
-	Gender = "Neuter",
+	Gender = "neuter",
 	AffixNameTypes = {
 		"compound", "prefix", "singular", "person", -- example: "Hledjolf" (dwarf from Norse mythology; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 272.)
 		"compound", "prefix", "singular", "settlement", -- no examples, but seems sensible in face of a general lack of examples
@@ -725,7 +725,7 @@ DefineLanguageWord("Isuldan", {
 	Language = "dwarven",
 	Type = "noun",
 	Meanings = {},
-	Gender = "Masculine",
+	Gender = "masculine",
 	NameTypes = {"person"} -- example: "Isuldan" (from Dyson Logos' The Tomb of Durâhn Oakenshield)
 })
 
@@ -733,7 +733,7 @@ DefineLanguageWord("Ivaldi", {
 	Language = "dwarven",
 	Type = "noun",
 	Meanings = {"Mighty"}, -- source gives meaning as "the Mighty"; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 101.
-	Gender = "Masculine", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 319.
+	Gender = "masculine", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 319.
 	NameTypes = {"person"} -- example: "Ivaldi" (dwarf from Norse mythology whose sons were mastersmiths)
 })
 
@@ -824,7 +824,7 @@ DefineLanguageWord("Leif", {
 	Language = "dwarven",
 	Type = "noun",
 	Meanings = {"Patrimony"}, -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 381.
-	Gender = "Feminine", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 381.
+	Gender = "feminine", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 381.
 	AffixNameTypes = {"compound", "suffix", "singular", "item-sword"} -- example: "Dainsleif"
 })
 
@@ -839,7 +839,7 @@ DefineLanguageWord("Lofar", { -- Source: Richard Cleasby and Gudbrand Vigfusson,
 	Language = "dwarven",
 	Type = "noun",
 	Meanings = {},
-	Gender = "Masculine",
+	Gender = "masculine",
 	NameTypes = {"person"} -- example: "Lofar" (dwarf from Norse mythology who was a descendant of the settlers of Joruvellir)
 })
 
@@ -868,7 +868,7 @@ DefineLanguageWord("Men", {
 	Language = "dwarven",
 	Type = "noun",
 	Meanings = {"Necklace"}, -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 772.
-	Gender = "Neuter", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 772.
+	Gender = "neuter", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 772.
 	AffixNameTypes = {"compound", "suffix", "singular", "item-amulet"} -- example: "Brisingamen" (golden necklace made by four dwarves, the Brisings)
 })
 
@@ -904,7 +904,7 @@ DefineLanguageWord("Nabbi", { -- Source: Richard Cleasby and Gudbrand Vigfusson,
 	Language = "dwarven",
 	Type = "noun",
 	Meanings = {"Small Protuberance on the Skin", "Small Protuberance on Greensward"},
-	Gender = "Masculine",
+	Gender = "masculine",
 	NameTypes = {"person"} -- example: "Nabbi" (dwarf from Norse mythology)
 })
 
@@ -934,7 +934,7 @@ DefineLanguageWord("Naut", {
 	Language = "dwarven",
 	Type = "noun",
 	Meanings = {"A Gift or Booty from a Person"}, -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 447.
-	Gender = "Masculine", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 447.
+	Gender = "masculine", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 447.
 	AffixNameTypes = {"compound", "suffix", "singular", "item-ring"} -- example: "Andvaranaut" (gold ring made by Andvari and stolen by Loki; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 21.)
 })
 
@@ -942,7 +942,7 @@ DefineLanguageWord("Nefi", { -- Source: Richard Cleasby and Gudbrand Vigfusson, 
 	Language = "dwarven",
 	Type = "noun",
 	Meanings = {"Cognate Kinsman"},
-	Gender = "Masculine",
+	Gender = "masculine",
 	NameTypes = {"person"} -- example: "Nefi" (dwarf from Norse mythology)
 })
 
@@ -957,7 +957,7 @@ DefineLanguageWord("Nid", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "
 	Language = "dwarven",
 	Type = "noun",
 	Meanings = {"Wane of the Moon, No Moon"},
-	Gender = "Feminine",
+	Gender = "feminine",
 	AffixNameTypes = {
 		"compound", "prefix", "singular", "person", -- example: "Nidjung" (Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 454)
 		"compound", "prefix", "singular", "province", -- no examples, but seems sensible in face of a general lack of examples
@@ -971,7 +971,7 @@ DefineLanguageWord("Nidi", { -- Source: Richard Cleasby and Gudbrand Vigfusson, 
 	Language = "dwarven",
 	Type = "noun",
 	Meanings = {"Wane of the Moon, No Moon"}, -- approximately, from "Nid"
-	Gender = "Masculine",
+	Gender = "masculine",
 	NameTypes = {"person"} -- example: "Nidi" (dwarf from Norse mythology)
 })
 
@@ -993,7 +993,7 @@ DefineLanguageWord("Nordri", {
 	Language = "dwarven",
 	Type = "noun",
 	Meanings = {"Northern"}, -- source gives meaning as "the Northern"; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 457.
-	Gender = "Masculine",
+	Gender = "masculine",
 	NameTypes = {"person"} -- example: "Nordri" (dwarf from Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 101.)
 })
 
@@ -1008,7 +1008,7 @@ DefineLanguageWord("Nyi", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "
 	Language = "dwarven",
 	Type = "noun",
 	Meanings = {"Moon"},
-	Gender = "Masculine",
+	Gender = "masculine",
 	NameTypes = {"person"} -- example: "Nyi" (dwarf from Norse mythology)
 })
 
@@ -1057,7 +1057,7 @@ DefineLanguageWord("Olf", { -- in Old Norse Ulf, but used in suffixes as "-olf";
 	Language = "dwarven",
 	Type = "noun",
 	Meanings = {"Wolf"},
-	Gender = "Masculine",
+	Gender = "masculine",
 	AffixNameTypes = {"compound", "suffix", "singular", "person"} -- example: "Hledjolf" (dwarf from Norse mythology; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 272.)
 })
 
@@ -1125,7 +1125,7 @@ DefineLanguageWord("Rorir", { -- alternative spelling given by Cleasby and Vigfu
 	Language = "dwarven",
 	Type = "noun",
 	Meanings = {"Rearer of Charms"},
-	Gender = "Masculine",
+	Gender = "masculine",
 	AffixNameTypes = {"compound", "suffix", "singular", "person"} -- example: "Thjodrorir"/"þjóð-reyrir" ("The Great Rearer of Charms"; dwarven sage from Norse mythology)
 })
 
@@ -1161,7 +1161,7 @@ DefineLanguageWord("Skid", {
 	Language = "dwarven",
 	Type = "noun",
 	Meanings = {"Wood"},
-	Gender = "Neuter", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 550.
+	Gender = "neuter", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 550.
 	-- example: "Skidbladnir" (ship made by the sons of Ivaldi, name means "Wooden-Bladed"); should add a category for ship names
 })
 
@@ -1169,7 +1169,7 @@ DefineLanguageWord("Skirvir", { -- alternatively spelled as "Skirfir"; Source: R
 	Language = "dwarven",
 	Type = "noun",
 	Meanings = {}, -- maybe related to Old Norse "Skirra"?
-	Gender = "Masculine",
+	Gender = "masculine",
 	NameTypes = {"person"} -- example: "Skirvir" (dwarf from Norse mythology)
 })
 
@@ -1204,7 +1204,7 @@ DefineLanguageWord("Sudri", { -- Source: Richard Cleasby and Gudbrand Vigfusson,
 	Language = "dwarven",
 	Type = "noun",
 	Meanings = {"Southern"}, -- "the Southern"
-	Gender = "Masculine",
+	Gender = "masculine",
 	NameTypes = {"person"} -- example: "Sudri" (dwarf from Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 101.)
 })
 
@@ -1215,7 +1215,7 @@ DefineLanguageWord("Svarin", { -- Source: Richard Cleasby and Gudbrand Vigfusson
 	NumberCaseInflections = {
 		"singular", "genitive", "Svarins" -- as in "Svarinshaug"
 	},
-	Gender = "Masculine",
+	Gender = "masculine",
 	NameTypes = {"person"} -- example: "Svarin" (dwarf from Norse mythology; maybe the one who gave his name to Svarinshaug?)
 })
 
@@ -1223,7 +1223,7 @@ DefineLanguageWord("Sviar", {
 	Language = "dwarven",
 	Type = "noun",
 	Meanings = {"Forger", "Smith"}, -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 612.
-	Gender = "Masculine", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 612.
+	Gender = "masculine", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 612.
 	NameTypes = {"person"} -- example: "Sviar" (dwarf from Norse mythology)
 })
 
@@ -1328,7 +1328,7 @@ DefineLanguageWord("Tuta", { -- Source: Richard Cleasby and Gudbrand Vigfusson, 
 	Language = "dwarven",
 	Type = "noun",
 	Meanings = {"Teat-Like Prominence"},
-	Gender = "Feminine",
+	Gender = "feminine",
 	NameTypes = {"person"} -- example: "Tuta"
 })
 
@@ -1357,7 +1357,7 @@ DefineLanguageWord("Vang", {  -- "Vangr" in Old Icelandic; Source: Richard Cleas
 	Language = "dwarven",
 	Type = "noun",
 	Meanings = {"Garden", "Green Home-Field"},
-	Gender = "Masculine",
+	Gender = "masculine",
 	AffixNameTypes = {
 		"compound", "suffix", "singular", "person", -- example: "Aurvang" (dwarf from Norse mythology)
 		"compound", "suffix", "singular", "settlement", -- no examples, but seems sensible in face of a general lack of examples
@@ -1390,7 +1390,7 @@ DefineLanguageWord("Vestri", { -- Source: Richard Cleasby and Gudbrand Vigfusson
 	Language = "dwarven",
 	Type = "noun",
 	Meanings = {"Western"}, -- "the Western"
-	Gender = "Masculine",
+	Gender = "masculine",
 	NameTypes = {"person"} -- example: "Vestri" (dwarf from Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 101.)
 })
 
@@ -1409,7 +1409,7 @@ DefineLanguageWord("Vig", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "
 	Language = "dwarven",
 	Type = "noun",
 	Meanings = {"Fight", "Battle"},
-	Gender = "Neuter",
+	Gender = "neuter",
 	NameTypes = {"person"}, -- example: "Vig" (dwarf from Norse mythology)
 	AffixNameTypes = {
 		"compound", "prefix", "singular", "person", -- example: "Víg-dvalinn" (dwarf from Norse mythology)

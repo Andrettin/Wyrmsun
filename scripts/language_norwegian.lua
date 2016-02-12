@@ -29,5 +29,5 @@ DefineLanguageWord("Bradd", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Language = "norwegian",
 	Type = "noun",
 	Meanings = {"Shore", "Edge"},
-	Gender = "Masculine"
+	Gender = "masculine"
 })

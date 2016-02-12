@@ -35,7 +35,7 @@ DefineLanguageWord("Nimid", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Language = "old-frankish",
 	Type = "noun",
 	Meanings = {"Holy Pasture"}, -- source gives (in German) "heiliger, gehegter Waldplatz, Weideplatz für die gehegten Opfertiere" as the meaning
-	Gender = "Masculine"
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Scramasacs", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 235.
@@ -54,5 +54,5 @@ DefineLanguageWord("Sworga", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Language = "old-frankish",
 	Type = "noun",
 	Meanings = {"Worry"}, -- presumably (this is the meaning given to the Proto-Germanic original word, and no meaning is specifically given to this one)
-	Gender = "Feminine"
+	Gender = "feminine"
 })

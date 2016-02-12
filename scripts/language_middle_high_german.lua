@@ -30,7 +30,7 @@ DefineLanguageWord("Adel", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Type = "noun",
 	Meanings = {"Lineage", "Noble Lineage", "Noble"}, -- source gives "Geschlecht, edles Geschlecht, Adel" as the meaning
 	DerivesFrom = {"old-high-german", "noun", "Adal"},
-	Gender = "Masculine"
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Bach", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 133.
@@ -38,7 +38,7 @@ DefineLanguageWord("Bach", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Type = "noun",
 	Meanings = {"Stream"}, -- source gives the German "Bach" as the meaning
 	DerivesFrom = {"old-high-german", "noun", "Bah"},
-	Gender = "Masculine"
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Bat", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 133.
@@ -46,7 +46,7 @@ DefineLanguageWord("Bat", { -- Source: August Fick and Alf Torp, "Wortschatz der
 	Type = "noun",
 	Meanings = {"Bath", "Baths"}, -- source gives the German "Bad" as the meaning
 	DerivesFrom = {"old-high-german", "noun", "Bad"},
-	Gender = "Neuter"
+	Gender = "neuter"
 })
 
 DefineLanguageWord("Berc", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
@@ -57,7 +57,7 @@ DefineLanguageWord("Berc", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	NumberCaseInflections = {
 		"singular", "genitive", "Berges"
 	},
-	Gender = "Masculine"
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Bluome", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 146.
@@ -65,7 +65,7 @@ DefineLanguageWord("Bluome", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Type = "noun",
 	Meanings = {"Flower"}, -- source gives the German "Blume" as the meaning
 	DerivesFrom = {"old-high-german", "noun", "Bluomo"},
-	Gender = "Masculine"
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Bluost", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 146.
@@ -73,7 +73,15 @@ DefineLanguageWord("Bluost", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Type = "noun",
 	Meanings = {"Blossom"}, -- apparently, but it is not clear from the source
 	DerivesFrom = {"proto-germanic", "noun", "Blôma"},
-	Gender = "Feminine"
+	Gender = "feminine"
+})
+
+DefineLanguageWord("Brücke", { -- source also gives the alternative form "Brügge"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 145.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Bridge"}, -- source gives the German "Brücke" as the meaning
+	Gender = "feminine",
+	DerivesFrom = {"old-high-german", "noun", "Prucca"}
 })
 
 DefineLanguageWord("Burc", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
@@ -81,14 +89,14 @@ DefineLanguageWord("Burc", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Type = "noun",
 	Meanings = {"Fortified Place", "Castle", "Palace", "City"}, -- source gives "befestigter Ort, Burg, Schloß, Stadt" as the meaning
 	DerivesFrom = {"old-high-german", "noun", "Burg"},
-	Gender = "Feminine"
+	Gender = "feminine"
 })
 
 DefineLanguageWord("Gart", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
 	Language = "middle-high-german",
 	Type = "noun",
 	Meanings = {"Prickle", "Stick for Driving Animals"},
-	Gender = "Masculine"
+	Gender = "masculine"
 })
 			
 DefineLanguageWord("Hert", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 46.
@@ -99,7 +107,7 @@ DefineLanguageWord("Hert", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	NumberCaseInflections = {
 		"singular", "genitive", "Herdes"
 	},
-	Gender = "Masculine"
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Hort", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
@@ -113,7 +121,7 @@ DefineLanguageWord("Kien", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Language = "middle-high-german",
 	Type = "noun",
 	Meanings = {"Fir", "Spruce"," Fir Splinter", "Fir Torch", "Spruce Splinter", "Spruce Torch"},
-	Gender = "Masculine"
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Lēren", { -- causative verb; Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 5.
@@ -143,14 +151,14 @@ DefineLanguageWord("Miete", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Type = "noun",
 	Meanings = {"Payment", "Reward", "Bribe"},
 	DerivesFrom = {"old-high-german", "noun", "Mēta"},
-	Gender = "Feminine"
+	Gender = "feminine"
 })
 
 DefineLanguageWord("Nare", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "middle-high-german",
 	Type = "noun",
 	Meanings = {"Salvation", "Rescue", "Nourishment", "Sustenance"},
-	Gender = "Feminine"
+	Gender = "feminine"
 })
 
 DefineLanguageWord("Nerigen", { -- source also gives alternative forms "Neren" and "Nern"; Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
@@ -164,14 +172,14 @@ DefineLanguageWord("Ort", { -- Source: Sean Crist, "An Analysis of *z loss in We
 	Type = "noun",
 	Meanings = {"Point", "Corner", "Edge of a Part", "Edge of a Piece", "Edge of a Small Coin"},
 	DerivesFrom = {"old-high-german", "noun", "Ort"},
-	Gender = "Masculine"
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Rünne", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
 	Language = "middle-high-german",
 	Type = "noun",
 	Meanings = {"Storm Surge"},
-	Gender = "Feminine"
+	Gender = "feminine"
 })
 
 DefineLanguageWord("Viur", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 127.
@@ -179,14 +187,14 @@ DefineLanguageWord("Viur", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Type = "noun",
 	Meanings = {"Fire"}, -- source gives "Feuer" as the meaning
 	DerivesFrom = {"old-high-german", "noun", "Fuir"},
-	Gender = "Neuter"
+	Gender = "neuter"
 })
 
 DefineLanguageWord("Weit", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 4, 7.
 	Language = "middle-high-german",
 	Type = "noun",
 	Meanings = {"Woad"},
-	Gender = "Masculine"
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Zwirn", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1-2, 6.

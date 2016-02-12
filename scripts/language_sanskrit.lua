@@ -88,28 +88,28 @@ DefineLanguageWord("Késara", { -- Source: Sean Crist, "An Analysis of *z loss i
 	Language = "sanskrit",
 	Type = "noun",
 	Meanings = {"Hair", "Mane"},
-	Gender = "Masculine"
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Majjấ", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "sanskrit",
 	Type = "noun",
 	Meanings = {"Marrow"},
-	Gender = "Feminine"
+	Gender = "feminine"
 })
 
 DefineLanguageWord("Majján", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "sanskrit",
 	Type = "noun",
 	Meanings = {"Marrow"},
-	Gender = "Masculine"
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Mīḍhá", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 7.
 	Language = "sanskrit",
 	Type = "noun",
 	Meanings = {"Reward from a Battle", "Reward from a Competition"},
-	Gender = "Neuter"
+	Gender = "neuter"
 })
 
 DefineLanguageWord("Náktam", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.

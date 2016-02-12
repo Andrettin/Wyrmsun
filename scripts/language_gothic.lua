@@ -92,7 +92,7 @@ DefineLanguageWord("Baírgahei", { -- Source: August Fick and Alf Torp, "Wortsch
 	Type = "noun",
 	Meanings = {"Mountainous Area"}, -- source gives "Berggegend" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Berga"},
-	Gender = "Feminine"
+	Gender = "feminine"
 })
 
 DefineLanguageWord("Baúrgs", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
@@ -100,7 +100,7 @@ DefineLanguageWord("Baúrgs", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Type = "noun",
 	Meanings = {"City"}, -- source gives "Stadt" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Burg"},
-	Gender = "Feminine"
+	Gender = "feminine"
 })
 
 DefineLanguageWord("Blôma", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 146.
@@ -108,7 +108,7 @@ DefineLanguageWord("Blôma", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Type = "noun",
 	Meanings = {"Flower"}, -- source gives the German "Blume" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Blôma"},
-	Gender = "Masculine"
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Bōka", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
@@ -193,7 +193,7 @@ DefineLanguageWord("Gazds", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Language = "gothic",
 	Type = "noun",
 	Meanings = {"Prickle"},
-	Gender = "Masculine"
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Hairto", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 3, Subsection 1.
@@ -303,7 +303,7 @@ DefineLanguageWord("Mizdon", { -- Source: Sean Crist, "An Analysis of *z loss in
 	Type = "noun",
 	Meanings = {"Reward"},
 	DerivesFrom = {"proto-germanic", "noun", "Mizdō"},
-	Gender = "Feminine"
+	Gender = "feminine"
 })
 
 DefineLanguageWord("Nahts", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
@@ -330,14 +330,14 @@ DefineLanguageWord("Razda", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Language = "gothic",
 	Type = "noun",
 	Meanings = {"Voice", "Pronunciation", "Speech"},
-	Gender = "Feminine"
+	Gender = "feminine"
 })
 
 DefineLanguageWord("Razn", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "gothic",
 	Type = "noun",
 	Meanings = {"House"},
-	Gender = "Neuter"
+	Gender = "neuter"
 })
 
 DefineLanguageWord("Sair", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.

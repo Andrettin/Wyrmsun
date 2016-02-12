@@ -30,7 +30,7 @@ DefineLanguageWord("Biari", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Type = "noun",
 	Meanings = {"Bear"}, -- used as a personal name, the meaning is not current
 	DerivesFrom = {"old-norse", "noun", "Bjǫrn"},
-	Gender = "Masculine",
+	Gender = "masculine",
 	NameTypes = {"person"}
 })
 

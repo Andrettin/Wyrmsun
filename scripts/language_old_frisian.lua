@@ -30,7 +30,7 @@ DefineLanguageWord("Berch", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Type = "noun",
 	Meanings = {"Mountain", "Hill", "Grave Mound"}, -- source gives "Berg, Hügel, Grabhügel" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Berga"},
-	Gender = "Masculine"
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Beth", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 133.
@@ -38,7 +38,15 @@ DefineLanguageWord("Beth", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Type = "noun",
 	Meanings = {"Bath", "Baths"}, -- source gives the German "Bad" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Baþa"},
-	Gender = "Neuter"
+	Gender = "neuter"
+})
+
+DefineLanguageWord("Bregge", { -- source also gives the alternative form "Brigge"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 145.
+	Language = "old-frisian",
+	Type = "noun",
+	Meanings = {"Bridge"}, -- source gives the German "Brücke" as the meaning
+	Gender = "feminine",
+	DerivesFrom = {"proto-germanic", "noun", "Brugjô"}
 })
 
 DefineLanguageWord("Burch", { -- source gives "Bur(i)ch"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
@@ -46,7 +54,7 @@ DefineLanguageWord("Burch", { -- source gives "Bur(i)ch"; Source: August Fick an
 	Type = "noun",
 	Meanings = {"Fortified Place", "City"}, -- source gives "befestigter Ort, Stadt" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Burg"},
-	Gender = "Feminine"
+	Gender = "feminine"
 })
 
 DefineLanguageWord("Hēde", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
@@ -61,7 +69,7 @@ DefineLanguageWord("Herth", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Type = "noun",
 	Meanings = {"Fireplace", "Fire"}, -- source gives "Feuerstätte, Feuer" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Herþa"},
-	Gender = "Masculine"
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Lēra", { -- causative verb; Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 5.
@@ -98,7 +106,7 @@ DefineLanguageWord("Mēde", { -- source also gives as alternatives the forms "M�
 	Type = "noun",
 	Meanings = {"Reward", "Rental", "Payment", "Gift"},
 	DerivesFrom = {"proto-germanic", "noun", "Mizdō"},
-	Gender = "Feminine"
+	Gender = "feminine"
 })
 
 DefineLanguageWord("Mēr", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.

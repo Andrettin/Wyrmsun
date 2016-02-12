@@ -30,7 +30,7 @@ DefineLanguageWord("Blôsem", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Type = "noun",
 	Meanings = {"Blossom"}, -- apparently, but it is not clear from the source
 	DerivesFrom = {"proto-germanic", "noun", "Blôma"},
-	Gender = "Feminine"
+	Gender = "feminine"
 })
 
 DefineLanguageWord("Hēde", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 7.
@@ -38,7 +38,7 @@ DefineLanguageWord("Hēde", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Type = "noun",
 	Meanings = {"Flax Fiber"},
 	Uncountable = true, -- as a material, it is likely to be uncountable
-	Gender = "Feminine"
+	Gender = "feminine"
 })
 
 DefineLanguageWord("Kên", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 4.

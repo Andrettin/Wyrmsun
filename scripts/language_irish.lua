@@ -44,7 +44,7 @@ DefineLanguageWord("Brot", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Language = "irish",
 	Type = "noun",
 	Meanings = {"Prickle"},
-	Gender = "Masculine"
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Búal", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 133.
@@ -58,7 +58,7 @@ DefineLanguageWord("Gas", { -- Source: Sean Crist, "An Analysis of *z loss in We
 	Language = "irish",
 	Type = "noun",
 	Meanings = {"Sapling", "Sprout", "Shoot"},
-	Gender = "Feminine"
+	Gender = "feminine"
 })
 
 DefineLanguageWord("Gat", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
@@ -92,7 +92,7 @@ DefineLanguageWord("Medg", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Language = "irish",
 	Type = "noun",
 	Meanings = {"Whey"},
-	Gender = "Feminine"
+	Gender = "feminine"
 })
 
 DefineLanguageWord("Rīadaim", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.

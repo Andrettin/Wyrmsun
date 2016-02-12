@@ -30,7 +30,7 @@ DefineLanguageWord("Athal", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Type = "noun",
 	Meanings = {"Noble Lineage"}, -- source gives "edles Geschlecht" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Aþala"},
-	Gender = "Neuter"
+	Gender = "neuter"
 })
 
 DefineLanguageWord("Bath", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 133.
@@ -38,7 +38,7 @@ DefineLanguageWord("Bath", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Type = "noun",
 	Meanings = {"Bath", "Baths"}, -- source gives the German "Bad" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Baþa"},
-	Gender = "Neuter"
+	Gender = "neuter"
 })
 
 DefineLanguageWord("Beki", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 133.
@@ -46,7 +46,7 @@ DefineLanguageWord("Beki", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Type = "noun",
 	Meanings = {"Stream"}, -- source gives the German "Bach" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Baki"},
-	Gender = "Masculine"
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Berg", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
@@ -54,7 +54,7 @@ DefineLanguageWord("Berg", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Type = "noun",
 	Meanings = {"Mountain", "Hill", "Grave Mound"}, -- source gives "Berg, Hügel, Grabhügel" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Berga"},
-	Gender = "Masculine"
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Blômo", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 146.
@@ -62,7 +62,15 @@ DefineLanguageWord("Blômo", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Type = "noun",
 	Meanings = {"Flower"}, -- source gives the German "Blume" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Blôma"},
-	Gender = "Masculine"
+	Gender = "masculine"
+})
+
+DefineLanguageWord("Bruggia", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 145.
+	Language = "old-saxon",
+	Type = "noun",
+	Meanings = {"Bridge"}, -- source gives the German "Brücke" as the meaning
+	Gender = "feminine",
+	DerivesFrom = {"proto-germanic", "noun", "Brugjô"}
 })
 
 DefineLanguageWord("Burg", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
@@ -70,7 +78,7 @@ DefineLanguageWord("Burg", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Type = "noun",
 	Meanings = {"Fortified Place", "City"}, -- source gives "befestigter Ort, Stadt" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Burg"},
-	Gender = "Feminine"
+	Gender = "feminine"
 })
 
 DefineLanguageWord("Fehu", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
@@ -84,7 +92,7 @@ DefineLanguageWord("Fiur", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Type = "noun",
 	Meanings = {"Fire"}, -- source gives "Feuer" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Fûir"},
-	Gender = "Neuter"
+	Gender = "neuter"
 })
 
 DefineLanguageWord("Fisc", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
@@ -110,7 +118,7 @@ DefineLanguageWord("Herth", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Type = "noun",
 	Meanings = {"Fireplace", "Fire"}, -- source gives "Feuerstätte, Feuer" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Herþa"},
-	Gender = "Masculine"
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Hord", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.
@@ -144,7 +152,7 @@ DefineLanguageWord("Līfnara", { -- Source: Sean Crist, "An Analysis of *z loss 
 	Language = "old-saxon",
 	Type = "noun",
 	Meanings = {"Food", "Nourishment"},
-	Gender = "Feminine"
+	Gender = "feminine"
 })
 
 DefineLanguageWord("Merg", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
@@ -159,7 +167,7 @@ DefineLanguageWord("Mēda", { -- source also gives as an alternatives the form "
 	Language = "old-saxon",
 	Type = "noun",
 	Meanings = {"Payment"},
-	Gender = "Feminine"
+	Gender = "feminine"
 })
 
 DefineLanguageWord("Mēr", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
@@ -179,7 +187,7 @@ DefineLanguageWord("Ord", { -- Source: Sean Crist, "An Analysis of *z loss in We
 	Language = "old-saxon",
 	Type = "noun",
 	Meanings = {"Point", "Edge of a Blade"},
-	Gender = "Masculine"
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Orlag", { -- source also gives the alternative form "Orlagi"; Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 10.

@@ -40,7 +40,7 @@ DefineLanguageWord("Μισθός", { -- Source: Sean Crist, "An Analysis of *z l
 	Language = "greek",
 	Type = "noun",
 	Meanings = {"Reward", "Payment of a Soldier"},
-	Gender = "Masculine"
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Χέσ-χιον", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
@@ -53,7 +53,7 @@ DefineLanguageWord("Χύσθος", { -- Source: Sean Crist, "An Analysis of *z l
 	Language = "greek",
 	Type = "noun",
 	Meanings = {"Cavity", "Vulva"},
-	Gender = "Masculine"
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Abdera", { -- should be written as the original Greek name (with Greek characters)
@@ -226,7 +226,7 @@ DefineLanguageWord("Téphra", { -- is this the plural form? Source: Winfred P. L
 })
 
 DefineLanguageWord("Thugátēr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
-	Language = "sanskrit",
+	Language = "greek",
 	Type = "noun",
 	Meanings = {"Daughter"}
 })

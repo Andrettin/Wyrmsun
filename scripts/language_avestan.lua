@@ -29,14 +29,14 @@ DefineLanguageWord("Barez", { -- source also gives the alternative form "Bareza"
 	Language = "avestan",
 	Type = "noun",
 	Meanings = {"Height", "Altitude"}, -- source gives "Höhe" as the meaning
-	Gender = "Feminine"
+	Gender = "feminine"
 })
 
 DefineLanguageWord("Mīzhda", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 7.
 	Language = "avestan",
 	Type = "noun",
 	Meanings = {"Reward"},
-	Gender = "Neuter"
+	Gender = "neuter"
 })
 
 DefineLanguageWord("Spaetō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.

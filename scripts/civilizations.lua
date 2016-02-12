@@ -514,7 +514,7 @@ DefineRaceNames(
 		"display", "Slav",
 		"visible",
 		"species", "human",
-		"language", "old-slavic",
+		"language", "old-church-slavonic",
 		"parent-civilization", "teuton",
 		"playable", false,
 		"default-color", "blue"

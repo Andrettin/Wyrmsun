@@ -30,7 +30,7 @@ DefineLanguageWord("Ađal", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Type = "noun",
 	Meanings = {"Nature", "Character"}, -- source gives "natura, indoles" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Aþala"},
-	Gender = "Neuter"
+	Gender = "neuter"
 })
 
 DefineLanguageWord("Ađalskâli", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 14.
@@ -38,7 +38,7 @@ DefineLanguageWord("Ađalskâli", { -- Source: August Fick and Alf Torp, "Wortsc
 	Type = "noun",
 	Meanings = {"Main Hall"}, -- source gives "Haupthalle" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Aþala"},
-	Gender = "Masculine"
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Ađili", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 14.
@@ -46,7 +46,7 @@ DefineLanguageWord("Ađili", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Type = "noun",
 	Meanings = {"Him whom Befits to Take Charge of Something in a Tribunal"}, -- source gives "dem es zukommt, eine Sache, vor Gericht zu führen" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Aþala"},
-	Gender = "Masculine"
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Aldr", { -- Source: Geir T. Zoëga, "A Concise Dictionary of Old Icelandic", 1910, p. 8.
@@ -56,14 +56,14 @@ DefineLanguageWord("Aldr", { -- Source: Geir T. Zoëga, "A Concise Dictionary of
 	NumberCaseInflections = {
 		"singular", "genitive", "Aldrs"
 	},
-	Gender = "Masculine"
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Aldrnari", { -- Compound of the words "Aldr" and "Nari", literally "life-sustainer"; Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Fire"},
-	Gender = "Masculine"
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Ār", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
@@ -78,7 +78,7 @@ DefineLanguageWord("Bađ", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Type = "noun",
 	Meanings = {"Steam Bath"}, -- source gives the German "Dampfbad" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Baþa"},
-	Gender = "Neuter"
+	Gender = "neuter"
 })
 
 DefineLanguageWord("Bekkr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 133.
@@ -93,7 +93,7 @@ DefineLanguageWord("Bera", { -- source also gives alternative form "Birna"; Sour
 	Type = "noun",
 	Meanings = {"Female Bear"}, -- source gives the German "Bärin" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Berôn"}, -- presumably from "Berôn", since that has the (apparently) same meaning and is also feminine, but the source is not entirely clear (it could be "Beran" instead)
-	Gender = "Feminine"
+	Gender = "feminine"
 })
 
 DefineLanguageWord("Bjarg", { -- source also gives the alternate form "Berg"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
@@ -101,7 +101,7 @@ DefineLanguageWord("Bjarg", { -- source also gives the alternate form "Berg"; So
 	Type = "noun",
 	Meanings = {"Cliff", "Mountain"}, -- source gives "Fels, Berg" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Berga"},
-	Gender = "Neuter"
+	Gender = "neuter"
 })
 
 DefineLanguageWord("Bjǫrn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
@@ -109,7 +109,7 @@ DefineLanguageWord("Bjǫrn", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Type = "noun",
 	Meanings = {"Bear"}, -- source gives the German "Bär" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Beran"},
-	Gender = "Masculine"
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Blômi", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 146.
@@ -117,7 +117,7 @@ DefineLanguageWord("Blômi", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Type = "noun",
 	Meanings = {"Flower"}, -- source gives the German "Blume" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Blôma"},
-	Gender = "Masculine"
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Blômstr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 146.
@@ -125,7 +125,7 @@ DefineLanguageWord("Blômstr", { -- Source: August Fick and Alf Torp, "Wortschat
 	Type = "noun",
 	Meanings = {"Blossom"}, -- apparently, but it is not clear from the source
 	DerivesFrom = {"proto-germanic", "noun", "Blôma"},
-	Gender = "Neuter"
+	Gender = "neuter"
 })
 
 DefineLanguageWord("Bōk", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
@@ -140,7 +140,7 @@ DefineLanguageWord("Borg", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Type = "noun",
 	Meanings = {"Terrace", "Rampart", "Wall", "Castle", "City"}, -- source gives "Terrasse, Wall, Mauer, Burg, Stadt" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Burg"},
-	Gender = "Feminine"
+	Gender = "feminine"
 })
 
 DefineLanguageWord("Bǫrr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
@@ -153,7 +153,15 @@ DefineLanguageWord("Broddr", { -- Source: Sean Crist, "An Analysis of *z loss in
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Point", "Sprout"},
-	Gender = "Masculine"
+	Gender = "masculine"
+})
+
+DefineLanguageWord("Bryggja", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 145.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Ship Bridge"}, -- source gives the German "Schiffsbrücke" as the meaning
+	Gender = "feminine",
+	DerivesFrom = {"proto-germanic", "noun", "Brugjô"}
 })
 
 DefineLanguageWord("Dyrr", { -- this is the nominative plural; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
@@ -198,14 +206,14 @@ DefineLanguageWord("Fŷrr", { -- source also gives the alternate form "Fûrr"; S
 	Type = "noun",
 	Meanings = {"Fire"}, -- source gives "Feuer" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Fûir"},
-	Gender = "Masculine"
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Gaddr", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Prickle"},
-	Gender = "Masculine"
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Garđr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
@@ -226,7 +234,7 @@ DefineLanguageWord("Haddr", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Type = "noun",
 	Meanings = {"Woman's Long Hair"},
 	DerivesFrom = {"proto-germanic", "noun", "Hazdaz"},
-	Gender = "Masculine"
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Hafr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
@@ -252,7 +260,7 @@ DefineLanguageWord("Hrǫnn", { -- Source: Sean Crist, "An Analysis of *z loss in
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Wave"},
-	Gender = "Feminine"
+	Gender = "feminine"
 })
 
 DefineLanguageWord("Hundr", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
@@ -317,7 +325,7 @@ DefineLanguageWord("Mergr", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	NumberCaseInflections = {
 		"singular", "genitive", "Mergjar"
 	},
-	Gender = "Masculine"
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Nātt", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
@@ -334,7 +342,7 @@ DefineLanguageWord("Oddr", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	NumberCaseInflections = {
 		"singular", "genitive", "Odds"
 	},
-	Gender = "Masculine"
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Orlǫg", { -- is singular or plural?; Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 10.
@@ -347,14 +355,14 @@ DefineLanguageWord("Rann", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"House"},
-	Gender = "Neuter"
+	Gender = "neuter"
 })
 
 DefineLanguageWord("Rǫdd", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 9.
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Sound", "Voice", "Vowel"},
-	Gender = "Feminine"
+	Gender = "feminine"
 })
 
 DefineLanguageWord("Sāđ", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
