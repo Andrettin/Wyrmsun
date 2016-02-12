@@ -1021,6 +1021,19 @@ DefineLanguageWord("Sieg", {
 	AffixNameTypes = {"compound", "prefix", "singular", "person"}
 })
 
+DefineLanguageWord("Silber", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"Silver"},
+	Gender = "neuter"
+})
+
+DefineLanguageWord("Silbern", {
+	Language = "high-german",
+	Type = "adjective",
+	Meanings = {"Silver"}
+})
+
 DefineLanguageWord("Spitze", {
 	Language = "high-german",
 	Type = "noun",

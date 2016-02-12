@@ -715,6 +715,21 @@ DefineLanguageWord("Shrew", {
 	}
 })
 
+DefineLanguageWord("Silver", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Silver"},
+	Gender = "neuter",
+	Uncountable = true
+})
+
+DefineLanguageWord("Silver", {
+	Language = "english",
+	Type = "adjective",
+	Meanings = {"Silver"},
+	AffixNameTypes = {"separate", "prefix", "singular", "unit-class-smithy"} -- seems sensible
+})
+
 DefineLanguageWord("Smithy", {
 	Language = "english",
 	Type = "noun",
