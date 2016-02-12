@@ -246,6 +246,10 @@ DefineLanguage("sanskrit", {
 	Name = "Sanskrit"
 })
 
+DefineLanguage("swedish", {
+	Name = "Swedish"
+})
+
 DefineLanguage("thracian", {
 	Name = "Thracian"
 })
@@ -286,6 +290,7 @@ Load("scripts/language_old_norse.lua")
 Load("scripts/language_old_swedish.lua")
 Load("scripts/language_old_icelandic.lua")
 Load("scripts/language_norwegian.lua")
+Load("scripts/language_swedish.lua")
 
 -- West Germanic languages (branch of the Germanic family)
 Load("scripts/language_west_germanic.lua")

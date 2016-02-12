@@ -25,6 +25,16 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineLanguageWord("Aes", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 11.
+	Language = "latin",
+	Type = "noun",
+	Meanings = {"Ore"}, -- source gives the German "Erz" as the meaning
+	Gender = "neuter",
+	NumberCaseInflections = {
+		"singular", "genitive", "Aeris"
+	}
+})
+
 DefineLanguageWord("Alucinare", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 101.
 	Language = "latin",
 	Type = "verb",
@@ -38,6 +48,12 @@ DefineLanguageWord("Alucitae", { -- this is the plural; Source: Alaric Hall, "Th
 	NumberCaseInflections = {
 		"plural", "nominative", "Alucitae"
 	}
+})
+
+DefineLanguageWord("Âra", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 20.
+	Language = "latin",
+	Type = "noun",
+	Meanings = {"Altar"} -- source gives the German "Altar" as the meaning
 })
 
 DefineLanguageWord("Caesaries", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 7.

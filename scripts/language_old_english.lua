@@ -46,6 +46,14 @@ DefineLanguageWord("Æþela", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Gender = "feminine"
 })
 
+DefineLanguageWord("Âr", { -- source also gives the alternative form "Æ̂r" (with the circumflex accent on top of the Æ); Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 11.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Ore"}, -- source gives the German "Erz" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Aiza"},
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Bæþ", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 133.
 	Language = "old-english",
 	Type = "noun",

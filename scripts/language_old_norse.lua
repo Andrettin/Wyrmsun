@@ -193,6 +193,14 @@ DefineLanguageWord("Dyrr", { -- this is the nominative plural; Source: Winfred P
 	}
 })
 
+DefineLanguageWord("Eir", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 11.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Ore", "Copper"}, -- source gives the German "Erz, Kupfer" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Aiza"},
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Fé", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "old-norse",
 	Type = "noun",

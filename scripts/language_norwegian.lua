@@ -32,6 +32,22 @@ DefineLanguageWord("Bradd", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Esja", { -- vernacular; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 20.
+	Language = "norwegian",
+	Type = "noun",
+	Meanings = {"Kind of Soaprock Usable for a Forge"}, -- source gives the German "eine Art (für die Esse anwendbare) Seifenstein" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Asjôn"},
+	Gender = "feminine"
+})
+
+DefineLanguageWord("Esja", { -- vernacular; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 20.
+	Language = "norwegian",
+	Type = "noun",
+	Meanings = {"Burning Ashes"}, -- source gives the German "glühende Asche" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Asjôn"},
+	Gender = "feminine"
+})
+
 DefineLanguageWord("Torp", { -- vernacular; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 100.
 	Language = "norwegian",
 	Type = "noun",

@@ -45,6 +45,16 @@ DefineLanguageWord("Aírþa", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	DerivesFrom = {"proto-germanic", "noun", "Erþō"}
 })
 
+DefineLanguageWord("Ais", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 11.
+	Language = "gothic",
+	Type = "noun",
+	Meanings = {"Ore", "Money"}, -- source gives the German "Erz, Geld" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Aiza"},
+	NumberCaseInflections = {
+		"singular", "genitive", "Aizis"
+	}
+})
+
 DefineLanguageWord("Aiþþau", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
 	Language = "gothic",
 	Type = "conjunction",

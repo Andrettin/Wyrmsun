@@ -142,11 +142,27 @@ DefineLanguageWord("Ēht", { -- Source: Richard M. Runge, "The Phonetic Realizat
 	Meanings = {"Property"} -- source gives the German "Besitz"
 })
 
+DefineLanguageWord("Êr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 11.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Ore", "Iron"}, -- source gives the German "Erz" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Aiza"},
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Erda", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Earth"}, -- derived from Proto-Germanic "Erþō", which means "Earth"
 	DerivesFrom = {"proto-germanic", "noun", "Erþō"}
+})
+
+DefineLanguageWord("Essa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 20.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Forge"}, -- source gives the German "Esse" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Asjôn"},
+	Gender = "feminine"
 })
 
 DefineLanguageWord("Fehu", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.

@@ -30,7 +30,7 @@
 DefineLanguageWord("Aiza", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 11.
 	Language = "proto-germanic",
 	Type = "noun",
-	Meanings = {"Ore"}, -- source gives "Erz" as the meaning
+	Meanings = {"Ore"}, -- source gives the German "Erz" as the meaning
 	Gender = "neuter"
 })
 

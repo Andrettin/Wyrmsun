@@ -100,6 +100,14 @@ DefineLanguageWord("Dorf", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Gender = "neuter"
 })
 
+DefineLanguageWord("Êr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 11.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Ore", "Iron"}, -- source gives the German "Erz, Eisen" as the meaning
+	DerivesFrom = {"old-high-german", "noun", "Êr"},
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Gart", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
 	Language = "middle-high-german",
 	Type = "noun",

@@ -25,36 +25,9 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageWord("Ayaṅh", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 11.
-	Language = "avestan",
+DefineLanguageWord("Ässja", { -- vernacular; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 20.
+	Language = "swedish",
 	Type = "noun",
-	Meanings = {"Metal", "Iron"}, -- source gives the German "Metall, Eisen" as the meaning
-	Gender = "neuter"
-})
-
-DefineLanguageWord("Barez", { -- source also gives the alternative form "Bareza", and the other form (this one neuter) "Barezaṅh-"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
-	Language = "avestan",
-	Type = "noun",
-	Meanings = {"Height", "Altitude"}, -- source gives "Höhe" as the meaning
-	Gender = "feminine"
-})
-
-DefineLanguageWord("Mīzhda", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 7.
-	Language = "avestan",
-	Type = "noun",
-	Meanings = {"Reward"},
-	Gender = "neuter"
-})
-
-DefineLanguageWord("Spaetō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
-	Language = "avestan",
-	Type = "adjective",
-	Meanings = {"White"},
-	DerivesFrom = {"proto-indo-european", "adjective", "Ḱweyt"}
-})
-
-DefineLanguageWord("Yārə", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
-	Language = "avestan",
-	Type = "noun",
-	Meanings = {"Year"}
+	Meanings = {"Forge"}, -- source gives the German "Esse" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Asjôn"}
 })

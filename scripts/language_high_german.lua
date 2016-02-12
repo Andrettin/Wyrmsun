@@ -311,7 +311,8 @@ DefineLanguageWord("Erz", {
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"Ore"},
-	DerivesFrom = {"proto-germanic", "noun", "Aiza"},
+	DerivesFrom = {"middle-high-german", "noun", "Êr"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 11.
+	Gender = "neuter",
 	NumberCaseInflections = {
 		"singular", "genitive", "Erzes",
 		"plural", "nominative", "Erze",
@@ -319,7 +320,6 @@ DefineLanguageWord("Erz", {
 		"plural", "dative", "Erzen",
 		"plural", "genitive", "Erze"
 	},
-	Gender = "neuter",
 	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- example: "Eisenerz"
 })
 
@@ -327,14 +327,14 @@ DefineLanguageWord("Esse", {
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"Forge"},
-	DerivesFrom = {"proto-germanic", "noun", "Asjôn"},
+	DerivesFrom = {"old-high-german", "noun", "Essa"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 20.
+	Gender = "feminine",
 	NumberCaseInflections = {
 		"plural", "nominative", "Essen",
 		"plural", "accusative", "Essen",
 		"plural", "dative", "Essen",
 		"plural", "genitive", "Essen"
-	},
-	Gender = "feminine"
+	}
 })
 
 DefineLanguageWord("Feuer", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 127.

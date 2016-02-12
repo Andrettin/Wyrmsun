@@ -25,6 +25,12 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineLanguageWord("Aslà", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 20.
+	Language = "lithuanian",
+	Type = "noun",
+	Meanings = {} -- source gives the German "der aus Lehm geschlagene Fußboden gehört wohl hierher" as the meaning
+})
+
 DefineLanguageWord("Bė́gu", { -- source also gives the alternative form "Bė́gti"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 133.
 	Language = "lithuanian",
 	Type = "verb", -- correct?

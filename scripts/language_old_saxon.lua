@@ -81,6 +81,14 @@ DefineLanguageWord("Burg", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Gender = "feminine"
 })
 
+DefineLanguageWord("Êr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 11.
+	Language = "old-saxon",
+	Type = "noun",
+	Meanings = {"Ore"}, -- source gives the German "Erz" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Aiza"},
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Fehu", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "old-saxon",
 	Type = "noun",
