@@ -234,6 +234,14 @@ DefineLanguageWord("Fisc", { -- Source: Richard M. Runge, "The Phonetic Realizat
 	Meanings = {"Fish"}
 })
 
+DefineLanguageWord("Ford", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 120.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Ford"}, -- source gives the German "Furt" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Furdu"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Fōt", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-english",
 	Type = "noun",
@@ -550,6 +558,14 @@ DefineLanguageWord("Sealticge", { -- Source: Alaric Hall, "The Meanings of Elf a
 	Type = "noun",
 	Meanings = {"Dancer"},
 	Gender = "feminine" -- presumably, given the source is talking about occupations for women
+})
+
+DefineLanguageWord("Seolfor", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 221.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Silver"}, -- source gives the German "Silber" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Silubra"},
+	Gender = "neuter"
 })
 
 DefineLanguageWord("Snoru", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.

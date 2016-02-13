@@ -224,6 +224,14 @@ DefineLanguageWord("Fuoz", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	DerivesFrom = {"proto-germanic", "noun", "Fōts"}
 })
 
+DefineLanguageWord("Furt", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, pp. 120-121.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Ford", "Path", "Riverbed"}, -- source gives the German "Furt, Weg, Flußbett" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Furdu"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Gart", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
 	Language = "old-high-german",
 	Type = "noun",
@@ -437,6 +445,14 @@ DefineLanguageWord("Sēula", { -- source also gives "Sēla"; Source: Richard M. 
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Soul"}
+})
+
+DefineLanguageWord("Silabar", { -- source also gives the alternative forms "Silapar" and "Silbar"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 221.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Silver"}, -- source gives the German "Silber" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Silubra"},
+	Gender = "neuter"
 })
 
 DefineLanguageWord("Skato", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.

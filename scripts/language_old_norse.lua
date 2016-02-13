@@ -223,6 +223,14 @@ DefineLanguageWord("Fiskr", { -- Source: Richard M. Runge, "The Phonetic Realiza
 	Meanings = {"Fish"}
 })
 
+DefineLanguageWord("Fjǫrđr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 120.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Bay", "Fjord"}, -- source gives the German "Bucht, Fjord" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Ferþu"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Flōđ", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-norse",
 	Type = "noun",
@@ -429,6 +437,14 @@ DefineLanguageWord("Síða", { -- Source: Alaric Hall, "The Meanings of Elf and 
 	Language = "old-norse",
 	Type = "verb",
 	Meanings = {"Work Magic"}
+})
+
+DefineLanguageWord("Silfr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 221.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Silver"}, -- source gives the German "Silber" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Silubra"},
+	Gender = "neuter"
 })
 
 DefineLanguageWord("Sunna", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.

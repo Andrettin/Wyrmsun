@@ -49,6 +49,14 @@ DefineLanguageWord("Esja", { -- vernacular; Source: August Fick and Alf Torp, "W
 	Gender = "feminine"
 })
 
+DefineLanguageWord("Ford", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 120.
+	Language = "norwegian",
+	Type = "noun",
+	Meanings = {"Path through a Mire"}, -- source gives the German "Weg durch einen Morast" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Furdu"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Torp", { -- vernacular; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 100.
 	Language = "norwegian",
 	Type = "noun",

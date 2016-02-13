@@ -240,12 +240,28 @@ DefineLanguageWord("Rünne", { -- Source: Sean Crist, "An Analysis of *z loss in
 	Gender = "feminine"
 })
 
+DefineLanguageWord("Silber", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 221.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Silver"}, -- source gives the German "Silber" as the meaning
+	DerivesFrom = {"old-high-german", "noun", "Silabar"},
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Viur", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 127.
 	Language = "middle-high-german",
 	Type = "noun",
 	Meanings = {"Fire"}, -- source gives "Feuer" as the meaning
 	DerivesFrom = {"old-high-german", "noun", "Fuir"},
 	Gender = "neuter"
+})
+
+DefineLanguageWord("Vurt", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, pp. 120-121.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Ford", "Path", "Riverbed"}, -- source gives the German "Furt, Weg, Flußbett" as the meaning
+	DerivesFrom = {"old-high-german", "noun", "Furt"},
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Weit", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 4, 7.

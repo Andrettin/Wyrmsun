@@ -48,6 +48,14 @@ DefineLanguageWord("Darm", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	DerivesFrom = {"old-low-german", "noun", "Tharm"}
 })
 
+DefineLanguageWord("Vorde", { -- source also gives the alternative form "Vort"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 120.
+	Language = "middle-low-german",
+	Type = "noun",
+	Meanings = {"Ford"}, -- source gives the German "Furt" as the meaning
+	DerivesFrom = {"old-low-german", "noun", "Ford"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Hēde", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 7.
 	Language = "middle-low-german",
 	Type = "noun",

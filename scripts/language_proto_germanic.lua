@@ -237,6 +237,13 @@ DefineLanguageWord("Fehu", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Meanings = {"Cattle"}
 })
 
+DefineLanguageWord("Ferþu", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 120.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Fjord"}, -- source gives the German "Fjord" as the meaning
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Flōduz", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "proto-germanic",
 	Type = "noun",
@@ -254,6 +261,13 @@ DefineLanguageWord("Fûir", { -- source also gives the alternate form "Fûr"; So
 	Type = "noun",
 	Meanings = {"Fire"}, -- source gives "Feuer" as the meaning
 	Gender = "neuter"
+})
+
+DefineLanguageWord("Furdu", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 120.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Ford"}, -- source gives the German "Furt" as the meaning
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Gárdiz", { -- Fick and Torp spell the word as "Garda"/"Gardi"/"Gardan"; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 72.
@@ -512,6 +526,24 @@ DefineLanguageWord("Saiþa", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Sēþiz", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Seed"}
+})
+
+DefineLanguageWord("Silubra", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 221.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Silver"} -- source gives the German "Silber" as the meaning
+})
+
+DefineLanguageWord("Skadwas", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Shadow"}
+})
+
 DefineLanguageWord("Skaran", { -- source also gives the alternative form "Skara"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 227.
 	Language = "proto-germanic",
 	Type = "noun",
@@ -538,18 +570,6 @@ DefineLanguageWord("Snaigva", { -- source also gives the forms "Snaiva", "Snaigv
 	Meanings = {"Snow"},
 	Gender = "masculine",
 	Uncountable = true -- seems likely to be uncountable
-})
-
-DefineLanguageWord("Sēþiz", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
-	Language = "proto-germanic",
-	Type = "noun",
-	Meanings = {"Seed"}
-})
-
-DefineLanguageWord("Skadwas", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
-	Language = "proto-germanic",
-	Type = "noun",
-	Meanings = {"Shadow"}
 })
 
 DefineLanguageWord("Sunōn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.

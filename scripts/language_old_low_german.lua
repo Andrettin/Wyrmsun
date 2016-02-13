@@ -25,6 +25,14 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineLanguageWord("Ford", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 120.
+	Language = "old-low-german",
+	Type = "noun",
+	Meanings = {"Ford"}, -- source gives the German "Furt" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Furdu"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Tharm", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 97.
 	Language = "old-low-german",
 	Type = "noun",

@@ -222,6 +222,14 @@ DefineLanguageWord("Orlag", { -- source also gives the alternative form "Orlagi"
 	Meanings = {"Fate"}
 })
 
+DefineLanguageWord("Siluƀar", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 221.
+	Language = "old-saxon",
+	Type = "noun",
+	Meanings = {"Silver"}, -- source gives the German "Silber" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Silubra"},
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Suht", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
 	Language = "old-saxon",
 	Type = "noun",

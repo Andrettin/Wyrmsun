@@ -42,3 +42,9 @@ DefineLanguageWord("Longo", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Type = "adjective",
 	Meanings = {"Long"}
 })
+
+DefineLanguageWord("Ritu", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 121.
+	Language = "gaulish",
+	Type = "noun",
+	Meanings = {"Ford"} -- source gives the German "Furt" as the meaning
+})

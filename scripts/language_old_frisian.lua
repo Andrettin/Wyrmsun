@@ -143,6 +143,14 @@ DefineLanguageWord("Ransa", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Meanings = {"House"}
 })
 
+DefineLanguageWord("Selover", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 221.
+	Language = "old-frisian",
+	Type = "noun",
+	Meanings = {"Silver"}, -- source gives the German "Silber" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Silubra"},
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Therm", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 97.
 	Language = "old-frisian",
 	Type = "noun",

@@ -81,6 +81,13 @@ DefineLanguageWord("Mozgŭ", { -- Source: Sean Crist, "An Analysis of *z loss in
 	Meanings = {"Brain"}
 })
 
+DefineLanguageWord("Sĭrebro", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 221.
+	Language = "old-church-slavonic",
+	Type = "noun",
+	Meanings = {"Silver"}, -- source gives the German "Silber" as the meaning
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Svins", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "old-church-slavonic",
 	Type = "adjective",

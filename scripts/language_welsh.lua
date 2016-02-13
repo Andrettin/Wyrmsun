@@ -61,3 +61,9 @@ DefineLanguageWord("Ieu", { -- this is the comparative; Source: Winfred P. Lehma
 		"comparative", "Ieu"
 	}
 })
+
+DefineLanguageWord("Rhŷd", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 121.
+	Language = "welsh",
+	Type = "noun",
+	Meanings = {"Ford"} -- source gives the German "Furt" as the meaning
+})

@@ -402,13 +402,14 @@ DefineLanguageWord("Furt", { -- Source: http://www.duden.de/rechtschreibung/Furt
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"Ford"},
+	DerivesFrom = {"middle-high-german", "noun", "Vurt"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, pp. 120-121.
+	Gender = "feminine",
 	NumberCaseInflections = {
 		"plural", "nominative", "Furten",
 		"plural", "accusative", "Furten",
 		"plural", "dative", "Furten",
 		"plural", "genitive", "Furten"
 	},
-	Gender = "feminine",
 	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- example: "Klagenfurt"
 })
 
@@ -1051,12 +1052,14 @@ DefineLanguageWord("Silber", {
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"Silver"},
+	DerivesFrom = {"middle-high-german", "noun", "Silber"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 221.
 	Gender = "neuter"
 })
 
 DefineLanguageWord("Silbern", {
 	Language = "high-german",
 	Type = "adjective",
+	DerivesFrom = {"middle-high-german", "noun", "Silber"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 221.
 	Meanings = {"Silver"}
 })
 

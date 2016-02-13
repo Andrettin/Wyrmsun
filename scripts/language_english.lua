@@ -282,6 +282,7 @@ DefineLanguageWord("Ford", {
 	Language = "english",
 	Type = "noun",
 	Meanings = {"Ford"},
+	DerivesFrom = {"old-english", "noun", "Ford"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 120.
 	Gender = "neuter",
 	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- examples: "Ashford", "Bedford", "Oxford"; Source: "Philip's International School Atlas", 2006, p. 64.
 })
@@ -727,6 +728,7 @@ DefineLanguageWord("Silver", {
 	Language = "english",
 	Type = "noun",
 	Meanings = {"Silver"},
+	DerivesFrom = {"old-english", "noun", "Seolfor"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 221.
 	Gender = "neuter",
 	Uncountable = true
 })
@@ -735,6 +737,7 @@ DefineLanguageWord("Silver", {
 	Language = "english",
 	Type = "adjective",
 	Meanings = {"Silver"},
+	DerivesFrom = {"old-english", "noun", "Seolfor"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 221.
 	AffixNameTypes = {"separate", "prefix", "singular", "unit-class-smithy"} -- seems sensible
 })
 

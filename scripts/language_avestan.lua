@@ -46,6 +46,18 @@ DefineLanguageWord("Mīzhda", { -- Source: Sean Crist, "An Analysis of *z loss i
 	Gender = "neuter"
 })
 
+DefineLanguageWord("Peretu", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 121.
+	Language = "avestan",
+	Type = "noun",
+	Meanings = {"Bridge"} -- source gives the German "Brücke" as the meaning
+})
+
+DefineLanguageWord("Peshu", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 121.
+	Language = "avestan",
+	Type = "noun",
+	Meanings = {"Ford"} -- source gives the German "Furt" as the meaning
+})
+
 DefineLanguageWord("Spaetō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 	Language = "avestan",
 	Type = "adjective",
