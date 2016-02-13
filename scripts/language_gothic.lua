@@ -218,6 +218,7 @@ DefineLanguageWord("Gazds", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Language = "gothic",
 	Type = "noun",
 	Meanings = {"Prickle"},
+	DerivesFrom = {"proto-germanic", "noun", "Gazdaz"},
 	Gender = "masculine"
 })
 

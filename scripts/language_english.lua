@@ -368,6 +368,14 @@ DefineLanguageWord("Hammer", {
 	AffixNameTypes = {"separate", "suffix", "singular", "unit-class-smithy"} -- seems sensible
 })
 
+DefineLanguageWord("Hards", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Hards", "Coarse Refuse of Flax"},
+	DerivesFrom = {"old-english", "noun", "Heorde"}, -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
+	Uncountable = true
+})
+
 DefineLanguageWord("Haven", {
 	Language = "english",
 	Type = "noun",

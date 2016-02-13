@@ -77,6 +77,7 @@ DefineLanguageWord("Brart", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Edge", "Forepart of a Ship"},
+	DerivesFrom = {"proto-germanic", "noun", "Bruzdaz"},
 	Gender = "masculine"
 })
 
@@ -84,6 +85,7 @@ DefineLanguageWord("Brort", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Skewer", "Projectile", "Edge", "Rim", "Forepart of a Ship"},
+	DerivesFrom = {"proto-germanic", "noun", "Bruzdaz"},
 	Gender = "masculine"
 })
 
@@ -203,7 +205,8 @@ DefineLanguageWord("Fuoz", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 DefineLanguageWord("Gart", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
 	Language = "old-high-german",
 	Type = "noun",
-	Meanings = {"Rod", "Prickle"}
+	Meanings = {"Rod", "Prickle"},
+	DerivesFrom = {"proto-germanic", "noun", "Gazdaz"}
 })
 
 DefineLanguageWord("Gart", { -- is this the same word as the "Gart" which has another meaning detailed above? Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.

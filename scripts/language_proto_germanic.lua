@@ -330,10 +330,10 @@ DefineLanguageWord("Herþa", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Gender = "masculine"
 })
 
-DefineLanguageWord("Hezdōn", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
+DefineLanguageWord("Hezdōn", { -- apparently the same as "Hezdon", though Torp gave them as being different; Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 7.
 	Language = "proto-germanic",
 	Type = "noun",
-	Meanings = {"Flax Fiber"},
+	Meanings = {"Flax Fiber", "Coarse Flax Fiber", "Coarse Hemp Fiber", "Oakum"},
 	Uncountable = true -- as a material, it is likely to be uncountable
 })
 

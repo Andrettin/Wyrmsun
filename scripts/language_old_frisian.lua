@@ -61,6 +61,7 @@ DefineLanguageWord("Hēde", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Language = "old-frisian",
 	Type = "noun",
 	Meanings = {"Flax Fiber"},
+	DerivesFrom = {"proto-germanic", "noun", "Hezdōn"},
 	Uncountable = true -- as a material, it is likely to be uncountable
 })
 
@@ -125,7 +126,8 @@ DefineLanguageWord("Nera", { -- Source: Sean Crist, "An Analysis of *z loss in W
 DefineLanguageWord("Ord", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
 	Language = "old-frisian",
 	Type = "noun",
-	Meanings = {"Point", "Place"} -- source gives the meaning as "(spear)point, place"
+	Meanings = {"Point", "Place"}, -- source gives the meaning as "(spear)point, place"
+	DerivesFrom = {"proto-germanic", "noun", "Uzdaz"}
 })
 
 DefineLanguageWord("Ransa", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.

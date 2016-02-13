@@ -92,7 +92,8 @@ DefineLanguageWord("Êr", { -- Source: August Fick and Alf Torp, "Wortschatz der
 DefineLanguageWord("Fehu", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "old-saxon",
 	Type = "noun",
-	Meanings = {"Cattle"}
+	Meanings = {"Cattle"},
+	DerivesFrom = {"proto-germanic", "noun", "Fehu"}
 })
 
 DefineLanguageWord("Fiur", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 127.
@@ -112,7 +113,8 @@ DefineLanguageWord("Fisc", { -- Source: Richard M. Runge, "The Phonetic Realizat
 DefineLanguageWord("Gard", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.
 	Language = "old-saxon",
 	Type = "noun",
-	Meanings = {"Staff", "Rod"}
+	Meanings = {"Staff", "Rod"},
+	DerivesFrom = {"proto-germanic", "noun", "Gazdaz"}
 })
 
 DefineLanguageWord("Herta", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.

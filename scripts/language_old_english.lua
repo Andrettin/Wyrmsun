@@ -117,6 +117,7 @@ DefineLanguageWord("Brord", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Language = "old-english",
 	Type = "noun",
 	Meanings = {"Point", "Sprout"},
+	DerivesFrom = {"proto-germanic", "noun", "Bruzdaz"},
 	Gender = "masculine"
 })
 
@@ -279,7 +280,8 @@ DefineLanguageWord("Gesihþ", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 DefineLanguageWord("Gierd", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
 	Language = "old-english",
 	Type = "noun",
-	Meanings = {"Rod", "Prickle"}
+	Meanings = {"Rod", "Prickle"},
+	DerivesFrom = {"proto-germanic", "noun", "Gazdaz"}
 })
 
 DefineLanguageWord("Glīwmǣden", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 77.
@@ -333,6 +335,7 @@ DefineLanguageWord("Heorde", { -- Source: Sean Crist, "An Analysis of *z loss in
 	Language = "old-english",
 	Type = "noun",
 	Meanings = {"Flax Fiber"},
+	DerivesFrom = {"proto-germanic", "noun", "Hezdōn"},
 	Uncountable = true -- as a material, it is likely to be uncountable, specially since there is a word for "hards of flax"
 })
 
@@ -381,6 +384,7 @@ DefineLanguageWord("Hræn", { -- source also gives the alternative form "Hærn";
 	Language = "old-english",
 	Type = "noun",
 	Meanings = {"Wave", "Sea"},
+	DerivesFrom = {"proto-germanic", "noun", "Hraznō"},
 	Gender = "feminine"
 })
 
@@ -473,6 +477,7 @@ DefineLanguageWord("Ord", { -- Source: Sean Crist, "An Analysis of *z loss in We
 	Language = "old-english",
 	Type = "noun",
 	Meanings = {"Point", "Spearpoint"},
+	DerivesFrom = {"proto-germanic", "noun", "Uzdaz"},
 	Gender = "masculine"
 })
 

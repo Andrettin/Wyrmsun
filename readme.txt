@@ -105,6 +105,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added support for damage bonus vs. dragons. This damage bonus affects wyrms, and will affect any other draconic creatures added later to the game.
 - Fixed an issue which caused unit/building proper names to overlap with other parts of the interface if a word in them was too long.
 - Fixed an issue which caused the player to be able to see others' buildings on the minimap if the player destroyed their own town hall.
+- The Brising Clan (dwarf) now has a faction-specific icon for the dwarven level 1 shield (if the player has the Brising Faction Flair DLC).
 
 * Modding
 - Added support for redefining civilizations and factions.

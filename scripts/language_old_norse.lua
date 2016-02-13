@@ -153,6 +153,7 @@ DefineLanguageWord("Broddr", { -- Source: Sean Crist, "An Analysis of *z loss in
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Point", "Sprout"},
+	DerivesFrom = {"proto-germanic", "noun", "Bruzdaz"},
 	Gender = "masculine"
 })
 
@@ -240,6 +241,7 @@ DefineLanguageWord("Gaddr", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Prickle"},
+	DerivesFrom = {"proto-germanic", "noun", "Gazdaz"},
 	Gender = "masculine"
 })
 
@@ -287,6 +289,7 @@ DefineLanguageWord("Hrǫnn", { -- Source: Sean Crist, "An Analysis of *z loss in
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Wave"},
+	DerivesFrom = {"proto-germanic", "noun", "Hraznō"},
 	Gender = "feminine"
 })
 
@@ -374,10 +377,11 @@ DefineLanguageWord("Oddr", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Point", "Place"},
+	DerivesFrom = {"proto-germanic", "noun", "Uzdaz"},
+	Gender = "masculine",
 	NumberCaseInflections = {
 		"singular", "genitive", "Odds"
-	},
-	Gender = "masculine"
+	}
 })
 
 DefineLanguageWord("Orlǫg", { -- is singular or plural?; Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 10.

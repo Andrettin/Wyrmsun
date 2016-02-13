@@ -76,6 +76,13 @@ DefineLanguageWord("Bluost", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Gender = "feminine"
 })
 
+DefineLanguageWord("Brort", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {},
+	DerivesFrom = {"old-high-german", "noun", "Brort"}
+})
+
 DefineLanguageWord("Brücke", { -- source also gives the alternative form "Brügge"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 145.
 	Language = "middle-high-german",
 	Type = "noun",

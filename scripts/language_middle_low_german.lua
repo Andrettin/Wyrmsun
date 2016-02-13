@@ -37,6 +37,7 @@ DefineLanguageWord("Hēde", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Language = "middle-low-german",
 	Type = "noun",
 	Meanings = {"Flax Fiber"},
+	DerivesFrom = {"proto-germanic", "noun", "Hezdōn"},
 	Uncountable = true, -- as a material, it is likely to be uncountable
 	Gender = "feminine"
 })
