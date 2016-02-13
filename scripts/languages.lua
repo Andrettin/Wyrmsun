@@ -198,6 +198,10 @@ DefineLanguage("old-latin", {
 	Name = "Old Latin"
 })
 
+DefineLanguage("old-low-german", {
+	Name = "Old Low German"
+})
+
 DefineLanguage("old-norse", {
 	Name = "Old Norse"
 })
@@ -298,6 +302,7 @@ Load("scripts/language_old_high_german.lua")
 Load("scripts/language_middle_high_german.lua")
 Load("scripts/language_high_german.lua")
 Load("scripts/language_old_saxon.lua")
+Load("scripts/language_old_low_german.lua")
 Load("scripts/language_middle_low_german.lua")
 Load("scripts/language_old_frankish.lua")
 Load("scripts/language_middle_dutch.lua")

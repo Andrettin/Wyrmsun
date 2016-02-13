@@ -38,21 +38,16 @@ local TeutonEvents = {
 				and FactionHasTechnologyType(EventFaction, "wood-plow")
 				and (EventFaction.Name == "Asa Tribe" or EventFaction.Name == "Skjoldung Tribe" or EventFaction.Name == "Yngling Tribe") -- the Ynglings shouldn't be able to become Teutons, but let's allow it for now since the other two germanic civilizations are not available for human players
 				and (SyncRand(50) < 1 or FactionHasCulture(EventFaction, "teuton"))
-				and GetProvinceOwner("Jutland") == EventFaction.Name
 			) then
 				return true
 			end
 			return false
 		end,
-		Persistent = true,
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				if (GetFactionProvinceCount(Factions.JuteTribe) == 0) then
-					FormFactionLua(EventFaction, Factions.JuteTribe)
-					EventFaction = Factions.JuteTribe
-				end
-				--[[
+				FormFactionLua(EventFaction, Factions.JuteTribe)
+				EventFaction = Factions.JuteTribe
 				for province_i, province_key in ipairs(EventFaction.OwnedProvinces) do
 					if (
 						GetProvinceCivilization(WorldMapProvinces[province_key].Name) == "germanic"
@@ -61,20 +56,12 @@ local TeutonEvents = {
 						break
 					end
 				end
-				--]]
-				SetProvinceCivilization("Jutland", "teuton")
 				for province_i, province_key in ipairs(EventFaction.OwnedProvinces) do -- remove claims from all provinces that are still Germanic, to make it more likely that they will split off
 					if (
 						GetProvinceCivilization(WorldMapProvinces[province_key].Name) == "germanic"
 					) then
 						RemoveProvinceClaim(WorldMapProvinces[province_key].Name, EventFaction.Civilization, EventFaction.Name)
 					end
-				end
-				if (GetProvinceOwner("Gotaland") == EventFaction.Name) then
-					SetProvinceCivilization("Gotaland", "goth")
-				end
-				if (GetProvinceOwner("Sweden") == EventFaction.Name) then
-					SetProvinceCivilization("Sweden", "norse")
 				end
 			end
 		}

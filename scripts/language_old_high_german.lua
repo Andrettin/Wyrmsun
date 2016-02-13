@@ -135,6 +135,17 @@ DefineLanguageWord("Corn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	DerivesFrom = {"proto-germanic", "noun", "Kŕnam"}
 })
 
+DefineLanguageWord("Daram", { -- source also gives the alternative form "Darm"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 97.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Intestine"}, -- source gives the German "Darm" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Þarma"},
+	Gender = "masculine",
+	NumberCaseInflections = {
+		"plural", "nominative", "Darama"
+	}
+})
+
 DefineLanguageWord("Dorf", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 100.
 	Language = "old-high-german",
 	Type = "noun",

@@ -188,8 +188,8 @@ DefineLanguageWord("Bryggja", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Ship Bridge"}, -- source gives the German "Schiffsbrücke" as the meaning
-	Gender = "feminine",
-	DerivesFrom = {"proto-germanic", "noun", "Brugjô"}
+	DerivesFrom = {"proto-germanic", "noun", "Brugjô"},
+	Gender = "feminine"
 })
 
 DefineLanguageWord("Dyrr", { -- this is the nominative plural; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
@@ -443,6 +443,14 @@ DefineLanguageWord("Svīn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Type = "noun",
 	Meanings = {"Pig"}, -- derived from the Proto-Germanic "Swīnaz", which means "Pig"
 	DerivesFrom = {"proto-germanic", "noun", "Swīnaz"}
+})
+
+DefineLanguageWord("Þarmr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 97.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Intestine"}, -- source gives the German "Darm" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Þarma"},
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Þorp", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 100.

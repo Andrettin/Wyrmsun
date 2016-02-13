@@ -171,7 +171,8 @@ DefineLanguageWord("Eisarn", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Type = "noun",
 	Meanings = {"Iron"}, -- source gives the German "Eisen" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Îsarna"},
-	Gender = "neuter"
+	Gender = "neuter",
+	Uncountable = true -- as a material, it is likely to be uncountable
 })
 
 DefineLanguageWord("Eisarneins", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 24.

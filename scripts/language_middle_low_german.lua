@@ -41,6 +41,13 @@ DefineLanguageWord("Blôsem", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Gender = "feminine"
 })
 
+DefineLanguageWord("Darm", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 97.
+	Language = "middle-low-german",
+	Type = "noun",
+	Meanings = {"Intestine"}, -- source gives the German "Darm" as the meaning
+	DerivesFrom = {"old-low-german", "noun", "Tharm"}
+})
+
 DefineLanguageWord("Hēde", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 7.
 	Language = "middle-low-german",
 	Type = "noun",

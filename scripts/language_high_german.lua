@@ -232,6 +232,22 @@ DefineLanguageWord("Burg", {
 	}
 })
 
+DefineLanguageWord("Darm", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"Intestine"},
+	DerivesFrom = {"middle-high-german", "noun", "Darm"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 97.
+	Gender = "masculine",
+	NumberCaseInflections = {
+		"singular", "genitive", "Darmes", -- alternatively "Darms"
+		"plural", "nominative", "Därme",
+		"plural", "accusative", "Därme",
+		"plural", "dative", "Därmen",
+		"plural", "genitive", "Därme"
+	},
+	AffixNameTypes = {"compound", "prefix", "singular", "settlement"} -- example: "Darmstadt"
+})
+
 DefineLanguageWord("Das", {
 	Language = "high-german",
 	Type = "article",
@@ -372,7 +388,7 @@ DefineLanguageWord("Fried", {
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {},
-	AffixNameTypes = {"compound", "suffix", "singular", "person"}
+	AffixNameTypes = {"compound", "suffix", "singular", "person"} -- example: "Gottfried"
 })
 
 DefineLanguageWord("Friedrich", {
@@ -446,7 +462,7 @@ DefineLanguageWord("Gott", {
 	Type = "noun",
 	Meanings = {"God"},
 	Gender = "masculine",
-	AffixNameTypes = {"compound", "prefix", "singular", "person"} -- example: Gottfried
+	AffixNameTypes = {"compound", "prefix", "singular", "person"} -- example: "Gottfried"
 })
 
 DefineLanguageWord("Gunther", {
@@ -1066,7 +1082,7 @@ DefineLanguageWord("Stadt", {
 		"plural", "nominative", "Städte"
 	},
 	Gender = "feminine",
-	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- examples: "Eisenstadt", "Josefstadt", "Kronstadt", "Leopoldstadt"
+	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- examples: "Darmstadt", "Eisenstadt", "Josefstadt", "Kronstadt", "Leopoldstadt"
 })
 
 DefineLanguageWord("Stuhl", {

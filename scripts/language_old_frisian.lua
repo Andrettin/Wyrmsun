@@ -143,6 +143,13 @@ DefineLanguageWord("Ransa", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Meanings = {"House"}
 })
 
+DefineLanguageWord("Therm", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 97.
+	Language = "old-frisian",
+	Type = "noun",
+	Meanings = {"Intestine"}, -- source gives the German "Darm" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Þarma"}
+})
+
 DefineLanguageWord("Thorp", { -- source also gives the alternative form "Therp"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 100.
 	Language = "old-frisian",
 	Type = "noun",

@@ -107,6 +107,17 @@ DefineLanguageWord("Burc", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Gender = "feminine"
 })
 
+DefineLanguageWord("Darm", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 97.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Intestine"}, -- source gives the German "Darm" as the meaning
+	DerivesFrom = {"old-high-german", "noun", "Daram"},
+	Gender = "masculine",
+	NumberCaseInflections = {
+		"plural", "nominative", "Derme"
+	}
+})
+
 DefineLanguageWord("Dorf", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 100.
 	Language = "middle-high-german",
 	Type = "noun",

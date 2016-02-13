@@ -590,6 +590,14 @@ DefineLanguageWord("Swīn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	DerivesFrom = {"proto-germanic", "noun", "Swīnaz"}
 })
 
+DefineLanguageWord("Þearm", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 97.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Intestine"}, -- source gives the German "Darm" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Þarma"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Þorp", { -- source also gives the alternative form "Þrop"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 100.
 	Language = "old-english",
 	Type = "noun",
@@ -598,16 +606,16 @@ DefineLanguageWord("Þorp", { -- source also gives the alternative form "Þrop";
 	Gender = "masculine"
 })
 
-DefineLanguageWord("Twīn", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 6.
-	Language = "old-english",
-	Type = "noun",
-	Meanings = {"Canvas", "Screen"}
-})
-
 DefineLanguageWord("Þunorrad", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 169.
 	Language = "old-english",
 	Type = "noun",
 	Meanings = {"Peal of Thunder"} -- literally: "thunder-ride" or "Thunor-ride"
+})
+
+DefineLanguageWord("Twīn", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 6.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Canvas", "Screen"}
 })
 
 DefineLanguageWord("Wâd", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 4.

@@ -891,7 +891,6 @@ local GermanicEvents = {
 			end
 			return false
 		end,
-		Persistent = true,
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)

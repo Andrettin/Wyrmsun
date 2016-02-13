@@ -1592,7 +1592,7 @@ function LoadProvinces(world)
 				slav = "Lvov",
 				teuton = "Lemberg"
 			},
-			SettlementLocation = {137, 28}, -- Lvov / Lemberg
+			SettlementLocation = {547, 114}, -- Lvov / Lemberg
 			Map = "maps/random/random-map-forest.smp",
 			SettlementTerrain = "Plains",
 			Claims = {
