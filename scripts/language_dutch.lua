@@ -277,6 +277,13 @@ DefineLanguageWord("Lo", { -- is this really a noun? Source: B. H. Slicher van B
 	}
 })
 
+DefineLanguageWord("Lood", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 181.
+	Language = "dutch",
+	Type = "noun",
+	Meanings = {},
+	DerivesFrom = {"proto-germanic", "noun", "Lauda"}
+})
+
 DefineLanguageWord("Molen", { -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
 	Language = "dutch",
 	Type = "noun",

@@ -128,6 +128,14 @@ DefineLanguageWord("Blômstr", { -- Source: August Fick and Alf Torp, "Wortschat
 	Gender = "neuter"
 })
 
+DefineLanguageWord("Blŷ", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 148.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Lead"}, -- source gives the German "Blei" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Blîva"},
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Bōk", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-norse",
 	Type = "noun",

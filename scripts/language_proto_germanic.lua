@@ -105,6 +105,13 @@ DefineLanguageWord("Berga", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Gender = "neuter"
 })
 
+DefineLanguageWord("Blîva", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 148.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Lead"}, -- source gives the German "Blei" as the meaning
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Blôma", { -- source also gives the alternative (masculine) form "Blôman"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 146.
 	Language = "proto-germanic",
 	Type = "noun",
@@ -399,7 +406,7 @@ DefineLanguageWord("Landa", { -- Source: August Fick and Alf Torp, "Wortschatz d
 DefineLanguageWord("Lauda", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 181.
 	Language = "proto-germanic",
 	Type = "noun",
-	Meanings = {"Metal", "Lead"},
+	Meanings = {"Metal", "Lead"}, -- source gives the German "Metall, Blei" as the meaning
 	Gender = "neuter",
 	Uncountable = true -- as a material, it is likely to be uncountable
 })

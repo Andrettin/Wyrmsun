@@ -73,6 +73,13 @@ DefineLanguageWord("Herth", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Lâd", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 181.
+	Language = "old-frisian",
+	Type = "noun",
+	Meanings = {"Lot"}, -- source gives the German "Loth" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Lauda"}
+})
+
 DefineLanguageWord("Lēra", { -- causative verb; Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 5.
 	Language = "old-frisian",
 	Type = "verb",

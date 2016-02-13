@@ -65,6 +65,17 @@ DefineLanguageWord("Bero", { -- source also gives the alternative form "Pero"; S
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Blîo", { -- source also gives the alternative form "Plîo"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 148.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Lead"}, -- source gives the German "Blei" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Blîva"},
+	Gender = "neuter",
+	NumberCaseInflections = {
+		"singular", "genitive", "Blîwes"
+	}
+})
+
 DefineLanguageWord("Bluomo", { -- source also gives the alternative form "Pluomo", and the (feminine) alternative form "Bluoma"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 146.
 	Language = "old-high-german",
 	Type = "noun",

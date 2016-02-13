@@ -98,6 +98,13 @@ DefineLanguageWord("Késara", { -- Source: Sean Crist, "An Analysis of *z loss i
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Lohá", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 181.
+	Language = "sanskrit",
+	Type = "noun",
+	Meanings = {"Copper", "Iron"}, -- source gives the German "Kupfer, Eisen" as the meaning
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Majjấ", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "sanskrit",
 	Type = "noun",

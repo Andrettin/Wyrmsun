@@ -60,6 +60,14 @@ DefineLanguageWord("Berc", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Blî", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 148.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Lead"}, -- source gives the German "Blei" as the meaning
+	DerivesFrom = {"old-high-german", "noun", "Blîo"},
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Bluome", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 146.
 	Language = "middle-high-german",
 	Type = "noun",
@@ -165,6 +173,14 @@ DefineLanguageWord("Lernen", { -- Source: Sean Crist, "An Analysis of *z loss in
 	Language = "middle-high-german",
 	Type = "verb",
 	Meanings = {"Learn"}
+})
+
+DefineLanguageWord("Lôt", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 181.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Pourable Metal", "Cast Metal Weight"}, -- source gives the German "gießbares Metall, gegossenes Metallgewicht" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Lauda"},
+	Gender = "neuter"
 })
 
 DefineLanguageWord("Marc", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.

@@ -150,12 +150,14 @@ DefineLanguageWord("Blei", {
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"Lead"},
+	DerivesFrom = {"middle-high-german", "noun", "Blî"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 148.
 	Gender = "neuter"
 })
 
 DefineLanguageWord("Bleiern", {
 	Language = "high-german",
 	Type = "adjective",
+	DerivesFrom = {"middle-high-german", "noun", "Blî"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 148.
 	Meanings = {"Lead"}
 })
 
@@ -766,6 +768,14 @@ DefineLanguageWord("Land", {
 	},
 	Gender = "neuter",
 	AffixNameTypes = {"compound", "suffix", "singular", "province"} -- example: "Burgenland"
+})
+
+DefineLanguageWord("Lot", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"Lot"},
+	DerivesFrom = {"middle-high-german", "noun", "Lôt"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 181.
+	Gender = "neuter"
 })
 
 DefineLanguageWord("Lothar", {

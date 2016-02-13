@@ -25,6 +25,14 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineLanguageWord("Blî", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 148.
+	Language = "middle-low-german",
+	Type = "noun",
+	Meanings = {"Lead"}, -- source gives the German "Blei" as the meaning
+	DerivesFrom = {"old-saxon", "noun", "Blî"},
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Blôsem", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 146.
 	Language = "middle-low-german",
 	Type = "noun",
@@ -48,6 +56,14 @@ DefineLanguageWord("Kên", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Meanings = {"Resinous Wood"}
 })
 
+DefineLanguageWord("Lôt", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 181.
+	Language = "middle-low-german",
+	Type = "noun",
+	Meanings = {"Lead", "Ball", "Lot"}, -- source gives the German "Blei, Kugel, ein gewisses Gewicht (Loth)" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Lauda"},
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Twern", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
 	Language = "middle-low-german",
 	Type = "noun",
@@ -63,5 +79,5 @@ DefineLanguageWord("Twernen", { -- Source: Sean Crist, "An Analysis of *z loss i
 DefineLanguageWord("Wêt", { -- source also gives the alternative form "Wêde"; Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 4.
 	Language = "middle-low-german",
 	Type = "noun",
-	Meanings = {"Woad"} -- 
+	Meanings = {"Woad"}
 })

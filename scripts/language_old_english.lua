@@ -408,6 +408,14 @@ DefineLanguageWord("Îsern", { -- source also gives the alternative form "Îsen"
 	Gender = "neuter"
 })
 
+DefineLanguageWord("Léad", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 181.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Lead", "Cauldron"}, -- source gives the German "Blei, Kessel" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Lauda"},
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Leoðurun", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 124.
 	Language = "old-english",
 	Type = "noun",

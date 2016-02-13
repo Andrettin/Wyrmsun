@@ -69,6 +69,13 @@ DefineLanguageWord("Jéras", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Meanings = {"Yearling Lamb"}
 })
 
+DefineLanguageWord("Liūdė", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 181.
+	Language = "lithuanian",
+	Type = "noun",
+	Meanings = {"Lead Lot"}, -- source gives the German "Bleiloth" as the meaning
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Pẽkus", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "lithuanian",
 	Type = "noun",
