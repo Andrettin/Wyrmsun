@@ -31,6 +31,12 @@ DefineLanguageWord("Aslà", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Meanings = {} -- source gives the German "der aus Lehm geschlagene Fußboden gehört wohl hierher" as the meaning
 })
 
+DefineLanguageWord("Ausztrìnis", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 12.
+	Language = "lithuanian",
+	Type = "noun",
+	Meanings = {"East Wind"} -- source gives the German "Ostwind" as the meaning
+})
+
 DefineLanguageWord("Bė́gu", { -- source also gives the alternative form "Bė́gti"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 133.
 	Language = "lithuanian",
 	Type = "verb", -- correct?
@@ -108,6 +114,23 @@ DefineLanguageWord("Spiáuju", { -- Source: Winfred P. Lehmann, "A Grammar of Pr
 	Language = "lithuanian",
 	Type = "verb",
 	Meanings = {"Spit"}
+})
+
+DefineLanguageWord("Vakaraĩ", { -- this is the plural; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 204.
+	Language = "lithuanian",
+	Type = "noun",
+	Meanings = {"West"}, -- source gives the German "West" as the meaning
+	DerivesFrom = {"proto-indo-european", "noun", "Vekero"},
+	NumberCaseInflections = {
+		"plural", "nominative", "Vakaraĩ"
+	}
+})
+
+DefineLanguageWord("Vãkaras", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 204.
+	Language = "lithuanian",
+	Type = "noun",
+	Meanings = {"Evening"}, -- source gives the German "Abend" as the meaning
+	DerivesFrom = {"proto-indo-european", "noun", "Vekero"}
 })
 
 DefineLanguageWord("Vienúolika", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.

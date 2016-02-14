@@ -28,12 +28,14 @@
 DefineFaction("Aedui Tribe", {
 	Civilization = "celt",
 	Type = "tribe",
+	Language = "gaulish",
 	Colors = {"green"}
 })
 
 DefineFaction("Arverni Tribe", {
 	Civilization = "celt",
 	Type = "tribe",
+	Language = "gaulish",
 	Colors = {"blue"}
 })
 
@@ -52,18 +54,21 @@ DefineFaction("Cotini Tribe", {
 DefineFaction("Helvetii Tribe", {
 	Civilization = "celt",
 	Type = "tribe",
+	Language = "gaulish",
 	Colors = {"violet"} -- another color, perhaps?
 })
 
 DefineFaction("Ligurian Tribe", {
 	Civilization = "celt", -- were they really Celts?
 	Type = "tribe",
+	Language = "gaulish",
 	Colors = {"green"}
 })
 
 DefineFaction("Menapii Tribe", {
 	Civilization = "celt",
 	Type = "tribe",
+	Language = "gaulish",
 	Colors = {"yellow"}
 })
 
@@ -88,12 +93,14 @@ DefineFaction("Scot Tribe", {
 DefineFaction("Sequani Tribe", {
 	Civilization = "celt",
 	Type = "tribe",
+	Language = "gaulish",
 	Colors = {"pink", "red"}
 })
 
 DefineFaction("Turone Tribe", {
 	Civilization = "celt",
 	Type = "tribe",
+	Language = "gaulish",
 	Colors = {"cyan"}
 })
 

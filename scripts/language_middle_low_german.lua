@@ -48,6 +48,13 @@ DefineLanguageWord("Darm", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	DerivesFrom = {"old-low-german", "noun", "Tharm"}
 })
 
+DefineLanguageWord("Sûd", { -- source also gives the alternative form "sûder"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.
+	Language = "middle-low-german",
+	Type = "adverb",
+	Meanings = {"Southward", "In the South"}, -- source gives the German "südwärts, im Süden" as the meaning
+	DerivesFrom = {"proto-germanic", "adverb", "Sunþa"}
+})
+
 DefineLanguageWord("Vorde", { -- source also gives the alternative form "Vort"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 120.
 	Language = "middle-low-german",
 	Type = "noun",

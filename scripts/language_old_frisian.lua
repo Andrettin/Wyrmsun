@@ -25,6 +25,13 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineLanguageWord("Âster", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 12.
+	Language = "old-frisian",
+	Type = "adverb",
+	Meanings = {},
+	DerivesFrom = {"proto-germanic", "adverb", "Austa"}
+})
+
 DefineLanguageWord("Berch", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
 	Language = "old-frisian",
 	Type = "noun",
@@ -52,7 +59,7 @@ DefineLanguageWord("Bregge", { -- source also gives the alternative form "Brigge
 DefineLanguageWord("Burch", { -- source gives "Bur(i)ch"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
 	Language = "old-frisian",
 	Type = "noun",
-	Meanings = {"Fortified Place", "City"}, -- source gives "befestigter Ort, Stadt" as the meaning
+	Meanings = {"Fortified Place", "City", "Town"}, -- source gives "befestigter Ort, Stadt" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Burg"},
 	Gender = "feminine"
 })
@@ -130,6 +137,27 @@ DefineLanguageWord("Nera", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Meanings = {"Nurture"}
 })
 
+DefineLanguageWord("North", { -- source also gives the alternative form "Nord"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 152.
+	Language = "old-frisian",
+	Type = "noun",
+	Meanings = {"North"}, -- source gives the German "Norden" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Nurþa"}
+})
+
+DefineLanguageWord("North", { -- source also gives the alternative form "Nord"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 152.
+	Language = "old-frisian",
+	Type = "adverb",
+	Meanings = {"Northward"}, -- source gives the German "nordwärts" as the meaning
+	DerivesFrom = {"proto-germanic", "adverb", "Nurþa"}
+})
+
+DefineLanguageWord("Norther", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 152.
+	Language = "old-frisian",
+	Type = "adjective",
+	Meanings = {},
+	DerivesFrom = {"proto-germanic", "adverb", "Nurþa"}
+})
+
 DefineLanguageWord("Ord", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
 	Language = "old-frisian",
 	Type = "noun",
@@ -151,6 +179,13 @@ DefineLanguageWord("Selover", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Gender = "neuter"
 })
 
+DefineLanguageWord("Sûth", { -- source also gives the alternative form "Sûther"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.
+	Language = "old-frisian",
+	Type = "adverb",
+	Meanings = {"Southward", "In the South"}, -- source gives the German "südwärts, im Süden" as the meaning
+	DerivesFrom = {"proto-germanic", "adverb", "Sunþa"}
+})
+
 DefineLanguageWord("Therm", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 97.
 	Language = "old-frisian",
 	Type = "noun",
@@ -169,6 +204,20 @@ DefineLanguageWord("Wêd", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Language = "old-frisian",
 	Type = "noun",
 	Meanings = {"Woad"}
+})
+
+DefineLanguageWord("West", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 204.
+	Language = "old-frisian",
+	Type = "noun",
+	Meanings = {"West"}, -- source gives the German "West" as the meaning
+	DerivesFrom = {"proto-germanic", "adverb", "Vesta"}
+})
+
+DefineLanguageWord("Wester", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 204.
+	Language = "old-frisian",
+	Type = "adverb",
+	Meanings = {"West"}, -- source gives the German "West" as the meaning
+	DerivesFrom = {"proto-germanic", "adverb", "Vesta"}
 })
 
 DefineLanguageWord("Wi", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 5.

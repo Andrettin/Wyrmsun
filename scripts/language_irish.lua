@@ -54,6 +54,13 @@ DefineLanguageWord("Búal", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	DerivesFrom = {"proto-indo-european", "verb", "Bheg"}
 })
 
+DefineLanguageWord("Fescor", { -- source also gives the alternative form "Ἑστέρα"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 204.
+	Language = "irish",
+	Type = "noun",
+	Meanings = {"Evening"}, -- source gives the German "Abend" as the meaning
+	DerivesFrom = {"proto-indo-european", "adverb", "Ve"}
+})
+
 DefineLanguageWord("Gas", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
 	Language = "irish",
 	Type = "noun",

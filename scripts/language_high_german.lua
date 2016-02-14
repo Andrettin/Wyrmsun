@@ -881,6 +881,22 @@ DefineLanguageWord("Mut", {
 	AffixNameTypes = {"compound", "suffix", "singular", "person"}
 })
 
+DefineLanguageWord("Nord", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"North"},
+	DerivesFrom = {"old-high-german", "noun", "Nord"}, -- seems sensible
+	Gender = "masculine"
+})
+
+DefineLanguageWord("Norden", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"North"},
+	DerivesFrom = {"old-high-german", "noun", "Nord"}, -- seems sensible
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Nuss", { -- Source: http://www.duden.de/rechtschreibung/Nuss
 	Language = "high-german",
 	Type = "noun",
@@ -905,10 +921,18 @@ DefineLanguageWord("Ort", {
 DefineLanguageWord("Ost", {
 	Language = "high-german",
 	Type = "noun",
-	Meanings = {"Ost"},
-	DerivesFrom = {"proto-germanic", "noun", "Austa"},
+	Meanings = {"East"},
+	DerivesFrom = {"middle-high-german", "noun", "Ôsten"}, -- correct? seems sensible
 	Gender = "masculine",
 	AffixNameTypes = {"compound", "prefix", "singular", "province"} -- example: "Ostmark"
+})
+
+DefineLanguageWord("Osten", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"East"},
+	DerivesFrom = {"middle-high-german", "noun", "Ôsten"},
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Otto", {
@@ -1080,7 +1104,7 @@ DefineLanguageWord("Spitze", {
 DefineLanguageWord("Stadt", {
 	Language = "high-german",
 	Type = "noun",
-	Meanings = {"City"},
+	Meanings = {"City", "Town"},
 	NumberCaseInflections = {
 		"plural", "nominative", "Städte"
 	},
@@ -1097,6 +1121,22 @@ DefineLanguageWord("Stuhl", {
 	},
 	Gender = "masculine"
 	-- Stuhlweissenburg uses as a prefix, but without being genitive?
+})
+
+DefineLanguageWord("Süd", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"South"},
+	DerivesFrom = {"middle-low-german", "adverb", "Sûd"}, -- High German "Süd" comes from the Low German, according to the source; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.
+	Gender = "masculine"
+})
+
+DefineLanguageWord("Süden", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"South"},
+	DerivesFrom = {"middle-low-german", "adverb", "Sûd"}, -- seems sensible, considering "Süd" comes the Low German
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Tal", {
@@ -1177,6 +1217,7 @@ DefineLanguageWord("West", {
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"West"},
+	DerivesFrom = {"old-high-german", "noun", "West"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 204.
 	Gender = "masculine",
 	AffixNameTypes = {"compound", "prefix", "singular", "province"} -- example: "Westphalien"
 })

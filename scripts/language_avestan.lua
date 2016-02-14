@@ -65,6 +65,12 @@ DefineLanguageWord("Spaetō", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	DerivesFrom = {"proto-indo-european", "adjective", "Ḱweyt"}
 })
 
+DefineLanguageWord("Ushaçtara", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 12.
+	Language = "avestan",
+	Type = "adverb",
+	Meanings = {"To The East Of"} -- source gives the German "östlich von" as the meaning
+})
+
 DefineLanguageWord("Yārə", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "avestan",
 	Type = "noun",

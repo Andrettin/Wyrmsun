@@ -84,7 +84,7 @@ DefineLanguageWord("Bruggia", { -- Source: August Fick and Alf Torp, "Wortschatz
 DefineLanguageWord("Burg", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
 	Language = "old-saxon",
 	Type = "noun",
-	Meanings = {"Fortified Place", "City"}, -- source gives "befestigter Ort, Stadt" as the meaning
+	Meanings = {"Fortified Place", "City", "Town"}, -- source gives "befestigter Ort, Stadt" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Burg"},
 	Gender = "feminine"
 })
@@ -209,6 +209,13 @@ DefineLanguageWord("Mī", { -- Source: Sean Crist, "An Analysis of *z loss in We
 	Dative = "Mī"
 })
 
+DefineLanguageWord("North", { -- source also gives the alternative form "Norđ"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 152.
+	Language = "old-saxon",
+	Type = "adverb",
+	Meanings = {"Northward"}, -- source gives the German "nordwärts" as the meaning
+	DerivesFrom = {"proto-germanic", "adverb", "Nurþa"}
+})
+
 DefineLanguageWord("Ord", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
 	Language = "old-saxon",
 	Type = "noun",
@@ -220,6 +227,20 @@ DefineLanguageWord("Orlag", { -- source also gives the alternative form "Orlagi"
 	Language = "old-saxon",
 	Type = "noun",
 	Meanings = {"Fate"}
+})
+
+DefineLanguageWord("Ôstan", { -- source gives "Ôstan(a)"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 12.
+	Language = "old-saxon",
+	Type = "adverb",
+	Meanings = {"From the East"}, -- source gives the German "von Osten her" as the meaning
+	DerivesFrom = {"proto-germanic", "adverb", "Austanô"}
+})
+
+DefineLanguageWord("Ôstar", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 12.
+	Language = "old-saxon",
+	Type = "adverb",
+	Meanings = {},
+	DerivesFrom = {"proto-germanic", "adverb", "Austa"}
 })
 
 DefineLanguageWord("Siluƀar", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 221.
@@ -234,6 +255,12 @@ DefineLanguageWord("Suht", { -- Source: Richard M. Runge, "The Phonetic Realizat
 	Language = "old-saxon",
 	Type = "noun",
 	Meanings = {"Sickness"}
+})
+
+DefineLanguageWord("Sûtharliuti", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.
+	Language = "old-saxon",
+	Type = "noun",
+	Meanings = {"Southern People"} -- source gives the German "Südleute" as the meaning
 })
 
 DefineLanguageWord("Thorp", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 100.
@@ -253,6 +280,13 @@ DefineLanguageWord("Wel", { -- Source: Richard M. Runge, "The Phonetic Realizati
 	Language = "old-saxon",
 	Type = "adverb",
 	Meanings = {"Well"}
+})
+
+DefineLanguageWord("Westar", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 204.
+	Language = "old-saxon",
+	Type = "adverb",
+	Meanings = {"West"}, -- source gives the German "West" as the meaning
+	DerivesFrom = {"proto-germanic", "adverb", "Vesta"}
 })
 
 DefineLanguageWord("Wī", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.

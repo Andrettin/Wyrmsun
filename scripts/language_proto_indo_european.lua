@@ -121,6 +121,18 @@ DefineLanguageWord("Swīnos", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Meanings = {"Pig"}
 })
 
+DefineLanguageWord("Ve", { -- source also gives the alternative form "Ves"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 204.
+	Language = "proto-indo-european",
+	Type = "adverb",
+	Meanings = {"Down", "From the Setting Sun"} -- source gives the German "hinab, von der untergehenden Sonne" as the meaning
+})
+
+DefineLanguageWord("Vekero", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 204.
+	Language = "proto-indo-european",
+	Type = "noun", -- correct?
+	Meanings = {}
+})
+
 DefineLanguageWord("Wiros", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
 	Language = "proto-indo-european",
 	Type = "noun",

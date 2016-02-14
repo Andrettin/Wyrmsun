@@ -108,7 +108,7 @@ DefineLanguageWord("Baírgahei", { -- Source: August Fick and Alf Torp, "Wortsch
 DefineLanguageWord("Baúrgs", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
 	Language = "gothic",
 	Type = "noun",
-	Meanings = {"City"}, -- source gives "Stadt" as the meaning
+	Meanings = {"City", "Town"}, -- source gives "Stadt" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Burg"},
 	Gender = "feminine"
 })

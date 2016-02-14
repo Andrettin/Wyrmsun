@@ -110,7 +110,7 @@ DefineLanguageWord("Buoh", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 DefineLanguageWord("Burg", { -- source also gives the alternative form "Purg"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
 	Language = "old-high-german",
 	Type = "noun",
-	Meanings = {"Fortified Place", "Castle", "Palace", "City"}, -- source gives "befestigter Ort, Burg, Schloß, Stadt" as the meaning
+	Meanings = {"Fortified Place", "Castle", "Palace", "City", "Town"}, -- source gives "befestigter Ort, Burg, Schloß, Stadt" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Burg"},
 	Gender = "feminine"
 })
@@ -386,6 +386,14 @@ DefineLanguageWord("Nara", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Gender = "feminine"
 })
 
+DefineLanguageWord("Nord", { -- source also gives the alternative form "Nort"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 152.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"North"}, -- source gives the German "Norden" as the meaning
+	DerivesFrom = {"proto-germanic", "adverb", "Nurþa"},
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Orlac", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 10.
 	Language = "old-high-german",
 	Type = "noun",
@@ -399,6 +407,35 @@ DefineLanguageWord("Ort", { -- Source: Sean Crist, "An Analysis of *z loss in We
 	Meanings = {"Point", "Corner", "Edge of a Part", "Edge of a Piece", "Edge of a Small Coin"},
 	DerivesFrom = {"proto-germanic", "noun", "Uzdaz"},
 	Gender = "masculine"
+})
+
+DefineLanguageWord("Ôstan", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 12.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"East"}, -- source gives the German "Osten" as the meaning
+	DerivesFrom = {"proto-germanic", "adverb", "Austanô"},
+	Gender = "masculine"
+})
+
+DefineLanguageWord("Ôstana", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 12.
+	Language = "old-high-german",
+	Type = "adverb",
+	Meanings = {"From the East", "In the East", "To the East"}, -- source gives the German "von Osten, im Osten, nach Osten" as the meaning
+	DerivesFrom = {"proto-germanic", "adverb", "Austanô"}
+})
+
+DefineLanguageWord("Ôstar", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 12.
+	Language = "old-high-german",
+	Type = "adjective",
+	Meanings = {},
+	DerivesFrom = {"proto-germanic", "adverb", "Austa"}
+})
+
+DefineLanguageWord("Ôstar", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 12.
+	Language = "old-high-german",
+	Type = "adverb",
+	Meanings = {},
+	DerivesFrom = {"proto-germanic", "adverb", "Austa"}
 })
 
 DefineLanguageWord("Ouga", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
@@ -474,6 +511,13 @@ DefineLanguageWord("Suht", { -- Source: Richard M. Runge, "The Phonetic Realizat
 	Meanings = {"Sickness"}
 })
 
+DefineLanguageWord("Sundar", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"South"}, -- source gives the German "Süden" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Sunþa"}
+})
+
 DefineLanguageWord("Sunno", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-high-german",
 	Type = "noun",
@@ -537,6 +581,13 @@ DefineLanguageWord("Wer", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-G
 	Type = "noun",
 	Meanings = {"Man"},
 	DerivesFrom = {"proto-indo-european", "noun", "Wiros"}
+})
+
+DefineLanguageWord("West", { -- source also gives the alternative form "Westar"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 204.
+	Language = "old-high-german",
+	Type = "noun", -- presumably, since it is listed next to the German masculine noun "West"
+	Meanings = {"West"}, -- source gives the German "West" as the meaning
+	DerivesFrom = {"proto-germanic", "adverb", "Vesta"}
 })
 
 DefineLanguageWord("Wī̆r", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.

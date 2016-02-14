@@ -102,7 +102,7 @@ DefineLanguageWord("Brücke", { -- source also gives the alternative form "Brüg
 DefineLanguageWord("Burc", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
 	Language = "middle-high-german",
 	Type = "noun",
-	Meanings = {"Fortified Place", "Castle", "Palace", "City"}, -- source gives "befestigter Ort, Burg, Schloß, Stadt" as the meaning
+	Meanings = {"Fortified Place", "Castle", "Palace", "City", "Town"}, -- source gives "befestigter Ort, Burg, Schloß, Stadt" as the meaning
 	DerivesFrom = {"old-high-german", "noun", "Burg"},
 	Gender = "feminine"
 })
@@ -233,6 +233,21 @@ DefineLanguageWord("Ort", { -- Source: Sean Crist, "An Analysis of *z loss in We
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Ôsten", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 12.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"East"}, -- source gives the German "Osten" as the meaning
+	DerivesFrom = {"old-high-german", "noun", "Ôstan"},
+	Gender = "masculine" -- can also be neuter
+})
+
+DefineLanguageWord("Ôsten", { -- source gives "Ôsten(e)"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 12.
+	Language = "middle-high-german",
+	Type = "adverb",
+	Meanings = {"From the East", "In the East", "To the East"}, -- source gives the German "von Osten, im Osten, nach Osten" as the meaning
+	DerivesFrom = {"old-high-german", "adverb", "Ôstana"}
+})
+
 DefineLanguageWord("Rünne", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
 	Language = "middle-high-german",
 	Type = "noun",
@@ -246,6 +261,13 @@ DefineLanguageWord("Silber", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Meanings = {"Silver"}, -- source gives the German "Silber" as the meaning
 	DerivesFrom = {"old-high-german", "noun", "Silabar"},
 	Gender = "neuter"
+})
+
+DefineLanguageWord("Sund", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"South"}, -- source gives the German "Süden" as the meaning
+	DerivesFrom = {"old-high-german", "noun", "Sundar"}
 })
 
 DefineLanguageWord("Viur", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 127.

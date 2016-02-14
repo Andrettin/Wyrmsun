@@ -27,6 +27,18 @@
 
 -- Proto-Germanic
 
+DefineLanguageWord("Aχtō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "proto-germanic",
+	Type = "numeral",
+	Number = 8
+})
+
+DefineLanguageWord("Af", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+	Language = "proto-germanic",
+	Type = "adposition",
+	Meanings = {"From"}
+})
+
 DefineLanguageWord("Aiza", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 11.
 	Language = "proto-germanic",
 	Type = "noun",
@@ -39,7 +51,10 @@ DefineLanguageWord("Ansu", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Type = "noun",
 	Meanings = {"God"},
 	Gender = "masculine",
-	AffixNameTypes = {"compound", "prefix", "singular", "settlement"} -- seems sensible in face of a lack of examples (cognate of the prefix in Asgard, and Asgard is the settlement in "Asia" in which Odin's people used to be center until they migrated to Scandinavia in the Ynglinga saga's story)
+	AffixNameTypes = {
+		"compound", "prefix", "singular", "province", -- cognate of the prefix in Asaland, and Asaland is the region in "Asia" in which Odin's people used to live until they migrated to Scandinavia in the Ynglinga saga's story
+		"compound", "prefix", "singular", "settlement" -- cognate of the prefix in Asgard, and Asgard is the settlement in "Asia" in which Odin's people used to live until they migrated to Scandinavia in the Ynglinga saga's story
+	}
 })
 
 DefineLanguageWord("Asjôn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 20.
@@ -59,10 +74,22 @@ DefineLanguageWord("Aþala", { -- Source: August Fick and Alf Torp, "Wortschatz 
 DefineLanguageWord("Austa", { -- source also gives the alternative form "Austra"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 12.
 	Language = "proto-germanic",
 	Type = "noun",
-	Meanings = {"East"}
+	Meanings = {"East"} -- source gives the German "Osten" as the meaning
 })
 
-DefineLanguageWord("Austrôn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 12.
+DefineLanguageWord("Austa", { -- source also gives the alternative form "Austra"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 12.
+	Language = "proto-germanic",
+	Type = "adverb",
+	Meanings = {"To the East"} -- source gives the German "nach Osten hin" as the meaning
+})
+
+DefineLanguageWord("Austanô", { -- source also gives the alternative form "Austra"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 12.
+	Language = "proto-germanic",
+	Type = "adverb",
+	Meanings = {"From the East"} -- source gives the German "von Osten her" as the meaning
+})
+
+DefineLanguageWord("Austrô", { -- source gives "Austrô(n)"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 12.
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"a Spring Goddess"},
@@ -172,7 +199,7 @@ DefineLanguageWord("Bruzdaz", { -- Source: Sean Crist, "An Analysis of *z loss i
 DefineLanguageWord("Burg", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
 	Language = "proto-germanic",
 	Type = "noun",
-	Meanings = {"Castle", "City"}, -- source gives "Burg, Stadt" as the meaning
+	Meanings = {"Castle", "City", "Town"}, -- source gives "Burg, Stadt" as the meaning
 	Gender = "feminine"
 })
 
@@ -276,7 +303,7 @@ DefineLanguageWord("Gárdiz", { -- Fick and Torp spell the word as "Garda"/"Gard
 	Meanings = {"Enclosure", "Court", "Garden"}, -- Fick and Torp give "Geheg, Hof, Garten" as the meaning; Lehmann gives the meaning as "Garden"
 	Gender = "masculine",
 	AffixNameTypes = {
-		"compound", "suffix", "singular", "province", -- seems sensible in face of a lack of examples, specially since is a cognate of the prefix in "Gardarike"
+		"compound", "prefix", "singular", "province", -- seems sensible in face of a lack of examples, specially since is a cognate of the prefix in "Gardarike"
 		"compound", "suffix", "singular", "settlement" -- seems sensible in face of a lack of examples (cognate of the suffix in Asgard, and Asgard is the settlement in "Asia" in which Odin's people used to be center until they migrated to Scandinavia in the Ynglinga saga's story)
 	}
 })
@@ -414,7 +441,8 @@ DefineLanguageWord("Landa", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Terra Firma", "Land", "Country"}, -- source gives the German words "terra firma, Land"
-	Gender = "neuter"
+	Gender = "neuter",
+	AffixNameTypes = {"compound", "suffix", "singular", "province"}, -- cognate of the suffix in Asaland, and Asaland is the region in "Asia" in which Odin's people used to live until they migrated to Scandinavia in the Ynglinga saga's story
 })
 
 DefineLanguageWord("Lauda", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 181.
@@ -469,6 +497,18 @@ DefineLanguageWord("Nemida", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Holy Pasture"} -- source gives (in German) "heiliger Weideplatz" as the meaning
+})
+
+DefineLanguageWord("Nurþa", { -- source also gives the alternative form "Nurþra"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 152.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"North"} -- source gives the German "Nord" as the meaning
+})
+
+DefineLanguageWord("Nurþa", { -- source also gives the alternative form "Nurþra"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 152.
+	Language = "proto-germanic",
+	Type = "adverb",
+	Meanings = {"North"} -- source gives the German "nördlich" as the meaning
 })
 
 DefineLanguageWord("Razdō", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 9.
@@ -578,6 +618,18 @@ DefineLanguageWord("Sunōn", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Meanings = {"Sun"}
 })
 
+DefineLanguageWord("Sunþa", { -- source also gives the alternative form "Sunþra"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"South"} -- source gives the German "Süd" as the meaning
+})
+
+DefineLanguageWord("Sunþa", { -- source also gives the alternative form "Sunþra"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.
+	Language = "proto-germanic",
+	Type = "adverb",
+	Meanings = {"Southward"} -- source gives the German "südwärts" as the meaning
+})
+
 DefineLanguageWord("Swīnaz", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "proto-germanic",
 	Type = "noun",
@@ -612,6 +664,12 @@ DefineLanguageWord("Þurpa", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Gender = "neuter"
 })
 
+DefineLanguageWord("Ufar", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+	Language = "proto-germanic",
+	Type = "adposition",
+	Meanings = {"Over"}
+})
+
 DefineLanguageWord("Uzdaz", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 7.
 	Language = "proto-germanic",
 	Type = "noun",
@@ -623,6 +681,13 @@ DefineLanguageWord("Uzlaga", { -- Source: Sean Crist, "An Analysis of *z loss in
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Fate"}
+})
+
+DefineLanguageWord("Vesta", { -- source also gives the alternative form "Vestra"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 204.
+	Language = "proto-germanic",
+	Type = "adverb",
+	Meanings = {"Westward"}, -- source gives the German "westwärts" as the meaning
+	DerivesFrom = {"proto-indo-european", "adverb", "Ve"}
 })
 
 DefineLanguageWord("Vîhsa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 206.
@@ -853,24 +918,6 @@ DefineLanguageWord("Maiz", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Language = "proto-germanic",
 	Type = "adverb",
 	Meanings = {"More"}
-})
-
-DefineLanguageWord("Af", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
-	Language = "proto-germanic",
-	Type = "adposition",
-	Meanings = {"From"}
-})
-
-DefineLanguageWord("Ufar", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
-	Language = "proto-germanic",
-	Type = "adposition",
-	Meanings = {"Over"}
-})
-
-DefineLanguageWord("Aχtō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
-	Language = "proto-germanic",
-	Type = "numeral",
-	Number = 8
 })
 
 -- Must re-check to see if actually correct

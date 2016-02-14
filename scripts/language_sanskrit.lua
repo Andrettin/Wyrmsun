@@ -32,6 +32,13 @@ DefineLanguageWord("Áśvas", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	DerivesFrom = {"proto-indo-european", "noun", "Éḱwos"}
 })
 
+DefineLanguageWord("Áva", { -- source also gives the alternative form "ávas-tâd"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 204.
+	Language = "sanskrit",
+	Type = "adverb", -- correct?
+	Meanings = {},
+	DerivesFrom = {"proto-indo-european", "adverb", "Ve"}
+})
+
 DefineLanguageWord("Bhalla", { -- source also gives the alternative form "Bhallaka"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
 	Language = "sanskrit",
 	Type = "noun",

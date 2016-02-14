@@ -94,6 +94,13 @@ DefineLanguageWord("Svins", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Meanings = {"of Pig"}
 })
 
+DefineLanguageWord("Večerŭ", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 204.
+	Language = "old-church-slavonic",
+	Type = "noun",
+	Meanings = {"Evening"}, -- source gives the German "Abend" as the meaning
+	DerivesFrom = {"proto-indo-european", "noun", "Vekero"}
+})
+
 DefineLanguageWord("Žrudŭ", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
 	Language = "old-church-slavonic",
 	Type = "noun",

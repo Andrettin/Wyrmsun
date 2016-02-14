@@ -28,6 +28,7 @@
 DefineFaction("Aestui Tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	Civilization = "slav", -- actually they were apparently Baltic (this needs to be confirmed), but let's make them Slavic to not have too many NPC civilizations in the game
 	Type = "tribe",
+	Language = "lithuanian",
 	Colors = {"green"}
 })
 
@@ -46,6 +47,7 @@ DefineFaction("Venedae Tribe", { -- Source: William R. Shepherd, "Historical Atl
 DefineFaction("Croatia", {
 	Civilization = "slav",
 	Type = "polity",
+	Language = "old-church-slavonic",
 	Colors = {"blue", "red"},
 	DefaultTier = "kingdom",
 	Titles = {
@@ -56,6 +58,7 @@ DefineFaction("Croatia", {
 DefineFaction("Muscovy", {
 	Civilization = "slav",
 	Type = "polity",
+	Language = "russian",
 	Colors = {"red"},
 	DefaultTier = "duchy",
 	Titles = {
@@ -76,6 +79,7 @@ DefineFaction("Poland", {
 DefineFaction("Russia", {
 	Civilization = "slav",
 	Type = "polity",
+	Language = "russian",
 	Colors = {"blue", "red"},
 	DefaultTier = "empire",
 	Titles = {

@@ -238,10 +238,33 @@ DefineLanguageWord("Ditch", {
 	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- example: "Redditch"; Source: "Philip's International School Atlas", 2006, p. 64.
 })
 
-DefineLanguageWord("Es", { -- archaic
+DefineLanguageWord("East", {
 	Language = "english",
 	Type = "noun",
 	Meanings = {"East"},
+	DerivesFrom = {"old-english", "noun", "Éaste"}, -- presumably? Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 12.
+	Gender = "neuter"
+})
+
+DefineLanguageWord("East", {
+	Language = "english",
+	Type = "adjective",
+	Meanings = {"East"},
+	DerivesFrom = {"old-english", "adjective", "Éasterra"} -- presumably? Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 12.
+})
+
+DefineLanguageWord("East", {
+	Language = "english",
+	Type = "adverb",
+	Meanings = {"East"},
+	DerivesFrom = {"old-english", "adverb", "Éast"} -- presumably? Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 12.
+})
+
+DefineLanguageWord("Es", { -- archaic
+	Language = "english",
+	Type = "noun", -- correct?
+	Meanings = {"East"},
+	DerivesFrom = {"old-english", "noun", "Éaste"}, -- presumably, since the English noun "East" is also set to derive from that word? Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 12.
 	Gender = "neuter",
 	AffixNameTypes = {"compound", "prefix", "singular", "province"} -- example: "Essex"
 })
@@ -571,10 +594,33 @@ DefineLanguageWord("Nor", { -- archaic
 	Type = "noun",
 	Meanings = {"North"},
 	Gender = "neuter",
+	DerivesFrom = {"old-english", "adverb", "Norþ"}, -- presumably, since the English word "North" also comes from that Old English word
 	AffixNameTypes = {
 		"compound", "prefix", "singular", "settlement", -- example: "Norwich"
 		"compound", "prefix", "singular", "province" -- example: "Norfolk"
 	}
+})
+
+DefineLanguageWord("North", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"North"},
+	DerivesFrom = {"old-english", "adverb", "Norþ"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 152.
+	Gender = "neuter"
+})
+
+DefineLanguageWord("North", {
+	Language = "english",
+	Type = "adjective",
+	Meanings = {"North"},
+	DerivesFrom = {"old-english", "adverb", "Norþ"} -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 152.
+})
+
+DefineLanguageWord("North", {
+	Language = "english",
+	Type = "adverb",
+	Meanings = {"North"},
+	DerivesFrom = {"old-english", "adverb", "Norþ"} -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 152.
 })
 
 DefineLanguageWord("Ox", {
@@ -759,6 +805,28 @@ DefineLanguageWord("Smoldering", {
 	AffixNameTypes = {"separate", "prefix", "singular", "unit-class-smithy"} -- seems sensible
 })
 
+DefineLanguageWord("South", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"South"},
+	DerivesFrom = {"old-english", "adverb", "Sûþ"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.
+	Gender = "neuter"
+})
+
+DefineLanguageWord("South", {
+	Language = "english",
+	Type = "adjective",
+	Meanings = {"South"},
+	DerivesFrom = {"old-english", "adverb", "Sûþ"} -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.
+})
+
+DefineLanguageWord("South", {
+	Language = "english",
+	Type = "adverb",
+	Meanings = {"South"},
+	DerivesFrom = {"old-english", "adverb", "Sûþ"} -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.
+})
+
 DefineLanguageWord("Staple", {
 	Language = "english",
 	Type = "noun",
@@ -790,6 +858,7 @@ DefineLanguageWord("Suf", { -- archaic
 	Language = "english",
 	Type = "noun",
 	Meanings = {"South"},
+	DerivesFrom = {"old-english", "adverb", "Sûþ"}, -- presumably, since the English word "South" comes from that Old English word
 	Gender = "neuter",
 	AffixNameTypes = {"compound", "prefix", "singular", "province"} -- example: "Suffolk"
 })
@@ -798,6 +867,7 @@ DefineLanguageWord("Sus", { -- archaic
 	Language = "english",
 	Type = "noun",
 	Meanings = {"South"},
+	DerivesFrom = {"old-english", "adverb", "Sûþ"}, -- presumably, since the English word "South" comes from that Old English word
 	Gender = "neuter",
 	AffixNameTypes = {"compound", "prefix", "singular", "province"} -- example: "Sussex"
 })
@@ -858,7 +928,30 @@ DefineLanguageWord("Wes", { -- archaic
 	Type = "noun",
 	Meanings = {"West"},
 	Gender = "neuter",
+	DerivesFrom = {"old-english", "adverb", "West"}, -- presumably, since the English word "West" comes from that Old English word
 	AffixNameTypes = {"compound", "prefix", "singular", "province"} -- example: "Wessex"
+})
+
+DefineLanguageWord("West", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"West"},
+	DerivesFrom = {"old-english", "adverb", "West"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 204.
+	Gender = "neuter"
+})
+
+DefineLanguageWord("West", {
+	Language = "english",
+	Type = "adjective",
+	Meanings = {"West"},
+	DerivesFrom = {"old-english", "adverb", "West"} -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 204.
+})
+
+DefineLanguageWord("West", {
+	Language = "english",
+	Type = "adverb",
+	Meanings = {"West"},
+	DerivesFrom = {"old-english", "adverb", "West"} -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 204.
 })
 
 DefineLanguageWord("Wich", {

@@ -143,7 +143,7 @@ DefineLanguageWord("Brycg", { -- Source: August Fick and Alf Torp, "Wortschatz d
 DefineLanguageWord("Burg", { -- source also gives the alternate form "Burh"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
 	Language = "old-english",
 	Type = "noun",
-	Meanings = {"Fortified Place", "City"}, -- source gives "befestigter Ort, Stadt" as the meaning
+	Meanings = {"Fortified Place", "City", "Town"}, -- source gives "befestigter Ort, Stadt" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Burg"},
 	NumberCaseInflections = {
 		"plural", "nominative", "Byrig"
@@ -197,6 +197,35 @@ DefineLanguageWord("Ealdorneru", { -- Source: Sean Crist, "An Analysis of *z los
 	Type = "noun",
 	Meanings = {"Saving of a Life"},
 	Gender = "feminine"
+})
+
+DefineLanguageWord("Éast", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 12.
+	Language = "old-english",
+	Type = "adverb",
+	Meanings = {},
+	DerivesFrom = {"proto-germanic", "adverb", "Austa"}
+})
+
+DefineLanguageWord("Éastan", { -- source gives "Éastan(e)"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 12.
+	Language = "old-english",
+	Type = "adverb",
+	Meanings = {"From the East"}, -- source gives the German "von Osten her" as the meaning
+	DerivesFrom = {"proto-germanic", "adverb", "Austanô"}
+})
+
+DefineLanguageWord("Éaste", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 12.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"East"},
+	DerivesFrom = {"proto-germanic", "noun", "Austa"},
+	Gender = "feminine"
+})
+
+DefineLanguageWord("Éasterra", { -- source also gives the alternative form "Éastra"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 12.
+	Language = "old-english",
+	Type = "adjective",
+	Meanings = {},
+	DerivesFrom = {"proto-germanic", "adverb", "Austa"}
 })
 
 DefineLanguageWord("Eoh", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
@@ -489,6 +518,13 @@ DefineLanguageWord("Neaht", { -- Source: Richard M. Runge, "The Phonetic Realiza
 	Meanings = {"Night"}
 })
 
+DefineLanguageWord("Norþ", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 152.
+	Language = "old-english",
+	Type = "adverb",
+	Meanings = {"Northward", "North"}, -- source gives the German "nordwärts, nördlich" as the meaning
+	DerivesFrom = {"proto-germanic", "adverb", "Nurþa"}
+})
+
 DefineLanguageWord("Ord", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.
 	Language = "old-english",
 	Type = "noun",
@@ -593,6 +629,13 @@ DefineLanguageWord("Sunna", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	DerivesFrom = {"proto-germanic", "noun", "Sunōn"}
 })
 
+DefineLanguageWord("Sûþ", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.
+	Language = "old-english",
+	Type = "adverb",
+	Meanings = {"Southward", "In the South"}, -- source gives the German "südwärts, im Süden" as the meaning
+	DerivesFrom = {"proto-germanic", "adverb", "Sunþa"}
+})
+
 DefineLanguageWord("Swæger", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
 	Language = "old-english",
 	Type = "noun",
@@ -671,6 +714,13 @@ DefineLanguageWord("Wer", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-G
 	Type = "noun",
 	Meanings = {"Man"},
 	DerivesFrom = {"proto-indo-european", "noun", "Wiros"}
+})
+
+DefineLanguageWord("West", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 204.
+	Language = "old-english",
+	Type = "adverb",
+	Meanings = {"West"}, -- source gives the German "West" as the meaning
+	DerivesFrom = {"proto-germanic", "adverb", "Vesta"}
 })
 
 DefineLanguageWord("Wif", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 85.

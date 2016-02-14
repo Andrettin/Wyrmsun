@@ -1634,7 +1634,8 @@ function LoadProvinces(world)
 			Name = "Gotaland",
 			CulturalNames = {
 				GothTribe = "Gothland",
-				goth = "Gothland"
+				goth = "Gothland",
+				norse = "Gotaland"
 			},
 			Tiles = {
 --				{128, 21}, {128, 22}, {129, 21}, {129, 22}, {129, 23}, {130, 22}, {130, 23}, {131, 22}, {131, 23}, -- old map
@@ -2019,7 +2020,8 @@ function LoadProvinces(world)
 			CulturalNames = {
 				goth = "Reidgothland", -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
 				teuton = "Jutland",
-				JuteTribe = "Jutland"
+				JuteTribe = "Jutland",
+				norse = "Jutland"
 			},
 			Tiles = {
 --				{126, 23}, {126, 24}, {126, 25}, {127, 25}, -- old map
@@ -3378,6 +3380,9 @@ function LoadProvinces(world)
 				{531, 84}, {531, 85}, {531, 86}, {531, 87},
 				{532, 85}, {532, 86},
 				{533, 85}
+			},
+			CulturalNames = {
+				norse = "Sweden"
 			},
 			SettlementName = "Sigtun",
 			CulturalSettlementNames = {

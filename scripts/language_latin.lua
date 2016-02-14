@@ -56,6 +56,12 @@ DefineLanguageWord("Âra", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Meanings = {"Altar"} -- source gives the German "Altar" as the meaning
 })
 
+DefineLanguageWord("Auster", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 12.
+	Language = "latin",
+	Type = "noun",
+	Meanings = {"South Wind"} -- source gives the German "Südwind" as the meaning
+})
+
 DefineLanguageWord("Caesaries", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 7.
 	Language = "latin",
 	Type = "noun",
@@ -327,6 +333,13 @@ DefineLanguageWord("Verus", { -- Source: Alaric Hall, "The Meanings of Elf and E
 	Language = "latin",
 	Type = "adjective",
 	Meanings = {"True", "Real"}
+})
+
+DefineLanguageWord("Vesper", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 204.
+	Language = "latin",
+	Type = "noun",
+	Meanings = {"Evening"}, -- source gives the German "Abend" as the meaning
+	DerivesFrom = {"proto-indo-european", "adverb", "Ve"}
 })
 
 DefineLanguageWord("Vir", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.

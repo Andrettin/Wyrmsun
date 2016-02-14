@@ -138,6 +138,13 @@ DefineLanguageWord("Érā", { -- this is the genitive; Source: Winfred P. Lehman
 	}
 })
 
+DefineLanguageWord("Ἔσπερος", { -- source also gives the alternative form "Ἑστέρα"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 204.
+	Language = "greek",
+	Type = "noun",
+	Meanings = {"Evening"}, -- source gives the German "Abend" as the meaning
+	DerivesFrom = {"proto-indo-european", "adverb", "Ve"}
+})
+
 DefineLanguageWord("Hépomai", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 	Language = "greek",
 	Type = "verb",
@@ -207,6 +214,12 @@ DefineLanguageWord("Némō", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Type = "verb",
 	Meanings = {"Distribute"},
 	DerivesFrom = {"proto-indo-european", "verb", "Nem"}
+})
+
+DefineLanguageWord("Νέρτερος", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 152.
+	Language = "greek",
+	Type = "noun",
+	Meanings = {"The Lower"} -- source gives the German "der untere" as the meaning
 })
 
 DefineLanguageWord("Nuktós", { -- this is the genitive; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
