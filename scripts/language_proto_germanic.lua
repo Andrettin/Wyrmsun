@@ -350,6 +350,13 @@ DefineLanguageWord("Gred", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	DerivesFrom = {"proto-indo-european", "noun", "Ghredh"}
 })
 
+DefineLanguageWord("Gulþa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 73.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Gold"}, -- source gives the German "Gold" as the meaning
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Haima", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 52.
 	Language = "proto-germanic",
 	Type = "noun",

@@ -449,13 +449,15 @@ DefineLanguageWord("Gold", {
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"Gold"},
+	DerivesFrom = {"middle-high-german", "noun", "Golt"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 73.
 	Gender = "neuter"
 })
 
 DefineLanguageWord("Golden", {
 	Language = "high-german",
 	Type = "adjective",
-	Meanings = {"Golden"}
+	Meanings = {"Golden"},
+	DerivesFrom = {"middle-high-german", "noun", "Golt"} -- presumably, since the corresponding noun derives from that word
 })
 
 DefineLanguageWord("Gott", {
@@ -495,7 +497,7 @@ DefineLanguageWord("Hagen", { -- Source: http://www.duden.de/rechtschreibung/Hag
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {}, -- personal name
-	-- source also gives the alternative form "Hagens" for the accusative
+	-- source also gives the alternative form "Hagens" for the genitive
 	Gender = "masculine",
 	NameTypes = {"person"}
 })

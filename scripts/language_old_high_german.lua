@@ -253,6 +253,13 @@ DefineLanguageWord("Gisiht", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	DerivesFrom = {"proto-indo-european", "verb", "Sekʷ"}
 })
 
+DefineLanguageWord("Gold", { -- source also gives the alternative form "Cold"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 73.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Gold"}, -- source gives the German "Gold" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Gulþa"}
+})
+
 DefineLanguageWord("Hagazussa", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 200.
 	Language = "old-high-german",
 	Type = "noun",

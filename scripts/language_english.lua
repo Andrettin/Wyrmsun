@@ -362,6 +362,7 @@ DefineLanguageWord("Gold", {
 	Language = "english",
 	Type = "noun",
 	Meanings = {"Gold"},
+	DerivesFrom = {"old-english", "noun", "Gold"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 73.
 	Gender = "neuter",
 	Uncountable = true
 })
@@ -370,6 +371,7 @@ DefineLanguageWord("Golden", {
 	Language = "english",
 	Type = "adjective",
 	Meanings = {"Golden"},
+	DerivesFrom = {"old-english", "noun", "Gold"}, -- seems sensible, since the corresponding noun derives from that word
 	AffixNameTypes = {"separate", "prefix", "singular", "unit-class-smithy"} -- seems sensible
 })
 

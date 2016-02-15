@@ -335,6 +335,13 @@ DefineLanguageWord("God", { -- Source: Alaric Hall, "The Meanings of Elf and Elv
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Gold", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 73.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Gold"}, -- source gives the German "Gold" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Gulþa"}
+})
+
 DefineLanguageWord("Gyden", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 89.
 	Language = "old-english",
 	Type = "noun",

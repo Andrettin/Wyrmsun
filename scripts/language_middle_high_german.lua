@@ -140,16 +140,27 @@ DefineLanguageWord("Gart", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Meanings = {"Prickle", "Stick for Driving Animals"},
 	Gender = "masculine"
 })
-			
+
+DefineLanguageWord("Golt", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 73.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Gold"}, -- source gives the German "Gold" as the meaning
+	DerivesFrom = {"old-high-german", "noun", "Gold"},
+	Gender = "neuter",
+	NumberCaseInflections = {
+		"singular", "genitive", "Goldes"
+	},
+})
+
 DefineLanguageWord("Hert", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 46.
 	Language = "middle-high-german",
 	Type = "noun",
 	Meanings = {"Stove"}, -- source gives "Herd" as the meaning
 	DerivesFrom = {"old-high-german", "noun", "Herd"},
+	Gender = "masculine",
 	NumberCaseInflections = {
 		"singular", "genitive", "Herdes"
-	},
-	Gender = "masculine"
+	}
 })
 
 DefineLanguageWord("Hort", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.

@@ -98,6 +98,13 @@ DefineLanguageWord("Gardhas", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	DerivesFrom = {"proto-indo-european", "noun", "Ghredh"}
 })
 
+DefineLanguageWord("Hâṭaka", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 73.
+	Language = "sanskrit",
+	Type = "noun",
+	Meanings = {"Gold"}, -- source gives the German "Gold" as the meaning
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Késara", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 7.
 	Language = "sanskrit",
 	Type = "noun",

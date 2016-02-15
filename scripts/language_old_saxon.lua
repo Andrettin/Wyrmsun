@@ -125,6 +125,13 @@ DefineLanguageWord("Gard", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	DerivesFrom = {"proto-germanic", "noun", "Gazdaz"}
 })
 
+DefineLanguageWord("Gold", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 73.
+	Language = "old-saxon",
+	Type = "noun",
+	Meanings = {"Gold"}, -- source gives the German "Gold" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Gulþa"}
+})
+
 DefineLanguageWord("Herta", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
 	Language = "old-saxon",
 	Type = "noun",

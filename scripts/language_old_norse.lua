@@ -360,6 +360,14 @@ DefineLanguageWord("Grenna", { -- Source: Sean Crist, "An Analysis of *z loss in
 	Meanings = {"Feed"}
 })
 
+DefineLanguageWord("Gull", { -- source also gives the alternative form "goll"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 73.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Gold"}, -- source gives the German "Gold" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Gulþa"},
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Haddr", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 3, 8.
 	Language = "old-norse",
 	Type = "noun",

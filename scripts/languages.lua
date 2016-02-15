@@ -142,6 +142,10 @@ DefineLanguage("latin", {
 	}
 })
 
+DefineLanguage("latvian", {
+	Name = "Latvian"
+})
+
 DefineLanguage("lithuanian", {
 	Name = "Lithuanian"
 })
@@ -278,6 +282,7 @@ DefineLanguage("west-germanic", {
 Load("scripts/language_proto_indo_european.lua")
 Load("scripts/language_armenian.lua")
 Load("scripts/language_avestan.lua")
+Load("scripts/language_latvian.lua")
 Load("scripts/language_lithuanian.lua")
 Load("scripts/language_greek.lua")
 Load("scripts/language_old_prussian.lua")

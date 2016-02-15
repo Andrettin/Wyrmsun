@@ -223,6 +223,14 @@ DefineLanguageWord("Gazds", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Gulþ", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 73.
+	Language = "gothic",
+	Type = "noun",
+	Meanings = {"Gold"}, -- source gives the German "Gold" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Gulþa"},
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Hairto", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 3, Subsection 1.
 	Language = "gothic",
 	Type = "noun",
