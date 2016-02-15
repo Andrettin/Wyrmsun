@@ -3805,6 +3805,8 @@ function GetUnitTypeInterfaceState(unit_type)
 	if (string.find(unit_type, "upgrade-") == nil) then
 		if (GetUnitTypeData(unit_type, "Class") == "infantry") then
 			return "barracks"
+		elseif (GetUnitTypeData(unit_type, "Class") == "spearman") then
+			return "barracks"
 		elseif (GetUnitTypeData(unit_type, "Class") == "shooter") then
 			return "barracks"
 		elseif (GetUnitTypeData(unit_type, "Class") == "cavalry") then
@@ -3845,6 +3847,10 @@ function GetUnitTypeRequiredBuildings(unit_type)
 	local required_buildings = {}
 	if (string.find(unit_type, "upgrade-") == nil) then
 		if (GetUnitTypeData(unit_type, "Class") == "infantry") then
+			if (GetCivilizationClassUnitType("barracks", GetUnitTypeData(unit_type, "Civilization")) ~= nil) then
+				table.insert(required_buildings, GetCivilizationClassUnitType("barracks", GetUnitTypeData(unit_type, "Civilization")))
+			end
+		elseif (GetUnitTypeData(unit_type, "Class") == "spearman") then
 			if (GetCivilizationClassUnitType("barracks", GetUnitTypeData(unit_type, "Civilization")) ~= nil) then
 				table.insert(required_buildings, GetCivilizationClassUnitType("barracks", GetUnitTypeData(unit_type, "Civilization")))
 			end

@@ -826,8 +826,8 @@ local NidavellirEvents = {
 				RunMap("maps/nidavellir/svafnirs-lair.smp")
 				GrandStrategyEventMap = false
 
-				RestoreScenarioUnitsToProvince({ProvinceName = "Caverns of Chaincolt", FactionName = "Norlund Clan", Heroes = {"Rugnur", "Baglur", "Thursagan"}, IgnoredUnitClasses = {"infantry", "shooter"}})
-				RestoreScenarioUnitsToProvince({ProvinceName = "Southern Tunnels", FactionName = "Shinsplitter Clan", IgnoredUnitClasses = {"infantry", "shooter"}})
+				RestoreScenarioUnitsToProvince({ProvinceName = "Caverns of Chaincolt", FactionName = "Norlund Clan", Heroes = {"Rugnur", "Baglur", "Thursagan"}, IgnoredUnitClasses = {"infantry", "spearman", "shooter"}})
+				RestoreScenarioUnitsToProvince({ProvinceName = "Southern Tunnels", FactionName = "Shinsplitter Clan", IgnoredUnitClasses = {"infantry", "spearman", "shooter"}})
 				if (GameResult == GameVictory) then
 					ChangeFactionResource("dwarf", "Norlund Clan", "coal", -20000) -- Scepter of Fire crafted
 					GrandStrategyEvent(Factions.NorlundClan, GrandStrategyEvents.CavernsOfFlame)
@@ -872,8 +872,8 @@ local NidavellirEvents = {
 				RunMap("maps/nidavellir/svafnirs-lair.smp")
 				GrandStrategyEventMap = false
 
-				RestoreScenarioUnitsToProvince({ProvinceName = "Caverns of Chaincolt", FactionName = "Norlund Clan", Heroes = {"Rugnur", "Baglur", "Thursagan"}, IgnoredUnitClasses = {"infantry", "shooter"}})
-				RestoreScenarioUnitsToProvince({ProvinceName = "Southern Tunnels", FactionName = "Shinsplitter Clan", IgnoredUnitClasses = {"infantry", "shooter"}})
+				RestoreScenarioUnitsToProvince({ProvinceName = "Caverns of Chaincolt", FactionName = "Norlund Clan", Heroes = {"Rugnur", "Baglur", "Thursagan"}, IgnoredUnitClasses = {"infantry", "spearman", "shooter"}})
+				RestoreScenarioUnitsToProvince({ProvinceName = "Southern Tunnels", FactionName = "Shinsplitter Clan", IgnoredUnitClasses = {"infantry", "spearman", "shooter"}})
 				
 				if (GameResult ~= GameVictory and GetProvinceHero("Caverns of Chaincolt", "Rugnur") == 2 and GetProvinceHero("Caverns of Chaincolt", "Baglur") == 2 and GetProvinceHero("Caverns of Chaincolt", "Thursagan") == 2) then
 					ChangeFactionResource("dwarf", "Norlund Clan", "coal", -20000) -- Scepter of Fire crafted

@@ -217,6 +217,7 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 DefineUnitType("unit-germanic-spearman", { Name = _("Spearman"),
 	Parent = "unit-template-spearman",
 	Civilization = "germanic",
+	Class = "", -- because the unit is not ready for being playable
 --	Description = _("Germanic tribes are known for their fierceness in combat, and these sword-wielding warriors act accordingly."),
 	Quote = _("\"Soon grew up | the sons of Jarl, / Beasts they tamed, | and bucklers rounded, / Shafts they fashioned, | and spears they shook.\" - Rigsthula"),
 --	Background = _("\"Erala\" is the Proto-Germanic word for \"warrior\"."),

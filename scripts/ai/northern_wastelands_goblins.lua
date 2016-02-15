@@ -30,7 +30,7 @@
 function AiNorthernWastelandsGoblins()
 	local loop_funcs = {
 		function()
-			AiForce(1, {GetAiUnitType("infantry"), 1}, true)
+			AiForce(1, {GetAiUnitType("spearman"), 1}, true)
 			if not AiCheckForce(1) then AiForce(1, {GetAiUnitType("shooter"), 1}, true) end
 			return AiDifficultySleep(4500)
 		end,
@@ -38,7 +38,7 @@ function AiNorthernWastelandsGoblins()
       
 		function()
 			AiForce(1, {GetAiUnitType("shooter"), 1}, true)
-			if not AiCheckForce(1) then AiForce(1, {GetAiUnitType("infantry"), 1}, true) end
+			if not AiCheckForce(1) then AiForce(1, {GetAiUnitType("spearman"), 1}, true) end
 			return AiDifficultySleep(4500)
 		end,
 		function() return AiAttackWithForce(1) end,

@@ -154,6 +154,9 @@ function RunTechTreeMenu(civilization_number)
 					tech_icon_x = 5
 					tech_icon_y = 1
 				elseif (GetUnitTypeData(unitName, "Class") == "infantry") then
+					tech_icon_x = 3
+					tech_icon_y = 3
+				elseif (GetUnitTypeData(unitName, "Class") == "spearman") then
 					tech_icon_x = 4
 					tech_icon_y = 3
 				elseif (GetUnitTypeData(unitName, "Class") == "shooter") then
@@ -164,7 +167,7 @@ function RunTechTreeMenu(civilization_number)
 					end
 				elseif (GetUnitTypeData(unitName, "Class") == "cavalry") then
 					tech_icon_x = 0
-					tech_icon_y = 3
+					tech_icon_y = 4
 					if ((GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("stables", civilization)) == false and GetTechnologyPointCost(civilization, GetCivilizationClassUnitType("stables", civilization)) > 0) or (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("smithy", civilization)) == false and GetTechnologyPointCost(civilization, GetCivilizationClassUnitType("smithy", civilization)) > 0)) then
 						tech_allowed = false
 					end
@@ -209,11 +212,11 @@ function RunTechTreeMenu(civilization_number)
 					tech_icon_x = 7
 					tech_icon_y = 2
 				elseif (GetUnitTypeData(unitName, "Class") == "smithy") then
-					tech_icon_x = 3
+					tech_icon_x = 1
 					tech_icon_y = 2
 				elseif (GetUnitTypeData(unitName, "Class") == "stables") then
 					tech_icon_x = 0
-					tech_icon_y = 2
+					tech_icon_y = 3
 					if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("lumber-mill", civilization)) == false and GetTechnologyPointCost(civilization, GetCivilizationClassUnitType("lumber-mill", civilization)) > 0) then
 						tech_allowed = false
 					end
@@ -246,25 +249,25 @@ function RunTechTreeMenu(civilization_number)
 				local tech_allowed = true
 				if (CUpgrade:Get(unitName).Class == "melee-weapon-1") then
 					tech_icon_x = 3
-					tech_icon_y = 3
+					tech_icon_y = 4
 					if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("smithy", civilization)) == false and GetTechnologyPointCost(civilization, GetCivilizationClassUnitType("smithy", civilization)) > 0) then
 						tech_allowed = false
 					end
 				elseif (CUpgrade:Get(unitName).Class == "melee-weapon-2") then
 					tech_icon_x = 3
-					tech_icon_y = 4
+					tech_icon_y = 5
 					if not (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("melee-weapon-1", civilization))) then
 						tech_allowed = false
 					end
 				elseif (CUpgrade:Get(unitName).Class == "bronze-shield") then
 					tech_icon_x = 2
-					tech_icon_y = 3
+					tech_icon_y = 4
 					if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("smithy", civilization)) == false and GetTechnologyPointCost(civilization, GetCivilizationClassUnitType("smithy", civilization)) > 0) then
 						tech_allowed = false
 					end
 				elseif (CUpgrade:Get(unitName).Class == "iron-shield") then
 					tech_icon_x = 2
-					tech_icon_y = 4
+					tech_icon_y = 5
 					if not (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("bronze-shield", civilization))) then
 						tech_allowed = false
 					end
