@@ -57,6 +57,13 @@ DefineLanguageWord("Ford", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Gletta", { -- vernacular; weak verb; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 81.
+	Language = "norwegian",
+	Type = "verb",
+	Meanings = {"Peek"}, -- source gives the German "gucken" as the meaning
+	DerivesFrom = {"old-norse", "verb", "Glotta"} -- presumably?
+})
+
 DefineLanguageWord("Torp", { -- vernacular; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 100.
 	Language = "norwegian",
 	Type = "noun",

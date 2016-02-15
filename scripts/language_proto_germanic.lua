@@ -330,6 +330,12 @@ DefineLanguageWord("Gazdaz", { -- Source: Sean Crist, "An Analysis of *z loss in
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Glent", { -- source also gives the alternative forms "glentan" and "glant"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 81.
+	Language = "proto-germanic",
+	Type = "verb",
+	Meanings = {"Glance", "Shine"} -- source gives the German "blicken, glänzen" as the meaning
+})
+
 DefineLanguageWord("Glôdi", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 82.
 	Language = "proto-germanic",
 	Type = "noun",
@@ -348,6 +354,14 @@ DefineLanguageWord("Gred", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Type = "adjective",
 	Meanings = {},
 	DerivesFrom = {"proto-indo-european", "noun", "Ghredh"}
+})
+
+DefineLanguageWord("Guda", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"God"}, -- source gives the German "Gott" as the meaning
+	DerivesFrom = {"proto-indo-european", "verb", "Ĝhutó"},
+	Gender = "masculine" -- can also be neuter
 })
 
 DefineLanguageWord("Gulþa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 73.

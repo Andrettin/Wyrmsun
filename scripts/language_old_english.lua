@@ -332,7 +332,11 @@ DefineLanguageWord("God", { -- Source: Alaric Hall, "The Meanings of Elf and Elv
 	Language = "old-english",
 	Type = "noun",
 	Meanings = {"God"},
-	Gender = "masculine"
+	DerivesFrom = {"proto-germanic", "noun", "Guda"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.
+	Gender = "masculine",
+	NumberCaseInflections = {
+		"plural", "nominative", "Godas" -- Fick also gives the alternative form "Godu"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.
+	}
 })
 
 DefineLanguageWord("Gold", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 73.

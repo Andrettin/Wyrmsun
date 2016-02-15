@@ -25,6 +25,13 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineLanguageWord("Glenten", { -- weak verb; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 81.
+	Language = "middle-english",
+	Type = "verb",
+	Meanings = {"Seem", "Glance"}, -- source gives the German "scheinen, blicken" as the meaning
+	DerivesFrom = {"proto-germanic", "verb", "Glent"}
+})
+
 DefineLanguageWord("Sliper", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 103.
 	Language = "middle-english",
 	Type = "adjective",

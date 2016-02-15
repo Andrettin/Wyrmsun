@@ -348,6 +348,13 @@ DefineLanguageWord("Garđr", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	DerivesFrom = {"proto-germanic", "noun", "Gárdiz"}
 })
 
+DefineLanguageWord("Glotta", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 81.
+	Language = "old-norse",
+	Type = "verb",
+	Meanings = {"Laugh with Scorn", "Show the Teeth"}, -- source gives the German "hohnlachen (die Zähne zeigen)" as the meaning
+	DerivesFrom = {"proto-germanic", "verb", "Glent"}
+})
+
 DefineLanguageWord("Greddir", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 10.
 	Language = "old-norse",
 	Type = "noun",
@@ -358,6 +365,22 @@ DefineLanguageWord("Grenna", { -- Source: Sean Crist, "An Analysis of *z loss in
 	Language = "old-norse",
 	Type = "verb",
 	Meanings = {"Feed"}
+})
+
+DefineLanguageWord("Guđ", { -- source also gives the alternative form "Gođ"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"God"}, -- source gives the German "Gott" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Guda"},
+	Gender = "neuter"
+})
+
+DefineLanguageWord("Guđ", { -- source also gives the alternative form "Gođ"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"The Christian God"}, -- source gives the German "der christliche Gott" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Guda"},
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Gull", { -- source also gives the alternative form "goll"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 73.

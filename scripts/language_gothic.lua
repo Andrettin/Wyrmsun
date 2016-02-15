@@ -231,6 +231,17 @@ DefineLanguageWord("Gulþ", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Gender = "neuter"
 })
 
+DefineLanguageWord("Guþ", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.
+	Language = "gothic",
+	Type = "noun",
+	Meanings = {"God"}, -- source gives the German "Gott" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Guda"},
+	Gender = "masculine",
+	NumberCaseInflections = {
+		"plural", "nominative", "Guda"
+	}
+})
+
 DefineLanguageWord("Hairto", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 3, Subsection 1.
 	Language = "gothic",
 	Type = "noun",

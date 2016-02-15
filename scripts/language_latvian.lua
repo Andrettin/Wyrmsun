@@ -25,6 +25,13 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineLanguageWord("Savēt", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.
+	Language = "latvian",
+	Type = "verb",
+	Meanings = {"Work Magic"}, -- source gives the German "zaubern" as the meaning
+	DerivesFrom = {"proto-indo-european", "verb", "Ĝhutó"}
+})
+
 DefineLanguageWord("Solts", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 73.
 	Language = "latvian",
 	Type = "noun",

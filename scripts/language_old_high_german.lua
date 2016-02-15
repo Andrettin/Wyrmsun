@@ -253,11 +253,25 @@ DefineLanguageWord("Gisiht", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	DerivesFrom = {"proto-indo-european", "verb", "Sekʷ"}
 })
 
+DefineLanguageWord("Glanz", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 81.
+	Language = "old-high-german",
+	Type = "adjective",
+	Meanings = {"Bright", "Shining"}, -- source gives the German "hell, glänzend" as the meaning
+	DerivesFrom = {"proto-germanic", "verb", "Glent"}
+})
+
 DefineLanguageWord("Gold", { -- source also gives the alternative form "Cold"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 73.
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Gold"}, -- source gives the German "Gold" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Gulþa"}
+})
+
+DefineLanguageWord("Got", { -- source also gives the alternative form "Cot"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"God"}, -- source gives the German "Gott" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Guda"}
 })
 
 DefineLanguageWord("Hagazussa", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 200.

@@ -76,3 +76,10 @@ DefineLanguageWord("Yārə", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Type = "noun",
 	Meanings = {"Year"}
 })
+
+DefineLanguageWord("Zavaiti", { -- this is the past; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.
+	Language = "avestan",
+	Type = "verb",
+	Meanings = {"Align"}, -- source gives the German "flucht" as the meaning
+	DerivesFrom = {"proto-indo-european", "verb", "Ĝhutó"}
+})

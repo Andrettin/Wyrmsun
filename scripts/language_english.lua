@@ -351,11 +351,22 @@ DefineLanguageWord("Gauntlet", {
 	Language = "english",
 	Type = "noun",
 	Meanings = {"Gauntlet"},
+	Gender = "neuter",
 	NumberCaseInflections = {
 		"plural", "nominative", "Gauntlets"
 	},
-	Gender = "neuter",
 	AffixNameTypes = {"separate", "suffix", "singular", "unit-class-smithy"} -- seems sensible
+})
+
+DefineLanguageWord("God", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"God"},
+	DerivesFrom = {"old-english", "noun", "God"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.
+	Gender = "masculine",
+	NumberCaseInflections = {
+		"plural", "nominative", "Gods"
+	}
 })
 
 DefineLanguageWord("Gold", {
@@ -896,7 +907,7 @@ DefineLanguageWord("The", {
 DefineLanguageWord("Tor", {
 	Language = "english",
 	Type = "noun",
-	Meanings = {}, -- maybe comes from the name of the corresponding Anglo-Saxon God to Thor?
+	Meanings = {},
 --	Gender = "neuter",
 	AffixNameTypes = {"compound", "prefix", "singular", "settlement"} -- example: "Torbay"; Source: "Philip's International School Atlas", 2006, p. 64.
 })

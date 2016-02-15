@@ -64,6 +64,13 @@ DefineLanguageWord("Burch", { -- source gives "Bur(i)ch"; Source: August Fick an
 	Gender = "feminine"
 })
 
+DefineLanguageWord("God", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.
+	Language = "old-frisian",
+	Type = "noun",
+	Meanings = {"God"}, -- source gives the German "Gott" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Guda"}
+})
+
 DefineLanguageWord("Gold", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 73.
 	Language = "old-frisian",
 	Type = "noun",

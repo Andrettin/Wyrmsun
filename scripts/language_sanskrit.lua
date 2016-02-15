@@ -105,6 +105,13 @@ DefineLanguageWord("Hâṭaka", { -- Source: August Fick and Alf Torp, "Wortscha
 	Gender = "neuter"
 })
 
+DefineLanguageWord("Hávate", { -- this is (apparently) the past; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.
+	Language = "sanskrit",
+	Type = "verb",
+	Meanings = {"Called"}, -- source gives the German "ruft" as the meaning
+	DerivesFrom = {"proto-indo-european", "verb", "Ĝhutó"}
+})
+
 DefineLanguageWord("Késara", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 7.
 	Language = "sanskrit",
 	Type = "noun",
@@ -156,6 +163,13 @@ DefineLanguageWord("Páśu", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Language = "sanskrit",
 	Type = "noun",
 	Meanings = {}
+})
+
+DefineLanguageWord("Puruhûta", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.
+	Language = "sanskrit",
+	Type = "adjective",
+	Meanings = {"Much-Called"}, -- source gives the German "viel angerufen (Beiname des Indra)" as the meaning
+	DerivesFrom = {"proto-indo-european", "verb", "Ĝhutó"}
 })
 
 DefineLanguageWord("Pū́tis", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.

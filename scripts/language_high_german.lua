@@ -439,6 +439,7 @@ DefineLanguageWord("Glänzend", {
 	Language = "high-german",
 	Type = "adjective",
 	Meanings = {"Shining"},
+	DerivesFrom = {"middle-high-german", "adjective", "Glanz"}, -- presumably
 	ComparisonDegreeInflections = {
 		"comparative", "Glänzender",
 		"superlative", "Glänzendsten"
@@ -464,6 +465,7 @@ DefineLanguageWord("Gott", {
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"God"},
+	DerivesFrom = {"middle-high-german", "noun", "Got"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.
 	Gender = "masculine",
 	AffixNameTypes = {"compound", "prefix", "singular", "person"} -- example: "Gottfried"
 })

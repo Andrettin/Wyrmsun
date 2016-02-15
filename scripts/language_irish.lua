@@ -31,6 +31,12 @@ DefineLanguageWord("Árus", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Meanings = {"Dwelling"}
 })
 
+DefineLanguageWord("Atgleinn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 81.
+	Language = "irish",
+	Type = "verb",
+	Meanings = {"Show"} -- source gives the Latin (?) "demonstrat" as the meaning
+})
+
 DefineLanguageWord("Bri", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
 	Language = "irish",
 	Type = "noun",
@@ -78,6 +84,12 @@ DefineLanguageWord("Gius", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Language = "irish",
 	Type = "noun",
 	Meanings = {"Fir", "Spruce"}
+})
+
+DefineLanguageWord("Glése", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 81.
+	Language = "irish",
+	Type = "noun",
+	Meanings = {"Shine"} -- source gives the German "Glanz" as the meaning
 })
 
 DefineLanguageWord("Íarn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 24.

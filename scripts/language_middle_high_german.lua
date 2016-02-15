@@ -141,6 +141,36 @@ DefineLanguageWord("Gart", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Glanst", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 81.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Shine"}, -- source gives the German "Glanz" as the meaning
+	DerivesFrom = {"old-high-german", "adjective", "Glanz"},
+	Gender = "masculine"
+})
+
+DefineLanguageWord("Glanz", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 81.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Shine", "Glow"}, -- source gives the German "Glanz, Schimmer" as the meaning
+	DerivesFrom = {"old-high-german", "adjective", "Glanz"},
+	Gender = "masculine"
+})
+
+DefineLanguageWord("Glanz", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 81.
+	Language = "middle-high-german",
+	Type = "adjective",
+	Meanings = {"Bright", "Shining"}, -- source gives the German "hell, glänzend" as the meaning
+	DerivesFrom = {"old-high-german", "adjective", "Glanz"}
+})
+
+DefineLanguageWord("Glinzen", { -- strong verb; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 81.
+	Language = "middle-high-german",
+	Type = "verb",
+	Meanings = {"Shine"}, -- source gives the German "glänzen" as the meaning
+	DerivesFrom = {"proto-germanic", "verb", "Glent"}
+})
+
 DefineLanguageWord("Golt", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 73.
 	Language = "middle-high-german",
 	Type = "noun",
@@ -150,6 +180,13 @@ DefineLanguageWord("Golt", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	NumberCaseInflections = {
 		"singular", "genitive", "Goldes"
 	},
+})
+
+DefineLanguageWord("Got", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"God"}, -- source gives the German "Gott" as the meaning
+	DerivesFrom = {"old-high-german", "noun", "Got"}
 })
 
 DefineLanguageWord("Hert", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 46.

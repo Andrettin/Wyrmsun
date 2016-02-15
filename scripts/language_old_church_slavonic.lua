@@ -51,6 +51,12 @@ DefineLanguageWord("Brŭvĭ", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Meanings = {"Brow"} -- source gives the German "Braue" as the meaning
 })
 
+DefineLanguageWord("Ględěti", { -- source also gives the alternative form "ględati"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 81.
+	Language = "old-church-slavonic",
+	Type = "verb",
+	Meanings = {"Look"} -- source gives the German "schauen" as the meaning
+})
+
 DefineLanguageWord("Kosa", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
 	Language = "old-church-slavonic",
 	Type = "noun",
@@ -99,6 +105,13 @@ DefineLanguageWord("Večerŭ", { -- Source: August Fick and Alf Torp, "Wortschat
 	Type = "noun",
 	Meanings = {"Evening"}, -- source gives the German "Abend" as the meaning
 	DerivesFrom = {"proto-indo-european", "noun", "Vekero"}
+})
+
+DefineLanguageWord("Zovą", { -- source also gives the alternative form "zvati"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.
+	Language = "old-church-slavonic",
+	Type = "verb",
+	Meanings = {"Call"}, -- source gives the German "rufen" as the meaning
+	DerivesFrom = {"proto-indo-european", "verb", "Ĝhutó"}
 })
 
 DefineLanguageWord("Žrudŭ", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
