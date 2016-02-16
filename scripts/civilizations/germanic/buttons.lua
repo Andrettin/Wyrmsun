@@ -10,7 +10,7 @@
 --
 --      buttons.ccl - Define the unit-buttons of the germanic civilization.
 --
---      (c) Copyright 2014 by Andrettin
+--      (c) Copyright 2014-2016 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -45,6 +45,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-germanic-short-sword",
 		"unit-teuton-worker",
 		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-frank-swordsman", "unit-teuton-ritter", "unit-frank-horseman",
 --		"unit-teuton-kogge",
+		"unit-goblin-swordsman",
 		"germanic-group", "teuton-group"
 	}
 })
@@ -71,6 +72,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-germanic-wooden-oblong-shield",
 		"unit-teuton-archer", "unit-teuton-ritter", "unit-frank-horseman",
 		"unit-teuton-catapult",
 		"unit-teuton-kogge",
+		"unit-goblin-swordsman",
 		"germanic-group", "teuton-group"
 	}
 })
@@ -124,6 +126,7 @@ DefineButton( { Pos = 5, Level = 0, Icon = "icon-germanic-stand-ground",
 	"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-frank-swordsman", "unit-teuton-spearman", "unit-frank-spearman",
 	"unit-teuton-archer", "unit-teuton-ritter", "unit-frank-horseman",
 	"unit-teuton-catapult",
+	"unit-goblin-swordsman",
 	"germanic-group", "teuton-group"
 } } )
 

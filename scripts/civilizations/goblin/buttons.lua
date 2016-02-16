@@ -143,34 +143,46 @@ DefineButton( { Pos = 16, Level = 1, Icon = "icon-cancel",
 -- Buildings Commands ---------------------------------------------------------
 
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-goblin-worker",
-  Action = "train-unit", Value = "unit-goblin-worker",
-  Key = "w", Hint = _("Train ~!Worker"), Popup = "popup-unit",
-  ForUnit = {"unit-goblin-town-hall"} } )
+	Action = "train-unit", Value = "unit-goblin-worker",
+	Key = "w", Hint = _("Train ~!Worker"), Popup = "popup-unit",
+	ForUnit = {"unit-goblin-town-hall"}
+} )
 
-DefineButton( { Pos = 1, Level = 0, Icon = "icon-goblin-spearman",
-  Action = "train-unit", Value = "unit-goblin-spearman",
-  Key = "i", Hint = _("Train ~!Impaler"), Popup = "popup-unit",
-  ForUnit = {"unit-goblin-mess-hall"} } )
+DefineButton( { Pos = 1, Level = 0, Icon = "icon-greebo",
+	Action = "train-unit", Value = "unit-goblin-swordsman",
+	Key = "s", Hint = _("Train ~!Swordsman"), Popup = "popup-unit",
+	ForUnit = {"unit-goblin-mess-hall"}
+} )
 
-DefineButton( { Pos = 2, Level = 0, Icon = "icon-goblin-archer",
-  Action = "train-unit", Value = "unit-goblin-archer",
-  Key = "a", Hint = _("Train ~!Archer"), Popup = "popup-unit",
-  ForUnit = {"unit-goblin-mess-hall"} } )
+DefineButton( { Pos = 2, Level = 0, Icon = "icon-goblin-spearman",
+	Action = "train-unit", Value = "unit-goblin-spearman",
+	Key = "i", Hint = _("Train ~!Impaler"), Popup = "popup-unit",
+	ForUnit = {"unit-goblin-mess-hall"}
+} )
 
-DefineButton( { Pos = 3, Level = 0, Icon = "icon-goblin-war-machine",
-  Action = "train-unit", Value = "unit-goblin-war-machine",
-  Key = "m", Hint = _("Build War ~!Machine"), Popup = "popup-unit",
-  ForUnit = {"unit-goblin-mess-hall"} } )
+DefineButton( { Pos = 3, Level = 0, Icon = "icon-goblin-archer",
+	Action = "train-unit", Value = "unit-goblin-archer",
+	Key = "a", Hint = _("Train ~!Archer"), Popup = "popup-unit",
+	ForUnit = {"unit-goblin-mess-hall"}
+} )
 
-DefineButton( { Pos = 4, Level = 0, Icon = "icon-goblin-glider",
-  Action = "train-unit", Value = "unit-goblin-glider",
-  Key = "g", Hint = _("Build ~!Glider"), Popup = "popup-unit",
-  ForUnit = {"unit-goblin-mess-hall"} } )
+DefineButton( { Pos = 4, Level = 0, Icon = "icon-goblin-war-machine",
+	Action = "train-unit", Value = "unit-goblin-war-machine",
+	Key = "m", Hint = _("Build War ~!Machine"), Popup = "popup-unit",
+	ForUnit = {"unit-goblin-mess-hall"}
+} )
+
+DefineButton( { Pos = 5, Level = 0, Icon = "icon-goblin-glider",
+	Action = "train-unit", Value = "unit-goblin-glider",
+	Key = "g", Hint = _("Build ~!Glider"), Popup = "popup-unit",
+	ForUnit = {"unit-goblin-mess-hall"}
+} )
 
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-goblin-thief",
-  Action = "train-unit", Value = "unit-goblin-thief",
-  Key = "t", Hint = _("Hire Goblin ~!Thief"), Popup = "popup-unit",
-  ForUnit = {"unit-mercenary-camp"} } )
+	Action = "train-unit", Value = "unit-goblin-thief",
+	Key = "t", Hint = _("Hire Goblin ~!Thief"), Popup = "popup-unit",
+	ForUnit = {"unit-mercenary-camp"}
+} )
 
 -- Researches ---------------------------------------------------------
 

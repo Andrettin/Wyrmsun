@@ -124,22 +124,47 @@ DefineUnitType("unit-goblin-thief", { Name = _("Thief"),
 	}
 } )
 
-DefineUnitType("unit-goblin-spearman", { Name = _("Impaler"),
+DefineUnitType("unit-goblin-swordsman", { Name = _("Swordsman"),
 	Parent = "unit-template-infantry",
 	Civilization = "goblin",
-	Image = {"file", "goblin/units/goblin_spearman.png", "size", {72, 72}},
-	Description = _("Due to their small size, the goblin infantry soldiers use the spear as their weapon of choice, as with it they can target their enemies' vital points, relying less on their lackluster strength."),
-	Animations = "animations-goblin-spearman", Icon = "icon-goblin-spearman",
-	Costs = {"time", 50, "gold", 500, "lumber", 50},
+	Image = {"file", "goblin/units/goblin_swordsman.png", "size", {72, 72}},
+	Description = _("Goblin swordsmen are amongst the most savage of their kind. With weapons in hand, they gleefully hack through their enemies' flesh."),
+	Animations = "animations-goblin-swordsman", Icon = "icon-greebo",
+	Costs = {"time", 50},
 	HitPoints = 50,
-	BasicDamage = 6, -- reduced damage, since it has a bonus against mounted units
 	Accuracy = 12,
 	Evasion = 12,
-	BonusAgainstMounted = 100,
 	DaySightRangeBonus = -1,
 	NightSightRangeBonus = 1,
-	WeaponClasses = {"spear"},
-	PierceDamage = true,
+	WeaponClasses = {"sword", "thrusting-sword"},
+	HackDamage = true,
+	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	DropAffixes = {"upgrade-item-prefix-penetrating", "upgrade-item-prefix-vicious", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-the-snigill", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-trickery"}, -- allow more magic enchantments than normal to compensate for the unit not being able to upgrade
+	Corpse = "unit-goblin-dead-body",
+	Sounds = {
+		"selected", "basic-goblin-voices-selected-group",
+		"acknowledge", "basic-goblin-voices-acknowledge",
+		"attack", "basic-goblin-voices-attack",
+--		"ready", "goblin-impaler-ready",
+		"help", "basic-goblin-voices-help",
+		"dead", "basic-goblin-voices-dead",
+		"hit", "sword-attack",
+		"miss", "attack-miss"
+	}
+} )
+
+DefineUnitType("unit-goblin-spearman", { Name = _("Impaler"),
+	Parent = "unit-template-spearman",
+	Civilization = "goblin",
+	Image = {"file", "goblin/units/goblin_spearman.png", "size", {72, 72}},
+	Description = _("The spear is a common weapon of choice amongst goblins. It is easy to manufacture, and the spear's length helps keeping larger foes at bay."),
+	Animations = "animations-goblin-spearman", Icon = "icon-goblin-spearman",
+	Costs = {"time", 40},
+	HitPoints = 50,
+	Accuracy = 12,
+	Evasion = 12,
+	DaySightRangeBonus = -1,
+	NightSightRangeBonus = 1,
 	AiDrops = {"unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	DropAffixes = {"upgrade-item-prefix-penetrating", "upgrade-item-prefix-vicious", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-the-snigill", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-trickery"}, -- allow more magic enchantments than normal to compensate for the unit not being able to upgrade
 	Corpse = "unit-goblin-dead-body",
@@ -149,9 +174,7 @@ DefineUnitType("unit-goblin-spearman", { Name = _("Impaler"),
 		"attack", "basic-goblin-voices-attack",
 		"ready", "goblin-impaler-ready",
 		"help", "basic-goblin-voices-help",
-		"dead", "basic-goblin-voices-dead",
-		"hit", "spear-attack",
-		"miss", "spear-miss"
+		"dead", "basic-goblin-voices-dead"
 	}
 } )
 

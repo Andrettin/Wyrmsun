@@ -88,6 +88,7 @@ editor_types = {
 --- - - - - - - - - - - - - - - - - - -
 
 	"unit-goblin-worker",
+	"unit-goblin-swordsman",
 	"unit-goblin-spearman",
 	"unit-goblin-archer",
 	"unit-goblin-thief",

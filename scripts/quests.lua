@@ -334,7 +334,7 @@ DefineQuest("The Wyrm", {
 })
 
 DefineQuest("Caverns of Flame", {
-	Icon = "icon-goblin-spearman",
+	Icon = "icon-greebo",
 	Description = "Rugnur and his companions reach deep into the Caverns of Flame, where they find an ancient dwarven mechanism which may just allow them to prevent the Shinsplitters from getting their hands on the Scepter.\n\nMap: Caverns of Flame",
 	RequiredQuest = "The Wyrm",
 	World = "Nidavellir",

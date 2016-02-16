@@ -5661,15 +5661,19 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 							Count = Count - 1
 						end
 					elseif (hostile_dungeon_player_civilization == "goblin") then
-						if (RandomNumber < 33) then
+						if (RandomNumber < 25) then
 							unit = OldCreateUnit("unit-goblin-spearman", 2, {RandomX, RandomY})
 							SetUnitVariable(unit, "Active", false)
 							Count = Count - 1
-						elseif (RandomNumber >= 33 and RandomNumber < 66) then
+						elseif (RandomNumber >= 25 and RandomNumber < 50) then
+							unit = OldCreateUnit("unit-goblin-swordsman", 2, {RandomX, RandomY})
+							SetUnitVariable(unit, "Active", false)
+							Count = Count - 1
+						elseif (RandomNumber >= 50 and RandomNumber < 75) then
 							unit = OldCreateUnit("unit-goblin-archer", 2, {RandomX, RandomY})
 							SetUnitVariable(unit, "Active", false)
 							Count = Count - 1
-						elseif (RandomNumber >= 66) then
+						elseif (RandomNumber >= 75) then
 							unit = OldCreateUnit("unit-goblin-thief", 2, {RandomX, RandomY})
 							SetUnitVariable(unit, "Active", false)
 							unit = OldCreateUnit("unit-goblin-thief", 2, {RandomX, RandomY})
