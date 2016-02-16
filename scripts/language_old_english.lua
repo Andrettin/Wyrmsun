@@ -31,6 +31,17 @@ DefineLanguageWord("Adl", { -- Source: Alaric Hall, "The Meanings of Elf and Elv
 	Meanings = {"Illness"}
 })
 
+DefineLanguageWord("Ælf", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 20.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Elf"}, -- source gives the German "Alf, Elf" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Alba"},
+	Gender = "masculine",
+	NumberCaseInflections = {
+		"plural", "nominative", "Ielfe"
+	}
+})
+
 DefineLanguageWord("Ærn", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "old-english",
 	Type = "noun",

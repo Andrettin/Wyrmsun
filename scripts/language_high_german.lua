@@ -37,6 +37,29 @@ DefineLanguageWord("Adel", {
 	AffixNameTypes = {"compound", "prefix", "singular", "settlement"} -- example: "Adelsberg"
 })
 
+DefineLanguageWord("Alp", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"Elf"},
+	DerivesFrom = {"middle-high-german", "noun", "Alp"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 20.
+	Gender = "masculine",
+	NumberCaseInflections = {
+		"singular", "genitive", "Alps", -- there is also the alternative form "Alpes"
+		"plural", "nominative", "Alpe"
+	},
+	AffixNameTypes = {"compound", "prefix", "singular", "person"} -- example: "Alphart"
+})
+
+DefineLanguageWord("Alpdrücken", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"Nightmare"},
+	Gender = "neuter",
+	NumberCaseInflections = {
+		"singular", "genitive", "Albdrückens"
+	}
+})
+
 DefineLanguageWord("Amboss", {
 	Language = "high-german",
 	Type = "noun",
@@ -493,6 +516,28 @@ DefineLanguageWord("Hacken", {
 	},
 	Gender = "masculine",
 	AffixNameTypes = {"compound", "prefix", "singular", "terrain-hills"} -- example: "Hackenberg"
+})
+
+DefineLanguageWord("Hacken", {
+	Language = "high-german",
+	Type = "verb",
+	Meanings = {"Chop"},
+	NumberPersonTenseMoodInflections = {
+		"singular", "first-person", "present", "indicative", "Hacke",
+		"singular", "second-person", "present", "indicative", "Hackst",
+		"singular", "third-person", "present", "indicative", "Hackt",
+		"plural", "second-person", "present", "indicative", "Hackt",
+		"singular", "first-person", "past", "indicative", "Hackte",
+		"singular", "second-person", "past", "indicative", "Hacktest",
+		"singular", "third-person", "past", "indicative", "Hackte",
+		"plural", "first-person", "past", "indicative", "Hackten",
+		"plural", "second-person", "past", "indicative", "Hacktet",
+		"plural", "third-person", "past", "indicative", "Hackten"
+	},
+	Participles = {
+		"present", "Hackend",
+		"past", "Gehackt"
+	}
 })
 
 DefineLanguageWord("Hagen", { -- Source: http://www.duden.de/rechtschreibung/Hagen
@@ -1241,29 +1286,7 @@ DefineLanguageWord("Wolf", {
 		"plural", "nominative", "Wölfe"
 	},
 	Gender = "masculine",
-	AffixNameTypes = {"compound", "prefix", "singular", "person"}
-})
-
-DefineLanguageWord("Hacken", {
-	Language = "high-german",
-	Type = "verb",
-	Meanings = {"Chop"},
-	NumberPersonTenseMoodInflections = {
-		"singular", "first-person", "present", "indicative", "Hacke",
-		"singular", "second-person", "present", "indicative", "Hackst",
-		"singular", "third-person", "present", "indicative", "Hackt",
-		"plural", "second-person", "present", "indicative", "Hackt",
-		"singular", "first-person", "past", "indicative", "Hackte",
-		"singular", "second-person", "past", "indicative", "Hacktest",
-		"singular", "third-person", "past", "indicative", "Hackte",
-		"plural", "first-person", "past", "indicative", "Hackten",
-		"plural", "second-person", "past", "indicative", "Hacktet",
-		"plural", "third-person", "past", "indicative", "Hackten"
-	},
-	Participles = {
-		"present", "Hackend",
-		"past", "Gehackt"
-	}
+	AffixNameTypes = {"compound", "prefix", "singular", "person"} -- examples: "Wolfgang", "Wolfhart"
 })
 
 DefineLanguageWord("Alt", {

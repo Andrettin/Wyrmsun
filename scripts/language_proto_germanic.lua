@@ -46,6 +46,12 @@ DefineLanguageWord("Aiza", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Gender = "neuter"
 })
 
+DefineLanguageWord("Alba", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 20.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Elf"} -- source gives the German "Alb, Elf" as the meaning
+})
+
 DefineLanguageWord("Ansu", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 16.
 	Language = "proto-germanic",
 	Type = "noun",

@@ -25,6 +25,13 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineLanguageWord("Alf", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 20.
+	Language = "middle-low-german",
+	Type = "noun",
+	Meanings = {"Evil Spirit", "Incubus"}, -- source gives the German "böser Geist, incubus" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Alba"}
+})
+
 DefineLanguageWord("Blî", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 148.
 	Language = "middle-low-german",
 	Type = "noun",

@@ -73,6 +73,17 @@ DefineLanguageWord("Aldrnari", { -- Compound of the words "Aldr" and "Nari", lit
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Alfr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 20.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Elf"}, -- source gives the German "Alf, Elf" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Alba"},
+	Gender = "masculine",
+	NumberCaseInflections = {
+		"plural", "nominative", "Alfar"
+	}
+})
+
 DefineLanguageWord("Ār", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-norse",
 	Type = "noun",

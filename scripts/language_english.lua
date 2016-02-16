@@ -29,6 +29,7 @@ DefineLanguageWord("Alf", { -- archaic
 	Language = "english",
 	Type = "noun",
 	Meanings = {"Elf"},
+	DerivesFrom = {"old-english", "noun", "Ælf"}, -- seems sensible
 	Gender = "masculine",
 	NameTypes = {"person"},
 	AffixNameTypes = {"compound", "prefix", "singular", "person"} -- example: "Alfred"
@@ -258,6 +259,17 @@ DefineLanguageWord("East", {
 	Type = "adverb",
 	Meanings = {"East"},
 	DerivesFrom = {"old-english", "adverb", "Éast"} -- presumably? Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 12.
+})
+
+DefineLanguageWord("Elf", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Elf"},
+	DerivesFrom = {"old-english", "noun", "Ælf"}, -- seems sensible
+	Gender = "masculine",
+	NumberCaseInflections = {
+		"plural", "nominative", "Elves"
+	}
 })
 
 DefineLanguageWord("Es", { -- archaic

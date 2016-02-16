@@ -178,6 +178,18 @@ DefineLanguageWord("Pū́tis", { -- Source: Winfred P. Lehmann, "A Grammar of Pr
 	Meanings = {"Foul"}
 })
 
+DefineLanguageWord("Ṛbhú", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 20.
+	Language = "sanskrit",
+	Type = "noun",
+	Meanings = {"Artist"} -- source gives the German "Künstler" as the meaning
+})
+
+DefineLanguageWord("Ṛbhú", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 20.
+	Language = "sanskrit",
+	Type = "adjective",
+	Meanings = {"Skilled"} -- source gives the German "geschickt" as the meaning
+})
+
 DefineLanguageWord("Saptá", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
 	Language = "sanskrit",
 	Type = "numeral",

@@ -33,6 +33,17 @@ DefineLanguageWord("Adel", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Alp", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 20.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Elf"}, -- apparently?
+	DerivesFrom = {"proto-germanic", "noun", "Alba"},
+	Gender = "masculine", -- can also be neuter
+	NumberCaseInflections = {
+		"plural", "nominative", "Elbe" -- source also gives the alternative form "Elber"
+	}
+})
+
 DefineLanguageWord("Bach", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 133.
 	Language = "middle-high-german",
 	Type = "noun",
