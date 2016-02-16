@@ -74,7 +74,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added many new component words for Germanic settlement, province and smithy name generation.
 
 * Factions
-- Added support for factions using a different language than their civilizations.
+- Added support for factions using a different language than their civilizations (for name generation).
 - The England and Scotland factions now use English for proper name generation (for units, settlements, provinces and smithies).
 
 * Grand Strategy
