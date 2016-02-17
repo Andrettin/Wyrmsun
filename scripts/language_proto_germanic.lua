@@ -565,19 +565,19 @@ DefineLanguageWord("Reupôn", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Meanings = {"Ptarmigan"} -- source gives meaning as "Schneehuhn (tetrao lagopus)"
 })
 
-DefineLanguageWord("Ristila", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 176.
-	Language = "proto-germanic",
-	Type = "noun",
-	Meanings = {"Plowshare"}, -- source gives meaning as "Sech, Pflugeisen"
-	Gender = "masculine"
-})
-
 DefineLanguageWord("Rîkia", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Power", "Dominion", "Realm"}, -- source gives meaning as "Macht, Herrschaft, Reich"
 	Gender = "neuter",
 	AffixNameTypes = {"compound", "suffix", "singular", "province"} -- seems sensible in face of a lack of examples, specially since it is the etymological origin of the suffix in "Gardarike"
+})
+
+DefineLanguageWord("Ristila", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 176.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Plowshare"}, -- source gives meaning as "Sech, Pflugeisen"
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Rîþa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.

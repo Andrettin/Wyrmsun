@@ -70,8 +70,9 @@ https://github.com/Andrettin/Wyrmsun
 * Buildings
 - Improved Teuton smithy name generation.
 
-* Civilization
+* Civilizations
 - Added many new component words for Germanic settlement, province and smithy name generation.
+- Names for smithies, provinces and settlements are now generated for Goblins.
 
 * Factions
 - Added support for factions using a different language than their civilizations (for name generation).

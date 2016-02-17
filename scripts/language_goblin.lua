@@ -53,11 +53,11 @@ DefineLanguageWord("Erdog", {
 	NameTypes = {"person"}
 })
 
-DefineLanguageWord("Fal Khag", {
+DefineLanguageWord("Fal", { -- from Wesnoth
 	Language = "goblin",
 	Type = "noun",
 	Meanings = {},
-	NameTypes = {"person"}
+	NameTypes = {"person"} -- example: "Fal Khag" (from Wesnoth)
 })
 
 DefineLanguageWord("Gashnok", {
@@ -151,6 +151,12 @@ DefineLanguageWord("Kartrog", {
 	NameTypes = {"person"}
 })
 
+DefineLanguageWord("Khag", { -- from Wesnoth, appears in Fal Khag's name
+	Language = "goblin",
+	Type = "noun",
+	Meanings = {}
+})
+
 DefineLanguageWord("Kret", { -- from Mike Anderson's Tyrant
 	Language = "goblin",
 	Type = "noun",
@@ -177,6 +183,12 @@ DefineLanguageWord("Lig", { -- from Mike Anderson's Tyrant
 	Type = "noun",
 	Meanings = {},
 	AffixNameTypes = {"compound", "suffix", "singular", "person"}
+})
+
+DefineLanguageWord("Lggi", { -- from Wesnoth, appears in T'shar Lggi's name
+	Language = "goblin",
+	Type = "noun",
+	Meanings = {}
 })
 
 DefineLanguageWord("Lug", { -- from Mike Anderson's Tyrant
@@ -270,11 +282,11 @@ DefineLanguageWord("Thurg", {
 	NameTypes = {"person"}
 })
 
-DefineLanguageWord("T'shar Lggi", {
+DefineLanguageWord("T'shar", { -- from Wesnoth
 	Language = "goblin",
 	Type = "noun",
 	Meanings = {},
-	NameTypes = {"person"}
+	NameTypes = {"person"} -- example: T'shar Lggi (from Wesnoth)
 })
 
 DefineLanguageWord("Tug", { -- from Mike Anderson's Tyrant

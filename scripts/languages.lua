@@ -46,7 +46,8 @@ DefineLanguage("dutch", {
 })
 
 DefineLanguage("dwarven", {
-	Name = "Dwarven"
+	Name = "Dwarven",
+	GenerateMissingWords = true
 })
 
 DefineLanguage("english", {
@@ -86,11 +87,13 @@ DefineLanguage("gaulish", {
 })
 
 DefineLanguage("gnomish", {
-	Name = "Gnomish"
+	Name = "Gnomish",
+--	GenerateMissingWords = true
 })
 
 DefineLanguage("goblin", {
-	Name = "Goblin"
+	Name = "Goblin",
+	GenerateMissingWords = true
 })
 
 DefineLanguage("gothic", {
@@ -131,7 +134,8 @@ DefineLanguage("japanese", {
 })
 
 DefineLanguage("kobold", {
-	Name = "Kobold"
+	Name = "Kobold",
+	GenerateMissingWords = true
 })
 
 DefineLanguage("latin", {

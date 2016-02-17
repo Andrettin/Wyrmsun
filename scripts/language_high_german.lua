@@ -407,18 +407,21 @@ DefineLanguageWord("Franz", {
 	NameTypes = {"person"}
 })
 
-DefineLanguageWord("Fried", {
+DefineLanguageWord("Fried", { -- root present in "Friede" and also in a number of adjectives
 	Language = "high-german",
 	Type = "noun",
-	Meanings = {},
-	AffixNameTypes = {"compound", "suffix", "singular", "person"} -- example: "Gottfried"
+	Meanings = {"Peace"},
+	AffixNameTypes = {
+		"compound", "prefix", "singular", "person", -- example: "Friedrich"
+		"compound", "suffix", "singular", "person" -- example: "Gottfried"
+	}
 })
 
-DefineLanguageWord("Friedrich", {
+DefineLanguageWord("Friede", {
 	Language = "high-german",
 	Type = "noun",
-	Meanings = {},
-	NameTypes = {"person"}
+	Meanings = {"Peace"},
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Furt", { -- Source: http://www.duden.de/rechtschreibung/Furt
@@ -1011,6 +1014,13 @@ DefineLanguageWord("Reich", {
 	Meanings = {"Realm", "Empire"},
 	DerivesFrom = {"proto-germanic", "noun", "Rîkia"},
 	Gender = "neuter"
+})
+
+DefineLanguageWord("Rich", {
+	Language = "high-german",
+	Type = "noun", -- correct?
+	Meanings = {},
+	AffixNameTypes = {"compound", "suffix", "singular", "person"} -- example: "Friedrich"
 })
 
 DefineLanguageWord("Rose", { -- Source: http://www.duden.de/rechtschreibung/Rose_Pflanze_Bluete_Verdickung

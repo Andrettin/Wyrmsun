@@ -25,12 +25,13 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageWord("Alf", { -- archaic
+DefineLanguageWord("Alf", {
 	Language = "english",
 	Type = "noun",
 	Meanings = {"Elf"},
 	DerivesFrom = {"old-english", "noun", "Ælf"}, -- seems sensible
 	Gender = "masculine",
+	Archaic = true,
 	NameTypes = {"person"},
 	AffixNameTypes = {"compound", "prefix", "singular", "person"} -- example: "Alfred"
 })
@@ -184,19 +185,21 @@ DefineLanguageWord("Bronze", {
 	AffixNameTypes = {"separate", "prefix", "singular", "unit-class-smithy"} -- seems sensible
 })
 
-DefineLanguageWord("Burn", { -- archaic
+DefineLanguageWord("Burn", {
 	Language = "english",
 	Type = "noun",
 	Meanings = {"Creek"},
 	Gender = "neuter",
+	Archaic = true,
 	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- example: "Blackburn"; Source: "Philip's International School Atlas", 2006, p. 64.
 })
 
-DefineLanguageWord("Bury", { -- archaic
+DefineLanguageWord("Bury", {
 	Language = "english",
 	Type = "noun",
 	Meanings = {"Bury"},
 	Gender = "neuter",
+	Archaic = true,
 	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- examples: "Newbury", "Salisbury", "Shrewsbury"; Source: "Philip's International School Atlas", 2006, p. 64.
 })
 
@@ -272,12 +275,13 @@ DefineLanguageWord("Elf", {
 	}
 })
 
-DefineLanguageWord("Es", { -- archaic
+DefineLanguageWord("Es", {
 	Language = "english",
 	Type = "noun", -- correct?
 	Meanings = {"East"},
 	DerivesFrom = {"old-english", "noun", "Éaste"}, -- presumably, since the English noun "East" is also set to derive from that word? Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 12.
 	Gender = "neuter",
+	Archaic = true,
 	AffixNameTypes = {"compound", "prefix", "singular", "province"} -- example: "Essex"
 })
 
@@ -614,12 +618,13 @@ DefineLanguageWord("New", {
 	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- examples: "Newbury", "Newport", "Newquay"; Source: "Philip's International School Atlas", 2006, p. 64.
 })
 
-DefineLanguageWord("Nor", { -- archaic
+DefineLanguageWord("Nor", {
 	Language = "english",
 	Type = "noun",
 	Meanings = {"North"},
 	Gender = "neuter",
 	DerivesFrom = {"old-english", "adverb", "Norþ"}, -- presumably, since the English word "North" also comes from that Old English word
+	Archaic = true,
 	AffixNameTypes = {
 		"compound", "prefix", "singular", "settlement", -- example: "Norwich"
 		"compound", "prefix", "singular", "province" -- example: "Norfolk"
@@ -703,11 +708,12 @@ DefineLanguageWord("Quay", {
 	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- example: "Newquay"; Source: "Philip's International School Atlas", 2006, p. 64.
 })
 
-DefineLanguageWord("Red", { -- archaic
+DefineLanguageWord("Red", {
 	Language = "english",
 	Type = "noun",
 	Meanings = {"Counsel", "Advice", "Account", "Story"},
 	Gender = "neuter",
+	Archaic = true,
 	AffixNameTypes = {"compound", "suffix", "singular", "person"} -- example: "Alfred"
 })
 
@@ -759,11 +765,12 @@ DefineLanguageWord("Sea", {
 	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- example: "Swansea"; Source: "Philip's International School Atlas", 2006, p. 64.
 })
 
-DefineLanguageWord("Sex", { -- archaic
+DefineLanguageWord("Sex", {
 	Language = "english",
 	Type = "noun",
 	Meanings = {"Saxon"},
 	Gender = "neuter",
+	Archaic = true,
 	AffixNameTypes = {"compound", "suffix", "plural", "province"} -- examples: "Essex", "Middlesex", "Sussex", "Wessex"
 })
 
@@ -879,21 +886,23 @@ DefineLanguageWord("Stone", {
 	}
 })
 
-DefineLanguageWord("Suf", { -- archaic
+DefineLanguageWord("Suf", {
 	Language = "english",
 	Type = "noun",
 	Meanings = {"South"},
 	DerivesFrom = {"old-english", "adverb", "Sûþ"}, -- presumably, since the English word "South" comes from that Old English word
 	Gender = "neuter",
+	Archaic = true,
 	AffixNameTypes = {"compound", "prefix", "singular", "province"} -- example: "Suffolk"
 })
 
-DefineLanguageWord("Sus", { -- archaic
+DefineLanguageWord("Sus", {
 	Language = "english",
 	Type = "noun",
 	Meanings = {"South"},
 	DerivesFrom = {"old-english", "adverb", "Sûþ"}, -- presumably, since the English word "South" comes from that Old English word
 	Gender = "neuter",
+	Archaic = true,
 	AffixNameTypes = {"compound", "prefix", "singular", "province"} -- example: "Sussex"
 })
 
@@ -948,12 +957,13 @@ DefineLanguageWord("Wall", {
 	AffixNameTypes = {"compound", "suffix", "singular", "province"} -- example: "Cornwall"
 })
 
-DefineLanguageWord("Wes", { -- archaic
+DefineLanguageWord("Wes", {
 	Language = "english",
 	Type = "noun",
 	Meanings = {"West"},
 	Gender = "neuter",
 	DerivesFrom = {"old-english", "adverb", "West"}, -- presumably, since the English word "West" comes from that Old English word
+	Archaic = true,
 	AffixNameTypes = {"compound", "prefix", "singular", "province"} -- example: "Wessex"
 })
 
