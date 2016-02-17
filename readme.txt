@@ -77,6 +77,8 @@ https://github.com/Andrettin/Wyrmsun
 * Factions
 - Added support for factions using a different language than their civilizations (for name generation).
 - The England and Scotland factions now use English for proper name generation (for units, settlements, provinces and smithies).
+- The Saxon Tribe now uses Old Saxon for proper name generation (for units, settlements, provinces and smithies).
+- The Frisian Tribe now uses Old Frisian for proper name generation (for units, settlements, provinces and smithies).
 
 * Grand Strategy
 - Fixed issue which caused custom heroes to not be placed in the province properly after the "On the Vanaquisl" event mission.

@@ -165,6 +165,13 @@ DefineLanguageWord("Páśu", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Meanings = {}
 })
 
+DefineLanguageWord("Prî́ti", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 128.
+	Language = "sanskrit",
+	Type = "noun",
+	Meanings = {"Happiness", "Friendly Attitude"}, -- source gives the German "Freude, freundschaftliche Gesinnung" as the meaning
+	Gender = "feminine"
+})
+
 DefineLanguageWord("Puruhûta", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.
 	Language = "sanskrit",
 	Type = "adjective",
@@ -176,6 +183,13 @@ DefineLanguageWord("Pū́tis", { -- Source: Winfred P. Lehmann, "A Grammar of Pr
 	Language = "sanskrit",
 	Type = "adjective",
 	Meanings = {"Foul"}
+})
+
+DefineLanguageWord("Râjan", { -- source also gives the form "-râj-"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
+	Language = "sanskrit",
+	Type = "noun",
+	Meanings = {"King"}, -- source gives the German "König" as the meaning
+	DerivesFrom = {"proto-indo-european", "noun", "Reĝ"}
 })
 
 DefineLanguageWord("Ṛbhú", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 20.

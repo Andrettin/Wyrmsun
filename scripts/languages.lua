@@ -190,6 +190,10 @@ DefineLanguage("old-frisian", {
 	Name = "Old Frisian"
 })
 
+DefineLanguage("old-gaulish", {
+	Name = "Old Gaulish"
+})
+
 DefineLanguage("old-high-german", {
 	Name = "Old High German"
 })
@@ -295,6 +299,7 @@ Load("scripts/language_sanskrit.lua")
 Load("scripts/language_umbrian.lua")
 
 -- Celtic languages (branch of the Indo-European family)
+Load("scripts/language_old_gaulish.lua")
 Load("scripts/language_gaulish.lua")
 Load("scripts/language_welsh.lua")
 Load("scripts/language_old_irish.lua")

@@ -289,6 +289,13 @@ DefineLanguageWord("Fōt", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	DerivesFrom = {"proto-germanic", "noun", "Fōts"}
 })
 
+DefineLanguageWord("Friþu", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 128.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Peace", "Protection", "Security"}, -- source gives the German "Friede, Schutz, Sicherheit" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Friþu"}
+})
+
 DefineLanguageWord("Fŷr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 127.
 	Language = "old-english",
 	Type = "noun",
@@ -581,6 +588,20 @@ DefineLanguageWord("Reord", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Type = "noun",
 	Meanings = {"Voice", "Sound", "Speech"},
 	Gender = "feminine"
+})
+
+DefineLanguageWord("Rîca", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Ruler"}, -- source gives the German "Herrscher" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Rîka"}
+})
+
+DefineLanguageWord("Rîce", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
+	Language = "old-english",
+	Type = "adjective",
+	Meanings = {"Powerful", "Notable", "Rich"}, -- source gives the German "mächtig, vornehm, reich" as the meaning
+	DerivesFrom = {"proto-germanic", "adjective", "Rîka"}
 })
 
 DefineLanguageWord("Sǣd", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.

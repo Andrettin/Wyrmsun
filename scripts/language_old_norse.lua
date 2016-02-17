@@ -329,6 +329,14 @@ DefineLanguageWord("Fōtr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	DerivesFrom = {"proto-germanic", "noun", "Fōts"}
 })
 
+DefineLanguageWord("Friđr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 128.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Love", "Peace"}, -- source gives the German "Liebe, Friede" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Friþu"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Fūll", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-norse",
 	Type = "adjective",
@@ -641,6 +649,13 @@ DefineLanguageWord("Rēttr", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Type = "adjective",
 	Meanings = {"Right", "Straight"}, -- derived from Proto-Germanic "Reχtaz", which means "Right, Straight"
 	DerivesFrom = {"proto-germanic", "adjective", "Reχtaz"}
+})
+
+DefineLanguageWord("Rîkr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
+	Language = "old-norse",
+	Type = "adjective",
+	Meanings = {"Powerful"}, -- source gives the German "mächtig" as the meaning
+	DerivesFrom = {"proto-germanic", "adjective", "Rîka"}
 })
 
 DefineLanguageWord("Rǫdd", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 9.

@@ -120,6 +120,16 @@ DefineLanguageWord("Medg", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Gender = "feminine"
 })
 
+DefineLanguageWord("Rí", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
+	Language = "irish",
+	Type = "noun",
+	Meanings = {"King"}, -- source gives the German "König" as the meaning
+	DerivesFrom = {"proto-indo-european", "noun", "Reĝ"},
+	NumberCaseInflections = {
+		"singular", "genitive", "Ríg"
+	}
+})
+
 DefineLanguageWord("Rīadaim", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
 	Language = "irish",
 	Type = "verb",

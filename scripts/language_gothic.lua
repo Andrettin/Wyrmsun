@@ -202,6 +202,20 @@ DefineLanguageWord("Flōdus", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	DerivesFrom = {"proto-germanic", "noun", "Flōduz"}
 })
 
+DefineLanguageWord("Friþôn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 128.
+	Language = "gothic",
+	Type = "noun",
+	Meanings = {},
+	DerivesFrom = {"proto-germanic", "noun", "Friþu"}
+})
+
+DefineLanguageWord("Friþareiks", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 128.
+	Language = "gothic",
+	Type = "noun",
+	Meanings = {}
+	-- derived from the Proto-Germanic "Friþu", but apparently only for part of it (the noun seems to be a compound)
+})
+
 DefineLanguageWord("Gaits", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
 	Language = "gothic",
 	Type = "noun",
@@ -384,6 +398,20 @@ DefineLanguageWord("Razn", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Type = "noun",
 	Meanings = {"House"},
 	Gender = "neuter"
+})
+
+DefineLanguageWord("Reiks", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
+	Language = "gothic",
+	Type = "noun",
+	Meanings = {"Ruler"}, -- source gives the German "Herrscher" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Rîka"}
+})
+
+DefineLanguageWord("Reiks", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
+	Language = "gothic",
+	Type = "adjective",
+	Meanings = {"Powerful", "Notable"}, -- source gives the German "mächtig, vornehm" as the meaning
+	DerivesFrom = {"proto-germanic", "adjective", "Rîka"}
 })
 
 DefineLanguageWord("Sair", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.

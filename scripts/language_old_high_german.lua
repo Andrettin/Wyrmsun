@@ -209,6 +209,14 @@ DefineLanguageWord("Fluot", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	DerivesFrom = {"proto-germanic", "noun", "Flōduz"}
 })
 
+DefineLanguageWord("Fridu", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 128.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Peace", "Protection", "Security", "Enclosure"}, -- source gives the German "Friede, Schutz, Sicherheit, Einfriedigung" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Friþu"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Fuir", { -- source also gives the alternate form "Fiur"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 127.
 	Language = "old-high-german",
 	Type = "noun",
@@ -490,6 +498,13 @@ DefineLanguageWord("Rarta", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Type = "noun",
 	Meanings = {"Voice", "Modulation"},
 	Gender = "feminine"
+})
+
+DefineLanguageWord("Rîhhi", { -- source also gives the alternative form "rîchi"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
+	Language = "old-high-german",
+	Type = "adjective",
+	Meanings = {"Powerful", "Notable", "Rich", "Magnificent", "Splendid"}, -- source gives the German "mächtig, vornehm, reich, prächtig, herrlich" as the meaning
+	DerivesFrom = {"proto-germanic", "adjective", "Rîka"}
 })
 
 DefineLanguageWord("Sāt", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.

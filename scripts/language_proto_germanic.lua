@@ -289,6 +289,13 @@ DefineLanguageWord("Fōts", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Meanings = {"Foot"}
 })
 
+DefineLanguageWord("Friþu", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 128.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Love", "Peace"}, -- source gives the German "Liebe, Friede" as the meaning
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Fûir", { -- source also gives the alternate form "Fûr"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 127.
 	Language = "proto-germanic",
 	Type = "noun",
@@ -563,6 +570,21 @@ DefineLanguageWord("Reupôn", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Ptarmigan"} -- source gives meaning as "Schneehuhn (tetrao lagopus)"
+})
+
+DefineLanguageWord("Rîka", { -- source also gives the alternative form "Rîkia"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Ruler"}, -- source gives the German "Herrscher" as the meaning
+	DerivesFrom = {"proto-indo-european", "noun", "Reĝ"},
+	AffixNameTypes = {"compound", "suffix", "singular", "person"} -- example (from another, now unknown, source): "Theudariks" (presuming "riks" to equal "rîka")
+})
+
+DefineLanguageWord("Rîka", { -- source also gives the alternative form "Rîkia"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
+	Language = "proto-germanic",
+	Type = "adjective",
+	Meanings = {"Powerful"}, -- source gives the German "mächtig" as the meaning
+	DerivesFrom = {"proto-indo-european", "noun", "Reĝ"}
 })
 
 DefineLanguageWord("Rîkia", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
@@ -989,13 +1011,6 @@ DefineLanguageWord("Ridaz", {
 	Type = "noun",
 	Meanings = {"Rider"},
 	AffixNameTypes = {"compound", "suffix", "singular", "person"} -- example: Woduridaz
-})
-
-DefineLanguageWord("Riks", {
-	Language = "proto-germanic",
-	Type = "noun",
-	Meanings = {"Ruler"},
-	AffixNameTypes = {"compound", "suffix", "singular", "person"} -- example: Theudariks
 })
 
 DefineLanguageWord("Staldaz", {

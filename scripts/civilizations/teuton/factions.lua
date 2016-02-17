@@ -45,6 +45,7 @@ DefineFaction("Frank Tribe", {
 DefineFaction("Saxon Tribe", {
 	Civilization = "teuton",
 	Type = "tribe",
+	Language = "old-saxon",
 	Colors = {"pink"},
 	DevelopsTo = {"Saxony", "Brandenburg", "England", "Prussia", "Scotland"},
 	FactionUpgrade = "upgrade-saxon-tribe-faction"
@@ -148,6 +149,7 @@ DefineFaction("Cherusci Tribe", {
 DefineFaction("Frisian Tribe", {
 	Civilization = "teuton",
 	Type = "tribe",
+	Language = "old-frisian",
 	Colors = {"violet", "purple"}, -- change to a better one?
 	DevelopsTo = {"Friesland", "Netherlands"},
 	FactionUpgrade = "upgrade-frisian-tribe-faction"
@@ -244,6 +246,7 @@ DefineFaction("Saxony", {
 	Civilization = "teuton",
 	ParentFaction = "Saxon Tribe",
 	Type = "polity",
+	Language = "high-german",
 	Colors = {"pink"},
 	DefaultTier = "duchy", -- Saxony was a duchy in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 	Titles = {
@@ -376,6 +379,7 @@ DefineFaction("Friesland", {
 	Civilization = "teuton",
 	ParentFaction = "Frisian Tribe",
 	Type = "polity",
+	Language = "high-german", -- should be Dutch or modern Frisian
 	Colors = {"black"},
 	DefaultTier = "barony", -- Friesland was a lordship in 1559-1600; Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
 	Titles = {

@@ -411,6 +411,7 @@ DefineLanguageWord("Fried", { -- root present in "Friede" and also in a number o
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"Peace"},
+	DerivesFrom = {"middle-high-german", "noun", "Vride"}, -- presumably, since "Friede" comes from that word
 	AffixNameTypes = {
 		"compound", "prefix", "singular", "person", -- example: "Friedrich"
 		"compound", "suffix", "singular", "person" -- example: "Gottfried"
@@ -421,6 +422,7 @@ DefineLanguageWord("Friede", {
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"Peace"},
+	DerivesFrom = {"middle-high-german", "noun", "Vride"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 128.
 	Gender = "masculine"
 })
 
@@ -451,7 +453,10 @@ DefineLanguageWord("Gau", {
 	Type = "noun",
 	Meanings = {"District"},
 	DerivesFrom = {"proto-germanic", "noun", "Gavja"},
-	Gender = "masculine"
+	Gender = "masculine",
+	AffixNameTypes = {
+		"compound", "suffix", "singular", "province" -- example: "Nordgau"
+	}
 })
 
 DefineLanguageWord("Gerhard", {
@@ -572,6 +577,14 @@ DefineLanguageWord("Hans", {
 	Type = "noun",
 	Meanings = {},
 	NameTypes = {"person"}
+})
+
+DefineLanguageWord("Hard", {
+	Language = "high-german",
+	Type = "adjective",
+	Meanings = {},
+	AffixNameTypes = {"compound", "suffix", "singular", "person"}, -- examples: "Richard",
+	Archaic = true
 })
 
 DefineLanguageWord("Hart", { -- Source: http://www.duden.de/rechtschreibung/hart
@@ -938,7 +951,10 @@ DefineLanguageWord("Nord", {
 	Type = "noun",
 	Meanings = {"North"},
 	DerivesFrom = {"old-high-german", "noun", "Nord"}, -- seems sensible
-	Gender = "masculine"
+	Gender = "masculine",
+	AffixNameTypes = {
+		"compound", "prefix", "singular", "province" -- example: "Nordgau"
+	}
 })
 
 DefineLanguageWord("Norden", {
@@ -1016,11 +1032,23 @@ DefineLanguageWord("Reich", {
 	Gender = "neuter"
 })
 
+DefineLanguageWord("Reich", {
+	Language = "high-german",
+	Type = "adjective",
+	Meanings = {"Rich"},
+	DerivesFrom = {"middle-high-german", "adjective", "Rîche"} -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
+})
+
 DefineLanguageWord("Rich", {
 	Language = "high-german",
-	Type = "noun", -- correct?
+	Type = "adjective",
 	Meanings = {},
-	AffixNameTypes = {"compound", "suffix", "singular", "person"} -- example: "Friedrich"
+	DerivesFrom = {"middle-high-german", "adjective", "Rîche"}, -- presumably, since the adjective "reich" does as well
+	AffixNameTypes = {
+		"compound", "prefix", "singular", "person", -- example: "Richard"
+		"compound", "suffix", "singular", "person" -- example: "Friedrich"
+	},
+	Archaic = true
 })
 
 DefineLanguageWord("Rose", { -- Source: http://www.duden.de/rechtschreibung/Rose_Pflanze_Bluete_Verdickung

@@ -118,6 +118,14 @@ DefineLanguageWord("Fisc", { -- Source: Richard M. Runge, "The Phonetic Realizat
 	Meanings = {"Fish"}
 })
 
+DefineLanguageWord("Frithu", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 128.
+	Language = "old-saxon",
+	Type = "noun",
+	Meanings = {"Peace"}, -- source gives the German "Friede" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Friþu"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Gard", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.
 	Language = "old-saxon",
 	Type = "noun",
@@ -255,6 +263,13 @@ DefineLanguageWord("Ôstar", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Type = "adverb",
 	Meanings = {},
 	DerivesFrom = {"proto-germanic", "adverb", "Austa"}
+})
+
+DefineLanguageWord("Rîki", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
+	Language = "old-saxon",
+	Type = "adjective",
+	Meanings = {"Powerful"}, -- source gives the German "mächtig" as the meaning
+	DerivesFrom = {"proto-germanic", "adjective", "Rîka"}
 })
 
 DefineLanguageWord("Siluƀar", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 221.

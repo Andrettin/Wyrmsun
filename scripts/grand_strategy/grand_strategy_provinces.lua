@@ -4054,7 +4054,8 @@ function LoadProvinces(world)
 			},
 			Civilization = "goblin",
 			CulturalNames = {
-				dwarf = "Caverns of Flame"
+				dwarf = "Caverns of Flame",
+				goblin = "Caverns of Flame"
 			},
 			SettlementLocation = {41, 6},
 			SettlementBuildings = {
@@ -4090,7 +4091,8 @@ function LoadProvinces(world)
 				{39, 0}, {39, 1}, {39, 5}, {39, 6}, {39, 7}, {39, 8}
 			},
 			CulturalNames = {
-				dwarf = "Eastern Mines"
+				dwarf = "Eastern Mines",
+				goblin = "Eastern Mines"
 			},
 			Civilization = "goblin",
 			SettlementLocation = {38, 7},
@@ -4260,7 +4262,8 @@ function LoadProvinces(world)
 			},
 			Civilization = "goblin",
 			CulturalNames = {
-				dwarf = "Northern Wastelands"
+				dwarf = "Northern Wastelands",
+				goblin = "Northern Wastelands"
 			},
 			SettlementLocation = {14, 2},
 			SettlementBuildings = {

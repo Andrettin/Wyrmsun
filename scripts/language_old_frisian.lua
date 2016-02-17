@@ -64,6 +64,13 @@ DefineLanguageWord("Burch", { -- source gives "Bur(i)ch"; Source: August Fick an
 	Gender = "feminine"
 })
 
+DefineLanguageWord("Fretho", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 128.
+	Language = "old-frisian",
+	Type = "noun",
+	Meanings = {"Peace", "Protection", "Security"}, -- source gives the German "Friede, Schutz, Sicherheit" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Friþu"}
+})
+
 DefineLanguageWord("God", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.
 	Language = "old-frisian",
 	Type = "noun",
@@ -183,6 +190,13 @@ DefineLanguageWord("Ransa", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Language = "old-frisian",
 	Type = "noun",
 	Meanings = {"House"}
+})
+
+DefineLanguageWord("Rîk", { -- source gives Rîk(e); Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
+	Language = "old-frisian",
+	Type = "adjective",
+	Meanings = {"Rich"}, -- source gives the German "reich" as the meaning
+	DerivesFrom = {"proto-germanic", "adjective", "Rîka"}
 })
 
 DefineLanguageWord("Selover", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 221.

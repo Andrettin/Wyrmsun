@@ -314,6 +314,13 @@ DefineLanguageWord("Rünne", { -- Source: Sean Crist, "An Analysis of *z loss in
 	Gender = "feminine"
 })
 
+DefineLanguageWord("Rîche", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
+	Language = "middle-high-german",
+	Type = "adjective",
+	Meanings = {"Powerful", "Notable", "Rich", "Magnificent", "Splendid"}, -- source gives the German "mächtig, vornehm, reich, prächtig, herrlich" as the meaning
+	DerivesFrom = {"old-high-german", "adjective", "Rîhhi"}
+})
+
 DefineLanguageWord("Silber", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 221.
 	Language = "middle-high-german",
 	Type = "noun",
@@ -335,6 +342,14 @@ DefineLanguageWord("Viur", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Meanings = {"Fire"}, -- source gives "Feuer" as the meaning
 	DerivesFrom = {"old-high-german", "noun", "Fuir"},
 	Gender = "neuter"
+})
+
+DefineLanguageWord("Vride", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 128.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Peace", "Protection", "Security", "Enclosure"}, -- source gives the German "Friede, Schutz, Sicherheit, Einfriedigung" as the meaning
+	DerivesFrom = {"old-high-german", "noun", "Fridu"},
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Vurt", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, pp. 120-121.

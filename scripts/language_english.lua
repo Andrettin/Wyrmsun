@@ -352,6 +352,15 @@ DefineLanguageWord("Frederick", {
 	NameTypes = {"person"}
 })
 
+DefineLanguageWord("Frith", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 128.
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Enclosure"}, -- source gives the German "Einfriedigung" as the meaning
+	DerivesFrom = {"old-english", "noun", "Friþu"},
+	Gender = "neuter",
+	Archaic = true
+})
+
 DefineLanguageWord("Gate", {
 	Language = "english",
 	Type = "noun",
@@ -419,6 +428,13 @@ DefineLanguageWord("Hammer", {
 	},
 	Gender = "neuter",
 	AffixNameTypes = {"separate", "suffix", "singular", "unit-class-smithy"} -- seems sensible
+})
+
+DefineLanguageWord("Hard", {
+	Language = "english",
+	Type = "adjective",
+	Meanings = {"Hard"},
+	AffixNameTypes = {"compound", "suffix", "singular", "person"} -- example: "Richard"
 })
 
 DefineLanguageWord("Hards", {
@@ -727,12 +743,12 @@ DefineLanguageWord("Red", {
 	}
 })
 
-DefineLanguageWord("Richard", {
+DefineLanguageWord("Rich", {
 	Language = "english",
-	Type = "noun",
-	Meanings = {},
-	Gender = "masculine",
-	NameTypes = {"person"}
+	Type = "adjective",
+	Meanings = {"Rich"},
+	DerivesFrom = {"old-english", "adjective", "Rîce"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
+	AffixNameTypes = {"compound", "prefix", "singular", "person"} -- example: "Richard"
 })
 
 DefineLanguageWord("Rusty", {
