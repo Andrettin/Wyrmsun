@@ -105,10 +105,10 @@ function AddSoundOptions(menu, offx, offy, centerx, bottom)
   local soundslider = {}
   -- slider button to decrease slider value
   soundslider = menu:addImageLeftSliderButton("", nil, 21, offy + 36 * 1.5, function() soundslider:setValue(soundslider:getValue() - 25.5); SetEffectsVolume(soundslider:getValue()) end)
-		
+
   -- slider button to increase slider value
   soundslider = menu:addImageRightSliderButton("", nil, 213, offy + 36 * 1.5, function() soundslider:setValue(soundslider:getValue() + 25.5); SetEffectsVolume(soundslider:getValue()) end)
-		
+
   -- slider itself
   soundslider = menu:addImageSlider(0, 255, 172, 18, offx + 41, offy + 36 * 1.5, function() SetEffectsVolume(soundslider:getValue()) end)
 
@@ -139,13 +139,13 @@ function AddSoundOptions(menu, offx, offy, centerx, bottom)
   local musicslider = {}
   -- slider button to decrease slider value
   musicslider = menu:addImageLeftSliderButton("", nil, 21, offy + 36 * 3.5, function() musicslider:setValue(musicslider:getValue() - 25.5); SetMusicVolume(musicslider:getValue()) end)
-		
+
   -- slider button to decrease slider value
   musicslider = menu:addImageRightSliderButton("", nil, 213, offy + 36 * 3.5, function() musicslider:setValue(musicslider:getValue() + 25.5); SetMusicVolume(musicslider:getValue()) end)
-		
+
   -- slider itself
   musicslider = menu:addImageSlider(0, 255, 172, 18, offx + 41, offy + 36 * 3.5, function() SetMusicVolume(musicslider:getValue()) end)
-		
+
   -- set the value so the game saves it
   musicslider:setValue(GetMusicVolume())
 
@@ -185,14 +185,14 @@ function RunGameSoundOptionsMenu()
   menu:run(false)
 end
 
-function RunPreferencesMenu()
-  local menu = WarGameMenu(panel(1))
+function AddPreferences(menu, offx, offy, centerx, bottom)
+  local l
 
-  menu:addLabel("Preferences", 128, 11)
+  l = menu:addLabel(_("Preferences"), 176, 11)
 
   --[[
   local fog = {}
-  fog = menu:addImageCheckBox("Fog of War", 16, 40 + 26 * 0,
+  fog = menu:addImageCheckBox("Fog of War", offx + 16, offy + 26 * 0,
     function() SetFogOfWar(fog:isMarked()) end)
   fog:setMarked(GetFogOfWar())
   if (IsReplayGame() or IsNetworkGame()) then
@@ -201,81 +201,128 @@ function RunPreferencesMenu()
   --]]
 
   local ckey = {}
-  ckey = menu:addImageCheckBox("Show Hotkey", 16, 40 + 26 * 0,
+  ckey = menu:addImageCheckBox("Show Hotkey", offx + 16, offy + 26 * 1,
     function() UI.ButtonPanel.ShowCommandKey = ckey:isMarked() end)
   ckey:setMarked(UI.ButtonPanel.ShowCommandKey)
-  
+  ckey:adjustSize()
+
   local mouse_grabbing = {}
-  mouse_grabbing = menu:addImageCheckBox("Mouse Grabbing", 16, 40 + 26 * 1,
-	function()
-		wyr.preferences.GrabMouse = mouse_grabbing:isMarked()
-		SetGrabMouse(wyr.preferences.GrabMouse)
-		SavePreferences()
-	end
+  mouse_grabbing = menu:addImageCheckBox("Mouse Grabbing", offx + 16, offy + 26 * 2,
+    function()
+        wyr.preferences.GrabMouse = mouse_grabbing:isMarked()
+        SetGrabMouse(wyr.preferences.GrabMouse)
+        SavePreferences()
+    end
   )
   mouse_grabbing:setMarked(GetGrabMouse())
+  mouse_grabbing:adjustSize()
 
   local reverse_mouse_wheel_scrolling = {}
-  reverse_mouse_wheel_scrolling = menu:addImageCheckBox("Reverse Mousewheel Scrolling", 16, 40 + 26 * 2,
-	function()
-		wyr.preferences.MouseScrollSpeedDefault = wyr.preferences.MouseScrollSpeedDefault * -1
-		SetMouseScrollSpeedDefault(wyr.preferences.MouseScrollSpeedDefault)
-		SavePreferences()
-	end
+  reverse_mouse_wheel_scrolling = menu:addImageCheckBox("Reverse Mousewheel Scrolling", offx + 16, offy + 26 * 3,
+    function()
+        wyr.preferences.MouseScrollSpeedDefault = wyr.preferences.MouseScrollSpeedDefault * -1
+        SetMouseScrollSpeedDefault(wyr.preferences.MouseScrollSpeedDefault)
+        SavePreferences()
+    end
   )
   reverse_mouse_wheel_scrolling:setMarked(wyr.preferences.MouseScrollSpeedDefault < 0)
+  reverse_mouse_wheel_scrolling:adjustSize()
 
-  menu:addLabel("Game Speed", 16, 40 + 36 * 2, Fonts["game"], false)
+  l = Label(_("Game Speed"))
+  l:setFont(CFont:Get("game"))
+  l:adjustSize()
+  menu:add(l, offx + 16, offy + 36 * 3)
 
   local gamespeed = {}
   -- slider button to decrease slider value
-  gamespeed = menu:addImageLeftSliderButton("", nil, 21, 40 + 36 * 2.5, function() gamespeed:setValue(gamespeed:getValue() - 5); SetGameSpeed(gamespeed:getValue()) end)
-		
+  gamespeed = menu:addImageLeftSliderButton("", nil, 21, offy + 36 * 3.5, function() gamespeed:setValue(gamespeed:getValue() - 5); SetGameSpeed(gamespeed:getValue()) end)
+
   -- slider button to decrease slider value
-  gamespeed = menu:addImageRightSliderButton("", nil, 213, 40 + 36 * 2.5, function() gamespeed:setValue(gamespeed:getValue() + 5); SetGameSpeed(gamespeed:getValue()) end)
-		
+  gamespeed = menu:addImageRightSliderButton("", nil, 213, offy + 36 * 3.5, function() gamespeed:setValue(gamespeed:getValue() + 5); SetGameSpeed(gamespeed:getValue()) end)
+
   -- slider itself
-  gamespeed = menu:addImageSlider(15, 75, 172, 18, 41, 40 + 36 * 2.5, function() SetGameSpeed(gamespeed:getValue()) end)
-		
+  gamespeed = menu:addImageSlider(15, 75, 172, 18, 41, offy + 36 * 3.5, function() SetGameSpeed(gamespeed:getValue()) end)
+
   -- set the value so the game saves it
   gamespeed:setValue(GetGameSpeed())
 
-  menu:addLabel("slow", 22, 40 + (36 * 3) + 6, Fonts["small"], false)
-  local l = Label("fast")
-  l:setFont(Fonts["small"])
+  l = Label("slow")
+  l:setFont(CFont:Get("small"))
   l:adjustSize()
-  menu:add(l, 234 - l:getWidth(), 40 + (36 * 3) + 6)
+  menu:addCentered(l, offx + 32, offy + 36 * 4 + 6)
 
-  menu:addLabel("Mouse Scroll Speed", 16, 40 + (36 * 4), Fonts["game"], false)
+  l = Label("fast")
+  l:setFont(CFont:Get("small"))
+  l:adjustSize()
+  menu:addCentered(l, offx + 224, offy + 36 * 4 + 6)
+
+  menu:addLabel("Mouse Scroll Speed", offx + 16, offy + (36 * 5), CFont:Get("game"), false)
 
   local mousescrollspeed = {}
   -- slider button to decrease slider value
-  mousescrollspeed = menu:addImageLeftSliderButton("", nil, 21, 40 + 36 * 4.5, function() mousescrollspeed:setValue(mousescrollspeed:getValue() - .5); SetMouseScrollSpeed(mousescrollspeed:getValue()) end)
-		
-  -- slider button to decrease slider value		
-  mousescrollspeed = menu:addImageRightSliderButton("", nil, 213, 40 + 36 * 4.5, function() mousescrollspeed:setValue(mousescrollspeed:getValue() + .5); SetMouseScrollSpeed(mousescrollspeed:getValue()) end)
-		
+  mousescrollspeed = menu:addImageLeftSliderButton("", nil, 21, offy + 36 * 5.5, function() mousescrollspeed:setValue(mousescrollspeed:getValue() - .5); SetMouseScrollSpeed(mousescrollspeed:getValue()) end)
+
+  -- slider button to decrease slider value
+  mousescrollspeed = menu:addImageRightSliderButton("", nil, 213, offy + 36 * 5.5, function() mousescrollspeed:setValue(mousescrollspeed:getValue() + .5); SetMouseScrollSpeed(mousescrollspeed:getValue()) end)
+
   -- slider itself
-  mousescrollspeed = menu:addImageSlider(1, 10, 172, 18, 41, 40 + 36 * 4.5, function() SetMouseScrollSpeed(mousescrollspeed:getValue()) end)
-		
+  mousescrollspeed = menu:addImageSlider(1, 10, 172, 18, 41, offy + 36 * 5.5, function() SetMouseScrollSpeed(mousescrollspeed:getValue()) end)
+
   -- set the value so the game saves it
   mousescrollspeed:setValue(GetMouseScrollSpeed())
 
-  menu:addLabel("slow", 22, 40 + (36 * 5) + 6, Fonts["small"], false)
-  local l = Label("fast")
-  l:setFont(Fonts["small"])
+  l = Label("slow")
+  l:setFont(CFont:Get("small"))
   l:adjustSize()
-  menu:add(l, 234 - l:getWidth(), 40 + (36 * 5) + 6)
+  menu:addCentered(l, offx + 32, offy + 36 * 6 + 6)
 
-  menu:addFullButton("~!OK", "o", 128 - (224 / 2), 288 - 40,
+  l = Label("fast")
+  l:setFont(CFont:Get("small"))
+  l:adjustSize()
+  menu:addCentered(l, offx + 224, offy + 36 * 6 + 6)
+
+  menu:addLabel("Key Scroll Speed", offx + 16, offy + (36 * 7), CFont:Get("game"), false)
+
+  local keyscrollspeed = {}
+  -- slider button to decrease slider value
+  keyscrollspeed = menu:addImageLeftSliderButton("", nil, offx + 21, offy + 36 * 7.5, function() keyscrollspeed:setValue(keyscrollspeed:getValue() - .5); SetKeyScrollSpeed(keyscrollspeed:getValue()) end)
+
+  -- slider button to increase slider value
+  keyscrollspeed = menu:addImageRightSliderButton("", nil, offx + 213, offy + 36 * 7.5, function() keyscrollspeed:setValue(keyscrollspeed:getValue() + .5); SetKeyScrollSpeed(keyscrollspeed:getValue()) end)
+
+  -- slider itself
+  keyscrollspeed = menu:addImageSlider(1, 10, 172, 18, offx + 41, offy + 36 * 7.5, function() SetKeyScrollSpeed(keyscrollspeed:getValue()) end)
+
+  -- set the value so the game saves it
+  keyscrollspeed:setValue(GetKeyScrollSpeed())
+
+  l = Label("slow")
+  l:setFont(CFont:Get("small"))
+  l:adjustSize();
+  menu:addCentered(l, offx + 32, offy + 36 * 8 + 6)
+
+  l = Label("fast")
+  l:setFont(CFont:Get("small"))
+  l:adjustSize()
+  menu:addCentered(l, offx + 224, offy + 36 * 8 + 6)
+
+  menu:addFullButton("~!OK", "o", centerx, bottom - 11 - 27,
     function()
       wyr.preferences.FogOfWar = GetFogOfWar()
       wyr.preferences.ShowCommandKey = UI.ButtonPanel.ShowCommandKey
       wyr.preferences.GameSpeed = GetGameSpeed()
       wyr.preferences.MouseScrollSpeed = GetMouseScrollSpeed()
+      wyr.preferences.KeyScrollSpeed = GetKeyScrollSpeed()
       SavePreferences()
       menu:stop()
     end)
+end
+
+function RunPreferencesMenu()
+  local menu = WarGameMenu(panel(5))
+  menu:resize(352, 352)
+
+  AddPreferences(menu, 0, 4, 352/2 - 224/2, 352)
 
   menu:run(false)
 end
@@ -341,7 +388,7 @@ function RunGameplayOptionsMenu()
 	local hotkey_setup_dd
 
 	menu:addLabel(_("~<Options~>"), offx + 176, offy + 1)
-	
+
 --[[
 	menu:addLabel(_("Language"), offx + 8, offy + 34 + 26*2, Fonts["game"], false)
 
@@ -391,7 +438,7 @@ function RunGameplayOptionsMenu()
 	)
 	hotkey_setup_dd:setSize(266, 20)
 	hotkey_setup_dd:setSelected(wyr.preferences.HotkeySetup)
-	
+
 	b = menu:addImageCheckBox(_("Mouse Grabbing"), offx + 16, offy + 55 + 26*4 + 14,
 		function()
 			if (wyr.preferences.GrabMouse == false) then
@@ -565,10 +612,10 @@ function RunVideoOptionsMenu()
   local soundslider = {}
   -- slider button to decrease slider value
   soundslider = menu:addImageLeftSliderButton("", nil, offx + 21, offy + 36 * 3.5, function() soundslider:setValue(soundslider:getValue() - 25.5); SetEffectsVolume(soundslider:getValue()) end)
-		
+
   -- slider button to increase slider value
   soundslider = menu:addImageRightSliderButton("", nil, offx + 213, offy + 36 * 3.5, function() soundslider:setValue(soundslider:getValue() + 25.5); SetEffectsVolume(soundslider:getValue()) end)
-		
+
   -- slider itself
   soundslider = menu:addImageSlider(0, 255, 172, 18, offx + 41, offy + 36 * 3.5, function() SetEffectsVolume(soundslider:getValue()) end)
 
@@ -599,13 +646,13 @@ function RunVideoOptionsMenu()
   local musicslider = {}
   -- slider button to decrease slider value
   musicslider = menu:addImageLeftSliderButton("", nil, offx + 21, offy + 36 * 5.5, function() musicslider:setValue(musicslider:getValue() - 25.5); SetMusicVolume(musicslider:getValue()) end)
-		
+
   -- slider button to decrease slider value
   musicslider = menu:addImageRightSliderButton("", nil, offx + 213, offy + 36 * 5.5, function() musicslider:setValue(musicslider:getValue() + 25.5); SetMusicVolume(musicslider:getValue()) end)
-		
+
   -- slider itself
   musicslider = menu:addImageSlider(0, 255, 172, 18, offx + 41, offy + 36 * 5.5, function() SetMusicVolume(musicslider:getValue()) end)
-		
+
   -- set the value so the game saves it
   musicslider:setValue(GetMusicVolume())
 
