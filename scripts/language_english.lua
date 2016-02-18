@@ -25,6 +25,22 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineLanguageWord("Adam", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {},
+	Gender = "masculine",
+	NameTypes = {"person"}
+})
+
+DefineLanguageWord("Alexander", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {},
+	Gender = "masculine",
+	NameTypes = {"person"}
+})
+
 DefineLanguageWord("Alf", {
 	Language = "english",
 	Type = "noun",
@@ -45,6 +61,22 @@ DefineLanguageWord("Anvil", {
 	},
 	Gender = "neuter",
 	AffixNameTypes = {"separate", "suffix", "singular", "unit-class-smithy"} -- seems sensible
+})
+
+DefineLanguageWord("Ard", {
+	Language = "english",
+	Type = "adjective",
+	Meanings = {},
+	AffixNameTypes = {"compound", "suffix", "singular", "person"}, -- examples: "Bernard", "Richard"
+	Archaic = true
+})
+
+DefineLanguageWord("Arthur", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {},
+	Gender = "masculine",
+	NameTypes = {"person"}
 })
 
 DefineLanguageWord("Ash", {
@@ -111,11 +143,19 @@ DefineLanguageWord("Bed", {
 	AffixNameTypes = {"compound", "prefix", "singular", "settlement"} -- example: "Bedford"; Source: "Philip's International School Atlas", 2006, p. 64.
 })
 
-DefineLanguageWord("Bernard", {
+DefineLanguageWord("Benjamin", {
 	Language = "english",
 	Type = "noun",
 	Meanings = {},
+	Gender = "masculine",
 	NameTypes = {"person"}
+})
+
+DefineLanguageWord("Bern", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {},
+	AffixNameTypes = {"compound", "prefix", "singular", "person"} -- example: "Bernard"
 })
 
 DefineLanguageWord("Black", {
@@ -211,6 +251,14 @@ DefineLanguageWord("Charles", {
 	NameTypes = {"person"}
 })
 
+DefineLanguageWord("Christopher", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {},
+	Gender = "masculine",
+	NameTypes = {"person"}
+})
+
 DefineLanguageWord("Copper", {
 	Language = "english",
 	Type = "noun",
@@ -234,12 +282,28 @@ DefineLanguageWord("Corn", {
 	AffixNameTypes = {"compound", "prefix", "singular", "province"} -- example: "Cornwall"
 })
 
+DefineLanguageWord("David", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {},
+	Gender = "masculine",
+	NameTypes = {"person"}
+})
+
 DefineLanguageWord("Ditch", {
 	Language = "english",
 	Type = "noun",
 	Meanings = {"Ditch"},
 	Gender = "neuter",
 	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- example: "Redditch"; Source: "Philip's International School Atlas", 2006, p. 64.
+})
+
+DefineLanguageWord("Donald", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {},
+	Gender = "masculine",
+	NameTypes = {"person"}
 })
 
 DefineLanguageWord("East", {
@@ -264,6 +328,30 @@ DefineLanguageWord("East", {
 	DerivesFrom = {"old-english", "adverb", "Éast"} -- presumably? Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 12.
 })
 
+DefineLanguageWord("Edgar", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {},
+	Gender = "masculine",
+	NameTypes = {"person"}
+})
+
+DefineLanguageWord("Edmund", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {},
+	Gender = "masculine",
+	NameTypes = {"person"}
+})
+
+DefineLanguageWord("Edward", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {},
+	Gender = "masculine",
+	NameTypes = {"person"}
+})
+
 DefineLanguageWord("Elf", {
 	Language = "english",
 	Type = "noun",
@@ -273,6 +361,14 @@ DefineLanguageWord("Elf", {
 	NumberCaseInflections = {
 		"plural", "nominative", "Elves"
 	}
+})
+
+DefineLanguageWord("Elias", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {},
+	Gender = "masculine",
+	NameTypes = {"person"}
 })
 
 DefineLanguageWord("Es", {
@@ -352,6 +448,15 @@ DefineLanguageWord("Frederick", {
 	NameTypes = {"person"}
 })
 
+DefineLanguageWord("Frey", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {},
+	DerivesFrom = {"old-english", "noun", "Friþu"}, -- presumably
+	AffixNameTypes = {"compound", "suffix", "singular", "person"}, -- example: "Godfrey"
+	Archaic = true
+})
+
 DefineLanguageWord("Frith", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 128.
 	Language = "english",
 	Type = "noun",
@@ -383,6 +488,14 @@ DefineLanguageWord("Gauntlet", {
 	AffixNameTypes = {"separate", "suffix", "singular", "unit-class-smithy"} -- seems sensible
 })
 
+DefineLanguageWord("George", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {},
+	Gender = "masculine",
+	NameTypes = {"person"}
+})
+
 DefineLanguageWord("God", {
 	Language = "english",
 	Type = "noun",
@@ -391,7 +504,8 @@ DefineLanguageWord("God", {
 	Gender = "masculine",
 	NumberCaseInflections = {
 		"plural", "nominative", "Gods"
-	}
+	},
+	AffixNameTypes = {"compound", "prefix", "singular", "person"} -- example: "Godfrey"
 })
 
 DefineLanguageWord("Gold", {
@@ -433,8 +547,7 @@ DefineLanguageWord("Hammer", {
 DefineLanguageWord("Hard", {
 	Language = "english",
 	Type = "adjective",
-	Meanings = {"Hard"},
-	AffixNameTypes = {"compound", "suffix", "singular", "person"} -- example: "Richard"
+	Meanings = {"Hard"}
 })
 
 DefineLanguageWord("Hards", {
@@ -443,6 +556,30 @@ DefineLanguageWord("Hards", {
 	Meanings = {"Hards", "Coarse Refuse of Flax"},
 	DerivesFrom = {"old-english", "noun", "Heorde"}, -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
 	Uncountable = true
+})
+
+DefineLanguageWord("Harold", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {},
+	Gender = "masculine",
+	NameTypes = {"person"}
+})
+
+DefineLanguageWord("Harrison", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {},
+	Gender = "masculine",
+	NameTypes = {"person"}
+})
+
+DefineLanguageWord("Harry", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {},
+	Gender = "masculine",
+	NameTypes = {"person"}
 })
 
 DefineLanguageWord("Haven", {
@@ -541,6 +678,14 @@ DefineLanguageWord("Iron", {
 	AffixNameTypes = {"separate", "prefix", "singular", "unit-class-smithy"} -- seems sensible
 })
 
+DefineLanguageWord("Jack", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {},
+	Gender = "masculine",
+	NameTypes = {"person"}
+})
+
 DefineLanguageWord("James", {
 	Language = "english",
 	Type = "noun",
@@ -550,6 +695,22 @@ DefineLanguageWord("James", {
 })
 
 DefineLanguageWord("John", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {},
+	Gender = "masculine",
+	NameTypes = {"person"}
+})
+
+DefineLanguageWord("Joseph", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {},
+	Gender = "masculine",
+	NameTypes = {"person"}
+})
+
+DefineLanguageWord("Kenneth", {
 	Language = "english",
 	Type = "noun",
 	Meanings = {},
@@ -611,6 +772,38 @@ DefineLanguageWord("Mail", {
 	AffixNameTypes = {"separate", "suffix", "singular", "unit-class-smithy"} -- seems sensible
 })
 
+DefineLanguageWord("Malcolm", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {},
+	Gender = "masculine",
+	NameTypes = {"person"}
+})
+
+DefineLanguageWord("Mark", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {},
+	Gender = "masculine",
+	NameTypes = {"person"}
+})
+
+DefineLanguageWord("Matthew", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {},
+	Gender = "masculine",
+	NameTypes = {"person"}
+})
+
+DefineLanguageWord("Michael", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {},
+	Gender = "masculine",
+	NameTypes = {"person"}
+})
+
 DefineLanguageWord("Middle", {
 	Language = "english",
 	Type = "noun",
@@ -625,6 +818,14 @@ DefineLanguageWord("Mouth", {
 	Meanings = {"Mouth"},
 	Gender = "neuter",
 	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- examples: "Plymouth", "Portsmouth"
+})
+
+DefineLanguageWord("Nathan", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {},
+	Gender = "masculine",
+	NameTypes = {"person"}
 })
 
 DefineLanguageWord("New", {
@@ -669,6 +870,14 @@ DefineLanguageWord("North", {
 	DerivesFrom = {"old-english", "adverb", "Norþ"} -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 152.
 })
 
+DefineLanguageWord("Oliver", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {},
+	Gender = "masculine",
+	NameTypes = {"person"}
+})
+
 DefineLanguageWord("Ox", {
 	Language = "english",
 	Type = "noun",
@@ -678,6 +887,14 @@ DefineLanguageWord("Ox", {
 })
 
 DefineLanguageWord("Peter", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {},
+	Gender = "masculine",
+	NameTypes = {"person"}
+})
+
+DefineLanguageWord("Philip", {
 	Language = "english",
 	Type = "noun",
 	Meanings = {},
@@ -751,6 +968,14 @@ DefineLanguageWord("Rich", {
 	AffixNameTypes = {"compound", "prefix", "singular", "person"} -- example: "Richard"
 })
 
+DefineLanguageWord("Robert", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {},
+	Gender = "masculine",
+	NameTypes = {"person"}
+})
+
 DefineLanguageWord("Rusty", {
 	Language = "english",
 	Type = "adjective",
@@ -779,6 +1004,14 @@ DefineLanguageWord("Sea", {
 	Meanings = {"Sea"},
 	Gender = "neuter",
 	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- example: "Swansea"; Source: "Philip's International School Atlas", 2006, p. 64.
+})
+
+DefineLanguageWord("Sebastian", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {},
+	Gender = "masculine",
+	NameTypes = {"person"}
 })
 
 DefineLanguageWord("Sex", {
@@ -891,6 +1124,14 @@ DefineLanguageWord("Stead", {
 	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- example: "Hempstead"; Source: "Philip's International School Atlas", 2006, p. 64.
 })
 
+DefineLanguageWord("Stephen", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {},
+	Gender = "masculine",
+	NameTypes = {"person"}
+})
+
 DefineLanguageWord("Stone", {
 	Language = "english",
 	Type = "noun",
@@ -939,6 +1180,22 @@ DefineLanguageWord("The", {
 	Dative = "The",
 	Genitive = "The",
 	Definite = true
+})
+
+DefineLanguageWord("Theodore", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {},
+	Gender = "masculine",
+	NameTypes = {"person"}
+})
+
+DefineLanguageWord("Thomas", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {},
+	Gender = "masculine",
+	NameTypes = {"person"}
 })
 
 DefineLanguageWord("Tor", {
