@@ -649,7 +649,7 @@ DefineLanguageWord("Hammer", {
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"Hammer"},
-	DerivesFrom = {"proto-germanic", "noun", "Hamara"},
+	DerivesFrom = {"old-high-german", "noun", "Hamar"}, -- presumably; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 46.
 	NumberCaseInflections = {
 		"singular", "genitive", "Hammers",
 		"plural", "nominative", "Hämmer",
@@ -1376,6 +1376,19 @@ DefineLanguageWord("Stadt", {
 	},
 	Gender = "feminine",
 	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- examples: "Darmstadt", "Eisenstadt", "Josefstadt", "Kronstadt", "Leopoldstadt"
+})
+
+DefineLanguageWord("Stein", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"Stone"},
+	Gender = "masculine"
+})
+
+DefineLanguageWord("Steinern", {
+	Language = "high-german",
+	Type = "adjective",
+	Meanings = {"Stone"}
 })
 
 DefineLanguageWord("Stuhl", {

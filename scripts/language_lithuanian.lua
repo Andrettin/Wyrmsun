@@ -25,6 +25,13 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineLanguageWord("Akmů̃", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 46.
+	Language = "lithuanian",
+	Type = "noun",
+	Meanings = {"Stone"}, -- source gives the German "Stein" as the meaning
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Aslà", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 20.
 	Language = "lithuanian",
 	Type = "noun",

@@ -482,6 +482,14 @@ DefineLanguageWord("Hafr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Meanings = {"Male Goat"}
 })
 
+DefineLanguageWord("Hamarr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 46.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Hammer", "Mining Hammer"}, -- source gives the German "Hammer, Berghammer" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Hamara"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Hane", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "old-norse",
 	Type = "noun",

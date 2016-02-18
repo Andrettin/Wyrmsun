@@ -405,6 +405,14 @@ DefineLanguageWord("Hād", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Meanings = {"Hair"}
 })
 
+DefineLanguageWord("Hamor", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 46.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Hammer"}, -- source gives the German "Hammer" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Hamara"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Hearpestre", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, pp. 77-78.
 	Language = "old-english",
 	Type = "noun",

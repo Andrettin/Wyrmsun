@@ -551,10 +551,11 @@ DefineLanguageWord("Hammer", {
 	Language = "english",
 	Type = "noun",
 	Meanings = {"Hammer"},
+	DerivesFrom = {"old-english", "noun", "Hamor"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 46.
+	Gender = "neuter",
 	NumberCaseInflections = {
 		"plural", "nominative", "Hammers"
 	},
-	Gender = "neuter",
 	AffixNameTypes = {"separate", "suffix", "singular", "unit-class-smithy"} -- seems sensible
 })
 
@@ -1166,6 +1167,13 @@ DefineLanguageWord("Stone", {
 		"compound", "prefix", "singular", "settlement", -- example: "Stonehaven"; Source: "Philip's International School Atlas", 2006, p. 64.
 		"compound", "suffix", "singular", "settlement" -- example: "Maidstone"; Source: "Philip's International School Atlas", 2006, p. 64.
 	}
+})
+
+DefineLanguageWord("Stone", {
+	Language = "english",
+	Type = "adjective",
+	Meanings = {"Stone"},
+	AffixNameTypes = {"separate", "prefix", "singular", "unit-class-smithy"} -- seems sensible
 })
 
 DefineLanguageWord("Suf", {

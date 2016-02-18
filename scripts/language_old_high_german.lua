@@ -322,6 +322,14 @@ DefineLanguageWord("Hagazussa", { -- Source: Alaric Hall, "The Meanings of Elf a
 	}
 })
 
+DefineLanguageWord("Hamar", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 46.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Hammer"}, -- source gives the German "Hammer" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Hamara"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Herd", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 46.
 	Language = "old-high-german",
 	Type = "noun",

@@ -41,6 +41,12 @@ DefineLanguageWord("Abydus", { -- should be written as the original Greek name (
 	NameTypes = {"settlement"} -- example: "Abydus"
 })
 
+DefineLanguageWord("Ἄχμων", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 46.
+	Language = "greek",
+	Type = "noun",
+	Meanings = {"Anvil"} -- source gives the German "Ambos" (sic) as the meaning
+})
+
 DefineLanguageWord("Acragas", { -- should be written as the original Greek name (with Greek characters)
 	Language = "greek",
 	Type = "noun",

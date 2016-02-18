@@ -25,6 +25,18 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineLanguageWord("Áçman", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 46.
+	Language = "sanskrit",
+	Type = "noun",
+	Meanings = {"Stone"} -- source gives the German "Stein" as the meaning
+})
+
+DefineLanguageWord("Acmará", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 46.
+	Language = "sanskrit",
+	Type = "adjective",
+	Meanings = {"Stone"} -- source gives the German "steinern" as the meaning
+})
+
 DefineLanguageWord("Áśvas", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 	Language = "sanskrit",
 	Type = "noun",

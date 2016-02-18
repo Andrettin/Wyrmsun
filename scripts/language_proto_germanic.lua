@@ -427,7 +427,7 @@ DefineLanguageWord("Haima", { -- Source: August Fick and Alf Torp, "Wortschatz d
 DefineLanguageWord("Hamara", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 46.
 	Language = "proto-germanic",
 	Type = "noun",
-	Meanings = {"Stone", "Hammer"}, -- source gives the German "Stein, Hammer"
+	Meanings = {"Stone", "Hammer"}, -- source gives the German "Stein, Hammer" as the meaning
 	Gender = "masculine"
 })
 

@@ -161,6 +161,14 @@ DefineLanguageWord("Gold", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	DerivesFrom = {"proto-germanic", "noun", "Gulþa"}
 })
 
+DefineLanguageWord("Hamur", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 46.
+	Language = "old-saxon",
+	Type = "noun",
+	Meanings = {"Hammer"}, -- source gives the German "Hammer" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Hamara"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Herta", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
 	Language = "old-saxon",
 	Type = "noun",

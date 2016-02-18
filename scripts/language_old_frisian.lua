@@ -108,6 +108,14 @@ DefineLanguageWord("Herth", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Homer", { -- source also gives the alternative form "hamer"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 46.
+	Language = "old-frisian",
+	Type = "noun",
+	Meanings = {"Hammer"}, -- source gives the German "Hammer" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Hamara"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Lâd", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 181.
 	Language = "old-frisian",
 	Type = "noun",
