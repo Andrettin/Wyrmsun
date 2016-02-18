@@ -33,6 +33,23 @@ DefineLanguageWord("Adal", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Alt", { -- source also gives the alternative form "altêr" (or is that the comparative?); Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 19.
+	Language = "old-high-german",
+	Type = "adjective",
+	Meanings = {"Old"}, -- source gives the German "alt" as the meaning
+	DerivesFrom = {"proto-germanic", "adjective", "Alda"}
+})
+
+DefineLanguageWord("Altiron", { -- this is the plural; source also gives the alternative form "Eltiron"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 19.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Parents"}, -- source gives the German "Eltern" as the meaning
+	DerivesFrom = {"proto-germanic", "adjective", "Alda"},
+	NumberCaseInflections = {
+		"plural", "nominative", "Altiron"
+	}
+})
+
 DefineLanguageWord("Bad", { -- source also gives the alternative form "Pad"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 133.
 	Language = "old-high-german",
 	Type = "noun",

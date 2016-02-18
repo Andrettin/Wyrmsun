@@ -56,6 +56,21 @@ DefineLanguageWord("Af", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Ge
 	DerivesFrom = {"proto-germanic", "adposition", "Af"}
 })
 
+DefineLanguageWord("Ala", { -- source also gives the alternative form "Ôl"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 19.
+	Language = "old-norse",
+	Type = "verb",
+	Meanings = {"Bring Forth", "Procreate", "Feed"}, -- source gives the German "hervorbringen, zeugen, füttern" as the meaning
+	DerivesFrom = {"proto-germanic", "verb", "Al"}
+})
+
+DefineLanguageWord("Aldin", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 19.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Beechnut"}, -- source gives the German "Ecker" as the meaning
+	DerivesFrom = {"proto-germanic", "verb", "Al"}, -- comes from the participle past of "Al", "Alda"
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Aldr", { -- Source: Geir T. Zoëga, "A Concise Dictionary of Old Icelandic", 1910, p. 8.
 	Language = "old-norse",
 	Type = "noun",
@@ -82,6 +97,17 @@ DefineLanguageWord("Alfr", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	NumberCaseInflections = {
 		"plural", "nominative", "Alfar"
 	}
+})
+
+DefineLanguageWord("Ali", { -- this is the participle; source gives "ali(þ)"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 19.
+	Language = "old-norse",
+	Type = "verb",
+	Meanings = {},
+	DerivesFrom = {"proto-germanic", "verb", "Al"},
+	Participles = {
+		"present", "Ali"
+	}
+	-- appears in ali-svîn
 })
 
 DefineLanguageWord("Ār", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
@@ -279,6 +305,24 @@ DefineLanguageWord("Eir", { -- Source: August Fick and Alf Torp, "Wortschatz der
 	Meanings = {"Ore", "Copper"}, -- source gives the German "Erz, Kupfer" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Aiza"},
 	Gender = "neuter"
+})
+
+DefineLanguageWord("Eldast", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 19.
+	Language = "old-norse",
+	Type = "verb",
+	Meanings = {"Grow Old"}, -- source gives the German "alt werden" as the meaning
+	DerivesFrom = {"proto-germanic", "adjective", "Alda"}
+})
+
+DefineLanguageWord("Ellri", { -- this is the comparative; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 19.
+	Language = "old-norse",
+	Type = "adjective",
+	Meanings = {"Older"}, -- source gives the German "älter" as the meaning
+	DerivesFrom = {"proto-germanic", "adjective", "Alda"},
+	ComparisonDegreeInflections = {
+		"comparative", "Ellri", -- source gives the German "älter" as the meaning
+		"superlative", "Elztr" -- source gives the German "ältest" as the meaning
+	}
 })
 
 DefineLanguageWord("Eta", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.

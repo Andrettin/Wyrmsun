@@ -25,6 +25,13 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineLanguageWord("Ald", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 19.
+	Language = "old-saxon",
+	Type = "adjective",
+	Meanings = {"Old"}, -- source gives the German "alt" as the meaning
+	DerivesFrom = {"proto-germanic", "adjective", "Alda"}
+})
+
 DefineLanguageWord("Athal", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 14.
 	Language = "old-saxon",
 	Type = "noun",

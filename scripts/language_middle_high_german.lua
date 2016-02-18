@@ -44,6 +44,23 @@ DefineLanguageWord("Alp", { -- Source: August Fick and Alf Torp, "Wortschatz der
 	}
 })
 
+DefineLanguageWord("Alt", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 19.
+	Language = "middle-high-german",
+	Type = "adjective",
+	Meanings = {"Old"}, -- source gives the German "alt" as the meaning
+	DerivesFrom = {"old-high-german", "adjective", "Alt"}
+})
+
+DefineLanguageWord("Altern", { -- this is the plural; source also gives the alternative form "Eltern"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 19.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Parents"}, -- source gives the German "Eltern" as the meaning
+	DerivesFrom = {"old-high-german", "noun", "Altiron"},
+	NumberCaseInflections = {
+		"plural", "nominative", "Altern"
+	}
+})
+
 DefineLanguageWord("Bach", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 133.
 	Language = "middle-high-german",
 	Type = "noun",

@@ -33,6 +33,13 @@ DefineLanguageWord("Bradd", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Elja", { -- vernacular; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 19.
+	Language = "norwegian",
+	Type = "verb",
+	Meanings = {},
+	DerivesFrom = {"old-norse", "verb", "Ali"}
+})
+
 DefineLanguageWord("Esja", { -- vernacular; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 20.
 	Language = "norwegian",
 	Type = "noun",

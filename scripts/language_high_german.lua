@@ -85,6 +85,7 @@ DefineLanguageWord("Alt", {
 	Language = "high-german",
 	Type = "adjective",
 	Meanings = {"Old"},
+	DerivesFrom = {"middle-high-german", "adjective", "Alt"},
 	AffixNameTypes = {"compound", "prefix", "singular", "settlement"} -- example: "Altsohl"
 })
 
@@ -394,6 +395,16 @@ DefineLanguageWord("Eisern", {
 	Type = "adjective",
 	Meanings = {"Iron"},
 	DerivesFrom = {"middle-high-german", "noun", "Îsern"} -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 24.
+})
+
+DefineLanguageWord("Eltern", { -- this is the plural
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"Parents"},
+	DerivesFrom = {"middle-high-german", "noun", "Altern"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 19.
+	NumberCaseInflections = {
+		"plural", "nominative", "Eltern"
+	}
 })
 
 DefineLanguageWord("Ernst", {

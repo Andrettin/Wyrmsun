@@ -46,10 +46,29 @@ DefineLanguageWord("Aiza", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Gender = "neuter"
 })
 
+DefineLanguageWord("Al", { -- source also gives the alternative forms "Alan", "Ôl" and "Alana"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 19.
+	Language = "proto-germanic",
+	Type = "verb",
+	Meanings = {"Feed"}, -- source gives the Latin "alere" as the meaning
+	Participles = {
+		"past", "Alda"
+	}
+})
+
 DefineLanguageWord("Alba", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 20.
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Elf"} -- source gives the German "Alb, Elf" as the meaning
+})
+
+DefineLanguageWord("Alda", { -- source also gives the alternative form "Alþia"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 19.
+	Language = "proto-germanic",
+	Type = "adjective",
+	Meanings = {"Old"}, -- source gives the German "alt" as the meaning
+	ComparisonDegreeInflections = {
+		"comparative", "Alþizan",
+		"superlative", "Alþista"
+	}
 })
 
 DefineLanguageWord("Ansu", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 16.
@@ -739,6 +758,12 @@ DefineLanguageWord("Vesta", { -- source also gives the alternative form "Vestra"
 	DerivesFrom = {"proto-indo-european", "adverb", "Ve"}
 })
 
+DefineLanguageWord("Vîha", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 206.
+	Language = "proto-germanic",
+	Type = "adjective",
+	Meanings = {"Holy"}
+})
+
 DefineLanguageWord("Vîhsa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 206.
 	Language = "proto-germanic",
 	Type = "noun",
@@ -927,12 +952,6 @@ DefineLanguageWord("Þrsúz", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Language = "proto-germanic",
 	Type = "adjective",
 	Meanings = {"Dry"}
-})
-
-DefineLanguageWord("Vîha", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 206.
-	Language = "proto-germanic",
-	Type = "adjective",
-	Meanings = {"Holy"}
 })
 
 DefineLanguageWord("Χwat", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.

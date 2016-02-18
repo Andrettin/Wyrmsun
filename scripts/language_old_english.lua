@@ -203,6 +203,17 @@ DefineLanguageWord("Duru", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	DerivesFrom = {"proto-germanic", "noun", "Durez"}
 })
 
+DefineLanguageWord("Eald", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 19.
+	Language = "old-english",
+	Type = "adjective",
+	Meanings = {"Old"}, -- source gives the German "alt" as the meaning
+	DerivesFrom = {"proto-germanic", "adjective", "Alda"},
+	ComparisonDegreeInflections = {
+		"comparative", "Ieldra",
+		"superlative", "Ieldest"
+	}
+})
+
 DefineLanguageWord("Ealdorneru", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "old-english",
 	Type = "noun",
@@ -464,6 +475,16 @@ DefineLanguageWord("Hund", { -- Source: Richard M. Runge, "The Phonetic Realizat
 	Language = "old-english",
 	Type = "noun",
 	Meanings = {"Dog"}
+})
+
+DefineLanguageWord("Ieldran", { -- this is the plural; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 19.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Parents"}, -- source gives the German "Eltern" as the meaning
+	DerivesFrom = {"proto-germanic", "adjective", "Alda"},
+	NumberCaseInflections = {
+		"plural", "nominative", "Ieldran"
+	}
 })
 
 DefineLanguageWord("Îsern", { -- source also gives the alternative form "Îsen" and "Îren"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 24.

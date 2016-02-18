@@ -870,6 +870,17 @@ DefineLanguageWord("North", {
 	DerivesFrom = {"old-english", "adverb", "Norþ"} -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 152.
 })
 
+DefineLanguageWord("Old", {
+	Language = "english",
+	Type = "adjective",
+	Meanings = {"Old"},
+	DerivesFrom = {"old-english", "adjective", "Eald"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 19.
+	ComparisonDegreeInflections = {
+		"comparative", "Older",
+		"superlative", "Oldest"
+	}
+})
+
 DefineLanguageWord("Oliver", {
 	Language = "english",
 	Type = "noun",

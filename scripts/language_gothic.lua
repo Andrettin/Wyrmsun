@@ -73,6 +73,30 @@ DefineLanguageWord("Aiz", { -- Source: Richard M. Runge, "The Phonetic Realizati
 	Meanings = {"Bronze"}
 })
 
+DefineLanguageWord("Alan", { -- source also gives the alternative forms "Ôl" and "Alans"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 19.
+	Language = "gothic",
+	Type = "verb",
+	Meanings = {"Grow Up", "Nourish Oneself"}, -- source gives the German "aufwachsen, sich nähren" as the meaning
+	DerivesFrom = {"proto-germanic", "verb", "Al"}
+})
+
+DefineLanguageWord("Aljan", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 19.
+	Language = "gothic",
+	Type = "verb",
+	Meanings = {"Pull Up", "Fatten"}, -- source gives the German "aufziehen, mästen" as the meaning
+	DerivesFrom = {"proto-germanic", "verb", "Al"},
+	Participles = {
+		"present", "Aliþs"
+	}
+})
+
+DefineLanguageWord("Alþeis", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 19.
+	Language = "gothic",
+	Type = "adjective",
+	Meanings = {"Old"}, -- source gives the German "alt" as the meaning
+	DerivesFrom = {"proto-germanic", "adjective", "Alda"}
+})
+
 DefineLanguageWord("Aufto", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
 	Language = "gothic",
 	Type = "adverb",
