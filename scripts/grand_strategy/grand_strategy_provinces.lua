@@ -1251,7 +1251,8 @@ function LoadProvinces(world)
 		EastFriesland = { -- also includes Osnabrück
 			Name = "East Friesland",
 			CulturalNames = {
-				teuton = "East Friesland"
+				teuton = "East Friesland",
+				FrisianTribe = "East Friesland"
 			},
 			Tiles = {
 				{500, 103}, {500, 104}, {500, 105}, {500, 106},

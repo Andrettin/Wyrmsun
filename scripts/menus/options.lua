@@ -201,7 +201,7 @@ function AddPreferences(menu, offx, offy, centerx, bottom)
   --]]
 
   local ckey = {}
-  ckey = menu:addImageCheckBox("Show Hotkey", offx + 16, offy + 26 * 1,
+  ckey = menu:addImageCheckBox("Show Hotkeys", offx + 16, offy + 26 * 1,
     function() UI.ButtonPanel.ShowCommandKey = ckey:isMarked() end)
   ckey:setMarked(UI.ButtonPanel.ShowCommandKey)
   ckey:adjustSize()
