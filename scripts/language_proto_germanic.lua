@@ -177,11 +177,25 @@ DefineLanguageWord("Bōks", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Meanings = {"Tablet"}
 })
 
+DefineLanguageWord("Brannian", { -- causative; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
+	Language = "proto-germanic",
+	Type = "verb",
+	Meanings = {"Burn"}, -- source gives the German "brennen" as the meaning
+	DerivesFrom = {"proto-indo-european", "verb", "Bhrenvō"}
+})
+
 DefineLanguageWord("Brazda", { -- source also gives the alternative form "Brezda"; Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Edge"},
 	Gender = "masculine"
+})
+
+DefineLanguageWord("Brennan", { -- source also gives the alternative forms "Brann", "Brunnum" and "Brunnana"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
+	Language = "proto-germanic",
+	Type = "verb",
+	Meanings = {"Burn"}, -- source gives the German "brennen" as the meaning
+	DerivesFrom = {"proto-indo-european", "verb", "Bhrenvō"}
 })
 
 DefineLanguageWord("Brōþar", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.

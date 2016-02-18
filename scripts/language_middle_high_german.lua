@@ -112,6 +112,20 @@ DefineLanguageWord("Bluost", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Gender = "feminine"
 })
 
+DefineLanguageWord("Brennen", { -- causative; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
+	Language = "middle-high-german",
+	Type = "verb",
+	Meanings = {"Burn"}, -- source gives the German "brennen" as the meaning
+	DerivesFrom = {"old-high-german", "verb", "Brennen"}
+})
+
+DefineLanguageWord("Brinnen", { -- strong verb; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
+	Language = "middle-high-german",
+	Type = "verb",
+	Meanings = {"Burn", "Glow"}, -- source gives the German "brennen, glühen" as the meaning
+	DerivesFrom = {"old-high-german", "verb", "Brinnan"}
+})
+
 DefineLanguageWord("Brort", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "middle-high-german",
 	Type = "noun",

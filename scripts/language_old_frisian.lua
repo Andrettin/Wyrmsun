@@ -40,6 +40,13 @@ DefineLanguageWord("Berch", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Berna", { -- strong verb; source also gives the alternative form "barna"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
+	Language = "old-frisian",
+	Type = "verb",
+	Meanings = {"Burn"}, -- presumably from the source
+	DerivesFrom = {"proto-germanic", "verb", "Brennan"}
+})
+
 DefineLanguageWord("Beth", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 133.
 	Language = "old-frisian",
 	Type = "noun",

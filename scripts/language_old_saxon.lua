@@ -80,6 +80,13 @@ DefineLanguageWord("Blômo", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Brinnan", { -- strong verb; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
+	Language = "old-saxon",
+	Type = "verb",
+	Meanings = {"Burn"}, -- presumably from the source
+	DerivesFrom = {"proto-germanic", "verb", "Brennan"}
+})
+
 DefineLanguageWord("Bruggia", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 145.
 	Language = "old-saxon",
 	Type = "noun",

@@ -234,6 +234,20 @@ DefineLanguageWord("Burn", {
 	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- example: "Blackburn"; Source: "Philip's International School Atlas", 2006, p. 64.
 })
 
+DefineLanguageWord("Burn", { 
+	Language = "english",
+	Type = "verb",
+	Meanings = {"Burn"},
+	DerivesFrom = {"old-english", "verb", "Beornan"} -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
+})
+
+DefineLanguageWord("Burning", { 
+	Language = "english",
+	Type = "adjective",
+	Meanings = {"Burning"},
+	DerivesFrom = {"old-english", "verb", "Beornan"} -- presumably, since the verb "Burn" does
+})
+
 DefineLanguageWord("Bury", {
 	Language = "english",
 	Type = "noun",

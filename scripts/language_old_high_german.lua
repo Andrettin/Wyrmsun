@@ -109,6 +109,20 @@ DefineLanguageWord("Brart", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Brennen", { -- causative; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
+	Language = "old-high-german",
+	Type = "verb",
+	Meanings = {"Burn"}, -- source gives the German "brennen" as the meaning
+	DerivesFrom = {"proto-germanic", "verb", "Brannian"}
+})
+
+DefineLanguageWord("Brinnan", { -- strong verb; source also gives the alternative form "prinnan"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
+	Language = "old-high-german",
+	Type = "verb",
+	Meanings = {"Burn", "Glow"}, -- source gives the German "brennen, glühen" as the meaning
+	DerivesFrom = {"proto-germanic", "verb", "Brennan"}
+})
+
 DefineLanguageWord("Brort", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 9.
 	Language = "old-high-german",
 	Type = "noun",

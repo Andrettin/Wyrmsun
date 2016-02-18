@@ -158,6 +158,13 @@ DefineLanguageWord("Ferō", { -- this is the singular first person present; Sour
 	}
 })
 
+DefineLanguageWord("Ferveo", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
+	Language = "latin",
+	Type = "verb", -- correct?
+	Meanings = {},
+	DerivesFrom = {"proto-indo-european", "verb", "Bhrenvō"}
+})
+
 DefineLanguageWord("Foris", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "latin",
 	Type = "noun",

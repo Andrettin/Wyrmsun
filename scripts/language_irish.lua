@@ -37,6 +37,13 @@ DefineLanguageWord("Atgleinn", { -- Source: August Fick and Alf Torp, "Wortschat
 	Meanings = {"Show"} -- source gives the Latin (?) "demonstrat" as the meaning
 })
 
+DefineLanguageWord("Brennim", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
+	Language = "irish",
+	Type = "verb", -- correct?
+	Meanings = {}, -- source gives the German (?) "sprudle" as the meaning
+	DerivesFrom = {"proto-indo-european", "verb", "Bhrenvō"}
+})
+
 DefineLanguageWord("Bri", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
 	Language = "irish",
 	Type = "noun",

@@ -228,10 +228,18 @@ DefineLanguageWord("Blume", { -- Source: http://www.duden.de/rechtschreibung/Blu
 	AffixNameTypes = {"compound", "prefix", "plural", "settlement"} -- example: "Blumenau"
 })
 
+DefineLanguageWord("Brennen", {
+	Language = "high-german",
+	Type = "verb",
+	Meanings = {"Burn"},
+	DerivesFrom = {"middle-high-german", "verb", "Brennen"} -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
+})
+
 DefineLanguageWord("Brennend", {
 	Language = "high-german",
 	Type = "adjective",
-	Meanings = {"Burning"}
+	Meanings = {"Burning"},
+	DerivesFrom = {"middle-high-german", "verb", "Brennen"} -- presumably, since the verb "Brennen" comes from this word
 })
 
 DefineLanguageWord("Bronze", {

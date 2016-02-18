@@ -247,6 +247,20 @@ DefineLanguageWord("Bǫrr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Meanings = {"Wheat", "Spelt"} -- the word means one of these, not both
 })
 
+DefineLanguageWord("Brenna", { -- causative; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
+	Language = "old-norse",
+	Type = "verb",
+	Meanings = {"Burn"}, -- source gives the German "brennen" as the meaning
+	DerivesFrom = {"proto-germanic", "verb", "Brannian"}
+})
+
+DefineLanguageWord("Brinna", { -- strong verb; source also gives the alternative form "Brenna"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
+	Language = "old-norse",
+	Type = "verb",
+	Meanings = {"Burn"}, -- source gives the German "brennen" as the meaning
+	DerivesFrom = {"proto-germanic", "verb", "Brennan"}
+})
+
 DefineLanguageWord("Broddr", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 9.
 	Language = "old-norse",
 	Type = "noun",

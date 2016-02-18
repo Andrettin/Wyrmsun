@@ -152,6 +152,20 @@ DefineLanguageWord("Bōka", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	DerivesFrom = {"proto-germanic", "noun", "Bōks"}
 })
 
+DefineLanguageWord("Brannjan", { -- causative; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
+	Language = "gothic",
+	Type = "verb",
+	Meanings = {"Burn"}, -- source gives the German "brennen" as the meaning
+	DerivesFrom = {"proto-germanic", "verb", "Brannian"}
+})
+
+DefineLanguageWord("Brinnan", { -- strong verb; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
+	Language = "gothic",
+	Type = "verb",
+	Meanings = {"Burn"}, -- source gives the German "brennen" as the meaning
+	DerivesFrom = {"proto-germanic", "verb", "Brennan"}
+})
+
 DefineLanguageWord("Dags", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
 	Language = "gothic",
 	Type = "noun",

@@ -81,6 +81,7 @@ DefineFaction("Ampsivarii Tribe", {
 DefineFaction("Angle Tribe", {
 	Civilization = "teuton",
 	Type = "tribe",
+	Language = "old-english",
 	Colors = {"white"},
 	DevelopsTo = {"England", "Scotland"},
 	FactionUpgrade = "upgrade-angle-tribe-faction"

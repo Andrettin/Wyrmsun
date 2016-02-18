@@ -65,6 +65,13 @@ DefineLanguageWord("Âr", { -- source also gives the alternative form "Æ̂r" (w
 	Gender = "neuter"
 })
 
+DefineLanguageWord("Bærnan", { -- causative; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
+	Language = "old-english",
+	Type = "verb",
+	Meanings = {"Burn"}, -- source gives the German "brennen" as the meaning
+	DerivesFrom = {"proto-germanic", "verb", "Brannian"}
+})
+
 DefineLanguageWord("Bæþ", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 133.
 	Language = "old-english",
 	Type = "noun",
@@ -93,6 +100,13 @@ DefineLanguageWord("Beorg", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Meanings = {"Mountain", "Hill", "Grave Mound"}, -- source gives "Berg, Hügel, Grabhügel" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Berga"},
 	Gender = "masculine"
+})
+
+DefineLanguageWord("Beornan", { -- strong verb; source also gives the alternative form "biernan"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
+	Language = "old-english",
+	Type = "verb",
+	Meanings = {"Burn"}, -- presumably from the source
+	DerivesFrom = {"proto-germanic", "verb", "Brennan"}
 })
 
 DefineLanguageWord("Bera", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
