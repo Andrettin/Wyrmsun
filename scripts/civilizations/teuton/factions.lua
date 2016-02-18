@@ -28,6 +28,7 @@
 DefineFaction("Suebi Tribe", {
 	Civilization = "teuton",
 	Type = "tribe",
+	Language = "old-high-german",
 	Colors = {"black"},
 	DefaultTier = "duchy",
 	DevelopsTo = {"Galicia", "Bavaria", "Austria"},
@@ -54,6 +55,7 @@ DefineFaction("Saxon Tribe", {
 DefineFaction("Thuringian Tribe", {
 	Civilization = "teuton",
 	Type = "tribe",
+	Language = "old-high-german",
 	Colors = {"green"},
 	FactionUpgrade = "upgrade-thuringian-tribe-faction"
 })
@@ -62,6 +64,7 @@ DefineFaction("Alamanni Tribe", {
 	Civilization = "teuton",
 --	ParentFaction = "Suebi Tribe",
 	Type = "tribe",
+	Language = "old-high-german",
 	Colors = {"blue"},
 	DevelopsTo = {"Baden", "Swabia", "Switzerland", "Wurtemberg"},
 	FactionUpgrade = "upgrade-alamanni-tribe-faction"
@@ -190,6 +193,7 @@ DefineFaction("Bavarian Tribe", {
 	Civilization = "teuton",
 --	ParentFaction = "Marcomanni Tribe",
 	Type = "tribe",
+	Language = "old-high-german",
 	Colors = {"cyan", "white"},
 	DevelopsTo = {"Bavaria", "Austria"},
 	FactionUpgrade = "upgrade-bavarian-tribe-faction"
@@ -233,6 +237,7 @@ DefineFaction("Bavaria", {
 	Civilization = "teuton",
 	ParentFaction = "Bavarian Tribe",
 	Type = "polity",
+	Language = "high-german",
 	Colors = {"cyan", "white"},
 	DefaultTier = "duchy", -- Bavaria was a duchy in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 	Titles = {
@@ -259,6 +264,7 @@ DefineFaction("Saxony", {
 DefineFaction("Swabia", {
 	Civilization = "teuton",
 	ParentFaction = "Alamanni Tribe",
+	Language = "high-german",
 	Type = "polity",
 	Colors = {"orange"},
 	DefaultTier = "duchy", -- Swabia was a duchy in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
