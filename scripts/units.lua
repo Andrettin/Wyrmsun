@@ -60,6 +60,7 @@ Units = {
 	"unit-dwarven-miner", "unit-dwarven-militia",
 	"unit-brising-miner", "unit-brising-militia",
 	"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
+	"unit-dwarven-guard",
 	"unit-dwarven-scout", "unit-dwarven-pathfinder",
 	"unit-dwarven-yale-rider", "unit-dwarven-ballista",
 	"unit-dwarven-gryphon-rider",

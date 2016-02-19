@@ -359,7 +359,7 @@ DefineLanguageWord("Gastiz", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Type = "noun",
 	Meanings = {"Guest"},
 	Gender = "masculine",
-	AffixNameTypes = {"compound", "suffix", "singular", "person"} -- examples: "Hlewagastiz", "Holtagastiz"
+	AffixNameTypes = {"compound", "suffix", "singular", "person"} -- examples: "Hlewagastiz", "Holtagastiz" (the latter needs confirmation from a source; the source I got it from I have lost the reference to)
 })
 
 DefineLanguageWord("Gavja", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 68.

@@ -41,6 +41,7 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-boots",
 	Key = "m", Hint = _("~!Move"), Popup = "popup-commands",
 	ForUnit = {
 		"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
+		"unit-dwarven-guard",
 		"unit-dwarven-scout", "unit-dwarven-pathfinder",
 		"unit-dwarven-miner", "unit-dwarven-militia",
 		"unit-brising-miner", "unit-brising-militia",
@@ -68,6 +69,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-shield-1",
 	Key = "s", Hint = _("~!Stop"), Popup = "popup-commands",
 	ForUnit = {
 		"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
+		"unit-dwarven-guard",
 		"unit-dwarven-scout", "unit-dwarven-pathfinder",
 		"unit-dwarven-miner", "unit-dwarven-militia",
 		"unit-brising-miner", "unit-brising-militia",
@@ -90,6 +92,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-shield-2",
 	Key = "s", Hint = _("~!Stop"), Popup = "popup-commands",
 	ForUnit = {
 		"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
+		"unit-dwarven-guard",
 		"unit-dwarven-militia", "unit-brising-militia",
 		"unit-dwarven-yale-rider",
 		"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
@@ -103,6 +106,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-shield-3",
 	Key = "s", Hint = _("~!Stop"), Popup = "popup-commands",
 	ForUnit = {
 		"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
+		"unit-dwarven-guard",
 		"unit-dwarven-militia", "unit-brising-militia",
 		"unit-dwarven-yale-rider",
 		"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
@@ -209,6 +213,7 @@ DefineButton( { Pos = 4, Level = 0, Icon = "icon-dwarven-patrol-land",
 	Key = "p", Hint = _("~!Patrol"), Popup = "popup-commands",
 	ForUnit = {
 		"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
+		"unit-dwarven-guard",
 		"unit-dwarven-militia", "unit-brising-militia",
 		"unit-dwarven-scout", "unit-dwarven-pathfinder",
 		"unit-dwarven-yale-rider",
@@ -226,6 +231,7 @@ DefineButton( { Pos = 5, Level = 0, Icon = "icon-dwarven-stand-ground",
 	Key = "t", Hint = _("S~!tand Ground"), Popup = "popup-commands",
 	ForUnit = {
 		"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
+		"unit-dwarven-guard",
 		"unit-dwarven-militia", "unit-brising-militia",
 		"unit-dwarven-scout", "unit-dwarven-pathfinder",
 		"unit-dwarven-yale-rider",
@@ -369,25 +375,31 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-axefighter",
 	ForUnit = {"unit-dwarven-barracks"}
 } )
 
-DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-scout",
+DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-guard",
+	Action = "train-unit", Value = "unit-dwarven-guard",
+	Key = "g", Hint = _("Train ~!Guard"), Popup = "popup-unit",
+	ForUnit = {"unit-dwarven-barracks"}
+} )
+
+DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-scout",
 	Action = "train-unit", Value = "unit-dwarven-scout",
 	Key = "s", Hint = _("Train ~!Scout"), Popup = "popup-unit",
 	ForUnit = {"unit-dwarven-barracks", "unit-gnomish-barracks"}
 } )
 
-DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-yale-rider",
+DefineButton( { Pos = 4, Level = 0, Icon = "icon-dwarven-yale-rider",
 	Action = "train-unit", Value = "unit-dwarven-yale-rider",
 	Key = "y", Hint = _("Train ~!Yale Rider"), Popup = "popup-unit",
 	ForUnit = {"unit-dwarven-barracks", "unit-gnomish-barracks"}
 } )
 
-DefineButton( { Pos = 4, Level = 0, Icon = "icon-dwarven-ballista",
+DefineButton( { Pos = 5, Level = 0, Icon = "icon-dwarven-ballista",
 	Action = "train-unit", Value = "unit-dwarven-ballista",
 	Key = "b", Hint = _("Build ~!Ballista"), Popup = "popup-unit",
 	ForUnit = {"unit-dwarven-barracks", "unit-gnomish-barracks"}
 } )
 
-DefineButton( { Pos = 5, Level = 0, Icon = "icon-dwarven-gryphon-rider",
+DefineButton( { Pos = 6, Level = 0, Icon = "icon-dwarven-gryphon-rider",
 	Action = "train-unit", Value = "unit-dwarven-gryphon-rider",
 	Key = "g", Hint = _("Train ~!Gryphon Rider"), Popup = "popup-unit",
 	ForUnit = {"unit-dwarven-barracks", "unit-gnomish-barracks"}

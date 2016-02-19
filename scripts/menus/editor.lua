@@ -51,6 +51,7 @@ editor_types = {
 	"unit-dwarven-axefighter",
 	"unit-dwarven-steelclad",
 	"unit-dwarven-thane",
+	"unit-dwarven-guard",
 	"unit-dwarven-scout",
 	"unit-dwarven-pathfinder",
 	"unit-dwarven-yale-rider",

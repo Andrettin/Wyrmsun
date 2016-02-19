@@ -171,7 +171,7 @@ DefineModifier("upgrade-teuton-spatha",
 	{"BasicDamage", 2},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-suebi-swordsman"}, {"apply-to", "unit-frank-swordsman"},
-	{"apply-to", "unit-teuton-spearman"}, {"apply-to", "unit-frank-spearman"},
+--	{"apply-to", "unit-teuton-spearman"}, {"apply-to", "unit-frank-spearman"},
 	{"apply-to", "unit-teuton-ritter"}, {"apply-to", "unit-frank-horseman"}
 )
 

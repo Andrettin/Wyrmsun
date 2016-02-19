@@ -16,8 +16,7 @@ wyrmsun32
 wyrmsun64
 run.sh
 linux_readme.txt
-wyrmsun_debug.lnk
-wyrmsun_multiplayer.lnk
+*.lnk
 
 ## Content used by Wyrmsun with permission, but which isn't licensed under an open-source license
 graphics/ui/backgrounds/gnashorn.png

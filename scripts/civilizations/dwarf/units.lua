@@ -131,7 +131,7 @@ DefineUnitType("unit-dwarven-axefighter", { Name = _("Axefighter"),
 	Description = _("Dwarven axefighters wield mighty battle axes, which make them feared opponents in close-range combat. Veteran axefighters often use the pay they've managed to spare to purchase steel armor for themselves at the local smithy."),
 	Image = {"file", "dwarf/units/dwarf_body_warrior_shield.png", "size", {72, 72}},
 	LayerImages = {
-		{"layer", "right-arm", "file", "dwarf/units/dwarf_right_arm_warrior.png"},
+		{"layer", "right-arm", "file", "dwarf/units/right_arm_warrior.png"},
 		{"layer", "clothing-right-arm", "file", "dwarf/units/shoulder_pad_right_arm_warrior.png"},
 		{"layer", "clothing-left-arm", "file", "dwarf/units/shoulder_pad_left_arm.png"},
 		{"layer", "weapon", "file", "dwarf/units/axe.png"},
@@ -367,6 +367,71 @@ DefineUnitType("unit-dwarven-thane", { Name = _("Stonelord"),
 		"dead", "basic-dwarf-voices-dead",
 		"hit", "axe-attack",
 		"miss", "attack-miss"
+	}
+} )
+
+DefineUnitType("unit-dwarven-guard", { Name = _("Guard"),
+	Parent = "unit-template-spearman",
+	Civilization = "dwarf",
+	Description = _("Dwarven axefighters wield mighty battle axes, which make them feared opponents in close-range combat. Veteran axefighters often use the pay they've managed to spare to purchase steel armor for themselves at the local smithy."),
+	Image = {"file", "dwarf/units/dwarf_body_warrior_shield.png", "size", {72, 72}},
+	LayerImages = {
+		{"layer", "right-arm", "file", "dwarf/units/right_arm_spear.png"},
+--		{"layer", "clothing-right-arm", "file", "dwarf/units/shoulder_pad_right_arm_warrior.png"},
+--		{"layer", "clothing-left-arm", "file", "dwarf/units/shoulder_pad_left_arm.png"},
+		{"layer", "weapon", "file", "dwarf/units/spear.png"},
+--		{"layer", "shield", "file", "dwarf/units/round_shield.png"}
+	},
+	Animations = "animations-dwarven-axefighter", Icon = "icon-dwarven-guard",
+	Corpse = "unit-dwarven-dead-body",
+	PierceDamage = true,
+	InvertedEastArms = true,
+	InvertedSoutheastArms = true,
+	AiDrops = {"unit-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	DropAffixes = {"upgrade-item-suffix-of-the-snigill"},
+	Variations = {
+		{
+			"variation-id", "red-hair",
+--			"upgrade-forbidden", "upgrade-old"
+		},
+		--[[
+		{
+			"variation-id", "gray-hair",
+			"file", "dwarf/units/dwarven_axefighter_gray_hair.png",
+			"icon", "icon-dwarven-axefighter-gray-hair"
+		},
+		{
+			"variation-id", "orange-hair",
+			"file", "dwarf/units/dwarven_axefighter_orange_hair.png",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"variation-id", "blond-hair",
+			"file", "dwarf/units/dwarven_axefighter_blond_hair.png",
+			"icon", "icon-dwarven-axefighter-blond-hair",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"variation-id", "black-hair",
+			"file", "dwarf/units/dwarven_axefighter_black_hair.png",
+			"icon", "icon-dwarven-axefighter-black-hair",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"variation-id", "brown-hair",
+			"file", "dwarf/units/dwarven_axefighter_brown_hair.png",
+			"icon", "icon-dwarven-axefighter-brown-hair",
+			"upgrade-forbidden", "upgrade-old"
+		}
+		--]]
+	},
+	Sounds = {
+		"selected", "basic-dwarf-voices-selected-group",
+		"acknowledge", "basic-dwarf-voices-acknowledge",
+		"attack", "basic-dwarf-voices-attack",
+--		"ready", "dwarven-axefighter-ready",
+		"help", "basic-dwarf-voices-help",
+		"dead", "basic-dwarf-voices-dead"
 	}
 } )
 

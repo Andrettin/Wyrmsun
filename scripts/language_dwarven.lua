@@ -364,12 +364,12 @@ DefineLanguageWord("Dur", { -- infix used by Wesnoth's dwarven names; not necess
 	}
 })
 
-DefineLanguageWord("Durahn", {
+DefineLanguageWord("Durâhn", {
 	Language = "dwarven",
 	Type = "noun",
 	Meanings = {},
 	Gender = "masculine",
-	NameTypes = {"person"} -- example: "Durahn" (from Dyson Logos' The Tomb of Durâhn Oakenshield)
+	NameTypes = {"person"} -- example: "Durâhn" (from Dyson Logos' The Tomb of Durâhn Oakenshield)
 })
 
 DefineLanguageWord("Durin", {

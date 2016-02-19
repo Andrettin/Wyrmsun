@@ -99,6 +99,7 @@ local land_funcs = {
 	"unit-dwarven-axefighter", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-dwarven-axefighter"),
 	"unit-dwarven-steelclad", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-dwarven-steelclad"),
 	"unit-dwarven-thane", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-dwarven-thane"),
+	"unit-dwarven-guard", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-dwarven-guard"),
 	"unit-dwarven-scout", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-dwarven-scout"),
 	"unit-dwarven-pathfinder", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-dwarven-pathfinder"),
 	"unit-dwarven-yale-rider", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-dwarven-yale-rider"),

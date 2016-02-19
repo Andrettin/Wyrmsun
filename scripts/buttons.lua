@@ -54,6 +54,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-spear",
 	ForUnit = {
 		"unit-goblin-worker", "unit-goblin-thief", "unit-goblin-spearman",
 		"unit-germanic-spearman", "unit-teuton-spearman", "unit-frank-spearman",
+		"unit-dwarven-guard", 
 		"goblin-group"
 	}
 })
@@ -100,6 +101,7 @@ DefineButton( { Pos = 13, Level = 0, Icon = "icon-level-up",
 	Key = "l", Hint = "Choose ~!Level-Up Upgrade", Popup = "popup-commands",
 	ForUnit = {
 		"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
+		"unit-dwarven-guard",
 		"unit-dwarven-scout", "unit-dwarven-pathfinder", "unit-dwarven-gryphon-rider",
 		"unit-dwarven-yale-rider",
 		"unit-germanic-warrior", "unit-germanic-spearman", "unit-germanic-archer",
@@ -163,6 +165,7 @@ DefineButton( { Pos = 4, Level = 1, Icon = "icon-spear-mastery",
 	Key = "p", Hint = "Learn S~!pear Mastery", Popup = "popup-commands",
 	Description = "Spear Mastery is a passive ability that increases damage with spears by 2.",
 	ForUnit = {
+		"unit-dwarven-guard",
 		"unit-goblin-spearman",
 		"unit-germanic-spearman", "unit-teuton-spearman", "unit-frank-spearman"
 	}
@@ -174,6 +177,7 @@ DefineButton( { Pos = 5, Level = 1, Icon = "icon-critical-strike",
 	Description = "Critical Strike is a passive ability that provides a 10% chance to deal double damage in combat. In No Randomness mode it provides a 10% damage bonus instead.",
 	ForUnit = {
 		"unit-dwarven-thane",
+		"unit-dwarven-guard",
 		"unit-dwarven-yale-rider",
 		"unit-dwarven-pathfinder", "unit-dwarven-gryphon-rider",
 		"unit-germanic-warrior", "unit-germanic-spearman", "unit-germanic-archer",
@@ -192,6 +196,7 @@ DefineButton( { Pos = 5, Level = 1, Icon = "icon-deadly-precision",
 	Description = "Deadly Precision is a passive ability that increases critical strike chance by 10%. In No Randomness mode it provides a 10% damage bonus instead.",
 	ForUnit = {
 		"unit-dwarven-thane",
+		"unit-dwarven-guard",
 		"unit-dwarven-yale-rider",
 		"unit-dwarven-pathfinder", "unit-dwarven-gryphon-rider",
 		"unit-germanic-warrior", "unit-germanic-spearman", "unit-germanic-archer",
@@ -210,6 +215,7 @@ DefineButton( { Pos = 6, Level = 1, Icon = "icon-eagle-eye",
 	Description = "Eagle Eye is a passive ability that increases accuracy by 2.",
 	ForUnit = {
 		"unit-dwarven-thane",
+		"unit-dwarven-guard",
 		"unit-dwarven-yale-rider",
 		"unit-dwarven-pathfinder", "unit-dwarven-gryphon-rider",
 		"unit-germanic-warrior", "unit-germanic-spearman", "unit-germanic-archer",
@@ -246,6 +252,7 @@ DefineButton( { Pos = 8, Level = 1, Icon = "icon-puncture",
 		"unit-germanic-warrior", "unit-germanic-spearman",
 		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-frank-swordsman",
 		"unit-teuton-spearman", "unit-frank-spearman",
+		"unit-dwarven-guard",
 		"unit-gnomish-master-at-arms",
 		"unit-goblin-thief", "unit-goblin-swordsman", "unit-goblin-spearman"
 	}
@@ -256,6 +263,7 @@ DefineButton( { Pos = 16, Level = 1, Icon = "icon-cancel",
 	Key = "escape", Hint = "Cancel (~<Esc~>)", Popup = "popup-commands",
 	ForUnit = {
 		"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
+		"unit-dwarven-guard",
 		"unit-dwarven-scout", "unit-dwarven-pathfinder", "unit-dwarven-gryphon-rider",
 		"unit-dwarven-yale-rider",
 		"unit-germanic-warrior", "unit-germanic-spearman", "unit-germanic-archer",
@@ -276,6 +284,7 @@ DefineButton( { Pos = 14, Level = 0, Icon = "icon-inventory",
 	Key = "i", Hint = "Open ~!Inventory", Popup = "popup-commands",
 	ForUnit = {
 		"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
+		"unit-dwarven-guard",
 		"unit-dwarven-scout", "unit-dwarven-pathfinder",
 		"unit-dwarven-yale-rider",
 		"unit-dwarven-gryphon-rider",
@@ -294,6 +303,7 @@ DefineButton( { Pos = 16, Level = 2, Icon = "icon-cancel",
 	Key = "escape", Hint = "Cancel (~<Esc~>)", Popup = "popup-commands",
 	ForUnit = {
 		"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
+		"unit-dwarven-guard",
 		"unit-dwarven-scout", "unit-dwarven-pathfinder",
 		"unit-dwarven-yale-rider",
 		"unit-dwarven-gryphon-rider",
@@ -351,6 +361,7 @@ DefineButton( { Pos = 7, Level = 0, Icon = "icon-puncture",
 	ForUnit = {
 		"unit-germanic-warrior", "unit-germanic-spearman",
 		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-frank-swordsman", "unit-teuton-spearman", "unit-frank-spearman",
+		"unit-dwarven-guard",
 		"unit-gnomish-master-at-arms",
 		"unit-goblin-thief", "unit-goblin-swordsman", "unit-goblin-spearman"
 	}

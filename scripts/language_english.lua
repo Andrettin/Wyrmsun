@@ -976,10 +976,11 @@ DefineLanguageWord("Red", {
 	AffixNameTypes = {"compound", "suffix", "singular", "person"} -- example: "Alfred"
 })
 
-DefineLanguageWord("Red", {
+DefineLanguageWord("Rēad", {
 	Language = "english",
 	Type = "adjective",
 	Meanings = {"Red"},
+	DerivesFrom = {"old-english", "adjective", "Rēad"}, -- presumably
 	AffixNameTypes = {
 		"separate", "prefix", "singular", "settlement", -- example: "Redditch"; Source: "Philip's International School Atlas", 2006, p. 64.
 		"separate", "prefix", "singular", "unit-class-smithy" -- seems sensible

@@ -304,6 +304,8 @@ b_o:
 /graphics/ui/status_effect_icons.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 
 badbuckle (Cenk Açan):
+/graphics/dwarf/units/right_arm_spear.png (modified from b_o's dwarven axefighter's arm) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/units/spear.png (modified from b_o's goblin spear) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 /graphics/teuton/units/ritter.png (uses b_o's horse) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 
 Bos Wars Team:

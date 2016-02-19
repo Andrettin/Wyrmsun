@@ -180,6 +180,9 @@ function HandleCheats(str)
   elseif (str == "horserider") then
 		unit = CreateUnit("unit-teuton-ritter", GetThisPlayer(), {Players[GetThisPlayer()].StartPos.x, Players[GetThisPlayer()].StartPos.y})
 
+  elseif (str == "alsvid") then
+		GameTimeOfDay = 2
+
   else
     return false
   end
