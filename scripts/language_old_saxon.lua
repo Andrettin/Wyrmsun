@@ -80,6 +80,21 @@ DefineLanguageWord("Blômo", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Bord", { -- Source: http://www.cnrtl.fr/definition/B%F6rde
+	Language = "old-saxon",
+	Type = "noun",
+	Meanings = {"Board", "Table"}, -- source gives the French "planche, table" as the meaning
+	DerivesFrom = {"proto-indo-european", "noun", "Bhrdho"}, -- Source: http://www.cnrtl.fr/definition/bord
+	Gender = "neuter"
+})
+
+DefineLanguageWord("Bord", { -- Source: http://www.cnrtl.fr/definition/bord
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Edge", "Ridge", "Edge of a Ship"}, -- source gives the French "bord, arête; bord de navire" as the meaning
+	DerivesFrom = {"proto-indo-european", "noun", "Bhrdho"}
+})
+
 DefineLanguageWord("Brinnan", { -- strong verb; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
 	Language = "old-saxon",
 	Type = "verb",

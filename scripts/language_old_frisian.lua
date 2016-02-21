@@ -55,6 +55,14 @@ DefineLanguageWord("Beth", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Gender = "neuter"
 })
 
+DefineLanguageWord("Bord", { -- Source: http://www.cnrtl.fr/definition/B%F6rde
+	Language = "old-frisian",
+	Type = "noun",
+	Meanings = {"Board", "Table"}, -- source gives the French "planche, table" as the meaning
+	DerivesFrom = {"proto-indo-european", "noun", "Bhrdho"}, -- Source: http://www.cnrtl.fr/definition/bord
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Bregge", { -- source also gives the alternative form "Brigge"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 145.
 	Language = "old-frisian",
 	Type = "noun",

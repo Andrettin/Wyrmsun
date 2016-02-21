@@ -233,6 +233,21 @@ DefineLanguageWord("Bōk", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	DerivesFrom = {"proto-germanic", "noun", "Bōks"}
 })
 
+DefineLanguageWord("Bord", { -- Source: http://www.cnrtl.fr/definition/B%F6rde
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Board", "Table"}, -- source gives the French "planche, table" as the meaning
+	DerivesFrom = {"proto-indo-european", "noun", "Bhrdho"}, -- Source: http://www.cnrtl.fr/definition/bord
+	Gender = "neuter"
+})
+
+DefineLanguageWord("Bord", { -- Source: http://www.cnrtl.fr/definition/bord
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Edge", "Ridge", "Edge of a Ship"}, -- source gives the French "bord, arête; bord de navire" as the meaning
+	DerivesFrom = {"proto-indo-european", "noun", "Bhrdho"}
+})
+
 DefineLanguageWord("Borg", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
 	Language = "old-norse",
 	Type = "noun",
@@ -377,7 +392,7 @@ DefineLanguageWord("Flōđ", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Flood"}, -- derived from the Proto-Germanic "Flōduz", which means "Flood"
-	DerivesFrom = {"proto-germanic", "noun", "Flōduz"}
+	DerivesFrom = {"northwest-germanic", "noun", "Flodu"}
 })
 
 DefineLanguageWord("Fōtr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.

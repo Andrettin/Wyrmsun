@@ -132,8 +132,8 @@ DefineUnitType("unit-dwarven-axefighter", { Name = _("Axefighter"),
 	Image = {"file", "dwarf/units/dwarf_body_warrior_shield.png", "size", {72, 72}},
 	LayerImages = {
 		{"layer", "right-arm", "file", "dwarf/units/right_arm_warrior.png"},
-		{"layer", "clothing-right-arm", "file", "dwarf/units/shoulder_pad_right_arm_warrior.png"},
-		{"layer", "clothing-left-arm", "file", "dwarf/units/shoulder_pad_left_arm.png"},
+--		{"layer", "clothing-right-arm", "file", "dwarf/units/shoulder_pad_right_arm_warrior.png"},
+--		{"layer", "clothing-left-arm", "file", "dwarf/units/shoulder_pad_left_arm.png"},
 		{"layer", "weapon", "file", "dwarf/units/axe.png"},
 		{"layer", "shield", "file", "dwarf/units/round_shield.png"}
 	},

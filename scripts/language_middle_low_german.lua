@@ -48,6 +48,14 @@ DefineLanguageWord("Blôsem", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Gender = "feminine"
 })
 
+DefineLanguageWord("Bort", { -- Source: http://www.cnrtl.fr/definition/B%F6rde
+	Language = "middle-low-german",
+	Type = "noun",
+	Meanings = {"Board", "Table"}, -- source gives the French "planche, table" as the meaning
+	DerivesFrom = {"old-saxon", "noun", "Bord"},
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Darm", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 97.
 	Language = "middle-low-german",
 	Type = "noun",

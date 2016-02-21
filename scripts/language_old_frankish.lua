@@ -25,6 +25,24 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineLanguageWord("Bord", { -- Source: http://www.cnrtl.fr/definition/B%F6rde
+	Language = "old-frankish", -- source gives "Ancien Bas Francique" (= Old Frankish)
+	Type = "noun",
+	Meanings = {"Board"}, -- source gives the French "planche" as the meaning
+	DerivesFrom = {"proto-indo-european", "noun", "Bhrdho"},
+	Gender = "neuter",
+	NumberCaseInflections = {
+		"plural", "nominative", "Borda"
+	}
+})
+
+DefineLanguageWord("Bord", { -- Source: http://www.cnrtl.fr/definition/bord
+	Language = "old-frankish", -- source gives "Ancien Bas Francique" (= Old Frankish)
+	Type = "noun",
+	Meanings = {"Edge of a Vessel"}, -- source gives the French "bord d'un vaisseau" as the meaning
+	DerivesFrom = {"proto-indo-european", "noun", "Bhrdho"}
+})
+
 DefineLanguageWord("Laisius", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 181.
 	Language = "old-frankish",
 	Type = "noun",
@@ -48,6 +66,12 @@ DefineLanguageWord("Sinigus", { -- source also gives the alternative form "Senis
 	Language = "old-frankish",
 	Type = "adjective",
 	Meanings = {"Old"} -- presumably (this is the meaning given to the Proto-Germanic original word, and no meaning is specifically given to this one)
+})
+
+DefineLanguageWord("Skĭrmjan", { -- Source: http://www.cnrtl.fr/definition/escrime
+	Language = "old-frankish", -- source gives "Ancien Bas Francique" (= Old Frankish, not Old Low Franconian as might be expected)
+	Type = "verb",
+	Meanings = {"Defend", "Protect"} -- source gives the French "défendre, protéger" as the meaning
 })
 
 DefineLanguageWord("Sworga", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.

@@ -240,6 +240,14 @@ DefineLanguageWord("Flōdus", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	DerivesFrom = {"proto-germanic", "noun", "Flōduz"}
 })
 
+DefineLanguageWord("Fotubaurd", { -- source gives "(fotu-)baurd"; Source: http://www.cnrtl.fr/definition/B%F6rde
+	Language = "gothic",
+	Type = "noun",
+	Meanings = {"Small Bench", "Footstool"}, -- source gives the French "petit banc, tabouret" as the meaning
+	DerivesFrom = {"proto-indo-european", "noun", "Bhrdho"}, -- Source: http://www.cnrtl.fr/definition/bord
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Friþôn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 128.
 	Language = "gothic",
 	Type = "noun",

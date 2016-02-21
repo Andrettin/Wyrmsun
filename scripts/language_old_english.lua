@@ -132,6 +132,21 @@ DefineLanguageWord("Bōc", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	DerivesFrom = {"proto-germanic", "noun", "Bōks"}
 })
 
+DefineLanguageWord("Bord", { -- Source: http://www.cnrtl.fr/definition/B%F6rde
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Board", "Table"}, -- source gives the French "planche, table" as the meaning
+	DerivesFrom = {"proto-indo-european", "noun", "Bhrdho"}, -- Source: http://www.cnrtl.fr/definition/bord
+	Gender = "neuter"
+})
+
+DefineLanguageWord("Bord", { -- Source: http://www.cnrtl.fr/definition/bord
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Edge", "Ridge", "Edge of a Ship"}, -- source gives the French "bord, arête; bord de navire" as the meaning
+	DerivesFrom = {"proto-indo-european", "noun", "Bhrdho"}
+})
+
 DefineLanguageWord("Breord", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "old-english",
 	Type = "noun",

@@ -31,10 +31,22 @@ DefineLanguageWord("Bheg", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Meanings = {"Run"} -- source gives the German "Laufen" as the meaning
 })
 
+DefineLanguageWord("Bheredh", { -- Source: http://www.cnrtl.fr/definition/bord
+	Language = "proto-indo-european",
+	Type = "verb",
+	Meanings = {"Cut"} -- source gives the French "couper" as the meaning
+})
+
 DefineLanguageWord("Bhewdh", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
 	Language = "proto-indo-european",
 	Type = "verb",
 	Meanings = {}
+})
+
+DefineLanguageWord("Bhrdho", { -- Source: http://www.cnrtl.fr/definition/bord
+	Language = "proto-indo-european",
+	Type = "noun",
+	Meanings = {"Board"} -- source gives the French "planche" as the meaning
 })
 
 DefineLanguageWord("Bhrenvō", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.

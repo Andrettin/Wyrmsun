@@ -187,6 +187,14 @@ DefineLanguageWord("Blossom", {
 	Gender = "neuter"
 })
 
+DefineLanguageWord("Board", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Board"},
+	DerivesFrom = {"old-english", "noun", "Bord"}, -- presumably
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Brass", {
 	Language = "english",
 	Type = "noun",

@@ -82,6 +82,10 @@ DefineLanguage("finnish", {
 	Name = "Finnish"
 })
 
+DefineLanguage("french", {
+	Name = "French"
+})
+
 DefineLanguage("gaulish", {
 	Name = "Gaulish"
 })
@@ -172,6 +176,10 @@ DefineLanguage("middle-low-german", {
 
 DefineLanguage("minoan", {
 	Name = "Minoan"
+})
+
+DefineLanguage("northwest-germanic", {
+	Name = "Northwest Germanic"
 })
 
 DefineLanguage("norwegian", {
@@ -307,6 +315,7 @@ Load("scripts/language_irish.lua")
 
 -- Germanic languages (branch of the Indo-European family)
 Load("scripts/language_proto_germanic.lua")
+Load("scripts/language_northwest_germanic.lua")
 
 -- North Germanic languages (branch of the Germanic family)
 Load("scripts/language_old_norse.lua")
@@ -338,6 +347,7 @@ Load("scripts/language_crimean_gothic.lua")
 -- Latin languages (branch of the Indo-European family)
 Load("scripts/language_old_latin.lua")
 Load("scripts/language_latin.lua")
+Load("scripts/language_french.lua")
 
 -- Slavic languages (branch of the Indo-European family)
 Load("scripts/language_old_church_slavonic.lua")

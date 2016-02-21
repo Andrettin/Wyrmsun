@@ -101,6 +101,13 @@ DefineLanguageWord("Bluomo", { -- source also gives the alternative form "Pluomo
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Bort", { -- Source: http://www.cnrtl.fr/definition/bord
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Edge", "Ridge", "Edge of a Ship"}, -- source gives the French "bord, arête; bord de navire" as the meaning
+	DerivesFrom = {"proto-indo-european", "noun", "Bhrdho"}
+})
+
 DefineLanguageWord("Brart", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "old-high-german",
 	Type = "noun",
@@ -237,7 +244,7 @@ DefineLanguageWord("Fluot", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Flood"}, -- derived from the Proto-Germanic "Flōduz", which means "Flood"
-	DerivesFrom = {"proto-germanic", "noun", "Flōduz"}
+	DerivesFrom = {"northwest-germanic", "noun", "Flodu"}
 })
 
 DefineLanguageWord("Fridu", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 128.

@@ -61,6 +61,13 @@ DefineLanguageWord("Bever", {
 	}
 })
 
+DefineLanguageWord("Boord", { -- Source: http://www.cnrtl.fr/definition/bord
+	Language = "dutch",
+	Type = "noun",
+	Meanings = {"Edge", "Ridge", "Edge of a Ship"}, -- source gives the French "bord, arête; bord de navire" as the meaning
+	DerivesFrom = {"old-frankish", "noun", "Bord"} -- the second one
+})
+
 DefineLanguageWord("Borg", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
 	Language = "dutch",
 	Type = "noun",
