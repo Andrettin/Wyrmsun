@@ -10,7 +10,7 @@
 --
 --      map_generation.lua - Defines the map generation scripts.
 --
---      (c) Copyright 2013-2015 by Andrettin
+--      (c) Copyright 2013-2016 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
