@@ -133,6 +133,8 @@ https://github.com/Andrettin/Wyrmsun
 - Workers will now look to see if any trees have regrown closer to their drop-off point when going to harvest lumber.
 - Improved worker pathfinding checks when choosing which objects to harvest.
 - Added Goblin Swordsman.
+- Cavalry units, siege weapons, transport ships and gryphon riders now require 2 food instead of 1.
+- Cavalry units now have 9 evasion instead of 10.
 
 * Upgrades
 - Update to the Spatha's icon (by Leo).

@@ -1099,6 +1099,7 @@ Leo:
 /graphics/teuton/icons/suebi_swordsman.png (licensed under the CC0)
 /graphics/teuton/icons/suebi_swordsman_gray_hair.png (licensed under the CC0)
 /graphics/teuton/ui/cursors/teuton_gauntlet.png (licensed under the CC0)
+/graphics/tilesets/forest/terrain/grass_and_dirt.png (licensed under the CC0)
 /graphics/ui/bleeding.png (licensed under the CC0)
 
 Mikodrak:
