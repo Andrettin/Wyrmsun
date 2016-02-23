@@ -89,6 +89,7 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed issue which required the attacked province to have a dock in order to conduct an attack overseas, rather than requiring the province from which the troops were being sent to have a dock.
 - Fixed issue which caused workers to not generate labor after loading a saved game.
 - Fixed issue which caused rebellions to happen with no rebel units present, when the population of the rebelling province was too low.
+- Added new tooltip to explain how to move units and attack provinces.
 
 * Heroes
 - An error message is now given when an invalid custom hero name is entered (if it has an invalid character or contains only spaces).

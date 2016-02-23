@@ -2563,7 +2563,8 @@ function DrawGrandStrategyInterface()
 		if (SelectedProvince ~= nil) then
 			if (GrandStrategyFaction ~= nil and GetProvinceOwner(SelectedProvince.Name) == GrandStrategyFaction.Name) then
 				if (GrandStrategyInterfaceState == "Province") then
-					Tip("Province Interface", "Click on a built structure (colored) to make use of its functions, and on an unbuilt one (grayed-out) to build it. The number on each unit icon represents how many units of that type are in the province, while the one between the arrows represent how many are currently selected. Use the arrows to select or deselect units.")
+					Tip("Province Interface", "Click on a built structure (colored) to make use of its functions, and on an unbuilt one (grayed-out) to build it. The number on each unit icon represents how many units of that type are in the province, while the one between the arrows represent how many are currently selected.")
+					Tip("Grand Strategy Units", "Use the arrows to select or deselect units. While units are selected, click on another province you own to move them there, or click on an enemy province to attack it.")
 				elseif (GrandStrategyInterfaceState == "town-hall" or GrandStrategyInterfaceState == "stronghold") then
 					Tip("Town Hall Interface", "A province's culture determines what is available in it. A province that has a different culture than your faction will suffer a penalty to economic efficiency. The number beside each commodity icon represents its price in gold, while the one between the arrows represents its quantity currently bid or offered by your faction - use the arrows to change it.")
 					Tip("Workers and Food", "Food is stored in each province. Once 2000 is accumulated, a new worker is created.")
