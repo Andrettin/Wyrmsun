@@ -25,6 +25,35 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineLanguageWord("Barguigner", {
+	Language = "french",
+	Type = "verb",
+	Meanings = {"Haggle", "Hesitate"},
+	DerivesFrom = {"old-frankish", "verb", "Borganjan"} -- source also gives an alternative theory in which it derives from the Old Frankish verb "warbanjan"; Source: http://www.cnrtl.fr/definition/barguigner
+})
+
+DefineLanguageWord("Bleu", {
+	Language = "french",
+	Type = "noun",
+	Meanings = {"Blue"},
+	DerivesFrom = {"old-frankish", "adjective", "Blāo"} -- Source: http://www.cnrtl.fr/definition/bleu
+})
+
+DefineLanguageWord("Bleu", {
+	Language = "french",
+	Type = "adjective",
+	Meanings = {"Blue"},
+	DerivesFrom = {"old-frankish", "adjective", "Blāo"} -- Source: http://www.cnrtl.fr/definition/bleu
+})
+
+DefineLanguageWord("Bois", {
+	Language = "french",
+	Type = "noun",
+	Meanings = {"Wood"},
+	DerivesFrom = {"old-frankish", "noun", "Bŏsk"} -- Source: http://www.cnrtl.fr/definition/bois
+	-- Fick gives as being derived from Medieval Latin "Buscus" instead; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 143.
+})
+
 DefineLanguageWord("Bord", {
 	Language = "french",
 	Type = "noun",
@@ -37,6 +66,13 @@ DefineLanguageWord("Börde", {
 	Type = "noun",
 	Meanings = {"Small Farm"},
 	DerivesFrom = {"old-frankish", "noun", "Bord"} -- derives from that noun's plural form "Borda"; Source: http://www.cnrtl.fr/definition/B%F6rde
+})
+
+DefineLanguageWord("Cresson", {
+	Language = "french",
+	Type = "noun",
+	Meanings = {"Cress"},
+	DerivesFrom = {"old-frankish", "noun", "Kresso"} -- Source: http://www.cnrtl.fr/definition/cresson
 })
 
 DefineLanguageWord("Escrime", {

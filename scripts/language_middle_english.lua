@@ -25,6 +25,13 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineLanguageWord("Busch", { -- source also gives the alternative form "Busk"; Source: http://www.cnrtl.fr/definition/bois
+	Language = "middle-english",
+	Type = "noun",
+	Meanings = {},
+	DerivesFrom = {"proto-germanic", "noun", "Buska"} -- presumably
+})
+
 DefineLanguageWord("Glenten", { -- weak verb; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 81.
 	Language = "middle-english",
 	Type = "verb",

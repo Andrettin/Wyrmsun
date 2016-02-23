@@ -187,6 +187,14 @@ DefineLanguageWord("Blossom", {
 	Gender = "neuter"
 })
 
+DefineLanguageWord("Blue", {
+	Language = "english",
+	Type = "adjective",
+	Meanings = {"Blue"},
+	DerivesFrom = {"old-english", "adjective", "Blâw"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 147.
+	AffixNameTypes = {"separate", "prefix", "singular", "unit-class-smithy"} -- seems sensible
+})
+
 DefineLanguageWord("Board", {
 	Language = "english",
 	Type = "noun",
@@ -263,6 +271,14 @@ DefineLanguageWord("Bury", {
 	Gender = "neuter",
 	Archaic = true,
 	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- examples: "Newbury", "Salisbury", "Shrewsbury"; Source: "Philip's International School Atlas", 2006, p. 64.
+})
+
+DefineLanguageWord("Bush", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Bush"},
+	DerivesFrom = {"middle-english", "noun", "Busch"}, -- presumably
+	Gender = "neuter"
 })
 
 DefineLanguageWord("Charles", {

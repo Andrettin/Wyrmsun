@@ -56,6 +56,14 @@ DefineLanguageWord("Bort", { -- Source: http://www.cnrtl.fr/definition/B%F6rde
 	Gender = "neuter"
 })
 
+DefineLanguageWord("Busch", { -- the TLFi also gives the alternative form "Busk"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 143; Source: http://www.cnrtl.fr/definition/bois
+	Language = "middle-low-german",
+	Type = "noun",
+	Meanings = {"Bush"}, -- source gives the German "Busch" as the meaning
+	DerivesFrom = {"old-saxon", "noun", "Busc"}, -- presumably
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Darm", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 97.
 	Language = "middle-low-german",
 	Type = "noun",
@@ -111,6 +119,12 @@ DefineLanguageWord("Twernen", { -- Source: Sean Crist, "An Analysis of *z loss i
 	Language = "middle-low-german",
 	Type = "verb",
 	Meanings = {"Twine"}
+})
+
+DefineLanguageWord("Werf", { -- source also gives the alternative form "Warf"; Source: http://www.cnrtl.fr/definition/barguigner
+	Language = "middle-low-german",
+	Type = "noun",
+	Meanings = {"Industry", "Trade"} -- source gives the French "industrie, métier" as the meaning
 })
 
 DefineLanguageWord("Wêt", { -- source also gives the alternative form "Wêde"; Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 4.

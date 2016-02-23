@@ -157,6 +157,12 @@ DefineLanguageWord("Berga", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Gender = "neuter"
 })
 
+DefineLanguageWord("Blêva", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 147.
+	Language = "proto-germanic",
+	Type = "adjective",
+	Meanings = {"Blue"} -- source gives the German "blau" as the meaning
+})
+
 DefineLanguageWord("Blîva", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 148.
 	Language = "proto-germanic",
 	Type = "noun",
@@ -246,6 +252,13 @@ DefineLanguageWord("Bûra", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Farmer", "Peasant"},
+	Gender = "masculine"
+})
+
+DefineLanguageWord("Buska", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 143.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Bush"}, -- source gives the German "Busch" as the meaning
 	Gender = "masculine"
 })
 

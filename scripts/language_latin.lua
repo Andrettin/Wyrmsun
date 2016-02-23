@@ -165,6 +165,12 @@ DefineLanguageWord("Ferveo", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	DerivesFrom = {"proto-indo-european", "verb", "Bhrenvō"}
 })
 
+DefineLanguageWord("Flâvus", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 147.
+	Language = "latin",
+	Type = "adjective",
+	Meanings = {"Blond"} -- source gives the German "blond" as the meaning
+})
+
 DefineLanguageWord("Foris", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "latin",
 	Type = "noun",

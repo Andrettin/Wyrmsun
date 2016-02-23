@@ -37,6 +37,12 @@ DefineLanguageWord("Atgleinn", { -- Source: August Fick and Alf Torp, "Wortschat
 	Meanings = {"Show"} -- source gives the Latin (?) "demonstrat" as the meaning
 })
 
+DefineLanguageWord("Blá", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 147.
+	Language = "irish",
+	Type = "adjective",
+	Meanings = {"Yellow"} -- source gives the German "gelb" as the meaning
+})
+
 DefineLanguageWord("Brennim", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
 	Language = "irish",
 	Type = "verb", -- correct?

@@ -64,6 +64,13 @@ DefineLanguageWord("Berg", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Blāo", { -- Source: http://www.cnrtl.fr/definition/bleu
+	Language = "old-saxon",
+	Type = "adjective",
+	Meanings = {"Blue"}, -- apparently
+	DerivesFrom = {"proto-germanic", "adjective", "Blêva"} -- presumably
+})
+
 DefineLanguageWord("Blî", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 148.
 	Language = "old-saxon",
 	Type = "noun",
@@ -116,6 +123,13 @@ DefineLanguageWord("Burg", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Meanings = {"Fortified Place", "City", "Town"}, -- source gives "befestigter Ort, Stadt" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Burg"},
 	Gender = "feminine"
+})
+
+DefineLanguageWord("Busc", { -- Source: http://www.cnrtl.fr/definition/bois
+	Language = "old-saxon",
+	Type = "noun",
+	Meanings = {},
+	DerivesFrom = {"proto-germanic", "noun", "Buska"} -- presumably
 })
 
 DefineLanguageWord("Êr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 11.

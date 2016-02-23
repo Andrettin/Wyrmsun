@@ -33,6 +33,22 @@ DefineLanguageWord("Bradd", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Busk", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 143.
+	Language = "norwegian",
+	Type = "noun",
+	Meanings = {"Tuft", "Treetop"}, -- source gives the German "Büschel, Wipfel" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Buska"},
+	Gender = "masculine"
+})
+
+DefineLanguageWord("Buska", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 143.
+	Language = "norwegian",
+	Type = "noun",
+	Meanings = {"Bush"}, -- source gives the German "Busch" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Buska"},
+	Gender = "feminine"
+})
+
 DefineLanguageWord("Elja", { -- vernacular; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 19.
 	Language = "norwegian",
 	Type = "verb",

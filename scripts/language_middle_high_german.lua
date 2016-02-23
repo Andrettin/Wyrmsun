@@ -88,6 +88,13 @@ DefineLanguageWord("Berc", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Blâ", { -- source also gives the inflected form "blâwer"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 147.
+	Language = "middle-high-german",
+	Type = "adjective",
+	Meanings = {"Blue"}, -- source (apparently) gives the German "blau" as the meaning
+	DerivesFrom = {"old-high-german", "adjective", "Blāo"}
+})
+
 DefineLanguageWord("Blî", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 148.
 	Language = "middle-high-german",
 	Type = "noun",
@@ -147,6 +154,14 @@ DefineLanguageWord("Burc", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Meanings = {"Fortified Place", "Castle", "Palace", "City", "Town"}, -- source gives "befestigter Ort, Burg, Schloß, Stadt" as the meaning
 	DerivesFrom = {"old-high-german", "noun", "Burg"},
 	Gender = "feminine"
+})
+
+DefineLanguageWord("Busch", { -- source also gives the alternative forms "Bosch" and "Bosche"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 143.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Bush", "Tuft", "Bouquet"}, -- source gives the German "Busch, Büschel, Strauß" as the meaning
+	DerivesFrom = {"old-high-german", "noun", "Busc"},
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Darm", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 97.
@@ -389,6 +404,13 @@ DefineLanguageWord("Vurt", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Meanings = {"Ford", "Path", "Riverbed"}, -- source gives the German "Furt, Weg, Flußbett" as the meaning
 	DerivesFrom = {"old-high-german", "noun", "Furt"},
 	Gender = "masculine"
+})
+
+DefineLanguageWord("Warb", { -- Source: http://www.cnrtl.fr/definition/barguigner
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Turn", "Affair", "Trade"}, -- source gives the French "action de tourner; affaire, métier" as the meaning
+	DerivesFrom = {"old-high-german", "verb", "Hwerfan"} -- related to it according to the source
 })
 
 DefineLanguageWord("Weit", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 4, 7.

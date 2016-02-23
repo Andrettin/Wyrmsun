@@ -117,6 +117,13 @@ DefineLanguageWord("Bera", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Blâw", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 147.
+	Language = "old-english",
+	Type = "adjective",
+	Meanings = {"Blue"}, -- source (apparently) gives the German "blau" as the meaning
+	DerivesFrom = {"proto-germanic", "adjective", "Blêva"}
+})
+
 DefineLanguageWord("Blôstma", { -- source also gives the alternative forms "Blôsma" and "Blôstm"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 146.
 	Language = "old-english",
 	Type = "noun",

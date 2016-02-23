@@ -55,6 +55,13 @@ DefineLanguageWord("Beth", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Gender = "neuter"
 })
 
+DefineLanguageWord("Blâw", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 147.
+	Language = "old-frisian",
+	Type = "adjective",
+	Meanings = {"Blue"}, -- source (apparently) gives the German "blau" as the meaning
+	DerivesFrom = {"proto-germanic", "adjective", "Blêva"}
+})
+
 DefineLanguageWord("Bord", { -- Source: http://www.cnrtl.fr/definition/B%F6rde
 	Language = "old-frisian",
 	Type = "noun",

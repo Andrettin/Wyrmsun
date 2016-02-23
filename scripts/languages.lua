@@ -133,6 +133,10 @@ DefineLanguage("irish", {
 	Name = "Irish"
 })
 
+DefineLanguage("italian", {
+	Name = "Italian"
+})
+
 DefineLanguage("japanese", {
 	Name = "Japanese"
 })
@@ -156,6 +160,10 @@ DefineLanguage("latvian", {
 
 DefineLanguage("lithuanian", {
 	Name = "Lithuanian"
+})
+
+DefineLanguage("medieval-latin", {
+	Name = "Medieval Latin"
 })
 
 DefineLanguage("middle-dutch", {
@@ -184,6 +192,14 @@ DefineLanguage("northwest-germanic", {
 
 DefineLanguage("norwegian", {
 	Name = "Norwegian"
+})
+
+DefineLanguage("old-church-slavonic", {
+	Name = "Old Church Slavonic"
+})
+
+DefineLanguage("old-danish", {
+	Name = "Old Danish"
 })
 
 DefineLanguage("old-english", {
@@ -232,10 +248,6 @@ DefineLanguage("old-prussian", {
 
 DefineLanguage("old-saxon", {
 	Name = "Old Saxon"
-})
-
-DefineLanguage("old-church-slavonic", {
-	Name = "Old Church Slavonic"
 })
 
 DefineLanguage("old-swedish", {
@@ -319,6 +331,7 @@ Load("scripts/language_northwest_germanic.lua")
 
 -- North Germanic languages (branch of the Germanic family)
 Load("scripts/language_old_norse.lua")
+Load("scripts/language_old_danish.lua")
 Load("scripts/language_old_swedish.lua")
 Load("scripts/language_old_icelandic.lua")
 Load("scripts/language_norwegian.lua")
@@ -347,7 +360,9 @@ Load("scripts/language_crimean_gothic.lua")
 -- Latin languages (branch of the Indo-European family)
 Load("scripts/language_old_latin.lua")
 Load("scripts/language_latin.lua")
+Load("scripts/language_medieval_latin.lua")
 Load("scripts/language_french.lua")
+Load("scripts/language_italian.lua")
 
 -- Slavic languages (branch of the Indo-European family)
 Load("scripts/language_old_church_slavonic.lua")

@@ -198,6 +198,21 @@ DefineLanguageWord("Bern", {
 	AffixNameTypes = {"compound", "prefix", "singular", "person"} -- example: "Bernhard"
 })
 
+DefineLanguageWord("Blau", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"Blue"},
+	DerivesFrom = {"middle-high-german", "adjective", "Blâ"}, -- presumably, since the corresponding adjective does
+	Gender = "neuter"
+})
+
+DefineLanguageWord("Blau", {
+	Language = "high-german",
+	Type = "adjective",
+	Meanings = {"Blue"},
+	DerivesFrom = {"middle-high-german", "adjective", "Blâ"} -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 147.
+})
+
 DefineLanguageWord("Blei", {
 	Language = "high-german",
 	Type = "noun",
@@ -296,6 +311,14 @@ DefineLanguageWord("Burg", {
 		"compound", "suffix", "singular", "settlement", -- examples: "Hamburg", "Klausenburg", "Marburg", "Nikolsburg", "Ödenburg", "Regensburg", "Salzburg", "Schässburg"
 		"compound", "suffix", "singular", "province" -- example: "Brandenburg"
 	}
+})
+
+DefineLanguageWord("Busch", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"Bush"},
+	DerivesFrom = {"middle-high-german", "noun", "Busch"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 143.
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Christian", {
@@ -1504,6 +1527,13 @@ DefineLanguageWord("Wasser", {
 	Gender = "neuter",
 	Uncountable = true,
 	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- example: "Hühnerwasser"
+})
+
+DefineLanguageWord("Werben", { 
+	Language = "high-german",
+	Type = "verb",
+	Meanings = {"Advertise"},
+	DerivesFrom = {"old-high-german", "verb", "Hwerfan"} -- Source: http://www.cnrtl.fr/definition/barguigner
 })
 
 DefineLanguageWord("Werner", {

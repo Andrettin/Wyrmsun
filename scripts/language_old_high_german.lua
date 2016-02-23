@@ -82,6 +82,13 @@ DefineLanguageWord("Bero", { -- source also gives the alternative form "Pero"; S
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Blāo", { -- the TLFi also gives the alternative form "blāwēr"; Fick gives "blâo, plâo" instead; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 147; Source: http://www.cnrtl.fr/definition/bleu
+	Language = "old-high-german",
+	Type = "adjective",
+	Meanings = {"Blue"}, -- source (apparently) gives the German "blau" as the meaning
+	DerivesFrom = {"proto-germanic", "adjective", "Blêva"}
+})
+
 DefineLanguageWord("Blîo", { -- source also gives the alternative form "Plîo"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 148.
 	Language = "old-high-german",
 	Type = "noun",
@@ -151,6 +158,14 @@ DefineLanguageWord("Burg", { -- source also gives the alternative form "Purg"; S
 	Meanings = {"Fortified Place", "Castle", "Palace", "City", "Town"}, -- source gives "befestigter Ort, Burg, Schloß, Stadt" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Burg"},
 	Gender = "feminine"
+})
+
+DefineLanguageWord("Busc", { -- Fick also gives the forms "Busk, Bosk" instead; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 143; Source: http://www.cnrtl.fr/definition/bois
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Bush", "Tuft", "Bouquet"}, -- source gives the German "Busch, Büschel, Strauß" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Buska"},
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Chien", { -- source also gives alternative forms "Kien" and "Kên"; Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 4.
@@ -381,6 +396,12 @@ DefineLanguageWord("Hurd", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Type = "noun",
 	Meanings = {"Wattle"}, -- derived from Proto-Germanic "Χŕdiz", which means "wattle"
 	DerivesFrom = {"proto-germanic", "noun", "Χŕdiz"}
+})
+
+DefineLanguageWord("Hwerfan", { -- source also gives the alternative form "hwerban"; Source: http://www.cnrtl.fr/definition/barguigner
+	Language = "old-high-german",
+	Type = "verb",
+	Meanings = {"Turn", "Return", "Practice a Profession"} -- source gives the French "se tourner, s'en retourner, exercer (une profession)" as the meaning
 })
 
 DefineLanguageWord("Îsarn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 24.

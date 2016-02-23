@@ -25,17 +25,10 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageWord("Busch", { -- source also gives the alternative form "Bosch"; Source: http://www.cnrtl.fr/definition/bois
-	Language = "middle-dutch",
+DefineLanguageWord("Bosco", {
+	Language = "italian",
 	Type = "noun",
-	Meanings = {},
-	DerivesFrom = {"old-frankish", "noun", "Bŏsk"} -- presumably
+	Meanings = {"Wood"},
+	DerivesFrom = {"medieval-latin", "noun", "Buscus"} -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 143.
 })
 
-DefineLanguageWord("Herde", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
-	Language = "middle-dutch",
-	Type = "noun",
-	Meanings = {"Flax Fiber"},
-	DerivesFrom = {"proto-germanic", "noun", "Hazdaz"},
-	Uncountable = true -- as a material, it is likely to be uncountable
-})

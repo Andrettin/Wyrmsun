@@ -202,6 +202,13 @@ DefineLanguageWord("Bjǫrn", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Blār", { -- Fick gives "blâr" instead; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 147; Source: http://www.cnrtl.fr/definition/bleu
+	Language = "old-norse",
+	Type = "adjective",
+	Meanings = {"Blue", "Dark", "Black"}, -- source gives the German "blau, dunkel, schwarz" as the meaning
+	DerivesFrom = {"proto-germanic", "adjective", "Blêva"}
+})
+
 DefineLanguageWord("Blômi", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 146.
 	Language = "old-norse",
 	Type = "noun",
