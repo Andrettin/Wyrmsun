@@ -592,6 +592,13 @@ DefineLanguageWord("Mennen", { -- Source: Alaric Hall, "The Meanings of Elf and 
 	Gender = "feminine"
 })
 
+DefineLanguageWord("Merisc", { -- Source: http://www.cnrtl.fr/definition/marais
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Mire", "Mud"}, -- source gives the French "bourbe, boue"
+	DerivesFrom = {"proto-germanic", "noun", "Mari"}
+})
+
 DefineLanguageWord("Munuc", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 89.
 	Language = "old-english",
 	Type = "noun",

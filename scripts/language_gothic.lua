@@ -268,10 +268,10 @@ DefineLanguageWord("Gaits", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Meanings = {"Goat"}
 })
 
-DefineLanguageWord("Gards", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+DefineLanguageWord("Gards", { -- the TLFi gives "Garda" instead; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2; Source: http://www.cnrtl.fr/definition/jardin
 	Language = "gothic",
 	Type = "noun",
-	Meanings = {"Garden"}, -- derived from Proto-Germanic "Gárdiz", which has the meaning of "garden"
+	Meanings = {"Enclosure"}, -- the TLFi gives the French "clôture" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Gárdiz"}
 })
 

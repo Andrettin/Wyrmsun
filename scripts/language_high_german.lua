@@ -559,6 +559,14 @@ DefineLanguageWord("Gang", {
 	AffixNameTypes = {"compound", "suffix", "singular", "person"}
 })
 
+DefineLanguageWord("Garten", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"Garden"},
+	DerivesFrom = {"old-high-german", "noun", "Gart"}, -- the first one; Source: http://www.cnrtl.fr/definition/jardin
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Gau", {
 	Language = "high-german",
 	Type = "noun",

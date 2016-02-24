@@ -109,6 +109,13 @@ DefineLanguageWord("Lôt", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Gender = "neuter"
 })
 
+DefineLanguageWord("Mersch", { -- source also gives the alternative form "Marsch"; Source: http://www.cnrtl.fr/definition/marais
+	Language = "middle-low-german",
+	Type = "noun",
+	Meanings = {"Fertile Coastland"}, -- source gives the French "terre fertile au bord de la mer"
+	DerivesFrom = {"proto-germanic", "noun", "Mari"}
+})
+
 DefineLanguageWord("Twern", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
 	Language = "middle-low-german",
 	Type = "noun",

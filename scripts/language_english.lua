@@ -827,6 +827,13 @@ DefineLanguageWord("Mark", {
 	NameTypes = {"person"}
 })
 
+DefineLanguageWord("Marsh", {
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Marsh"},
+	DerivesFrom = {"old-english", "noun", "Merisc"} -- Source: http://www.cnrtl.fr/definition/marais
+})
+
 DefineLanguageWord("Matthew", {
 	Language = "english",
 	Type = "noun",

@@ -82,6 +82,12 @@ DefineLanguageWord("Bero", { -- source also gives the alternative form "Pero"; S
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Biskerian", { -- Source: http://www.cnrtl.fr/definition/d%C3%A9chirer
+	Language = "old-high-german",
+	Type = "verb",
+	Meanings = {"Deprive", "Frustrate", "Separate"} -- source gives the Latin (?) "privare, frustrare, separare" as the meaning
+})
+
 DefineLanguageWord("Blāo", { -- the TLFi also gives the alternative form "blāwēr"; Fick gives "blâo, plâo" instead; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 147; Source: http://www.cnrtl.fr/definition/bleu
 	Language = "old-high-german",
 	Type = "adjective",
@@ -293,18 +299,18 @@ DefineLanguageWord("Furt", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Gart", { -- the TLFi also gives the alternative form "Garto"; is this the same word as the "Gart" which has another meaning detailed below? Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2; Source: http://www.cnrtl.fr/definition/jardin
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Garden"}, -- the TLFi gives the French "jardin" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Gárdiz"}
+})
+
 DefineLanguageWord("Gart", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Rod", "Prickle"},
 	DerivesFrom = {"proto-germanic", "noun", "Gazdaz"}
-})
-
-DefineLanguageWord("Gart", { -- is this the same word as the "Gart" which has another meaning detailed above? Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
-	Language = "old-high-german",
-	Type = "noun",
-	Meanings = {"Garden"}, -- derived from Proto-Germanic "Gárdiz", which has the meaning of "garden"
-	DerivesFrom = {"proto-germanic", "noun", "Gárdiz"}
 })
 
 DefineLanguageWord("Gisiht", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.

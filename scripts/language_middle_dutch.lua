@@ -25,11 +25,24 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineLanguageWord("Boomgaert", { -- uses the word "Gaert" as a compound element; Source: http://www.cnrtl.fr/definition/jardin
+	Language = "middle-dutch",
+	Type = "noun",
+	Meanings = {"Garden", "Orchard"} -- source gives the French "jardin, verger" as the meaning
+})
+
 DefineLanguageWord("Busch", { -- source also gives the alternative form "Bosch"; Source: http://www.cnrtl.fr/definition/bois
 	Language = "middle-dutch",
 	Type = "noun",
 	Meanings = {},
 	DerivesFrom = {"old-frankish", "noun", "Bŏsk"} -- presumably
+})
+
+DefineLanguageWord("Gaert", { -- Source: http://www.cnrtl.fr/definition/jardin
+	Language = "middle-dutch",
+	Type = "noun",
+	Meanings = {},
+	DerivesFrom = {"old-frankish", "noun", "Gart"} -- presumably
 })
 
 DefineLanguageWord("Herde", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
@@ -38,4 +51,17 @@ DefineLanguageWord("Herde", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Meanings = {"Flax Fiber"},
 	DerivesFrom = {"proto-germanic", "noun", "Hazdaz"},
 	Uncountable = true -- as a material, it is likely to be uncountable
+})
+
+DefineLanguageWord("Mersch", { -- source also gives the alternative form "Maersch"; Source: http://www.cnrtl.fr/definition/marais
+	Language = "middle-dutch",
+	Type = "noun",
+	Meanings = {"Meadow", "Marshland"}, -- source gives the French "pré; terrain marécageux"
+	DerivesFrom = {"old-frankish", "noun", "Marisk"} -- presumably
+})
+
+DefineLanguageWord("Wijngaert", { -- uses the word "Gaert" as a compound element; Source: http://www.cnrtl.fr/definition/jardin
+	Language = "middle-dutch",
+	Type = "noun",
+	Meanings = {"Vineyard"} -- source gives the French "vignoble" as the meaning
 })

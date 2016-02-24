@@ -69,6 +69,13 @@ DefineLanguageWord("Bŏsk", { -- Source: http://www.cnrtl.fr/definition/bois
 	DerivesFrom = {"proto-germanic", "noun", "Buska"} -- presumably
 })
 
+DefineLanguageWord("Gart", { -- source also gives the alternative form "Gardo"; Source: http://www.cnrtl.fr/definition/jardin
+	Language = "old-frankish", -- source gives "Ancien Bas Francique" (= Old Frankish)
+	Type = "noun",
+	Meanings = {"Enclosure"}, -- source gives the French "clôture" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Gárdiz"} -- presumably
+})
+
 DefineLanguageWord("Kresso", { -- Source: http://www.cnrtl.fr/definition/cresson
 	Language = "old-frankish", -- source gives "Ancien Bas Francique" (= Old Frankish)
 	Type = "noun",
@@ -79,6 +86,13 @@ DefineLanguageWord("Laisius", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Language = "old-frankish",
 	Type = "noun",
 	Meanings = {"Womb"} -- source gives (in German) "Schoß" as the meaning
+})
+
+DefineLanguageWord("Marisk", { -- Source: http://www.cnrtl.fr/definition/marais
+	Language = "old-frankish", -- source gives "Ancien Bas Francique" (= Old Frankish)
+	Type = "noun",
+	Meanings = {},
+	DerivesFrom = {"proto-germanic", "noun", "Mari"}
 })
 
 DefineLanguageWord("Nimid", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 151.
@@ -98,6 +112,18 @@ DefineLanguageWord("Sinigus", { -- source also gives the alternative form "Senis
 	Language = "old-frankish",
 	Type = "adjective",
 	Meanings = {"Old"} -- presumably (this is the meaning given to the Proto-Germanic original word, and no meaning is specifically given to this one)
+})
+
+DefineLanguageWord("Skerian", { -- Source: http://www.cnrtl.fr/definition/d%C3%A9chirer
+	Language = "old-frankish", -- source gives "Ancien Bas Francique" (= Old Frankish)
+	Type = "verb",
+	Meanings = {"Separate", "Divide"} -- source gives the French "séparer, diviser" as the meaning
+})
+
+DefineLanguageWord("Skîran", { -- Source: http://www.cnrtl.fr/definition/d%C3%A9chirer
+	Language = "old-frankish", -- source gives "Ancien Bas Francique" (= Old Frankish)
+	Type = "verb",
+	Meanings = {"Scrape", "Scratch"} -- source gives the French "râcler, gratter" as the meaning
 })
 
 DefineLanguageWord("Skĭrmjan", { -- Source: http://www.cnrtl.fr/definition/escrime

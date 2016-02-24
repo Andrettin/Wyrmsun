@@ -195,6 +195,7 @@ DefineLanguageWord("Gart", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Language = "middle-high-german",
 	Type = "noun",
 	Meanings = {"Prickle", "Stick for Driving Animals"},
+	DerivesFrom = {"old-high-german", "noun", "Gart"}, -- the second one
 	Gender = "masculine"
 })
 

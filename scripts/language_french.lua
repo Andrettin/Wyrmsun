@@ -75,9 +75,30 @@ DefineLanguageWord("Cresson", {
 	DerivesFrom = {"old-frankish", "noun", "Kresso"} -- Source: http://www.cnrtl.fr/definition/cresson
 })
 
+DefineLanguageWord("Déchirer", {
+	Language = "french",
+	Type = "verb",
+	Meanings = {"Tear"},
+	DerivesFrom = {"old-frankish", "verb", "Skerian"} -- Source: http://www.cnrtl.fr/definition/d%C3%A9chirer
+})
+
 DefineLanguageWord("Escrime", {
 	Language = "french",
 	Type = "noun",
 	Meanings = {"Fencing"},
 	DerivesFrom = {"old-frankish", "verb", "Skĭrmjan"} -- Source: http://www.cnrtl.fr/definition/escrime
+})
+
+DefineLanguageWord("Jardin", {
+	Language = "french",
+	Type = "noun",
+	Meanings = {"Garden"},
+	DerivesFrom = {"old-frankish", "noun", "Gart"} -- Source: http://www.cnrtl.fr/definition/jardin
+})
+
+DefineLanguageWord("Marais", {
+	Language = "french",
+	Type = "noun",
+	Meanings = {"Marsh"},
+	DerivesFrom = {"old-frankish", "noun", "Marisk"} -- Source: http://www.cnrtl.fr/definition/marais
 })

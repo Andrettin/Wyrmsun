@@ -546,6 +546,12 @@ DefineLanguageWord("Maitila", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Mari", { -- source gives "mari-"; Source: http://www.cnrtl.fr/definition/marais
+	Language = "proto-germanic", -- source gives "Germanic"
+	Type = "noun",
+	Meanings = {"Sea"} -- source gives the French "mer"
+})
+
 DefineLanguageWord("Mark", { -- source also gives the form "Markô"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 160.
 	Language = "proto-germanic",
 	Type = "noun",
