@@ -38,6 +38,7 @@ DefineFaction("Suebi Tribe", {
 DefineFaction("Frank Tribe", {
 	Civilization = "teuton",
 	Type = "tribe",
+	Language = "old-frankish",
 	Colors = {"green", "orange"},
 	DevelopsTo = {"Francia", "Franconia", "Netherlands"},
 	FactionUpgrade = "upgrade-frank-tribe-faction"
@@ -178,6 +179,7 @@ DefineFaction("Jute Tribe", {
 DefineFaction("Lombard Tribe", {
 	Civilization = "teuton",
 	Type = "tribe",
+	Language = "old-high-german", -- should be Lombardic
 	Colors = {"green"},
 	FactionUpgrade = "upgrade-lombard-tribe-faction"
 })
@@ -218,7 +220,7 @@ DefineFaction("Semnone Tribe", {
 
 DefineFaction("Sugambri Tribe", {
 	Civilization = "teuton",
-	ParentFaction = "Saxon Tribe", -- accurate?
+	ParentFaction = "Frank Tribe", -- accurate?
 	Type = "tribe",
 	Colors = {"black"},
 	DevelopsTo = {"Westphalia"} -- same general area
@@ -344,6 +346,7 @@ DefineFaction("Netherlands", {
 	Civilization = "teuton",
 	ParentFaction = "Francia",
 	Type = "polity",
+	Language = "dutch",
 	Colors = {"orange", "blue"},
 	DefaultTier = "kingdom",
 	Titles = {
@@ -377,6 +380,7 @@ DefineFaction("Franconia", {
 	Civilization = "teuton",
 	ParentFaction = "Francia",
 	Type = "polity",
+	Language = "high-german",
 	Colors = {"blue"},
 	DefaultTier = "duchy", -- Franconia was a duchy in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 	DevelopsTo = {"Holy Rome", "Francia"} -- Franconia was a part of the Holy Roman Empire in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
@@ -386,7 +390,7 @@ DefineFaction("Friesland", {
 	Civilization = "teuton",
 	ParentFaction = "Frisian Tribe",
 	Type = "polity",
-	Language = "high-german", -- should be Dutch or modern Frisian
+	Language = "dutch", -- maybe should be modern Frisian instead?
 	Colors = {"black"},
 	DefaultTier = "barony", -- Friesland was a lordship in 1559-1600; Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
 	Titles = {
@@ -410,6 +414,7 @@ DefineFaction("Hesse", {
 	Civilization = "teuton",
 	ParentFaction = "Francia",
 	Type = "polity",
+	Language = "high-german",
 	Colors = {"black"},
 	DefaultTier = "duchy", -- Hesse was a landgraviate in 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
 	Titles = {
@@ -430,6 +435,7 @@ DefineFaction("Holy Rome", {
 	Civilization = "teuton",
 	ParentFaction = "Francia",
 	Type = "polity",
+	Language = "high-german",
 	Colors = {"yellow"},
 	DefaultTier = "empire"
 })

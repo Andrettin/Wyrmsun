@@ -1225,7 +1225,7 @@ function LoadProvinces(world)
 		Drenthe = {
 			Name = "Drenthe",
 			CulturalNames = {
-				teuton = "Drenthe" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
+				Netherlands = "Drenthe" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
 			},
 			Tiles = {
 				{497, 105},
@@ -1234,7 +1234,7 @@ function LoadProvinces(world)
 			},
 			SettlementName = "Assen",
 			CulturalSettlementNames = {
-				teuton = "Assen" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
+				Netherlands = "Assen" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
 			},
 			SettlementLocation = {498, 105}, -- Assen
 			Map = "maps/random/random-map-forest.smp",
@@ -1252,7 +1252,8 @@ function LoadProvinces(world)
 			Name = "East Friesland",
 			CulturalNames = {
 				teuton = "East Friesland",
-				FrisianTribe = "East Friesland"
+				FrisianTribe = "East Friesland",
+				Netherlands = "East Friesland"
 			},
 			Tiles = {
 				{500, 103}, {500, 104}, {500, 105}, {500, 106},
@@ -1262,7 +1263,7 @@ function LoadProvinces(world)
 			},
 			SettlementName = "Emden",
 			CulturalSettlementNames = {
-				teuton = "Emden"
+				Netherlands = "Emden"
 			},
 			SettlementLocation = {500, 104}, -- Emden
 			Map = "maps/random/random-map-forest.smp",
@@ -1278,9 +1279,8 @@ function LoadProvinces(world)
 			Name = "England",
 			CulturalNames = {
 				England = "England",
-				SaxonTribe = "England",
-				latin = "Britannia",
-				teuton = "England"
+				AngleTribe = "England",
+				latin = "Britannia"
 			},
 			Tiles = {
 --				{117, 26}, {117, 27}, {118, 25}, {118, 26}, {118, 27}, {119, 25}, {119, 26}, {119, 27}, {120, 26}, -- old map
@@ -1310,7 +1310,7 @@ function LoadProvinces(world)
 			CulturalSettlementNames = {
 				celt = "Londinium",
 				latin = "Londinium",
-				teuton = "London"
+				England = "London"
 			},
 			SettlementLocation = {480, 109}, -- London
 			Map = "maps/random/random-map-forest.smp",
@@ -1502,7 +1502,9 @@ function LoadProvinces(world)
 		Franconia = {
 			Name = "Franconia",
 			CulturalNames = {
-				teuton = "Franconia"
+				teuton = "Franconia",
+				FrankTribe = "Franconia",
+				Netherlands = "Franconia"
 			},
 			Tiles = {
 				{506, 114}, {506, 115},
@@ -1535,6 +1537,7 @@ function LoadProvinces(world)
 			Name = "Friesland",
 			CulturalNames = {
 				FrisianTribe = "Frisia",
+				Netherlands = "Friesland", -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
 				teuton = "Friesland" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
 			},
 			Tiles = {
@@ -1545,7 +1548,7 @@ function LoadProvinces(world)
 			},
 			SettlementName = "Leeuwarden",
 			CulturalSettlementNames = {
-				teuton = "Leeuwarden" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
+				Netherlands = "Leeuwarden" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
 			},
 			SettlementLocation = {496, 104}, -- Leeuwarden
 			Map = "maps/random/random-map-forest.smp",
@@ -1750,8 +1753,7 @@ function LoadProvinces(world)
 				latin = "Caledonia",
 				England = "Highland Scotland",
 				ScotTribe = "Highland Scotland",
-				Scotland = "Highland Scotland",
-				teuton = "Highland Scotland"
+				Scotland = "Highland Scotland"
 			},
 			Tiles = {
 --				{116, 22}, {116, 23}, {117, 22}, {117, 23}, {117, 24}, {118, 23}, {118, 24}, -- old map
@@ -1813,8 +1815,8 @@ function LoadProvinces(world)
 			Name = "Holland",
 			CulturalNames = {
 				latin = "Batavia",
-				teuton = "Holland",
-				BatavianTribe = "Batavia"
+				BatavianTribe = "Batavia",
+				Netherlands = "Holland"
 			},
 			Tiles = {
 --				{123, 26}, {123, 27}, {124, 26}, {124, 27}, -- old map
@@ -1830,7 +1832,7 @@ function LoadProvinces(world)
 			},
 			SettlementName = "Amsterdam",
 			CulturalSettlementNames = {
-				teuton = "Amsterdam"
+				Netherlands = "Amsterdam"
 			},
 			SettlementLocation = {493, 107}, -- Amsterdam
 			Map = "maps/random/random-map-forest.smp",
@@ -2239,7 +2241,7 @@ function LoadProvinces(world)
 		Lorraine = {
 			Name = "Lorraine",
 			CulturalNames = {
---				french = "Lorraine",
+				France = "Lorraine",
 				teuton = "Lothringen"
 			},
 			Tiles = {
@@ -2251,6 +2253,7 @@ function LoadProvinces(world)
 			},
 			SettlementName = "Nancy",
 			CulturalSettlementNames = {
+				France = "Nancy"
 			},
 			SettlementLocation = {496, 118}, -- Nancy
 			Map = "maps/random/random-map-forest.smp",
@@ -2294,7 +2297,7 @@ function LoadProvinces(world)
 			},
 			SettlementName = "Cologne",
 			CulturalSettlementNames = {
---				french = "Cologne",
+				France = "Cologne",
 				latin = "Colonia Agrippina", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 				teuton = "Köln"
 			},
@@ -2311,8 +2314,7 @@ function LoadProvinces(world)
 				latin = "Valentia", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 				England = "Lowland Scotland",
 				ScotTribe = "Lowland Scotland",
-				Scotland = "Lowland Scotland",
-				teuton = "Lowland Scotland"
+				Scotland = "Lowland Scotland"
 			},
 			Tiles = {
 				{466, 97}, {466, 98}, {466, 99},
@@ -2701,7 +2703,7 @@ function LoadProvinces(world)
 		Overijssel = {
 			Name = "Overijssel",
 			CulturalNames = {
-				teuton = "Overijssel" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
+				Netherlands = "Overijssel" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
 			},
 			Tiles = {
 				{497, 106},
@@ -2710,7 +2712,7 @@ function LoadProvinces(world)
 			},
 			SettlementName = "Zwolle",
 			CulturalSettlementNames = {
-				teuton = "Zwolle" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
+				Netherlands = "Zwolle" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
 			},
 			SettlementLocation = {497, 106}, -- Zwolle
 			Map = "maps/random/random-map-forest.smp",
@@ -4761,9 +4763,8 @@ function LoadProvinces(world)
 			CulturalNames = {
 				celt = "British Ocean",
 				latin = "British Ocean",
-				teuton = "England",
 				England = "English Channel",
-				SaxonTribe = "English Channel"
+				AngleTribe = "English Channel"
 			},
 			Tiles = {
 --				{116, 28}, {117, 28}, {118, 28}, {119, 28}, {120, 27}, {120, 28}, -- old map

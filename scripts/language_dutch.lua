@@ -77,6 +77,23 @@ DefineLanguageWord("Borg", { -- is this really a noun? Source: B. H. Slicher van
 	}
 })
 
+DefineLanguageWord("Bos", {
+	Language = "dutch",
+	Type = "noun",
+	Meanings = {"Wood", "Forest"}, -- Source: http://www.vandale.nl/opzoeken?pattern=bos&lang=ne
+	DerivesFrom = {"middle-dutch", "noun", "Busch"} -- presumably
+})
+
+DefineLanguageWord("Bosch", {
+	Language = "dutch",
+	Type = "noun",
+	Meanings = {},
+	DerivesFrom = {"middle-dutch", "noun", "Busch"}, -- presumably
+	AffixNameTypes = {
+		"compound", "suffix", "singular", "settlement" -- example: "'s-Hertogenbosch"
+	}
+})
+
 DefineLanguageWord("Braak", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
 	Language = "dutch",
 	Type = "noun",
@@ -146,6 +163,18 @@ DefineLanguageWord("Heim", { -- is this really a noun? Source: B. H. Slicher van
 	Meanings = {},
 	AffixNameTypes = {
 		"compound", "suffix", "singular", "settlement" -- Characteristic of the influence of the Carolingian realm; Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
+	}
+})
+
+DefineLanguageWord("Hertog", {
+	Language = "dutch",
+	Type = "noun",
+	Meanings = {"Duke"}, -- Source: http://www.vandale.nl/opzoeken?pattern=Hertog&lang=ne
+	NumberCaseInflections = {
+		"singular", "genitive", "Hertogen"
+	},
+	AffixNameTypes = {
+		"compound", "prefix", "singular", "settlement" -- example: "'s-Hertogenbosch"
 	}
 })
 
