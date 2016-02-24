@@ -1066,6 +1066,7 @@ DefineLanguageWord("Salis", { -- used in placenames, but not in actual speech
 	Type = "noun", -- correct?
 	Meanings = {"Salt"}, -- presumably
 	Gender = "neuter",
+	Archaic = true,
 	AffixNameTypes = {"compound", "prefix", "singular", "settlement"} -- example: "Salisbury"; Source: "Philip's International School Atlas", 2006, p. 64.
 })
 

@@ -207,7 +207,8 @@ DefineLanguage("old-english", {
 })
 
 DefineLanguage("old-frankish", {
-	Name = "Old Frankish"
+	Name = "Old Frankish",
+--	GenerateMissingWords = true
 })
 
 DefineLanguage("old-french", {
