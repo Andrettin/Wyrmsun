@@ -454,6 +454,13 @@ DefineLanguageWord("Glotta", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	DerivesFrom = {"proto-germanic", "verb", "Glent"}
 })
 
+DefineLanguageWord("Grâr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 79.
+	Language = "old-norse",
+	Type = "adjective",
+	Meanings = {"Gray"}, -- source gives the German "grau" as the meaning
+	DerivesFrom = {"proto-germanic", "adjective", "Grêva"}
+})
+
 DefineLanguageWord("Greddir", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 10.
 	Language = "old-norse",
 	Type = "noun",
@@ -464,6 +471,13 @@ DefineLanguageWord("Grenna", { -- Source: Sean Crist, "An Analysis of *z loss in
 	Language = "old-norse",
 	Type = "verb",
 	Meanings = {"Feed"}
+})
+
+DefineLanguageWord("Grŷjandi", { -- part of this compound is derived from the Proto-Germanic adjective "Grêva"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 79.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Dawn"}, -- source gives the German "Morgendämmerung" as the meaning
+	Gender = "feminine"
 })
 
 DefineLanguageWord("Guđ", { -- source also gives the alternative form "Gođ"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.

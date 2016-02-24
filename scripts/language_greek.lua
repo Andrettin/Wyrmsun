@@ -109,6 +109,13 @@ DefineLanguageWord("Calli", { -- should be written as the original Greek name (w
 	AffixNameTypes = {"compound", "prefix", "singular", "settlement"} -- example: "Callipolis"
 })
 
+DefineLanguageWord("Χαροπός", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 79.
+	Language = "greek",
+	Type = "verb", -- correct?
+	Meanings = {},
+	DerivesFrom = {"proto-indo-european", "verb", "Ĝherē"}
+})
+
 DefineLanguageWord("Χέσ-χιον", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
 	Language = "greek",
 	Type = "noun",

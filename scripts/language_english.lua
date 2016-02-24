@@ -563,6 +563,14 @@ DefineLanguageWord("Golden", {
 	AffixNameTypes = {"separate", "prefix", "singular", "unit-class-smithy"} -- seems sensible
 })
 
+DefineLanguageWord("Gray", {
+	Language = "english",
+	Type = "adjective",
+	Meanings = {"Gray"},
+	DerivesFrom = {"old-english", "adjective", "Græ̂g"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 79.
+	AffixNameTypes = {"separate", "prefix", "singular", "unit-class-smithy"} -- seems sensible
+})
+
 DefineLanguageWord("Guard", {
 	Language = "english",
 	Type = "noun",
@@ -619,6 +627,18 @@ DefineLanguageWord("Harry", {
 	Meanings = {},
 	Gender = "masculine",
 	NameTypes = {"person"}
+})
+
+DefineLanguageWord("Hauberk", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Hauberk"},
+	DerivesFrom = {"old-french", "noun", "Halberc"}, -- Merriam-Webster gives "Hauberc" instead; Source: http://www.merriam-webster.com/dictionary/hauberk
+	Gender = "neuter",
+	NumberCaseInflections = {
+		"plural", "nominative", "Hauberks"
+	},
+	AffixNameTypes = {"separate", "suffix", "singular", "unit-class-smithy"} -- seems sensible
 })
 
 DefineLanguageWord("Haven", {
@@ -1007,7 +1027,7 @@ DefineLanguageWord("Red", {
 	AffixNameTypes = {"compound", "suffix", "singular", "person"} -- example: "Alfred"
 })
 
-DefineLanguageWord("Rēad", {
+DefineLanguageWord("Red", {
 	Language = "english",
 	Type = "adjective",
 	Meanings = {"Red"},

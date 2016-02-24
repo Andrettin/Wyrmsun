@@ -210,6 +210,10 @@ DefineLanguage("old-frankish", {
 	Name = "Old Frankish"
 })
 
+DefineLanguage("old-french", {
+	Name = "Old French"
+})
+
 DefineLanguage("old-frisian", {
 	Name = "Old Frisian"
 })
@@ -351,7 +355,6 @@ Load("scripts/language_dutch.lua")
 Load("scripts/language_old_frisian.lua")
 Load("scripts/language_old_english.lua")
 Load("scripts/language_middle_english.lua")
-Load("scripts/language_english.lua")
 
 -- East Germanic languages (branch of the Germanic family)
 Load("scripts/language_gothic.lua")
@@ -361,8 +364,12 @@ Load("scripts/language_crimean_gothic.lua")
 Load("scripts/language_old_latin.lua")
 Load("scripts/language_latin.lua")
 Load("scripts/language_medieval_latin.lua")
+Load("scripts/language_old_french.lua")
 Load("scripts/language_french.lua")
 Load("scripts/language_italian.lua")
+
+-- English
+Load("scripts/language_english.lua") -- put it here since it uses words of Old French origin
 
 -- Slavic languages (branch of the Indo-European family)
 Load("scripts/language_old_church_slavonic.lua")

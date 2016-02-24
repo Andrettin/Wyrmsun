@@ -148,6 +148,13 @@ DefineLanguageWord("Goor", { -- is this really a noun? Source: B. H. Slicher van
 	}
 })
 
+DefineLanguageWord("Grijs", { -- Source: http://www.cnrtl.fr/definition/gris
+	Language = "dutch",
+	Type = "adjective",
+	Meanings = {"Gray"}, -- source gives the French "gris" as the meaning
+	DerivesFrom = {"old-frankish", "adjective", "Grîs"} -- presumably
+})
+
 DefineLanguageWord("Haar", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
 	Language = "dutch",
 	Type = "noun",

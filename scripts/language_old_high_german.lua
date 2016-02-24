@@ -341,6 +341,20 @@ DefineLanguageWord("Got", { -- source also gives the alternative form "Cot"; Sou
 	DerivesFrom = {"proto-germanic", "noun", "Guda"}
 })
 
+DefineLanguageWord("Grâ", { -- source also gives the alternative form "crâ"; source also gives the inflected form "grâwer"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 79.
+	Language = "old-high-german",
+	Type = "adjective",
+	Meanings = {"Gray"}, -- source gives the German "grau" as the meaning
+	DerivesFrom = {"proto-germanic", "adjective", "Grêva"}
+})
+
+DefineLanguageWord("Grîs", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 79.
+	Language = "old-high-german",
+	Type = "adjective",
+	Meanings = {"Gray", "Old"}, -- source gives the German "grau, greis" as the meaning
+	DerivesFrom = {"proto-germanic", "adjective", "Grîsa"}
+})
+
 DefineLanguageWord("Hagazussa", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 200.
 	Language = "old-high-german",
 	Type = "noun",

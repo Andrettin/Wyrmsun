@@ -411,6 +411,20 @@ DefineLanguageWord("Gold", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	DerivesFrom = {"proto-germanic", "noun", "Gulþa"}
 })
 
+DefineLanguageWord("Græ̂g", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 79.
+	Language = "old-english",
+	Type = "adjective",
+	Meanings = {"Gray"}, -- source gives the German "grau" as the meaning
+	DerivesFrom = {"proto-germanic", "adjective", "Grêva"}
+})
+
+DefineLanguageWord("Grīs", { -- Source: http://www.cnrtl.fr/definition/gris
+	Language = "old-english",
+	Type = "adjective",
+	Meanings = {"Gray"}, -- source gives the French "gris" as the meaning
+	DerivesFrom = {"proto-germanic", "adjective", "Grîsa"} -- presumably
+})
+
 DefineLanguageWord("Gyden", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 89.
 	Language = "old-english",
 	Type = "noun",

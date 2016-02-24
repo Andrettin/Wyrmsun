@@ -191,6 +191,12 @@ DefineLanguageWord("Berg", {
 	}
 })
 
+DefineLanguageWord("Bergen", {
+	Language = "high-german",
+	Type = "verb",
+	Meanings = {"Salvage"}
+})
+
 DefineLanguageWord("Bern", {
 	Language = "high-german",
 	Type = "noun",
@@ -618,6 +624,20 @@ DefineLanguageWord("Gott", {
 	DerivesFrom = {"middle-high-german", "noun", "Got"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.
 	Gender = "masculine",
 	AffixNameTypes = {"compound", "prefix", "singular", "person"} -- example: "Gottfried"
+})
+
+DefineLanguageWord("Grau", {
+	Language = "high-german",
+	Type = "adjective",
+	Meanings = {"Gray"},
+	DerivesFrom = {"middle-high-german", "adjective", "Grâ"} -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 79.
+})
+
+DefineLanguageWord("Greis", {
+	Language = "high-german",
+	Type = "adjective",
+	Meanings = {"Old"},
+	DerivesFrom = {"middle-high-german", "adjective", "Grīs"} -- presumably; Source: http://www.cnrtl.fr/definition/gris
 })
 
 DefineLanguageWord("Gunther", {

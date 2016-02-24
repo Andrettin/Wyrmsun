@@ -107,6 +107,20 @@ DefineLanguageWord("Gold", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	DerivesFrom = {"proto-germanic", "noun", "Gulþa"}
 })
 
+DefineLanguageWord("Grê", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 79.
+	Language = "old-frisian",
+	Type = "adjective",
+	Meanings = {"Gray"}, -- source gives the German "grau" as the meaning
+	DerivesFrom = {"proto-germanic", "adjective", "Grêva"}
+})
+
+DefineLanguageWord("Grîs", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 79.
+	Language = "old-frisian",
+	Type = "adjective",
+	Meanings = {"Gray", "Old"}, -- source gives the German "grau, greis" as the meaning
+	DerivesFrom = {"proto-germanic", "adjective", "Grîsa"}
+})
+
 DefineLanguageWord("Hēde", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
 	Language = "old-frisian",
 	Type = "noun",

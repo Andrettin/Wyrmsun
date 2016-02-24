@@ -25,6 +25,12 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineLanguageWord("Bergan", { -- Source: http://www.cnrtl.fr/definition/haubert
+	Language = "old-frankish", -- source gives "Ancien Bas Francique" (= Old Frankish)
+	Type = "verb",
+	Meanings = {"Salvage"} -- source gives the French "mettre en sûreté" as the meaning
+})
+
 DefineLanguageWord("Blāo", { -- Source: http://www.cnrtl.fr/definition/bleu
 	Language = "old-frankish", -- source gives "Ancien Bas Francique" (= Old Frankish)
 	Type = "adjective",
@@ -74,6 +80,25 @@ DefineLanguageWord("Gart", { -- source also gives the alternative form "Gardo"; 
 	Type = "noun",
 	Meanings = {"Enclosure"}, -- source gives the French "clôture" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Gárdiz"} -- presumably
+})
+
+DefineLanguageWord("Grîs", { -- Source: http://www.cnrtl.fr/definition/gris
+	Language = "old-frankish", -- source gives "Ancien Bas Francique" (= Old Frankish)
+	Type = "adjective",
+	Meanings = {"Gray"}, -- source gives the French "gris" as the meaning
+	DerivesFrom = {"proto-germanic", "adjective", "Grîsa"} -- presumably
+})
+
+DefineLanguageWord("Hals", { -- Source: http://www.cnrtl.fr/definition/haubert
+	Language = "old-frankish", -- source gives "Ancien Bas Francique" (= Old Frankish)
+	Type = "noun",
+	Meanings = {"Neck"} -- source gives the French "cou" as the meaning
+})
+
+DefineLanguageWord("Halsberg", { -- compound of the noun "Hals" and the verb "Bergan"; Source: http://www.cnrtl.fr/definition/haubert
+	Language = "old-frankish", -- source gives "Ancien Bas Francique" (= Old Frankish)
+	Type = "noun",
+	Meanings = {"Neck Cover"} -- source gives the French "ce qui protège le cou" as the meaning
 })
 
 DefineLanguageWord("Kresso", { -- Source: http://www.cnrtl.fr/definition/cresson

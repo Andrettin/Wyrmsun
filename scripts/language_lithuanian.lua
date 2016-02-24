@@ -152,6 +152,13 @@ DefineLanguageWord("Źengiù", { -- Source: Winfred P. Lehmann, "A Grammar of Pr
 	Meanings = {"Go", "Stride"}
 })
 
+DefineLanguageWord("Żėriù", { -- source also gives the alternative form "żėrė́ti"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 79.
+	Language = "lithuanian",
+	Type = "verb",
+	Meanings = {"Shine in Glory"}, -- source gives the German "im Glanze strahlen" as the meaning
+	DerivesFrom = {"proto-indo-european", "verb", "Ĝherē"}
+})
+
 DefineLanguageWord("Žìrnis", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "lithuanian",
 	Type = "noun",

@@ -107,6 +107,13 @@ DefineLanguageWord("Večerŭ", { -- Source: August Fick and Alf Torp, "Wortschat
 	DerivesFrom = {"proto-indo-european", "noun", "Vekero"}
 })
 
+DefineLanguageWord("Zĭrěti", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 79.
+	Language = "old-church-slavonic",
+	Type = "verb",
+	Meanings = {"Shine", "See"}, -- source gives the German "strahlen, sehen" as the meaning
+	DerivesFrom = {"proto-indo-european", "verb", "Ĝherē"}
+})
+
 DefineLanguageWord("Zovą", { -- source also gives the alternative form "zvati"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.
 	Language = "old-church-slavonic",
 	Type = "verb",

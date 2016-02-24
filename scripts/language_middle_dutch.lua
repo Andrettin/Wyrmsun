@@ -45,6 +45,13 @@ DefineLanguageWord("Gaert", { -- Source: http://www.cnrtl.fr/definition/jardin
 	DerivesFrom = {"old-frankish", "noun", "Gart"} -- presumably
 })
 
+DefineLanguageWord("Halsberch", { -- Source: http://www.cnrtl.fr/definition/haubert
+	Language = "middle-dutch",
+	Type = "noun",
+	Meanings = {"Neck Cover"}, -- source gives the French "ce qui protège le cou" as the meaning
+	DerivesFrom = {"old-frankish", "noun", "Halsberg"} -- presumably
+})
+
 DefineLanguageWord("Herde", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
 	Language = "middle-dutch",
 	Type = "noun",

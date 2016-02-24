@@ -415,6 +415,20 @@ DefineLanguageWord("Gred", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	DerivesFrom = {"proto-indo-european", "noun", "Ghredh"}
 })
 
+DefineLanguageWord("Grêva", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 79.
+	Language = "proto-germanic",
+	Type = "adjective",
+	Meanings = {"Gray"}, -- source gives the German "grau" as the meaning
+	DerivesFrom = {"proto-indo-european", "verb", "Ĝherē"}
+})
+
+DefineLanguageWord("Grîsa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, pp. 79-80.
+	Language = "proto-germanic",
+	Type = "adjective",
+	Meanings = {"Gray", "Old"}, -- source gives the German "grau, greis" as the meaning
+	DerivesFrom = {"proto-indo-european", "verb", "Ĝherē"}
+})
+
 DefineLanguageWord("Guda", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.
 	Language = "proto-germanic",
 	Type = "noun",

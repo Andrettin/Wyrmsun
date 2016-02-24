@@ -89,6 +89,27 @@ DefineLanguageWord("Escrime", {
 	DerivesFrom = {"old-frankish", "verb", "Skĭrmjan"} -- Source: http://www.cnrtl.fr/definition/escrime
 })
 
+DefineLanguageWord("Gris", {
+	Language = "french",
+	Type = "noun",
+	Meanings = {"Gray"},
+	DerivesFrom = {"old-frankish", "adjective", "Grîs"} -- Source: http://www.cnrtl.fr/definition/gris
+})
+
+DefineLanguageWord("Gris", {
+	Language = "french",
+	Type = "adjective",
+	Meanings = {"Gray"},
+	DerivesFrom = {"old-frankish", "adjective", "Grîs"} -- Source: http://www.cnrtl.fr/definition/gris
+})
+
+DefineLanguageWord("Haubert", {
+	Language = "french",
+	Type = "noun",
+	Meanings = {"Hauberk"},
+	DerivesFrom = {"old-french", "noun", "Halberc"} -- Source: http://www.cnrtl.fr/definition/haubert
+})
+
 DefineLanguageWord("Jardin", {
 	Language = "french",
 	Type = "noun",

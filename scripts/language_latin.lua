@@ -262,6 +262,13 @@ DefineLanguageWord("Quod", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Nominative = "Quod"
 })
 
+DefineLanguageWord("Râvus", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 79.
+	Language = "latin",
+	Type = "adjective",
+	Meanings = {"Gray"}, -- source gives the German "grau" as the meaning
+	DerivesFrom = {"proto-indo-european", "verb", "Ĝherē"}
+})
+
 DefineLanguageWord("Rectus", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "latin",
 	Type = "adjective",

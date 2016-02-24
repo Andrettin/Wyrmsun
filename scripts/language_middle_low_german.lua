@@ -71,19 +71,11 @@ DefineLanguageWord("Darm", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	DerivesFrom = {"old-low-german", "noun", "Tharm"}
 })
 
-DefineLanguageWord("Sûd", { -- source also gives the alternative form "sûder"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.
+DefineLanguageWord("Grâwe", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 79.
 	Language = "middle-low-german",
-	Type = "adverb",
-	Meanings = {"Southward", "In the South"}, -- source gives the German "südwärts, im Süden" as the meaning
-	DerivesFrom = {"proto-germanic", "adverb", "Sunþa"}
-})
-
-DefineLanguageWord("Vorde", { -- source also gives the alternative form "Vort"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 120.
-	Language = "middle-low-german",
-	Type = "noun",
-	Meanings = {"Ford"}, -- source gives the German "Furt" as the meaning
-	DerivesFrom = {"old-low-german", "noun", "Ford"},
-	Gender = "masculine"
+	Type = "adjective",
+	Meanings = {"Gray"}, -- source gives the German "grau" as the meaning
+	DerivesFrom = {"proto-germanic", "adjective", "Grêva"}
 })
 
 DefineLanguageWord("Hēde", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 7.
@@ -116,6 +108,13 @@ DefineLanguageWord("Mersch", { -- source also gives the alternative form "Marsch
 	DerivesFrom = {"proto-germanic", "noun", "Mari"}
 })
 
+DefineLanguageWord("Sûd", { -- source also gives the alternative form "sûder"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.
+	Language = "middle-low-german",
+	Type = "adverb",
+	Meanings = {"Southward", "In the South"}, -- source gives the German "südwärts, im Süden" as the meaning
+	DerivesFrom = {"proto-germanic", "adverb", "Sunþa"}
+})
+
 DefineLanguageWord("Twern", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
 	Language = "middle-low-german",
 	Type = "noun",
@@ -126,6 +125,14 @@ DefineLanguageWord("Twernen", { -- Source: Sean Crist, "An Analysis of *z loss i
 	Language = "middle-low-german",
 	Type = "verb",
 	Meanings = {"Twine"}
+})
+
+DefineLanguageWord("Vorde", { -- source also gives the alternative form "Vort"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 120.
+	Language = "middle-low-german",
+	Type = "noun",
+	Meanings = {"Ford"}, -- source gives the German "Furt" as the meaning
+	DerivesFrom = {"old-low-german", "noun", "Ford"},
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Werf", { -- source also gives the alternative form "Warf"; Source: http://www.cnrtl.fr/definition/barguigner

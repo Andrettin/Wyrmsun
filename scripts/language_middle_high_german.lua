@@ -247,6 +247,26 @@ DefineLanguageWord("Got", { -- Source: August Fick and Alf Torp, "Wortschatz der
 	DerivesFrom = {"old-high-german", "noun", "Got"}
 })
 
+DefineLanguageWord("Grâ", { -- source also gives the alternative forms "grâw", "grô" and "grôw"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 79.
+	Language = "middle-high-german",
+	Type = "adjective",
+	Meanings = {"Gray"}, -- source gives the German "grau" as the meaning
+	DerivesFrom = {"old-high-german", "adjective", "Grâ"}
+})
+
+DefineLanguageWord("Grīs", { -- Fick gives "Grîs" instead; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 79; Source: http://www.cnrtl.fr/definition/gris
+	Language = "middle-high-german",
+	Type = "adjective",
+	Meanings = {"Gray"}, -- the TLFi gives the French "gris" as the meaning; Fick gives the German "grau, greis" instead
+	DerivesFrom = {"old-high-german", "adjective", "Grîs"} -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 79.
+})
+
+DefineLanguageWord("Halsberc", { -- Source: http://www.cnrtl.fr/definition/haubert
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Neck Cover"} -- source gives the French "ce qui protège le cou" as the meaning
+})
+
 DefineLanguageWord("Hert", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 46.
 	Language = "middle-high-german",
 	Type = "noun",
