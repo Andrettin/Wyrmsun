@@ -222,7 +222,6 @@ DefineRaceNames(
 			"Pres", -- example: "Presburg"
 			"Regens", -- example: "Regensburg"
 			"Schäss", -- example: "Schässburg"
-			"Spiel", -- "Spiel" = "Game"/"Play"; example: "Spielberg"
 			"Stuhl", -- "Stuhl" = "Chair"; example: "Stuhlweissenburg"
 			"Ziller" -- example: "Zillertal"
 		},

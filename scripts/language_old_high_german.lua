@@ -33,6 +33,12 @@ DefineLanguageWord("Adal", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Adelâr", { -- could be a compound of "Adel" (noble) with "âr" (eagle); Source: http://www.cnrtl.fr/definition/al%C3%A9rion
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Noble Eagle"}
+})
+
 DefineLanguageWord("Alt", { -- source also gives the alternative form "altêr" (or is that the comparative?); Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 19.
 	Language = "old-high-german",
 	Type = "adjective",

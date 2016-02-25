@@ -44,6 +44,18 @@ DefineLanguageWord("Adel", {
 	AffixNameTypes = {"compound", "prefix", "singular", "settlement"} -- example: "Adelsberg"
 })
 
+DefineLanguageWord("Adler", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"Eagle"},
+	DerivesFrom = {"old-high-german", "noun", "Adelâr"}, -- Source: http://www.cnrtl.fr/definition/al%C3%A9rion
+	Gender = "masculine",
+	NumberCaseInflections = {
+		"singular", "genitive", "Adlers",
+		"plural", "dative", "Adlern"
+	}
+})
+
 DefineLanguageWord("Albert", {
 	Language = "high-german",
 	Type = "noun",
@@ -354,11 +366,11 @@ DefineLanguageWord("Das", {
 	Language = "high-german",
 	Type = "article",
 	Meanings = {"The"},
+	ArticleType = "definite",
 	Nominative = "Das",
 	Accusative = "Das",
 	Dative = "Dem",
 	Genitive = "Des",
-	Definite = true,
 	Gender = "neuter"
 })
 
@@ -373,11 +385,11 @@ DefineLanguageWord("Der", {
 	Language = "high-german",
 	Type = "article",
 	Meanings = {"The"},
+	ArticleType = "definite",
 	Nominative = "Der",
 	Accusative = "Den",
 	Dative = "Dem",
 	Genitive = "Des",
-	Definite = true,
 	Gender = "masculine"
 })
 
@@ -385,11 +397,11 @@ DefineLanguageWord("Die", {
 	Language = "high-german",
 	Type = "article",
 	Meanings = {"The"},
+	ArticleType = "definite",
 	Nominative = "Die",
 	Accusative = "Die",
 	Dative = "Der",
 	Genitive = "Der",
-	Definite = true,
 	Gender = "feminine"
 })
 
@@ -1404,6 +1416,21 @@ DefineLanguageWord("Silbern", {
 	Meanings = {"Silver"}
 })
 
+DefineLanguageWord("Spiel", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"Game", "Play"},
+	NumberCaseInflections = {
+		"singular", "genitive", "Spieles", -- alternatively also "Spiels"
+		"plural", "nominative", "Spiele",
+		"plural", "accusative", "Spiele",
+		"plural", "dative", "Spielen",
+		"plural", "genitive", "Spiele"
+	},
+	Gender = "neuter",
+	AffixNameTypes = {"compound", "prefix", "singular", "settlement"} -- example: "Spielberg"
+})
+
 DefineLanguageWord("Spitze", {
 	Language = "high-german",
 	Type = "noun",
@@ -1446,11 +1473,15 @@ DefineLanguageWord("Stuhl", {
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"Chair"},
+	Gender = "masculine",
 	NumberCaseInflections = {
-		"singular", "genitive", "Stuhls"
+		"singular", "genitive", "Stuhles", -- alternatively also "Stuhls"
+		"plural", "nominative", "Stühle",
+		"plural", "accusative", "Stühle",
+		"plural", "dative", "Stühlen",
+		"plural", "genitive", "Stühle"
 	},
-	Gender = "masculine"
-	-- Stuhlweissenburg uses as a prefix, but without being genitive?
+	AffixNameTypes = {"compound", "prefix", "singular", "settlement"} -- example: "Stuhlweissenburg"
 })
 
 DefineLanguageWord("Süd", {
@@ -1607,7 +1638,7 @@ DefineLanguageWord("Neu", {
 	}
 })
 
-DefineLanguageWord("Schwartz", {
+DefineLanguageWord("Schwarz", {
 	Language = "high-german",
 	Type = "adjective",
 	Meanings = {"Black"}
@@ -1619,6 +1650,7 @@ DefineLanguageWord("Weiß", {
 	Meanings = {"White"},
 	AffixNameTypes = {
 		"compound", "prefix", "singular", "settlement", -- example: "Weisskirchen"
+		"compound", "infix", "singular", "settlement", -- example: "Stuhlweissenburg"
 		"compound", "prefix", "singular", "terrain-mountains" -- example: "Weißkugel"
 	}
 })

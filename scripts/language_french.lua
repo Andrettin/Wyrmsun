@@ -25,6 +25,13 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineLanguageWord("Alérion", {
+	Language = "french", -- source gives "Ancien Bas Francique" (= Old Frankish)
+	Type = "noun",
+	Meanings = {"Alerion"}, -- a sort of mythological bird
+	DerivesFrom = {"old-frankish", "noun", "Aδalarjo"} -- Source: http://www.cnrtl.fr/definition/al%C3%A9rion
+})
+
 DefineLanguageWord("Barguigner", {
 	Language = "french",
 	Type = "verb",

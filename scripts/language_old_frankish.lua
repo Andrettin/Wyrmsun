@@ -25,6 +25,12 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineLanguageWord("Aδalarjo", { -- source also gives the alternative form "Adalaro"; Source: http://www.cnrtl.fr/definition/al%C3%A9rion
+	Language = "old-frankish", -- source gives "Ancien Bas Francique" (= Old Frankish)
+	Type = "noun",
+	Meanings = {"Eagle"} -- source gives the French "aigle" as the meaning
+})
+
 DefineLanguageWord("Bergan", { -- Source: http://www.cnrtl.fr/definition/haubert
 	Language = "old-frankish", -- source gives "Ancien Bas Francique" (= Old Frankish)
 	Type = "verb",

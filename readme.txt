@@ -138,6 +138,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added Goblin Swordsman.
 - Cavalry units, siege weapons, transport ships and gryphon riders now require 2 food instead of 1.
 - Cavalry units now have 9 evasion instead of 10.
+- Workers can now use mines owned by allies.
 
 * Upgrades
 - Update to the Spatha's icon (by Leo).

@@ -1261,11 +1261,11 @@ DefineLanguageWord("The", {
 	Language = "english",
 	Type = "article",
 	Meanings = {"The"},
+	ArticleType = "definite",
 	Nominative = "The",
 	Accusative = "The",
 	Dative = "The",
-	Genitive = "The",
-	Definite = true
+	Genitive = "The"
 })
 
 DefineLanguageWord("Theodore", {
