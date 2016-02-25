@@ -192,7 +192,11 @@ DefineLanguageWord("Berg", {
 	Meanings = {"Mountain", "Hill"},
 	DerivesFrom = {"middle-high-german", "noun", "Berc"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
 	NumberCaseInflections = {
-		"plural", "nominative", "Berge"
+		"singular", "genitive", "Berges", -- alternatively also "Bergs"
+		"plural", "nominative", "Berge",
+		"plural", "accusative", "Berge",
+		"plural", "dative", "Bergen",
+		"plural", "genitive", "Berge"
 	},
 	Gender = "masculine",
 	AffixNameTypes = {
@@ -293,7 +297,10 @@ DefineLanguageWord("Bruck", { -- used in placenames, but not in actual speech
 	Type = "noun",
 	Meanings = {"Bridge"},
 	NumberCaseInflections = {
-		"plural", "nominative", "Brucken"
+		"plural", "nominative", "Brucken",
+		"plural", "accusative", "Brucken",
+		"plural", "dative", "Brucken",
+		"plural", "genitive", "Brucken"
 	},
 	Gender = "feminine",
 	DerivesFrom = {"middle-high-german", "noun", "Brücke"}, -- presumably, since the High German word "Brücke" does come from Middle High German "Brücke"
@@ -321,12 +328,15 @@ DefineLanguageWord("Burg", {
 	Meanings = {"Castle"},
 	DerivesFrom = {"middle-high-german", "noun", "Burc"},
 	NumberCaseInflections = {
-		"plural", "nominative", "Burgen"
+		"plural", "nominative", "Burgen",
+		"plural", "accusative", "Burgen",
+		"plural", "dative", "Burgen",
+		"plural", "genitive", "Burgen"
 	},
 	Gender = "feminine",
 	AffixNameTypes = {
 		"compound", "prefix", "plural", "province", -- example: "Burgenland"
-		"compound", "suffix", "singular", "settlement", -- examples: "Hamburg", "Klausenburg", "Marburg", "Nikolsburg", "Ödenburg", "Regensburg", "Salzburg", "Schässburg"
+		"compound", "suffix", "singular", "settlement", -- examples: "Hamburg", "Klausenburg", "Marburg", "Nikolsburg", "Ödenburg", "Regensburg", "Salzburg", "Schässburg", "Stuhlweissenburg"
 		"compound", "suffix", "singular", "province" -- example: "Brandenburg"
 	}
 })
@@ -367,6 +377,7 @@ DefineLanguageWord("Das", {
 	Type = "article",
 	Meanings = {"The"},
 	ArticleType = "definite",
+	GrammaticalNumber = "singular",
 	Nominative = "Das",
 	Accusative = "Das",
 	Dative = "Dem",
@@ -386,6 +397,7 @@ DefineLanguageWord("Der", {
 	Type = "article",
 	Meanings = {"The"},
 	ArticleType = "definite",
+	GrammaticalNumber = "singular",
 	Nominative = "Der",
 	Accusative = "Den",
 	Dative = "Dem",
@@ -398,11 +410,24 @@ DefineLanguageWord("Die", {
 	Type = "article",
 	Meanings = {"The"},
 	ArticleType = "definite",
+	GrammaticalNumber = "singular",
 	Nominative = "Die",
 	Accusative = "Die",
 	Dative = "Der",
 	Genitive = "Der",
 	Gender = "feminine"
+})
+
+DefineLanguageWord("Die", {
+	Language = "high-german",
+	Type = "article",
+	Meanings = {"The"},
+	ArticleType = "definite",
+	GrammaticalNumber = "plural",
+	Nominative = "Die",
+	Accusative = "Die",
+	Dative = "Den",
+	Genitive = "Der"
 })
 
 DefineLanguageWord("Dorf", {
@@ -412,7 +437,11 @@ DefineLanguageWord("Dorf", {
 	DerivesFrom = {"middle-high-german", "noun", "Dorf"},
 	Gender = "neuter",
 	NumberCaseInflections = {
-		"plural", "nominative", "Dörfer"
+		"singular", "genitive", "Dorfes", -- alternatively also "Dorfs"
+		"plural", "nominative", "Dörfer",
+		"plural", "accusative", "Dörfer",
+		"plural", "dative", "Dörfern",
+		"plural", "genitive", "Dörfer"
 	},
 	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- examples: "Frohsdorf", "Gänserndorf"
 })
@@ -591,6 +620,13 @@ DefineLanguageWord("Gau", {
 	Meanings = {"District"},
 	DerivesFrom = {"proto-germanic", "noun", "Gavja"},
 	Gender = "masculine",
+	NumberCaseInflections = {
+		"singular", "genitive", "Gaues", -- alternatively also "Gaus"
+		"plural", "nominative", "Gaue",
+		"plural", "accusative", "Gaue",
+		"plural", "dative", "Gauen",
+		"plural", "genitive", "Gaue"
+	},
 	AffixNameTypes = {
 		"compound", "suffix", "singular", "province" -- example: "Nordgau"
 	}
@@ -803,10 +839,14 @@ DefineLanguageWord("Hof", {
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"Court"},
-	NumberCaseInflections = {
-		"plural", "nominative", "Höfe"
-	},
 	Gender = "masculine",
+	NumberCaseInflections = {
+		"singular", "genitive", "Hofes", -- alternatively also "Hofs"
+		"plural", "nominative", "Höfe",
+		"plural", "accusative", "Höfe",
+		"plural", "dative", "Höfen",
+		"plural", "genitive", "Höfe"
+	},
 	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- example: "Königinhof"
 })
 
@@ -814,11 +854,11 @@ DefineLanguageWord("Horn", {
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"Horn"},
+	Gender = "neuter",
 	NumberCaseInflections = {
-		"singular", "genitive", "Horns",
+		"singular", "genitive", "Horns", -- alternatively also "Hornes"
 		"plural", "nominative", "Hörner"
 	},
-	Gender = "neuter",
 	AffixNameTypes = {"compound", "suffix", "singular", "terrain-mountains"} -- example: "Teufelshorn"
 })
 
@@ -1103,10 +1143,13 @@ DefineLanguageWord("Mark", {
 	Type = "noun",
 	Meanings = {"March"},
 	DerivesFrom = {"proto-germanic", "noun", "Mark"},
-	NumberCaseInflections = {
-		"plural", "nominative", "Marken"
-	},
 	Gender = "feminine",
+	NumberCaseInflections = {
+		"plural", "nominative", "Marken",
+		"plural", "accusative", "Marken",
+		"plural", "dative", "Marken",
+		"plural", "genitive", "Marken"
+	},
 	AffixNameTypes = {"compound", "suffix", "singular", "province"} -- example: "Steiermark" (Styria)
 })
 
@@ -1450,7 +1493,10 @@ DefineLanguageWord("Stadt", {
 	Type = "noun",
 	Meanings = {"City", "Town"},
 	NumberCaseInflections = {
-		"plural", "nominative", "Städte"
+		"plural", "nominative", "Städte",
+		"plural", "accusative", "Städte",
+		"plural", "dative", "Städten",
+		"plural", "genitive", "Städte"
 	},
 	Gender = "feminine",
 	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- examples: "Darmstadt", "Eisenstadt", "Josefstadt", "Kronstadt", "Leopoldstadt"
@@ -1504,10 +1550,14 @@ DefineLanguageWord("Tal", {
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"Valley"},
-	NumberCaseInflections = {
-		"plural", "nominative", "Täler"
-	},
 	Gender = "neuter",
+	NumberCaseInflections = {
+		"singular", "genitive", "Tales", -- alternatively also "Tals"
+		"plural", "nominative", "Täler",
+		"plural", "accusative", "Täler",
+		"plural", "dative", "Tälern",
+		"plural", "genitive", "Täler"
+	},
 	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- examples: "Zillertal"
 })
 
