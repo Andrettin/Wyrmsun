@@ -898,7 +898,7 @@ DefineLanguageWord("New", {
 	Language = "english",
 	Type = "adjective",
 	Meanings = {"New"},
-	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- examples: "Newbury", "Newport", "Newquay"; Source: "Philip's International School Atlas", 2006, p. 64.
+	AffixNameTypes = {"compound", "prefix", "singular", "settlement"} -- examples: "Newbury", "Newport", "Newquay"; Source: "Philip's International School Atlas", 2006, p. 64.
 })
 
 DefineLanguageWord("Nor", {
