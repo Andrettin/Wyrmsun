@@ -5513,6 +5513,7 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 						if (GetNumUnitsAt(-1, "any", {RandomX - 1, RandomY - 1}, {RandomX + 1, RandomY + 1}) < 1) then
 							SetStartView(1, RandomX, RandomY)
 							if (second_player_hero == "random") then
+								local available_heroes = {}
 								if (second_player_civilization == "teuton") then
 									if (FindHero("Marbod") == nil) then
 										table.insert(available_heroes, "Marbod")
