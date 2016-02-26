@@ -56,10 +56,10 @@ DefineLanguageWord("Anvil", {
 	Language = "english",
 	Type = "noun",
 	Meanings = {"Anvil"},
+	Gender = "neuter",
 	NumberCaseInflections = {
 		"plural", "nominative", "Anvils"
 	},
-	Gender = "neuter",
 	AffixNameTypes = {"separate", "suffix", "singular", "unit-class-smithy"} -- seems sensible
 })
 
@@ -390,6 +390,20 @@ DefineLanguageWord("Edward", {
 	NameTypes = {"person"}
 })
 
+DefineLanguageWord("Eight", {
+	Language = "english",
+	Type = "numeral",
+	Number = 8,
+	AffixNameTypes = {"separate", "prefix", "singular", "unit-class-smithy"} -- seems sensible
+})
+
+DefineLanguageWord("Eleven", {
+	Language = "english",
+	Type = "numeral",
+	Number = 11,
+	AffixNameTypes = {"separate", "prefix", "singular", "unit-class-smithy"} -- seems sensible
+})
+
 DefineLanguageWord("Elf", {
 	Language = "english",
 	Type = "noun",
@@ -502,6 +516,13 @@ DefineLanguageWord("Frith", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	DerivesFrom = {"old-english", "noun", "Friþu"},
 	Gender = "neuter",
 	Archaic = true
+})
+
+DefineLanguageWord("Five", {
+	Language = "english",
+	Type = "numeral",
+	Number = 5,
+	AffixNameTypes = {"separate", "prefix", "singular", "unit-class-smithy"} -- seems sensible
 })
 
 DefineLanguageWord("Gate", {
@@ -828,6 +849,9 @@ DefineLanguageWord("Mail", {
 	Type = "noun",
 	Meanings = {"Mail"},
 	Gender = "neuter",
+	NumberCaseInflections = {
+		"plural", "nominative", "Mails"
+	},
 	AffixNameTypes = {"separate", "suffix", "singular", "unit-class-smithy"} -- seems sensible
 })
 
@@ -899,6 +923,13 @@ DefineLanguageWord("New", {
 	Type = "adjective",
 	Meanings = {"New"},
 	AffixNameTypes = {"compound", "prefix", "singular", "settlement"} -- examples: "Newbury", "Newport", "Newquay"; Source: "Philip's International School Atlas", 2006, p. 64.
+})
+
+DefineLanguageWord("Nine", {
+	Language = "english",
+	Type = "numeral",
+	Number = 9,
+	AffixNameTypes = {"separate", "prefix", "singular", "unit-class-smithy"} -- seems sensible
 })
 
 DefineLanguageWord("Nor", {
@@ -1093,6 +1124,13 @@ DefineLanguageWord("Sebastian", {
 	NameTypes = {"person"}
 })
 
+DefineLanguageWord("Seven", {
+	Language = "english",
+	Type = "numeral",
+	Number = 7,
+	AffixNameTypes = {"separate", "prefix", "singular", "unit-class-smithy"} -- seems sensible
+})
+
 DefineLanguageWord("Sex", {
 	Language = "english",
 	Type = "noun",
@@ -1107,6 +1145,9 @@ DefineLanguageWord("Shield", {
 	Type = "noun",
 	Meanings = {"Shield"},
 	Gender = "neuter",
+	NumberCaseInflections = {
+		"plural", "nominative", "Shields"
+	},
 	AffixNameTypes = {"separate", "suffix", "singular", "unit-class-smithy"} -- seems sensible
 })
 
@@ -1284,6 +1325,13 @@ DefineLanguageWord("Thomas", {
 	NameTypes = {"person"}
 })
 
+DefineLanguageWord("Three", {
+	Language = "english",
+	Type = "numeral",
+	Number = 3,
+	AffixNameTypes = {"separate", "prefix", "singular", "unit-class-smithy"} -- seems sensible
+})
+
 DefineLanguageWord("Tor", {
 	Language = "english",
 	Type = "noun",
@@ -1306,6 +1354,20 @@ DefineLanguageWord("Tree", {
 	Meanings = {"Tree"},
 	Gender = "neuter",
 	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 336.
+})
+
+DefineLanguageWord("Twelve", {
+	Language = "english",
+	Type = "numeral",
+	Number = 12,
+	AffixNameTypes = {"separate", "prefix", "singular", "unit-class-smithy"} -- seems sensible
+})
+
+DefineLanguageWord("Two", {
+	Language = "english",
+	Type = "numeral",
+	Number = 2,
+	AffixNameTypes = {"separate", "prefix", "singular", "unit-class-smithy"} -- seems sensible
 })
 
 DefineLanguageWord("Wall", {

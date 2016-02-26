@@ -183,6 +183,10 @@ DefineLanguage("kobold", {
 	GenerateMissingWords = true
 })
 
+DefineLanguage("late-latin", {
+	Name = "Late Latin"
+})
+
 DefineLanguage("latin", {
 	Name = "Latin",
 	NameTranslations = {
@@ -401,6 +405,7 @@ Load("scripts/language_crimean_gothic.lua")
 -- Latin languages (branch of the Indo-European family)
 Load("scripts/language_old_latin.lua")
 Load("scripts/language_latin.lua")
+Load("scripts/language_late_latin.lua")
 Load("scripts/language_medieval_latin.lua")
 Load("scripts/language_old_french.lua")
 Load("scripts/language_french.lua")

@@ -274,7 +274,7 @@ DefineLanguageWord("Fluot", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	DerivesFrom = {"northwest-germanic", "noun", "Flodu"}
 })
 
-DefineLanguageWord("Fridu", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 128.
+DefineLanguageWord("Fridu", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 128; Source: http://www.cnrtl.fr/definition/effrayer
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Peace", "Protection", "Security", "Enclosure"}, -- source gives the German "Friede, Schutz, Sicherheit, Einfriedigung" as the meaning
@@ -611,6 +611,12 @@ DefineLanguageWord("Sēula", { -- source also gives "Sēla"; Source: Richard M. 
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Soul"}
+})
+
+DefineLanguageWord("Sibun", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
+	Language = "old-high-german",
+	Type = "numeral",
+	Number = 7
 })
 
 DefineLanguageWord("Silabar", { -- source also gives the alternative forms "Silapar" and "Silbar"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 221.
@@ -1026,10 +1032,4 @@ DefineLanguageWord("Ubir", { -- Lehmann also gives the alternative form "ubar"; 
 	Type = "adposition",
 	Meanings = {"Over"}, -- derived from the Proto-Germanic "Ufar", which means "Over"
 	DerivesFrom = {"proto-germanic", "adposition", "Ufar"}
-})
-
-DefineLanguageWord("Sibun", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
-	Language = "old-high-german",
-	Type = "numeral",
-	Number = 7
 })

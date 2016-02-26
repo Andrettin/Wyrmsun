@@ -25,16 +25,9 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageWord("Buscus", { -- source also gives the alternative form "Boscus"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 143.
-	Language = "medieval-latin",
-	Type = "noun",
-	Meanings = {},
-	DerivesFrom = {"proto-germanic", "noun", "Buska"}
-})
-
-DefineLanguageWord("Exfrediare", { -- Source: http://www.cnrtl.fr/definition/effrayer
-	Language = "medieval-latin", -- source gives it as appearing in the English domain
+DefineLanguageWord("Exfridare", { -- Source: http://www.cnrtl.fr/definition/effrayer
+	Language = "late-latin", -- source gives "Bas Latin" (= Late Latin)
 	Type = "verb",
-	Meanings = {"Confuse", "Agitate", "Disturb", "Perturb"}, -- source gives the French "troubler" as the meaning
-	DerivesFrom = {"late-latin", "verb", "Exfridare"} -- presumably
+	Meanings = {},
+	DerivesFrom = {"old-frankish", "noun", "Fridu"}
 })

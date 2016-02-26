@@ -105,7 +105,11 @@ DefineLanguageWord("Amboss", {
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"Anvil"},
-	Gender = "masculine"
+	Gender = "masculine",
+	NumberCaseInflections = {
+		"singular", "genitive", "Ambosses",
+		"plural", "nominative", "Ambosse"
+	}
 })
 
 DefineLanguageWord("Arl", {
@@ -336,7 +340,7 @@ DefineLanguageWord("Burg", {
 	Gender = "feminine",
 	AffixNameTypes = {
 		"compound", "prefix", "plural", "province", -- example: "Burgenland"
-		"compound", "suffix", "singular", "settlement", -- examples: "Hamburg", "Klausenburg", "Marburg", "Nikolsburg", "Ödenburg", "Regensburg", "Salzburg", "Schässburg", "Stuhlweissenburg"
+		"compound", "suffix", "singular", "settlement", -- examples: "Friedeburg", "Hamburg", "Klausenburg", "Marburg", "Nikolsburg", "Ödenburg", "Regensburg", "Salzburg", "Schässburg", "Stuhlweissenburg"
 		"compound", "suffix", "singular", "province" -- example: "Brandenburg"
 	}
 })
@@ -592,7 +596,11 @@ DefineLanguageWord("Friede", {
 	Type = "noun",
 	Meanings = {"Peace"},
 	DerivesFrom = {"middle-high-german", "noun", "Vride"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 128.
-	Gender = "masculine"
+	Gender = "masculine",
+	Uncountable = true,
+	AffixNameTypes = {
+		"compound", "prefix", "singular", "settlement", -- example: "Friedeburg"
+	}
 })
 
 DefineLanguageWord("Furt", { -- Source: http://www.duden.de/rechtschreibung/Furt
@@ -958,7 +966,14 @@ DefineLanguageWord("Kettenhemd", {
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"Mail"},
-	Gender = "neuter"
+	Gender = "neuter",
+	NumberCaseInflections = {
+		"singular", "genitive", "Kettenhemdes", -- alternatively also "Kettenhemds"
+		"plural", "nominative", "Kettenhemden",
+		"plural", "accusative", "Kettenhemden",
+		"plural", "dative", "Kettenhemden",
+		"plural", "genitive", "Kettenhemden"
+	}
 })
 
 DefineLanguageWord("Kirche", {
@@ -1406,7 +1421,14 @@ DefineLanguageWord("Schild", {
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"Shield"},
-	Gender = "masculine"
+	Gender = "masculine",
+	NumberCaseInflections = {
+		"singular", "genitive", "Schildes", -- alternatively also "Schilds"
+		"plural", "nominative", "Schilde",
+		"plural", "accusative", "Schilde",
+		"plural", "dative", "Schilden",
+		"plural", "genitive", "Schilde"
+	}
 })
 
 DefineLanguageWord("Schloss", { -- Source: http://www.duden.de/rechtschreibung/Schloss
@@ -1436,13 +1458,13 @@ DefineLanguageWord("Schmiede", {
 	Type = "noun",
 	Meanings = {"Smithy"},
 	DerivesFrom = {"proto-germanic", "noun", "Smiþjôn"},
+	Gender = "feminine",
 	NumberCaseInflections = {
 		"plural", "nominative", "Schmieden",
 		"plural", "accusative", "Schmieden",
 		"plural", "dative", "Schmieden",
 		"plural", "genitive", "Schmieden"
-	},
-	Gender = "feminine"
+	}
 })
 
 DefineLanguageWord("Schnee", {

@@ -38,6 +38,12 @@ DefineLanguageWord("Aihʷa", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	DerivesFrom = {"proto-indo-european", "noun", "Éḱwos"}
 })
 
+DefineLanguageWord("Ainlif", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
+	Language = "gothic",
+	Type = "numeral",
+	Number = 11
+})
+
 DefineLanguageWord("Aírþa", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "gothic",
 	Type = "noun",
@@ -478,6 +484,12 @@ DefineLanguageWord("Sauhts", { -- Source: Richard M. Runge, "The Phonetic Realiz
 	Meanings = {"Sickness"}
 })
 
+DefineLanguageWord("Sibun", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
+	Language = "gothic",
+	Type = "numeral",
+	Number = 7
+})
+
 DefineLanguageWord("Silubr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 221.
 	Language = "gothic",
 	Type = "noun",
@@ -520,6 +532,12 @@ DefineLanguageWord("Þaúrp", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Meanings = {"Field"}, -- source gives the German "Feld" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Þurpa"},
 	Gender = "neuter"
+})
+
+DefineLanguageWord("Twalif", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
+	Language = "gothic",
+	Type = "numeral",
+	Number = 12
 })
 
 DefineLanguageWord("Us", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
@@ -899,22 +917,4 @@ DefineLanguageWord("Ufar", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Type = "adposition",
 	Meanings = {"Over"}, -- derived from the Proto-Germanic "Ufar", which means "Over"
 	DerivesFrom = {"proto-germanic", "adposition", "Ufar"}
-})
-
-DefineLanguageWord("Sibun", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
-	Language = "gothic",
-	Type = "numeral",
-	Number = 7
-})
-
-DefineLanguageWord("Ainlif", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
-	Language = "gothic",
-	Type = "numeral",
-	Number = 11
-})
-
-DefineLanguageWord("Twalif", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
-	Language = "gothic",
-	Type = "numeral",
-	Number = 12
 })

@@ -25,6 +25,13 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineLanguageWord("Alt", { -- a suffix; http://www.cnrtl.fr/definition/lourdaud//1
+	Language = "old-french",
+	Type = "noun", -- correct?
+	Meanings = {},
+	DerivesFrom = {"old-frankish", "noun", "Wald"}
+})
+
 DefineLanguageWord("Halberc", { -- Source: http://www.cnrtl.fr/definition/haubert
 	Language = "old-french", -- attested c. 1100 AD
 	Type = "noun",

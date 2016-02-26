@@ -26,10 +26,25 @@
 --
 
 DefineLanguageWord("Alérion", {
-	Language = "french", -- source gives "Ancien Bas Francique" (= Old Frankish)
+	Language = "french",
 	Type = "noun",
 	Meanings = {"Alerion"}, -- a sort of mythological bird
 	DerivesFrom = {"old-frankish", "noun", "Aδalarjo"} -- Source: http://www.cnrtl.fr/definition/al%C3%A9rion
+})
+
+DefineLanguageWord("Aud", { -- a suffix
+	Language = "french",
+	Type = "noun", -- correct?
+	Meanings = {},
+	DerivesFrom = {"old-french", "noun", "Alt"}, -- http://www.cnrtl.fr/definition/lourdaud//1
+	AffixNameTypes = {"compound", "suffix", "singular", "person"} -- examples: "Bellaud", "Bonnaud", "Renaud"
+})
+
+DefineLanguageWord("Aut", { -- a suffix
+	Language = "french",
+	Type = "noun", -- correct?
+	Meanings = {},
+	DerivesFrom = {"old-french", "noun", "Alt"} -- http://www.cnrtl.fr/definition/lourdaud//1
 })
 
 DefineLanguageWord("Barguigner", {
@@ -37,6 +52,13 @@ DefineLanguageWord("Barguigner", {
 	Type = "verb",
 	Meanings = {"Haggle", "Hesitate"},
 	DerivesFrom = {"old-frankish", "verb", "Borganjan"} -- source also gives an alternative theory in which it derives from the Old Frankish verb "warbanjan"; Source: http://www.cnrtl.fr/definition/barguigner
+})
+
+DefineLanguageWord("Bell", {
+	Language = "french",
+	Type = "noun", -- correct?
+	Meanings = {},
+	AffixNameTypes = {"compound", "prefix", "singular", "person"} -- example: "Bellaud"
 })
 
 DefineLanguageWord("Bleu", {
@@ -59,6 +81,13 @@ DefineLanguageWord("Bois", {
 	Meanings = {"Wood"},
 	DerivesFrom = {"old-frankish", "noun", "Bŏsk"} -- Source: http://www.cnrtl.fr/definition/bois
 	-- Fick gives as being derived from Medieval Latin "Buscus" instead; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 143.
+})
+
+DefineLanguageWord("Bonn", {
+	Language = "french",
+	Type = "noun", -- correct?
+	Meanings = {},
+	AffixNameTypes = {"compound", "prefix", "singular", "person"} -- example: "Bonnaud"
 })
 
 DefineLanguageWord("Bord", {
@@ -89,6 +118,12 @@ DefineLanguageWord("Déchirer", {
 	DerivesFrom = {"old-frankish", "verb", "Skerian"} -- Source: http://www.cnrtl.fr/definition/d%C3%A9chirer
 })
 
+DefineLanguageWord("Effrayer", {
+	Language = "french",
+	Type = "verb",
+	Meanings = {"Scare", "Frighten"},
+	DerivesFrom = {"late-latin", "verb", "Exfridare"} -- Source: http://www.cnrtl.fr/definition/effrayer
+})
 DefineLanguageWord("Escrime", {
 	Language = "french",
 	Type = "noun",
@@ -129,4 +164,11 @@ DefineLanguageWord("Marais", {
 	Type = "noun",
 	Meanings = {"Marsh"},
 	DerivesFrom = {"old-frankish", "noun", "Marisk"} -- Source: http://www.cnrtl.fr/definition/marais
+})
+
+DefineLanguageWord("Ren", {
+	Language = "french",
+	Type = "noun", -- correct?
+	Meanings = {},
+	AffixNameTypes = {"compound", "prefix", "singular", "person"} -- example: "Renaud"
 })

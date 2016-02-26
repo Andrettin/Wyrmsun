@@ -31,6 +31,13 @@ DefineLanguageWord("Aδalarjo", { -- source also gives the alternative form "Ada
 	Meanings = {"Eagle"} -- source gives the French "aigle" as the meaning
 })
 
+DefineLanguageWord("Ans", { -- http://www.cnrtl.fr/definition/lourdaud//1
+	Language = "old-frankish",
+	Type = "noun", -- correct?
+	Meanings = {},
+	AffixNameTypes = {"compound", "prefix", "singular", "person"} -- examples: "Answald"
+})
+
 DefineLanguageWord("Bergan", { -- Source: http://www.cnrtl.fr/definition/haubert
 	Language = "old-frankish", -- source gives "Ancien Bas Francique" (= Old Frankish)
 	Type = "verb",
@@ -81,11 +88,25 @@ DefineLanguageWord("Bŏsk", { -- Source: http://www.cnrtl.fr/definition/bois
 	DerivesFrom = {"proto-germanic", "noun", "Buska"} -- presumably
 })
 
+DefineLanguageWord("Fridu", { -- Source: http://www.cnrtl.fr/definition/effrayer
+	Language = "old-frankish", -- source gives "Ancien Bas Francique" (= Old Frankish)
+	Type = "noun",
+	Meanings = {"Peace"}, -- source gives the French "paix" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Friþu"} -- presumably
+})
+
 DefineLanguageWord("Gart", { -- source also gives the alternative form "Gardo"; Source: http://www.cnrtl.fr/definition/jardin
 	Language = "old-frankish", -- source gives "Ancien Bas Francique" (= Old Frankish)
 	Type = "noun",
 	Meanings = {"Enclosure"}, -- source gives the French "clôture" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Gárdiz"} -- presumably
+})
+
+DefineLanguageWord("Grim", { -- http://www.cnrtl.fr/definition/lourdaud//1
+	Language = "old-frankish",
+	Type = "noun", -- correct?
+	Meanings = {},
+	AffixNameTypes = {"compound", "prefix", "singular", "person"} -- examples: "Grimwald"
 })
 
 DefineLanguageWord("Grîs", { -- Source: http://www.cnrtl.fr/definition/gris
@@ -174,6 +195,19 @@ DefineLanguageWord("Waidanjan", { -- Source: http://www.cnrtl.fr/definition/barg
 	Language = "old-frankish", -- source gives "Ancien Bas Francique" (= Old Frankish)
 	Type = "verb",
 	Meanings = {"Win", "Gain"} -- source gives the French "gagner" as the meaning (or as a cognate, it isn't clear from it)
+})
+
+DefineLanguageWord("Wald", { -- a suffix, from the verb "walden"; http://www.cnrtl.fr/definition/lourdaud//1
+	Language = "old-frankish",
+	Type = "noun", -- correct? maybe should be "walden"'s participle instead
+	Meanings = {},
+	AffixNameTypes = {"compound", "suffix", "singular", "person"} -- examples: "Answald", "Grimwald"
+})
+
+DefineLanguageWord("Walden", { -- http://www.cnrtl.fr/definition/lourdaud//1
+	Language = "old-frankish",
+	Type = "verb",
+	Meanings = {"Govern"}
 })
 
 DefineLanguageWord("Warb", { -- Source: http://www.cnrtl.fr/definition/barguigner
