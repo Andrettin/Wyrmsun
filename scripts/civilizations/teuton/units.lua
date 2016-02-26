@@ -10,7 +10,7 @@
 --
 --      units.lua - Defines the teuton (west germanic) unit-types.
 --
---      (c) Copyright 2015 by Andrettin
+--      (c) Copyright 2015-2016 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -478,12 +478,17 @@ DefineUnitType("unit-teuton-ritter", { Name = _("Ritter"),
 	Description = _("The Teutons excel in mounted combat. Their well-armored and trained heavy cavalry strikes fear in the hearts of their enemies whenever they are seen upon the battlefield."),
 	Background = _("\"Ritter\" is the German word for \"knight\"."),
 	Image = {"file", "teuton/units/ritter.png", "size", {72, 72}},
+	LayerImages = {
+		{"layer", "shield", "file", "teuton/units/ritter_shield.png"}
+	},
 	Animations = "animations-melee-unit", Icon = "icon-teuton-ritter",
 	Armor = 3, BasicDamage = 13, -- +1 armor, +1 damage
 	DaySightRangeBonus = 1,
 	NightSightRangeBonus = -1,
 	WeaponClasses = {"sword"},
 	HackDamage = true,
+	InvertedEastArms = true,
+	InvertedSoutheastArms = true,
 	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
 	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-flaming", "upgrade-item-prefix-glacial", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-the-serpent", "upgrade-item-suffix-of-victory"}, -- allow more affixes than normal for the unit's level, to compensate for the unit not being upgradeable
 	Corpse = "unit-human-dead-body",

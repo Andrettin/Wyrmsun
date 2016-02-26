@@ -134,6 +134,7 @@ DefineUnitType("unit-dwarven-axefighter", { Name = _("Axefighter"),
 		{"layer", "right-arm", "file", "dwarf/units/right_arm_warrior.png"},
 		{"layer", "clothing-right-arm", "file", "dwarf/units/shoulder_pad_right_arm_warrior.png"},
 		{"layer", "clothing-left-arm", "file", "dwarf/units/shoulder_pad_left_arm.png"},
+		{"layer", "hair", "file", "dwarf/units/red_hair_warrior.png"},
 		{"layer", "weapon", "file", "dwarf/units/axe.png"},
 		{"layer", "shield", "file", "dwarf/units/round_shield.png"}
 	},
@@ -149,38 +150,36 @@ DefineUnitType("unit-dwarven-axefighter", { Name = _("Axefighter"),
 	Variations = {
 		{
 			"variation-id", "red-hair",
---			"upgrade-forbidden", "upgrade-old"
+			"upgrade-forbidden", "upgrade-old"
 		},
-		--[[
 		{
 			"variation-id", "gray-hair",
-			"file", "dwarf/units/dwarven_axefighter_gray_hair.png",
+			"layer-file", "hair", "dwarf/units/gray_hair_warrior.png",
 			"icon", "icon-dwarven-axefighter-gray-hair"
 		},
 		{
 			"variation-id", "orange-hair",
-			"file", "dwarf/units/dwarven_axefighter_orange_hair.png",
+			"layer-file", "hair", "dwarf/units/orange_hair_warrior.png",
 			"upgrade-forbidden", "upgrade-old"
 		},
 		{
 			"variation-id", "blond-hair",
-			"file", "dwarf/units/dwarven_axefighter_blond_hair.png",
+			"layer-file", "hair", "dwarf/units/blond_hair_warrior.png",
 			"icon", "icon-dwarven-axefighter-blond-hair",
 			"upgrade-forbidden", "upgrade-old"
 		},
 		{
 			"variation-id", "black-hair",
-			"file", "dwarf/units/dwarven_axefighter_black_hair.png",
+			"layer-file", "hair", "dwarf/units/black_hair_warrior.png",
 			"icon", "icon-dwarven-axefighter-black-hair",
 			"upgrade-forbidden", "upgrade-old"
 		},
 		{
 			"variation-id", "brown-hair",
-			"file", "dwarf/units/dwarven_axefighter_brown_hair.png",
+			"layer-file", "hair", "dwarf/units/brown_hair_warrior.png",
 			"icon", "icon-dwarven-axefighter-brown-hair",
 			"upgrade-forbidden", "upgrade-old"
 		}
-		--]]
 	},
 	Sounds = {
 		"selected", "basic-dwarf-voices-selected-group",
@@ -379,8 +378,9 @@ DefineUnitType("unit-dwarven-guard", { Name = _("Guard"),
 		{"layer", "right-arm", "file", "dwarf/units/right_arm_spear.png"},
 --		{"layer", "clothing-right-arm", "file", "dwarf/units/shoulder_pad_right_arm_warrior.png"},
 --		{"layer", "clothing-left-arm", "file", "dwarf/units/shoulder_pad_left_arm.png"},
+		{"layer", "hair", "file", "dwarf/units/brown_hair_warrior.png"},
 		{"layer", "weapon", "file", "dwarf/units/spear.png"},
---		{"layer", "shield", "file", "dwarf/units/round_shield.png"}
+		{"layer", "shield", "file", "dwarf/units/heater_shield.png"}
 	},
 	Animations = "animations-dwarven-axefighter", Icon = "icon-dwarven-guard",
 	Corpse = "unit-dwarven-dead-body",
@@ -391,39 +391,8 @@ DefineUnitType("unit-dwarven-guard", { Name = _("Guard"),
 	DropAffixes = {"upgrade-item-suffix-of-the-snigill"},
 	Variations = {
 		{
-			"variation-id", "red-hair",
---			"upgrade-forbidden", "upgrade-old"
-		},
-		--[[
-		{
-			"variation-id", "gray-hair",
-			"file", "dwarf/units/dwarven_axefighter_gray_hair.png",
-			"icon", "icon-dwarven-axefighter-gray-hair"
-		},
-		{
-			"variation-id", "orange-hair",
-			"file", "dwarf/units/dwarven_axefighter_orange_hair.png",
-			"upgrade-forbidden", "upgrade-old"
-		},
-		{
-			"variation-id", "blond-hair",
-			"file", "dwarf/units/dwarven_axefighter_blond_hair.png",
-			"icon", "icon-dwarven-axefighter-blond-hair",
-			"upgrade-forbidden", "upgrade-old"
-		},
-		{
-			"variation-id", "black-hair",
-			"file", "dwarf/units/dwarven_axefighter_black_hair.png",
-			"icon", "icon-dwarven-axefighter-black-hair",
-			"upgrade-forbidden", "upgrade-old"
-		},
-		{
-			"variation-id", "brown-hair",
-			"file", "dwarf/units/dwarven_axefighter_brown_hair.png",
-			"icon", "icon-dwarven-axefighter-brown-hair",
-			"upgrade-forbidden", "upgrade-old"
+			"variation-id", "brown-hair"
 		}
-		--]]
 	},
 	Sounds = {
 		"selected", "basic-dwarf-voices-selected-group",

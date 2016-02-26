@@ -115,12 +115,16 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed an issue which caused unit/building proper names to overlap with other parts of the interface if a word in them was too long.
 - Fixed an issue which caused the player to be able to see others' buildings on the minimap if the player destroyed their own town hall.
 - The Brising Clan (dwarf) now has a faction-specific icon for the dwarven level 1 shield (if the player has the Brising Faction Flair DLC).
+- The Custom Game "Advanced Squads" option now includes two cavalry units in each squad.
 
 * Modding
 - Added support for redefining civilizations and factions.
 
 * Multiplayer
 - Fixed a potential desync cause due to units' facing being randomly set when created through a random number generating function that isn't synchronized.
+
+* Terrain
+- Overhaul of the forest tilesets (by Leo).
 
 * Units
 - When right-clicking on a tile-based resource, workers who are already carrying the resource at maximum capacity will now return goods and then begin harvesting.
@@ -136,9 +140,12 @@ https://github.com/Andrettin/Wyrmsun
 - Workers will now look to see if any trees have regrown closer to their drop-off point when going to harvest lumber.
 - Improved worker pathfinding checks when choosing which objects to harvest.
 - Added Goblin Swordsman.
+- Added Dwarven Guard (icon and shield by Jinn, spear-wielding arm animation by badbuckle).
 - Cavalry units, siege weapons, transport ships and gryphon riders now require 2 food instead of 1.
 - Cavalry units now have 9 evasion instead of 10.
 - Workers can now use mines owned by allies.
+- The Ritter graphics now have improved shading (modification by Jinn).
+- New Teuton iron shield unit graphics (by Jinn).
 
 * Upgrades
 - Update to the Spatha's icon (by Leo).
