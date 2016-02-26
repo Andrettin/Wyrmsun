@@ -565,6 +565,17 @@ DefineLanguageWord("Franz", {
 	NameTypes = {"person"}
 })
 
+DefineLanguageWord("Frei", {
+	Language = "high-german",
+	Type = "adjective",
+	Meanings = {"Free"},
+	ComparisonDegreeInflections = {
+		"comparative", "Freier",
+		"superlative", "Freiesten" -- alternatively also "freisten"
+	},
+	AffixNameTypes = {"compound", "prefix", "singular", "settlement"} -- example: "Freistadt"
+})
+
 DefineLanguageWord("Fried", { -- root present in "Friede" and also in a number of adjectives
 	Language = "high-german",
 	Type = "noun",
@@ -796,7 +807,15 @@ DefineLanguageWord("Heim", {
 	Type = "noun",
 	Meanings = {"Home"},
 	DerivesFrom = {"proto-germanic", "noun", "Haima"},
-	Gender = "neuter"
+	Gender = "neuter",
+	NumberCaseInflections = {
+		"singular", "genitive", "Heimes", -- alternatively also "Heims"
+		"plural", "nominative", "Heime",
+		"plural", "accusative", "Heime",
+		"plural", "dative", "Heimen",
+		"plural", "genitive", "Heime"
+	},
+	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- example: "Rosenheim"
 })
 
 DefineLanguageWord("Hein", {
@@ -1340,7 +1359,10 @@ DefineLanguageWord("Rose", { -- Source: http://www.duden.de/rechtschreibung/Rose
 		"plural", "genitive", "Rosen"
 	},
 	Gender = "feminine",
-	AffixNameTypes = {"compound", "prefix", "plural", "terrain-hills"} -- example: "Rosenhügel"
+	AffixNameTypes = {
+		"compound", "prefix", "plural", "settlement", -- example: "Rosenheim"
+		"compound", "prefix", "plural", "terrain-hills" -- example: "Rosenhügel"
+	}
 })
 
 DefineLanguageWord("Rostig", {
