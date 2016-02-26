@@ -418,6 +418,13 @@ DefineLanguageWord("Græ̂g", { -- Source: August Fick and Alf Torp, "Wortschatz
 	DerivesFrom = {"proto-germanic", "adjective", "Grêva"}
 })
 
+DefineLanguageWord("Grêne", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 80.
+	Language = "old-english",
+	Type = "adjective",
+	Meanings = {"Green"}, -- source gives the German "grün" as the meaning
+	DerivesFrom = {"proto-germanic", "adjective", "Grônia"}
+})
+
 DefineLanguageWord("Grīs", { -- Source: http://www.cnrtl.fr/definition/gris
 	Language = "old-english",
 	Type = "adjective",

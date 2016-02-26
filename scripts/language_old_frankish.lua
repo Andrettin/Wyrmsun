@@ -116,6 +116,13 @@ DefineLanguageWord("Grîs", { -- Source: http://www.cnrtl.fr/definition/gris
 	DerivesFrom = {"proto-germanic", "adjective", "Grîsa"} -- presumably
 })
 
+DefineLanguageWord("Grôdi", { -- Source: http://www.cnrtl.fr/definition/gruyer
+	Language = "old-frankish", -- source gives "Ancien Bas Francique" (= Old Frankish)
+	Type = "noun",
+	Meanings = {"Green"}, -- source gives the French "vert" as the meaning
+	DerivesFrom = {"proto-germanic", "adjective", "Grônia"} -- presumably
+})
+
 DefineLanguageWord("Hals", { -- Source: http://www.cnrtl.fr/definition/haubert
 	Language = "old-frankish", -- source gives "Ancien Bas Francique" (= Old Frankish)
 	Type = "noun",

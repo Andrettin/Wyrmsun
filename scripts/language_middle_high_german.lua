@@ -261,6 +261,13 @@ DefineLanguageWord("Grīs", { -- Fick gives "Grîs" instead; Source: August Fic
 	DerivesFrom = {"old-high-german", "adjective", "Grîs"} -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 79.
 })
 
+DefineLanguageWord("Grüene", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 80.
+	Language = "middle-high-german",
+	Type = "adjective",
+	Meanings = {"Green"}, -- source gives the German "grün" as the meaning
+	DerivesFrom = {"old-high-german", "adjective", "Gruoni"}
+})
+
 DefineLanguageWord("Halsberc", { -- Source: http://www.cnrtl.fr/definition/haubert
 	Language = "middle-high-german",
 	Type = "noun",

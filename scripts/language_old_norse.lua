@@ -473,6 +473,13 @@ DefineLanguageWord("Grenna", { -- Source: Sean Crist, "An Analysis of *z loss in
 	Meanings = {"Feed"}
 })
 
+DefineLanguageWord("Grœnn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 80.
+	Language = "old-norse",
+	Type = "adjective",
+	Meanings = {"Green"}, -- source gives the German "grün" as the meaning
+	DerivesFrom = {"proto-germanic", "adjective", "Grônia"}
+})
+
 DefineLanguageWord("Grŷjandi", { -- part of this compound is derived from the Proto-Germanic adjective "Grêva"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 79.
 	Language = "old-norse",
 	Type = "noun",

@@ -124,6 +124,7 @@ DefineLanguageWord("Effrayer", {
 	Meanings = {"Scare", "Frighten"},
 	DerivesFrom = {"late-latin", "verb", "Exfridare"} -- Source: http://www.cnrtl.fr/definition/effrayer
 })
+
 DefineLanguageWord("Escrime", {
 	Language = "french",
 	Type = "noun",
@@ -143,6 +144,21 @@ DefineLanguageWord("Gris", {
 	Type = "adjective",
 	Meanings = {"Gray"},
 	DerivesFrom = {"old-frankish", "adjective", "Grîs"} -- Source: http://www.cnrtl.fr/definition/gris
+})
+
+DefineLanguageWord("Gruyer", {
+	Language = "french",
+	Type = "noun",
+	Meanings = {"Royal Officer of Waters and Forests", "Seigniorial Officer of Waters and Forests"},
+	DerivesFrom = {"gallo-romance", "noun", "Grodiarius"}, -- Source: http://www.cnrtl.fr/definition/gruyer
+	Gender = "masculine"
+})
+
+DefineLanguageWord("Gruyer", {
+	Language = "french",
+	Type = "adjective",
+	Meanings = {"Lord Beneficiary of the Use of His Vassals' Woods"}, -- when used in "seigneur gruyer"
+	DerivesFrom = {"gallo-romance", "noun", "Grodiarius"} -- Source: http://www.cnrtl.fr/definition/gruyer
 })
 
 DefineLanguageWord("Haubert", {

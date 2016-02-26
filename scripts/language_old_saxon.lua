@@ -197,6 +197,13 @@ DefineLanguageWord("Grîs", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	DerivesFrom = {"proto-germanic", "adjective", "Grîsa"}
 })
 
+DefineLanguageWord("Grôni", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 80.
+	Language = "old-saxon",
+	Type = "adjective",
+	Meanings = {"Green"}, -- source gives the German "grün" as the meaning
+	DerivesFrom = {"proto-germanic", "adjective", "Grônia"}
+})
+
 DefineLanguageWord("Hamur", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 46.
 	Language = "old-saxon",
 	Type = "noun",

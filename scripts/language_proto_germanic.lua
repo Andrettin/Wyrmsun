@@ -429,6 +429,12 @@ DefineLanguageWord("Grîsa", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	DerivesFrom = {"proto-indo-european", "verb", "Ĝherē"}
 })
 
+DefineLanguageWord("Grônia", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 80.
+	Language = "proto-germanic",
+	Type = "adjective",
+	Meanings = {"Green"} -- source gives the German "grün" as the meaning
+})
+
 DefineLanguageWord("Guda", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.
 	Language = "proto-germanic",
 	Type = "noun",

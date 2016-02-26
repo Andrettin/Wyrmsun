@@ -361,6 +361,20 @@ DefineLanguageWord("Grîs", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	DerivesFrom = {"proto-germanic", "adjective", "Grîsa"}
 })
 
+DefineLanguageWord("Gruoni", { -- source also gives the alternative form "cruoui"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 80.
+	Language = "old-high-german",
+	Type = "adjective",
+	Meanings = {"Green"}, -- source gives the German "grün" as the meaning
+	DerivesFrom = {"proto-germanic", "adjective", "Grônia"}
+})
+
+DefineLanguageWord("Gruoti", { -- Source: http://www.cnrtl.fr/definition/gruyer
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Green"}, -- source gives the French "vert" as the meaning
+	DerivesFrom = {"proto-germanic", "adjective", "Grônia"} -- presumably, since the corresponding adjective does
+})
+
 DefineLanguageWord("Hagazussa", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 200.
 	Language = "old-high-german",
 	Type = "noun",

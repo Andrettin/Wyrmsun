@@ -707,6 +707,22 @@ DefineLanguageWord("Greis", {
 	DerivesFrom = {"middle-high-german", "adjective", "Grīs"} -- presumably; Source: http://www.cnrtl.fr/definition/gris
 })
 
+DefineLanguageWord("Grün", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"Green"},
+	DerivesFrom = {"old-high-german", "noun", "Gruoti"}, -- apparently; Source: http://www.cnrtl.fr/definition/gruyer
+	Gender = "neuter",
+	Uncountable = true
+})
+
+DefineLanguageWord("Grün", {
+	Language = "high-german",
+	Type = "adjective",
+	Meanings = {"Green"},
+	DerivesFrom = {"middle-high-german", "adjective", "Grüene"} -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 80.
+})
+
 DefineLanguageWord("Gunther", {
 	Language = "high-german",
 	Type = "noun",
