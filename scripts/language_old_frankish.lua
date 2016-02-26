@@ -228,3 +228,10 @@ DefineLanguageWord("Warbanjan", { -- derived from the noun "Warb"; Source: http:
 	Type = "verb",
 	Meanings = {}
 })
+
+DefineLanguageWord("Worm", { -- source also gives the alternative form "Wurm"; Source: http://www.cnrtl.fr/definition/gourme
+	Language = "old-frankish", -- source gives "Ancien Bas Francique" (= Old Frankish)
+	Type = "noun",
+	Meanings = {"Pus"}, -- source gives the French "pus" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Vurma"} -- presumably
+})

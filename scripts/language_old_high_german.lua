@@ -746,10 +746,15 @@ DefineLanguageWord("Wī̆r", { -- Source: Sean Crist, "An Analysis of *z loss in
 	Nominative = "Wī̆r"
 })
 
-DefineLanguageWord("Wurm", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
+DefineLanguageWord("Wurm", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209; Source: http://www.cnrtl.fr/definition/gourme
 	Language = "old-high-german",
 	Type = "noun",
-	Meanings = {"Worm", "Serpent"} -- probably could be extended to mean "wyrm" as well
+	Meanings = {"Worm", "Serpent", "Maggot", "Adder", "Viper", "Pus"}, -- probably could be extended to mean "wyrm" as well; Runge gives "worm, serpent" as the meaning; Fick gives the German "Wurm, Made, Natter, Schlange" as the meaning; the TLFi gives "pus" as the meaning, is the "Wurm" mentioned there actually a different word?
+	DerivesFrom = {"proto-germanic", "noun", "Vurma"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
+	Gender = "masculine",
+	NumberCaseInflections = {
+		"plural", "nominative", "Wurmi"
+	}
 })
 
 DefineLanguageWord("Beran", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.

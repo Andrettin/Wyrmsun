@@ -820,7 +820,7 @@ DefineLanguageWord("Vîha", { -- Source: August Fick and Alf Torp, "Wortschatz d
 DefineLanguageWord("Vîhsa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 206.
 	Language = "proto-germanic",
 	Type = "noun",
-	Meanings = {"Village"}, -- source gives "Flecken, Dorf" as the meaning
+	Meanings = {"Village"}, -- source gives the German "Flecken, Dorf" as the meaning
 	Gender = "neuter"
 })
 
@@ -828,6 +828,13 @@ DefineLanguageWord("Vikkan", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Sorcerer"},
+	Gender = "masculine"
+})
+
+DefineLanguageWord("Vurma", { -- source also gives the alternative form "Vurmi"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Worm"}, -- source gives the German "Wurm" as the meaning
 	Gender = "masculine"
 })
 

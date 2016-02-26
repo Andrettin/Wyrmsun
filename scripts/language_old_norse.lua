@@ -739,6 +739,14 @@ DefineLanguageWord("Orlǫg", { -- is singular or plural?; Source: Sean Crist, "A
 	Meanings = {"Fate"}
 })
 
+DefineLanguageWord("Ormr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Worm", "Serpent"}, -- source gives the German "Wurm, Schlange" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Vurma"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Rann", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "old-norse",
 	Type = "noun",

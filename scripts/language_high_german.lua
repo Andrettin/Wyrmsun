@@ -1739,6 +1739,17 @@ DefineLanguageWord("Wolf", {
 	AffixNameTypes = {"compound", "prefix", "singular", "person"} -- examples: "Wolfgang", "Wolfhart"
 })
 
+DefineLanguageWord("Wurm", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"Worm"},
+	DerivesFrom = {"middle-high-german", "noun", "Wurm"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
+	Gender = "masculine",
+	NumberCaseInflections = {
+		"singular", "genitive", "Wurms" -- alternatively also "Wurmes"
+	}
+})
+
 DefineLanguageWord("Neu", {
 	Language = "high-german",
 	Type = "adjective",

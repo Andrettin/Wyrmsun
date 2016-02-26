@@ -451,3 +451,10 @@ DefineLanguageWord("Wijk", { -- Source: B. H. Slicher van Bath, "Dutch Tribal Pr
 		"compound", "suffix", "singular", "settlement" -- examples: "Beverwijk", "Waalwijk"
 	}
 })
+
+DefineLanguageWord("Worm", {
+	Language = "dutch",
+	Type = "noun",
+	Meanings = {"Worm", "Pus"}, -- the TLFi gives the French "pus" as the meaning, is that actually the same word?
+	DerivesFrom = {"old-frankish", "noun", "Worm"} --  Source: http://www.cnrtl.fr/definition/gourme
+})

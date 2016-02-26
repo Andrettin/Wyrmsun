@@ -390,10 +390,12 @@ DefineLanguageWord("Wī", { -- Source: Sean Crist, "An Analysis of *z loss in We
 	Nominative = "Wī" -- source also gives "We" as alternative
 })
 
-DefineLanguageWord("Wurm", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
+DefineLanguageWord("Wurm", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
 	Language = "old-saxon",
 	Type = "noun",
-	Meanings = {"Worm", "Serpent"} -- probably could be extended to mean "wyrm" as well
+	Meanings = {"Worm", "Serpent"}, -- probably could be extended to mean "wyrm" as well
+	DerivesFrom = {"proto-germanic", "noun", "Vurma"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Beran", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.

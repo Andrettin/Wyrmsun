@@ -292,6 +292,10 @@ DefineLanguage("old-norse", {
 	Name = "Old Norse"
 })
 
+DefineLanguage("old-provencal", {
+	Name = "Old Provençal"
+})
+
 DefineLanguage("old-prussian", {
 	Name = "Old Prussian"
 })
@@ -413,6 +417,7 @@ Load("scripts/language_late_latin.lua")
 Load("scripts/language_medieval_latin.lua")
 Load("scripts/language_gallo_romance.lua")
 Load("scripts/language_old_french.lua")
+Load("scripts/language_old_provencal.lua")
 Load("scripts/language_french.lua")
 Load("scripts/language_italian.lua")
 

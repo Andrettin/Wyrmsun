@@ -305,3 +305,11 @@ DefineLanguageWord("Wi", { -- Source: Sean Crist, "An Analysis of *z loss in Wes
 	Meanings = {"We"},
 	Nominative = "Wi"
 })
+
+DefineLanguageWord("Worm", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
+	Language = "old-frisian",
+	Type = "noun",
+	Meanings = {"Worm", "Maggot", "Adder", "Viper", "Serpent"}, -- source (apparently) gives the German "Wurm, Made, Natter, Schlange" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Vurma"},
+	Gender = "masculine"
+})

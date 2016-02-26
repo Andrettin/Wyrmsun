@@ -448,6 +448,14 @@ DefineLanguageWord("Weit", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Wurm", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Worm", "Maggot", "Adder", "Viper", "Serpent"}, -- source gives the German "Wurm, Made, Natter, Schlange" as the meaning
+	DerivesFrom = {"old-high-german", "noun", "Wurm"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Zwirn", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1-2, 6.
 	Language = "middle-high-german",
 	Type = "noun",

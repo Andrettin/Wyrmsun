@@ -571,7 +571,7 @@ DefineLanguageWord("Ford", {
 	Meanings = {"Ford"},
 	DerivesFrom = {"old-english", "noun", "Ford"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 120.
 	Gender = "neuter",
-	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- examples: "Ashford", "Bedford", "Oxford"; Source: "Philip's International School Atlas", 2006, p. 64.
+	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- examples: "Ashford", "Bedford", "Oxford" (Source: "Philip's International School Atlas", 2006, p. 64), "Waterford"
 })
 
 DefineLanguageWord("Forge", {
@@ -829,6 +829,17 @@ DefineLanguageWord("Henry", {
 	Meanings = {},
 	Gender = "masculine",
 	NameTypes = {"person"}
+})
+
+DefineLanguageWord("Hill", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Hill"},
+	Gender = "neuter",
+	NumberCaseInflections = {
+		"plural", "nominative", "Hills"
+	},
+	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- example: "Wormshill"
 })
 
 DefineLanguageWord("Hoard", {
@@ -1209,7 +1220,7 @@ DefineLanguageWord("Port", {
 	AffixNameTypes = {
 		"compound", "prefix", "singular", "settlement", -- example: "Portsmouth"
 		"compound", "prefix", "singular", "province", -- example: "Portland" (duchy)
-		"compound", "suffix", "singular", "settlement" -- example: "Newport"; Source: "Philip's International School Atlas", 2006, p. 64.
+		"compound", "suffix", "singular", "settlement" -- example: "Newport" (Source: "Philip's International School Atlas", 2006, p. 64), "Westport"
 	}
 })
 
@@ -1609,6 +1620,17 @@ DefineLanguageWord("Wall", {
 	}
 })
 
+DefineLanguageWord("Water", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Water"},
+	Gender = "neuter",
+	Uncountable = true,
+	AffixNameTypes = {
+		"compound", "prefix", "singular", "settlement" -- example: "Waterford"
+	}
+})
+
 DefineLanguageWord("Wes", {
 	Language = "english",
 	Type = "noun",
@@ -1626,7 +1648,7 @@ DefineLanguageWord("West", {
 	DerivesFrom = {"old-english", "adverb", "West"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 204.
 	Gender = "neuter",
 	Uncountable = true,
-	AffixNameTypes = {"compound", "prefix", "singular", "settlement"} -- example: "Westbury"
+	AffixNameTypes = {"compound", "prefix", "singular", "settlement"} -- examples: "Westbury", "Westport"
 })
 
 DefineLanguageWord("West", {
@@ -1684,4 +1706,29 @@ DefineLanguageWord("Wool", {
 	Gender = "neuter",
 	Uncountable = true,
 	AffixNameTypes = {"compound", "prefix", "singular", "settlement"} -- example: "Woolwich"
+})
+
+DefineLanguageWord("Worm", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Worm"},
+	DerivesFrom = {"old-english", "noun", "Wyrm"}, -- presumably
+	Gender = "neuter",
+	NumberCaseInflections = {
+		"singular", "genitive", "Worms",
+		"plural", "nominative", "Worms"
+	},
+	AffixNameTypes = {"compound", "prefix", "singular", "settlement"} -- example: "Wormshill"
+})
+
+DefineLanguageWord("Wyrm", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Wyrm"},
+	DerivesFrom = {"old-english", "noun", "Wyrm"}, -- presumably
+	Gender = "neuter",
+	NumberCaseInflections = {
+		"singular", "genitive", "Wyrms",
+		"plural", "nominative", "Wyrms"
+	}
 })

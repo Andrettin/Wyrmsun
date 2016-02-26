@@ -559,10 +559,12 @@ DefineLanguageWord("Wair", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	DerivesFrom = {"proto-indo-european", "noun", "Wiros"}
 })
 
-DefineLanguageWord("Waurms", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
+DefineLanguageWord("Waurms", { -- Fick gives "Vaúrms" instead"; Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
 	Language = "gothic",
 	Type = "noun",
-	Meanings = {"Worm", "Serpent"} -- probably could be extended to mean "wyrm" as well
+	Meanings = {"Worm", "Serpent"}, -- probably could be extended to mean "wyrm" as well
+	DerivesFrom = {"proto-germanic", "noun", "Vurma"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Wigs", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.

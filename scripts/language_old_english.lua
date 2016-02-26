@@ -1284,3 +1284,11 @@ DefineLanguageWord("Ofer", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Meanings = {"Over"}, -- derived from the Proto-Germanic "Ufar", which means "Over"
 	DerivesFrom = {"proto-germanic", "adposition", "Ufar"}
 })
+
+DefineLanguageWord("Wyrm", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Worm", "Maggot", "Adder", "Viper", "Serpent"}, -- source (apparently) gives the German "Wurm, Made, Natter, Schlange" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Vurma"},
+	Gender = "masculine"
+})
