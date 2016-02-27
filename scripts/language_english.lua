@@ -57,9 +57,6 @@ DefineLanguageWord("Anvil", {
 	Type = "noun",
 	Meanings = {"Anvil"},
 	Gender = "neuter",
-	NumberCaseInflections = {
-		"plural", "nominative", "Anvils"
-	},
 	AffixNameTypes = {"separate", "suffix", "singular", "unit-class-smithy"} -- seems sensible
 })
 
@@ -181,9 +178,6 @@ DefineLanguageWord("Blade", {
 	Language = "english",
 	Type = "noun",
 	Meanings = {"Blade"},
-	NumberCaseInflections = {
-		"plural", "nominative", "Blades"
-	},
 	Gender = "neuter",
 	AffixNameTypes = {"separate", "suffix", "singular", "unit-class-smithy"} -- seems sensible
 })
@@ -503,7 +497,8 @@ DefineLanguageWord("Elf", {
 	DerivesFrom = {"old-english", "noun", "Ælf"}, -- seems sensible
 	Gender = "masculine",
 	NumberCaseInflections = {
-		"plural", "nominative", "Elves"
+		"plural", "nominative", "Elves",
+		"plural", "genitive", "Elves"
 	}
 })
 
@@ -578,9 +573,6 @@ DefineLanguageWord("Forge", {
 	Language = "english",
 	Type = "noun",
 	Meanings = {"Forge"},
-	NumberCaseInflections = {
-		"plural", "nominative", "Forges"
-	},
 	Gender = "neuter",
 	AffixNameTypes = {"separate", "suffix", "singular", "unit-class-smithy"} -- seems sensible
 })
@@ -629,9 +621,6 @@ DefineLanguageWord("Gate", {
 	Language = "english",
 	Type = "noun",
 	Meanings = {"Gate"},
-	NumberCaseInflections = {
-		"singular", "genitive", "Gates"
-	},
 	Gender = "neuter",
 	AffixNameTypes = {"compound", "prefix", "singular", "genitive", "settlement"} -- example: "Gateshead"; Source: "Philip's International School Atlas", 2006, p. 64.
 })
@@ -641,9 +630,6 @@ DefineLanguageWord("Gauntlet", {
 	Type = "noun",
 	Meanings = {"Gauntlet"},
 	Gender = "neuter",
-	NumberCaseInflections = {
-		"plural", "nominative", "Gauntlets"
-	},
 	AffixNameTypes = {"separate", "suffix", "singular", "unit-class-smithy"} -- seems sensible
 })
 
@@ -661,9 +647,6 @@ DefineLanguageWord("God", {
 	Meanings = {"God"},
 	DerivesFrom = {"old-english", "noun", "God"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.
 	Gender = "masculine",
-	NumberCaseInflections = {
-		"plural", "nominative", "Gods"
-	},
 	AffixNameTypes = {"compound", "prefix", "singular", "person"} -- example: "Godfrey"
 })
 
@@ -726,9 +709,6 @@ DefineLanguageWord("Hammer", {
 	Meanings = {"Hammer"},
 	DerivesFrom = {"old-english", "noun", "Hamor"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 46.
 	Gender = "neuter",
-	NumberCaseInflections = {
-		"plural", "nominative", "Hammers"
-	},
 	AffixNameTypes = {"separate", "suffix", "singular", "unit-class-smithy"} -- seems sensible
 })
 
@@ -785,9 +765,6 @@ DefineLanguageWord("Hauberk", {
 	Meanings = {"Hauberk"},
 	DerivesFrom = {"old-french", "noun", "Halberc"}, -- Merriam-Webster gives "Hauberc" instead; Source: http://www.merriam-webster.com/dictionary/hauberk
 	Gender = "neuter",
-	NumberCaseInflections = {
-		"plural", "nominative", "Hauberks"
-	},
 	AffixNameTypes = {"separate", "suffix", "singular", "unit-class-smithy"} -- seems sensible
 })
 
@@ -836,9 +813,6 @@ DefineLanguageWord("Hill", {
 	Type = "noun",
 	Meanings = {"Hill"},
 	Gender = "neuter",
-	NumberCaseInflections = {
-		"plural", "nominative", "Hills"
-	},
 	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- example: "Wormshill"
 })
 
@@ -954,11 +928,6 @@ DefineLanguageWord("King", {
 	Type = "noun",
 	Meanings = {"King"},
 	Gender = "masculine",
-	NumberCaseInflections = {
-		"singular", "genitive", "Kings",
-		"plural", "nominative", "Kings",
-		"plural", "genitive", "Kings"
-	},
 	AffixNameTypes = {"compound", "prefix", "singular", "genitive", "settlement"} -- example: "Kingston"
 })
 
@@ -1030,9 +999,6 @@ DefineLanguageWord("Mail", {
 	Type = "noun",
 	Meanings = {"Mail"},
 	Gender = "neuter",
-	NumberCaseInflections = {
-		"plural", "nominative", "Mails"
-	},
 	AffixNameTypes = {"separate", "suffix", "singular", "unit-class-smithy"} -- seems sensible
 })
 
@@ -1213,9 +1179,6 @@ DefineLanguageWord("Port", {
 	Language = "english",
 	Type = "noun",
 	Meanings = {"Port"},
-	NumberCaseInflections = {
-		"singular", "genitive", "Ports"
-	},
 	Gender = "neuter",
 	AffixNameTypes = {
 		"compound", "prefix", "singular", "genitive", "settlement", -- example: "Portsmouth"
@@ -1337,6 +1300,10 @@ DefineLanguageWord("Sex", {
 	Meanings = {"Saxon"},
 	Gender = "neuter",
 	Archaic = true,
+	NumberCaseInflections = {
+		"plural", "nominative", "Sex",
+		"plural", "genitive", "Sex"
+	},
 	AffixNameTypes = {"compound", "suffix", "plural", "province"} -- examples: "Essex", "Middlesex", "Sussex", "Wessex"
 })
 
@@ -1345,9 +1312,6 @@ DefineLanguageWord("Shield", {
 	Type = "noun",
 	Meanings = {"Shield"},
 	Gender = "neuter",
-	NumberCaseInflections = {
-		"plural", "nominative", "Shields"
-	},
 	AffixNameTypes = {"separate", "suffix", "singular", "unit-class-smithy"} -- seems sensible
 })
 
@@ -1370,9 +1334,6 @@ DefineLanguageWord("Shrew", {
 	Language = "english",
 	Type = "noun",
 	Meanings = {"Shrew"},
-	NumberCaseInflections = {
-		"singular", "genitive", "Shrews"
-	},
 	Gender = "neuter",
 	AffixNameTypes = {
 		"compound", "prefix", "singular", "genitive", "settlement" -- example: "Shrewsbury"; Source: "Philip's International School Atlas", 2006, p. 64.
@@ -1410,7 +1371,8 @@ DefineLanguageWord("Smithy", {
 	Type = "noun",
 	Meanings = {"Smithy"},
 	NumberCaseInflections = {
-		"plural", "nominative", "Smithies"
+		"plural", "nominative", "Smithies",
+		"plural", "genitive", "Smithies"
 	},
 	Gender = "neuter",
 	AffixNameTypes = {"separate", "suffix", "singular", "unit-class-smithy"} -- seems sensible
@@ -1522,9 +1484,6 @@ DefineLanguageWord("Swan", {
 	Type = "noun",
 	Meanings = {"Swan"},
 	Gender = "neuter",
-	NumberCaseInflections = {
-		"singular", "genitive", "Swans"
-	},
 	AffixNameTypes = {"compound", "prefix", "singular", "settlement"} -- examples: "Swansea" (Source: "Philip's International School Atlas", 2006, p. 64), "Swanscombe"
 })
 
@@ -1714,10 +1673,6 @@ DefineLanguageWord("Worm", {
 	Meanings = {"Worm"},
 	DerivesFrom = {"old-english", "noun", "Wyrm"}, -- presumably
 	Gender = "neuter",
-	NumberCaseInflections = {
-		"singular", "genitive", "Worms",
-		"plural", "nominative", "Worms"
-	},
 	AffixNameTypes = {"compound", "prefix", "singular", "genitive", "settlement"} -- example: "Wormshill"
 })
 
@@ -1726,9 +1681,5 @@ DefineLanguageWord("Wyrm", {
 	Type = "noun",
 	Meanings = {"Wyrm"},
 	DerivesFrom = {"old-english", "noun", "Wyrm"}, -- presumably
-	Gender = "neuter",
-	NumberCaseInflections = {
-		"singular", "genitive", "Wyrms",
-		"plural", "nominative", "Wyrms"
-	}
+	Gender = "neuter"
 })

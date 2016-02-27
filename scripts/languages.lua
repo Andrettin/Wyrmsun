@@ -52,6 +52,15 @@ DefineLanguage("dwarven", {
 
 DefineLanguage("english", {
 	Name = "English",
+	NounEndings = {
+		"singular", "genitive", "no-word-junction", "'s",
+		"singular", "genitive", "compound", "s",
+		"plural", "nominative", "s",
+		"plural", "accusative", "s",
+		"plural", "dative", "s",
+		"plural", "genitive", "no-word-junction", "s'",
+		"plural", "genitive", "compound", "s"
+	},
 	NameTranslations = {
 		-- German to English
 		"Bernhard", "Bernard",
@@ -114,7 +123,7 @@ DefineLanguage("greek", {
 
 DefineLanguage("high-german", {
 	Name = "High German",
-	ArticleCaseNumberGenderAdjectiveEndings = {
+	AdjectiveEndings = {
 		"no-article", "nominative", "singular", "masculine", "er",
 		"no-article", "nominative", "singular", "feminine", "e",
 		"no-article", "nominative", "singular", "neuter", "es",
