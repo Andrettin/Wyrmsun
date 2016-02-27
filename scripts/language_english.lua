@@ -633,7 +633,7 @@ DefineLanguageWord("Gate", {
 		"singular", "genitive", "Gates"
 	},
 	Gender = "neuter",
-	AffixNameTypes = {"compound", "prefix", "singular", "settlement"} -- example: "Gateshead"; Source: "Philip's International School Atlas", 2006, p. 64.
+	AffixNameTypes = {"compound", "prefix", "singular", "genitive", "settlement"} -- example: "Gateshead"; Source: "Philip's International School Atlas", 2006, p. 64.
 })
 
 DefineLanguageWord("Gauntlet", {
@@ -959,7 +959,7 @@ DefineLanguageWord("King", {
 		"plural", "nominative", "Kings",
 		"plural", "genitive", "Kings"
 	},
-	AffixNameTypes = {"compound", "prefix", "singular", "settlement"} -- example: "Kingston"
+	AffixNameTypes = {"compound", "prefix", "singular", "genitive", "settlement"} -- example: "Kingston"
 })
 
 DefineLanguageWord("Lanca", {
@@ -1218,7 +1218,7 @@ DefineLanguageWord("Port", {
 	},
 	Gender = "neuter",
 	AffixNameTypes = {
-		"compound", "prefix", "singular", "settlement", -- example: "Portsmouth"
+		"compound", "prefix", "singular", "genitive", "settlement", -- example: "Portsmouth"
 		"compound", "prefix", "singular", "province", -- example: "Portland" (duchy)
 		"compound", "suffix", "singular", "settlement" -- example: "Newport" (Source: "Philip's International School Atlas", 2006, p. 64), "Westport"
 	}
@@ -1375,7 +1375,7 @@ DefineLanguageWord("Shrew", {
 	},
 	Gender = "neuter",
 	AffixNameTypes = {
-		"compound", "prefix", "singular", "settlement" -- example: "Shrewsbury"; Source: "Philip's International School Atlas", 2006, p. 64.
+		"compound", "prefix", "singular", "genitive", "settlement" -- example: "Shrewsbury"; Source: "Philip's International School Atlas", 2006, p. 64.
 	}
 })
 
@@ -1718,7 +1718,7 @@ DefineLanguageWord("Worm", {
 		"singular", "genitive", "Worms",
 		"plural", "nominative", "Worms"
 	},
-	AffixNameTypes = {"compound", "prefix", "singular", "settlement"} -- example: "Wormshill"
+	AffixNameTypes = {"compound", "prefix", "singular", "genitive", "settlement"} -- example: "Wormshill"
 })
 
 DefineLanguageWord("Wyrm", {

@@ -108,7 +108,10 @@ DefineLanguageWord("Andvari", {
 		"singular", "genitive", "Andvara" -- as in "Andvaranaut"
 	},
 	Gender = "masculine", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 21.
-	NameTypes = {"person"} -- example: "Andvari" (gurnard-shaped dwarf from Norse mythology whose hoard and golden ring were stolen by Loki)
+	NameTypes = {"person"}, -- example: "Andvari" (gurnard-shaped dwarf from Norse mythology whose hoard and golden ring were stolen by Loki)
+	AffixNameTypes = {
+		"compound", "prefix", "singular", "genitive", "item-ring", -- example: "Andvaranaut" (golden ring made by Andvari)
+	}
 })
 
 DefineLanguageWord("Angarthing", { -- "An-garth-ing"? seems to follow similar naming conventions as the three-element names of the dwarven name list
@@ -246,7 +249,7 @@ DefineLanguageWord("Brising", { -- also name of a group of four dwarves (or the 
 	AffixNameTypes = {
 		"compound", "prefix", "singular", "settlement", -- no examples, but seems sensible in face of a general lack of examples
 		"compound", "prefix", "singular", "province", -- no examples, but seems sensible in face of a general lack of examples
-		"compound", "prefix", "singular", "item-amulet", -- example: "Brisingamen" (golden necklace made by four dwarves, the Brisings)
+		"compound", "prefix", "singular", "genitive", "item-amulet", -- example: "Brisingamen" (golden necklace made by four dwarves, the Brisings)
 		"compound", "prefix", "singular", "terrain-hills", -- no examples, but seems sensible in face of a general lack of examples
 		"compound", "prefix", "singular", "terrain-mountains" -- no examples, but seems sensible in face of a general lack of examples
 	}
@@ -283,7 +286,7 @@ DefineLanguageWord("Dain", {
 	},
 	Gender = "masculine", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 97.
 	NameTypes = {"person"}, -- example: "Dain" (dwarf from Norse mythology)
-	AffixNameTypes = {"compound", "prefix", "singular", "item-sword"} -- example: "Dainsleif"
+	AffixNameTypes = {"compound", "prefix", "singular", "genitive", "item-sword"} -- example: "Dainsleif"
 })
 
 DefineLanguageWord("Delling", {

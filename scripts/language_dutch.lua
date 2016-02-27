@@ -181,7 +181,7 @@ DefineLanguageWord("Hertog", {
 		"singular", "genitive", "Hertogen"
 	},
 	AffixNameTypes = {
-		"compound", "prefix", "singular", "settlement" -- example: "'s-Hertogenbosch"
+		"compound", "prefix", "singular", "genitive", "settlement" -- example: "'s-Hertogenbosch"
 	}
 })
 
