@@ -464,6 +464,19 @@ DefineLanguageWord("Hamara", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Hauga", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 54.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Hill"}, -- source gives the German "Hügel" as the meaning
+	Gender = "masculine"
+})
+
+DefineLanguageWord("Hauha", { -- source also gives the alternative form "hauga"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 54.
+	Language = "proto-germanic",
+	Type = "adjective",
+	Meanings = {"High"} -- source gives the German "hoch" as the meaning
+})
+
 DefineLanguageWord("Hazdaz", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
 	Language = "proto-germanic",
 	Type = "noun",
@@ -509,6 +522,13 @@ DefineLanguageWord("Huzda", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Hidden Treasure"}
+})
+
+DefineLanguageWord("Hvîta", { -- source also gives the alternative form "hvitta"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 67.
+	Language = "proto-germanic",
+	Type = "adjective",
+	Meanings = {"White", "Light Colored"}, -- source gives the German "weiß, hellfarbig" as the meaning
+	DerivesFrom = {"proto-indo-european", "adjective", "Ḱweyt"} -- Lehmann gives its reflexes as being derived from this word; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 })
 
 DefineLanguageWord("Îsarna", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 24.
@@ -749,6 +769,19 @@ DefineLanguageWord("Sunþa", { -- source also gives the alternative form "Sunþr
 	Language = "proto-germanic",
 	Type = "adverb",
 	Meanings = {"Southward"} -- source gives the German "südwärts" as the meaning
+})
+
+DefineLanguageWord("Surgên", { -- source gives "S(v)urgên"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.
+	Language = "proto-germanic",
+	Type = "verb",
+	Meanings = {"Worry"} -- source gives the German "sorgen" as the meaning
+})
+
+DefineLanguageWord("Surgô", { -- source also gives the alternative form "Svurgô"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Worry"}, -- source gives the German "Sorge" as the meaning
+	Gender = "feminine"
 })
 
 DefineLanguageWord("Swīnaz", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.

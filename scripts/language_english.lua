@@ -252,6 +252,15 @@ DefineLanguageWord("Bronze", {
 	AffixNameTypes = {"separate", "prefix", "singular", "unit-class-smithy"} -- seems sensible
 })
 
+DefineLanguageWord("Brown", {
+	Language = "english",
+	Type = "adjective",
+	Meanings = {"Brown"},
+	AffixNameTypes = {
+		"separate", "prefix", "singular", "unit-class-smithy" -- seems sensible
+	}
+})
+
 DefineLanguageWord("Burn", {
 	Language = "english",
 	Type = "noun",
@@ -806,6 +815,13 @@ DefineLanguageWord("Henry", {
 	Meanings = {},
 	Gender = "masculine",
 	NameTypes = {"person"}
+})
+
+DefineLanguageWord("High", {
+	Language = "english",
+	Type = "adjective",
+	Meanings = {"High"},
+	DerivesFrom = {"old-english", "adjective", "Héah"} -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 54.
 })
 
 DefineLanguageWord("Hill", {
@@ -1394,6 +1410,14 @@ DefineLanguageWord("Somer", {
 	AffixNameTypes = {"compound", "prefix", "singular", "province"} -- example: "Somerset"
 })
 
+DefineLanguageWord("Sorrow", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Sorrow"},
+	DerivesFrom = {"old-english", "noun", "Sorg"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.
+	Gender = "neuter"
+})
+
 DefineLanguageWord("South", {
 	Language = "english",
 	Type = "noun",
@@ -1622,6 +1646,16 @@ DefineLanguageWord("West", {
 	Type = "adverb",
 	Meanings = {"West"},
 	DerivesFrom = {"old-english", "adverb", "West"} -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 204.
+})
+
+DefineLanguageWord("White", {
+	Language = "english",
+	Type = "adjective",
+	Meanings = {"White"},
+	DerivesFrom = {"old-english", "adjective", "Hwīt"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 67.
+	AffixNameTypes = {
+		"separate", "prefix", "singular", "unit-class-smithy" -- seems sensible
+	}
 })
 
 DefineLanguageWord("Wich", {

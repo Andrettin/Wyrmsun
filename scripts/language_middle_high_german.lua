@@ -285,11 +285,36 @@ DefineLanguageWord("Hert", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	}
 })
 
+DefineLanguageWord("Hôch", { -- source also gives the inflected form "hôher"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 54.
+	Language = "middle-high-german",
+	Type = "adjective",
+	Meanings = {"High"}, -- source gives the German "hoch" as the meaning
+	DerivesFrom = {"old-high-german", "adjective", "Hōh"}
+})
+
+DefineLanguageWord("Hoger", { -- (apparently) a nominalized adjective; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 54.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Hump"}, -- source gives the German "Buckel" as the meaning
+	DerivesFrom = {"old-high-german", "adjective", "Hōh"} -- apparently, but it is not entirely clear from the source
+})
+
 DefineLanguageWord("Hort", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
 	Language = "middle-high-german",
 	Type = "noun",
 	Meanings = {"Treasure"},
 	DerivesFrom = {"old-high-german", "noun", "Hort"}
+})
+
+DefineLanguageWord("Houc", { -- "strong"? Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 54.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Hill"}, -- source gives the German "Hügel" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Hauga"},
+	Gender = "neuter",
+	NumberCaseInflections = {
+		"singular", "genitive", "Houges"
+	}
 })
 
 DefineLanguageWord("Îsern", { -- source also gives the alternative form "Îsen"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 24.
@@ -446,6 +471,13 @@ DefineLanguageWord("Weit", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Type = "noun",
 	Meanings = {"Woad"},
 	Gender = "masculine"
+})
+
+DefineLanguageWord("Wîz̨", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 67.
+	Language = "middle-high-german",
+	Type = "adjective",
+	Meanings = {"White"}, -- source gives the German "weiß" as the meaning
+	DerivesFrom = {"old-high-german", "adjective", "Wîz̨"}
 })
 
 DefineLanguageWord("Wurm", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.

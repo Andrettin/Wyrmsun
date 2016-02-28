@@ -82,6 +82,18 @@ DefineLanguageWord("Jéras", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Meanings = {"Yearling Lamb"}
 })
 
+DefineLanguageWord("Kaukarà", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 54.
+	Language = "lithuanian",
+	Type = "noun",
+	Meanings = {"Hill"} -- source gives the German "Hügel" as the meaning
+})
+
+DefineLanguageWord("Kaũkas", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 54.
+	Language = "lithuanian",
+	Type = "noun",
+	Meanings = {"Bump"} -- source gives the German "Beule" as the meaning
+})
+
 DefineLanguageWord("Liūdė", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 181.
 	Language = "lithuanian",
 	Type = "noun",

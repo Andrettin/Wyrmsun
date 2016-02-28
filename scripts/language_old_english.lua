@@ -456,6 +456,13 @@ DefineLanguageWord("Hamor", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Héah", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 54.
+	Language = "old-english",
+	Type = "adjective",
+	Meanings = {"High"}, -- source gives the German "hoch" as the meaning
+	DerivesFrom = {"proto-germanic", "adjective", "Hauha"}
+})
+
 DefineLanguageWord("Hearpestre", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, pp. 77-78.
 	Language = "old-english",
 	Type = "noun",
@@ -540,6 +547,13 @@ DefineLanguageWord("Hund", { -- Source: Richard M. Runge, "The Phonetic Realizat
 	Language = "old-english",
 	Type = "noun",
 	Meanings = {"Dog"}
+})
+
+DefineLanguageWord("Hwīt", { -- Fick gives "hwit" instead; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 67.
+	Language = "old-english",
+	Type = "adjective",
+	Meanings = {"White"},
+	DerivesFrom = {"proto-germanic", "adjective", "Hvîta"} -- as given by Fick
 })
 
 DefineLanguageWord("Ieldran", { -- this is the plural; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 19.
@@ -744,6 +758,21 @@ DefineLanguageWord("Snoru", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Language = "old-english",
 	Type = "noun",
 	Meanings = {"Daughter-in-Law"}
+})
+
+DefineLanguageWord("Sorg", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Worry"}, -- source (apparently) gives the German "Sorge" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Surgô"},
+	Gender = "feminine"
+})
+
+DefineLanguageWord("Sorgian", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, pp. 223-224.
+	Language = "old-english",
+	Type = "verb",
+	Meanings = {"Worry"}, -- source gives the German "sorgen" as the meaning
+	DerivesFrom = {"proto-germanic", "verb", "Surgên"}
 })
 
 DefineLanguageWord("Sperehealf", { -- also given as Sperehand; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 197.
@@ -1175,13 +1204,6 @@ DefineLanguageWord("Gydig", { -- Source: Alaric Hall, "The Meanings of Elf and E
 	Language = "old-english",
 	Type = "adjective",
 	Meanings = {"Possessed (by a God)"}
-})
-
-DefineLanguageWord("Hwīt", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
-	Language = "old-english",
-	Type = "adjective",
-	Meanings = {"White"},
-	DerivesFrom = {"proto-indo-european", "adjective", "Ḱweyt"}
 })
 
 DefineLanguageWord("Long", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.

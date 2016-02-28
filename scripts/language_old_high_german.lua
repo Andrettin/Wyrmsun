@@ -392,6 +392,13 @@ DefineLanguageWord("Hamar", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Hōh", { -- Fick gives "hôh" instead; Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 54.
+	Language = "old-high-german",
+	Type = "adjective",
+	Meanings = {"High"}, -- Runge gives the German "hoch" as the meaning
+	DerivesFrom = {"proto-germanic", "adjective", "Hauha"} -- as given by Fick
+})
+
 DefineLanguageWord("Herd", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 46.
 	Language = "old-high-german",
 	Type = "noun",
@@ -654,6 +661,21 @@ DefineLanguageWord("Snura", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Meanings = {"Daughter-in-Law"}
 })
 
+DefineLanguageWord("Sorga", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Worry"}, -- source gives the German "Sorge" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Surgô"},
+	Gender = "feminine"
+})
+
+DefineLanguageWord("Sorgên", { -- source also gives the alternative form "sworgên"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, pp. 223-224.
+	Language = "old-high-german",
+	Type = "verb",
+	Meanings = {"Worry"}, -- source gives the German "sorgen" as the meaning
+	DerivesFrom = {"proto-germanic", "verb", "Surgên"}
+})
+
 DefineLanguageWord("Suht", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
 	Language = "old-high-german",
 	Type = "noun",
@@ -744,6 +766,13 @@ DefineLanguageWord("Wī̆r", { -- Source: Sean Crist, "An Analysis of *z loss in
 	Type = "pronoun",
 	Meanings = {"We"},
 	Nominative = "Wī̆r"
+})
+
+DefineLanguageWord("Wîz̨", { -- Fick gives "(h)wîz̨"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 67.
+	Language = "old-high-german",
+	Type = "adjective",
+	Meanings = {"White"}, -- source gives the German "weiß" as the meaning
+	DerivesFrom = {"proto-germanic", "adjective", "Hvîta"}
 })
 
 DefineLanguageWord("Wurm", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209; Source: http://www.cnrtl.fr/definition/gourme
@@ -980,12 +1009,6 @@ DefineLanguageWord("Fūl", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Type = "adjective",
 	Meanings = {"Foul"}, -- derived from the Proto-Germanic "Fūla", which means "Foul"
 	DerivesFrom = {"proto-germanic", "adjective", "Fūla"}
-})
-
-DefineLanguageWord("Hōh", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
-	Language = "old-high-german",
-	Type = "adjective",
-	Meanings = {"High"} -- source gives translation as the German word "hoch"
 })
 
 DefineLanguageWord("Jung", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.

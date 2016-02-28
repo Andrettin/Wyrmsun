@@ -128,6 +128,13 @@ DefineLanguageWord("Grîs", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	DerivesFrom = {"proto-germanic", "adjective", "Grîsa"}
 })
 
+DefineLanguageWord("Hach", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 54.
+	Language = "old-frisian",
+	Type = "adjective",
+	Meanings = {"High"}, -- source gives the German "hoch" as the meaning
+	DerivesFrom = {"proto-germanic", "adjective", "Hauha"}
+})
+
 DefineLanguageWord("Hēde", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
 	Language = "old-frisian",
 	Type = "noun",
@@ -150,6 +157,13 @@ DefineLanguageWord("Homer", { -- source also gives the alternative form "hamer";
 	Meanings = {"Hammer"}, -- source gives the German "Hammer" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Hamara"},
 	Gender = "masculine"
+})
+
+DefineLanguageWord("Hwit", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 67.
+	Language = "old-frisian",
+	Type = "adjective",
+	Meanings = {"White"}, -- source gives the German "weiß" as the meaning
+	DerivesFrom = {"proto-germanic", "adjective", "Hvîta"}
 })
 
 DefineLanguageWord("Lâd", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 181.

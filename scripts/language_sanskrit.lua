@@ -131,6 +131,26 @@ DefineLanguageWord("Késara", { -- Source: Sean Crist, "An Analysis of *z loss i
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Koca", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 54.
+	Language = "sanskrit",
+	Type = "adjective",
+	Meanings = {"Shrunk"} -- source gives the German "einschrumpfend" as the meaning
+})
+
+DefineLanguageWord("Kuca", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 54.
+	Language = "sanskrit",
+	Type = "noun",
+	Meanings = {"Female Breast"}, -- source gives the German "die weibliche Brust" as the meaning
+	Gender = "masculine"
+})
+
+DefineLanguageWord("Kuksi", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 54.
+	Language = "sanskrit",
+	Type = "noun",
+	Meanings = {"Belly"}, -- source gives the German "Bauch" as the meaning
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Lohá", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 181.
 	Language = "sanskrit",
 	Type = "noun",
@@ -232,6 +252,12 @@ DefineLanguageWord("Stighnoti", { -- Source: Winfred P. Lehmann, "A Grammar of P
 	Language = "sanskrit",
 	Type = "verb",
 	Meanings = {"Climb"}
+})
+
+DefineLanguageWord("Sûrkṣati", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 224.
+	Language = "sanskrit",
+	Type = "verb",
+	Meanings = {"Preoccupies With"} -- source gives the German "kümmert sich um" as the meaning
 })
 
 DefineLanguageWord("Śvetá", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.

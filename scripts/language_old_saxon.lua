@@ -226,6 +226,13 @@ DefineLanguageWord("Herth", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Hôh", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 54.
+	Language = "old-saxon",
+	Type = "adjective",
+	Meanings = {"High"}, -- source gives the German "hoch" as the meaning
+	DerivesFrom = {"proto-germanic", "adjective", "Hauha"}
+})
+
 DefineLanguageWord("Hord", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.
 	Language = "old-saxon",
 	Type = "noun",
@@ -244,6 +251,13 @@ DefineLanguageWord("Hurth", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Type = "noun",
 	Meanings = {"Wattle"}, -- derived from Proto-Germanic "Χŕdiz", which has the meaning of "wattle"
 	DerivesFrom = {"proto-germanic", "noun", "Χŕdiz"}
+})
+
+DefineLanguageWord("Hwit", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 67.
+	Language = "old-saxon",
+	Type = "adjective",
+	Meanings = {"White"}, -- source gives the German "weiß" as the meaning
+	DerivesFrom = {"proto-germanic", "adjective", "Hvîta"}
 })
 
 DefineLanguageWord("Îsarn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 24.
@@ -343,6 +357,21 @@ DefineLanguageWord("Siluƀar", { -- Source: August Fick and Alf Torp, "Wortschat
 	Meanings = {"Silver"}, -- source gives the German "Silber" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Silubra"},
 	Gender = "neuter"
+})
+
+DefineLanguageWord("Sorga", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.
+	Language = "old-saxon",
+	Type = "noun",
+	Meanings = {"Worry"}, -- source (apparently) gives the German "Sorge" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Surgô"},
+	Gender = "feminine"
+})
+
+DefineLanguageWord("Sorgôn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, pp. 223-224.
+	Language = "old-saxon",
+	Type = "verb",
+	Meanings = {"Worry"}, -- source gives the German "sorgen" as the meaning
+	DerivesFrom = {"proto-germanic", "verb", "Surgên"}
 })
 
 DefineLanguageWord("Suht", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.

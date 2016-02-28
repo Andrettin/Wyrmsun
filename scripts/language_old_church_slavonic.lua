@@ -69,6 +69,12 @@ DefineLanguageWord("Kosmŭ", { -- Source: Sean Crist, "An Analysis of *z loss in
 	Meanings = {"Head Hair"}
 })
 
+DefineLanguageWord("Kukŭ", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 54.
+	Language = "old-church-slavonic",
+	Type = "adjective",
+	Meanings = {"Crooked"} -- source gives the German "krumm" as the meaning
+})
+
 DefineLanguageWord("Mězga", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "old-church-slavonic",
 	Type = "noun",

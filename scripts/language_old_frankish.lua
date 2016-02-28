@@ -194,7 +194,8 @@ DefineLanguageWord("Skĭrmjan", { -- Source: http://www.cnrtl.fr/definition/escr
 DefineLanguageWord("Sworga", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.
 	Language = "old-frankish",
 	Type = "noun",
-	Meanings = {"Worry"}, -- presumably (this is the meaning given to the Proto-Germanic original word, and no meaning is specifically given to this one)
+	Meanings = {"Worry"}, -- source gives the German "Sorge" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Surgô"},
 	Gender = "feminine"
 })
 

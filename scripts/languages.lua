@@ -41,6 +41,10 @@ DefineLanguage("crimean-gothic", {
 	Name = "Crimean Gothic"
 })
 
+DefineLanguage("danish", {
+	Name = "Danish"
+})
+
 DefineLanguage("dutch", {
 	Name = "Dutch"
 })
@@ -397,6 +401,7 @@ Load("scripts/language_old_norse.lua")
 Load("scripts/language_old_danish.lua")
 Load("scripts/language_old_swedish.lua")
 Load("scripts/language_old_icelandic.lua")
+Load("scripts/language_danish.lua")
 Load("scripts/language_norwegian.lua")
 Load("scripts/language_swedish.lua")
 

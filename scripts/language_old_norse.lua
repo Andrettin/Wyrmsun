@@ -539,6 +539,14 @@ DefineLanguageWord("Hane", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Meanings = {"Rooster"}
 })
 
+DefineLanguageWord("Haugr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 54.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Hill"}, -- source gives the German "Hügel" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Hauga"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Hnīga", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 	Language = "old-norse",
 	Type = "verb",
@@ -551,6 +559,13 @@ DefineLanguageWord("Hodd", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Type = "noun",
 	Meanings = {"Treasure"},
 	DerivesFrom = {"proto-germanic", "noun", "Huzda"}
+})
+
+DefineLanguageWord("Hôr", { -- source also gives the alternative form "hâr"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 54.
+	Language = "old-norse",
+	Type = "adjective",
+	Meanings = {"High"}, -- source gives the German "hoch" as the meaning
+	DerivesFrom = {"proto-germanic", "adjective", "Hauha"}
 })
 
 DefineLanguageWord("Hrǫnn", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.
@@ -574,11 +589,11 @@ DefineLanguageWord("Hurđ", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	DerivesFrom = {"proto-germanic", "noun", "Χŕdiz"}
 })
 
-DefineLanguageWord("Hvītr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
+DefineLanguageWord("Hvītr", { -- Fick gives "hvîtr" instead; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 67.
 	Language = "old-norse",
 	Type = "adjective",
-	Meanings = {"White"},
-	DerivesFrom = {"proto-indo-european", "adjective", "Ḱweyt"}
+	Meanings = {"White", "Light Colored"}, -- Lehmann gives only "white" as the meaning, while Fick gives the German "weiß, hellfarbig"
+	DerivesFrom = {"proto-germanic", "adjective", "Hvîta"} -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 67.
 })
 
 DefineLanguageWord("Îsarn", { -- source also gives the alternative form "Jârn"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 24.
@@ -815,6 +830,14 @@ DefineLanguageWord("Silfr", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Gender = "neuter"
 })
 
+DefineLanguageWord("Sorg", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Worry"}, -- source (apparently) gives the German "Sorge" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Surgô"},
+	Gender = "feminine"
+})
+
 DefineLanguageWord("Stīga", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-norse",
 	Type = "verb",
@@ -849,6 +872,13 @@ DefineLanguageWord("Svīn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Type = "noun",
 	Meanings = {"Pig"}, -- derived from the Proto-Germanic "Swīnaz", which means "Pig"
 	DerivesFrom = {"proto-germanic", "noun", "Swīnaz"}
+})
+
+DefineLanguageWord("Syrgja", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, pp. 223-224.
+	Language = "old-norse",
+	Type = "verb",
+	Meanings = {"Worry"}, -- source gives the German "sorgen" as the meaning
+	DerivesFrom = {"proto-germanic", "verb", "Surgên"}
 })
 
 DefineLanguageWord("Þarmr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 97.

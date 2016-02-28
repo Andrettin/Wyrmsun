@@ -25,22 +25,22 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageWord("Kukurs", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 54.
-	Language = "latvian",
+DefineLanguageWord("Fri", {
+	Language = "danish",
+	Type = "adjective",
+	Meanings = {"Free"},
+	AffixNameTypes = {"compound", "suffix", "settlement"} -- example: "Sorgenfri"
+})
+
+DefineLanguageWord("Sorg", {
+	Language = "danish",
 	Type = "noun",
-	Meanings = {"Hump"} -- source gives the German "Buckel" as the meaning
+	Meanings = {"Grief"},
+	DerivesFrom = {"old-norse", "noun", "Sorg"}, -- presumably
+	NumberCaseInflections = {
+		"plural", "nominative", "Sorgen" -- correct?
+	},
+	AffixNameTypes = {
+		"compound", "prefix", "plural", "settlement" -- example: "Sorgenfri"
+	}
 })
-
-DefineLanguageWord("Savēt", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.
-	Language = "latvian",
-	Type = "verb",
-	Meanings = {"Work Magic"}, -- source gives the German "zaubern" as the meaning
-	DerivesFrom = {"proto-indo-european", "verb", "Ĝhutó"}
-})
-
-DefineLanguageWord("Solts", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 73.
-	Language = "latvian",
-	Type = "noun",
-	Meanings = {"Gold"} -- source gives the German "Gold" as the meaning
-})
-

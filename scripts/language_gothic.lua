@@ -320,6 +320,13 @@ DefineLanguageWord("Haubiþ", { -- Source: Richard M. Runge, "The Phonetic Reali
 	Meanings = {"Main"} -- source gives German noun "Haupt" as transation
 })
 
+DefineLanguageWord("Hauhs", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 54.
+	Language = "gothic",
+	Type = "adjective",
+	Meanings = {"High"}, -- Runge gives the German "hoch" as the meaning
+	DerivesFrom = {"proto-germanic", "adjective", "Hauha"} -- as given by Fick
+})
+
 DefineLanguageWord("Haúrds", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "gothic",
 	Type = "noun",
@@ -350,6 +357,13 @@ DefineLanguageWord("Huzd", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Type = "noun",
 	Meanings = {"Treasure"},
 	DerivesFrom = {"proto-germanic", "noun", "Huzda"}
+})
+
+DefineLanguageWord("Hʷeits", { -- Fick gives "hveits" instead; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 67.
+	Language = "gothic",
+	Type = "adjective",
+	Meanings = {"White"},
+	DerivesFrom = {"proto-germanic", "adjective", "Hvîta"} -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 67.
 })
 
 DefineLanguageWord("Jēr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
@@ -482,6 +496,21 @@ DefineLanguageWord("Sauhts", { -- Source: Richard M. Runge, "The Phonetic Realiz
 	Language = "gothic",
 	Type = "noun",
 	Meanings = {"Sickness"}
+})
+
+DefineLanguageWord("Saúrga", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.
+	Language = "gothic",
+	Type = "noun",
+	Meanings = {"Worry", "Grief"}, -- source gives the German "Sorge, Betrübnis" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Surgô"},
+	Gender = "feminine"
+})
+
+DefineLanguageWord("Saúrgan", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, pp. 223-224.
+	Language = "gothic",
+	Type = "verb",
+	Meanings = {"Worry"}, -- source gives the German "sorgen" as the meaning
+	DerivesFrom = {"proto-germanic", "verb", "Surgên"}
 })
 
 DefineLanguageWord("Sibun", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
@@ -804,19 +833,6 @@ DefineLanguageWord("Grēdags", { -- Source: Winfred P. Lehmann, "A Grammar of Pr
 	Type = "adjective",
 	Meanings = {"Hungry"},
 	DerivesFrom = {"proto-germanic", "adjective", "Gred"}
-})
-
-DefineLanguageWord("Hauhs", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
-	Language = "gothic",
-	Type = "adjective",
-	Meanings = {"High"} -- source gives translation as the German word "hoch"
-})
-
-DefineLanguageWord("Hʷeits", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
-	Language = "gothic",
-	Type = "adjective",
-	Meanings = {"White"},
-	DerivesFrom = {"proto-indo-european", "adjective", "Ḱweyt"}
 })
 
 DefineLanguageWord("Juggs", { -- Lehmann gives "Jugga-" instead; Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.

@@ -31,3 +31,10 @@ DefineLanguageWord("Ässja", { -- vernacular; Source: August Fick and Alf Torp, 
 	Meanings = {"Forge"}, -- source gives the German "Esse" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Asjôn"}
 })
+
+DefineLanguageWord("Hög", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 54.
+	Language = "swedish",
+	Type = "adjective",
+	Meanings = {"High"}, -- source gives the German "hoch" as the meaning
+	DerivesFrom = {"old-norse", "adjective", "Hôr"}
+})
