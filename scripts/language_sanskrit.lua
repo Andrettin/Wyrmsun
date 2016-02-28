@@ -185,6 +185,12 @@ DefineLanguageWord("Náktam", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Meanings = {"Night"} -- presumably, but is not entirely clear from source
 })
 
+DefineLanguageWord("Návya", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 153.
+	Language = "sanskrit",
+	Type = "adjective",
+	Meanings = {"New", "Fresh", "Young"} -- source gives the German "neu, frisch, jung" as the meaning
+})
+
 DefineLanguageWord("Pā́dam", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "sanskrit",
 	Type = "noun",

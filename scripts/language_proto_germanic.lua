@@ -635,6 +635,12 @@ DefineLanguageWord("Nemida", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Meanings = {"Holy Pasture"} -- source gives (in German) "heiliger Weideplatz" as the meaning
 })
 
+DefineLanguageWord("Neuja", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 153.
+	Language = "proto-germanic",
+	Type = "adjective",
+	Meanings = {"New"} -- source gives the German "neu" as the meaning
+})
+
 DefineLanguageWord("Nurþa", { -- source also gives the alternative form "Nurþra"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 152.
 	Language = "proto-germanic",
 	Type = "noun",
@@ -727,6 +733,12 @@ DefineLanguageWord("Silubra", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Silver"} -- source gives the German "Silber" as the meaning
+})
+
+DefineLanguageWord("Sinaskalka", { -- Source: http://www.cnrtl.fr/definition/s%C3%A9n%C3%A9chal
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Senior Servant"} -- the TLFi gives the French "serviteur le plus âgé" as the meaning
 })
 
 DefineLanguageWord("Skadwas", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.

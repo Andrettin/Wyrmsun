@@ -391,6 +391,13 @@ DefineLanguageWord("Nerigen", { -- source also gives alternative forms "Neren" a
 	Meanings = {"Heal", "Sustain the Life of", "Save", "Protect", "Nourish"}
 })
 
+DefineLanguageWord("Niuwe", { -- source also gives the alternative form "niwe"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 153.
+	Language = "middle-high-german",
+	Type = "adjective",
+	Meanings = {"New"}, -- source gives the German "neu" as the meaning
+	DerivesFrom = {"old-high-german", "adjective", "Niuwi"}
+})
+
 DefineLanguageWord("Ort", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.
 	Language = "middle-high-german",
 	Type = "noun",

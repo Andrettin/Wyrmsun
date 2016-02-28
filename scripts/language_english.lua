@@ -709,7 +709,7 @@ DefineLanguageWord("Ham", {
 	Meanings = {},
 	Gender = "neuter",
 	Archaic = true,
-	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- example: "Durham"
+	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- examples: "Durham", "Oldham"
 })
 
 DefineLanguageWord("Hammer", {
@@ -1085,6 +1085,7 @@ DefineLanguageWord("New", {
 	Language = "english",
 	Type = "adjective",
 	Meanings = {"New"},
+	DerivesFrom = {"old-english", "adjective", "Nîwe"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 153.
 	AffixNameTypes = {"compound", "prefix", "singular", "settlement"} -- examples: "Newbury", "Newcastle upon Tyne", "Newport", "Newquay"; Source: "Philip's International School Atlas", 2006, p. 64.
 })
 
@@ -1140,7 +1141,8 @@ DefineLanguageWord("Old", {
 	ComparisonDegreeInflections = {
 		"comparative", "Older",
 		"superlative", "Oldest"
-	}
+	},
+	AffixNameTypes = {"compound", "prefix", "singular", "settlement"} -- example: "Oldham"
 })
 
 DefineLanguageWord("Oliver", {

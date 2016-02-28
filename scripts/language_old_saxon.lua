@@ -318,6 +318,13 @@ DefineLanguageWord("Mī", { -- Source: Sean Crist, "An Analysis of *z loss in We
 	Dative = "Mī"
 })
 
+DefineLanguageWord("Niuwi", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 153.
+	Language = "old-saxon",
+	Type = "adjective",
+	Meanings = {"New"}, -- source gives the German "neu" as the meaning
+	DerivesFrom = {"proto-germanic", "adjective", "Neuja"}
+})
+
 DefineLanguageWord("North", { -- source also gives the alternative form "Norđ"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 152.
 	Language = "old-saxon",
 	Type = "adverb",

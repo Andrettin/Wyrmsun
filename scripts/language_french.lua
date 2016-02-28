@@ -196,3 +196,11 @@ DefineLanguageWord("Ren", {
 	Meanings = {},
 	AffixNameTypes = {"compound", "prefix", "singular", "person"} -- example: "Renaud"
 })
+
+DefineLanguageWord("Sénéchal", {
+	Language = "french",
+	Type = "noun",
+	Meanings = {"Seneschal"},
+	DerivesFrom = {"old-frankish", "noun", "Siniskalk"}, -- Source: http://www.cnrtl.fr/definition/s%C3%A9n%C3%A9chal
+	Gender = "masculine"
+})

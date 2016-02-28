@@ -447,6 +447,13 @@ DefineLanguageWord("Nahts", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	DerivesFrom = {"proto-germanic", "noun", "Naχts"}
 })
 
+DefineLanguageWord("Niujus", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 153.
+	Language = "gothic",
+	Type = "adjective",
+	Meanings = {"New"},	-- source gives the German "neu" as the meaning
+	DerivesFrom = {"proto-germanic", "adjective", "Neuja"}
+})
+
 DefineLanguageWord("Qino", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 	Language = "gothic",
 	Type = "noun",

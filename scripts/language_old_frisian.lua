@@ -231,6 +231,13 @@ DefineLanguageWord("Nera", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Meanings = {"Nurture"}
 })
 
+DefineLanguageWord("Nîe", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 153.
+	Language = "old-frisian",
+	Type = "adjective",
+	Meanings = {"New"}, -- source gives the German "neu" as the meaning
+	DerivesFrom = {"proto-germanic", "adjective", "Neuja"}
+})
+
 DefineLanguageWord("North", { -- source also gives the alternative form "Nord"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 152.
 	Language = "old-frisian",
 	Type = "noun",

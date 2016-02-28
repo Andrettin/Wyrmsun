@@ -662,6 +662,13 @@ DefineLanguageWord("Neaht", { -- Source: Richard M. Runge, "The Phonetic Realiza
 	Meanings = {"Night"}
 })
 
+DefineLanguageWord("Nîwe", { -- source also gives the alternative form "néowe"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 153.
+	Language = "old-english",
+	Type = "adjective",
+	Meanings = {"New"}, -- source gives the German "neu" as the meaning
+	DerivesFrom = {"proto-germanic", "adjective", "Neuja"}
+})
+
 DefineLanguageWord("Norþ", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 152.
 	Language = "old-english",
 	Type = "adverb",

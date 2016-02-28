@@ -168,10 +168,11 @@ DefineLanguageWord("Scramasacs", { -- Source: August Fick and Alf Torp, "Wortsch
 	Meanings = {"Knife-like Sword"} -- source gives (in German) "messerartiges Schwert" as the meaning
 })
 
-DefineLanguageWord("Sinigus", { -- source also gives the alternative form "Seniscalcus"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 215.
-	Language = "old-frankish",
-	Type = "adjective",
-	Meanings = {"Old"} -- presumably (this is the meaning given to the Proto-Germanic original word, and no meaning is specifically given to this one)
+DefineLanguageWord("Siniskalk", { -- Fick gives "Sinigus, seniscalcus" instead; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 215; Source: http://www.cnrtl.fr/definition/s%C3%A9n%C3%A9chal
+	Language = "old-frankish", -- the TLFi gives "Ancien Bas Francique" (= Old Frankish)
+	Type = "noun",
+	Meanings = {"Senior Servant"}, -- the TLFi gives the French "serviteur le plus âgé" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Sinaskalka"}
 })
 
 DefineLanguageWord("Skerian", { -- Source: http://www.cnrtl.fr/definition/d%C3%A9chirer

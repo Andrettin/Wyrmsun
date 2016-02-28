@@ -745,6 +745,21 @@ DefineLanguageWord("Norđ", { -- source also gives the alternative form "Norđr"
 	DerivesFrom = {"proto-germanic", "adverb", "Nurþa"}
 })
 
+DefineLanguageWord("Nŷ", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 153.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"New Moon"}, -- source gives the German "Neumond" as the meaning
+	DerivesFrom = {"proto-germanic", "adjective", "Neuja"},
+	Gender = "neuter"
+})
+
+DefineLanguageWord("Nŷr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 153.
+	Language = "old-norse",
+	Type = "adjective",
+	Meanings = {"New"}, -- source gives the German "neu" as the meaning
+	DerivesFrom = {"proto-germanic", "adjective", "Neuja"}
+})
+
 DefineLanguageWord("Oddr", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 7.
 	Language = "old-norse",
 	Type = "noun",

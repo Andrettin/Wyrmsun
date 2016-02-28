@@ -537,6 +537,13 @@ DefineLanguageWord("Nara", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Gender = "feminine"
 })
 
+DefineLanguageWord("Niuwi", { -- source also gives the alternative form "niwi"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 153.
+	Language = "old-high-german",
+	Type = "adjective",
+	Meanings = {"New"}, -- source gives the German "neu" as the meaning
+	DerivesFrom = {"proto-germanic", "adjective", "Neuja"}
+})
+
 DefineLanguageWord("Nord", { -- source also gives the alternative form "Nort"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 152.
 	Language = "old-high-german",
 	Type = "noun",

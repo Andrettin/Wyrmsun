@@ -1373,6 +1373,19 @@ DefineLanguageWord("Mut", {
 	AffixNameTypes = {"compound", "suffix", "singular", "person"}
 })
 
+DefineLanguageWord("Neu", {
+	Language = "high-german",
+	Type = "adjective",
+	Meanings = {"New"},
+	DerivesFrom = {"middle-high-german", "adjective", "Niuwe"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 153.
+	AffixNameTypes = {
+		"compound", "prefix", "settlement", -- examples: "Neusohl", "Neusorge"
+		"compound", "infix", "settlement", -- example: "Klosterneuburg"
+		"separate", "prefix", "settlement", -- example: "Neue Sorge"
+		"compound", "prefix", "unit-class-castle" -- example: "Schloss Neusorge"
+	}
+})
+
 DefineLanguageWord("Nord", {
 	Language = "high-german",
 	Type = "noun",
@@ -1906,18 +1919,6 @@ DefineLanguageWord("Wurm", {
 	Gender = "masculine",
 	NumberCaseInflections = {
 		"singular", "genitive", "Wurms" -- alternatively also "Wurmes"
-	}
-})
-
-DefineLanguageWord("Neu", {
-	Language = "high-german",
-	Type = "adjective",
-	Meanings = {"New"},
-	AffixNameTypes = {
-		"compound", "prefix", "singular", "settlement", -- examples: "Neusohl", "Neusorge"
-		"compound", "infix", "singular", "settlement", -- example: "Klosterneuburg"
-		"separate", "prefix", "singular", "settlement", -- example: "Neue Sorge"
-		"compound", "prefix", "singular", "unit-class-castle" -- example: "Schloss Neusorge"
 	}
 })
 
