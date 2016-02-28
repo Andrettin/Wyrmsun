@@ -562,6 +562,17 @@ DefineLanguageWord("Hnīga", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	DerivesFrom = {"proto-indo-european", "verb", "Kneygʷh"}
 })
 
+DefineLanguageWord("Hnot", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 58.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Nut"}, -- source gives the German "Nuß"
+	DerivesFrom = {"proto-germanic", "noun", "Hnut"},
+	Gender = "feminine",
+	NumberCaseInflections = {
+		"plural", "nominative", "Hnetr"
+	}
+})
+
 DefineLanguageWord("Hodd", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.
 	Language = "old-norse",
 	Type = "noun",
@@ -574,6 +585,14 @@ DefineLanguageWord("Hôr", { -- source also gives the alternative form "hâr"; S
 	Type = "adjective",
 	Meanings = {"High"}, -- source gives the German "hoch" as the meaning
 	DerivesFrom = {"proto-germanic", "adjective", "Hauha"}
+})
+
+DefineLanguageWord("Horn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 47.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Horn", "Drinking Horn", "Corner"}, -- source gives the German "Horn, Trinkhorn, Ecke"
+	DerivesFrom = {"northwest-germanic", "noun", "Horna"}, -- presumably
+	Gender = "neuter"
 })
 
 DefineLanguageWord("Hrǫnn", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.
@@ -602,6 +621,14 @@ DefineLanguageWord("Hvītr", { -- Fick gives "hvîtr" instead; Source: Winfred P
 	Type = "adjective",
 	Meanings = {"White", "Light Colored"}, -- Lehmann gives only "white" as the meaning, while Fick gives the German "weiß, hellfarbig"
 	DerivesFrom = {"proto-germanic", "adjective", "Hvîta"} -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 67.
+})
+
+DefineLanguageWord("Hyrni", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 47.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Corner", "Angle"}, -- source gives the German "Ecke, Winkel" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Hurnia"},
+	Gender = "neuter"
 })
 
 DefineLanguageWord("Îsarn", { -- source also gives the alternative form "Jârn"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 24.
@@ -954,6 +981,13 @@ DefineLanguageWord("Tvinna", { -- Source: Sean Crist, "An Analysis of *z loss in
 	Meanings = {"Double", "Duplicate"}
 })
 
+DefineLanguageWord("Ulfr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Wolf"}, -- source gives the German "Wolf"
+	DerivesFrom = {"proto-germanic", "noun", "Vulfa"}
+})
+
 DefineLanguageWord("Vagn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
 	Language = "old-norse",
 	Type = "noun",
@@ -1025,4 +1059,12 @@ DefineLanguageWord("Yfir", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Type = "adposition",
 	Meanings = {"Over"}, -- derived from the Proto-Germanic "Ufar", which means "Over"
 	DerivesFrom = {"proto-germanic", "adposition", "Ufar"}
+})
+
+DefineLanguageWord("Ylgr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Female Wolf"}, -- source gives the German "Wölfin"
+	DerivesFrom = {"proto-germanic", "noun", "Vulgvî"},
+	Gender = "feminine"
 })

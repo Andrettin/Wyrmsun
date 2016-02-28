@@ -108,6 +108,13 @@ DefineLanguageWord("Mersch", { -- source also gives the alternative form "Marsch
 	DerivesFrom = {"proto-germanic", "noun", "Mari"}
 })
 
+DefineLanguageWord("Note", { -- source also gives the alternative form "Not"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 58.
+	Language = "middle-low-german",
+	Type = "noun",
+	Meanings = {"Nut"}, -- source (apparently) gives the German "Nuß"
+	DerivesFrom = {"proto-germanic", "noun", "Hnut"}
+})
+
 DefineLanguageWord("Sûd", { -- source also gives the alternative form "sûder"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.
 	Language = "middle-low-german",
 	Type = "adverb",

@@ -515,10 +515,12 @@ DefineLanguageWord("Hlewa", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	AffixNameTypes = {"compound", "prefix", "singular", "person"} -- example: "Hlewagastiz"
 })
 
-DefineLanguageWord("Horna", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
-	Language = "proto-germanic", -- from the Gallehus inscription, is it really Proto-Germanic?
+DefineLanguageWord("Hnut", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 58.
+	Language = "proto-germanic",
 	Type = "noun",
-	Meanings = {"Horn"}
+	Meanings = {"Nut"}, -- source gives the German "Nuß"
+	Gender = "feminine",
+	DerivesFrom = {"proto-indo-european", "noun", "Knud"},
 })
 
 DefineLanguageWord("Hraznō", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.
@@ -526,6 +528,19 @@ DefineLanguageWord("Hraznō", { -- Source: Sean Crist, "An Analysis of *z loss i
 	Type = "noun",
 	Meanings = {"Wave"},
 	Gender = "feminine"
+})
+
+DefineLanguageWord("Hurna", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 47.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Horn"}, -- source gives the German "Horn"
+	Gender = "neuter"
+})
+
+DefineLanguageWord("Hurnia", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 47.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Corner", "Angle"} -- source gives the German "Ecke, Winkel" as the meaning
 })
 
 DefineLanguageWord("Huzda", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.
@@ -884,6 +899,37 @@ DefineLanguageWord("Vikkan", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Type = "noun",
 	Meanings = {"Sorcerer"},
 	Gender = "masculine"
+})
+
+DefineLanguageWord("Vulbî", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Female Wolf"}, -- source gives the German "Wölfin"
+	DerivesFrom = {"proto-indo-european", "noun", "Vl̥po"}, -- apparently
+	Gender = "feminine"
+})
+
+DefineLanguageWord("Vulfa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Wolf"}, -- source gives the German "Wolf"
+	DerivesFrom = {"proto-indo-european", "noun", "Vl̥po"},
+	Gender = "masculine"
+})
+
+DefineLanguageWord("Vulgvî", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {},
+	DerivesFrom = {"proto-indo-european", "noun", "Vl̥qo"},
+	Gender = "feminine"
+})
+
+DefineLanguageWord("Vulhva", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {},
+	DerivesFrom = {"proto-indo-european", "noun", "Vl̥qo"}
 })
 
 DefineLanguageWord("Vurma", { -- source also gives the alternative form "Vurmi"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.

@@ -31,3 +31,10 @@ DefineLanguageWord("Flodu", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Meanings = {"Flood"}, -- presumably, since the word it comes from has that meaning
 	DerivesFrom = {"proto-germanic", "noun", "Flōduz"}
 })
+
+DefineLanguageWord("Horna", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
+	Language = "northwest-germanic", -- from the Gallehus inscription, probably Northwest Germanic as per the description here: http://www.utexas.edu/cola/centers/lrc/general/ie-lg/Germanic.html
+	Type = "noun",
+	Meanings = {"Horn"},
+	DerivesFrom = {"proto-germanic", "noun", "Hurna"} -- presumably
+})

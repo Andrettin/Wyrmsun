@@ -420,11 +420,30 @@ DefineLanguageWord("Hleib", { -- Source: Richard M. Runge, "The Phonetic Realiza
 	Meanings = {"Bread"}
 })
 
+DefineLanguageWord("Hnuz̨", { -- source also gives the alternative form "Nuz̨"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 58.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Nut"}, -- source gives the German "Nuß"
+	DerivesFrom = {"proto-germanic", "noun", "Hnut"},
+	Gender = "feminine",
+	NumberCaseInflections = {
+		"plural", "nominative", "Nuz̨z̨i"
+	}
+})
+
 DefineLanguageWord("Hōh", { -- Fick gives "hôh" instead; Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 54.
 	Language = "old-high-german",
 	Type = "adjective",
 	Meanings = {"High"}, -- Runge gives the German "hoch" as the meaning
 	DerivesFrom = {"proto-germanic", "adjective", "Hauha"} -- as given by Fick
+})
+
+DefineLanguageWord("Horn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 47.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Horn", "Preeminent Peak"}, -- source (apparently) gives the German "Horn, hervorragende Spitze"
+	DerivesFrom = {"northwest-germanic", "noun", "Horna"}, -- presumably
+	Gender = "neuter"
 })
 
 DefineLanguageWord("Hort", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.
@@ -762,11 +781,17 @@ DefineLanguageWord("Wela", { -- Source: Richard M. Runge, "The Phonetic Realizat
 	Meanings = {"Well"}
 })
 
-DefineLanguageWord("Wer", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
+DefineLanguageWord("Wer", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6; Source: http://www.cnrtl.fr/definition/garou
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Man"},
-	DerivesFrom = {"proto-indo-european", "noun", "Wiros"}
+	DerivesFrom = {"proto-indo-european", "noun", "Wiros"} -- as given by Lehmann
+})
+
+DefineLanguageWord("Werwolf", { -- composed of "Wer" and "Wolf"; Source: http://www.cnrtl.fr/definition/garou
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {}
 })
 
 DefineLanguageWord("West", { -- source also gives the alternative form "Westar"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 204.
@@ -788,6 +813,20 @@ DefineLanguageWord("Wîz̨", { -- Fick gives "(h)wîz̨"; Source: August Fick an
 	Type = "adjective",
 	Meanings = {"White"}, -- source gives the German "weiß" as the meaning
 	DerivesFrom = {"proto-germanic", "adjective", "Hvîta"}
+})
+
+DefineLanguageWord("Wolf", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209; Source: http://www.cnrtl.fr/definition/garou
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Wolf"}, -- the TLFi gives the French "loup", while Fick gives the German "Wolf"
+	DerivesFrom = {"proto-germanic", "noun", "Vulfa"}
+})
+
+DefineLanguageWord("Wulpa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Female Wolf"}, -- source gives the German "Wölfin"
+	DerivesFrom = {"proto-germanic", "noun", "Vulbî"}
 })
 
 DefineLanguageWord("Wurm", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209; Source: http://www.cnrtl.fr/definition/gourme

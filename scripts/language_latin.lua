@@ -236,12 +236,26 @@ DefineLanguageWord("Longus", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Meanings = {"Long"} -- presumably, but it is not entirely clear from the source
 })
 
+DefineLanguageWord("Lupus", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
+	Language = "latin",
+	Type = "noun",
+	Meanings = {},
+	DerivesFrom = {"proto-indo-european", "noun", "Vl̥qo"}
+})
+
 DefineLanguageWord("Molere", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "latin",
 	Type = "verb",
 	Meanings = {"Grind"}, -- presumably, but it is not entirely clear from the source
 	DerivesFrom = {"proto-indo-european", "verb", "Mel"}
 	-- also given as "Molō" (if it is indeed the same word); Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
+})
+
+DefineLanguageWord("Nux", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 58.
+	Language = "latin",
+	Type = "noun",
+	Meanings = {},
+	DerivesFrom = {"proto-indo-european", "noun", "Knud"}
 })
 
 DefineLanguageWord("Octō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
@@ -381,6 +395,13 @@ DefineLanguageWord("Vir", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-G
 	Type = "noun",
 	Meanings = {},
 	DerivesFrom = {"proto-indo-european", "noun", "Wiros"}
+})
+
+DefineLanguageWord("Volpes", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
+	Language = "latin",
+	Type = "noun",
+	Meanings = {"Fox"}, -- source gives the German "Fuchs"
+	DerivesFrom = {"proto-indo-european", "noun", "Vl̥po"}
 })
 
 DefineLanguageWord("Vōs", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 5, Subsection 1.

@@ -132,6 +132,14 @@ DefineLanguageWord("Escrime", {
 	DerivesFrom = {"old-frankish", "verb", "Skĭrmjan"} -- Source: http://www.cnrtl.fr/definition/escrime
 })
 
+DefineLanguageWord("Garou", {
+	Language = "french",
+	Type = "noun",
+	Meanings = {"Werewolf"},
+	DerivesFrom = {"old-frankish", "noun", "Werwolf"}, -- Source: http://www.cnrtl.fr/definition/garou
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Gourme", {
 	Language = "french",
 	Type = "noun",

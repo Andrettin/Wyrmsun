@@ -169,7 +169,7 @@ DefineLanguageWord("Brord", { -- Source: Sean Crist, "An Analysis of *z loss in 
 })
 
 DefineLanguageWord("Brû", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 145.
-	Language = "old-norse",
+	Language = "old-english",
 	Type = "noun",
 	Gender = "feminine",
 	Meanings = {"Eyebrow", "Eyelid", "Eyelash"}, -- source gives the German "Augenbraue, Augenlid, Wimper" as the meaning
@@ -523,6 +523,17 @@ DefineLanguageWord("Hléor", { -- Source: Richard M. Runge, "The Phonetic Realiz
 	Meanings = {"Cheek"}
 })
 
+DefineLanguageWord("Hnutu", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 58.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Nut"}, -- source gives the German "Nuß"
+	DerivesFrom = {"proto-germanic", "noun", "Hnut"},
+	Gender = "feminine",
+	NumberCaseInflections = {
+		"plural", "nominative", "Hnyte"
+	}
+})
+
 DefineLanguageWord("Hoppestre", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, pp. 77-78.
 	Language = "old-english",
 	Type = "noun",
@@ -535,6 +546,13 @@ DefineLanguageWord("Hord", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Type = "noun",
 	Meanings = {"Treasure", "Amassed Wealth"},
 	DerivesFrom = {"proto-germanic", "noun", "Huzda"}
+})
+
+DefineLanguageWord("Horn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 47.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Horn", "Preeminent Peak"}, -- source (apparently) gives the German "Horn, hervorragende Spitze"
+	DerivesFrom = {"northwest-germanic", "noun", "Horna"} -- presumably
 })
 
 DefineLanguageWord("Hræn", { -- source also gives the alternative form "Hærn"; Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.
@@ -923,6 +941,13 @@ DefineLanguageWord("Wihte", { -- this is the plural; Source: Alaric Hall, "The M
 	NumberCaseInflections = {
 		"plural", "nominative", "Wihte"
 	}
+})
+
+DefineLanguageWord("Wulf", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Wolf"}, -- source gives the German "Wolf"
+	DerivesFrom = {"proto-germanic", "noun", "Vulfa"}
 })
 
 DefineLanguageWord("Aseowen", { -- this is the past participle; Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 239.

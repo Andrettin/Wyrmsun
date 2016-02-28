@@ -83,6 +83,13 @@ DefineLanguageWord("Brhant", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Meanings = {"High"} -- source gives "Hoch" as the meaning
 })
 
+DefineLanguageWord("Çṛṅga", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 47.
+	Language = "sanskrit",
+	Type = "noun",
+	Meanings = {"Horn"}, -- source gives the German "Horn" as the meaning
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Dāhas", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
 	Language = "sanskrit",
 	Type = "noun",
@@ -299,4 +306,12 @@ DefineLanguageWord("Vidma", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	NumberPersonTenseMoodInflections = {
 		"plural", "first-person", "present", "indicative", "Vidma"
 	}
+})
+
+DefineLanguageWord("Vṛ́ká", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
+	Language = "sanskrit",
+	Type = "noun",
+	Meanings = {"Wolf"}, -- source gives the German "Wolf"
+	DerivesFrom = {"proto-indo-european", "noun", "Vl̥qo"},
+	Gender = "masculine"
 })

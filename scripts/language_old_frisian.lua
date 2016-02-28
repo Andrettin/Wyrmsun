@@ -151,6 +151,14 @@ DefineLanguageWord("Hēde", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Uncountable = true -- as a material, it is likely to be uncountable
 })
 
+DefineLanguageWord("Herne", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 47.
+	Language = "old-frisian",
+	Type = "noun",
+	Meanings = {"Corner", "Angle"}, -- source gives the German "Ecke, Winkel" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Hurnia"},
+	Gender = "feminine"
+})
+
 DefineLanguageWord("Herth", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 46.
 	Language = "old-frisian",
 	Type = "noun",
@@ -165,6 +173,13 @@ DefineLanguageWord("Homer", { -- source also gives the alternative form "hamer";
 	Meanings = {"Hammer"}, -- source gives the German "Hammer" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Hamara"},
 	Gender = "masculine"
+})
+
+DefineLanguageWord("Horn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 47.
+	Language = "old-frisian",
+	Type = "noun",
+	Meanings = {"Horn", "Preeminent Peak"}, -- source (apparently) gives the German "Horn, hervorragende Spitze"
+	DerivesFrom = {"northwest-germanic", "noun", "Horna"} -- presumably
 })
 
 DefineLanguageWord("Hwit", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 67.
@@ -333,6 +348,13 @@ DefineLanguageWord("Wi", { -- Source: Sean Crist, "An Analysis of *z loss in Wes
 	Type = "pronoun",
 	Meanings = {"We"},
 	Nominative = "Wi"
+})
+
+DefineLanguageWord("Wolf", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
+	Language = "old-frisian",
+	Type = "noun",
+	Meanings = {"Wolf"}, -- source gives the German "Wolf"
+	DerivesFrom = {"proto-germanic", "noun", "Vulfa"}
 })
 
 DefineLanguageWord("Worm", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.

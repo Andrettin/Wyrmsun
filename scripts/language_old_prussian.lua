@@ -31,3 +31,10 @@ DefineLanguageWord("Semen", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Meanings = {"Seed"}
 })
 
+DefineLanguageWord("Wilkis", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
+	Language = "old-prussian", -- source gives "Prussian"
+	Type = "noun",
+	Meanings = {},
+	DerivesFrom = {"proto-indo-european", "noun", "Vl̥qo"}
+})
+

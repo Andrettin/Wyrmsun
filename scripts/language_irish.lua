@@ -73,6 +73,14 @@ DefineLanguageWord("Búal", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	DerivesFrom = {"proto-indo-european", "verb", "Bheg"}
 })
 
+DefineLanguageWord("Cnú", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 58.
+	Language = "irish",
+	Type = "noun",
+	Meanings = {"Nut"}, -- source gives the German "Nuß"
+	DerivesFrom = {"proto-indo-european", "noun", "Knud"},
+	Gender = "feminine"
+})
+
 DefineLanguageWord("Fescor", { -- source also gives the alternative form "Ἑστέρα"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 204.
 	Language = "irish",
 	Type = "noun",

@@ -44,3 +44,10 @@ DefineLanguageWord("Solts", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Meanings = {"Gold"} -- source gives the German "Gold" as the meaning
 })
 
+DefineLanguageWord("Wilks", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
+	Language = "latvian",
+	Type = "noun",
+	Meanings = {},
+	DerivesFrom = {"proto-indo-european", "noun", "Vl̥qo"}
+})
+

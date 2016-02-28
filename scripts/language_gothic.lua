@@ -342,10 +342,12 @@ DefineLanguageWord("Haúrds", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	DerivesFrom = {"proto-germanic", "noun", "Χŕdiz"}
 })
 
-DefineLanguageWord("Haurn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+DefineLanguageWord("Haurn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 47.
 	Language = "gothic",
 	Type = "noun",
-	Meanings = {"Horn"}
+	Meanings = {"Horn"}, -- as given by Lehmann; Fick gives the German "Horn, Hornfrucht" instead
+	DerivesFrom = {"proto-germanic", "noun", "Hurna"}, -- presumably
+	Gender = "neuter" -- as given by Fick
 })
 
 DefineLanguageWord("Hlaifs", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
@@ -588,6 +590,14 @@ DefineLanguageWord("Us", { -- Source: Richard M. Runge, "The Phonetic Realizatio
 	Language = "gothic",
 	Type = "adverb",
 	Meanings = {"Out"}
+})
+
+DefineLanguageWord("Vulfs", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
+	Language = "gothic",
+	Type = "noun",
+	Meanings = {"Wolf"}, -- source gives the German "Wolf"
+	DerivesFrom = {"proto-germanic", "noun", "Vulfa"},
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Waila", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.

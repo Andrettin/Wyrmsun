@@ -158,6 +158,20 @@ DefineLanguageWord("Vienúolika", { -- Source: Winfred P. Lehmann, "A Grammar of
 	Number = 11
 })
 
+DefineLanguageWord("Viɫkas", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
+	Language = "lithuanian",
+	Type = "noun",
+	Meanings = {},
+	DerivesFrom = {"proto-indo-european", "noun", "Vl̥qo"}
+})
+
+DefineLanguageWord("Vilpiszỹs", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
+	Language = "lithuanian",
+	Type = "noun",
+	Meanings = {"Wild Cat"}, -- source gives the German "wilde Katze"
+	DerivesFrom = {"proto-indo-european", "noun", "Vl̥po"}
+})
+
 DefineLanguageWord("Źengiù", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
 	Language = "lithuanian",
 	Type = "verb",

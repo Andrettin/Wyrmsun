@@ -234,7 +234,8 @@ DefineLanguageWord("Bridge", {
 	Type = "noun",
 	Meanings = {"Bridge"},
 	Gender = "neuter",
-	DerivesFrom = {"old-english", "noun", "Brycg"} -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 145.
+	DerivesFrom = {"old-english", "noun", "Brycg"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 145.
+	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- example: "Woodbridge"
 })
 
 DefineLanguageWord("Bronze", {
@@ -317,6 +318,14 @@ DefineLanguageWord("Charles", {
 	NameTypes = {"person"}
 })
 
+DefineLanguageWord("Chat", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Chat"},
+	Gender = "neuter",
+	AffixNameTypes = {"compound", "prefix", "singular", "settlement"} -- example: "Chatham"
+})
+
 DefineLanguageWord("Che", {
 	Language = "english",
 	Type = "noun", -- correct?
@@ -333,7 +342,10 @@ DefineLanguageWord("Chester", {
 	Gender = "neuter",
 	Archaic = true,
 	NameTypes = {"settlement"},
-	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- example: "Dorchester"
+	AffixNameTypes = {
+		"compound", "prefix", "singular", "settlement", -- example: "Chesterfield"
+		"compound", "suffix", "singular", "settlement" -- examples: "Dorchester", "Winchester"
+	}
 })
 
 DefineLanguageWord("Christopher", {
@@ -529,6 +541,14 @@ DefineLanguageWord("Es", {
 	AffixNameTypes = {"compound", "prefix", "singular", "province"} -- example: "Essex"
 })
 
+DefineLanguageWord("Field", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Field"},
+	AffixNameTypes = {"compound", "suffix", "singular", "settlement"}, -- examples: "Chesterfield", "Mansfield", "Marshfield"
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Fiery", {
 	Language = "english",
 	Type = "adjective",
@@ -575,7 +595,7 @@ DefineLanguageWord("Ford", {
 	Meanings = {"Ford"},
 	DerivesFrom = {"old-english", "noun", "Ford"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 120.
 	Gender = "neuter",
-	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- examples: "Ashford", "Bedford", "Oxford" (Source: "Philip's International School Atlas", 2006, p. 64), "Waterford"
+	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- examples: "Ashford", "Bedford", "Guildford", "Longford", "Oxford" (Source: "Philip's International School Atlas", 2006, p. 64), "Waterford"
 })
 
 DefineLanguageWord("Forge", {
@@ -703,13 +723,21 @@ DefineLanguageWord("Guard", {
 	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- example: "Fishguard"; Source: "Philip's International School Atlas", 2006, p. 64.
 })
 
+DefineLanguageWord("Guild", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Guild"},
+	Gender = "neuter",
+	AffixNameTypes = {"compound", "prefix", "singular", "settlement"} -- example: "Guildford"
+})
+
 DefineLanguageWord("Ham", {
 	Language = "english",
 	Type = "noun", -- correct?
 	Meanings = {},
 	Gender = "neuter",
 	Archaic = true,
-	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- examples: "Durham", "Oldham"
+	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- examples: "Chatham", "Durham", "Oldham"
 })
 
 DefineLanguageWord("Hammer", {
@@ -782,7 +810,7 @@ DefineLanguageWord("Haven", {
 	Type = "noun",
 	Meanings = {"Haven"},
 	Gender = "neuter",
-	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- example: "Stonehaven"; Source: "Philip's International School Atlas", 2006, p. 64.
+	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- examples: "Stonehaven", "Whitehaven" (Source: "Philip's International School Atlas", 2006, p. 64)
 })
 
 DefineLanguageWord("Head", {
@@ -790,7 +818,7 @@ DefineLanguageWord("Head", {
 	Type = "noun",
 	Meanings = {"Head"},
 	Gender = "neuter",
-	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- example: "Gateshead"; Source: "Philip's International School Atlas", 2006, p. 64.
+	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- examples: "Gateshead" (Source: "Philip's International School Atlas", 2006, p. 64), "Holyhead"
 })
 
 DefineLanguageWord("Hearth", {
@@ -844,7 +872,18 @@ DefineLanguageWord("Holy", {
 	Language = "english",
 	Type = "adjective",
 	Meanings = {"Holy"},
-	AffixNameTypes = {"separate", "prefix", "singular", "unit-class-smithy"} -- seems sensible
+	AffixNameTypes = {
+		"compound", "prefix", "settlement", -- example: "Holyhead"
+		"separate", "prefix", "unit-class-smithy" -- seems sensible
+	}
+})
+
+DefineLanguageWord("Horn", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Horn"},
+	DerivesFrom = {"old-english", "noun", "Horn"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 47.
+	Gender = "neuter"
 })
 
 DefineLanguageWord("House", {
@@ -862,7 +901,14 @@ DefineLanguageWord("Hunt", {
 	Participles = {
 		"present", "Hunting",
 		"past", "Hunted"
-	},
+	}
+})
+
+DefineLanguageWord("Hunting", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Hunting"},
+	Gender = "neuter",
 	AffixNameTypes = {"compound", "prefix", "singular", "settlement"} -- example: "Huntingdon"
 })
 
@@ -995,6 +1041,13 @@ DefineLanguageWord("Liver", {
 	AffixNameTypes = {"compound", "prefix", "singular", "settlement"} -- example: "Liverpool"
 })
 
+DefineLanguageWord("Long", {
+	Language = "english",
+	Type = "adjective",
+	Meanings = {"Long"},
+	AffixNameTypes = {"compound", "prefix", "singular", "settlement"} -- examples: "Longford"
+})
+
 DefineLanguageWord("Magic", {
 	Language = "english",
 	Type = "adjective",
@@ -1026,6 +1079,14 @@ DefineLanguageWord("Malcolm", {
 	NameTypes = {"person"}
 })
 
+DefineLanguageWord("Man", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Man"},
+	Gender = "masculine",
+	AffixNameTypes = {"compound", "prefix", "singular", "genitive", "settlement"} -- example: "Mansfield"
+})
+
 DefineLanguageWord("Mark", {
 	Language = "english",
 	Type = "noun",
@@ -1035,10 +1096,12 @@ DefineLanguageWord("Mark", {
 })
 
 DefineLanguageWord("Marsh", {
-	Language = "old-english",
+	Language = "english",
 	Type = "noun",
 	Meanings = {"Marsh"},
-	DerivesFrom = {"old-english", "noun", "Merisc"} -- Source: http://www.cnrtl.fr/definition/marais
+	Gender = "neuter",
+	DerivesFrom = {"old-english", "noun", "Merisc"}, -- Source: http://www.cnrtl.fr/definition/marais
+	AffixNameTypes = {"compound", "prefix", "singular", "settlement"} -- example: "Marshfield"
 })
 
 DefineLanguageWord("Matthew", {
@@ -1133,6 +1196,14 @@ DefineLanguageWord("North", {
 	DerivesFrom = {"old-english", "adverb", "Norþ"} -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 152.
 })
 
+DefineLanguageWord("Nut", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Nut"},
+	DerivesFrom = {"old-english", "noun", "Hnutu"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 58.
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Old", {
 	Language = "english",
 	Type = "adjective",
@@ -1201,7 +1272,7 @@ DefineLanguageWord("Port", {
 	AffixNameTypes = {
 		"compound", "prefix", "singular", "genitive", "settlement", -- example: "Portsmouth"
 		"compound", "prefix", "singular", "province", -- example: "Portland" (duchy)
-		"compound", "suffix", "singular", "settlement" -- example: "Newport" (Source: "Philip's International School Atlas", 2006, p. 64), "Westport"
+		"compound", "suffix", "singular", "settlement" -- examples: "Newport", "Stockport" (Source: "Philip's International School Atlas", 2006, p. 64), "Westport"
 	}
 })
 
@@ -1211,6 +1282,23 @@ DefineLanguageWord("Quay", {
 	Meanings = {"Quay"},
 	Gender = "neuter",
 	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- example: "Newquay"; Source: "Philip's International School Atlas", 2006, p. 64.
+})
+
+DefineLanguageWord("Read", {
+	Language = "english",
+	Type = "verb",
+	Meanings = {"Read"},
+	Participles = {
+		"present", "Reading"
+	}
+})
+
+DefineLanguageWord("Reading", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Reading"},
+	Gender = "neuter",
+	NameTypes = {"settlement"}
 })
 
 DefineLanguageWord("Red", {
@@ -1467,6 +1555,14 @@ DefineLanguageWord("Stephen", {
 	NameTypes = {"person"}
 })
 
+DefineLanguageWord("Stock", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Stock"},
+	Gender = "neuter",
+	AffixNameTypes = {"compound", "prefix", "singular", "settlement"} -- example: "Stockport"
+})
+
 DefineLanguageWord("Stone", {
 	Language = "english",
 	Type = "noun",
@@ -1656,6 +1752,7 @@ DefineLanguageWord("White", {
 	Meanings = {"White"},
 	DerivesFrom = {"old-english", "adjective", "Hwīt"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 67.
 	AffixNameTypes = {
+		"compound", "prefix", "singular", "settlement", -- example: "Whitehaven"
 		"separate", "prefix", "singular", "unit-class-smithy" -- seems sensible
 	}
 })
@@ -1692,6 +1789,30 @@ DefineLanguageWord("Wimble", {
 	Gender = "neuter",
 	Archaic = true,
 	AffixNameTypes = {"compound", "prefix", "singular", "settlement"} -- example: "Wimbledon"
+})
+
+DefineLanguageWord("Win", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Win"},
+	Gender = "neuter",
+	AffixNameTypes = {"compound", "prefix", "singular", "settlement"} -- example: "Winchester"
+})
+
+DefineLanguageWord("Wolf", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Wolf"},
+	DerivesFrom = {"old-english", "noun", "Wulf"},
+	Gender = "neuter"
+})
+
+DefineLanguageWord("Wood", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Wood"},
+	Gender = "neuter",
+	AffixNameTypes = {"compound", "prefix", "singular", "settlement"} -- example: "Woodbridge"
 })
 
 DefineLanguageWord("Wool", {

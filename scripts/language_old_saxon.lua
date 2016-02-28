@@ -96,7 +96,7 @@ DefineLanguageWord("Bord", { -- Source: http://www.cnrtl.fr/definition/B%F6rde
 })
 
 DefineLanguageWord("Bord", { -- Source: http://www.cnrtl.fr/definition/bord
-	Language = "old-english",
+	Language = "old-saxon",
 	Type = "noun",
 	Meanings = {"Edge", "Ridge", "Edge of a Ship"}, -- source gives the French "bord, arête; bord de navire" as the meaning
 	DerivesFrom = {"proto-indo-european", "noun", "Bhrdho"}
@@ -246,6 +246,16 @@ DefineLanguageWord("Hord", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Type = "noun",
 	Meanings = {"Treasure", "Closed Interior", "Hidden Interior"},
 	DerivesFrom = {"proto-germanic", "noun", "Huzda"}
+})
+
+DefineLanguageWord("Horn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 47.
+	Language = "old-saxon",
+	Type = "noun",
+	Meanings = {"Horn", "Preeminent Peak"}, -- source (apparently) gives the German "Horn, hervorragende Spitze"
+	DerivesFrom = {"northwest-germanic", "noun", "Horna"}, -- presumably
+	NumberCaseInflections = {
+		"plural", "nominative", "Horni"
+	}
 })
 
 DefineLanguageWord("Hund", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
@@ -432,6 +442,13 @@ DefineLanguageWord("Wī", { -- Source: Sean Crist, "An Analysis of *z loss in We
 	Type = "pronoun",
 	Meanings = {"We"},
 	Nominative = "Wī" -- source also gives "We" as alternative
+})
+
+DefineLanguageWord("Wulf", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
+	Language = "old-saxon",
+	Type = "noun",
+	Meanings = {"Wolf"}, -- source gives the German "Wolf"
+	DerivesFrom = {"proto-germanic", "noun", "Vulfa"}
 })
 
 DefineLanguageWord("Wurm", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.

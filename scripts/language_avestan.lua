@@ -71,6 +71,13 @@ DefineLanguageWord("Ushaçtara", { -- Source: August Fick and Alf Torp, "Wortsch
 	Meanings = {"To The East Of"} -- source gives the German "östlich von" as the meaning
 })
 
+DefineLanguageWord("Vehrka", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
+	Language = "avestan",
+	Type = "noun",
+	Meanings = {},
+	DerivesFrom = {"proto-indo-european", "noun", "Vl̥qo"}
+})
+
 DefineLanguageWord("Yārə", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "avestan",
 	Type = "noun",

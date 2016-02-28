@@ -67,6 +67,13 @@ DefineLanguageWord("Mersch", { -- source also gives the alternative form "Maersc
 	DerivesFrom = {"old-frankish", "noun", "Marisk"} -- presumably
 })
 
+DefineLanguageWord("Weerwolf", { -- source also gives the alternative form "Werwolf"; Source: http://www.cnrtl.fr/definition/garou
+	Language = "middle-dutch",
+	Type = "noun",
+	Meanings = {},
+	DerivesFrom = {"old-frankish", "noun", "Werwolf"}
+})
+
 DefineLanguageWord("Wijngaert", { -- uses the word "Gaert" as a compound element; Source: http://www.cnrtl.fr/definition/jardin
 	Language = "middle-dutch",
 	Type = "noun",

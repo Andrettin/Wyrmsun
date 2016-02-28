@@ -307,6 +307,14 @@ DefineLanguageWord("Hoger", { -- (apparently) a nominalized adjective; Source: A
 	DerivesFrom = {"old-high-german", "adjective", "Hōh"} -- apparently, but it is not entirely clear from the source
 })
 
+DefineLanguageWord("Horn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 47.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Horn", "Preeminent Peak"}, -- source (apparently) gives the German "Horn, hervorragende Spitze"
+	DerivesFrom = {"old-high-german", "noun", "Horn"},
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Hort", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
 	Language = "middle-high-german",
 	Type = "noun",
@@ -396,6 +404,14 @@ DefineLanguageWord("Niuwe", { -- source also gives the alternative form "niwe"; 
 	Type = "adjective",
 	Meanings = {"New"}, -- source gives the German "neu" as the meaning
 	DerivesFrom = {"old-high-german", "adjective", "Niuwi"}
+})
+
+DefineLanguageWord("Nuz̨", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 58.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Nut"}, -- source gives the German "Nuß"
+	DerivesFrom = {"old-high-german", "noun", "Hnuz̨"},
+	Gender = "feminine"
 })
 
 DefineLanguageWord("Ort", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.
@@ -493,6 +509,20 @@ DefineLanguageWord("Wîz̨", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Type = "adjective",
 	Meanings = {"White"}, -- source gives the German "weiß" as the meaning
 	DerivesFrom = {"old-high-german", "adjective", "Wîz̨"}
+})
+
+DefineLanguageWord("Wolf", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Wolf"}, -- source gives the German "Wolf"
+	DerivesFrom = {"old-high-german", "noun", "Wolf"}
+})
+
+DefineLanguageWord("Wülpe", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Female Wolf"}, -- source gives the German "Wölfin"
+	DerivesFrom = {"old-high-german", "noun", "Wulpa"}
 })
 
 DefineLanguageWord("Wurm", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.

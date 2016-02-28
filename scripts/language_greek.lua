@@ -25,8 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
--- Greek
-
 DefineLanguageWord("Abdera", { -- should be written as the original Greek name (with Greek characters)
 	Language = "greek",
 	Type = "noun",
@@ -200,6 +198,13 @@ DefineLanguageWord("Kúrtos", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Language = "greek",
 	Type = "noun",
 	Meanings = {"Cage"}
+})
+
+DefineLanguageWord("Λύχος", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
+	Language = "greek",
+	Type = "noun",
+	Meanings = {},
+	DerivesFrom = {"proto-indo-european", "noun", "Vl̥qo"}
 })
 
 DefineLanguageWord("Meízōn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.

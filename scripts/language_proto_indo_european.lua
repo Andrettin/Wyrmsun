@@ -115,6 +115,12 @@ DefineLanguageWord("Kneygʷh", { -- Source: Winfred P. Lehmann, "A Grammar of Pr
 	Meanings = {"Bow"}
 })
 
+DefineLanguageWord("Knud", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 58.
+	Language = "proto-indo-european",
+	Type = "noun",
+	Meanings = {}
+})
+
 DefineLanguageWord("Ḱweyt", { -- source gives "Ḱwey-t/d-"; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 	Language = "proto-indo-european",
 	Type = "adjective",
@@ -172,6 +178,24 @@ DefineLanguageWord("Ve", { -- source also gives the alternative form "Ves"; Sour
 DefineLanguageWord("Vekero", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 204.
 	Language = "proto-indo-european",
 	Type = "noun", -- correct?
+	Meanings = {}
+})
+
+DefineLanguageWord("Vel", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
+	Language = "proto-indo-european", -- apparently
+	Type = "verb",
+	Meanings = {"Rip"} -- source gives the German "reißen"
+})
+
+DefineLanguageWord("Vl̥po", { -- from the root "vel"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
+	Language = "proto-indo-european",
+	Type = "noun",
+	Meanings = {}
+})
+
+DefineLanguageWord("Vl̥qo", { -- from the root "vel"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
+	Language = "proto-indo-european",
+	Type = "noun",
 	Meanings = {}
 })
 
