@@ -525,6 +525,14 @@ DefineLanguageWord("Hafr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Meanings = {"Male Goat"}
 })
 
+DefineLanguageWord("Hals", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 50.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Neck", "Throat", "Front Part of a Ship", "Elongated Ridge"}, -- source gives the German "Hals, Vorderteil des Schiffes, länglicher Bergrücken" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Halsa"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Hamarr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 46.
 	Language = "old-norse",
 	Type = "noun",

@@ -463,6 +463,14 @@ DefineLanguageWord("Héah", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	DerivesFrom = {"proto-germanic", "adjective", "Hauha"}
 })
 
+DefineLanguageWord("Heals", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 50.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Neck", "Throat", "Front Part of a Ship"}, -- source gives the German "Hals, Vorderteil des Schiffes" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Halsa"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Hearpestre", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, pp. 77-78.
 	Language = "old-english",
 	Type = "noun",

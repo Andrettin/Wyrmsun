@@ -384,19 +384,20 @@ DefineLanguageWord("Hagazussa", { -- Source: Alaric Hall, "The Meanings of Elf a
 	}
 })
 
+DefineLanguageWord("Hals", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 50.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Neck", "Throat"}, -- source gives the German "Hals" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Halsa"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Hamar", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 46.
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Hammer"}, -- source gives the German "Hammer" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Hamara"},
 	Gender = "masculine"
-})
-
-DefineLanguageWord("Hōh", { -- Fick gives "hôh" instead; Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 54.
-	Language = "old-high-german",
-	Type = "adjective",
-	Meanings = {"High"}, -- Runge gives the German "hoch" as the meaning
-	DerivesFrom = {"proto-germanic", "adjective", "Hauha"} -- as given by Fick
 })
 
 DefineLanguageWord("Herd", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 46.
@@ -417,6 +418,13 @@ DefineLanguageWord("Hleib", { -- Source: Richard M. Runge, "The Phonetic Realiza
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Bread"}
+})
+
+DefineLanguageWord("Hōh", { -- Fick gives "hôh" instead; Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 54.
+	Language = "old-high-german",
+	Type = "adjective",
+	Meanings = {"High"}, -- Runge gives the German "hoch" as the meaning
+	DerivesFrom = {"proto-germanic", "adjective", "Hauha"} -- as given by Fick
 })
 
 DefineLanguageWord("Hort", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.

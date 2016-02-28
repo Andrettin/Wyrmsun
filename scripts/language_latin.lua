@@ -86,6 +86,13 @@ DefineLanguageWord("Caulis", { -- Source: Richard M. Runge, "The Phonetic Realiz
 	Meanings = {} -- words derived from it mean (in German) "Kohl"
 })
 
+DefineLanguageWord("Collum", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 50.
+	Language = "latin",
+	Type = "noun",
+	Meanings = {"Neck", "Throat"}, -- source gives the German "Hals" as the meaning
+	DerivesFrom = {"proto-indo-european", "verb", "Kel"}
+})
+
 DefineLanguageWord("Cōnīveō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 	Language = "latin",
 	Type = "verb",

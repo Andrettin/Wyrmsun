@@ -32,6 +32,14 @@ DefineLanguageWord("Fri", {
 	AffixNameTypes = {"compound", "suffix", "settlement"} -- example: "Sorgenfri"
 })
 
+DefineLanguageWord("Hals", {
+	Language = "danish",
+	Type = "noun",
+	Meanings = {"Neck"},
+	DerivesFrom = {"old-norse", "noun", "Hals"}, -- presumably
+	NameTypes = {"settlement"}
+})
+
 DefineLanguageWord("Sorg", {
 	Language = "danish",
 	Type = "noun",

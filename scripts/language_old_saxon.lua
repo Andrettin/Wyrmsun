@@ -204,6 +204,14 @@ DefineLanguageWord("Grôni", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	DerivesFrom = {"proto-germanic", "adjective", "Grônia"}
 })
 
+DefineLanguageWord("Hals", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 50.
+	Language = "old-saxon",
+	Type = "noun",
+	Meanings = {"Neck", "Throat", "Front Part of a Ship"}, -- source gives the German "Hals, Vorderteil des Schiffes" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Halsa"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Hamur", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 46.
 	Language = "old-saxon",
 	Type = "noun",

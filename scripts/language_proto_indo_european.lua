@@ -103,6 +103,12 @@ DefineLanguageWord("Gʷīwos", { -- Source: Winfred P. Lehmann, "A Grammar of Pr
 	Meanings = {"Alive"}
 })
 
+DefineLanguageWord("Kel", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 50.
+	Language = "proto-indo-european",
+	Type = "verb",
+	Meanings = {"Raise"} -- source gives the German "erheben" as the meaning
+})
+
 DefineLanguageWord("Kneygʷh", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 	Language = "proto-indo-european",
 	Type = "verb",

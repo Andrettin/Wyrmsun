@@ -314,6 +314,14 @@ DefineLanguageWord("Hairto", { -- Source: Richard M. Runge, "The Phonetic Realiz
 	Meanings = {"Heart"}
 })
 
+DefineLanguageWord("Hals", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 50.
+	Language = "gothic",
+	Type = "noun",
+	Meanings = {"Neck", "Throat"}, -- source gives the German "Hals" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Halsa"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Haubiþ", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
 	Language = "gothic",
 	Type = "noun",

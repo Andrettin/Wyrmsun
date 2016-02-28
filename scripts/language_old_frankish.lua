@@ -126,7 +126,8 @@ DefineLanguageWord("Grôdi", { -- Source: http://www.cnrtl.fr/definition/gruyer
 DefineLanguageWord("Hals", { -- Source: http://www.cnrtl.fr/definition/haubert
 	Language = "old-frankish", -- source gives "Ancien Bas Francique" (= Old Frankish)
 	Type = "noun",
-	Meanings = {"Neck"} -- source gives the French "cou" as the meaning
+	Meanings = {"Neck"}, -- source gives the French "cou" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Halsa"} -- presumably
 })
 
 DefineLanguageWord("Halsberg", { -- compound of the noun "Hals" and the verb "Bergan"; Source: http://www.cnrtl.fr/definition/haubert

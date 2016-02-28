@@ -57,6 +57,13 @@ DefineLanguageWord("Ględěti", { -- source also gives the alternative form "gl�
 	Meanings = {"Look"} -- source gives the German "schauen" as the meaning
 })
 
+DefineLanguageWord("Klasŭ", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 50.
+	Language = "old-church-slavonic",
+	Type = "noun",
+	Meanings = {"Ear"}, -- source gives the German "Ähre" as the meaning
+	DerivesFrom = {"proto-indo-european", "verb", "Kel"}
+})
+
 DefineLanguageWord("Kosa", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
 	Language = "old-church-slavonic",
 	Type = "noun",

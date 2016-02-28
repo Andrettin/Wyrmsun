@@ -323,14 +323,17 @@ DefineLanguageWord("Brücke", {
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"Bridge"},
+	DerivesFrom = {"middle-high-german", "noun", "Brücke"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 145.
+	Gender = "feminine",
 	NumberCaseInflections = {
 		"plural", "nominative", "Brücken",
 		"plural", "accusative", "Brücken",
 		"plural", "dative", "Brücken",
 		"plural", "genitive", "Brücken"
 	},
-	Gender = "feminine",
-	DerivesFrom = {"middle-high-german", "noun", "Brücke"} -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 145.
+	AffixNameTypes = {
+		"compound", "suffix", "singular", "settlement" -- example: "Halsbrücke"
+	}
 })
 
 DefineLanguageWord("Burg", {
@@ -454,7 +457,7 @@ DefineLanguageWord("Dorf", {
 		"plural", "dative", "Dörfern",
 		"plural", "genitive", "Dörfer"
 	},
-	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- examples: "Frohsdorf", "Gänserndorf"
+	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- examples: "Frohsdorf", "Gänserndorf", "Halsdorf"
 })
 
 DefineLanguageWord("Drasch", {
@@ -639,7 +642,7 @@ DefineLanguageWord("Fürst", {
 		"plural", "dative", "Fürsten",
 		"plural", "genitive", "Fürsten"
 	},
-	AffixNameTypes = {"compound", "prefix", "plural", "settlement"} -- example: "Fürstenfeld"
+	AffixNameTypes = {"compound", "prefix", "plural", "settlement"} -- example: "Fürstenfeld" (not entirely clear if that's really the plural or if it is the genitive)
 })
 
 DefineLanguageWord("Furt", { -- Source: http://www.duden.de/rechtschreibung/Furt
@@ -818,6 +821,25 @@ DefineLanguageWord("Hagen", { -- Source: http://www.duden.de/rechtschreibung/Hag
 		"singular", "genitive", "Hagens"
 	},
 	NameTypes = {"person"}
+})
+
+DefineLanguageWord("Hals", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"Neck", "Throat"},
+	DerivesFrom = {"middle-high-german", "noun", "Hals"}, -- presumably
+	Gender = "masculine",
+	NumberCaseInflections = {
+		"singular", "genitive", "Halses",
+		"plural", "nominative", "Hälse",
+		"plural", "accusative", "Hälse",
+		"plural", "dative", "Hälsen",
+		"plural", "genitive", "Hälse"
+	},
+	NameTypes = {"settlement"},
+	AffixNameTypes = {
+		"compound", "prefix", "singular", "settlement" -- examples: "Halsbrücke", "Halsdorf"
+	}
 })
 
 DefineLanguageWord("Hammer", {
@@ -1862,10 +1884,14 @@ DefineLanguageWord("Wolf", {
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"Wolf"},
-	NumberCaseInflections = {
-		"plural", "nominative", "Wölfe"
-	},
 	Gender = "masculine",
+	NumberCaseInflections = {
+		"singular", "genitive", "Wolfs", -- alternatively also "Wolfes"
+		"plural", "nominative", "Wölfe",
+		"plural", "accusative", "Wölfe",
+		"plural", "dative", "Wölfen",
+		"plural", "genitive", "Wölfe"
+	},
 	AffixNameTypes = {
 		"compound", "prefix", "singular", "genitive", "settlement", -- example: "Wolfsberg"
 		"compound", "prefix", "singular", "person" -- examples: "Wolfgang", "Wolfhart"

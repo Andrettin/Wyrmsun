@@ -27,6 +27,8 @@
 
 -- Proto-Germanic
 
+-- Note: According to Sean Crist, the reconstructions by August Fick are out of date; as such, they should be replaced by more recent data as the opportunity arises
+
 DefineLanguageWord("Aχtō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "proto-germanic",
 	Type = "numeral",
@@ -454,6 +456,14 @@ DefineLanguageWord("Haima", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Village", "Home"}, -- source gives "Dorf, Heim, Heimat" as the meaning
+	Gender = "masculine"
+})
+
+DefineLanguageWord("Halsa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 50.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Neck", "Throat"}, -- source gives the German "Hals" as the meaning
+	DerivesFrom = {"proto-indo-european", "verb", "Kel"},
 	Gender = "masculine"
 })
 

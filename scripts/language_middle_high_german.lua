@@ -268,6 +268,14 @@ DefineLanguageWord("Grüene", { -- Source: August Fick and Alf Torp, "Wortschatz
 	DerivesFrom = {"old-high-german", "adjective", "Gruoni"}
 })
 
+DefineLanguageWord("Hals", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 50.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Neck", "Throat", "Elongated Ridge"}, -- source gives the German "Hals" and "länglicher Bergrücken" as the meanings
+	DerivesFrom = {"old-high-german", "noun", "Hals"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Halsberc", { -- Source: http://www.cnrtl.fr/definition/haubert
 	Language = "middle-high-german",
 	Type = "noun",
