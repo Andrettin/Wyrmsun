@@ -689,6 +689,13 @@ DefineLanguageWord("Razna", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Gender = "neuter"
 })
 
+DefineLanguageWord("Rêda", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 172.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Counsel", "Council"}, -- source gives the German "Rat"
+	Gender = "masculine" -- alternatively also neuter
+})
+
 DefineLanguageWord("Reupôn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 169.
 	Language = "proto-germanic",
 	Type = "noun",

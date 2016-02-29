@@ -716,6 +716,14 @@ DefineLanguageWord("Plegestre", { -- Source: Alaric Hall, "The Meanings of Elf a
 	Gender = "feminine" -- presumably, given the source is talking about occupations for women
 })
 
+DefineLanguageWord("Ræ̂d", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 172.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Counsel", "Council", "Advice", "Resolution", "Plan", "Might", "Help", "Stance", "Condition", "Meaning", "Sense"}, -- source gives the German "Rat, Ratschlag, Entschluß, Plan, Macht, Hülfe, Stellung, Zustand, Bedeutung, Sinn"
+	DerivesFrom = {"proto-germanic", "noun", "Rêda"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Ræsn", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "old-english",
 	Type = "noun",

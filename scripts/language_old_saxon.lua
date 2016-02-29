@@ -161,6 +161,14 @@ DefineLanguageWord("Fisc", { -- Source: Richard M. Runge, "The Phonetic Realizat
 	Meanings = {"Fish"}
 })
 
+DefineLanguageWord("Ford", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 120.
+	Language = "old-saxon", -- source gives Old Low German
+	Type = "noun",
+	Meanings = {"Ford"}, -- source gives the German "Furt" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Furdu"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Frithu", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 128.
 	Language = "old-saxon",
 	Type = "noun",
@@ -369,6 +377,14 @@ DefineLanguageWord("Ôstar", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	DerivesFrom = {"proto-germanic", "adverb", "Austa"}
 })
 
+DefineLanguageWord("Râd", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 172.
+	Language = "old-saxon",
+	Type = "noun",
+	Meanings = {"Counsel", "Council", "Indoctrination", "Support", "Provision", "Supply", "Profit"}, -- source gives the German "Rat, Belehrung, Unterstützung, Vorsorge, Vorrat, Gewinn"
+	DerivesFrom = {"proto-germanic", "noun", "Rêda"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Rîki", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
 	Language = "old-saxon",
 	Type = "adjective",
@@ -411,6 +427,12 @@ DefineLanguageWord("Sûtharliuti", { -- Source: August Fick and Alf Torp, "Worts
 	Meanings = {"Southern People"} -- source gives the German "Südleute" as the meaning
 })
 
+DefineLanguageWord("Tharm", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 97.
+	Language = "old-saxon", -- source gives Old Low German
+	Type = "noun",
+	Meanings = {"Intestine"}, -- source gives the German "Darm" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Þarma"}
+})
 DefineLanguageWord("Thorp", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 100.
 	Language = "old-saxon",
 	Type = "noun",

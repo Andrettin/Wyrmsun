@@ -287,6 +287,14 @@ DefineLanguageWord("Ransa", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Meanings = {"House"}
 })
 
+DefineLanguageWord("Rêd", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 172.
+	Language = "old-frisian",
+	Type = "noun",
+	Meanings = {"Counsel", "Council"}, -- source gives the German "Rat"
+	DerivesFrom = {"proto-germanic", "noun", "Rêda"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Rîk", { -- source gives Rîk(e); Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
 	Language = "old-frisian",
 	Type = "adjective",

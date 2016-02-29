@@ -249,6 +249,13 @@ DefineLanguageWord("Ṛbhú", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Meanings = {"Skilled"} -- source gives the German "geschickt" as the meaning
 })
 
+DefineLanguageWord("Rấdhas", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 172.
+	Language = "sanskrit",
+	Type = "noun",
+	Meanings = {"Success", "Pursuit", "Might", "Bestowal of Goodwill"}, -- source gives the German "Gelingen, Streben, Macht, Erweisung des Wohlwollens"
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Saptá", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
 	Language = "sanskrit",
 	Type = "numeral",

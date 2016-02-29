@@ -812,6 +812,14 @@ DefineLanguageWord("Ormr", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Râđ", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 172.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Counsel", "Council", "Consideration", "Decision", "Determination", "Disposal", "Violence", "Means", "Supply", "Stance", "Marriage"}, -- source gives the German "Rat, Überlegung, Entscheidung, Bestimmung, Verfügung, Gewalt, Mittel, Vorrat, Stellung, Heirat"
+	DerivesFrom = {"proto-germanic", "noun", "Rêda"},
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Rann", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "old-norse",
 	Type = "noun",

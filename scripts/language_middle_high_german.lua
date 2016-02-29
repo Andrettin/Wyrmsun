@@ -437,11 +437,12 @@ DefineLanguageWord("Ôsten", { -- source gives "Ôsten(e)"; Source: August Fick 
 	DerivesFrom = {"old-high-german", "adverb", "Ôstana"}
 })
 
-DefineLanguageWord("Rünne", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
+DefineLanguageWord("Rât", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 172.
 	Language = "middle-high-german",
 	Type = "noun",
-	Meanings = {"Storm Surge"},
-	Gender = "feminine"
+	Meanings = {"Counsel", "Council", "Advice", "Indoctrination", "Consultation", "Consideration", "Resolution", "Intention", "Attack", "Provision", "Supply"}, -- source gives the German "Rat, Ratschlag, Belehrung, Beratung, Überlegung, Entschluß, Absicht, Anschlag, Vorsorge, Vorrat"
+	DerivesFrom = {"old-high-german", "noun", "Rât"},
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Rîche", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
@@ -449,6 +450,13 @@ DefineLanguageWord("Rîche", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Type = "adjective",
 	Meanings = {"Powerful", "Notable", "Rich", "Magnificent", "Splendid"}, -- source gives the German "mächtig, vornehm, reich, prächtig, herrlich" as the meaning
 	DerivesFrom = {"old-high-german", "adjective", "Rîhhi"}
+})
+
+DefineLanguageWord("Rünne", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Storm Surge"},
+	Gender = "feminine"
 })
 
 DefineLanguageWord("Silber", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 221.

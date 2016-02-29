@@ -648,6 +648,14 @@ DefineLanguageWord("Rarta", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Gender = "feminine"
 })
 
+DefineLanguageWord("Rât", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 172.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Counsel", "Council", "Advice", "Indoctrination", "Consultation", "Consideration", "Resolution", "Intention", "Attack", "Provision", "Supply"}, -- source gives the German "Rat, Ratschlag, Belehrung, Beratung, Überlegung, Entschluß, Absicht, Anschlag, Vorsorge, Vorrat"
+	DerivesFrom = {"proto-germanic", "noun", "Rêda"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Rîhhi", { -- source also gives the alternative form "rîchi"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
 	Language = "old-high-german",
 	Type = "adjective",

@@ -68,7 +68,7 @@ DefineLanguageWord("Darm", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Language = "middle-low-german",
 	Type = "noun",
 	Meanings = {"Intestine"}, -- source gives the German "Darm" as the meaning
-	DerivesFrom = {"old-low-german", "noun", "Tharm"}
+	DerivesFrom = {"old-saxon", "noun", "Tharm"}
 })
 
 DefineLanguageWord("Grâwe", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 79.
@@ -138,7 +138,7 @@ DefineLanguageWord("Vorde", { -- source also gives the alternative form "Vort"; 
 	Language = "middle-low-german",
 	Type = "noun",
 	Meanings = {"Ford"}, -- source gives the German "Furt" as the meaning
-	DerivesFrom = {"old-low-german", "noun", "Ford"},
+	DerivesFrom = {"old-saxon", "noun", "Ford"},
 	Gender = "masculine"
 })
 

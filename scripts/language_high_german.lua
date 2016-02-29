@@ -1541,6 +1541,21 @@ DefineLanguageWord("Pippin", {
 	NameTypes = {"person"}
 })
 
+DefineLanguageWord("Rat", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"Counsel", "Council"},
+	DerivesFrom = {"middle-high-german", "noun", "Rât"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 172.
+	Gender = "masculine",
+	NumberCaseInflections = {
+		"singular", "genitive", "Rates", -- alternatively also "Rats"
+		"plural", "nominative", "Räte",
+		"plural", "accusative", "Räte",
+		"plural", "dative", "Räten",
+		"plural", "genitive", "Räte"
+	}
+})
+
 DefineLanguageWord("Reich", {
 	Language = "high-german",
 	Type = "noun",

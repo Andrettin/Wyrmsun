@@ -1305,6 +1305,7 @@ DefineLanguageWord("Red", {
 	Language = "english",
 	Type = "noun",
 	Meanings = {"Counsel", "Advice", "Account", "Story"},
+	DerivesFrom = {"old-english", "noun", "Ræ̂d"}, -- presumably
 	Gender = "neuter",
 	Archaic = true,
 	AffixNameTypes = {"compound", "suffix", "singular", "person"} -- example: "Alfred"

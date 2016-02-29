@@ -25,3 +25,8 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineLanguageWord("Amraud", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 172.
+	Language = "old-welsh",
+	Type = "noun",
+	Meanings = {"Mind"}, -- source gives the Latin (?) "mens"
+})

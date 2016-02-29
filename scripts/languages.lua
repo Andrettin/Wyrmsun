@@ -297,10 +297,6 @@ DefineLanguage("old-latin", {
 	Name = "Old Latin"
 })
 
-DefineLanguage("old-low-german", {
-	Name = "Old Low German"
-})
-
 DefineLanguage("old-norse", {
 	Name = "Old Norse"
 })
@@ -319,6 +315,10 @@ DefineLanguage("old-saxon", {
 
 DefineLanguage("old-swedish", {
 	Name = "Old Swedish"
+})
+
+DefineLanguage("old-welsh", {
+	Name = "Old Welsh"
 })
 
 DefineLanguage("oscan", {
@@ -388,6 +388,7 @@ Load("scripts/language_umbrian.lua")
 -- Celtic languages (branch of the Indo-European family)
 Load("scripts/language_old_gaulish.lua")
 Load("scripts/language_gaulish.lua")
+Load("scripts/language_old_welsh.lua")
 Load("scripts/language_welsh.lua")
 Load("scripts/language_old_irish.lua")
 Load("scripts/language_irish.lua")
@@ -410,7 +411,6 @@ Load("scripts/language_west_germanic.lua")
 Load("scripts/language_old_high_german.lua")
 Load("scripts/language_middle_high_german.lua")
 Load("scripts/language_old_saxon.lua")
-Load("scripts/language_old_low_german.lua")
 Load("scripts/language_middle_low_german.lua")
 Load("scripts/language_high_german.lua")
 Load("scripts/language_old_frankish.lua")
