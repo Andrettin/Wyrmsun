@@ -332,7 +332,8 @@ DefineLanguageWord("Brücke", {
 		"plural", "genitive", "Brücken"
 	},
 	AffixNameTypes = {
-		"compound", "suffix", "singular", "settlement" -- example: "Halsbrücke", "Zweibrücken"
+		"compound", "suffix", "singular", "settlement", -- example: "Halsbrücke"
+		"compound", "suffix", "plural", "settlement" -- example: "Zweibrücken"
 	}
 })
 
@@ -923,7 +924,10 @@ DefineLanguageWord("Hart", { -- Source: http://www.duden.de/rechtschreibung/hart
 DefineLanguageWord("Heilig", {
 	Language = "high-german",
 	Type = "adjective",
-	Meanings = {"Holy"}
+	Meanings = {"Holy"},
+	AffixNameTypes = {
+		"compound", "prefix", "dative", "settlement", -- example: "Heiligenstadt"
+	}
 })
 
 DefineLanguageWord("Heim", {
