@@ -781,6 +781,13 @@ DefineUnitType("unit-dwarven-smithy", { Name = _("Smithy"),
 	}
 } )
 
+DefineUnitType("unit-brising-smithy", {
+	Parent = "unit-dwarven-smithy",
+	Civilization = "dwarf",
+	Faction = "Brising Clan",
+	TimeEfficiencyBonus = 50 -- +50% Time Efficiency Bonus
+} )
+
 DefineUnitType("unit-dwarven-yale-pen", { Name = _("Yale Pen"),
 	Parent = "unit-template-stables",
 	Civilization = "dwarf",

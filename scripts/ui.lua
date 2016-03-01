@@ -10,7 +10,7 @@
 --
 --      ui.lua - Define the user interface
 --
---      (c) Copyright 2000-2015 by Lutz Sammer, Jimmy Salmon and Andrettin
+--      (c) Copyright 2000-2016 by Lutz Sammer, Jimmy Salmon and Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -956,6 +956,19 @@ if not (ui_loaded_first_time) then
 				}, 
 				{ 	Condition = {AttackRange = "only", AttackFromTransporter = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Range: "), Variable = "AttackRange", Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {TimeEfficiencyBonus = "only"}, HighlightColor = "yellow",
+					More = {"Text", {Text = Concat(
+							Concat(
+								Concat(
+									_("Time Efficiency: "),
+									If(GreaterThan(TypeVar("TimeEfficiencyBonus", "Value"), 0), "+", "")
+								),
+								String(TypeVar("TimeEfficiencyBonus", "Value"))
+							),
+							"%"
+						),
+						Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {FireResistance = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Fire Resistance: "), String(TypeVar("FireResistance","Value")), "%"), Font = wyr.preferences.PopupDescriptionFont}}

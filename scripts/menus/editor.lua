@@ -18,13 +18,9 @@ editor_types = {
 
 	"unit-teuton-worker",
 	"unit-teuton-swordsman",
-	"unit-suebi-swordsman",
-	"unit-frank-swordsman",
 	"unit-teuton-spearman",
-	"unit-frank-spearman",
 	"unit-teuton-archer",
 	"unit-teuton-ritter",
-	"unit-frank-horseman",
 	"unit-teuton-catapult",
 	"unit-teuton-kogge",
 	"unit-teuton-town-hall",
@@ -38,6 +34,12 @@ editor_types = {
 	"unit-teuton-guard-tower",
 	"unit-teuton-dock",
 
+	"unit-suebi-swordsman",
+
+	"unit-frank-swordsman",
+	"unit-frank-spearman",
+	"unit-frank-horseman",
+
 --- - - - - - - - - - - - - - - - - - -
 
 	"unit-celt-farm",
@@ -46,8 +48,6 @@ editor_types = {
 
 	"unit-dwarven-miner",
 	"unit-dwarven-militia",
-	"unit-brising-miner",
-	"unit-brising-militia",
 	"unit-dwarven-axefighter",
 	"unit-dwarven-steelclad",
 	"unit-dwarven-thane",
@@ -69,6 +69,10 @@ editor_types = {
 	"unit-dwarven-sentry-tower",
 	"unit-dwarven-guard-tower",
 	"unit-dwarven-dock",
+
+	"unit-brising-miner",
+	"unit-brising-militia",
+	"unit-brising-smithy",
 
 	"unit-surghan-mercenary-steelclad",
 	"unit-surghan-mercenary-thane",

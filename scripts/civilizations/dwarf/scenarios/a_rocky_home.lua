@@ -61,7 +61,7 @@ if (LoadedGame == false) then
 	SetPlayerData(0, "Allow", "unit-dwarven-town-hall", "F")
 	SetPlayerData(0, "Allow", "unit-dwarven-barracks", "F")
 	SetPlayerData(0, "Allow", "unit-dwarven-mushroom-farm", "F")
-	SetPlayerData(0, "Allow", "unit-dwarven-smithy", "F")
+	SetPlayerData(0, "Allow", "unit-brising-smithy", "F")
 	SetPlayerData(0, "Allow", "unit-dwarven-lumber-mill", "F")
 	SetPlayerData(0, "Allow", "unit-dwarven-sentry-tower", "F")
 	SetPlayerData(0, "Allow", "unit-gold-mine", "F")

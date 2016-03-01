@@ -69,6 +69,8 @@ https://github.com/Andrettin/Wyrmsun
 
 * Buildings
 - Improved Teuton smithy name generation.
+- Added a Brising-specific version of the Dwarven Smithy (+50% Time Efficiency).
+- Brising Smithies now have their own graphics (if the player has the Brising Faction Flair DLC).
 
 * Civilizations
 - Added many new component words for Germanic settlement, province and smithy name generation.
@@ -117,6 +119,7 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed an issue which caused the player to be able to see others' buildings on the minimap if the player destroyed their own town hall.
 - The Brising Clan (dwarf) now has a faction-specific icon for the dwarven level 1 shield (if the player has the Brising Faction Flair DLC).
 - The Custom Game "Advanced Squads" option now includes two cavalry units in each squad.
+- Fixed issue which sometimes caused the game to crash when exiting a scenario.
 
 * Modding
 - Added support for redefining civilizations and factions.

@@ -222,7 +222,7 @@ if (GrandStrategy == false) then
 	IncreaseUnitLevel(unit, 1)
 
 	-- abandoned dwarven buildings
-	unit = CreateUnit("unit-dwarven-smithy", 3, {31, 49})
+	unit = CreateUnit("unit-brising-smithy", 3, {31, 49})
 
 	unit = CreateUnit("unit-dwarven-guard-tower", 3, {20, 12}) -- add some rescuable dwarven guard towers to buy some time from the attackers, so that Rugnur and his companions can reach the forge
 	if (unit) then
@@ -391,7 +391,7 @@ elseif (GrandStrategyEventMap) then
 		abandoned_building_player = 0
 	end
 	
-	unit = CreateUnit("unit-dwarven-smithy", abandoned_building_player, {31, 49})
+	unit = CreateUnit("unit-brising-smithy", abandoned_building_player, {31, 49})
 
 	SetDiplomacy(0, "enemy", 1)
 	SetDiplomacy(0, "enemy", 2)

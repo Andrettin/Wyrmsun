@@ -10,7 +10,7 @@
 --
 --      buttons.ccl - Define the unit-buttons of the dwarven civilization.
 --
---      (c) Copyright 2013-2015 by Andrettin
+--      (c) Copyright 2013-2016 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -310,7 +310,13 @@ DefineButton( { Pos = 4, Level = 1, Icon = "icon-dwarven-lumber-mill",
 DefineButton( { Pos = 5, Level = 1, Icon = "icon-dwarven-smithy",
 	Action = "build", Value = "unit-dwarven-smithy",
 	Key = "s", Hint = _("Build ~!Smithy"), Popup = "popup-building",
-	ForUnit = {"unit-dwarven-miner", "unit-brising-miner", "unit-gnomish-worker"}
+	ForUnit = {"unit-dwarven-miner", "unit-gnomish-worker"}
+})
+
+DefineButton( { Pos = 5, Level = 1, Icon = "icon-dwarven-smithy",
+	Action = "build", Value = "unit-brising-smithy",
+	Key = "s", Hint = _("Build ~!Smithy"), Popup = "popup-building",
+	ForUnit = {"unit-brising-miner"}
 })
 
 DefineButton( { Pos = 6, Level = 1, Icon = "icon-dwarven-yale-pen",
@@ -424,7 +430,7 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-broad-axe",
 	Allowed = "check-single-research",
 	Key = "a", Hint = _("Research Broad ~!Axe"), Popup = "popup-research",
 	Description = _("+2 Damage for Axefighters, Steelclads, Stonelords and Yale Riders."),
-	ForUnit = {"unit-dwarven-smithy"}
+	ForUnit = {"unit-dwarven-smithy", "unit-brising-smithy"}
 } )
 
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-great-axe",
@@ -432,7 +438,7 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-great-axe",
 	Allowed = "check-single-research",
 	Key = "a", Hint = _("Research Great ~!Axe"), Popup = "popup-research",
 	Description = _("+2 Damage for Axefighters, Steelclads, Stonelords and Yale Riders."),
-	ForUnit = {"unit-dwarven-smithy"}
+	ForUnit = {"unit-dwarven-smithy", "unit-brising-smithy"}
 } )
 
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-shield-2",
@@ -440,7 +446,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-shield-2",
 	Allowed = "check-single-research",
 	Key = "s", Hint = _("Research Heater ~!Shield"), Popup = "popup-research",
 	Description = _("+2 Armor for Axefighters, Steelclads, Stonelords and Yale Riders."),
-	ForUnit = {"unit-dwarven-smithy"}
+	ForUnit = {"unit-dwarven-smithy", "unit-brising-smithy"}
 } )
 
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-shield-3",
@@ -448,7 +454,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-shield-3",
 	Allowed = "check-single-research",
 	Key = "s", Hint = _("Research Thrymgjol ~!Shield"), Popup = "popup-research",
 	Description = _("+2 Armor for Axefighters, Steelclads, Stonelords and Yale Riders."),
-	ForUnit = {"unit-dwarven-smithy"}
+	ForUnit = {"unit-dwarven-smithy", "unit-brising-smithy"}
 } )
 
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-ballista-bolt-2",
@@ -456,7 +462,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-ballista-bolt-2",
 	Allowed = "check-single-research",
 	Key = "b", Hint = _("Research Broadhead Ballista ~!Bolt"), Popup = "popup-research",
 	Description = _("+15 Damage for Ballistas."),
-	ForUnit = {"unit-dwarven-smithy"}
+	ForUnit = {"unit-dwarven-smithy", "unit-brising-smithy"}
 } )
 
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-ballista-bolt-3",
@@ -464,7 +470,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-ballista-bolt-3",
 	Allowed = "check-single-research",
 	Key = "b", Hint = _("Research Penetrating Ballista ~!Bolt"), Popup = "popup-research",
 	Description = _("+15 Damage for Ballistas."),
-	ForUnit = {"unit-dwarven-smithy"}
+	ForUnit = {"unit-dwarven-smithy", "unit-brising-smithy"}
 } )
 
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-sharp-throwing-axe",

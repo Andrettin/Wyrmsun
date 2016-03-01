@@ -298,7 +298,7 @@ AddTrigger(
 		local uncount = 0
 		uncount = GetUnits("any")
 		for unit1 = 1,table.getn(uncount) do 
-			if (GetUnitVariable(uncount[unit1],"Ident") == "unit-dwarven-smithy" and GetUnitVariable(uncount[unit1],"Player") ~= GetFactionPlayer("Shinsplitter Clan")) then
+			if (GetUnitVariable(uncount[unit1],"Ident") == "unit-brising-smithy" and GetUnitVariable(uncount[unit1],"Player") ~= GetFactionPlayer("Shinsplitter Clan")) then
 				smithy = uncount[unit1]
 			end
 		end
@@ -427,7 +427,7 @@ AddTrigger(
 		uncount = GetUnits(GetFactionPlayer("Norlund Clan"))
 		for unit1 = 1,table.getn(uncount) do 
 			if (GetUnitVariable(uncount[unit1], "Ident") == "unit-dwarven-gryphon-rider") then
-				local unit_quantity = GetNumUnitsAt(-1, "unit-dwarven-smithy", {GetUnitVariable(uncount[unit1],"PosX") - 6, GetUnitVariable(uncount[unit1],"PosY") - 6}, {GetUnitVariable(uncount[unit1],"PosX") + 6, GetUnitVariable(uncount[unit1],"PosY") + 6})
+				local unit_quantity = GetNumUnitsAt(-1, "unit-brising-smithy", {GetUnitVariable(uncount[unit1],"PosX") - 6, GetUnitVariable(uncount[unit1],"PosY") - 6}, {GetUnitVariable(uncount[unit1],"PosX") + 6, GetUnitVariable(uncount[unit1],"PosY") + 6})
 				if (unit_quantity > 0) then
 					player = GetFactionPlayer("Norlund Clan")
 					return true

@@ -279,7 +279,7 @@ DefineModifier("upgrade-dwarven-masonry",
 	{"Points", 10},
 	{"apply-to", "unit-dwarven-town-hall"}, {"apply-to", "unit-dwarven-stronghold"},
 	{"apply-to", "unit-dwarven-mushroom-farm"}, {"apply-to", "unit-dwarven-barracks"},
-	{"apply-to", "unit-dwarven-lumber-mill"}, {"apply-to", "unit-dwarven-smithy"},
+	{"apply-to", "unit-dwarven-lumber-mill"}, {"apply-to", "unit-dwarven-smithy"}, {"apply-to", "unit-brising-smithy"},
 	{"apply-to", "unit-dwarven-yale-pen"},
 	{"apply-to", "unit-dwarven-sentry-tower"}, {"apply-to", "unit-dwarven-guard-tower"},
 	{"apply-to", "unit-dwarven-dock"}
@@ -294,7 +294,7 @@ DefineModifier("upgrade-dwarven-runewriting",
 	{"TimeEfficiencyBonus", 10},
 	{"apply-to", "unit-dwarven-town-hall"}, {"apply-to", "unit-dwarven-stronghold"},
 	{"apply-to", "unit-dwarven-mushroom-farm"}, {"apply-to", "unit-dwarven-barracks"},
-	{"apply-to", "unit-dwarven-lumber-mill"}, {"apply-to", "unit-dwarven-smithy"},
+	{"apply-to", "unit-dwarven-lumber-mill"}, {"apply-to", "unit-dwarven-smithy"}, {"apply-to", "unit-brising-smithy"},
 --	{"apply-to", "unit-dwarven-yale-pen"},
 	{"apply-to", "unit-dwarven-sentry-tower"}, {"apply-to", "unit-dwarven-guard-tower"},
 	{"apply-to", "unit-dwarven-dock"}
@@ -325,8 +325,7 @@ DefineModifier("upgrade-brising-clan-faction",
 )
 
 DefineModifier("upgrade-brising-clan-faction",
-	{"TimeEfficiencyBonus", 50},
-	{"apply-to", "unit-dwarven-smithy"}
+	{"apply-to", "unit-dwarven-smithy"}, {"convert-to", "unit-brising-smithy"}
 )
 
 DefineModifier("upgrade-brising-clan-faction",
@@ -415,7 +414,7 @@ DefineDependency("unit-dwarven-stronghold",
 )
 
 DefineDependency("upgrade-dwarven-coinage",
-	{"unit-dwarven-smithy"}
+	{"unit-dwarven-smithy"}, "or", {"unit-brising-smithy"}
 )
 
 DefineDependency("upgrade-dwarven-alchemy",
@@ -427,7 +426,7 @@ DefineDependency("unit-dwarven-guard-tower",
 )
 
 DefineDependency("unit-dwarven-ballista",
-	{"unit-dwarven-smithy", "unit-dwarven-lumber-mill"}
+	{"unit-dwarven-smithy", "unit-dwarven-lumber-mill"}, "or", {"unit-brising-smithy", "unit-dwarven-lumber-mill"}
 )
 
 DefineDependency("unit-dwarven-yale-pen",
@@ -435,7 +434,7 @@ DefineDependency("unit-dwarven-yale-pen",
 )
 
 DefineDependency("unit-dwarven-yale-rider",
-	{"unit-dwarven-smithy", "unit-dwarven-yale-pen"}
+	{"unit-dwarven-smithy", "unit-dwarven-yale-pen"}, "or", {"unit-brising-smithy", "unit-dwarven-yale-pen"}
 )
 
 DefineDependency("unit-dwarven-dock",

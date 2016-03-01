@@ -67,7 +67,7 @@ Units = {
 	"unit-dwarven-transport-ship",
 	"unit-dwarven-town-hall", "unit-dwarven-stronghold", 
 	"unit-dwarven-mushroom-farm", "unit-dwarven-barracks",
-	"unit-dwarven-lumber-mill", "unit-dwarven-smithy",
+	"unit-dwarven-lumber-mill", "unit-dwarven-smithy", "unit-brising-smithy",
 	"unit-dwarven-yale-pen",
 	"unit-dwarven-sentry-tower", "unit-dwarven-guard-tower",
 	"unit-dwarven-dock",
