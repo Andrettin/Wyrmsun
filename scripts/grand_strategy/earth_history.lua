@@ -1791,7 +1791,7 @@ if (GrandStrategyYear >= 325) then
 end
 
 if (GrandStrategyYear >= 346) then
-	SetFactionRuler("goth", "Ostrogoth Tribe", "Ermanaric") -- Ermanaric died c. 376, so we estimate him having become ruler a certain number of years before
+	SetFactionRuler("goth", "Ostrogoth Tribe", "Airmanareiks") -- Airmanareiks died c. 376, so we estimate him having become ruler a certain number of years before
 end
 
 if (GrandStrategyYear >= 357) then
