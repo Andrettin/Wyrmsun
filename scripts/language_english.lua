@@ -1198,6 +1198,7 @@ DefineLanguageWord("Ham", {
 	Language = "english",
 	Type = "noun", -- correct?
 	Meanings = {},
+	DerivesFrom = {"old-english", "noun", "Hâm"}, -- presumably
 	Gender = "neuter",
 	Archaic = true,
 	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- examples: "Chatham", "Durham", "Oldham"
@@ -1387,6 +1388,7 @@ DefineLanguageWord("Home", {
 	Type = "noun",
 	Meanings = {"Home"},
 	Gender = "neuter",
+	DerivesFrom = {"old-english", "noun", "Hâm"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 52.
 	AffixNameTypes = {
 		"separate", "prefix", "singular", "terrain-hills" -- example: "Home Down"
 	}

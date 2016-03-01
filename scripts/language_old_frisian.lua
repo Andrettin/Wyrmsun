@@ -143,6 +143,14 @@ DefineLanguageWord("Hals", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Hâm", { -- source also gives the alternative form "Hêm"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 52.
+	Language = "old-frisian",
+	Type = "noun",
+	Meanings = {"Home", "House", "Dwelling"}, -- source gives the German "Heimat, Haus, Wohnung" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Haima"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Hēde", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
 	Language = "old-frisian",
 	Type = "noun",

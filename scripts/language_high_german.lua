@@ -960,7 +960,7 @@ DefineLanguageWord("Heim", {
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"Home"},
-	DerivesFrom = {"proto-germanic", "noun", "Haima"},
+	DerivesFrom = {"middle-high-german", "noun", "Heim"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 52.
 	Gender = "neuter",
 	NumberCaseInflections = {
 		"singular", "genitive", "Heimes", -- alternatively also "Heims"
@@ -970,6 +970,17 @@ DefineLanguageWord("Heim", {
 		"plural", "genitive", "Heime"
 	},
 	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- examples: "Mannheim", "Rosenheim"
+})
+
+DefineLanguageWord("Heimisch", {
+	Language = "high-german",
+	Type = "adjective",
+	Meanings = {"Domestic"},
+	DerivesFrom = {"middle-high-german", "adjective", "Heimisch"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 52.
+	ComparisonDegreeInflections = {
+		"comparative", "Heimischer",
+		"superlative", "Heimischsten"
+	}
 })
 
 DefineLanguageWord("Hein", {

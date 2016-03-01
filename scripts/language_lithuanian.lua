@@ -82,6 +82,12 @@ DefineLanguageWord("Jéras", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Meanings = {"Yearling Lamb"}
 })
 
+DefineLanguageWord("Kaimýnas", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 53.
+	Language = "lithuanian",
+	Type = "noun",
+	Meanings = {"Neighbor"} -- source gives the German "Nachbar" as the meaning
+})
+
 DefineLanguageWord("Kaukarà", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 54.
 	Language = "lithuanian",
 	Type = "noun",
@@ -92,6 +98,12 @@ DefineLanguageWord("Kaũkas", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Language = "lithuanian",
 	Type = "noun",
 	Meanings = {"Bump"} -- source gives the German "Beule" as the meaning
+})
+
+DefineLanguageWord("Kë̃mas", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 53.
+	Language = "lithuanian",
+	Type = "noun",
+	Meanings = {"Farm"} -- source gives the German "Bauernhof" as the meaning
 })
 
 DefineLanguageWord("Liūdė", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 181.
@@ -133,6 +145,13 @@ DefineLanguageWord("Spiáuju", { -- Source: Winfred P. Lehmann, "A Grammar of Pr
 	Language = "lithuanian",
 	Type = "verb",
 	Meanings = {"Spit"}
+})
+
+DefineLanguageWord("Szeimýna", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 53.
+	Language = "lithuanian",
+	Type = "noun",
+	Meanings = {"Menial Staff", "House Servant Staff"}, -- source gives the German "Gesinde, Hausdienerschaft" as the meaning
+	Gender = "feminine"
 })
 
 DefineLanguageWord("Vakaraĩ", { -- this is the plural; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 204.

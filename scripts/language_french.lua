@@ -177,11 +177,37 @@ DefineLanguageWord("Gruyer", {
 	DerivesFrom = {"gallo-romance", "noun", "Grodiarius"} -- Source: http://www.cnrtl.fr/definition/gruyer
 })
 
+DefineLanguageWord("Hameau", {
+	Language = "french",
+	Type = "noun",
+	Meanings = {"Hamlet"},
+	DerivesFrom = {"old-french", "noun", "Ham"} -- Source: http://www.cnrtl.fr/definition/hameau
+})
+
+DefineLanguageWord("Hamel", {
+	Language = "french",
+	Type = "noun",
+	Meanings = {"Hamlet"}, -- presumably
+	DerivesFrom = {"old-french", "noun", "Ham"}, -- Source: http://www.cnrtl.fr/definition/hameau
+	Archaic = true,
+	NameTypes = {"settlement"}, -- example: "Le Hamel" (Source: http://www.cnrtl.fr/definition/hameau)
+	AffixNameTypes = {"compound", "prefix", "singular", "settlement"} -- examples: "Hamelet", "Hamelin" (Source: http://www.cnrtl.fr/definition/hameau)
+})
+
 DefineLanguageWord("Haubert", {
 	Language = "french",
 	Type = "noun",
 	Meanings = {"Hauberk"},
 	DerivesFrom = {"old-french", "noun", "Halberc"} -- Source: http://www.cnrtl.fr/definition/haubert
+})
+
+DefineLanguageWord("Hem", {
+	Language = "french",
+	Type = "noun",
+	Meanings = {"Hamlet"}, -- presumably
+	DerivesFrom = {"old-french", "noun", "Ham"}, -- Source: http://www.cnrtl.fr/definition/hameau
+	Archaic = true,
+	NameTypes = {"settlement"} -- example: "Hem" (Source: http://www.cnrtl.fr/definition/hameau)
 })
 
 DefineLanguageWord("Jardin", {

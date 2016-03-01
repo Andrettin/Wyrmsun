@@ -235,6 +235,22 @@ DefineLanguageWord("Hêlag", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	DerivesFrom = {"proto-germanic", "adjective", "Hailaga"}
 })
 
+DefineLanguageWord("Hêm", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 52.
+	Language = "old-saxon",
+	Type = "noun",
+	Meanings = {"Home"}, -- source gives the German "Heimat" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Haima"},
+	Gender = "masculine" -- alternatively also neuter
+})
+
+DefineLanguageWord("Hême", { -- dative; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 52.
+	Language = "old-high-german",
+	Type = "adverb",
+	Meanings = {"Home"}, -- source gives the German "zu Hause" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Haima"}, -- unclear if the word comes from this noun or from one of the related adverbs
+	Dative = "Heimi"
+})
+
 DefineLanguageWord("Herta", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
 	Language = "old-saxon",
 	Type = "noun",

@@ -31,6 +31,12 @@ DefineLanguageWord("Kukurs", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Meanings = {"Hump"} -- source gives the German "Buckel" as the meaning
 })
 
+DefineLanguageWord("Saime", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 53.
+	Language = "latvian",
+	Type = "noun",
+	Meanings = {"Rabble"} -- source gives the German "Gesindel" as the meaning
+})
+
 DefineLanguageWord("Savēt", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.
 	Language = "latvian",
 	Type = "verb",

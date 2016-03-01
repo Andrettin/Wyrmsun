@@ -120,10 +120,22 @@ DefineLanguageWord("Χέσ-χιον", { -- Source: Sean Crist, "An Analysis of *
 	Meanings = {"Oakum"} -- source gives the German word "Werg" as the meaning
 })
 
+DefineLanguageWord("Χοίμαω", { -- first person singular; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 53.
+	Language = "greek",
+	Type = "verb",
+	Meanings = {"Bed", "Put to Sleep"} -- source gives the German "bette, schläfere ein" as the meaning
+})
+
 DefineLanguageWord("Χórtos", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "greek",
 	Type = "noun",
 	Meanings = {"Garden"}
+})
+
+DefineLanguageWord("Χώμη", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 53.
+	Language = "greek",
+	Type = "noun",
+	Meanings = {"Village"} -- source gives the German "Dorf" as the meaning
 })
 
 DefineLanguageWord("Χύσθος", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.

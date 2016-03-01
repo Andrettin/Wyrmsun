@@ -113,6 +113,18 @@ DefineLanguageWord("Mozgŭ", { -- Source: Sean Crist, "An Analysis of *z loss in
 	Meanings = {"Brain"}
 })
 
+DefineLanguageWord("Sěmĭ", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 53.
+	Language = "old-church-slavonic",
+	Type = "noun",
+	Meanings = {"Person"} -- source gives the German "Person" as the meaning
+})
+
+DefineLanguageWord("Sěmija", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 53.
+	Language = "old-church-slavonic",
+	Type = "noun",
+	Meanings = {"Menial Staff"} -- source gives the German "Gesinde" as the meaning
+})
+
 DefineLanguageWord("Sĭrebro", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 221.
 	Language = "old-church-slavonic",
 	Type = "noun",

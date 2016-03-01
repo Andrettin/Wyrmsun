@@ -123,6 +123,13 @@ DefineLanguageWord("Grôdi", { -- Source: http://www.cnrtl.fr/definition/gruyer
 	DerivesFrom = {"proto-germanic", "adjective", "Grônia"} -- presumably
 })
 
+DefineLanguageWord("Haim", { -- Source: http://www.cnrtl.fr/definition/hameau
+	Language = "old-frankish", -- source gives "Ancien Bas Francique" (= Old Frankish)
+	Type = "noun",
+	Meanings = {"Small Village"}, -- source gives the French "petit village" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Haima"} -- presumably
+})
+
 DefineLanguageWord("Hals", { -- Source: http://www.cnrtl.fr/definition/haubert
 	Language = "old-frankish", -- source gives "Ancien Bas Francique" (= Old Frankish)
 	Type = "noun",

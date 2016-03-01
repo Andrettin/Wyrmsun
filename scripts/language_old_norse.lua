@@ -562,6 +562,46 @@ DefineLanguageWord("Heilagr", { -- Source: August Fick and Alf Torp, "Wortschatz
 	DerivesFrom = {"proto-germanic", "adjective", "Hailaga"}
 })
 
+DefineLanguageWord("Heim", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 52.
+	Language = "old-norse",
+	Type = "adverb",
+	Meanings = {"Home"}, -- source gives the German "nach Hause" as the meaning
+	DerivesFrom = {"proto-germanic", "adverb", "Haima"} -- apparently
+})
+
+DefineLanguageWord("Heíman", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 52.
+	Language = "old-norse",
+	Type = "adverb",
+	Meanings = {"Home"}, -- source gives the German "von Hause" as the meaning
+	DerivesFrom = {"proto-germanic", "adverb", "Haimanô"} -- apparently
+})
+
+DefineLanguageWord("Heima", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 52.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Home"}, -- source gives the German "Heimat" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Haima"},
+	Gender = "neuter",
+	NumberCaseInflections = {
+		"singular", "dative", "Heima" -- source gives meaning of "zu Hause"
+	}
+})
+
+DefineLanguageWord("Heimr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 52.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Home", "World"}, -- source gives the German "Heimat, Welt" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Haima"},
+	Gender = "masculine"
+})
+
+DefineLanguageWord("Heimskr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 52.
+	Language = "old-norse",
+	Type = "adjective",
+	Meanings = {"Dumb"}, -- source gives the German "dumm (immer zu Hause hockend)" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Haima"} -- apparently
+})
+
 DefineLanguageWord("Hnīga", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 	Language = "old-norse",
 	Type = "verb",

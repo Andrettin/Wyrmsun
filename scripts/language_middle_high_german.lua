@@ -289,6 +289,59 @@ DefineLanguageWord("Heilec", { -- source also gives the alternative form "heilic
 	DerivesFrom = {"old-high-german", "adjective", "Heilag"}
 })
 
+DefineLanguageWord("Heim", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 52.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Home", "House"}, -- source gives the German "Haus, Heimat" as the meaning
+	DerivesFrom = {"old-high-german", "noun", "Heim"},
+	Gender = "neuter"
+})
+
+DefineLanguageWord("Heime", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 52.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Home", "House"}, -- source gives the German "Haus, Heimat" as the meaning
+	DerivesFrom = {"old-high-german", "noun", "Heima"},
+	Gender = "feminine"
+})
+
+DefineLanguageWord("Heime", { -- dative; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 52.
+	Language = "middle-high-german",
+	Type = "adverb",
+	Meanings = {"Home"}, -- source gives the German "zu Hause" as the meaning
+	DerivesFrom = {"old-high-german", "adverb", "Heimi"},
+	Dative = "Heime"
+})
+
+DefineLanguageWord("Heimen", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, pp. 52-53.
+	Language = "middle-high-german",
+	Type = "verb",
+	Meanings = {"Take Home", "Marry"}, -- source gives the German "heimführen, heiraten" as the meaning
+	DerivesFrom = {"old-high-german", "noun", "Heim"} -- apparently, but unclear
+})
+
+DefineLanguageWord("Heimen", { -- source also gives the alternative form "heimenen"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 52.
+	Language = "middle-high-german",
+	Type = "adverb",
+	Meanings = {"Home"}, -- source gives the German "zu Hause" as the meaning
+	DerivesFrom = {"old-high-german", "adverb", "Heimina"} -- apparently
+})
+
+DefineLanguageWord("Heimisch", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 52.
+	Language = "middle-high-german",
+	Type = "adjective",
+	Meanings = {"Domestic"}, -- source gives the German "heimisch" as the meaning
+	DerivesFrom = {"old-high-german", "adjective", "Heimisc"}
+})
+
+DefineLanguageWord("Heira", { -- accusative; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 52.
+	Language = "middle-high-german",
+	Type = "adverb",
+	Meanings = {"Home"}, -- source gives the German "nach Hause" as the meaning
+	DerivesFrom = {"old-high-german", "adverb", "Heira"}, -- apparently
+	Accusative = "Heira"
+})
+
 DefineLanguageWord("Hert", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 46.
 	Language = "middle-high-german",
 	Type = "noun",

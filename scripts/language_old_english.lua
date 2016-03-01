@@ -460,6 +460,28 @@ DefineLanguageWord("Hād", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Meanings = {"Hair"}
 })
 
+DefineLanguageWord("Hæ̂man", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, pp. 52-53.
+	Language = "old-english",
+	Type = "verb",
+	Meanings = {"Copulate", "Sleep With"}, -- source gives the German "beischlafen" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Haima"} -- apparently
+})
+
+DefineLanguageWord("Hâm", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 52.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Home", "House", "Dwelling"}, -- source gives the German "Heimat, Haus, Wohnung" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Haima"},
+	Gender = "masculine"
+})
+
+DefineLanguageWord("Hâm", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 52.
+	Language = "old-english",
+	Type = "adverb",
+	Meanings = {"Home"}, -- source gives the German "nach Hause" as the meaning
+	DerivesFrom = {"proto-germanic", "adverb", "Haima"} -- apparently
+})
+
 DefineLanguageWord("Hamor", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 46.
 	Language = "old-english",
 	Type = "noun",

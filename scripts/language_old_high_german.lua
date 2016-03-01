@@ -407,6 +407,59 @@ DefineLanguageWord("Heilag", { -- source also gives the alternative form "heilac
 	DerivesFrom = {"proto-germanic", "adjective", "Hailaga"}
 })
 
+DefineLanguageWord("Heim", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 52.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Home", "House"}, -- source gives the German "Haus, Heimat" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Haima"},
+	Gender = "neuter"
+})
+
+DefineLanguageWord("Heima", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 52.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Home", "House"}, -- source gives the German "Haus, Heimat" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Haima"},
+	Gender = "feminine"
+})
+
+DefineLanguageWord("Heimenân", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 52.
+	Language = "old-high-german",
+	Type = "adverb",
+	Meanings = {"Home"}, -- source gives the German "aus der Heimat" as the meaning
+	DerivesFrom = {"proto-germanic", "adverb", "Haimanô"} -- apparently
+})
+
+DefineLanguageWord("Heimi", { -- dative; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 52.
+	Language = "old-high-german",
+	Type = "adverb",
+	Meanings = {"Home"}, -- source gives the German "zu Hause" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Haima"}, -- unclear if the word comes from this noun or from one of the related adverbs
+	Dative = "Heimi"
+})
+
+DefineLanguageWord("Heimina", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 52.
+	Language = "old-high-german",
+	Type = "adverb",
+	Meanings = {"Home"}, -- source gives the German "von Hause" as the meaning
+	DerivesFrom = {"proto-germanic", "adverb", "Haimanô"} -- apparently
+})
+
+DefineLanguageWord("Heimisc", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 52.
+	Language = "old-high-german",
+	Type = "adjective",
+	Meanings = {"Domestic"}, -- source gives the German "heimisch" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Haima"} -- apparently
+})
+
+DefineLanguageWord("Heira", { -- accusative; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 52.
+	Language = "old-high-german",
+	Type = "adverb",
+	Meanings = {"Home"}, -- source gives the German "nach Hause" as the meaning
+	DerivesFrom = {"proto-germanic", "adverb", "Haima"}, -- apparently
+	Accusative = "Heira"
+})
+
 DefineLanguageWord("Herd", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 46.
 	Language = "old-high-german",
 	Type = "noun",

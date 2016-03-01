@@ -38,3 +38,10 @@ DefineLanguageWord("Halberc", { -- Source: http://www.cnrtl.fr/definition/hauber
 	Meanings = {"Hauberk"}, -- apparently
 	DerivesFrom = {"old-frankish", "noun", "Halsberg"}
 })
+
+DefineLanguageWord("Ham", { -- Source: http://www.cnrtl.fr/definition/hameau
+	Language = "old-french",
+	Type = "noun",
+	Meanings = {"Small Village"}, -- source gives the French "petit village" as the meaning
+	DerivesFrom = {"old-frankish", "noun", "Haim"}
+})

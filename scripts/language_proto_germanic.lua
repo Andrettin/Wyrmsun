@@ -461,8 +461,24 @@ DefineLanguageWord("Gulþa", { -- Source: August Fick and Alf Torp, "Wortschatz 
 DefineLanguageWord("Haima", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 52.
 	Language = "proto-germanic",
 	Type = "noun",
-	Meanings = {"Village", "Home"}, -- source gives "Dorf, Heim, Heimat" as the meaning
-	Gender = "masculine"
+	Meanings = {"Village", "Home"}, -- source gives the German "Dorf, Heim, Heimat" as the meaning
+	Gender = "masculine",
+	NumberCaseInflections = {
+		"singular", "accusative", "Haima" -- source gives meaning of "nach Hause" for the accusative; source also gives the (apparently accusative) "Haimanô", meaning "von Hause"
+	}
+})
+
+DefineLanguageWord("Haima", { -- accusative; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 52.
+	Language = "proto-germanic",
+	Type = "adverb", -- apparently
+	Meanings = {"Home"}, -- source gives the German "nach Hause" as the meaning
+	Accusative = "Haima"
+})
+
+DefineLanguageWord("Haimanô", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 52.
+	Language = "proto-germanic",
+	Type = "adverb",
+	Meanings = {"Home"} -- source gives the German "von Hause" as the meaning
 })
 
 DefineLanguageWord("Halsa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 50.
@@ -929,7 +945,7 @@ DefineLanguageWord("Vîha", { -- Source: August Fick and Alf Torp, "Wortschatz d
 DefineLanguageWord("Vîhsa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 206.
 	Language = "proto-germanic",
 	Type = "noun",
-	Meanings = {"Village"}, -- source gives the German "Flecken, Dorf" as the meaning
+	Meanings = {"Hamlet", "Village"}, -- source gives the German "Flecken, Dorf" as the meaning
 	Gender = "neuter"
 })
 
