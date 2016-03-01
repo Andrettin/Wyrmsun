@@ -117,10 +117,6 @@ DefineLanguage("goblin", {
 	GenerateMissingWords = true
 })
 
-DefineLanguage("gothic", {
-	Name = "Gothic"
-})
-
 DefineLanguage("greek", {
 	Name = "Greek"
 })
@@ -177,6 +173,10 @@ DefineLanguage("high-german", {
 		"Ermanaric", "Ermenrich", -- "Ermenrich" is the German form of the Gothic name Ermanaric
 		"Theodoric", "Dietrich" -- "Dietrich" is the German form of the Gothic name Theodoric
 	}
+})
+
+DefineLanguage("gothic", { -- define Gothic after High German to prevent some type name generation weirdnesses
+	Name = "Gothic"
 })
 
 DefineLanguage("illyrian", {

@@ -308,6 +308,14 @@ DefineLanguageWord("Kunni", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	DerivesFrom = {"proto-germanic", "noun", "Kuni"}
 })
 
+DefineLanguageWord("Land", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 184.
+	Language = "old-saxon",
+	Type = "noun",
+	Meanings = {"Land", "Country"}, -- source gives the German "Land"
+	DerivesFrom = {"proto-germanic", "noun", "Landa"},
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Līfnara", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "old-saxon",
 	Type = "noun",

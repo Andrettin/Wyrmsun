@@ -681,6 +681,14 @@ DefineLanguageWord("Kyn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-G
 	DerivesFrom = {"proto-germanic", "noun", "Kuni"}
 })
 
+DefineLanguageWord("Land", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 184.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Land", "Country"}, -- source gives the German "Land"
+	DerivesFrom = {"proto-germanic", "noun", "Landa"},
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Langr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-norse",
 	Type = "adjective",

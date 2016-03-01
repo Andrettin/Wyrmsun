@@ -417,6 +417,14 @@ DefineLanguageWord("Kuni", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	DerivesFrom = {"proto-germanic", "noun", "Kuni"}
 })
 
+DefineLanguageWord("Land", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 184.
+	Language = "gothic",
+	Type = "noun",
+	Meanings = {"Land", "Country"}, -- source gives the German "Land"
+	DerivesFrom = {"proto-germanic", "noun", "Landa"},
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Laun", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
 	Language = "gothic",
 	Type = "noun",

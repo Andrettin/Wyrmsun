@@ -125,6 +125,13 @@ DefineLanguageWord("Kass", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Meanings = {"Curl", "Tress"}
 })
 
+DefineLanguageWord("Land", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 184.
+	Language = "irish",
+	Type = "noun",
+	Meanings = {"Free Space"}, -- source gives the German "freier Platz"
+	Gender = "feminine"
+})
+
 DefineLanguageWord("Máo", { -- this is the comparative, what is the normal version of the word? Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
 	Language = "irish",
 	Type = "adjective",

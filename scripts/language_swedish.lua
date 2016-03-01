@@ -38,3 +38,11 @@ DefineLanguageWord("Hög", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Meanings = {"High"}, -- source gives the German "hoch" as the meaning
 	DerivesFrom = {"old-norse", "adjective", "Hôr"}
 })
+
+DefineLanguageWord("Linda", { -- vernacular; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 184.
+	Language = "swedish",
+	Type = "noun",
+	Meanings = {"Open Country"}, -- source gives the German "Brachfeld"
+	DerivesFrom = {"old-norse", "noun", "Land"}, -- presumably
+	Gender = "feminine"
+})

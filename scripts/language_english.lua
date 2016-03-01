@@ -588,6 +588,7 @@ DefineLanguageWord("Corn", {
 	Language = "english",
 	Type = "noun",
 	Meanings = {"Corn"},
+	DerivesFrom = {"old-english", "noun", "Corn"}, -- presumably
 	Gender = "neuter",
 	AffixNameTypes = {"compound", "prefix", "singular", "province"} -- example: "Cornwall"
 })
@@ -1551,6 +1552,7 @@ DefineLanguageWord("Land", {
 	Language = "english",
 	Type = "noun",
 	Meanings = {"Land"},
+	DerivesFrom = {"old-english", "noun", "Land"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 184.
 	Gender = "neuter",
 	AffixNameTypes = {"compound", "suffix", "singular", "province"} -- example: "Portland"
 })
@@ -2317,6 +2319,7 @@ DefineLanguageWord("Shire", {
 	Language = "english",
 	Type = "noun",
 	Meanings = {"Shire"},
+	DerivesFrom = {"old-english", "noun", "Scîr"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 233.
 	Gender = "neuter",
 	AffixNameTypes = {"compound", "suffix", "singular", "province"} -- examples: "Berkshire", "Cheshire", "Hampshire", "Lancashire", "Shropshire", "Wiltshire"
 })

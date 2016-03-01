@@ -25,6 +25,12 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineLanguageWord("Lindan", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 184.
+	Language = "old-prussian", -- source gives Prussian
+	Type = "noun",
+	Meanings = {"Valley"} -- source gives the German "Tal"
+})
+
 DefineLanguageWord("Semen", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "old-prussian",
 	Type = "noun",

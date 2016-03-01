@@ -1305,8 +1305,8 @@ DefineLanguageWord("Lai", { -- Source: http://www.duden.de/rechtschreibung/Lai
 DefineLanguageWord("Land", {
 	Language = "high-german",
 	Type = "noun",
-	Meanings = {"Country"},
-	DerivesFrom = {"proto-germanic", "noun", "Landa"},
+	Meanings = {"Land", "Country"},
+	DerivesFrom = {"middle-high-german", "noun", "Lant"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 184.
 	NumberCaseInflections = {
 		"singular", "genitive", "Landes",
 		"plural", "nominative", "Länder",

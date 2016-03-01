@@ -600,6 +600,14 @@ DefineLanguageWord("Îsern", { -- source also gives the alternative form "Îsen"
 	Gender = "neuter"
 })
 
+DefineLanguageWord("Land", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 184.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Land", "Country"}, -- source gives the German "Land"
+	DerivesFrom = {"proto-germanic", "noun", "Landa"},
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Léad", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 181.
 	Language = "old-english",
 	Type = "noun",
@@ -777,6 +785,14 @@ DefineLanguageWord("Scernicge", { -- Source: Alaric Hall, "The Meanings of Elf a
 	Language = "old-english",
 	Type = "noun",
 	Meanings = {"Actress"},
+	Gender = "feminine"
+})
+
+DefineLanguageWord("Scîr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 233.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Service", "Shop", "Area"}, -- source gives the German "Dienst, Geschäft, Gebiet"
+	DerivesFrom = {"proto-germanic", "noun", "Skîrô"},
 	Gender = "feminine"
 })
 

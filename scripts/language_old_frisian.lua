@@ -203,6 +203,14 @@ DefineLanguageWord("Lâd", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	DerivesFrom = {"proto-germanic", "noun", "Lauda"}
 })
 
+DefineLanguageWord("Lond", { -- source also gives the alternative form "Land"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 184.
+	Language = "old-frisian",
+	Type = "noun",
+	Meanings = {"Land", "Country"}, -- source gives the German "Land"
+	DerivesFrom = {"proto-germanic", "noun", "Landa"},
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Lēra", { -- causative verb; Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 5.
 	Language = "old-frisian",
 	Type = "verb",

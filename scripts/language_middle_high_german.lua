@@ -355,6 +355,17 @@ DefineLanguageWord("Kien", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Lant", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 184.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Land", "Country"}, -- source gives the German "Land"
+	DerivesFrom = {"old-high-german", "noun", "Lant"},
+	Gender = "neuter",
+	NumberCaseInflections = {
+		"singular", "genitive", "Landes"
+	}
+})
+
 DefineLanguageWord("Lēren", { -- causative verb; Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 5.
 	Language = "middle-high-german",
 	Type = "verb",

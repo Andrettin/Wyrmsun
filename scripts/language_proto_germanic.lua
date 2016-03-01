@@ -591,7 +591,7 @@ DefineLanguageWord("Kuni", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 DefineLanguageWord("Landa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 184.
 	Language = "proto-germanic",
 	Type = "noun",
-	Meanings = {"Terra Firma", "Land", "Country"}, -- source gives the German words "terra firma, Land"
+	Meanings = {"Terra Firma", "Land", "Country"}, -- source gives the German "terra firma, Land"
 	Gender = "neuter",
 	AffixNameTypes = {"compound", "suffix", "singular", "province"}, -- cognate of the suffix in Asaland, and Asaland is the region in "Asia" in which Odin's people used to live until they migrated to Scandinavia in the Ynglinga saga's story
 })
@@ -779,6 +779,13 @@ DefineLanguageWord("Skaran", { -- source also gives the alternative form "Skara"
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Plowshare"} -- source gives "Schar, Pflugeisen" as the meaning
+})
+
+DefineLanguageWord("Skîrô", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 233.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Procurement"}, -- source gives the German "Besorgung"
+	Gender = "feminine"
 })
 
 DefineLanguageWord("Smaiþra", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 263.

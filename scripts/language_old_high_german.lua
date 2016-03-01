@@ -506,6 +506,17 @@ DefineLanguageWord("Kōl", { -- Source: Richard M. Runge, "The Phonetic Realizat
 	Meanings = {"Cabbage"}
 })
 
+DefineLanguageWord("Lant", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 184.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Land", "Country"}, -- source gives the German "Land"
+	DerivesFrom = {"proto-germanic", "noun", "Landa"},
+	Gender = "neuter",
+	NumberCaseInflections = {
+		"singular", "genitive", "Lantes" -- source also gives the alternative form "Landes"
+	}
+})
+
 DefineLanguageWord("Lōn", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
 	Language = "old-high-german",
 	Type = "noun",
@@ -675,6 +686,14 @@ DefineLanguageWord("Sāt", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Type = "noun",
 	Meanings = {"Seed"}, -- derived from the Proto-Germanic "Sēþiz", which means "Seed"
 	DerivesFrom = {"proto-germanic", "noun", "Sēþiz"}
+})
+
+DefineLanguageWord("Scîra", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 233.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Procurement", "Shop"}, -- source gives the German "Besorgung, Geschäft"
+	DerivesFrom = {"proto-germanic", "noun", "Skîrô"},
+	Gender = "feminine"
 })
 
 DefineLanguageWord("Sēula", { -- source also gives "Sēla"; Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.

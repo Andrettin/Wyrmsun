@@ -82,6 +82,13 @@ DefineLanguageWord("Kukŭ", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Meanings = {"Crooked"} -- source gives the German "krumm" as the meaning
 })
 
+DefineLanguageWord("Lędina", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 184.
+	Language = "old-church-slavonic",
+	Type = "noun",
+	Meanings = {"Wasteland"}, -- source gives the German "wüstes Land"
+	Gender = "feminine"
+})
+
 DefineLanguageWord("Mědĭ", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 264.
 	Language = "old-church-slavonic",
 	Type = "noun",
