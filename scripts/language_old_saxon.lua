@@ -477,6 +477,15 @@ DefineLanguageWord("Tharm", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Meanings = {"Intestine"}, -- source gives the German "Darm" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Þarma"}
 })
+
+DefineLanguageWord("Thioda", { -- source also gives the alternative form "Thiod"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 99.
+	Language = "old-saxon",
+	Type = "noun",
+	Meanings = {"People"}, -- source gives the German "Volk, Leute" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Þeudô"},
+	Gender = "feminine"
+})
+
 DefineLanguageWord("Thorp", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 100.
 	Language = "old-saxon",
 	Type = "noun",

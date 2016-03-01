@@ -215,6 +215,10 @@ DefineLanguage("latvian", {
 	Name = "Latvian"
 })
 
+DefineLanguage("liegeois", { -- should be a dialect instead of its own language
+	Name = "Liègeois"
+})
+
 DefineLanguage("lithuanian", {
 	Name = "Lithuanian"
 })
@@ -267,6 +271,10 @@ DefineLanguage("old-english", {
 	NameTranslations = {
 		"Airmanareiks", "Eormenrîc" -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 18
 	}
+})
+
+DefineLanguage("old-flemish", { -- should be a dialect instead?
+	Name = "Old Flemish"
 })
 
 DefineLanguage("old-frankish", {
@@ -423,6 +431,7 @@ Load("scripts/language_middle_low_german.lua")
 Load("scripts/language_high_german.lua")
 Load("scripts/language_old_frankish.lua")
 Load("scripts/language_middle_dutch.lua")
+Load("scripts/language_old_flemish.lua")
 Load("scripts/language_dutch.lua")
 Load("scripts/language_old_frisian.lua")
 Load("scripts/language_old_english.lua")
@@ -441,6 +450,7 @@ Load("scripts/language_gallo_romance.lua")
 Load("scripts/language_old_french.lua")
 Load("scripts/language_old_provencal.lua")
 Load("scripts/language_french.lua")
+Load("scripts/language_liegeois.lua")
 Load("scripts/language_italian.lua")
 
 -- English

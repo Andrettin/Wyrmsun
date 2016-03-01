@@ -125,6 +125,7 @@ DefineLanguageWord("Ede", { -- is this really a noun? Source: B. H. Slicher van 
 	Language = "dutch",
 	Type = "noun",
 	Meanings = {},
+	DerivesFrom = {"old-frankish", "noun", "Ithi"}, -- presumably
 	AffixNameTypes = {
 		"compound", "suffix", "singular", "settlement" -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
 	}

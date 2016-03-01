@@ -25,6 +25,13 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineLanguageWord("Touto", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 99.
+	Language = "oscan",
+	Type = "noun",
+	Meanings = {"Polity", "Citizenship", "City"}, -- source gives the Latin "civitas" as the meaning
+	Gender = "feminine"
+})
+
 DefineLanguageWord("Trííbúm", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 100.
 	Language = "oscan",
 	Type = "noun",

@@ -130,6 +130,12 @@ DefineLanguageWord("Haim", { -- Source: http://www.cnrtl.fr/definition/hameau
 	DerivesFrom = {"proto-germanic", "noun", "Haima"} -- presumably
 })
 
+DefineLanguageWord("Haimithi", { -- apparently a compound of "haim" and "ithi"; Source: http://www.cnrtl.fr/definition/Amad%E9
+	Language = "old-frankish",
+	Type = "noun",
+	Meanings = {"Fenced Place"} -- source gives the French "lieu entouré de clôture" as the meaning
+})
+
 DefineLanguageWord("Hals", { -- Source: http://www.cnrtl.fr/definition/haubert
 	Language = "old-frankish", -- source gives "Ancien Bas Francique" (= Old Frankish)
 	Type = "noun",
@@ -141,6 +147,12 @@ DefineLanguageWord("Halsberg", { -- compound of the noun "Hals" and the verb "Be
 	Language = "old-frankish", -- source gives "Ancien Bas Francique" (= Old Frankish)
 	Type = "noun",
 	Meanings = {"Neck Cover"} -- source gives the French "ce qui protège le cou" as the meaning
+})
+
+DefineLanguageWord("Ithi", { -- apparently a suffix forming the compound "haimithi"; Source: http://www.cnrtl.fr/definition/Amad%E9
+	Language = "old-frankish",
+	Type = "noun", -- correct?
+	Meanings = {}
 })
 
 DefineLanguageWord("Kresso", { -- Source: http://www.cnrtl.fr/definition/cresson

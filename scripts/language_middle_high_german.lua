@@ -175,6 +175,22 @@ DefineLanguageWord("Darm", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	}
 })
 
+DefineLanguageWord("Diet", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 99.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"People"}, -- source gives the German "Volk, Leute" as the meaning
+	DerivesFrom = {"old-high-german", "noun", "Diota"}, -- apparently
+	Gender = "feminine" -- alternatively also masculine or neuter
+})
+
+DefineLanguageWord("Diet", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 99.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Person", "Fellow"}, -- source gives the German "Mensch, Kerl" as the meaning
+	DerivesFrom = {"old-high-german", "noun", "Diot"}, -- apparently
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Dorf", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 100.
 	Language = "middle-high-german",
 	Type = "noun",

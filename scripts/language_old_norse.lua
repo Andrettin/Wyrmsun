@@ -1033,6 +1033,14 @@ DefineLanguageWord("Þarmr", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Þjôđ", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 99.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"People", "Nation"}, -- source gives the German "Volk, Nation, Leute" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Þeudô"},
+	Gender = "feminine"
+})
+
 DefineLanguageWord("Þorp", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 100.
 	Language = "old-norse",
 	Type = "noun",

@@ -78,6 +78,12 @@ DefineLanguageWord("Grâwe", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	DerivesFrom = {"proto-germanic", "adjective", "Grêva"}
 })
 
+DefineLanguageWord("Hameide", { -- source also gives the alternative forms "homeide" and "hameie"; Source: http://www.cnrtl.fr/definition/Amad%E9
+	Language = "middle-low-german",
+	Type = "noun",
+	Meanings = {"Enclosure", "Fence"} -- source gives the French "enclos, clôture" as the meaning
+})
+
 DefineLanguageWord("Hēde", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 7.
 	Language = "middle-low-german",
 	Type = "noun",

@@ -176,6 +176,12 @@ DefineLanguageWord("Rīadaim", { -- Source: Winfred P. Lehmann, "A Grammar of Pr
 	Meanings = {"Travel"}
 })
 
+DefineLanguageWord("Túath", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 99.
+	Language = "irish",
+	Type = "noun",
+	Meanings = {"People"} -- source gives the German "Volk" as the meaning
+})
+
 DefineLanguageWord("Úr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 127.
 	Language = "irish",
 	Type = "noun",

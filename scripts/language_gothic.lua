@@ -622,6 +622,14 @@ DefineLanguageWord("Þaúrp", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Gender = "neuter"
 })
 
+DefineLanguageWord("Þiuda", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 99.
+	Language = "gothic",
+	Type = "noun",
+	Meanings = {"People"}, -- source gives the German "Volk" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Þeudô"},
+	Gender = "feminine"
+})
+
 DefineLanguageWord("Twalif", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
 	Language = "gothic",
 	Type = "numeral",

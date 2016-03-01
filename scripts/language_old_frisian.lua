@@ -361,6 +361,14 @@ DefineLanguageWord("Therm", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	DerivesFrom = {"proto-germanic", "noun", "Þarma"}
 })
 
+DefineLanguageWord("Thiade", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 99.
+	Language = "old-frisian",
+	Type = "noun",
+	Meanings = {"People"}, -- source gives the German "Volk, Leute" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Þeudô"},
+	Gender = "feminine"
+})
+
 DefineLanguageWord("Thorp", { -- source also gives the alternative form "Therp"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 100.
 	Language = "old-frisian",
 	Type = "noun",

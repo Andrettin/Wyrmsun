@@ -25,37 +25,9 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageWord("Alt", { -- a suffix; http://www.cnrtl.fr/definition/lourdaud//1
-	Language = "old-french",
-	Type = "noun", -- correct?
+DefineLanguageWord("Hameyde", { -- Source: http://www.cnrtl.fr/definition/Amad%E9
+	Language = "old-flemish",
+	Type = "noun",
 	Meanings = {},
-	DerivesFrom = {"old-frankish", "noun", "Wald"}
-})
-
-DefineLanguageWord("Halberc", { -- Source: http://www.cnrtl.fr/definition/haubert
-	Language = "old-french", -- attested c. 1100 AD
-	Type = "noun",
-	Meanings = {"Hauberk"}, -- apparently
-	DerivesFrom = {"old-frankish", "noun", "Halsberg"}
-})
-
-DefineLanguageWord("Ham", { -- Source: http://www.cnrtl.fr/definition/hameau
-	Language = "old-french",
-	Type = "noun",
-	Meanings = {"Small Village"}, -- source gives the French "petit village" as the meaning
-	DerivesFrom = {"old-frankish", "noun", "Haim"}
-})
-
-DefineLanguageWord("Hamede", { -- Source: http://www.cnrtl.fr/definition/Amad%E9
-	Language = "old-french",
-	Type = "noun",
-	Meanings = {"Bar", "Barrier"}, -- source gives the French "barre, barrière" as the meaning
-	DerivesFrom = {"middle-dutch", "noun", "Hameide"} -- alternatively from Old Flemish "Hameyde" (or was the source specifying the dialect of Middle Dutch?)
-})
-
-DefineLanguageWord("Hamie", { -- Source: http://www.cnrtl.fr/definition/Amad%E9
-	Language = "old-french",
-	Type = "noun",
-	Meanings = {"Bar"}, -- source gives the French "barre" as the meaning
-	DerivesFrom = {"old-frankish", "noun", "Haimithi"} -- apparently
+	DerivesFrom = {"old-frankish", "noun", "Haimithi"} -- presumably
 })

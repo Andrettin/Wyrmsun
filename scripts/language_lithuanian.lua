@@ -154,6 +154,12 @@ DefineLanguageWord("Szeimýna", { -- Source: August Fick and Alf Torp, "Wortscha
 	Gender = "feminine"
 })
 
+DefineLanguageWord("Tauta", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 99.
+	Language = "lithuanian",
+	Type = "noun",
+	Meanings = {"Upland", "Germany"} -- source gives the German "Oberland, Deutschland" as the meaning
+})
+
 DefineLanguageWord("Vakaraĩ", { -- this is the plural; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 204.
 	Language = "lithuanian",
 	Type = "noun",

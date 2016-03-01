@@ -211,6 +211,22 @@ DefineLanguageWord("Daram", { -- source also gives the alternative form "Darm"; 
 	}
 })
 
+DefineLanguageWord("Diot", { -- source also gives the alternative form "Deot"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 99.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"People"}, -- source gives the German "Volk, Leute" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Þeudô"},
+	Gender = "masculine" -- alternatively also neuter
+})
+
+DefineLanguageWord("Diota", { -- source also gives the alternative form "Deota"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 99.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"People"}, -- source gives the German "Volk, Leute" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Þeudô"},
+	Gender = "feminine"
+})
+
 DefineLanguageWord("Dorf", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 100.
 	Language = "old-high-german",
 	Type = "noun",

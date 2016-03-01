@@ -32,6 +32,14 @@ DefineLanguageWord("Alérion", {
 	DerivesFrom = {"old-frankish", "noun", "Aδalarjo"} -- Source: http://www.cnrtl.fr/definition/al%C3%A9rion
 })
 
+DefineLanguageWord("Amade", {
+	Language = "french",
+	Type = "noun",
+	Meanings = {"Meeting of Three Parallel Lists which Run Through an Heraldic Shield without Touching the Edges"},
+	DerivesFrom = {"old-french", "noun", "Hamede"}, -- Source: http://www.cnrtl.fr/definition/Amad%E9
+	Gender = "feminine"
+})
+
 DefineLanguageWord("Aud", { -- a suffix
 	Language = "french",
 	Type = "noun", -- correct?

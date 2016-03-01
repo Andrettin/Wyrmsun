@@ -903,6 +903,14 @@ DefineLanguageWord("Þarma", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Þeudô", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 99.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"People"}, -- source gives the German "Volk" as the meaning
+	Gender = "feminine",
+	AffixNameTypes = {"compound", "prefix", "singular", "person"} -- example: "Theudariks" (from a source I lost the reference to) (presuming "Theuda" to equal "Þeudô")
+})
+
 DefineLanguageWord("Þurpa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 100.
 	Language = "proto-germanic",
 	Type = "noun",
@@ -1253,13 +1261,6 @@ DefineLanguageWord("Staldaz", {
 	Type = "noun",
 	Meanings = {"Owner"},
 	AffixNameTypes = {"compound", "suffix", "singular", "person"} -- example: Hagustaldaz
-})
-
-DefineLanguageWord("Theuda", {
-	Language = "proto-germanic",
-	Type = "noun",
-	Meanings = {"People"},
-	AffixNameTypes = {"compound", "prefix", "singular", "person"} -- example: "Theudariks"
 })
 
 DefineLanguageWord("Wagigaz", {

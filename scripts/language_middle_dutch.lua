@@ -52,6 +52,20 @@ DefineLanguageWord("Halsberch", { -- Source: http://www.cnrtl.fr/definition/haub
 	DerivesFrom = {"old-frankish", "noun", "Halsberg"} -- presumably
 })
 
+DefineLanguageWord("Ham", { -- Source: http://www.cnrtl.fr/definition/Amad%E9
+	Language = "middle-dutch",
+	Type = "noun",
+	Meanings = {"Enclosure"}, -- source gives the French "enclos" as the meaning
+	DerivesFrom = {"old-frankish", "noun", "Haim"} -- presumably
+})
+
+DefineLanguageWord("Hameide", { -- source also gives the alternative forms "hameede", "ameide" and "hameye"; Source: http://www.cnrtl.fr/definition/Amad%E9
+	Language = "middle-dutch",
+	Type = "noun",
+	Meanings = {"Bar", "Closing Bar", "Ram", "Yard", "Farm"}, -- source gives the French "barre, barre de fermeture, barreau, bélier" and "cour, ferme" as the meaning
+	DerivesFrom = {"old-frankish", "noun", "Haimithi"} -- apparently
+})
+
 DefineLanguageWord("Herde", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
 	Language = "middle-dutch",
 	Type = "noun",
