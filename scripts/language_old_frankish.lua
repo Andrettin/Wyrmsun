@@ -181,6 +181,13 @@ DefineLanguageWord("Nimid", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Riki", { -- Source: http://www.cnrtl.fr/definition/riche
+	Language = "old-frankish", -- source gives "Ancien Bas Francique" (= Old Frankish)
+	Type = "adjective",
+	Meanings = {"Powerful"}, -- source gives the French "puissant" as the meaning
+	DerivesFrom = {"proto-germanic", "adjective", "Rîka"} -- presumably
+})
+
 DefineLanguageWord("Scramasacs", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 235.
 	Language = "old-frankish",
 	Type = "noun",

@@ -25,16 +25,9 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageWord("Bosco", {
-	Language = "italian",
-	Type = "noun",
-	Meanings = {"Wood"},
-	DerivesFrom = {"medieval-latin", "noun", "Buscus"} -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 143.
-})
-
-DefineLanguageWord("Ricco", {
-	Language = "italian",
+DefineLanguageWord("Ric", { -- Source: http://www.cnrtl.fr/definition/riche
+	Language = "provencal", -- as given by the TLFi; is the dialect of Occitan meant?
 	Type = "adjective",
-	Meanings = {"Rich"},
-	DerivesFrom = {"gothic", "adjective", "Reiks"} -- Source: http://www.cnrtl.fr/definition/riche
+	Meanings = {},
+	DerivesFrom = {"gothic", "adjective", "Reiks"}
 })

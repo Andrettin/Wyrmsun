@@ -280,7 +280,7 @@ DefineLanguageWord("Friþareiks", { -- Source: August Fick and Alf Torp, "Wortsc
 	Language = "gothic",
 	Type = "noun",
 	Meanings = {}
-	-- derived from the Proto-Germanic "Friþu", but apparently only for part of it (the noun seems to be a compound)
+	-- derived from the Proto-Germanic "Friþu", but apparently only for part of it (the noun seems to be a compound; maybe it is a given name? it seems to correspond to "Friedrich"/"Frederick")
 })
 
 DefineLanguageWord("Gaits", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
@@ -532,11 +532,11 @@ DefineLanguageWord("Reiks", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	AffixNameTypes = {"compound", "suffix", "singular", "person"} -- example: "Airmanareiks" (Gothic king; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 18) (maybe the corresponding adjective is part of this compound instead)
 })
 
-DefineLanguageWord("Reiks", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
+DefineLanguageWord("Reiks", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174; Source: http://www.cnrtl.fr/definition/riche
 	Language = "gothic",
 	Type = "adjective",
-	Meanings = {"Powerful", "Notable"}, -- source gives the German "mächtig, vornehm" as the meaning
-	DerivesFrom = {"proto-germanic", "adjective", "Rîka"}
+	Meanings = {"Powerful", "Notable"}, -- Fick gives the German "mächtig, vornehm" as the meaning, while the TLFi gives the French "puissant"
+	DerivesFrom = {"proto-germanic", "adjective", "Rîka"} -- as given by Fick
 })
 
 DefineLanguageWord("Sair", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.

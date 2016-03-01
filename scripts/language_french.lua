@@ -239,6 +239,13 @@ DefineLanguageWord("Ren", {
 	AffixNameTypes = {"compound", "prefix", "singular", "person"} -- example: "Renaud"
 })
 
+DefineLanguageWord("Riche", {
+	Language = "french",
+	Type = "adjective",
+	Meanings = {"Rich"},
+	DerivesFrom = {"old-frankish", "adjective", "Riki"} -- Source: http://www.cnrtl.fr/definition/riche
+})
+
 DefineLanguageWord("Sénéchal", {
 	Language = "french",
 	Type = "noun",

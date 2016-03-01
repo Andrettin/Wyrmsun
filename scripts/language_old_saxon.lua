@@ -422,11 +422,11 @@ DefineLanguageWord("Râd", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Gender = "masculine"
 })
 
-DefineLanguageWord("Rîki", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
-	Language = "old-saxon",
+DefineLanguageWord("Rîki", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174; Source: http://www.cnrtl.fr/definition/riche
+	Language = "old-saxon", -- the TLFi gives Old Low German
 	Type = "adjective",
-	Meanings = {"Powerful"}, -- source gives the German "mächtig" as the meaning
-	DerivesFrom = {"proto-germanic", "adjective", "Rîka"}
+	Meanings = {"Powerful"}, -- Fick gives the German "mächtig" as the meaning, while the TLFi gives the French "puissant"
+	DerivesFrom = {"proto-germanic", "adjective", "Rîka"} -- as given by Fick
 })
 
 DefineLanguageWord("Siluƀar", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 221.

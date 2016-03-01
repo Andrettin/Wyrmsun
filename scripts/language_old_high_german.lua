@@ -749,11 +749,11 @@ DefineLanguageWord("Rât", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Gender = "masculine"
 })
 
-DefineLanguageWord("Rîhhi", { -- source also gives the alternative form "rîchi"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
+DefineLanguageWord("Rîhhi", { -- Fick also gives the alternative form "rîchi"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174; Source: http://www.cnrtl.fr/definition/riche
 	Language = "old-high-german",
 	Type = "adjective",
-	Meanings = {"Powerful", "Notable", "Rich", "Magnificent", "Splendid"}, -- source gives the German "mächtig, vornehm, reich, prächtig, herrlich" as the meaning
-	DerivesFrom = {"proto-germanic", "adjective", "Rîka"}
+	Meanings = {"Powerful", "Notable", "Rich", "Magnificent", "Splendid"}, -- Fick gives the German "mächtig, vornehm, reich, prächtig, herrlich" as the meaning, while the TLFi gives the French "puissant"
+	DerivesFrom = {"proto-germanic", "adjective", "Rîka"} -- as given by Fick
 })
 
 DefineLanguageWord("Sāt", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.

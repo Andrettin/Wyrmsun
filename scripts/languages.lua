@@ -37,6 +37,10 @@ DefineLanguage("basque", {
 	Name = "Basque"
 })
 
+DefineLanguage("catalan", {
+	Name = "Catalan"
+})
+
 DefineLanguage("crimean-gothic", {
 	Name = "Crimean Gothic"
 })
@@ -345,6 +349,10 @@ DefineLanguage("phrygian", {
 	Name = "Phrygian"
 })
 
+DefineLanguage("portuguese", {
+	Name = "Portuguese"
+})
+
 DefineLanguage("proto-celtic", {
 	Name = "Proto-Celtic"
 })
@@ -357,12 +365,20 @@ DefineLanguage("proto-indo-european", {
 	Name = "Proto-Indo-European"
 })
 
+DefineLanguage("provencal", {
+	Name = "Provençal"
+})
+
 DefineLanguage("russian", {
 	Name = "Russian"
 })
 
 DefineLanguage("sanskrit", {
 	Name = "Sanskrit"
+})
+
+DefineLanguage("spanish", {
+	Name = "Spanish"
 })
 
 DefineLanguage("swedish", {
@@ -451,7 +467,11 @@ Load("scripts/language_old_french.lua")
 Load("scripts/language_old_provencal.lua")
 Load("scripts/language_french.lua")
 Load("scripts/language_liegeois.lua")
+Load("scripts/language_provencal.lua")
 Load("scripts/language_italian.lua")
+Load("scripts/language_portuguese.lua")
+Load("scripts/language_catalan.lua")
+Load("scripts/language_spanish.lua")
 
 -- English
 Load("scripts/language_english.lua") -- put it here since it uses words of Old French origin
