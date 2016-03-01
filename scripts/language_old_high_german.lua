@@ -485,6 +485,12 @@ DefineLanguageWord("Hwerfan", { -- source also gives the alternative form "hwerb
 	Meanings = {"Turn", "Return", "Practice a Profession"} -- source gives the French "se tourner, s'en retourner, exercer (une profession)" as the meaning
 })
 
+DefineLanguageWord("Irmindeot", { -- the first part of this compound derives from the Proto-Germanic noun "Erman"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 18.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Wide Earth"} -- source gives the German "die weite Erde"
+})
+
 DefineLanguageWord("Îsarn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 24.
 	Language = "old-high-german",
 	Type = "noun",

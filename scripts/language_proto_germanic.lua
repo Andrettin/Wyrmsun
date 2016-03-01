@@ -300,6 +300,12 @@ DefineLanguageWord("Erala", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Erman", { -- source gives "Erman(a)", and also the alternative form "Ermun(a)"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 18.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Large Livestock", "Herd of Cattle", "Head of Cattle"} -- source gives the German "Großvieh" and the Latin "armentum"
+})
+
 DefineLanguageWord("Erþō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "proto-germanic",
 	Type = "noun",

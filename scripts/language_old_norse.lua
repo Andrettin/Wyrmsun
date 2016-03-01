@@ -646,6 +646,20 @@ DefineLanguageWord("Îsarn", { -- source also gives the alternative form "Jârn"
 	Gender = "neuter"
 })
 
+DefineLanguageWord("Jǫrmungrund", { -- the first part of this compound derives from the Proto-Germanic noun "Erman"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 18.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Wide Earth"} -- source gives the German "die weite Erde"
+})
+
+DefineLanguageWord("Jǫrmuni", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 18.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Ox", "Horse"}, -- source gives the German "Ochs, Pferd"
+	DerivesFrom = {"proto-germanic", "noun", "Erman"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Koma", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 	Language = "old-norse",
 	Type = "verb",

@@ -293,6 +293,18 @@ DefineLanguageWord("Eoh", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-G
 	DerivesFrom = {"proto-indo-european", "noun", "Éḱwos"}
 })
 
+DefineLanguageWord("Eormengrund", { -- the first part of this compound derives from the Proto-Germanic noun "Erman"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 18.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Wide Earth"} -- source gives the German "die weite Erde"
+})
+
+DefineLanguageWord("Eormenþéod", { -- the first part of this compound derives from the Proto-Germanic noun "Erman"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 18.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Wide Earth"} -- source gives the German "die weite Erde"
+})
+
 DefineLanguageWord("Eorþe", { -- Runge gives "Eorþe", while Lehmann gives "Eorþ"; Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 238; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-english",
 	Type = "noun",

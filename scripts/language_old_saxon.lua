@@ -293,6 +293,12 @@ DefineLanguageWord("Hwit", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	DerivesFrom = {"proto-germanic", "adjective", "Hvîta"}
 })
 
+DefineLanguageWord("Irminthiod", { -- the first part of this compound derives from the Proto-Germanic noun "Erman"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 18.
+	Language = "old-saxon",
+	Type = "noun",
+	Meanings = {"Wide Earth"} -- source gives the German "die weite Erde"
+})
+
 DefineLanguageWord("Îsarn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 24.
 	Language = "old-saxon",
 	Type = "noun",

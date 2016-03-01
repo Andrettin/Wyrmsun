@@ -44,6 +44,14 @@ DefineLanguageWord("Ainlif", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Number = 11
 })
 
+DefineLanguageWord("Airmana", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 18.
+	Language = "gothic",
+	Type = "noun",
+	Meanings = {},
+	DerivesFrom = {"proto-germanic", "noun", "Erman"},
+	AffixNameTypes = {"compound", "prefix", "singular", "person"} -- example: "Airmanareiks" (Gothic king)
+})
+
 DefineLanguageWord("Aírþa", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "gothic",
 	Type = "noun",
@@ -509,7 +517,8 @@ DefineLanguageWord("Reiks", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Language = "gothic",
 	Type = "noun",
 	Meanings = {"Ruler"}, -- source gives the German "Herrscher" as the meaning
-	DerivesFrom = {"proto-germanic", "noun", "Rîka"}
+	DerivesFrom = {"proto-germanic", "noun", "Rîka"},
+	AffixNameTypes = {"compound", "suffix", "singular", "person"} -- example: "Airmanareiks" (Gothic king; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 18) (maybe the corresponding adjective is part of this compound instead)
 })
 
 DefineLanguageWord("Reiks", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.

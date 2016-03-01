@@ -87,41 +87,7 @@ DefineLanguage("english", {
 	}
 })
 
-DefineLanguage("etruscan", {
-	Name = "Etruscan"
-})
-
-DefineLanguage("finnish", {
-	Name = "Finnish"
-})
-
-DefineLanguage("french", {
-	Name = "French"
-})
-
-DefineLanguage("gallo-romance", {
-	Name = "Gallo-Romance"
-})
-
-DefineLanguage("gaulish", {
-	Name = "Gaulish"
-})
-
-DefineLanguage("gnomish", {
-	Name = "Gnomish",
---	GenerateMissingWords = true
-})
-
-DefineLanguage("goblin", {
-	Name = "Goblin",
-	GenerateMissingWords = true
-})
-
-DefineLanguage("greek", {
-	Name = "Greek"
-})
-
-DefineLanguage("high-german", {
+DefineLanguage("high-german", { -- define High German early to prevent some type name generation weirdnesses
 	Name = "High German",
 	AdjectiveEndings = {
 		"no-article", "nominative", "singular", "masculine", "er",
@@ -170,13 +136,46 @@ DefineLanguage("high-german", {
 		"Smiþu", "Schmied", -- from Proto-Germanic to German
 		"Vindobona", "Wien", -- "Wien" = "Vienna"; from the Latin name "Vindobona"
 		"Walakuzjōn", "Walküre", -- from Proto-Germanic to German
-		"Ermanaric", "Ermenrich", -- "Ermenrich" is the German form of the Gothic name Ermanaric
 		"Theodoric", "Dietrich" -- "Dietrich" is the German form of the Gothic name Theodoric
 	}
 })
 
-DefineLanguage("gothic", { -- define Gothic after High German to prevent some type name generation weirdnesses
+DefineLanguage("etruscan", {
+	Name = "Etruscan"
+})
+
+DefineLanguage("finnish", {
+	Name = "Finnish"
+})
+
+DefineLanguage("french", {
+	Name = "French"
+})
+
+DefineLanguage("gallo-romance", {
+	Name = "Gallo-Romance"
+})
+
+DefineLanguage("gaulish", {
+	Name = "Gaulish"
+})
+
+DefineLanguage("gnomish", {
+	Name = "Gnomish",
+--	GenerateMissingWords = true
+})
+
+DefineLanguage("goblin", {
+	Name = "Goblin",
+	GenerateMissingWords = true
+})
+
+DefineLanguage("gothic", {
 	Name = "Gothic"
+})
+
+DefineLanguage("greek", {
+	Name = "Greek"
 })
 
 DefineLanguage("illyrian", {
@@ -233,7 +232,10 @@ DefineLanguage("middle-english", {
 })
 
 DefineLanguage("middle-high-german", {
-	Name = "Middle High German"
+	Name = "Middle High German",
+	NameTranslations = {
+		"Airmanareiks", "Ermenrîch" -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 18
+	}
 })
 
 DefineLanguage("middle-low-german", {
@@ -261,7 +263,10 @@ DefineLanguage("old-danish", {
 })
 
 DefineLanguage("old-english", {
-	Name = "Old English"
+	Name = "Old English",
+	NameTranslations = {
+		"Airmanareiks", "Eormenrîc" -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 18
+	}
 })
 
 DefineLanguage("old-frankish", {
@@ -298,7 +303,10 @@ DefineLanguage("old-latin", {
 })
 
 DefineLanguage("old-norse", {
-	Name = "Old Norse"
+	Name = "Old Norse",
+	NameTranslations = {
+		"Airmanareiks", "Jǫrmunrekr" -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 18
+	}
 })
 
 DefineLanguage("old-provencal", {
