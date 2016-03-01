@@ -494,6 +494,12 @@ DefineLanguageWord("Hazdaz", { -- Source: Sean Crist, "An Analysis of *z loss in
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Hailaga", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 42.
+	Language = "proto-germanic",
+	Type = "adjective",
+	Meanings = {"Holy"} -- source gives the German "heilig"
+})
+
 DefineLanguageWord("Herþa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 46.
 	Language = "proto-germanic",
 	Type = "noun",
@@ -775,17 +781,30 @@ DefineLanguageWord("Skaran", { -- source also gives the alternative form "Skara"
 	Meanings = {"Plowshare"} -- source gives "Schar, Pflugeisen" as the meaning
 })
 
+DefineLanguageWord("Smaiþra", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 263.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Artist"}, -- source gives the Latin "artifex"
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Smiþjôn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 264.
 	Language = "proto-germanic",
 	Type = "noun",
-	Meanings = {"Smithy"}, -- source gives "Schmiede" as the meaning
+	Meanings = {"Smithy"}, -- source gives the German "Schmiede" as the meaning
 	Gender = "feminine"
+})
+
+DefineLanguageWord("Smîþôn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 264.
+	Language = "proto-germanic",
+	Type = "verb",
+	Meanings = {}
 })
 
 DefineLanguageWord("Smiþu", { -- source also gives the alternative form "Smiþa"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 263.
 	Language = "proto-germanic",
 	Type = "noun",
-	Meanings = {"Smith", "Master Craftsman"}, -- source gives "Schmied, Werkmeister" as the meaning
+	Meanings = {"Smith", "Master Craftsman"}, -- source gives the German "Schmied, Werkmeister" as the meaning
 	Gender = "masculine"
 })
 

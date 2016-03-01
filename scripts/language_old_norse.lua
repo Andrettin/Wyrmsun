@@ -555,6 +555,13 @@ DefineLanguageWord("Haugr", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Heilagr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 42.
+	Language = "old-norse",
+	Type = "adjective",
+	Meanings = {"Holy"}, -- source gives the German "heilig"
+	DerivesFrom = {"proto-germanic", "adjective", "Hailaga"}
+})
+
 DefineLanguageWord("Hnīga", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 	Language = "old-norse",
 	Type = "verb",
@@ -886,6 +893,23 @@ DefineLanguageWord("Silfr", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Meanings = {"Silver"}, -- source gives the German "Silber" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Silubra"},
 	Gender = "neuter"
+})
+
+DefineLanguageWord("Smiđja", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 264.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Smithy"}, -- source gives the German "Schmiede" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Smiþjôn"}
+})
+
+DefineLanguageWord("Smiđr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 263.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Craftsman", "Builder", "Smith"}, -- source gives the German "Handwerker, Baumeister, Schmied"
+	DerivesFrom = {"proto-germanic", "noun", "Smiþu"},
+	NumberCaseInflections = {
+		"singular", "genitive", "Smiđs" -- alternatively also "Smiđar" (is that the genitive plural?)
+	}
 })
 
 DefineLanguageWord("Sorg", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.

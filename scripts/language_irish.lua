@@ -141,6 +141,12 @@ DefineLanguageWord("Medg", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Gender = "feminine"
 })
 
+DefineLanguageWord("Mían", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 264.
+	Language = "irish",
+	Type = "noun",
+	Meanings = {"Metal"} -- source gives the German "Metall"
+})
+
 DefineLanguageWord("Notail", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 19.
 	Language = "irish",
 	Type = "verb",

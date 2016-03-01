@@ -82,6 +82,12 @@ DefineLanguageWord("Kukŭ", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Meanings = {"Crooked"} -- source gives the German "krumm" as the meaning
 })
 
+DefineLanguageWord("Mědĭ", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 264.
+	Language = "old-church-slavonic",
+	Type = "noun",
+	Meanings = {"Metal"} -- source gives the German "Metall"
+})
+
 DefineLanguageWord("Mězga", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "old-church-slavonic",
 	Type = "noun",

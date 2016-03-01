@@ -282,6 +282,13 @@ DefineLanguageWord("Halsberc", { -- Source: http://www.cnrtl.fr/definition/haube
 	Meanings = {"Neck Cover"} -- source gives the French "ce qui protège le cou" as the meaning
 })
 
+DefineLanguageWord("Heilec", { -- source also gives the alternative form "heilic"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 42.
+	Language = "middle-high-german",
+	Type = "adjective",
+	Meanings = {"Holy"}, -- source gives the German "heilig"
+	DerivesFrom = {"old-high-german", "adjective", "Heilag"}
+})
+
 DefineLanguageWord("Hert", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 46.
 	Language = "middle-high-german",
 	Type = "noun",
@@ -465,6 +472,21 @@ DefineLanguageWord("Silber", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Meanings = {"Silver"}, -- source gives the German "Silber" as the meaning
 	DerivesFrom = {"old-high-german", "noun", "Silabar"},
 	Gender = "neuter"
+})
+
+DefineLanguageWord("Smide", { -- source also gives the alternative form "smitte"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 264.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Smithy"}, -- source gives the German "Schmiede" as the meaning
+	DerivesFrom = {"old-high-german", "noun", "Smiththa"}
+})
+
+DefineLanguageWord("Smit", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, pp. 263-264.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Smith", "Skilled Metalworker"}, -- source gives the German "Schmied, (kunstfertiger) Arbeiter in Metall"
+	DerivesFrom = {"old-high-german", "noun", "Smid"},
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Sund", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.

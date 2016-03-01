@@ -25,6 +25,12 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineLanguageWord("Acht", {
+	Language = "high-german",
+	Type = "numeral",
+	Number = 8
+})
+
 DefineLanguageWord("Adalbert", {
 	Language = "high-german",
 	Type = "noun",
@@ -473,6 +479,12 @@ DefineLanguageWord("Drasch", {
 	AffixNameTypes = {"compound", "prefix", "singular", "terrain-mountains"} -- example: "Draschturm"
 })
 
+DefineLanguageWord("Drei", {
+	Language = "high-german",
+	Type = "numeral",
+	Number = 3
+})
+
 DefineLanguageWord("Eisen", {
 	Language = "high-german",
 	Type = "noun",
@@ -488,6 +500,12 @@ DefineLanguageWord("Eisern", {
 	Type = "adjective",
 	Meanings = {"Iron"},
 	DerivesFrom = {"middle-high-german", "noun", "Îsern"} -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 24.
+})
+
+DefineLanguageWord("Elf", {
+	Language = "high-german",
+	Type = "numeral",
+	Number = 11
 })
 
 DefineLanguageWord("Eltern", { -- this is the plural
@@ -577,7 +595,8 @@ DefineLanguageWord("Feuer", { -- Source: August Fick and Alf Torp, "Wortschatz d
 DefineLanguageWord("Feurig", {
 	Language = "high-german",
 	Type = "adjective",
-	Meanings = {"Fiery"}
+	Meanings = {"Fiery"},
+	DerivesFrom = {"middle-high-german", "noun", "Viur"} -- presumably, since "Feuer" does
 })
 
 DefineLanguageWord("Fisch", { -- Source: http://www.duden.de/rechtschreibung/Fisch
@@ -692,6 +711,12 @@ DefineLanguageWord("Gau", {
 	AffixNameTypes = {
 		"compound", "suffix", "singular", "province" -- example: "Nordgau"
 	}
+})
+
+DefineLanguageWord("Gelb", {
+	Language = "high-german",
+	Type = "adjective",
+	Meanings = {"Yellow"}
 })
 
 DefineLanguageWord("Gerhard", {
@@ -925,6 +950,7 @@ DefineLanguageWord("Heilig", {
 	Language = "high-german",
 	Type = "adjective",
 	Meanings = {"Holy"},
+	DerivesFrom = {"middle-high-german", "adjective", "Heilec"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 42.
 	AffixNameTypes = {
 		"compound", "prefix", "dative", "settlement", -- example: "Heiligenstadt"
 	}
@@ -1677,17 +1703,55 @@ DefineLanguageWord("Schlossberg", { -- Source: http://www.duden.de/rechtschreibu
 	NameTypes = {"terrain-hills"} -- example: "Schlossberg" (Graz)
 })
 
+DefineLanguageWord("Schmied", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"Smith"},
+	DerivesFrom = {"middle-high-german", "noun", "Smit"}, -- presumably
+	Gender = "masculine",
+	NumberCaseInflections = {
+		"singular", "genitive", "Schmiedes", -- alternatively also "Schmieds"
+		"plural", "nominative", "Schmiede",
+		"plural", "accusative", "Schmiede",
+		"plural", "dative", "Schmieden",
+		"plural", "genitive", "Schmiede"
+	}
+})
+
 DefineLanguageWord("Schmiede", {
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"Smithy"},
-	DerivesFrom = {"proto-germanic", "noun", "Smiþjôn"},
+	DerivesFrom = {"middle-high-german", "noun", "Smide"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 264.
 	Gender = "feminine",
 	NumberCaseInflections = {
 		"plural", "nominative", "Schmieden",
 		"plural", "accusative", "Schmieden",
 		"plural", "dative", "Schmieden",
 		"plural", "genitive", "Schmieden"
+	}
+})
+
+DefineLanguageWord("Schmieden", {
+	Language = "high-german",
+	Type = "verb",
+	Meanings = {"Forge"},
+	DerivesFrom = {"old-high-german", "verb", "Smidôn"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 264.
+	NumberPersonTenseMoodInflections = {
+		"singular", "first-person", "present", "indicative", "Schmiede",
+		"singular", "second-person", "present", "indicative", "Schmiedest",
+		"singular", "third-person", "present", "indicative", "Schmiedet",
+		"plural", "second-person", "present", "indicative", "Schmiedet",
+		"singular", "first-person", "past", "indicative", "Schmiedete",
+		"singular", "second-person", "past", "indicative", "Schmiedetest",
+		"singular", "third-person", "past", "indicative", "Schmiedete",
+		"plural", "first-person", "past", "indicative", "Schmiedeten",
+		"plural", "second-person", "past", "indicative", "Schmiedetet",
+		"plural", "third-person", "past", "indicative", "Schmiedeten"
+	},
+	Participles = {
+		"present", "Schmiedend",
+		"past", "Geschmiedet"
 	}
 })
 
@@ -1699,6 +1763,12 @@ DefineLanguageWord("Schnee", {
 	Gender = "masculine",
 	Uncountable = true,
 	AffixNameTypes = {"compound", "prefix", "singular", "terrain-mountains"} -- example: "Schneeberg"
+})
+
+DefineLanguageWord("Sechs", {
+	Language = "high-german",
+	Type = "numeral",
+	Number = 6
 })
 
 DefineLanguageWord("Sieg", {
@@ -1910,6 +1980,18 @@ DefineLanguageWord("Verrostet", {
 	Meanings = {"Rusty"}
 })
 
+DefineLanguageWord("Vier", {
+	Language = "high-german",
+	Type = "numeral",
+	Number = 4
+})
+
+DefineLanguageWord("Violett", {
+	Language = "high-german",
+	Type = "adjective",
+	Meanings = {"Violet"}
+})
+
 DefineLanguageWord("Waid", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 4.
 	Language = "high-german",
 	Type = "noun",
@@ -2019,11 +2101,23 @@ DefineLanguageWord("Wurm", {
 	}
 })
 
+DefineLanguageWord("Zehn", {
+	Language = "high-german",
+	Type = "numeral",
+	Number = 10
+})
+
 DefineLanguageWord("Zwei", {
 	Language = "high-german",
 	Type = "numeral",
 	Number = 2,
 	AffixNameTypes = {"compound", "prefix", "settlement"} -- example: "Zweibrücken"
+})
+
+DefineLanguageWord("Zwölf", {
+	Language = "high-german",
+	Type = "numeral",
+	Number = 12
 })
 
 DefineLanguageWord("Schwarz", {

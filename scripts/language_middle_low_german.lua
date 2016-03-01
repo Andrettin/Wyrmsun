@@ -115,6 +115,27 @@ DefineLanguageWord("Note", { -- source also gives the alternative form "Not"; So
 	DerivesFrom = {"proto-germanic", "noun", "Hnut"}
 })
 
+DefineLanguageWord("Smede", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 264.
+	Language = "middle-low-german",
+	Type = "noun",
+	Meanings = {"Smithy"}, -- source gives the German "Schmiede" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Smiþjôn"}
+})
+
+DefineLanguageWord("Smeden", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 264.
+	Language = "middle-low-german",
+	Type = "verb",
+	Meanings = {"Forge"}, -- source gives the German "schmieden" as the meaning
+	DerivesFrom = {"proto-germanic", "verb", "Smîþôn"}
+})
+
+DefineLanguageWord("Smit", { -- source also gives the alternative form "Smet"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 263.
+	Language = "middle-low-german",
+	Type = "noun",
+	Meanings = {"Smith"}, -- source gives the German "Schmied"
+	DerivesFrom = {"old-saxon", "noun", "Smiđ"}
+})
+
 DefineLanguageWord("Sûd", { -- source also gives the alternative form "sûder"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.
 	Language = "middle-low-german",
 	Type = "adverb",

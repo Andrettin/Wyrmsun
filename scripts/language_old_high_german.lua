@@ -400,6 +400,13 @@ DefineLanguageWord("Hamar", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Heilag", { -- source also gives the alternative form "heilac"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 42.
+	Language = "old-high-german",
+	Type = "adjective",
+	Meanings = {"Holy"}, -- source gives the German "heilig"
+	DerivesFrom = {"proto-germanic", "adjective", "Hailaga"}
+})
+
 DefineLanguageWord("Herd", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 46.
 	Language = "old-high-german",
 	Type = "noun",
@@ -695,6 +702,36 @@ DefineLanguageWord("Skato", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Type = "noun",
 	Meanings = {"Shadow"},
 	DerivesFrom = {"proto-germanic", "noun", "Skadwas"}
+})
+
+DefineLanguageWord("Smaidar", { -- source also gives the alternative form "smeidar"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, pp. 263-264.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Artist"}, -- source gives the Latin "artifex"
+	DerivesFrom = {"proto-germanic", "noun", "Smaiþra"},
+	Gender = "masculine"
+})
+
+DefineLanguageWord("Smid", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, pp. 263-264.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Smith", "Skilled Metalworker"}, -- source gives the German "Schmied, (kunstfertiger) Arbeiter in Metall"
+	DerivesFrom = {"proto-germanic", "noun", "Smiþu"},
+	Gender = "masculine"
+})
+
+DefineLanguageWord("Smidôn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 264.
+	Language = "old-high-german",
+	Type = "verb",
+	Meanings = {"Forge"}, -- source gives the German "schmieden" as the meaning
+	DerivesFrom = {"proto-germanic", "verb", "Smîþôn"}
+})
+
+DefineLanguageWord("Smiththa", { -- source also gives the alternative forms "smitta", "smidda" and "smida"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 264.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Smithy"}, -- source gives the German "Schmiede" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Smiþjôn"}
 })
 
 DefineLanguageWord("Snura", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.

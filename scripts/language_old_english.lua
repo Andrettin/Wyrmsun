@@ -795,6 +795,27 @@ DefineLanguageWord("Seolfor", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Gender = "neuter"
 })
 
+DefineLanguageWord("Smiþ", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 263.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Smith", "Wheelwright"}, -- source gives the German "Schmied, Rademacher"
+	DerivesFrom = {"proto-germanic", "noun", "Smiþu"}
+})
+
+DefineLanguageWord("Smiþian", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 264.
+	Language = "old-english",
+	Type = "verb",
+	Meanings = {"Work Metal", "Work Wood"}, -- source gives the German "in Metall oder Holz arbeiten" as the meaning
+	DerivesFrom = {"proto-germanic", "verb", "Smîþôn"}
+})
+
+DefineLanguageWord("Smiþþe", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 264.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Smithy"}, -- source gives the German "Schmiede" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Smiþjôn"}
+})
+
 DefineLanguageWord("Snoru", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
 	Language = "old-english",
 	Type = "noun",
@@ -1252,6 +1273,13 @@ DefineLanguageWord("Gydig", { -- Source: Alaric Hall, "The Meanings of Elf and E
 	Language = "old-english",
 	Type = "adjective",
 	Meanings = {"Possessed (by a God)"}
+})
+
+DefineLanguageWord("Hâlig", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 42.
+	Language = "old-english",
+	Type = "adjective",
+	Meanings = {"Holy"}, -- source gives the German "heilig"
+	DerivesFrom = {"proto-germanic", "adjective", "Hailaga"}
 })
 
 DefineLanguageWord("Long", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.

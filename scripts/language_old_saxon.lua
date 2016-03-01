@@ -228,6 +228,13 @@ DefineLanguageWord("Hamur", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Hêlag", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 42.
+	Language = "old-saxon",
+	Type = "adjective",
+	Meanings = {"Holy"}, -- source gives the German "heilig"
+	DerivesFrom = {"proto-germanic", "adjective", "Hailaga"}
+})
+
 DefineLanguageWord("Herta", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
 	Language = "old-saxon",
 	Type = "noun",
@@ -398,6 +405,13 @@ DefineLanguageWord("Siluƀar", { -- Source: August Fick and Alf Torp, "Wortschat
 	Meanings = {"Silver"}, -- source gives the German "Silber" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Silubra"},
 	Gender = "neuter"
+})
+
+DefineLanguageWord("Smiđ", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 263.
+	Language = "old-saxon", -- source gives Old Low German
+	Type = "noun",
+	Meanings = {"Smith"}, -- source gives the German "Schmied"
+	DerivesFrom = {"proto-germanic", "noun", "Smiþu"}
 })
 
 DefineLanguageWord("Sorga", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.

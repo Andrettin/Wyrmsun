@@ -79,6 +79,13 @@ DefineLanguageWord("Aiz", { -- Source: Richard M. Runge, "The Phonetic Realizati
 	Meanings = {"Bronze"}
 })
 
+DefineLanguageWord("Aizasmiþa", { -- the latter part of this compound is derived from the Proto-Germanic noun "Smiþu"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, pp. 263-264.
+	Language = "gothic",
+	Type = "noun",
+	Meanings = {"Smith"}, -- source gives the German "Schmied"
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Alan", { -- source also gives the alternative forms "Ôl" and "Alans"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 19.
 	Language = "gothic",
 	Type = "verb",
@@ -279,6 +286,13 @@ DefineLanguageWord("Gards", { -- the TLFi gives "Garda" instead; Source: Winfred
 	Type = "noun",
 	Meanings = {"Enclosure"}, -- the TLFi gives the French "clôture" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Gárdiz"}
+})
+
+DefineLanguageWord("Gasmiþôn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 264.
+	Language = "gothic",
+	Type = "verb",
+	Meanings = {"Forge", "Prepare"}, -- source gives the German "schmieden, bereiten" as the meaning
+	DerivesFrom = {"proto-germanic", "verb", "Smîþôn"}
 })
 
 DefineLanguageWord("Gazds", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.

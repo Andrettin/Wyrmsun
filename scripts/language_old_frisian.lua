@@ -151,6 +151,13 @@ DefineLanguageWord("Hēde", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Uncountable = true -- as a material, it is likely to be uncountable
 })
 
+DefineLanguageWord("Hêlich", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 42.
+	Language = "old-frisian",
+	Type = "adjective",
+	Meanings = {"Holy"}, -- source gives the German "heilig"
+	DerivesFrom = {"proto-germanic", "adjective", "Hailaga"}
+})
+
 DefineLanguageWord("Herne", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 47.
 	Language = "old-frisian",
 	Type = "noun",
@@ -308,6 +315,20 @@ DefineLanguageWord("Selover", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Meanings = {"Silver"}, -- source gives the German "Silber" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Silubra"},
 	Gender = "neuter"
+})
+
+DefineLanguageWord("Smeth", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 263.
+	Language = "old-frisian",
+	Type = "noun",
+	Meanings = {"Smith"}, -- source gives the German "Schmied"
+	DerivesFrom = {"proto-germanic", "noun", "Smiþu"}
+})
+
+DefineLanguageWord("Smithe", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 264.
+	Language = "old-frisian",
+	Type = "noun",
+	Meanings = {"Smithy"}, -- source gives the German "Schmiede" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Smiþjôn"}
 })
 
 DefineLanguageWord("Sûth", { -- source also gives the alternative form "Sûther"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.
