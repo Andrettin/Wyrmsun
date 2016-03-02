@@ -1307,6 +1307,24 @@ DefineLanguageWord("Hearth", {
 	Gender = "neuter"
 })
 
+DefineLanguageWord("Helm", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Helm"},
+	DerivesFrom = {"old-english", "noun", "Helm"}, -- presumably
+	Gender = "neuter",
+	AffixNameTypes = {"separate", "suffix", "singular", "unit-class-smithy"} -- seems sensible
+})
+
+DefineLanguageWord("Helmet", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Helmet"},
+	DerivesFrom = {"old-english", "noun", "Helm"}, -- presumably
+	Gender = "neuter",
+	AffixNameTypes = {"separate", "suffix", "singular", "unit-class-smithy"} -- seems sensible
+})
+
 DefineLanguageWord("Hemp", {
 	Language = "english",
 	Type = "noun",
@@ -2639,6 +2657,13 @@ DefineLanguageWord("Thorn", {
 	AffixNameTypes = {
 		"separate", "prefix", "singular", "terrain-mountains" -- example: "Thorn Crag"
 	}
+})
+
+DefineLanguageWord("Thorp", { -- Source: http://www.cnrtl.fr/definition/trop
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Village"}, -- source gives the French "village" as the meaning
+	DerivesFrom = {"old-english", "noun", "Þorp"} -- presumably
 })
 
 DefineLanguageWord("Three", {

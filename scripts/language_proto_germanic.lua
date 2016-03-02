@@ -522,6 +522,13 @@ DefineLanguageWord("Hailaga", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Meanings = {"Holy"} -- source gives the German "heilig"
 })
 
+DefineLanguageWord("Helma", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 49.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Helm"}, -- source gives the German "Helm" as the meaning
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Herþa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 46.
 	Language = "proto-germanic",
 	Type = "noun",

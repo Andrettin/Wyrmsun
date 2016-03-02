@@ -235,6 +235,14 @@ DefineLanguageWord("Hêlag", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	DerivesFrom = {"proto-germanic", "adjective", "Hailaga"}
 })
 
+DefineLanguageWord("Helm", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 49.
+	Language = "old-saxon",
+	Type = "noun",
+	Meanings = {"Helm", "Treetop"}, -- source gives the German "Helm, Wipfel" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Helma"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Hêm", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 52.
 	Language = "old-saxon",
 	Type = "noun",

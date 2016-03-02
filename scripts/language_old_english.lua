@@ -512,6 +512,14 @@ DefineLanguageWord("Hearpestre", { -- Source: Alaric Hall, "The Meanings of Elf 
 	Gender = "feminine" -- presumably, given the source is talking about occupations for women
 })
 
+DefineLanguageWord("Helm", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 49.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Helm", "Treetop"}, -- source gives the German "Helm, Wipfel" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Helma"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Heordan", { -- this is the plural, what is the singular? Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
 	Language = "old-english",
 	Type = "noun",

@@ -602,6 +602,14 @@ DefineLanguageWord("Heimskr", { -- Source: August Fick and Alf Torp, "Wortschatz
 	DerivesFrom = {"proto-germanic", "noun", "Haima"} -- apparently
 })
 
+DefineLanguageWord("Hjalmr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 49.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Helm", "Treetop"}, -- source (apparently) gives the German "Helm, Wipfel" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Helma"},
+	Gender = "masculine" -- apparently
+})
+
 DefineLanguageWord("Hnīga", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 	Language = "old-norse",
 	Type = "verb",
@@ -1041,12 +1049,12 @@ DefineLanguageWord("Þjôđ", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Gender = "feminine"
 })
 
-DefineLanguageWord("Þorp", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 100.
+DefineLanguageWord("Þorp", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 100; Source: http://www.cnrtl.fr/definition/trop
 	Language = "old-norse",
 	Type = "noun",
-	Meanings = {"Flock", "Crowd", "Farmstead"}, -- source gives the German "Schar, Menschenhaufen, kleineres Gehöft" as the meaning
-	DerivesFrom = {"proto-germanic", "noun", "Þurpa"},
-	Gender = "neuter"
+	Meanings = {"Flock", "Crowd", "Farmstead"}, -- Fick gives the German "Schar, Menschenhaufen, kleineres Gehöft" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Þurpa"}, -- as given by Fick
+	Gender = "neuter" -- as given by Fick
 })
 
 DefineLanguageWord("Þrennr", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.

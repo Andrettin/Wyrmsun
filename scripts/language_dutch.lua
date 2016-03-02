@@ -121,6 +121,13 @@ DefineLanguageWord("Dam", {
 	}
 })
 
+DefineLanguageWord("Dorp", { -- Source: http://www.cnrtl.fr/definition/trop
+	Language = "dutch",
+	Type = "noun",
+	Meanings = {"Village"}, -- source gives the French "village" as the meaning
+	DerivesFrom = {"old-frankish", "noun", "Thorp"} -- presumably
+})
+
 DefineLanguageWord("Ede", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
 	Language = "dutch",
 	Type = "noun",

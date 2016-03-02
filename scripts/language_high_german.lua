@@ -1004,6 +1004,21 @@ DefineLanguageWord("Hel", {
 	AffixNameTypes = {"compound", "prefix", "singular", "person"} -- example: "Helmut"
 })
 
+DefineLanguageWord("Helm", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"Helm"},
+	DerivesFrom = {"middle-high-german", "noun", "Helm"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 49.
+	Gender = "masculine",
+	NumberCaseInflections = {
+		"singular", "genitive", "Helmes", -- alternatively also "Helms"
+		"plural", "nominative", "Helme",
+		"plural", "accusative", "Helme",
+		"plural", "dative", "Helmen",
+		"plural", "genitive", "Helme"
+	}
+})
+
 DefineLanguageWord("Herd", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 46.
 	Language = "high-german",
 	Type = "noun",

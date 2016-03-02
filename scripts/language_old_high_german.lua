@@ -476,6 +476,13 @@ DefineLanguageWord("Heira", { -- accusative; Source: August Fick and Alf Torp, "
 	Accusative = "Heira"
 })
 
+DefineLanguageWord("Helm", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 49; Source: http://www.cnrtl.fr/definition/heaume
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Helm"}, -- the TLFi gives the French "casque" as the meaning, while Fick gives the German "Helm"
+	DerivesFrom = {"proto-germanic", "noun", "Helma"} -- as given by Fick
+})
+
 DefineLanguageWord("Herd", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 46.
 	Language = "old-high-german",
 	Type = "noun",

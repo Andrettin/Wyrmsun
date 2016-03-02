@@ -149,6 +149,12 @@ DefineLanguageWord("Halsberg", { -- compound of the noun "Hals" and the verb "Be
 	Meanings = {"Neck Cover"} -- source gives the French "ce qui protège le cou" as the meaning
 })
 
+DefineLanguageWord("Helm", { -- Source: http://www.cnrtl.fr/definition/heaume
+	Language = "old-frankish", -- source gives "Ancien Bas Francique" (= Old Frankish)
+	Type = "noun",
+	Meanings = {"Helmet"} -- source gives the French "casque" as the meaning
+})
+
 DefineLanguageWord("Ithi", { -- apparently a suffix forming the compound "haimithi"; Source: http://www.cnrtl.fr/definition/Amad%E9
 	Language = "old-frankish",
 	Type = "noun", -- correct?
@@ -225,6 +231,13 @@ DefineLanguageWord("Sworga", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Meanings = {"Worry"}, -- source gives the German "Sorge" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Surgô"},
 	Gender = "feminine"
+})
+
+DefineLanguageWord("Thorp", { -- source also gives the alternative form "throp"; Source: http://www.cnrtl.fr/definition/trop
+	Language = "old-frankish", -- source gives "Ancien Bas Francique" (= Old Frankish)
+	Type = "noun",
+	Meanings = {"Heap", "Agglomeration", "Village"}, -- source gives the French "amas, agglomération; village" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Þurpa"} -- presumably
 })
 
 DefineLanguageWord("Waidanjan", { -- Source: http://www.cnrtl.fr/definition/barguigner

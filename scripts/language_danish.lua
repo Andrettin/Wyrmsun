@@ -52,3 +52,10 @@ DefineLanguageWord("Sorg", {
 		"compound", "prefix", "plural", "settlement" -- example: "Sorgenfri"
 	}
 })
+
+DefineLanguageWord("Torp", { -- Source: http://www.cnrtl.fr/definition/trop
+	Language = "danish",
+	Type = "noun",
+	Meanings = {"Hamlet"}, -- source gives the French "hameau" as the meaning
+	DerivesFrom = {"old-norse", "noun", "Þorp"} -- presumably
+})

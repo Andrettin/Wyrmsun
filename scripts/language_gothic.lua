@@ -379,8 +379,15 @@ DefineLanguageWord("Haurn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Language = "gothic",
 	Type = "noun",
 	Meanings = {"Horn"}, -- as given by Lehmann; Fick gives the German "Horn, Hornfrucht" instead
-	DerivesFrom = {"proto-germanic", "noun", "Hurna"}, -- presumably
+	DerivesFrom = {"proto-germanic", "noun", "Hurna"}, -- as given by Fick
 	Gender = "neuter" -- as given by Fick
+})
+
+DefineLanguageWord("Hilms", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 49.
+	Language = "gothic",
+	Type = "noun",
+	Meanings = {"Helm"}, -- source gives the German "Helm" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Helma"}
 })
 
 DefineLanguageWord("Hlaifs", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.

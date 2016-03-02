@@ -358,6 +358,13 @@ DefineLanguageWord("Heira", { -- accusative; Source: August Fick and Alf Torp, "
 	Accusative = "Heira"
 })
 
+DefineLanguageWord("Helm", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 49.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Helm"}, -- source gives the German "Helm"
+	DerivesFrom = {"old-high-german", "noun", "Helm"}
+})
+
 DefineLanguageWord("Hert", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 46.
 	Language = "middle-high-german",
 	Type = "noun",

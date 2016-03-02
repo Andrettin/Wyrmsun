@@ -209,6 +209,13 @@ DefineLanguageWord("Haubert", {
 	DerivesFrom = {"old-french", "noun", "Halberc"} -- Source: http://www.cnrtl.fr/definition/haubert
 })
 
+DefineLanguageWord("Heaume", {
+	Language = "french",
+	Type = "noun",
+	Meanings = {"Helmet"}, -- source gives the French "casque" as the meaning
+	DerivesFrom = {"old-frankish", "noun", "Helm"} -- Source: http://www.cnrtl.fr/definition/heaume
+})
+
 DefineLanguageWord("Hem", {
 	Language = "french",
 	Type = "noun",
@@ -252,4 +259,11 @@ DefineLanguageWord("Sénéchal", {
 	Meanings = {"Seneschal"},
 	DerivesFrom = {"old-frankish", "noun", "Siniskalk"}, -- Source: http://www.cnrtl.fr/definition/s%C3%A9n%C3%A9chal
 	Gender = "masculine"
+})
+
+DefineLanguageWord("Trop", {
+	Language = "french",
+	Type = "adverb",
+	Meanings = {"Too"},
+	DerivesFrom = {"old-frankish", "noun", "Thorp"} -- Source: http://www.cnrtl.fr/definition/trop
 })

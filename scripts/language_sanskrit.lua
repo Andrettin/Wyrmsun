@@ -83,6 +83,13 @@ DefineLanguageWord("Brhant", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Meanings = {"High"} -- source gives "Hoch" as the meaning
 })
 
+DefineLanguageWord("Çárman", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 49.
+	Language = "sanskrit",
+	Type = "noun",
+	Meanings = {"Shield", "Blanket"}, -- source gives the German "Schirm, Decke" as the meaning
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Çṛṅga", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 47.
 	Language = "sanskrit",
 	Type = "noun",
