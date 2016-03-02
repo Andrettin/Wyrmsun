@@ -167,7 +167,7 @@ DefineRaceNames(
 --			"Vorarl" -- example: "Vorarlberg"
 		},
 		"province-name-suffixes", {
-			"phalien" -- example: "Westphalien" (Westphalia)
+			"falen" -- example: "Westfalen" (Westphalia)
 		},
 		"settlement-names", {
 			"Botzen",

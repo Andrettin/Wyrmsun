@@ -104,7 +104,10 @@ DefineLanguageWord("Alt", {
 	Type = "adjective",
 	Meanings = {"Old"},
 	DerivesFrom = {"middle-high-german", "adjective", "Alt"},
-	AffixNameTypes = {"compound", "prefix", "singular", "settlement"} -- example: "Altsohl"
+	AffixNameTypes = {
+		"compound", "prefix", "province", -- example: "Altmark" (Source: William R. Shepherd, "Historical Atlas", 1911, pp. 134-135)
+		"compound", "prefix", "settlement" -- example: "Altsohl"
+	}
 })
 
 DefineLanguageWord("Amboss", {
@@ -1424,7 +1427,7 @@ DefineLanguageWord("Mark", {
 		"plural", "dative", "Marken",
 		"plural", "genitive", "Marken"
 	},
-	AffixNameTypes = {"compound", "suffix", "singular", "province"} -- example: "Steiermark" (Styria)
+	AffixNameTypes = {"compound", "suffix", "singular", "province"} -- examples: "Ostmark", "Steiermark" (Styria)
 })
 
 DefineLanguageWord("Matthias", {
@@ -1461,6 +1464,20 @@ DefineLanguageWord("Michael", {
 	NameTypes = {"person"}
 })
 
+DefineLanguageWord("Mittel", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"Means", "Middle"},
+	Gender = "neuter",
+	NumberCaseInflections = {
+		"plural", "genitive", "Mittels",
+		"plural", "dative", "Mitteln"
+	},
+	AffixNameTypes = {
+		"compound", "prefix", "province" -- example: "Mittelmark" (Source: William R. Shepherd, "Historical Atlas", 1911, pp. 134-135)
+	}
+})
+
 DefineLanguageWord("Mühle", { -- Source: http://www.duden.de/rechtschreibung/Muehle
 	Language = "high-german",
 	Type = "noun",
@@ -1490,6 +1507,7 @@ DefineLanguageWord("Neu", {
 	Meanings = {"New"},
 	DerivesFrom = {"middle-high-german", "adjective", "Niuwe"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 153.
 	AffixNameTypes = {
+		"compound", "prefix", "province", -- example: "Neumark" (Source: William R. Shepherd, "Historical Atlas", 1911, pp. 134-135)
 		"compound", "prefix", "settlement", -- examples: "Neusohl", "Neusorge", "Neustadt"
 		"compound", "infix", "settlement", -- example: "Klosterneuburg"
 		"separate", "prefix", "settlement", -- example: "Neue Sorge"

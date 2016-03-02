@@ -3854,7 +3854,7 @@ function LoadProvinces(world)
 		Westphalia = {
 			Name = "Westphalia",
 			CulturalNames = {
-				teuton = "Westphalien"
+				teuton = "Westfalen"
 			},
 			Tiles = {
 --				{125, 26}, {125, 27}, {125, 28}, {126, 26}, {126, 27}, {126, 28}, {127, 26}, -- old map
