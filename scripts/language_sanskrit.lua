@@ -263,6 +263,12 @@ DefineLanguageWord("Rấdhas", { -- Source: August Fick and Alf Torp, "Wortschat
 	Gender = "neuter"
 })
 
+DefineLanguageWord("Sámâ", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.
+	Language = "sanskrit",
+	Type = "noun",
+	Meanings = {"Semester", "Season", "Year"} -- source gives the German "Halbjahr, Jahreszeit, Jahr" as the meaning
+})
+
 DefineLanguageWord("Saptá", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
 	Language = "sanskrit",
 	Type = "numeral",

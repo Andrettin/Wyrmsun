@@ -997,6 +997,13 @@ DefineLanguageWord("Silfr", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Gender = "neuter"
 })
 
+DefineLanguageWord("Simull", { -- source also gives the alternative forms "Simi" and "Siruir"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Ox", "One Year Old Ox"}, -- source gives the German "(einjähriger) Ochs" as the meaning
+	-- according to the source, this word possibly comes from an original (Proto-Germanic?) "sem-", meaning "Summer" and being related to Proto-Germanic "Sumara"
+})
+
 DefineLanguageWord("Smiđja", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 264.
 	Language = "old-norse",
 	Type = "noun",
@@ -1042,6 +1049,14 @@ DefineLanguageWord("Suđr", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Type = "adverb",
 	Meanings = {"Southward"}, -- source gives the German "südwärts" as the meaning
 	DerivesFrom = {"proto-germanic", "adverb", "Sunþa"}
+})
+
+DefineLanguageWord("Sumar", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223; Source: http://www.cnrtl.fr/definition/sombre//3
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Summer"}, -- Fick gives the German "Sommer" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Sumara"}, -- as given by Fick
+	Gender = "neuter" -- as given by Fick
 })
 
 DefineLanguageWord("Sunna", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.

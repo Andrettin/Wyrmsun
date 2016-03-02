@@ -39,6 +39,12 @@ DefineLanguageWord("Barez", { -- source also gives the alternative form "Bareza"
 	Gender = "feminine"
 })
 
+DefineLanguageWord("Hama", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.
+	Language = "avestan",
+	Type = "noun",
+	Meanings = {"Summer"} -- source gives the German "Sommer" as the meaning
+})
+
 DefineLanguageWord("Marezu", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 160.
 	Language = "avestan",
 	Type = "noun",

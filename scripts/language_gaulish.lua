@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2015 by Andrettin
+--      (c) Copyright 2016 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -54,4 +54,10 @@ DefineLanguageWord("Ritu", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Language = "gaulish",
 	Type = "noun",
 	Meanings = {"Ford"} -- source gives the German "Furt" as the meaning
+})
+
+DefineLanguageWord("Samo", { -- Source: http://www.cnrtl.fr/definition/sombre//3
+	Language = "gaulish",
+	Type = "noun",
+	Meanings = {"Summer"} -- source gives the French "été" as the meaning
 })

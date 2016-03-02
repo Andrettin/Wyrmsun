@@ -46,3 +46,10 @@ DefineLanguageWord("Linda", { -- vernacular; Source: August Fick and Alf Torp, "
 	DerivesFrom = {"old-norse", "noun", "Land"}, -- presumably
 	Gender = "feminine"
 })
+
+DefineLanguageWord("Somel", { -- vernacular; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.
+	Language = "swedish",
+	Type = "noun",
+	Meanings = {"Female Reindeer"}, -- source gives the German "Renntierkuh" as the meaning
+	DerivesFrom = {"old-norse", "noun", "Simull"} -- apparently
+})

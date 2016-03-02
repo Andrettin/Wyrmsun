@@ -25,6 +25,13 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineLanguageWord("Aba", { -- Lehmann also gives the alternative form "ab"; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+	Language = "old-high-german",
+	Type = "adposition",
+	Meanings = {"From"}, -- derived from the Proto-Germanic "Af", which means "From"
+	DerivesFrom = {"proto-germanic", "adposition", "Af"}
+})
+
 DefineLanguageWord("Adal", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 14.
 	Language = "old-high-german",
 	Type = "noun",
@@ -72,6 +79,13 @@ DefineLanguageWord("Bah", { -- Source: August Fick and Alf Torp, "Wortschatz der
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Beran", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
+	Language = "old-high-german",
+	Type = "verb",
+	Meanings = {},
+	DerivesFrom = {"proto-germanic", "verb", "Beran"}
+})
+
 DefineLanguageWord("Berg", { -- source also gives the alternative forms "Berc", "Perc", "Perag" and "Perac"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
 	Language = "old-high-german",
 	Type = "noun",
@@ -88,10 +102,33 @@ DefineLanguageWord("Bero", { -- source also gives the alternative form "Pero"; S
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Biotan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+	Language = "old-high-german",
+	Type = "verb",
+	Meanings = {"Bid", "Offer", "Order"},
+	DerivesFrom = {"proto-germanic", "verb", "Beud"}
+})
+
+DefineLanguageWord("Birit", { -- this is the singular third person present form; Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
+	Language = "old-high-german",
+	Type = "verb",
+	Meanings = {"Bears"},
+	-- infinitive form? maybe is the same word as "beran", since the Latin cognate of "beran", "ferō", means "I bear"
+	NumberPersonTenseMoodInflections = {
+		"singular", "third-person", "present", "indicative", "Birit"
+	}
+})
+
 DefineLanguageWord("Biskerian", { -- Source: http://www.cnrtl.fr/definition/d%C3%A9chirer
 	Language = "old-high-german",
 	Type = "verb",
 	Meanings = {"Deprive", "Frustrate", "Separate"} -- source gives the Latin (?) "privare, frustrare, separare" as the meaning
+})
+
+DefineLanguageWord("Bītan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
+	Language = "old-high-german",
+	Type = "verb",
+	Meanings = {"Bite"}
 })
 
 DefineLanguageWord("Blāo", { -- the TLFi also gives the alternative form "blāwēr"; Fick gives "blâo, plâo" instead; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 147; Source: http://www.cnrtl.fr/definition/bleu
@@ -235,6 +272,13 @@ DefineLanguageWord("Dorf", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Gender = "neuter"
 })
 
+DefineLanguageWord("Durri", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+	Language = "old-high-german",
+	Type = "adjective",
+	Meanings = {"Dry"}, -- derived from Proto-Germanic "Þrsúz", which has the meaning of "dry"
+	DerivesFrom = {"proto-germanic", "adjective", "Þrsúz"}
+})
+
 DefineLanguageWord("Eddo", { -- Also given as "Edo", are Eddo and Edo two forms of "or" in Old High German, or are they just different ways to write the same word in that language?; Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
 	Language = "old-high-german",
 	Type = "conjunction",
@@ -268,6 +312,12 @@ DefineLanguageWord("Essa", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Meanings = {"Forge"}, -- source gives the German "Esse" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Asjôn"},
 	Gender = "feminine"
+})
+
+DefineLanguageWord("Ezzan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 3, Subsection 1.
+	Language = "old-high-german",
+	Type = "verb",
+	Meanings = {"Eat"}
 })
 
 DefineLanguageWord("Fehu", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
@@ -304,6 +354,13 @@ DefineLanguageWord("Fuir", { -- source also gives the alternate form "Fiur"; Sou
 	Meanings = {"Fire"}, -- source gives "Feuer" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Fûir"},
 	Gender = "neuter"
+})
+
+DefineLanguageWord("Fūl", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+	Language = "old-high-german",
+	Type = "adjective",
+	Meanings = {"Foul"}, -- derived from the Proto-Germanic "Fūla", which means "Foul"
+	DerivesFrom = {"proto-germanic", "adjective", "Fūla"}
 })
 
 DefineLanguageWord("Fuoz", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
@@ -476,6 +533,12 @@ DefineLanguageWord("Heira", { -- accusative; Source: August Fick and Alf Torp, "
 	Accusative = "Heira"
 })
 
+DefineLanguageWord("Helfan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
+	Language = "old-high-german",
+	Type = "verb",
+	Meanings = {"Help"}
+})
+
 DefineLanguageWord("Helm", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 49; Source: http://www.cnrtl.fr/definition/heaume
 	Language = "old-high-german",
 	Type = "noun",
@@ -503,6 +566,13 @@ DefineLanguageWord("Hleib", { -- Source: Richard M. Runge, "The Phonetic Realiza
 	Meanings = {"Bread"}
 })
 
+DefineLanguageWord("Hnīgan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
+	Language = "old-high-german",
+	Type = "verb",
+	Meanings = {"Bow"},
+	DerivesFrom = {"proto-indo-european", "verb", "Kneygʷh"}
+})
+
 DefineLanguageWord("Hnuz̨", { -- source also gives the alternative form "Nuz̨"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 58.
 	Language = "old-high-german",
 	Type = "noun",
@@ -519,6 +589,12 @@ DefineLanguageWord("Hōh", { -- Fick gives "hôh" instead; Source: Richard M. Ru
 	Type = "adjective",
 	Meanings = {"High"}, -- Runge gives the German "hoch" as the meaning
 	DerivesFrom = {"proto-germanic", "adjective", "Hauha"} -- as given by Fick
+})
+
+DefineLanguageWord("Hōren", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
+	Language = "old-high-german",
+	Type = "verb",
+	Meanings = {"Hear"}
 })
 
 DefineLanguageWord("Horn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 47.
@@ -582,10 +658,31 @@ DefineLanguageWord("Jār", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	DerivesFrom = {"proto-germanic", "noun", "Yēra"}
 })
 
+DefineLanguageWord("Jung", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
+	Language = "old-high-german",
+	Type = "adjective",
+	Meanings = {"Young"},
+	DerivesFrom = {"proto-indo-european", "adjective", "Yehw"}
+})
+
 DefineLanguageWord("Kōl", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Cabbage"}
+})
+
+DefineLanguageWord("Kweman", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "old-high-german",
+	Type = "verb",
+	Meanings = {"Come"}, -- apparently, but not entirely clear from the source
+	DerivesFrom = {"proto-germanic", "verb", "Kwemanan"}
+})
+
+DefineLanguageWord("Lang", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+	Language = "old-high-german",
+	Type = "adjective",
+	Meanings = {"Long"}, -- derived from Proto-Germanic "Langaz", which means "Long"
+	DerivesFrom = {"proto-germanic", "adjective", "Langaz"}
 })
 
 DefineLanguageWord("Lant", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 184.
@@ -599,10 +696,44 @@ DefineLanguageWord("Lant", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	}
 })
 
+DefineLanguageWord("Lēren", { -- causative verb; Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 4.
+	Language = "old-high-german",
+	Type = "verb",
+	Meanings = {"Teach"}
+})
+
+DefineLanguageWord("Lernēn", { -- source also gives "Lirnēn" as an alternative; Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
+	Language = "old-high-german",
+	Type = "verb",
+	Meanings = {"Learn"}
+})
+
+DefineLanguageWord("Līhan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
+	Language = "old-high-german",
+	Type = "verb",
+	Meanings = {"Lend"},
+	DerivesFrom = {"proto-indo-european", "verb", "Leykʷ"},
+	NumberPersonTenseMoodInflections = {
+		"plural", "first-person", "past", "indicative", "Liwum" -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
+	}
+})
+
 DefineLanguageWord("Lōn", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Pay"} -- source gives German word "Lohn" as transation
+})
+
+DefineLanguageWord("Lōs", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
+	Language = "old-high-german",
+	Type = "adjective",
+	Meanings = {"Empty", "Loose"} -- source gives translation as the German words "los" and "leer"
+})
+
+DefineLanguageWord("Loufan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
+	Language = "old-high-german",
+	Type = "verb",
+	Meanings = {"Run"}
 })
 
 DefineLanguageWord("Maht", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
@@ -610,6 +741,13 @@ DefineLanguageWord("Maht", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Type = "noun",
 	Meanings = {"Might"}, -- derived from Proto-Germanic "Maχtiz", which means "Might"
 	DerivesFrom = {"proto-germanic", "noun", "Maχtiz"}
+})
+
+DefineLanguageWord("Malan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
+	Language = "old-high-german",
+	Type = "verb",
+	Meanings = {"Grind"},
+	DerivesFrom = {"proto-indo-european", "verb", "Mel"}
 })
 
 DefineLanguageWord("Marc", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 9.
@@ -634,6 +772,17 @@ DefineLanguageWord("Mēr", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Language = "old-high-german",
 	Type = "adverb",
 	Meanings = {"More"}
+})
+
+DefineLanguageWord("Mēro", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236; Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+	Language = "old-high-german",
+	Type = "adjective",
+	Meanings = {"More"}, -- perhaps a "determiner" class of words should be added?
+	DerivesFrom = {"proto-germanic", "adjective", "Mēria"},
+	ComparisonDegreeInflections = {
+		"comparative", "Mēro", -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
+		"superlative", "Mēst" -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
+	}
 })
 
 DefineLanguageWord("Mēta", { -- source also gives as alternatives the forms "Miata" and "Mieta"; Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
@@ -662,6 +811,12 @@ DefineLanguageWord("Nara", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Type = "noun",
 	Meanings = {"Salvation", "Rescue", "Nourishment", "Sustenance"}, -- meaning given for Middle High German, but not for Old High German, presumably because both are the same
 	Gender = "feminine"
+})
+
+DefineLanguageWord("Nerjan", { -- source also gives alternative forms "Nerren" and "Neren"; Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
+	Language = "old-high-german",
+	Type = "verb",
+	Meanings = {"Heal", "Sustain the Life of", "Save", "Protect", "Nourish"} -- meaning given for Middle High German, but not for Old High German, presumably because both are the same
 })
 
 DefineLanguageWord("Niuwi", { -- source also gives the alternative form "niwi"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 153.
@@ -749,6 +904,13 @@ DefineLanguageWord("Prucca", { -- source also gives the alternative form "Prucga
 	DerivesFrom = {"proto-germanic", "noun", "Brugjô"}
 })
 
+DefineLanguageWord("Queman", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
+	Language = "old-high-german",
+	Type = "verb",
+	Meanings = {"Come"},
+	DerivesFrom = {"proto-indo-european", "verb", "Gʷem"}
+})
+
 DefineLanguageWord("Rarta", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 10.
 	Language = "old-high-german",
 	Type = "noun",
@@ -764,11 +926,24 @@ DefineLanguageWord("Rât", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Reht", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+	Language = "old-high-german",
+	Type = "adjective",
+	Meanings = {"Right", "Straight"}, -- derived from Proto-Germanic "Reχtaz", which means "Right, Straight"
+	DerivesFrom = {"proto-germanic", "adjective", "Reχtaz"}
+})
+
 DefineLanguageWord("Rîhhi", { -- Fick also gives the alternative form "rîchi"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174; Source: http://www.cnrtl.fr/definition/riche
 	Language = "old-high-german",
 	Type = "adjective",
 	Meanings = {"Powerful", "Notable", "Rich", "Magnificent", "Splendid"}, -- Fick gives the German "mächtig, vornehm, reich, prächtig, herrlich" as the meaning, while the TLFi gives the French "puissant"
 	DerivesFrom = {"proto-germanic", "adjective", "Rîka"} -- as given by Fick
+})
+
+DefineLanguageWord("Rōt", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
+	Language = "old-high-german",
+	Type = "adjective",
+	Meanings = {"Red"}
 })
 
 DefineLanguageWord("Sāt", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
@@ -784,6 +959,27 @@ DefineLanguageWord("Scîra", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Meanings = {"Procurement", "Shop"}, -- source gives the German "Besorgung, Geschäft"
 	DerivesFrom = {"proto-germanic", "noun", "Skîrô"},
 	Gender = "feminine"
+})
+
+DefineLanguageWord("Scrīban", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
+	Language = "old-high-german",
+	Type = "verb",
+	Meanings = {"Write"}
+})
+
+DefineLanguageWord("Sehan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
+	Language = "old-high-german",
+	Type = "verb",
+	Meanings = {"See"},
+	DerivesFrom = {"proto-indo-european", "verb", "Sekʷ"},
+	NumberPersonTenseMoodInflections = {
+		"singular", "first-person", "past", "indicative", "Sah",
+		"singular", "third-person", "past", "indicative", "Sah",
+		"plural", "first-person", "past", "indicative", "Sāhum"
+	},
+	Participles = {
+		"past", "Gisewan"
+	}
 })
 
 DefineLanguageWord("Sēula", { -- source also gives "Sēla"; Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
@@ -804,6 +1000,13 @@ DefineLanguageWord("Silabar", { -- source also gives the alternative forms "Sila
 	Meanings = {"Silver"}, -- source gives the German "Silber" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Silubra"},
 	Gender = "neuter"
+})
+
+DefineLanguageWord("Skatewen", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
+	Language = "old-high-german",
+	Type = "verb",
+	Meanings = {"Shadow"}, -- "to shadow"
+	DerivesFrom = {"proto-germanic", "noun", "Skadwas"}
 })
 
 DefineLanguageWord("Skato", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
@@ -864,10 +1067,40 @@ DefineLanguageWord("Sorgên", { -- source also gives the alternative form "sworg
 	DerivesFrom = {"proto-germanic", "verb", "Surgên"}
 })
 
+DefineLanguageWord("Standan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 3, Subsection 1.
+	Language = "old-high-german",
+	Type = "verb",
+	Meanings = {"Stand"}
+})
+
+DefineLanguageWord("Stīgan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+	Language = "old-high-german",
+	Type = "verb",
+	Meanings = {"Climb"},
+	DerivesFrom = {"proto-germanic", "verb", "Steig"},
+	Participles = {
+		"past", "Steig"
+	}
+})
+
+DefineLanguageWord("Stōzan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
+	Language = "old-high-german",
+	Type = "verb",
+	Meanings = {"Push"} -- source gives translation as the German word "stoßen"
+})
+
 DefineLanguageWord("Suht", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Sickness"}
+})
+
+DefineLanguageWord("Sumar", { -- Fick also gives the alternative form "Sumer"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223; Source: http://www.cnrtl.fr/definition/sombre//3
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Summer"}, -- Fick gives the German "Sommer" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Sumara"}, -- as given by Fick
+	Gender = "masculine" -- as given by Fick
 })
 
 DefineLanguageWord("Sundar", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.
@@ -903,10 +1136,30 @@ DefineLanguageWord("Teil", { -- Source: Richard M. Runge, "The Phonetic Realizat
 	Meanings = {"Part"}
 })
 
+DefineLanguageWord("Tiuf", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+	Language = "old-high-german",
+	Type = "adjective",
+	Meanings = {"Deep"}, -- derived from Proto-Germanic "Déwpaz", which has the meaning of "deep"
+	DerivesFrom = {"proto-germanic", "adjective", "Déwpaz"}
+})
+
 DefineLanguageWord("Tōd", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Death"}
+})
+
+DefineLanguageWord("Trūēn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 3, Subsection 1.
+	Language = "old-high-german",
+	Type = "verb",
+	Meanings = {"Trust"}
+})
+
+DefineLanguageWord("Ubir", { -- Lehmann also gives the alternative form "ubar"; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+	Language = "old-high-german",
+	Type = "adposition",
+	Meanings = {"Over"}, -- derived from the Proto-Germanic "Ufar", which means "Over"
+	DerivesFrom = {"proto-germanic", "adposition", "Ufar"}
 })
 
 DefineLanguageWord("Urlaga", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 10.
@@ -942,6 +1195,12 @@ DefineLanguageWord("Wer", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-G
 	DerivesFrom = {"proto-indo-european", "noun", "Wiros"} -- as given by Lehmann
 })
 
+DefineLanguageWord("Werdan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
+	Language = "old-high-german",
+	Type = "verb",
+	Meanings = {"Become"}
+})
+
 DefineLanguageWord("Werwolf", { -- composed of "Wer" and "Wolf"; Source: http://www.cnrtl.fr/definition/garou
 	Language = "old-high-german",
 	Type = "noun",
@@ -969,6 +1228,15 @@ DefineLanguageWord("Wîz̨", { -- Fick gives "(h)wîz̨"; Source: August Fick an
 	DerivesFrom = {"proto-germanic", "adjective", "Hvîta"}
 })
 
+DefineLanguageWord("Wizzan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
+	Language = "old-high-german",
+	Type = "verb",
+	Meanings = {"Know"},
+	DerivesFrom = {"proto-germanic", "verb", "Witum"},
+	NumberPersonTenseMoodInflections = {
+		"plural", "first-person", "present", "indicative", "Wizzum" -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+	}
+})
 DefineLanguageWord("Wolf", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209; Source: http://www.cnrtl.fr/definition/garou
 	Language = "old-high-german",
 	Type = "noun",
@@ -991,188 +1259,6 @@ DefineLanguageWord("Wurm", { -- Source: Richard M. Runge, "The Phonetic Realizat
 	Gender = "masculine",
 	NumberCaseInflections = {
 		"plural", "nominative", "Wurmi"
-	}
-})
-
-DefineLanguageWord("Beran", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
-	Language = "old-high-german",
-	Type = "verb",
-	Meanings = {},
-	DerivesFrom = {"proto-germanic", "verb", "Beran"}
-})
-
-DefineLanguageWord("Biotan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
-	Language = "old-high-german",
-	Type = "verb",
-	Meanings = {"Bid", "Offer", "Order"},
-	DerivesFrom = {"proto-germanic", "verb", "Beud"}
-})
-
-DefineLanguageWord("Birit", { -- this is the singular third person present form; Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
-	Language = "old-high-german",
-	Type = "verb",
-	Meanings = {"Bears"},
-	-- infinitive form? maybe is the same word as "beran", since the Latin cognate of "beran", "ferō", means "I bear"
-	NumberPersonTenseMoodInflections = {
-		"singular", "third-person", "present", "indicative", "Birit"
-	}
-})
-
-DefineLanguageWord("Bītan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
-	Language = "old-high-german",
-	Type = "verb",
-	Meanings = {"Bite"}
-})
-
-DefineLanguageWord("Ezzan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 3, Subsection 1.
-	Language = "old-high-german",
-	Type = "verb",
-	Meanings = {"Eat"}
-})
-
-DefineLanguageWord("Helfan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
-	Language = "old-high-german",
-	Type = "verb",
-	Meanings = {"Help"}
-})
-
-DefineLanguageWord("Hnīgan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
-	Language = "old-high-german",
-	Type = "verb",
-	Meanings = {"Bow"},
-	DerivesFrom = {"proto-indo-european", "verb", "Kneygʷh"}
-})
-
-DefineLanguageWord("Hōren", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
-	Language = "old-high-german",
-	Type = "verb",
-	Meanings = {"Hear"}
-})
-
-DefineLanguageWord("Kweman", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
-	Language = "old-high-german",
-	Type = "verb",
-	Meanings = {"Come"}, -- apparently, but not entirely clear from source
-	DerivesFrom = {"proto-germanic", "verb", "Kwemanan"}
-})
-
-DefineLanguageWord("Lēren", { -- causative verb; Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 4.
-	Language = "old-high-german",
-	Type = "verb",
-	Meanings = {"Teach"}
-})
-
-DefineLanguageWord("Lernēn", { -- source also gives "Lirnēn" as an alternative; Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
-	Language = "old-high-german",
-	Type = "verb",
-	Meanings = {"Learn"}
-})
-
-DefineLanguageWord("Līhan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
-	Language = "old-high-german",
-	Type = "verb",
-	Meanings = {"Lend"},
-	DerivesFrom = {"proto-indo-european", "verb", "Leykʷ"},
-	NumberPersonTenseMoodInflections = {
-		"plural", "first-person", "past", "indicative", "Liwum" -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
-	}
-})
-
-DefineLanguageWord("Loufan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
-	Language = "old-high-german",
-	Type = "verb",
-	Meanings = {"Run"}
-})
-
-DefineLanguageWord("Malan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
-	Language = "old-high-german",
-	Type = "verb",
-	Meanings = {"Grind"},
-	DerivesFrom = {"proto-indo-european", "verb", "Mel"}
-})
-
-DefineLanguageWord("Nerjan", { -- source also gives alternative forms "Nerren" and "Neren"; Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
-	Language = "old-high-german",
-	Type = "verb",
-	Meanings = {"Heal", "Sustain the Life of", "Save", "Protect", "Nourish"} -- meaning given for Middle High German, but not for Old High German, presumably because both are the same
-})
-
-DefineLanguageWord("Queman", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
-	Language = "old-high-german",
-	Type = "verb",
-	Meanings = {"Come"},
-	DerivesFrom = {"proto-indo-european", "verb", "Gʷem"}
-})
-
-DefineLanguageWord("Scrīban", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
-	Language = "old-high-german",
-	Type = "verb",
-	Meanings = {"Write"}
-})
-
-DefineLanguageWord("Skatewen", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
-	Language = "old-high-german",
-	Type = "verb",
-	Meanings = {"Shadow"}, -- "to shadow"
-	DerivesFrom = {"proto-germanic", "noun", "Skadwas"}
-})
-
-DefineLanguageWord("Sehan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
-	Language = "old-high-german",
-	Type = "verb",
-	Meanings = {"See"},
-	DerivesFrom = {"proto-indo-european", "verb", "Sekʷ"},
-	NumberPersonTenseMoodInflections = {
-		"singular", "first-person", "past", "indicative", "Sah",
-		"singular", "third-person", "past", "indicative", "Sah",
-		"plural", "first-person", "past", "indicative", "Sāhum"
-	},
-	Participles = {
-		"past", "Gisewan"
-	}
-})
-
-DefineLanguageWord("Standan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 3, Subsection 1.
-	Language = "old-high-german",
-	Type = "verb",
-	Meanings = {"Stand"}
-})
-
-DefineLanguageWord("Stīgan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
-	Language = "old-high-german",
-	Type = "verb",
-	Meanings = {"Climb"},
-	DerivesFrom = {"proto-germanic", "verb", "Steig"},
-	Participles = {
-		"past", "Steig"
-	}
-})
-
-DefineLanguageWord("Stōzan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
-	Language = "old-high-german",
-	Type = "verb",
-	Meanings = {"Push"} -- source gives translation as the German word "stoßen"
-})
-
-DefineLanguageWord("Trūēn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 3, Subsection 1.
-	Language = "old-high-german",
-	Type = "verb",
-	Meanings = {"Trust"}
-})
-
-DefineLanguageWord("Werdan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
-	Language = "old-high-german",
-	Type = "verb",
-	Meanings = {"Become"}
-})
-
-DefineLanguageWord("Wizzan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
-	Language = "old-high-german",
-	Type = "verb",
-	Meanings = {"Know"},
-	DerivesFrom = {"proto-germanic", "verb", "Witum"},
-	NumberPersonTenseMoodInflections = {
-		"plural", "first-person", "present", "indicative", "Wizzum" -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	}
 })
 
@@ -1203,83 +1289,4 @@ DefineLanguageWord("Zwirnēn", { -- source also gives the alternative form "Zwir
 	Language = "old-high-german",
 	Type = "verb",
 	Meanings = {"Twine"}
-})
-
-DefineLanguageWord("Durri", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
-	Language = "old-high-german",
-	Type = "adjective",
-	Meanings = {"Dry"}, -- derived from Proto-Germanic "Þrsúz", which has the meaning of "dry"
-	DerivesFrom = {"proto-germanic", "adjective", "Þrsúz"}
-})
-
-DefineLanguageWord("Fūl", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
-	Language = "old-high-german",
-	Type = "adjective",
-	Meanings = {"Foul"}, -- derived from the Proto-Germanic "Fūla", which means "Foul"
-	DerivesFrom = {"proto-germanic", "adjective", "Fūla"}
-})
-
-DefineLanguageWord("Jung", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
-	Language = "old-high-german",
-	Type = "adjective",
-	Meanings = {"Young"},
-	DerivesFrom = {"proto-indo-european", "adjective", "Yehw"}
-})
-
-DefineLanguageWord("Lang", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
-	Language = "old-high-german",
-	Type = "adjective",
-	Meanings = {"Long"}, -- derived from Proto-Germanic "Langaz", which means "Long"
-	DerivesFrom = {"proto-germanic", "adjective", "Langaz"}
-})
-
-DefineLanguageWord("Lōs", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
-	Language = "old-high-german",
-	Type = "adjective",
-	Meanings = {"Empty", "Loose"} -- source gives translation as the German words "los" and "leer"
-})
-
-DefineLanguageWord("Mēro", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236; Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
-	Language = "old-high-german",
-	Type = "adjective",
-	Meanings = {"More"}, -- perhaps a "determiner" class of words should be added?
-	DerivesFrom = {"proto-germanic", "adjective", "Mēria"},
-	ComparisonDegreeInflections = {
-		"comparative", "Mēro", -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
-		"superlative", "Mēst" -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
-	}
-})
-
-DefineLanguageWord("Reht", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
-	Language = "old-high-german",
-	Type = "adjective",
-	Meanings = {"Right", "Straight"}, -- derived from Proto-Germanic "Reχtaz", which means "Right, Straight"
-	DerivesFrom = {"proto-germanic", "adjective", "Reχtaz"}
-})
-
-DefineLanguageWord("Rōt", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
-	Language = "old-high-german",
-	Type = "adjective",
-	Meanings = {"Red"}
-})
-
-DefineLanguageWord("Tiuf", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
-	Language = "old-high-german",
-	Type = "adjective",
-	Meanings = {"Deep"}, -- derived from Proto-Germanic "Déwpaz", which has the meaning of "deep"
-	DerivesFrom = {"proto-germanic", "adjective", "Déwpaz"}
-})
-
-DefineLanguageWord("Aba", { -- Lehmann also gives the alternative form "ab"; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
-	Language = "old-high-german",
-	Type = "adposition",
-	Meanings = {"From"}, -- derived from the Proto-Germanic "Af", which means "From"
-	DerivesFrom = {"proto-germanic", "adposition", "Af"}
-})
-
-DefineLanguageWord("Ubir", { -- Lehmann also gives the alternative form "ubar"; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
-	Language = "old-high-german",
-	Type = "adposition",
-	Meanings = {"Over"}, -- derived from the Proto-Germanic "Ufar", which means "Over"
-	DerivesFrom = {"proto-germanic", "adposition", "Ufar"}
 })

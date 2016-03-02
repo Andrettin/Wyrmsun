@@ -232,6 +232,13 @@ DefineLanguageWord("Skĭrmjan", { -- Source: http://www.cnrtl.fr/definition/escr
 	Meanings = {"Defend", "Protect"} -- source gives the French "défendre, protéger" as the meaning
 })
 
+DefineLanguageWord("Sumar", { -- Source: http://www.cnrtl.fr/definition/sombre//3
+	Language = "old-frankish", -- source gives "Ancien Bas Francique" (= Old Frankish)
+	Type = "noun",
+	Meanings = {"Summer"}, -- source gives the French "été" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Sumara"} -- presumably
+})
+
 DefineLanguageWord("Sworga", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.
 	Language = "old-frankish",
 	Type = "noun",

@@ -183,6 +183,24 @@ DefineLanguageWord("Rīadaim", { -- Source: Winfred P. Lehmann, "A Grammar of Pr
 	Meanings = {"Travel"}
 })
 
+DefineLanguageWord("Sam", { -- source also gives the alternative form "Samrad"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.
+	Language = "irish",
+	Type = "noun",
+	Meanings = {"Summer"} -- source gives the German "Sommer" as the meaning
+})
+
+DefineLanguageWord("Samaisc", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.
+	Language = "irish",
+	Type = "noun",
+	Meanings = {"Heifer"} -- source gives the German "Färse" as the meaning
+})
+
+DefineLanguageWord("Seamar", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.
+	Language = "irish",
+	Type = "noun",
+	Meanings = {"Clover"} -- source gives the German "Klee"
+})
+
 DefineLanguageWord("Túath", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 99.
 	Language = "irish",
 	Type = "noun",

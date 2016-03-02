@@ -45,3 +45,9 @@ DefineLanguageWord("Marca", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Meanings = {},
 	DerivesFrom = {"proto-germanic", "noun", {"Mark", "Half Pound", "Half Silver Pound"}, "Markô"} -- as given by Fick
 })
+
+DefineLanguageWord("Sombrum", { -- Source: http://www.cnrtl.fr/definition/sombre//3
+	Language = "medieval-latin",
+	Type = "noun",
+	Meanings = {"Tillage"} -- source gives the French "labour" as the meaning
+})

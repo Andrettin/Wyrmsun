@@ -1864,6 +1864,18 @@ DefineLanguageWord("Silbern", {
 	Meanings = {"Silver"}
 })
 
+DefineLanguageWord("Sommer", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"Summer"},
+	DerivesFrom = {"middle-high-german", "noun", "Sumer"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.
+	Gender = "masculine",
+	NumberCaseInflections = {
+		"singular", "genitive", "Sommers",
+		"plural", "dative", "Sommern"
+	}
+})
+
 DefineLanguageWord("Sorge", {
 	Language = "high-german",
 	Type = "noun",

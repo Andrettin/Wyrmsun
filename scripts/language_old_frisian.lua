@@ -369,6 +369,14 @@ DefineLanguageWord("Smithe", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	DerivesFrom = {"proto-germanic", "noun", "Smiþjôn"}
 })
 
+DefineLanguageWord("Sumur", { -- Fick also gives the alternative forms "Summer" and "Somer"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223; Source: http://www.cnrtl.fr/definition/sombre//3
+	Language = "old-frisian",
+	Type = "noun",
+	Meanings = {"Summer"}, -- Fick gives the German "Sommer" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Sumara"}, -- as given by Fick
+	Gender = "masculine" -- apparently, as given by Fick
+})
+
 DefineLanguageWord("Sûth", { -- source also gives the alternative form "Sûther"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.
 	Language = "old-frisian",
 	Type = "adverb",

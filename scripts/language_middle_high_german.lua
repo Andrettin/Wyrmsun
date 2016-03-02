@@ -603,6 +603,14 @@ DefineLanguageWord("Smit", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Sumer", { -- source also gives the alternative form "Summer"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Summer"}, -- source gives the German "Sommer" as the meaning
+	DerivesFrom = {"old-high-german", "noun", "Sumar"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Sund", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.
 	Language = "middle-high-german",
 	Type = "noun",

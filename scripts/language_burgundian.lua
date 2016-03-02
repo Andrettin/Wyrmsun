@@ -25,14 +25,9 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageWord("Amar̄n", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.
-	Language = "armenian",
+DefineLanguageWord("Sumor", { -- Source: http://www.cnrtl.fr/definition/sombre//3
+	Language = "burgundian",
 	Type = "noun",
-	Meanings = {"Summer"} -- source gives the German "Sommer, am Jahr" as the meaning
-})
-
-DefineLanguageWord("Hur", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 127.
-	Language = "armenian",
-	Type = "noun",
-	Meanings = {"Torch"} -- source gives "Fackel" as the meaning
+	Meanings = {"Summer"}, -- source gives the French "été" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Sumara"} -- presumably
 })

@@ -293,6 +293,13 @@ DefineLanguageWord("Dverga", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Ek", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
+	Language = "proto-germanic", -- from the Gallehus inscription, is it really Proto-Germanic?
+	Type = "pronoun",
+	Meanings = {"I"},
+	Nominative = "Ek"
+})
+
 DefineLanguageWord("Erala", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 22.
 	Language = "proto-germanic",
 	Type = "noun",
@@ -646,6 +653,12 @@ DefineLanguageWord("Maitila", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Maiz", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
+	Language = "proto-germanic",
+	Type = "adverb",
+	Meanings = {"More"}
+})
+
 DefineLanguageWord("Mari", { -- source gives "mari-"; Source: http://www.cnrtl.fr/definition/marais
 	Language = "proto-germanic", -- source gives "Germanic"
 	Type = "noun",
@@ -689,6 +702,13 @@ DefineLanguageWord("Mazgaz", { -- Source: Sean Crist, "An Analysis of *z loss in
 	Type = "noun",
 	Meanings = {"Marrow"},
 	Gender = "masculine"
+})
+
+DefineLanguageWord("Miz", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
+	Language = "proto-germanic",
+	Type = "pronoun",
+	Meanings = {"Me"}, -- dative
+	Dative = "Miz"
 })
 
 DefineLanguageWord("Mizdō", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 7.
@@ -877,6 +897,13 @@ DefineLanguageWord("Snaigva", { -- source also gives the forms "Snaiva", "Snaigv
 	Uncountable = true -- seems likely to be uncountable
 })
 
+DefineLanguageWord("Sumara", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Summer"}, -- source gives the German "Sommer" as the meaning
+	Gender = "neuter" -- alternatively also masculine
+})
+
 DefineLanguageWord("Sunōn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "proto-germanic",
 	Type = "noun",
@@ -1053,6 +1080,13 @@ DefineLanguageWord("Walakuzjōn", { -- Source: Sean Crist, "An Analysis of *z lo
 	Gender = "feminine"
 })
 
+DefineLanguageWord("Wīz", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 5.
+	Language = "proto-germanic",
+	Type = "pronoun",
+	Meanings = {"We"},
+	Nominative = "Wīz"
+})
+
 DefineLanguageWord("Yēra", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "proto-germanic",
 	Type = "noun",
@@ -1215,33 +1249,6 @@ DefineLanguageWord("Χwat", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Type = "pronoun",
 	Meanings = {"What"},
 	Nominative = "Χwat"
-})
-
-DefineLanguageWord("Ek", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
-	Language = "proto-germanic", -- from the Gallehus inscription, is it really Proto-Germanic?
-	Type = "pronoun",
-	Meanings = {"I"},
-	Nominative = "Ek"
-})
-
-DefineLanguageWord("Miz", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
-	Language = "proto-germanic",
-	Type = "pronoun",
-	Meanings = {"Me"}, -- dative
-	Dative = "Miz"
-})
-
-DefineLanguageWord("Wīz", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 5.
-	Language = "proto-germanic",
-	Type = "pronoun",
-	Meanings = {"We"},
-	Nominative = "Wīz"
-})
-
-DefineLanguageWord("Maiz", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
-	Language = "proto-germanic",
-	Type = "adverb",
-	Meanings = {"More"}
 })
 
 -- Must re-check to see if actually correct

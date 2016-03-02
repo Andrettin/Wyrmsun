@@ -268,6 +268,13 @@ DefineLanguageWord("Sénéchal", {
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Sombrer", {
+	Language = "french",
+	Type = "verb",
+	Meanings = {"Till a Soil for the First Time"},
+	DerivesFrom = {"old-frankish", "noun", "Sumar"} -- Source: http://www.cnrtl.fr/definition/sombre//3
+})
+
 DefineLanguageWord("Trop", {
 	Language = "french",
 	Type = "adverb",

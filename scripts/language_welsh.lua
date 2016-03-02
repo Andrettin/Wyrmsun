@@ -40,6 +40,12 @@ DefineLanguageWord("Erw", { -- this is the genitive; Source: Winfred P. Lehmann,
 	}
 })
 
+DefineLanguageWord("Hâf", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.
+	Language = "welsh", -- source gives New Welsh
+	Type = "noun",
+	Meanings = {"Summer"} -- source gives the German "Sommer" as the meaning
+})
+
 DefineLanguageWord("Hud", { -- presumably a noun; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 121.
 	Language = "welsh",
 	Type = "noun",

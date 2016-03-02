@@ -2472,6 +2472,7 @@ DefineLanguageWord("Somer", {
 	Language = "english",
 	Type = "noun", -- correct?
 	Meanings = {},
+	DerivesFrom = {"old-english", "noun", "Sumor"}, -- possibly, since "Summer" does
 	Gender = "neuter",
 	Archaic = true,
 	AffixNameTypes = {"compound", "prefix", "singular", "province"} -- example: "Somerset"
@@ -2619,6 +2620,14 @@ DefineLanguageWord("Suf", {
 	Gender = "neuter",
 	Archaic = true,
 	AffixNameTypes = {"compound", "prefix", "singular", "province"} -- example: "Suffolk"
+})
+
+DefineLanguageWord("Summer", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Summer"},
+	DerivesFrom = {"old-english", "noun", "Sumor"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.
+	Gender = "neuter"
 })
 
 DefineLanguageWord("Sus", {

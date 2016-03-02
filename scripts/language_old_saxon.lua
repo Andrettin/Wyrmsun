@@ -56,12 +56,36 @@ DefineLanguageWord("Beki", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Beran", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
+	Language = "old-saxon",
+	Type = "verb",
+	Meanings = {},
+	DerivesFrom = {"proto-germanic", "verb", "Beran"}
+})
+
 DefineLanguageWord("Berg", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
 	Language = "old-saxon",
 	Type = "noun",
 	Meanings = {"Mountain", "Hill", "Grave Mound"}, -- source gives "Berg, Hügel, Grabhügel" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Berga"},
 	Gender = "masculine"
+})
+
+DefineLanguageWord("Birid", { -- this is the singular third person present form; Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
+	Language = "old-saxon",
+	Type = "verb",
+	Meanings = {"Bears"},
+	-- infinitive form? maybe is the same word as "beran", since the Latin cognate of "beran", "ferō", means "I bear"
+	NumberPersonTenseMoodInflections = {
+		"singular", "third-person", "present", "indicative", "Birid"
+	}
+})
+
+DefineLanguageWord("Bītan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
+	Language = "old-saxon",
+	Type = "verb",
+	Meanings = {"Bite"},
+	DerivesFrom = {"proto-germanic", "verb", "Bītan"}
 })
 
 DefineLanguageWord("Blāo", { -- Source: http://www.cnrtl.fr/definition/bleu
@@ -138,6 +162,12 @@ DefineLanguageWord("Êr", { -- Source: August Fick and Alf Torp, "Wortschatz der
 	Meanings = {"Ore"}, -- source gives the German "Erz" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Aiza"},
 	Gender = "neuter"
+})
+
+DefineLanguageWord("Etan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
+	Language = "old-saxon",
+	Type = "verb",
+	Meanings = {"Eat"}
 })
 
 DefineLanguageWord("Fehu", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
@@ -243,6 +273,12 @@ DefineLanguageWord("Helm", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Helpan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
+	Language = "old-saxon",
+	Type = "verb",
+	Meanings = {"Help"}
+})
+
 DefineLanguageWord("Hêm", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 52.
 	Language = "old-saxon",
 	Type = "noun",
@@ -331,6 +367,12 @@ DefineLanguageWord("Îsarn", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Gender = "neuter"
 })
 
+DefineLanguageWord("Jung", {
+	Language = "old-saxon",
+	Type = "adjective",
+	Meanings = {"Young"} -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
+})
+
 DefineLanguageWord("Kunni", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
 	Language = "old-saxon",
 	Type = "noun",
@@ -346,11 +388,23 @@ DefineLanguageWord("Land", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Gender = "neuter"
 })
 
+DefineLanguageWord("Lērian", { -- causative verb; Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 5.
+	Language = "old-saxon",
+	Type = "verb",
+	Meanings = {"Teach"}
+})
+
 DefineLanguageWord("Līfnara", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "old-saxon",
 	Type = "noun",
 	Meanings = {"Food", "Nourishment"},
 	Gender = "feminine"
+})
+
+DefineLanguageWord("Līnōn", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
+	Language = "old-saxon",
+	Type = "verb",
+	Meanings = {"Learn"}
 })
 
 DefineLanguageWord("Marka", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 160.
@@ -382,11 +436,27 @@ DefineLanguageWord("Mēr", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Meanings = {"More"}
 })
 
+DefineLanguageWord("Mēro", { -- this is the comparative, what is the normal version of the word? Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
+	Language = "old-saxon",
+	Type = "adjective",
+	Meanings = {"More"},
+	ComparisonDegreeInflections = {
+		"comparative", "Mēro",
+		"superlative", "Mēst"
+	}
+})
+
 DefineLanguageWord("Mī", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
 	Language = "old-saxon",
 	Type = "pronoun",
 	Meanings = {"Me"}, -- dative
 	Dative = "Mī"
+})
+
+DefineLanguageWord("Nerian", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
+	Language = "old-saxon",
+	Type = "verb",
+	Meanings = {"Save"}
 })
 
 DefineLanguageWord("Niuwi", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 153.
@@ -438,11 +508,38 @@ DefineLanguageWord("Râd", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Reht", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+	Language = "old-saxon",
+	Type = "adjective",
+	Meanings = {"Right", "Straight"}, -- derived from Proto-Germanic "Reχtaz", which means "Right, Straight"
+	DerivesFrom = {"proto-germanic", "adjective", "Reχtaz"}
+})
+
 DefineLanguageWord("Rîki", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174; Source: http://www.cnrtl.fr/definition/riche
 	Language = "old-saxon", -- the TLFi gives Old Low German
 	Type = "adjective",
 	Meanings = {"Powerful"}, -- Fick gives the German "mächtig" as the meaning, while the TLFi gives the French "puissant"
 	DerivesFrom = {"proto-germanic", "adjective", "Rîka"} -- as given by Fick
+})
+
+DefineLanguageWord("Scrīban", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
+	Language = "old-saxon",
+	Type = "verb",
+	Meanings = {"Write"}
+})
+
+DefineLanguageWord("Sehan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5; Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
+	Language = "old-saxon",
+	Type = "verb",
+	Meanings = {"See"},
+	NumberPersonTenseMoodInflections = {
+		"singular", "first-person", "past", "indicative", "Sah",
+		"singular", "third-person", "past", "indicative", "Sah",
+		"plural", "first-person", "past", "indicative", "Sāwum"
+	},
+	Participles = {
+		"past", "Gisewan"
+	}
 })
 
 DefineLanguageWord("Siluƀar", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 221.
@@ -479,6 +576,14 @@ DefineLanguageWord("Suht", { -- Source: Richard M. Runge, "The Phonetic Realizat
 	Language = "old-saxon",
 	Type = "noun",
 	Meanings = {"Sickness"}
+})
+
+DefineLanguageWord("Sumar", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.
+	Language = "old-saxon",
+	Type = "noun",
+	Meanings = {"Summer"}, -- source gives the German "Sommer" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Sumara"},
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Sûtharliuti", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.
@@ -521,6 +626,12 @@ DefineLanguageWord("Wel", { -- Source: Richard M. Runge, "The Phonetic Realizati
 	Meanings = {"Well"}
 })
 
+DefineLanguageWord("Werthan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
+	Language = "old-saxon",
+	Type = "verb",
+	Meanings = {"Become"}
+})
+
 DefineLanguageWord("Westar", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 204.
 	Language = "old-saxon",
 	Type = "adverb",
@@ -533,6 +644,12 @@ DefineLanguageWord("Wī", { -- Source: Sean Crist, "An Analysis of *z loss in We
 	Type = "pronoun",
 	Meanings = {"We"},
 	Nominative = "Wī" -- source also gives "We" as alternative
+})
+
+DefineLanguageWord("Witan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
+	Language = "old-saxon",
+	Type = "verb",
+	Meanings = {"Know"}
 })
 
 DefineLanguageWord("Wulf", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
@@ -548,113 +665,4 @@ DefineLanguageWord("Wurm", { -- Source: Richard M. Runge, "The Phonetic Realizat
 	Meanings = {"Worm", "Serpent"}, -- probably could be extended to mean "wyrm" as well
 	DerivesFrom = {"proto-germanic", "noun", "Vurma"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
 	Gender = "masculine"
-})
-
-DefineLanguageWord("Beran", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
-	Language = "old-saxon",
-	Type = "verb",
-	Meanings = {},
-	DerivesFrom = {"proto-germanic", "verb", "Beran"}
-})
-
-DefineLanguageWord("Birid", { -- this is the singular third person present form; Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
-	Language = "old-saxon",
-	Type = "verb",
-	Meanings = {"Bears"},
-	-- infinitive form? maybe is the same word as "beran", since the Latin cognate of "beran", "ferō", means "I bear"
-	NumberPersonTenseMoodInflections = {
-		"singular", "third-person", "present", "indicative", "Birid"
-	}
-})
-
-DefineLanguageWord("Bītan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
-	Language = "old-saxon",
-	Type = "verb",
-	Meanings = {"Bite"},
-	DerivesFrom = {"proto-germanic", "verb", "Bītan"}
-})
-
-DefineLanguageWord("Etan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
-	Language = "old-saxon",
-	Type = "verb",
-	Meanings = {"Eat"}
-})
-
-DefineLanguageWord("Helpan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
-	Language = "old-saxon",
-	Type = "verb",
-	Meanings = {"Help"}
-})
-
-DefineLanguageWord("Lērian", { -- causative verb; Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 5.
-	Language = "old-saxon",
-	Type = "verb",
-	Meanings = {"Teach"}
-})
-
-DefineLanguageWord("Līnōn", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
-	Language = "old-saxon",
-	Type = "verb",
-	Meanings = {"Learn"}
-})
-
-DefineLanguageWord("Nerian", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
-	Language = "old-saxon",
-	Type = "verb",
-	Meanings = {"Save"}
-})
-
-DefineLanguageWord("Scrīban", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
-	Language = "old-saxon",
-	Type = "verb",
-	Meanings = {"Write"}
-})
-
-DefineLanguageWord("Sehan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5; Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
-	Language = "old-saxon",
-	Type = "verb",
-	Meanings = {"See"},
-	NumberPersonTenseMoodInflections = {
-		"singular", "first-person", "past", "indicative", "Sah",
-		"singular", "third-person", "past", "indicative", "Sah",
-		"plural", "first-person", "past", "indicative", "Sāwum"
-	},
-	Participles = {
-		"past", "Gisewan"
-	}
-})
-
-DefineLanguageWord("Werthan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
-	Language = "old-saxon",
-	Type = "verb",
-	Meanings = {"Become"}
-})
-
-DefineLanguageWord("Witan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
-	Language = "old-saxon",
-	Type = "verb",
-	Meanings = {"Know"}
-})
-
-DefineLanguageWord("Jung", {
-	Language = "old-saxon",
-	Type = "adjective",
-	Meanings = {"Young"} -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
-})
-
-DefineLanguageWord("Mēro", { -- this is the comparative, what is the normal version of the word? Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
-	Language = "old-saxon",
-	Type = "adjective",
-	Meanings = {"More"},
-	ComparisonDegreeInflections = {
-		"comparative", "Mēro",
-		"superlative", "Mēst"
-	}
-})
-
-DefineLanguageWord("Reht", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
-	Language = "old-saxon",
-	Type = "adjective",
-	Meanings = {"Right", "Straight"}, -- derived from Proto-Germanic "Reχtaz", which means "Right, Straight"
-	DerivesFrom = {"proto-germanic", "adjective", "Reχtaz"}
 })

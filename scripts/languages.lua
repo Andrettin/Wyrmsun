@@ -37,6 +37,10 @@ DefineLanguage("basque", {
 	Name = "Basque"
 })
 
+DefineLanguage("burgundian", {
+	Name = "Burgundian"
+})
+
 DefineLanguage("catalan", {
 	Name = "Catalan"
 })
@@ -140,6 +144,7 @@ DefineLanguage("high-german", { -- define High German early to prevent some type
 		"Smiþu", "Schmied", -- from Proto-Germanic to German
 		"Vindobona", "Wien", -- "Wien" = "Vienna"; from the Latin name "Vindobona"
 		"Walakuzjōn", "Walküre", -- from Proto-Germanic to German
+		"Airmanareiks", "Ermenrich", -- "Ermenrich" is the German form of the Gothic name Airmanareiks
 		"Theodoric", "Dietrich" -- "Dietrich" is the German form of the Gothic name Theodoric
 	}
 })
@@ -365,6 +370,10 @@ DefineLanguage("proto-indo-european", {
 	Name = "Proto-Indo-European"
 })
 
+DefineLanguage("proto-slavic", {
+	Name = "Proto-Slavic"
+})
+
 DefineLanguage("provencal", {
 	Name = "Provençal"
 })
@@ -456,6 +465,7 @@ Load("scripts/language_middle_english.lua")
 -- East Germanic languages (branch of the Germanic family)
 Load("scripts/language_gothic.lua")
 Load("scripts/language_crimean_gothic.lua")
+Load("scripts/language_burgundian.lua")
 
 -- Latin languages (branch of the Indo-European family)
 Load("scripts/language_old_latin.lua")
