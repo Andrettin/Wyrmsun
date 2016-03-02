@@ -605,7 +605,7 @@ DefineLanguageWord("Heimskr", { -- Source: August Fick and Alf Torp, "Wortschatz
 DefineLanguageWord("Hjalmr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 49.
 	Language = "old-norse",
 	Type = "noun",
-	Meanings = {"Helm", "Treetop"}, -- source (apparently) gives the German "Helm, Wipfel" as the meaning
+	Meanings = {"Helm", "Helmet", "Treetop"}, -- source (apparently) gives the German "Helm, Wipfel" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Helma"},
 	Gender = "masculine" -- apparently
 })
@@ -772,6 +772,14 @@ DefineLanguageWord("Mala", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	DerivesFrom = {"proto-indo-european", "verb", "Mel"}
 })
 
+DefineLanguageWord("Mark", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 160.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Sign", "Indicator", "Border"}, -- source gives the German "Zeichen, Kennzeichen (auch 'Grenze' in endi-mark, land-mark)"
+	DerivesFrom = {"proto-germanic", "noun", "Marka"},
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Māttr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-norse",
 	Type = "noun",
@@ -812,6 +820,30 @@ DefineLanguageWord("Mergr", { -- Source: Sean Crist, "An Analysis of *z loss in 
 		"singular", "genitive", "Mergjar"
 	},
 	Gender = "masculine"
+})
+
+DefineLanguageWord("Mǫrk", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 160.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Forest", "Border Forest"}, -- source gives the German "Wald, Grenzwald (ursprünglich ungerodetes Grenzland)"
+	DerivesFrom = {"proto-germanic", "noun", "Mark"},
+	Gender = "feminine",
+	NumberCaseInflections = {
+		"singular", "genitive", "Markar", -- alternatively also "Merkr"
+		"plural", "nominative", "Markir" -- alternatively also "Merkr"
+	}
+})
+
+DefineLanguageWord("Mǫrk", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 160.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Silver Mark"}, -- source gives the German "Mark Silbers"
+	DerivesFrom = {"proto-germanic", "noun", {"Mark", "Half Pound", "Half Silver Pound"}, "Markô"},
+	Gender = "feminine",
+	NumberCaseInflections = {
+		"singular", "genitive", "Markar",
+		"plural", "nominative", "Merkr"
+	}
 })
 
 DefineLanguageWord("Nara", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.

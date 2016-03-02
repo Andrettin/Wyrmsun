@@ -238,7 +238,7 @@ DefineLanguageWord("Hêlag", { -- Source: August Fick and Alf Torp, "Wortschatz 
 DefineLanguageWord("Helm", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 49.
 	Language = "old-saxon",
 	Type = "noun",
-	Meanings = {"Helm", "Treetop"}, -- source gives the German "Helm, Wipfel" as the meaning
+	Meanings = {"Helm", "Helmet", "Treetop"}, -- source gives the German "Helm, Wipfel" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Helma"},
 	Gender = "masculine"
 })
@@ -350,6 +350,14 @@ DefineLanguageWord("Līfnara", { -- Source: Sean Crist, "An Analysis of *z loss 
 	Language = "old-saxon",
 	Type = "noun",
 	Meanings = {"Food", "Nourishment"},
+	Gender = "feminine"
+})
+
+DefineLanguageWord("Marka", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 160.
+	Language = "old-saxon",
+	Type = "noun",
+	Meanings = {"Border", "Rural Area"}, -- source gives the German "Grenze, Landgebiet"
+	DerivesFrom = {"proto-germanic", "noun", "Mark"},
 	Gender = "feminine"
 })
 

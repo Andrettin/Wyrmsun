@@ -1716,12 +1716,29 @@ DefineLanguageWord("Man", {
 	AffixNameTypes = {"compound", "prefix", "singular", "genitive", "settlement"} -- example: "Mansfield"
 })
 
+DefineLanguageWord("March", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"March"},
+	DerivesFrom = {"old-english", "noun", {"Border", "End", "District"}, "Mearc"}, -- presumably
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Mark", {
 	Language = "english",
 	Type = "noun",
-	Meanings = {},
-	Gender = "masculine",
+	Meanings = {"Mark"},
+	DerivesFrom = {"old-english", "noun", {"Mark", "Sign"}, "Mearc"}, -- presumably
+	Gender = "neuter",
 	NameTypes = {"person"}
+})
+
+DefineLanguageWord("Mark", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Mark"}, -- Currency unit used by i.e. Germany
+	DerivesFrom = {"old-english", "noun", {"Half Silver Pound"}, "Mearc"}, -- presumably
+	Gender = "neuter"
 })
 
 DefineLanguageWord("Marsh", {

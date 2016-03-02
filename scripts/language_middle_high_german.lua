@@ -211,7 +211,7 @@ DefineLanguageWord("Gart", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Language = "middle-high-german",
 	Type = "noun",
 	Meanings = {"Prickle", "Stick for Driving Animals"},
-	DerivesFrom = {"old-high-german", "noun", "Gart"}, -- the second one
+	DerivesFrom = {"old-high-german", "noun", {"Rod", "Prickle"}, "Gart"},
 	Gender = "masculine"
 })
 
@@ -361,7 +361,7 @@ DefineLanguageWord("Heira", { -- accusative; Source: August Fick and Alf Torp, "
 DefineLanguageWord("Helm", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 49.
 	Language = "middle-high-german",
 	Type = "noun",
-	Meanings = {"Helm"}, -- source gives the German "Helm"
+	Meanings = {"Helm", "Helmet"}, -- source gives the German "Helm"
 	DerivesFrom = {"old-high-german", "noun", "Helm"}
 })
 
@@ -470,6 +470,33 @@ DefineLanguageWord("Marc", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	NumberCaseInflections = {
 		"singular", "genitive", "Marges"
 	}
+})
+
+DefineLanguageWord("Mare", { -- source also gives the alternative form "March"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 160.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Sign"}, -- source gives the German "Zeichen"
+	DerivesFrom = {"proto-germanic", "noun", "Marka"},
+	Gender = "neuter",
+	NumberCaseInflections = {
+		"singular", "genitive", "Markes"
+	}
+})
+
+DefineLanguageWord("Marke", { -- source also gives the alternative form "Mark"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 160.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Border", "Borderland", "District", "Forest"}, -- source gives the German "Grenze, Grenzland, Bezirk, Wald"
+	DerivesFrom = {"old-high-german", "noun", "Marca"},
+	Gender = "feminine"
+})
+
+DefineLanguageWord("Marke", { -- Fick also gives the alternative form "Mark", while the TLFi also gives the alternative forms "Marc" and "March"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 160; Source: http://www.cnrtl.fr/definition/marc
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Half Silver Pound", "Half Gold Pound"}, -- Fick gives the German "halbes Pfund Silbers", while the TLFi gives the French "moitié d'une livre d'or ou d'argent"
+	DerivesFrom = {"proto-germanic", "noun", {"Mark", "Half Pound", "Half Silver Pound"}, "Markô"}, -- as given by Fick
+	Gender = "feminine" -- as given by Fick
 })
 
 DefineLanguageWord("Miete", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 7.

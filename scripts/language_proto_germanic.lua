@@ -525,7 +525,7 @@ DefineLanguageWord("Hailaga", { -- Source: August Fick and Alf Torp, "Wortschatz
 DefineLanguageWord("Helma", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 49.
 	Language = "proto-germanic",
 	Type = "noun",
-	Meanings = {"Helm"}, -- source gives the German "Helm" as the meaning
+	Meanings = {"Helm", "Helmet"}, -- source gives the German "Helm" as the meaning
 	Gender = "masculine"
 })
 
@@ -652,10 +652,35 @@ DefineLanguageWord("Mari", { -- source gives "mari-"; Source: http://www.cnrtl.f
 	Meanings = {"Sea"} -- source gives the French "mer"
 })
 
-DefineLanguageWord("Mark", { -- source also gives the form "Markô"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 160.
+DefineLanguageWord("Mark", { -- source also gives the alternative form "Markô"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 160.
 	Language = "proto-germanic",
 	Type = "noun",
-	Meanings = {"March", "Border", "Borderland"},
+	Meanings = {"Mark", "Border", "Borderland"}, -- source gives the German "Marke, Grenze, Grenzland"
+	DerivesFrom = {"proto-indo-european", "verb", "Mareĝ"}, -- source indicates this as a possibility
+	Gender = "feminine"
+})
+
+DefineLanguageWord("Marka", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 160.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Sign", "Indicator", "Mark"}, -- source gives the German "Zeichen, Kennzeichen, Marke"
+	DerivesFrom = {"proto-indo-european", "verb", "Mareĝ"}, -- presumably, since the source lists this word as being equivalent (same origin?) to the noun "Mark"
+	Gender = "neuter"
+})
+
+DefineLanguageWord("Markô", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 160.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Sign", "Indicator", "Mark"}, -- source gives the German "Zeichen, Kennzeichen, Marke"
+	DerivesFrom = {"proto-indo-european", "verb", "Mareĝ"}, -- presumably, since the source lists this word as being equivalent (same origin?) to the noun "Mark"
+	Gender = "feminine"
+})
+
+DefineLanguageWord("Markô", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 160.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Mark", "Half Pound", "Half Silver Pound"}, -- source gives the German "Mark, halbes Pfund (Silbers)"
+	DerivesFrom = {"proto-indo-european", "verb", "Mareĝ"}, -- presumably, since the source lists this word as being originally equivalent to the noun "Marka"
 	Gender = "feminine"
 })
 

@@ -102,14 +102,14 @@ DefineLanguageWord("Bord", {
 	Language = "french",
 	Type = "noun",
 	Meanings = {"Edge"},
-	DerivesFrom = {"old-frankish", "noun", "Bord"} -- the second one; Source: http://www.cnrtl.fr/definition/bord
+	DerivesFrom = {"old-frankish", "noun", {"Edge of a Vessel"}, "Bord"} -- Source: http://www.cnrtl.fr/definition/bord
 })
 
 DefineLanguageWord("Börde", {
 	Language = "french",
 	Type = "noun",
 	Meanings = {"Small Farm"},
-	DerivesFrom = {"old-frankish", "noun", "Bord"} -- derives from that noun's plural form "Borda"; Source: http://www.cnrtl.fr/definition/B%F6rde
+	DerivesFrom = {"old-frankish", "noun", {"Board"}, "Bord"} -- derives from that noun's plural form "Borda"; Source: http://www.cnrtl.fr/definition/B%F6rde
 })
 
 DefineLanguageWord("Cresson", {
@@ -212,7 +212,7 @@ DefineLanguageWord("Haubert", {
 DefineLanguageWord("Heaume", {
 	Language = "french",
 	Type = "noun",
-	Meanings = {"Helmet"}, -- source gives the French "casque" as the meaning
+	Meanings = {"Helm", "Helmet"}, -- source gives the French "casque" as the meaning
 	DerivesFrom = {"old-frankish", "noun", "Helm"} -- Source: http://www.cnrtl.fr/definition/heaume
 })
 
@@ -237,6 +237,13 @@ DefineLanguageWord("Marais", {
 	Type = "noun",
 	Meanings = {"Marsh"},
 	DerivesFrom = {"old-frankish", "noun", "Marisk"} -- Source: http://www.cnrtl.fr/definition/marais
+})
+
+DefineLanguageWord("Marc", {
+	Language = "french",
+	Type = "noun",
+	Meanings = {"Mark"}, -- currency unit i.e. used by Germany, measure unit
+	DerivesFrom = {"old-frankish", "noun", "Marka"} -- Source: http://www.cnrtl.fr/definition/marc
 })
 
 DefineLanguageWord("Ren", {

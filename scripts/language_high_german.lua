@@ -694,7 +694,7 @@ DefineLanguageWord("Garten", {
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"Garden"},
-	DerivesFrom = {"old-high-german", "noun", "Gart"}, -- the first one; Source: http://www.cnrtl.fr/definition/jardin
+	DerivesFrom = {"old-high-german", "noun", {"Garden"}, "Gart"}, -- Source: http://www.cnrtl.fr/definition/jardin
 	Gender = "masculine"
 })
 
@@ -1010,7 +1010,7 @@ DefineLanguageWord("Hel", {
 DefineLanguageWord("Helm", {
 	Language = "high-german",
 	Type = "noun",
-	Meanings = {"Helm"},
+	Meanings = {"Helm", "Helmet"},
 	DerivesFrom = {"middle-high-german", "noun", "Helm"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 49.
 	Gender = "masculine",
 	NumberCaseInflections = {
@@ -1342,7 +1342,7 @@ DefineLanguageWord("Land", {
 		"plural", "genitive", "Länder"
 	},
 	Gender = "neuter",
-	AffixNameTypes = {"compound", "suffix", "singular", "province"} -- example: "Burgenland"
+	AffixNameTypes = {"compound", "suffix", "singular", "province"} -- examples: "Burgenland"
 })
 
 DefineLanguageWord("Leopold", {
@@ -1419,7 +1419,7 @@ DefineLanguageWord("Mark", {
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"March"},
-	DerivesFrom = {"proto-germanic", "noun", "Mark"},
+	DerivesFrom = {"middle-high-german", "noun", "Marke"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 160.
 	Gender = "feminine",
 	NumberCaseInflections = {
 		"plural", "nominative", "Marken",
@@ -1427,7 +1427,30 @@ DefineLanguageWord("Mark", {
 		"plural", "dative", "Marken",
 		"plural", "genitive", "Marken"
 	},
+	NameTypes = {"person"},
 	AffixNameTypes = {"compound", "suffix", "singular", "province"} -- examples: "Ostmark", "Steiermark" (Styria)
+})
+
+DefineLanguageWord("Mark", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"Mark"}, -- Currency unit used by i.e. Germany
+	DerivesFrom = {"middle-high-german", "noun", {"Half Silver Pound", "Half Gold Pound"}, "Marke"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 160; Source: http://www.cnrtl.fr/definition/marc
+	Gender = "feminine"
+})
+
+DefineLanguageWord("Marke", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"Mark"},
+	DerivesFrom = {"middle-high-german", "noun", "Marke"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 160.
+	Gender = "feminine",
+	NumberCaseInflections = {
+		"plural", "nominative", "Marken",
+		"plural", "accusative", "Marken",
+		"plural", "dative", "Marken",
+		"plural", "genitive", "Marken"
+	}
 })
 
 DefineLanguageWord("Matthias", {

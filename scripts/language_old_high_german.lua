@@ -479,7 +479,7 @@ DefineLanguageWord("Heira", { -- accusative; Source: August Fick and Alf Torp, "
 DefineLanguageWord("Helm", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 49; Source: http://www.cnrtl.fr/definition/heaume
 	Language = "old-high-german",
 	Type = "noun",
-	Meanings = {"Helm"}, -- the TLFi gives the French "casque" as the meaning, while Fick gives the German "Helm"
+	Meanings = {"Helm", "Helmet"}, -- the TLFi gives the French "casque" as the meaning, while Fick gives the German "Helm"
 	DerivesFrom = {"proto-germanic", "noun", "Helma"} -- as given by Fick
 })
 
@@ -620,6 +620,14 @@ DefineLanguageWord("Marc", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	NumberCaseInflections = {
 		"singular", "genitive", "Marges" -- source also gives the alternative form "Marages"
 	}
+})
+
+DefineLanguageWord("Marca", { -- source also gives the alternative form "Marcha"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 160.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Border", "Borderland", "District", "Forest"}, -- source gives the German "Grenze, Grenzland, Bezirk, Wald"
+	DerivesFrom = {"proto-germanic", "noun", "Mark"},
+	Gender = "feminine"
 })
 
 DefineLanguageWord("Mēr", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.

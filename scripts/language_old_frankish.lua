@@ -152,7 +152,7 @@ DefineLanguageWord("Halsberg", { -- compound of the noun "Hals" and the verb "Be
 DefineLanguageWord("Helm", { -- Source: http://www.cnrtl.fr/definition/heaume
 	Language = "old-frankish", -- source gives "Ancien Bas Francique" (= Old Frankish)
 	Type = "noun",
-	Meanings = {"Helmet"} -- source gives the French "casque" as the meaning
+	Meanings = {"Helm", "Helmet"} -- source gives the French "casque" as the meaning
 })
 
 DefineLanguageWord("Ithi", { -- apparently a suffix forming the compound "haimithi"; Source: http://www.cnrtl.fr/definition/Amad%E9
@@ -171,6 +171,13 @@ DefineLanguageWord("Laisius", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Language = "old-frankish",
 	Type = "noun",
 	Meanings = {"Womb"} -- source gives (in German) "Schoß" as the meaning
+})
+
+DefineLanguageWord("Marka", { -- Source: http://www.cnrtl.fr/definition/marc
+	Language = "old-frankish", -- source gives "Ancien Bas Francique" (= Old Frankish)
+	Type = "noun",
+	Meanings = {},
+	DerivesFrom = {"proto-germanic", "noun", {"Mark", "Half Pound", "Half Silver Pound"}, "Markô"} -- presumably
 })
 
 DefineLanguageWord("Marisk", { -- Source: http://www.cnrtl.fr/definition/marais

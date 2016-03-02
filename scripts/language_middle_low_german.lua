@@ -107,6 +107,21 @@ DefineLanguageWord("Lôt", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Gender = "neuter"
 })
 
+DefineLanguageWord("Mark", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 160.
+	Language = "middle-low-german",
+	Type = "noun",
+	Meanings = {"Sign"}, -- source gives the German "Zeichen"
+	DerivesFrom = {"proto-germanic", "noun", "Marka"},
+	Gender = "neuter"
+})
+
+DefineLanguageWord("Marke", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 160.
+	Language = "middle-low-german",
+	Type = "noun",
+	Meanings = {"Half Silver Pound"}, -- source gives the German "halbes Pfund Silbers"
+	DerivesFrom = {"proto-germanic", "noun", {"Mark", "Half Pound", "Half Silver Pound"}, "Markô"}
+})
+
 DefineLanguageWord("Mersch", { -- source also gives the alternative form "Marsch"; Source: http://www.cnrtl.fr/definition/marais
 	Language = "middle-low-german",
 	Type = "noun",

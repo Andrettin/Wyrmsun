@@ -243,6 +243,13 @@ DefineLanguageWord("Lupus", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	DerivesFrom = {"proto-indo-european", "noun", "Vl̥qo"}
 })
 
+DefineLanguageWord("Margo", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 160.
+	Language = "latin",
+	Type = "noun",
+	Meanings = {"Edge"}, -- source gives the German "Rand"
+	DerivesFrom = {"proto-indo-european", "verb", "Mareĝ"} -- source indicates this as a possibility
+})
+
 DefineLanguageWord("Molere", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "latin",
 	Type = "verb",

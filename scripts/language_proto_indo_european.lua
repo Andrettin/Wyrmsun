@@ -133,6 +133,12 @@ DefineLanguageWord("Leykʷ", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Meanings = {"Leave"}
 })
 
+DefineLanguageWord("Mareĝ", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 160.
+	Language = "proto-indo-european", -- presumably, but the source does not explicitly make it clear
+	Type = "verb",
+	Meanings = {"Streak"} -- source gives the German "streifen"
+})
+
 DefineLanguageWord("Mel", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
 	Language = "proto-indo-european",
 	Type = "verb",

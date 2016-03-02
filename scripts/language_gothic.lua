@@ -386,7 +386,7 @@ DefineLanguageWord("Haurn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 DefineLanguageWord("Hilms", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 49.
 	Language = "gothic",
 	Type = "noun",
-	Meanings = {"Helm"}, -- source gives the German "Helm" as the meaning
+	Meanings = {"Helm", "Helmet"}, -- source gives the German "Helm" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Helma"}
 })
 
@@ -480,6 +480,14 @@ DefineLanguageWord("Manasēþs", { -- Source: Winfred P. Lehmann, "A Grammar of 
 	Language = "gothic",
 	Type = "noun",
 	Meanings = {} -- the "Sēþiz" Proto-Germanic word from which the "-sēþs" element in this word originates means "Seed"
+})
+
+DefineLanguageWord("Marka", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 160.
+	Language = "gothic",
+	Type = "noun",
+	Meanings = {"Mark", "Border", "Area"}, -- source gives the German "Marke, Grenze, Gebiet"
+	DerivesFrom = {"proto-germanic", "noun", "Mark"},
+	Gender = "feminine"
 })
 
 DefineLanguageWord("Mizdon", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 7.

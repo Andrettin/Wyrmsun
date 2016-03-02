@@ -38,3 +38,10 @@ DefineLanguageWord("Exfrediare", { -- Source: http://www.cnrtl.fr/definition/eff
 	Meanings = {"Confuse", "Agitate", "Disturb", "Perturb"}, -- source gives the French "troubler" as the meaning
 	DerivesFrom = {"late-latin", "verb", "Exfridare"} -- presumably
 })
+
+DefineLanguageWord("Marca", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 160; http://www.cnrtl.fr/definition/marc
+	Language = "medieval-latin",
+	Type = "noun",
+	Meanings = {},
+	DerivesFrom = {"proto-germanic", "noun", {"Mark", "Half Pound", "Half Silver Pound"}, "Markô"} -- as given by Fick
+})

@@ -154,6 +154,13 @@ DefineLanguageWord("Mían", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Meanings = {"Metal"} -- source gives the German "Metall"
 })
 
+DefineLanguageWord("Mruig", { -- source also gives the alternative form "Bruig"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 160.
+	Language = "irish",
+	Type = "noun",
+	Meanings = {"March", "Landscape"}, -- source gives the German "Mark, Landschaft"
+	DerivesFrom = {"proto-indo-european", "verb", "Mareĝ"} -- source indicates this as a possibility
+})
+
 DefineLanguageWord("Notail", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 19.
 	Language = "irish",
 	Type = "verb",

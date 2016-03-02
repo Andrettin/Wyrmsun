@@ -169,7 +169,7 @@ DefineLanguageWord("Hêlich", { -- Source: August Fick and Alf Torp, "Wortschatz
 DefineLanguageWord("Helm", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 49.
 	Language = "old-frisian",
 	Type = "noun",
-	Meanings = {"Helm", "Treetop"}, -- source gives the German "Helm, Wipfel" as the meaning
+	Meanings = {"Helm", "Helmet", "Treetop"}, -- source gives the German "Helm, Wipfel" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Helma"},
 	Gender = "masculine"
 })
@@ -269,6 +269,20 @@ DefineLanguageWord("Mēr", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Type = "adverb",
 	Meanings = {"More"},
 	Nominative = "Mēr"
+})
+
+DefineLanguageWord("Merk", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 160.
+	Language = "old-frisian",
+	Type = "noun",
+	Meanings = {"Half Silver Pound"}, -- source gives the German "halbes Pfund Silbers"
+	DerivesFrom = {"proto-germanic", "noun", {"Mark", "Half Pound", "Half Silver Pound"}, "Markô"}
+})
+
+DefineLanguageWord("Merke", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 160.
+	Language = "old-frisian",
+	Type = "noun",
+	Meanings = {"Border"}, -- source gives the German "Grenze"
+	DerivesFrom = {"proto-germanic", "noun", "Mark"}
 })
 
 DefineLanguageWord("Nera", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
