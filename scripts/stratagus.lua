@@ -1960,7 +1960,8 @@ local defaultPreferences = {
 	TipsShown = {},
 	LastVersionPlayed = "0.0.0",
 	EnabledMods = {},
-	SortSaveGamesByTime = false
+	SortSaveGamesByTime = false,
+	EnableOAML = false
 }
 
 CompleteMissingValues(wyr.preferences, defaultPreferences)
