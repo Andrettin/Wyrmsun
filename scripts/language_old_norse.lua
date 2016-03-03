@@ -1125,6 +1125,22 @@ DefineLanguageWord("Þyrpast", { -- Source: August Fick and Alf Torp, "Wortschat
 	DerivesFrom = {"proto-germanic", "noun", "Þurpa"}
 })
 
+DefineLanguageWord("Torf", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 86.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Peat"}, -- source gives the German "Torf" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Turba"},
+	Gender = "neuter"
+})
+
+DefineLanguageWord("Torfa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 86; Source: http://www.cnrtl.fr/definition/tourbe//1
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Sod"}, -- Fick gives the German "Torfscholle" as the meaning, while the TLFi gives the French "motte de gazon"
+	DerivesFrom = {"proto-germanic", "noun", "Turba"}, -- as given by Fick
+	Gender = "feminine" -- as given by Fick
+})
+
 DefineLanguageWord("Tvennr", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 6.
 	Language = "old-norse",
 	Type = "adjective",

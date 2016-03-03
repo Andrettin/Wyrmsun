@@ -406,6 +406,14 @@ DefineLanguageWord("Thorp", { -- source also gives the alternative form "Therp";
 	DerivesFrom = {"proto-germanic", "noun", "Þurpa"}
 })
 
+DefineLanguageWord("Turf", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 86.
+	Language = "old-frisian",
+	Type = "noun",
+	Meanings = {"Lawn", "Turf"}, -- source gives the German "Rasen" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Turba"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Wêd", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 4.
 	Language = "old-frisian",
 	Type = "noun",

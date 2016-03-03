@@ -164,6 +164,14 @@ DefineLanguageWord("Sûd", { -- source also gives the alternative form "sûder";
 	DerivesFrom = {"proto-germanic", "adverb", "Sunþa"}
 })
 
+DefineLanguageWord("Torf", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 86.
+	Language = "middle-low-german",
+	Type = "noun",
+	Meanings = {"Lawn", "Turf"}, -- source gives the German "Rasen" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Turba"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Twern", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
 	Language = "middle-low-german",
 	Type = "noun",

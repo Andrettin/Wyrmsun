@@ -1285,6 +1285,14 @@ DefineLanguageWord("Ziohan", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	DerivesFrom = {"proto-germanic", "verb", "Téuχanan"}
 })
 
+DefineLanguageWord("Zurba", { -- source also gives the alternative form "Zurf"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 86.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Lawn", "Turf"}, -- source gives the German "Rasen" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Turba"},
+	Gender = "feminine"
+})
+
 DefineLanguageWord("Zwirnēn", { -- source also gives the alternative form "Zwirnōn"; Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
 	Language = "old-high-german",
 	Type = "verb",

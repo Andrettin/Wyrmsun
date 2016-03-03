@@ -949,6 +949,18 @@ DefineLanguageWord("Hart", { -- Source: http://www.duden.de/rechtschreibung/hart
 	}
 })
 
+DefineLanguageWord("Haus", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"House"},
+	Gender = "neuter",
+	NumberCaseInflections = {
+		"singular", "genitive", "Hauses",
+		"plural", "nominative", "Häuser"
+	},
+	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- examples: "Torfhaus"
+})
+
 DefineLanguageWord("Heilig", {
 	Language = "high-german",
 	Type = "adjective",
@@ -2036,6 +2048,19 @@ DefineLanguageWord("Tobias", {
 	Type = "noun",
 	Meanings = {},
 	NameTypes = {"person"}
+})
+
+DefineLanguageWord("Torf", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"Peat"},
+	DerivesFrom = {"middle-low-german", "noun", "Torf"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 86.
+	Gender = "masculine",
+	NumberCaseInflections = {
+		"singular", "genitive", "Torfs", -- alternatively also "Torfes"
+		"plural", "nominative", "Torfe"
+	},
+	AffixNameTypes = {"compound", "prefix", "singular", "settlement"} -- examples: "Torfhaus"
 })
 
 DefineLanguageWord("Turm", {

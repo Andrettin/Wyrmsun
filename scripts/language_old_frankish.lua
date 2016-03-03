@@ -254,6 +254,13 @@ DefineLanguageWord("Thorp", { -- source also gives the alternative form "throp";
 	DerivesFrom = {"proto-germanic", "noun", "Þurpa"} -- presumably
 })
 
+DefineLanguageWord("Turba", { -- Source: http://www.cnrtl.fr/definition/tourbe//1
+	Language = "old-frankish", -- source gives "Francique" (which likely means Old Frankish in this case)
+	Type = "noun",
+	Meanings = {},
+	DerivesFrom = {"proto-germanic", "noun", "Turba"} -- presumably
+})
+
 DefineLanguageWord("Waidanjan", { -- Source: http://www.cnrtl.fr/definition/barguigner
 	Language = "old-frankish", -- source gives "Ancien Bas Francique" (= Old Frankish)
 	Type = "verb",

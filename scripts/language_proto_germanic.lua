@@ -977,6 +977,12 @@ DefineLanguageWord("Þurpa", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Gender = "neuter"
 })
 
+DefineLanguageWord("Turba", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 86.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Peat", "Lawn", "Turf"} -- source gives the German "Torf, Rasen" as the meaning
+})
+
 DefineLanguageWord("Ufar", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "proto-germanic",
 	Type = "adposition",

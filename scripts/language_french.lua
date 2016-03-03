@@ -275,6 +275,14 @@ DefineLanguageWord("Sombrer", {
 	DerivesFrom = {"old-frankish", "noun", "Sumar"} -- Source: http://www.cnrtl.fr/definition/sombre//3
 })
 
+DefineLanguageWord("Tourbe", {
+	Language = "french",
+	Type = "noun",
+	Meanings = {"Peat"},
+	DerivesFrom = {"old-frankish", "noun", "Turba"}, -- Source: http://www.cnrtl.fr/definition/tourbe//1
+	Gender = "feminine"
+})
+
 DefineLanguageWord("Trop", {
 	Language = "french",
 	Type = "adverb",

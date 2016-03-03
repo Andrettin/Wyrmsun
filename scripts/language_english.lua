@@ -2773,6 +2773,14 @@ DefineLanguageWord("Tree", {
 	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 336.
 })
 
+DefineLanguageWord("Turf", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Turf"},
+	DerivesFrom = {"old-english", "noun", "Turf"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 86.
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Twelve", {
 	Language = "english",
 	Type = "numeral",

@@ -104,6 +104,13 @@ DefineLanguageWord("Dāhas", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	DerivesFrom = {"proto-indo-european", "noun", "Dhagh"}
 })
 
+DefineLanguageWord("Darbhá", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 86.
+	Language = "sanskrit",
+	Type = "noun",
+	Meanings = {"Tuft of Grass", "Bush Grass"}, -- source gives the German "Grasbüschel, Buschgras" as the meaning
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Duhitā́", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
 	Language = "sanskrit",
 	Type = "noun",

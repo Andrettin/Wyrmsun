@@ -1356,6 +1356,14 @@ DefineLanguageWord("Tiohhian", { -- Source: Richard M. Runge, "The Phonetic Real
 	Meanings = {"Consider"}
 })
 
+DefineLanguageWord("Turf", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 86.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Peat", "Lawn", "Turf"}, -- source gives the German "Torf, Rasen" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Turba"},
+	Gender = "feminine"
+})
+
 DefineLanguageWord("Trūwian", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 3, Subsection 1.
 	Language = "old-english",
 	Type = "verb",
