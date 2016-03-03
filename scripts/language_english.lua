@@ -48,8 +48,7 @@ DefineLanguageWord("Alf", {
 	DerivesFrom = {"old-english", "noun", "Ælf"}, -- seems sensible
 	Gender = "masculine",
 	Archaic = true,
-	NameTypes = {"person"},
-	AffixNameTypes = {"compound", "prefix", "singular", "person"} -- example: "Alfred"
+	NameTypes = {"person"}
 })
 
 DefineLanguageWord("Anvil", {
@@ -74,7 +73,6 @@ DefineLanguageWord("Ard", {
 	Language = "english",
 	Type = "adjective",
 	Meanings = {},
-	AffixNameTypes = {"compound", "suffix", "singular", "person"}, -- examples: "Bernard", "Richard"
 	Archaic = true
 })
 
@@ -223,7 +221,7 @@ DefineLanguageWord("Bern", {
 	Language = "english",
 	Type = "noun",
 	Meanings = {},
-	AffixNameTypes = {"compound", "prefix", "singular", "person"} -- example: "Bernard"
+	Archaic = true
 })
 
 DefineLanguageWord("Berry", {
@@ -1019,7 +1017,6 @@ DefineLanguageWord("Frey", {
 	Type = "noun",
 	Meanings = {},
 	DerivesFrom = {"old-english", "noun", "Friþu"}, -- presumably
-	AffixNameTypes = {"compound", "suffix", "singular", "person"}, -- example: "Godfrey"
 	Archaic = true
 })
 
@@ -1121,8 +1118,7 @@ DefineLanguageWord("God", {
 	Type = "noun",
 	Meanings = {"God"},
 	DerivesFrom = {"old-english", "noun", "God"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.
-	Gender = "masculine",
-	AffixNameTypes = {"compound", "prefix", "singular", "person"} -- example: "Godfrey"
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Gold", {
@@ -2100,8 +2096,7 @@ DefineLanguageWord("Red", {
 	Meanings = {"Counsel", "Advice", "Account", "Story"},
 	DerivesFrom = {"old-english", "noun", "Ræ̂d"}, -- presumably
 	Gender = "neuter",
-	Archaic = true,
-	AffixNameTypes = {"compound", "suffix", "singular", "person"} -- example: "Alfred"
+	Archaic = true
 })
 
 DefineLanguageWord("Red", {
@@ -2117,14 +2112,6 @@ DefineLanguageWord("Red", {
 	}
 })
 
-DefineLanguageWord("Rich", {
-	Language = "english",
-	Type = "adjective",
-	Meanings = {"Rich"},
-	DerivesFrom = {"old-english", "adjective", "Rîce"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
-	AffixNameTypes = {"compound", "prefix", "singular", "person"} -- example: "Richard"
-})
-
 DefineLanguageWord("Rib", {
 	Language = "english",
 	Type = "noun",
@@ -2133,6 +2120,13 @@ DefineLanguageWord("Rib", {
 	AffixNameTypes = {
 		"separate", "prefix", "plural", "terrain-hills" -- example: "Ribs Down"
 	}
+})
+
+DefineLanguageWord("Rich", {
+	Language = "english",
+	Type = "adjective",
+	Meanings = {"Rich"},
+	DerivesFrom = {"old-english", "adjective", "Rîce"} -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
 })
 
 DefineLanguageWord("Ridge", {
@@ -3013,3 +3007,54 @@ DefineLanguageWord("Yew", {
 		"compound", "prefix", "singular", "terrain-mountains" -- example: "Yewbarrow"
 	}
 })
+
+-- compounds
+
+DefineLanguageWord("Alfred", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Elf-Counsel"}, -- Alf = Elf, Red = Counsel
+	CompoundElements = {
+		"prefix", "english", "noun", "Alf",
+		"suffix", "english", "noun", "Red"
+	},
+	Archaic = true,
+	NameTypes = {"person"}
+})
+
+DefineLanguageWord("Bernard", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {},
+	CompoundElements = {
+		"prefix", "english", "noun", "Bern",
+		"suffix", "english", "adjective", "Ard"
+	},
+	Archaic = true,
+	NameTypes = {"person"}
+})
+
+DefineLanguageWord("Godfrey", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {},
+	CompoundElements = {
+		"prefix", "english", "noun", "God",
+		"suffix", "english", "noun", "Frey"
+	},
+	Archaic = true,
+	NameTypes = {"person"}
+})
+
+DefineLanguageWord("Richard", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {},
+	CompoundElements = {
+		"prefix", "english", "adjective", "Rich",
+		"suffix", "english", "adjective", "Ard"
+	},
+	Archaic = true,
+	NameTypes = {"person"}
+})
+

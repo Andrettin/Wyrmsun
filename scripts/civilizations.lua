@@ -161,7 +161,6 @@ DefineRaceNames(
 			"Tirol" -- "Tirol" = "Tyrol"
 		},
 		"province-name-prefixes", {
-			"Branden", -- example: "Brandenburg"
 			"Mecklen", -- example: "Mecklenburg"
 			"Steier" -- example: "Steiermark" (Styria)
 --			"Vorarl" -- example: "Vorarlberg"

@@ -81,13 +81,6 @@ DefineLanguageWord("Aldr", { -- Source: Geir T. Zoëga, "A Concise Dictionary of
 	Gender = "masculine"
 })
 
-DefineLanguageWord("Aldrnari", { -- Compound of the words "Aldr" and "Nari", literally "life-sustainer"; Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
-	Language = "old-norse",
-	Type = "noun",
-	Meanings = {"Fire"},
-	Gender = "masculine"
-})
-
 DefineLanguageWord("Alfr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 20.
 	Language = "old-norse",
 	Type = "noun",
@@ -1240,4 +1233,17 @@ DefineLanguageWord("Ylgr", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Meanings = {"Female Wolf"}, -- source gives the German "Wölfin"
 	DerivesFrom = {"proto-germanic", "noun", "Vulgvî"},
 	Gender = "feminine"
+})
+
+-- compounds
+
+DefineLanguageWord("Aldrnari", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Fire"}, -- literally (as a compound): "life-sustainer"
+	CompoundElements = {
+		"prefix", "old-norse", "noun", "Aldr",
+--		"suffix", "old-norse", "noun", "Nari" -- need to add this as a word
+	},
+	Gender = "masculine"
 })

@@ -130,23 +130,11 @@ DefineLanguageWord("Haim", { -- Source: http://www.cnrtl.fr/definition/hameau
 	DerivesFrom = {"proto-germanic", "noun", "Haima"} -- presumably
 })
 
-DefineLanguageWord("Haimithi", { -- apparently a compound of "haim" and "ithi"; Source: http://www.cnrtl.fr/definition/Amad%E9
-	Language = "old-frankish",
-	Type = "noun",
-	Meanings = {"Fenced Place"} -- source gives the French "lieu entouré de clôture" as the meaning
-})
-
 DefineLanguageWord("Hals", { -- Source: http://www.cnrtl.fr/definition/haubert
 	Language = "old-frankish", -- source gives "Ancien Bas Francique" (= Old Frankish)
 	Type = "noun",
 	Meanings = {"Neck"}, -- source gives the French "cou" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Halsa"} -- presumably
-})
-
-DefineLanguageWord("Halsberg", { -- compound of the noun "Hals" and the verb "Bergan"; Source: http://www.cnrtl.fr/definition/haubert
-	Language = "old-frankish", -- source gives "Ancien Bas Francique" (= Old Frankish)
-	Type = "noun",
-	Meanings = {"Neck Cover"} -- source gives the French "ce qui protège le cou" as the meaning
 })
 
 DefineLanguageWord("Helm", { -- Source: http://www.cnrtl.fr/definition/heaume
@@ -318,3 +306,26 @@ DefineLanguageWord("Worm", { -- source also gives the alternative form "Wurm"; S
 	Meanings = {"Pus"}, -- source gives the French "pus" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Vurma"} -- presumably
 })
+
+-- compounds
+
+DefineLanguageWord("Haimithi", { -- Source: http://www.cnrtl.fr/definition/Amad%E9
+	Language = "old-frankish",
+	Type = "noun",
+	Meanings = {"Fenced Place"}, -- source gives the French "lieu entouré de clôture" as the meaning
+	CompoundElements = { -- apparently
+		"prefix", "old-frankish", "noun", "Haim",
+		"suffix", "old-frankish", "noun", "Ithi"
+	}
+})
+
+DefineLanguageWord("Halsberg", { -- Source: http://www.cnrtl.fr/definition/haubert
+	Language = "old-frankish", -- source gives "Ancien Bas Francique" (= Old Frankish)
+	Type = "noun",
+	Meanings = {"Neck Cover"}, -- source gives the French "ce qui protège le cou" as the meaning
+	CompoundElements = {
+		"prefix", "old-frankish", "noun", "Hals",
+		"suffix", "old-frankish", "verb", "Bergan"
+	}
+})
+
