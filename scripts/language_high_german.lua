@@ -984,7 +984,7 @@ DefineLanguageWord("Heim", {
 		"plural", "dative", "Heimen",
 		"plural", "genitive", "Heime"
 	},
-	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- examples: "Mannheim", "Rosenheim"
+	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- examples: "Mannheim", "Meisenheim", "Rosenheim"
 })
 
 DefineLanguageWord("Heimisch", {
@@ -1477,6 +1477,20 @@ DefineLanguageWord("Maximilian", {
 	Type = "noun",
 	Meanings = {},
 	NameTypes = {"person"}
+})
+
+DefineLanguageWord("Meise", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"Peat"},
+	Gender = "feminine",
+	NumberCaseInflections = {
+		"plural", "nominative", "Meisen",
+		"plural", "accusative", "Meisen",
+		"plural", "dative", "Meisen",
+		"plural", "genitive", "Meisen"
+	},
+	AffixNameTypes = {"compound", "prefix", "plural", "settlement"} -- example: "Meisenheim"
 })
 
 DefineLanguageWord("Messing", {
