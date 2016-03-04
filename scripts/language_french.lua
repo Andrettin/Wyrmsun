@@ -112,6 +112,20 @@ DefineLanguageWord("Börde", {
 	DerivesFrom = {"old-frankish", "noun", {"Board"}, "Bord"} -- derives from that noun's plural form "Borda"; Source: http://www.cnrtl.fr/definition/B%F6rde
 })
 
+DefineLanguageWord("Bourg", { -- Source: T. C. Donkin, "An Etymological Dictionary of the Romance Languages", 1864, p. 84.
+	Language = "french",
+	Type = "noun",
+	Meanings = {"Small Town", "Borough"},
+	DerivesFrom = {"proto-germanic", "noun", "Burg"} -- the source gives it as being of Germanic origin (then going on to list a series of words in Germanic languages); presumably from the Old Frankish in French, since they were the Germanic people who settled in France; but since we don't know the relevant Old Frankish word, set this as being derived from the Proto-Germanic one instead
+})
+
+DefineLanguageWord("Bourgeois", { -- Source: T. C. Donkin, "An Etymological Dictionary of the Romance Languages", 1864, p. 84.
+	Language = "french",
+	Type = "noun", -- correct?
+	Meanings = {},
+	DerivesFrom = {"late-latin", "noun", "Burgus"}
+})
+
 DefineLanguageWord("Cresson", {
 	Language = "french",
 	Type = "noun",

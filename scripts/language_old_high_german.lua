@@ -201,12 +201,13 @@ DefineLanguageWord("Buoh", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	DerivesFrom = {"proto-germanic", "noun", "Bōks"}
 })
 
-DefineLanguageWord("Burg", { -- source also gives the alternative form "Purg"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
+DefineLanguageWord("Burg", { -- Fick also gives the alternative form "Purg"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137; Source: T. C. Donkin, "An Etymological Dictionary of the Romance Languages", 1864, p. 84.
 	Language = "old-high-german",
 	Type = "noun",
-	Meanings = {"Fortified Place", "Castle", "Palace", "City", "Town"}, -- source gives "befestigter Ort, Burg, Schloß, Stadt" as the meaning
-	DerivesFrom = {"proto-germanic", "noun", "Burg"},
-	Gender = "feminine"
+	Meanings = {"Fortified Place", "Castle", "Palace", "City", "Town"}, -- Fick gives "befestigter Ort, Burg, Schloß, Stadt" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Burg"}, -- as given by Fick
+	Gender = "feminine" -- as given by Fick
+	-- Donkin gives this word as coming "bergan" (to shelter)
 })
 
 DefineLanguageWord("Busc", { -- Fick also gives the forms "Busk, Bosk" instead; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 143; Source: http://www.cnrtl.fr/definition/bois

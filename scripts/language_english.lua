@@ -305,6 +305,7 @@ DefineLanguageWord("Borough", {
 	Language = "english",
 	Type = "noun",
 	Meanings = {"Borough"},
+	DerivesFrom = {"old-english", "noun", "Burg"}, -- presumably, since Donkin gives this word as being cognate of the Gothic "Baurgs" and the Old High German "Burg"; Source: T. C. Donkin, "An Etymological Dictionary of the Romance Languages", 1864, p. 84.
 	Gender = "neuter",
 	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- example: "Scarborough"
 })
@@ -406,6 +407,14 @@ DefineLanguageWord("Buck", {
 	AffixNameTypes = {
 		"separate", "prefix", "singular", "terrain-mountains" -- example: "Buck Pike"
 	}
+})
+
+DefineLanguageWord("Burgh", { -- Source: T. C. Donkin, "An Etymological Dictionary of the Romance Languages", 1864, p. 84.
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Burgh"},
+	DerivesFrom = {"old-english", "noun", "Burg"}, -- presumably, since Donkin gives this word as being cognate of the Gothic "Baurgs" and the Old High German "Burg"
+	Gender = "neuter" -- presumably
 })
 
 DefineLanguageWord("Burn", {

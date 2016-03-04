@@ -706,14 +706,6 @@ function RunVideoOptionsMenu()
   checkOpenGL:setMarked(wyr.preferences.UseOpenGL)
 --  checkOpenGL:setMarked(UseOpenGL) --TODO: Enable if we have an OpenGL function
 
-  local oldEnableOAML = wyr.preferences.EnableOAML
-  checkOAML = menu:addImageCheckBox(_("Enable adaptive music"), offx + 16, offy + 55 + 26*11 + 14,
-    function()
-      wyr.preferences.EnableOAML = checkOAML:isMarked()
-      SavePreferences()
-    end)
-  if (wyr.preferences.EnableOAML) then checkOAML:setMarked(true) end
-
   menu:addHalfButton(_("~!OK"), "o", offx + 123, offy + 55 + 26*12 + 14, function()
 	wyr.preferences.EffectsVolume = GetEffectsVolume()
 	wyr.preferences.EffectsEnabled = IsEffectsEnabled()

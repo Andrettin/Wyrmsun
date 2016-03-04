@@ -335,6 +335,12 @@ DefineLanguageWord("Podós", { -- this is the genitive; Source: Winfred P. Lehma
 	}
 })
 
+DefineLanguageWord("Πύργος", { -- Source: T. C. Donkin, "An Etymological Dictionary of the Romance Languages", 1864, p. 84.
+	Language = "greek",
+	Type = "noun",
+	Meanings = {}
+})
+
 DefineLanguageWord("Polis", { -- should be written as the original Greek name (with Greek characters)
 	Language = "greek",
 	Type = "noun",

@@ -25,6 +25,13 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineLanguageWord("Burgus", { -- Source: T. C. Donkin, "An Etymological Dictionary of the Romance Languages", 1864, p. 84.
+	Language = "late-latin",
+	Type = "noun",
+	Meanings = {},
+	DerivesFrom = {"greek", "noun", "Πύργος"} -- according to the source, at least this word's masculine form comes from this Greek word, even if it otherwise comes from the Germanic
+})
+
 DefineLanguageWord("Exfridare", { -- Source: http://www.cnrtl.fr/definition/effrayer
 	Language = "late-latin", -- source gives "Bas Latin" (= Late Latin)
 	Type = "verb",

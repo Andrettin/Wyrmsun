@@ -25,6 +25,27 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineLanguageWord("Borgese", { -- Source: T. C. Donkin, "An Etymological Dictionary of the Romance Languages", 1864, p. 84.
+	Language = "italian",
+	Type = "noun", -- correct?
+	Meanings = {},
+	DerivesFrom = {"late-latin", "noun", "Burgus"}
+})
+
+DefineLanguageWord("Borghese", { -- Source: T. C. Donkin, "An Etymological Dictionary of the Romance Languages", 1864, p. 84.
+	Language = "italian",
+	Type = "noun", -- correct?
+	Meanings = {},
+	DerivesFrom = {"gothic", "noun", "Baúrgs"} -- apparently
+})
+
+DefineLanguageWord("Borgo", { -- Source: T. C. Donkin, "An Etymological Dictionary of the Romance Languages", 1864, p. 84.
+	Language = "italian",
+	Type = "noun",
+	Meanings = {"Small Town", "Borough"},
+	DerivesFrom = {"gothic", "noun", "Baúrgs"} -- the source gives it as being of Germanic origin (then going on to list a series of Germanic words including this Gothic one); presumably from the Gothic in Italian since they were the Germanic people who settled in Italy
+})
+
 DefineLanguageWord("Bosco", {
 	Language = "italian",
 	Type = "noun",

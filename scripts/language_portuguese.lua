@@ -25,6 +25,27 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineLanguageWord("Burgel", { -- Source: T. C. Donkin, "An Etymological Dictionary of the Romance Languages", 1864, p. 84.
+	Language = "portuguese",
+	Type = "noun", -- correct?
+	Meanings = {},
+	DerivesFrom = {"late-latin", "noun", "Burgus"}
+})
+
+DefineLanguageWord("Burguez", { -- Source: T. C. Donkin, "An Etymological Dictionary of the Romance Languages", 1864, p. 84.
+	Language = "portuguese",
+	Type = "noun", -- correct?
+	Meanings = {},
+	DerivesFrom = {"gothic", "noun", "Baúrgs"} -- apparently
+})
+
+DefineLanguageWord("Burgo", { -- Source: T. C. Donkin, "An Etymological Dictionary of the Romance Languages", 1864, p. 84.
+	Language = "portuguese",
+	Type = "noun",
+	Meanings = {"Small Town", "Borough"},
+	DerivesFrom = {"gothic", "noun", "Baúrgs"} -- the source gives it as being of Germanic origin (then going on to list a series of Germanic words including this Gothic one); presumably from the Gothic in Portuguese, since it seems likely it has the same origin as the Spanish word
+})
+
 DefineLanguageWord("Rico", {
 	Language = "portuguese",
 	Type = "adjective",

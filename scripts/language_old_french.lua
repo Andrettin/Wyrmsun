@@ -32,6 +32,13 @@ DefineLanguageWord("Alt", { -- a suffix; http://www.cnrtl.fr/definition/lourdaud
 	DerivesFrom = {"old-frankish", "noun", "Wald"}
 })
 
+DefineLanguageWord("Borgois", { -- Source: T. C. Donkin, "An Etymological Dictionary of the Romance Languages", 1864, p. 84.
+	Language = "old-french",
+	Type = "noun", -- correct?
+	Meanings = {},
+	DerivesFrom = {"proto-germanic", "noun", "Burg"} -- the source (apparently) gives it as being of Germanic origin; presumably from the Old Frankish in French, since they were the Germanic people who settled in France; but since we don't know the relevant Old Frankish word, set this as being derived from the Proto-Germanic one instead
+})
+
 DefineLanguageWord("Halberc", { -- Source: http://www.cnrtl.fr/definition/haubert
 	Language = "old-french", -- attested c. 1100 AD
 	Type = "noun",
