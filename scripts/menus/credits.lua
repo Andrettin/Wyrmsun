@@ -32,6 +32,10 @@ function RunShowCreditsMenu()
   local offx = (Video.Width - 640) / 2
   local offy = (Video.Height - 480) / 2
 
+  if (wyr.preferences.EnableOAML) then
+    SetMusicCondition(10, 1)
+  end
+
   local credits = {
 	_("Wyrmsun Design and Maintenance"),
 	"  Andrettin",
@@ -272,5 +276,8 @@ function RunShowCreditsMenu()
   menu:run()
 
   SetGameSpeed(speed)
+  if (wyr.preferences.EnableOAML) then
+    SetMusicCondition(10, 0)
+  end
 end
 

@@ -2,7 +2,8 @@
 function RunResultsMenu()
 	local background
 	local result
-	
+
+	StopMusic()
 	if (GameResult == GameVictory) then
 		result = "Victory!"
 		if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
@@ -14,6 +15,13 @@ function RunResultsMenu()
 		elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "kobold") then
 			background = GetBackground("ui/backgrounds/wyrm.png")
 			PlayMusic("music/victory.ogg")
+		elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "germanic") then
+			background = GetBackground("ui/backgrounds/wyrm.png")
+			if (wyr.preferences.EnableOAML) then
+				PlayMusicName("GermanicWin")
+			else
+				PlayMusic("music/victory.ogg")
+			end
 		else
 			background = GetBackground("ui/backgrounds/gryphon.png")
 			PlayMusic("music/victory.ogg")
@@ -34,7 +42,11 @@ function RunResultsMenu()
 			PlayMusic("music/defeat.ogg")
 		elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "germanic" or GetPlayerData(GetThisPlayer(), "RaceName") == "teuton") then
 			background = GetBackground("ui/backgrounds/wyrm.png")
-			PlayMusic("music/defeat.ogg")
+			if (wyr.preferences.EnableOAML) then
+				PlayMusicName("GermanicLose")
+			else
+				PlayMusic("music/defeat.ogg")
+			end
 		else
 			background = GetBackground("ui/backgrounds/wyrm.png")
 			PlayMusic("music/defeat.ogg")

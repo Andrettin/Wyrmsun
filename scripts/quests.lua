@@ -37,7 +37,9 @@ DefineQuest("On the Vanaquisl", {
 	Scenario = "scripts/civilizations/germanic/scenarios/on_the_vanaquisl.lua",
 	X = 1,
 	Y = 1,
-	PlayerColor = "orange"
+	PlayerColor = "orange",
+	LoadingMusic = "GermanicLoading",
+	MapMusic = "GermanicTheme"
 })
 
 DefineQuest("Westward Migration", {
@@ -51,7 +53,9 @@ DefineQuest("Westward Migration", {
 	Scenario = "scripts/civilizations/germanic/scenarios/westward_migration.lua",
 	X = 2,
 	Y = 1,
-	PlayerColor = "orange"
+	PlayerColor = "orange",
+	LoadingMusic = "GermanicLoading",
+	MapMusic = "GermanicTheme2"
 })
 
 DefineQuest("Northwards to the Sea", {
@@ -65,7 +69,9 @@ DefineQuest("Northwards to the Sea", {
 	Scenario = "scripts/civilizations/germanic/scenarios/northwards_to_the_sea.lua",
 	X = 3,
 	Y = 1,
-	PlayerColor = "orange"
+	PlayerColor = "orange",
+	LoadingMusic = "GermanicLoading",
+	MapMusic = "GermanicTheme3"
 })
 
 DefineQuest("Gylve's Realm", {
@@ -79,7 +85,9 @@ DefineQuest("Gylve's Realm", {
 	Scenario = "scripts/civilizations/germanic/scenarios/gylves_realm.lua",
 	X = 4,
 	Y = 1,
-	PlayerColor = "orange"
+	PlayerColor = "orange",
+	LoadingMusic = "GermanicLoading",
+	MapMusic = "GermanicTheme4"
 })
 
 DefineQuest("The Battle of Magetobria", {
@@ -176,7 +184,9 @@ DefineQuest("A Rocky Home", {
 	Scenario = "scripts/civilizations/dwarf/scenarios/a_rocky_home.lua",
 	X = 1,
 	Y = 1,
-	PlayerColor = "white"
+	PlayerColor = "white",
+	LoadingMusic = "DwarfLoading",
+	MapMusic = "DwarfTheme"
 })
 
 DefineQuest("The Mead of Wisdom", {
@@ -190,7 +200,9 @@ DefineQuest("The Mead of Wisdom", {
 	Scenario = "scripts/civilizations/dwarf/scenarios/the_mead_of_wisdom.lua",
 	X = 2,
 	Y = 1,
-	PlayerColor = "white"
+	PlayerColor = "white",
+	LoadingMusic = "DwarfLoading",
+	MapMusic = "DwarfTheme2"
 })
 
 DefineQuest("The Treasures of Svarinshaug", {
@@ -204,7 +216,9 @@ DefineQuest("The Treasures of Svarinshaug", {
 	Scenario = "scripts/civilizations/dwarf/scenarios/the_treasures_of_svarinshaug.lua",
 	X = 3,
 	Y = 1,
-	PlayerColor = "white"
+	PlayerColor = "white",
+	LoadingMusic = "DwarfLoading",
+	MapMusic = "DwarfTheme3"
 })
 
 DefineQuest("The Necklace of the Brisings", {
@@ -218,7 +232,9 @@ DefineQuest("The Necklace of the Brisings", {
 	Scenario = "scripts/civilizations/dwarf/scenarios/the_necklace_of_the_brisings.lua",
 	X = 4,
 	Y = 1,
-	PlayerColor = "black"
+	PlayerColor = "black",
+	LoadingMusic = "DwarfLoading",
+	MapMusic = "DwarfTheme4"
 })
 
 DefineQuest("The Binding of Grafvitnir", {

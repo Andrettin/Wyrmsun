@@ -36,7 +36,11 @@ function RunQuestWorldMenu()
 	wyrmsun.playlist = { "music/battle_theme_a.ogg" }
 
 	if not (IsMusicPlaying()) then
-		PlayMusic("music/battle_theme_a.ogg")
+		if (wyr.preferences.EnableOAML) then
+			PlayMusicName("MenuTheme")
+		else
+			PlayMusic("music/battle_theme_a.ogg")
+		end
 	end
 
 	local menu = WarMenu()
@@ -82,7 +86,11 @@ function RunQuestMenu(world)
 	wyrmsun.playlist = { "music/battle_theme_a.ogg" }
 
 	if not (IsMusicPlaying()) then
-		PlayMusic("music/battle_theme_a.ogg")
+		if (wyr.preferences.EnableOAML) then
+			PlayMusicName("MenuTheme")
+		else
+			PlayMusic("music/battle_theme_a.ogg")
+		end
 	end
 
 	local menu = WarMenu()

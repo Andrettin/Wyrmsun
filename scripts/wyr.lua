@@ -277,7 +277,7 @@ function SetPlayerData(player, data, arg1, arg2)
 end
 
 function LoadCivilizationUI(civilization)
-	if (UsingTechTree == false and civilization ~= GetPlayerData(GetThisPlayer(), "RaceName")) then
+	if (wyr.preferences.EnableOAML == false and UsingTechTree == false and civilization ~= GetPlayerData(GetThisPlayer(), "RaceName")) then
 		StopMusic()
 	end
 	Load("scripts/ui.lua")

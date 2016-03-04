@@ -769,6 +769,11 @@ function RunMap(map, objective, fow, revealmap)
 	end
 	local loop = true
 	while (loop) do
+		if (wyr.preferences.EnableOAML and CurrentQuest ~= "" and GetQuestData(CurrentQuest, "LoadingMusic") ~= "") then
+			StopMusic()
+			PlayMusicName(GetQuestData(CurrentQuest, "LoadingMusic"))
+		end
+
 		InitGameVariables()
 		if fow ~= nil then
 			SetFogOfWar(fow)
@@ -922,7 +927,11 @@ function RunSinglePlayerGameMenu()
   wyrmsun.playlist = { "music/battle_theme_a.ogg" }
 
   if not (IsMusicPlaying()) then
-    PlayMusic("music/battle_theme_a.ogg")
+      if (wyr.preferences.EnableOAML) then
+        PlayMusicName("MenuTheme")
+      else
+        PlayMusic("music/battle_theme_a.ogg")
+      end
   end
 
   local menu = WarMenu()
@@ -1370,7 +1379,11 @@ function BuildProgramStartMenu()
 	wyrmsun.playlist = { "music/battle_theme_a.ogg" }
 
 	if not (IsMusicPlaying()) then
-		PlayMusic("music/battle_theme_a.ogg")
+		if (wyr.preferences.EnableOAML) then
+			PlayMusicName("MenuTheme")
+		else
+			PlayMusic("music/battle_theme_a.ogg")
+		end
 	end
 
 	local menu = WarMenu()
@@ -1458,6 +1471,10 @@ LoadMods()
 GenerateMissingLanguageData() -- generate missing language data after loading mods, so that the function will take language data defined in mods into account
 
 function GameStarting()
+	if (wyr.preferences.EnableOAML and CurrentQuest ~= "" and GetQuestData(CurrentQuest, "MapMusic") ~= "") then
+		StopMusic()
+		PlayMusicName(GetQuestData(CurrentQuest, "MapMusic"))
+	end
 	--[[
 	if (wyr.preferences.ShowTips and not IsReplayGame() and not IsNetworkGame()) then
 		SetGamePaused(true)

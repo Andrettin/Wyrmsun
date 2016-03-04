@@ -38,7 +38,11 @@ function RunTechTreeMenu(civilization_number)
 		wyrmsun.playlist = { "music/battle_theme_a.ogg" }
 		
 		if not (IsMusicPlaying()) then
-			PlayMusic("music/battle_theme_a.ogg")
+			if (wyr.preferences.EnableOAML) then
+				PlayMusicName("MenuTheme")
+			else
+				PlayMusic("music/battle_theme_a.ogg")
+			end
 		end
 	end
 

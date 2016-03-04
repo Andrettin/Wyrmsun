@@ -40,11 +40,19 @@
 --
 
 function MusicStopped()
+	if (wyr.preferences.EnableOAML) then
+		return
+	end
+
 	while (table.getn(wyrmsun.playlist) ~= 0) do
 		local num = math.random(table.getn(wyrmsun.playlist))
 		if (PlayMusic(wyrmsun.playlist[num]) == 0) then return end
 		table.remove(wyrmsun.playlist, num)
 	end
+end
+
+if (wyr.preferences.EnableOAML) then
+	InitMusicOAML()
 end
 
 ------------------------------------------------------------------------------
