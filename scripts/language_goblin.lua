@@ -98,8 +98,7 @@ DefineLanguageWord("Grash", { -- from Mike Anderson's Tyrant
 DefineLanguageWord("Greebo", {
 	Language = "goblin",
 	Type = "noun",
-	Meanings = {},
-	NameTypes = {"person"}
+	Meanings = {}
 })
 
 DefineLanguageWord("Grogor-Tuk", {

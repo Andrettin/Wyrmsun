@@ -108,7 +108,6 @@ DefineLanguageWord("Andvari", {
 		"singular", "genitive", "Andvara" -- as in "Andvaranaut"
 	},
 	Gender = "masculine", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 21.
-	NameTypes = {"person"}, -- example: "Andvari" (gurnard-shaped dwarf from Norse mythology whose hoard and golden ring were stolen by Loki)
 	AffixNameTypes = {
 		"compound", "prefix", "singular", "genitive", "item-ring", -- example: "Andvaranaut" (golden ring made by Andvari)
 	}
@@ -173,8 +172,7 @@ DefineLanguageWord("Bafur", {
 DefineLanguageWord("Baglur", {
 	Language = "dwarven",
 	Type = "noun",
-	Meanings = {},
-	NameTypes = {"person"} -- example: "Baglur" (from Wesnoth, The Scepter of Fire; veteran warrior and member of the party of dwarves who handled the crafting of the Sceptre of Fire)
+	Meanings = {}
 })
 
 DefineLanguageWord("Bari", {
@@ -285,7 +283,6 @@ DefineLanguageWord("Dain", {
 		"singular", "genitive", "Dains" -- as in "Dainsleif"
 	},
 	Gender = "masculine", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 97.
-	NameTypes = {"person"}, -- example: "Dain" (dwarf from Norse mythology)
 	AffixNameTypes = {"compound", "prefix", "singular", "genitive", "item-sword"} -- example: "Dainsleif"
 })
 
@@ -378,15 +375,13 @@ DefineLanguageWord("Durâhn", {
 DefineLanguageWord("Durin", {
 	Language = "dwarven",
 	Type = "noun",
-	Meanings = {},
-	NameTypes = {"person"} -- example: "Durin" (dwarf from Norse mythology who was Modsognir's deputy)
+	Meanings = {}
 })
 
 DefineLanguageWord("Durstorn", {
 	Language = "dwarven",
 	Type = "noun",
-	Meanings = {},
-	NameTypes = {"person"} -- example: "Durstorn" (from Wesnoth, The Scepter of Fire; chieftain of Rugnur's tribe)
+	Meanings = {}
 })
 
 DefineLanguageWord("Dvalin", {
@@ -560,8 +555,7 @@ DefineLanguageWord("Glomin", {
 DefineLanguageWord("Glonoin", {
 	Language = "dwarven",
 	Type = "noun",
-	Meanings = {},
-	NameTypes = {"person"} -- example: "Glonoin" (from Wesnoth, The Scepter of Fire; chieftain of the Shorbear clan)
+	Meanings = {}
 })
 
 DefineLanguageWord("Gneissus", {
@@ -736,8 +730,7 @@ DefineLanguageWord("Ivaldi", {
 	Language = "dwarven",
 	Type = "noun",
 	Meanings = {"Mighty"}, -- source gives meaning as "the Mighty"; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 101.
-	Gender = "masculine", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 319.
-	NameTypes = {"person"} -- example: "Ivaldi" (dwarf from Norse mythology whose sons were mastersmiths)
+	Gender = "masculine" -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 319.
 })
 
 DefineLanguageWord("Jari", {
@@ -899,16 +892,14 @@ DefineLanguageWord("Mjollnir", {
 DefineLanguageWord("Modsognir", {
 	Language = "dwarven",
 	Type = "noun",
-	Meanings = {},
-	NameTypes = {"person"} -- example: "Modsognir" (the first and mightiest of the dwarves in Norse mythology)
+	Meanings = {}
 })
 
 DefineLanguageWord("Nabbi", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 445.
 	Language = "dwarven",
 	Type = "noun",
 	Meanings = {"Small Protuberance on the Skin", "Small Protuberance on Greensward"},
-	Gender = "masculine",
-	NameTypes = {"person"} -- example: "Nabbi" (dwarf from Norse mythology)
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Naglering", { -- possibly "Nagle-ring"?
@@ -1045,8 +1036,7 @@ DefineLanguageWord("Odrorir", {
 DefineLanguageWord("Oin", {
 	Language = "dwarven",
 	Type = "noun",
-	Meanings = {},
-	NameTypes = {"person"} -- example: "Oin" (dwarf from Norse mythology who was the father of Andvari)
+	Meanings = {}
 })
 
 DefineLanguageWord("Ol", { -- suffix used by Wesnoth's dwarven names; not necessarily a noun
@@ -1099,8 +1089,7 @@ DefineLanguageWord("Rad", {
 DefineLanguageWord("Regin", {
 	Language = "dwarven",
 	Type = "noun",
-	Meanings = {"Counsel-Giver"},
-	NameTypes = {"person"} -- example: "Regin" (dwarven smith from Norse mythology who was the brother of the dragon Fafnir)
+	Meanings = {"Counsel-Giver"}
 })
 
 DefineLanguageWord("Rekk", {
@@ -1128,15 +1117,13 @@ DefineLanguageWord("Rorir", { -- alternative spelling given by Cleasby and Vigfu
 	Language = "dwarven",
 	Type = "noun",
 	Meanings = {"Rearer of Charms"},
-	Gender = "masculine",
-	AffixNameTypes = {"compound", "suffix", "singular", "person"} -- example: "Thjodrorir"/"þjóð-reyrir" ("The Great Rearer of Charms"; dwarven sage from Norse mythology)
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Rugnur", {
 	Language = "dwarven",
 	Type = "noun",
-	Meanings = {},
-	NameTypes = {"person"} -- example: "Rugnur" (from Wesnoth, The Scepter of Fire; leader of the party of dwarves who handled the crafting of the Sceptre of Fire)
+	Meanings = {}
 })
 
 DefineLanguageWord("Rynan", {
@@ -1270,7 +1257,6 @@ DefineLanguageWord("Thjod", { -- Source: Richard Cleasby and Gudbrand Vigfusson,
 	Type = "adjective",
 	Meanings = {"Great"},
 	AffixNameTypes = {
-		"compound", "prefix", "singular", "person", -- example: "Thjodrorir"/"þjóð-reyrir" ("The Great Rearer of Charms"; dwarven sage from Norse mythology)
 		"compound", "prefix", "singular", "settlement", -- no examples, but seems sensible in face of a general lack of examples
 		"compound", "prefix", "singular", "province", -- no examples, but seems sensible in face of a general lack of examples
 		"compound", "prefix", "singular", "terrain-hills", -- no examples, but seems sensible in face of a general lack of examples
@@ -1316,8 +1302,7 @@ DefineLanguageWord("Thrymgjol", {
 DefineLanguageWord("Thursagan", {
 	Language = "dwarven",
 	Type = "noun",
-	Meanings = {},
-	NameTypes = {"person"} -- example: "Thursagan" (Battle for Wesnoth, The Sceptre of Fire; master runesmith who crafted the Sceptre of Fire)
+	Meanings = {}
 })
 
 DefineLanguageWord("Trith", { -- prefix used by Wesnoth's dwarven names; not necessarily a noun

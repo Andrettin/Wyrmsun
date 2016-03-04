@@ -67,8 +67,7 @@ DefineLanguageWord("Pypo", {
 	Language = "gnomish",
 	Type = "noun",
 	Meanings = {},
-	Gender = "masculine", -- presumably, since it is a masculine personal name
-	NameTypes = {"person"}
+	Gender = "masculine" -- presumably, since it is a masculine personal name
 })
 
 DefineLanguageWord("Rubezahl", {

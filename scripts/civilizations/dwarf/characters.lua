@@ -29,6 +29,7 @@
 
 DefineCharacter("Modsognir", { -- one of the earliest dwarven leaders; in Norse mythology Modsognir was the mightiest and first of dwarves
 	Name = "Modsognir",
+	NameWord = {"dwarven", "noun", "Modsognir"},
 	Gender = "male",
 	Type = "unit-dwarven-steelclad",
 	Civilization = "dwarf",
@@ -47,6 +48,7 @@ DefineCharacter("Modsognir", { -- one of the earliest dwarven leaders; in Norse 
 
 DefineCharacter("Durin", { -- deputy of Modsognir
 	Name = "Durin",
+	NameWord = {"dwarven", "noun", "Durin"},
 	Gender = "male",
 	Type = "unit-dwarven-steelclad",
 	Civilization = "dwarf",
@@ -64,7 +66,11 @@ DefineCharacter("Durin", { -- deputy of Modsognir
 })
 
 DefineCharacter("Thjodrorir", { -- dwarven sage of Modsognir's clan; in Norse mythology, a dwarf who knew a charm of power to the gods
-	Name = "Thjodrorir",
+	Name = "Thjodrorir", -- alternatively written as "þjóð-reyrir" ("The Great Rearer of Charms") (Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 739)
+	NameCompoundElements = { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 739.
+		"prefix", "dwarven", "adjective", "Thjod",
+		"suffix", "dwarven", "noun", "singular", "Rorir"
+	},
 	Type = "unit-dwarven-steelclad", -- should be a priest
 	Civilization = "dwarf",
 	Faction = "Brising Clan",
@@ -73,8 +79,9 @@ DefineCharacter("Thjodrorir", { -- dwarven sage of Modsognir's clan; in Norse my
 	DeathYear = -3000 + 30 -- estimated
 })
 
-DefineCharacter("Ivaldi", { -- his sons were skilled craftsmen; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 63.
+DefineCharacter("Ivaldi", { -- his sons were mastersmiths; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 63.
 	Name = "Ivaldi",
+	NameWord = {"dwarven", "noun", "Ivaldi"},
 	Type = "unit-dwarven-steelclad", -- should be a runesmith?
 	Civilization = "dwarf",
 	Trait = "upgrade-mighty", -- described as mighty
@@ -83,8 +90,9 @@ DefineCharacter("Ivaldi", { -- his sons were skilled craftsmen; Source: Kevin Cr
 	DeathYear = -3000
 })
 
-DefineCharacter("Thursagan", {
+DefineCharacter("Thursagan", { -- from "The Sceptre of Fire" campaign of "Battle for Wesnoth"; master runesmith who crafted the Sceptre of Fire
 	Name = "Thursagan",
+	NameWord = {"dwarven", "noun", "Thursagan"},
 	Gender = "male",
 	Type = "unit-dwarven-thane",
 	Civilization = "dwarf",
@@ -108,8 +116,9 @@ DefineCharacter("Thursagan", {
 	}
 })
 
-DefineCharacter("Baglur", {
+DefineCharacter("Baglur", { -- from "The Sceptre of Fire" campaign of "Battle for Wesnoth"; veteran warrior and member of the party of dwarves who handled the crafting of the Sceptre of Fire
 	Name = "Baglur",
+	NameWord = {"dwarven", "noun", "Baglur"},
 	Gender = "male",
 	Type = "unit-dwarven-steelclad",
 	Civilization = "dwarf",
@@ -126,8 +135,9 @@ DefineCharacter("Baglur", {
 	ForbiddenUpgrades = {"unit-dwarven-yale-rider"}
 })
 
-DefineCharacter("Durstorn", {
+DefineCharacter("Durstorn", { -- from "The Sceptre of Fire" campaign of "Battle for Wesnoth"; chieftain of Rugnur's tribe
 	Name = "Durstorn",
+	NameWord = {"dwarven", "noun", "Durstorn"},
 	Gender = "male",
 	Type = "unit-dwarven-thane",
 	Civilization = "dwarf",
@@ -143,8 +153,9 @@ DefineCharacter("Durstorn", {
 	ForbiddenUpgrades = {"unit-dwarven-yale-rider"}
 })
 
-DefineCharacter("Glonoin", {
+DefineCharacter("Glonoin", { -- from "The Sceptre of Fire" campaign of "Battle for Wesnoth"; chieftain of the Shorbear clan
 	Name = "Glonoin",
+	NameWord = {"dwarven", "noun", "Glonoin"},
 	Gender = "male",
 	Type = "unit-dwarven-thane",
 	Civilization = "dwarf",
@@ -154,8 +165,9 @@ DefineCharacter("Glonoin", {
 	DeathYear = 29 + 15 -- Shorbear Hold conquered in 29 AD by Rugnur's and Durstorn's Clan
 })
 
-DefineCharacter("Rugnur", {
+DefineCharacter("Rugnur", { -- from "The Sceptre of Fire" campaign of "Battle for Wesnoth"; leader of the party of dwarves who handled the crafting of the Sceptre of Fire
 	Name = "Rugnur",
+	NameWord = {"dwarven", "noun", "Rugnur"},
 	Gender = "male",
 	Type = "unit-dwarven-axefighter",
 	Civilization = "dwarf",
@@ -172,8 +184,9 @@ DefineCharacter("Rugnur", {
 	ForbiddenUpgrades = {"unit-dwarven-yale-rider"}
 })
 
-DefineCharacter("Oin", {
+DefineCharacter("Oin", { -- dwarf from Norse mythology who was the father of Andvari
 	Name = "Oin",
+	NameWord = {"dwarven", "noun", "Oin"},
 	Type = "unit-dwarven-steelclad",
 	Civilization = "dwarf",
 	ProvinceOfOrigin = "Svarinshaug",
@@ -181,8 +194,9 @@ DefineCharacter("Oin", {
 	DeathYear = 437 - (30 * 2)
 })
 
-DefineCharacter("Andvari", { -- dwarf who possessed a lot of gold, including a golden ring (Andvaranaut); was possibly one of the settlers of Joruvellir; son of Oin
+DefineCharacter("Andvari", { -- dwarf who possessed a lot of gold, including a golden ring (Andvaranaut) which in Norse mythology was stolen by Loki; was possibly one of the settlers of Joruvellir
 	Name = "Andvari",
+	NameWord = {"dwarven", "noun", "Andvari"},
 	Type = "unit-dwarven-steelclad",
 	Civilization = "dwarf",
 	ProvinceOfOrigin = "Svarinshaug",
@@ -191,8 +205,9 @@ DefineCharacter("Andvari", { -- dwarf who possessed a lot of gold, including a g
 	Father = "Oin"
 })
 
-DefineCharacter("Regin", { -- skilled smith
+DefineCharacter("Regin", { -- skilled smith; in Norse mythology was the brother of the dragon Fafnir
 	Name = "Regin",
+	NameWord = {"dwarven", "noun", "Regin"},
 	Type = "unit-dwarven-steelclad", -- should be a runesmith
 	Civilization = "dwarf",
 	ProvinceOfOrigin = "Svarinshaug",
@@ -203,6 +218,7 @@ DefineCharacter("Regin", { -- skilled smith
 
 DefineCharacter("Dain", { -- dwarven mastersmith; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 100.
 	Name = "Dain",
+	NameWord = {"dwarven", "noun", "Dain"},
 	Type = "unit-dwarven-steelclad", -- should be a runesmith
 	Civilization = "dwarf",
 	ProvinceOfOrigin = "Svarinshaug",
@@ -212,6 +228,7 @@ DefineCharacter("Dain", { -- dwarven mastersmith; Source: Kevin Crossley-Holland
 
 DefineCharacter("Nabbi", { -- dwarven mastersmith; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 100.
 	Name = "Nabbi",
+	NameWord = {"dwarven", "noun", "Nabbi"},
 	Type = "unit-dwarven-steelclad", -- should be a runesmith
 	Civilization = "dwarf",
 	ProvinceOfOrigin = "Svarinshaug",

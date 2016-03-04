@@ -55,8 +55,7 @@ DefineLanguageWord("Airmana", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Language = "gothic",
 	Type = "noun",
 	Meanings = {},
-	DerivesFrom = {"proto-germanic", "noun", "Erman"},
-	AffixNameTypes = {"compound", "prefix", "singular", "person"} -- example: "Airmanareiks" (Gothic king)
+	DerivesFrom = {"proto-germanic", "noun", "Erman"}
 })
 
 DefineLanguageWord("Aírþa", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
@@ -774,8 +773,7 @@ DefineLanguageWord("Reiks", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Language = "gothic",
 	Type = "noun",
 	Meanings = {"Ruler"}, -- source gives the German "Herrscher" as the meaning
-	DerivesFrom = {"proto-germanic", "noun", "Rîka"},
-	AffixNameTypes = {"compound", "suffix", "singular", "person"} -- example: "Airmanareiks" (Gothic king; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 18) (maybe the corresponding adjective is part of this compound instead)
+	DerivesFrom = {"proto-germanic", "noun", "Rîka"}
 })
 
 DefineLanguageWord("Reiks", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174; Source: http://www.cnrtl.fr/definition/riche
