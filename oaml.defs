@@ -56,6 +56,7 @@
 </track>
 <track>
 	<name>GermanicLoading</name>
+	<group>loading</group>
 	<fadeIn>5000</fadeIn>
 	<fadeOut>1000</fadeOut>
 	<xfadeIn>10</xfadeIn>
@@ -84,6 +85,7 @@
 </track>
 <track>
 	<name>GermanicTheme</name>
+	<group>map</group>
 	<fadeIn>10000</fadeIn>
 	<fadeOut>1000</fadeOut>
 	<xfadeIn>10</xfadeIn>
@@ -144,6 +146,7 @@
 </track>
 <track>
 	<name>GermanicTheme2</name>
+	<group>map</group>
 	<fadeIn>2000</fadeIn>
 	<fadeOut>1000</fadeOut>
 	<xfadeIn>10</xfadeIn>
@@ -197,6 +200,7 @@
 </track>
 <track>
 	<name>GermanicTheme3</name>
+	<group>map</group>
 	<fadeIn>2000</fadeIn>
 	<fadeOut>1000</fadeOut>
 	<xfadeIn>500</xfadeIn>
@@ -304,6 +308,7 @@
 </track>
 <track>
 	<name>GermanicWin</name>
+	<group>win</group>
 	<fadeIn>0</fadeIn>
 	<fadeOut>500</fadeOut>
 	<xfadeIn>10</xfadeIn>
@@ -325,6 +330,7 @@
 </track>
 <track>
 	<name>GermanicLose</name>
+	<group>lose</group>
 	<fadeIn>1000</fadeIn>
 	<fadeOut>500</fadeOut>
 	<xfadeIn>10</xfadeIn>
@@ -339,6 +345,7 @@
 </track>
 <track>
 	<name>DwarfLoading</name>
+	<group>loading</group>
 	<fadeIn>5000</fadeIn>
 	<fadeOut>1000</fadeOut>
 	<xfadeIn>10</xfadeIn>
@@ -360,6 +367,7 @@
 </track>
 <track>
 	<name>DwarfTheme</name>
+	<group>map</group>
 	<fadeIn>10000</fadeIn>
 	<fadeOut>1000</fadeOut>
 	<xfadeIn>10</xfadeIn>
@@ -406,6 +414,7 @@
 </track>
 <track>
 	<name>DwarfTheme2</name>
+	<group>map</group>
 	<fadeIn>10000</fadeIn>
 	<fadeOut>1000</fadeOut>
 	<xfadeIn>10</xfadeIn>
@@ -452,6 +461,7 @@
 </track>
 <track>
 	<name>dwarf</name>
+	<group>map</group>
 	<fadeIn>1000</fadeIn>
 	<fadeOut>1000</fadeOut>
 	<xfadeIn>500</xfadeIn>
@@ -489,6 +499,7 @@
 </track>
 <track>
 	<name>germanic</name>
+	<group>map</group>
 	<fadeIn>1000</fadeIn>
 	<fadeOut>1000</fadeOut>
 	<xfadeIn>500</xfadeIn>
@@ -529,6 +540,7 @@
 </track>
 <track>
 	<name>teuton</name>
+	<group>map</group>
 	<fadeIn>1000</fadeIn>
 	<fadeOut>1000</fadeOut>
 	<xfadeIn>500</xfadeIn>
@@ -569,6 +581,7 @@
 </track>
 <track>
 	<name>bosque</name>
+	<group>map</group>
 	<fadeIn>1000</fadeIn>
 	<fadeOut>1000</fadeOut>
 	<xfadeIn>500</xfadeIn>
@@ -588,6 +601,7 @@
 </track>
 <track>
 	<name>celt</name>
+	<group>map</group>
 	<fadeIn>1000</fadeIn>
 	<fadeOut>1000</fadeOut>
 	<xfadeIn>500</xfadeIn>

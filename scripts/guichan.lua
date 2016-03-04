@@ -769,9 +769,13 @@ function RunMap(map, objective, fow, revealmap)
 	end
 	local loop = true
 	while (loop) do
-		if (wyr.preferences.EnableOAML and CurrentQuest ~= "" and GetQuestData(CurrentQuest, "LoadingMusic") ~= "") then
+		if (wyr.preferences.EnableOAML) then
 			StopMusic()
-			PlayMusicName(GetQuestData(CurrentQuest, "LoadingMusic"))
+			if (CurrentQuest ~= "" and GetQuestData(CurrentQuest, "LoadingMusic") ~= "") then
+				PlayMusicName(GetQuestData(CurrentQuest, "LoadingMusic"))
+			else
+				PlayMusicByGroupRandom("loading")
+			end
 		end
 
 		InitGameVariables()
@@ -1471,9 +1475,14 @@ LoadMods()
 GenerateMissingLanguageData() -- generate missing language data after loading mods, so that the function will take language data defined in mods into account
 
 function GameStarting()
-	if (wyr.preferences.EnableOAML and CurrentQuest ~= "" and GetQuestData(CurrentQuest, "MapMusic") ~= "") then
-		StopMusic()
-		PlayMusicName(GetQuestData(CurrentQuest, "MapMusic"))
+	if (wyr.preferences.EnableOAML) then
+		if (CurrentQuest ~= "" and GetQuestData(CurrentQuest, "MapMusic") ~= "") then
+			StopMusic()
+			PlayMusicName(GetQuestData(CurrentQuest, "MapMusic"))
+		else
+			StopMusic()
+			PlayMusicByGroupRandom("map")
+		end
 	end
 	--[[
 	if (wyr.preferences.ShowTips and not IsReplayGame() and not IsNetworkGame()) then
