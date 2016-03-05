@@ -277,8 +277,11 @@ function SetPlayerData(player, data, arg1, arg2)
 end
 
 function LoadCivilizationUI(civilization)
-	if (wyr.preferences.EnableOAML == false and UsingTechTree == false and civilization ~= GetPlayerData(GetThisPlayer(), "RaceName")) then
+	if (UsingTechTree == false and civilization ~= GetPlayerData(GetThisPlayer(), "RaceName")) then
 		StopMusic()
+	end
+	if (wyr.preferences.EnableOAML and GameRunning) then
+		PlayMusicByGroupRandom("map")
 	end
 	Load("scripts/ui.lua")
 	local ui_file = "scripts/civilizations/" .. civilization .. "/ui.lua"

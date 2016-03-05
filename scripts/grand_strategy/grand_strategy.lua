@@ -630,7 +630,7 @@ function AttackProvince(province, faction)
 	if (province == nil or faction == nil or faction == "") then
 		return
 	end
-	GetMapInfo(province.Map)
+	GetMapInfo(GetProvinceData(province.Name, "Map"))
 	Attacker = faction
 	local empty_province = false
 	if (GetProvinceOwner(province.Name) ~= "") then
@@ -693,7 +693,7 @@ function AttackProvince(province, faction)
 			end
 		end
 		GrandStrategyBattle = true
-		RunMap(province.Map)
+		RunMap(GetProvinceData(province.Name, "Map"))
 
 		if (GameResult == GameVictory) then
 			victorious_player = GrandStrategyFaction.Name
@@ -1392,7 +1392,6 @@ function RunGrandStrategyLoadGameMenu()
 			GameResult = GameNoResult
 			Load("save/grand_strategy/" .. saved_games_list[saved_games:getSelected() + 1] .. ".lua")
 			GrandStrategyYear = wyr[saved_games_list[saved_games:getSelected() + 1]].SavedGrandStrategyYear
-			SetGrandStrategyWorld(wyr[saved_games_list[saved_games:getSelected() + 1]].SavedGrandStrategyWorld)
 			for x=0,GetWorldMapWidth() - 1 do
 				for y=0,GetWorldMapHeight() - 1 do
 					CalculateWorldMapTileGraphicTile(x, y)

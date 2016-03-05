@@ -313,7 +313,7 @@ function GenerateRandomWorldMap()
 			local RandomY = SyncRand(world_map_height)
 			if (
 				GetWorldMapTileTerrain(RandomX, RandomY) ~= "Water" and GetWorldMapTileProvinceName(RandomX, RandomY) == ""
-				and (WorldMapProvinces[key].SettlementTerrain == nil or GetWorldMapTileTerrain(RandomX, RandomY) == WorldMapProvinces[key].SettlementTerrain)
+				and (GetProvinceData(WorldMapProvinces[key].Name, "SettlementTerrain") == "" or GetWorldMapTileTerrain(RandomX, RandomY) == GetProvinceData(WorldMapProvinces[key].Name, "SettlementTerrain"))
 				and (WorldMapProvinces[key].Coastal == nil or WorldMapProvinces[key].Coastal == false or GetWorldMapTileTerrain(RandomX - 1, RandomY) == "Water" or GetWorldMapTileTerrain(RandomX + 1, RandomY) == "Water" or GetWorldMapTileTerrain(RandomX, RandomY - 1) == "Water" or GetWorldMapTileTerrain(RandomX, RandomY + 1) == "Water")
 			) then
 				SetWorldMapTileProvince(RandomX, RandomY, WorldMapProvinces[key].Name)
