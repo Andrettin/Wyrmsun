@@ -235,8 +235,7 @@ DefineLanguageWord("Μισθός", { -- Source: Sean Crist, "An Analysis of *z l
 DefineLanguageWord("Nea", { -- should be written as the original Greek name (with Greek characters)
 	Language = "greek",
 	Type = "adjective",
-	Meanings = {"New"},
-	AffixNameTypes = {"compound", "prefix", "singular", "settlement"} -- example: "Neapolis" (Naples)
+	Meanings = {"New"}
 })
 
 DefineLanguageWord("Némō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
@@ -345,7 +344,7 @@ DefineLanguageWord("Polis", { -- should be written as the original Greek name (w
 	Language = "greek",
 	Type = "noun",
 	Meanings = {"City"},
-	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- examples: "Amphipolis", "Callipolis", "Neapolis" (Naples)
+	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- examples: "Amphipolis", "Callipolis"
 })
 
 DefineLanguageWord("Skiá", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.

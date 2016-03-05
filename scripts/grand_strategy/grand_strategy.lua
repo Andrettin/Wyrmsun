@@ -227,7 +227,7 @@ function RunGrandStrategyGameSetupMenu()
 
 			InitializeGrandStrategyFactions()
 --			CalculateFactionDisembarkmentProvinces()
-			
+
 			GrandStrategyGameInitialized = true
 			SetCurrentCustomHero("")
 			

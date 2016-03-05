@@ -291,8 +291,10 @@ DefineProvince("Argolis", {
 	},
 	SettlementName = "Argos",
 	CulturalSettlementNames = {
-		"greek", "Argos",
-		Mycenae = "Mycenae"
+		"greek", "Argos"
+	},
+	FactionCulturalSettlementNames = {
+		"greek", "Mycenae", "Mycenae"
 	},
 	SettlementLocation = {544, 148}, -- Argos
 	Map = "maps/random/random-map-forest.smp",
@@ -307,10 +309,13 @@ DefineProvince("Argolis", {
 DefineProvince("Astrakhan", {
 	World = "Earth",
 	CulturalNames = {
-		"germanic", "Ansulanda" -- rendering of "Asaland" in Proto-Germanic
+		"germanic", "Ansulanda", "name-compound-elements", { -- rendering of "Asaland" in Proto-Germanic, as in the Ynglinga saga's story Asaland is the region in "Asia" in which Odin's people (here understood as the Indo-Europeans who went on to settle Scandinavia and become speakers of Proto-Germanic) used to live until they migrated to Scandinavia
+			"prefix", "proto-germanic", "noun", "singular", "Ansu",
+			"suffix", "proto-germanic", "noun", "singular", "Landa"
+		}
 	},
 	Tiles = {
---				{151, 30}, {152, 28}, {152, 29}, {152, 30}, {152, 31}, {153, 28}, {153, 29}, {153, 30}, {153, 31}, {154, 28}, {154, 29}, {154, 30}, {155, 29}, {155, 30}, -- old map
+--		{151, 30}, {152, 28}, {152, 29}, {152, 30}, {152, 31}, {153, 28}, {153, 29}, {153, 30}, {153, 31}, {154, 28}, {154, 29}, {154, 30}, {155, 29}, {155, 30}, -- old map
 		{601, 120}, {601, 121}, {601, 122},
 		{602, 119}, {602, 120}, {602, 121}, {602, 122}, {602, 123}, {602, 124},
 		{603, 118}, {603, 119}, {603, 120}, {603, 121}, {603, 122}, {603, 123}, {603, 124},
@@ -338,7 +343,10 @@ DefineProvince("Astrakhan", {
 	},
 	SettlementName = "Astrakhan",
 	CulturalSettlementNames = {
-		"germanic", "Ansugarda" -- rendering of "Asgard" in Proto-Germanic
+		"germanic", "Ansugárdiz", "name-compound-elements", { -- rendering of "Asgard" in Proto-Germanic, as in the Ynglinga saga's story Asgard is the settlement in "Asia" in which Odin's people (here understood as the Indo-Europeans who went on to settle Scandinavia and become speakers of Proto-Germanic) used to live until they migrated to Scandinavia
+			"prefix", "proto-germanic", "noun", "singular", "Ansu",
+			"suffix", "proto-germanic", "noun", "singular", "Gárdiz"
+		}
 	},
 	SettlementLocation = {618, 124}, -- Astrakhan
 	Map = "maps/random/random-map-forest.smp",
@@ -501,7 +509,10 @@ DefineProvince("Bavaria", {
 	SettlementName = "Ratisbon",
 	CulturalSettlementNames = {
 		"latin", "Regina Castra",
-		"teuton", "Regensburg"
+		"teuton", "Regensburg", "name-compound-elements", {
+--			"prefix", "high-german", "noun", "Regens", -- ?
+			"suffix", "high-german", "noun", "singular", "Burg"
+		}
 	},
 	SettlementLocation = {514, 116}, -- Regensburg
 	Map = "maps/earth/regensburg.smp",
@@ -681,7 +692,10 @@ DefineProvince("Bosnia", {
 DefineProvince("Brandenburg", {
 	World = "Earth",
 	CulturalNames = {
-		"teuton", "Brandenburg"
+		"teuton", "Brandenburg", "name-compound-elements", {
+			"prefix", "high-german", "verb", "no-tense", "Branden", -- correct?
+			"suffix", "high-german", "noun", "singular", "Burg"
+		}
 	},
 	FactionCulturalNames = {
 		"teuton", "Semnone Tribe", "Semnonia",
@@ -913,7 +927,10 @@ DefineProvince("Carniola", {
 	SettlementName = "Laibach",
 	CulturalSettlementNames = {
 		"latin", "Emona", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
-		"teuton", "Laibach" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+		"teuton", "Laibach", "name-compound-elements", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+			"prefix", "high-german", "noun", "singular", "Lai",
+			"suffix", "high-german", "noun", "singular", "Bach"
+		}
 	},
 	SettlementLocation = {521, 125}, -- Laibach/Ljubljana
 	Map = "maps/random/random-map-forest.smp",
@@ -1631,7 +1648,10 @@ DefineProvince("Galicia", {
 	SettlementName = "Lvov",
 	CulturalSettlementNames = {
 		"slav", "Lvov",
-		"teuton", "Lemberg"
+		"teuton", "Lemberg", "name-compound-elements", {
+--			"prefix", "high-german", "noun", "Lem", -- ?
+			"suffix", "high-german", "noun", "singular", "Berg"
+		}
 	},
 	SettlementLocation = {547, 114}, -- Lvov / Lemberg
 	Map = "maps/random/random-map-forest.smp",
@@ -2688,7 +2708,10 @@ DefineProvince("Naples", {
 	},
 	SettlementName = "Neapolis",
 	CulturalSettlementNames = {
-		"greek", "Neapolis",
+		"greek", "Neapolis", "name-compound-elements", {
+			"prefix", "greek", "adjective", "Nea",
+			"suffix", "greek", "noun", "singular", "Polis"
+		},
 		"latin", "Neapolis"
 	},
 	SettlementLocation = {520, 139}, -- Naples
@@ -2700,7 +2723,10 @@ DefineProvince("Naples", {
 DefineProvince("Neumark", {
 	World = "Earth",
 	CulturalNames = {
-		"teuton", "Neumark"
+		"teuton", "Neumark", "name-compound-elements", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 134-135.
+			"prefix", "high-german", "adjective", "Neu",
+			"suffix", "high-german", "noun", {"March"}, "singular", "Mark"
+		}
 	},
 	Tiles = {
 		{520, 105},
@@ -3085,7 +3111,10 @@ DefineProvince("Prussia", {
 	},
 	SettlementName = "Königsberg",
 	CulturalSettlementNames = {
-		"teuton", "Königsberg"
+		"teuton", "Königsberg", "name-compound-elements", {
+			"prefix", "high-german", "noun", "singular", "genitive", "König",
+			"suffix", "high-german", "noun", "singular", "Berg"
+		}
 	},
 	SettlementLocation = {537, 100}, -- Königsberg
 	Map = "maps/random/random-map-forest.smp",
@@ -3659,7 +3688,10 @@ DefineProvince("Transylvania", {
 	World = "Earth",
 	CulturalNames = {
 		"latin", "Upper Dacia",
-		"teuton", "Siebenbürgen"
+		"teuton", "Siebenbürgen", "name-compound-elements", {
+			"prefix", "high-german", "numeral", "Sieben",
+			"suffix", "high-german", "noun", "plural", "Burg" -- not exact, because the plural of "Burg" is written "Burgen", and not "Bürgen"
+		}
 	},
 	Tiles = {
 --				{136, 30}, {136, 31}, {137, 30}, {137, 31}, {138, 30}, {138, 31}, -- old map
@@ -3982,7 +4014,10 @@ DefineProvince("West Galicia", {
 DefineProvince("Westphalia", {
 	World = "Earth",
 	CulturalNames = {
-		"teuton", "Westfalen"
+		"teuton", "Westfalen", "name-compound-elements", {
+			"prefix", "high-german", "noun", "singular", "West",
+--			"suffix", "high-german", "noun", "Falen" -- ?
+		}
 	},
 	Tiles = {
 --				{125, 26}, {125, 27}, {125, 28}, {126, 26}, {126, 27}, {126, 28}, {127, 26}, -- old map

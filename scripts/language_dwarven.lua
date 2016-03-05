@@ -219,7 +219,7 @@ DefineLanguageWord("Blindi", { -- this is the participle past
 	Participles = {
 		"past", "Blindi"
 	},
-	AffixNameTypes = {"compound", "suffix", "singular", "person"} -- example: "Solblindi" (Norse mythology)
+	AffixNameTypes = {"compound", "suffix", "past", "person"} -- example: "Solblindi" (Norse mythology)
 })
 
 DefineLanguageWord("Bodn", {

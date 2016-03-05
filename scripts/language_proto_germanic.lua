@@ -77,11 +77,7 @@ DefineLanguageWord("Ansu", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"God"},
-	Gender = "masculine",
-	AffixNameTypes = {
-		"compound", "prefix", "singular", "province", -- cognate of the prefix in Asaland, and Asaland is the region in "Asia" in which Odin's people used to live until they migrated to Scandinavia in the Ynglinga saga's story
-		"compound", "prefix", "singular", "settlement" -- cognate of the prefix in Asgard, and Asgard is the settlement in "Asia" in which Odin's people used to live until they migrated to Scandinavia in the Ynglinga saga's story
-	}
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Asjôn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 20.
@@ -377,8 +373,7 @@ DefineLanguageWord("Gárdiz", { -- Fick and Torp spell the word as "Garda"/"Gard
 	Meanings = {"Enclosure", "Court", "Garden"}, -- Fick and Torp give "Geheg, Hof, Garten" as the meaning; Lehmann gives the meaning as "Garden"
 	Gender = "masculine",
 	AffixNameTypes = {
-		"compound", "prefix", "singular", "province", -- seems sensible in face of a lack of examples, specially since is a cognate of the prefix in "Gardarike"
-		"compound", "suffix", "singular", "settlement" -- seems sensible in face of a lack of examples (cognate of the suffix in Asgard, and Asgard is the settlement in "Asia" in which Odin's people used to be center until they migrated to Scandinavia in the Ynglinga saga's story)
+		"compound", "prefix", "singular", "province" -- seems sensible in face of a lack of examples, specially since is a cognate of the prefix in "Gardarike"
 	}
 })
 
@@ -628,8 +623,7 @@ DefineLanguageWord("Landa", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Terra Firma", "Land", "Country"}, -- source gives the German "terra firma, Land"
-	Gender = "neuter",
-	AffixNameTypes = {"compound", "suffix", "singular", "province"}, -- cognate of the suffix in Asaland, and Asaland is the region in "Asia" in which Odin's people used to live until they migrated to Scandinavia in the Ynglinga saga's story
+	Gender = "neuter"
 })
 
 DefineLanguageWord("Lauda", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 181.

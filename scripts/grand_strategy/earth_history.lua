@@ -432,7 +432,7 @@ if (GrandStrategyYear >= -3000) then -- around this time Gylve or his ancestors 
 	
 	-- First Greek Bronze Age begins around 3000 BC; Source: "Atlas de História Mundial", 2001, p. 66.
 	
-	SetFactionRuler("germanic", "Asa Tribe", "Lorikus")
+	SetFactionRuler("germanic", "Asa Tribe", "Lóríkus")
 	
 	-- The Zodiac was invented around 3000 BC; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 5.
 end

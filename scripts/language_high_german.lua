@@ -212,7 +212,7 @@ DefineLanguageWord("Berg", {
 	},
 	Gender = "masculine",
 	AffixNameTypes = {
-		"compound", "suffix", "singular", "settlement", -- examples: "Adelsberg", "Hartberg", "Lemberg", "Königsberg", "Spielberg", "Wolfsberg"
+		"compound", "suffix", "singular", "settlement", -- examples: "Adelsberg", "Hartberg", "Spielberg", "Wolfsberg"
 		"compound", "suffix", "singular", "province", -- example: "Vorarlberg" (Vorarlberg is a special case, however - ideally we should generate mountain names like "Arlberg", and then have the possibility of adding the prefix "Vor" regarding the mountain, if it is on the edge of the province
 		"compound", "suffix", "singular", "terrain-hills", -- examples: "Bärenberg", "Hackenberg"
 		"compound", "suffix", "singular", "terrain-mountains" -- example: "Arlberg", "Schneeberg"
@@ -287,9 +287,28 @@ DefineLanguageWord("Brand", {
 		"plural", "accusative", "Brände",
 		"plural", "dative", "Bränden",
 		"plural", "genitive", "Brände"
+	}
+})
+
+DefineLanguageWord("Branden", {
+	Language = "high-german",
+	Type = "verb",
+	Meanings = {"Surge"},
+	NumberPersonTenseMoodInflections = {
+		"singular", "first-person", "present", "indicative", "Brande",
+		"singular", "second-person", "present", "indicative", "Brandest",
+		"singular", "third-person", "present", "indicative", "Brandet",
+		"plural", "second-person", "present", "indicative", "Brandet",
+		"singular", "first-person", "past", "indicative", "Brandete",
+		"singular", "second-person", "past", "indicative", "Brandetest",
+		"singular", "third-person", "past", "indicative", "Brandete",
+		"plural", "first-person", "past", "indicative", "Brandeten",
+		"plural", "second-person", "past", "indicative", "Brandetet",
+		"plural", "third-person", "past", "indicative", "Brandeten"
 	},
-	AffixNameTypes = {
-		"compound", "prefix", "plural", "dative", "province" -- example: "Brandenburg" (the umlaut is different in this case, but it doesn't matter so much since diacritical marks from generated names are removed by the game)
+	Participles = {
+		"present", "Brandend",
+		"past", "Gebrandet"
 	}
 })
 
@@ -375,8 +394,7 @@ DefineLanguageWord("Burg", {
 	Gender = "feminine",
 	AffixNameTypes = {
 		"compound", "prefix", "plural", "province", -- example: "Burgenland"
-		"compound", "suffix", "singular", "settlement", -- examples: "Friedeburg", "Hamburg", "Klausenburg", "Klosterneuburg", "Marburg", "Nikolsburg", "Ödenburg", "Regensburg", "Salzburg", "Schässburg", "Stuhlweissenburg", "Wolfsburg"
-		"compound", "suffix", "singular", "province" -- example: "Brandenburg"
+		"compound", "suffix", "singular", "settlement" -- examples: "Friedeburg", "Hamburg", "Klausenburg", "Klosterneuburg", "Marburg", "Nikolsburg", "Ödenburg", "Salzburg", "Schässburg", "Stuhlweissenburg", "Wolfsburg"
 	}
 })
 
@@ -1116,8 +1134,8 @@ DefineLanguageWord("Horn", {
 	},
 	NameTypes = {"settlement"},
 	AffixNameTypes = {
-		"compound", "suffix", "singular", "terrain-mountains"
-	} -- example: "Teufelshorn"
+		"compound", "suffix", "singular", "terrain-mountains" -- example: "Teufelshorn"
+	}
 })
 
 DefineLanguageWord("Hügel", {
@@ -1280,8 +1298,7 @@ DefineLanguageWord("König", {
 	},
 	Gender = "masculine",
 	AffixNameTypes = {
-		"compound", "prefix", "singular", "nominative", "settlement", -- example: "Königgrätz"
-		"compound", "prefix", "singular", "genitive", "settlement" -- example: "Königsberg"
+		"compound", "prefix", "singular", "nominative", "settlement" -- example: "Königgrätz"
 	}
 })
 
@@ -1355,8 +1372,7 @@ DefineLanguageWord("Lai", { -- Source: http://www.duden.de/rechtschreibung/Lai
 	NumberCaseInflections = {
 		"plural", "nominative", "Lais"
 	},
-	Gender = "neuter",
-	AffixNameTypes = {"compound", "prefix", "singular", "settlement"} -- example: "Laibach"
+	Gender = "neuter"
 })
 
 DefineLanguageWord("Land", {
@@ -1570,7 +1586,6 @@ DefineLanguageWord("Neu", {
 	Meanings = {"New"},
 	DerivesFrom = {"middle-high-german", "adjective", "Niuwe"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 153.
 	AffixNameTypes = {
-		"compound", "prefix", "province", -- example: "Neumark" (Source: William R. Shepherd, "Historical Atlas", 1911, pp. 134-135)
 		"compound", "prefix", "settlement", -- examples: "Neusohl", "Neusorge", "Neustadt"
 		"compound", "infix", "settlement", -- example: "Klosterneuburg"
 		"separate", "prefix", "settlement", -- example: "Neue Sorge"
@@ -2173,8 +2188,7 @@ DefineLanguageWord("West", {
 	Type = "noun",
 	Meanings = {"West"},
 	DerivesFrom = {"old-high-german", "noun", "West"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 204.
-	Gender = "masculine",
-	AffixNameTypes = {"compound", "prefix", "singular", "province"} -- example: "Westphalien"
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Wilhelm", {
@@ -2275,8 +2289,7 @@ DefineLanguageWord("Fünf", {
 DefineLanguageWord("Sieben", {
 	Language = "high-german",
 	Type = "numeral",
-	Number = 7,
-	AffixNameTypes = {"compound", "prefix", "province"} -- example: "Siebenbürgen"
+	Number = 7
 })
 
 -- compounds
