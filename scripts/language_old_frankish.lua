@@ -88,6 +88,13 @@ DefineLanguageWord("Bŏsk", { -- Source: http://www.cnrtl.fr/definition/bois
 	DerivesFrom = {"proto-germanic", "noun", "Buska"} -- presumably
 })
 
+DefineLanguageWord("Brand", { -- Source: http://www.cnrtl.fr/definition/brand
+	Language = "old-frankish", -- source gives "Ancien Bas Francique" (= Old Frankish)
+	Type = "noun",
+	Meanings = {"Brand", "Firebrand"}, -- source gives the French "tison, brandon" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Branda"} -- presumably
+})
+
 DefineLanguageWord("Fridu", { -- Source: http://www.cnrtl.fr/definition/effrayer
 	Language = "old-frankish", -- source gives "Ancien Bas Francique" (= Old Frankish)
 	Type = "noun",

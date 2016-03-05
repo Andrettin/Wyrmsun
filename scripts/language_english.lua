@@ -321,6 +321,14 @@ DefineLanguageWord("Bow", {
 	}
 })
 
+DefineLanguageWord("Brand", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Brand"},
+	DerivesFrom = {"old-english", "noun", "Brond"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Brass", {
 	Language = "english",
 	Type = "noun",
@@ -397,6 +405,14 @@ DefineLanguageWord("Brown", {
 		"separate", "prefix", "terrain-mountains", -- examples: "Brown Crag", "Brown Pike"
 		"separate", "prefix", "singular", "unit-class-smithy" -- seems sensible
 	}
+})
+
+DefineLanguageWord("Brunt", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Brunt"},
+	DerivesFrom = {"old-english", "noun", "Bruneþa"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
+	Gender = "neuter"
 })
 
 DefineLanguageWord("Buck", {

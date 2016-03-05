@@ -90,7 +90,7 @@ DefineLanguageWord("Asjôn", { -- Source: August Fick and Alf Torp, "Wortschatz 
 DefineLanguageWord("Aþala", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 14.
 	Language = "proto-germanic",
 	Type = "noun",
-	Meanings = {"Kind", "Gender", "Lineage"}, -- source gives "Art, Geschlecht (innerstes Wesen)" as the meaning
+	Meanings = {"Kind", "Gender", "Lineage"}, -- source gives the German "Art, Geschlecht (innerstes Wesen)" as the meaning
 	Gender = "neuter"
 })
 
@@ -181,6 +181,13 @@ DefineLanguageWord("Bōks", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Meanings = {"Tablet"}
 })
 
+DefineLanguageWord("Branda", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Fire", "Stick", "Stick for Burning"}, -- source gives the German "Brand, Stock (zum Brennen)" as the meaning
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Brannian", { -- causative; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
 	Language = "proto-germanic",
 	Type = "verb",
@@ -219,6 +226,27 @@ DefineLanguageWord("Brugjô", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Bridge"}, -- source gives the German "Brücke" as the meaning
+	Gender = "feminine"
+})
+
+DefineLanguageWord("Brunan", { -- source also gives the alternative form "Bruni"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Fire"}, -- source gives the German "Brand" as the meaning
+	Gender = "masculine"
+})
+
+DefineLanguageWord("Brunaþan", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Heat", "Body Heat"}, -- source gives the German "Hitze (im Körper)" as the meaning
+	Gender = "masculine"
+})
+
+DefineLanguageWord("Brundi", { -- source also gives the alternative form "Brunsti"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Fire"}, -- source gives the German "Brand" as the meaning
 	Gender = "feminine"
 })
 

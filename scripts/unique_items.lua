@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2015 by Andrettin
+--      (c) Copyright 2015-2016 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -24,6 +24,19 @@
 --      along with this program; if not, write to the Free Software
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
+
+if (OldDefineUniqueItem == nil) then
+	OldDefineUniqueItem = DefineUniqueItem
+end
+
+function DefineUniqueItem(unique_item, data)
+	if (data.Type ~= nil) then
+		OldDefineUniqueItem(unique_item, {Type = data.Type})
+		data.Type = nil
+	end
+	
+	OldDefineUniqueItem(unique_item, data)
+end
 
 DefineUniqueItem("Brimir", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 102.
 	Type = "unit-broad-sword",
@@ -52,6 +65,7 @@ DefineUniqueItem("Gram", { -- Source: Henry Adams Bellows (transl.), "The Poetic
 
 DefineUniqueItem("Hrotti", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 385.
 	Type = "unit-spatha",
+	NameWord = {"dwarven", "noun", "Hrotti"},
 	Prefix = "upgrade-item-prefix-penetrating",
 	Suffix = "upgrade-item-suffix-of-perfuration",
 	Background = "In Norse mythology, Hrotti (\"Thruster\") was Fafnir's sword, which was taken by Sigurd.",
@@ -61,6 +75,7 @@ DefineUniqueItem("Hrotti", { -- Source: Henry Adams Bellows (transl.), "The Poet
 
 DefineUniqueItem("Rithil", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 380.
 	Type = "unit-spatha",
+	NameWord = {"dwarven", "adjective", "Rithil"},
 	Prefix = "upgrade-item-prefix-swift",
 	Suffix = "upgrade-item-suffix-of-betrayal",
 	Background = "In Norse mythology, Rithil (\"Swift-Moving\") was Regin's sword, which he used to slay his brother Fafnir. One source gives the alternate name Refil (\"Serpent\") for the sword.",
@@ -93,6 +108,10 @@ DefineUniqueItem("Svalin", { -- Source: Kevin Crossley-Holland, "The Norse Myths
 
 DefineUniqueItem("Brisingamen", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", pp. 177.
 	Type = "unit-amulet",
+	NameCompoundElements = {
+		"prefix", "dwarven", "noun", "singular", "genitive", "Brising",
+		"suffix", "dwarven", "noun", "singular", "Men"
+	},
 	Prefix = "upgrade-item-prefix-flaming",
 	Suffix = "upgrade-item-suffix-of-swiftness",
 	Background = "In Norse mythology, Brisingamen (\"The Necklace of the Brisings\") was a golden necklace crafted by four dwarven smiths for the goddess Freyja.",
@@ -101,6 +120,10 @@ DefineUniqueItem("Brisingamen", { -- Source: Henry Adams Bellows (transl.), "The
 
 DefineUniqueItem("Andvaranaut", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", pp. 114, 360; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 21.
 	Type = "unit-ring",
+	NameCompoundElements = {
+		"prefix", "dwarven", "noun", "singular", "genitive", "Andvari",
+		"suffix", "dwarven", "noun", "singular", "Naut"
+	},
 	Prefix = "upgrade-item-prefix-vicious",
 	Suffix = "upgrade-item-suffix-of-betrayal",
 	Background = "In Norse mythology, Andvaranaut (\"Andvari's Booty\") was a gold ring owned by Andvari and forcibly taken from him by Loki. Upon the ring's theft, Andvari cursed whoever would come to own it. The ring had the power to make gold.",
@@ -109,6 +132,7 @@ DefineUniqueItem("Andvaranaut", { -- Source: Henry Adams Bellows (transl.), "The
 
 DefineUniqueItem("Draupnir", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 241; Source: Henry Adams Bellows (transl.), "The Poetic Edda", pp. 114.
 	Type = "unit-ring",
+	NameWord = {"dwarven", "noun", "Draupnir"},
 	Prefix = "upgrade-item-prefix-flaming",
 	Suffix = "upgrade-item-suffix-of-power",
 	Background = "In Norse mythology, Draupnir (\"Dropper\") was a gold arm-ring crafted by the dwarves Brokk and Eitri for the Aesir. Eight rings with the same weight in gold as Draupnir dropped from it every ninth night. Draupnir was burned with Odin's son Balder in his funeral pyre.",

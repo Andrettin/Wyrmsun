@@ -107,10 +107,7 @@ DefineLanguageWord("Andvari", {
 	NumberCaseInflections = {
 		"singular", "genitive", "Andvara" -- as in "Andvaranaut"
 	},
-	Gender = "masculine", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 21.
-	AffixNameTypes = {
-		"compound", "prefix", "singular", "genitive", "item-ring", -- example: "Andvaranaut" (golden ring made by Andvari)
-	}
+	Gender = "masculine" -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 21.
 })
 
 DefineLanguageWord("Angarthing", { -- "An-garth-ing"? seems to follow similar naming conventions as the three-element names of the dwarven name list
@@ -247,7 +244,6 @@ DefineLanguageWord("Brising", { -- also name of a group of four dwarves (or the 
 	AffixNameTypes = {
 		"compound", "prefix", "singular", "settlement", -- no examples, but seems sensible in face of a general lack of examples
 		"compound", "prefix", "singular", "province", -- no examples, but seems sensible in face of a general lack of examples
-		"compound", "prefix", "singular", "genitive", "item-amulet", -- example: "Brisingamen" (golden necklace made by four dwarves, the Brisings)
 		"compound", "prefix", "singular", "terrain-hills", -- no examples, but seems sensible in face of a general lack of examples
 		"compound", "prefix", "singular", "terrain-mountains" -- no examples, but seems sensible in face of a general lack of examples
 	}
@@ -320,9 +316,8 @@ DefineLanguageWord("Draupnir", {
 	Meanings = {"Dropper"},
 	Gender = "masculine", -- presumably, since it's the name of a male dwarf?
 	NameTypes = {
-		"person", -- example: "Draupnir" (dwarf from Norse mythology)
-		"item-ring" -- example: "Draupnir" (solid gold arm-ring made by the dwarven brothers Brokk and Eitri; maybe should be a different item type than ring, as it is actually an arm-ring?)
-	},
+		"person" -- example: "Draupnir" (dwarf from Norse mythology)
+	}
 })
 
 DefineLanguageWord("Duf", {
@@ -580,13 +575,6 @@ DefineLanguageWord("Gom", { -- prefix used by Wesnoth's dwarven names; not neces
 	AffixNameTypes = {"compound", "prefix", "singular", "person"} -- examples: "Gomaithas", "Gomaithil", "Gomaithol", "Gomaithsol", "Gomalil", "Gomalis", "Gomalus", "Gomatas", "Gomatil", "Gomating", "Gomatis", "Gomatlos", "Gomatol", "Gomcatil", "Gomcatis", "Gomcatlos", "Gomdras", "Gomdril", "Gomdring", "Gomdris", "Gomdrol", "Gomdrsil", "Gomduris", "Gomdurlos", "Gomdursil", "Gomdursol", "Gomdurus", "Gomthaas", "Gomthalos", "Gomthasol"
 })
 
-DefineLanguageWord("Gram", {
-	Language = "dwarven",
-	Type = "noun",
-	Meanings = {},
-	NameTypes = {"item-sword"} -- example: "Gram" (sword made by the dwarf Regin)
-})
-
 DefineLanguageWord("Grerr", {
 	Language = "dwarven",
 	Type = "noun",
@@ -674,6 +662,12 @@ DefineLanguageWord("Hornbori", {
 	Type = "noun",
 	Meanings = {},
 	NameTypes = {"person"} -- example: "Hornbori" (dwarf from Norse mythology)
+})
+
+DefineLanguageWord("Hrotti", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 385.
+	Language = "dwarven",
+	Type = "noun", -- correct?
+	Meanings = {"Thruster"}
 })
 
 DefineLanguageWord("Hugstari", {
@@ -864,8 +858,7 @@ DefineLanguageWord("Men", {
 	Language = "dwarven",
 	Type = "noun",
 	Meanings = {"Necklace"}, -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 772.
-	Gender = "neuter", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 772.
-	AffixNameTypes = {"compound", "suffix", "singular", "item-amulet"} -- example: "Brisingamen" (golden necklace made by four dwarves, the Brisings)
+	Gender = "neuter" -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 772.
 })
 
 DefineLanguageWord("Mjod", {
@@ -928,8 +921,7 @@ DefineLanguageWord("Naut", {
 	Language = "dwarven",
 	Type = "noun",
 	Meanings = {"A Gift or Booty from a Person"}, -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 447.
-	Gender = "masculine", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 447.
-	AffixNameTypes = {"compound", "suffix", "singular", "item-ring"} -- example: "Andvaranaut" (gold ring made by Andvari and stolen by Loki; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 21.)
+	Gender = "masculine" -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 447.
 })
 
 DefineLanguageWord("Nefi", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 450.
@@ -1106,11 +1098,10 @@ DefineLanguageWord("Relgorn", {
 	NameTypes = {"person"} -- example: "Relgorn" (from Wesnoth, Heir to the Throne and Delfador's Memoirs)
 })
 
-DefineLanguageWord("Rithil", {
+DefineLanguageWord("Rithil", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 380.
 	Language = "dwarven",
 	Type = "adjective",
-	Meanings = {"Swift-Moving"},
-	NameTypes = {"item-sword"} -- example: "Rithil" (the dwarf Regin's sword)
+	Meanings = {"Swift-Moving"}
 })
 
 DefineLanguageWord("Rorir", { -- alternative spelling given by Cleasby and Vigfusson: "Reyrir"; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 739.

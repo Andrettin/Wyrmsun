@@ -126,6 +126,14 @@ DefineLanguageWord("Bord", { -- Source: http://www.cnrtl.fr/definition/bord
 	DerivesFrom = {"proto-indo-european", "noun", "Bhrdho"}
 })
 
+DefineLanguageWord("Brand", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
+	Language = "old-saxon", -- source gives Old Low German
+	Type = "noun",
+	Meanings = {"Fire", "Burning Log"}, -- source gives the German "Brand, brennendes Holzscheit"
+	DerivesFrom = {"proto-germanic", "noun", "Branda"}, -- apparently
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Brinnan", { -- strong verb; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
 	Language = "old-saxon",
 	Type = "verb",

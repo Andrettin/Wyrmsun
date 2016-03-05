@@ -720,18 +720,6 @@ function RunVideoOptionsMenu()
 		wyr.preferences.VideoFullScreen = Video.FullScreen
 	end
 
-	if (wyr.preferences.EnableOAML ~= oldEnableOAML) then
-		if (wyr.preferences.EnableOAML) then
-			StopMusic()
-			InitMusicOAML()
-			PlayMusicName("MenuTheme")
-		else
-			StopMusic()
-			ShutdownMusicOAML()
-			PlayMusic("music/battle_theme_a.ogg")
-		end
-	end
-
 	SavePreferences()
   	menu:stop()
   end)

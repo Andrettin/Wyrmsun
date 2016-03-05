@@ -119,6 +119,14 @@ DefineLanguageWord("Bluost", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Gender = "feminine"
 })
 
+DefineLanguageWord("Brant", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136; Source: http://www.cnrtl.fr/definition/brand
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Blaze", "Burning Log", "Sword", "Brand", "Sparkling Sword"}, -- Fick gives the German "Feuersbrunst, brennendes Holzscheit, Schwert", while the TLFi gives the French "tison" and "épée étincelante"
+	DerivesFrom = {"old-high-german", "noun", "Brant"}, -- as given by Fick and the TLFi
+	Gender = "masculine" -- as given by Fick
+})
+
 DefineLanguageWord("Brennen", { -- causative; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
 	Language = "middle-high-german",
 	Type = "verb",
@@ -146,6 +154,14 @@ DefineLanguageWord("Brücke", { -- source also gives the alternative form "Brüg
 	Meanings = {"Bridge"}, -- source gives the German "Brücke" as the meaning
 	Gender = "feminine",
 	DerivesFrom = {"old-high-german", "noun", "Prucca"}
+})
+
+DefineLanguageWord("Brunst", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Burning", "Fire"}, -- source gives the German "Brennen, Brand"
+	DerivesFrom = {"old-high-german", "noun", "Brunst"},
+	Gender = "feminine"
 })
 
 DefineLanguageWord("Burc", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.

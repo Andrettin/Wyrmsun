@@ -56,6 +56,14 @@ DefineLanguageWord("Bort", { -- Source: http://www.cnrtl.fr/definition/B%F6rde
 	Gender = "neuter"
 })
 
+DefineLanguageWord("Brant", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
+	Language = "middle-low-german",
+	Type = "noun",
+	Meanings = {"Fire", "Firebrand", "Sword"}, -- source gives the German "Feuer, Feuerbrand, Schwert"
+	DerivesFrom = {"old-saxon", "noun", "Brand"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Busch", { -- the TLFi also gives the alternative form "Busk"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 143; Source: http://www.cnrtl.fr/definition/bois
 	Language = "middle-low-german",
 	Type = "noun",

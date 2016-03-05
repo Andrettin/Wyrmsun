@@ -70,6 +70,14 @@ DefineLanguageWord("Bord", { -- Source: http://www.cnrtl.fr/definition/B%F6rde
 	Gender = "neuter"
 })
 
+DefineLanguageWord("Brond", { -- source also gives the alternative form "Brand"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
+	Language = "old-frisian",
+	Type = "noun",
+	Meanings = {"Fire", "Burning"}, -- source gives the German "Brand, Brennen"
+	DerivesFrom = {"proto-germanic", "noun", "Branda"}, -- apparently
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Bregge", { -- source also gives the alternative form "Brigge"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 145.
 	Language = "old-frisian",
 	Type = "noun",

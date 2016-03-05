@@ -164,6 +164,14 @@ DefineLanguageWord("Bort", { -- Source: http://www.cnrtl.fr/definition/bord
 	DerivesFrom = {"proto-indo-european", "noun", "Bhrdho"}
 })
 
+DefineLanguageWord("Brant", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136; Source: http://www.cnrtl.fr/definition/brand
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Blaze", "Burning Log", "Sword", "Brand", "Sparkling Sword"}, -- Fick gives the German "Feuersbrunst, brennendes Holzscheit, Schwert", while the TLFi gives the French "tison" and "épée étincelante"
+	DerivesFrom = {"proto-germanic", "noun", "Branda"}, -- apparently, as given by Fick
+	Gender = "masculine" -- as given by Fick
+})
+
 DefineLanguageWord("Brart", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "old-high-german",
 	Type = "noun",
@@ -186,12 +194,28 @@ DefineLanguageWord("Brinnan", { -- strong verb; source also gives the alternativ
 	DerivesFrom = {"proto-germanic", "verb", "Brennan"}
 })
 
+DefineLanguageWord("Bronado", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Body Heat"}, -- source gives the German "Hitze im Körper"
+	DerivesFrom = {"proto-germanic", "noun", "Brunaþan"}, -- apparently
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Brort", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 9.
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Skewer", "Projectile", "Edge", "Rim", "Forepart of a Ship"},
 	DerivesFrom = {"proto-germanic", "noun", "Bruzdaz"},
 	Gender = "masculine"
+})
+
+DefineLanguageWord("Brunst", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Burning", "Fire"}, -- source gives the German "Brennen, Brand"
+	DerivesFrom = {"proto-germanic", "noun", "Brundi"}, -- apparently
+	Gender = "feminine"
 })
 
 DefineLanguageWord("Buoh", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.

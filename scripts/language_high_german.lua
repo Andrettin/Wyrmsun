@@ -280,6 +280,7 @@ DefineLanguageWord("Brand", {
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"Fire"},
+	DerivesFrom = {"middle-high-german", "noun", "Brant"}, -- presumably
 	Gender = "masculine",
 	NumberCaseInflections = {
 		"singular", "genitive", "Brandes", -- alternatively also "Brands"
@@ -294,6 +295,7 @@ DefineLanguageWord("Branden", {
 	Language = "high-german",
 	Type = "verb",
 	Meanings = {"Surge"},
+	DerivesFrom = {"middle-high-german", "noun", "Brant"}, -- presumably (assuming it to have a similar origin as the noun "Brand")
 	NumberPersonTenseMoodInflections = {
 		"singular", "first-person", "present", "indicative", "Brande",
 		"singular", "second-person", "present", "indicative", "Brandest",
@@ -377,6 +379,20 @@ DefineLanguageWord("Brücke", {
 	AffixNameTypes = {
 		"compound", "suffix", "singular", "settlement", -- example: "Halsbrücke"
 		"compound", "suffix", "plural", "settlement" -- example: "Zweibrücken"
+	}
+})
+
+DefineLanguageWord("Brunst", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"Rut"},
+	DerivesFrom = {"middle-high-german", "noun", "Brunst"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
+	Gender = "feminine",
+	NumberCaseInflections = {
+		"plural", "nominative", "Brünste",
+		"plural", "accusative", "Brünste",
+		"plural", "dative", "Brünsten",
+		"plural", "genitive", "Brünste"
 	}
 })
 

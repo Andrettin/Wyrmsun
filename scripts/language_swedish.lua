@@ -32,6 +32,13 @@ DefineLanguageWord("Ässja", { -- vernacular; Source: August Fick and Alf Torp, 
 	DerivesFrom = {"proto-germanic", "noun", "Asjôn"}
 })
 
+DefineLanguageWord("Brånad", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
+	Language = "swedish",
+	Type = "noun",
+	Meanings = {"Rut"}, -- source gives the German "Brunst"
+	DerivesFrom = {"proto-germanic", "noun", "Brunaþan"} -- apparently
+})
+
 DefineLanguageWord("Hög", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 54.
 	Language = "swedish",
 	Type = "adjective",

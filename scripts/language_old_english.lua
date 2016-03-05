@@ -185,6 +185,14 @@ DefineLanguageWord("Bord", { -- Source: http://www.cnrtl.fr/definition/bord
 	DerivesFrom = {"proto-indo-european", "noun", "Bhrdho"}
 })
 
+DefineLanguageWord("Brond", { -- Fick gives "Brand" instead; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136; Source: http://www.cnrtl.fr/definition/brand
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Fire", "Firebrand", "Sword", "Brand", "Sword Blade"}, -- Fick gives the German "Feuer, Feuerbrand, Schwert", while the TLFi gives the French "tison" and "lame d'épée, épée"
+	DerivesFrom = {"proto-germanic", "noun", "Branda"}, -- apparently, as given by Fick
+	Gender = "masculine" -- as given by Fick
+})
+
 DefineLanguageWord("Breord", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "old-english",
 	Type = "noun",
@@ -208,6 +216,14 @@ DefineLanguageWord("Brû", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	NumberCaseInflections = {
 		"plural", "genitive", "Brûna"
 	}
+})
+
+DefineLanguageWord("Bruneþa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Body Heat"}, -- source gives the German "Hitze im Körper"
+	DerivesFrom = {"proto-germanic", "noun", "Brunaþan"}, -- apparently
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Brycg", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 145.

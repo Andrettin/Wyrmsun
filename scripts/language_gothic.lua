@@ -100,6 +100,14 @@ DefineLanguageWord("Aizasmiþa", { -- the latter part of this compound is derive
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Alabrunsts", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
+	Language = "gothic",
+	Type = "noun",
+	Meanings = {}, -- source gives a Greek word as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Brundi"}, -- apparently
+	Gender = "feminine"
+})
+
 DefineLanguageWord("Alan", { -- source also gives the alternative forms "Ôl" and "Alans"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 19.
 	Language = "gothic",
 	Type = "verb",

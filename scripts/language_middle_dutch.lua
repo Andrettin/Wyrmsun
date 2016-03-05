@@ -31,6 +31,13 @@ DefineLanguageWord("Boomgaert", { -- uses the word "Gaert" as a compound element
 	Meanings = {"Garden", "Orchard"} -- source gives the French "jardin, verger" as the meaning
 })
 
+DefineLanguageWord("Brant", { -- Source: http://www.cnrtl.fr/definition/brand
+	Language = "middle-dutch",
+	Type = "noun",
+	Meanings = {"Fire", "Pyre", "Sparkling Weapon", "Sword"}, -- source gives the French "feu, bûcher" and "arme étincelante, épée"
+	DerivesFrom = {"old-frankish", "noun", "Brand"} -- presumably
+})
+
 DefineLanguageWord("Busch", { -- source also gives the alternative form "Bosch"; Source: http://www.cnrtl.fr/definition/bois
 	Language = "middle-dutch",
 	Type = "noun",

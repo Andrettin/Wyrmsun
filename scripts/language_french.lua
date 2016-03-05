@@ -126,6 +126,14 @@ DefineLanguageWord("Bourgeois", { -- Source: T. C. Donkin, "An Etymological Dict
 	DerivesFrom = {"late-latin", "noun", "Burgus"}
 })
 
+DefineLanguageWord("Brand", {
+	Language = "french",
+	Type = "noun",
+	Meanings = {"Two-Handed Sword"},
+	DerivesFrom = {"old-frankish", "noun", "Brand"}, -- Source: http://www.cnrtl.fr/definition/brand
+	Gender = "feminine"
+})
+
 DefineLanguageWord("Cresson", {
 	Language = "french",
 	Type = "noun",

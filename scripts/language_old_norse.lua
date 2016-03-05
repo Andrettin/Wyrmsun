@@ -262,6 +262,14 @@ DefineLanguageWord("Bǫrr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Meanings = {"Wheat", "Spelt"} -- the word means one of these, not both
 })
 
+DefineLanguageWord("Brandr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136; Source: http://www.cnrtl.fr/definition/brand
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Fire", "Pole", "Sword Blade", "Burning", "Firewood", "Two-Edged Sword"}, -- Fick gives the German "Brand, Pfosten, Schwertklinge", while the TLFi gives the French "embrasement, bois de chauffage" and "lame de l'épée, glaive"
+	DerivesFrom = {"proto-germanic", "noun", "Branda"}, -- apparently, as given by Fick
+	Gender = "masculine" -- as given by Fick
+})
+
 DefineLanguageWord("Brenna", { -- causative; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
 	Language = "old-norse",
 	Type = "verb",
@@ -301,6 +309,22 @@ DefineLanguageWord("Brûn", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	NumberCaseInflections = {
 		"plural", "nominative", "Brŷnn"
 	}
+})
+
+DefineLanguageWord("Brundr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Rut"}, -- source gives the German "Brunst"
+	DerivesFrom = {"proto-germanic", "noun", "Brundi"}, -- apparently
+	Gender = "masculine"
+})
+
+DefineLanguageWord("Bruni", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Burning"}, -- source gives the German "Brennen"
+	DerivesFrom = {"proto-germanic", "noun", "Brunan"}, -- apparently
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Bryggja", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 145.
