@@ -113,7 +113,10 @@ DefineProvince("Alsace", {
 	SettlementName = "Strasburg",
 	CulturalSettlementNames = {
 		"latin", "Argentoratum", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
-		"teuton", "Strasburg"
+		"teuton", "Strasburg", "name-compound-elements", {
+--			"prefix", -- ?
+			"suffix", "high-german", "noun", "singular", "Burg"
+		}
 	},
 	SettlementLocation = {501, 118}, -- Strasburg
 	Map = "maps/random/random-map-forest.smp",
@@ -395,7 +398,10 @@ DefineProvince("Augsburg", {
 	SettlementName = "Augsburg",
 	CulturalSettlementNames = {
 		"latin", "Augusta Vindelicorum", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
-		"teuton", "Augsburg"
+		"teuton", "Augsburg", "name-compound-elements", {
+--			"prefix", -- ?
+			"suffix", "high-german", "noun", "singular", "Burg"
+		}
 	},
 	SettlementLocation = {510, 118}, -- Augsburg
 	Map = "maps/random/random-map-forest.smp",
@@ -510,7 +516,7 @@ DefineProvince("Bavaria", {
 	CulturalSettlementNames = {
 		"latin", "Regina Castra",
 		"teuton", "Regensburg", "name-compound-elements", {
---			"prefix", "high-german", "noun", "Regens", -- ?
+--			"prefix", -- ?
 			"suffix", "high-german", "noun", "singular", "Burg"
 		}
 	},
@@ -1346,8 +1352,10 @@ DefineProvince("England", {
 	SettlementName = "Londinium",
 	CulturalSettlementNames = {
 		"celt", "Londinium",
-		"latin", "Londinium",
-		England = "London"
+		"latin", "Londinium"
+	},
+	FactionCulturalSettlementNames = {
+		"teuton", "England", "London"
 	},
 	SettlementLocation = {480, 109}, -- London
 	Map = "maps/random/random-map-forest.smp",
@@ -1443,7 +1451,10 @@ DefineProvince("Euboea", { -- to make this island appear separated from Attica, 
 DefineProvince("Farther Pomerania", {
 	World = "Earth",
 	CulturalNames = {
-		"teuton", "Hinterpommern"
+		"teuton", "Hinterpommern", "name-compound-elements", {
+			"prefix", "high-german", "adposition", "Hinter",
+--			"suffix" -- ?
+		}
 	},
 	Tiles = {
 		{521, 104},
@@ -1459,7 +1470,10 @@ DefineProvince("Farther Pomerania", {
 	},
 	SettlementName = "Kolberg",
 	CulturalSettlementNames = {
-		"teuton", "Kolberg"
+		"teuton", "Kolberg", "name-compound-elements", {
+--			"prefix", -- ?
+			"suffix", "high-german", "noun", "singular", "Berg"
+		}
 	},
 	SettlementLocation = {523, 102}, -- Kolberg
 	Map = "maps/random/random-map-forest.smp",
@@ -1569,7 +1583,10 @@ DefineProvince("Franconia", {
 	},
 	SettlementName = "Würzburg",
 	CulturalSettlementNames = {
-		"teuton", "Würzburg"
+		"teuton", "Würzburg", "name-compound-elements", {
+--			"prefix", -- ?
+			"suffix", "high-german", "noun", "singular", "Burg"
+		}
 	},
 	SettlementLocation = {508, 114}, -- Würzburg
 	Map = "maps/random/random-map-forest.smp",
@@ -1649,7 +1666,7 @@ DefineProvince("Galicia", {
 	CulturalSettlementNames = {
 		"slav", "Lvov",
 		"teuton", "Lemberg", "name-compound-elements", {
---			"prefix", "high-german", "noun", "Lem", -- ?
+--			"prefix", -- ?
 			"suffix", "high-german", "noun", "singular", "Berg"
 		}
 	},
@@ -1854,7 +1871,10 @@ DefineProvince("Highland Scotland", {
 DefineProvince("Hither Pomerania", {
 	World = "Earth",
 	CulturalNames = {
-		"teuton", "Vorpommern"
+		"teuton", "Vorpommern", "name-compound-elements", {
+			"prefix", "high-german", "adposition", "Vor",
+--			"suffix" -- ?
+		}
 	},
 	Tiles = {
 		{515, 101},
@@ -2214,7 +2234,10 @@ DefineProvince("Latvia", {
 DefineProvince("Lauenburg", {
 	World = "Earth",
 	CulturalNames = {
-		"teuton", "Lauenburg"
+		"teuton", "Lauenburg", "name-compound-elements", {
+--			"prefix", -- ?
+			"suffix", "high-german", "noun", "singular", "Burg"
+		}
 	},
 	Tiles = {
 		{509, 103},
@@ -2418,6 +2441,12 @@ DefineProvince("Lowland Scotland", {
 		{474, 97}
 	},
 	SettlementName = "Edinburgh",
+	FactionCulturalSettlementNames = {
+		"teuton", "England", "Edinburgh", "name-compound-elements", {
+--			"prefix", -- ?
+			"suffix", "english", "noun", "singular", "Burgh"
+		}
+	},
 	SettlementLocation = {470, 97}, -- Edinburgh
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Hills",
@@ -2477,7 +2506,10 @@ DefineProvince("Magdeburg", {
 	},
 	SettlementName = "Magdeburg",
 	CulturalSettlementNames = {
-		"teuton", "Magdeburg"
+		"teuton", "Magdeburg", "name-compound-elements", {
+--			"prefix", -- ?
+			"suffix", "high-german", "noun", "singular", "Burg"
+		}
 	},
 	SettlementLocation = {513, 107}, -- Magdeburg
 	Map = "maps/random/random-map-forest.smp",
@@ -2543,7 +2575,10 @@ DefineProvince("Mazovia", {
 DefineProvince("Mecklenburg", {
 	World = "Earth",
 	CulturalNames = {
-		"teuton", "Mecklenburg"
+		"teuton", "Mecklenburg", "name-compound-elements", {
+--			"prefix", -- ?
+			"suffix", "high-german", "noun", "singular", "Burg"
+		}
 	},
 	Tiles = {
 		{511, 102}, {511, 103}, {511, 104},
@@ -2786,7 +2821,10 @@ DefineProvince("Oldenburg", {
 	},
 	SettlementName = "Oldenburg",
 	CulturalSettlementNames = {
-		"teuton", "Oldenburg"
+		"teuton", "Oldenburg", "name-compound-elements", {
+--			"prefix", -- ?
+			"suffix", "high-german", "noun", "singular", "Burg"
+		}
 	},
 	SettlementLocation = {503, 104}, -- Oldenburg
 	Map = "maps/random/random-map-forest.smp",
@@ -3359,7 +3397,10 @@ DefineProvince("Schleswig", {
 	},
 	SettlementName = "Flensburg",
 	CulturalSettlementNames = {
-		"teuton", "Flensburg"
+		"teuton", "Flensburg", "name-compound-elements", {
+--			"prefix", -- ?
+			"suffix", "high-german", "noun", "singular", "Burg"
+		}
 	},
 	SettlementLocation = {506, 100}, -- Flensburg
 	Map = "maps/random/random-map-forest.smp",
@@ -3490,7 +3531,10 @@ DefineProvince("Slovakia", {
 	},
 	SettlementName = "Bratislava",
 	CulturalSettlementNames = {
-		"teuton", "Presburg"
+		"teuton", "Presburg", "name-compound-elements", {
+--			"prefix", -- ?
+			"suffix", "high-german", "noun", "singular", "Burg"
+		}
 	},
 	SettlementLocation = {528, 118}, -- Bratislava
 	Map = "maps/random/random-map-forest.smp",
@@ -3715,8 +3759,11 @@ DefineProvince("Transylvania", {
 	SettlementName = "Cluj",
 	SettlementLocation = {545, 122}, -- Cluj/Klausenburg
 	CulturalSettlementNames = {
---				romanian = "Cluj",
-		"teuton", "Klausenburg"
+--		"romanian", "Cluj",
+		"teuton", "Klausenburg", "name-compound-elements", {
+			"prefix", "high-german", "noun", "plural", "Klause",
+			"suffix", "high-german", "noun", "singular", "Burg"
+		}
 	},
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",

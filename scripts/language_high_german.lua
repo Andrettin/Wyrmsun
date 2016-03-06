@@ -410,7 +410,7 @@ DefineLanguageWord("Burg", {
 	Gender = "feminine",
 	AffixNameTypes = {
 		"compound", "prefix", "plural", "province", -- example: "Burgenland"
-		"compound", "suffix", "singular", "settlement" -- examples: "Friedeburg", "Hamburg", "Klausenburg", "Klosterneuburg", "Marburg", "Nikolsburg", "Ödenburg", "Salzburg", "Schässburg", "Stuhlweissenburg", "Wolfsburg"
+		"compound", "suffix", "singular", "settlement" -- examples: "Friedeburg", "Hamburg", "Klosterneuburg", "Marburg", "Nikolsburg", "Ödenburg", "Salzburg", "Schässburg", "Stuhlweissenburg", "Wolfsburg"
 	}
 })
 
@@ -1100,6 +1100,12 @@ DefineLanguageWord("Hilde", { -- female name
 	Meanings = {}
 })
 
+DefineLanguageWord("Hinter", {
+	Language = "high-german",
+	Type = "adposition",
+	Meanings = {"Behind"}
+})
+
 DefineLanguageWord("Hoch", {
 	Language = "high-german",
 	Type = "adjective",
@@ -1283,8 +1289,7 @@ DefineLanguageWord("Klause", { -- Source: http://www.duden.de/rechtschreibung/Kl
 		"plural", "dative", "Klausen",
 		"plural", "genitive", "Klausen"
 	},
-	Gender = "feminine",
-	AffixNameTypes = {"compound", "prefix", "plural", "settlement"} -- example: "Klausenburg"
+	Gender = "feminine"
 })
 
 DefineLanguageWord("Kloster", {
@@ -2149,6 +2154,12 @@ DefineLanguageWord("Violett", {
 	Language = "high-german",
 	Type = "adjective",
 	Meanings = {"Violet"}
+})
+
+DefineLanguageWord("Vor", {
+	Language = "high-german",
+	Type = "adposition",
+	Meanings = {"Before"}
 })
 
 DefineLanguageWord("Waid", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 4.

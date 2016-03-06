@@ -1234,12 +1234,6 @@ DefineLanguageWord("Werdan", { -- Source: Richard M. Runge, "The Phonetic Realiz
 	Meanings = {"Become"}
 })
 
-DefineLanguageWord("Werwolf", { -- composed of "Wer" and "Wolf"; Source: http://www.cnrtl.fr/definition/garou
-	Language = "old-high-german",
-	Type = "noun",
-	Meanings = {}
-})
-
 DefineLanguageWord("West", { -- source also gives the alternative form "Westar"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 204.
 	Language = "old-high-german",
 	Type = "noun", -- presumably, since it is listed next to the German masculine noun "West"
@@ -1330,4 +1324,16 @@ DefineLanguageWord("Zwirnēn", { -- source also gives the alternative form "Zwir
 	Language = "old-high-german",
 	Type = "verb",
 	Meanings = {"Twine"}
+})
+
+-- compounds
+
+DefineLanguageWord("Werwolf", { -- Source: http://www.cnrtl.fr/definition/garou
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {},
+	CompoundElements = {
+		"prefix", "old-high-german", "noun", "Wer",
+		"suffix", "old-high-german", "noun", "Wolf"
+	}
 })

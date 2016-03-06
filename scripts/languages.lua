@@ -96,6 +96,45 @@ DefineLanguage("english", {
 	}
 })
 
+DefineLanguage("etruscan", {
+	Name = "Etruscan"
+})
+
+DefineLanguage("finnish", {
+	Name = "Finnish"
+})
+
+DefineLanguage("french", {
+	Name = "French"
+})
+
+DefineLanguage("gallo-romance", {
+	Name = "Gallo-Romance"
+})
+
+DefineLanguage("gaulish", {
+	Name = "Gaulish"
+})
+
+DefineLanguage("gnomish", {
+	Name = "Gnomish",
+--	GenerateMissingWords = true
+})
+
+DefineLanguage("goblin", {
+	Name = "Goblin",
+	GenerateMissingWords = true
+})
+
+DefineLanguage("gothic", {
+	Name = "Gothic"
+})
+
+DefineLanguage("greek", {
+	Name = "Greek",
+	SkipNameTypeInheritance = true
+})
+
 DefineLanguage("high-german", { -- define High German early to prevent some type name generation weirdnesses
 	Name = "High German",
 	AdjectiveEndings = {
@@ -148,45 +187,6 @@ DefineLanguage("high-german", { -- define High German early to prevent some type
 		"Airmanareiks", "Ermenrich", -- "Ermenrich" is the German form of the Gothic name Airmanareiks
 		"Theodoric", "Dietrich" -- "Dietrich" is the German form of the Gothic name Theodoric
 	}
-})
-
-DefineLanguage("etruscan", {
-	Name = "Etruscan"
-})
-
-DefineLanguage("finnish", {
-	Name = "Finnish"
-})
-
-DefineLanguage("french", {
-	Name = "French"
-})
-
-DefineLanguage("gallo-romance", {
-	Name = "Gallo-Romance"
-})
-
-DefineLanguage("gaulish", {
-	Name = "Gaulish"
-})
-
-DefineLanguage("gnomish", {
-	Name = "Gnomish",
---	GenerateMissingWords = true
-})
-
-DefineLanguage("goblin", {
-	Name = "Goblin",
-	GenerateMissingWords = true
-})
-
-DefineLanguage("gothic", {
-	Name = "Gothic"
-})
-
-DefineLanguage("greek", {
-	Name = "Greek",
-	SkipNameTypeInheritance = true
 })
 
 DefineLanguage("illyrian", {
