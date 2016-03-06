@@ -182,6 +182,13 @@ DefineLanguageWord("Marisk", { -- Source: http://www.cnrtl.fr/definition/marais
 	DerivesFrom = {"proto-germanic", "noun", "Mari"}
 })
 
+DefineLanguageWord("Meisinga", { -- Source: http://www.cnrtl.fr/definition/m%C3%A9sange
+	Language = "old-frankish", -- source gives "Ancien Bas Francique" (= Old Frankish)
+	Type = "noun",
+	Meanings = {"Tit", "Titmouse"}, -- source gives the French "mésange" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Maisôn"} -- presumably
+})
+
 DefineLanguageWord("Nimid", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 151.
 	Language = "old-frankish",
 	Type = "noun",

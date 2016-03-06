@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2015 by Andrettin
+--      (c) Copyright 2015-2016 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -28,7 +28,7 @@
 DefineFaction("Aestui Tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	Civilization = "slav", -- actually they were apparently Baltic (this needs to be confirmed), but let's make them Slavic to not have too many NPC civilizations in the game
 	Type = "tribe",
-	Language = "lithuanian",
+--	Language = "lithuanian",
 	Colors = {"green"}
 })
 
@@ -47,7 +47,7 @@ DefineFaction("Venedae Tribe", { -- Source: William R. Shepherd, "Historical Atl
 DefineFaction("Croatia", {
 	Civilization = "slav",
 	Type = "polity",
-	Language = "old-church-slavonic",
+--	Language = "old-church-slavonic",
 	Colors = {"blue", "red"},
 	DefaultTier = "kingdom",
 	Titles = {

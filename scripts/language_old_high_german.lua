@@ -793,6 +793,14 @@ DefineLanguageWord("Marca", { -- source also gives the alternative form "Marcha"
 	Gender = "feminine"
 })
 
+DefineLanguageWord("Meisa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 155; Source: http://www.cnrtl.fr/definition/m%C3%A9sange
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Tit", "Titmouse"}, -- Fick gives the German "Meise" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Maisôn"}, -- as given by Fick
+	Gender = "feminine" -- as given by Fick
+})
+
 DefineLanguageWord("Mēr", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
 	Language = "old-high-german",
 	Type = "adverb",

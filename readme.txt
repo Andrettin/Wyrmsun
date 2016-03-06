@@ -84,7 +84,6 @@ https://github.com/Andrettin/Wyrmsun
 - The Suebi, Marcomanni, Alamanni, Bavarian Tribes and their related factions now use Old High German for proper name generation (for units, settlements, provinces and smithies).
 - The Angle Tribe now uses Old English for proper name generation (for units, settlements, provinces and smithies).
 - The Frank Tribe and related factions now use Old Frankish for proper name generation (for units, settlements, provinces and smithies).
-- The Netherlands and related factions now use Dutch for proper name generation (for units, settlements, provinces and smithies).
 
 * Grand Strategy
 - Fixed issue which caused custom heroes to not be placed in the province properly after the "On the Vanaquisl" event mission.

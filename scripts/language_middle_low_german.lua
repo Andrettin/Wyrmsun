@@ -137,6 +137,14 @@ DefineLanguageWord("Mersch", { -- source also gives the alternative form "Marsch
 	DerivesFrom = {"proto-germanic", "noun", "Mari"}
 })
 
+DefineLanguageWord("Mêse", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 155.
+	Language = "middle-low-german",
+	Type = "noun",
+	Meanings = {"Tit", "Titmouse"}, -- source gives the German "Meise" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Maisôn"},
+	Gender = "feminine"
+})
+
 DefineLanguageWord("Note", { -- source also gives the alternative form "Not"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 58.
 	Language = "middle-low-german",
 	Type = "noun",

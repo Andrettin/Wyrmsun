@@ -668,6 +668,13 @@ DefineLanguageWord("Maχtiz", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Meanings = {"Might"}
 })
 
+DefineLanguageWord("Maisôn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 155.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Tit", "Titmouse"}, -- source gives the German "Meise" as the meaning
+	Gender = "feminine"
+})
+
 DefineLanguageWord("Maitila", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 164.
 	Language = "proto-germanic",
 	Type = "noun",

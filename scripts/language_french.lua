@@ -268,6 +268,14 @@ DefineLanguageWord("Marc", {
 	DerivesFrom = {"old-frankish", "noun", "Marka"} -- Source: http://www.cnrtl.fr/definition/marc
 })
 
+DefineLanguageWord("Mésange", {
+	Language = "french",
+	Type = "noun",
+	Meanings = {"Tit", "Titmouse"},
+	DerivesFrom = {"old-frankish", "noun", "Meisinga"}, -- Source: http://www.cnrtl.fr/definition/m%C3%A9sange
+	Gender = "feminine"
+})
+
 DefineLanguageWord("Ren", {
 	Language = "french",
 	Type = "noun", -- correct?

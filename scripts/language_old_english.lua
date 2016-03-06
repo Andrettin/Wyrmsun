@@ -885,6 +885,14 @@ DefineLanguageWord("Māra", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	}
 })
 
+DefineLanguageWord("Mâse", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 155.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Tit", "Titmouse"}, -- source gives the German "Meise" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Maisôn"},
+	Gender = "feminine"
+})
+
 DefineLanguageWord("Mē", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
 	Language = "old-english",
 	Type = "pronoun",

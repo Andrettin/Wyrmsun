@@ -1529,7 +1529,8 @@ DefineLanguageWord("Maximilian", {
 DefineLanguageWord("Meise", {
 	Language = "high-german",
 	Type = "noun",
-	Meanings = {"Peat"},
+	Meanings = {"Tit", "Titmouse"},
+	DerivesFrom = {"middle-high-german", "noun", "Meise"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 155.
 	Gender = "feminine",
 	NumberCaseInflections = {
 		"plural", "nominative", "Meisen",

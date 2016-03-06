@@ -68,6 +68,12 @@ DefineLanguageWord("Ieu", { -- this is the comparative; Source: Winfred P. Lehma
 	}
 })
 
+DefineLanguageWord("Mwyalch", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 155.
+	Language = "welsh",
+	Type = "noun",
+	Meanings = {"Blackbird", "Merl", "Thrush"} -- source gives the German "Amsel, Drossel" as the meaning
+})
+
 DefineLanguageWord("Rhŷd", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 121.
 	Language = "welsh",
 	Type = "noun",

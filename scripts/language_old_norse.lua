@@ -821,6 +821,14 @@ DefineLanguageWord("Meiri", { -- given by Lehmann, but it is not entirely clear 
 	}
 })
 
+DefineLanguageWord("Meisingr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 155.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Tit", "Titmouse"}, -- source gives the German "Meise" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Maisôn"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Mēr", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
 	Language = "old-norse",
 	Type = "pronoun",

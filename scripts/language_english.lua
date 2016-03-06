@@ -2721,6 +2721,14 @@ DefineLanguageWord("Three", {
 	}
 })
 
+DefineLanguageWord("Titmouse", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Titmouse"},
+	DerivesFrom = {"old-english", "noun", "Mâse"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 155.
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Ton", {
 	Language = "english",
 	Type = "noun",

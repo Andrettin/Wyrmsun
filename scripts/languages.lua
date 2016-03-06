@@ -205,7 +205,7 @@ DefineLanguage("japanese", {
 
 DefineLanguage("kobold", {
 	Name = "Kobold",
-	GenerateMissingWords = true
+--	GenerateMissingWords = true
 })
 
 DefineLanguage("late-latin", {

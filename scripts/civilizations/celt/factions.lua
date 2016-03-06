@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2015 by Andrettin
+--      (c) Copyright 2015-2016 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -28,14 +28,14 @@
 DefineFaction("Aedui Tribe", {
 	Civilization = "celt",
 	Type = "tribe",
-	Language = "gaulish",
+--	Language = "gaulish",
 	Colors = {"green"}
 })
 
 DefineFaction("Arverni Tribe", {
 	Civilization = "celt",
 	Type = "tribe",
-	Language = "gaulish",
+--	Language = "gaulish",
 	Colors = {"blue"}
 })
 
@@ -54,21 +54,21 @@ DefineFaction("Cotini Tribe", {
 DefineFaction("Helvetii Tribe", {
 	Civilization = "celt",
 	Type = "tribe",
-	Language = "gaulish",
+--	Language = "gaulish",
 	Colors = {"violet"} -- another color, perhaps?
 })
 
 DefineFaction("Ligurian Tribe", {
 	Civilization = "celt", -- were they really Celts?
 	Type = "tribe",
-	Language = "gaulish",
+--	Language = "gaulish",
 	Colors = {"green"}
 })
 
 DefineFaction("Menapii Tribe", {
 	Civilization = "celt",
 	Type = "tribe",
-	Language = "gaulish",
+--	Language = "gaulish",
 	Colors = {"yellow"}
 })
 
@@ -93,14 +93,14 @@ DefineFaction("Scot Tribe", {
 DefineFaction("Sequani Tribe", {
 	Civilization = "celt",
 	Type = "tribe",
-	Language = "gaulish",
+--	Language = "gaulish",
 	Colors = {"pink", "red"}
 })
 
 DefineFaction("Turone Tribe", {
 	Civilization = "celt",
 	Type = "tribe",
-	Language = "gaulish",
+--	Language = "gaulish",
 	Colors = {"cyan"}
 })
 

@@ -515,6 +515,14 @@ DefineLanguageWord("Marke", { -- Fick also gives the alternative form "Mark", wh
 	Gender = "feminine" -- as given by Fick
 })
 
+DefineLanguageWord("Meise", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 155.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Tit", "Titmouse"}, -- source gives the German "Meise" as the meaning
+	DerivesFrom = {"old-high-german", "noun", "Meisa"},
+	Gender = "feminine"
+})
+
 DefineLanguageWord("Miete", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 7.
 	Language = "middle-high-german",
 	Type = "noun",

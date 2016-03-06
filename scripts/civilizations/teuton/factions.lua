@@ -346,7 +346,7 @@ DefineFaction("Netherlands", {
 	Civilization = "teuton",
 	ParentFaction = "Francia",
 	Type = "polity",
-	Language = "dutch",
+--	Language = "dutch",
 	Colors = {"orange", "blue"},
 	DefaultTier = "kingdom",
 	Titles = {
@@ -390,7 +390,7 @@ DefineFaction("Friesland", {
 	Civilization = "teuton",
 	ParentFaction = "Frisian Tribe",
 	Type = "polity",
-	Language = "dutch", -- maybe should be modern Frisian instead?
+--	Language = "dutch", -- maybe should be modern Frisian instead?
 	Colors = {"black"},
 	DefaultTier = "barony", -- Friesland was a lordship in 1559-1600; Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
 	Titles = {
