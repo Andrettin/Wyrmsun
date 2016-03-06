@@ -29,7 +29,8 @@ DefineLanguageWord("Bord", { -- Source: http://www.cnrtl.fr/definition/B%F6rde
 	Language = "old-icelandic",
 	Type = "noun",
 	Meanings = {"Board", "Table"}, -- source gives the French "planche, table" as the meaning
-	DerivesFrom = {"old-norse", "noun", "Bord"}
+	DerivesFrom = {"old-norse", "noun", "Bord"},
+	Replaces = {"old-norse", "noun", "Bord"}
 })
 
 DefineLanguageWord("Drósir", { -- this is the plural; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
@@ -67,8 +68,10 @@ DefineLanguageWord("Lín", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 
 DefineLanguageWord("Meiri", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 3.
 	Language = "old-icelandic",
-	Type = "adjective",
-	Meanings = {"More"} -- perhaps a "determiner" class of words should be added?
+	Type = "adjective", -- perhaps a "determiner" class of words should be added?
+	Meanings = {"More"},
+	DerivesFrom = {"old-norse", "adjective", "Meiri"}, -- presumably
+	Replaces = {"old-norse", "adjective", "Meiri"}
 })
 
 DefineLanguageWord("Reyrr", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.

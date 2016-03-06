@@ -44,6 +44,8 @@ DefineLanguageWord("Mēre", { -- this is the comparative, what is the normal ver
 	Language = "old-swedish",
 	Type = "adjective",
 	Meanings = {"Larger"}, -- this is the meaning for the comparative, should be replaced when we got hold of the normal version of the adjective
+	DerivesFrom = {"old-norse", "adjective", "Meiri"}, -- presumably
+	Replaces = {"old-norse", "adjective", "Meiri"},
 	ComparisonDegreeInflections = {
 		"comparative", "Mēre"
 	}
@@ -55,9 +57,11 @@ DefineLanguageWord("Tuar", { -- Source: Richard M. Runge, "The Phonetic Realizat
 	Number = 2
 })
 
-DefineLanguageWord("Vīr", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 5.
+DefineLanguageWord("Vī", { -- source gives "Vī(r)"; Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 5.
 	Language = "old-swedish",
 	Type = "pronoun",
 	Meanings = {"We"},
-	Nominative = "Vīr"
+	DerivesFrom = {"old-norse", "pronoun", "Vēr"},
+	Replaces = {"old-norse", "pronoun", "Vēr"},
+	Nominative = "Vī"
 })

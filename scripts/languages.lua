@@ -274,10 +274,6 @@ DefineLanguage("old-church-slavonic", {
 	Name = "Old Church Slavonic"
 })
 
-DefineLanguage("old-danish", {
-	Name = "Old Danish"
-})
-
 DefineLanguage("old-english", {
 	Name = "Old English",
 	NameTranslations = {
@@ -310,10 +306,6 @@ DefineLanguage("old-high-german", {
 	Name = "Old High German"
 })
 
-DefineLanguage("old-icelandic", {
-	Name = "Old Icelandic"
-})
-
 DefineLanguage("old-irish", {
 	Name = "Old Irish"
 })
@@ -329,6 +321,16 @@ DefineLanguage("old-norse", {
 	}
 })
 
+DefineLanguage("old-danish", {
+	Name = "Old Danish",
+	DialectOf = "old-norse"
+})
+
+DefineLanguage("old-icelandic", {
+	Name = "Old Icelandic",
+	DialectOf = "old-norse"
+})
+
 DefineLanguage("old-provencal", {
 	Name = "Old Provençal"
 })
@@ -342,7 +344,8 @@ DefineLanguage("old-saxon", {
 })
 
 DefineLanguage("old-swedish", {
-	Name = "Old Swedish"
+	Name = "Old Swedish",
+	DialectOf = "old-norse"
 })
 
 DefineLanguage("old-welsh", {
