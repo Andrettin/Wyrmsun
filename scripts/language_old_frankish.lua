@@ -147,7 +147,8 @@ DefineLanguageWord("Hals", { -- Source: http://www.cnrtl.fr/definition/haubert
 DefineLanguageWord("Helm", { -- Source: http://www.cnrtl.fr/definition/heaume
 	Language = "old-frankish", -- source gives "Ancien Bas Francique" (= Old Frankish)
 	Type = "noun",
-	Meanings = {"Helm", "Helmet"} -- source gives the French "casque" as the meaning
+	Meanings = {"Helm", "Helmet"}, -- source gives the French "casque" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Helma"} -- presumably
 })
 
 DefineLanguageWord("Ithi", { -- apparently a suffix forming the compound "haimithi"; Source: http://www.cnrtl.fr/definition/Amad%E9
@@ -301,12 +302,6 @@ DefineLanguageWord("Wer", { -- Source: http://www.cnrtl.fr/definition/garou
 	DerivesFrom = {"proto-indo-european", "noun", "Wiros"} -- presumably
 })
 
-DefineLanguageWord("Werwolf", { -- composed of "Wer" and "Wolf"; Source: http://www.cnrtl.fr/definition/garou
-	Language = "old-frankish", -- source gives "Ancien Bas Francique" (= Old Frankish)
-	Type = "noun",
-	Meanings = {}
-})
-
 DefineLanguageWord("Wolf", { -- Source: http://www.cnrtl.fr/definition/garou
 	Language = "old-frankish", -- source gives "Ancien Bas Francique" (= Old Frankish)
 	Type = "noun",
@@ -343,3 +338,12 @@ DefineLanguageWord("Halsberg", { -- Source: http://www.cnrtl.fr/definition/haube
 	}
 })
 
+DefineLanguageWord("Werwolf", { -- Source: http://www.cnrtl.fr/definition/garou
+	Language = "old-frankish", -- source gives "Ancien Bas Francique" (= Old Frankish)
+	Type = "noun",
+	Meanings = {},
+	CompoundElements = {
+		"prefix", "old-frankish", "noun", "Wer",
+		"suffix", "old-frankish", "noun", "Wolf"
+	}
+})

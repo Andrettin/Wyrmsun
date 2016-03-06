@@ -30,7 +30,8 @@ DefineLanguage("armenian", {
 })
 
 DefineLanguage("avestan", {
-	Name = "Avestan"
+	Name = "Avestan",
+	SkipNameTypeInheritance = true
 })
 
 DefineLanguage("basque", {
@@ -184,7 +185,8 @@ DefineLanguage("gothic", {
 })
 
 DefineLanguage("greek", {
-	Name = "Greek"
+	Name = "Greek",
+	SkipNameTypeInheritance = true
 })
 
 DefineLanguage("illyrian", {
@@ -214,6 +216,7 @@ DefineLanguage("late-latin", {
 
 DefineLanguage("latin", {
 	Name = "Latin",
+	SkipNameTypeInheritance = true,
 	NameTranslations = {
 		"Nea", "Nea", -- example: "Neapolis" -> "Neapolis" (Naples); name remained with no change
 		"Polis", "Polis" -- example: "Neapolis" -> "Neapolis" (Naples); name remained with no change

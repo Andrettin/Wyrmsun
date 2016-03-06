@@ -1606,7 +1606,7 @@ DefineLanguageWord("Neu", {
 		"compound", "prefix", "settlement", -- examples: "Neusohl", "Neusorge", "Neustadt"
 		"compound", "infix", "settlement", -- example: "Klosterneuburg"
 		"separate", "prefix", "settlement", -- example: "Neue Sorge"
-		"compound", "prefix", "unit-class-castle" -- example: "Schloss Neusorge"
+--		"compound", "prefix", "unit-class-castle" -- example: "Schloss Neusorge"
 	}
 })
 
@@ -1955,11 +1955,11 @@ DefineLanguageWord("Sorge", {
 		"plural", "dative", "Sorgen",
 		"plural", "genitive", "Sorgen"
 	},
-	NameTypes = {"settlement", "river"},
+--	NameTypes = {"settlement", "river"},
 	AffixNameTypes = {
 		"compound", "suffix", "singular", "settlement", -- example: "Neusorge"
 		"separate", "suffix", "singular", "settlement", -- example: "Neue Sorge"
-		"compound", "suffix", "singular", "unit-class-castle" -- example: "Schloss Neusorge"
+--		"compound", "suffix", "singular", "unit-class-castle" -- example: "Schloss Neusorge"
 	}
 })
 
