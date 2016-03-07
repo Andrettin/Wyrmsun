@@ -37,6 +37,13 @@ DefineLanguageWord("Acmará", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Meanings = {"Stone"} -- source gives the German "steinern" as the meaning
 })
 
+DefineLanguageWord("Ádhāt", { -- this is the aorist form; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
+	Language = "sanskrit",
+	Type = "verb",
+	Meanings = {"Sucked"},
+	DerivesFrom = {"proto-indo-european", "noun", "Dheʔ"}
+})
+
 DefineLanguageWord("Áśvas", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 	Language = "sanskrit",
 	Type = "noun",
@@ -70,7 +77,7 @@ DefineLanguageWord("Bhrû", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Gender = "feminine"
 })
 
-DefineLanguageWord("Bhūta", { -- this is a participle; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
+DefineLanguageWord("Bhūta", { -- this is a participle; source gives "Bhūta"; source later gives a "Bhūtá-", also descending from Proto-Indo-European "Bhew"; probably meant to be the same, but the author used the accents inconsistently? Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
 	Language = "sanskrit",
 	Type = "verb",
 	Meanings = {"Grown"},
@@ -121,6 +128,12 @@ DefineLanguageWord("Darbhá", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Dhī́ta", { -- this is the past perfect participle; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
+	Language = "sanskrit",
+	Type = "verb",
+	Meanings = {}
+})
+
 DefineLanguageWord("Duhitā́", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
 	Language = "sanskrit",
 	Type = "noun",
@@ -166,6 +179,13 @@ DefineLanguageWord("Koca", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Language = "sanskrit",
 	Type = "adjective",
 	Meanings = {"Shrunk"} -- source gives the German "einschrumpfend" as the meaning
+})
+
+DefineLanguageWord("Kravís", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
+	Language = "sanskrit",
+	Type = "noun",
+	Meanings = {"Raw Meat"},
+	DerivesFrom = {"proto-indo-european", "noun", "Krewx"},
 })
 
 DefineLanguageWord("Kuca", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 54.
@@ -234,6 +254,13 @@ DefineLanguageWord("Páśu", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Meanings = {}
 })
 
+DefineLanguageWord("Prīnā́ti", { -- source gives "is pleased" as the meaning, so this is presumably the past form; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
+	Language = "sanskrit",
+	Type = "verb",
+	Meanings = {"Is Pleased"},
+	DerivesFrom = {"proto-indo-european", "adjective", "Pryx"}
+})
+
 DefineLanguageWord("Prî́ti", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 128.
 	Language = "sanskrit",
 	Type = "noun",
@@ -295,7 +322,8 @@ DefineLanguageWord("Saptá", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 DefineLanguageWord("Skunā́ti", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
 	Language = "sanskrit",
 	Type = "verb", -- verb of the ninth class
-	Meanings = {"Cover"}
+	Meanings = {"Cover"},
+	DerivesFrom = {"proto-indo-european", "verb", "Kwneχ"}
 })
 
 DefineLanguageWord("Snuṣā́", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.

@@ -61,7 +61,13 @@ DefineLanguageWord("Bhrenvō", { -- Source: August Fick and Alf Torp, "Wortschat
 	Meanings = {}
 })
 
-DefineLanguageWord("Deγ", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
+DefineLanguageWord("Bhru", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
+	Language = "proto-indo-european",
+	Type = "noun", -- correct?
+	Meanings = {}
+})
+
+DefineLanguageWord("Deγ", { -- source also gives the alternative form "dō"; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
 	Language = "proto-indo-european",
 	Type = "verb",
 	Meanings = {"Give"}
@@ -73,7 +79,7 @@ DefineLanguageWord("Dhagh", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Meanings = {}
 })
 
-DefineLanguageWord("Dheʔ", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
+DefineLanguageWord("Dheʔ", { -- source also gives the alternative form "dhē"; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
 	Language = "proto-indo-european",
 	Type = "noun",
 	Meanings = {"Place"}
@@ -127,6 +133,12 @@ DefineLanguageWord("Kel", { -- Source: August Fick and Alf Torp, "Wortschatz der
 	Meanings = {"Raise"} -- source gives the German "erheben" as the meaning
 })
 
+DefineLanguageWord("Kewx", { -- source gives "kew-X-"; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
+	Language = "proto-indo-european",
+	Type = "verb", -- correct?
+	Meanings = {}
+})
+
 DefineLanguageWord("Kneygʷh", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 	Language = "proto-indo-european",
 	Type = "verb",
@@ -139,9 +151,21 @@ DefineLanguageWord("Knud", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Meanings = {}
 })
 
+DefineLanguageWord("Krewx", { -- source gives "kr-ew-X-"; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
+	Language = "proto-indo-european",
+	Type = "noun", -- correct?
+	Meanings = {}
+})
+
 DefineLanguageWord("Ḱweyt", { -- source gives "Ḱwey-t/d-"; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 	Language = "proto-indo-european",
 	Type = "adjective",
+	Meanings = {}
+})
+
+DefineLanguageWord("Kwneχ", { -- source gives "(s)kw-n-eχ-"; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
+	Language = "proto-indo-european", -- apparently, but not entirely clear from the source
+	Type = "verb", -- correct?
 	Meanings = {}
 })
 
@@ -175,6 +199,12 @@ DefineLanguageWord("Oh", { -- source gives "oH-"; Source: Winfred P. Lehmann, "A
 	Meanings = {}
 })
 
+DefineLanguageWord("Pryx", { -- source gives "pr-y-X-"; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
+	Language = "proto-indo-european",
+	Type = "adjective", -- correct?
+	Meanings = {}
+})
+
 DefineLanguageWord("Reĝ", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
 	Language = "proto-indo-european",
 	Type = "noun",
@@ -199,7 +229,7 @@ DefineLanguageWord("Swīnos", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Meanings = {"Pig"}
 })
 
-DefineLanguageWord("Teχ", { -- source gives "(s)teχ"; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
+DefineLanguageWord("Teχ", { -- source gives "(s)teχ"; source also gives the alternative form "(s)tā"; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
 	Language = "proto-indo-european",
 	Type = "verb",
 	Meanings = {"Stand"}

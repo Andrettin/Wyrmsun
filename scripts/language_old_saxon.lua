@@ -71,6 +71,13 @@ DefineLanguageWord("Berg", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Beuuod", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
+	Language = "old-saxon",
+	Type = "verb",
+	Meanings = {"Harvest"},
+	DerivesFrom = {"proto-indo-european", "verb", "Bhew"} -- apparently, since it is a cognate of Sanskrit "bhūtá-" and Greek "éphūn", both of which come from this Proto-Indo-European word
+})
+
 DefineLanguageWord("Birid", { -- this is the singular third person present form; Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
 	Language = "old-saxon",
 	Type = "verb",
@@ -216,6 +223,13 @@ DefineLanguageWord("Ford", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Frī", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
+	Language = "old-saxon",
+	Type = "adjective",
+	Meanings = {"Free"},
+	DerivesFrom = {"proto-indo-european", "adjective", "Pryx"}
+})
+
 DefineLanguageWord("Frithu", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 128.
 	Language = "old-saxon",
 	Type = "noun",
@@ -348,6 +362,13 @@ DefineLanguageWord("Horn", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	NumberCaseInflections = {
 		"plural", "nominative", "Horni"
 	}
+})
+
+DefineLanguageWord("Hreuuan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
+	Language = "old-saxon",
+	Type = "verb", -- correct?
+	Meanings = {"Rue"},
+	DerivesFrom = {"proto-indo-european", "noun", "Krewx"},
 })
 
 DefineLanguageWord("Hund", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.

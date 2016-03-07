@@ -152,6 +152,13 @@ DefineLanguageWord("Égō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Nominative = "Égō"
 })
 
+DefineLanguageWord("Éphūn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
+	Language = "greek",
+	Type = "noun",
+	Meanings = {},
+	DerivesFrom = {"proto-indo-european", "verb", "Bhew"}
+})
+
 DefineLanguageWord("Érā", { -- this is the genitive; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "greek",
 	Type = "noun",
@@ -378,6 +385,16 @@ DefineLanguageWord("Téphra", { -- is this the plural form? Source: Winfred P. L
 	Type = "noun",
 	Meanings = {"Ashes"},
 	DerivesFrom = {"proto-indo-european", "noun", "Dhagh"}
+})
+
+DefineLanguageWord("Thḗsato", { -- this is apparently the past participle, since the source gives "sucked" as the meaning; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
+	Language = "greek",
+	Type = "verb",
+	Meanings = {"Sucked"},
+	DerivesFrom = {"proto-indo-european", "noun", "Dheʔ"},
+	Participles = {
+		"past", "Thḗsato"
+	}
 })
 
 DefineLanguageWord("Thugátēr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.

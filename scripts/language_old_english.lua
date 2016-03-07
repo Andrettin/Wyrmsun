@@ -185,18 +185,25 @@ DefineLanguageWord("Bord", { -- Source: http://www.cnrtl.fr/definition/bord
 	DerivesFrom = {"proto-indo-european", "noun", "Bhrdho"}
 })
 
+DefineLanguageWord("Breord", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Shore", "Edge"}
+})
+
+DefineLanguageWord("Brēowan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Brew"},
+	DerivesFrom = {"proto-indo-european", "noun", "Bhru"} -- apparently
+})
+
 DefineLanguageWord("Brond", { -- Fick gives "Brand" instead; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136; Source: http://www.cnrtl.fr/definition/brand
 	Language = "old-english",
 	Type = "noun",
 	Meanings = {"Fire", "Firebrand", "Sword", "Brand", "Sword Blade"}, -- Fick gives the German "Feuer, Feuerbrand, Schwert", while the TLFi gives the French "tison" and "lame d'épée, épée"
 	DerivesFrom = {"proto-germanic", "noun", "Branda"}, -- apparently, as given by Fick
 	Gender = "masculine" -- as given by Fick
-})
-
-DefineLanguageWord("Breord", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
-	Language = "old-english",
-	Type = "noun",
-	Meanings = {"Shore", "Edge"}
 })
 
 DefineLanguageWord("Brord", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 9.
@@ -265,10 +272,11 @@ DefineLanguageWord("Cēosan", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	-- source also gives the forms "cēas", "curon" and "coren" (presumably conjugations of the verb)
 })
 
-DefineLanguageWord("Cēowan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 3, Subsection 2.
+DefineLanguageWord("Cēowan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 1.3.2, 2.6.1.
 	Language = "old-english",
 	Type = "verb",
-	Meanings = {"Chew"}
+	Meanings = {"Chew"},
+	DerivesFrom = {"proto-indo-european", "verb", "Kewx"}
 	-- source also gives the forms "cēaw", "cuwon" and "cowen" (presumably conjugations of the verb)
 })
 
@@ -1160,6 +1168,13 @@ DefineLanguageWord("Scrīfan", { -- Source: Winfred P. Lehmann, "A Grammar of Pr
 	Language = "old-english",
 	Type = "verb",
 	Meanings = {"Write"}
+})
+
+DefineLanguageWord("Scuwo", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Shadow"},
+	DerivesFrom = {"proto-indo-european", "verb", "Kwneχ"} -- presumably, since it is a cognate of Sanskrit "skunā́ti"
 })
 
 DefineLanguageWord("Sealticge", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, pp. 77-78.

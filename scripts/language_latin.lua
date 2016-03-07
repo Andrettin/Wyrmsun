@@ -127,6 +127,13 @@ DefineLanguageWord("Custos", { -- Source: Sean Crist, "An Analysis of *z loss in
 	Meanings = {"Guard"} -- source gives meaning as "a Guard"
 })
 
+DefineLanguageWord("Dēfrūtum", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
+	Language = "latin",
+	Type = "noun",
+	Meanings = {"Cider"},
+	DerivesFrom = {"proto-indo-european", "noun", "Bhru"}
+})
+
 DefineLanguageWord("Dūcō", { -- this is the singular first person present; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Sections 3-4.
 	Language = "latin",
 	Type = "verb",

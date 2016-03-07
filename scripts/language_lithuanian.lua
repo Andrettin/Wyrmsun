@@ -216,6 +216,13 @@ DefineLanguageWord("Żėriù", { -- source also gives the alternative form "żė
 	DerivesFrom = {"proto-indo-european", "verb", "Ĝherē"}
 })
 
+DefineLanguageWord("Žiáunos", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
+	Language = "lithuanian",
+	Type = "noun",
+	Meanings = {"Jawbone"},
+	DerivesFrom = {"proto-indo-european", "verb", "Kewx"} -- presumably, since it is a cognate of Old English "cēowan" and Old Norse "tyggia"
+})
+
 DefineLanguageWord("Žìrnis", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "lithuanian",
 	Type = "noun",

@@ -382,6 +382,13 @@ DefineLanguageWord("Fridu", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Friia", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
+	Language = "old-high-german",
+	Type = "adjective",
+	Meanings = {"Free"},
+	DerivesFrom = {"proto-indo-european", "adjective", "Pryx"}
+})
+
 DefineLanguageWord("Fuir", { -- source also gives the alternate form "Fiur"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 127.
 	Language = "old-high-german",
 	Type = "noun",
@@ -1058,6 +1065,13 @@ DefineLanguageWord("Skato", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	DerivesFrom = {"proto-germanic", "noun", "Skadwas"}
 })
 
+DefineLanguageWord("Skuwo", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Shadow"},
+	DerivesFrom = {"proto-indo-european", "verb", "Kwneχ"} -- presumably, since it is a cognate of Sanskrit "skunā́ti"
+})
+
 DefineLanguageWord("Smaidar", { -- source also gives the alternative form "smeidar"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, pp. 263-264.
 	Language = "old-high-german",
 	Type = "noun",
@@ -1170,6 +1184,13 @@ DefineLanguageWord("Swīn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Type = "noun",
 	Meanings = {"Pig"}, -- derived from the Proto-Germanic "Swīnaz", which means "Pig"
 	DerivesFrom = {"proto-germanic", "noun", "Swīnaz"}
+})
+
+DefineLanguageWord("Tāju", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
+	Language = "old-high-german",
+	Type = "verb",
+	Meanings = {"Suckle"},
+	DerivesFrom = {"proto-indo-european", "noun", "Dheʔ"}
 })
 
 DefineLanguageWord("Teil", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.

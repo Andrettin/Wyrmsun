@@ -670,6 +670,7 @@ DefineLanguageWord("Frei", {
 	Language = "high-german",
 	Type = "adjective",
 	Meanings = {"Free"},
+	DerivesFrom = {"old-high-german", "adjective", "Friia"}, -- presumably
 	ComparisonDegreeInflections = {
 		"comparative", "Freier",
 		"superlative", "Freiesten" -- alternatively also "freisten"

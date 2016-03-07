@@ -34,6 +34,13 @@ DefineLanguageWord("Biari", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	NameTypes = {"person"}
 })
 
+DefineLanguageWord("Deggia", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
+	Language = "old-swedish",
+	Type = "verb",
+	Meanings = {"Suckle"},
+	DerivesFrom = {"proto-indo-european", "noun", "Dheʔ"}
+})
+
 DefineLanguageWord("Ēr", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
 	Language = "old-swedish",
 	Type = "noun",

@@ -250,6 +250,13 @@ DefineLanguageWord("Brinnan", { -- strong verb; Source: August Fick and Alf Torp
 	DerivesFrom = {"proto-germanic", "verb", "Brennan"}
 })
 
+DefineLanguageWord("Daddjan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
+	Language = "gothic",
+	Type = "verb",
+	Meanings = {"Suckle"},
+	DerivesFrom = {"proto-indo-european", "noun", "Dheʔ"}
+})
+
 DefineLanguageWord("Dags", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
 	Language = "gothic",
 	Type = "noun",
@@ -870,6 +877,13 @@ DefineLanguageWord("Skeinan", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Language = "gothic",
 	Type = "verb",
 	Meanings = {"Shine"}
+})
+
+DefineLanguageWord("Skuggwa", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
+	Language = "gothic",
+	Type = "noun",
+	Meanings = {"Mirror"},
+	DerivesFrom = {"proto-indo-european", "verb", "Kwneχ"} -- presumably, since it is a cognate of Sanskrit "skunā́ti"
 })
 
 DefineLanguageWord("Speiwan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.

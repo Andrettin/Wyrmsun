@@ -300,6 +300,16 @@ DefineLanguageWord("Brû", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	DerivesFrom = {"proto-germanic", "noun", "Brôvô"}
 })
 
+DefineLanguageWord("Brugginn", { -- source gives "brewed" as the meaning, so this is likely the participle past; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Brewed"},
+	DerivesFrom = {"proto-indo-european", "noun", "Bhru"}, -- apparently
+	Participles = {
+		"past", "Brugginn"
+	}
+})
+
 DefineLanguageWord("Brûn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 145.
 	Language = "old-norse",
 	Type = "noun",
@@ -333,6 +343,16 @@ DefineLanguageWord("Bryggja", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Meanings = {"Ship Bridge"}, -- source gives the German "Schiffsbrücke" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Brugjô"},
 	Gender = "feminine"
+})
+
+DefineLanguageWord("Bygg", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Barley"},
+	DerivesFrom = {"proto-indo-european", "verb", "Bhew"}, -- apparently, since it is a cognate of Sanskrit "bhūtá-" and Greek "éphūn", both of which come from this Proto-Indo-European word
+	NumberCaseInflections = {
+		"singular", "dative", "Byggue"
+	}
 })
 
 DefineLanguageWord("Djūpr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
@@ -438,6 +458,13 @@ DefineLanguageWord("Friđr", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Meanings = {"Love", "Peace"}, -- source gives the German "Liebe, Friede" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Friþu"},
 	Gender = "masculine"
+})
+
+DefineLanguageWord("Frigg", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"A Goddess"}, -- Odin's wife
+	DerivesFrom = {"proto-indo-european", "adjective", "Pryx"}
 })
 
 DefineLanguageWord("Fūll", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
@@ -679,6 +706,13 @@ DefineLanguageWord("Hrǫnn", { -- Source: Sean Crist, "An Analysis of *z loss in
 	Meanings = {"Wave"},
 	DerivesFrom = {"proto-germanic", "noun", "Hraznō"},
 	Gender = "feminine"
+})
+
+DefineLanguageWord("Hryggva", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
+	Language = "old-norse",
+	Type = "verb", -- correct?
+	Meanings = {"Rue"},
+	DerivesFrom = {"proto-indo-european", "noun", "Krewx"},
 })
 
 DefineLanguageWord("Hundr", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
@@ -1035,6 +1069,13 @@ DefineLanguageWord("Simull", { -- source also gives the alternative forms "Simi"
 	-- according to the source, this word possibly comes from an original (Proto-Germanic?) "sem-", meaning "Summer" and being related to Proto-Germanic "Sumara"
 })
 
+DefineLanguageWord("Skuggi", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Shadow"},
+	DerivesFrom = {"proto-indo-european", "verb", "Kwneχ"} -- presumably, since it is a cognate of Sanskrit "skunā́ti"
+})
+
 DefineLanguageWord("Smiđja", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 264.
 	Language = "old-norse",
 	Type = "noun",
@@ -1189,6 +1230,13 @@ DefineLanguageWord("Tvinna", { -- Source: Sean Crist, "An Analysis of *z loss in
 	Language = "old-norse",
 	Type = "verb",
 	Meanings = {"Double", "Duplicate"}
+})
+
+DefineLanguageWord("Tyggia", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
+	Language = "old-norse",
+	Type = "verb",
+	Meanings = {"Chew"},
+	DerivesFrom = {"proto-indo-european", "verb", "Kewx"}
 })
 
 DefineLanguageWord("Ulfr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
