@@ -164,6 +164,15 @@ DefineLanguageWord("Busc", { -- Source: http://www.cnrtl.fr/definition/bois
 	DerivesFrom = {"proto-germanic", "noun", "Buska"} -- presumably
 })
 
+DefineLanguageWord("Eiiere", { -- this is the genitive plural; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
+	Language = "old-saxon",
+	Type = "noun",
+	Meanings = {"Egg"},
+	NumberCaseInflections = {
+		"plural", "genitive", "Eiiere"
+	}
+})
+
 DefineLanguageWord("Êr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 11.
 	Language = "old-saxon",
 	Type = "noun",
@@ -620,6 +629,12 @@ DefineLanguageWord("Thorp", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Type = "noun",
 	Meanings = {"Village"}, -- source gives the German "Dorf" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Þurpa"}
+})
+
+DefineLanguageWord("Treuua", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
+	Language = "old-saxon",
+	Type = "noun",
+	Meanings = {"Faithfulness"}
 })
 
 DefineLanguageWord("Weg", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.

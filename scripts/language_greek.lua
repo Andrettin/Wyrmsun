@@ -278,6 +278,13 @@ DefineLanguageWord("Omφḗ", { -- Source: Winfred P. Lehmann, "A Grammar of Pr
 	Meanings = {"Oracle"}
 })
 
+DefineLanguageWord("Ōón", { -- source also gives the variant in Sappho "ṓion"; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
+	Language = "greek",
+	Type = "noun",
+	Meanings = {"Egg"},
+	DerivesFrom = {"proto-indo-european", "noun", "Oh"}
+})
+
 DefineLanguageWord("Ὀφρύς", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 145.
 	Language = "greek",
 	Type = "noun",
@@ -317,6 +324,13 @@ DefineLanguageWord("Pheídomai", { -- this is the singular first person present;
 	NumberPersonTenseMoodInflections = {
 		"singular", "first-person", "present", "indicative", "Pheídomai"
 	}
+})
+
+DefineLanguageWord("Phū́ō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
+	Language = "greek",
+	Type = "verb",
+	Meanings = {"Grow"},
+	DerivesFrom = {"proto-indo-european", "verb", "Bhew"}
 })
 
 DefineLanguageWord("Plōtós", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.

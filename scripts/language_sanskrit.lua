@@ -70,6 +70,16 @@ DefineLanguageWord("Bhrû", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Gender = "feminine"
 })
 
+DefineLanguageWord("Bhūta", { -- this is a participle; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
+	Language = "sanskrit",
+	Type = "verb",
+	Meanings = {"Grown"},
+	DerivesFrom = {"proto-indo-european", "verb", "Bhew"}, -- from the variant "bhu-H-" (more precisely bhu-H-tó-)
+	Participles = {
+		"present", "Bhūta" -- source only says that this is a participle, not that it is a present participle
+	}
+})
+
 DefineLanguageWord("Bódhati", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
 	Language = "sanskrit",
 	Type = "verb",
@@ -280,6 +290,12 @@ DefineLanguageWord("Saptá", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Language = "sanskrit",
 	Type = "numeral",
 	Number = 7
+})
+
+DefineLanguageWord("Skunā́ti", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
+	Language = "sanskrit",
+	Type = "verb", -- verb of the ninth class
+	Meanings = {"Cover"}
 })
 
 DefineLanguageWord("Snuṣā́", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.

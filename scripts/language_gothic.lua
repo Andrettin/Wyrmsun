@@ -956,6 +956,12 @@ DefineLanguageWord("Trauan", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Meanings = {"Trust"}
 })
 
+DefineLanguageWord("Triggws", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
+	Language = "gothic",
+	Type = "adjective",
+	Meanings = {"Faithful"}
+})
+
 DefineLanguageWord("Twalif", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
 	Language = "gothic",
 	Type = "numeral",

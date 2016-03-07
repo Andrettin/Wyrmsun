@@ -316,6 +316,15 @@ DefineLanguageWord("Ēht", { -- Source: Richard M. Runge, "The Phonetic Realizat
 	Meanings = {"Property"} -- source gives the German "Besitz"
 })
 
+DefineLanguageWord("Eiie", { -- this is the dative singular; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Egg"},
+	NumberCaseInflections = {
+		"singular", "dative", "Eiie"
+	}
+})
+
 DefineLanguageWord("Êr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 11.
 	Language = "old-high-german",
 	Type = "noun",
@@ -1180,6 +1189,12 @@ DefineLanguageWord("Tōd", { -- Source: Richard M. Runge, "The Phonetic Realizat
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Death"}
+})
+
+DefineLanguageWord("Trēow", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Faithfulness"}
 })
 
 DefineLanguageWord("Trūēn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 3, Subsection 1.

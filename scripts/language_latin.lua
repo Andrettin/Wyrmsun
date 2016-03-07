@@ -277,6 +277,13 @@ DefineLanguageWord("Octō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Number = 8
 })
 
+DefineLanguageWord("Ōvum", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
+	Language = "latin",
+	Type = "noun",
+	Meanings = {"Egg"},
+	DerivesFrom = {"proto-indo-european", "noun", "Oh"}
+})
+
 DefineLanguageWord("Pater", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "latin",
 	Type = "noun",

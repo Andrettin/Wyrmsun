@@ -25,6 +25,12 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineLanguageWord("Ada", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
+	Language = "crimean-gothic",
+	Type = "noun",
+	Meanings = {"Egg"}
+})
+
 DefineLanguageWord("Waghen", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "crimean-gothic",
 	Type = "noun",

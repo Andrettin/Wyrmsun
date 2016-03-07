@@ -100,6 +100,12 @@ DefineLanguageWord("Kaũkas", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Meanings = {"Bump"} -- source gives the German "Beule" as the meaning
 })
 
+DefineLanguageWord("Káuti", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
+	Language = "lithuanian",
+	Type = "verb",
+	Meanings = {"Strike"}
+})
+
 DefineLanguageWord("Kë̃mas", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 53.
 	Language = "lithuanian",
 	Type = "noun",

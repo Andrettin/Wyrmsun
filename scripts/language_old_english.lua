@@ -1380,6 +1380,12 @@ DefineLanguageWord("Tiohhian", { -- Source: Richard M. Runge, "The Phonetic Real
 	Meanings = {"Consider"}
 })
 
+DefineLanguageWord("Trēow", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Faithfulness"}
+})
+
 DefineLanguageWord("Turf", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 86.
 	Language = "old-english",
 	Type = "noun",

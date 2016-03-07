@@ -352,6 +352,12 @@ DefineLanguageWord("Dyrr", { -- this is the nominative plural; Source: Winfred P
 	}
 })
 
+DefineLanguageWord("Egg", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Egg"}
+})
+
 DefineLanguageWord("Eir", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 11.
 	Language = "old-norse",
 	Type = "noun",
@@ -1164,6 +1170,12 @@ DefineLanguageWord("Torfa", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Meanings = {"Sod"}, -- Fick gives the German "Torfscholle" as the meaning, while the TLFi gives the French "motte de gazon"
 	DerivesFrom = {"proto-germanic", "noun", "Turba"}, -- as given by Fick
 	Gender = "feminine" -- as given by Fick
+})
+
+DefineLanguageWord("Tryggr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
+	Language = "old-norse",
+	Type = "adjective",
+	Meanings = {"Faithful"}
 })
 
 DefineLanguageWord("Tvennr", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 6.

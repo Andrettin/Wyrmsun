@@ -37,6 +37,12 @@ DefineLanguageWord("Bheredh", { -- Source: http://www.cnrtl.fr/definition/bord
 	Meanings = {"Cut"} -- source gives the French "couper" as the meaning
 })
 
+DefineLanguageWord("Bhew", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
+	Language = "proto-indo-european",
+	Type = "verb",
+	Meanings = {"Grow"}
+})
+
 DefineLanguageWord("Bhewdh", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
 	Language = "proto-indo-european",
 	Type = "verb",
@@ -55,10 +61,22 @@ DefineLanguageWord("Bhrenvō", { -- Source: August Fick and Alf Torp, "Wortschat
 	Meanings = {}
 })
 
+DefineLanguageWord("Deγ", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
+	Language = "proto-indo-european",
+	Type = "verb",
+	Meanings = {"Give"}
+})
+
 DefineLanguageWord("Dhagh", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
 	Language = "proto-indo-european",
 	Type = "noun",
 	Meanings = {}
+})
+
+DefineLanguageWord("Dheʔ", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
+	Language = "proto-indo-european",
+	Type = "noun",
+	Meanings = {"Place"}
 })
 
 DefineLanguageWord("Éḱwos", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
@@ -151,6 +169,12 @@ DefineLanguageWord("Nem", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-G
 	Meanings = {"Take"}
 })
 
+DefineLanguageWord("Oh", { -- source gives "oH-"; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
+	Language = "proto-indo-european",
+	Type = "noun", -- unclear from the source
+	Meanings = {}
+})
+
 DefineLanguageWord("Reĝ", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
 	Language = "proto-indo-european",
 	Type = "noun",
@@ -173,6 +197,18 @@ DefineLanguageWord("Swīnos", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Language = "proto-indo-european", -- late Proto-Indo-European
 	Type = "noun",
 	Meanings = {"Pig"}
+})
+
+DefineLanguageWord("Teχ", { -- source gives "(s)teχ"; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
+	Language = "proto-indo-european",
+	Type = "verb",
+	Meanings = {"Stand"}
+})
+
+DefineLanguageWord("Teg", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
+	Language = "proto-indo-european",
+	Type = "verb", -- unclear in the source
+	Meanings = {"Cover"}
 })
 
 DefineLanguageWord("Ve", { -- source also gives the alternative form "Ves"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 204.
