@@ -118,8 +118,13 @@ DefineCharacter("Widemer Amelung", { -- Source: F. E. Sandbach, "The Heroic Saga
 	DeathYear = 453 + (30 * 1) -- estimated
 })
 
-DefineCharacter("Theoderic Amelung", { -- Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, pp. 6-7, 9.
-	Name = "Theoderic", -- king of the Ostrogoths; Dietrich von Bern in the German sagas; was given as a hostage by Walamer to the Romans, and thus stayed for 10 years (until 472 AD) in the Byzantine court; his religion was Arian Christianity
+DefineCharacter("Þiudareiks Amelung", { -- Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, pp. 6-7, 9.
+	-- king of the Ostrogoths; Dietrich von Bern in the German sagas; was given as a hostage by Walamer to the Romans, and thus stayed for 10 years (until 472 AD) in the Byzantine court; his religion was Arian Christianity
+	Name = "Þiudareiks", -- tentative rendering of the name in Gothic, based on the cognates of the German version of the name, "Dietrich"; also known as "Theoderic"
+	NameCompoundElements = { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 18.
+		"prefix", "gothic", "noun", "Þiuda",
+		"suffix", "gothic", "noun", "Reiks" -- maybe the adjective written in the same manner is part of this compound instead
+	},
 	Dynasty = "Amelung",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",

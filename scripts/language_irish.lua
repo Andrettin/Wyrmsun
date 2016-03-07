@@ -73,6 +73,13 @@ DefineLanguageWord("Búal", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	DerivesFrom = {"proto-indo-european", "verb", "Bheg"}
 })
 
+DefineLanguageWord("Ceallach", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 50.
+	Language = "irish",
+	Type = "noun",
+	Meanings = {"War"}, -- source gives the German "Krieg" as the meaning
+	DerivesFrom = {"proto-indo-european", "noun", "Keld"}
+})
+
 DefineLanguageWord("Cnú", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 58.
 	Language = "irish",
 	Type = "noun",

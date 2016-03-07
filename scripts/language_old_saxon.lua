@@ -340,6 +340,14 @@ DefineLanguageWord("Herth", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Hild", { -- source gives by this word "das. hildi", that form either belonging to another language or being an inflection of this word; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 50.
+	Language = "old-saxon",
+	Type = "noun",
+	Meanings = {"Fight", "Conflict", "War"}, -- source gives the German "Kampf, Krieg" as the meaning
+	Gender = "feminine",
+	DerivesFrom = {"proto-germanic", "noun", "Heldî"}
+})
+
 DefineLanguageWord("Hôh", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 54.
 	Language = "old-saxon",
 	Type = "adjective",

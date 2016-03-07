@@ -652,6 +652,14 @@ DefineLanguageWord("Heimskr", { -- Source: August Fick and Alf Torp, "Wortschatz
 	DerivesFrom = {"proto-germanic", "noun", "Haima"} -- apparently
 })
 
+DefineLanguageWord("Hildr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 50.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Fight", "Conflict", "A Conflict Goddess"}, -- source gives the German "Kampf, Kampfgöttin" as the meaning
+	Gender = "feminine",
+	DerivesFrom = {"proto-germanic", "noun", "Heldî"}
+})
+
 DefineLanguageWord("Hjalmr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 49.
 	Language = "old-norse",
 	Type = "noun",

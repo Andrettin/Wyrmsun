@@ -552,6 +552,14 @@ DefineLanguageWord("Hailaga", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Meanings = {"Holy"} -- source gives the German "heilig"
 })
 
+DefineLanguageWord("Heldî", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 50.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Fight", "Conflict"}, -- source gives the German "Kampf" as the meaning
+	Gender = "feminine",
+	DerivesFrom = {"proto-indo-european", "noun", "Keld"} -- apparently
+})
+
 DefineLanguageWord("Helma", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 49.
 	Language = "proto-germanic",
 	Type = "noun",
@@ -585,7 +593,7 @@ DefineLanguageWord("Hnut", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Type = "noun",
 	Meanings = {"Nut"}, -- source gives the German "Nuß"
 	Gender = "feminine",
-	DerivesFrom = {"proto-indo-european", "noun", "Knud"},
+	DerivesFrom = {"proto-indo-european", "noun", "Knud"}
 })
 
 DefineLanguageWord("Hraznō", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 8.

@@ -601,6 +601,13 @@ DefineLanguageWord("Herza", { -- Source: Richard M. Runge, "The Phonetic Realiza
 	Meanings = {"Heart"}
 })
 
+DefineLanguageWord("Hiltja", { -- source also gives the alternative form "hilta"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 50.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Fight", "Conflict"}, -- source gives the German "Kampf" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Heldî"}
+})
+
 DefineLanguageWord("Hleib", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
 	Language = "old-high-german",
 	Type = "noun",

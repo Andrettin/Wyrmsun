@@ -1925,7 +1925,7 @@ if (GrandStrategyYear >= 474) then
 	-- In 474 AD the Ostrogoths left Pannonia to settle in Macedonia under the aegis of the Eastern Roman Emperor, and in that same year Theodemer died, being succeeded by Theoderic; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 7.
 	SetProvinceOwner("Pannonia", "", "")
 	SetProvinceOwner("Macedonia", "goth", "Ostrogoth Tribe")
-	SetFactionRuler("goth", "Ostrogoth Tribe", "Theoderic Amelung")
+	SetFactionRuler("goth", "Ostrogoth Tribe", "Þiudareiks Amelung")
 end
 
 if (GrandStrategyYear >= 480) then

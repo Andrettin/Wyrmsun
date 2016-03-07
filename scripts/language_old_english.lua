@@ -729,6 +729,14 @@ DefineLanguageWord("Heorþ", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Hild", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 50.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Fight", "Conflict", "War"}, -- source gives the German "Kampf, Krieg" as the meaning
+	Gender = "feminine",
+	DerivesFrom = {"proto-germanic", "noun", "Heldî"}
+})
+
 DefineLanguageWord("Hlēapestre", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, pp. 77-78.
 	Language = "old-english",
 	Type = "noun",

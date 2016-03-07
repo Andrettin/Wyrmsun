@@ -133,6 +133,12 @@ DefineLanguageWord("Kel", { -- Source: August Fick and Alf Torp, "Wortschatz der
 	Meanings = {"Raise"} -- source gives the German "erheben" as the meaning
 })
 
+DefineLanguageWord("Keld", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 50.
+	Language = "proto-indo-european",
+	Type = "noun", -- correct?
+	Meanings = {}
+})
+
 DefineLanguageWord("Kewx", { -- source gives "kew-X-"; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
 	Language = "proto-indo-european",
 	Type = "verb", -- correct?

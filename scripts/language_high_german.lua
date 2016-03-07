@@ -1098,7 +1098,8 @@ DefineLanguageWord("Hermann", {
 DefineLanguageWord("Hilde", { -- female name
 	Language = "high-german",
 	Type = "noun",
-	Meanings = {}
+	Meanings = {},
+	DerivesFrom = {"old-high-german", "noun", "Hiltja"} -- presumably
 })
 
 DefineLanguageWord("Hinter", {
