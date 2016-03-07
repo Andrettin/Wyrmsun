@@ -10,7 +10,7 @@
 --
 --      credits.lua - Define the menu for credits.
 --
---      (c) Copyright 2015 by Andrettin
+--      (c) Copyright 2015-2016 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -120,7 +120,7 @@ function RunShowCreditsMenu()
 	_("Graphics and Artwork"),
 	"  b_o",
 	"  João Victor G. Costa (Jinn)",
-	"  Leo",
+	"  Exidelo (Leo)",
 	"  Tanja Nov.",
 	"  2D-Retroperspectives",
 	"  badbuckle (Cenk Açan)",

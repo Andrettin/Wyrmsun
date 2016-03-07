@@ -10,8 +10,8 @@ if (LoadedGame == false) then
 		TreeQuantity = "medium",
 		WaterQuantity = "low",
 		RoughLandQuantity = "medium",
-		DarkLandQuantity = "medium",
-		DarkRoughLandQuantity = "medium",
+--		DarkLandQuantity = "medium",
+--		DarkRoughLandQuantity = "medium",
 		WorkerQuantity = 5,
 		PlayerCivilizations = {"teuton", "latin"},
 		PlayerBuildings = {

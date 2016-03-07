@@ -45,8 +45,8 @@ DefineTileset("name", "Conifer Forest (Autumn)",
 		},
 		"solid", { "unused",
 			{}},								-- 000
-		"solid", { "shallow-water", "water",
-			{ 324, 325, 325, 326}},						-- 010
+		"solid", { "shallow-water", "image", "tilesets/forest/terrain/water.png", "animation-frames", 5, "water",
+			{ 1, 1, 1, 1}},								-- 010
 		"solid", { "unused",
 			{}},								-- 020
 		"solid", { "dirt", "image", "tilesets/forest/terrain/grass_and_dirt.png", "land", "no-building", "dirt",
@@ -93,20 +93,20 @@ DefineTileset("name", "Conifer Forest (Autumn)",
 			{},											-- 1E0
 			{}},										-- 1F0
 		"mixed", { "shallow-water", "dirt", "coast",
-			{ 201, 202, 201},							-- 200
-			{ 203, 204, 203},							-- 210
-			{ 205, 206, 207},							-- 220
-			{ 208, 209, 208},							-- 230
-			{ 210, 211, 212},							-- 240
-			{ 213, 213, 213},							-- 250
-			{ 214, 215, 214},							-- 260
-			{ 216, 217, 216},							-- 270
-			{ 218, 218, 218},							-- 280
-			{ 219, 220, 221},							-- 290
-			{ 222, 223, 222},							-- 2A0
-			{ 224, 225, 226},							-- 2B0
-			{ 227, 228, 227},							-- 2C0
-			{ 229, 230, 229},							-- 2D0
+			{ 37, 39, 41},								-- 200
+			{ 36, 38, 40},								-- 210
+			{ 19, 21, 23},								-- 220
+			{ 31, 33, 35},								-- 230
+			{ 18, 20, 22},								-- 240
+			{ 44, 45, 44},								-- 250
+			{ 6, 8, 10},								-- 260
+			{ 30, 32, 34},								-- 270
+			{ 42, 43, 42},								-- 280
+			{ 25, 27, 29},								-- 290
+			{ 7, 9, 11},								-- 2A0
+			{ 24, 26, 28},								-- 2B0
+			{ 12, 14, 16},								-- 2C0
+			{ 13, 15, 17},								-- 2D0
 			{},											-- 2E0
 			{}},										-- 2F0
 		"mixed", { "dark-dirt", "dirt", "land", "no-building", "dirt",
