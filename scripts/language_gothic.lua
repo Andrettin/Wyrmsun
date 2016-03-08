@@ -352,18 +352,18 @@ DefineLanguageWord("Fotubaurd", { -- source gives "(fotu-)baurd"; Source: http:/
 	Gender = "neuter"
 })
 
-DefineLanguageWord("Friþôn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 128.
+DefineLanguageWord("Friþa", { -- maybe is another form or an inflection of "Friþôn"? Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 128.
 	Language = "gothic",
-	Type = "noun",
+	Type = "noun", -- correct?
 	Meanings = {},
 	DerivesFrom = {"proto-germanic", "noun", "Friþu"}
 })
 
-DefineLanguageWord("Friþareiks", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 128.
+DefineLanguageWord("Friþôn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 128.
 	Language = "gothic",
 	Type = "noun",
-	Meanings = {}
-	-- derived from the Proto-Germanic "Friþu", but apparently only for part of it (the noun seems to be a compound; maybe it is a given name? it seems to correspond to "Friedrich"/"Frederick")
+	Meanings = {"Love", "Peace"}, -- source gives the German "Liebe, Friede"
+	DerivesFrom = {"proto-germanic", "noun", "Friþu"}
 })
 
 DefineLanguageWord("Fūls", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
@@ -1060,3 +1060,17 @@ DefineLanguageWord("Witan", { -- Source: Richard M. Runge, "The Phonetic Realiza
 		"plural", "first-person", "present", "indicative", "Witum"
 	}
 })
+
+-- compounds
+
+DefineLanguageWord("Friþareiks", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 128.
+	Language = "gothic",
+	Type = "noun",
+	Meanings = {},
+	CompoundElements = {
+		"prefix", "gothic", "noun", "Friþa",
+		"suffix", "gothic", "noun", "Reiks" -- presumably; maybe the adjective written in the same manner is part of this compound instead
+	}
+	-- maybe it is a given name? it seems to correspond to "Friedrich"/"Frederick"
+})
+

@@ -111,6 +111,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added Alvissmol (literary work, scroll) (+1 mana) (dropped by dwarven Mead Halls and Bastions).
 - "Right-click to use" no longer appears in an item's popup if the item cannot be currently used (i.e. if the unit doesn't fulfill the conditions for a scroll to be used).
 - Fixed issue which caused the stats change of one of the equipped rings to not be displayed properly when two rings are equipped.
+- Added Hildebrandslied (literary work, scroll) (+1% critical strike chance) (dropped by teuton Rathauses and Burgs).
 
 * Miscellaneous
 - Added support for damage bonus vs. dragons. This damage bonus affects wyrms, and will affect any other draconic creatures added later to the game.

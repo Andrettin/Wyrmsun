@@ -1366,6 +1366,19 @@ if not (ui_loaded_first_time) then
 						),
 						Font = wyr.preferences.PopupDescriptionFont}}
 				},
+				{ 	Condition = {CriticalStrikeChance = "only"}, HighlightColor = "yellow",
+					More = {"Text", {Text = Concat(
+							Concat(
+								Concat(
+									_("Critical Strike Chance: "),
+									If(GreaterThan(UnitVar("CriticalStrikeChance", "Change"), 0), "+", "")
+								),
+								String(UnitVar("CriticalStrikeChance", "Change"))
+							),
+							"%"
+						),
+						Font = wyr.preferences.PopupDescriptionFont}}
+				},
 				{ 	Condition = {BonusAgainstMounted = "only"}, HighlightColor = "yellow",
 					More = {"Text", {Text = Concat(
 							Concat(

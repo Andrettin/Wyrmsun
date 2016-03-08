@@ -85,6 +85,21 @@ DefineCharacter("Airmanareiks", { -- Source: Henry Adams Bellows (transl.), "The
 	DeathYear = 376 -- died
 })
 
+DefineCharacter("Friþareiks", { -- Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 26.
+	-- son of Ermenrich (= Airmanareiks) in the Dietrich Saga; in the saga he was taken prisoner by Dietrich, but he couldn't have been a contemporary of Dietrich if he was a son of Airmanareiks
+	Name = "Friþareiks", -- in the saga his name is "Friedrich"; this is a tentative rendering of the name in Gothic, based on the cognates of the.components.of.the original German name
+	NameCompoundElements = {
+		"prefix", "gothic", "noun", "Friþa",
+		"suffix", "gothic", "noun", "Reiks" -- maybe the adjective written in the same manner is part of this compound instead
+	},
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "goth",
+	ProvinceOfOrigin = "Pannonia", -- presumably, because this is Airmanareiks' province of origin
+	Year = 376, -- estimated
+	DeathYear = 376 * (30 * 1) -- estimated
+})
+
 DefineCharacter("Walamer Amelung", { -- Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 6.
 	Name = "Walamer", -- king of the Ostrogoths; invaded Illyria in 462 AD
 	Dynasty = "Amelung",

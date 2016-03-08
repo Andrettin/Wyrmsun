@@ -39,6 +39,12 @@ DefineUpgrade("upgrade-work-fafnismol", {
 --	Quote = "\"Hail to thee, Sigurd! | Thou victory hast, / And Fafnir in fight hast slain; / Of all the men | who tread the earth, / Most fearless art thou, methinks.\" - Fafnismol (Regin)" -- original
 })
 
+DefineUpgrade("upgrade-work-hildebrandslied", {
+	Name = _("Hildebrandslied"),
+	Work = "scroll",
+	Quote = "\"That Hildebrand was my father, / and I am Hadubrand. / Long ago to the east he went, / fleeing Otacher's hatred\" - Hildebrandslied (Hadubrand)"
+})
+
 DefineUpgrade("upgrade-work-reginsmol", {
 	Name = _("Reginsmol"), -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", pp. 356-369.
 	Work = "scroll",
@@ -58,6 +64,10 @@ DefineModifier("upgrade-work-alvissmol",
 
 DefineModifier("upgrade-work-fafnismol",
 	{"BonusAgainstDragons", 1}
+)
+
+DefineModifier("upgrade-work-hildebrandslied",
+	{"CriticalStrikeChance", 1}
 )
 
 DefineModifier("upgrade-work-reginsmol",
