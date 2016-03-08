@@ -769,13 +769,11 @@ function RunMap(map, objective, fow, revealmap)
 	end
 	local loop = true
 	while (loop) do
-		if (wyr.preferences.EnableOAML) then
-			StopMusic()
-			if (CurrentQuest ~= "" and GetQuestData(CurrentQuest, "LoadingMusic") ~= "") then
-				PlayMusicName(GetQuestData(CurrentQuest, "LoadingMusic"))
-			else
-				PlayMusicByGroupAndSubgroupRandom("loading", GetPlayerData(GetThisPlayer(), "RaceName"))
-			end
+		StopMusic()
+		if (CurrentQuest ~= "" and GetQuestData(CurrentQuest, "LoadingMusic") ~= "") then
+			PlayMusicName(GetQuestData(CurrentQuest, "LoadingMusic"))
+		else
+			PlayMusicByGroupAndSubgroupRandom("loading", GetPlayerData(GetThisPlayer(), "RaceName"))
 		end
 
 		InitGameVariables()
@@ -927,47 +925,44 @@ function RunSelectScenarioMenu()
 end
 
 function RunSinglePlayerGameMenu()
-  SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
-  wyrmsun.playlist = { "music/battle_theme_a.ogg" }
+	SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
 
-  if not (IsMusicPlaying()) then
-      if (wyr.preferences.EnableOAML) then
-        PlayMusicName("MenuTheme")
-      else
-        PlayMusic("music/battle_theme_a.ogg")
-      end
-  end
+	if not (IsMusicPlaying()) then
+		PlayMusicName("MenuTheme")
+	end
 
-  local menu = WarMenu()
-  local offx = (Video.Width - 640) / 2
-  local offy = (Video.Height - 480) / 2
+	local menu = WarMenu()
+	local offx = (Video.Width - 640) / 2
+	local offy = (Video.Height - 480) / 2
 
-  menu:addLabel(_("~<Single Player~>"), offx + 320, offy + 212 - 25 - (36 * 1))
-  menu:addFullButton(_("~!Quests"), "q", offx + 208, offy + 104 + 36*2,
-    function()
-		RunQuestWorldMenu();
-		if (RunningScenario) then
-			menu:stop()
+	menu:addLabel(_("~<Single Player~>"), offx + 320, offy + 212 - 25 - (36 * 1))
+	menu:addFullButton(_("~!Quests"), "q", offx + 208, offy + 104 + 36*2,
+		function()
+			RunQuestWorldMenu();
+			if (RunningScenario) then
+				menu:stop()
+			end
 		end
-	end)
-  menu:addFullButton(_("~!Custom Game"), "c", offx + 208, offy + 104 + 36*3,
-    function()
-		RunSinglePlayerCustomGameMenu()
-		if (RunningScenario) then
+	)
+	menu:addFullButton(_("~!Custom Game"), "c", offx + 208, offy + 104 + 36*3,
+		function()
+			RunSinglePlayerCustomGameMenu()
+			if (RunningScenario) then
+				menu:stop(1)
+			end
+		end
+	)
+	menu:addFullButton(_("~!Load Game"), "l", offx + 208, offy + 104 + 36*4,
+		function()
+			RunLoadGameMenu();
 			menu:stop(1)
 		end
-	end)
-  menu:addFullButton(_("~!Load Game"), "l", offx + 208, offy + 104 + 36*4,
-    function()
-		RunLoadGameMenu();
-		menu:stop(1)
-	end
-  )
-  menu:addFullButton(_("~!Tech Tree"), "t", offx + 208, offy + 104 + 36*5,
-    function() RunTechTreeMenu(0) end)
-  menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + 36*6,
-    function() menu:stop() end)
-  return menu:run()
+	)
+	menu:addFullButton(_("~!Tech Tree"), "t", offx + 208, offy + 104 + 36*5,
+		function() RunTechTreeMenu(0) end)
+	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + 36*6,
+		function() menu:stop() end)
+	return menu:run()
 end
 
 function RunSinglePlayerCustomGameMenu()
@@ -1380,14 +1375,9 @@ end
 
 function BuildProgramStartMenu()
 	SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
-	wyrmsun.playlist = { "music/battle_theme_a.ogg" }
 
 	if not (IsMusicPlaying()) then
-		if (wyr.preferences.EnableOAML) then
-			PlayMusicName("MenuTheme")
-		else
-			PlayMusic("music/battle_theme_a.ogg")
-		end
+		PlayMusicName("MenuTheme")
 	end
 
 	local menu = WarMenu()
@@ -1475,14 +1465,12 @@ LoadMods()
 GenerateMissingLanguageData() -- generate missing language data after loading mods, so that the function will take language data defined in mods into account
 
 function GameStarting()
-	if (wyr.preferences.EnableOAML) then
-		if (CurrentQuest ~= "" and GetQuestData(CurrentQuest, "MapMusic") ~= "") then
-			StopMusic()
-			PlayMusicName(GetQuestData(CurrentQuest, "MapMusic"))
-		else
-			StopMusic()
-			PlayMusicByGroupAndSubgroupRandom("map", GetPlayerData(GetThisPlayer(), "RaceName"))
-		end
+	if (CurrentQuest ~= "" and GetQuestData(CurrentQuest, "MapMusic") ~= "") then
+		StopMusic()
+		PlayMusicName(GetQuestData(CurrentQuest, "MapMusic"))
+	else
+		StopMusic()
+		PlayMusicByGroupAndSubgroupRandom("map", GetPlayerData(GetThisPlayer(), "RaceName"))
 	end
 	--[[
 	if (wyr.preferences.ShowTips and not IsReplayGame() and not IsNetworkGame()) then

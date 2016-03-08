@@ -33,14 +33,9 @@ QuestWorlds = {"~!Earth", "~!Nidavellir"}
 
 function RunQuestWorldMenu()
 	SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
-	wyrmsun.playlist = { "music/battle_theme_a.ogg" }
 
 	if not (IsMusicPlaying()) then
-		if (wyr.preferences.EnableOAML) then
-			PlayMusicName("MenuTheme")
-		else
-			PlayMusic("music/battle_theme_a.ogg")
-		end
+		PlayMusicName("MenuTheme")
 	end
 
 	local menu = WarMenu()
@@ -83,14 +78,9 @@ function RunQuestMenu(world)
 --	else
 		SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
 --	end
-	wyrmsun.playlist = { "music/battle_theme_a.ogg" }
 
 	if not (IsMusicPlaying()) then
-		if (wyr.preferences.EnableOAML) then
-			PlayMusicName("MenuTheme")
-		else
-			PlayMusic("music/battle_theme_a.ogg")
-		end
+		PlayMusicName("MenuTheme")
 	end
 
 	local menu = WarMenu()
@@ -342,7 +332,6 @@ function Briefing(quest)
 	
 	local menu = WarMenu(nil, briefing_background)
 	
-	wyrmsun.playlist = {}
 	if (GetQuestData(quest, "BriefingMusic") ~= "") then
 		PlayMusic(GetQuestData(quest, "BriefingMusic"))
 	else

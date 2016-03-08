@@ -82,7 +82,6 @@ SetTitleScreens(
 -------------------------------------------------------------------------------
 --	Music play list -	Insert your titles here
 -------------------------------------------------------------------------------
-wyrmsun.playlist = { "music/battle_theme_a.ogg" }
 
 --  Set the game name. It's used so we can mantain different savegames
 --  and setting. Might also be used for multiplayer.
@@ -1960,8 +1959,7 @@ local defaultPreferences = {
 	TipsShown = {},
 	LastVersionPlayed = "0.0.0",
 	EnabledMods = {},
-	SortSaveGamesByTime = false,
-	EnableOAML = true
+	SortSaveGamesByTime = false
 }
 
 CompleteMissingValues(wyr.preferences, defaultPreferences)

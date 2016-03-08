@@ -52,10 +52,8 @@ function RunEncyclopediaMenu()
 	Load("scripts/menus/encyclopedia_civilizations.lua")
 
 	if (RunningScenario == false) then
-		wyrmsun.playlist = { "music/battle_theme_a.ogg" }
-		
 		if not (IsMusicPlaying()) then
-			PlayMusic("music/battle_theme_a.ogg")
+			PlayMusicName("MenuTheme")
 		end
 	end
 
@@ -129,10 +127,8 @@ end
 function RunEncyclopediaUnitsMenu(state)
 
 	if (RunningScenario == false) then
-		wyrmsun.playlist = { "music/battle_theme_a.ogg" }
-
 		if not (IsMusicPlaying()) then
-			PlayMusic("music/battle_theme_a.ogg")
+			PlayMusicName("MenuTheme")
 		end
 	end
 
@@ -363,10 +359,8 @@ function addEncyclopediaIcon(unit_name, state, menu, x, y)
 			PlaySound("click")
 			
 			if (RunningScenario == false) then
-				wyrmsun.playlist = { "music/battle_theme_a.ogg" }
-
 				if not (IsMusicPlaying()) then
-					PlayMusic("music/battle_theme_a.ogg")
+					PlayMusicName("MenuTheme")
 				end
 			end
 
@@ -627,10 +621,8 @@ end
 function RunEncyclopediaTextsMenu()
 
 	if (RunningScenario == false) then
-		wyrmsun.playlist = { "music/battle_theme_a.ogg" }
-
 		if not (IsMusicPlaying()) then
-			PlayMusic("music/battle_theme_a.ogg")
+			PlayMusicName("MenuTheme")
 		end
 	end
 
@@ -660,10 +652,8 @@ end
 
 function OpenEncyclopediaText(text_key, chosen_chapter)
 	if (RunningScenario == false) then
-		wyrmsun.playlist = { "music/battle_theme_a.ogg" }
-
 		if not (IsMusicPlaying()) then
-			PlayMusic("music/battle_theme_a.ogg")
+			PlayMusicName("MenuTheme")
 		end
 	end
 
@@ -988,10 +978,8 @@ end
 function RunEncyclopediaWorldsMenu()
 
 	if (RunningScenario == false) then
-		wyrmsun.playlist = { "music/battle_theme_a.ogg" }
-
 		if not (IsMusicPlaying()) then
-			PlayMusic("music/battle_theme_a.ogg")
+			PlayMusicName("MenuTheme")
 		end
 	end
 
@@ -1041,10 +1029,8 @@ end
 
 function OpenEncyclopediaWorldEntry(world_key)
 	if (RunningScenario == false) then
-		wyrmsun.playlist = { "music/battle_theme_a.ogg" }
-
 		if not (IsMusicPlaying()) then
-			PlayMusic("music/battle_theme_a.ogg")
+			PlayMusicName("MenuTheme")
 		end
 	end
 
@@ -1112,10 +1098,8 @@ end
 function RunEncyclopediaGameConceptsMenu()
 
 	if (RunningScenario == false) then
-		wyrmsun.playlist = { "music/battle_theme_a.ogg" }
-
 		if not (IsMusicPlaying()) then
-			PlayMusic("music/battle_theme_a.ogg")
+			PlayMusicName("MenuTheme")
 		end
 	end
 
@@ -1165,10 +1149,8 @@ end
 
 function OpenEncyclopediaGameConceptEntry(game_concept_key)
 	if (RunningScenario == false) then
-		wyrmsun.playlist = { "music/battle_theme_a.ogg" }
-
 		if not (IsMusicPlaying()) then
-			PlayMusic("music/battle_theme_a.ogg")
+			PlayMusicName("MenuTheme")
 		end
 	end
 
@@ -1197,10 +1179,8 @@ end
 function RunEncyclopediaCivilizationsMenu()
 
 	if (RunningScenario == false) then
-		wyrmsun.playlist = { "music/battle_theme_a.ogg" }
-
 		if not (IsMusicPlaying()) then
-			PlayMusic("music/battle_theme_a.ogg")
+			PlayMusicName("MenuTheme")
 		end
 	end
 
@@ -1250,10 +1230,8 @@ end
 
 function OpenEncyclopediaCivilizationEntry(civilization_key)
 	if (RunningScenario == false) then
-		wyrmsun.playlist = { "music/battle_theme_a.ogg" }
-
 		if not (IsMusicPlaying()) then
-			PlayMusic("music/battle_theme_a.ogg")
+			PlayMusicName("MenuTheme")
 		end
 	end
 
@@ -1302,10 +1280,8 @@ end
 function RunEncyclopediaFactionsMenu()
 
 	if (RunningScenario == false) then
-		wyrmsun.playlist = { "music/battle_theme_a.ogg" }
-
 		if not (IsMusicPlaying()) then
-			PlayMusic("music/battle_theme_a.ogg")
+			PlayMusicName("MenuTheme")
 		end
 	end
 
@@ -1355,10 +1331,8 @@ end
 
 function OpenEncyclopediaFactionEntry(faction_key)
 	if (RunningScenario == false) then
-		wyrmsun.playlist = { "music/battle_theme_a.ogg" }
-
 		if not (IsMusicPlaying()) then
-			PlayMusic("music/battle_theme_a.ogg")
+			PlayMusicName("MenuTheme")
 		end
 	end
 

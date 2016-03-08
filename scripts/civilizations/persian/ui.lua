@@ -58,37 +58,10 @@ DefineCursor({
 --	* Civilization Persian.
 --;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-wyrmsun.playlist = { "music/battle.ogg", "music/battle-epic.ogg", "music/battle_theme_a.ogg", "music/the_adventure_begins.ogg" }
-
-function PersianScreen(screen_width, screen_height)
-  local info_panel_x = 0
-  local info_panel_y = 160
-
-  local ui = {
-    "info-panel", {
-      "panels", {"panel-general-contents", "panel-attack-unit-contents",
-                "panel-all-unit-contents", "panel-building-contents"},
-      "completed-bar", {
-        "color", {48, 100, 4}
-      }
-    }
-  }
-end
-
 UI.NormalFontColor = "white"
 UI.ReverseFontColor = "yellow"
 
 UI.Fillers:clear()
-
-function AddFiller(file, x, y)
-	if CanAccessFile(file) == true then
-		b = CFiller:new_local()
-		b.G = CGraphic:New(file)
-		b.X = x
-		b.Y = y
-		UI.Fillers:push_back(b)
-	end
-end
 
 AddFiller("germanic/ui/filler_bottom.png", 380, Video.Height - 181)
 AddFiller("germanic/ui/resource.png", 0, 0)

@@ -280,7 +280,7 @@ function LoadCivilizationUI(civilization)
 	if (UsingTechTree == false and civilization ~= GetPlayerData(GetThisPlayer(), "RaceName")) then
 		StopMusic()
 	end
-	if (wyr.preferences.EnableOAML and GameRunning) then
+	if (GameRunning and (CurrentQuest == "" or GetQuestData(CurrentQuest, "MapMusic") == "")) then
 		PlayMusicByGroupAndSubgroupRandom("map", civilization)
 	end
 	Load("scripts/ui.lua")
@@ -301,17 +301,11 @@ function LoadCivilizationUI(civilization)
 	UI.GrandStrategyEndTurnButton.Style = UI.MenuButton.Style
 	UI.GrandStrategyShowHeroesButton.Style = UI.MenuButton.Style
 	UI.GrandStrategyShowRulerButton.Style = UI.MenuButton.Style
-	if not (RunningScenario) then
-		wyrmsun.playlist = { "music/battle_theme_a.ogg" }
-	end
-	if (UsingTechTree == false and civilization ~= GetPlayerData(GetThisPlayer(), "RaceName")) then
-		MusicStopped()
-	end
 end
 
 -- override normal AI setting when in grand strategy mode
 if (OldSetAiType == nil) then
-  OldSetAiType = SetAiType
+	OldSetAiType = SetAiType
 end
 
 -- Override with game settings

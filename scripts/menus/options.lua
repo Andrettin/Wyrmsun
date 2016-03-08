@@ -161,7 +161,7 @@ function AddSoundOptions(menu, offx, offy, centerx, bottom)
 
   local musiccheckbox = {}
   musiccheckbox = menu:addImageCheckBox("Enabled", offx + 240, offy + 36 * 3.5,
-    function() SetMusicEnabled(musiccheckbox:isMarked()); MusicStopped() end)
+    function() SetMusicEnabled(musiccheckbox:isMarked()); end)
   musiccheckbox:setMarked(IsMusicEnabled())
   musiccheckbox:adjustSize();
 
@@ -344,10 +344,9 @@ end
 
 function BuildOptionsMenu()
 	SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
-	wyrmsun.playlist = { "music/battle_theme_a.ogg" }
 
 	if not (IsMusicPlaying()) then
-		PlayMusic("music/battle_theme_a.ogg")
+		PlayMusicName("MenuTheme")
 	end
 
 	local menu = WarMenu()
@@ -562,169 +561,172 @@ function RunGameplayOptionsMenu()
 end
 
 function RunVideoOptionsMenu()
-  local menu = WarMenu()
-  local offx = (Video.Width - 352) / 2
-  local offy = (Video.Height - 352) / 2
-  local checkTexture
-  local checkOpenGL
-  local b
-  local resolution_width_list = {"640", "720", "800", "1024", "1280", "1360", "1366", "1400", "1440", "1600", "1680", "1920"}
-  local resolution_width_dd
-  local resolution_height_list = {"480", "600", "720", "768", "800", "864", "900", "960", "1024", "1050", "1080"}
-  local resolution_height_dd
-  local resolution_width = Video.Width
-  local resolution_height = Video.Height
-  local fullscreen_dd
-  local fullscreen = Video.FullScreen
+	local menu = WarMenu()
+	local offx = (Video.Width - 352) / 2
+	local offy = (Video.Height - 352) / 2
+	local checkTexture
+	local checkOpenGL
+	local b
+	local resolution_width_list = {"640", "720", "800", "1024", "1280", "1360", "1366", "1400", "1440", "1600", "1680", "1920"}
+	local resolution_width_dd
+	local resolution_height_list = {"480", "600", "720", "768", "800", "864", "900", "960", "1024", "1050", "1080"}
+	local resolution_height_dd
+	local resolution_width = Video.Width
+	local resolution_height = Video.Height
+	local fullscreen_dd
+	local fullscreen = Video.FullScreen
 
-  menu:addLabel(_("~<Options~>"), offx + 176, offy + 1)
-  menu:addLabel(_("Resolution Width:"), offx + 8, offy + 34, Fonts["game"], false)
-  resolution_width_dd = menu:addDropDown(resolution_width_list, offx + 8, offy + 55 + 26*0,
-    function(dd)
-   		resolution_width = tonumber(resolution_width_list[resolution_width_dd:getSelected() + 1])
-    end)
-  resolution_width_dd:setSize(152, 20)
-  for i = 1,table.getn(resolution_width_list) do
-	if (tonumber(resolution_width_list[i]) == Video.Width) then
-		resolution_width_dd:setSelected(i - 1)
+	menu:addLabel(_("~<Options~>"), offx + 176, offy + 1)
+	menu:addLabel(_("Resolution Width:"), offx + 8, offy + 34, Fonts["game"], false)
+	resolution_width_dd = menu:addDropDown(resolution_width_list, offx + 8, offy + 55 + 26*0,
+	function(dd)
+		resolution_width = tonumber(resolution_width_list[resolution_width_dd:getSelected() + 1])
+	end)
+	resolution_width_dd:setSize(152, 20)
+	for i = 1,table.getn(resolution_width_list) do
+		if (tonumber(resolution_width_list[i]) == Video.Width) then
+			resolution_width_dd:setSelected(i - 1)
+		end
 	end
-  end
 
-  menu:addLabel(_("Resolution Height:"), offx + 16 + 152 + 24, offy + 34, Fonts["game"], false)
-  resolution_height_dd = menu:addDropDown(resolution_height_list, offx + 16 + 152 + 24, offy + 55 + 26*0,
-    function(dd)
-   		resolution_height = tonumber(resolution_height_list[resolution_height_dd:getSelected() + 1])
-    end)
-  resolution_height_dd:setSize(152, 20)
-  for i = 1,table.getn(resolution_height_list) do
-	if (tonumber(resolution_height_list[i]) == Video.Height) then
-		resolution_height_dd:setSelected(i - 1)
+	menu:addLabel(_("Resolution Height:"), offx + 16 + 152 + 24, offy + 34, Fonts["game"], false)
+	resolution_height_dd = menu:addDropDown(resolution_height_list, offx + 16 + 152 + 24, offy + 55 + 26*0,
+	function(dd)
+		resolution_height = tonumber(resolution_height_list[resolution_height_dd:getSelected() + 1])
+	end)
+	resolution_height_dd:setSize(152, 20)
+	for i = 1,table.getn(resolution_height_list) do
+		if (tonumber(resolution_height_list[i]) == Video.Height) then
+			resolution_height_dd:setSelected(i - 1)
+		end
 	end
-  end
 
-  -- sound volume options
-  b = Label(_("Sound Effects Volume"))
-  b:setFont(CFont:Get("game"))
-  b:adjustSize();
-  menu:add(b, offx + 16, offy + 36 * 3)
+	-- sound volume options
+	b = Label(_("Sound Effects Volume"))
+	b:setFont(CFont:Get("game"))
+	b:adjustSize();
+	menu:add(b, offx + 16, offy + 36 * 3)
 
-  -- FIXME: disable if effects turned off
-  local soundslider = {}
-  -- slider button to decrease slider value
-  soundslider = menu:addImageLeftSliderButton("", nil, offx + 21, offy + 36 * 3.5, function() soundslider:setValue(soundslider:getValue() - 25.5); SetEffectsVolume(soundslider:getValue()) end)
+	-- FIXME: disable if effects turned off
+	local soundslider = {}
+	-- slider button to decrease slider value
+	soundslider = menu:addImageLeftSliderButton("", nil, offx + 21, offy + 36 * 3.5, function() soundslider:setValue(soundslider:getValue() - 25.5); SetEffectsVolume(soundslider:getValue()) end)
 
-  -- slider button to increase slider value
-  soundslider = menu:addImageRightSliderButton("", nil, offx + 213, offy + 36 * 3.5, function() soundslider:setValue(soundslider:getValue() + 25.5); SetEffectsVolume(soundslider:getValue()) end)
+	-- slider button to increase slider value
+	soundslider = menu:addImageRightSliderButton("", nil, offx + 213, offy + 36 * 3.5, function() soundslider:setValue(soundslider:getValue() + 25.5); SetEffectsVolume(soundslider:getValue()) end)
 
-  -- slider itself
-  soundslider = menu:addImageSlider(0, 255, 172, 18, offx + 41, offy + 36 * 3.5, function() SetEffectsVolume(soundslider:getValue()) end)
+	-- slider itself
+	soundslider = menu:addImageSlider(0, 255, 172, 18, offx + 41, offy + 36 * 3.5, function() SetEffectsVolume(soundslider:getValue()) end)
 
-  soundslider:setValue(GetEffectsVolume())
+	soundslider:setValue(GetEffectsVolume())
 
-  b = Label("min")
-  b:setFont(CFont:Get("small"))
-  b:adjustSize();
-  menu:addCentered(b, offx + 32, offy + 36 * 4 + 6)
+	b = Label("min")
+	b:setFont(CFont:Get("small"))
+	b:adjustSize();
+	menu:addCentered(b, offx + 32, offy + 36 * 4 + 6)
 
-  b = Label("max")
-  b:setFont(CFont:Get("small"))
-  b:adjustSize();
-  menu:addCentered(b, offx + 224, offy + 36 * 4 + 6)
+	b = Label("max")
+	b:setFont(CFont:Get("small"))
+	b:adjustSize();
+	menu:addCentered(b, offx + 224, offy + 36 * 4 + 6)
 
-  local effectscheckbox = {}
-  effectscheckbox = menu:addImageCheckBox("Enabled", offx + 240, offy + 36 * 3.5,
-    function() SetEffectsEnabled(effectscheckbox:isMarked()) end)
-  effectscheckbox:setMarked(IsEffectsEnabled())
-  effectscheckbox:adjustSize()
+	local effectscheckbox = {}
+	effectscheckbox = menu:addImageCheckBox("Enabled", offx + 240, offy + 36 * 3.5,
+		function() SetEffectsEnabled(effectscheckbox:isMarked()) end)
+	effectscheckbox:setMarked(IsEffectsEnabled())
+	effectscheckbox:adjustSize()
 
-  b = Label("Music Volume")
-  b:setFont(CFont:Get("game"))
-  b:adjustSize();
-  menu:add(b, offx + 16, offy + 36 * 5)
+	b = Label("Music Volume")
+	b:setFont(CFont:Get("game"))
+	b:adjustSize();
+	menu:add(b, offx + 16, offy + 36 * 5)
 
-  -- FIXME: disable if music turned off
-  local musicslider = {}
-  -- slider button to decrease slider value
-  musicslider = menu:addImageLeftSliderButton("", nil, offx + 21, offy + 36 * 5.5, function() musicslider:setValue(musicslider:getValue() - 25.5); SetMusicVolume(musicslider:getValue()) end)
+	-- FIXME: disable if music turned off
+	local musicslider = {}
+	-- slider button to decrease slider value
+	musicslider = menu:addImageLeftSliderButton("", nil, offx + 21, offy + 36 * 5.5, function() musicslider:setValue(musicslider:getValue() - 25.5); SetMusicVolume(musicslider:getValue()) end)
 
-  -- slider button to decrease slider value
-  musicslider = menu:addImageRightSliderButton("", nil, offx + 213, offy + 36 * 5.5, function() musicslider:setValue(musicslider:getValue() + 25.5); SetMusicVolume(musicslider:getValue()) end)
+	-- slider button to decrease slider value
+	musicslider = menu:addImageRightSliderButton("", nil, offx + 213, offy + 36 * 5.5, function() musicslider:setValue(musicslider:getValue() + 25.5); SetMusicVolume(musicslider:getValue()) end)
 
-  -- slider itself
-  musicslider = menu:addImageSlider(0, 255, 172, 18, offx + 41, offy + 36 * 5.5, function() SetMusicVolume(musicslider:getValue()) end)
+	-- slider itself
+	musicslider = menu:addImageSlider(0, 255, 172, 18, offx + 41, offy + 36 * 5.5, function() SetMusicVolume(musicslider:getValue()) end)
 
-  -- set the value so the game saves it
-  musicslider:setValue(GetMusicVolume())
+	-- set the value so the game saves it
+	musicslider:setValue(GetMusicVolume())
 
-  b = Label("min")
-  b:setFont(CFont:Get("small"))
-  b:adjustSize();
-  menu:addCentered(b, offx + 32, offy + 36 * 6 + 6)
+	b = Label("min")
+	b:setFont(CFont:Get("small"))
+	b:adjustSize();
+	menu:addCentered(b, offx + 32, offy + 36 * 6 + 6)
 
-  b = Label("max")
-  b:setFont(CFont:Get("small"))
-  b:adjustSize();
-  menu:addCentered(b, offx + 224, offy + 36 * 6 + 6)
+	b = Label("max")
+	b:setFont(CFont:Get("small"))
+	b:adjustSize();
+	menu:addCentered(b, offx + 224, offy + 36 * 6 + 6)
 
-  local musiccheckbox = {}
-  musiccheckbox = menu:addImageCheckBox("Enabled", offx + 240, offy + 36 * 5.5,
-    function()
-      SetMusicEnabled(musiccheckbox:isMarked());
-      if (wyr.preferences.EnableOAML and musiccheckbox:isMarked()) then
-        PlayMusicName("MenuTheme")
-      end
-      MusicStopped()
-    end)
-  musiccheckbox:setMarked(IsMusicEnabled())
-  musiccheckbox:adjustSize();
+	local musiccheckbox = {}
+	musiccheckbox = menu:addImageCheckBox("Enabled", offx + 240, offy + 36 * 5.5,
+		function()
+			SetMusicEnabled(musiccheckbox:isMarked());
+			if (musiccheckbox:isMarked()) then
+				PlayMusicName("MenuTheme")
+			end
+		end
+	)
+	musiccheckbox:setMarked(IsMusicEnabled())
+	musiccheckbox:adjustSize();
 
-  full_screen_dd = menu:addImageCheckBox(_("Full Screen"), offx + 16, offy + 55 + 26*8 + 14,
-    function()
-      fullscreen = full_screen_dd:isMarked()
-    end)
-  full_screen_dd:setMarked(Video.FullScreen)
+	full_screen_dd = menu:addImageCheckBox(_("Full Screen"), offx + 16, offy + 55 + 26*8 + 14,
+		function()
+			fullscreen = full_screen_dd:isMarked()
+		end
+	)
+	full_screen_dd:setMarked(Video.FullScreen)
 
-  checkTexture = menu:addImageCheckBox(_("Set Maximum OpenGL Texture to 256"), offx + 16, offy + 55 + 26*10 + 14,
-    function()
-      if (checkTexture:isMarked()) then
-        wyr.preferences.MaxOpenGLTexture = 256
-      else
-        wyr.preferences.MaxOpenGLTexture = 0
-      end
-      SetMaxOpenGLTexture(wyr.preferences.MaxOpenGLTexture)
-      SavePreferences()
-    end)
-  if (wyr.preferences.MaxOpenGLTexture == 256) then checkTexture:setMarked(true) end
+	checkTexture = menu:addImageCheckBox(_("Set Maximum OpenGL Texture to 256"), offx + 16, offy + 55 + 26*10 + 14,
+		function()
+			if (checkTexture:isMarked()) then
+				wyr.preferences.MaxOpenGLTexture = 256
+			else
+				wyr.preferences.MaxOpenGLTexture = 0
+			end
+			SetMaxOpenGLTexture(wyr.preferences.MaxOpenGLTexture)
+			SavePreferences()
+		end
+	)
+	if (wyr.preferences.MaxOpenGLTexture == 256) then checkTexture:setMarked(true) end
 
-  checkOpenGL = menu:addImageCheckBox(_("Use OpenGL / OpenGL ES 1.1 (restart required)"), offx + 16, offy + 55 + 26*9 + 14,
-    function()
+	checkOpenGL = menu:addImageCheckBox(_("Use OpenGL / OpenGL ES 1.1 (restart required)"), offx + 16, offy + 55 + 26*9 + 14,
+		function()
 --TODO: Add function for immediately change state of OpenGL
-      wyr.preferences.UseOpenGL = checkOpenGL:isMarked()
-      SavePreferences()
---      menu:stop() --TODO: Enable if we have an OpenGL function
-    end)
-  checkOpenGL:setMarked(wyr.preferences.UseOpenGL)
---  checkOpenGL:setMarked(UseOpenGL) --TODO: Enable if we have an OpenGL function
+			wyr.preferences.UseOpenGL = checkOpenGL:isMarked()
+			SavePreferences()
+--			menu:stop() --TODO: Enable if we have an OpenGL function
+		end
+	)
+	checkOpenGL:setMarked(wyr.preferences.UseOpenGL)
+--	checkOpenGL:setMarked(UseOpenGL) --TODO: Enable if we have an OpenGL function
 
-  menu:addHalfButton(_("~!OK"), "o", offx + 123, offy + 55 + 26*12 + 14, function()
-	wyr.preferences.EffectsVolume = GetEffectsVolume()
-	wyr.preferences.EffectsEnabled = IsEffectsEnabled()
-	wyr.preferences.MusicVolume = GetMusicVolume()
-	wyr.preferences.MusicEnabled = IsMusicEnabled()
-	if (resolution_width ~= Video.Width or resolution_height ~= Video.Height) then
-		SetVideoSize(resolution_width, resolution_height)
-	end
+	menu:addHalfButton(_("~!OK"), "o", offx + 123, offy + 55 + 26*12 + 14, function()
+		wyr.preferences.EffectsVolume = GetEffectsVolume()
+		wyr.preferences.EffectsEnabled = IsEffectsEnabled()
+		wyr.preferences.MusicVolume = GetMusicVolume()
+		wyr.preferences.MusicEnabled = IsMusicEnabled()
+		if (resolution_width ~= Video.Width or resolution_height ~= Video.Height) then
+			SetVideoSize(resolution_width, resolution_height)
+		end
 
-	if (fullscreen ~= Video.FullScreen) then
-		ToggleFullScreen()
-		wyr.preferences.VideoFullScreen = Video.FullScreen
-	end
+		if (fullscreen ~= Video.FullScreen) then
+			ToggleFullScreen()
+			wyr.preferences.VideoFullScreen = Video.FullScreen
+		end
 
-	SavePreferences()
-  	menu:stop()
-  end)
+		SavePreferences()
+		menu:stop()
+	end)
 
-  return menu:run()
+	return menu:run()
 end
 
 function RunOptionsMenu()

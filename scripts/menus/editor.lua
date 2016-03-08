@@ -323,23 +323,22 @@ end
 
 -- root of the editor menu
 function RunEditorMenu()
-  SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
-  wyrmsun.playlist = { "music/battle_theme_a.ogg" }
+	SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
 
-  if not (IsMusicPlaying()) then
-    PlayMusic("music/battle_theme_a.ogg")
-  end
+	if not (IsMusicPlaying()) then
+		PlayMusicName("MenuTheme")
+	end
 
-  local menu = WarMenu()
-  local offx = (Video.Width - 640) / 2
-  local offy = (Video.Height - 480) / 2
+	local menu = WarMenu()
+	local offx = (Video.Width - 640) / 2
+	local offy = (Video.Height - 480) / 2
 
-  menu:addLabel(_("~<Map Editor~>"), offx + 320, offy + 212 - 25)
-  local buttonNewMap =
-  menu:addFullButton(_("~!New Map"), "n", offx + 208, offy + 104 + 36*3, function() RunEditorNewMapMenu(); menu:stop() end)
-  menu:addFullButton(_("~!Load Map"), "l", offx + 208, offy + 104 + 36*4, function() RunEditorLoadMapMenu(); menu:stop() end)
-  menu:addFullButton(_("~!Cancel"), "c", offx + 208, offy + 104 + 36*5, function() menu:stop() end)
-  return menu:run()
+	menu:addLabel(_("~<Map Editor~>"), offx + 320, offy + 212 - 25)
+	local buttonNewMap =
+	menu:addFullButton(_("~!New Map"), "n", offx + 208, offy + 104 + 36*3, function() RunEditorNewMapMenu(); menu:stop() end)
+	menu:addFullButton(_("~!Load Map"), "l", offx + 208, offy + 104 + 36*4, function() RunEditorLoadMapMenu(); menu:stop() end)
+	menu:addFullButton(_("~!Cancel"), "c", offx + 208, offy + 104 + 36*5, function() menu:stop() end)
+	return menu:run()
 end
 
 function RunEditorSaveMap(browser, name, menu)

@@ -61,10 +61,9 @@ function RunGrandStrategyGameSetupMenu()
 	ProcessingEndTurn = false
 
 	SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
-	wyrmsun.playlist = { "music/battle_theme_a.ogg" }
 
 	if not (IsMusicPlaying()) then
-		PlayMusic("music/battle_theme_a.ogg")
+		PlayMusicName("MenuTheme")
 	end
 
 	local menu = WarMenu()

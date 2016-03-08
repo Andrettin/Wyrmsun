@@ -129,7 +129,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Music
 - Added 42 new music pieces by Marcelo Fernandez (http://www.marcelofernandezmusic.com).
-- Wyrmsun now features adaptive music pieces, which change according to context (i.e. the music becomes more intense when a battle occurs) (by Marcelo Fernandez).
+- Wyrmsun now features adaptive music pieces, which change according to context (i.e. the music becomes more intense when a battle occurs) (by Marcelo Fernandez) (https://github.com/marcelofg55/oaml).
 
 * Terrain
 - Overhaul of the forest tilesets (by Leo).

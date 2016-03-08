@@ -5,6 +5,7 @@
 	<fadeOut>1000</fadeOut>
 	<xfadeIn>10</xfadeIn>
 	<xfadeOut>10</xfadeOut>
+	<volume>0.6</volume>
 	<audio>
 		<filename>music/oaml/MenuTheme_Intro.ogg</filename>
 		<bpm>116</bpm>
@@ -56,10 +57,10 @@
 </track>
 <track>
 	<name>OldMenuTheme</name>
-	<fadeIn>1000</fadeIn>
+	<fadeIn>0</fadeIn>
 	<fadeOut>1000</fadeOut>
-	<xfadeIn>500</xfadeIn>
-	<xfadeOut>500</xfadeOut>
+	<xfadeIn>10</xfadeIn>
+	<xfadeOut>10</xfadeOut>
 	<audio>
 		<filename>music/battle_theme_a.ogg</filename>
 	</audio>

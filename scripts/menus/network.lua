@@ -636,54 +636,55 @@ function RunCreateMultiGameMenu(s)
 end
 
 function RunMultiPlayerGameMenu(s)
-  local menu = WarMenu()
-  local offx = (Video.Width - 640) / 2
-  local offy = (Video.Height - 480) / 2
-  local nick
+	local menu = WarMenu()
+	local offx = (Video.Width - 640) / 2
+	local offy = (Video.Height - 480) / 2
+	local nick
 
-  local function FixMusic()
-    SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
-    wyrmsun.playlist = { "music/battle_theme_a.ogg" }
+	local function FixMusic()
+		SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
+	
+		if not (IsMusicPlaying()) then
+			PlayMusicName("MenuTheme")
+		end
+	end
 
-    if not (IsMusicPlaying()) then
-        PlayMusic("music/battle_theme_a.ogg")
-    end
-  end
+	InitGameSettings()
+	InitNetwork1()
 
-  InitGameSettings()
-  InitNetwork1()
+	menu:addLabel("~<Multiplayer Network Game~>", offx + 640/2 + 12, offy + 192)
 
-  menu:addLabel("~<Multiplayer Network Game~>", offx + 640/2 + 12, offy + 192)
+	menu:writeText(_("Nickname :"), 208 + offx, 264 + offy)
+	nick = menu:addTextInputField(GetLocalPlayerName(), offx + 298, 260 + offy)
 
-  menu:writeText(_("Nickname :"), 208 + offx, 264 + offy)
-  nick = menu:addTextInputField(GetLocalPlayerName(), offx + 298, 260 + offy)
+	menu:addFullButton(_("~!Join Game"), "j", 208 + offx, 320 + (36 * 0) + offy,
+		function()
+			if nick:getText() ~= GetLocalPlayerName() then
+				SetLocalPlayerName(nick:getText())
+				wyr.preferences.PlayerName = nick:getText()
+				SavePreferences()
+			end
+			RunJoinIpMenu()
+			FixMusic()
+		end
+	)
+	menu:addFullButton(_("~!Create Game"), "c", 208 + offx, 320 + (36 * 1) + offy,
+		function()
+			if nick:getText() ~= GetLocalPlayerName() then
+				SetLocalPlayerName(nick:getText())
+				wyr.preferences.PlayerName = nick:getText()
+				SavePreferences()
+			end
+			RunCreateMultiGameMenu()
+			FixMusic()
+		end
+	)
 
-  menu:addFullButton(_("~!Join Game"), "j", 208 + offx, 320 + (36 * 0) + offy,
-    function()
-      if nick:getText() ~= GetLocalPlayerName() then
-        SetLocalPlayerName(nick:getText())
-        wyr.preferences.PlayerName = nick:getText()
-        SavePreferences()
-      end
-      RunJoinIpMenu()
-      FixMusic()
-    end)
-  menu:addFullButton(_("~!Create Game"), "c", 208 + offx, 320 + (36 * 1) + offy,
-    function()
-      if nick:getText() ~= GetLocalPlayerName() then
-        SetLocalPlayerName(nick:getText())
-        wyr.preferences.PlayerName = nick:getText()
-        SavePreferences()
-      end
-      RunCreateMultiGameMenu()
-      FixMusic()
-    end)
+	menu:addFullButton(_("~!Previous Menu"), "p", 208 + offx, 320 + (36 * 2) + offy,
+		function() SetLocalPlayerName("") menu:stop() end) -- Andrettin: in single-player games the local player shouldn't use his nick
 
-  menu:addFullButton(_("~!Previous Menu"), "p", 208 + offx, 320 + (36 * 2) + offy,
-    function() SetLocalPlayerName("") menu:stop() end) -- Andrettin: in single-player games the local player shouldn't use his nick
+	menu:run()
 
-  menu:run()
-
-  ExitNetwork1()
+	ExitNetwork1()
 end
 
