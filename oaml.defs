@@ -55,6 +55,16 @@
 	</audio>
 </track>
 <track>
+	<name>OldMenuTheme</name>
+	<fadeIn>1000</fadeIn>
+	<fadeOut>1000</fadeOut>
+	<xfadeIn>500</xfadeIn>
+	<xfadeOut>500</xfadeOut>
+	<audio>
+		<filename>music/battle_theme_a.ogg</filename>
+	</audio>
+</track>
+<track>
 	<name>GermanicLoading</name>
 	<group>loading</group>
 	<fadeIn>5000</fadeIn>

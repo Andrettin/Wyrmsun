@@ -127,6 +127,10 @@ https://github.com/Andrettin/Wyrmsun
 * Multiplayer
 - Fixed a potential desync cause due to units' facing being randomly set when created through a random number generating function that isn't synchronized.
 
+* Music
+- Added 42 new music pieces by Marcelo Fernandez (http://www.marcelofernandezmusic.com).
+- Wyrmsun now features adaptive music pieces, which change according to context (i.e. the music becomes more intense when a battle occurs) (by Marcelo Fernandez).
+
 * Terrain
 - Overhaul of the forest tilesets (by Leo).
 

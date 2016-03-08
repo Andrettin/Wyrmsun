@@ -161,6 +161,7 @@ function RunShowCreditsMenu()
 	"  Wildfire Games",
 	"  Wolfgang Kohler",
 	_("Music"),
+	"  Marcelo Fernandez",
 	"  bart",
 	"  Battle for Wesnoth Team",
 	"  cynicmusic",
