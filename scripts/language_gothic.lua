@@ -458,6 +458,13 @@ DefineLanguageWord("Hals", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Hardus", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 48.
+	Language = "gothic",
+	Type = "adjective",
+	Meanings = {"Hard", "Strict"}, -- source gives the German "hart, streng" as the meaning
+	DerivesFrom = {"proto-germanic", "adjective", "Hardu"}
+})
+
 DefineLanguageWord("Haubiþ", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
 	Language = "gothic",
 	Type = "noun",

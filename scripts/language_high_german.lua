@@ -975,6 +975,7 @@ DefineLanguageWord("Hard", {
 	Language = "high-german",
 	Type = "adjective",
 	Meanings = {},
+	DerivesFrom = {"middle-high-german", "adjective", "Hart"}, -- presumably
 	Archaic = true
 })
 
@@ -982,6 +983,7 @@ DefineLanguageWord("Hart", { -- Source: http://www.duden.de/rechtschreibung/hart
 	Language = "high-german",
 	Type = "adjective",
 	Meanings = {"Hard"},
+	DerivesFrom = {"middle-high-german", "adjective", "Hart"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 48.
 	ComparisonDegreeInflections = {
 		"comparative", "Härter",
 		"superlative", "Härteste"
@@ -2330,7 +2332,7 @@ DefineLanguageWord("Alphart", {
 	Meanings = {},
 	CompoundElements = {
 		"prefix", "high-german", "noun", "Alp",
-		"suffix", "high-german", "adjective", "Hart"
+		"suffix", "high-german", "adjective", "Hart" -- correct?
 	},
 	Archaic = true,
 	NameTypes = {"person"}
@@ -2342,7 +2344,7 @@ DefineLanguageWord("Bernard", {
 	Meanings = {},
 	CompoundElements = {
 		"prefix", "high-german", "noun", "Bern",
-		"suffix", "high-german", "adjective", "Hard"
+		"suffix", "high-german", "adjective", "Hard" -- correct?
 	},
 	Archaic = true,
 	NameTypes = {"person"}
@@ -2437,7 +2439,7 @@ DefineLanguageWord("Richard", {
 	Meanings = {},
 	CompoundElements = {
 		"prefix", "high-german", "adjective", "Rich",
-		"suffix", "high-german", "adjective", "Hard"
+		"suffix", "high-german", "adjective", "Hard" -- correct?
 	},
 	Archaic = true,
 	NameTypes = {"person"}

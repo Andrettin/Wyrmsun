@@ -121,7 +121,7 @@ DefineCharacter("Widemer Amelung", { -- Source: F. E. Sandbach, "The Heroic Saga
 DefineCharacter("Þiudareiks Amelung", { -- Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, pp. 6-7, 9.
 	-- king of the Ostrogoths; Dietrich von Bern in the German sagas; was given as a hostage by Walamer to the Romans, and thus stayed for 10 years (until 472 AD) in the Byzantine court; his religion was Arian Christianity
 	Name = "Þiudareiks", -- tentative rendering of the name in Gothic, based on the cognates of the German version of the name, "Dietrich"; also known as "Theoderic"
-	NameCompoundElements = { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 18.
+	NameCompoundElements = {
 		"prefix", "gothic", "noun", "Þiuda",
 		"suffix", "gothic", "noun", "Reiks" -- maybe the adjective written in the same manner is part of this compound instead
 	},
@@ -153,6 +153,21 @@ DefineCharacter("Tufa", { -- Source: F. E. Sandbach, "The Heroic Saga-Cycle of D
 --	ProvinceOfOrigin = "?",
 	Year = 489,
 	DeathYear = 493 -- was probably put to death by Theoderic in 493 AD when the defenders of Ravenna (including Odoacer) were
+})
+
+DefineCharacter("Vulfshardus", { -- Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, pp. 28-29, 63.
+	-- follower of Dietrich (= Theoderic, gothic king) in the Dietrich Saga; hot-headed (source pp. 28-29); young and ever thirsting for the fray (source p. 63)
+	Name = "Vulfshardus", -- in the saga his name is "Wolfhart"; this is a tentative rendering of the name in Gothic, based on the cognates of the original German name
+	NameCompoundElements = {
+		"prefix", "gothic", "noun", "Vulfs",
+		"suffix", "gothic", "adjective", "Hardus"
+	},
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "goth",
+	ProvinceOfOrigin = "Pannonia", -- presumably, because this is Theoderic's province of origin
+	Year = 454, -- contemporary of Theoderic, who was born in 454 AD
+	DeathYear = 526 -- contemporary of Theoderic, who died in 526
 })
 
 DefineCharacter("Gibica", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, p. 91; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 226.

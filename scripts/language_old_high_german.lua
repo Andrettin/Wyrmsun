@@ -514,6 +514,13 @@ DefineLanguageWord("Hamar", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Hart", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 48.
+	Language = "old-high-german",
+	Type = "adjective",
+	Meanings = {"Strict", "Hefty", "Hard"}, -- source gives the German "streng, heftig, hart" as the meaning
+	DerivesFrom = {"proto-germanic", "adjective", "Hardu"}
+})
+
 DefineLanguageWord("Heilag", { -- source also gives the alternative form "heilac"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 42.
 	Language = "old-high-german",
 	Type = "adjective",

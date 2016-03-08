@@ -314,6 +314,13 @@ DefineLanguageWord("Halsberc", { -- Source: http://www.cnrtl.fr/definition/haube
 	Meanings = {"Neck Cover"} -- source gives the French "ce qui protège le cou" as the meaning
 })
 
+DefineLanguageWord("Hart", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 48.
+	Language = "middle-high-german",
+	Type = "adjective",
+	Meanings = {"Strict", "Hefty", "Hard"}, -- source gives the German "streng, heftig, hart" as the meaning
+	DerivesFrom = {"old-high-german", "adjective", "Hart"}
+})
+
 DefineLanguageWord("Heilec", { -- source also gives the alternative form "heilic"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 42.
 	Language = "middle-high-german",
 	Type = "adjective",

@@ -597,6 +597,13 @@ DefineLanguageWord("Hane", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Meanings = {"Rooster"}
 })
 
+DefineLanguageWord("Harđr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 48.
+	Language = "old-norse",
+	Type = "adjective",
+	Meanings = {"Hard", "Sturdy", "Hefty"}, -- source gives the German "hart, kräftig, heftig" as the meaning
+	DerivesFrom = {"proto-germanic", "adjective", "Hardu"}
+})
+
 DefineLanguageWord("Haugr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 54.
 	Language = "old-norse",
 	Type = "noun",

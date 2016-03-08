@@ -289,6 +289,13 @@ DefineLanguageWord("Hamur", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Hard", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 48.
+	Language = "old-saxon",
+	Type = "adverb", -- apparently from the source
+	Meanings = {},
+	DerivesFrom = {"proto-germanic", "adjective", "Hardu"}
+})
+
 DefineLanguageWord("Hêlag", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 42.
 	Language = "old-saxon",
 	Type = "adjective",

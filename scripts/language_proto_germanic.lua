@@ -552,6 +552,12 @@ DefineLanguageWord("Hailaga", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Meanings = {"Holy"} -- source gives the German "heilig"
 })
 
+DefineLanguageWord("Hardu", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 48.
+	Language = "proto-germanic",
+	Type = "adjective",
+	Meanings = {"Hard", "Strict"} -- source gives the German "hart, streng" as the meaning
+})
+
 DefineLanguageWord("Heldî", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 50.
 	Language = "proto-germanic",
 	Type = "noun",

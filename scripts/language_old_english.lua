@@ -676,6 +676,13 @@ DefineLanguageWord("Heals", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Heard", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 48.
+	Language = "old-english",
+	Type = "adverb", -- apparently from the source
+	Meanings = {},
+	DerivesFrom = {"proto-germanic", "adjective", "Hardu"}
+})
+
 DefineLanguageWord("Hearpestre", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, pp. 77-78.
 	Language = "old-english",
 	Type = "noun",

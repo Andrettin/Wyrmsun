@@ -1246,7 +1246,15 @@ DefineLanguageWord("Hamp", {
 DefineLanguageWord("Hard", {
 	Language = "english",
 	Type = "adjective",
-	Meanings = {"Hard"}
+	Meanings = {"Hard"},
+	DerivesFrom = {"old-english", "adverb", "Heard"} -- presumably? though I imagine Old English also had a cognate adjective, this is the closest we have for now
+})
+
+DefineLanguageWord("Hard", {
+	Language = "english",
+	Type = "adverb",
+	Meanings = {"Hard"},
+	DerivesFrom = {"old-english", "adverb", "Heard"} -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 48.
 })
 
 DefineLanguageWord("Hards", {

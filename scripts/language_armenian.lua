@@ -36,3 +36,9 @@ DefineLanguageWord("Hur", { -- Source: August Fick and Alf Torp, "Wortschatz der
 	Type = "noun",
 	Meanings = {"Torch"} -- source gives "Fackel" as the meaning
 })
+
+DefineLanguageWord("Karer", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 48.
+	Language = "armenian",
+	Type = "adjective",
+	Meanings = {"Hard", "Strict"} -- source gives the German "hart, streng" as the meaning
+})

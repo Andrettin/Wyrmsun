@@ -138,6 +138,18 @@ DefineLanguageWord("Χώμη", { -- Source: August Fick and Alf Torp, "Wortschat
 	Meanings = {"Village"} -- source gives the German "Dorf" as the meaning
 })
 
+DefineLanguageWord("Χράτος", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 48.
+	Language = "greek",
+	Type = "noun",
+	Meanings = {"Strength"} -- source gives the German "Kraft" as the meaning
+})
+
+DefineLanguageWord("Χρατύς", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 48.
+	Language = "greek",
+	Type = "adjective",
+	Meanings = {"Strong", "Firm", "Hard"} -- source gives the German "stark, fest, hart" as the meaning
+})
+
 DefineLanguageWord("Χύσθος", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.
 	Language = "greek",
 	Type = "noun",
