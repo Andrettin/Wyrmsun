@@ -8,49 +8,32 @@ function RunResultsMenu()
 		result = "Victory!"
 		if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
 			background = GetBackground("ui/backgrounds/yale.png")
-			PlayMusic("music/victory.ogg")
 		elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "gnome") then
 			background = GetBackground("ui/backgrounds/yale.png")
-			PlayMusic("music/victory.ogg")
 		elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "kobold") then
 			background = GetBackground("ui/backgrounds/wyrm.png")
-			PlayMusic("music/victory.ogg")
 		elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "germanic") then
 			background = GetBackground("ui/backgrounds/wyrm.png")
-			if (wyr.preferences.EnableOAML) then
-				PlayMusicName("GermanicWin")
-			else
-				PlayMusic("music/victory.ogg")
-			end
 		else
 			background = GetBackground("ui/backgrounds/gryphon.png")
-			PlayMusic("music/victory.ogg")
 		end
+		PlayMusicByGroupAndSubgroupRandom("win", GetPlayerData(GetThisPlayer(), "RaceName"))
 	elseif (GameResult == GameDefeat) then
 		result = "Defeat!"
 		if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
 			background = GetBackground("ui/backgrounds/wyrm.png")
-			PlayMusic("music/defeat2.ogg")
 		elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "gnome") then
 			background = GetBackground("ui/backgrounds/wyrm.png")
-			PlayMusic("music/defeat2.ogg")
 		elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "goblin") then
 			background = GetBackground("ui/backgrounds/yale.png")
-			PlayMusic("music/defeat.ogg")
 		elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "kobold") then
 			background = GetBackground("ui/backgrounds/yale.png")
-			PlayMusic("music/defeat.ogg")
 		elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "germanic" or GetPlayerData(GetThisPlayer(), "RaceName") == "teuton") then
 			background = GetBackground("ui/backgrounds/wyrm.png")
-			if (wyr.preferences.EnableOAML) then
-				PlayMusicName("GermanicLose")
-			else
-				PlayMusic("music/defeat.ogg")
-			end
 		else
 			background = GetBackground("ui/backgrounds/wyrm.png")
-			PlayMusic("music/defeat.ogg")
 		end
+		PlayMusicByGroupAndSubgroupRandom("lose", GetPlayerData(GetThisPlayer(), "RaceName"))
 	elseif (GameResult == GameDraw) then
 		result = "Draw!"
 		background = GetBackground("ui/backgrounds/gullinburst.png")

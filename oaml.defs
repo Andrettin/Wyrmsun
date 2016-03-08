@@ -67,6 +67,7 @@
 <track>
 	<name>GermanicLoading</name>
 	<group>loading</group>
+	<subgroup>germanic</subgroup>
 	<fadeIn>5000</fadeIn>
 	<fadeOut>1000</fadeOut>
 	<xfadeIn>10</xfadeIn>
@@ -96,6 +97,7 @@
 <track>
 	<name>GermanicTheme</name>
 	<group>map</group>
+	<subgroup>germanic</subgroup>
 	<fadeIn>10000</fadeIn>
 	<fadeOut>1000</fadeOut>
 	<xfadeIn>10</xfadeIn>
@@ -157,6 +159,7 @@
 <track>
 	<name>GermanicTheme2</name>
 	<group>map</group>
+	<subgroup>germanic</subgroup>
 	<fadeIn>2000</fadeIn>
 	<fadeOut>1000</fadeOut>
 	<xfadeIn>10</xfadeIn>
@@ -211,6 +214,7 @@
 <track>
 	<name>GermanicTheme3</name>
 	<group>map</group>
+	<subgroup>germanic</subgroup>
 	<fadeIn>2000</fadeIn>
 	<fadeOut>1000</fadeOut>
 	<xfadeIn>500</xfadeIn>
@@ -319,6 +323,7 @@
 <track>
 	<name>GermanicWin</name>
 	<group>win</group>
+	<subgroup>germanic</subgroup>
 	<fadeIn>0</fadeIn>
 	<fadeOut>500</fadeOut>
 	<xfadeIn>10</xfadeIn>
@@ -341,6 +346,7 @@
 <track>
 	<name>GermanicLose</name>
 	<group>lose</group>
+	<subgroup>germanic</subgroup>
 	<fadeIn>1000</fadeIn>
 	<fadeOut>500</fadeOut>
 	<xfadeIn>10</xfadeIn>
@@ -356,6 +362,7 @@
 <track>
 	<name>DwarfLoading</name>
 	<group>loading</group>
+	<subgroup>dwarf</subgroup>
 	<fadeIn>5000</fadeIn>
 	<fadeOut>1000</fadeOut>
 	<xfadeIn>10</xfadeIn>
@@ -378,6 +385,7 @@
 <track>
 	<name>DwarfTheme</name>
 	<group>map</group>
+	<subgroup>dwarf</subgroup>
 	<fadeIn>10000</fadeIn>
 	<fadeOut>1000</fadeOut>
 	<xfadeIn>10</xfadeIn>
@@ -425,6 +433,7 @@
 <track>
 	<name>DwarfTheme2</name>
 	<group>map</group>
+	<subgroup>dwarf</subgroup>
 	<fadeIn>10000</fadeIn>
 	<fadeOut>1000</fadeOut>
 	<xfadeIn>10</xfadeIn>
@@ -472,6 +481,7 @@
 <track>
 	<name>dwarf</name>
 	<group>map</group>
+	<subgroup>dwarf</subgroup>
 	<fadeIn>1000</fadeIn>
 	<fadeOut>1000</fadeOut>
 	<xfadeIn>500</xfadeIn>
@@ -501,48 +511,7 @@
 		<filename>music/battle-epic.ogg</filename>
 	</audio>
 	<audio>
-		<filename>music/battle_theme_a.ogg</filename>
-	</audio>
-	<audio>
-		<filename>music/the_adventure_begins.ogg</filename>
-	</audio>
-</track>
-<track>
-	<name>germanic</name>
-	<group>map</group>
-	<fadeIn>1000</fadeIn>
-	<fadeOut>1000</fadeOut>
-	<xfadeIn>500</xfadeIn>
-	<xfadeOut>500</xfadeOut>
-	<audio>
 		<filename>music/legends_of_the_north.ogg</filename>
-	</audio>
-	<audio>
-		<filename>music/war_on_water_1.ogg</filename>
-	</audio>
-	<audio>
-		<filename>music/war_on_water_2.ogg</filename>
-	</audio>
-	<audio>
-		<filename>music/war_on_water_3.ogg</filename>
-	</audio>
-	<audio>
-		<filename>music/icy_heights.ogg</filename>
-	</audio>
-	<audio>
-		<filename>music/journeys_end.ogg</filename>
-	</audio>
-	<audio>
-		<filename>music/wanderer.ogg</filename>
-	</audio>
-	<audio>
-		<filename>music/casualties_of_war.ogg</filename>
-	</audio>
-	<audio>
-		<filename>music/battle-epic.ogg</filename>
-	</audio>
-	<audio>
-		<filename>music/battle_theme_a.ogg</filename>
 	</audio>
 	<audio>
 		<filename>music/the_adventure_begins.ogg</filename>
@@ -551,6 +520,7 @@
 <track>
 	<name>teuton</name>
 	<group>map</group>
+	<subgroup>teuton</subgroup>
 	<fadeIn>1000</fadeIn>
 	<fadeOut>1000</fadeOut>
 	<xfadeIn>500</xfadeIn>
@@ -583,49 +553,39 @@
 		<filename>music/battle-epic.ogg</filename>
 	</audio>
 	<audio>
-		<filename>music/battle_theme_a.ogg</filename>
-	</audio>
-	<audio>
 		<filename>music/the_adventure_begins.ogg</filename>
 	</audio>
 </track>
 <track>
-	<name>bosque</name>
-	<group>map</group>
-	<fadeIn>1000</fadeIn>
-	<fadeOut>1000</fadeOut>
-	<xfadeIn>500</xfadeIn>
-	<xfadeOut>500</xfadeOut>
+	<name>Victory</name>
+	<group>win</group>
+	<fadeIn>0</fadeIn>
+	<fadeOut>500</fadeOut>
+	<xfadeIn>10</xfadeIn>
+	<xfadeOut>10</xfadeOut>
 	<audio>
-		<filename>music/battle.ogg</filename>
-	</audio>
-	<audio>
-		<filename>music/battle-epic.ogg</filename>
-	</audio>
-	<audio>
-		<filename>music/battle_theme_a.ogg</filename>
-	</audio>
-	<audio>
-		<filename>music/the_adventure_begins.ogg</filename>
+		<filename>music/victory.ogg</filename>
 	</audio>
 </track>
 <track>
-	<name>celt</name>
-	<group>map</group>
-	<fadeIn>1000</fadeIn>
-	<fadeOut>1000</fadeOut>
-	<xfadeIn>500</xfadeIn>
-	<xfadeOut>500</xfadeOut>
+	<name>Defeat</name>
+	<group>lose</group>
+	<fadeIn>0</fadeIn>
+	<fadeOut>500</fadeOut>
+	<xfadeIn>10</xfadeIn>
+	<xfadeOut>10</xfadeOut>
 	<audio>
-		<filename>music/battle.ogg</filename>
+		<filename>music/defeat.ogg</filename>
 	</audio>
+</track>
+<track>
+	<name>Defeat2</name>
+	<group>lose</group>
+	<fadeIn>0</fadeIn>
+	<fadeOut>500</fadeOut>
+	<xfadeIn>10</xfadeIn>
+	<xfadeOut>10</xfadeOut>
 	<audio>
-		<filename>music/battle-epic.ogg</filename>
-	</audio>
-	<audio>
-		<filename>music/battle_theme_a.ogg</filename>
-	</audio>
-	<audio>
-		<filename>music/the_adventure_begins.ogg</filename>
+		<filename>music/defeat2.ogg</filename>
 	</audio>
 </track>

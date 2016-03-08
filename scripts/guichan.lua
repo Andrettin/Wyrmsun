@@ -774,7 +774,7 @@ function RunMap(map, objective, fow, revealmap)
 			if (CurrentQuest ~= "" and GetQuestData(CurrentQuest, "LoadingMusic") ~= "") then
 				PlayMusicName(GetQuestData(CurrentQuest, "LoadingMusic"))
 			else
-				PlayMusicByGroupRandom("loading")
+				PlayMusicByGroupAndSubgroupRandom("loading", GetPlayerData(GetThisPlayer(), "RaceName"))
 			end
 		end
 
@@ -1481,7 +1481,7 @@ function GameStarting()
 			PlayMusicName(GetQuestData(CurrentQuest, "MapMusic"))
 		else
 			StopMusic()
-			PlayMusicByGroupRandom("map")
+			PlayMusicByGroupAndSubgroupRandom("map", GetPlayerData(GetThisPlayer(), "RaceName"))
 		end
 	end
 	--[[

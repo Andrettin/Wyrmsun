@@ -281,7 +281,7 @@ function LoadCivilizationUI(civilization)
 		StopMusic()
 	end
 	if (wyr.preferences.EnableOAML and GameRunning) then
-		PlayMusicByGroupRandom("map")
+		PlayMusicByGroupAndSubgroupRandom("map", civilization)
 	end
 	Load("scripts/ui.lua")
 	local ui_file = "scripts/civilizations/" .. civilization .. "/ui.lua"
