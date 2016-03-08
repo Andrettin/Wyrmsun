@@ -48,7 +48,6 @@ function RunEncyclopediaMenu()
 	
 	Load("scripts/game_concepts.lua")
 	Load("scripts/texts.lua")
-	Load("scripts/worlds.lua")
 	Load("scripts/menus/encyclopedia_civilizations.lua")
 
 	if (RunningScenario == false) then
@@ -995,22 +994,24 @@ function RunEncyclopediaWorldsMenu()
 	end
 	menu:addLabel("~<Encyclopedia: Worlds~>", offx + 320, offy + 104 + 36*(-4 + height_offset), nil, true)
 
+	local worlds = GetWorlds()
+
 	local world_x = 0
-	if (GetTableSize(Worlds) > 20) then
+	if (GetTableSize(worlds) > 20) then
 		world_x = -2
-	elseif (GetTableSize(Worlds) > 10) then
+	elseif (GetTableSize(worlds) > 10) then
 		world_x = -1
 	end
 	local world_y = -3
 
-	for world_key, world_value in pairsByKeys(Worlds) do
+	for i=1,table.getn(worlds) do
 		local world_hotkey = ""		
-		if (string.find(_(Worlds[world_key].Name), "~!") ~= nil) then
-			world_hotkey = string.sub(string.match(_(Worlds[world_key].Name), "~!%a"), 3)
+		if (string.find(_(GetWorldData(worlds[i], "Name")), "~!") ~= nil) then
+			world_hotkey = string.sub(string.match(_(GetWorldData(worlds[i], "Name")), "~!%a"), 3)
 			world_hotkey = string.lower(world_hotkey)
 		end
-		menu:addFullButton(_(Worlds[world_key].Name), world_hotkey, offx + 208 + (113 * world_x), offy + 104 + (36 * (world_y + height_offset)),
-			function() OpenEncyclopediaWorldEntry(world_key); end)
+		menu:addFullButton(_(GetWorldData(worlds[i], "Name")), world_hotkey, offx + 208 + (113 * world_x), offy + 104 + (36 * (world_y + height_offset)),
+			function() OpenEncyclopediaWorldEntry(worlds[i]); end)
 
 		if (world_y > 5 or (world_y > 4 and Video.Height < 600)) then
 			world_x = world_x + 2
@@ -1027,7 +1028,7 @@ function RunEncyclopediaWorldsMenu()
 	menu:run()
 end
 
-function OpenEncyclopediaWorldEntry(world_key)
+function OpenEncyclopediaWorldEntry(world)
 	if (RunningScenario == false) then
 		if not (IsMusicPlaying()) then
 			PlayMusicName("MenuTheme")
@@ -1038,7 +1039,7 @@ function OpenEncyclopediaWorldEntry(world_key)
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2
 
-	encyclopedia_entry_menu:addLabel("~<" .. Worlds[world_key].Name .. "~>", offx + 320, offy + 104 + 36*-2, nil, true)
+	encyclopedia_entry_menu:addLabel("~<" .. world .. "~>", offx + 320, offy + 104 + 36*-2, nil, true)
 
 	local l = MultiLineLabel()
 	l:setFont(Fonts["game"])
@@ -1047,11 +1048,11 @@ function OpenEncyclopediaWorldEntry(world_key)
 	encyclopedia_entry_menu:add(l, 32, offy + 104 + 36*0)
 	local description = ""
 	local background = ""
-	if (Worlds[world_key].Description ~= "") then
-		description = "Description: " .. Worlds[world_key].Description
+	if (GetWorldData(world, "Description") ~= "") then
+		description = "Description: " .. GetWorldData(world, "Description")
 	end
-	if (Worlds[world_key].Background ~= "") then
-		background = "\n\nBackground: " .. Worlds[world_key].Background
+	if (GetWorldData(world, "Background") ~= "") then
+		background = "\n\nBackground: " .. GetWorldData(world, "Background")
 	end
 	l:setCaption(description .. background)
 			
