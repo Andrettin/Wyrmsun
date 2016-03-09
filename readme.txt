@@ -65,7 +65,7 @@ https://github.com/Andrettin/Wyrmsun
 -----------------------------------------------------------------------
 
 * Abilities
-- Added "Puncture" learnable active ability (icon by Leo), available for units capable of making melee thrusting attacks.
+- Added "Puncture" learnable active ability (icon by Exidelo), available for units capable of making melee thrusting attacks.
 
 * Buildings
 - Improved Teuton smithy name generation.
@@ -132,7 +132,7 @@ https://github.com/Andrettin/Wyrmsun
 - Wyrmsun now features adaptive music pieces, which change according to context (i.e. the music becomes more intense when a battle occurs) (by Marcelo Fernandez) (https://github.com/marcelofg55/oaml).
 
 * Terrain
-- Overhaul of the forest tilesets (by Leo).
+- Overhaul of the forest tilesets (by Exidelo).
 
 * Units
 - When right-clicking on a tile-based resource, workers who are already carrying the resource at maximum capacity will now return goods and then begin harvesting.
@@ -156,7 +156,7 @@ https://github.com/Andrettin/Wyrmsun
 - New Teuton iron shield unit graphics (by Jinn).
 
 * Upgrades
-- Update to the Spatha's icon (by Leo).
+- Update to the Spatha's icon (by Exidelo).
 
 -----------------------------------------------------------------------
 - 1.9.9

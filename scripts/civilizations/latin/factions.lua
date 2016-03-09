@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2015 by Andrettin
+--      (c) Copyright 2015-2016 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -137,9 +137,21 @@ DefineFaction("France", {
 	}
 })
 
+DefineFaction("Italy", {
+	Civilization = "latin",
+	Type = "polity",
+	Colors = {"green", "red"},
+	DefaultTier = "kingdom",
+	Titles = {
+		"monarchy", "kingdom", "Kingdom",
+		"republic", "kingdom", "Republic"
+	}
+})
+
 DefineFaction("Moldavia", {
 	Civilization = "latin",
 	Type = "polity",
+	ParentCivilization = "Romania",
 	Colors = {"brown"},
 	DefaultTier = "duchy",
 	Titles = {
@@ -158,6 +170,13 @@ DefineFaction("Portugal", {
 	}
 })
 
+DefineFaction("Romania", {
+	Civilization = "latin",
+	Type = "polity",
+	Colors = {"yellow", "blue", "red"},
+	DefaultTier = "kingdom"
+})
+
 DefineFaction("Rome", {
 	Civilization = "latin",
 	Type = "polity",
@@ -174,6 +193,7 @@ DefineFaction("Rome", {
 DefineFaction("Savoy", {
 	Civilization = "latin",
 	Type = "polity",
+	ParentCivilization = "Italy",
 	Colors = {"brown"},
 	DefaultTier = "duchy",
 	Titles = {
@@ -184,6 +204,7 @@ DefineFaction("Savoy", {
 DefineFaction("Sicily", {
 	Civilization = "latin",
 	Type = "polity",
+	ParentCivilization = "Italy",
 	Colors = {"green"},
 	DefaultTier = "duchy",
 	Titles = {
@@ -215,6 +236,7 @@ DefineFaction("Transylvania", {
 DefineFaction("Venice", {
 	Civilization = "latin",
 	Type = "polity",
+	ParentCivilization = "Italy",
 	Colors = {"red"},
 	DefaultTier = "duchy", -- Venice was a duchy in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 	Titles = {
@@ -225,6 +247,7 @@ DefineFaction("Venice", {
 DefineFaction("Wallachia", {
 	Civilization = "latin",
 	Type = "polity",
+	ParentCivilization = "Romania",
 	Colors = {"brown"},
 	DefaultTier = "duchy",
 	Titles = {

@@ -1208,7 +1208,9 @@ DefineProvince("Dobruja", {
 	SettlementName = "Constanța",
 	CulturalSettlementNames = {
 		"latin", "Tomi", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
---				romanian = "Constanța"
+	},
+	FactionCulturalSettlementNames = {
+		"latin", "Romania", "Constanța"
 	},
 	SettlementLocation = {560, 130}, -- Constanta
 	Map = "maps/random/random-map-forest.smp",
@@ -2639,8 +2641,8 @@ DefineProvince("Moldavia", {
 	},
 	SettlementName = "Jassy",
 	SettlementLocation = {557, 121}, -- Jassy/Iași
-	CulturalSettlementNames = {
---				romanian = "Iași"
+	FactionCulturalSettlementNames = {
+		"latin", "Romania", "Iași"
 	},
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -3759,11 +3761,13 @@ DefineProvince("Transylvania", {
 	SettlementName = "Cluj",
 	SettlementLocation = {545, 122}, -- Cluj/Klausenburg
 	CulturalSettlementNames = {
---		"romanian", "Cluj",
 		"teuton", "Klausenburg", "name-compound-elements", {
 			"prefix", "high-german", "noun", "plural", "Klause",
 			"suffix", "high-german", "noun", "singular", "Burg"
 		}
+	},
+	FactionCulturalSettlementNames = {
+		"latin", "Romania", "Cluj"
 	},
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -4018,8 +4022,8 @@ DefineProvince("Wallachia", {
 	},
 	SettlementName = "Bucharest",
 	SettlementLocation = {554, 129}, -- Bucharest
-	CulturalSettlementNames = {
---				romanian = "Bucharest"
+	FactionCulturalSettlementNames = {
+		"latin", "Romania", "Bucharest"
 	},
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",

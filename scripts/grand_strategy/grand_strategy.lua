@@ -10,7 +10,7 @@
 --
 --      grand_strategy.lua - Defines the grand strategy game mode.
 --
---      (c) Copyright 2014-2015 by Andrettin
+--      (c) Copyright 2014-2016 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -118,6 +118,7 @@ function RunGrandStrategyGameSetupMenu()
 			GameResult = GameNoResult
 			GrandStrategyYear = math.floor(date_slider:getValue())
 			if (world_list[world:getSelected() + 1] ~= "Random") then
+				InitializeGrandStrategyWorldMap()
 				Load("scripts/grand_strategy/" .. string.lower(world_list[world:getSelected() + 1]) .. "_world_map.lua");
 				Load("scripts/grand_strategy/" .. string.lower(world_list[world:getSelected() + 1]) .. "_history.lua");
 			else
@@ -391,6 +392,7 @@ function RunGrandStrategyGameSetupMenu()
 	
 		if (IsMouseLeftButtonPressed() == false or ignore_mouse_state) then
 			if (world_list[world:getSelected() + 1] ~= "Random") then
+				InitializeGrandStrategyWorldMap()
 				Load("scripts/grand_strategy/" .. string.lower(world_list[world:getSelected() + 1]) .. "_world_map.lua");
 				Load("scripts/grand_strategy/" .. string.lower(world_list[world:getSelected() + 1]) .. "_history.lua");
 				

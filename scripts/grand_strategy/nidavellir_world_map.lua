@@ -606,7 +606,6 @@ SetWorldMapTileTerrain(44, 8, dark_plains_id)
 SetWorldMapTileTerrain(44, 9, hills_id)
 SetWorldMapTileTerrain(44, 10, hills_id)
 SetWorldMapTileTerrain(44, 11, hills_id)
-SetWorldMapTileCulturalName(44, 11, "dwarf", "Svarinshaug");
 SetWorldMapTileTerrain(44, 12, hills_id)
 SetWorldMapTileTerrain(44, 13, hills_id)
 SetWorldMapTileTerrain(44, 14, hills_id)
