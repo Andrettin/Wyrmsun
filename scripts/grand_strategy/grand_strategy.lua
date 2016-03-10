@@ -1068,6 +1068,7 @@ function GetFactionUnitTypeCount(faction, unit_type, include_under_construction)
 		unit_count = unit_count + GetProvinceUnitQuantity(WorldMapProvinces[key].Name, unit_type)
 		if (include_under_construction) then
 			unit_count = unit_count + GetProvinceUnderConstructionUnitQuantity(WorldMapProvinces[key].Name, unit_type)
+			unit_count = unit_count + GetProvinceMovingUnitQuantity(WorldMapProvinces[key].Name, unit_type)
 		end
 	end
 	return unit_count

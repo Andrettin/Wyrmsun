@@ -281,9 +281,6 @@ function LoadCivilizationUI(civilization)
 		if (UsingTechTree == false and civilization ~= GetPlayerData(GetThisPlayer(), "RaceName")) then
 			StopMusic()
 		end
-		if (GameRunning) then
-			PlayMusicByGroupAndSubgroupRandom("map", civilization)
-		end
 	end
 	Load("scripts/ui.lua")
 	local ui_file = "scripts/civilizations/" .. civilization .. "/ui.lua"

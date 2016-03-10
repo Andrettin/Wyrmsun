@@ -1470,7 +1470,7 @@ function GameStarting()
 		PlayMusicName(GetQuestData(CurrentQuest, "MapMusic"))
 	else
 		StopMusic()
-		PlayMusicByGroupAndSubgroupRandom("map", GetPlayerData(GetThisPlayer(), "RaceName"))
+		PlayMusicByGroupAndFactionRandom("map", GetPlayerData(GetThisPlayer(), "RaceName"), GetPlayerData(GetThisPlayer(), "Faction"))
 	end
 	--[[
 	if (wyr.preferences.ShowTips and not IsReplayGame() and not IsNetworkGame()) then
