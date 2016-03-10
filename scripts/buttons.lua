@@ -334,7 +334,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-carrots",
 DefineButton( { Pos = 4, Level = 0, Icon = "icon-red-potion",
 	Action = "train-unit", Value = "unit-potion-of-healing",
 	Key = "h", Hint = _("Buy Potion of ~!Healing"), Popup = "popup-item",
-	ForUnit = {"unit-teuton-stronghold", "unit-dwarven-stronghold"}
+	ForUnit = {"unit-teuton-stronghold", "unit-dwarven-stronghold", "unit-brising-stronghold"}
 } )
 
 -- Special Abilities ---------------------------------------------------

@@ -72,6 +72,9 @@ editor_types = {
 
 	"unit-brising-miner",
 	"unit-brising-militia",
+	"unit-brising-transport-ship",
+	"unit-brising-town-hall",
+	"unit-brising-stronghold",
 	"unit-brising-smithy",
 
 	"unit-surghan-mercenary-steelclad",

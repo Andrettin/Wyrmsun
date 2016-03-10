@@ -278,6 +278,7 @@ DefineModifier("upgrade-dwarven-masonry",
 	{"Armor", 5},
 	{"Points", 10},
 	{"apply-to", "unit-dwarven-town-hall"}, {"apply-to", "unit-dwarven-stronghold"},
+	{"apply-to", "unit-brising-town-hall"}, {"apply-to", "unit-brising-stronghold"},
 	{"apply-to", "unit-dwarven-mushroom-farm"}, {"apply-to", "unit-dwarven-barracks"},
 	{"apply-to", "unit-dwarven-lumber-mill"}, {"apply-to", "unit-dwarven-smithy"}, {"apply-to", "unit-brising-smithy"},
 	{"apply-to", "unit-dwarven-yale-pen"},
@@ -287,12 +288,14 @@ DefineModifier("upgrade-dwarven-masonry",
 
 DefineModifier("upgrade-dwarven-coinage",
 	{"improve-production", "gold", 10},
-	{"apply-to", "unit-dwarven-town-hall"}, {"apply-to", "unit-dwarven-stronghold"}
+	{"apply-to", "unit-dwarven-town-hall"}, {"apply-to", "unit-dwarven-stronghold"},
+	{"apply-to", "unit-brising-town-hall"}, {"apply-to", "unit-brising-stronghold"}
 )
 
 DefineModifier("upgrade-dwarven-runewriting",
 	{"TimeEfficiencyBonus", 10},
 	{"apply-to", "unit-dwarven-town-hall"}, {"apply-to", "unit-dwarven-stronghold"},
+	{"apply-to", "unit-brising-town-hall"}, {"apply-to", "unit-brising-stronghold"},
 	{"apply-to", "unit-dwarven-mushroom-farm"}, {"apply-to", "unit-dwarven-barracks"},
 	{"apply-to", "unit-dwarven-lumber-mill"}, {"apply-to", "unit-dwarven-smithy"}, {"apply-to", "unit-brising-smithy"},
 --	{"apply-to", "unit-dwarven-yale-pen"},
@@ -325,6 +328,14 @@ DefineModifier("upgrade-brising-clan-faction",
 )
 
 DefineModifier("upgrade-brising-clan-faction",
+	{"apply-to", "unit-dwarven-town-hall"}, {"convert-to", "unit-brising-town-hall"}
+)
+
+DefineModifier("upgrade-brising-clan-faction",
+	{"apply-to", "unit-dwarven-stronghold"}, {"convert-to", "unit-brising-stronghold"}
+)
+
+DefineModifier("upgrade-brising-clan-faction",
 	{"apply-to", "unit-dwarven-smithy"}, {"convert-to", "unit-brising-smithy"}
 )
 
@@ -334,6 +345,10 @@ DefineModifier("upgrade-brising-clan-faction",
 
 DefineModifier("upgrade-brising-clan-faction",
 	{"apply-to", "unit-dwarven-militia"}, {"convert-to", "unit-brising-militia"}
+)
+
+DefineModifier("upgrade-brising-clan-faction",
+	{"apply-to", "unit-dwarven-transport-ship"}, {"convert-to", "unit-brising-transport-ship"}
 )
 
 DefineModifier("upgrade-norlund-clan-faction",
@@ -413,6 +428,10 @@ DefineDependency("unit-dwarven-stronghold",
 	{"unit-dwarven-barracks", "upgrade-dwarven-masonry"}
 )
 
+DefineDependency("unit-brising-stronghold",
+	{"unit-dwarven-barracks", "upgrade-dwarven-masonry"}
+)
+
 DefineDependency("upgrade-dwarven-coinage",
 	{"unit-dwarven-smithy"}, "or", {"unit-brising-smithy"}
 )
@@ -445,8 +464,12 @@ DefineDependency("unit-dwarven-transport-ship",
 	{"unit-dwarven-lumber-mill"}
 )
 
+DefineDependency("unit-brising-transport-ship",
+	{"unit-dwarven-lumber-mill"}
+)
+
 DefineDependency("unit-dwarven-gryphon-rider",
-	{"unit-dwarven-stronghold", "unit-dwarven-lumber-mill"}
+	{"unit-dwarven-stronghold", "unit-dwarven-lumber-mill"}, "or", {"unit-brising-stronghold", "unit-dwarven-lumber-mill"}
 )
 
 DefineDependency("unit-brising-miner",

@@ -47,7 +47,7 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-boots",
 		"unit-brising-miner", "unit-brising-militia",
 		"unit-dwarven-yale-rider",
 		"unit-dwarven-ballista", "unit-dwarven-gryphon-rider",
-		"unit-dwarven-transport-ship",
+		"unit-dwarven-transport-ship", "unit-brising-transport-ship",
 		"unit-goblin-worker", "unit-goblin-thief", "unit-goblin-swordsman", "unit-goblin-spearman", "unit-goblin-archer",
 		"unit-goblin-war-machine", "unit-goblin-glider",
 		"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
@@ -81,7 +81,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-shield-1",
 		"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
 		"unit-slug", "unit-rat",
 		"unit-slime", "unit-yale", "unit-gryphon", "unit-wyrm",
-		"unit-dwarven-transport-ship",
+		"unit-dwarven-transport-ship", "unit-brising-transport-ship",
 		"dwarf-group"
 	}
 })
@@ -125,7 +125,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-battle-axe",
 		"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
 		"unit-slug", "unit-rat",
 		"unit-slime", "unit-yale", "unit-gryphon", "unit-wyrm",
---		"unit-dwarven-transport-ship",
+--		"unit-dwarven-transport-ship", "unit-brising-transport-ship",
 		"dwarf-group"
 	}
 })
@@ -221,7 +221,7 @@ DefineButton( { Pos = 4, Level = 0, Icon = "icon-dwarven-patrol-land",
 		"unit-goblin-thief", "unit-goblin-swordsman", "unit-goblin-spearman", "unit-goblin-archer",
 		"unit-goblin-war-machine", "unit-goblin-glider",
 		"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
---		"unit-dwarven-transport-ship",
+--		"unit-dwarven-transport-ship", "unit-brising-transport-ship",
 		"dwarf-group"
 	}
 })
@@ -276,6 +276,7 @@ DefineButton( { Pos = 13, Level = 0, Icon = "icon-rally-point",
 	Key = "r", Hint = _("Set ~!Rally Point"), Popup = "popup-commands",
 	ForUnit = {
 		"unit-dwarven-town-hall", "unit-dwarven-stronghold",
+		"unit-brising-town-hall", "unit-brising-stronghold",
 		"unit-dwarven-barracks",
 		"unit-dwarven-sentry-tower", "unit-dwarven-guard-tower"
 	}
@@ -286,7 +287,13 @@ DefineButton( { Pos = 13, Level = 0, Icon = "icon-rally-point",
 DefineButton( { Pos = 1, Level = 1, Icon = "icon-dwarven-town-hall",
 	Action = "build", Value = "unit-dwarven-town-hall",
 	Key = "h", Hint = _("Build Mead ~!Hall"), Popup = "popup-building",
-	ForUnit = {"unit-dwarven-miner", "unit-brising-miner"}
+	ForUnit = {"unit-dwarven-miner"}
+})
+
+DefineButton( { Pos = 1, Level = 1, Icon = "icon-dwarven-town-hall",
+	Action = "build", Value = "unit-brising-town-hall",
+	Key = "h", Hint = _("Build Mead ~!Hall"), Popup = "popup-building",
+	ForUnit = {"unit-brising-miner"}
 })
 
 DefineButton( { Pos = 2, Level = 1, Icon = "icon-dwarven-mushroom-farm",
@@ -372,7 +379,7 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-miner",
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-miner",
 	Action = "train-unit", Value = "unit-brising-miner",
 	Key = "m", Hint = _("Train ~!Miner"), Popup = "popup-unit",
-	ForUnit = {"unit-dwarven-town-hall", "unit-dwarven-stronghold"}
+	ForUnit = {"unit-brising-town-hall", "unit-brising-stronghold"}
 } )
 
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-axefighter",
@@ -413,6 +420,12 @@ DefineButton( { Pos = 6, Level = 0, Icon = "icon-dwarven-gryphon-rider",
 
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-transport-ship",
 	Action = "train-unit", Value = "unit-dwarven-transport-ship",
+	Key = "t", Hint = _("Build ~!Transport"), Popup = "popup-unit",
+	ForUnit = {"unit-dwarven-dock"}
+} )
+
+DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-transport-ship",
+	Action = "train-unit", Value = "unit-brising-transport-ship",
 	Key = "t", Hint = _("Build ~!Transport"), Popup = "popup-unit",
 	ForUnit = {"unit-dwarven-dock"}
 } )
@@ -528,7 +541,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-coinage",
 	Allowed = "check-single-research",
 	Description = _("+10% Gold Processing."),
 	Key = "c", Hint = _("Research ~!Coinage"), Popup = "popup-research",
-	ForUnit = {"unit-dwarven-stronghold"}
+	ForUnit = {"unit-dwarven-stronghold", "unit-brising-stronghold"}
 } )
 
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-norse-runewriting",
@@ -536,7 +549,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-norse-runewriting",
 	Allowed = "check-single-research",
 	Description = _("+10% Time Efficiency for all buildings, changes faction from tribe to polity."),
 	Key = "r", Hint = _("Research Dvalic ~!Runewriting"), Popup = "popup-research",
-	ForUnit = {"unit-dwarven-stronghold"}
+	ForUnit = {"unit-dwarven-stronghold", "unit-brising-stronghold"}
 } )
 
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-cauldron",
@@ -544,7 +557,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-cauldron",
 	Allowed = "check-single-research",
 	Description = _("+1 Fire Damage for Scouts, Pathfinders and Gryphon Riders, +5 Fire Damage for Ballistas."),
 	Key = "a", Hint = _("Research ~!Alchemy"), Popup = "popup-research",
-	ForUnit = {"unit-dwarven-stronghold"}
+	ForUnit = {"unit-dwarven-stronghold", "unit-brising-stronghold"}
 } )
 
 -- Upgrades ---------------------------------------------------------
@@ -759,6 +772,13 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-stronghold",
 	Allowed = "check-upgrade-to",
 	Key = "b", Hint = _("Upgrade to ~!Bastion"), Popup = "popup-building",
 	ForUnit = {"unit-dwarven-town-hall"}
+} )
+  
+DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-stronghold",
+	Action = "upgrade-to", Value = "unit-brising-stronghold",
+	Allowed = "check-upgrade-to",
+	Key = "b", Hint = _("Upgrade to ~!Bastion"), Popup = "popup-building",
+	ForUnit = {"unit-brising-town-hall"}
 } )
   
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-guard-tower",

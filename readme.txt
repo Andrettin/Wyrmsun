@@ -71,6 +71,7 @@ https://github.com/Andrettin/Wyrmsun
 - Improved Teuton smithy name generation.
 - Added a Brising-specific version of the Dwarven Smithy (+50% Time Efficiency).
 - Brising Smithies now have their own graphics (if the player has the Brising Faction Flair DLC).
+- Brising Mead Halls and Bastions now have their own graphics (if the player has the Brising Faction Flair DLC).
 
 * Civilizations
 - Added many new component words for Germanic settlement, province and smithy name generation.
@@ -154,6 +155,7 @@ https://github.com/Andrettin/Wyrmsun
 - Workers can now use mines owned by allies.
 - The Ritter graphics now have improved shading (modification by Jinn).
 - New Teuton iron shield unit graphics (by Jinn).
+- Brising Transports now have their own graphics (if the player has the Brising Faction Flair DLC).
 
 * Upgrades
 - Update to the Spatha's icon (by Exidelo).

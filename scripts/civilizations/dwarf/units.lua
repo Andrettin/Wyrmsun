@@ -664,6 +664,12 @@ DefineUnitType("unit-dwarven-transport-ship", { Name = _("Transport"),
 	}
 })
 
+DefineUnitType("unit-brising-transport-ship", {
+	Parent = "unit-dwarven-transport-ship",
+	Civilization = "dwarf",
+	Faction = "Brising Clan"
+} )
+
 DefineUnitType("unit-dwarven-town-hall", { Name = _("Mead Hall"),
 	Parent = "unit-template-town-hall",
 	Civilization = "dwarf",
@@ -680,6 +686,12 @@ DefineUnitType("unit-dwarven-town-hall", { Name = _("Mead Hall"),
 	Sounds = {
 		"help", "basic-dwarf-voices-help-town"
 	}
+} )
+
+DefineUnitType("unit-brising-town-hall", {
+	Parent = "unit-dwarven-town-hall",
+	Civilization = "dwarf",
+	Faction = "Brising Clan"
 } )
 
 DefineUnitType("unit-dwarven-stronghold", { Name = _("Bastion"),
@@ -699,6 +711,12 @@ DefineUnitType("unit-dwarven-stronghold", { Name = _("Bastion"),
 	Sounds = {
 		"help", "basic-dwarf-voices-help-town"
 	}
+} )
+
+DefineUnitType("unit-brising-stronghold", {
+	Parent = "unit-dwarven-stronghold",
+	Civilization = "dwarf",
+	Faction = "Brising Clan"
 } )
 
 DefineUnitType("unit-dwarven-mushroom-farm", { Name = _("Mushroom Farm"),
