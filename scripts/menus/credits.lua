@@ -162,7 +162,6 @@ function RunShowCreditsMenu()
 		"  Marcelo Fernandez",
 		"  bart",
 		"  Battle for Wesnoth Team",
-		"  cynicmusic",
 		"  Écrivain",
 		"  yd",
 		"  Aleksi Aubry-Carlson (Aleksi)",

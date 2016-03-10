@@ -26,10 +26,7 @@ Battle for Wesnoth Team:
 /music/victory2.ogg (licensed under the GPL 2.0)
 /music/wanderer.ogg (licensed under the GPL 2.0)
 
-cynicmusic:
-/music/battle_theme_a.ogg (licensed under the CC0)
-
-Écrivain:
+Ã‰crivain:
 /music/icy_heights.ogg (licensed under the CC0)
 
 Marcelo Fernandez (http://www.marcelofernandezmusic.com):

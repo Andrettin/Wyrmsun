@@ -59,8 +59,7 @@ DefineLanguage("dutch", {
 })
 
 DefineLanguage("dwarven", {
-	Name = "Dwarven",
---	GenerateMissingWords = true
+	Name = "Dwarven"
 })
 
 DefineLanguage("english", {
@@ -117,13 +116,11 @@ DefineLanguage("gaulish", {
 })
 
 DefineLanguage("gnomish", {
-	Name = "Gnomish",
---	GenerateMissingWords = true
+	Name = "Gnomish"
 })
 
 DefineLanguage("goblin", {
-	Name = "Goblin",
-	GenerateMissingWords = true
+	Name = "Goblin"
 })
 
 DefineLanguage("gothic", {
@@ -206,8 +203,7 @@ DefineLanguage("japanese", {
 })
 
 DefineLanguage("kobold", {
-	Name = "Kobold",
---	GenerateMissingWords = true
+	Name = "Kobold"
 })
 
 DefineLanguage("late-latin", {
@@ -286,8 +282,7 @@ DefineLanguage("old-flemish", { -- should be a dialect instead?
 })
 
 DefineLanguage("old-frankish", {
-	Name = "Old Frankish",
---	GenerateMissingWords = true
+	Name = "Old Frankish"
 })
 
 DefineLanguage("old-french", {
