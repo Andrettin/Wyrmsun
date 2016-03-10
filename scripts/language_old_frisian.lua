@@ -220,6 +220,14 @@ DefineLanguageWord("Horn", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	DerivesFrom = {"northwest-germanic", "noun", "Horna"} -- presumably
 })
 
+DefineLanguageWord("Hunger", { -- source also gives the alternative form "Honger"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 44.
+	Language = "old-frisian",
+	Type = "noun",
+	Meanings = {"Hunger"}, -- source gives the German "Hunger" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Hunhru"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Hwit", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 67.
 	Language = "old-frisian",
 	Type = "adjective",

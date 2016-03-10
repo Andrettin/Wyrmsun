@@ -120,6 +120,15 @@ DefineLanguageWord("Χέσ-χιον", { -- Source: Sean Crist, "An Analysis of *
 	Meanings = {"Oakum"} -- source gives the German word "Werg" as the meaning
 })
 
+DefineLanguageWord("Χέγχει", { -- this is (apparently) the third person singular present inflection; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 44.
+	Language = "greek",
+	Type = "verb", -- apparently
+	Meanings = {"Hunger"}, -- source gives the German "hungert" as the meaning
+	NumberPersonTenseMoodInflections = {
+		"singular", "third-person", "present", "indicative", "Χέγχει"
+	}
+})
+
 DefineLanguageWord("Χοίμαω", { -- first person singular; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 53.
 	Language = "greek",
 	Type = "verb",

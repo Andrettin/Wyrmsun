@@ -55,6 +55,7 @@ DefineLanguageWord("Anvil", {
 	Language = "english",
 	Type = "noun",
 	Meanings = {"Anvil"},
+	DerivesFrom = {"old-english", "noun", "Anfilte"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 124.
 	Gender = "neuter",
 	AffixNameTypes = {"separate", "suffix", "singular", "unit-class-smithy"} -- seems sensible
 })
@@ -1475,6 +1476,14 @@ DefineLanguageWord("House", {
 	Meanings = {"House"},
 	Gender = "neuter",
 	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 336.
+})
+
+DefineLanguageWord("Hunger", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Hunger"},
+	DerivesFrom = {"old-english", "noun", "Hungor"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 44.
+	Gender = "neuter"
 })
 
 DefineLanguageWord("Hunt", {

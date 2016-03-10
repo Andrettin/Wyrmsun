@@ -349,6 +349,13 @@ DefineLanguageWord("Fadēr", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Meanings = {"Father"}
 })
 
+DefineLanguageWord("Falta", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 124.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Joint"}, -- source gives the German "Fuge (das Zusammenschlagen)" as the meaning
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Fehu", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "proto-germanic",
 	Type = "noun",
@@ -607,6 +614,13 @@ DefineLanguageWord("Hraznō", { -- Source: Sean Crist, "An Analysis of *z loss i
 	Type = "noun",
 	Meanings = {"Wave"},
 	Gender = "feminine"
+})
+
+DefineLanguageWord("Hunhru", { -- source also gives the alternative form "hungru"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 44.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Hunger"}, -- source gives the German "Hunger" as the meaning
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Hurna", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 47.
@@ -1298,6 +1312,19 @@ DefineLanguageWord("Χwat", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Type = "pronoun",
 	Meanings = {"What"},
 	Nominative = "Χwat"
+})
+
+-- compounds
+
+DefineLanguageWord("Anafalta", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 124.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Anvil"}, -- source gives the German "Amboß" as the meaning
+	CompoundElements = {
+--		"prefix", -- "Ana"?
+		"suffix", "proto-germanic", "noun", "Falta"
+	},
+	Gender = "masculine"
 })
 
 -- Must re-check to see if actually correct

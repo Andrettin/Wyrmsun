@@ -392,6 +392,14 @@ DefineLanguageWord("Hund", { -- Source: Richard M. Runge, "The Phonetic Realizat
 	Meanings = {"Dog"}
 })
 
+DefineLanguageWord("Hungar", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 44.
+	Language = "old-saxon",
+	Type = "noun",
+	Meanings = {"Hunger"}, -- source gives the German "Hunger" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Hunhru"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Hurth", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-saxon",
 	Type = "noun",

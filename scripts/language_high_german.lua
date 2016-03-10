@@ -614,6 +614,14 @@ DefineLanguageWord("Fabian", {
 	NameTypes = {"person"}
 })
 
+DefineLanguageWord("Falz", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"Forest Bird Copulation"}, -- source gives the German "Begattung der Waldvögel" as the meaning; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 124.
+	DerivesFrom = {"middle-high-german", "noun", "Valz"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 124.
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Feld", {
 	Language = "high-german",
 	Type = "noun",
@@ -1204,11 +1212,12 @@ DefineLanguageWord("Hunger", { -- Source: http://www.duden.de/rechtschreibung/Hu
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"Hunger"},
+	DerivesFrom = {"old-high-german", "noun", "Hungar"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 44.
+	Gender = "masculine",
+	Uncountable = true,
 	NumberCaseInflections = {
 		"singular", "genitive", "Hungers"
 	},
-	Gender = "masculine",
-	Uncountable = true,
 	AffixNameTypes = {"compound", "prefix", "singular", "terrain-hills"} -- example: "Hungerberg"
 })
 
@@ -1874,14 +1883,6 @@ DefineLanguageWord("Schloss", { -- Source: http://www.duden.de/rechtschreibung/S
 	Gender = "neuter",
 })
 
-DefineLanguageWord("Schlossberg", { -- Source: http://www.duden.de/rechtschreibung/Schlossberg
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {"Hill under a Castle", "Hill under a Palace", "Mountain under a Castle", "Mountain under a Palace"},
-	Gender = "masculine",
-	NameTypes = {"terrain-hills"} -- example: "Schlossberg" (Graz)
-})
-
 DefineLanguageWord("Schmied", {
 	Language = "high-german",
 	Type = "noun",
@@ -2478,6 +2479,18 @@ DefineLanguageWord("Richard", {
 	},
 	Archaic = true,
 	NameTypes = {"person"}
+})
+
+DefineLanguageWord("Schlossberg", { -- Source: http://www.duden.de/rechtschreibung/Schlossberg
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"Hill under a Castle", "Hill under a Palace", "Mountain under a Castle", "Mountain under a Palace"},
+	CompoundElements = {
+		"prefix", "high-german", "noun", "Schloss",
+		"suffix", "high-german", "noun", "Berg"
+	},
+	Gender = "masculine",
+	NameTypes = {"terrain-hills"} -- example: "Schlossberg" (Graz)
 })
 
 DefineLanguageWord("Siegfried", {

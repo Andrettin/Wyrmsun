@@ -649,6 +649,14 @@ DefineLanguageWord("Sund", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	DerivesFrom = {"old-high-german", "noun", "Sundar"}
 })
 
+DefineLanguageWord("Valz", { -- source also gives the alternative forms "valze" and "velze"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 124.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Joint", "Indentation of the Sword Blade"}, -- source gives the German "Fuge, rinnenartige Vertiefung an der Schwertklinge" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Falta"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Viur", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 127.
 	Language = "middle-high-german",
 	Type = "noun",

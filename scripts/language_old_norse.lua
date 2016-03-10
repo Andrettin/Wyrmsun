@@ -736,6 +736,17 @@ DefineLanguageWord("Hundr", { -- Source: Richard M. Runge, "The Phonetic Realiza
 	Meanings = {"Dog"}
 })
 
+DefineLanguageWord("Hungr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 44.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Hunger"}, -- source gives the German "Hunger" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Hunhru"},
+	Gender = "masculine",
+	NumberCaseInflections = {
+		"singular", "genitive", "Hungrar"
+	}
+})
+
 DefineLanguageWord("Hurđ", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-norse",
 	Type = "noun",

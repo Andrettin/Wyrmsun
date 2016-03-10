@@ -531,6 +531,14 @@ DefineLanguageWord("Hneiwan", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	DerivesFrom = {"proto-indo-european", "verb", "Kneygʷh"}
 })
 
+DefineLanguageWord("Hûhrus", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 44.
+	Language = "gothic",
+	Type = "noun",
+	Meanings = {"Hunger"}, -- source gives the German "Hunger" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Hunhru"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Hunds", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
 	Language = "gothic",
 	Type = "noun",

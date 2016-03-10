@@ -57,6 +57,14 @@ DefineLanguageWord("Æþela", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Gender = "feminine"
 })
 
+DefineLanguageWord("Anfilte", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 124.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Anvil"}, -- source gives the German "Amboß" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Anafalta"},
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Âr", { -- source also gives the alternative form "Æ̂r" (with the circumflex accent on top of the Æ); Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 11.
 	Language = "old-english",
 	Type = "noun",
@@ -802,6 +810,14 @@ DefineLanguageWord("Hræn", { -- source also gives the alternative form "Hærn";
 	Meanings = {"Wave", "Sea"},
 	DerivesFrom = {"proto-germanic", "noun", "Hraznō"},
 	Gender = "feminine"
+})
+
+DefineLanguageWord("Hungor", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 44.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Hunger"}, -- source gives the German "Hunger" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Hunhru"},
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Hweowol", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 238.

@@ -63,6 +63,14 @@ DefineLanguageWord("Altiron", { -- this is the plural; source also gives the alt
 	}
 })
 
+DefineLanguageWord("Anafalz", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 124.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Anvil"}, -- source gives the German "Amboß" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Anafalta"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Bad", { -- source also gives the alternative form "Pad"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 133.
 	Language = "old-high-german",
 	Type = "noun",
@@ -671,6 +679,14 @@ DefineLanguageWord("Houbit", { -- Source: Richard M. Runge, "The Phonetic Realiz
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Main"} -- source gives German noun "Haupt" as the translation
+})
+
+DefineLanguageWord("Hungar", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 44.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Hunger"}, -- source gives the German "Hunger" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Hunhru"},
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Hunt", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
