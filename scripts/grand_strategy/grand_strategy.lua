@@ -128,6 +128,9 @@ function RunGrandStrategyGameSetupMenu()
 			GrandStrategyFaction = GetFactionFromName(faction_list[faction:getSelected() + 1])
 			SetPlayerFaction(GetFactionFromName(faction_list[faction:getSelected() + 1]).Civilization, GetFactionFromName(faction_list[faction:getSelected() + 1]).Name)
 			SetPlayerData(GetThisPlayer(), "RaceName", GrandStrategyFaction.Civilization)
+			StopMusic()
+			PlayMusicByGroupAndFactionRandom("map", GrandStrategyFaction.Civilization, GrandStrategyFaction.Name)
+			
 			GrandStrategyInterfaceState = "Province"
 			GrandStrategyMapWidthIndent = 0
 			GrandStrategyMapHeightIndent = 0
@@ -1403,6 +1406,9 @@ function RunGrandStrategyLoadGameMenu()
 			Factions = wyr[saved_games_list[saved_games:getSelected() + 1]].SavedFactions
 			GrandStrategyFaction = GetFactionFromName(wyr[saved_games_list[saved_games:getSelected() + 1]].SavedGrandStrategyFactionName)
 			SetPlayerFaction(GetFactionFromName(wyr[saved_games_list[saved_games:getSelected() + 1]].SavedGrandStrategyFactionName).Civilization, GetFactionFromName(wyr[saved_games_list[saved_games:getSelected() + 1]].SavedGrandStrategyFactionName).Name)
+			
+			StopMusic()
+			PlayMusicByGroupAndFactionRandom("map", GrandStrategyFaction.Civilization, GrandStrategyFaction.Name)
 			
 			WorldMapProvinces = wyr[saved_games_list[saved_games:getSelected() + 1]].SavedWorldMapProvinces
 			

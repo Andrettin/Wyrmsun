@@ -509,7 +509,7 @@
 	</audio>
 </track>
 <track>
-	<name>teuton</name>
+	<name>TeutonTheme</name>
 	<group>map</group>
 	<subgroup>teuton</subgroup>
 	<fadeIn>1000</fadeIn>
