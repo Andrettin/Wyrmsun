@@ -450,6 +450,21 @@ DefineLanguageWord("Hairto", { -- Source: Richard M. Runge, "The Phonetic Realiz
 	Meanings = {"Heart"}
 })
 
+DefineLanguageWord("Halba", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 51.
+	Language = "gothic",
+	Type = "noun",
+	Meanings = {"Half", "Part", "Side"}, -- source (apparently) gives the German "Hälfte, Teil, Seite" as the meaning
+	DerivesFrom = {"proto-germanic", "adjective", "Halba"},
+	Gender = "feminine"
+})
+
+DefineLanguageWord("Halbs", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 51.
+	Language = "gothic",
+	Type = "adjective",
+	Meanings = {"Half"}, -- source gives the German "halb" as the meaning
+	DerivesFrom = {"proto-germanic", "adjective", "Halba"}
+})
+
 DefineLanguageWord("Hals", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 50.
 	Language = "gothic",
 	Type = "noun",
@@ -859,11 +874,27 @@ DefineLanguageWord("Sibun", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Number = 7
 })
 
+DefineLanguageWord("Sigis", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 214.
+	Language = "gothic",
+	Type = "noun",
+	Meanings = {"Victory"}, -- source gives the German "Sieg" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Segiz"},
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Siggwan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "gothic",
 	Type = "verb",
 	Meanings = {"Sing"}, -- apparently, but not entirely clear from source
 	DerivesFrom = {"proto-germanic", "verb", "Singwanan"}
+})
+
+DefineLanguageWord("Sihu", { -- source is unsure whether this is a writing mistake for "sigu"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 214.
+	Language = "gothic",
+	Type = "noun",
+	Meanings = {"Victory"}, -- source gives the German "Sieg" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Segiz"},
+	Gender = "neuter"
 })
 
 DefineLanguageWord("Silubr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 221.
@@ -905,6 +936,14 @@ DefineLanguageWord("Speiwan", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Language = "gothic",
 	Type = "verb",
 	Meanings = {"Spit"}
+})
+
+DefineLanguageWord("Stains", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 245.
+	Language = "gothic",
+	Type = "noun",
+	Meanings = {"Stone"}, -- source (apparently) gives the German "Stein" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Staina"},
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Standan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 3, Subsection 1.

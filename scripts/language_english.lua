@@ -1216,6 +1216,21 @@ DefineLanguageWord("Guild", {
 	AffixNameTypes = {"compound", "prefix", "singular", "settlement"} -- example: "Guildford"
 })
 
+DefineLanguageWord("Half", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Half"},
+	DerivesFrom = {"old-english", "noun", "Healf"}, -- presumably; could also have come from the corresponding adjective
+	Gender = "neuter"
+})
+
+DefineLanguageWord("Half", {
+	Language = "english",
+	Type = "adjective",
+	Meanings = {"Half"},
+	DerivesFrom = {"old-english", "adjective", "Healf"} -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 51.
+})
+
 DefineLanguageWord("Ham", {
 	Language = "english",
 	Type = "noun", -- correct?
@@ -1593,6 +1608,7 @@ DefineLanguageWord("King", {
 	Language = "english",
 	Type = "noun",
 	Meanings = {"King"},
+	DerivesFrom = {"old-english", "noun", "Cyning"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 27.
 	Gender = "masculine",
 	AffixNameTypes = {"compound", "prefix", "singular", "genitive", "settlement"} -- example: "Kingston"
 })
@@ -2613,6 +2629,7 @@ DefineLanguageWord("Stone", {
 	Language = "english",
 	Type = "noun",
 	Meanings = {"Stone"},
+	DerivesFrom = {"old-english", "noun", "Stân"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 245.
 	Gender = "neuter",
 	AffixNameTypes = {
 		"compound", "prefix", "singular", "settlement", -- example: "Stonehaven"; Source: "Philip's International School Atlas", 2006, p. 64.
@@ -2625,6 +2642,7 @@ DefineLanguageWord("Stone", {
 	Language = "english",
 	Type = "adjective",
 	Meanings = {"Stone"},
+	DerivesFrom = {"old-english", "noun", "Stân"}, -- presumably, since the corresponding noun does
 	AffixNameTypes = {"separate", "prefix", "singular", "unit-class-smithy"} -- seems sensible
 })
 

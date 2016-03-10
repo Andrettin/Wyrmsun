@@ -506,6 +506,29 @@ DefineLanguageWord("Hagazussa", { -- Source: Alaric Hall, "The Meanings of Elf a
 	}
 })
 
+DefineLanguageWord("Halftanôd", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 51.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Half"}, -- source (apparently) gives the German "Hälfte" as the meaning
+	DerivesFrom = {"proto-germanic", "adjective", "Halba"}, -- comes from the (Proto-Germanic or Old High German?) verb "halftanôn"
+	Gender = "neuter"
+})
+
+DefineLanguageWord("Halp", { -- source also gives the alternative form "halb"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 51.
+	Language = "old-high-german",
+	Type = "adjective",
+	Meanings = {"Half"}, -- source gives the German "halb" as the meaning
+	DerivesFrom = {"proto-germanic", "adjective", "Halba"}
+})
+
+DefineLanguageWord("Halpa", { -- source also gives the alternative form "halba"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 51.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Side", "Direction"}, -- source gives the German "Seite, Richtung" as the meaning
+	DerivesFrom = {"proto-germanic", "adjective", "Halba"},
+	Gender = "feminine"
+})
+
 DefineLanguageWord("Hals", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 50.
 	Language = "old-high-german",
 	Type = "noun",
@@ -740,6 +763,13 @@ DefineLanguageWord("Kōl", { -- Source: Richard M. Runge, "The Phonetic Realizat
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Cabbage"}
+})
+
+DefineLanguageWord("Kuning", { -- source also gives the alternative form "chuninc"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 27.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"King"}, -- source gives the German "König" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Kuninga"}
 })
 
 DefineLanguageWord("Kweman", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
@@ -1073,6 +1103,14 @@ DefineLanguageWord("Sibun", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Number = 7
 })
 
+DefineLanguageWord("Sigu", { -- source also gives the alternative forms "sigo", "sigi" and "siki"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 214.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Victory"}, -- source (apparently) gives the German "Sieg" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Segiz"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Silabar", { -- source also gives the alternative forms "Silapar" and "Silbar"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 221.
 	Language = "old-high-german",
 	Type = "noun",
@@ -1157,6 +1195,14 @@ DefineLanguageWord("Standan", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Language = "old-high-german",
 	Type = "verb",
 	Meanings = {"Stand"}
+})
+
+DefineLanguageWord("Stein", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 245.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Stone"}, -- source gives the German "Stein" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Staina"},
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Stīgan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.

@@ -273,6 +273,21 @@ DefineLanguageWord("Grôni", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	DerivesFrom = {"proto-germanic", "adjective", "Grônia"}
 })
 
+DefineLanguageWord("Halƀa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 51.
+	Language = "old-saxon",
+	Type = "noun",
+	Meanings = {"Half", "Side"}, -- source gives the German "Hälfte, Seite" as the meaning
+	DerivesFrom = {"proto-germanic", "adjective", "Halba"},
+	Gender = "feminine"
+})
+
+DefineLanguageWord("Half", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 51.
+	Language = "old-saxon",
+	Type = "adjective",
+	Meanings = {"Half"}, -- source gives the German "halb" as the meaning
+	DerivesFrom = {"proto-germanic", "adjective", "Halba"}
+})
+
 DefineLanguageWord("Hals", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 50.
 	Language = "old-saxon",
 	Type = "noun",
@@ -326,7 +341,7 @@ DefineLanguageWord("Hêm", { -- Source: August Fick and Alf Torp, "Wortschatz de
 })
 
 DefineLanguageWord("Hême", { -- dative; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 52.
-	Language = "old-high-german",
+	Language = "old-saxon",
 	Type = "adverb",
 	Meanings = {"Home"}, -- source gives the German "zu Hause" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Haima"}, -- unclear if the word comes from this noun or from one of the related adverbs
@@ -432,6 +447,13 @@ DefineLanguageWord("Jung", {
 	Language = "old-saxon",
 	Type = "adjective",
 	Meanings = {"Young"} -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
+})
+
+DefineLanguageWord("Kuning", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 27.
+	Language = "old-saxon",
+	Type = "noun",
+	Meanings = {"King"}, -- source (apparently) gives the German "König" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Kuninga"}
 })
 
 DefineLanguageWord("Kunni", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
@@ -603,6 +625,14 @@ DefineLanguageWord("Sehan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	}
 })
 
+DefineLanguageWord("Sigi", { -- source gives "sigi- (drohtin)"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 214.
+	Language = "old-saxon",
+	Type = "noun", -- correct?
+	Meanings = {"Victory"}, -- source (apparently?) gives the German "Sieg" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Segiz"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Siluƀar", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 221.
 	Language = "old-saxon",
 	Type = "noun",
@@ -631,6 +661,14 @@ DefineLanguageWord("Sorgôn", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Type = "verb",
 	Meanings = {"Worry"}, -- source gives the German "sorgen" as the meaning
 	DerivesFrom = {"proto-germanic", "verb", "Surgên"}
+})
+
+DefineLanguageWord("Stên", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 245.
+	Language = "old-saxon",
+	Type = "noun",
+	Meanings = {"Stone"}, -- source (apparently) gives the German "Stein" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Staina"},
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Suht", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.

@@ -327,6 +327,13 @@ DefineLanguageWord("Cwic", { -- source gives the word as "Cwic(u)"; Source: Winf
 	DerivesFrom = {"proto-indo-european", "adjective", "Gʷīwos"}
 })
 
+DefineLanguageWord("Cyning", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 27.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"King"}, -- source (apparently) gives the German "König" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Kuninga"}
+})
+
 DefineLanguageWord("Cynn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
 	Language = "old-english",
 	Type = "noun",
@@ -674,6 +681,21 @@ DefineLanguageWord("Healdan", { -- Source: Richard M. Runge, "The Phonetic Reali
 	Language = "old-english",
 	Type = "verb",
 	Meanings = {"Hold"}
+})
+
+DefineLanguageWord("Healf", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 51.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Half", "Side"}, -- source gives the German "Hälfte, Seite" as the meaning
+	DerivesFrom = {"proto-germanic", "adjective", "Halba"},
+	Gender = "feminine"
+})
+
+DefineLanguageWord("Healf", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 51.
+	Language = "old-english",
+	Type = "adjective",
+	Meanings = {"Half"}, -- source gives the German "halb" as the meaning
+	DerivesFrom = {"proto-germanic", "adjective", "Halba"}
 })
 
 DefineLanguageWord("Heals", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 50.
@@ -1247,6 +1269,14 @@ DefineLanguageWord("Sēon", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	}
 })
 
+DefineLanguageWord("Sigor", { -- source also gives the alternative form "sige"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 214.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Victory"}, -- source (apparently) gives the German "Sieg" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Segiz"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Smiþ", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 263.
 	Language = "old-english",
 	Type = "noun",
@@ -1299,6 +1329,14 @@ DefineLanguageWord("Spinelhealf", { -- Source: Alaric Hall, "The Meanings of Elf
 	Language = "old-english",
 	Type = "noun",
 	Meanings = {"Spindle-Side"}
+})
+
+DefineLanguageWord("Stân", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 245.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Stone"}, -- source (apparently) gives the German "Stein" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Staina"},
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Standan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 3, Subsection 1.

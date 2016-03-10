@@ -300,6 +300,21 @@ DefineLanguageWord("Grüene", { -- Source: August Fick and Alf Torp, "Wortschatz
 	DerivesFrom = {"old-high-german", "adjective", "Gruoni"}
 })
 
+DefineLanguageWord("Halbe", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 51.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Side", "Direction"}, -- source gives the German "Seite, Richtung" as the meaning
+	DerivesFrom = {"old-high-german", "noun", "Halpa"},
+	Gender = "feminine"
+})
+
+DefineLanguageWord("Halp", { -- source also gives the inflected form "halber"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 51.
+	Language = "middle-high-german",
+	Type = "adjective",
+	Meanings = {"Half"}, -- source gives the German "halb" as the meaning
+	DerivesFrom = {"old-high-german", "adjective", "Halp"}
+})
+
 DefineLanguageWord("Hals", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 50.
 	Language = "middle-high-german",
 	Type = "noun",
@@ -452,6 +467,16 @@ DefineLanguageWord("Kien", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Type = "noun",
 	Meanings = {"Fir", "Spruce"," Fir Splinter", "Fir Torch", "Spruce Splinter", "Spruce Torch"},
 	Gender = "masculine"
+})
+
+DefineLanguageWord("Künec", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 27.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"King"}, -- source gives the German "König" as the meaning
+	DerivesFrom = {"old-high-german", "noun", "Kuning"},
+	NumberCaseInflections = {
+		"singular", "genitive", "Küneges"
+	}
 })
 
 DefineLanguageWord("Lant", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 184.
@@ -611,6 +636,14 @@ DefineLanguageWord("Rünne", { -- Source: Sean Crist, "An Analysis of *z loss in
 	Gender = "feminine"
 })
 
+DefineLanguageWord("Sige", { -- source also gives the alternative form "sic"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 214.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Victory"}, -- source (apparently) gives the German "Sieg" as the meaning
+	DerivesFrom = {"old-high-german", "noun", "Sigu"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Silber", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 221.
 	Language = "middle-high-german",
 	Type = "noun",
@@ -631,6 +664,14 @@ DefineLanguageWord("Smit", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Type = "noun",
 	Meanings = {"Smith", "Skilled Metalworker"}, -- source gives the German "Schmied, (kunstfertiger) Arbeiter in Metall"
 	DerivesFrom = {"old-high-german", "noun", "Smid"},
+	Gender = "masculine"
+})
+
+DefineLanguageWord("Stein", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 245.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Stone"}, -- source gives the German "Stein" as the meaning
+	DerivesFrom = {"old-high-german", "noun", "Stein"},
 	Gender = "masculine"
 })
 

@@ -559,6 +559,18 @@ DefineLanguageWord("Hailaga", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Meanings = {"Holy"} -- source gives the German "heilig"
 })
 
+DefineLanguageWord("Halba", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 51.
+	Language = "proto-germanic",
+	Type = "adjective",
+	Meanings = {"Half", "Split"} -- source gives the German "halb (eigentlich gespalten)" as the meaning
+})
+
+DefineLanguageWord("Halbiþô", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 51.
+	Language = "proto-germanic",
+	Type = "noun", -- apparently
+	Meanings = {"Half"} -- source (apparently) gives the German "Hälfte" as the meaning
+})
+
 DefineLanguageWord("Hardu", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 48.
 	Language = "proto-germanic",
 	Type = "adjective",
@@ -673,6 +685,12 @@ DefineLanguageWord("Kuni", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Race"}
+})
+
+DefineLanguageWord("Kuninga", { -- source also gives the alternative form "kununga"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 27.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"King"} -- source gives the German "König" as the meaning
 })
 
 DefineLanguageWord("Landa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 184.
@@ -882,6 +900,13 @@ DefineLanguageWord("Saiþa", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Segiz", { -- source gives "segiz(a)"; source also gives the alternative form "segu"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 214.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Victory"}, -- source gives the German "Sieg" as the meaning
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Sēþiz", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "proto-germanic",
 	Type = "noun",
@@ -952,6 +977,13 @@ DefineLanguageWord("Snaigva", { -- source also gives the forms "Snaiva", "Snaigv
 	Meanings = {"Snow"},
 	Gender = "masculine",
 	Uncountable = true -- seems likely to be uncountable
+})
+
+DefineLanguageWord("Staina", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 245.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Stone"}, -- source gives the German "Stein" as the meaning
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Sumara", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.

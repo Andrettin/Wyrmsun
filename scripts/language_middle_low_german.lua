@@ -101,6 +101,13 @@ DefineLanguageWord("Hēde", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Gender = "feminine"
 })
 
+DefineLanguageWord("Helfte", { -- source also gives the alternative form "helft"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 51.
+	Language = "middle-low-german",
+	Type = "noun", -- apparently
+	Meanings = {"Half"}, -- source (apparently) gives the German "Hälfte" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Halbiþô"}
+})
+
 DefineLanguageWord("Kên", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 4.
 	Language = "middle-low-german",
 	Type = "noun",

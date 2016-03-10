@@ -307,6 +307,13 @@ DefineLanguageWord("Rấdhas", { -- Source: August Fick and Alf Torp, "Wortschat
 	Gender = "neuter"
 })
 
+DefineLanguageWord("Sáhas", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 214.
+	Language = "sanskrit",
+	Type = "noun",
+	Meanings = {"Violence", "Victory"}, -- source gives the German "Gewalt, Sieg" as the meaning
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Sámâ", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.
 	Language = "sanskrit",
 	Type = "noun",

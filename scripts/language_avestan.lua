@@ -45,6 +45,12 @@ DefineLanguageWord("Hama", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Meanings = {"Summer"} -- source gives the German "Sommer" as the meaning
 })
 
+DefineLanguageWord("Hazaṅh", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 214.
+	Language = "avestan",
+	Type = "noun",
+	Meanings = {"Violence", "Power", "Predation"} -- source gives the German "Gewalt, Macht, Raub" as the meaning
+})
+
 DefineLanguageWord("Marezu", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 160.
 	Language = "avestan",
 	Type = "noun",

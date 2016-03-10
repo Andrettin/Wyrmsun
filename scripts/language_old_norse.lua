@@ -92,7 +92,7 @@ DefineLanguageWord("Alfr", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	}
 })
 
-DefineLanguageWord("Ali", { -- this is the participle; source gives "ali(þ)"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 19.
+DefineLanguageWord("Ali", { -- this is the (present?) participle; source gives "ali(þ)"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 19.
 	Language = "old-norse",
 	Type = "verb",
 	Meanings = {},
@@ -575,6 +575,21 @@ DefineLanguageWord("Hafr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Meanings = {"Male Goat"}
 })
 
+DefineLanguageWord("Halfa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 51.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Half", "Part", "Side"}, -- source gives the German "Hälfte, Teil, Seite" as the meaning
+	DerivesFrom = {"proto-germanic", "adjective", "Halba"},
+	Gender = "feminine"
+})
+
+DefineLanguageWord("Halfr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 51.
+	Language = "old-norse",
+	Type = "adjective",
+	Meanings = {"Half"}, -- source gives the German "halb" as the meaning
+	DerivesFrom = {"proto-germanic", "adjective", "Halba"}
+})
+
 DefineLanguageWord("Hals", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 50.
 	Language = "old-norse",
 	Type = "noun",
@@ -657,6 +672,14 @@ DefineLanguageWord("Heimskr", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Type = "adjective",
 	Meanings = {"Dumb"}, -- source gives the German "dumm (immer zu Hause hockend)" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Haima"} -- apparently
+})
+
+DefineLanguageWord("Helfđ", { -- source also gives the alternative form "helft"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 51.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Half"}, -- source (apparently) gives the German "Hälfte" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Halbiþô"},
+	Gender = "feminine"
 })
 
 DefineLanguageWord("Hildr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 50.
@@ -803,6 +826,14 @@ DefineLanguageWord("Kona", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Type = "noun",
 	Meanings = {"Woman"},
 	DerivesFrom = {"proto-indo-european", "noun", "Gʷen"}
+})
+
+DefineLanguageWord("Konungr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 27.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"King"}, -- source gives the German "König" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Kuninga"},
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Korn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
@@ -1080,6 +1111,17 @@ DefineLanguageWord("Síða", { -- Source: Alaric Hall, "The Meanings of Elf and 
 	Meanings = {"Work Magic"}
 })
 
+DefineLanguageWord("Sigr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 214.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Victory"}, -- source (apparently) gives the German "Sieg" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Segiz"},
+	Gender = "masculine",
+	NumberCaseInflections = {
+		"singular", "genitive", "Sigrs"
+	}
+})
+
 DefineLanguageWord("Silfr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 221.
 	Language = "old-norse",
 	Type = "noun",
@@ -1125,6 +1167,14 @@ DefineLanguageWord("Sorg", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Meanings = {"Worry"}, -- source (apparently) gives the German "Sorge" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Surgô"},
 	Gender = "feminine"
+})
+
+DefineLanguageWord("Steinn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 245.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Stone"}, -- source (apparently) gives the German "Stein" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Staina"},
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Stīga", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.

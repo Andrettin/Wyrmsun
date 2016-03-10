@@ -38,6 +38,10 @@ DefineCharacter("Eymund", { -- Source: Henry Adams Bellows (transl.), "The Poeti
 
 DefineCharacter("Halfdan the Old Skjoldung", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", pp. 221-223.
 	Name = "Halfdan", -- mythical king of Denmark; had an ice-cold sword; was strengthened by king Eymund of Holmgarth and slew Sigtrygg with the ice-cold sword; married Eymund's daughter Almveig
+	NameElements = {
+		"compound", "prefix", "old-norse", "adjective", "Halfr", -- presumably
+--		"compound", "suffix", -- ?
+	},
 	ExtraName = "the Old",
 	Dynasty = "Skjoldung", -- the text gives Halfdan the Old both as "the foremost of the Skjoldungs", and as a progenitor of the Skjoldungs (along with the Skilfings, Othlings and Ynglings) himself
 	Gender = "male",
@@ -73,6 +77,9 @@ DefineCharacter("Authi", { -- Source: Henry Adams Bellows (transl.), "The Poetic
 
 DefineCharacter("Ali", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 222.
 	Name = "Ali",
+	NameElements = {
+		"word", "old-norse", "verb", "present", "Ali" -- presumably; also, not certain if that is the present participle of the verb, or another participle form
+	},
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
@@ -85,6 +92,10 @@ DefineCharacter("Ali", { -- Source: Henry Adams Bellows (transl.), "The Poetic E
 
 DefineCharacter("Sigtrygg", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 222.
 	Name = "Sigtrygg", -- Halfdan the Old slew him with an ice-cold sword
+	NameElements = {
+		"compound", "prefix", "old-norse", "noun", "Sigr", -- presumably
+		"compound", "suffix", "old-norse", "adjective", "Tryggr" -- presumably
+	},
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
@@ -196,6 +207,9 @@ DefineCharacter("Jofurmar Dögling", { -- Source: Henry Adams Bellows (transl.),
 
 DefineCharacter("Alf the Old Dögling", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 223.
 	Name = "Alf", -- apparently isn't the same Alf the Old who is father of Instein, since they have different fathers themselves
+	NameElements = {
+		"word", "old-norse", "noun", "Alfr" -- presumably
+	},
 	ExtraName = "the Old",
 	Dynasty = "Dögling",
 	Gender = "male",
@@ -232,6 +246,9 @@ DefineCharacter("Saefari", { -- Source: Kevin Crossley-Holland, "The Norse Myths
 
 DefineCharacter("Ulf", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 222.
 	Name = "Ulf",
+	NameElements = {
+		"word", "old-norse", "noun", "Ulfr" -- presumably
+	},
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
@@ -243,6 +260,9 @@ DefineCharacter("Ulf", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1
 
 DefineCharacter("Alf the Old", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 222.
 	Name = "Alf",
+	NameElements = {
+		"word", "old-norse", "noun", "Alfr" -- presumably
+	},
 	ExtraName = "the Old",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
@@ -255,6 +275,10 @@ DefineCharacter("Alf the Old", { -- Source: Kevin Crossley-Holland, "The Norse M
 
 DefineCharacter("Instein", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 100-101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 222.
 	Name = "Instein", -- one of the warriors of King Half of Horthaland
+	NameElements = {
+--		"compound", "prefix" -- ?
+		"compound", "suffix", "old-norse", "noun", "Steinn" -- presumably
+	},
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
@@ -266,6 +290,10 @@ DefineCharacter("Instein", { -- Source: Kevin Crossley-Holland, "The Norse Myths
 
 DefineCharacter("Saekonung", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101.
 	Name = "Saekonung",
+	NameElements = {
+--		"compound", "prefix", -- ?
+		"compound", "suffix", "old-norse", "noun", "Konungr" -- presumably
+	},
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
@@ -420,6 +448,10 @@ DefineCharacter("Skurhold", { -- Source: Kevin Crossley-Holland, "The Norse Myth
 
 DefineCharacter("Isulf", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 224.
 	Name = "Isulf", -- also known as Isolf
+	NameElements = {
+--		"compound", "prefix", -- ?
+		"compound", "suffix", "old-norse", "noun", "Ulfr" -- presumably
+	},
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
@@ -432,6 +464,10 @@ DefineCharacter("Isulf", { -- Source: Kevin Crossley-Holland, "The Norse Myths",
 
 DefineCharacter("Osulf", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 224.
 	Name = "Osulf", -- also known as Osolf
+	NameElements = {
+--		"compound", "prefix", -- ?
+		"compound", "suffix", "old-norse", "noun", "Ulfr" -- presumably
+	},
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
@@ -444,6 +480,9 @@ DefineCharacter("Osulf", { -- Source: Kevin Crossley-Holland, "The Norse Myths",
 
 DefineCharacter("Hild", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", pp. 223-224.
 	Name = "Hild",
+	NameElements = {
+		"word", "old-norse", "noun", "Hildr" -- presumably
+	},
 	Gender = "female",
 	Type = "unit-teuton-archer",
 	Civilization = "norse",
@@ -454,6 +493,9 @@ DefineCharacter("Hild", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 
 
 DefineCharacter("Half", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 222.
 	Name = "Half", -- also known as Hoalf; king of Horthaland (the Halfsrekkar); Instein was one of his warriors
+	NameElements = {
+		"word", "old-norse", "adjective", "Halfr" -- presumably
+	},
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
@@ -720,6 +762,10 @@ DefineCharacter("Randver", { -- Source: Kevin Crossley-Holland, "The Norse Myths
 
 DefineCharacter("Sigurd Ring", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 227.
 	Name = "Sigurd",
+	NameElements = {
+		"compound", "prefix", "old-norse", "noun", "Sigr" -- presumably
+--		"compound", "suffix" -- ?
+	},
 	ExtraName = "Ring",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
@@ -820,6 +866,9 @@ DefineCharacter("Thorir the Iron-Shield", { -- Source: Henry Adams Bellows (tran
 
 DefineCharacter("Ulf the Gaper", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 224.
 	Name = "Ulf",
+	NameElements = {
+		"word", "old-norse", "noun", "Ulfr" -- presumably
+	},
 	ExtraName = "the Gaper",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
@@ -831,6 +880,9 @@ DefineCharacter("Ulf the Gaper", { -- Source: Henry Adams Bellows (transl.), "Th
 
 DefineCharacter("Brodd", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 224.
 	Name = "Brodd",
+	NameElements = {
+		"word", "old-norse", "noun", "Broddr" -- presumably
+	},
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
@@ -925,6 +977,9 @@ DefineCharacter("Hakon Hakonson", { -- Source: Snorri Sturlson, "Heimskringla", 
 
 DefineCharacter("Alf", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 142.
 	Name = "Alf", -- also known as Alfus; officiated in Greenland; presumably was Bishop of Greenland
+	NameElements = {
+		"word", "old-norse", "noun", "Alfr" -- presumably
+	},
 	Gender = "male",
 	Type = "unit-teuton-swordsman", -- should be priest
 	Civilization = "norse", -- presumably

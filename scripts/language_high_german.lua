@@ -948,6 +948,27 @@ DefineLanguageWord("Hagen", { -- Source: http://www.duden.de/rechtschreibung/Hag
 	NameTypes = {"person"}
 })
 
+DefineLanguageWord("Halb", {
+	Language = "high-german",
+	Type = "adjective",
+	Meanings = {"Half"},
+	DerivesFrom = {"middle-high-german", "adjective", "Halp"} -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 51.
+})
+
+DefineLanguageWord("Hälfte", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"Half"},
+	DerivesFrom = {"middle-low-german", "noun", "Helfte"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 51.
+	Gender = "feminine",
+	NumberCaseInflections = {
+		"plural", "nominative", "Hälften",
+		"plural", "accusative", "Hälften",
+		"plural", "dative", "Hälften",
+		"plural", "genitive", "Hälften"
+	}
+})
+
 DefineLanguageWord("Hals", {
 	Language = "high-german",
 	Type = "noun",
@@ -1347,11 +1368,12 @@ DefineLanguageWord("König", {
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"King"},
+	DerivesFrom = {"middle-high-german", "noun", "Künec"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 27.
+	Gender = "masculine",
 	NumberCaseInflections = {
 		"singular", "genitive", "Königs",
 		"plural", "nominative", "Könige"
 	},
-	Gender = "masculine",
 	AffixNameTypes = {
 		"compound", "prefix", "singular", "nominative", "settlement" -- example: "Königgrätz"
 	}
@@ -1361,10 +1383,11 @@ DefineLanguageWord("Königin", {
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"Queen"},
+	DerivesFrom = {"middle-high-german", "noun", "Künec"}, -- presumably (unless there was a word for Queen in Middle High German from which this one is derived)
+	Gender = "feminine",
 	NumberCaseInflections = {
 		"plural", "nominative", "Königinnen"
 	},
-	Gender = "feminine",
 	AffixNameTypes = {"compound", "prefix", "singular", "settlement"} -- example: "Königinhof"
 })
 
@@ -1955,10 +1978,15 @@ DefineLanguageWord("Sieg", {
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"Victory"},
+	DerivesFrom = {"middle-high-german", "noun", "Sige"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 214.
+	Gender = "masculine",
 	NumberCaseInflections = {
-		"plural", "nominative", "Siege"
-	},
-	Gender = "masculine"
+		"singular", "genitive", "Sieges", -- alternatively also "Siegs"
+		"plural", "nominative", "Siege",
+		"plural", "accusative", "Siege",
+		"plural", "dative", "Siegen",
+		"plural", "genitive", "Siege"
+	}
 })
 
 DefineLanguageWord("Silber", {
@@ -2048,13 +2076,13 @@ DefineLanguageWord("Stadt", {
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"City", "Town"},
+	Gender = "feminine",
 	NumberCaseInflections = {
 		"plural", "nominative", "Städte",
 		"plural", "accusative", "Städte",
 		"plural", "dative", "Städten",
 		"plural", "genitive", "Städte"
 	},
-	Gender = "feminine",
 	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- examples: "Darmstadt", "Eisenstadt", "Freistadt", "Josefstadt", "Kronstadt", "Leopoldstadt", "Neustadt"
 })
 
@@ -2062,7 +2090,15 @@ DefineLanguageWord("Stein", {
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"Stone"},
-	Gender = "masculine"
+	DerivesFrom = {"middle-high-german", "noun", "Stein"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 245.
+	Gender = "masculine",
+	NumberCaseInflections = {
+		"singular", "genitive", "Steines", -- alternatively also "Steins"
+		"plural", "nominative", "Steine",
+		"plural", "accusative", "Steine",
+		"plural", "dative", "Steinen",
+		"plural", "genitive", "Steine"
+	}
 })
 
 DefineLanguageWord("Steinern", {

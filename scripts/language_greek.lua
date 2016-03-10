@@ -401,6 +401,12 @@ DefineLanguageWord("Steíkhō", { -- Source: Winfred P. Lehmann, "A Grammar of P
 	Meanings = {"Climb"}
 })
 
+DefineLanguageWord("Στῑ́α", { -- source also gives the alternative form "στῖον"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 245.
+	Language = "greek",
+	Type = "noun",
+	Meanings = {"Small Stone"} -- source gives the German "Steinchen" as the meaning
+})
+
 DefineLanguageWord("Téphra", { -- is this the plural form? Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
 	Language = "greek",
 	Type = "noun",

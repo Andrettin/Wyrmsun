@@ -132,6 +132,12 @@ DefineLanguageWord("Sĭrebro", { -- Source: August Fick and Alf Torp, "Wortschat
 	Gender = "neuter"
 })
 
+DefineLanguageWord("Stěna", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 245.
+	Language = "old-church-slavonic",
+	Type = "noun",
+	Meanings = {"Wall"} -- source gives the German "Mauer, Wand" as the meaning
+})
+
 DefineLanguageWord("Svins", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "old-church-slavonic",
 	Type = "adjective",

@@ -143,12 +143,34 @@ DefineLanguageWord("Hach", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	DerivesFrom = {"proto-germanic", "adjective", "Hauha"}
 })
 
+DefineLanguageWord("Half", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 51.
+	Language = "old-frisian",
+	Type = "adjective",
+	Meanings = {"Half"}, -- source gives the German "halb" as the meaning
+	DerivesFrom = {"proto-germanic", "adjective", "Halba"}
+})
+
+DefineLanguageWord("Halfte", { -- source also gives the alternative form "helfte"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 51.
+	Language = "old-frisian",
+	Type = "noun", -- apparently
+	Meanings = {"Half"}, -- source (apparently) gives the German "Hälfte" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Halbiþô"}
+})
+
 DefineLanguageWord("Hals", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 50.
 	Language = "old-frisian",
 	Type = "noun",
 	Meanings = {"Neck", "Throat", "Front Part of a Ship"}, -- source gives the German "Hals, Vorderteil des Schiffes" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Halsa"},
 	Gender = "masculine"
+})
+
+DefineLanguageWord("Halve", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 51.
+	Language = "old-frisian",
+	Type = "noun",
+	Meanings = {"Half", "Side"}, -- source gives the German "Hälfte, Seite" as the meaning
+	DerivesFrom = {"proto-germanic", "adjective", "Halba"},
+	Gender = "feminine"
 })
 
 DefineLanguageWord("Hâm", { -- source also gives the alternative form "Hêm"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 52.
@@ -378,6 +400,14 @@ DefineLanguageWord("Selover", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Gender = "neuter"
 })
 
+DefineLanguageWord("Sî", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 214.
+	Language = "old-frisian",
+	Type = "noun",
+	Meanings = {"Victory"}, -- source (apparently) gives the German "Sieg" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Segiz"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Smeth", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 263.
 	Language = "old-frisian",
 	Type = "noun",
@@ -390,6 +420,14 @@ DefineLanguageWord("Smithe", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Type = "noun",
 	Meanings = {"Smithy"}, -- source gives the German "Schmiede" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Smiþjôn"}
+})
+
+DefineLanguageWord("Stên", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 245.
+	Language = "old-frisian",
+	Type = "noun",
+	Meanings = {"Stone"}, -- source (apparently) gives the German "Stein" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Staina"},
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Sumur", { -- Fick also gives the alternative forms "Summer" and "Somer"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223; Source: http://www.cnrtl.fr/definition/sombre//3
