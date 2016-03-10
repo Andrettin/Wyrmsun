@@ -277,11 +277,13 @@ function SetPlayerData(player, data, arg1, arg2)
 end
 
 function LoadCivilizationUI(civilization)
-	if (UsingTechTree == false and civilization ~= GetPlayerData(GetThisPlayer(), "RaceName")) then
-		StopMusic()
-	end
-	if (GameRunning and (CurrentQuest == "" or GetQuestData(CurrentQuest, "MapMusic") == "")) then
-		PlayMusicByGroupAndSubgroupRandom("map", civilization)
+	if (CurrentQuest == nil or CurrentQuest == "" or GetQuestData(CurrentQuest, "MapMusic") == "") then
+		if (UsingTechTree == false and civilization ~= GetPlayerData(GetThisPlayer(), "RaceName")) then
+			StopMusic()
+		end
+		if (GameRunning) then
+			PlayMusicByGroupAndSubgroupRandom("map", civilization)
+		end
 	end
 	Load("scripts/ui.lua")
 	local ui_file = "scripts/civilizations/" .. civilization .. "/ui.lua"
