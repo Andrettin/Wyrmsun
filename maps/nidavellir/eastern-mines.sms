@@ -120,12 +120,12 @@ SetAiType(3, "land-attack")
 SetPlayerData(15, "RaceName", "neutral")
 
 if (CurrentQuest == "The Treasures of Svarinshaug") then
-	unit = CreateUnit("unit-dwarven-town-hall", 0, {59, 53})
-	unit = CreateUnit("unit-dwarven-miner", 0, {59, 53})
-	unit = CreateUnit("unit-dwarven-miner", 0, {59, 53})
-	unit = CreateUnit("unit-dwarven-miner", 0, {59, 53})
-	unit = CreateUnit("unit-dwarven-miner", 0, {59, 53})
-	unit = CreateUnit("unit-dwarven-miner", 0, {59, 53})
+	unit = CreateUnit("unit-brising-town-hall", 0, {59, 53})
+	unit = CreateUnit("unit-brising-miner", 0, {59, 53})
+	unit = CreateUnit("unit-brising-miner", 0, {59, 53})
+	unit = CreateUnit("unit-brising-miner", 0, {59, 53})
+	unit = CreateUnit("unit-brising-miner", 0, {59, 53})
+	unit = CreateUnit("unit-brising-miner", 0, {59, 53})
 else
 	unit = CreateUnit("unit-dwarven-town-hall", 0, {19, 47})
 	unit = CreateUnit("unit-dwarven-miner", 0, {19, 47})
