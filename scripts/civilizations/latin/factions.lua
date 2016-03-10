@@ -148,17 +148,6 @@ DefineFaction("Italy", {
 	}
 })
 
-DefineFaction("Moldavia", {
-	Civilization = "latin",
-	Type = "polity",
-	ParentCivilization = "Romania",
-	Colors = {"brown"},
-	DefaultTier = "duchy",
-	Titles = {
-		"monarchy", "duchy", "Principality"
-	}
-})
-
 DefineFaction("Portugal", {
 	Civilization = "latin",
 	Type = "polity",
@@ -177,6 +166,17 @@ DefineFaction("Romania", {
 	DefaultTier = "kingdom"
 })
 
+DefineFaction("Moldavia", {
+	Civilization = "latin",
+	Type = "polity",
+	ParentFaction = "Romania",
+	Colors = {"brown"},
+	DefaultTier = "duchy",
+	Titles = {
+		"monarchy", "duchy", "Principality"
+	}
+})
+
 DefineFaction("Rome", {
 	Civilization = "latin",
 	Type = "polity",
@@ -193,7 +193,7 @@ DefineFaction("Rome", {
 DefineFaction("Savoy", {
 	Civilization = "latin",
 	Type = "polity",
-	ParentCivilization = "Italy",
+	ParentFaction = "Italy",
 	Colors = {"brown"},
 	DefaultTier = "duchy",
 	Titles = {
@@ -204,7 +204,7 @@ DefineFaction("Savoy", {
 DefineFaction("Sicily", {
 	Civilization = "latin",
 	Type = "polity",
-	ParentCivilization = "Italy",
+	ParentFaction = "Italy",
 	Colors = {"green"},
 	DefaultTier = "duchy",
 	Titles = {
@@ -236,7 +236,7 @@ DefineFaction("Transylvania", {
 DefineFaction("Venice", {
 	Civilization = "latin",
 	Type = "polity",
-	ParentCivilization = "Italy",
+	ParentFaction = "Italy",
 	Colors = {"red"},
 	DefaultTier = "duchy", -- Venice was a duchy in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 	Titles = {
@@ -247,7 +247,7 @@ DefineFaction("Venice", {
 DefineFaction("Wallachia", {
 	Civilization = "latin",
 	Type = "polity",
-	ParentCivilization = "Romania",
+	ParentFaction = "Romania",
 	Colors = {"brown"},
 	DefaultTier = "duchy",
 	Titles = {

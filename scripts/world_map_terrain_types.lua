@@ -8,9 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      grand_strategy_terrain_types.lua - Defines the terrain types for the grand strategy mode.
---
---      (c) Copyright 2015 by Andrettin
+--      (c) Copyright 2015-2016 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -27,53 +25,50 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineWorldMapTerrainTypes(
-	"terrain-type", {
-		"name", "Plains",
-		"tag", "plains",
-		"variations", 5
-	},
-	"terrain-type", {
-		"name", "Dark Plains",
-		"tag", "dark_plains",
-		"variations", 5
-	},
-	"terrain-type", {
-		"name", "Hills",
-		"tag", "hills",
-		"base-tile", "Plains",
-		"has-transitions", true,
-		"variations", 5
-	},
-	"terrain-type", {
-		"name", "Mountains",
-		"tag", "mountains",
-		"base-tile", "Plains",
-		"has-transitions", true,
-		"variations", 1
-	},
-	"terrain-type", {
-		"name", "Water",
-		"tag", "ocean",
-		"base-tile", "Plains",
-		"water", true,
-		"has-transitions", true,
-		"variations", 4
-	},
-	"terrain-type", {
-		"name", "Conifer Forest",
-		"tag", "conifer_forest",
-		"base-tile", "Plains",
-		"has-transitions", true,
-		"variations", 2
-	},
-	"terrain-type", {
-		"name", "Scrub Forest",
-		"tag", "scrub_forest",
-		"base-tile", "Plains",
-		"variations", 4
-	}
-)
+DefineWorldMapTerrainType("Plains", {
+	Tag = "plains",
+	Variations = 5
+})
+
+DefineWorldMapTerrainType("Dark Plains", {
+	Tag = "dark_plains",
+	Variations = 5
+})
+
+DefineWorldMapTerrainType("Hills", {
+	Tag = "hills",
+	BaseTile = "Plains",
+	HasTransitions = true,
+	Variations = 5
+})
+
+DefineWorldMapTerrainType("Mountains", {
+	Tag = "mountains",
+	BaseTile = "Plains",
+	HasTransitions = true,
+	Variations = 1
+})
+
+DefineWorldMapTerrainType("Water", {
+	Tag = "ocean",
+	BaseTile = "Plains",
+	Water = true,
+	HasTransitions = true,
+	Variations = 4
+})
+
+DefineWorldMapTerrainType("Conifer Forest", {
+	Tag = "conifer_forest",
+	BaseTile = "Plains",
+	HasTransitions = true,
+	Variations = 2
+})
+
+DefineWorldMapTerrainType("Scrub Forest", {
+	Tag = "scrub_forest",
+	BaseTile = "Plains",
+	Variations = 4
+})
 
 SetResourceGrandStrategyBuildingTerrainSpecificGraphic("gold", "Mountains", true)
 SetResourceGrandStrategyBuildingTerrainSpecificGraphic("silver", "Mountains", true)

@@ -2004,7 +2004,6 @@ Preference.HotkeySetup = wyr.preferences.HotkeySetup
 --- Uses Stratagus Library path!
 Load("scripts/languages.lua")
 Load("scripts/civilizations.lua")
-Load("scripts/grand_strategy/grand_strategy_terrain_types.lua") -- has to be placed before the languages, because they can refer to terrain types
 Load("scripts/icons.lua")
 Load("scripts/sound.lua")
 Load("scripts/missiles.lua")
@@ -2020,6 +2019,7 @@ Load("scripts/ai.lua")
 Load("scripts/commands.lua")
 Load("scripts/cheats.lua")
 Load("scripts/map_generation.lua")
+Load("scripts/world_map_terrain_types.lua")
 Load("scripts/worlds.lua")
 Load("scripts/world_earth_tiles.lua")
 Load("scripts/world_nidavellir_tiles.lua")

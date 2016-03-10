@@ -757,8 +757,7 @@ DefineLanguageWord("Jung", { -- Source: Richard Cleasby and Gudbrand Vigfusson, 
 DefineLanguageWord("Kal", {
 	Language = "dwarven",
 	Type = "noun",
-	Meanings = {},
-	AffixNameTypes = {"separate", "prefix", "singular", "settlement"} -- example: "Kal Kartha" (from Wesnoth)
+	Meanings = {}
 })
 
 DefineLanguageWord("Karrag", {
@@ -771,8 +770,7 @@ DefineLanguageWord("Karrag", {
 DefineLanguageWord("Kartha", {
 	Language = "dwarven",
 	Type = "noun",
-	Meanings = {},
-	AffixNameTypes = {"separate", "suffix", "singular", "settlement"} -- example: "Kal Kartha" (from Wesnoth)
+	Meanings = {}
 })
 
 DefineLanguageWord("Kili", {
@@ -792,8 +790,7 @@ DefineLanguageWord("Kinan", {
 DefineLanguageWord("Knalga", {
 	Language = "dwarven",
 	Type = "noun",
-	Meanings = {},
-	NameTypes = {"settlement"} -- example: "Knalga" (from Wesnoth)
+	Meanings = {}
 })
 
 DefineLanguageWord("Kuhnar", {
@@ -850,8 +847,7 @@ DefineLanguageWord("Los", { -- suffix used by Wesnoth's dwarven names; not neces
 DefineLanguageWord("Lyr", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 247.
 	Language = "dwarven",
 	Type = "adjective",
-	Meanings = {"Heat-Holding"},
-	NameTypes = {"settlement"} -- example: "Lyr" (hall built by dwarves in Norse mythology)
+	Meanings = {"Heat-Holding"}
 })
 
 DefineLanguageWord("Men", {

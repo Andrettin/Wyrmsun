@@ -10485,7 +10485,6 @@ SetWorldMapTileTerrain(522, 145, water_id)
 SetWorldMapTileTerrain(522, 146, water_id)
 SetWorldMapTileTerrain(522, 147, hills_id) -- to prevent water passage between (522, 147) and (523, 148)
 SetWorldMapTileTerrain(522, 148, mountains_id)
-SetWorldMapTileName(522, 148, "Etna")
 SetWorldMapTileTerrain(522, 149, plains_id)
 AddWorldMapResource("grain", 522, 149, true) -- Vines; Source: "Philip's International School Atlas", 2006, p. 59.
 SetWorldMapTileTerrain(522, 150, hills_id)

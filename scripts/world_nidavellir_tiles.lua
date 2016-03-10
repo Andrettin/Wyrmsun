@@ -25,10 +25,43 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineWorldMapTile({44, 11}, {
+DefineWorldMapTile({32, 14}, {
 	World = "Nidavellir",
-	CulturalNames = {
-		"dwarf", "Svarinshaug"
+	CulturalSettlementNames = {
+		"dwarf", "Knalga", "name-elements", {"word", "dwarven", "noun", "Knalga"}
 	}
 })
 
+DefineWorldMapTile({33, 15}, {
+	World = "Nidavellir",
+	CulturalSettlementNames = {
+		"dwarf", "Shorbear Hold"
+	}
+})
+
+DefineWorldMapTile({44, 11}, {
+	World = "Nidavellir",
+	CulturalTerrainNames = {
+		"Hills", "dwarf", "Svarinshaug", "name-elements", {
+			"compound", "prefix", "dwarven", "noun", "singular", "genitive", "Svarin",
+			"compound", "suffix", "dwarven", "noun", "singular", "Haug"
+		}
+	}
+})
+
+DefineWorldMapTile({45, 5}, {
+	World = "Nidavellir",
+	CulturalSettlementNames = {
+		"dwarf", "Kal Kartha", "name-elements", {
+			"separate", "prefix", "dwarven", "noun", "Kal",
+			"separate", "suffix", "dwarven", "noun", "Kartha"
+		}
+	}
+})
+
+DefineWorldMapTile({50, 13}, {
+	World = "Nidavellir",
+	CulturalSettlementNames = {
+		"dwarf", "Lyr", "name-elements", {"word", "dwarven", "adjective", "Lyr"}
+	}
+})

@@ -37,7 +37,7 @@ Load("scripts/civilizations/teuton/characters.lua")
 
 DefineCharacter("Pypo", {
 	Name = "Pypo",
-	NameWord = {"gnomish", "noun", "Pypo"},
+	NameElements = {"word", "gnomish", "noun", "Pypo"},
 	Gender = "male",
 	Type = "unit-gnomish-master-at-arms",
 	Civilization = "gnome",
@@ -50,7 +50,7 @@ DefineCharacter("Pypo", {
 
 DefineCharacter("Greebo", {
 	Name = "Greebo",
-	NameWord = {"goblin", "noun", "Greebo"},
+	NameElements = {"word", "goblin", "noun", "Greebo"},
 	Gender = "male",
 	Type = "unit-goblin-spearman",
 	Civilization = "goblin",

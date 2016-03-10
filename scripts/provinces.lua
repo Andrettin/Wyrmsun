@@ -40,10 +40,6 @@ DefineProvince("Abruzzo", {
 		{521, 136}, {521, 137},
 		{522, 137}
 	},
-	SettlementName = "L'Aquila",
-	CulturalSettlementNames = {
-		"latin", "Amiternum"
-	},
 	SettlementLocation = {518, 135}, -- L'Aquila
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -62,10 +58,6 @@ DefineProvince("Aetolia", {
 	},
 	CulturalNames = {
 		"greek", "Aetolia"
-	},
-	SettlementName = "Naupactus",
-	CulturalSettlementNames = {
-		"greek", "Naupactus"
 	},
 	SettlementLocation = {541, 145}, -- Naupactus
 	Map = "maps/random/random-map-forest.smp",
@@ -87,11 +79,6 @@ DefineProvince("Albania", {
 		"illyrian", "Taulantia",
 		"latin", "Taulantia"
 	},
-	SettlementName = "Dyrrhachium",
-	CulturalSettlementNames = {
-		"greek", "Epidamnus",
-		"latin", "Dyrrhachium"
-	},
 	SettlementLocation = {536, 138}, -- Tirana
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -109,14 +96,6 @@ DefineProvince("Alsace", {
 		{500, 117}, {500, 118}, {500, 119}, {500, 120},
 		{501, 117}, {501, 118}, {501, 119}, {501, 120},
 		{502, 117}
-	},
-	SettlementName = "Strasburg",
-	CulturalSettlementNames = {
-		"latin", "Argentoratum", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
-		"teuton", "Strasburg", "name-compound-elements", {
---			"prefix", -- ?
-			"suffix", "high-german", "noun", "singular", "Burg"
-		}
 	},
 	SettlementLocation = {501, 118}, -- Strasburg
 	Map = "maps/random/random-map-forest.smp",
@@ -138,7 +117,7 @@ DefineProvince("Andalusia", {
 		"latin", "Spain", "Andalusia"
 	},
 	Tiles = {
---				{115, 37}, {116, 36}, {116, 37}, {117, 36}, {117, 37}, {118, 37}, -- old map
+--		{115, 37}, {116, 36}, {116, 37}, {117, 36}, {117, 37}, {118, 37}, -- old map
 		{459, 148}, {459, 149},
 		{460, 147}, {460, 148}, {460, 149},
 		{461, 147}, {461, 148}, {461, 149}, {461, 150},
@@ -160,10 +139,6 @@ DefineProvince("Andalusia", {
 		{477, 146}, {477, 147}, {477, 148},
 		{478, 146}
 	},
-	SettlementName = "Corduba",
-	CulturalSettlementNames = {
-		"latin", "Corduba"
-	},
 	SettlementLocation = {466, 148}, -- Cordoba
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains"
@@ -184,10 +159,6 @@ DefineProvince("Apulia", {
 		{529, 140},
 		{530, 140},
 		{531, 140}, {531, 141}
-	},
-	SettlementName = "Bari",
-	CulturalSettlementNames = {
-		"latin", "Barium"
 	},
 	SettlementLocation = {527, 139}, -- Bari
 	Map = "maps/random/random-map-forest.smp",
@@ -224,10 +195,6 @@ DefineProvince("Aquitaine", {
 		{491, 127}, {491, 128}, {491, 129}, {491, 130}, {491, 131},
 		{492, 127}, {492, 128}, {492, 129}, {492, 130}, {492, 131},
 		{493, 127}, {493, 128}, {493, 129}, {493, 130}, {493, 131}
-	},
-	SettlementName = "Tolosa",
-	CulturalSettlementNames = {
-		"latin", "Tolosa"
 	},
 	SettlementLocation = {483, 132}, -- Toulouse
 	Map = "maps/random/random-map-forest.smp",
@@ -266,10 +233,6 @@ DefineProvince("Aragon", {
 		{489, 143},
 		{491, 142}
 	},
-	SettlementName = "Caesaraugusta",
-	CulturalSettlementNames = {
-		"latin", "Caesaraugusta"
-	},
 	SettlementLocation = {477, 137}, -- Zaragoza
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -282,7 +245,7 @@ DefineProvince("Aragon", {
 DefineProvince("Argolis", {
 	World = "Earth",
 	Tiles = {
---				{135, 37}, {136, 37}, -- old map
+--		{135, 37}, {136, 37}, -- old map
 		{540, 148},
 		{541, 148}, {541, 149},
 		{542, 147}, {542, 148}, {542, 149},
@@ -291,13 +254,6 @@ DefineProvince("Argolis", {
 	},
 	CulturalNames = {
 		"greek", "Argolis"
-	},
-	SettlementName = "Argos",
-	CulturalSettlementNames = {
-		"greek", "Argos"
-	},
-	FactionCulturalSettlementNames = {
-		"greek", "Mycenae", "Mycenae"
 	},
 	SettlementLocation = {544, 148}, -- Argos
 	Map = "maps/random/random-map-forest.smp",
@@ -312,9 +268,9 @@ DefineProvince("Argolis", {
 DefineProvince("Astrakhan", {
 	World = "Earth",
 	CulturalNames = {
-		"germanic", "Ansulanda", "name-compound-elements", { -- rendering of "Asaland" in Proto-Germanic, as in the Ynglinga saga's story Asaland is the region in "Asia" in which Odin's people (here understood as the Indo-Europeans who went on to settle Scandinavia and become speakers of Proto-Germanic) used to live until they migrated to Scandinavia
-			"prefix", "proto-germanic", "noun", "singular", "Ansu",
-			"suffix", "proto-germanic", "noun", "singular", "Landa"
+		"germanic", "Ansulanda", "name-elements", { -- rendering of "Asaland" in Proto-Germanic, as in the Ynglinga saga's story Asaland is the region in "Asia" in which Odin's people (here understood as the Indo-Europeans who went on to settle Scandinavia and become speakers of Proto-Germanic) used to live until they migrated to Scandinavia
+			"compound", "prefix", "proto-germanic", "noun", "singular", "Ansu",
+			"compound", "suffix", "proto-germanic", "noun", "singular", "Landa"
 		}
 	},
 	Tiles = {
@@ -344,13 +300,6 @@ DefineProvince("Astrakhan", {
 		{623, 117}, {623, 118}, {623, 119}, {623, 120}, {623, 121}, {623, 122},
 		{624, 121}, {624, 122},
 	},
-	SettlementName = "Astrakhan",
-	CulturalSettlementNames = {
-		"germanic", "Ansugárdiz", "name-compound-elements", { -- rendering of "Asgard" in Proto-Germanic, as in the Ynglinga saga's story Asgard is the settlement in "Asia" in which Odin's people (here understood as the Indo-Europeans who went on to settle Scandinavia and become speakers of Proto-Germanic) used to live until they migrated to Scandinavia
-			"prefix", "proto-germanic", "noun", "singular", "Ansu",
-			"suffix", "proto-germanic", "noun", "singular", "Gárdiz"
-		}
-	},
 	SettlementLocation = {618, 124}, -- Astrakhan
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -371,11 +320,6 @@ DefineProvince("Attica", {
 	CulturalNames = {
 		"greek", "Attica"
 	},
-	SettlementName = "Athens",
-	CulturalSettlementNames = {
-		"greek", "Athens",
-		"latin", "Athens"
-	},
 	SettlementLocation = {547, 147}, -- Athens
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -395,14 +339,6 @@ DefineProvince("Augsburg", {
 		{509, 118}, {509, 119}, {509, 120},
 		{510, 117}, {510, 118}, {510, 119}, {510, 120}
 	},
-	SettlementName = "Augsburg",
-	CulturalSettlementNames = {
-		"latin", "Augusta Vindelicorum", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
-		"teuton", "Augsburg", "name-compound-elements", {
---			"prefix", -- ?
-			"suffix", "high-german", "noun", "singular", "Burg"
-		}
-	},
 	SettlementLocation = {510, 118}, -- Augsburg
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -421,7 +357,7 @@ DefineProvince("Austria", {
 		"teuton", "Austria"
 	},
 	Tiles = {
---				{127, 30}, {128, 30}, {129, 29}, {129, 30}, {130, 29}, {130, 30}, {131, 29}, {131, 30}, -- old map
+--		{127, 30}, {128, 30}, {129, 29}, {129, 30}, {130, 29}, {130, 30}, {131, 29}, {131, 30}, -- old map
 		{507, 121},
 		{508, 121},
 		{509, 121},
@@ -443,13 +379,6 @@ DefineProvince("Austria", {
 		{525, 117}, {525, 118}, {525, 119}, {525, 120}, {525, 121}, {525, 122}, {525, 123},
 		{526, 117}, {526, 118}, {526, 119}, {526, 120},
 		{527, 117}, {527, 118}
-	},
-	SettlementName = "Vienna",
-	CulturalSettlementNames = {
-		"celt", "Vindobona",
-		"germanic", "Vindobona",
-		"latin", "Vindobona",
-		"teuton", "Vienna"
 	},
 	SettlementLocation = {526, 118}, -- Vienna
 	Map = "maps/earth/salzburg.smp",
@@ -475,10 +404,6 @@ DefineProvince("Baden", {
 		{505, 116}, {505, 119},
 		{506, 116}, {506, 119},
 		{507, 115}, {507, 116}
-	},
-	SettlementName = "Rastatt",
-	CulturalSettlementNames = {
-		"teuton", "Rastatt"
 	},
 	SettlementLocation = {503, 117}, -- Rastatt
 	Map = "maps/random/random-map-forest.smp",
@@ -512,14 +437,6 @@ DefineProvince("Bavaria", {
 		{517, 117}, {517, 118},
 		{518, 117}
 	},
-	SettlementName = "Ratisbon",
-	CulturalSettlementNames = {
-		"latin", "Regina Castra",
-		"teuton", "Regensburg", "name-compound-elements", {
---			"prefix", -- ?
-			"suffix", "high-german", "noun", "singular", "Burg"
-		}
-	},
 	SettlementLocation = {514, 116}, -- Regensburg
 	Map = "maps/earth/regensburg.smp",
 	SettlementTerrain = "Plains",
@@ -539,7 +456,7 @@ DefineProvince("Belgium", {
 		"teuton", "Frank Tribe", "Austrasia"
 	},
 	Tiles = {
---				{122, 27}, {122, 28}, {123, 28}, {124, 28}, -- old map
+--		{122, 27}, {122, 28}, {123, 28}, {124, 28}, -- old map
 		{488, 110}, {488, 111},
 		{489, 110}, {489, 111},
 		{490, 110}, {490, 111}, {490, 112},
@@ -550,10 +467,6 @@ DefineProvince("Belgium", {
 		{495, 110}, {495, 111}, {495, 112}, {495, 113}, {495, 114}, {495, 115},
 		{496, 112}, {496, 113}, {496, 114}, {496, 115},
 		{497, 115}
-	},
-	SettlementName = "Brussels",
-	CulturalSettlementNames = {
-		"latin", "Aduatuca"
 	},
 	SettlementLocation = {492, 111}, -- Brussels
 	Map = "maps/random/random-map-forest.smp",
@@ -580,13 +493,12 @@ DefineProvince("Bessarabia", {
 		{564, 123}, {564, 124}, {564, 125},
 		{565, 124}, {565, 125}
 	},
-	SettlementName = "Kishinev",
 	SettlementLocation = {562, 122}, -- Kishinev
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
 	Claims = {
 		"goth", "Bastarnae Tribe"
---				"latin", "Moldavia"
+--		"latin", "Moldavia"
 	}
 })
 
@@ -599,10 +511,6 @@ DefineProvince("Boeotia", {
 	},
 	CulturalNames = {
 		"greek", "Boeotia"
-	},
-	SettlementName = "Thebes",
-	CulturalSettlementNames = {
-		"greek", "Thebes"
 	},
 	SettlementLocation = {546, 146}, -- Thebes
 	Map = "maps/random/random-map-forest.smp",
@@ -638,10 +546,6 @@ DefineProvince("Bohemia", {
 		{526, 113}, {526, 114},
 		{527, 114}
 	},
-	SettlementName = "Prague",
-	FactionCulturalSettlementNames = {
-		"teuton", "Marcomanni Tribe", "Bubienum" -- name of the Marcomannic capital; Source: Frederick Kohlrausch, "A History of Germany", 1844, p. 57.
-	},
 	SettlementLocation = {520, 113}, -- Prague
 	Map = "maps/earth/prague.smp",
 	SettlementTerrain = "Plains",
@@ -661,10 +565,6 @@ DefineProvince("Bornholm", {
 	},
 	Tiles = {
 		{522, 99}
-	},
---			SettlementName = "",
-	CulturalSettlementNames = {
-		"norse", "Sigtun"
 	},
 	SettlementLocation = {522, 99},
 	Map = "maps/random/random-map-forest.smp",
@@ -689,7 +589,6 @@ DefineProvince("Bosnia", {
 		{534, 128}, {534, 129}, {534, 130}, {534, 131},
 		{535, 128}, {535, 130}, {535, 131}
 	},
-	SettlementName = "Sarajevo",
 	SettlementLocation = {532, 131}, -- Sarajevo
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains"
@@ -698,9 +597,9 @@ DefineProvince("Bosnia", {
 DefineProvince("Brandenburg", {
 	World = "Earth",
 	CulturalNames = {
-		"teuton", "Brandenburg", "name-compound-elements", {
-			"prefix", "high-german", "verb", "no-tense", "Branden", -- correct?
-			"suffix", "high-german", "noun", "singular", "Burg"
+		"teuton", "Brandenburg", "name-elements", {
+			"compound", "prefix", "high-german", "verb", "no-tense", "Branden", -- correct?
+			"compound", "suffix", "high-german", "noun", "singular", "Burg"
 		}
 	},
 	FactionCulturalNames = {
@@ -708,7 +607,7 @@ DefineProvince("Brandenburg", {
 		"teuton", "Suebi Tribe", "Semnonia"
 	},
 	Tiles = {
---				{127, 27}, {128, 25}, {128, 26}, {128, 27}, {129, 25}, {129, 26}, {129, 27}, -- old map
+--		{127, 27}, {128, 25}, {128, 26}, {128, 27}, {129, 25}, {129, 26}, {129, 27}, -- old map
 		{513, 104},
 		{514, 104}, {514, 105}, {514, 106}, {514, 107},
 		{515, 104}, {515, 105}, {515, 106}, {515, 107},
@@ -718,10 +617,6 @@ DefineProvince("Brandenburg", {
 		{519, 104}, {519, 105}, {519, 106}, {519, 107},
 		{520, 106}, {520, 107},
 		{521, 106}, {521, 107}
-	},
-	SettlementName = "Berlin",
-	CulturalSettlementNames = {
-		"teuton", "Berlin"
 	},
 	SettlementLocation = {518, 106}, -- Berlin
 	Map = "maps/random/random-map-forest.smp",
@@ -743,10 +638,6 @@ DefineProvince("Bremen", {
 		{505, 103}, {505, 104},
 		{506, 103}, {506, 104}, {506, 105}
 	},
-	SettlementName = "Bremen",
-	CulturalSettlementNames = {
-		"teuton", "Bremen"
-	},
 	SettlementLocation = {504, 104}, -- Bremen
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -762,7 +653,7 @@ DefineProvince("Bremen", {
 DefineProvince("Brittany", {
 	World = "Earth",
 	Tiles = {
---				{117, 29}, {118, 29}, {118, 30}, -- old map
+--		{117, 29}, {118, 29}, {118, 30}, -- old map
 		{467, 118}, {467, 119},
 		{468, 118}, {468, 119},
 		{469, 117}, {469, 118}, {469, 119},
@@ -781,8 +672,6 @@ DefineProvince("Brittany", {
 	FactionCulturalNames = {
 		"latin", "France", "Brittany"
 	},
-	SettlementName = "Rennes",
---			SettlementLocation = {475, 121}, -- Nantes
 	SettlementLocation = {475, 119}, -- Rennes
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains"
@@ -798,10 +687,6 @@ DefineProvince("Brunswick", {
 		{508, 108}, {508, 109},
 		{509, 107}, {509, 108},
 		{510, 107}
-	},
-	SettlementName = "Brunswick",
-	CulturalSettlementNames = {
-		"teuton", "Braunschweig"
 	},
 	SettlementLocation = {509, 107}, -- Brunswick
 	Map = "maps/random/random-map-forest.smp",
@@ -822,10 +707,6 @@ DefineProvince("Bukowina", {
 		{551, 119}, {551, 120},
 		{552, 118}, {552, 119}, {552, 120},
 	},
-	SettlementName = "Czernowitz",
-	CulturalSettlementNames = {
-		"teuton", "Czernowitz"
-	},
 	SettlementLocation = {552, 119}, -- Czernowitz / Chernivtsi
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -837,7 +718,7 @@ DefineProvince("Bukowina", {
 DefineProvince("Bulgaria", {
 	World = "Earth",
 	Tiles = {
---				{136, 33}, {137, 33}, {138, 33}, {139, 33}, -- old map
+--		{136, 33}, {137, 33}, {138, 33}, {139, 33}, -- old map
 		{544, 131}, {544, 132}, {544, 134}, {544, 135},
 		{545, 131}, {545, 132}, {545, 133}, {545, 134}, {545, 135}, {545, 136}, {545, 137}, {545, 138},
 		{546, 131}, {546, 132}, {546, 133}, {546, 134}, {546, 135}, {546, 136}, {546, 137}, {546, 138},
@@ -859,11 +740,6 @@ DefineProvince("Bulgaria", {
 	CulturalNames = {
 		"latin", "Lower Moesia" -- Lower Moesia encompassed most of Bulgaria, but left out large parts of its south, including Sofia, which were part of the Thrace province of Rome; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 	},
-	SettlementName = "Sofia",
-	CulturalSettlementNames = {
-		"latin", "Ulpia"
-		-- Sardica
-	},
 	SettlementLocation = {546, 134}, -- Sofia
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -879,7 +755,7 @@ DefineProvince("Burgundy", {
 		"latin", "France", "Bourgogne"
 	},
 	Tiles = {
---				{123, 31}, {123, 32}, {124, 30}, {124, 31}, {124, 32}, -- old map
+--		{123, 31}, {123, 32}, {124, 30}, {124, 31}, {124, 32}, -- old map
 		{491, 120}, {491, 121}, {491, 123},
 		{492, 120}, {492, 121}, {492, 122}, {492, 123},
 		{493, 120}, {493, 121}, {493, 122}, {493, 123},
@@ -887,7 +763,6 @@ DefineProvince("Burgundy", {
 		{495, 124}, {495, 125},
 		{496, 124}, {496, 125}
 	},
-	SettlementName = "Dijon",
 	SettlementLocation = {494, 121}, -- Dijon
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -902,15 +777,14 @@ DefineProvince("Calabria", {
 	CulturalNames = {
 		"latin", "Brutium" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 30-31.
 	},
+	FactionCulturalNames = {
+		"latin", "Italy", "Calabria"
+	},
 	Tiles = {
 		{525, 142}, {525, 143}, {525, 146}, {525, 147},
 		{526, 142}, {526, 143}, {526, 144}, {526, 145}, {526, 146},
 		{527, 143}, {527, 144},
 		{528, 144}
-	},
-	SettlementName = "Catanzaro",
-	CulturalSettlementNames = {
-		"latin", "Castra Hannibalis"
 	},
 	SettlementLocation = {526, 145}, -- Catanzaro
 	Map = "maps/random/random-map-forest.smp",
@@ -930,14 +804,6 @@ DefineProvince("Carniola", {
 		{522, 124}, {522, 125},
 		{523, 125}
 	},
-	SettlementName = "Laibach",
-	CulturalSettlementNames = {
-		"latin", "Emona", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
-		"teuton", "Laibach", "name-compound-elements", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
-			"prefix", "high-german", "noun", "singular", "Lai",
-			"suffix", "high-german", "noun", "singular", "Bach"
-		}
-	},
 	SettlementLocation = {521, 125}, -- Laibach/Ljubljana
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains"
@@ -953,7 +819,7 @@ DefineProvince("Castille", {
 		"latin", "Spain", "Castille"
 	},
 	Tiles = {
---				{115, 34}, {115, 35}, {115, 36}, {116, 33}, {116, 34}, {116, 35}, {117, 33}, {117, 34}, {117, 35}, {118, 33}, {118, 34}, {118, 35}, {118, 36}, -- old map
+--		{115, 34}, {115, 35}, {115, 36}, {116, 33}, {116, 34}, {116, 35}, {117, 33}, {117, 34}, {117, 35}, {118, 33}, {118, 34}, {118, 35}, {118, 36}, -- old map
 		{459, 132}, {459, 143}, {459, 146},
 		{460, 132}, {460, 133}, {460, 134}, {460, 136}, {460, 139}, {460, 140}, {460, 141}, {460, 142}, {460, 143}, {460, 144}, {460, 145}, {460, 146},
 		{461, 132}, {461, 133}, {461, 134}, {461, 135}, {461, 136}, {461, 138}, {461, 139}, {461, 140}, {461, 141}, {461, 142}, {461, 143}, {461, 144}, {461, 145}, {461, 146},
@@ -974,10 +840,6 @@ DefineProvince("Castille", {
 		{476, 134}, {476, 142}, {476, 143}, {476, 144},
 		{477, 134}
 	},
-	SettlementName = "Complutum",
-	CulturalSettlementNames = {
-		"latin", "Complutum" -- Toletum is also in the same region and more important in antiquity, but not in the same site as Madrid
-	},
 	SettlementLocation = {469, 141}, -- Madrid
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains"
@@ -989,10 +851,6 @@ DefineProvince("Corinth", {
 		{545, 147}, {545, 148}
 	},
 	CulturalNames = {
-		"greek", "Corinth"
-	},
-	SettlementName = "Corinth",
-	CulturalSettlementNames = {
 		"greek", "Corinth"
 	},
 	SettlementLocation = {545, 148}, -- Corinth
@@ -1010,13 +868,9 @@ DefineProvince("Corsica", {
 		"latin", "Corsica"
 	},
 	Tiles = {
---				{126, 34}, -- old map
+--		{126, 34}, -- old map
 		{505, 135}, {505, 136}, {505, 137},
 		{506, 134}, {506, 135}, {506, 136}
-	},
-	SettlementName = "Aleria",
-	CulturalSettlementNames = {
-		"latin", "Aleria"
 	},
 	SettlementLocation = {506, 136},
 	Map = "maps/random/random-map-forest.smp",
@@ -1048,12 +902,8 @@ DefineProvince("Courland", {
 		{555, 96}, {555, 97},
 		{556, 97}
 	},
-	SettlementName = "Mitau",
-	CulturalSettlementNames = {
-		"teuton", "Mitau"
-	},
-	SettlementLocation = {547, 95}, -- Mitau
 	Map = "maps/random/random-map-forest.smp",
+	SettlementLocation = {547, 95},
 	SettlementTerrain = "Plains",
 	Coastal = true,
 	Claims = {
@@ -1075,11 +925,6 @@ DefineProvince("Crete", {
 	},
 	CulturalNames = {
 		"greek", "Crete"
-	},
-	SettlementName = "Knossos",
-	CulturalSettlementNames = {
-		"greek", "Knossos",
-		"latin", "Cnossus"
 	},
 	SettlementLocation = {551, 155}, -- Knossos
 	Map = "maps/random/random-map-forest.smp",
@@ -1111,16 +956,12 @@ DefineProvince("Crimea", {
 		{582, 127},
 		{583, 127}
 	},
-	SettlementName = "Simferopol",
 	SettlementLocation = {576, 128}, -- Simferopol
-	CulturalSettlementNames = {
-		"greek", "Heraclea Chersonesus" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 18-19.
-	},
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
 	Claims = {
 		"greek", "Cimmerian Bosphorus"
---				"teuton", "Crimea"
+--		"teuton", "Crimea"
 	}
 })
 
@@ -1133,7 +974,7 @@ DefineProvince("Croatia", {
 		"slav", "Croatia", "Croatia"
 	},
 	Tiles = {
---				{130, 31}, {131, 31}, {131, 32}, {132, 31}, {132, 32}, {133, 32}, {133, 33}, -- old map
+--		{130, 31}, {131, 31}, {131, 32}, {132, 31}, {132, 32}, {133, 32}, {133, 33}, -- old map
 		{521, 126},
 		{522, 126}, {522, 127}, {522, 128},
 		{523, 126}, {523, 127}, {523, 128}, {523, 129},
@@ -1147,10 +988,6 @@ DefineProvince("Croatia", {
 		{531, 126},
 		{532, 126},
 		{533, 126}, {533, 127}
-	},
-	SettlementName = "Zagreb",
-	CulturalSettlementNames = {
-		"latin", "Celeta" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 	},
 	SettlementLocation = {525, 125}, -- Zagreb
 	Map = "maps/random/random-map-forest.smp",
@@ -1179,11 +1016,7 @@ DefineProvince("Dalmatia", {
 		{531, 133}, {531, 134},
 		{532, 134}
 	},
-	SettlementName = "Zara",
 	SettlementLocation = {523, 130}, -- Zara
-	CulturalSettlementNames = {
-		"latin", "Iadera" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
-	},
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
 	Coastal = true,
@@ -1205,13 +1038,6 @@ DefineProvince("Dobruja", {
 		{562, 127}, {562, 128},
 		{563, 127}, {563, 128}
 	},
-	SettlementName = "Constanța",
-	CulturalSettlementNames = {
-		"latin", "Tomi", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
-	},
-	FactionCulturalSettlementNames = {
-		"latin", "Romania", "Constanța"
-	},
 	SettlementLocation = {560, 130}, -- Constanta
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -1230,7 +1056,7 @@ DefineProvince("Don", {
 		"celt", "Vana Tribe", "Vanaland"
 	},
 	Tiles = {
---				{147, 30}, {148, 29}, {148, 30}, {149, 29}, {149, 30}, {150, 28}, {150, 29}, {150, 30}, -- old map
+--		{147, 30}, {148, 29}, {148, 30}, {149, 29}, {149, 30}, {150, 28}, {150, 29}, {150, 30}, -- old map
 		{588, 113},
 		{589, 112}, {589, 113}, {589, 121},
 		{590, 111}, {590, 112}, {590, 113}, {590, 120}, {590, 121},
@@ -1249,11 +1075,7 @@ DefineProvince("Don", {
 		{603, 115}, {603, 116}, {603, 117},
 		{604, 116}
 	},
-	SettlementName = "Tanais",
 	SettlementLocation = {592, 121}, -- Rostov-on-Don
-	CulturalSettlementNames = {
-		"greek", "Tanais"
-	},
 	Map = "maps/earth/tanais.smp",
 	SettlementTerrain = "Plains",
 	Claims = {
@@ -1270,10 +1092,6 @@ DefineProvince("Drenthe", {
 		{497, 105},
 		{498, 105},
 		{499, 105}
-	},
-	SettlementName = "Assen",
-	FactionCulturalSettlementNames = {
-		"teuton", "Netherlands", "Assen" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
 	},
 	SettlementLocation = {498, 105}, -- Assen
 	Map = "maps/random/random-map-forest.smp",
@@ -1303,10 +1121,6 @@ DefineProvince("East Friesland", { -- also includes Osnabrück
 		{502, 106},
 		{503, 106}, {503, 107}
 	},
-	SettlementName = "Emden",
-	FactionCulturalSettlementNames = {
-		"teuton", "Netherlands", "Emden"
-	},
 	SettlementLocation = {500, 104}, -- Emden
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -1328,7 +1142,7 @@ DefineProvince("England", {
 		"teuton", "Angle Tribe", "England"
 	},
 	Tiles = {
---				{117, 26}, {117, 27}, {118, 25}, {118, 26}, {118, 27}, {119, 25}, {119, 26}, {119, 27}, {120, 26}, -- old map
+--		{117, 26}, {117, 27}, {118, 25}, {118, 26}, {118, 27}, {119, 25}, {119, 26}, {119, 27}, {120, 26}, -- old map
 		{464, 113},
 		{465, 108}, {465, 112}, {465, 113},
 		{466, 108}, {466, 112},
@@ -1351,14 +1165,6 @@ DefineProvince("England", {
 		{483, 105}, {483, 106}, {483, 107}, {483, 110},
 		{484, 106}, {484, 107}
 	},
-	SettlementName = "Londinium",
-	CulturalSettlementNames = {
-		"celt", "Londinium",
-		"latin", "Londinium"
-	},
-	FactionCulturalSettlementNames = {
-		"teuton", "England", "London"
-	},
 	SettlementLocation = {480, 109}, -- London
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -1380,10 +1186,6 @@ DefineProvince("Epirus", {
 	CulturalNames = {
 		"greek", "Epirus"
 	},
-	SettlementName = "Nicopolis",
-	CulturalSettlementNames = {
-		"greek", "Nicopolis"
-	},
 	SettlementLocation = {538, 144}, -- Nicopolis
 	Map = "maps/random/random-map-forest.smp",
 	Claims = {
@@ -1400,7 +1202,7 @@ DefineProvince("Estonia", {
 		"teuton", "Estland"
 	},
 	Tiles = {
---				{135, 23}, {135, 24}, {136, 23}, {136, 24}, {137, 22}, {137, 23}, {137, 24}, {138, 22}, {138, 23}, {138, 24}, {139, 22}, {139, 23}, -- old map
+--		{135, 23}, {135, 24}, {136, 23}, {136, 24}, {137, 22}, {137, 23}, {137, 24}, {138, 22}, {138, 23}, {138, 24}, {139, 22}, {139, 23}, -- old map
 		{543, 89},
 		{544, 89},
 		{547, 88}, {547, 89},
@@ -1416,10 +1218,6 @@ DefineProvince("Estonia", {
 		{557, 87}, {557, 89}, {557, 90}, {557, 91},
 		{558, 87},
 		{559, 87}
-	},
-	SettlementName = "Tallinn",
-	CulturalSettlementNames = {
-		"teuton", "Reval"
 	},
 	SettlementLocation = {550, 87}, -- Tallinn
 	Map = "maps/random/random-map-forest.smp",
@@ -1437,10 +1235,6 @@ DefineProvince("Euboea", { -- to make this island appear separated from Attica, 
 	CulturalNames = {
 		"greek", "Euboea"
 	},
-	SettlementName = "Chalcis",
-	CulturalSettlementNames = {
-		"greek", "Chalcis"
-	},
 	SettlementLocation = {548, 145}, -- Chalcis
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -1453,8 +1247,8 @@ DefineProvince("Euboea", { -- to make this island appear separated from Attica, 
 DefineProvince("Farther Pomerania", {
 	World = "Earth",
 	CulturalNames = {
-		"teuton", "Hinterpommern", "name-compound-elements", {
-			"prefix", "high-german", "adposition", "Hinter",
+		"teuton", "Hinterpommern", "name-elements", {
+			"compound", "prefix", "high-german", "adposition", "Hinter",
 --			"suffix" -- ?
 		}
 	},
@@ -1469,13 +1263,6 @@ DefineProvince("Farther Pomerania", {
 		{528, 101}, {528, 102},
 		{529, 100}, {529, 101}, {529, 102},
 		{530, 100}
-	},
-	SettlementName = "Kolberg",
-	CulturalSettlementNames = {
-		"teuton", "Kolberg", "name-compound-elements", {
---			"prefix", -- ?
-			"suffix", "high-german", "noun", "singular", "Berg"
-		}
 	},
 	SettlementLocation = {523, 102}, -- Kolberg
 	Map = "maps/random/random-map-forest.smp",
@@ -1522,10 +1309,6 @@ DefineProvince("France", {
 		{494, 115}, {494, 116}, {494, 117}, {494, 118}, {494, 119}, {494, 120},
 		{495, 119}, {495, 120},
 	},
-	SettlementName = "Lutetia",
-	CulturalSettlementNames = {
-		"latin", "Lutetia"
-	},
 	SettlementLocation = {486, 117}, -- Paris
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -1550,16 +1333,12 @@ DefineProvince("Franche Comte", {
 		{498, 120}, {498, 121}, {498, 122},
 		{499, 120}, {499, 121}
 	},
-	SettlementName = "Besançon",
-	FactionCulturalSettlementNames = {
-		"latin", "France", "Besançon"
-	},
 	SettlementLocation = {497, 121}, -- Besançon
 	Map = "maps/earth/belfort.smp",
 	SettlementTerrain = "Plains",
 	Claims = {
 		"celt", "Sequani Tribe"
---				"latin", "France"
+--		"latin", "France"
 	}
 })
 
@@ -1582,13 +1361,6 @@ DefineProvince("Franconia", {
 		{512, 113}, {512, 114}, {512, 115},
 		{513, 113},
 		{514, 113}
-	},
-	SettlementName = "Würzburg",
-	CulturalSettlementNames = {
-		"teuton", "Würzburg", "name-compound-elements", {
---			"prefix", -- ?
-			"suffix", "high-german", "noun", "singular", "Burg"
-		}
 	},
 	SettlementLocation = {508, 114}, -- Würzburg
 	Map = "maps/random/random-map-forest.smp",
@@ -1617,10 +1389,6 @@ DefineProvince("Friesland", {
 		{497, 104},
 		{498, 104},
 		{499, 104},
-	},
-	SettlementName = "Leeuwarden",
-	FactionCulturalSettlementNames = {
-		"teuton", "Netherlands", "Leeuwarden" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
 	},
 	SettlementLocation = {496, 104}, -- Leeuwarden
 	Map = "maps/random/random-map-forest.smp",
@@ -1664,14 +1432,6 @@ DefineProvince("Galicia", {
 		{551, 114}, {551, 115}, {551, 116}, {551, 117}, {551, 118},
 		{552, 114}, {552, 115}, {552, 116}, {552, 117}
 	},
-	SettlementName = "Lvov",
-	CulturalSettlementNames = {
-		"slav", "Lvov",
-		"teuton", "Lemberg", "name-compound-elements", {
---			"prefix", -- ?
-			"suffix", "high-german", "noun", "singular", "Berg"
-		}
-	},
 	SettlementLocation = {547, 114}, -- Lvov / Lemberg
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -1701,10 +1461,6 @@ DefineProvince("Gallaecia", {
 		{458, 132}, {458, 133}, {458, 134}, {458, 135}, {458, 136},
 		{459, 133}, {459, 134}, {459, 135}, {459, 136},
 		{460, 135}
-	},
-	SettlementName = "Lucus Augusti",
-	CulturalSettlementNames = {
-		"latin", "Lucus Augusti"
 	},
 	SettlementLocation = {456, 132}, -- Corunna
 	Map = "maps/random/random-map-forest.smp",
@@ -1739,11 +1495,6 @@ DefineProvince("Gotaland", {
 		{526, 89}, {526, 90}, {526, 91}, {526, 92}, {526, 93}, {526, 94},
 		{527, 89}, {527, 90}
 	},
-	SettlementName = "Gothenburg",
-	CulturalSettlementNames = {
-		"goth", "Gothenburg",
-		"norse", "Göteborg"
-	},
 	SettlementLocation = {513, 91}, -- Gothenburg
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -1760,12 +1511,11 @@ DefineProvince("Gotland", {
 		"goth", "Gotland"
 	},
 	Tiles = {
---				{133, 23}, -- old map
+--		{133, 23}, -- old map
 		{532, 92}, {532, 93},
 		{533, 91}, {533, 92}
 	},
 	SettlementLocation = {532, 92},
-	SettlementName = "Wisby",
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
 	Coastal = true,
@@ -1787,10 +1537,6 @@ DefineProvince("Hanover", {
 		{509, 104}, {509, 105}, {509, 106},
 		{510, 104}, {510, 105}, {510, 106},
 		{511, 105}
-	},
-	SettlementName = "Hanover",
-	CulturalSettlementNames = {
-		"teuton", "Hannover"
 	},
 	SettlementLocation = {507, 107}, -- Hanover
 	Map = "maps/random/random-map-forest.smp",
@@ -1815,10 +1561,6 @@ DefineProvince("Hesse", {
 		{506, 109}, {506, 110}, {506, 111}, {506, 112}, {506, 113},
 		{507, 110}, {507, 111}, {507, 112}
 	},
-	SettlementName = "Cassel",
-	CulturalSettlementNames = {
-		"teuton", "Kassel"
-	},
 	SettlementLocation = {506, 109}, -- Kassel
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -1841,7 +1583,7 @@ DefineProvince("Highland Scotland", {
 		"teuton", "Scotland", "Highland Scotland"
 	},
 	Tiles = {
---				{116, 22}, {116, 23}, {117, 22}, {117, 23}, {117, 24}, {118, 23}, {118, 24}, -- old map
+--		{116, 22}, {116, 23}, {117, 22}, {117, 23}, {117, 24}, {118, 23}, {118, 24}, -- old map
 		{460, 79}, {460, 90},
 		{461, 90}, {461, 92},
 		{462, 92}, {462, 95}, {462, 97},
@@ -1859,7 +1601,6 @@ DefineProvince("Highland Scotland", {
 		{474, 92},
 		{476, 84}
 	},
-	SettlementName = "Aberdeen",
 	SettlementLocation = {473, 93}, -- Aberdeen
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Hills",
@@ -1873,8 +1614,8 @@ DefineProvince("Highland Scotland", {
 DefineProvince("Hither Pomerania", {
 	World = "Earth",
 	CulturalNames = {
-		"teuton", "Vorpommern", "name-compound-elements", {
-			"prefix", "high-german", "adposition", "Vor",
+		"teuton", "Vorpommern", "name-elements", {
+			"compound", "prefix", "high-german", "adposition", "Vor",
 --			"suffix" -- ?
 		}
 	},
@@ -1886,10 +1627,6 @@ DefineProvince("Hither Pomerania", {
 		{519, 103},
 		{520, 103}, {520, 104},
 		{521, 103}
-	},
-	SettlementName = "Stettin",
-	CulturalSettlementNames = {
-		"teuton", "Stettin"
 	},
 	SettlementLocation = {521, 103}, -- Stettin
 	Map = "maps/random/random-map-forest.smp",
@@ -1911,7 +1648,7 @@ DefineProvince("Holland", {
 		"teuton", "Netherlands", "Holland"
 	},
 	Tiles = {
---				{123, 26}, {123, 27}, {124, 26}, {124, 27}, -- old map
+--		{123, 26}, {123, 27}, {124, 26}, {124, 27}, -- old map
 		{490, 109},
 		{491, 108}, {491, 109},
 		{492, 107}, {492, 108}, {492, 109},
@@ -1921,10 +1658,6 @@ DefineProvince("Holland", {
 		{496, 107}, {496, 108}, {496, 109}, {496, 110}, {496, 111},
 		{497, 107}, {497, 109},
 		{498, 107}
-	},
-	SettlementName = "Amsterdam",
-	FactionCulturalSettlementNames = {
-		"teuton", "Netherlands", "Amsterdam"
 	},
 	SettlementLocation = {493, 107}, -- Amsterdam
 	Map = "maps/random/random-map-forest.smp",
@@ -1952,10 +1685,6 @@ DefineProvince("Holstein", {
 		{509, 101}, {509, 102},
 		{510, 101}
 	},
-	SettlementName = "Kiel",
-	CulturalSettlementNames = {
-		"teuton", "Kiel"
-	},
 	SettlementLocation = {508, 101}, -- Kiel
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -1981,10 +1710,6 @@ DefineProvince("Hordaland", {
 	CulturalNames = {
 		"norse", "Hordaland"
 	},
-	SettlementName = "Bergen",
-	CulturalSettlementNames = {
-		"norse", "Bergen"
-	},
 	SettlementLocation = {495, 84}, -- Bergen
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -2001,7 +1726,7 @@ DefineProvince("Hungary", {
 		Hungary = "Hungary"
 	},
 	Tiles = {
---				{132, 29}, {132, 30}, {133, 29}, {133, 30}, {133, 31}, {134, 29}, {134, 30}, {134, 31}, {135, 29}, {135, 30}, {135, 31}, {136, 29}, -- old map
+--		{132, 29}, {132, 30}, {133, 29}, {133, 30}, {133, 31}, {134, 29}, {134, 30}, {134, 31}, {135, 29}, {135, 30}, {135, 31}, {136, 29}, -- old map
 		{534, 119}, {534, 124},
 		{535, 119}, {535, 120}, {535, 121}, {535, 122}, {535, 123}, {535, 124},
 		{536, 118}, {536, 119}, {536, 120}, {536, 121}, {536, 122}, {536, 123}, {536, 124},
@@ -2014,9 +1739,8 @@ DefineProvince("Hungary", {
 		{543, 118}, {543, 119},
 		{544, 119}
 	},
-	SettlementName = "Pest",
-	SettlementLocation = {535, 120}, -- Pest
 	Map = "maps/random/random-map-forest.smp",
+	SettlementLocation = {535, 120},
 	SettlementTerrain = "Plains",
 	Claims = {
 		"persian", "Iazyge Tribe"
@@ -2057,7 +1781,6 @@ DefineProvince("Iceland", {
 		{439, 69}, {439, 70}, {439, 71},
 		{440, 69}, {440, 70}, {440, 71}
 	},
-	SettlementName = "Reykjavik",
 	SettlementLocation = {418, 73}, -- Reykjavik
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -2066,11 +1789,11 @@ DefineProvince("Iceland", {
 
 DefineProvince("Ireland", {
 	World = "Earth",
-	CulturalNames = { -- cultural names can be assigned either per faction or per civilization
+	CulturalNames = {
 		"latin", "Hibernia"
 	},
 	Tiles = {
---				{113, 25}, {113, 26}, {114, 25}, {114, 26}, {115, 25}, {115, 26}, -- old map
+--		{113, 25}, {113, 26}, {114, 25}, {114, 26}, {115, 25}, {115, 26}, -- old map
 		{451, 108},
 		{452, 102}, {452, 103}, {452, 106}, {452, 107}, {452, 108},
 		{453, 102}, {453, 103}, {453, 104}, {453, 105}, {453, 106}, {453, 107}, {453, 108}, {453, 109},
@@ -2085,7 +1808,6 @@ DefineProvince("Ireland", {
 		{462, 99}, {462, 100}, {462, 101}, {462, 104}, {462, 105},
 		{463, 100}, {463, 101}
 	},
-	SettlementName = "Eblana", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	SettlementLocation = {462, 104}, -- Dublin
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -2106,11 +1828,6 @@ DefineProvince("Istria", {
 		{519, 125}, {519, 126}, {519, 127},
 		{520, 126}
 	},
-	SettlementName = "Trieste",
-	CulturalSettlementNames = {
-		"latin", "Tergeste", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
-		"teuton", "Triest"
-	},
 	SettlementLocation = {519, 126}, -- Trieste
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -2128,7 +1845,7 @@ DefineProvince("Jutland", {
 		"teuton", "Jute Tribe", "Jutland"
 	},
 	Tiles = {
---				{126, 23}, {126, 24}, {126, 25}, {127, 25}, -- old map
+--		{126, 23}, {126, 24}, {126, 25}, {127, 25}, -- old map
 		{503, 95}, {503, 96}, {503, 97},
 		{504, 94}, {504, 95}, {504, 96}, {504, 97}, {504, 98},
 		{505, 94}, {505, 95}, {505, 96}, {505, 97},
@@ -2138,7 +1855,6 @@ DefineProvince("Jutland", {
 		{509, 92}, {509, 93}, {509, 95},
 		{510, 95}
 	},
-	SettlementName = "Aarhus",
 	SettlementLocation = {508, 96}, -- Aarhus
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -2163,10 +1879,6 @@ DefineProvince("Lacedaemonia", {
 	CulturalNames = {
 		"greek", "Lacedaemonia"
 	},
-	SettlementName = "Sparta",
-	CulturalSettlementNames = {
-		"greek", "Sparta"
-	},
 	SettlementLocation = {543, 150}, -- Sparta
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -2179,19 +1891,15 @@ DefineProvince("Lacedaemonia", {
 DefineProvince("Latium", {
 	World = "Earth",
 	Tiles = {
---				{129, 33}, {129, 34}, -- old map
+--		{129, 33}, {129, 34}, -- old map
 		{513, 134}, {513, 135},
 		{514, 133}, {514, 134}, {514, 135}, {514, 136},
 		{515, 135}, {515, 136}, {515, 137},
 		{516, 136}, {516, 137},
 		{517, 136}, {517, 137}, {517, 138}
 	},
-	SettlementName = "Rome",
 	CulturalNames = {
 		"latin", "Latium"
-	},
-	CulturalSettlementNames = {
-		"latin", "Roma"
 	},
 	SettlementLocation = {515, 136}, -- Rome
 	Map = "maps/random/random-map-forest.smp",
@@ -2221,10 +1929,6 @@ DefineProvince("Latvia", {
 		{558, 92}, {558, 93}, {558, 94}, {558, 95}, {558, 96},
 		{559, 94}, {559, 95}
 	},
-	SettlementName = "Riga",
-	CulturalSettlementNames = {
-		"teuton", "Riga"
-	},
 	SettlementLocation = {548, 94}, -- Riga
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -2236,18 +1940,14 @@ DefineProvince("Latvia", {
 DefineProvince("Lauenburg", {
 	World = "Earth",
 	CulturalNames = {
-		"teuton", "Lauenburg", "name-compound-elements", {
---			"prefix", -- ?
-			"suffix", "high-german", "noun", "singular", "Burg"
+		"teuton", "Lauenburg", "name-elements", {
+--			"compound", "prefix", -- ?
+			"compound", "suffix", "high-german", "noun", "singular", "Burg"
 		}
 	},
 	Tiles = {
 		{509, 103},
 		{510, 102}, {510, 103}
-	},
-	SettlementName = "Lübeck",
-	CulturalSettlementNames = {
-		"teuton", "Lübeck"
 	},
 	SettlementLocation = {510, 102},
 	Map = "maps/random/random-map-forest.smp",
@@ -2274,11 +1974,7 @@ DefineProvince("Liguria", {
 		{506, 129},
 		{507, 129}
 	},
-	SettlementName = "Genoa",
 	SettlementLocation = {505, 129}, -- Genoa
-	CulturalSettlementNames = {
-		"latin", "Genua"
-	},
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
 	Coastal = true,
@@ -2310,9 +2006,6 @@ DefineProvince("Lithuania", {
 		{554, 97}, {554, 98}, {554, 99},
 		{555, 98}, {555, 99}
 	},
-	SettlementName = "Vilnius",
-	CulturalSettlementNames = {
-	},
 	SettlementLocation = {552, 100}, -- Vilnius
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -2329,17 +2022,12 @@ DefineProvince("Lombardy", {
 		"latin", "Transpadane Gaul"
 	},
 	Tiles = {
---				{125, 31}, {125, 32}, {126, 31}, {126, 32}, {127, 31}, {127, 32}, {128, 31}, {128, 32}, {128, 33}, {129, 31}, -- old map
+--		{125, 31}, {125, 32}, {126, 31}, {126, 32}, {127, 31}, {127, 32}, {128, 31}, {128, 32}, {128, 33}, {129, 31}, -- old map
 		{505, 125}, {505, 126},
 		{506, 124}, {506, 125}, {506, 126}, {506, 127},
 		{507, 124}, {507, 125}, {507, 126}, {507, 127},
 		{508, 124}, {508, 125}, {508, 126}, {508, 127},
 		{509, 123}, {509, 124}, {509, 125}, {509, 126}, {509, 127}
-	},
-	SettlementName = "Milan",
-	CulturalSettlementNames = {
-		"latin", "Mediolanum",
-		"teuton", "Mailand"
 	},
 	SettlementLocation = {506, 126}, -- Milan
 	Map = "maps/random/random-map-forest.smp",
@@ -2360,10 +2048,6 @@ DefineProvince("Lorraine", {
 		{497, 118}, {497, 119},
 		{498, 118}, {498, 119},
 		{499, 118}, {499, 119}
-	},
-	SettlementName = "Nancy",
-	FactionCulturalSettlementNames = {
-		"latin", "France", "Nancy"
 	},
 	SettlementLocation = {496, 118}, -- Nancy
 	Map = "maps/random/random-map-forest.smp",
@@ -2386,10 +2070,6 @@ DefineProvince("Lower Lusatia", {
 		{521, 108}, {521, 109},
 		{522, 108}, {522, 109}, {522, 110}
 	},
-	SettlementName = "Guben",
-	CulturalSettlementNames = {
-		"teuton", "Guben"
-	},
 	SettlementLocation = {521, 108}, -- Guben
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains"
@@ -2404,14 +2084,6 @@ DefineProvince("Lower Rhine", {
 		{500, 112}, {500, 113}, {500, 114}, {500, 115}, {500, 116},
 		{501, 113}, {501, 114},
 		{502, 113}, {502, 114}
-	},
-	SettlementName = "Cologne",
-	CulturalSettlementNames = {
-		"latin", "Colonia Agrippina", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
-		"teuton", "Köln"
-	},
-	FactionCulturalSettlementNames = {
-		"latin", "France", "Cologne"
 	},
 	SettlementLocation = {498, 111}, -- Cologne
 	Map = "maps/random/random-map-forest.smp",
@@ -2442,13 +2114,6 @@ DefineProvince("Lowland Scotland", {
 		{473, 97}, {473, 98},
 		{474, 97}
 	},
-	SettlementName = "Edinburgh",
-	FactionCulturalSettlementNames = {
-		"teuton", "England", "Edinburgh", "name-compound-elements", {
---			"prefix", -- ?
-			"suffix", "english", "noun", "singular", "Burgh"
-		}
-	},
 	SettlementLocation = {470, 97}, -- Edinburgh
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Hills",
@@ -2461,7 +2126,7 @@ DefineProvince("Lowland Scotland", {
 DefineProvince("Macedonia", {
 	World = "Earth",
 	Tiles = {
---				{134, 35}, {135, 34}, {135, 35}, {136, 34}, {137, 34}, -- old map
+--		{134, 35}, {135, 34}, {135, 35}, {136, 34}, {137, 34}, -- old map
 		{540, 140}, {540, 141},
 		{541, 140}, {541, 141},
 		{542, 140}, {542, 141},
@@ -2475,11 +2140,6 @@ DefineProvince("Macedonia", {
 	},
 	CulturalNames = {
 		"greek", "Macedonia"
-	},
-	SettlementName = "Aegae",
-	CulturalSettlementNames = {
-		"greek", "Aegae",
-		"latin", "Edessa"
 	},
 	SettlementLocation = {542, 140}, -- Aegae
 	Map = "maps/random/random-map-forest.smp",
@@ -2506,13 +2166,6 @@ DefineProvince("Magdeburg", {
 		{515, 108},
 		{516, 108}
 	},
-	SettlementName = "Magdeburg",
-	CulturalSettlementNames = {
-		"teuton", "Magdeburg", "name-compound-elements", {
---			"prefix", -- ?
-			"suffix", "high-german", "noun", "singular", "Burg"
-		}
-	},
 	SettlementLocation = {513, 107}, -- Magdeburg
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -2531,7 +2184,6 @@ DefineProvince("Malta", {
 	Tiles = {
 		{521, 153}
 	},
-	SettlementName = "Valletta",
 	SettlementLocation = {521, 153},
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -2546,7 +2198,7 @@ DefineProvince("Mazovia", {
 		"slav", "Mazovia"
 	},
 	Tiles = {
---				{133, 26}, {133, 27}, {134, 26}, {134, 27}, {135, 26}, {135, 27}, -- old map
+--		{133, 26}, {133, 27}, {134, 26}, {134, 27}, {135, 26}, {135, 27}, -- old map
 		{531, 107}, {531, 108},
 		{532, 106}, {532, 107}, {532, 108}, {532, 109}, {532, 110},
 		{533, 105}, {533, 106}, {533, 107}, {533, 108}, {533, 109}, {533, 110}, {533, 111},
@@ -2561,10 +2213,6 @@ DefineProvince("Mazovia", {
 		{542, 104}, {542, 105}, {542, 106},
 		{543, 103}, {543, 104}, {543, 105}, {543, 106}
 	},
-	SettlementName = "Warsaw",
-	CulturalSettlementNames = {
-		"slav", "Warsaw"
-	},
 	SettlementLocation = {538, 107}, -- Warsaw
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -2577,9 +2225,9 @@ DefineProvince("Mazovia", {
 DefineProvince("Mecklenburg", {
 	World = "Earth",
 	CulturalNames = {
-		"teuton", "Mecklenburg", "name-compound-elements", {
---			"prefix", -- ?
-			"suffix", "high-german", "noun", "singular", "Burg"
+		"teuton", "Mecklenburg", "name-elements", {
+--			"compound", "prefix", -- ?
+			"compound", "suffix", "high-german", "noun", "singular", "Burg"
 		}
 	},
 	Tiles = {
@@ -2590,10 +2238,6 @@ DefineProvince("Mecklenburg", {
 		{515, 102}, {515, 103},
 		{516, 103},
 		{517, 103}, {517, 104}
-	},
-	SettlementName = "Schwerin",
-	CulturalSettlementNames = {
-		"teuton", "Schwerin"
 	},
 	SettlementLocation = {512, 103}, -- Schwerin
 	Map = "maps/random/random-map-forest.smp",
@@ -2615,7 +2259,6 @@ DefineProvince("Modena", {
 		{510, 128}, {510, 129}, {510, 130},
 		{511, 128}, {511, 129}
 	},
-	SettlementName = "Modena",
 	SettlementLocation = {511, 129}, -- Modena
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -2639,11 +2282,7 @@ DefineProvince("Moldavia", {
 		{558, 121}, {558, 122}, {558, 123}, {558, 124}, {558, 125}, {558, 126},
 		{559, 122}, {559, 123}, {559, 124}, {559, 125}, {559, 126}
 	},
-	SettlementName = "Jassy",
 	SettlementLocation = {557, 121}, -- Jassy/Iași
-	FactionCulturalSettlementNames = {
-		"latin", "Romania", "Iași"
-	},
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
 	Claims = {
@@ -2659,10 +2298,6 @@ DefineProvince("Montenegro", {
 		{535, 133}, {535, 134}, {535, 135},
 		{536, 134},
 		{537, 134}
-	},
-	SettlementName = "Podgorica",
-	CulturalSettlementNames = {
-		"latin", "Doclea" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 	},
 	SettlementLocation = {534, 135}, -- Podgorica
 	Map = "maps/random/random-map-forest.smp",
@@ -2687,11 +2322,6 @@ DefineProvince("Moravia", {
 		{532, 114}, {532, 115},
 		{533, 114}
 	},
-	SettlementName = "Brünn",
-	CulturalSettlementNames = {
-		"slav", "Brno",
-		"teuton", "Brünn"
-	},
 	SettlementLocation = {527, 116}, -- Brünn
 	Map = "maps/earth/prague.smp",
 	SettlementTerrain = "Plains",
@@ -2713,9 +2343,6 @@ DefineProvince("Moselle", {
 		{498, 117},
 		{499, 117}
 	},
-	SettlementName = "Metz",
-	CulturalSettlementNames = {
-	},
 	SettlementLocation = {496, 116}, -- Metz
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -2731,7 +2358,7 @@ DefineProvince("Naples", {
 		"latin", "Campania" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 30-31.
 	},
 	Tiles = {
---				{130, 34}, {131, 34}, {131, 35}, {131, 36}, {132, 35}, -- old map
+--		{130, 34}, {131, 34}, {131, 35}, {131, 36}, {132, 35}, -- old map
 		{518, 137}, {518, 138},
 		{519, 137}, {519, 138},
 		{520, 138}, {520, 139},
@@ -2743,14 +2370,6 @@ DefineProvince("Naples", {
 		{526, 140}, {526, 141},
 		{527, 140}, {527, 141}
 	},
-	SettlementName = "Neapolis",
-	CulturalSettlementNames = {
-		"greek", "Neapolis", "name-compound-elements", {
-			"prefix", "greek", "adjective", "Nea",
-			"suffix", "greek", "noun", "singular", "Polis"
-		},
-		"latin", "Neapolis"
-	},
 	SettlementLocation = {520, 139}, -- Naples
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -2760,9 +2379,9 @@ DefineProvince("Naples", {
 DefineProvince("Neumark", {
 	World = "Earth",
 	CulturalNames = {
-		"teuton", "Neumark", "name-compound-elements", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 134-135.
-			"prefix", "high-german", "adjective", "Neu",
-			"suffix", "high-german", "noun", {"March"}, "singular", "Mark"
+		"teuton", "Neumark", "name-elements", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 134-135.
+			"compound", "prefix", "high-german", "adjective", "Neu",
+			"compound", "suffix", "high-german", "noun", {"March"}, "singular", "Mark"
 		}
 	},
 	Tiles = {
@@ -2772,10 +2391,6 @@ DefineProvince("Neumark", {
 		{523, 105}, {523, 106}, {523, 107},
 		{524, 104}, {524, 105}, {524, 107},
 		{525, 104}, {525, 105}
-	},
-	SettlementName = "Küstrin",
-	CulturalSettlementNames = {
-		"teuton", "Küstrin"
 	},
 	SettlementLocation = {522, 106}, -- Küstrin
 	Map = "maps/random/random-map-forest.smp",
@@ -2803,7 +2418,6 @@ DefineProvince("Normandy", {
 	FactionCulturalNames = {
 		"latin", "France", "Normandy"
 	},
-	SettlementName = "Rouen",
 	SettlementLocation = {482, 115}, -- Rouen
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -2821,13 +2435,6 @@ DefineProvince("Oldenburg", {
 		{502, 103}, {502, 104}, {502, 105},
 		{503, 104}, {503, 105}
 	},
-	SettlementName = "Oldenburg",
-	CulturalSettlementNames = {
-		"teuton", "Oldenburg", "name-compound-elements", {
---			"prefix", -- ?
-			"suffix", "high-german", "noun", "singular", "Burg"
-		}
-	},
 	SettlementLocation = {503, 104}, -- Oldenburg
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -2843,7 +2450,6 @@ DefineProvince("Orkney", {
 	Tiles = {
 		{470, 87}
 	},
-	SettlementName = "Kirkwall",
 	SettlementLocation = {470, 87},
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -2863,10 +2469,6 @@ DefineProvince("Overijssel", {
 		{497, 106},
 		{498, 106},
 		{499, 106}
-	},
-	SettlementName = "Zwolle",
-	FactionCulturalSettlementNames = {
-		"teuton", "Netherlands", "Zwolle" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
 	},
 	SettlementLocation = {497, 106}, -- Zwolle
 	Map = "maps/random/random-map-forest.smp",
@@ -2890,11 +2492,6 @@ DefineProvince("Palatinate", {
 		{502, 115}, {502, 116},
 		{503, 114}, {503, 115}, {503, 116}
 	},
-	SettlementName = "Kaiserslautern",
-	CulturalSettlementNames = {
-		"latin", "Borbetomagus", -- not actually the same city as Kaiserslautern (Borbetomagus is Worms), but nevertheless in the Palatinate; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
-		"teuton", "Kaiserslautern"
-	},
 	SettlementLocation = {502, 115}, -- Kaiserslautern
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -2911,16 +2508,11 @@ DefineProvince("Palermo", {
 		"latin", "Panormus"
 	},
 	Tiles = {
---				{129, 37}, -- old map
+--		{129, 37}, -- old map
 		{516, 148},
 		{517, 147}, {517, 148},
 		{518, 148}, {518, 149},
 		{519, 148}, {519, 149}
-	},
-	SettlementName = "Panormus", -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 12.
-	CulturalSettlementNames = {
-		"greek", "Panormus",
-		"latin", "Panormus"
 	},
 	SettlementLocation = {517, 147}, -- Palermo
 	Map = "maps/random/random-map-forest.smp",
@@ -2929,7 +2521,7 @@ DefineProvince("Palermo", {
 	Claims = {
 		"latin", "Elymian Tribe",
 		"latin", "Sicanian Tribe"
---				"latin", "Sicily"
+--		"latin", "Sicily"
 	}
 })
 
@@ -2949,10 +2541,6 @@ DefineProvince("Pannonia", {
 		{533, 120}, {533, 121}, {533, 122}, {533, 123}, {533, 124}, {533, 125},
 		{534, 120}, {534, 121}, {534, 122}, {534, 123}
 	},
-	SettlementName = "Buda",
-	CulturalSettlementNames = {
-		"latin", "Aquincum"
-	},
 	SettlementLocation = {534, 120}, -- Buda
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -2971,11 +2559,6 @@ DefineProvince("Parma", {
 		{508, 128}, {508, 129},
 		{509, 128}, {509, 129}
 	},
-	SettlementName = "Parma",
-	CulturalSettlementNames = {
-		"latin", "Parma"
---				"latin", "Placentia" -- Piacenza
-	},
 	SettlementLocation = {509, 128}, -- Parma
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains"
@@ -2991,10 +2574,6 @@ DefineProvince("Piedmont", {
 		{504, 125}, {504, 126}, {504, 127}, {504, 128},
 		{505, 127}, {505, 128},
 		{506, 128}
-	},
-	SettlementName = "Turin",
-	CulturalSettlementNames = {
-		"latin", "Augusta Taurinorum"
 	},
 	SettlementLocation = {502, 127}, -- Turin
 	Map = "maps/random/random-map-forest.smp",
@@ -3020,12 +2599,6 @@ DefineProvince("Pomerelia", {
 		{534, 101}, {534, 102}, {534, 103}, {534, 104},
 		{535, 101}, {535, 103}, {535, 104},
 		{536, 103}, {536, 104}
-	},
-	SettlementName = "Danzig",
-	CulturalSettlementNames = {
---				polish = "Gdańsk",
-		"slav", "Gdańsk",
-		"teuton", "Danzig"
 	},
 	SettlementLocation = {532, 101}, -- Danzig
 	Map = "maps/random/random-map-forest.smp",
@@ -3058,10 +2631,6 @@ DefineProvince("Portugal", {
 		{460, 137}, {460, 138},
 		{461, 137}
 	},
-	SettlementName = "Lisbon",
-	CulturalSettlementNames = {
-		"latin", "Olisipo"
-	},
 	SettlementLocation = {454, 145}, -- Lisbon
 	Map = "maps/earth/braga.smp",
 	SettlementTerrain = "Plains",
@@ -3083,10 +2652,6 @@ DefineProvince("Posen", {
 		{530, 104}, {530, 105}, {530, 106}, {530, 107}, {530, 108}, {530, 109},
 		{531, 104}, {531, 105}, {531, 106}, {531, 109}, {531, 110},
 		{532, 105}
-	},
-	SettlementName = "Posen",
-	CulturalSettlementNames = {
-		"teuton", "Posen"
 	},
 	SettlementLocation = {528, 107}, -- Posen
 	Map = "maps/random/random-map-forest.smp",
@@ -3117,13 +2682,6 @@ DefineProvince("Provence", {
 		{500, 130}, {500, 131},
 		{501, 130}
 	},
-	SettlementName = "Marseilles",
-	CulturalSettlementNames = {
-		"latin", "Massilia"
-	},
-	FactionCulturalSettlementNames = {
-		"latin", "France", "Marseilles"
-	},
 	SettlementLocation = {495, 132}, -- Marseilles
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -3138,7 +2696,7 @@ DefineProvince("Prussia", {
 		"teuton", "Ostpreussen"
 	},
 	Tiles = {
---				{130, 26}, {131, 25}, {131, 26}, {132, 25}, {132, 26}, {133, 25}, {134, 25}, {135, 25}, -- old map
+--		{130, 26}, {131, 25}, {131, 26}, {132, 25}, {132, 26}, {133, 25}, {134, 25}, {135, 25}, -- old map
 		{535, 102},
 		{536, 101}, {536, 102},
 		{537, 100}, {537, 101}, {537, 102}, {537, 103}, {537, 104},
@@ -3148,13 +2706,6 @@ DefineProvince("Prussia", {
 		{541, 99}, {541, 100}, {541, 101}, {541, 102}, {541, 103},
 		{542, 99}, {542, 100}, {542, 101}, {542, 102}, {542, 103},
 		{543, 99}, {543, 100}, {543, 101}, {543, 102}
-	},
-	SettlementName = "Königsberg",
-	CulturalSettlementNames = {
-		"teuton", "Königsberg", "name-compound-elements", {
-			"prefix", "high-german", "noun", "singular", "genitive", "König",
-			"suffix", "high-german", "noun", "singular", "Berg"
-		}
 	},
 	SettlementLocation = {537, 100}, -- Königsberg
 	Map = "maps/random/random-map-forest.smp",
@@ -3173,10 +2724,6 @@ DefineProvince("Rhodes", {
 	CulturalNames = {
 		"greek", "Rhodes"
 	},
-	SettlementName = "Ialysus",
-	CulturalSettlementNames = {
-		"greek", "Ialysus"
-	},
 	SettlementLocation = {559, 152}, -- Ialysus
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -3194,10 +2741,6 @@ DefineProvince("Rhodope", {
 	},
 	CulturalNames = {
 		"greek", "Rodópi"
-	},
-	SettlementName = "Komotini",
-	CulturalSettlementNames = {
-		"greek", "Komotiní"
 	},
 	SettlementLocation = {552, 139}, -- Komotini
 	Map = "maps/random/random-map-forest.smp",
@@ -3219,11 +2762,7 @@ DefineProvince("Romagna", {
 		{514, 128}, {514, 129}, {514, 130},
 		{515, 130}
 	},
-	SettlementName = "Bologna",
 	SettlementLocation = {512, 129}, -- Bologna
-	CulturalSettlementNames = {
-		"latin", "Bononia"
-	},
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
 	Coastal = true
@@ -3241,7 +2780,7 @@ DefineProvince("Russia", {
 		"slav", "Russia", "Russia"
 	},
 	Tiles = {
---				{140, 22}, {140, 23}, {140, 24}, {140, 25}, {140, 26}, {141, 21}, {141, 22}, {141, 23}, {141, 24}, {141, 25}, {141, 26}, {142, 21}, {142, 22}, {142, 23}, {142, 24}, {142, 25}, {142, 26}, {143, 21}, {143, 22}, {143, 23}, {143, 24}, {143, 25}, {143, 26}, {144, 21}, {144, 22}, {144, 23}, {144, 24}, {144, 25}, {144, 26}, {145, 18}, {145, 19}, {145, 20}, {145, 21}, {145, 22}, {145, 23}, {145, 24}, {145, 25}, {145, 26}, {145, 27}, {146, 18}, {146, 19}, {146, 20}, {146, 21}, {146, 22}, {146, 23}, {146, 24}, {146, 25}, {146, 26}, {146, 27}, {147, 18}, {147, 19}, {147, 20}, {147, 21}, {147, 22}, {147, 23}, {147, 24}, {147, 25}, {147, 26}, {147, 27}, {148, 20}, {148, 21}, {148, 22}, {148, 23}, {148, 24}, {148, 25}, {148, 26}, {148, 27}, {148, 28}, {149, 23}, {149, 24}, {149, 25}, {149, 26}, {149, 27}, {149, 28}, {150, 23}, {150, 24}, {150, 25}, {150, 26}, {150, 27}, {151, 24}, {151, 25}, {151, 26}, {151, 27}, {151, 28}, {151, 29}, {152, 24}, {152, 25}, {152, 26}, {152, 27}, {153, 24}, {153, 25}, {153, 26}, {154, 24}, {154, 25}, -- old map
+--		{140, 22}, {140, 23}, {140, 24}, {140, 25}, {140, 26}, {141, 21}, {141, 22}, {141, 23}, {141, 24}, {141, 25}, {141, 26}, {142, 21}, {142, 22}, {142, 23}, {142, 24}, {142, 25}, {142, 26}, {143, 21}, {143, 22}, {143, 23}, {143, 24}, {143, 25}, {143, 26}, {144, 21}, {144, 22}, {144, 23}, {144, 24}, {144, 25}, {144, 26}, {145, 18}, {145, 19}, {145, 20}, {145, 21}, {145, 22}, {145, 23}, {145, 24}, {145, 25}, {145, 26}, {145, 27}, {146, 18}, {146, 19}, {146, 20}, {146, 21}, {146, 22}, {146, 23}, {146, 24}, {146, 25}, {146, 26}, {146, 27}, {147, 18}, {147, 19}, {147, 20}, {147, 21}, {147, 22}, {147, 23}, {147, 24}, {147, 25}, {147, 26}, {147, 27}, {148, 20}, {148, 21}, {148, 22}, {148, 23}, {148, 24}, {148, 25}, {148, 26}, {148, 27}, {148, 28}, {149, 23}, {149, 24}, {149, 25}, {149, 26}, {149, 27}, {149, 28}, {150, 23}, {150, 24}, {150, 25}, {150, 26}, {150, 27}, {151, 24}, {151, 25}, {151, 26}, {151, 27}, {151, 28}, {151, 29}, {152, 24}, {152, 25}, {152, 26}, {152, 27}, {153, 24}, {153, 25}, {153, 26}, {154, 24}, {154, 25}, -- old map
 		{558, 90}, {558, 91},
 		{559, 88}, {559, 89}, {559, 90}, {559, 91}, {559, 92}, {559, 93},
 		{560, 86}, {560, 87}, {560, 88}, {560, 89}, {560, 90}, {560, 91}, {560, 92}, {560, 93}, {560, 94}, {560, 95},
@@ -3294,10 +2833,6 @@ DefineProvince("Russia", {
 		{607, 82}, {607, 83}, {607, 84}, {607, 85}, {607, 86}, {607, 87}, {607, 88}, {607, 89}, {607, 90}, {607, 91}, {607, 92}, {607, 93}, {607, 94}, {607, 95}, {607, 96}, {607, 97}, {607, 98}, {607, 99}, {607, 100}, {607, 101}, {607, 102}, {607, 103}, {607, 104}, {607, 105}, {607, 106}, {607, 107}, {607, 108}, {607, 109}, {607, 110}, {607, 111}, {607, 112}, {607, 113}, {607, 114}, {607, 115}, {607, 116},
 		{608, 82}, {608, 83}, {608, 84}, {608, 85}, {608, 86}, {608, 87}, {608, 88}, {608, 89}, {608, 90}, {608, 91}, {608, 92}, {608, 93}, {608, 94}, {608, 95}, {608, 96}, {608, 97}, {608, 98}, {608, 99}, {608, 100}, {608, 101}, {608, 102}, {608, 103}, {608, 104}, {608, 105}, {608, 106}, {608, 107}, {608, 108}, {608, 109}, {608, 110}, {608, 111}, {608, 112}, {608, 113}, {608, 114}
 	},
-	SettlementName = "Moscow",
-	CulturalSettlementNames = {
-		"slav", "Moscow"
-	},
 	SettlementLocation = {587, 97}, -- Moscow
 	Map = "maps/earth/novgorod.smp",
 	SettlementTerrain = "Plains",
@@ -3315,15 +2850,11 @@ DefineProvince("Sardinia", {
 		"latin", "Sardinia"
 	},
 	Tiles = {
---				{126, 36}, -- old map
+--		{126, 36}, -- old map
 		{504, 140}, {504, 141}, {504, 142}, {504, 143}, {504, 144},
 		{505, 139}, {505, 140}, {505, 141}, {505, 142}, {505, 143}, {505, 144},
 		{506, 139}, {506, 140}, {506, 141}, {506, 142}, {506, 143},
 		{507, 140}
-	},
-	SettlementName = "Caralis",
-	CulturalSettlementNames = {
-		"latin", "Caralis"
 	},
 	SettlementLocation = {505, 144}, -- Cagliari
 	Map = "maps/random/random-map-forest.smp",
@@ -3343,16 +2874,12 @@ DefineProvince("Savoy", {
 		{499, 124}, {499, 125}, {499, 126}, {499, 127},
 		{500, 126}, {500, 127}
 	},
-	SettlementName = "Chambéry",
-	FactionCulturalSettlementNames = {
-		"latin", "France", "Chambéry"
-	},
 	SettlementLocation = {496, 126}, -- Chambéry
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
 	Claims = {
---				"latin", "France",
---				"latin", "Savoy"
+--		"latin", "France",
+--		"latin", "Savoy"
 	}
 })
 
@@ -3375,7 +2902,6 @@ DefineProvince("Scania", {
 		{524, 95},
 		{525, 95}
 	},
-	SettlementName = "Malmö",
 	SettlementLocation = {517, 97}, -- Malmö
 	Map = "maps/earth/malmo.smp",
 	SettlementTerrain = "Plains",
@@ -3397,13 +2923,6 @@ DefineProvince("Schleswig", {
 		{506, 98}, {506, 99}, {506, 100},
 		{507, 100}
 	},
-	SettlementName = "Flensburg",
-	CulturalSettlementNames = {
-		"teuton", "Flensburg", "name-compound-elements", {
---			"prefix", -- ?
-			"suffix", "high-german", "noun", "singular", "Burg"
-		}
-	},
 	SettlementLocation = {506, 100}, -- Flensburg
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -3417,7 +2936,7 @@ DefineProvince("Schleswig", {
 DefineProvince("Serbia", {
 	World = "Earth",
 	Tiles = {
---				{134, 32}, {135, 32}, {135, 33}, -- old map
+--		{134, 32}, {135, 32}, {135, 33}, -- old map
 		{535, 129}, {535, 132},
 		{536, 128}, {536, 129}, {536, 130}, {536, 131}, {536, 132}, {536, 133},
 		{537, 129}, {537, 130}, {537, 131}, {537, 132}, {537, 133},
@@ -3431,10 +2950,6 @@ DefineProvince("Serbia", {
 	},
 	CulturalNames = {
 		"latin", "Upper Moesia"
-	},
-	SettlementName = "Belgrade",
-	CulturalSettlementNames = {
-		"latin", "Singidunum" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 	},
 	SettlementLocation = {538, 129}, -- Belgrade
 	Map = "maps/random/random-map-forest.smp",
@@ -3450,7 +2965,7 @@ DefineProvince("Silesia", {
 		"teuton", "Schlesien"
 	},
 	Tiles = {
---				{130, 27}, {131, 27}, {132, 27}, {132, 28}, -- old map
+--		{130, 27}, {131, 27}, {132, 27}, {132, 28}, -- old map
 		{523, 108}, {523, 109}, {523, 110},
 		{524, 108}, {524, 109}, {524, 110},
 		{525, 108}, {525, 109}, {525, 110}, {525, 111},
@@ -3463,10 +2978,6 @@ DefineProvince("Silesia", {
 		{532, 111}, {532, 112}, {532, 113},
 		{533, 112}, {533, 113},
 		{534, 113}
-	},
-	SettlementName = "Breslau",
-	CulturalSettlementNames = {
-		"teuton", "Breslau"
 	},
 	SettlementLocation = {526, 110}, -- Breslau
 	Map = "maps/random/random-map-forest.smp",
@@ -3491,10 +3002,6 @@ DefineProvince("Skopje", {
 		{543, 136}, {543, 137}, {543, 138},
 		{544, 136}, {544, 137}, {544, 138}
 	},
-	SettlementName = "Skopje",
-	CulturalSettlementNames = {
-		"latin", "Scupi" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
-	},
 	SettlementLocation = {540, 136}, -- Skopje
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -3506,6 +3013,7 @@ DefineProvince("Skopje", {
 DefineProvince("Slovakia", {
 	World = "Earth",
 	CulturalNames = {
+		"slav", "Slovakia"
 	},
 	Tiles = {
 		{528, 117}, {528, 118},
@@ -3531,13 +3039,6 @@ DefineProvince("Slovakia", {
 		{548, 118},
 		{549, 118}
 	},
-	SettlementName = "Bratislava",
-	CulturalSettlementNames = {
-		"teuton", "Presburg", "name-compound-elements", {
---			"prefix", -- ?
-			"suffix", "high-german", "noun", "singular", "Burg"
-		}
-	},
 	SettlementLocation = {528, 118}, -- Bratislava
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -3553,7 +3054,7 @@ DefineProvince("Slovakia", {
 DefineProvince("Sweden", {
 	World = "Earth",
 	Tiles = {
---				{129, 20}, {130, 20}, {130, 21}, {131, 21}, {132, 21}, -- old map
+--		{129, 20}, {130, 20}, {130, 21}, {131, 21}, {132, 21}, -- old map
 		{514, 85}, {514, 86},
 		{515, 85}, {515, 86}, {515, 87},
 		{516, 82}, {516, 83}, {516, 84}, {516, 85}, {516, 86}, {516, 87},
@@ -3578,10 +3079,6 @@ DefineProvince("Sweden", {
 	CulturalNames = {
 		"norse", "Sweden"
 	},
-	SettlementName = "Sigtun",
-	CulturalSettlementNames = {
-		"norse", "Sigtun"
-	},
 	SettlementLocation = {531, 87}, -- Stockholm / Sigtun
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -3599,7 +3096,7 @@ DefineProvince("Switzerland", {
 		"teuton", "Switzerland"
 	},
 	Tiles = {
---				{125, 30}, {126, 30}, -- old map
+--		{125, 30}, {126, 30}, -- old map
 		{497, 123}, {497, 124},
 		{498, 122}, {498, 123},
 		{499, 122}, {499, 123},
@@ -3614,7 +3111,6 @@ DefineProvince("Switzerland", {
 		{508, 122}, {508, 123},
 		{509, 122}
 	},
-	SettlementName = "Bern",
 	SettlementLocation = {501, 122}, -- Bern
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Mountains",
@@ -3637,11 +3133,6 @@ DefineProvince("Syracuse", {
 		{522, 147}, {522, 148}, {522, 149}, {522, 150}, {522, 151},
 		{523, 147}
 	},
-	SettlementName = "Syracuse",
-	CulturalSettlementNames = {
-		"greek", "Syracusae",
-		"latin", "Syracusae"
-	},
 	SettlementLocation = {522, 150}, -- Syracuse
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -3663,10 +3154,6 @@ DefineProvince("Thessaly", {
 	CulturalNames = {
 		"greek", "Thessaly"
 	},
-	SettlementName = "Larissa",
-	CulturalSettlementNames = {
-		"greek", "Larissa"
-	},
 	SettlementLocation = {543, 143}, -- Larissa
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -3679,7 +3166,7 @@ DefineProvince("Thessaly", {
 DefineProvince("Thrace", {
 	World = "Earth",
 	Tiles = {
---				{138, 34}, {139, 34}, -- old map
+--		{138, 34}, {139, 34}, -- old map
 		{555, 138}, {555, 139},
 		{556, 137}, {556, 138}, {556, 139},
 		{557, 137}, {557, 138}, {557, 139},
@@ -3687,11 +3174,6 @@ DefineProvince("Thrace", {
 		{559, 137}, {559, 138},
 		{560, 138},
 		{561, 138}
-	},
-	SettlementName = "Byzantium",
-	CulturalSettlementNames = {
-		"greek", "Byzantium",
-		"latin", "Constantinople"
 	},
 	SettlementLocation = {561, 138}, -- Constantinople
 	Map = "maps/random/random-map-forest.smp",
@@ -3717,10 +3199,6 @@ DefineProvince("Thuringia", {
 		{514, 110}, {514, 111}, {514, 112},
 		{515, 110}
 	},
-	SettlementName = "Erfurt",
-	CulturalSettlementNames = {
-		"teuton", "Erfurt"
-	},
 	SettlementLocation = {511, 110}, -- Erfurt
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -3734,13 +3212,13 @@ DefineProvince("Transylvania", {
 	World = "Earth",
 	CulturalNames = {
 		"latin", "Upper Dacia",
-		"teuton", "Siebenbürgen", "name-compound-elements", {
-			"prefix", "high-german", "numeral", "Sieben",
-			"suffix", "high-german", "noun", "plural", "Burg" -- not exact, because the plural of "Burg" is written "Burgen", and not "Bürgen"
+		"teuton", "Siebenbürgen", "name-elements", {
+			"compound", "prefix", "high-german", "numeral", "Sieben",
+			"compound", "suffix", "high-german", "noun", "plural", "Burg" -- not exact, because the plural of "Burg" is written "Burgen", and not "Bürgen"
 		}
 	},
 	Tiles = {
---				{136, 30}, {136, 31}, {137, 30}, {137, 31}, {138, 30}, {138, 31}, -- old map
+--		{136, 30}, {136, 31}, {137, 30}, {137, 31}, {138, 30}, {138, 31}, -- old map
 		{538, 125},
 		{539, 124}, {539, 125}, {539, 126},
 		{540, 123}, {540, 124}, {540, 125}, {540, 126}, {540, 127},
@@ -3758,21 +3236,11 @@ DefineProvince("Transylvania", {
 		{552, 123}, {552, 124}, {552, 125}, {552, 126},
 		{553, 125}
 	},
-	SettlementName = "Cluj",
 	SettlementLocation = {545, 122}, -- Cluj/Klausenburg
-	CulturalSettlementNames = {
-		"teuton", "Klausenburg", "name-compound-elements", {
-			"prefix", "high-german", "noun", "plural", "Klause",
-			"suffix", "high-german", "noun", "singular", "Burg"
-		}
-	},
-	FactionCulturalSettlementNames = {
-		"latin", "Romania", "Cluj"
-	},
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
 	Claims = {
---				"latin", "Transylvania"
+--		"latin", "Transylvania"
 		"minoan", "Paintedware Tribe"
 	}
 })
@@ -3781,7 +3249,7 @@ DefineProvince("Tuscany", {
 	World = "Earth",
 	CulturalNames = {
 		"latin", "Etruria",
-		etruscan = "Etruria"
+		"etruscan", "Etruria"
 	},
 	Tiles = {
 		{509, 131},
@@ -3790,10 +3258,6 @@ DefineProvince("Tuscany", {
 		{512, 130}, {512, 131}, {512, 132}, {512, 133}, {512, 134},
 		{513, 130}, {513, 131}, {513, 132}, {513, 133},
 		{514, 131}, {514, 132}
-	},
-	SettlementName = "Florence",
-	CulturalSettlementNames = {
-		"latin", "Florentia"
 	},
 	SettlementLocation = {512, 131}, -- Florence
 	Map = "maps/random/random-map-forest.smp",
@@ -3817,7 +3281,7 @@ DefineProvince("Ukraine", {
 		"slav", "Russia", "Ukraine"
 	},
 	Tiles = {
---				{139, 28}, {140, 27}, {140, 28}, {140, 29}, {141, 27}, {141, 28}, {141, 29}, {141, 30}, {142, 27}, {142, 28}, {142, 29}, {142, 30}, {143, 27}, {143, 28}, {143, 29}, {143, 30}, {144, 27}, {144, 28}, {144, 29}, {144, 30}, {144, 31}, {145, 28}, {145, 29}, {145, 30}, {146, 28}, {146, 29}, {146, 30}, {147, 28}, {147, 29}, -- old map
+--		{139, 28}, {140, 27}, {140, 28}, {140, 29}, {141, 27}, {141, 28}, {141, 29}, {141, 30}, {142, 27}, {142, 28}, {142, 29}, {142, 30}, {143, 27}, {143, 28}, {143, 29}, {143, 30}, {144, 27}, {144, 28}, {144, 29}, {144, 30}, {144, 31}, {145, 28}, {145, 29}, {145, 30}, {146, 28}, {146, 29}, {146, 30}, {147, 28}, {147, 29}, -- old map
 		{548, 110}, {548, 111}, {548, 112},
 		{549, 110}, {549, 111}, {549, 112},
 		{550, 109}, {550, 110}, {550, 111}, {550, 112},
@@ -3864,7 +3328,6 @@ DefineProvince("Ukraine", {
 		{591, 115}, {591, 116}, {591, 117}, {591, 118}, {591, 119},
 		{592, 115}, {592, 116}, {592, 117}, {592, 118}, {592, 119}
 	},
-	SettlementName = "Kiev",
 	SettlementLocation = {566, 112}, -- Kiev
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -3888,7 +3351,6 @@ DefineProvince("Umbria", {
 		{517, 132}, {517, 133},
 		{518, 132}, {518, 133}
 	},
-	SettlementName = "Perugia",
 	SettlementLocation = {515, 134}, -- Perugia
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -3912,10 +3374,6 @@ DefineProvince("Upper Lusatia", {
 		{520, 109}, {520, 110},
 		{521, 110}
 	},
-	SettlementName = "Bautzen",
-	CulturalSettlementNames = {
-		"teuton", "Bautzen"
-	},
 	SettlementLocation = {520, 109}, -- Bautzen
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains"
@@ -3932,10 +3390,6 @@ DefineProvince("Upper Saxony", {
 		{517, 109}, {517, 110}, {517, 111},
 		{518, 110}, {518, 111},
 		{519, 110}
-	},
-	SettlementName = "Leipzig",
-	CulturalSettlementNames = {
-		"teuton", "Leipzig"
 	},
 	SettlementLocation = {515, 109}, -- Leipzig
 	Map = "maps/random/random-map-forest.smp",
@@ -3961,11 +3415,6 @@ DefineProvince("Venetia", {
 		{516, 123}, {516, 124}, {516, 125},
 		{517, 124}, {517, 125}
 	},
-	SettlementName = "Venice",
-	CulturalSettlementNames = {
-		"latin", "Aquileia",
-		"teuton", "Venedig"
-	},
 	SettlementLocation = {515, 126}, -- Venice
 	Map = "maps/earth/oderzo.smp",
 	SettlementTerrain = "Plains",
@@ -3987,10 +3436,6 @@ DefineProvince("Vojvodina", {
 		{539, 127}, {539, 128},
 		{540, 128}
 	},
-	SettlementName = "Novi Sad",
-	CulturalSettlementNames = {
-		"teuton", "Neusatz" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 168.
-	},
 	SettlementLocation = {536, 127}, -- Novi Sad
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains"
@@ -4002,7 +3447,7 @@ DefineProvince("Wallachia", {
 		"latin", "Southern Lower Dacia"
 	},
 	Tiles = {
---				{136, 32}, {137, 32}, {138, 32}, {139, 32}, {140, 32}, -- old map
+--		{136, 32}, {137, 32}, {138, 32}, {139, 32}, {140, 32}, -- old map
 		{544, 127}, {544, 128}, {544, 129}, {544, 130},
 		{545, 127}, {545, 128}, {545, 129}, {545, 130},
 		{546, 127}, {546, 128}, {546, 129}, {546, 130},
@@ -4020,15 +3465,11 @@ DefineProvince("Wallachia", {
 		{558, 127}, {558, 128}, {558, 129},
 		{559, 127}, {559, 129}
 	},
-	SettlementName = "Bucharest",
 	SettlementLocation = {554, 129}, -- Bucharest
-	FactionCulturalSettlementNames = {
-		"latin", "Romania", "Bucharest"
-	},
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
 	Claims = {
---				"latin", "Wallachia",
+--		"latin", "Wallachia",
 		"minoan", "Paintedware Tribe",
 		"thracian", "Getae Tribe"
 	}
@@ -4037,7 +3478,10 @@ DefineProvince("Wallachia", {
 DefineProvince("West Galicia", {
 	World = "Earth",
 	CulturalNames = {
-		"teuton", "Westgalizien"
+		"teuton", "Westgalizien", "name-elements", {
+			"compound", "prefix", "high-german", "noun", "singular", "West",
+--			"compound", "suffix", -- ?
+		}
 	},
 	Tiles = {
 		{537, 109}, {537, 110}, {537, 111}, {537, 112},
@@ -4052,7 +3496,6 @@ DefineProvince("West Galicia", {
 		{546, 108}, {546, 109}, {546, 110}, {546, 111}, {546, 112},
 		{547, 111}, {547, 112}
 	},
-	SettlementName = "Lublin",
 	SettlementLocation = {543, 110}, -- Lublin
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -4065,13 +3508,13 @@ DefineProvince("West Galicia", {
 DefineProvince("Westphalia", {
 	World = "Earth",
 	CulturalNames = {
-		"teuton", "Westfalen", "name-compound-elements", {
-			"prefix", "high-german", "noun", "singular", "West",
---			"suffix", "high-german", "noun", "Falen" -- ?
+		"teuton", "Westfalen", "name-elements", {
+			"compound", "prefix", "high-german", "noun", "singular", "West",
+--			"compound", "suffix", -- ?
 		}
 	},
 	Tiles = {
---				{125, 26}, {125, 27}, {125, 28}, {126, 26}, {126, 27}, {126, 28}, {127, 26}, -- old map
+--		{125, 26}, {125, 27}, {125, 28}, {126, 26}, {126, 27}, {126, 28}, {127, 26}, -- old map
 		{497, 108},
 		{498, 108}, {498, 109}, {498, 110},
 		{499, 107}, {499, 108}, {499, 109}, {499, 110}, {499, 111},
@@ -4082,10 +3525,6 @@ DefineProvince("Westphalia", {
 		{504, 107}, {504, 108}, {504, 109}, {504, 110},
 		{505, 107}, {505, 108},
 		{506, 107}, {506, 108}
-	},
-	SettlementName = "Düsseldorf",
-	CulturalSettlementNames = {
-		"teuton", "Düsseldorf"
 	},
 	SettlementLocation = {500, 109}, -- Düsseldorf
 	Map = "maps/random/random-map-forest.smp",
@@ -4103,7 +3542,7 @@ DefineProvince("White Russia", {
 		"slav", "White Russia"
 	},
 	Tiles = {
---				{136, 25}, {136, 26}, {136, 27}, {137, 25}, {137, 26}, {137, 27}, {138, 25}, {138, 26}, {138, 27}, {139, 24}, {139, 25}, {139, 26}, {139, 27}, -- old map
+--		{136, 25}, {136, 26}, {136, 27}, {137, 25}, {137, 26}, {137, 27}, {138, 25}, {138, 26}, {138, 27}, {139, 24}, {139, 25}, {139, 26}, {139, 27}, -- old map
 		{543, 107},
 		{544, 101}, {544, 102}, {544, 103}, {544, 104}, {544, 105}, {544, 106}, {544, 107},
 		{545, 101}, {545, 102}, {545, 103}, {545, 104}, {545, 105}, {545, 106}, {545, 107},
@@ -4135,10 +3574,6 @@ DefineProvince("White Russia", {
 		{571, 102}, {571, 103}, {571, 104},
 		{572, 102}, {572, 103}
 	},
-	SettlementName = "Minsk",
-	CulturalSettlementNames = {
-		"slav", "Minsk"
-	},
 	SettlementLocation = {559, 102}, -- Minsk
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
@@ -4159,10 +3594,6 @@ DefineProvince("Wurtemberg", {
 		{507, 117}, {507, 118}, {507, 119}, {507, 120},
 		{508, 116}, {508, 117}, {508, 118}, {508, 119}, {508, 120},
 		{509, 117}
-	},
-	SettlementName = "Stuttgart",
-	CulturalSettlementNames = {
-		"teuton", "Stuttgart"
 	},
 	SettlementLocation = {506, 117}, -- Stuttgart
 	Map = "maps/random/random-map-forest.smp",
@@ -4188,10 +3619,6 @@ DefineProvince("Zealand", {
 	},
 	CulturalNames = {
 		"norse", "Sjaelland"
-	},
-	SettlementName = "Copenhagen",
-	CulturalSettlementNames = {
-		"norse", "Copenhagen"
 	},
 	SettlementLocation = {515, 97}, -- Copenhagen
 	Map = "maps/random/random-map-forest.smp",
@@ -4379,11 +3806,7 @@ DefineProvince("Kal Kartha", {
 		{55, 7}, {55, 8}, {55, 9}, {55, 10}, {55, 11}, {55, 12},
 		{56, 12}
 	},
-	SettlementName = "Kal Kartha",
 	CulturalNames = {
-		"dwarf", "Kal Kartha"
-	},
-	CulturalSettlementNames = {
 		"dwarf", "Kal Kartha"
 	},
 	SettlementLocation = {45, 5},
@@ -4397,11 +3820,7 @@ DefineProvince("Kal Kartha", {
 DefineProvince("Lyr", {
 	World = "Nidavellir",
 	Tiles = { {47, 13}, {47, 14}, {47, 15}, {47, 16}, {48, 13}, {48, 14}, {48, 15}, {48, 16}, {49, 12}, {49, 13}, {49, 14}, {49, 15}, {49, 16}, {49, 17}, {50, 12}, {50, 13}, {50, 14}, {50, 15}, {50, 16}, {50, 17}, {51, 12}, {51, 13}, {51, 14}, {51, 15}, {51, 16}, {51, 17}, {52, 13}, {52, 14}, {52, 15}, {52, 16}, {52, 17}, {53, 13}, {53, 14}, {53, 15}, {53, 16}, {54, 13}, {54, 14}, {54, 15}, {54, 16}, {55, 13}, {55, 14}, {55, 15}, {55, 16}, {56, 13}, {56, 14}, {56, 15}, {56, 16} },
-	SettlementName = "Lyr",
 	CulturalNames = {
-		"dwarf", "Lyr"
-	},
-	CulturalSettlementNames = {
 		"dwarf", "Lyr"
 	},
 	SettlementLocation = {50, 13},
@@ -4452,12 +3871,8 @@ DefineProvince("Peaceful Valley", {
 DefineProvince("Shorbear Hills", {
 	World = "Nidavellir",
 	Tiles = { {31, 16}, {31, 17}, {31, 18}, {32, 15}, {32, 16}, {32, 17}, {32, 18}, {32, 19}, {33, 14}, {33, 15}, {33, 16}, {33, 17}, {33, 18}, {33, 19}, {34, 14}, {34, 15}, {34, 16}, {34, 17} },
-	SettlementName = "Shorbear Hold",
 	CulturalNames = {
 		"dwarf", "Shorbear Hills"
-	},
-	CulturalSettlementNames = {
-		"dwarf", "Shorbear Hold"
 	},
 	SettlementLocation = {33, 15},
 	Map = "maps/nidavellir/shorbear-hills.smp",
@@ -4471,12 +3886,8 @@ DefineProvince("Shorbear Hills", {
 DefineProvince("Southern Tunnels", {
 	World = "Nidavellir",
 	Tiles = { {31, 14}, {32, 13}, {32, 14}, {33, 12}, {33, 13}, {34, 12}, {34, 13}, {35, 13} },
-	SettlementName = "Knalga",
 	CulturalNames = {
 		"dwarf", "Southern Tunnels"
-	},
-	CulturalSettlementNames = {
-		"dwarf", "Knalga"
 	},
 	SettlementLocation = {32, 14},
 	Map = "maps/nidavellir/southern-tunnels.smp",
@@ -4494,9 +3905,6 @@ DefineProvince("Svarinshaug", {
 		"dwarf", "Svarinshaug"
 	},
 	SettlementLocation = {44, 11},
-	CulturalSettlementNames = {
-		"dwarf", "Svarinshaug"
-	},
 	Map = "maps/nidavellir/svarinshaug.smp",
 	SettlementTerrain = "Hills",
 	Claims = {
@@ -4508,7 +3916,7 @@ DefineProvince("Adriatic Sea", { -- Source: "Limits of Oceans and Seas", 1953, p
 	World = "Earth",
 	Water = true,
 	Tiles = {
---				{129, 32}, {130, 32}, {130, 33}, {131, 33}, {132, 33}, {132, 34}, {133, 34}, {133, 35}, -- old map
+--		{129, 32}, {130, 32}, {130, 33}, {131, 33}, {132, 33}, {132, 34}, {133, 34}, {133, 35}, -- old map
 		{515, 127}, {515, 128}, {515, 129},
 		{516, 126}, {516, 127}, {516, 128}, {516, 129}, {516, 130},
 		{517, 126}, {517, 127}, {517, 128}, {517, 129}, {517, 130}, {517, 131},

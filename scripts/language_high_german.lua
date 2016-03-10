@@ -735,6 +735,16 @@ DefineLanguageWord("Gang", {
 	Meanings = {}
 })
 
+DefineLanguageWord("Gart", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"Rural Landsknecht Guard"},
+	NumberCaseInflections = {
+		"plural", "nominative", "Garten"
+	},
+	Gender = "feminine"
+})
+
 DefineLanguageWord("Garten", {
 	Language = "high-german",
 	Type = "noun",
@@ -1228,6 +1238,17 @@ DefineLanguageWord("Joseph", {
 	Type = "noun",
 	Meanings = {},
 	NameTypes = {"person"}
+})
+
+DefineLanguageWord("Kaiser", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"Emperor"},
+	NumberCaseInflections = {
+		"singular", "genitive", "Kaisers",
+		"plural", "dative", "Kaisern"
+	},
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Karl", {
@@ -1794,6 +1815,20 @@ DefineLanguageWord("Salz", {
 	Gender = "masculine",
 	Uncountable = true,
 	AffixNameTypes = {"compound", "prefix", "singular", "settlement"} -- example: Salzburg
+})
+
+DefineLanguageWord("Satz", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"Sentence", "Sediment"},
+	NumberCaseInflections = {
+		"singular", "genitive", "Satzes",
+		"plural", "nominative", "Sätze",
+		"plural", "accusative", "Sätze",
+		"plural", "dative", "Sätzen",
+		"plural", "genitive", "Sätze"
+	},
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Schaf", {
