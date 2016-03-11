@@ -212,6 +212,22 @@ DefineCharacter("Aldhelm", { -- Source: Alaric Hall, "The Meanings of Elf and El
 	DeathYear = 709 -- died in 709/710
 })
 
+DefineCharacter("Widukind", {
+	Name = "Widukind",
+	NameElements = {
+--		"compound", "prefix", -- ?
+		"compound", "suffix", "old-saxon", "noun", "Kind" -- presumably
+	},
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "teuton",
+	Faction = "Saxon Tribe",
+--	ProvinceOfOrigin = ?
+--	Year = ?,
+--	DeathYear = ?
+})
+
+
 DefineCharacter("Nicolas Breakspear", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 126.
 	Name = "Nicolas", -- son of a peasant employed in the Benedictine monastery of Saint Albans in Hertfordshire; was educated by the monks there; later became a cardinal and was sent on a mission to Norway to settle the Church there; was elected Pope in 1154 AD under the title of Hadrian IV
 	ExtraName = "Breakspear", -- I assume this isn't his family name, but a nickname or something of the sort?

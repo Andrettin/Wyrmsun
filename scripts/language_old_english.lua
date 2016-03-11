@@ -294,6 +294,13 @@ DefineLanguageWord("Cildisc", { -- Source: Alaric Hall, "The Meanings of Elf and
 	Meanings = {"Childish"}
 })
 
+DefineLanguageWord("Cniht", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 27.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Boy", "Youth", "Servant"}, -- source gives the German "Knabe, Jüngling, Diener" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Knehta"}
+})
+
 DefineLanguageWord("Corn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-english",
 	Type = "noun",

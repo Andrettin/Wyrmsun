@@ -1303,6 +1303,21 @@ DefineLanguageWord("Kettenhemd", {
 	}
 })
 
+DefineLanguageWord("Kind", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"Child"},
+	DerivesFrom = {"old-high-german", "noun", "Kind"}, -- presumably
+	Gender = "neuter",
+	NumberCaseInflections = {
+		"singular", "genitive", "Kindes", -- alternatively also "Kinds"
+		"plural", "nominative", "Kinder",
+		"plural", "accusative", "Kinder",
+		"plural", "dative", "Kindern",
+		"plural", "genitive", "Kinder"
+	}
+})
+
 DefineLanguageWord("Kirche", {
 	Language = "high-german",
 	Type = "noun",
@@ -1362,6 +1377,21 @@ DefineLanguageWord("Kloster", {
 	},
 	AffixNameTypes = {
 		"compound", "prefix", "singular", "settlement" -- example: "Klosterneuburg"
+	}
+})
+
+DefineLanguageWord("Knecht", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 27.
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"Servant"},
+	DerivesFrom = {"middle-high-german", "noun", "Kneht"},
+	Gender = "masculine",
+	NumberCaseInflections = {
+		"singular", "genitive", "Knechtes", -- alternatively also "Knechts"
+		"plural", "nominative", "Knechte",
+		"plural", "accusative", "Knechte",
+		"plural", "dative", "Knechten",
+		"plural", "genitive", "Knechte"
 	}
 })
 

@@ -257,6 +257,13 @@ DefineLanguageWord("Hwit", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	DerivesFrom = {"proto-germanic", "adjective", "Hvîta"}
 })
 
+DefineLanguageWord("Knecht", { -- source also gives the alternative form "kniucht"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 27.
+	Language = "old-frisian",
+	Type = "noun",
+	Meanings = {"Boy", "Bachelor", "Servant"}, -- source apparently gives the German "Knabe, Junggesell, Diener" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Knehta"}
+})
+
 DefineLanguageWord("Lâd", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 181.
 	Language = "old-frisian",
 	Type = "noun",

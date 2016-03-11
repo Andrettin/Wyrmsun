@@ -263,6 +263,13 @@ DefineLanguageWord("Chunni", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	DerivesFrom = {"proto-germanic", "noun", "Kuni"}
 })
 
+DefineLanguageWord("Cneht", { -- source also gives the alternative form "chneht"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 27.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Boy", "Youth", "Young Warrior", "Servant", "Squire"}, -- source gives the German "Knabe, Jüngling, junger Krieger, Diener, Knecht, Knappe" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Knehta"}
+})
+
 DefineLanguageWord("Corn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-high-german",
 	Type = "noun",
@@ -757,6 +764,14 @@ DefineLanguageWord("Jung", { -- Source: Richard M. Runge, "The Phonetic Realizat
 	Type = "adjective",
 	Meanings = {"Young"},
 	DerivesFrom = {"proto-indo-european", "adjective", "Yehw"}
+})
+
+DefineLanguageWord("Kind", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 27.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Child"}, -- source gives the German "Kind" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Kenþa"},
+	Gender = "neuter"
 })
 
 DefineLanguageWord("Kōl", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.

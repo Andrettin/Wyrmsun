@@ -114,6 +114,13 @@ DefineLanguageWord("Kên", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Meanings = {"Resinous Wood"}
 })
 
+DefineLanguageWord("Knecht", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 27.
+	Language = "middle-low-german",
+	Type = "noun",
+	Meanings = {"Boy", "Bachelor", "Servant"}, -- source gives the German "Knabe, Junggesell, Diener" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Knehta"} -- Old Low German "inkneht", although having the same root, appears to have a prefix, and thus this word likely does not derive from it
+})
+
 DefineLanguageWord("Lôt", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 181.
 	Language = "middle-low-german",
 	Type = "noun",

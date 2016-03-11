@@ -429,6 +429,13 @@ DefineLanguageWord("Hwit", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	DerivesFrom = {"proto-germanic", "adjective", "Hvîta"}
 })
 
+DefineLanguageWord("Inkneht", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 27.
+	Language = "old-saxon", -- source gives Old Low German
+	Type = "noun",
+	Meanings = {"House Servant"}, -- source gives the German "Diener des Hauses" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Knehta"}
+})
+
 DefineLanguageWord("Irminthiod", { -- the first part of this compound derives from the Proto-Germanic noun "Erman"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 18.
 	Language = "old-saxon",
 	Type = "noun",
@@ -447,6 +454,14 @@ DefineLanguageWord("Jung", {
 	Language = "old-saxon",
 	Type = "adjective",
 	Meanings = {"Young"} -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
+})
+
+DefineLanguageWord("Kind", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 27.
+	Language = "old-saxon",
+	Type = "noun",
+	Meanings = {"Child"}, -- source apparently gives the German "Kind" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Kenþa"},
+	Gender = "neuter"
 })
 
 DefineLanguageWord("Kuning", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 27.

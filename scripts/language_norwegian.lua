@@ -87,6 +87,14 @@ DefineLanguageWord("Gletta", { -- vernacular; weak verb; Source: August Fick and
 	DerivesFrom = {"old-norse", "verb", "Glotta"} -- presumably?
 })
 
+DefineLanguageWord("Kind", { -- dialectal; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 27.
+	Language = "norwegian",
+	Type = "noun",
+	Meanings = {"Child"}, -- source gives the German "Kind" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Kenþa"},
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Simla", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.
 	Language = "norwegian", -- source gives New Norwegian
 	Type = "noun",

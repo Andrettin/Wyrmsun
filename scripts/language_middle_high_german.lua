@@ -469,6 +469,13 @@ DefineLanguageWord("Kien", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Kneht", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 27.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Boy", "Youth", "Young Warrior", "Servant", "Squire"}, -- source gives the German "Knabe, Jüngling, junger Krieger, Diener, Knecht, Knappe" as the meaning
+	DerivesFrom = {"old-high-german", "noun", "Cneht"}
+})
+
 DefineLanguageWord("Künec", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 27.
 	Language = "middle-high-german",
 	Type = "noun",

@@ -668,11 +668,23 @@ DefineLanguageWord("Îsarna", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Gender = "neuter"
 })
 
+DefineLanguageWord("Kenþa", { -- source also gives the alternative form "kenda"; also a participle passive meaning (in German) "geboren"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 27.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Child"} -- source gives the German "Kind" as the meaning
+})
+
 DefineLanguageWord("Kizna", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 4, 7.
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Resinous Wood"},
 	Gender = "masculine"
+})
+
+DefineLanguageWord("Knehta", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 27.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {}
 })
 
 DefineLanguageWord("Kŕnam", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.

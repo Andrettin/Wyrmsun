@@ -1613,6 +1613,14 @@ DefineLanguageWord("King", {
 	AffixNameTypes = {"compound", "prefix", "singular", "genitive", "settlement"} -- example: "Kingston"
 })
 
+DefineLanguageWord("Knight", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Knight"},
+	DerivesFrom = {"old-english", "noun", "Cniht"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 27.
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Lanca", {
 	Language = "english",
 	Type = "noun", -- correct?
