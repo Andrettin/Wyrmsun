@@ -87,7 +87,7 @@ DefineQuest("Gylve's Realm", {
 	Y = 1,
 	PlayerColor = "orange",
 	LoadingMusic = "GermanicLoading",
-	MapMusic = "GermanicTheme4"
+--	MapMusic = "GermanicTheme4"
 })
 
 DefineQuest("The Battle of Magetobria", {

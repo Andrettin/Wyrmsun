@@ -1708,7 +1708,10 @@ DefineProvince("Hordaland", {
 		{500, 83}, {500, 84}
 	},
 	CulturalNames = {
-		"norse", "Hordaland"
+		"norse", "Hordaland", "name-elements", {
+--			"compound", "prefix", -- ?
+			"compound", "suffix", "old-norse", "noun", "singular", "Land" -- presumably
+		}
 	},
 	SettlementLocation = {495, 84}, -- Bergen
 	Map = "maps/random/random-map-forest.smp",

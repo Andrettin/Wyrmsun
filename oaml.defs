@@ -206,10 +206,10 @@
 	<name>GermanicTheme3</name>
 	<group>map</group>
 	<subgroup>germanic</subgroup>
-	<fadeIn>2000</fadeIn>
-	<fadeOut>1000</fadeOut>
-	<xfadeIn>500</xfadeIn>
-	<xfadeOut>500</xfadeOut>
+	<fadeIn>500</fadeIn>
+	<fadeOut>500</fadeOut>
+	<xfadeIn>10</xfadeIn>
+	<xfadeOut>10</xfadeOut>
 	<audio>
 		<filename>music/oaml/GermanicTheme3_A1.ogg</filename>
 		<bpm>112</bpm>
