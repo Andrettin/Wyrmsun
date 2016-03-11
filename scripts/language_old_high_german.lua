@@ -1300,6 +1300,17 @@ DefineLanguageWord("Trūēn", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Meanings = {"Trust"}
 })
 
+DefineLanguageWord("Zûn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 89.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Fence", "Hedge", "Enclosure"}, -- source gives the German "Zaun, Hecke, Gehege" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Tûna"},
+	Gender = "masculine",
+	NumberCaseInflections = {
+		"plural", "nominative", "Zûnî"
+	}
+})
+
 DefineLanguageWord("Ubir", { -- Lehmann also gives the alternative form "ubar"; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-high-german",
 	Type = "adposition",

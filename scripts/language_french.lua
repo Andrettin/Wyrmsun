@@ -45,7 +45,7 @@ DefineLanguageWord("Aud", { -- a suffix
 	Type = "noun", -- correct?
 	Meanings = {},
 	DerivesFrom = {"old-french", "noun", "Alt"}, -- http://www.cnrtl.fr/definition/lourdaud//1
-	AffixNameTypes = {"compound", "suffix", "singular", "person"} -- examples: "Bellaud", "Bonnaud", "Renaud"
+	AffixNameTypes = {"compound", "suffix", "singular", "person-male"} -- examples: "Bellaud", "Bonnaud", "Renaud"
 })
 
 DefineLanguageWord("Aut", { -- a suffix
@@ -66,7 +66,7 @@ DefineLanguageWord("Bell", {
 	Language = "french",
 	Type = "noun", -- correct?
 	Meanings = {},
-	AffixNameTypes = {"compound", "prefix", "singular", "person"} -- example: "Bellaud"
+	AffixNameTypes = {"compound", "prefix", "singular", "person-male"} -- example: "Bellaud"
 })
 
 DefineLanguageWord("Bleu", {
@@ -95,7 +95,7 @@ DefineLanguageWord("Bonn", {
 	Language = "french",
 	Type = "noun", -- correct?
 	Meanings = {},
-	AffixNameTypes = {"compound", "prefix", "singular", "person"} -- example: "Bonnaud"
+	AffixNameTypes = {"compound", "prefix", "singular", "person-male"} -- example: "Bonnaud"
 })
 
 DefineLanguageWord("Bord", {
@@ -280,7 +280,7 @@ DefineLanguageWord("Ren", {
 	Language = "french",
 	Type = "noun", -- correct?
 	Meanings = {},
-	AffixNameTypes = {"compound", "prefix", "singular", "person"} -- example: "Renaud"
+	AffixNameTypes = {"compound", "prefix", "singular", "person-male"} -- example: "Renaud"
 })
 
 DefineLanguageWord("Riche", {

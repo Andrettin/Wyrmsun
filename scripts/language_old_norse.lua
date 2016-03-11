@@ -1295,6 +1295,14 @@ DefineLanguageWord("Tryggr", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Meanings = {"Faithful"}
 })
 
+DefineLanguageWord("Tûn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 89.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Enclosed Lawn in Front of the House", "Court Square", "City", "Town"}, -- source gives the German "eingehegter Grasplatz vor dem Hause, Hofplatz, Stadt" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Tûna"},
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Tvennr", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 6.
 	Language = "old-norse",
 	Type = "adjective",

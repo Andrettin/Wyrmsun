@@ -88,6 +88,15 @@ DefineLanguageWord("Cnú", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Gender = "feminine"
 })
 
+DefineLanguageWord("Dún", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 89.
+	Language = "irish",
+	Type = "noun",
+	Meanings = {"Firm City", "Firm Town"}, -- source gives the German "feßte Stadt" as the meaning
+	NumberCaseInflections = {
+		"singular", "genitive", "Dúne"
+	}
+})
+
 DefineLanguageWord("Fescor", { -- source also gives the alternative form "Ἑστέρα"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 204.
 	Language = "irish",
 	Type = "noun",

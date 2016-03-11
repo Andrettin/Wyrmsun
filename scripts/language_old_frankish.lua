@@ -35,7 +35,7 @@ DefineLanguageWord("Ans", { -- http://www.cnrtl.fr/definition/lourdaud//1
 	Language = "old-frankish",
 	Type = "noun", -- correct?
 	Meanings = {},
-	AffixNameTypes = {"compound", "prefix", "singular", "person"} -- examples: "Answald"
+	AffixNameTypes = {"compound", "prefix", "singular", "person-male"} -- examples: "Answald"
 })
 
 DefineLanguageWord("Bergan", { -- Source: http://www.cnrtl.fr/definition/haubert
@@ -113,7 +113,7 @@ DefineLanguageWord("Grim", { -- http://www.cnrtl.fr/definition/lourdaud//1
 	Language = "old-frankish",
 	Type = "noun", -- correct?
 	Meanings = {},
-	AffixNameTypes = {"compound", "prefix", "singular", "person"} -- examples: "Grimwald"
+	AffixNameTypes = {"compound", "prefix", "singular", "person-male"} -- examples: "Grimwald"
 })
 
 DefineLanguageWord("Grîs", { -- Source: http://www.cnrtl.fr/definition/gris
@@ -274,7 +274,7 @@ DefineLanguageWord("Wald", { -- a suffix, from the verb "walden"; http://www.cnr
 	Language = "old-frankish",
 	Type = "noun", -- correct? maybe should be "walden"'s participle instead
 	Meanings = {},
-	AffixNameTypes = {"compound", "suffix", "singular", "person"} -- examples: "Answald", "Grimwald"
+	AffixNameTypes = {"compound", "suffix", "singular", "person-male"} -- examples: "Answald", "Grimwald"
 })
 
 DefineLanguageWord("Walden", { -- http://www.cnrtl.fr/definition/lourdaud//1

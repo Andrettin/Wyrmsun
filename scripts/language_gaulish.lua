@@ -44,6 +44,13 @@ DefineLanguageWord("Dubnorix", { -- Source: Winfred P. Lehmann, "A Grammar of Pr
 	Meanings = {"Deep"} -- cognate of Proto-Germanic "Déwpaz" and Lithuanian "Dubùs", both of which mean "Deep"; the meaning for the Gaulish word isn't given by the source, so the meaning of the cognates is the closest we have
 })
 
+DefineLanguageWord("Dûnum", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 89.
+	Language = "gaulish",
+	Type = "noun",
+	Meanings = {}
+	-- appears in city names
+})
+
 DefineLanguageWord("Longo", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "gaulish",
 	Type = "adjective",

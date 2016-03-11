@@ -467,6 +467,14 @@ DefineLanguageWord("Thorp", { -- source also gives the alternative form "Therp";
 	DerivesFrom = {"proto-germanic", "noun", "Þurpa"}
 })
 
+DefineLanguageWord("Tûn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 89.
+	Language = "old-frisian",
+	Type = "noun",
+	Meanings = {"Fence"}, -- source gives the German "Zaun" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Tûna"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Turf", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 86.
 	Language = "old-frisian",
 	Type = "noun",

@@ -765,6 +765,14 @@ DefineLanguageWord("Wurm", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Zûn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 89.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Fence", "Hedge", "Enclosure"}, -- source gives the German "Zaun, Hecke, Gehege" as the meaning
+	DerivesFrom = {"old-high-german", "noun", "Zûn"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Zwirn", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1-2, 6.
 	Language = "middle-high-german",
 	Type = "noun",

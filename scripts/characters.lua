@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2015 by Andrettin
+--      (c) Copyright 2015-2016 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -24,6 +24,35 @@
 --      along with this program; if not, write to the Free Software
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
+
+if (OldDefineCharacter == nil) then
+	OldDefineCharacter = DefineCharacter
+end
+
+function DefineCharacter(character, data)
+	if (data.Name ~= nil or data.ExtraName ~= nil or data.Dynasty ~= nil or data.Gender ~= nil) then
+		local preliminary_data = {}
+		if (data.Name ~= nil) then
+			preliminary_data.Name = data.Name
+		end
+		if (data.ExtraName ~= nil) then
+			preliminary_data.ExtraName = data.ExtraName
+		end
+		if (data.Dynasty ~= nil) then
+			preliminary_data.Dynasty = data.Dynasty
+		end
+		if (data.Gender ~= nil) then
+			preliminary_data.Gender = data.Gender
+		end
+		OldDefineCharacter(character, preliminary_data)
+		data.Name = nil
+		data.ExtraName = nil
+		data.Dynasty = nil
+		data.Gender = nil
+	end
+	
+	OldDefineCharacter(character, data)
+end
 
 Load("scripts/civilizations/dwarf/characters.lua")
 Load("scripts/civilizations/elf/characters.lua")

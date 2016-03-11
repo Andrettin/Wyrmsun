@@ -25,12 +25,20 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineLanguageWord("Adalga", {
+	Language = "gnomish",
+	Type = "noun",
+	Meanings = {},
+	Gender = "feminine", -- presumably, since it is a feminine personal name
+	NameTypes = {"person-female"}
+})
+
 DefineLanguageWord("Bimbam", {
 	Language = "gnomish",
 	Type = "noun",
 	Meanings = {},
 	Gender = "masculine", -- presumably, since it is a masculine personal name
-	NameTypes = {"person"}
+	NameTypes = {"person-male"}
 })
 
 DefineLanguageWord("Clavo", {
@@ -38,7 +46,7 @@ DefineLanguageWord("Clavo", {
 	Type = "noun",
 	Meanings = {},
 	Gender = "masculine", -- presumably, since it is a masculine personal name
-	NameTypes = {"person"}
+	NameTypes = {"person-male"}
 })
 
 DefineLanguageWord("Cravatu", {
@@ -46,7 +54,7 @@ DefineLanguageWord("Cravatu", {
 	Type = "noun",
 	Meanings = {},
 	Gender = "masculine", -- presumably, since it is a masculine personal name
-	NameTypes = {"person"}
+	NameTypes = {"person-male"}
 })
 
 DefineLanguageWord("Kalutho", {
@@ -54,7 +62,7 @@ DefineLanguageWord("Kalutho", {
 	Type = "noun",
 	Meanings = {},
 	Gender = "masculine", -- presumably, since it is a masculine personal name
-	NameTypes = {"person"}
+	NameTypes = {"person-male"}
 })
 
 DefineLanguageWord("Leffas", {
@@ -75,5 +83,5 @@ DefineLanguageWord("Rubezahl", {
 	Type = "noun",
 	Meanings = {},
 	Gender = "masculine", -- presumably, since it is a masculine personal name
-	NameTypes = {"person"}
+	NameTypes = {"person-male"}
 })

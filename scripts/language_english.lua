@@ -30,7 +30,7 @@ DefineLanguageWord("Adam", {
 	Type = "noun",
 	Meanings = {},
 	Gender = "masculine",
-	NameTypes = {"person"}
+	NameTypes = {"person-male"}
 })
 
 DefineLanguageWord("Alexander", {
@@ -38,7 +38,7 @@ DefineLanguageWord("Alexander", {
 	Type = "noun",
 	Meanings = {},
 	Gender = "masculine",
-	NameTypes = {"person"}
+	NameTypes = {"person-male"}
 })
 
 DefineLanguageWord("Alf", {
@@ -48,7 +48,7 @@ DefineLanguageWord("Alf", {
 	DerivesFrom = {"old-english", "noun", "Ælf"}, -- seems sensible
 	Gender = "masculine",
 	Archaic = true,
-	NameTypes = {"person"}
+	NameTypes = {"person-male"}
 })
 
 DefineLanguageWord("Anvil", {
@@ -82,7 +82,7 @@ DefineLanguageWord("Arthur", {
 	Type = "noun",
 	Meanings = {},
 	Gender = "masculine",
-	NameTypes = {"person"}
+	NameTypes = {"person-male"}
 })
 
 DefineLanguageWord("Ash", {
@@ -206,7 +206,7 @@ DefineLanguageWord("Benjamin", {
 	Type = "noun",
 	Meanings = {},
 	Gender = "masculine",
-	NameTypes = {"person"}
+	NameTypes = {"person-male"}
 })
 
 DefineLanguageWord("Berk", {
@@ -524,7 +524,7 @@ DefineLanguageWord("Charles", {
 	Type = "noun",
 	Meanings = {},
 	Gender = "masculine",
-	NameTypes = {"person"}
+	NameTypes = {"person-male"}
 })
 
 DefineLanguageWord("Chat", {
@@ -562,7 +562,7 @@ DefineLanguageWord("Christopher", {
 	Type = "noun",
 	Meanings = {},
 	Gender = "masculine",
-	NameTypes = {"person"}
+	NameTypes = {"person-male"}
 })
 
 DefineLanguageWord("Church", {
@@ -683,7 +683,7 @@ DefineLanguageWord("David", {
 	Type = "noun",
 	Meanings = {},
 	Gender = "masculine",
-	NameTypes = {"person"}
+	NameTypes = {"person-male"}
 })
 
 DefineLanguageWord("Dead", {
@@ -717,7 +717,7 @@ DefineLanguageWord("Donald", {
 	Type = "noun",
 	Meanings = {},
 	Gender = "masculine",
-	NameTypes = {"person"}
+	NameTypes = {"person-male"}
 })
 
 DefineLanguageWord("Dor", {
@@ -800,7 +800,7 @@ DefineLanguageWord("Edgar", {
 	Type = "noun",
 	Meanings = {},
 	Gender = "masculine",
-	NameTypes = {"person"}
+	NameTypes = {"person-male"}
 })
 
 DefineLanguageWord("Edmund", {
@@ -808,7 +808,7 @@ DefineLanguageWord("Edmund", {
 	Type = "noun",
 	Meanings = {},
 	Gender = "masculine",
-	NameTypes = {"person"}
+	NameTypes = {"person-male"}
 })
 
 DefineLanguageWord("Edward", {
@@ -816,7 +816,7 @@ DefineLanguageWord("Edward", {
 	Type = "noun",
 	Meanings = {},
 	Gender = "masculine",
-	NameTypes = {"person"}
+	NameTypes = {"person-male"}
 })
 
 DefineLanguageWord("Eel", {
@@ -860,7 +860,7 @@ DefineLanguageWord("Elias", {
 	Type = "noun",
 	Meanings = {},
 	Gender = "masculine",
-	NameTypes = {"person"}
+	NameTypes = {"person-male"}
 })
 
 DefineLanguageWord("End", {
@@ -1028,14 +1028,14 @@ DefineLanguageWord("Francis", {
 	Type = "noun",
 	Meanings = {},
 	Gender = "masculine",
-	NameTypes = {"person"}
+	NameTypes = {"person-male"}
 })
 
 DefineLanguageWord("Frederick", {
 	Language = "english",
 	Type = "noun",
 	Meanings = {},
-	NameTypes = {"person"}
+	NameTypes = {"person-male"}
 })
 
 DefineLanguageWord("Frey", {
@@ -1126,7 +1126,7 @@ DefineLanguageWord("George", {
 	Type = "noun",
 	Meanings = {},
 	Gender = "masculine",
-	NameTypes = {"person"}
+	NameTypes = {"person-male"}
 })
 
 DefineLanguageWord("Goat", {
@@ -1286,7 +1286,7 @@ DefineLanguageWord("Harold", {
 	Type = "noun",
 	Meanings = {},
 	Gender = "masculine",
-	NameTypes = {"person"}
+	NameTypes = {"person-male"}
 })
 
 DefineLanguageWord("Harrison", {
@@ -1294,7 +1294,7 @@ DefineLanguageWord("Harrison", {
 	Type = "noun",
 	Meanings = {},
 	Gender = "masculine",
-	NameTypes = {"person"}
+	NameTypes = {"person-male"}
 })
 
 DefineLanguageWord("Harrow", {
@@ -1312,7 +1312,7 @@ DefineLanguageWord("Harry", {
 	Type = "noun",
 	Meanings = {},
 	Gender = "masculine",
-	NameTypes = {"person"}
+	NameTypes = {"person-male"}
 })
 
 DefineLanguageWord("Hauberk", {
@@ -1383,7 +1383,7 @@ DefineLanguageWord("Henry", {
 	Type = "noun",
 	Meanings = {},
 	Gender = "masculine",
-	NameTypes = {"person"}
+	NameTypes = {"person-male"}
 })
 
 DefineLanguageWord("High", {
@@ -1569,7 +1569,7 @@ DefineLanguageWord("Jack", {
 	Type = "noun",
 	Meanings = {},
 	Gender = "masculine",
-	NameTypes = {"person"}
+	NameTypes = {"person-male"}
 })
 
 DefineLanguageWord("James", {
@@ -1577,7 +1577,7 @@ DefineLanguageWord("James", {
 	Type = "noun",
 	Meanings = {},
 	Gender = "masculine",
-	NameTypes = {"person"}
+	NameTypes = {"person-male"}
 })
 
 DefineLanguageWord("John", {
@@ -1585,7 +1585,7 @@ DefineLanguageWord("John", {
 	Type = "noun",
 	Meanings = {},
 	Gender = "masculine",
-	NameTypes = {"person"}
+	NameTypes = {"person-male"}
 })
 
 DefineLanguageWord("Joseph", {
@@ -1593,7 +1593,7 @@ DefineLanguageWord("Joseph", {
 	Type = "noun",
 	Meanings = {},
 	Gender = "masculine",
-	NameTypes = {"person"}
+	NameTypes = {"person-male"}
 })
 
 DefineLanguageWord("Kenneth", {
@@ -1601,7 +1601,7 @@ DefineLanguageWord("Kenneth", {
 	Type = "noun",
 	Meanings = {},
 	Gender = "masculine",
-	NameTypes = {"person"}
+	NameTypes = {"person-male"}
 })
 
 DefineLanguageWord("King", {
@@ -1651,7 +1651,7 @@ DefineLanguageWord("Lewis", {
 	Type = "noun",
 	Meanings = {},
 	Gender = "masculine",
-	NameTypes = {"person"}
+	NameTypes = {"person-male"}
 })
 
 DefineLanguageWord("Little", {
@@ -1759,7 +1759,7 @@ DefineLanguageWord("Malcolm", {
 	Type = "noun",
 	Meanings = {},
 	Gender = "masculine",
-	NameTypes = {"person"}
+	NameTypes = {"person-male"}
 })
 
 DefineLanguageWord("Man", {
@@ -1784,7 +1784,7 @@ DefineLanguageWord("Mark", {
 	Meanings = {"Mark"},
 	DerivesFrom = {"old-english", "noun", {"Mark", "Sign"}, "Mearc"}, -- presumably
 	Gender = "neuter",
-	NameTypes = {"person"}
+	NameTypes = {"person-male"}
 })
 
 DefineLanguageWord("Mark", {
@@ -1809,7 +1809,7 @@ DefineLanguageWord("Matthew", {
 	Type = "noun",
 	Meanings = {},
 	Gender = "masculine",
-	NameTypes = {"person"}
+	NameTypes = {"person-male"}
 })
 
 DefineLanguageWord("Michael", {
@@ -1817,7 +1817,7 @@ DefineLanguageWord("Michael", {
 	Type = "noun",
 	Meanings = {},
 	Gender = "masculine",
-	NameTypes = {"person"}
+	NameTypes = {"person-male"}
 })
 
 DefineLanguageWord("Middle", {
@@ -1873,7 +1873,7 @@ DefineLanguageWord("Nathan", {
 	Type = "noun",
 	Meanings = {},
 	Gender = "masculine",
-	NameTypes = {"person"}
+	NameTypes = {"person-male"}
 })
 
 DefineLanguageWord("Nethermost", {
@@ -1980,7 +1980,7 @@ DefineLanguageWord("Oliver", {
 	Type = "noun",
 	Meanings = {},
 	Gender = "masculine",
-	NameTypes = {"person"}
+	NameTypes = {"person-male"}
 })
 
 DefineLanguageWord("Orange", {
@@ -2023,7 +2023,7 @@ DefineLanguageWord("Peter", {
 	Type = "noun",
 	Meanings = {},
 	Gender = "masculine",
-	NameTypes = {"person"}
+	NameTypes = {"person-male"}
 })
 
 DefineLanguageWord("Philip", {
@@ -2031,7 +2031,7 @@ DefineLanguageWord("Philip", {
 	Type = "noun",
 	Meanings = {},
 	Gender = "masculine",
-	NameTypes = {"person"}
+	NameTypes = {"person-male"}
 })
 
 DefineLanguageWord("Pike", {
@@ -2213,7 +2213,7 @@ DefineLanguageWord("Robert", {
 	Type = "noun",
 	Meanings = {},
 	Gender = "masculine",
-	NameTypes = {"person"}
+	NameTypes = {"person-male"}
 })
 
 DefineLanguageWord("Rock", {
@@ -2336,7 +2336,7 @@ DefineLanguageWord("Sebastian", {
 	Type = "noun",
 	Meanings = {},
 	Gender = "masculine",
-	NameTypes = {"person"}
+	NameTypes = {"person-male"}
 })
 
 DefineLanguageWord("Seat", {
@@ -2611,7 +2611,7 @@ DefineLanguageWord("Stephen", {
 	Type = "noun",
 	Meanings = {},
 	Gender = "masculine",
-	NameTypes = {"person"}
+	NameTypes = {"person-male"}
 })
 
 DefineLanguageWord("Stock", {
@@ -2718,7 +2718,7 @@ DefineLanguageWord("Theodore", {
 	Type = "noun",
 	Meanings = {},
 	Gender = "masculine",
-	NameTypes = {"person"}
+	NameTypes = {"person-male"}
 })
 
 DefineLanguageWord("Thomas", {
@@ -2726,7 +2726,7 @@ DefineLanguageWord("Thomas", {
 	Type = "noun",
 	Meanings = {},
 	Gender = "masculine",
-	NameTypes = {"person"}
+	NameTypes = {"person-male"}
 })
 
 DefineLanguageWord("Thorn", {
@@ -2768,6 +2768,7 @@ DefineLanguageWord("Ton", {
 	Language = "english",
 	Type = "noun",
 	Meanings = {}, -- town?
+	DerivesFrom = {"old-english", "noun", "Tûn"}, -- presumably? if this is indeed related to the word "Town"
 	Gender = "neuter",
 	Archaic = true,
 	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- example: "Kingston"
@@ -2815,6 +2816,7 @@ DefineLanguageWord("Town", {
 	Language = "english",
 	Type = "noun",
 	Meanings = {"Town"},
+	DerivesFrom = {"old-english", "noun", "Tûn"}, -- presumably
 	Gender = "neuter",
 	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 336.
 })
@@ -2964,7 +2966,7 @@ DefineLanguageWord("William", {
 	Type = "noun",
 	Meanings = {},
 	Gender = "masculine",
-	NameTypes = {"person"}
+	NameTypes = {"person-male"}
 })
 
 DefineLanguageWord("Wilt", {
@@ -3087,7 +3089,7 @@ DefineLanguageWord("Alfred", {
 		"suffix", "english", "noun", "Red"
 	},
 	Archaic = true,
-	NameTypes = {"person"}
+	NameTypes = {"person-male"}
 })
 
 DefineLanguageWord("Bernard", {
@@ -3099,7 +3101,7 @@ DefineLanguageWord("Bernard", {
 		"suffix", "english", "adjective", "Ard"
 	},
 	Archaic = true,
-	NameTypes = {"person"}
+	NameTypes = {"person-male"}
 })
 
 DefineLanguageWord("Godfrey", {
@@ -3111,7 +3113,7 @@ DefineLanguageWord("Godfrey", {
 		"suffix", "english", "noun", "Frey"
 	},
 	Archaic = true,
-	NameTypes = {"person"}
+	NameTypes = {"person-male"}
 })
 
 DefineLanguageWord("Richard", {
@@ -3123,6 +3125,6 @@ DefineLanguageWord("Richard", {
 		"suffix", "english", "adjective", "Ard"
 	},
 	Archaic = true,
-	NameTypes = {"person"}
+	NameTypes = {"person-male"}
 })
 

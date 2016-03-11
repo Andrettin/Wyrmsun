@@ -195,6 +195,14 @@ DefineLanguageWord("Torf", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Tûn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 89.
+	Language = "middle-low-german",
+	Type = "noun",
+	Meanings = {"Fence", "Property Enclosure", "Garden"}, -- source gives the German "Zaun, als Einfriedigung des Eigentums, Garten" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Tûna"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Twern", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
 	Language = "middle-low-german",
 	Type = "noun",

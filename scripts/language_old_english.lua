@@ -1484,6 +1484,14 @@ DefineLanguageWord("Trūwian", { -- Source: Winfred P. Lehmann, "A Grammar of Pr
 	Meanings = {"Trust"}
 })
 
+DefineLanguageWord("Tûn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 89.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Fence Around the House", "Garden", "Court", "Village", "City", "Town"}, -- source gives the German "Zaun um das Haus, Garten, Hof, Dorf, Stadt" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Tûna"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Twīn", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 6.
 	Language = "old-english",
 	Type = "noun",
