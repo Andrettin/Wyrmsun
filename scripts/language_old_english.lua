@@ -933,6 +933,14 @@ DefineLanguageWord("Mā", { -- Source: Sean Crist, "An Analysis of *z loss in We
 	Meanings = {"More"}
 })
 
+DefineLanguageWord("Maga", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 156.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Stomach"}, -- source (apparently) gives the German "Magen" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Magan"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Mann", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, pp. 85-86, 89.
 	Language = "old-english",
 	Type = "noun",
@@ -1214,6 +1222,14 @@ DefineLanguageWord("Scernicge", { -- Source: Alaric Hall, "The Meanings of Elf a
 	Type = "noun",
 	Meanings = {"Actress"},
 	Gender = "feminine"
+})
+
+DefineLanguageWord("Scield", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 229.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Shield", "Protection"}, -- source gives the German "Schild, Schutz" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Skeldu"},
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Scîr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 233.

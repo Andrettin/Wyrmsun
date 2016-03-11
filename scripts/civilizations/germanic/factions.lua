@@ -33,14 +33,14 @@ DefineFaction("Asa Tribe", {
 	FactionUpgrade = "upgrade-asa-tribe-faction"
 })
 
-DefineFaction("Skjoldung Tribe", { -- mythical Danish dynasty, Skjöldr was a son of Odin set to rule over Reidgothland (Jutland) and Zealand; Source: Snorri Sturlson, "Heimskringla", 1844; Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
+DefineFaction("Skeldung Tribe", { -- Skjoldung in the original Norse sagas, here rendered in Proto-Germanic; mythical Danish dynasty, Skjöldr was a son of Odin set to rule over Reidgothland (Jutland) and Zealand; Source: Snorri Sturlson, "Heimskringla", 1844; Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
 	Civilization = "germanic",
 	ParentFaction = "Asa Tribe",
 	Type = "tribe",
 	Colors = {"red", "white"},
 --	DevelopsTo = {"Dane Tribe", "Goth Tribe", "Herulian Tribe", "Jute Tribe"}
 	DevelopsTo = {"Dane Tribe", "Goth Tribe", "Herulian Tribe"},
-	FactionUpgrade = "upgrade-skjoldung-tribe-faction"
+	FactionUpgrade = "upgrade-skeldung-tribe-faction"
 })
 
 DefineFaction("Volsung Tribe", { -- mythical Frankish dynasty, which originated from the descendants of Odin set to rule over "Frankland"; Source: Snorri Sturlson, "Heimskringla", 1844; Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.

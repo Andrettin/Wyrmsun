@@ -1863,7 +1863,7 @@ DefineProvince("Jutland", {
 	SettlementTerrain = "Plains",
 	Coastal = true,
 	Claims = {
-		"germanic", "Skjoldung Tribe",
+		"germanic", "Skeldung Tribe",
 		"norse", "Dane Tribe",
 		"teuton", "Charude Tribe",
 		"teuton", "Jute Tribe"
@@ -3631,7 +3631,7 @@ DefineProvince("Zealand", {
 		"basque", "Funnelbeaker Tribe",
 		"basque", "Maglemose Tribe",
 		"basque", "Kongemose Tribe",
-		"germanic", "Skjoldung Tribe",
+		"germanic", "Skeldung Tribe",
 		"goth", "Herulian Tribe",
 		"norse", "Dane Tribe"
 	},

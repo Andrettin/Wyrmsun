@@ -36,7 +36,7 @@ Units = {
 	"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield",
 	"upgrade-germanic-barbed-arrow",
 	"upgrade-germanic-wood-plow",
-	"upgrade-asa-tribe-faction", "upgrade-skjoldung-tribe-faction", "upgrade-volsung-tribe-faction", "upgrade-yngling-tribe-faction",
+	"upgrade-asa-tribe-faction", "upgrade-skeldung-tribe-faction", "upgrade-volsung-tribe-faction", "upgrade-yngling-tribe-faction",
 	"upgrade-teuton-civilization",
 	"unit-teuton-worker", "unit-teuton-swordsman", "unit-suebi-swordsman", "unit-frank-swordsman",
 	"unit-teuton-spearman", "unit-frank-spearman", "unit-teuton-archer",

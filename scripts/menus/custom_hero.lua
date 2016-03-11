@@ -171,7 +171,7 @@ function CustomHeroCreationMenu(world, quest_menu)
 			else
 				DefineCustomHero(hero_full_name, {
 					Name = hero_name:getText(),
-					Dynasty = hero_family_name:getText(),
+					FamilyName = hero_family_name:getText(),
 					Civilization = string.lower(hero_civilization_list[hero_civilization:getSelected() + 1]),
 					Type = hero_class_ident_list[hero_class:getSelected() + 1],
 					Trait = trait_ident_list[trait:getSelected() + 1],

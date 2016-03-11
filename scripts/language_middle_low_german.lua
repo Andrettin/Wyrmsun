@@ -129,6 +129,14 @@ DefineLanguageWord("Lôt", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Gender = "neuter"
 })
 
+DefineLanguageWord("Mage", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 156.
+	Language = "middle-low-german",
+	Type = "noun",
+	Meanings = {"Stomach"}, -- source (apparently) gives the German "Magen" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Magan"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Mark", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 160.
 	Language = "middle-low-german",
 	Type = "noun",

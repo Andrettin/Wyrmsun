@@ -852,6 +852,14 @@ DefineLanguageWord("Loufan", { -- Source: Richard M. Runge, "The Phonetic Realiz
 	Meanings = {"Run"}
 })
 
+DefineLanguageWord("Mago", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 156.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Stomach"}, -- source gives the German "Magen" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Magan"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Maht", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-high-german",
 	Type = "noun",
@@ -1075,6 +1083,17 @@ DefineLanguageWord("Sāt", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Type = "noun",
 	Meanings = {"Seed"}, -- derived from the Proto-Germanic "Sēþiz", which means "Seed"
 	DerivesFrom = {"proto-germanic", "noun", "Sēþiz"}
+})
+
+DefineLanguageWord("Scilt", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 229.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Shield"}, -- source gives the German "Schild" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Skeldu"},
+	Gender = "masculine",
+	NumberCaseInflections = {
+		"plural", "nominative", "Scilti" -- alternatively also "schiltâ"
+	}
 })
 
 DefineLanguageWord("Scîra", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 233.

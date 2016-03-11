@@ -620,6 +620,14 @@ DefineLanguageWord("Rîki", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	DerivesFrom = {"proto-germanic", "adjective", "Rîka"} -- as given by Fick
 })
 
+DefineLanguageWord("Scild", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 229.
+	Language = "old-saxon",
+	Type = "noun",
+	Meanings = {"Shield", "Protection"}, -- source gives the German "Schild, Schutz" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Skeldu"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Scrīban", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "old-saxon",
 	Type = "verb",

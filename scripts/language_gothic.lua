@@ -925,6 +925,13 @@ DefineLanguageWord("Skeinan", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Meanings = {"Shine"}
 })
 
+DefineLanguageWord("Skildus", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 229.
+	Language = "gothic",
+	Type = "noun",
+	Meanings = {"Shield"}, -- source gives the German "Schild" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Skeldu"}
+})
+
 DefineLanguageWord("Skuggwa", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
 	Language = "gothic",
 	Type = "noun",

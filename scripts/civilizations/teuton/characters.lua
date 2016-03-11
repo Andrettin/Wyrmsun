@@ -66,7 +66,7 @@ DefineCharacter("Volsung", { -- Source: C. Scott Littleton, "The Germanic Sword 
 
 DefineCharacter("Eylimi Othling", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 226.
 	Name = "Eylimi",
-	Dynasty = "Othling", -- dynasty name in the Norse myths
+	FamilyName = "Othling", -- dynasty name in the Norse myths
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton", -- Norse?
@@ -77,7 +77,7 @@ DefineCharacter("Eylimi Othling", { -- Source: Kevin Crossley-Holland, "The Nors
 
 DefineCharacter("Signy Volsung", { -- Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, pp. 2-3.
 	Name = "Signy",
-	Dynasty = "Volsung",
+	FamilyName = "Volsung",
 	Gender = "female",
 	Type = "unit-teuton-archer",
 	Civilization = "teuton",
@@ -101,7 +101,7 @@ DefineCharacter("Siggeir", { -- Source: C. Scott Littleton, "The Germanic Sword 
 
 DefineCharacter("Siegmund Volsung", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, p. 94; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 3.
 	Name = "Siegmund", -- also known as Sigmund in the Norse myths; tenth and youngest son of Volsung
-	Dynasty = "Volsung",
+	FamilyName = "Volsung",
 	Gender = "male",
 	Type = "unit-frank-swordsman",
 	Civilization = "teuton",
@@ -113,7 +113,7 @@ DefineCharacter("Siegmund Volsung", { -- Source: Norman Davies, "Vanished Kingdo
 
 DefineCharacter("Sieglind Hraudung", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, p. 94; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 226.
 	Name = "Sieglind", -- also known as Hjordis in the Norse myths; 
-	Dynasty = "Hraudung", -- dynasty name in the Norse myths (would be better to know the German name to put here, since her given name is in German); she was also an Othling
+	FamilyName = "Hraudung", -- dynasty name in the Norse myths (would be better to know the German name to put here, since her given name is in German); she was also an Othling
 	Gender = "female",
 	Type = "unit-teuton-archer",
 	Civilization = "teuton", -- Norse?
@@ -125,7 +125,7 @@ DefineCharacter("Sieglind Hraudung", { -- Source: Norman Davies, "Vanished Kingd
 
 DefineCharacter("Sinfiotli Volsung", { -- Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 3.
 	Name = "Sinfiotli", -- born out of the incestuous relationship between Siegmund and his sister Signy
-	Dynasty = "Volsung",
+	FamilyName = "Volsung",
 	Gender = "male",
 	Type = "unit-frank-swordsman",
 	Civilization = "teuton",
@@ -138,7 +138,7 @@ DefineCharacter("Sinfiotli Volsung", { -- Source: C. Scott Littleton, "The Germa
 
 DefineCharacter("Siegfried Volsung", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, p. 94.
 	Name = "Siegfried", -- Son of Siegmund and Sieglind; Gudrun's husband
-	Dynasty = "Volsung",
+	FamilyName = "Volsung",
 	Gender = "male",
 	Type = "unit-frank-swordsman",
 	Civilization = "teuton",
@@ -151,7 +151,7 @@ DefineCharacter("Siegfried Volsung", { -- Source: Norman Davies, "Vanished Kingd
 
 DefineCharacter("Svanhild Volsung", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", pp. 226, 536, 538, 542, 546.
 	Name = "Svanhild", -- also called Sunilda or Sanielh; in the Norse myths was married to and killed by Jormunrek, but they could hardly have lived at the same time
-	Dynasty = "Volsung",
+	FamilyName = "Volsung",
 	Gender = "female",
 	Type = "unit-teuton-archer",
 	Civilization = "teuton",

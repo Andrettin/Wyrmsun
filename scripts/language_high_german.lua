@@ -1541,6 +1541,17 @@ DefineLanguageWord("Lukas", {
 	NameTypes = {"person-male"}
 })
 
+DefineLanguageWord("Magen", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"Stomach"},
+	DerivesFrom = {"middle-high-german", "noun", "Mage"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 156.
+	Gender = "masculine",
+	NumberCaseInflections = {
+		"singular", "genitive", "Magens"
+	}
+})
+
 DefineLanguageWord("Magisch", {
 	Language = "high-german",
 	Type = "adjective",
@@ -1913,6 +1924,7 @@ DefineLanguageWord("Schild", {
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"Shield"},
+	DerivesFrom = {"middle-high-german", "noun", "Schilt"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 229.
 	Gender = "masculine",
 	NumberCaseInflections = {
 		"singular", "genitive", "Schildes", -- alternatively also "Schilds"

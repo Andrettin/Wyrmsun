@@ -37,7 +37,7 @@ DefineCharacter("Judita", { -- Source: Alena Ježková, "77 Prague Legends", 200
 
 DefineCharacter("Agnes Přemyslid", { -- Source: Alena Ježková, "77 Prague Legends", 2006, p. 36.
 	Name = "Agnes", -- Agnes Přemyslovna, youngest daughter of the Czech king Přemysl Otakar I
-	Dynasty = "Přemyslid",
+	FamilyName = "Přemyslid",
 	Gender = "female",
 	Type = "unit-teuton-archer", -- should be something else
 	Civilization = "slav",

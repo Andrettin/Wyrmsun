@@ -879,6 +879,14 @@ DefineLanguageWord("Ljā", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	DerivesFrom = {"proto-indo-european", "verb", "Leykʷ"}
 })
 
+DefineLanguageWord("Magi", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 156.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Stomach"}, -- source gives the German "Magen" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Magan"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Mala", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
 	Language = "old-norse",
 	Type = "verb",
@@ -1135,6 +1143,21 @@ DefineLanguageWord("Simull", { -- source also gives the alternative forms "Simi"
 	Type = "noun",
 	Meanings = {"Ox", "One Year Old Ox"}, -- source gives the German "(einjähriger) Ochs" as the meaning
 	-- according to the source, this word possibly comes from an original (Proto-Germanic?) "sem-", meaning "Summer" and being related to Proto-Germanic "Sumara"
+})
+
+DefineLanguageWord("Skjaldþili", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 229.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Board"} -- source gives the German "Getäfel" as the meaning
+	-- the first part of this compound derives from Proto-Germanic "Skeldu"
+})
+
+DefineLanguageWord("Skjǫldr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 229.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Shield"}, -- source gives the German "Schild" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Skeldu"},
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Skuggi", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.

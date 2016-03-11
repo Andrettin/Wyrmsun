@@ -589,57 +589,57 @@ local GermanicEvents = {
 		},
 		OptionTooltips = {"+500 Gold"}
 	},
-	SkjoldsDomain = { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
-		Name = "Skjold's Domain",
-		Description = "Our chieftain Voden has granted our newly-conquered lands to the south to his younger son, Skjold.",
+	SkeldusDomain = { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
+		Name = "Skeldu's Domain",
+		Description = "Our chieftain Voden has granted our newly-conquered lands to the south to his younger son, Skeldu.",
 		Conditions = function(s)
 			if (
 				EventFaction.Name == "Asa Tribe"
 				and (GetProvinceOwner("Zealand") == EventFaction.Name or GetProvinceOwner("Jutland") == EventFaction.Name)
 				and GetFactionRuler(EventFaction.Civilization, EventFaction.Name) == "Voden"
-				and GrandStrategyHeroIsAlive("Skjold")
+				and GrandStrategyHeroIsAlive("Skeldu")
 			) then
 				return true
 			else
 				return false
 			end
 		end,
-		Options = {"~!OK", "Play as ~!Skjold"},
+		Options = {"~!OK", "Play as ~!Skeldu"},
 		OptionEffects = {
 			function(s)
 				EqualizeProvinceUnits(EventFaction)
 				if (GetProvinceOwner("Jutland") == EventFaction.Name) then
-					AcquireProvince(WorldMapProvinces.Jutland, "Skjoldung Tribe")
+					AcquireProvince(WorldMapProvinces.Jutland, "Skeldung Tribe")
 					RemoveProvinceClaim("Jutland", EventFaction.Civilization, EventFaction.Name)
-					AddProvinceClaim("Jutland", "germanic", "Skjoldung Tribe")
+					AddProvinceClaim("Jutland", "germanic", "Skeldung Tribe")
 				end
 				if (GetProvinceOwner("Zealand") == EventFaction.Name) then
-					AcquireProvince(WorldMapProvinces.Zealand, "Skjoldung Tribe")
+					AcquireProvince(WorldMapProvinces.Zealand, "Skeldung Tribe")
 					RemoveProvinceClaim("Zealand", EventFaction.Civilization, EventFaction.Name)
-					AddProvinceClaim("Zealand", "germanic", "Skjoldung Tribe")
+					AddProvinceClaim("Zealand", "germanic", "Skeldung Tribe")
 				end
-				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "germanic", "Skjoldung Tribe")
-				SetFactionRuler("germanic", "Skjoldung Tribe", "Skjold")
+				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "germanic", "Skeldung Tribe")
+				SetFactionRuler("germanic", "Skeldung Tribe", "Skeldu")
 			end,
 			function(s)
 				EqualizeProvinceUnits(EventFaction)
 				if (GetProvinceOwner("Jutland") == EventFaction.Name) then
-					AcquireProvince(WorldMapProvinces.Jutland, "Skjoldung Tribe")
+					AcquireProvince(WorldMapProvinces.Jutland, "Skeldung Tribe")
 					RemoveProvinceClaim("Jutland", EventFaction.Civilization, EventFaction.Name)
-					AddProvinceClaim("Jutland", "germanic", "Skjoldung Tribe")
+					AddProvinceClaim("Jutland", "germanic", "Skeldung Tribe")
 				end
 				if (GetProvinceOwner("Zealand") == EventFaction.Name) then
-					AcquireProvince(WorldMapProvinces.Zealand, "Skjoldung Tribe")
+					AcquireProvince(WorldMapProvinces.Zealand, "Skeldung Tribe")
 					RemoveProvinceClaim("Zealand", EventFaction.Civilization, EventFaction.Name)
-					AddProvinceClaim("Zealand", "germanic", "Skjoldung Tribe")
+					AddProvinceClaim("Zealand", "germanic", "Skeldung Tribe")
 				end
-				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "germanic", "Skjoldung Tribe")
-				SetFactionRuler("germanic", "Skjoldung Tribe", "Skjold")
-				GrandStrategyFaction = Factions.SkjoldungTribe
-				SetPlayerFaction("germanic", "Skjoldung Tribe")
+				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "germanic", "Skeldung Tribe")
+				SetFactionRuler("germanic", "Skeldung Tribe", "Skeldu")
+				GrandStrategyFaction = Factions.SkeldungTribe
+				SetPlayerFaction("germanic", "Skeldung Tribe")
 			end
 		},
-		OptionTooltips = {"Skjoldung Tribe acquires our lands beyond the sea", "Skjoldung Tribe acquires our lands beyond the sea, plas as the Skjoldung Tribe"}
+		OptionTooltips = {"Skeldung Tribe acquires our lands beyond the sea", "Skeldung Tribe acquires our lands beyond the sea, play as the Skeldung Tribe"}
 	},
 	YngveChieftainOfTheSwedes = { -- Source: Snorri Sturlson, "Heimskringla", 1844.
 		Name = "Yngve, Chieftain",
@@ -883,7 +883,7 @@ local GermanicEvents = {
 				and FactionHasTechnologyType(EventFaction, "bronze-shield")
 				and FactionHasTechnologyType(EventFaction, "ranged-projectile-1")
 				and FactionHasTechnologyType(EventFaction, "wood-plow")
-				and (EventFaction.Name == "Asa Tribe" or EventFaction.Name == "Skjoldung Tribe" or EventFaction.Name == "Yngling Tribe")
+				and (EventFaction.Name == "Asa Tribe" or EventFaction.Name == "Skeldung Tribe" or EventFaction.Name == "Yngling Tribe")
 				and EventFaction.Name ~= GrandStrategyFaction.Name -- only available for NPC factions, since the goth civilization is not playable
 				and (SyncRand(50) < 1 or FactionHasCulture(EventFaction, "goth"))
 			) then

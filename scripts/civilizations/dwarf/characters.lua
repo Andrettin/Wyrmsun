@@ -71,6 +71,7 @@ DefineCharacter("Thjodrorir", { -- dwarven sage of Modsognir's clan; in Norse my
 		"compound", "prefix", "dwarven", "adjective", "Thjod",
 		"compound", "suffix", "dwarven", "noun", "singular", "Rorir"
 	},
+	Gender = "male",
 	Type = "unit-dwarven-steelclad", -- should be a priest
 	Civilization = "dwarf",
 	Faction = "Brising Clan",
@@ -82,6 +83,7 @@ DefineCharacter("Thjodrorir", { -- dwarven sage of Modsognir's clan; in Norse my
 DefineCharacter("Ivaldi", { -- his sons were mastersmiths; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 63.
 	Name = "Ivaldi",
 	NameElements = {"word", "dwarven", "noun", "Ivaldi"},
+	Gender = "male",
 	Type = "unit-dwarven-steelclad", -- should be a runesmith?
 	Civilization = "dwarf",
 	Trait = "upgrade-mighty", -- described as mighty
@@ -187,6 +189,7 @@ DefineCharacter("Rugnur", { -- from "The Sceptre of Fire" campaign of "Battle fo
 DefineCharacter("Oin", { -- dwarf from Norse mythology who was the father of Andvari
 	Name = "Oin",
 	NameElements = {"word", "dwarven", "noun", "Oin"},
+	Gender = "male",
 	Type = "unit-dwarven-steelclad",
 	Civilization = "dwarf",
 	ProvinceOfOrigin = "Svarinshaug",
@@ -197,6 +200,7 @@ DefineCharacter("Oin", { -- dwarf from Norse mythology who was the father of And
 DefineCharacter("Andvari", { -- dwarf who possessed a lot of gold, including a golden ring (Andvaranaut) which in Norse mythology was stolen by Loki; was possibly one of the settlers of Joruvellir
 	Name = "Andvari",
 	NameElements = {"word", "dwarven", "noun", "Andvari"},
+	Gender = "male",
 	Type = "unit-dwarven-steelclad",
 	Civilization = "dwarf",
 	ProvinceOfOrigin = "Svarinshaug",
@@ -208,6 +212,7 @@ DefineCharacter("Andvari", { -- dwarf who possessed a lot of gold, including a g
 DefineCharacter("Regin", { -- skilled smith; in Norse mythology was the brother of the dragon Fafnir
 	Name = "Regin",
 	NameElements = {"word", "dwarven", "noun", "Regin"},
+	Gender = "male",
 	Type = "unit-dwarven-steelclad", -- should be a runesmith
 	Civilization = "dwarf",
 	ProvinceOfOrigin = "Svarinshaug",
@@ -219,6 +224,7 @@ DefineCharacter("Regin", { -- skilled smith; in Norse mythology was the brother 
 DefineCharacter("Dain", { -- dwarven mastersmith; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 100.
 	Name = "Dain",
 	NameElements = {"word", "dwarven", "noun", "Dain"},
+	Gender = "male",
 	Type = "unit-dwarven-steelclad", -- should be a runesmith
 	Civilization = "dwarf",
 	ProvinceOfOrigin = "Svarinshaug",
@@ -229,6 +235,7 @@ DefineCharacter("Dain", { -- dwarven mastersmith; Source: Kevin Crossley-Holland
 DefineCharacter("Nabbi", { -- dwarven mastersmith; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 100.
 	Name = "Nabbi",
 	NameElements = {"word", "dwarven", "noun", "Nabbi"},
+	Gender = "male",
 	Type = "unit-dwarven-steelclad", -- should be a runesmith
 	Civilization = "dwarf",
 	ProvinceOfOrigin = "Svarinshaug",

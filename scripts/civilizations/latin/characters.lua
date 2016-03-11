@@ -77,7 +77,7 @@ DefineCharacter("Avitus", { -- Source: Norman Davies, "Vanished Kingdoms", 2012,
 
 DefineCharacter("Geofrei Gaimar", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 76.
 	Name = "Geofrei",
-	Dynasty = "Gaimar", -- was that actually his family name?
+	FamilyName = "Gaimar", -- was that actually his family name?
 	Gender = "male",
 	Type = "unit-teuton-swordsman", -- should be something more appropriate for a writer?
 	Civilization = "latin", -- should be French

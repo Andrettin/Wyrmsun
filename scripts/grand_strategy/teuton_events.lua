@@ -36,7 +36,7 @@ local TeutonEvents = {
 				and FactionHasTechnologyType(EventFaction, "bronze-shield")
 				and FactionHasTechnologyType(EventFaction, "ranged-projectile-1")
 				and FactionHasTechnologyType(EventFaction, "wood-plow")
-				and (EventFaction.Name == "Asa Tribe" or EventFaction.Name == "Skjoldung Tribe" or EventFaction.Name == "Yngling Tribe") -- the Ynglings shouldn't be able to become Teutons, but let's allow it for now since the other two germanic civilizations are not available for human players
+				and (EventFaction.Name == "Asa Tribe" or EventFaction.Name == "Skeldung Tribe" or EventFaction.Name == "Yngling Tribe") -- the Ynglings shouldn't be able to become Teutons, but let's allow it for now since the other two germanic civilizations are not available for human players
 				and (SyncRand(50) < 1 or FactionHasCulture(EventFaction, "teuton"))
 			) then
 				return true

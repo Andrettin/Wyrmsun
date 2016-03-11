@@ -433,7 +433,6 @@ Load("scripts/language_gaulish.lua")
 Load("scripts/language_old_welsh.lua")
 Load("scripts/language_welsh.lua")
 Load("scripts/language_old_irish.lua")
-Load("scripts/language_irish.lua")
 
 -- Germanic languages (branch of the Indo-European family)
 Load("scripts/language_proto_germanic.lua")
@@ -447,6 +446,9 @@ Load("scripts/language_old_icelandic.lua")
 Load("scripts/language_danish.lua")
 Load("scripts/language_norwegian.lua")
 Load("scripts/language_swedish.lua")
+
+-- Irish (has to be placed here because it has words from Old Norse)
+Load("scripts/language_irish.lua")
 
 -- West Germanic languages (branch of the Germanic family)
 Load("scripts/language_west_germanic.lua")

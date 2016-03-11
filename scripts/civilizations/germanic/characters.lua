@@ -123,8 +123,9 @@ DefineCharacter("Móda", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p
 	Father = "Vingener"
 })
 
-DefineCharacter("Magi", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
-	Name = "Magi",
+DefineCharacter("Magan", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
+	Name = "Magan", -- "Magi" in the source; this is a Proto-Germanic rendering of the name
+	NameElements = {"word", "proto-germanic", "noun", "Magan"},
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "germanic",
@@ -142,7 +143,7 @@ DefineCharacter("Seskef", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, 
 	ProvinceOfOrigin = "Astrakhan",
 	Year = -3000 + 12 + (10 * 7),
 	DeathYear = -3000 + 12 + (10 * 8),
-	Father = "Magi"
+	Father = "Magan"
 })
 
 DefineCharacter("Bedvig", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
@@ -370,8 +371,9 @@ DefineCharacter("Beldeg", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, 
 	Mother = "Frígídá" -- presumably, since she was Vóden's wife
 })
 
-DefineCharacter("Brandr", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
-	Name = "Brandr",
+DefineCharacter("Branda", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
+	Name = "Branda", -- "Brandr" in the source; this is a Proto-Germanic rendering of the name
+	NameElements = {"word", "proto-germanic", "noun", "Branda"},
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "germanic",
@@ -389,7 +391,7 @@ DefineCharacter("Frjódigar", { -- Source: Snorri Sturlson, "The Prose Edda", 19
 	ProvinceOfOrigin = "Jutland",
 	Year = -2800 + (30 * 3),
 	DeathYear = -2800 + (30 * 4),
-	Father = "Brandr"
+	Father = "Branda"
 })
 
 DefineCharacter("Freóvin", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
@@ -448,8 +450,10 @@ DefineCharacter("Rerir", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p
 	Father = "Sigi"
 })
 
-DefineCharacter("Skjöldr", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 221.
-	Name = "Skjöldr", -- ancestor of the Danish kings; from his springs the Skjoldungs
+DefineCharacter("Skeldu", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 221.
+	-- ancestor of the Danish kings; from him spring the Skjoldungs
+	Name = "Skeldu", -- "Skjöldr" in the source; this is a Proto-Germanic rendering of the name
+	NameElements = {"word", "proto-germanic", "noun", "Skeldu"},
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "germanic",
@@ -460,16 +464,16 @@ DefineCharacter("Skjöldr", { -- Source: Snorri Sturlson, "The Prose Edda", 1916
 	Mother = "Frígídá" -- presumably, since she was Vóden's wife
 })
 
-DefineCharacter("Fridleif Skjoldung", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
+DefineCharacter("Fridleif Skeldung", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
 	Name = "Fridleifr",
-	Dynasty = "Skjoldung",
+	FamilyName = "Skeldung", -- "Skjoldung" in the original Norse saga (from Skjöldr), here rendered as Skeldu (Proto-Germanic version of "Skjöldr") and -ung (the suffix in the original word; which should be changed for a Proto-Germanic version)
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "germanic",
 	ProvinceOfOrigin = "Zealand",
 	Year = -2800 + (30 * 2),
 	DeathYear = -2800 + (30 * 3),
-	Father = "Skjöldr"
+	Father = "Skeldu"
 })
 
 DefineCharacter("Sæmingr", { -- Source: Snorri Sturlson, "Heimskringla", 1844; Source: Snorri Sturlson, "The Prose Edda", 1916, p. 9.

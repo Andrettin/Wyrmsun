@@ -38,7 +38,7 @@ local NorseEvents = {
 				and FactionHasTechnologyType(EventFaction, "bronze-shield")
 				and FactionHasTechnologyType(EventFaction, "ranged-projectile-1")
 				and FactionHasTechnologyType(EventFaction, "wood-plow")
-				and (EventFaction.Name == "Asa Tribe" or EventFaction.Name == "Skjoldung Tribe" or EventFaction.Name == "Yngling Tribe")
+				and (EventFaction.Name == "Asa Tribe" or EventFaction.Name == "Skeldung Tribe" or EventFaction.Name == "Yngling Tribe")
 				and EventFaction.Name ~= GrandStrategyFaction.Name -- only available for NPC factions, since the norse civilization is not playable
 				and (SyncRand(50) < 1 or FactionHasCulture(EventFaction, "norse"))
 			) then

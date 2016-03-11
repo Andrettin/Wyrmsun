@@ -43,7 +43,7 @@ DefineCharacter("Halfdan the Old Skjoldung", { -- Source: Henry Adams Bellows (t
 --		"compound", "suffix", -- ?
 	},
 	ExtraName = "the Old",
-	Dynasty = "Skjoldung", -- the text gives Halfdan the Old both as "the foremost of the Skjoldungs", and as a progenitor of the Skjoldungs (along with the Skilfings, Othlings and Ynglings) himself
+	FamilyName = "Skjoldung", -- the text gives Halfdan the Old both as "the foremost of the Skjoldungs", and as a progenitor of the Skjoldungs (along with the Skilfings, Othlings and Ynglings) himself
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
@@ -128,7 +128,7 @@ DefineCharacter("Thora", { -- Source: Henry Adams Bellows (transl.), "The Poetic
 
 DefineCharacter("Frathmar Dögling", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 223.
 	Name = "Frathmar",
-	Dynasty = "Dögling",
+	FamilyName = "Dögling",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
@@ -141,7 +141,7 @@ DefineCharacter("Frathmar Dögling", { -- Source: Henry Adams Bellows (transl.),
 
 DefineCharacter("Gyrth Dögling", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 223.
 	Name = "Gyrth",
-	Dynasty = "Dögling",
+	FamilyName = "Dögling",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
@@ -154,7 +154,7 @@ DefineCharacter("Gyrth Dögling", { -- Source: Henry Adams Bellows (transl.), "T
 
 DefineCharacter("Frekis Dögling", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 223.
 	Name = "Frekis",
-	Dynasty = "Dögling",
+	FamilyName = "Dögling",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
@@ -168,7 +168,7 @@ DefineCharacter("Frekis Dögling", { -- Source: Henry Adams Bellows (transl.), "
 DefineCharacter("Frekis II Dögling", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 223.
 	Name = "Frekis",
 	ExtraName = "II", -- to differentiate him from his brother
-	Dynasty = "Dögling",
+	FamilyName = "Dögling",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
@@ -181,7 +181,7 @@ DefineCharacter("Frekis II Dögling", { -- Source: Henry Adams Bellows (transl.)
 
 DefineCharacter("Am Dögling", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 223.
 	Name = "Am",
-	Dynasty = "Dögling",
+	FamilyName = "Dögling",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
@@ -194,7 +194,7 @@ DefineCharacter("Am Dögling", { -- Source: Henry Adams Bellows (transl.), "The 
 
 DefineCharacter("Jofurmar Dögling", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 223.
 	Name = "Jofurmar",
-	Dynasty = "Dögling",
+	FamilyName = "Dögling",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
@@ -211,7 +211,7 @@ DefineCharacter("Alf the Old Dögling", { -- Source: Henry Adams Bellows (transl
 		"word", "old-norse", "noun", "Alfr" -- presumably
 	},
 	ExtraName = "the Old",
-	Dynasty = "Dögling",
+	FamilyName = "Dögling",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
@@ -789,7 +789,7 @@ DefineCharacter("Skelfir", { -- Source: Henry Adams Bellows (transl.), "The Poet
 DefineCharacter("Helgi Hundingsbane Ylfing", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 221.
 	Name = "Helgi",
 	ExtraName = "Hundingsbane",
-	Dynasty = "Ylfing",
+	FamilyName = "Ylfing",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",

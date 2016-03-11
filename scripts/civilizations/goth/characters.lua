@@ -102,7 +102,7 @@ DefineCharacter("Friþareiks", { -- Source: F. E. Sandbach, "The Heroic Saga-Cyc
 
 DefineCharacter("Walamer Amelung", { -- Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 6.
 	Name = "Walamer", -- king of the Ostrogoths; invaded Illyria in 462 AD
-	Dynasty = "Amelung",
+	FamilyName = "Amelung",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth",
@@ -113,7 +113,7 @@ DefineCharacter("Walamer Amelung", { -- Source: F. E. Sandbach, "The Heroic Saga
 
 DefineCharacter("Theodemer Amelung", { -- Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, pp. 6-7.
 	Name = "Theodemer", -- brother of Walamer
-	Dynasty = "Amelung",
+	FamilyName = "Amelung",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth",
@@ -124,7 +124,7 @@ DefineCharacter("Theodemer Amelung", { -- Source: F. E. Sandbach, "The Heroic Sa
 
 DefineCharacter("Widemer Amelung", { -- Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 6.
 	Name = "Widemer", -- brother of Walamer
-	Dynasty = "Amelung",
+	FamilyName = "Amelung",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth",
@@ -140,7 +140,7 @@ DefineCharacter("Þiudareiks Amelung", { -- Source: F. E. Sandbach, "The Heroic 
 		"compound", "prefix", "gothic", "noun", "Þiuda",
 		"compound", "suffix", "gothic", "noun", "Reiks" -- maybe the adjective written in the same manner is part of this compound instead
 	},
-	Dynasty = "Amelung",
+	FamilyName = "Amelung",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth",

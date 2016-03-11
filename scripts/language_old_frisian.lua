@@ -291,6 +291,14 @@ DefineLanguageWord("Lernēn", { -- source also gives "Lirnēn" as an alternative
 	Meanings = {"Learn"}
 })
 
+DefineLanguageWord("Maga", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 156.
+	Language = "old-frisian",
+	Type = "noun",
+	Meanings = {"Stomach"}, -- source (apparently) gives the German "Magen" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Magan"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Māra", { -- this is the comparative, what is the normal version of the word? Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
 	Language = "old-frisian",
 	Type = "adjective",
@@ -412,6 +420,14 @@ DefineLanguageWord("Sî", { -- Source: August Fick and Alf Torp, "Wortschatz der
 	Type = "noun",
 	Meanings = {"Victory"}, -- source (apparently) gives the German "Sieg" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Segiz"},
+	Gender = "masculine"
+})
+
+DefineLanguageWord("Skeld", { -- source also gives the alternative form "schild"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 229.
+	Language = "old-frisian",
+	Type = "noun",
+	Meanings = {"Shield", "Protection"}, -- source gives the German "Schild, Schutz" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Skeldu"},
 	Gender = "masculine"
 })
 

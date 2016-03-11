@@ -1820,6 +1820,14 @@ DefineLanguageWord("Matthew", {
 	NameTypes = {"person-male"}
 })
 
+DefineLanguageWord("Maw", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Maw"},
+	DerivesFrom = {"old-english", "noun", "Maga"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 156.
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Michael", {
 	Language = "english",
 	Type = "noun",
@@ -2401,6 +2409,7 @@ DefineLanguageWord("Shield", {
 	Language = "english",
 	Type = "noun",
 	Meanings = {"Shield"},
+	DerivesFrom = {"old-english", "noun", "Scield"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 229.
 	Gender = "neuter",
 	AffixNameTypes = {"separate", "suffix", "singular", "unit-class-smithy"} -- seems sensible
 })

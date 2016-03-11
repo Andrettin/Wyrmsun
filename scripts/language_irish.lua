@@ -211,6 +211,13 @@ DefineLanguageWord("Samaisc", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Meanings = {"Heifer"} -- source gives the German "Färse" as the meaning
 })
 
+DefineLanguageWord("Scell", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 229.
+	Language = "irish",
+	Type = "noun",
+	Meanings = {},
+	DerivesFrom = {"old-norse", "noun", "Skjǫldr"}
+})
+
 DefineLanguageWord("Seamar", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.
 	Language = "irish",
 	Type = "noun",

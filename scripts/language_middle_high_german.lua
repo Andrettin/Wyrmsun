@@ -517,6 +517,14 @@ DefineLanguageWord("Lôt", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Gender = "neuter"
 })
 
+DefineLanguageWord("Mage", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 156.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Stomach"}, -- source gives the German "Magen" as the meaning
+	DerivesFrom = {"old-high-german", "noun", "Mago"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Marc", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "middle-high-german",
 	Type = "noun",
@@ -641,6 +649,17 @@ DefineLanguageWord("Rünne", { -- Source: Sean Crist, "An Analysis of *z loss in
 	Type = "noun",
 	Meanings = {"Storm Surge"},
 	Gender = "feminine"
+})
+
+DefineLanguageWord("Schilt", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 229.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Shield"}, -- source gives the German "Schild" as the meaning
+	DerivesFrom = {"old-high-german", "noun", "Scilt"},
+	Gender = "masculine",
+	NumberCaseInflections = {
+		"singular", "genitive", "Schildes"
+	}
 })
 
 DefineLanguageWord("Sige", { -- source also gives the alternative form "sic"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 214.

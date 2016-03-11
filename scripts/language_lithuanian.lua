@@ -147,6 +147,12 @@ DefineLanguageWord("Saĩsti", { -- Source: Alaric Hall, "The Meanings of Elf and
 	Meanings = {"Interpret a Sign or Prophesy"}
 })
 
+DefineLanguageWord("Skìltis", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, pp. 229-230.
+	Language = "lithuanian",
+	Type = "noun",
+	Meanings = {"Cut Off Slice"} -- source gives the German "abgeschnittene Scheibe" as the meaning
+})
+
 DefineLanguageWord("Spiáuju", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
 	Language = "lithuanian",
 	Type = "verb",
