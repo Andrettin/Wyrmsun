@@ -152,7 +152,7 @@ DefineLanguageWord("Máo", { -- this is the comparative, what is the normal vers
 	Language = "irish",
 	Type = "adjective",
 	Meanings = {"More"}, -- "Máo" actually means "größer"
-	ComparisonDegreeInflections = {
+	ComparisonDegreeCaseInflections = {
 		"comparative", "Máo" -- source also gives alternative form "Móo"
 	}
 })

@@ -67,7 +67,7 @@ DefineLanguageWord("Alda", { -- source also gives the alternative form "Alþia";
 	Language = "proto-germanic",
 	Type = "adjective",
 	Meanings = {"Old"}, -- source gives the German "alt" as the meaning
-	ComparisonDegreeInflections = {
+	ComparisonDegreeCaseInflections = {
 		"comparative", "Alþizan",
 		"superlative", "Alþista"
 	}
@@ -141,6 +141,12 @@ DefineLanguageWord("Beran", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Beran", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
+	Language = "proto-germanic",
+	Type = "verb",
+	Meanings = {}
+})
+
 DefineLanguageWord("Berôn", { -- source also gives the alternative form "Berniôn"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
 	Language = "proto-germanic",
 	Type = "noun",
@@ -153,6 +159,22 @@ DefineLanguageWord("Berga", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Type = "noun",
 	Meanings = {"Mountain", "Hill"},
 	Gender = "neuter"
+})
+
+DefineLanguageWord("Beud", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Sections 2-4.
+	Language = "proto-germanic",
+	Type = "verb",
+	Meanings = {"Bid", "Offer", "Order"},
+	DerivesFrom = {"proto-indo-european", "verb", "Bhewdh"},
+	Participles = {
+		"past", "Baud" -- "offered" / "ordered"
+	}
+})
+
+DefineLanguageWord("Bītan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
+	Language = "proto-germanic",
+	Type = "verb",
+	Meanings = {"Bite"} -- reflexes have "bite" as their meaning
 })
 
 DefineLanguageWord("Blêva", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 147.
@@ -919,6 +941,13 @@ DefineLanguageWord("Saiþa", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Saivi", { -- source gives it as being from "saig-vi"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 221.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Lake"}, -- source gives the German "See" as the meaning
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Segiz", { -- source gives "segiz(a)"; source also gives the alternative form "segu"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 214.
 	Language = "proto-germanic",
 	Type = "noun",
@@ -1220,28 +1249,6 @@ DefineLanguageWord("Yēra", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Meanings = {"Year"}
 })
 
-DefineLanguageWord("Beran", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
-	Language = "proto-germanic",
-	Type = "verb",
-	Meanings = {}
-})
-
-DefineLanguageWord("Beud", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Sections 2-4.
-	Language = "proto-germanic",
-	Type = "verb",
-	Meanings = {"Bid", "Offer", "Order"},
-	DerivesFrom = {"proto-indo-european", "verb", "Bhewdh"},
-	Participles = {
-		"past", "Baud" -- "offered" / "ordered"
-	}
-})
-
-DefineLanguageWord("Bītan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
-	Language = "proto-germanic",
-	Type = "verb",
-	Meanings = {"Bite"} -- reflexes have "bite" as their meaning
-})
-
 DefineLanguageWord("Kwemanan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "proto-germanic",
 	Type = "verb",
@@ -1339,7 +1346,7 @@ DefineLanguageWord("Mēria", { -- Crist gives "Mēria", while Lehmann gives "Mé
 	Language = "proto-germanic",
 	Type = "adjective",
 	Meanings = {"More"},
-	ComparisonDegreeInflections = {
+	ComparisonDegreeCaseInflections = {
 		"comparative", "Maizan",
 		"superlative", "Maista"
 	}

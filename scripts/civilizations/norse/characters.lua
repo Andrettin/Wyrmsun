@@ -39,7 +39,7 @@ DefineCharacter("Eymund", { -- Source: Henry Adams Bellows (transl.), "The Poeti
 DefineCharacter("Halfdan the Old Skjoldung", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", pp. 221-223.
 	Name = "Halfdan", -- mythical king of Denmark; had an ice-cold sword; was strengthened by king Eymund of Holmgarth and slew Sigtrygg with the ice-cold sword; married Eymund's daughter Almveig
 	NameElements = {
-		"compound", "prefix", "old-norse", "adjective", "Halfr", -- presumably
+		"compound", "prefix", "old-norse", "adjective", "no-case", "Halfr", -- presumably; used "no-case" to avoid the nominative ending "-r"
 --		"compound", "suffix", -- ?
 	},
 	ExtraName = "the Old",
@@ -93,7 +93,7 @@ DefineCharacter("Ali", { -- Source: Henry Adams Bellows (transl.), "The Poetic E
 DefineCharacter("Sigtrygg", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 222.
 	Name = "Sigtrygg", -- Halfdan the Old slew him with an ice-cold sword
 	NameElements = {
-		"compound", "prefix", "old-norse", "noun", "Sigr", -- presumably
+		"compound", "prefix", "old-norse", "noun", "no-case", "Sigr", -- presumably; used "no-case" to avoid the nominative ending "-r"
 		"compound", "suffix", "old-norse", "adjective", "Tryggr" -- presumably
 	},
 	Gender = "male",
@@ -235,6 +235,10 @@ DefineCharacter("Svan the Red", { -- Source: Kevin Crossley-Holland, "The Norse 
 
 DefineCharacter("Saefari", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 222.
 	Name = "Saefari",
+	NameElements = {
+		"compound", "prefix", "old-norse", "noun", "no-case", "Sær" -- presumably; used "no-case" to avoid the nominative ending "-r"
+--		"compound", "suffix" -- ?
+	},
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
@@ -291,7 +295,7 @@ DefineCharacter("Instein", { -- Source: Kevin Crossley-Holland, "The Norse Myths
 DefineCharacter("Saekonung", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101.
 	Name = "Saekonung",
 	NameElements = {
---		"compound", "prefix", -- ?
+		"compound", "prefix", "old-norse", "noun", "no-case", "Sær", -- presumably; used "no-case" to avoid the nominative ending "-r"
 		"compound", "suffix", "old-norse", "noun", "Konungr" -- presumably
 	},
 	Gender = "male",
@@ -763,7 +767,7 @@ DefineCharacter("Randver", { -- Source: Kevin Crossley-Holland, "The Norse Myths
 DefineCharacter("Sigurd Ring", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 227.
 	Name = "Sigurd",
 	NameElements = {
-		"compound", "prefix", "old-norse", "noun", "Sigr" -- presumably
+		"compound", "prefix", "old-norse", "noun", "no-case", "Sigr" -- presumably
 --		"compound", "suffix" -- ?
 	},
 	ExtraName = "Ring",

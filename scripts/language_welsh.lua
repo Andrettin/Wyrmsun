@@ -63,7 +63,7 @@ DefineLanguageWord("Ieu", { -- this is the comparative; Source: Winfred P. Lehma
 	Type = "adjective",
 	Meanings = {"Younger"},
 	DerivesFrom = {"proto-indo-european", "adjective", "Yehw"},
-	ComparisonDegreeInflections = {
+	ComparisonDegreeCaseInflections = {
 		"comparative", "Ieu"
 	}
 })

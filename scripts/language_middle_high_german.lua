@@ -662,6 +662,14 @@ DefineLanguageWord("Schilt", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	}
 })
 
+DefineLanguageWord("Sê", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 221.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Lake"}, -- source gives the German "See" as the meaning
+	DerivesFrom = {"old-high-german", "noun", "Sêu"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Sige", { -- source also gives the alternative form "sic"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 214.
 	Language = "middle-high-german",
 	Type = "noun",

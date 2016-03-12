@@ -679,7 +679,7 @@ DefineLanguageWord("Frei", {
 	Type = "adjective",
 	Meanings = {"Free"},
 	DerivesFrom = {"old-high-german", "adjective", "Friia"}, -- presumably
-	ComparisonDegreeInflections = {
+	ComparisonDegreeCaseInflections = {
 		"comparative", "Freier",
 		"superlative", "Freiesten" -- alternatively also "freisten"
 	},
@@ -797,7 +797,7 @@ DefineLanguageWord("Glänzend", {
 	Type = "adjective",
 	Meanings = {"Shining"},
 	DerivesFrom = {"middle-high-german", "adjective", "Glanz"}, -- presumably
-	ComparisonDegreeInflections = {
+	ComparisonDegreeCaseInflections = {
 		"comparative", "Glänzender",
 		"superlative", "Glänzendsten"
 	}
@@ -865,7 +865,7 @@ DefineLanguageWord("Groß", {
 	Language = "high-german",
 	Type = "adjective",
 	Meanings = {"Big"},
-	ComparisonDegreeInflections = {
+	ComparisonDegreeCaseInflections = {
 		"comparative", "Größer",
 		"superlative", "Größte"
 	},
@@ -1023,7 +1023,7 @@ DefineLanguageWord("Hart", { -- Source: http://www.duden.de/rechtschreibung/hart
 	Type = "adjective",
 	Meanings = {"Hard"},
 	DerivesFrom = {"middle-high-german", "adjective", "Hart"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 48.
-	ComparisonDegreeInflections = {
+	ComparisonDegreeCaseInflections = {
 		"comparative", "Härter",
 		"superlative", "Härteste"
 	},
@@ -1075,7 +1075,7 @@ DefineLanguageWord("Heimisch", {
 	Type = "adjective",
 	Meanings = {"Domestic"},
 	DerivesFrom = {"middle-high-german", "adjective", "Heimisch"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 52.
-	ComparisonDegreeInflections = {
+	ComparisonDegreeCaseInflections = {
 		"comparative", "Heimischer",
 		"superlative", "Heimischsten"
 	}
@@ -1155,7 +1155,7 @@ DefineLanguageWord("Hoch", {
 	Type = "adjective",
 	Meanings = {"High"},
 	DerivesFrom = {"middle-high-german", "adjective", "Hôch"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 54.
-	ComparisonDegreeInflections = {
+	ComparisonDegreeCaseInflections = {
 		"comparative", "Höher",
 		"superlative", "Höchste"
 	}
@@ -2015,6 +2015,18 @@ DefineLanguageWord("Sechs", {
 	Language = "high-german",
 	Type = "numeral",
 	Number = 6
+})
+
+DefineLanguageWord("See", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"Lake"},
+	DerivesFrom = {"middle-high-german", "noun", "Sê"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 221.
+	Gender = "masculine",
+	NumberCaseInflections = {
+		"singular", "genitive", "Sees",
+		"plural", "nominative", "Seen"
+	}
 })
 
 DefineLanguageWord("Sieg", {

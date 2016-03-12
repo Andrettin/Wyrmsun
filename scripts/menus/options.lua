@@ -328,6 +328,8 @@ function RunPreferencesMenu()
 end
 
 function SetVideoSize(width, height)
+	UI.MapArea.EndX = width - 1
+	UI.MapArea.EndY = height - 176 - 1
 	if (Video:ResizeScreen(width, height) == false) then
 		return
 	end

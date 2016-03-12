@@ -53,7 +53,7 @@ DefineLanguageWord("Mēre", { -- this is the comparative, what is the normal ver
 	Meanings = {"Larger"}, -- this is the meaning for the comparative, should be replaced when we got hold of the normal version of the adjective
 	DerivesFrom = {"old-norse", "adjective", "Meiri"}, -- presumably
 	Replaces = {"old-norse", "adjective", "Meiri"},
-	ComparisonDegreeInflections = {
+	ComparisonDegreeCaseInflections = {
 		"comparative", "Mēre"
 	}
 })

@@ -373,7 +373,7 @@ DefineLanguageWord("Eald", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Type = "adjective",
 	Meanings = {"Old"}, -- source gives the German "alt" as the meaning
 	DerivesFrom = {"proto-germanic", "adjective", "Alda"},
-	ComparisonDegreeInflections = {
+	ComparisonDegreeCaseInflections = {
 		"comparative", "Ieldra",
 		"superlative", "Ieldest"
 	}
@@ -956,7 +956,7 @@ DefineLanguageWord("Māra", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Type = "adjective",
 	Meanings = {"More"},
 	DerivesFrom = {"proto-germanic", "adjective", "Mēria"},
-	ComparisonDegreeInflections = {
+	ComparisonDegreeCaseInflections = {
 		"superlative", "Māst"
 	}
 })
@@ -1181,6 +1181,14 @@ DefineLanguageWord("Rīdan", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Language = "old-english",
 	Type = "verb",
 	Meanings = {"Travel"}
+})
+
+DefineLanguageWord("Sæ̂", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 221.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Lake"}, -- source (apparently) gives the German "See" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Saivi"},
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Sǣd", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.

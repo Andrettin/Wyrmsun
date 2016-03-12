@@ -697,7 +697,7 @@ DefineLanguageWord("Maiza", { -- Lehmann gives "Máiza", while Runge gives "Maiz
 	Type = "adjective",
 	Meanings = {"More"}, -- perhaps a "determiner" class of words should be added?
 	DerivesFrom = {"proto-germanic", "adjective", "Mēria"},
-	ComparisonDegreeInflections = {
+	ComparisonDegreeCaseInflections = {
 		"comparative", "Maiza", -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242; Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
 		"superlative", "Maists" -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
 	}
@@ -839,6 +839,14 @@ DefineLanguageWord("Sair", { -- Source: Richard M. Runge, "The Phonetic Realizat
 	Language = "gothic",
 	Type = "noun",
 	Meanings = {"Wound"}
+})
+
+DefineLanguageWord("Saivs", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 221.
+	Language = "gothic",
+	Type = "noun",
+	Meanings = {"Lake"}, -- source gives the German "See, Bog" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Saivi"},
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Saiwala", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.

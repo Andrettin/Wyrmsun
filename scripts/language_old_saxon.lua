@@ -538,7 +538,7 @@ DefineLanguageWord("Mēro", { -- this is the comparative, what is the normal ver
 	Language = "old-saxon",
 	Type = "adjective",
 	Meanings = {"More"},
-	ComparisonDegreeInflections = {
+	ComparisonDegreeCaseInflections = {
 		"comparative", "Mēro",
 		"superlative", "Mēst"
 	}
@@ -646,6 +646,14 @@ DefineLanguageWord("Sehan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Participles = {
 		"past", "Gisewan"
 	}
+})
+
+DefineLanguageWord("Sêu", { -- source also gives the alternative form "sêo"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 221.
+	Language = "old-saxon",
+	Type = "noun",
+	Meanings = {"Lake"}, -- source (apparently) gives the German "See" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Saivi"},
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Sigi", { -- source gives "sigi- (drohtin)"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 214.

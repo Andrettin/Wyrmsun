@@ -1981,7 +1981,7 @@ DefineLanguageWord("Old", {
 	Type = "adjective",
 	Meanings = {"Old"},
 	DerivesFrom = {"old-english", "adjective", "Eald"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 19.
-	ComparisonDegreeInflections = {
+	ComparisonDegreeCaseInflections = {
 		"comparative", "Older",
 		"superlative", "Oldest"
 	},
@@ -2343,6 +2343,7 @@ DefineLanguageWord("Sea", {
 	Language = "english",
 	Type = "noun",
 	Meanings = {"Sea"},
+	DerivesFrom = {"old-english", "noun", "Sæ̂"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 221.
 	Gender = "neuter",
 	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- example: "Swansea"; Source: "Philip's International School Atlas", 2006, p. 64.
 })

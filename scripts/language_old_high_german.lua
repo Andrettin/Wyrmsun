@@ -448,6 +448,13 @@ DefineLanguageWord("Gart", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	DerivesFrom = {"proto-germanic", "noun", "Gazdaz"}
 })
 
+DefineLanguageWord("Gisig", { -- related to Proto-Germanic "saig-vi", according to the source?; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 221.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Lake", "Bog"}, -- source gives the German "See, Sumpf" as the meaning
+	Gender = "masculine" -- alternatively also neuter
+})
+
 DefineLanguageWord("Gisiht", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 	Language = "old-high-german",
 	Type = "noun",
@@ -911,7 +918,7 @@ DefineLanguageWord("Mēro", { -- Source: Richard M. Runge, "The Phonetic Realiza
 	Type = "adjective",
 	Meanings = {"More"}, -- perhaps a "determiner" class of words should be added?
 	DerivesFrom = {"proto-germanic", "adjective", "Mēria"},
-	ComparisonDegreeInflections = {
+	ComparisonDegreeCaseInflections = {
 		"comparative", "Mēro", -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
 		"superlative", "Mēst" -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
 	}
@@ -1122,6 +1129,17 @@ DefineLanguageWord("Sehan", { -- Source: Richard M. Runge, "The Phonetic Realiza
 	},
 	Participles = {
 		"past", "Gisewan"
+	}
+})
+
+DefineLanguageWord("Sêu", { -- source also gives the alternative forms "sêo" and "sê"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 221.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Lake"}, -- source gives the German "See" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Saivi"},
+	Gender = "masculine",
+	NumberCaseInflections = {
+		"singular", "genitive", "Sêwes"
 	}
 })
 

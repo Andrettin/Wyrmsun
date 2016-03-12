@@ -303,7 +303,7 @@ DefineLanguageWord("Māra", { -- this is the comparative, what is the normal ver
 	Language = "old-frisian",
 	Type = "adjective",
 	Meanings = {"More"},
-	ComparisonDegreeInflections = {
+	ComparisonDegreeCaseInflections = {
 		"comparative", "Māra",
 		"superlative", "Māst"
 	}
@@ -405,6 +405,14 @@ DefineLanguageWord("Rîk", { -- source gives Rîk(e); Source: August Fick and Al
 	Type = "adjective",
 	Meanings = {"Rich"}, -- source gives the German "reich" as the meaning
 	DerivesFrom = {"proto-germanic", "adjective", "Rîka"}
+})
+
+DefineLanguageWord("Sê", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 221.
+	Language = "old-frisian",
+	Type = "noun",
+	Meanings = {"Lake"}, -- source (apparently) gives the German "See" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Saivi"},
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Selover", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 221.

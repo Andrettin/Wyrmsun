@@ -398,7 +398,7 @@ DefineLanguageWord("Ellri", { -- this is the comparative; Source: August Fick an
 	Type = "adjective",
 	Meanings = {"Older"}, -- source gives the German "älter" as the meaning
 	DerivesFrom = {"proto-germanic", "adjective", "Alda"},
-	ComparisonDegreeInflections = {
+	ComparisonDegreeCaseInflections = {
 		"comparative", "Ellri", -- source gives the German "älter" as the meaning
 		"superlative", "Elztr" -- source gives the German "ältest" as the meaning
 	}
@@ -587,7 +587,10 @@ DefineLanguageWord("Halfr", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Language = "old-norse",
 	Type = "adjective",
 	Meanings = {"Half"}, -- source gives the German "halb" as the meaning
-	DerivesFrom = {"proto-germanic", "adjective", "Halba"}
+	DerivesFrom = {"proto-germanic", "adjective", "Halba"},
+	ComparisonDegreeCaseInflections = {
+		"positive", "no-case", "Halfr" -- presumably (assuming the "-r" ending here is a nominative ending)
+	}
 })
 
 DefineLanguageWord("Hals", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 50.
@@ -920,7 +923,7 @@ DefineLanguageWord("Meiri", { -- given by Lehmann, but it is not entirely clear 
 	Type = "adjective",
 	Meanings = {"More"},
 	DerivesFrom = {"proto-germanic", "adjective", "Mēria"},
-	ComparisonDegreeInflections = {
+	ComparisonDegreeCaseInflections = {
 		"comparative", "Meiri",
 		"superlative", "Mestr"
 	}
@@ -1101,6 +1104,17 @@ DefineLanguageWord("Sāđ", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	DerivesFrom = {"proto-germanic", "noun", "Sēþiz"}
 })
 
+DefineLanguageWord("Sær", { -- source also (apparently) gives the alternative forms "sjâr" and "sjôr"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 221.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Lake", "Sea"}, -- source gives the German "See, Meer" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Saivi"},
+	Gender = "masculine",
+	NumberCaseInflections = {
+		"singular", "no-case", "Sæ" -- presumably (assuming the "-r" ending here is a nominative ending)
+	}
+})
+
 DefineLanguageWord("Seiðr", { -- maybe is the past participle of Síði instead? Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 118.
 	Language = "old-norse",
 	Type = "adjective",
@@ -1126,6 +1140,7 @@ DefineLanguageWord("Sigr", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	DerivesFrom = {"proto-germanic", "noun", "Segiz"},
 	Gender = "masculine",
 	NumberCaseInflections = {
+		"singular", "no-case", "Sig", -- presumably (assuming the "-r" ending here is a nominative ending)
 		"singular", "genitive", "Sigrs"
 	}
 })
