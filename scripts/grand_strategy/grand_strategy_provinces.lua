@@ -522,28 +522,13 @@ function LoadProvinces(world)
 		},
 		CavernsOfChaincolt = {
 			Name = "Caverns of Chaincolt",
-			Tiles = { {25, 14}, {25, 15}, {25, 16}, {26, 11}, {26, 14}, {26, 15}, {27, 11}, {27, 12}, {27, 13}, {27, 14}, {27, 15}, {27, 16}, {28, 9}, {28, 10}, {28, 11}, {28, 12}, {28, 13}, {28, 14}, {28, 15}, {28, 16}, {28, 17}, {29, 9}, {29, 10}, {29, 11}, {29, 12}, {29, 13}, {29, 14}, {29, 15}, {29, 16}, {29, 17}, {29, 18}, {29, 19}, {29, 20}, {30, 9}, {30, 10}, {30, 11}, {30, 12}, {30, 13}, {30, 14}, {30, 15}, {30, 16}, {30, 17}, {30, 18}, {30, 19}, {30, 20}, {31, 9}, {31, 10}, {31, 11}, {31, 12}, {31, 13}, {31, 15}, {31, 19}, {32, 9}, {32, 10}, {32, 11}, {32, 12} },
-			CulturalNames = {
-				dwarf = "Caverns of Chaincolt"
-			},
 			Units = {
 				unit_goblin_spearman = 4
 			}
 		},
 		CavernsOfFlame = {
 			Name = "Caverns of Flame",
-			Tiles = {
-				{39, 2}, {39, 3}, {39, 4}, {39, 9},
-				{40, 0}, {40, 1}, {40, 2}, {40, 3}, {40, 4}, {40, 5}, {40, 6}, {40, 7}, {40, 8}, {40, 9},
-				{41, 0}, {41, 1}, {41, 2}, {41, 3}, {41, 4}, {41, 5}, {41, 6}, {41, 7}, {41, 8}, {41, 9},
-				{42, 0}, {42, 1}, {42, 2}, {42, 3}, {42, 4}, {42, 5}, {42, 6}, {42, 7},
-				{43, 0}, {43, 1}, {43, 2}, {43, 3}, {43, 6}
-			},
 			Civilization = "goblin",
-			CulturalNames = {
-				dwarf = "Caverns of Flame",
-				goblin = "Caverns of Flame"
-			},
 			SettlementBuildings = {
 				unit_dwarven_smithy = true -- abandoned forge which Thursagan later uses to craft the Scepter of Fire
 			},
@@ -554,30 +539,6 @@ function LoadProvinces(world)
 		},
 		EasternMines = {
 			Name = "Eastern Mines",
-			Tiles = {
-				{22, 0}, {22, 1}, {22, 2},
-				{23, 0}, {23, 1}, {23, 2}, {23, 3}, {23, 4},
-				{24, 0}, {24, 1}, {24, 2}, {24, 3}, {24, 4}, {24, 5},
-				{25, 0}, {25, 1}, {25, 2}, {25, 3}, {25, 4}, {25, 5},
-				{26, 0}, {26, 1}, {26, 2}, {26, 3}, {26, 4}, {26, 5},
-				{27, 0}, {27, 1}, {27, 2}, {27, 3}, {27, 4}, {27, 5},
-				{28, 0}, {28, 1}, {28, 2}, {28, 3}, {28, 4},
-				{29, 0}, {29, 1}, {29, 2}, {29, 3}, {29, 4},
-				{30, 0}, {30, 1}, {30, 2}, {30, 3}, {30, 4}, {30, 8},
-				{31, 0}, {31, 1}, {31, 2}, {31, 3}, {31, 4}, {31, 5}, {31, 6}, {31, 8},
-				{32, 0}, {32, 1}, {32, 2}, {32, 3}, {32, 4}, {32, 5}, {32, 6}, {32, 7}, {32, 8},
-				{33, 0}, {33, 1}, {33, 2}, {33, 3}, {33, 4}, {33, 5}, {33, 6}, {33, 7}, {33, 8}, {33, 9},
-				{34, 0}, {34, 1}, {34, 2}, {34, 3}, {34, 4}, {34, 5}, {34, 6}, {34, 7}, {34, 8},
-				{35, 0}, {35, 1}, {35, 2}, {35, 3}, {35, 4}, {35, 5}, {35, 6}, {35, 7}, {35, 8}, {35, 9},
-				{36, 0}, {36, 1}, {36, 2}, {36, 3}, {36, 4}, {36, 5}, {36, 6}, {36, 7}, {36, 8}, {36, 9},
-				{37, 0}, {37, 1}, {37, 2}, {37, 3}, {37, 4}, {37, 5}, {37, 6}, {37, 7}, {37, 8}, {37, 9}, {37, 10},
-				{38, 0}, {38, 1}, {38, 2}, {38, 3}, {38, 4}, {38, 5}, {38, 6}, {38, 7}, {38, 8}, {38, 9},
-				{39, 0}, {39, 1}, {39, 5}, {39, 6}, {39, 7}, {39, 8}
-			},
-			CulturalNames = {
-				dwarf = "Eastern Mines",
-				goblin = "Eastern Mines"
-			},
 			Civilization = "goblin",
 			Units = {
 	--			unit_goblin_spearman = 3 -- three starting chieftains in the Gathering Materials scenario
@@ -586,20 +547,12 @@ function LoadProvinces(world)
 		},
 		GryphonMountain = {
 			Name = "Gryphon Mountain",
-			Tiles = { {24, 22}, {24, 23}, {25, 20}, {25, 21}, {25, 22}, {25, 23}, {26, 20}, {26, 21}, {26, 22}, {26, 23}, {27, 20}, {27, 21}, {27, 22}, {27, 23}, {27, 24}, {27, 25}, {28, 20}, {28, 21}, {28, 22}, {28, 23}, {28, 24}, {28, 25}, {28, 26}, {28, 27}, {29, 21}, {29, 22}, {29, 23}, {29, 24}, {29, 25}, {29, 26}, {29, 27}, {30, 21}, {30, 23}, {30, 24}, {30, 25}, {30, 26}, {30, 27}, {31, 23}, {31, 24}, {31, 25}, {31, 26}, {32, 23}, {32, 24} },
-			CulturalNames = {
-				dwarf = "Gryphon Mountain"
-			},
 			Units = { -- wild units in the Gryphon Mountain scenario
 				unit_dwarven_gryphon_rider = 6 -- Mother Gryphon, Graak, Grook, Gruak, Graik, Griak
 			}
 		},
 		Heartfangs = {
 			Name = "Heartfangs",
-			Tiles = { {14, 10}, {14, 11}, {15, 7}, {15, 8}, {15, 9}, {15, 10}, {15, 11}, {15, 12}, {16, 7}, {16, 8}, {16, 9}, {16, 10}, {16, 11}, {16, 12}, {17, 8}, {17, 9}, {17, 10}, {17, 11}, {17, 12}, {17, 13}, {18, 6}, {18, 9}, {18, 10}, {18, 11}, {18, 12}, {19, 5}, {19, 6}, {19, 8}, {19, 9}, {19, 10}, {19, 11}, {19, 12}, {19, 13}, {20, 4}, {20, 5}, {20, 6}, {20, 7}, {20, 8}, {20, 9}, {20, 10}, {20, 11}, {20, 12}, {20, 13}, {21, 4}, {21, 5}, {21, 6}, {21, 7}, {21, 8}, {21, 9}, {21, 10}, {21, 11}, {21, 12}, {21, 13}, {22, 4}, {22, 5}, {22, 6}, {22, 7}, {22, 8}, {22, 9}, {22, 10}, {22, 11}, {22, 12}, {22, 13}, {23, 5}, {23, 6}, {23, 7}, {23, 8}, {23, 9}, {23, 10}, {23, 11}, {23, 12}, {23, 13}, {24, 6}, {24, 7}, {24, 8}, {24, 9}, {24, 10}, {24, 11}, {24, 12}, {24, 13}, {24, 14}, {25, 6}, {25, 7}, {25, 8}, {25, 9}, {25, 10}, {25, 11}, {25, 12}, {25, 13}, {26, 6}, {26, 7}, {26, 8}, {26, 9}, {26, 10}, {26, 12}, {26, 13}, {27, 9}, {27, 10} },
-			CulturalNames = {
-				dwarf = "Heartfangs"
-			},
 			Owner = "Khag Tribe",
 			Civilization = "goblin",
 			SettlementBuildings = {
@@ -611,10 +564,6 @@ function LoadProvinces(world)
 		},
 		HighPass = {
 			Name = "High Pass",
-			Tiles = { {39, 12}, {40, 10}, {40, 11}, {40, 12}, {41, 10}, {41, 11}, {41, 12}, {42, 11} },
-			CulturalNames = {
-				dwarf = "High Pass"
-			},
 			Units = { -- wild units in the High Pass scenario
 				unit_goblin_spearman = 10, -- 10 uses of the WILD_THING function which generates trolls, ogres and wolves
 				unit_dwarven_gryphon_rider = 1 -- Kaara
@@ -622,10 +571,6 @@ function LoadProvinces(world)
 		},
 		HighbrookPass = {
 			Name = "Highbrook Pass",
-			Tiles = { {33, 10}, {33, 11}, {34, 9}, {34, 10}, {34, 11}, {35, 10}, {35, 11}, {35, 12}, {35, 14}, {35, 15}, {36, 10}, {36, 11}, {36, 12}, {36, 13}, {36, 14}, {36, 15}, {37, 11}, {37, 12}, {37, 13}, {37, 14}, {37, 15}, {38, 10}, {38, 11}, {38, 12}, {38, 13}, {38, 14}, {39, 10}, {39, 11}, {39, 13}, {39, 14} },
-			CulturalNames = {
-				dwarf = "Highbrook Pass"
-			},
 			Units = { -- starting units in the Settling Disputes scenario
 				unit_dwarven_axefighter = 0,
 				unit_dwarven_steelclad = 0,
@@ -636,9 +581,6 @@ function LoadProvinces(world)
 		},
 		Joruvellir = {
 			Name = "Joruvellir",
-			CulturalNames = {
-				dwarf = "Joruvellir"
-			},
 			Units = {
 				unit_goblin_spearman = 6, -- some enemy goblins
 				unit_goblin_archer = 3
@@ -646,12 +588,6 @@ function LoadProvinces(world)
 		},
 		KalKartha = {
 			Name = "Kal Kartha",
-			CulturalNames = {
-				dwarf = "Kal Kartha"
-			},
-			CulturalSettlementNames = {
-				dwarf = "Kal Kartha"
-			},
 			Units = { -- some wild gnomes from the Forbidden Forest to stop too early expansion into this province
 				unit_dwarven_axefighter = 0,
 				unit_dwarven_steelclad = 0,
@@ -661,12 +597,6 @@ function LoadProvinces(world)
 		},
 		Lyr = {
 			Name = "Lyr",
-			CulturalNames = {
-				dwarf = "Lyr"
-			},
-			CulturalSettlementNames = {
-				dwarf = "Lyr"
-			},
 			Units = { -- some wild dwarves to stop too early expansion into this province
 				unit_dwarven_axefighter = 12
 			}
@@ -674,10 +604,6 @@ function LoadProvinces(world)
 		NorthernWastelands = {
 			Name = "Northern Wastelands",
 			Civilization = "goblin",
-			CulturalNames = {
-				dwarf = "Northern Wastelands",
-				goblin = "Northern Wastelands"
-			},
 			SettlementBuildings = {
 				unit_dwarven_smithy = true -- Thursagan's smithy
 			},
@@ -689,9 +615,6 @@ function LoadProvinces(world)
 		PeacefulValley = {
 			Name = "Peaceful Valley",
 			Owner = "Lggi Tribe",
-			CulturalNames = {
-				goblin = "Peaceful Valley"
-			},
 			Civilization = "goblin",
 			SettlementBuildings = {
 				unit_goblin_town_hall = true,
@@ -703,24 +626,12 @@ function LoadProvinces(world)
 		},
 		ShorbearHills = {
 			Name = "Shorbear Hills",
-			CulturalNames = {
-				dwarf = "Shorbear Hills"
-			},
-			CulturalSettlementNames = {
-				dwarf = "Shorbear Hold"
-			},
 			Units = {
 				unit_goblin_spearman = 4
 			}
 		},
 		SouthernTunnels = {
 			Name = "Southern Tunnels",
-			CulturalNames = {
-				dwarf = "Southern Tunnels"
-			},
-			CulturalSettlementNames = {
-				dwarf = "Knalga"
-			},
 			Units = {
 				unit_goblin_spearman = 4
 			}
@@ -729,14 +640,8 @@ function LoadProvinces(world)
 			Name = "Svarinshaug",
 			Owner = "Brising Clan",
 			Civilization = "dwarf",
-			CulturalNames = {
-				dwarf = "Svarinshaug"
-			},
 			SettlementBuildings = {
 				unit_dwarven_town_hall = true
-			},
-			CulturalSettlementNames = {
-				dwarf = "Svarinshaug"
 			}
 		}
 	}
