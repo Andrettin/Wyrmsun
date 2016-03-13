@@ -206,6 +206,9 @@ DefineLanguageWord("Bladnir", {
 	Meanings = {"Bladed"},
 	-- example: "Skidbladnir" (ship made by the sons of Ivaldi, name means "Wooden-Bladed")
 	-- should add a category for ship name suffixes
+	AffixNameTypes = {
+		"separate", "prefix", "unit-class-smithy" -- seems sensible
+	}
 })
 
 DefineLanguageWord("Blindi", { -- this is the participle past
@@ -245,7 +248,9 @@ DefineLanguageWord("Brising", { -- also name of a group of four dwarves (or the 
 		"compound", "prefix", "singular", "settlement", -- no examples, but seems sensible in face of a general lack of examples
 		"compound", "prefix", "singular", "province", -- no examples, but seems sensible in face of a general lack of examples
 		"compound", "prefix", "singular", "terrain-hills", -- no examples, but seems sensible in face of a general lack of examples
-		"compound", "prefix", "singular", "terrain-mountains" -- no examples, but seems sensible in face of a general lack of examples
+		"compound", "prefix", "singular", "terrain-mountains", -- no examples, but seems sensible in face of a general lack of examples
+		"separate", "prefix", "unit-class-smithy", -- seems sensible
+		"separate", "suffix", "unit-class-smithy" -- seems sensible
 	}
 })
 
@@ -279,7 +284,11 @@ DefineLanguageWord("Dain", {
 		"singular", "genitive", "Dains" -- as in "Dainsleif"
 	},
 	Gender = "masculine", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 97.
-	AffixNameTypes = {"compound", "prefix", "singular", "genitive", "item-sword"} -- example: "Dainsleif"
+	AffixNameTypes = {
+		"compound", "prefix", "singular", "genitive", "item-sword", -- example: "Dainsleif"
+		"separate", "prefix", "unit-class-lumber-mill", -- seems sensible
+		"separate", "prefix", "unit-class-smithy" -- seems sensible
+	}
 })
 
 DefineLanguageWord("Delling", {
@@ -811,7 +820,10 @@ DefineLanguageWord("Leif", {
 	Type = "noun",
 	Meanings = {"Patrimony"}, -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 381.
 	Gender = "feminine", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 381.
-	AffixNameTypes = {"compound", "suffix", "singular", "item-sword"} -- example: "Dainsleif"
+	AffixNameTypes = {
+		"compound", "suffix", "singular", "item-sword", -- example: "Dainsleif"
+		"separate", "suffix", "unit-class-smithy" -- seems sensible
+	}
 })
 
 DefineLanguageWord("Lit", {
@@ -916,7 +928,10 @@ DefineLanguageWord("Naut", {
 	Language = "dwarven",
 	Type = "noun",
 	Meanings = {"A Gift or Booty from a Person"}, -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 447.
-	Gender = "masculine" -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 447.
+	Gender = "masculine", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 447.
+	AffixNameTypes = {
+		"separate", "suffix", "unit-class-smithy" -- seems sensible
+	}
 })
 
 DefineLanguageWord("Nefi", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 450.
@@ -1097,7 +1112,8 @@ DefineLanguageWord("Rithil", { -- Source: Henry Adams Bellows (transl.), "The Po
 	Type = "adjective",
 	Meanings = {"Swift-Moving"},
 	AffixNameTypes = {
-		"separate", "prefix", "unit-class-lumber-mill" -- seems sensible
+		"separate", "prefix", "unit-class-lumber-mill", -- seems sensible
+		"separate", "prefix", "unit-class-smithy" -- seems sensible
 	}
 })
 
@@ -1170,7 +1186,8 @@ DefineLanguageWord("Sol", {
 		"compound", "prefix", "singular", "province", -- no examples, but seems sensible in face of a general lack of examples
 		"compound", "prefix", "singular", "terrain-hills", -- no examples, but seems sensible in face of a general lack of examples
 		"compound", "prefix", "singular", "terrain-mountains", -- no examples, but seems sensible in face of a general lack of examples
-		"compound", "suffix", "singular", "person-male" -- suffix used by Wesnoth's dwarven names; examples: "Aigatsol", "Aigcatsol", "Aigdrsol", "Aigdursol", "Alaithsol", "Alalsol", "Aldrsol", "Althasol", "Anatsol", "Andursol", "Anthasol", "Augatsol", "Augdursol", "Dulaithsol", "Dulatsol", "Dulcatsol", "Dulthasol", "Glamaithsol", "Glamdrsol", "Glamdursol", "Glamthasol", "Gomaithsol", "Gomdursol", "Gomthasol", "Naraithsol", "Narcatsol", "Nardrsol", "Pelaithsol", "Pelalsol", "Peldrsol", "Peldursol", "Trithaithsol", "Trithatsol", "Trithcatsol", "Trithdrsol", "Triththasol"
+		"compound", "suffix", "singular", "person-male", -- suffix used by Wesnoth's dwarven names; examples: "Aigatsol", "Aigcatsol", "Aigdrsol", "Aigdursol", "Alaithsol", "Alalsol", "Aldrsol", "Althasol", "Anatsol", "Andursol", "Anthasol", "Augatsol", "Augdursol", "Dulaithsol", "Dulatsol", "Dulcatsol", "Dulthasol", "Glamaithsol", "Glamdrsol", "Glamdursol", "Glamthasol", "Gomaithsol", "Gomdursol", "Gomthasol", "Naraithsol", "Narcatsol", "Nardrsol", "Pelaithsol", "Pelalsol", "Peldrsol", "Peldursol", "Trithaithsol", "Trithatsol", "Trithcatsol", "Trithdrsol", "Triththasol"
+		"separate", "prefix", "unit-class-smithy" -- seems sensible
 	}
 })
 
@@ -1252,6 +1269,7 @@ DefineLanguageWord("Thjod", { -- Source: Richard Cleasby and Gudbrand Vigfusson,
 		"compound", "prefix", "singular", "province", -- no examples, but seems sensible in face of a general lack of examples
 		"compound", "prefix", "singular", "terrain-hills", -- no examples, but seems sensible in face of a general lack of examples
 		"compound", "prefix", "singular", "terrain-mountains", -- no examples, but seems sensible in face of a general lack of examples
+		"separate", "prefix", "unit-class-smithy", -- seems sensible
 		"separate", "prefix", "unit-class-lumber-mill" -- seems sensible
 	}
 })
@@ -1410,7 +1428,9 @@ DefineLanguageWord("Vind", {
 		"compound", "prefix", "singular", "province", -- no examples, but seems sensible in face of a general lack of examples
 		"compound", "prefix", "singular", "settlement", -- no examples, but seems sensible in face of a general lack of examples
 		"compound", "prefix", "singular", "terrain-hills", -- no examples, but seems sensible in face of a general lack of examples
-		"compound", "prefix", "singular", "terrain-mountains" -- no examples, but seems sensible in face of a general lack of examples
+		"compound", "prefix", "singular", "terrain-mountains", -- no examples, but seems sensible in face of a general lack of examples
+		"separate", "prefix", "unit-class-lumber-mill", -- seems sensible
+		"separate", "prefix", "unit-class-smithy" -- seems sensible
 	}
 })
 

@@ -73,6 +73,7 @@ https://github.com/Andrettin/Wyrmsun
 - Brising Smithies now have their own graphics (if the player has the Brising Faction Flair DLC).
 - Brising Mead Halls and Bastions now have their own graphics (if the player has the Brising Faction Flair DLC).
 - Added proper name generation for lumber mills.
+- Dwarven Smithies now have proper names in the Dwarven language.
 
 * Civilizations
 - Added many new component words for Germanic settlement, province and smithy name generation.
