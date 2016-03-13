@@ -185,6 +185,13 @@ DefineLanguageWord("Flâvus", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Meanings = {"Blond"} -- source gives the German "blond" as the meaning
 })
 
+DefineLanguageWord("Forfex", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, pp. 135-136.
+	Language = "latin",
+	Type = "noun",
+	Meanings = {"Scissors"}, -- source gives the German "Scheere" as the meaning
+	DerivesFrom = {"proto-indo-european", "noun", "Bhrdho"} -- the TLFi gives the cognates of this word as deriving from the Indo-European word "bhrdho-" (Source: http://www.cnrtl.fr/definition/bord); Fick gives the Indo-European root of this word as "bher(e)dh" instead
+})
+
 DefineLanguageWord("Foris", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "latin",
 	Type = "noun",

@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2015 by Andrettin
+--      (c) Copyright 2015-2016 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -742,7 +742,6 @@ DefineLanguageWord("Joru", { -- from Norse mythology, "Joruvellir" = "Fields of 
 	AffixNameTypes = {
 		"compound", "prefix", "singular", "province", -- example: "Joruvellir" (Norse mythology)
 		"compound", "prefix", "singular", "settlement", -- no examples, but seems sensible in face of a general lack of examples
-		"compound", "prefix", "singular", "terrain-hills", -- no examples, but seems sensible in face of a general lack of examples
 		"compound", "prefix", "singular", "terrain-mountains" -- no examples, but seems sensible in face of a general lack of examples
 	}
 })
@@ -1000,7 +999,6 @@ DefineLanguageWord("Nyr", {
 	Meanings = {"New"}, -- spelled as "Nýr" in Old Icelandic; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 459.
 	NameTypes = {"person-male"}, -- example: "Nyr" (dwarf from Norse mythology)
 	AffixNameTypes = {
-		"compound", "prefix", "singular", "settlement", -- no examples, but seems sensible in face of a general lack of examples
 		"compound", "prefix", "singular", "province", -- no examples, but seems sensible in face of a general lack of examples
 		"compound", "prefix", "singular", "terrain-hills", -- no examples, but seems sensible in face of a general lack of examples
 		"compound", "prefix", "singular", "terrain-mountains" -- no examples, but seems sensible in face of a general lack of examples
@@ -1097,7 +1095,10 @@ DefineLanguageWord("Relgorn", {
 DefineLanguageWord("Rithil", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 380.
 	Language = "dwarven",
 	Type = "adjective",
-	Meanings = {"Swift-Moving"}
+	Meanings = {"Swift-Moving"},
+	AffixNameTypes = {
+		"separate", "prefix", "unit-class-lumber-mill" -- seems sensible
+	}
 })
 
 DefineLanguageWord("Rorir", { -- alternative spelling given by Cleasby and Vigfusson: "Reyrir"; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 739.
@@ -1140,6 +1141,9 @@ DefineLanguageWord("Skid", {
 	Meanings = {"Wood"},
 	Gender = "neuter", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 550.
 	-- example: "Skidbladnir" (ship made by the sons of Ivaldi, name means "Wooden-Bladed"); should add a category for ship names
+	AffixNameTypes = {
+		"separate", "suffix", "unit-class-lumber-mill" -- seems sensible
+	}
 })
 
 DefineLanguageWord("Skirvir", { -- alternatively spelled as "Skirfir"; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 550.
@@ -1247,7 +1251,8 @@ DefineLanguageWord("Thjod", { -- Source: Richard Cleasby and Gudbrand Vigfusson,
 		"compound", "prefix", "singular", "settlement", -- no examples, but seems sensible in face of a general lack of examples
 		"compound", "prefix", "singular", "province", -- no examples, but seems sensible in face of a general lack of examples
 		"compound", "prefix", "singular", "terrain-hills", -- no examples, but seems sensible in face of a general lack of examples
-		"compound", "prefix", "singular", "terrain-mountains" -- no examples, but seems sensible in face of a general lack of examples
+		"compound", "prefix", "singular", "terrain-mountains", -- no examples, but seems sensible in face of a general lack of examples
+		"separate", "prefix", "unit-class-lumber-mill" -- seems sensible
 	}
 })
 

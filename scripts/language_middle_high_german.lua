@@ -69,6 +69,14 @@ DefineLanguageWord("Bach", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Bart", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Beard"}, -- source gives the German "Bart" as the meaning
+	DerivesFrom = {"old-high-german", "noun", "Bart"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Bat", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 133.
 	Language = "middle-high-german",
 	Type = "noun",
@@ -132,6 +140,13 @@ DefineLanguageWord("Brennen", { -- causative; Source: August Fick and Alf Torp, 
 	Type = "verb",
 	Meanings = {"Burn"}, -- source gives the German "brennen" as the meaning
 	DerivesFrom = {"old-high-german", "verb", "Brennen"}
+})
+
+DefineLanguageWord("Bret", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, pp. 135-136.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Board"}, -- source gives the German "Brett" as the meaning
+	DerivesFrom = {"old-high-german", "noun", "Bret"}
 })
 
 DefineLanguageWord("Brinnen", { -- strong verb; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
@@ -670,6 +685,21 @@ DefineLanguageWord("Rünne", { -- Source: Sean Crist, "An Analysis of *z loss in
 	Type = "noun",
 	Meanings = {"Storm Surge"},
 	Gender = "feminine"
+})
+
+DefineLanguageWord("Sage", { -- source also gives the alternative form "sege"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 213.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Saw"}, -- source gives the German "Säge" as the meaning
+	DerivesFrom = {"old-high-german", "noun", "Saga"},
+	Gender = "feminine"
+})
+
+DefineLanguageWord("Sagler", { -- source apparently gives the word as being related to the Proto-Germanic noun "sagô" and its reflexes; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 213.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Incisor"}, -- source gives the German "Schneidezahn" as the meaning
+	DerivesFrom = {"old-high-german", "noun", "Saga"} -- presumably
 })
 
 DefineLanguageWord("Schilt", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 229.

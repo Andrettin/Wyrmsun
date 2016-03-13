@@ -32,6 +32,14 @@ DefineLanguageWord("Ässja", { -- vernacular; Source: August Fick and Alf Torp, 
 	DerivesFrom = {"proto-germanic", "noun", "Asjôn"}
 })
 
+DefineLanguageWord("Bräda", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, pp. 135-136.
+	Language = "swedish",
+	Type = "noun",
+	Meanings = {"Board"}, -- source gives the German "Brett" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Burda"}, -- source says the word could be derived from the Low German, or from "brêdiôn" (a Proto-Germanic word derived from "burda"/"breda"?)
+	Gender = "feminine"
+})
+
 DefineLanguageWord("Brånad", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
 	Language = "swedish",
 	Type = "noun",

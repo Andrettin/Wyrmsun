@@ -140,6 +140,21 @@ DefineLanguageWord("Bađ", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Gender = "neuter"
 })
 
+DefineLanguageWord("Barđa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Beard", "Stem", "Edge", "Seam"}, -- source gives the German "Bart, Steven, Rand, Saum" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Barda"},
+	Gender = "neuter"
+})
+
+DefineLanguageWord("Barđa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"A Type of Axe"}, -- source gives the German "eine Art Axt" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Barda"}
+})
+
 DefineLanguageWord("Bauþ", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-norse",
 	Type = "verb",
@@ -233,12 +248,12 @@ DefineLanguageWord("Bōk", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	DerivesFrom = {"proto-germanic", "noun", "Bōks"}
 })
 
-DefineLanguageWord("Bord", { -- Source: http://www.cnrtl.fr/definition/B%F6rde
+DefineLanguageWord("Bord", { -- Fick gives "borđ" instead; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, pp. 135-136; Source: http://www.cnrtl.fr/definition/B%F6rde
 	Language = "old-norse",
 	Type = "noun",
-	Meanings = {"Board", "Table"}, -- source gives the French "planche, table" as the meaning
-	DerivesFrom = {"proto-indo-european", "noun", "Bhrdho"}, -- Source: http://www.cnrtl.fr/definition/bord
-	Gender = "neuter"
+	Meanings = {"Board", "Table"}, -- the TLFi gives the French "planche, table" as the meaning; Fick gives the German "Brett, Tisch"
+	DerivesFrom = {"proto-germanic", "noun", "Burda"}, -- as given by Fick; the TLFi gives it as deriving from the Indo-European word "bhrdho-" (Source: http://www.cnrtl.fr/definition/bord)
+	Gender = "neuter" -- as given by the TLFi
 })
 
 DefineLanguageWord("Bord", { -- Source: http://www.cnrtl.fr/definition/bord
@@ -1210,6 +1225,14 @@ DefineLanguageWord("Smiđr", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	NumberCaseInflections = {
 		"singular", "genitive", "Smiđs" -- alternatively also "Smiđar" (is that the genitive plural?)
 	}
+})
+
+DefineLanguageWord("Sǫg", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 213.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Saw"}, -- source gives the German "Säge" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Sagô"},
+	Gender = "feminine"
 })
 
 DefineLanguageWord("Sorg", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.

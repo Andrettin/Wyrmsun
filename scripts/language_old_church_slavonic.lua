@@ -32,6 +32,12 @@ DefineLanguageWord("Běžą", { -- source also gives the alternate form "Běžat
 	DerivesFrom = {"proto-indo-european", "verb", "Bheg"}
 })
 
+DefineLanguageWord("Brada", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
+	Language = "old-church-slavonic",
+	Type = "noun",
+	Meanings = {"Beard"} -- source gives the German "Bart" as the meaning
+})
+
 DefineLanguageWord("Brěga", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
 	Language = "old-church-slavonic",
 	Type = "noun",
@@ -111,6 +117,18 @@ DefineLanguageWord("Mozgŭ", { -- Source: Sean Crist, "An Analysis of *z loss in
 	Language = "old-church-slavonic",
 	Type = "noun",
 	Meanings = {"Brain"}
+})
+
+DefineLanguageWord("Sěčivo", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 213.
+	Language = "old-church-slavonic",
+	Type = "noun",
+	Meanings = {"Axe"} -- source gives the German "Axt" as the meaning
+})
+
+DefineLanguageWord("Sekyra", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 213.
+	Language = "old-church-slavonic",
+	Type = "noun",
+	Meanings = {"Heel"} -- source gives the German "Hacke" as the meaning
 })
 
 DefineLanguageWord("Sěmĭ", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 53.

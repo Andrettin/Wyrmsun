@@ -49,7 +49,7 @@ DefineLanguageWord("Bhewdh", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Meanings = {}
 })
 
-DefineLanguageWord("Bhrdho", { -- Source: http://www.cnrtl.fr/definition/bord
+DefineLanguageWord("Bhrdho", { -- Fick gives "bher(e)dh" instead; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, pp. 135-136; Source: http://www.cnrtl.fr/definition/bord
 	Language = "proto-indo-european",
 	Type = "noun",
 	Meanings = {"Board"} -- source gives the French "planche" as the meaning

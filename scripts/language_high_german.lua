@@ -221,6 +221,21 @@ DefineLanguageWord("Bär", { -- Source: http://www.duden.de/rechtschreibung/Baer
 	AffixNameTypes = {"compound", "prefix", "plural", "terrain-hills"}, -- example: "Bärenberg"
 })
 
+DefineLanguageWord("Bart", { -- Source: http://www.duden.de/rechtschreibung/Bart
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"Beard"},
+	DerivesFrom = {"middle-high-german", "noun", "Bart"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
+	Gender = "masculine",
+	NumberCaseInflections = {
+		"singular", "genitive", "Bartes", -- alternatively also "Barts"
+		"plural", "nominative", "Bärte",
+		"plural", "accusative", "Bärte",
+		"plural", "dative", "Bärten",
+		"plural", "genitive", "Bärte"
+	}
+})
+
 DefineLanguageWord("Berg", {
 	Language = "high-german",
 	Type = "noun",
@@ -356,6 +371,21 @@ DefineLanguageWord("Brennend", {
 	Type = "adjective",
 	Meanings = {"Burning"},
 	DerivesFrom = {"middle-high-german", "verb", "Brennen"} -- presumably, since the verb "Brennen" comes from this word
+})
+
+DefineLanguageWord("Brett", { -- Source: http://www.duden.de/rechtschreibung/Brett
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"Board"},
+	DerivesFrom = {"middle-high-german", "noun", "Bret"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, pp. 135-136.
+	Gender = "neuter",
+	NumberCaseInflections = {
+		"plural", "genitive", "Brettes", -- alternatively also "Bretts"
+		"plural", "nominative", "Bretter",
+		"plural", "accusative", "Bretter",
+		"plural", "dative", "Brettern",
+		"plural", "genitive", "Bretter"
+	}
 })
 
 DefineLanguageWord("Bronze", {
@@ -1912,6 +1942,20 @@ DefineLanguageWord("Rudolf", {
 	NameTypes = {"person-male"}
 })
 
+DefineLanguageWord("Säge", { -- Source: http://www.duden.de/rechtschreibung/Saege
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"Saw"},
+	DerivesFrom = {"middle-high-german", "noun", "Sage"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 213.
+	Gender = "feminine",
+	NumberCaseInflections = {
+		"plural", "nominative", "Sägen",
+		"plural", "accusative", "Sägen",
+		"plural", "dative", "Sägen",
+		"plural", "genitive", "Sägen"
+	}
+})
+
 DefineLanguageWord("Salz", {
 	Language = "high-german",
 	Type = "noun",
@@ -1925,14 +1969,14 @@ DefineLanguageWord("Satz", {
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"Sentence", "Sediment"},
+	Gender = "masculine",
 	NumberCaseInflections = {
 		"singular", "genitive", "Satzes",
 		"plural", "nominative", "Sätze",
 		"plural", "accusative", "Sätze",
 		"plural", "dative", "Sätzen",
 		"plural", "genitive", "Sätze"
-	},
-	Gender = "masculine"
+	}
 })
 
 DefineLanguageWord("Schaf", {

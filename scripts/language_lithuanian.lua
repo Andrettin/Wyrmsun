@@ -44,6 +44,12 @@ DefineLanguageWord("Ausztrìnis", { -- Source: August Fick and Alf Torp, "Wortsc
 	Meanings = {"East Wind"} -- source gives the German "Ostwind" as the meaning
 })
 
+DefineLanguageWord("Barzdà", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
+	Language = "lithuanian",
+	Type = "noun",
+	Meanings = {"Beard"} -- source gives the German "Bart" as the meaning
+})
+
 DefineLanguageWord("Bė́gu", { -- source also gives the alternative form "Bė́gti"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 133.
 	Language = "lithuanian",
 	Type = "verb", -- correct?

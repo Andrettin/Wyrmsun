@@ -55,7 +55,7 @@ DefineLanguageWord("Bord", { -- Source: http://www.cnrtl.fr/definition/B%F6rde
 	Language = "old-frankish", -- source gives "Ancien Bas Francique" (= Old Frankish)
 	Type = "noun",
 	Meanings = {"Board"}, -- source gives the French "planche" as the meaning
-	DerivesFrom = {"proto-indo-european", "noun", "Bhrdho"},
+	DerivesFrom = {"proto-germanic", "noun", "Burda"}, -- the TLFi gives it as deriving from the Indo-European word "bhrdho-" (Source: http://www.cnrtl.fr/definition/bord); Fick gives this word's cognates as deriving from Proto-Germanic "burda"
 	Gender = "neuter",
 	NumberCaseInflections = {
 		"plural", "nominative", "Borda"

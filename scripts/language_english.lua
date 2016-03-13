@@ -165,6 +165,14 @@ DefineLanguageWord("Bear", {
 	Gender = "neuter"
 })
 
+DefineLanguageWord("Beard", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Beard"},
+	DerivesFrom = {"old-english", "noun", "Beard"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Beck", {
 	Language = "english",
 	Type = "noun",
@@ -187,7 +195,8 @@ DefineLanguageWord("Beech", {
 	Meanings = {"Beech"},
 	Gender = "neuter",
 	AffixNameTypes = {
-		"separate", "prefix", "singular", "terrain-hills" -- example: "Beech Pollard"
+		"separate", "prefix", "singular", "terrain-hills", -- example: "Beech Pollard"
+		"separate", "prefix", "singular", "unit-class-lumber-mill" -- seems sensible
 	}
 })
 
@@ -247,7 +256,8 @@ DefineLanguageWord("Black", {
 		"compound", "prefix", "settlement", -- examples: "Blackburn", "Blackpool" (Source: "Philip's International School Atlas", 2006, p. 64), "Blackwall"
 		"separate", "prefix", "terrain-hills", -- example: "Black Hill"
 		"separate", "prefix", "terrain-mountains", -- examples: "Black Crag", "Black Fell", "Black Hill", "Black Sails"
-		"separate", "prefix", "unit-class-smithy" -- seems sensible
+		"separate", "prefix", "unit-class-smithy", -- seems sensible
+		"separate", "prefix", "unit-class-lumber-mill" -- seems sensible
 	}
 })
 
@@ -272,7 +282,10 @@ DefineLanguageWord("Blue", {
 	Type = "adjective",
 	Meanings = {"Blue"},
 	DerivesFrom = {"old-english", "adjective", "Blâw"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 147.
-	AffixNameTypes = {"separate", "prefix", "singular", "unit-class-smithy"} -- seems sensible
+	AffixNameTypes = {
+		"separate", "prefix", "singular", "unit-class-smithy", -- seems sensible
+		"separate", "prefix", "unit-class-lumber-mill" -- seems sensible
+	}
 })
 
 DefineLanguageWord("Blunt", {
@@ -298,8 +311,9 @@ DefineLanguageWord("Board", {
 	Language = "english",
 	Type = "noun",
 	Meanings = {"Board"},
-	DerivesFrom = {"old-english", "noun", "Bord"}, -- presumably
-	Gender = "neuter"
+	DerivesFrom = {"old-english", "noun", "Bord"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, pp. 135-136.
+	Gender = "neuter",
+	AffixNameTypes = {"separate", "suffix", "singular", "unit-class-lumber-mill"} -- seems sensible
 })
 
 DefineLanguageWord("Borough", {
@@ -404,7 +418,8 @@ DefineLanguageWord("Brown", {
 	Meanings = {"Brown"},
 	AffixNameTypes = {
 		"separate", "prefix", "terrain-mountains", -- examples: "Brown Crag", "Brown Pike"
-		"separate", "prefix", "singular", "unit-class-smithy" -- seems sensible
+		"separate", "prefix", "singular", "unit-class-smithy", -- seems sensible
+		"separate", "prefix", "unit-class-lumber-mill" -- seems sensible
 	}
 })
 
@@ -519,6 +534,14 @@ DefineLanguageWord("Castle", {
 	}
 })
 
+DefineLanguageWord("Chair", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Chair"},
+	Gender = "neuter",
+	AffixNameTypes = {"separate", "suffix", "singular", "unit-class-lumber-mill"} -- seems sensible
+})
+
 DefineLanguageWord("Charles", {
 	Language = "english",
 	Type = "noun",
@@ -580,7 +603,9 @@ DefineLanguageWord("Cold", {
 	Type = "adjective",
 	Meanings = {"Cold"},
 	AffixNameTypes = {
-		"separate", "prefix", "terrain-mountains" -- examples: "Cold Fell", "Cold Pike"
+		"separate", "prefix", "terrain-mountains", -- examples: "Cold Fell", "Cold Pike"
+		"separate", "prefix", "unit-class-smithy", -- seems sensible
+		"separate", "prefix", "unit-class-lumber-mill" -- seems sensible
 	}
 })
 
@@ -833,14 +858,20 @@ DefineLanguageWord("Eight", {
 	Language = "english",
 	Type = "numeral",
 	Number = 8,
-	AffixNameTypes = {"separate", "prefix", "singular", "unit-class-smithy"} -- seems sensible
+	AffixNameTypes = {
+		"separate", "prefix", "unit-class-smithy", -- seems sensible
+		"separate", "prefix", "unit-class-lumber-mill" -- seems sensible
+	}
 })
 
 DefineLanguageWord("Eleven", {
 	Language = "english",
 	Type = "numeral",
 	Number = 11,
-	AffixNameTypes = {"separate", "prefix", "singular", "unit-class-smithy"} -- seems sensible
+	AffixNameTypes = {
+		"separate", "prefix", "unit-class-smithy", -- seems sensible
+		"separate", "prefix", "unit-class-lumber-mill" -- seems sensible
+	}
 })
 
 DefineLanguageWord("Elf", {
@@ -963,7 +994,10 @@ DefineLanguageWord("Five", {
 	Language = "english",
 	Type = "numeral",
 	Number = 5,
-	AffixNameTypes = {"separate", "prefix", "singular", "unit-class-smithy"} -- seems sensible
+	AffixNameTypes = {
+		"separate", "prefix", "unit-class-smithy", -- seems sensible
+		"separate", "prefix", "unit-class-lumber-mill" -- seems sensible
+	}
 })
 
 DefineLanguageWord("Fleet", {
@@ -1174,7 +1208,8 @@ DefineLanguageWord("Gray", {
 	DerivesFrom = {"old-english", "adjective", "Græ̂g"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 79.
 	AffixNameTypes = {
 		"separate", "prefix", "terrain-mountains", -- examples: "Gray Crag", "Grey Crag", "Grey Friar"
-		"separate", "prefix", "singular", "unit-class-smithy" -- seems sensible
+		"separate", "prefix", "singular", "unit-class-smithy", -- seems sensible
+		"separate", "prefix", "unit-class-lumber-mill" -- seems sensible
 	}
 })
 
@@ -1196,7 +1231,8 @@ DefineLanguageWord("Green", {
 		"compound", "prefix", "settlement", -- example: "Greenwich"
 		"separate", "prefix", "terrain-hills", -- example: "Green Hill"
 		"separate", "prefix", "terrain-mountains", -- examples: "Green Gable", "Green Hill", "Green Side"
-		"separate", "prefix", "unit-class-smithy" -- seems sensible
+		"separate", "prefix", "unit-class-smithy", -- seems sensible
+		"separate", "prefix", "unit-class-lumber-mill" -- seems sensible
 	}
 })
 
@@ -1431,7 +1467,8 @@ DefineLanguageWord("Holly", {
 	Meanings = {"Holly"},
 	Gender = "neuter",
 	AffixNameTypes = {
-		"separate", "prefix", "singular", "terrain-hills" -- example: "Holly Hill"
+		"separate", "prefix", "singular", "terrain-hills", -- example: "Holly Hill"
+		"separate", "prefix", "unit-class-lumber-mill" -- seems sensible
 	}
 })
 
@@ -1442,7 +1479,8 @@ DefineLanguageWord("Holy", {
 	DerivesFrom = {"old-english", "adjective", "Hâlig"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 42.
 	AffixNameTypes = {
 		"compound", "prefix", "settlement", -- example: "Holyhead"
-		"separate", "prefix", "unit-class-smithy" -- seems sensible
+		"separate", "prefix", "unit-class-smithy", -- seems sensible
+		"separate", "prefix", "unit-class-lumber-mill" -- seems sensible
 	}
 })
 
@@ -1733,7 +1771,10 @@ DefineLanguageWord("Magic", {
 	Language = "english",
 	Type = "adjective",
 	Meanings = {"Magic"},
-	AffixNameTypes = {"separate", "prefix", "singular", "unit-class-smithy"} -- seems sensible
+	AffixNameTypes = {
+		"separate", "prefix", "unit-class-smithy",  -- seems sensible
+		"separate", "prefix", "unit-class-lumber-mill" -- seems sensible
+	}
 })
 
 DefineLanguageWord("Maid", {
@@ -1847,6 +1888,16 @@ DefineLanguageWord("Middle", {
 	}
 })
 
+DefineLanguageWord("Mighty", {
+	Language = "english",
+	Type = "adjective",
+	Meanings = {"Mighty"},
+	AffixNameTypes = {
+		"separate", "prefix", "unit-class-smithy", -- seems sensible
+		"separate", "prefix", "unit-class-lumber-mill" -- seems sensible
+	}
+})
+
 DefineLanguageWord("Moor", {
 	Language = "english",
 	Type = "noun",
@@ -1862,7 +1913,9 @@ DefineLanguageWord("Mossy", {
 	Type = "adjective",
 	Meanings = {"Mossy"},
 	AffixNameTypes = {
-		"separate", "infix", "terrain-mountains" -- example: "White Mossy Hill"
+		"separate", "infix", "terrain-mountains", -- example: "White Mossy Hill"
+		"separate", "prefix", "unit-class-smithy", -- seems sensible
+		"separate", "prefix", "unit-class-lumber-mill" -- seems sensible
 	}
 })
 
@@ -1908,7 +1961,8 @@ DefineLanguageWord("New", {
 	DerivesFrom = {"old-english", "adjective", "Nîwe"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 153.
 	AffixNameTypes = {
 		"compound", "prefix", "settlement", -- examples: "Newbury", "Newcastle upon Tyne", "Newport", "Newquay"; Source: "Philip's International School Atlas", 2006, p. 64.
-		"separate", "prefix", "unit-class-smithy" -- seems sensible
+		"separate", "prefix", "unit-class-smithy", -- seems sensible
+		"separate", "prefix", "unit-class-lumber-mill" -- seems sensible
 	}
 })
 
@@ -1916,7 +1970,10 @@ DefineLanguageWord("Nine", {
 	Language = "english",
 	Type = "numeral",
 	Number = 9,
-	AffixNameTypes = {"separate", "prefix", "unit-class-smithy"} -- seems sensible
+	AffixNameTypes = {
+		"separate", "prefix", "unit-class-smithy", -- seems sensible
+		"separate", "prefix", "unit-class-lumber-mill" -- seems sensible
+	}
 })
 
 DefineLanguageWord("Nor", {
@@ -1976,6 +2033,15 @@ DefineLanguageWord("Nut", {
 	Gender = "neuter"
 })
 
+DefineLanguageWord("Oaken", {
+	Language = "english",
+	Type = "adjective",
+	Meanings = {"Oaken"},
+	AffixNameTypes = {
+		"separate", "prefix", "unit-class-lumber-mill" -- seems sensible
+	}
+})
+
 DefineLanguageWord("Old", {
 	Language = "english",
 	Type = "adjective",
@@ -1987,7 +2053,8 @@ DefineLanguageWord("Old", {
 	},
 	AffixNameTypes = {
 		"compound", "prefix", "settlement", -- example: "Oldham"
-		"separate", "prefix", "unit-class-smithy" -- seems sensible
+		"separate", "prefix", "unit-class-smithy", -- seems sensible
+		"separate", "prefix", "unit-class-lumber-mill" -- seems sensible
 	}
 })
 
@@ -2004,7 +2071,8 @@ DefineLanguageWord("Orange", {
 	Type = "adjective",
 	Meanings = {"Orange"},
 	AffixNameTypes = {
-		"separate", "prefix", "unit-class-smithy" -- seems sensible
+		"separate", "prefix", "unit-class-smithy", -- seems sensible
+		"separate", "prefix", "unit-class-lumber-mill" -- seems sensible
 	}
 })
 
@@ -2082,6 +2150,14 @@ DefineLanguageWord("Place", {
 	}
 })
 
+DefineLanguageWord("Plank", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Plank"},
+	Gender = "neuter",
+	AffixNameTypes = {"separate", "suffix", "singular", "unit-class-lumber-mill"} -- seems sensible
+})
+
 DefineLanguageWord("Ply", {
 	Language = "english",
 	Type = "noun",
@@ -2125,7 +2201,8 @@ DefineLanguageWord("Purple", {
 	Type = "adjective",
 	Meanings = {"Purple"},
 	AffixNameTypes = {
-		"separate", "prefix", "unit-class-smithy" -- seems sensible
+		"separate", "prefix", "unit-class-smithy", -- seems sensible
+		"separate", "prefix", "unit-class-lumber-mill" -- seems sensible
 	}
 })
 
@@ -2182,7 +2259,8 @@ DefineLanguageWord("Red", {
 		"compound", "prefix", "singular", "settlement", -- example: "Redditch"; Source: "Philip's International School Atlas", 2006, p. 64.
 		"separate", "prefix", "terrain-hills", -- example: "Red Hill"
 		"separate", "prefix", "terrain-mountains", -- examples: "Red Crag", "Red Pike", "Red Screes"
-		"separate", "prefix", "unit-class-smithy" -- seems sensible
+		"separate", "prefix", "unit-class-smithy", -- seems sensible
+		"separate", "prefix", "unit-class-lumber-mill" -- seems sensible
 	}
 })
 
@@ -2307,6 +2385,15 @@ DefineLanguageWord("Sandal", {
 	}
 })
 
+DefineLanguageWord("Saw", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Saw"},
+	DerivesFrom = {"old-english", "noun", "Sagu"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 213.
+	Gender = "neuter",
+	AffixNameTypes = {"separate", "suffix", "singular", "unit-class-lumber-mill"} -- seems sensible
+})
+
 DefineLanguageWord("Scale", {
 	Language = "english",
 	Type = "noun",
@@ -2380,7 +2467,10 @@ DefineLanguageWord("Seven", {
 	Language = "english",
 	Type = "numeral",
 	Number = 7,
-	AffixNameTypes = {"separate", "prefix", "singular", "unit-class-smithy"} -- seems sensible
+	AffixNameTypes = {
+		"separate", "prefix", "unit-class-smithy", -- seems sensible
+		"separate", "prefix", "unit-class-lumber-mill" -- seems sensible
+	}
 })
 
 DefineLanguageWord("Sex", {
@@ -2668,6 +2758,7 @@ DefineLanguageWord("Stony", {
 	Language = "english",
 	Type = "adjective",
 	Meanings = {"Stony"},
+	DerivesFrom = {"old-english", "noun", "Stân"}, -- presumably, since the noun "stone" does
 	AffixNameTypes = {
 		"separate", "prefix", "terrain-mountains", -- example: "Stony Cove Pike"
 		"separate", "infix", "terrain-mountains" -- example: "Great Stony Hill"
@@ -2770,7 +2861,8 @@ DefineLanguageWord("Three", {
 	Number = 3,
 	AffixNameTypes = {
 		"separate", "prefix", "terrain-mountains", -- example: "Three Pikes"
-		"separate", "prefix", "singular", "unit-class-smithy" -- seems sensible
+		"separate", "prefix", "unit-class-smithy", -- seems sensible
+		"separate", "prefix", "unit-class-lumber-mill" -- seems sensible
 	}
 })
 
@@ -2867,14 +2959,20 @@ DefineLanguageWord("Twelve", {
 	Language = "english",
 	Type = "numeral",
 	Number = 12,
-	AffixNameTypes = {"separate", "prefix", "singular", "unit-class-smithy"} -- seems sensible
+	AffixNameTypes = {
+		"separate", "prefix", "unit-class-smithy", -- seems sensible
+		"separate", "prefix", "unit-class-lumber-mill" -- seems sensible
+	}
 })
 
 DefineLanguageWord("Two", {
 	Language = "english",
 	Type = "numeral",
 	Number = 2,
-	AffixNameTypes = {"separate", "prefix", "singular", "unit-class-smithy"} -- seems sensible
+	AffixNameTypes = {
+		"separate", "prefix", "unit-class-smithy", -- seems sensible
+		"separate", "prefix", "unit-class-lumber-mill" -- seems sensible
+	}
 })
 
 DefineLanguageWord("Violet", {
@@ -2883,7 +2981,8 @@ DefineLanguageWord("Violet", {
 	Meanings = {"Violet"},
 	AffixNameTypes = {
 		"separate", "prefix", "terrain-hills", -- example: "Violet Hill"
-		"separate", "prefix", "unit-class-smithy" -- seems sensible
+		"separate", "prefix", "unit-class-smithy", -- seems sensible
+		"separate", "prefix", "unit-class-lumber-mill" -- seems sensible
 	}
 })
 
@@ -2958,7 +3057,8 @@ DefineLanguageWord("White", {
 		"compound", "prefix", "terrain-mountains", -- example: "Whiteside"
 		"separate", "prefix", "terrain-mountains", -- examples: "White Maiden", "White Mossy Hill", "White Pike", "White Side"
 		"separate", "infix", "terrain-mountains", -- example: "Low White Stones"
-		"separate", "prefix", "unit-class-smithy" -- seems sensible
+		"separate", "prefix", "unit-class-smithy", -- seems sensible
+		"separate", "prefix", "unit-class-lumber-mill" -- seems sensible
 	}
 })
 
@@ -3045,7 +3145,9 @@ DefineLanguageWord("Wood", {
 	Type = "noun",
 	Meanings = {"Wood"},
 	Gender = "neuter",
-	AffixNameTypes = {"compound", "prefix", "singular", "settlement"} -- example: "Woodbridge"
+	AffixNameTypes = {
+		"compound", "prefix", "singular", "settlement" -- example: "Woodbridge"
+	}
 })
 
 DefineLanguageWord("Wool", {
@@ -3082,7 +3184,8 @@ DefineLanguageWord("Yellow", {
 	Type = "adjective",
 	Meanings = {"Yellow"},
 	AffixNameTypes = {
-		"separate", "prefix", "unit-class-smithy" -- seems sensible
+		"separate", "prefix", "unit-class-smithy", -- seems sensible
+		"separate", "prefix", "unit-class-lumber-mill" -- seems sensible
 	}
 })
 

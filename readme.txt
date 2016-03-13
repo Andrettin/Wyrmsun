@@ -72,6 +72,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added a Brising-specific version of the Dwarven Smithy (+50% Time Efficiency).
 - Brising Smithies now have their own graphics (if the player has the Brising Faction Flair DLC).
 - Brising Mead Halls and Bastions now have their own graphics (if the player has the Brising Faction Flair DLC).
+- Added proper name generation for lumber mills.
 
 * Civilizations
 - Added many new component words for Germanic settlement, province and smithy name generation.
@@ -79,12 +80,12 @@ https://github.com/Andrettin/Wyrmsun
 
 * Factions
 - Added support for factions using a different language than their civilizations (for name generation).
-- The England and Scotland factions now use English for proper name generation (for units, settlements, provinces and smithies).
-- The Saxon Tribe and related factions now use Old Saxon for proper name generation (for units, settlements, provinces and smithies).
-- The Frisian Tribe and related factions now use Old Frisian for proper name generation (for units, settlements, provinces and smithies).
-- The Suebi, Marcomanni, Alamanni, Bavarian Tribes and their related factions now use Old High German for proper name generation (for units, settlements, provinces and smithies).
-- The Angle Tribe now uses Old English for proper name generation (for units, settlements, provinces and smithies).
-- The Frank Tribe and related factions now use Old Frankish for proper name generation (for units, settlements, provinces and smithies).
+- The England and Scotland factions now use English for proper name generation (for units, settlements, provinces, mountains, hills, smithies and lumber mills).
+- The Saxon Tribe and related factions now use Old Saxon for proper name generation (for units, settlements, provinces, mountains, hills, smithies and lumber mills).
+- The Frisian Tribe and related factions now use Old Frisian for proper name generation (for units, settlements, provinces, mountains, hills, smithies and lumber mills).
+- The Suebi, Marcomanni, Alamanni, Bavarian Tribes and their related factions now use Old High German for proper name generation (for units, settlements, provinces, mountains, hills, smithies and lumber mills).
+- The Angle Tribe now uses Old English for proper name generation (for units, settlements, provinces, mountains, hills, smithies and lumber mills).
+- The Frank Tribe and related factions now use Old Frankish for proper name generation (for units, settlements, provinces, mountains, hills, smithies and lumber mills).
 - Renamed the Skjoldung Tribe (Germanic) to Skeldung Tribe.
 
 * Grand Strategy

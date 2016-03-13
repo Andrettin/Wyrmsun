@@ -87,6 +87,21 @@ DefineLanguageWord("Bah", { -- Source: August Fick and Alf Torp, "Wortschatz der
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Bart", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Beard"}, -- source gives the German "Bart" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Barda"},
+	Gender = "masculine"
+})
+
+DefineLanguageWord("Barta", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {},
+	DerivesFrom = {"proto-germanic", "noun", "Barda"}
+})
+
 DefineLanguageWord("Beran", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "old-high-german",
 	Type = "verb",
@@ -193,6 +208,13 @@ DefineLanguageWord("Brennen", { -- causative; Source: August Fick and Alf Torp, 
 	Type = "verb",
 	Meanings = {"Burn"}, -- source gives the German "brennen" as the meaning
 	DerivesFrom = {"proto-germanic", "verb", "Brannian"}
+})
+
+DefineLanguageWord("Bret", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, pp. 135-136.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Board"}, -- source gives the German "Brett" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Burda"}
 })
 
 DefineLanguageWord("Brinnan", { -- strong verb; source also gives the alternative form "prinnan"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
@@ -1098,6 +1120,14 @@ DefineLanguageWord("Rōt", { -- Source: Richard M. Runge, "The Phonetic Realizat
 	Language = "old-high-german",
 	Type = "adjective",
 	Meanings = {"Red"}
+})
+
+DefineLanguageWord("Saga", { -- source also gives the alternative form "sega"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 213.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Saw"}, -- source gives the German "Säge" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Sagô"},
+	Gender = "feminine"
 })
 
 DefineLanguageWord("Sāt", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.

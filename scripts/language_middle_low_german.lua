@@ -32,6 +32,13 @@ DefineLanguageWord("Alf", { -- Source: August Fick and Alf Torp, "Wortschatz der
 	DerivesFrom = {"proto-germanic", "noun", "Alba"}
 })
 
+DefineLanguageWord("Bart", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
+	Language = "middle-low-german",
+	Type = "noun",
+	Meanings = {"Beard"}, -- source gives the German "Bart" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Barda"}
+})
+
 DefineLanguageWord("Blî", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 148.
 	Language = "middle-low-german",
 	Type = "noun",
@@ -48,12 +55,12 @@ DefineLanguageWord("Blôsem", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Gender = "feminine"
 })
 
-DefineLanguageWord("Bort", { -- Source: http://www.cnrtl.fr/definition/B%F6rde
+DefineLanguageWord("Bort", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, pp. 135-136; Source: http://www.cnrtl.fr/definition/B%F6rde
 	Language = "middle-low-german",
 	Type = "noun",
-	Meanings = {"Board", "Table"}, -- source gives the French "planche, table" as the meaning
-	DerivesFrom = {"old-saxon", "noun", "Bord"},
-	Gender = "neuter"
+	Meanings = {"Board", "Table"}, -- the TLFi gives the French "planche, table" as the meaning; Fick gives the German "Tisch"
+	DerivesFrom = {"old-saxon", "noun", "Bord"}, -- as given by the TLFi and Fick
+	Gender = "neuter" -- as given by the TLFi
 })
 
 DefineLanguageWord("Brant", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
@@ -62,6 +69,17 @@ DefineLanguageWord("Brant", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Meanings = {"Fire", "Firebrand", "Sword"}, -- source gives the German "Feuer, Feuerbrand, Schwert"
 	DerivesFrom = {"old-saxon", "noun", "Brand"},
 	Gender = "masculine"
+})
+
+DefineLanguageWord("Bret", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, pp. 135-136.
+	Language = "middle-low-german",
+	Type = "noun",
+	Meanings = {"Board"}, -- source apparently gives the German "Brett" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Burda"},
+	Gender = "neuter",
+	NumberCaseInflections = {
+		"singular", "genitive", "Bredes"
+	}
 })
 
 DefineLanguageWord("Busch", { -- the TLFi also gives the alternative form "Busk"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 143; Source: http://www.cnrtl.fr/definition/bois
@@ -172,6 +190,13 @@ DefineLanguageWord("Note", { -- source also gives the alternative form "Not"; So
 	Type = "noun",
 	Meanings = {"Nut"}, -- source (apparently) gives the German "Nuß"
 	DerivesFrom = {"proto-germanic", "noun", "Hnut"}
+})
+
+DefineLanguageWord("Sage", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 213.
+	Language = "middle-low-german",
+	Type = "noun",
+	Meanings = {"Saw"}, -- source (apparently) gives the German "Säge" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Sagô"}
 })
 
 DefineLanguageWord("Smede", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 264.

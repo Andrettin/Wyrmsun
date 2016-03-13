@@ -188,6 +188,14 @@ DefineLanguageWord("Bairiþ", { -- this is the singular third person present; So
 	}
 })
 
+DefineLanguageWord("Baurd", { -- the TLFi gives "(fotu-)baurd"; Fick gives "(fôtu-)baúrd" instead; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 135; Source: http://www.cnrtl.fr/definition/B%F6rde
+	Language = "gothic",
+	Type = "noun",
+	Meanings = {"Small Bench", "Footstool"}, -- the TLFi gives the French "petit banc, tabouret" as the meaning; Fick gives the German "Foßbrett" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Burda"}, -- as given by Fick; the TLFi gives it as deriving from the Indo-European word "bhrdho-" (Source: http://www.cnrtl.fr/definition/bord)
+	Gender = "neuter" -- as given by the TLFi and Fick
+})
+
 DefineLanguageWord("Baúrgs", { -- Donkin gives "Baurgs" instead; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137; Source: T. C. Donkin, "An Etymological Dictionary of the Romance Languages", 1864, p. 84.
 	Language = "gothic",
 	Type = "noun",
@@ -342,14 +350,6 @@ DefineLanguageWord("Flōdus", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Type = "noun",
 	Meanings = {"Flood"}, -- derived from the Proto-Germanic "Flōduz", which means "Flood"
 	DerivesFrom = {"proto-germanic", "noun", "Flōduz"}
-})
-
-DefineLanguageWord("Fotubaurd", { -- source gives "(fotu-)baurd"; Source: http://www.cnrtl.fr/definition/B%F6rde
-	Language = "gothic",
-	Type = "noun",
-	Meanings = {"Small Bench", "Footstool"}, -- source gives the French "petit banc, tabouret" as the meaning
-	DerivesFrom = {"proto-indo-european", "noun", "Bhrdho"}, -- Source: http://www.cnrtl.fr/definition/bord
-	Gender = "neuter"
 })
 
 DefineLanguageWord("Friþa", { -- maybe is another form or an inflection of "Friþôn"? Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 128.

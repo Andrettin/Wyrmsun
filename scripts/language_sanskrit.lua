@@ -58,6 +58,16 @@ DefineLanguageWord("Áva", { -- source also gives the alternative form "ávas-t�
 	DerivesFrom = {"proto-indo-european", "adverb", "Ve"}
 })
 
+DefineLanguageWord("Bardhaka", { -- this is presumably a past participle, since one is given as the meaning; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, pp. 135-136.
+	Language = "sanskrit",
+	Type = "verb",
+	Meanings = {"Chopped"}, -- source gives the German "abschneidend" as the meaning
+	DerivesFrom = {"proto-indo-european", "noun", "Bhrdho"}, -- the TLFi gives the cognates of this word as deriving from the Indo-European word "bhrdho-" (Source: http://www.cnrtl.fr/definition/bord); Fick gives the Indo-European root of this word as "bher(e)dh" instead
+	Participles = {
+		"past", "Bardhaka"
+	}
+})
+
 DefineLanguageWord("Bhalla", { -- source also gives the alternative form "Bhallaka"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
 	Language = "sanskrit",
 	Type = "noun",

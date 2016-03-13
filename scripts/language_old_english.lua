@@ -98,6 +98,14 @@ DefineLanguageWord("Bæþ", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Gender = "neuter"
 })
 
+DefineLanguageWord("Beard", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Beard"}, -- source gives the German "Bart" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Barda"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Bearn", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 238.
 	Language = "old-english",
 	Type = "noun",
@@ -178,12 +186,12 @@ DefineLanguageWord("Bōc", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	DerivesFrom = {"proto-germanic", "noun", "Bōks"}
 })
 
-DefineLanguageWord("Bord", { -- Source: http://www.cnrtl.fr/definition/B%F6rde
+DefineLanguageWord("Bord", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, pp. 135-136; Source: http://www.cnrtl.fr/definition/B%F6rde
 	Language = "old-english",
 	Type = "noun",
-	Meanings = {"Board", "Table"}, -- source gives the French "planche, table" as the meaning
-	DerivesFrom = {"proto-indo-european", "noun", "Bhrdho"}, -- Source: http://www.cnrtl.fr/definition/bord
-	Gender = "neuter"
+	Meanings = {"Board", "Table"}, -- the TLFi gives the French "planche, table" as the meaning; Fick gives the German "Brett, Tisch"
+	DerivesFrom = {"proto-germanic", "noun", "Burda"}, -- as given by Fick; the TLFi gives it as deriving from the Indo-European word "bhrdho-" (Source: http://www.cnrtl.fr/definition/bord)
+	Gender = "neuter" -- as given by the TLFi and Fick
 })
 
 DefineLanguageWord("Bord", { -- Source: http://www.cnrtl.fr/definition/bord
@@ -191,6 +199,14 @@ DefineLanguageWord("Bord", { -- Source: http://www.cnrtl.fr/definition/bord
 	Type = "noun",
 	Meanings = {"Edge", "Ridge", "Edge of a Ship"}, -- source gives the French "bord, arête; bord de navire" as the meaning
 	DerivesFrom = {"proto-indo-european", "noun", "Bhrdho"}
+})
+
+DefineLanguageWord("Bred", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, pp. 135-136.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Board"}, -- source apparently gives the German "Brett" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Burda"},
+	Gender = "neuter"
 })
 
 DefineLanguageWord("Breord", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
@@ -1217,6 +1233,14 @@ DefineLanguageWord("Sælig", { -- Source: Alaric Hall, "The Meanings of Elf and 
 	Language = "old-english",
 	Type = "adjective",
 	Meanings = {"Happy", "Prosperous"}
+})
+
+DefineLanguageWord("Sagu", { -- source also gives the alternative form "sage"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 213.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Saw"}, -- source gives the German "Säge" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Sagô"},
+	Gender = "feminine"
 })
 
 DefineLanguageWord("Sangestre", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, pp. 77-78.

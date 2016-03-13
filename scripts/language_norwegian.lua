@@ -33,6 +33,14 @@ DefineLanguageWord("Bradd", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Bræda", { -- vernacular; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, pp. 135-136.
+	Language = "norwegian",
+	Type = "noun",
+	Meanings = {"Board"}, -- source gives the German "Brett" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Burda"}, -- source says the word could be derived from the Low German, or from "brêdiôn" (a Proto-Germanic word derived from "burda"/"breda"?)
+	Gender = "feminine"
+})
+
 DefineLanguageWord("Busk", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 143.
 	Language = "norwegian",
 	Type = "noun",

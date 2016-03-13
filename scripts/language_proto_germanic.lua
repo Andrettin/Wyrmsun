@@ -127,6 +127,13 @@ DefineLanguageWord("Baki", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Barda", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Beard", "Edge"}, -- source gives the German "Bart, Rand" as the meaning
+	Gender = "masculine" -- alternatively also neuter
+})
+
 DefineLanguageWord("Baþa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 133.
 	Language = "proto-germanic",
 	Type = "noun",
@@ -287,6 +294,14 @@ DefineLanguageWord("Bruzdaz", { -- Source: Sean Crist, "An Analysis of *z loss i
 	Type = "noun",
 	Meanings = {"Blade", "Edge"},
 	Gender = "masculine"
+})
+
+DefineLanguageWord("Burda", { -- source also gives the alternative form "breda"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 135.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Board"}, -- source gives the German "Brett" as the meaning
+	DerivesFrom = {"proto-indo-european", "noun", "Bhrdho"}, -- the TLFi gives the reflexes of this word as deriving from the Indo-European word "bhrdho-" (Source: http://www.cnrtl.fr/definition/bord); Fick gives the Indo-European root as "bher(e)dh" instead
+	Gender = "neuter"
 })
 
 DefineLanguageWord("Burg", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
@@ -937,6 +952,13 @@ DefineLanguageWord("Rîþa", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Current", "Stream"} -- source gives meaning as "Strom, Bach"
+})
+
+DefineLanguageWord("Sagô", { -- source also gives the alternative form "segô"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 213.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Saw"}, -- source gives the German "Säge" as the meaning
+	Gender = "feminine"
 })
 
 DefineLanguageWord("Saiþa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 221.
