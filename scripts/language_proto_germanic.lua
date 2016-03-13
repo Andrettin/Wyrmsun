@@ -916,9 +916,14 @@ DefineLanguageWord("Rîka", { -- source also gives the alternative form "Rîkia"
 DefineLanguageWord("Rîkia", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
 	Language = "proto-germanic",
 	Type = "noun",
-	Meanings = {"Power", "Dominion", "Realm"}, -- source gives meaning as "Macht, Herrschaft, Reich"
-	Gender = "neuter",
-	AffixNameTypes = {"compound", "suffix", "singular", "province"} -- seems sensible in face of a lack of examples, specially since it is the etymological origin of the suffix in "Gardarike"
+	Meanings = {"Power", "Dominion", "Realm", "Empire"}, -- source gives the German "Macht, Herrschaft, Reich" as the meaning
+	Gender = "neuter"
+})
+
+DefineLanguageWord("Rîkisôn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
+	Language = "proto-germanic",
+	Type = "verb", -- apparently
+	Meanings = {}
 })
 
 DefineLanguageWord("Ristila", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 176.

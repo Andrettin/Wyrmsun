@@ -814,6 +814,14 @@ DefineLanguageWord("Razn", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Gender = "neuter"
 })
 
+DefineLanguageWord("Reiki", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
+	Language = "gothic",
+	Type = "noun",
+	Meanings = {"Power", "Dominion", "Realm", "Empire"}, -- source gives the German "Macht, Herrschaft, Reich" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Rîkia"},
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Reiks", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
 	Language = "gothic",
 	Type = "noun",

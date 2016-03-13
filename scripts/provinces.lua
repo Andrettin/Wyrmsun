@@ -2774,8 +2774,10 @@ DefineProvince("Romagna", {
 DefineProvince("Russia", {
 	World = "Earth",
 	CulturalNames = {
-		"goth", "Gardarike",
-		"norse", "Gardarike",
+		"norse", "Gardarike", "name-elements", {
+--			"compound", "prefix", -- ?
+			"compound", "suffix", "old-norse", "noun", "Rîki" -- presumably
+		},
 		"slav", "Russia"
 	},
 	FactionCulturalNames = {

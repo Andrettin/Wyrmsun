@@ -199,6 +199,13 @@ DefineLanguageWord("Rīadaim", { -- Source: Winfred P. Lehmann, "A Grammar of Pr
 	Meanings = {"Travel"}
 })
 
+DefineLanguageWord("Rige", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
+	Language = "irish",
+	Type = "noun",
+	Meanings = {"Dominion", "Realm", "Empire"}, -- source gives the German "Herrschaft, Reich" as the meaning
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Sam", { -- source also gives the alternative form "Samrad"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.
 	Language = "irish",
 	Type = "noun",

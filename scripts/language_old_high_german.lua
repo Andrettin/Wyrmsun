@@ -1072,6 +1072,21 @@ DefineLanguageWord("Reht", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	DerivesFrom = {"proto-germanic", "adjective", "Reχtaz"}
 })
 
+DefineLanguageWord("Rîchisôn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
+	Language = "old-high-german",
+	Type = "verb",
+	Meanings = {"Rule"}, -- source gives the German "herrschen" as the meaning
+	DerivesFrom = {"proto-germanic", "verb", "Rîkisôn"}
+})
+
+DefineLanguageWord("Rîhhi", { -- source also gives the alternative forms "rîchi" and "rîche"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Dominion", "Realm", "Empire", "Authority"}, -- source gives the German "Herrschaft, Reich, Obrigkeit" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Rîkia"},
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Rîhhi", { -- Fick also gives the alternative form "rîchi"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174; Source: http://www.cnrtl.fr/definition/riche
 	Language = "old-high-german",
 	Type = "adjective",

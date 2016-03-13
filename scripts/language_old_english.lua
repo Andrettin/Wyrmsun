@@ -1172,9 +1172,24 @@ DefineLanguageWord("Rîca", { -- Source: August Fick and Alf Torp, "Wortschatz d
 
 DefineLanguageWord("Rîce", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
 	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Power", "Kingdom"}, -- source gives the German "Macht, Königreich" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Rîkia"},
+	Gender = "neuter"
+})
+
+DefineLanguageWord("Rîce", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
+	Language = "old-english",
 	Type = "adjective",
 	Meanings = {"Powerful", "Notable", "Rich"}, -- source gives the German "mächtig, vornehm, reich" as the meaning
 	DerivesFrom = {"proto-germanic", "adjective", "Rîka"}
+})
+
+DefineLanguageWord("Rîcsian", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
+	Language = "old-english",
+	Type = "verb",
+	Meanings = {"Rule"}, -- source gives the German "herrschen" as the meaning
+	DerivesFrom = {"proto-germanic", "verb", "Rîkisôn"}
 })
 
 DefineLanguageWord("Rīdan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.

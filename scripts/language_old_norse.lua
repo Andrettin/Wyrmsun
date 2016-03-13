@@ -1083,6 +1083,19 @@ DefineLanguageWord("Rēttr", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	DerivesFrom = {"proto-germanic", "adjective", "Reχtaz"}
 })
 
+DefineLanguageWord("Rîki", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Power", "Dominion", "Realm", "Empire"}, -- source gives the German "Macht, Herrschaft, Reich" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Rîkia"}
+})
+
+DefineLanguageWord("Rîkja", { -- related to the Proto-Germanic noun "rîkia"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
+	Language = "old-norse",
+	Type = "verb",
+	Meanings = {"Rule"} -- source gives the German "herrschen" as the meaning
+})
+
 DefineLanguageWord("Rîkr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
 	Language = "old-norse",
 	Type = "adjective",

@@ -637,11 +637,32 @@ DefineLanguageWord("Rât", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Rîche", { -- source also gives the alternative form "rîch"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Dominion", "Realm", "Empire", "Authority"}, -- source gives the German "Herrschaft, Reich, Obrigkeit" as the meaning
+	DerivesFrom = {"old-high-german", "noun", "Rîhhi"},
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Rîche", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
 	Language = "middle-high-german",
 	Type = "adjective",
 	Meanings = {"Powerful", "Notable", "Rich", "Magnificent", "Splendid"}, -- source gives the German "mächtig, vornehm, reich, prächtig, herrlich" as the meaning
 	DerivesFrom = {"old-high-german", "adjective", "Rîhhi"}
+})
+
+DefineLanguageWord("Rîchen", { -- related to the Proto-Germanic noun "rîkia"; source also gives the alternative form "gerîchen"; related to Old High German preteritum "gireih"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
+	Language = "middle-high-german",
+	Type = "verb",
+	Meanings = {"Become Powerful", "Become Rich", "Rule"} -- source gives the German "mächtig oder reich werden, herrschen" as the meaning
+})
+
+DefineLanguageWord("Rîchsen", { -- source gives "rîch(e)sen"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
+	Language = "middle-high-german",
+	Type = "verb",
+	Meanings = {"Rule"}, -- source gives the German "herrschen" as the meaning
+	DerivesFrom = {"old-high-german", "verb", "Rîchisôn"}
 })
 
 DefineLanguageWord("Rünne", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 8.

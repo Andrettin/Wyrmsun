@@ -400,7 +400,15 @@ DefineLanguageWord("Rêd", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Gender = "masculine"
 })
 
-DefineLanguageWord("Rîk", { -- source gives Rîk(e); Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
+DefineLanguageWord("Rîk", { -- source gives "rîk(e)"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
+	Language = "old-frisian",
+	Type = "noun",
+	Meanings = {"Power", "Kingdom"}, -- source gives the German "Macht, Königreich" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Rîkia"},
+	Gender = "neuter"
+})
+
+DefineLanguageWord("Rîk", { -- source gives "rîk(e)"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
 	Language = "old-frisian",
 	Type = "adjective",
 	Meanings = {"Rich"}, -- source gives the German "reich" as the meaning

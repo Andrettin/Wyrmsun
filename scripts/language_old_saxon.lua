@@ -613,6 +613,14 @@ DefineLanguageWord("Reht", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	DerivesFrom = {"proto-germanic", "adjective", "Reχtaz"}
 })
 
+DefineLanguageWord("Rîki", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
+	Language = "old-saxon",
+	Type = "noun",
+	Meanings = {"Realm", "Empire", "Dominion", "Authority"}, -- source gives the German "Reich, Herrschaft, Obrigkeit" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Rîkia"},
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Rîki", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174; Source: http://www.cnrtl.fr/definition/riche
 	Language = "old-saxon", -- the TLFi gives Old Low German
 	Type = "adjective",

@@ -1833,8 +1833,15 @@ DefineLanguageWord("Reich", {
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"Realm", "Empire"},
-	DerivesFrom = {"proto-germanic", "noun", "Rîkia"},
-	Gender = "neuter"
+	DerivesFrom = {"middle-high-german", "noun", "Rîche"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
+	Gender = "neuter",
+	NumberCaseInflections = {
+		"singular", "genitive", "Reiches", -- alternatively also "Reichs"
+		"plural", "nominative", "Reiche",
+		"plural", "accusative", "Reiche",
+		"plural", "dative", "Reichen",
+		"plural", "genitive", "Reiche"
+	}
 })
 
 DefineLanguageWord("Reich", {
