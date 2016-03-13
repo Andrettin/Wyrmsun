@@ -583,7 +583,7 @@ DefinePanelContents(
 	},
 	{ Pos = {50, 153}, Condition = {ShowOpponent = false, HideNeutral = true, Build = "only"},
 		More = {"Text", "% Complete"}},
-	{ Pos = {107, 78}, Condition = {ShowOpponent = false, HideNeutral = true, Build = "only"},
+	{ Pos = {107, 78}, Condition = {ShowOpponent = false, HideNeutral = true, Build = "only", BuilderOutside = "false"},
 		More = {"Icon", {Unit = "Worker"}}}
 
 
