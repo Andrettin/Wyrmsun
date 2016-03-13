@@ -46,6 +46,15 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-teuton-spatha",
 	}
 } )
 
+DefineButton( { Pos = 3, Level = 0, Icon = "icon-pike",
+	Action = "attack",
+	Allowed = "check-upgrade", AllowArg = {"upgrade-teuton-pike"},
+	Key = "a", Hint = _("~!Attack"), Popup = "popup-commands",
+	ForUnit = {
+		"unit-teuton-spearman", "unit-frank-spearman"
+	}
+})
+
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-teuton-iron-shield",
 	Action = "stop",
 	Allowed = "check-upgrade", AllowArg = {"upgrade-teuton-iron-shield"},
@@ -281,14 +290,6 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-teuton-iron-shield",
 	ForUnit = {"unit-teuton-smithy"}
 } )
 
-DefineButton( { Pos = 1, Level = 0, Icon = "icon-bodkin-arrow",
-	Action = "research", Value = "upgrade-teuton-bodkin-arrow",
-	Allowed = "check-single-research",
-	Key = "a", Hint = _("Research Bodkin ~!Arrow"), Popup = "popup-research",
-	Description = "+2 Damage for Skutans.",
-	ForUnit = {"unit-teuton-lumber-mill"}
-} )
-
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-catapult-projectile-2",
 	Action = "research", Value = "upgrade-teuton-catapult-projectile-1",
 	Allowed = "check-single-research",
@@ -305,7 +306,23 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-catapult-projectile-3",
 	ForUnit = {"unit-teuton-smithy"}
 } )
 
-DefineButton( { Pos = 2, Level = 0, Icon = "icon-iron-tipped-wood-plow",
+DefineButton( { Pos = 1, Level = 0, Icon = "icon-pike",
+	Action = "research", Value = "upgrade-teuton-pike",
+	Allowed = "check-single-research",
+	Key = "k", Hint = _("Research Pi~!ke"), Popup = "popup-research",
+	Description = _("+2 Damage for Speerkampfers."),
+	ForUnit = {"unit-teuton-lumber-mill"}
+} )
+
+DefineButton( { Pos = 2, Level = 0, Icon = "icon-bodkin-arrow",
+	Action = "research", Value = "upgrade-teuton-bodkin-arrow",
+	Allowed = "check-single-research",
+	Key = "a", Hint = _("Research Bodkin ~!Arrow"), Popup = "popup-research",
+	Description = "+2 Damage for Skutans.",
+	ForUnit = {"unit-teuton-lumber-mill"}
+} )
+
+DefineButton( { Pos = 3, Level = 0, Icon = "icon-iron-tipped-wood-plow",
 	Action = "research", Value = "upgrade-teuton-iron-tipped-wood-plow",
 	Allowed = "check-single-research",
 	Description = _("+1 Food supply for Farms."),
@@ -313,7 +330,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-iron-tipped-wood-plow",
 	ForUnit = {"unit-teuton-lumber-mill"}
 } )
 
-DefineButton( { Pos = 3, Level = 0, Icon = "icon-masonry",
+DefineButton( { Pos = 4, Level = 0, Icon = "icon-masonry",
 	Action = "research", Value = "upgrade-teuton-masonry",
 	Allowed = "check-single-research",
 	Key = "m", Hint = _("Research ~!Masonry"), Popup = "popup-research",

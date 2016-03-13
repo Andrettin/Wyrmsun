@@ -10,7 +10,7 @@
 --
 --      buttons.ccl - Define the unit-buttons of the goblin civilization.
 --
---      (c) Copyright 2014 by Andrettin
+--      (c) Copyright 2014-2016 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -35,6 +35,24 @@
 --
 
 -- general commands -- almost all units have it -------------------------------
+
+DefineButton( { Pos = 3, Level = 0, Icon = "icon-long-spear",
+	Action = "attack",
+	Allowed = "check-upgrade", AllowArg = {"upgrade-goblin-long-spear"},
+	Key = "a", Hint = _("~!Attack"), Popup = "popup-commands",
+	ForUnit = {
+		"unit-goblin-spearman"
+	}
+})
+
+DefineButton( { Pos = 3, Level = 0, Icon = "icon-pike",
+	Action = "attack",
+	Allowed = "check-upgrade", AllowArg = {"upgrade-goblin-pike"},
+	Key = "a", Hint = _("~!Attack"), Popup = "popup-commands",
+	ForUnit = {
+		"unit-goblin-spearman"
+	}
+})
 
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-catapult-projectile-1",
 	Action = "attack",
@@ -202,7 +220,23 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-catapult-projectile-3",
 	ForUnit = {"unit-goblin-smithy"}
 } )
 
-DefineButton( { Pos = 2, Level = 0, Icon = "icon-wood-plow",
+DefineButton( { Pos = 1, Level = 0, Icon = "icon-long-spear",
+	Action = "research", Value = "upgrade-goblin-long-spear",
+	Allowed = "check-single-research",
+	Key = "s", Hint = _("Research Long ~!Spear"), Popup = "popup-research",
+	Description = _("+2 Damage for Impalers."),
+	ForUnit = {"unit-goblin-lumber-mill"}
+} )
+
+DefineButton( { Pos = 1, Level = 0, Icon = "icon-pike",
+	Action = "research", Value = "upgrade-goblin-pike",
+	Allowed = "check-single-research",
+	Key = "k", Hint = _("Research Pi~!ke"), Popup = "popup-research",
+	Description = _("+2 Damage for Impalers."),
+	ForUnit = {"unit-goblin-lumber-mill"}
+} )
+
+DefineButton( { Pos = 3, Level = 0, Icon = "icon-wood-plow",
 	Action = "research", Value = "upgrade-goblin-wood-plow",
 	Allowed = "check-single-research",
 	Description = _("+1 Food supply for Farms."),
@@ -210,7 +244,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-wood-plow",
 	ForUnit = {"unit-goblin-lumber-mill"}
 } )
 
-DefineButton( { Pos = 2, Level = 0, Icon = "icon-iron-tipped-wood-plow",
+DefineButton( { Pos = 3, Level = 0, Icon = "icon-iron-tipped-wood-plow",
 	Action = "research", Value = "upgrade-goblin-iron-tipped-wood-plow",
 	Allowed = "check-single-research",
 	Description = _("+1 Food supply for Farms."),
@@ -218,7 +252,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-iron-tipped-wood-plow",
 	ForUnit = {"unit-goblin-lumber-mill"}
 } )
 
-DefineButton( { Pos = 3, Level = 0, Icon = "icon-masonry",
+DefineButton( { Pos = 4, Level = 0, Icon = "icon-masonry",
 	Action = "research", Value = "upgrade-goblin-masonry",
 	Allowed = "check-single-research",
 	Key = "m", Hint = _("Research ~!Masonry"), Popup = "popup-research",

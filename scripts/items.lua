@@ -66,6 +66,10 @@ DefineUnitType("unit-spatha", { Name = _("Spatha"),
 	BasicDamage = 4
 } )
 
+DefineUnitType("unit-frankish-spatha", { Name = _("Frankish Spatha"),
+	Parent = "unit-spatha"
+} )
+
 DefineUnitType("unit-thrusting-sword", { Name = _("Thrusting Sword"),
 	Parent = "unit-template-item",
 	Image = {"file", "germanic/items/broad_bronze_sword.png", "size", {32, 32}},
@@ -112,6 +116,30 @@ DefineUnitType("unit-mining-pick", { Name = _("Mining Pick"),
 	Icon = "icon-mining-pick",
 	ItemClass = "mace",
 	BasicDamage = 0
+} )
+
+DefineUnitType("unit-short-spear", { Name = _("Short Spear"),
+	Parent = "unit-template-item",
+	Image = {"file", "neutral/items/spear.png", "size", {32, 32}},
+	Icon = "icon-spear",
+	ItemClass = "spear",
+	BasicDamage = 0
+} )
+
+DefineUnitType("unit-long-spear", { Name = _("Long Spear"),
+	Parent = "unit-template-item",
+	Image = {"file", "neutral/items/spear.png", "size", {32, 32}},
+	Icon = "icon-long-spear",
+	ItemClass = "spear",
+	BasicDamage = 2
+} )
+
+DefineUnitType("unit-pike", { Name = _("Pike"),
+	Parent = "unit-template-item",
+	Image = {"file", "neutral/items/spear.png", "size", {32, 32}},
+	Icon = "icon-pike",
+	ItemClass = "spear",
+	BasicDamage = 4
 } )
 
 DefineUnitType("unit-throwing-axe", { Name = _("Throwing Axe"),
@@ -186,6 +214,10 @@ DefineUnitType("unit-round-shield", { Name = _("Round Shield"),
 	Icon = "icon-dwarven-shield-1",
 	ItemClass = "shield",
 	Armor = 0
+} )
+
+DefineUnitType("unit-brising-round-shield", { Name = _("Brising Round Shield"),
+	Parent = "unit-round-shield"
 } )
 
 DefineUnitType("unit-heater-shield", { Name = _("Heater Shield"),

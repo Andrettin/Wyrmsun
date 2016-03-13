@@ -61,6 +61,15 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-germanic-broad-sword",
 	}
 })
 
+DefineButton( { Pos = 3, Level = 0, Icon = "icon-long-spear",
+	Action = "attack",
+	Allowed = "check-upgrade", AllowArg = {"upgrade-germanic-long-spear"},
+	Key = "a", Hint = _("~!Attack"), Popup = "popup-commands",
+	ForUnit = {
+		"unit-teuton-spearman", "unit-frank-spearman"
+	}
+})
+
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-germanic-wooden-oblong-shield",
 	Action = "stop",
 	Key = "s", Hint = _("~!Stop"), Popup = "popup-commands",
@@ -243,7 +252,16 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-germanic-bronze-shield",
 	ForUnit = {"unit-germanic-smithy", "unit-teuton-smithy"}
 } )
 
-DefineButton( { Pos = 1, Level = 0, Icon = "icon-germanic-barbed-arrow",
+DefineButton( { Pos = 1, Level = 0, Icon = "icon-long-spear",
+	Action = "research", Value = "upgrade-germanic-long-spear",
+	Allowed = "check-single-research",
+	Key = "s", Hint = _("Research Long ~!Spear"), Popup = "popup-research",
+	Description = "+2 Damage for Speerkampfers.",
+--	ForUnit = {"unit-germanic-carpenters-shop", "unit-teuton-lumber-mill"}
+	ForUnit = {"unit-teuton-lumber-mill"}
+} )
+  
+DefineButton( { Pos = 2, Level = 0, Icon = "icon-germanic-barbed-arrow",
 	Action = "research", Value = "upgrade-germanic-barbed-arrow",
 	Allowed = "check-single-research",
 	Key = "a", Hint = _("Research Barbed ~!Arrow"), Popup = "popup-research",
@@ -251,7 +269,7 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-germanic-barbed-arrow",
 	ForUnit = {"unit-germanic-carpenters-shop", "unit-teuton-lumber-mill"}
 } )
   
-DefineButton( { Pos = 2, Level = 0, Icon = "icon-wood-plow",
+DefineButton( { Pos = 3, Level = 0, Icon = "icon-wood-plow",
 	Action = "research", Value = "upgrade-germanic-wood-plow",
 	Allowed = "check-single-research",
 	Description = _("+1 Food supply for Farms."),

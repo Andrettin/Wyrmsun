@@ -156,14 +156,16 @@ DefineUnitType("unit-teuton-swordsman", { Name = _("Krieger"),
 			"variation-id", "broad-bronze-sword",
 			"file", "germanic/units/broad_bronze_sword.png",
 			"upgrade-forbidden", "upgrade-teuton-spatha",
-			"item-not-equipped", "unit-spatha"
+			"item-not-equipped", "unit-spatha",
+			"item-not-equipped", "unit-frankish-spatha"
 		},
 		{
 			"layer", "weapon",
 			"variation-id", "long-iron-sword",
 			"file", "teuton/units/long_iron_sword.png",
 			"upgrade-required", "upgrade-teuton-spatha",
-			"item-equipped", "unit-spatha"
+			"item-equipped", "unit-spatha",
+			"item-equipped", "unit-frankish-spatha"
 		},
 		{
 			"layer", "shield",
@@ -263,14 +265,16 @@ DefineUnitType("unit-suebi-swordsman", { Name = _("Krieger"),
 			"variation-id", "broad-bronze-sword",
 			"file", "germanic/units/broad_bronze_sword.png",
 			"upgrade-forbidden", "upgrade-teuton-spatha",
-			"item-not-equipped", "unit-spatha"
+			"item-not-equipped", "unit-spatha",
+			"item-not-equipped", "unit-frankish-spatha"
 		},
 		{
 			"layer", "weapon",
 			"variation-id", "long-iron-sword",
 			"file", "teuton/units/long_iron_sword.png",
 			"upgrade-required", "upgrade-teuton-spatha",
-			"item-equipped", "unit-spatha"
+			"item-equipped", "unit-spatha",
+			"item-equipped", "unit-frankish-spatha"
 		},
 		{
 			"layer", "shield",
@@ -312,7 +316,8 @@ DefineUnitType("unit-frank-swordsman", { Name = _("Krieger"),
 	Civilization = "teuton",
 	Faction = "Frank Tribe",
 	Armor = 3, -- +1 armor
-	Points = 55 -- +5 points
+	Points = 55, -- +5 points
+	AiDrops = {"unit-frankish-spatha"}
 } )
 
 DefineUnitType("unit-teuton-spearman", { Name = _("Speerkampfer"),
@@ -337,7 +342,7 @@ DefineUnitType("unit-teuton-spearman", { Name = _("Speerkampfer"),
 	Corpse = "unit-human-dead-body",
 	DaySightRangeBonus = 1,
 	NightSightRangeBonus = -1,
-	AiDrops = {"unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
+	AiDrops = {"unit-short-spear", "unit-long-spear", "unit-pike", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
 	Variations = {
 		{
 			"variation-id", "red-hair"
@@ -508,7 +513,8 @@ DefineUnitType("unit-frank-horseman", { Name = _("Ritter"),
 	Civilization = "teuton",
 	Faction = "Frank Tribe",
 	Armor = 4, BasicDamage = 14, -- +1 armor, +1 damage
-	Points = 60 -- +10 points
+	Points = 60, -- +10 points
+	AiDrops = {"unit-frankish-spatha"}
 } )
 
 DefineUnitType("unit-teuton-catapult", { Name = _("Catapult"),
@@ -579,7 +585,7 @@ DefineUnitType("unit-teuton-stronghold", { Name = _("Burg"),
 	Shadow = {"file", "teuton/buildings/stronghold_shadow.png", "size", {128, 128}},
 	Icon = "icon-teuton-stronghold",
 	TechnologyPointCost = 1,
-	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows"},
+	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows"},
 	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-flaming", "upgrade-item-prefix-glacial", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-the-serpent", "upgrade-item-suffix-of-the-snail", "upgrade-item-suffix-of-trickery", "upgrade-work-hildebrandslied"},
 	DropSpells = {"spell-frank-allegiance", "spell-suebi-allegiance"},
 	Sounds = {
@@ -622,7 +628,7 @@ DefineUnitType("unit-teuton-barracks", { Name = _("Barracks"),
 	Image = {"file", "teuton/buildings/barracks.png", "size", {96, 96}},
 	Shadow = {"file", "teuton/buildings/barracks_shadow.png", "size", {96, 96}},
 	Icon = "icon-teuton-barracks",
-	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows"},
+	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows"},
 	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-flaming", "upgrade-item-prefix-glacial", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-the-serpent", "upgrade-item-suffix-of-the-snail", "upgrade-item-suffix-of-trickery"},
 	Variations = {
 		{
@@ -650,7 +656,7 @@ DefineUnitType("unit-teuton-lumber-mill", { Name = _("Lumber Mill"),
 	Image = {"file", "teuton/buildings/lumber_mill.png", "size", {96, 96}},
 	Shadow = {"file", "teuton/buildings/lumber_mill_shadow.png", "size", {96, 96}},
 	Icon = "icon-teuton-lumber-mill",
-	AiDrops = {"unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows"},
+	AiDrops = {"unit-short-spear", "unit-long-spear", "unit-pike", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows"},
 	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-flaming", "upgrade-item-prefix-glacial", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-the-serpent", "upgrade-item-suffix-of-the-snail", "upgrade-item-suffix-of-trickery"},
 	Variations = {
 		{

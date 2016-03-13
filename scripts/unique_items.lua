@@ -55,7 +55,7 @@ DefineUniqueItem("Laevatein", { -- Source: Kevin Crossley-Holland, "The Norse My
 } )
 
 DefineUniqueItem("Gram", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", pp. 351, 365.
-	Type = "unit-spatha",
+	Type = "unit-frankish-spatha",
 	Prefix = "upgrade-item-prefix-wounding",
 	Suffix = "upgrade-item-suffix-of-victory",
 	Background = "In Norse mythology, Gram was the sword given by Odin to Sigmund. Being later broken into pieces, the sword was reforged by Regin for Sigurd.",

@@ -110,7 +110,7 @@ DefineQuest("The Home of the Boii", {
 	RequiredQuest = "The Battle of Magetobria",
 	World = "Earth",
 	Civilization = "teuton",
-	TechnologyPoints = 3,
+	TechnologyPoints = 4,
 	Map = "maps/earth/prague.smp",
 	Scenario = "scripts/civilizations/teuton/scenarios/the_home_of_the_boii.lua",
 	X = 6,
@@ -211,14 +211,14 @@ DefineQuest("The Treasures of Svarinshaug", {
 	RequiredQuest = "The Mead of Wisdom",
 	World = "Nidavellir",
 	Civilization = "dwarf",
-	TechnologyPoints = 2,
+	TechnologyPoints = 3,
 	Map = "maps/nidavellir/eastern-mines.smp",
 	Scenario = "scripts/civilizations/dwarf/scenarios/the_treasures_of_svarinshaug.lua",
 	X = 3,
 	Y = 1,
 	PlayerColor = "white",
 	LoadingMusic = "DwarfLoading",
-	MapMusic = "DwarfTheme3"
+--	MapMusic = "DwarfTheme3"
 })
 
 DefineQuest("The Necklace of the Brisings", {
@@ -227,14 +227,14 @@ DefineQuest("The Necklace of the Brisings", {
 	RequiredQuest = "The Treasures of Svarinshaug",
 	World = "Nidavellir",
 	Civilization = "dwarf",
-	TechnologyPoints = 2,
+	TechnologyPoints = 3,
 	Map = "maps/nidavellir/aurvang.smp",
 	Scenario = "scripts/civilizations/dwarf/scenarios/the_necklace_of_the_brisings.lua",
 	X = 4,
 	Y = 1,
 	PlayerColor = "black",
 	LoadingMusic = "DwarfLoading",
-	MapMusic = "DwarfTheme4"
+--	MapMusic = "DwarfTheme4"
 })
 
 DefineQuest("The Binding of Grafvitnir", {

@@ -116,6 +116,9 @@ https://github.com/Andrettin/Wyrmsun
 - "Right-click to use" no longer appears in an item's popup if the item cannot be currently used (i.e. if the unit doesn't fulfill the conditions for a scroll to be used).
 - Fixed issue which caused the stats change of one of the equipped rings to not be displayed properly when two rings are equipped.
 - Added Hildebrandslied (literary work, scroll) (+1% critical strike chance) (dropped by teuton Rathauses and Burgs).
+- Added Brising Round Shield.
+- Added Frankish Spatha.
+- The unique sword Gram is now a Frankish Spatha.
 
 * Miscellaneous
 - Added support for damage bonus vs. dragons. This damage bonus affects wyrms, and will affect any other draconic creatures added later to the game.
@@ -134,6 +137,11 @@ https://github.com/Andrettin/Wyrmsun
 * Music
 - Added 42 new music pieces by Marcelo Fernandez (http://www.marcelofernandezmusic.com).
 - Wyrmsun now features adaptive music pieces, which change according to context (i.e. the music becomes more intense when a battle occurs) (by Marcelo Fernandez) (https://github.com/marcelofg55/oaml).
+
+* Quests
+- The Home of the Boii quest (Teuton) now grants 4 tech points instead of 3.
+- The Treasures of Svarinshaug quest (Dwarf) now grants 3 tech points instead of 2.
+- The Necklace of the Brisings quest (Dwarf) now grants 3 tech points instead of 2.
 
 * Terrain
 - Overhaul of the forest tilesets (by Exidelo).
@@ -162,6 +170,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Upgrades
 - Update to the Spatha's icon (by Exidelo).
+- Added Long Spear and Pike upgrades for spearmen (icons by Vladislav "iDreamRunner").
 
 -----------------------------------------------------------------------
 - 1.9.9

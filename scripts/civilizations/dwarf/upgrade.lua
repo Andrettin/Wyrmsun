@@ -83,6 +83,20 @@ DefineUpgrade("upgrade-dwarven-great-axe", {
 	TechnologyPointCost = 1
 })
 
+DefineUpgrade("upgrade-dwarven-long-spear", {
+	Parent = "upgrade-long-spear",
+	Civilization = "dwarf",
+	Description = _("With the lengthening of spear shafts, soldiers who wield these weapons have greater reach against their enemies.\n\nEffect: +2 Damage for Guards."),
+	TechnologyPointCost = 1
+})
+
+DefineUpgrade("upgrade-dwarven-pike", {
+	Parent = "upgrade-pike",
+	Civilization = "dwarf",
+	Description = _("Much longer than previous spears, pikes can be deadly when used by disciplined groups of soldiers.\n\nEffect: +2 Damage for Guards."),
+	TechnologyPointCost = 1
+})
+
 DefineUpgrade("upgrade-dwarven-shield-1", {
 	Name = _("Heater Shield"),
 	Parent = "upgrade-bronze-shield",
@@ -220,6 +234,18 @@ DefineModifier("upgrade-dwarven-great-axe",
 	{"apply-to", "unit-dwarven-militia"}, {"apply-to", "unit-brising-militia"},
 	{"apply-to", "unit-dwarven-yale-rider"},
 	{"apply-to", "unit-surghan-mercenary-steelclad"}, {"apply-to", "unit-surghan-mercenary-thane"}
+)
+
+DefineModifier("upgrade-dwarven-long-spear",
+	{"BasicDamage", 2},
+	{"Points", 10},
+	{"apply-to", "unit-dwarven-guard"}
+)
+
+DefineModifier("upgrade-dwarven-pike",
+	{"BasicDamage", 2},
+	{"Points", 10},
+	{"apply-to", "unit-dwarven-guard"}
 )
 
 DefineModifier("upgrade-dwarven-shield-1",
@@ -402,6 +428,10 @@ DefineDependency("unit-dwarven-scout",
 
 DefineDependency("upgrade-dwarven-great-axe",
 	{"upgrade-dwarven-broad-axe"}
+)
+
+DefineDependency("upgrade-dwarven-pike",
+	{"upgrade-dwarven-long-spear"}
 )
 
 DefineDependency("upgrade-dwarven-shield-2",

@@ -33,6 +33,7 @@ if (LoadedGame == false) then
 	SetPlayerData(1, "Allow", "upgrade-germanic-bronze-shield", "F")
 	SetPlayerData(1, "Allow", "upgrade-germanic-broad-sword", "F")
 	SetPlayerData(1, "Allow", "upgrade-germanic-barbed-arrow", "F")
+	SetPlayerData(1, "Allow", "upgrade-germanic-long-spear", "F")
 	if (GrandStrategy == false or GetProvinceOwner("Jutland") == "") then
 		SetPlayerData(1, "Faction", "Ertebolle Tribe")
 	else

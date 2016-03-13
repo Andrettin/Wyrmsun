@@ -8,9 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      units.ccl - Define the dwarven unit-types.
---
---      (c) Copyright 2013-2015 by Andrettin
+--      (c) Copyright 2013-2016 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -122,7 +120,8 @@ DefineUnitType("unit-brising-militia", { Name = _("Militia"),
 	Civilization = "dwarf",
 	Faction = "Brising Clan",
 	HitPoints = 40, -- +10 HP
-	Points = 35 -- +5 points
+	Points = 35, -- +5 points
+	AiDrops = {"unit-brising-round-shield"}
 } )
 
 DefineUnitType("unit-dwarven-axefighter", { Name = _("Axefighter"),
@@ -387,7 +386,7 @@ DefineUnitType("unit-dwarven-guard", { Name = _("Guard"),
 	PierceDamage = true,
 	InvertedEastArms = true,
 	InvertedSoutheastArms = true,
-	AiDrops = {"unit-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	AiDrops = {"unit-short-spear", "unit-long-spear", "unit-pike", "unit-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	DropAffixes = {"upgrade-item-suffix-of-the-snigill"},
 	Variations = {
 		{
@@ -706,7 +705,7 @@ DefineUnitType("unit-dwarven-stronghold", { Name = _("Bastion"),
 	RepairCosts = {"gold", 1, "lumber", 1, "stone", 1},
 	FireResistance = 20,
 	TechnologyPointCost = 1,
-	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots"},
+	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots"},
 	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-glacial", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-the-snigill", "upgrade-work-alvissmol", "upgrade-work-fafnismol", "upgrade-work-reginsmol", "upgrade-work-the-scepter-of-fire"},
 	Sounds = {
 		"help", "basic-dwarf-voices-help-town"
@@ -716,7 +715,8 @@ DefineUnitType("unit-dwarven-stronghold", { Name = _("Bastion"),
 DefineUnitType("unit-brising-stronghold", {
 	Parent = "unit-dwarven-stronghold",
 	Civilization = "dwarf",
-	Faction = "Brising Clan"
+	Faction = "Brising Clan",
+	AiDrops = {"unit-brising-round-shield"}
 } )
 
 DefineUnitType("unit-dwarven-mushroom-farm", { Name = _("Mushroom Farm"),
@@ -747,7 +747,7 @@ DefineUnitType("unit-dwarven-barracks", { Name = _("War Hall"),
 	Costs = {"time", 200, "gold", 700, "lumber", 340, "stone", 110},
 	RepairCosts = {"gold", 1, "lumber", 1, "stone", 1},
 	FireResistance = 20,
-	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots"},
+	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots"},
 	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-glacial", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-the-snigill"},
 	Sounds = {
 		"help", "basic-dwarf-voices-help-town"
@@ -767,7 +767,7 @@ DefineUnitType("unit-dwarven-lumber-mill", { Name = _("Lumber Mill"),
 	RepairCosts = {"gold", 1, "lumber", 1, "stone", 1},
 	FireResistance = 20,
 	TechnologyPointCost = 1,
-	AiDrops = {"unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe"},
+	AiDrops = {"unit-short-spear", "unit-long-spear", "unit-pike", "unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe"},
 	DropAffixes = {"upgrade-item-prefix-storm", "upgrade-item-suffix-of-lightning", "upgrade-item-suffix-of-the-snigill"},
 	Sounds = {
 		"help", "basic-dwarf-voices-help-town"
@@ -801,7 +801,8 @@ DefineUnitType("unit-brising-smithy", {
 	Parent = "unit-dwarven-smithy",
 	Civilization = "dwarf",
 	Faction = "Brising Clan",
-	TimeEfficiencyBonus = 50 -- +50% Time Efficiency Bonus
+	TimeEfficiencyBonus = 50, -- +50% Time Efficiency Bonus
+	AiDrops = {"unit-brising-round-shield"}
 } )
 
 DefineUnitType("unit-dwarven-yale-pen", { Name = _("Yale Pen"),

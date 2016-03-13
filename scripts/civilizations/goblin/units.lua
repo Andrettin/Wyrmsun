@@ -10,7 +10,7 @@
 --
 --      units.ccl - Define the goblin unit-types.
 --
---      (c) Copyright 2014-2015 by Andrettin
+--      (c) Copyright 2014-2016 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -165,7 +165,7 @@ DefineUnitType("unit-goblin-spearman", { Name = _("Impaler"),
 	Evasion = 12,
 	DaySightRangeBonus = -1,
 	NightSightRangeBonus = 1,
-	AiDrops = {"unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	AiDrops = {"unit-short-spear", "unit-long-spear", "unit-pike", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	DropAffixes = {"upgrade-item-prefix-penetrating", "upgrade-item-prefix-vicious", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-the-snigill", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-trickery"}, -- allow more magic enchantments than normal to compensate for the unit not being able to upgrade
 	Corpse = "unit-goblin-dead-body",
 	Sounds = {
@@ -307,7 +307,7 @@ DefineUnitType("unit-goblin-mess-hall", { Name = _("Mess Hall"),
 	Image = {"file", "goblin/buildings/mess_hall.png", "size", {96, 96}},
 	Shadow = {"file", "goblin/buildings/mess_hall_shadow.png", "size", {96, 96}},
 	Animations = "animations-building", Icon = "icon-goblin-mess-hall",
-	AiDrops = {"unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-boots", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows"},
+	AiDrops = {"unit-short-spear", "unit-long-spear", "unit-pike", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-boots", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows"},
 	DropAffixes = {"upgrade-item-prefix-flaming", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-the-snigill", "upgrade-item-suffix-of-trickery"},
 	Sounds = {
 		"help", "basic-goblin-voices-help-town"
@@ -321,7 +321,7 @@ DefineUnitType("unit-goblin-lumber-mill", { Name = _("Lumber Mill"),
 	Image = {"file", "goblin/buildings/lumber_mill.png", "size", {96, 96}},
 	Shadow = {"file", "goblin/buildings/lumber_mill_shadow.png", "size", {96, 96}},
 	Icon = "icon-goblin-lumber-mill",
-	AiDrops = {"unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows"},
+	AiDrops = {"unit-short-spear", "unit-long-spear", "unit-pike", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows"},
 	DropAffixes = {"upgrade-item-prefix-flaming", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-the-snigill", "upgrade-item-suffix-of-trickery"},
 	Sounds = {
 		"help", "basic-goblin-voices-help-town"

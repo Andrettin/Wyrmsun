@@ -164,13 +164,15 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 			"layer", "weapon",
 			"variation-id", "broad-bronze-sword",
 			"file", "germanic/units/broad_bronze_sword.png",
-			"item-not-equipped", "unit-spatha"
+			"item-not-equipped", "unit-spatha",
+			"item-not-equipped", "unit-frankish-spatha"
 		},
 		{
 			"layer", "weapon",
 			"variation-id", "long-iron-sword",
 			"file", "teuton/units/long_iron_sword.png",
-			"item-equipped", "unit-spatha"
+			"item-equipped", "unit-spatha",
+			"item-equipped", "unit-frankish-spatha"
 		},
 		{
 			"layer", "shield",
@@ -238,7 +240,7 @@ DefineUnitType("unit-germanic-spearman", { Name = _("Spearman"),
 	Corpse = "unit-human-dead-body",
 	DaySightRangeBonus = 1,
 	NightSightRangeBonus = -1,
-	AiDrops = {"unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
+	AiDrops = {"unit-short-spear", "unit-long-spear", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
 	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-flaming", "upgrade-item-prefix-glacial", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-penetrating", "upgrade-item-prefix-quenching", "upgrade-item-prefix-vicious", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-the-serpent", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-the-snail", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-thorns", "upgrade-item-suffix-of-trickery", "upgrade-item-suffix-of-victory"}, -- allow more affixes than normal for the unit's level, to compensate for the unit not being upgradeable
 	Variations = {
 		{
@@ -421,7 +423,7 @@ DefineUnitType("unit-germanic-barracks", { Name = _("War Lodge"),
 	Image = {"file", "germanic/buildings/barracks.png", "size", {96, 96}},
 	Shadow = {"file", "germanic/buildings/barracks_shadow.png", "size", {96, 96}},
 	Animations = "animations-building", Icon = "icon-germanic-barracks",
-	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-wooden-shield", "unit-bronze-shield", "unit-boots", "unit-arrows", "unit-barbed-arrows"},
+	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-short-spear", "unit-long-spear", "unit-wooden-shield", "unit-bronze-shield", "unit-boots", "unit-arrows", "unit-barbed-arrows"},
 	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-flaming", "upgrade-item-prefix-glacial", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-the-serpent", "upgrade-item-suffix-of-the-snail", "upgrade-item-suffix-of-trickery"},
 	Sounds = {
 		"help", "basic-germanic-voices-help-town"
@@ -436,7 +438,7 @@ DefineUnitType("unit-germanic-carpenters-shop", { Name = _("Carpenter's Shop"),
 	Shadow = {"file", "germanic/buildings/carpenters_shop_shadow.png", "size", {96, 96}},
 	Icon = "icon-germanic-carpenters-shop",
 	TechnologyPointCost = 1,
-	AiDrops = {"unit-arrows", "unit-barbed-arrows"},
+	AiDrops = {"unit-short-spear", "unit-long-spear", "unit-arrows", "unit-barbed-arrows"},
 	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-flaming", "upgrade-item-prefix-glacial", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-the-serpent", "upgrade-item-suffix-of-the-snail", "upgrade-item-suffix-of-trickery"},
 	Sounds = {
 		"help", "basic-germanic-voices-help-town"

@@ -27,33 +27,12 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-local upgrades = {
-	{"upgrade-teuton-civilization", _("Teuton Civilization"), "icon-teuton-civilization", "",
-		"",
-		"",
-		"",
-		{   200,     0,     0,     0,     0,     0,     0,     0},
-		{   200,     0,     0,     0,     0,     0,     0,     0},
-		0},
-}
-
-for i = 1,table.getn(upgrades) do
-	u = CUpgrade:New(upgrades[i][1])
-	u.Name = upgrades[i][2]
-	u.Icon = Icons[upgrades[i][3]]
-	u.Class = upgrades[i][4]
-	u.Civilization = "germanic"
-	u.Description = upgrades[i][5]
-	u.Quote = upgrades[i][6]
-	u.Background = upgrades[i][7]
-	for j = 1,table.getn(upgrades[i][8]) do
-		u.Costs[j - 1] = upgrades[i][8][j]
-	end
-	for j = 1,table.getn(upgrades[i][9]) do
-		u.GrandStrategyCosts[j - 1] = upgrades[i][9][j]
-	end
-	u.TechnologyPointCost = upgrades[i][10]
-end
+DefineUpgrade("upgrade-teuton-civilization", {
+	Name = _("Teuton Civilization"),
+	Civilization = "germanic",
+	Icon = "icon-teuton-civilization",
+	Costs = {"time", 200}
+})
 
 DefineUpgrade("upgrade-germanic-broad-sword", {
 	Parent = "upgrade-broad-sword",
@@ -62,6 +41,14 @@ DefineUpgrade("upgrade-germanic-broad-sword", {
 	Description = _("While the earlier short swords relied mostly on stabbing attacks, the enlarged width of the broad swords allowed germanic swordsmen to deal devastating slashing attacks.\n\nEffect: +2 Damage for Eralas."),
 	Background = _("A number of bronze age swords have been found in Denmark. They were used by men not only in combat, but also as a symbol of social status."),
 	TechnologyPointCost = 1
+})
+
+DefineUpgrade("upgrade-germanic-long-spear", {
+	Parent = "upgrade-long-spear",
+	Civilization = "teuton", -- change to Germanic when they get spearmen
+	Description = _("With the lengthening of spear shafts, soldiers who wield these weapons have greater reach against their enemies.\n\nEffect: +2 Damage for Speerkampfers."),
+--	TechnologyPointCost = 1
+	TechnologyPointCost = 0 -- 0 cost until the Germanics get spearmen
 })
 
 DefineUpgrade("upgrade-germanic-bronze-shield", {
@@ -112,6 +99,12 @@ DefineModifier("upgrade-germanic-broad-sword",
 	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-suebi-swordsman"}, {"apply-to", "unit-frank-swordsman"},
 --	{"apply-to", "unit-teuton-spearman"}, {"apply-to", "unit-frank-spearman"},
 	{"apply-to", "unit-teuton-ritter"}, {"apply-to", "unit-frank-horseman"}
+)
+
+DefineModifier("upgrade-germanic-long-spear",
+	{"BasicDamage", 2},
+	{"Points", 10},
+	{"apply-to", "unit-teuton-spearman"}, {"apply-to", "unit-frank-spearman"}
 )
 
 DefineModifier("upgrade-germanic-bronze-shield",
@@ -169,5 +162,6 @@ DefineDependency("unit-germanic-archer",
 )
 
 DefineDependency("upgrade-teuton-civilization",
+--	{"upgrade-germanic-broad-sword", "upgrade-germanic-long-spear", "upgrade-germanic-bronze-shield", "upgrade-germanic-barbed-arrow", "upgrade-germanic-wood-plow"}
 	{"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield", "upgrade-germanic-barbed-arrow", "upgrade-germanic-wood-plow"}
 )

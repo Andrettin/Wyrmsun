@@ -10,7 +10,7 @@
 --
 --      upgrade.ccl - Define the goblin dependencies and upgrades.
 --
---      (c) Copyright 2014-2015 by Andrettin
+--      (c) Copyright 2014-2016 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -63,6 +63,20 @@ for i = 1,table.getn(upgrades) do
 	u.Ability = false
 end
 
+DefineUpgrade("upgrade-goblin-long-spear", {
+	Parent = "upgrade-long-spear",
+	Civilization = "goblin",
+	Description = _("With the lengthening of spear shafts, soldiers who wield these weapons have greater reach against their enemies.\n\nEffect: +2 Damage for Impalers."),
+	TechnologyPointCost = 1
+})
+
+DefineUpgrade("upgrade-goblin-pike", {
+	Parent = "upgrade-pike",
+	Civilization = "goblin",
+	Description = _("Much longer than previous spears, pikes can be deadly when used by disciplined groups of soldiers.\n\nEffect: +2 Damage for Impalers."),
+	TechnologyPointCost = 1
+})
+
 DefineUpgrade("upgrade-goblin-wood-plow", {
 	Parent = "upgrade-wood-plow",
 	Civilization = "goblin",
@@ -81,6 +95,18 @@ DefineUpgrade("upgrade-goblin-masonry", {
 	Description = _("Masonry is the craft of building structures from blocks, which are bound together with mortar.\n\nEffect: +20% Hit Points and +5 Armor for buildings."),
 	TechnologyPointCost = 1
 })
+
+DefineModifier("upgrade-goblin-long-spear",
+	{"BasicDamage", 2},
+	{"Points", 10},
+	{"apply-to", "unit-goblin-spearman"}
+)
+
+DefineModifier("upgrade-goblin-pike",
+	{"BasicDamage", 2},
+	{"Points", 10},
+	{"apply-to", "unit-goblin-spearman"}
+)
 
 DefineModifier("upgrade-goblin-catapult-projectile-1",
 	{"BasicDamage", 15},
@@ -119,6 +145,10 @@ DefineDependency("unit-goblin-war-machine",
 DefineDependency("unit-goblin-glider",
 	{"unit-goblin-lumber-mill"})
 
+DefineDependency("upgrade-goblin-pike",
+	{"upgrade-goblin-long-spear"}
+)
+	
 DefineDependency("upgrade-goblin-catapult-projectile-1",
 	{"unit-goblin-lumber-mill"}
 )

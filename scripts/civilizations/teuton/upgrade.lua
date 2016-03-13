@@ -74,6 +74,13 @@ DefineUpgrade("upgrade-teuton-spatha", {
 	TechnologyPointCost = 1
 })
 
+DefineUpgrade("upgrade-teuton-pike", {
+	Parent = "upgrade-pike",
+	Civilization = "teuton",
+	Description = _("Much longer than previous spears, pikes can be deadly when used by disciplined groups of soldiers.\n\nEffect: +2 Damage for Speerkampfers."),
+	TechnologyPointCost = 1
+})
+
 DefineUpgrade("upgrade-teuton-iron-shield", {
 	Parent = "upgrade-iron-shield",
 	Icon = "icon-teuton-iron-shield",
@@ -171,8 +178,13 @@ DefineModifier("upgrade-teuton-spatha",
 	{"BasicDamage", 2},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-suebi-swordsman"}, {"apply-to", "unit-frank-swordsman"},
---	{"apply-to", "unit-teuton-spearman"}, {"apply-to", "unit-frank-spearman"},
 	{"apply-to", "unit-teuton-ritter"}, {"apply-to", "unit-frank-horseman"}
+)
+
+DefineModifier("upgrade-teuton-pike",
+	{"BasicDamage", 2},
+	{"Points", 10},
+	{"apply-to", "unit-teuton-spearman"}, {"apply-to", "unit-frank-spearman"}
 )
 
 DefineModifier("upgrade-teuton-iron-shield",
@@ -361,6 +373,10 @@ DefineDependency("unit-teuton-catapult",
 
 DefineDependency("upgrade-teuton-spatha",
 	{"upgrade-germanic-broad-sword"}
+)
+
+DefineDependency("upgrade-teuton-pike",
+	{"upgrade-germanic-long-spear"}
 )
 
 DefineDependency("upgrade-teuton-iron-shield",

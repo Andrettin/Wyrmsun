@@ -10,7 +10,7 @@
 --
 --      upgrade.lua - Define the dependencies and upgrades.
 --
---      (c) Copyright 2001-2015 by Lutz Sammer, Jimmy Salmon and Andrettin
+--      (c) Copyright 2001-2016 by Lutz Sammer, Jimmy Salmon and Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -196,6 +196,26 @@ DefineUpgrade("upgrade-great-axe", {
 	GrandStrategyCosts = {"time", 250, "gold", 1500, "lumber", 450, "research", 2400}
 })
 
+DefineUpgrade("upgrade-long-spear", {
+	Name = _("Long Spear"),
+	Class = "long-spear",
+	Description = _("With the lengthening of spear shafts, soldiers who wield these weapons have greater reach against their enemies."),
+	Icon = "icon-long-spear",
+	Weapon = true,
+	Costs = {"time", 200, "gold", 400, "lumber", 200},
+	GrandStrategyCosts = {"time", 200, "gold", 400, "lumber", 200, "research", 800}
+})
+
+DefineUpgrade("upgrade-pike", {
+	Name = _("Pike"),
+	Class = "pike",
+	Description = _("Much longer than previous spears, pikes can be deadly when used by disciplined groups of soldiers."),
+	Icon = "icon-pike",
+	Weapon = true,
+	Costs = {"time", 250, "gold", 1200, "lumber", 600},
+	GrandStrategyCosts = {"time", 250, "gold", 1200, "lumber", 600, "research", 2400}
+})
+
 DefineUpgrade("upgrade-bronze-shield", {
 	Name = _("Bronze Shield"),
 	Class = "bronze-shield",
@@ -352,19 +372,21 @@ function ApplyTechLevels()
 		"upgrade-teuton-coinage", "upgrade-teuton-alchemy"
 	}
 	local bronze_upgrades = {
-		"upgrade-dwarven-broad-axe", "upgrade-dwarven-shield-1", "upgrade-dwarven-sharp-throwing-axe",
-		"upgrade-germanic-broad-sword", "upgrade-germanic-bronze-shield", "upgrade-germanic-barbed-arrow",
+		"upgrade-dwarven-broad-axe", "upgrade-dwarven-long-spear", "upgrade-dwarven-shield-1", "upgrade-dwarven-sharp-throwing-axe",
+		"upgrade-germanic-broad-sword", "upgrade-germanic-long-spear", "upgrade-germanic-bronze-shield", "upgrade-germanic-barbed-arrow",
+		"upgrade-goblin-long-spear", 
 		"upgrade-dwarven-wood-plow",
 		"upgrade-goblin-wood-plow",
 		"upgrade-germanic-wood-plow"
 	}
 	local iron_upgrades = {
-		"upgrade-teuton-spatha", "upgrade-teuton-iron-shield", "upgrade-teuton-bodkin-arrow",
+		"upgrade-teuton-spatha", "upgrade-teuton-pike", "upgrade-teuton-iron-shield", "upgrade-teuton-bodkin-arrow",
 		"upgrade-teuton-catapult-projectile-1", "upgrade-teuton-catapult-projectile-2",
 		"upgrade-teuton-iron-tipped-wood-plow",
-		"upgrade-dwarven-great-axe", "upgrade-dwarven-shield-2", "upgrade-dwarven-bearded-throwing-axe",
+		"upgrade-dwarven-great-axe", "upgrade-dwarven-pike", "upgrade-dwarven-shield-2", "upgrade-dwarven-bearded-throwing-axe",
 		"upgrade-dwarven-ballista-bolt-1", "upgrade-dwarven-ballista-bolt-2",
 		"upgrade-dwarven-iron-tipped-wood-plow",
+		"upgrade-goblin-pike",
 		"upgrade-goblin-catapult-projectile-1", "upgrade-goblin-catapult-projectile-2",
 		"upgrade-goblin-iron-tipped-wood-plow"
 	}
