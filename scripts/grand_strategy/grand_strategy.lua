@@ -3070,8 +3070,10 @@ function IsBuildingAvailable(province, unit_type)
 	
 	if (
 		GetProvinceWater(province.Name) == false
-		and GetCivilizationClassUnitType(GetUnitTypeData(unit_type, "Class"), GetProvinceCivilization(province.Name)) ~= unit_type
-		and (GetProvinceCivilization(province.Name) ~= GetFactionFromName(GetProvinceOwner(province.Name)).Civilization or GetFactionClassUnitType(GetUnitTypeData(unit_type, "Class"), GetProvinceCivilization(province.Name), GetProvinceOwner(province.Name)) ~= unit_type)
+		and (
+			(GetProvinceCivilization(province.Name) ~= GetFactionFromName(GetProvinceOwner(province.Name)).Civilization and GetCivilizationClassUnitType(GetUnitTypeData(unit_type, "Class"), GetProvinceCivilization(province.Name)) ~= unit_type)
+			or (GetProvinceCivilization(province.Name) == GetFactionFromName(GetProvinceOwner(province.Name)).Civilization and GetFactionClassUnitType(GetUnitTypeData(unit_type, "Class"), GetProvinceCivilization(province.Name), GetProvinceOwner(province.Name)) ~= unit_type)
+		)
 		and GetUnitTypeData(unit_type, "Class") ~= "mercenary-camp"
 	) then
 		return false
