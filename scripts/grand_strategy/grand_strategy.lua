@@ -4138,7 +4138,7 @@ function SetRegionPopulation(region_name, quantity)
 end
 
 function RestoreScenarioUnitsToProvince(arg) -- restore the units of a certain faction to a certain province
-	if (arg.IgnoredUnitClasses ~= nil) then
+	if (arg.IgnoredUnitClasses == nil) then
 		arg.IgnoredUnitClasses = {}
 	end
 	
