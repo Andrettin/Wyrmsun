@@ -333,7 +333,7 @@ DefineProvince("Augsburg", {
 	World = "Earth",
 	CulturalNames = {
 		"latin", "Augusta Vindelicorum",
-		"teuton", "Augsburg"
+		"teuton", "Augsburg", "settlement-derived-name" -- presumably, since a settlement with that name exists there
 	},
 	Tiles = {
 		{509, 118}, {509, 119}, {509, 120},
@@ -395,7 +395,9 @@ DefineProvince("Baden", {
 	World = "Earth",
 	CulturalNames = {
 		"latin", "Agri Decumates", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		"teuton", "Baden"
+		"teuton", "Baden", "name-elements", { -- is this a settlement-derived name instead?
+			"word", "high-german", "verb", "no-tense", "Baden", -- correct?
+		}
 	},
 	Tiles = {
 		{502, 118}, {502, 119}, {502, 120},
@@ -597,7 +599,7 @@ DefineProvince("Bosnia", {
 DefineProvince("Brandenburg", {
 	World = "Earth",
 	CulturalNames = {
-		"teuton", "Brandenburg", "name-elements", {
+		"teuton", "Brandenburg", "name-elements", { -- is this a settlement-derived name instead?
 			"compound", "prefix", "high-german", "verb", "no-tense", "Branden", -- correct?
 			"compound", "suffix", "high-german", "noun", "singular", "Burg"
 		}
@@ -851,7 +853,7 @@ DefineProvince("Corinth", {
 		{545, 147}, {545, 148}
 	},
 	CulturalNames = {
-		"greek", "Corinth"
+		"greek", "Corinth", "settlement-derived-name"
 	},
 	SettlementLocation = {545, 148}, -- Corinth
 	Map = "maps/random/random-map-forest.smp",
@@ -1050,7 +1052,7 @@ DefineProvince("Dobruja", {
 DefineProvince("Don", {
 	World = "Earth",
 	CulturalNames = {
-		"greek", "Tanais"
+		"greek", "Tanais", "settlement-derived-name"
 	},
 	FactionCulturalNames = {
 		"celt", "Vana Tribe", "Vanaland"
@@ -1526,7 +1528,7 @@ DefineProvince("Gotland", {
 DefineProvince("Hanover", {
 	World = "Earth",
 	CulturalNames = {
-		"teuton", "Hannover"
+		"teuton", "Hannover" -- is this a settlement-derived name?
 	},
 	Tiles = {
 		{504, 105}, {504, 106},
@@ -1675,7 +1677,7 @@ DefineProvince("Holland", {
 DefineProvince("Holstein", {
 	World = "Earth",
 	CulturalNames = {
-		"teuton", "Holstein"
+		"teuton", "Holstein" -- is this a settlement-derived name?
 	},
 	Tiles = {
 		{505, 101}, {505, 102},
@@ -1943,7 +1945,7 @@ DefineProvince("Latvia", {
 DefineProvince("Lauenburg", {
 	World = "Earth",
 	CulturalNames = {
-		"teuton", "Lauenburg", "name-elements", {
+		"teuton", "Lauenburg", "name-elements", { -- is this a settlement-derived name instead?
 --			"compound", "prefix", -- ?
 			"compound", "suffix", "high-german", "noun", "singular", "Burg"
 		}
@@ -2157,7 +2159,7 @@ DefineProvince("Macedonia", {
 DefineProvince("Magdeburg", {
 	World = "Earth",
 	CulturalNames = {
-		"teuton", "Magdeburg"
+		"teuton", "Magdeburg", "settlement-derived-name" -- presumably, since a settlement with that name exists there
 	},
 	Tiles = {
 		{509, 109},
@@ -2228,7 +2230,7 @@ DefineProvince("Mazovia", {
 DefineProvince("Mecklenburg", {
 	World = "Earth",
 	CulturalNames = {
-		"teuton", "Mecklenburg", "name-elements", {
+		"teuton", "Mecklenburg", "name-elements", { -- is this a settlement-derived name instead?
 --			"compound", "prefix", -- ?
 			"compound", "suffix", "high-german", "noun", "singular", "Burg"
 		}
@@ -2432,7 +2434,7 @@ DefineProvince("Normandy", {
 DefineProvince("Oldenburg", {
 	World = "Earth",
 	CulturalNames = {
-		"teuton", "Oldenburg"
+		"teuton", "Oldenburg", "settlement-derived-name" -- presumably, since a settlement with that name exists there
 	},
 	Tiles = {
 		{502, 103}, {502, 104}, {502, 105},
@@ -2643,7 +2645,7 @@ DefineProvince("Portugal", {
 DefineProvince("Posen", {
 	World = "Earth",
 	CulturalNames = {
-		"teuton", "Posen"
+		"teuton", "Posen", "settlement-derived-name" -- presumably, since a settlement with that name exists there
 	},
 	Tiles = {
 		{524, 106},
@@ -2921,7 +2923,7 @@ DefineProvince("Scania", {
 DefineProvince("Schleswig", {
 	World = "Earth",
 	CulturalNames = {
-		"teuton", "Schleswig"
+		"teuton", "Schleswig" -- is this a settlement-derived name?
 	},
 	Tiles = {
 		{505, 98}, {505, 99}, {505, 100},
@@ -2996,7 +2998,7 @@ DefineProvince("Silesia", {
 DefineProvince("Skopje", {
 	World = "Earth",
 	CulturalNames = {
-		"latin", "Scupi"
+		"latin", "Scupi", "settlement-derived-name"
 	},
 	Tiles = {
 		{538, 137}, {538, 138},
@@ -3129,8 +3131,8 @@ DefineProvince("Switzerland", {
 DefineProvince("Syracuse", {
 	World = "Earth",
 	CulturalNames = {
-		"greek", "Syracusae",
-		"latin", "Syracusae"
+		"greek", "Syracusae", "settlement-derived-name", -- presumably, since a settlement with that name exists there
+		"latin", "Syracusae", "settlement-derived-name" -- presumably, since a settlement with that name exists there
 	},
 	Tiles = {
 		{520, 148}, {520, 149}, {520, 150},
@@ -3590,7 +3592,7 @@ DefineProvince("White Russia", {
 DefineProvince("Wurtemberg", {
 	World = "Earth",
 	CulturalNames = {
-		"teuton", "Württemberg"
+		"teuton", "Württemberg" -- is this a settlement-derived name?
 	},
 	Tiles = {
 		{504, 118},
@@ -3812,7 +3814,7 @@ DefineProvince("Kal Kartha", {
 		{56, 12}
 	},
 	CulturalNames = {
-		"dwarf", "Kal Kartha"
+		"dwarf", "Kal Kartha", "settlement-derived-name"
 	},
 	SettlementLocation = {45, 5},
 	Map = "maps/random/random-map-swamp.smp",
@@ -3826,7 +3828,7 @@ DefineProvince("Lyr", {
 	World = "Nidavellir",
 	Tiles = { {47, 13}, {47, 14}, {47, 15}, {47, 16}, {48, 13}, {48, 14}, {48, 15}, {48, 16}, {49, 12}, {49, 13}, {49, 14}, {49, 15}, {49, 16}, {49, 17}, {50, 12}, {50, 13}, {50, 14}, {50, 15}, {50, 16}, {50, 17}, {51, 12}, {51, 13}, {51, 14}, {51, 15}, {51, 16}, {51, 17}, {52, 13}, {52, 14}, {52, 15}, {52, 16}, {52, 17}, {53, 13}, {53, 14}, {53, 15}, {53, 16}, {54, 13}, {54, 14}, {54, 15}, {54, 16}, {55, 13}, {55, 14}, {55, 15}, {55, 16}, {56, 13}, {56, 14}, {56, 15}, {56, 16} },
 	CulturalNames = {
-		"dwarf", "Lyr"
+		"dwarf", "Lyr", "settlement-derived-name"
 	},
 	SettlementLocation = {50, 13},
 	Map = "maps/random/random-map-swamp.smp",

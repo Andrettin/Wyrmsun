@@ -168,7 +168,7 @@ DefineLanguageWord("Bad", { -- Source: http://www.duden.de/rechtschreibung/Bad
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"Bath", "Baths"},
-	DerivesFrom = {"middle-high-german", "noun", "Bat"},
+	DerivesFrom = {"middle-high-german", "noun", "Bat"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 133.
 	NumberCaseInflections = {
 		"singular", "genitive", "Bades", -- source also gives alternative form "Bads"
 		"plural", "nominative", "Bäder",
@@ -178,6 +178,29 @@ DefineLanguageWord("Bad", { -- Source: http://www.duden.de/rechtschreibung/Bad
 	},
 	Gender = "neuter",
 	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- example: "Karlsbad"
+})
+
+DefineLanguageWord("Baden", {
+	Language = "high-german",
+	Type = "verb",
+	Meanings = {"Bathe"},
+	DerivesFrom = {"middle-high-german", "noun", "Bat"}, -- presumably, since the corresponding noun "Bad" comes from this word
+	NumberPersonTenseMoodInflections = {
+		"singular", "first-person", "present", "indicative", "Bade",
+		"singular", "second-person", "present", "indicative", "Badest",
+		"singular", "third-person", "present", "indicative", "Badet",
+		"plural", "second-person", "present", "indicative", "Badet",
+		"singular", "first-person", "past", "indicative", "Badete",
+		"singular", "second-person", "past", "indicative", "Badetest",
+		"singular", "third-person", "past", "indicative", "Badete",
+		"plural", "first-person", "past", "indicative", "Badeten",
+		"plural", "second-person", "past", "indicative", "Badetet",
+		"plural", "third-person", "past", "indicative", "Badeten"
+	},
+	Participles = {
+		"present", "Badend",
+		"past", "Gebadet"
+	}
 })
 
 DefineLanguageWord("Bär", { -- Source: http://www.duden.de/rechtschreibung/Baer_Raubtier
