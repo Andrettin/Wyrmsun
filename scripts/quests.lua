@@ -276,7 +276,8 @@ DefineQuest("A Bargain is Struck", {
 	Scenario = "scripts/civilizations/dwarf/scenarios/a_bargain_is_struck.lua",
 	X = 7,
 	Y = 1,
-	PlayerColor = "red"
+	PlayerColor = "red",
+	MapMusic = "ABargainIsStruck"
 })
 
 DefineQuest("Closing the Gates", {
@@ -290,7 +291,8 @@ DefineQuest("Closing the Gates", {
 	Scenario = "scripts/civilizations/dwarf/scenarios/closing_the_gates.lua",
 	X = 8,
 	Y = 1,
-	PlayerColor = "red"
+	PlayerColor = "red",
+	MapMusic = "ClosingTheGates"
 })
 
 DefineQuest("Searching for the Runecrafter", {
@@ -304,7 +306,8 @@ DefineQuest("Searching for the Runecrafter", {
 	Scenario = "scripts/civilizations/dwarf/scenarios/searching_for_the_runecrafter.lua",
 	X = 9,
 	Y = 1,
-	PlayerColor = "red"
+	PlayerColor = "red",
+	MapMusic = "SearchingForTheRunecrafter"
 })
 
 DefineQuest("Gathering Materials", {
@@ -318,7 +321,8 @@ DefineQuest("Gathering Materials", {
 	Scenario = "scripts/civilizations/dwarf/scenarios/gathering_materials.lua",
 	X = 1,
 	Y = 2,
-	PlayerColor = "red"
+	PlayerColor = "red",
+	MapMusic = "GatheringMaterials"
 })
 
 DefineQuest("Hills of the Shorbear Clan", {
@@ -332,7 +336,8 @@ DefineQuest("Hills of the Shorbear Clan", {
 	Scenario = "scripts/civilizations/dwarf/scenarios/hills_of_the_shorbear_clan.lua",
 	X = 2,
 	Y = 2,
-	PlayerColor = "red"
+	PlayerColor = "red",
+	MapMusic = "HillsOfTheShorbearClan"
 })
 
 DefineQuest("The Wyrm", {
@@ -346,7 +351,8 @@ DefineQuest("The Wyrm", {
 	Scenario = "scripts/civilizations/dwarf/scenarios/the_wyrm.lua",
 	X = 3,
 	Y = 2,
-	PlayerColor = "red"
+	PlayerColor = "red",
+	MapMusic = "TheWyrm"
 })
 
 DefineQuest("Caverns of Flame", {
@@ -360,7 +366,8 @@ DefineQuest("Caverns of Flame", {
 	Scenario = "scripts/civilizations/dwarf/scenarios/caverns_of_flame.lua",
 	X = 4,
 	Y = 2,
-	PlayerColor = "red"
+	PlayerColor = "red",
+	MapMusic = "CavernsOfFlame"
 })
 
 --[[

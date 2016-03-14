@@ -7,6 +7,7 @@ Battle for Wesnoth Team:
 /music/breaking_the_chains.ogg (licensed under the GPL 2.0)
 /music/casualties_of_war.ogg (licensed under the GPL 2.0)
 /music/defeat.ogg (licensed under the GPL 2.0)
+/music/elvish-theme.ogg (licensed under the GPL 2.0)
 /music/heroes_rite.ogg (licensed under the GPL 2.0)
 /music/journeys_end.ogg (licensed under the GPL 2.0)
 /music/knalgan_theme.ogg (licensed under the GPL 2.0)

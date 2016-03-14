@@ -470,9 +470,93 @@
 	</audio>
 </track>
 <track>
-	<name>dwarf</name>
+	<name>ABargainIsStruck</name>
 	<group>map</group>
-	<subgroup>dwarf</subgroup>
+	<subgroup>Norlund Clan</subgroup>
+	<fadeIn>1000</fadeIn>
+	<fadeOut>1000</fadeOut>
+	<xfadeIn>500</xfadeIn>
+	<xfadeOut>500</xfadeOut>
+	<audio>
+		<filename>music/knolls.ogg</filename>
+	</audio>
+	<audio>
+		<filename>music/loyalists.ogg</filename>
+	</audio>
+	<audio>
+		<filename>music/breaking_the_chains.ogg</filename>
+	</audio>
+</track>
+<track>
+	<name>ClosingTheGates</name>
+	<group>map</group>
+	<subgroup>Norlund Clan</subgroup>
+	<fadeIn>1000</fadeIn>
+	<fadeOut>1000</fadeOut>
+	<xfadeIn>500</xfadeIn>
+	<xfadeOut>500</xfadeOut>
+	<audio>
+		<filename>music/battle.ogg</filename>
+	</audio>
+	<audio>
+		<filename>music/the_city_falls.ogg</filename>
+	</audio>
+</track>
+<track>
+	<name>SearchingForTheRunecrafter</name>
+	<group>map</group>
+	<subgroup>Norlund Clan</subgroup>
+	<fadeIn>1000</fadeIn>
+	<fadeOut>1000</fadeOut>
+	<xfadeIn>500</xfadeIn>
+	<xfadeOut>500</xfadeOut>
+	<audio>
+		<filename>music/wanderer.ogg</filename>
+	</audio>
+	<audio>
+		<filename>music/elvish-theme.ogg</filename>
+	</audio>
+	<audio>
+		<filename>music/knolls.ogg</filename>
+	</audio>
+</track>
+<track>
+	<name>GatheringMaterials</name>
+	<group>map</group>
+	<subgroup>Norlund Clan</subgroup>
+	<fadeIn>1000</fadeIn>
+	<fadeOut>1000</fadeOut>
+	<xfadeIn>500</xfadeIn>
+	<xfadeOut>500</xfadeOut>
+	<audio>
+		<filename>music/underground.ogg</filename>
+	</audio>
+	<audio>
+		<filename>music/suspense.ogg</filename>
+	</audio>
+</track>
+<track>
+	<name>HillsOfTheShorbearClan</name>
+	<group>map</group>
+	<subgroup>Norlund Clan</subgroup>
+	<fadeIn>1000</fadeIn>
+	<fadeOut>1000</fadeOut>
+	<xfadeIn>500</xfadeIn>
+	<xfadeOut>500</xfadeOut>
+	<audio>
+		<filename>music/knolls.ogg</filename>
+	</audio>
+	<audio>
+		<filename>music/the_city_falls.ogg</filename>
+	</audio>
+	<audio>
+		<filename>music/battle.ogg</filename>
+	</audio>
+</track>
+<track>
+	<name>TheWyrm</name>
+	<group>map</group>
+	<subgroup>Norlund Clan</subgroup>
 	<fadeIn>1000</fadeIn>
 	<fadeOut>1000</fadeOut>
 	<xfadeIn>500</xfadeIn>
@@ -480,32 +564,20 @@
 	<audio>
 		<filename>music/knalgan_theme.ogg</filename>
 	</audio>
+</track>
+<track>
+	<name>CavernsOfFlame</name>
+	<group>map</group>
+	<subgroup>Norlund Clan</subgroup>
+	<fadeIn>1000</fadeIn>
+	<fadeOut>1000</fadeOut>
+	<xfadeIn>500</xfadeIn>
+	<xfadeOut>500</xfadeOut>
 	<audio>
-		<filename>music/knolls.ogg</filename>
+		<filename>music/the_dangerous_symphony.ogg</filename>
 	</audio>
 	<audio>
-		<filename>music/the_deep_path.ogg</filename>
-	</audio>
-	<audio>
-		<filename>music/underground.ogg</filename>
-	</audio>
-	<audio>
-		<filename>music/northern_mountains.ogg</filename>
-	</audio>
-	<audio>
-		<filename>music/casualties_of_war.ogg</filename>
-	</audio>
-	<audio>
-		<filename>music/battle.ogg</filename>
-	</audio>
-	<audio>
-		<filename>music/battle-epic.ogg</filename>
-	</audio>
-	<audio>
-		<filename>music/legends_of_the_north.ogg</filename>
-	</audio>
-	<audio>
-		<filename>music/the_adventure_begins.ogg</filename>
+		<filename>music/heroes_rite.ogg</filename>
 	</audio>
 </track>
 <track>
