@@ -8,9 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      buttons.ccl - Define the unit-buttons of the teuton civilization.
---
---      (c) Copyright 2014-2015 by Andrettin
+--      (c) Copyright 2014-2016 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -132,9 +130,17 @@ DefineButton( { Pos = 1, Level = 1, Icon = "icon-teuton-town-hall",
   ForUnit = {"unit-teuton-worker"} } )
   
 DefineButton( { Pos = 2, Level = 1, Icon = "icon-germanic-farm",
-  Action = "build", Value = "unit-teuton-farm",
-  Key = "f", Hint = _("Build ~!Farm"), Popup = "popup-building",
-  ForUnit = {"unit-teuton-worker"} } )
+	Action = "build", Value = "unit-teuton-farm",
+	Key = "f", Hint = _("Build ~!Farm"), Popup = "popup-building",
+	ForUnit = {"unit-teuton-worker"}
+} )
+
+DefineButton( { Pos = 2, Level = 1, Icon = "icon-teuton-farm",
+	Action = "build", Value = "unit-teuton-farm",
+	Allowed = "check-upgrade", AllowArg = {"upgrade-teuton-masonry"},
+	Key = "f", Hint = _("Build ~!Farm"), Popup = "popup-building",
+	ForUnit = {"unit-teuton-worker"}
+} )
 
 DefineButton( { Pos = 3, Level = 1, Icon = "icon-germanic-barracks",
   Action = "build", Value = "unit-teuton-barracks",
