@@ -992,6 +992,12 @@ DefineLanguageWord("Steigan", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	}
 })
 
+DefineLanguageWord("Sugil", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.2.
+	Language = "gothic",
+	Type = "noun",
+	Meanings = {"Sun"}
+})
+
 DefineLanguageWord("Sunnō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "gothic",
 	Type = "noun",

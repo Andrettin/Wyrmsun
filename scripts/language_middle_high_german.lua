@@ -168,7 +168,7 @@ DefineLanguageWord("Brücke", { -- source also gives the alternative form "Brüg
 	Type = "noun",
 	Meanings = {"Bridge"}, -- source gives the German "Brücke" as the meaning
 	Gender = "feminine",
-	DerivesFrom = {"old-high-german", "noun", "Prucca"}
+	DerivesFrom = {"old-high-german", "noun", "Brukka"}
 })
 
 DefineLanguageWord("Brunst", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
@@ -593,6 +593,12 @@ DefineLanguageWord("Miete", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Gender = "feminine"
 })
 
+DefineLanguageWord("Mucke", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.2.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Midge"}
+})
+
 DefineLanguageWord("Nare", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "middle-high-german",
 	Type = "noun",
@@ -784,6 +790,20 @@ DefineLanguageWord("Tac", { -- Source: August Fick and Alf Torp, "Wortschatz der
 	NumberCaseInflections = {
 		"singular", "genitive", "Tages"
 	}
+})
+
+DefineLanguageWord("Tage", { -- source gives "-tage"; suffix used in compounds; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 106.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {},
+	DerivesFrom = {"old-high-german", "noun", "Tago"}
+})
+
+DefineLanguageWord("Tagen", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 106.
+	Language = "middle-high-german",
+	Type = "verb",
+	Meanings = {"Dawn"}, -- source gives the German "tagen" as the meaning
+	DerivesFrom = {"old-high-german", "verb", "Tagên"}
 })
 
 DefineLanguageWord("Valz", { -- source also gives the alternative forms "valze" and "velze"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 124.

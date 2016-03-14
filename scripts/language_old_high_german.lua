@@ -240,6 +240,14 @@ DefineLanguageWord("Brort", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Brukka", { -- Fick gives "prucca" and the alternative form "prucga" instead; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.2; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 145.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Bridge"}, -- as given by both Lehmann and Fick; Fick gives the German "Brücke" as the meaning
+	Gender = "feminine", -- as given by Fick
+	DerivesFrom = {"proto-germanic", "noun", "Brugjô"} -- as given by Fick
+})
+
 DefineLanguageWord("Brunst", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
 	Language = "old-high-german",
 	Type = "noun",
@@ -788,6 +796,12 @@ DefineLanguageWord("Jār", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	DerivesFrom = {"proto-germanic", "noun", "Yēra"}
 })
 
+DefineLanguageWord("Jugund", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.2.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Youth"}
+})
+
 DefineLanguageWord("Jung", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
 	Language = "old-high-german",
 	Type = "adjective",
@@ -968,6 +982,12 @@ DefineLanguageWord("Munt", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Gender = "feminine"
 })
 
+DefineLanguageWord("Nacho", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.2.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Boat"}
+})
+
 DefineLanguageWord("Naht", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-high-german",
 	Type = "noun",
@@ -1065,12 +1085,10 @@ DefineLanguageWord("Pfeife", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Meanings = {"Pipe"}
 })
 
-DefineLanguageWord("Prucca", { -- source also gives the alternative form "Prucga"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 145.
+DefineLanguageWord("Queh", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.2.
 	Language = "old-high-german",
-	Type = "noun",
-	Meanings = {"Bridge"}, -- source gives the German "Brücke" as the meaning
-	Gender = "feminine",
-	DerivesFrom = {"proto-germanic", "noun", "Brugjô"}
+	Type = "adjective",
+	Meanings = {"Alive"}
 })
 
 DefineLanguageWord("Queman", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
@@ -1296,6 +1314,13 @@ DefineLanguageWord("Sorgên", { -- source also gives the alternative form "sworg
 	DerivesFrom = {"proto-germanic", "verb", "Surgên"}
 })
 
+DefineLanguageWord("Speck", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.2.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Bacon"},
+	DerivesFrom = {"proto-indo-european", "noun", "Spyxwon"} -- apparently
+})
+
 DefineLanguageWord("Standan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 3, Subsection 1.
 	Language = "old-high-german",
 	Type = "verb",
@@ -1375,6 +1400,21 @@ DefineLanguageWord("Tac", { -- source also gives the alternative form "tag"; Sou
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Tagên", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 106.
+	Language = "old-high-german",
+	Type = "verb",
+	Meanings = {"Dawn"}, -- source gives the German "tagen" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Dag"}
+})
+
+DefineLanguageWord("Tago", { -- source gives "-tago"; suffix used in compounds; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 106.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {},
+	DerivesFrom = {"proto-germanic", "noun", "Dag"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Tāju", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
 	Language = "old-high-german",
 	Type = "verb",
@@ -1411,6 +1451,12 @@ DefineLanguageWord("Trūēn", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Language = "old-high-german",
 	Type = "verb",
 	Meanings = {"Trust"}
+})
+
+DefineLanguageWord("Vernawun", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.2.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Wood-Carrying Boats"}
 })
 
 DefineLanguageWord("Zûn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 89.
@@ -1541,6 +1587,13 @@ DefineLanguageWord("Zeh", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-G
 	}
 })
 
+DefineLanguageWord("Zeichur", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.2.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Brother-in-Law"},
+	DerivesFrom = {"proto-indo-european", "noun", "Daxw"} -- apparently
+})
+
 DefineLanguageWord("Ziohan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-high-german",
 	Type = "verb",
@@ -1588,6 +1641,15 @@ DefineLanguageWord("Muntboro", { -- Source: August Fick and Alf Torp, "Wortschat
 	}
 })
 
+DefineLanguageWord("Siohtago", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 106.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {},
+	CompoundElements = {
+--		"prefix", -- ?
+		"suffix", "old-high-german", "noun", "Tago"
+	}
+})
 DefineLanguageWord("Werwolf", { -- Source: http://www.cnrtl.fr/definition/garou
 	Language = "old-high-german",
 	Type = "noun",

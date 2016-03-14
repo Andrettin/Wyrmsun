@@ -70,6 +70,18 @@ DefineLanguageWord("Bruvìs", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Dȧ́gas", { -- source also gives the alternative form "dagà"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 106.
+	Language = "lithuanian",
+	Type = "noun",
+	Meanings = {"Harvest Season"} -- source gives the German "Erntezeit" as the meaning
+})
+
+DefineLanguageWord("Degù", { -- source also gives the alternative form "dègti"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 106.
+	Language = "lithuanian",
+	Type = "verb",
+	Meanings = {"Burn"} -- source gives the German "brennen" as the meaning
+})
+
 DefineLanguageWord("Dubùs", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "lithuanian",
 	Type = "adjective",

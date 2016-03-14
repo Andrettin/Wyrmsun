@@ -362,7 +362,7 @@ DefineLanguageWord("Sēmen", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Meanings = {"Seed"}
 })
 
-DefineLanguageWord("Sōl", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+DefineLanguageWord("Sōl", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.3, 2.6.2.
 	Language = "latin",
 	Type = "noun",
 	Meanings = {"Sun"}
@@ -435,6 +435,13 @@ DefineLanguageWord("Vir", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-G
 	Type = "noun",
 	Meanings = {},
 	DerivesFrom = {"proto-indo-european", "noun", "Wiros"}
+})
+
+DefineLanguageWord("Vīvus", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.2.
+	Language = "latin",
+	Type = "adjective",
+	Meanings = {"Alive"},
+	DerivesFrom = {"proto-indo-european", "adjective", "Gʷyxwos"}
 })
 
 DefineLanguageWord("Volpes", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.

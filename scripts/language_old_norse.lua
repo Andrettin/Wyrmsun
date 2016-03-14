@@ -363,12 +363,12 @@ DefineLanguageWord("Bruni", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Gender = "masculine"
 })
 
-DefineLanguageWord("Bryggja", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 145.
+DefineLanguageWord("Bryggia", { -- Fick gives "bryggja" instead; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.2; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 145.
 	Language = "old-norse",
 	Type = "noun",
-	Meanings = {"Ship Bridge"}, -- source gives the German "Schiffsbrücke" as the meaning
-	DerivesFrom = {"proto-germanic", "noun", "Brugjô"},
-	Gender = "feminine"
+	Meanings = {"Pier"}, -- as given by Lehmann; Fick gives the German "Schiffsbrücke" as the meaning instead
+	DerivesFrom = {"proto-germanic", "noun", "Brugjô"}, -- as given by Fick
+	Gender = "feminine" -- as given by Fick
 })
 
 DefineLanguageWord("Bygg", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
@@ -379,6 +379,20 @@ DefineLanguageWord("Bygg", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	NumberCaseInflections = {
 		"singular", "dative", "Byggue"
 	}
+})
+
+DefineLanguageWord("Daga", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 106.
+	Language = "old-norse",
+	Type = "verb",
+	Meanings = {"Dawn"}, -- source gives the German "tagen" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Dag"}
+})
+
+DefineLanguageWord("Dagi", { -- source gives "-dagi"; suffix used in compounds; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 106.
+	Language = "old-norse",
+	Type = "noun", -- correct?
+	Meanings = {},
+	DerivesFrom = {"proto-germanic", "noun", "Dag"}
 })
 
 DefineLanguageWord("Dagr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 106.
@@ -880,7 +894,7 @@ DefineLanguageWord("Korn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	DerivesFrom = {"proto-germanic", "noun", "Kŕnam"}
 })
 
-DefineLanguageWord("Kvikr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
+DefineLanguageWord("Kvikr", { -- source also gives "Kuikr" with the same meaning later; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.5, 2.6.2.
 	Language = "old-norse",
 	Type = "adjective",
 	Meanings = {"Alive"},
@@ -1045,11 +1059,29 @@ DefineLanguageWord("Nātt", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	DerivesFrom = {"proto-germanic", "noun", "Naχts"}
 })
 
+DefineLanguageWord("Naust", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.2.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Boat-House"}
+})
+
 DefineLanguageWord("Nema", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
 	Language = "old-norse",
 	Type = "verb",
 	Meanings = {"Take", "Accept"},
 	DerivesFrom = {"proto-indo-european", "verb", "Nem"}
+})
+
+DefineLanguageWord("Nǫkkvi", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.2.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Boat"}
+})
+
+DefineLanguageWord("Nōr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.2.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Ship"}
 })
 
 DefineLanguageWord("Norđ", { -- source also gives the alternative form "Norđr"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 152.
@@ -1279,6 +1311,13 @@ DefineLanguageWord("Sorg", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Meanings = {"Worry"}, -- source (apparently) gives the German "Sorge" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Surgô"},
 	Gender = "feminine"
+})
+
+DefineLanguageWord("Spic", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.2.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Bacon"},
+	DerivesFrom = {"proto-indo-european", "noun", "Spyxwon"} -- apparently
 })
 
 DefineLanguageWord("Steinn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 245.
@@ -1545,4 +1584,14 @@ DefineLanguageWord("Aldrnari", { -- Source: Sean Crist, "An Analysis of *z loss 
 --		"suffix", "old-norse", "noun", "Nari" -- need to add this as a word
 	},
 	Gender = "masculine"
+})
+
+DefineLanguageWord("Eindagi", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 106.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Certain Day", "Appointment"}, -- source gives the German "bestimmter Tag, Termin" as the meaning
+	CompoundElements = {
+--		"prefix", -- ?
+		"suffix", "old-norse", "noun", "Dagi"
+	}
 })

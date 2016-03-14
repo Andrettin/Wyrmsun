@@ -57,11 +57,12 @@ DefineLanguageWord("Æþela", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Gender = "feminine"
 })
 
-DefineLanguageWord("Elm", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 23.
+DefineLanguageWord("Ândaga", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 106.
 	Language = "old-english",
 	Type = "noun",
-	Meanings = {"Elm"}, -- source apparently gives the German "Ulme" as the meaning
-	DerivesFrom = {"proto-germanic", "noun", "Alma"}
+	Meanings = {"Appointment"}, -- source gives the German "Termin" as the meaning
+	-- the suffix in this compound is derived from the Proto-Germanic noun "Dag"
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Anfilte", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 124.
@@ -264,12 +265,12 @@ DefineLanguageWord("Bruneþa", { -- Source: August Fick and Alf Torp, "Wortschat
 	Gender = "masculine"
 })
 
-DefineLanguageWord("Brycg", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 145.
+DefineLanguageWord("Brycg", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.2; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 145.
 	Language = "old-english",
 	Type = "noun",
-	Meanings = {"Bridge"}, -- source gives the German "Brücke" as the meaning
-	Gender = "feminine",
-	DerivesFrom = {"proto-germanic", "noun", "Brugjô"}
+	Meanings = {"Bridge"}, -- as given by Lehmann and Fick; Fick gives the German "Brücke" as the meaning
+	Gender = "feminine", -- as given by Fick
+	DerivesFrom = {"proto-germanic", "noun", "Brugjô"} -- as given by Fick
 })
 
 DefineLanguageWord("Burg", { -- source also gives the alternate form "Burh"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
@@ -350,7 +351,7 @@ DefineLanguageWord("Cwene", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	DerivesFrom = {"proto-indo-european", "noun", "Gʷen"}
 })
 
-DefineLanguageWord("Cwic", { -- source gives the word as "Cwic(u)"; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
+DefineLanguageWord("Cwic", { -- source gives the word as "cwic(u)"; source also gives "cuic" with the same meaning later; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.5, 2.6.2.
 	Language = "old-english",
 	Type = "adjective",
 	Meanings = {"Alive"},
@@ -375,6 +376,13 @@ DefineLanguageWord("Dæg", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Language = "old-english",
 	Type = "noun",
 	Meanings = {"Day"}, -- source apparently gives the German "Tag" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Dag"}
+})
+
+DefineLanguageWord("Dagian", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 106.
+	Language = "old-english",
+	Type = "verb",
+	Meanings = {"Dawn"}, -- source gives the German "tagen" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Dag"}
 })
 
@@ -443,6 +451,13 @@ DefineLanguageWord("Éasterra", { -- source also gives the alternative form "Éa
 	Type = "adjective",
 	Meanings = {},
 	DerivesFrom = {"proto-germanic", "adverb", "Austa"}
+})
+
+DefineLanguageWord("Elm", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 23.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Elm"}, -- source apparently gives the German "Ulme" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Alma"}
 })
 
 DefineLanguageWord("Eoh", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
@@ -916,6 +931,12 @@ DefineLanguageWord("Îsern", { -- source also gives the alternative form "Îsen"
 	Gender = "neuter"
 })
 
+DefineLanguageWord("Iuguð", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.2.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Youth"}
+})
+
 DefineLanguageWord("Lǣran", { -- causative verb; Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 5.
 	Language = "old-english",
 	Type = "verb",
@@ -1071,6 +1092,12 @@ DefineLanguageWord("Merisc", { -- Source: http://www.cnrtl.fr/definition/marais
 	DerivesFrom = {"proto-germanic", "noun", "Mari"}
 })
 
+DefineLanguageWord("Muggia", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.2.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Midge"}
+})
+
 DefineLanguageWord("Mund", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 167.
 	Language = "old-english",
 	Type = "noun",
@@ -1091,6 +1118,12 @@ DefineLanguageWord("Mynecenu", { -- Source: Alaric Hall, "The Meanings of Elf an
 	Type = "noun",
 	Meanings = {"Nun"},
 	Gender = "feminine"
+})
+
+DefineLanguageWord("Naca", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.2.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Boat"}
 })
 
 DefineLanguageWord("Neaht", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 238; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
@@ -1417,6 +1450,13 @@ DefineLanguageWord("Sperehealf", { -- also given as Sperehand; Source: Alaric Ha
 	Meanings = {"Spear-Side", "Patrilineal Ancestry"}
 })
 
+DefineLanguageWord("Spic", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.2.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Bacon"},
+	DerivesFrom = {"proto-indo-european", "noun", "Spyxwon"} -- apparently
+})
+
 DefineLanguageWord("Spinelhealf", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 197.
 	Language = "old-english",
 	Type = "noun",
@@ -1479,11 +1519,24 @@ DefineLanguageWord("Swīn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	DerivesFrom = {"proto-germanic", "noun", "Swīnaz"}
 })
 
+DefineLanguageWord("Sygel", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.2.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Sun"}
+})
+
 DefineLanguageWord("Symeringwyrt", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.
 	Language = "old-english",
 	Type = "noun",
 	Meanings = {}
 	-- the first part of this compound is (apparently) derived from the Proto-Germanic noun "Sumara"
+})
+
+DefineLanguageWord("Tācor", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.2.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Brother-in-Law"},
+	DerivesFrom = {"proto-indo-european", "noun", "Daxw"} -- apparently
 })
 
 DefineLanguageWord("Táh", { -- this is the singular first person past; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.

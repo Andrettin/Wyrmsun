@@ -2279,6 +2279,29 @@ DefineLanguageWord("Tag", {
 	}
 })
 
+DefineLanguageWord("Tagen", {
+	Language = "high-german",
+	Type = "verb",
+	Meanings = {"Dawn"},
+	DerivesFrom = {"middle-high-german", "verb", "Tagen"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 106.
+	NumberPersonTenseMoodInflections = {
+		"singular", "first-person", "present", "indicative", "Tage",
+		"singular", "second-person", "present", "indicative", "Tagst",
+		"singular", "third-person", "present", "indicative", "Tagt",
+		"plural", "second-person", "present", "indicative", "Tagt",
+		"singular", "first-person", "past", "indicative", "Tagte",
+		"singular", "second-person", "past", "indicative", "Tagtest",
+		"singular", "third-person", "past", "indicative", "Tagte",
+		"plural", "first-person", "past", "indicative", "Tagten",
+		"plural", "second-person", "past", "indicative", "Tagtet",
+		"plural", "third-person", "past", "indicative", "Tagten"
+	},
+	Participles = {
+		"present", "Tagend",
+		"past", "Getagt"
+	}
+})
+
 DefineLanguageWord("Tal", {
 	Language = "high-german",
 	Type = "noun",

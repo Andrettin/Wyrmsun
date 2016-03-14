@@ -32,10 +32,10 @@ DefineLanguageWord("Allobroges", { -- Source: August Fick and Alf Torp, "Wortsch
 	DerivesFrom = {"proto-indo-european", "verb", "Mareĝ"} -- source indicates this as a possibility
 })
 
-DefineLanguageWord("Brîva", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 145.
+DefineLanguageWord("Briva", { -- Fick gives "brîva" instead; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.2; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 145.
 	Language = "gaulish",
 	Type = "noun",
-	Meanings = {"Bridge"} -- source gives the German "Brücke" as the meaning
+	Meanings = {"Bridge"} -- as given by both Lehmann and Fick; Fick gives the German "Brücke" as the meaning
 })
 
 DefineLanguageWord("Dubnorix", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.

@@ -828,6 +828,14 @@ DefineLanguageWord("Wurm", { -- Source: Richard M. Runge, "The Phonetic Realizat
 
 -- compounds
 
+DefineLanguageWord("Êndago", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 106.
+	Language = "old-saxon",
+	Type = "noun",
+	Meanings = {"Appointment"}, -- source gives the German "Termin" as the meaning
+	-- the suffix in this compound is derived from the Proto-Germanic noun "Dag"
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Mundburd", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 167.
 	Language = "old-saxon", -- source gives Old Low German
 	Type = "noun",

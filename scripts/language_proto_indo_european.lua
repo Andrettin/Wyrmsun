@@ -67,6 +67,12 @@ DefineLanguageWord("Bhru", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Meanings = {}
 })
 
+DefineLanguageWord("Daxw", { -- source gives "daXw-"; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.2.
+	Language = "proto-indo-european",
+	Type = "noun", -- correct?
+	Meanings = {}
+})
+
 DefineLanguageWord("Deγ", { -- source also gives the alternative form "dō"; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
 	Language = "proto-indo-european",
 	Type = "verb",
@@ -125,6 +131,12 @@ DefineLanguageWord("Gʷīwos", { -- Source: Winfred P. Lehmann, "A Grammar of Pr
 	Language = "proto-indo-european",
 	Type = "adjective",
 	Meanings = {"Alive"}
+})
+
+DefineLanguageWord("Gʷyxwos", { -- source gives "gʷyXw-os"; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.2.
+	Language = "proto-indo-european",
+	Type = "adjective", -- correct?
+	Meanings = {}
 })
 
 DefineLanguageWord("Kel", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 50.
@@ -226,6 +238,12 @@ DefineLanguageWord("Rowdho", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 DefineLanguageWord("Sekʷ", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 	Language = "proto-indo-european",
 	Type = "verb",
+	Meanings = {}
+})
+
+DefineLanguageWord("Spyxwon", { -- source gives "spyXw-on"; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.2.
+	Language = "proto-indo-european",
+	Type = "noun", -- correct?
 	Meanings = {}
 })
 

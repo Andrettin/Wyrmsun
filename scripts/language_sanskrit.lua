@@ -44,6 +44,16 @@ DefineLanguageWord("Ádhāt", { -- this is the aorist form; Source: Winfred P. L
 	DerivesFrom = {"proto-indo-european", "noun", "Dheʔ"}
 })
 
+DefineLanguageWord("Áhar", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 106.
+	Language = "sanskrit",
+	Type = "noun",
+	Meanings = {"Day"}, -- source gives the German "Tag" as the meaning
+	Gender = "neuter",
+	NumberCaseInflections = {
+		"singular", "genitive", "Áhnas"
+	}
+})
+
 DefineLanguageWord("Áśvas", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 	Language = "sanskrit",
 	Type = "noun",
@@ -78,6 +88,12 @@ DefineLanguageWord("Bhrā́tā", { -- Source: Winfred P. Lehmann, "A Grammar of 
 	Language = "sanskrit",
 	Type = "noun",
 	Meanings = {"Brother"}
+})
+
+DefineLanguageWord("Bhrū́", { -- same as "Bhrû"?; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.2.
+	Language = "sanskrit",
+	Type = "noun",
+	Meanings = {"Bridge"}
 })
 
 DefineLanguageWord("Bhrû", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 145.
@@ -131,11 +147,27 @@ DefineLanguageWord("Dāhas", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	DerivesFrom = {"proto-indo-european", "noun", "Dhagh"}
 })
 
+DefineLanguageWord("Dáhati", { -- given the meaning, this is presumably the third person singular; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 106.
+	Language = "sanskrit",
+	Type = "verb",
+	Meanings = {"Burns"}, -- source gives the German "brennt" as the meaning
+	NumberPersonTenseMoodInflections = {
+		"singular", "third-person", "present", "indicative", "Dáhati" -- presumably, given the meaning
+	}
+})
+
 DefineLanguageWord("Darbhá", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 86.
 	Language = "sanskrit",
 	Type = "noun",
 	Meanings = {"Tuft of Grass", "Bush Grass"}, -- source gives the German "Grasbüschel, Buschgras" as the meaning
 	Gender = "masculine"
+})
+
+DefineLanguageWord("Devŗ́", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.2.
+	Language = "sanskrit",
+	Type = "noun",
+	Meanings = {},
+	DerivesFrom = {"proto-indo-european", "noun", "Daxw"}
 })
 
 DefineLanguageWord("Dhī́ta", { -- this is the past perfect participle; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
@@ -176,6 +208,13 @@ DefineLanguageWord("Hávate", { -- this is (apparently) the past; Source: August
 	Type = "verb",
 	Meanings = {"Called"}, -- source gives the German "ruft" as the meaning
 	DerivesFrom = {"proto-indo-european", "verb", "Ĝhutó"}
+})
+
+DefineLanguageWord("Jīvá", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.2.
+	Language = "sanskrit",
+	Type = "adjective",
+	Meanings = {"Alive"},
+	DerivesFrom = {"proto-indo-european", "adjective", "Gʷyxwos"}
 })
 
 DefineLanguageWord("Késara", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 7.
@@ -246,10 +285,27 @@ DefineLanguageWord("Náktam", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Meanings = {"Night"} -- presumably, but is not entirely clear from source
 })
 
+DefineLanguageWord("Náus", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.2.
+	Language = "sanskrit",
+	Type = "noun",
+	Meanings = {},
+	NumberCaseInflections = {
+		"singular", "accusative", "Nā́vam",
+		"singular", "genitive", "Nāvás"
+	}
+})
+
 DefineLanguageWord("Návya", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 153.
 	Language = "sanskrit",
 	Type = "adjective",
 	Meanings = {"New", "Fresh", "Young"} -- source gives the German "neu, frisch, jung" as the meaning
+})
+
+DefineLanguageWord("Nidâghá", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 106.
+	Language = "sanskrit",
+	Type = "noun",
+	Meanings = {"Heat", "Summer"}, -- source gives the German "Hitze, Sommer" as the meaning
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Pā́dam", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
@@ -262,6 +318,13 @@ DefineLanguageWord("Páśu", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Language = "sanskrit",
 	Type = "noun",
 	Meanings = {}
+})
+
+DefineLanguageWord("Pī́van", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.2.
+	Language = "sanskrit",
+	Type = "noun",
+	Meanings = {"Fat"},
+	DerivesFrom = {"proto-indo-european", "noun", "Spyxwon"}
 })
 
 DefineLanguageWord("Prīnā́ti", { -- source gives "is pleased" as the meaning, so this is presumably the past form; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
@@ -361,6 +424,12 @@ DefineLanguageWord("Sûrkṣati", { -- Source: August Fick and Alf Torp, "Wortsc
 	Meanings = {"Preoccupies With"} -- source gives the German "kümmert sich um" as the meaning
 })
 
+DefineLanguageWord("Súvar", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.2.
+	Language = "sanskrit",
+	Type = "noun",
+	Meanings = {"Sun"}
+})
+
 DefineLanguageWord("Śvetá", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 	Language = "sanskrit",
 	Type = "adjective",
@@ -402,4 +471,13 @@ DefineLanguageWord("Vṛ́ká", { -- Source: August Fick and Alf Torp, "Wortscha
 	Meanings = {"Wolf"}, -- source gives the German "Wolf"
 	DerivesFrom = {"proto-indo-european", "noun", "Vl̥qo"},
 	Gender = "masculine"
+})
+
+DefineLanguageWord("Yū́va", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.2.
+	Language = "sanskrit",
+	Type = "noun",
+	Meanings = {"Youth"},
+	NumberCaseInflections = {
+		"singular", "genitive", "Yūnás"
+	}
 })

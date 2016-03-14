@@ -31,6 +31,12 @@ DefineLanguageWord("Caymis", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Meanings = {"Village"} -- source gives the German "Dorf" as the meaning
 })
 
+DefineLanguageWord("Dagis", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 106.
+	Language = "old-prussian", -- source gives Prussian
+	Type = "noun",
+	Meanings = {"Summer"} -- source gives the German "Sommer" as the meaning
+})
+
 DefineLanguageWord("Lindan", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 184.
 	Language = "old-prussian", -- source gives Prussian
 	Type = "noun",

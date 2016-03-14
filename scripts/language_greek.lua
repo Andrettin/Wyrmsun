@@ -166,6 +166,13 @@ DefineLanguageWord("Χύσθος", { -- Source: Sean Crist, "An Analysis of *z l
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Dāḗr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.2.
+	Language = "greek",
+	Type = "noun",
+	Meanings = {},
+	DerivesFrom = {"proto-indo-european", "noun", "Daxw"}
+})
+
 DefineLanguageWord("Égō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 1.
 	Language = "greek",
 	Type = "pronoun",
@@ -196,6 +203,12 @@ DefineLanguageWord("Ἔσπερος", { -- source also gives the alternative for
 	DerivesFrom = {"proto-indo-european", "adverb", "Ve"}
 })
 
+DefineLanguageWord("Hēélios", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.2.
+	Language = "greek",
+	Type = "noun",
+	Meanings = {"Sun"}
+})
+
 DefineLanguageWord("Hépomai", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 	Language = "greek",
 	Type = "verb",
@@ -203,17 +216,17 @@ DefineLanguageWord("Hépomai", { -- Source: Winfred P. Lehmann, "A Grammar of Pr
 	DerivesFrom = {"proto-indo-european", "verb", "Sekʷ"}
 })
 
+DefineLanguageWord("Heptá", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
+	Language = "greek",
+	Type = "numeral",
+	Number = 7
+})
+
 DefineLanguageWord("Híppos", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.
 	Language = "greek",
 	Type = "noun",
 	Meanings = {"Horse"},
 	DerivesFrom = {"proto-indo-european", "noun", "Éḱwos"}
-})
-
-DefineLanguageWord("Heptá", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
-	Language = "greek",
-	Type = "numeral",
-	Number = 7
 })
 
 DefineLanguageWord("Ídmen", { -- this is the plural first person present; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
@@ -264,6 +277,22 @@ DefineLanguageWord("Μισθός", { -- Source: Sean Crist, "An Analysis of *z l
 	Type = "noun",
 	Meanings = {"Reward", "Payment of a Soldier"},
 	Gender = "masculine"
+})
+
+DefineLanguageWord("Muîa", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.2.
+	Language = "greek",
+	Type = "noun",
+	Meanings = {"Midge"}
+})
+
+DefineLanguageWord("Naûs", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.2.
+	Language = "greek",
+	Type = "noun",
+	Meanings = {},
+	NumberCaseInflections = {
+		"singular", "accusative", "Nêa",
+		"singular", "genitive", "Nēós"
+	}
 })
 
 DefineLanguageWord("Nea", { -- should be written as the original Greek name (with Greek characters)
@@ -365,6 +394,13 @@ DefineLanguageWord("Phū́ō", { -- Source: Winfred P. Lehmann, "A Grammar of Pr
 	Type = "verb",
 	Meanings = {"Grow"},
 	DerivesFrom = {"proto-indo-european", "verb", "Bhew"}
+})
+
+DefineLanguageWord("Pī́on", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.2.
+	Language = "greek",
+	Type = "noun",
+	Meanings = {"Fat"},
+	DerivesFrom = {"proto-indo-european", "noun", "Spyxwon"}
 })
 
 DefineLanguageWord("Plōtós", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.

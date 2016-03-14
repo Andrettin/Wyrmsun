@@ -58,6 +58,12 @@ DefineLanguageWord("Mēre", { -- this is the comparative, what is the normal ver
 	}
 })
 
+DefineLanguageWord("Mygg", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.2.
+	Language = "old-swedish",
+	Type = "noun",
+	Meanings = {"Midge"}
+})
+
 DefineLanguageWord("Tuar", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
 	Language = "old-swedish",
 	Type = "numeral",
