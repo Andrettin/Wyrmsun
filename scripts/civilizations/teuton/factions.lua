@@ -40,7 +40,7 @@ DefineFaction("Frank Tribe", {
 	Type = "tribe",
 	Language = "old-frankish",
 	Colors = {"green", "orange"},
-	DevelopsTo = {"Francia", "Franconia", "Netherlands"},
+	DevelopsTo = {"Francia", "Franconia", "Austrasia", "Neustria", "Netherlands"},
 	FactionUpgrade = "upgrade-frank-tribe-faction"
 })
 
@@ -376,6 +376,16 @@ DefineFaction("England", {
 	}
 })
 
+DefineFaction("Austrasia", {
+	Civilization = "teuton",
+	ParentFaction = "Francia",
+	Type = "polity",
+	Language = "high-german",
+	Colors = {"pink"},
+	DefaultTier = "kingdom", -- correct?
+	DevelopsTo = {"Holy Rome", "Francia"}
+})
+
 DefineFaction("Franconia", {
 	Civilization = "teuton",
 	ParentFaction = "Francia",
@@ -384,6 +394,16 @@ DefineFaction("Franconia", {
 	Colors = {"blue"},
 	DefaultTier = "duchy", -- Franconia was a duchy in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 	DevelopsTo = {"Holy Rome", "Francia"} -- Franconia was a part of the Holy Roman Empire in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+})
+
+DefineFaction("Neustria", {
+	Civilization = "teuton",
+	ParentFaction = "Francia",
+	Type = "polity",
+	Language = "high-german",
+	Colors = {"orange"},
+	DefaultTier = "kingdom", -- correct?
+	DevelopsTo = {"Holy Rome", "Francia"}
 })
 
 DefineFaction("Friesland", {

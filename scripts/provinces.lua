@@ -201,7 +201,7 @@ DefineProvince("Aquitaine", {
 	SettlementTerrain = "Plains",
 	Claims = {
 		"celt", "Arverni Tribe"
---				"latin", "France"
+--		"latin", "France"
 	}
 })
 
@@ -474,7 +474,8 @@ DefineProvince("Belgium", {
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
 	Claims = {
-		"celt", "Menapii Tribe"
+		"celt", "Menapii Tribe",
+		"teuton", "Austrasia" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
 	}
 })
 
@@ -770,7 +771,7 @@ DefineProvince("Burgundy", {
 	SettlementTerrain = "Plains",
 	Claims = {
 		"celt", "Aedui Tribe"
---				"latin", "France"
+--		"latin", "France"
 	}
 })
 
@@ -1287,7 +1288,7 @@ DefineProvince("France", {
 		"teuton", "Frank Tribe", "Neustria"
 	},
 	Tiles = {
---				{119, 29}, {119, 30}, {120, 29}, {120, 30}, {121, 28}, {121, 29}, {121, 30}, {122, 29}, {122, 30}, {122, 31}, {123, 29}, {123, 30}, {124, 29}, {125, 29}, -- old map
+--		{119, 29}, {119, 30}, {120, 29}, {120, 30}, {121, 28}, {121, 29}, {121, 30}, {122, 29}, {122, 30}, {122, 31}, {123, 29}, {123, 30}, {124, 29}, {125, 29}, -- old map
 		{474, 122},
 		{475, 122}, {475, 123},
 		{476, 120}, {476, 121}, {476, 122}, {476, 123},
@@ -1315,7 +1316,8 @@ DefineProvince("France", {
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
 	Claims = {
---				"latin", "France"
+		"teuton", "Neustria", -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
+--		"latin", "France"
 	}
 })
 
@@ -1568,6 +1570,7 @@ DefineProvince("Hesse", {
 	SettlementTerrain = "Plains",
 	Claims = {
 		"teuton", "Chatti Tribe",
+		"teuton", "Austrasia", -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
 		"teuton", "Franconia", -- Part of the Duchy of Franconia in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		"teuton", "Hesse",
 		"teuton", "Holy Rome"
@@ -2094,6 +2097,7 @@ DefineProvince("Lower Rhine", {
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
 	Claims = {
+		"teuton", "Austrasia", -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
 		"teuton", "Holy Rome"
 	}
 })
