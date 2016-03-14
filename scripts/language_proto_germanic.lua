@@ -338,11 +338,12 @@ DefineLanguageWord("Χŕdiz", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Meanings = {"Wattle"}
 })
 
-DefineLanguageWord("Dag", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
+DefineLanguageWord("Dag", { -- Lehmann gives "dag-"; Fick gives "daga" and the alternative form "dagan" instead; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 106.
 	Language = "proto-germanic",
 	Type = "noun",
-	Meanings = {},
-	DerivesFrom = {"proto-indo-european", "noun", "Dhagh"}
+	Meanings = {"Day"}, -- Fick gives the German "Tag" as the meaning
+	DerivesFrom = {"proto-indo-european", "noun", "Dhagh"}, -- as given by Lehmann
+	Gender = "masculine" -- as given by Fick
 })
 
 DefineLanguageWord("Durez", { -- this is the nominative plural; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.

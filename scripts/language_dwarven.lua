@@ -422,9 +422,9 @@ DefineLanguageWord("Eikin", {
 	Type = "adjective",
 	Meanings = {"Oaken"},
 	AffixNameTypes = {
-		"compound", "prefix", "singular", "person-male", -- example: "Eikinskjaldi" (Norse mythology)
-		"compound", "prefix", "singular", "settlement", -- no examples, but seems sensible in face of a general lack of examples
-		"compound", "prefix", "singular", "province" -- no examples, but seems sensible in face of a general lack of examples
+		"compound", "prefix", "person-male", -- example: "Eikinskjaldi" (Norse mythology)
+		"compound", "prefix", "settlement", -- no examples, but seems sensible in face of a general lack of examples
+		"compound", "prefix", "province" -- no examples, but seems sensible in face of a general lack of examples
 	}
 })
 

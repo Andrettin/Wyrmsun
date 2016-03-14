@@ -102,6 +102,13 @@ DefineLanguageWord("Burch", { -- source gives "Bur(i)ch"; Source: August Fick an
 	Gender = "feminine"
 })
 
+DefineLanguageWord("Dach", { -- source also gives the alternative form "Dei"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 106.
+	Language = "old-frisian",
+	Type = "noun",
+	Meanings = {"Day"}, -- source apparently gives the German "Tag" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Dag"}
+})
+
 DefineLanguageWord("Fretho", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 128.
 	Language = "old-frisian",
 	Type = "noun",

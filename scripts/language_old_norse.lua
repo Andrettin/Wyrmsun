@@ -381,6 +381,14 @@ DefineLanguageWord("Bygg", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	}
 })
 
+DefineLanguageWord("Dagr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 106.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Day"}, -- source apparently gives the German "Tag" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Dag"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Djūpr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-norse",
 	Type = "adjective",

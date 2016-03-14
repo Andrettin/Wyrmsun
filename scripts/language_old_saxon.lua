@@ -171,6 +171,13 @@ DefineLanguageWord("Busc", { -- Source: http://www.cnrtl.fr/definition/bois
 	DerivesFrom = {"proto-germanic", "noun", "Buska"} -- presumably
 })
 
+DefineLanguageWord("Dag", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 106.
+	Language = "old-saxon",
+	Type = "noun",
+	Meanings = {"Day"}, -- source apparently gives the German "Tag" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Dag"}
+})
+
 DefineLanguageWord("Eiiere", { -- this is the genitive plural; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
 	Language = "old-saxon",
 	Type = "noun",

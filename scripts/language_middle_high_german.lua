@@ -775,6 +775,17 @@ DefineLanguageWord("Sund", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	DerivesFrom = {"old-high-german", "noun", "Sundar"}
 })
 
+DefineLanguageWord("Tac", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 106.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Day"}, -- source gives the German "Tag" as the meaning
+	DerivesFrom = {"old-high-german", "noun", "Tac"},
+	Gender = "masculine",
+	NumberCaseInflections = {
+		"singular", "genitive", "Tages"
+	}
+})
+
 DefineLanguageWord("Valz", { -- source also gives the alternative forms "valze" and "velze"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 124.
 	Language = "middle-high-german",
 	Type = "noun",

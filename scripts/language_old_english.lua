@@ -371,6 +371,13 @@ DefineLanguageWord("Cynn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	DerivesFrom = {"proto-germanic", "noun", "Kuni"}
 })
 
+DefineLanguageWord("Dæg", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 106.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Day"}, -- source apparently gives the German "Tag" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Dag"}
+})
+
 DefineLanguageWord("Denisc", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 100.
 	Language = "old-english",
 	Type = "adjective",

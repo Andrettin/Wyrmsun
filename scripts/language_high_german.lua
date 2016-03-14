@@ -2267,6 +2267,18 @@ DefineLanguageWord("Süden", {
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Tag", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"Day"},
+	DerivesFrom = {"middle-high-german", "noun", "Tac"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 106.
+	Gender = "masculine",
+	NumberCaseInflections = {
+		"singular", "genitive", "Tages", -- "Tag[e]s"
+		"plural", "nominative", "Tage"
+	}
+})
+
 DefineLanguageWord("Tal", {
 	Language = "high-german",
 	Type = "noun",

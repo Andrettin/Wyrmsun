@@ -711,6 +711,14 @@ DefineLanguageWord("David", {
 	NameTypes = {"person-male"}
 })
 
+DefineLanguageWord("Day", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 106.
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Day"},
+	DerivesFrom = {"old-english", "noun", "Dæg"},
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Dead", {
 	Language = "english",
 	Type = "adjective",

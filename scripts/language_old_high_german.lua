@@ -1367,6 +1367,14 @@ DefineLanguageWord("Swīn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	DerivesFrom = {"proto-germanic", "noun", "Swīnaz"}
 })
 
+DefineLanguageWord("Tac", { -- source also gives the alternative form "tag"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 106.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Day"}, -- source gives the German "Tag" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Dag"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Tāju", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
 	Language = "old-high-german",
 	Type = "verb",

@@ -265,11 +265,12 @@ DefineLanguageWord("Daddjan", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	DerivesFrom = {"proto-indo-european", "noun", "Dheʔ"}
 })
 
-DefineLanguageWord("Dags", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
+DefineLanguageWord("Dags", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 106.
 	Language = "gothic",
 	Type = "noun",
-	Meanings = {"Day"},
-	DerivesFrom = {"proto-germanic", "noun", "Dag"}
+	Meanings = {"Day"}, -- as given by Lehmann and Fick (the latter gives the German "Tag" as the meaning)
+	DerivesFrom = {"proto-germanic", "noun", "Dag"}, -- as given by Lehmann and Fick
+	Gender = "masculine" -- as given by Fick
 })
 
 DefineLanguageWord("Dails", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.

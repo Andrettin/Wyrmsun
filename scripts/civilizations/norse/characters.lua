@@ -114,6 +114,9 @@ DefineCharacter("Sigtrygg", { -- Source: Henry Adams Bellows (transl.), "The Poe
 
 DefineCharacter("Dag", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 223.
 	Name = "Dag", -- ancestor of the Döglings; married to Thora
+	NameElements = {
+		"word", "old-norse", "noun", "Dagr" -- presumably
+	},
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
