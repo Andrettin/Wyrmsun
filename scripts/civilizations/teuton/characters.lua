@@ -151,6 +151,7 @@ DefineCharacter("Siegfried Volsung", { -- Source: Norman Davies, "Vanished Kingd
 
 DefineCharacter("Svanhild Volsung", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", pp. 226, 536, 538, 542, 546.
 	Name = "Svanhild", -- also called Sunilda or Sanielh; in the Norse myths was married to and killed by Jormunrek, but they could hardly have lived at the same time
+	-- suffix is likely the Old Norse noun "Hildr"
 	FamilyName = "Volsung",
 	Gender = "female",
 	Type = "unit-teuton-archer",

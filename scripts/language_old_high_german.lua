@@ -960,6 +960,14 @@ DefineLanguageWord("Mir", { -- Source: Sean Crist, "An Analysis of *z loss in We
 	Dative = "Mir"
 })
 
+DefineLanguageWord("Munt", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 167.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Hand", "Protection", "Tutelage"}, -- source gives the German "Hand, Schutz, Bevormundung" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Mundô"},
+	Gender = "feminine"
+})
+
 DefineLanguageWord("Naht", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-high-german",
 	Type = "noun",
@@ -1547,6 +1555,30 @@ DefineLanguageWord("Zwirnēn", { -- source also gives the alternative form "Zwir
 })
 
 -- compounds
+
+DefineLanguageWord("Bahweiga", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 205.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Plate", "Dish", "Platter"} -- source gives the Latin "lanx" as the meaning
+	-- the second part of this compound (apparently) comes from the Proto-Germanic "vaigô"
+})
+
+DefineLanguageWord("Elmboum", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 23.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Elm"} -- source apparently gives the German "Ulme" as the meaning
+	-- the first part of this compound derives from the Proto-Germanic "alma"
+})
+
+DefineLanguageWord("Muntboro", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 167.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Guardian", "Protector"}, -- source apparently gives the German "Vormund, Beschützer" as the meaning
+	CompoundElements = {
+		"prefix", "old-high-german", "noun", "Munt", -- presumably
+--		"suffix", -- ?
+	}
+})
 
 DefineLanguageWord("Werwolf", { -- Source: http://www.cnrtl.fr/definition/garou
 	Language = "old-high-german",

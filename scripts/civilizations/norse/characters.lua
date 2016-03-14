@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2015 by Andrettin
+--      (c) Copyright 2015-2016 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -27,6 +27,10 @@
 
 DefineCharacter("Eymund", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 222.
 	Name = "Eymund", -- king of Holmgarth (i.e. Russia); described as "the strongest of men"
+	NameElements = {
+--		"compound", "prefix", -- ?
+		"compound", "suffix", "old-norse", "noun", "Mund" -- presumably (could also be "Mundr")
+	},
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse", -- accurate?
@@ -54,6 +58,10 @@ DefineCharacter("Halfdan the Old Skjoldung", { -- Source: Henry Adams Bellows (t
 
 DefineCharacter("Almveig", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 222.
 	Name = "Almveig", -- wife of Halfdan the Old Skjoldung; also known as Alvig; bore Halfdan the Old eighteen sons (nine of them being in a single birth); the nine who were the result of a single birth were all slain, while the other nine are held to be the ancestors of the most famous heroes in Norse myths
+	NameElements = {
+		"compound", "prefix", "old-norse", "noun", "no-case", "Almr", -- presumably
+		"compound", "suffix", "old-norse", "noun", "Veig" -- presumably
+	},
 	Gender = "female",
 	Type = "unit-teuton-archer",
 	Civilization = "norse", -- accurate?
@@ -744,6 +752,10 @@ DefineCharacter("Harald War Tooth", { -- Source: Kevin Crossley-Holland, "The No
 
 DefineCharacter("Rathbard", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 227.
 	Name = "Rathbard", -- king
+	NameElements = {
+		"compound", "prefix", "old-norse", "noun", "Râđ", -- presumably
+		"compound", "suffix", "old-norse", "noun", "Barđ" -- presumably
+	},	
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse", -- correct?

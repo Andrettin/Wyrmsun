@@ -88,6 +88,7 @@ DefineLanguageWord("Alfr", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	DerivesFrom = {"proto-germanic", "noun", "Alba"},
 	Gender = "masculine",
 	NumberCaseInflections = {
+		"singular", "no-case", "Alf", -- presumably (assuming the "-r" ending here is the nominative ending)
 		"plural", "nominative", "Alfar"
 	}
 })
@@ -101,6 +102,16 @@ DefineLanguageWord("Ali", { -- this is the (present?) participle; source gives "
 		"present", "Ali"
 	}
 	-- appears in ali-svîn
+})
+
+DefineLanguageWord("Almr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 23.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Elm"}, -- source apparently gives the German "Ulme" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Alma"},
+	NumberCaseInflections = {
+		"singular", "no-case", "Almr", -- presumably (assuming the "-r" ending here is the nominative ending)
+	}
 })
 
 DefineLanguageWord("Ār", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
@@ -140,7 +151,7 @@ DefineLanguageWord("Bađ", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Gender = "neuter"
 })
 
-DefineLanguageWord("Barđa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
+DefineLanguageWord("Barđ", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Beard", "Stem", "Edge", "Seam"}, -- source gives the German "Bart, Steven, Rand, Saum" as the meaning
@@ -994,6 +1005,25 @@ DefineLanguageWord("Mǫrk", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	}
 })
 
+DefineLanguageWord("Mund", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 167.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Hand"}, -- source gives the German "Hand" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Mundô"},
+	Gender = "feminine"
+})
+
+DefineLanguageWord("Mundr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 167.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Price of the Bride", "Tutelage Over the Bridge Obtained by Paying Her Price"}, -- source gives the German "Kaufpreis der Braut und die durch den Kauf erworbene Vormundschaft über dieselbe" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Mundô"},
+	Gender = "masculine",
+	NumberCaseInflections = {
+		"singular", "no-case", "Mund" -- presumably (assuming the "-r" ending here is the nominative ending)
+	}
+})
+
 DefineLanguageWord("Nara", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "old-norse",
 	Type = "verb",
@@ -1401,7 +1431,10 @@ DefineLanguageWord("Ulfr", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Wolf"}, -- source gives the German "Wolf"
-	DerivesFrom = {"proto-germanic", "noun", "Vulfa"}
+	DerivesFrom = {"proto-germanic", "noun", "Vulfa"},
+	NumberCaseInflections = {
+		"singular", "no-case", "Ulf" -- presumably (assuming the "-r" ending here is the nominative ending)
+	}
 })
 
 DefineLanguageWord("Vagn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
@@ -1422,6 +1455,14 @@ DefineLanguageWord("Vegr", { -- Source: Richard M. Runge, "The Phonetic Realizat
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Way"}
+})
+
+DefineLanguageWord("Veig", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 205.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Strength", "Strong Drink", "Beaker"}, -- source gives the German "Kraft, Stärke, starkes Getrank, Trinkbecher" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Vaigô"},
+	Gender = "feminine"
 })
 
 DefineLanguageWord("Vēr", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.

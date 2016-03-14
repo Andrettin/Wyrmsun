@@ -57,6 +57,13 @@ DefineLanguageWord("Æþela", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Gender = "feminine"
 })
 
+DefineLanguageWord("Elm", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 23.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Elm"}, -- source apparently gives the German "Ulme" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Alma"}
+})
+
 DefineLanguageWord("Anfilte", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 124.
 	Language = "old-english",
 	Type = "noun",
@@ -1057,6 +1064,14 @@ DefineLanguageWord("Merisc", { -- Source: http://www.cnrtl.fr/definition/marais
 	DerivesFrom = {"proto-germanic", "noun", "Mari"}
 })
 
+DefineLanguageWord("Mund", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 167.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Hand", "Protection", "Tutelage"}, -- source gives the German "Hand, Schutz, Bevormundung" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Mundô"},
+	Gender = "feminine"
+})
+
 DefineLanguageWord("Munuc", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 89.
 	Language = "old-english",
 	Type = "noun",
@@ -1574,6 +1589,14 @@ DefineLanguageWord("Wâd", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Meanings = {"Woad"}
 })
 
+DefineLanguageWord("Wæ̂ge", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 205.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Cup"}, -- source gives the German "Becher" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Vaigô"}, -- apparently
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Wægn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-english",
 	Type = "noun",
@@ -1693,4 +1716,16 @@ DefineLanguageWord("Wyrm", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Meanings = {"Worm", "Maggot", "Adder", "Viper", "Serpent"}, -- source (apparently) gives the German "Wurm, Made, Natter, Schlange" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Vurma"},
 	Gender = "masculine"
+})
+
+-- compounds
+
+DefineLanguageWord("Mundbora", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 167.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Guardian", "Protector"}, -- source apparently gives the German "Vormund, Beschützer" as the meaning
+	CompoundElements = {
+		"prefix", "old-english", "noun", "Mund", -- presumably
+--		"suffix", -- ?
+	}
 })

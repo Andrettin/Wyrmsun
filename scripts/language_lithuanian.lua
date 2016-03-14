@@ -195,6 +195,12 @@ DefineLanguageWord("Vãkaras", { -- Source: August Fick and Alf Torp, "Wortschat
 	DerivesFrom = {"proto-indo-european", "noun", "Vekero"}
 })
 
+DefineLanguageWord("Vëkà", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 205.
+	Language = "lithuanian",
+	Type = "noun",
+	Meanings = {"Strength"} -- source gives the German "Kraft, Stärke" as the meaning
+})
+
 DefineLanguageWord("Vienúolika", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
 	Language = "lithuanian",
 	Type = "numeral",

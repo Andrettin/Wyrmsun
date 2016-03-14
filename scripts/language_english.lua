@@ -894,6 +894,17 @@ DefineLanguageWord("Elias", {
 	NameTypes = {"person-male"}
 })
 
+DefineLanguageWord("Elm", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Elm"},
+	DerivesFrom = {"old-english", "noun", "Elm"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 23.
+	Gender = "neuter",
+	AffixNameTypes = {
+		"separate", "prefix", "unit-class-lumber-mill" -- seems sensible
+	}
+})
+
 DefineLanguageWord("End", {
 	Language = "english",
 	Type = "noun",
@@ -1283,7 +1294,10 @@ DefineLanguageWord("Hammer", {
 	Meanings = {"Hammer"},
 	DerivesFrom = {"old-english", "noun", "Hamor"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 46.
 	Gender = "neuter",
-	AffixNameTypes = {"separate", "suffix", "singular", "unit-class-smithy"} -- seems sensible
+	AffixNameTypes = {
+		"separate", "suffix", "singular", "unit-class-smithy", -- seems sensible
+		"separate", "suffix", "singular", "unit-class-lumber-mill" -- seems sensible
+	}
 })
 
 DefineLanguageWord("Hamp", {

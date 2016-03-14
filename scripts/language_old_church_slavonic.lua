@@ -169,6 +169,12 @@ DefineLanguageWord("Večerŭ", { -- Source: August Fick and Alf Torp, "Wortschat
 	DerivesFrom = {"proto-indo-european", "noun", "Vekero"}
 })
 
+DefineLanguageWord("Věkŭ", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 205.
+	Language = "old-church-slavonic",
+	Type = "noun",
+	Meanings = {"Strength", "Age"} -- source gives the German "Kraft, Lebensalter" as the meaning
+})
+
 DefineLanguageWord("Zĭrěti", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 79.
 	Language = "old-church-slavonic",
 	Type = "verb",

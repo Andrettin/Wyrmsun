@@ -247,6 +247,12 @@ DefineLanguageWord("Λύχος", { -- Source: August Fick and Alf Torp, "Wortsch
 	DerivesFrom = {"proto-indo-european", "noun", "Vl̥qo"}
 })
 
+DefineLanguageWord("Μάρη", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 167.
+	Language = "greek",
+	Type = "noun",
+	Meanings = {"Hand"} -- source gives the German "Hand" as the meaning
+})
+
 DefineLanguageWord("Meízōn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "greek",
 	Type = "adjective",

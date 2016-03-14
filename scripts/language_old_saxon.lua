@@ -764,6 +764,14 @@ DefineLanguageWord("Weg", { -- Source: Richard M. Runge, "The Phonetic Realizati
 	Meanings = {"Way"}
 })
 
+DefineLanguageWord("Wêgi", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 205.
+	Language = "old-saxon",
+	Type = "noun",
+	Meanings = {"Bowl", "Cup"}, -- source gives the German "Schale, Becher" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Vaigô"}, -- apparently
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Wel", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
 	Language = "old-saxon",
 	Type = "adverb",
@@ -809,4 +817,13 @@ DefineLanguageWord("Wurm", { -- Source: Richard M. Runge, "The Phonetic Realizat
 	Meanings = {"Worm", "Serpent"}, -- probably could be extended to mean "wyrm" as well
 	DerivesFrom = {"proto-germanic", "noun", "Vurma"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
 	Gender = "masculine"
+})
+
+-- compounds
+
+DefineLanguageWord("Mundburd", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 167.
+	Language = "old-saxon", -- source gives Old Low German
+	Type = "noun",
+	Meanings = {"Guardian", "Protector"} -- source gives the German "Vormund, Beschützer" as the meaning
+	-- the prefix in this compound comes from the Proto-Germanic word "mundô"
 })

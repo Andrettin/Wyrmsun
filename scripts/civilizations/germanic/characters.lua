@@ -225,6 +225,7 @@ DefineCharacter("Ját", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p.
 
 DefineCharacter("Gudólfr", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
 	Name = "Gudólfr",
+	-- prefix is likely the Old Norse neuter noun "Guđ"
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "germanic",
@@ -339,6 +340,7 @@ DefineCharacter("Heingistr", { -- Source: Snorri Sturlson, "The Prose Edda", 191
 
 DefineCharacter("Sigarr", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.
 	Name = "Sigarr",
+	-- prefix is likely Old Norse "Sigr"
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "germanic",
@@ -464,8 +466,9 @@ DefineCharacter("Skeldu", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, 
 	Mother = "Frígídá" -- presumably, since she was Vóden's wife
 })
 
-DefineCharacter("Fridleif Skeldung", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
+DefineCharacter("Fridleifr Skeldung", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
 	Name = "Fridleifr",
+	-- prefix is likely the Old Norse word "Friđr"
 	FamilyName = "Skeldung", -- "Skjoldung" in the original Norse saga (from Skjöldr), here rendered as Skeldu (Proto-Germanic version of "Skjöldr") and -ung (the suffix in the original word; which should be changed for a Proto-Germanic version)
 	Gender = "male",
 	Type = "unit-germanic-warrior",

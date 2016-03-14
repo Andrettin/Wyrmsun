@@ -73,6 +73,13 @@ DefineLanguageWord("Alda", { -- source also gives the alternative form "Alþia";
 	}
 })
 
+DefineLanguageWord("Alma", { -- source also gives the alternative form "elma"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 23.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Elm"}, -- source gives the German "Ulme" as the meaning
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Ansu", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 16.
 	Language = "proto-germanic",
 	Type = "noun",
@@ -849,6 +856,13 @@ DefineLanguageWord("Mizdō", { -- Source: Sean Crist, "An Analysis of *z loss in
 	Gender = "feminine"
 })
 
+DefineLanguageWord("Mundô", { -- source also gives the alternative form "mundi"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 167.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Hand"}, -- source gives the German "Hand" as the meaning
+	Gender = "feminine"
+})
+
 DefineLanguageWord("Naχts", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "proto-germanic",
 	Type = "noun",
@@ -1177,6 +1191,13 @@ DefineLanguageWord("Uzlaga", { -- Source: Sean Crist, "An Analysis of *z loss in
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Fate"}
+})
+
+DefineLanguageWord("Vaigô", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 205.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Strength"}, -- source gives the German "Kraft" as the meaning
+	Gender = "feminine"
 })
 
 DefineLanguageWord("Vesta", { -- source also gives the alternative form "Vestra"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 204.

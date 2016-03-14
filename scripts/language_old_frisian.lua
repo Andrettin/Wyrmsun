@@ -353,6 +353,14 @@ DefineLanguageWord("Merke", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	DerivesFrom = {"proto-germanic", "noun", "Mark"}
 })
 
+DefineLanguageWord("Mund", { -- source also gives the alternative form "mond"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 167.
+	Language = "old-frisian",
+	Type = "noun",
+	Meanings = {"Protection", "Tutelage"}, -- source gives the German "Schutz, Bevormundung" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Mundô"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Nera", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
 	Language = "old-frisian",
 	Type = "verb",

@@ -257,6 +257,12 @@ DefineLanguageWord("Lupus", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	DerivesFrom = {"proto-indo-european", "noun", "Vl̥qo"}
 })
 
+DefineLanguageWord("Manus", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 167.
+	Language = "latin",
+	Type = "noun",
+	Meanings = {"Hand"} -- source gives the German "Hand" as the meaning
+})
+
 DefineLanguageWord("Margo", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 160.
 	Language = "latin",
 	Type = "noun",
