@@ -8,8 +8,6 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      buttons.ccl - Define the unit-buttons of the goblin civilization.
---
 --      (c) Copyright 2014-2016 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
@@ -259,3 +257,12 @@ DefineButton( { Pos = 4, Level = 0, Icon = "icon-masonry",
 	Description = "+20% Hit Points and +5 Armor for buildings.",
 	ForUnit = {"unit-goblin-lumber-mill"}
 } )
+
+-- Upgrades ---------------------------------------------------------
+
+DefineButton( { Pos = 1, Level = 1, Icon = "icon-goblin-headhunter",
+	Action = "experience-upgrade-to", Value = "unit-goblin-headhunter",
+	Key = "u", Hint = _("~!Upgrade to Headhunter"), Popup = "popup-unit",
+	ForUnit = {"unit-goblin-archer"}
+} )
+

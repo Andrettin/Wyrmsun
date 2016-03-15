@@ -109,7 +109,7 @@ DefineButton( { Pos = 13, Level = 0, Icon = "icon-level-up",
 		"unit-teuton-spearman", "unit-frank-spearman", "unit-teuton-archer",
 		"unit-teuton-ritter", "unit-frank-horseman",
 		"unit-gnomish-recruit", "unit-gnomish-duelist", "unit-gnomish-master-at-arms", "unit-gnomish-herbalist",
-		"unit-goblin-thief", "unit-goblin-swordsman", "unit-goblin-spearman", "unit-goblin-archer",
+		"unit-goblin-thief", "unit-goblin-swordsman", "unit-goblin-spearman", "unit-goblin-archer", "unit-goblin-headhunter",
 		"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane"
 	}
 } )
@@ -185,7 +185,7 @@ DefineButton( { Pos = 5, Level = 1, Icon = "icon-critical-strike",
 		"unit-teuton-spearman", "unit-frank-spearman",
 		"unit-teuton-archer", "unit-teuton-ritter", "unit-frank-horseman",
 		"unit-gnomish-master-at-arms",
-		"unit-goblin-thief", "unit-goblin-swordsman", "unit-goblin-spearman", "unit-goblin-archer",
+		"unit-goblin-thief", "unit-goblin-swordsman", "unit-goblin-spearman", "unit-goblin-headhunter",
 		"unit-surghan-mercenary-thane"
 	}
 } )
@@ -204,7 +204,7 @@ DefineButton( { Pos = 5, Level = 1, Icon = "icon-deadly-precision",
 		"unit-teuton-spearman", "unit-frank-spearman",
 		"unit-teuton-archer", "unit-teuton-ritter", "unit-frank-horseman",
 		"unit-gnomish-master-at-arms",
-		"unit-goblin-thief", "unit-goblin-swordsman", "unit-goblin-spearman", "unit-goblin-archer",
+		"unit-goblin-thief", "unit-goblin-swordsman", "unit-goblin-spearman", "unit-goblin-headhunter",
 		"unit-surghan-mercenary-thane"
 	}
 } )
@@ -223,7 +223,7 @@ DefineButton( { Pos = 6, Level = 1, Icon = "icon-eagle-eye",
 		"unit-teuton-spearman", "unit-frank-spearman",
 		"unit-teuton-archer", "unit-teuton-ritter", "unit-frank-horseman",
 		"unit-gnomish-master-at-arms",
-		"unit-goblin-thief", "unit-goblin-swordsman", "unit-goblin-spearman", "unit-goblin-archer",
+		"unit-goblin-thief", "unit-goblin-swordsman", "unit-goblin-spearman", "unit-goblin-headhunter",
 		"unit-surghan-mercenary-thane"
 	}
 } )
@@ -271,7 +271,7 @@ DefineButton( { Pos = 16, Level = 1, Icon = "icon-cancel",
 		"unit-teuton-spearman", "unit-frank-spearman",
 		"unit-teuton-archer", "unit-teuton-ritter", "unit-frank-horseman",
 		"unit-gnomish-recruit", "unit-gnomish-duelist", "unit-gnomish-master-at-arms", "unit-gnomish-herbalist",
-		"unit-goblin-thief", "unit-goblin-swordsman", "unit-goblin-spearman", "unit-goblin-archer",
+		"unit-goblin-thief", "unit-goblin-swordsman", "unit-goblin-spearman", "unit-goblin-archer", "unit-goblin-headhunter",
 		"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane"
 	} 
 } )
@@ -293,7 +293,7 @@ DefineButton( { Pos = 14, Level = 0, Icon = "icon-inventory",
 		"unit-teuton-spearman", "unit-frank-spearman",
 		"unit-teuton-archer", "unit-teuton-ritter", "unit-frank-horseman",
 		"unit-gnomish-recruit", "unit-gnomish-duelist", "unit-gnomish-master-at-arms", "unit-gnomish-herbalist",
-		"unit-goblin-thief", "unit-goblin-swordsman", "unit-goblin-spearman", "unit-goblin-archer",
+		"unit-goblin-thief", "unit-goblin-swordsman", "unit-goblin-spearman", "unit-goblin-archer", "unit-goblin-headhunter",
 		"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane"
 	}
 } )
@@ -312,7 +312,7 @@ DefineButton( { Pos = 16, Level = 2, Icon = "icon-cancel",
 		"unit-teuton-spearman", "unit-frank-spearman",
 		"unit-teuton-archer", "unit-teuton-ritter", "unit-frank-horseman",
 		"unit-gnomish-recruit", "unit-gnomish-duelist", "unit-gnomish-master-at-arms", "unit-gnomish-herbalist",
-		"unit-goblin-thief", "unit-goblin-swordsman", "unit-goblin-spearman", "unit-goblin-archer",
+		"unit-goblin-thief", "unit-goblin-swordsman", "unit-goblin-spearman", "unit-goblin-archer", "unit-goblin-headhunter",
 		"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane"
 	} 
 } )

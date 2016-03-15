@@ -102,7 +102,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-germanic-arrow",
 	Action = "attack",
 	Key = "a", Hint = _("~!Attack"), Popup = "popup-commands",
 	ForUnit = {
-		"unit-germanic-archer", "unit-teuton-archer", "unit-goblin-archer"
+		"unit-germanic-archer", "unit-teuton-archer", "unit-goblin-archer", "unit-goblin-headhunter"
 	}
 } )
 

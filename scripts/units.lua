@@ -78,7 +78,7 @@ Units = {
 	"upgrade-eikinskjaldi-clan-faction", "upgrade-brising-clan-faction", "upgrade-norlund-clan-faction", "upgrade-shinsplitter-clan-faction", "upgrade-shorbear-clan-faction", "upgrade-joruvellir-faction", "upgrade-kal-kartha-faction", "upgrade-knalga-faction", "upgrade-lyr-faction",
 	"unit-gnomish-worker", "unit-gnomish-recruit", "unit-gnomish-duelist", "unit-gnomish-master-at-arms", "unit-gnomish-herbalist", "unit-gnomish-caravan",
 	"unit-gnomish-town-hall", "unit-gnomish-farm", "unit-gnomish-barracks",
-	"unit-goblin-worker", "unit-goblin-swordsman", "unit-goblin-spearman", "unit-goblin-archer", "unit-goblin-thief",
+	"unit-goblin-worker", "unit-goblin-swordsman", "unit-goblin-spearman", "unit-goblin-archer", "unit-goblin-headhunter", "unit-goblin-thief",
 	"unit-goblin-war-machine", "unit-goblin-glider",
 	"unit-goblin-town-hall", "unit-goblin-mess-hall", "unit-goblin-farm", "unit-goblin-lumber-mill", "unit-goblin-smithy",
 	"upgrade-goblin-long-spear", "upgrade-goblin-pike",

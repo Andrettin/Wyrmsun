@@ -8,8 +8,6 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      units.ccl - Define the goblin unit-types.
---
 --      (c) Copyright 2014-2016 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
@@ -181,7 +179,7 @@ DefineUnitType("unit-goblin-spearman", { Name = _("Impaler"),
 DefineUnitType("unit-goblin-archer", { Name = _("Archer"),
 	Parent = "unit-template-archer",
 	Civilization = "goblin",
-	Description = _("Swift and deadly, the goblin archers hone above all the art of the ambush. Wary of being caught unprepared, they carry daggers with them, should an enemy get too close."),
+	Description = _("Swift and deadly, the goblin archers hone above all the art of the ambush."),
 	Image = {"file", "goblin/units/goblin_archer.png", "size", {72, 72}},
 	Animations = "animations-goblin-archer", Icon = "icon-goblin-archer",
 	HitPoints = 35,
@@ -194,8 +192,37 @@ DefineUnitType("unit-goblin-archer", { Name = _("Archer"),
 	WeaponClasses = {"bow"},
 	PierceDamage = true,
 	AiDrops = {"unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
-	DropAffixes = {"upgrade-item-prefix-penetrating", "upgrade-item-prefix-vicious", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-the-snigill", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-trickery"}, -- allow more magic enchantments than normal to compensate for the unit not being able to upgrade
 	Corpse = "unit-goblin-dead-body",
+	Sounds = {
+		"selected", "basic-goblin-voices-selected-group",
+		"acknowledge", "basic-goblin-voices-acknowledge",
+		"attack", "basic-goblin-voices-attack",
+		"ready", "goblin-archer-ready",
+		"help", "basic-goblin-voices-help",
+		"dead", "basic-goblin-voices-dead",
+		"hit", "dagger-attack",
+		"miss", "attack-miss"
+	}
+} )
+
+DefineUnitType("unit-goblin-headhunter", { Name = _("Headhunter"),
+	Parent = "unit-template-veteran-shooter",
+	Civilization = "goblin",
+	Description = _("Goblin headhunters are lethally accurate assassins, who revel in the suffering of their victims."),
+	Image = {"file", "goblin/units/goblin_archer.png", "size", {72, 72}},
+	Animations = "animations-goblin-archer", Icon = "icon-goblin-headhunter",
+	HitPoints = 40,
+	Accuracy = 13,
+	Evasion = 12,
+	DaySightRangeBonus = -1,
+	NightSightRangeBonus = 1,
+	Missile = "missile-goblin-arrow",
+	FireMissile = "missile-flaming-goblin-arrow",
+	Corpse = "unit-goblin-dead-body",
+	WeaponClasses = {"bow"},
+	PierceDamage = true,
+	AiDrops = {"unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	DropAffixes = {"upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-the-snigill", "upgrade-item-suffix-of-trickery"},
 	Sounds = {
 		"selected", "basic-goblin-voices-selected-group",
 		"acknowledge", "basic-goblin-voices-acknowledge",

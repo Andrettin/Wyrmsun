@@ -168,6 +168,7 @@ https://github.com/Andrettin/Wyrmsun
 - The Ritter graphics now have improved shading (modification by Jinn).
 - New Teuton iron shield unit graphics (by Jinn).
 - Brising Transports now have their own graphics (if the player has the Brising Faction Flair DLC).
+- Added Goblin Headhunter (upgrade of the Goblin Archer) (icon by Jinn).
 
 * Upgrades
 - Update to the Spatha's icon (by Exidelo).
