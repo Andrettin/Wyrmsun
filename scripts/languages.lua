@@ -360,7 +360,8 @@ DefineLanguage("portuguese", {
 })
 
 DefineLanguage("proto-celtic", {
-	Name = "Proto-Celtic"
+	Name = "Proto-Celtic",
+	SkipNameTypeInheritance = true
 })
 
 DefineLanguage("proto-germanic", {
@@ -372,7 +373,8 @@ DefineLanguage("proto-indo-european", {
 })
 
 DefineLanguage("proto-slavic", {
-	Name = "Proto-Slavic"
+	Name = "Proto-Slavic",
+	SkipNameTypeInheritance = true
 })
 
 DefineLanguage("provencal", {
@@ -380,7 +382,8 @@ DefineLanguage("provencal", {
 })
 
 DefineLanguage("russian", {
-	Name = "Russian"
+	Name = "Russian",
+	SkipNameTypeInheritance = true
 })
 
 DefineLanguage("sanskrit", {
@@ -396,7 +399,8 @@ DefineLanguage("swedish", {
 })
 
 DefineLanguage("thracian", {
-	Name = "Thracian"
+	Name = "Thracian",
+	SkipNameTypeInheritance = true
 })
 
 DefineLanguage("ukrainian", {
