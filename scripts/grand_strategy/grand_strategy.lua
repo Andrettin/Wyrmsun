@@ -1530,29 +1530,20 @@ function AddGrandStrategyBuildingButton(x, y, unit_type)
 	
 	local old_unit_type = unit_type
 	
+	if ((GetProvinceCivilization(SelectedProvince.Name) == "teuton" or GetCivilizationData(GetProvinceCivilization(SelectedProvince.Name), "ParentCivilization") == "teuton") and GetUnitTypeData(unit_type, "Class") == "town-hall" and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then
+		unit_type = "unit-germanic-town-hall"
+	elseif ((GetProvinceCivilization(SelectedProvince.Name) == "teuton" or GetCivilizationData(GetProvinceCivilization(SelectedProvince.Name), "ParentCivilization") == "teuton") and GetUnitTypeData(unit_type, "Class") == "barracks" and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then
+		unit_type = "unit-germanic-barracks"
+	elseif ((GetProvinceCivilization(SelectedProvince.Name) == "teuton" or GetCivilizationData(GetProvinceCivilization(SelectedProvince.Name), "ParentCivilization") == "teuton") and GetUnitTypeData(unit_type, "Class") == "lumber-mill" and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then -- special case for the teuton lumber mill
+		unit_type = "unit-germanic-carpenters-shop"
+	elseif ((GetProvinceCivilization(SelectedProvince.Name) == "teuton" or GetCivilizationData(GetProvinceCivilization(SelectedProvince.Name), "ParentCivilization") == "teuton") and GetUnitTypeData(unit_type, "Class") == "smithy" and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then
+		unit_type = "unit-germanic-smithy"
+	end
+	
+	b = PlayerColorImageButton("", GetFactionData(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "Color"))
 	if (GetProvinceSettlementBuilding(SelectedProvince.Name, unit_type) == false) then -- if not built, make icon gray
-		if ((GetProvinceCivilization(SelectedProvince.Name) == "teuton" or GetCivilizationData(GetProvinceCivilization(SelectedProvince.Name), "ParentCivilization") == "teuton") and GetUnitTypeData(unit_type, "Class") == "town-hall" and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then
-			unit_type = "unit-germanic-town-hall"
-		elseif ((GetProvinceCivilization(SelectedProvince.Name) == "teuton" or GetCivilizationData(GetProvinceCivilization(SelectedProvince.Name), "ParentCivilization") == "teuton") and GetUnitTypeData(unit_type, "Class") == "barracks" and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then
-			unit_type = "unit-germanic-barracks"
-		elseif ((GetProvinceCivilization(SelectedProvince.Name) == "teuton" or GetCivilizationData(GetProvinceCivilization(SelectedProvince.Name), "ParentCivilization") == "teuton") and GetUnitTypeData(unit_type, "Class") == "lumber-mill" and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then -- special case for the teuton lumber mill
-			unit_type = "unit-germanic-carpenters-shop"
-		elseif ((GetProvinceCivilization(SelectedProvince.Name) == "teuton" or GetCivilizationData(GetProvinceCivilization(SelectedProvince.Name), "ParentCivilization") == "teuton") and GetUnitTypeData(unit_type, "Class") == "smithy" and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then
-			unit_type = "unit-germanic-smithy"
-		end
-		b = ImageButton("")
-		unit_icon = CGraphic:New(string.sub(CIcon:Get(GetUnitTypeData(unit_type, "Icon")).G:getFile(), 0, -5) .. "_grayed.png", 46, 38)
+		unit_icon = CIcon:Get(GetUnitTypeData(unit_type, "Icon")).GScale
 	else
-		if ((GetProvinceCivilization(SelectedProvince.Name) == "teuton" or GetCivilizationData(GetProvinceCivilization(SelectedProvince.Name), "ParentCivilization") == "teuton") and GetUnitTypeData(unit_type, "Class") == "town-hall" and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then
-			unit_type = "unit-germanic-town-hall"
-		elseif ((GetProvinceCivilization(SelectedProvince.Name) == "teuton" or GetCivilizationData(GetProvinceCivilization(SelectedProvince.Name), "ParentCivilization") == "teuton") and GetUnitTypeData(unit_type, "Class") == "barracks" and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then
-			unit_type = "unit-germanic-barracks"
-		elseif ((GetProvinceCivilization(SelectedProvince.Name) == "teuton" or GetCivilizationData(GetProvinceCivilization(SelectedProvince.Name), "ParentCivilization") == "teuton") and GetUnitTypeData(unit_type, "Class") == "lumber-mill" and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then -- special case for the germanic lumber mill
-			unit_type = "unit-germanic-carpenters-shop"
-		elseif ((GetProvinceCivilization(SelectedProvince.Name) == "teuton" or GetCivilizationData(GetProvinceCivilization(SelectedProvince.Name), "ParentCivilization") == "teuton") and GetUnitTypeData(unit_type, "Class") == "smithy" and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then
-			unit_type = "unit-germanic-smithy"
-		end
-		b = PlayerColorImageButton("", GetFactionData(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "Color"))
 		unit_icon = CIcon:Get(GetUnitTypeData(unit_type, "Icon")).G
 	end
 	
@@ -1560,7 +1551,6 @@ function AddGrandStrategyBuildingButton(x, y, unit_type)
 	
 	unit_type = old_unit_type
 	
-	unit_icon:Load()
 	UIElements[table.getn(UIElements) + 1] = b
 	UIElements[table.getn(UIElements)]:setActionCallback(
 		function()
@@ -1690,14 +1680,13 @@ function AddGrandStrategyTechnologyButton(x, y, unit_type)
 	local b
 	local unit_icon
 	
+	b = PlayerColorImageButton("", GetFactionData(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "Color"))
+
 	if (GetFactionCurrentResearch(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name) == unit_type) then -- if already being researched, make icon gray
-		b = ImageButton("")
-		unit_icon = CGraphic:New(string.sub(CUpgrade:Get(unit_type).Icon.G:getFile(), 0, -5) .. "_grayed.png", 46, 38)
+		unit_icon = CUpgrade:Get(unit_type).Icon.GScale
 	else
-		b = PlayerColorImageButton("", GetFactionData(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "Color"))
 		unit_icon = CUpgrade:Get(unit_type).Icon.G
 	end
-	unit_icon:Load()
 	UIElements[table.getn(UIElements) + 1] = b
 	UIElements[table.getn(UIElements)]:setActionCallback(
 		function()
@@ -1782,22 +1771,20 @@ function AddGrandStrategyHeroButton(x, y, hero_name)
 	local b
 	local unit_icon
 	
+	b = PlayerColorImageButton("", GetFactionData(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "Color"))
 	if (SelectedHero == hero_name) then -- if hero is already selected, make icon gray
-		b = ImageButton("")
 		if (GrandStrategyHeroIsCustom(hero_name)) then
-			unit_icon = CGraphic:New(string.sub(CIcon:Get(GetCustomHeroData(hero_name, "Icon")).G:getFile(), 0, -5) .. "_grayed.png", 46, 38)
+			unit_icon = CIcon:Get(GetCustomHeroData(hero_name, "Icon")).GScale
 		else
-			unit_icon = CGraphic:New(string.sub(CIcon:Get(GetCharacterData(hero_name, "Icon")).G:getFile(), 0, -5) .. "_grayed.png", 46, 38)
+			unit_icon = CIcon:Get(GetCharacterData(hero_name, "Icon")).GScale
 		end
 	else
-		b = PlayerColorImageButton("", GetFactionData(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "Color"))
 		if (GrandStrategyHeroIsCustom(hero_name)) then
 			unit_icon = CIcon:Get(GetCustomHeroData(hero_name, "Icon")).G
 		else
 			unit_icon = CIcon:Get(GetCharacterData(hero_name, "Icon")).G
 		end
 	end
-	unit_icon:Load()
 	UIElements[table.getn(UIElements) + 1] = b
 	UIElements[table.getn(UIElements)]:setActionCallback(
 		function()
@@ -1837,14 +1824,12 @@ function AddGrandStrategyMercenaryButton(x, y, unit_type)
 	local b
 	local unit_icon
 	
+	b = PlayerColorImageButton("", GetFactionData(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "Color"))
 	if (GetProvinceUnderConstructionUnitQuantity(SelectedProvince.Name, unit_type) > 0) then -- if mercenary group is already being hired, make icon gray
-		b = ImageButton("")
-		unit_icon = CGraphic:New(string.sub(CIcon:Get(GetUnitTypeData(unit_type, "Icon")).G:getFile(), 0, -5) .. "_grayed.png", 46, 38)
+		unit_icon = CIcon:Get(GetUnitTypeData(unit_type, "Icon")).GScale
 	else
-		b = PlayerColorImageButton("", GetFactionData(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "Color"))
 		unit_icon = CIcon:Get(GetUnitTypeData(unit_type, "Icon")).G
 	end
-	unit_icon:Load()
 	UIElements[table.getn(UIElements) + 1] = b
 	UIElements[table.getn(UIElements)]:setActionCallback(
 		function()

@@ -568,7 +568,7 @@ if (GrandStrategyYear >= -2770) then -- estimated date
 end
 
 if (GrandStrategyYear >= -2740) then -- estimated date
-	SetFactionRuler("germanic", "Skeldung Tribe", "Fridleif Skeldung")
+	SetFactionRuler("germanic", "Skeldung Tribe", "Fridleifr Skeldung")
 end
 
 if (GrandStrategyYear >= -2700) then

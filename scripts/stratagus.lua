@@ -105,6 +105,8 @@ Preference.ProgressBarG = CGraphic:New("ui/progress_bar.png", 160, 24)
 Preference.MineNotifications = true
 Preference.NoStatusLineTooltips = true
 Preference.PauseOnLeave = false
+Preference.GrayscaleIcons = true
+Preference.SepiaForGrayscale = true
 
 Preference.ShowOrders = 2
 

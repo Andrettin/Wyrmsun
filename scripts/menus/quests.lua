@@ -228,19 +228,15 @@ function RunQuestMenu(world)
 end
 
 function addQuestIcon(quest, menu, x, y)
-	local quest_icon_file = string.sub(CIcon:Get(GetQuestData(quest, "Icon")).G:getFile(), 0, -5)
 	local quest_icon_frame = CIcon:Get(GetQuestData(quest, "Icon")).Frame
 	local questicon
 	local b
 	if (GetArrayIncludes(wyr.preferences.QuestsCompleted, quest)) then
-		questicon = CGraphic:New(quest_icon_file .. "_grayed.png")
-		questicon:Load()
-		b = ImageButton("")
+		questicon = CIcon:Get(GetQuestData(quest, "Icon")).GScale
 	else
-		questicon = CPlayerColorGraphic:New(quest_icon_file .. ".png")
-		questicon:Load()
-		b = PlayerColorImageButton("", GetQuestData(quest, "PlayerColor"))
+		questicon = CIcon:Get(GetQuestData(quest, "Icon")).G
 	end
+	b = PlayerColorImageButton("", GetQuestData(quest, "PlayerColor"))
 	local quest_icon_x_origin = (quest_icon_frame * 46) % questicon:getGraphicWidth()
 	local quest_icon_y_origin = math.floor((quest_icon_frame * 46) / questicon:getGraphicWidth()) * 38
 	b:setActionCallback(
@@ -251,12 +247,7 @@ function addQuestIcon(quest, menu, x, y)
 			quest_menu:setSize(352, 352)
     			quest_menu:setPosition((Video.Width - quest_menu:getWidth()) / 2, (Video.Height - quest_menu:getHeight()) / 2)
 			quest_menu:addLabel(_(quest), 176, 11)
-			local quest_menu_image
-			if (GetArrayIncludes(wyr.preferences.QuestsCompleted, quest)) then
-				quest_menu_image = ImageWidget(questicon)
-			else
-				quest_menu_image = PlayerColorImageWidget(questicon, GetQuestData(quest, "PlayerColor"))
-			end
+			local quest_menu_image = PlayerColorImageWidget(questicon, GetQuestData(quest, "PlayerColor"))
 			quest_menu_image:setImageOrigin(quest_icon_x_origin, quest_icon_y_origin)	
 			quest_menu:add(quest_menu_image, 153, 48)
 
