@@ -98,6 +98,7 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed issue which caused rebellions to happen with no rebel units present, when the population of the rebelling province was too low.
 - Added new tooltip to explain how to move units and attack provinces.
 - Fixed issue with terrain tile name generation which caused an occasional crash when starting a grand strategy game.
+- Added new tooltip to explain how to attack over water.
 
 * Heroes
 - An error message is now given when an invalid custom hero name is entered (if it has an invalid character or contains only spaces).

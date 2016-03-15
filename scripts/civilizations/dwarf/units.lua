@@ -382,6 +382,7 @@ DefineUnitType("unit-dwarven-guard", { Name = _("Guard"),
 		{"layer", "shield", "file", "dwarf/units/heater_shield.png"}
 	},
 	Animations = "animations-dwarven-axefighter", Icon = "icon-dwarven-guard",
+	Costs = {"time", 55, "gold", 460, "lumber", 45},
 	HitPoints = 65,
 	Armor = 2,
 	Corpse = "unit-dwarven-dead-body",

@@ -7,6 +7,7 @@ dlcs/
 mods/
 wyr/
 crash.dmp
+oaml.log
 SDL.dll
 stderr.txt
 stdout.txt
