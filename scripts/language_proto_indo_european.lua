@@ -295,7 +295,7 @@ DefineLanguageWord("Vl̥qo", { -- from the root "vel"; Source: August Fick and A
 	Meanings = {}
 })
 
-DefineLanguageWord("Wiros", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
+DefineLanguageWord("Wiros", { -- the source also later gives "wir-"; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6, 2.7.1.
 	Language = "proto-indo-european",
 	Type = "noun",
 	Meanings = {"Man"}

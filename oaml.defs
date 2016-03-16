@@ -581,45 +581,6 @@
 	</audio>
 </track>
 <track>
-	<name>TeutonTheme</name>
-	<group>map</group>
-	<subgroup>teuton</subgroup>
-	<fadeIn>1000</fadeIn>
-	<fadeOut>1000</fadeOut>
-	<xfadeIn>500</xfadeIn>
-	<xfadeOut>500</xfadeOut>
-	<audio>
-		<filename>music/loyalists.ogg</filename>
-	</audio>
-	<audio>
-		<filename>music/war_on_water_1.ogg</filename>
-	</audio>
-	<audio>
-		<filename>music/war_on_water_2.ogg</filename>
-	</audio>
-	<audio>
-		<filename>music/war_on_water_3.ogg</filename>
-	</audio>
-	<audio>
-		<filename>music/heroes_rite.ogg</filename>
-	</audio>
-	<audio>
-		<filename>music/the_king_is_dead.ogg</filename>
-	</audio>
-	<audio>
-		<filename>music/traveling_minstrels.ogg</filename>
-	</audio>
-	<audio>
-		<filename>music/casualties_of_war.ogg</filename>
-	</audio>
-	<audio>
-		<filename>music/battle-epic.ogg</filename>
-	</audio>
-	<audio>
-		<filename>music/the_adventure_begins.ogg</filename>
-	</audio>
-</track>
-<track>
 	<name>Victory</name>
 	<group>win</group>
 	<fadeIn>0</fadeIn>

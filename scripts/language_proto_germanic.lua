@@ -388,6 +388,12 @@ DefineLanguageWord("Erþō", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Meanings = {"Earth"}
 })
 
+DefineLanguageWord("Etanan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.1.
+	Language = "proto-germanic",
+	Type = "verb",
+	Meanings = {"Eat"}
+})
+
 DefineLanguageWord("Fadēr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "proto-germanic",
 	Type = "noun",
@@ -412,6 +418,12 @@ DefineLanguageWord("Ferþu", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Type = "noun",
 	Meanings = {"Fjord"}, -- source gives the German "Fjord" as the meaning
 	Gender = "masculine"
+})
+
+DefineLanguageWord("Fimfe", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.1.
+	Language = "proto-germanic",
+	Type = "numeral",
+	Number = 5 -- apparently
 })
 
 DefineLanguageWord("Flōduz", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
@@ -713,6 +725,15 @@ DefineLanguageWord("Îsarna", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Gender = "neuter"
 })
 
+DefineLanguageWord("Isti", { -- this is the singular first person present; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.1.
+	Language = "proto-germanic",
+	Type = "verb",
+	Meanings = {"Is"},
+	NumberPersonTenseMoodInflections = {
+		"singular", "first-person", "present", "indicative", "Isti"
+	}
+})
+
 DefineLanguageWord("Kenþa", { -- source also gives the alternative form "kenda"; also a participle passive meaning (in German) "geboren"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 27.
 	Language = "proto-germanic",
 	Type = "noun",
@@ -748,6 +769,12 @@ DefineLanguageWord("Kuninga", { -- source also gives the alternative form "kunun
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"King"} -- source gives the German "König" as the meaning
+})
+
+DefineLanguageWord("Kwemanan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
+	Language = "proto-germanic",
+	Type = "verb",
+	Meanings = {"Come"}
 })
 
 DefineLanguageWord("Landa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 184.
@@ -880,6 +907,12 @@ DefineLanguageWord("Neuja", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Language = "proto-germanic",
 	Type = "adjective",
 	Meanings = {"New"} -- source gives the German "neu" as the meaning
+})
+
+DefineLanguageWord("Nistǒs", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.1.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {}
 })
 
 DefineLanguageWord("Nurþa", { -- source also gives the alternative form "Nurþra"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 152.
@@ -1083,6 +1116,15 @@ DefineLanguageWord("Staina", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Steig", { -- source gives "steig-"; source also later gives "stīganan"; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.2, 2.7.1.
+	Language = "proto-germanic",
+	Type = "verb",
+	Meanings = {"Climb"},
+	Participles = {
+		"past", "Staig"
+	}
+})
+
 DefineLanguageWord("Sumara", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.
 	Language = "proto-germanic",
 	Type = "noun",
@@ -1154,6 +1196,12 @@ DefineLanguageWord("Þeudô", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Meanings = {"People"}, -- source gives the German "Volk" as the meaning
 	Gender = "feminine",
 	AffixNameTypes = {"compound", "prefix", "singular", "person-male"} -- example: "Theudariks" (from a source I lost the reference to) (presuming "Theuda" to equal "Þeudô")
+})
+
+DefineLanguageWord("Þinχanan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.1.
+	Language = "proto-germanic",
+	Type = "verb",
+	Meanings = {"Thrive"}
 })
 
 DefineLanguageWord("Þurpa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 100.
@@ -1285,6 +1333,30 @@ DefineLanguageWord("Walakuzjōn", { -- Source: Sean Crist, "An Analysis of *z lo
 	Gender = "feminine"
 })
 
+DefineLanguageWord("Wela", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.1.
+	Language = "proto-germanic",
+	Type = "adverb",
+	Meanings = {"Indeed"}
+})
+
+DefineLanguageWord("Wilda", { -- this is the singular first person past; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.1.
+	Language = "proto-germanic",
+	Type = "verb",
+	Meanings = {"Wished"},
+	NumberPersonTenseMoodInflections = {
+		"singular", "first-person", "past", "indicative", "Wilda" -- "I wished"
+	}
+})
+
+DefineLanguageWord("Witanan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.2, 2.7.1.
+	Language = "proto-germanic",
+	Type = "verb",
+	Meanings = {"Know"},
+	NumberPersonTenseMoodInflections = {
+		"plural", "first-person", "present", "indicative", "Witum"
+	}
+})
+
 DefineLanguageWord("Wīz", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 5.
 	Language = "proto-germanic",
 	Type = "pronoun",
@@ -1296,12 +1368,6 @@ DefineLanguageWord("Yēra", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Year"}
-})
-
-DefineLanguageWord("Kwemanan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
-	Language = "proto-germanic",
-	Type = "verb",
-	Meanings = {"Come"}
 })
 
 DefineLanguageWord("Laizijanã", { -- causative verb; Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 4-5.
@@ -1334,15 +1400,6 @@ DefineLanguageWord("Singwanan", { -- Source: Winfred P. Lehmann, "A Grammar of P
 	Meanings = {"Sing"}
 })
 
-DefineLanguageWord("Steig", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
-	Language = "proto-germanic",
-	Type = "verb",
-	Meanings = {"Climb"},
-	Participles = {
-		"past", "Staig"
-	}
-})
-
 DefineLanguageWord("Tawido", { -- this is the singular first person past (apparently); Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "proto-germanic", -- from the Gallehus inscription, is it really Proto-Germanic?
 	Type = "verb",
@@ -1362,15 +1419,6 @@ DefineLanguageWord("Twiznōn", { -- Source: Sean Crist, "An Analysis of *z loss 
 	Language = "proto-germanic",
 	Type = "verb",
 	Meanings = {"Twine"}
-})
-
-DefineLanguageWord("Witum", { -- this is the plural first person present; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
-	Language = "proto-germanic",
-	Type = "verb",
-	Meanings = {"Know"},
-	NumberPersonTenseMoodInflections = {
-		"plural", "first-person", "present", "indicative", "Witum"
-	}
 })
 
 DefineLanguageWord("Déwpaz", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.

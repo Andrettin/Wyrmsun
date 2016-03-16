@@ -487,10 +487,11 @@ DefineLanguageWord("Eorþe", { -- Runge gives "Eorþe", while Lehmann gives "Eor
 	Uncountable = true
 })
 
-DefineLanguageWord("Etan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 3, Subsection 1.
+DefineLanguageWord("Etan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 1.3.1, 2.7.1.
 	Language = "old-english",
 	Type = "verb",
-	Meanings = {"Eat"}
+	Meanings = {"Eat"},
+	DerivesFrom = {"proto-germanic", "verb", "Etanan"} -- as given by Lehmann
 })
 
 DefineLanguageWord("Eþþa", { -- Also given as "Oþþe", are Eþþa and Oþþe two forms of "or" in Old English, or are they just different ways to write the same word in that language?; Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
@@ -511,6 +512,13 @@ DefineLanguageWord("Fiðelestre", { -- Source: Alaric Hall, "The Meanings of Elf
 	Type = "noun",
 	Meanings = {"Fiddler"},
 	Gender = "feminine" -- presumably, given the source is talking about occupations for women
+})
+
+DefineLanguageWord("Fīf", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.1.
+	Language = "old-english",
+	Type = "numeral",
+	Number = 5,
+	DerivesFrom = {"proto-germanic", "numeral", "Fimfe"}
 })
 
 DefineLanguageWord("Fisc", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
@@ -923,6 +931,16 @@ DefineLanguageWord("Ieldran", { -- this is the plural; Source: August Fick and A
 	}
 })
 
+DefineLanguageWord("Is", { -- this is the singular first person present; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.1.
+	Language = "old-english",
+	Type = "verb",
+	Meanings = {"Is"},
+	DerivesFrom = {"proto-germanic", "verb", "Isti"},
+	NumberPersonTenseMoodInflections = {
+		"singular", "first-person", "present", "indicative", "Is"
+	}
+})
+
 DefineLanguageWord("Îsern", { -- source also gives the alternative form "Îsen" and "Îren"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 24.
 	Language = "old-english",
 	Type = "noun",
@@ -1136,6 +1154,13 @@ DefineLanguageWord("Nerian", { -- Source: Sean Crist, "An Analysis of *z loss in
 	Language = "old-english",
 	Type = "verb",
 	Meanings = {"Save", "Protect"}
+})
+
+DefineLanguageWord("Nest", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.1.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Nest"},
+	DerivesFrom = {"proto-germanic", "noun", "Nistǒs"}
 })
 
 DefineLanguageWord("Niman", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
@@ -1690,10 +1715,11 @@ DefineLanguageWord("Weg", { -- Source: Richard M. Runge, "The Phonetic Realizati
 	Meanings = {"Way"}
 })
 
-DefineLanguageWord("Wel", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
+DefineLanguageWord("Wel", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.1.
 	Language = "old-english",
 	Type = "adverb",
-	Meanings = {"Well"}
+	Meanings = {"Well", "Indeed"}, -- Runge gives "Well", while Lehmann gives "Indeed"
+	DerivesFrom = {"proto-germanic", "adverb", "Wela"} -- as given by Lehmann
 })
 
 DefineLanguageWord("Wer", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
@@ -1747,11 +1773,11 @@ DefineLanguageWord("Wihte", { -- this is the plural; Source: Alaric Hall, "The M
 	}
 })
 
-DefineLanguageWord("Witan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
+DefineLanguageWord("Witan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.1.
 	Language = "old-english",
 	Type = "verb",
 	Meanings = {"Know"},
-	DerivesFrom = {"proto-germanic", "verb", "Witum"},
+	DerivesFrom = {"proto-germanic", "verb", "Witanan"},
 	NumberPersonTenseMoodInflections = {
 		"plural", "first-person", "present", "indicative", "Witom" -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	}

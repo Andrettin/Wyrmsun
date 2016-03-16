@@ -203,6 +203,15 @@ DefineLanguageWord("Ἔσπερος", { -- source also gives the alternative for
 	DerivesFrom = {"proto-indo-european", "adverb", "Ve"}
 })
 
+DefineLanguageWord("Ésti", { -- this is the singular first person present; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.1.
+	Language = "greek",
+	Type = "verb",
+	Meanings = {"Is"},
+	NumberPersonTenseMoodInflections = {
+		"singular", "first-person", "present", "indicative", "Ésti"
+	}
+})
+
 DefineLanguageWord("Hēélios", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.2.
 	Language = "greek",
 	Type = "noun",
@@ -335,6 +344,12 @@ DefineLanguageWord("Oktṓ", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Number = 8
 })
 
+DefineLanguageWord("Ōlénē", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.1.
+	Language = "greek",
+	Type = "noun",
+	Meanings = {"Elbow"}
+})
+
 DefineLanguageWord("Omφḗ", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "greek",
 	Type = "noun",
@@ -365,6 +380,12 @@ DefineLanguageWord("Patḗr", { -- Source: Winfred P. Lehmann, "A Grammar of Pr
 	Language = "greek",
 	Type = "noun",
 	Meanings = {"Father"}
+})
+
+DefineLanguageWord("Pénte", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.1.
+	Language = "greek",
+	Type = "numeral",
+	Number = 5
 })
 
 DefineLanguageWord("Peúthomai", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Sections 3-4.

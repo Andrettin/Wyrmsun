@@ -104,6 +104,12 @@ DefineLanguageWord("Ali", { -- this is the (present?) participle; source gives "
 	-- appears in ali-svîn
 })
 
+DefineLanguageWord("Alin", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.1.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Ell"}
+})
+
 DefineLanguageWord("Almr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 23.
 	Language = "old-norse",
 	Type = "noun",
@@ -452,10 +458,11 @@ DefineLanguageWord("Ellri", { -- this is the comparative; Source: August Fick an
 	}
 })
 
-DefineLanguageWord("Eta", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
+DefineLanguageWord("Eta", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.1.
 	Language = "old-norse",
 	Type = "verb",
-	Meanings = {"Eat"}
+	Meanings = {"Eat"},
+	DerivesFrom = {"proto-germanic", "verb", "Etanan"} -- as given by Lehmann
 })
 
 DefineLanguageWord("Eystri", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 12.
@@ -470,6 +477,13 @@ DefineLanguageWord("Fé", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-G
 	Type = "noun",
 	Meanings = {"Cattle"},
 	DerivesFrom = {"proto-germanic", "noun", "Fehu"}
+})
+
+DefineLanguageWord("Fimm", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.1.
+	Language = "old-norse",
+	Type = "numeral",
+	Number = 5,
+	DerivesFrom = {"proto-germanic", "numeral", "Fimfe"}
 })
 
 DefineLanguageWord("Fiskr", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
@@ -849,6 +863,16 @@ DefineLanguageWord("Îsarn", { -- source also gives the alternative form "Jârn"
 	Meanings = {"Iron"}, -- source gives the German "Eisen" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Îsarna"},
 	Gender = "neuter"
+})
+
+DefineLanguageWord("Ist", { -- this is the singular first person present; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.1.
+	Language = "old-norse", -- source gives Old Norse Runic
+	Type = "verb",
+	Meanings = {"Is"},
+	DerivesFrom = {"proto-germanic", "verb", "Isti"},
+	NumberPersonTenseMoodInflections = {
+		"singular", "first-person", "present", "indicative", "Ist"
+	}
 })
 
 DefineLanguageWord("Jǫrmungrund", { -- the first part of this compound derives from the Proto-Germanic noun "Erman"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 18.
@@ -1328,7 +1352,7 @@ DefineLanguageWord("Steinn", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Gender = "masculine"
 })
 
-DefineLanguageWord("Stīga", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+DefineLanguageWord("Stīga", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.2, 2.7.1.
 	Language = "old-norse",
 	Type = "verb",
 	Meanings = {"Climb"},
@@ -1525,7 +1549,7 @@ DefineLanguageWord("Verða", { -- Source: Richard M. Runge, "The Phonetic Realiz
 	Meanings = {"Become"}
 })
 
-DefineLanguageWord("Verr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
+DefineLanguageWord("Verr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6, 2.7.1.
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Man"},
@@ -1548,14 +1572,31 @@ DefineLanguageWord("Vestr", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Gender = "neuter"
 })
 
-DefineLanguageWord("Vita", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
+DefineLanguageWord("Vilda", { -- this is the singular first person past; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.1.
+	Language = "old-norse",
+	Type = "verb",
+	Meanings = {"Wished"},
+	DerivesFrom = {"proto-germanic", "verb", "Wilda"},
+	NumberPersonTenseMoodInflections = {
+		"singular", "first-person", "past", "indicative", "Vilda" -- "I wished"
+	}
+})
+
+DefineLanguageWord("Vita", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.1.
 	Language = "old-norse",
 	Type = "verb",
 	Meanings = {"Know"},
-	DerivesFrom = {"proto-germanic", "verb", "Witum"},
+	DerivesFrom = {"proto-germanic", "verb", "Witanan"},
 	NumberPersonTenseMoodInflections = {
 		"plural", "first-person", "present", "indicative", "Vitom" -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	}
+})
+
+DefineLanguageWord("Wel", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.1.
+	Language = "old-norse",
+	Type = "adverb",
+	Meanings = {"Indeed"},
+	DerivesFrom = {"proto-germanic", "adverb", "Wela"}
 })
 
 DefineLanguageWord("Yfir", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.

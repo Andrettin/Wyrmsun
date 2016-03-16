@@ -2566,6 +2566,7 @@ DefineLanguageWord("Fünf", {
 	Language = "high-german",
 	Type = "numeral",
 	Number = 5,
+	DerivesFrom = {"old-high-german", "numeral", "Fimf"}, -- presumably
 	AffixNameTypes = {"compound", "prefix", "settlement"} -- example: "Fünfkirchen"
 })
 

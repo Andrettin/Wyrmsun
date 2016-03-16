@@ -430,10 +430,10 @@ DefineLanguageWord("Vesper", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	DerivesFrom = {"proto-indo-european", "adverb", "Ve"}
 })
 
-DefineLanguageWord("Vir", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
+DefineLanguageWord("Vir", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6, 2.7.1.
 	Language = "latin",
 	Type = "noun",
-	Meanings = {},
+	Meanings = {"Man"},
 	DerivesFrom = {"proto-indo-european", "noun", "Wiros"}
 })
 

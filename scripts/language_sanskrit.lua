@@ -314,6 +314,12 @@ DefineLanguageWord("Pā́dam", { -- Source: Winfred P. Lehmann, "A Grammar of Pr
 	Meanings = {"Foot"} -- meaning not explicitly given in source, but Proto-Germanic cognate "Fōts" means "Foot"
 })
 
+DefineLanguageWord("Páňca", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.1.
+	Language = "sanskrit",
+	Type = "numeral",
+	Number = 5
+})
+
 DefineLanguageWord("Páśu", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "sanskrit",
 	Type = "noun",
@@ -435,6 +441,12 @@ DefineLanguageWord("Śvetá", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Type = "adjective",
 	Meanings = {"White"},
 	DerivesFrom = {"proto-indo-european", "adjective", "Ḱweyt"}
+})
+
+DefineLanguageWord("Tanákti", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.1.
+	Language = "sanskrit",
+	Type = "verb",
+	Meanings = {"Coagulate"}
 })
 
 DefineLanguageWord("Upári", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.

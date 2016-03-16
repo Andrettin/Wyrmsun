@@ -318,6 +318,13 @@ DefineLanguageWord("Daram", { -- source also gives the alternative form "Darm"; 
 	}
 })
 
+DefineLanguageWord("Dīhan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.1.
+	Language = "old-high-german",
+	Type = "verb",
+	Meanings = {"Thrive"},
+	DerivesFrom = {"proto-germanic", "verb", "Þinχanan"}
+})
+
 DefineLanguageWord("Diot", { -- source also gives the alternative form "Deot"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 99.
 	Language = "old-high-german",
 	Type = "noun",
@@ -370,6 +377,12 @@ DefineLanguageWord("Eiie", { -- this is the dative singular; Source: Winfred P. 
 	}
 })
 
+DefineLanguageWord("Elina", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.1.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Ell"}
+})
+
 DefineLanguageWord("Êr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 11.
 	Language = "old-high-german",
 	Type = "noun",
@@ -393,10 +406,11 @@ DefineLanguageWord("Essa", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Gender = "feminine"
 })
 
-DefineLanguageWord("Ezzan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 3, Subsection 1.
+DefineLanguageWord("Ezzan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 1.3.1, 2.7.1.
 	Language = "old-high-german",
 	Type = "verb",
-	Meanings = {"Eat"}
+	Meanings = {"Eat"},
+	DerivesFrom = {"proto-germanic", "verb", "Etanan"} -- as given by Lehmann
 })
 
 DefineLanguageWord("Fehu", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
@@ -404,6 +418,13 @@ DefineLanguageWord("Fehu", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Type = "noun",
 	Meanings = {"Cattle"},
 	DerivesFrom = {"proto-germanic", "noun", "Fehu"}
+})
+
+DefineLanguageWord("Fimf", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.1.
+	Language = "old-high-german",
+	Type = "numeral",
+	Number = 5,
+	DerivesFrom = {"proto-germanic", "numeral", "Fimfe"}
 })
 
 DefineLanguageWord("Fisk", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
@@ -789,6 +810,16 @@ DefineLanguageWord("Îsarn", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Gender = "neuter"
 })
 
+DefineLanguageWord("Ist", { -- this is the singular first person present; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.1.
+	Language = "old-high-german",
+	Type = "verb",
+	Meanings = {"Is"},
+	DerivesFrom = {"proto-germanic", "verb", "Isti"},
+	NumberPersonTenseMoodInflections = {
+		"singular", "first-person", "present", "indicative", "Ist"
+	}
+})
+
 DefineLanguageWord("Jār", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-high-german",
 	Type = "noun",
@@ -1006,6 +1037,13 @@ DefineLanguageWord("Nerjan", { -- source also gives alternative forms "Nerren" a
 	Language = "old-high-german",
 	Type = "verb",
 	Meanings = {"Heal", "Sustain the Life of", "Save", "Protect", "Nourish"} -- meaning given for Middle High German, but not for Old High German, presumably because both are the same
+})
+
+DefineLanguageWord("Nest", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.1.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Nest"},
+	DerivesFrom = {"proto-germanic", "noun", "Nistǒs"}
 })
 
 DefineLanguageWord("Niuwi", { -- source also gives the alternative form "niwi"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 153.
@@ -1335,7 +1373,7 @@ DefineLanguageWord("Stein", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Gender = "masculine"
 })
 
-DefineLanguageWord("Stīgan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+DefineLanguageWord("Stīgan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.2, 2.7.1.
 	Language = "old-high-german",
 	Type = "verb",
 	Meanings = {"Climb"},
@@ -1497,13 +1535,14 @@ DefineLanguageWord("Weit", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Gender = "masculine"
 })
 
-DefineLanguageWord("Wela", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
+DefineLanguageWord("Wela", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.1.
 	Language = "old-high-german",
 	Type = "adverb",
-	Meanings = {"Well"}
+	Meanings = {"Well", "Indeed"}, -- Runge gives "Well", while Lehmann gives "Indeed"
+	DerivesFrom = {"proto-germanic", "adverb", "Wela"} -- as given by Lehmann
 })
 
-DefineLanguageWord("Wer", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6; Source: http://www.cnrtl.fr/definition/garou
+DefineLanguageWord("Wer", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6, 2.7.1; Source: http://www.cnrtl.fr/definition/garou
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Man"},
@@ -1537,11 +1576,11 @@ DefineLanguageWord("Wîz̨", { -- Fick gives "(h)wîz̨"; Source: August Fick an
 	DerivesFrom = {"proto-germanic", "adjective", "Hvîta"}
 })
 
-DefineLanguageWord("Wizzan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
+DefineLanguageWord("Wizzan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.1.
 	Language = "old-high-german",
 	Type = "verb",
 	Meanings = {"Know"},
-	DerivesFrom = {"proto-germanic", "verb", "Witum"},
+	DerivesFrom = {"proto-germanic", "verb", "Witanan"},
 	NumberPersonTenseMoodInflections = {
 		"plural", "first-person", "present", "indicative", "Wizzum" -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	}

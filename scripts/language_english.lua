@@ -1013,6 +1013,7 @@ DefineLanguageWord("Five", {
 	Language = "english",
 	Type = "numeral",
 	Number = 5,
+	DerivesFrom = {"old-english", "numeral", "Fīf"}, -- presumably
 	AffixNameTypes = {
 		"separate", "prefix", "unit-class-smithy", -- seems sensible
 		"separate", "prefix", "unit-class-lumber-mill" -- seems sensible

@@ -340,6 +340,13 @@ DefineLanguageWord("Faíhu", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	DerivesFrom = {"proto-germanic", "noun", "Fehu"}
 })
 
+DefineLanguageWord("Fimf", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.1.
+	Language = "gothic",
+	Type = "numeral",
+	Number = 5,
+	DerivesFrom = {"proto-germanic", "numeral", "Fimfe"}
+})
+
 DefineLanguageWord("Fisks", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
 	Language = "gothic",
 	Type = "noun",
@@ -528,6 +535,12 @@ DefineLanguageWord("Hilpan", { -- Source: Richard M. Runge, "The Phonetic Realiz
 	Meanings = {"Help"}
 })
 
+DefineLanguageWord("Hiri", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.1.
+	Language = "gothic",
+	Type = "verb", -- correct? source gave it as an interjection
+	Meanings = {"Come Here"}
+})
+
 DefineLanguageWord("Hlaifs", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
 	Language = "gothic",
 	Type = "noun",
@@ -575,10 +588,21 @@ DefineLanguageWord("Hʷeits", { -- Fick gives "hveits" instead; Source: Winfred 
 	DerivesFrom = {"proto-germanic", "adjective", "Hvîta"} -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 67.
 })
 
-DefineLanguageWord("Itan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 3, Subsection 1.
+DefineLanguageWord("Ist", { -- this is the singular first person present; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.1.
 	Language = "gothic",
 	Type = "verb",
-	Meanings = {"Eat"}
+	Meanings = {"Is"},
+	DerivesFrom = {"proto-germanic", "verb", "Isti"},
+	NumberPersonTenseMoodInflections = {
+		"singular", "first-person", "present", "indicative", "Ist"
+	}
+})
+
+DefineLanguageWord("Itan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 1.3.1, 2.7.1.
+	Language = "gothic",
+	Type = "verb",
+	Meanings = {"Eat"},
+	DerivesFrom = {"proto-germanic", "verb", "Etanan"} -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.1.
 })
 
 DefineLanguageWord("Izwis", { -- should be the nominative form; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 5, Subsection 1.
@@ -636,6 +660,12 @@ DefineLanguageWord("Lagg", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Type = "adjective",
 	Meanings = {"Long"}, -- derived from Proto-Germanic "Langaz", which means "Long"
 	DerivesFrom = {"proto-germanic", "adjective", "Langaz"}
+})
+
+DefineLanguageWord("Laílōt", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.1.
+	Language = "gothic",
+	Type = "verb",
+	Meanings = {"Let"}
 })
 
 DefineLanguageWord("Laisjan", { -- causative verb; Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 4-5.
@@ -982,7 +1012,7 @@ DefineLanguageWord("Stautan", { -- Source: Richard M. Runge, "The Phonetic Reali
 	Meanings = {"Push"} -- source gives translation as the German word "stoßen"
 })
 
-DefineLanguageWord("Steigan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Sections 2, 4.
+DefineLanguageWord("Steigan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.2, 2.4, 2.7.1.
 	Language = "gothic",
 	Type = "verb",
 	Meanings = {"Climb"},
@@ -1031,6 +1061,13 @@ DefineLanguageWord("Þaúrsus", { -- Source: Winfred P. Lehmann, "A Grammar of P
 	Type = "adjective",
 	Meanings = {"Dry"}, -- derived from Proto-Germanic "Þrsúz", which has the meaning of "dry"
 	DerivesFrom = {"proto-germanic", "adjective", "Þrsúz"}
+})
+
+DefineLanguageWord("Þeihan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.1.
+	Language = "gothic",
+	Type = "verb",
+	Meanings = {"Thrive"},
+	DerivesFrom = {"proto-germanic", "verb", "Þinχanan"}
 })
 
 DefineLanguageWord("Þiuda", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 99.
@@ -1087,13 +1124,14 @@ DefineLanguageWord("Vulfs", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Gender = "masculine"
 })
 
-DefineLanguageWord("Waila", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
+DefineLanguageWord("Waíla", { -- Runge gives "Waila" instead; Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.1.
 	Language = "gothic",
 	Type = "adverb",
-	Meanings = {"Well"}
+	Meanings = {"Well", "Indeed"}, -- Runge gives "Well", while Lehmann gives "Indeed"
+	DerivesFrom = {"proto-germanic", "adverb", "Wela"} -- as given by Lehmann
 })
 
-DefineLanguageWord("Wair", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
+DefineLanguageWord("Waír", { -- at an earlier point the source gives "Wair" instead; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6, 2.7.1.
 	Language = "gothic",
 	Type = "noun",
 	Meanings = {"Man"},
@@ -1127,11 +1165,21 @@ DefineLanguageWord("Wigs", { -- Source: Richard M. Runge, "The Phonetic Realizat
 	Meanings = {"Way"}
 })
 
-DefineLanguageWord("Witan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241; Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 3, Subsection 3.
+DefineLanguageWord("Wilda", { -- this is the singular first person past; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.1.
+	Language = "gothic",
+	Type = "verb",
+	Meanings = {"Wished"},
+	DerivesFrom = {"proto-germanic", "verb", "Wilda"},
+	NumberPersonTenseMoodInflections = {
+		"singular", "first-person", "past", "indicative", "Wilda" -- "I wished"
+	}
+})
+
+DefineLanguageWord("Witan", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241; Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 1.3.3, 2.7.1.
 	Language = "gothic",
 	Type = "verb",
 	Meanings = {"Know", "Keep Watch Over"},
-	DerivesFrom = {"proto-germanic", "verb", "Witum"},
+	DerivesFrom = {"proto-germanic", "verb", "Witanan"},
 	NumberPersonTenseMoodInflections = {
 		"singular", "first-person", "present", "indicative", "Wáit", -- Lehmann 1.3.3 gives "Wait", while 2.6 in that same source gives "Wáit"; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
 		"plural", "first-person", "present", "indicative", "Witum"
