@@ -121,6 +121,9 @@ https://github.com/Andrettin/Wyrmsun
 - Added Frankish Spatha.
 - The unique sword Gram is now a Frankish Spatha.
 
+* Map Editor
+- A tooltip now appears when hovering the mouse over a unit type's icon in the editor.
+
 * Miscellaneous
 - Added support for damage bonus vs. dragons. This damage bonus affects wyrms, and will affect any other draconic creatures added later to the game.
 - Fixed an issue which caused unit/building proper names to overlap with other parts of the interface if a word in them was too long.

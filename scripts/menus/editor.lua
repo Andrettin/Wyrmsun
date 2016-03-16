@@ -667,27 +667,166 @@ function RunEditorMapProperties()
 end
 
 --
+--  Change language properties from the editor
+--
+function RunEditorLanguageProperties()
+	-- TODO : find a correct backgroung menu
+	local menu = WarGameMenu(panel(5))
+	local sizeX = 352
+	local sizeY = 352
+
+	menu:resize(sizeX, sizeY)
+	menu:addLabel("Custom Language Words", sizeX / 2, 11)
+
+	local word_type_list = {"noun", "verb", "adjective", "adverb", "pronoun", "adposition", "article"}
+
+	local language_ident_list = GetLanguages()
+	table.sort(language_ident_list)
+	local language_list = {}
+	for i=1,table.getn(language_ident_list) do
+		table.insert(language_list, GetLanguageData(language_ident_list[i], "Name"))
+	end
+		
+	local current_language
+	local word_list = {}
+	local word_properties = {}
+	for i=1,table.getn(language_ident_list) do
+		word_list[i] = GetLanguageData(language_ident_list[i], "MapWords")
+	end
+	for i=1,table.getn(language_ident_list) do
+		word_properties[i] = {}
+		for j=1,table.getn(word_list[i]) do
+			word_properties[i][j] = {}
+			word_properties[i][j].Type = GetLanguageWordData(language_ident_list[i], word_list[i][j], "Type")
+		end
+	end
+	
+	CleanLanguageMapWords()
+	
+	local word_type
+	local word_type_label
+	
+	local function WordChanged()
+		word_type:setSelected(GetElementIndexFromArray(word_type_list, word_properties[current_language:getSelected() + 1][current_word:getSelected() + 1].Type) - 1)
+	end
+	
+	local function LanguageChanged()
+		current_word:setList(word_list[current_language:getSelected() + 1])
+		current_word:setSize(120, 20)
+		current_word:setSelected(0)
+		
+		local has_words = table.getn(word_list[current_language:getSelected() + 1]) > 0
+		
+		current_word:setVisible(has_words)
+		word_type:setVisible(has_words)
+		word_type_label:setVisible(has_words)
+
+		if (has_words) then
+			WordChanged()
+		end		
+	end
+
+	current_language = menu:addDropDown(language_list, (sizeX / 2) - 60, 11 + (36 * 1), function(dd) LanguageChanged() end)
+	current_language:setSize(120, 20)
+	current_language:setSelected(0)
+		
+	current_word = menu:addDropDown(word_list[current_language:getSelected() + 1], (sizeX / 2) - 60, 11 + (36 * 2), function(dd) WordChanged() end)
+	current_word:setSize(120, 20)
+		
+	word_type_label = menu:addLabel(_("Type:"), 10, 14 + 36 * 3, Fonts["game"], false)
+	word_type = menu:addDropDown(word_type_list, (sizeX / 2) - 60 - 10, 11 + 36 * 3, function(dd)
+		word_properties[current_language:getSelected() + 1][current_word:getSelected() + 1].Type = word_type_list[word_type:getSelected() + 1]
+	end)
+	word_type:setSize(236, 20)
+	word_type:setSelected(0)
+		
+	LanguageChanged()
+	
+	menu:addFullButton("Crea~!te Word", "t", 176 - (224 / 2), 352 - 40 * 2,
+		function()
+			local sub_menu = WarGameMenu(panel(3))
+			sub_menu:setSize(384, 256)
+			sub_menu:setPosition((Video.Width - sub_menu:getWidth()) / 2, (Video.Height - sub_menu:getHeight()) / 2)
+			sub_menu:addLabel(_("Create Word"), 176, 11)
+			
+			local sub_sizeX = 384
+			local sub_sizeY = 256
+
+			sub_menu:addLabel(_("Word:"), 10, 12 + 36 * 1, Fonts["game"], false)
+			local word_text = sub_menu:addTextInputField("", (sub_sizeX / 2) - 60 - 10, 11 + 36 * 1, 120)
+			
+			sub_menu:addFullButton("Crea~!te", "t", 176 - (224 / 2), sub_sizeY - 40 * 2,
+				function()
+					if (word_text:getText() == "") then
+						GenericDialog("Error", "The word cannot be empty.")
+					elseif (GetArrayIncludes(word_list[current_language:getSelected() + 1], word_text:getText()) or GetArrayIncludes(GetLanguageData(language_ident_list[current_language:getSelected() + 1], "Words"), word_text:getText())) then
+						GenericDialog("Error", "There is already another word for that language spelled that way.")
+					elseif (IsNameValidForWord(word_text:getText()) == false) then
+						GenericDialog("Error", "The word is invalid.")
+					else
+						local new_word_id = table.getn(word_list[current_language:getSelected() + 1]) + 1
+						word_list[current_language:getSelected() + 1][new_word_id] = word_text:getText()
+						word_properties[current_language:getSelected() + 1][new_word_id] = {}
+						word_properties[current_language:getSelected() + 1][new_word_id].Type = "noun"
+						
+						LanguageChanged()
+						sub_menu:stop()
+					end
+				end
+			)
+			sub_menu:addFullButton("~!Cancel", "c", 176 - (224 / 2), sub_sizeY - 40 * 1,
+				function()
+					sub_menu:stop()
+				end
+			)
+			sub_menu:run(false)
+		end
+	)
+	
+	menu:addHalfButton("~!OK", "o", 20 + 48, sizeY - 40,
+		function()
+			for i=1,table.getn(word_list) do
+				for j=1,table.getn(word_list[i]) do
+					DefineLanguageWord(word_list[i][j], {
+						Language = language_ident_list[i],
+						Type = word_properties[i][j].Type,
+						MapWord = true
+					})
+				end
+			end
+			menu:stop()
+		end
+	)
+
+	menu:addHalfButton(_("~!Cancel"), "c", 130 + 48, sizeY - 40,
+		function() menu:stop() end)
+
+	menu:run(false)
+end
+
+--
 --  Main menu in editor.
 --
 function RunInEditorMenu()
-  local menu = WarGameMenu(panel(1))
+	local menu = WarGameMenu(panel(1))
 
-  menu:addLabel("Editor Menu", 128, 11)
+	menu:addLabel("Editor Menu", 128, 11)
 
-  menu:addFullButton("Save (~<F11~>)", "f11", 16, 40, RunEditorSaveMenu)
-  local buttonEditorLoad = -- To be removed when enabled.
-  menu:addFullButton("Load (~<F12~>)", "f12", 16, 40 + 36 * 1, RunEditorLoadMenu)
-  menu:addFullButton("Map Properties (~<F5~>)", "f5", 16, 40 + 36 * 2, RunEditorMapProperties)
-  menu:addFullButton("Player Properties (~<F6~>)", "f6", 16, 40 + 36 * 3, RunEditorPlayerProperties)
+	menu:addFullButton("Save (~<F11~>)", "f11", 16, 40, RunEditorSaveMenu)
+	local buttonEditorLoad = -- To be removed when enabled.
+	menu:addFullButton("Load (~<F12~>)", "f12", 16, 40 + 36 * 1, RunEditorLoadMenu)
+	menu:addFullButton("Map Properties (~<F5~>)", "f5", 16, 40 + 36 * 2, RunEditorMapProperties)
+	menu:addFullButton("Player Properties (~<F6~>)", "f6", 16, 40 + 36 * 3, RunEditorPlayerProperties)
+	menu:addFullButton("Custom ~!Language Words", "l", 16, 40 + 36 * 4, RunEditorLanguageProperties)
 
-  buttonEditorLoad:setEnabled(false) -- To be removed when enabled.
+	buttonEditorLoad:setEnabled(false) -- To be removed when enabled.
 
-  menu:addFullButton("E~!xit to Menu", "x", 16, 40 + 36 * 4,
-    function() Editor.Running = EditorNotRunning; menu:stopAll(); end)
-  menu:addFullButton("Return to Editor (~<Esc~>)", "escape", 16, 288 - 40,
-    function() menu:stop() end)
+	menu:addFullButton("E~!xit to Menu", "x", 16, 40 + 36 * 5,
+		function() Editor.Running = EditorNotRunning; menu:stopAll(); end)
+	menu:addFullButton("Return to Editor (~<Esc~>)", "escape", 16, 288 - 40,
+		function() menu:stop() end)
 
-  menu:run(false)
+	menu:run(false)
 end
 
 --
