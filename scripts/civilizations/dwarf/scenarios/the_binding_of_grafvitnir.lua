@@ -274,6 +274,11 @@ AddTrigger(
 					end
 				end
 			end
+			
+			-- also trigger the quest's ending if Grafvitnir has died
+			if (GetPlayerData(GetFactionPlayer("Grafvitnir"), "UnitTypesCount", "unit-wyrm") == 0) then
+				return true
+			end
 		end
 		return false
 	end,

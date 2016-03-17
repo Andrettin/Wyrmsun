@@ -146,6 +146,7 @@ https://github.com/Andrettin/Wyrmsun
 - The Home of the Boii quest (Teuton) now grants 4 tech points instead of 3.
 - The Treasures of Svarinshaug quest (Dwarf) now grants 3 tech points instead of 2.
 - The Necklace of the Brisings quest (Dwarf) now grants 3 tech points instead of 2.
+- Fixed issue which prevented the player from winning The Binding of Grafvitnir quest (Dwarf) if Grafvitnir was killed.
 
 * Terrain
 - Overhaul of the forest tilesets (by Exidelo).
