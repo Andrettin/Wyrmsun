@@ -341,10 +341,11 @@ function RunGrandStrategyGameSetupMenu()
 		if (IsMouseLeftButtonPressed() == false or ignore_mouse_state) then
 			CleanGrandStrategyGame()
 			
-			if (GrandStrategyWorld ~= world_list[world:getSelected() + 1]) then
-				SetGrandStrategyWorld(world_list[world:getSelected() + 1])
-				InitializeGrandStrategyGame(false)
+			local old_world = GrandStrategyWorld
+			SetGrandStrategyWorld(world_list[world:getSelected() + 1])
+			InitializeGrandStrategyGame(false)
 				
+			if (old_world ~= world_list[world:getSelected() + 1]) then
 				if (GrandStrategyWorld == "Earth") then
 					date_minimum = -3000 -- beginning of the last wave of Indo-European migrations, which lasted until 2800 BC
 					date_maximum = -71 -- the Suebic king Ariovistus enters Gaul at the request of the Arverni and the Sequani to fight the Aedui

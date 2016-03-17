@@ -123,6 +123,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Map Editor
 - A tooltip now appears when hovering the mouse over a unit type's icon in the editor.
+- Added support for defining map-specific words (for name generation).
 
 * Miscellaneous
 - Added support for damage bonus vs. dragons. This damage bonus affects wyrms, and will affect any other draconic creatures added later to the game.
