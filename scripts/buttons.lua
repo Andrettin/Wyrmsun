@@ -28,15 +28,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
--- Load the buttons of all races
-
-Load("scripts/civilizations/celt/buttons.lua")
-Load("scripts/civilizations/dwarf/buttons.lua")
-Load("scripts/civilizations/germanic/buttons.lua")
-Load("scripts/civilizations/gnome/buttons.lua")
-Load("scripts/civilizations/goblin/buttons.lua")
-Load("scripts/civilizations/teuton/buttons.lua")
-
 ------------------------------------------------------------------------------
 --  Define unit-button.
 --
@@ -366,3 +357,12 @@ DefineButton( { Pos = 7, Level = 0, Icon = "icon-puncture",
 		"unit-goblin-thief", "unit-goblin-swordsman", "unit-goblin-spearman"
 	}
 })
+
+-- Load the buttons of all races
+
+Load("scripts/civilizations/celt/buttons.lua")
+Load("scripts/civilizations/dwarf/buttons.lua")
+Load("scripts/civilizations/germanic/buttons.lua")
+Load("scripts/civilizations/gnome/buttons.lua")
+Load("scripts/civilizations/goblin/buttons.lua")
+Load("scripts/civilizations/teuton/buttons.lua")
