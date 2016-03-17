@@ -159,11 +159,20 @@ function AddSoundOptions(menu, offx, offy, centerx, bottom)
   b:adjustSize();
   menu:addCentered(b, offx + 224, offy + 36 * 4 + 6)
 
-  local musiccheckbox = {}
-  musiccheckbox = menu:addImageCheckBox("Enabled", offx + 240, offy + 36 * 3.5,
-    function() SetMusicEnabled(musiccheckbox:isMarked()); end)
-  musiccheckbox:setMarked(IsMusicEnabled())
-  musiccheckbox:adjustSize();
+	local musiccheckbox = {}
+	musiccheckbox = menu:addImageCheckBox("Enabled", offx + 240, offy + 36 * 3.5,
+		function()
+			SetMusicEnabled(musiccheckbox:isMarked());
+			if (musiccheckbox:isMarked()) then
+				if (CurrentQuest ~= "" and GetQuestData(CurrentQuest, "MapMusic") ~= "") then
+					PlayMusicName(GetQuestData(CurrentQuest, "MapMusic"))
+				else
+					PlayMusicByGroupAndFactionRandom("map", GetPlayerData(GetThisPlayer(), "RaceName"), GetPlayerData(GetThisPlayer(), "Faction"))
+				end
+			end
+		end)
+	musiccheckbox:setMarked(IsMusicEnabled())
+	musiccheckbox:adjustSize();
 
   b = menu:addFullButton("~!OK", "o", centerx, bottom - 11 - 27,
     function()

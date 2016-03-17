@@ -473,7 +473,6 @@ end
 --  Change player properties from the editor
 --
 function RunEditorPlayerProperties()
-	-- TODO : find a correct backgroung menu
 	local menu = WarGameMenu(panel(5))
 	local sizeX = 352
 	local sizeY = 352
@@ -670,7 +669,6 @@ end
 --  Change language properties from the editor
 --
 function RunEditorLanguageProperties()
-	-- TODO : find a correct backgroung menu
 	local menu = WarGameMenu(panel(5))
 	local sizeX = 352
 	local sizeY = 352
@@ -678,9 +676,23 @@ function RunEditorLanguageProperties()
 	menu:resize(sizeX, sizeY)
 	menu:addLabel("Custom Language Words", sizeX / 2, 11)
 
-	local word_type_list = {"noun", "verb", "adjective", "adverb", "pronoun", "adposition", "article"}
+	local word_type_list = {"noun", "verb", "adjective", "pronoun", "adverb", "conjunction", "adposition", "article"}
+	local gender_list = {"masculine", "feminine", "neuter", "no-gender"}
+	local name_type_list = {"person-male", "person-female", "unit-class-barracks", "unit-class-dock", "unit-class-farm", "unit-class-lumber-mill", "unit-class-smithy", "unit-class-stables", "unit-class-town-hall", "unit-class-watch-tower", "unit-class-siege-engine"}
+	local word_junction_type_list = {"compound", "separate"}
+	local affix_type_list = {"prefix", "infix", "suffix"}
 
-	local language_ident_list = GetLanguages()
+	local language_ident_list = GetLanguages(true)
+	RemoveElementFromArray(language_ident_list, "avestan")
+	RemoveElementFromArray(language_ident_list, "basque")
+	RemoveElementFromArray(language_ident_list, "etruscan")
+	RemoveElementFromArray(language_ident_list, "greek")
+	RemoveElementFromArray(language_ident_list, "illyrian")
+	RemoveElementFromArray(language_ident_list, "minoan")
+	RemoveElementFromArray(language_ident_list, "phrygian")
+	RemoveElementFromArray(language_ident_list, "proto-slavic")
+	RemoveElementFromArray(language_ident_list, "russian")
+	RemoveElementFromArray(language_ident_list, "thracian")
 	table.sort(language_ident_list)
 	local language_list = {}
 	for i=1,table.getn(language_ident_list) do
@@ -698,6 +710,16 @@ function RunEditorLanguageProperties()
 		for j=1,table.getn(word_list[i]) do
 			word_properties[i][j] = {}
 			word_properties[i][j].Type = GetLanguageWordData(language_ident_list[i], word_list[i][j], "Type")
+			word_properties[i][j].Gender = GetLanguageWordData(language_ident_list[i], word_list[i][j], "Gender")
+			word_properties[i][j].Meaning = GetLanguageWordData(language_ident_list[i], word_list[i][j], "Meaning")
+			word_properties[i][j].NameTypes = GetLanguageWordData(language_ident_list[i], word_list[i][j], "NameTypes")
+			word_properties[i][j].AffixNameTypes = {}
+			for k=1,table.getn(word_junction_type_list) do
+				word_properties[i][j].AffixNameTypes[k] = {}
+				for n=1,table.getn(affix_type_list) do
+					word_properties[i][j].AffixNameTypes[k][n] = GetLanguageWordData(language_ident_list[i], word_list[i][j], "AffixNameTypes", word_junction_type_list[k], affix_type_list[n])
+				end
+			end
 		end
 	end
 	
@@ -705,44 +727,155 @@ function RunEditorLanguageProperties()
 	
 	local word_type
 	local word_type_label
+	local gender
+	local gender_label
+	local meaning
+	local meaning_label
+	local name_type
+	local name_type_checkbox
+	local name_type_label
+	local affix_name_type_word_junction_type
+	local affix_name_type_affix_type
+	local affix_name_type_checkbox
+	
+	local function NameTypeChanged()
+		name_type_checkbox:setMarked(GetArrayIncludes(word_properties[current_language:getSelected() + 1][current_word:getSelected() + 1].NameTypes, name_type_list[name_type:getSelected() + 1]))
+		
+		affix_name_type_checkbox:setMarked(GetArrayIncludes(word_properties[current_language:getSelected() + 1][current_word:getSelected() + 1].AffixNameTypes[affix_name_type_word_junction_type:getSelected() + 1][affix_name_type_affix_type:getSelected() + 1], name_type_list[name_type:getSelected() + 1]))
+	end
+	
+	local function WordTypeChanged()
+		local has_gender = (word_properties[current_language:getSelected() + 1][current_word:getSelected() + 1].Type == "noun" or word_properties[current_language:getSelected() + 1][current_word:getSelected() + 1].Type == "article")
+
+		if (has_gender) then
+			if (word_properties[current_language:getSelected() + 1][current_word:getSelected() + 1].Gender == "") then
+				word_properties[current_language:getSelected() + 1][current_word:getSelected() + 1].Gender = "neuter"
+			end
+			gender:setSelected(GetElementIndexFromArray(gender_list, word_properties[current_language:getSelected() + 1][current_word:getSelected() + 1].Gender) - 1)
+		else
+			word_properties[current_language:getSelected() + 1][current_word:getSelected() + 1].Gender = ""
+			gender:setSelected(0)
+		end
+		
+		gender:setVisible(has_gender)
+		gender_label:setVisible(has_gender)		
+	end
 	
 	local function WordChanged()
 		word_type:setSelected(GetElementIndexFromArray(word_type_list, word_properties[current_language:getSelected() + 1][current_word:getSelected() + 1].Type) - 1)
+		
+		WordTypeChanged()
+		
+		meaning:setText(word_properties[current_language:getSelected() + 1][current_word:getSelected() + 1].Meaning)
+		
+		NameTypeChanged()
 	end
 	
-	local function LanguageChanged()
+	local function LanguageChanged(new_word)
 		current_word:setList(word_list[current_language:getSelected() + 1])
 		current_word:setSize(120, 20)
-		current_word:setSelected(0)
+		if (new_word == nil) then
+			current_word:setSelected(0)
+		else
+			current_word:setSelected(GetElementIndexFromArray(word_list[current_language:getSelected() + 1], new_word) - 1)
+		end
 		
 		local has_words = table.getn(word_list[current_language:getSelected() + 1]) > 0
 		
 		current_word:setVisible(has_words)
 		word_type:setVisible(has_words)
 		word_type_label:setVisible(has_words)
+		meaning:setVisible(has_words)
+		meaning_label:setVisible(has_words)
+		name_type:setVisible(has_words)
+		name_type_label:setVisible(has_words)
+		name_type_checkbox:setVisible(has_words)
+		affix_name_type_word_junction_type:setVisible(has_words)
+		affix_name_type_affix_type:setVisible(has_words)
+		affix_name_type_checkbox:setVisible(has_words)
 
 		if (has_words) then
 			WordChanged()
+		else
+			gender:setVisible(false)
+			gender_label:setVisible(false)
 		end		
 	end
 
-	current_language = menu:addDropDown(language_list, (sizeX / 2) - 60, 11 + (36 * 1), function(dd) LanguageChanged() end)
+	current_language = menu:addDropDown(language_list, (sizeX / 2) - 60, 11 + (34 * 1), function(dd) LanguageChanged() end)
 	current_language:setSize(120, 20)
 	current_language:setSelected(0)
 		
-	current_word = menu:addDropDown(word_list[current_language:getSelected() + 1], (sizeX / 2) - 60, 11 + (36 * 2), function(dd) WordChanged() end)
+	current_word = menu:addDropDown(word_list[current_language:getSelected() + 1], (sizeX / 2) - 60, 11 + (34 * 2), function(dd) WordChanged() end)
 	current_word:setSize(120, 20)
 		
-	word_type_label = menu:addLabel(_("Type:"), 10, 14 + 36 * 3, Fonts["game"], false)
-	word_type = menu:addDropDown(word_type_list, (sizeX / 2) - 60 - 10, 11 + 36 * 3, function(dd)
+	word_type_label = menu:addLabel(_("Type:"), 10, 14 + 34 * 3, Fonts["game"], false)
+	word_type = menu:addDropDown(word_type_list, (sizeX / 2) - 60 - 10, 11 + 34 * 3, function(dd)
 		word_properties[current_language:getSelected() + 1][current_word:getSelected() + 1].Type = word_type_list[word_type:getSelected() + 1]
+		WordTypeChanged()
 	end)
 	word_type:setSize(236, 20)
 	word_type:setSelected(0)
-		
+
+	meaning_label = menu:addLabel(_("Meaning:"), 10, 12 + 34 * 4, Fonts["game"], false)
+	meaning = menu:addTextInputField("", (sizeX / 2) - 60 - 10, 11 + 34 * 4, 120)
+			
+	gender_label = menu:addLabel(_("Gender:"), 10, 14 + 34 * 5, Fonts["game"], false)
+	gender = menu:addDropDown(gender_list, (sizeX / 2) - 60 - 10, 11 + 34 * 5, function(dd)
+		word_properties[current_language:getSelected() + 1][current_word:getSelected() + 1].Gender = gender_list[gender:getSelected() + 1]
+	end)
+	gender:setSize(236, 20)
+	gender:setSelected(0)
+
+	name_type_label = menu:addLabel(_("Name Types:"), 10, 14 + 34 * 6, Fonts["game"], false)
+	name_type = menu:addDropDown(name_type_list, (sizeX / 2) - 60 - 10, 11 + 34 * 6, function(dd) NameTypeChanged() end)
+	name_type:setSize(236 - 19 - 10, 20)
+	name_type:setSelected(0)
+	
+	name_type_checkbox = menu:addImageCheckBox("", sizeX - 19 - 10, 11 + 34 * 6,
+	function()
+		if (name_type_checkbox:isMarked()) then
+			if (GetArrayIncludes(word_properties[current_language:getSelected() + 1][current_word:getSelected() + 1].NameTypes, name_type_list[name_type:getSelected() + 1]) == false) then
+				table.insert(word_properties[current_language:getSelected() + 1][current_word:getSelected() + 1].NameTypes, name_type_list[name_type:getSelected() + 1])
+			end
+		else
+			RemoveElementFromArray(word_properties[current_language:getSelected() + 1][current_word:getSelected() + 1].NameTypes, name_type_list[name_type:getSelected() + 1])
+		end
+	end)
+	name_type_checkbox:setMarked(false)
+
+	affix_name_type_word_junction_type = menu:addDropDown(word_junction_type_list, (sizeX / 2) - 60 - 10, 11 + 34 * 7, function(dd) NameTypeChanged() end)
+	affix_name_type_word_junction_type:setSize(((236 - 19 - 10) / 2) - 1, 20)
+	affix_name_type_word_junction_type:setSelected(0)
+	
+	affix_name_type_affix_type = menu:addDropDown(affix_type_list, (sizeX / 2) - 60 - 10 + ((236 - 19 - 10) / 2) + 2, 11 + 34 * 7, function(dd) NameTypeChanged() end)
+	affix_name_type_affix_type:setSize(((236 - 19 - 10) / 2) - 1, 20)
+	affix_name_type_affix_type:setSelected(0)
+	
+	affix_name_type_checkbox = menu:addImageCheckBox("", sizeX - 19 - 10, 11 + 34 * 7,
+	function()
+		if (affix_name_type_checkbox:isMarked()) then
+			if (GetArrayIncludes(word_properties[current_language:getSelected() + 1][current_word:getSelected() + 1].AffixNameTypes[affix_name_type_word_junction_type:getSelected() + 1][affix_name_type_affix_type:getSelected() + 1], name_type_list[name_type:getSelected() + 1]) == false) then
+				table.insert(word_properties[current_language:getSelected() + 1][current_word:getSelected() + 1].AffixNameTypes[affix_name_type_word_junction_type:getSelected() + 1][affix_name_type_affix_type:getSelected() + 1], name_type_list[name_type:getSelected() + 1])
+			end
+		else
+			RemoveElementFromArray(word_properties[current_language:getSelected() + 1][current_word:getSelected() + 1].AffixNameTypes[affix_name_type_word_junction_type:getSelected() + 1][affix_name_type_affix_type:getSelected() + 1], name_type_list[name_type:getSelected() + 1])
+		end
+	end)
+	affix_name_type_checkbox:setMarked(false)
+
+	local function listen()
+		local has_words = table.getn(word_list[current_language:getSelected() + 1]) > 0
+		if (has_words) then
+			word_properties[current_language:getSelected() + 1][current_word:getSelected() + 1].Meaning = meaning:getText()
+		end
+	end
+	local listener = LuaActionListener(listen)
+	menu:addLogicCallback(listener)
+	
 	LanguageChanged()
 	
-	menu:addFullButton("Crea~!te Word", "t", 176 - (224 / 2), 352 - 40 * 2,
+	menu:addFullButton("Crea~!te Word", "t", 176 - (224 / 2), sizeY - 36 * 2,
 		function()
 			local sub_menu = WarGameMenu(panel(3))
 			sub_menu:setSize(384, 256)
@@ -768,8 +901,18 @@ function RunEditorLanguageProperties()
 						word_list[current_language:getSelected() + 1][new_word_id] = word_text:getText()
 						word_properties[current_language:getSelected() + 1][new_word_id] = {}
 						word_properties[current_language:getSelected() + 1][new_word_id].Type = "noun"
+						word_properties[current_language:getSelected() + 1][new_word_id].Meaning = ""
+						word_properties[current_language:getSelected() + 1][new_word_id].Gender = "neuter"
+						word_properties[current_language:getSelected() + 1][new_word_id].NameTypes = {}
+						word_properties[current_language:getSelected() + 1][new_word_id].AffixNameTypes = {}
+						for k=1,table.getn(word_junction_type_list) do
+							word_properties[current_language:getSelected() + 1][new_word_id].AffixNameTypes[k] = {}
+							for n=1,table.getn(affix_type_list) do
+								word_properties[current_language:getSelected() + 1][new_word_id].AffixNameTypes[k][n] = {}
+							end
+						end
 						
-						LanguageChanged()
+						LanguageChanged(word_text:getText())
 						sub_menu:stop()
 					end
 				end
@@ -783,22 +926,41 @@ function RunEditorLanguageProperties()
 		end
 	)
 	
-	menu:addHalfButton("~!OK", "o", 20 + 48, sizeY - 40,
+	menu:addHalfButton("~!OK", "o", 20 + 48, sizeY - 36 * 1,
 		function()
 			for i=1,table.getn(word_list) do
 				for j=1,table.getn(word_list[i]) do
-					DefineLanguageWord(word_list[i][j], {
+					local word_definition = {
 						Language = language_ident_list[i],
 						Type = word_properties[i][j].Type,
+						NameTypes = word_properties[i][j].NameTypes,
 						MapWord = true
-					})
+					}
+					if (word_properties[i][j].Meaning ~= "") then
+						word_definition.Meanings = {word_properties[i][j].Meaning}
+					end
+					if (word_properties[i][j].Gender ~= "") then
+						word_definition.Gender = word_properties[i][j].Gender
+					end
+					word_definition.AffixNameTypes = {}
+					for k=1,table.getn(word_junction_type_list) do
+						for n=1,table.getn(affix_type_list) do
+							for o=1,table.getn(word_properties[i][j].AffixNameTypes[k][n]) do
+								table.insert(word_definition.AffixNameTypes, word_junction_type_list[k])
+								table.insert(word_definition.AffixNameTypes, affix_type_list[n])
+								table.insert(word_definition.AffixNameTypes, word_properties[i][j].AffixNameTypes[k][n][o])
+							end
+						end
+					end
+					
+					DefineLanguageWord(word_list[i][j], word_definition)
 				end
 			end
 			menu:stop()
 		end
 	)
 
-	menu:addHalfButton(_("~!Cancel"), "c", 130 + 48, sizeY - 40,
+	menu:addHalfButton(_("~!Cancel"), "c", 130 + 48, sizeY - 36 * 1,
 		function() menu:stop() end)
 
 	menu:run(false)
@@ -814,16 +976,16 @@ function RunInEditorMenu()
 
 	menu:addFullButton("Save (~<F11~>)", "f11", 16, 40, RunEditorSaveMenu)
 	local buttonEditorLoad = -- To be removed when enabled.
-	menu:addFullButton("Load (~<F12~>)", "f12", 16, 40 + 36 * 1, RunEditorLoadMenu)
-	menu:addFullButton("Map Properties (~<F5~>)", "f5", 16, 40 + 36 * 2, RunEditorMapProperties)
-	menu:addFullButton("Player Properties (~<F6~>)", "f6", 16, 40 + 36 * 3, RunEditorPlayerProperties)
-	menu:addFullButton("Custom ~!Language Words", "l", 16, 40 + 36 * 4, RunEditorLanguageProperties)
+	menu:addFullButton("Load (~<F12~>)", "f12", 16, 40 + 35 * 1, RunEditorLoadMenu)
+	menu:addFullButton("Map Properties (~<F5~>)", "f5", 16, 40 + 35 * 2, RunEditorMapProperties)
+	menu:addFullButton("Player Properties (~<F6~>)", "f6", 16, 40 + 35 * 3, RunEditorPlayerProperties)
+	menu:addFullButton("Custom ~!Language Words", "l", 16, 40 + 35 * 4, RunEditorLanguageProperties)
 
 	buttonEditorLoad:setEnabled(false) -- To be removed when enabled.
 
-	menu:addFullButton("E~!xit to Menu", "x", 16, 40 + 36 * 5,
+	menu:addFullButton("E~!xit to Menu", "x", 16, 40 + 35 * 5,
 		function() Editor.Running = EditorNotRunning; menu:stopAll(); end)
-	menu:addFullButton("Return to Editor (~<Esc~>)", "escape", 16, 288 - 40,
+	menu:addFullButton("Return to Editor (~<Esc~>)", "escape", 16, 40 + 35 * 6,
 		function() menu:stop() end)
 
 	menu:run(false)
