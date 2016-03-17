@@ -214,9 +214,11 @@ DefineUpgrade("upgrade-knalga-faction", {
 	Name = _("Knalga Faction")
 })
 
+--[[
 DefineUpgrade("upgrade-lyr-faction", {
 	Name = _("Lyr Faction")
 })
+--]]
 
 DefineModifier("upgrade-dwarven-broad-axe",
 	{"BasicDamage", 2},
@@ -416,11 +418,13 @@ DefineModifier("upgrade-knalga-faction",
 	{"apply-to", "unit-dwarven-axefighter"}, {"apply-to", "unit-dwarven-steelclad"}, {"apply-to", "unit-dwarven-thane"}
 )
 
+--[[
 DefineModifier("upgrade-lyr-faction",
 	{"Armor", 5}, -- Thrymgjol bonus
 	{"Points", 10},
 	{"apply-to", "unit-dwarven-sentry-tower"}, {"apply-to", "unit-dwarven-guard-tower"}
 )
+--]]
 
 DefineDependency("unit-dwarven-scout",
 	{"unit-dwarven-lumber-mill"}

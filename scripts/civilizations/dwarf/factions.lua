@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2015 by Andrettin
+--      (c) Copyright 2015-2016 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -103,10 +103,11 @@ DefineFaction("Joruvellir", {
 DefineFaction("Lyr", {
 	Civilization = "dwarf",
 	Type = "polity",
+	ParentFaction = "Brising Clan",
 	Colors = {"green", "teal"},
 	DefaultTier = "barony",
 	Titles = {
 		"monarchy", "barony", "Lordship"
 	},
-	FactionUpgrade = "upgrade-lyr-faction"
+--	FactionUpgrade = "upgrade-lyr-faction"
 })
