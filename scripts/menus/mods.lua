@@ -8,9 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      options.lua - Define the menu for options.
---
---      (c) Copyright 2015 by Andrettin
+--      (c) Copyright 2015-2016 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -207,7 +205,6 @@ function LoadDLCs()
 		u = u + 1
 	end
 
-	u = 1
 	-- get dlcs in the subdirectories of the dlcs folder
 	for j=1,table.getn(dirlist) do
 		local fileslist = ListFilesInDirectory("dlcs/" .. dirlist[j])
@@ -215,7 +212,8 @@ function LoadDLCs()
 			if (string.find(f, "main.lua")) then
 				ModPath = "dlcs/" .. dirlist[j]
 				Load(ModPath .. f)
-				u = u + 1
+			elseif (string.find(f, "oaml.defs")) then
+				LoadOAMLDefinitionsFile("dlcs/" .. dirlist[j] .. f)
 			end
 		end
 	end

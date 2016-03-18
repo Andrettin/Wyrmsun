@@ -61,6 +61,16 @@ https://github.com/Andrettin/Wyrmsun
 ############################################################
 
 -----------------------------------------------------------------------
+- 2.0.1
+-----------------------------------------------------------------------
+
+* DLCs
+- Added "The Death of Count Cadaloc" theme to the Frankish Faction Flair Pack, for when playing Frankish factions.
+
+* Multiplayer
+- Fixed a few potential crash causes for multiplayer.
+
+-----------------------------------------------------------------------
 - 2.0.0
 -----------------------------------------------------------------------
 
