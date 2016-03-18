@@ -1,5 +1,5 @@
 -- Stratagus Map Presentation
 
 DefinePlayerTypes("person","person","person","person")
-PresentMap("Aquitania", 3, 128, 128, 1)
+PresentMap("Aquitania", 4, 128, 128, 1)
 MapWorld = "Earth"

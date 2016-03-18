@@ -378,7 +378,8 @@ DefineFaction("England", {
 
 DefineFaction("Austrasia", {
 	Civilization = "teuton",
-	ParentFaction = "Francia",
+--	ParentFaction = "Francia",
+	ParentFaction = "Frank Tribe",
 	Type = "polity",
 	Language = "high-german",
 	Colors = {"pink"},
@@ -388,7 +389,8 @@ DefineFaction("Austrasia", {
 
 DefineFaction("Franconia", {
 	Civilization = "teuton",
-	ParentFaction = "Francia",
+--	ParentFaction = "Francia",
+	ParentFaction = "Frank Tribe",
 	Type = "polity",
 	Language = "high-german",
 	Colors = {"blue"},
@@ -398,7 +400,8 @@ DefineFaction("Franconia", {
 
 DefineFaction("Neustria", {
 	Civilization = "teuton",
-	ParentFaction = "Francia",
+--	ParentFaction = "Francia",
+	ParentFaction = "Frank Tribe",
 	Type = "polity",
 	Language = "high-german",
 	Colors = {"orange"},
@@ -432,7 +435,8 @@ DefineFaction("Galicia", { -- Suebi kingdom of Galicia
 
 DefineFaction("Hesse", {
 	Civilization = "teuton",
-	ParentFaction = "Francia",
+--	ParentFaction = "Francia",
+	ParentFaction = "Frank Tribe",
 	Type = "polity",
 	Language = "high-german",
 	Colors = {"black"},
@@ -453,7 +457,8 @@ DefineFaction("Holland", {
 
 DefineFaction("Holy Rome", {
 	Civilization = "teuton",
-	ParentFaction = "Francia",
+--	ParentFaction = "Francia",
+	ParentFaction = "Frank Tribe",
 	Type = "polity",
 	Language = "high-german",
 	Colors = {"yellow"},
