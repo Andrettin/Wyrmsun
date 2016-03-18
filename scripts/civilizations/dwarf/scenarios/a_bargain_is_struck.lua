@@ -547,7 +547,7 @@ AddTrigger(
 						end}
 					)
 					end},
-					"gnome/icons/duelist.png"
+					"icon-gnomish-duelist"
 				)
 				return false
 			end
@@ -623,7 +623,7 @@ AddTrigger(
 					)
 				end
 			end},
-			"gnome/icons/duelist.png"
+			"icon-gnomish-duelist"
 		)
 		return false
 	end

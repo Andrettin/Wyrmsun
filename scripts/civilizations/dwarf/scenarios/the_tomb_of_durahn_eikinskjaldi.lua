@@ -79,8 +79,7 @@ AddTrigger(
 			player,
 			{"~!Continue"},
 			{function(s)
-			end},
-			"dwarf/icons/baglur.png"
+			end}
 		)
 		return false
 	end
@@ -110,11 +109,9 @@ AddTrigger(
 				player,
 				{"~!Continue"},
 				{function(s)
-				end},
-				"dwarf/icons/durstorn.png"
+				end}
 			)
-			end},
-			"dwarf/icons/baglur.png"
+			end}
 		)
 		return false
 	end
@@ -138,8 +135,7 @@ AddTrigger(
 			player,
 			{"~!Continue"},
 			{function(s)
-			end},
-			"dwarf/icons/baglur.png"
+			end}
 		)
 		return false
 	end
@@ -163,8 +159,7 @@ AddTrigger(
 			player,
 			{"~!Continue"},
 			{function(s)
-			end},
-			"dwarf/icons/baglur.png"
+			end}
 		)
 		return false
 	end
@@ -229,8 +224,7 @@ AddTrigger(
 			player,
 			{"~!Continue"},
 			{function(s)
-			end},
-			"dwarf/icons/baglur.png"
+			end}
 		)
 		return false
 	end
@@ -254,8 +248,7 @@ AddTrigger(
 			player,
 			{"~!Continue"},
 			{function(s)
-			end},
-			"dwarf/icons/durstorn.png"
+			end}
 		)
 		return false
 	end
@@ -288,8 +281,7 @@ AddTrigger(
 					end
 					ActionVictory()
 				end
-			end},
-			"dwarf/icons/durstorn.png"
+			end}
 		)
 		return false
 	end

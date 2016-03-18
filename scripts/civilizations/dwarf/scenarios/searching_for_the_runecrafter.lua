@@ -192,23 +192,19 @@ AddTrigger(
 										end
 										AddPlayerObjective(player, "- Find Thursagan and bring him to your Mead Hall")
 										AddPlayerObjective(player, "- Rugnur, Baglur, Thursagan and the gnomish envoy must survive")
-									end},
-									"dwarf/icons/baglur.png"
+									end}
 								)
 								end},
-								"gnome/icons/duelist.png"
+								"icon-gnomish-duelist"
 							)
-							end},
-							"dwarf/icons/baglur.png"
+							end}
 						)
-						end},
-						"dwarf/icons/rugnur.png"
+						end}
 					)
-					end},
-					"dwarf/icons/baglur.png"
+					end}
 				)
 				end},
-				"gnome/icons/duelist.png"
+				"icon-gnomish-duelist"
 			)
 			end},
 			nil,
@@ -343,32 +339,28 @@ AddTrigger(
 											{"~!Continue"},
 											{function(s)
 												OrderUnit(GetFactionPlayer("Gryphon Riders"), "unit-dwarven-gryphon-rider", {0, 34}, {6, 52}, "move")
-											end},
-											"dwarf/icons/baglur.png"
+											end}
 										)
 										end},
-										"dwarf/icons/gryphon_rider.png"
+										"icon-dwarven-gryphon-rider"
 									)
-									end},
-									"dwarf/icons/rugnur.png"
+									end}
 								)
 								end},
-								"dwarf/icons/gryphon_rider.png"
+								"icon-dwarven-gryphon-rider"
 							)
-							end},
-							"dwarf/icons/rugnur.png"
+							end}
 						)
 						end},
-						"dwarf/icons/gryphon_rider.png"
+						"icon-dwarven-gryphon-rider"
 					)
-					end},
-					"dwarf/icons/baglur.png"
+					end}
 				)
 				end},
-				"gnome/icons/duelist.png"
+				"icon-gnomish-duelist"
 			)
 			end},
-			"dwarf/icons/gryphon_rider.png"
+			"icon-dwarven-gryphon-rider"
 		)
 		return false
 	end
@@ -406,11 +398,10 @@ AddTrigger(
 				player,
 				{"~!Continue"},
 				{function(s)
-				end},
-				"dwarf/icons/baglur.png"
+				end}
 			)
 			end},
-			"dwarf/icons/thursagan.png"
+			"icon-thursagan"
 		)
 		return false
 	end
@@ -536,41 +527,29 @@ AddTrigger(
 																	return false
 																end
 															)
-														end},
-														"dwarf/icons/baglur.png"
+														end}
 													)
-													end},
-													"dwarf/icons/thursagan.png"
+													end}
 												)
-												end},
-												"dwarf/icons/rugnur.png"
+												end}
 											)
-											end},
-											"dwarf/icons/thursagan.png"
+											end}
 										)
-										end},
-										"dwarf/icons/baglur.png"
+										end}
 									)
-									end},
-									"dwarf/icons/thursagan.png"
+									end}
 								)
-								end},
-								"dwarf/icons/rugnur.png"
+								end}
 							)
-							end},
-							"dwarf/icons/thursagan.png"
+							end}
 						)
-						end},
-						"dwarf/icons/baglur.png"
+						end}
 					)
-					end},
-					"dwarf/icons/thursagan.png"
+					end}
 				)
-				end},
-				"dwarf/icons/rugnur.png"
+				end}
 			)
-			end},
-			"dwarf/icons/thursagan.png"
+			end}
 		)
 		return false
 	end
@@ -741,73 +720,59 @@ AddTrigger(
 																											end
 																											ActionVictory()
 																										end
-																									end},
-																									"dwarf/icons/thursagan.png"
+																									end}
 																								)
 																								end},
-																								"dwarf/icons/durstorn.png"
+																								"icon-durstorn"
 																							)
-																							end},
-																							"dwarf/icons/rugnur.png"
+																							end}
 																						)
-																						end},
-																						"dwarf/icons/baglur.png"
+																						end}
 																					)
-																					end},
-																					"dwarf/icons/thursagan.png"
+																					end}
 																				)
 																				end},
-																				"dwarf/icons/durstorn.png"
+																				"icon-durstorn"
 																			)
-																			end},
-																			"dwarf/icons/thursagan.png"
+																			end}
 																		)
 																		end},
-																		"dwarf/icons/durstorn.png"
+																		"icon-durstorn"
 																	)
-																	end},
-																	"dwarf/icons/thursagan.png"
+																	end}
 																)
-																end},
-																"dwarf/icons/thursagan.png"
+																end}
 															)
 															end},
-															"dwarf/icons/durstorn.png"
+															"icon-durstorn"
 														)
-														end},
-														"dwarf/icons/rugnur.png"
+														end}
 													)
 													end},
-													"dwarf/icons/durstorn.png"
+													"icon-durstorn"
 												)
-												end},
-												"dwarf/icons/thursagan.png"
+												end}
 											)
 											end},
-											"dwarf/icons/durstorn.png"
+											"icon-durstorn"
 										)
-										end},
-										"dwarf/icons/thursagan.png"
+										end}
 									)
 									end},
-									"dwarf/icons/durstorn.png"
+									"icon-durstorn"
 								)
-								end},
-								"dwarf/icons/thursagan.png"
+								end}
 							)
-							end},
-							"dwarf/icons/baglur.png"
+							end}
 						)
 						end},
-						"dwarf/icons/durstorn.png"
+						"icon-durstorn"
 					)
-					end},
-					"dwarf/icons/rugnur.png"
+					end}
 				)
 				end}
 			)
-			end},
-			"dwarf/icons/thursagan.png"
+			end}
 		)
 		return false
 	end

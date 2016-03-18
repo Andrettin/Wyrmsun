@@ -101,16 +101,16 @@ AddTrigger(
 							end
 							AddPlayerObjective(player, "- Find Thjodrorir and slay him")
 						end},
-						"dwarf/icons/dwarven_steelclad.png"
+						"icon-dwarven-steelclad"
 					)
 					end},
-					"dwarf/icons/dwarven_steelclad.png"
+					"icon-dwarven-steelclad"
 				)
 				end},
-				"dwarf/icons/dwarven_steelclad.png"
+				"icon-dwarven-steelclad"
 			)
 			end},
-			"dwarf/icons/dwarven_steelclad.png"
+			"icon-dwarven-steelclad"
 		)
 		return false
 	end
@@ -147,8 +147,7 @@ AddTrigger(
 					AddPlayerObjective(player, "- Rescue Thjodrorir's remains")
 					AddPlayerObjective(player, "- Bring Fjalar and Galar to the clan's justice")
 					AddPlayerObjective(player, "- Durin must survive")
-				end},
-				"dwarf/icons/durin.png"
+				end}
 			)
 			end},
 			nil,
@@ -220,20 +219,15 @@ AddTrigger(
 							player,
 							{"~!Continue"},
 							{function(s)
-							end},
-							"dwarf/icons/dwarven_steelclad_brown_hair.png"
+							end}
 						)
-						end},
-						"dwarf/icons/durin.png"
+						end}
 					)
-					end},
-					"dwarf/icons/dwarven_steelclad.png"
+					end}
 				)
-				end},
-				"dwarf/icons/dwarven_steelclad_brown_hair.png"
+				end}
 			)
-			end},
-			"dwarf/icons/durin.png"
+			end}
 		)
 		return false
 	end
@@ -266,8 +260,7 @@ AddTrigger(
 					end
 					ActionVictory()
 				end
-			end},
-			"dwarf/icons/durin.png"
+			end}
 		)
 		return false
 	end

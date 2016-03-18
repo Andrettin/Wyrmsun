@@ -735,88 +735,88 @@ AddTrigger(
 																																									ActionVictory()
 																																								end
 																																							end},
-																																							"dwarf/icons/dwarven_steelclad.png"
+																																							"icon-dwarven-steelclad"
 																																						)
 																																						end},
-																																						"dwarf/icons/durstorn.png"
+																																						"icon-durstorn"
 																																					)
 																																					end},
-																																					"dwarf/icons/dwarven_steelclad.png"
+																																					"icon-dwarven-steelclad"
 																																				)
 																																				end},
-																																				"dwarf/icons/durstorn.png"
+																																				"icon-durstorn"
 																																			)
 																																			end}
 																																		)
 																																		end},
-																																		"dwarf/icons/durstorn.png"
+																																		"icon-durstorn"
 																																	)
 																																	end}
 																																)
 																																end},
-																																"dwarf/icons/durstorn.png"
+																																"icon-durstorn"
 																															)
 																															end},
-																															"dwarf/icons/dwarven_steelclad_gray_hair.png"
+																															"icon-dwarven-steelclad-gray-hair"
 																														)
 																														end}
 																													)
 																													end},
-																													"dwarf/icons/dwarven_steelclad_gray_hair.png"
+																													"icon-dwarven-steelclad-gray-hair"
 																												)
 																												end}
 																											)
 																											end},
-																											"dwarf/icons/dwarven_steelclad_gray_hair.png"
+																											"icon-dwarven-steelclad-gray-hair"
 																										)
 																										end},
-																										"dwarf/icons/durstorn.png"
+																										"icon-durstorn"
 																									)
 																									end}
 																								)
 																								end}
 																							)
 																							end},
-																							"dwarf/icons/dwarven_steelclad_gray_hair.png"
+																							"icon-dwarven-steelclad-gray-hair"
 																						)
 																						end}
 																					)
 																					end},
-																					"dwarf/icons/dwarven_steelclad_gray_hair.png"
+																					"icon-dwarven-steelclad-gray-hair"
 																				)
 																				end}
 																			)
 																			end}
 																		)
 																		end},
-																		"dwarf/icons/dwarven_steelclad_gray_hair.png"
+																		"icon-dwarven-steelclad-gray-hair"
 																	)
 																	end},
-																	"dwarf/icons/dwarven_steelclad.png"
+																	"icon-dwarven-steelclad"
 																)
 																end},
-																"dwarf/icons/durstorn.png"
+																"icon-durstorn"
 															)
 															end},
-															"dwarf/icons/dwarven_steelclad.png"
+															"icon-dwarven-steelclad"
 														)
 														end},
-														"dwarf/icons/durstorn.png"
+														"icon-durstorn"
 													)
 													end}
 												)
 												end},
-												"dwarf/icons/durstorn.png"
+												"icon-durstorn"
 											)
 											end}
 										)
 										end},
-										"dwarf/icons/durstorn.png"
+										"icon-durstorn"
 									)
 									end}
 								)
 								end},
-								"dwarf/icons/durstorn.png"
+								"icon-durstorn"
 							)
 							end}
 						)
@@ -1059,88 +1059,88 @@ AddTrigger(
 																																						ActionVictory()
 																																					end
 																																				end},
-																																				"dwarf/icons/dwarven_steelclad.png"
+																																				"icon-dwarven-steelclad"
 																																			)
 																																			end},
-																																			"dwarf/icons/durstorn.png"
+																																			"icon-durstorn"
 																																		)
 																																		end},
-																																		"dwarf/icons/dwarven_steelclad.png"
+																																		"icon-dwarven-steelclad"
 																																	)
 																																	end},
-																																	"dwarf/icons/durstorn.png"
+																																	"icon-durstorn"
 																																)
 																																end}
 																															)
 																															end},
-																															"dwarf/icons/durstorn.png"
+																															"icon-durstorn"
 																														)
 																														end}
 																													)
 																													end},
-																													"dwarf/icons/durstorn.png"
+																													"icon-durstorn"
 																												)
 																												end},
-																												"dwarf/icons/dwarven_steelclad_gray_hair.png"
+																												"icon-dwarven-steelclad-gray-hair"
 																											)
 																											end}
 																										)
 																										end},
-																										"dwarf/icons/dwarven_steelclad_gray_hair.png"
+																										"icon-dwarven-steelclad-gray-hair"
 																									)
 																									end}
 																								)
 																								end},
-																								"dwarf/icons/dwarven_steelclad_gray_hair.png"
+																								"icon-dwarven-steelclad-gray-hair"
 																							)
 																							end},
-																							"dwarf/icons/durstorn.png"
+																							"icon-durstorn"
 																						)
 																						end}
 																					)
 																					end}
 																				)
 																				end},
-																				"dwarf/icons/dwarven_steelclad_gray_hair.png"
+																				"icon-dwarven-steelclad-gray-hair"
 																			)
 																			end}
 																		)
 																		end},
-																		"dwarf/icons/dwarven_steelclad_gray_hair.png"
+																		"icon-dwarven-steelclad-gray-hair"
 																	)
 																	end}
 																)
 																end}
 															)
 															end},
-															"dwarf/icons/dwarven_steelclad_gray_hair.png"
+															"icon-dwarven-steelclad-gray-hair"
 														)
 														end},
-														"dwarf/icons/dwarven_steelclad.png"
+														"icon-dwarven-steelclad"
 													)
 													end},
-													"dwarf/icons/durstorn.png"
+													"icon-durstorn"
 												)
 												end},
-												"dwarf/icons/dwarven_steelclad.png"
+												"icon-dwarven-steelclad"
 											)
 											end},
-											"dwarf/icons/durstorn.png"
+											"icon-durstorn"
 										)
 										end}
 									)
 									end},
-									"dwarf/icons/durstorn.png"
+									"icon-durstorn"
 								)
 								end}
 							)
 							end},
-							"dwarf/icons/durstorn.png"
+							"icon-durstorn"
 						)
 						end}
 					)
 					end},
-					"dwarf/icons/durstorn.png"
+					"icon-durstorn"
 				)
 				end}
 			)

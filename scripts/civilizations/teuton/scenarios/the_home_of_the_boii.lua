@@ -189,11 +189,9 @@ AddTrigger(
 						AddPlayerObjective(player, "- Defeat the Boii")
 						AddPlayerObjective(player, "- Find the warriors of the other tribes (optional)")
 						AddPlayerObjective(player, "- Marbod must survive")
-					end},
-					"teuton/icons/marbod.png"
+					end}
 				)
-				end},
-				"teuton/icons/marbod.png"
+				end}
 			)
 			end}
 		)
@@ -220,8 +218,7 @@ AddTrigger(
 			player,
 			{"~!Continue"},
 			{function(s)
-			end},
-			"teuton/icons/marbod.png"
+			end}
 		)
 		return false
 	end
@@ -252,8 +249,7 @@ AddTrigger(
 			player,
 			{"~!Continue"},
 			{function(s)
-			end},
-			"teuton/icons/marbod.png"
+			end}
 		)
 		return false
 	end
@@ -286,8 +282,7 @@ AddTrigger(
 					end
 					ActionVictory()
 				end
-			end},
-			"teuton/icons/marbod.png"
+			end}
 		)
 		return false
 	end

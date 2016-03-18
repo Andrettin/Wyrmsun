@@ -584,9 +584,9 @@ function Event(speaker, event_description, player, options, option_effects, even
 			local b = PlayerColorImageWidget(event_icon, GetFactionData(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "Color"))
 			menu:add(b, 153, 48)
 		elseif (event_icon ~= nil) then
-			event_icon = CGraphic:New(event_icon)
+			event_icon = CIcon:Get(event_icon).G
 			event_icon:Load()
-			local b = ImageWidget(event_icon)
+			local b = PlayerColorImageWidget(event_icon, "gray")
 			menu:add(b, 153, 48)
 		end
 

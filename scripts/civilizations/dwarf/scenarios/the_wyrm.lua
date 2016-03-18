@@ -196,26 +196,20 @@ AddTrigger(
 											end
 											AddPlayerObjective(player, "- Get all heroes to the end of the tunnel")
 											AddPlayerObjective(player, "- Rugnur, Baglur and Thursagan must survive")
-										end},
-										"dwarf/icons/rugnur.png"
+										end}
 									)
-									end},
-									"dwarf/icons/baglur.png"
+									end}
 								)
-								end},
-								"dwarf/icons/thursagan.png"
+								end}
 							)
-							end},
-							"dwarf/icons/rugnur.png"
+							end}
 						)
 						end},
-						"dwarf/icons/gryphon_rider.png"
+						"icon-dwarven-gryphon-rider"
 					)
-					end},
-					"dwarf/icons/thursagan.png"
+					end}
 				)
-				end},
-				"dwarf/icons/rugnur.png"
+				end}
 			)
 			end},
 			nil,
@@ -362,14 +356,11 @@ AddTrigger(
 					player,
 					{"~!Continue"},
 					{function(s)
-					end},
-					"dwarf/icons/rugnur.png"
+					end}
 				)
-				end},
-				"dwarf/icons/thursagan.png"
+				end}
 			)
-			end},
-			"dwarf/icons/rugnur.png"
+			end}
 		)
 		return false
 	end
@@ -407,11 +398,9 @@ AddTrigger(
 				player,
 				{"~!Continue"},
 				{function(s)
-				end},
-				"dwarf/icons/baglur.png"
+				end}
 			)
-			end},
-			"dwarf/icons/thursagan.png"
+			end}
 		)
 		return false
 	end
@@ -451,11 +440,10 @@ AddTrigger(
 				{function(s)
 					AddPlayerObjective(player, "- Move Thursagan to the forge")
 					AddPlayerObjective(player, "- Defend Thursagan until the Scepter of Fire is complete")
-				end},
-				"dwarf/icons/thursagan.png"
+				end}
 			)
 			end},
-			"dwarf/icons/gryphon_rider.png"
+			"icon-dwarven-gryphon-rider"
 		)
 		-- there should be a version of the dialogue if another unit finds the forge, too
 		return false
@@ -484,8 +472,7 @@ AddTrigger(
 				{function(s)
 					ChangeUnitOwner(FindHero("Thursagan", GetFactionPlayer("Norlund Clan")), 15)
 					SetUnitVariable(FindHero("Thursagan", GetFactionPlayer("Norlund Clan")), "LastCycle", GameCycle)
-				end},
-				"dwarf/icons/thursagan.png"
+				end}
 			)
 		end
 		return false
@@ -560,11 +547,9 @@ AddTrigger(
 				player,
 				{"~!Continue"},
 				{function(s)
-				end},
-				"kobold/icons/kobold_footpad.png"
+				end}
 			)
-			end},
-			"kobold/icons/kobold_footpad.png"
+			end}
 		)
 		return false
 	end
@@ -624,11 +609,9 @@ AddTrigger(
 							end}
 						)
 					end
-				end},
-				"dwarf/icons/rugnur.png"
+				end}
 			)
-			end},
-			"dwarf/icons/thursagan.png"
+			end}
 		)
 		return false
 	end

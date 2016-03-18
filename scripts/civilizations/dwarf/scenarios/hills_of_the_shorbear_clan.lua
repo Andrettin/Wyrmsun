@@ -366,16 +366,14 @@ AddTrigger(
 																																--]]
 																															end}
 																														)
-																														end},
-																														"dwarf/icons/thursagan.png"
+																														end}
 																													)
-																													end},
-																													"dwarf/icons/thane_gray_hair.png"
+																													end}
 																												)
 																												end}
 																											)
 																											end},
-																											"dwarf/icons/thursagan.png",
+																											nil,
 																											nil,
 																											event_player ~= GetFactionPlayer("Norlund Clan")
 																										)
@@ -385,7 +383,7 @@ AddTrigger(
 																										event_player ~= GetFactionPlayer("Norlund Clan")
 																									)
 																									end},
-																									"dwarf/icons/thursagan.png",
+																									nil,
 																									nil,
 																									event_player ~= GetFactionPlayer("Norlund Clan")
 																								)
@@ -395,52 +393,45 @@ AddTrigger(
 																								event_player ~= GetFactionPlayer("Norlund Clan")
 																							)
 																							end},
-																							"dwarf/icons/baglur.png",
+																							nil,
 																							nil,
 																							event_player ~= GetFactionPlayer("Norlund Clan")
 																						)
 																						end},
-																						"dwarf/icons/rugnur.png",
+																						nil,
 																						nil,
 																						event_player ~= GetFactionPlayer("Norlund Clan")
 																					)
-																					end},
-																					"dwarf/icons/thane_gray_hair.png"
+																					end}
 																				)
 																				end}
 																			)
-																			end},
-																			"dwarf/icons/thane_gray_hair.png"
+																			end}
 																		)
 																		end}
 																	)
 																	end},
-																	"dwarf/icons/rugnur.png",
+																	nil,
 																	nil,
 																	event_player ~= GetFactionPlayer("Norlund Clan")
 																)
-																end},
-																"dwarf/icons/thane_gray_hair.png"
+																end}
 															)
 															end}
 														)
-														end},
-														"dwarf/icons/thane_gray_hair.png"
+														end}
 													)
 													end}
 												)
-												end},
-												"dwarf/icons/thane_gray_hair.png"
+												end}
 											)
 											end}
 										)
-										end},
-										"dwarf/icons/thane_gray_hair.png"
+										end}
 									)
 									end}
 								)
-								end},
-								"dwarf/icons/thane_gray_hair.png"
+								end}
 							)
 							end},
 							nil,
@@ -448,17 +439,17 @@ AddTrigger(
 							event_player ~= GetFactionPlayer("Norlund Clan")
 						)
 						end},
-						"dwarf/icons/thursagan.png",
+						nil,
 						nil,
 						event_player ~= GetFactionPlayer("Norlund Clan")
 					)
 					end},
-					"dwarf/icons/rugnur.png",
+					nil,
 					nil,
 					event_player ~= GetFactionPlayer("Norlund Clan")
 				)
 				end},
-				"dwarf/icons/dwarven_steelclad.png",
+				nil,
 				nil,
 				event_player ~= GetFactionPlayer("Norlund Clan")
 			)
@@ -567,34 +558,25 @@ AddTrigger(
 												{function(s)
 													RemovePlayerObjective(GetFactionPlayer("Shinsplitter Clan"), "- Defeat your enemies")
 													AddPlayerObjective(GetFactionPlayer("Shinsplitter Clan"), "- Defeat the Norlunds")
-												end},
-												"dwarf/icons/thursagan.png"
+												end}
 											)
 											end}
 										)
-										end},
-										"dwarf/icons/thane_gray_hair.png"
+										end}
 									)
-									end},
-									"dwarf/icons/thane.png"
+									end}
 								)
-								end},
-								"dwarf/icons/thane_gray_hair.png"
+								end}
 							)
-							end},
-							"dwarf/icons/thane.png"
+							end}
 						)
-						end},
-						"dwarf/icons/thane_gray_hair.png"
+						end}
 					)
-					end},
-					"dwarf/icons/rugnur.png"
+					end}
 				)
-				end},
-				"dwarf/icons/thane_gray_hair.png"
+				end}
 			)
-			end},
-			"dwarf/icons/thane.png"
+			end}
 		)
 		return false
 	end
@@ -650,8 +632,7 @@ AddTrigger(
 									{function(s)
 									end}
 								)
-								end},
-								"dwarf/icons/thursagan.png"
+								end}
 							)
 						else
 							Event(
@@ -668,8 +649,7 @@ AddTrigger(
 									{function(s)
 									end}
 								)
-								end},
-								"dwarf/icons/thursagan.png"
+								end}
 							)
 						end
 					elseif ((UnitIsAt(FindHero("Rugnur"), {26, 23}, {51, 44}) and UnitIsAt(FindHero("Baglur"), {26, 23}, {51, 44}) and UnitIsAt(FindHero("Thursagan"), {26, 23}, {51, 44}) and UnitIsAt(FindHero("Durstorn"), {26, 23}, {51, 44}) and (GetNumUnitsAt(player, "unit-gnomish-duelist", {26, 23}, {51, 44}) + GetNumUnitsAt(player, "unit-gnomish-master-at-arms", {26, 23}, {51, 44})) >= 1) == false) then
@@ -687,18 +667,15 @@ AddTrigger(
 								{function(s)
 								end}
 							)
-							end},
-							"dwarf/icons/thursagan.png"
+							end}
 						)
 					end
 					AddPlayerObjective(player, "- Have all heroes in the Shorbear caves while no enemies are in the caves")
 					end}
 				)
-				end},
-				"dwarf/icons/thursagan.png"
+				end}
 			)
-			end},
-			"dwarf/icons/durstorn.png"
+			end}
 		)
 		return false
 	end
@@ -832,8 +809,7 @@ AddTrigger(
 					)
 					end}
 				)
-			end},
-			"dwarf/icons/durstorn.png"
+			end}
 		)
 		return false
 	end
@@ -1008,80 +984,59 @@ AddTrigger(
 																												player,
 																												{"~!Continue"},
 																												{function(s)
-																												end},
-																												"dwarf/icons/thane.png"
+																												end}
 																											)
 																											end},
-																											"gnome/icons/duelist.png"
+																											"icon-gnomish-duelist"
 																										)
-																										end},
-																										"dwarf/icons/thursagan.png"
+																										end}
 																									)
 																									end},
-																									"gnome/icons/duelist.png"
+																									"icon-gnomish-duelist"
 																								)
-																								end},
-																								"dwarf/icons/rugnur.png"
+																								end}
 																							)
-																							end},
-																							"dwarf/icons/rugnur.png"
+																							end}
 																						)
 																						end},
-																						"gnome/icons/duelist.png"
+																						"icon-gnomish-duelist"
 																					)
-																					end},
-																					"dwarf/icons/rugnur.png"
+																					end}
 																				)
-																				end},
-																				"dwarf/icons/thursagan.png"
+																				end}
 																			)
 																			end},
-																			"gnome/icons/duelist.png"
+																			"icon-gnomish-duelist"
 																		)
-																		end},
-																		"dwarf/icons/thursagan.png"
+																		end}
 																	)
-																	end},
-																	"dwarf/icons/thursagan.png"
+																	end}
 																)
-																end},
-																"dwarf/icons/rugnur.png"
+																end}
 															)
-														end},
-														"dwarf/icons/durstorn.png"
+														end}
 													)
-													end},
-													"dwarf/icons/rugnur.png"
+													end}
 												)
-												end},
-												"dwarf/icons/durstorn.png"
+												end}
 											)
-											end},
-											"dwarf/icons/thursagan.png"
+											end}
 										)
-										end},
-										"dwarf/icons/durstorn.png"
+										end}
 									)
-									end},
-									"dwarf/icons/thursagan.png"
+									end}
 								)
-								end},
-								"dwarf/icons/durstorn.png"
+								end}
 							)
-							end},
-							"dwarf/icons/rugnur.png"
+							end}
 						)
-						end},
-						"dwarf/icons/durstorn.png"
+						end}
 					)
-					end},
-					"dwarf/icons/baglur.png"
+					end}
 				)
-				end},
-				"dwarf/icons/durstorn.png"
+				end}
 			)
-			end},
-			"dwarf/icons/rugnur.png"
+			end}
 		)
 		return false
 	end
@@ -1105,8 +1060,7 @@ AddTrigger(
 			player,
 			{"~!Continue"},
 			{function(s)
-			end},
-			"dwarf/icons/rugnur.png"
+			end}
 		)
 		return false
 	end
@@ -1130,8 +1084,7 @@ AddTrigger(
 			player,
 			{"~!Continue"},
 			{function(s)
-			end},
-			"dwarf/icons/rugnur.png"
+			end}
 		)
 		return false
 	end

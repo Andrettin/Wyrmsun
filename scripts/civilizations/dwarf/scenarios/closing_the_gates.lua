@@ -281,7 +281,7 @@ AddTrigger(
 						end}
 					)
 					end},
-					"gnome/icons/duelist.png"
+					"icon-gnomish-duelist"
 				)
 				end}
 			)
@@ -521,72 +521,72 @@ AddTrigger(
 																																				end
 																																			end
 																																		end},
-																																		"dwarf/icons/durstorn.png"
+																																		"icon-durstorn"
 																																	)
 																																	end},
-																																	"gnome/icons/duelist.png"
+																																	"icon-gnomish-duelist"
 																																)
 																																end}
 																															)
 																															end},
-																															"dwarf/icons/durstorn.png"
+																															"icon-durstorn"
 																														)
 																														end}
 																													)
 																													end},
-																													"dwarf/icons/durstorn.png"
+																													"icon-durstorn"
 																												)
 																												end}
 																											)
 																											end},
-																											"dwarf/icons/durstorn.png"
+																											"icon-durstorn"
 																										)
 																										end}
 																									)
 																									end},
-																									"dwarf/icons/durstorn.png"
+																									"icon-durstorn"
 																								)
 																								end}
 																							)
 																							end},
-																							"dwarf/icons/durstorn.png"
+																							"icon-durstorn"
 																						)
 																						end}
 																						)
 																					end},
-																					"dwarf/icons/pathfinder.png"
+																					"icon-dwarven-pathfinder"
 																				)
 																				end}
 																			)
 																			end},
-																			"dwarf/icons/dwarven_steelclad.png"
+																			"icon-dwarven-steelclad"
 																		)
 																		end}
 																	)
 																	end},
-																	"dwarf/icons/durstorn.png"
+																	"icon-durstorn"
 																)
 																end}
 															)
 															end},
-															"dwarf/icons/durstorn.png"
+															"icon-durstorn"
 														)
 														end}
 													)
 													end},
-													"dwarf/icons/durstorn.png"
+													"icon-durstorn"
 												)
 												end},
-												"dwarf/icons/dwarven_steelclad.png"
+												"icon-dwarven-steelclad"
 											)
 											end},
-											"dwarf/icons/durstorn.png"
+											"icon-durstorn"
 										)
 										end},
-										"dwarf/icons/pathfinder.png"
+										"icon-dwarven-pathfinder"
 									)
 									end},
-									"dwarf/icons/durstorn.png"
+									"icon-durstorn"
 								)
 								end}
 							)
@@ -595,7 +595,7 @@ AddTrigger(
 						end}
 					)
 					end},
-					"dwarf/icons/dwarven_steelclad.png"
+					"icon-dwarven-steelclad"
 				)
 				end}
 			)
