@@ -37,7 +37,7 @@ DebugPrint("Stratagus default config file loading ...\n")
 wyrmsun = {}
 
 wyrmsun.Name = "Wyrmsun"
-wyrmsun.Version = "2.0.0"
+wyrmsun.Version = "2.0.1"
 wyrmsun.Homepage = ""
 wyrmsun.Licence = "GPL 2.0"
 wyrmsun.Copyright = "Copyright (c) 2013-2016 by Andrettin"
@@ -1656,7 +1656,7 @@ function PersistencyUpdates()
 	end
 	
 	for i=1,table.getn(wyr.preferences.EnabledMods) do
-		if (not string.find(wyr.preferences.EnabledMods[i], ".sms.gz") and not string.find(wyr.preferences.EnabledMods[i], ".lua")) then
+		if not (CanAccessFile(wyr.preferences.EnabledMods[i])) then
 			wyr.preferences.EnabledMods[i] = nil
 		end
 		SavePreferences()
