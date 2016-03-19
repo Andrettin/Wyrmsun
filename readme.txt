@@ -61,11 +61,14 @@ https://github.com/Andrettin/Wyrmsun
 ############################################################
 
 -----------------------------------------------------------------------
-- 2.0.1
+- 2.1.0
 -----------------------------------------------------------------------
 
 * DLCs
 - Added "The Death of Count Cadaloc" music theme to the Frankish Faction Flair Pack, for when playing Frankish factions (by Marcelo Fernandez) (http://www.marcelofernandezmusic.com).
+
+* Map Editor
+- Added support for saving maps as mods, which can be loaded through the Mods screen to alter unit stats and words (for name generation).
 
 * Multiplayer
 - Fixed a few potential crash causes for multiplayer.

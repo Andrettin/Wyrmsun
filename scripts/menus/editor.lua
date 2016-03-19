@@ -277,6 +277,7 @@ local function RunEditorNewMapMenu()
 		end
 		menu:stop()
 		StartEditor(nil, false)
+		ReloadMods()
 		RunEditorMenu()
 	end)
 	menu:addFullButton(_("~!Cancel"), "c", offx + 208, offy + 104 + 36 * 6, function() menu:stop(1); RunEditorMenu() end)
@@ -297,22 +298,26 @@ local function RunEditorLoadMapMenu(is_mod)
 	-- update label content
 	local function MapChanged()
 		if not (is_mod) then
+			labelDescription:setCaption("Name: " .. _(mapinfo.description))
+			labelDescription:adjustSize()
+
 			labelMapName:setCaption("File: " .. string.sub(mapname, 6))
 			labelMapName:adjustSize()
 		
 			labelNbPlayer:setCaption("Players: " .. mapinfo.nplayers)
 			labelNbPlayer:adjustSize()
 
-			labelDescription:setCaption("Scenario: " .. _(mapinfo.description))
-			labelDescription:adjustSize()
-
 			labelMapSize:setCaption("Size: " .. mapinfo.w .. " x " .. mapinfo.h)
 			labelMapSize:adjustSize()
 		else
 			if (modname ~= "") then
+				labelDescription:setCaption("Name: " .. _(mapinfo.description))
+				labelDescription:adjustSize()
+
 				labelMapName:setCaption("File: " .. string.sub(modname, 6))
 				edit_button:setEnabled(true)
 			else
+				labelDescription:setCaption("")
 				labelMapName:setCaption("")
 				edit_button:setEnabled(false)
 			end
@@ -320,8 +325,8 @@ local function RunEditorLoadMapMenu(is_mod)
 		end
 	end
 
-	labelMapName = menu:addLabel("", offx + 208, offy + 104 + 36 * 0, Fonts["game"], false)
-	labelDescription = menu:addLabel("", offx + 208, offy + 104 + 32 * 1, Fonts["game"], false)
+	labelDescription = menu:addLabel("", offx + 208, offy + 104 + 32 * 0, Fonts["game"], false)
+	labelMapName = menu:addLabel("", offx + 208, offy + 104 + 36 * 1, Fonts["game"], false)
 	labelNbPlayer = menu:addLabel("", offx + 208, offy + 104 + 32 * 2, Fonts["game"], false)
 	labelMapSize = menu:addLabel("", offx + 208, offy + 104 + 32 * 3, Fonts["game"], false)
 
@@ -343,7 +348,7 @@ local function RunEditorLoadMapMenu(is_mod)
 			else
 				local oldmapname = modname
 				RunSelectScenarioMenu(is_mod)
-				if (modname ~= oldmapname) then
+				if (modname ~= oldmapname and modname ~= "") then
 					GetMapInfo(modname)
 					MapChanged()
 				end
@@ -351,21 +356,25 @@ local function RunEditorLoadMapMenu(is_mod)
 		end)
 
 	if not (is_mod) then
-		edit_button = menu:addFullButton(_("~!Edit Map"), "e", offx + 208, offy + 104 + 36 * 5, function() menu:stop(); StartEditor(mapname, false); RunEditorMenu() end)
+		edit_button = menu:addFullButton(_("~!Edit Map"), "e", offx + 208, offy + 104 + 36 * 5, function() menu:stop(); StartEditor(mapname, false); ReloadMods(); RunEditorMenu() end)
 	else
 		edit_button = menu:addFullButton(_("~!Edit Mod"), "e", offx + 208, offy + 104 + 36 * 5, function() menu:stop();
 			Map.Info.MapWidth = 32
 			Map.Info.MapHeight = 32
 			LoadTileModels("scripts/tilesets/" .. string.gsub(editor_tilesets[1], "-", "_") .. ".lua")
 			StartEditor(modname, true);
-		RunEditorMenu() end)
+			ReloadMods();
+			RunEditorMenu()
+		end)
 	end
 	menu:addFullButton(_("~!Cancel"), "c", offx + 208, offy + 104 + 36 * 6, function() menu:stop(1); RunEditorMenu() end)
 
 	if not (is_mod) then
 		GetMapInfo(mapname)
 	else
-		GetMapInfo(modname)
+		if (modname ~= "") then
+			GetMapInfo(modname)
+		end
 	end
 	MapChanged()
 	return menu:run()
@@ -534,6 +543,7 @@ function RunEditorLoadMenu()
 --  if (buttonStatut == 1) then
 --    EditorLoadMap(mapname)
 --    StartEditor(mapname, false)
+--	  ReloadMods()
 --  end
 --]]
 end

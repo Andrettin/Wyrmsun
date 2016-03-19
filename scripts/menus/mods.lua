@@ -36,6 +36,7 @@ function RunModsMenu(selected_mod)
 	local b
 	local mod_list = {}
 	local mod_dd
+	local mod_enabled
 
 	-- load the mods
 	local mods = {}
@@ -45,6 +46,25 @@ function RunModsMenu(selected_mod)
 		local f
 		local u = 1
 
+		-- get the mods saved from the editor
+		local fileslist = ListFilesInDirectory(ModDirectories[mod_dir_i])
+		for i,f in ipairs(fileslist) do
+			Map.Info.Description = ""
+			if (string.find(f, ".smp.gz")) then
+				local mod_location = ModDirectories[mod_dir_i] .. f
+				Load(mod_location)
+				mod_location = tostring(string.gsub(mod_location, ".smp.gz", ".sms.gz"))
+				if (GetArrayIncludes(mods, mod_location) == false) then
+					mods[table.getn(mods) + 1] = mod_location
+					if (Map.Info.Description ~= "") then
+						table.insert(mod_list, Map.Info.Description)
+					else
+						table.insert(mod_list, mod_location)
+					end
+				end
+			end
+		end
+		
 		-- list the subdirectories in the mods folder
 		local dirlist = {}
 		local dirs = ListDirsInDirectory(ModDirectories[mod_dir_i])
@@ -53,10 +73,9 @@ function RunModsMenu(selected_mod)
 			u = u + 1
 		end
 
-		u = 1
 		-- get mods in the subdirectories of the mods folder
 		for j=1,table.getn(dirlist) do
-			local fileslist = ListFilesInDirectory(ModDirectories[mod_dir_i] .. dirlist[j])
+			fileslist = ListFilesInDirectory(ModDirectories[mod_dir_i] .. dirlist[j])
 			for i,f in ipairs(fileslist) do
 				ModName = ""
 				if (string.find(f, "info.lua")) then
@@ -66,7 +85,6 @@ function RunModsMenu(selected_mod)
 						mods[table.getn(mods) + 1] = mod_location
 						table.insert(mod_list, ModName)
 					end
-					u = u + 1
 				end
 			end
 		end
@@ -79,7 +97,11 @@ function RunModsMenu(selected_mod)
 			ModName = ""
 			ModDescription = ""
 			ModDependencies = nil
+			Map.Info.Description = ""
 			Load(mods[mod_dd:getSelected() + 1])
+			if (Map.Info.Description ~= "") then
+				ModName = Map.Info.Description
+			end
 			menu:stop()
 			RunModsMenu(mod_dd:getSelected())
 		end
@@ -92,7 +114,9 @@ function RunModsMenu(selected_mod)
 		ModDependencies = nil
 		Load(mods[selected_mod + 1])
 
-		menu:addMultiLineLabel(_("Description: " .. ModDescription), ((Video.Width - 640) / 2) + 32, offy + 34 + 60*1.5, Fonts["game"], false, Video.Width - (Video.Width - 640) - 64)
+		if (ModDescription ~= "") then
+			menu:addMultiLineLabel(_("Description: " .. ModDescription), ((Video.Width - 640) / 2) + 32, offy + 34 + 60*1.5, Fonts["game"], false, Video.Width - (Video.Width - 640) - 64)
+		end
 
 		if (ModDependencies ~= nil) then
 			local dependencies_string = "Dependencies: "
@@ -105,12 +129,22 @@ function RunModsMenu(selected_mod)
 			menu:addLabel(_(dependencies_string), Video.Width / 2, offy + 34 + 60*2.5, Fonts["game"], true)
 		end
 
-		local mod_enabled = {}
-		mod_enabled = menu:addImageCheckBox("Enabled (Restart Required)", offx + 48, offy + 36 * 8.5,
+		local enabled_label
+		if (string.find(mods[selected_mod + 1], ".sms.gz")) then
+			enabled_label = "Enabled"
+		else
+			enabled_label = "Enabled (Restart Required)"
+		end
+		
+		
+		mod_enabled = menu:addImageCheckBox(enabled_label, offx + 48, offy + 36 * 8.5,
 			function()
-				if (GetArrayIncludes(wyr.preferences.EnabledMods, mod_list[mod_dd:getSelected() + 1])) then
-					RemoveElementFromArray(wyr.preferences.EnabledMods, mod_list[mod_dd:getSelected() + 1])
+				if (GetArrayIncludes(wyr.preferences.EnabledMods, mods[mod_dd:getSelected() + 1])) then
+					RemoveElementFromArray(wyr.preferences.EnabledMods, mods[mod_dd:getSelected() + 1])
 					SavePreferences()
+					if (string.find(mods[selected_mod + 1], ".sms.gz")) then
+						DisableMod(mods[selected_mod + 1])
+					end
 				else
 					local has_required_dependencies = true
 					if (ModDependencies ~= nil) then
@@ -121,14 +155,17 @@ function RunModsMenu(selected_mod)
 						end
 					end
 					if (has_required_dependencies) then
-						table.insert(wyr.preferences.EnabledMods, mod_list[mod_dd:getSelected() + 1])
+						table.insert(wyr.preferences.EnabledMods, mods[mod_dd:getSelected() + 1])
 						SavePreferences()
+						if (string.find(mods[selected_mod + 1], ".sms.gz")) then
+							Load(mods[selected_mod + 1])
+						end
 					end
 				end
-				mod_enabled:setMarked(GetArrayIncludes(wyr.preferences.EnabledMods, mod_list[mod_dd:getSelected() + 1]))
+				mod_enabled:setMarked(GetArrayIncludes(wyr.preferences.EnabledMods, mods[mod_dd:getSelected() + 1]))
 			end
 		)
-		mod_enabled:setMarked(GetArrayIncludes(wyr.preferences.EnabledMods, mod_list[mod_dd:getSelected() + 1]))
+		mod_enabled:setMarked(GetArrayIncludes(wyr.preferences.EnabledMods, mods[mod_dd:getSelected() + 1]))
 		mod_enabled:adjustSize()
 	end
 
@@ -147,44 +184,16 @@ function LoadMods()
 	Mods = {}
 	local mod_list = {}
   
-	for mod_dir_i=1,table.getn(ModDirectories) do
-		local i
-		local f
-		local u = 1
-
-		-- list the subdirectories in the mods folder
-		local dirlist = {}
-		local dirs = ListDirsInDirectory(ModDirectories[mod_dir_i])
-		for i,f in ipairs(dirs) do
-			dirlist[u] = f .. "/"
-			u = u + 1
+	for i=1,table.getn(wyr.preferences.EnabledMods) do
+		if (string.find(wyr.preferences.EnabledMods[i], ".sms.gz")) then
+			Load(wyr.preferences.EnabledMods[i])
+		else
+			ModName = ""
+			ModPath = tostring(string.gsub(wyr.preferences.EnabledMods[i], "info.lua", ""))
+			Load(wyr.preferences.EnabledMods[i])
+			table.insert(MapDirectories, tostring(string.gsub(wyr.preferences.EnabledMods[i], "info.lua", "maps/")))
+			Load(tostring(string.gsub(wyr.preferences.EnabledMods[i], "info", "main")))
 		end
-
-		u = 1
-		-- get mods in the subdirectories of the mods folder
-		for j=1,table.getn(dirlist) do
-			local fileslist = ListFilesInDirectory(ModDirectories[mod_dir_i] .. dirlist[j])
-			for i,f in ipairs(fileslist) do
-				ModName = ""
-				if (string.find(f, "info.lua")) then
-					local mod_location = ModDirectories[mod_dir_i] .. dirlist[j] .. f
-					Load(mod_location)
-					if (GetArrayIncludes(mod_list, ModName) == false and GetArrayIncludes(wyr.preferences.EnabledMods, ModName)) then
-						Mods[table.getn(Mods) + 1] = mod_location
-						table.insert(mod_list, ModName)
-					end
-					u = u + 1
-				end
-			end
-		end
-	end
-
-	for i=1,table.getn(Mods) do
-		ModName = ""
-		ModPath = tostring(string.gsub(Mods[i], "info.lua", ""))
-		Load(Mods[i])
-		table.insert(MapDirectories, tostring(string.gsub(Mods[i], "info.lua", "maps/")))
-		Load(tostring(string.gsub(Mods[i], "info", "main")))
 	end
 	
 	ModPath = ""
@@ -219,4 +228,18 @@ function LoadDLCs()
 	end
 	
 	ModPath = ""
+end
+
+function ReloadMods() -- used after the editor runs, to reload mods made in the map editor
+	for i=1,table.getn(wyr.preferences.EnabledMods) do
+		if (string.find(wyr.preferences.EnabledMods[i], ".sms.gz")) then
+			DisableMod(wyr.preferences.EnabledMods[i])
+		end
+	end
+
+	for i=1,table.getn(wyr.preferences.EnabledMods) do
+		if (string.find(wyr.preferences.EnabledMods[i], ".sms.gz")) then
+			Load(wyr.preferences.EnabledMods[i])
+		end
+	end
 end
