@@ -332,6 +332,11 @@ DefineLanguageWord("Buska", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Χunda", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.2.
+	Language = "proto-germanic",
+	Type = "numeral" -- presumably
+})
+
 DefineLanguageWord("Χŕdiz", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "proto-germanic",
 	Type = "noun",
@@ -346,7 +351,7 @@ DefineLanguageWord("Dag", { -- Lehmann gives "dag-"; Fick gives "daga" and the a
 	Gender = "masculine" -- as given by Fick
 })
 
-DefineLanguageWord("Durez", { -- this is the nominative plural; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+DefineLanguageWord("Dur", { -- source gives "dur-"; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.2, 2.7.2.
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Door"},
@@ -418,6 +423,12 @@ DefineLanguageWord("Ferþu", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Type = "noun",
 	Meanings = {"Fjord"}, -- source gives the German "Fjord" as the meaning
 	Gender = "masculine"
+})
+
+DefineLanguageWord("Filu", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.2.
+	Language = "proto-germanic",
+	Type = "adjective", -- correct? inferred from the meaning
+	Meanings = {"Much"}
 })
 
 DefineLanguageWord("Fimfe", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.1.
@@ -550,6 +561,12 @@ DefineLanguageWord("Gulþa", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Type = "noun",
 	Meanings = {"Gold"}, -- source gives the German "Gold" as the meaning
 	Gender = "neuter"
+})
+
+DefineLanguageWord("Gumn", { -- source gives "gumn-"; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.2.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Man"}
 })
 
 DefineLanguageWord("Haima", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 52.
@@ -1223,7 +1240,7 @@ DefineLanguageWord("Turba", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Meanings = {"Peat", "Lawn", "Turf"} -- source gives the German "Torf, Rasen" as the meaning
 })
 
-DefineLanguageWord("Ufar", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+DefineLanguageWord("Ufar", { -- later the source gives "ufer" instead; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.2, 2.7.2.
 	Language = "proto-germanic",
 	Type = "adposition",
 	Meanings = {"Over"}

@@ -285,11 +285,11 @@ DefineLanguageWord("Dauhtar", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Meanings = {"Daughter"}
 })
 
-DefineLanguageWord("Daúr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+DefineLanguageWord("Daúr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.2, 2.7.2.
 	Language = "gothic",
 	Type = "noun",
-	Meanings = {"Door"}, -- derived from Proto-Germanic "Durez", which has the meaning of "door"
-	DerivesFrom = {"proto-germanic", "noun", "Durez"}
+	Meanings = {"Door"},
+	DerivesFrom = {"proto-germanic", "noun", "Dur"}
 })
 
 DefineLanguageWord("Dauþus", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
@@ -340,6 +340,13 @@ DefineLanguageWord("Faíhu", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	DerivesFrom = {"proto-germanic", "noun", "Fehu"}
 })
 
+DefineLanguageWord("Filu", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.2.
+	Language = "gothic",
+	Type = "adjective", -- correct? inferred from the meaning
+	Meanings = {"Much"},
+	DerivesFrom = {"proto-germanic", "adjective", "Filu"}
+})
+
 DefineLanguageWord("Fimf", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.1.
 	Language = "gothic",
 	Type = "numeral",
@@ -372,6 +379,12 @@ DefineLanguageWord("Friþôn", { -- Source: August Fick and Alf Torp, "Wortschat
 	Type = "noun",
 	Meanings = {"Love", "Peace"}, -- source gives the German "Liebe, Friede"
 	DerivesFrom = {"proto-germanic", "noun", "Friþu"}
+})
+
+DefineLanguageWord("Fugls", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.2.
+	Language = "gothic",
+	Type = "noun",
+	Meanings = {}
 })
 
 DefineLanguageWord("Fūls", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
@@ -428,6 +441,13 @@ DefineLanguageWord("Gulþ", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Meanings = {"Gold"}, -- source gives the German "Gold" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Gulþa"},
 	Gender = "neuter"
+})
+
+DefineLanguageWord("Guma", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.2.
+	Language = "gothic",
+	Type = "noun",
+	Meanings = {"Man"},
+	DerivesFrom = {"proto-germanic", "noun", "Gumn"}
 })
 
 DefineLanguageWord("Guþ", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.
@@ -566,6 +586,12 @@ DefineLanguageWord("Hûhrus", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Meanings = {"Hunger"}, -- source gives the German "Hunger" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Hunhru"},
 	Gender = "masculine"
+})
+
+DefineLanguageWord("Hunda", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.2.
+	Language = "gothic",
+	Type = "numeral", -- presumably
+	DerivesFrom = {"proto-germanic", "numeral", "Χunda"}
 })
 
 DefineLanguageWord("Hunds", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
@@ -1103,10 +1129,10 @@ DefineLanguageWord("Twalif", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Number = 12
 })
 
-DefineLanguageWord("Ufar", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+DefineLanguageWord("Ufar", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.2, 2.7.2.
 	Language = "gothic",
 	Type = "adposition",
-	Meanings = {"Over"}, -- derived from the Proto-Germanic "Ufar", which means "Over"
+	Meanings = {"Over"},
 	DerivesFrom = {"proto-germanic", "adposition", "Ufar"}
 })
 

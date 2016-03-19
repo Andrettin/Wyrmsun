@@ -420,6 +420,13 @@ DefineLanguageWord("Fehu", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	DerivesFrom = {"proto-germanic", "noun", "Fehu"}
 })
 
+DefineLanguageWord("Filu", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.2.
+	Language = "old-high-german",
+	Type = "adjective", -- correct? inferred from the meaning
+	Meanings = {"Much"},
+	DerivesFrom = {"proto-germanic", "adjective", "Filu"}
+})
+
 DefineLanguageWord("Fimf", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.1.
 	Language = "old-high-german",
 	Type = "numeral",
@@ -453,6 +460,18 @@ DefineLanguageWord("Friia", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Type = "adjective",
 	Meanings = {"Free"},
 	DerivesFrom = {"proto-indo-european", "adjective", "Pryx"}
+})
+
+DefineLanguageWord("Fugal", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.2.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {}
+})
+
+DefineLanguageWord("Fogal", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.2.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Bird"}
 })
 
 DefineLanguageWord("Fuir", { -- source also gives the alternate form "Fiur"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 127.
@@ -527,11 +546,18 @@ DefineLanguageWord("Gold", { -- source also gives the alternative form "Cold"; S
 	DerivesFrom = {"proto-germanic", "noun", "Gulþa"}
 })
 
-DefineLanguageWord("Got", { -- source also gives the alternative form "Cot"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.
+DefineLanguageWord("Gomo", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.2.
 	Language = "old-high-german",
 	Type = "noun",
-	Meanings = {"God"}, -- source gives the German "Gott" as the meaning
-	DerivesFrom = {"proto-germanic", "noun", "Guda"}
+	Meanings = {"Man"},
+	DerivesFrom = {"proto-germanic", "noun", "Gumn"}
+})
+
+DefineLanguageWord("Got", { -- Fick also gives the alternative form "Cot"; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.2; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"God"}, -- Fick gives the German "Gott" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Guda"} -- as given by Fick
 })
 
 DefineLanguageWord("Grâ", { -- source also gives the alternative form "crâ"; source also gives the inflected form "grâwer"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 79.
@@ -767,6 +793,12 @@ DefineLanguageWord("Houbit", { -- Source: Richard M. Runge, "The Phonetic Realiz
 	Language = "old-high-german",
 	Type = "noun",
 	Meanings = {"Main"} -- source gives German noun "Haupt" as the translation
+})
+
+DefineLanguageWord("Hundert", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.2.
+	Language = "old-high-german",
+	Type = "numeral", -- presumably
+	DerivesFrom = {"proto-germanic", "numeral", "Χunda"}
 })
 
 DefineLanguageWord("Hungar", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 44.
@@ -1479,6 +1511,13 @@ DefineLanguageWord("Tōd", { -- Source: Richard M. Runge, "The Phonetic Realizat
 	Meanings = {"Death"}
 })
 
+DefineLanguageWord("Tor", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.2.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Door"},
+	DerivesFrom = {"proto-germanic", "noun", "Dur"}
+})
+
 DefineLanguageWord("Trēow", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
 	Language = "old-high-german",
 	Type = "noun",
@@ -1508,10 +1547,10 @@ DefineLanguageWord("Zûn", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	}
 })
 
-DefineLanguageWord("Ubir", { -- Lehmann also gives the alternative form "ubar"; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+DefineLanguageWord("Ubir", { -- Lehmann also gives the alternative form "ubar"; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.2, 2.7.2.
 	Language = "old-high-german",
 	Type = "adposition",
-	Meanings = {"Over"}, -- derived from the Proto-Germanic "Ufar", which means "Over"
+	Meanings = {"Over"},
 	DerivesFrom = {"proto-germanic", "adposition", "Ufar"}
 })
 

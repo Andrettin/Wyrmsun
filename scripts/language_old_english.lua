@@ -399,11 +399,11 @@ DefineLanguageWord("Dēop", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	DerivesFrom = {"proto-germanic", "adjective", "Déwpaz"}
 })
 
-DefineLanguageWord("Duru", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+DefineLanguageWord("Duru", { -- at first the source gives "duru", but later on it gives "dor"; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.2, 2.7.2.
 	Language = "old-english",
 	Type = "noun",
-	Meanings = {"Door"}, -- derived from Proto-Germanic "Durez", which has the meaning of "door"
-	DerivesFrom = {"proto-germanic", "noun", "Durez"}
+	Meanings = {"Door"},
+	DerivesFrom = {"proto-germanic", "noun", "Dur"}
 })
 
 DefineLanguageWord("Eald", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 19.
@@ -507,6 +507,13 @@ DefineLanguageWord("Feoh", { -- Source: Richard M. Runge, "The Phonetic Realizat
 	DerivesFrom = {"proto-germanic", "noun", "Fehu"}
 })
 
+DefineLanguageWord("Feolu", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.2.
+	Language = "old-english",
+	Type = "adjective", -- correct? inferred from the meaning
+	Meanings = {"Much"},
+	DerivesFrom = {"proto-germanic", "adjective", "Filu"}
+})
+
 DefineLanguageWord("Fiðelestre", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 77.
 	Language = "old-english",
 	Type = "noun",
@@ -547,6 +554,12 @@ DefineLanguageWord("Friþu", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Type = "noun",
 	Meanings = {"Peace", "Protection", "Security"}, -- source gives the German "Friede, Schutz, Sicherheit" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Friþu"}
+})
+
+DefineLanguageWord("Fugol", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.2.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {}
 })
 
 DefineLanguageWord("Fūl", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
@@ -625,14 +638,14 @@ DefineLanguageWord("Glīwmǣden", { -- Source: Alaric Hall, "The Meanings of Elf
 	Gender = "feminine" -- presumably, given the source is talking about occupations for women
 })
 
-DefineLanguageWord("God", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 89.
+DefineLanguageWord("God", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 89; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.2; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.
 	Language = "old-english",
 	Type = "noun",
 	Meanings = {"God"},
-	DerivesFrom = {"proto-germanic", "noun", "Guda"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.
+	DerivesFrom = {"proto-germanic", "noun", "Guda"}, -- as given by Fick
 	Gender = "masculine",
 	NumberCaseInflections = {
-		"plural", "nominative", "Godas" -- Fick also gives the alternative form "Godu"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.
+		"plural", "nominative", "Godas" -- as given by Fick; Fick also gives the alternative form "Godu"
 	}
 })
 
@@ -669,6 +682,13 @@ DefineLanguageWord("Grīs", { -- Source: http://www.cnrtl.fr/definition/gris
 	Type = "adjective",
 	Meanings = {"Gray"}, -- source gives the French "gris" as the meaning
 	DerivesFrom = {"proto-germanic", "adjective", "Grîsa"} -- presumably
+})
+
+DefineLanguageWord("Gume", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.2.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Man"},
+	DerivesFrom = {"proto-germanic", "noun", "Gumn"}
 })
 
 DefineLanguageWord("Gyden", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 89.
@@ -892,6 +912,12 @@ DefineLanguageWord("Hræn", { -- source also gives the alternative form "Hærn";
 	Meanings = {"Wave", "Sea"},
 	DerivesFrom = {"proto-germanic", "noun", "Hraznō"},
 	Gender = "feminine"
+})
+
+DefineLanguageWord("Hundred", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.2.
+	Language = "old-english",
+	Type = "numeral", -- presumably
+	DerivesFrom = {"proto-germanic", "numeral", "Χunda"}
 })
 
 DefineLanguageWord("Hungor", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 44.

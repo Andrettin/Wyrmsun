@@ -419,8 +419,8 @@ DefineLanguageWord("Djūpr", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 DefineLanguageWord("Dyrr", { -- this is the nominative plural; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-norse",
 	Type = "noun",
-	Meanings = {"Door"}, -- derived from Proto-Germanic "Durez", which has the meaning of "door"
-	DerivesFrom = {"proto-germanic", "noun", "Durez"},
+	Meanings = {"Door"}, -- derived from Proto-Germanic "Dur", which has the meaning of "door"
+	DerivesFrom = {"proto-germanic", "noun", "Dur"},
 	NumberCaseInflections = {
 		"plural", "nominative", "Dyrr"
 	}
@@ -529,6 +529,18 @@ DefineLanguageWord("Frigg", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	DerivesFrom = {"proto-indo-european", "adjective", "Pryx"}
 })
 
+DefineLanguageWord("Fugl", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.2.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {}
+})
+
+DefineLanguageWord("Fogl", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.2.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Bird"}
+})
+
 DefineLanguageWord("Fūll", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-norse",
 	Type = "adjective",
@@ -566,6 +578,13 @@ DefineLanguageWord("Glotta", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	DerivesFrom = {"proto-germanic", "verb", "Glent"}
 })
 
+DefineLanguageWord("Godahus", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.2.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Temple"}
+	-- this is a compound which has a first element related to "guð"
+})
+
 DefineLanguageWord("Grâr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 79.
 	Language = "old-norse",
 	Type = "adjective",
@@ -599,12 +618,12 @@ DefineLanguageWord("Grŷjandi", { -- part of this compound is derived from the P
 	Gender = "feminine"
 })
 
-DefineLanguageWord("Guđ", { -- source also gives the alternative form "Gođ"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.
+DefineLanguageWord("Guð", { -- Lehmann also gives the alternative form "goð"; Fick gives "Guđ", and the alternative form "Gođ"; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.2; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.
 	Language = "old-norse",
 	Type = "noun",
-	Meanings = {"God"}, -- source gives the German "Gott" as the meaning
-	DerivesFrom = {"proto-germanic", "noun", "Guda"},
-	Gender = "neuter"
+	Meanings = {"God"}, -- as given by Lehmann; Fick corroborates it, giving the German "Gott" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Guda"}, -- as given by Fick
+	Gender = "neuter" -- as given by Fick
 })
 
 DefineLanguageWord("Guđ", { -- source also gives the alternative form "Gođ"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.
@@ -621,6 +640,13 @@ DefineLanguageWord("Gull", { -- source also gives the alternative form "goll"; S
 	Meanings = {"Gold"}, -- source gives the German "Gold" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Gulþa"},
 	Gender = "neuter"
+})
+
+DefineLanguageWord("Gume", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.2.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Man"},
+	DerivesFrom = {"proto-germanic", "noun", "Gumn"}
 })
 
 DefineLanguageWord("Haddr", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 3, 8.
@@ -822,6 +848,12 @@ DefineLanguageWord("Hundr", { -- Source: Richard M. Runge, "The Phonetic Realiza
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {"Dog"}
+})
+
+DefineLanguageWord("Hundrað", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.2.
+	Language = "old-norse",
+	Type = "numeral", -- presumably
+	DerivesFrom = {"proto-germanic", "numeral", "Χunda"}
 })
 
 DefineLanguageWord("Hungr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 44.
@@ -1599,10 +1631,10 @@ DefineLanguageWord("Wel", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-G
 	DerivesFrom = {"proto-germanic", "adverb", "Wela"}
 })
 
-DefineLanguageWord("Yfir", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+DefineLanguageWord("Yfir", { -- later the source gives "yfer" instead; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.2, 2.7.2.
 	Language = "old-norse",
 	Type = "adposition",
-	Meanings = {"Over"}, -- derived from the Proto-Germanic "Ufar", which means "Over"
+	Meanings = {"Over"},
 	DerivesFrom = {"proto-germanic", "adposition", "Ufar"}
 })
 
