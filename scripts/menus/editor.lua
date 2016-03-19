@@ -275,7 +275,7 @@ local function RunEditorNewMapMenu()
 			end
 		end
 		menu:stop()
-		StartEditor(nil)
+		StartEditor(nil, false)
 		RunEditorMenu()
 	end)
 	menu:addFullButton(_("~!Cancel"), "c", offx + 208, offy + 104 + 36 * 6, function() menu:stop(1); RunEditorMenu() end)
@@ -283,51 +283,91 @@ local function RunEditorNewMapMenu()
 end
 
 -- Menu for loading map to edit
-local function RunEditorLoadMapMenu()
-  local menu = WarMenu()
-  local offx = (Video.Width - 640) / 2
-  local offy = (Video.Height - 480) / 2
-  local labelMapName
-  local labelDescription
-  local labelNbPlayer
-  local labelMapSize
-  
-  -- update label content
-  local function MapChanged()
-    labelMapName:setCaption("File      : " .. string.sub(mapname, 6))
-    labelMapName:adjustSize()
+local function RunEditorLoadMapMenu(is_mod)
+	local menu = WarMenu()
+	local offx = (Video.Width - 640) / 2
+	local offy = (Video.Height - 480) / 2
+	local labelMapName
+	local labelDescription
+	local labelNbPlayer
+	local labelMapSize
+	local edit_button
+	
+	-- update label content
+	local function MapChanged()
+		if not (is_mod) then
+			labelMapName:setCaption("File: " .. string.sub(mapname, 6))
+			labelMapName:adjustSize()
+		
+			labelNbPlayer:setCaption("Players: " .. mapinfo.nplayers)
+			labelNbPlayer:adjustSize()
 
-    labelNbPlayer:setCaption("Players  : " .. mapinfo.nplayers)
-    labelNbPlayer:adjustSize()
+			labelDescription:setCaption("Scenario: " .. _(mapinfo.description))
+			labelDescription:adjustSize()
 
-    labelDescription:setCaption("Scenario : " .. _(mapinfo.description))
-    labelDescription:adjustSize()
+			labelMapSize:setCaption("Size: " .. mapinfo.w .. " x " .. mapinfo.h)
+			labelMapSize:adjustSize()
+		else
+			if (modname ~= "") then
+				labelMapName:setCaption("File: " .. string.sub(modname, 6))
+				edit_button:setEnabled(true)
+			else
+				labelMapName:setCaption("")
+				edit_button:setEnabled(false)
+			end
+			labelMapName:adjustSize()
+		end
+	end
 
-    labelMapSize:setCaption("Size      : " .. mapinfo.w .. " x " .. mapinfo.h)
-    labelMapSize:adjustSize()
-  end
+	labelMapName = menu:addLabel("", offx + 208, offy + 104 + 36 * 0, Fonts["game"], false)
+	labelDescription = menu:addLabel("", offx + 208, offy + 104 + 32 * 1, Fonts["game"], false)
+	labelNbPlayer = menu:addLabel("", offx + 208, offy + 104 + 32 * 2, Fonts["game"], false)
+	labelMapSize = menu:addLabel("", offx + 208, offy + 104 + 32 * 3, Fonts["game"], false)
 
-  labelMapName = menu:addLabel("", offx + 208, offy + 104 + 36 * 0, Fonts["game"], false)
-  labelDescription = menu:addLabel("", offx + 208, offy + 104 + 32 * 1, Fonts["game"], false)
-  labelNbPlayer = menu:addLabel("", offx + 208, offy + 104 + 32 * 2, Fonts["game"], false)
-  labelMapSize = menu:addLabel("", offx + 208, offy + 104 + 32 * 3, Fonts["game"], false)
+	local select_button_string
+	if not (is_mod) then
+		select_button_string = _("~!Select Map")
+	else
+		select_button_string = _("~!Select Mod")
+	end
+	menu:addFullButton(select_button_string, "s", offx + 208, offy + 104 + 36 * 4,
+		function()
+			if not (is_mod) then
+				local oldmapname = mapname
+				RunSelectScenarioMenu(is_mod)
+				if (mapname ~= oldmapname) then
+					GetMapInfo(mapname)
+					MapChanged()
+				end
+			else
+				local oldmapname = modname
+				RunSelectScenarioMenu(is_mod)
+				if (modname ~= oldmapname) then
+					GetMapInfo(modname)
+					MapChanged()
+				end
+			end
+		end)
 
-  menu:addFullButton(_("~!Select Map"), "s", offx + 208, offy + 104 + 36 * 4,
-    function()
-      local oldmapname = mapname
-      RunSelectScenarioMenu()
-      if (mapname ~= oldmapname) then
-        GetMapInfo(mapname)
-        MapChanged()
-      end
-    end)
+	if not (is_mod) then
+		edit_button = menu:addFullButton(_("~!Edit Map"), "e", offx + 208, offy + 104 + 36 * 5, function() menu:stop(); StartEditor(mapname, false); RunEditorMenu() end)
+	else
+		edit_button = menu:addFullButton(_("~!Edit Mod"), "e", offx + 208, offy + 104 + 36 * 5, function() menu:stop();
+			Map.Info.MapWidth = 32
+			Map.Info.MapHeight = 32
+			LoadTileModels("scripts/tilesets/" .. string.gsub(editor_tilesets[1], "-", "_") .. ".lua")
+			StartEditor(modname, true);
+		RunEditorMenu() end)
+	end
+	menu:addFullButton(_("~!Cancel"), "c", offx + 208, offy + 104 + 36 * 6, function() menu:stop(1); RunEditorMenu() end)
 
-  menu:addFullButton(_("~!Edit Map"), "e", offx + 208, offy + 104 + 36 * 5, function() menu:stop(); StartEditor(mapname); RunEditorMenu() end)
-  menu:addFullButton(_("~!Cancel"), "c", offx + 208, offy + 104 + 36 * 6, function() menu:stop(1); RunEditorMenu() end)
-
-  GetMapInfo(mapname)
-  MapChanged()
-  return menu:run()
+	if not (is_mod) then
+		GetMapInfo(mapname)
+	else
+		GetMapInfo(modname)
+	end
+	MapChanged()
+	return menu:run()
 end
 
 -- root of the editor menu
@@ -345,22 +385,31 @@ function RunEditorMenu()
 	menu:addLabel(_("~<Map Editor~>"), offx + 320, offy + 212 - 25)
 	local buttonNewMap =
 	menu:addFullButton(_("~!New Map"), "n", offx + 208, offy + 104 + 36*3, function() RunEditorNewMapMenu(); menu:stop() end)
-	menu:addFullButton(_("~!Load Map"), "l", offx + 208, offy + 104 + 36*4, function() RunEditorLoadMapMenu(); menu:stop() end)
-	menu:addFullButton(_("~!Cancel"), "c", offx + 208, offy + 104 + 36*5, function() menu:stop() end)
+	menu:addFullButton(_("~!Load Map"), "l", offx + 208, offy + 104 + 36*4, function() RunEditorLoadMapMenu(false); menu:stop() end)
+	menu:addFullButton(_("Load ~!Mod"), "m", offx + 208, offy + 104 + 36*5, function() RunEditorLoadMapMenu(true); menu:stop() end)
+	menu:addFullButton(_("~!Cancel"), "c", offx + 208, offy + 104 + 36*6, function() menu:stop() end)
 	return menu:run()
 end
 
-function RunEditorSaveMap(browser, name, menu)
-	local saved = EditorSaveMap(browser.path .. name)
+function RunEditorSaveMap(browser, name, menu, save_as_mod)
+	local saved = EditorSaveMap(browser.path .. name, save_as_mod)
 	if (saved == -1) then
 		local confirm = WarGameMenu(panel(3))
 		confirm:resize(300,120)
-		confirm:addLabel("Cannot save map to file:", 300 / 2, 11)
+		if not (save_as_mod) then
+			confirm:addLabel("Cannot save map to file:", 300 / 2, 11)
+		else
+			confirm:addLabel("Cannot save mod to file:", 300 / 2, 11)
+		end
 		confirm:addLabel(browser.path .. name, 300 / 2, 31)
 		confirm:addHalfButton("~!OK", "o", 1 * (300 / 3), 120 - 16 - 27, function() confirm:stop() end)
 		confirm:run(false)
 	else
-		UI.StatusLine:Set("Saved map to: " .. browser.path .. name)
+		if not (save_as_mod) then
+			UI.StatusLine:Set("Saved map to: " .. browser.path .. name)
+		else
+			UI.StatusLine:Set("Saved mod to: " .. browser.path .. name)
+		end
 		menu:stop()
 	end
 end
@@ -368,33 +417,50 @@ end
 --
 --  Save map from the editor
 --
-function RunEditorSaveMenu()
-	local map_has_person_player = false
-	for i = 0, 14 do
-		if (Map.Info.PlayerType[i] == 5) then
-			map_has_person_player = true
-			break
+function RunEditorSaveMenu(save_as_mod)
+	if not (save_as_mod) then
+		local map_has_person_player = false
+		for i = 0, 14 do
+			if (Map.Info.PlayerType[i] == 5) then
+				map_has_person_player = true
+				break
+			end
 		end
-	end
-	if not (map_has_person_player) then
-		GenericDialog("Error", "A map needs to have at least one person player.")
-		return
+		if not (map_has_person_player) then
+			GenericDialog("Error", "A map needs to have at least one person player.")
+			return
+		end
 	end
 	
 	local menu = WarGameMenu(panel(3))
 
 	menu:resize(384, 256)
 
-	menu:addLabel("Save Map", 384 / 2, 11)
+	if not (save_as_mod) then
+		menu:addLabel("Save Map", 384 / 2, 11)
+	else
+		menu:addLabel("Save as Mod", 384 / 2, 11)
+	end
 
-	local t = menu:addTextInputField("map.smp",
-		(384 - 300 - 18) / 2, 11 + 24, 318)
+	local t
+	local browser
+	if not (save_as_mod) then
+		t = menu:addTextInputField("map.smp",
+			(384 - 300 - 18) / 2, 11 + 24, 318)
 
-	local browser = menu:addBrowser(MapDirectories[1], ".smp$",
-		(384 - 300 - 18) / 2, 11 + 24 + 22, 318, 126)
-		local function cb(s)
-			t:setText(browser:getSelectedItem())
-		end
+		browser = menu:addBrowser(MapDirectories[1], ".smp$",
+			(384 - 300 - 18) / 2, 11 + 24 + 22, 318, 126)
+	else
+		t = menu:addTextInputField("mod.smp.gz",
+			(384 - 300 - 18) / 2, 11 + 24, 318)
+
+		browser = menu:addBrowser(ModDirectories[1], ".smp.gz$",
+			(384 - 300 - 18) / 2, 11 + 24 + 22, 318, 126, nil, false)
+	end
+
+	local function cb(s)
+		t:setText(browser:getSelectedItem())
+	end
 	browser:setActionCallback(cb)
 
 	menu:addHalfButton(_("~!Cancel"), "c", 384 - ((384 - 300 - 18) / 2) - 106, 256 - 16 - 27, function() menu:stop() end)
@@ -405,19 +471,21 @@ function RunEditorSaveMenu()
 		if (string.len(name) == 0) then
 			return
 		end
-		-- strip .gz
-		if (string.find(name, ".gz$") ~= nil) then
-			name = string.sub(name, 1, string.len(name) - 3)
-		end
 		-- append .smp
-		if (string.find(name, ".smp$") == nil) then
-			name = name .. ".smp"
+		if not (save_as_mod) then
+			if (string.find(name, ".smp$") == nil) then
+				name = name .. ".smp"
+			end
+		else
+			if (string.find(name, ".smp.gz$") == nil) then
+				name = name .. ".smp.gz"
+			end
 		end
+		
 		-- replace invalid chars with underscore
 		local t = {"\\", "/", ":", "*", "?", "\"", "<", ">", "|"}
 		table.foreachi(t, function(k,v) name = string.gsub(name, v, "_") end)
 
---		if (browser:exists(name .. ".gz")) then
 		if (browser:exists(name)) then
 			local confirm = WarGameMenu(panel(3))
 			confirm:resize(300,120)
@@ -426,12 +494,12 @@ function RunEditorSaveMenu()
 			confirm:addHalfButton("~!Yes", "y", 1 * (300 / 3) - 90, 120 - 16 - 27,
 			function()
 				confirm:stop()
-				RunEditorSaveMap(browser, name, menu)
+				RunEditorSaveMap(browser, name, menu, save_as_mod)
 			end)
 			confirm:addHalfButton("~!No", "n", 3 * (300 / 3) - 116, 120 - 16 - 27, function() confirm:stop() end)
 			confirm:run(false)
 		else
-			RunEditorSaveMap(browser, name, menu)
+			RunEditorSaveMap(browser, name, menu, save_as_mod)
 		end
 	end)
 	
@@ -464,7 +532,7 @@ function RunEditorLoadMenu()
 --  RunSelectScenarioMenu()
 --  if (buttonStatut == 1) then
 --    EditorLoadMap(mapname)
---    StartEditor(mapname)
+--    StartEditor(mapname, false)
 --  end
 --]]
 end
@@ -974,14 +1042,15 @@ function RunInEditorMenu()
 
 	menu:addLabel("Editor Menu", 128, 11)
 
-	menu:addFullButton("Save (~<F11~>)", "f11", 16, 40, RunEditorSaveMenu)
-	local buttonEditorLoad = -- To be removed when enabled.
-	menu:addFullButton("Load (~<F12~>)", "f12", 16, 40 + 35 * 1, RunEditorLoadMenu)
+	menu:addFullButton("Save Map (~<F11~>)", "f11", 16, 40, function() RunEditorSaveMenu(false); end)
+--	local buttonEditorLoad = -- To be removed when enabled.
+--	menu:addFullButton("Load (~<F12~>)", "f12", 16, 40 + 35 * 1, RunEditorLoadMenu)
+	menu:addFullButton("Save as ~!Mod", "m", 16, 40 + 35 * 1, function() RunEditorSaveMenu(true); end)
 	menu:addFullButton("Map Properties (~<F5~>)", "f5", 16, 40 + 35 * 2, RunEditorMapProperties)
 	menu:addFullButton("Player Properties (~<F6~>)", "f6", 16, 40 + 35 * 3, RunEditorPlayerProperties)
 	menu:addFullButton("Custom ~!Language Words", "l", 16, 40 + 35 * 4, RunEditorLanguageProperties)
 
-	buttonEditorLoad:setEnabled(false) -- To be removed when enabled.
+--	buttonEditorLoad:setEnabled(false) -- To be removed when enabled.
 
 	menu:addFullButton("E~!xit to Menu", "x", 16, 40 + 35 * 5,
 		function() Editor.Running = EditorNotRunning; menu:stopAll(); end)

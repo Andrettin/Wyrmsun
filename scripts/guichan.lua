@@ -804,6 +804,7 @@ function RunMap(map, objective, fow, revealmap)
 end
 
 mapname = "maps/random/random-map-swamp.smp"
+modname = ""
 local buttonStatut = 0 -- 0:not initialised, 1: Ok, 2: Cancel
 mapinfo = {
   playertypes = {nil, nil, nil, nil, nil, nil, nil, nil},
@@ -870,17 +871,31 @@ function GetMapInfo(mapname)
   PresentMap = OldPresentMap
 end
 
-function RunSelectScenarioMenu()
+function RunSelectScenarioMenu(is_mod)
 	buttonStatut = 0
 	local menu = WarMenu(nil, panel(5), false)
 	menu:setSize(352, 352)
 	menu:setPosition((Video.Width - 352) / 2, (Video.Height - 352) / 2)
 	menu:setDrawMenusUnder(true)
 
-	menu:addLabel(_("Select Map"), 176, 8)
+	local browser
+	if not (is_mod) then
+		menu:addLabel(_("Select Map"), 176, 8)
+		
+		browser = menu:addBrowser(MapDirectories[1], "^.*%.smp%.?g?z?$",
+			24, 88, 300, 108, mapname)
+	else
+		menu:addLabel(_("Select Mod"), 176, 8)
 
-	local browser = menu:addBrowser(MapDirectories[1], "^.*%.smp%.?g?z?$",
-		24, 88, 300, 108, mapname)
+		if (modname ~= "") then
+			browser = menu:addBrowser(ModDirectories[1], "^.*%.smp%.?g?z?$",
+				24, 88, 300, 108, modname, false)
+		else
+			browser = menu:addBrowser(ModDirectories[1], "^.*%.smp%.?g?z?$",
+				24, 88, 300, 108, nil, false)
+		end
+	end
+
 
 	local l = menu:addLabel(browser:getSelectedItem(), 24, 208, Fonts["game"], false)
 
@@ -898,27 +913,33 @@ function RunSelectScenarioMenu()
 				return
 			end
 			buttonStatut = 1
-			mapname = browser.path .. cap
+			if not (is_mod) then
+				mapname = browser.path .. cap
+			else
+				modname = browser.path .. cap
+			end
 			menu:stop()
 		end)
 	menu:addHalfButton(_("~!Cancel"), "c", 198, 318,
 		function() buttonStatut = 2; menu:stop() end)
 	
-	local sortByCheckBox
-	sortByCheckBox = menu:addImageCheckBox(_("Show Latest First"), (352 - 300 - 18) / 2, 352 - 16 - 27 - 25,
-	function()
-		wyr.preferences.SortSaveGamesByTime = sortByCheckBox:isMarked()
-		SavePreferences()
+	if not (is_mod) then
+		local sortByCheckBox
+		sortByCheckBox = menu:addImageCheckBox(_("Show Latest First"), (352 - 300 - 18) / 2, 352 - 16 - 27 - 25,
+		function()
+			wyr.preferences.SortSaveGamesByTime = sortByCheckBox:isMarked()
+			SavePreferences()
 
+			if (wyr.preferences.SortSaveGamesByTime) then
+				browser:sortByTime()
+			else
+				browser:sortByName()
+			end
+		end)
+		sortByCheckBox:setMarked(wyr.preferences.SortSaveGamesByTime)
 		if (wyr.preferences.SortSaveGamesByTime) then
 			browser:sortByTime()
-		else
-			browser:sortByName()
 		end
-	end)
-	sortByCheckBox:setMarked(wyr.preferences.SortSaveGamesByTime)
-	if (wyr.preferences.SortSaveGamesByTime) then
-		browser:sortByTime()
 	end
 	
 	menu:run()
@@ -1482,7 +1503,7 @@ end
 
 if (Editor.Running == EditorCommandLine) then
 	if (CliMapName and CliMapName ~= "") then
-		StartEditor(CliMapName)
+		StartEditor(CliMapName, false)
 	else
 		RunEditorMenu()
 	end
