@@ -68,7 +68,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added "The Death of Count Cadaloc" music theme to the Frankish Faction Flair Pack, for when playing Frankish factions (by Marcelo Fernandez) (http://www.marcelofernandezmusic.com).
 
 * Map Editor
-- Added support for saving maps as mods, which can be loaded through the Mods screen to alter unit stats and words (for name generation).
+- Added support for saving maps as mods; this saves only the custom words (for name generation), modified unit stats and unit sounds, allowing you to load the mod in the Mods screen.
 
 * Multiplayer
 - Fixed a few potential crash causes for multiplayer.

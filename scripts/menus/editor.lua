@@ -1508,25 +1508,25 @@ function EditUnitTypePropertiesSounds(unit_type)
 	menu:addHalfButton("~!OK", "o", 20 + 48, sizeY - 40,
 		function()
 			if (sound_list[selected_sound:getSelected() + 1] ~= GetUnitTypeData(unit_type, "Sounds", "selected")) then
-				SetMapSound(unit_type, sound_list[selected_sound:getSelected() + 1], "selected")
+				SetModSound(Map.Info.Filename, unit_type, sound_list[selected_sound:getSelected() + 1], "selected")
 			end
 			if (sound_list[acknowledge_sound:getSelected() + 1] ~= GetUnitTypeData(unit_type, "Sounds", "acknowledge")) then
-				SetMapSound(unit_type, sound_list[acknowledge_sound:getSelected() + 1], "acknowledge")
+				SetModSound(Map.Info.Filename, unit_type, sound_list[acknowledge_sound:getSelected() + 1], "acknowledge")
 			end
 			if (sound_list[attack_sound:getSelected() + 1] ~= GetUnitTypeData(unit_type, "Sounds", "attack")) then
-				SetMapSound(unit_type, sound_list[attack_sound:getSelected() + 1], "attack")
+				SetModSound(Map.Info.Filename, unit_type, sound_list[attack_sound:getSelected() + 1], "attack")
 			end
 			if (sound_list[ready_sound:getSelected() + 1] ~= GetUnitTypeData(unit_type, "Sounds", "ready")) then
-				SetMapSound(unit_type, sound_list[ready_sound:getSelected() + 1], "ready")
+				SetModSound(Map.Info.Filename, unit_type, sound_list[ready_sound:getSelected() + 1], "ready")
 			end
 			if (sound_list[idle_sound:getSelected() + 1] ~= GetUnitTypeData(unit_type, "Sounds", "idle")) then
-				SetMapSound(unit_type, sound_list[idle_sound:getSelected() + 1], "idle")
+				SetModSound(Map.Info.Filename, unit_type, sound_list[idle_sound:getSelected() + 1], "idle")
 			end
 			if (sound_list[help_sound:getSelected() + 1] ~= GetUnitTypeData(unit_type, "Sounds", "help")) then
-				SetMapSound(unit_type, sound_list[help_sound:getSelected() + 1], "help")
+				SetModSound(Map.Info.Filename, unit_type, sound_list[help_sound:getSelected() + 1], "help")
 			end
 			if (sound_list[dead_sound:getSelected() + 1] ~= GetUnitTypeData(unit_type, "Sounds", "dead")) then
-				SetMapSound(unit_type, sound_list[dead_sound:getSelected() + 1], "dead")
+				SetModSound(Map.Info.Filename, unit_type, sound_list[dead_sound:getSelected() + 1], "dead")
 			end
 			menu:stop()
 		end
