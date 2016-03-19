@@ -1655,6 +1655,13 @@ function PersistencyUpdates()
 		SavePreferences()
 	end
 	
+	for i=1,table.getn(wyr.preferences.EnabledMods) do
+		if (not string.find(wyr.preferences.EnabledMods[i], ".sms.gz") and not string.find(wyr.preferences.EnabledMods[i], ".lua")) then
+			wyr.preferences.EnabledMods[i] = nil
+		end
+		SavePreferences()
+	end
+	
 	if (wyr.preferences.Heroes ~= nil) then
 		for key, value in pairs(wyr.preferences.Heroes) do
 			local hero_type = GetCharacterData(wyr.preferences.Heroes[key].name, "Type")
