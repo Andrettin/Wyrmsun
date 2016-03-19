@@ -356,12 +356,18 @@ local function RunEditorLoadMapMenu(is_mod)
 		end)
 
 	if not (is_mod) then
-		edit_button = menu:addFullButton(_("~!Edit Map"), "e", offx + 208, offy + 104 + 36 * 5, function() menu:stop(); StartEditor(mapname, false); ReloadMods(); RunEditorMenu() end)
+		edit_button = menu:addFullButton(_("~!Edit Map"), "e", offx + 208, offy + 104 + 36 * 5, function()
+			menu:stop();
+			StartEditor(mapname, false);
+			ReloadMods();
+			RunEditorMenu()
+		end)
 	else
 		edit_button = menu:addFullButton(_("~!Edit Mod"), "e", offx + 208, offy + 104 + 36 * 5, function() menu:stop();
 			Map.Info.MapWidth = 32
 			Map.Info.MapHeight = 32
 			LoadTileModels("scripts/tilesets/" .. string.gsub(editor_tilesets[1], "-", "_") .. ".lua")
+			DisableMod(tostring(string.gsub(modname, ".smp.gz", ".sms.gz"))) -- to prevent a mod's changes being applied twice if it is both active and is the mod currently being loaded
 			StartEditor(modname, true);
 			ReloadMods();
 			RunEditorMenu()
@@ -1240,6 +1246,8 @@ function EditUnitTypePropertiesStats(unit_type)
 	menu:resize(sizeX, sizeY)
 	menu:addLabel(_(GetUnitTypeName(unit_type)) .. " " .. _("Properties"), sizeX / 2, 11)
 
+	local variables_displayed = {"HitPoints", "BasicDamage", "Armor", "Accuracy", "Evasion", "AttackRange", "SightRange", "Speed", "CriticalStrikeChance", "Backstab", "BonusAgainstMounted", "ThornsDamage", "DaySightRangeBonus", "NightSightRangeBonus"}
+
 	menu:addLabel(_("Hit Points:"), 10, 12 + 36 * 1, Fonts["game"], false)
 	local hp_value = menu:addTextInputField(GetUnitTypeData(unit_type, "HitPoints"), (sizeX / 2) - 60 - 10, 11 + 36 * 1, 60)
 
@@ -1282,84 +1290,92 @@ function EditUnitTypePropertiesStats(unit_type)
 	menu:addLabel(_("Night Sight:"), (sizeX / 2) + 10, 12 + 36 * 7, Fonts["game"], false)
 	local night_sight_range_bonus_value = menu:addTextInputField(GetUnitTypeData(unit_type, "NightSightRangeBonus"), sizeX - 60 - 10, 11 + 36 * 7, 60)
 
-	menu:addHalfButton(_("~!OK"), "o", 20 + 48, sizeY - 40,
+	for i=1,table.getn(variables_displayed) do
+		SetModStat(Map.Info.Filename, unit_type, variables_displayed[i], 0, "Value")
+		SetModStat(Map.Info.Filename, unit_type, variables_displayed[i], 0, "Max")
+		SetModStat(Map.Info.Filename, unit_type, variables_displayed[i], 0, "Enable")
+	end
+				
+	menu:addFullButton(_("~!OK"), "o", 20 + 48, sizeY - 40,
 		function()
 			if (hp_value:getText() ~= GetUnitTypeData(unit_type, "HitPoints")) then
-				SetMapStat(unit_type, "HitPoints", hp_value:getText(), "Value")
-				SetMapStat(unit_type, "HitPoints", hp_value:getText(), "Max")
-				SetMapStat(unit_type, "HitPoints", 1, "Enable")
+				SetModStat(Map.Info.Filename, unit_type, "HitPoints", hp_value:getText() - GetUnitTypeData(unit_type, "HitPoints"), "Value")
+				SetModStat(Map.Info.Filename, unit_type, "HitPoints", hp_value:getText() - GetUnitTypeData(unit_type, "HitPoints"), "Max")
+				SetModStat(Map.Info.Filename, unit_type, "HitPoints", 1, "Enable")
 			end
 			if (basic_damage_value:getText() ~= GetUnitTypeData(unit_type, "BasicDamage")) then
-				SetMapStat(unit_type, "BasicDamage", basic_damage_value:getText(), "Value")
-				SetMapStat(unit_type, "BasicDamage", basic_damage_value:getText(), "Max")
-				SetMapStat(unit_type, "BasicDamage", 1, "Enable")
+				SetModStat(Map.Info.Filename, unit_type, "BasicDamage", basic_damage_value:getText() - GetUnitTypeData(unit_type, "BasicDamage"), "Value")
+				SetModStat(Map.Info.Filename, unit_type, "BasicDamage", basic_damage_value:getText() - GetUnitTypeData(unit_type, "BasicDamage"), "Max")
+				SetModStat(Map.Info.Filename, unit_type, "BasicDamage", 1, "Enable")
 			end
 			if (armor_value:getText() ~= GetUnitTypeData(unit_type, "Armor")) then
-				SetMapStat(unit_type, "Armor", armor_value:getText(), "Value")
-				SetMapStat(unit_type, "Armor", armor_value:getText(), "Max")
-				SetMapStat(unit_type, "Armor", 1, "Enable")
+				SetModStat(Map.Info.Filename, unit_type, "Armor", armor_value:getText() - GetUnitTypeData(unit_type, "Armor"), "Value")
+				SetModStat(Map.Info.Filename, unit_type, "Armor", armor_value:getText() - GetUnitTypeData(unit_type, "Armor"), "Max")
+				SetModStat(Map.Info.Filename, unit_type, "Armor", 1, "Enable")
 			end
 			if (accuracy_value:getText() ~= GetUnitTypeData(unit_type, "Accuracy")) then
-				SetMapStat(unit_type, "Accuracy", accuracy_value:getText(), "Value")
-				SetMapStat(unit_type, "Accuracy", accuracy_value:getText(), "Max")
-				SetMapStat(unit_type, "Accuracy", 1, "Enable")
+				SetModStat(Map.Info.Filename, unit_type, "Accuracy", accuracy_value:getText() - GetUnitTypeData(unit_type, "Accuracy"), "Value")
+				SetModStat(Map.Info.Filename, unit_type, "Accuracy", accuracy_value:getText() - GetUnitTypeData(unit_type, "Accuracy"), "Max")
+				SetModStat(Map.Info.Filename, unit_type, "Accuracy", 1, "Enable")
 			end
 			if (evasion_value:getText() ~= GetUnitTypeData(unit_type, "Evasion")) then
-				SetMapStat(unit_type, "Evasion", evasion_value:getText(), "Value")
-				SetMapStat(unit_type, "Evasion", evasion_value:getText(), "Max")
-				SetMapStat(unit_type, "Evasion", 1, "Enable")
+				SetModStat(Map.Info.Filename, unit_type, "Evasion", evasion_value:getText() - GetUnitTypeData(unit_type, "Evasion"), "Value")
+				SetModStat(Map.Info.Filename, unit_type, "Evasion", evasion_value:getText() - GetUnitTypeData(unit_type, "Evasion"), "Max")
+				SetModStat(Map.Info.Filename, unit_type, "Evasion", 1, "Enable")
 			end
 			if (range_value:getText() ~= GetUnitTypeData(unit_type, "AttackRange")) then
-				SetMapStat(unit_type, "AttackRange", range_value:getText(), "Value")
-				SetMapStat(unit_type, "AttackRange", range_value:getText(), "Max")
-				SetMapStat(unit_type, "AttackRange", 1, "Enable")
+				SetModStat(Map.Info.Filename, unit_type, "AttackRange", range_value:getText() - GetUnitTypeData(unit_type, "AttackRange"), "Value")
+				SetModStat(Map.Info.Filename, unit_type, "AttackRange", range_value:getText() - GetUnitTypeData(unit_type, "AttackRange"), "Max")
+				SetModStat(Map.Info.Filename, unit_type, "AttackRange", 1, "Enable")
 			end
 			if (sight_value:getText() ~= GetUnitTypeData(unit_type, "SightRange")) then
-				SetMapStat(unit_type, "SightRange", sight_value:getText(), "Value")
-				SetMapStat(unit_type, "SightRange", sight_value:getText(), "Max")
-				SetMapStat(unit_type, "SightRange", 1, "Enable")
+				SetModStat(Map.Info.Filename, unit_type, "SightRange", sight_value:getText() - GetUnitTypeData(unit_type, "SightRange"), "Value")
+				SetModStat(Map.Info.Filename, unit_type, "SightRange", sight_value:getText() - GetUnitTypeData(unit_type, "SightRange"), "Max")
+				SetModStat(Map.Info.Filename, unit_type, "SightRange", 1, "Enable")
 			end
 			if (speed_value:getText() ~= GetUnitTypeData(unit_type, "Speed")) then
-				SetMapStat(unit_type, "Speed", speed_value:getText(), "Value")
-				SetMapStat(unit_type, "Speed", speed_value:getText(), "Max")
-				SetMapStat(unit_type, "Speed", 1, "Enable")
+				SetModStat(Map.Info.Filename, unit_type, "Speed", speed_value:getText() - GetUnitTypeData(unit_type, "Speed"), "Value")
+				SetModStat(Map.Info.Filename, unit_type, "Speed", speed_value:getText() - GetUnitTypeData(unit_type, "Speed"), "Max")
+				SetModStat(Map.Info.Filename, unit_type, "Speed", 1, "Enable")
 			end
 			if (critical_strike_chance_value:getText() ~= GetUnitTypeData(unit_type, "CriticalStrikeChance")) then
-				SetMapStat(unit_type, "CriticalStrikeChance", critical_strike_chance_value:getText(), "Value")
-				SetMapStat(unit_type, "CriticalStrikeChance", critical_strike_chance_value:getText(), "Max")
-				SetMapStat(unit_type, "CriticalStrikeChance", 1, "Enable")
+				SetModStat(Map.Info.Filename, unit_type, "CriticalStrikeChance", critical_strike_chance_value:getText() - GetUnitTypeData(unit_type, "CriticalStrikeChance"), "Value")
+				SetModStat(Map.Info.Filename, unit_type, "CriticalStrikeChance", critical_strike_chance_value:getText() - GetUnitTypeData(unit_type, "CriticalStrikeChance"), "Max")
+				SetModStat(Map.Info.Filename, unit_type, "CriticalStrikeChance", 1, "Enable")
 			end
 			if (backstab_value:getText() ~= GetUnitTypeData(unit_type, "Backstab")) then
-				SetMapStat(unit_type, "Backstab", backstab_value:getText(), "Value")
-				SetMapStat(unit_type, "Backstab", backstab_value:getText(), "Max")
-				SetMapStat(unit_type, "Backstab", 1, "Enable")
+				SetModStat(Map.Info.Filename, unit_type, "Backstab", backstab_value:getText() - GetUnitTypeData(unit_type, "Backstab"), "Value")
+				SetModStat(Map.Info.Filename, unit_type, "Backstab", backstab_value:getText() - GetUnitTypeData(unit_type, "Backstab"), "Max")
+				SetModStat(Map.Info.Filename, unit_type, "Backstab", 1, "Enable")
 			end
 			if (bonus_against_mounted_value:getText() ~= GetUnitTypeData(unit_type, "BonusAgainstMounted")) then
-				SetMapStat(unit_type, "BonusAgainstMounted", bonus_against_mounted_value:getText(), "Value")
-				SetMapStat(unit_type, "BonusAgainstMounted", bonus_against_mounted_value:getText(), "Max")
-				SetMapStat(unit_type, "BonusAgainstMounted", 1, "Enable")
+				SetModStat(Map.Info.Filename, unit_type, "BonusAgainstMounted", bonus_against_mounted_value:getText() - GetUnitTypeData(unit_type, "BonusAgainstMounted"), "Value")
+				SetModStat(Map.Info.Filename, unit_type, "BonusAgainstMounted", bonus_against_mounted_value:getText() - GetUnitTypeData(unit_type, "BonusAgainstMounted"), "Max")
+				SetModStat(Map.Info.Filename, unit_type, "BonusAgainstMounted", 1, "Enable")
 			end
 			if (thorns_damage_value:getText() ~= GetUnitTypeData(unit_type, "ThornsDamage")) then
-				SetMapStat(unit_type, "ThornsDamage", thorns_damage_value:getText(), "Value")
-				SetMapStat(unit_type, "ThornsDamage", thorns_damage_value:getText(), "Max")
-				SetMapStat(unit_type, "ThornsDamage", 1, "Enable")
+				SetModStat(Map.Info.Filename, unit_type, "ThornsDamage", thorns_damage_value:getText() - GetUnitTypeData(unit_type, "ThornsDamage"), "Value")
+				SetModStat(Map.Info.Filename, unit_type, "ThornsDamage", thorns_damage_value:getText() - GetUnitTypeData(unit_type, "ThornsDamage"), "Max")
+				SetModStat(Map.Info.Filename, unit_type, "ThornsDamage", 1, "Enable")
 			end
 			if (day_sight_range_bonus_value:getText() ~= GetUnitTypeData(unit_type, "DaySightRangeBonus")) then
-				SetMapStat(unit_type, "DaySightRangeBonus", day_sight_range_bonus_value:getText(), "Value")
-				SetMapStat(unit_type, "DaySightRangeBonus", day_sight_range_bonus_value:getText(), "Max")
-				SetMapStat(unit_type, "DaySightRangeBonus", 1, "Enable")
+				SetModStat(Map.Info.Filename, unit_type, "DaySightRangeBonus", day_sight_range_bonus_value:getText() - GetUnitTypeData(unit_type, "DaySightRangeBonus"), "Value")
+				SetModStat(Map.Info.Filename, unit_type, "DaySightRangeBonus", day_sight_range_bonus_value:getText() - GetUnitTypeData(unit_type, "DaySightRangeBonus"), "Max")
+				SetModStat(Map.Info.Filename, unit_type, "DaySightRangeBonus", 1, "Enable")
 			end
 			if (night_sight_range_bonus_value:getText() ~= GetUnitTypeData(unit_type, "NightSightRangeBonus")) then
-				SetMapStat(unit_type, "NightSightRangeBonus", night_sight_range_bonus_value:getText(), "Value")
-				SetMapStat(unit_type, "NightSightRangeBonus", night_sight_range_bonus_value:getText(), "Max")
-				SetMapStat(unit_type, "NightSightRangeBonus", 1, "Enable")
+				SetModStat(Map.Info.Filename, unit_type, "NightSightRangeBonus", night_sight_range_bonus_value:getText() - GetUnitTypeData(unit_type, "NightSightRangeBonus"), "Value")
+				SetModStat(Map.Info.Filename, unit_type, "NightSightRangeBonus", night_sight_range_bonus_value:getText() - GetUnitTypeData(unit_type, "NightSightRangeBonus"), "Max")
+				SetModStat(Map.Info.Filename, unit_type, "NightSightRangeBonus", 1, "Enable")
 			end
 			menu:stop()
 		end
 	)
 
+	--[[
 	menu:addHalfButton(_("~!Cancel"), "c", 130 + 48, sizeY - 40,
 		function() menu:stop() end)
+	--]]
 
 	menu:run(false)
 end
@@ -1375,6 +1391,8 @@ function EditUnitTypePropertiesResourceStats(unit_type)
 
 	menu:resize(sizeX, sizeY)
 	menu:addLabel(_(GetUnitTypeName(unit_type)) .. " " .. _("Properties"), sizeX / 2, 11)
+	
+	local resources_displayed = {"time", "gold", "lumber", "stone"}
 
 	menu:addLabel(_("Time Cost:"), 10, 12 + 36 * 1, Fonts["game"], false)
 	local time_cost_value = menu:addTextInputField(GetUnitTypeData(unit_type, "Costs", "time"), (sizeX / 2) - 60 - 10, 11 + 36 * 1, 60)
@@ -1397,35 +1415,42 @@ function EditUnitTypePropertiesResourceStats(unit_type)
 	menu:addLabel(_("Stone Proc.:"), 10, 12 + 36 * 4, Fonts["game"], false)
 	local stone_processing_value = menu:addTextInputField(GetUnitTypeData(unit_type, "ImproveProduction", "stone"), (sizeX / 2) - 60 - 10, 11 + 36 * 4, 60)
 
-	menu:addHalfButton(_("~!OK"), "o", 20 + 48, sizeY - 40,
+	for i=1,table.getn(resources_displayed) do
+		SetModStat(Map.Info.Filename, unit_type, "Costs", 0, resources_displayed[i])
+		SetModStat(Map.Info.Filename, unit_type, "ImproveProduction", 0, resources_displayed[i])
+	end
+	
+	menu:addFullButton(_("~!OK"), "o", 20 + 48, sizeY - 40,
 		function()
 			if (time_cost_value:getText() ~= GetUnitTypeData(unit_type, "Costs", "time")) then
-				SetMapStat(unit_type, "Costs", time_cost_value:getText(), "time")
+				SetModStat(Map.Info.Filename, unit_type, "Costs", time_cost_value:getText() - GetUnitTypeData(unit_type, "Costs", "time"), "time")
 			end
 			if (gold_cost_value:getText() ~= GetUnitTypeData(unit_type, "Costs", "gold")) then
-				SetMapStat(unit_type, "Costs", gold_cost_value:getText(), "gold")
+				SetModStat(Map.Info.Filename, unit_type, "Costs", gold_cost_value:getText() - GetUnitTypeData(unit_type, "Costs", "gold"), "gold")
 			end
 			if (lumber_cost_value:getText() ~= GetUnitTypeData(unit_type, "Costs", "lumber")) then
-				SetMapStat(unit_type, "Costs", lumber_cost_value:getText(), "lumber")
+				SetModStat(Map.Info.Filename, unit_type, "Costs", lumber_cost_value:getText() - GetUnitTypeData(unit_type, "Costs", "lumber"), "lumber")
 			end
 			if (stone_cost_value:getText() ~= GetUnitTypeData(unit_type, "Costs", "stone")) then
-				SetMapStat(unit_type, "Costs", stone_cost_value:getText(), "stone")
+				SetModStat(Map.Info.Filename, unit_type, "Costs", stone_cost_value:getText() - GetUnitTypeData(unit_type, "Costs", "stone"), "stone")
 			end
 			if (gold_processing_value:getText() ~= GetUnitTypeData(unit_type, "ImproveProduction", "gold")) then
-				SetMapStat(unit_type, "ImproveProduction", gold_processing_value:getText(), "gold")
+				SetModStat(Map.Info.Filename, unit_type, "ImproveProduction", gold_processing_value:getText() - GetUnitTypeData(unit_type, "ImproveProduction", "gold"), "gold")
 			end
 			if (lumber_processing_value:getText() ~= GetUnitTypeData(unit_type, "ImproveProduction", "lumber")) then
-				SetMapStat(unit_type, "ImproveProduction", lumber_processing_value:getText(), "lumber")
+				SetModStat(Map.Info.Filename, unit_type, "ImproveProduction", lumber_processing_value:getText() - GetUnitTypeData(unit_type, "ImproveProduction", "lumber"), "lumber")
 			end
 			if (stone_processing_value:getText() ~= GetUnitTypeData(unit_type, "ImproveProduction", "stone")) then
-				SetMapStat(unit_type, "ImproveProduction", stone_processing_value:getText(), "stone")
+				SetModStat(Map.Info.Filename, unit_type, "ImproveProduction", stone_processing_value:getText() - GetUnitTypeData(unit_type, "ImproveProduction", "stone"), "stone")
 			end
 			menu:stop()
 		end
 	)
 
+	--[[
 	menu:addHalfButton(_("~!Cancel"), "c", 130 + 48, sizeY - 40,
 		function() menu:stop() end)
+	--]]
 
 	menu:run(false)
 end
