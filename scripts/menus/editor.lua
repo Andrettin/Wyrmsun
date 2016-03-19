@@ -264,6 +264,7 @@ local function RunEditorNewMapMenu()
 		Map.Info.Description = mapDescription:getText()
 		Map.Info.MapWidth = mapSizes[1 + mapSizex:getSelected()]
 		Map.Info.MapHeight = mapSizes[1 + mapSizey:getSelected()]
+		Map.Info.Filename = "new_map"
 		if (CanAccessFile("scripts/tilesets/" .. string.gsub(editor_tilesets[1 + dropDownTileset:getSelected()], "-", "_") .. ".lua")) then
 			LoadTileModels("scripts/tilesets/" .. string.gsub(editor_tilesets[1 + dropDownTileset:getSelected()], "-", "_") .. ".lua")
 		else -- if the tileset doesn't exist in the base game, check if any enabled mod has this tileset
@@ -771,7 +772,7 @@ function RunEditorLanguageProperties()
 	local word_list = {}
 	local word_properties = {}
 	for i=1,table.getn(language_ident_list) do
-		word_list[i] = GetLanguageData(language_ident_list[i], "MapWords")
+		word_list[i] = GetLanguageData(language_ident_list[i], "ModWords", Map.Info.Filename)
 	end
 	for i=1,table.getn(language_ident_list) do
 		word_properties[i] = {}
@@ -791,7 +792,7 @@ function RunEditorLanguageProperties()
 		end
 	end
 	
-	CleanLanguageMapWords()
+	CleanLanguageModWords(Map.Info.Filename)
 	
 	local word_type
 	local word_type_label
@@ -1002,7 +1003,7 @@ function RunEditorLanguageProperties()
 						Language = language_ident_list[i],
 						Type = word_properties[i][j].Type,
 						NameTypes = word_properties[i][j].NameTypes,
-						MapWord = true
+						Mod = Map.Info.Filename
 					}
 					if (word_properties[i][j].Meaning ~= "") then
 						word_definition.Meanings = {word_properties[i][j].Meaning}
