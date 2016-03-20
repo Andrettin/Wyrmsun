@@ -243,7 +243,7 @@ DefineLanguageWord("Ing", { -- is this really a noun? Source: B. H. Slicher van 
 	Type = "noun",
 	Meanings = {},
 	AffixNameTypes = {
-		"compound", "suffix", "singular", "unit-teuton-farm" -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, pp. 331, 335.
+		"compound", "suffix", "singular", "unit-class-farm" -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, pp. 331, 335.
 	}
 })
 
@@ -252,7 +252,7 @@ DefineLanguageWord("Ingakker", { -- is this really a noun? Source: B. H. Slicher
 	Type = "noun",
 	Meanings = {},
 	AffixNameTypes = {
-		"compound", "suffix", "singular", "unit-teuton-farm" -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
+		"compound", "suffix", "singular", "unit-class-farm" -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
 	}
 })
 
@@ -261,7 +261,7 @@ DefineLanguageWord("Ingen", { -- is this really a noun? Source: B. H. Slicher va
 	Type = "noun",
 	Meanings = {},
 	AffixNameTypes = {
-		"compound", "suffix", "singular", "unit-teuton-farm" -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
+		"compound", "suffix", "singular", "unit-class-farm" -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
 	}
 })
 
@@ -270,7 +270,7 @@ DefineLanguageWord("Inggoed", { -- is this really a noun? Source: B. H. Slicher 
 	Type = "noun",
 	Meanings = {},
 	AffixNameTypes = {
-		"compound", "suffix", "singular", "unit-teuton-farm" -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
+		"compound", "suffix", "singular", "unit-class-farm" -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
 	}
 })
 
@@ -279,7 +279,7 @@ DefineLanguageWord("Ingheim", { -- is this really a noun? Source: B. H. Slicher 
 	Type = "noun",
 	Meanings = {},
 	AffixNameTypes = {
-		"compound", "suffix", "singular", "unit-teuton-farm" -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
+		"compound", "suffix", "singular", "unit-class-farm" -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
 	}
 })
 
@@ -288,7 +288,7 @@ DefineLanguageWord("Inghuis", { -- is this really a noun? Source: B. H. Slicher 
 	Type = "noun",
 	Meanings = {},
 	AffixNameTypes = {
-		"compound", "suffix", "singular", "unit-teuton-farm" -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
+		"compound", "suffix", "singular", "unit-class-farm" -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
 	}
 })
 

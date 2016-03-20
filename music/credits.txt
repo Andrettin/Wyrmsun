@@ -1,13 +1,12 @@
-bart (http://opengameart.org):
-/music/the_adventure_begins.ogg (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
-
 Battle for Wesnoth Team:
 /music/battle.ogg (licensed under the GPL 2.0)
 /music/battle-epic.ogg (licensed under the GPL 2.0)
 /music/breaking_the_chains.ogg (licensed under the GPL 2.0)
 /music/casualties_of_war.ogg (licensed under the GPL 2.0)
 /music/defeat.ogg (licensed under the GPL 2.0)
+/music/defeat2.ogg (licensed under the GPL 2.0)
 /music/elvish-theme.ogg (licensed under the GPL 2.0)
+/music/frantic.ogg (licensed under the GPL 2.0)
 /music/heroes_rite.ogg (licensed under the GPL 2.0)
 /music/journeys_end.ogg (licensed under the GPL 2.0)
 /music/knalgan_theme.ogg (licensed under the GPL 2.0)
@@ -15,20 +14,22 @@ Battle for Wesnoth Team:
 /music/legends_of_the_north.ogg (licensed under the GPL 2.0)
 /music/loyalists.ogg (licensed under the GPL 2.0)
 /music/northern_mountains.ogg (licensed under the GPL 2.0)
+/music/northerners.ogg (licensed under the GPL 2.0)
+/music/nunc_dimittis.ogg (licensed under the GPL 2.0)
+/music/revelation.ogg (licensed under the GPL 2.0)
+/music/siege_of_laurelmor.ogg (licensed under the GPL 2.0)
 /music/suspense.ogg (licensed under the GPL 2.0)
 /music/the_city_falls.ogg (licensed under the GPL 2.0)
 /music/the_dangerous_symphony.ogg (licensed under the GPL 2.0)
 /music/the_deep_path.ogg (licensed under the GPL 2.0)
 /music/the_king_is_dead.ogg (licensed under the GPL 2.0)
+/music/transience.ogg (licensed under the GPL 2.0)
 /music/traveling_minstrels.ogg (licensed under the GPL 2.0)
 /music/underground.ogg (licensed under the GPL 2.0)
 /music/vengeful.ogg (licensed under the GPL 2.0)
 /music/victory.ogg (licensed under the GPL 2.0)
 /music/victory2.ogg (licensed under the GPL 2.0)
 /music/wanderer.ogg (licensed under the GPL 2.0)
-
-Écrivain:
-/music/icy_heights.ogg (licensed under the CC0)
 
 Marcelo Fernandez (http://www.marcelofernandezmusic.com):
 /music/oaml/DwarfLoading_A1.ogg (Creative Commons Attribution 4.0 International)
@@ -73,8 +74,3 @@ Marcelo Fernandez (http://www.marcelofernandezmusic.com):
 /music/oaml/MenuTheme_A4.ogg (Creative Commons Attribution 4.0 International)
 /music/oaml/MenuTheme_C.ogg (Creative Commons Attribution 4.0 International)
 /music/oaml/MenuTheme_Intro.ogg (Creative Commons Attribution 4.0 International)
-
-yd:
-/music/war_on_water_1.ogg (licensed under the CC0)
-/music/war_on_water_2.ogg (licensed under the CC0)
-/music/war_on_water_3.ogg (licensed under the CC0)

@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<track>
+	<name>AtTheEastGate</name>
+	<group>map</group>
+	<subgroup>dwarf</subgroup>
+	<subgroup>Knalga</subgroup>
+	<fadeIn>1000</fadeIn>
+	<fadeOut>1000</fadeOut>
+	<xfadeIn>500</xfadeIn>
+	<xfadeOut>500</xfadeOut>
+	<audio>
+		<filename>music/loyalists.ogg</filename>
+	</audio>
+	<audio>
+		<filename>music/knalgan_theme.ogg</filename>
+	</audio>
+	<audio>
+		<filename>music/northerners.ogg</filename>
+	</audio>
+</track>
+<track>
+	<name>StrangeAllies</name>
+	<group>map</group>
+	<subgroup>dwarf</subgroup>
+	<subgroup>goblin</subgroup>
+	<subgroup>Knalga</subgroup>
+	<fadeIn>1000</fadeIn>
+	<fadeOut>1000</fadeOut>
+	<xfadeIn>500</xfadeIn>
+	<xfadeOut>500</xfadeOut>
+	<audio>
+		<filename>music/the_city_falls.ogg</filename>
+	</audio>
+	<audio>
+		<filename>music/battle.ogg</filename>
+	</audio>
+	<audio>
+		<filename>music/the_king_is_dead.ogg</filename>
+	</audio>
+</track>
+<track>
+	<name>GoblinBridge</name>
+	<group>map</group>
+	<subgroup>dwarf</subgroup>
+	<subgroup>goblin</subgroup>
+	<subgroup>Knalga</subgroup>
+	<fadeIn>1000</fadeIn>
+	<fadeOut>1000</fadeOut>
+	<xfadeIn>500</xfadeIn>
+	<xfadeOut>500</xfadeOut>
+	<audio>
+		<filename>music/frantic.ogg</filename>
+	</audio>
+	<audio>
+		<filename>music/wanderer.ogg</filename>
+	</audio>
+	<audio>
+		<filename>music/nunc_dimittis.ogg</filename>
+	</audio>
+</track>
+<track>
+	<name>Invaders</name>
+	<group>map</group>
+	<subgroup>dwarf</subgroup>
+	<subgroup>Knalga</subgroup>
+	<fadeIn>1000</fadeIn>
+	<fadeOut>1000</fadeOut>
+	<xfadeIn>500</xfadeIn>
+	<xfadeOut>500</xfadeOut>
+	<audio>
+		<filename>music/the_dangerous_symphony.ogg</filename>
+	</audio>
+	<audio>
+		<filename>music/the_city_falls.ogg</filename>
+	</audio>
+	<audio>
+		<filename>music/vengeful.ogg</filename>
+	</audio>
+</track>
+<track>
+	<name>HighPass</name>
+	<group>map</group>
+	<subgroup>dwarf</subgroup>
+	<subgroup>Knalga</subgroup>
+	<fadeIn>1000</fadeIn>
+	<fadeOut>1000</fadeOut>
+	<xfadeIn>500</xfadeIn>
+	<xfadeOut>500</xfadeOut>
+	<audio>
+		<filename>music/heroes_rite.ogg</filename>
+	</audio>
+	<audio>
+		<filename>music/northern_mountains.ogg</filename>
+	</audio>
+	<audio>
+		<filename>music/casualties_of_war.ogg</filename>
+	</audio>
+</track>
+<track>
+	<name>WitnessesAndKobolds</name>
+	<group>map</group>
+	<subgroup>dwarf</subgroup>
+	<subgroup>kobold</subgroup>
+	<subgroup>Knalga</subgroup>
+	<fadeIn>1000</fadeIn>
+	<fadeOut>1000</fadeOut>
+	<xfadeIn>500</xfadeIn>
+	<xfadeOut>500</xfadeOut>
+	<audio>
+		<filename>music/revelation.ogg</filename>
+	</audio>
+	<audio>
+		<filename>music/traveling_minstrels.ogg</filename>
+	</audio>
+	<audio>
+		<filename>music/nunc_dimittis.ogg</filename>
+	</audio>
+</track>
+<track>
+	<name>Fear</name>
+	<group>map</group>
+	<subgroup>dwarf</subgroup>
+	<subgroup>Knalga</subgroup>
+	<fadeIn>1000</fadeIn>
+	<fadeOut>1000</fadeOut>
+	<xfadeIn>500</xfadeIn>
+	<xfadeOut>500</xfadeOut>
+	<audio>
+		<filename>music/breaking_the_chains.ogg</filename>
+	</audio>
+	<audio>
+		<filename>music/knalgan_theme.ogg</filename>
+	</audio>
+	<audio>
+		<filename>music/battle.ogg</filename>
+	</audio>
+</track>
+<track>
+	<name>ForbiddenForest</name>
+	<group>map</group>
+	<subgroup>dwarf</subgroup>
+	<subgroup>gnome</subgroup>
+	<subgroup>Knalga</subgroup>
+	<fadeIn>1000</fadeIn>
+	<fadeOut>1000</fadeOut>
+	<xfadeIn>500</xfadeIn>
+	<xfadeOut>500</xfadeOut>
+	<audio>
+		<filename>music/elvish-theme.ogg</filename>
+	</audio>
+	<audio>
+		<filename>music/traveling_minstrels.ogg</filename>
+	</audio>
+	<audio>
+		<filename>music/frantic.ogg</filename>
+	</audio>
+</track>
+<track>
+	<name>TheSiegeOfKalKartha</name>
+	<group>map</group>
+	<subgroup>dwarf</subgroup>
+	<subgroup>Knalga</subgroup>
+	<subgroup>Kal Kartha</subgroup>
+	<fadeIn>1000</fadeIn>
+	<fadeOut>1000</fadeOut>
+	<xfadeIn>500</xfadeIn>
+	<xfadeOut>500</xfadeOut>
+	<audio>
+		<filename>music/the_dangerous_symphony.ogg</filename>
+	</audio>
+	<audio>
+		<filename>music/loyalists.ogg</filename>
+	</audio>
+	<audio>
+		<filename>music/northerners.ogg</filename>
+	</audio>
+</track>
+<track>
+	<name>TheCourtOfKarrag</name>
+	<group>map</group>
+	<subgroup>dwarf</subgroup>
+	<subgroup>Knalga</subgroup>
+	<subgroup>Kal Kartha</subgroup>
+	<fadeIn>1000</fadeIn>
+	<fadeOut>1000</fadeOut>
+	<xfadeIn>500</xfadeIn>
+	<xfadeOut>500</xfadeOut>
+	<audio>
+		<filename>music/the_king_is_dead.ogg</filename>
+	</audio>
+	<audio>
+		<filename>music/revelation.ogg</filename>
+	</audio>
+	<audio>
+		<filename>music/transience.ogg</filename>
+	</audio>
+</track>
+<track>
+	<name>TheUnderlevels</name>
+	<group>map</group>
+	<subgroup>dwarf</subgroup>
+	<subgroup>Knalga</subgroup>
+	<subgroup>Kal Kartha</subgroup>
+	<fadeIn>1000</fadeIn>
+	<fadeOut>1000</fadeOut>
+	<xfadeIn>500</xfadeIn>
+	<xfadeOut>500</xfadeOut>
+	<audio>
+		<filename>music/vengeful.ogg</filename>
+	</audio>
+	<audio>
+		<filename>music/underground.ogg</filename>
+	</audio>
+	<audio>
+		<filename>music/breaking_the_chains.ogg</filename>
+	</audio>
+	<audio>
+		<filename>music/siege_of_laurelmor.ogg</filename>
+	</audio>
+	<audio>
+		<filename>music/battle.ogg</filename>
+	</audio>
+	<audio>
+		<filename>music/the_deep_path.ogg</filename>
+	</audio>
+	<audio>
+		<filename>music/the_dangerous_symphony.ogg</filename>
+	</audio>
+	<audio>
+		<filename>music/knalgan_theme.ogg</filename>
+	</audio>
+	<audio>
+		<filename>music/legends_of_the_north.ogg</filename>
+	</audio>
+	<audio>
+		<filename>music/suspense.ogg</filename>
+	</audio>
+	<audio>
+		<filename>music/revelation.ogg</filename>
+	</audio>
+</track>

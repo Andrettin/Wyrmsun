@@ -33,6 +33,7 @@
 	<name>GermanicTheme</name>
 	<group>map</group>
 	<subgroup>germanic</subgroup>
+	<subgroup>Asa Tribe</subgroup>
 	<fadeIn>10000</fadeIn>
 	<fadeOut>1000</fadeOut>
 	<xfadeIn>10</xfadeIn>
@@ -95,6 +96,7 @@
 	<name>GermanicTheme2</name>
 	<group>map</group>
 	<subgroup>germanic</subgroup>
+	<subgroup>Asa Tribe</subgroup>
 	<fadeIn>2000</fadeIn>
 	<fadeOut>1000</fadeOut>
 	<xfadeIn>10</xfadeIn>
@@ -150,6 +152,7 @@
 	<name>GermanicTheme3</name>
 	<group>map</group>
 	<subgroup>germanic</subgroup>
+	<subgroup>Asa Tribe</subgroup>
 	<fadeIn>500</fadeIn>
 	<fadeOut>500</fadeOut>
 	<xfadeIn>10</xfadeIn>
