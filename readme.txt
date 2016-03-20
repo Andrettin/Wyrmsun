@@ -64,6 +64,9 @@ https://github.com/Andrettin/Wyrmsun
 - 2.1.0
 -----------------------------------------------------------------------
 
+* Civilizations
+- All cursors are now preloaded, instead of only that of the player's civilization, to eliminate the cursor loading time mid-game when changing civilization.
+
 * DLCs
 - Added "The Death of Count Cadaloc" music theme to the Frankish Faction Flair Pack, for when playing Frankish factions (by Marcelo Fernandez) (http://www.marcelofernandezmusic.com).
 
