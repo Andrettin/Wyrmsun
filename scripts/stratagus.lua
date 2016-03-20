@@ -2014,6 +2014,7 @@ Preference.HotkeySetup = wyr.preferences.HotkeySetup
 Load("scripts/languages.lua")
 Load("scripts/civilizations.lua")
 Load("scripts/icons.lua")
+Load("scripts/music.lua")
 Load("scripts/sound.lua")
 Load("scripts/missiles.lua")
 Load("scripts/constructions.lua")

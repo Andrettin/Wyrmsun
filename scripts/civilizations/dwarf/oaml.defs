@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<track>
+	<name>DwarfLoading</name>
+	<group>loading</group>
+	<subgroup>dwarf</subgroup>
+	<fadeIn>5000</fadeIn>
+	<fadeOut>1000</fadeOut>
+	<xfadeIn>10</xfadeIn>
+	<xfadeOut>10</xfadeOut>
+	<audio>
+		<filename>music/oaml/DwarfLoading_A1.ogg</filename>
+		<bpm>60</bpm>
+		<beatsPerBar>3</beatsPerBar>
+		<type>2</type>
+		<bars>8</bars>
+	</audio>
+	<audio>
+		<filename>music/oaml/DwarfLoading_A2.ogg</filename>
+		<bpm>60</bpm>
+		<beatsPerBar>3</beatsPerBar>
+		<type>2</type>
+		<bars>8</bars>
+	</audio>
+</track>
+<track>
+	<name>DwarfTheme</name>
+	<group>map</group>
+	<subgroup>dwarf</subgroup>
+	<fadeIn>10000</fadeIn>
+	<fadeOut>1000</fadeOut>
+	<xfadeIn>10</xfadeIn>
+	<xfadeOut>10</xfadeOut>
+	<audio>
+		<filename>music/oaml/DwarfTheme_A1.ogg</filename>
+		<bpm>72</bpm>
+		<beatsPerBar>3</beatsPerBar>
+		<type>2</type>
+		<bars>16</bars>
+		<minMovementBars>1</minMovementBars>
+	</audio>
+	<audio>
+		<filename>music/oaml/DwarfTheme_A2.ogg</filename>
+		<bpm>72</bpm>
+		<beatsPerBar>3</beatsPerBar>
+		<type>2</type>
+		<bars>16</bars>
+		<minMovementBars>1</minMovementBars>
+	</audio>
+	<audio>
+		<filename>music/oaml/DwarfTheme_R1.ogg</filename>
+		<bpm>72</bpm>
+		<beatsPerBar>3</beatsPerBar>
+		<type>2</type>
+		<bars>16</bars>
+		<minMovementBars>1</minMovementBars>
+		<randomChance>25</randomChance>
+	</audio>
+	<audio>
+		<filename>music/oaml/DwarfTheme_B1.ogg</filename>
+		<bpm>72</bpm>
+		<beatsPerBar>3</beatsPerBar>
+		<type>4</type>
+		<bars>8</bars>
+		<minMovementBars>1</minMovementBars>
+		<condId>1</condId>
+		<condType>3</condType>
+		<condValue>1</condValue>
+		<condValue2>100</condValue2>
+		<xfadeIn>2000</xfadeIn>
+		<xfadeOut>2000</xfadeOut>
+	</audio>
+</track>
+<track>
+	<name>DwarfTheme2</name>
+	<group>map</group>
+	<subgroup>dwarf</subgroup>
+	<fadeIn>10000</fadeIn>
+	<fadeOut>1000</fadeOut>
+	<xfadeIn>10</xfadeIn>
+	<xfadeOut>10</xfadeOut>
+	<audio>
+		<filename>music/oaml/DwarfTheme2_A1.ogg</filename>
+		<bpm>80</bpm>
+		<beatsPerBar>3</beatsPerBar>
+		<type>2</type>
+		<bars>16</bars>
+		<minMovementBars>1</minMovementBars>
+	</audio>
+	<audio>
+		<filename>music/oaml/DwarfTheme2_A2.ogg</filename>
+		<bpm>80</bpm>
+		<beatsPerBar>3</beatsPerBar>
+		<type>2</type>
+		<bars>16</bars>
+		<minMovementBars>1</minMovementBars>
+	</audio>
+	<audio>
+		<filename>music/oaml/DwarfTheme2_R1.ogg</filename>
+		<bpm>80</bpm>
+		<beatsPerBar>3</beatsPerBar>
+		<type>2</type>
+		<bars>16</bars>
+		<minMovementBars>1</minMovementBars>
+		<randomChance>100</randomChance>
+	</audio>
+	<audio>
+		<filename>music/oaml/DwarfTheme2_B1.ogg</filename>
+		<bpm>80</bpm>
+		<beatsPerBar>3</beatsPerBar>
+		<type>4</type>
+		<bars>16</bars>
+		<minMovementBars>1</minMovementBars>
+		<condId>1</condId>
+		<condType>3</condType>
+		<condValue>1</condValue>
+		<condValue2>100</condValue2>
+		<xfadeIn>1000</xfadeIn>
+		<xfadeOut>1000</xfadeOut>
+	</audio>
+</track>
+<track>
+	<name>ABargainIsStruck</name>
+	<group>map</group>
+	<subgroup>Norlund Clan</subgroup>
+	<fadeIn>1000</fadeIn>
+	<fadeOut>1000</fadeOut>
+	<xfadeIn>500</xfadeIn>
+	<xfadeOut>500</xfadeOut>
+	<audio>
+		<filename>music/knolls.ogg</filename>
+	</audio>
+	<audio>
+		<filename>music/loyalists.ogg</filename>
+	</audio>
+	<audio>
+		<filename>music/breaking_the_chains.ogg</filename>
+	</audio>
+</track>
+<track>
+	<name>ClosingTheGates</name>
+	<group>map</group>
+	<subgroup>Norlund Clan</subgroup>
+	<fadeIn>1000</fadeIn>
+	<fadeOut>1000</fadeOut>
+	<xfadeIn>500</xfadeIn>
+	<xfadeOut>500</xfadeOut>
+	<audio>
+		<filename>music/battle.ogg</filename>
+	</audio>
+	<audio>
+		<filename>music/the_city_falls.ogg</filename>
+	</audio>
+</track>
+<track>
+	<name>SearchingForTheRunecrafter</name>
+	<group>map</group>
+	<subgroup>Norlund Clan</subgroup>
+	<fadeIn>1000</fadeIn>
+	<fadeOut>1000</fadeOut>
+	<xfadeIn>500</xfadeIn>
+	<xfadeOut>500</xfadeOut>
+	<audio>
+		<filename>music/wanderer.ogg</filename>
+	</audio>
+	<audio>
+		<filename>music/elvish-theme.ogg</filename>
+	</audio>
+	<audio>
+		<filename>music/knolls.ogg</filename>
+	</audio>
+</track>
+<track>
+	<name>GatheringMaterials</name>
+	<group>map</group>
+	<subgroup>Norlund Clan</subgroup>
+	<fadeIn>1000</fadeIn>
+	<fadeOut>1000</fadeOut>
+	<xfadeIn>500</xfadeIn>
+	<xfadeOut>500</xfadeOut>
+	<audio>
+		<filename>music/underground.ogg</filename>
+	</audio>
+	<audio>
+		<filename>music/suspense.ogg</filename>
+	</audio>
+</track>
+<track>
+	<name>HillsOfTheShorbearClan</name>
+	<group>map</group>
+	<subgroup>Norlund Clan</subgroup>
+	<fadeIn>1000</fadeIn>
+	<fadeOut>1000</fadeOut>
+	<xfadeIn>500</xfadeIn>
+	<xfadeOut>500</xfadeOut>
+	<audio>
+		<filename>music/knolls.ogg</filename>
+	</audio>
+	<audio>
+		<filename>music/the_city_falls.ogg</filename>
+	</audio>
+	<audio>
+		<filename>music/battle.ogg</filename>
+	</audio>
+</track>
+<track>
+	<name>TheWyrm</name>
+	<group>map</group>
+	<subgroup>Norlund Clan</subgroup>
+	<fadeIn>1000</fadeIn>
+	<fadeOut>1000</fadeOut>
+	<xfadeIn>500</xfadeIn>
+	<xfadeOut>500</xfadeOut>
+	<audio>
+		<filename>music/knalgan_theme.ogg</filename>
+	</audio>
+</track>
+<track>
+	<name>CavernsOfFlame</name>
+	<group>map</group>
+	<subgroup>Norlund Clan</subgroup>
+	<fadeIn>1000</fadeIn>
+	<fadeOut>1000</fadeOut>
+	<xfadeIn>500</xfadeIn>
+	<xfadeOut>500</xfadeOut>
+	<audio>
+		<filename>music/the_dangerous_symphony.ogg</filename>
+	</audio>
+	<audio>
+		<filename>music/heroes_rite.ogg</filename>
+	</audio>
+</track>

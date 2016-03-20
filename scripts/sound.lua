@@ -10,7 +10,7 @@
 --
 --      sound.lua - Define the used sounds.
 --
---      (c) Copyright 1999-2015 by Fabrice Rossi, Lutz Sammer, Jimmy Salmon and Andrettin
+--      (c) Copyright 1999-2016 by Fabrice Rossi, Lutz Sammer, Jimmy Salmon and Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -29,17 +29,6 @@
 
 --	Uncomment this to enable threaded sound
 --SoundThread()
-
-------------------------------------------------------------------------------
---	Music part
-
-------------------------------------------------------------------------------
---	MusicStopped is called if the current music is finished.
---
---		This is a random music player demo
---
-
-InitMusicOAML()
 
 ------------------------------------------------------------------------------
 --	Define sounds later used
