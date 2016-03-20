@@ -750,6 +750,20 @@ function RunEditorMapProperties()
 	menu:run(false)
 end
 
+function RunEditorCustomDataProperties()
+	local menu = WarGameMenu(panel(1))
+
+	menu:addLabel("Custom Data Properties", 128, 11)
+
+	menu:addFullButton("Custom ~!Factions", "f", 16, 40 + 35 * 0, RunEditorFactionProperties)
+	menu:addFullButton("Custom ~!Language Words", "l", 16, 40 + 35 * 1, RunEditorLanguageProperties)
+
+	menu:addFullButton("Previous Menu (~<Esc~>)", "escape", 16, 40 + 35 * 6,
+		function() menu:stop() end)
+
+	menu:run(false)
+end
+
 --
 --  Change language properties from the editor
 --
@@ -785,6 +799,7 @@ function RunEditorLanguageProperties()
 	end
 		
 	local current_language
+	local current_word
 	local word_list = {}
 	local word_properties = {}
 	for i=1,table.getn(language_ident_list) do
@@ -1052,6 +1067,238 @@ function RunEditorLanguageProperties()
 end
 
 --
+--  Change faction properties from the editor
+--
+function RunEditorFactionProperties()
+	local menu = WarGameMenu(panel(5))
+	local sizeX = 352
+	local sizeY = 352
+
+	menu:resize(sizeX, sizeY)
+	menu:addLabel("Custom Factions", sizeX / 2, 11)
+
+	local faction_type_list = {"tribe", "polity"}
+	local color_list = GetPlayerColors()
+
+	local civilization_ident_list = GetCivilizations()
+	table.sort(civilization_ident_list)
+	local civilization_list = {}
+	for i=1,table.getn(civilization_ident_list) do
+		table.insert(civilization_list, GetCivilizationData(civilization_ident_list[i], "Display"))
+	end
+	
+	local language_ident_list = GetLanguages(true)
+	RemoveElementFromArray(language_ident_list, "avestan")
+	RemoveElementFromArray(language_ident_list, "basque")
+	RemoveElementFromArray(language_ident_list, "etruscan")
+	RemoveElementFromArray(language_ident_list, "greek")
+	RemoveElementFromArray(language_ident_list, "illyrian")
+	RemoveElementFromArray(language_ident_list, "minoan")
+	RemoveElementFromArray(language_ident_list, "phrygian")
+	RemoveElementFromArray(language_ident_list, "proto-slavic")
+	RemoveElementFromArray(language_ident_list, "russian")
+	RemoveElementFromArray(language_ident_list, "thracian")
+	table.sort(language_ident_list)
+	local language_list = {}
+	for i=1,table.getn(language_ident_list) do
+		table.insert(language_list, GetLanguageData(language_ident_list[i], "Name"))
+	end
+	table.insert(language_ident_list, "")
+	table.insert(language_list, "")
+		
+	local current_civilization
+	local current_faction
+	local faction_list = {}
+	local faction_properties = {}
+	for i=1,table.getn(civilization_ident_list) do
+		faction_list[i] = GetCivilizationData(civilization_ident_list[i], "Factions", Map.Info.Filename)
+	end
+	for i=1,table.getn(civilization_ident_list) do
+		faction_properties[i] = {}
+		for j=1,table.getn(faction_list[i]) do
+			faction_properties[i][j] = {}
+			faction_properties[i][j].Type = GetFactionData(civilization_ident_list[i], faction_list[i][j], "Type")
+			faction_properties[i][j].Color = GetFactionData(civilization_ident_list[i], faction_list[i][j], "Color")
+			if (GetFactionData(civilization_ident_list[i], faction_list[i][j], "Language") ~= GetCivilizationData(civilization_ident_list[i], "Language")) then
+				faction_properties[i][j].Language = GetFactionData(civilization_ident_list[i], faction_list[i][j], "Language")
+			else
+				faction_properties[i][j].Language = ""
+			end
+			faction_properties[i][j].FactionUpgrade = GetFactionData(civilization_ident_list[i], faction_list[i][j], "FactionUpgrade")
+		end
+	end
+	
+	local faction_upgrade_list = {}
+	for i=1,table.getn(civilization_ident_list) do
+		faction_upgrade_list[i] = {}
+		local civilization_factions = GetCivilizationData(civilization_ident_list[i], "Factions")
+		for j=1,table.getn(civilization_factions) do
+			if (GetFactionData(civilization_ident_list[i], civilization_factions[j], "FactionUpgrade") ~= "" and GetArrayIncludes(faction_upgrade_list[i], GetFactionData(civilization_ident_list[i], civilization_factions[j], "FactionUpgrade")) == false) then
+				table.insert(faction_upgrade_list[i], GetFactionData(civilization_ident_list[i], civilization_factions[j], "FactionUpgrade"))
+			end
+		end
+		table.insert(faction_upgrade_list[i], "")
+	end
+
+	local faction_type
+	local faction_type_label
+	local language
+	local language_label
+	local color
+	local color_label
+	local faction_upgrade
+	local faction_upgrade_label
+	
+	local function FactionChanged()
+		faction_type:setSelected(GetElementIndexFromArray(faction_type_list, faction_properties[current_civilization:getSelected() + 1][current_faction:getSelected() + 1].Type) - 1)
+		
+		language:setSelected(GetElementIndexFromArray(language_ident_list, faction_properties[current_civilization:getSelected() + 1][current_faction:getSelected() + 1].Language) - 1)
+		
+		color:setSelected(GetElementIndexFromArray(color_list, faction_properties[current_civilization:getSelected() + 1][current_faction:getSelected() + 1].Color) - 1)
+		
+		faction_upgrade:setSelected(GetElementIndexFromArray(faction_upgrade_list[current_civilization:getSelected() + 1], faction_properties[current_civilization:getSelected() + 1][current_faction:getSelected() + 1].FactionUpgrade) - 1)
+	end
+	
+	local function CivilizationChanged(new_faction)
+		current_faction:setList(faction_list[current_civilization:getSelected() + 1])
+		current_faction:setSize(120, 20)
+		if (new_faction == nil) then
+			current_faction:setSelected(0)
+		else
+			current_faction:setSelected(GetElementIndexFromArray(faction_list[current_civilization:getSelected() + 1], new_faction) - 1)
+		end
+		
+		local has_factions = table.getn(faction_list[current_civilization:getSelected() + 1]) > 0
+		
+		current_faction:setVisible(has_factions)
+		faction_type:setVisible(has_factions)
+		faction_type_label:setVisible(has_factions)
+		language:setVisible(has_factions)
+		language_label:setVisible(has_factions)
+		color:setVisible(has_factions)
+		color_label:setVisible(has_factions)
+		faction_upgrade:setVisible(has_factions)
+		faction_upgrade_label:setVisible(has_factions)
+		faction_upgrade:setList(faction_upgrade_list[current_civilization:getSelected() + 1])
+		faction_upgrade:setSize(236, 20)
+
+		if (has_factions) then
+			FactionChanged()
+		end		
+	end
+
+	current_civilization = menu:addDropDown(civilization_list, (sizeX / 2) - 60, 11 + (34 * 1), function(dd) CivilizationChanged() end)
+	current_civilization:setSize(120, 20)
+	current_civilization:setSelected(0)
+		
+	current_faction = menu:addDropDown(faction_list[current_civilization:getSelected() + 1], (sizeX / 2) - 60, 11 + (34 * 2), function(dd) FactionChanged() end)
+	current_faction:setSize(120, 20)
+		
+	faction_type_label = menu:addLabel(_("Type:"), 10, 14 + 34 * 3, Fonts["game"], false)
+	faction_type = menu:addDropDown(faction_type_list, (sizeX / 2) - 60 - 10, 11 + 34 * 3, function(dd)
+		faction_properties[current_civilization:getSelected() + 1][current_faction:getSelected() + 1].Type = faction_type_list[faction_type:getSelected() + 1]
+	end)
+	faction_type:setSize(236, 20)
+	faction_type:setSelected(0)
+
+	language_label = menu:addLabel(_("Language:"), 10, 14 + 34 * 4, Fonts["game"], false)
+	language = menu:addDropDown(language_list, (sizeX / 2) - 60 - 10, 11 + 34 * 4, function(dd)
+		faction_properties[current_civilization:getSelected() + 1][current_faction:getSelected() + 1].Language = language_ident_list[language:getSelected() + 1]
+	end)
+	language:setSize(236, 20)
+	language:setSelected(0)
+
+	color_label = menu:addLabel(_("Color:"), 10, 14 + 34 * 5, Fonts["game"], false)
+	color = menu:addDropDown(color_list, (sizeX / 2) - 60 - 10, 11 + 34 * 5, function(dd)
+		faction_properties[current_civilization:getSelected() + 1][current_faction:getSelected() + 1].Color = color_list[color:getSelected() + 1]
+	end)
+	color:setSize(236, 20)
+	color:setSelected(0)
+
+	faction_upgrade_label = menu:addLabel(_("Upgrade:"), 10, 14 + 34 * 6, Fonts["game"], false)
+	faction_upgrade = menu:addDropDown({""}, (sizeX / 2) - 60 - 10, 11 + 34 * 6, function(dd)
+		faction_properties[current_civilization:getSelected() + 1][current_faction:getSelected() + 1].FactionUpgrade = faction_upgrade_list[current_civilization:getSelected() + 1][faction_upgrade:getSelected() + 1]
+	end)
+	faction_upgrade:setSize(236, 20)
+	faction_upgrade:setSelected(0)
+
+	CivilizationChanged()
+	
+	menu:addFullButton("Crea~!te Faction", "t", 176 - (224 / 2), sizeY - 36 * 2,
+		function()
+			local sub_menu = WarGameMenu(panel(3))
+			sub_menu:setSize(384, 256)
+			sub_menu:setPosition((Video.Width - sub_menu:getWidth()) / 2, (Video.Height - sub_menu:getHeight()) / 2)
+			sub_menu:addLabel(_("Create Faction"), 176, 11)
+			
+			local sub_sizeX = 384
+			local sub_sizeY = 256
+
+			sub_menu:addLabel(_("Faction:"), 10, 12 + 36 * 1, Fonts["game"], false)
+			local faction_name = sub_menu:addTextInputField("", (sub_sizeX / 2) - 60 - 10, 11 + 36 * 1, 120)
+			
+			sub_menu:addFullButton("Crea~!te", "t", 176 - (224 / 2), sub_sizeY - 40 * 2,
+				function()
+					if (faction_name:getText() == "") then
+						GenericDialog("Error", "The faction's name cannot be empty.")
+					elseif (GetArrayIncludes(faction_list[current_civilization:getSelected() + 1], faction_name:getText()) or GetArrayIncludes(GetFactions(), faction_name:getText())) then
+						GenericDialog("Error", "There is already another faction with that name.")
+					elseif (IsNameValidForWord(faction_name:getText()) == false) then
+						GenericDialog("Error", "The faction's name is invalid.")
+					else
+						local new_faction_id = table.getn(faction_list[current_civilization:getSelected() + 1]) + 1
+						faction_list[current_civilization:getSelected() + 1][new_faction_id] = faction_name:getText()
+						faction_properties[current_civilization:getSelected() + 1][new_faction_id] = {}
+						faction_properties[current_civilization:getSelected() + 1][new_faction_id].Type = "tribe"
+						faction_properties[current_civilization:getSelected() + 1][new_faction_id].Color = GetCivilizationData(civilization_ident_list[current_civilization:getSelected() + 1], "DefaultColor")
+						faction_properties[current_civilization:getSelected() + 1][new_faction_id].Language = ""
+						faction_properties[current_civilization:getSelected() + 1][new_faction_id].FactionUpgrade = ""
+						
+						CivilizationChanged(faction_name:getText())
+						sub_menu:stop()
+					end
+				end
+			)
+			sub_menu:addFullButton("~!Cancel", "c", 176 - (224 / 2), sub_sizeY - 40 * 1,
+				function()
+					sub_menu:stop()
+				end
+			)
+			sub_menu:run(false)
+		end
+	)
+	
+	menu:addHalfButton("~!OK", "o", 20 + 48, sizeY - 36 * 1,
+		function()
+			for i=1,table.getn(faction_list) do
+				for j=1,table.getn(faction_list[i]) do
+					local faction_definition = {
+						Civilization = civilization_ident_list[i],
+						Type = faction_properties[i][j].Type,
+						Colors = {faction_properties[i][j].Color},
+						Mod = Map.Info.Filename
+					}
+					if (faction_properties[i][j].Language ~= "") then
+						faction_definition.Language = faction_properties[i][j].Language
+					end
+					if (faction_properties[i][j].FactionUpgrade ~= "") then
+						faction_definition.FactionUpgrade = faction_properties[i][j].FactionUpgrade
+					end
+					
+					DefineFaction(faction_list[i][j], faction_definition)
+				end
+			end
+			menu:stop()
+		end
+	)
+
+	menu:addHalfButton(_("~!Cancel"), "c", 130 + 48, sizeY - 36 * 1,
+		function() menu:stop() end)
+
+	menu:run(false)
+end
+
+--
 --  Main menu in editor.
 --
 function RunInEditorMenu()
@@ -1065,7 +1312,7 @@ function RunInEditorMenu()
 	menu:addFullButton("Save as ~!Mod", "m", 16, 40 + 35 * 1, function() RunEditorSaveMenu(true); end)
 	menu:addFullButton("Map Properties (~<F5~>)", "f5", 16, 40 + 35 * 2, RunEditorMapProperties)
 	menu:addFullButton("Player Properties (~<F6~>)", "f6", 16, 40 + 35 * 3, RunEditorPlayerProperties)
-	menu:addFullButton("Custom ~!Language Words", "l", 16, 40 + 35 * 4, RunEditorLanguageProperties)
+	menu:addFullButton("Custom ~!Data", "d", 16, 40 + 35 * 4, RunEditorCustomDataProperties)
 
 --	buttonEditorLoad:setEnabled(false) -- To be removed when enabled.
 

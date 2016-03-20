@@ -68,13 +68,14 @@ https://github.com/Andrettin/Wyrmsun
 - All cursors are now preloaded, instead of only that of the player's civilization, to eliminate the cursor loading time mid-game when changing civilization.
 
 * DLCs
-- Added "The Death of Count Cadaloc" music theme to the Frankish Faction Flair Pack, for when playing Frankish factions (by Marcelo Fernandez) (http://www.marcelofernandezmusic.com).
+- Added "The Death of Count Cadaloc" music theme to the Frankish Faction Flair Pack (by Marcelo Fernandez) (http://www.marcelofernandezmusic.com), for when playing Frankish factions.
 
 * Items
 - Fixed an issue which caused the game to crash when units who do not have any active abilities (like Skutans) had a spell scroll in their inventory, and the mouse hovered over the item.
 
 * Map Editor
-- Added support for saving maps as mods; this saves only the custom words (for name generation), modified unit stats and unit sounds, allowing you to load the mod in the Mods screen.
+- Added support for adding custom factions in the editor.
+- Added support for saving maps as mods; this saves only the custom factions, custom words (for name generation), modified unit stats and unit sounds, allowing you to load the mod in the Mods screen.
 
 * Multiplayer
 - Fixed a few potential crash causes for multiplayer.

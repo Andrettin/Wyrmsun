@@ -38,11 +38,7 @@ function ChooseFaction(old_civilization, old_faction)
 	local chosen_faction
 	local current_civilization = GetPlayerData(GetThisPlayer(), "RaceName")
 	
-	if (old_faction ~= "" and table.getn(GetFactionDevelopsTo(old_civilization, old_faction, current_civilization)) > 0) then
-		potential_factions = GetFactionDevelopsTo(old_civilization, old_faction, current_civilization)
-	else
-		potential_factions = GetCivilizationFactionNames(current_civilization)
-	end
+	potential_factions = GetFactions(current_civilization)
 	
 	for i=1,table.getn(potential_factions) do
 		if (GetFactionData(current_civilization, potential_factions[i], "Playable")) then
@@ -75,6 +71,7 @@ function ChooseFaction(old_civilization, old_faction)
 		l:setCaption("Default Color: " .. CapitalizeString(GetFactionData(current_civilization, faction_list[faction_dd:getSelected() + 1], "Color")) .. "\n\nEffects: " .. GetFactionEffectsString(current_civilization, faction_list[faction_dd:getSelected() + 1]))
 	end)
 	faction_dd:setSize(152, 20)
+	faction_dd:setSelected(0)
 	
 	-- faction effects
 	l = MultiLineLabel()
