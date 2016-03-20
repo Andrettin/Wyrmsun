@@ -75,6 +75,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Multiplayer
 - Fixed a few potential crash causes for multiplayer.
+- Fixed a potential desync cause related to variations.
 
 -----------------------------------------------------------------------
 - 2.0.0
