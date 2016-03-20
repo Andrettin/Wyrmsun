@@ -1,11 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <track>
+	<name>ANewAlly</name>
+	<group>map</group>
+	<subgroup>Norlund Clan</subgroup>
+	<fadeIn>1000</fadeIn>
+	<fadeOut>1000</fadeOut>
+	<xfadeIn>500</xfadeIn>
+	<xfadeOut>500</xfadeOut>
+	<audio>
+		<filename>music/knalgan_theme.ogg</filename>
+	</audio>
+	<audio>
+		<filename>music/legends_of_the_north.ogg</filename>
+	</audio>
+	<audio>
+		<filename>music/the_dangerous_symphony.ogg</filename>
+	</audio>
+</track>
+<track>
+	<name>PlungingIntoTheDarkness</name>
+	<group>map</group>
+	<subgroup>Norlund Clan</subgroup>
+	<fadeIn>1000</fadeIn>
+	<fadeOut>1000</fadeOut>
+	<xfadeIn>500</xfadeIn>
+	<xfadeOut>500</xfadeOut>
+	<audio>
+		<filename>music/knalgan_theme.ogg</filename>
+	</audio>
+	<audio>
+		<filename>music/underground.ogg</filename>
+	</audio>
+	<audio>
+		<filename>music/the_deep_path.ogg</filename>
+	</audio>
+	<audio>
+		<filename>music/into_the_shadows.ogg</filename>
+	</audio>
+</track>
+<track>
 	<name>ABargainIsStruck</name>
 	<group>map</group>
 	<subgroup>dwarf</subgroup>
 	<subgroup>gnome</subgroup>
-	<subgroup>Norlund Clan</subgroup>
-	<subgroup>Shinsplitter Clan</subgroup>
 	<fadeIn>1000</fadeIn>
 	<fadeOut>1000</fadeOut>
 	<xfadeIn>500</xfadeIn>
@@ -24,8 +61,6 @@
 	<name>ClosingTheGates</name>
 	<group>map</group>
 	<subgroup>dwarf</subgroup>
-	<subgroup>Norlund Clan</subgroup>
-	<subgroup>Shinsplitter Clan</subgroup>
 	<fadeIn>1000</fadeIn>
 	<fadeOut>1000</fadeOut>
 	<xfadeIn>500</xfadeIn>
@@ -41,7 +76,6 @@
 	<name>SearchingForTheRunecrafter</name>
 	<group>map</group>
 	<subgroup>dwarf</subgroup>
-	<subgroup>Norlund Clan</subgroup>
 	<fadeIn>1000</fadeIn>
 	<fadeOut>1000</fadeOut>
 	<xfadeIn>500</xfadeIn>
@@ -61,7 +95,6 @@
 	<group>map</group>
 	<subgroup>dwarf</subgroup>
 	<subgroup>goblin</subgroup>
-	<subgroup>Norlund Clan</subgroup>
 	<fadeIn>1000</fadeIn>
 	<fadeOut>1000</fadeOut>
 	<xfadeIn>500</xfadeIn>
@@ -77,8 +110,6 @@
 	<name>HillsOfTheShorbearClan</name>
 	<group>map</group>
 	<subgroup>dwarf</subgroup>
-	<subgroup>Norlund Clan</subgroup>
-	<subgroup>Shinsplitter Clan</subgroup>
 	<subgroup>Shorbear Clan</subgroup>
 	<fadeIn>1000</fadeIn>
 	<fadeOut>1000</fadeOut>
@@ -99,8 +130,6 @@
 	<group>map</group>
 	<subgroup>dwarf</subgroup>
 	<subgroup>kobold</subgroup>
-	<subgroup>Norlund Clan</subgroup>
-	<subgroup>Shinsplitter Clan</subgroup>
 	<fadeIn>1000</fadeIn>
 	<fadeOut>1000</fadeOut>
 	<xfadeIn>500</xfadeIn>
@@ -114,8 +143,6 @@
 	<group>map</group>
 	<subgroup>dwarf</subgroup>
 	<subgroup>goblin</subgroup>
-	<subgroup>Norlund Clan</subgroup>
-	<subgroup>Shinsplitter Clan</subgroup>
 	<fadeIn>1000</fadeIn>
 	<fadeOut>1000</fadeOut>
 	<xfadeIn>500</xfadeIn>

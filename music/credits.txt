@@ -8,6 +8,7 @@ Battle for Wesnoth Team:
 /music/elvish-theme.ogg (licensed under the GPL 2.0)
 /music/frantic.ogg (licensed under the GPL 2.0)
 /music/heroes_rite.ogg (licensed under the GPL 2.0)
+/music/into_the_shadows.ogg (licensed under the GPL 2.0)
 /music/journeys_end.ogg (licensed under the GPL 2.0)
 /music/knalgan_theme.ogg (licensed under the GPL 2.0)
 /music/knolls.ogg (licensed under the GPL 2.0)

@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <track>
+	<name>SettlingDisputes</name>
+	<group>map</group>
+	<subgroup>Shinsplitter Clan</subgroup>
+	<fadeIn>1000</fadeIn>
+	<fadeOut>1000</fadeOut>
+	<xfadeIn>500</xfadeIn>
+	<xfadeOut>500</xfadeOut>
+	<audio>
+		<filename>music/frantic.ogg</filename>
+	</audio>
+	<audio>
+		<filename>music/knalgan_theme.ogg</filename>
+	</audio>
+	<audio>
+		<filename>music/siege_of_laurelmor.ogg</filename>
+	</audio>
+</track>
+<track>
 	<name>AtTheEastGate</name>
 	<group>map</group>
 	<subgroup>dwarf</subgroup>
