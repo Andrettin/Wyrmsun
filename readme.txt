@@ -67,6 +67,9 @@ https://github.com/Andrettin/Wyrmsun
 * DLCs
 - Added "The Death of Count Cadaloc" music theme to the Frankish Faction Flair Pack, for when playing Frankish factions (by Marcelo Fernandez) (http://www.marcelofernandezmusic.com).
 
+* Items
+- Fixed an issue which caused the game to crash when units who do not have any active abilities (like Skutans) had a spell scroll in their inventory, and the mouse hovered over the item.
+
 * Map Editor
 - Added support for saving maps as mods; this saves only the custom words (for name generation), modified unit stats and unit sounds, allowing you to load the mod in the Mods screen.
 

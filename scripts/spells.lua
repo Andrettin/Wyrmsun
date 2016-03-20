@@ -10,7 +10,7 @@
 --
 --      spells.lua - The spells.
 --
---      (c) Copyright 1998-2015 by Joris Dauphin, Jimmy Salmon and Andrettin.
+--      (c) Copyright 1998-2016 by Joris Dauphin, Jimmy Salmon and Andrettin.
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
