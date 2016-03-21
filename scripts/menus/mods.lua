@@ -50,10 +50,10 @@ function RunModsMenu(selected_mod)
 		local fileslist = ListFilesInDirectory(ModDirectories[mod_dir_i])
 		for i,f in ipairs(fileslist) do
 			Map.Info.Description = ""
-			if (string.find(f, ".smp.gz")) then
+			if (string.find(f, ".smp")) then
 				local mod_location = ModDirectories[mod_dir_i] .. f
 				Load(mod_location)
-				mod_location = tostring(string.gsub(mod_location, ".smp.gz", ".sms.gz"))
+				mod_location = tostring(string.gsub(mod_location, ".smp", ".sms"))
 				if (GetArrayIncludes(mods, mod_location) == false) then
 					mods[table.getn(mods) + 1] = mod_location
 					if (Map.Info.Description ~= "") then
@@ -78,12 +78,25 @@ function RunModsMenu(selected_mod)
 			fileslist = ListFilesInDirectory(ModDirectories[mod_dir_i] .. dirlist[j])
 			for i,f in ipairs(fileslist) do
 				ModName = ""
+				Map.Info.Description = ""
 				if (string.find(f, "info.lua")) then
 					local mod_location = ModDirectories[mod_dir_i] .. dirlist[j] .. f
 					Load(mod_location)
 					if (GetArrayIncludes(mod_list, ModName) == false) then
 						mods[table.getn(mods) + 1] = mod_location
 						table.insert(mod_list, ModName)
+					end
+				elseif (string.find(f, ".smp")) then
+					local mod_location = ModDirectories[mod_dir_i] .. dirlist[j] .. f
+					Load(mod_location)
+					mod_location = tostring(string.gsub(mod_location, ".smp", ".sms"))
+					if (GetArrayIncludes(mods, mod_location) == false) then
+						mods[table.getn(mods) + 1] = mod_location
+						if (Map.Info.Description ~= "") then
+							table.insert(mod_list, Map.Info.Description)
+						else
+							table.insert(mod_list, mod_location)
+						end
 					end
 				end
 			end
@@ -130,7 +143,7 @@ function RunModsMenu(selected_mod)
 		end
 
 		local enabled_label
-		if (string.find(mods[selected_mod + 1], ".sms.gz")) then
+		if (string.find(mods[selected_mod + 1], ".sms")) then
 			enabled_label = "Enabled"
 		else
 			enabled_label = "Enabled (Restart Required)"
@@ -142,7 +155,7 @@ function RunModsMenu(selected_mod)
 				if (GetArrayIncludes(wyr.preferences.EnabledMods, mods[mod_dd:getSelected() + 1])) then
 					RemoveElementFromArray(wyr.preferences.EnabledMods, mods[mod_dd:getSelected() + 1])
 					SavePreferences()
-					if (string.find(mods[selected_mod + 1], ".sms.gz")) then
+					if (string.find(mods[selected_mod + 1], ".sms")) then
 						DisableMod(mods[selected_mod + 1])
 					end
 				else
@@ -157,7 +170,7 @@ function RunModsMenu(selected_mod)
 					if (has_required_dependencies) then
 						table.insert(wyr.preferences.EnabledMods, mods[mod_dd:getSelected() + 1])
 						SavePreferences()
-						if (string.find(mods[selected_mod + 1], ".sms.gz")) then
+						if (string.find(mods[selected_mod + 1], ".sms")) then
 							Load(mods[selected_mod + 1])
 						end
 					end
@@ -185,7 +198,7 @@ function LoadMods()
 	local mod_list = {}
   
 	for i=1,table.getn(wyr.preferences.EnabledMods) do
-		if (string.find(wyr.preferences.EnabledMods[i], ".sms.gz")) then
+		if (string.find(wyr.preferences.EnabledMods[i], ".sms")) then
 			Load(wyr.preferences.EnabledMods[i])
 		else
 			ModName = ""
@@ -232,13 +245,13 @@ end
 
 function ReloadMods() -- used after the editor runs, to reload mods made in the map editor
 	for i=1,table.getn(wyr.preferences.EnabledMods) do
-		if (string.find(wyr.preferences.EnabledMods[i], ".sms.gz")) then
+		if (string.find(wyr.preferences.EnabledMods[i], ".sms")) then
 			DisableMod(wyr.preferences.EnabledMods[i])
 		end
 	end
 
 	for i=1,table.getn(wyr.preferences.EnabledMods) do
-		if (string.find(wyr.preferences.EnabledMods[i], ".sms.gz")) then
+		if (string.find(wyr.preferences.EnabledMods[i], ".sms")) then
 			Load(wyr.preferences.EnabledMods[i])
 		end
 	end

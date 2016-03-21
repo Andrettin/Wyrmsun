@@ -889,10 +889,10 @@ function RunSelectScenarioMenu(is_mod)
 
 		if (modname ~= "") then
 			browser = menu:addBrowser(ModDirectories[1], "^.*%.smp%.?g?z?$",
-				24, 88, 300, 108, modname, false)
+				24, 88, 300, 108, modname)
 		else
 			browser = menu:addBrowser(ModDirectories[1], "^.*%.smp%.?g?z?$",
-				24, 88, 300, 108, nil, false)
+				24, 88, 300, 108)
 		end
 	end
 

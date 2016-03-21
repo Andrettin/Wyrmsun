@@ -849,6 +849,8 @@ MakeSound("horse-dead", {
 })
 SetSoundRange("horse-dead", 32)
 
+Load("scripts/civilizations/orc/sound.lua")
+
 --	Define sounds used by the game
 --
 DefineGameSounds(

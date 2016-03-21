@@ -367,7 +367,7 @@ local function RunEditorLoadMapMenu(is_mod)
 			Map.Info.MapWidth = 32
 			Map.Info.MapHeight = 32
 			LoadTileModels("scripts/tilesets/" .. string.gsub(editor_tilesets[1], "-", "_") .. ".lua")
-			DisableMod(tostring(string.gsub(modname, ".smp.gz", ".sms.gz"))) -- to prevent a mod's changes being applied twice if it is both active and is the mod currently being loaded
+			DisableMod(tostring(string.gsub(modname, ".smp", ".sms"))) -- to prevent a mod's changes being applied twice if it is both active and is the mod currently being loaded
 			StartEditor(modname, true);
 			ReloadMods();
 			RunEditorMenu()
@@ -467,11 +467,11 @@ function RunEditorSaveMenu(save_as_mod)
 		browser = menu:addBrowser(MapDirectories[1], ".smp$",
 			(384 - 300 - 18) / 2, 11 + 24 + 22, 318, 126)
 	else
-		t = menu:addTextInputField("mod.smp.gz",
+		t = menu:addTextInputField("mod.smp",
 			(384 - 300 - 18) / 2, 11 + 24, 318)
 
-		browser = menu:addBrowser(ModDirectories[1], ".smp.gz$",
-			(384 - 300 - 18) / 2, 11 + 24 + 22, 318, 126, nil, false)
+		browser = menu:addBrowser(ModDirectories[1], ".smp$",
+			(384 - 300 - 18) / 2, 11 + 24 + 22, 318, 126)
 	end
 
 	local function cb(s)
@@ -488,14 +488,8 @@ function RunEditorSaveMenu(save_as_mod)
 			return
 		end
 		-- append .smp
-		if not (save_as_mod) then
-			if (string.find(name, ".smp$") == nil) then
-				name = name .. ".smp"
-			end
-		else
-			if (string.find(name, ".smp.gz$") == nil) then
-				name = name .. ".smp.gz"
-			end
+		if (string.find(name, ".smp$") == nil) then
+			name = name .. ".smp"
 		end
 		
 		-- replace invalid chars with underscore
