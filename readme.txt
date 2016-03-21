@@ -69,6 +69,9 @@ https://github.com/Andrettin/Wyrmsun
 
 * DLCs
 - Added "The Death of Count Cadaloc" music theme to the Frankish Faction Flair Pack (by Marcelo Fernandez) (http://www.marcelofernandezmusic.com), for when playing Frankish factions.
+- With the Brising Faction Flair Pack, dwarven Axefighters and Steelclads now have a different shield for their unit graphics if the player is using the Brising Clan or a related faction, or if a Brising Round Shield is equipped (graphics by Jinn).
+- Added graphics for when a Brising Round Shield is laying on the floor (by Jinn).
+- Update to the Brising Round Shield icon (modification by Jinn).
 
 * Items
 - Fixed an issue which caused the game to crash when units who do not have any active abilities (like Skutans) had a spell scroll in their inventory, and the mouse hovered over the item.

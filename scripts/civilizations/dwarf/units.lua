@@ -146,40 +146,6 @@ DefineUnitType("unit-dwarven-axefighter", { Name = _("Axefighter"),
 	InvertedSoutheastArms = true,
 	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	DropAffixes = {"upgrade-item-suffix-of-the-snigill"},
-	Variations = {
-		{
-			"variation-id", "red-hair",
-			"upgrade-forbidden", "upgrade-old"
-		},
-		{
-			"variation-id", "gray-hair",
-			"layer-file", "hair", "dwarf/units/gray_hair_warrior.png",
-			"icon", "icon-dwarven-axefighter-gray-hair"
-		},
-		{
-			"variation-id", "orange-hair",
-			"layer-file", "hair", "dwarf/units/orange_hair_warrior.png",
-			"upgrade-forbidden", "upgrade-old"
-		},
-		{
-			"variation-id", "blond-hair",
-			"layer-file", "hair", "dwarf/units/blond_hair_warrior.png",
-			"icon", "icon-dwarven-axefighter-blond-hair",
-			"upgrade-forbidden", "upgrade-old"
-		},
-		{
-			"variation-id", "black-hair",
-			"layer-file", "hair", "dwarf/units/black_hair_warrior.png",
-			"icon", "icon-dwarven-axefighter-black-hair",
-			"upgrade-forbidden", "upgrade-old"
-		},
-		{
-			"variation-id", "brown-hair",
-			"layer-file", "hair", "dwarf/units/brown_hair_warrior.png",
-			"icon", "icon-dwarven-axefighter-brown-hair",
-			"upgrade-forbidden", "upgrade-old"
-		}
-	},
 	Sounds = {
 		"selected", "basic-dwarf-voices-selected-group",
 		"acknowledge", "basic-dwarf-voices-acknowledge",
@@ -190,6 +156,75 @@ DefineUnitType("unit-dwarven-axefighter", { Name = _("Axefighter"),
 		"hit", "axe-attack",
 		"miss", "attack-miss"
 	}
+} )
+
+local axefighter_variations = {
+	{
+		"variation-id", "red-hair",
+		"upgrade-forbidden", "upgrade-old"
+	},
+	{
+		"variation-id", "gray-hair",
+		"layer-file", "hair", "dwarf/units/gray_hair_warrior.png",
+		"icon", "icon-dwarven-axefighter-gray-hair"
+	},
+	{
+		"variation-id", "orange-hair",
+		"layer-file", "hair", "dwarf/units/orange_hair_warrior.png",
+		"upgrade-forbidden", "upgrade-old"
+	},
+	{
+		"variation-id", "blond-hair",
+		"layer-file", "hair", "dwarf/units/blond_hair_warrior.png",
+		"icon", "icon-dwarven-axefighter-blond-hair",
+		"upgrade-forbidden", "upgrade-old"
+	},
+	{
+		"variation-id", "black-hair",
+		"layer-file", "hair", "dwarf/units/black_hair_warrior.png",
+		"icon", "icon-dwarven-axefighter-black-hair",
+		"upgrade-forbidden", "upgrade-old"
+	},
+	{
+		"variation-id", "brown-hair",
+		"layer-file", "hair", "dwarf/units/brown_hair_warrior.png",
+		"icon", "icon-dwarven-axefighter-brown-hair",
+		"upgrade-forbidden", "upgrade-old"
+	}
+}
+
+if (CanAccessFile("dlcs/brising_faction_flair/graphics/units/brising_round_shield.png")) then
+	table.insert(axefighter_variations, {
+		"layer", "shield",
+		"variation-id", "round-shield",
+		"upgrade-forbidden", "upgrade-brising-clan-faction",
+		"item-not-equipped", "unit-brising-round-shield"
+	})
+	
+	table.insert(axefighter_variations, {
+		"layer", "shield",
+		"variation-id", "round-shield",
+		"item-equipped", "unit-round-shield"
+	})
+	
+	table.insert(axefighter_variations, {
+		"layer", "shield",
+		"variation-id", "brising-round-shield",
+		"file", "dlcs/brising_faction_flair/graphics/units/brising_round_shield.png",
+		"upgrade-required", "upgrade-brising-clan-faction",
+		"item-not-equipped", "unit-round-shield"
+	})
+	
+	table.insert(axefighter_variations, {
+		"layer", "shield",
+		"variation-id", "brising-round-shield",
+		"file", "dlcs/brising_faction_flair/graphics/units/brising_round_shield.png",
+		"item-equipped", "unit-brising-round-shield"
+	})
+end
+
+DefineUnitType("unit-dwarven-axefighter", {
+	Variations = axefighter_variations
 } )
 
 DefineUnitType("unit-dwarven-steelclad", { Name = _("Steelclad"),
@@ -204,97 +239,8 @@ DefineUnitType("unit-dwarven-steelclad", { Name = _("Steelclad"),
 	HackDamage = true,
 	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-the-snigill"},
-	Variations = {
-		{
-			"variation-id", "red-hair",
-			"upgrade-forbidden", "upgrade-dwarven-great-axe",
-			"item-not-equipped", "unit-great-axe",
-			"upgrade-forbidden", "upgrade-old"
-		},
-		{
-			"variation-id", "gray-hair",
-			"file", "dwarf/units/dwarven_steelclad_gray_hair.png",
-			"icon", "icon-dwarven-steelclad-gray-hair",
-			"upgrade-forbidden", "upgrade-dwarven-great-axe",
-			"item-not-equipped", "unit-great-axe"
-		},
-		{
-			"variation-id", "orange-hair",
-			"file", "dwarf/units/dwarven_steelclad_orange_hair.png",
-			"upgrade-forbidden", "upgrade-dwarven-great-axe",
-			"item-not-equipped", "unit-great-axe",
-			"upgrade-forbidden", "upgrade-old"
-		},
-		{
-			"variation-id", "blond-hair",
-			"file", "dwarf/units/dwarven_steelclad_blond_hair.png",
-			"icon", "icon-dwarven-steelclad-blond-hair",
-			"upgrade-forbidden", "upgrade-dwarven-great-axe",
-			"item-not-equipped", "unit-great-axe",
-			"upgrade-forbidden", "upgrade-old"
-		},
-		{
-			"variation-id", "black-hair",
-			"file", "dwarf/units/dwarven_steelclad_black_hair.png",
-			"icon", "icon-dwarven-steelclad-black-hair",
-			"upgrade-forbidden", "upgrade-dwarven-great-axe",
-			"item-not-equipped", "unit-great-axe",
-			"upgrade-forbidden", "upgrade-old"
-		},
-		{
-			"variation-id", "brown-hair",
-			"file", "dwarf/units/dwarven_steelclad_brown_hair.png",
-			"icon", "icon-dwarven-steelclad-brown-hair",
-			"upgrade-forbidden", "upgrade-dwarven-great-axe",
-			"item-not-equipped", "unit-great-axe",
-			"upgrade-forbidden", "upgrade-old"
-		},
-		-- Great Axe
-		{
-			"variation-id", "red-hair",
-			"file", "dwarf/units/dwarven_steelclad_great_axe.png",
-			"upgrade-required", "upgrade-dwarven-great-axe",
-			"item-equipped", "unit-great-axe",
-			"upgrade-forbidden", "upgrade-old"
-		},
-		{
-			"variation-id", "gray-hair",
-			"file", "dwarf/units/dwarven_steelclad_gray_hair_great_axe.png",
-			"icon", "icon-dwarven-steelclad-gray-hair",
-			"upgrade-required", "upgrade-dwarven-great-axe"
-		},
-		{
-			"variation-id", "orange-hair",
-			"file", "dwarf/units/dwarven_steelclad_orange_hair_great_axe.png",
-			"upgrade-required", "upgrade-dwarven-great-axe",
-			"item-equipped", "unit-great-axe",
-			"upgrade-forbidden", "upgrade-old"
-		},
-		{
-			"variation-id", "blond-hair",
-			"file", "dwarf/units/dwarven_steelclad_blond_hair_great_axe.png",
-			"icon", "icon-dwarven-steelclad-blond-hair",
-			"upgrade-required", "upgrade-dwarven-great-axe",
-			"item-equipped", "unit-great-axe",
-			"upgrade-forbidden", "upgrade-old"
-		},
-		{
-			"variation-id", "black-hair",
-			"file", "dwarf/units/dwarven_steelclad_black_hair_great_axe.png",
-			"icon", "icon-dwarven-steelclad-black-hair",
-			"upgrade-required", "upgrade-dwarven-great-axe",
-			"item-equipped", "unit-great-axe",
-			"upgrade-forbidden", "upgrade-old"
-		},
-		{
-			"variation-id", "brown-hair",
-			"file", "dwarf/units/dwarven_steelclad_brown_hair_great_axe.png",
-			"icon", "icon-dwarven-steelclad-brown-hair",
-			"upgrade-required", "upgrade-dwarven-great-axe",
-			"item-equipped", "unit-great-axe",
-			"upgrade-forbidden", "upgrade-old"
-		}
-	},
+	InvertedEastArms = true,
+	InvertedSoutheastArms = true,
 	Sounds = {
 		"selected", "basic-dwarf-voices-selected-group",
 		"acknowledge", "basic-dwarf-voices-acknowledge",
@@ -305,6 +251,134 @@ DefineUnitType("unit-dwarven-steelclad", { Name = _("Steelclad"),
 		"hit", "axe-attack",
 		"miss", "attack-miss"
 	}
+} )
+
+local steelclad_variations = {
+	{
+		"variation-id", "red-hair",
+		"upgrade-forbidden", "upgrade-dwarven-great-axe",
+		"item-not-equipped", "unit-great-axe",
+		"upgrade-forbidden", "upgrade-old"
+	},
+	{
+		"variation-id", "gray-hair",
+		"file", "dwarf/units/dwarven_steelclad_gray_hair.png",
+		"icon", "icon-dwarven-steelclad-gray-hair",
+		"upgrade-forbidden", "upgrade-dwarven-great-axe",
+		"item-not-equipped", "unit-great-axe"
+	},
+	{
+		"variation-id", "orange-hair",
+		"file", "dwarf/units/dwarven_steelclad_orange_hair.png",
+		"upgrade-forbidden", "upgrade-dwarven-great-axe",
+		"item-not-equipped", "unit-great-axe",
+		"upgrade-forbidden", "upgrade-old"
+	},
+	{
+		"variation-id", "blond-hair",
+		"file", "dwarf/units/dwarven_steelclad_blond_hair.png",
+		"icon", "icon-dwarven-steelclad-blond-hair",
+		"upgrade-forbidden", "upgrade-dwarven-great-axe",
+		"item-not-equipped", "unit-great-axe",
+		"upgrade-forbidden", "upgrade-old"
+	},
+	{
+		"variation-id", "black-hair",
+		"file", "dwarf/units/dwarven_steelclad_black_hair.png",
+		"icon", "icon-dwarven-steelclad-black-hair",
+		"upgrade-forbidden", "upgrade-dwarven-great-axe",
+		"item-not-equipped", "unit-great-axe",
+		"upgrade-forbidden", "upgrade-old"
+	},
+	{
+		"variation-id", "brown-hair",
+		"file", "dwarf/units/dwarven_steelclad_brown_hair.png",
+		"icon", "icon-dwarven-steelclad-brown-hair",
+		"upgrade-forbidden", "upgrade-dwarven-great-axe",
+		"item-not-equipped", "unit-great-axe",
+		"upgrade-forbidden", "upgrade-old"
+	},
+	-- Great Axe
+	{
+		"variation-id", "red-hair",
+		"file", "dwarf/units/dwarven_steelclad_great_axe.png",
+		"upgrade-required", "upgrade-dwarven-great-axe",
+		"item-equipped", "unit-great-axe",
+		"upgrade-forbidden", "upgrade-old"
+	},
+	{
+		"variation-id", "gray-hair",
+		"file", "dwarf/units/dwarven_steelclad_gray_hair_great_axe.png",
+		"icon", "icon-dwarven-steelclad-gray-hair",
+		"upgrade-required", "upgrade-dwarven-great-axe"
+	},
+	{
+		"variation-id", "orange-hair",
+		"file", "dwarf/units/dwarven_steelclad_orange_hair_great_axe.png",
+		"upgrade-required", "upgrade-dwarven-great-axe",
+		"item-equipped", "unit-great-axe",
+		"upgrade-forbidden", "upgrade-old"
+	},
+	{
+		"variation-id", "blond-hair",
+		"file", "dwarf/units/dwarven_steelclad_blond_hair_great_axe.png",
+		"icon", "icon-dwarven-steelclad-blond-hair",
+		"upgrade-required", "upgrade-dwarven-great-axe",
+		"item-equipped", "unit-great-axe",
+		"upgrade-forbidden", "upgrade-old"
+	},
+	{
+		"variation-id", "black-hair",
+		"file", "dwarf/units/dwarven_steelclad_black_hair_great_axe.png",
+		"icon", "icon-dwarven-steelclad-black-hair",
+		"upgrade-required", "upgrade-dwarven-great-axe",
+		"item-equipped", "unit-great-axe",
+		"upgrade-forbidden", "upgrade-old"
+	},
+	{
+		"variation-id", "brown-hair",
+		"file", "dwarf/units/dwarven_steelclad_brown_hair_great_axe.png",
+		"icon", "icon-dwarven-steelclad-brown-hair",
+		"upgrade-required", "upgrade-dwarven-great-axe",
+		"item-equipped", "unit-great-axe",
+		"upgrade-forbidden", "upgrade-old"
+	}
+}
+
+if (CanAccessFile("dlcs/brising_faction_flair/graphics/units/brising_round_shield.png")) then
+	table.insert(steelclad_variations, {
+		"layer", "shield",
+		"variation-id", "round-shield",
+		"file", "dwarf/units/round_shield.png",
+		"upgrade-forbidden", "upgrade-brising-clan-faction",
+		"item-not-equipped", "unit-brising-round-shield"
+	})
+	
+	table.insert(steelclad_variations, {
+		"layer", "shield",
+		"variation-id", "round-shield",
+		"file", "dwarf/units/round_shield.png",
+		"item-equipped", "unit-round-shield"
+	})
+	
+	table.insert(steelclad_variations, {
+		"layer", "shield",
+		"variation-id", "brising-round-shield",
+		"file", "dlcs/brising_faction_flair/graphics/units/brising_round_shield.png",
+		"upgrade-required", "upgrade-brising-clan-faction",
+		"item-not-equipped", "unit-round-shield"
+	})
+	
+	table.insert(steelclad_variations, {
+		"layer", "shield",
+		"variation-id", "brising-round-shield",
+		"file", "dlcs/brising_faction_flair/graphics/units/brising_round_shield.png",
+		"item-equipped", "unit-brising-round-shield"
+	})
+end
+
+DefineUnitType("unit-dwarven-steelclad", {
+	Variations = steelclad_variations
 } )
 
 DefineUnitType("unit-dwarven-thane", { Name = _("Stonelord"),

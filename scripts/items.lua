@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2015 by Andrettin
+--      (c) Copyright 2015-2016 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -168,7 +168,7 @@ DefineUnitType("unit-bearded-throwing-axe", { Name = _("Bearded Throwing Axe"),
 
 DefineUnitType("unit-wooden-shield", { Name = _("Wooden Shield"),
 	Parent = "unit-template-item",
-	Image = {"file", "neutral/items/round_shield.png", "size", {32, 32}},
+	Image = {"file", "dwarf/items/round_shield.png", "size", {13, 13}},
 	Icon = "icon-germanic-wooden-oblong-shield",
 	ItemClass = "shield",
 	Armor = 0
@@ -210,7 +210,7 @@ DefineUnitType("unit-suebi-shield", { Name = _("Suebi Shield"),
 
 DefineUnitType("unit-round-shield", { Name = _("Round Shield"),
 	Parent = "unit-template-item",
-	Image = {"file", "neutral/items/round_shield.png", "size", {32, 32}},
+	Image = {"file", "dwarf/items/round_shield.png", "size", {13, 13}},
 	Icon = "icon-dwarven-shield-1",
 	ItemClass = "shield",
 	Armor = 0
@@ -222,7 +222,7 @@ DefineUnitType("unit-brising-round-shield", { Name = _("Brising Round Shield"),
 
 DefineUnitType("unit-heater-shield", { Name = _("Heater Shield"),
 	Parent = "unit-template-item",
-	Image = {"file", "neutral/items/round_shield_2.png", "size", {32, 32}},
+	Image = {"file", "dwarf/items/round_shield.png", "size", {13, 13}},
 	Icon = "icon-dwarven-shield-2",
 	ItemClass = "shield",
 	Armor = 2
@@ -230,7 +230,7 @@ DefineUnitType("unit-heater-shield", { Name = _("Heater Shield"),
 
 DefineUnitType("unit-thrymgjol-shield", { Name = _("Thrymgjol Shield"),
 	Parent = "unit-template-item",
-	Image = {"file", "neutral/items/round_shield_2.png", "size", {32, 32}},
+	Image = {"file", "dwarf/items/round_shield.png", "size", {13, 13}},
 	Icon = "icon-dwarven-shield-3",
 	ItemClass = "shield",
 	Armor = 4
