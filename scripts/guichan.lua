@@ -1493,12 +1493,19 @@ function GameStarting()
 		StopMusic()
 		PlayMusicByGroupAndFactionRandom("map", GetPlayerData(GetThisPlayer(), "RaceName"), GetPlayerData(GetThisPlayer(), "Faction"))
 	end
+	
 	--[[
 	if (wyr.preferences.ShowTips and not IsReplayGame() and not IsNetworkGame()) then
 		SetGamePaused(true)
 		RunTipsMenu()
 	end
 	--]]
+	
+	if (not IsNetworkGame() and GrandStrategy == false) then
+		if (PlayerFaction ~= "") then
+			SetPlayerData(GetThisPlayer(), "Faction", PlayerFaction)
+		end
+	end
 end
 
 if (Editor.Running == EditorCommandLine) then

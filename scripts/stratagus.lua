@@ -335,12 +335,6 @@ function SinglePlayerTriggers()
 		end
 	end
 	
-	if (not IsNetworkGame() and GrandStrategy == false) then
-		if (PlayerFaction ~= "") then
-			SetPlayerData(GetThisPlayer(), "Faction", PlayerFaction)
-		end
-	end
-
 	CreateDecorations()
 
 	StandardTriggers()
