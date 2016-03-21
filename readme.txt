@@ -68,7 +68,7 @@ https://github.com/Andrettin/Wyrmsun
 - All cursors are now preloaded, instead of only that of the player's civilization, to eliminate the cursor loading time mid-game when changing civilization.
 
 * DLCs
-- Added "The Death of Count Cadaloc" music theme to the Frankish Faction Flair Pack (by Marcelo Fernandez) (http://www.marcelofernandezmusic.com), for when playing Frankish factions.
+- Added "The Death of Count Cadaloc" music theme to the Frankish Faction Flair Pack (by Marcelo Fernandez) (http://www.marcelofernandezmusic.com), for when playing Frankish factions (or playing Teuton factions who lack music of their own).
 - With the Brising Faction Flair Pack, dwarven Axefighters and Steelclads now have a different shield for their unit graphics if the player is using the Brising Clan or a related faction, or if a Brising Round Shield is equipped (graphics by Jinn).
 - Added graphics for when a Brising Round Shield is laying on the floor (by Jinn).
 - Update to the Brising Round Shield icon (modification by Jinn).
