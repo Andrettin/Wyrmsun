@@ -1084,6 +1084,7 @@ João Victor G. Costa (Jinn):
 /graphics/ui/prestige.png (licensed under the CC0)
 /graphics/ui/prestige_extra_1.png (licensed under the CC0)
 /graphics/ui/progress_bar.png (licensed under the CC0)
+/graphics/ui/regeneration.png (licensed under the CC0)
 /graphics/ui/research.png (licensed under the CC0)
 /graphics/ui/score.png (licensed under the CC0)
 /graphics/ui/score_extra_1.png (licensed under the CC0)
