@@ -74,8 +74,8 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed an issue which caused the game to crash when units who do not have any active abilities (like Skutans) had a spell scroll in their inventory, and the mouse hovered over the item.
 
 * Map Editor
-- Added support for adding custom factions in the editor.
 - Added support for saving maps as mods; this saves only the custom factions, custom words (for name generation), modified unit stats and unit sounds, allowing you to load the mod in the Mods screen.
+- Added support for creating custom factions in the editor.
 
 * Multiplayer
 - Fixed a few potential crash causes for multiplayer.

@@ -837,6 +837,7 @@ function RunEditorLanguageProperties()
 	local affix_name_type_word_junction_type
 	local affix_name_type_affix_type
 	local affix_name_type_checkbox
+	local delete_word_button
 	
 	local function NameTypeChanged()
 		name_type_checkbox:setMarked(GetArrayIncludes(word_properties[current_language:getSelected() + 1][current_word:getSelected() + 1].NameTypes, name_type_list[name_type:getSelected() + 1]))
@@ -893,6 +894,7 @@ function RunEditorLanguageProperties()
 		affix_name_type_word_junction_type:setVisible(has_words)
 		affix_name_type_affix_type:setVisible(has_words)
 		affix_name_type_checkbox:setVisible(has_words)
+		delete_word_button:setVisible(has_words)
 
 		if (has_words) then
 			WordChanged()
@@ -973,9 +975,7 @@ function RunEditorLanguageProperties()
 	local listener = LuaActionListener(listen)
 	menu:addLogicCallback(listener)
 	
-	LanguageChanged()
-	
-	menu:addFullButton("Crea~!te Word", "t", 176 - (224 / 2), sizeY - 36 * 2,
+	menu:addHalfButton("~!Add", "a", 20 + 48, sizeY - 36 * 2,
 		function()
 			local sub_menu = WarGameMenu(panel(3))
 			sub_menu:setSize(384, 256)
@@ -1025,6 +1025,35 @@ function RunEditorLanguageProperties()
 			sub_menu:run(false)
 		end
 	)
+	
+	delete_word_button = menu:addHalfButton("~!Delete", "d", 130 + 48, sizeY - 36 * 2,
+		function()
+			local confirm = WarGameMenu(panel(4))
+
+			confirm:resize(288,128)
+
+			confirm:addLabel("Delete " .. word_list[current_language:getSelected() + 1][current_word:getSelected() + 1], 288 / 2, 11)
+			confirm:addLabel("Are you sure? This cannot be undone.", 288 / 2, 45, Fonts["game"])
+
+			confirm:addHalfButton("~!Yes", "y", 1 * (288 / 3) - 90, 120 - 16 - 27,
+				function()
+					DeleteModWord(language_ident_list[current_language:getSelected() + 1], word_list[current_language:getSelected() + 1][current_word:getSelected() + 1])
+					RemoveElementFromArray(word_list[current_language:getSelected() + 1], word_list[current_language:getSelected() + 1][current_word:getSelected() + 1])
+					word_properties[current_language:getSelected() + 1][current_word:getSelected() + 1] = nil
+					LanguageChanged()
+					confirm:stop()
+				end
+			)
+
+			confirm:addHalfButton("~!No", "n", 3 * (288 / 3) - 116, 120 - 16 - 27,
+				function() confirm:stop() end
+			)
+
+			confirm:run()
+		end
+	)
+	
+	LanguageChanged()
 	
 	menu:addHalfButton("~!OK", "o", 20 + 48, sizeY - 36 * 1,
 		function()
@@ -1154,6 +1183,7 @@ function RunEditorFactionProperties()
 	local faction_upgrade_label
 	local parent_faction
 	local parent_faction_label
+	local delete_faction_button
 	
 	local function FactionChanged()
 		faction_type:setSelected(GetElementIndexFromArray(faction_type_list, faction_properties[current_civilization:getSelected() + 1][current_faction:getSelected() + 1].Type) - 1)
@@ -1201,6 +1231,7 @@ function RunEditorFactionProperties()
 		faction_upgrade:setSize(236, 20)
 		parent_faction:setVisible(has_factions)
 		parent_faction_label:setVisible(has_factions)
+		delete_faction_button:setVisible(has_factions)
 
 		if (has_factions) then
 			FactionChanged()
@@ -1249,9 +1280,7 @@ function RunEditorFactionProperties()
 	faction_upgrade:setSize(236, 20)
 	faction_upgrade:setSelected(0)
 
-	CivilizationChanged()
-	
-	menu:addFullButton("Crea~!te Faction", "t", 176 - (224 / 2), sizeY - 36 * 2,
+	menu:addHalfButton("~!Add", "a", 20 + 48, sizeY - 36 * 2,
 		function()
 			local sub_menu = WarGameMenu(panel(3))
 			sub_menu:setSize(384, 256)
@@ -1296,6 +1325,36 @@ function RunEditorFactionProperties()
 			sub_menu:run(false)
 		end
 	)
+	
+	delete_faction_button = menu:addHalfButton("~!Delete", "d", 130 + 48, sizeY - 36 * 2,
+		function()
+			local confirm = WarGameMenu(panel(4))
+
+			confirm:resize(288,128)
+
+			confirm:addLabel("Delete " .. faction_list[current_civilization:getSelected() + 1][current_faction:getSelected() + 1], 288 / 2, 11)
+			confirm:addLabel("Are you sure? This cannot be undone.", 288 / 2, 45, Fonts["game"])
+
+			confirm:addHalfButton("~!Yes", "y", 1 * (288 / 3) - 90, 120 - 16 - 27,
+				function()
+					DeleteModFaction(civilization_ident_list[current_civilization:getSelected() + 1], faction_list[current_civilization:getSelected() + 1][current_faction:getSelected() + 1])
+					RemoveElementFromArray(civilization_factions[current_civilization:getSelected() + 1], faction_list[current_civilization:getSelected() + 1][current_faction:getSelected() + 1])
+					RemoveElementFromArray(faction_list[current_civilization:getSelected() + 1], faction_list[current_civilization:getSelected() + 1][current_faction:getSelected() + 1])
+					faction_properties[current_civilization:getSelected() + 1][current_faction:getSelected() + 1] = nil
+					CivilizationChanged()
+					confirm:stop()
+				end
+			)
+
+			confirm:addHalfButton("~!No", "n", 3 * (288 / 3) - 116, 120 - 16 - 27,
+				function() confirm:stop() end
+			)
+
+			confirm:run()
+		end
+	)
+	
+	CivilizationChanged()
 	
 	menu:addHalfButton("~!OK", "o", 20 + 48, sizeY - 36 * 1,
 		function()
