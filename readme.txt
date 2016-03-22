@@ -79,6 +79,7 @@ https://github.com/Andrettin/Wyrmsun
 * Map Editor
 - Added support for saving maps as mods; this saves only the custom factions, custom words (for name generation), modified unit stats and unit sounds, allowing you to load the mod in the Mods screen.
 - Added support for creating custom factions in the editor.
+- Added support for creating custom unit types in the editor.
 
 * Multiplayer
 - Fixed a few potential crash causes for multiplayer.

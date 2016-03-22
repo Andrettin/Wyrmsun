@@ -1010,14 +1010,12 @@ if not (ui_loaded_first_time) then
 				{ 	Margin = {1, 1},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				}, 
-				--[[
 				{ 	Condition = {ButtonAction = "editor-unit"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = TypeIdent("Type"), Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {ButtonAction = "editor-unit"}, Margin = {1, 1},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
-				--]]
 				{	Condition = {ButtonAction = "train-unit"},
 					More = {"Costs", {Font = PopupFont}}, HighlightColor = "yellow",
 				}, 

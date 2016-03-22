@@ -27,7 +27,7 @@
 
 DefineUnitType("unit-template-item", { Name = _("Item"),
 	Image = {"file", "neutral/items/gold_sack.png", "size", {16, 14}},
-	Animations = "animations-item", Icon = "icon-gold-sack",
+	Animations = "animations-item",
 	NeutralMinimapColor = {255, 255, 0},
 	HitPoints = 1,
 	DrawLevel = 30,

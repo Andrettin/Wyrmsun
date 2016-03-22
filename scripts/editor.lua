@@ -32,6 +32,3 @@ SetEditorSelectIcon("icon-germanic-patrol-land")
 SetEditorUnitsIcon("icon-germanic-warrior")
 
 Editor.UnitTypes:clear()
-for key,value in ipairs(editor_types) do
-  Editor.UnitTypes:push_back(value)
-end
