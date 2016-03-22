@@ -444,7 +444,6 @@ DefineUnitType("unit-gnomish-caravan", { Name = _("Caravan"),
 	Type = "land",
 	Coward = true,
 	RightMouseAction = "move",
-	SelectableByRectangle = true,
 	MaxOnBoard = 2,
 	CanTransport = {"GroundAttack", "false", "Fauna", "false", "SaveCargo", "false", "Mounted", "false"}, -- forbidding ground attack as an ugly way of making ballistas not be able to enter the transporter; and forbidden "SaveCargo" is an ugly way of making caravans not be able to enter other caravans
 	AttackFromTransporter = true,

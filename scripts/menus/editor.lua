@@ -1359,29 +1359,117 @@ function EditUnitTypeProperties(unit_type)
 	menu:resize(sizeX, sizeY)
 	menu:addLabel(_(GetUnitTypeName(unit_type)) .. " " .. _("Properties"), sizeX / 2, 11)
 
+	local main_properties_button = menu:addFullButton(_("~!Main Properties"), "m", (sizeX / 2) - (224 / 2), sizeY - 40 - (36 * 7),
+		function()
+			EditUnitTypePropertiesMain(unit_type)
+		end
+	)
+
 	menu:addFullButton(_("S~!tats"), "t", (sizeX / 2) - (224 / 2), sizeY - 40 - (36 * 6),
 		function()
 			EditUnitTypePropertiesStats(unit_type)
 		end
 	)
-		
+
 	menu:addFullButton(_("~!Resource Stats"), "r", (sizeX / 2) - (224 / 2), sizeY - 40 - (36 * 5),
 		function()
 			EditUnitTypePropertiesResourceStats(unit_type)
 		end
 	)
-		
+
 	menu:addFullButton(_("~!Sounds"), "s", (sizeX / 2) - (224 / 2), sizeY - 40 - (36 * 4),
 		function()
 			EditUnitTypePropertiesSounds(unit_type)
 		end
 	)
-		
-	menu:addFullButton(_("~!OK"), "o", (sizeX / 2) - (224 / 2), sizeY - 40 - (36 * 3),
+
+	local training_properties_button = menu:addFullButton(_("~!Training"), "t", (sizeX / 2) - (224 / 2), sizeY - 40 - (36 * 3),
+		function()
+			EditUnitTypePropertiesTraining(unit_type)
+		end
+	)
+
+	menu:addFullButton(_("~!OK"), "o", (sizeX / 2) - (224 / 2), sizeY - 40 - (36 * 2),
 		function()
 			menu:stop()
 		end
 	)
+	
+	if (GetUnitTypeData(unit_type, "Mod") ~= Map.Info.Filename) then
+		main_properties_button:setEnabled(false)
+		training_properties_button:setEnabled(false)
+	end
+
+	menu:run(false)
+end
+
+function EditUnitTypePropertiesMain(unit_type)
+
+	if (unit_type == "" or unit_type == nil) then
+		return;
+	end
+	local menu = WarGameMenu(panel(5))
+	local sizeX = 352
+	local sizeY = 352
+
+	menu:resize(sizeX, sizeY)
+	menu:addLabel(_(GetUnitTypeName(unit_type)) .. " " .. _("Properties"), sizeX / 2, 11)
+
+	local civilization_list = GetCivilizations()
+	table.insert(civilization_list, "")
+	local faction_list = {}
+	
+	local civilization
+	local civilization_label
+	local faction
+	local faction_label
+  
+	local function CivilizationChanged()
+		faction_list = nil
+		if (civilization_list[civilization:getSelected() + 1] ~= "") then
+			faction_list = GetFactions(civilization_list[civilization:getSelected() + 1])
+		else
+			faction_list = {}
+		end
+		table.insert(faction_list, "")
+		faction:setList(faction_list)
+		faction:setSize(236, 20)
+		faction:setSelected(0)
+	end
+	
+	civilization_label = menu:addLabel(_("Civilization:"), 10, 14 + 36 * 1, Fonts["game"], false)
+	civilization = menu:addDropDown(civilization_list, (sizeX / 2) - 60 - 10, 11 + 36 * 1, function(dd) CivilizationChanged() end)
+	civilization:setSize(236, 20)
+	civilization:setSelected(GetElementIndexFromArray(civilization_list, GetUnitTypeData(unit_type, "Civilization")) - 1)
+	
+	faction_label = menu:addLabel(_("Faction:"), 10, 14 + 36 * 2, Fonts["game"], false)
+	faction = menu:addDropDown(faction_list, (sizeX / 2) - 60 - 10, 11 + 36 * 2, function(dd) end)
+	faction:setSize(236, 20)
+
+	CivilizationChanged()
+	
+	faction:setSelected(GetElementIndexFromArray(faction_list, GetUnitTypeData(unit_type, "Faction")) - 1)
+	
+	menu:addHalfButton("~!OK", "o", 20 + 48, sizeY - 40,
+		function()
+			local unit_type_definition = {}
+
+			if (civilization_list[civilization:getSelected() + 1] ~= GetUnitTypeData(unit_type, "Civilization")) then
+				unit_type_definition.Civilization = civilization_list[civilization:getSelected() + 1]
+			end
+
+			if (faction_list[faction:getSelected() + 1] ~= GetUnitTypeData(unit_type, "Faction")) then
+				unit_type_definition.Faction = faction_list[faction:getSelected() + 1]
+			end
+
+			DefineUnitType(unit_type, unit_type_definition)
+
+			menu:stop()
+		end
+	)
+
+	menu:addHalfButton(_("~!Cancel"), "c", 130 + 48, sizeY - 40,
+		function() menu:stop() end)
 
 	menu:run(false)
 end
@@ -1623,26 +1711,64 @@ function EditUnitTypePropertiesResourceStats(unit_type)
 	
 	menu:addFullButton(_("~!OK"), "o", 20 + 48, sizeY - 40,
 		function()
-			if (time_cost_value:getText() ~= GetUnitTypeData(unit_type, "Costs", "time")) then
-				SetModStat(Map.Info.Filename, unit_type, "Costs", time_cost_value:getText() - GetUnitTypeData(unit_type, "Costs", "time"), "time")
-			end
-			if (gold_cost_value:getText() ~= GetUnitTypeData(unit_type, "Costs", "gold")) then
-				SetModStat(Map.Info.Filename, unit_type, "Costs", gold_cost_value:getText() - GetUnitTypeData(unit_type, "Costs", "gold"), "gold")
-			end
-			if (lumber_cost_value:getText() ~= GetUnitTypeData(unit_type, "Costs", "lumber")) then
-				SetModStat(Map.Info.Filename, unit_type, "Costs", lumber_cost_value:getText() - GetUnitTypeData(unit_type, "Costs", "lumber"), "lumber")
-			end
-			if (stone_cost_value:getText() ~= GetUnitTypeData(unit_type, "Costs", "stone")) then
-				SetModStat(Map.Info.Filename, unit_type, "Costs", stone_cost_value:getText() - GetUnitTypeData(unit_type, "Costs", "stone"), "stone")
-			end
-			if (gold_processing_value:getText() ~= GetUnitTypeData(unit_type, "ImproveProduction", "gold")) then
-				SetModStat(Map.Info.Filename, unit_type, "ImproveProduction", gold_processing_value:getText() - GetUnitTypeData(unit_type, "ImproveProduction", "gold"), "gold")
-			end
-			if (lumber_processing_value:getText() ~= GetUnitTypeData(unit_type, "ImproveProduction", "lumber")) then
-				SetModStat(Map.Info.Filename, unit_type, "ImproveProduction", lumber_processing_value:getText() - GetUnitTypeData(unit_type, "ImproveProduction", "lumber"), "lumber")
-			end
-			if (stone_processing_value:getText() ~= GetUnitTypeData(unit_type, "ImproveProduction", "stone")) then
-				SetModStat(Map.Info.Filename, unit_type, "ImproveProduction", stone_processing_value:getText() - GetUnitTypeData(unit_type, "ImproveProduction", "stone"), "stone")
+			if (GetUnitTypeData(unit_type, "Mod") == Map.Info.Filename) then
+				local unit_type_definition = {}
+				
+				unit_type_definition.Costs = {}
+				unit_type_definition.ImproveProduction = {}
+				
+				if (time_cost_value:getText() ~= GetUnitTypeData(unit_type, "Costs", "time")) then
+					table.insert(unit_type_definition.Costs, "time")
+					table.insert(unit_type_definition.Costs, tonumber(time_cost_value:getText()))
+				end
+				if (gold_cost_value:getText() ~= GetUnitTypeData(unit_type, "Costs", "gold")) then
+					table.insert(unit_type_definition.Costs, "gold")
+					table.insert(unit_type_definition.Costs, tonumber(gold_cost_value:getText()))
+				end
+				if (lumber_cost_value:getText() ~= GetUnitTypeData(unit_type, "Costs", "lumber")) then
+					table.insert(unit_type_definition.Costs, "lumber")
+					table.insert(unit_type_definition.Costs, tonumber(lumber_cost_value:getText()))
+				end
+				if (stone_cost_value:getText() ~= GetUnitTypeData(unit_type, "Costs", "stone")) then
+					table.insert(unit_type_definition.Costs, "stone")
+					table.insert(unit_type_definition.Costs, tonumber(stone_cost_value:getText()))
+				end
+				if (gold_processing_value:getText() ~= GetUnitTypeData(unit_type, "ImproveProduction", "gold")) then
+					table.insert(unit_type_definition.ImproveProduction, "gold")
+					table.insert(unit_type_definition.ImproveProduction, tonumber(gold_processing_value:getText()))
+				end
+				if (lumber_processing_value:getText() ~= GetUnitTypeData(unit_type, "ImproveProduction", "lumber")) then
+					table.insert(unit_type_definition.ImproveProduction, "lumber")
+					table.insert(unit_type_definition.ImproveProduction, tonumber(lumber_processing_value:getText()))
+				end
+				if (stone_processing_value:getText() ~= GetUnitTypeData(unit_type, "ImproveProduction", "stone")) then
+					table.insert(unit_type_definition.ImproveProduction, "stone")
+					table.insert(unit_type_definition.ImproveProduction, tonumber(stone_processing_value:getText()))
+				end
+				
+				DefineUnitType(unit_type, unit_type_definition)
+			else
+				if (time_cost_value:getText() ~= GetUnitTypeData(unit_type, "Costs", "time")) then
+					SetModStat(Map.Info.Filename, unit_type, "Costs", time_cost_value:getText() - GetUnitTypeData(unit_type, "Costs", "time"), "time")
+				end
+				if (gold_cost_value:getText() ~= GetUnitTypeData(unit_type, "Costs", "gold")) then
+					SetModStat(Map.Info.Filename, unit_type, "Costs", gold_cost_value:getText() - GetUnitTypeData(unit_type, "Costs", "gold"), "gold")
+				end
+				if (lumber_cost_value:getText() ~= GetUnitTypeData(unit_type, "Costs", "lumber")) then
+					SetModStat(Map.Info.Filename, unit_type, "Costs", lumber_cost_value:getText() - GetUnitTypeData(unit_type, "Costs", "lumber"), "lumber")
+				end
+				if (stone_cost_value:getText() ~= GetUnitTypeData(unit_type, "Costs", "stone")) then
+					SetModStat(Map.Info.Filename, unit_type, "Costs", stone_cost_value:getText() - GetUnitTypeData(unit_type, "Costs", "stone"), "stone")
+				end
+				if (gold_processing_value:getText() ~= GetUnitTypeData(unit_type, "ImproveProduction", "gold")) then
+					SetModStat(Map.Info.Filename, unit_type, "ImproveProduction", gold_processing_value:getText() - GetUnitTypeData(unit_type, "ImproveProduction", "gold"), "gold")
+				end
+				if (lumber_processing_value:getText() ~= GetUnitTypeData(unit_type, "ImproveProduction", "lumber")) then
+					SetModStat(Map.Info.Filename, unit_type, "ImproveProduction", lumber_processing_value:getText() - GetUnitTypeData(unit_type, "ImproveProduction", "lumber"), "lumber")
+				end
+				if (stone_processing_value:getText() ~= GetUnitTypeData(unit_type, "ImproveProduction", "stone")) then
+					SetModStat(Map.Info.Filename, unit_type, "ImproveProduction", stone_processing_value:getText() - GetUnitTypeData(unit_type, "ImproveProduction", "stone"), "stone")
+				end
 			end
 			menu:stop()
 		end
@@ -1652,6 +1778,88 @@ function EditUnitTypePropertiesResourceStats(unit_type)
 	menu:addHalfButton(_("~!Cancel"), "c", 130 + 48, sizeY - 40,
 		function() menu:stop() end)
 	--]]
+
+	menu:run(false)
+end
+
+function EditUnitTypePropertiesTraining(unit_type)
+
+	if (unit_type == "" or unit_type == nil) then
+		return;
+	end
+	local menu = WarGameMenu(panel(5))
+	local sizeX = 352
+	local sizeY = 352
+
+	menu:resize(sizeX, sizeY)
+	menu:addLabel(_(GetUnitTypeName(unit_type)) .. " " .. _("Properties"), sizeX / 2, 11)
+
+	local unit_type_list = GetUnitTypes()
+	local trained_unit_type_list = GetUnitTypeData(unit_type, "Trains")
+	
+	local trains
+	local trains_label
+	local trains_checkbox
+  
+	local function TrainedUnitTypeChanged()
+		trains_checkbox:setMarked(GetArrayIncludes(trained_unit_type_list, unit_type_list[trains:getSelected() + 1]))
+	end
+	
+	trains_label = menu:addLabel(_("Trains:"), 10, 14 + 36 * 1, Fonts["game"], false)
+	trains = menu:addDropDown(unit_type_list, (sizeX / 2) - 60 - 10, 11 + 36 * 1, function(dd) CivilizationChanged() end)
+	trains:setSize(236 - 19 - 10, 20)
+	trains:setSelected(0)
+	
+	trains_checkbox = menu:addImageCheckBox("", sizeX - 19 - 10, 11 + 36 * 1,
+	function()
+		if (trains_checkbox:isMarked()) then
+			if (GetArrayIncludes(trained_unit_type_list, unit_type_list[trains:getSelected() + 1]) == false) then
+				table.insert(trained_unit_type_list, unit_type_list[trains:getSelected() + 1])
+			end
+		else
+			RemoveElementFromArray(trained_unit_type_list, unit_type_list[trains:getSelected() + 1])
+		end
+	end)
+
+	TrainedUnitTypeChanged()
+	
+	menu:addLabel(_("Button Pos:"), 10, 12 + 36 * 2, Fonts["game"], false)
+	local button_pos_value = menu:addTextInputField(GetUnitTypeData(unit_type, "ButtonPos"), (sizeX / 2) - 60 - 10, 11 + 36 * 2, 60)
+
+	menu:addLabel(_("Hotkey:"), (sizeX / 2) + 10, 12 + 36 * 2, Fonts["game"], false)
+	local button_key_value = menu:addTextInputField(GetUnitTypeData(unit_type, "ButtonKey"), sizeX - 60 - 10, 11 + 36 * 2, 60)
+
+	menu:addLabel(_("Hint:"), 10, 12 + 36 * 3, Fonts["game"], false)
+	local button_hint_value = menu:addTextInputField(GetUnitTypeData(unit_type, "ButtonHint"), (sizeX / 2) - 60 - 10, 11 + 36 * 3, 180)
+
+	menu:addHalfButton("~!OK", "o", 20 + 48, sizeY - 40,
+		function()
+			local unit_type_definition = {}
+
+			if (trained_unit_type_list ~= GetUnitTypeData(unit_type, "Trains")) then
+				unit_type_definition.Trains = trained_unit_type_list
+			end
+
+			if (button_pos_value:getText() ~= GetUnitTypeData(unit_type, "ButtonPos")) then
+				unit_type_definition.ButtonPos = tonumber(button_pos_value:getText())
+			end
+
+			if (button_key_value:getText() ~= GetUnitTypeData(unit_type, "ButtonKey")) then
+				unit_type_definition.ButtonKey = tostring(button_key_value:getText())
+			end
+
+			if (button_hint_value:getText() ~= GetUnitTypeData(unit_type, "ButtonHint")) then
+				unit_type_definition.ButtonHint = tostring(button_hint_value:getText())
+			end
+
+			DefineUnitType(unit_type, unit_type_definition)
+
+			menu:stop()
+		end
+	)
+
+	menu:addHalfButton(_("~!Cancel"), "c", 130 + 48, sizeY - 40,
+		function() menu:stop() end)
 
 	menu:run(false)
 end
@@ -1708,26 +1916,92 @@ function EditUnitTypePropertiesSounds(unit_type)
 	
 	menu:addHalfButton("~!OK", "o", 20 + 48, sizeY - 40,
 		function()
-			if (sound_list[selected_sound:getSelected() + 1] ~= GetUnitTypeData(unit_type, "Sounds", "selected")) then
-				SetModSound(Map.Info.Filename, unit_type, sound_list[selected_sound:getSelected() + 1], "selected")
-			end
-			if (sound_list[acknowledge_sound:getSelected() + 1] ~= GetUnitTypeData(unit_type, "Sounds", "acknowledge")) then
-				SetModSound(Map.Info.Filename, unit_type, sound_list[acknowledge_sound:getSelected() + 1], "acknowledge")
-			end
-			if (sound_list[attack_sound:getSelected() + 1] ~= GetUnitTypeData(unit_type, "Sounds", "attack")) then
-				SetModSound(Map.Info.Filename, unit_type, sound_list[attack_sound:getSelected() + 1], "attack")
-			end
-			if (sound_list[ready_sound:getSelected() + 1] ~= GetUnitTypeData(unit_type, "Sounds", "ready")) then
-				SetModSound(Map.Info.Filename, unit_type, sound_list[ready_sound:getSelected() + 1], "ready")
-			end
-			if (sound_list[idle_sound:getSelected() + 1] ~= GetUnitTypeData(unit_type, "Sounds", "idle")) then
-				SetModSound(Map.Info.Filename, unit_type, sound_list[idle_sound:getSelected() + 1], "idle")
-			end
-			if (sound_list[help_sound:getSelected() + 1] ~= GetUnitTypeData(unit_type, "Sounds", "help")) then
-				SetModSound(Map.Info.Filename, unit_type, sound_list[help_sound:getSelected() + 1], "help")
-			end
-			if (sound_list[dead_sound:getSelected() + 1] ~= GetUnitTypeData(unit_type, "Sounds", "dead")) then
-				SetModSound(Map.Info.Filename, unit_type, sound_list[dead_sound:getSelected() + 1], "dead")
+			if (GetUnitTypeData(unit_type, "Mod") == Map.Info.Filename) then
+				local unit_type_definition = {}
+				
+				unit_type_definition.Sounds = {}
+				
+				if (sound_list[selected_sound:getSelected() + 1] ~= GetUnitTypeData(unit_type, "Sounds", "selected")) then
+					table.insert(unit_type_definition.Sounds, "selected")
+					table.insert(unit_type_definition.Sounds, sound_list[selected_sound:getSelected() + 1])
+				end
+				if (sound_list[acknowledge_sound:getSelected() + 1] ~= GetUnitTypeData(unit_type, "Sounds", "acknowledge")) then
+					table.insert(unit_type_definition.Sounds, "acknowledge")
+					table.insert(unit_type_definition.Sounds, sound_list[acknowledge_sound:getSelected() + 1])
+				end
+				if (sound_list[attack_sound:getSelected() + 1] ~= GetUnitTypeData(unit_type, "Sounds", "attack")) then
+					table.insert(unit_type_definition.Sounds, "attack")
+					table.insert(unit_type_definition.Sounds, sound_list[attack_sound:getSelected() + 1])
+				end
+				if (sound_list[ready_sound:getSelected() + 1] ~= GetUnitTypeData(unit_type, "Sounds", "ready")) then
+					table.insert(unit_type_definition.Sounds, "ready")
+					table.insert(unit_type_definition.Sounds, sound_list[ready_sound:getSelected() + 1])
+				end
+				if (sound_list[idle_sound:getSelected() + 1] ~= GetUnitTypeData(unit_type, "Sounds", "idle")) then
+					table.insert(unit_type_definition.Sounds, "idle")
+					table.insert(unit_type_definition.Sounds, sound_list[idle_sound:getSelected() + 1])
+				end
+				if (sound_list[help_sound:getSelected() + 1] ~= GetUnitTypeData(unit_type, "Sounds", "help")) then
+					table.insert(unit_type_definition.Sounds, "help")
+					table.insert(unit_type_definition.Sounds, sound_list[help_sound:getSelected() + 1])
+				end
+				if (sound_list[dead_sound:getSelected() + 1] ~= GetUnitTypeData(unit_type, "Sounds", "dead")) then
+					table.insert(unit_type_definition.Sounds, "dead")
+					table.insert(unit_type_definition.Sounds, sound_list[dead_sound:getSelected() + 1])
+				end
+				
+				if (time_cost_value:getText() ~= GetUnitTypeData(unit_type, "Costs", "time")) then
+					table.insert(unit_type_definition.Costs, "time")
+					table.insert(unit_type_definition.Costs, tonumber(time_cost_value:getText()))
+				end
+				if (gold_cost_value:getText() ~= GetUnitTypeData(unit_type, "Costs", "gold")) then
+					table.insert(unit_type_definition.Costs, "gold")
+					table.insert(unit_type_definition.Costs, tonumber(gold_cost_value:getText()))
+				end
+				if (lumber_cost_value:getText() ~= GetUnitTypeData(unit_type, "Costs", "lumber")) then
+					table.insert(unit_type_definition.Costs, "lumber")
+					table.insert(unit_type_definition.Costs, tonumber(lumber_cost_value:getText()))
+				end
+				if (stone_cost_value:getText() ~= GetUnitTypeData(unit_type, "Costs", "stone")) then
+					table.insert(unit_type_definition.Costs, "stone")
+					table.insert(unit_type_definition.Costs, tonumber(stone_cost_value:getText()))
+				end
+				if (gold_processing_value:getText() ~= GetUnitTypeData(unit_type, "ImproveProduction", "gold")) then
+					table.insert(unit_type_definition.ImproveProduction, "gold")
+					table.insert(unit_type_definition.ImproveProduction, tonumber(gold_processing_value:getText()))
+				end
+				if (lumber_processing_value:getText() ~= GetUnitTypeData(unit_type, "ImproveProduction", "lumber")) then
+					table.insert(unit_type_definition.ImproveProduction, "lumber")
+					table.insert(unit_type_definition.ImproveProduction, tonumber(lumber_processing_value:getText()))
+				end
+				if (stone_processing_value:getText() ~= GetUnitTypeData(unit_type, "ImproveProduction", "stone")) then
+					table.insert(unit_type_definition.ImproveProduction, "stone")
+					table.insert(unit_type_definition.ImproveProduction, tonumber(stone_processing_value:getText()))
+				end
+				
+				DefineUnitType(unit_type, unit_type_definition)
+			else
+				if (sound_list[selected_sound:getSelected() + 1] ~= GetUnitTypeData(unit_type, "Sounds", "selected")) then
+					SetModSound(Map.Info.Filename, unit_type, sound_list[selected_sound:getSelected() + 1], "selected")
+				end
+				if (sound_list[acknowledge_sound:getSelected() + 1] ~= GetUnitTypeData(unit_type, "Sounds", "acknowledge")) then
+					SetModSound(Map.Info.Filename, unit_type, sound_list[acknowledge_sound:getSelected() + 1], "acknowledge")
+				end
+				if (sound_list[attack_sound:getSelected() + 1] ~= GetUnitTypeData(unit_type, "Sounds", "attack")) then
+					SetModSound(Map.Info.Filename, unit_type, sound_list[attack_sound:getSelected() + 1], "attack")
+				end
+				if (sound_list[ready_sound:getSelected() + 1] ~= GetUnitTypeData(unit_type, "Sounds", "ready")) then
+					SetModSound(Map.Info.Filename, unit_type, sound_list[ready_sound:getSelected() + 1], "ready")
+				end
+				if (sound_list[idle_sound:getSelected() + 1] ~= GetUnitTypeData(unit_type, "Sounds", "idle")) then
+					SetModSound(Map.Info.Filename, unit_type, sound_list[idle_sound:getSelected() + 1], "idle")
+				end
+				if (sound_list[help_sound:getSelected() + 1] ~= GetUnitTypeData(unit_type, "Sounds", "help")) then
+					SetModSound(Map.Info.Filename, unit_type, sound_list[help_sound:getSelected() + 1], "help")
+				end
+				if (sound_list[dead_sound:getSelected() + 1] ~= GetUnitTypeData(unit_type, "Sounds", "dead")) then
+					SetModSound(Map.Info.Filename, unit_type, sound_list[dead_sound:getSelected() + 1], "dead")
+				end
 			end
 			menu:stop()
 		end

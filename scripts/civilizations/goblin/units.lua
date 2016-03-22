@@ -267,6 +267,7 @@ DefineUnitType("unit-goblin-war-machine", { Name = _("War Machine"),
 } )
 
 DefineUnitType("unit-goblin-glider", { Name = _("Glider"),
+	Parent = "unit-template-unit",
 	Class = "glider",
 	Civilization = "goblin",
 	Description = _("A brainchild of goblin inventiveness, gliders are used to scout ahead and determine enemy positions."),
@@ -296,7 +297,6 @@ DefineUnitType("unit-goblin-glider", { Name = _("Glider"),
 	Coward = true,
 	organic = true,
 	Flesh = true,
-	SelectableByRectangle = true,
 	BoardSize = 100, -- to prevent this unit from being loaded into transporters
 	ButtonKey = "g",
 	ButtonHint = _("Build ~!Glider"),
