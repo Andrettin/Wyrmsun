@@ -109,6 +109,9 @@ DefineUnitType("unit-goblin-thief", { Name = _("Thief"),
 	Corpse = "unit-goblin-dead-body",
 	WeaponClasses = {"dagger"},
 	PierceDamage = true,
+	ButtonKey = "t",
+	ButtonHint = _("Hire Goblin ~!Thief"),
+	ButtonPos = 1,
 	AiDrops = {"unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	Sounds = {
 		"selected", "basic-goblin-voices-selected-group",
@@ -136,6 +139,8 @@ DefineUnitType("unit-goblin-swordsman", { Name = _("Swordsman"),
 	NightSightRangeBonus = 1,
 	WeaponClasses = {"sword", "thrusting-sword"},
 	HackDamage = true,
+	ButtonKey = "s",
+	ButtonHint = _("Train ~!Swordsman"),
 	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	DropAffixes = {"upgrade-item-prefix-penetrating", "upgrade-item-prefix-vicious", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-the-snigill", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-trickery"}, -- allow more magic enchantments than normal to compensate for the unit not being able to upgrade
 	Corpse = "unit-goblin-dead-body",
@@ -163,6 +168,8 @@ DefineUnitType("unit-goblin-spearman", { Name = _("Impaler"),
 	Evasion = 12,
 	DaySightRangeBonus = -1,
 	NightSightRangeBonus = 1,
+	ButtonKey = "i",
+	ButtonHint = _("Train ~!Impaler"),
 	AiDrops = {"unit-short-spear", "unit-long-spear", "unit-pike", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	DropAffixes = {"upgrade-item-prefix-penetrating", "upgrade-item-prefix-vicious", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-the-snigill", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-trickery"}, -- allow more magic enchantments than normal to compensate for the unit not being able to upgrade
 	Corpse = "unit-goblin-dead-body",
@@ -191,6 +198,8 @@ DefineUnitType("unit-goblin-archer", { Name = _("Archer"),
 	FireMissile = "missile-flaming-goblin-arrow",
 	WeaponClasses = {"bow"},
 	PierceDamage = true,
+	ButtonKey = "a",
+	ButtonHint = _("Train ~!Archer"),
 	AiDrops = {"unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	Corpse = "unit-goblin-dead-body",
 	Sounds = {
@@ -246,6 +255,8 @@ DefineUnitType("unit-goblin-war-machine", { Name = _("War Machine"),
 	FireMissile = "missile-flaming-catapult-rock",
 	CanCastSpell = {"spell-war-machine-spear-attack"},
 	AutoCastActive = {"spell-war-machine-spear-attack"},
+	ButtonKey = "m",
+	ButtonHint = _("Build War ~!Machine"),
 	BluntDamage = true,
 	Sounds = {
 --		"acknowledge", "ballista-acknowledge",
@@ -287,6 +298,9 @@ DefineUnitType("unit-goblin-glider", { Name = _("Glider"),
 	Flesh = true,
 	SelectableByRectangle = true,
 	BoardSize = 100, -- to prevent this unit from being loaded into transporters
+	ButtonKey = "g",
+	ButtonHint = _("Build ~!Glider"),
+	ButtonPos = 7,
 	Traits = {"upgrade-near-sighted", "upgrade-keen", "upgrade-limping", "upgrade-old", "upgrade-quick", "upgrade-resilient", "upgrade-slow"}, -- removed traits which affect damage, as this unit can't attack
 	Sounds = {
 		"selected", "basic-goblin-voices-selected-group",
@@ -306,6 +320,7 @@ DefineUnitType("unit-goblin-town-hall", { Name = _("Town Hall"),
 	Image = {"file", "goblin/buildings/town_hall.png", "size", {128, 128}},
 	Shadow = {"file", "goblin/buildings/town_hall_shadow.png", "size", {128, 128}},
 	Animations = "animations-building", Icon = "icon-goblin-town-hall",
+	Trains = {"unit-goblin-worker"},
 	AiDrops = {"unit-boots"},
 	DropAffixes = {"upgrade-item-prefix-flaming", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-the-snigill", "upgrade-item-suffix-of-trickery"},
 	Sounds = {
@@ -334,6 +349,9 @@ DefineUnitType("unit-goblin-mess-hall", { Name = _("Mess Hall"),
 	Image = {"file", "goblin/buildings/mess_hall.png", "size", {96, 96}},
 	Shadow = {"file", "goblin/buildings/mess_hall_shadow.png", "size", {96, 96}},
 	Animations = "animations-building", Icon = "icon-goblin-mess-hall",
+	Trains = {"unit-goblin-swordsman", "unit-goblin-spearman", "unit-goblin-archer", "unit-goblin-war-machine", "unit-goblin-glider"},
+	ButtonKey = "m",
+	ButtonHint = _("Build ~!Mess Hall"),
 	AiDrops = {"unit-short-spear", "unit-long-spear", "unit-pike", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-boots", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows"},
 	DropAffixes = {"upgrade-item-prefix-flaming", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-the-snigill", "upgrade-item-suffix-of-trickery"},
 	Sounds = {
@@ -363,11 +381,17 @@ DefineUnitType("unit-goblin-smithy", { Name = _("Fugla Forge"),
 	Image = {"file", "goblin/buildings/smithy.png", "size", {96, 96}},
 	Shadow = {"file", "goblin/buildings/smithy_shadow.png", "size", {96, 96}},
 	Icon = "icon-goblin-smithy",
+	ButtonKey = "o",
+	ButtonHint = _("Build Fugla F~!orge"),
 	AiDrops = {"unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield"},
 	DropAffixes = {"upgrade-item-prefix-flaming", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-the-snigill", "upgrade-item-suffix-of-trickery"},
 	Sounds = {
 		"help", "basic-goblin-voices-help-town"
 	}
+} )
+
+DefineUnitType("unit-goblin-worker", {
+	Trains = {"unit-goblin-town-hall", "unit-goblin-farm", "unit-goblin-mess-hall", "unit-goblin-lumber-mill", "unit-goblin-smithy", "unit-gold-mine", "unit-silver-mine", "unit-copper-mine"}
 } )
 
 DefineUnitType("unit-goblin-banner", { Name = _("Goblin Banner"),

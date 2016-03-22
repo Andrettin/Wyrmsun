@@ -50,6 +50,40 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-spear",
 	}
 })
 
+DefineButton( { Pos = 6, Level = 0, Icon = "icon-attack-ground",
+	Action = "attack-ground",
+	Key = "g", Hint = _("Attack ~!Ground"), Popup = "popup-commands",
+	ForUnit = {
+		"unit-teuton-catapult", "germanic-group", "teuton-group",
+		"unit-dwarven-ballista", "dwarf-group",
+		"unit-goblin-war-machine", "goblin-group"
+	}
+})
+
+-- Worker Commands ------------------------------------------------------
+
+DefineButton( { Pos = 4, Level = 0, Icon = "icon-repair",
+	Action = "repair",
+	Key = "r", Hint = _("~!Repair"), Popup = "popup-commands",
+	ForUnit = {
+		"unit-germanic-worker", "unit-teuton-worker",
+		"unit-dwarven-miner", "unit-brising-miner",
+		"unit-gnomish-worker",
+		"unit-goblin-worker"
+	}
+})
+
+DefineButton( { Pos = 5, Level = 0, Icon = "icon-harvest",
+	Action = "harvest",
+	Key = "h", Hint = _("~!Harvest Resource"), Popup = "popup-commands",
+	ForUnit = {
+		"unit-germanic-worker", "unit-teuton-worker",
+		"unit-dwarven-miner", "unit-brising-miner",
+		"unit-gnomish-worker",
+		"unit-goblin-worker"
+	}
+})
+
 DefineButton( { Pos = 13, Level = 0, Icon = "icon-build-basic-structure",
 	Action = "button", Value = 1,
 	Key = "b", Hint = _("~!Build Structure"), Popup = "popup-commands",
@@ -57,6 +91,29 @@ DefineButton( { Pos = 13, Level = 0, Icon = "icon-build-basic-structure",
 		"unit-dwarven-miner", "unit-brising-miner", "unit-germanic-worker", "unit-gnomish-worker", "unit-goblin-worker", "unit-teuton-worker"
 	}
 })
+
+-- Building Commands ------------------------------------------------------
+
+DefineButton( { Pos = 13, Level = 0, Icon = "icon-rally-point",
+	Action = "rally-point",
+	Key = "r", Hint = _("Set ~!Rally Point"), Popup = "popup-commands",
+	ForUnit = {
+		"unit-germanic-town-hall",
+		"unit-germanic-barracks",
+		"unit-teuton-town-hall", "unit-teuton-stronghold",
+		"unit-teuton-barracks",
+		"unit-teuton-watch-tower", "unit-teuton-guard-tower",
+		"unit-dwarven-town-hall", "unit-dwarven-stronghold",
+		"unit-brising-town-hall", "unit-brising-stronghold",
+		"unit-dwarven-barracks",
+		"unit-dwarven-sentry-tower", "unit-dwarven-guard-tower",
+		"unit-gnomish-town-hall",
+		"unit-gnomish-barracks",
+		"unit-goblin-town-hall",
+		"unit-goblin-barracks"
+	}
+} )
+  
 
 -- General Cancel Buttons ------------------------------------------------------
 
@@ -308,26 +365,6 @@ DefineButton( { Pos = 16, Level = 2, Icon = "icon-cancel",
 	} 
 } )
 
--- Purchasable Items ------------------------------------------------------
-
-DefineButton( { Pos = 1, Level = 0, Icon = "icon-cheese",
-	Action = "train-unit", Value = "unit-cheese",
-	Key = "c", Hint = _("Buy ~!Cheese"), Popup = "popup-item",
-	ForUnit = {"unit-germanic-farm", "unit-teuton-farm", "unit-celt-farm", "unit-dwarven-mushroom-farm", "unit-gnomish-farm", "unit-goblin-farm"}
-} )
-
-DefineButton( { Pos = 2, Level = 0, Icon = "icon-carrots",
-	Action = "train-unit", Value = "unit-carrots",
-	Key = "r", Hint = _("Buy Ca~!rrots"), Popup = "popup-item",
-	ForUnit = {"unit-germanic-farm", "unit-teuton-farm", "unit-celt-farm", "unit-gnomish-farm", "unit-goblin-farm"}
-} )
-
-DefineButton( { Pos = 4, Level = 0, Icon = "icon-red-potion",
-	Action = "train-unit", Value = "unit-potion-of-healing",
-	Key = "h", Hint = _("Buy Potion of ~!Healing"), Popup = "popup-item",
-	ForUnit = {"unit-teuton-stronghold", "unit-dwarven-stronghold", "unit-brising-stronghold"}
-} )
-
 -- Special Abilities ---------------------------------------------------
 
 DefineButton( { Pos = 6, Level = 0, Icon = "icon-stun",
@@ -358,7 +395,15 @@ DefineButton( { Pos = 7, Level = 0, Icon = "icon-puncture",
 	}
 })
 
--- Load the buttons of all races
+-- Buildings ---------------------------------------------------
+
+DefineButton( { Pos = 16, Level = 1, Icon = "icon-cancel",
+	Action = "button", Value = 0,
+	Key = "escape", Hint = _("Cancel (~<Esc~>)"), Popup = "popup-commands",
+	ForUnit = {"unit-germanic-worker", "unit-teuton-worker", "unit-dwarven-miner", "unit-brising-miner", "unit-gnomish-worker", "unit-goblin-worker"}
+})
+
+-- Load the buttons of all civilizations
 
 Load("scripts/civilizations/celt/buttons.lua")
 Load("scripts/civilizations/dwarf/buttons.lua")

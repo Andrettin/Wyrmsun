@@ -27,13 +27,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-------------------------------------------------------------------------------
---	Define", "unit-button.
---
---	DefineButton( { Pos = n, Level = n 'icon ident Action = name ['value value]
---		['allowed check ['values]] Key = key, Hint = hint 'for-unit", "units)
---
-
 -- Simple Buildings Celt -----------------------------------------------------
 
 DefineButton( { Pos = 2, Level = 1, Icon = "icon-celt-farm",

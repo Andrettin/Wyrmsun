@@ -42,6 +42,8 @@ DefineUnitType("unit-gnomish-worker", { Name = _("Scavenger"),
 	Corpse = "unit-gnomish-dead-body",
 	WeaponClasses = {"mace"},
 	BluntDamage = true,
+	ButtonKey = "s",
+	ButtonHint = _("Train ~!Scavenger"),
 	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-cheese", "unit-wool-shoes"},
 	CanGatherResources = {
 		{
@@ -118,6 +120,8 @@ DefineUnitType("unit-gnomish-recruit", { Name = _("Recruit"),
 	DropAffixes = {"upgrade-item-suffix-of-the-snigill"},
 	PierceDamage = true,
 	InvertedSoutheastArms = true,
+	ButtonKey = "r",
+	ButtonHint = _("Train ~!Recruit"),
 	Variations = {
 		{
 			"variation-id", "blond-hair",
@@ -395,6 +399,9 @@ DefineUnitType("unit-gnomish-herbalist", { Name = _("Herbalist"),
 	AiDrops = {"unit-wool-shoes", "unit-furry-wool-shoes", "unit-cheese", "unit-potion-of-healing"},
 	DropAffixes = {"upgrade-item-prefix-jinns", "upgrade-item-prefix-penetrating", "upgrade-item-prefix-storm", "upgrade-item-prefix-vicious", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-the-jinn", "upgrade-item-suffix-of-lightning", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-the-snigill", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-trickery"}, -- allow more magic enchantments than normal 
 	HackDamage = true,
+	ButtonPos = 2,
+	ButtonKey = "h",
+	ButtonHint = _("Train ~!Herbalist"),
 	Variations = {
 		{
 			"variation-id", "blond-hair",
@@ -418,6 +425,7 @@ DefineUnitType("unit-gnomish-herbalist", { Name = _("Herbalist"),
 } )
 
 DefineUnitType("unit-gnomish-caravan", { Name = _("Caravan"),
+	Parent = "unit-template-unit",
 	Class = "caravan",
 	Civilization = "gnome",
 	Description = _("These caravans are used by gnomish societies to conduct trade, bringing goods as far as the Heart Mountains."),
@@ -428,7 +436,6 @@ DefineUnitType("unit-gnomish-caravan", { Name = _("Caravan"),
 	RepairCosts = {"gold", 1, "lumber", 1},
 	Speed = 5,
 	HitPoints = 110,
-	DrawLevel = 40,
 	TileSize = {1, 1}, BoxSize = {63, 63},
 	SightRange = 9,
 	Priority = 70,
@@ -442,6 +449,8 @@ DefineUnitType("unit-gnomish-caravan", { Name = _("Caravan"),
 	CanTransport = {"GroundAttack", "false", "Fauna", "false", "SaveCargo", "false", "Mounted", "false"}, -- forbidding ground attack as an ugly way of making ballistas not be able to enter the transporter; and forbidden "SaveCargo" is an ugly way of making caravans not be able to enter other caravans
 	AttackFromTransporter = true,
 	SaveCargo = true,
+	ButtonKey = "c",
+	ButtonHint = _("Build ~!Caravan"),
 	Sounds = {
 		"selected", "click",
 --		"acknowledge", "ballista-acknowledge",
@@ -464,14 +473,12 @@ DefineUnitType("unit-gnomish-town-hall", { Name = _("Town Hall"),
 	Image = {"file", "gnome/buildings/town_hall.png", "size", {128, 128}},
 	Shadow = {"file", "gnome/buildings/town_hall_shadow.png", "size", {128, 128}},
 	Animations = "animations-building", Icon = "icon-gnomish-town-hall",
+	Trains = {"unit-gnomish-worker"},
 	AiDrops = {"unit-wool-shoes", "unit-furry-wool-shoes"},
 	DropAffixes = {"upgrade-item-prefix-jinns", "upgrade-item-prefix-penetrating", "upgrade-item-prefix-storm", "upgrade-item-prefix-vicious", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-the-jinn", "upgrade-item-suffix-of-lightning", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-the-snigill", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-trickery"},
 	Sounds = {
-		"selected", "town-hall-selected",
---		"acknowledge", "town-hall-acknowledge",
 		"ready", "basic-gnome-voices-work-complete",
-		"help", "basic-gnome-voices-help-town",
-		"dead", "building-destroyed"
+		"help", "basic-gnome-voices-help-town"
 	}
 } )
 
@@ -483,11 +490,8 @@ DefineUnitType("unit-gnomish-farm", { Name = _("Farm"),
 	Shadow = {"file", "gnome/buildings/farm_shadow.png", "size", {64, 64}},
 	Icon = "icon-gnomish-farm",
 	Sounds = {
-		"selected", "farm-selected",
---		"acknowledge", "farm-acknowledge",
 		"ready", "basic-gnome-voices-work-complete",
-		"help", "basic-gnome-voices-help-town",
-		"dead", "building-destroyed"
+		"help", "basic-gnome-voices-help-town"
 	}
 } )
 
@@ -498,13 +502,16 @@ DefineUnitType("unit-gnomish-barracks", { Name = _("Barracks"),
 	Image = {"file", "gnome/buildings/barracks.png", "size", {96, 96}},
 	Shadow = {"file", "gnome/buildings/barracks_shadow.png", "size", {96, 96}},
 	Animations = "animations-building", Icon = "icon-gnomish-barracks",
+	Trains = {"unit-gnomish-recruit", "unit-dwarven-scout", "unit-dwarven-yale-rider", "unit-dwarven-ballista", "unit-dwarven-gryphon-rider", "unit-gnomish-herbalist"},
 	AiDrops = {"unit-thrusting-sword", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-wool-shoes", "unit-furry-wool-shoes"},
 	DropAffixes = {"upgrade-item-prefix-jinns", "upgrade-item-prefix-penetrating", "upgrade-item-prefix-storm", "upgrade-item-prefix-vicious", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-the-jinn", "upgrade-item-suffix-of-lightning", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-the-snigill", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-trickery"},
 	Sounds = {
-		"selected", "barracks-selected",
---		"acknowledge", "barracks-acknowledge",
 		"ready", "basic-gnome-voices-work-complete",
-		"help", "basic-gnome-voices-help-town",
-		"dead", "building-destroyed"
+		"help", "basic-gnome-voices-help-town"
 	}
 } )
+
+DefineUnitType("unit-gnomish-worker", { -- this is here because the buildings need to be defined before being assigned to the miner's "Trains" array
+	Trains = {"unit-gnomish-town-hall", "unit-gnomish-farm", "unit-gnomish-barracks", "unit-dwarven-lumber-mill", "unit-dwarven-smithy", "unit-dwarven-yale-pen", "unit-dwarven-sentry-tower", "unit-dwarven-dock", "unit-gold-mine", "unit-silver-mine", "unit-copper-mine"}
+} )
+

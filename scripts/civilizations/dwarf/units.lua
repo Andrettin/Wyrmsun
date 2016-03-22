@@ -41,6 +41,8 @@ DefineUnitType("unit-dwarven-miner", { Name = _("Miner"),
 	Corpse = "unit-dwarven-dead-body",
 	WeaponClasses = {"mace"},
 	BluntDamage = true,
+	ButtonKey = "m",
+	ButtonHint = _("Train ~!Miner"),
 	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-boots", "unit-cheese"},
 	CanGatherResources = {
 		{
@@ -85,14 +87,6 @@ DefineUnitType("unit-dwarven-miner", { Name = _("Miner"),
 	}
 } )
 
-DefineUnitType("unit-brising-miner", { Name = _("Miner"),
-	Parent = "unit-dwarven-miner",
-	Civilization = "dwarf",
-	Faction = "Brising Clan",
-	HitPoints = 40, -- +10 HP
-	Points = 35 -- +5 points
-} )
-
 DefineUnitType("unit-dwarven-militia", { Name = _("Militia"),
 	Parent = "unit-template-militia",
 	Civilization = "dwarf",
@@ -115,15 +109,6 @@ DefineUnitType("unit-dwarven-militia", { Name = _("Militia"),
 	}
 } )
 
-DefineUnitType("unit-brising-militia", { Name = _("Militia"),
-	Parent = "unit-dwarven-militia",
-	Civilization = "dwarf",
-	Faction = "Brising Clan",
-	HitPoints = 40, -- +10 HP
-	Points = 35, -- +5 points
-	AiDrops = {"unit-brising-round-shield"}
-} )
-
 DefineUnitType("unit-dwarven-axefighter", { Name = _("Axefighter"),
 	Parent = "unit-template-infantry",
 	Civilization = "dwarf",
@@ -144,6 +129,8 @@ DefineUnitType("unit-dwarven-axefighter", { Name = _("Axefighter"),
 	HackDamage = true,
 	InvertedEastArms = true,
 	InvertedSoutheastArms = true,
+	ButtonKey = "a",
+	ButtonHint = _("Train ~!Axefighter"),
 	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	DropAffixes = {"upgrade-item-suffix-of-the-snigill"},
 	Sounds = {
@@ -463,6 +450,8 @@ DefineUnitType("unit-dwarven-guard", { Name = _("Guard"),
 	PierceDamage = true,
 	InvertedEastArms = true,
 	InvertedSoutheastArms = true,
+	ButtonKey = "g",
+	ButtonHint = _("Train ~!Guard"),
 	AiDrops = {"unit-short-spear", "unit-long-spear", "unit-pike", "unit-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	DropAffixes = {"upgrade-item-suffix-of-the-snigill"},
 	Variations = {
@@ -497,6 +486,8 @@ DefineUnitType("unit-dwarven-scout", { Name = _("Scout"),
 	TechnologyPointCost = 1,
 	WeaponClasses = {"throwing-axe"},
 	HackDamage = true,
+	ButtonKey = "s",
+	ButtonHint = _("Train ~!Scout"),
 	AiDrops = {"unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	Variations = {
 		{
@@ -592,6 +583,8 @@ DefineUnitType("unit-dwarven-yale-rider", { Name = _("Yale Rider"),
 	Corpse = "unit-dwarven-dead-body",
 	WeaponClasses = {"axe"},
 	HackDamage = true,
+	ButtonKey = "y",
+	ButtonHint = _("Train ~!Yale Rider"),
 	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-the-snigill"},
 	Variations = {
@@ -677,6 +670,8 @@ DefineUnitType("unit-dwarven-gryphon-rider", { Name = _("Gryphon Rider"),
 	MaxAttackRange = 4,
 	WeaponClasses = {"throwing-axe"},
 	HackDamage = true,
+	ButtonKey = "r",
+	ButtonHint = _("Train Gryphon ~!Rider"),
 	AiDrops = {"unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	DropAffixes = {"upgrade-item-prefix-storm", "upgrade-item-suffix-of-lightning", "upgrade-item-suffix-of-the-snigill"},
 	Variations = {
@@ -720,6 +715,8 @@ DefineUnitType("unit-dwarven-ballista", { Name = _("Ballista"),
 	Missile = "missile-dwarven-ballista-bolt",
 	FireMissile = "missile-flaming-dwarven-ballista-bolt",
 	PierceDamage = true,
+	ButtonKey = "b",
+	ButtonHint = _("Build ~!Ballista"),
 	Sounds = {
 --		"acknowledge", "ballista-acknowledge",
 		"ready", "dwarven-ballista-ready",
@@ -740,12 +737,6 @@ DefineUnitType("unit-dwarven-transport-ship", { Name = _("Transport"),
 	}
 })
 
-DefineUnitType("unit-brising-transport-ship", {
-	Parent = "unit-dwarven-transport-ship",
-	Civilization = "dwarf",
-	Faction = "Brising Clan"
-} )
-
 DefineUnitType("unit-dwarven-town-hall", { Name = _("Mead Hall"),
 	Parent = "unit-template-town-hall",
 	Civilization = "dwarf",
@@ -757,17 +748,13 @@ DefineUnitType("unit-dwarven-town-hall", { Name = _("Mead Hall"),
 	Costs = {"time", 255, "gold", 1200, "lumber", 600, "stone", 200},
 	RepairCosts = {"gold", 1, "lumber", 1, "stone", 1},
 	FireResistance = 20,
+	ButtonHint = _("Build Mead ~!Hall"),
+	Trains = {"unit-dwarven-miner"},
 	AiDrops = {"unit-boots"},
 	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-glacial", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-the-snigill", "upgrade-work-alvissmol", "upgrade-work-fafnismol", "upgrade-work-reginsmol", "upgrade-work-the-scepter-of-fire"},
 	Sounds = {
 		"help", "basic-dwarf-voices-help-town"
 	}
-} )
-
-DefineUnitType("unit-brising-town-hall", {
-	Parent = "unit-dwarven-town-hall",
-	Civilization = "dwarf",
-	Faction = "Brising Clan"
 } )
 
 DefineUnitType("unit-dwarven-stronghold", { Name = _("Bastion"),
@@ -781,19 +768,12 @@ DefineUnitType("unit-dwarven-stronghold", { Name = _("Bastion"),
 	Costs = {"time", 200, "gold", 2200, "lumber", 275, "stone", 825},
 	RepairCosts = {"gold", 1, "lumber", 1, "stone", 1},
 	FireResistance = 20,
-	TechnologyPointCost = 1,
+	Trains = {"unit-dwarven-miner", "unit-potion-of-healing"},
 	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots"},
 	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-glacial", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-the-snigill", "upgrade-work-alvissmol", "upgrade-work-fafnismol", "upgrade-work-reginsmol", "upgrade-work-the-scepter-of-fire"},
 	Sounds = {
 		"help", "basic-dwarf-voices-help-town"
 	}
-} )
-
-DefineUnitType("unit-brising-stronghold", {
-	Parent = "unit-dwarven-stronghold",
-	Civilization = "dwarf",
-	Faction = "Brising Clan",
-	AiDrops = {"unit-brising-round-shield"}
 } )
 
 DefineUnitType("unit-dwarven-mushroom-farm", { Name = _("Mushroom Farm"),
@@ -807,6 +787,8 @@ DefineUnitType("unit-dwarven-mushroom-farm", { Name = _("Mushroom Farm"),
 	Costs = {"time", 100, "gold", 500, "lumber", 190, "stone", 60},
 	RepairCosts = {"gold", 1, "lumber", 1, "stone", 1},
 	FireResistance = 20,
+	ButtonHint = _("Build Mushroom ~!Farm"),
+	Trains = {"unit-cheese"},
 	Drops = {"unit-wood-pile"},
 	Sounds = {
 		"help", "basic-dwarf-voices-help-town"
@@ -824,6 +806,9 @@ DefineUnitType("unit-dwarven-barracks", { Name = _("War Hall"),
 	Costs = {"time", 200, "gold", 700, "lumber", 340, "stone", 110},
 	RepairCosts = {"gold", 1, "lumber", 1, "stone", 1},
 	FireResistance = 20,
+	ButtonKey = "w",
+	ButtonHint = _("Build ~!War Hall"),
+	Trains = {"unit-dwarven-axefighter", "unit-dwarven-guard", "unit-dwarven-scout", "unit-dwarven-yale-rider", "unit-dwarven-ballista", "unit-dwarven-gryphon-rider"},
 	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots"},
 	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-glacial", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-the-snigill"},
 	Sounds = {
@@ -874,14 +859,6 @@ DefineUnitType("unit-dwarven-smithy", { Name = _("Smithy"),
 	}
 } )
 
-DefineUnitType("unit-brising-smithy", {
-	Parent = "unit-dwarven-smithy",
-	Civilization = "dwarf",
-	Faction = "Brising Clan",
-	TimeEfficiencyBonus = 50, -- +50% Time Efficiency Bonus
-	AiDrops = {"unit-brising-round-shield"}
-} )
-
 DefineUnitType("unit-dwarven-yale-pen", { Name = _("Yale Pen"),
 	Parent = "unit-template-stables",
 	Civilization = "dwarf",
@@ -894,6 +871,8 @@ DefineUnitType("unit-dwarven-yale-pen", { Name = _("Yale Pen"),
 	RepairCosts = {"gold", 1, "lumber", 1, "stone", 1},
 	FireResistance = 20,
 	TechnologyPointCost = 1,
+	ButtonKey = "y",
+	ButtonHint = _("Build ~!Yale Pen"),
 	Drops = {"unit-yale"},
 	Sounds = {
 		"selected", "yale-pen-selected",
@@ -913,6 +892,7 @@ DefineUnitType("unit-dwarven-sentry-tower", { Name = _("Sentry Tower"),
 	FireResistance = 20,
 	HitPoints = 250, -- 300 with masonry
 	Construction = "construction-dwarven-sentry-tower",
+	ButtonHint = _("Build Sentry ~!Tower"),
 	Sounds = {
 		"help", "basic-dwarf-voices-help-town"
 	}
@@ -949,6 +929,65 @@ DefineUnitType("unit-dwarven-dock", { Name = _("Dock"),
 	}
 } )
 
+DefineUnitType("unit-dwarven-miner", { -- this is here because the buildings need to be defined before being assigned to the miner's "Trains" array
+	Trains = {"unit-dwarven-town-hall", "unit-dwarven-mushroom-farm", "unit-dwarven-barracks", "unit-dwarven-lumber-mill", "unit-dwarven-smithy", "unit-dwarven-yale-pen", "unit-dwarven-sentry-tower", "unit-dwarven-dock", "unit-gold-mine", "unit-silver-mine", "unit-copper-mine"}
+} )
+
+DefineUnitType("unit-brising-miner", { Name = _("Miner"),
+	Parent = "unit-dwarven-miner",
+	Civilization = "dwarf",
+	Faction = "Brising Clan",
+	HitPoints = 40, -- +10 HP
+	Points = 35 -- +5 points
+} )
+
+DefineUnitType("unit-brising-militia", { Name = _("Militia"),
+	Parent = "unit-dwarven-militia",
+	Civilization = "dwarf",
+	Faction = "Brising Clan",
+	HitPoints = 40, -- +10 HP
+	Points = 35, -- +5 points
+	AiDrops = {"unit-brising-round-shield"}
+} )
+
+DefineUnitType("unit-brising-transport-ship", {
+	Parent = "unit-dwarven-transport-ship",
+	Civilization = "dwarf",
+	Faction = "Brising Clan"
+} )
+
+DefineUnitType("unit-brising-town-hall", {
+	Parent = "unit-dwarven-town-hall",
+	Civilization = "dwarf",
+	Faction = "Brising Clan",
+	Trains = {"unit-brising-miner"}
+} )
+
+DefineUnitType("unit-brising-stronghold", {
+	Parent = "unit-dwarven-stronghold",
+	Civilization = "dwarf",
+	Faction = "Brising Clan",
+	Trains = {"unit-brising-miner", "unit-potion-of-healing"},
+	AiDrops = {"unit-brising-round-shield"}
+} )
+
+DefineUnitType("unit-brising-smithy", {
+	Parent = "unit-dwarven-smithy",
+	Civilization = "dwarf",
+	Faction = "Brising Clan",
+	TimeEfficiencyBonus = 50, -- +50% Time Efficiency Bonus
+	AiDrops = {"unit-brising-round-shield"}
+} )
+
+DefineUnitType("unit-brising-miner", { -- this is here because the buildings need to be defined before being assigned to the miner's "Trains" array
+	Trains = {"unit-brising-town-hall", "unit-dwarven-mushroom-farm", "unit-dwarven-barracks", "unit-dwarven-lumber-mill", "unit-brising-smithy", "unit-dwarven-yale-pen", "unit-dwarven-sentry-tower", "unit-dwarven-dock", "unit-gold-mine", "unit-silver-mine", "unit-copper-mine"}
+} )
+
+DefineUnitType("unit-dwarven-dock", {
+	Trains = {"unit-dwarven-transport-ship", "unit-brising-transport-ship"},
+} )
+
+
 DefineUnitType("unit-surghan-mercenary-steelclad", { Name = _("Surghan Mercenary"),
 	Parent = "unit-dwarven-steelclad",
 	Class = "",
@@ -960,6 +999,9 @@ DefineUnitType("unit-surghan-mercenary-steelclad", { Name = _("Surghan Mercenary
 	Costs = {"time", 0, "gold", 900, "lumber", 0},
 	TrainQuantity = 4,
 	Mercenary = true,
+	ButtonPos = 5,
+	ButtonKey = "s",
+	ButtonHint = _("Hire ~!Surghan Mercenaries"),
 	Variations = {
 		{
 			"variation-id", "red-hair",

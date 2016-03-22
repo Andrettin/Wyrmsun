@@ -37,6 +37,8 @@ DefineUnitType("unit-template-item", { Name = _("Item"),
 	Type = "land",
 	NumDirections = 1,
 	Item = true,
+	ButtonPopup = "popup-item",
+	ButtonLevel = 0,
 	Sounds = {
 		"selected", "click"
 	} 
@@ -308,6 +310,9 @@ DefineUnitType("unit-potion-of-healing", { Name = _("Potion of Healing"),
 	ItemClass = "potion",
 	Costs = {"gold", 150},
 	HitPointHealing = 45,
+	ButtonKey = "h",
+	ButtonHint = _("Buy Potion of ~!Healing"),
+	ButtonPos = 4,
 	Sounds = {
 		"used", "potion"
 	} 
@@ -331,6 +336,9 @@ DefineUnitType("unit-cheese", { Name = _("Cheese"),
 	Costs = {"gold", 25},
 	Dairy = true,
 	HitPointHealing = 5,
+	ButtonKey = "c",
+	ButtonHint = _("Buy ~!Cheese"),
+	ButtonPos = 1,
 	Sounds = {
 		"used", "eat"
 	} 
@@ -344,6 +352,9 @@ DefineUnitType("unit-carrots", { Name = _("Carrots"),
 	Costs = {"gold", 25},
 	HitPointHealing = 5,
 	Vegetable = true,
+	ButtonKey = "r",
+	ButtonHint = _("Buy Ca~!rrots"),
+	ButtonPos = 2,
 	Sounds = {
 		"used", "eat"
 	} 

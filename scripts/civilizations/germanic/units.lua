@@ -10,7 +10,7 @@
 --
 --      units.ccl - Defines the germanic unit-types.
 --
---      (c) Copyright 2014-2015 by Andrettin
+--      (c) Copyright 2014-2016 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -46,6 +46,8 @@ DefineUnitType("unit-germanic-worker", { Name = _("Bura"), -- Bûra = "Bauer" in
 	NightSightRangeBonus = -1,
 	WeaponClasses = {"mace"},
 	BluntDamage = true,
+	ButtonKey = "b",
+	ButtonHint = _("Train ~!Bura"),
 	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-boots", "unit-cheese", "unit-carrots"},
 	CanGatherResources = {
 		{
@@ -115,6 +117,8 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 	Mana = {Enable = true, Max = 75, Value = 75, Increase = 1},
 	CanCastSpell = {"spell-puncture"},
 	AutoCastActive = {"spell-puncture"},
+	ButtonKey = "e",
+	ButtonHint = _("Train ~!Erala"),
 	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-wooden-shield", "unit-bronze-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
 	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-flaming", "upgrade-item-prefix-glacial", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-penetrating", "upgrade-item-prefix-quenching", "upgrade-item-prefix-vicious", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-the-serpent", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-the-snail", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-thorns", "upgrade-item-suffix-of-trickery", "upgrade-item-suffix-of-victory"}, -- allow more affixes than normal for the unit's level, to compensate for the unit not being upgradeable
 	Variations = {
@@ -354,6 +358,8 @@ DefineUnitType("unit-germanic-archer", { Name = _("Skutan"),
 	BonusAgainstAir = 50,
 	WeaponClasses = {"bow"},
 	PierceDamage = true,
+	ButtonKey = "s",
+	ButtonHint = _("Train ~!Skutan"),
 	AiDrops = {"unit-arrows", "unit-barbed-arrows", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
 	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-flaming", "upgrade-item-prefix-glacial", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-penetrating", "upgrade-item-prefix-quenching", "upgrade-item-prefix-vicious", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-the-serpent", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-the-snail", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-thorns", "upgrade-item-suffix-of-trickery", "upgrade-item-suffix-of-victory"}, -- allow more affixes than normal for the unit's level, to compensate for the unit not being upgradeable
 	Variations = {
@@ -393,6 +399,8 @@ DefineUnitType("unit-germanic-town-hall", { Name = _("Chieftain's Hall"),
 	Shadow = {"file", "germanic/buildings/town_hall_shadow.png", "size", {128, 128}},
 	Animations = "animations-germanic-town-hall", Icon = "icon-germanic-town-hall",
 	Construction = "construction-germanic-town-hall",
+	Trains = {"unit-germanic-worker"},
+	ButtonHint = _("Build Chieftain's ~!Hall"),
 	AiDrops = {"unit-boots"},
 	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-flaming", "upgrade-item-prefix-glacial", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-the-serpent", "upgrade-item-suffix-of-the-snail", "upgrade-item-suffix-of-trickery"},
 	Sounds = {
@@ -423,6 +431,9 @@ DefineUnitType("unit-germanic-barracks", { Name = _("War Lodge"),
 	Image = {"file", "germanic/buildings/barracks.png", "size", {96, 96}},
 	Shadow = {"file", "germanic/buildings/barracks_shadow.png", "size", {96, 96}},
 	Animations = "animations-building", Icon = "icon-germanic-barracks",
+	Trains = {"unit-germanic-warrior", "unit-germanic-archer"},
+	ButtonKey = "w",
+	ButtonHint = _("Build ~!War Lodge"),
 	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-short-spear", "unit-long-spear", "unit-wooden-shield", "unit-bronze-shield", "unit-boots", "unit-arrows", "unit-barbed-arrows"},
 	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-flaming", "upgrade-item-prefix-glacial", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-the-serpent", "upgrade-item-suffix-of-the-snail", "upgrade-item-suffix-of-trickery"},
 	Sounds = {
@@ -438,6 +449,8 @@ DefineUnitType("unit-germanic-carpenters-shop", { Name = _("Carpenter's Shop"),
 	Shadow = {"file", "germanic/buildings/carpenters_shop_shadow.png", "size", {96, 96}},
 	Icon = "icon-germanic-carpenters-shop",
 	TechnologyPointCost = 1,
+	ButtonKey = "p",
+	ButtonHint = _("Build Car~!penter's Shop"),
 	AiDrops = {"unit-short-spear", "unit-long-spear", "unit-arrows", "unit-barbed-arrows"},
 	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-flaming", "upgrade-item-prefix-glacial", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-the-serpent", "upgrade-item-suffix-of-the-snail", "upgrade-item-suffix-of-trickery"},
 	Sounds = {
@@ -458,4 +471,8 @@ DefineUnitType("unit-germanic-smithy", { Name = _("Smithy"),
 	Sounds = {
 		"help", "basic-germanic-voices-help-town"
 	}
+} )
+
+DefineUnitType("unit-germanic-worker", {
+	Trains = {"unit-germanic-town-hall", "unit-germanic-farm", "unit-germanic-barracks", "unit-germanic-carpenters-shop", "unit-germanic-smithy", "unit-gold-mine", "unit-silver-mine", "unit-copper-mine"}
 } )

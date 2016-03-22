@@ -1483,7 +1483,7 @@ SetGrabMouse(wyr.preferences.GrabMouse)
 LoadDLCs()
 LoadMods()
 
-GenerateMissingLanguageData() -- generate missing language data after loading mods, so that the function will take language data defined in mods into account
+--GenerateMissingLanguageData() -- generate missing language data after loading mods, so that the function will take language data defined in mods into account
 
 function GameStarting()
 	if (CurrentQuest ~= "" and GetQuestData(CurrentQuest, "MapMusic") ~= "") then

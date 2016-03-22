@@ -8,8 +8,6 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      units.lua - Defines the teuton (west germanic) unit-types.
---
 --      (c) Copyright 2015-2016 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
@@ -46,6 +44,8 @@ DefineUnitType("unit-teuton-worker", { Name = _("Bura"),
 	NightSightRangeBonus = -1,
 	WeaponClasses = {"mace"},
 	BluntDamage = true,
+	ButtonKey = "b",
+	ButtonHint = _("Train ~!Bura"),
 	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-boots", "unit-cheese", "unit-carrots"},
 	CanGatherResources = {
 		{
@@ -113,6 +113,8 @@ DefineUnitType("unit-teuton-swordsman", { Name = _("Krieger"),
 	Mana = {Enable = true, Max = 75, Value = 75, Increase = 1},
 	CanCastSpell = {"spell-puncture"},
 	AutoCastActive = {"spell-puncture"},
+	ButtonKey = "k",
+	ButtonHint = _("Train ~!Krieger"),
 	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
 	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-flaming", "upgrade-item-prefix-glacial", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-penetrating", "upgrade-item-prefix-quenching", "upgrade-item-prefix-vicious", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-the-serpent", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-the-snail", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-thorns", "upgrade-item-suffix-of-trickery", "upgrade-item-suffix-of-victory"}, -- allow more affixes than normal for the unit's level, to compensate for the unit not being upgradeable
 	Variations = {
@@ -343,6 +345,8 @@ DefineUnitType("unit-teuton-spearman", { Name = _("Speerkampfer"),
 	DaySightRangeBonus = 1,
 	NightSightRangeBonus = -1,
 	AiDrops = {"unit-short-spear", "unit-long-spear", "unit-pike", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
+	ButtonKey = "e",
+	ButtonHint = _("Train Sp~!eerkampfer"),
 	Variations = {
 		{
 			"variation-id", "red-hair"
@@ -447,6 +451,8 @@ DefineUnitType("unit-teuton-archer", { Name = _("Skutan"),
 	BonusAgainstAir = 50,
 	WeaponClasses = {"bow"},
 	PierceDamage = true,
+	ButtonKey = "s",
+	ButtonHint = _("Train ~!Skutan"),
 	AiDrops = {"unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
 	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-flaming", "upgrade-item-prefix-glacial", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-penetrating", "upgrade-item-prefix-quenching", "upgrade-item-prefix-vicious", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-the-serpent", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-the-snail", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-thorns", "upgrade-item-suffix-of-trickery", "upgrade-item-suffix-of-victory"}, -- allow more affixes than normal for the unit's level, to compensate for the unit not being upgradeable
 	Variations = {
@@ -494,6 +500,8 @@ DefineUnitType("unit-teuton-ritter", { Name = _("Ritter"),
 	HackDamage = true,
 	InvertedEastArms = true,
 	InvertedSoutheastArms = true,
+	ButtonKey = "r",
+	ButtonHint = _("Train ~!Ritter"),
 	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
 	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-flaming", "upgrade-item-prefix-glacial", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-the-serpent", "upgrade-item-suffix-of-victory"}, -- allow more affixes than normal for the unit's level, to compensate for the unit not being upgradeable
 	Corpse = "unit-human-dead-body",
@@ -526,6 +534,8 @@ DefineUnitType("unit-teuton-catapult", { Name = _("Catapult"),
 	Missile = "missile-catapult-sandstone-rock",
 	FireMissile = "missile-flaming-catapult-rock",
 	BluntDamage = true,
+	ButtonKey = "c",
+	ButtonHint = _("Build ~!Catapult"),
 	Sounds = {
 --		"acknowledge", "ballista-acknowledge",
 --		"ready", "dwarven-ballista-ready",
@@ -541,6 +551,8 @@ DefineUnitType("unit-teuton-kogge", { Name = _("Kogge"),
 	Image = {"file", "teuton/units/kogge.png", "size", {72, 72}},
 	LightImage = {"file", "teuton/units/kogge_water.png"},
 	Animations = "animations-transport-ship", Icon = "icon-teuton-kogge",
+	ButtonKey = "k",
+	ButtonHint = _("Build ~!Kogge"),
 	Sounds = {
 		"help", "basic-teuton-voices-help"
 	}
@@ -553,6 +565,7 @@ DefineUnitType("unit-teuton-town-hall", { Name = _("Rathaus"),
 	Image = {"file", "teuton/buildings/town_hall.png", "size", {128, 128}},
 	Shadow = {"file", "teuton/buildings/town_hall_shadow.png", "size", {128, 128}},
 	Icon = "icon-teuton-town-hall",
+	Trains = {"unit-teuton-worker"},
 	AiDrops = {"unit-boots"},
 	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-flaming", "upgrade-item-prefix-glacial", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-the-serpent", "upgrade-item-suffix-of-the-snail", "upgrade-item-suffix-of-trickery", "upgrade-work-hildebrandslied"},
 	DropSpells = {"spell-frank-allegiance", "spell-suebi-allegiance"},
@@ -584,7 +597,7 @@ DefineUnitType("unit-teuton-stronghold", { Name = _("Burg"),
 	Image = {"file", "teuton/buildings/stronghold.png", "size", {128, 128}},
 	Shadow = {"file", "teuton/buildings/stronghold_shadow.png", "size", {128, 128}},
 	Icon = "icon-teuton-stronghold",
-	TechnologyPointCost = 1,
+	Trains = {"unit-teuton-worker", "unit-potion-of-healing"},
 	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows"},
 	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-flaming", "upgrade-item-prefix-glacial", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-the-serpent", "upgrade-item-suffix-of-the-snail", "upgrade-item-suffix-of-trickery", "upgrade-work-hildebrandslied"},
 	DropSpells = {"spell-frank-allegiance", "spell-suebi-allegiance"},
@@ -628,6 +641,7 @@ DefineUnitType("unit-teuton-barracks", { Name = _("Barracks"),
 	Image = {"file", "teuton/buildings/barracks.png", "size", {96, 96}},
 	Shadow = {"file", "teuton/buildings/barracks_shadow.png", "size", {96, 96}},
 	Icon = "icon-teuton-barracks",
+	Trains = {"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-frank-swordsman", "unit-teuton-spearman", "unit-frank-spearman", "unit-teuton-archer", "unit-teuton-ritter", "unit-frank-horseman", "unit-teuton-catapult"},
 	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows"},
 	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-flaming", "upgrade-item-prefix-glacial", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-the-serpent", "upgrade-item-suffix-of-the-snail", "upgrade-item-suffix-of-trickery"},
 	Variations = {
@@ -749,7 +763,17 @@ DefineUnitType("unit-teuton-dock", { Name = _("Dock"),
 	Image = {"file", "teuton/buildings/dock.png", "size", {96, 96}},
 	Shadow = {"file", "teuton/buildings/dock_shadow.png", "size", {96, 96}},
 	Animations = "animations-building", Icon = "icon-teuton-dock",
+	Trains = {"unit-teuton-kogge"},
 	Sounds = {
 		"help", "basic-teuton-voices-help-town"
+	}
+} )
+
+DefineUnitType("unit-teuton-worker", {
+	Trains = {
+		--"unit-teuton-town-hall",
+		"unit-teuton-farm",
+		--"unit-teuton-barracks", "unit-teuton-lumber-mill",
+		"unit-teuton-smithy", "unit-teuton-stables", "unit-teuton-watch-tower", "unit-teuton-dock", "unit-gold-mine", "unit-silver-mine", "unit-copper-mine"
 	}
 } )
