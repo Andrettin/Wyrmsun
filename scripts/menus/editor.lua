@@ -1806,7 +1806,7 @@ function EditUnitTypePropertiesTraining(unit_type)
 	end
 	
 	trains_label = menu:addLabel(_("Trains:"), 10, 14 + 36 * 1, Fonts["game"], false)
-	trains = menu:addDropDown(unit_type_list, (sizeX / 2) - 60 - 10, 11 + 36 * 1, function(dd) CivilizationChanged() end)
+	trains = menu:addDropDown(unit_type_list, (sizeX / 2) - 60 - 10, 11 + 36 * 1, function(dd) TrainedUnitTypeChanged() end)
 	trains:setSize(236 - 19 - 10, 20)
 	trains:setSelected(0)
 	
