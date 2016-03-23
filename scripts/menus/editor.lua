@@ -1,6 +1,33 @@
 
 editor_tilesets = { "cave", "conifer_forest_summer", "conifer_forest_autumn", "dungeon", "fairlimbed_forest", "swamp"}
 
+function GetUnitGraphics()
+	local unit_graphics_list = {}
+
+	local i
+	local f
+	local u = 1
+
+	-- list the subdirectories in the dlcs folder
+	local dirlist = {}
+	local dirs = ListDirsInDirectory("graphics/")
+	for i,f in ipairs(dirs) do
+		dirlist[u] = f .. "/"
+		u = u + 1
+	end
+
+	for j=1,table.getn(dirlist) do
+		if (GetArrayIncludes(ListDirsInDirectory("graphics/" .. dirlist[j]), "units")) then
+			local fileslist = ListFilesInDirectory("graphics/" .. dirlist[j] .. "units/")
+			for i,f in ipairs(fileslist) do
+				table.insert(unit_graphics_list, dirlist[j] .. "units/" .. f)
+			end
+		end
+	end
+	
+	return unit_graphics_list
+end
+
 --  Menu for new map to edit
 local function RunEditorNewMapMenu()
 	local menu = WarMenu()
@@ -1365,31 +1392,37 @@ function EditUnitTypeProperties(unit_type)
 		end
 	)
 
-	menu:addFullButton(_("S~!tats"), "t", (sizeX / 2) - (224 / 2), sizeY - 40 - (36 * 6),
+	local graphics_properties_button = menu:addFullButton(_("~!Graphics"), "g", (sizeX / 2) - (224 / 2), sizeY - 40 - (36 * 6),
+		function()
+			EditUnitTypePropertiesGraphics(unit_type)
+		end
+	)
+
+	menu:addFullButton(_("S~!tats"), "t", (sizeX / 2) - (224 / 2), sizeY - 40 - (36 * 5),
 		function()
 			EditUnitTypePropertiesStats(unit_type)
 		end
 	)
 
-	menu:addFullButton(_("~!Resource Stats"), "r", (sizeX / 2) - (224 / 2), sizeY - 40 - (36 * 5),
+	menu:addFullButton(_("~!Resource Stats"), "r", (sizeX / 2) - (224 / 2), sizeY - 40 - (36 * 4),
 		function()
 			EditUnitTypePropertiesResourceStats(unit_type)
 		end
 	)
 
-	menu:addFullButton(_("~!Sounds"), "s", (sizeX / 2) - (224 / 2), sizeY - 40 - (36 * 4),
+	menu:addFullButton(_("~!Sounds"), "s", (sizeX / 2) - (224 / 2), sizeY - 40 - (36 * 3),
 		function()
 			EditUnitTypePropertiesSounds(unit_type)
 		end
 	)
 
-	local training_properties_button = menu:addFullButton(_("~!Training"), "t", (sizeX / 2) - (224 / 2), sizeY - 40 - (36 * 3),
+	local training_properties_button = menu:addFullButton(_("~!Training"), "t", (sizeX / 2) - (224 / 2), sizeY - 40 - (36 * 2),
 		function()
 			EditUnitTypePropertiesTraining(unit_type)
 		end
 	)
 
-	menu:addFullButton(_("~!OK"), "o", (sizeX / 2) - (224 / 2), sizeY - 40 - (36 * 2),
+	menu:addFullButton(_("~!OK"), "o", (sizeX / 2) - (224 / 2), sizeY - 40 - (36 * 1),
 		function()
 			menu:stop()
 		end
@@ -1397,6 +1430,7 @@ function EditUnitTypeProperties(unit_type)
 	
 	if (GetUnitTypeData(unit_type, "Mod") ~= Map.Info.Filename) then
 		main_properties_button:setEnabled(false)
+		graphics_properties_button:setEnabled(false)
 	end
 
 	menu:run(false)
@@ -1459,6 +1493,62 @@ function EditUnitTypePropertiesMain(unit_type)
 
 			if (faction_list[faction:getSelected() + 1] ~= GetUnitTypeData(unit_type, "Faction")) then
 				unit_type_definition.Faction = faction_list[faction:getSelected() + 1]
+			end
+
+			DefineUnitType(unit_type, unit_type_definition)
+
+			menu:stop()
+		end
+	)
+
+	menu:addHalfButton(_("~!Cancel"), "c", 130 + 48, sizeY - 40,
+		function() menu:stop() end)
+
+	menu:run(false)
+end
+
+function EditUnitTypePropertiesGraphics(unit_type)
+
+	if (unit_type == "" or unit_type == nil) then
+		return;
+	end
+	local menu = WarGameMenu(panel(5))
+	local sizeX = 352
+	local sizeY = 352
+
+	menu:resize(sizeX, sizeY)
+	menu:addLabel(_(GetUnitTypeName(unit_type)) .. " " .. _("Properties"), sizeX / 2, 11)
+
+	local unit_graphics_list = GetUnitGraphics()
+	table.insert(unit_graphics_list, "")
+	local trained_unit_type_list = GetUnitTypeData(unit_type, "Trains", Map.Info.Filename)
+	
+	local unit_graphics
+	local unit_graphics_label
+  
+	unit_graphics_label = menu:addLabel(_("Graphics:"), 10, 14 + 36 * 1, Fonts["game"], false)
+	unit_graphics = menu:addDropDown(unit_graphics_list, (sizeX / 2) - 60 - 10, 11 + 36 * 1, function(dd) end)
+	unit_graphics:setSize(236 - 19 - 10, 20)
+	unit_graphics:setSelected(GetElementIndexFromArray(unit_graphics_list, GetUnitTypeData(unit_type, "Image")) - 1)
+	
+	menu:addLabel(_("Frame Width:"), 10, 12 + 36 * 2, Fonts["game"], false)
+	local frame_width_value = menu:addTextInputField(GetUnitTypeData(unit_type, "Width"), (sizeX / 2) - 60 - 10, 11 + 36 * 2, 60)
+
+	menu:addLabel(_("Frame Height:"), (sizeX / 2) + 10, 12 + 36 * 2, Fonts["game"], false)
+	local frame_height_value = menu:addTextInputField(GetUnitTypeData(unit_type, "Height"), sizeX - 60 - 10, 11 + 36 * 2, 60)
+	
+	menu:addHalfButton("~!OK", "o", 20 + 48, sizeY - 40,
+		function()
+			local unit_type_definition = {}
+
+			if (unit_graphics_list[unit_graphics:getSelected() + 1] ~= GetUnitTypeData(unit_type, "Image")) then
+				unit_type_definition.Image = {}
+				table.insert(unit_type_definition.Image, "file")
+				table.insert(unit_type_definition.Image, unit_graphics_list[unit_graphics:getSelected() + 1])
+				if (frame_width_value:getText() ~= GetUnitTypeData(unit_type, "Width") or frame_height_value:getText() ~= GetUnitTypeData(unit_type, "Height")) then
+					table.insert(unit_type_definition.Image, "size")
+					table.insert(unit_type_definition.Image, {tonumber(frame_width_value:getText()), tonumber(frame_height_value:getText())})
+				end
 			end
 
 			DefineUnitType(unit_type, unit_type_definition)
