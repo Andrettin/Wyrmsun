@@ -1397,7 +1397,6 @@ function EditUnitTypeProperties(unit_type)
 	
 	if (GetUnitTypeData(unit_type, "Mod") ~= Map.Info.Filename) then
 		main_properties_button:setEnabled(false)
-		training_properties_button:setEnabled(false)
 	end
 
 	menu:run(false)
@@ -1795,7 +1794,7 @@ function EditUnitTypePropertiesTraining(unit_type)
 	menu:addLabel(_(GetUnitTypeName(unit_type)) .. " " .. _("Properties"), sizeX / 2, 11)
 
 	local unit_type_list = GetUnitTypes()
-	local trained_unit_type_list = GetUnitTypeData(unit_type, "Trains")
+	local trained_unit_type_list = GetUnitTypeData(unit_type, "Trains", Map.Info.Filename)
 	
 	local trains
 	local trains_label
@@ -1834,25 +1833,31 @@ function EditUnitTypePropertiesTraining(unit_type)
 
 	menu:addHalfButton("~!OK", "o", 20 + 48, sizeY - 40,
 		function()
-			local unit_type_definition = {}
+			if (GetUnitTypeData(unit_type, "Mod") == Map.Info.Filename) then
+				local unit_type_definition = {}
 
-			if (trained_unit_type_list ~= GetUnitTypeData(unit_type, "Trains")) then
-				unit_type_definition.Trains = trained_unit_type_list
+				if (trained_unit_type_list ~= GetUnitTypeData(unit_type, "Trains")) then
+					unit_type_definition.Trains = trained_unit_type_list
+				end
+
+				if (button_pos_value:getText() ~= GetUnitTypeData(unit_type, "ButtonPos")) then
+					unit_type_definition.ButtonPos = tonumber(button_pos_value:getText())
+				end
+
+				if (button_key_value:getText() ~= GetUnitTypeData(unit_type, "ButtonKey")) then
+					unit_type_definition.ButtonKey = tostring(button_key_value:getText())
+				end
+
+				if (button_hint_value:getText() ~= GetUnitTypeData(unit_type, "ButtonHint")) then
+					unit_type_definition.ButtonHint = tostring(button_hint_value:getText())
+				end
+
+				DefineUnitType(unit_type, unit_type_definition)
+			else
+				if (trained_unit_type_list ~= GetUnitTypeData(unit_type, "Trains")) then
+					SetModTrains(Map.Info.Filename, unit_type, trained_unit_type_list)
+				end
 			end
-
-			if (button_pos_value:getText() ~= GetUnitTypeData(unit_type, "ButtonPos")) then
-				unit_type_definition.ButtonPos = tonumber(button_pos_value:getText())
-			end
-
-			if (button_key_value:getText() ~= GetUnitTypeData(unit_type, "ButtonKey")) then
-				unit_type_definition.ButtonKey = tostring(button_key_value:getText())
-			end
-
-			if (button_hint_value:getText() ~= GetUnitTypeData(unit_type, "ButtonHint")) then
-				unit_type_definition.ButtonHint = tostring(button_hint_value:getText())
-			end
-
-			DefineUnitType(unit_type, unit_type_definition)
 
 			menu:stop()
 		end
