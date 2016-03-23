@@ -43,10 +43,9 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-spear",
 	Action = "attack",
 	Key = "a", Hint = _("~!Attack"), Popup = "popup-commands",
 	ForUnit = {
-		"unit-goblin-worker", "unit-goblin-thief", "unit-goblin-spearman",
+		"unit-goblin-spearman",
 		"unit-germanic-spearman", "unit-teuton-spearman", "unit-frank-spearman",
-		"unit-dwarven-guard", 
-		"goblin-group"
+		"unit-dwarven-guard"
 	}
 })
 

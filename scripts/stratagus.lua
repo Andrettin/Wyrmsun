@@ -2005,9 +2005,9 @@ Preference.PlayerColorCircle = wyr.preferences.PlayerColorCircle
 Preference.HotkeySetup = wyr.preferences.HotkeySetup
 
 --- Uses Stratagus Library path!
+Load("scripts/icons.lua")
 Load("scripts/languages.lua")
 Load("scripts/civilizations.lua")
-Load("scripts/icons.lua")
 Load("scripts/music.lua")
 Load("scripts/sound.lua")
 Load("scripts/missiles.lua")

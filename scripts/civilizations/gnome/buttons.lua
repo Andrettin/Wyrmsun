@@ -36,31 +36,11 @@
 
 -- general commands -------------------------------
 
-DefineButton( { Pos = 1, Level = 0, Icon = "icon-gnomish-boots",
-	Action = "move",
-	Key = "m", Hint = _("~!Move"), Popup = "popup-commands",
-	ForUnit = {
-		"unit-gnomish-worker", "unit-gnomish-recruit", "unit-gnomish-duelist", "unit-gnomish-master-at-arms",
-		"unit-gnomish-herbalist", "unit-gnomish-caravan",
-		"gnome-group"
-	}
-} )
-
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-gnomish-thrusting-sword-1",
 	Action = "attack",
 	Key = "a", Hint = _("~!Attack"), Popup = "popup-commands",
 	ForUnit = {
-		"unit-gnomish-worker", "unit-gnomish-recruit", "unit-gnomish-duelist", "unit-gnomish-master-at-arms", "unit-gnomish-herbalist",
-		"gnome-group"
-	}
-} )
-
-DefineButton( { Pos = 4, Level = 0, Icon = "icon-gnomish-patrol-land",
-	Action = "patrol",
-	Key = "p", Hint = _("~!Patrol"), Popup = "popup-commands",
-	ForUnit = {
-		"unit-gnomish-recruit", "unit-gnomish-duelist", "unit-gnomish-master-at-arms", 
-		"gnome-group"
+		"unit-gnomish-recruit", "unit-gnomish-duelist", "unit-gnomish-master-at-arms"
 	}
 } )
 

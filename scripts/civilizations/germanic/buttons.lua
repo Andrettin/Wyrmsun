@@ -40,13 +40,9 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-germanic-short-sword",
 	Action = "attack",
 	Key = "a", Hint = _("~!Attack"), Popup = "popup-commands",
 	ForUnit = {
-		"unit-germanic-worker",
 		"unit-germanic-warrior",
-		"unit-teuton-worker",
 		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-frank-swordsman", "unit-teuton-ritter", "unit-frank-horseman",
---		"unit-teuton-kogge",
-		"unit-goblin-swordsman",
-		"germanic-group", "teuton-group"
+		"unit-goblin-swordsman"
 	}
 })
 
@@ -74,15 +70,8 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-germanic-wooden-oblong-shield",
 	Action = "stop",
 	Key = "s", Hint = _("~!Stop"), Popup = "popup-commands",
 	ForUnit = {
-		"unit-germanic-worker",
-		"unit-germanic-warrior", "unit-germanic-spearman", "unit-germanic-archer",
-		"unit-teuton-worker",
-		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-frank-swordsman", "unit-teuton-spearman", "unit-frank-spearman",
-		"unit-teuton-archer", "unit-teuton-ritter", "unit-frank-horseman",
-		"unit-teuton-catapult",
-		"unit-teuton-kogge",
-		"unit-goblin-swordsman",
-		"germanic-group", "teuton-group"
+		"unit-germanic-warrior", "unit-germanic-spearman",
+		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-frank-swordsman", "unit-teuton-spearman", "unit-frank-spearman"
 	}
 })
 
@@ -114,29 +103,12 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-germanic-barbed-arrow",
 	"unit-germanic-archer", "unit-teuton-archer"
   } } )
 
-DefineButton( { Pos = 4, Level = 0, Icon = "icon-germanic-patrol-land",
-	Action = "patrol",
-	Key = "p", Hint = _("~!Patrol"), Popup = "popup-commands",
-	ForUnit = {
-		"unit-germanic-warrior", "unit-germanic-spearman", "unit-germanic-archer",
-		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-frank-swordsman", "unit-teuton-spearman", "unit-frank-spearman",
-		"unit-teuton-archer", "unit-teuton-ritter", "unit-frank-horseman",
-		"unit-teuton-catapult",
---		"unit-teuton-kogge",
-		"germanic-group", "teuton-group"
-	}
-})
-  
 DefineButton( { Pos = 5, Level = 0, Icon = "icon-germanic-stand-ground",
   Action = "stand-ground",
   Key = "t", Hint = _("S~!tand Ground"), Popup = "popup-commands",
   ForUnit = {
-    "unit-germanic-warrior", "unit-germanic-spearman", "unit-germanic-archer",
-	"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-frank-swordsman", "unit-teuton-spearman", "unit-frank-spearman",
-	"unit-teuton-archer", "unit-teuton-ritter", "unit-frank-horseman",
-	"unit-teuton-catapult",
-	"unit-goblin-swordsman",
-	"germanic-group", "teuton-group"
+	"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-frank-swordsman",
+	"unit-goblin-swordsman"
 } } )
 
 -- worker specific actions ---------------------------------------------------

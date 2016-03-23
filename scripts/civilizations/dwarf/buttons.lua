@@ -36,56 +36,6 @@
 
 -- general commands -- almost all units have it -------------------------------
 
-DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-boots",
-	Action = "move",
-	Key = "m", Hint = _("~!Move"), Popup = "popup-commands",
-	ForUnit = {
-		"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
-		"unit-dwarven-guard",
-		"unit-dwarven-scout", "unit-dwarven-pathfinder",
-		"unit-dwarven-miner", "unit-dwarven-militia",
-		"unit-brising-miner", "unit-brising-militia",
-		"unit-dwarven-yale-rider",
-		"unit-dwarven-ballista", "unit-dwarven-gryphon-rider",
-		"unit-dwarven-transport-ship", "unit-brising-transport-ship",
-		"unit-goblin-worker", "unit-goblin-thief", "unit-goblin-swordsman", "unit-goblin-spearman", "unit-goblin-archer", "unit-goblin-headhunter",
-		"unit-goblin-war-machine", "unit-goblin-glider",
-		"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
-		"unit-germanic-worker",
-		"unit-germanic-warrior", "unit-germanic-spearman", "unit-germanic-archer",
-		"unit-teuton-worker", 
-		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-frank-swordsman", "unit-teuton-spearman", "unit-frank-spearman",
-		"unit-teuton-archer", "unit-teuton-ritter", "unit-frank-horseman",
-		"unit-teuton-catapult", 
-		"unit-teuton-kogge",
-		"unit-slug", "unit-rat",
-		"unit-slime", "unit-yale", "unit-gryphon", "unit-wyrm",
-		"dwarf-group", "germanic-group", "teuton-group"
-	}
-} )
-
-DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-shield-1",
-	Action = "stop",
-	Key = "s", Hint = _("~!Stop"), Popup = "popup-commands",
-	ForUnit = {
-		"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
-		"unit-dwarven-guard",
-		"unit-dwarven-scout", "unit-dwarven-pathfinder",
-		"unit-dwarven-miner", "unit-dwarven-militia",
-		"unit-brising-miner", "unit-brising-militia",
-		"unit-dwarven-yale-rider",
-		"unit-dwarven-ballista", "unit-dwarven-gryphon-rider",
-		"unit-gnomish-worker", "unit-gnomish-recruit", "unit-gnomish-duelist", "unit-gnomish-master-at-arms", "unit-gnomish-herbalist", "unit-gnomish-caravan",
-		"unit-goblin-worker", "unit-goblin-thief", "unit-goblin-spearman", "unit-goblin-archer", "unit-goblin-headhunter",
-		"unit-goblin-war-machine", "unit-goblin-glider",
-		"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
-		"unit-slug", "unit-rat",
-		"unit-slime", "unit-yale", "unit-gryphon", "unit-wyrm",
-		"unit-dwarven-transport-ship", "unit-brising-transport-ship",
-		"dwarf-group"
-	}
-})
-
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-shield-2",
 	Action = "stop",
 	Allowed = "check-upgrade", AllowArg = {"upgrade-dwarven-shield-1"},
@@ -110,22 +60,6 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-shield-3",
 		"unit-dwarven-militia", "unit-brising-militia",
 		"unit-dwarven-yale-rider",
 		"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
-		"dwarf-group"
-	}
-})
-
-DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-battle-axe",
-	Action = "attack",
-	Key = "a", Hint = _("~!Attack"), Popup = "popup-commands",
-	ForUnit = {
-		"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
-		"unit-dwarven-miner", "unit-brising-miner",
-		"unit-dwarven-militia", "unit-brising-militia",
-		"unit-dwarven-yale-rider",
-		"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
-		"unit-slug", "unit-rat",
-		"unit-slime", "unit-yale", "unit-gryphon", "unit-wyrm",
---		"unit-dwarven-transport-ship", "unit-brising-transport-ship",
 		"dwarf-group"
 	}
 })
@@ -225,41 +159,6 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-ballista-bolt-3",
 		"unit-dwarven-ballista"
 	}
 } )
-
-DefineButton( { Pos = 4, Level = 0, Icon = "icon-dwarven-patrol-land",
-	Action = "patrol",
-	Key = "p", Hint = _("~!Patrol"), Popup = "popup-commands",
-	ForUnit = {
-		"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
-		"unit-dwarven-guard",
-		"unit-dwarven-militia", "unit-brising-militia",
-		"unit-dwarven-scout", "unit-dwarven-pathfinder",
-		"unit-dwarven-yale-rider",
-		"unit-dwarven-ballista", "unit-dwarven-gryphon-rider",
-		"unit-goblin-thief", "unit-goblin-swordsman", "unit-goblin-spearman", "unit-goblin-archer", "unit-goblin-headhunter",
-		"unit-goblin-war-machine", "unit-goblin-glider",
-		"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
---		"unit-dwarven-transport-ship", "unit-brising-transport-ship",
-		"dwarf-group"
-	}
-})
-
-DefineButton( { Pos = 5, Level = 0, Icon = "icon-dwarven-stand-ground",
-	Action = "stand-ground",
-	Key = "t", Hint = _("S~!tand Ground"), Popup = "popup-commands",
-	ForUnit = {
-		"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
-		"unit-dwarven-guard",
-		"unit-dwarven-militia", "unit-brising-militia",
-		"unit-dwarven-scout", "unit-dwarven-pathfinder",
-		"unit-dwarven-yale-rider",
-		"unit-dwarven-ballista", "unit-dwarven-gryphon-rider",
-		"unit-gnomish-recruit", "unit-gnomish-duelist", "unit-gnomish-master-at-arms", 
-		"unit-goblin-thief", "unit-goblin-spearman", "unit-goblin-archer", "unit-goblin-headhunter", "unit-goblin-war-machine",
-		"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane",
-		"dwarf-group"
-	}
-})
 
 -- Miner-specific actions ---------------------------------------------------
 
