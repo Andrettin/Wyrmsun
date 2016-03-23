@@ -27,7 +27,14 @@
 
 DefineCivilization("neutral", {
 	Display = "Neutral",
-	Playable = false
+	Playable = false,
+	ButtonIcons = {
+		"move", "icon-dwarven-boots",
+		"stop", "icon-dwarven-shield-1",
+		"attack", "icon-dwarven-battle-axe",
+		"patrol", "icon-dwarven-patrol-land",
+		"stand-ground", "icon-dwarven-stand-ground"
+	}
 })
 
 --[[
@@ -57,11 +64,13 @@ DefineCivilization("dwarf", {
 	Species = "dwarf",
 	Language = "dwarven",
 	DefaultColor = "red",
-	MoveIcon = "icon-dwarven-boots",
-	StopIcon = "icon-dwarven-shield-1",
-	AttackIcon = "icon-dwarven-battle-axe",
-	PatrolIcon = "icon-dwarven-patrol-land",
-	StandGroundIcon = "icon-dwarven-stand-ground"
+	ButtonIcons = {
+		"move", "icon-dwarven-boots",
+		"stop", "icon-dwarven-shield-1",
+		"attack", "icon-dwarven-battle-axe",
+		"patrol", "icon-dwarven-patrol-land",
+		"stand-ground", "icon-dwarven-stand-ground"
+	}
 })
 
 DefineCivilization("elf", {
@@ -78,7 +87,14 @@ DefineCivilization("elf", {
 	},
 	--]]
 	Playable = false,
-	DefaultColor = "teal"
+	DefaultColor = "teal",
+	ButtonIcons = {
+		"move", "icon-gnomish-boots",
+		"stop", "icon-germanic-wooden-oblong-shield",
+		"attack", "icon-germanic-short-sword",
+		"patrol", "icon-germanic-patrol-land",
+		"stand-ground", "icon-germanic-stand-ground"
+	}
 })
 
 --[[
@@ -98,11 +114,13 @@ DefineCivilization("germanic", {
 	Species = "human",
 	Language = "proto-germanic",
 	DefaultColor = "orange",
-	MoveIcon = "icon-dwarven-boots",
-	StopIcon = "icon-germanic-wooden-oblong-shield",
-	AttackIcon = "icon-germanic-short-sword",
-	PatrolIcon = "icon-germanic-patrol-land",
-	StandGroundIcon = "icon-germanic-stand-ground"
+	ButtonIcons = {
+		"move", "icon-dwarven-boots",
+		"stop", "icon-germanic-wooden-oblong-shield",
+		"attack", "icon-germanic-short-sword",
+		"patrol", "icon-germanic-patrol-land",
+		"stand-ground", "icon-germanic-stand-ground"
+	}
 })
 
 DefineCivilization("celt", { -- has to be defined after the germanic civilization because it uses it as its parent civilization
@@ -123,11 +141,12 @@ DefineCivilization("gnome", {
 	Language = "gnomish",
 	Playable = false,
 	DefaultColor = "blue",
-	MoveIcon = "icon-gnomish-boots",
-	StopIcon = "icon-dwarven-shield-1",
-	AttackIcon = "icon-gnomish-thrusting-sword-1",
-	PatrolIcon = "icon-gnomish-patrol-land",
-	StandGroundIcon = "icon-dwarven-stand-ground"
+	ButtonIcons = {
+		"move", "icon-gnomish-boots",
+		"attack", "icon-gnomish-thrusting-sword-1",
+		"patrol", "icon-gnomish-patrol-land",
+		"stand-ground", "icon-germanic-stand-ground"
+	}
 })
 
 DefineCivilization("goblin", {
@@ -137,11 +156,13 @@ DefineCivilization("goblin", {
 	Language = "goblin",
 	Playable = false,
 	DefaultColor = "teal",
-	MoveIcon = "icon-dwarven-boots",
-	StopIcon = "icon-dwarven-shield-1",
-	AttackIcon = "icon-spear",
-	PatrolIcon = "icon-dwarven-patrol-land",
-	StandGroundIcon = "icon-dwarven-stand-ground"
+	ButtonIcons = {
+		"move", "icon-dwarven-boots",
+		"stop", "icon-dwarven-shield-1",
+		"attack", "icon-spear",
+		"patrol", "icon-gnomish-patrol-land",
+		"stand-ground", "icon-dwarven-stand-ground"
+	}
 })
 
 DefineCivilization("kobold", {
@@ -152,10 +173,10 @@ DefineCivilization("kobold", {
 	ParentCivilization = "goblin",
 	Playable = false,
 	DefaultColor = "violet",
-	MoveIcon = "icon-dwarven-boots",
-	StopIcon = "icon-dwarven-shield-1",
-	PatrolIcon = "icon-dwarven-patrol-land",
-	StandGroundIcon = "icon-dwarven-stand-ground"
+	ButtonIcons = {
+		"attack", "icon-gnomish-thrusting-sword-1",
+		"stand-ground", "icon-germanic-stand-ground"
+	}
 })
 
 DefineCivilization("orc", {
@@ -163,7 +184,14 @@ DefineCivilization("orc", {
 	Visible = true,
 	Species = "orc",
 	Playable = false,
-	DefaultColor = "red"
+	DefaultColor = "red",
+	ButtonIcons = {
+		"move", "icon-dwarven-boots",
+		"stop", "icon-dwarven-shield-1",
+		"attack", "icon-dwarven-battle-axe",
+		"patrol", "icon-dwarven-patrol-land",
+		"stand-ground", "icon-dwarven-stand-ground"
+	}
 })
 
 DefineCivilization("teuton", {
@@ -172,11 +200,7 @@ DefineCivilization("teuton", {
 	Species = "human",
 	Language = "high-german",
 	ParentCivilization = "germanic",
-	MoveIcon = "icon-dwarven-boots",
-	StopIcon = "icon-germanic-wooden-oblong-shield",
-	AttackIcon = "icon-germanic-short-sword",
-	PatrolIcon = "icon-germanic-patrol-land",
-	StandGroundIcon = "icon-germanic-stand-ground",
+	DefaultColor = "yellow"
 	--[[
 	ProvinceNames = {
 		"Baden",
@@ -258,7 +282,6 @@ DefineCivilization("teuton", {
 		"weissenburg" -- "weissenburg" = "white castle"; example: "Stuhlweissenburg"
 	},
 	--]]
-	DefaultColor = "yellow"
 })
 
 DefineCivilization("troll", {

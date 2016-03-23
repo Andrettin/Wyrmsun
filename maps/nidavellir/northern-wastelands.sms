@@ -207,6 +207,7 @@ end
 -- create gryphon riders
 unit = CreateUnit("unit-dwarven-gryphon-rider", 3, {2, 35})
 IncreaseUnitLevel(unit, 1)
+AcquireAbility(unit, "upgrade-critical-strike")
 SetUnitVariable(unit, "Active", false)
 unit = CreateUnit("unit-dwarven-gryphon-rider", 3, {0, 34})
 SetUnitVariable(unit, "Active", false)
