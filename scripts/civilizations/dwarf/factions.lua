@@ -30,7 +30,8 @@ DefineFaction("Brising Clan", {
 	Type = "tribe",
 	Colors = {"red", "orange", "fire"},
 	DevelopsTo = {"Joruvellir", "Kal Kartha", "Knalga", "Lyr"},
-	FactionUpgrade = "upgrade-brising-clan-faction"
+	FactionUpgrade = "upgrade-brising-clan-faction",
+	Description = _("The Brising clan is one of the first dwarven clans ever known. It made its home in Svarinshaug, where they tamed the fierce forces of nature.")
 })
 
 DefineFaction("Eikinskjaldi Clan", { -- originally Oakenshield (from Dyson Logos' The Tomb of Durahn Oakenshield), translated into Norse to make it seem more dwarvish
@@ -38,7 +39,8 @@ DefineFaction("Eikinskjaldi Clan", { -- originally Oakenshield (from Dyson Logos
 	Type = "tribe",
 	Colors = {"brown"},
 	DevelopsTo = {"Joruvellir", "Kal Kartha", "Knalga", "Lyr"},
-	FactionUpgrade = "upgrade-eikinskjaldi-clan-faction"
+	FactionUpgrade = "upgrade-eikinskjaldi-clan-faction",
+	Description = _("The Eikinskjaldi clan traces its origins to Eikinskjaldi, a member of the legendary group of dwarves who migrated to the sandy plains of Joruvellir. One of Eikinskjaldi's descendants was Durahn, a mighty dwarven warlord who was buried in a rich tomb.")
 })
 
 DefineFaction("Norlund Clan", {
@@ -47,7 +49,8 @@ DefineFaction("Norlund Clan", {
 	Colors = {"red", "orange"},
 --	DevelopsTo = {"Kal Kartha", "Knalga"},
 	DevelopsTo = {"Joruvellir", "Kal Kartha", "Knalga", "Lyr"},
-	FactionUpgrade = "upgrade-norlund-clan-faction"
+	FactionUpgrade = "upgrade-norlund-clan-faction",
+	Description = _("The Norlund clan has its origins in the Caverns of Chaincolt, and counts a number of skilled warriors and craftsmen amongst its ranks. Eventually the Norlund clan would unify much of dwarfdom into the Lordship of Knalga.")
 })
 
 DefineFaction("Shinsplitter Clan", {
@@ -55,7 +58,8 @@ DefineFaction("Shinsplitter Clan", {
 	Type = "tribe",
 	Colors = {"green", "teal"},
 	DevelopsTo = {"Joruvellir", "Kal Kartha", "Knalga", "Lyr"},
-	FactionUpgrade = "upgrade-shinsplitter-clan-faction"
+	FactionUpgrade = "upgrade-shinsplitter-clan-faction",
+	Description = _("The warriors of the Shinsplitter clan are a wild bunch, and often go into frenzies during battle. In later times the Shinsplitters migrated east to the Highbrook Pass.")
 })
 
 DefineFaction("Shorbear Clan", {
@@ -64,7 +68,8 @@ DefineFaction("Shorbear Clan", {
 	Colors = {"blue", "cyan"},
 --	DevelopsTo = {"Knalga"},
 	DevelopsTo = {"Joruvellir", "Kal Kartha", "Knalga", "Lyr"},
-	FactionUpgrade = "upgrade-shorbear-clan-faction"
+	FactionUpgrade = "upgrade-shorbear-clan-faction",
+	Description = _("Contrary to many of the other dwarven clans, which prefer to live in mountains, the Shorbears have made their homes in the hills. They are known as excellent crafters of tools.")
 })
 
 DefineFaction("Kal Kartha", {

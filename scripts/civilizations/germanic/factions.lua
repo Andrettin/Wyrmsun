@@ -30,7 +30,8 @@ DefineFaction("Asa Tribe", {
 	Civilization = "germanic",
 	Type = "tribe",
 	Colors = {"orange", "red"},
-	FactionUpgrade = "upgrade-asa-tribe-faction"
+	FactionUpgrade = "upgrade-asa-tribe-faction",
+	Description = _("The Asa are the legendary progenitors of the Germanic peoples.")
 })
 
 DefineFaction("Skeldung Tribe", { -- Skjoldung in the original Norse sagas, here rendered in Proto-Germanic; mythical Danish dynasty, Skjöldr was a son of Odin set to rule over Reidgothland (Jutland) and Zealand; Source: Snorri Sturlson, "Heimskringla", 1844; Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.

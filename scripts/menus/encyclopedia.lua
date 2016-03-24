@@ -112,7 +112,6 @@ function RunEncyclopediaMenu()
 			Texts = nil;
 			Worlds = nil;
 			CivilizationsEncyclopedia = nil;
-			FactionsEncyclopedia = nil;
 			menu:stop();
 			if (GrandStrategy) then
 				GrandStrategyGamePaused = false
@@ -1297,29 +1296,42 @@ function RunEncyclopediaFactionsMenu()
 		height_offset = 2
 	end
 	menu:addLabel("~<Encyclopedia: Factions~>", offx + 320, offy + 104 + 36*(-4 + height_offset), nil, true)
+	
+	local civilizations = GetCivilizations()
+	local potential_factions = {}
+	local factions = {}
+	local all_factions = {}
+	
+	for i = 1, table.getn(civilizations) do
+		potential_factions[i] = GetCivilizationData(civilizations[i], "Factions")
+		factions[i] = {}
+		for j = 1, table.getn(potential_factions[i]) do
+			if (GetFactionData(civilizations[i], potential_factions[i][j], "Description") ~= "") then
+				table.insert(factions[i], potential_factions[i][j])
+				table.insert(all_factions, potential_factions[i][j])
+			end
+		end
+	end
 
 	local faction_x = 0
-	if (GetTableSize(FactionsEncyclopedia) > 20) then
+	if (GetTableSize(all_factions) > 20) then
 		faction_x = -2
-	elseif (GetTableSize(FactionsEncyclopedia) > 10) then
+	elseif (GetTableSize(all_factions) > 10) then
 		faction_x = -1
 	end
 	local faction_y = -3
 
-	for faction_key, faction_value in pairsByKeys(FactionsEncyclopedia) do
-		local faction_hotkey = ""		
-		if (string.find(_(FactionsEncyclopedia[faction_key].Name), "~!") ~= nil) then
-			faction_hotkey = string.sub(string.match(_(FactionsEncyclopedia[faction_key].Name), "~!%a"), 3)
-			faction_hotkey = string.lower(faction_hotkey)
-		end
-		menu:addFullButton(_(FactionsEncyclopedia[faction_key].Name), faction_hotkey, offx + 208 + (113 * faction_x), offy + 104 + (36 * (faction_y + height_offset)),
-			function() OpenEncyclopediaFactionEntry(faction_key); end)
+	for i = 1, table.getn(civilizations) do
+		for j = 1, table.getn(factions[i]) do
+			menu:addFullButton(_(factions[i][j]) .. " (" .. GetCivilizationData(civilizations[i], "Display") .. ")", "", offx + 208 + (113 * faction_x), offy + 104 + (36 * (faction_y + height_offset)),
+				function() OpenEncyclopediaFactionEntry(civilizations[i], factions[i][j]); end)
 
-		if (faction_y > 5 or (faction_y > 4 and Video.Height < 600)) then
-			faction_x = faction_x + 2
-			faction_y = -3
-		else
-			faction_y = faction_y + 1
+			if (faction_y > 5 or (faction_y > 4 and Video.Height < 600)) then
+				faction_x = faction_x + 2
+				faction_y = -3
+			else
+				faction_y = faction_y + 1
+			end
 		end
 	end
 
@@ -1330,18 +1342,18 @@ function RunEncyclopediaFactionsMenu()
 	menu:run()
 end
 
-function OpenEncyclopediaFactionEntry(faction_key)
+function OpenEncyclopediaFactionEntry(civilization, faction)
 	if (RunningScenario == false) then
 		if not (IsMusicPlaying()) then
 			PlayMusicName("MenuTheme")
 		end
 	end
 
-	local encyclopedia_entry_menu = WarMenu(nil, GetBackground(GetCivilizationBackground(FactionsEncyclopedia[faction_key].Civilization)))
+	local encyclopedia_entry_menu = WarMenu(nil, GetBackground(GetCivilizationBackground(civilization)))
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2
 
-	encyclopedia_entry_menu:addLabel("~<" .. FactionsEncyclopedia[faction_key].Name .. "~>", offx + 320, offy + 104 + 36*-2, nil, true)
+	encyclopedia_entry_menu:addLabel("~<" .. faction .. "~>", offx + 320, offy + 104 + 36*-2, nil, true)
 
 	local l = MultiLineLabel()
 	l:setFont(Fonts["game"])
@@ -1349,8 +1361,8 @@ function OpenEncyclopediaFactionEntry(faction_key)
 	l:setLineWidth(Video.Width - 64)
 	encyclopedia_entry_menu:add(l, 32, offy + 104 + 36*0)
 	local description = ""
-	if (FactionsEncyclopedia[faction_key].Description ~= nil) then
-		description = "Description: " .. FactionsEncyclopedia[faction_key].Description
+	if (GetFactionData(civilization, faction, "Description") ~= "") then
+		description = "Description: " .. GetFactionData(civilization, faction, "Description")
 	end
 	l:setCaption(description)
 			

@@ -32,7 +32,8 @@ DefineFaction("Suebi Tribe", {
 	Colors = {"black"},
 	DefaultTier = "duchy",
 	DevelopsTo = {"Galicia", "Bavaria", "Austria"},
-	FactionUpgrade = "upgrade-suebi-tribe-faction"
+	FactionUpgrade = "upgrade-suebi-tribe-faction",
+	Description = _("The Suebi were a powerful tribe in ancient Germania, battling the Romans a number of times. From the Suebi tribes such as the Marcomanni and the Quadi would originate. In the 5th century a group of Suebi settled and conquered Galicia, establishing a kingdom there.")
 })
 
 DefineFaction("Frank Tribe", {
@@ -189,7 +190,8 @@ DefineFaction("Marcomanni Tribe", {
 	ParentFaction = "Suebi Tribe",
 	Type = "tribe",
 	Colors = {"orange", "red"}, -- change to a better one?
-	DevelopsTo = {"Bavaria", "Galicia", "Austria"}
+	DevelopsTo = {"Bavaria", "Galicia", "Austria"},
+	Description = _("The Marcomanni were a Suebic tribe. Eventually they migrated to the east, settling in Bohemia and expelling the local Boii tribe. In the 2nd century they fought the terrible Marcomannic Wars against the Romans. The name \"Marcomanni\" means \"march-men\", or \"frontier-men\".")
 })
 
 DefineFaction("Bavarian Tribe", {
@@ -199,7 +201,8 @@ DefineFaction("Bavarian Tribe", {
 	Language = "old-high-german",
 	Colors = {"cyan", "white"},
 	DevelopsTo = {"Bavaria", "Austria"},
-	FactionUpgrade = "upgrade-bavarian-tribe-faction"
+	FactionUpgrade = "upgrade-bavarian-tribe-faction",
+	Description = _("The Bavarians were a West Germanic people, tracing their origins to the Marcomanni. Their name means \"men of Bohemia\", an appelation they gained due to the Marcomanni having established themselves in Bohemia under Marbod. The Bavarians migrated south, giving their newly-settled land the name it has to this day, Bavaria.")
 })
 
 DefineFaction("Quadi Tribe", {
