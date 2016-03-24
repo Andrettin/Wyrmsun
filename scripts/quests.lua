@@ -8,9 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      quests.lua - Defines quests.
---
---      (c) Copyright 2013-2015 by Andrettin
+--      (c) Copyright 2013-2016 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -206,7 +204,7 @@ DefineQuest("The Mead of Wisdom", {
 })
 
 DefineQuest("The Treasures of Svarinshaug", {
-	Icon = "icon-dwarven-smithy",
+	Icon = "icon-brising-smithy",
 	Description = "The dwarven smiths Brokk and Eitri are competing with the renowned sons of Ivaldi to craft the best artifacts for Modsognir. To obtain the necessary high quality ores will be perilous, however, as dangerous creatures abound in the deep mines where they lay...\n\nMap: Eastern Mines",
 	RequiredQuest = "The Mead of Wisdom",
 	World = "Nidavellir",

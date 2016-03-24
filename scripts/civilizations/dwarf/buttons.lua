@@ -8,8 +8,6 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      buttons.ccl - Define the unit-buttons of the dwarven civilization.
---
 --      (c) Copyright 2013-2016 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
@@ -522,7 +520,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-stronghold",
 	ForUnit = {"unit-dwarven-town-hall"}
 } )
   
-DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-stronghold",
+DefineButton( { Pos = 2, Level = 0, Icon = "icon-brising-stronghold",
 	Action = "upgrade-to", Value = "unit-brising-stronghold",
 	Allowed = "check-upgrade-to",
 	Key = "b", Hint = _("Upgrade to ~!Bastion"), Popup = "popup-building",

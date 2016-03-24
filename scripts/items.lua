@@ -69,7 +69,8 @@ DefineUnitType("unit-spatha", { Name = _("Spatha"),
 } )
 
 DefineUnitType("unit-frankish-spatha", { Name = _("Frankish Spatha"),
-	Parent = "unit-spatha"
+	Parent = "unit-spatha",
+	Icon = "icon-frankish-spatha"
 } )
 
 DefineUnitType("unit-thrusting-sword", { Name = _("Thrusting Sword"),
@@ -219,7 +220,9 @@ DefineUnitType("unit-round-shield", { Name = _("Round Shield"),
 } )
 
 DefineUnitType("unit-brising-round-shield", { Name = _("Brising Round Shield"),
-	Parent = "unit-round-shield"
+	Parent = "unit-round-shield",
+	Image = {"file", "dlcs/brising_faction_flair/graphics/items/brising_round_shield.png", "size", {14, 14}},
+	Icon = "icon-brising-round-shield"
 } )
 
 DefineUnitType("unit-heater-shield", { Name = _("Heater Shield"),

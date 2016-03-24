@@ -937,6 +937,7 @@ DefineUnitType("unit-brising-miner", { Name = _("Miner"),
 	Parent = "unit-dwarven-miner",
 	Civilization = "dwarf",
 	Faction = "Brising Clan",
+	Icon = "icon-brising-miner",
 	HitPoints = 40, -- +10 HP
 	Points = 35 -- +5 points
 } )
@@ -945,6 +946,7 @@ DefineUnitType("unit-brising-militia", { Name = _("Militia"),
 	Parent = "unit-dwarven-militia",
 	Civilization = "dwarf",
 	Faction = "Brising Clan",
+	Icon = "icon-brising-militia",
 	HitPoints = 40, -- +10 HP
 	Points = 35, -- +5 points
 	AiDrops = {"unit-brising-round-shield"}
@@ -953,13 +955,17 @@ DefineUnitType("unit-brising-militia", { Name = _("Militia"),
 DefineUnitType("unit-brising-transport-ship", {
 	Parent = "unit-dwarven-transport-ship",
 	Civilization = "dwarf",
-	Faction = "Brising Clan"
+	Faction = "Brising Clan",
+	Image = {"file", "dlcs/brising_faction_flair/graphics/units/brising_transport.png", "size", {72, 72}},
+	Icon = "icon-brising-transport-ship"
 } )
 
 DefineUnitType("unit-brising-town-hall", {
 	Parent = "unit-dwarven-town-hall",
 	Civilization = "dwarf",
 	Faction = "Brising Clan",
+	Image = {"file", "dlcs/brising_faction_flair/graphics/buildings/brising_town_hall.png", "size", {128, 128}},
+	Icon = "icon-brising-town-hall",
 	Trains = {"unit-brising-miner"}
 } )
 
@@ -967,6 +973,8 @@ DefineUnitType("unit-brising-stronghold", {
 	Parent = "unit-dwarven-stronghold",
 	Civilization = "dwarf",
 	Faction = "Brising Clan",
+	Image = {"file", "dlcs/brising_faction_flair/graphics/buildings/brising_stronghold.png", "size", {128, 128}},
+	Icon = "icon-brising-stronghold",
 	Trains = {"unit-brising-miner", "unit-potion-of-healing"},
 	AiDrops = {"unit-brising-round-shield"}
 } )
@@ -975,6 +983,9 @@ DefineUnitType("unit-brising-smithy", {
 	Parent = "unit-dwarven-smithy",
 	Civilization = "dwarf",
 	Faction = "Brising Clan",
+	Image = {"file", "dlcs/brising_faction_flair/graphics/buildings/brising_smithy.png", "size", {96, 96}},
+	Shadow = {"file", "dlcs/brising_faction_flair/graphics/buildings/brising_smithy_shadow.png", "size", {96, 96}},
+	Icon = "icon-brising-smithy",
 	TimeEfficiencyBonus = 50, -- +50% Time Efficiency Bonus
 	AiDrops = {"unit-brising-round-shield"}
 } )
