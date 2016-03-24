@@ -8,8 +8,6 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      icons.lua - Define the icons.
---
 --      (c) Copyright 2013-2016 by Lutz Sammer, Jimmy Salmon and Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
@@ -232,288 +230,6 @@ DefineIcon({
 })
 
 DefineIcon({
-	Name = "icon-celt-farm",
-	Size = {46, 38},
-	File = "celt/icons/farm.png"
-})
-
-DefineIcon({
-	Name = "icon-germanic-worker",
-	Size = {46, 38},
-	File = "germanic/icons/worker.png"
-})
-
-DefineIcon({
-	Name = "icon-germanic-warrior",
-	Size = {46, 38},
-	File = "germanic/icons/warrior.png"
-})
-
-DefineIcon({
-	Name = "icon-germanic-warrior-brown-hair",
-	Size = {46, 38},
-	File = "germanic/icons/warrior_brown_hair.png"
-})
-
-DefineIcon({
-	Name = "icon-germanic-warrior-gray-hair",
-	Size = {46, 38},
-	File = "germanic/icons/warrior_gray_hair.png"
-})
-
-DefineIcon({
-	Name = "icon-germanic-warrior-red-hair",
-	Size = {46, 38},
-	File = "germanic/icons/warrior_red_hair.png"
-})
-
-DefineIcon({
-	Name = "icon-germanic-archer",
-	Size = {46, 38},
-	File = "germanic/icons/archer.png"
-})
-
-DefineIcon({
-	Name = "icon-germanic-archer-blond-hair",
-	Size = {46, 38},
-	File = "germanic/icons/archer_blond_hair.png"
-})
-
-DefineIcon({
-	Name = "icon-germanic-archer-gray-hair",
-	Size = {46, 38},
-	File = "germanic/icons/archer_gray_hair.png"
-})
-
-DefineIcon({
-	Name = "icon-old-man",
-	Size = {46, 38},
-	File = "germanic/icons/old_man.png"
-})
-
-DefineIcon({
-	Name = "icon-germanic-town-hall",
-	Size = {46, 38},
-	File = "germanic/icons/town_hall.png"
-})
-
-DefineIcon({
-	Name = "icon-germanic-farm",
-	Size = {46, 38},
-	File = "germanic/icons/farm.png"
-})
-
-DefineIcon({
-	Name = "icon-germanic-barracks",
-	Size = {46, 38},
-	File = "germanic/icons/barracks.png"
-})
-
-DefineIcon({
-	Name = "icon-germanic-carpenters-shop",
-	Size = {46, 38},
-	File = "germanic/icons/carpenters_shop.png"
-})
-
-DefineIcon({
-	Name = "icon-germanic-smithy",
-	Size = {46, 38},
-	File = "germanic/icons/smithy.png"
-})
-
-DefineIcon({
-	Name = "icon-germanic-short-sword",
-	Size = {46, 38},
-	File = "germanic/icons/short_sword.png"
-})
-
-DefineIcon({
-	Name = "icon-germanic-broad-sword",
-	Size = {46, 38},
-	File = "germanic/icons/broad_sword.png"
-})
-
-DefineIcon({
-	Name = "icon-germanic-wooden-oblong-shield",
-	Size = {46, 38},
-	File = "germanic/icons/wooden_oblong_shield.png"
-})
-
-DefineIcon({
-	Name = "icon-germanic-bronze-shield",
-	Size = {46, 38},
-	File = "germanic/icons/bronze_shield.png"
-})
-
-DefineIcon({
-	Name = "icon-germanic-arrow",
-	Size = {46, 38},
-	File = "germanic/icons/arrow.png"
-})
-
-DefineIcon({
-	Name = "icon-germanic-barbed-arrow",
-	Size = {46, 38},
-	File = "germanic/icons/barbed_arrow.png"
-})
-
-DefineIcon({
-	Name = "icon-germanic-patrol-land",
-	Size = {46, 38},
-	File = "germanic/icons/patrol_land.png"
-})
-
-DefineIcon({
-	Name = "icon-germanic-stand-ground",
-	Size = {46, 38},
-	File = "germanic/icons/stand_ground.png"
-})
-
-DefineIcon({
-	Name = "icon-germanic-return-goods",
-	Size = {46, 38},
-	File = "germanic/icons/return_goods.png"
-})
-
-DefineIcon({
-	Name = "icon-norse-runewriting",
-	Size = {46, 38},
-	File = "norse/icons/runewriting.png"
-})
-
-DefineIcon({
-	Name = "icon-elven-swordsman",
-	Size = {46, 38},
-	File = "elf/icons/elven_swordsman.png"
-})
-
-DefineIcon({
-	Name = "icon-orc-spearthrower",
-	Size = {46, 38},
-	File = "orc/icons/spearthrower.png"
-})
-
-DefineIcon({
-	Name = "icon-orc-sea-orc",
-	Size = {46, 38},
-	File = "orc/icons/sea_orc.png"
-})
-
-DefineIcon({
-	Name = "icon-orc-shaman",
-	Size = {46, 38},
-	File = "orc/icons/shaman.png"
-})
-
-DefineIcon({
-	Name = "icon-gnomish-worker",
-	Size = {46, 38},
-	File = "gnome/icons/gnomish_worker.png"
-})
-
-DefineIcon({
-	Name = "icon-gnomish-worker-gray-hair",
-	Size = {46, 38},
-	File = "gnome/icons/gnomish_worker_gray_hair.png"
-})
-
-DefineIcon({
-	Name = "icon-gnomish-recruit",
-	Size = {46, 38},
-	File = "gnome/icons/gnomish_recruit.png"
-})
-
-DefineIcon({
-	Name = "icon-gnomish-recruit-gray-hair",
-	Size = {46, 38},
-	File = "gnome/icons/gnomish_recruit_gray_hair.png"
-})
-
-DefineIcon({
-	Name = "icon-gnomish-duelist",
-	Size = {46, 38},
-	File = "gnome/icons/duelist.png"
-})
-
-DefineIcon({
-	Name = "icon-gnomish-duelist-gray-hair",
-	Size = {46, 38},
-	File = "gnome/icons/duelist_gray_hair.png"
-})
-
-DefineIcon({
-	Name = "icon-gnomish-master-at-arms",
-	Size = {46, 38},
-	File = "gnome/icons/master_at_arms.png"
-})
-
-DefineIcon({
-	Name = "icon-gnomish-master-at-arms-gray-hair",
-	Size = {46, 38},
-	File = "gnome/icons/master_at_arms_gray_hair.png"
-})
-
-DefineIcon({
-	Name = "icon-gnomish-herbalist",
-	Size = {46, 38},
-	File = "gnome/icons/gnomish_herbalist.png"
-})
-
-DefineIcon({
-	Name = "icon-gnomish-town-hall",
-	Size = {46, 38},
-	File = "gnome/icons/town_hall.png"
-})
-
-DefineIcon({
-	Name = "icon-gnomish-farm",
-	Size = {46, 38},
-	File = "gnome/icons/farm.png"
-})
-
-DefineIcon({
-	Name = "icon-gnomish-barracks",
-	Size = {46, 38},
-	File = "gnome/icons/barracks.png"
-})
-
-DefineIcon({
-	Name = "icon-gnomish-thrusting-sword-1",
-	Size = {46, 38},
-	File = "gnome/icons/thrusting_sword_1.png"
-})
-
-DefineIcon({
-	Name = "icon-gnomish-boots",
-	Size = {46, 38},
-	File = "gnome/icons/boots.png"
-})
-
-DefineIcon({
-	Name = "icon-gnomish-boots-fur",
-	Size = {46, 38},
-	File = "gnome/icons/boots_fur.png"
-})
-
-DefineIcon({
-	Name = "icon-gnomish-patrol-land",
-	Size = {46, 38},
-	File = "gnome/icons/patrol_land.png"
-})
-
-DefineIcon({
-	Name = "icon-herbal-cure",
-	Size = {46, 38},
-	File = "gnome/icons/herbal_cure.png"
-})
-
-DefineIcon({
-	Name = "icon-portent",
-	Size = {46, 38},
-	File = "gnome/icons/portent.png"
-})
-
-DefineIcon({
 	Name = "icon-stun",
 	Size = {46, 38},
 	File = "neutral/icons/stun.png"
@@ -523,90 +239,6 @@ DefineIcon({
 	Name = "icon-puncture",
 	Size = {46, 38},
 	File = "neutral/icons/puncture.png"
-})
-
-DefineIcon({
-	Name = "icon-goblin-town-hall",
-	Size = {46, 38},
-	File = "goblin/icons/town_hall.png"
-})
-
-DefineIcon({
-	Name = "icon-goblin-mess-hall",
-	Size = {46, 38},
-	File = "goblin/icons/mess_hall.png"
-})
-
-DefineIcon({
-	Name = "icon-goblin-farm",
-	Size = {46, 38},
-	File = "goblin/icons/farm.png"
-})
-
-DefineIcon({
-	Name = "icon-goblin-lumber-mill",
-	Size = {46, 38},
-	File = "goblin/icons/lumber_mill.png"
-})
-
-DefineIcon({
-	Name = "icon-goblin-smithy",
-	Size = {46, 38},
-	File = "goblin/icons/smithy.png"
-})
-
-DefineIcon({
-	Name = "icon-goblin-worker",
-	Size = {46, 38},
-	File = "goblin/icons/goblin_worker.png"
-})
-
-DefineIcon({
-	Name = "icon-goblin-spearman",
-	Size = {46, 38},
-	File = "goblin/icons/goblin_spearman.png"
-})
-
-DefineIcon({
-	Name = "icon-goblin-archer",
-	Size = {46, 38},
-	File = "goblin/icons/goblin_archer.png"
-})
-
-DefineIcon({
-	Name = "icon-goblin-headhunter",
-	Size = {46, 38},
-	File = "goblin/icons/headhunter.png"
-})
-
-DefineIcon({
-	Name = "icon-goblin-thief",
-	Size = {46, 38},
-	File = "goblin/icons/goblin_thief.png"
-})
-
-DefineIcon({
-	Name = "icon-goblin-war-machine",
-	Size = {46, 38},
-	File = "goblin/icons/goblin_war_machine.png"
-})
-
-DefineIcon({
-	Name = "icon-goblin-glider",
-	Size = {46, 38},
-	File = "goblin/icons/glider.png"
-})
-
-DefineIcon({
-	Name = "icon-greebo",
-	Size = {46, 38},
-	File = "goblin/icons/greebo.png"
-})
-
-DefineIcon({
-	Name = "icon-kobold-footpad",
-	Size = {46, 38},
-	File = "kobold/icons/kobold_footpad.png"
 })
 
 DefineIcon({
@@ -1075,12 +707,6 @@ DefineIcon({
 
 if (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "dungeon") then
 	DefineIcon({
-		Name = "icon-gnomish-caravan",
-		Size = {46, 38},
-		File = "tilesets/swamp/gnome/icons/gnomish_caravan.png"
-	})
-
-	DefineIcon({
 		Name = "icon-rat",
 		Size = {46, 38},
 		File = "tilesets/swamp/neutral/icons/rat.png"
@@ -1090,12 +716,6 @@ if (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "dungeon") then
 		Name = "icon-glyph",
 		Size = {46, 38},
 		File = "tilesets/swamp/neutral/icons/glyph.png"
-	})
-
-	DefineIcon({
-		Name = "icon-goblin-banner",
-		Size = {46, 38},
-		File = "tilesets/swamp/goblin/icons/goblin_banner.png"
 	})
 
 	DefineIcon({
@@ -1153,12 +773,6 @@ if (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "dungeon") then
 	})
 elseif (wyrmsun.tileset == "conifer_forest_summer" or wyrmsun.tileset == "conifer_forest_autumn" or wyrmsun.tileset == "fairlimbed_forest") then
 	DefineIcon({
-		Name = "icon-gnomish-caravan",
-		Size = {46, 38},
-		File = "tilesets/forest/gnome/icons/gnomish_caravan.png"
-	})
-
-	DefineIcon({
 		Name = "icon-rat",
 		Size = {46, 38},
 		File = "tilesets/forest/neutral/icons/rat.png"
@@ -1168,12 +782,6 @@ elseif (wyrmsun.tileset == "conifer_forest_summer" or wyrmsun.tileset == "conife
 		Name = "icon-glyph",
 		Size = {46, 38},
 		File = "tilesets/forest/neutral/icons/glyph.png"
-	})
-
-	DefineIcon({
-		Name = "icon-goblin-banner",
-		Size = {46, 38},
-		File = "tilesets/forest/goblin/icons/goblin_banner.png"
 	})
 
 	DefineIcon({
@@ -1231,12 +839,6 @@ elseif (wyrmsun.tileset == "conifer_forest_summer" or wyrmsun.tileset == "conife
 	})
 else	
 	DefineIcon({
-		Name = "icon-gnomish-caravan",
-		Size = {46, 38},
-		File = "tilesets/swamp/gnome/icons/gnomish_caravan.png"
-	})
-
-	DefineIcon({
 		Name = "icon-rat",
 		Size = {46, 38},
 		File = "tilesets/forest/neutral/icons/rat.png"
@@ -1246,12 +848,6 @@ else
 		Name = "icon-glyph",
 		Size = {46, 38},
 		File = "tilesets/swamp/neutral/icons/glyph.png"
-	})
-
-	DefineIcon({
-		Name = "icon-goblin-banner",
-		Size = {46, 38},
-		File = "tilesets/swamp/goblin/icons/goblin_banner.png"
 	})
 
 	DefineIcon({
@@ -1309,5 +905,13 @@ else
 	})
 end
 
+Load("scripts/civilizations/celt/icons.lua")
 Load("scripts/civilizations/dwarf/icons.lua")
+Load("scripts/civilizations/elf/icons.lua")
+Load("scripts/civilizations/germanic/icons.lua")
+Load("scripts/civilizations/gnome/icons.lua")
+Load("scripts/civilizations/goblin/icons.lua")
+Load("scripts/civilizations/kobold/icons.lua")
+Load("scripts/civilizations/norse/icons.lua")
+Load("scripts/civilizations/orc/icons.lua")
 Load("scripts/civilizations/teuton/icons.lua")
