@@ -1649,9 +1649,9 @@ function EditUnitTypePropertiesGraphics(unit_type)
 			elseif (tonumber(frame_height_value:getText()) == nil) then
 				GenericDialog("Error", "The frame height must be a number.")
 			elseif (graphic_width % tonumber(frame_width_value:getText()) ~= 0) then
-				GenericDialog("Error", "The image graphic's width must be divisible by the frame width.")
+				GenericDialog("Error", "The image graphic's width (" .. graphic_width .. ") must be divisible by the frame width.")
 			elseif (graphic_height % tonumber(frame_height_value:getText()) ~= 0) then
-				GenericDialog("Error", "The image graphic's height must be divisible by the frame height.")
+				GenericDialog("Error", "The image graphic's height (" .. graphic_height .. ") must be divisible by the frame height.")
 			else
 				local unit_type_definition = {}
 
