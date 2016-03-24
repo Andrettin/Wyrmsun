@@ -148,6 +148,7 @@ Load("scripts/anim.lua")
 --	NOTE: Save can generate this table.
 --
 DefineUnitType("unit-template-unit", { Name = _("Unit"),
+	Animations = "animations-melee-unit-new",
 	DrawLevel = 40,
 	SelectableByRectangle = true,
 	ButtonLevel = 0,

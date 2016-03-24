@@ -8,7 +8,6 @@ function GetUnitGraphics()
 	local f
 	local u = 1
 
-	-- list the subdirectories in the dlcs folder
 	local dirlist = {}
 	local dirs = ListDirsInDirectory("graphics/")
 	for i,f in ipairs(dirs) do
@@ -21,6 +20,43 @@ function GetUnitGraphics()
 			local fileslist = ListFilesInDirectory("graphics/" .. dirlist[j] .. "units/")
 			for i,f in ipairs(fileslist) do
 				table.insert(unit_graphics_list, dirlist[j] .. "units/" .. f)
+			end
+		end
+	end
+	
+	u = 1
+	dirlist = nil
+	dirlist = {}
+	dirs = ListDirsInDirectory("dlcs/")
+	for i,f in ipairs(dirs) do
+		dirlist[u] = f .. "/"
+		u = u + 1
+	end
+
+	for j=1,table.getn(dirlist) do
+		if (GetArrayIncludes(ListDirsInDirectory("dlcs/" .. dirlist[j]), "graphics") and GetArrayIncludes(ListDirsInDirectory("dlcs/" .. dirlist[j] .. "graphics/"), "units")) then
+			local fileslist = ListFilesInDirectory("dlcs/" .. dirlist[j] .. "graphics/units/")
+			for i,f in ipairs(fileslist) do
+				table.insert(unit_graphics_list, "dlcs/" .. dirlist[j] .. "graphics/units/" .. f)
+			end
+		end
+	end
+	
+	
+	u = 1
+	dirlist = nil
+	dirlist = {}
+	dirs = ListDirsInDirectory("mods/")
+	for i,f in ipairs(dirs) do
+		dirlist[u] = f .. "/"
+		u = u + 1
+	end
+
+	for j=1,table.getn(dirlist) do
+		if (GetArrayIncludes(ListDirsInDirectory("mods/" .. dirlist[j]), "graphics") and GetArrayIncludes(ListDirsInDirectory("mods/" .. dirlist[j] .. "graphics/"), "units")) then
+			local fileslist = ListFilesInDirectory("mods/" .. dirlist[j] .. "graphics/units/")
+			for i,f in ipairs(fileslist) do
+				table.insert(unit_graphics_list, "mods/" .. dirlist[j] .. "graphics/units/" .. f)
 			end
 		end
 	end
@@ -1280,29 +1316,35 @@ function EditUnitProperties()
 
 	menu:addHalfButton(_("~!OK"), "o", 20 + 48, sizeY - 40,
 		function()
-			SetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Name", name_value:getText())
-			if (GetUnitBoolFlag(UnitNumber(GetUnitUnderCursor()), "organic") and table.getn(GetUnitTypeData(GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Ident"), "Traits")) > 0) then
-				if (trait_list[unit_trait:getSelected() + 1] ~= GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Trait")) then
-					AcquireTrait(UnitNumber(GetUnitUnderCursor()), trait_list[unit_trait:getSelected() + 1])
-				end
-			end
-			if (GetUnitBoolFlag(UnitNumber(GetUnitUnderCursor()), "Building") or GetUnitBoolFlag(UnitNumber(GetUnitUnderCursor()), "Item")) then
-				if (table.getn(GetUnitTypeData(GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Ident"), "Prefixes")) > 0 and prefix_list[unit_prefix:getSelected() + 1] ~= GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Prefix")) then
-					SetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Prefix", prefix_list[unit_prefix:getSelected() + 1])
-				end
-				if (table.getn(GetUnitTypeData(GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Ident"), "Suffixes")) > 0 and suffix_list[unit_suffix:getSelected() + 1] ~= GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Suffix")) then
-					SetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Suffix", suffix_list[unit_suffix:getSelected() + 1])
-				end
-			end
-			if (GetUnitUnderCursor().Type.GivesResource ~= 0) then
-				GetUnitUnderCursor().ResourcesHeld = resourceValue:getText();
+			if (tonumber(resourceValue:getText()) == nil) then
+				GenericDialog("Error", "The resource amount must be a number.")
+			elseif (tonumber(hp_value:getText()) == nil) then
+				GenericDialog("Error", "The hit points must be a number.")
 			else
-				GetUnitUnderCursor().Active = activeCheckBox:isMarked();
+				SetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Name", name_value:getText())
+				if (GetUnitBoolFlag(UnitNumber(GetUnitUnderCursor()), "organic") and table.getn(GetUnitTypeData(GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Ident"), "Traits")) > 0) then
+					if (trait_list[unit_trait:getSelected() + 1] ~= GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Trait")) then
+						AcquireTrait(UnitNumber(GetUnitUnderCursor()), trait_list[unit_trait:getSelected() + 1])
+					end
+				end
+				if (GetUnitBoolFlag(UnitNumber(GetUnitUnderCursor()), "Building") or GetUnitBoolFlag(UnitNumber(GetUnitUnderCursor()), "Item")) then
+					if (table.getn(GetUnitTypeData(GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Ident"), "Prefixes")) > 0 and prefix_list[unit_prefix:getSelected() + 1] ~= GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Prefix")) then
+						SetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Prefix", prefix_list[unit_prefix:getSelected() + 1])
+					end
+					if (table.getn(GetUnitTypeData(GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Ident"), "Suffixes")) > 0 and suffix_list[unit_suffix:getSelected() + 1] ~= GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Suffix")) then
+						SetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Suffix", suffix_list[unit_suffix:getSelected() + 1])
+					end
+				end
+				if (GetUnitUnderCursor().Type.GivesResource ~= 0) then
+					GetUnitUnderCursor().ResourcesHeld = resourceValue:getText();
+				else
+					GetUnitUnderCursor().Active = activeCheckBox:isMarked();
+				end
+				if (hp_value:getText() ~= GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "HitPoints", "Max")) then
+					SetUnitVariable(UnitNumber(GetUnitUnderCursor()), "HitPoints", tonumber(hp_value:getText()))
+				end
+				menu:stop()
 			end
-			if (hp_value:getText() ~= GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "HitPoints", "Max")) then
-				SetUnitVariable(UnitNumber(GetUnitUnderCursor()), "HitPoints", tonumber(hp_value:getText()))
-			end
-			menu:stop()
 		end
 	)
 		
@@ -1329,12 +1371,20 @@ function EditorCreateUnitType()
 	menu:addLabel(_("Name:"), 10, 12 + 36 * 2, Fonts["game"], false)
 	local unit_type_name = menu:addTextInputField("", (sizeX / 2) - 60 - 10, 11 + 36 * 2, 120)
 	
-	local unit_types_list = GetUnitTypes()
-	table.insert(unit_types_list, "")
+	local unit_types_list = {}
+	local potential_unit_types_list = GetUnitTypes()
+	for i=1,table.getn(potential_unit_types_list) do
+		if (string.find(potential_unit_types_list[i], "template") ~= nil and potential_unit_types_list[i] ~= "unit-template-unit" and potential_unit_types_list[i] ~= "unit-template-building") then
+			table.insert(unit_types_list, potential_unit_types_list[i])
+		end
+	end
+--	table.insert(unit_types_list, "")
+	
 	local parent_unit_type_label = menu:addLabel(_("Parent:"), 10, 14 + 34 * 3, Fonts["game"], false)
 	local parent_unit_type = menu:addDropDown(unit_types_list, (sizeX / 2) - 60 - 10, 11 + 34 * 3, function(dd) end)
 	parent_unit_type:setSize(236, 20)
-	parent_unit_type:setSelected(GetElementIndexFromArray(unit_types_list, "") - 1)
+--	parent_unit_type:setSelected(GetElementIndexFromArray(unit_types_list, "") - 1)
+	parent_unit_type:setSelected(0)
 			
 	menu:addFullButton("Crea~!te", "t", 176 - (224 / 2), sizeY - 40 * 2,
 		function()
@@ -1355,6 +1405,18 @@ function EditorCreateUnitType()
 				}				
 				if (unit_types_list[parent_unit_type:getSelected() + 1] ~= "") then
 					unit_type_definition.Parent = unit_types_list[parent_unit_type:getSelected() + 1]
+				end
+				
+				if (unit_types_list[parent_unit_type:getSelected() + 1] == "" or GetUnitTypeData(unit_types_list[parent_unit_type:getSelected() + 1], "Icon") == "") then
+					unit_type_definition.Icon = "icon-cancel"
+				end
+				
+				if (unit_types_list[parent_unit_type:getSelected() + 1] == "" or GetUnitTypeData(unit_types_list[parent_unit_type:getSelected() + 1], "Animations") == "") then
+					unit_type_definition.Animations = "animations-melee-unit-new"
+				end
+				
+				if (unit_types_list[parent_unit_type:getSelected() + 1] == "" or GetUnitTypeData(unit_types_list[parent_unit_type:getSelected() + 1], "Image") == "") then
+					unit_type_definition.Image = {"file", "germanic/units/worker.png", "size", {72, 72}}
 				end
 				
 				DefineUnitType(unit_type_ident:getText(), unit_type_definition)
@@ -1520,16 +1582,27 @@ function EditUnitTypePropertiesGraphics(unit_type)
 	menu:addLabel(_(GetUnitTypeName(unit_type)) .. " " .. _("Properties"), sizeX / 2, 11)
 
 	local unit_graphics_list = GetUnitGraphics()
-	table.insert(unit_graphics_list, "")
-	local trained_unit_type_list = GetUnitTypeData(unit_type, "Trains", Map.Info.Filename)
+	
+	local animation_list = GetAnimations()
+	
+	local icon_list = GetIcons()
 	
 	local unit_graphics
 	local unit_graphics_label
+	local animation
+	local animation_label
+	local icon
+	local icon_label
   
 	unit_graphics_label = menu:addLabel(_("Graphics:"), 10, 14 + 36 * 1, Fonts["game"], false)
 	unit_graphics = menu:addDropDown(unit_graphics_list, (sizeX / 2) - 60 - 10, 11 + 36 * 1, function(dd) end)
-	unit_graphics:setSize(236 - 19 - 10, 20)
+	unit_graphics:setSize(236, 20)
 	unit_graphics:setSelected(GetElementIndexFromArray(unit_graphics_list, GetUnitTypeData(unit_type, "Image")) - 1)
+	if (GetUnitTypeData(unit_type, "Image") == "") then
+		unit_graphics:setSelected(0)
+	else
+		unit_graphics:setSelected(GetElementIndexFromArray(unit_graphics_list, GetUnitTypeData(unit_type, "Image")) - 1)
+	end
 	
 	menu:addLabel(_("Frame Width:"), 10, 12 + 36 * 2, Fonts["game"], false)
 	local frame_width_value = menu:addTextInputField(GetUnitTypeData(unit_type, "Width"), (sizeX / 2) - 60 - 10, 11 + 36 * 2, 60)
@@ -1537,23 +1610,73 @@ function EditUnitTypePropertiesGraphics(unit_type)
 	menu:addLabel(_("Frame Height:"), (sizeX / 2) + 10, 12 + 36 * 2, Fonts["game"], false)
 	local frame_height_value = menu:addTextInputField(GetUnitTypeData(unit_type, "Height"), sizeX - 60 - 10, 11 + 36 * 2, 60)
 	
+	animation_label = menu:addLabel(_("Animations:"), 10, 14 + 36 * 3, Fonts["game"], false)
+	animation = menu:addDropDown(animation_list, (sizeX / 2) - 60 - 10, 11 + 36 * 3, function(dd) end)
+	animation:setSize(236, 20)
+	if (GetUnitTypeData(unit_type, "Animations") == "") then
+		animation:setSelected(0)
+	else
+		animation:setSelected(GetElementIndexFromArray(animation_list, GetUnitTypeData(unit_type, "Animations")) - 1)
+	end
+	
+	icon_label = menu:addLabel(_("Icon:"), 10, 14 + 36 * 4, Fonts["game"], false)
+	icon = menu:addDropDown(icon_list, (sizeX / 2) - 60 - 10, 11 + 36 * 4, function(dd) end)
+	icon:setSize(236, 20)
+	if (GetUnitTypeData(unit_type, "Icon") == "") then
+		icon:setSelected(0)
+	else
+		icon:setSelected(GetElementIndexFromArray(icon_list, GetUnitTypeData(unit_type, "Icon")) - 1)
+	end
+	
 	menu:addHalfButton("~!OK", "o", 20 + 48, sizeY - 40,
 		function()
-			local unit_type_definition = {}
-
-			if (unit_graphics_list[unit_graphics:getSelected() + 1] ~= GetUnitTypeData(unit_type, "Image")) then
-				unit_type_definition.Image = {}
-				table.insert(unit_type_definition.Image, "file")
-				table.insert(unit_type_definition.Image, unit_graphics_list[unit_graphics:getSelected() + 1])
-				if (frame_width_value:getText() ~= GetUnitTypeData(unit_type, "Width") or frame_height_value:getText() ~= GetUnitTypeData(unit_type, "Height")) then
-					table.insert(unit_type_definition.Image, "size")
-					table.insert(unit_type_definition.Image, {tonumber(frame_width_value:getText()), tonumber(frame_height_value:getText())})
-				end
+			local graphic_width = 0
+			local graphic_height = 0
+			local graphic = CGraphic:Get(unit_graphics_list[unit_graphics:getSelected() + 1])
+			if (graphic == nil) then
+				graphic = CGraphic:New(unit_graphics_list[unit_graphics:getSelected() + 1])
+				graphic:Load()
+				graphic_width = graphic:getGraphicWidth()
+				graphic_height = graphic:getGraphicHeight()
+				CGraphic:Free(graphic)
+			else
+				graphic_width = graphic:getGraphicWidth()
+				graphic_height = graphic:getGraphicHeight()
 			end
 
-			DefineUnitType(unit_type, unit_type_definition)
+			if (tonumber(frame_width_value:getText()) == nil) then
+				GenericDialog("Error", "The frame width must be a number.")
+			elseif (tonumber(frame_height_value:getText()) == nil) then
+				GenericDialog("Error", "The frame height must be a number.")
+			elseif (graphic_width % tonumber(frame_width_value:getText()) ~= 0) then
+				GenericDialog("Error", "The image graphic's width must be divisible by the frame width.")
+			elseif (graphic_height % tonumber(frame_height_value:getText()) ~= 0) then
+				GenericDialog("Error", "The image graphic's height must be divisible by the frame height.")
+			else
+				local unit_type_definition = {}
 
-			menu:stop()
+				if (unit_graphics_list[unit_graphics:getSelected() + 1] ~= GetUnitTypeData(unit_type, "Image")) then
+					unit_type_definition.Image = {}
+					table.insert(unit_type_definition.Image, "file")
+					table.insert(unit_type_definition.Image, unit_graphics_list[unit_graphics:getSelected() + 1])
+					if (frame_width_value:getText() ~= GetUnitTypeData(unit_type, "Width") or frame_height_value:getText() ~= GetUnitTypeData(unit_type, "Height")) then
+						table.insert(unit_type_definition.Image, "size")
+						table.insert(unit_type_definition.Image, {tonumber(frame_width_value:getText()), tonumber(frame_height_value:getText())})
+					end
+				end
+
+				if (animation_list[animation:getSelected() + 1] ~= GetUnitTypeData(unit_type, "Animations")) then
+					unit_type_definition.Animations = animation_list[animation:getSelected() + 1]
+				end
+
+				if (icon_list[icon:getSelected() + 1] ~= GetUnitTypeData(unit_type, "Icon")) then
+					unit_type_definition.Icon = icon_list[icon:getSelected() + 1]
+				end
+
+				DefineUnitType(unit_type, unit_type_definition)
+
+				menu:stop()
+			end
 		end
 	)
 
@@ -1627,126 +1750,156 @@ function EditUnitTypePropertiesStats(unit_type)
 				
 	menu:addFullButton(_("~!OK"), "o", 20 + 48, sizeY - 40,
 		function()
-			if (GetUnitTypeData(unit_type, "Mod") == Map.Info.Filename) then
-				local unit_type_definition = {}
-				
-				if (hp_value:getText() ~= GetUnitTypeData(unit_type, "HitPoints")) then
-					unit_type_definition.HitPoints = tonumber(hp_value:getText())
-				end
-				if (basic_damage_value:getText() ~= GetUnitTypeData(unit_type, "BasicDamage")) then
-					unit_type_definition.BasicDamage = tonumber(basic_damage_value:getText())
-				end
-				if (armor_value:getText() ~= GetUnitTypeData(unit_type, "Armor")) then
-					unit_type_definition.Armor = tonumber(armor_value:getText())
-				end
-				if (accuracy_value:getText() ~= GetUnitTypeData(unit_type, "Accuracy")) then
-					unit_type_definition.Accuracy = tonumber(accuracy_value:getText())
-				end
-				if (evasion_value:getText() ~= GetUnitTypeData(unit_type, "Evasion")) then
-					unit_type_definition.Evasion = tonumber(evasion_value:getText())
-				end
-				if (range_value:getText() ~= GetUnitTypeData(unit_type, "AttackRange")) then
-					unit_type_definition.MaxAttackRange = tonumber(range_value:getText())
-				end
-				if (sight_value:getText() ~= GetUnitTypeData(unit_type, "SightRange")) then
-					unit_type_definition.SightRange = tonumber(sight_value:getText())
-				end
-				if (speed_value:getText() ~= GetUnitTypeData(unit_type, "Speed")) then
-					unit_type_definition.Speed = tonumber(speed_value:getText())
-				end
-				if (critical_strike_chance_value:getText() ~= GetUnitTypeData(unit_type, "CriticalStrikeChance")) then
-					unit_type_definition.CriticalStrikeChance = tonumber(critical_strike_chance_value:getText())
-				end
-				if (backstab_value:getText() ~= GetUnitTypeData(unit_type, "Backstab")) then
-					unit_type_definition.Backstab = tonumber(backstab_value:getText())
-				end
-				if (bonus_against_mounted_value:getText() ~= GetUnitTypeData(unit_type, "BonusAgainstMounted")) then
-					unit_type_definition.BonusAgainstMounted = tonumber(bonus_against_mounted_value:getText())
-				end
-				if (thorns_damage_value:getText() ~= GetUnitTypeData(unit_type, "ThornsDamage")) then
-					unit_type_definition.ThornsDamage = tonumber(thorns_damage_value:getText())
-				end
-				if (day_sight_range_bonus_value:getText() ~= GetUnitTypeData(unit_type, "DaySightRangeBonus")) then
-					unit_type_definition.DaySightRangeBonus = tonumber(day_sight_range_bonus_value:getText())
-				end
-				if (night_sight_range_bonus_value:getText() ~= GetUnitTypeData(unit_type, "NightSightRangeBonus")) then
-					unit_type_definition.NightSightRangeBonus = tonumber(night_sight_range_bonus_value:getText())
-				end
-				
-				DefineUnitType(unit_type, unit_type_definition)
+			if (tonumber(hp_value:getText()) == nil) then
+				GenericDialog("Error", "The hit points must be a number.")
+			elseif (tonumber(basic_damage_value:getText()) == nil) then
+				GenericDialog("Error", "The basic damage must be a number.")
+			elseif (tonumber(armor_value:getText()) == nil) then
+				GenericDialog("Error", "The armor must be a number.")
+			elseif (tonumber(accuracy_value:getText()) == nil) then
+				GenericDialog("Error", "The accuracy must be a number.")
+			elseif (tonumber(evasion_value:getText()) == nil) then
+				GenericDialog("Error", "The evasion must be a number.")
+			elseif (tonumber(range_value:getText()) == nil) then
+				GenericDialog("Error", "The range must be a number.")
+			elseif (tonumber(sight_value:getText()) == nil) then
+				GenericDialog("Error", "The sight must be a number.")
+			elseif (tonumber(speed_value:getText()) == nil) then
+				GenericDialog("Error", "The speed must be a number.")
+			elseif (tonumber(critical_strike_chance_value:getText()) == nil) then
+				GenericDialog("Error", "The critical strike chance must be a number.")
+			elseif (tonumber(backstab_value:getText()) == nil) then
+				GenericDialog("Error", "The backstab bonus must be a number.")
+			elseif (tonumber(bonus_against_mounted_value:getText()) == nil) then
+				GenericDialog("Error", "The bonus against mounted must be a number.")
+			elseif (tonumber(thorns_damage_value:getText()) == nil) then
+				GenericDialog("Error", "The thorns damage must be a number.")
+			elseif (tonumber(day_sight_range_bonus_value:getText()) == nil) then
+				GenericDialog("Error", "The day sight bonus must be a number.")
+			elseif (tonumber(night_sight_range_bonus_value:getText()) == nil) then
+				GenericDialog("Error", "The night sight bonus must be a number.")
 			else
-				if (hp_value:getText() ~= GetUnitTypeData(unit_type, "HitPoints")) then
-					SetModStat(Map.Info.Filename, unit_type, "HitPoints", hp_value:getText() - GetUnitTypeData(unit_type, "HitPoints"), "Value")
-					SetModStat(Map.Info.Filename, unit_type, "HitPoints", hp_value:getText() - GetUnitTypeData(unit_type, "HitPoints"), "Max")
-					SetModStat(Map.Info.Filename, unit_type, "HitPoints", 1, "Enable")
+				if (GetUnitTypeData(unit_type, "Mod") == Map.Info.Filename) then
+					local unit_type_definition = {}
+					
+					if (hp_value:getText() ~= GetUnitTypeData(unit_type, "HitPoints")) then
+						unit_type_definition.HitPoints = tonumber(hp_value:getText())
+					end
+					if (basic_damage_value:getText() ~= GetUnitTypeData(unit_type, "BasicDamage")) then
+						unit_type_definition.BasicDamage = tonumber(basic_damage_value:getText())
+					end
+					if (armor_value:getText() ~= GetUnitTypeData(unit_type, "Armor")) then
+						unit_type_definition.Armor = tonumber(armor_value:getText())
+					end
+					if (accuracy_value:getText() ~= GetUnitTypeData(unit_type, "Accuracy")) then
+						unit_type_definition.Accuracy = tonumber(accuracy_value:getText())
+					end
+					if (evasion_value:getText() ~= GetUnitTypeData(unit_type, "Evasion")) then
+						unit_type_definition.Evasion = tonumber(evasion_value:getText())
+					end
+					if (range_value:getText() ~= GetUnitTypeData(unit_type, "AttackRange")) then
+						unit_type_definition.MaxAttackRange = tonumber(range_value:getText())
+					end
+					if (sight_value:getText() ~= GetUnitTypeData(unit_type, "SightRange")) then
+						unit_type_definition.SightRange = tonumber(sight_value:getText())
+					end
+					if (speed_value:getText() ~= GetUnitTypeData(unit_type, "Speed")) then
+						unit_type_definition.Speed = tonumber(speed_value:getText())
+					end
+					if (critical_strike_chance_value:getText() ~= GetUnitTypeData(unit_type, "CriticalStrikeChance")) then
+						unit_type_definition.CriticalStrikeChance = tonumber(critical_strike_chance_value:getText())
+					end
+					if (backstab_value:getText() ~= GetUnitTypeData(unit_type, "Backstab")) then
+						unit_type_definition.Backstab = tonumber(backstab_value:getText())
+					end
+					if (bonus_against_mounted_value:getText() ~= GetUnitTypeData(unit_type, "BonusAgainstMounted")) then
+						unit_type_definition.BonusAgainstMounted = tonumber(bonus_against_mounted_value:getText())
+					end
+					if (thorns_damage_value:getText() ~= GetUnitTypeData(unit_type, "ThornsDamage")) then
+						unit_type_definition.ThornsDamage = tonumber(thorns_damage_value:getText())
+					end
+					if (day_sight_range_bonus_value:getText() ~= GetUnitTypeData(unit_type, "DaySightRangeBonus")) then
+						unit_type_definition.DaySightRangeBonus = tonumber(day_sight_range_bonus_value:getText())
+					end
+					if (night_sight_range_bonus_value:getText() ~= GetUnitTypeData(unit_type, "NightSightRangeBonus")) then
+						unit_type_definition.NightSightRangeBonus = tonumber(night_sight_range_bonus_value:getText())
+					end
+					
+					DefineUnitType(unit_type, unit_type_definition)
+				else
+					if (hp_value:getText() ~= GetUnitTypeData(unit_type, "HitPoints")) then
+						SetModStat(Map.Info.Filename, unit_type, "HitPoints", hp_value:getText() - GetUnitTypeData(unit_type, "HitPoints"), "Value")
+						SetModStat(Map.Info.Filename, unit_type, "HitPoints", hp_value:getText() - GetUnitTypeData(unit_type, "HitPoints"), "Max")
+						SetModStat(Map.Info.Filename, unit_type, "HitPoints", 1, "Enable")
+					end
+					if (basic_damage_value:getText() ~= GetUnitTypeData(unit_type, "BasicDamage")) then
+						SetModStat(Map.Info.Filename, unit_type, "BasicDamage", basic_damage_value:getText() - GetUnitTypeData(unit_type, "BasicDamage"), "Value")
+						SetModStat(Map.Info.Filename, unit_type, "BasicDamage", basic_damage_value:getText() - GetUnitTypeData(unit_type, "BasicDamage"), "Max")
+						SetModStat(Map.Info.Filename, unit_type, "BasicDamage", 1, "Enable")
+					end
+					if (armor_value:getText() ~= GetUnitTypeData(unit_type, "Armor")) then
+						SetModStat(Map.Info.Filename, unit_type, "Armor", armor_value:getText() - GetUnitTypeData(unit_type, "Armor"), "Value")
+						SetModStat(Map.Info.Filename, unit_type, "Armor", armor_value:getText() - GetUnitTypeData(unit_type, "Armor"), "Max")
+						SetModStat(Map.Info.Filename, unit_type, "Armor", 1, "Enable")
+					end
+					if (accuracy_value:getText() ~= GetUnitTypeData(unit_type, "Accuracy")) then
+						SetModStat(Map.Info.Filename, unit_type, "Accuracy", accuracy_value:getText() - GetUnitTypeData(unit_type, "Accuracy"), "Value")
+						SetModStat(Map.Info.Filename, unit_type, "Accuracy", accuracy_value:getText() - GetUnitTypeData(unit_type, "Accuracy"), "Max")
+						SetModStat(Map.Info.Filename, unit_type, "Accuracy", 1, "Enable")
+					end
+					if (evasion_value:getText() ~= GetUnitTypeData(unit_type, "Evasion")) then
+						SetModStat(Map.Info.Filename, unit_type, "Evasion", evasion_value:getText() - GetUnitTypeData(unit_type, "Evasion"), "Value")
+						SetModStat(Map.Info.Filename, unit_type, "Evasion", evasion_value:getText() - GetUnitTypeData(unit_type, "Evasion"), "Max")
+						SetModStat(Map.Info.Filename, unit_type, "Evasion", 1, "Enable")
+					end
+					if (range_value:getText() ~= GetUnitTypeData(unit_type, "AttackRange")) then
+						SetModStat(Map.Info.Filename, unit_type, "AttackRange", range_value:getText() - GetUnitTypeData(unit_type, "AttackRange"), "Value")
+						SetModStat(Map.Info.Filename, unit_type, "AttackRange", range_value:getText() - GetUnitTypeData(unit_type, "AttackRange"), "Max")
+						SetModStat(Map.Info.Filename, unit_type, "AttackRange", 1, "Enable")
+					end
+					if (sight_value:getText() ~= GetUnitTypeData(unit_type, "SightRange")) then
+						SetModStat(Map.Info.Filename, unit_type, "SightRange", sight_value:getText() - GetUnitTypeData(unit_type, "SightRange"), "Value")
+						SetModStat(Map.Info.Filename, unit_type, "SightRange", sight_value:getText() - GetUnitTypeData(unit_type, "SightRange"), "Max")
+						SetModStat(Map.Info.Filename, unit_type, "SightRange", 1, "Enable")
+					end
+					if (speed_value:getText() ~= GetUnitTypeData(unit_type, "Speed")) then
+						SetModStat(Map.Info.Filename, unit_type, "Speed", speed_value:getText() - GetUnitTypeData(unit_type, "Speed"), "Value")
+						SetModStat(Map.Info.Filename, unit_type, "Speed", speed_value:getText() - GetUnitTypeData(unit_type, "Speed"), "Max")
+						SetModStat(Map.Info.Filename, unit_type, "Speed", 1, "Enable")
+					end
+					if (critical_strike_chance_value:getText() ~= GetUnitTypeData(unit_type, "CriticalStrikeChance")) then
+						SetModStat(Map.Info.Filename, unit_type, "CriticalStrikeChance", critical_strike_chance_value:getText() - GetUnitTypeData(unit_type, "CriticalStrikeChance"), "Value")
+						SetModStat(Map.Info.Filename, unit_type, "CriticalStrikeChance", critical_strike_chance_value:getText() - GetUnitTypeData(unit_type, "CriticalStrikeChance"), "Max")
+						SetModStat(Map.Info.Filename, unit_type, "CriticalStrikeChance", 1, "Enable")
+					end
+					if (backstab_value:getText() ~= GetUnitTypeData(unit_type, "Backstab")) then
+						SetModStat(Map.Info.Filename, unit_type, "Backstab", backstab_value:getText() - GetUnitTypeData(unit_type, "Backstab"), "Value")
+						SetModStat(Map.Info.Filename, unit_type, "Backstab", backstab_value:getText() - GetUnitTypeData(unit_type, "Backstab"), "Max")
+						SetModStat(Map.Info.Filename, unit_type, "Backstab", 1, "Enable")
+					end
+					if (bonus_against_mounted_value:getText() ~= GetUnitTypeData(unit_type, "BonusAgainstMounted")) then
+						SetModStat(Map.Info.Filename, unit_type, "BonusAgainstMounted", bonus_against_mounted_value:getText() - GetUnitTypeData(unit_type, "BonusAgainstMounted"), "Value")
+						SetModStat(Map.Info.Filename, unit_type, "BonusAgainstMounted", bonus_against_mounted_value:getText() - GetUnitTypeData(unit_type, "BonusAgainstMounted"), "Max")
+						SetModStat(Map.Info.Filename, unit_type, "BonusAgainstMounted", 1, "Enable")
+					end
+					if (thorns_damage_value:getText() ~= GetUnitTypeData(unit_type, "ThornsDamage")) then
+						SetModStat(Map.Info.Filename, unit_type, "ThornsDamage", thorns_damage_value:getText() - GetUnitTypeData(unit_type, "ThornsDamage"), "Value")
+						SetModStat(Map.Info.Filename, unit_type, "ThornsDamage", thorns_damage_value:getText() - GetUnitTypeData(unit_type, "ThornsDamage"), "Max")
+						SetModStat(Map.Info.Filename, unit_type, "ThornsDamage", 1, "Enable")
+					end
+					if (day_sight_range_bonus_value:getText() ~= GetUnitTypeData(unit_type, "DaySightRangeBonus")) then
+						SetModStat(Map.Info.Filename, unit_type, "DaySightRangeBonus", day_sight_range_bonus_value:getText() - GetUnitTypeData(unit_type, "DaySightRangeBonus"), "Value")
+						SetModStat(Map.Info.Filename, unit_type, "DaySightRangeBonus", day_sight_range_bonus_value:getText() - GetUnitTypeData(unit_type, "DaySightRangeBonus"), "Max")
+						SetModStat(Map.Info.Filename, unit_type, "DaySightRangeBonus", 1, "Enable")
+					end
+					if (night_sight_range_bonus_value:getText() ~= GetUnitTypeData(unit_type, "NightSightRangeBonus")) then
+						SetModStat(Map.Info.Filename, unit_type, "NightSightRangeBonus", night_sight_range_bonus_value:getText() - GetUnitTypeData(unit_type, "NightSightRangeBonus"), "Value")
+						SetModStat(Map.Info.Filename, unit_type, "NightSightRangeBonus", night_sight_range_bonus_value:getText() - GetUnitTypeData(unit_type, "NightSightRangeBonus"), "Max")
+						SetModStat(Map.Info.Filename, unit_type, "NightSightRangeBonus", 1, "Enable")
+					end
 				end
-				if (basic_damage_value:getText() ~= GetUnitTypeData(unit_type, "BasicDamage")) then
-					SetModStat(Map.Info.Filename, unit_type, "BasicDamage", basic_damage_value:getText() - GetUnitTypeData(unit_type, "BasicDamage"), "Value")
-					SetModStat(Map.Info.Filename, unit_type, "BasicDamage", basic_damage_value:getText() - GetUnitTypeData(unit_type, "BasicDamage"), "Max")
-					SetModStat(Map.Info.Filename, unit_type, "BasicDamage", 1, "Enable")
-				end
-				if (armor_value:getText() ~= GetUnitTypeData(unit_type, "Armor")) then
-					SetModStat(Map.Info.Filename, unit_type, "Armor", armor_value:getText() - GetUnitTypeData(unit_type, "Armor"), "Value")
-					SetModStat(Map.Info.Filename, unit_type, "Armor", armor_value:getText() - GetUnitTypeData(unit_type, "Armor"), "Max")
-					SetModStat(Map.Info.Filename, unit_type, "Armor", 1, "Enable")
-				end
-				if (accuracy_value:getText() ~= GetUnitTypeData(unit_type, "Accuracy")) then
-					SetModStat(Map.Info.Filename, unit_type, "Accuracy", accuracy_value:getText() - GetUnitTypeData(unit_type, "Accuracy"), "Value")
-					SetModStat(Map.Info.Filename, unit_type, "Accuracy", accuracy_value:getText() - GetUnitTypeData(unit_type, "Accuracy"), "Max")
-					SetModStat(Map.Info.Filename, unit_type, "Accuracy", 1, "Enable")
-				end
-				if (evasion_value:getText() ~= GetUnitTypeData(unit_type, "Evasion")) then
-					SetModStat(Map.Info.Filename, unit_type, "Evasion", evasion_value:getText() - GetUnitTypeData(unit_type, "Evasion"), "Value")
-					SetModStat(Map.Info.Filename, unit_type, "Evasion", evasion_value:getText() - GetUnitTypeData(unit_type, "Evasion"), "Max")
-					SetModStat(Map.Info.Filename, unit_type, "Evasion", 1, "Enable")
-				end
-				if (range_value:getText() ~= GetUnitTypeData(unit_type, "AttackRange")) then
-					SetModStat(Map.Info.Filename, unit_type, "AttackRange", range_value:getText() - GetUnitTypeData(unit_type, "AttackRange"), "Value")
-					SetModStat(Map.Info.Filename, unit_type, "AttackRange", range_value:getText() - GetUnitTypeData(unit_type, "AttackRange"), "Max")
-					SetModStat(Map.Info.Filename, unit_type, "AttackRange", 1, "Enable")
-				end
-				if (sight_value:getText() ~= GetUnitTypeData(unit_type, "SightRange")) then
-					SetModStat(Map.Info.Filename, unit_type, "SightRange", sight_value:getText() - GetUnitTypeData(unit_type, "SightRange"), "Value")
-					SetModStat(Map.Info.Filename, unit_type, "SightRange", sight_value:getText() - GetUnitTypeData(unit_type, "SightRange"), "Max")
-					SetModStat(Map.Info.Filename, unit_type, "SightRange", 1, "Enable")
-				end
-				if (speed_value:getText() ~= GetUnitTypeData(unit_type, "Speed")) then
-					SetModStat(Map.Info.Filename, unit_type, "Speed", speed_value:getText() - GetUnitTypeData(unit_type, "Speed"), "Value")
-					SetModStat(Map.Info.Filename, unit_type, "Speed", speed_value:getText() - GetUnitTypeData(unit_type, "Speed"), "Max")
-					SetModStat(Map.Info.Filename, unit_type, "Speed", 1, "Enable")
-				end
-				if (critical_strike_chance_value:getText() ~= GetUnitTypeData(unit_type, "CriticalStrikeChance")) then
-					SetModStat(Map.Info.Filename, unit_type, "CriticalStrikeChance", critical_strike_chance_value:getText() - GetUnitTypeData(unit_type, "CriticalStrikeChance"), "Value")
-					SetModStat(Map.Info.Filename, unit_type, "CriticalStrikeChance", critical_strike_chance_value:getText() - GetUnitTypeData(unit_type, "CriticalStrikeChance"), "Max")
-					SetModStat(Map.Info.Filename, unit_type, "CriticalStrikeChance", 1, "Enable")
-				end
-				if (backstab_value:getText() ~= GetUnitTypeData(unit_type, "Backstab")) then
-					SetModStat(Map.Info.Filename, unit_type, "Backstab", backstab_value:getText() - GetUnitTypeData(unit_type, "Backstab"), "Value")
-					SetModStat(Map.Info.Filename, unit_type, "Backstab", backstab_value:getText() - GetUnitTypeData(unit_type, "Backstab"), "Max")
-					SetModStat(Map.Info.Filename, unit_type, "Backstab", 1, "Enable")
-				end
-				if (bonus_against_mounted_value:getText() ~= GetUnitTypeData(unit_type, "BonusAgainstMounted")) then
-					SetModStat(Map.Info.Filename, unit_type, "BonusAgainstMounted", bonus_against_mounted_value:getText() - GetUnitTypeData(unit_type, "BonusAgainstMounted"), "Value")
-					SetModStat(Map.Info.Filename, unit_type, "BonusAgainstMounted", bonus_against_mounted_value:getText() - GetUnitTypeData(unit_type, "BonusAgainstMounted"), "Max")
-					SetModStat(Map.Info.Filename, unit_type, "BonusAgainstMounted", 1, "Enable")
-				end
-				if (thorns_damage_value:getText() ~= GetUnitTypeData(unit_type, "ThornsDamage")) then
-					SetModStat(Map.Info.Filename, unit_type, "ThornsDamage", thorns_damage_value:getText() - GetUnitTypeData(unit_type, "ThornsDamage"), "Value")
-					SetModStat(Map.Info.Filename, unit_type, "ThornsDamage", thorns_damage_value:getText() - GetUnitTypeData(unit_type, "ThornsDamage"), "Max")
-					SetModStat(Map.Info.Filename, unit_type, "ThornsDamage", 1, "Enable")
-				end
-				if (day_sight_range_bonus_value:getText() ~= GetUnitTypeData(unit_type, "DaySightRangeBonus")) then
-					SetModStat(Map.Info.Filename, unit_type, "DaySightRangeBonus", day_sight_range_bonus_value:getText() - GetUnitTypeData(unit_type, "DaySightRangeBonus"), "Value")
-					SetModStat(Map.Info.Filename, unit_type, "DaySightRangeBonus", day_sight_range_bonus_value:getText() - GetUnitTypeData(unit_type, "DaySightRangeBonus"), "Max")
-					SetModStat(Map.Info.Filename, unit_type, "DaySightRangeBonus", 1, "Enable")
-				end
-				if (night_sight_range_bonus_value:getText() ~= GetUnitTypeData(unit_type, "NightSightRangeBonus")) then
-					SetModStat(Map.Info.Filename, unit_type, "NightSightRangeBonus", night_sight_range_bonus_value:getText() - GetUnitTypeData(unit_type, "NightSightRangeBonus"), "Value")
-					SetModStat(Map.Info.Filename, unit_type, "NightSightRangeBonus", night_sight_range_bonus_value:getText() - GetUnitTypeData(unit_type, "NightSightRangeBonus"), "Max")
-					SetModStat(Map.Info.Filename, unit_type, "NightSightRangeBonus", 1, "Enable")
-				end
+				menu:stop()
 			end
-			menu:stop()
 		end
 	)
 
@@ -1800,66 +1953,82 @@ function EditUnitTypePropertiesResourceStats(unit_type)
 	
 	menu:addFullButton(_("~!OK"), "o", 20 + 48, sizeY - 40,
 		function()
-			if (GetUnitTypeData(unit_type, "Mod") == Map.Info.Filename) then
-				local unit_type_definition = {}
-				
-				unit_type_definition.Costs = {}
-				unit_type_definition.ImproveProduction = {}
-				
-				if (time_cost_value:getText() ~= GetUnitTypeData(unit_type, "Costs", "time")) then
-					table.insert(unit_type_definition.Costs, "time")
-					table.insert(unit_type_definition.Costs, tonumber(time_cost_value:getText()))
-				end
-				if (gold_cost_value:getText() ~= GetUnitTypeData(unit_type, "Costs", "gold")) then
-					table.insert(unit_type_definition.Costs, "gold")
-					table.insert(unit_type_definition.Costs, tonumber(gold_cost_value:getText()))
-				end
-				if (lumber_cost_value:getText() ~= GetUnitTypeData(unit_type, "Costs", "lumber")) then
-					table.insert(unit_type_definition.Costs, "lumber")
-					table.insert(unit_type_definition.Costs, tonumber(lumber_cost_value:getText()))
-				end
-				if (stone_cost_value:getText() ~= GetUnitTypeData(unit_type, "Costs", "stone")) then
-					table.insert(unit_type_definition.Costs, "stone")
-					table.insert(unit_type_definition.Costs, tonumber(stone_cost_value:getText()))
-				end
-				if (gold_processing_value:getText() ~= GetUnitTypeData(unit_type, "ImproveProduction", "gold")) then
-					table.insert(unit_type_definition.ImproveProduction, "gold")
-					table.insert(unit_type_definition.ImproveProduction, tonumber(gold_processing_value:getText()))
-				end
-				if (lumber_processing_value:getText() ~= GetUnitTypeData(unit_type, "ImproveProduction", "lumber")) then
-					table.insert(unit_type_definition.ImproveProduction, "lumber")
-					table.insert(unit_type_definition.ImproveProduction, tonumber(lumber_processing_value:getText()))
-				end
-				if (stone_processing_value:getText() ~= GetUnitTypeData(unit_type, "ImproveProduction", "stone")) then
-					table.insert(unit_type_definition.ImproveProduction, "stone")
-					table.insert(unit_type_definition.ImproveProduction, tonumber(stone_processing_value:getText()))
-				end
-				
-				DefineUnitType(unit_type, unit_type_definition)
+			if (tonumber(time_cost_value:getText()) == nil) then
+				GenericDialog("Error", "The time cost must be a number.")
+			elseif (tonumber(gold_cost_value:getText()) == nil) then
+				GenericDialog("Error", "The gold cost must be a number.")
+			elseif (tonumber(lumber_cost_value:getText()) == nil) then
+				GenericDialog("Error", "The lumber cost must be a number.")
+			elseif (tonumber(stone_cost_value:getText()) == nil) then
+				GenericDialog("Error", "The stone cost must be a number.")
+			elseif (tonumber(gold_processing_value:getText()) == nil) then
+				GenericDialog("Error", "The gold processing must be a number.")
+			elseif (tonumber(lumber_processing_value:getText()) == nil) then
+				GenericDialog("Error", "The lumber processing must be a number.")
+			elseif (tonumber(stone_processing_value:getText()) == nil) then
+				GenericDialog("Error", "The stone processing must be a number.")
 			else
-				if (time_cost_value:getText() ~= GetUnitTypeData(unit_type, "Costs", "time")) then
-					SetModStat(Map.Info.Filename, unit_type, "Costs", time_cost_value:getText() - GetUnitTypeData(unit_type, "Costs", "time"), "time")
+				if (GetUnitTypeData(unit_type, "Mod") == Map.Info.Filename) then
+					local unit_type_definition = {}
+					
+					unit_type_definition.Costs = {}
+					unit_type_definition.ImproveProduction = {}
+					
+					if (time_cost_value:getText() ~= GetUnitTypeData(unit_type, "Costs", "time")) then
+						table.insert(unit_type_definition.Costs, "time")
+						table.insert(unit_type_definition.Costs, tonumber(time_cost_value:getText()))
+					end
+					if (gold_cost_value:getText() ~= GetUnitTypeData(unit_type, "Costs", "gold")) then
+						table.insert(unit_type_definition.Costs, "gold")
+						table.insert(unit_type_definition.Costs, tonumber(gold_cost_value:getText()))
+					end
+					if (lumber_cost_value:getText() ~= GetUnitTypeData(unit_type, "Costs", "lumber")) then
+						table.insert(unit_type_definition.Costs, "lumber")
+						table.insert(unit_type_definition.Costs, tonumber(lumber_cost_value:getText()))
+					end
+					if (stone_cost_value:getText() ~= GetUnitTypeData(unit_type, "Costs", "stone")) then
+						table.insert(unit_type_definition.Costs, "stone")
+						table.insert(unit_type_definition.Costs, tonumber(stone_cost_value:getText()))
+					end
+					if (gold_processing_value:getText() ~= GetUnitTypeData(unit_type, "ImproveProduction", "gold")) then
+						table.insert(unit_type_definition.ImproveProduction, "gold")
+						table.insert(unit_type_definition.ImproveProduction, tonumber(gold_processing_value:getText()))
+					end
+					if (lumber_processing_value:getText() ~= GetUnitTypeData(unit_type, "ImproveProduction", "lumber")) then
+						table.insert(unit_type_definition.ImproveProduction, "lumber")
+						table.insert(unit_type_definition.ImproveProduction, tonumber(lumber_processing_value:getText()))
+					end
+					if (stone_processing_value:getText() ~= GetUnitTypeData(unit_type, "ImproveProduction", "stone")) then
+						table.insert(unit_type_definition.ImproveProduction, "stone")
+						table.insert(unit_type_definition.ImproveProduction, tonumber(stone_processing_value:getText()))
+					end
+					
+					DefineUnitType(unit_type, unit_type_definition)
+				else
+					if (time_cost_value:getText() ~= GetUnitTypeData(unit_type, "Costs", "time")) then
+						SetModStat(Map.Info.Filename, unit_type, "Costs", time_cost_value:getText() - GetUnitTypeData(unit_type, "Costs", "time"), "time")
+					end
+					if (gold_cost_value:getText() ~= GetUnitTypeData(unit_type, "Costs", "gold")) then
+						SetModStat(Map.Info.Filename, unit_type, "Costs", gold_cost_value:getText() - GetUnitTypeData(unit_type, "Costs", "gold"), "gold")
+					end
+					if (lumber_cost_value:getText() ~= GetUnitTypeData(unit_type, "Costs", "lumber")) then
+						SetModStat(Map.Info.Filename, unit_type, "Costs", lumber_cost_value:getText() - GetUnitTypeData(unit_type, "Costs", "lumber"), "lumber")
+					end
+					if (stone_cost_value:getText() ~= GetUnitTypeData(unit_type, "Costs", "stone")) then
+						SetModStat(Map.Info.Filename, unit_type, "Costs", stone_cost_value:getText() - GetUnitTypeData(unit_type, "Costs", "stone"), "stone")
+					end
+					if (gold_processing_value:getText() ~= GetUnitTypeData(unit_type, "ImproveProduction", "gold")) then
+						SetModStat(Map.Info.Filename, unit_type, "ImproveProduction", gold_processing_value:getText() - GetUnitTypeData(unit_type, "ImproveProduction", "gold"), "gold")
+					end
+					if (lumber_processing_value:getText() ~= GetUnitTypeData(unit_type, "ImproveProduction", "lumber")) then
+						SetModStat(Map.Info.Filename, unit_type, "ImproveProduction", lumber_processing_value:getText() - GetUnitTypeData(unit_type, "ImproveProduction", "lumber"), "lumber")
+					end
+					if (stone_processing_value:getText() ~= GetUnitTypeData(unit_type, "ImproveProduction", "stone")) then
+						SetModStat(Map.Info.Filename, unit_type, "ImproveProduction", stone_processing_value:getText() - GetUnitTypeData(unit_type, "ImproveProduction", "stone"), "stone")
+					end
 				end
-				if (gold_cost_value:getText() ~= GetUnitTypeData(unit_type, "Costs", "gold")) then
-					SetModStat(Map.Info.Filename, unit_type, "Costs", gold_cost_value:getText() - GetUnitTypeData(unit_type, "Costs", "gold"), "gold")
-				end
-				if (lumber_cost_value:getText() ~= GetUnitTypeData(unit_type, "Costs", "lumber")) then
-					SetModStat(Map.Info.Filename, unit_type, "Costs", lumber_cost_value:getText() - GetUnitTypeData(unit_type, "Costs", "lumber"), "lumber")
-				end
-				if (stone_cost_value:getText() ~= GetUnitTypeData(unit_type, "Costs", "stone")) then
-					SetModStat(Map.Info.Filename, unit_type, "Costs", stone_cost_value:getText() - GetUnitTypeData(unit_type, "Costs", "stone"), "stone")
-				end
-				if (gold_processing_value:getText() ~= GetUnitTypeData(unit_type, "ImproveProduction", "gold")) then
-					SetModStat(Map.Info.Filename, unit_type, "ImproveProduction", gold_processing_value:getText() - GetUnitTypeData(unit_type, "ImproveProduction", "gold"), "gold")
-				end
-				if (lumber_processing_value:getText() ~= GetUnitTypeData(unit_type, "ImproveProduction", "lumber")) then
-					SetModStat(Map.Info.Filename, unit_type, "ImproveProduction", lumber_processing_value:getText() - GetUnitTypeData(unit_type, "ImproveProduction", "lumber"), "lumber")
-				end
-				if (stone_processing_value:getText() ~= GetUnitTypeData(unit_type, "ImproveProduction", "stone")) then
-					SetModStat(Map.Info.Filename, unit_type, "ImproveProduction", stone_processing_value:getText() - GetUnitTypeData(unit_type, "ImproveProduction", "stone"), "stone")
-				end
+				menu:stop()
 			end
-			menu:stop()
 		end
 	)
 
@@ -1923,33 +2092,37 @@ function EditUnitTypePropertiesTraining(unit_type)
 
 	menu:addHalfButton("~!OK", "o", 20 + 48, sizeY - 40,
 		function()
-			if (GetUnitTypeData(unit_type, "Mod") == Map.Info.Filename) then
-				local unit_type_definition = {}
-
-				if (trained_unit_type_list ~= GetUnitTypeData(unit_type, "Trains")) then
-					unit_type_definition.Trains = trained_unit_type_list
-				end
-
-				if (button_pos_value:getText() ~= GetUnitTypeData(unit_type, "ButtonPos")) then
-					unit_type_definition.ButtonPos = tonumber(button_pos_value:getText())
-				end
-
-				if (button_key_value:getText() ~= GetUnitTypeData(unit_type, "ButtonKey")) then
-					unit_type_definition.ButtonKey = tostring(button_key_value:getText())
-				end
-
-				if (button_hint_value:getText() ~= GetUnitTypeData(unit_type, "ButtonHint")) then
-					unit_type_definition.ButtonHint = tostring(button_hint_value:getText())
-				end
-
-				DefineUnitType(unit_type, unit_type_definition)
+			if (tonumber(button_pos_value:getText()) == nil) then
+				GenericDialog("Error", "The button pos must be a number.")
 			else
-				if (trained_unit_type_list ~= GetUnitTypeData(unit_type, "Trains")) then
-					SetModTrains(Map.Info.Filename, unit_type, trained_unit_type_list)
-				end
-			end
+				if (GetUnitTypeData(unit_type, "Mod") == Map.Info.Filename) then
+					local unit_type_definition = {}
 
-			menu:stop()
+					if (trained_unit_type_list ~= GetUnitTypeData(unit_type, "Trains")) then
+						unit_type_definition.Trains = trained_unit_type_list
+					end
+
+					if (button_pos_value:getText() ~= GetUnitTypeData(unit_type, "ButtonPos")) then
+						unit_type_definition.ButtonPos = tonumber(button_pos_value:getText())
+					end
+
+					if (button_key_value:getText() ~= GetUnitTypeData(unit_type, "ButtonKey")) then
+						unit_type_definition.ButtonKey = tostring(button_key_value:getText())
+					end
+
+					if (button_hint_value:getText() ~= GetUnitTypeData(unit_type, "ButtonHint")) then
+						unit_type_definition.ButtonHint = tostring(button_hint_value:getText())
+					end
+
+					DefineUnitType(unit_type, unit_type_definition)
+				else
+					if (trained_unit_type_list ~= GetUnitTypeData(unit_type, "Trains")) then
+						SetModTrains(Map.Info.Filename, unit_type, trained_unit_type_list)
+					end
+				end
+
+				menu:stop()
+			end
 		end
 	)
 
@@ -2043,35 +2216,6 @@ function EditUnitTypePropertiesSounds(unit_type)
 				if (sound_list[dead_sound:getSelected() + 1] ~= GetUnitTypeData(unit_type, "Sounds", "dead")) then
 					table.insert(unit_type_definition.Sounds, "dead")
 					table.insert(unit_type_definition.Sounds, sound_list[dead_sound:getSelected() + 1])
-				end
-				
-				if (time_cost_value:getText() ~= GetUnitTypeData(unit_type, "Costs", "time")) then
-					table.insert(unit_type_definition.Costs, "time")
-					table.insert(unit_type_definition.Costs, tonumber(time_cost_value:getText()))
-				end
-				if (gold_cost_value:getText() ~= GetUnitTypeData(unit_type, "Costs", "gold")) then
-					table.insert(unit_type_definition.Costs, "gold")
-					table.insert(unit_type_definition.Costs, tonumber(gold_cost_value:getText()))
-				end
-				if (lumber_cost_value:getText() ~= GetUnitTypeData(unit_type, "Costs", "lumber")) then
-					table.insert(unit_type_definition.Costs, "lumber")
-					table.insert(unit_type_definition.Costs, tonumber(lumber_cost_value:getText()))
-				end
-				if (stone_cost_value:getText() ~= GetUnitTypeData(unit_type, "Costs", "stone")) then
-					table.insert(unit_type_definition.Costs, "stone")
-					table.insert(unit_type_definition.Costs, tonumber(stone_cost_value:getText()))
-				end
-				if (gold_processing_value:getText() ~= GetUnitTypeData(unit_type, "ImproveProduction", "gold")) then
-					table.insert(unit_type_definition.ImproveProduction, "gold")
-					table.insert(unit_type_definition.ImproveProduction, tonumber(gold_processing_value:getText()))
-				end
-				if (lumber_processing_value:getText() ~= GetUnitTypeData(unit_type, "ImproveProduction", "lumber")) then
-					table.insert(unit_type_definition.ImproveProduction, "lumber")
-					table.insert(unit_type_definition.ImproveProduction, tonumber(lumber_processing_value:getText()))
-				end
-				if (stone_processing_value:getText() ~= GetUnitTypeData(unit_type, "ImproveProduction", "stone")) then
-					table.insert(unit_type_definition.ImproveProduction, "stone")
-					table.insert(unit_type_definition.ImproveProduction, tonumber(stone_processing_value:getText()))
 				end
 				
 				DefineUnitType(unit_type, unit_type_definition)
