@@ -1298,6 +1298,7 @@ function RunEncyclopediaFactionsMenu()
 	menu:addLabel("~<Encyclopedia: Factions~>", offx + 320, offy + 104 + 36*(-4 + height_offset), nil, true)
 	
 	local civilizations = GetCivilizations()
+	table.sort(civilizations)
 	local potential_factions = {}
 	local factions = {}
 	local all_factions = {}
@@ -1311,6 +1312,7 @@ function RunEncyclopediaFactionsMenu()
 				table.insert(all_factions, potential_factions[i][j])
 			end
 		end
+		table.sort(factions[i])
 	end
 
 	local faction_x = 0
