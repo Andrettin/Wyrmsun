@@ -80,7 +80,7 @@ DefineUpgrade("upgrade-frank-spatha", {
 	Parent = "upgrade-teuton-spatha",
 	Icon = "icon-frankish-spatha",
 	Civilization = "teuton",
-	Civilization = "Frank Tribe",
+	Faction = "Frank Tribe",
 	Description = _("With the development of iron working, the forging of longer swords became a practical possibility.\n\nEffect: +2 Damage for Kriegers and Ritters."),
 	Background = _("During the Migration Period, Germanic peoples - including West Germanics - used longswords such as these in combat."),
 	TechnologyPointCost = 1,

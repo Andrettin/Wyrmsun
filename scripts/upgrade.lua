@@ -34,6 +34,7 @@ function DefineUpgrade(upgrade_ident, data)
 		upgrade.Icon = CUpgrade:Get(data.Parent).Icon
 		upgrade.Class = CUpgrade:Get(data.Parent).Class
 		upgrade.Civilization = CUpgrade:Get(data.Parent).Civilization
+		upgrade.Faction = CUpgrade:Get(data.Parent).Faction
 		upgrade.Description = CUpgrade:Get(data.Parent).Description
 		upgrade.Quote = CUpgrade:Get(data.Parent).Quote
 		upgrade.Background = CUpgrade:Get(data.Parent).Background
@@ -69,6 +70,9 @@ function DefineUpgrade(upgrade_ident, data)
 	end
 	if (data.Civilization ~= nil) then
 		upgrade.Civilization = data.Civilization
+	end
+	if (data.Faction ~= nil) then
+		upgrade.Faction = data.Faction
 	end
 	if (data.Description ~= nil) then
 		upgrade.Description = data.Description

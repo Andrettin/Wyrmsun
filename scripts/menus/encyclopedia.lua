@@ -8,9 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      encyclopedia.lua - Defines the encyclopedia for tech trees.
---
---      (c) Copyright 2014-2015 by Andrettin
+--      (c) Copyright 2014-2016 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -436,7 +434,7 @@ function addEncyclopediaIcon(unit_name, state, menu, x, y)
 					civilization = "Civilization: " .. CapitalizeString(CUpgrade:Get(unit_name).Civilization) .. "\n\n"
 				end
 				if (CUpgrade:Get(unit_name).Faction ~= "") then
-					faction = "Faction: " .. CapitalizeString(CUpgrade:Get(unit_name).Faction) .. "\n\n"
+					faction = "Faction: " .. CUpgrade:Get(unit_name).Faction .. "\n\n"
 				end
 				if (CUpgrade:Get(unit_name).Class ~= "") then
 					unit_type_class = "Class: " .. _(FullyCapitalizeString(string.gsub(CUpgrade:Get(unit_name).Class, "-", " "))) .. "\n\n"
