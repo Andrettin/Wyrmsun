@@ -85,6 +85,9 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed a few potential crash causes for multiplayer.
 - Fixed a potential desync cause related to variations.
 
+* Quests
+- Updated The Mead of Wisdom quest (dwarf) to give some information as to the fate of the sons and followers of Fjalar and Galar after the duo's death.
+
 -----------------------------------------------------------------------
 - 2.0.0
 -----------------------------------------------------------------------

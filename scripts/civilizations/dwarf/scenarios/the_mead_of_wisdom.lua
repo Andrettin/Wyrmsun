@@ -8,9 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      the_mead_of_wisdom.lua
---
---      (c) Copyright 2015 by Andrettin
+--      (c) Copyright 2015-2016 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -251,15 +249,23 @@ AddTrigger(
 			player,
 			{"~!Continue"},
 			{function(s)
-				if (player == GetThisPlayer()) then
-					if (GrandStrategy == false) then
-						if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "The Mead of Wisdom") == false) then
-							table.insert(wyr.preferences.QuestsCompleted, "The Mead of Wisdom")
+			Event(
+				"",
+				"And thus were Fjalar and Galar defeated that day. Yet, their sons survived. Fearful of the Brisings, they went away with the duo's remaining followers, seeking refuge in the great depths. But that is a story for another time...",
+				player,
+				{"~!Continue"},
+				{function(s)
+					if (player == GetThisPlayer()) then
+						if (GrandStrategy == false) then
+							if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "The Mead of Wisdom") == false) then
+								table.insert(wyr.preferences.QuestsCompleted, "The Mead of Wisdom")
+							end
+							SavePreferences()
 						end
-						SavePreferences()
+						ActionVictory()
 					end
-					ActionVictory()
-				end
+				end}
+			)
 			end}
 		)
 		return false
