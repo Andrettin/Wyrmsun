@@ -8,9 +8,7 @@
 --												T H E	 W A R	 B E G I N S
 --				 Stratagus - A free fantasy real time strategy game engine
 --
---			units.ccl - Defines the kobold unit-types.
---
---			(c) Copyright 2014 by Andrettin
+--			(c) Copyright 2014-2016 by Andrettin
 --
 --			This program is free software; you can redistribute it and/or modify
 --			it under the terms of the GNU General Public License as published by
@@ -39,6 +37,11 @@ DefineUnitType("unit-kobold-footpad", { Name = _("Footpad"),
 	Image = {"file", "kobold/units/kobold_footpad.png", "size", {72, 72}},
 	Description = _("Stealthy and fierce, kobold footpads are the warriors of their race. They roam the tunnels of Nidavellir, abhorring to fight in the open. They call their swords \"fangs\" in homage to the power of a wyrm's bite."),
 	Animations = "animations-goblin-spearman", Icon = "icon-kobold-footpad",
+	DefaultEquipment = {
+		{"weapon", "unit-short-sword"},
+		{"shield", "unit-round-shield"},
+		{"boots", "unit-boots"}
+	},
 	HitPoints = 50,
 	Accuracy = 12,
 	Evasion = 12,

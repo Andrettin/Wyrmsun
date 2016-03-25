@@ -67,14 +67,16 @@ DefineUpgrade("upgrade-goblin-long-spear", {
 	Parent = "upgrade-long-spear",
 	Civilization = "goblin",
 	Description = _("With the lengthening of spear shafts, soldiers who wield these weapons have greater reach against their enemies.\n\nEffect: +2 Damage for Impalers."),
-	TechnologyPointCost = 1
+	TechnologyPointCost = 1,
+	Item = "unit-long-spear"
 })
 
 DefineUpgrade("upgrade-goblin-pike", {
 	Parent = "upgrade-pike",
 	Civilization = "goblin",
 	Description = _("Much longer than previous spears, pikes can be deadly when used by disciplined groups of soldiers.\n\nEffect: +2 Damage for Impalers."),
-	TechnologyPointCost = 1
+	TechnologyPointCost = 1,
+	Item = "unit-pike"
 })
 
 DefineUpgrade("upgrade-goblin-wood-plow", {

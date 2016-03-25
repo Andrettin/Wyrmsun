@@ -10,7 +10,7 @@
 --
 --      upgrade.ccl - Define the teuton dependencies and upgrades.
 --
---      (c) Copyright 2014-2015 by Andrettin
+--      (c) Copyright 2014-2016 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -71,14 +71,16 @@ DefineUpgrade("upgrade-teuton-spatha", {
 	Civilization = "teuton",
 	Description = _("With the development of iron working, the forging of longer swords became a practical possibility.\n\nEffect: +2 Damage for Kriegers."),
 	Background = _("During the Migration Period, Germanic peoples - including West Germanics - used longswords such as these in combat."),
-	TechnologyPointCost = 1
+	TechnologyPointCost = 1,
+	Item = "unit-spatha"
 })
 
 DefineUpgrade("upgrade-teuton-pike", {
 	Parent = "upgrade-pike",
 	Civilization = "teuton",
 	Description = _("Much longer than previous spears, pikes can be deadly when used by disciplined groups of soldiers.\n\nEffect: +2 Damage for Speerkampfers."),
-	TechnologyPointCost = 1
+	TechnologyPointCost = 1,
+	Item = "unit-pike"
 })
 
 DefineUpgrade("upgrade-teuton-iron-shield", {
@@ -86,7 +88,8 @@ DefineUpgrade("upgrade-teuton-iron-shield", {
 	Icon = "icon-teuton-iron-shield",
 	Civilization = "teuton",
 	Description = _("The development of iron working makes the crafting of sturdier shields possible.\n\nEffect: +2 Armor for Kriegers."),
-	TechnologyPointCost = 1
+	TechnologyPointCost = 1,
+	Item = "unit-iron-shield"
 })
 
 DefineUpgrade("upgrade-teuton-bodkin-arrow", {
@@ -96,7 +99,8 @@ DefineUpgrade("upgrade-teuton-bodkin-arrow", {
 	Civilization = "teuton",
 	Description = _("Bodkin arrows focus pressure on a single point, greatly enhancing their piercing capability.\n\nEffect: +2 Damage for Skutans."),
 	TechnologyPointCost = 1,
-	Arrows = true
+	Arrows = true,
+	Item = "unit-bodkin-arrows"
 })
 
 DefineUpgrade("upgrade-teuton-iron-tipped-wood-plow", {

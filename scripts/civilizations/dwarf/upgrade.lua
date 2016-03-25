@@ -8,8 +8,6 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      upgrade.ccl - Define the dwarven dependencies and upgrades.
---
 --      (c) Copyright 2013-2016 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
@@ -72,7 +70,8 @@ DefineUpgrade("upgrade-dwarven-broad-axe", {
 	Icon = "icon-dwarven-broad-axe",
 	Civilization = "dwarf",
 	Description = _("Dwarven smiths work hard at their craft to improve soldiers' weapons, and with the perfecting of smithing techniques the broadening of axe blades becomes possible.\n\nEffect: +2 Damage for Axefighters, Steelclads, Stonelords and Yale Riders."),
-	TechnologyPointCost = 1
+	TechnologyPointCost = 1,
+	Item = "unit-broad-axe"
 })
 
 DefineUpgrade("upgrade-dwarven-great-axe", {
@@ -80,21 +79,24 @@ DefineUpgrade("upgrade-dwarven-great-axe", {
 	Icon = "icon-dwarven-great-axe",
 	Civilization = "dwarf",
 	Description = _("Further innovations in dwarven smithing allow axes to be made sturdier, and often to carry double blades.\n\nEffect: +2 Damage for Axefighters, Steelclads, Stonelords and Yale Riders."),
-	TechnologyPointCost = 1
+	TechnologyPointCost = 1,
+	Item = "unit-great-axe"
 })
 
 DefineUpgrade("upgrade-dwarven-long-spear", {
 	Parent = "upgrade-long-spear",
 	Civilization = "dwarf",
 	Description = _("With the lengthening of spear shafts, soldiers who wield these weapons have greater reach against their enemies.\n\nEffect: +2 Damage for Guards."),
-	TechnologyPointCost = 1
+	TechnologyPointCost = 1,
+	Item = "unit-long-spear"
 })
 
 DefineUpgrade("upgrade-dwarven-pike", {
 	Parent = "upgrade-pike",
 	Civilization = "dwarf",
 	Description = _("Much longer than previous spears, pikes can be deadly when used by disciplined groups of soldiers.\n\nEffect: +2 Damage for Guards."),
-	TechnologyPointCost = 1
+	TechnologyPointCost = 1,
+	Item = "unit-pike"
 })
 
 DefineUpgrade("upgrade-dwarven-shield-1", {
@@ -103,7 +105,8 @@ DefineUpgrade("upgrade-dwarven-shield-1", {
 	Icon = "icon-dwarven-shield-2",
 	Civilization = "dwarf",
 	Description = _("Earlier shields provided little more than a minimal degree of protection. With the development of heater shields, dwarven soldiers have a greater chance of survival in battle.\n\nEffect: +2 Armor for Axefighters, Steelclads, Stonelords and Yale Riders."),
-	TechnologyPointCost = 1
+	TechnologyPointCost = 1,
+	Item = "unit-heater-shield"
 })
 
 DefineUpgrade("upgrade-dwarven-shield-2", {
@@ -114,7 +117,8 @@ DefineUpgrade("upgrade-dwarven-shield-2", {
 	Description = _("As shield-making techniques improved, the creation of thrymgjol shields became possible. These shields receive their name from the impregnable gate crafted by the sons of the dwarf Solblindi, due to the mighty protection they give their users.\n\nEffect: +2 Armor for Axefighters, Steelclads, Stonelords and Yale Riders."),
 	Background = _("The Thrymgjol gate and its makers, the sons of the dwarf Solblindi, are mentioned in the ~<Svipdagsmol~> of Norse mythology. The name \"Thrymgjol\" means \"loud-clanging\"."),
 	Quote = _("\"Thrymgjol they call it; | 'twas made by the three, / The sons of Solblindi; / And fast as a fetter | the farer it holds, / Whoever shall lift the latch.\" - Dwarven Traditional Poetry (The Warder)"),
-	TechnologyPointCost = 1
+	TechnologyPointCost = 1,
+	Item = "unit-thrymgjol-shield"
 })
 
 DefineUpgrade("upgrade-dwarven-sharp-throwing-axe", {
@@ -124,7 +128,8 @@ DefineUpgrade("upgrade-dwarven-sharp-throwing-axe", {
 	Civilization = "dwarf",
 	Description = _("As their craftsmanship progresses, dwarven artisans become capable of improving the basic throwing axe to have sharper blades.\n\nEffect: +2 Damage for Scouts, Pathfinders and Gryphon Riders."),
 	TechnologyPointCost = 1,
-	Weapon = true
+	Weapon = true,
+	Item = "unit-sharp-throwing-axe"
 })
 
 DefineUpgrade("upgrade-dwarven-bearded-throwing-axe", {
@@ -134,7 +139,8 @@ DefineUpgrade("upgrade-dwarven-bearded-throwing-axe", {
 	Civilization = "dwarf",
 	Description = _("The 'bearding' of throwing axes by extending the bottom of their blades is an innovation which makes them more deadly when thrown.\n\nEffect: +2 Damage for Scouts, Pathfinders and Gryphon Riders."),
 	TechnologyPointCost = 1,
-	Weapon = true
+	Weapon = true,
+	Item = "unit-bearded-throwing-axe"
 })
 
 DefineUpgrade("upgrade-dwarven-wood-plow", {
@@ -223,18 +229,20 @@ DefineUpgrade("upgrade-lyr-faction", {
 DefineModifier("upgrade-dwarven-broad-axe",
 	{"BasicDamage", 2},
 	{"Points", 10},
+	{"apply-to", "unit-dwarven-militia"}, 
 	{"apply-to", "unit-dwarven-axefighter"}, {"apply-to", "unit-dwarven-steelclad"}, {"apply-to", "unit-dwarven-thane"},
-	{"apply-to", "unit-dwarven-militia"}, {"apply-to", "unit-brising-militia"},
 	{"apply-to", "unit-dwarven-yale-rider"},
+	{"apply-to", "unit-brising-militia"},
 	{"apply-to", "unit-surghan-mercenary-steelclad"}, {"apply-to", "unit-surghan-mercenary-thane"}
 )
 
 DefineModifier("upgrade-dwarven-great-axe",
 	{"BasicDamage", 2},
 	{"Points", 10},
+	{"apply-to", "unit-dwarven-militia"}, 
 	{"apply-to", "unit-dwarven-axefighter"}, {"apply-to", "unit-dwarven-steelclad"}, {"apply-to", "unit-dwarven-thane"},
-	{"apply-to", "unit-dwarven-militia"}, {"apply-to", "unit-brising-militia"},
 	{"apply-to", "unit-dwarven-yale-rider"},
+	{"apply-to", "unit-brising-militia"},
 	{"apply-to", "unit-surghan-mercenary-steelclad"}, {"apply-to", "unit-surghan-mercenary-thane"}
 )
 
@@ -253,20 +261,22 @@ DefineModifier("upgrade-dwarven-pike",
 DefineModifier("upgrade-dwarven-shield-1",
 	{"Armor", 2},
 	{"Points", 10},
+	{"apply-to", "unit-dwarven-militia"},
 	{"apply-to", "unit-dwarven-axefighter"}, {"apply-to", "unit-dwarven-steelclad"}, {"apply-to", "unit-dwarven-thane"},
 	{"apply-to", "unit-dwarven-guard"},
-	{"apply-to", "unit-dwarven-militia"}, {"apply-to", "unit-brising-militia"},
 	{"apply-to", "unit-dwarven-yale-rider"},
+	{"apply-to", "unit-brising-militia"},
 	{"apply-to", "unit-surghan-mercenary-steelclad"}, {"apply-to", "unit-surghan-mercenary-thane"}
 )
 
 DefineModifier("upgrade-dwarven-shield-2",
 	{"Armor", 2},
 	{"Points", 10},
+	{"apply-to", "unit-dwarven-militia"},
 	{"apply-to", "unit-dwarven-axefighter"}, {"apply-to", "unit-dwarven-steelclad"}, {"apply-to", "unit-dwarven-thane"},
 	{"apply-to", "unit-dwarven-guard"},
-	{"apply-to", "unit-dwarven-militia"}, {"apply-to", "unit-brising-militia"},
 	{"apply-to", "unit-dwarven-yale-rider"},
+	{"apply-to", "unit-brising-militia"},
 	{"apply-to", "unit-surghan-mercenary-steelclad"}, {"apply-to", "unit-surghan-mercenary-thane"}
 )
 
@@ -504,12 +514,4 @@ DefineDependency("unit-brising-transport-ship",
 
 DefineDependency("unit-dwarven-gryphon-rider",
 	{"unit-dwarven-stronghold", "unit-dwarven-lumber-mill"}, "or", {"unit-brising-stronghold", "unit-dwarven-lumber-mill"}
-)
-
-DefineDependency("unit-brising-miner",
-	{"upgrade-brising-clan-faction"}
-)
-
-DefineDependency("unit-brising-militia",
-	{"upgrade-brising-clan-faction"}
 )

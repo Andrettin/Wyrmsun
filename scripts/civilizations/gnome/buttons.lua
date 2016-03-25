@@ -34,16 +34,6 @@
 --		['allowed check ['values]] Key = key, Hint = hint 'for-unit", "units)
 --
 
--- general commands -------------------------------
-
-DefineButton( { Pos = 3, Level = 0, Icon = "icon-gnomish-thrusting-sword-1",
-	Action = "attack",
-	Key = "a", Hint = _("~!Attack"), Popup = "popup-commands",
-	ForUnit = {
-		"unit-gnomish-recruit", "unit-gnomish-duelist", "unit-gnomish-master-at-arms"
-	}
-} )
-
 -- Special Abilities ---------------------------------------------------
 
 DefineButton( { Pos = 4, Level = 0, Icon = "icon-herbal-cure",

@@ -38,6 +38,9 @@ DefineUnitType("unit-dwarven-miner", { Name = _("Miner"),
 	Background = _("In Norse mythology, dwarves were shown to have an affinity for metals, and often they lived in mountainous homes."),
 	Image = {"file", "dwarf/units/miner.png", "size", {72, 72}},
 	Animations = "animations-dwarven-miner", Icon = "icon-dwarven-miner",
+	DefaultEquipment = {
+		{"boots", "unit-boots"}
+	},
 	Corpse = "unit-dwarven-dead-body",
 	WeaponClasses = {"mace"},
 	BluntDamage = true,
@@ -93,6 +96,11 @@ DefineUnitType("unit-dwarven-militia", { Name = _("Militia"),
 	Description = _("When enemies approach, dwarven miners pick up arms from the nearest storage center in defense of their homelands."),
 	Image = {"file", "dwarf/units/militia.png", "size", {72, 72}},
 	Animations = "animations-dwarven-militia", Icon = "icon-dwarven-militia",
+	DefaultEquipment = {
+		{"weapon", "unit-battle-axe"},
+		{"shield", "unit-round-shield"},
+		{"boots", "unit-boots"}
+	},
 	Corpse = "unit-dwarven-dead-body",
 	WeaponClasses = {"axe"},
 	HackDamage = true,
@@ -123,6 +131,11 @@ DefineUnitType("unit-dwarven-axefighter", { Name = _("Axefighter"),
 		{"layer", "shield", "file", "dwarf/units/round_shield.png"}
 	},
 	Animations = "animations-dwarven-axefighter", Icon = "icon-dwarven-axefighter",
+	DefaultEquipment = {
+		{"weapon", "unit-battle-axe"},
+--		{"shield", "unit-round-shield"}, -- commented out to make the Brising Round Shield icon appear when proper
+		{"boots", "unit-boots"}
+	},
 	Costs = {"time", 60, "gold", 495, "lumber", 22},
 	Corpse = "unit-dwarven-dead-body",
 	WeaponClasses = {"axe"},
@@ -133,6 +146,64 @@ DefineUnitType("unit-dwarven-axefighter", { Name = _("Axefighter"),
 	ButtonHint = _("Train ~!Axefighter"),
 	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	DropAffixes = {"upgrade-item-suffix-of-the-snigill"},
+	Variations = {
+		{
+			"variation-id", "red-hair",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"variation-id", "gray-hair",
+			"layer-file", "hair", "dwarf/units/gray_hair_warrior.png",
+			"icon", "icon-dwarven-axefighter-gray-hair"
+		},
+		{
+			"variation-id", "orange-hair",
+			"layer-file", "hair", "dwarf/units/orange_hair_warrior.png",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"variation-id", "blond-hair",
+			"layer-file", "hair", "dwarf/units/blond_hair_warrior.png",
+			"icon", "icon-dwarven-axefighter-blond-hair",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"variation-id", "black-hair",
+			"layer-file", "hair", "dwarf/units/black_hair_warrior.png",
+			"icon", "icon-dwarven-axefighter-black-hair",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"variation-id", "brown-hair",
+			"layer-file", "hair", "dwarf/units/brown_hair_warrior.png",
+			"icon", "icon-dwarven-axefighter-brown-hair",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"layer", "shield",
+			"variation-id", "round-shield",
+			"upgrade-forbidden", "upgrade-brising-clan-faction",
+			"item-not-equipped", "unit-brising-round-shield"
+		},
+		{
+			"layer", "shield",
+			"variation-id", "round-shield",
+			"item-equipped", "unit-round-shield"
+		},
+		{
+			"layer", "shield",
+			"variation-id", "brising-round-shield",
+			"file", "dlcs/brising_faction_flair/graphics/units/brising_round_shield.png",
+			"upgrade-required", "upgrade-brising-clan-faction",
+			"item-not-equipped", "unit-round-shield"
+		},
+		{
+			"layer", "shield",
+			"variation-id", "brising-round-shield",
+			"file", "dlcs/brising_faction_flair/graphics/units/brising_round_shield.png",
+			"item-equipped", "unit-brising-round-shield"
+		}
+	},
 	Sounds = {
 		"selected", "basic-dwarf-voices-selected-group",
 		"acknowledge", "basic-dwarf-voices-acknowledge",
@@ -145,81 +216,17 @@ DefineUnitType("unit-dwarven-axefighter", { Name = _("Axefighter"),
 	}
 } )
 
-local axefighter_variations = {
-	{
-		"variation-id", "red-hair",
-		"upgrade-forbidden", "upgrade-old"
-	},
-	{
-		"variation-id", "gray-hair",
-		"layer-file", "hair", "dwarf/units/gray_hair_warrior.png",
-		"icon", "icon-dwarven-axefighter-gray-hair"
-	},
-	{
-		"variation-id", "orange-hair",
-		"layer-file", "hair", "dwarf/units/orange_hair_warrior.png",
-		"upgrade-forbidden", "upgrade-old"
-	},
-	{
-		"variation-id", "blond-hair",
-		"layer-file", "hair", "dwarf/units/blond_hair_warrior.png",
-		"icon", "icon-dwarven-axefighter-blond-hair",
-		"upgrade-forbidden", "upgrade-old"
-	},
-	{
-		"variation-id", "black-hair",
-		"layer-file", "hair", "dwarf/units/black_hair_warrior.png",
-		"icon", "icon-dwarven-axefighter-black-hair",
-		"upgrade-forbidden", "upgrade-old"
-	},
-	{
-		"variation-id", "brown-hair",
-		"layer-file", "hair", "dwarf/units/brown_hair_warrior.png",
-		"icon", "icon-dwarven-axefighter-brown-hair",
-		"upgrade-forbidden", "upgrade-old"
-	}
-}
-
-if (CanAccessFile("dlcs/brising_faction_flair/graphics/units/brising_round_shield.png")) then
-	table.insert(axefighter_variations, {
-		"layer", "shield",
-		"variation-id", "round-shield",
-		"upgrade-forbidden", "upgrade-brising-clan-faction",
-		"item-not-equipped", "unit-brising-round-shield"
-	})
-	
-	table.insert(axefighter_variations, {
-		"layer", "shield",
-		"variation-id", "round-shield",
-		"item-equipped", "unit-round-shield"
-	})
-	
-	table.insert(axefighter_variations, {
-		"layer", "shield",
-		"variation-id", "brising-round-shield",
-		"file", "dlcs/brising_faction_flair/graphics/units/brising_round_shield.png",
-		"upgrade-required", "upgrade-brising-clan-faction",
-		"item-not-equipped", "unit-round-shield"
-	})
-	
-	table.insert(axefighter_variations, {
-		"layer", "shield",
-		"variation-id", "brising-round-shield",
-		"file", "dlcs/brising_faction_flair/graphics/units/brising_round_shield.png",
-		"item-equipped", "unit-brising-round-shield"
-	})
-end
-
-DefineUnitType("unit-dwarven-axefighter", {
-	Variations = axefighter_variations
-} )
-
 DefineUnitType("unit-dwarven-steelclad", { Name = _("Steelclad"),
 	Parent = "unit-template-veteran-infantry",
 	Civilization = "dwarf",
 	Description = _("The more experienced dwarven steelclad fighters wear heavy chain mail and plate armor, for which they are rightly famous."),
 	Image = {"file", "dwarf/units/dwarven_steelclad.png", "size", {72, 72}},
 	Animations = "animations-dwarven-axefighter", Icon = "icon-dwarven-steelclad",
+	DefaultEquipment = {
+		{"weapon", "unit-battle-axe"},
+--		{"shield", "unit-round-shield"}, -- commented out to make the Brising Round Shield icon appear when proper
+		{"boots", "unit-boots"}
+	},
 	Costs = {"time", 90, "gold", 825, "lumber", 75},
 	Armor = 4,
 	WeaponClasses = {"axe"},
@@ -228,6 +235,121 @@ DefineUnitType("unit-dwarven-steelclad", { Name = _("Steelclad"),
 	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-the-snigill"},
 	InvertedEastArms = true,
 	InvertedSoutheastArms = true,
+	Variations = {
+		{
+			"variation-id", "red-hair",
+			"upgrade-forbidden", "upgrade-dwarven-great-axe",
+			"item-not-equipped", "unit-great-axe",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"variation-id", "gray-hair",
+			"file", "dwarf/units/dwarven_steelclad_gray_hair.png",
+			"icon", "icon-dwarven-steelclad-gray-hair",
+			"upgrade-forbidden", "upgrade-dwarven-great-axe",
+			"item-not-equipped", "unit-great-axe"
+		},
+		{
+			"variation-id", "orange-hair",
+			"file", "dwarf/units/dwarven_steelclad_orange_hair.png",
+			"upgrade-forbidden", "upgrade-dwarven-great-axe",
+			"item-not-equipped", "unit-great-axe",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"variation-id", "blond-hair",
+			"file", "dwarf/units/dwarven_steelclad_blond_hair.png",
+			"icon", "icon-dwarven-steelclad-blond-hair",
+			"upgrade-forbidden", "upgrade-dwarven-great-axe",
+			"item-not-equipped", "unit-great-axe",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"variation-id", "black-hair",
+			"file", "dwarf/units/dwarven_steelclad_black_hair.png",
+			"icon", "icon-dwarven-steelclad-black-hair",
+			"upgrade-forbidden", "upgrade-dwarven-great-axe",
+			"item-not-equipped", "unit-great-axe",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"variation-id", "brown-hair",
+			"file", "dwarf/units/dwarven_steelclad_brown_hair.png",
+			"icon", "icon-dwarven-steelclad-brown-hair",
+			"upgrade-forbidden", "upgrade-dwarven-great-axe",
+			"item-not-equipped", "unit-great-axe",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		-- Great Axe
+		{
+			"variation-id", "red-hair",
+			"file", "dwarf/units/dwarven_steelclad_great_axe.png",
+			"upgrade-required", "upgrade-dwarven-great-axe",
+			"item-equipped", "unit-great-axe",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"variation-id", "gray-hair",
+			"file", "dwarf/units/dwarven_steelclad_gray_hair_great_axe.png",
+			"icon", "icon-dwarven-steelclad-gray-hair",
+			"upgrade-required", "upgrade-dwarven-great-axe"
+		},
+		{
+			"variation-id", "orange-hair",
+			"file", "dwarf/units/dwarven_steelclad_orange_hair_great_axe.png",
+			"upgrade-required", "upgrade-dwarven-great-axe",
+			"item-equipped", "unit-great-axe",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"variation-id", "blond-hair",
+			"file", "dwarf/units/dwarven_steelclad_blond_hair_great_axe.png",
+			"icon", "icon-dwarven-steelclad-blond-hair",
+			"upgrade-required", "upgrade-dwarven-great-axe",
+			"item-equipped", "unit-great-axe",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"variation-id", "black-hair",
+			"file", "dwarf/units/dwarven_steelclad_black_hair_great_axe.png",
+			"icon", "icon-dwarven-steelclad-black-hair",
+			"upgrade-required", "upgrade-dwarven-great-axe",
+			"item-equipped", "unit-great-axe",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"variation-id", "brown-hair",
+			"file", "dwarf/units/dwarven_steelclad_brown_hair_great_axe.png",
+			"icon", "icon-dwarven-steelclad-brown-hair",
+			"upgrade-required", "upgrade-dwarven-great-axe",
+			"item-equipped", "unit-great-axe",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"layer", "shield",
+			"variation-id", "round-shield",
+			"upgrade-forbidden", "upgrade-brising-clan-faction",
+			"item-not-equipped", "unit-brising-round-shield"
+		},
+		{
+			"layer", "shield",
+			"variation-id", "round-shield",
+			"item-equipped", "unit-round-shield"
+		},
+		{
+			"layer", "shield",
+			"variation-id", "brising-round-shield",
+			"file", "dlcs/brising_faction_flair/graphics/units/brising_round_shield.png",
+			"upgrade-required", "upgrade-brising-clan-faction",
+			"item-not-equipped", "unit-round-shield"
+		},
+		{
+			"layer", "shield",
+			"variation-id", "brising-round-shield",
+			"file", "dlcs/brising_faction_flair/graphics/units/brising_round_shield.png",
+			"item-equipped", "unit-brising-round-shield"
+		}
+	},
 	Sounds = {
 		"selected", "basic-dwarf-voices-selected-group",
 		"acknowledge", "basic-dwarf-voices-acknowledge",
@@ -238,135 +360,7 @@ DefineUnitType("unit-dwarven-steelclad", { Name = _("Steelclad"),
 		"hit", "axe-attack",
 		"miss", "attack-miss"
 	}
-} )
-
-local steelclad_variations = {
-	{
-		"variation-id", "red-hair",
-		"upgrade-forbidden", "upgrade-dwarven-great-axe",
-		"item-not-equipped", "unit-great-axe",
-		"upgrade-forbidden", "upgrade-old"
-	},
-	{
-		"variation-id", "gray-hair",
-		"file", "dwarf/units/dwarven_steelclad_gray_hair.png",
-		"icon", "icon-dwarven-steelclad-gray-hair",
-		"upgrade-forbidden", "upgrade-dwarven-great-axe",
-		"item-not-equipped", "unit-great-axe"
-	},
-	{
-		"variation-id", "orange-hair",
-		"file", "dwarf/units/dwarven_steelclad_orange_hair.png",
-		"upgrade-forbidden", "upgrade-dwarven-great-axe",
-		"item-not-equipped", "unit-great-axe",
-		"upgrade-forbidden", "upgrade-old"
-	},
-	{
-		"variation-id", "blond-hair",
-		"file", "dwarf/units/dwarven_steelclad_blond_hair.png",
-		"icon", "icon-dwarven-steelclad-blond-hair",
-		"upgrade-forbidden", "upgrade-dwarven-great-axe",
-		"item-not-equipped", "unit-great-axe",
-		"upgrade-forbidden", "upgrade-old"
-	},
-	{
-		"variation-id", "black-hair",
-		"file", "dwarf/units/dwarven_steelclad_black_hair.png",
-		"icon", "icon-dwarven-steelclad-black-hair",
-		"upgrade-forbidden", "upgrade-dwarven-great-axe",
-		"item-not-equipped", "unit-great-axe",
-		"upgrade-forbidden", "upgrade-old"
-	},
-	{
-		"variation-id", "brown-hair",
-		"file", "dwarf/units/dwarven_steelclad_brown_hair.png",
-		"icon", "icon-dwarven-steelclad-brown-hair",
-		"upgrade-forbidden", "upgrade-dwarven-great-axe",
-		"item-not-equipped", "unit-great-axe",
-		"upgrade-forbidden", "upgrade-old"
-	},
-	-- Great Axe
-	{
-		"variation-id", "red-hair",
-		"file", "dwarf/units/dwarven_steelclad_great_axe.png",
-		"upgrade-required", "upgrade-dwarven-great-axe",
-		"item-equipped", "unit-great-axe",
-		"upgrade-forbidden", "upgrade-old"
-	},
-	{
-		"variation-id", "gray-hair",
-		"file", "dwarf/units/dwarven_steelclad_gray_hair_great_axe.png",
-		"icon", "icon-dwarven-steelclad-gray-hair",
-		"upgrade-required", "upgrade-dwarven-great-axe"
-	},
-	{
-		"variation-id", "orange-hair",
-		"file", "dwarf/units/dwarven_steelclad_orange_hair_great_axe.png",
-		"upgrade-required", "upgrade-dwarven-great-axe",
-		"item-equipped", "unit-great-axe",
-		"upgrade-forbidden", "upgrade-old"
-	},
-	{
-		"variation-id", "blond-hair",
-		"file", "dwarf/units/dwarven_steelclad_blond_hair_great_axe.png",
-		"icon", "icon-dwarven-steelclad-blond-hair",
-		"upgrade-required", "upgrade-dwarven-great-axe",
-		"item-equipped", "unit-great-axe",
-		"upgrade-forbidden", "upgrade-old"
-	},
-	{
-		"variation-id", "black-hair",
-		"file", "dwarf/units/dwarven_steelclad_black_hair_great_axe.png",
-		"icon", "icon-dwarven-steelclad-black-hair",
-		"upgrade-required", "upgrade-dwarven-great-axe",
-		"item-equipped", "unit-great-axe",
-		"upgrade-forbidden", "upgrade-old"
-	},
-	{
-		"variation-id", "brown-hair",
-		"file", "dwarf/units/dwarven_steelclad_brown_hair_great_axe.png",
-		"icon", "icon-dwarven-steelclad-brown-hair",
-		"upgrade-required", "upgrade-dwarven-great-axe",
-		"item-equipped", "unit-great-axe",
-		"upgrade-forbidden", "upgrade-old"
-	}
-}
-
-if (CanAccessFile("dlcs/brising_faction_flair/graphics/units/brising_round_shield.png")) then
-	table.insert(steelclad_variations, {
-		"layer", "shield",
-		"variation-id", "round-shield",
-		"file", "dwarf/units/round_shield.png",
-		"upgrade-forbidden", "upgrade-brising-clan-faction",
-		"item-not-equipped", "unit-brising-round-shield"
-	})
-	
-	table.insert(steelclad_variations, {
-		"layer", "shield",
-		"variation-id", "round-shield",
-		"file", "dwarf/units/round_shield.png",
-		"item-equipped", "unit-round-shield"
-	})
-	
-	table.insert(steelclad_variations, {
-		"layer", "shield",
-		"variation-id", "brising-round-shield",
-		"file", "dlcs/brising_faction_flair/graphics/units/brising_round_shield.png",
-		"upgrade-required", "upgrade-brising-clan-faction",
-		"item-not-equipped", "unit-round-shield"
-	})
-	
-	table.insert(steelclad_variations, {
-		"layer", "shield",
-		"variation-id", "brising-round-shield",
-		"file", "dlcs/brising_faction_flair/graphics/units/brising_round_shield.png",
-		"item-equipped", "unit-brising-round-shield"
-	})
-end
-
-DefineUnitType("unit-dwarven-steelclad", {
-	Variations = steelclad_variations
-} )
+})
 
 DefineUnitType("unit-dwarven-thane", { Name = _("Stonelord"),
 	Parent = "unit-template-heroic-infantry",
@@ -376,6 +370,11 @@ DefineUnitType("unit-dwarven-thane", { Name = _("Stonelord"),
 	Background = _("In Norse mythology, the dwarven leader Modsognir appears in the ~<Voluspo~> as one of the first dwarves and the mightiest of them."),
 	Image = {"file", "dwarf/units/thane.png", "size", {72, 72}},
 	Animations = "animations-dwarven-axefighter", Icon = "icon-dwarven-thane",
+	DefaultEquipment = {
+		{"weapon", "unit-battle-axe"},
+--		{"shield", "unit-round-shield"}, -- commented out to make the Brising Round Shield icon appear when proper
+		{"boots", "unit-boots"}
+	},
 	Armor = 6,
 	Corpse = "unit-dwarven-dead-body",
 	CanCastSpell = {"spell-axe-twirl"},
@@ -443,6 +442,11 @@ DefineUnitType("unit-dwarven-guard", { Name = _("Guard"),
 		{"layer", "shield", "file", "dwarf/units/heater_shield.png"}
 	},
 	Animations = "animations-dwarven-axefighter", Icon = "icon-dwarven-guard",
+	DefaultEquipment = {
+		{"weapon", "unit-short-spear"},
+--		{"shield", "unit-round-shield"}, -- commented out to make the Brising Round Shield icon appear when proper
+		{"boots", "unit-boots"}
+	},
 	Costs = {"time", 55, "gold", 460, "lumber", 45},
 	HitPoints = 65,
 	Armor = 2,
@@ -477,6 +481,10 @@ DefineUnitType("unit-dwarven-scout", { Name = _("Scout"),
 --	Background = _("In Norse mythology, there is a mention in the ~<Voluspo~> of a throng of dwarves led by Dvalin who moved away from the rocks and into the sands, these migrants being the ancestors of Lofar."), -- use this for the pathfinder
 	Image = {"file", "dwarf/units/dwarven_scout.png", "size", {72, 72}},
 	Animations = "animations-dwarven-scout", Icon = "icon-dwarven-scout",
+	DefaultEquipment = {
+		{"weapon", "unit-throwing-axe"},
+		{"boots", "unit-boots"}
+	},
 	BasicDamage = 10,
 	Missile = "missile-throwing-axe",
 	FireMissile = "missile-flaming-throwing-axe",
@@ -538,6 +546,10 @@ DefineUnitType("unit-dwarven-pathfinder", { Name = _("Pathfinder"),
 	Description = _("These hardy dwarves are sometimes away from their caves for long periods, scouting and patrolling the borders. They spend this time watching for invaders, and fighting bandits and thieves who encroach on dwarven territory. Their deftly thrown axes can rival the power and accuracy of a gnomish marksman."),
 	Image = {"file", "dwarf/units/dwarven_scout.png", "size", {72, 72}},
 	Animations = "animations-dwarven-scout", Icon = "icon-dwarven-pathfinder",
+	DefaultEquipment = {
+		{"weapon", "unit-throwing-axe"},
+		{"boots", "unit-boots"}
+	},
 	BasicDamage = 11,
 	Missile = "missile-throwing-axe",
 	FireMissile = "missile-flaming-throwing-axe",
@@ -580,6 +592,11 @@ DefineUnitType("unit-dwarven-yale-rider", { Name = _("Yale Rider"),
 	Image = {"file", "dwarf/units/yale_rider_red_hair_gray_fur.png", "size", {72, 72}},
 	Costs = {"time", 90, "gold", 825, "lumber", 35},
 	Animations = "animations-melee-unit", Icon = "icon-dwarven-yale-rider",
+	DefaultEquipment = {
+		{"weapon", "unit-battle-axe"},
+--		{"shield", "unit-round-shield"}, -- commented out to make the Brising Round Shield icon appear when proper
+		{"boots", "unit-boots"}
+	},
 	Corpse = "unit-dwarven-dead-body",
 	WeaponClasses = {"axe"},
 	HackDamage = true,
@@ -664,6 +681,10 @@ DefineUnitType("unit-dwarven-gryphon-rider", { Name = _("Gryphon Rider"),
 	Quote = _("\"Ha ha! Gryphons as mounts, that is naught but the stuff of legends! Is there no end to your folly?\" - Relgorn, Chieftain of the Norlund Clan"),
 	Image = {"file", "dwarf/units/gryphon_rider.png", "size", {100, 100}},
 	Animations = "animations-dwarven-gryphon-rider", Icon = "icon-dwarven-gryphon-rider",
+	DefaultEquipment = {
+		{"weapon", "unit-throwing-axe"},
+		{"boots", "unit-boots"}
+	},
 	Missile = "missile-throwing-axe",
 	FireMissile = "missile-flaming-throwing-axe",
 	BasicDamage = 13,
@@ -933,7 +954,7 @@ DefineUnitType("unit-dwarven-miner", { -- this is here because the buildings nee
 	Trains = {"unit-dwarven-town-hall", "unit-dwarven-mushroom-farm", "unit-dwarven-barracks", "unit-dwarven-lumber-mill", "unit-dwarven-smithy", "unit-dwarven-yale-pen", "unit-dwarven-sentry-tower", "unit-dwarven-dock", "unit-gold-mine", "unit-silver-mine", "unit-copper-mine"}
 } )
 
-DefineUnitType("unit-brising-miner", { Name = _("Miner"),
+DefineUnitType("unit-brising-miner", {
 	Parent = "unit-dwarven-miner",
 	Civilization = "dwarf",
 	Faction = "Brising Clan",
@@ -942,11 +963,14 @@ DefineUnitType("unit-brising-miner", { Name = _("Miner"),
 	Points = 35 -- +5 points
 } )
 
-DefineUnitType("unit-brising-militia", { Name = _("Militia"),
+DefineUnitType("unit-brising-militia", {
 	Parent = "unit-dwarven-militia",
 	Civilization = "dwarf",
 	Faction = "Brising Clan",
 	Icon = "icon-brising-militia",
+	DefaultEquipment = {
+		{"shield", "unit-brising-round-shield"}
+	},
 	HitPoints = 40, -- +10 HP
 	Points = 35, -- +5 points
 	AiDrops = {"unit-brising-round-shield"}
@@ -997,7 +1021,6 @@ DefineUnitType("unit-brising-miner", { -- this is here because the buildings nee
 DefineUnitType("unit-dwarven-dock", {
 	Trains = {"unit-dwarven-transport-ship", "unit-brising-transport-ship"},
 } )
-
 
 DefineUnitType("unit-surghan-mercenary-steelclad", { Name = _("Surghan Mercenary"),
 	Parent = "unit-dwarven-steelclad",

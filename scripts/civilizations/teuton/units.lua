@@ -39,6 +39,9 @@ DefineUnitType("unit-teuton-worker", { Name = _("Bura"),
 --	Background = _("\"Bûra\" is the Proto-Germanic word for \"peasant\" or \"farmer\"."),
 	Image = {"file", "germanic/units/worker.png", "size", {72, 72}},
 	Animations = "animations-worker", Icon = "icon-germanic-worker",
+	DefaultEquipment = {
+		{"boots", "unit-boots"}
+	},
 	Corpse = "unit-human-dead-body",
 	DaySightRangeBonus = 1,
 	NightSightRangeBonus = -1,
@@ -104,6 +107,11 @@ DefineUnitType("unit-teuton-swordsman", { Name = _("Krieger"),
 		{"layer", "weapon", "file", "teuton/units/long_iron_sword.png"}
 	},
 	Animations = "animations-melee-unit-new", Icon = "icon-teuton-swordsman",
+	DefaultEquipment = {
+		{"weapon", "unit-short-sword"},
+		{"shield", "unit-wooden-shield"},
+		{"boots", "unit-boots"}
+	},
 	Costs = {"time", 50, "gold", 600},
 	Corpse = "unit-human-dead-body",
 	DaySightRangeBonus = 1,
@@ -377,6 +385,7 @@ DefineUnitType("unit-frank-swordsman", { Name = _("Krieger"),
 			"layer", "weapon",
 			"variation-id", "long-iron-sword",
 			"file", "teuton/units/long_iron_sword.png",
+			"button-icon", "attack", "icon-frankish-spatha",
 			"upgrade-required", "upgrade-teuton-spatha",
 			"item-equipped", "unit-spatha",
 			"item-equipped", "unit-frankish-spatha"
@@ -435,6 +444,11 @@ DefineUnitType("unit-teuton-spearman", { Name = _("Speerkampfer"),
 		{"layer", "weapon", "file", "human/units/spear.png"},
 	},
 	Animations = "animations-melee-unit-new", Icon = "icon-teuton-spearman",
+	DefaultEquipment = {
+		{"weapon", "unit-short-spear"},
+		{"shield", "unit-wooden-shield"},
+		{"boots", "unit-boots"}
+	},
 	Corpse = "unit-human-dead-body",
 	DaySightRangeBonus = 1,
 	NightSightRangeBonus = -1,
@@ -632,6 +646,10 @@ DefineUnitType("unit-teuton-archer", { Name = _("Skutan"),
 		{"layer", "backpack", "file", "human/units/quiver.png"}
 	},
 	Animations = "animations-goblin-archer", Icon = "icon-germanic-archer",
+	DefaultEquipment = {
+		{"boots", "unit-boots"},
+		{"arrows", "unit-arrows"}
+	},
 	Corpse = "unit-human-dead-body",
 	DaySightRangeBonus = 1,
 	NightSightRangeBonus = -1,
@@ -680,6 +698,11 @@ DefineUnitType("unit-teuton-ritter", { Name = _("Ritter"),
 		{"layer", "shield", "file", "teuton/units/ritter_shield.png"}
 	},
 	Animations = "animations-melee-unit", Icon = "icon-teuton-ritter",
+	DefaultEquipment = {
+		{"weapon", "unit-short-sword"},
+		{"shield", "unit-wooden-shield"},
+		{"boots", "unit-boots"}
+	},
 	Armor = 3, BasicDamage = 13, -- +1 armor, +1 damage
 	DaySightRangeBonus = 1,
 	NightSightRangeBonus = -1,
@@ -714,7 +737,7 @@ DefineUnitType("unit-frank-horseman", { Name = _("Ritter"),
 	Armor = 4, BasicDamage = 14, -- +1 armor, +1 damage
 	Points = 60, -- +10 points
 	AiDrops = {"unit-frankish-spatha"}
-} )
+})
 
 DefineUnitType("unit-teuton-catapult", { Name = _("Catapult"),
 	Parent = "unit-template-siege-engine",

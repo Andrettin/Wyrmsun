@@ -31,6 +31,9 @@ DefineFaction("Brising Clan", {
 	Colors = {"red", "orange", "fire"},
 	DevelopsTo = {"Joruvellir", "Kal Kartha", "Knalga", "Lyr"},
 	FactionUpgrade = "upgrade-brising-clan-faction",
+	ButtonIcons = {
+		"stop", "icon-brising-round-shield"
+	},
 	Description = _("The Brising clan is one of the first dwarven clans ever known. It made its home in Svarinshaug, where they tamed the fierce forces of nature.")
 })
 

@@ -34,24 +34,6 @@
 
 -- general commands -- almost all units have it -------------------------------
 
-DefineButton( { Pos = 3, Level = 0, Icon = "icon-long-spear",
-	Action = "attack",
-	Allowed = "check-upgrade", AllowArg = {"upgrade-goblin-long-spear"},
-	Key = "a", Hint = _("~!Attack"), Popup = "popup-commands",
-	ForUnit = {
-		"unit-goblin-spearman"
-	}
-})
-
-DefineButton( { Pos = 3, Level = 0, Icon = "icon-pike",
-	Action = "attack",
-	Allowed = "check-upgrade", AllowArg = {"upgrade-goblin-pike"},
-	Key = "a", Hint = _("~!Attack"), Popup = "popup-commands",
-	ForUnit = {
-		"unit-goblin-spearman"
-	}
-})
-
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-catapult-projectile-1",
 	Action = "attack",
 	Key = "a", Hint = _("~!Attack"), Popup = "popup-commands",

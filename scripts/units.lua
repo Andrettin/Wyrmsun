@@ -62,10 +62,13 @@ Units = {
 	"unit-dwarven-scout", "unit-dwarven-pathfinder",
 	"unit-dwarven-yale-rider", "unit-dwarven-ballista",
 	"unit-dwarven-gryphon-rider",
-	"unit-dwarven-transport-ship", "unit-brising-transport-ship",
-	"unit-dwarven-town-hall", "unit-dwarven-stronghold", "unit-brising-town-hall", "unit-brising-stronghold", 
+	"unit-dwarven-transport-ship",
+	"unit-brising-transport-ship",
+	"unit-dwarven-town-hall", "unit-dwarven-stronghold",
+	"unit-brising-town-hall", "unit-brising-stronghold",
 	"unit-dwarven-mushroom-farm", "unit-dwarven-barracks",
-	"unit-dwarven-lumber-mill", "unit-dwarven-smithy", "unit-brising-smithy",
+	"unit-dwarven-lumber-mill", "unit-dwarven-smithy",
+	"unit-brising-smithy",
 	"unit-dwarven-yale-pen",
 	"unit-dwarven-sentry-tower", "unit-dwarven-guard-tower",
 	"unit-dwarven-dock",
@@ -75,7 +78,7 @@ Units = {
 	"upgrade-dwarven-wood-plow", "upgrade-dwarven-iron-tipped-wood-plow",
 	"upgrade-dwarven-masonry",
 	"upgrade-dwarven-coinage", "upgrade-dwarven-runewriting", "upgrade-dwarven-alchemy",
-	"upgrade-eikinskjaldi-clan-faction", "upgrade-brising-clan-faction", "upgrade-norlund-clan-faction", "upgrade-shinsplitter-clan-faction", "upgrade-shorbear-clan-faction", "upgrade-joruvellir-faction", "upgrade-kal-kartha-faction", "upgrade-knalga-faction", -- "upgrade-lyr-faction",
+	"upgrade-brising-clan-faction", "upgrade-eikinskjaldi-clan-faction", "upgrade-norlund-clan-faction", "upgrade-shinsplitter-clan-faction", "upgrade-shorbear-clan-faction", "upgrade-joruvellir-faction", "upgrade-kal-kartha-faction", "upgrade-knalga-faction", -- "upgrade-lyr-faction",
 	"unit-gnomish-worker", "unit-gnomish-recruit", "unit-gnomish-duelist", "unit-gnomish-master-at-arms", "unit-gnomish-herbalist", "unit-gnomish-caravan",
 	"unit-gnomish-town-hall", "unit-gnomish-farm", "unit-gnomish-barracks",
 	"unit-goblin-worker", "unit-goblin-swordsman", "unit-goblin-spearman", "unit-goblin-archer", "unit-goblin-headhunter", "unit-goblin-thief",
@@ -4305,11 +4308,6 @@ DefineUnitType("unit-elven-swordsman", { Name = _("Swordsman"),
 	WeaponClasses = {"sword", "thrusting-sword"},
 	HackDamage = true,
 	Sounds = {
---		"selected", "basic-dwarf-voices-selected-group",
---		"acknowledge", "basic-dwarf-voices-acknowledge",
---		"ready", "dwarven-axefighter-ready",
---		"help", "basic-dwarf-voices-help",
---		"dead", "basic-dwarf-voices-dead",
 		"hit", "sword-attack",
 		"miss", "attack-miss"
 	}
@@ -4360,11 +4358,6 @@ DefineUnitType("unit-orc-sea-orc", { Name = _("Sea Orc"),
 	WeaponClasses = {"sword", "thrusting-sword"},
 	HackDamage = true,
 	Sounds = {
---		"selected", "basic-dwarf-voices-selected-group",
---		"acknowledge", "basic-dwarf-voices-acknowledge",
---		"ready", "dwarven-axefighter-ready",
---		"help", "basic-dwarf-voices-help",
---		"dead", "basic-dwarf-voices-dead",
 		"hit", "sword-attack",
 		"miss", "attack-miss"
 	}
@@ -4393,14 +4386,7 @@ DefineUnitType("unit-orc-shaman", { Name = _("Shaman"),
 	CanAttack = true,
 	CanTargetLand = true,
 	organic = true,
-	BluntDamage = true,
-	Sounds = {
---		"selected", "basic-dwarf-voices-selected-group",
---		"acknowledge", "basic-dwarf-voices-acknowledge",
---		"ready", "dwarven-axefighter-ready",
---		"help", "basic-dwarf-voices-help",
---		"dead", "basic-dwarf-voices-dead"
-	}
+	BluntDamage = true
 } )
 
 DefineUnitType("unit-water-elemental", { Name = _("Water Elemental"),
@@ -4423,10 +4409,6 @@ DefineUnitType("unit-water-elemental", { Name = _("Water Elemental"),
 	CanAttack = true,
 	CanTargetLand = true, CanTargetSea = true, CanTargetAir = true,
 	Sounds = {
---		"selected", "basic-dwarf-voices-selected-group",
---		"acknowledge", "basic-dwarf-voices-acknowledge",
---		"ready", "dwarven-axefighter-ready",
---		"help", "basic-dwarf-voices-help",
 		"dead", "squishy-hit",
 		"hit", "squishy-attack",
 		"miss", "squishy-miss"
@@ -4459,9 +4441,6 @@ DefineUnitType("unit-long-swordsman", { Name = _("Long Swordsman"),
 	NumDirections = 1,
 	Sounds = {
 		"selected", "click",
---		"acknowledge", "basic-dwarf-voices-acknowledge",
---		"ready", "dwarven-axefighter-ready",
---		"help", "basic-dwarf-voices-help",
 		"dead", "basic-human-voices-dead"}
 } )
 

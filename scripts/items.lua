@@ -49,6 +49,9 @@ DefineUnitType("unit-short-sword", { Name = _("Short Sword"),
 	Image = {"file", "germanic/items/broad_bronze_sword.png", "size", {32, 32}},
 	Icon = "icon-germanic-short-sword",
 	ItemClass = "sword",
+	ButtonIcons = {
+		{"stand-ground", "icon-germanic-stand-ground"}
+	},
 	BasicDamage = 0
 } )
 
@@ -57,6 +60,9 @@ DefineUnitType("unit-broad-sword", { Name = _("Broad Sword"),
 	Image = {"file", "germanic/items/broad_bronze_sword.png", "size", {32, 32}},
 	Icon = "icon-germanic-broad-sword",
 	ItemClass = "sword",
+	ButtonIcons = {
+		{"stand-ground", "icon-germanic-stand-ground"}
+	},
 	BasicDamage = 2
 } )
 
@@ -65,6 +71,9 @@ DefineUnitType("unit-spatha", { Name = _("Spatha"),
 	Image = {"file", "teuton/items/long_iron_sword.png", "size", {32, 32}},
 	Icon = "icon-teuton-spatha",
 	ItemClass = "sword",
+	ButtonIcons = {
+		{"stand-ground", "icon-germanic-stand-ground"}
+	},
 	BasicDamage = 4
 } )
 
@@ -78,6 +87,9 @@ DefineUnitType("unit-thrusting-sword", { Name = _("Thrusting Sword"),
 	Image = {"file", "germanic/items/broad_bronze_sword.png", "size", {32, 32}},
 	Icon = "icon-gnomish-thrusting-sword-1",
 	ItemClass = "thrusting-sword",
+	ButtonIcons = {
+		{"stand-ground", "icon-germanic-stand-ground"}
+	},
 	BasicDamage = 0
 } )
 
@@ -86,6 +98,9 @@ DefineUnitType("unit-battle-axe", { Name = _("Battle Axe"),
 	Image = {"file", "neutral/items/axe.png", "size", {32, 32}},
 	Icon = "icon-dwarven-battle-axe",
 	ItemClass = "axe",
+	ButtonIcons = {
+		{"stand-ground", "icon-dwarven-stand-ground"}
+	},
 	BasicDamage = 0
 } )
 
@@ -94,6 +109,9 @@ DefineUnitType("unit-broad-axe", { Name = _("Broad Axe"),
 	Image = {"file", "neutral/items/axe.png", "size", {32, 32}},
 	Icon = "icon-dwarven-broad-axe",
 	ItemClass = "axe",
+	ButtonIcons = {
+		{"stand-ground", "icon-dwarven-stand-ground"}
+	},
 	BasicDamage = 2
 } )
 
@@ -102,6 +120,9 @@ DefineUnitType("unit-great-axe", { Name = _("Great Axe"),
 	Image = {"file", "neutral/items/axe.png", "size", {32, 32}},
 	Icon = "icon-dwarven-great-axe",
 	ItemClass = "axe",
+	ButtonIcons = {
+		{"stand-ground", "icon-dwarven-stand-ground"}
+	},
 	BasicDamage = 4
 } )
 
@@ -150,6 +171,9 @@ DefineUnitType("unit-throwing-axe", { Name = _("Throwing Axe"),
 	Image = {"file", "neutral/items/axe.png", "size", {32, 32}},
 	Icon = "icon-dwarven-throwing-axe",
 	ItemClass = "throwing-axe",
+	ButtonIcons = {
+		{"stand-ground", "icon-dwarven-stand-ground"}
+	},
 	BasicDamage = 0
 } )
 
@@ -158,6 +182,9 @@ DefineUnitType("unit-sharp-throwing-axe", { Name = _("Sharp Throwing Axe"),
 	Image = {"file", "neutral/items/axe.png", "size", {32, 32}},
 	Icon = "icon-dwarven-sharp-throwing-axe",
 	ItemClass = "throwing-axe",
+	ButtonIcons = {
+		{"stand-ground", "icon-dwarven-stand-ground"}
+	},
 	BasicDamage = 2
 } )
 
@@ -166,6 +193,9 @@ DefineUnitType("unit-bearded-throwing-axe", { Name = _("Bearded Throwing Axe"),
 	Image = {"file", "neutral/items/axe.png", "size", {32, 32}},
 	Icon = "icon-dwarven-bearded-throwing-axe",
 	ItemClass = "throwing-axe",
+	ButtonIcons = {
+		{"stand-ground", "icon-dwarven-stand-ground"}
+	},
 	BasicDamage = 4
 } )
 

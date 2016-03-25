@@ -37,6 +37,9 @@ DefineUnitType("unit-gnomish-worker", { Name = _("Scavenger"),
 	Description = _("Scavengers serve as the main source of manual labor in the gnomish lands."),
 	Image = {"file", "gnome/units/gnomish_worker.png", "size", {72, 72}},
 	Animations = "animations-gnomish-worker", Icon = "icon-gnomish-worker",
+	DefaultEquipment = {
+		{"boots", "unit-wool-shoes"}
+	},
 	Accuracy = 9,
 	Evasion = 10,
 	Corpse = "unit-gnomish-dead-body",
@@ -108,6 +111,11 @@ DefineUnitType("unit-gnomish-recruit", { Name = _("Recruit"),
 		{"layer", "weapon", "file", "gnome/units/thrusting_sword.png"}
 	},
 	Animations = "animations-gnomish-recruit", Icon = "icon-gnomish-recruit",
+	DefaultEquipment = {
+		{"weapon", "unit-thrusting-sword"},
+		{"shield", "unit-round-shield"},
+		{"boots", "unit-wool-shoes"}
+	},
 	Costs = {"gold", 500},
 	HitPoints = 50,
 	Accuracy = 11,
@@ -207,6 +215,11 @@ DefineUnitType("unit-gnomish-duelist", { Name = _("Duelist"),
 		{"layer", "weapon", "file", "gnome/units/thrusting_sword.png"}
 	},
 	Animations = "animations-gnomish-recruit", Icon = "icon-gnomish-duelist",
+	DefaultEquipment = {
+		{"weapon", "unit-thrusting-sword"},
+		{"shield", "unit-round-shield"},
+		{"boots", "unit-wool-shoes"}
+	},
 	HitPoints = 60,
 	Accuracy = 13,
 	Evasion = 13,
@@ -300,6 +313,11 @@ DefineUnitType("unit-gnomish-master-at-arms", { Name = _("Master at Arms"),
 		{"layer", "weapon", "file", "gnome/units/thrusting_sword.png"}
 	},
 	Animations = "animations-gnomish-recruit", Icon = "icon-gnomish-master-at-arms",
+	DefaultEquipment = {
+		{"weapon", "unit-thrusting-sword"},
+		{"shield", "unit-round-shield"},
+		{"boots", "unit-wool-shoes"}
+	},
 	HitPoints = 75,
 	Accuracy = 15,
 	Evasion = 15,
@@ -390,6 +408,9 @@ DefineUnitType("unit-gnomish-herbalist", { Name = _("Herbalist"),
 	Description = _("The priests of gnomish societies, herbalists are in deep contact with nature. They honor the souls of plants while using them to concoct powerful potions and medicines."),
 	Image = {"file", "gnome/units/gnomish_herbalist.png", "size", {72, 72}},
 	Animations = "animations-gnomish-herbalist", Icon = "icon-gnomish-herbalist",
+	DefaultEquipment = {
+		{"boots", "unit-wool-shoes"}
+	},
 	HitPoints = 35,
 	Accuracy = 10,
 	Evasion = 10,

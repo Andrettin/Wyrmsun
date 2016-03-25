@@ -39,16 +39,6 @@
 
 -- General Commands ------------------------------------------------------
 
-DefineButton( { Pos = 3, Level = 0, Icon = "icon-spear",
-	Action = "attack",
-	Key = "a", Hint = _("~!Attack"), Popup = "popup-commands",
-	ForUnit = {
-		"unit-goblin-spearman",
-		"unit-germanic-spearman", "unit-teuton-spearman", "unit-frank-spearman",
-		"unit-dwarven-guard"
-	}
-})
-
 DefineButton( { Pos = 6, Level = 0, Icon = "icon-attack-ground",
 	Action = "attack-ground",
 	Key = "g", Hint = _("Attack ~!Ground"), Popup = "popup-commands",

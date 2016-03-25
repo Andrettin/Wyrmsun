@@ -8,8 +8,6 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      units.ccl - Defines the germanic unit-types.
---
 --      (c) Copyright 2014-2016 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
@@ -41,6 +39,9 @@ DefineUnitType("unit-germanic-worker", { Name = _("Bura"), -- Bûra = "Bauer" in
 	Background = _("\"Bûra\" is the Proto-Germanic word for \"peasant\" or \"farmer\"."),
 	Image = {"file", "germanic/units/worker.png", "size", {72, 72}},
 	Animations = "animations-worker", Icon = "icon-germanic-worker",
+	DefaultEquipment = {
+		{"boots", "unit-boots"}
+	},
 	Corpse = "unit-human-dead-body",
 	DaySightRangeBonus = 1,
 	NightSightRangeBonus = -1,
@@ -108,6 +109,11 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 		{"layer", "helmet", "file", "germanic/units/bronze_helmet.png"}
 	},
 	Animations = "animations-melee-unit-new", Icon = "icon-germanic-warrior",
+	DefaultEquipment = {
+		{"weapon", "unit-short-sword"},
+		{"shield", "unit-wooden-shield"},
+		{"boots", "unit-boots"}
+	},
 	Costs = {"time", 50, "gold", 600},
 	Corpse = "unit-human-dead-body",
 	DaySightRangeBonus = 1,
@@ -241,6 +247,11 @@ DefineUnitType("unit-germanic-spearman", { Name = _("Spearman"),
 		{"layer", "weapon", "file", "human/units/spear.png"},
 	},
 	Animations = "animations-melee-unit-new", Icon = "icon-germanic-warrior",
+	DefaultEquipment = {
+		{"weapon", "unit-short-spear"},
+		{"shield", "unit-wooden-shield"},
+		{"boots", "unit-boots"}
+	},
 	Corpse = "unit-human-dead-body",
 	DaySightRangeBonus = 1,
 	NightSightRangeBonus = -1,
@@ -351,6 +362,10 @@ DefineUnitType("unit-germanic-archer", { Name = _("Skutan"),
 		{"layer", "backpack", "file", "human/units/quiver.png"}
 	},
 	Animations = "animations-goblin-archer", Icon = "icon-germanic-archer",
+	DefaultEquipment = {
+		{"boots", "unit-boots"},
+		{"arrows", "unit-arrows"}
+	},
 	Corpse = "unit-human-dead-body",
 	TechnologyPointCost = 1,
 	DaySightRangeBonus = 1,

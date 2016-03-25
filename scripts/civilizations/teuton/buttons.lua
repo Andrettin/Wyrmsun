@@ -34,44 +34,6 @@
 
 -- General Commands -------------------------------
 
-DefineButton( { Pos = 3, Level = 0, Icon = "icon-teuton-spatha",
-	Action = "attack",
-	Allowed = "check-upgrade", AllowArg = {"upgrade-teuton-spatha"},
-	Key = "a", Hint = _("~!Attack"), Popup = "popup-commands",
-	ForUnit = {
-		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-frank-swordsman", "unit-teuton-ritter", "unit-frank-horseman",
-		"germanic-group", "teuton-group"
-	}
-} )
-
-DefineButton( { Pos = 3, Level = 0, Icon = "icon-pike",
-	Action = "attack",
-	Allowed = "check-upgrade", AllowArg = {"upgrade-teuton-pike"},
-	Key = "a", Hint = _("~!Attack"), Popup = "popup-commands",
-	ForUnit = {
-		"unit-teuton-spearman", "unit-frank-spearman"
-	}
-})
-
-DefineButton( { Pos = 2, Level = 0, Icon = "icon-teuton-iron-shield",
-	Action = "stop",
-	Allowed = "check-upgrade", AllowArg = {"upgrade-teuton-iron-shield"},
-	Key = "s", Hint = _("~!Stop"), Popup = "popup-commands",
-	ForUnit = {
-		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-frank-swordsman", "unit-teuton-spearman", "unit-frank-spearman", "unit-teuton-ritter", "unit-frank-horseman",
-		"germanic-group", "teuton-group"
-	}
-} )
-
-DefineButton( { Pos = 3, Level = 0, Icon = "icon-bodkin-arrow",
-	Action = "attack",
-	Allowed = "check-upgrade", AllowArg = {"upgrade-teuton-bodkin-arrow"},
-	Key = "a", Hint = _("~!Attack"), Popup = "popup-commands",
-	ForUnit = {
-		"unit-teuton-archer"
-	}
-} )
-
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-catapult-projectile-1",
 	Action = "attack",
 	Key = "a", Hint = _("~!Attack"), Popup = "popup-commands",
