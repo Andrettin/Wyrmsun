@@ -606,6 +606,15 @@ DefineUnitType("unit-dwarven-yale-rider", { Name = _("Yale Rider"),
 	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-the-snigill"},
 	Variations = {
 		{
+			"variation-id", "red-hair-gray-fur",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"variation-id", "red-hair-brown-fur",
+			"file", "dwarf/units/yale_rider_red_hair_brown_fur.png",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
 			"variation-id", "black-hair-brown-fur",
 			"file", "dwarf/units/yale_rider_black_hair_brown_fur.png",
 			"icon", "icon-dwarven-yale-rider-black-hair",
@@ -650,15 +659,6 @@ DefineUnitType("unit-dwarven-yale-rider", { Name = _("Yale Rider"),
 			"variation-id", "orange-hair-white-fur",
 			"file", "dwarf/units/yale_rider_orange_hair_white_fur.png",
 			"icon", "icon-dwarven-yale-rider-orange-hair",
-			"upgrade-forbidden", "upgrade-old"
-		},
-		{
-			"variation-id", "red-hair-gray-fur",
-			"upgrade-forbidden", "upgrade-old"
-		},
-		{
-			"variation-id", "red-hair-brown-fur",
-			"file", "dwarf/units/yale_rider_red_hair_brown_fur.png",
 			"upgrade-forbidden", "upgrade-old"
 		}
 	},

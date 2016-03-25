@@ -425,12 +425,12 @@ DefineUnitType("unit-gnomish-herbalist", { Name = _("Herbalist"),
 	ButtonHint = _("Train ~!Herbalist"),
 	Variations = {
 		{
-			"variation-id", "blond-hair",
-			"upgrade-forbidden", "upgrade-old"
-		},
-		{
 			"variation-id", "gray-hair",
 			"file", "gnome/units/gnomish_herbalist_gray_hair.png"
+		},
+		{
+			"variation-id", "blond-hair",
+			"upgrade-forbidden", "upgrade-old"
 		}
 	},
 	Sounds = {
