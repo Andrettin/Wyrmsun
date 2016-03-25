@@ -191,9 +191,19 @@ DefineButton( { Pos = 3, Level = 1, Icon = "icon-sword-mastery",
 	Description = "Sword Mastery is a passive ability that increases damage with swords by 2.",
 	ForUnit = {
 		"unit-germanic-warrior",
-		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-frank-swordsman", "unit-teuton-ritter", "unit-frank-horseman",
+		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-teuton-ritter",
 		"unit-gnomish-master-at-arms",
 		"unit-goblin-swordsman"
+	}
+} )
+
+DefineButton( { Pos = 3, Level = 1, Icon = "icon-sword-mastery",
+	Action = "learn-ability", Value = "upgrade-sword-mastery",
+	Allowed = "check-upgrade", AllowArg = {"upgrade-frank-spatha"},
+	Key = "w", Hint = "Learn S~!word Mastery", Popup = "popup-commands",
+	Description = "Sword Mastery is a passive ability that increases damage with swords by 2.",
+	ForUnit = {
+		"unit-frank-swordsman", "unit-frank-horseman"
 	}
 } )
 

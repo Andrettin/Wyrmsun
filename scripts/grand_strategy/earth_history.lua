@@ -1741,7 +1741,7 @@ if (GrandStrategyYear >= 180) then
 	SetFactionTechnology("teuton", "Charude Tribe", "upgrade-teuton-spatha", true)
 	SetFactionTechnology("teuton", "Chauci Tribe", "upgrade-teuton-spatha", true)
 	SetFactionTechnology("teuton", "Cherusci Tribe", "upgrade-teuton-spatha", true)
-	SetFactionTechnology("teuton", "Frank Tribe", "upgrade-teuton-spatha", true)
+	SetFactionTechnology("teuton", "Frank Tribe", "upgrade-frank-spatha", true)
 	SetFactionTechnology("teuton", "Frisian Tribe", "upgrade-teuton-spatha", true)
 	SetFactionTechnology("teuton", "Hermunduri Tribe", "upgrade-teuton-spatha", true)
 	SetFactionTechnology("teuton", "Marcomanni Tribe", "upgrade-teuton-spatha", true)

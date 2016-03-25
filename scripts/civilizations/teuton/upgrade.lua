@@ -69,10 +69,22 @@ DefineUpgrade("upgrade-teuton-spatha", {
 	Parent = "upgrade-long-sword",
 	Icon = "icon-teuton-spatha",
 	Civilization = "teuton",
-	Description = _("With the development of iron working, the forging of longer swords became a practical possibility.\n\nEffect: +2 Damage for Kriegers."),
+	Description = _("With the development of iron working, the forging of longer swords became a practical possibility.\n\nEffect: +2 Damage for Kriegers and Ritters."),
 	Background = _("During the Migration Period, Germanic peoples - including West Germanics - used longswords such as these in combat."),
 	TechnologyPointCost = 1,
 	Item = "unit-spatha"
+})
+
+DefineUpgrade("upgrade-frank-spatha", {
+	Name = _("Spatha"),
+	Parent = "upgrade-teuton-spatha",
+	Icon = "icon-frankish-spatha",
+	Civilization = "teuton",
+	Civilization = "Frank Tribe",
+	Description = _("With the development of iron working, the forging of longer swords became a practical possibility.\n\nEffect: +2 Damage for Kriegers and Ritters."),
+	Background = _("During the Migration Period, Germanic peoples - including West Germanics - used longswords such as these in combat."),
+	TechnologyPointCost = 1,
+	Item = "unit-frankish-spatha"
 })
 
 DefineUpgrade("upgrade-teuton-pike", {
@@ -87,7 +99,7 @@ DefineUpgrade("upgrade-teuton-iron-shield", {
 	Parent = "upgrade-iron-shield",
 	Icon = "icon-teuton-iron-shield",
 	Civilization = "teuton",
-	Description = _("The development of iron working makes the crafting of sturdier shields possible.\n\nEffect: +2 Armor for Kriegers."),
+	Description = _("The development of iron working makes the crafting of sturdier shields possible.\n\nEffect: +2 Armor for Kriegers, Speerkampfers and Ritters."),
 	TechnologyPointCost = 1,
 	Item = "unit-iron-shield"
 })
@@ -181,8 +193,19 @@ DefineUpgrade("upgrade-mecklenburg-faction", {
 DefineModifier("upgrade-teuton-spatha",
 	{"BasicDamage", 2},
 	{"Points", 10},
-	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-suebi-swordsman"}, {"apply-to", "unit-frank-swordsman"},
-	{"apply-to", "unit-teuton-ritter"}, {"apply-to", "unit-frank-horseman"}
+	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-suebi-swordsman"},
+	{"apply-to", "unit-teuton-ritter"}
+)
+
+DefineModifier("upgrade-frank-spatha",
+	{"BasicDamage", 2},
+	{"Points", 10},
+	{"apply-to", "unit-frank-swordsman"},
+	{"apply-to", "unit-frank-horseman"}
+)
+
+DefineModifier("upgrade-frank-spatha", -- for the case that a Frankish tribe becomes a civilization with a different upgrade
+	{"allow", "upgrade-teuton-spatha", "R"}
 )
 
 DefineModifier("upgrade-teuton-pike",
@@ -376,7 +399,11 @@ DefineDependency("unit-teuton-catapult",
 )
 
 DefineDependency("upgrade-teuton-spatha",
-	{"upgrade-germanic-broad-sword"}
+	{"upgrade-germanic-broad-sword", "upgrade-frank-tribe-faction", 0}
+)
+
+DefineDependency("upgrade-frank-spatha",
+	{"upgrade-germanic-broad-sword", "upgrade-frank-tribe-faction"}
 )
 
 DefineDependency("upgrade-teuton-pike",

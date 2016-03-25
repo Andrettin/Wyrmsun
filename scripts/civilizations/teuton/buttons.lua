@@ -107,7 +107,15 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-teuton-spatha",
 	Action = "research", Value = "upgrade-teuton-spatha",
 	Allowed = "check-single-research",
 	Key = "p", Hint = _("Research S~!patha"), Popup = "popup-research",
-	Description = "+2 Damage for Kriegers.",
+	Description = "+2 Damage for Kriegers and Ritters.",
+	ForUnit = {"unit-teuton-smithy"}
+} )
+
+DefineButton( { Pos = 1, Level = 0, Icon = "icon-frankish-spatha",
+	Action = "research", Value = "upgrade-frank-spatha",
+	Allowed = "check-single-research",
+	Key = "p", Hint = _("Research S~!patha"), Popup = "popup-research",
+	Description = "+2 Damage for Kriegers and Ritters.",
 	ForUnit = {"unit-teuton-smithy"}
 } )
 
@@ -115,7 +123,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-teuton-iron-shield",
 	Action = "research", Value = "upgrade-teuton-iron-shield",
 	Allowed = "check-single-research",
 	Key = "s", Hint = _("Research Iron ~!Shield"), Popup = "popup-research",
-	Description = "+2 Armor for Kriegers.",
+	Description = "+2 Armor for Kriegers, Speerkampfers and Ritters.",
 	ForUnit = {"unit-teuton-smithy"}
 } )
 
