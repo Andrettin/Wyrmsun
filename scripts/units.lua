@@ -3812,6 +3812,7 @@ DefineUnitType("unit-template-priest", { Name = _("Priest"),
 } )
 
 DefineUnitType("unit-template-flying-rider", { Name = _("Flying Rider"),
+	Parent = "unit-template-unit",
 	Class = "flying-rider",
 	Costs = {"time", 250, "gold", 1750, "lumber", 750},
 	Intelligence = 12,
