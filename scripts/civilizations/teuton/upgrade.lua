@@ -204,10 +204,6 @@ DefineModifier("upgrade-frank-spatha",
 	{"apply-to", "unit-frank-horseman"}
 )
 
-DefineModifier("upgrade-frank-spatha", -- for the case that a Frankish tribe becomes a civilization with a different upgrade
-	{"allow", "upgrade-teuton-spatha", "R"}
-)
-
 DefineModifier("upgrade-teuton-pike",
 	{"BasicDamage", 2},
 	{"Points", 10},
