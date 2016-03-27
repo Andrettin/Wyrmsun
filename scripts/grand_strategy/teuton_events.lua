@@ -376,33 +376,6 @@ local TeutonEvents = {
 			end
 		}
 	},
-	HistoriaEcclesiasticaVenerabilisBedae = { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 34.
-		Name = "Historia Ecclesiastica Venerabilis Bedae",
-		Description = "The venerable Bede has written an important work of history, the Historia Ecclesiastica Venerabilis Bedae.",
-		Conditions = function(s)
-			if (
-				GetProvinceOwner("England") == EventFaction.Name
-				and GetProvinceCivilization("England") == "teuton" -- should be English
---				and SyncRand(100) < 10
-			) then
-				return true
-			else
-				return false
-			end
-		end,
-		MinYear = 731, -- written about the year 731
-		MaxYear = 731, -- written about the year 731
-		RequiredEvents = {
---			SnorriSturlsonSage = true
-		},
-		Options = {"~!OK"},
-		OptionEffects = {
-			function(s)
-				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 5)
-			end
-		},
-		OptionTooltips = {"+5 Prestige"}
-	},
 	HorseFleshEatingProhibited = { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 69.
 		Name = "Horse-Flesh Eating Prohibited",
 		Description = "A council gathered in Mercia has declared the old custom of eating horse-flesh to be forbidden, judging it to be incompatible with Christian doctrine.",

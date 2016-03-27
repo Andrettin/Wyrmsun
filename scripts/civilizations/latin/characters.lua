@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2015 by Andrettin
+--      (c) Copyright 2015-2016 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -24,6 +24,17 @@
 --      along with this program; if not, write to the Free Software
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
+
+DefineCharacter("Caesar", { -- Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 227.
+	Name = "Caesar",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "latin",
+	ProvinceOfOrigin = "Rome", -- correct?
+	Year = -58, -- De Bello Gallico was written 58-52 BC
+	DeathYear = -58 + 30, -- estimated
+	AuthoredWorks = {"upgrade-work-de-bello-gallico"}
+})
 
 DefineCharacter("Marcian", { -- Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 6.
 	Name = "Marcian", -- Roman emperor who concluded a treaty with the Ostrogothic king Walamer after he had become independent in 453 AD, with the Ostrogoths providing protection of the frontier while the Romans gave them a subsidy

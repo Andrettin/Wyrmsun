@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2015 by Andrettin
+--      (c) Copyright 2016 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -25,21 +25,20 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-local LatinEvents = {
-	DivitiacusPleaForAssistance = { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 218.
-		Name = "Divitiacus' Plea for Assistance",
-		Description = "The Aedui chief Divitiacus has told us of a German invasion of Gaul, and asks for our assistance in pushing them back beyond the Rhine.",
-		TriggeredOnly = true,
-		Options = {"~!Accept", "~!Decline"},
-		OptionEffects = {
-			function(s)
-				DeclareWar(EventFaction.Name, "Suebi Tribe")
-			end,
-			function(s)
-			end
-		},
-		OptionTooltips = {"War with the Suebi Tribe", ""}
-	}
-}
-	
-AddEventTable(LatinEvents)
+DefineUpgrade("upgrade-work-hildebrandslied", {
+	Name = _("Hildebrandslied"),
+	Work = "scroll",
+	Civilization = "teuton",
+	Quote = "\"That Hildebrand was my father, / and I am Hadubrand. / Long ago to the east he went, / fleeing Otacher's hatred\" - Hildebrandslied (Hadubrand)"
+})
+
+DefineUpgrade("upgrade-work-historia-ecclesiastica-venerabilis-bedae", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 34.
+	Name = _("Historia Ecclesiastica Venerabilis Bedae"),
+	Work = "scroll",
+	Civilization = "teuton",
+	Year = 731
+})
+
+DefineModifier("upgrade-work-hildebrandslied",
+	{"CriticalStrikeChance", 1}
+)

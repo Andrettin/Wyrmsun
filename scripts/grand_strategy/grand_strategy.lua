@@ -1391,6 +1391,9 @@ function RunGrandStrategyLoadGameMenu()
 			end
 			SetCurrentCustomHero("")
 			CleanGrandStrategyGame()
+			
+			GrandStrategyGameLoading = true
+
 			InitializeGrandStrategyGame()
 			
 			GrandStrategy = true
@@ -1437,6 +1440,7 @@ function RunGrandStrategyLoadGameMenu()
 			
 			InitializeGrandStrategyFactions()
 			
+			GrandStrategyGameLoading = false
 			GrandStrategyGameInitialized = true
 			
 			menu:stop()

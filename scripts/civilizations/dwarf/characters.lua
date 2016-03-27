@@ -115,7 +115,8 @@ DefineCharacter("Thursagan", { -- from "The Sceptre of Fire" campaign of "Battle
 			"unique", "The Hammer of Thursagan",
 			"bound", true
 		},
-	}
+	},
+	LiteraryAppearances = {"upgrade-work-the-scepter-of-fire"}
 })
 
 DefineCharacter("Baglur", { -- from "The Sceptre of Fire" campaign of "Battle for Wesnoth"; veteran warrior and member of the party of dwarves who handled the crafting of the Sceptre of Fire
@@ -152,7 +153,8 @@ DefineCharacter("Durstorn", { -- from "The Sceptre of Fire" campaign of "Battle 
 	Year = -1,
 	DeathYear = 35 + 15, -- died in 35 AD of a violent death, but was already somewhat old; +15 years
 	Persistent = true,
-	ForbiddenUpgrades = {"unit-dwarven-yale-rider"}
+	ForbiddenUpgrades = {"unit-dwarven-yale-rider"},
+	LiteraryAppearances = {"upgrade-work-the-scepter-of-fire"}
 })
 
 DefineCharacter("Glonoin", { -- from "The Sceptre of Fire" campaign of "Battle for Wesnoth"; chieftain of the Shorbear clan
@@ -183,7 +185,8 @@ DefineCharacter("Rugnur", { -- from "The Sceptre of Fire" campaign of "Battle fo
 	Year = 25,
 	DeathYear = 40 + 30, -- died in 40 AD of a violent death, and wasn't old; +30 years
 	Persistent = true,
-	ForbiddenUpgrades = {"unit-dwarven-yale-rider"}
+	ForbiddenUpgrades = {"unit-dwarven-yale-rider"},
+	LiteraryAppearances = {"upgrade-work-the-scepter-of-fire"}
 })
 
 DefineCharacter("Oin", { -- dwarf from Norse mythology who was the father of Andvari
@@ -217,8 +220,9 @@ DefineCharacter("Regin", { -- skilled smith; in Norse mythology was the brother 
 	Civilization = "dwarf",
 	ProvinceOfOrigin = "Svarinshaug",
 	Year = 437 - (30 * 2),
-	DeathYear = 437 - (30 * 1) -- Gunnar died in 437 AD; Regin comes from one generation before him
+	DeathYear = 437 - (30 * 1), -- Gunnar died in 437 AD; Regin comes from one generation before him
 	-- in the Norse myths Regin was the son of Hreidmar; but whereas Regin has been identified as a dwarf, to my knowledge Hreidmar hasn't
+	LiteraryAppearances = {"upgrade-work-fafnismol", "upgrade-work-reginsmol"}
 })
 
 DefineCharacter("Dain", { -- dwarven mastersmith; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 100.

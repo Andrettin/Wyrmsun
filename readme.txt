@@ -61,6 +61,13 @@ https://github.com/Andrettin/Wyrmsun
 ############################################################
 
 -----------------------------------------------------------------------
+- 2.1.1
+-----------------------------------------------------------------------
+
+* Grand Strategy
+- Literary works now have a random chance of being created in a province of the appropriate culture (if the province's owner has knowledge of writing). When a literary work is created in a province, it provides a small amount of prestige to the owner of the province.
+
+-----------------------------------------------------------------------
 - 2.1.0
 -----------------------------------------------------------------------
 

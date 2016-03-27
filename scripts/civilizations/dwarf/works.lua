@@ -25,11 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-Load("scripts/civilizations/dwarf/works.lua")
-Load("scripts/civilizations/greek/works.lua")
-Load("scripts/civilizations/latin/works.lua")
-Load("scripts/civilizations/teuton/works.lua")
-
 DefineUpgrade("upgrade-work-alvissmol", {
 	Name = _("Alvissmol"), -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", pp. 183-194.
 	Work = "scroll",
@@ -61,13 +56,6 @@ DefineUpgrade("upgrade-work-the-scepter-of-fire", {
 	Quote = "\"The land of Untersberg's banner bold / Comes not from its own land; / It comes from Dwarfdom, grim and old / Made by a runesmith's hand.\" - The Scepter of Fire"
 })
 
-DefineUpgrade("upgrade-work-hildebrandslied", {
-	Name = _("Hildebrandslied"),
-	Work = "scroll",
-	Civilization = "teuton",
-	Quote = "\"That Hildebrand was my father, / and I am Hadubrand. / Long ago to the east he went, / fleeing Otacher's hatred\" - Hildebrandslied (Hadubrand)"
-})
-
 DefineModifier("upgrade-work-alvissmol",
 	{"Mana", 1}
 )
@@ -82,8 +70,4 @@ DefineModifier("upgrade-work-reginsmol",
 
 DefineModifier("upgrade-work-the-scepter-of-fire",
 	{"FireResistance", 1}
-)
-
-DefineModifier("upgrade-work-hildebrandslied",
-	{"CriticalStrikeChance", 1}
 )

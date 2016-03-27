@@ -130,6 +130,9 @@ function DefineUpgrade(upgrade_ident, data)
 	if (data.Work ~= nil) then
 		upgrade.Work = GetItemClassIdByName(data.Work)
 	end
+	if (data.Year ~= nil) then
+		upgrade.Year = data.Year
+	end
 	if (data.Item ~= nil) then
 		SetUpgradeItem(upgrade_ident, data.Item)
 	end

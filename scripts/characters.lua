@@ -62,6 +62,7 @@ Load("scripts/civilizations/dwarf/characters.lua")
 Load("scripts/civilizations/elf/characters.lua")
 Load("scripts/civilizations/germanic/characters.lua")
 Load("scripts/civilizations/goth/characters.lua")
+Load("scripts/civilizations/greek/characters.lua")
 Load("scripts/civilizations/latin/characters.lua")
 Load("scripts/civilizations/norse/characters.lua")
 Load("scripts/civilizations/teuton/characters.lua")
@@ -76,7 +77,8 @@ DefineCharacter("Pypo", {
 	Civilization = "gnome",
 	ProvinceOfOrigin = "Brown Hills",
 	Year = -1,
-	DeathYear = 40 -- last we hear of him
+	DeathYear = 40, -- last we hear of him
+	LiteraryAppearances = {"upgrade-work-the-scepter-of-fire"}
 })
 
 -- Goblin heroes

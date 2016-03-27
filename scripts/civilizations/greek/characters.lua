@@ -8,9 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      grand_strategy_events.lua - Defines the grand strategy events.
---
---      (c) Copyright 2015 by Andrettin
+--      (c) Copyright 2016 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -27,31 +25,13 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-local GreekEvents = {
-	HistoriaNova = { -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 320.
-		Name = "Historia nova",
-		Description = "Zosimus has written a work of his entitled \"Historia nova\", in which he describes events that occurred as far away as the Netherlands.",
-		Conditions = function(s)
-			if (
-				GetProvinceOwner("Thrace") == EventFaction.Name
-				and GetProvinceCivilization("Thrace") == "greek"
-			) then
-				EventProvince = WorldMapProvinces.Thrace
-				return true
-			else
-				return false
-			end
-		end,
-		MinYear = 500, -- written around 500 AD
-		MaxYear = 500,
-		Options = {"~!OK"},
-		OptionEffects = {
-			function(s)
-				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
-			end
-		},
-		OptionTooltips = {"+1 Prestige"}
-	}
-}
-	
-AddEventTable(GreekEvents)
+DefineCharacter("Zosimus", { -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 320.
+	Name = "Zosimus",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "greek",
+	ProvinceOfOrigin = "Thrace",
+	Year = 500, -- wrote "Historia nova" around 500 AD
+	DeathYear = 500 + 30, -- estimated
+	AuthoredWorks = {"upgrade-work-historia-nova"}
+})

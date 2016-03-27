@@ -228,6 +228,16 @@ DefineCharacter("Widukind", {
 --	DeathYear = ?
 })
 
+DefineCharacter("Bede", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 34.
+	Name = "Bede",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "teuton",
+	ProvinceOfOrigin = "England",
+	Year = 731, -- wrote "Historia Ecclesiastica Venerabilis Bedae" around 731 AD
+	DeathYear = 731 + 30, -- estimated
+	AuthoredWorks = {"upgrade-work-historia-ecclesiastica-venerabilis-bedae"}
+})
 
 DefineCharacter("Nicolas Breakspear", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 126.
 	Name = "Nicolas", -- son of a peasant employed in the Benedictine monastery of Saint Albans in Hertfordshire; was educated by the monks there; later became a cardinal and was sent on a mission to Norway to settle the Church there; was elected Pope in 1154 AD under the title of Hadrian IV
