@@ -1546,7 +1546,7 @@ function AddGrandStrategyBuildingButton(x, y, unit_type)
 	end
 	
 	b = PlayerColorImageButton("", GetFactionData(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "Color"))
-	if (GetProvinceSettlementBuilding(SelectedProvince.Name, unit_type) == false) then -- if not built, make icon gray
+	if (GetProvinceSettlementBuilding(SelectedProvince.Name, old_unit_type) == false) then -- if not built, make icon gray
 		unit_icon = CIcon:Get(GetUnitTypeData(unit_type, "Icon")).GScale
 	else
 		unit_icon = CIcon:Get(GetUnitTypeData(unit_type, "Icon")).G
