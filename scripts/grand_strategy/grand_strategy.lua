@@ -3284,7 +3284,9 @@ function UseBuilding(province, unit_type)
 end
 
 function IsTechnologyAvailable(province, unit_type)
-	if (GetCivilizationClassUnitType(CUpgrade:Get(unit_type).Class, GetProvinceCivilization(province.Name)) ~= unit_type) then
+	if (GetFactionFromName(GetProvinceOwner(province.Name)).Civilization == GetProvinceCivilization(province.Name) and GetFactionClassUnitType(CUpgrade:Get(unit_type).Class, GetProvinceCivilization(province.Name), GetProvinceOwner(province.Name)) ~= unit_type) then
+		return false
+	elseif (GetFactionFromName(GetProvinceOwner(province.Name)).Civilization ~= GetProvinceCivilization(province.Name) and GetCivilizationClassUnitType(CUpgrade:Get(unit_type).Class, GetProvinceCivilization(province.Name)) ~= unit_type) then
 		return false
 	end
 

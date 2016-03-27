@@ -30,7 +30,7 @@ DefineCharacter("Caesar", { -- Source: Heiko Steuer, "Warrior bands, war lords a
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "latin",
-	ProvinceOfOrigin = "Rome", -- correct?
+	ProvinceOfOrigin = "Latium", -- correct?
 	Year = -58, -- De Bello Gallico was written 58-52 BC
 	DeathYear = -58 + 30, -- estimated
 	AuthoredWorks = {"upgrade-work-de-bello-gallico"}
