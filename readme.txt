@@ -66,6 +66,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Grand Strategy
 - Literary works now have a random chance of being created in a province of the appropriate culture (if the province's owner has knowledge of writing). When a literary work is created in a province, it provides a small amount of prestige to the owner of the province.
+- Fixed issue which caused Teuton grand strategy buildings to appear grayed even if already built.
 
 -----------------------------------------------------------------------
 - 2.1.0
