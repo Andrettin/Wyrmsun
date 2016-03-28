@@ -8,8 +8,6 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      ui.lua - Define the user interface
---
 --      (c) Copyright 2000-2016 by Lutz Sammer, Jimmy Salmon and Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
@@ -324,6 +322,80 @@ UI.StatusLine.TextX = 2
 UI.StatusLine.TextY = Video.Height + 2 - 16
 UI.StatusLine.Width = Video.Width - 16 - 2 - 176
 UI.StatusLine.Font = Fonts["game"]
+
+-- gold
+UI.Resources[1].G = CGraphic:New("ui/gold.png", 14, 14)
+UI.Resources[1].IconFrame = 0
+UI.Resources[1].IconX = 154 + 0
+UI.Resources[1].IconY = 0
+UI.Resources[1].TextX = 154 + 0 + 18
+UI.Resources[1].TextY = 1
+
+-- lumber
+UI.Resources[2].G = CGraphic:New("ui/lumber.png", 14, 14)
+UI.Resources[2].IconFrame = 0
+UI.Resources[2].IconX = 154 + 75
+UI.Resources[2].IconY = 0
+UI.Resources[2].TextX = 154 + 75 + 18
+UI.Resources[2].TextY = 1
+
+-- stone
+UI.Resources[5].G = CGraphic:New("ui/stone.png", 14, 14)
+UI.Resources[5].IconFrame = 0
+UI.Resources[5].IconX = 154 + 150
+UI.Resources[5].IconY = 0
+UI.Resources[5].TextX = 154 + 150 + 18
+UI.Resources[5].TextY = 1
+
+-- oil
+--UI.Resources[3].G = CGraphic:New("ui/oil.png", 14, 14)
+--UI.Resources[3].IconFrame = 0
+--UI.Resources[3].IconX = 154 + 150
+--UI.Resources[3].IconY = 0
+--UI.Resources[3].TextX = 154 + 150 + 18
+--UI.Resources[3].TextY = 1
+
+-- coal
+--UI.Resources[6].G = CGraphic:New("ui/coal.png", 14, 14)
+--UI.Resources[6].IconFrame = 0
+--UI.Resources[6].IconX = 154 + 150
+--UI.Resources[6].IconY = 0
+--UI.Resources[6].TextX = 154 + 150 + 18
+--UI.Resources[6].TextY = 1
+
+-- Hide Coal (should not show up in normal scenarios)
+if (UI.Resources[6].G) then
+	UI.Resources[6].G = nil
+end
+UI.Resources[6].TextX = -1
+UI.Resources[6].TextY = -1
+
+-- food
+if (CanAccessFile("ui/food.png")) then
+  UI.Resources[FoodCost].G = CGraphic:New("ui/food.png", 14, 14)
+end
+UI.Resources[FoodCost].IconFrame = 0
+UI.Resources[FoodCost].IconX = Video.Width - 138 - 99 - 26
+UI.Resources[FoodCost].IconY = 0
+UI.Resources[FoodCost].TextX = Video.Width - 138 + 18 - 99 - 26
+UI.Resources[FoodCost].TextY = 1
+
+-- score
+if (CanAccessFile("ui/score.png"))then
+  UI.Resources[ScoreCost].G = CGraphic:New("ui/score.png", 14, 14)
+end
+UI.Resources[ScoreCost].IconFrame = 0
+UI.Resources[ScoreCost].IconX = Video.Width - 68 - 99 - 26
+UI.Resources[ScoreCost].IconY = 0
+UI.Resources[ScoreCost].TextX = Video.Width - 68 + 18 - 99 - 26
+UI.Resources[ScoreCost].TextY = 1
+
+UI.Resources[ManaResCost].G = CGraphic:New("ui/mana_icon.png", 14, 14)
+UI.Resources[ManaResCost].IconFrame = 0
+UI.Resources[ManaResCost].IconX = -100
+UI.Resources[ManaResCost].IconY = -100
+UI.Resources[ManaResCost].TextX = -100
+UI.Resources[ManaResCost].TextY = -100
 
 UI.Resources[GetResourceIdByName("grain")].G = CGraphic:New("ui/grain.png", 14, 14)
 UI.Resources[GetResourceIdByName("grain")].IconFrame = 0
