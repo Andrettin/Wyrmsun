@@ -39,6 +39,9 @@ SetDLCFileEquivalency("dlcs/brising_faction_flair/graphics/buildings/brising_str
 SetDLCFileEquivalency("dlcs/brising_faction_flair/graphics/buildings/brising_smithy.png", "dwarf/buildings/smithy.png")
 SetDLCFileEquivalency("dlcs/brising_faction_flair/graphics/buildings/brising_smithy_shadow.png", "dwarf/buildings/smithy_shadow.png")
 SetDLCFileEquivalency("dlcs/brising_faction_flair/graphics/items/brising_round_shield.png", "dwarf/items/round_shield.png")
+SetDLCFileEquivalency("dlcs/brising_faction_flair/graphics/ui/buttonpanel.png", "dwarf/ui/buttonpanel.png")
+SetDLCFileEquivalency("dlcs/brising_faction_flair/graphics/ui/filler_bottom.png", "dwarf/ui/filler_bottom.png")
+SetDLCFileEquivalency("dlcs/brising_faction_flair/graphics/ui/infopanel.png", "dwarf/ui/infopanel.png")
 
 SetDLCFileEquivalency("dlcs/frankish_faction_flair/graphics/icons/frank_swordsman_blond_hair.png", "teuton/icons/saxon_swordsman_blond_hair.png")
 SetDLCFileEquivalency("dlcs/frankish_faction_flair/graphics/icons/frank_swordsman_brown_hair.png", "teuton/icons/saxon_swordsman_brown_hair.png")
@@ -55,4 +58,7 @@ SetDLCFileEquivalency("dlcs/frankish_faction_flair/graphics/icons/scara_brown_ha
 SetDLCFileEquivalency("dlcs/frankish_faction_flair/graphics/icons/scara_gray_hair.png", "teuton/icons/spearman.png")
 SetDLCFileEquivalency("dlcs/frankish_faction_flair/graphics/icons/scara_red_hair.png", "teuton/icons/spearman.png")
 SetDLCFileEquivalency("dlcs/frankish_faction_flair/graphics/icons/frankish_spatha.png", "teuton/icons/spatha.png")
+SetDLCFileEquivalency("dlcs/frankish_faction_flair/graphics/ui/buttonpanel.png", "germanic/ui/buttonpanel.png")
+SetDLCFileEquivalency("dlcs/frankish_faction_flair/graphics/ui/filler_bottom.png", "germanic/ui/filler_bottom.png")
+SetDLCFileEquivalency("dlcs/frankish_faction_flair/graphics/ui/infopanel.png", "germanic/ui/infopanel.png")
 SetDLCFileEquivalency("dlcs/frankish_faction_flair/graphics/units/frank_horseman_shield.png", "teuton/units/ritter_shield.png")

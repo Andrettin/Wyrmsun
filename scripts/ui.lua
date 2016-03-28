@@ -145,16 +145,6 @@ local max_damage = 	Add(
 UI.InfoPanel.X = 162
 UI.InfoPanel.Y = Video.Height - 186
 
-function AddFiller(file, x, y)
-	if CanAccessFile(file) == true then
-		b = CFiller:new_local()
-		b.G = CGraphic:New(file)
-		b.X = x
-		b.Y = y
-		UI.Fillers:push_back(b)
-	end
-end
-
 b = CUIButton:new()
 b.X = 169
 b.Y = Video.Height - 166

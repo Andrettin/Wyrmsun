@@ -38,12 +38,5 @@ DefineCursor({
 UI.NormalFontColor = "white"
 UI.ReverseFontColor = "yellow"
 
-UI.Fillers:clear()
-
-AddFiller("dwarf/ui/filler_bottom.png", 380, Video.Height - 181)
-AddFiller("dwarf/ui/resource.png", 0, 0)
-AddFiller("dwarf/ui/buttonpanel.png", Video.Width - 256, Video.Height - 200)
-AddFiller("dwarf/ui/infopanel.png", 0, Video.Height - 200)
-
 UI.MenuButton.Style = FindButtonStyle("main-gnome")
 UI.NetworkDiplomacyButton.Style = FindButtonStyle("main-gnome")

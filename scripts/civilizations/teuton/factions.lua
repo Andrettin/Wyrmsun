@@ -42,7 +42,13 @@ DefineFaction("Frank Tribe", {
 	Language = "old-frankish",
 	Colors = {"green", "orange"},
 	DevelopsTo = {"Francia", "Franconia", "Austrasia", "Neustria", "Netherlands"},
-	FactionUpgrade = "upgrade-frank-tribe-faction"
+	FactionUpgrade = "upgrade-frank-tribe-faction",
+	UIFillers = {
+		"dlcs/frankish_faction_flair/graphics/ui/filler_bottom.png", 380, -181,
+		"dwarf/ui/resource.png", 0, 0,
+		"dlcs/frankish_faction_flair/graphics/ui/buttonpanel.png", -256, -200,
+		"dlcs/frankish_faction_flair/graphics/ui/infopanel.png", 0, -200
+	}
 })
 
 DefineFaction("Saxon Tribe", {

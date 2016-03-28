@@ -64,6 +64,10 @@ https://github.com/Andrettin/Wyrmsun
 - 2.1.2
 -----------------------------------------------------------------------
 
+* DLCs
+- Added command panel interface graphics in the Brising Faction Flair Pack (by Jinn).
+- Added command panel interface graphics in the Frankish Faction Flair Pack (by Jinn).
+
 * Units
 - Units will now attack non-predator fauna units that are attacking one of your units (i.e. yales that attacked an unit of yours who got close to it).
 

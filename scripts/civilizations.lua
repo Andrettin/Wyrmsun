@@ -34,6 +34,12 @@ DefineCivilization("neutral", {
 		"attack", "icon-dwarven-battle-axe",
 		"patrol", "icon-dwarven-patrol-land",
 		"stand-ground", "icon-dwarven-stand-ground"
+	},
+	UIFillers = {
+		"dwarf/ui/filler_bottom.png", 380, -181,
+		"dwarf/ui/resource.png", 0, 0,
+		"dwarf/ui/buttonpanel.png", -256, -200,
+		"dwarf/ui/infopanel.png", 0, -200
 	}
 })
 
@@ -70,6 +76,12 @@ DefineCivilization("dwarf", {
 		"attack", "icon-dwarven-battle-axe",
 		"patrol", "icon-dwarven-patrol-land",
 		"stand-ground", "icon-dwarven-stand-ground"
+	},
+	UIFillers = {
+		"dwarf/ui/filler_bottom.png", 380, -181,
+		"dwarf/ui/resource.png", 0, 0,
+		"dwarf/ui/buttonpanel.png", -256, -200,
+		"dwarf/ui/infopanel.png", 0, -200
 	}
 })
 
@@ -94,6 +106,12 @@ DefineCivilization("elf", {
 		"attack", "icon-germanic-short-sword",
 		"patrol", "icon-germanic-patrol-land",
 		"stand-ground", "icon-germanic-stand-ground"
+	},
+	UIFillers = {
+		"germanic/ui/filler_bottom.png", 380, -181,
+		"germanic/ui/resource.png", 0, 0,
+		"germanic/ui/buttonpanel.png", -256, -200,
+		"germanic/ui/infopanel.png", 0, -200
 	}
 })
 
@@ -120,6 +138,12 @@ DefineCivilization("germanic", {
 		"attack", "icon-germanic-short-sword",
 		"patrol", "icon-germanic-patrol-land",
 		"stand-ground", "icon-germanic-stand-ground"
+	},
+	UIFillers = {
+		"germanic/ui/filler_bottom.png", 380, -181,
+		"germanic/ui/resource.png", 0, 0,
+		"germanic/ui/buttonpanel.png", -256, -200,
+		"germanic/ui/infopanel.png", 0, -200
 	}
 })
 
@@ -162,6 +186,12 @@ DefineCivilization("goblin", {
 		"attack", "icon-spear",
 		"patrol", "icon-gnomish-patrol-land",
 		"stand-ground", "icon-dwarven-stand-ground"
+	},
+	UIFillers = {
+		"dwarf/ui/filler_bottom.png", 380, -181,
+		"dwarf/ui/resource.png", 0, 0,
+		"dwarf/ui/buttonpanel.png", -256, -200,
+		"dwarf/ui/infopanel.png", 0, -200
 	}
 })
 
@@ -191,6 +221,12 @@ DefineCivilization("orc", {
 		"attack", "icon-dwarven-battle-axe",
 		"patrol", "icon-dwarven-patrol-land",
 		"stand-ground", "icon-dwarven-stand-ground"
+	},
+	UIFillers = {
+		"dwarf/ui/filler_bottom.png", 380, -181,
+		"dwarf/ui/resource.png", 0, 0,
+		"dwarf/ui/buttonpanel.png", -256, -200,
+		"dwarf/ui/infopanel.png", 0, -200
 	}
 })
 

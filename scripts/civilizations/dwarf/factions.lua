@@ -34,6 +34,12 @@ DefineFaction("Brising Clan", {
 	ButtonIcons = {
 		"stop", "icon-brising-round-shield"
 	},
+	UIFillers = {
+		"dlcs/brising_faction_flair/graphics/ui/filler_bottom.png", 380, -181,
+		"dwarf/ui/resource.png", 0, 0,
+		"dlcs/brising_faction_flair/graphics/ui/buttonpanel.png", -256, -200,
+		"dlcs/brising_faction_flair/graphics/ui/infopanel.png", 0, -200
+	},
 	Description = _("The Brising clan is one of the first dwarven clans ever known. It made its home in Svarinshaug, where they tamed the fierce forces of nature.")
 })
 
