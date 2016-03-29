@@ -355,6 +355,9 @@ UI.Resources[GetResourceIdByName("prestige")].IconFrame = 0
 UI.Resources[GetResourceIdByName("prestige")].IconX = Video.Width
 UI.Resources[GetResourceIdByName("prestige")].IconY = Video.Height
 
+UI.TimePanel.X = Video.Width * 50 / 100
+UI.TimePanel.Y = 1
+
 UI.MenuButton.X = 26
 UI.MenuButton.Y = 1
 UI.MenuButton.Text = "Menu (~<F10~>)"
