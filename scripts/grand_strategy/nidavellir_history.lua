@@ -71,7 +71,6 @@ if (GrandStrategyYear >= -3000) then
 	SetProvinceHero("Svarinshaug", "Modsognir", 2) 
 	SetFactionRuler("dwarf", "Brising Clan", "Modsognir")
 	SetProvinceHero("Svarinshaug", "Durin", 2)
-	SetProvinceUnitQuantity("Svarinshaug", "unit-brising-miner", 4)
 	
 	-- give plow technology to the dwarven factions
 	SetFactionTechnology("dwarf", "Brising Clan", "upgrade-dwarven-wood-plow", true)
@@ -105,7 +104,6 @@ if (GrandStrategyYear >= -1) then
 	GrandStrategyEvents.TheShinsplitterClan = nil
 	GrandStrategyEvents.TheShorbearClan = nil
 	SetProvinceOwner("Caverns of Chaincolt", "dwarf", "Norlund Clan")
-	SetProvinceUnitQuantity("Caverns of Chaincolt", "unit-dwarven-miner", 4)
 	SetProvinceSettlementBuilding("Caverns of Chaincolt", "unit-dwarven-town-hall", true)
 	SetProvinceSettlementBuilding("Caverns of Chaincolt", "unit-dwarven-barracks", true) -- has capability to train warriors
 	SetProvinceSettlementBuilding("Caverns of Chaincolt", "unit-dwarven-smithy", true) -- Durstorn has runesmiths under his employ
@@ -123,7 +121,6 @@ if (GrandStrategyYear >= -1) then
 	SetProvinceUnitQuantity("Shorbear Hills", "unit-goblin-spearman", 0)
 	SetProvinceUnitQuantity("Shorbear Hills", "unit-dwarven-thane", 1) -- Glonoin
 	SetFactionRuler("dwarf", "Shorbear Clan", "Glonoin")
-	SetProvinceUnitQuantity("Shorbear Hills", "unit-dwarven-miner", 4)
 	SetWorldMapResourceProspected("gold", 34, 14, true)
 	SetProvinceOwner("Southern Tunnels", "dwarf", "Shinsplitter Clan")
 	SetProvinceSettlementBuilding("Southern Tunnels", "unit-dwarven-town-hall", true)
@@ -131,7 +128,6 @@ if (GrandStrategyYear >= -1) then
 	SetProvinceUnitQuantity("Southern Tunnels", "unit-goblin-spearman", 0)
 	SetProvinceUnitQuantity("Southern Tunnels", "unit-dwarven-steelclad", 3) -- Glildur, Glindur, Kalnar
 	SetProvinceUnitQuantity("Southern Tunnels", "unit-dwarven-thane", 5) -- Lyndar, Gaenlar, Glinan, Crintil, Aendan
-	SetProvinceUnitQuantity("Southern Tunnels", "unit-dwarven-miner", 4)
 	SetWorldMapResourceProspected("gold", 32, 13, true)
 
 	-- bronze age technologies had already been obtained by the dwarves by this point
@@ -278,7 +274,6 @@ if (GrandStrategyYear >= 400) then
 	SetProvinceSettlementBuilding("Kal Kartha", "unit-dwarven-barracks", true)
 	SetProvinceUnitQuantity("Kal Kartha", "unit-gnomish-recruit", 0)
 	SetWorldMapResourceProspected("gold", 46, 5, true)
-	SetProvinceUnitQuantity("Kal Kartha", "unit-dwarven-miner", 4)
 	SetFactionTechnology("dwarf", "Kal Kartha", "upgrade-dwarven-runewriting", true) -- polities require writing
 
 	SetProvinceOwner("Lyr", "dwarf", "Lyr") -- The Lordship of Lyr was founded around the same time as the other lordships
@@ -286,7 +281,6 @@ if (GrandStrategyYear >= 400) then
 	SetProvinceSettlementBuilding("Lyr", "unit-dwarven-barracks", true)
 	SetProvinceUnitQuantity("Lyr", "unit-dwarven-axefighter", 0)
 	SetWorldMapResourceProspected("gold", 51, 15, true)
-	SetProvinceUnitQuantity("Lyr", "unit-dwarven-miner", 4)
 	SetFactionTechnology("dwarf", "Lyr", "upgrade-dwarven-runewriting", true) -- polities require writing
 	
 	SetProvinceOwner("Joruvellir", "dwarf", "Joruvellir") -- The Lordship of Joruvellir may have been founded at the same time as the other lordships

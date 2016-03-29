@@ -28,10 +28,9 @@ Features:
 - Persistent heroes, who carry over their level, abilities and items throughout scenarios
 - Possibility to create your own custom persistent heroes
 - Normal, magic-enchanted and unique items drop from enemies
-- Cave, Conifer Forest, Dungeon, Fairlimbed Forest and Swamp tilesets
 - Dozens of maps of real and fictional locations to choose from, as well as random maps
 - Living environment, with fauna reproduction and predation
-- Very moddable game, with mod-loading capability built in
+- Very moddable game, with a built-in mod editor and Steam Workshop integration
 - Grand strategy mode, where production is resolved on the strategic (world map) level, while battles are resolved on the tactical level
 - In-game encyclopedia, allowing players to learn more about the units, buildings and other elements of the game, as well as their historical and mythological sources of inspiration
 
@@ -71,6 +70,8 @@ https://github.com/Andrettin/Wyrmsun
 * Grand Strategy
 - At the start of the game, if a province has more workers than it can feed, that quantity will be automatically reduced to the maximum number of workers the province can feed.
 - Fixed issue which caused factions to generate names for tiles even if their language was the same as their civilization's.
+- Provinces owned by factions at game start now begin with at least four workers (if it can feed that many).
+- Provinces owned by factions at game start now begin with at least two infantry units.
 
 * Units
 - Units will now attack non-predator fauna units that are attacking one of your units (i.e. yales that attacked an unit of yours who got close to it).
