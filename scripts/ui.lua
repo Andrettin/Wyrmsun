@@ -1069,10 +1069,16 @@ if not (ui_loaded_first_time) then
 		MinWidth = 128,
 		DefaultFont = wyr.preferences.PopupDescriptionFont,
 		Contents = {
-				{	HighlightColor = "yellow",
+				{	Condition = {Affixed = "false", Unique = "false"}, HighlightColor = "yellow",
 					More = {"ButtonInfo", {InfoType = "Hint", Font = PopupFont}}
 				}, 
-				{ 	Margin = {1, 1},
+				{	Condition = {Affixed = "only", Unique = "false"}, TextColor = "light-blue", HighlightColor = "yellow",
+					More = {"ButtonInfo", {InfoType = "Hint", Font = PopupFont}}
+				}, 
+				{	Condition = {Unique = "only"}, TextColor = "fire", HighlightColor = "yellow",
+					More = {"ButtonInfo", {InfoType = "Hint", Font = PopupFont}}
+				}, 
+				{ 	Condition = {Opponent = "false", Neutral = "false"}, Margin = {1, 1},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				}, 
 				{ 	Condition = {ButtonAction = "editor-unit"}, HighlightColor = "yellow",
@@ -1087,25 +1093,31 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {ButtonAction = "train-unit"}, Margin = {1, 1},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
-				{ 	Condition = {Mercenary = "false"}, HighlightColor = "yellow",
+				{ 	Condition = {Class = true, ButtonAction = "train-unit"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Class: "), TypeClass("Type")), Font = wyr.preferences.PopupDescriptionFont}}
 				},
-				{ 	Condition = {Mercenary = "only"}, HighlightColor = "yellow",
+				{ 	Condition = {Class = true, ButtonAction = "editor-unit"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = Concat(_("Class: "), TypeClass("Type")), Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {Mercenary = "only", ButtonAction = "train-unit"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Troop Quantity: "), String(TypeTrainQuantity("Type"))), Font = wyr.preferences.PopupDescriptionFont}}
 				},
-				{ 	Condition = {HitPoints = "only"}, HighlightColor = "yellow",
+				{ 	Condition = {Mercenary = "only", ButtonAction = "editor-unit"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = Concat(_("Troop Quantity: "), String(TypeTrainQuantity("Type"))), Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {HitPoints = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Hit Points: "), Variable = "HitPoints", Font = wyr.preferences.PopupDescriptionFont}}
 				},
-				{ 	HighlightColor = "yellow",
+				{ 	Condition = {Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Armor: "), Variable = "Armor", Font = wyr.preferences.PopupDescriptionFont}}
 				},
-				{ 	Condition = {SightRange = "only"}, HighlightColor = "yellow",
+				{ 	Condition = {SightRange = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Sight: "), Variable = "SightRange", Font = wyr.preferences.PopupDescriptionFont}}
 				},
-				{ 	Condition = {AttackRange = "only", BasicDamage = "only"}, HighlightColor = "yellow",
+				{ 	Condition = {AttackRange = "only", BasicDamage = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Range: "), Variable = "AttackRange", Font = wyr.preferences.PopupDescriptionFont}}
 				},
-				{ 	Condition = {BasicDamage = "only"}, HighlightColor = "yellow",
+				{ 	Condition = {BasicDamage = "only", ButtonAction = "train-unit"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(
 						_("Damage: "),
 						String(
@@ -1160,38 +1172,178 @@ if not (ui_loaded_first_time) then
 						)
 					), Font = wyr.preferences.PopupDescriptionFont}}
 				},
-				{ 	Condition = {Accuracy = "only"}, HighlightColor = "yellow",
+				{ 	Condition = {BasicDamage = "only", ButtonAction = "editor-unit"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = Concat(
+						_("Damage: "),
+						String(
+							Div(
+								Add(
+									Add(
+										Add(
+											TypeVar("PiercingDamage","Value"), TypeVar("BasicDamage","Value")
+										),
+										Add(
+											TypeVar("FireDamage","Value"), TypeVar("ColdDamage","Value")
+										)
+									),
+									Add(
+										Add(
+											TypeVar("ArcaneDamage","Value"), TypeVar("LightningDamage","Value")
+										),
+										Add(
+											Add(
+												TypeVar("AirDamage","Value"), TypeVar("EarthDamage","Value")
+											),
+											TypeVar("WaterDamage","Value")
+										)
+									)
+								),
+								2
+							)
+						),
+						"-",
+						String(
+							Add(
+								Add(
+									Add(
+										TypeVar("PiercingDamage","Value"), TypeVar("BasicDamage","Value")
+									),
+									Add(
+										TypeVar("FireDamage","Value"), TypeVar("ColdDamage","Value")
+									)
+								),
+								Add(
+									Add(
+										TypeVar("ArcaneDamage","Value"), TypeVar("LightningDamage","Value")
+									),
+									Add(
+										Add(
+											TypeVar("AirDamage","Value"), TypeVar("EarthDamage","Value")
+										),
+										TypeVar("WaterDamage","Value")
+									)
+								)
+							)
+						)
+					), Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {BasicDamage = "only", ButtonAction = "unit", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = Concat(
+						_("Damage: "),
+						String(
+							Div(
+								Add(
+									Add(
+										Add(
+											UnitVar("PiercingDamage","Value"), UnitVar("BasicDamage","Value")
+										),
+										Add(
+											UnitVar("FireDamage","Value"), UnitVar("ColdDamage","Value")
+										)
+									),
+									Add(
+										Add(
+											UnitVar("ArcaneDamage","Value"), UnitVar("LightningDamage","Value")
+										),
+										Add(
+											Add(
+												UnitVar("AirDamage","Value"), UnitVar("EarthDamage","Value")
+											),
+											UnitVar("WaterDamage","Value")
+										)
+									)
+								),
+								2
+							)
+						),
+						"-",
+						String(
+							Add(
+								Add(
+									Add(
+										UnitVar("PiercingDamage","Value"), UnitVar("BasicDamage","Value")
+									),
+									Add(
+										UnitVar("FireDamage","Value"), UnitVar("ColdDamage","Value")
+									)
+								),
+								Add(
+									Add(
+										UnitVar("ArcaneDamage","Value"), UnitVar("LightningDamage","Value")
+									),
+									Add(
+										Add(
+											UnitVar("AirDamage","Value"), UnitVar("EarthDamage","Value")
+										),
+										UnitVar("WaterDamage","Value")
+									)
+								)
+							)
+						)
+					), Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {Accuracy = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Accuracy: "), Variable = "Accuracy", Font = wyr.preferences.PopupDescriptionFont}}
 				},
-				{ 	Condition = {Evasion = "only"}, HighlightColor = "yellow",
+				{ 	Condition = {Evasion = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Evasion: "), Variable = "Evasion", Font = wyr.preferences.PopupDescriptionFont}}
 				},
-				{ 	Condition = {Backstab = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(_("Backstab Bonus: "), String(TypeVar("Backstab","Value")), "%"), Font = wyr.preferences.PopupDescriptionFont}}
+				{ 	Condition = {Backstab = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Backstab Bonus: "), Variable = "Backstab", Font = wyr.preferences.PopupDescriptionFont}}
 				},
-				{ 	Condition = {BonusAgainstMounted = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(_("Bonus vs. Mounted: "), String(TypeVar("BonusAgainstMounted","Value")), "%"), Font = wyr.preferences.PopupDescriptionFont}}
+				{ 	Condition = {BonusAgainstMounted = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Bonus vs. Mounted: "), Variable = "BonusAgainstMounted", Font = wyr.preferences.PopupDescriptionFont}}
 				},
-				{ 	Condition = {BonusAgainstAir = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(_("Bonus vs. Air: "), String(TypeVar("BonusAgainstAir","Value")), "%"), Font = wyr.preferences.PopupDescriptionFont}}
+				{ 	Condition = {BonusAgainstAir = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Bonus vs. Air: "), Variable = "BonusAgainstAir", Font = wyr.preferences.PopupDescriptionFont}}
 				},
-				{ 	Condition = {BonusAgainstGiants = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(_("Bonus vs. Giants: "), String(TypeVar("BonusAgainstGiants","Value")), "%"), Font = wyr.preferences.PopupDescriptionFont}}
+				{ 	Condition = {BonusAgainstGiants = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Bonus vs. Giants: "), Variable = "BonusAgainstGiants", Font = wyr.preferences.PopupDescriptionFont}}
 				},
-				{ 	Condition = {BonusAgainstDragons = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(_("Bonus vs. Dragons: "), String(TypeVar("BonusAgainstDragons","Value")), "%"), Font = wyr.preferences.PopupDescriptionFont}}
+				{ 	Condition = {BonusAgainstDragons = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Bonus vs. Dragons: "), Variable = "BonusAgainstDragons", Font = wyr.preferences.PopupDescriptionFont}}
 				},
-				{ 	Condition = {BonusAgainstBuildings = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(_("Bonus vs. Buildings: "), String(TypeVar("BonusAgainstBuildings","Value")), "%"), Font = wyr.preferences.PopupDescriptionFont}}
+				{ 	Condition = {BonusAgainstBuildings = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Bonus vs. Buildings: "), Variable = "BonusAgainstBuildings", Font = wyr.preferences.PopupDescriptionFont}}
 				},
-				{ 	Condition = {FireResistance = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(_("Fire Resistance: "), String(TypeVar("FireResistance","Value")), "%"), Font = wyr.preferences.PopupDescriptionFont}}
+				{ 	Condition = {FireResistance = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Fire Resistance: "), Variable = "FireResistance", Font = wyr.preferences.PopupDescriptionFont}}
 				},
-				{ 	Condition = {AttackFromTransporter = "only", BasicDamage = "false"}, HighlightColor = "yellow",
+				{ 	Condition = {ColdResistance = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Cold Resistance: "), Variable = "ColdResistance", Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {ArcaneResistance = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Arcane Resistance: "), Variable = "ArcaneResistance", Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {LightningResistance = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Lightning Resistance: "), Variable = "LightningResistance", Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {AirResistance = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Air Resistance: "), Variable = "AirResistance", Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {EarthResistance = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Earth Resistance: "), Variable = "EarthResistance", Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {WaterResistance = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Water Resistance: "), Variable = "WaterResistance", Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {HackResistance = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Hack Resistance: "), Variable = "HackResistance", Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {PierceResistance = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Pierce Resistance: "), Variable = "PierceResistance", Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {BluntResistance = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Blunt Resistance: "), Variable = "BluntResistance", Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {AttackFromTransporter = "only", BasicDamage = "false", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Transport: "), String(TypeVar("Transport", "Max"))), Font = wyr.preferences.PopupDescriptionFont}}
 				},
-				{ 	Condition = {AttackRange = "only", AttackFromTransporter = "only", BasicDamage = "false"}, HighlightColor = "yellow",
+				{ 	Condition = {AttackRange = "only", AttackFromTransporter = "only", BasicDamage = "false", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Range Bonus: +"), Variable = "AttackRange", Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {Speed = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Speed: "), Variable = "Speed", Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				-- Description
 				{ 	Margin = {1, 1}, Condition = {ButtonAction = "editor-unit"}, 
@@ -1206,6 +1358,18 @@ if not (ui_loaded_first_time) then
 				}, 
 				{ 	Condition = {HasDescription = true}, HighlightColor = "yellow",
 					More = {"ButtonInfo", {InfoType = "Description", MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Margin = {1, 1}, Condition = {ButtonAction = "unit"}, 
+					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
+				}, 
+				{ 	Condition = {ButtonAction = "unit"}, HighlightColor = "yellow",
+					More = {"Text", {Text = _("Left-click to center"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {ButtonAction = "unit"}, HighlightColor = "yellow",
+					More = {"Text", {Text = _("Middle-click to track"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {Encyclopedia = true, ButtonAction = "unit"}, HighlightColor = "yellow",
+					More = {"Text", {Text = _("Right-click to see encyclopedia"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 				},
 		}	
 	})

@@ -354,245 +354,7 @@ function addEncyclopediaIcon(unit_name, state, menu, x, y)
 		function()
 			PlaySound("click")
 			
-			if (RunningScenario == false) then
-				if not (IsMusicPlaying()) then
-					PlayMusicName("MenuTheme")
-				end
-			end
-
-			local encyclopedia_entry_menu = WarMenu(nil, GetBackground(GetUnitBackground(unit_name, state)))
-			local offx = (Video.Width - 640) / 2
-			local offy = (Video.Height - 480) / 2
-
-			if (string.find(unit_name, "prefix") == nil and string.find(unit_name, "suffix") == nil) then
-				local encyclopedia_entry_menu_image = PlayerColorImageWidget(encyclopedia_icon, playercolor)
-				encyclopedia_entry_menu_image:setImageOrigin(encyclopedia_icon_x_origin, encyclopedia_icon_y_origin)
-				encyclopedia_entry_menu:add(encyclopedia_entry_menu_image, (Video.Width / 2) - 23, offy + 104 + 36*-1)
-			end
-			encyclopedia_entry_menu:addLabel("~<" .. tooltip_name .. "~>", offx + 320, offy + 104 + 36*-2, nil, true)
-
-			local l = MultiLineLabel()
-			l:setFont(Fonts["game"])
-			l:setSize(Video.Width - 64, Video.Height / 2)
-			l:setLineWidth(Video.Width - 64)
-			encyclopedia_entry_menu:add(l, 32, offy + 104 + 36*0 + 18)
-			local civilization = ""
-			local faction = ""
-			local unit_type_type = ""
-			local unit_type_class = ""
-			local description = ""
-			local effects = ""
-			local applies_to = ""
-			local droppers_string = ""
-			local quote = ""
-			local background = ""
-			if (string.find(unit_name, "unit") ~= nil) then
-				if (GetUnitTypeData(unit_name, "Civilization") ~= "") then
-					civilization = "Civilization: " .. _(CapitalizeString(GetUnitTypeData(unit_name, "Civilization"))) .. "\n\n"
-				end
-				if (GetUnitTypeData(unit_name, "Faction") ~= "") then
-					faction = "Faction: " .. _(CapitalizeString(GetUnitTypeData(unit_name, "Faction"))) .. "\n\n"
-				end
-				if (GetUnitTypeData(unit_name, "Class") ~= "") then
-					unit_type_class = "Class: " .. _(FullyCapitalizeString(string.gsub(GetUnitTypeData(unit_name, "Class"), "-", " "))) .. "\n\n"
-				end
-				if (GetUnitTypeData(unit_name, "Description") ~= "") then
-					description = "Description: " .. GetUnitTypeData(unit_name, "Description") .. "\n\n"
-				end
-				if (GetUnitTypeData(unit_name, "Quote") ~= "") then
-					quote = "Quote: " .. GetUnitTypeData(unit_name, "Quote") .. "\n\n"
-				end
-				if (GetUnitTypeData(unit_name, "Item") and GetItemEffectsString(unit_name) ~= "") then
-					effects = "Effects: " .. GetItemEffectsString(unit_name) .. ".\n\n"
-				end
-				if (GetUnitTypeData(unit_name, "Item") and table.getn(GetUnitTypeData(unit_name, "Droppers")) > 0) then
-					droppers_string = "Dropped By: "
-					local droppers = GetUnitTypeData(unit_name, "Droppers")
-					local first_dropper = true
-					for i=1,table.getn(droppers) do
-						if (string.find(droppers[i], "template") == nil and GetUnitTypeData(droppers[i], "Mercenary") == false and GetUnitTypeData(droppers[i], "Civilization") ~= "elf" and GetUnitTypeData(droppers[i], "Civilization") ~= "orc") then
-							if not (first_dropper) then
-								droppers_string = droppers_string .. ", "
-							else
-								first_dropper = false
-							end
-							droppers_string = droppers_string .. GetUnitTypeData(droppers[i], "Name")
-							if (GetUnitTypeData(droppers[i], "Civilization") ~= "" and GetUnitTypeData(droppers[i], "Faction") ~= "") then
-								droppers_string = droppers_string .. " (" .. CapitalizeString(GetUnitTypeData(droppers[i], "Civilization")) .. ": " .. GetUnitTypeData(droppers[i], "Faction") .. ")"
-							elseif (GetUnitTypeData(droppers[i], "Civilization") ~= "") then
-								droppers_string = droppers_string .. " (" .. CapitalizeString(GetUnitTypeData(droppers[i], "Civilization")) .. ")"
-							end
-						end
-					end
-					droppers_string = droppers_string .. "."
-				end
-				if (GetUnitTypeData(unit_name, "Background") ~= "") then
-					background = "Background: " .. GetUnitTypeData(unit_name, "Background") .. "\n\n"
-				end
-			elseif (string.find(unit_name, "upgrade") ~= nil) then
-				if (CUpgrade:Get(unit_name).Civilization ~= "") then
-					civilization = "Civilization: " .. CapitalizeString(CUpgrade:Get(unit_name).Civilization) .. "\n\n"
-				end
-				if (CUpgrade:Get(unit_name).Faction ~= "") then
-					faction = "Faction: " .. CUpgrade:Get(unit_name).Faction .. "\n\n"
-				end
-				if (CUpgrade:Get(unit_name).Class ~= "") then
-					unit_type_class = "Class: " .. _(FullyCapitalizeString(string.gsub(CUpgrade:Get(unit_name).Class, "-", " "))) .. "\n\n"
-				end
-				if (CUpgrade:Get(unit_name).Description ~= "") then
-					description = "Description: " .. CUpgrade:Get(unit_name).Description .. "\n\n"
-				end
-				if (CUpgrade:Get(unit_name).Quote ~= "") then
-					quote = "Quote: " .. CUpgrade:Get(unit_name).Quote .. "\n\n"
-				end
-				if (string.find(unit_name, "prefix") ~= nil or string.find(unit_name, "suffix") ~= nil) then
-					effects = "Effects: " .. GetUpgradeEffectsString(unit_name) .. ".\n\n"
-					applies_to = "Available For: "
-					local applies_to_items = GetUpgradeData(unit_name, "AppliesTo")
-					table.sort(applies_to_items)
-					for i=1,table.getn(applies_to_items) do
-						if (i > 1) then
-							applies_to = applies_to .. ", "
-						end
-						if (string.find(applies_to_items[i], "unit") ~= nil) then
-							applies_to = applies_to .. _(GetUnitTypeData(applies_to_items[i], "Name"))
-						else
-							applies_to = applies_to .. _(FullyCapitalizeString(string.gsub(applies_to_items[i], "-", " ")))
-						end
-						if (string.sub(applies_to_items[i], -1) ~= "s") then
-							applies_to = applies_to .. "s"
-						end
-					end
-					applies_to = applies_to .. ".\n\n"
-				end
-				if (string.find(unit_name, "prefix") ~= nil or string.find(unit_name, "suffix") ~= nil) then
-					local droppers = GetUpgradeData(unit_name, "Droppers")
-					if (table.getn(droppers) > 0) then
-						droppers_string = "Dropped By: "
-						local first_dropper = true
-						for i=1,table.getn(droppers) do
-							if (string.find(droppers[i], "template") == nil and GetUnitTypeData(droppers[i], "Mercenary") == false and GetUnitTypeData(droppers[i], "Civilization") ~= "elf" and GetUnitTypeData(droppers[i], "Civilization") ~= "orc") then
-								if not (first_dropper) then
-									droppers_string = droppers_string .. ", "
-								else
-									first_dropper = false
-								end
-								droppers_string = droppers_string .. GetUnitTypeData(droppers[i], "Name")
-								if (GetUnitTypeData(droppers[i], "Civilization") ~= "" and GetUnitTypeData(droppers[i], "Faction") ~= "") then
-									droppers_string = droppers_string .. " (" .. CapitalizeString(GetUnitTypeData(droppers[i], "Civilization")) .. ": " .. GetUnitTypeData(droppers[i], "Faction") .. ")"
-								elseif (GetUnitTypeData(droppers[i], "Civilization") ~= "") then
-									droppers_string = droppers_string .. " (" .. CapitalizeString(GetUnitTypeData(droppers[i], "Civilization")) .. ")"
-								end
-							end
-						end
-						droppers_string = droppers_string .. ".\n\n"
-					end
-				end
-				if (CUpgrade:Get(unit_name).Background ~= "") then
-					background = "Background: " .. CUpgrade:Get(unit_name).Background .. "\n\n"
-				end
-			elseif (state == "heroes") then
-				if (GetCharacterData(unit_name, "Civilization") ~= "") then
-					civilization = "Civilization: " .. _(CapitalizeString(GetCharacterData(unit_name, "Civilization"))) .. "\n\n"
-				end
-				if (GetCharacterData(unit_name, "Faction") ~= "") then
-					faction = "Faction: " .. _(CapitalizeString(GetCharacterData(unit_name, "Faction"))) .. "\n\n"
-				end
-				if (GetCharacterData(unit_name, "Type") ~= "") then
-					unit_type_type = "Type: " .. _(GetUnitTypeData(GetCharacterData(unit_name, "Type"), "Name")) .. "\n\n"
-				end
-				if (GetUnitTypeData(GetCharacterData(unit_name, "Type"), "Class") ~= "") then
-					unit_type_class = "Class: " .. _(FullyCapitalizeString(string.gsub(GetUnitTypeData(GetCharacterData(unit_name, "Type"), "Class"), "-", " "))) .. "\n\n"
-				end
-				if (GetCharacterData(unit_name, "Description") ~= "") then
-					description = "Description: " .. GetCharacterData(unit_name, "Description") .. "\n\n"
-				end
-				if (GetCharacterData(unit_name, "Quote") ~= "") then
-					quote = "Quote: " .. GetCharacterData(unit_name, "Quote") .. "\n\n"
-				end
-				if (GetCharacterData(unit_name, "Background") ~= "") then
-					background = "Background: " .. GetCharacterData(unit_name, "Background") .. "\n\n"
-				end
-			elseif (state == "unique_items") then
-				if (GetUniqueItemData(unit_name, "Type") ~= "") then
-					unit_type_type = "Type: " .. _(GetUnitTypeData(GetUniqueItemData(unit_name, "Type"), "Name")) .. "\n\n"
-				end
-				if (GetUnitTypeData(GetUniqueItemData(unit_name, "Type"), "Class") ~= "") then
-					unit_type_class = "Class: " .. _(FullyCapitalizeString(string.gsub(GetUnitTypeData(GetUniqueItemData(unit_name, "Type"), "Class"), "-", " "))) .. "\n\n"
-				end
-				if (GetUniqueItemData(unit_name, "Description") ~= "") then
-					description = "Description: " .. GetUniqueItemData(unit_name, "Description") .. "\n\n"
-				end
-				if (GetUniqueItemEffectsString(unit_name) ~= "") then
-					effects = "Effects: " .. GetUniqueItemEffectsString(unit_name) .. ".\n\n"
-				end
-				if (GetUniqueItemData(unit_name, "Quote") ~= "") then
-					quote = "Quote: " .. GetUniqueItemData(unit_name, "Quote") .. "\n\n"
-				end
-				if (table.getn(GetUniqueItemData(unit_name, "Droppers")) > 0) then
-					droppers_string = "Dropped By: "
-					local droppers = GetUniqueItemData(unit_name, "Droppers")
-					local first_dropper = true
-					for i=1,table.getn(droppers) do
-						if (string.find(droppers[i], "template") == nil and GetUnitTypeData(droppers[i], "Mercenary") == false and GetUnitTypeData(droppers[i], "Civilization") ~= "elf" and GetUnitTypeData(droppers[i], "Civilization") ~= "orc") then
-							if not (first_dropper) then
-								droppers_string = droppers_string .. ", "
-							else
-								first_dropper = false
-							end
-							droppers_string = droppers_string .. GetUnitTypeData(droppers[i], "Name")
-							if (GetUnitTypeData(droppers[i], "Civilization") ~= "" and GetUnitTypeData(droppers[i], "Faction") ~= "") then
-								droppers_string = droppers_string .. " (" .. CapitalizeString(GetUnitTypeData(droppers[i], "Civilization")) .. ": " .. GetUnitTypeData(droppers[i], "Faction") .. ")"
-							elseif (GetUnitTypeData(droppers[i], "Civilization") ~= "") then
-								droppers_string = droppers_string .. " (" .. CapitalizeString(GetUnitTypeData(droppers[i], "Civilization")) .. ")"
-							end
-						end
-					end
-					droppers_string = droppers_string .. ".\n\n"
-				end
-				if (GetUniqueItemData(unit_name, "Background") ~= "") then
-					background = "Background: " .. GetUniqueItemData(unit_name, "Background") .. "\n\n"
-				end
-			end
-			l:setCaption(civilization .. faction .. unit_type_type .. unit_type_class .. description .. quote .. effects .. applies_to .. droppers_string .. background)
-			
-			-- add buttons of texts related to the subject matter of the entry
-			local chapter_references = 0
-			for text_key, text_value in pairsByKeys(Texts, text_compare) do
-				for chapter_key, chapter_value in pairsByKeys(Texts[text_key].Chapters, chapter_compare) do
-					if (string.find(l:getCaption(), "~<" .. Texts[text_key].Chapters[chapter_key].Title .. "~>") ~= nil) then
-						chapter_references = chapter_references + 1
-					end
-				end
-			end
-
-			local chapter_x
-			local chapter_y = 8
-			if (chapter_references == 1) then
-				chapter_x = 0
-			elseif (chapter_references == 2) then
-				chapter_x = -1
-			else
-				chapter_x = -2
-			end
-			for text_key, text_value in pairsByKeys(Texts, text_compare) do
-				for chapter_key, chapter_value in pairsByKeys(Texts[text_key].Chapters, chapter_compare) do
-					if (string.find(l:getCaption(), "~<" .. Texts[text_key].Chapters[chapter_key].Title .. "~>") ~= nil) then
-						if (GetTableSize(Texts[text_key].Chapters) > 1) then
-							encyclopedia_entry_menu:addFullButton(Texts[text_key].Chapters[chapter_key].Title, "", offx + 208 + (113 * chapter_x), offy + 104 + (36 * chapter_y),
-								function() OpenEncyclopediaText(text_key, chapter_key); end)
-						else
-							encyclopedia_entry_menu:addFullButton(Texts[text_key].Chapters[chapter_key].Title, "", offx + 208 + (113 * chapter_x), offy + 104 + (36 * chapter_y),
-								function() OpenEncyclopediaText(text_key); end)
-						end
-						chapter_x = chapter_x + 2
-					end
-				end
-			end
-
-			encyclopedia_entry_menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * 9),
-				function() encyclopedia_entry_menu:stop(); end)
-			encyclopedia_entry_menu:run()
+			OpenEncyclopediaUnitEntry(unit_name, state)
 		end
 	)
 	menu:add(b, x, y)
@@ -612,6 +374,352 @@ function addEncyclopediaIcon(unit_name, state, menu, x, y)
 		b:setBackgroundColor(Color(0,0,0,0))
 	end
 	return b
+end
+
+function OpenEncyclopediaUnitEntry(unit_name, state)
+	if (Texts == nil) then
+		Load("scripts/texts.lua")
+	end
+
+	if (state ~= "heroes" and state ~= "item_prefixes" and state ~= "item_suffixes" and state ~= "runic_suffixes" and state ~= "unique_items") then
+		if (state ~= "technologies" and string.find(unit_name, "upgrade") == nil) then
+			if (
+				(
+					GetUnitTypeData(unit_name, "Description") == ""
+					and GetUnitTypeData(unit_name, "Background") == ""
+					and (GetUnitTypeData(unit_name, "Item") == false or GetUnitTypeData(unit_name, "Class") == "")
+				)
+			) then
+				if (GetUnitTypeData(unit_name, "Parent") ~= "") then
+					OpenEncyclopediaUnitEntry(GetUnitTypeData(unit_name, "Parent"), state)
+				end
+				
+				return;
+			end
+		elseif (state == "technologies" and string.find(unit_name, "unit") == nil) then
+			if (CUpgrade:Get(unit_name).Description == "" and CUpgrade:Get(unit_name).Background == "") then
+				return;
+			end
+		end
+	end
+
+	if (RunningScenario == false) then
+		if not (IsMusicPlaying()) then
+			PlayMusicName("MenuTheme")
+		end
+	end
+
+	local menu = WarMenu(nil, GetBackground(GetUnitBackground(unit_name, state)))
+	local offx = (Video.Width - 640) / 2
+	local offy = (Video.Height - 480) / 2
+
+	local encyclopedia_icon
+	local encyclopedia_icon_frame = 0
+	local civilization
+	local faction
+	local tooltip_name = ""
+	local tooltip_civilization = ""
+	if (string.find(unit_name, "unit") ~= nil) then
+		encyclopedia_icon = CIcon:Get(GetUnitTypeData(unit_name, "Icon")).G
+		encyclopedia_icon_frame = CIcon:Get(GetUnitTypeData(unit_name, "Icon")).Frame
+		civilization = GetUnitTypeData(unit_name, "Civilization")
+		faction = GetUnitTypeData(unit_name, "Faction")
+		tooltip_name = GetUnitTypeData(unit_name, "Name")
+		if (civilization ~= "") then
+			tooltip_civilization = "(" ..  _(CapitalizeString(civilization))
+			if (faction ~= "") then
+				tooltip_civilization = tooltip_civilization ..  ": " .. _(FullyCapitalizeString(string.gsub(faction, "-", " ")))
+			end
+			tooltip_civilization = tooltip_civilization .. ")"
+		end
+	elseif (string.find(unit_name, "upgrade") ~= nil) then
+		if (string.find(unit_name, "prefix") == nil and string.find(unit_name, "suffix") == nil) then
+			encyclopedia_icon = CUpgrade:Get(unit_name).Icon.G
+			encyclopedia_icon_frame = CUpgrade:Get(unit_name).Icon.Frame
+		else
+			encyclopedia_icon = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-large-normal.png")
+			encyclopedia_icon_grayed = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-large-grayed.png")
+		end
+		civilization = CUpgrade:Get(unit_name).Civilization
+		faction = CUpgrade:Get(unit_name).Faction
+		tooltip_name = CUpgrade:Get(unit_name).Name
+		if (civilization ~= "") then
+			tooltip_civilization = "(" ..  _(CapitalizeString(civilization))
+			if (faction ~= "") then
+				tooltip_civilization = tooltip_civilization ..  ": " .. _(FullyCapitalizeString(string.gsub(faction, "-", " ")))
+			end
+			tooltip_civilization = tooltip_civilization .. ")"
+		end
+	elseif (state == "heroes") then
+		encyclopedia_icon = CIcon:Get(GetCharacterData(unit_name, "Icon")).G
+		encyclopedia_icon_frame = CIcon:Get(GetCharacterData(unit_name, "Icon")).Frame
+		civilization = GetCharacterData(unit_name, "Civilization")
+		faction = GetCharacterData(unit_name, "Faction")
+		tooltip_name = GetCharacterData(unit_name, "FullName")
+		if (civilization ~= "") then
+			tooltip_civilization = "(" ..  _(CapitalizeString(civilization))
+			if (faction ~= "") then
+				tooltip_civilization = tooltip_civilization ..  ": " .. _(FullyCapitalizeString(string.gsub(faction, "-", " ")))
+			end
+			tooltip_civilization = tooltip_civilization .. ")"
+		end
+	elseif (state == "unique_items") then
+		encyclopedia_icon = CIcon:Get(GetUnitTypeData(GetUniqueItemData(unit_name, "Type"), "Icon")).G
+		encyclopedia_icon_frame = CIcon:Get(GetUnitTypeData(GetUniqueItemData(unit_name, "Type"), "Icon")).Frame
+		civilization = ""
+		faction = ""
+		tooltip_name = unit_name
+		if (civilization ~= "") then
+			tooltip_civilization = "(" ..  _(CapitalizeString(civilization))
+			if (faction ~= "") then
+				tooltip_civilization = tooltip_civilization ..  ": " .. _(FullyCapitalizeString(string.gsub(faction, "-", " ")))
+			end
+			tooltip_civilization = tooltip_civilization .. ")"
+		end
+	end
+	encyclopedia_icon:Load()
+	local encyclopedia_icon_x_origin = (encyclopedia_icon_frame * encyclopedia_icon:getWidth()) % encyclopedia_icon:getGraphicWidth()
+	local encyclopedia_icon_y_origin = math.floor((encyclopedia_icon_frame * encyclopedia_icon:getWidth()) / encyclopedia_icon:getGraphicWidth()) * encyclopedia_icon:getHeight()
+	local playercolor
+	if (string.find(unit_name, "prefix") == nil and string.find(unit_name, "suffix") == nil) then
+		if (civilization ~= "" and faction ~= "") then
+			playercolor = GetFactionData(civilization, faction, "Color")
+		elseif (civilization ~= "") then
+			playercolor = GetCivilizationData(civilization, "DefaultColor")
+		else
+			playercolor = "gray"
+		end
+	end
+
+	if (string.find(unit_name, "prefix") == nil and string.find(unit_name, "suffix") == nil) then
+		local menu_image = PlayerColorImageWidget(encyclopedia_icon, playercolor)
+		menu_image:setImageOrigin(encyclopedia_icon_x_origin, encyclopedia_icon_y_origin)
+		menu:add(menu_image, (Video.Width / 2) - 23, offy + 104 + 36*-1)
+	end
+	menu:addLabel("~<" .. tooltip_name .. "~>", offx + 320, offy + 104 + 36*-2, nil, true)
+
+	local l = MultiLineLabel()
+	l:setFont(Fonts["game"])
+	l:setSize(Video.Width - 64, Video.Height / 2)
+	l:setLineWidth(Video.Width - 64)
+	menu:add(l, 32, offy + 104 + 36*0 + 18)
+	local civilization = ""
+	local faction = ""
+	local unit_type_type = ""
+	local unit_type_class = ""
+	local description = ""
+	local effects = ""
+	local applies_to = ""
+	local droppers_string = ""
+	local quote = ""
+	local background = ""
+	if (string.find(unit_name, "unit") ~= nil) then
+		if (GetUnitTypeData(unit_name, "Civilization") ~= "") then
+			civilization = "Civilization: " .. _(CapitalizeString(GetUnitTypeData(unit_name, "Civilization"))) .. "\n\n"
+		end
+		if (GetUnitTypeData(unit_name, "Faction") ~= "") then
+			faction = "Faction: " .. _(CapitalizeString(GetUnitTypeData(unit_name, "Faction"))) .. "\n\n"
+		end
+		if (GetUnitTypeData(unit_name, "Class") ~= "") then
+			unit_type_class = "Class: " .. _(FullyCapitalizeString(string.gsub(GetUnitTypeData(unit_name, "Class"), "-", " "))) .. "\n\n"
+		end
+		if (GetUnitTypeData(unit_name, "Description") ~= "") then
+			description = "Description: " .. GetUnitTypeData(unit_name, "Description") .. "\n\n"
+		end
+		if (GetUnitTypeData(unit_name, "Quote") ~= "") then
+			quote = "Quote: " .. GetUnitTypeData(unit_name, "Quote") .. "\n\n"
+		end
+		if (GetUnitTypeData(unit_name, "Item") and GetItemEffectsString(unit_name) ~= "") then
+			effects = "Effects: " .. GetItemEffectsString(unit_name) .. ".\n\n"
+		end
+		if (GetUnitTypeData(unit_name, "Item") and table.getn(GetUnitTypeData(unit_name, "Droppers")) > 0) then
+			droppers_string = "Dropped By: "
+			local droppers = GetUnitTypeData(unit_name, "Droppers")
+			local first_dropper = true
+			for i=1,table.getn(droppers) do
+				if (string.find(droppers[i], "template") == nil and GetUnitTypeData(droppers[i], "Mercenary") == false and GetUnitTypeData(droppers[i], "Civilization") ~= "elf" and GetUnitTypeData(droppers[i], "Civilization") ~= "orc") then
+					if not (first_dropper) then
+						droppers_string = droppers_string .. ", "
+					else
+						first_dropper = false
+					end
+					droppers_string = droppers_string .. GetUnitTypeData(droppers[i], "Name")
+					if (GetUnitTypeData(droppers[i], "Civilization") ~= "" and GetUnitTypeData(droppers[i], "Faction") ~= "") then
+						droppers_string = droppers_string .. " (" .. CapitalizeString(GetUnitTypeData(droppers[i], "Civilization")) .. ": " .. GetUnitTypeData(droppers[i], "Faction") .. ")"
+					elseif (GetUnitTypeData(droppers[i], "Civilization") ~= "") then
+						droppers_string = droppers_string .. " (" .. CapitalizeString(GetUnitTypeData(droppers[i], "Civilization")) .. ")"
+					end
+				end
+			end
+			droppers_string = droppers_string .. "."
+		end
+		if (GetUnitTypeData(unit_name, "Background") ~= "") then
+			background = "Background: " .. GetUnitTypeData(unit_name, "Background") .. "\n\n"
+		end
+	elseif (string.find(unit_name, "upgrade") ~= nil) then
+		if (CUpgrade:Get(unit_name).Civilization ~= "") then
+			civilization = "Civilization: " .. CapitalizeString(CUpgrade:Get(unit_name).Civilization) .. "\n\n"
+		end
+		if (CUpgrade:Get(unit_name).Faction ~= "") then
+			faction = "Faction: " .. CUpgrade:Get(unit_name).Faction .. "\n\n"
+		end
+		if (CUpgrade:Get(unit_name).Class ~= "") then
+			unit_type_class = "Class: " .. _(FullyCapitalizeString(string.gsub(CUpgrade:Get(unit_name).Class, "-", " "))) .. "\n\n"
+		end
+		if (CUpgrade:Get(unit_name).Description ~= "") then
+			description = "Description: " .. CUpgrade:Get(unit_name).Description .. "\n\n"
+		end
+		if (CUpgrade:Get(unit_name).Quote ~= "") then
+			quote = "Quote: " .. CUpgrade:Get(unit_name).Quote .. "\n\n"
+		end
+		if (string.find(unit_name, "prefix") ~= nil or string.find(unit_name, "suffix") ~= nil) then
+			effects = "Effects: " .. GetUpgradeEffectsString(unit_name) .. ".\n\n"
+			applies_to = "Available For: "
+			local applies_to_items = GetUpgradeData(unit_name, "AppliesTo")
+			table.sort(applies_to_items)
+			for i=1,table.getn(applies_to_items) do
+				if (i > 1) then
+					applies_to = applies_to .. ", "
+				end
+				if (string.find(applies_to_items[i], "unit") ~= nil) then
+					applies_to = applies_to .. _(GetUnitTypeData(applies_to_items[i], "Name"))
+				else
+					applies_to = applies_to .. _(FullyCapitalizeString(string.gsub(applies_to_items[i], "-", " ")))
+				end
+				if (string.sub(applies_to_items[i], -1) ~= "s") then
+					applies_to = applies_to .. "s"
+				end
+			end
+			applies_to = applies_to .. ".\n\n"
+		end
+		if (string.find(unit_name, "prefix") ~= nil or string.find(unit_name, "suffix") ~= nil) then
+			local droppers = GetUpgradeData(unit_name, "Droppers")
+			if (table.getn(droppers) > 0) then
+				droppers_string = "Dropped By: "
+				local first_dropper = true
+				for i=1,table.getn(droppers) do
+					if (string.find(droppers[i], "template") == nil and GetUnitTypeData(droppers[i], "Mercenary") == false and GetUnitTypeData(droppers[i], "Civilization") ~= "elf" and GetUnitTypeData(droppers[i], "Civilization") ~= "orc") then
+						if not (first_dropper) then
+							droppers_string = droppers_string .. ", "
+						else
+							first_dropper = false
+						end
+						droppers_string = droppers_string .. GetUnitTypeData(droppers[i], "Name")
+						if (GetUnitTypeData(droppers[i], "Civilization") ~= "" and GetUnitTypeData(droppers[i], "Faction") ~= "") then
+							droppers_string = droppers_string .. " (" .. CapitalizeString(GetUnitTypeData(droppers[i], "Civilization")) .. ": " .. GetUnitTypeData(droppers[i], "Faction") .. ")"
+						elseif (GetUnitTypeData(droppers[i], "Civilization") ~= "") then
+							droppers_string = droppers_string .. " (" .. CapitalizeString(GetUnitTypeData(droppers[i], "Civilization")) .. ")"
+						end
+					end
+				end
+				droppers_string = droppers_string .. ".\n\n"
+			end
+		end
+		if (CUpgrade:Get(unit_name).Background ~= "") then
+			background = "Background: " .. CUpgrade:Get(unit_name).Background .. "\n\n"
+		end
+	elseif (state == "heroes") then
+		if (GetCharacterData(unit_name, "Civilization") ~= "") then
+			civilization = "Civilization: " .. _(CapitalizeString(GetCharacterData(unit_name, "Civilization"))) .. "\n\n"
+		end
+		if (GetCharacterData(unit_name, "Faction") ~= "") then
+			faction = "Faction: " .. _(CapitalizeString(GetCharacterData(unit_name, "Faction"))) .. "\n\n"
+		end
+		if (GetCharacterData(unit_name, "Type") ~= "") then
+			unit_type_type = "Type: " .. _(GetUnitTypeData(GetCharacterData(unit_name, "Type"), "Name")) .. "\n\n"
+		end
+		if (GetUnitTypeData(GetCharacterData(unit_name, "Type"), "Class") ~= "") then
+			unit_type_class = "Class: " .. _(FullyCapitalizeString(string.gsub(GetUnitTypeData(GetCharacterData(unit_name, "Type"), "Class"), "-", " "))) .. "\n\n"
+		end
+		if (GetCharacterData(unit_name, "Description") ~= "") then
+			description = "Description: " .. GetCharacterData(unit_name, "Description") .. "\n\n"
+		end
+		if (GetCharacterData(unit_name, "Quote") ~= "") then
+			quote = "Quote: " .. GetCharacterData(unit_name, "Quote") .. "\n\n"
+		end
+		if (GetCharacterData(unit_name, "Background") ~= "") then
+			background = "Background: " .. GetCharacterData(unit_name, "Background") .. "\n\n"
+		end
+	elseif (state == "unique_items") then
+		if (GetUniqueItemData(unit_name, "Type") ~= "") then
+			unit_type_type = "Type: " .. _(GetUnitTypeData(GetUniqueItemData(unit_name, "Type"), "Name")) .. "\n\n"
+		end
+		if (GetUnitTypeData(GetUniqueItemData(unit_name, "Type"), "Class") ~= "") then
+			unit_type_class = "Class: " .. _(FullyCapitalizeString(string.gsub(GetUnitTypeData(GetUniqueItemData(unit_name, "Type"), "Class"), "-", " "))) .. "\n\n"
+		end
+		if (GetUniqueItemData(unit_name, "Description") ~= "") then
+			description = "Description: " .. GetUniqueItemData(unit_name, "Description") .. "\n\n"
+		end
+		if (GetUniqueItemEffectsString(unit_name) ~= "") then
+			effects = "Effects: " .. GetUniqueItemEffectsString(unit_name) .. ".\n\n"
+		end
+		if (GetUniqueItemData(unit_name, "Quote") ~= "") then
+			quote = "Quote: " .. GetUniqueItemData(unit_name, "Quote") .. "\n\n"
+		end
+		if (table.getn(GetUniqueItemData(unit_name, "Droppers")) > 0) then
+			droppers_string = "Dropped By: "
+			local droppers = GetUniqueItemData(unit_name, "Droppers")
+			local first_dropper = true
+			for i=1,table.getn(droppers) do
+				if (string.find(droppers[i], "template") == nil and GetUnitTypeData(droppers[i], "Mercenary") == false and GetUnitTypeData(droppers[i], "Civilization") ~= "elf" and GetUnitTypeData(droppers[i], "Civilization") ~= "orc") then
+					if not (first_dropper) then
+						droppers_string = droppers_string .. ", "
+					else
+						first_dropper = false
+					end
+					droppers_string = droppers_string .. GetUnitTypeData(droppers[i], "Name")
+					if (GetUnitTypeData(droppers[i], "Civilization") ~= "" and GetUnitTypeData(droppers[i], "Faction") ~= "") then
+						droppers_string = droppers_string .. " (" .. CapitalizeString(GetUnitTypeData(droppers[i], "Civilization")) .. ": " .. GetUnitTypeData(droppers[i], "Faction") .. ")"
+					elseif (GetUnitTypeData(droppers[i], "Civilization") ~= "") then
+						droppers_string = droppers_string .. " (" .. CapitalizeString(GetUnitTypeData(droppers[i], "Civilization")) .. ")"
+					end
+				end
+			end
+			droppers_string = droppers_string .. ".\n\n"
+		end
+		if (GetUniqueItemData(unit_name, "Background") ~= "") then
+			background = "Background: " .. GetUniqueItemData(unit_name, "Background") .. "\n\n"
+		end
+	end
+	l:setCaption(civilization .. faction .. unit_type_type .. unit_type_class .. description .. quote .. effects .. applies_to .. droppers_string .. background)
+	
+	-- add buttons of texts related to the subject matter of the entry
+	local chapter_references = 0
+	for text_key, text_value in pairsByKeys(Texts, text_compare) do
+		for chapter_key, chapter_value in pairsByKeys(Texts[text_key].Chapters, chapter_compare) do
+			if (string.find(l:getCaption(), "~<" .. Texts[text_key].Chapters[chapter_key].Title .. "~>") ~= nil) then
+				chapter_references = chapter_references + 1
+			end
+		end
+	end
+
+	local chapter_x
+	local chapter_y = 8
+	if (chapter_references == 1) then
+		chapter_x = 0
+	elseif (chapter_references == 2) then
+		chapter_x = -1
+	else
+		chapter_x = -2
+	end
+	for text_key, text_value in pairsByKeys(Texts, text_compare) do
+		for chapter_key, chapter_value in pairsByKeys(Texts[text_key].Chapters, chapter_compare) do
+			if (string.find(l:getCaption(), "~<" .. Texts[text_key].Chapters[chapter_key].Title .. "~>") ~= nil) then
+				if (GetTableSize(Texts[text_key].Chapters) > 1) then
+					menu:addFullButton(Texts[text_key].Chapters[chapter_key].Title, "", offx + 208 + (113 * chapter_x), offy + 104 + (36 * chapter_y),
+						function() OpenEncyclopediaText(text_key, chapter_key); end)
+				else
+					menu:addFullButton(Texts[text_key].Chapters[chapter_key].Title, "", offx + 208 + (113 * chapter_x), offy + 104 + (36 * chapter_y),
+						function() OpenEncyclopediaText(text_key); end)
+				end
+				chapter_x = chapter_x + 2
+			end
+		end
+	end
+
+	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * 9),
+		function() menu:stop(); end)
+	menu:run()
 end
 
 function RunEncyclopediaTextsMenu()

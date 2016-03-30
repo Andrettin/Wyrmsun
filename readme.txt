@@ -75,9 +75,11 @@ https://github.com/Andrettin/Wyrmsun
 
 * Miscellaneous
 - The time of day is now written in the interface (thanks to Marcelo Fernandez).
+- Fixed issue with results screen.
 
 * Units
 - Units will now attack non-predator fauna units that are attacking one of your units (i.e. yales that attacked an unit of yours who got close to it).
+- The popup which appears when hovering a single-selected unit now has information on its stats, and right-clicking the button now leads to its encyclopedia entry.
 
 -----------------------------------------------------------------------
 - 2.1.1
