@@ -129,6 +129,9 @@ function RunResultsMenu()
 --	menu:addFullButton(_("~!Continue"), "c", offx + 400, offy + 440,
 	menu:addFullButton(_("~!Continue"), "c", (Video.Width / 2) - 112, offy + 440,
 		function()
+			if not (GrandStrategy) then
+				CleanPlayers()
+			end
 			StopMusic();
 			if (GrandStrategy) then
 				PlayMusicByGroupAndFactionRandom("map", GrandStrategyFaction.Civilization, GrandStrategyFaction.Name)

@@ -111,6 +111,7 @@ function RunGrandStrategyGameSetupMenu()
 
 	menu:addFullButton(_("~!Start Game"), "s", offx + 208, offy + 212 + (36 * 4),
 		function()
+			CleanPlayers() -- for safety
 			CleanGrandStrategyGame()
 			InitializeGrandStrategyGame()
 			GrandStrategy = true
@@ -865,6 +866,8 @@ function AttackProvince(province, faction)
 	Defender = ""
 	AttackedProvince = nil
 	GameResult = GameNoResult
+	CleanPlayers()
+	SetPlayerData(GetThisPlayer(), "RaceName", GrandStrategyFaction.Civilization)
 end
 
 function AcquireProvince(province, faction)
@@ -1389,6 +1392,7 @@ function RunGrandStrategyLoadGameMenu()
 			if (saved_games:getSelected() < 0) then
 				return
 			end
+			CleanPlayers() -- for safety
 			SetCurrentCustomHero("")
 			CleanGrandStrategyGame()
 			
@@ -3748,7 +3752,10 @@ function GrandStrategyEvent(faction, event)
 						menu:stop()
 						event.OptionEffects[i]()
 						GameResult = GameNoResult -- this is because many events start scenarios
+						CleanPlayers()
+						SetPlayerData(GetThisPlayer(), "RaceName", GrandStrategyFaction.Civilization)
 						GrandStrategyGamePaused = false
+						
 					end
 				)
 				if (event.OptionTooltips ~= nil and event.OptionTooltips[i] ~= nil) then
@@ -3763,6 +3770,8 @@ function GrandStrategyEvent(faction, event)
 					menu:stop()
 					event.OptionEffects[1]()
 					GameResult = GameNoResult -- this is because many events start scenarios
+					CleanPlayers()
+					SetPlayerData(GetThisPlayer(), "RaceName", GrandStrategyFaction.Civilization)
 					GrandStrategyGamePaused = false
 				end,
 				{0, 0}
