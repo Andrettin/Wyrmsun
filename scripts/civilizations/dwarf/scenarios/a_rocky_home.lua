@@ -244,10 +244,7 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if (GameTimeOfDay >= 4) then
-			return true
-		end
-		return false
+		return true
 	end,
 	function()
 		GameTimeOfDay = 2

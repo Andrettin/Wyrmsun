@@ -73,6 +73,9 @@ https://github.com/Andrettin/Wyrmsun
 - Provinces owned by factions at game start now begin with at least four workers (if it can feed that many).
 - Provinces owned by factions at game start now begin with at least two infantry units.
 
+* Miscellaneous
+- The time of day is now written in the interface (thanks to Marcelo Fernandez).
+
 * Units
 - Units will now attack non-predator fauna units that are attacking one of your units (i.e. yales that attacked an unit of yours who got close to it).
 
