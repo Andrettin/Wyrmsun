@@ -144,7 +144,7 @@ DefineUnitType("unit-dwarven-axefighter", { Name = _("Axefighter"),
 	InvertedSoutheastArms = true,
 	ButtonKey = "a",
 	ButtonHint = _("Train ~!Axefighter"),
-	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-round-shield", "unit-brising-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	DropAffixes = {"upgrade-item-suffix-of-the-snigill"},
 	Variations = {
 		{
@@ -231,7 +231,7 @@ DefineUnitType("unit-dwarven-steelclad", { Name = _("Steelclad"),
 	Armor = 4,
 	WeaponClasses = {"axe"},
 	HackDamage = true,
-	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-round-shield", "unit-brising-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-the-snigill"},
 	InvertedEastArms = true,
 	InvertedSoutheastArms = true,
@@ -380,7 +380,7 @@ DefineUnitType("unit-dwarven-thane", { Name = _("Stonelord"),
 	CanCastSpell = {"spell-axe-twirl"},
 	WeaponClasses = {"axe", "mace"},
 	HackDamage = true,
-	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-round-shield", "unit-brising-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-glacial", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-the-colossus", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-the-snigill"},
 	Variations = {
 		{
@@ -456,7 +456,7 @@ DefineUnitType("unit-dwarven-guard", { Name = _("Guard"),
 	InvertedSoutheastArms = true,
 	ButtonKey = "g",
 	ButtonHint = _("Train ~!Guard"),
-	AiDrops = {"unit-short-spear", "unit-long-spear", "unit-pike", "unit-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	AiDrops = {"unit-short-spear", "unit-long-spear", "unit-pike", "unit-round-shield", "unit-brising-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	DropAffixes = {"upgrade-item-suffix-of-the-snigill"},
 	Variations = {
 		{
@@ -602,7 +602,7 @@ DefineUnitType("unit-dwarven-yale-rider", { Name = _("Yale Rider"),
 	HackDamage = true,
 	ButtonKey = "y",
 	ButtonHint = _("Train ~!Yale Rider"),
-	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-round-shield", "unit-brising-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-the-snigill"},
 	Variations = {
 		{
@@ -753,6 +753,18 @@ DefineUnitType("unit-dwarven-transport-ship", { Name = _("Transport"),
 	Image = {"file", "dwarf/units/transport.png", "size", {72, 72}},
 	LightImage = {"file", "dwarf/units/transport_water.png"},
 	Animations = "animations-transport-ship", Icon = "icon-dwarven-transport-ship",
+	Variations = {
+		{
+			"variation-id", "dwarf",
+			"upgrade-forbidden", "upgrade-brising-clan-faction"
+		},
+		{
+			"variation-id", "brising",
+			"file", "dlcs/brising_faction_flair/graphics/units/brising_transport.png",
+			"icon", "icon-brising-transport-ship",
+			"upgrade-required", "upgrade-brising-clan-faction"
+		}
+	},
 	Sounds = {
 		"help", "basic-dwarf-voices-help"
 	}
@@ -770,13 +782,24 @@ DefineUnitType("unit-dwarven-town-hall", { Name = _("Mead Hall"),
 	RepairCosts = {"gold", 1, "lumber", 1, "stone", 1},
 	FireResistance = 20,
 	ButtonHint = _("Build Mead ~!Hall"),
-	Trains = {"unit-dwarven-miner"},
 	AiDrops = {"unit-boots"},
 	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-glacial", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-the-snigill", "upgrade-work-alvissmol", "upgrade-work-fafnismol", "upgrade-work-reginsmol", "upgrade-work-the-scepter-of-fire"},
+	Variations = {
+		{
+			"variation-id", "dwarf",
+			"upgrade-forbidden", "upgrade-brising-clan-faction"
+		},
+		{
+			"variation-id", "brising",
+			"file", "dlcs/brising_faction_flair/graphics/buildings/brising_town_hall.png",
+			"icon", "icon-brising-town-hall",
+			"upgrade-required", "upgrade-brising-clan-faction"
+		}
+	},
 	Sounds = {
 		"help", "basic-dwarf-voices-help-town"
 	}
-} )
+})
 
 DefineUnitType("unit-dwarven-stronghold", { Name = _("Bastion"),
 	Parent = "unit-template-stronghold",
@@ -789,13 +812,24 @@ DefineUnitType("unit-dwarven-stronghold", { Name = _("Bastion"),
 	Costs = {"time", 200, "gold", 2200, "lumber", 275, "stone", 825},
 	RepairCosts = {"gold", 1, "lumber", 1, "stone", 1},
 	FireResistance = 20,
-	Trains = {"unit-dwarven-miner", "unit-potion-of-healing"},
-	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots"},
+	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-round-shield", "unit-brising-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots"},
 	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-glacial", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-the-snigill", "upgrade-work-alvissmol", "upgrade-work-fafnismol", "upgrade-work-reginsmol", "upgrade-work-the-scepter-of-fire"},
+	Variations = {
+		{
+			"variation-id", "dwarf",
+			"upgrade-forbidden", "upgrade-brising-clan-faction"
+		},
+		{
+			"variation-id", "brising",
+			"file", "dlcs/brising_faction_flair/graphics/buildings/brising_stronghold.png",
+			"icon", "icon-brising-stronghold",
+			"upgrade-required", "upgrade-brising-clan-faction"
+		}
+	},
 	Sounds = {
 		"help", "basic-dwarf-voices-help-town"
 	}
-} )
+})
 
 DefineUnitType("unit-dwarven-mushroom-farm", { Name = _("Mushroom Farm"),
 	Parent = "unit-template-farm",
@@ -830,7 +864,7 @@ DefineUnitType("unit-dwarven-barracks", { Name = _("War Hall"),
 	ButtonKey = "w",
 	ButtonHint = _("Build ~!War Hall"),
 	Trains = {"unit-dwarven-axefighter", "unit-dwarven-guard", "unit-dwarven-scout", "unit-dwarven-yale-rider", "unit-dwarven-ballista", "unit-dwarven-gryphon-rider"},
-	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots"},
+	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-round-shield", "unit-brising-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots"},
 	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-glacial", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-the-snigill"},
 	Sounds = {
 		"help", "basic-dwarf-voices-help-town"
@@ -945,6 +979,7 @@ DefineUnitType("unit-dwarven-dock", { Name = _("Dock"),
 	Costs = {"time", 200, "gold", 800, "lumber", 360, "stone", 90},
 	RepairCosts = {"gold", 1, "lumber", 1, "stone", 1},
 	FireResistance = 20,
+	Trains = {"unit-dwarven-transport-ship"},
 	Sounds = {
 		"help", "basic-dwarf-voices-help-town"
 	}
@@ -976,33 +1011,6 @@ DefineUnitType("unit-brising-militia", {
 	AiDrops = {"unit-brising-round-shield"}
 } )
 
-DefineUnitType("unit-brising-transport-ship", {
-	Parent = "unit-dwarven-transport-ship",
-	Civilization = "dwarf",
-	Faction = "Brising Clan",
-	Image = {"file", "dlcs/brising_faction_flair/graphics/units/brising_transport.png", "size", {72, 72}},
-	Icon = "icon-brising-transport-ship"
-} )
-
-DefineUnitType("unit-brising-town-hall", {
-	Parent = "unit-dwarven-town-hall",
-	Civilization = "dwarf",
-	Faction = "Brising Clan",
-	Image = {"file", "dlcs/brising_faction_flair/graphics/buildings/brising_town_hall.png", "size", {128, 128}},
-	Icon = "icon-brising-town-hall",
-	Trains = {"unit-brising-miner"}
-} )
-
-DefineUnitType("unit-brising-stronghold", {
-	Parent = "unit-dwarven-stronghold",
-	Civilization = "dwarf",
-	Faction = "Brising Clan",
-	Image = {"file", "dlcs/brising_faction_flair/graphics/buildings/brising_stronghold.png", "size", {128, 128}},
-	Icon = "icon-brising-stronghold",
-	Trains = {"unit-brising-miner", "unit-potion-of-healing"},
-	AiDrops = {"unit-brising-round-shield"}
-} )
-
 DefineUnitType("unit-brising-smithy", {
 	Parent = "unit-dwarven-smithy",
 	Civilization = "dwarf",
@@ -1015,12 +1023,16 @@ DefineUnitType("unit-brising-smithy", {
 } )
 
 DefineUnitType("unit-brising-miner", { -- this is here because the buildings need to be defined before being assigned to the miner's "Trains" array
-	Trains = {"unit-brising-town-hall", "unit-dwarven-mushroom-farm", "unit-dwarven-barracks", "unit-dwarven-lumber-mill", "unit-brising-smithy", "unit-dwarven-yale-pen", "unit-dwarven-sentry-tower", "unit-dwarven-dock", "unit-gold-mine", "unit-silver-mine", "unit-copper-mine"}
+	Trains = {"unit-dwarven-town-hall", "unit-dwarven-mushroom-farm", "unit-dwarven-barracks", "unit-dwarven-lumber-mill", "unit-brising-smithy", "unit-dwarven-yale-pen", "unit-dwarven-sentry-tower", "unit-dwarven-dock", "unit-gold-mine", "unit-silver-mine", "unit-copper-mine"}
 } )
 
-DefineUnitType("unit-dwarven-dock", {
-	Trains = {"unit-dwarven-transport-ship", "unit-brising-transport-ship"},
-} )
+DefineUnitType("unit-dwarven-town-hall", {
+	Trains = {"unit-dwarven-miner", "unit-brising-miner"},
+})
+
+DefineUnitType("unit-dwarven-stronghold", {
+	Trains = {"unit-dwarven-miner", "unit-brising-miner", "unit-potion-of-healing"},
+})
 
 DefineUnitType("unit-surghan-mercenary-steelclad", { Name = _("Surghan Mercenary"),
 	Parent = "unit-dwarven-steelclad",

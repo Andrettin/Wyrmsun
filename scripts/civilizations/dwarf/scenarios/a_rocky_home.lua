@@ -58,7 +58,7 @@ if (LoadedGame == false) then
 		unit = OldCreateUnit("unit-brising-miner", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 	end
 
-	SetPlayerData(0, "Allow", "unit-brising-town-hall", "F")
+	SetPlayerData(0, "Allow", "unit-dwarven-town-hall", "F")
 	SetPlayerData(0, "Allow", "unit-dwarven-barracks", "F")
 	SetPlayerData(0, "Allow", "unit-dwarven-mushroom-farm", "F")
 	SetPlayerData(0, "Allow", "unit-brising-smithy", "F")

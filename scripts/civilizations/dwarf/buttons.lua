@@ -189,7 +189,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-coinage",
 	Allowed = "check-single-research",
 	Description = _("+10% Gold Processing."),
 	Key = "c", Hint = _("Research ~!Coinage"), Popup = "popup-research",
-	ForUnit = {"unit-dwarven-stronghold", "unit-brising-stronghold"}
+	ForUnit = {"unit-dwarven-stronghold"}
 } )
 
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-norse-runewriting",
@@ -197,7 +197,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-norse-runewriting",
 	Allowed = "check-single-research",
 	Description = _("+10% Time Efficiency for all buildings, changes faction from tribe to polity."),
 	Key = "r", Hint = _("Research Dvalic ~!Runewriting"), Popup = "popup-research",
-	ForUnit = {"unit-dwarven-stronghold", "unit-brising-stronghold"}
+	ForUnit = {"unit-dwarven-stronghold"}
 } )
 
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-cauldron",
@@ -205,7 +205,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-cauldron",
 	Allowed = "check-single-research",
 	Description = _("+1 Fire Damage for Scouts, Pathfinders and Gryphon Riders, +5 Fire Damage for Ballistas."),
 	Key = "a", Hint = _("Research ~!Alchemy"), Popup = "popup-research",
-	ForUnit = {"unit-dwarven-stronghold", "unit-brising-stronghold"}
+	ForUnit = {"unit-dwarven-stronghold"}
 } )
 
 -- Upgrades ---------------------------------------------------------
@@ -420,13 +420,6 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-stronghold",
 	Allowed = "check-upgrade-to",
 	Key = "b", Hint = _("Upgrade to ~!Bastion"), Popup = "popup-building",
 	ForUnit = {"unit-dwarven-town-hall"}
-} )
-  
-DefineButton( { Pos = 2, Level = 0, Icon = "icon-brising-stronghold",
-	Action = "upgrade-to", Value = "unit-brising-stronghold",
-	Allowed = "check-upgrade-to",
-	Key = "b", Hint = _("Upgrade to ~!Bastion"), Popup = "popup-building",
-	ForUnit = {"unit-brising-town-hall"}
 } )
   
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-guard-tower",
