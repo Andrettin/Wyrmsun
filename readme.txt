@@ -60,6 +60,16 @@ https://github.com/Andrettin/Wyrmsun
 ############################################################
 
 -----------------------------------------------------------------------
+- 2.1.3
+-----------------------------------------------------------------------
+
+* Maps
+- Fixed a couple of tiles who were in the wrong place in the Shorbear Hills map.
+
+* Quests
+- The Gnomish Envoy and Rugnur now disappear upon reaching their final objectives in the Hills of the Shorbear Clan quest.
+
+-----------------------------------------------------------------------
 - 2.1.2
 -----------------------------------------------------------------------
 
