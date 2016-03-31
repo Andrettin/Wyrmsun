@@ -28,6 +28,7 @@
 DefineCivilization("neutral", {
 	Display = "Neutral",
 	Playable = false,
+	Adjective = "Neutral",
 	ButtonIcons = {
 		"move", "icon-dwarven-boots",
 		"stop", "icon-dwarven-shield-1",
@@ -50,6 +51,8 @@ DefineCivilization("dutch", { -- information for later use
 	Visible = true,
 	Species = "human",
 	ParentCivilization = "teuton",
+	Language = "dutch",
+	Adjective = "Dutch",
 	ProvinceNames = {
 		"Gelderland", -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
 		"Overijssel" -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
@@ -69,6 +72,7 @@ DefineCivilization("dwarf", {
 	Visible = true,
 	Species = "dwarf",
 	Language = "dwarven",
+	Adjective = "Dwarven",
 	DefaultColor = "red",
 	ButtonIcons = {
 		"move", "icon-dwarven-boots",
@@ -90,6 +94,7 @@ DefineCivilization("elf", {
 	Visible = true,
 	Species = "elf",
 --	Language = "elven",
+	Adjective = "Elven",
 	--[[
 	PersonalNames = {
 		"Aendan", "Amadrieriand", "Amáril", "Amelad", "Ameldor", "Amendel", "Ameng", "Amilmaldur", "Amilmalith", "Amilmandir", "Amind", "Amiol", "Amiorion", "Amithrarion", "Amóldor", "Amorfimir", "Amorfir", "Amowyn", "Amulas", "Amundil", "Anán", "Anebrin", "Anebrir", "Anémbor", "Anénduil", "Anerion", "Anilad", "Anil-Gawyn", "Anilmambor", "Anilmariand", "Anior", "Anithranduil", "Anol", "Anon", "Anorfing", "Anundil", "Asaeri", "Belán", "Belandil", "Belarandel", "Belel", "Belén", "Belil-Gandil", "Belilmand", "Belilmang", "Beliondil", "Beliril", "Belithraldor", "Belithrawyn", "Belólad", "Belómir", "Belondel", "Belyrion", "Cadriembor", "Cadrieriand", "Cálad", "Caladrielas", "Calándel", "Caldur", "Cáldur", "Calebrindel", "Calebrindir", "Calénduil", "Calil-Gandir", "Calil-Gawyn", "Calioriand", "Caliril", "Calónduil", "Caloril", "Cándir", "Canduil", "Caraldur", "Carang", "Célad", "Celadrieriand", "Celang", "Celaral", "Celarandil", "Celáriand", "Celebririon", "Celelas", "Celendel", "Celér", "Celilmalas", "Celiondir", "Celior", "Celiorion", "Celong", "Celór", "Celóril", "Celorion", "Celundir", "Celuwyn", "Celyndel", "Cénduil", "Cindil", "Ciong", "Cithralad", "Cithraldur", "Cithrand", "Cithrandel", "Cithraril", "Col", "Corfil", "Corfildur", "Cówyn", "Crintil", "Cun", "Cundir", "Cylas", "Dain", "Delán", "Delánd", "Delandel", "Delaraldur", "Deláril", "Delawyn", "Deléng", "Delilmaldor", "Deliol", "Delithrar", "Deliwyn", "Delóldor", "Delorfilad", "Delorfilith", "Delorion", "Delundil", "Ealin", "Eäradriendel", "Eäradrier", "Eäránduil", "Eäraralad", "Eärebrindel", "Eäréldor", "Eäreng", "Eärérion", "Eärithrandil", "Eäromir", "Eärorfiriand", "Eäryldur", "Eäryriand", "Eladrieng", "Elálith", "Elánd", "Elándil", "Elebrildor", "Elebrindel", "Elebriril", "Elélas", "Elémbor", "Elemir", "Elen", "Elil-Garil", "Elilmaldur", "Eliomir", "Eliondil", "Elolas", "Elólas", "Elor", "Elorfilad", "Elradrien", "Elralith", "Elran", "Elreldur", "Elrilmand", "Elrioldor", "Elriolith", "Elrithralith", "Elrithranduil", "Elrorfir", "Elval", "Elvandir", "Elvaramir", "Elváwyn", "Elvebrind", "Elvebrindel", "Elvélith", "Elvémir", "Elverion", "Elvil-Garion", "Elvilmaldur", "Elvilmaril", "Elvioldur", "Elvombor", "Elvónduil", "Elvorfimir", "Elvorfiriand", "Elvorfiril", "Elvóriand", "Elvund", "Elyldor", "Elyrion", "Eowambor", "Eowanduil", "Eowar", "Eowaraldor", "Eowaran", "Eowarar", "Eowariand", "Eowarion", "Eowebrind", "Eowémir", "Eowil-Garion", "Eowimbor", "Eowiomir", "Eowithrawyn", "Eowóldur", "Eoworfildor", "Eowówyn", "Eowylas", "Erlornas", "Fadriendel", "Fandel", "Farandir", "Fáwyn", "Fendel", "Fer", "Filman", "Fioril", "Fithraril", "Forfilas", "Fyrion", "Gadriendil", "Gadrieng", "Gaelir", "Gaenlar", "Galadrieldor", "Galálad", "Galálas", "Galalith", "Galar", "Galelas", "Galeldur", "Galelith", "Galémbor", "Galithrariand", "Galoldur", "Galtrid", "Galuldur", "Galur", "Galurion", "Gambor", "Gán", "Ganduil", "Garaldor", "Gararil", "Gelad", "Géril", "Gil-Gandel", "Gil-Gang", "Giombor", "Githral", "Githralad", "Gladriendil", "Glal", "Glámbor", "Glandil", "Glarang", "Glararil", "Glildur", "Glilmal", "Glimir", "Glinan", "Glindur", "Glior", "Glólas", "Gloldor", "Glómir", "Glon", "Glul", "Golad", "Gor", "Gumbor", "Gyl", "Gymbor", "Gyn", "Harariand", "Háriand", "Hebril", "Hemir", "Hénduil", "Hilas", "Hil-Garion", "Hilmariand", "Hiong", "Hirion", "Hithrandel", "Horfilad", "Horfindel", "Hundel", "Hymir", "Hyrion", "Hywyn", "Isadrieng", "Isándir", "Isarandel", "Isarar", "Iselas", "Isér", "Isilmandel", "Isirion", "Isithral", "Isól", "Isóndel", "Isóng", "Isorfilad", "Isorfindir", "Isuwyn", "Isyndel", "Kalenz", "Kalnar", "Landar", "Legal", "Legaran", "Legémir", "Legéril", "Legilad", "Legil-Gal", "Legiondel", "Legithralith", "Legorfindil", "Legorfirion", "Legówyn", "Legyl", "Legyn", "Linduilas", "Lómadrieril", "Lómarand", "Lomarfel", "Lómariand", "Lómebrilad", "Lómebrind", "Lómémbor", "Lómilmaril", "Lómiriand", "Lómorfindil", "Lómowyn", "Losnin", "Lyndar", "Madrieril", "Maldur", "Mánduil", "Maraldur", "Mebrin", "Méng", "Mérion", "Miolith", "Miomir", "Mithrand", "Mondir", "Móndir", "Morfilas", "Morfin", "Morfiriand", "Mylith", "Nadrieldor", "Nalith", "Nán", "Nél", "Nil-Galas", "Nil-Galith", "Nil-Gar", "Nilmar", "Nóndel", "Norfildor", "Norfilith", "Norfindil", "Norfindir", "Numbor", "Nyldur", "Padrieriand", "Padrieril", "Pamir", "Paraldor", "Parariand", "Pilmalad", "Pindir", "Pór", "Porfildur", "Pumbor", "Pyldur", "Raesil", "Rebrir", "Réndir", "Rilmandil", "Rithrandil", "Ról", "Róldor", "Roldur", "Róldur", "Rorfilad", "Rorfindil", "Rówyn", "Ryn", "Sadrielas", "Salira", "Sebrin", "Sebriril", "Sénd", "Sil-Gal",  "Sólad", "Sorfind", "Sóriand", "Tadriendir", "Taral", "Taraldur", "Táriand", "Tendel", "Téwyn", "Thradrieriand", "Thrambor", "Thraral", "Threbring", "Thrélad", "Thréldur", "Thril-Gamir", "Thril-Gandir", "Thril-Gar", "Thrilmandel", "Thrimir", "Thrion", "Thrithran", "Throlas", "Thrón", "Thróng", "Thrund", "Thryriand", "Til-Gan", "Tilmalad", "Tilmalas", "Tinandir", "Tinarambor", "Tinarariand", "Tinén", "Tinil-Ganduil", "Tinilmand", "Tinilmawyn", "Tinimir", "Tinindil", "Tinithrar", "Tinoldor", "Tinond", "Tinorfind", "Tinorfiriand", "Tinóriand", "Tinowyn", "Tinun", "Tinyl", "Tion", "Tolas", "Torfildur", "Tówyn", "Tylad", "Unadrieldor", "Unadrier", "Unál", "Unalas", "Unálas", "Unaraldur", "Unaril", "Unárion", "Unebrin", "Unebrind", "Uneldor", "Unil", "Unil-Gan", "Uniolith", "Unioril", "Unólith", "Unombor", "Unóndel", "Unondir", "Unorfildor", "Unorfiril", "Unorfiwyn", "Unulad", "Uradredia", "Uradrielas", "Uradrierion", "Urálas", "Urálith", "Urambor", "Urér", "Uril-Gambor", "Urilmalith", "Uróldor", "Urorfildor", "Urul", "Urymir", "Válad", "Ván", "Vándel", "Vandir", "Varalas", "Vararion", "Vebril", "Vebrilas", "Vebrinduil", "Vel", "Velon", "Vilith", "Vol", "Vólas", "Vóldur", "Vondel", "Vorfin", "Vorfindil", "Vulas", "Vuldur", "Vunduil", "Vylas", "Vyldor",
@@ -122,6 +127,7 @@ DefineCivilization("english", { -- information for later use
 	Species = "human",
 	ParentCivilization = "teuton",
 	Language = "english",
+	Adjective = "English",
 	DefaultColor = "red"
 })
 --]]
@@ -131,6 +137,7 @@ DefineCivilization("germanic", {
 	Visible = true,
 	Species = "human",
 	Language = "proto-germanic",
+	Adjective = "Germanic",
 	DefaultColor = "orange",
 	ButtonIcons = {
 		"move", "icon-dwarven-boots",
@@ -153,6 +160,7 @@ DefineCivilization("celt", { -- has to be defined after the germanic civilizatio
 	Species = "human",
 	Language = "proto-celtic",
 	ParentCivilization = "germanic",
+	Adjective = "Celtic",
 	Playable = false,
 	DefaultColor = "green"
 })
@@ -163,6 +171,7 @@ DefineCivilization("gnome", {
 	Species = "gnome",
 	ParentCivilization = "dwarf",
 	Language = "gnomish",
+	Adjective = "Gnomish",
 	Playable = false,
 	DefaultColor = "blue",
 	ButtonIcons = {
@@ -178,6 +187,7 @@ DefineCivilization("goblin", {
 	Visible = true,
 	Species = "goblin",
 	Language = "goblin",
+	Adjective = "Goblin",
 	Playable = false,
 	DefaultColor = "teal",
 	ButtonIcons = {
@@ -201,6 +211,7 @@ DefineCivilization("kobold", {
 	Species = "kobold",
 	Language = "kobold",
 	ParentCivilization = "goblin",
+	Adjective = "Kobold",
 	Playable = false,
 	DefaultColor = "violet",
 	ButtonIcons = {
@@ -213,6 +224,7 @@ DefineCivilization("orc", {
 	Display = "Orc",
 	Visible = true,
 	Species = "orc",
+	Adjective = "Orc",
 	Playable = false,
 	DefaultColor = "red",
 	ButtonIcons = {
@@ -236,6 +248,7 @@ DefineCivilization("teuton", {
 	Species = "human",
 	Language = "high-german",
 	ParentCivilization = "germanic",
+	Adjective = "Teutonic",
 	DefaultColor = "yellow"
 	--[[
 	ProvinceNames = {
@@ -325,6 +338,7 @@ DefineCivilization("troll", {
 	Visible = true,
 	Species = "troll",
 	ParentCivilization = "goblin",
+	Adjective = "Troll",
 	Playable = false,
 	DefaultColor = "green"
 })
@@ -335,6 +349,7 @@ DefineCivilization("basque", { -- represents not only the speakers of Vasconic l
 	Species = "human",
 	Language = "basque",
 	ParentCivilization = "germanic",
+	Adjective = "Basque",
 	Playable = false
 })
 
@@ -344,6 +359,7 @@ DefineCivilization("etruscan", {
 	Species = "human",
 	Language = "etruscan",
 	ParentCivilization = "teuton",
+	Adjective = "Etruscan",
 	Playable = false
 })
 
@@ -353,6 +369,7 @@ DefineCivilization("goth", {
 	Species = "human",
 	Language = "gothic",
 	ParentCivilization = "teuton",
+	Adjective = "Gothic",
 	Playable = false
 })
 
@@ -362,6 +379,7 @@ DefineCivilization("greek", {
 	Species = "human",
 	Language = "greek",
 	ParentCivilization = "teuton",
+	Adjective = "Greek",
 	Playable = false,
 	--[[
 	SettlementNames = {
@@ -454,6 +472,7 @@ DefineCivilization("illyrian", {
 	Species = "human",
 	Language = "illyrian",
 	ParentCivilization = "teuton",
+	Adjective = "Illyrian",
 	Playable = false
 })
 
@@ -463,6 +482,7 @@ DefineCivilization("latin", {
 	Species = "human",
 	Language = "latin",
 	ParentCivilization = "teuton",
+	Adjective = "Latin",
 	Playable = false,
 	--[[
 	SettlementNames = {
@@ -562,6 +582,7 @@ DefineCivilization("minoan", {
 	Species = "human",
 	Language = "minoan",
 	ParentCivilization = "teuton",
+	Adjective = "Minoan",
 	Playable = false
 })
 
@@ -571,6 +592,7 @@ DefineCivilization("norse", {
 	Species = "human",
 	Language = "old-norse",
 	ParentCivilization = "teuton",
+	Adjective = "Norse",
 	Playable = false
 })
 
@@ -580,6 +602,7 @@ DefineCivilization("persian", {
 	Species = "human",
 	Language = "avestan",
 	ParentCivilization = "teuton",
+	Adjective = "Persian",
 	Playable = false
 })
 
@@ -588,6 +611,7 @@ DefineCivilization("phoenician", {
 	Visible = true,
 	Species = "human",
 	ParentCivilization = "teuton",
+	Adjective = "Phoenician",
 	Playable = false,
 	DefaultColor = "black"
 })
@@ -598,6 +622,7 @@ DefineCivilization("phrygian", {
 	Species = "human",
 	Language = "phrygian",
 	ParentCivilization = "teuton",
+	Adjective = "Phrygian",
 	Playable = false
 })
 
@@ -607,6 +632,7 @@ DefineCivilization("slav", {
 	Species = "human",
 	Language = "proto-slavic",
 	ParentCivilization = "teuton",
+	Adjective = "Slavic",
 	Playable = false,
 	DefaultColor = "blue"
 })
@@ -617,6 +643,7 @@ DefineCivilization("thracian", {
 	Species = "human",
 	Language = "thracian",
 	ParentCivilization = "teuton",
+	Adjective = "Thracian",
 	Playable = false
 })
 

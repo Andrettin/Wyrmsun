@@ -590,7 +590,7 @@ function GetAvailableCivilizationsTechTree()
 				(civilizations[i] ~= "teuton" or GetArrayIncludes(wyr.preferences.QuestsCompleted, "Gylve's Realm"))
 			) then
 				local playable_civilization_species = CapitalizeString(GetCivilizationData(civilizations[i], "Species"))
-				local playable_civilization = CapitalizeString(civilizations[i])
+				local playable_civilization = GetCivilizationData(civilizations[i], "Display")
 				if (playable_civilization_species ~= playable_civilization) then
 					table.insert(civilization_list, _(playable_civilization_species .. " - " .. playable_civilization))
 				else

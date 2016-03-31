@@ -40,7 +40,8 @@ DefineFaction("Brising Clan", {
 		"dlcs/brising_faction_flair/graphics/ui/buttonpanel.png", -256, -200,
 		"dlcs/brising_faction_flair/graphics/ui/infopanel.png", 0, -200
 	},
-	Description = _("The Brising clan is one of the first dwarven clans ever known. It made its home in Svarinshaug, where they tamed the fierce forces of nature.")
+	Description = _("The Brising clan was one of the first dwarven clans ever known. It made its home in Svarinshaug, where they tamed the fierce forces of nature."),
+	Background = "In Norse mythology, \"Brising\" was an appelation used for the dwarves in general, or more specifically for the ones who created the necklace Brisingamen. \"Brising\" means \"flame\" in Old Norse."
 })
 
 DefineFaction("Eikinskjaldi Clan", { -- originally Oakenshield (from Dyson Logos' The Tomb of Durahn Oakenshield), translated into Norse to make it seem more dwarvish
@@ -49,7 +50,8 @@ DefineFaction("Eikinskjaldi Clan", { -- originally Oakenshield (from Dyson Logos
 	Colors = {"brown"},
 	DevelopsTo = {"Joruvellir", "Kal Kartha", "Knalga", "Lyr"},
 	FactionUpgrade = "upgrade-eikinskjaldi-clan-faction",
-	Description = _("The Eikinskjaldi clan traces its origins to Eikinskjaldi, a member of the legendary group of dwarves who migrated to the sandy plains of Joruvellir. One of Eikinskjaldi's descendants was Durahn, a mighty dwarven warlord who was buried in a rich tomb.")
+	Description = _("The Eikinskjaldi clan traces its origins to Eikinskjaldi, a member of the legendary group of dwarves who migrated to the sandy plains of Joruvellir. One of Eikinskjaldi's descendants was Durahn, a mighty dwarven warlord who was buried in a rich tomb."),
+	Background = "In Norse mythology Eikinskjaldi was the name of a dwarf who migrated from Svarinshaug to Joruvellir. \"Eikinskjaldi\" means \"oaken shield\" in Old Norse."
 })
 
 DefineFaction("Norlund Clan", {
@@ -59,7 +61,7 @@ DefineFaction("Norlund Clan", {
 --	DevelopsTo = {"Kal Kartha", "Knalga"},
 	DevelopsTo = {"Joruvellir", "Kal Kartha", "Knalga", "Lyr"},
 	FactionUpgrade = "upgrade-norlund-clan-faction",
-	Description = _("The Norlund clan has its origins in the Caverns of Chaincolt, and counts a number of skilled warriors and craftsmen amongst its ranks. Eventually the Norlund clan would unify much of dwarfdom into the Lordship of Knalga.")
+	Description = _("The Norlund clan has its origins in the Caverns of Chaincolt, and counts with a number of skilled warriors and craftsmen amongst its ranks. Eventually the Norlund clan would unify much of dwarfdom into the Lordship of Knalga.")
 })
 
 DefineFaction("Shinsplitter Clan", {
@@ -78,7 +80,7 @@ DefineFaction("Shorbear Clan", {
 --	DevelopsTo = {"Knalga"},
 	DevelopsTo = {"Joruvellir", "Kal Kartha", "Knalga", "Lyr"},
 	FactionUpgrade = "upgrade-shorbear-clan-faction",
-	Description = _("Contrary to many of the other dwarven clans, which prefer to live in mountains, the Shorbears have made their homes in the hills. They are known as excellent crafters of tools.")
+	Description = _("Contrary to many of the other dwarven clans, who prefer to live in mountains, the Shorbears have made their homes in the hills. They are known as excellent crafters of tools.")
 })
 
 DefineFaction("Kal Kartha", {
@@ -111,7 +113,8 @@ DefineFaction("Joruvellir", {
 	Titles = {
 		"monarchy", "barony", "Lordship"
 	},
-	FactionUpgrade = "upgrade-joruvellir-faction"
+	FactionUpgrade = "upgrade-joruvellir-faction",
+	Description = "The arid sands of Joruvellir were first settled by a group of dwarves who had their origins in Svarinshaug."
 })
 
 DefineFaction("Lyr", {
@@ -123,5 +126,7 @@ DefineFaction("Lyr", {
 	Titles = {
 		"monarchy", "barony", "Lordship"
 	},
---	FactionUpgrade = "upgrade-lyr-faction"
+--	FactionUpgrade = "upgrade-lyr-faction",
+	Description = "The shining hall of Lyr was built by a number of skilled dwarven craftsmen who had split off from the Brising clan.",
+	Background = "In Norse mythology Lyr was a magnificent hall which was built by Loki with the help of the dwarves Bari, Delling, Dori, Iri, Jari, Ori, Uni, Var and Vegdrasil. The giantess Menglad dwelled in the hall. \"Lyr\" means \"heat-holding\" in Old Norse."
 })

@@ -8,8 +8,6 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      grand_strategy.lua - Defines the grand strategy game mode.
---
 --      (c) Copyright 2014-2016 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
@@ -3693,7 +3691,7 @@ function GrandStrategyEvent(faction, event)
 				end
 			end
 			if (string.find(event_name, "CULTURE_NAME") ~= nil) then
-				event_name = string.gsub(event_name, "CULTURE_NAME", CapitalizeString(EventFaction.Civilization))
+				event_name = string.gsub(event_name, "CULTURE_NAME", GetCivilizationData(EventFaction.Civilization, "Adjective"))
 			end
 		end
 		menu:addLabel(event_name, 176, 11)
@@ -3720,7 +3718,7 @@ function GrandStrategyEvent(faction, event)
 				end
 			end
 			if (string.find(event_description, "CULTURE_NAME") ~= nil) then
-				event_description = string.gsub(event_description, "CULTURE_NAME", CapitalizeString(EventFaction.Civilization))
+				event_description = string.gsub(event_description, "CULTURE_NAME", GetCivilizationData(EventFaction.Civilization, "Adjective"))
 			end
 		end
 		l:setCaption(event_description)

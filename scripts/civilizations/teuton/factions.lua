@@ -614,3 +614,5 @@ DefineFaction("Turkey", {
 		"monarchy", "empire", "Empire"
 	}
 })
+
+Load("scripts/civilizations/teuton/factions_english.lua")

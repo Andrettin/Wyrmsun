@@ -256,7 +256,7 @@ function addQuestIcon(quest, menu, x, y)
 			l:setSize(324, 208)
 			l:setLineWidth(324)
 			quest_menu:add(l, 14, 112)
-			local quest_description = GetQuestData(quest, "Description") .. "\n\nRewards: " .. tostring(GetQuestData(quest, "TechnologyPoints")) .. " " .. CapitalizeString(GetQuestData(quest, "Civilization"))
+			local quest_description = GetQuestData(quest, "Description") .. "\n\nRewards: " .. tostring(GetQuestData(quest, "TechnologyPoints")) .. " " .. GetCivilizationData(GetQuestData(quest, "Civilization"), "Display")
 			if (GetQuestData(quest, "TechnologyPoints") > 1) then
 				quest_description = quest_description .. " Technology Points."
 			else
@@ -307,7 +307,7 @@ function addQuestIcon(quest, menu, x, y)
 	b:setBorderSize(0) -- Andrettin: make buttons not have the borders they previously had
 	b:setFrameImage(Preference.IconFrameG)
 	b:setPressedFrameImage(Preference.PressedIconFrameG)
-	b:setTooltip(quest .. " (" .. CapitalizeString(GetQuestData(quest, "Civilization")) .. ")")
+	b:setTooltip(quest .. " (" .. GetCivilizationData(GetQuestData(quest, "Civilization"), "Display") .. ")")
 	return b
 end
 

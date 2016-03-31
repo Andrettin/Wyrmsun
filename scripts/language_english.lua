@@ -529,7 +529,6 @@ DefineLanguageWord("Castle", {
 	Meanings = {"Castle"},
 	Gender = "neuter",
 	AffixNameTypes = {
-		"compound", "suffix", "singular", "settlement", -- example: "Newcastle upon Tyne"
 		"separate", "prefix", "singular", "terrain-hills" -- example: "Castle Hill"
 	}
 })
@@ -801,8 +800,7 @@ DefineLanguageWord("Dur", {
 	Type = "noun", -- correct?
 	Meanings = {},
 	Gender = "neuter",
-	Archaic = true,
-	AffixNameTypes = {"compound", "prefix", "singular", "settlement"} -- example: "Durham"
+	Archaic = true
 })
 
 DefineLanguageWord("East", {
@@ -1294,7 +1292,7 @@ DefineLanguageWord("Ham", {
 	DerivesFrom = {"old-english", "noun", "Hâm"}, -- presumably
 	Gender = "neuter",
 	Archaic = true,
-	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- examples: "Chatham", "Durham", "Oldham"
+	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- examples: "Chatham", "Oldham"
 })
 
 DefineLanguageWord("Hammer", {
@@ -1983,7 +1981,7 @@ DefineLanguageWord("New", {
 	Meanings = {"New"},
 	DerivesFrom = {"old-english", "adjective", "Nîwe"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 153.
 	AffixNameTypes = {
-		"compound", "prefix", "settlement", -- examples: "Newbury", "Newcastle upon Tyne", "Newport", "Newquay"; Source: "Philip's International School Atlas", 2006, p. 64.
+		"compound", "prefix", "settlement", -- examples: "Newbury", "Newport", "Newquay"; Source: "Philip's International School Atlas", 2006, p. 64.
 		"separate", "prefix", "unit-class-smithy", -- seems sensible
 		"separate", "prefix", "unit-class-lumber-mill" -- seems sensible
 	}

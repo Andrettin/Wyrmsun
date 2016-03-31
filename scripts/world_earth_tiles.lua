@@ -117,6 +117,43 @@ DefineWorldMapTile({473, 93}, {
 	}
 })
 
+DefineWorldMapTile({474, 97}, {
+	World = "Earth",
+	FactionCulturalSettlementNames = {
+		"teuton", "England", "Berwick" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
+	}
+})
+
+DefineWorldMapTile({475, 98}, {
+	World = "Earth",
+	FactionCulturalSettlementNames = {
+		"teuton", "England", "Bamburgh", "name-elements", { -- Shepherd gives it as "Bamborough" instead; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
+--			"compound", "prefix", "english", -- ?
+			"compound", "suffix", "english", "noun", "Burgh" -- presumably
+		}
+	}
+})
+
+DefineWorldMapTile({475, 99}, {
+	World = "Earth",
+	FactionCulturalSettlementNames = {
+		"teuton", "England", "Newcastle", "name-elements", { -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
+			"compound", "prefix", "english", "adjective", "New", -- presumably
+			"compound", "suffix", "english", "noun", "singular", "Castle" -- presumably
+		}
+	}
+})
+
+DefineWorldMapTile({475, 100}, {
+	World = "Earth",
+	FactionCulturalSettlementNames = {
+		"teuton", "England", "Durham", "name-elements", { -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
+			"compound", "prefix", "english", "noun", "Dur", -- presumably
+			"compound", "suffix", "english", "noun", "Ham" -- presumably
+		}
+	}
+})
+
 DefineWorldMapTile({475, 119}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {

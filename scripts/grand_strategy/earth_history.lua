@@ -1640,8 +1640,12 @@ if (GrandStrategyYear >= 33) then -- estimated date
 end
 
 if (GrandStrategyYear >= 43) then
-	SetProvinceOwner("England", "latin", "Rome")  -- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-	SetProvinceOwner("Rhodes", "latin", "Rome")  -- Rhodes acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	-- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	SetProvinceOwner("England", "latin", "Rome")
+	SetProvinceOwner("Durham", "latin", "Rome")
+	SetProvinceSettlementBuilding("Durham", "unit-teuton-town-hall", true)
+	
+	SetProvinceOwner("Rhodes", "latin", "Rome") -- Rhodes acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 end
 
 if (GrandStrategyYear >= 50) then
@@ -1657,9 +1661,11 @@ if (GrandStrategyYear >= 63) then -- estimated date
 end
 
 if (GrandStrategyYear >= 80) then
-	-- Lowland Scotland acquired by Rome in 80 AD (its frontier being the Wall of Antoninus or Severus); Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	-- The area between the Wall of Antoninus (or Severus) and Hadrian's Wall was acquired by Rome in 80 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	SetProvinceOwner("Lowland Scotland", "latin", "Rome")
 	SetProvinceSettlementBuilding("Lowland Scotland", "unit-teuton-town-hall", true)
+	SetProvinceOwner("Northumberland", "latin", "Rome")
+	SetProvinceSettlementBuilding("Northumberland", "unit-teuton-town-hall", true)
 end
 
 if (GrandStrategyYear >= 83) then
@@ -2078,7 +2084,10 @@ if (GrandStrategyYear >= 526) then -- political situation in 526-600 in Europe; 
 	SetProvinceCivilization("Zealand", "norse")
 	AcquireFactionTechnologies("germanic", "Skeldung Tribe", "norse", "Dane Tribe")
 	
-	SetProvinceOwner("England", "teuton", "Angle Tribe") -- by 526 AD the Anglo-Saxons had become masters of most of Roman Britannia; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+	-- by 526 AD the Anglo-Saxons had become masters of most of Roman Britannia; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+	SetProvinceOwner("England", "teuton", "Angle Tribe")
+	SetProvinceOwner("Durham", "teuton", "Angle Tribe")
+	SetProvinceOwner("Northumberland", "teuton", "Angle Tribe")
 end
 
 if (GrandStrategyYear >= 531) then
@@ -2141,6 +2150,13 @@ end
 if (GrandStrategyYear >= 597) then
 	GrandStrategyEvents.AugustineArchbishopOfEngland = nil
 	GrandStrategyEvents.TheChurchAtCanterbury = nil -- church and monastery built at Canterbury by Augustine; Source: Philip Schaff, "History of the Christian Church", 1997, Â§10.
+end
+
+if (GrandStrategyYear >= 600) then
+	-- In 600 AD, the Bernice people (who were Anglians) were centered in Bamburgh; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
+	SetProvinceOwner("Northumberland", "teuton", "Bernice Tribe")
+	SetProvinceCivilization("Northumberland", "teuton")
+	AcquireFactionTechnologies("teuton", "Angle Tribe", "teuton", "Bernice Tribe")
 end
 
 if (GrandStrategyYear >= 602) then
@@ -2528,7 +2544,8 @@ if (GrandStrategyYear >= 1557) then -- Astrakhan acquired by Muscovy in 1557 AD;
 	SetProvinceOwner("Astrakhan", "slav", "Muscovy")
 end
 
-if (GrandStrategyYear >= 1560) then -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+if (GrandStrategyYear >= 1560) then
+	-- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	SetProvinceOwner("Aragon", "latin", "Spain")
 	SetProvinceOwner("Castille", "latin", "Spain")
 	SetProvinceOwner("Andalusia", "latin", "Spain")
@@ -2612,6 +2629,8 @@ if (GrandStrategyYear >= 1560) then -- Political situation in Europe in 1560 AD;
 	SetProvinceOwner("Dobruja", "teuton", "Turkey")
 	
 	SetProvinceOwner("England", "teuton", "England")
+	SetProvinceOwner("Durham", "teuton", "England")
+	SetProvinceOwner("Northumberland", "teuton", "England")
 	SetProvinceOwner("Lowland Scotland", "teuton", "Scotland")
 	SetProvinceOwner("Highland Scotland", "teuton", "Scotland")
 	SetProvinceOwner("Orkney", "teuton", "Scotland")

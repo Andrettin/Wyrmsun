@@ -63,8 +63,23 @@ https://github.com/Andrettin/Wyrmsun
 - 2.1.3
 -----------------------------------------------------------------------
 
+* Factions
+- Added a new Teuton faction, the Bernice Tribe (uses Old English as its language), as well as a corresponding encyclopedia entry.
+- Expanded the encyclopedia entry of the dwarven Brising Clan.
+- Expanded the encyclopedia entry of the dwarven Eikinskjaldi Clan.
+- Added an encyclopedia entry for the dwarven Joruvellir faction.
+- Added an encyclopedia entry for the dwarven Lyr faction.
+- Expanded the encyclopedia entry of the germanic Asa Tribe.
+
+* Grand Strategy
+- Added Durham province.
+- Added Northumberland province.
+
 * Maps
 - Fixed a couple of tiles who were in the wrong place in the Shorbear Hills map.
+
+* Miscellaneous
+- The encyclopedia "Factions" section is now divided into subsections for different civilizations.
 
 * Quests
 - The Gnomish Envoy and Rugnur now disappear upon reaching their final objectives in the Hills of the Shorbear Clan quest.
