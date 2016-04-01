@@ -25,24 +25,9 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineFaction("Bernice Tribe", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
-	Civilization = "teuton",
-	ParentFaction = "Angle Tribe",
-	Type = "tribe",
-	Language = "old-english",
-	Colors = {"brown"},
-	DevelopsTo = {"England", "Scotland"},
-	FactionUpgrade = "upgrade-bernice-tribe-faction",
-	Description = "The Bernice were an Anglian people who established themselves on the Northumbrian coast, eventually managing to conquer the surrounding Celtic territories."
+DefineLanguageWord("Deifr", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
+	Language = "british",
+	Type = "noun",
+	Meanings = {"Waters"}
 })
 
-DefineFaction("Dere Tribe", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
-	Civilization = "teuton",
-	ParentFaction = "Angle Tribe",
-	Type = "tribe",
-	Language = "old-english",
-	Colors = {"blue"},
-	DevelopsTo = {"England", "Scotland"},
-	FactionUpgrade = "upgrade-bernice-tribe-faction",
-	Description = "The Dere were a group of Anglian peoples, who originally dwelled in the central and eastern parts of modern Yorkshire. Their name comes from the British word \"deifr\" (meaning \"waters\"), likely due to their initial settlements being located at the confluence of multiple rivers into the Humber."
-})

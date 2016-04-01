@@ -168,6 +168,13 @@ DefineWorldMapTile({475, 121}, {
 	}
 })
 
+DefineWorldMapTile({477, 102}, {
+	World = "Earth",
+	FactionCulturalSettlementNames = {
+		"teuton", "England", "York" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
+	}
+})
+
 DefineWorldMapTile({477, 137}, {
 	World = "Earth",
 	CulturalSettlementNames = {
@@ -175,6 +182,15 @@ DefineWorldMapTile({477, 137}, {
 	},
 	FactionCulturalSettlementNames = {
 		"latin", "Spain", "Zaragoza"
+	}
+})
+
+DefineWorldMapTile({478, 102}, {
+	World = "Earth",
+	FactionCulturalSettlementNames = {
+		"teuton", "England", "Hull", "name-elements", { -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
+			"word", "english", "noun", "Hull" -- presumably
+		}
 	}
 })
 

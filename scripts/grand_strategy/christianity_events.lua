@@ -392,13 +392,15 @@ local ChristianityEvents = {
 		OptionTooltips = {"+1 Prestige"}
 	},
 	PaulinusAppointedArchbishopOfYork = { -- Source: Philip Schaff, "History of the Christian Church", 1997, §10.
-		Name = "Paulinus Appointed Archbishop of York",
-		Description = "Paulinus, who had been sent by the Pope to PROVINCE_NAME to aid in the promotion of Christianity there, has been appointed the archbishop of York.",
+		Name = "Paulinus Appointed Archbishop of PROVINCE_NAME",
+		Description = "Paulinus, who had been sent by the Pope to SECOND_PROVINCE_NAME to aid in the promotion of Christianity there, has been appointed the archbishop of PROVINCE_NAME.",
 		Conditions = function(s)
 			if (
-				GetProvinceOwner("England") == EventFaction.Name
+				GetProvinceOwner("York") == EventFaction.Name
+				and GetProvinceOwner("England") == EventFaction.Name
 			) then
-				EventProvince = WorldMapProvinces.England
+				EventProvince = WorldMapProvinces.York
+				SecondEventProvince = WorldMapProvinces.England
 				return true
 			else
 				return false

@@ -38,6 +38,10 @@ DefineLanguage("basque", {
 	Name = "Basque"
 })
 
+DefineLanguage("british", {
+	Name = "British"
+})
+
 DefineLanguage("burgundian", {
 	Name = "Burgundian"
 })
@@ -352,7 +356,8 @@ DefineLanguage("oscan", {
 })
 
 DefineLanguage("phrygian", {
-	Name = "Phrygian"
+	Name = "Phrygian",
+	SkipNameTypeInheritance = true
 })
 
 DefineLanguage("portuguese", {
@@ -434,6 +439,7 @@ Load("scripts/language_umbrian.lua")
 -- Celtic languages (branch of the Indo-European family)
 Load("scripts/language_old_gaulish.lua")
 Load("scripts/language_gaulish.lua")
+Load("scripts/language_british.lua")
 Load("scripts/language_old_welsh.lua")
 Load("scripts/language_welsh.lua")
 Load("scripts/language_old_irish.lua")

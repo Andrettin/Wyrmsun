@@ -31,6 +31,7 @@ GrandStrategyEventMap = false
 GrandStrategyBattle = false
 EventFaction = nil
 EventProvince = nil
+SecondEventProvince = nil
 GrandStrategyWorld = ""
 BattalionMultiplier = wyr.preferences.GrandStrategyBattalionMultiplier
 GrandStrategyMapWidthIndent = 0
@@ -52,6 +53,7 @@ function RunGrandStrategyGameSetupMenu()
 	GrandStrategyBattle = false
 	EventFaction = nil
 	EventProvince = nil
+	SecondEventProvince = nil
 	GrandStrategyWorld = ""
 	BattalionMultiplier = wyr.preferences.GrandStrategyBattalionMultiplier
 	GrandStrategyMapWidthIndent = 0
@@ -3390,6 +3392,7 @@ function ClearGrandStrategyVariables()
 	MercenaryGroups = nil
 	EventFaction = nil
 	EventProvince = nil
+	SecondEventProvince = nil
 	CleanGrandStrategyGame()
 	ProcessingEndTurn = nil
 	GrandStrategyMapWidthIndent = 0
@@ -3694,6 +3697,11 @@ function GrandStrategyEvent(faction, event)
 				event_name = string.gsub(event_name, "CULTURE_NAME", GetCivilizationData(EventFaction.Civilization, "Adjective"))
 			end
 		end
+		if (SecondEventProvince ~= nil) then
+			if (string.find(event_name, "SECOND_PROVINCE_NAME") ~= nil) then
+				event_name = string.gsub(event_name, "SECOND_PROVINCE_NAME", GetProvinceName(SecondEventProvince))
+			end
+		end
 		menu:addLabel(event_name, 176, 11)
 
 		local l = MultiLineLabel()
@@ -3719,6 +3727,11 @@ function GrandStrategyEvent(faction, event)
 			end
 			if (string.find(event_description, "CULTURE_NAME") ~= nil) then
 				event_description = string.gsub(event_description, "CULTURE_NAME", GetCivilizationData(EventFaction.Civilization, "Adjective"))
+			end
+		end
+		if (SecondEventProvince ~= nil) then
+			if (string.find(event_description, "SECOND_PROVINCE_NAME") ~= nil) then
+				event_description = string.gsub(event_description, "SECOND_PROVINCE_NAME", GetProvinceName(SecondEventProvince))
 			end
 		end
 		l:setCaption(event_description)
@@ -3802,6 +3815,7 @@ function DoEvents()
 				end
 				EventFaction = nil
 				EventProvince = nil
+				SecondEventProvince = nil
 			end
 		end
 	end

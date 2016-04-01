@@ -64,7 +64,8 @@ https://github.com/Andrettin/Wyrmsun
 -----------------------------------------------------------------------
 
 * Factions
-- Added a new Teuton faction, the Bernice Tribe (uses Old English as its language), as well as a corresponding encyclopedia entry. The Kriegers and Speerkampfers of the Bernice Tribe get 50% damage bonus for a certain duration after disembarking from a transport.
+- Added a new Teuton faction, the Bernice Tribe (uses Old English as its language), as well as a corresponding encyclopedia entry.
+- Added a new Teuton faction, the Dere Tribe (uses Old English as its language), as well as a corresponding encyclopedia entry.
 - Expanded the encyclopedia entry of the dwarven Brising Clan.
 - Expanded the encyclopedia entry of the dwarven Eikinskjaldi Clan.
 - Added an encyclopedia entry for the dwarven Joruvellir faction.
@@ -74,6 +75,7 @@ https://github.com/Andrettin/Wyrmsun
 * Grand Strategy
 - Added Durham province.
 - Added Northumberland province.
+- Added York province.
 
 * Maps
 - Fixed a couple of tiles who were in the wrong place in the Shorbear Hills map.
@@ -83,6 +85,9 @@ https://github.com/Andrettin/Wyrmsun
 
 * Quests
 - The Gnomish Envoy and Rugnur now disappear upon reaching their final objectives in the Hills of the Shorbear Clan quest.
+
+* Units
+- The Kriegers and Speerkampfers of the Bernice and Dere Tribes get a 50% damage bonus for a certain duration after disembarking from a transport ship.
 
 -----------------------------------------------------------------------
 - 2.1.2

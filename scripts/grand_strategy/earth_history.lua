@@ -1644,6 +1644,8 @@ if (GrandStrategyYear >= 43) then
 	SetProvinceOwner("England", "latin", "Rome")
 	SetProvinceOwner("Durham", "latin", "Rome")
 	SetProvinceSettlementBuilding("Durham", "unit-teuton-town-hall", true)
+	SetProvinceOwner("York", "latin", "Rome")
+	SetProvinceSettlementBuilding("York", "unit-teuton-town-hall", true)
 	
 	SetProvinceOwner("Rhodes", "latin", "Rome") -- Rhodes acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 end
@@ -2024,6 +2026,11 @@ if (GrandStrategyYear >= 500) then
 	SetRegionPopulation("Eurasia", 6900000) -- CIS had a population of around 6.9 millions in 500 AD; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
 	
 	-- around 500 AD a royal palace (which had a hall and a Christian chapel) was built by the Burgundians in Geneva; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
+	
+	-- The Dere (a collection of Anglian peoples) were in possession of York in 500 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
+	SetProvinceOwner("York", "teuton", "Dere Tribe")
+	SetProvinceCivilization("York", "teuton")
+	AcquireFactionTechnologies("teuton", "Angle Tribe", "teuton", "Dere Tribe")
 end
 
 if (GrandStrategyYear >= 506) then
@@ -2631,6 +2638,7 @@ if (GrandStrategyYear >= 1560) then
 	SetProvinceOwner("England", "teuton", "England")
 	SetProvinceOwner("Durham", "teuton", "England")
 	SetProvinceOwner("Northumberland", "teuton", "England")
+	SetProvinceOwner("York", "teuton", "England")
 	SetProvinceOwner("Lowland Scotland", "teuton", "Scotland")
 	SetProvinceOwner("Highland Scotland", "teuton", "Scotland")
 	SetProvinceOwner("Orkney", "teuton", "Scotland")

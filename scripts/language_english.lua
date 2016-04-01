@@ -1552,6 +1552,13 @@ DefineLanguageWord("House", {
 	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 336.
 })
 
+DefineLanguageWord("Hull", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Hull"},
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Hunger", {
 	Language = "english",
 	Type = "noun",
