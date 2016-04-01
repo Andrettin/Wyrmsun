@@ -73,11 +73,14 @@ if not (ui_loaded_first_time) then
 		end
 		DefineDecorations({Index = "CarryResource", HideNeutral = false, CenterX = true,OffsetPercent = {50, 100},Method = {"sprite", {"sprite-mana"}}})
 	end
+	DefineSprites({Name = "sprite-inspire", File = "ui/strength.png", Offset = {1, 1}, Size = {16, 16}})
 	DefineSprites({Name = "sprite-slow", File = "ui/slow.png", Offset = {1, 1}, Size = {16, 16}})
 	DefineSprites({Name = "sprite-stun", File = "ui/stun.png", Offset = {1, 1}, Size = {16, 16}})
 	DefineSprites({Name = "sprite-bleeding", File = "ui/bleeding.png", Offset = {1, 1}, Size = {16, 16}})
 	DefineSprites({Name = "sprite-level-up", File = "ui/level_up.png", Offset = {1, 1}, Size = {16, 16}})
 
+	DefineDecorations({Index = "Inspire", ShowOpponent = true,
+	  Offset = {0, 0}, Method = {"static-sprite", {"sprite-inspire", 0}}})
 	DefineDecorations({Index = "Slow", ShowOpponent = true,
 	  Offset = {0, 16}, Method = {"static-sprite", {"sprite-slow", 0}}})
 	DefineDecorations({Index = "Stun", ShowOpponent = true,
@@ -1344,6 +1347,9 @@ if not (ui_loaded_first_time) then
 				},
 				{ 	Condition = {Speed = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Speed: "), Variable = "Speed", Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {DisembarkmentBonus = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Disembarkment Bonus"), Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				-- Description
 				{ 	Margin = {1, 1}, Condition = {ButtonAction = "editor-unit"}, 

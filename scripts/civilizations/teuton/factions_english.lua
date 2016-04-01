@@ -32,5 +32,6 @@ DefineFaction("Bernice Tribe", { -- Source: Frank Stenton, "Anglo-Saxon England"
 	Language = "old-english",
 	Colors = {"white"},
 	DevelopsTo = {"England", "Scotland"},
+	FactionUpgrade = "upgrade-bernice-tribe-faction",
 	Description = "The Bernice were an Anglian people who established themselves on the Northumbrian coast, eventually managing to conquer the surrounding Celtic territories."
 })

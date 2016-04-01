@@ -8,8 +8,6 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      upgrade.ccl - Define the teuton dependencies and upgrades.
---
 --      (c) Copyright 2014-2016 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
@@ -160,6 +158,10 @@ DefineUpgrade("upgrade-angle-tribe-faction", {
 
 DefineUpgrade("upgrade-bavarian-tribe-faction", {
 	Name = _("Bavarian Tribe Faction")
+})
+
+DefineUpgrade("upgrade-bernice-tribe-faction", {
+	Name = _("Bernice Tribe Faction")
 })
 
 DefineUpgrade("upgrade-frank-tribe-faction", {
@@ -332,6 +334,12 @@ DefineModifier("upgrade-bavarian-tribe-faction",
 	{"BasicDamage", 1},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-swordsman"}
+)
+
+DefineModifier("upgrade-bernice-tribe-faction",
+	{"DisembarkmentBonus", 1},
+	{"Points", 10},
+	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-spearman"}
 )
 
 DefineModifier("upgrade-frank-tribe-faction",

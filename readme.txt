@@ -64,7 +64,7 @@ https://github.com/Andrettin/Wyrmsun
 -----------------------------------------------------------------------
 
 * Factions
-- Added a new Teuton faction, the Bernice Tribe (uses Old English as its language), as well as a corresponding encyclopedia entry.
+- Added a new Teuton faction, the Bernice Tribe (uses Old English as its language), as well as a corresponding encyclopedia entry. The Kriegers and Speerkampfers of the Bernice Tribe get 50% damage bonus for a certain duration after disembarking from a transport.
 - Expanded the encyclopedia entry of the dwarven Brising Clan.
 - Expanded the encyclopedia entry of the dwarven Eikinskjaldi Clan.
 - Added an encyclopedia entry for the dwarven Joruvellir faction.

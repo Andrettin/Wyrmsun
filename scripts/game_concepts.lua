@@ -8,9 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      game_concepts.lua - Defines the game concepts.
---
---      (c) Copyright 2015 by Andrettin
+--      (c) Copyright 2015-2016 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -50,6 +48,10 @@ GameConcepts = {
 		Description = _("In Grand Strategy mode, claims are provinces considered to be an integral part of a country.")
 	},
 	--]]
+	DisembarkmentBonus = {
+		Name = _("Disembarkment Bonus"),
+		Description = _("Units that have a disembarkment bonus deal 50% more damage for a certain duration after having been unloaded from a transport ship.")
+	},
 	Experience = {
 		Name = _("~!Experience"),
 		Description = _("Organic units gain experience as enemy units are killed, eventually allowing them to level up. Leveling up allows the unit to upgrade to a better unit type, or to learn one new ability.")
