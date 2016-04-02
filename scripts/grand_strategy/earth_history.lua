@@ -944,7 +944,6 @@ if (GrandStrategyYear >= -400) then -- Boii attested c. 400 BC; Source: John T. 
 	SetProvinceCivilization("Bohemia", "celt")
 end
 
-
 if (GrandStrategyYear >= -387) then
 	-- Plundering of Rome under Brennus (Celtic leader) and battle at the river Allia in 387 BC; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 230.
 end
