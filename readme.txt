@@ -28,8 +28,6 @@ Features:
 - Persistent heroes, who carry over their level, abilities and items throughout scenarios
 - Possibility to create your own custom persistent heroes
 - Normal, magic-enchanted and unique items drop from enemies
-- Dozens of maps of real and fictional locations to choose from, as well as random maps
-- Living environment, with fauna reproduction and predation
 - Very moddable game, with a built-in mod editor and Steam Workshop integration
 - Grand strategy mode, where production is resolved on the strategic (world map) level, while battles are resolved on the tactical level
 - In-game encyclopedia, allowing players to learn more about the units, buildings and other elements of the game, as well as their historical and mythological sources of inspiration
@@ -67,13 +65,15 @@ https://github.com/Andrettin/Wyrmsun
 - Building graphics can now be used for custom units/buildings in the editor.
 
 * Factions
-- Added a new Teuton faction, the Bernice Tribe (uses Old English as its language), as well as a corresponding encyclopedia entry.
-- Added a new Teuton faction, the Dere Tribe (uses Old English as its language), as well as a corresponding encyclopedia entry.
+- Added the Bernice Tribe (Teuton, uses Old English as its language).
+- Added the Dere Tribe (Teuton, uses Old English as its language).
 - Expanded the encyclopedia entry of the dwarven Brising Clan.
 - Expanded the encyclopedia entry of the dwarven Eikinskjaldi Clan.
 - Added an encyclopedia entry for the dwarven Joruvellir faction.
 - Added an encyclopedia entry for the dwarven Lyr faction.
 - Expanded the encyclopedia entry of the germanic Asa Tribe.
+- Added Bernicia (Teuton polity, uses Old English as its language).
+- Added Deira (Teuton polity, uses Old English as its language).
 
 * Grand Strategy
 - Added Durham province.
@@ -93,7 +93,7 @@ https://github.com/Andrettin/Wyrmsun
 - New forest tileset rock graphics (by Exidelo).
 
 * Units
-- The Kriegers and Speerkampfers of the Bernice and Dere Tribes get a 50% damage bonus for a certain duration after disembarking from a transport ship.
+- The Kriegers and Speerkampfers of the Bernice Tribe, Dere Tribe, Bernicia and Deira get a 50% damage bonus for a certain duration after disembarking from a transport ship.
 
 -----------------------------------------------------------------------
 - 2.1.2

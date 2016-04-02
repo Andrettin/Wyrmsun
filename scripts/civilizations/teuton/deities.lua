@@ -25,11 +25,20 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineDeity("Woden", {
-	Civilization = "teuton",
-	ParentDeity = "Wodanaz",
-	Gender = "male",
-	Major = true
+DefineDeity("Baeldaeg", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75.
+	Civilization = "teuton", -- English
+	Gender = "male", -- presumably
+	Major = true,
+	Description = "In the Anglo-Saxon tradition, Baeldaeg was the son of Woden, to whom the royal houses of both Bernicia and Wessex ascribed their descent.",
+	Background = "The deity's name was spelled \"Bældæg\" in its original form."
+})
+
+DefineDeity("Woden", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75.
+	Civilization = "teuton", -- English
+	ParentDeity = "Wodanaz", -- presumably
+	Gender = "male", -- presumably
+	Major = true,
+	Description = "Woden was the one of the major deities in the Anglo-Saxon tradition. The royal house of Deira claimed Woden as their ancestor."
 })
 
 DefineDeity("Seaxneat", { -- also called Saxnoth; "The Conquest of Saxony", p. 9

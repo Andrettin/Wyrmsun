@@ -13,6 +13,7 @@ GenerateProvince({
 		mushrooms = 1
 	}
 })
+
 GenerateProvince({
 	Province = WorldMapProvinces.Joruvellir,
 	BorderProvinces = {"Aurvang"},
@@ -24,6 +25,7 @@ GenerateProvince({
 		stone = 2
 	}
 })
+
 GenerateProvince({
 	Province = WorldMapWaterProvinces.DeepSea,
 	BorderProvinces = {"Kal Kartha", "Lyr"},
@@ -69,7 +71,6 @@ LoadEvents("Nidavellir")
 
 if (GrandStrategyYear >= -3000) then
 	SetProvinceHero("Svarinshaug", "Modsognir", 2) 
-	SetFactionRuler("dwarf", "Brising Clan", "Modsognir")
 	SetProvinceHero("Svarinshaug", "Durin", 2)
 	
 	-- give plow technology to the dwarven factions
@@ -120,7 +121,6 @@ if (GrandStrategyYear >= -1) then
 	SetProvinceSettlementBuilding("Shorbear Hills", "unit-dwarven-smithy", true) -- renowned skilled crafters
 	SetProvinceUnitQuantity("Shorbear Hills", "unit-goblin-spearman", 0)
 	SetProvinceUnitQuantity("Shorbear Hills", "unit-dwarven-thane", 1) -- Glonoin
-	SetFactionRuler("dwarf", "Shorbear Clan", "Glonoin")
 	SetWorldMapResourceProspected("gold", 34, 14, true)
 	SetProvinceOwner("Southern Tunnels", "dwarf", "Shinsplitter Clan")
 	SetProvinceSettlementBuilding("Southern Tunnels", "unit-dwarven-town-hall", true)
@@ -157,11 +157,8 @@ if (GrandStrategyYear >= -1) then
 	SetFactionTechnology("dwarf", "Lyr", "upgrade-dwarven-sharp-throwing-axe", true)
 	
 	SetProvinceHero("Caverns of Chaincolt", "Durstorn", 2) -- Durstorn was already present when the conflict with Pypo over the Brown Hills happened
-	SetFactionRuler("dwarf", "Norlund Clan", "Durstorn")
 	SetProvinceHero("Caverns of Chaincolt", "Baglur", 2) -- Baglur was already present when the conflict with Pypo over the Brown Hills happened
 	SetProvinceHero("Caverns of Chaincolt", "Thursagan", 2) -- Thursagan could be in the Caverns of Chaincolt at this time
-	
-	SetFactionRuler("gnome", "Untersberg", "Pypo")
 end
 
 if (GrandStrategyYear >= 25) then -- at this time Rugnur was already in charge of the outpost in the Chaincolt Foothills, Baglur was at the Caverns of Chaincolt gate, Thursagan was living in the Northern Wastelands and Durstorn was the chief of the Norlund clan

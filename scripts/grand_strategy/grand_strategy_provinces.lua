@@ -650,7 +650,7 @@ function LoadProvinces(world)
 			Owner = "Brising Clan",
 			Civilization = "dwarf",
 			SettlementBuildings = {
-				unit_brising_town_hall = true
+				unit_dwarven_town_hall = true
 			}
 		}
 	}

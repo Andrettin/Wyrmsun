@@ -78,7 +78,10 @@ DefineCharacter("Pypo", {
 	ProvinceOfOrigin = "Brown Hills",
 	Year = -1,
 	DeathYear = 40, -- last we hear of him
-	LiteraryAppearances = {"upgrade-work-the-scepter-of-fire"}
+	LiteraryAppearances = {"upgrade-work-the-scepter-of-fire"},
+	HistoricalRulerships = {
+		-1, 40, "gnome", "Untersberg"
+	}
 })
 
 -- Goblin heroes
@@ -104,8 +107,11 @@ DefineCharacter("Gylve", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p
 	Type = "unit-germanic-warrior",
 	Civilization = "basque",
 	ProvinceOfOrigin = "Scania",
-	Year = -3000 + 12 + (10 * 18),
-	DeathYear = -2800 + (30 * 1)
+	Year = -3000 + 12 + (10 * 18), -- contemporary of Vóden
+	DeathYear = -2800 + (30 * 1),
+	HistoricalRulerships = {
+		-3000 + 12 + (10 * 18), -2800 + (30 * 1), "basque", "Gylfing Tribe"
+	}
 })
 
 -- Hun heroes

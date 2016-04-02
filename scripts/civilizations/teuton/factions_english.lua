@@ -46,3 +46,25 @@ DefineFaction("Dere Tribe", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	FactionUpgrade = "upgrade-bernice-tribe-faction",
 	Description = "The Dere were a group of Anglian peoples, who originally dwelled in the central and eastern parts of modern Yorkshire. Their name comes from the British word \"deifr\" (meaning \"waters\"), likely due to their initial settlements being located at the confluence of multiple rivers into the Humber."
 })
+
+DefineFaction("Bernicia", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75.
+	Civilization = "teuton",
+	ParentFaction = "Bernice Tribe",
+	Type = "polity",
+	Language = "old-english",
+	Colors = {"brown"},
+	DefaultTier = "kingdom",
+	DevelopsTo = {"England", "Scotland"},
+	Description = "Bernicia was the kingdom founded by the Bernice people in Northumbria."
+})
+
+DefineFaction("Deira", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75.
+	Civilization = "teuton",
+	ParentFaction = "Dere Tribe",
+	Type = "polity",
+	Language = "old-english",
+	Colors = {"blue"},
+	DefaultTier = "kingdom",
+	DevelopsTo = {"England", "Scotland"},
+	Description = "Deira was the kingdom founded by the Dere people in Northumbria."
+})

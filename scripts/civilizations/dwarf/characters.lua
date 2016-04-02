@@ -43,7 +43,10 @@ DefineCharacter("Modsognir", { -- one of the earliest dwarven leaders; in Norse 
 	Year = -3000,
 	DeathYear = -3000 + 30, -- estimated
 	Persistent = true,
-	ForbiddenUpgrades = {"unit-dwarven-yale-rider"}
+	ForbiddenUpgrades = {"unit-dwarven-yale-rider"},
+	HistoricalRulerships = {
+		-3000, -3000 + 30, "dwarf", "Brising Clan"
+	}
 })
 
 DefineCharacter("Durin", { -- deputy of Modsognir
@@ -154,7 +157,10 @@ DefineCharacter("Durstorn", { -- from "The Sceptre of Fire" campaign of "Battle 
 	DeathYear = 35 + 15, -- died in 35 AD of a violent death, but was already somewhat old; +15 years
 	Persistent = true,
 	ForbiddenUpgrades = {"unit-dwarven-yale-rider"},
-	LiteraryAppearances = {"upgrade-work-the-scepter-of-fire"}
+	LiteraryAppearances = {"upgrade-work-the-scepter-of-fire"},
+	HistoricalRulerships = {
+		-1, 35, "dwarf", "Norlund Clan"
+	}
 })
 
 DefineCharacter("Glonoin", { -- from "The Sceptre of Fire" campaign of "Battle for Wesnoth"; chieftain of the Shorbear clan
@@ -166,7 +172,10 @@ DefineCharacter("Glonoin", { -- from "The Sceptre of Fire" campaign of "Battle f
 	Faction = "Shorbear Clan",
 	ProvinceOfOrigin = "Shorbear Hills",
 	Year = -1,
-	DeathYear = 29 + 15 -- Shorbear Hold conquered in 29 AD by Rugnur's and Durstorn's Clan
+	DeathYear = 29 + 15, -- Shorbear Hold conquered in 29 AD by Rugnur's and Durstorn's Clan
+	HistoricalRulerships = {
+		-1, 29, "dwarf", "Shorbear Clan"
+	}
 })
 
 DefineCharacter("Rugnur", { -- from "The Sceptre of Fire" campaign of "Battle for Wesnoth"; leader of the party of dwarves who handled the crafting of the Sceptre of Fire

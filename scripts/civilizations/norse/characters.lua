@@ -938,7 +938,10 @@ DefineCharacter("Magnus the Saint", { -- Source: Snorri Sturlson, "Heimskringla"
 	Civilization = "norse",
 	ProvinceOfOrigin = "Orkney", -- presumably
 	Year = 1129 - 30, -- estimated
-	DeathYear = 1129 -- presumably
+	DeathYear = 1129, -- presumably
+	HistoricalRulerships = {
+		1129 - 30, 1129, "norse", "Orkney"
+	}
 })
 
 DefineCharacter("Koll", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 125.
@@ -959,7 +962,10 @@ DefineCharacter("Kala", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol.
 	ProvinceOfOrigin = "Orkney", -- presumably
 	Year = 1129, -- was made Earl of Orkney
 	DeathYear = 1129 + 30, -- estimated
-	Father = "Koll"
+	Father = "Koll",
+	HistoricalRulerships = {
+		1129, 1129 + 30, "norse", "Orkney"
+	}
 })
 
 DefineCharacter("Arnold", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 142.
@@ -979,7 +985,10 @@ DefineCharacter("Hakon", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol
 	Civilization = "norse",
 	ProvinceOfOrigin = "Hordaland", -- only province implemented that is part of Norway; but Akershus/Oslo would be a better fit: since we only know he came from Norway, it makes sense to set the capital as his province of origin
 	Year = 1261 - 30, -- estimated
-	DeathYear = 1261 -- estimated
+	DeathYear = 1261, -- by this date his son was already ruling over Norway
+	HistoricalRulerships = {
+		1261 - 30, 1261, "norse", "Orkney" -- his son was King of Norway, so presumably he was too; date estimated; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 142.
+	}
 })
 
 DefineCharacter("Hakon Hakonson", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 142.
@@ -991,7 +1000,10 @@ DefineCharacter("Hakon Hakonson", { -- Source: Snorri Sturlson, "Heimskringla", 
 	ProvinceOfOrigin = "Hordaland", -- only province implemented that is part of Norway; but Akershus/Oslo would be a better fit: since we only know he came from Norway, it makes sense to set the capital as his province of origin
 	Year = 1261, -- annexed the Norse settlements in Greenland to Norway in 1261 AD
 	DeathYear = 1261 + 30, -- estimated
-	Father = "Hakon"
+	Father = "Hakon",
+	HistoricalRulerships = {
+		1261, 1261 + 30, "norse", "Orkney"
+	}
 })
 
 DefineCharacter("Alf", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 142.

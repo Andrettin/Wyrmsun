@@ -432,86 +432,7 @@ if (GrandStrategyYear >= -3000) then -- around this time Gylve or his ancestors 
 	
 	-- First Greek Bronze Age begins around 3000 BC; Source: "Atlas de História Mundial", 2001, p. 66.
 	
-	SetFactionRuler("germanic", "Asa Tribe", "Lóríkus")
-	
 	-- The Zodiac was invented around 3000 BC; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 5.
-end
-
-if (GrandStrategyYear >= -2988) then
-	SetFactionRuler("germanic", "Asa Tribe", "Tror") -- when Trór was 12 years old, he slew his foster-father Lóríkus and took his place
-end
-
-if (GrandStrategyYear >= -2978) then
-	SetFactionRuler("germanic", "Asa Tribe", "Loridi")
-end
-
-if (GrandStrategyYear >= -2968) then
-	SetFactionRuler("germanic", "Asa Tribe", "Einridi")
-end
-
-if (GrandStrategyYear >= -2958) then
-	SetFactionRuler("germanic", "Asa Tribe", "Vingethor")
-end
-
-if (GrandStrategyYear >= -2948) then
-	SetFactionRuler("germanic", "Asa Tribe", "Vingener")
-end
-
-if (GrandStrategyYear >= -2938) then
-	SetFactionRuler("germanic", "Asa Tribe", "Moda")
-end
-
-if (GrandStrategyYear >= -2928) then
-	SetFactionRuler("germanic", "Asa Tribe", "Magan")
-end
-
-if (GrandStrategyYear >= -2918) then
-	SetFactionRuler("germanic", "Asa Tribe", "Seskef")
-end
-
-if (GrandStrategyYear >= -2908) then
-	SetFactionRuler("germanic", "Asa Tribe", "Bedvig")
-end
-
-if (GrandStrategyYear >= -2898) then
-	SetFactionRuler("germanic", "Asa Tribe", "Athra")
-end
-
-if (GrandStrategyYear >= -2888) then
-	SetFactionRuler("germanic", "Asa Tribe", "Itermann")
-end
-
-if (GrandStrategyYear >= -2878) then
-	SetFactionRuler("germanic", "Asa Tribe", "Heremod")
-end
-
-if (GrandStrategyYear >= -2868) then
-	SetFactionRuler("germanic", "Asa Tribe", "Skjaldun")
-end
-
-if (GrandStrategyYear >= -2858) then
-	SetFactionRuler("germanic", "Asa Tribe", "Bjaf")
-end
-
-if (GrandStrategyYear >= -2848) then
-	SetFactionRuler("germanic", "Asa Tribe", "Jat")
-end
-
-if (GrandStrategyYear >= -2838) then
-	SetFactionRuler("germanic", "Asa Tribe", "Gudolf")
-end
-
-if (GrandStrategyYear >= -2828) then
-	SetFactionRuler("germanic", "Asa Tribe", "Finn")
-end
-
-if (GrandStrategyYear >= -2818) then
-	SetFactionRuler("germanic", "Asa Tribe", "Friallaf")
-end
-
-if (GrandStrategyYear >= -2808) then
-	SetFactionRuler("germanic", "Asa Tribe", "Voden")
-	SetFactionRuler("basque", "Gylfing Tribe", "Gylve")
 end
 
 if (GrandStrategyYear >= -2800) then -- establishment of the Single Grave Culture (a part of the Indo-European-speaking Corded Ware cultures) in Jutland; around this time southern Sweden was settled by the Battle Axe culture (also a part of the Corded Ware cultures)
@@ -525,7 +446,6 @@ if (GrandStrategyYear >= -2800) then -- establishment of the Single Grave Cultur
 	SetProvinceOwner("Zealand", "germanic", "Skeldung Tribe")
 	SetProvinceCivilization("Zealand", "germanic")
 	SetProvinceSettlementBuilding("Zealand", "unit-germanic-town-hall", true)
-	SetFactionRuler("germanic", "Skeldung Tribe", "Skeldu")
 	
 	SetProvinceOwner("Sweden", "germanic", "Asa Tribe")
 	SetProvinceCivilization("Sweden", "germanic")
@@ -564,11 +484,6 @@ if (GrandStrategyYear >= -2770) then -- estimated date
 	SetProvinceOwner("Sweden", "germanic", "Yngling Tribe")
 	SetProvinceOwner("Gotaland", "germanic", "Yngling Tribe")
 	SetProvinceOwner("Scania", "germanic", "Yngling Tribe")
-	SetFactionRuler("germanic", "Yngling Tribe", "Yngve")
-end
-
-if (GrandStrategyYear >= -2740) then -- estimated date
-	SetFactionRuler("germanic", "Skeldung Tribe", "Fridleifr Skeldung")
 end
 
 if (GrandStrategyYear >= -2700) then
@@ -1416,7 +1331,6 @@ end
 if (GrandStrategyYear >= -71) then -- The Suebic king Ariovistus enters Gaul at the request of the Arverni and the Sequani to fight the Aedui in 71 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 230.
 	-- since the Suebi were in existence then, they were also probably already settled where Tacitus had described the Suebic Semnones as living in, since the other territories settled by Suebic tribes (Bohemia and Moravia) were only conquered later on
 	SetProvinceOwner("Brandenburg", "teuton", "Suebi Tribe")
-	SetFactionRuler("teuton", "Suebi Tribe", "Ariovistus")
 	
 	SetProvinceOwner("Burgundy", "celt", "Aedui Tribe") -- Aedui inhabited modern Bourgogne; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 	SetProvinceCivilization("Burgundy", "celt")
@@ -1591,7 +1505,6 @@ if (GrandStrategyYear >= -9) then -- Marbod, king of the Suebic tribe of the Mar
 	SetProvinceCivilization("Bohemia", "teuton")
 	SetProvinceUnitQuantity("Bohemia", "unit-germanic-warrior", 0)
 	SetProvinceHero("Bohemia", "Marbod", 2)
-	SetFactionRuler("teuton", "Marcomanni Tribe", "Marbod")
 	SetProvinceUnitQuantity("Bohemia", "unit-suebi-swordsman", 5) -- Marbod had 70,000 foot soldiers and 4,000 horse riders; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 231.
 	SetProvinceUnitQuantity("Bohemia", "unit-teuton-archer", 2) -- let's make 20,000 of those soldiers into archers
 	SetProvinceUnitQuantity("Bohemia", "unit-teuton-ritter", 1) -- 4,000 horse riders
@@ -1798,10 +1711,6 @@ if (GrandStrategyYear >= 325) then
 	-- decree by Emperor Constantine in 325 AD regulating the issue of gold solidi for Sicily, Sardinia and Corsica; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, p. 186.
 end
 
-if (GrandStrategyYear >= 346) then
-	SetFactionRuler("goth", "Ostrogoth Tribe", "Airmanareiks") -- Airmanareiks died c. 376, so we estimate him having become ruler a certain number of years before
-end
-
 if (GrandStrategyYear >= 357) then
 	-- Roman commander (and later emperor) Julian defeat an Alamannic army (led by their king Chnodomar and his nephew Serapio/Agenarich) in the battle of Argentoratum in 357 AD; the Alamanns counted with an alliance of five kings (Vestralp, Urius, Ursicinus, Suomer and Hortar), totalling 35,000 soldiers commanded by 17 warlords, with each leading 2,000-3,000 warriors; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 231.
 end
@@ -1813,7 +1722,6 @@ end
 if (GrandStrategyYear >= 381) then
 	-- date estimated from Gundahar's establishment of the Kingdom of the Burgundians
 	SetProvinceOwner("Franconia", "goth", "Burgundian Tribe")
-	SetFactionRuler("goth", "Burgundian Tribe", "Gibica")
 end
 
 if (GrandStrategyYear >= 395) then
@@ -1857,7 +1765,6 @@ if (GrandStrategyYear >= 411) then
 	-- Kingdom of the Burgundians established by Gundahar (a Burgundian tribal chief) in 411 AD, with its center in Borbetomagus (Worms); Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 91-93.
 	SetProvinceOwner("Palatinate", "goth", "Burgundy")
 	AcquireFactionTechnologies("goth", "Burgundian Tribe", "goth", "Burgundy")
-	SetFactionRuler("goth", "Burgundy", "Gundahar")
 end
 
 if (GrandStrategyYear >= 412) then
@@ -1880,8 +1787,6 @@ end
 
 if (GrandStrategyYear >= 437) then
 	-- Invasion of Gundahar's kingdom in 437 AD by Attila's Huns, with 20,000 Burgundians having died as a result; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 93.
-	
-	SetFactionRuler("goth", "Burgundy", "Gundioc") -- Gundioc became king of the Burgundians in 437 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 94-95.
 end
 
 if (GrandStrategyYear >= 440) then
@@ -1914,32 +1819,12 @@ if (GrandStrategyYear >= 453) then
 	-- Walamer was king over the Ostrogoths in Pannonia (between the Danube and the Drave) when Attila's empire collapsed in 453 AD; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 6.
 	SetProvinceOwner("Ukraine", "", "")
 	SetProvinceOwner("Pannonia", "goth", "Ostrogoth Tribe")
-	SetFactionRuler("goth", "Ostrogoth Tribe", "Walamer Amelung")
-	
-	SetFactionRuler("latin", "Rome", "Marcian") -- Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 6.
-end
-
-if (GrandStrategyYear >= 462) then
-	SetFactionRuler("latin", "Rome", "Leo") -- Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 6.
-end
-
-if (GrandStrategyYear >= 472) then
-	SetFactionRuler("goth", "Ostrogoth Tribe", "Theodemer Amelung") -- by 472 AD Theodemer has become king of the Ostrogoths; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, pp. 6-7.
 end
 
 if (GrandStrategyYear >= 474) then
-	SetFactionRuler("goth", "Burgundy", "Chilperic") -- beginning of Chilperic's reign over the Burgundians in 474 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
-	
 	-- In 474 AD the Ostrogoths left Pannonia to settle in Macedonia under the aegis of the Eastern Roman Emperor, and in that same year Theodemer died, being succeeded by Theoderic; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 7.
 	SetProvinceOwner("Pannonia", "", "")
 	SetProvinceOwner("Macedonia", "goth", "Ostrogoth Tribe")
-	SetFactionRuler("goth", "Ostrogoth Tribe", "Þiudareiks Amelung")
-end
-
-if (GrandStrategyYear >= 480) then
-	SetFactionRuler("goth", "Burgundy", "Gundobad") -- beginning of Gundobad's reign over the Burgundians in 480 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
-	
-	SetFactionRuler("latin", "Rome", "Zeno") -- Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 7.
 end
 
 if (GrandStrategyYear >= 481) then
@@ -2063,16 +1948,8 @@ if (GrandStrategyYear >= 507) then -- political situation in 507-534 in Europe; 
 	SetProvinceSettlementBuilding("Franconia", "unit-teuton-town-hall", true)
 end
 
-if (GrandStrategyYear >= 516) then
-	SetFactionRuler("goth", "Burgundy", "Sigismund") -- beginning of Sigismund's reign over the Burgundians in 516 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
-end
-
-if (GrandStrategyYear >= 516) then
-	-- Catholic ascendancy systematized in the Burgundian kingdom in 517, in the Council of Epaon (perhaps Albon in the Dauphiné); during the Council Avitus laid out guidelines for socio-religious practice; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 99.
-end
-
-if (GrandStrategyYear >= 523) then
-	SetFactionRuler("goth", "Burgundy", "Gundimar") -- beginning of Gundimar's reign over the Burgundians in 523 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
+if (GrandStrategyYear >= 517) then
+	-- Catholic ascendancy systematized in the Burgundian kingdom in 517 AD, in the Council of Epaon (perhaps Albon in the Dauphiné); during the Council Avitus laid out guidelines for socio-religious practice; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 99.
 end
 
 if (GrandStrategyYear >= 526) then -- political situation in 526-600 in Europe; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
@@ -2460,8 +2337,7 @@ if (GrandStrategyYear >= 1091) then
 end
 
 if (GrandStrategyYear >= 1099) then
-	SetFactionRuler("norse", "Orkney", "Magnus the Saint") -- date estimated; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 125.
-	SetProvinceOwner("Orkney", "norse", "Orkney") -- if the faction had a ruler at this date, then it must have existed
+	SetProvinceOwner("Orkney", "norse", "Orkney") -- since the faction had a ruler at this date, then it must have existed
 end
 
 if (GrandStrategyYear >= 1104) then
@@ -2470,10 +2346,6 @@ end
 
 if (GrandStrategyYear >= 1124) then
 	-- Regular succession of bishops in Greenland begins in 1124 AD; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 141.
-end
-
-if (GrandStrategyYear >= 1129) then
-	SetFactionRuler("norse", "Orkney", "Kala") -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 125.
 end
 
 if (GrandStrategyYear >= 1133) then -- Saemund died in 1133
@@ -2493,10 +2365,6 @@ if (GrandStrategyYear >= 1208) then -- estimated date
 	GrandStrategyEvents.SnorriSturlsonSage = nil
 end
 
-if (GrandStrategyYear >= 1231) then
-	SetFactionRuler("norse", "Norway", "Hakon") -- his son was King of Norway, so presumably he was too; date estimated; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 142.
-end
-
 if (GrandStrategyYear >= 1241) then
 	GrandStrategyEvents.Heimskringla = nil -- should be moved to actual date of composition/publication
 	GrandStrategyEvents.SnorrisMurder = nil -- Snorri murdered by his son-in-law, Gizurr Thórvaldssoon; Source: Snorri Sturlson, "The Prose Edda", 1916, p. XI.
@@ -2505,7 +2373,6 @@ end
 if (GrandStrategyYear >= 1261) then
 	-- Norse settlements in Greenland annexed to Norway in 1261 AD by King Hakon Hakonson; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 142.
 --	SetProvinceOwner("Greenland", "norse", "Norway") 
-	SetFactionRuler("norse", "Norway", "Hakon Hakonson")
 end
 
 if (GrandStrategyYear >= 1349) then

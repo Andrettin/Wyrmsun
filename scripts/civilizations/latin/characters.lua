@@ -43,7 +43,10 @@ DefineCharacter("Marcian", { -- Source: F. E. Sandbach, "The Heroic Saga-Cycle o
 	Civilization = "latin",
 	ProvinceOfOrigin = "Thrace", -- possibly not accurate, but since he was the (Eastern) Roman emperor put him there until we have better information
 	Year = 453, -- concluded a treaty with Walamer soon after he became independent in 453 AD
-	DeathYear = 462 -- by 462 AD the Roman emperor was his successor Leo
+	DeathYear = 462, -- by 462 AD the Roman emperor was his successor Leo
+	HistoricalRulerships = {
+		453, 462, "latin", "Rome"
+	}
 })
 
 DefineCharacter("Leo", { -- Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 6.
@@ -53,7 +56,10 @@ DefineCharacter("Leo", { -- Source: F. E. Sandbach, "The Heroic Saga-Cycle of Di
 	Civilization = "latin",
 	ProvinceOfOrigin = "Thrace", -- possibly not accurate, but since he was the (Eastern) Roman emperor put him there until we have better information
 	Year = 462, -- ruled in 462 AD when Walamer invaded Illyria because of the treaty's renouncement
-	DeathYear = 480 -- by 480 AD the ruler of Eastern Rome was Zeno
+	DeathYear = 480, -- by 480 AD the ruler of Eastern Rome was Zeno
+	HistoricalRulerships = {
+		462, 480, "latin", "Rome"
+	}
 })
 
 DefineCharacter("Zeno", { -- Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 7.
@@ -63,7 +69,10 @@ DefineCharacter("Zeno", { -- Source: F. E. Sandbach, "The Heroic Saga-Cycle of D
 	Civilization = "latin",
 	ProvinceOfOrigin = "Thrace", -- possibly not accurate, but since he was the (Eastern) Roman emperor put him there until we have better information
 	Year = 480, -- by 480 AD the ruler of Eastern Rome was Zeno
-	DeathYear = 480 + 30 -- estimated
+	DeathYear = 480 + 30, -- estimated
+	HistoricalRulerships = {
+		480, 480 + 30, "latin", "Rome"
+	}
 })
 
 DefineCharacter("Sidonius Apollinaris", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
