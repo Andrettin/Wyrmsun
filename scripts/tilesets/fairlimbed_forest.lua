@@ -40,6 +40,8 @@ DefineTileset("name", "Fairlimbed Forest",
 			"growing-tree", { -1, -1, },
 			"top-one-rock", 59, "mid-one-rock", 60, "bot-one-rock", 61, -- need to update this later
 			"removed-rock", 56,
+			"removed-rock", 57,
+			"removed-rock", 58,
 		},
 		"solid", { "unused",
 			{}},								-- 000
