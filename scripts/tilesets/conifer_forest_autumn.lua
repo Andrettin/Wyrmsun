@@ -8,8 +8,6 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      conifer_forest_autumn.lua - Define the conifer forest (autumn) tileset.
---
 --      (c) Copyright 2015-2016 by Andrettin
 --
 --      This program is free software-- you can redistribute it and/or modify
@@ -40,8 +38,8 @@ DefineTileset("name", "Conifer Forest (Autumn)",
 			"top-one-tree", 48, "mid-one-tree", 64, "bot-one-tree", 80,
 			"removed-tree", 16,
 			"growing-tree", { -1, -1, },
-			"top-one-rock", 48, "mid-one-rock", 64, "bot-one-rock", 80,
-			"removed-rock", 16,
+			"top-one-rock", 59, "mid-one-rock", 60, "bot-one-rock", 61, -- need to update this later
+			"removed-rock", 56,
 		},
 		"solid", { "unused",
 			{}},								-- 000
@@ -60,7 +58,7 @@ DefineTileset("name", "Conifer Forest (Autumn)",
 		"solid", { "pine-tree", "image", "tilesets/forest/terrain/pine_tree_autumn.png", "land", "forest", "unpassable",
 			{ 18, 18, 18, 18}},							-- 070
 		"solid", { "rock", "image", "tilesets/forest/terrain/rock.png", "land", "rock", "unpassable",
-			{ 18, 21, 24, 18}},						-- 080
+			{ 1, 2, 3, 1}},								-- 080
 		"solid", { "unused",
 			{}},								-- 090
 		"solid", { "unused",
@@ -127,22 +125,22 @@ DefineTileset("name", "Conifer Forest (Autumn)",
 			{},											-- 3E0
 			{}},										-- 3F0
 		"mixed", { "rock", "dirt", "land", "rock", "unpassable",
-			{ 35, 38, 35},							-- 400
-			{ 33, 36, 33},							-- 410
-			{ 34, 37, 40},							-- 420
-			{ 3, 6, 3},								-- 430
-			{ 19, 22, 25},							-- 440
-			{ 30, 31, 30},							-- 450
-			{ 27, 29, 27},							-- 460
-			{ 1, 4, 1},								-- 470
-			{ 14, 15, 14},							-- 480
-			{ 17, 20, 23},							-- 490
-			{ 26, 28, 26},							-- 4A0
-			{ 2, 5, 8},								-- 4B0
-			{ 11, 13, 11},							-- 4C0
-			{ 10, 12, 10},							-- 4D0
-			{},										-- 4E0
-			{}},									-- 4F0
+			{ 15, 17, 19},								-- 400
+			{ 14, 16, 18},								-- 410
+			{ 28, 30, 32},								-- 420
+			{ 8, 10, 12},								-- 430
+			{ 29, 31, 33},								-- 440
+			{ 51, 52, 51},								-- 450
+			{ 35, 37, 39},								-- 460
+			{ 7, 9, 11},								-- 470
+			{ 49, 50, 49},								-- 480
+			{ 21, 23, 25},								-- 490
+			{ 36, 38, 40},								-- 4A0
+			{ 22, 24, 26},								-- 4B0
+			{ 42, 44, 46},								-- 4C0
+			{ 43, 45, 47},								-- 4D0
+			{},											-- 4E0
+			{}},										-- 4F0
 		"mixed", { "dirt", "grass", "land", "no-building", "dirt",
 			{ 15, 17, 19},								-- 500
 			{ 14, 16, 18},								-- 510

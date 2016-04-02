@@ -86,6 +86,9 @@ https://github.com/Andrettin/Wyrmsun
 * Quests
 - The Gnomish Envoy and Rugnur now disappear upon reaching their final objectives in the Hills of the Shorbear Clan quest.
 
+* Terrain
+- New forest tileset rock graphics (by Exidelo).
+
 * Units
 - The Kriegers and Speerkampfers of the Bernice and Dere Tribes get a 50% damage bonus for a certain duration after disembarking from a transport ship.
 

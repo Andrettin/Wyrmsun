@@ -399,6 +399,7 @@ Exidelo (Leo):
 /graphics/teuton/icons/suebi_swordsman_gray_hair.png (licensed under the CC0)
 /graphics/teuton/ui/cursors/teuton_gauntlet.png (licensed under the CC0)
 /graphics/tilesets/forest/terrain/grass_and_dirt.png (licensed under the CC0)
+/graphics/tilesets/forest/terrain/rock.png (licensed under the CC0)
 /graphics/tilesets/forest/terrain/water.png (licensed under the CC0)
 /graphics/ui/bleeding.png (licensed under the CC0)
 
@@ -840,7 +841,6 @@ João Victor G. Costa (Jinn):
 /graphics/tilesets/dungeon/terrain/dungeon.png (rockbound cave floor and cave wall tiles) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 /graphics/tilesets/forest/neutral/icons/rat.png (licensed under the CC0)
 /graphics/tilesets/forest/terrain/forest.png (dirt and water tiles) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
-/graphics/tilesets/forest/terrain/rock.png (licensed under the CC0)
 /graphics/tilesets/swamp/neutral/buildings/destroyed_site.png (licensed under the CC0)
 /graphics/tilesets/swamp/neutral/icons/rat.png (licensed under the CC0)
 /graphics/tilesets/swamp/terrain/rock.png (licensed under the CC0)

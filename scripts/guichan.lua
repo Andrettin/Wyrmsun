@@ -8,8 +8,6 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      guichan.lua - Define the main guichan menu.
---
 --      (c) Copyright 2006-2016 by Jimmy Salmon, Pali Rohár and Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
