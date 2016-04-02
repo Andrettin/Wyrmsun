@@ -63,6 +63,9 @@ https://github.com/Andrettin/Wyrmsun
 - 2.1.3
 -----------------------------------------------------------------------
 
+* Editor
+- Building graphics can now be used for custom units/buildings in the editor.
+
 * Factions
 - Added a new Teuton faction, the Bernice Tribe (uses Old English as its language), as well as a corresponding encyclopedia entry.
 - Added a new Teuton faction, the Dere Tribe (uses Old English as its language), as well as a corresponding encyclopedia entry.

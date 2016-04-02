@@ -16,6 +16,12 @@ function GetUnitGraphics()
 	end
 
 	for j=1,table.getn(dirlist) do
+		if (GetArrayIncludes(ListDirsInDirectory("graphics/" .. dirlist[j]), "buildings")) then
+			local fileslist = ListFilesInDirectory("graphics/" .. dirlist[j] .. "buildings/")
+			for i,f in ipairs(fileslist) do
+				table.insert(unit_graphics_list, dirlist[j] .. "buildings/" .. f)
+			end
+		end
 		if (GetArrayIncludes(ListDirsInDirectory("graphics/" .. dirlist[j]), "units")) then
 			local fileslist = ListFilesInDirectory("graphics/" .. dirlist[j] .. "units/")
 			for i,f in ipairs(fileslist) do
@@ -34,6 +40,12 @@ function GetUnitGraphics()
 	end
 
 	for j=1,table.getn(dirlist) do
+		if (GetArrayIncludes(ListDirsInDirectory("dlcs/" .. dirlist[j]), "graphics") and GetArrayIncludes(ListDirsInDirectory("dlcs/" .. dirlist[j] .. "graphics/"), "buildings")) then
+			local fileslist = ListFilesInDirectory("dlcs/" .. dirlist[j] .. "graphics/buildings/")
+			for i,f in ipairs(fileslist) do
+				table.insert(unit_graphics_list, "dlcs/" .. dirlist[j] .. "graphics/buildings/" .. f)
+			end
+		end
 		if (GetArrayIncludes(ListDirsInDirectory("dlcs/" .. dirlist[j]), "graphics") and GetArrayIncludes(ListDirsInDirectory("dlcs/" .. dirlist[j] .. "graphics/"), "units")) then
 			local fileslist = ListFilesInDirectory("dlcs/" .. dirlist[j] .. "graphics/units/")
 			for i,f in ipairs(fileslist) do
