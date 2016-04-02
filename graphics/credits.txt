@@ -800,6 +800,8 @@ João Victor G. Costa (Jinn):
 /graphics/orc/icons/warrior.png (licensed under the CC0)
 /graphics/teuton/buildings/barracks.png (licensed under the CC0)
 /graphics/teuton/buildings/barracks_shadow.png (licensed under the CC0)
+/graphics/teuton/buildings/church.png (licensed under the CC0)
+/graphics/teuton/buildings/church_shadow.png (licensed under the CC0)
 /graphics/teuton/buildings/dock.png (licensed under the CC0)
 /graphics/teuton/buildings/dock_shadow.png (licensed under the CC0)
 /graphics/teuton/buildings/farm.png (licensed under the CC0)
