@@ -2030,7 +2030,7 @@ if (GrandStrategyYear >= 588) then
 	-- according to tradition, Æthelric of Bernicia acquired the kingdom of Deira upon its king Ælle's death in 588 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75.
 	AcquireFactionTechnologies("teuton", "Deira", "teuton", "Dere Tribe")
 	SetProvinceOwner("York", "teuton", "Bernicia")
-	AcquireFactionTechnologies("teuton", "Bernicia Tribe", "teuton", "Bernice Tribe")
+	AcquireFactionTechnologies("teuton", "Bernicia", "teuton", "Bernice Tribe")
 end
 
 if (GrandStrategyYear >= 596) then
