@@ -64,6 +64,7 @@ https://github.com/Andrettin/Wyrmsun
 * Buildings
 - Added Dwarven Temple (graphics by Jinn).
 - Added Teuton Temple (graphics by Jinn).
+- Temples regenerate the health of nearby organic units.
 
 * Editor
 - Building graphics can now be used for custom units/buildings in the editor.
@@ -92,6 +93,8 @@ https://github.com/Andrettin/Wyrmsun
 
 * Quests
 - The Gnomish Envoy and Rugnur now disappear upon reaching their final objectives in the Hills of the Shorbear Clan quest.
+- The Tomb of Durahn Eikinskjaldi quest (Dwarf) now grants two technology points instead of one.
+- The Blue Danube quest (Teuton) now grants four technology points instead of three.
 
 * Terrain
 - New forest tileset rock graphics (by Exidelo).

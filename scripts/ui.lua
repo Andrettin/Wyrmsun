@@ -77,17 +77,20 @@ if not (ui_loaded_first_time) then
 	DefineSprites({Name = "sprite-slow", File = "ui/slow.png", Offset = {1, 1}, Size = {16, 16}})
 	DefineSprites({Name = "sprite-stun", File = "ui/stun.png", Offset = {1, 1}, Size = {16, 16}})
 	DefineSprites({Name = "sprite-bleeding", File = "ui/bleeding.png", Offset = {1, 1}, Size = {16, 16}})
+	DefineSprites({Name = "sprite-regeneration", File = "ui/regeneration.png", Offset = {1, 1}, Size = {16, 16}})
 	DefineSprites({Name = "sprite-level-up", File = "ui/level_up.png", Offset = {1, 1}, Size = {16, 16}})
 
-	DefineDecorations({Index = "Inspire", ShowOpponent = true,
+	DefineDecorations({Index = "Inspire", ShowOpponent = true, ShowWhenMax = true,
 	  Offset = {0, 0}, Method = {"static-sprite", {"sprite-inspire", 0}}})
-	DefineDecorations({Index = "Slow", ShowOpponent = true,
+	DefineDecorations({Index = "Slow", ShowOpponent = true, ShowWhenMax = true,
 	  Offset = {0, 16}, Method = {"static-sprite", {"sprite-slow", 0}}})
-	DefineDecorations({Index = "Stun", ShowOpponent = true,
+	DefineDecorations({Index = "Stun", ShowOpponent = true, ShowWhenMax = true,
 	  Offset = {16, 16}, Method = {"static-sprite", {"sprite-stun", 0}}})
-	DefineDecorations({Index = "Bleeding", ShowOpponent = true,
+	DefineDecorations({Index = "Bleeding", ShowOpponent = true, ShowWhenMax = true,
 	  Offset = {16, 16}, Method = {"static-sprite", {"sprite-bleeding", 0}}})
-	DefineDecorations({Index = "LevelUp", ShowOpponent = false, HideAllied = true,
+	DefineDecorations({Index = "Regeneration", ShowOpponent = true, ShowWhenMax = true,
+	  Offset = {16, 16}, Method = {"static-sprite", {"sprite-regeneration", 0}}})
+	DefineDecorations({Index = "LevelUp", ShowOpponent = false, HideAllied = true, ShowWhenMax = true,
 	  Offset = {16, 16}, Method = {"static-sprite", {"sprite-level-up", 0}}})
 end
 
@@ -1055,6 +1058,9 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {AttackRange = "only", AttackFromTransporter = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Range Bonus: +"), Variable = "AttackRange", Font = wyr.preferences.PopupDescriptionFont}}
 				},
+				{ 	Condition = {RegenerationAura = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Regeneration Aura"), Font = wyr.preferences.PopupDescriptionFont}}
+				},
 				-- Description
 				{ 	Margin = {1, 1}, Condition = {HasDescription = true}, 
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
@@ -1350,6 +1356,9 @@ if not (ui_loaded_first_time) then
 				},
 				{ 	Condition = {DisembarkmentBonus = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Disembarkment Bonus"), Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {RegenerationAura = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Regeneration Aura"), Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				-- Description
 				{ 	Margin = {1, 1}, Condition = {ButtonAction = "editor-unit"}, 

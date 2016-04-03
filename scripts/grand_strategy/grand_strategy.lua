@@ -1628,7 +1628,7 @@ function AddGrandStrategyBuildingButton(x, y, unit_type)
 		building_function_tooltip = " (allows cavalry units to be trained)"
 	elseif (GetUnitTypeData(unit_type, "Class") == "temple") then
 --		building_function_tooltip = " (researches upgrades)"
-		building_function_tooltip = " (allows certain random events)"
+--		building_function_tooltip = " (allows certain random events)"
 	elseif (GetUnitTypeData(unit_type, "Class") == "dock") then
 		building_function_tooltip = " (allows fishing and attacking nearby coasts)"
 	elseif (GetUnitTypeData(unit_type, "Class") == "mercenary-camp") then

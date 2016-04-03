@@ -122,6 +122,9 @@ local tips = {
 	"Spearmen have a bonus against mounted units.",
 	"Ranged units can shoot from within towers, strongholds and transport ships, with extra range.",
 
+	-- Building-related tips
+	"Temples regenerate the health of nearby organic units.",
+	
 	-- Technology-related tips
 	"Researching a Writing upgrade will allow your faction to advance from a tribal one to a polity.",
 	

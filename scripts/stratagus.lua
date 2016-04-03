@@ -789,6 +789,22 @@ function StandardTriggers()
 			)
 		end
 		
+		if (GetArrayIncludes(wyr.preferences.TipsShown, "Temple") == false) then
+			AddTrigger(
+				function()
+					if (table.getn(GetSelectedUnits()) > 0 and (GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-teuton-temple" or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-dwarven-smithy")) then
+						return true
+					else
+						return false
+					end
+				end,
+				function()
+					Tip("Temple", "Temples regenerate the health of nearby organic units.")
+					return false
+				end
+			)
+		end
+		
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Krieger") == false) then
 			AddTrigger(
 				function()

@@ -10,6 +10,7 @@ function LoadGame(s)
 		if (GameResult ~= GameRestart) then
 			loop = false
 		end
+		CurrentQuest = ""
 	end
 
 	RunResultsMenu()
