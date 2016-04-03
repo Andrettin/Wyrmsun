@@ -219,6 +219,12 @@ function RunTechTreeMenu(civilization_number)
 					if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("lumber-mill", civilization)) == false and GetTechnologyPointCost(civilization, GetCivilizationClassUnitType("lumber-mill", civilization)) > 0) then
 						tech_allowed = false
 					end
+				elseif (GetUnitTypeData(unitName, "Class") == "temple") then
+					tech_icon_x = 10
+					tech_icon_y = 2
+					if (GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetCivilizationClassUnitType("lumber-mill", civilization)) == false and GetTechnologyPointCost(civilization, GetCivilizationClassUnitType("lumber-mill", civilization)) > 0) then
+						tech_allowed = false
+					end
 				elseif (GetUnitTypeData(unitName, "Class") == "dock") then
 					tech_icon_x = 6
 					tech_icon_y = 5
@@ -446,6 +452,9 @@ function GetTechnologyAllowsString(technology, civilization)
 			end
 			if (GetCivilizationClassUnitType("stables", civilization) ~= nil) then
 				table.insert(allowed_technologies, GetCivilizationClassUnitType("stables", civilization))
+			end
+			if (GetCivilizationClassUnitType("temple", civilization) ~= nil) then
+				table.insert(allowed_technologies, GetCivilizationClassUnitType("temple", civilization))
 			end
 			if (GetCivilizationClassUnitType("dock", civilization) ~= nil) then
 				table.insert(allowed_technologies, GetCivilizationClassUnitType("dock", civilization))

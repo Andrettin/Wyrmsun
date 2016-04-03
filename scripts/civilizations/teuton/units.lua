@@ -946,6 +946,18 @@ DefineUnitType("unit-teuton-stables", { Name = _("Stables"),
 	}
 } )
 
+DefineUnitType("unit-teuton-temple", { Name = _("Temple"),
+	Parent = "unit-template-temple",
+	Civilization = "teuton",
+	Description = _("In early times, Teutons professed faith in polytheistic deities in their houses of worship, the most important one being Woden. Eventually, Christian missionaries managed to expand their faith to the entirety of the Teutonic lands, overtaking the earlier paganism."),
+	Image = {"file", "teuton/buildings/church.png", "size", {96, 96}},
+	Shadow = {"file", "teuton/buildings/church_shadow.png", "size", {96, 96}},
+	Icon = "icon-teuton-church",
+	Sounds = {
+		"help", "basic-teuton-voices-help-town"
+	}
+} )
+
 DefineUnitType("unit-teuton-watch-tower", { Name = _("Watch Tower"),
 	Parent = "unit-template-watch-tower",
 	Civilization = "teuton",
@@ -988,6 +1000,6 @@ DefineUnitType("unit-teuton-worker", {
 		--"unit-teuton-town-hall",
 		"unit-teuton-farm",
 		--"unit-teuton-barracks", "unit-teuton-lumber-mill",
-		"unit-teuton-smithy", "unit-teuton-stables", "unit-teuton-watch-tower", "unit-teuton-dock", "unit-gold-mine", "unit-silver-mine", "unit-copper-mine"
+		"unit-teuton-smithy", "unit-teuton-stables", "unit-teuton-temple", "unit-teuton-watch-tower", "unit-teuton-dock", "unit-gold-mine", "unit-silver-mine", "unit-copper-mine"
 	}
 } )

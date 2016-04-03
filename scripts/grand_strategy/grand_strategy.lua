@@ -1626,6 +1626,9 @@ function AddGrandStrategyBuildingButton(x, y, unit_type)
 		building_function_tooltip = " (researches melee weapon, shield and siege weapon upgrades)"
 	elseif (GetUnitTypeData(unit_type, "Class") == "stables") then
 		building_function_tooltip = " (allows cavalry units to be trained)"
+	elseif (GetUnitTypeData(unit_type, "Class") == "temple") then
+--		building_function_tooltip = " (researches upgrades)"
+		building_function_tooltip = " (allows certain random events)"
 	elseif (GetUnitTypeData(unit_type, "Class") == "dock") then
 		building_function_tooltip = " (allows fishing and attacking nearby coasts)"
 	elseif (GetUnitTypeData(unit_type, "Class") == "mercenary-camp") then
@@ -2350,7 +2353,7 @@ function DrawGrandStrategyInterface()
 						end
 					end
 				end
-			elseif (GrandStrategyInterfaceState == "stables" or GrandStrategyInterfaceState == "dock") then
+			elseif (GrandStrategyInterfaceState == "stables" or GrandStrategyInterfaceState == "temple" or GrandStrategyInterfaceState == "dock") then
 				AddGrandStrategyLabel(GetUnitTypeName(GetCivilizationClassUnitType(GrandStrategyInterfaceState, GetProvinceCivilization(SelectedProvince.Name))), UI.InfoPanel.X + 109, UI.InfoPanel.Y + 53, Fonts["game"], true, false)
 				
 				local item_x = 0
@@ -2579,6 +2582,7 @@ function DrawGrandStrategyInterface()
 				elseif (GrandStrategyInterfaceState == "smithy") then
 					Tip("Smithy Interface", "Here you can research some new technologies. Click on a technology's icon to research it. You can only research one technology in a given turn.")
 				elseif (GrandStrategyInterfaceState == "stables") then
+				elseif (GrandStrategyInterfaceState == "temple") then
 				elseif (GrandStrategyInterfaceState == "dock") then
 				elseif (GrandStrategyInterfaceState == "mercenary-camp") then
 					Tip("Mercenary Camp Interface", "Here you can recruit thief units as you would normal units, as well as hire unique mercenary squads.")
@@ -2701,7 +2705,10 @@ function AIDoTurn(ai_faction)
 					elseif (GetUnitTypeData(unitName, "Class") == "stables" and ((ProvinceHasBuildingClass(WorldMapProvinces[key].Name, "barracks") and ProvinceHasBuildingClass(WorldMapProvinces[key].Name, "smithy")) or GetFactionBuildingTypeCount(ai_faction, "stables") == 0)) then -- it only makes sense to build more than one stables if it is to make cavalry available in a province
 						BuildStructure(WorldMapProvinces[key], unitName)
 						break
-					elseif (GetUnitTypeData(unitName, "Class") == "dock") then -- it only makes sense to build a dock if the province 
+					elseif (GetUnitTypeData(unitName, "Class") == "dock") then
+						BuildStructure(WorldMapProvinces[key], unitName)
+						break
+					elseif (GetUnitTypeData(unitName, "Class") == "temple" and (ProvinceHasBuildingClass(WorldMapProvinces[key].Name, "stronghold") or GetFactionBuildingTypeCount(ai_faction, "temple") == 0)) then -- only build temples after a stronghold is in place
 						BuildStructure(WorldMapProvinces[key], unitName)
 						break
 					end
@@ -3897,6 +3904,9 @@ function GetUnitTypeRequiredBuildings(unit_type)
 			if (GetCivilizationClassUnitType("stables", GetUnitTypeData(unit_type, "Civilization")) ~= nil) then
 				table.insert(required_buildings, GetCivilizationClassUnitType("stables", GetUnitTypeData(unit_type, "Civilization")))
 			end
+			if (GetCivilizationClassUnitType("temple", GetUnitTypeData(unit_type, "Civilization")) ~= nil) then
+				table.insert(required_buildings, GetCivilizationClassUnitType("temple", GetUnitTypeData(unit_type, "Civilization")))
+			end
 		elseif (GetUnitTypeData(unit_type, "Class") == "siege-engine") then
 			if (GetCivilizationClassUnitType("barracks", GetUnitTypeData(unit_type, "Civilization")) ~= nil) then
 				table.insert(required_buildings, GetCivilizationClassUnitType("barracks", GetUnitTypeData(unit_type, "Civilization")))
@@ -3926,6 +3936,13 @@ function GetUnitTypeRequiredBuildings(unit_type)
 				table.insert(required_buildings, GetCivilizationClassUnitType("town-hall", GetUnitTypeData(unit_type, "Civilization")))
 			end
 		elseif (GetUnitTypeData(unit_type, "Class") == "stables") then
+			if (GetCivilizationClassUnitType("town-hall", GetUnitTypeData(unit_type, "Civilization")) ~= nil) then
+				table.insert(required_buildings, GetCivilizationClassUnitType("town-hall", GetUnitTypeData(unit_type, "Civilization")))
+			end
+			if (GetCivilizationClassUnitType("lumber-mill", GetUnitTypeData(unit_type, "Civilization")) ~= nil) then
+				table.insert(required_buildings, GetCivilizationClassUnitType("lumber-mill", GetUnitTypeData(unit_type, "Civilization")))
+			end
+		elseif (GetUnitTypeData(unit_type, "Class") == "temple") then
 			if (GetCivilizationClassUnitType("town-hall", GetUnitTypeData(unit_type, "Civilization")) ~= nil) then
 				table.insert(required_buildings, GetCivilizationClassUnitType("town-hall", GetUnitTypeData(unit_type, "Civilization")))
 			end

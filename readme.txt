@@ -61,6 +61,10 @@ https://github.com/Andrettin/Wyrmsun
 - 2.1.3
 -----------------------------------------------------------------------
 
+* Buildings
+- Added Dwarven Temple (graphics by Jinn).
+- Added Teuton Temple (graphics by Jinn).
+
 * Editor
 - Building graphics can now be used for custom units/buildings in the editor.
 

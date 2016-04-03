@@ -428,6 +428,8 @@ João Victor G. Costa (Jinn):
 /graphics/dwarf/buildings/smithy_shadow.png (licensed under the CC0)
 /graphics/dwarf/buildings/stronghold.png (licensed under the CC0)
 /graphics/dwarf/buildings/stronghold_shadow.png (licensed under the CC0)
+/graphics/dwarf/buildings/temple.png (licensed under the CC0)
+/graphics/dwarf/buildings/temple_shadow.png (licensed under the CC0)
 /graphics/dwarf/buildings/town_hall.png (licensed under the CC0)
 /graphics/dwarf/buildings/town_hall_shadow.png (licensed under the CC0)
 /graphics/dwarf/buildings/yale_pen.png (licensed under the CC0)

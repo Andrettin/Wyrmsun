@@ -249,7 +249,7 @@ DefineModifier("upgrade-teuton-masonry",
 	{"apply-to", "unit-teuton-town-hall"}, {"apply-to", "unit-teuton-stronghold"},
 	{"apply-to", "unit-teuton-farm"}, {"apply-to", "unit-teuton-barracks"},
 	{"apply-to", "unit-teuton-lumber-mill"}, {"apply-to", "unit-teuton-smithy"},
-	{"apply-to", "unit-teuton-stables"},
+	{"apply-to", "unit-teuton-stables"}, {"apply-to", "unit-teuton-temple"},
 	{"apply-to", "unit-teuton-watch-tower"}, {"apply-to", "unit-teuton-guard-tower"},
 	{"apply-to", "unit-teuton-dock"}
 )
@@ -264,7 +264,7 @@ DefineModifier("upgrade-teuton-writing",
 	{"apply-to", "unit-teuton-town-hall"}, {"apply-to", "unit-teuton-stronghold"},
 	{"apply-to", "unit-teuton-farm"}, {"apply-to", "unit-teuton-barracks"},
 	{"apply-to", "unit-teuton-lumber-mill"}, {"apply-to", "unit-teuton-smithy"},
---	{"apply-to", "unit-teuton-stables"},
+--	{"apply-to", "unit-teuton-stables"}, {"apply-to", "unit-teuton-temple"},
 	{"apply-to", "unit-teuton-watch-tower"}, {"apply-to", "unit-teuton-guard-tower"},
 	{"apply-to", "unit-teuton-dock"}
 )
@@ -468,6 +468,10 @@ DefineDependency("unit-frank-swordsman",
 
 DefineDependency("unit-frank-spearman",
 	{"upgrade-frank-tribe-faction"}
+)
+
+DefineDependency("unit-teuton-temple",
+	{"unit-teuton-lumber-mill"}
 )
 
 DefineDependency("unit-teuton-dock",

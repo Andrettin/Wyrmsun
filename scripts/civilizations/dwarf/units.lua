@@ -935,6 +935,22 @@ DefineUnitType("unit-dwarven-yale-pen", { Name = _("Yale Pen"),
 	}
 } )
 
+DefineUnitType("unit-dwarven-temple", { Name = _("Temple"),
+	Parent = "unit-template-temple",
+	Civilization = "dwarf",
+	Description = _("Dwarven temples of worship are built as underground vaults, where they keep their mystic texts. The temple vault has many layers, with only dwarven sages of the highest caliber being granted access to the deepest ones."),
+	Image = {"file", "dwarf/buildings/temple.png", "size", {96, 96}},
+	Shadow = {"file", "dwarf/buildings/temple_shadow.png", "size", {96, 96}},
+	Icon = "icon-dwarven-temple",
+--	Costs = {"time", 150, "gold", 1000, "lumber", 300},
+	Costs = {"time", 175, "gold", 900, "lumber", 400, "stone", 100},
+	RepairCosts = {"gold", 1, "lumber", 1, "stone", 1},
+	FireResistance = 20,
+	Sounds = {
+		"help", "basic-dwarf-voices-help-town"
+	}
+} )
+
 DefineUnitType("unit-dwarven-sentry-tower", { Name = _("Sentry Tower"),
 	Parent = "unit-template-watch-tower",
 	Civilization = "dwarf",
@@ -986,7 +1002,7 @@ DefineUnitType("unit-dwarven-dock", { Name = _("Dock"),
 } )
 
 DefineUnitType("unit-dwarven-miner", { -- this is here because the buildings need to be defined before being assigned to the miner's "Trains" array
-	Trains = {"unit-dwarven-town-hall", "unit-dwarven-mushroom-farm", "unit-dwarven-barracks", "unit-dwarven-lumber-mill", "unit-dwarven-smithy", "unit-dwarven-yale-pen", "unit-dwarven-sentry-tower", "unit-dwarven-dock", "unit-gold-mine", "unit-silver-mine", "unit-copper-mine"}
+	Trains = {"unit-dwarven-town-hall", "unit-dwarven-mushroom-farm", "unit-dwarven-barracks", "unit-dwarven-lumber-mill", "unit-dwarven-smithy", "unit-dwarven-yale-pen", "unit-dwarven-temple", "unit-dwarven-sentry-tower", "unit-dwarven-dock", "unit-gold-mine", "unit-silver-mine", "unit-copper-mine"}
 } )
 
 DefineUnitType("unit-brising-miner", {
@@ -1023,7 +1039,7 @@ DefineUnitType("unit-brising-smithy", {
 } )
 
 DefineUnitType("unit-brising-miner", { -- this is here because the buildings need to be defined before being assigned to the miner's "Trains" array
-	Trains = {"unit-dwarven-town-hall", "unit-dwarven-mushroom-farm", "unit-dwarven-barracks", "unit-dwarven-lumber-mill", "unit-brising-smithy", "unit-dwarven-yale-pen", "unit-dwarven-sentry-tower", "unit-dwarven-dock", "unit-gold-mine", "unit-silver-mine", "unit-copper-mine"}
+	Trains = {"unit-dwarven-town-hall", "unit-dwarven-mushroom-farm", "unit-dwarven-barracks", "unit-dwarven-lumber-mill", "unit-brising-smithy", "unit-dwarven-yale-pen", "unit-dwarven-temple", "unit-dwarven-sentry-tower", "unit-dwarven-dock", "unit-gold-mine", "unit-silver-mine", "unit-copper-mine"}
 } )
 
 DefineUnitType("unit-dwarven-town-hall", {
