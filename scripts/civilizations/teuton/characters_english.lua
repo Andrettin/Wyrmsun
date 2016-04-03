@@ -31,7 +31,37 @@ DefineCharacter("Ælle", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
 	ProvinceOfOrigin = "York",
-	DeathYear = 588 -- died
+	DeathYear = 588, -- died
+	HistoricalRulerships = {
+		0, 588, "teuton", "Deira" -- first recorded king of Deira
+	}
+})
+
+DefineCharacter("Æthelric", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75.
+	Name = "Æthelric",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "teuton",
+	ProvinceOfOrigin = "Northumberland",
+	Year = 588, -- according to tradition, Æthelric acquired the kingdom of Deira upon Ælle's death in 588 AD
+	HistoricalRulerships = {
+		588, 0, "teuton", "Bernicia" -- king of Bernicia
+	}
+})
+
+DefineCharacter("Æthelfrith", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75.
+	Name = "Æthelfrith",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "teuton",
+	ProvinceOfOrigin = "Northumberland",
+	Year = 593, -- beginning of reign
+	DeathYear = 616, -- end of reign
+	Father = "Æthelric",
+	HistoricalRulerships = {
+		593, 616, "teuton", "Bernicia" -- king of Bernicia
+	}
+	-- married the daughter of the Deiran king Ælle
 })
 
 DefineCharacter("Ethelred", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 127.
@@ -69,6 +99,5 @@ DefineCharacter("Nicolas Breakspear", { -- Source: Snorri Sturlson, "Heimskringl
 	Type = "unit-teuton-swordsman", -- should be priest
 	Civilization = "teuton", -- should be English
 	ProvinceOfOrigin = "England", -- Hertfordshire (since his father worked there, he's probably from there)
-	Year = 1154, -- elected Pope
-	Father = "Koll"
+	Year = 1154 -- elected Pope
 })

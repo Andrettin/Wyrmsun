@@ -939,7 +939,7 @@ DefineCharacter("Magnus the Saint", { -- Source: Snorri Sturlson, "Heimskringla"
 	ProvinceOfOrigin = "Orkney", -- presumably
 	DeathYear = 1129, -- presumably, since this is the date Kala was made Earl of Orkney
 	HistoricalRulerships = {
-		1129 - 30, 1129, "norse", "Orkney"
+		0, 1129, "norse", "Orkney"
 	}
 })
 
@@ -960,7 +960,7 @@ DefineCharacter("Kala", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol.
 	Year = 1129, -- was made Earl of Orkney
 	Father = "Koll",
 	HistoricalRulerships = {
-		1129, 1129 + 30, "norse", "Orkney"
+		1129, 0, "norse", "Orkney"
 	}
 })
 
@@ -980,7 +980,7 @@ DefineCharacter("Hakon", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol
 	Civilization = "norse",
 	ProvinceOfOrigin = "Hordaland", -- only province implemented that is part of Norway; but Akershus/Oslo would be a better fit: since we only know he came from Norway, it makes sense to set the capital as his province of origin
 	HistoricalRulerships = {
-		1261 - 30, 1261, "norse", "Orkney" -- his son was King of Norway, so presumably he was too; date estimated; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 142.
+		0, 0, "norse", "Orkney" -- his son was King of Norway, so presumably he was too; date estimated; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 142.
 	}
 })
 
@@ -994,7 +994,7 @@ DefineCharacter("Hakon Hakonson", { -- Source: Snorri Sturlson, "Heimskringla", 
 	Year = 1261, -- annexed the Norse settlements in Greenland to Norway in 1261 AD
 	Father = "Hakon",
 	HistoricalRulerships = {
-		1261, 1261 + 30, "norse", "Orkney"
+		1261, 0, "norse", "Orkney"
 	}
 })
 

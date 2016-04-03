@@ -33,7 +33,7 @@ DefineCharacter("Gibica", { -- Source: Norman Davies, "Vanished Kingdoms", 2012,
 	ProvinceOfOrigin = "Franconia", -- place where the Burgundians dwelled before moving to the area of the Palatinate
 	DeathYear = 411,
 	HistoricalRulerships = {
-		411 - (30 * 1), 411, "goth", "Burgundian Tribe"
+		0, 411, "goth", "Burgundian Tribe"
 	}
 })
 

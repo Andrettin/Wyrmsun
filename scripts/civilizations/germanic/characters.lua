@@ -520,7 +520,7 @@ DefineCharacter("Fridleifr Skeldung", { -- Source: Snorri Sturlson, "The Prose E
 	ProvinceOfOrigin = "Zealand",
 	Father = "Skeldu",
 	HistoricalRulerships = {
-		-2800 + (30 * 2), -2800 + (30 * 3), "germanic", "Skeldung Tribe"
+		0, 0, "germanic", "Skeldung Tribe"
 	}
 })
 

@@ -69,7 +69,7 @@ DefineCharacter("Zeno", { -- Source: F. E. Sandbach, "The Heroic Saga-Cycle of D
 	ProvinceOfOrigin = "Thrace", -- possibly not accurate, but since he was the (Eastern) Roman emperor put him there until we have better information
 	Year = 480, -- by 480 AD the ruler of Eastern Rome was Zeno
 	HistoricalRulerships = {
-		480, 480 + 30, "latin", "Rome"
+		480, 0, "latin", "Rome"
 	}
 })
 

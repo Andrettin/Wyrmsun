@@ -83,7 +83,7 @@ DefineCharacter("Airmanareiks", { -- Source: Henry Adams Bellows (transl.), "The
 	ProvinceOfOrigin = "Ukraine", -- accurate?
 	DeathYear = 376, -- died
 	HistoricalRulerships = {
-		376 - (30 * 1), 376, "goth", "Ostrogoth Tribe"
+		0, 376, "goth", "Ostrogoth Tribe"
 	}
 })
 
@@ -122,6 +122,7 @@ DefineCharacter("Theodemer Amelung", { -- Source: F. E. Sandbach, "The Heroic Sa
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth",
 	ProvinceOfOrigin = "Pannonia",
+	Year = 472,
 	DeathYear = 474, -- died
 	HistoricalRulerships = {
 		472, 474, "goth", "Ostrogoth Tribe" -- by 472 AD Theodemer has become king of the Ostrogoths; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, pp. 6-7.

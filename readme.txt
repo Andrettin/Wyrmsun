@@ -66,6 +66,9 @@ https://github.com/Andrettin/Wyrmsun
 - Added Teuton Temple (graphics by Jinn).
 - Temples regenerate the health of nearby organic units.
 
+* Characters
+- Added the royal lines of Bernicia and Deira.
+
 * Editor
 - Building graphics can now be used for custom units/buildings in the editor.
 
