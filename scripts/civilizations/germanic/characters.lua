@@ -33,6 +33,7 @@ DefineCharacter("Lóríkus", { -- Source: Snorri Sturlson, "The Prose Edda", 191
 	ProvinceOfOrigin = "Astrakhan",
 	Year = -3000, -- beginning of the process of the Indo-European migrations to Scandinavia
 	DeathYear = -3000 + 12, -- Trór becomes 12 years old and slays Lóríkus
+	ViolentDeath = true,
 	HistoricalRulerships = {
 		-3000, -3000 + 12, "germanic", "Asa Tribe"
 	}
@@ -44,8 +45,7 @@ DefineCharacter("Lórá", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, 
 	Type = "unit-germanic-archer",
 	Civilization = "germanic",
 	ProvinceOfOrigin = "Astrakhan",
-	Year = -3000,
-	DeathYear = -3000 + 12 -- Trór becomes 12 years old and slays Lóríkus
+	Year = -3000
 })
 
 DefineCharacter("Tróán", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 6.
@@ -374,8 +374,6 @@ DefineCharacter("Vitgils", { -- Source: Snorri Sturlson, "The Prose Edda", 1916,
 	Type = "unit-germanic-warrior",
 	Civilization = "germanic",
 	ProvinceOfOrigin = "Jutland", -- his father was in the Prose Edda set to rule over East Saxland; but since that region wasn't settled by Germanic peoples yet, place Vegdeg's family in the region settled by Germanics which would later give rise to West Germanic culture (Jutland)
-	Year = -2800 + (30 * 2),
-	DeathYear = -2800 + (30 * 3),
 	Father = "Vegdeg"
 })
 
@@ -385,8 +383,6 @@ DefineCharacter("Vitta", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p
 	Type = "unit-germanic-warrior",
 	Civilization = "germanic",
 	ProvinceOfOrigin = "Jutland",
-	Year = -2800 + (30 * 3),
-	DeathYear = -2800 + (30 * 4),
 	Father = "Vitgils"
 })
 
@@ -396,8 +392,6 @@ DefineCharacter("Heingistr", { -- Source: Snorri Sturlson, "The Prose Edda", 191
 	Type = "unit-germanic-warrior",
 	Civilization = "germanic",
 	ProvinceOfOrigin = "Jutland",
-	Year = -2800 + (30 * 4),
-	DeathYear = -2800 + (30 * 5),
 	Father = "Vitta"
 })
 
@@ -408,8 +402,6 @@ DefineCharacter("Sigarr", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, 
 	Type = "unit-germanic-warrior",
 	Civilization = "germanic",
 	ProvinceOfOrigin = "Jutland",
-	Year = -2800 + (30 * 3),
-	DeathYear = -2800 + (30 * 4),
 	Father = "Vitgils"
 })
 
@@ -419,8 +411,6 @@ DefineCharacter("Svebdeg", { -- Source: Snorri Sturlson, "The Prose Edda", 1916,
 	Type = "unit-germanic-warrior",
 	Civilization = "germanic",
 	ProvinceOfOrigin = "Jutland",
-	Year = -2800 + (30 * 4),
-	DeathYear = -2800 + (30 * 5),
 	Father = "Sigarr"
 })
 
@@ -443,8 +433,6 @@ DefineCharacter("Branda", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, 
 	Type = "unit-germanic-warrior",
 	Civilization = "germanic",
 	ProvinceOfOrigin = "Jutland", -- his father was in the Prose Edda set to rule over Westphalia; but since that region wasn't settled by Germanic peoples yet, place Beldeg's family in the region settled by Germanics which would later give rise to West Germanic culture (Jutland)
-	Year = -2800 + (30 * 2),
-	DeathYear = -2800 + (30 * 3),
 	Father = "Beldeg"
 })
 
@@ -454,8 +442,6 @@ DefineCharacter("Frjódigar", { -- Source: Snorri Sturlson, "The Prose Edda", 19
 	Type = "unit-germanic-warrior",
 	Civilization = "germanic",
 	ProvinceOfOrigin = "Jutland",
-	Year = -2800 + (30 * 3),
-	DeathYear = -2800 + (30 * 4),
 	Father = "Branda"
 })
 
@@ -465,8 +451,6 @@ DefineCharacter("Freóvin", { -- Source: Snorri Sturlson, "The Prose Edda", 1916
 	Type = "unit-germanic-warrior",
 	Civilization = "germanic",
 	ProvinceOfOrigin = "Jutland",
-	Year = -2800 + (30 * 4),
-	DeathYear = -2800 + (30 * 5),
 	Father = "Frjódigar"
 })
 
@@ -476,8 +460,6 @@ DefineCharacter("Uvigg", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p
 	Type = "unit-germanic-warrior",
 	Civilization = "germanic",
 	ProvinceOfOrigin = "Jutland",
-	Year = -2800 + (30 * 5),
-	DeathYear = -2800 + (30 * 6),
 	Father = "Freóvin"
 })
 
@@ -487,8 +469,6 @@ DefineCharacter("Gevis", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p
 	Type = "unit-germanic-warrior",
 	Civilization = "germanic",
 	ProvinceOfOrigin = "Jutland",
-	Year = -2800 + (30 * 6),
-	DeathYear = -2800 + (30 * 7),
 	Father = "Uvigg"
 })
 
@@ -510,8 +490,6 @@ DefineCharacter("Rerir", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p
 	Type = "unit-germanic-warrior",
 	Civilization = "germanic",
 	ProvinceOfOrigin = "Jutland", -- his father was in the Prose Edda set to rule over Frankland; but since that region wasn't settled by Germanic peoples yet, place Sigi's family in the region settled by Germanics which would later give rise to West Germanic culture (Jutland)
-	Year = -2800 + (30 * 2),
-	DeathYear = -2800 + (30 * 3),
 	Father = "Sigi"
 })
 
@@ -540,8 +518,6 @@ DefineCharacter("Fridleifr Skeldung", { -- Source: Snorri Sturlson, "The Prose E
 	Type = "unit-germanic-warrior",
 	Civilization = "germanic",
 	ProvinceOfOrigin = "Zealand",
-	Year = -2800 + (30 * 2),
-	DeathYear = -2800 + (30 * 3),
 	Father = "Skeldu",
 	HistoricalRulerships = {
 		-2800 + (30 * 2), -2800 + (30 * 3), "germanic", "Skeldung Tribe"
@@ -555,7 +531,6 @@ DefineCharacter("Sæmingr", { -- Source: Snorri Sturlson, "Heimskringla", 1844; 
 	Civilization = "germanic",
 	ProvinceOfOrigin = "Sweden",
 	Year = -2800 + (30 * 1),
-	DeathYear = -2800 + (30 * 2),
 	Father = "Vóden",
 	Mother = "Frígídá" -- presumably, since she was Vóden's wife
 })

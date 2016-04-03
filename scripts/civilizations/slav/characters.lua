@@ -31,8 +31,7 @@ DefineCharacter("Judita", { -- Source: Alena Ježková, "77 Prague Legends", 200
 	Type = "unit-teuton-archer", -- should be something else
 	Civilization = "slav",
 	ProvinceOfOrigin = "Bohemia", -- presumably
-	Year = 1158, -- ordered Judita Bridge (across the Vltava river in Prague) built
-	DeathYear = 1158 + 30 -- estimated
+	Year = 1158 -- ordered Judita Bridge (across the Vltava river in Prague) built
 })
 
 DefineCharacter("Agnes Přemyslid", { -- Source: Alena Ježková, "77 Prague Legends", 2006, p. 36.
@@ -42,8 +41,7 @@ DefineCharacter("Agnes Přemyslid", { -- Source: Alena Ježková, "77 Prague Leg
 	Type = "unit-teuton-archer", -- should be something else
 	Civilization = "slav",
 	ProvinceOfOrigin = "Bohemia", -- presumably
-	Year = 1231, -- founded St. Agnes' Cloister (in Prague), and became its mother superior
-	DeathYear = 1231 + 30 -- estimated
+	Year = 1231 -- founded St. Agnes' Cloister (in Prague), and became its mother superior
 })
 
 DefineCharacter("Petr Parléř", { -- Source: Alena Ježková, "77 Prague Legends", 2006, p. 45.
@@ -53,8 +51,7 @@ DefineCharacter("Petr Parléř", { -- Source: Alena Ježková, "77 Prague Legend
 	Type = "unit-teuton-worker",
 	Civilization = "slav",
 	ProvinceOfOrigin = "Bohemia", -- presumably
-	Year = 1357, -- The foundation stone of a new bridge to replace Judita Bridge was laid in the 9th of July 1357 by Emperor and King Charles IV; the construction of this new bridge was entrusted to Petr Parléř, who had built St Vitus' Cathedral
-	DeathYear = 1357 + 30 -- estimated
+	Year = 1357 -- The foundation stone of a new bridge to replace Judita Bridge was laid in the 9th of July 1357 by Emperor and King Charles IV; the construction of this new bridge was entrusted to Petr Parléř, who had built St Vitus' Cathedral
 })
 
 DefineCharacter("Charles", { -- Source: Alena Ježková, "77 Prague Legends", 2006, pp. 45, 87.
@@ -74,8 +71,7 @@ DefineCharacter("Mikulás of Kadaň", { -- Source: Alena Ježková, "77 Prague L
 	Type = "unit-teuton-swordsman", -- should probably be something else
 	Civilization = "slav",
 	ProvinceOfOrigin = "Bohemia", -- presumably
-	Year = 1410, -- Built Prague's Old Town Astronomical Clock before 1410
-	DeathYear = 1410 + 30 -- estimated
+	Year = 1410 -- Built Prague's Old Town Astronomical Clock before 1410
 })
 
 DefineCharacter("Hanuš of Růže", { -- Source: Alena Ježková, "77 Prague Legends", 2006, p. 10.
@@ -97,7 +93,8 @@ DefineCharacter("Vacláv Budovec of Budov", { -- Source: Alena Ježková, "77 Pr
 	Civilization = "slav",
 	ProvinceOfOrigin = "Bohemia", -- presumably
 	Year = 1547, -- born
-	DeathYear = 1621 -- Executed in the 21st of June 1621 for his role in the rebellion against Emperor Ferdinand II; he was 74 years old when executed; only 10 years later it would be allowed to take his head from public display and be buried
+	DeathYear = 1621, -- Executed in the 21st of June 1621 for his role in the rebellion against Emperor Ferdinand II; he was 74 years old when executed; only 10 years later it would be allowed to take his head from public display and be buried
+	ViolentDeath = true
 })
 
 DefineCharacter("Kryštof Harant of Polžice", { -- Source: Alena Ježková, "77 Prague Legends", 2006, p. 13.
@@ -107,8 +104,8 @@ DefineCharacter("Kryštof Harant of Polžice", { -- Source: Alena Ježková, "77
 	Type = "unit-teuton-swordsman", -- perhaps should be something else
 	Civilization = "slav",
 	ProvinceOfOrigin = "Bohemia", -- presumably
-	Year = 1621 - 30, -- estimated
-	DeathYear = 1621 -- Executed in the 21st of June 1621 for rebelling against Emperor Ferdinand II; only 10 years later it would be allowed to take his head from public display and be buried
+	DeathYear = 1621, -- Executed in the 21st of June 1621 for rebelling against Emperor Ferdinand II; only 10 years later it would be allowed to take his head from public display and be buried
+	ViolentDeath = true
 })
 
 DefineCharacter("Jan Jesenius", { -- Source: Alena Ježková, "77 Prague Legends", 2006, p. 13.
@@ -118,8 +115,8 @@ DefineCharacter("Jan Jesenius", { -- Source: Alena Ježková, "77 Prague Legends
 	Type = "unit-teuton-swordsman", -- should be something else
 	Civilization = "slav",
 	ProvinceOfOrigin = "Bohemia", -- presumably
-	Year = 1621 - 30, -- estimated
-	DeathYear = 1621 -- Executed in the 21st of June 1621 for rebelling against Emperor Ferdinand II; only 10 years later it would be allowed to take his head from public display and be buried
+	DeathYear = 1621, -- Executed in the 21st of June 1621 for rebelling against Emperor Ferdinand II; only 10 years later it would be allowed to take his head from public display and be buried
+	ViolentDeath = true
 })
 
 DefineCharacter("Mydlář", { -- Source: Alena Ježková, "77 Prague Legends", 2006, p. 13.
@@ -128,8 +125,7 @@ DefineCharacter("Mydlář", { -- Source: Alena Ježková, "77 Prague Legends", 2
 	Type = "unit-teuton-swordsman",
 	Civilization = "slav",
 	ProvinceOfOrigin = "Bohemia", -- presumably
-	Year = 1621, -- Executed the Czech lords in 21st of June 1621
-	DeathYear = 1621 + 30 -- estimated
+	Year = 1621 -- Executed the Czech lords in 21st of June 1621
 })
 
 DefineCharacter("Humprecht Černín of Chudenice", { -- Source: Alena Ježková, "77 Prague Legends", 2006, p. 94.
@@ -139,6 +135,5 @@ DefineCharacter("Humprecht Černín of Chudenice", { -- Source: Alena Ježková,
 	Type = "unit-teuton-swordsman",
 	Civilization = "slav",
 	ProvinceOfOrigin = "Bohemia", -- presumably
-	Year = 1669, -- Had the Černín Palace built in Prague for him in 1669
-	DeathYear = 1669 + 30 -- estimated
+	Year = 1669 -- Had the Černín Palace built in Prague for him in 1669
 })

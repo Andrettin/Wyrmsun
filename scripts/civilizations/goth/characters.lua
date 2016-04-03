@@ -81,7 +81,6 @@ DefineCharacter("Airmanareiks", { -- Source: Henry Adams Bellows (transl.), "The
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth",
 	ProvinceOfOrigin = "Ukraine", -- accurate?
-	Year = 376 - (30 * 1), -- estimated
 	DeathYear = 376, -- died
 	HistoricalRulerships = {
 		376 - (30 * 1), 376, "goth", "Ostrogoth Tribe"
@@ -99,8 +98,7 @@ DefineCharacter("Friþareiks", { -- Source: F. E. Sandbach, "The Heroic Saga-Cyc
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth",
 	ProvinceOfOrigin = "Pannonia", -- presumably, because this is Airmanareiks' province of origin
-	Year = 376, -- estimated
-	DeathYear = 376 * (30 * 1) -- estimated
+	Father = "Airmanareiks"
 })
 
 DefineCharacter("Walamer Amelung", { -- Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 6.
@@ -124,7 +122,6 @@ DefineCharacter("Theodemer Amelung", { -- Source: F. E. Sandbach, "The Heroic Sa
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth",
 	ProvinceOfOrigin = "Pannonia",
-	Year = 453, -- same generation as Walamer
 	DeathYear = 474, -- died
 	HistoricalRulerships = {
 		472, 474, "goth", "Ostrogoth Tribe" -- by 472 AD Theodemer has become king of the Ostrogoths; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, pp. 6-7.
@@ -138,8 +135,7 @@ DefineCharacter("Widemer Amelung", { -- Source: F. E. Sandbach, "The Heroic Saga
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth",
 	ProvinceOfOrigin = "Pannonia",
-	Year = 453, -- same generation as Walamer
-	DeathYear = 453 + (30 * 1) -- estimated
+	DateReferenceCharacter = "Walamer Amelung" -- same generation as Walamer
 })
 
 DefineCharacter("Þiudareiks Amelung", { -- Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, pp. 6-7, 9.
@@ -169,7 +165,8 @@ DefineCharacter("Odoacer", { -- Source: F. E. Sandbach, "The Heroic Saga-Cycle o
 	Civilization = "goth",
 --	ProvinceOfOrigin = "?",
 	Year = 480, -- Odoacer deposed Romulus Augustus in 480 AD, going then on to rule Italy as an independent king
-	DeathYear = 493 -- was put to death by Theoderic in 493 AD
+	DeathYear = 493, -- was put to death by Theoderic in 493 AD
+	ViolentDeath = true
 })
 
 DefineCharacter("Tufa", { -- Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 8-9.
@@ -193,8 +190,7 @@ DefineCharacter("Vulfshardus", { -- Source: F. E. Sandbach, "The Heroic Saga-Cyc
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth",
 	ProvinceOfOrigin = "Pannonia", -- presumably, because this is Theoderic's province of origin
-	Year = 454, -- contemporary of Theoderic, who was born in 454 AD
-	DeathYear = 526 -- contemporary of Theoderic, who died in 526
+	DateReferenceCharacter = "Þiudareiks Amelung" -- contemporary of Theoderic
 })
 
 Load("scripts/civilizations/goth/characters_burgundian.lua")

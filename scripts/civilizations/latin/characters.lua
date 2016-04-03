@@ -32,7 +32,6 @@ DefineCharacter("Caesar", { -- Source: Heiko Steuer, "Warrior bands, war lords a
 	Civilization = "latin",
 	ProvinceOfOrigin = "Latium", -- correct?
 	Year = -58, -- De Bello Gallico was written 58-52 BC
-	DeathYear = -58 + 30, -- estimated
 	AuthoredWorks = {"upgrade-work-de-bello-gallico"}
 })
 
@@ -69,7 +68,6 @@ DefineCharacter("Zeno", { -- Source: F. E. Sandbach, "The Heroic Saga-Cycle of D
 	Civilization = "latin",
 	ProvinceOfOrigin = "Thrace", -- possibly not accurate, but since he was the (Eastern) Roman emperor put him there until we have better information
 	Year = 480, -- by 480 AD the ruler of Eastern Rome was Zeno
-	DeathYear = 480 + 30, -- estimated
 	HistoricalRulerships = {
 		480, 480 + 30, "latin", "Rome"
 	}
@@ -81,8 +79,7 @@ DefineCharacter("Sidonius Apollinaris", { -- Source: Norman Davies, "Vanished Ki
 	Type = "unit-teuton-swordsman",
 	Civilization = "latin",
 	ProvinceOfOrigin = "Provence",
-	Year = 452, -- 20 years old, met Burgundians at his home city of Lugdunum
-	DeathYear = 452 + (30 * 1) -- estimated
+	Year = 452 -- 20 years old, met Burgundians at his home city of Lugdunum
 })
 
 DefineCharacter("Avitus", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, p. 99.
@@ -102,8 +99,7 @@ DefineCharacter("Geofrei Gaimar", { -- Source: Alaric Hall, "The Meanings of Elf
 	Type = "unit-teuton-swordsman", -- should be something more appropriate for a writer?
 	Civilization = "latin", -- should be French
 	ProvinceOfOrigin = "France", -- accurate?
-	Year = 1135, -- composed Estoire des Anglais c. 1135-1140 AD
-	DeathYear = 1135 + 30 -- estimated
+	Year = 1135 -- composed Estoire des Anglais c. 1135-1140 AD
 })
 
 DefineCharacter("Nicholas", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 142.
@@ -112,6 +108,5 @@ DefineCharacter("Nicholas", { -- Source: Snorri Sturlson, "Heimskringla", 1844, 
 	Type = "unit-teuton-swordsman", -- should be priest
 	Civilization = "latin", -- accurate?
 	ProvinceOfOrigin = "Latium", -- probably not accurate, but since we only know he was Pope, set his province of origin to Latium until we have better information
-	Year = 1448, -- sent a brief to the bishops of Skalholt and Holum in Iceland in 1448 AD
-	DeathYear = 1448 + 30 -- estimated
+	Year = 1448 -- sent a brief to the bishops of Skalholt and Holum in Iceland in 1448 AD
 })

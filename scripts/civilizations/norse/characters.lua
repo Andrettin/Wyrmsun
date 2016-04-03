@@ -937,8 +937,7 @@ DefineCharacter("Magnus the Saint", { -- Source: Snorri Sturlson, "Heimskringla"
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
 	ProvinceOfOrigin = "Orkney", -- presumably
-	Year = 1129 - 30, -- estimated
-	DeathYear = 1129, -- presumably
+	DeathYear = 1129, -- presumably, since this is the date Kala was made Earl of Orkney
 	HistoricalRulerships = {
 		1129 - 30, 1129, "norse", "Orkney"
 	}
@@ -949,9 +948,7 @@ DefineCharacter("Koll", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol.
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
-	ProvinceOfOrigin = "Orkney", -- since his son was Earl of Orkney
-	Year = 1129 - 30, -- estimated
-	DeathYear = 1129 -- estimated
+	ProvinceOfOrigin = "Orkney" -- since his son was Earl of Orkney
 })
 
 DefineCharacter("Kala", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 125.
@@ -961,7 +958,6 @@ DefineCharacter("Kala", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol.
 	Civilization = "norse",
 	ProvinceOfOrigin = "Orkney", -- presumably
 	Year = 1129, -- was made Earl of Orkney
-	DeathYear = 1129 + 30, -- estimated
 	Father = "Koll",
 	HistoricalRulerships = {
 		1129, 1129 + 30, "norse", "Orkney"
@@ -974,8 +970,7 @@ DefineCharacter("Arnold", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vo
 	Type = "unit-teuton-swordsman", -- should be priest
 	Civilization = "norse", -- presumably
 	ProvinceOfOrigin = "Scania", -- presumably, since he was ordained there
-	Year = 1121, -- ordained Bishop of Greenland by the Archbishop of Lund (in Scania)
-	DeathYear = 1121 + 30 -- estimated
+	Year = 1121 -- ordained Bishop of Greenland by the Archbishop of Lund (in Scania)
 })
 
 DefineCharacter("Hakon", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 142.
@@ -984,8 +979,6 @@ DefineCharacter("Hakon", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
 	ProvinceOfOrigin = "Hordaland", -- only province implemented that is part of Norway; but Akershus/Oslo would be a better fit: since we only know he came from Norway, it makes sense to set the capital as his province of origin
-	Year = 1261 - 30, -- estimated
-	DeathYear = 1261, -- by this date his son was already ruling over Norway
 	HistoricalRulerships = {
 		1261 - 30, 1261, "norse", "Orkney" -- his son was King of Norway, so presumably he was too; date estimated; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 142.
 	}
@@ -999,7 +992,6 @@ DefineCharacter("Hakon Hakonson", { -- Source: Snorri Sturlson, "Heimskringla", 
 	Civilization = "norse",
 	ProvinceOfOrigin = "Hordaland", -- only province implemented that is part of Norway; but Akershus/Oslo would be a better fit: since we only know he came from Norway, it makes sense to set the capital as his province of origin
 	Year = 1261, -- annexed the Norse settlements in Greenland to Norway in 1261 AD
-	DeathYear = 1261 + 30, -- estimated
 	Father = "Hakon",
 	HistoricalRulerships = {
 		1261, 1261 + 30, "norse", "Orkney"
@@ -1015,7 +1007,6 @@ DefineCharacter("Alf", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 
 	Type = "unit-teuton-swordsman", -- should be priest
 	Civilization = "norse", -- presumably
 	ProvinceOfOrigin = "Greenland", -- possibly he was from elsewhere, but we have no information about that
-	Year = 1378 - 30, -- estimated
 	DeathYear = 1378 -- died in Greenland
 })
 
@@ -1025,8 +1016,7 @@ DefineCharacter("Margaret", { -- Source: Snorri Sturlson, "Heimskringla", 1844, 
 	Type = "unit-teuton-archer",
 	Civilization = "norse",
 --	ProvinceOfOrigin = "?",
-	Year = 1387, -- the three northern crowns devolved to her in 1387 AD
-	DeathYear = 1387 + 30 -- estimated
+	Year = 1387 -- the three northern crowns devolved to her in 1387 AD
 })
 
 DefineCharacter("Henry", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 142.
@@ -1035,8 +1025,7 @@ DefineCharacter("Henry", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol
 	Type = "unit-teuton-swordsman", -- should be priest
 	Civilization = "norse", -- presumably
 --	ProvinceOfOrigin = "?",
-	Year = 1389, -- appointed Bishop of Greenland
-	DeathYear = 1389 + 30 -- estimated
+	Year = 1389 -- appointed Bishop of Greenland
 })
 
 DefineCharacter("Askil", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 142.
@@ -1045,8 +1034,7 @@ DefineCharacter("Askil", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol
 	Type = "unit-teuton-swordsman", -- should be priest
 	Civilization = "norse", -- presumably
 --	ProvinceOfOrigin = "?",
-	Year = 1406, -- appointed Bishop of Greenland to succeed Henry in case he was dead
-	DeathYear = 1406 + 30 -- estimated
+	Year = 1406 -- appointed Bishop of Greenland to succeed Henry in case he was dead
 })
 
 DefineCharacter("Andreas", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 142.
@@ -1054,9 +1042,7 @@ DefineCharacter("Andreas", { -- Source: Snorri Sturlson, "Heimskringla", 1844, v
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse", -- presumably
-	ProvinceOfOrigin = "Greenland", -- accurate? his son was Bishop of Greenland
-	Year = 1409 - 30, -- estimated
-	DeathYear = 1409 -- estimated
+	ProvinceOfOrigin = "Greenland" -- accurate? his son was Bishop of Greenland
 })
 
 DefineCharacter("Endrede", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 142.
@@ -1066,6 +1052,5 @@ DefineCharacter("Endrede", { -- Source: Snorri Sturlson, "Heimskringla", 1844, v
 	Civilization = "norse", -- presumably
 	ProvinceOfOrigin = "Greenland", -- accurate?
 	Year = 1409, -- executed a marriage settlement at Garda (the episcopal seat of Greenland) in 1409
-	DeathYear = 1409 + 30, -- estimated
 	Father = "Andreas"
 })

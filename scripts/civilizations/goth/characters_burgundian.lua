@@ -31,7 +31,6 @@ DefineCharacter("Gibica", { -- Source: Norman Davies, "Vanished Kingdoms", 2012,
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth",
 	ProvinceOfOrigin = "Franconia", -- place where the Burgundians dwelled before moving to the area of the Palatinate
-	Year = 411 - (30 * 1), -- estimated
 	DeathYear = 411,
 	HistoricalRulerships = {
 		411 - (30 * 1), 411, "goth", "Burgundian Tribe"
@@ -43,9 +42,7 @@ DefineCharacter("Grimhild", { -- Source: Kevin Crossley-Holland, "The Norse Myth
 	Gender = "female",
 	Type = "unit-teuton-archer",
 	Civilization = "goth",
-	ProvinceOfOrigin = "Franconia", -- place where the Burgundians dwelled before moving to the area of the Palatinate
-	Year = 411 - (30 * 1), -- estimated
-	DeathYear = 411
+	ProvinceOfOrigin = "Franconia" -- place where the Burgundians dwelled before moving to the area of the Palatinate
 })
 
 DefineCharacter("Gundahar", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 91-94; Source: Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 226.
@@ -57,6 +54,7 @@ DefineCharacter("Gundahar", { -- Source: Norman Davies, "Vanished Kingdoms", 201
 	Trait = "upgrade-generous", -- in the Anglo-Saxon poem "Widsith", Gundahar (Gunthere) gave the poet "a shining treasure" for his songs
 	Year = 406, -- Gundahar and his father Gibica brought the Burgundians over the Rhine in 406/407 AD
 	DeathYear = 437, -- invasion of Gundahar's kingdom in 437 AD by Attila's Huns
+	ViolentDeath = true, -- presumably
 	Father = "Gibica",
 	Mother = "Grimhild",
 	HistoricalRulerships = {
@@ -70,8 +68,7 @@ DefineCharacter("Glaumvor", { -- Source: Henry Adams Bellows (transl.), "The Poe
 	Type = "unit-teuton-archer",
 	Civilization = "goth",
 	ProvinceOfOrigin = "Franconia", -- place where the Burgundians dwelled before moving to the area of the Palatinate
-	Year = 437 - (30 * 1),
-	DeathYear = 437 -- comes from the same generation as Gunnar/Gundahar, who died in 437 AD
+	DateReferenceCharacter = "Gundahar" -- comes from the same generation as Gunnar/Gundahar
 })
 
 DefineCharacter("Gudrun", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, p. 94; Source: Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 226.
@@ -80,8 +77,6 @@ DefineCharacter("Gudrun", { -- Source: Norman Davies, "Vanished Kingdoms", 2012,
 	Type = "unit-teuton-archer",
 	Civilization = "goth",
 	ProvinceOfOrigin = "Franconia", -- place where the Burgundians dwelled before moving to the area of the Palatinate
-	Year = 437 - (30 * 1),
-	DeathYear = 437, -- comes from the same generation as Gunnar/Gundahar, who died in 437 AD
 	Father = "Gibica",
 	Mother = "Grimhild"
 })
@@ -92,8 +87,6 @@ DefineCharacter("Hogni", { -- Source: Source: Kevin Crossley-Holland, "The Norse
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth",
 	ProvinceOfOrigin = "Franconia",
-	Year = 437 - (30 * 1),
-	DeathYear = 437, -- comes from the same generation as Gunnar/Gundahar, who died in 437 AD
 	Father = "Gibica",
 	Mother = "Grimhild"
 })
@@ -104,9 +97,7 @@ DefineCharacter("Kostbera", { -- Source: Henry Adams Bellows (transl.), "The Poe
 	Type = "unit-teuton-archer",
 	Civilization = "goth",
 	Trait = "upgrade-wise", -- kind; wise and cunning in rune-craft
-	ProvinceOfOrigin = "Franconia",
-	Year = 437 - (30 * 1),
-	DeathYear = 437 -- comes from the same generation as Gunnar/Gundahar, who died in 437 AD
+	ProvinceOfOrigin = "Franconia"
 })
 
 DefineCharacter("Orkning", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", pp. 509-510.
@@ -115,8 +106,7 @@ DefineCharacter("Orkning", { -- Source: Henry Adams Bellows (transl.), "The Poet
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth",
 	ProvinceOfOrigin = "Franconia",
-	Year = 437 - (30 * 1),
-	DeathYear = 437 -- comes from the same generation as Gunnar/Gundahar, who died in 437 AD
+	DateReferenceCharacter = "Gundahar" -- comes from the same generation as Gunnar/Gundahar
 })
 
 DefineCharacter("Snaevar", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", pp. 509, 517.
@@ -125,8 +115,6 @@ DefineCharacter("Snaevar", { -- Source: Henry Adams Bellows (transl.), "The Poet
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth",
 	ProvinceOfOrigin = "Franconia",
-	Year = 437, -- he belonged to one generation after Gundahar/Gunnar, who died in 437 AD
-	DeathYear = 437 + (30 * 1),
 	Father = "Hogni",
 	Mother = "Kostbera"
 })
@@ -137,8 +125,6 @@ DefineCharacter("Solar", { -- Source: Henry Adams Bellows (transl.), "The Poetic
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth",
 	ProvinceOfOrigin = "Franconia",
-	Year = 437, -- he belonged to one generation after Gundahar/Gunnar, who died in 437 AD
-	DeathYear = 437 + (30 * 1),
 	Father = "Hogni",
 	Mother = "Kostbera"
 })
@@ -149,8 +135,6 @@ DefineCharacter("Gotthorm", { -- Source: Source: Kevin Crossley-Holland, "The No
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth",
 	ProvinceOfOrigin = "Franconia",
-	Year = 437 - (30 * 1),
-	DeathYear = 437, -- comes from the same generation as Gunnar/Gundahar, who died in 437 AD
 	Mother = "Grimhild"
 })
 
@@ -160,8 +144,7 @@ DefineCharacter("Brynhild", { -- Source: Henry Adams Bellows (transl.), "The Poe
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth", -- put her as a Burgundian until we have better information
 	ProvinceOfOrigin = "Franconia",
-	Year = 437 - (30 * 1),
-	DeathYear = 437 -- comes from the same generation as Gunnar/Gundahar, who died in 437 AD
+	DateReferenceCharacter = "Gundahar" -- comes from the same generation as Gunnar/Gundahar
 })
 
 DefineCharacter("Gundioc", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 94-96.

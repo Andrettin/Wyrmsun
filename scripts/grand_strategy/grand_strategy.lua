@@ -229,7 +229,7 @@ function RunGrandStrategyGameSetupMenu()
 			
 			InitializeGrandStrategyMinimap()
 
-			InitializeGrandStrategyFactions()
+			FinalizeGrandStrategyInitialization()
 --			CalculateFactionDisembarkmentProvinces()
 
 			GrandStrategyGameInitialized = true
@@ -1442,7 +1442,7 @@ function RunGrandStrategyLoadGameMenu()
 			
 			InitializeGrandStrategyMinimap()
 			
-			InitializeGrandStrategyFactions()
+			FinalizeGrandStrategyInitialization()
 			
 			GrandStrategyGameLoading = false
 			GrandStrategyGameInitialized = true
@@ -2186,7 +2186,12 @@ function DrawGrandStrategyInterface()
 				local item_y = 0
 
 				-- workers (to show how many are available for training
-				local worker_unit_type = GetCivilizationClassUnitType("worker", GetProvinceCivilization(SelectedProvince.Name))
+				local worker_unit_type
+				if (GetFactionFromName(GetProvinceOwner(SelectedProvince.Name)).Civilization == GetProvinceCivilization(SelectedProvince.Name)) then
+					worker_unit_type = GetFactionClassUnitType("worker", GetProvinceCivilization(SelectedProvince.Name), GetProvinceOwner(SelectedProvince.Name))
+				else
+					worker_unit_type = GetCivilizationClassUnitType("worker", GetProvinceCivilization(SelectedProvince.Name))
+				end
 				if (worker_unit_type ~= nil) then
 					local icon_offset_x = Video.Width - 243 + 15 + (item_x * 56)
 					local icon_offset_y = Video.Height - 186 + 13 + (item_y * (47 + 19 + 4))

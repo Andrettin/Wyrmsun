@@ -41,7 +41,6 @@ DefineCharacter("Modsognir", { -- one of the earliest dwarven leaders; in Norse 
 	Trait = "upgrade-mighty",
 	ProvinceOfOrigin = "Svarinshaug",
 	Year = -3000,
-	DeathYear = -3000 + 30, -- estimated
 	Persistent = true,
 	ForbiddenUpgrades = {"unit-dwarven-yale-rider"},
 	HistoricalRulerships = {
@@ -63,7 +62,6 @@ DefineCharacter("Durin", { -- deputy of Modsognir
 	Trait = "upgrade-dextrous",
 	ProvinceOfOrigin = "Svarinshaug",
 	Year = -3000,
-	DeathYear = -3000 + 30, -- estimated
 	Persistent = true,
 	ForbiddenUpgrades = {"unit-dwarven-yale-rider"}
 })
@@ -79,8 +77,7 @@ DefineCharacter("Thjodrorir", { -- dwarven sage of Modsognir's clan; in Norse my
 	Civilization = "dwarf",
 	Faction = "Brising Clan",
 	ProvinceOfOrigin = "Svarinshaug",
-	Year = -3000,
-	DeathYear = -3000 + 30 -- estimated
+	Year = -3000
 })
 
 DefineCharacter("Ivaldi", { -- his sons were mastersmiths; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 63.
@@ -91,8 +88,7 @@ DefineCharacter("Ivaldi", { -- his sons were mastersmiths; Source: Kevin Crossle
 	Civilization = "dwarf",
 	Trait = "upgrade-mighty", -- described as mighty
 	ProvinceOfOrigin = "Svarinshaug",
-	Year = -3000 - (30 * 1),
-	DeathYear = -3000
+	DeathYear = -3000 -- his sons made artifacts for Modsognir, and thus are presumably from the same generation as Modsognir, who we have set starting at 3000 BC
 })
 
 DefineCharacter("Thursagan", { -- from "The Sceptre of Fire" campaign of "Battle for Wesnoth"; master runesmith who crafted the Sceptre of Fire
@@ -110,7 +106,8 @@ DefineCharacter("Thursagan", { -- from "The Sceptre of Fire" campaign of "Battle
 	HairVariation = "gray-hair",
 	ProvinceOfOrigin = "Caverns of Chaincolt",
 	Year = -1,
-	DeathYear = 40 + 10, -- died in 40 AD of a violent death, but was already rather old; +10 years
+	DeathYear = 40, -- died in 40 AD of a violent death
+	ViolentDeath = true,
 	Persistent = true,
 	ForbiddenUpgrades = {"unit-dwarven-yale-rider"},
 	Items = {
@@ -136,7 +133,8 @@ DefineCharacter("Baglur", { -- from "The Sceptre of Fire" campaign of "Battle fo
 	HairVariation = "gray-hair",
 	ProvinceOfOrigin = "Caverns of Chaincolt",
 	Year = -1,
-	DeathYear = 40 + 10, -- died in 40 AD of a violent death, but was already rather old; +10 years
+	DeathYear = 40, -- died in 40 AD of a violent death
+	ViolentDeath = true,
 	Persistent = true,
 	ForbiddenUpgrades = {"unit-dwarven-yale-rider"}
 })
@@ -154,7 +152,8 @@ DefineCharacter("Durstorn", { -- from "The Sceptre of Fire" campaign of "Battle 
 	HairVariation = "brown-hair",
 	ProvinceOfOrigin = "Caverns of Chaincolt",
 	Year = -1,
-	DeathYear = 35 + 15, -- died in 35 AD of a violent death, but was already somewhat old; +15 years
+	DeathYear = 35, -- died in 35 AD of a violent death
+	ViolentDeath = true,
 	Persistent = true,
 	ForbiddenUpgrades = {"unit-dwarven-yale-rider"},
 	LiteraryAppearances = {"upgrade-work-the-scepter-of-fire"},
@@ -172,7 +171,8 @@ DefineCharacter("Glonoin", { -- from "The Sceptre of Fire" campaign of "Battle f
 	Faction = "Shorbear Clan",
 	ProvinceOfOrigin = "Shorbear Hills",
 	Year = -1,
-	DeathYear = 29 + 15, -- Shorbear Hold conquered in 29 AD by Rugnur's and Durstorn's Clan
+	DeathYear = 29, -- Shorbear Hold conquered in 29 AD by Rugnur's and Durstorn's Clan
+	ViolentDeath = true,
 	HistoricalRulerships = {
 		-1, 29, "dwarf", "Shorbear Clan"
 	}
@@ -192,7 +192,8 @@ DefineCharacter("Rugnur", { -- from "The Sceptre of Fire" campaign of "Battle fo
 	HairVariation = "brown-hair",
 	ProvinceOfOrigin = "Caverns of Chaincolt",
 	Year = 25,
-	DeathYear = 40 + 30, -- died in 40 AD of a violent death, and wasn't old; +30 years
+	DeathYear = 40, -- died in 40 AD of a violent death
+	ViolentDeath = true,
 	Persistent = true,
 	ForbiddenUpgrades = {"unit-dwarven-yale-rider"},
 	LiteraryAppearances = {"upgrade-work-the-scepter-of-fire"}
@@ -204,21 +205,7 @@ DefineCharacter("Oin", { -- dwarf from Norse mythology who was the father of And
 	Gender = "male",
 	Type = "unit-dwarven-steelclad",
 	Civilization = "dwarf",
-	ProvinceOfOrigin = "Svarinshaug",
-	Year = 437 - (30 * 3),
-	DeathYear = 437 - (30 * 2)
-})
-
-DefineCharacter("Andvari", { -- dwarf who possessed a lot of gold, including a golden ring (Andvaranaut) which in Norse mythology was stolen by Loki; was possibly one of the settlers of Joruvellir
-	Name = "Andvari",
-	NameElements = {"word", "dwarven", "noun", "Andvari"},
-	Gender = "male",
-	Type = "unit-dwarven-steelclad",
-	Civilization = "dwarf",
-	ProvinceOfOrigin = "Svarinshaug",
-	Year = 437 - (30 * 2),
-	DeathYear = 437 - (30 * 1), -- Gunnar died in 437 AD; Andvari comes from one generation before him
-	Father = "Oin"
+	ProvinceOfOrigin = "Svarinshaug"
 })
 
 DefineCharacter("Regin", { -- skilled smith; in Norse mythology was the brother of the dragon Fafnir
@@ -228,10 +215,20 @@ DefineCharacter("Regin", { -- skilled smith; in Norse mythology was the brother 
 	Type = "unit-dwarven-steelclad", -- should be a runesmith
 	Civilization = "dwarf",
 	ProvinceOfOrigin = "Svarinshaug",
-	Year = 437 - (30 * 2),
-	DeathYear = 437 - (30 * 1), -- Gunnar died in 437 AD; Regin comes from one generation before him
 	-- in the Norse myths Regin was the son of Hreidmar; but whereas Regin has been identified as a dwarf, to my knowledge Hreidmar hasn't
-	LiteraryAppearances = {"upgrade-work-fafnismol", "upgrade-work-reginsmol"}
+	LiteraryAppearances = {"upgrade-work-fafnismol", "upgrade-work-reginsmol"},
+	DateReferenceCharacter = "Siegmund Volsung" -- was the foster-father of Siegmund's son, Siegfried, and thus was a contemporary of Siegmund
+})
+
+DefineCharacter("Andvari", { -- dwarf who possessed a lot of gold, including a golden ring (Andvaranaut) which in Norse mythology was stolen by Loki; was possibly one of the settlers of Joruvellir
+	Name = "Andvari",
+	NameElements = {"word", "dwarven", "noun", "Andvari"},
+	Gender = "male",
+	Type = "unit-dwarven-steelclad",
+	Civilization = "dwarf",
+	ProvinceOfOrigin = "Svarinshaug",
+	Father = "Oin",
+	DateReferenceCharacter = "Regin" -- in the saga, Loki steals Andvari's gold to give it to Regin's family
 })
 
 DefineCharacter("Dain", { -- dwarven mastersmith; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 100.
@@ -241,8 +238,7 @@ DefineCharacter("Dain", { -- dwarven mastersmith; Source: Kevin Crossley-Holland
 	Type = "unit-dwarven-steelclad", -- should be a runesmith
 	Civilization = "dwarf",
 	ProvinceOfOrigin = "Svarinshaug",
---	Year = ?, -- contemporary of Ottar, who lived after Siegfried
---	DeathYear = ?
+	DateReferenceCharacter = "Ottar" -- contemporary of Ottar
 })
 
 DefineCharacter("Nabbi", { -- dwarven mastersmith; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 100.
@@ -252,6 +248,5 @@ DefineCharacter("Nabbi", { -- dwarven mastersmith; Source: Kevin Crossley-Hollan
 	Type = "unit-dwarven-steelclad", -- should be a runesmith
 	Civilization = "dwarf",
 	ProvinceOfOrigin = "Svarinshaug",
---	Year = ?, -- contemporary of Ottar, who lived after Siegfried
---	DeathYear = ?
+	DateReferenceCharacter = "Ottar" -- contemporary of Ottar
 })

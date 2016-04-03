@@ -25,12 +25,17 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineCharacter("Zosimus", { -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 320.
-	Name = "Zosimus",
+DefineCharacter("Widukind", {
+	Name = "Widukind",
+	NameElements = {
+--		"compound", "prefix", -- ?
+		"compound", "suffix", "old-saxon", "noun", "Kind" -- presumably
+	},
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
-	Civilization = "greek",
-	ProvinceOfOrigin = "Thrace",
-	Year = 500, -- wrote "Historia nova" around 500 AD
-	AuthoredWorks = {"upgrade-work-historia-nova"}
+	Civilization = "teuton",
+	Faction = "Saxon Tribe",
+--	ProvinceOfOrigin = ?
+--	Year = ?,
+--	DeathYear = ?
 })

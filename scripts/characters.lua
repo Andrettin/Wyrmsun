@@ -58,14 +58,16 @@ function DefineCharacter(character, data)
 	OldDefineCharacter(character, data)
 end
 
-Load("scripts/civilizations/dwarf/characters.lua")
-Load("scripts/civilizations/elf/characters.lua")
 Load("scripts/civilizations/germanic/characters.lua")
 Load("scripts/civilizations/goth/characters.lua")
 Load("scripts/civilizations/greek/characters.lua")
 Load("scripts/civilizations/latin/characters.lua")
 Load("scripts/civilizations/norse/characters.lua")
 Load("scripts/civilizations/teuton/characters.lua")
+
+-- load characters of fictional species afterwards, since many of them use human characters as a date reference
+Load("scripts/civilizations/dwarf/characters.lua")
+Load("scripts/civilizations/elf/characters.lua")
 
 -- Gnome heroes
 
@@ -96,7 +98,6 @@ DefineCharacter("Greebo", {
 	Trait = "upgrade-strong", -- seems appropriate, but maybe something else for this character would be better?
 	ProvinceOfOrigin = "Caverns of Flame", -- placeholder (this character needs to have a province of origin since he has a hero unit type)
 	Year = 3000, -- placeholder (this character needs to have a year since he has a hero unit type)
-	DeathYear = 3000 + 30 -- placeholder (this character needs to have a death year since he has a hero unit type)
 })
 
 -- Basque heroes
@@ -107,11 +108,10 @@ DefineCharacter("Gylve", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p
 	Type = "unit-germanic-warrior",
 	Civilization = "basque",
 	ProvinceOfOrigin = "Scania",
-	Year = -3000 + 12 + (10 * 18), -- contemporary of Vóden
-	DeathYear = -2800 + (30 * 1),
 	HistoricalRulerships = {
 		-3000 + 12 + (10 * 18), -2800 + (30 * 1), "basque", "Gylfing Tribe"
-	}
+	},
+	DateReferenceCharacter = "Vóden" -- contemporary of Vóden
 })
 
 -- Hun heroes

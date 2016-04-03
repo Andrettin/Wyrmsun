@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2015 by Andrettin
+--      (c) Copyright 2015-2016 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -25,49 +25,13 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineCharacter("Ariovistus", {
-	Name = "Ariovistus",
-	Gender = "male",
-	Type = "unit-suebi-swordsman",
-	Civilization = "teuton",
-	Faction = "Suebi Tribe",
-	ProvinceOfOrigin = "Brandenburg",
-	Year = -71, -- The Suebic king Ariovistus entered Gaul at the request of the Arverni and the Sequani to fight the Aedui in 71 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 230.
-	DeathYear = -58, -- Ariovistus terribly beaten by Caesar in 58 BC; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 219.
-	HistoricalRulerships = {
-		-71, -58, "teuton", "Suebi Tribe"
-	}
-})
-
-DefineCharacter("Marbod", {
-	Name = "Marbod",
-	Gender = "male",
-	Type = "unit-suebi-swordsman",
-	Level = 2,
-	Civilization = "teuton",
-	Faction = "Marcomanni Tribe",
-	Trait = "upgrade-keen",
-	HairVariation = "blond-hair",
-	Description = _("A young chieftain of the Marcomanni, Marbod aspires to forge a realm for his tribe capable of withstanding the test of time."),
-	Icon = "icon-marbod",
-	ProvinceOfOrigin = "Brandenburg",
-	Year = -9, -- Marbod, king of the Suebic tribe of the Marcomanni, conquers Bohemia in 9 BC
-	DeathYear = 19 + 15, -- Marbod deposed in 19 AD; give +15 years of life
-	Persistent = true,
-	HistoricalRulerships = {
-		-9, 19, "teuton", "Marcomanni Tribe"
-	}
-})
-
 -- personnages from the Volsungasaga, presumed Teuton since Sigurd was a Frank
 DefineCharacter("Volsung", { -- Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 3; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 226.
 	Name = "Volsung",
 	Gender = "male",
 	Type = "unit-frank-swordsman",
 	Civilization = "teuton",
---	ProvinceOfOrigin = "?",
-	Year = 437 - (30 * 3),
-	DeathYear = 437 - (30 * 2) -- Gunnar/Gundahar died in 437 AD; Volsung comes from two generations before him
+--	ProvinceOfOrigin = "?"
 })
 
 DefineCharacter("Eylimi Othling", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 226.
@@ -76,9 +40,7 @@ DefineCharacter("Eylimi Othling", { -- Source: Kevin Crossley-Holland, "The Nors
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton", -- Norse?
-	ProvinceOfOrigin = "Zealand", -- since he descends from Halfdan the Old of Denmark
-	Year = 437 - (30 * 3),
-	DeathYear = 437 - (30 * 2) -- Gunnar/Gundahar died in 437 AD; Eylimi comes from one generation before him
+	ProvinceOfOrigin = "Zealand" -- since he descends from Halfdan the Old of Denmark
 })
 
 DefineCharacter("Signy Volsung", { -- Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, pp. 2-3.
@@ -88,8 +50,6 @@ DefineCharacter("Signy Volsung", { -- Source: C. Scott Littleton, "The Germanic 
 	Type = "unit-teuton-archer",
 	Civilization = "teuton",
 --	ProvinceOfOrigin = "?",
-	Year = 437 - (30 * 2),
-	DeathYear = 437 - (30 * 1), -- Gunnar/Gundahar died in 437 AD; Signy comes from one generation before him
 	Father = "Volsung"
 	-- wedded to Siggeir
 })
@@ -100,8 +60,7 @@ DefineCharacter("Siggeir", { -- Source: C. Scott Littleton, "The Germanic Sword 
 	Type = "unit-frank-swordsman",
 	Civilization = "teuton",
 --	ProvinceOfOrigin = "?",
-	Year = 437 - (30 * 2),
-	DeathYear = 437 - (30 * 1), -- Gunnar/Gundahar died in 437 AD; Siggeir comes from one generation before him
+	DateReferenceCharacter = "Signy Volsung" -- comes from the same generation as Signy Volsung
 	-- wedded to Signy
 })
 
@@ -112,8 +71,6 @@ DefineCharacter("Siegmund Volsung", { -- Source: Norman Davies, "Vanished Kingdo
 	Type = "unit-frank-swordsman",
 	Civilization = "teuton",
 --	ProvinceOfOrigin = "?",
-	Year = 437 - (30 * 2),
-	DeathYear = 437 - (30 * 1), -- Gunnar/Gundahar died in 437 AD; Siegmund comes from one generation before him
 	Father = "Volsung"
 })
 
@@ -124,8 +81,6 @@ DefineCharacter("Sieglind Hraudung", { -- Source: Norman Davies, "Vanished Kingd
 	Type = "unit-teuton-archer",
 	Civilization = "teuton", -- Norse?
 	ProvinceOfOrigin = "Zealand", -- since he descends from Halfdan the Old of Denmark
-	Year = 437 - (30 * 2),
-	DeathYear = 437 - (30 * 1), -- Gunnar/Gundahar died in 437 AD; Sieglind comes from one generation before him
 	Father = "Eylimi Othling"
 })
 
@@ -136,8 +91,6 @@ DefineCharacter("Sinfiotli Volsung", { -- Source: C. Scott Littleton, "The Germa
 	Type = "unit-frank-swordsman",
 	Civilization = "teuton",
 --	ProvinceOfOrigin = "?",
-	Year = 437 - (30 * 1),
-	DeathYear = 437, -- Gunnar/Gundahar died in 437 AD; Siegfried comes from the same generation as him
 	Father = "Siegmund Volsung",
 	Mother = "Signy Volsung"
 })
@@ -149,8 +102,6 @@ DefineCharacter("Siegfried Volsung", { -- Source: Norman Davies, "Vanished Kingd
 	Type = "unit-frank-swordsman",
 	Civilization = "teuton",
 --	ProvinceOfOrigin = "?",
-	Year = 437 - (30 * 1),
-	DeathYear = 437, -- Gunnar/Gundahar died in 437 AD; Siegfried comes from the same generation as him
 	Father = "Siegmund Volsung",
 	Mother = "Sieglind Hraudung"
 })
@@ -163,8 +114,6 @@ DefineCharacter("Svanhild Volsung", { -- Source: Henry Adams Bellows (transl.), 
 	Type = "unit-teuton-archer",
 	Civilization = "teuton",
 --	ProvinceOfOrigin = "?",
-	Year = 437,
-	DeathYear = 437 + (30 * 1), -- Gunnar/Gundahar died in 437 AD; Svanhild comes from one generation after him
 	Father = "Siegfried Volsung",
 	Mother = "Gudrun"
 })
@@ -185,18 +134,7 @@ DefineCharacter("Clovis", { -- Source: Norman Davies, "Vanished Kingdoms", 2012,
 	Type = "unit-frank-swordsman",
 	Civilization = "teuton",
 --	ProvinceOfOrigin = "?",
-	Year = 511 - 30, -- estimated
 	DeathYear = 511 -- died
-})
-
-DefineCharacter("Ethelred", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 127.
-	Name = "Ethelred", -- did the massacre of the Danes in 1002 AD
-	Gender = "male",
-	Type = "unit-teuton-swordsman",
-	Civilization = "teuton", -- should be English?
-	ProvinceOfOrigin = "England", -- presumably
-	Year = 1002, -- massacred the Danes
-	DeathYear = 1002 + 30 -- estimated
 })
 
 DefineCharacter("Adalbert", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 141.
@@ -205,54 +143,9 @@ DefineCharacter("Adalbert", { -- Source: Snorri Sturlson, "Heimskringla", 1844, 
 	Type = "unit-teuton-swordsman", -- should be priest
 	Civilization = "teuton", -- presumably
 	ProvinceOfOrigin = "Bremen", -- presumably
-	Year = 1075 - 30, -- estimated
 	DeathYear = 1075 -- died
 })
 
-DefineCharacter("Aldhelm", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 98.
-	Name = "Aldhelm", -- composed the "Helleborus" riddle
-	Gender = "male",
-	Type = "unit-teuton-swordsman", -- should be something more appropriate for the composer of a riddle?
-	Civilization = "teuton", -- Anglo-Saxon
-	ProvinceOfOrigin = "England", -- presumably
-	Year = 709 - 30, -- estimated
-	DeathYear = 709 -- died in 709/710
-})
-
-DefineCharacter("Widukind", {
-	Name = "Widukind",
-	NameElements = {
---		"compound", "prefix", -- ?
-		"compound", "suffix", "old-saxon", "noun", "Kind" -- presumably
-	},
-	Gender = "male",
-	Type = "unit-teuton-swordsman",
-	Civilization = "teuton",
-	Faction = "Saxon Tribe",
---	ProvinceOfOrigin = ?
---	Year = ?,
---	DeathYear = ?
-})
-
-DefineCharacter("Bede", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 34.
-	Name = "Bede",
-	Gender = "male",
-	Type = "unit-teuton-swordsman",
-	Civilization = "teuton",
-	ProvinceOfOrigin = "England",
-	Year = 731, -- wrote "Historia Ecclesiastica Venerabilis Bedae" around 731 AD
-	DeathYear = 731 + 30, -- estimated
-	AuthoredWorks = {"upgrade-work-historia-ecclesiastica-venerabilis-bedae"}
-})
-
-DefineCharacter("Nicolas Breakspear", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 126.
-	Name = "Nicolas", -- son of a peasant employed in the Benedictine monastery of Saint Albans in Hertfordshire; was educated by the monks there; later became a cardinal and was sent on a mission to Norway to settle the Church there; was elected Pope in 1154 AD under the title of Hadrian IV
-	ExtraName = "Breakspear", -- I assume this isn't his family name, but a nickname or something of the sort?
-	Gender = "male",
-	Type = "unit-teuton-swordsman", -- should be priest
-	Civilization = "teuton", -- should be English
-	ProvinceOfOrigin = "England", -- Hertfordshire (since his father worked there, he's probably from there)
-	Year = 1154, -- elected Pope
-	DeathYear = 1154 + 30, -- estimated
-	Father = "Koll"
-})
+Load("scripts/civilizations/teuton/characters_english.lua")
+Load("scripts/civilizations/teuton/characters_saxon.lua")
+Load("scripts/civilizations/teuton/characters_suebi.lua")
