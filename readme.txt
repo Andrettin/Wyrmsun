@@ -93,6 +93,9 @@ https://github.com/Andrettin/Wyrmsun
 - Added Wales province.
 - In the Grand Strategy mode, temples provide extra research.
 
+* Items
+- Potions of Healing are now bought in temples, rather than stronghold-type buildings.
+
 * Maps
 - Fixed a couple of tiles who were in the wrong place in the Shorbear Hills map.
 

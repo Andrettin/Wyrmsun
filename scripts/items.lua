@@ -345,7 +345,7 @@ DefineUnitType("unit-potion-of-healing", { Name = _("Potion of Healing"),
 	HitPointHealing = 45,
 	ButtonKey = "h",
 	ButtonHint = _("Buy Potion of ~!Healing"),
-	ButtonPos = 4,
+	ButtonPos = 1,
 	Sounds = {
 		"used", "potion"
 	} 

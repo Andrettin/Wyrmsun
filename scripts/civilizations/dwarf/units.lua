@@ -946,6 +946,7 @@ DefineUnitType("unit-dwarven-temple", { Name = _("Temple"),
 	Costs = {"time", 175, "gold", 900, "lumber", 400, "stone", 100},
 	RepairCosts = {"gold", 1, "lumber", 1, "stone", 1},
 	FireResistance = 20,
+	Trains = {"unit-potion-of-healing"},
 	Sounds = {
 		"help", "basic-dwarf-voices-help-town"
 	}
@@ -1047,7 +1048,7 @@ DefineUnitType("unit-dwarven-town-hall", {
 })
 
 DefineUnitType("unit-dwarven-stronghold", {
-	Trains = {"unit-dwarven-miner", "unit-brising-miner", "unit-potion-of-healing"},
+	Trains = {"unit-dwarven-miner", "unit-brising-miner"},
 })
 
 DefineUnitType("unit-surghan-mercenary-steelclad", { Name = _("Surghan Mercenary"),

@@ -811,7 +811,7 @@ DefineUnitType("unit-teuton-stronghold", { Name = _("Burg"),
 	Image = {"file", "teuton/buildings/stronghold.png", "size", {128, 128}},
 	Shadow = {"file", "teuton/buildings/stronghold_shadow.png", "size", {128, 128}},
 	Icon = "icon-teuton-stronghold",
-	Trains = {"unit-teuton-worker", "unit-potion-of-healing"},
+	Trains = {"unit-teuton-worker"},
 	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-frankish-spatha", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-kite-shield", "unit-boots", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows"},
 	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-flaming", "upgrade-item-prefix-glacial", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-the-serpent", "upgrade-item-suffix-of-the-snail", "upgrade-item-suffix-of-trickery", "upgrade-work-hildebrandslied"},
 	DropSpells = {"spell-frank-allegiance", "spell-suebi-allegiance"},
@@ -953,6 +953,7 @@ DefineUnitType("unit-teuton-temple", { Name = _("Temple"),
 	Image = {"file", "teuton/buildings/church.png", "size", {96, 96}},
 	Shadow = {"file", "teuton/buildings/church_shadow.png", "size", {96, 96}},
 	Icon = "icon-teuton-church",
+	Trains = {"unit-potion-of-healing"},
 	Sounds = {
 		"help", "basic-teuton-voices-help-town"
 	}
