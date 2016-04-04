@@ -1042,6 +1042,33 @@ DefineProvince("Croatia", {
 	}
 })
 
+DefineProvince("Cumbria", {
+	World = "Earth",
+	FactionCulturalNames = {
+		"teuton", "England", "Cumbria"
+	},
+	Tiles = {
+		{470, 100}, {470, 101},
+		{471, 99}, {471, 100}, {471, 101},
+		{472, 99}, {472, 100}, {472, 101},
+		{473, 101}
+	},
+	SettlementLocation = {471, 100}, -- Carlisle
+	Map = "maps/random/random-map-forest.smp",
+	SettlementTerrain = "Plains",
+	Coastal = true,
+	Claims = {
+		"teuton", "England"
+	},
+	HistoricalOwners = {
+		43, "latin", "Rome", -- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		1560, "teuton", "England" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalCultures = {
+		1560, "teuton"
+	}
+})
+
 DefineProvince("Dalmatia", {
 	World = "Earth",
 	CulturalNames = {
@@ -1213,22 +1240,22 @@ DefineProvince("England", {
 	Tiles = {
 --		{117, 26}, {117, 27}, {118, 25}, {118, 26}, {118, 27}, {119, 25}, {119, 26}, {119, 27}, {120, 26}, -- old map
 		{464, 113},
-		{465, 108}, {465, 112}, {465, 113},
-		{466, 108}, {466, 112},
-		{467, 105}, {467, 108}, {467, 111}, {467, 112},
-		{468, 104}, {468, 105}, {468, 106}, {468, 107}, {468, 108}, {468, 110}, {468, 111}, {468, 112},
-		{469, 104}, {469, 105}, {469, 106}, {469, 107}, {469, 108}, {469, 109}, {469, 110}, {469, 111}, {469, 112},
-		{470, 100}, {470, 101}, {470, 104}, {470, 105}, {470, 106}, {470, 107}, {470, 108}, {470, 109}, {470, 110}, {470, 111},
-		{471, 99}, {471, 100}, {471, 101}, {471, 103}, {471, 104}, {471, 105}, {471, 106}, {471, 107}, {471, 108}, {471, 109}, {471, 110}, {471, 111},
-		{472, 99}, {472, 100}, {472, 101}, {472, 102}, {472, 103}, {472, 104}, {472, 105}, {472, 106}, {472, 107}, {472, 108}, {472, 109}, {472, 110}, {472, 111},
-		{473, 101}, {473, 103}, {473, 104}, {473, 105}, {473, 106}, {473, 107}, {473, 108}, {473, 109}, {473, 110}, {473, 111},
-		{474, 104}, {474, 105}, {474, 106}, {474, 107}, {474, 108}, {474, 109}, {474, 110}, {474, 111},
-		{475, 104}, {475, 105}, {475, 106}, {475, 107}, {475, 108}, {475, 109}, {475, 110}, {475, 111},
-		{476, 104}, {476, 105}, {476, 106}, {476, 107}, {476, 108}, {476, 109}, {476, 110}, {476, 111},
-		{477, 103}, {477, 104}, {477, 105}, {477, 106}, {477, 107}, {477, 108}, {477, 109}, {477, 110}, {477, 111},
-		{478, 103}, {478, 104}, {478, 105}, {478, 106}, {478, 107}, {478, 108}, {478, 109}, {478, 110}, {478, 111},
-		{479, 103}, {479, 104}, {479, 105}, {479, 106}, {479, 107}, {479, 108}, {479, 109}, {479, 110},
-		{480, 104}, {480, 105}, {480, 106}, {480, 107}, {480, 108}, {480, 109}, {480, 110}, {480, 111},
+		{465, 112}, {465, 113},
+		{466, 112},
+		{467, 111}, {467, 112},
+		{468, 110}, {468, 111}, {468, 112},
+		{469, 110}, {469, 111}, {469, 112},
+		{470, 110}, {470, 111},
+		{471, 110}, {471, 111},
+		{472, 109}, {472, 110}, {472, 111},
+		{473, 108}, {473, 109}, {473, 110}, {473, 111},
+		{474, 108}, {474, 109}, {474, 110}, {474, 111},
+		{475, 108}, {475, 109}, {475, 110}, {475, 111},
+		{476, 108}, {476, 109}, {476, 110}, {476, 111},
+		{477, 108}, {477, 109}, {477, 110}, {477, 111},
+		{478, 108}, {478, 109}, {478, 110}, {478, 111},
+		{479, 107}, {479, 108}, {479, 109}, {479, 110},
+		{480, 107}, {480, 108}, {480, 109}, {480, 110}, {480, 111},
 		{481, 105}, {481, 106}, {481, 107}, {481, 108}, {481, 109}, {481, 110},
 		{482, 105}, {482, 106}, {482, 107}, {482, 108}, {482, 110},
 		{483, 105}, {483, 106}, {483, 107}, {483, 110},
@@ -2355,6 +2382,44 @@ DefineProvince("Mecklenburg", {
 		"teuton", "Mecklenburg"
 	},
 	Coastal = true
+})
+
+DefineProvince("Mercia", {
+	World = "Earth",
+	FactionCulturalNames = {
+		"teuton", "England", "Mercia"
+	},
+	Tiles = {
+		{471, 103}, {471, 104}, {471, 105}, {471, 106}, {471, 107}, {471, 108}, {471, 109},
+		{472, 102}, {472, 103}, {472, 104}, {472, 105}, {472, 106}, {472, 107}, {472, 108},
+		{473, 103}, {473, 104}, {473, 105}, {473, 106}, {473, 107},
+		{474, 104}, {474, 105}, {474, 106}, {474, 107},
+		{475, 104}, {475, 105}, {475, 106}, {475, 107},
+		{476, 104}, {476, 105}, {476, 106}, {476, 107},
+		{477, 103}, {477, 104}, {477, 105}, {477, 106}, {477, 107},
+		{478, 103}, {478, 104}, {478, 105}, {478, 106}, {478, 107},
+		{479, 103}, {479, 104}, {479, 105}, {479, 106},
+		{480, 104}, {480, 105}, {480, 106}
+	},
+	SettlementLocation = {475, 106}, -- Tamworth
+	Map = "maps/random/random-map-forest.smp",
+	SettlementTerrain = "Plains",
+	Coastal = true,
+	Claims = {
+		"teuton", "Mercia",
+		"teuton", "England"
+	},
+	HistoricalOwners = {
+		43, "latin", "Rome", -- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		526, "teuton", "Angle Tribe", -- by 526 AD the Anglo-Saxons had become masters of most of Roman Britannia; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+		1560, "teuton", "England" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalClaims = {
+--		654, "teuton", "Mercia" -- since their king fell in this year, the kingdom existed then
+	},
+	HistoricalCultures = {
+		654, "teuton"
+	}
 })
 
 DefineProvince("Modena", {
@@ -3625,6 +3690,32 @@ DefineProvince("Vojvodina", {
 	SettlementLocation = {536, 127}, -- Novi Sad
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains"
+})
+
+DefineProvince("Wales", {
+	World = "Earth",
+	FactionCulturalNames = {
+		"teuton", "England", "Wales"
+	},
+	Tiles = {
+		{465, 108},
+		{466, 108},
+		{467, 105}, {467, 108},
+		{468, 104}, {468, 105}, {468, 106}, {468, 107}, {468, 108},
+		{469, 104}, {469, 105}, {469, 106}, {469, 107}, {469, 108}, {469, 109},
+		{470, 104}, {470, 105}, {470, 106}, {470, 107}, {470, 108}, {470, 109}
+	},
+	SettlementLocation = {470, 109}, -- Cardiff
+	Map = "maps/random/random-map-forest.smp",
+	SettlementTerrain = "Plains",
+	Coastal = true,
+	Claims = {
+		"teuton", "England"
+	},
+	HistoricalOwners = {
+		43, "latin", "Rome", -- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		1560, "teuton", "England" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	}
 })
 
 DefineProvince("Wallachia", {

@@ -110,6 +110,13 @@ DefineWorldMapTile({470, 150}, {
 	}
 })
 
+DefineWorldMapTile({471, 100}, {
+	World = "Earth",
+	FactionCulturalSettlementNames = {
+		"teuton", "England", "Carlisle"
+	}
+})
+
 DefineWorldMapTile({473, 93}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
@@ -151,6 +158,13 @@ DefineWorldMapTile({475, 100}, {
 			"compound", "prefix", "english", "noun", "Dur", -- presumably
 			"compound", "suffix", "english", "noun", "Ham" -- presumably
 		}
+	}
+})
+
+DefineWorldMapTile({475, 106}, {
+	World = "Earth",
+	FactionCulturalSettlementNames = {
+		"teuton", "England", "Tamworth" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
 	}
 })
 

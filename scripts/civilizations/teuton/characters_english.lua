@@ -64,6 +64,18 @@ DefineCharacter("Æthelfrith", { -- Source: Frank Stenton, "Anglo-Saxon England"
 	-- married the daughter of the Deiran king Ælle
 })
 
+DefineCharacter("Penda", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75.
+	Name = "Penda",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "teuton",
+	ProvinceOfOrigin = "England",
+	DeathYear = 654, -- fall of Penda
+	HistoricalRulerships = {
+		0, 654, "teuton", "Mercia" -- king of Mercia
+	}
+})
+
 DefineCharacter("Ethelred", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 127.
 	Name = "Ethelred", -- did the massacre of the Danes in 1002 AD
 	Gender = "male",

@@ -28,22 +28,22 @@
 --
 
 Regions = {
-	BritishIsles = {"Durham", "England", "Highland Scotland", "Ireland", "Lowland Scotland", "Northumberland", "Orkney", "York"},
+	BritishIsles = {"Cumbria", "Durham", "England", "Highland Scotland", "Ireland", "Lowland Scotland", "Mercia", "Northumberland", "Orkney", "Wales", "York"},
 	Czechoslovakia = {"Bohemia", "Moravia", "Slovakia"},
-	England = {"Durham", "England", "Northumberland", "York"},
+	England = {"Cumbria", "Durham", "England", "Mercia", "Northumberland", "Wales", "York"},
 	Eurasia = {"Astrakhan", "Bessarabia", "Bukowina", "Crimea", "Don", "Russia", "Ukraine", "White Russia"},
-	Europe = {"Abruzzo", "Aetolia", "Albania", "Alsace", "Andalusia", "Apulia", "Aquitaine", "Aragon", "Argolis", "Astrakhan", "Attica", "Augsburg", "Austria", "Baden", "Bavaria", "Belgium", "Bessarabia", "Boeotia", "Bohemia", "Bornholm", "Bosnia", "Brandenburg", "Bremen", "Brittany", "Brunswick", "Bukowina", "Bulgaria", "Burgundy", "Calabria", "Carniola", "Castille", "Corinth", "Corsica", "Courland", "Crete", "Crimea", "Croatia", "Dalmatia", "Dobruja", "Don", "Drenthe", "Durham", "East Friesland", "England", "Epirus", "Estonia", "Euboea", "Farther Pomerania", "France", "Franche Comte", "Franconia", "Friesland", "Galicia", "Gallaecia", "Gotaland", "Gotland", "Hanover", "Hesse", "Highland Scotland", "Hither Pomerania", "Holland", "Holstein", "Hordaland", "Hungary", "Iceland", "Ireland", "Istria", "Jutland", "Lacedaemonia", "Latium", "Latvia", "Lauenburg", "Liguria", "Lithuania", "Lombardy", "Lorraine", "Lower Lusatia", "Lower Rhine", "Lowland Scotland", "Macedonia", "Magdeburg", "Malta", "Mazovia", "Mecklenburg", "Modena", "Moldavia", "Montenegro", "Moravia", "Moselle", "Naples", "Neumark", "Normandy", "Northumberland", "Oldenburg", "Orkney", "Overijssel", "Palatinate", "Palermo", "Pannonia", "Parma", "Piedmont", "Pomerelia", "Portugal", "Posen", "Provence", "Prussia", "Rhodes", "Rhodope", "Romagna", "Russia", "Sardinia", "Savoy", "Scania", "Schleswig", "Serbia", "Silesia", "Skopje", "Slovakia", "Sweden", "Switzerland", "Syracuse", "Thessaly", "Thrace", "Thuringia", "Transylvania", "Tuscany", "Ukraine", "Umbria", "Upper Lusatia", "Upper Saxony", "Venetia", "Vojvodina", "Wallachia", "West Galicia", "Westphalia", "White Russia", "Wurtemberg", "York", "Zealand"},
+	Europe = {"Abruzzo", "Aetolia", "Albania", "Alsace", "Andalusia", "Apulia", "Aquitaine", "Aragon", "Argolis", "Astrakhan", "Attica", "Augsburg", "Austria", "Baden", "Bavaria", "Belgium", "Bessarabia", "Boeotia", "Bohemia", "Bornholm", "Bosnia", "Brandenburg", "Bremen", "Brittany", "Brunswick", "Bukowina", "Bulgaria", "Burgundy", "Calabria", "Carniola", "Castille", "Corinth", "Corsica", "Courland", "Crete", "Crimea", "Croatia", "Cumbria", "Dalmatia", "Dobruja", "Don", "Drenthe", "Durham", "East Friesland", "England", "Epirus", "Estonia", "Euboea", "Farther Pomerania", "France", "Franche Comte", "Franconia", "Friesland", "Galicia", "Gallaecia", "Gotaland", "Gotland", "Hanover", "Hesse", "Highland Scotland", "Hither Pomerania", "Holland", "Holstein", "Hordaland", "Hungary", "Iceland", "Ireland", "Istria", "Jutland", "Lacedaemonia", "Latium", "Latvia", "Lauenburg", "Liguria", "Lithuania", "Lombardy", "Lorraine", "Lower Lusatia", "Lower Rhine", "Lowland Scotland", "Macedonia", "Magdeburg", "Malta", "Mazovia", "Mecklenburg", "Mercia", "Modena", "Moldavia", "Montenegro", "Moravia", "Moselle", "Naples", "Neumark", "Normandy", "Northumberland", "Oldenburg", "Orkney", "Overijssel", "Palatinate", "Palermo", "Pannonia", "Parma", "Piedmont", "Pomerelia", "Portugal", "Posen", "Provence", "Prussia", "Rhodes", "Rhodope", "Romagna", "Russia", "Sardinia", "Savoy", "Scania", "Schleswig", "Serbia", "Silesia", "Skopje", "Slovakia", "Sweden", "Switzerland", "Syracuse", "Thessaly", "Thrace", "Thuringia", "Transylvania", "Tuscany", "Ukraine", "Umbria", "Upper Lusatia", "Upper Saxony", "Venetia", "Vojvodina", "Wales", "Wallachia", "West Galicia", "Westphalia", "White Russia", "Wurtemberg", "York", "Zealand"},
 	France = {"Alsace", "Aquitaine", "Brittany", "Burgundy", "France", "Franche Comte", "Lorraine", "Moselle", "Normandy", "Provence", "Savoy"},
 	Gaul = {"Alsace", "Aquitaine", "Belgium", "Brittany", "Burgundy", "France", "Franche Comte", "Lorraine", "Lower Rhine", "Moselle", "Normandy", "Palatinate", "Provence", "Savoy"},
 	GermanyNetherlands = {"Augsburg", "Austria", "Baden", "Bavaria", "Belgium", "Brandenburg", "Bremen", "Brunswick", "Drenthe", "East Friesland", "Farther Pomerania", "Franconia", "Friesland", "Hanover", "Hesse", "Hither Pomerania", "Holland", "Holstein", "Lauenburg", "Lower Lusatia", "Lower Rhine", "Magdeburg", "Mecklenburg", "Neumark", "Oldenburg", "Overijssel", "Palatinate", "Silesia", "Thuringia", "Upper Lusatia", "Upper Saxony", "Westphalia", "Wurtemberg"},
 	Greece = {"Aetolia", "Albania", "Argolis", "Attica", "Boeotia", "Corinth", "Crete", "Epirus", "Euboea", "Lacedaemonia", "Macedonia", "Rhodes", "Rhodope", "Skopje", "Thessaly", "Thrace"},
 	Iberia = {"Andalusia", "Aragon", "Castille", "Gallaecia", "Portugal"},
 	Italy = {"Abruzzo", "Apulia", "Calabria", "Corsica", "Istria", "Latium", "Liguria", "Lombardy", "Modena", "Naples", "Palermo", "Parma", "Piedmont", "Romagna", "Sardinia", "Syracuse", "Tuscany", "Umbria", "Venetia"},
-	NorthwestEurope = {"Alsace", "Aquitaine", "Belgium", "Brittany", "Burgundy", "Drenthe", "Durham", "England", "France", "Franche Comte", "Friesland", "Highland Scotland", "Holland", "Ireland", "Lorraine", "Lowland Scotland", "Moselle", "Normandy", "Northumberland", "Orkney", "Overijssel", "Provence", "Savoy", "York"},
+	NorthwestEurope = {"Alsace", "Aquitaine", "Belgium", "Brittany", "Burgundy", "Cumbria", "Drenthe", "Durham", "England", "France", "Franche Comte", "Friesland", "Highland Scotland", "Holland", "Ireland", "Lorraine", "Lowland Scotland", "Mercia", "Moselle", "Normandy", "Northumberland", "Orkney", "Overijssel", "Provence", "Savoy", "Wales", "York"},
 	Poland = {"Bukowina", "Galicia", "Mazovia", "Pomerelia", "Posen", "West Galicia", "White Russia"},
 	RomanDanube = {"Augsburg", "Austria", "Baden", "Bavaria", "Bosnia", "Bulgaria", "Carniola", "Croatia", "Dalmatia", "Dobruja", "Montenegro", "Pannonia", "Serbia", "Switzerland", "Wurtemberg"},
 	Scandinavia = {"Bornholm", "Gotaland", "Gotland", "Hordaland", "Jutland", "Scania", "Schleswig", "Sweden", "Zealand"},
-	WestandCentralEurope = {"Abruzzo", "Aetolia", "Albania", "Alsace", "Andalusia", "Apulia", "Aquitaine", "Aragon", "Argolis", "Attica", "Augsburg", "Austria", "Baden", "Bavaria", "Belgium", "Boeotia", "Bohemia", "Bornholm", "Bosnia", "Brandenburg", "Bremen", "Brittany", "Brunswick", "Bulgaria", "Burgundy", "Calabria", "Carniola", "Castille", "Corinth", "Corsica", "Courland", "Crete", "Croatia", "Dalmatia", "Dobruja", "Drenthe", "Durham", "East Friesland", "England", "Epirus", "Estonia", "Euboea", "Farther Pomerania", "France", "Franche Comte", "Franconia", "Friesland", "Galicia", "Gallaecia", "Gotaland", "Gotland", "Hanover", "Hesse", "Highland Scotland", "Hither Pomerania", "Holland", "Holstein", "Hordaland", "Hungary", "Iceland", "Ireland", "Istria", "Jutland", "Lacedaemonia", "Latium", "Latvia", "Lauenburg", "Liguria", "Lithuania", "Lombardy", "Lorraine", "Lower Lusatia", "Lower Rhine", "Lowland Scotland", "Macedonia", "Magdeburg", "Malta", "Mazovia", "Mecklenburg", "Modena", "Moldavia", "Montenegro", "Moravia", "Moselle", "Naples", "Neumark", "Normandy", "Northumberland", "Oldenburg", "Orkney", "Overijssel", "Palatinate", "Palermo", "Pannonia", "Parma", "Piedmont", "Pomerelia", "Portugal", "Posen", "Provence", "Prussia", "Rhodes", "Rhodope", "Romagna", "Sardinia", "Savoy", "Scania", "Schleswig", "Serbia", "Silesia", "Skopje", "Slovakia", "Sweden", "Switzerland", "Syracuse", "Thessaly", "Thrace", "Thuringia", "Transylvania", "Tuscany", "Umbria", "Upper Lusatia", "Upper Saxony", "Venetia", "Vojvodina", "Wallachia", "West Galicia", "Westphalia", "Wurtemberg", "York", "Zealand"}
+	WestandCentralEurope = {"Abruzzo", "Aetolia", "Albania", "Alsace", "Andalusia", "Apulia", "Aquitaine", "Aragon", "Argolis", "Attica", "Augsburg", "Austria", "Baden", "Bavaria", "Belgium", "Boeotia", "Bohemia", "Bornholm", "Bosnia", "Brandenburg", "Bremen", "Brittany", "Brunswick", "Bulgaria", "Burgundy", "Calabria", "Carniola", "Castille", "Corinth", "Corsica", "Courland", "Crete", "Croatia", "Cumbria", "Dalmatia", "Dobruja", "Drenthe", "Durham", "East Friesland", "England", "Epirus", "Estonia", "Euboea", "Farther Pomerania", "France", "Franche Comte", "Franconia", "Friesland", "Galicia", "Gallaecia", "Gotaland", "Gotland", "Hanover", "Hesse", "Highland Scotland", "Hither Pomerania", "Holland", "Holstein", "Hordaland", "Hungary", "Iceland", "Ireland", "Istria", "Jutland", "Lacedaemonia", "Latium", "Latvia", "Lauenburg", "Liguria", "Lithuania", "Lombardy", "Lorraine", "Lower Lusatia", "Lower Rhine", "Lowland Scotland", "Macedonia", "Magdeburg", "Malta", "Mazovia", "Mecklenburg", "Mercia", "Modena", "Moldavia", "Montenegro", "Moravia", "Moselle", "Naples", "Neumark", "Normandy", "Northumberland", "Oldenburg", "Orkney", "Overijssel", "Palatinate", "Palermo", "Pannonia", "Parma", "Piedmont", "Pomerelia", "Portugal", "Posen", "Provence", "Prussia", "Rhodes", "Rhodope", "Romagna", "Sardinia", "Savoy", "Scania", "Schleswig", "Serbia", "Silesia", "Skopje", "Slovakia", "Sweden", "Switzerland", "Syracuse", "Thessaly", "Thrace", "Thuringia", "Transylvania", "Tuscany", "Umbria", "Upper Lusatia", "Upper Saxony", "Venetia", "Vojvodina", "Wales", "Wallachia", "West Galicia", "Westphalia", "Wurtemberg", "York", "Zealand"}
 }
 
 function LoadProvinces(world)
@@ -177,6 +177,9 @@ function LoadProvinces(world)
 		},
 		Croatia = {
 			Name = "Croatia"
+		},
+		Cumbria = {
+			Name = "Cumbria"
 		},
 		Dalmatia = {
 			Name = "Dalmatia"
@@ -331,6 +334,9 @@ function LoadProvinces(world)
 		Mecklenburg = {
 			Name = "Mecklenburg"
 		},
+		Mercia = {
+			Name = "Mercia"
+		},
 		Modena = {
 			Name = "Modena"
 		},
@@ -483,6 +489,9 @@ function LoadProvinces(world)
 		},
 		Vojvodina = {
 			Name = "Vojvodina"
+		},
+		Wales = {
+			Name = "Wales"
 		},
 		Wallachia = {
 			Name = "Wallachia"

@@ -82,12 +82,16 @@ https://github.com/Andrettin/Wyrmsun
 - Expanded the encyclopedia entry of the germanic Asa Tribe.
 - Added Bernicia (Teuton polity, uses Old English as its language).
 - Added Deira (Teuton polity, uses Old English as its language).
+- Added Mercia (Teuton polity, uses Old English as its language).
 
 * Grand Strategy
 - Added Durham province.
 - Added Northumberland province.
 - Added York province.
-- In Grand Strategy mode, temples provide extra research.
+- Added Mercia province.
+- Added Cumbria province.
+- Added Wales province.
+- In the Grand Strategy mode, temples provide extra research.
 
 * Maps
 - Fixed a couple of tiles who were in the wrong place in the Shorbear Hills map.
@@ -104,7 +108,7 @@ https://github.com/Andrettin/Wyrmsun
 - New forest tileset rock graphics (by Exidelo).
 
 * Units
-- The Kriegers and Speerkampfers of the Bernice Tribe, Dere Tribe, Bernicia and Deira get a 50% damage bonus for a certain duration after disembarking from a transport ship.
+- The Kriegers and Speerkampfers of the Bernice Tribe and Dere Tribes get a 50% damage bonus for a certain duration after disembarking from a transport ship.
 
 -----------------------------------------------------------------------
 - 2.1.2

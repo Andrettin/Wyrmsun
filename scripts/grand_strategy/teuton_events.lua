@@ -378,13 +378,14 @@ local TeutonEvents = {
 	},
 	HorseFleshEatingProhibited = { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 69.
 		Name = "Horse-Flesh Eating Prohibited",
-		Description = "A council gathered in Mercia has declared the old custom of eating horse-flesh to be forbidden, judging it to be incompatible with Christian doctrine.",
+		Description = "A council gathered in PROVINCE_NAME has declared the old custom of eating horse-flesh to be forbidden, judging it to be incompatible with Christian doctrine.",
 		Conditions = function(s)
 			if (
-				GetProvinceOwner("England") == EventFaction.Name
-				and (GetProvinceCivilization("England") == "germanic" or GetProvinceCivilization("England") == "teuton" or GetProvinceCivilization("England") == "norse" or GetProvinceCivilization("England") == "goth") -- eating horse-flesh was a Germanic custom
+				GetProvinceOwner("Mercia") == EventFaction.Name
+				and (GetProvinceCivilization("Mercia") == "germanic" or GetProvinceCivilization("Mercia") == "teuton" or GetProvinceCivilization("Mercia") == "norse" or GetProvinceCivilization("Mercia") == "goth") -- eating horse-flesh was a Germanic custom
 				and SyncRand(100) < 1 -- should take a while for this to happen after Christianization
 			) then
+				EventProvince = WorldMapProvinces.Mercia
 				return true
 			else
 				return false

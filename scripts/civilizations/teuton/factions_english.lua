@@ -57,8 +57,9 @@ DefineFaction("Bernicia", { -- Source: Frank Stenton, "Anglo-Saxon England", 197
 	Colors = {"brown"},
 	DefaultTier = "kingdom",
 	DevelopsTo = {"England", "Scotland"},
+	FactionUpgrade = "upgrade-angle-tribe-faction",
 	Description = "Bernicia was the kingdom founded by the Bernice people in Northumbria.",
-	HistoricalFactionDerivations = {588, "teuton", "Bernice Tribe"} -- according to tradition, Æthelric of Bernicia acquired the kingdom of Deira upon its king Ælle's death in 588 AD; and Bernicia had a king then, their kingdom already existed, too
+	HistoricalFactionDerivations = {547, "teuton", "Bernice Tribe"} -- Kingdom of Bernicia founded in 547 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75.
 })
 
 DefineFaction("Deira", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75.
@@ -69,6 +70,19 @@ DefineFaction("Deira", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, 
 	Colors = {"blue"},
 	DefaultTier = "kingdom",
 	DevelopsTo = {"England", "Scotland"},
+	FactionUpgrade = "upgrade-angle-tribe-faction",
 	Description = "Deira was the kingdom founded by the Dere people in Northumbria.",
 	HistoricalFactionDerivations = {588, "teuton", "Dere Tribe"} -- according to tradition, Æthelric of Bernicia acquired the kingdom of Deira upon its king Ælle's death in 588 AD; and since their king died in this year, the kingdom existed then
+})
+
+DefineFaction("Mercia", {
+	Civilization = "teuton",
+	ParentFaction = "Angle Tribe",
+	Type = "polity",
+	Language = "old-english",
+	Colors = {"red"},
+	DefaultTier = "kingdom",
+	DevelopsTo = {"England"},
+	Description = "",
+	HistoricalFactionDerivations = {654, "teuton", "Angle Tribe"} -- we have notice of the fall of a king Penda of Mercia in 654 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75.
 })

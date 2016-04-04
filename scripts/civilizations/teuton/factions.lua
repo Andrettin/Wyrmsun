@@ -109,7 +109,7 @@ DefineFaction("Angle Tribe", {
 	Type = "tribe",
 	Language = "old-english",
 	Colors = {"white"},
-	DevelopsTo = {"England", "Scotland"},
+	DevelopsTo = {"England", "Bernicia", "Deira", "Mercia", "Scotland"},
 	FactionUpgrade = "upgrade-angle-tribe-faction",
 	HistoricalFactionDerivations = {-264, "germanic", "Skeldung Tribe"},
 	HistoricalTechnologies = {
