@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2015 by Andrettin
+--      (c) Copyright 2015-2016 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -25,17 +25,36 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineFaction("Goth Tribe", {
+	Civilization = "goth",
+	Type = "tribe",
+	Colors = {"red"},
+	DevelopsTo = {"Gothia"},
+	HistoricalFactionDerivations = {-325, "germanic", "Yngling Tribe"},
+	HistoricalTechnologies = {
+		"upgrade-teuton-spatha", 180 -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
+	}
+})
+
 DefineFaction("Bastarnae Tribe", {
 	Civilization = "goth",
 	Type = "tribe",
-	Colors = {"blue"}
+	Colors = {"blue"},
+	HistoricalFactionDerivations = {-264, "goth", "Goth Tribe"},
+	HistoricalTechnologies = {
+		"upgrade-teuton-spatha", 180 -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
+	}
 })
 
 DefineFaction("Burgundian Tribe", {
 	Civilization = "goth",
 	Type = "tribe",
 	Colors = {"brown"},
-	DevelopsTo = {"Burgundy"}
+	DevelopsTo = {"Burgundy"},
+	HistoricalFactionDerivations = {-264, "goth", "Goth Tribe"},
+	HistoricalTechnologies = {
+		"upgrade-teuton-spatha", 180 -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
+	}
 })
 
 DefineFaction("Gepidae Tribe", {
@@ -44,17 +63,14 @@ DefineFaction("Gepidae Tribe", {
 	Colors = {"black"}
 })
 
-DefineFaction("Goth Tribe", {
-	Civilization = "goth",
-	Type = "tribe",
-	Colors = {"red"},
-	DevelopsTo = {"Gothia"}
-})
-
 DefineFaction("Herulian Tribe", {
 	Civilization = "goth",
 	Type = "tribe",
-	Colors = {"green"}
+	Colors = {"green"},
+	HistoricalFactionDerivations = {-27, "goth", "Goth Tribe"},
+	HistoricalTechnologies = {
+		"upgrade-teuton-spatha", 180 -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
+	}
 })
 
 DefineFaction("Lugii Tribe", {
@@ -67,39 +83,60 @@ DefineFaction("Ostrogoth Tribe", {
 	Civilization = "goth",
 	Type = "tribe",
 	Colors = {"red"},
-	DevelopsTo = {"Gothia"}
+	DevelopsTo = {"Gothia"},
+	HistoricalFactionDerivations = {200, "goth", "Goth Tribe"}
 })
 
 DefineFaction("Rugian Tribe", {
 	Civilization = "goth",
 	Type = "tribe",
-	Colors = {"red", "orange"} -- change to a better one?
+	Colors = {"red", "orange"}, -- change to a better one?
+	HistoricalFactionDerivations = {-264, "goth", "Goth Tribe"},
+	HistoricalTechnologies = {
+		"upgrade-teuton-spatha", 180 -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
+	}
 })
 
 DefineFaction("Silingae Tribe", {
 	Civilization = "goth",
 	Type = "tribe",
-	Colors = {"orange"}
+	Colors = {"orange"},
+	HistoricalFactionDerivations = {-264, "goth", "Goth Tribe"},
+	HistoricalTechnologies = {
+		"upgrade-teuton-spatha", 180 -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
+	}
 })
 
 DefineFaction("Turcilingian Tribe", {
 	Civilization = "goth",
 	Type = "tribe",
-	Colors = {"blue"}
+	Colors = {"blue"},
+	HistoricalFactionDerivations = {-264, "goth", "Goth Tribe"},
+	HistoricalTechnologies = {
+		"upgrade-teuton-spatha", 180 -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
+	}
 })
 
 DefineFaction("Vandal Tribe", {
 	Civilization = "goth",
 	Type = "tribe",
 	Colors = {"cyan", "blue"},
-	DevelopsTo = {"Vandalia"}
+	DevelopsTo = {"Vandalia"},
+	HistoricalFactionDerivations = {-264, "goth", "Goth Tribe"},
+	HistoricalTechnologies = {
+		"upgrade-teuton-spatha", 180 -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
+	}
 })
 
 DefineFaction("Visigoth Tribe", {
 	Civilization = "goth",
 	Type = "tribe",
 	Colors = {"pink"},
-	DevelopsTo = {"Gothia"}
+	DevelopsTo = {"Gothia"},
+	HistoricalFactionDerivations = {200, "goth", "Goth Tribe"},
+	HistoricalTechnologies = {
+		"upgrade-teuton-coinage", 573 -- Visigothic gold tremissis coined in 573 AD; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, p. 188.
+	}
 })
 
 -- polities
@@ -111,7 +148,8 @@ DefineFaction("Burgundy", {
 	DefaultTier = "kingdom",
 	Titles = {
 		"monarchy", "kingdom", "Kingdom"
-	}
+	},
+	HistoricalFactionDerivations = {411, "goth", "Burgundian Tribe"} -- Kingdom of the Burgundians established by Gundahar (a Burgundian tribal chief) in 411 AD, with its center in Borbetomagus (Worms); Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 91-93.
 })
 
 DefineFaction("Gothia", {
