@@ -307,6 +307,16 @@ DefineProvince("Astrakhan", {
 		"germanic", "Asa Tribe",
 		"persian", "Aorsi Tribe",
 		"persian", "Sarmatian Tribe"
+	},
+	HistoricalOwners = {
+		-3000, "germanic", "Asa Tribe",
+		-2800, "", "", -- Proto-Indo-Europeans who would give origin to the Germanic peoples concluded their migration to Scandinavia at this date
+		-336, "persian", "Sarmatian Tribe", -- Macedonian Empire (and environs) in 336-323 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 18-19.
+		-264, "persian", "Aorsi Tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		1557, "slav", "Muscovy", -- Astrakhan acquired by Muscovy in 1557 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalCultures = {
+		-336, "persian",
 	}
 })
 
@@ -388,6 +398,16 @@ DefineProvince("Austria", {
 		"celt", "Norici Tribe",
 		"teuton", "Austria",
 		"teuton", "Holy Rome"
+	},
+	HistoricalOwners = {
+		-- The people of the Linear Pottery culture arrived in northern Poland and Germany about 5500 BC, possessing knowledge of agriculture; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 139.
+		-- Linear Pottery culture existed in parts of Central Europe between 7000 and 2000 BC; since the other source gives them as arriving in northern Poland and Germany c. 5500 BC, let's place their beginnings at that date; Source: "Atlas de História Mundial", 2001, pp. 40-41.
+		-5500, "basque", "Linearware Tribe", -- map indicates only Lower Austria
+		-800, "celt", "Norici Tribe", -- Hallstatt culture in southern Germany and adjacent areas c. 800-400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 87.
+		-15, "latin", "Rome", -- Noricum acquired by Rome in 15 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		507, "goth", "Ostrogoth Tribe", -- political situation in 507-534 in Europe; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
+		919, "teuton", "Holy Rome", -- Bavarian East March; political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+		1560, "teuton", "Austria" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	}
 })
 
@@ -557,6 +577,12 @@ DefineProvince("Bohemia", {
 		"celt", "Boii Tribe",
 		"teuton", "Marcomanni Tribe",
 		"teuton", "Holy Rome"
+	},
+	HistoricalOwners = {
+		-5500, "basque", "Linearware Tribe", -- Linear Pottery culture existed in parts of Central Europe between 7000 and 2000 BC; since the other source gives them as arriving in northern Poland and Germany c. 5500 BC, let's place their beginnings at that date; Source: "Atlas de História Mundial", 2001, pp. 40-41.
+	},
+	HistoricalCultures = {
+		395, "celt"
 	}
 })
 
@@ -628,6 +654,11 @@ DefineProvince("Brandenburg", {
 		"teuton", "Semnone Tribe",
 		"teuton", "Suebi Tribe",
 		"teuton", "Brandenburg"
+	},
+	HistoricalOwners = {
+		-264, "teuton", "Semnone Tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		-71, "teuton", "Suebi Tribe", -- Suebi attested in 71 BC; since the Suebi were in existence then, they were also probably already settled where Tacitus had described the Suebic Semnones as living in, since the other territories settled by Suebic tribes (Bohemia and Moravia) were only conquered later on
+		1560, "teuton", "Brandenburg" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	}
 })
 
@@ -1126,6 +1157,11 @@ DefineProvince("Durham", {
 	Coastal = true,
 	Claims = {
 		"teuton", "England"
+	},
+	HistoricalOwners = {
+		43, "latin", "Rome", -- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		526, "teuton", "Angle Tribe", -- by 526 AD the Anglo-Saxons had become masters of most of Roman Britannia; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+		1560, "teuton", "England" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	}
 })
 
@@ -1195,6 +1231,15 @@ DefineProvince("England", {
 	Claims = {
 		"basque", "Bellbeaker Tribe",
 		"teuton", "England"
+	},
+	HistoricalOwners = {
+		-7000, "basque", "Bellbeaker Tribe", -- Bell Beaker culture existed in Normandy and the western parts of Great Britain between 7000 and 2000 BC; Source: "Atlas de História Mundial", 2001, pp. 40-41.
+		43, "latin", "Rome", -- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		526, "teuton", "Angle Tribe", -- by 526 AD the Anglo-Saxons had become masters of most of Roman Britannia; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+		1560, "teuton", "England" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalCultures = {
+		-7000, "basque"
 	}
 })
 
@@ -1491,6 +1536,12 @@ DefineProvince("Gallaecia", {
 	SettlementTerrain = "Plains",
 	Claims = {
 		"teuton", "Galicia"
+	},
+	HistoricalOwners = {
+		-17, "latin", "Rome", -- Gallaecia and Asturias acquired by Rome in 17 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		411, "teuton", "Suebi Tribe", -- The Suebi conquered Gallaecia in 411 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
+		486, "teuton", "Galicia", -- Suebi kingdom of Galicia; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		1560, "latin", "Spain" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	}
 })
 
@@ -1633,6 +1684,13 @@ DefineProvince("Highland Scotland", {
 	Claims = {
 		"celt", "Pict Tribe",
 		"teuton", "Scotland" -- should be English
+	},
+	HistoricalOwners = {
+		395, "celt", "Pict Tribe", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		1560, "teuton", "Scotland" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalCultures = {
+		395, "celt"
 	}
 })
 
@@ -1842,6 +1900,12 @@ DefineProvince("Ireland", {
 	Coastal = true,
 	Claims = {
 		"celt", "Scot Tribe"
+	},
+	HistoricalOwners = {
+		395, "celt", "Scot Tribe"
+	},
+	HistoricalCultures = {
+		395, "celt"
 	}
 })
 
@@ -2148,6 +2212,10 @@ DefineProvince("Lowland Scotland", {
 	Coastal = true,
 	Claims = {
 		"teuton", "Scotland" -- should be English
+	},
+	HistoricalOwners = {
+		80, "latin", "Rome", -- The area between the Wall of Antoninus (or Severus) and Hadrian's Wall was acquired by Rome in 80 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		1560, "teuton", "Scotland" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	}
 })
 
@@ -2451,6 +2519,18 @@ DefineProvince("Normandy", {
 	SettlementTerrain = "Plains",
 	Claims = {
 		"basque", "Bellbeaker Tribe"
+	},
+	HistoricalOwners = {
+		-7000, "basque", "Bellbeaker Tribe", -- Bell Beaker culture existed in Normandy and the western parts of Great Britain between 7000 and 2000 BC; Source: "Atlas de História Mundial", 2001, pp. 40-41.
+		-50, "latin", "Rome", -- Gaul conquered by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		486, "teuton", "Francia", -- The Frankish Merovingian king Clovis conquers Syagrius' realm, the last Roman territory in Gaul; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
+		1560, "latin", "France", -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalClaims = {
+		486, "teuton", "Francia"
+	},
+	HistoricalCultures = {
+		-7000, "basque"
 	}
 })
 
@@ -2475,6 +2555,15 @@ DefineProvince("Northumberland", {
 	Claims = {
 		"teuton", "Bernice Tribe", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
 		"teuton", "England"
+	},
+	HistoricalOwners = {
+		80, "latin", "Rome", -- The area between the Wall of Antoninus (or Severus) and Hadrian's Wall was acquired by Rome in 80 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		526, "teuton", "Bernice Tribe", -- by 526 AD the Anglo-Saxons had become masters of most of Roman Britannia; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+		600, "teuton", "Bernice Tribe", -- In 600 AD, the Bernice people (who were Anglians) were centered in Bamburgh; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
+		1560, "teuton", "England" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalCultures = {
+		600, "teuton"
 	}
 })
 
@@ -2509,6 +2598,10 @@ DefineProvince("Orkney", {
 	Claims = {
 		"norse", "Orkney",
 		"teuton", "Scotland" -- should be English-cultured instead
+	},
+	HistoricalOwners = {
+		1099, "norse", "Orkney", -- since the faction had a ruler at this date, then it must have existed
+		1560, "teuton", "Scotland" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	}
 })
 
@@ -2686,7 +2779,13 @@ DefineProvince("Portugal", {
 	SettlementLocation = {454, 145}, -- Lisbon
 	Map = "maps/earth/braga.smp",
 	SettlementTerrain = "Plains",
-	Coastal = true
+	Coastal = true,
+	HistoricalOwners = {
+		-138, "latin", "Rome", -- Lusitania acquired by Rome in 138 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		450, "teuton", "Suebi Tribe", -- The Suebi were in possession of most of modern Portugal by around 450 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
+		486, "teuton", "Galicia", -- Suebi kingdom of Galicia; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		1560, "latin", "Portugal" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	}
 })
 
 DefineProvince("Posen", {
@@ -3681,6 +3780,18 @@ DefineProvince("York", {
 	Claims = {
 		"teuton", "Dere Tribe", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
 		"teuton", "England"
+	},
+	HistoricalOwners = {
+		43, "latin", "Rome", -- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		500, "teuton", "Dere Tribe", -- The Dere (a collection of Anglian peoples) were in possession of York in 500 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
+		588, "teuton", "Bernicia", -- according to tradition, Æthelric of Bernicia acquired the kingdom of Deira upon its king Ælle's death in 588 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75.
+		1560, "teuton", "England" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalClaims = {
+		588, "teuton", "Deira" -- since their king died in this year, the kingdom existed then
+	},
+	HistoricalCultures = {
+		500, "teuton"
 	}
 })
 
@@ -3710,7 +3821,18 @@ DefineProvince("Zealand", {
 		"goth", "Herulian Tribe",
 		"norse", "Dane Tribe"
 	},
-	Coastal = true
+	Coastal = true,
+	HistoricalOwners = {
+		-9000, "basque", "Maglemose Tribe", -- Maglemose culture arose in Zealand in 9000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 37.
+		-6400, "basque", "Kongemose Tribe", -- Maglemose cultured ended and Kongemose culture arose in Zealand in 6400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 37.
+		-5400, "basque", "Ertebolle Tribe", -- Kongemose cultured ended and Ertebolle culture arose in Zealand in 5400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 37.
+		-3950, "basque", "Funnelbeaker Tribe", -- Ertebolle cultured ended and Funnel Beaker culture arose in Zealand in 3950 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 37.
+		-2800, "germanic", "Skeldung Tribe", -- Funnel Beaker culture ended in Zealand in 2800 BC and the Corded Ware culture (neolithic) began; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 38.
+		-264, "", "", -- remove Proto-Germanics
+		-27, "goth", "Herulian Tribe", -- political situation in Europe (presumably) at the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+		526, "norse", "Dane Tribe", -- Danes were in Zealand in 526-600; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+		919, "norse", "Denmark" -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+	}
 })
 
 DefineProvince("Aurvang", {

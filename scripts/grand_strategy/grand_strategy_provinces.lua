@@ -84,7 +84,6 @@ function LoadProvinces(world)
 		},
 		Astrakhan = {
 			Name = "Astrakhan",
-			Owner = "Asa Tribe",
 			SettlementBuildings = {
 				unit_germanic_town_hall = true,
 				unit_germanic_barracks = true

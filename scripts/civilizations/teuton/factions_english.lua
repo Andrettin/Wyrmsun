@@ -31,7 +31,7 @@ DefineFaction("Bernice Tribe", { -- Source: Frank Stenton, "Anglo-Saxon England"
 	Type = "tribe",
 	Language = "old-english",
 	Colors = {"brown"},
-	DevelopsTo = {"England", "Scotland"},
+	DevelopsTo = {"Bernicia", "England", "Scotland"},
 	FactionUpgrade = "upgrade-bernice-tribe-faction",
 	Description = "The Bernice were an Anglian people who established themselves on the Northumbrian coast, eventually managing to conquer the surrounding Celtic territories."
 })
@@ -42,7 +42,7 @@ DefineFaction("Dere Tribe", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	Type = "tribe",
 	Language = "old-english",
 	Colors = {"blue"},
-	DevelopsTo = {"England", "Scotland"},
+	DevelopsTo = {"Deira", "England", "Scotland"},
 	FactionUpgrade = "upgrade-bernice-tribe-faction",
 	Description = "The Dere were a group of Anglian peoples, who originally dwelled in the central and eastern parts of modern Yorkshire. Their name comes from the British word \"deifr\" (meaning \"waters\"), likely due to their initial settlements being located at the confluence of multiple rivers into the Humber."
 })
