@@ -94,7 +94,7 @@ https://github.com/Andrettin/Wyrmsun
 - In the Grand Strategy mode, temples provide extra research.
 
 * Items
-- Potions of Healing are now bought in temples, rather than stronghold-type buildings.
+- Potions of Healing are now bought in temples, rather than stronghold-class buildings.
 
 * Maps
 - Fixed a couple of tiles who were in the wrong place in the Shorbear Hills map.
