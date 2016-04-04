@@ -87,6 +87,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added Durham province.
 - Added Northumberland province.
 - Added York province.
+- In Grand Strategy mode, temples provide extra research.
 
 * Maps
 - Fixed a couple of tiles who were in the wrong place in the Shorbear Hills map.

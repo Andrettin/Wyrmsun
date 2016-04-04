@@ -2707,13 +2707,13 @@ function AIDoTurn(ai_faction)
 					elseif (GetUnitTypeData(unitName, "Class") == "smithy" and ((ProvinceHasBuildingClass(WorldMapProvinces[key].Name, "barracks") and ProvinceHasBuildingClass(WorldMapProvinces[key].Name, "lumber-mill")) or GetFactionBuildingTypeCount(ai_faction, "smithy") == 0)) then -- it only makes sense to build more than one smithy if it is to make ballistas available in a province
 						BuildStructure(WorldMapProvinces[key], unitName)
 						break
+					elseif (GetUnitTypeData(unitName, "Class") == "temple") then -- build temples after other research buildings
+						BuildStructure(WorldMapProvinces[key], unitName)
+						break
 					elseif (GetUnitTypeData(unitName, "Class") == "stables" and ((ProvinceHasBuildingClass(WorldMapProvinces[key].Name, "barracks") and ProvinceHasBuildingClass(WorldMapProvinces[key].Name, "smithy")) or GetFactionBuildingTypeCount(ai_faction, "stables") == 0)) then -- it only makes sense to build more than one stables if it is to make cavalry available in a province
 						BuildStructure(WorldMapProvinces[key], unitName)
 						break
 					elseif (GetUnitTypeData(unitName, "Class") == "dock") then
-						BuildStructure(WorldMapProvinces[key], unitName)
-						break
-					elseif (GetUnitTypeData(unitName, "Class") == "temple" and (ProvinceHasBuildingClass(WorldMapProvinces[key].Name, "stronghold") or GetFactionBuildingTypeCount(ai_faction, "temple") == 0)) then -- only build temples after a stronghold is in place
 						BuildStructure(WorldMapProvinces[key], unitName)
 						break
 					end

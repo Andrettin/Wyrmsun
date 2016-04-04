@@ -106,7 +106,7 @@ DefineCharacter("Orkning", { -- Source: Henry Adams Bellows (transl.), "The Poet
 	Type = "unit-teuton-swordsman",
 	Civilization = "goth",
 	ProvinceOfOrigin = "Franconia",
-	DateReferenceCharacter = "Gundahar" -- comes from the same generation as Gunnar/Gundahar
+	DateReferenceCharacter = "Kostbera"
 })
 
 DefineCharacter("Snaevar", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", pp. 509, 517.
