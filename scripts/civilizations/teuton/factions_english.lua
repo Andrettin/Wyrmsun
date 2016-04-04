@@ -34,7 +34,7 @@ DefineFaction("Bernice Tribe", { -- Source: Frank Stenton, "Anglo-Saxon England"
 	DevelopsTo = {"Bernicia", "England", "Scotland"},
 	FactionUpgrade = "upgrade-bernice-tribe-faction",
 	Description = "The Bernice were an Anglian people who established themselves on the Northumbrian coast, eventually managing to conquer the surrounding Celtic territories.",
-	HistoricalFactionDerivations = {600, "teuton", "Angle Tribe"} -- In 600 AD, the Bernice people (who were Anglians) were centered in Bamburgh; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
+	HistoricalFactionDerivations = {526, "teuton", "Angle Tribe"}
 })
 
 DefineFaction("Dere Tribe", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
@@ -59,7 +59,7 @@ DefineFaction("Bernicia", { -- Source: Frank Stenton, "Anglo-Saxon England", 197
 	DevelopsTo = {"England", "Scotland"},
 	FactionUpgrade = "upgrade-angle-tribe-faction",
 	Description = "Bernicia was the kingdom founded by the Bernice people in Northumbria.",
-	HistoricalFactionDerivations = {547, "teuton", "Bernice Tribe"} -- Kingdom of Bernicia founded in 547 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75.
+	HistoricalFactionDerivations = {547, "teuton", "Bernice Tribe"} -- the Kingdom of Bernicia was founded in 547 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75.
 })
 
 DefineFaction("Deira", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75.
