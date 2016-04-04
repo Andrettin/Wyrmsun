@@ -187,6 +187,11 @@ DefineFaction("Rome", {
 		"monarchy", "empire", "Empire",
 		"republic", "kingdom", "Republic",
 		"republic", "empire", "Republic"
+	},
+	HistoricalFactionDerivations = {-500, "latin", "Latin Tribe"},
+	HistoricalTechnologies = {
+		"upgrade-teuton-masonry", -264, -- Rome should already have masonry technology by then
+		"upgrade-teuton-coinage", -58 -- Silver currency existent in the Roman Republic during Caesar's time, and he issued gold currency during his campaigns in Gaul; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, p. 190.
 	}
 })
 

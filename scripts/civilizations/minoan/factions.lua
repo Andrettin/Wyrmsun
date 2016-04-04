@@ -53,5 +53,9 @@ DefineFaction("Crete", { -- Minoans
 	DefaultTier = "kingdom",
 	Titles = {
 		"monarchy", "kingdom", "Kingdom"
+	},
+	HistoricalTechnologies = {
+		"upgrade-teuton-writing", -2000, -- Linear A and Linear B tablets found in Crete belonging to the period between 2000 and 1400 BC; Source: "Atlas de História Mundial", 2001, p. 67.
+		"upgrade-teuton-masonry", -1900 -- Beginning of the age of the first Minoan palaces around 1900 BC; Source: "Atlas de História Mundial", 2001, p. 66.
 	}
 })

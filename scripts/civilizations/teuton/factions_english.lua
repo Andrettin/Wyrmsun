@@ -33,7 +33,8 @@ DefineFaction("Bernice Tribe", { -- Source: Frank Stenton, "Anglo-Saxon England"
 	Colors = {"brown"},
 	DevelopsTo = {"Bernicia", "England", "Scotland"},
 	FactionUpgrade = "upgrade-bernice-tribe-faction",
-	Description = "The Bernice were an Anglian people who established themselves on the Northumbrian coast, eventually managing to conquer the surrounding Celtic territories."
+	Description = "The Bernice were an Anglian people who established themselves on the Northumbrian coast, eventually managing to conquer the surrounding Celtic territories.",
+	HistoricalFactionDerivations = {600, "teuton", "Angle Tribe"} -- In 600 AD, the Bernice people (who were Anglians) were centered in Bamburgh; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
 })
 
 DefineFaction("Dere Tribe", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
@@ -44,7 +45,8 @@ DefineFaction("Dere Tribe", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	Colors = {"blue"},
 	DevelopsTo = {"Deira", "England", "Scotland"},
 	FactionUpgrade = "upgrade-bernice-tribe-faction",
-	Description = "The Dere were a group of Anglian peoples, who originally dwelled in the central and eastern parts of modern Yorkshire. Their name comes from the British word \"deifr\" (meaning \"waters\"), likely due to their initial settlements being located at the confluence of multiple rivers into the Humber."
+	Description = "The Dere were a group of Anglian peoples, who originally dwelled in the central and eastern parts of modern Yorkshire. Their name comes from the British word \"deifr\" (meaning \"waters\"), likely due to their initial settlements being located at the confluence of multiple rivers into the Humber.",
+	HistoricalFactionDerivations = {500, "teuton", "Angle Tribe"} -- The Dere (a collection of Anglian peoples) were in possession of York in 500 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
 })
 
 DefineFaction("Bernicia", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75.
@@ -55,7 +57,8 @@ DefineFaction("Bernicia", { -- Source: Frank Stenton, "Anglo-Saxon England", 197
 	Colors = {"brown"},
 	DefaultTier = "kingdom",
 	DevelopsTo = {"England", "Scotland"},
-	Description = "Bernicia was the kingdom founded by the Bernice people in Northumbria."
+	Description = "Bernicia was the kingdom founded by the Bernice people in Northumbria.",
+	HistoricalFactionDerivations = {588, "teuton", "Bernice Tribe"} -- according to tradition, Æthelric of Bernicia acquired the kingdom of Deira upon its king Ælle's death in 588 AD; and Bernicia had a king then, their kingdom already existed, too
 })
 
 DefineFaction("Deira", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75.
@@ -66,5 +69,6 @@ DefineFaction("Deira", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, 
 	Colors = {"blue"},
 	DefaultTier = "kingdom",
 	DevelopsTo = {"England", "Scotland"},
-	Description = "Deira was the kingdom founded by the Dere people in Northumbria."
+	Description = "Deira was the kingdom founded by the Dere people in Northumbria.",
+	HistoricalFactionDerivations = {588, "teuton", "Dere Tribe"} -- according to tradition, Æthelric of Bernicia acquired the kingdom of Deira upon its king Ælle's death in 588 AD; and since their king died in this year, the kingdom existed then
 })

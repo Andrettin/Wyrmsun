@@ -72,16 +72,6 @@ LoadEvents("Nidavellir")
 if (GrandStrategyYear >= -3000) then
 	SetProvinceHero("Svarinshaug", "Modsognir", 2) 
 	SetProvinceHero("Svarinshaug", "Durin", 2)
-	
-	-- give plow technology to the dwarven factions
-	SetFactionTechnology("dwarf", "Brising Clan", "upgrade-dwarven-wood-plow", true)
-	SetFactionTechnology("dwarf", "Norlund Clan", "upgrade-dwarven-wood-plow", true)
-	SetFactionTechnology("dwarf", "Shinsplitter Clan", "upgrade-dwarven-wood-plow", true)
-	SetFactionTechnology("dwarf", "Shorbear Clan", "upgrade-dwarven-wood-plow", true)
-	SetFactionTechnology("dwarf", "Knalga", "upgrade-dwarven-wood-plow", true)
-	SetFactionTechnology("dwarf", "Joruvellir", "upgrade-dwarven-wood-plow", true)
-	SetFactionTechnology("dwarf", "Kal Kartha", "upgrade-dwarven-wood-plow", true)
-	SetFactionTechnology("dwarf", "Lyr", "upgrade-dwarven-wood-plow", true)
 end
 
 if (GrandStrategyYear >= -2970) then -- estimated date
@@ -126,32 +116,6 @@ if (GrandStrategyYear >= -1) then
 	SetProvinceUnitQuantity("Southern Tunnels", "unit-dwarven-steelclad", 3) -- Glildur, Glindur, Kalnar
 	SetProvinceUnitQuantity("Southern Tunnels", "unit-dwarven-thane", 5) -- Lyndar, Gaenlar, Glinan, Crintil, Aendan
 	SetWorldMapResourceProspected("gold", 32, 13, true)
-
-	-- bronze age technologies had already been obtained by the dwarves by this point
-	SetFactionTechnology("dwarf", "Brising Clan", "upgrade-dwarven-broad-axe", true)
-	SetFactionTechnology("dwarf", "Brising Clan", "upgrade-dwarven-shield-1", true)
-	SetFactionTechnology("dwarf", "Brising Clan", "upgrade-dwarven-sharp-throwing-axe", true)
-	SetFactionTechnology("dwarf", "Norlund Clan", "upgrade-dwarven-broad-axe", true)
-	SetFactionTechnology("dwarf", "Norlund Clan", "upgrade-dwarven-shield-1", true)
-	SetFactionTechnology("dwarf", "Norlund Clan", "upgrade-dwarven-sharp-throwing-axe", true)
-	SetFactionTechnology("dwarf", "Shinsplitter Clan", "upgrade-dwarven-broad-axe", true)
-	SetFactionTechnology("dwarf", "Shinsplitter Clan", "upgrade-dwarven-shield-1", true)
-	SetFactionTechnology("dwarf", "Shinsplitter Clan", "upgrade-dwarven-sharp-throwing-axe", true)
-	SetFactionTechnology("dwarf", "Shorbear Clan", "upgrade-dwarven-broad-axe", true)
-	SetFactionTechnology("dwarf", "Shorbear Clan", "upgrade-dwarven-shield-1", true)
-	SetFactionTechnology("dwarf", "Shorbear Clan", "upgrade-dwarven-sharp-throwing-axe", true)
-	SetFactionTechnology("dwarf", "Joruvellir", "upgrade-dwarven-broad-axe", true)
-	SetFactionTechnology("dwarf", "Joruvellir", "upgrade-dwarven-shield-1", true)
-	SetFactionTechnology("dwarf", "Joruvellir", "upgrade-dwarven-sharp-throwing-axe", true)
-	SetFactionTechnology("dwarf", "Knalga", "upgrade-dwarven-broad-axe", true)
-	SetFactionTechnology("dwarf", "Knalga", "upgrade-dwarven-shield-1", true)
-	SetFactionTechnology("dwarf", "Knalga", "upgrade-dwarven-sharp-throwing-axe", true)
-	SetFactionTechnology("dwarf", "Kal Kartha", "upgrade-dwarven-broad-axe", true)
-	SetFactionTechnology("dwarf", "Kal Kartha", "upgrade-dwarven-shield-1", true)
-	SetFactionTechnology("dwarf", "Kal Kartha", "upgrade-dwarven-sharp-throwing-axe", true)
-	SetFactionTechnology("dwarf", "Lyr", "upgrade-dwarven-broad-axe", true)
-	SetFactionTechnology("dwarf", "Lyr", "upgrade-dwarven-shield-1", true)
-	SetFactionTechnology("dwarf", "Lyr", "upgrade-dwarven-sharp-throwing-axe", true)
 	
 	SetProvinceHero("Caverns of Chaincolt", "Durstorn", 2) -- Durstorn was already present when the conflict with Pypo over the Brown Hills happened
 	SetProvinceHero("Caverns of Chaincolt", "Baglur", 2) -- Baglur was already present when the conflict with Pypo over the Brown Hills happened
@@ -165,16 +129,6 @@ if (GrandStrategyYear >= 25) then -- at this time Rugnur was already in charge o
 
 	SetProvinceSettlementBuilding("Caverns of Chaincolt", "unit-dwarven-lumber-mill", true) -- had capability to train scouts by then
 	SetProvinceSettlementBuilding("Southern Tunnels", "unit-dwarven-lumber-mill", true) -- had capability to train scouts by then
-
-	-- dwarves already had castles built of stone masonry by then
-	SetFactionTechnology("dwarf", "Brising Clan", "upgrade-dwarven-masonry", true)
-	SetFactionTechnology("dwarf", "Norlund Clan", "upgrade-dwarven-masonry", true)
-	SetFactionTechnology("dwarf", "Shinsplitter Clan", "upgrade-dwarven-masonry", true)
-	SetFactionTechnology("dwarf", "Shorbear Clan", "upgrade-dwarven-masonry", true)
-	SetFactionTechnology("dwarf", "Joruvellir", "upgrade-dwarven-masonry", true)
-	SetFactionTechnology("dwarf", "Knalga", "upgrade-dwarven-masonry", true)
-	SetFactionTechnology("dwarf", "Kal Kartha", "upgrade-dwarven-masonry", true)
-	SetFactionTechnology("dwarf", "Lyr", "upgrade-dwarven-masonry", true)
 end
 
 if (GrandStrategyYear > 25) then
@@ -261,34 +215,20 @@ if (GrandStrategyYear >= 400) then
 	SetProvinceOwner("Caverns of Chaincolt", "dwarf", "Knalga") -- The Lordship of Knalga was founded around 400 AD
 	SetProvinceOwner("Southern Tunnels", "dwarf", "Knalga")
 	SetProvinceOwner("Shorbear Hills", "dwarf", "Knalga")
-	SetFactionTechnology("dwarf", "Knalga", "upgrade-dwarven-runewriting", true) -- polities require writing
 
 	SetProvinceOwner("Kal Kartha", "dwarf", "Kal Kartha") -- The Lordship of Kal Kartha was founded around 400 AD
 	SetProvinceSettlementBuilding("Kal Kartha", "unit-dwarven-barracks", true)
 	SetProvinceUnitQuantity("Kal Kartha", "unit-gnomish-recruit", 0)
 	SetWorldMapResourceProspected("gold", 46, 5, true)
-	SetFactionTechnology("dwarf", "Kal Kartha", "upgrade-dwarven-runewriting", true) -- polities require writing
 
 	SetProvinceOwner("Lyr", "dwarf", "Lyr") -- The Lordship of Lyr was founded around the same time as the other lordships
 	SetProvinceSettlementBuilding("Lyr", "unit-dwarven-barracks", true)
 	SetProvinceUnitQuantity("Lyr", "unit-dwarven-axefighter", 0)
 	SetWorldMapResourceProspected("gold", 51, 15, true)
-	SetFactionTechnology("dwarf", "Lyr", "upgrade-dwarven-runewriting", true) -- polities require writing
 	
 	SetProvinceOwner("Joruvellir", "dwarf", "Joruvellir") -- The Lordship of Joruvellir may have been founded at the same time as the other lordships
-	SetFactionTechnology("dwarf", "Joruvellir", "upgrade-dwarven-runewriting", true) -- polities require writing
 	SetProvinceUnitQuantity("Joruvellir", "unit-goblin-spearman", 0)
 	SetProvinceUnitQuantity("Joruvellir", "unit-goblin-archer", 0)
-
-	-- The Dwarves should already have Coinage technology by then
-	SetFactionTechnology("dwarf", "Brising Clan", "upgrade-dwarven-coinage", true)
-	SetFactionTechnology("dwarf", "Norlund Clan", "upgrade-dwarven-coinage", true)
-	SetFactionTechnology("dwarf", "Shinsplitter Clan", "upgrade-dwarven-coinage", true)
-	SetFactionTechnology("dwarf", "Shorbear Clan", "upgrade-dwarven-coinage", true)
-	SetFactionTechnology("dwarf", "Joruvellir", "upgrade-dwarven-coinage", true)
-	SetFactionTechnology("dwarf", "Knalga", "upgrade-dwarven-coinage", true)
-	SetFactionTechnology("dwarf", "Kal Kartha", "upgrade-dwarven-coinage", true)
-	SetFactionTechnology("dwarf", "Lyr", "upgrade-dwarven-coinage", true)
 end
 
 if (GrandStrategyYear >= 500) then
@@ -303,14 +243,6 @@ end
 if (GrandStrategyYear >= 534) then
 	SetProvinceUnitQuantity("Southern Tunnels", "unit-dwarven-steelclad", 4) -- 4 Dwarven Stalwarts
 	SetProvinceUnitQuantity("Southern Tunnels", "unit-dwarven-thane", 1) -- Hamel
-
-	-- Mushroom Farms existent in Knalga
-	SetFactionTechnology("dwarf", "Knalga", "upgrade-dwarven-iron-tipped-wood-plow", true)
-	
-	-- let's set plow upgrades for the other dwarven polities now too
-	SetFactionTechnology("dwarf", "Joruvellir", "upgrade-dwarven-iron-tipped-wood-plow", true)
-	SetFactionTechnology("dwarf", "Kal Kartha", "upgrade-dwarven-iron-tipped-wood-plow", true)
-	SetFactionTechnology("dwarf", "Lyr", "upgrade-dwarven-iron-tipped-wood-plow", true)
 end
 
 if (GrandStrategyYear >= 535) then
@@ -323,38 +255,4 @@ if (GrandStrategyYear >= 550) then
 	SetProvinceUnitQuantity("Kal Kartha", "unit-dwarven-axefighter", 2) -- 2 Masked Ulfserkers in Karrag's court
 	SetProvinceUnitQuantity("Kal Kartha", "unit-dwarven-steelclad", 3) -- Dulcatulos, 2 Masked Steelclads in Karrag's court
 	SetProvinceUnitQuantity("Kal Kartha", "unit-dwarven-thane", 4) -- Karrag
-	
-	-- late iron age technologies already obtained by the dwarves by this point
-	SetFactionTechnology("dwarf", "Brising Clan", "upgrade-dwarven-great-axe", true)
-	SetFactionTechnology("dwarf", "Brising Clan", "upgrade-dwarven-shield-2", true)
-	SetFactionTechnology("dwarf", "Brising Clan", "upgrade-dwarven-bearded-throwing-axe", true)
-	SetFactionTechnology("dwarf", "Brising Clan", "upgrade-dwarven-ballista-bolt-1", true)
-	SetFactionTechnology("dwarf", "Norlund Clan", "upgrade-dwarven-great-axe", true)
-	SetFactionTechnology("dwarf", "Norlund Clan", "upgrade-dwarven-shield-2", true)
-	SetFactionTechnology("dwarf", "Norlund Clan", "upgrade-dwarven-bearded-throwing-axe", true)
-	SetFactionTechnology("dwarf", "Norlund Clan", "upgrade-dwarven-ballista-bolt-1", true)
-	SetFactionTechnology("dwarf", "Shinsplitter Clan", "upgrade-dwarven-great-axe", true)
-	SetFactionTechnology("dwarf", "Shinsplitter Clan", "upgrade-dwarven-shield-2", true)
-	SetFactionTechnology("dwarf", "Shinsplitter Clan", "upgrade-dwarven-bearded-throwing-axe", true)
-	SetFactionTechnology("dwarf", "Shinsplitter Clan", "upgrade-dwarven-ballista-bolt-1", true)
-	SetFactionTechnology("dwarf", "Shorbear Clan", "upgrade-dwarven-great-axe", true)
-	SetFactionTechnology("dwarf", "Shorbear Clan", "upgrade-dwarven-shield-2", true)
-	SetFactionTechnology("dwarf", "Shorbear Clan", "upgrade-dwarven-bearded-throwing-axe", true)
-	SetFactionTechnology("dwarf", "Shorbear Clan", "upgrade-dwarven-ballista-bolt-1", true)
-	SetFactionTechnology("dwarf", "Joruvellir", "upgrade-dwarven-great-axe", true)
-	SetFactionTechnology("dwarf", "Joruvellir", "upgrade-dwarven-shield-2", true)
-	SetFactionTechnology("dwarf", "Joruvellir", "upgrade-dwarven-bearded-throwing-axe", true)
-	SetFactionTechnology("dwarf", "Joruvellir", "upgrade-dwarven-ballista-bolt-1", true)
-	SetFactionTechnology("dwarf", "Kal Kartha", "upgrade-dwarven-great-axe", true)
-	SetFactionTechnology("dwarf", "Kal Kartha", "upgrade-dwarven-shield-2", true)
-	SetFactionTechnology("dwarf", "Kal Kartha", "upgrade-dwarven-bearded-throwing-axe", true)
-	SetFactionTechnology("dwarf", "Kal Kartha", "upgrade-dwarven-ballista-bolt-1", true)
-	SetFactionTechnology("dwarf", "Knalga", "upgrade-dwarven-great-axe", true)
-	SetFactionTechnology("dwarf", "Knalga", "upgrade-dwarven-shield-2", true)
-	SetFactionTechnology("dwarf", "Knalga", "upgrade-dwarven-bearded-throwing-axe", true)
-	SetFactionTechnology("dwarf", "Knalga", "upgrade-dwarven-ballista-bolt-1", true)
-	SetFactionTechnology("dwarf", "Lyr", "upgrade-dwarven-great-axe", true)
-	SetFactionTechnology("dwarf", "Lyr", "upgrade-dwarven-shield-2", true)
-	SetFactionTechnology("dwarf", "Lyr", "upgrade-dwarven-bearded-throwing-axe", true)
-	SetFactionTechnology("dwarf", "Lyr", "upgrade-dwarven-ballista-bolt-1", true)
 end

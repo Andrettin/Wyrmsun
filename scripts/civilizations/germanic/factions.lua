@@ -31,17 +31,25 @@ DefineFaction("Asa Tribe", {
 	Colors = {"orange", "red"},
 	FactionUpgrade = "upgrade-asa-tribe-faction",
 	Description = "The Asa are the legendary progenitors of the Germanic peoples.",
-	Background = "In the Ynglinga Saga, the Asa (another name for the Aesir) were Odin's people, who originally lived in Asaland (identified with Asia), a realm centered in the city of Asgard. They went forth from their original lands to Scandinavia and northern Central Europe, establishing themselves in those regions."
+	Background = "In the Ynglinga Saga, the Asa (another name for the Aesir) were Odin's people, who originally lived in Asaland (identified with Asia), a realm centered in the city of Asgard. They went forth from their original lands to Scandinavia and northern Central Europe, establishing themselves in those regions.",
+	HistoricalTechnologies = {
+		"upgrade-germanic-wood-plow", -4000, -- Indo-Europeans possessed plows (as indicated by the existence of a word for plow in their vocabulary); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 104.
+	}
 })
 
-DefineFaction("Skeldung Tribe", { -- Skjoldung in the original Norse sagas, here rendered in Proto-Germanic; mythical Danish dynasty, Skj�ldr was a son of Odin set to rule over Reidgothland (Jutland) and Zealand; Source: Snorri Sturlson, "Heimskringla", 1844; Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
+DefineFaction("Skeldung Tribe", { -- Skjoldung in the original Norse sagas, here rendered in Proto-Germanic; mythical Danish dynasty, Skjöldr was a son of Odin set to rule over Reidgothland (Jutland) and Zealand; Source: Snorri Sturlson, "Heimskringla", 1844; Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
 	Civilization = "germanic",
 	ParentFaction = "Asa Tribe",
 	Type = "tribe",
 	Colors = {"red", "white"},
 --	DevelopsTo = {"Dane Tribe", "Goth Tribe", "Herulian Tribe", "Jute Tribe"}
 	DevelopsTo = {"Dane Tribe", "Goth Tribe", "Herulian Tribe"},
-	FactionUpgrade = "upgrade-skeldung-tribe-faction"
+	FactionUpgrade = "upgrade-skeldung-tribe-faction",
+	HistoricalFactionDerivations = {-2800, "germanic", "Asa Tribe"},
+	HistoricalTechnologies = {
+		"upgrade-germanic-bronze-shield", -1100, -- bronze shields found in the Danish bogs began to be made; Source: http://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-bronze-age-shields/
+		"upgrade-germanic-broad-sword", -1000 -- broad bronze sword from Føllenslev; Source: http://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/men-and-woman-in-the-bronze-age/
+	}
 })
 
 DefineFaction("Volsung Tribe", { -- mythical Frankish dynasty, which originated from the descendants of Odin set to rule over "Frankland"; Source: Snorri Sturlson, "Heimskringla", 1844; Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8.
@@ -59,5 +67,6 @@ DefineFaction("Yngling Tribe", { -- mythical Swedish dynasty, Yngve was a son of
 	Type = "tribe",
 	Colors = {"blue", "yellow"},
 	DevelopsTo = {"Goth Tribe", "Swede Tribe"},
-	FactionUpgrade = "upgrade-yngling-tribe-faction"
+	FactionUpgrade = "upgrade-yngling-tribe-faction",
+	HistoricalFactionDerivations = {-2770, "germanic", "Asa Tribe"}
 })

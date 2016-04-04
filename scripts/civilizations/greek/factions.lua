@@ -42,6 +42,21 @@ DefineFaction("Dolopes Tribe", {
 
 -- polities
 
+DefineFaction("Mycenae", {
+	Civilization = "greek",
+	Type = "polity",
+	Colors = {"orange"},
+	DefaultTier = "county",
+	Titles = {
+		"monarchy", "county", "City-State",
+		"republic", "county", "City-State"
+	},
+	HistoricalTechnologies = {
+		"upgrade-teuton-writing", -1700, -- Linear B tablets found in Mycenae belonging to the period between 1700 and 1200 BC; Source: "Atlas de História Mundial", 2001, p. 67.
+		"upgrade-teuton-masonry", -1400 -- Construction of palaces in continental Greece around 1400 BC; Source: "Atlas de História Mundial", 2001, p. 66.
+	}
+})
+
 DefineFaction("Argos", {
 	Civilization = "greek",
 	Type = "polity",
@@ -50,7 +65,8 @@ DefineFaction("Argos", {
 	Titles = {
 		"monarchy", "county", "City-State",
 		"republic", "county", "City-State"
-	}
+	},
+	HistoricalFactionDerivations = {-700, "greek", "Mycenae"}
 })
 
 DefineFaction("Athens", {
@@ -61,7 +77,8 @@ DefineFaction("Athens", {
 	Titles = {
 		"monarchy", "county", "City-State",
 		"republic", "county", "City-State"
-	}
+	},
+	HistoricalFactionDerivations = {-700, "greek", "Mycenae"}
 })
 
 DefineFaction("Cimmerian Bosphorus", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
@@ -79,7 +96,8 @@ DefineFaction("Corinth", {
 	Titles = {
 		"monarchy", "county", "City-State",
 		"republic", "county", "City-State"
-	}
+	},
+	HistoricalFactionDerivations = {-700, "greek", "Mycenae"}
 })
 
 DefineFaction("Epirus", {
@@ -112,17 +130,6 @@ DefineFaction("Macedon", {
 	}
 })
 
-DefineFaction("Mycenae", {
-	Civilization = "greek",
-	Type = "polity",
-	Colors = {"orange"},
-	DefaultTier = "county",
-	Titles = {
-		"monarchy", "county", "City-State",
-		"republic", "county", "City-State"
-	}
-})
-
 DefineFaction("Sparta", {
 	Civilization = "greek",
 	Type = "polity",
@@ -131,7 +138,8 @@ DefineFaction("Sparta", {
 	Titles = {
 		"monarchy", "county", "City-State",
 		"republic", "county", "City-State"
-	}
+	},
+	HistoricalFactionDerivations = {-700, "greek", "Mycenae"}
 })
 
 DefineFaction("Thebes", {
@@ -142,7 +150,8 @@ DefineFaction("Thebes", {
 	Titles = {
 		"monarchy", "county", "City-State",
 		"republic", "county", "City-State"
-	}
+	},
+	HistoricalFactionDerivations = {-700, "greek", "Mycenae"}
 })
 
 DefineFaction("Thrace", {

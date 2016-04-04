@@ -37,34 +37,43 @@ Load("scripts/civilizations/slav/factions.lua")
 Load("scripts/civilizations/teuton/factions.lua")
 
 -- Basque factions
-DefineFaction("Ertebolle Tribe", { -- based on the Ertebolle culture of Zealand - not actually a tribe, but an archaeological culture, but this is still the most appropriate way to represent it in-game
+DefineFaction("Maglemose Tribe", { -- Scandinavian pre-Indo-Europeans are very unlikely to have spoken a Vasconic language, but this fits better than making them Germanic (as the Vasconic languages are pre-Indo-European); based on the Maglemose culture of Zealand - not actually a tribe, but an archaeological culture, but this is still the most appropriate way to represent it in-game
 	Civilization = "basque",
 	Type = "tribe",
 	Colors = {"red", "white"}
-})
-
-DefineFaction("Funnelbeaker Tribe", { -- based on the Funnel Beaker culture of Zealand - not actually a tribe, but an archaeological culture, but this is still the most appropriate way to represent it in-game
-	Civilization = "basque",
-	Type = "tribe",
-	Colors = {"red", "white"}
-})
-
-DefineFaction("Gylfing Tribe", { -- Scandinavian pre-Indo-Europeans are very unlikely to have spoken a Vasconic language, but this fits better than making them Germanic (as the Vasconic languages are pre-Indo-European)
-	Civilization = "basque",
-	Type = "tribe",
-	Colors = {"green", "teal"}
 })
 
 DefineFaction("Kongemose Tribe", { -- based on the Kongemose culture of Zealand - not actually a tribe, but an archaeological culture, but this is still the most appropriate way to represent it in-game
 	Civilization = "basque",
 	Type = "tribe",
-	Colors = {"red", "white"}
+	Colors = {"red", "white"},
+	HistoricalFactionDerivations = {-6400, "basque", "Maglemose Tribe"} -- Maglemose cultured ended and Kongemose culture arose in Zealand in 6400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 37.
 })
 
-DefineFaction("Maglemose Tribe", { -- Scandinavian pre-Indo-Europeans are very unlikely to have spoken a Vasconic language, but this fits better than making them Germanic (as the Vasconic languages are pre-Indo-European); based on the Maglemose culture of Zealand - not actually a tribe, but an archaeological culture, but this is still the most appropriate way to represent it in-game
+DefineFaction("Ertebolle Tribe", { -- based on the Ertebolle culture of Zealand - not actually a tribe, but an archaeological culture, but this is still the most appropriate way to represent it in-game
 	Civilization = "basque",
 	Type = "tribe",
-	Colors = {"red", "white"}
+	Colors = {"red", "white"},
+	HistoricalFactionDerivations = {-6400, "basque", "Kongemose Tribe"} -- Kongemose cultured ended and Ertebolle culture arose in Zealand in 5400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 37.
+})
+
+DefineFaction("Funnelbeaker Tribe", { -- based on the Funnel Beaker culture of Zealand - not actually a tribe, but an archaeological culture, but this is still the most appropriate way to represent it in-game
+	Civilization = "basque",
+	Type = "tribe",
+	Colors = {"red", "white"},
+	HistoricalFactionDerivations = {-6400, "basque", "Ertebolle Tribe"}, -- Ertebolle cultured ended and Funnel Beaker culture arose in Zealand in 3950 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 37.
+	HistoricalTechnologies = {
+		"upgrade-germanic-wood-plow", -3600, -- Primitive ard (plow) appears in Northern Europe c. 3600 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 297.
+	}
+})
+
+DefineFaction("Gylfing Tribe", { -- Scandinavian pre-Indo-Europeans are very unlikely to have spoken a Vasconic language, but this fits better than making them Germanic (as the Vasconic languages are pre-Indo-European)
+	Civilization = "basque",
+	Type = "tribe",
+	Colors = {"green", "teal"},
+	HistoricalTechnologies = {
+		"upgrade-germanic-wood-plow", -3600, -- Primitive ard (plow) appears in Northern Europe c. 3600 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 297.
+	}
 })
 
 DefineFaction("Cardialware Tribe", {

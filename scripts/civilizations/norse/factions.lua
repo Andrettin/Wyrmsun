@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2015 by Andrettin
+--      (c) Copyright 2015-2016 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -25,11 +25,23 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineFaction("Swede Tribe", {
+	Civilization = "norse",
+	Type = "tribe",
+	Colors = {"blue", "yellow"},
+	DevelopsTo = {"Sweden"},
+	HistoricalFactionDerivations = {-264, "germanic", "Yngling Tribe"},
+	HistoricalTechnologies = {
+		"upgrade-teuton-spatha", 180 -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
+	}
+})
+
 DefineFaction("Dane Tribe", {
 	Civilization = "norse",
 	Type = "tribe",
 	Colors = {"red", "white"},
-	DevelopsTo = {"Denmark"}
+	DevelopsTo = {"Denmark"},
+	HistoricalFactionDerivations = {526, "norse", "Swede Tribe"} -- Danes were in Scania and Zealand in 526-600; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 })
 
 DefineFaction("Geat Tribe", {
@@ -37,13 +49,6 @@ DefineFaction("Geat Tribe", {
 	Type = "tribe",
 	Colors = {"teal"},
 	DevelopsTo = {"Gautland"}
-})
-
-DefineFaction("Swede Tribe", {
-	Civilization = "norse",
-	Type = "tribe",
-	Colors = {"blue", "yellow"},
-	DevelopsTo = {"Sweden"}
 })
 
 -- polities

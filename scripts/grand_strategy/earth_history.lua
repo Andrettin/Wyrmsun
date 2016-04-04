@@ -206,12 +206,6 @@ if (GrandStrategyYear >= -6500) then
 	-- Since circa 6500 BC in northern Europe the Mesolithic cultures increase in complexity and diversification; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 135.
 end
 
-if (GrandStrategyYear >= -6400) then
-	-- Maglemose culture ends in Zealand in 6400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 37.
-	-- Kongemose culture arises in Zealand in 6400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 37.
-	AcquireFactionTechnologies("basque", "Maglemose Tribe", "basque", "Kongemose Tribe")
-end
-
 if (GrandStrategyYear >= -6000) then
 	SetRegionPopulation("West and Central Europe", 2100000) -- Non-CIS Europe had a population of around 2.1 millions in 6000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
 	
@@ -236,15 +230,9 @@ if (GrandStrategyYear >= -5500) then
 	-- Linear Pottery culture existed in parts of Central Europe between 7000 and 2000 BC; since the other source gives them as arriving in northern Poland and Germany c. 5500 BC, let's place their beginnings at that date; Source: "Atlas de História Mundial", 2001, pp. 40-41.
 	SetProvinceOwner("Franconia", "basque", "Linearware Tribe")
 	SetProvinceCivilization("Franconia", "basque")
-	SetProvinceOwner("Bohemia", "basque", "Linearware Tribe")
-	SetProvinceCivilization("Bohemia", "basque")
 	SetProvinceCivilization("Austria", "basque")
 	SetProvinceOwner("Pannonia", "basque", "Linearware Tribe")
 	SetProvinceCivilization("Pannonia", "basque")
-	SetProvinceOwner("Moravia", "basque", "Linearware Tribe")
-	SetProvinceCivilization("Moravia", "basque")
-	SetProvinceOwner("Slovakia", "basque", "Linearware Tribe")
-	SetProvinceCivilization("Slovakia", "basque")
 		
 	-- Tybrind Vig (in the coast of the Danish island of Fyn) begins being occupied around 5500 BC (it pertained to the Ertebolle culture); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 142.
 	
@@ -252,10 +240,6 @@ if (GrandStrategyYear >= -5500) then
 end
 
 if (GrandStrategyYear >= -5400) then
-	-- Kongemose culture ends in Zealand in 5400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 37.
-	-- Ertebolle culture arises in Zealand in 5400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 37.
-	AcquireFactionTechnologies("basque", "Kongemose Tribe", "basque", "Ertebolle Tribe")
-	
 	-- Ringkloster (Late Mesolithic interior site in eastern Jutland, c. 20 km inland and by lake Skanderborg) begins being irregularly occupied at around 5400 BC; wild boars were hunted for their meat; pine martens and otters were hunted for their fur; the site was generally occupied between Fall and early Spring; Ringkloster may have been occupied by Ertebolle foragers, who would pass the remnant of the year at the coast; it may also have been inhabited by a people distinct from the coast-inhabitants; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 135.
 	
 	-- Dabki (Late Mesolithic inland site near Poland's Baltic coast) faced several occupations from 5400 BC; beavers, deer and ducks were hunted, and many sorts of freshwater fishes were caught, particularly pike and perch; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, pp. 135-136.
@@ -300,10 +284,6 @@ end
 if (GrandStrategyYear >= -4000) then
 	-- Indo-European spoken at least partly in the Pontic-Caspian region between 4000 and 2000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 108.
 	
-	-- Indo-Europeans possessed plows (as indicated by the existence of a word for plow in their vocabulary); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 104.
-	SetFactionTechnology("germanic", "Asa Tribe", "upgrade-germanic-wood-plow", true)
-	SetFactionTechnology("celt", "Vana Tribe", "upgrade-germanic-wood-plow", true)
-	
 	-- Eneolithic Baden culture existed in "temperate southeastern Europe" (where, more precisely?) in the 4th millenium BC, and made use of animal traction; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 15.
 	
 	-- Use of plows begins in Northwestern Europe c. 4000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 329.
@@ -324,10 +304,6 @@ if (GrandStrategyYear >= -4000) then
 end
 
 if (GrandStrategyYear >= -3950) then
-	-- Ertebolle culture ends in Zealand in 3950 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 37.
-	-- Funnel Beaker culture begins in Zealand in 3950 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 37.
-	AcquireFactionTechnologies("basque", "Ertebolle Tribe", "basque", "Funnelbeaker Tribe")
-	
 	-- Funnel Beaker culture existed in parts of Northern Europe between 7000 and 2000 BC; since the other source gives them as being present in Zealand in 3950 BC, let's place their beginnings at that date; Source: "Atlas de História Mundial", 2001, pp. 40-41.
 	SetProvinceOwner("Friesland", "basque", "Funnelbeaker Tribe")
 	SetProvinceCivilization("Friesland", "basque")
@@ -364,12 +340,6 @@ if (GrandStrategyYear >= -3800) then
 	-- Coastal Ertebolle Mesolithic sites and shell middens cease being occupied c. 3800 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 136.
 end
 
-if (GrandStrategyYear >= -3600) then
-	-- Primitive ard (plow) appears in Northern Europe c. 3600 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 297.
-	SetFactionTechnology("basque", "Funnelbeaker Tribe", "upgrade-germanic-wood-plow", true)
-	SetFactionTechnology("basque", "Gylfing Tribe", "upgrade-germanic-wood-plow", true)
-end
-
 if (GrandStrategyYear >= -3550) then
 	-- Ringkloster (Late Mesolithic interior site in eastern Jutland, c. 20 km inland and by lake Skanderborg) ceases being irregularly occupied at around 5400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 135.
 end
@@ -400,7 +370,6 @@ if (GrandStrategyYear >= -2800) then -- establishment of the Single Grave Cultur
 	-- Funnel Beaker culture ends in Zealand in 2800 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 38.
 
 	-- in the Ynglinga saga, "Odin's people", the Asa, settle Scandinavia in a manner not too dissimilar from what archaeological findings tell us of Indo-European settlement in the region; thus the name "Asa Tribe" is used here to denote the Indo-European-speaking peoples who settled in Scandinavia, and were the precursors of the Germanic peoples
-	AcquireFactionTechnologies("germanic", "Asa Tribe", "germanic", "Skeldung Tribe")
 	SetProvinceOwner("Jutland", "germanic", "Skeldung Tribe")
 	SetProvinceCivilization("Jutland", "germanic")
 	SetProvinceCivilization("Zealand", "germanic")
@@ -432,7 +401,6 @@ end
 
 if (GrandStrategyYear >= -2770) then -- estimated date
 	GrandStrategyEvents.YngveChieftainOfTheSwedes = nil
-	AcquireFactionTechnologies("germanic", "Asa Tribe", "germanic", "Yngling Tribe")
 	SetProvinceOwner("Sweden", "germanic", "Yngling Tribe")
 	SetProvinceOwner("Gotaland", "germanic", "Yngling Tribe")
 	SetProvinceOwner("Scania", "germanic", "Yngling Tribe")
@@ -485,13 +453,6 @@ if (GrandStrategyYear >= -2000) then
 	SetWorldMapTilePort(554, 156, true) -- Palaikastro
 	
 	-- Temples and palaces existent in Crete between 2000 and 1400 BC; Source: "Atlas de História Mundial", 2001, p. 67.
-	
-	SetFactionTechnology("minoan", "Crete", "upgrade-teuton-writing", true) -- Linear A and Linear B tablets found in Crete belonging to the period between 2000 and 1400 BC; Source: "Atlas de História Mundial", 2001, p. 67.
-end
-
-if (GrandStrategyYear >= -1900) then
-	-- Beginning of the age of the first Minoan palaces around 1900 BC; Source: "Atlas de História Mundial", 2001, p. 66.
-	SetFactionTechnology("minoan", "Crete", "upgrade-teuton-masonry", true)
 end
 
 if (GrandStrategyYear >= -1750) then
@@ -507,8 +468,6 @@ if (GrandStrategyYear >= -1700) then
 	SetProvinceSettlementBuilding("Attica", "unit-teuton-stronghold", true) -- Mycenaean fortifications present in Athens between 1700 and 1200 BC, as well as in Aghia Irini (in the island of Ceos); Source: "Atlas de História Mundial", 2001, p. 67.
 	SetProvinceSettlementBuilding("Boeotia", "unit-teuton-stronghold", true) -- Mycenaean fortifications present in Eutresis, Kastri, Aghia Marina, Gla, Aghios Ioannis, Chantsa, Stroviki, Pyrgos and Panopeus between 1700 and 1200 BC, as well as in Aghia Irini (in the island of Ceos); Source: "Atlas de História Mundial", 2001, p. 67.
 	SetProvinceSettlementBuilding("Lacedaemonia", "unit-teuton-stronghold", true) -- Mycenaean fortifications present in Elliniko and Peristeria (both in the western coast of Messenia) between 1700 and 1200 BC, as well as in Phylakopi (in the island of Melos); Source: "Atlas de História Mundial", 2001, p. 67.
-	
-	SetFactionTechnology("greek", "Mycenae", "upgrade-teuton-writing", true) -- Linear B tablets found in Mycenae belonging to the period between 1700 and 1200 BC; Source: "Atlas de História Mundial", 2001, p. 67.
 	
 	-- Commercial routes in Greece between 1700 and 1200 BC (there being commercial routes, this would mean at least trail-level pathway); Source: "Atlas de História Mundial", 2001, p. 67.
 	SetWorldMapTilePathway(539, 144, "southeast", "trail")
@@ -635,9 +594,6 @@ if (GrandStrategyYear >= -1400) then
 	GrandStrategyEvents.TheWhiteHorse = nil -- the white horse at Uffington was made between 1400 and 600 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 46.
 	
 	-- Late Bronze Age ends around 1400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 112.
-	
-	-- Construction of palaces in continental Greece around 1400 BC; Source: "Atlas de História Mundial", 2001, p. 66.
-	SetFactionTechnology("greek", "Mycenae", "upgrade-teuton-masonry", true)
 end
 
 if (GrandStrategyYear >= -1365) then
@@ -674,14 +630,11 @@ if (GrandStrategyYear >= -1190) then
 	SetProvinceOwner("Thessaly", "", "")
 end
 
-if (GrandStrategyYear >= -1100) then -- bronze shields found in the Danish bogs began to be made; Source: http://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-bronze-age-shields/
-	SetFactionTechnology("germanic", "Skeldung Tribe", "upgrade-germanic-bronze-shield", true)
-	GrandStrategyEvents.TheSunShields = nil
+if (GrandStrategyYear >= -1100) then 
+	GrandStrategyEvents.TheSunShields = nil -- bronze shields found in the Danish bogs began to be made; Source: http://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-bronze-age-shields/
 end
 
-if (GrandStrategyYear >= -1000) then -- broad bronze sword from FÃ¸llenslev; Source: http://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/men-and-woman-in-the-bronze-age/
-	SetFactionTechnology("germanic", "Skeldung Tribe", "upgrade-germanic-broad-sword", true)
-	
+if (GrandStrategyYear >= -1000) then
 	-- Widespread accretion of fine-grained floodpain alluvium in Northern European lowland rivers after 1000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 129.
 	
 	SetRegionPopulation("West and Central Europe", 16700000) -- Non-CIS Europe had a population of around 16.7 millions in 1000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
@@ -720,22 +673,17 @@ end
 if (GrandStrategyYear >= -700) then -- Greece in 700-600 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	SetProvinceOwner("Attica", "greek", "Athens")
 	SetFactionGovernmentType("greek", "Athens", "republic")
-	AcquireFactionTechnologies("greek", "Mycenae", "greek", "Athens")
 	
 	SetProvinceOwner("Boeotia", "greek", "Thebes")
-	AcquireFactionTechnologies("greek", "Mycenae", "greek", "Thebes")
 	
 	SetProvinceOwner("Epirus", "greek", "Chaoni Tribe")
 	SetProvinceCivilization("Epirus", "greek")
 	
 	SetProvinceOwner("Lacedaemonia", "greek", "Sparta")
-	AcquireFactionTechnologies("greek", "Mycenae", "greek", "Sparta")
 
 	SetProvinceOwner("Argolis", "greek", "Argos")
-	AcquireFactionTechnologies("greek", "Mycenae", "greek", "Argos")
 
 	SetProvinceOwner("Corinth", "greek", "Corinth")
-	AcquireFactionTechnologies("greek", "Mycenae", "greek", "Corinth")
 end
 
 if (GrandStrategyYear >= -600) then -- Jastorf culture dates from 600 BC, and encompassed Jutland, southern Sweden, northwestern Germany, and eastern Germany; Source: J. P. Mallory and Douglas Q. Adams, "Encyclopedia of Indo-European Culture", 1997, pp. 321-322
@@ -786,7 +734,6 @@ if (GrandStrategyYear >= -500) then
 	
 	-- Roman territory in 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
 	SetProvinceOwner("Latium", "latin", "Rome") -- was not actually all of Latium, but only the vicinity of the city of Rome
-	AcquireFactionTechnologies("latin", "Latin Tribe", "latin", "Rome")
 	SetFactionGovernmentType("latin", "Rome", "republic") -- should be earlier?
 	
 	-- Situation of Italy in (apparently) 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
@@ -858,11 +805,6 @@ if (GrandStrategyYear >= -431) then
 	SetFactionDiplomacyState("greek", "Sparta", "greek", "Macedon", "alliance")
 end
 
-if (GrandStrategyYear >= -400) then -- Boii attested c. 400 BC; Source: John T. Koch, "Celtic Culture: Aberdeen breviary-celticism", 2006, pp. 223-224.
-	SetProvinceOwner("Bohemia", "celt", "Boii Tribe")
-	SetProvinceCivilization("Bohemia", "celt")
-end
-
 if (GrandStrategyYear >= -387) then
 	-- Plundering of Rome under Brennus (Celtic leader) and battle at the river Allia in 387 BC; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 230.
 end
@@ -914,7 +856,6 @@ if (GrandStrategyYear >= -325) then -- Pytheas sets out on an exploration voyage
 	
 	SetProvinceOwner("Gotaland", "goth", "Goth Tribe") -- Goths are the earliest Germanic people known to inhabit Götaland; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 	SetProvinceCivilization("Gotaland", "goth")
-	AcquireFactionTechnologies("germanic", "Yngling Tribe", "goth", "Goth Tribe")
 	
 	SetProvinceOwner("Gotland", "goth", "Goth Tribe") -- maybe should be later?
 	AddProvinceClaim("Gotland", "goth", "Goth Tribe")
@@ -962,74 +903,54 @@ if (GrandStrategyYear >= -264) then
 	SetProvinceOwner("Tuscany", "latin", "Rome")
 	SetProvinceOwner("Umbria", "latin", "Rome")
 	
-	SetFactionTechnology("latin", "Rome", "upgrade-teuton-masonry", true) -- Rome should already have masonry technology by then
-	SetFactionTechnology("latin", "Rome", "upgrade-teuton-coinage", true) -- Rome should already have coinage technology by then
-	
 	-- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	SetProvinceOwner("Bremen", "teuton", "Chauci Tribe")	
 	SetProvinceCivilization("Bremen", "teuton")
 	SetProvinceOwner("Oldenburg", "teuton", "Chauci Tribe")
 	SetProvinceCivilization("Oldenburg", "teuton")
 	AddProvinceClaim("Oldenburg", "teuton", "Chauci Tribe")
-	AcquireFactionTechnologies("germanic", "Skeldung Tribe", "teuton", "Chauci Tribe")
 
 	SetProvinceOwner("Brunswick", "teuton", "Cherusci Tribe")	
 	SetProvinceCivilization("Brunswick", "teuton")
 	SetProvinceOwner("Magdeburg", "teuton", "Cherusci Tribe")	
 	SetProvinceCivilization("Magdeburg", "teuton")
-	AcquireFactionTechnologies("germanic", "Skeldung Tribe", "teuton", "Cherusci Tribe")
 	
 	SetProvinceOwner("Hanover", "teuton", "Lombard Tribe")	
 	SetProvinceCivilization("Hanover", "teuton")
-	AcquireFactionTechnologies("germanic", "Skeldung Tribe", "teuton", "Lombard Tribe")
 	
 	SetProvinceOwner("Holland", "teuton", "Batavian Tribe")	
 	SetProvinceCivilization("Holland", "teuton")
-	AcquireFactionTechnologies("germanic", "Skeldung Tribe", "teuton", "Batavian Tribe")
 	
 	SetProvinceOwner("Friesland", "teuton", "Frisian Tribe")	
 	SetProvinceCivilization("Friesland", "teuton")
 	SetProvinceOwner("East Friesland", "teuton", "Frisian Tribe")	
 	SetProvinceCivilization("East Friesland", "teuton")
-	AcquireFactionTechnologies("germanic", "Skeldung Tribe", "teuton", "Frisian Tribe")
 
 	SetProvinceOwner("Holstein", "teuton", "Saxon Tribe") -- also inhabited by the Teutones
 	SetProvinceCivilization("Holstein", "teuton")
 	SetProvinceOwner("Lauenburg", "teuton", "Saxon Tribe") 
 	SetProvinceCivilization("Lauenburg", "teuton")
-	AcquireFactionTechnologies("germanic", "Skeldung Tribe", "teuton", "Saxon Tribe")
 	
 	SetProvinceOwner("Schleswig", "teuton", "Angle Tribe")	
 	SetProvinceCivilization("Schleswig", "teuton")
-	AcquireFactionTechnologies("germanic", "Skeldung Tribe", "teuton", "Angle Tribe")
 	
 	SetProvinceOwner("Mecklenburg", "teuton", "Varini Tribe")
 	SetProvinceCivilization("Mecklenburg", "teuton")
-	AcquireFactionTechnologies("germanic", "Skeldung Tribe", "teuton", "Varini Tribe")
 	
 	SetProvinceOwner("Sweden", "norse", "Swede Tribe")
 	SetProvinceCivilization("Sweden", "norse")
-	AcquireFactionTechnologies("germanic", "Yngling Tribe", "norse", "Swede Tribe")
-	
-	SetProvinceCivilization("Brandenburg", "teuton")
-	AcquireFactionTechnologies("germanic", "Skeldung Tribe", "teuton", "Semnone Tribe")
-	AcquireFactionTechnologies("germanic", "Skeldung Tribe", "teuton", "Suebi Tribe")
 	
 	SetProvinceOwner("Hither Pomerania", "goth", "Rugian Tribe")
 	SetProvinceCivilization("Hither Pomerania", "goth")
-	AcquireFactionTechnologies("goth", "Goth Tribe", "goth", "Rugian Tribe")
 	
 	SetProvinceOwner("Farther Pomerania", "goth", "Turcilingian Tribe")
 	SetProvinceCivilization("Farther Pomerania", "goth")
-	AcquireFactionTechnologies("goth", "Goth Tribe", "goth", "Turcilingian Tribe")
 	
 	SetProvinceOwner("Westphalia", "teuton", "Sugambri Tribe")
 	SetProvinceCivilization("Westphalia", "teuton")
-	AcquireFactionTechnologies("germanic", "Skeldung Tribe", "teuton", "Sugambri Tribe")
 	
 	SetProvinceOwner("Hesse", "teuton", "Chatti Tribe")
 	SetProvinceCivilization("Hesse", "teuton")
-	AcquireFactionTechnologies("germanic", "Skeldung Tribe", "teuton", "Chatti Tribe")
 	
 	SetProvinceOwner("Franconia", "teuton", "Hermunduri Tribe")
 	SetProvinceCivilization("Franconia", "teuton")
@@ -1037,11 +958,9 @@ if (GrandStrategyYear >= -264) then
 	SetProvinceCivilization("Upper Saxony", "teuton")
 	SetProvinceOwner("Thuringia", "teuton", "Hermunduri Tribe")
 	SetProvinceCivilization("Thuringia", "teuton")
-	AcquireFactionTechnologies("germanic", "Skeldung Tribe", "teuton", "Hermunduri Tribe")
 	
 	SetProvinceOwner("Silesia", "goth", "Silingae Tribe")
 	SetProvinceCivilization("Silesia", "goth")
-	AcquireFactionTechnologies("goth", "Goth Tribe", "goth", "Silingae Tribe")	
 	
 	SetProvinceOwner("Pomerelia", "goth", "Goth Tribe")
 	SetProvinceCivilization("Pomerelia", "goth")
@@ -1052,18 +971,13 @@ if (GrandStrategyYear >= -264) then
 	
 	SetProvinceOwner("Mazovia", "goth", "Vandal Tribe")
 	SetProvinceCivilization("Mazovia", "goth")
-	AcquireFactionTechnologies("goth", "Goth Tribe", "goth", "Vandal Tribe")
 	
 	SetProvinceOwner("Posen", "goth", "Burgundian Tribe")
 	SetProvinceCivilization("Posen", "goth")
-	AcquireFactionTechnologies("goth", "Goth Tribe", "goth", "Burgundian Tribe")
 	AddProvinceClaim("Posen", "goth", "Burgundian Tribe")	
 	
 	SetProvinceOwner("Lithuania", "slav", "Aestui Tribe")
 	SetProvinceCivilization("Lithuania", "slav")
-	
-	SetProvinceOwner("Slovakia", "celt", "Cotini Tribe")
-	SetProvinceCivilization("Slovakia", "celt")
 	
 	SetProvinceOwner("Hungary", "persian", "Iazyge Tribe")
 	SetProvinceCivilization("Hungary", "persian")
@@ -1072,7 +986,6 @@ if (GrandStrategyYear >= -264) then
 	SetProvinceCivilization("Galicia", "goth")
 	SetProvinceOwner("Bessarabia", "goth", "Bastarnae Tribe")
 	SetProvinceCivilization("Bessarabia", "goth")
-	AcquireFactionTechnologies("goth", "Goth Tribe", "goth", "Bastarnae Tribe")
 	
 	SetProvinceOwner("West Galicia", "slav", "Venedae Tribe")
 	SetProvinceCivilization("West Galicia", "slav")
@@ -1240,9 +1153,6 @@ if (GrandStrategyYear >= -58) then -- in 58 BC Caesar fought Ariovistus' Suebi a
 
 	-- gold staters also present in Bohemia and the Danubian valley, as well as the Black Forest, the Rhine, Central Gaul, Armorica and the Channel Islands; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, p. 191.
 --	SetFactionTechnology("celt", "Boii Tribe", "upgrade-teuton-coinage", true)
-
-	-- Silver currency existent in the Roman Republic during Caesar's time, and he issued gold currency during his campaigns in Gaul; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, p. 190.
-	SetFactionTechnology("latin", "Rome", "upgrade-teuton-coinage", true)
 end
 
 if (GrandStrategyYear >= -52) then
@@ -1292,26 +1202,21 @@ if (GrandStrategyYear >= -27) then
 	SetRegionPopulation("Italy", 14000000) -- 14 million people lived in Italy at the "Time of Augustus"; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
 	SetRegionPopulation("Iberia", 6000000) -- 6 million people lived in Spain-Portugal at the "Time of Augustus"; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
 	 -- 31 million people lived in Roman Asia and Africa at the "Time of Augustus"; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
-	 
+
 	-- political situation in Europe (presumably) at the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 	SetProvinceCivilization("Zealand", "goth")
-	AcquireFactionTechnologies("goth", "Goth Tribe", "teuton", "Herulian Tribe")
 	
 	SetProvinceOwner("Jutland", "teuton", "Charude Tribe")	
 	SetProvinceCivilization("Jutland", "teuton")
-	AcquireFactionTechnologies("germanic", "Skeldung Tribe", "teuton", "Charude Tribe")
 	
 	SetProvinceOwner("Franconia", "celt", "Turone Tribe")
 	SetProvinceCivilization("Franconia", "celt")
-	AcquireFactionTechnologies("celt", "Boii Tribe", "celt", "Turone Tribe")
 	
 	SetProvinceOwner("Drenthe", "teuton", "Ampsivarii Tribe")
 	SetProvinceCivilization("Drenthe", "teuton")
-	AcquireFactionTechnologies("germanic", "Skeldung Tribe", "teuton", "Ampsivarii Tribe")
 	
 	SetProvinceOwner("Overijssel", "teuton", "Chamavi Tribe")
 	SetProvinceCivilization("Overijssel", "teuton")
-	AcquireFactionTechnologies("germanic", "Skeldung Tribe", "teuton", "Chamavi Tribe")
 end
 
 if (GrandStrategyYear >= -15) then
@@ -1326,21 +1231,10 @@ end
 
 if (GrandStrategyYear >= -9) then -- Marbod, king of the Suebic tribe of the Marcomanni, conquers Bohemia
 	GrandStrategyEvents.TheHomeOfTheBoii = nil
-	SetProvinceOwner("Bohemia", "teuton", "Marcomanni Tribe")
-	SetProvinceCivilization("Bohemia", "teuton")
-	SetProvinceUnitQuantity("Bohemia", "unit-germanic-warrior", 0)
 	SetProvinceHero("Bohemia", "Marbod", 2)
 	SetProvinceUnitQuantity("Bohemia", "unit-suebi-swordsman", 5) -- Marbod had 70,000 foot soldiers and 4,000 horse riders; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 231.
 	SetProvinceUnitQuantity("Bohemia", "unit-teuton-archer", 2) -- let's make 20,000 of those soldiers into archers
 	SetProvinceUnitQuantity("Bohemia", "unit-teuton-ritter", 1) -- 4,000 horse riders
-	AcquireFactionTechnologies("teuton", "Suebi Tribe", "teuton", "Marcomanni Tribe")
-	
-	-- if the Boii were conquered by the Marcomanni in 9 BC, the Quadi probably moved to Moravia and Slovakia at around the same time
-	SetProvinceOwner("Moravia", "teuton", "Quadi Tribe")
-	SetProvinceCivilization("Moravia", "teuton")
-	SetProvinceOwner("Slovakia", "teuton", "Quadi Tribe")
-	SetProvinceCivilization("Slovakia", "teuton")
-	AcquireFactionTechnologies("teuton", "Suebi Tribe", "teuton", "Quadi Tribe")
 end
 
 if (GrandStrategyYear >= 0) then
@@ -1423,7 +1317,6 @@ end
 if (GrandStrategyYear >= 150) then
 	SetProvinceOwner("Holland", "teuton", "Frank Tribe") -- Franks were the people settled in the modern Netherlands in (presumably) 150 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 	SetProvinceCivilization("Holland", "teuton")
-	AcquireFactionTechnologies("germanic", "Skeldung Tribe", "teuton", "Frank Tribe")
 	
 	-- Rugians shown as being in Bavaria (presumably) in 150 AD; Source William R. Shepherd's Historical Atlas, 1911, p. 45.
 	SetProvinceOwner("Bavaria", "goth", "Rugian Tribe")
@@ -1448,49 +1341,15 @@ if (GrandStrategyYear >= 177) then
 	-- The Iazyges were allied with the Marcomanni in the Marcomannic War of 177-180 AD; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
 end
 
-if (GrandStrategyYear >= 180) then
-	-- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
-	SetFactionTechnology("goth", "Bastarnae Tribe", "upgrade-teuton-spatha", true)
-	SetFactionTechnology("goth", "Burgundian Tribe", "upgrade-teuton-spatha", true)
-	SetFactionTechnology("goth", "Goth Tribe", "upgrade-teuton-spatha", true)
-	SetFactionTechnology("goth", "Herulian Tribe", "upgrade-teuton-spatha", true)
-	SetFactionTechnology("goth", "Rugian Tribe", "upgrade-teuton-spatha", true)
-	SetFactionTechnology("goth", "Silingae Tribe", "upgrade-teuton-spatha", true)
-	SetFactionTechnology("goth", "Turcilingian Tribe", "upgrade-teuton-spatha", true)
-	SetFactionTechnology("goth", "Vandal Tribe", "upgrade-teuton-spatha", true)
-	SetFactionTechnology("norse", "Swede Tribe", "upgrade-teuton-spatha", true)
-	SetFactionTechnology("teuton", "Ampsivarii Tribe", "upgrade-teuton-spatha", true)
-	SetFactionTechnology("teuton", "Angle Tribe", "upgrade-teuton-spatha", true)
-	SetFactionTechnology("teuton", "Batavian Tribe", "upgrade-teuton-spatha", true)
-	SetFactionTechnology("teuton", "Chamavi Tribe", "upgrade-teuton-spatha", true)
-	SetFactionTechnology("teuton", "Chatti Tribe", "upgrade-teuton-spatha", true)
-	SetFactionTechnology("teuton", "Charude Tribe", "upgrade-teuton-spatha", true)
-	SetFactionTechnology("teuton", "Chauci Tribe", "upgrade-teuton-spatha", true)
-	SetFactionTechnology("teuton", "Cherusci Tribe", "upgrade-teuton-spatha", true)
-	SetFactionTechnology("teuton", "Frank Tribe", "upgrade-frank-spatha", true)
-	SetFactionTechnology("teuton", "Frisian Tribe", "upgrade-teuton-spatha", true)
-	SetFactionTechnology("teuton", "Hermunduri Tribe", "upgrade-teuton-spatha", true)
-	SetFactionTechnology("teuton", "Marcomanni Tribe", "upgrade-teuton-spatha", true)
-	SetFactionTechnology("teuton", "Lombard Tribe", "upgrade-teuton-spatha", true)
-	SetFactionTechnology("teuton", "Quadi Tribe", "upgrade-teuton-spatha", true)
-	SetFactionTechnology("teuton", "Saxon Tribe", "upgrade-teuton-spatha", true)
-	SetFactionTechnology("teuton", "Semnone Tribe", "upgrade-teuton-spatha", true)
-	SetFactionTechnology("teuton", "Suebi Tribe", "upgrade-teuton-spatha", true)
-	SetFactionTechnology("teuton", "Sugambri Tribe", "upgrade-teuton-spatha", true)
-	SetFactionTechnology("teuton", "Varini Tribe", "upgrade-teuton-spatha", true)
-end
-
 if (GrandStrategyYear >= 200) then
 	SetProvinceOwner("Pomerelia", "", "")
 	SetProvinceOwner("Prussia", "", "")
 	SetProvinceOwner("Gotaland", "", "")
 	SetProvinceOwner("Gotland", "", "")
 	SetProvinceOwner("Ukraine", "goth", "Ostrogoth Tribe") -- The eastern goths had migrated to the area of modern Ukraine in about 200 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
-	AcquireFactionTechnologies("goth", "Goth Tribe", "goth", "Ostrogoth Tribe")
 	SetProvinceOwner("Wallachia", "goth", "Visigoth Tribe") -- The western goths had migrated to the area of modern Romania / ancient Dacia in about 200 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 	SetProvinceOwner("Moldavia", "goth", "Visigoth Tribe")
 	SetProvinceOwner("Bessarabia", "goth", "Visigoth Tribe")
-	AcquireFactionTechnologies("goth", "Goth Tribe", "goth", "Visigoth Tribe")
 	
 	SetRegionPopulation("West and Central Europe", 32600000) -- Non-CIS Europe had a population of around 32.6 millions in 200 AD; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
 	
@@ -1557,7 +1416,6 @@ if (GrandStrategyYear >= 411) then
 	
 	-- Kingdom of the Burgundians established by Gundahar (a Burgundian tribal chief) in 411 AD, with its center in Borbetomagus (Worms); Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 91-93.
 	SetProvinceOwner("Palatinate", "goth", "Burgundy")
-	AcquireFactionTechnologies("goth", "Burgundian Tribe", "goth", "Burgundy")
 end
 
 if (GrandStrategyYear >= 412) then
@@ -1631,7 +1489,6 @@ if (GrandStrategyYear >= 481) then
 	AddProvinceClaim("Lower Rhine", "teuton", "Francia")
 	SetProvinceOwner("Overijssel", "teuton", "Francia")
 	AddProvinceClaim("Overijssel", "teuton", "Francia")
-	AcquireFactionTechnologies("teuton", "Frank Tribe", "teuton", "Francia")
 
 	-- Political situation of the territories surrounding the Frankish realm in 481-814 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
 	SetProvinceOwner("Alsace", "teuton", "Alamanni Tribe")
@@ -1639,7 +1496,6 @@ if (GrandStrategyYear >= 481) then
 	SetProvinceOwner("Wurtemberg", "teuton", "Alamanni Tribe")
 	SetProvinceOwner("Augsburg", "teuton", "Alamanni Tribe")
 	SetProvinceOwner("Palatinate", "teuton", "Alamanni Tribe")
-	AcquireFactionTechnologies("teuton", "Suebi Tribe", "teuton", "Alamanni Tribe")
 end
 
 if (GrandStrategyYear >= 486) then
@@ -1653,7 +1509,6 @@ if (GrandStrategyYear >= 486) then
 	SetProvinceUnitQuantity("Corsica", "unit-germanic-warrior", 0) -- let's remove those oodles of warriors placed there to make this province difficult to conquer
 	SetProvinceOwner("Sardinia", "goth", "Vandal Tribe") -- Sardinia was a part of the Kingdom of the Vandals in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 	SetProvinceUnitQuantity("Sardinia", "unit-germanic-warrior", 0) -- let's remove those oodles of warriors placed there to make this province difficult to conquer
-	AcquireFactionTechnologies("teuton", "Suebi Tribe", "teuton", "Galicia")
 	SetProvinceOwner("Castille", "goth", "Visigoth Tribe") -- Kingdom of the Visigoths; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 	SetProvinceUnitQuantity("Castille", "unit-germanic-warrior", 0)
 	SetProvinceOwner("Andalusia", "goth", "Visigoth Tribe") -- Kingdom of the Visigoths; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
@@ -1697,9 +1552,6 @@ if (GrandStrategyYear >= 500) then
 	SetRegionPopulation("Eurasia", 6900000) -- CIS had a population of around 6.9 millions in 500 AD; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
 	
 	-- around 500 AD a royal palace (which had a hall and a Christian chapel) was built by the Burgundians in Geneva; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
-	
-	-- The Dere (a collection of Anglian peoples) were in possession of York in 500 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
-	AcquireFactionTechnologies("teuton", "Angle Tribe", "teuton", "Dere Tribe")
 end
 
 if (GrandStrategyYear >= 506) then
@@ -1725,7 +1577,6 @@ if (GrandStrategyYear >= 507) then -- political situation in 507-534 in Europe; 
 	AddProvinceClaim("Aquitaine", "teuton", "Francia")
 	
 	SetProvinceOwner("Franconia", "teuton", "Thuringian Tribe")
-	AcquireFactionTechnologies("teuton", "Suebi Tribe", "teuton", "Thuringian Tribe") -- who did the Thuringians actually stem from?
 	SetProvinceCivilization("Franconia", "teuton")
 end
 
@@ -1735,18 +1586,12 @@ end
 
 if (GrandStrategyYear >= 526) then -- political situation in 526-600 in Europe; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 	SetProvinceOwner("Bavaria", "teuton", "Bavarian Tribe")
-	AcquireFactionTechnologies("teuton", "Marcomanni Tribe", "teuton", "Bavarian Tribe")
 	SetProvinceCivilization("Bavaria", "teuton")
-	SetProvinceOwner("Bohemia", "teuton", "Bavarian Tribe")
-	SetProvinceCivilization("Bohemia", "teuton")
-	SetProvinceOwner("Slovakia", "teuton", "Lombard Tribe")
-	SetProvinceCivilization("Slovakia", "teuton")
 	SetProvinceOwner("Holland", "teuton", "Frisian Tribe")
 	
 	SetProvinceOwner("Scania", "norse", "Dane Tribe") -- Danes were in Scania in 526-600; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 	SetProvinceCivilization("Scania", "norse")
 	SetProvinceCivilization("Zealand", "norse")
-	AcquireFactionTechnologies("germanic", "Skeldung Tribe", "norse", "Dane Tribe")
 end
 
 if (GrandStrategyYear >= 531) then
@@ -1788,24 +1633,8 @@ if (GrandStrategyYear >= 565) then
 	-- beginning of Justin II's reign in the Eastern Roman Empire in 565 AD; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, p. 176.
 end
 
-if (GrandStrategyYear >= 573) then
-	SetFactionTechnology("goth", "Visigoth Tribe", "upgrade-teuton-coinage", true) -- Visigothic gold tremissis coined in 573 AD; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, p. 188.
-end
-
-if (GrandStrategyYear >= 578) then
-	SetFactionTechnology("teuton", "Francia", "upgrade-teuton-coinage", true) -- Merovingian Francia began to issue gold solidi at some point between 565 and 578 AD; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, p. 176.
-	
-	-- end of Justin II's reign in the Eastern Roman Empire in 578 AD; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, p. 176.
-end
-
 if (GrandStrategyYear >= 584) then
 	-- beginning of Maurice's reign in the Eastern Roman Empire in 584 AD; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, p. 176.
-end
-
-if (GrandStrategyYear >= 588) then
-	-- according to tradition, Æthelric of Bernicia acquired the kingdom of Deira upon its king Ælle's death in 588 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75.
-	AcquireFactionTechnologies("teuton", "Deira", "teuton", "Dere Tribe")
-	AcquireFactionTechnologies("teuton", "Bernicia", "teuton", "Bernice Tribe")
 end
 
 if (GrandStrategyYear >= 596) then
@@ -1815,11 +1644,6 @@ end
 if (GrandStrategyYear >= 597) then
 	GrandStrategyEvents.AugustineArchbishopOfEngland = nil
 	GrandStrategyEvents.TheChurchAtCanterbury = nil -- church and monastery built at Canterbury by Augustine; Source: Philip Schaff, "History of the Christian Church", 1997, Â§10.
-end
-
-if (GrandStrategyYear >= 600) then
-	-- In 600 AD, the Bernice people (who were Anglians) were centered in Bamburgh; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
-	AcquireFactionTechnologies("teuton", "Angle Tribe", "teuton", "Bernice Tribe")
 end
 
 if (GrandStrategyYear >= 602) then
@@ -1948,16 +1772,10 @@ end
 if (GrandStrategyYear >= 919) then
 	-- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 	
-	AcquireFactionTechnologies("teuton", "Francia", "teuton", "Holy Rome")
-	
 	-- Duchy of Bavaria
 	SetProvinceOwner("Bavaria", "teuton", "Holy Rome")
 	AddProvinceClaim("Bavaria", "teuton", "Bavaria")
 	AddProvinceClaim("Austria", "teuton", "Bavaria") -- Bavarian East March
-	
-	-- Duchy of Bohemia
-	SetProvinceOwner("Bohemia", "teuton", "Holy Rome")
-	SetProvinceOwner("Moravia", "teuton", "Holy Rome")
 	
 	-- Duchy of Carinthia
 	SetProvinceOwner("Carniola", "teuton", "Holy Rome")
@@ -2031,7 +1849,6 @@ if (GrandStrategyYear >= 919) then
 	SetProvinceCivilization("Croatia", "slav")
 	SetProvinceOwner("Pannonia", "teuton", "Hungary")
 	SetProvinceOwner("Hungary", "teuton", "Hungary")
-	SetProvinceOwner("Slovakia", "teuton", "Hungary")
 	SetProvinceOwner("Galicia", "slav", "Poland")
 	SetProvinceCivilization("Galicia", "slav")
 	SetProvinceOwner("Mazovia", "slav", "Poland")
@@ -2224,9 +2041,6 @@ if (GrandStrategyYear >= 1560) then
 	SetProvinceOwner("Prussia", "teuton", "Prussia")
 	
 	SetFactionTier("teuton", "Austria", "grand duchy")
-	SetProvinceOwner("Bohemia", "teuton", "Austria")
-	SetProvinceOwner("Moravia", "teuton", "Austria")
-	SetProvinceOwner("Slovakia", "teuton", "Austria")
 	SetProvinceOwner("Carniola", "teuton", "Austria")
 	SetProvinceOwner("Istria", "teuton", "Austria") -- the outer parts of Istria were owned by Venice, but the inner parts (including Trieste) were owned by Austria)
 	SetProvinceOwner("Silesia", "teuton", "Austria")

@@ -41,7 +41,19 @@ DefineFaction("Brising Clan", {
 		"dlcs/brising_faction_flair/graphics/ui/infopanel.png", 0, -200
 	},
 	Description = _("The Brising clan was one of the first dwarven clans ever known. It made its home in Svarinshaug, where they tamed the fierce forces of nature."),
-	Background = "In Norse mythology, \"Brising\" was an appelation used for the dwarves in general, or more specifically for the ones who created the necklace Brisingamen. \"Brising\" means \"flame\" in Old Norse."
+	Background = "In Norse mythology, \"Brising\" was an appelation used for the dwarves in general, or more specifically for the ones who created the necklace Brisingamen. \"Brising\" means \"flame\" in Old Norse.",
+	HistoricalTechnologies = {
+		"upgrade-dwarven-wood-plow", -3000, -- give plow technology to the dwarven factions
+		"upgrade-dwarven-broad-axe", -1, -- bronze age technologies had already been obtained by the dwarves by this point
+		"upgrade-dwarven-shield-1", -1, -- bronze age technologies had already been obtained by the dwarves by this point
+		"upgrade-dwarven-sharp-throwing-axe", -1, -- bronze age technologies had already been obtained by the dwarves by this point
+		"upgrade-dwarven-masonry", 25, -- dwarves already had castles built of stone masonry by then
+		"upgrade-dwarven-coinage", 400, -- the dwarves should already have Coinage technology by then
+		"upgrade-dwarven-great-axe", 550, -- late iron age technologies already obtained by the dwarves by this point
+		"upgrade-dwarven-shield-2", 550, -- late iron age technologies already obtained by the dwarves by this point
+		"upgrade-dwarven-bearded-throwing-axe", 550, -- late iron age technologies already obtained by the dwarves by this point
+		"upgrade-dwarven-ballista-bolt-1", 550, -- late iron age technologies already obtained by the dwarves by this point
+	}
 })
 
 DefineFaction("Eikinskjaldi Clan", { -- originally Oakenshield (from Dyson Logos' The Tomb of Durahn Oakenshield), translated into Norse to make it seem more dwarvish
@@ -61,7 +73,14 @@ DefineFaction("Norlund Clan", {
 --	DevelopsTo = {"Kal Kartha", "Knalga"},
 	DevelopsTo = {"Joruvellir", "Kal Kartha", "Knalga", "Lyr"},
 	FactionUpgrade = "upgrade-norlund-clan-faction",
-	Description = _("The Norlund clan has its origins in the Caverns of Chaincolt, and counts with a number of skilled warriors and craftsmen amongst its ranks. Eventually the Norlund clan would unify much of dwarfdom into the Lordship of Knalga.")
+	Description = _("The Norlund clan has its origins in the Caverns of Chaincolt, and counts with a number of skilled warriors and craftsmen amongst its ranks. Eventually the Norlund clan would unify much of dwarfdom into the Lordship of Knalga."),
+	HistoricalFactionDerivations = {-1, "dwarf", "Brising Clan"},
+	HistoricalTechnologies = {
+		"upgrade-dwarven-broad-axe", -1, -- bronze age technologies had already been obtained by the dwarves by this point
+		"upgrade-dwarven-shield-1", -1, -- bronze age technologies had already been obtained by the dwarves by this point
+		"upgrade-dwarven-sharp-throwing-axe", -1, -- bronze age technologies had already been obtained by the dwarves by this point
+		"upgrade-dwarven-masonry", 25, -- dwarves already had castles built of stone masonry by then
+	}
 })
 
 DefineFaction("Shinsplitter Clan", {
@@ -70,7 +89,19 @@ DefineFaction("Shinsplitter Clan", {
 	Colors = {"green", "teal"},
 	DevelopsTo = {"Joruvellir", "Kal Kartha", "Knalga", "Lyr"},
 	FactionUpgrade = "upgrade-shinsplitter-clan-faction",
-	Description = _("The warriors of the Shinsplitter clan are a wild bunch, and often go into frenzies during battle. In later times the Shinsplitters migrated east to the Highbrook Pass.")
+	Description = _("The warriors of the Shinsplitter clan are a wild bunch, and often go into frenzies during battle. In later times the Shinsplitters migrated east to the Highbrook Pass."),
+	HistoricalFactionDerivations = {-1, "dwarf", "Brising Clan"},
+	HistoricalTechnologies = {
+		"upgrade-dwarven-broad-axe", -1, -- bronze age technologies had already been obtained by the dwarves by this point
+		"upgrade-dwarven-shield-1", -1, -- bronze age technologies had already been obtained by the dwarves by this point
+		"upgrade-dwarven-sharp-throwing-axe", -1, -- bronze age technologies had already been obtained by the dwarves by this point
+		"upgrade-dwarven-masonry", 25, -- dwarves already had castles built of stone masonry by then
+		"upgrade-dwarven-coinage", 400, -- the dwarves should already have Coinage technology by then
+		"upgrade-dwarven-great-axe", 550, -- late iron age technologies already obtained by the dwarves by this point
+		"upgrade-dwarven-shield-2", 550, -- late iron age technologies already obtained by the dwarves by this point
+		"upgrade-dwarven-bearded-throwing-axe", 550, -- late iron age technologies already obtained by the dwarves by this point
+		"upgrade-dwarven-ballista-bolt-1", 550, -- late iron age technologies already obtained by the dwarves by this point
+	}
 })
 
 DefineFaction("Shorbear Clan", {
@@ -80,7 +111,14 @@ DefineFaction("Shorbear Clan", {
 --	DevelopsTo = {"Knalga"},
 	DevelopsTo = {"Joruvellir", "Kal Kartha", "Knalga", "Lyr"},
 	FactionUpgrade = "upgrade-shorbear-clan-faction",
-	Description = _("Contrary to many of the other dwarven clans, who prefer to live in mountains, the Shorbears have made their homes in the hills. They are known as excellent crafters of tools.")
+	Description = _("Contrary to many of the other dwarven clans, who prefer to live in mountains, the Shorbears have made their homes in the hills. They are known as excellent crafters of tools."),
+	HistoricalFactionDerivations = {-1, "dwarf", "Brising Clan"},
+	HistoricalTechnologies = {
+		"upgrade-dwarven-broad-axe", -1, -- bronze age technologies had already been obtained by the dwarves by this point
+		"upgrade-dwarven-shield-1", -1, -- bronze age technologies had already been obtained by the dwarves by this point
+		"upgrade-dwarven-sharp-throwing-axe", -1, -- bronze age technologies had already been obtained by the dwarves by this point
+		"upgrade-dwarven-masonry", 25, -- dwarves already had castles built of stone masonry by then
+	}
 })
 
 DefineFaction("Kal Kartha", {
@@ -91,7 +129,17 @@ DefineFaction("Kal Kartha", {
 	Titles = {
 		"monarchy", "barony", "Lordship"
 	},
-	FactionUpgrade = "upgrade-kal-kartha-faction"
+	FactionUpgrade = "upgrade-kal-kartha-faction",
+	HistoricalFactionDerivations = {400, "dwarf", "Brising Clan"},
+	HistoricalTechnologies = {
+		"upgrade-dwarven-runewriting", 400, -- polities require writing
+		"upgrade-dwarven-coinage", 400, -- the dwarves should already have Coinage technology by then
+		"upgrade-dwarven-iron-tipped-wood-plow", 534, -- Mushroom Farms existent in Knalga (so possibly also in other polities)
+		"upgrade-dwarven-great-axe", 550, -- late iron age technologies already obtained by the dwarves by this point
+		"upgrade-dwarven-shield-2", 550, -- late iron age technologies already obtained by the dwarves by this point
+		"upgrade-dwarven-bearded-throwing-axe", 550, -- late iron age technologies already obtained by the dwarves by this point
+		"upgrade-dwarven-ballista-bolt-1", 550, -- late iron age technologies already obtained by the dwarves by this point
+	}
 })
 
 DefineFaction("Knalga", {
@@ -102,7 +150,17 @@ DefineFaction("Knalga", {
 	Titles = {
 		"monarchy", "barony", "Lordship"
 	},
-	FactionUpgrade = "upgrade-knalga-faction"
+	FactionUpgrade = "upgrade-knalga-faction",
+	HistoricalFactionDerivations = {400, "dwarf", "Norlund Clan"},
+	HistoricalTechnologies = {
+		"upgrade-dwarven-runewriting", 400, -- polities require writing
+		"upgrade-dwarven-coinage", 400, -- the dwarves should already have Coinage technology by then
+		"upgrade-dwarven-iron-tipped-wood-plow", 534, -- Mushroom Farms existent in Knalga
+		"upgrade-dwarven-great-axe", 550, -- late iron age technologies already obtained by the dwarves by this point
+		"upgrade-dwarven-shield-2", 550, -- late iron age technologies already obtained by the dwarves by this point
+		"upgrade-dwarven-bearded-throwing-axe", 550, -- late iron age technologies already obtained by the dwarves by this point
+		"upgrade-dwarven-ballista-bolt-1", 550 -- late iron age technologies already obtained by the dwarves by this point
+	}
 })
 
 DefineFaction("Joruvellir", {
@@ -114,7 +172,17 @@ DefineFaction("Joruvellir", {
 		"monarchy", "barony", "Lordship"
 	},
 	FactionUpgrade = "upgrade-joruvellir-faction",
-	Description = "The arid sands of Joruvellir were first settled by a group of dwarves who had their origins in Svarinshaug."
+	Description = "The arid sands of Joruvellir were first settled by a group of dwarves who had their origins in Svarinshaug.",
+	HistoricalFactionDerivations = {400, "dwarf", "Brising Clan"},
+	HistoricalTechnologies = {
+		"upgrade-dwarven-runewriting", 400, -- polities require writing
+		"upgrade-dwarven-coinage", 400, -- the dwarves should already have Coinage technology by then
+		"upgrade-dwarven-iron-tipped-wood-plow", 534, -- Mushroom Farms existent in Knalga (so possibly also in other polities)
+		"upgrade-dwarven-great-axe", 550, -- late iron age technologies already obtained by the dwarves by this point
+		"upgrade-dwarven-shield-2", 550, -- late iron age technologies already obtained by the dwarves by this point
+		"upgrade-dwarven-bearded-throwing-axe", 550, -- late iron age technologies already obtained by the dwarves by this point
+		"upgrade-dwarven-ballista-bolt-1", 550, -- late iron age technologies already obtained by the dwarves by this point
+	}
 })
 
 DefineFaction("Lyr", {
@@ -128,5 +196,15 @@ DefineFaction("Lyr", {
 	},
 --	FactionUpgrade = "upgrade-lyr-faction",
 	Description = "The shining hall of Lyr was built by a number of skilled dwarven craftsmen who had split off from the Brising clan.",
-	Background = "In Norse mythology Lyr was a magnificent hall which was built by Loki with the help of the dwarves Bari, Delling, Dori, Iri, Jari, Ori, Uni, Var and Vegdrasil. The giantess Menglad dwelled in the hall. \"Lyr\" means \"heat-holding\" in Old Norse."
+	Background = "In Norse mythology Lyr was a magnificent hall which was built by Loki with the help of the dwarves Bari, Delling, Dori, Iri, Jari, Ori, Uni, Var and Vegdrasil. The giantess Menglad dwelled in the hall. \"Lyr\" means \"heat-holding\" in Old Norse.",
+	HistoricalFactionDerivations = {400, "dwarf", "Brising Clan"},
+	HistoricalTechnologies = {
+		"upgrade-dwarven-runewriting", 400, -- polities require writing
+		"upgrade-dwarven-coinage", 400, -- the dwarves should already have Coinage technology by then
+		"upgrade-dwarven-iron-tipped-wood-plow", 534, -- Mushroom Farms existent in Knalga (so possibly also in other polities)
+		"upgrade-dwarven-great-axe", 550, -- late iron age technologies already obtained by the dwarves by this point
+		"upgrade-dwarven-shield-2", 550, -- late iron age technologies already obtained by the dwarves by this point
+		"upgrade-dwarven-bearded-throwing-axe", 550, -- late iron age technologies already obtained by the dwarves by this point
+		"upgrade-dwarven-ballista-bolt-1", 550, -- late iron age technologies already obtained by the dwarves by this point
+	}
 })
