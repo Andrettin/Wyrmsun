@@ -941,6 +941,19 @@ DefineUnitType("unit-teuton-stables", { Name = _("Stables"),
 	Icon = "icon-teuton-stables",
 	TechnologyPointCost = 1,
 	Drops = {"unit-horse"},
+	Variations = {
+		{
+			"variation-id", "stables",
+			"file", "germanic/buildings/stables.png",
+			"shadow-file", "germanic/buildings/stables_shadow.png",
+			"icon", "icon-germanic-stables",
+			"upgrade-forbidden", "upgrade-teuton-masonry"
+		},
+		{
+			"variation-id", "stables",
+			"upgrade-required", "upgrade-teuton-masonry"
+		}
+	},
 	Sounds = {
 		"help", "basic-teuton-voices-help-town"
 	}

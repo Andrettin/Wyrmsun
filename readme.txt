@@ -65,6 +65,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added Dwarven Temple (graphics by Jinn).
 - Added Teuton Temple (graphics by Jinn).
 - Temples regenerate the health of nearby organic units.
+- Added graphics for pre-masonry Teuton Stables (by Exidelo, commissioned by Kyran Jackson for his third-party Wyrmsun spinoff under development, Timeless Tales).
 
 * Characters
 - Added the royal lines of Bernicia and Deira.
