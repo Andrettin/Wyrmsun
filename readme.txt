@@ -111,7 +111,7 @@ https://github.com/Andrettin/Wyrmsun
 - New forest tileset rock graphics (by Exidelo).
 
 * Units
-- The Kriegers and Speerkampfers of the Bernice Tribe and Dere Tribes get a 50% damage bonus for a certain duration after disembarking from a transport ship.
+- The Kriegers and Speerkampfers of the Bernice and Dere Tribes get a 50% damage bonus for a certain duration after disembarking from a transport ship.
 
 -----------------------------------------------------------------------
 - 2.1.2
