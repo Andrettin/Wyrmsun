@@ -67,9 +67,6 @@ https://github.com/Andrettin/Wyrmsun
 - Temples regenerate the health of nearby organic units.
 - Added graphics for pre-masonry Teuton Stables (by Exidelo, commissioned by Kyran Jackson for his third-party Wyrmsun spinoff under development, Timeless Tales).
 
-* Characters
-- Added the royal lines of Bernicia and Deira.
-
 * Editor
 - Building graphics can now be used for custom units/buildings in the editor.
 
