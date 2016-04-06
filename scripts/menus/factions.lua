@@ -26,12 +26,6 @@
 --
 
 function ChooseFaction(old_civilization, old_faction)
-	if (GameRunning and not IsNetworkGame()) then
-		SetGamePaused(true)
-	elseif (GrandStrategy) then
-		GrandStrategyGamePaused = true
-	end
-	
 	local potential_factions
 	local faction_list = {}
 	local faction_dd
@@ -55,7 +49,17 @@ function ChooseFaction(old_civilization, old_faction)
 	end
 	
 	table.sort(faction_list)
+	
+	if (table.getn(faction_list) == 0) then
+		return;
+	end
 
+	if (GameRunning and not IsNetworkGame()) then
+		SetGamePaused(true)
+	elseif (GrandStrategy) then
+		GrandStrategyGamePaused = true
+	end
+	
 	local menu
 	
 	if (GrandStrategy == false) then
