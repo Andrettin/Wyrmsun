@@ -575,7 +575,7 @@ DefineLanguageWord("Chester", {
 	NameTypes = {"settlement"},
 	AffixNameTypes = {
 		"compound", "prefix", "singular", "settlement", -- example: "Chesterfield"
-		"compound", "suffix", "singular", "settlement" -- examples: "Dorchester", "Winchester"
+		"compound", "suffix", "singular", "settlement" -- example: "Dorchester"
 	}
 })
 
@@ -2510,7 +2510,7 @@ DefineLanguageWord("Sex", {
 		"plural", "nominative", "Sex",
 		"plural", "genitive", "Sex"
 	},
-	AffixNameTypes = {"compound", "suffix", "plural", "province"} -- examples: "Essex", "Middlesex", "Sussex"
+	AffixNameTypes = {"compound", "suffix", "plural", "province"} -- examples: "Essex", "Middlesex"
 })
 
 DefineLanguageWord("Shelter", {
@@ -2826,8 +2826,7 @@ DefineLanguageWord("Sus", {
 	Meanings = {"South"},
 	DerivesFrom = {"old-english", "adverb", "Sûþ"}, -- presumably, since the English word "South" comes from that Old English word
 	Gender = "neuter",
-	Archaic = true,
-	AffixNameTypes = {"compound", "prefix", "singular", "province"} -- example: "Sussex"
+	Archaic = true
 })
 
 DefineLanguageWord("Swan", {
@@ -3134,8 +3133,7 @@ DefineLanguageWord("Win", {
 	Language = "english",
 	Type = "noun",
 	Meanings = {"Win"},
-	Gender = "neuter",
-	AffixNameTypes = {"compound", "prefix", "singular", "settlement"} -- example: "Winchester"
+	Gender = "neuter"
 })
 
 DefineLanguageWord("Windmill", {

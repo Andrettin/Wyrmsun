@@ -80,7 +80,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added Bernicia, Deira, East Anglia, Mercia and Wessex (Teuton polities, they use Old English as their language).
 
 * Grand Strategy
-- Added Cornwall, Cumbria, Durham, Mercia, Northumberland, Wales and York provinces.
+- Split the England province into the Cornwall, Cumbria, Durham, East Anglia, Essex, Kent, Mercia, Northumberland, Sussex, Wales, Wessex and York ones.
 - In the Grand Strategy mode, temples provide extra research.
 
 * Items

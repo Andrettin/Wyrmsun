@@ -8,8 +8,6 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      provinces.lua - Defines the provinces.
---
 --      (c) Copyright 2016 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
@@ -1226,6 +1224,44 @@ DefineProvince("Durham", {
 		43, "latin", "Rome", -- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		526, "teuton", "Angle Tribe", -- by 526 AD the Anglo-Saxons had become masters of most of Roman Britannia; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 		1560, "teuton", "England" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalCultures = {
+		526, "teuton"
+	}
+})
+
+DefineProvince("East Anglia", {
+	World = "Earth",
+	FactionCulturalNames = {
+		"teuton", "England", "East Anglia", "name-elements", {
+			"separate", "prefix", "english", "noun", "East"
+--			"separate", "suffix", -- ?
+		}
+	},
+	Tiles = {
+		{481, 105}, {481, 106}, {481, 107},
+		{482, 105}, {482, 106}, {482, 107},
+		{483, 105}, {483, 106}, {483, 107},
+		{484, 106}, {484, 107}
+	},
+	SettlementLocation = {484, 106}, -- Yarmouth
+	Map = "maps/random/random-map-forest.smp",
+	SettlementTerrain = "Plains",
+	Coastal = true,
+	Claims = {
+		"teuton", "England"
+	},
+	HistoricalOwners = {
+		43, "latin", "Rome", -- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		526, "teuton", "Angle Tribe", -- by 526 AD the Anglo-Saxons had become masters of most of Roman Britannia; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+		616, "teuton", "East Anglia", -- we have notice that Rædwald was king of East Anglia then; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 78-79.
+		1560, "teuton", "England" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalClaims = {
+		616, "teuton", "East Anglia"
+	},
+	HistoricalCultures = {
+		526, "teuton"
 	}
 })
 
@@ -1255,87 +1291,6 @@ DefineProvince("East Friesland", { -- also includes Osnabrück
 	Coastal = true
 })
 
-DefineProvince("England", {
-	World = "Earth",
-	CulturalNames = {
-		"latin", "Britannia"
-	},
-	FactionCulturalNames = {
-		"teuton", "England", "England",
-		"teuton", "Angle Tribe", "England"
-	},
-	Tiles = {
---		{117, 26}, {117, 27}, {118, 25}, {118, 26}, {118, 27}, {119, 25}, {119, 26}, {119, 27}, {120, 26}, -- old map
-		{467, 111},
-		{468, 110}, {468, 111}, {468, 112},
-		{469, 110}, {469, 111}, {469, 112},
-		{470, 110}, {470, 111},
-		{471, 110}, {471, 111},
-		{472, 109}, {472, 110}, {472, 111},
-		{473, 108}, {473, 109}, {473, 110}, {473, 111},
-		{474, 108}, {474, 109}, {474, 110}, {474, 111},
-		{475, 108}, {475, 109}, {475, 110}, {475, 111},
-		{476, 108}, {476, 109}, {476, 110}, {476, 111},
-		{477, 108}, {477, 109}, {477, 110}, {477, 111},
-		{478, 108}, {478, 109}, {478, 110}, {478, 111},
-		{479, 107}, {479, 108}, {479, 109}, {479, 110},
-		{480, 107}, {480, 108}, {480, 109}, {480, 110}, {480, 111},
-		{481, 105}, {481, 106}, {481, 107}, {481, 108}, {481, 109}, {481, 110},
-		{482, 105}, {482, 106}, {482, 107}, {482, 108}, {482, 110},
-		{483, 105}, {483, 106}, {483, 107}, {483, 110},
-		{484, 106}, {484, 107}
-	},
-	SettlementLocation = {480, 109}, -- London
-	Map = "maps/random/random-map-forest.smp",
-	SettlementTerrain = "Plains",
-	Coastal = true,
-	Claims = {
-		"basque", "Bellbeaker Tribe",
-		"teuton", "England"
-	},
-	HistoricalOwners = {
-		-7000, "basque", "Bellbeaker Tribe", -- Bell Beaker culture existed in Normandy and the western parts of Great Britain between 7000 and 2000 BC; Source: "Atlas de História Mundial", 2001, pp. 40-41.
-		43, "latin", "Rome", -- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		526, "teuton", "Angle Tribe", -- by 526 AD the Anglo-Saxons had become masters of most of Roman Britannia; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
-		1560, "teuton", "England" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
-	},
-	HistoricalCultures = {
-		-7000, "basque"
-	}
-})
-
---[[
-DefineProvince("Wessex", {
-	World = "Earth",
-	FactionCulturalNames = {
-		"teuton", "England", "Wessex", {
-			"compound", "prefix", "english", "noun", "singular", "Wes",
-			"compound", "suffix", "english", "noun", "plural", "Sex"
-		}
-	},
-	Tiles = {
-		{470, 100}, {470, 101},
-		{471, 99}, {471, 100}, {471, 101},
-		{472, 99}, {472, 100}, {472, 101},
-		{473, 101}
-	},
-	SettlementLocation = {471, 100}, -- Carlisle
-	Map = "maps/random/random-map-forest.smp",
-	SettlementTerrain = "Plains",
-	Coastal = true,
-	Claims = {
-		"teuton", "England"
-	},
-	HistoricalOwners = {
-		43, "latin", "Rome", -- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		1560, "teuton", "England" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
-	},
-	HistoricalCultures = {
-		1560, "teuton"
-	}
-})
---]]
-
 DefineProvince("Epirus", {
 	World = "Earth",
 	Tiles = {
@@ -1355,6 +1310,36 @@ DefineProvince("Epirus", {
 	},
 	SettlementTerrain = "Plains",
 	Coastal = true
+})
+
+DefineProvince("Essex", {
+	World = "Earth",
+	FactionCulturalNames = {
+		"teuton", "England", "Essex"
+	},
+	Tiles = {
+		{477, 108},
+		{478, 108}, {478, 109},
+		{479, 107}, {479, 108}, {479, 109},
+		{480, 107}, {480, 108}, {480, 109},
+		{481, 108}, {481, 109},
+		{482, 108}
+	},
+	SettlementLocation = {480, 109}, -- London
+	Map = "maps/random/random-map-forest.smp",
+	SettlementTerrain = "Plains",
+	Coastal = true,
+	Claims = {
+		"teuton", "England"
+	},
+	HistoricalOwners = {
+		43, "latin", "Rome", -- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		526, "teuton", "Saxon Tribe", -- by 526 AD the Anglo-Saxons had become masters of most of Roman Britannia; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+		1560, "teuton", "England" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalCultures = {
+		526, "teuton"
+	}
 })
 
 DefineProvince("Estonia", {
@@ -2052,6 +2037,34 @@ DefineProvince("Jutland", {
 	}
 })
 
+DefineProvince("Kent", {
+	World = "Earth",
+	FactionCulturalNames = {
+		"teuton", "England", "Kent"
+	},
+	Tiles = {
+		{480, 110},
+		{481, 110},
+		{482, 110},
+		{483, 110}
+	},
+	SettlementLocation = {483, 110}, -- Dover
+	Map = "maps/random/random-map-forest.smp",
+	SettlementTerrain = "Plains",
+	Coastal = true,
+	Claims = {
+		"teuton", "England"
+	},
+	HistoricalOwners = {
+		43, "latin", "Rome", -- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		526, "teuton", "Jute Tribe", -- by 526 AD the Anglo-Saxons had become masters of most of Roman Britannia; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+		1560, "teuton", "England" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalCultures = {
+		526, "teuton"
+	}
+})
+
 DefineProvince("Lacedaemonia", {
 	World = "Earth",
 	Tiles = {
@@ -2462,19 +2475,19 @@ DefineProvince("Mercia", {
 	SettlementTerrain = "Plains",
 	Coastal = true,
 	Claims = {
-		"teuton", "Mercia",
 		"teuton", "England"
 	},
 	HistoricalOwners = {
 		43, "latin", "Rome", -- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		526, "teuton", "Angle Tribe", -- by 526 AD the Anglo-Saxons had become masters of most of Roman Britannia; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+		654, "teuton", "Mercia", -- since their king Penda fell in this year, the kingdom existed then; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75.
 		1560, "teuton", "England" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalClaims = {
---		654, "teuton", "Mercia" -- since their king fell in this year, the kingdom existed then
+		654, "teuton", "Mercia"
 	},
 	HistoricalCultures = {
-		654, "teuton"
+		526, "teuton"
 	}
 })
 
@@ -2707,7 +2720,7 @@ DefineProvince("Northumberland", {
 		547, "teuton", "Bernicia" -- the Kingdom of Bernicia was founded in 547 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75.
 	},
 	HistoricalCultures = {
-		547, "teuton"
+		526, "teuton"
 	}
 })
 
@@ -3361,6 +3374,37 @@ DefineProvince("Slovakia", {
 	}
 })
 
+DefineProvince("Sussex", {
+	World = "Earth",
+	FactionCulturalNames = {
+		"teuton", "England", "Sussex", "name-elements", {
+			"compound", "prefix", "english", "noun", "Sus",
+			"compound", "suffix", "english", "noun", "plural", "Sex"
+		}
+	},
+	Tiles = {
+		{477, 111},
+		{478, 111},
+		{479, 111},
+		{480, 111}
+	},
+	SettlementLocation = {480, 111}, -- Newhaven
+	Map = "maps/random/random-map-forest.smp",
+	SettlementTerrain = "Plains",
+	Coastal = true,
+	Claims = {
+		"teuton", "England"
+	},
+	HistoricalOwners = {
+		43, "latin", "Rome", -- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		526, "teuton", "Saxon Tribe", -- by 526 AD the Anglo-Saxons had become masters of most of Roman Britannia; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+		1560, "teuton", "England" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalCultures = {
+		526, "teuton"
+	}
+})
+
 DefineProvince("Sweden", {
 	World = "Earth",
 	Tiles = {
@@ -3769,13 +3813,18 @@ DefineProvince("Wales", {
 	SettlementTerrain = "Plains",
 	Coastal = true,
 	Claims = {
+		"basque", "Bellbeaker Tribe",
 		"celt", "Powys", -- Powys encompassed the area between the upper Severn and the Dee rivers; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 78.
 		"teuton", "England"
 	},
 	HistoricalOwners = {
+		-7000, "basque", "Bellbeaker Tribe", -- Bell Beaker culture existed in Normandy and the southwestern parts of Great Britain between 7000 and 2000 BC; Source: "Atlas de História Mundial", 2001, pp. 40-41.
 		43, "latin", "Rome", -- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		613, "celt", "Powys", -- at some point between 613 and 616, the king of Powys was defeated by the Bernicians at Chester, so the kingdom must have existed by then; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 78.
 		1560, "teuton", "England" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalCultures = {
+		-7000, "basque"
 	}
 })
 
@@ -3810,6 +3859,49 @@ DefineProvince("Wallachia", {
 --		"latin", "Wallachia",
 		"minoan", "Paintedware Tribe",
 		"thracian", "Getae Tribe"
+	}
+})
+
+DefineProvince("Wessex", {
+	World = "Earth",
+	FactionCulturalNames = {
+		"teuton", "England", "Wessex", "name-elements", {
+			"compound", "prefix", "english", "noun", "Wes",
+			"compound", "suffix", "english", "noun", "plural", "Sex"
+		}
+	},
+	Tiles = {
+		{467, 111},
+		{468, 110}, {468, 111}, {468, 112},
+		{469, 110}, {469, 111}, {469, 112},
+		{470, 110}, {470, 111},
+		{471, 110}, {471, 111},
+		{472, 109}, {472, 110}, {472, 111},
+		{473, 108}, {473, 109}, {473, 110}, {473, 111},
+		{474, 108}, {474, 109}, {474, 110}, {474, 111},
+		{475, 108}, {475, 109}, {475, 110}, {475, 111},
+		{476, 108}, {476, 109}, {476, 110}, {476, 111},
+		{477, 109}, {477, 110},
+		{478, 110},
+		{479, 110}
+	},
+	SettlementLocation = {476, 110}, -- Winchester
+	Map = "maps/random/random-map-forest.smp",
+	SettlementTerrain = "Plains",
+	Coastal = true,
+	Claims = {
+		"basque", "Bellbeaker Tribe",
+		"teuton", "England"
+	},
+	HistoricalOwners = {
+		-7000, "basque", "Bellbeaker Tribe", -- Bell Beaker culture existed in Normandy and the southwestern parts of Great Britain between 7000 and 2000 BC; Source: "Atlas de História Mundial", 2001, pp. 40-41.
+		43, "latin", "Rome", -- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		526, "teuton", "Saxon Tribe", -- by 526 AD the Anglo-Saxons had become masters of most of Roman Britannia; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+		1560, "teuton", "England" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalCultures = {
+		-7000, "basque",
+		526, "teuton"
 	}
 })
 
@@ -4712,7 +4804,7 @@ DefineProvince("Eastern Mediterranean Sea", { -- Source: "Limits of Oceans and S
 DefineProvince("English Channel", {
 	World = "Earth",
 	Water = true,
---	ReferenceProvince = "England", -- province used as a reference for this province's name
+--	ReferenceProvince = "Wessex", -- province used as a reference for this province's name
 	CulturalNames = {
 		"celt", "British Ocean",
 		"latin", "British Ocean"
@@ -4738,7 +4830,7 @@ DefineProvince("English Channel", {
 		{476, 112}, {476, 113}, {476, 114},
 		{477, 112}, {477, 113}, {477, 114}, {477, 115},
 		{478, 112}, {478, 113}, {478, 114}, {478, 115},
-		{479, 111}, {479, 112}, {479, 113}, {479, 114}, {479, 115},
+		{479, 112}, {479, 113}, {479, 114}, {479, 115},
 		{480, 112}, {480, 113}, {480, 114},
 		{481, 111}, {481, 112}, {481, 113},
 		{482, 111}, {482, 112}, {482, 113},

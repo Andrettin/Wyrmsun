@@ -192,6 +192,16 @@ DefineWorldMapTile({475, 121}, {
 	}
 })
 
+DefineWorldMapTile({476, 110}, {
+	World = "Earth",
+	FactionCulturalSettlementNames = {
+		"teuton", "England", "Winchester", "name-elements", {
+			"compound", "prefix", "english", "noun", "singular", "Win",
+			"compound", "suffix", "english", "noun", "singular", "Chester"
+		}
+	}
+})
+
 DefineWorldMapTile({477, 102}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
@@ -229,6 +239,16 @@ DefineWorldMapTile({480, 109}, {
 	}
 })
 
+DefineWorldMapTile({480, 111}, { -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
+	World = "Earth",
+	FactionCulturalSettlementNames = {
+		"teuton", "England", "Newhaven", "name-elements", {
+			"compound", "prefix", "english", "adjective", "New",
+			"compound", "suffix", "english", "noun", "singular", "Haven"
+		}
+	}
+})
+
 DefineWorldMapTile({481, 135}, {
 	World = "Earth",
 	FactionCulturalTerrainNames = {
@@ -243,6 +263,13 @@ DefineWorldMapTile({482, 115}, {
 	}
 })
 
+DefineWorldMapTile({483, 110}, { -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
+	World = "Earth",
+	FactionCulturalSettlementNames = {
+		"teuton", "England", "Dover"
+	}
+})
+
 DefineWorldMapTile({483, 132}, {
 	World = "Earth",
 	CulturalSettlementNames = {
@@ -250,6 +277,16 @@ DefineWorldMapTile({483, 132}, {
 	},
 	FactionCulturalSettlementNames = {
 		"latin", "France", "Toulouse"
+	}
+})
+
+DefineWorldMapTile({484, 106}, { -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
+	World = "Earth",
+	FactionCulturalSettlementNames = {
+		"teuton", "England", "Yarmouth", "name-elements", {
+--			"compound", "prefix", -- ?
+			"compound", "suffix", "english", "noun", "singular", "Mouth"
+		}
 	}
 })
 

@@ -34,7 +34,7 @@ local ChristianityEvents = {
 		Conditions = function(s)
 			if (
 				GetProvinceOwner("Ireland") == EventFaction.Name
-				and GetProvinceCivilization("England") == "celt"
+				and GetProvinceCivilization("Essex") == "celt" -- Essex correct?
 			) then
 				EventProvince = WorldMapProvinces.Ireland
 				return true
@@ -207,12 +207,11 @@ local ChristianityEvents = {
 	},
 	TheMissionOfAugustine = { -- Source: Philip Schaff, "History of the Christian Church", 1997, §10.
 		Name = "The Mission of Augustine",
-		Description = "The Pope has sent the Benedictine abbot Augustine on a mission to propagate Christianity in PROVINCE_NAME. He has arrived with thirty other monks, along with a priest called Laurentius and some translators. Augustine carried, besides papal instructions, letters of recommendation and a few books.",
+		Description = "The Pope has sent the Benedictine abbot Augustine on a mission to propagate Christianity in England. He has arrived with thirty other monks, along with a priest called Laurentius and some translators. Augustine carried, besides papal instructions, letters of recommendation and a few books.",
 		Conditions = function(s)
 			if (
-				GetProvinceOwner("England") == EventFaction.Name
+				GetProvinceOwner("Essex") == EventFaction.Name
 			) then
-				EventProvince = WorldMapProvinces.England
 				return true
 			else
 				return false
@@ -233,8 +232,8 @@ local ChristianityEvents = {
 		OptionTooltips = {"+1 Prestige", ""}
 	},
 	AugustineArchbishopOfEngland = { -- Source: Philip Schaff, "History of the Christian Church", 1997, §10.
-		Name = "Augustine, Archbishop of PROVINCE_NAME",
-		Description = "With our friendship, Augustine was able to perform his work with much efficaciousness. As a result of his successes, he has been ordained archbishop of PROVINCE_NAME.",
+		Name = "Augustine, Archbishop of England",
+		Description = "With our friendship, Augustine was able to perform his work with much efficaciousness. As a result of his successes, he has been ordained archbishop of England.",
 		TriggeredOnly = true,
 		Options = {"~!OK"},
 		OptionEffects = {
@@ -246,13 +245,12 @@ local ChristianityEvents = {
 	},
 	TheChurchAtCanterbury = { -- Source: Philip Schaff, "History of the Christian Church", 1997, §10.
 		Name = "The Church at Canterbury",
-		Description = "Archbishop Augustine has built a church at Canterbury, which shall be the center of the Christian faith in PROVINCE_NAME.",
+		Description = "Archbishop Augustine has built a church at Canterbury, which shall be the center of the Christian faith in England.",
 		Conditions = function(s)
 			if (
-				GetProvinceOwner("England") == EventFaction.Name
-				and ProvinceHasBuildingClass(WorldMapProvinces.England.Name, "temple")
+				GetProvinceOwner("Kent") == EventFaction.Name
+				and ProvinceHasBuildingClass(WorldMapProvinces.Kent.Name, "temple")
 			) then
-				EventProvince = WorldMapProvinces.England
 				return true
 			else
 				return false
@@ -272,12 +270,12 @@ local ChristianityEvents = {
 	},
 	TheConferenceAtAugustinesOak = { -- Source: Philip Schaff, "History of the Christian Church", 1997, §11.
 		Name = "The Conference at Augustine's Oak",
-		Description = "Augustine, the archbishop of Canterbury, has arranged with our king's aid a conference with the Briton bishops. The meeting took place in Sussex, near the banks of the Severn under an oak. Augustine sought to make them give up their local religious traditions and accept the customs practiced in Rome, which they resisted. The Briton bishops said they needed the approval of their people to give up the old traditions, and asked for a second, larger conference to be held later.",
+		Description = "Augustine, the archbishop of Canterbury, has arranged with our king's aid a conference with the Briton bishops. The meeting took place in PROVINCE_NAME, near the banks of the Severn under an oak. Augustine sought to make them give up their local religious traditions and accept the customs practiced in Rome, which they resisted. The Briton bishops said they needed the approval of their people to give up the old traditions, and asked for a second, larger conference to be held later.",
 		Conditions = function(s)
 			if (
-				GetProvinceOwner("England") == EventFaction.Name
+				GetProvinceOwner("Sussex") == EventFaction.Name
 			) then
-				EventProvince = WorldMapProvinces.England
+				EventProvince = WorldMapProvinces.Sussex
 				return true
 			else
 				return false
@@ -298,12 +296,11 @@ local ChristianityEvents = {
 	},
 	AugustinesSecondConference = { -- Source: Philip Schaff, "History of the Christian Church", 1997, §11.
 		Name = "Augustine's Second Conference",
-		Description = "The Briton bishops have met archbishop Augustine in a second conference, having brought with them several scholars from the Convent of Bangor. The bishops had been advised by a venerated hermit to accept Augustine's propositions only if he stood up to talk to them, instead of speaking to them with arrogance from his seat. Augustine remained seated. He demanded that they accept Roman customs and help him in the conversion of PROVINCE_NAME. The bishops refused Augustine, who then predicted that they would suffer divine punishment through the Anglo-Saxons.",
+		Description = "The Briton bishops have met archbishop Augustine in a second conference, having brought with them several scholars from the Convent of Bangor. The bishops had been advised by a venerated hermit to accept Augustine's propositions only if he stood up to talk to them, instead of speaking to them with arrogance from his seat. Augustine remained seated. He demanded that they accept Roman customs and help him in the conversion of England. The bishops refused Augustine, who then predicted that they would suffer divine punishment through the Anglo-Saxons.",
 		Conditions = function(s)
 			if (
-				GetProvinceOwner("England") == EventFaction.Name
+				GetProvinceOwner("Sussex") == EventFaction.Name
 			) then
-				EventProvince = WorldMapProvinces.England
 				return true
 			else
 				return false
@@ -323,12 +320,12 @@ local ChristianityEvents = {
 	},
 	MellitusConsecratedBishopOfLondon = { -- Source: Philip Schaff, "History of the Christian Church", 1997, §10.
 		Name = "Mellitus Ordained Bishop of PROVINCE_SETTLEMENT_NAME",
-		Description = "Mellitus, a priest sent by the Pope to PROVINCE_NAME, has been consecrated bishop of PROVINCE_SETTLEMENT_NAME.",
+		Description = "Mellitus, a priest sent by the Pope to England, has been consecrated bishop of PROVINCE_SETTLEMENT_NAME.",
 		Conditions = function(s)
 			if (
-				GetProvinceOwner("England") == EventFaction.Name
+				GetProvinceOwner("Essex") == EventFaction.Name
 			) then
-				EventProvince = WorldMapProvinces.England
+				EventProvince = WorldMapProvinces.Essex
 				return true
 			else
 				return false
@@ -349,9 +346,9 @@ local ChristianityEvents = {
 		Description = "Justus, a priest sent by the Pope to PROVINCE_NAME, has been consecrated bishop of Rochester.",
 		Conditions = function(s)
 			if (
-				GetProvinceOwner("England") == EventFaction.Name
+				GetProvinceOwner("Kent") == EventFaction.Name
 			) then
-				EventProvince = WorldMapProvinces.England
+				EventProvince = WorldMapProvinces.Kent
 				return true
 			else
 				return false
@@ -393,14 +390,12 @@ local ChristianityEvents = {
 	},
 	PaulinusAppointedArchbishopOfYork = { -- Source: Philip Schaff, "History of the Christian Church", 1997, §10.
 		Name = "Paulinus Appointed Archbishop of PROVINCE_NAME",
-		Description = "Paulinus, who had been sent by the Pope to SECOND_PROVINCE_NAME to aid in the promotion of Christianity there, has been appointed the archbishop of PROVINCE_NAME.",
+		Description = "Paulinus, who had been sent by the Pope to England to aid in the promotion of Christianity there, has been appointed the archbishop of PROVINCE_NAME.",
 		Conditions = function(s)
 			if (
 				GetProvinceOwner("York") == EventFaction.Name
-				and GetProvinceOwner("England") == EventFaction.Name
 			) then
 				EventProvince = WorldMapProvinces.York
-				SecondEventProvince = WorldMapProvinces.England
 				return true
 			else
 				return false
@@ -518,7 +513,7 @@ local ChristianityEvents = {
 		Conditions = function(s)
 			if (
 				GetProvinceOwner("Overijssel") == EventFaction.Name
-				and GetProvinceCivilization("England") == "teuton" -- should be English; Liafwin's province of origin has to be the same culture as he historically was
+				and GetProvinceCivilization("Essex") == "teuton" -- should be English; Liafwin's province of origin has to be the same culture as he historically was; Essex set because he was from England and this is the province where London lays
 			) then
 				EventProvince = WorldMapProvinces.Overijssel
 				return true

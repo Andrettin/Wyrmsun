@@ -478,8 +478,8 @@ local TeutonEvents = {
 		Description = "William Camden has published Britannia, an analysis of the material remnants of ancient British peoples. One of the objects analyzed by him was the Stonehenge monument.",
 		Conditions = function(s)
 			if (
-				GetProvinceOwner("England") == EventFaction.Name
-				and GetProvinceCivilization("England") == "teuton" -- should be English
+				GetProvinceOwner("Essex") == EventFaction.Name -- since this was presumably in England, and Essex is where the London lays
+				and GetProvinceCivilization("Essex") == "teuton" -- should be English
 			) then
 				return true
 			else
@@ -599,8 +599,8 @@ local TeutonEvents = {
 		Description = "Charles Darwin has published a work entitled On the Origin of Species by Means of Natural Selection, in which he proposes that living organisms are the result of a long process of natural evolution.",
 		Conditions = function(s)
 			if (
-				GetProvinceOwner("England") == EventFaction.Name
-				and GetProvinceCivilization("England") == "teuton" -- should be English
+				GetProvinceOwner("Essex") == EventFaction.Name -- since this was presumably in England, and Essex is where the London lays
+				and GetProvinceCivilization("Essex") == "teuton" -- should be English
 			) then
 				return true
 			else
@@ -645,8 +645,8 @@ local TeutonEvents = {
 		Description = "Sir John Lubbock has published his Prehistoric Times, in which he divides the Stone Age between the Old Stone Age (the Palaeolithic) and the New Stone Age (the Neolithic). The former was marked by the use of flaked stone, while in the latter polished stone was used.",
 		Conditions = function(s)
 			if (
-				GetProvinceOwner("England") == EventFaction.Name
-				and GetProvinceCivilization("England") == "teuton" -- should be English
+				GetProvinceOwner("Essex") == EventFaction.Name -- since this was presumably in England, and Essex is where the London lays
+				and GetProvinceCivilization("Essex") == "teuton" -- should be English
 			) then
 				return true
 			else

@@ -146,7 +146,7 @@ DefineCharacter("Penda", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
-	ProvinceOfOrigin = "England",
+	ProvinceOfOrigin = "Mercia",
 	DeathYear = 654, -- fall of Penda
 	HistoricalRulerships = {
 		0, 654, "teuton", "Mercia" -- king of Mercia
@@ -158,7 +158,7 @@ DefineCharacter("Ethelred", { -- Source: Snorri Sturlson, "Heimskringla", 1844, 
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton", -- should be English?
-	ProvinceOfOrigin = "England", -- presumably
+	ProvinceOfOrigin = "Essex", -- presumably in England, so let's put in London's province
 	Year = 1002 -- massacred the Danes
 })
 
@@ -167,7 +167,7 @@ DefineCharacter("Aldhelm", { -- Source: Alaric Hall, "The Meanings of Elf and El
 	Gender = "male",
 	Type = "unit-teuton-swordsman", -- should be something more appropriate for the composer of a riddle?
 	Civilization = "teuton", -- Anglo-Saxon
-	ProvinceOfOrigin = "England", -- presumably
+	ProvinceOfOrigin = "Essex", -- presumably in England, so let's put in London's province
 	DeathYear = 709 -- died in 709/710
 })
 
@@ -176,7 +176,7 @@ DefineCharacter("Bede", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol.
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
-	ProvinceOfOrigin = "England",
+	ProvinceOfOrigin = "Essex", -- in England, so let's put in London's province
 	Year = 731, -- wrote "Historia Ecclesiastica Venerabilis Bedae" around 731 AD
 	AuthoredWorks = {"upgrade-work-historia-ecclesiastica-venerabilis-bedae"}
 })
@@ -187,6 +187,6 @@ DefineCharacter("Nicolas Breakspear", { -- Source: Snorri Sturlson, "Heimskringl
 	Gender = "male",
 	Type = "unit-teuton-swordsman", -- should be priest
 	Civilization = "teuton", -- should be English
-	ProvinceOfOrigin = "England", -- Hertfordshire (since his father worked there, he's probably from there)
+	ProvinceOfOrigin = "Essex", -- Hertfordshire (since his father worked there, he's probably from there)
 	Year = 1154 -- elected Pope
 })

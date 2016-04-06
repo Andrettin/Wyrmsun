@@ -151,12 +151,12 @@ local EarthEvents = {
 		Description = "The people of PROVINCE_NAME have carved the figure of a horse on a hill, filling it with chalk afterwards, resulting in a huge symbol of a white horse.",
 		Conditions = function(s)
 			if (
-				GetProvinceOwner("England") == EventFaction.Name -- was made at Uffington, in southern England
-				and GetProvinceCivilization("England") == "celt" -- a Celtic culture did this
-				and ProvinceHasBuildingClass(WorldMapProvinces.England.Name, "smithy") -- happened in the late bronze age, possibly required bronze age tools
+				GetProvinceOwner("Wessex") == EventFaction.Name -- was made at Uffington, in southern England
+				and GetProvinceCivilization("Wessex") == "celt" -- a Celtic culture did this
+				and ProvinceHasBuildingClass(WorldMapProvinces.Wessex.Name, "smithy") -- happened in the late bronze age, possibly required bronze age tools
 				and SyncRand(100) < 1
 			) then
-				EventProvince = WorldMapProvinces.England
+				EventProvince = WorldMapProvinces.Wessex
 				return true
 			else
 				return false
