@@ -3814,6 +3814,7 @@ DefineProvince("Wales", {
 	Coastal = true,
 	Claims = {
 		"basque", "Bellbeaker Tribe",
+		"celt", "Gwynedd", -- Gwynedd is in north Wales
 		"celt", "Powys", -- Powys encompassed the area between the upper Severn and the Dee rivers; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 78.
 		"teuton", "England"
 	},
@@ -3824,7 +3825,8 @@ DefineProvince("Wales", {
 		1560, "teuton", "England" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalCultures = {
-		-7000, "basque"
+		-7000, "basque",
+		613, "celt"
 	}
 })
 

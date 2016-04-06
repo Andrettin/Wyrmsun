@@ -74,3 +74,28 @@ DefineCharacter("Solomon", { -- Source: Frank Stenton, "Anglo-Saxon England", 19
 		613, 0, "celt", "Powys" -- king of Powys; at some point between 613 and 616, he was defeated by the Bernicians at Chester
 	}
 })
+
+DefineCharacter("Certic", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 80.
+	Name = "Certic",
+	Gender = "male",
+	Type = "unit-germanic-warrior",
+	Civilization = "celt",
+--	ProvinceOfOrigin = ?
+	DateReferenceCharacter = "Edwin", -- was a contemporary of Edwin of Deira, who conquered his kingdom
+	HistoricalRulerships = {
+		0, 0, "celt", "Elmet" -- king of Elmet
+	}
+})
+
+DefineCharacter("Cadwallon", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 80-81.
+	Name = "Cadwallon",
+	Gender = "male",
+	Type = "unit-germanic-warrior",
+	Civilization = "celt",
+	ProvinceOfOrigin = "Wales",
+	Year = 632,
+	DeathYear = 633, -- killed by Oswald of Bernicia in 633
+	HistoricalRulerships = {
+		632, 0, "celt", "Gwynedd" -- king of Gwynedd; in 632 AD attacked Northumbria, and fought Edwin in Hatfield Chase, ending with the latter's death and that of Edwin's son Osfrith
+	}
+})

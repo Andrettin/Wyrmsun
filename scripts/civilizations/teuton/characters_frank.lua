@@ -42,3 +42,15 @@ DefineCharacter("Bertha", { -- Source: Frank Stenton, "Anglo-Saxon England", 197
 	ProvinceOfOrigin = "France", -- possibly
 	DateReferenceCharacter = "Æthelberht"
 })
+
+DefineCharacter("Dagobert", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 81.
+	Name = "Dagobert", -- kinsman of Edwin of Deira's wife
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "teuton",
+	ProvinceOfOrigin = "France", -- possibly
+	DateReferenceCharacter = "Edwin", -- contemporary of Edwin of Deira
+	HistoricalRulerships = {
+		0, 0, "teuton", "Francia" -- king of the Franks as Dagobert I
+	}
+})

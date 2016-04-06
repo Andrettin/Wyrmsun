@@ -107,10 +107,26 @@ DefineFaction("Turone Tribe", {
 
 -- Polities
 
+DefineFaction("Elmet", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 80.
+	Civilization = "celt",
+	Type = "polity",
+--	Language = "welsh", -- it was a Briton kingdom
+	Colors = {"teal"},
+	DefaultTier = "kingdom"
+})
+
+DefineFaction("Gwynedd", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 80.
+	Civilization = "celt",
+	Type = "polity",
+--	Language = "welsh", -- it was a Briton kingdom
+	Colors = {"blue"},
+	DefaultTier = "kingdom"
+})
+
 DefineFaction("Powys", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 78.
 	Civilization = "celt",
 	Type = "polity",
---	Language = "welsh", -- it was a British (Briton) kingdom
+--	Language = "welsh", -- it was a Briton kingdom
 	Colors = {"green"},
 	DefaultTier = "kingdom"
 })
