@@ -66,6 +66,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added Teuton Temple (graphics by Jinn).
 - Temples regenerate the health of nearby organic units.
 - Added graphics for pre-masonry Teuton Stables (by Exidelo, commissioned by Kyran Jackson for his third-party Wyrmsun spinoff under development, Timeless Tales).
+- Fixed issue which caused towers to occasionally deal a very fast, constant stream of damage.
 
 * Editor
 - Building graphics can now be used for custom units/buildings in the editor.
@@ -73,22 +74,13 @@ https://github.com/Andrettin/Wyrmsun
 * Factions
 - Added the Bernice Tribe (Teuton, uses Old English as its language).
 - Added the Dere Tribe (Teuton, uses Old English as its language).
-- Expanded the encyclopedia entry of the dwarven Brising Clan.
-- Expanded the encyclopedia entry of the dwarven Eikinskjaldi Clan.
-- Added an encyclopedia entry for the dwarven Joruvellir faction.
-- Added an encyclopedia entry for the dwarven Lyr faction.
+- Expanded the encyclopedia entry of the dwarven Brising and Eikinskjaldi Clans.
+- Added an encyclopedia entry for the dwarven Joruvellir and Lyr factions.
 - Expanded the encyclopedia entry of the germanic Asa Tribe.
-- Added Bernicia (Teuton polity, uses Old English as its language).
-- Added Deira (Teuton polity, uses Old English as its language).
-- Added Mercia (Teuton polity, uses Old English as its language).
+- Added Bernicia, Deira, East Anglia, Mercia and Wessex (Teuton polities, they use Old English as their language).
 
 * Grand Strategy
-- Added Durham province.
-- Added Northumberland province.
-- Added York province.
-- Added Mercia province.
-- Added Cumbria province.
-- Added Wales province.
+- Added Cornwall, Cumbria, Durham, Mercia, Northumberland, Wales and York provinces.
 - In the Grand Strategy mode, temples provide extra research.
 
 * Items
@@ -110,6 +102,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Units
 - The Kriegers and Speerkampfers of the Bernice and Dere Tribes get a 50% damage bonus for a certain duration after disembarking from a transport ship.
+- Transports and towers now have an attack button, used to instruct the units inside to attack a particular unit.
 
 -----------------------------------------------------------------------
 - 2.1.2

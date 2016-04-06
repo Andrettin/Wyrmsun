@@ -906,6 +906,33 @@ DefineProvince("Corinth", {
 	}
 })
 
+DefineProvince("Cornwall", {
+	World = "Earth",
+	FactionCulturalNames = {
+		"teuton", "England", "Cornwall", "name-elements", {
+			"compound", "prefix", "english", "noun", "singular", "Corn", -- presumably
+			"compound", "suffix", "english", "noun", "singular", "Wall" -- presumably
+		}
+	},
+	Tiles = {
+		{464, 113},
+		{465, 112}, {465, 113},
+		{466, 112},
+		{467, 112}
+	},
+	SettlementLocation = {465, 113}, -- Falmouth
+	Map = "maps/random/random-map-forest.smp",
+	SettlementTerrain = "Plains",
+	Coastal = true,
+	Claims = {
+		"teuton", "England"
+	},
+	HistoricalOwners = {
+		43, "latin", "Rome", -- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		1560, "teuton", "England" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	}
+})
+
 DefineProvince("Corsica", {
 	World = "Earth",
 	CulturalNames = {
@@ -1239,10 +1266,7 @@ DefineProvince("England", {
 	},
 	Tiles = {
 --		{117, 26}, {117, 27}, {118, 25}, {118, 26}, {118, 27}, {119, 25}, {119, 26}, {119, 27}, {120, 26}, -- old map
-		{464, 113},
-		{465, 112}, {465, 113},
-		{466, 112},
-		{467, 111}, {467, 112},
+		{467, 111},
 		{468, 110}, {468, 111}, {468, 112},
 		{469, 110}, {469, 111}, {469, 112},
 		{470, 110}, {470, 111},
@@ -1279,6 +1303,38 @@ DefineProvince("England", {
 		-7000, "basque"
 	}
 })
+
+--[[
+DefineProvince("Wessex", {
+	World = "Earth",
+	FactionCulturalNames = {
+		"teuton", "England", "Wessex", {
+			"compound", "prefix", "english", "noun", "singular", "Wes",
+			"compound", "suffix", "english", "noun", "plural", "Sex"
+		}
+	},
+	Tiles = {
+		{470, 100}, {470, 101},
+		{471, 99}, {471, 100}, {471, 101},
+		{472, 99}, {472, 100}, {472, 101},
+		{473, 101}
+	},
+	SettlementLocation = {471, 100}, -- Carlisle
+	Map = "maps/random/random-map-forest.smp",
+	SettlementTerrain = "Plains",
+	Coastal = true,
+	Claims = {
+		"teuton", "England"
+	},
+	HistoricalOwners = {
+		43, "latin", "Rome", -- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		1560, "teuton", "England" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalCultures = {
+		1560, "teuton"
+	}
+})
+--]]
 
 DefineProvince("Epirus", {
 	World = "Earth",
@@ -3713,10 +3769,12 @@ DefineProvince("Wales", {
 	SettlementTerrain = "Plains",
 	Coastal = true,
 	Claims = {
+		"celt", "Powys", -- Powys encompassed the area between the upper Severn and the Dee rivers; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 78.
 		"teuton", "England"
 	},
 	HistoricalOwners = {
 		43, "latin", "Rome", -- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		613, "celt", "Powys", -- at some point between 613 and 616, the king of Powys was defeated by the Bernicians at Chester, so the kingdom must have existed by then; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 78.
 		1560, "teuton", "England" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	}
 })

@@ -37,31 +37,108 @@ DefineCharacter("Ælle", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971
 	}
 })
 
-DefineCharacter("Æthelric", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75.
+DefineCharacter("Ida", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 76.
+	Name = "Ida",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "teuton",
+	ProvinceOfOrigin = "Northumberland",
+	Year = 547, -- became king of Bernicia
+	HistoricalRulerships = {
+		547, 0, "teuton", "Bernicia" -- first king of Bernicia
+	}
+})
+
+DefineCharacter("Theodric", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 76.
+	Name = "Theodric", -- in his age, the Anglo-Saxons suffered a siege in Holy Island for three days
+	NameElements = {
+		"compound", "prefix", "old-english", "noun", "Þéod", -- presumably
+--		"compound", "suffix", "old-english", -- ?
+	},
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "teuton",
+	ProvinceOfOrigin = "Northumberland",
+	Father = "Ida",
+	HistoricalRulerships = {
+		0, 0, "teuton", "Bernicia" -- presumably, since his father was king of Bernicia
+	}
+})
+
+DefineCharacter("Æthelric", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 75-76.
 	Name = "Æthelric",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
 	ProvinceOfOrigin = "Northumberland",
 	Year = 588, -- according to tradition, Æthelric acquired the kingdom of Deira upon Ælle's death in 588 AD
+	Father = "Ida", -- the source says that his son Æthelfrith was grandson of Ida
 	HistoricalRulerships = {
-		588, 0, "teuton", "Bernicia" -- king of Bernicia
+		588, 0, "teuton", "Bernicia", -- king of Bernicia
+		588, 0, "teuton", "Deira" -- according to tradition, Æthelric acquired the kingdom of Deira upon Ælle's death in 588 AD
 	}
 })
 
-DefineCharacter("Æthelfrith", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75.
+DefineCharacter("Æthelfrith", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 75, 78.
 	Name = "Æthelfrith",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
 	ProvinceOfOrigin = "Northumberland",
 	Year = 593, -- beginning of reign
-	DeathYear = 616, -- end of reign
+	DeathYear = 616, -- died in battle against Rædwald
+	ViolentDeath = true,
 	Father = "Æthelric",
+	Description = _("Aethelfrith was the king of Bernicia between 593 and 616. He simultaneously ruled over Deira, and is famed for his defeat of the Britons at Chester. Aethelfrith came to a tragic end at the hands of Raedwald of East Anglia in 616, being killed in battle."),
 	HistoricalRulerships = {
-		593, 616, "teuton", "Bernicia" -- king of Bernicia
+		593, 616, "teuton", "Bernicia", -- king of Bernicia
+		593, 616, "teuton", "Deira"
 	}
 	-- married the daughter of the Deiran king Ælle
+	-- at some point between 613 and 616, he defeated the Britons at Chester; before the battle of Chester, Æthelfrith's warriors killed a group of British monks who stemmed from the monastery of Bangor Iscoed, and had come to pray for the Briton forces; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 77-78
+	-- at some point between 613 and 616, he defeated the Britons at Chester; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 77-78
+})
+
+DefineCharacter("Ceawlin", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 76.
+	Name = "Ceawlin",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "teuton",
+	ProvinceOfOrigin = "Wessex",
+	DateReferenceCharacter = "Æthelfrith", -- contemporary of Æthelfrith of Bernicia
+	HistoricalRulerships = {
+		0, 0, "teuton", "Wessex"
+	}
+})
+
+DefineCharacter("Edwin", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 78-79.
+	Name = "Edwin",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "teuton",
+	ProvinceOfOrigin = "York",
+	Father = "Ælle",
+	Year = 616, -- in 616 Rædwald of East Anglia (with whom Edwin had taken refuge), fought and won against Æthelfrith of Bernicia to support Edwin's claim to the Deiran throne
+	HistoricalRulerships = {
+		0, 0, "teuton", "Bernicia",
+		0, 0, "teuton", "Deira" -- was the heir to Deira, but also became the king of Bernicia after the battle against Æthelfrith in 616
+	}
+})
+
+DefineCharacter("Rædwald", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 78-79.
+	Name = "Rædwald",
+	NameElements = {
+		"compound", "prefix", "old-english", "noun", "Ræ̂d", -- presumably
+--		"compound", "suffix", "old-english", -- ?
+	},
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "teuton",
+	ProvinceOfOrigin = "East Anglia",
+	Year = 616, -- in the summer or early fall of 616, Rædwald (supporting Edwin's claim to the Deiran throne; Edwin had taken refuge with him) engaged in a battle against Æthelfrith of Bernicia, with the location being at the southern border of Deira, where the Idle river crosses with the Lincoln-Doncaster Roman road
+	HistoricalRulerships = {
+		616, 0, "teuton", "East Anglia"
+	}
 })
 
 DefineCharacter("Penda", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75.

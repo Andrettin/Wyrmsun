@@ -1349,7 +1349,7 @@ if not (ui_loaded_first_time) then
 					More = {"Variable", {Text = Concat(_("Transport: "), String(TypeVar("Transport", "Max"))), Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {AttackRange = "only", AttackFromTransporter = "only", BasicDamage = "false", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Range Bonus: +"), Variable = "AttackRange", Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Variable", {Text = Concat(_("Range Bonus: +"), String(TypeVar("AttackRange", "Value"))), Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {Speed = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Speed: "), Variable = "Speed", Font = wyr.preferences.PopupDescriptionFont}}

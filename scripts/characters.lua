@@ -64,6 +64,7 @@ Load("scripts/civilizations/greek/characters.lua")
 Load("scripts/civilizations/latin/characters.lua")
 Load("scripts/civilizations/norse/characters.lua")
 Load("scripts/civilizations/teuton/characters.lua")
+Load("scripts/civilizations/celt/characters.lua") -- define after Teuton ones, because some Celtic characters refer to Teutonic ones
 
 -- load characters of fictional species afterwards, since many of them use human characters as a date reference
 Load("scripts/civilizations/dwarf/characters.lua")

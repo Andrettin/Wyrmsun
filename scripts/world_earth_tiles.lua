@@ -69,6 +69,16 @@ DefineWorldMapTile({464, 141}, {
 	}
 })
 
+DefineWorldMapTile({465, 113}, {
+	World = "Earth",
+	FactionCulturalSettlementNames = {
+		"teuton", "England", "Falmouth", "name-elements", {
+--			"compound", "prefix", -- ?
+			"compound", "suffix", "english", "noun", "singular", "Mouth"
+		}
+	}
+})
+
 DefineWorldMapTile({466, 148}, {
 	World = "Earth",
 	CulturalSettlementNames = {

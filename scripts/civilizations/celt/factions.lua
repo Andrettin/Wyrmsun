@@ -105,6 +105,16 @@ DefineFaction("Turone Tribe", {
 	HistoricalFactionDerivations = {-27, "celt", "Boii Tribe"}
 })
 
+-- Polities
+
+DefineFaction("Powys", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 78.
+	Civilization = "celt",
+	Type = "polity",
+--	Language = "welsh", -- it was a British (Briton) kingdom
+	Colors = {"green"},
+	DefaultTier = "kingdom"
+})
+
 -- Non-Playable Tribes
 
 DefineFaction("Vana Tribe", {

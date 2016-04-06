@@ -75,7 +75,30 @@ DefineFaction("Deira", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, 
 	HistoricalFactionDerivations = {588, "teuton", "Dere Tribe"} -- according to tradition, Æthelric of Bernicia acquired the kingdom of Deira upon its king Ælle's death in 588 AD; and since their king died in this year, the kingdom existed then
 })
 
+DefineFaction("East Anglia", {
+	Civilization = "teuton",
+	ParentFaction = "Angle Tribe",
+	Type = "polity",
+	Language = "old-english",
+	Colors = {"pink"},
+	DefaultTier = "kingdom",
+	DevelopsTo = {"England"},
+	Description = ""
+})
+
 DefineFaction("Mercia", {
+	Civilization = "teuton",
+	ParentFaction = "Angle Tribe",
+	Type = "polity",
+	Language = "old-english",
+	Colors = {"white"},
+	DefaultTier = "kingdom",
+	DevelopsTo = {"England"},
+	Description = "",
+	HistoricalFactionDerivations = {654, "teuton", "Angle Tribe"} -- we have notice of the fall of a king Penda of Mercia in 654 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75.
+})
+
+DefineFaction("Wessex", {
 	Civilization = "teuton",
 	ParentFaction = "Angle Tribe",
 	Type = "polity",
@@ -83,6 +106,5 @@ DefineFaction("Mercia", {
 	Colors = {"red"},
 	DefaultTier = "kingdom",
 	DevelopsTo = {"England"},
-	Description = "",
-	HistoricalFactionDerivations = {654, "teuton", "Angle Tribe"} -- we have notice of the fall of a king Penda of Mercia in 654 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75.
+	Description = ""
 })

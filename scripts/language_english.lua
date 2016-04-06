@@ -637,8 +637,7 @@ DefineLanguageWord("Corn", {
 	Type = "noun",
 	Meanings = {"Corn"},
 	DerivesFrom = {"old-english", "noun", "Corn"}, -- presumably
-	Gender = "neuter",
-	AffixNameTypes = {"compound", "prefix", "singular", "province"} -- example: "Cornwall"
+	Gender = "neuter"
 })
 
 DefineLanguageWord("Cottage", {
@@ -2511,7 +2510,7 @@ DefineLanguageWord("Sex", {
 		"plural", "nominative", "Sex",
 		"plural", "genitive", "Sex"
 	},
-	AffixNameTypes = {"compound", "suffix", "plural", "province"} -- examples: "Essex", "Middlesex", "Sussex", "Wessex"
+	AffixNameTypes = {"compound", "suffix", "plural", "province"} -- examples: "Essex", "Middlesex", "Sussex"
 })
 
 DefineLanguageWord("Shelter", {
@@ -3020,7 +3019,6 @@ DefineLanguageWord("Wall", {
 	Meanings = {"Wall"},
 	Gender = "neuter",
 	AffixNameTypes = {
-		"compound", "suffix", "singular", "province", -- example: "Cornwall"
 		"compound", "suffix", "singular", "settlement" -- example: "Blackwall"
 	}
 })
@@ -3043,8 +3041,7 @@ DefineLanguageWord("Wes", {
 	Meanings = {"West"},
 	Gender = "neuter",
 	DerivesFrom = {"old-english", "adverb", "West"}, -- presumably, since the English word "West" comes from that Old English word
-	Archaic = true,
-	AffixNameTypes = {"compound", "prefix", "singular", "province"} -- example: "Wessex"
+	Archaic = true
 })
 
 DefineLanguageWord("West", {
