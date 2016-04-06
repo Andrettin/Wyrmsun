@@ -128,15 +128,6 @@ DefineCharacter("Ricimer", { -- Source: Norman Davies, "Vanished Kingdoms", 2012
 	DeathYear = 472 -- died
 })
 
-DefineCharacter("Clovis", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 97, 99.
-	Name = "Clovis", -- Frankish king and husband of Clothilda (daughter of the Burgundian king Chilperic); converted to Catholic Christianity
-	Gender = "male",
-	Type = "unit-frank-swordsman",
-	Civilization = "teuton",
---	ProvinceOfOrigin = "?",
-	DeathYear = 511 -- died
-})
-
 DefineCharacter("Adalbert", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 141.
 	Name = "Adalbert", -- archbishop of Bremen; was requested by Norse people (including from Greenland) to send clergymen to them, which he did
 	Gender = "male",
@@ -147,5 +138,6 @@ DefineCharacter("Adalbert", { -- Source: Snorri Sturlson, "Heimskringla", 1844, 
 })
 
 Load("scripts/civilizations/teuton/characters_english.lua")
+Load("scripts/civilizations/teuton/characters_frank.lua")
 Load("scripts/civilizations/teuton/characters_saxon.lua")
 Load("scripts/civilizations/teuton/characters_suebi.lua")

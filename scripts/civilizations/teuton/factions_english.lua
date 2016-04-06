@@ -86,6 +86,17 @@ DefineFaction("East Anglia", {
 	Description = ""
 })
 
+DefineFaction("Kent", {
+	Civilization = "teuton",
+	ParentFaction = "Jute Tribe",
+	Type = "polity",
+	Language = "old-english",
+	Colors = {"cyan"},
+	DefaultTier = "kingdom",
+	DevelopsTo = {"England"},
+	Description = ""
+})
+
 DefineFaction("Mercia", {
 	Civilization = "teuton",
 	ParentFaction = "Angle Tribe",
@@ -100,7 +111,7 @@ DefineFaction("Mercia", {
 
 DefineFaction("Wessex", {
 	Civilization = "teuton",
-	ParentFaction = "Angle Tribe",
+	ParentFaction = "Saxon Tribe",
 	Type = "polity",
 	Language = "old-english",
 	Colors = {"red"},

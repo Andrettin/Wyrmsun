@@ -141,6 +141,28 @@ DefineCharacter("Rædwald", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	}
 })
 
+DefineCharacter("Lilla", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 79.
+	Name = "Lilla",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "teuton",
+	ProvinceOfOrigin = "York", -- presumably
+	DateReferenceCharacter = "Edwin",
+	Description = _("Lilla was a thegn of Edwin of Deira. He saved his lord's life by stopping an assassin from Wessex just as he was about to strike Edwin.")
+})
+
+DefineCharacter("Æthelberht", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 79.
+	Name = "Æthelberht",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "teuton",
+	ProvinceOfOrigin = "Kent",
+	DateReferenceCharacter = "Edwin", -- contemporary of Edwin, but probably not of the same generation, since his daughter married Edwin
+	HistoricalRulerships = {
+		0, 0, "teuton", "Kent"
+	}
+})
+
 DefineCharacter("Penda", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75.
 	Name = "Penda",
 	Gender = "male",

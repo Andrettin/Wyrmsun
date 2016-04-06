@@ -2630,7 +2630,6 @@ function SetSelectedProvinceLua(province)
 			end
 			
 			if (SelectedHero ~= "" and SelectedHero ~= nil and GetProvinceHero(SelectedProvince.Name, SelectedHero) == 2) then
-				SetProvinceAttackedBy(province.Name, GrandStrategyFaction.Civilization, GrandStrategyFaction.Name)
 				SetProvinceHero(province.Name, SelectedHero, 1)
 				SelectedHero = ""
 			end

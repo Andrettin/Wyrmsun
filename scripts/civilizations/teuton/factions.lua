@@ -64,7 +64,7 @@ DefineFaction("Saxon Tribe", {
 	Type = "tribe",
 	Language = "old-saxon",
 	Colors = {"pink"},
-	DevelopsTo = {"Saxony", "Brandenburg", "England", "Prussia", "Scotland", "Wessex"},
+	DevelopsTo = {"Saxony", "Brandenburg", "Wessex", "England", "Prussia", "Scotland"},
 	FactionUpgrade = "upgrade-saxon-tribe-faction",
 	HistoricalFactionDerivations = {-264, "germanic", "Skeldung Tribe"},
 	HistoricalTechnologies = {
@@ -234,7 +234,7 @@ DefineFaction("Jute Tribe", {
 	ParentFaction = "Angle Tribe", -- accurate?
 	Type = "tribe",
 	Colors = {"red", "white"},
-	DevelopsTo = {"Jutland"}
+	DevelopsTo = {"Jutland", "Kent"}
 })
 
 DefineFaction("Lombard Tribe", {
