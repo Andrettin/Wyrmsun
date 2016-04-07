@@ -351,6 +351,7 @@ function RunGrandStrategyGameSetupMenu()
 					date_minimum = -3000 -- beginning of the last wave of Indo-European migrations, which lasted until 2800 BC
 					date_maximum = -71 -- the Suebic king Ariovistus enters Gaul at the request of the Arverni and the Sequani to fight the Aedui
 --					date_maximum = 486 -- conquest of Syagrius' realm by the Frankish Merovingian king, Clovis
+					date_maximum = 654
 					
 					bookmark_list = {
 						"3000 BC", -- beginning of the last wave of Indo-European migrations, which lasted until 2800 BC

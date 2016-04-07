@@ -95,7 +95,17 @@ DefineCharacter("Cadwallon", { -- Source: Frank Stenton, "Anglo-Saxon England", 
 	ProvinceOfOrigin = "Wales",
 	Year = 632,
 	DeathYear = 633, -- killed by Oswald of Bernicia in 633
+	ViolentDeath = true,
 	HistoricalRulerships = {
 		632, 0, "celt", "Gwynedd" -- king of Gwynedd; in 632 AD attacked Northumbria, and fought Edwin in Hatfield Chase, ending with the latter's death and that of Edwin's son Osfrith
 	}
+})
+
+DefineCharacter("Cadafael", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 83-84.
+	Name = "Cadafael", -- Cadafael of Gwynedd
+	Gender = "male",
+	Type = "unit-germanic-warrior",
+	Civilization = "celt",
+	ProvinceOfOrigin = "Wales",
+	Year = 654 -- went with Penda to attack Oswiu of Bernicia
 })

@@ -1315,7 +1315,10 @@ DefineProvince("Epirus", {
 DefineProvince("Essex", {
 	World = "Earth",
 	FactionCulturalNames = {
-		"teuton", "England", "Essex"
+		"teuton", "England", "Essex", "name-elements", {
+			"compound", "prefix", "english", "noun", "Es",
+			"compound", "suffix", "english", "noun", "plural", "Sex"
+		}
 	},
 	Tiles = {
 		{477, 108},
@@ -2181,6 +2184,37 @@ DefineProvince("Liguria", {
 	}
 })
 
+DefineProvince("Lincoln", {
+	World = "Earth",
+	FactionCulturalNames = {
+		"teuton", "England", "Lincoln"
+	},
+	Tiles = {
+		{478, 103}, {478, 104}, {478, 105},
+		{479, 103}, {479, 104}, {479, 105},
+		{480, 104}, {480, 105}
+	},
+	SettlementLocation = {478, 104}, -- Lincoln
+	Map = "maps/random/random-map-forest.smp",
+	SettlementTerrain = "Plains",
+	Coastal = true,
+	Claims = {
+		"teuton", "England"
+	},
+	HistoricalOwners = {
+		43, "latin", "Rome", -- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		526, "teuton", "Angle Tribe", -- by 526 AD the Anglo-Saxons had become masters of most of Roman Britannia; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+		654, "teuton", "Middle Anglia", -- Peada was king of the Middle Angles when Penda fell; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 84.
+		1560, "teuton", "England" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalClaims = {
+		654, "teuton", "Middle Anglia"
+	},
+	HistoricalCultures = {
+		526, "teuton"
+	}
+})
+
 DefineProvince("Lithuania", {
 	World = "Earth",
 	CulturalNames = {
@@ -2466,9 +2500,9 @@ DefineProvince("Mercia", {
 		{475, 104}, {475, 105}, {475, 106}, {475, 107},
 		{476, 104}, {476, 105}, {476, 106}, {476, 107},
 		{477, 103}, {477, 104}, {477, 105}, {477, 106}, {477, 107},
-		{478, 103}, {478, 104}, {478, 105}, {478, 106}, {478, 107},
-		{479, 103}, {479, 104}, {479, 105}, {479, 106},
-		{480, 104}, {480, 105}, {480, 106}
+		{478, 106}, {478, 107},
+		{479, 106},
+		{480, 106}
 	},
 	SettlementLocation = {475, 106}, -- Tamworth
 	Map = "maps/random/random-map-forest.smp",
@@ -2480,11 +2514,12 @@ DefineProvince("Mercia", {
 	HistoricalOwners = {
 		43, "latin", "Rome", -- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		526, "teuton", "Angle Tribe", -- by 526 AD the Anglo-Saxons had become masters of most of Roman Britannia; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
-		654, "teuton", "Mercia", -- since their king Penda fell in this year, the kingdom existed then; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75.
+		632, "teuton", "Mercia", -- Penda became king of Mercia in 632 after the demise of Edwin of Deira; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 75, 80-81, 83-84.
+		654, "teuton", "Middle Anglia", -- Peada, king of the Middle Angles, ruled over the Mercian lands south of the Trent after Penda fell; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 84.
 		1560, "teuton", "England" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalClaims = {
-		654, "teuton", "Mercia"
+		632, "teuton", "Mercia"
 	},
 	HistoricalCultures = {
 		526, "teuton"

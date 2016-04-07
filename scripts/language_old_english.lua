@@ -1445,7 +1445,15 @@ DefineLanguageWord("Sēon", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	}
 })
 
-DefineLanguageWord("Sigor", { -- source also gives the alternative form "sige"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 214.
+DefineLanguageWord("Sige", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 214.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Victory"}, -- source (apparently) gives the German "Sieg" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Segiz"},
+	Gender = "masculine"
+})
+
+DefineLanguageWord("Sigor", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 214.
 	Language = "old-english",
 	Type = "noun",
 	Meanings = {"Victory"}, -- source (apparently) gives the German "Sieg" as the meaning

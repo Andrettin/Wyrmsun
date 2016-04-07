@@ -926,8 +926,7 @@ DefineLanguageWord("Es", {
 	Meanings = {"East"},
 	DerivesFrom = {"old-english", "noun", "Éaste"}, -- presumably, since the English noun "East" is also set to derive from that word? Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 12.
 	Gender = "neuter",
-	Archaic = true,
-	AffixNameTypes = {"compound", "prefix", "singular", "province"} -- example: "Essex"
+	Archaic = true
 })
 
 DefineLanguageWord("Fair", {
@@ -2510,7 +2509,7 @@ DefineLanguageWord("Sex", {
 		"plural", "nominative", "Sex",
 		"plural", "genitive", "Sex"
 	},
-	AffixNameTypes = {"compound", "suffix", "plural", "province"} -- examples: "Essex", "Middlesex"
+	AffixNameTypes = {"compound", "suffix", "plural", "province"} -- examples: "Middlesex"
 })
 
 DefineLanguageWord("Shelter", {

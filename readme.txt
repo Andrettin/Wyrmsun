@@ -61,6 +61,12 @@ https://github.com/Andrettin/Wyrmsun
 - 2.1.4
 -----------------------------------------------------------------------
 
+* Factions
+- Added Essex and Middle Anglia (Teuton polities, they use Old English as their language).
+
+* Grand Strategy
+- Added Lincoln province.
+
 -----------------------------------------------------------------------
 - 2.1.3
 -----------------------------------------------------------------------

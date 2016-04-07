@@ -120,6 +120,7 @@ DefineCharacter("Edwin", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971
 	Father = "Ælle",
 	Year = 616, -- in 616 Rædwald of East Anglia (with whom Edwin had taken refuge), fought and won against Æthelfrith of Bernicia to support Edwin's claim to the Deiran throne
 	DeathYear = 632, -- died in 632 in battle against Cadwallon of Gwynedd
+	ViolentDeath = true,
 	HistoricalRulerships = {
 		616, 632, "teuton", "Bernicia",
 		616, 632, "teuton", "Deira" -- was the heir to Deira, but also became the king of Bernicia after the battle against Æthelfrith in 616
@@ -181,20 +182,23 @@ DefineCharacter("Osfrith", { -- Source: Frank Stenton, "Anglo-Saxon England", 19
 	Civilization = "teuton",
 	ProvinceOfOrigin = "York",
 	Father = "Edwin",
-	DeathYear = 632 -- died in 632 in battle against Cadwallon of Gwynedd
+	DeathYear = 632, -- died in 632 in battle against Cadwallon of Gwynedd
+	ViolentDeath = true
 })
 
-DefineCharacter("Penda", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 75, 80-81.
+DefineCharacter("Penda", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 75, 80-81, 83-84.
 	Name = "Penda",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
 	ProvinceOfOrigin = "Mercia",
 	Year = 632, -- in 632, Penda (still a noble belonging to the Mercian royal house with no throne) allied himself Cadwallon of Gwynedd against Edwin of Deira
-	DeathYear = 654, -- fall of Penda
+	DeathYear = 654, -- died fighting against Oswiu of Bernicia
+	ViolentDeath = true,
 	HistoricalRulerships = {
 		632, 654, "teuton", "Mercia" -- became king of Mercia in 632 after Edwin's demise
 	}
+	-- attacked Oswiu of Bernicia in 654 with thirty "legions"
 })
 
 DefineCharacter("Osric", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 81.
@@ -206,6 +210,7 @@ DefineCharacter("Osric", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971
 	DateReferenceCharacter = "Edwin", -- was a cousin of Edwin's
 	Year = 632,
 	DeathYear = 633, -- died fighting against Cadwallon in the summer of 633
+	ViolentDeath = true,
 	HistoricalRulerships = {
 		632, 633, "teuton", "Deira" -- king of Deira from Edwin's death to 633
 	}
@@ -220,6 +225,7 @@ DefineCharacter("Eanfrith", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	Father = "Æthelfrith",
 	Year = 632,
 	DeathYear = 633, -- killed in 633 while visiting Cadwallon to sue for peace
+	ViolentDeath = true,
 	HistoricalRulerships = {
 		632, 633, "teuton", "Bernicia" -- king of Bernicia from Edwin's death to 633
 	}
@@ -233,9 +239,11 @@ DefineCharacter("Oswald", { -- Source: Frank Stenton, "Anglo-Saxon England", 197
 	ProvinceOfOrigin = "Northumberland",
 	Father = "Æthelfrith", -- he was a brother of Eanfrith's, so presumably also a son of Æthelfrith
 	Year = 633, -- destroyed Cadwallon at Rowley Burn (south of Hexham) in 633, becoming king of both Bernicia and Deira
+	DeathYear = 641, -- defeated and killed by Penda of Mercia at Maserfelth (likely Oswestry in Shropshire) on the 5h of August 641
+	ViolentDeath = true,
 	HistoricalRulerships = {
-		633, 0, "teuton", "Bernicia",
-		633, 0, "teuton", "Deira"
+		633, 641, "teuton", "Bernicia",
+		633, 641, "teuton", "Deira"
 	}
 	-- married the daughter of Cynegils of Wessex
 })
@@ -278,14 +286,19 @@ DefineCharacter("Eanflæd", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	-- married to Oswiu, brother of Oswald of Bernicia
 })
 
-DefineCharacter("Oswiu", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 81.
+DefineCharacter("Oswiu", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 81-84.
 	Name = "Oswiu",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
 	ProvinceOfOrigin = "Northumberland",
-	Father = "Æthelfrith" -- he was a brother of Oswald's, so presumably also of Eanfrith's, and as such likely also a son of Æthelfrith
+	Father = "Æthelfrith", -- he was a brother of Oswald's, so presumably also of Eanfrith's, and as such likely also a son of Æthelfrith
+	Year = 641,
+	HistoricalRulerships = {
+		641, 0, "teuton", "Bernicia" -- became king of Bernicia on the death of his brother Oswald
+	}
 	-- married to Eanflæd, daughter of Edwin of Deira
+	-- fought an won against Penda in battle of the Winwæd (a stream, somewhere around Leeds)
 })
 
 DefineCharacter("Cynegils", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 81.
@@ -298,6 +311,92 @@ DefineCharacter("Cynegils", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	HistoricalRulerships = {
 		0, 0, "teuton", "Wessex" -- king of Wessex
 	}
+})
+
+DefineCharacter("Oswine", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 82-83.
+	Name = "Oswine",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "teuton",
+	ProvinceOfOrigin = "York",
+	Father = "Osric",
+	Year = 641,
+	DeathYear = 651, -- died as a result of Oswiu of Bernicia's invasion of Deira in 651 AD
+	ViolentDeath = true,
+	HistoricalRulerships = {
+		641, 651, "teuton", "Deira" -- became king of Deira on the death of Oswald of Bernicia
+	}
+})
+
+DefineCharacter("Æthelwald", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 83.
+	Name = "Æthelwald",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "teuton",
+	ProvinceOfOrigin = "Northumberland", -- presumably, since he was a son of Oswald of Bernicia
+	Father = "Oswald",
+	Year = 651,
+	HistoricalRulerships = {
+		651, 0, "teuton", "Deira" -- was chosen by the Deirans as their king upon the demise of Oswine; he was under the protection of Penda of Mercia (apparently) from his accession
+	}
+})
+
+DefineCharacter("Æthelhere", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 83-84.
+	Name = "Æthelhere",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "teuton",
+	ProvinceOfOrigin = "East Anglia",
+	Year = 654,
+	DeathYear = 654, -- in 654 went with Penda to attack Oswiu of Bernicia, resulting in Æthelhere's death
+	ViolentDeath = true,
+	HistoricalRulerships = {
+		654, 654, "teuton", "East Anglia" -- king of East Anglia; in 654 went with Penda to attack Oswiu of Bernicia, resulting in Æthelhere's death
+	}
+})
+
+DefineCharacter("Sigeberht", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 84.
+	Name = "Sigeberht",
+	NameElements = {
+		"compound", "prefix", "old-english", "noun", "Sige", -- presumably
+--		"compound", "suffix", "old-english", -- ?
+	},
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "teuton",
+	ProvinceOfOrigin = "Essex",
+	DateReferenceCharacter = "Oswiu", -- friend of Oswiu of Bernicia
+	HistoricalRulerships = {
+		0, 0, "teuton", "Essex" -- king of Essex
+	}
+})
+
+DefineCharacter("Cenwalh", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 84.
+	Name = "Cenwalh",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "teuton",
+	ProvinceOfOrigin = "Wessex",
+	DateReferenceCharacter = "Penda", -- was forced into exile from his lands by Penda of Mercia
+	HistoricalRulerships = {
+		0, 0, "teuton", "Wessex" -- king of Wessex
+	}
+})
+
+DefineCharacter("Peada", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 84.
+	Name = "Peada", -- king of the Middle Angles
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "teuton",
+	ProvinceOfOrigin = "Mercia", -- presumably, since his father was ruler of that realm
+	Father = "Penda",
+	Year = 654, -- was given the Mercian territories south of the Trent after Penda's fall, at which point he was already king of the Middle Angles
+	DeathYear = 656, -- murdered
+	ViolentDeath = true,
+	HistoricalRulerships = {
+		654, 656, "teuton", "Middle Anglia"
+	}
+	-- married the daughter of Oswiu of Bernicia
 })
 
 DefineCharacter("Ethelred", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 127.

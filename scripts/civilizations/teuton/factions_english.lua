@@ -83,6 +83,18 @@ DefineFaction("East Anglia", {
 	Colors = {"pink"},
 	DefaultTier = "kingdom",
 	DevelopsTo = {"England"},
+	Description = "",
+	HistoricalFactionDerivations = {616, "teuton", "Angle Tribe"} -- The kingdom of East Anglia existed in 616 under Rædwald; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 78-79.
+})
+
+DefineFaction("Essex", {
+	Civilization = "teuton",
+	ParentFaction = "Saxon Tribe",
+	Type = "polity",
+	Language = "old-english",
+	Colors = {"purple"},
+	DefaultTier = "kingdom",
+	DevelopsTo = {"England"},
 	Description = ""
 })
 
@@ -107,6 +119,18 @@ DefineFaction("Mercia", {
 	DevelopsTo = {"England"},
 	Description = "",
 	HistoricalFactionDerivations = {654, "teuton", "Angle Tribe"} -- we have notice of the fall of a king Penda of Mercia in 654 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75.
+})
+
+DefineFaction("Middle Anglia", {
+	Civilization = "teuton",
+	ParentFaction = "Angle Tribe",
+	Type = "polity",
+	Language = "old-english",
+	Colors = {"violet"},
+	DefaultTier = "kingdom",
+	DevelopsTo = {"England"},
+	Description = "",
+	HistoricalFactionDerivations = {654, "teuton", "Angle Tribe"} -- Peada was king of the Middle Angles when Penda fell; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 84.
 })
 
 DefineFaction("Wessex", {
