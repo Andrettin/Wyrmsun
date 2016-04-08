@@ -41,9 +41,11 @@ if (LoadedGame == false) then
 	SetAiType(4, "land-attack")
 	if (GrandStrategy == false) then
 		local rome_player = GetFactionPlayer("Rome")
-		SetPlayerData(rome_player, "Allow", "upgrade-teuton-masonry", "R")
-		SetPlayerData(rome_player, "Allow", "unit-teuton-catapult", "F")
-		SetPlayerData(rome_player, "Allow", "unit-teuton-stronghold", "F")
+		if not (GrandStrategy) then
+			SetPlayerData(rome_player, "Allow", "upgrade-teuton-masonry", "R")
+			SetPlayerData(rome_player, "Allow", "unit-teuton-catapult", "F")
+			SetPlayerData(rome_player, "Allow", "unit-teuton-stronghold", "F")
+		end
 
 	--	unit = CreateUnit("unit-suebi-swordsman", 0, {Players[0].StartPos.x, Players[0].StartPos.y}) -- add Ballomar here later
 	

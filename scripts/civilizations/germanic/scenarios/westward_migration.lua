@@ -67,11 +67,13 @@ if (LoadedGame == false) then
 		-- Asa units
 		CreateProvinceUnits("Astrakhan", 0)
 		CreateProvinceCustomHero("Astrakhan", 0)
-		unit = CreateUnit("unit-germanic-worker", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		unit = CreateUnit("unit-germanic-worker", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		unit = CreateUnit("unit-germanic-worker", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		unit = CreateUnit("unit-germanic-worker", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		unit = CreateUnit("unit-germanic-worker", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		if not (GrandStrategyBattleBaseBuilding) then
+			unit = CreateUnit("unit-germanic-worker", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+			unit = CreateUnit("unit-germanic-worker", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+			unit = CreateUnit("unit-germanic-worker", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+			unit = CreateUnit("unit-germanic-worker", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+			unit = CreateUnit("unit-germanic-worker", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		end
 	end
 
 	unit = CreateUnit("unit-germanic-town-hall", 1, {Players[1].StartPos.x, Players[1].StartPos.y})

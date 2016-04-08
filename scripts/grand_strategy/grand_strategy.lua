@@ -34,6 +34,7 @@ EventProvince = nil
 SecondEventProvince = nil
 GrandStrategyWorld = ""
 BattalionMultiplier = wyr.preferences.GrandStrategyBattalionMultiplier
+GrandStrategyBattleBaseBuilding = wyr.preferences.GrandStrategyBattleBaseBuilding
 GrandStrategyMapWidthIndent = 0
 GrandStrategyMapHeightIndent = 0
 PopulationGrowthThreshold = 2000
@@ -56,6 +57,7 @@ function RunGrandStrategyGameSetupMenu()
 	SecondEventProvince = nil
 	GrandStrategyWorld = ""
 	BattalionMultiplier = wyr.preferences.GrandStrategyBattalionMultiplier
+	GrandStrategyBattleBaseBuilding = wyr.preferences.GrandStrategyBattleBaseBuilding
 	GrandStrategyMapWidthIndent = 0
 	GrandStrategyMapHeightIndent = 0
 	ProcessingEndTurn = false
@@ -85,6 +87,7 @@ function RunGrandStrategyGameSetupMenu()
 	local hero_dd
 	local hero_list = {}
 	local automatic_battles
+	local battle_base_building
 	local no_randomness
 
 	local function FactionChanged()
@@ -304,7 +307,15 @@ function RunGrandStrategyGameSetupMenu()
 	)
 	automatic_battles:setMarked(wyr.preferences.AutomaticBattles)
   
-	no_randomness = menu:addImageCheckBox(_("No Randomness"), offx + 40, offy + 10 + 240 + 3,
+	battle_base_building = menu:addImageCheckBox(_("Battle Base Building"), offx + 640 - 224 - 16, offy + 10 + 220 + 3,
+		function()
+			wyr.preferences.GrandStrategyBattleBaseBuilding = battle_base_building:isMarked()
+			SavePreferences()
+		end
+	)
+	battle_base_building:setMarked(wyr.preferences.GrandStrategyBattleBaseBuilding)
+  
+	no_randomness = menu:addImageCheckBox(_("No Randomness"), offx + 40, offy + 10 + 220 + 3,
 		function()
 			wyr.preferences.NoRandomness = no_randomness:isMarked()
 			SavePreferences()
@@ -712,7 +723,7 @@ function AttackProvince(province, faction)
 		-- set the new unit quantity to the surviving units of the victorious side
 		for i, unitName in ipairs(Units) do
 			if (IsOffensiveMilitaryUnit(unitName)) then
-				SetProvinceUnitQuantity(province.Name, unitName, math.ceil(GetPlayerData(GetFactionPlayer(victorious_player), "UnitTypesNonHeroCount", unitName) / BattalionMultiplier))
+				SetProvinceUnitQuantity(province.Name, unitName, math.ceil(GetPlayerData(GetFactionPlayer(victorious_player), "UnitTypesStartingNonHeroCount", unitName) / BattalionMultiplier))
 			end
 		end
 		
@@ -4186,7 +4197,7 @@ function RestoreScenarioUnitsToProvince(arg) -- restore the units of a certain f
 	
 	for i, unitName in ipairs(Units) do
 		if (IsOffensiveMilitaryUnit(unitName) and GetArrayIncludes(arg.IgnoredUnitClasses, GetUnitTypeData(unitName, "Class")) == false) then
-			ChangeProvinceUnitQuantity(arg.ProvinceName, unitName, math.ceil(GetPlayerData(GetFactionPlayer(arg.FactionName), "UnitTypesNonHeroCount", unitName) / BattalionMultiplier))
+			ChangeProvinceUnitQuantity(arg.ProvinceName, unitName, math.ceil(GetPlayerData(GetFactionPlayer(arg.FactionName), "UnitTypesStartingNonHeroCount", unitName) / BattalionMultiplier))
 		end
 	end
 	

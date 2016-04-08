@@ -68,11 +68,6 @@ if (LoadedGame == false) then
 		unit = CreateUnit("unit-germanic-warrior", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 		SetUnitVariable(unit, "Active", false)
 		
-		unit = CreateUnit("unit-germanic-worker", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
-		unit = CreateUnit("unit-germanic-worker", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
-		unit = CreateUnit("unit-germanic-worker", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
-		unit = CreateUnit("unit-germanic-worker", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
-		unit = CreateUnit("unit-germanic-worker", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
 		unit = CreateUnit("unit-germanic-warrior", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
 		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-germanic-warrior", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
@@ -98,6 +93,14 @@ if (LoadedGame == false) then
 		
 		-- Vana units
 		CreateProvinceUnits("Don", 1)
+	end
+	
+	if (GrandStrategy == false or (GrandStrategyEventMap and GrandStrategyBattleBaseBuilding)) then
+		unit = CreateUnit("unit-germanic-worker", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+		unit = CreateUnit("unit-germanic-worker", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+		unit = CreateUnit("unit-germanic-worker", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+		unit = CreateUnit("unit-germanic-worker", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+		unit = CreateUnit("unit-germanic-worker", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
 	end
 	
 	-- create raft in the nearest coast tile to the Vana settlement

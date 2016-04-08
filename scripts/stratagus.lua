@@ -369,6 +369,8 @@ function SinglePlayerTriggers()
 							if (string.find(unitName, "upgrade-") ~= nil) then
 								if (GetFactionTechnology(GetPlayerData(i, "RaceName"), GetPlayerData(i, "Name"), unitName)) then
 									SetPlayerData(i, "Allow", unitName, "R")
+								else
+									SetPlayerData(i, "Allow", unitName, "F")
 								end
 							end
 						end
@@ -1998,6 +2000,7 @@ local defaultPreferences = {
 	AutomaticBattles = false,
 	Difficulty = 2,
 	GrandStrategyBattalionMultiplier = 1,
+	GrandStrategyBattleBaseBuilding = false,
 	QuestsCompleted = {},
 	TechnologyAcquired = {},
 	AchievementsCompleted = {},

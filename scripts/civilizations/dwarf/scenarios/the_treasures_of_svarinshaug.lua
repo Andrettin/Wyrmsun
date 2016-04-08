@@ -49,12 +49,6 @@ if (LoadedGame == false) then
 		
 		CreateProvinceUnits("Svarinshaug", 0, 2, false, true)
 		CreateProvinceCustomHero("Svarinshaug", 0)
-		
-		-- don't allow the player to build/train units if in grand strategy mode
-		SetPlayerData(0, "Allow", "unit-dwarven-barracks", "F")
-		SetPlayerData(0, "Allow", "unit-brising-smithy", "F")
-		SetPlayerData(0, "Allow", "unit-dwarven-lumber-mill", "F")
-		SetPlayerData(0, "Allow", "unit-dwarven-sentry-tower", "F")
 	end
 	
 

@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-if (LoadedGame == false) then
+if (GrandStrategy == false and LoadedGame == false) then
 	SetPlayerData(0, "Allow", "upgrade-dwarven-runewriting", "F")
 	SetPlayerData(1, "Allow", "upgrade-dwarven-runewriting", "F")
 	SetPlayerData(2, "Allow", "upgrade-dwarven-runewriting", "F")

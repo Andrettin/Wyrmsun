@@ -70,6 +70,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Grand Strategy
 - Added Lincoln province.
+- Added the option of playing grand strategy battles with base-building available.
 
 * Terrain
 - Tree and rock tiles now contain 500 of their respective resource, instead of 100.

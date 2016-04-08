@@ -35,23 +35,20 @@ if (LoadedGame == false) then
 	SetPlayerData(1, "Resources", "gold", 5000)
 	SetPlayerData(1, "Resources", "lumber", 3000)
 	SetPlayerData(1, "Resources", "stone", 2000)
-	SetPlayerData(1, "Allow", "unit-dwarven-smithy", "F")
-	SetPlayerData(1, "Allow", "unit-dwarven-lumber-mill", "F")
-	SetPlayerData(1, "Allow", "unit-dwarven-guard-tower", "F")
-	SetPlayerData(1, "Allow", "unit-dwarven-stronghold", "F")
-	SetPlayerData(0, "Allow", "upgrade-dwarven-runewriting", "F")
-	SetPlayerData(1, "Allow", "upgrade-dwarven-runewriting", "F")
+	if not (GrandStrategy) then
+		SetPlayerData(1, "Allow", "unit-dwarven-smithy", "F")
+		SetPlayerData(1, "Allow", "unit-dwarven-lumber-mill", "F")
+		SetPlayerData(1, "Allow", "unit-dwarven-guard-tower", "F")
+		SetPlayerData(1, "Allow", "unit-dwarven-stronghold", "F")
+		SetPlayerData(0, "Allow", "upgrade-dwarven-runewriting", "F")
+		SetPlayerData(1, "Allow", "upgrade-dwarven-runewriting", "F")
+	end
 	
 	if not (GrandStrategy) then
 		unit = CreateUnit("unit-dwarven-axefighter", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 		SetUnitVariable(unit, "Character", "Modsognir")
 		unit = CreateUnit("unit-dwarven-axefighter", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 		SetUnitVariable(unit, "Character", "Durin")
-		unit = CreateUnit("unit-brising-miner", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		unit = CreateUnit("unit-brising-miner", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		unit = CreateUnit("unit-brising-miner", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		unit = CreateUnit("unit-brising-miner", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		unit = CreateUnit("unit-brising-miner", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 		unit = CreateUnit("unit-dwarven-steelclad", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
 		SetUnitVariable(unit, "Active", false)
 	elseif (GrandStrategyEventMap) then
@@ -68,28 +65,14 @@ if (LoadedGame == false) then
 		end
 		
 		CreateProvinceUnits("Aurvang", 1, 1)
-		
-		-- don't allow the player to build/train units if in grand strategy mode
-		SetPlayerData(0, "Allow", "unit-brising-miner", "F")
-		SetPlayerData(0, "Allow", "unit-dwarven-town-hall", "F")
-		SetPlayerData(0, "Allow", "unit-dwarven-mushroom-farm", "F")
-		SetPlayerData(0, "Allow", "unit-dwarven-barracks", "F")
-		SetPlayerData(0, "Allow", "unit-brising-smithy", "F")
-		SetPlayerData(0, "Allow", "unit-dwarven-lumber-mill", "F")
-		SetPlayerData(0, "Allow", "unit-dwarven-sentry-tower", "F")
-		SetPlayerData(0, "Allow", "unit-gold-mine", "F")
-		SetPlayerData(0, "Allow", "unit-silver-mine", "F")
-		SetPlayerData(0, "Allow", "unit-copper-mine", "F")
-		SetPlayerData(1, "Allow", "unit-dwarven-miner", "F")
-		SetPlayerData(1, "Allow", "unit-dwarven-town-hall", "F")
-		SetPlayerData(1, "Allow", "unit-dwarven-mushroom-farm", "F")
-		SetPlayerData(1, "Allow", "unit-dwarven-barracks", "F")
-		SetPlayerData(1, "Allow", "unit-dwarven-smithy", "F")
-		SetPlayerData(1, "Allow", "unit-dwarven-lumber-mill", "F")
-		SetPlayerData(1, "Allow", "unit-dwarven-sentry-tower", "F")
-		SetPlayerData(1, "Allow", "unit-gold-mine", "F")
-		SetPlayerData(1, "Allow", "unit-silver-mine", "F")
-		SetPlayerData(1, "Allow", "unit-copper-mine", "F")
+	end
+	
+	if (GrandStrategy == false or (GrandStrategyEventMap and GrandStrategyBattleBaseBuilding)) then
+		unit = CreateUnit("unit-brising-miner", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		unit = CreateUnit("unit-brising-miner", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		unit = CreateUnit("unit-brising-miner", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		unit = CreateUnit("unit-brising-miner", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		unit = CreateUnit("unit-brising-miner", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 	end
 end
 

@@ -721,7 +721,7 @@ AddTrigger(
 				
 				-- create settlement for the Norlund Clan in the Shorbear Hold, after its conquest
 				unit = CreateUnit("unit-dwarven-stronghold", 0, {37, 32})
-				if (GrandStrategy == false) then
+				if (GrandStrategy == false or GrandStrategyBattleBaseBuilding) then
 					unit = CreateUnit("unit-dwarven-miner", 0, {38, 33})
 					unit = CreateUnit("unit-dwarven-miner", 0, {38, 33})
 					unit = CreateUnit("unit-dwarven-miner", 0, {38, 33})
@@ -741,41 +741,53 @@ AddTrigger(
 				unit = CreateUnit("unit-dwarven-mushroom-farm", 0, {40, 28})
 				unit = CreateUnit("unit-dwarven-mushroom-farm", 0, {44, 36})
 
-				if (GrandStrategy == false) then
-					unit = CreateUnit("unit-dwarven-thane", 2, {5, 65}) -- Gaenlar
-					SetUnitVariable(unit, "Active", false)
-
-					-- create second encampment for Shinsplitters
-					unit = CreateUnit("unit-dwarven-town-hall", 2, {40, 10})
-					unit = CreateUnit("unit-dwarven-miner", 2, {40, 10})
-					unit = CreateUnit("unit-dwarven-miner", 2, {40, 10})
-					unit = CreateUnit("unit-dwarven-miner", 2, {40, 10})
-					unit = CreateUnit("unit-dwarven-miner", 2, {40, 10})
-					unit = CreateUnit("unit-dwarven-miner", 2, {40, 10})
-					unit = CreateUnit("unit-dwarven-thane", 2, {40, 10}) -- Glinan
-					SetUnitVariable(unit, "Active", false)
-
-					-- create third encampment for Shinsplitters
-					unit = CreateUnit("unit-dwarven-town-hall", 2, {60, 60})
-					unit = CreateUnit("unit-dwarven-miner", 2, {60, 60})
-					unit = CreateUnit("unit-dwarven-miner", 2, {60, 60})
-					unit = CreateUnit("unit-dwarven-miner", 2, {60, 60})
-					unit = CreateUnit("unit-dwarven-miner", 2, {60, 60})
-					unit = CreateUnit("unit-dwarven-miner", 2, {60, 60})
-					unit = CreateUnit("unit-dwarven-thane", 2, {60, 60}) -- Kalnar
-					SetUnitVariable(unit, "Active", false)
-				elseif (GrandStrategyEventMap) then
-					-- Shinsplitters
-					SetStartView(2, 40, 10)
-					CreateProvinceUnits("Southern Tunnels", 2, 4)
-					if (GetNumUnitsAt(GetFactionPlayer("Shinsplitter Clan"), "unit-dwarven-thane", {0, 0}, {256, 256}) < 1 and GetProvinceUnitQuantity("Southern Tunnels", "unit-dwarven-thane") >= 1) then
-						unit = CreateUnit("unit-dwarven-thane", 2, {40, 10})
+				if (GrandStrategy == false or GrandStrategyEventMap) then
+					if (GrandStrategy == false) then
+						unit = CreateUnit("unit-dwarven-thane", 2, {5, 65}) -- Gaenlar
 						SetUnitVariable(unit, "Active", false)
-						ChangeProvinceUnitQuantity("Southern Tunnels", "unit-dwarven-thane", -1)
+					end
+
+					if (GrandStrategy == false or GrandStrategyBattleBaseBuilding) then
+						-- create second encampment for Shinsplitters
+						unit = CreateUnit("unit-dwarven-town-hall", 2, {40, 10})
+						unit = CreateUnit("unit-dwarven-miner", 2, {40, 10})
+						unit = CreateUnit("unit-dwarven-miner", 2, {40, 10})
+						unit = CreateUnit("unit-dwarven-miner", 2, {40, 10})
+						unit = CreateUnit("unit-dwarven-miner", 2, {40, 10})
+						unit = CreateUnit("unit-dwarven-miner", 2, {40, 10})
+					end
+					if (GrandStrategy == false) then
+						unit = CreateUnit("unit-dwarven-thane", 2, {40, 10}) -- Glinan
+						SetUnitVariable(unit, "Active", false)
+					end
+
+					if (GrandStrategy == false or GrandStrategyBattleBaseBuilding) then
+						-- create third encampment for Shinsplitters
+						unit = CreateUnit("unit-dwarven-town-hall", 2, {60, 60})
+						unit = CreateUnit("unit-dwarven-miner", 2, {60, 60})
+						unit = CreateUnit("unit-dwarven-miner", 2, {60, 60})
+						unit = CreateUnit("unit-dwarven-miner", 2, {60, 60})
+						unit = CreateUnit("unit-dwarven-miner", 2, {60, 60})
+						unit = CreateUnit("unit-dwarven-miner", 2, {60, 60})
+					end
+					if (GrandStrategy == false) then
+						unit = CreateUnit("unit-dwarven-thane", 2, {60, 60}) -- Kalnar
+						SetUnitVariable(unit, "Active", false)
 					end
 					
-					-- if in grand strategy mode, give the province to the Shinsplitters
-					AcquireProvince(WorldMapProvinces.ShorbearHills, "Shinsplitter Clan")
+					if (GrandStrategyEventMap) then
+						-- Shinsplitters
+						SetStartView(2, 40, 10)
+						CreateProvinceUnits("Southern Tunnels", 2, 4)
+						if (GetNumUnitsAt(GetFactionPlayer("Shinsplitter Clan"), "unit-dwarven-thane", {0, 0}, {256, 256}) < 1 and GetProvinceUnitQuantity("Southern Tunnels", "unit-dwarven-thane") >= 1) then
+							unit = CreateUnit("unit-dwarven-thane", 2, {40, 10})
+							SetUnitVariable(unit, "Active", false)
+							ChangeProvinceUnitQuantity("Southern Tunnels", "unit-dwarven-thane", -1)
+						end
+						
+						-- if in grand strategy mode, give the province to the Shinsplitters
+						AcquireProvince(WorldMapProvinces.ShorbearHills, "Shinsplitter Clan")
+					end
 				end
 				
 				

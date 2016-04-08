@@ -85,8 +85,6 @@ if (LoadedGame == false) then
 	elseif (GrandStrategyEventMap) then
 		SetAiType(0, "grand-strategy-battle")
 		SetAiType(1, "grand-strategy-battle")
-		SetPlayerData(0, "Allow", "unit-teuton-worker", "F") -- don't allow the player to build/train units if in grand strategy mode
-		SetPlayerData(1, "Allow", "unit-germanic-worker", "F")
 
 		local units_to_be_created = {}
 		

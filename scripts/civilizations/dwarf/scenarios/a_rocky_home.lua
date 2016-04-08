@@ -26,7 +26,9 @@
 --
 
 if (LoadedGame == false) then
-	SetPlayerData(0, "Allow", "upgrade-dwarven-runewriting", "F")
+	if not (GrandStrategy) then
+		SetPlayerData(0, "Allow", "upgrade-dwarven-runewriting", "F")
+	end
 	SetPlayerData(0, "Resources", "gold", 0)
 	SetPlayerData(0, "Resources", "lumber", 0)
 	SetPlayerData(0, "Resources", "stone", 0)
@@ -53,9 +55,11 @@ if (LoadedGame == false) then
 			SetUnitVariable(unit, "Character", "Durin")
 		end
 		
-		unit = OldCreateUnit("unit-brising-miner", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		unit = OldCreateUnit("unit-brising-miner", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		unit = OldCreateUnit("unit-brising-miner", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		if (GrandStrategyBattleBaseBuilding == false) then
+			unit = OldCreateUnit("unit-brising-miner", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+			unit = OldCreateUnit("unit-brising-miner", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+			unit = OldCreateUnit("unit-brising-miner", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		end
 	end
 
 	SetPlayerData(0, "Allow", "unit-dwarven-town-hall", "F")

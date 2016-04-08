@@ -2071,12 +2071,15 @@ function GenerateRandomMap(arg)
 
 		CreateDecorations()	
 
-		if (GrandStrategy == false) then
+		if (GrandStrategy == false or GrandStrategyBattleBaseBuilding) then
 			if (arg.WorkerQuantity) then
 				for i=0,14 do
 					if (Map.Info.PlayerType[i] == PlayerPerson or Map.Info.PlayerType[i] == PlayerComputer) then
 						for j=1,arg.WorkerQuantity do
 							unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
+							if (GrandStrategy and GrandStrategyBattleBaseBuilding) then
+								SetUnitVariable(unit, "Starting", false)
+							end
 						end
 					end
 				end
@@ -2730,7 +2733,7 @@ function FindAppropriatePlayerSpawnPoint(min_x, max_x, min_y, max_y)
 			local gold_mine_quantity = GetNumUnitsAt(15, "unit-gold-deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(15, "unit-silver-deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) + GetNumUnitsAt(15, "unit-copper-deposit", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8})
 			local close_gold_mine_quantity = GetNumUnitsAt(15, "unit-gold-deposit", {RandomX - 6, RandomY - 6}, {RandomX + 6, RandomY + 6}) + GetNumUnitsAt(15, "unit-silver-deposit", {RandomX - 6, RandomY - 6}, {RandomX + 6, RandomY + 6}) + GetNumUnitsAt(15, "unit-copper-deposit", {RandomX - 6, RandomY - 6}, {RandomX + 6, RandomY + 6})
 
-			if (unit_quantity < 1 and (gold_mine_quantity >= 1 or GrandStrategy) and close_gold_mine_quantity < 1) then
+			if (unit_quantity < 1 and (gold_mine_quantity >= 1 or (GrandStrategy and GrandStrategyBattleBaseBuilding == false)) and close_gold_mine_quantity < 1) then
 				location_found = true
 			end
 		end
@@ -3762,7 +3765,7 @@ function GenerateTown(layout, town_player, town_player_civilization, town_player
 	ApplyRawTiles()
 	CleanRawTiles()
 	
-	if (GrandStrategy == false) then
+	if (GrandStrategy == false or GrandStrategyBattleBaseBuilding) then
 		CreateGoldSpots((Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight - 3, false)
 		
 		unit = CreateUnit("unit-germanic-worker", town_player, {Players[town_player].StartPos.x, Players[town_player].StartPos.y})
@@ -3968,7 +3971,7 @@ function GenerateValley(direction, lake_quantity, mixed_civilizations)
 		end
 	end
 
-	if (GrandStrategy == false) then
+	if (GrandStrategy == false or GrandStrategyBattleBaseBuilding) then
 		CreateGoldSpots((Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight - 3, symmetric)
 
 		if (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "cave") then
@@ -5929,16 +5932,17 @@ function GenerateCave(town_halls, symmetric)
 	end
 
 	
-	if (GrandStrategy == false) then
+	if (GrandStrategy == false or GrandStrategyBattleBaseBuilding) then
 		CreateNeutralBuildings("unit-mercenary-camp", 1, 0, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight - 3, symmetric)
 
 		for i=0,14 do
 			if (Map.Info.PlayerType[i] == PlayerPerson or Map.Info.PlayerType[i] == PlayerComputer) then
-				unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
-				unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
-				unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
-				unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
-				unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
+				for j=1,5 do
+					unit = CreateUnit("unit-germanic-worker", i, {Players[i].StartPos.x, Players[i].StartPos.y})
+					if (GrandStrategy and GrandStrategyBattleBaseBuilding) then
+						SetUnitVariable(unit, "Starting", false)
+					end
+				end
 			end
 		end
 	end

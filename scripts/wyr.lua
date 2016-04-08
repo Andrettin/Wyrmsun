@@ -62,10 +62,11 @@ function CreateUnit(unittype, player, pos)
 		or (
 			GrandStrategy
 			and GrandStrategyEventMap == false
+			and GrandStrategyBattleBaseBuilding == false
 			and (unittype == "unit-gold-deposit" or unittype == "unit-silver-deposit" or unittype == "unit-copper-deposit" or unittype == "unit-coal-mine" or unittype == "unit-mercenary-camp" or (player ~= 15 and Players[player].Type ~= PlayerNeutral))
 		)
 	) then
-		return
+		return nil
 	end
 
 	-- Leave neutral the way it is
@@ -171,7 +172,7 @@ function SetPlayerData(player, data, arg1, arg2)
 		elseif (GameSettings.Resources == 3) then
 			res = {10000, 10000, 10000, 0, 10000, 0, 0, 0, 0, 0, 0, 0, 0}
 		end
-		if (GrandStrategy == false or GrandStrategyEventMap) then
+		if (GrandStrategy == false or GrandStrategyEventMap or GrandStrategyBattleBaseBuilding) then
 			arg2 = res[GetResourceIdByName(arg1)]
 		else
 			arg2 = 0
