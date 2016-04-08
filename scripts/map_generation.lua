@@ -1728,9 +1728,9 @@ function CreatePlayers(min_x, max_x, min_y, max_y, mixed_civilizations, town_hal
 					end
 
 					SetPlayerData(i, "Resources", "gold", 10000)
-					SetPlayerData(i, "Resources", "lumber", 3000)
-					SetPlayerData(i, "Resources", "stone", 1000)
-					SetPlayerData(i, "Resources", "oil", 1000)
+					SetPlayerData(i, "Resources", "lumber", 6000)
+					SetPlayerData(i, "Resources", "stone", 2000)
+--					SetPlayerData(i, "Resources", "oil", 2000)
 					SetAiType(i, "land-attack")
 				end
 			end
@@ -2350,11 +2350,11 @@ function ApplyRawTiles()
 			elseif (RawTile(x, y) == "Tree") then
 				solid_slot = 7
 				mixed_slot = 7
-				value = 100
+				value = 500
 			elseif (RawTile(x, y) == "Rock") then
 				solid_slot = 8
 				mixed_slot = 4
-				value = 100
+				value = 500
 			end
 			if (RawTile(x, y) == "Water" or RawTile(x, y) == "Dark-Water" or RawTile(x, y) == "Dark-Rough" or RawTile(x, y) == "Land" or RawTile(x, y) == "Dark-Land" or RawTile(x, y) == "Tree" or RawTile(x, y) == "Rock") then
 				if (mixed_slot ~= 0 and GetArrayIncludes(non_transitional_tile_types, RawTile(x, y + 1)) == false and GetArrayIncludes(non_transitional_tile_types, RawTile(x, y - 1)) and GetArrayIncludes(non_transitional_tile_types, RawTile(x - 1, y)) and GetArrayIncludes(non_transitional_tile_types, RawTile(x + 1, y)) and GetArrayIncludes(non_transitional_tile_types, RawTile(x - 1, y - 1)) and GetArrayIncludes(non_transitional_tile_types, RawTile(x + 1, y - 1))) then

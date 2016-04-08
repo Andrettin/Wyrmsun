@@ -111,7 +111,7 @@ AddTrigger(
 						{"~!Continue"},
 						{function(s)
 							AddPlayerObjective(player, "- Kill 8 Yales")
-							AddPlayerObjective(player, "- Gather 400 lumber and 200 stone")
+							AddPlayerObjective(player, "- Gather 800 lumber and 400 stone")
 							AddPlayerObjective(player, "- Modsognir must survive")
 							AddPlayerObjective(player, "- Durin must survive")
 						end}
@@ -150,7 +150,7 @@ AddTrigger(
 			player,
 			{"~!Continue"},
 			{function(s)
-				if (player == GetThisPlayer() and GetPlayerData(GetThisPlayer(), "Resources", "lumber") >= 400 and GetPlayerData(GetThisPlayer(), "Resources", "stone") >= 200) then
+				if (player == GetThisPlayer() and GetPlayerData(GetThisPlayer(), "Resources", "lumber") >= 800 and GetPlayerData(GetThisPlayer(), "Resources", "stone") >= 400) then
 					if (GrandStrategy == false) then
 						if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "A Rocky Home") == false) then
 							table.insert(wyr.preferences.QuestsCompleted, "A Rocky Home")
@@ -170,7 +170,7 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if (PlayerHasObjective(GetThisPlayer(), "- Gather 400 lumber and 200 stone") and GetPlayerData(GetThisPlayer(), "Resources", "lumber") >= 400 and GetPlayerData(GetThisPlayer(), "Resources", "stone") >= 200) then
+		if (PlayerHasObjective(GetThisPlayer(), "- Gather 800 lumber and 400 stone") and GetPlayerData(GetThisPlayer(), "Resources", "lumber") >= 800 and GetPlayerData(GetThisPlayer(), "Resources", "stone") >= 400) then
 			player = GetThisPlayer()
 			return true
 		end

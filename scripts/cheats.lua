@@ -41,10 +41,10 @@ function HandleCheats(str)
   elseif (str == "otters ransom") then
 	for i = 0,PlayerMax - 1 do
 		SetPlayerData(i, "Resources", "gold", GetPlayerData(i, "Resources", "gold") + 12000)
-		SetPlayerData(i, "Resources", "lumber", GetPlayerData(i, "Resources", "lumber") + 5000)
-		SetPlayerData(i, "Resources", "oil", GetPlayerData(i, "Resources", "oil") + 5000)
-		SetPlayerData(i, "Resources", "stone", GetPlayerData(i, "Resources", "stone") + 5000)
-		SetPlayerData(i, "Resources", "coal", GetPlayerData(i, "Resources", "coal") + 5000)
+		SetPlayerData(i, "Resources", "lumber", GetPlayerData(i, "Resources", "lumber") + 10000)
+		SetPlayerData(i, "Resources", "oil", GetPlayerData(i, "Resources", "oil") + 10000)
+		SetPlayerData(i, "Resources", "stone", GetPlayerData(i, "Resources", "stone") + 10000)
+		SetPlayerData(i, "Resources", "coal", GetPlayerData(i, "Resources", "coal") + 10000)
 	end
 	AddMessage("Resources increased!")
 

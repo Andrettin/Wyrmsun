@@ -27,12 +27,12 @@
 if (LoadedGame == false) then
 	SetPlayerData(0, "Faction", "Brising Clan")
 	SetPlayerData(0, "Resources", "gold", 5000)
-	SetPlayerData(0, "Resources", "lumber", 1500)
-	SetPlayerData(0, "Resources", "stone", 1000)
+	SetPlayerData(0, "Resources", "lumber", 3000)
+	SetPlayerData(0, "Resources", "stone", 2000)
 	SetPlayerData(1, "Name", "Grafvitnir")
 	SetPlayerData(1, "Resources", "gold", 5000)
-	SetPlayerData(1, "Resources", "lumber", 1500)
-	SetPlayerData(1, "Resources", "stone", 1000)
+	SetPlayerData(1, "Resources", "lumber", 3000)
+	SetPlayerData(1, "Resources", "stone", 2000)
 	
 	if not (GrandStrategy) then
 		unit = CreateUnit("unit-dwarven-axefighter", 0, {Players[0].StartPos.x, Players[0].StartPos.y})

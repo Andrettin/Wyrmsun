@@ -61,15 +61,23 @@ https://github.com/Andrettin/Wyrmsun
 - 2.1.4
 -----------------------------------------------------------------------
 
+* Buildings
+- Increased building lumber and stone costs to compensate for the increase in lumber and stone gathering rates.
+
 * Factions
 - Added Essex, Middle Anglia and Northumbria (Teuton polities, they use Old English as their language).
 
 * Grand Strategy
 - Added Lincoln province.
 
+* Terrain
+- Tree and rock tiles now contain 500 of their respective resource, instead of 100.
+
 * Units
 - The Teuton archer now has its own portrait (icon by Mrmo Tarius and Jinn) and is now named "Schutze".
 - Added Dwarven Explorer, an experience upgrade of the Dwarven Pathfinder (icon by Jinn).
+- Workers now gather lumber and stone at a speed more comparable to that at which they gather precious metals.
+- Increased unit lumber and stone costs to compensate for the increase in lumber and stone gathering rates.
 
 -----------------------------------------------------------------------
 - 2.1.3

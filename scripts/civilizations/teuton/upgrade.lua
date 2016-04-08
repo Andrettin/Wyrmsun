@@ -30,8 +30,8 @@ local upgrades = {
 		_("As siegecrafting techniques develop, catapult rocks made out of sandstone are replaced by ones made of granite, increasing the damage catapults can cause.\n\nEffect: +15 Damage for Catapults."),
 		"",
 		"",
-		{   250,   900,     0,     0,     0,   300,     0,     0},
-		{   250,   900,     0,     0,     0,   300,     0,  1500},
+		{   250,   1000,     0,     0,     0,   500,     0,     0},
+		{   250,   1000,     0,     0,     0,   500,     0,  1500},
 		1
 	},
 	{"upgrade-teuton-catapult-projectile-2", _("Catapult Metal Projectile"), "icon-catapult-projectile-3", "siege-projectile-2",

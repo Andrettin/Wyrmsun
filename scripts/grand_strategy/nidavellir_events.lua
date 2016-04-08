@@ -62,16 +62,16 @@ local NidavellirEvents = {
 					if (GameResult == GameVictory) then
 						ChangeFactionResource("dwarf", "Brising Clan", "prestige", 5) -- prestige for successfully settling Svarinshaug
 						ChangeFactionResource("dwarf", "Brising Clan", "gold", 800) -- food gained from the yales
-						ChangeFactionResource("dwarf", "Brising Clan", "lumber", 400) -- lumber gained from the mission
-						ChangeFactionResource("dwarf", "Brising Clan", "stone", 200) -- stone gained from the mission
+						ChangeFactionResource("dwarf", "Brising Clan", "lumber", 800) -- lumber gained from the mission
+						ChangeFactionResource("dwarf", "Brising Clan", "stone", 400) -- stone gained from the mission
 					elseif (GameResult == GameDefeat) then
 						AcquireProvince(WorldMapProvinces.Svarinshaug, "")
 					end
 				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "Brising Clan" or wyr.preferences.AutomaticBattles)) then
 					ChangeFactionResource("dwarf", "Brising Clan", "prestige", 5) -- prestige for successfully settling Svarinshaug
 					ChangeFactionResource("dwarf", "Brising Clan", "gold", 800) -- food gained from the yales
-					ChangeFactionResource("dwarf", "Brising Clan", "lumber", 400) -- lumber gained from the mission
-					ChangeFactionResource("dwarf", "Brising Clan", "stone", 200) -- stone gained from the mission
+					ChangeFactionResource("dwarf", "Brising Clan", "lumber", 800) -- lumber gained from the mission
+					ChangeFactionResource("dwarf", "Brising Clan", "stone", 400) -- stone gained from the mission
 					if (GrandStrategyFaction.Name == EventFaction.Name) then
 						CenterGrandStrategyMapOnTile(WorldMapProvinces.Svarinshaug.SettlementLocation[1], WorldMapProvinces.Svarinshaug.SettlementLocation[2])
 						GenericDialog("A Rocky Home", "We have successfully hunted enough yales and gathered enough lumber and stone to survive our early days in Svarinshaug.")

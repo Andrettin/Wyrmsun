@@ -31,8 +31,8 @@ local upgrades = {
 		_("While the earliest dwarven ballista bolts had been little more than tree trunks cut to have more penetrating effect, these bolts exhibit a broad metal head capable of slicing enemy foes and structures alike.\n\nEffect: +15 Damage for Ballistas."),
 		"",
 		"",
-		{   250,   900,   300,     0,     0,     0,     0,     0},
-		{   250,   900,   300,     0,     0,     0,     0,  1500},
+		{   250,   1000,   500,     0,     0,     0,     0,     0},
+		{   250,   1000,   500,     0,     0,     0,     0,  1500},
 		1
 	},
 	{
@@ -40,8 +40,8 @@ local upgrades = {
 		_("Although the slicing power of broadhead ballista bolts was a great improvement over previous bolts, it was still far from ideal. Th penetrating ballista bolts instead do not slice their targets, but concentrate their might on a single point, maximizing puncturing power and thus their capability to breach enemy walls.\n\nEffect: +15 Damage for Ballistas."),
 		"",
 		"",
-		{   250,  2400,   800,     0,     0,     0,     0,     0},
-		{   250,  2400,   800,     0,     0,     0,     0,  4000},
+		{   250,  3000,   1000,     0,     0,     0,     0,     0},
+		{   250,  3000,   1000,     0,     0,     0,     0,  4000},
 		1
 	}
 }
@@ -159,8 +159,8 @@ DefineUpgrade("upgrade-dwarven-masonry", {
 	Parent = "upgrade-masonry",
 	Civilization = "dwarf",
 	Description = _("Masonry is the craft of building structures from blocks, which are bound together with mortar.\n\nEffect: +20% Hit Points and +5 Armor for buildings, and allows Sentry Towers to be upgraded to Guard Towers and Mead Halls to Bastions."),
-	Costs = {"time", 250, "gold", 900, "lumber", 375, "stone", 375},
-	GrandStrategyCosts = {"time", 250, "gold", 900, "lumber", 375, "stone", 375, "research", 2400},
+	Costs = {"time", 250, "gold", 900, "lumber", 750, "stone", 750},
+	GrandStrategyCosts = {"time", 250, "gold", 900, "lumber", 750, "stone", 750, "research", 2400},
 	TechnologyPointCost = 1
 })
 

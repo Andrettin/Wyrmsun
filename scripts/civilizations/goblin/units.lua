@@ -300,7 +300,7 @@ DefineUnitType("unit-goblin-glider", { Name = _("Glider"),
 	DefaultEquipment = {
 		{"boots", "unit-boots"}
 	},
-	Costs = {"time", 65, "gold", 500, "lumber", 100},
+	Costs = {"time", 65, "gold", 500, "lumber", 300},
 	NeutralMinimapColor = {192, 192, 192},
 	Intelligence = 11,
 	Speed = 14,
@@ -363,7 +363,7 @@ DefineUnitType("unit-goblin-farm", { Name = _("Farm"),
 	Shadow = {"file", "goblin/buildings/farm_shadow.png", "size", {64, 64}},
 	Icon = "icon-goblin-farm",
 	HitPoints = 167, -- 200 with masonry
-	Costs = {"time", 80, "gold", 400, "lumber", 200},
+	Costs = {"time", 80, "gold", 400, "lumber", 600},
 	Sounds = {
 		"help", "basic-goblin-voices-help-town"
 	}
