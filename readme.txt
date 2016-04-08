@@ -79,6 +79,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added Dwarven Explorer, an experience upgrade of the Dwarven Pathfinder (icon by Jinn).
 - Workers now gather lumber and stone at a speed more comparable to that at which they gather precious metals.
 - Increased unit lumber and stone costs to compensate for the increase in lumber and stone gathering rates.
+- Spearmen now have 75 mana.
 
 -----------------------------------------------------------------------
 - 2.1.3
