@@ -623,16 +623,15 @@ DefineUnitType("unit-frank-spearman", { Name = _("Speerkampfer"),
 	}
 } )
 
-DefineUnitType("unit-teuton-archer", { Name = _("Skutan"),
+DefineUnitType("unit-teuton-archer", { Name = _("Schutze"),
 	Parent = "unit-template-archer",
 	Civilization = "teuton",
---	Description = _("These warriors specialize in the art of archery, which they employ against their enemies with great lethality."),
---	Quote = _("\"Within two gazed | in each other's eyes, / Fathir and Mothir, | and played with their fingers; / There sat the house-lord, | wound strings for the bow, / Shafts he fashioned, | and bows he shaped.\" - Rigsthula"),
---	Background = _("\"Skutan\" is the Proto-Germanic word for \"archer\"."),
+	Description = _("Teuton archers are a perilous lot. They excel at ambushing enemies in the forests of their homelands."),
+	Background = _("\"Schütze\" is the German word for \"archer\"."),
 	Image = {"file", "human/units/human_body_archer.png", "size", {72, 72}},
 	Shadow = {"file", "human/units/human_shadow_archer.png", "size", {72, 72}},
 	LayerImages = {
-		{"layer", "hair", "file", "human/units/red_hair_archer.png"},
+		{"layer", "hair", "file", "human/units/blond_hair_archer.png"},
 		{"layer", "left-arm", "file", "human/units/human_left_arm_archer.png"},
 		{"layer", "right-arm", "file", "human/units/human_right_arm_archer.png"},
 		{"layer", "clothing", "file", "germanic/units/coat_archer.png"},
@@ -644,7 +643,7 @@ DefineUnitType("unit-teuton-archer", { Name = _("Skutan"),
 		{"layer", "helmet", "file", "germanic/units/wool_hat_archer.png"},
 		{"layer", "backpack", "file", "human/units/quiver.png"}
 	},
-	Animations = "animations-goblin-archer", Icon = "icon-germanic-archer",
+	Animations = "animations-goblin-archer", Icon = "icon-teuton-archer",
 	DefaultEquipment = {
 		{"boots", "unit-boots"},
 		{"arrows", "unit-arrows"}
@@ -656,26 +655,9 @@ DefineUnitType("unit-teuton-archer", { Name = _("Skutan"),
 	WeaponClasses = {"bow"},
 	PierceDamage = true,
 	ButtonKey = "s",
-	ButtonHint = _("Train ~!Skutan"),
+	ButtonHint = _("Train ~!Schutze"),
 	AiDrops = {"unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows", "unit-boots", "unit-cheese", "unit-carrots", "unit-potion-of-healing"},
 	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-flaming", "upgrade-item-prefix-glacial", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-penetrating", "upgrade-item-prefix-quenching", "upgrade-item-prefix-vicious", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-the-serpent", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-the-snail", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-thorns", "upgrade-item-suffix-of-trickery", "upgrade-item-suffix-of-victory"}, -- allow more affixes than normal for the unit's level, to compensate for the unit not being upgradeable
-	Variations = {
-		{
-			"variation-id", "red-hair",
-			"upgrade-forbidden", "upgrade-old"
-		},
-		{
-			"variation-id", "gray-hair",
-			"layer-file", "hair", "human/units/gray_hair_archer.png",
-			"icon", "icon-germanic-archer-gray-hair"
-		},
-		{
-			"variation-id", "blond-hair",
-			"layer-file", "hair", "human/units/blond_hair_archer.png",
-			"icon", "icon-germanic-archer-blond-hair",
-			"upgrade-forbidden", "upgrade-old"
-		}
-	},
 	Sounds = {
 		"selected", "basic-teuton-voices-selected-group",
 		"acknowledge", "basic-teuton-voices-acknowledge",

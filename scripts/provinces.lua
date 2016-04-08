@@ -1218,11 +1218,13 @@ DefineProvince("Durham", {
 	SettlementTerrain = "Plains",
 	Coastal = true,
 	Claims = {
-		"teuton", "England"
+		"teuton", "England",
+		"teuton", "Northumbria"
 	},
 	HistoricalOwners = {
 		43, "latin", "Rome", -- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		526, "teuton", "Angle Tribe", -- by 526 AD the Anglo-Saxons had become masters of most of Roman Britannia; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+		654, "teuton", "Northumbria", -- Northumbria unified by Oswiu of Bernicia in 654
 		1560, "teuton", "England" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalCultures = {
@@ -2205,6 +2207,8 @@ DefineProvince("Lincoln", {
 		43, "latin", "Rome", -- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		526, "teuton", "Angle Tribe", -- by 526 AD the Anglo-Saxons had become masters of most of Roman Britannia; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 		654, "teuton", "Middle Anglia", -- Peada was king of the Middle Angles when Penda fell; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 84.
+		656, "teuton", "Northumbria", -- After the murder of Peada in 656, Middle Anglia became a province of the Kingdom of Northumbria; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 84.
+		657, "teuton", "Mercia", -- Wulfhere proclaimed Mercian king in 657, ending Northumbrian dominion (apparently from the source not only in Mercia but also in Middle Anglia); Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 84.
 		1560, "teuton", "England" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalClaims = {
@@ -2516,6 +2520,8 @@ DefineProvince("Mercia", {
 		526, "teuton", "Angle Tribe", -- by 526 AD the Anglo-Saxons had become masters of most of Roman Britannia; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 		632, "teuton", "Mercia", -- Penda became king of Mercia in 632 after the demise of Edwin of Deira; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 75, 80-81, 83-84.
 		654, "teuton", "Middle Anglia", -- Peada, king of the Middle Angles, ruled over the Mercian lands south of the Trent after Penda fell; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 84.
+		656, "teuton", "Northumbria", -- After the murder of Peada in 656, Mercia became a province of the Kingdom of Northumbria; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 84.
+		657, "teuton", "Mercia", -- Wulfhere proclaimed Mercian king in 657, ending Northumbrian dominion; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 84.
 		1560, "teuton", "England" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalClaims = {
@@ -2743,12 +2749,14 @@ DefineProvince("Northumberland", {
 	Coastal = true,
 	Claims = {
 		"teuton", "Bernice Tribe", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
-		"teuton", "England"
+		"teuton", "England",
+		"teuton", "Northumbria"
 	},
 	HistoricalOwners = {
 		80, "latin", "Rome", -- The area between the Wall of Antoninus (or Severus) and Hadrian's Wall was acquired by Rome in 80 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		526, "teuton", "Bernice Tribe", -- by 526 AD the Anglo-Saxons had become masters of most of Roman Britannia; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 		547, "teuton", "Bernicia", -- the Kingdom of Bernicia was founded in 547 AD; in 600 AD, the Bernice people (who were Anglians) were centered in Bamburgh; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 74-75.
+		654, "teuton", "Northumbria", -- Northumbria unified by Oswiu of Bernicia in 654
 		1560, "teuton", "England" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalClaims = {
@@ -4093,12 +4101,14 @@ DefineProvince("York", {
 	Coastal = true,
 	Claims = {
 		"teuton", "Dere Tribe", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
-		"teuton", "England"
+		"teuton", "England",
+		"teuton", "Northumbria"
 	},
 	HistoricalOwners = {
 		43, "latin", "Rome", -- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		500, "teuton", "Dere Tribe", -- The Dere (a collection of Anglian peoples) were in possession of York in 500 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
 		588, "teuton", "Bernicia", -- according to tradition, Æthelric of Bernicia acquired the kingdom of Deira upon its king Ælle's death in 588 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75.
+		654, "teuton", "Northumbria", -- Northumbria unified by Oswiu of Bernicia in 654
 		1560, "teuton", "England" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalClaims = {

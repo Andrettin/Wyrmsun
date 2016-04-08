@@ -64,7 +64,7 @@ DefineFaction("Saxon Tribe", {
 	Type = "tribe",
 	Language = "old-saxon",
 	Colors = {"pink"},
-	DevelopsTo = {"Saxony", "Brandenburg", "Essex", "Wessex", "England", "Prussia", "Scotland"},
+	DevelopsTo = {"Saxony", "Brandenburg", "Essex", "Wessex", "England", "Prussia"},
 	FactionUpgrade = "upgrade-saxon-tribe-faction",
 	HistoricalFactionDerivations = {-264, "germanic", "Skeldung Tribe"},
 	HistoricalTechnologies = {
@@ -109,7 +109,7 @@ DefineFaction("Angle Tribe", {
 	Type = "tribe",
 	Language = "old-english",
 	Colors = {"white"},
-	DevelopsTo = {"England", "Bernicia", "Deira", "East Anglia", "Mercia", "Middle Anglia", "Scotland"},
+	DevelopsTo = {"England", "Bernicia", "Deira", "East Anglia", "Mercia", "Middle Anglia", "Northumbria", "Scotland"},
 	FactionUpgrade = "upgrade-angle-tribe-faction",
 	HistoricalFactionDerivations = {-264, "germanic", "Skeldung Tribe"},
 	HistoricalTechnologies = {

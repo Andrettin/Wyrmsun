@@ -62,10 +62,14 @@ https://github.com/Andrettin/Wyrmsun
 -----------------------------------------------------------------------
 
 * Factions
-- Added Essex and Middle Anglia (Teuton polities, they use Old English as their language).
+- Added Essex, Middle Anglia and Northumbria (Teuton polities, they use Old English as their language).
 
 * Grand Strategy
 - Added Lincoln province.
+
+* Units
+- The Teuton archer now has its own portrait (icon by Mrmo Tarius and Jinn) and is now named "Schutze".
+- Added Dwarven Explorer, an experience upgrade of the Dwarven Pathfinder (icon by Jinn).
 
 -----------------------------------------------------------------------
 - 2.1.3

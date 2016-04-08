@@ -59,7 +59,7 @@ Units = {
 	"unit-brising-miner", "unit-brising-militia",
 	"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
 	"unit-dwarven-guard",
-	"unit-dwarven-scout", "unit-dwarven-pathfinder",
+	"unit-dwarven-scout", "unit-dwarven-pathfinder", "unit-dwarven-explorer",
 	"unit-dwarven-yale-rider", "unit-dwarven-ballista",
 	"unit-dwarven-gryphon-rider",
 	"unit-dwarven-transport-ship",
@@ -3675,7 +3675,20 @@ DefineUnitType("unit-template-veteran-shooter", { Name = _("Veteran Shooter"),
 	Points = 90,
 	Level = 2,
 	AiDrops = {"unit-amulet", "unit-ring"},
-	DropAffixes = {"upgrade-item-prefix-impregnable", "upgrade-item-prefix-penetrating", "upgrade-item-prefix-vicious", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-thorns"}
+	DropAffixes = {"upgrade-item-prefix-penetrating", "upgrade-item-prefix-vicious", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-speed"}
+} )
+
+DefineUnitType("unit-template-heroic-shooter", { Name = _("Heroic Shooter"),
+	Parent = "unit-template-veteran-shooter",
+	Class = "heroic-shooter",
+	Costs = {"time", 140, "gold", 1000, "lumber", 100},
+	Intelligence = 13,
+	HitPoints = 60,
+	BasicDamage = 11,
+	Accuracy = 12,
+	Points = 120,
+	Level = 3,
+	DropAffixes = {"upgrade-item-prefix-impregnable", "upgrade-item-suffix-of-thorns"}
 } )
 
 DefineUnitType("unit-template-thief", { Name = _("Thief"),

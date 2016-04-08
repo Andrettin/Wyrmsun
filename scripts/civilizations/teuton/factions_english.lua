@@ -31,7 +31,7 @@ DefineFaction("Bernice Tribe", { -- Source: Frank Stenton, "Anglo-Saxon England"
 	Type = "tribe",
 	Language = "old-english",
 	Colors = {"brown"},
-	DevelopsTo = {"Bernicia", "England", "Scotland"},
+	DevelopsTo = {"Bernicia", "Northumbria", "England", "Scotland"},
 	FactionUpgrade = "upgrade-bernice-tribe-faction",
 	Description = "The Bernice were an Anglian people who established themselves on the Northumbrian coast, eventually managing to conquer the surrounding Celtic territories.",
 	HistoricalFactionDerivations = {526, "teuton", "Angle Tribe"}
@@ -43,7 +43,7 @@ DefineFaction("Dere Tribe", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	Type = "tribe",
 	Language = "old-english",
 	Colors = {"blue"},
-	DevelopsTo = {"Deira", "England", "Scotland"},
+	DevelopsTo = {"Deira", "Northumbria", "England", "Scotland"},
 	FactionUpgrade = "upgrade-bernice-tribe-faction",
 	Description = "The Dere were a group of Anglian peoples, who originally dwelled in the central and eastern parts of modern Yorkshire. Their name comes from the British word \"deifr\" (meaning \"waters\"), likely due to their initial settlements being located at the confluence of multiple rivers into the Humber.",
 	HistoricalFactionDerivations = {500, "teuton", "Angle Tribe"} -- The Dere (a collection of Anglian peoples) were in possession of York in 500 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
@@ -56,7 +56,7 @@ DefineFaction("Bernicia", { -- Source: Frank Stenton, "Anglo-Saxon England", 197
 	Language = "old-english",
 	Colors = {"brown"},
 	DefaultTier = "kingdom",
-	DevelopsTo = {"England", "Scotland"},
+	DevelopsTo = {"Northumbria", "England", "Scotland"},
 	FactionUpgrade = "upgrade-angle-tribe-faction",
 	Description = "Bernicia was the kingdom founded by the Bernice people in Northumbria.",
 	HistoricalFactionDerivations = {547, "teuton", "Bernice Tribe"} -- the Kingdom of Bernicia was founded in 547 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75.
@@ -69,7 +69,7 @@ DefineFaction("Deira", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, 
 	Language = "old-english",
 	Colors = {"blue"},
 	DefaultTier = "kingdom",
-	DevelopsTo = {"England", "Scotland"},
+	DevelopsTo = {"Northumbria", "England", "Scotland"},
 	FactionUpgrade = "upgrade-angle-tribe-faction",
 	Description = "Deira was the kingdom founded by the Dere people in Northumbria.",
 	HistoricalFactionDerivations = {588, "teuton", "Dere Tribe"} -- according to tradition, Æthelric of Bernicia acquired the kingdom of Deira upon its king Ælle's death in 588 AD; and since their king died in this year, the kingdom existed then
@@ -131,6 +131,17 @@ DefineFaction("Middle Anglia", {
 	DevelopsTo = {"England"},
 	Description = "",
 	HistoricalFactionDerivations = {654, "teuton", "Angle Tribe"} -- Peada was king of the Middle Angles when Penda fell; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 84.
+})
+
+DefineFaction("Northumbria", {
+	Civilization = "teuton",
+	ParentFaction = "Bernicia",
+	Type = "polity",
+	Language = "old-english",
+	Colors = {"brown"},
+	DefaultTier = "kingdom",
+	DevelopsTo = {"England", "Scotland"},
+	HistoricalFactionDerivations = {654, "teuton", "Bernicia"} -- Northumbria unified by Oswiu of Bernicia in 654
 })
 
 DefineFaction("Wessex", {

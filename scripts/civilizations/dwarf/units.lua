@@ -585,6 +585,51 @@ DefineUnitType("unit-dwarven-pathfinder", { Name = _("Pathfinder"),
 	}
 } )
 
+DefineUnitType("unit-dwarven-explorer", { Name = _("Explorer"),
+	Parent = "unit-template-heroic-shooter",
+	Civilization = "dwarf",
+	Description = _("Dwarven Explorers are peerless survivalists. Using only the equipment they carry, they can range for months around the forests and mountains looking for new seams of ore and deposits of minerals. Whilst their skill in a melee is less than some other dwarves, they are unmatched with throwing axes, having practiced this skill hunting in the mountains. Their maneuverability makes them dangerous and tricky foes."),
+	Image = {"file", "dwarf/units/dwarven_scout.png", "size", {72, 72}},
+	Animations = "animations-dwarven-scout", Icon = "icon-dwarven-explorer",
+	DefaultEquipment = {
+		{"weapon", "unit-throwing-axe"},
+		{"boots", "unit-boots"}
+	},
+	BasicDamage = 12,
+	Missile = "missile-throwing-axe",
+	FireMissile = "missile-flaming-throwing-axe",
+	MaxAttackRange = 4,
+	SightRange = 6,
+	Corpse = "unit-dwarven-dead-body",
+	WeaponClasses = {"throwing-axe"},
+	HackDamage = true,
+	AiDrops = {"unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	Variations = {
+		{
+			"variation-id", "orange-hair",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"variation-id", "blond-hair",
+			"file", "dwarf/units/dwarven_scout_blond_hair.png",
+			"icon", "icon-dwarven-explorer-blond-hair",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"variation-id", "gray-hair",
+			"file", "dwarf/units/dwarven_scout_gray_hair.png",
+			"icon", "icon-dwarven-explorer-gray-hair"
+		}
+	},
+	Sounds = {
+		"selected", "basic-dwarf-voices-selected-group",
+		"acknowledge", "basic-dwarf-voices-acknowledge",
+		"attack", "basic-dwarf-voices-attack",
+		"help", "basic-dwarf-voices-help",
+		"dead", "basic-dwarf-voices-dead"
+	}
+} )
+
 DefineUnitType("unit-dwarven-yale-rider", { Name = _("Yale Rider"),
 	Parent = "unit-template-cavalry",
 	Civilization = "dwarf",

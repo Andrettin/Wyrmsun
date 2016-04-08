@@ -194,6 +194,30 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-dwarven-explorer",
+	Size = {46, 38},
+	File = "dwarf/icons/explorer.png"
+})
+
+DefineIcon({
+	Name = "icon-dwarven-explorer-black-hair",
+	Size = {46, 38},
+	File = "dwarf/icons/explorer_black_hair.png"
+})
+
+DefineIcon({
+	Name = "icon-dwarven-explorer-blond-hair",
+	Size = {46, 38},
+	File = "dwarf/icons/explorer_blond_hair.png"
+})
+
+DefineIcon({
+	Name = "icon-dwarven-explorer-gray-hair",
+	Size = {46, 38},
+	File = "dwarf/icons/explorer_gray_hair.png"
+})
+
+DefineIcon({
 	Name = "icon-dwarven-yale-rider",
 	Size = {46, 38},
 	File = "dwarf/icons/yale_rider.png"

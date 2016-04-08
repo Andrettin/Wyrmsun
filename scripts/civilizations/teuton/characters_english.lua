@@ -286,7 +286,7 @@ DefineCharacter("Eanflæd", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	-- married to Oswiu, brother of Oswald of Bernicia
 })
 
-DefineCharacter("Oswiu", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 81-84.
+DefineCharacter("Oswiu", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 81-85.
 	Name = "Oswiu",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
@@ -294,8 +294,9 @@ DefineCharacter("Oswiu", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971
 	ProvinceOfOrigin = "Northumberland",
 	Father = "Æthelfrith", -- he was a brother of Oswald's, so presumably also of Eanfrith's, and as such likely also a son of Æthelfrith
 	Year = 641,
+	DeathYear = 670,
 	HistoricalRulerships = {
-		641, 0, "teuton", "Bernicia" -- became king of Bernicia on the death of his brother Oswald
+		641, 670, "teuton", "Bernicia" -- became king of Bernicia on the death of his brother Oswald
 	}
 	-- married to Eanflæd, daughter of Edwin of Deira
 	-- fought an won against Penda in battle of the Winwæd (a stream, somewhere around Leeds)
@@ -391,12 +392,30 @@ DefineCharacter("Peada", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971
 	ProvinceOfOrigin = "Mercia", -- presumably, since his father was ruler of that realm
 	Father = "Penda",
 	Year = 654, -- was given the Mercian territories south of the Trent after Penda's fall, at which point he was already king of the Middle Angles
-	DeathYear = 656, -- murdered
+	DeathYear = 656, -- murdered in the spring of 656
 	ViolentDeath = true,
 	HistoricalRulerships = {
 		654, 656, "teuton", "Middle Anglia"
 	}
 	-- married the daughter of Oswiu of Bernicia
+})
+
+DefineCharacter("Wulfhere", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 84-85.
+	Name = "Wulfhere",
+	NameElements = {
+		"compound", "prefix", "old-english", "noun", "Wulf", -- presumably
+--		"compound", "suffix", "old-english", -- ?
+	},
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "teuton",
+	ProvinceOfOrigin = "Mercia",
+	Father = "Penda",
+	Year = 657, -- beginning of reign
+	HistoricalRulerships = {
+		657, 0, "teuton", "Mercia" -- became king of Mercia in 657
+	}
+	-- became overlord of the kings of Essex in 665
 })
 
 DefineCharacter("Ethelred", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 127.

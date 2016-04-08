@@ -138,7 +138,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-sharp-throwing-axe",
 	Action = "research", Value = "upgrade-dwarven-sharp-throwing-axe",
 	Allowed = "check-single-research",
 	Key = "t", Hint = _("Research Sharp ~!Throwing Axe"), Popup = "popup-research",
-	Description = _("+2 Damage for Scouts, Pathfinders and Gryphon Riders."),
+	Description = _("+2 Damage for Scouts, Pathfinders, Explorers and Gryphon Riders."),
 	ForUnit = {"unit-dwarven-lumber-mill"}
 } )
 
@@ -146,7 +146,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-bearded-throwing-axe",
 	Action = "research", Value = "upgrade-dwarven-bearded-throwing-axe",
 	Allowed = "check-single-research",
 	Key = "t", Hint = _("~!Research Bearded ~!Throwing Axe"), Popup = "popup-research",
-	Description = _("+1 Damage for Scouts, Pathfinders and Gryphon Riders."),
+	Description = _("+1 Damage for Scouts, Pathfinders, Explorers and Gryphon Riders."),
 	ForUnit = {"unit-dwarven-lumber-mill"}
 } )
 
@@ -203,7 +203,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-norse-runewriting",
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-cauldron",
 	Action = "research", Value = "upgrade-dwarven-alchemy",
 	Allowed = "check-single-research",
-	Description = _("+1 Fire Damage for Scouts, Pathfinders and Gryphon Riders, +5 Fire Damage for Ballistas."),
+	Description = _("+1 Fire Damage for Scouts, Pathfinders, Explorers and Gryphon Riders, +5 Fire Damage for Ballistas."),
 	Key = "a", Hint = _("Research ~!Alchemy"), Popup = "popup-research",
 	ForUnit = {"unit-dwarven-stronghold"}
 } )
@@ -413,6 +413,27 @@ DefineButton( { Pos = 1, Level = 1, Icon = "icon-dwarven-pathfinder-gray-hair",
 	Allowed = "check-unit-variable", AllowArg = {"Variation", "Value", "==", "5"},
 	Key = "u", Hint = _("~!Upgrade to Pathfinder"), Popup = "popup-unit",
 	ForUnit = {"unit-dwarven-scout"}
+} )
+
+DefineButton( { Pos = 1, Level = 1, Icon = "icon-dwarven-explorer",
+	Action = "experience-upgrade-to", Value = "unit-dwarven-explorer",
+	Allowed = "check-unit-variable", AllowArg = {"Variation", "Value", "==", "0"},
+	Key = "u", Hint = _("~!Upgrade to Explorer"), Popup = "popup-unit",
+	ForUnit = {"unit-dwarven-pathfinder"}
+} )
+
+DefineButton( { Pos = 1, Level = 1, Icon = "icon-dwarven-explorer-blond-hair",
+	Action = "experience-upgrade-to", Value = "unit-dwarven-explorer",
+	Allowed = "check-unit-variable", AllowArg = {"Variation", "Value", "==", "1"},
+	Key = "u", Hint = _("~!Upgrade to Explorer"), Popup = "popup-unit",
+	ForUnit = {"unit-dwarven-pathfinder"}
+} )
+
+DefineButton( { Pos = 1, Level = 1, Icon = "icon-dwarven-explorer-gray-hair",
+	Action = "experience-upgrade-to", Value = "unit-dwarven-explorer",
+	Allowed = "check-unit-variable", AllowArg = {"Variation", "Value", "==", "2"},
+	Key = "u", Hint = _("~!Upgrade to Explorer"), Popup = "popup-unit",
+	ForUnit = {"unit-dwarven-pathfinder"}
 } )
 
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-stronghold",
