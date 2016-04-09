@@ -49,9 +49,6 @@ if (LoadedGame == false) then
 		unit = CreateUnit("unit-suebi-swordsman", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 		unit = CreateUnit("unit-teuton-archer", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 	elseif (GrandStrategyEventMap) then
-		SetAiType(0, "grand-strategy-battle")
-		SetAiType(1, "grand-strategy-battle")
-		
 		-- Marcomanni units
 		CreateProvinceUnits("Austria", 0)
 		CreateProvinceCustomHero("Austria", 0)

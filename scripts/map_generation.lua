@@ -6038,3 +6038,13 @@ function FillStumps()
 		end
 	end
 end
+
+function GenerateBuilding(building_type, player)
+	local worker = FindUnitOfClass("worker", player, GrandStrategy and GrandStrategyEventMap == false)
+	
+	if (worker == nil) then
+		return;
+	end
+	
+	unit = CreateBuildingAtRandomLocationNear(building_type, player, {GetUnitVariable(worker,"PosX"), GetUnitVariable(worker,"PosY")}, worker)
+end

@@ -83,9 +83,6 @@ if (LoadedGame == false) then
 			end
 		end
 	elseif (GrandStrategyEventMap) then
-		SetAiType(0, "grand-strategy-battle")
-		SetAiType(1, "grand-strategy-battle")
-
 		local units_to_be_created = {}
 		
 		-- Marcomanni units
@@ -98,6 +95,12 @@ if (LoadedGame == false) then
 		-- Boii units
 		CreateProvinceUnits("Bohemia", 1)
 		CreateProvinceCustomHero("Bohemia", 1)
+		
+		if (GrandStrategyBattleBaseBuilding == false) then
+			-- don't allow the player to build/train units if in grand strategy mode if base-building is not active
+			SetPlayerData(0, "Allow", "unit-teuton-worker", "F")
+			SetPlayerData(1, "Allow", "unit-germanic-worker", "F")
+		end
 	end
 	
 	-- create allied Germanic forces

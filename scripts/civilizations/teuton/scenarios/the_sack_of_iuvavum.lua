@@ -82,9 +82,6 @@ if (LoadedGame == false) then
 		unit = CreateUnit("unit-teuton-archer", 4, {Players[4].StartPos.x, Players[4].StartPos.y})
 		unit = CreateUnit("unit-teuton-archer", 4, {Players[4].StartPos.x, Players[4].StartPos.y})
 	elseif (GrandStrategyEventMap) then
-		SetAiType(0, "grand-strategy-battle")
-		SetAiType(4, "grand-strategy-battle")
-		
 		local units_to_be_created = {}
 		
 		-- Marcomanni units

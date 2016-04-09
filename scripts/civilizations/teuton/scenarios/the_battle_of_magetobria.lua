@@ -60,10 +60,6 @@ if (LoadedGame == false) then
 		unit = CreateUnit("unit-germanic-archer", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
 		SetUnitVariable(unit, "Active", false)
 	elseif (GrandStrategyEventMap) then
-		SetAiType(0, "grand-strategy-battle")
-		SetAiType(1, "grand-strategy-battle")
-		SetAiType(2, "grand-strategy-battle")
-		
 		local units_to_be_created = {}
 		
 		-- Suebi units

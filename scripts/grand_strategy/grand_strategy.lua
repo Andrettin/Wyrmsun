@@ -1410,8 +1410,6 @@ function RunGrandStrategyLoadGameMenu()
 			
 			GrandStrategyGameLoading = true
 
-			InitializeGrandStrategyGame()
-			
 			GrandStrategy = true
 			GrandStrategyGamePaused = false
 			GameResult = GameNoResult

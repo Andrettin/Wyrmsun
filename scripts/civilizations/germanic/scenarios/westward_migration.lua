@@ -62,8 +62,6 @@ if (LoadedGame == false) then
 		unit = CreateUnit("unit-germanic-warrior", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 		unit = CreateUnit("unit-germanic-warrior", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 	elseif (GrandStrategyEventMap) then
-		SetAiType(0, "grand-strategy-battle")
-		
 		-- Asa units
 		CreateProvinceUnits("Astrakhan", 0)
 		CreateProvinceCustomHero("Astrakhan", 0)

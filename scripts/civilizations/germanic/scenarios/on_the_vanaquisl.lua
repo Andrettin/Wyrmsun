@@ -85,8 +85,6 @@ if (LoadedGame == false) then
 			CreateCreeps(1, "unit-germanic-warrior", 36, Map.Info.MapWidth / 4, Map.Info.MapWidth * 7 / 8, Map.Info.MapHeight / 6, Map.Info.MapHeight * 5 / 6)
 		end
 	elseif (GrandStrategyEventMap) then
-		SetAiType(0, "grand-strategy-battle")
-		
 		-- Asa units
 		CreateProvinceUnits("Astrakhan", 0)
 		CreateProvinceCustomHero("Astrakhan", 0)

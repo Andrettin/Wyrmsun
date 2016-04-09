@@ -1630,6 +1630,28 @@ function FindUnit(unit_type, player)
 	return nil
 end
 
+function GetPlayerClassType(unit_class, player, use_province_civilization)
+	if (use_province_civilization and GetPlayerData(player, "Faction") ~= "" and GetPlayerData(player, "RaceName") == GetProvinceCivilization(AttackedProvince.Name)) then
+		return GetFactionClassUnitType(unit_class, GetPlayerData(player, "RaceName"), GetPlayerData(player, "Faction"))
+	elseif (use_province_civilization) then
+		return GetCivilizationClassUnitType(unit_class, GetProvinceCivilization(AttackedProvince.Name))
+	elseif (GetPlayerData(player, "Faction") ~= "") then
+		return GetFactionClassUnitType(unit_class, GetPlayerData(player, "RaceName"), GetPlayerData(player, "Faction"))
+	else
+		return GetCivilizationClassUnitType(unit_class, GetPlayerData(player, "RaceName"))
+	end
+end
+
+function FindUnitOfClass(unit_class, player, use_province_civilization)
+	local class_type = GetPlayerClassType(unit_class, player, use_province_civilization)
+	
+	if (class_type == nil) then
+		return nil
+	else
+		return FindUnit(class_type, player)
+	end
+end
+
 function FindHero(hero, player)
 	local uncount = 0
 	

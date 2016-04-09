@@ -62,8 +62,9 @@ function CreateUnit(unittype, player, pos)
 		or (
 			GrandStrategy
 			and GrandStrategyEventMap == false
-			and GrandStrategyBattleBaseBuilding == false
-			and (unittype == "unit-gold-deposit" or unittype == "unit-silver-deposit" or unittype == "unit-copper-deposit" or unittype == "unit-coal-mine" or unittype == "unit-mercenary-camp" or (player ~= 15 and Players[player].Type ~= PlayerNeutral))
+			and (
+				((unittype == "unit-gold-deposit" or unittype == "unit-silver-deposit" or unittype == "unit-copper-deposit" or unittype == "unit-coal-mine" or unittype == "unit-mercenary-camp") and GrandStrategyBattleBaseBuilding == false)
+				or (player ~= 15 and Players[player].Type ~= PlayerNeutral))
 		)
 	) then
 		return nil
@@ -305,10 +306,9 @@ end
 
 -- Override with game settings
 function SetAiType(player, arg)
-	if (GrandStrategy and GrandStrategyEventMap == false and Defender == GetPlayerData(player, "Name") and ProvinceHasBuildingClass(AttackedProvince.Name, "stronghold")) then
+	if (GrandStrategy and GrandStrategyEventMap == false and GrandStrategyBattleBaseBuilding == false and Defender == GetPlayerData(player, "Name") and ProvinceHasBuildingClass(AttackedProvince.Name, "stronghold")) then
 		arg = "passive" -- if has a stronghold, don't attack, but wait for the enemy to come to you
-	end
-	if ((GrandStrategy and GrandStrategyEventMap == false) or ((GameSettings.NumUnits == 3 or GameSettings.NumUnits == 4 or GameSettings.NumUnits == 5) and arg ~= "passive")) then
+	elseif ((GrandStrategy and GrandStrategyEventMap == false and GrandStrategyBattleBaseBuilding == false) or ((GameSettings.NumUnits == 3 or GameSettings.NumUnits == 4 or GameSettings.NumUnits == 5) and arg ~= "passive")) then
 		arg = "grand-strategy-battle"
 	end
 
