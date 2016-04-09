@@ -1095,7 +1095,7 @@ AddTrigger(
 		return false
 	end,
 	function()
-		if not (GetUnitVariable(FindHero("Rugnur"))) then
+		if not (GetUnitVariable(FindHero("Rugnur"), "Idle")) then
 			return true
 		end
 		Event(
