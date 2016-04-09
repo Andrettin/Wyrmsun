@@ -43,15 +43,18 @@ DefineCharacter("Dutigern", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	DateReferenceCharacter = "Maelgwn" -- was a contemporary of Maelgwn
 })
 
-DefineCharacter("Aedan mac Gabrain", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 77.
+DefineCharacter("Aedan mac Gabrain", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 77, 86.
 	Name = "Aedan", -- the king of a kingdom founded in Argyll by Irish settlers
 	FamilyName = "mac Gabrain",
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "celt",
 	ProvinceOfOrigin = "Highland Scotland",
-	Year = 574 -- became king
+	Year = 574, -- became king
 	-- attacked the Bernicians in 603 AD
+	HistoricalRulerships = {
+		574, 0, "celt", "Argyll"
+	}
 })
 
 DefineCharacter("Cynan", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 78.
@@ -109,3 +112,17 @@ DefineCharacter("Cadafael", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	ProvinceOfOrigin = "Wales",
 	Year = 654 -- went with Penda to attack Oswiu of Bernicia
 })
+
+DefineCharacter("Bruide mac Beli", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 87-88.
+	Name = "Bruide mac Beli",
+	Gender = "male",
+	Type = "unit-germanic-warrior",
+	Civilization = "celt",
+	ProvinceOfOrigin = "Highland Scotland", -- son of the king of Strathclyde
+	Year = 672,
+	DeathYear = 693, -- died
+	HistoricalRulerships = {
+		672, 693, "celt", "Pict Tribe" -- became king of the Picts in 672
+	}
+})
+

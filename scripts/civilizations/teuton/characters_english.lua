@@ -231,6 +231,18 @@ DefineCharacter("Eanfrith", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	}
 })
 
+DefineCharacter("Talorcan", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 87.
+	Name = "Talorcan",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "teuton",
+	ProvinceOfOrigin = "Northumberland",
+	Father = "Eanfrith",
+	HistoricalRulerships = {
+		632, 633, "celt", "Pict Tribe" -- was king of the Picts
+	}
+})
+
 DefineCharacter("Oswald", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 81-82.
 	Name = "Oswald",
 	Gender = "male",
@@ -296,10 +308,11 @@ DefineCharacter("Oswiu", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971
 	Year = 641,
 	DeathYear = 670,
 	HistoricalRulerships = {
-		641, 670, "teuton", "Bernicia" -- became king of Bernicia on the death of his brother Oswald
+		641, 654, "teuton", "Bernicia", -- became king of Bernicia on the death of his brother Oswald
+		654, 670, "teuton", "Northumbria" -- Northumbria unified in 654
 	}
 	-- married to Eanflæd, daughter of Edwin of Deira
-	-- fought an won against Penda in battle of the Winwæd (a stream, somewhere around Leeds)
+	-- fought and won against Penda in the battle of the Winwæd (a stream, somewhere around Leeds) in 654
 })
 
 DefineCharacter("Cynegils", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 81.
@@ -416,24 +429,112 @@ DefineCharacter("Wulfhere", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 		657, 0, "teuton", "Mercia" -- became king of Mercia in 657
 	}
 	-- became overlord of the kings of Essex in 665
+	-- invaded Northumbria in 674, possessing an army gathered from all Anglo-Saxon kingdoms south of the Humber
 })
 
-DefineCharacter("Ethelred", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 127.
-	Name = "Ethelred", -- did the massacre of the Danes in 1002 AD
+DefineCharacter("Ecgfrith", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 85, 88.
+	Name = "Ecgfrith",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
-	Civilization = "teuton", -- should be English?
-	ProvinceOfOrigin = "Essex", -- presumably in England, so let's put in London's province
-	Year = 1002 -- massacred the Danes
+	Civilization = "teuton",
+	ProvinceOfOrigin = "Northumberland", -- Northumbrian, so let's place him here
+	Father = "Oswiu",
+	Year = 674, -- defeated Wulfhere of Mercia's invasion of Northumbria in 674
+	DeathYear = 685, -- died in the 20th of May 685 at Duin Nechtain / Nechtanesmere while leading a raid against the Picts under their king Bruide
+	ViolentDeath = true,
+	HistoricalRulerships = {
+		674, 685, "teuton", "Northumbria"
+	}
+	-- was defeated in 678 by Æthelred, Wulfhere's brother, in a battle close to the Trent river
+	-- in 684 had an army sent to Ireland against the kingdom of Meath
 })
 
-DefineCharacter("Aldhelm", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 98.
-	Name = "Aldhelm", -- composed the "Helleborus" riddle
+DefineCharacter("Beornhæth", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 88.
+	Name = "Beornhæth", -- Northumbrian ealdorman, quelled a Pictish rebellion with Ecgfrith of Northumbria
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "teuton",
+	ProvinceOfOrigin = "Northumberland", -- Northumbrian, so let's place him here
+	DateReferenceCharacter = "Ecgfrith" -- was a contemporary of Ecgfrith's
+})
+
+DefineCharacter("Æthelred", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 85.
+	Name = "Æthelred",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "teuton",
+	ProvinceOfOrigin = "Mercia",
+	Father = "Penda", -- presumably, since he was Wulfhere of Mercia's brother
+	Year = 678 -- defeated Ecgfrith of Northumbria in a battle close to the Trent river in 678
+})
+
+DefineCharacter("Aldfrith", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 88.
+	Name = "Aldfrith",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "teuton",
+	ProvinceOfOrigin = "Northumberland", -- Northumbrian, so let's place him here
+	Father = "Oswiu",
+	Year = 685,
+	DeathYear = 704, -- end of reign
+	HistoricalRulerships = {
+		685, 704, "teuton", "Northumbria" -- succeeded his brother Ecgfrith as king of Northumbria
+	}
+})
+
+DefineCharacter("Aldhelm", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 89; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 98.
+	Name = "Aldhelm", -- abbot of Malmesbury, composed the "Helleborus" riddle
+	NameElements = {
+--		"compound", "prefix", "old-english", -- ?
+		"compound", "suffix", "old-english", "noun", "Helm" -- presumably
+	},
 	Gender = "male",
 	Type = "unit-teuton-swordsman", -- should be something more appropriate for the composer of a riddle?
-	Civilization = "teuton", -- Anglo-Saxon
-	ProvinceOfOrigin = "Essex", -- presumably in England, so let's put in London's province
+	Civilization = "teuton",
+	ProvinceOfOrigin = "Wessex",
 	DeathYear = 709 -- died in 709/710
+})
+
+DefineCharacter("Osred", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 91.
+	Name = "Osred",
+	Trait = "upgrade-cruel", -- described as wild, irreligious and tyrannical to his noble subjects
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "teuton",
+	ProvinceOfOrigin = "Northumberland", -- Northumbrian, so let's place him here
+	Father = "Aldfrith",
+	Year = 697, -- began to rule in 705, when he was eight years old
+	DeathYear = 716, -- murdered in 716
+	ViolentDeath = true,
+	HistoricalRulerships = {
+		705, 716, "teuton", "Northumbria" -- began to rule in 705
+	}
+})
+
+DefineCharacter("Beorhtfrith", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 88.
+	Name = "Beorhtfrith", -- Northumbrian ealdorman
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "teuton",
+	ProvinceOfOrigin = "Northumberland", -- Northumbrian, so let's place him here
+	Year = 711 -- defeated a Pictish army in the Scottish central plain in 711
+})
+
+DefineCharacter("Ceolwulf", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 91.
+	Name = "Ceolwulf",
+	NameElements = {
+--		"compound", "prefix", "old-english", -- ?
+		"compound", "suffix", "old-english", "noun", "Wulf" -- presumably
+	},
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "teuton",
+	ProvinceOfOrigin = "Northumberland", -- Northumbrian, so let's place him here
+	Year = 729,
+	DeathYear = 737,
+	HistoricalRulerships = {
+		729, 737, "teuton", "Northumbria" -- was king of Northumbria between 729 and 737
+	}
 })
 
 DefineCharacter("Bede", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 34.
@@ -444,6 +545,224 @@ DefineCharacter("Bede", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol.
 	ProvinceOfOrigin = "Essex", -- in England, so let's put in London's province
 	Year = 731, -- wrote "Historia Ecclesiastica Venerabilis Bedae" around 731 AD
 	AuthoredWorks = {"upgrade-work-historia-ecclesiastica-venerabilis-bedae"}
+})
+
+DefineCharacter("Eadberht", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 92.
+	Name = "Eadberht",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "teuton",
+	ProvinceOfOrigin = "Northumberland", -- Northumbrian, so let's place him here
+	Year = 737,
+	HistoricalRulerships = {
+		737, 758, "teuton", "Northumbria" -- succeeded Ceolwulf as king of Northumbria, withdrew from public life in 758, becoming a clerk under his brother Egbert, the archbishop of York
+	}
+	-- conquered Kyle and other areas from Strathclyde in 750
+	-- allied with the Picts in 756 and attacked Alcluith
+})
+
+DefineCharacter("Æthelbald", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 92.
+	Name = "Æthelbald",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "teuton",
+	ProvinceOfOrigin = "Mercia",
+	DateReferenceCharacter = "Eadberht", -- was a contemporary of Eadberht's
+	HistoricalRulerships = {
+		0, 0, "teuton", "Mercia" -- was king of Mercia
+	}
+})
+
+DefineCharacter("Offa", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 92.
+	Name = "Offa",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "teuton",
+	ProvinceOfOrigin = "Northumberland", -- Northumbrian, so let's place him here
+	Father = "Aldfrith"
+})
+
+DefineCharacter("Egbert", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 92.
+	Name = "Egbert", -- archbishop of York
+	Gender = "male",
+	Type = "unit-teuton-swordsman", -- should be a priest
+	Civilization = "teuton",
+	ProvinceOfOrigin = "Northumberland", -- Northumbrian, so let's place him here
+	DateReferenceCharacter = "Eadberht", -- was Eadberht's brother
+})
+
+DefineCharacter("Oswulf", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 92.
+	Name = "Oswulf",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "teuton",
+	ProvinceOfOrigin = "Northumberland", -- Northumbrian, so let's place him here
+	Father = "Eadberht",
+	DeathYear = 758 -- killed by his retainers in the summer of 758
+})
+
+DefineCharacter("Æthelwald Moll", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 92.
+	Name = "Æthelwald",
+	FamilyName = "Moll",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "teuton",
+	ProvinceOfOrigin = "Northumberland", -- Northumbrian, so let's place him here
+	Year = 759,
+	HistoricalRulerships = {
+		759, 765, "teuton", "Northumbria" -- became king of Northumbria in 759, lost the throne to Alhred six years later
+	}
+})
+
+DefineCharacter("Alhred", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 90, 92-93.
+	Name = "Alhred", -- descendant of Ida
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "teuton",
+	ProvinceOfOrigin = "Northumberland", -- Northumbrian, so let's place him here
+	Year = 765,
+	DeathYear = 774, -- end of reign
+	HistoricalRulerships = {
+		765, 774, "teuton", "Northumbria" -- king of Northumbria between 765 and 774; in 774 lost the throne by a formal act of the nobility and his own household
+	}
+})
+
+DefineCharacter("Æthelred Moll", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 93-94.
+	Name = "Æthelred",
+	FamilyName = "Moll",
+	Trait = "upgrade-cruel", -- treacherous and merciless
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "teuton",
+	ProvinceOfOrigin = "Northumberland", -- Northumbrian, so let's place him here
+	Father = "Æthelwald Moll",
+	Year = 774,
+	DeathYear = 796, -- murdered
+	ViolentDeath = true,
+	HistoricalRulerships = {
+		774, 779, "teuton", "Northumbria", -- became king of Northumbria after Alhred was deposed, was expelled in 779 from Northumbria by Ælfwald
+		789, 796, "teuton", "Northumbria" -- was restored to the throne within a year after Ælfwald's reign ended
+	}
+	-- married a daughter of Offa, king of Mercia, in 792
+})
+
+DefineCharacter("Ælfwald", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 90, 93.
+	Name = "Ælfwald", -- grandson of Eadberht
+	NameElements = {
+		"compound", "prefix", "old-english", "noun", "Ælf", -- presumably
+--		"compound", "suffix", "old-english", -- ?
+	},
+	Trait = "upgrade-pious", -- considered just and pious
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "teuton",
+	ProvinceOfOrigin = "Northumberland", -- Northumbrian, so let's place him here
+	Year = 779, -- expelled Æthelred Moll from Northumbria
+	DeathYear = 788,
+	HistoricalRulerships = {
+		779, 788, "teuton", "Northumbria" -- king of Northumbria between 779 and 788
+	}
+})
+
+DefineCharacter("Offa of Mercia", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 93.
+	Name = "Offa",
+	ExtraName = "of Mercia",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "teuton",
+	ProvinceOfOrigin = "Mercia",
+	Year = 792,
+	HistoricalRulerships = {
+		792, 0, "teuton", "Mercia" -- was king of Mercia in 792 when Æthelred Moll married a daughter of his
+	}
+})
+
+DefineCharacter("Alcuin", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 90.
+	Name = "Alcuin", -- Northumbrian scholar who made the school of York famous
+	Gender = "male",
+	Type = "unit-teuton-swordsman", -- should be a unit type more appropriate for a scholar
+	Civilization = "teuton",
+	ProvinceOfOrigin = "York", -- presumably
+	Year = 782 -- moved from England to the court of Charlemagne
+})
+
+DefineCharacter("Torhtmund", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 90.
+	Name = "Torhtmund", -- Minister of the Northumbrian king Æthelred Moll, Torhtmund killed the king's murderer
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "teuton",
+	ProvinceOfOrigin = "Northumberland", -- Northumbrian, so let's place him here
+	DateReferenceCharacter = "Alcuin" -- was introduced by Alcuin to Charlemagne
+})
+
+DefineCharacter("Eardwulf", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 94-95.
+	Name = "Eardwulf",
+	NameElements = {
+--		"compound", "prefix", "old-english", -- ?
+		"compound", "suffix", "old-english", "noun", "Wulf" -- presumably
+	},
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "teuton",
+	ProvinceOfOrigin = "Northumberland", -- Northumbrian, so let's place him here
+	Year = 801,
+	DeathYear = 810, -- died
+	HistoricalRulerships = {
+		801, 808, "teuton", "Northumbria", -- was king of Northumbia in 801 when he invaded Mercia; in the spring of 808 he was expelled from Northumbria
+		808, 810, "teuton", "Northumbria" -- was restored as king in the same year of being expelled, with the support of Charlemagne and Pope Leo III; died in or before 810
+	}
+})
+
+DefineCharacter("Cenwulf", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 94.
+	Name = "Cenwulf",
+	NameElements = {
+		"compound", "prefix", "old-english", "noun", "Cên", -- presumably
+		"compound", "suffix", "old-english", "noun", "Wulf" -- presumably
+	},
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "teuton",
+	ProvinceOfOrigin = "Mercia",
+	Year = 801,
+	HistoricalRulerships = {
+		801, 0, "teuton", "Mercia" -- was king of Mercia in 801 when Eardwulf of Northumbria invaded it
+	}
+})
+
+DefineCharacter("Eanred", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 95.
+	Name = "Eanred",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "teuton",
+	ProvinceOfOrigin = "Northumberland", -- Northumbrian, so let's place him here
+	Father = "Eardwulf",
+	Year = 810,
+	DeathYear = 840,
+	HistoricalRulerships = {
+		810, 840, "teuton", "Northumbria" -- succeeded Eardwulf as king of Northumbria, and ruled for thirty years
+	}
+})
+
+DefineCharacter("Egbert of Wessex", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 95.
+	Name = "Egbert",
+	ExtraName = "of Wessex",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "teuton",
+	ProvinceOfOrigin = "Wessex",
+	Year = 829,
+	HistoricalRulerships = {
+		829, 0, "teuton", "Wessex" -- was king of Mercia in 829 when Eanred of Northumbria submitted to him
+	}
+})
+
+DefineCharacter("Ethelred", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 127.
+	Name = "Ethelred", -- did the massacre of the Danes in 1002 AD
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "teuton", -- should be English?
+	ProvinceOfOrigin = "Essex", -- presumably in England, so let's put in London's province
+	Year = 1002 -- massacred the Danes
 })
 
 DefineCharacter("Nicolas Breakspear", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 126.

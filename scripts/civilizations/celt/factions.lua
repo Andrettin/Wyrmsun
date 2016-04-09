@@ -107,6 +107,14 @@ DefineFaction("Turone Tribe", {
 
 -- Polities
 
+DefineFaction("Argyll", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 77, 86.
+	Civilization = "celt", -- founded by
+	Type = "polity",
+--	Language = "old-irish", -- founded by Irish settlers
+	Colors = {"purple"},
+	DefaultTier = "kingdom"
+})
+
 DefineFaction("Elmet", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 80.
 	Civilization = "celt",
 	Type = "polity",
@@ -123,11 +131,27 @@ DefineFaction("Gwynedd", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971
 	DefaultTier = "kingdom"
 })
 
+DefineFaction("Meath", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 88.
+	Civilization = "celt",
+	Type = "polity",
+--	Language = "old-irish", -- it was an Irish kingdom
+	Colors = {"red"},
+	DefaultTier = "kingdom"
+})
+
 DefineFaction("Powys", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 78.
 	Civilization = "celt",
 	Type = "polity",
 --	Language = "welsh", -- it was a Briton kingdom
 	Colors = {"green"},
+	DefaultTier = "kingdom"
+})
+
+DefineFaction("Strathclyde", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 85, 87.
+	Civilization = "celt",
+	Type = "polity",
+--	Language = "welsh", -- it was a Briton kingdom
+	Colors = {"brown"},
 	DefaultTier = "kingdom"
 })
 

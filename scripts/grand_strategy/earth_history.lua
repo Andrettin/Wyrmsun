@@ -1704,6 +1704,10 @@ if (GrandStrategyYear >= 785) then
 	GrandStrategyEvents.HorseFleshEatingProhibited = nil
 end
 
+if (GrandStrategyYear >= 793) then
+	-- Lindisfarne sacked by Northmen in 793; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 93.
+end
+
 if (GrandStrategyYear >= 807) then
 	GrandStrategyEvents.FerdomnachLearnedMonkOfArmagh = nil
 	GrandStrategyEvents.TheBookOfArmagh = nil
