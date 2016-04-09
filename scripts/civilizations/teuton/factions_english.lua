@@ -89,7 +89,8 @@ DefineFaction("East Anglia", {
 
 DefineFaction("Essex", {
 	Civilization = "teuton",
-	ParentFaction = "Saxon Tribe",
+--	ParentFaction = "Saxon Tribe",
+	ParentFaction = "Angle Tribe",
 	Type = "polity",
 	Language = "old-english",
 	Colors = {"purple"},
@@ -100,7 +101,8 @@ DefineFaction("Essex", {
 
 DefineFaction("Kent", {
 	Civilization = "teuton",
-	ParentFaction = "Jute Tribe",
+--	ParentFaction = "Jute Tribe",
+	ParentFaction = "Angle Tribe",
 	Type = "polity",
 	Language = "old-english",
 	Colors = {"cyan"},
@@ -146,7 +148,8 @@ DefineFaction("Northumbria", {
 
 DefineFaction("Wessex", {
 	Civilization = "teuton",
-	ParentFaction = "Saxon Tribe",
+--	ParentFaction = "Saxon Tribe",
+	ParentFaction = "Angle Tribe",
 	Type = "polity",
 	Language = "old-english",
 	Colors = {"red"},
