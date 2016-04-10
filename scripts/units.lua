@@ -3924,7 +3924,7 @@ DefineUnitType("unit-template-transport-ship", { Name = _("Transport"),
 	ButtonPos = 1,
 	ButtonKey = "t",
 	ButtonHint = _("Build ~!Transport"),
-	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-vulnerability"},
+	Affixes = {"upgrade-item-prefix-frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-vulnerability"},
 	Sounds = {
 		"selected", "ship-selected",
 		"ready", "ship-selected",

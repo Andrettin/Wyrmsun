@@ -65,6 +65,9 @@ https://github.com/Andrettin/Wyrmsun
 - Increased building lumber and stone costs to compensate for the increase in lumber and stone gathering rates.
 - Temple regeneration aura range is now shown when a temple is selected.
 
+* Editor
+- Units can now be set to their unique versions in the editor.
+
 * Factions
 - Added Essex, Middle Anglia and Northumbria (Teuton polities, they use Old English as their language).
 
