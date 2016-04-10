@@ -745,7 +745,7 @@ DefineUnitType("unit-teuton-kogge", { Name = _("Kogge"),
 	Description = _("A mainstay of the Hanseatic vessels of the North Sea, the Kogge is a sturdy ship capable of carrying a large amount of cargo. It is well-suited for commerce, the transport of troops and naval warfare alike."),
 	Image = {"file", "teuton/units/kogge.png", "size", {72, 72}},
 	LightImage = {"file", "teuton/units/kogge_water.png"},
-	Animations = "animations-transport-ship", Icon = "icon-teuton-kogge",
+	Icon = "icon-teuton-kogge",
 	ButtonKey = "k",
 	ButtonHint = _("Build ~!Kogge"),
 	Sounds = {

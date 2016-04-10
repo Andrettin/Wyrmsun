@@ -797,7 +797,7 @@ DefineUnitType("unit-dwarven-transport-ship", { Name = _("Transport"),
 	Description = _("Sailing the Deep Sea and underground rivers alike, these ships are manned by hearty dwarven crews. Every journey brings back new tales, be it of a kobold dwarf-eating tribe, or of treacherous goblin pirates..."),
 	Image = {"file", "dwarf/units/transport.png", "size", {72, 72}},
 	LightImage = {"file", "dwarf/units/transport_water.png"},
-	Animations = "animations-transport-ship", Icon = "icon-dwarven-transport-ship",
+	Icon = "icon-dwarven-transport-ship",
 	Variations = {
 		{
 			"variation-id", "dwarf",

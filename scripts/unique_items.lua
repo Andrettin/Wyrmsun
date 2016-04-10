@@ -170,6 +170,19 @@ DefineUniqueItem("Shorbear Hold", {
 	Quote = "\"Everyone to the caves, and kill those still inside!\" - Durstorn, Norlund Chieftain"
 } )
 
+DefineUniqueItem("Skidbladnir", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", pp. 101.
+	Type = "unit-dwarven-transport-ship",
+--	NameElements = {
+--		"compound", "prefix", "dwarven", "noun", "Skid",
+--		"compound", "suffix", "dwarven", "adjective", "Bladnir"
+--	},
+	Prefix = "upgrade-item-prefix-impregnable",
+	Suffix = "upgrade-item-suffix-of-swiftness",
+	Description = "Skidbladnir was a ship built by the sons of Ivaldi for Modsognir. Its magnificent sail provided the sleek ship with great speed.",
+	Quote = "\"In days of old | did Ivaldi's sons / Skidbladnir fashion fair, / The best of ships | for the mighty Modsognir, / The noble child of the earth.\" - Dwarven Traditional Poetry",
+	Background = "Skidbladnir appeared in Norse mythology as a ship crafted by the sons of Ivaldi for Norse god Frey. The vessel was said to always have fair wind, and could be folded up until it fit into a pocket. The ship's name means \"wooden-bladed\" in Old Norse."
+} )
+
 --[[
 DefineUniqueItem("Carolinum", { -- Source: Alena Ježková, "77 Prague Legends", 2006, p. 31.
 	Type = "unit-teuton-university", -- could also be a library, or perhaps a temple

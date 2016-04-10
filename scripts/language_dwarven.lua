@@ -204,8 +204,6 @@ DefineLanguageWord("Bladnir", {
 	Language = "dwarven",
 	Type = "adjective",
 	Meanings = {"Bladed"},
-	-- example: "Skidbladnir" (ship made by the sons of Ivaldi, name means "Wooden-Bladed")
-	-- should add a category for ship name suffixes
 	AffixNameTypes = {
 		"separate", "prefix", "unit-class-smithy" -- seems sensible
 	}
@@ -1156,7 +1154,6 @@ DefineLanguageWord("Skid", {
 	Type = "noun",
 	Meanings = {"Wood"},
 	Gender = "neuter", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 550.
-	-- example: "Skidbladnir" (ship made by the sons of Ivaldi, name means "Wooden-Bladed"); should add a category for ship names
 	AffixNameTypes = {
 		"separate", "suffix", "unit-class-lumber-mill" -- seems sensible
 	}

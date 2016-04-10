@@ -84,6 +84,7 @@ https://github.com/Andrettin/Wyrmsun
 - Workers now gather lumber and stone at a speed more comparable to that at which they gather precious metals.
 - Increased unit lumber and stone costs to compensate for the increase in lumber and stone gathering rates.
 - Spearmen now have 75 mana.
+- Added unique Dwarven transport ship, Skidbladnir (+1 speed, +1 evasion, +2 armor), for use in custom maps.
 
 -----------------------------------------------------------------------
 - 2.1.3
