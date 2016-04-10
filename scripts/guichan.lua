@@ -1534,6 +1534,33 @@ function GameStarting()
 				end
 			end
 		end
+		
+		-- add grand strategy battle units
+		if (GrandStrategy and GrandStrategyEventMap == false) then
+			for i=0,14 do
+				if ((Players[i].Type == PlayerPerson or Players[i].Type == PlayerComputer)) then
+					if (GetPlayerData(i, "Name") == Attacker) then
+						CreateProvinceUnits(AttackedProvince.Name, i, 1, true, true)
+					elseif (GetPlayerData(i, "Name") == Defender) then
+						CreateProvinceUnits(AttackedProvince.Name, i, 1, false, false)
+					end
+					local grand_strategy_heroes = GetGrandStrategyHeroes()
+					for j = 1, table.getn(grand_strategy_heroes) do
+						if (
+							(GetPlayerData(i, "Name") == Attacker and GetProvinceHero(AttackedProvince.Name, grand_strategy_heroes[j]) == 3)
+							or (GetPlayerData(i, "Name") == Defender and GetProvinceHero(AttackedProvince.Name, grand_strategy_heroes[j]) == 2) -- create heroes which are in the province for the defender
+						) then
+							unit = OldCreateUnit(GetGrandStrategyHeroUnitType(grand_strategy_heroes[j]), i, {Players[i].StartPos.x, Players[i].StartPos.y})
+							if (GrandStrategyHeroIsCustom(grand_strategy_heroes[j])) then
+								SetUnitVariable(unit, "CustomHero", grand_strategy_heroes[j])
+							else
+								SetUnitVariable(unit, "Character", grand_strategy_heroes[j])
+							end
+						end
+					end
+				end
+			end
+		end
 	end
 end
 

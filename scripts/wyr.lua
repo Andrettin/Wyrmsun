@@ -128,6 +128,14 @@ function SetPlayerData(player, data, arg1, arg2)
 					end
 				elseif (GetProvinceCivilization(AttackedProvince.Name) ~= "") then
 					arg1 = GetProvinceCivilization(AttackedProvince.Name)
+				else
+					if (GrandStrategyWorld == "Earth") then
+						arg1 = "germanic"
+					elseif (GrandStrategyWorld == "Nidavellir") then
+						arg1 = "goblin"
+					else
+						arg1 = "goblin"
+					end
 				end
 			end
 		end
@@ -168,7 +176,7 @@ function SetPlayerData(player, data, arg1, arg2)
 	elseif (data == "Resources") then
 		if (GameSettings.Resources == 1) then
 			res = {2000, 2000, 2000, 0, 2000, 0, 0, 0, 0, 0, 0, 0, 0}
-		elseif (GameSettings.Resources == 2) then
+		elseif (GameSettings.Resources == 2 or (GrandStrategy and GrandStrategyBattleBaseBuilding)) then
 			res = {5000, 4000, 4000, 0, 4000, 0, 0, 0, 0, 0, 0, 0, 0}
 		elseif (GameSettings.Resources == 3) then
 			res = {10000, 10000, 10000, 0, 10000, 0, 0, 0, 0, 0, 0, 0, 0}
@@ -251,30 +259,6 @@ function SetPlayerData(player, data, arg1, arg2)
 				end
 			end
 		end
-	elseif (data == "Name") then
-		if (GrandStrategy and GrandStrategyEventMap == false) then
-			if (player ~= 15 and (Players[player].Type == PlayerPerson or Players[player].Type == PlayerComputer)) then
-				if (arg1 == Attacker) then
-					CreateProvinceUnits(AttackedProvince.Name, player, 1, true, true)
-				elseif (arg1 == Defender) then
-					CreateProvinceUnits(AttackedProvince.Name, player, 1, false, false)
-				end
-				local grand_strategy_heroes = GetGrandStrategyHeroes()
-				for i = 1, table.getn(grand_strategy_heroes) do
-					if (
-						(arg1 == Attacker and GetProvinceHero(AttackedProvince.Name, grand_strategy_heroes[i]) == 3)
-						or (arg1 == Defender and GetProvinceHero(AttackedProvince.Name, grand_strategy_heroes[i]) == 2) -- create heroes which are in the province for the defender
-					) then
-						unit = OldCreateUnit(GetGrandStrategyHeroUnitType(grand_strategy_heroes[i]), player, {Players[player].StartPos.x, Players[player].StartPos.y})
-						if (GrandStrategyHeroIsCustom(grand_strategy_heroes[i])) then
-							SetUnitVariable(unit, "CustomHero", grand_strategy_heroes[i])
-						else
-							SetUnitVariable(unit, "Character", grand_strategy_heroes[i])
-						end
-					end
-				end
-			end
-		end
 	end
 end
 
@@ -306,7 +290,9 @@ end
 
 -- Override with game settings
 function SetAiType(player, arg)
-	if (GrandStrategy and GrandStrategyEventMap == false and GrandStrategyBattleBaseBuilding == false and Defender == GetPlayerData(player, "Name") and ProvinceHasBuildingClass(AttackedProvince.Name, "stronghold")) then
+	if (GrandStrategy and GrandStrategyEventMap == false and GrandStrategyBattleBaseBuilding) then
+		arg = "land-attack"
+	elseif (GrandStrategy and GrandStrategyEventMap == false and GrandStrategyBattleBaseBuilding == false and Defender == GetPlayerData(player, "Name") and ProvinceHasBuildingClass(AttackedProvince.Name, "stronghold")) then
 		arg = "passive" -- if has a stronghold, don't attack, but wait for the enemy to come to you
 	elseif ((GrandStrategy and GrandStrategyEventMap == false and GrandStrategyBattleBaseBuilding == false) or ((GameSettings.NumUnits == 3 or GameSettings.NumUnits == 4 or GameSettings.NumUnits == 5) and arg ~= "passive")) then
 		arg = "grand-strategy-battle"

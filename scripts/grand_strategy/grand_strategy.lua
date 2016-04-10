@@ -654,11 +654,11 @@ function AttackProvince(province, faction)
 	if (GetProvinceOwner(province.Name) ~= "") then
 		Defender = GetProvinceOwner(province.Name)
 	else
-		Defender = GetProvinceName(province)
+		Defender = GetProvinceName(province) .. " Province"
 		empty_province = true
 	end
 	local revolt = false
-	if (GetFactionProvinceCount(GetFactionFromName(Attacker)) == 0 and GetFactionDiplomacyState(GetFactionFromName(Attacker).Civilization, Attacker, GetFactionFromName(Defender).Civilization, Defender) == "peace") then -- if the attacker doesn't own any provinces, then this must be a revolt
+	if (empty_province == false and GetFactionProvinceCount(GetFactionFromName(Attacker)) == 0 and GetFactionDiplomacyState(GetFactionFromName(Attacker).Civilization, Attacker, GetFactionFromName(Defender).Civilization, Defender) == "peace") then -- if the attacker doesn't own any provinces, then this must be a revolt
 		revolt = true
 	end
 	AttackedProvince = province
@@ -817,10 +817,11 @@ function AttackProvince(province, faction)
 		ChangeFactionResource(GetFactionFromName(Attacker).Civilization, GetFactionFromName(Attacker).Name, "prestige", attacker_prestige + 5) -- plus five for acquiring the territory
 		if (empty_province == false) then
 			ChangeFactionResource(GetFactionFromName(Defender).Civilization, GetFactionFromName(Defender).Name, "prestige", - attacker_prestige - 5) -- minus five for losing the territory
-		end
-		if (revolt) then
-			SetFactionDiplomacyState(GetFactionFromName(Attacker).Civilization, Attacker, GetFactionFromName(Defender).Civilization, Defender, "war")
-			AcquireFactionTechnologies(GetFactionFromName(Defender).Civilization, GetFactionFromName(Defender).Name, GetFactionFromName(Attacker).Civilization, GetFactionFromName(Attacker).Name)
+			
+			if (revolt) then
+				SetFactionDiplomacyState(GetFactionFromName(Attacker).Civilization, Attacker, GetFactionFromName(Defender).Civilization, Defender, "war")
+				AcquireFactionTechnologies(GetFactionFromName(Defender).Civilization, GetFactionFromName(Defender).Name, GetFactionFromName(Attacker).Civilization, GetFactionFromName(Attacker).Name)
+			end
 		end
 	else
 		if (GrandStrategyFaction ~= nil and Defender == GrandStrategyFaction.Name and SelectedProvince == province) then -- this is here to make it so the right interface state happens if the province is selected (a lost province that is selected will have the interface state switched from province to diplomacy)
@@ -2716,7 +2717,7 @@ function AIDoTurn(ai_faction)
 					elseif (GetUnitTypeData(unitName, "Class") == "smithy" and ((ProvinceHasBuildingClass(WorldMapProvinces[key].Name, "barracks") and ProvinceHasBuildingClass(WorldMapProvinces[key].Name, "lumber-mill")) or GetFactionBuildingTypeCount(ai_faction, "smithy") == 0)) then -- it only makes sense to build more than one smithy if it is to make ballistas available in a province
 						BuildStructure(WorldMapProvinces[key], unitName)
 						break
-					elseif (GetUnitTypeData(unitName, "Class") == "temple") then -- build temples after other research buildings
+					elseif (GetUnitTypeData(unitName, "Class") == "temple" and ProvinceHasBuildingClass(WorldMapProvinces[key].Name, "smithy") and ProvinceHasBuildingClass(WorldMapProvinces[key].Name, "lumber-mill")) then -- build temples after other research buildings
 						BuildStructure(WorldMapProvinces[key], unitName)
 						break
 					elseif (GetUnitTypeData(unitName, "Class") == "stables" and ((ProvinceHasBuildingClass(WorldMapProvinces[key].Name, "barracks") and ProvinceHasBuildingClass(WorldMapProvinces[key].Name, "smithy")) or GetFactionBuildingTypeCount(ai_faction, "stables") == 0)) then -- it only makes sense to build more than one stables if it is to make cavalry available in a province

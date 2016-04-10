@@ -105,6 +105,22 @@ SetDiplomacy(1, "enemy", 2)
 SetDiplomacy(2, "enemy", 0)
 SetDiplomacy(2, "enemy", 1)
 
+-- Gold Mines
+unit = CreateUnit("unit-gold-deposit", 15, {2, 47})
+SetResourcesHeld(unit, 125000)
+unit = CreateUnit("unit-gold-rock", 15, {3, 48})
+unit = CreateUnit("unit-gold-rock", 15, {3, 48})
+unit = CreateUnit("unit-gold-rock", 15, {3, 48})
+unit = CreateUnit("unit-gold-rock", 15, {3, 48})
+unit = CreateUnit("unit-gold-rock", 15, {3, 48})
+unit = CreateUnit("unit-gold-deposit", 15, {29, 20})
+SetResourcesHeld(unit, 12500)
+unit = CreateUnit("unit-gold-rock", 15, {30, 21})
+unit = CreateUnit("unit-gold-rock", 15, {30, 21})
+unit = CreateUnit("unit-gold-rock", 15, {30, 21})
+unit = CreateUnit("unit-gold-rock", 15, {30, 21})
+unit = CreateUnit("unit-gold-rock", 15, {30, 21})
+	
 if (GrandStrategy == false) then
 	if (MaxTechLevel[GetThisPlayer() + 1] == "") then
 		for i=0,15 do
@@ -114,22 +130,6 @@ if (GrandStrategy == false) then
 		end
 	end
 	
-	-- Gold Mines
-	unit = CreateUnit("unit-gold-deposit", 15, {2, 47})
-	SetResourcesHeld(unit, 125000)
-	unit = CreateUnit("unit-gold-rock", 15, {3, 48})
-	unit = CreateUnit("unit-gold-rock", 15, {3, 48})
-	unit = CreateUnit("unit-gold-rock", 15, {3, 48})
-	unit = CreateUnit("unit-gold-rock", 15, {3, 48})
-	unit = CreateUnit("unit-gold-rock", 15, {3, 48})
-	unit = CreateUnit("unit-gold-deposit", 15, {29, 20})
-	SetResourcesHeld(unit, 12500)
-	unit = CreateUnit("unit-gold-rock", 15, {30, 21})
-	unit = CreateUnit("unit-gold-rock", 15, {30, 21})
-	unit = CreateUnit("unit-gold-rock", 15, {30, 21})
-	unit = CreateUnit("unit-gold-rock", 15, {30, 21})
-	unit = CreateUnit("unit-gold-rock", 15, {30, 21})
-
 	-- Knalgan outpost
 	unit = CreateUnit("unit-dwarven-town-hall", 0, {35, 26})
 	unit = CreateUnit("unit-dwarven-mushroom-farm", 0, {48, 24})
@@ -358,7 +358,7 @@ unit = CreateUnit("unit-glyph", 15, {15, 24})
 unit = CreateUnit("unit-glyph", 15, {23, 7})
 unit = CreateUnit("unit-glyph", 15, {51, 43})
 
-if (GrandStrategy) then
+if (GrandStrategy and GrandStrategyEventMap) then
 	if (GetProvinceSettlementBuilding(WorldMapProvinces.CavernsOfChaincolt.Name, "unit-dwarven-smithy")) then
 		unit = CreateUnit("unit-dwarven-smithy", 0, {38, 21})
 	end

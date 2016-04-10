@@ -34,8 +34,8 @@ if (LoadedGame == false) then
 			{-2, -2, -2, -2, -2, -2, -2, -2}
 		},
 		WorkerQuantity = 5,
-		NoTownHall = (GrandStrategy or CurrentQuest == "Westward Migration"),
-		NoDeposits = (GrandStrategy or CurrentQuest == "Westward Migration")
+		NoTownHall = ((GrandStrategy and GrandStrategyBattleBaseBuilding == false) or CurrentQuest == "Westward Migration"),
+		NoDeposits = ((GrandStrategy and GrandStrategyBattleBaseBuilding == false) or CurrentQuest == "Westward Migration")
 	})
 	
 	if (CurrentQuest == "Westward Migration") then

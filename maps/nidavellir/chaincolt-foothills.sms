@@ -116,6 +116,29 @@ if (GrandStrategy == false or GrandStrategyEventMap) then
 	SetDiplomacy(2, "neutral", 1)
 end
 
+-- Gold Mines
+unit = CreateUnit("unit-gold-deposit", 15, {35, 8})
+SetResourcesHeld(unit, 12500)
+unit = CreateUnit("unit-gold-rock", 15, {36, 9})
+unit = CreateUnit("unit-gold-rock", 15, {36, 9})
+unit = CreateUnit("unit-gold-rock", 15, {36, 9})
+unit = CreateUnit("unit-gold-rock", 15, {36, 9})
+unit = CreateUnit("unit-gold-rock", 15, {36, 9})
+unit = CreateUnit("unit-gold-deposit", 15, {43, 54})
+SetResourcesHeld(unit, 25000)
+unit = CreateUnit("unit-gold-rock", 15, {44, 55})
+unit = CreateUnit("unit-gold-rock", 15, {44, 55})
+unit = CreateUnit("unit-gold-rock", 15, {44, 55})
+unit = CreateUnit("unit-gold-rock", 15, {44, 55})
+unit = CreateUnit("unit-gold-rock", 15, {44, 55})
+unit = CreateUnit("unit-gold-deposit", 15, {4, 52})
+SetResourcesHeld(unit, 12500)
+unit = CreateUnit("unit-gold-rock", 15, {5, 53})
+unit = CreateUnit("unit-gold-rock", 15, {5, 53})
+unit = CreateUnit("unit-gold-rock", 15, {5, 53})
+unit = CreateUnit("unit-gold-rock", 15, {5, 53})
+unit = CreateUnit("unit-gold-rock", 15, {5, 53})
+	
 if (GrandStrategy == false) then
 	--[[
 	if (MaxTechLevel[GetThisPlayer() + 1] == "") then
@@ -126,29 +149,6 @@ if (GrandStrategy == false) then
 		end
 	end
 	--]]
-
-	-- Gold Mines
-	unit = CreateUnit("unit-gold-deposit", 15, {35, 8})
-	SetResourcesHeld(unit, 12500)
-	unit = CreateUnit("unit-gold-rock", 15, {36, 9})
-	unit = CreateUnit("unit-gold-rock", 15, {36, 9})
-	unit = CreateUnit("unit-gold-rock", 15, {36, 9})
-	unit = CreateUnit("unit-gold-rock", 15, {36, 9})
-	unit = CreateUnit("unit-gold-rock", 15, {36, 9})
-	unit = CreateUnit("unit-gold-deposit", 15, {43, 54})
-	SetResourcesHeld(unit, 25000)
-	unit = CreateUnit("unit-gold-rock", 15, {44, 55})
-	unit = CreateUnit("unit-gold-rock", 15, {44, 55})
-	unit = CreateUnit("unit-gold-rock", 15, {44, 55})
-	unit = CreateUnit("unit-gold-rock", 15, {44, 55})
-	unit = CreateUnit("unit-gold-rock", 15, {44, 55})
-	unit = CreateUnit("unit-gold-deposit", 15, {4, 52})
-	SetResourcesHeld(unit, 12500)
-	unit = CreateUnit("unit-gold-rock", 15, {5, 53})
-	unit = CreateUnit("unit-gold-rock", 15, {5, 53})
-	unit = CreateUnit("unit-gold-rock", 15, {5, 53})
-	unit = CreateUnit("unit-gold-rock", 15, {5, 53})
-	unit = CreateUnit("unit-gold-rock", 15, {5, 53})
 
 	unit = CreateUnit("unit-dwarven-town-hall", 0, {46, 6})
 	unit = CreateUnit("unit-dwarven-mushroom-farm", 0, {40, 20})
