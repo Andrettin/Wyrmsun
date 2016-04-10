@@ -155,7 +155,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-bodkin-arrow",
 	Action = "research", Value = "upgrade-teuton-bodkin-arrow",
 	Allowed = "check-single-research",
 	Key = "a", Hint = _("Research Bodkin ~!Arrow"), Popup = "popup-research",
-	Description = "+2 Damage for Skutans.",
+	Description = "+2 Damage for Schutzes.",
 	ForUnit = {"unit-teuton-lumber-mill"}
 } )
 
@@ -194,7 +194,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-norse-runewriting",
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-cauldron",
 	Action = "research", Value = "upgrade-teuton-alchemy",
 	Allowed = "check-single-research",
-	Description = _("+1 Fire Damage for Skutans, +5 Fire Damage for Catapults."),
+	Description = _("+1 Fire Damage for Schutzes, +5 Fire Damage for Catapults."),
 	Key = "a", Hint = _("Research ~!Alchemy"), Popup = "popup-research",
 	ForUnit = {"unit-teuton-stronghold"}
 } )

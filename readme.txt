@@ -79,7 +79,7 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed issue with the Hills of the Shorbear Clan quest which caused a crash when Rugnur stepped onto the glyph.
 
 * Terrain
-- Tree and rock tiles now contain 500 of their respective resource, instead of 100.
+- Tree and rock tiles now contain 300 of their respective resource, instead of 100.
 
 * Units
 - The Teuton archer now has its own portrait (icon by Mrmo Tarius and Jinn) and is now named "Schutze".
