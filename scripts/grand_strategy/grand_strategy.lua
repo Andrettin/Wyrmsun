@@ -303,6 +303,7 @@ function RunGrandStrategyGameSetupMenu()
 		function()
 			wyr.preferences.AutomaticBattles = automatic_battles:isMarked()
 			SavePreferences()
+			battle_base_building:setVisible(wyr.preferences.AutomaticBattles == false)
 		end
 	)
 	automatic_battles:setMarked(wyr.preferences.AutomaticBattles)
@@ -314,6 +315,7 @@ function RunGrandStrategyGameSetupMenu()
 		end
 	)
 	battle_base_building:setMarked(wyr.preferences.GrandStrategyBattleBaseBuilding)
+	battle_base_building:setVisible(wyr.preferences.AutomaticBattles == false)
   
 	no_randomness = menu:addImageCheckBox(_("No Randomness"), offx + 40, offy + 10 + 220 + 3,
 		function()
