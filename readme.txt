@@ -64,6 +64,7 @@ https://github.com/Andrettin/Wyrmsun
 * Grand Strategy
 - Rulers can now affect revolt risk.
 - The ruler interface now shows the ruler's trait.
+- Works without a specific author attached to them (i.e. the Alvissmol) will now have a suitable random character become the author, or an author will be generated.
 
 * Units
 - Added Dim (-5 mana), Genius (+10 mana), Intelligent (+5 mana), Pious (+5 mana) and Wise (+5 mana) traits.

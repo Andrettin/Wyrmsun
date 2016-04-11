@@ -732,7 +732,7 @@ function AttackProvince(province, faction)
 		local grand_strategy_heroes = GetGrandStrategyHeroes()
 		local victorious_player_heroes = GetPlayerData(GetFactionPlayer(victorious_player), "Heroes")
 		for i = 1, table.getn(grand_strategy_heroes) do
-			if (GetProvinceHero(province.Name, grand_strategy_heroes[i]) ~= 0) then
+			if (GetProvinceHero(province.Name, grand_strategy_heroes[i]) ~= 0 and GetProvinceHero(province.Name, grand_strategy_heroes[i]) ~= 4) then
 				if (GetArrayIncludes(victorious_player_heroes, grand_strategy_heroes[i])) then
 					SetProvinceHero(province.Name, grand_strategy_heroes[i], 2)
 				else
@@ -3658,7 +3658,7 @@ function CanTriggerEvent(faction, event)
 		if (event.Provinces ~= nil and GetTableSize(event.Provinces) > 0) then
 			for key, value in pairs(event.Provinces) do
 				for second_key, second_value in pairs(event.Heroes) do
-					if (event.Provinces[key] == true and GetProvinceOwner(WorldMapProvinces[key].Name) == faction.Name and (GetProvinceHero(WorldMapProvinces[key].Name, second_key) == 2) ~= event.Heroes[second_key]) then
+					if (event.Provinces[key] == true and GetProvinceOwner(WorldMapProvinces[key].Name) == faction.Name and (GetProvinceHero(WorldMapProvinces[key].Name, second_key) == 2 or GetProvinceHero(WorldMapProvinces[key].Name, second_key) == 4) ~= event.Heroes[second_key]) then
 						return false
 					end
 				end
@@ -3920,9 +3920,6 @@ function GetUnitTypeRequiredBuildings(unit_type)
 			end
 			if (GetCivilizationClassUnitType("stables", GetUnitTypeData(unit_type, "Civilization")) ~= nil) then
 				table.insert(required_buildings, GetCivilizationClassUnitType("stables", GetUnitTypeData(unit_type, "Civilization")))
-			end
-			if (GetCivilizationClassUnitType("temple", GetUnitTypeData(unit_type, "Civilization")) ~= nil) then
-				table.insert(required_buildings, GetCivilizationClassUnitType("temple", GetUnitTypeData(unit_type, "Civilization")))
 			end
 		elseif (GetUnitTypeData(unit_type, "Class") == "siege-engine") then
 			if (GetCivilizationClassUnitType("barracks", GetUnitTypeData(unit_type, "Civilization")) ~= nil) then
