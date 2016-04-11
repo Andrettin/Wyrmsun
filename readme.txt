@@ -63,6 +63,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Grand Strategy
 - Rulers can now affect revolt risk.
+- The ruler interface now shows the ruler's trait.
 
 * Units
 - Added Dim (-5 mana), Genius (+10 mana), Intelligent (+5 mana), Pious (+5 mana) and Wise (+5 mana) traits.
