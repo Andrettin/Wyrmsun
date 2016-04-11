@@ -291,7 +291,7 @@ DefineUnitType("unit-goblin-war-machine", { Name = _("War Machine"),
 } )
 
 DefineUnitType("unit-goblin-glider", { Name = _("Glider"),
-	Parent = "unit-template-unit",
+	Parent = "unit-template-sapient-unit",
 	Class = "glider",
 	Civilization = "goblin",
 	Description = _("A brainchild of goblin inventiveness, gliders are used to scout ahead and determine enemy positions."),
@@ -322,13 +322,12 @@ DefineUnitType("unit-goblin-glider", { Name = _("Glider"),
 	RightMouseAction = "move",
 	DetectCloak = true,
 	Coward = true,
-	organic = true,
 	Flesh = true,
 	BoardSize = 100, -- to prevent this unit from being loaded into transporters
 	ButtonKey = "g",
 	ButtonHint = _("Build ~!Glider"),
 	ButtonPos = 7,
-	Traits = {"upgrade-near-sighted", "upgrade-keen", "upgrade-limping", "upgrade-old", "upgrade-quick", "upgrade-resilient", "upgrade-slow"}, -- removed traits which affect damage, as this unit can't attack
+	Traits = {"upgrade-dim", "upgrade-keen", "upgrade-limping", "upgrade-near-sighted", "upgrade-old", "upgrade-quick", "upgrade-resilient", "upgrade-slow", "upgrade-pious", "upgrade-wise"}, -- removed traits which affect damage, as this unit can't attack
 	Sounds = {
 		"selected", "basic-goblin-voices-selected-group",
 		"acknowledge", "glider-flying",
