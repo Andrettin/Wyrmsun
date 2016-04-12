@@ -25,6 +25,146 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineRegion("British Isles", {
+	HistoricalPopulation = {
+		-4000, (2750 + 5500 / 2) -- The British Isles had between 2,750 and 5,500 people at the end of the Mesolithic; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 148.
+	}
+})
+
+DefineRegion("Cisleithania", {
+	HistoricalPopulation = {
+		1851, 17534948, -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 33.
+		1910, 27963872 -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 33.
+	}
+})
+
+DefineRegion("Czechoslovakia", {
+	HistoricalPopulation = {
+		1600, 2000000 -- 2 million people lived in Czechoslovakia around 1600; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
+	}
+})
+
+DefineRegion("England", {
+	HistoricalPopulation = {
+		1401, 4000000, -- 4 million people lived in England during the 14th century; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
+		1600, 5000000 -- 5 million people lived in England around 1600; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
+	}
+})
+
+DefineRegion("Eurasia", {
+	HistoricalPopulation = {
+		-10000, 200000, -- CIS had a population of around 0.2 millions in 10,000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+		-9000, 200000, -- CIS had a population of around 0.2 millions in 9000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+		-8000, 400000, -- CIS had a population of around 0.4 millions in 8000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+		-7000, 500000, -- CIS had a population of around 0.5 millions in 7000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+		-6000, 800000, -- CIS had a population of around 0.8 millions in 6000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+		-5000, 1200000, -- CIS had a population of around 1.2 millions in 5000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+		-4000, 1800000, -- CIS had a population of around 1.8 millions in 4000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+		-3000, 2700000, -- CIS had a population of around 2.7 millions in 3000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+		-2000, 4100000, -- CIS had a population of around 4.1 millions in 2000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+		-1000, 6100000, -- CIS had a population of around 6.1 millions in 1000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html	
+		0, 9200000, -- CIS had a population of around 9.2 millions in 0 AD; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html	
+		100, 8600000, -- CIS had a population of around 8.6 millions in 100 AD; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html	
+		200, 8100000, -- CIS had a population of around 8.1 millions in 200 AD; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html	
+		300, 7700000, -- CIS had a population of around 7.7 millions in 300 AD; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html	
+		400, 7400000, -- CIS had a population of around 7.4 millions in 400 AD; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html	
+		500, 6900000 -- CIS had a population of around 6.9 millions in 500 AD; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+	}
+})
+
+DefineRegion("Europe", {
+})
+
+DefineRegion("France", {
+	HistoricalPopulation = {
+		1401, 21000000, -- 21 million people lived in France during the 14th century; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
+		1600, 17000000 -- 17 million people lived in France around 1600; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
+	}
+})
+
+DefineRegion("Gaul", {
+	HistoricalPopulation = {
+		-27, 5000000 -- 5 million people lived in France at the "Time of Augustus"; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
+	}
+})
+
+DefineRegion("Germany-Netherlands", {
+	HistoricalPopulation = {
+		1401, 15000000, -- 15 million people lived in Germany-Netherlands during the 14th century; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
+		1600, 20000000 -- 20 million people lived in Germany-Netherlands around 1600; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
+	}
+})
+
+DefineRegion("Greece", {
+	HistoricalPopulation = {
+		-27, 3000000 -- 3 million people lived in Greece at the "Time of Augustus"; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
+	}
+})
+
+DefineRegion("Iberia", {
+	HistoricalPopulation = {
+		-27, 6000000, -- 6 million people lived in Spain-Portugal at the "Time of Augustus"; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
+		1401, 6000000, -- 6 million people lived in Spain-Portugal during the 14th century; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
+		1600, 10000000 -- 10 million people lived in Spain-Portugal around 1600; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
+	}
+})
+
+DefineRegion("Italy", {
+	HistoricalPopulation = {
+		-27, 14000000, -- 14 million people lived in Italy at the "Time of Augustus"; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
+		1401, 11000000, -- 11 million people lived in Italy during the 14th century; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
+		1600, 13000000 -- 13 million people lived in Italy around 1600; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
+	}
+})
+
+DefineRegion("Northwest Europe", {
+	HistoricalPopulation = {
+		-7000, 100000 -- At the height of the Mesolithic the population in northwestern Europe was no larger than 100,000; since the Mesolithic in Northwestern Europe began around 10,000 BC and ended about 4000 BC, its height would have been in the middle, or 7000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, pp. 144, 148.
+	}
+})
+
+DefineRegion("Poland", {
+	HistoricalPopulation = {
+		1600, 3000000 -- 3 million people lived in Poland around 1600; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
+	}
+})
+
+DefineRegion("Roman Danube", {
+	HistoricalPopulation = {
+		-27, 2000000 -- 2 million people lived in the (Roman) Danube at the "Time of Augustus"; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
+	}
+})
+
+DefineRegion("Scandinavia", {
+	HistoricalPopulation = {
+		1401, 2000000, -- 2 million people lived in Scandinavia during the 14th century; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
+		1600, 2000000 -- 2 million people lived in Scandinavia around 1600; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
+	}
+})
+
+DefineRegion("West and Central Europe", {
+	HistoricalPopulation = {
+		-10000, 500000, -- Non-CIS Europe had a population of around 0.5 millions in 10,000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+		-9000, 800000, -- Non-CIS Europe had a population of around 0.8 millions in 9000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+		-8000, 1100000, -- Non-CIS Europe had a population of around 1.1 millions in 8000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+		-7000, 1500000, -- Non-CIS Europe had a population of around 1.5 millions in 7000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+		-6000, 2100000, -- Non-CIS Europe had a population of around 2.1 millions in 6000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+		-5000, 3100000, -- Non-CIS Europe had a population of around 3.1 millions in 5000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+		-4000, 4400000, -- Non-CIS Europe had a population of around 4.4 millions in 4000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+		-3000, 6600000, -- Non-CIS Europe had a population of around 6.6 millions in 3000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+		-2000, 10300000, -- Non-CIS Europe had a population of around 10.3 millions in 2000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+		-1000, 16700000, -- Non-CIS Europe had a population of around 16.7 millions in 1000 BC; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+		0, 29300000, -- Non-CIS Europe had a population of around 29.3 millions in 0 AD; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+		100, 31000000, -- Non-CIS Europe had a population of around 31 millions in 100 AD; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+		200, 32600000, -- Non-CIS Europe had a population of around 32.6 millions in 200 AD; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+		300, 31200000, -- Non-CIS Europe had a population of around 31.2 millions in 300 AD; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+		400, 29700000, -- Non-CIS Europe had a population of around 29.7 millions in 400 AD; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+		500, 25900000 -- Non-CIS Europe had a population of around 25.9 millions in 500 AD; Source: http://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+	}
+})
+
+
+
 DefineProvince("Abruzzo", {
 	World = "Earth",
 	CulturalNames = {
@@ -41,7 +181,8 @@ DefineProvince("Abruzzo", {
 	SettlementLocation = {518, 135}, -- L'Aquila
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
-	Coastal = true
+	Coastal = true,
+	Regions = {"Europe", "Italy", "West and Central Europe"}
 })
 
 DefineProvince("Aetolia", {
@@ -60,7 +201,8 @@ DefineProvince("Aetolia", {
 	SettlementLocation = {541, 145}, -- Naupactus
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
-	Coastal = true
+	Coastal = true,
+	Regions = {"Europe", "Greece", "West and Central Europe"}
 })
 
 DefineProvince("Albania", {
@@ -82,7 +224,8 @@ DefineProvince("Albania", {
 	SettlementTerrain = "Plains",
 	Claims = {
 		"illyrian", "Taulantii Tribe"
-	}
+	},
+	Regions = {"Europe", "Greece", "West and Central Europe"}
 })
 
 DefineProvince("Alsace", {
@@ -102,7 +245,8 @@ DefineProvince("Alsace", {
 		"teuton", "Alamanni Tribe",
 		"teuton", "Swabia", -- Part of the Duchy of Swabia in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		"teuton", "Holy Rome"				
-	}
+	},
+	Regions = {"Europe", "France", "Gaul", "Northwest Europe", "West and Central Europe"}
 })
 
 DefineProvince("Andalusia", {
@@ -139,7 +283,8 @@ DefineProvince("Andalusia", {
 	},
 	SettlementLocation = {466, 148}, -- Cordoba
 	Map = "maps/random/random-map-forest.smp",
-	SettlementTerrain = "Plains"
+	SettlementTerrain = "Plains",
+	Regions = {"Europe", "Iberia", "West and Central Europe"}
 })
 
 DefineProvince("Apulia", {
@@ -161,7 +306,8 @@ DefineProvince("Apulia", {
 	SettlementLocation = {527, 139}, -- Bari
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
-	Coastal = true
+	Coastal = true,
+	Regions = {"Europe", "Italy", "West and Central Europe"}
 })
 
 DefineProvince("Aquitaine", {
@@ -200,7 +346,8 @@ DefineProvince("Aquitaine", {
 	Claims = {
 		"celt", "Arverni Tribe"
 --		"latin", "France"
-	}
+	},
+	Regions = {"Europe", "France", "Gaul", "Northwest Europe", "West and Central Europe"}
 })
 
 DefineProvince("Aragon", {
@@ -213,7 +360,7 @@ DefineProvince("Aragon", {
 		"latin", "Spain", "Aragon"
 	},
 	Tiles = {
---				{119, 34}, {119, 35}, {119, 36}, {120, 34}, {121, 34}, -- old map
+--		{119, 34}, {119, 35}, {119, 36}, {120, 34}, {121, 34}, -- old map
 		{475, 137}, {475, 138}, {475, 141},
 		{476, 135}, {476, 136}, {476, 137}, {476, 138}, {476, 139}, {476, 140}, {476, 141},
 		{477, 135}, {477, 136}, {477, 137}, {477, 138}, {477, 139}, {477, 140}, {477, 141}, {477, 142}, {477, 143}, {477, 144}, {477, 145},
@@ -237,7 +384,8 @@ DefineProvince("Aragon", {
 	Coastal = true,
 	Claims = {
 		"basque", "Cardialware Tribe"
-	}
+	},
+	Regions = {"Europe", "Iberia", "West and Central Europe"}
 })
 
 DefineProvince("Argolis", {
@@ -260,7 +408,8 @@ DefineProvince("Argolis", {
 	Claims = {
 		"greek", "Argos",
 		"greek", "Mycenae"
-	}
+	},
+	Regions = {"Europe", "Greece", "West and Central Europe"}
 })
 
 DefineProvince("Astrakhan", {
@@ -315,7 +464,8 @@ DefineProvince("Astrakhan", {
 	},
 	HistoricalCultures = {
 		-336, "persian",
-	}
+	},
+	Regions = {"Eurasia", "Europe"}
 })
 
 DefineProvince("Attica", {
@@ -334,7 +484,8 @@ DefineProvince("Attica", {
 	Coastal = true,
 	Claims = {
 		"greek", "Athens"
-	}
+	},
+	Regions = {"Europe", "Greece", "West and Central Europe"}
 })
 
 DefineProvince("Augsburg", {
@@ -354,7 +505,8 @@ DefineProvince("Augsburg", {
 		"teuton", "Alamanni Tribe",
 		"teuton", "Swabia", -- Part of the Duchy of Swabia in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		"teuton", "Holy Rome"
-	}
+	},
+	Regions = {"Europe", "Germany-Netherlands", "Roman Danube", "West and Central Europe"}
 })
 
 DefineProvince("Austria", {
@@ -406,7 +558,8 @@ DefineProvince("Austria", {
 		507, "goth", "Ostrogoth Tribe", -- political situation in 507-534 in Europe; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
 		919, "teuton", "Holy Rome", -- Bavarian East March; political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		1560, "teuton", "Austria" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
-	}
+	},
+	Regions = {"Cisleithania", "Europe", "Germany-Netherlands", "Roman Danube", "West and Central Europe"}
 })
 
 DefineProvince("Baden", {
@@ -433,7 +586,8 @@ DefineProvince("Baden", {
 		"teuton", "Baden",
 		"teuton", "Swabia", -- Part of the Duchy of Swabia in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		"teuton", "Holy Rome"
-	}
+	},
+	Regions = {"Europe", "Germany-Netherlands", "Roman Danube", "West and Central Europe"}
 })
 
 DefineProvince("Bavaria", {
@@ -463,7 +617,8 @@ DefineProvince("Bavaria", {
 	Claims = {
 		"teuton", "Bavarian Tribe",
 		"teuton", "Holy Rome"
-	}
+	},
+	Regions = {"Europe", "Germany-Netherlands", "Roman Danube", "West and Central Europe"}
 })
 
 DefineProvince("Belgium", {
@@ -494,7 +649,8 @@ DefineProvince("Belgium", {
 	Claims = {
 		"celt", "Menapii Tribe",
 		"teuton", "Austrasia" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
-	}
+	},
+	Regions = {"Europe", "Gaul", "Germany-Netherlands", "Northwest Europe", "West and Central Europe"}
 })
 
 DefineProvince("Bessarabia", {
@@ -520,7 +676,8 @@ DefineProvince("Bessarabia", {
 	Claims = {
 		"goth", "Bastarnae Tribe"
 --		"latin", "Moldavia"
-	}
+	},
+	Regions = {"Eurasia", "Europe"}
 })
 
 DefineProvince("Boeotia", {
@@ -539,7 +696,8 @@ DefineProvince("Boeotia", {
 	Coastal = true,
 	Claims = {
 		"greek", "Thebes"
-	}
+	},
+	Regions = {"Europe", "Greece", "West and Central Europe"}
 })
 
 DefineProvince("Bohemia", {
@@ -588,7 +746,8 @@ DefineProvince("Bohemia", {
 		-5500, "basque",
 		-400, "celt",
 		-9, "teuton"
-	}
+	},
+	Regions = {"Cisleithania", "Czechoslovakia", "Europe", "West and Central Europe"}
 })
 
 DefineProvince("Bornholm", {
@@ -625,7 +784,8 @@ DefineProvince("Bosnia", {
 	},
 	SettlementLocation = {532, 131}, -- Sarajevo
 	Map = "maps/random/random-map-forest.smp",
-	SettlementTerrain = "Plains"
+	SettlementTerrain = "Plains",
+	Regions = {"Europe", "Roman Danube", "West and Central Europe"}
 })
 
 DefineProvince("Brandenburg", {
@@ -667,7 +827,8 @@ DefineProvince("Brandenburg", {
 	},
 	HistoricalCultures = {
 		-264, "teuton"
-	}
+	},
+	Regions = {"Europe", "Germany-Netherlands", "West and Central Europe"}
 })
 
 DefineProvince("Bremen", {
@@ -689,7 +850,8 @@ DefineProvince("Bremen", {
 		"teuton", "Bremen",
 		"teuton", "Holy Rome"
 	},
-	Coastal = true
+	Coastal = true,
+	Regions = {"Europe", "Germany-Netherlands", "West and Central Europe"}
 })
 
 DefineProvince("Brittany", {
@@ -716,7 +878,8 @@ DefineProvince("Brittany", {
 	},
 	SettlementLocation = {475, 119}, -- Rennes
 	Map = "maps/random/random-map-forest.smp",
-	SettlementTerrain = "Plains"
+	SettlementTerrain = "Plains",
+	Regions = {"Europe", "France", "Gaul", "Northwest Europe", "West and Central Europe"}
 })
 
 DefineProvince("Brunswick", {
@@ -737,7 +900,8 @@ DefineProvince("Brunswick", {
 		"teuton", "Cherusci Tribe",
 		"teuton", "Brunswick",
 		"teuton", "Holy Rome"
-	}
+	},
+	Regions = {"Europe", "Germany-Netherlands", "West and Central Europe"}
 })
 
 DefineProvince("Bukowina", {
@@ -754,7 +918,8 @@ DefineProvince("Bukowina", {
 	SettlementTerrain = "Plains",
 	Claims = {
 		"slav", "Poland"
-	}
+	},
+	Regions = {"Cisleithania", "Eurasia", "Europe", "Poland"}
 })
 
 DefineProvince("Bulgaria", {
@@ -788,7 +953,8 @@ DefineProvince("Bulgaria", {
 	Claims = {
 		"greek", "Thrace",
 		"thracian", "Odrysae Tribe"
-	}
+	},
+	Regions = {"Europe", "Roman Danube", "West and Central Europe"}
 })
 
 DefineProvince("Burgundy", {
@@ -811,7 +977,8 @@ DefineProvince("Burgundy", {
 	Claims = {
 		"celt", "Aedui Tribe"
 --		"latin", "France"
-	}
+	},
+	Regions = {"Europe", "France", "Gaul", "Northwest Europe", "West and Central Europe"}
 })
 
 DefineProvince("Calabria", {
@@ -831,7 +998,8 @@ DefineProvince("Calabria", {
 	SettlementLocation = {526, 145}, -- Catanzaro
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
-	Coastal = true
+	Coastal = true,
+	Regions = {"Europe", "Italy", "West and Central Europe"}
 })
 
 DefineProvince("Carniola", {
@@ -848,7 +1016,8 @@ DefineProvince("Carniola", {
 	},
 	SettlementLocation = {521, 125}, -- Laibach/Ljubljana
 	Map = "maps/random/random-map-forest.smp",
-	SettlementTerrain = "Plains"
+	SettlementTerrain = "Plains",
+	Regions = {"Cisleithania", "Europe", "Roman Danube", "West and Central Europe"}
 })
 
 DefineProvince("Castille", {
@@ -884,7 +1053,8 @@ DefineProvince("Castille", {
 	},
 	SettlementLocation = {469, 141}, -- Madrid
 	Map = "maps/random/random-map-forest.smp",
-	SettlementTerrain = "Plains"
+	SettlementTerrain = "Plains",
+	Regions = {"Europe", "Iberia", "West and Central Europe"}
 })
 
 DefineProvince("Corinth", {
@@ -901,7 +1071,8 @@ DefineProvince("Corinth", {
 	Coastal = true,
 	Claims = {
 		"greek", "Corinth"
-	}
+	},
+	Regions = {"Europe", "Greece", "West and Central Europe"}
 })
 
 DefineProvince("Cornwall", {
@@ -928,7 +1099,8 @@ DefineProvince("Cornwall", {
 	HistoricalOwners = {
 		43, "latin", "Rome", -- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		1560, "teuton", "England" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
-	}
+	},
+	Regions = {"British Isles", "England", "Europe", "Northwest Europe", "West and Central Europe"}
 })
 
 DefineProvince("Corsica", {
@@ -944,7 +1116,8 @@ DefineProvince("Corsica", {
 	SettlementLocation = {506, 136},
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
-	Coastal = true
+	Coastal = true,
+	Regions = {"Europe", "Italy", "West and Central Europe"}
 })
 
 DefineProvince("Courland", {
@@ -1003,7 +1176,8 @@ DefineProvince("Crete", {
 		"minoan", "Minoan Tribe",
 		"minoan", "Crete",
 		"greek", "Krete"
-	}
+	},
+	Regions = {"Europe", "Greece", "West and Central Europe"}
 })
 
 DefineProvince("Crimea", {
@@ -1031,7 +1205,8 @@ DefineProvince("Crimea", {
 	Claims = {
 		"greek", "Cimmerian Bosphorus"
 --		"teuton", "Crimea"
-	}
+	},
+	Regions = {"Eurasia", "Europe"}
 })
 
 DefineProvince("Croatia", {
@@ -1064,7 +1239,8 @@ DefineProvince("Croatia", {
 	Coastal = true,
 	Claims = {
 		"slav", "Croatia"
-	}
+	},
+	Regions = {"Europe", "Roman Danube", "West and Central Europe"}
 })
 
 DefineProvince("Cumbria", {
@@ -1091,7 +1267,8 @@ DefineProvince("Cumbria", {
 	},
 	HistoricalCultures = {
 		1560, "teuton"
-	}
+	},
+	Regions = {"British Isles", "England", "Europe", "Northwest Europe", "West and Central Europe"}
 })
 
 DefineProvince("Dalmatia", {
@@ -1118,7 +1295,8 @@ DefineProvince("Dalmatia", {
 	Coastal = true,
 	Claims = {
 		"illyrian", "Illyrian Tribe"
-	}
+	},
+	Regions = {"Europe", "Roman Danube", "West and Central Europe"}
 })
 
 DefineProvince("Dobruja", {
@@ -1140,7 +1318,8 @@ DefineProvince("Dobruja", {
 	Claims = {
 		"greek", "Thrace",
 		"thracian", "Getae Tribe"
-	}
+	},
+	Regions = {"Europe", "Roman Danube", "West and Central Europe"}
 })
 
 DefineProvince("Don", {
@@ -1176,7 +1355,8 @@ DefineProvince("Don", {
 	SettlementTerrain = "Plains",
 	Claims = {
 		"celt", "Vana Tribe"
-	}
+	},
+	Regions = {"Eurasia", "Europe"}
 })
 
 DefineProvince("Drenthe", {
@@ -1199,7 +1379,8 @@ DefineProvince("Drenthe", {
 		"teuton", "Drenthe",
 		"teuton", "Netherlands",
 		"teuton", "Holy Rome"
-	}
+	},
+	Regions = {"Europe", "Germany-Netherlands", "Northwest Europe", "West and Central Europe"}
 })
 
 DefineProvince("Durham", {
@@ -1229,7 +1410,8 @@ DefineProvince("Durham", {
 	},
 	HistoricalCultures = {
 		526, "teuton"
-	}
+	},
+	Regions = {"British Isles", "England", "Europe", "Northwest Europe", "West and Central Europe"}
 })
 
 DefineProvince("East Anglia", {
@@ -1264,7 +1446,8 @@ DefineProvince("East Anglia", {
 	},
 	HistoricalCultures = {
 		526, "teuton"
-	}
+	},
+	Regions = {"British Isles", "England", "Europe", "Northwest Europe", "West and Central Europe"}
 })
 
 DefineProvince("East Friesland", { -- also includes Osnabrück
@@ -1290,7 +1473,8 @@ DefineProvince("East Friesland", { -- also includes Osnabrück
 		"teuton", "Frisian Tribe",
 		"teuton", "Holy Rome"
 	},
-	Coastal = true
+	Coastal = true,
+	Regions = {"Europe", "Germany-Netherlands", "West and Central Europe"}
 })
 
 DefineProvince("Epirus", {
@@ -1311,7 +1495,8 @@ DefineProvince("Epirus", {
 		"greek", "Epirus"
 	},
 	SettlementTerrain = "Plains",
-	Coastal = true
+	Coastal = true,
+	Regions = {"Europe", "Greece", "West and Central Europe"}
 })
 
 DefineProvince("Essex", {
@@ -1344,7 +1529,8 @@ DefineProvince("Essex", {
 	},
 	HistoricalCultures = {
 		526, "teuton"
-	}
+	},
+	Regions = {"British Isles", "England", "Europe", "Northwest Europe", "West and Central Europe"}
 })
 
 DefineProvince("Estonia", {
@@ -1392,7 +1578,8 @@ DefineProvince("Euboea", { -- to make this island appear separated from Attica, 
 	Coastal = true,
 	Claims = {
 		"minoan", "Impressedware Tribe"
-	}
+	},
+	Regions = {"Europe", "Greece", "West and Central Europe"}
 })
 
 DefineProvince("Farther Pomerania", {
@@ -1421,7 +1608,8 @@ DefineProvince("Farther Pomerania", {
 	Claims = {
 		"goth", "Turcilingian Tribe"
 	},
-	Coastal = true
+	Coastal = true,
+	Regions = {"Europe", "Germany-Netherlands", "West and Central Europe"}
 })
 
 DefineProvince("France", {
@@ -1466,7 +1654,8 @@ DefineProvince("France", {
 	Claims = {
 		"teuton", "Neustria", -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
 --		"latin", "France"
-	}
+	},
+	Regions = {"Europe", "France", "Gaul", "Northwest Europe", "West and Central Europe"}
 })
 
 DefineProvince("Franche Comte", {
@@ -1491,7 +1680,8 @@ DefineProvince("Franche Comte", {
 	Claims = {
 		"celt", "Sequani Tribe"
 --		"latin", "France"
-	}
+	},
+	Regions = {"Europe", "France", "Gaul", "Northwest Europe", "West and Central Europe"}
 })
 
 DefineProvince("Franconia", {
@@ -1524,7 +1714,8 @@ DefineProvince("Franconia", {
 		"teuton", "Thuringian Tribe",
 		"teuton", "Franconia", -- Part of the Duchy of Franconia in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		"teuton", "Holy Rome"
-	}
+	},
+	Regions = {"Europe", "Germany-Netherlands", "West and Central Europe"}
 })
 
 DefineProvince("Friesland", {
@@ -1552,7 +1743,8 @@ DefineProvince("Friesland", {
 		"teuton", "Friesland",
 		"teuton", "Netherlands",
 		"teuton", "Holy Rome"
-	}
+	},
+	Regions = {"Europe", "Germany-Netherlands", "Northwest Europe", "West and Central Europe"}
 })
 
 DefineProvince("Galicia", {
@@ -1591,7 +1783,8 @@ DefineProvince("Galicia", {
 		"goth", "Bastarnae Tribe",
 		"goth", "Gepidae Tribe",
 		"slav", "Poland"
-	}
+	},
+	Regions = {"Cisleithania", "Europe", "Poland", "West and Central Europe"}
 })
 
 DefineProvince("Gallaecia", {
@@ -1625,7 +1818,8 @@ DefineProvince("Gallaecia", {
 		411, "teuton", "Suebi Tribe", -- The Suebi conquered Gallaecia in 411 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 		486, "teuton", "Galicia", -- Suebi kingdom of Galicia; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		1560, "latin", "Spain" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
-	}
+	},
+	Regions = {"Europe", "Iberia", "West and Central Europe"}
 })
 
 DefineProvince("Gotaland", {
@@ -1702,7 +1896,8 @@ DefineProvince("Hanover", {
 	Claims = {
 		"teuton", "Lombard Tribe",
 		"teuton", "Holy Rome"
-	}
+	},
+	Regions = {"Europe", "Germany-Netherlands", "West and Central Europe"}
 })
 
 DefineProvince("Hesse", {
@@ -1728,7 +1923,8 @@ DefineProvince("Hesse", {
 		"teuton", "Franconia", -- Part of the Duchy of Franconia in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		"teuton", "Hesse",
 		"teuton", "Holy Rome"
-	}
+	},
+	Regions = {"Europe", "Germany-Netherlands", "West and Central Europe"}
 })
 
 DefineProvince("Highland Scotland", {
@@ -1774,7 +1970,8 @@ DefineProvince("Highland Scotland", {
 	},
 	HistoricalCultures = {
 		395, "celt"
-	}
+	},
+	Regions = {"British Isles", "Europe", "Northwest Europe", "West and Central Europe"}
 })
 
 DefineProvince("Hither Pomerania", {
@@ -1801,7 +1998,8 @@ DefineProvince("Hither Pomerania", {
 		"basque", "Funnelbeaker Tribe",
 		"goth", "Rugian Tribe"
 	},
-	Coastal = true
+	Coastal = true,
+	Regions = {"Europe", "Germany-Netherlands", "West and Central Europe"}
 })
 
 DefineProvince("Holland", {
@@ -1835,7 +2033,8 @@ DefineProvince("Holland", {
 		"teuton", "Holland",
 		"teuton", "Netherlands",
 		"teuton", "Holy Rome"
-	}
+	},
+	Regions = {"Europe", "Germany-Netherlands", "Northwest Europe", "West and Central Europe"}
 })
 
 DefineProvince("Holstein", {
@@ -1859,7 +2058,8 @@ DefineProvince("Holstein", {
 		"teuton", "Saxon Tribe",
 		"teuton", "Holy Rome"
 	},
-	Coastal = true
+	Coastal = true,
+	Regions = {"Europe", "Germany-Netherlands", "West and Central Europe"}
 })
 
 DefineProvince("Hordaland", {
@@ -1989,7 +2189,8 @@ DefineProvince("Ireland", {
 	},
 	HistoricalCultures = {
 		395, "celt"
-	}
+	},
+	Regions = {"British Isles", "Europe", "Northwest Europe", "West and Central Europe"}
 })
 
 DefineProvince("Istria", {
@@ -2006,7 +2207,8 @@ DefineProvince("Istria", {
 	SettlementLocation = {519, 126}, -- Trieste
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
-	Coastal = true
+	Coastal = true,
+	Regions = {"Europe", "Italy", "West and Central Europe"}
 })
 
 DefineProvince("Jutland", {
@@ -2067,7 +2269,8 @@ DefineProvince("Kent", {
 	},
 	HistoricalCultures = {
 		526, "teuton"
-	}
+	},
+	Regions = {"British Isles", "England", "Europe", "Northwest Europe", "West and Central Europe"}
 })
 
 DefineProvince("Lacedaemonia", {
@@ -2088,7 +2291,8 @@ DefineProvince("Lacedaemonia", {
 	Coastal = true,
 	Claims = {
 		"greek", "Sparta"
-	}
+	},
+	Regions = {"Europe", "Greece", "West and Central Europe"}
 })
 
 DefineProvince("Latium", {
@@ -2110,7 +2314,8 @@ DefineProvince("Latium", {
 	Claims = {
 		"latin", "Latin Tribe",
 		"latin", "Rome"
-	}
+	},
+	Regions = {"Europe", "Italy", "West and Central Europe"}
 })
 
 DefineProvince("Latvia", {
@@ -2160,7 +2365,8 @@ DefineProvince("Lauenburg", {
 		"basque", "Funnelbeaker Tribe",
 		"teuton", "Saxon Tribe",
 		"teuton", "Holy Rome"
-	}
+	},
+	Regions = {"Europe", "Germany-Netherlands", "West and Central Europe"}
 })
 
 DefineProvince("Liguria", {
@@ -2183,7 +2389,8 @@ DefineProvince("Liguria", {
 	Coastal = true,
 	Claims = {
 		"celt", "Ligurian Tribe"
-	}
+	},
+	Regions = {"Europe", "Italy", "West and Central Europe"}
 })
 
 DefineProvince("Lincoln", {
@@ -2216,7 +2423,8 @@ DefineProvince("Lincoln", {
 	},
 	HistoricalCultures = {
 		526, "teuton"
-	}
+	},
+	Regions = {"British Isles", "England", "Europe", "Northwest Europe", "West and Central Europe"}
 })
 
 DefineProvince("Lithuania", {
@@ -2267,7 +2475,8 @@ DefineProvince("Lombardy", {
 	},
 	SettlementLocation = {506, 126}, -- Milan
 	Map = "maps/random/random-map-forest.smp",
-	SettlementTerrain = "Plains"
+	SettlementTerrain = "Plains",
+	Regions = {"Europe", "Italy", "West and Central Europe"}
 })
 
 DefineProvince("Lorraine", {
@@ -2290,7 +2499,8 @@ DefineProvince("Lorraine", {
 	SettlementTerrain = "Plains",
 	Claims = {
 		"teuton", "Holy Rome"
-	}
+	},
+	Regions = {"Europe", "France", "Gaul", "Northwest Europe", "West and Central Europe"}
 })
 
 DefineProvince("Lower Lusatia", {
@@ -2308,7 +2518,8 @@ DefineProvince("Lower Lusatia", {
 	},
 	SettlementLocation = {521, 108}, -- Guben
 	Map = "maps/random/random-map-forest.smp",
-	SettlementTerrain = "Plains"
+	SettlementTerrain = "Plains",
+	Regions = {"Europe", "Germany-Netherlands", "West and Central Europe"}
 })
 
 DefineProvince("Lower Rhine", {
@@ -2327,7 +2538,8 @@ DefineProvince("Lower Rhine", {
 	Claims = {
 		"teuton", "Austrasia", -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
 		"teuton", "Holy Rome"
-	}
+	},
+	Regions = {"Europe", "Gaul", "Germany-Netherlands", "West and Central Europe"}
 })
 
 DefineProvince("Lowland Scotland", {
@@ -2360,7 +2572,8 @@ DefineProvince("Lowland Scotland", {
 	HistoricalOwners = {
 		80, "latin", "Rome", -- The area between the Wall of Antoninus (or Severus) and Hadrian's Wall was acquired by Rome in 80 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		1560, "teuton", "Scotland" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
-	}
+	},
+	Regions = {"British Isles", "Europe", "Northwest Europe", "West and Central Europe"}
 })
 
 DefineProvince("Macedonia", {
@@ -2388,7 +2601,8 @@ DefineProvince("Macedonia", {
 		"greek", "Macedon",
 		"thracian", "Edoni Tribe", -- inhabited the region between Stryinon and Nestus rivers
 		"thracian", "Odomanti Tribe" -- inhabited the region between Stryinon and Nestus rivers
-	}
+	},
+	Regions = {"Europe", "Greece", "West and Central Europe"}
 })
 
 DefineProvince("Magdeburg", {
@@ -2413,7 +2627,8 @@ DefineProvince("Magdeburg", {
 		"teuton", "Cherusci Tribe",
 		"teuton", "Magdeburg",
 		"teuton", "Holy Rome"
-	}
+	},
+	Regions = {"Europe", "Germany-Netherlands", "West and Central Europe"}
 })
 
 DefineProvince("Malta", {
@@ -2488,7 +2703,8 @@ DefineProvince("Mecklenburg", {
 		"teuton", "Varini Tribe",
 		"teuton", "Mecklenburg"
 	},
-	Coastal = true
+	Coastal = true,
+	Regions = {"Europe", "Germany-Netherlands", "West and Central Europe"}
 })
 
 DefineProvince("Mercia", {
@@ -2529,7 +2745,8 @@ DefineProvince("Mercia", {
 	},
 	HistoricalCultures = {
 		526, "teuton"
-	}
+	},
+	Regions = {"British Isles", "England", "Europe", "Northwest Europe", "West and Central Europe"}
 })
 
 DefineProvince("Modena", {
@@ -2543,7 +2760,8 @@ DefineProvince("Modena", {
 	SettlementLocation = {511, 129}, -- Modena
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
-	Coastal = true
+	Coastal = true,
+	Regions = {"Europe", "Italy", "West and Central Europe"}
 })
 
 DefineProvince("Moldavia", {
@@ -2583,7 +2801,8 @@ DefineProvince("Montenegro", {
 	SettlementLocation = {534, 135}, -- Podgorica
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
-	Coastal = true
+	Coastal = true,
+	Regions = {"Europe", "Roman Danube", "West and Central Europe"}
 })
 
 DefineProvince("Moravia", {
@@ -2621,7 +2840,8 @@ DefineProvince("Moravia", {
 	HistoricalCultures = {
 		-5500, "basque",
 		-9, "teuton"
-	}
+	},
+	Regions = {"Cisleithania", "Czechoslovakia", "Europe", "West and Central Europe"}
 })
 
 DefineProvince("Moselle", {
@@ -2639,7 +2859,8 @@ DefineProvince("Moselle", {
 	SettlementTerrain = "Plains",
 	Claims = {
 		"teuton", "Holy Rome"
-	}
+	},
+	Regions = {"Europe", "France", "Gaul", "Northwest Europe", "West and Central Europe"}
 })
 
 DefineProvince("Naples", {
@@ -2664,7 +2885,8 @@ DefineProvince("Naples", {
 	SettlementLocation = {520, 139}, -- Naples
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
-	Coastal = true
+	Coastal = true,
+	Regions = {"Europe", "Italy", "West and Central Europe"}
 })
 
 DefineProvince("Neumark", {
@@ -2688,7 +2910,8 @@ DefineProvince("Neumark", {
 	SettlementTerrain = "Plains",
 	Claims = {
 		"teuton", "Brandenburg"
-	}
+	},
+	Regions = {"Europe", "Germany-Netherlands", "West and Central Europe"}
 })
 
 DefineProvince("Normandy", {
@@ -2726,7 +2949,8 @@ DefineProvince("Normandy", {
 	},
 	HistoricalCultures = {
 		-7000, "basque"
-	}
+	},
+	Regions = {"Europe", "France", "Gaul", "Northwest Europe", "West and Central Europe"}
 })
 
 DefineProvince("Northumberland", {
@@ -2764,7 +2988,8 @@ DefineProvince("Northumberland", {
 	},
 	HistoricalCultures = {
 		526, "teuton"
-	}
+	},
+	Regions = {"British Isles", "England", "Europe", "Northwest Europe", "West and Central Europe"}
 })
 
 DefineProvince("Oldenburg", {
@@ -2783,7 +3008,8 @@ DefineProvince("Oldenburg", {
 		"basque", "Funnelbeaker Tribe",
 		"teuton", "Holy Rome"
 	},
-	Coastal = true
+	Coastal = true,
+	Regions = {"Europe", "Germany-Netherlands", "West and Central Europe"}
 })
 
 DefineProvince("Orkney", {
@@ -2802,7 +3028,8 @@ DefineProvince("Orkney", {
 	HistoricalOwners = {
 		1099, "norse", "Orkney", -- since the faction had a ruler at this date, then it must have existed
 		1560, "teuton", "Scotland" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
-	}
+	},
+	Regions = {"British Isles", "Europe", "Northwest Europe", "West and Central Europe"}
 })
 
 DefineProvince("Overijssel", {
@@ -2824,7 +3051,8 @@ DefineProvince("Overijssel", {
 		"teuton", "Overijssel",
 		"teuton", "Netherlands",
 		"teuton", "Holy Rome"
-	}
+	},
+	Regions = {"Europe", "Germany-Netherlands", "Northwest Europe", "West and Central Europe"}
 })
 
 DefineProvince("Palatinate", {
@@ -2843,7 +3071,8 @@ DefineProvince("Palatinate", {
 	Claims = {
 		"teuton", "Franconia", -- Part of the Duchy of Franconia in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		"teuton", "Holy Rome"
-	}
+	},
+	Regions = {"Europe", "Gaul", "Germany-Netherlands", "West and Central Europe"}
 })
 
 DefineProvince("Palermo", {
@@ -2867,7 +3096,8 @@ DefineProvince("Palermo", {
 		"latin", "Elymian Tribe",
 		"latin", "Sicanian Tribe"
 --		"latin", "Sicily"
-	}
+	},
+	Regions = {"Europe", "Italy", "West and Central Europe"}
 })
 
 DefineProvince("Pannonia", {
@@ -2891,7 +3121,8 @@ DefineProvince("Pannonia", {
 	SettlementTerrain = "Plains",
 	Claims = {
 		"basque", "Linearware Tribe"
-	}
+	},
+	Regions = {"Europe", "Roman Danube", "West and Central Europe"}
 })
 
 DefineProvince("Parma", {
@@ -2906,7 +3137,8 @@ DefineProvince("Parma", {
 	},
 	SettlementLocation = {509, 128}, -- Parma
 	Map = "maps/random/random-map-forest.smp",
-	SettlementTerrain = "Plains"
+	SettlementTerrain = "Plains",
+	Regions = {"Europe", "Italy", "West and Central Europe"}
 })
 
 DefineProvince("Piedmont", {
@@ -2922,7 +3154,8 @@ DefineProvince("Piedmont", {
 	},
 	SettlementLocation = {502, 127}, -- Turin
 	Map = "maps/random/random-map-forest.smp",
-	SettlementTerrain = "Plains"
+	SettlementTerrain = "Plains",
+	Regions = {"Europe", "Italy", "West and Central Europe"}
 })
 
 DefineProvince("Pomerelia", {
@@ -2985,7 +3218,8 @@ DefineProvince("Portugal", {
 		450, "teuton", "Suebi Tribe", -- The Suebi were in possession of most of modern Portugal by around 450 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 		486, "teuton", "Galicia", -- Suebi kingdom of Galicia; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		1560, "latin", "Portugal" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
-	}
+	},
+	Regions = {"Europe", "Iberia", "West and Central Europe"}
 })
 
 DefineProvince("Posen", {
@@ -3037,8 +3271,9 @@ DefineProvince("Provence", {
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
 	Claims = {
---				"latin", "France"
-	}
+--		"latin", "France"
+	},
+	Regions = {"Europe", "France", "Gaul", "Northwest Europe", "West and Central Europe"}
 })
 
 DefineProvince("Prussia", {
@@ -3078,7 +3313,8 @@ DefineProvince("Rhodes", {
 	SettlementLocation = {559, 152}, -- Ialysus
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
-	Coastal = true
+	Coastal = true,
+	Regions = {"Europe", "Greece", "West and Central Europe"}
 })
 
 DefineProvince("Rhodope", {
@@ -3098,7 +3334,8 @@ DefineProvince("Rhodope", {
 	SettlementTerrain = "Plains",
 	Claims = {
 		"greek", "Thrace"
-	}
+	},
+	Regions = {"Europe", "Greece", "West and Central Europe"}
 })
 
 DefineProvince("Romagna", {
@@ -3116,7 +3353,8 @@ DefineProvince("Romagna", {
 	SettlementLocation = {512, 129}, -- Bologna
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
-	Coastal = true
+	Coastal = true,
+	Regions = {"Europe", "Italy", "West and Central Europe"}
 })
 
 DefineProvince("Russia", {
@@ -3194,7 +3432,8 @@ DefineProvince("Russia", {
 		"slav", "Budini Tribe",
 		"slav", "Muscovy",
 		"slav", "Russia"
-	}
+	},
+	Regions = {"Eurasia", "Europe"}
 })
 
 DefineProvince("Sardinia", {
@@ -3212,7 +3451,8 @@ DefineProvince("Sardinia", {
 	SettlementLocation = {505, 144}, -- Cagliari
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
-	Coastal = true
+	Coastal = true,
+	Regions = {"Europe", "Italy", "West and Central Europe"}
 })
 
 DefineProvince("Savoy", {
@@ -3233,7 +3473,8 @@ DefineProvince("Savoy", {
 	Claims = {
 --		"latin", "France",
 --		"latin", "Savoy"
-	}
+	},
+	Regions = {"Europe", "France", "Gaul", "Northwest Europe", "West and Central Europe"}
 })
 
 DefineProvince("Scania", {
@@ -3309,7 +3550,8 @@ DefineProvince("Serbia", {
 	SettlementTerrain = "Plains",
 	Claims = {
 		"thracian", "Triballi Tribe"
-	}
+	},
+	Regions = {"Europe", "Roman Danube", "West and Central Europe"}
 })
 
 DefineProvince("Silesia", {
@@ -3338,7 +3580,8 @@ DefineProvince("Silesia", {
 	Claims = {
 		"goth", "Lugii Tribe",
 		"goth", "Silingae Tribe"
-	}
+	},
+	Regions = {"Europe", "Germany-Netherlands", "West and Central Europe"}
 })
 
 DefineProvince("Skopje", {
@@ -3360,7 +3603,8 @@ DefineProvince("Skopje", {
 	SettlementTerrain = "Plains",
 	Claims = {
 		"phrygian", "Bryges Tribe"
-	}
+	},
+	Regions = {"Europe", "Greece", "West and Central Europe"}
 })
 
 DefineProvince("Slovakia", {
@@ -3414,7 +3658,8 @@ DefineProvince("Slovakia", {
 		-5500, "basque",
 		-264, "celt",
 		-9, "teuton"
-	}
+	},
+	Regions = {"Czechoslovakia", "Europe", "West and Central Europe"}
 })
 
 DefineProvince("Sussex", {
@@ -3445,7 +3690,8 @@ DefineProvince("Sussex", {
 	},
 	HistoricalCultures = {
 		526, "teuton"
-	}
+	},
+	Regions = {"British Isles", "England", "Europe", "Northwest Europe", "West and Central Europe"}
 })
 
 DefineProvince("Sweden", {
@@ -3515,7 +3761,8 @@ DefineProvince("Switzerland", {
 		"celt", "Helvetii Tribe",
 		"teuton", "Switzerland",
 		"teuton", "Holy Rome"
-	}
+	},
+	Regions = {"Europe", "Roman Danube", "West and Central Europe"}
 })
 
 DefineProvince("Syracuse", {
@@ -3537,7 +3784,8 @@ DefineProvince("Syracuse", {
 	Claims = {
 		"latin", "Sicel Tribe"
 --				"latin", "Sicily"
-	}
+	},
+	Regions = {"Europe", "Italy", "West and Central Europe"}
 })
 
 DefineProvince("Thessaly", {
@@ -3557,7 +3805,8 @@ DefineProvince("Thessaly", {
 	Coastal = true,
 	Claims = {
 		"minoan", "Impressedware Tribe"
-	}
+	},
+	Regions = {"Europe", "Greece", "West and Central Europe"}
 })
 
 DefineProvince("Thrace", {
@@ -3578,7 +3827,8 @@ DefineProvince("Thrace", {
 	Claims = {
 		"thracian", "Apsinthii Tribe",
 		"greek", "Thrace"
-	}
+	},
+	Regions = {"Europe", "Greece", "West and Central Europe"}
 })
 
 DefineProvince("Thuringia", {
@@ -3602,7 +3852,8 @@ DefineProvince("Thuringia", {
 	Claims = {
 		"teuton", "Hermunduri Tribe",
 		"teuton", "Holy Rome"
-	}
+	},
+	Regions = {"Europe", "Germany-Netherlands", "West and Central Europe"}
 })
 
 DefineProvince("Transylvania", {
@@ -3663,7 +3914,8 @@ DefineProvince("Tuscany", {
 	Claims = {
 		"etruscan", "Etruscan Tribe",
 		"etruscan", "Etruria"
-	}
+	},
+	Regions = {"Europe", "Italy", "West and Central Europe"}
 })
 
 DefineProvince("Ukraine", {
@@ -3734,7 +3986,8 @@ DefineProvince("Ukraine", {
 		"persian", "Roxolani Tribe",
 		"persian", "Scythian Tribe",
 		"slav", "Venedae Tribe"
-	}
+	},
+	Regions = {"Eurasia", "Europe"}
 })
 
 DefineProvince("Umbria", {
@@ -3757,7 +4010,8 @@ DefineProvince("Umbria", {
 		"latin", "Picentian Tribe",
 		"latin", "Sabine Tribe",
 		"latin", "Umbrian Tribe"
-	}
+	},
+	Regions = {"Europe", "Italy", "West and Central Europe"}
 })
 
 DefineProvince("Upper Lusatia", {
@@ -3773,7 +4027,8 @@ DefineProvince("Upper Lusatia", {
 	},
 	SettlementLocation = {520, 109}, -- Bautzen
 	Map = "maps/random/random-map-forest.smp",
-	SettlementTerrain = "Plains"
+	SettlementTerrain = "Plains",
+	Regions = {"Europe", "Germany-Netherlands", "West and Central Europe"}
 })
 
 DefineProvince("Upper Saxony", {
@@ -3794,7 +4049,8 @@ DefineProvince("Upper Saxony", {
 	Claims = {
 		"teuton", "Hermunduri Tribe",
 		"teuton", "Holy Rome"
-	}
+	},
+	Regions = {"Europe", "Germany-Netherlands", "West and Central Europe"}
 })
 
 DefineProvince("Venetia", {
@@ -3818,8 +4074,9 @@ DefineProvince("Venetia", {
 	Coastal = true,
 	Claims = {
 		"latin", "Venetian Tribe"
---				"latin", "Venice"
-	}
+--		"latin", "Venice"
+	},
+	Regions = {"Europe", "Italy", "West and Central Europe"}
 })
 
 DefineProvince("Vojvodina", {
@@ -3870,7 +4127,8 @@ DefineProvince("Wales", {
 	HistoricalCultures = {
 		-7000, "basque",
 		613, "celt"
-	}
+	},
+	Regions = {"British Isles", "England", "Europe", "Northwest Europe", "West and Central Europe"}
 })
 
 DefineProvince("Wallachia", {
@@ -3947,7 +4205,8 @@ DefineProvince("Wessex", {
 	HistoricalCultures = {
 		-7000, "basque",
 		526, "teuton"
-	}
+	},
+	Regions = {"British Isles", "England", "Europe", "Northwest Europe", "West and Central Europe"}
 })
 
 DefineProvince("West Galicia", {
@@ -4008,7 +4267,8 @@ DefineProvince("Westphalia", {
 		"teuton", "Sugambri Tribe",
 		"teuton", "Westphalia",
 		"teuton", "Holy Rome"
-	}
+	},
+	Regions = {"Europe", "Germany-Netherlands", "West and Central Europe"}
 })
 
 DefineProvince("White Russia", {
@@ -4054,7 +4314,8 @@ DefineProvince("White Russia", {
 	SettlementTerrain = "Plains",
 	Claims = {
 		"slav", "Poland"
-	}
+	},
+	Regions = {"Eurasia", "Europe"}
 })
 
 DefineProvince("Wurtemberg", {
@@ -4078,7 +4339,8 @@ DefineProvince("Wurtemberg", {
 		"teuton", "Swabia", -- Part of the Duchy of Swabia in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		"teuton", "Wurtemberg",
 		"teuton", "Holy Rome"
-	}
+	},
+	Regions = {"Europe", "Germany-Netherlands", "Roman Danube", "West and Central Europe"}
 })
 
 DefineProvince("York", {
@@ -4116,7 +4378,8 @@ DefineProvince("York", {
 	},
 	HistoricalCultures = {
 		500, "teuton"
-	}
+	},
+	Regions = {"British Isles", "England", "Europe", "Northwest Europe", "West and Central Europe"}
 })
 
 DefineProvince("Zealand", {

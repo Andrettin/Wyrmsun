@@ -1835,8 +1835,7 @@ DefineLanguageWord("Osten", {
 DefineLanguageWord("Otto", {
 	Language = "high-german",
 	Type = "noun",
-	Meanings = {},
-	NameTypes = {"person-male"}
+	Meanings = {}
 })
 
 DefineLanguageWord("Paul", {

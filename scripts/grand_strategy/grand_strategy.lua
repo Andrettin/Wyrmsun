@@ -4178,16 +4178,6 @@ function GetYearString(year)
 	end
 end
 
-function SetRegionPopulation(region_name, quantity)
-	region_name = string.gsub(region_name, " ", "")
-	region_name = string.gsub(region_name, "-", "")
-	local region = Regions[region_name]
-	
-	for i=1,table.getn(region) do
-		SetProvincePopulation(region[i], quantity / table.getn(region))
-	end
-end
-
 function RestoreScenarioUnitsToProvince(arg) -- restore the units of a certain faction to a certain province
 	if (arg.IgnoredUnitClasses == nil) then
 		arg.IgnoredUnitClasses = {}
