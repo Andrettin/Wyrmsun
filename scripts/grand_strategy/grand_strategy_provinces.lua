@@ -63,10 +63,6 @@ function LoadProvinces(world)
 		},
 		Astrakhan = {
 			Name = "Astrakhan",
-			SettlementBuildings = {
-				unit_germanic_town_hall = true,
-				unit_germanic_barracks = true
-			},
 			Units = {
 				unit_germanic_warrior = 8
 			}
@@ -148,11 +144,7 @@ function LoadProvinces(world)
 			Name = "Courland"
 		},
 		Crete = {
-			Name = "Crete",
-			Owner = "Minoan Tribe", -- Minoans inhabited the island of Crete in 3000 BC; Source: Rodney Castleden, "Minoans", 2002, p. 4.
-			SettlementBuildings = {
-				unit_teuton_town_hall = true
-			}
+			Name = "Crete"
 		},
 		Crimea = {
 			Name = "Crimea"
@@ -172,10 +164,6 @@ function LoadProvinces(world)
 		Don = {
 			Name = "Don",
 			Owner = "Vana Tribe",
-			SettlementBuildings = {
-				unit_germanic_town_hall = true,
-				unit_germanic_barracks = true
-			},
 			Units = {
 				unit_germanic_warrior = 4
 			}
@@ -525,10 +513,6 @@ function LoadProvinces(world)
 			Name = "Brown Hills",
 			Owner = "Untersberg",
 			Civilization = "gnome",
-			SettlementBuildings = {
-				unit_gnomish_town_hall = true,
-				unit_gnomish_barracks = true -- has capability to train soldiers
-			},
 			Units = {
 				unit_gnomish_master_at_arms = 1, -- Pypo I
 				unit_gnomish_duelist = 1 -- Pypo's envoy
@@ -543,9 +527,6 @@ function LoadProvinces(world)
 		CavernsOfFlame = {
 			Name = "Caverns of Flame",
 			Civilization = "goblin",
-			SettlementBuildings = {
-				unit_dwarven_smithy = true -- abandoned forge which Thursagan later uses to craft the Scepter of Fire
-			},
 			Units = { -- starting units in the Caverns of Flame scenario
 				unit_goblin_spearman = 10, -- 2 orcish warlords, 2 troll warriors, 2 trolls, 4 orcish warriors
 				unit_goblin_war_machine = 1
@@ -569,9 +550,6 @@ function LoadProvinces(world)
 			Name = "Heartfangs",
 			Owner = "Khag Tribe",
 			Civilization = "goblin",
-			SettlementBuildings = {
-				unit_goblin_town_hall = true
-			},
 			Units = {
 				unit_goblin_spearman = 5 -- Fal Khag, Gatrakh, Thurg, Krung, Gorokh (should all be cavalry)
 			}
@@ -618,9 +596,6 @@ function LoadProvinces(world)
 		NorthernWastelands = {
 			Name = "Northern Wastelands",
 			Civilization = "goblin",
-			SettlementBuildings = {
-				unit_dwarven_smithy = true -- Thursagan's smithy
-			},
 			Units = { -- numbers derived from 3 goblins per 13 groups which appear in the map during the Searching for the Runecrafter quest (the 2 other goblins which appear in the NorthernWastelandsEnemy() function were added for balance reasons)
 				unit_goblin_spearman = 26,
 				unit_goblin_archer = 13
@@ -630,10 +605,6 @@ function LoadProvinces(world)
 			Name = "Peaceful Valley",
 			Owner = "Lggi Tribe",
 			Civilization = "goblin",
-			SettlementBuildings = {
-				unit_goblin_town_hall = true,
-				unit_goblin_barracks = true -- has capability to train soldiers
-			},
 			Units = {
 				unit_goblin_spearman = 14 -- 13 is the quantity of villages in Peaceful Valley map (each can generate 0-2 goblin spearmen) + T'shar Lggi himself
 			}
@@ -653,10 +624,7 @@ function LoadProvinces(world)
 		Svarinshaug = {
 			Name = "Svarinshaug",
 			Owner = "Brising Clan",
-			Civilization = "dwarf",
-			SettlementBuildings = {
-				unit_dwarven_town_hall = true
-			}
+			Civilization = "dwarf"
 		}
 	}
 	

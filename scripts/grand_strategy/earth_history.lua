@@ -341,12 +341,8 @@ if (GrandStrategyYear >= -2800) then -- establishment of the Single Grave Cultur
 	SetProvinceOwner("Gotaland", "germanic", "Asa Tribe")
 	SetProvinceCivilization("Gotaland", "germanic")
 	
-	SetProvinceSettlementBuilding("Astrakhan", "unit-germanic-town-hall", false)
-	SetProvinceSettlementBuilding("Astrakhan", "unit-germanic-barracks", false)
 	SetProvinceUnitQuantity("Astrakhan", "unit-germanic-warrior", 0)
 	SetProvinceOwner("Don", "", "")
-	SetProvinceSettlementBuilding("Don", "unit-germanic-town-hall", false)
-	SetProvinceSettlementBuilding("Don", "unit-germanic-barracks", false)
 	SetProvinceUnitQuantity("Don", "unit-germanic-warrior", 0)
 
 	GrandStrategyEvents.OnTheVanaquisl = nil
@@ -417,13 +413,6 @@ end
 
 if (GrandStrategyYear >= -1700) then
 	-- Late Bronze Age begins around 1700 BC, and during this period cremation became the burial tradition in almost all of Europe; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 112.
-	
-	SetProvinceSettlementBuilding("Aetolia", "unit-teuton-stronghold", true) -- Mycenaean fortifications present in Krisa (in Locris Ozolis) between 1700 and 1200 BC; Source: "Atlas de História Mundial", 2001, p. 67.
-	SetProvinceSettlementBuilding("Argolis", "unit-teuton-stronghold", true) -- Mycenaean fortifications present in Argos, Tirinto, Dendra and Kastro between 1700 and 1200 BC, as well as in Araxos (in the Achaean coast) and in Kolonna (in the isle of Aegina); Source: "Atlas de História Mundial", 2001, p. 67.
-	SetProvinceSettlementBuilding("Corinth", "unit-teuton-stronghold", true) -- Mycenaean fortifications present in Korakou and Perdikaria (both in the isthmus of Corinth); Source: "Atlas de História Mundial", 2001, p. 67.
-	SetProvinceSettlementBuilding("Attica", "unit-teuton-stronghold", true) -- Mycenaean fortifications present in Athens between 1700 and 1200 BC, as well as in Aghia Irini (in the island of Ceos); Source: "Atlas de História Mundial", 2001, p. 67.
-	SetProvinceSettlementBuilding("Boeotia", "unit-teuton-stronghold", true) -- Mycenaean fortifications present in Eutresis, Kastri, Aghia Marina, Gla, Aghios Ioannis, Chantsa, Stroviki, Pyrgos and Panopeus between 1700 and 1200 BC, as well as in Aghia Irini (in the island of Ceos); Source: "Atlas de História Mundial", 2001, p. 67.
-	SetProvinceSettlementBuilding("Lacedaemonia", "unit-teuton-stronghold", true) -- Mycenaean fortifications present in Elliniko and Peristeria (both in the western coast of Messenia) between 1700 and 1200 BC, as well as in Phylakopi (in the island of Melos); Source: "Atlas de História Mundial", 2001, p. 67.
 	
 	-- Commercial routes in Greece between 1700 and 1200 BC (there being commercial routes, this would mean at least trail-level pathway); Source: "Atlas de História Mundial", 2001, p. 67.
 	SetWorldMapTilePathway(539, 144, "southeast", "trail")
@@ -508,7 +497,6 @@ end
 
 if (GrandStrategyYear >= -1600) then
 	GrandStrategyEvents.TheCurvedSwords = nil  -- Source: http://natmus.dk/en/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-roerby-swords/
-	SetProvinceSettlementBuilding("Jutland", "unit-germanic-smithy", true) -- bronzesmithing capabilities existed in Jutland, so that these swords were crafted
 	
 	-- Endpoints of sea trade routes (which in the game would mean those tiles having docks/ports) between 1600 and 1300 BC (date range could also be larger); Source: "Atlas de História Mundial", 2001, p. 66.
 	SetWorldMapTilePort(506, 143, true)
@@ -522,7 +510,6 @@ end
 if (GrandStrategyYear >= -1450) then
 	 -- Minoan civilization disappears in 1450 BC; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 23.
 	SetProvinceOwner("Crete", "", "")
-	SetProvinceSettlementBuilding("Crete", "unit-teuton-town-hall", false)
 	
 	-- Mycenaean Greece included Argolis, Aetolia, Attica, Boeotia, Corinth, Crete, Euboea, Lacedaemonia and Rhodes about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	SetProvinceOwner("Aetolia", "greek", "Mycenae")
@@ -569,20 +556,14 @@ end
 if (GrandStrategyYear >= -1190) then
 	-- Mycenaean palaces were abandoned in 1190 BC; Source: "Atlas de História Mundial", 2001, p. 66.
 	SetProvinceOwner("Aetolia", "", "")
-	SetProvinceSettlementBuilding("Aetolia", "unit-teuton-stronghold", false)
 	SetProvinceOwner("Argolis", "", "")
-	SetProvinceSettlementBuilding("Argolis", "unit-teuton-stronghold", false)
 	SetProvinceOwner("Attica", "", "")
-	SetProvinceSettlementBuilding("Attica", "unit-teuton-stronghold", false)
 	SetProvinceOwner("Boeotia", "", "")
-	SetProvinceSettlementBuilding("Boeotia", "unit-teuton-stronghold", false)
 	SetProvinceOwner("Corinth", "", "")
-	SetProvinceSettlementBuilding("Corinth", "unit-teuton-stronghold", false)
 	SetProvinceOwner("Crete", "", "")
 	SetProvinceOwner("Euboea", "", "")
 	SetProvinceOwner("Rhodes", "", "")
 	SetProvinceOwner("Lacedaemonia", "", "")
-	SetProvinceSettlementBuilding("Lacedaemonia", "unit-teuton-stronghold", false)
 	SetProvinceOwner("Thessaly", "", "")
 end
 
@@ -843,10 +824,6 @@ if (GrandStrategyYear >= -301) then
 end
 
 if (GrandStrategyYear >= -264) then
-	SetProvinceSettlementBuilding("Latium", "unit-teuton-barracks", true)
-	SetProvinceSettlementBuilding("Latium", "unit-teuton-lumber-mill", true)
-	SetProvinceSettlementBuilding("Latium", "unit-teuton-smithy", true)
-	
 	-- Roman territory at the beginning of the 1st Punic War (264 BC); Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	SetProvinceOwner("Naples", "latin", "Rome")
 	SetProvinceOwner("Abruzzo", "latin", "Rome")

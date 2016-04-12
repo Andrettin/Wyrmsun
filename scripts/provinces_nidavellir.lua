@@ -47,6 +47,9 @@ DefineProvince("Brown Hills", {
 	SettlementTerrain = "Hills", -- should be DkPl?
 	Claims = {
 		"gnome", "Untersberg"
+	},
+	HistoricalSettlementBuildings = {
+		25, "unit-gnomish-barracks", true -- has capability to train soldiers
 	}
 })
 
@@ -62,6 +65,10 @@ DefineProvince("Caverns of Chaincolt", {
 	Claims = {
 		"dwarf", "Norlund Clan",
 		"dwarf", "Knalga"
+	},
+	HistoricalSettlementBuildings = {
+		25, "unit-dwarven-barracks", true, -- had capability to train warriors
+		25, "unit-dwarven-lumber-mill", true -- had the capability to train scouts
 	}
 })
 
@@ -80,7 +87,10 @@ DefineProvince("Caverns of Flame", {
 	},
 	SettlementLocation = {41, 6},
 	Map = "maps/nidavellir/caverns-of-flame.smp",
-	SettlementTerrain = "Hills"
+	SettlementTerrain = "Hills",
+	HistoricalSettlementBuildings = {
+		25, "unit-dwarven-smithy", true -- an abandoned dwarven forge was present when Thursagan used it to craft the Scepter of Fire
+	}
 })
 
 DefineProvince("Eastern Mines", {
@@ -161,6 +171,9 @@ DefineProvince("Highbrook Pass", {
 	SettlementTerrain = "Mountains",
 	Claims = {
 		"dwarf", "Shinsplitter Clan"
+	},
+	HistoricalSettlementBuildings = {
+		535, "unit-dwarven-barracks", true -- the Shinsplitters were already capable of recruiting warriors in Highbrook Pass around this time
 	}
 })
 
@@ -204,6 +217,10 @@ DefineProvince("Kal Kartha", {
 	SettlementTerrain = "Mountains",
 	Claims = {
 		"dwarf", "Kal Kartha"
+	},
+	HistoricalSettlementBuildings = {
+		550, "unit-dwarven-barracks", true, -- had capability to train warriors
+		550, "unit-dwarven-smithy", true -- Karrag was already reviving the art of runesmithing in 550 AD
 	}
 })
 
@@ -241,7 +258,11 @@ DefineProvince("Northern Wastelands", {
 	},
 	SettlementLocation = {14, 2},
 	Map = "maps/nidavellir/northern-wastelands.smp",
-	SettlementTerrain = "Hills"
+	SettlementTerrain = "Hills",
+	HistoricalSettlementBuildings = {
+		25, "unit-dwarven-smithy", true, -- Thursagan's smithy
+		27, "unit-dwarven-smithy", false -- Thursagan abandoned his smithy in the Northern Wastelands to follow Rugnur is his quest to craft the Scepter of Fire
+	}
 })
 
 DefineProvince("Peaceful Valley", {
@@ -270,6 +291,12 @@ DefineProvince("Shorbear Hills", {
 	Claims = {
 		"dwarf", "Shorbear Clan",
 		"dwarf", "Knalga"
+	},
+	HistoricalSettlementBuildings = {
+		25, "unit-dwarven-stronghold", true, -- Shorbear Hold
+		25, "unit-dwarven-barracks", true, -- had capability to train warriors
+		25, "unit-dwarven-smithy", true, -- renowned skilled crafters
+		29, "unit-dwarven-lumber-mill", true -- had the capability to train scouts
 	}
 })
 
@@ -285,6 +312,11 @@ DefineProvince("Southern Tunnels", {
 	Claims = {
 		"dwarf", "Shinsplitter Clan",
 		"dwarf", "Knalga"
+	},
+	HistoricalSettlementBuildings = {
+		25, "unit-dwarven-barracks", true, -- had capability to train warriors
+		25, "unit-dwarven-lumber-mill", true, -- had the capability to train scouts
+		35, "unit-mercenary-camp", true -- at some point between 35 and 40 the Shinsplitters had the capacity to recruit mercenaries, as shown by them having hired the Surghan Mercenaries
 	}
 })
 

@@ -62,6 +62,10 @@ DefineProvince("Aetolia", {
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
 	Coastal = true,
+	HistoricalSettlementBuildings = {
+		-1700, "unit-teuton-stronghold", true, -- Mycenaean fortifications present in Krisa (in Locris Ozolis) between 1700 and 1200 BC; Source: "Atlas de História Mundial", 2001, p. 67.
+		-1190, "unit-teuton-stronghold", false -- Mycenaean palaces were abandoned in 1190 BC; Source: "Atlas de História Mundial", 2001, p. 66.
+	},
 	Regions = {"Europe", "Greece", "West and Central Europe"}
 })
 
@@ -269,6 +273,10 @@ DefineProvince("Argolis", {
 		"greek", "Argos",
 		"greek", "Mycenae"
 	},
+	HistoricalSettlementBuildings = {
+		-1700, "unit-teuton-stronghold", true, -- Mycenaean fortifications present in Argos, Tirinto, Dendra and Kastro between 1700 and 1200 BC, as well as in Araxos (in the Achaean coast) and in Kolonna (in the isle of Aegina); Source: "Atlas de História Mundial", 2001, p. 67.
+		-1190, "unit-teuton-stronghold", false -- Mycenaean palaces were abandoned in 1190 BC; Source: "Atlas de História Mundial", 2001, p. 66.
+	},
 	Regions = {"Europe", "Greece", "West and Central Europe"}
 })
 
@@ -325,6 +333,12 @@ DefineProvince("Astrakhan", {
 	HistoricalCultures = {
 		-336, "persian",
 	},
+	HistoricalSettlementBuildings = {
+		-3000, "unit-germanic-town-hall", true,
+		-3000, "unit-germanic-barracks", true,
+		-2800, "unit-germanic-town-hall", false,
+		-2800, "unit-germanic-barracks", false
+	},
 	Regions = {"Eurasia", "Europe"}
 })
 
@@ -344,6 +358,10 @@ DefineProvince("Attica", {
 	Coastal = true,
 	Claims = {
 		"greek", "Athens"
+	},
+	HistoricalSettlementBuildings = {
+		-1700, "unit-teuton-stronghold", true, -- Mycenaean fortifications present in Athens between 1700 and 1200 BC, as well as in Aghia Irini (in the island of Ceos); Source: "Atlas de História Mundial", 2001, p. 67.
+		-1190, "unit-teuton-stronghold", false -- Mycenaean palaces were abandoned in 1190 BC; Source: "Atlas de História Mundial", 2001, p. 66.
 	},
 	Regions = {"Europe", "Greece", "West and Central Europe"}
 })
@@ -556,6 +574,10 @@ DefineProvince("Boeotia", {
 	Coastal = true,
 	Claims = {
 		"greek", "Thebes"
+	},
+	HistoricalSettlementBuildings = {
+		-1700, "unit-teuton-stronghold", true, -- Mycenaean fortifications present in Eutresis, Kastri, Aghia Marina, Gla, Aghios Ioannis, Chantsa, Stroviki, Pyrgos and Panopeus between 1700 and 1200 BC, as well as in Aghia Irini (in the island of Ceos); Source: "Atlas de História Mundial", 2001, p. 67.
+		-1190, "unit-teuton-stronghold", false -- Mycenaean palaces were abandoned in 1190 BC; Source: "Atlas de História Mundial", 2001, p. 66.
 	},
 	Regions = {"Europe", "Greece", "West and Central Europe"}
 })
@@ -933,7 +955,11 @@ DefineProvince("Corinth", {
 	Claims = {
 		"greek", "Corinth"
 	},
-	Regions = {"Europe", "Greece", "West and Central Europe"}
+	Regions = {"Europe", "Greece", "West and Central Europe"},
+	HistoricalSettlementBuildings = {
+		-1700, "unit-teuton-stronghold", true, -- Mycenaean fortifications present in Korakou and Perdikaria (both in the isthmus of Corinth); Source: "Atlas de História Mundial", 2001, p. 67.
+		-1190, "unit-teuton-stronghold", false -- Mycenaean palaces were abandoned in 1190 BC; Source: "Atlas de História Mundial", 2001, p. 66.
+	}
 })
 
 DefineProvince("Cornwall", {
@@ -1017,7 +1043,7 @@ DefineProvince("Courland", {
 DefineProvince("Crete", {
 	World = "Earth",
 	Tiles = {
---				{137, 39}, {138, 39}, -- old map
+--		{137, 39}, {138, 39}, -- old map
 		{547, 155},
 		{548, 155},
 		{549, 155},
@@ -1038,6 +1064,9 @@ DefineProvince("Crete", {
 		"minoan", "Minoan Tribe",
 		"minoan", "Crete",
 		"greek", "Krete"
+	},
+	HistoricalOwners = {
+		-3000, "minoan", "Minoan Tribe" -- Minoans inhabited the island of Crete in 3000 BC; Source: Rodney Castleden, "Minoans", 2002, p. 4.
 	},
 	Regions = {"Europe", "Greece", "West and Central Europe"}
 })
@@ -1217,6 +1246,12 @@ DefineProvince("Don", {
 	SettlementTerrain = "Plains",
 	Claims = {
 		"celt", "Vana Tribe"
+	},
+	HistoricalSettlementBuildings = {
+		-3000, "unit-germanic-town-hall", true,
+		-3000, "unit-germanic-barracks", true,
+		-2800, "unit-germanic-town-hall", false,
+		-2800, "unit-germanic-barracks", false
 	},
 	Regions = {"Eurasia", "Europe"}
 })
@@ -2110,6 +2145,9 @@ DefineProvince("Jutland", {
 		"teuton", "Charude Tribe",
 		"teuton", "Jute Tribe"
 	},
+	HistoricalSettlementBuildings = {
+		-1600, "unit-germanic-smithy", true -- bronzesmithing capabilities existed in Jutland in 1600 BC, since swords were crafted there at this date; Source: http://natmus.dk/en/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-roerby-swords/
+	},
 	Regions = {"Europe", "Scandinavia", "West and Central Europe"}
 })
 
@@ -2160,6 +2198,10 @@ DefineProvince("Lacedaemonia", {
 	Coastal = true,
 	Claims = {
 		"greek", "Sparta"
+	},
+	HistoricalSettlementBuildings = {
+		-1700, "unit-teuton-stronghold", true, -- Mycenaean fortifications present in Elliniko and Peristeria (both in the western coast of Messenia) between 1700 and 1200 BC, as well as in Phylakopi (in the island of Melos); Source: "Atlas de História Mundial", 2001, p. 67.
+		-1190, "unit-teuton-stronghold", false -- Mycenaean palaces were abandoned in 1190 BC; Source: "Atlas de História Mundial", 2001, p. 66.
 	},
 	Regions = {"Europe", "Greece", "West and Central Europe"}
 })

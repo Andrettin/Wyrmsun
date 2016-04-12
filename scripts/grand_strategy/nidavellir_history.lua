@@ -95,8 +95,6 @@ if (GrandStrategyYear >= -1) then
 	GrandStrategyEvents.TheShinsplitterClan = nil
 	GrandStrategyEvents.TheShorbearClan = nil
 	SetProvinceOwner("Caverns of Chaincolt", "dwarf", "Norlund Clan")
-	SetProvinceSettlementBuilding("Caverns of Chaincolt", "unit-dwarven-barracks", true) -- has capability to train warriors
-	SetProvinceSettlementBuilding("Caverns of Chaincolt", "unit-dwarven-smithy", true) -- Durstorn has runesmiths under his employ
 	SetProvinceUnitQuantity("Caverns of Chaincolt", "unit-goblin-spearman", 0)
 --	SetProvinceUnitQuantity("Caverns of Chaincolt", "unit-dwarven-steelclad", 4) -- Neglur, Glinar, Kuhnar, Theganli
 --	SetProvinceUnitQuantity("Caverns of Chaincolt", "unit-dwarven-scout", 1) -- Noiraran
@@ -104,14 +102,10 @@ if (GrandStrategyYear >= -1) then
 	SetProvinceUnitQuantity("Caverns of Chaincolt", "unit-dwarven-steelclad", 2) -- Neglur, Glinar
 	SetWorldMapResourceProspected("gold", 30, 12, true)
 	SetProvinceOwner("Shorbear Hills", "dwarf", "Shorbear Clan")
-	SetProvinceSettlementBuilding("Shorbear Hills", "unit-dwarven-stronghold", true) -- Shorbear Hold
-	SetProvinceSettlementBuilding("Shorbear Hills", "unit-dwarven-barracks", true) -- has capability to train warriors
-	SetProvinceSettlementBuilding("Shorbear Hills", "unit-dwarven-smithy", true) -- renowned skilled crafters
 	SetProvinceUnitQuantity("Shorbear Hills", "unit-goblin-spearman", 0)
 	SetProvinceUnitQuantity("Shorbear Hills", "unit-dwarven-thane", 1) -- Glonoin
 	SetWorldMapResourceProspected("gold", 34, 14, true)
 	SetProvinceOwner("Southern Tunnels", "dwarf", "Shinsplitter Clan")
-	SetProvinceSettlementBuilding("Southern Tunnels", "unit-dwarven-barracks", true) -- has capability to train warriors
 	SetProvinceUnitQuantity("Southern Tunnels", "unit-goblin-spearman", 0)
 	SetProvinceUnitQuantity("Southern Tunnels", "unit-dwarven-steelclad", 3) -- Glildur, Glindur, Kalnar
 	SetProvinceUnitQuantity("Southern Tunnels", "unit-dwarven-thane", 5) -- Lyndar, Gaenlar, Glinan, Crintil, Aendan
@@ -126,9 +120,6 @@ if (GrandStrategyYear >= 25) then -- at this time Rugnur was already in charge o
 	SetProvinceHero("Caverns of Chaincolt", "Rugnur", 2)
 	SetProvinceHero("Northern Wastelands", "Thursagan", 2) -- by this point, Thursagan had gone away to the north
 	GrandStrategyEvents.TheSagesDeparture = nil
-
-	SetProvinceSettlementBuilding("Caverns of Chaincolt", "unit-dwarven-lumber-mill", true) -- had capability to train scouts by then
-	SetProvinceSettlementBuilding("Southern Tunnels", "unit-dwarven-lumber-mill", true) -- had capability to train scouts by then
 end
 
 if (GrandStrategyYear > 25) then
@@ -146,7 +137,6 @@ end
 if (GrandStrategyYear >= 27) then -- time it took for Rugnur's party to travel to the Northern Wastelands and come back
 	GrandStrategyEvents.SearchingForTheRunecrafter = nil
 	SetProvinceHero("Caverns of Chaincolt", "Thursagan", 2)
-	SetProvinceSettlementBuilding("Northern Wastelands", "unit-dwarven-smithy", false) -- Thursagan abandoned his smithy in the Northern Wastelands to follow Rugnur is his quest to craft the Scepter of Fire
 --	ChangeProvinceUnitQuantity("Caverns of Chaincolt", "unit-dwarven-steelclad", 2) -- Thursagan joined and brought Kinan and Rynan, two runecrafters-in-training
 	SetProvinceUnitQuantity("Northern Wastelands", "unit-goblin-spearman", GetProvinceUnitQuantity("Northern Wastelands", "unit-goblin-spearman") / 2) -- halve enemies in the northern wastelands (deaths due to combat with Rugnur's dwarves)
 	SetProvinceUnitQuantity("Northern Wastelands", "unit-goblin-archer", GetProvinceUnitQuantity("Northern Wastelands", "unit-goblin-archer") / 2)
@@ -169,8 +159,6 @@ if (GrandStrategyYear >= 29) then
 	SetProvinceHero("Shorbear Hills", "Thursagan", 2)
 	--]]
 	KillGrandStrategyHero("Glonoin")
-
-	SetProvinceSettlementBuilding("Shorbear Hills", "unit-dwarven-lumber-mill", true) -- had capability to train scouts by then
 end
 
 if (GrandStrategyYear >= 35) then
@@ -186,7 +174,6 @@ if (GrandStrategyYear >= 35) then
 	SetProvinceHero("Caverns of Flame", "Thursagan", 2)
 	--]]
 	SetProvinceHero("Shorbear Hills", "Durstorn", 0) -- Durstorn is killed in a conflict between him and other members of the clan
-	SetProvinceSettlementBuilding("Southern Tunnels", "unit-mercenary-camp", true) -- at some point between 35 and 40 AD the Shinsplitters had the capacity to recruit mercenaries, as shown by them having hired the Surghan Mercenaries
 	MercenaryGroups.unit_surghan_mercenary_steelclad = nil
 	SetProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-duelist", 0) -- gnomish recruit returns to Untersberg
 	SetProvinceUnitQuantity("Caverns of Chaincolt", "unit-dwarven-gryphon-rider", 0) -- gryphon riders return to the Northern Wastelands
@@ -207,8 +194,6 @@ if (GrandStrategyYear >= 389) then
 	SetProvinceOwner("Peaceful Valley", "", "") -- Lggi Tribe destroyed
 	SetProvinceCivilization("Peaceful Valley", "")
 	SetProvinceUnitQuantity("Peaceful Valley", "unit-goblin-spearman", 0)
-	SetProvinceSettlementBuilding("Peaceful Valley", "unit-goblin-town-hall", false)
-	SetProvinceSettlementBuilding("Peaceful Valley", "unit-goblin-barracks", false)
 end
 
 if (GrandStrategyYear >= 400) then
@@ -217,12 +202,10 @@ if (GrandStrategyYear >= 400) then
 	SetProvinceOwner("Shorbear Hills", "dwarf", "Knalga")
 
 	SetProvinceOwner("Kal Kartha", "dwarf", "Kal Kartha") -- The Lordship of Kal Kartha was founded around 400 AD
-	SetProvinceSettlementBuilding("Kal Kartha", "unit-dwarven-barracks", true)
 	SetProvinceUnitQuantity("Kal Kartha", "unit-gnomish-recruit", 0)
 	SetWorldMapResourceProspected("gold", 46, 5, true)
 
 	SetProvinceOwner("Lyr", "dwarf", "Lyr") -- The Lordship of Lyr was founded around the same time as the other lordships
-	SetProvinceSettlementBuilding("Lyr", "unit-dwarven-barracks", true)
 	SetProvinceUnitQuantity("Lyr", "unit-dwarven-axefighter", 0)
 	SetWorldMapResourceProspected("gold", 51, 15, true)
 	
@@ -245,13 +228,7 @@ if (GrandStrategyYear >= 534) then
 	SetProvinceUnitQuantity("Southern Tunnels", "unit-dwarven-thane", 1) -- Hamel
 end
 
-if (GrandStrategyYear >= 535) then
-	SetProvinceSettlementBuilding("Highbrook Pass", "unit-dwarven-barracks", true) -- the Shinsplitters were already capable of recruiting warriors in Highbrook Pass around this time
-end
-
 if (GrandStrategyYear >= 550) then
-	SetProvinceSettlementBuilding("Kal Kartha", "unit-dwarven-smithy", true) -- Karrag was already reviving the art of runesmithing in 550 AD
-
 	SetProvinceUnitQuantity("Kal Kartha", "unit-dwarven-axefighter", 2) -- 2 Masked Ulfserkers in Karrag's court
 	SetProvinceUnitQuantity("Kal Kartha", "unit-dwarven-steelclad", 3) -- Dulcatulos, 2 Masked Steelclads in Karrag's court
 	SetProvinceUnitQuantity("Kal Kartha", "unit-dwarven-thane", 4) -- Karrag
