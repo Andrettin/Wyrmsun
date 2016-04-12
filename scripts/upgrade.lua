@@ -27,142 +27,19 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+if (OldDefineUpgrade == nil) then
+	OldDefineUpgrade = DefineUpgrade
+end
+
 function DefineUpgrade(upgrade_ident, data)
-	upgrade = CUpgrade:New(upgrade_ident)
 	if (data.Parent ~= nil) then
-		upgrade.Name = CUpgrade:Get(data.Parent).Name
-		upgrade.Icon = CUpgrade:Get(data.Parent).Icon
-		upgrade.Class = CUpgrade:Get(data.Parent).Class
-		upgrade.Civilization = CUpgrade:Get(data.Parent).Civilization
-		upgrade.Faction = CUpgrade:Get(data.Parent).Faction
-		upgrade.Description = CUpgrade:Get(data.Parent).Description
-		upgrade.Quote = CUpgrade:Get(data.Parent).Quote
-		upgrade.Background = CUpgrade:Get(data.Parent).Background
-		for i = 1,MaxCosts do
-			upgrade.Costs[i - 1] = CUpgrade:Get(data.Parent).Costs[i - 1]
-			upgrade.GrandStrategyCosts[i - 1] = CUpgrade:Get(data.Parent).GrandStrategyCosts[i - 1]
-			upgrade.GrandStrategyProductionEfficiencyModifier[i - 1] = CUpgrade:Get(data.Parent).GrandStrategyProductionEfficiencyModifier[i - 1]
-		end
-		for i = 1,MaxItemClasses do
-			upgrade.ItemPrefix[i - 1] = CUpgrade:Get(data.Parent).ItemPrefix[i - 1]
-			upgrade.ItemSuffix[i - 1] = CUpgrade:Get(data.Parent).ItemSuffix[i - 1]
-		end
-		upgrade.TechnologyPointCost = CUpgrade:Get(data.Parent).TechnologyPointCost
-		upgrade.Ability = CUpgrade:Get(data.Parent).Ability
-		upgrade.Weapon = CUpgrade:Get(data.Parent).Weapon
-		upgrade.Shield = CUpgrade:Get(data.Parent).Shield
-		upgrade.Boots = CUpgrade:Get(data.Parent).Boots
-		upgrade.Arrows = CUpgrade:Get(data.Parent).Arrows
-		upgrade.Item = CUpgrade:Get(data.Parent).Item
-		upgrade.MagicPrefix = CUpgrade:Get(data.Parent).MagicPrefix
-		upgrade.MagicSuffix = CUpgrade:Get(data.Parent).MagicSuffix
-		upgrade.RunicAffix = CUpgrade:Get(data.Parent).RunicAffix
-		upgrade.Work = CUpgrade:Get(data.Parent).Work
-	end
-	if (data.Name ~= nil) then
-		upgrade.Name = data.Name
-	end
-	if (data.Icon ~= nil) then
-		upgrade.Icon = Icons[data.Icon]
-	end
-	if (data.Class ~= nil) then
-		upgrade.Class = data.Class
-	end
-	if (data.Civilization ~= nil) then
-		upgrade.Civilization = data.Civilization
-	end
-	if (data.Faction ~= nil) then
-		upgrade.Faction = data.Faction
-	end
-	if (data.Description ~= nil) then
-		upgrade.Description = data.Description
-	end
-	if (data.Quote ~= nil) then
-		upgrade.Quote = data.Quote
-	end
-	if (data.Background ~= nil) then
-		upgrade.Background = data.Background
-	end
-	if (data.Costs ~= nil) then
-		for i = 1,table.getn(data.Costs),2 do
-			upgrade.Costs[GetResourceIdByName(data.Costs[i])] = data.Costs[i + 1]
-		end
-	end
-	if (data.GrandStrategyCosts ~= nil) then
-		for i = 1,table.getn(data.GrandStrategyCosts),2 do
-			upgrade.GrandStrategyCosts[GetResourceIdByName(data.GrandStrategyCosts[i])] = data.GrandStrategyCosts[i + 1]
-		end
-	end
-	if (data.GrandStrategyProductionEfficiencyModifier ~= nil) then
-		for i = 1,table.getn(data.GrandStrategyProductionEfficiencyModifier),2 do
-			upgrade.GrandStrategyProductionEfficiencyModifier[GetResourceIdByName(data.GrandStrategyProductionEfficiencyModifier[i])] = data.GrandStrategyProductionEfficiencyModifier[i + 1]
-		end
-	end
-	if (data.TechnologyPointCost ~= nil) then
-		upgrade.TechnologyPointCost = data.TechnologyPointCost
-	end
-	if (data.Ability ~= nil) then
-		upgrade.Ability = data.Ability
-	elseif (data.Parent == nil) then
-		upgrade.Ability = false
-	end
-	if (data.Weapon ~= nil) then
-		upgrade.Weapon = data.Weapon
-	end
-	if (data.Shield ~= nil) then
-		upgrade.Shield = data.Shield
-	end
-	if (data.Boots ~= nil) then
-		upgrade.Boots = data.Boots
-	end
-	if (data.Arrows ~= nil) then
-		upgrade.Arrows = data.Arrows
-	end
-	if (data.MagicPrefix ~= nil) then
-		upgrade.MagicPrefix = data.MagicPrefix
-	end
-	if (data.MagicSuffix ~= nil) then
-		upgrade.MagicSuffix = data.MagicSuffix
-	end
-	if (data.RunicAffix ~= nil) then
-		upgrade.RunicAffix = data.RunicAffix
-	end
-	if (data.Work ~= nil) then
-		upgrade.Work = GetItemClassIdByName(data.Work)
-	end
-	if (data.Year ~= nil) then
-		upgrade.Year = data.Year
-	end
-	if (data.Item ~= nil) then
-		SetUpgradeItem(upgrade_ident, data.Item)
-	end
-	if (data.ItemPrefix ~= nil) then
-		for i = 1,table.getn(data.ItemPrefix),2 do
-			upgrade.ItemPrefix[GetItemClassIdByName(data.ItemPrefix[i])] = data.ItemPrefix[i + 1]
-		end
-	end
-	if (data.ItemSuffix ~= nil) then
-		for i = 1,table.getn(data.ItemSuffix),2 do
-			upgrade.ItemSuffix[GetItemClassIdByName(data.ItemSuffix[i])] = data.ItemSuffix[i + 1]
-		end
-	end
-	if (data.IncompatibleAffixes ~= nil) then
-		for i = 1,table.getn(data.IncompatibleAffixes) do
-			upgrade.IncompatibleAffixes[CUpgrade:Get(data.IncompatibleAffixes[i]).ID] = true
-		end
-	end
-	if (data.RequiredAbilities ~= nil) then
-		for i = 1,table.getn(data.RequiredAbilities) do
-			AddUpgradeRequiredAbility(upgrade_ident, data.RequiredAbilities[i])
-		end
-	end
-	if (data.WeaponClasses ~= nil) then
-		for i = 1,table.getn(data.WeaponClasses) do
-			AddUpgradeWeaponClass(upgrade_ident, GetItemClassIdByName(data.WeaponClasses[i]))
-		end
+		OldDefineUpgrade(upgrade_ident, {Parent = data.Parent})
+		data.Parent = nil
 	end
 	
-	if (upgrade.Ability) then
+	OldDefineUpgrade(upgrade_ident, data)
+	
+	if (CUpgrade:Get(upgrade_ident).Ability) then
 		DefineAllow(upgrade_ident, "AAAAAAAAAAAAAAAA")
 	end
 end
