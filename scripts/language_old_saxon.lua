@@ -842,3 +842,10 @@ DefineLanguageWord("Mundburd", { -- Source: August Fick and Alf Torp, "Wortschat
 	Meanings = {"Guardian", "Protector"} -- source gives the German "Vormund, Beschützer" as the meaning
 	-- the prefix in this compound comes from the Proto-Germanic word "mundô"
 })
+
+DefineLanguageWord("Winilioth", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 181.
+	Language = "old-saxon", -- source gives Old Low German
+	Type = "noun",
+	Meanings = {"Folk Song"}, -- source gives the German "Volkslied" as the meaning
+	-- the suffix in this compound (-lioth) comes from the Proto-Germanic word "Leuþa"
+})

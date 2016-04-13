@@ -27,6 +27,9 @@
 
 DefineUpgrade("upgrade-work-alvissmol", {
 	Name = _("Alvissmol"), -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", pp. 183-194.
+	NameElements = {
+		"compound", "suffix", "dwarven", "noun", "Mol"
+	},
 	Work = "scroll",
 	Civilization = "dwarf",
 	Quote = "\"Alvis am I, | and under the earth / My home 'neath the rocks I have; / With the thunder-thrower | a word do I seek, / Let the gods their bond not break.\" - Alvissmol (Alvis)"
@@ -35,6 +38,9 @@ DefineUpgrade("upgrade-work-alvissmol", {
 
 DefineUpgrade("upgrade-work-fafnismol", {
 	Name = _("Fafnismol"), -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", pp. 370-385.
+	NameElements = {
+		"compound", "suffix", "dwarven", "noun", "Mol"
+	},
 	Work = "scroll",
 	Civilization = "dwarf",
 	Quote = "\"Hail to thee, warrior! | Thou victory hast, / And Fafnir in fight hast slain; / Of all the dwarves | who tread the earth, / Most fearless art thou, methinks.\" - Fafnismol (Regin)"
@@ -43,6 +49,9 @@ DefineUpgrade("upgrade-work-fafnismol", {
 
 DefineUpgrade("upgrade-work-reginsmol", {
 	Name = _("Reginsmol"), -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", pp. 356-369.
+	NameElements = {
+		"compound", "suffix", "dwarven", "noun", "Mol"
+	},
 	Work = "scroll",
 	Civilization = "dwarf",
 	Quote = "\"Here shall I foster | the fearless prince, / Now Modsognir's heir | to us is come; / The noblest hero | under the mountains, / The threads of his fate | all lands enfold.\" - Reginsmol (Regin)"

@@ -156,6 +156,21 @@ DefineLanguageWord("Auso", { -- Source: Richard M. Runge, "The Phonetic Realizat
 	Meanings = {"Ear"} -- seemingly etymologically, if not actually
 })
 
+DefineLanguageWord("Aviliudôn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 181.
+	Language = "gothic",
+	Type = "verb",
+	Meanings = {"Laud"}, -- source gives the German "lobsingen" as the meaning
+	DerivesFrom = {"proto-germanic", "verb", "Leuþôn"} -- apparently
+})
+
+DefineLanguageWord("Aviliuþ", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 181.
+	Language = "gothic",
+	Type = "noun",
+	Meanings = {"Laud"}, -- source gives the German "Lobgesang" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Leuþa"}, -- apparently
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Bairan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "gothic",
 	Type = "verb",
@@ -734,6 +749,20 @@ DefineLanguageWord("Lein", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Language = "gothic",
 	Type = "noun",
 	Meanings = {"Linen"}
+})
+
+DefineLanguageWord("Liuþareis", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 181.
+	Language = "gothic",
+	Type = "noun",
+	Meanings = {"Singer"}, -- source gives the German "Sänger" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Leuþa"}
+})
+
+DefineLanguageWord("Liuþôn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 181.
+	Language = "gothic",
+	Type = "verb",
+	Meanings = {"Sing"}, -- source gives the German "singen" as the meaning
+	DerivesFrom = {"proto-germanic", "verb", "Leuþôn"}
 })
 
 DefineLanguageWord("Mahts", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.

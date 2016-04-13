@@ -1015,6 +1015,21 @@ DefineLanguageWord("Leornian", { -- Source: Sean Crist, "An Analysis of *z loss 
 	Meanings = {"Learn"}
 })
 
+DefineLanguageWord("Léoþ", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 181.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Song"}, -- source gives the German "Lied" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Leuþa"},
+	Gender = "neuter"
+})
+
+DefineLanguageWord("Léoþian", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 181.
+	Language = "old-english",
+	Type = "verb",
+	Meanings = {"Sing"}, -- source (apparently) gives the German "singen" as the meaning
+	DerivesFrom = {"proto-germanic", "verb", "Leuþôn"}
+})
+
 DefineLanguageWord("Long", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-english",
 	Type = "adjective",

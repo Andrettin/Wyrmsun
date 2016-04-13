@@ -187,6 +187,12 @@ DefineLanguageWord("Kwneχ", { -- source gives "(s)kw-n-eχ-"; Source: Winfred P
 	Meanings = {}
 })
 
+DefineLanguageWord("Lēut", { -- source also gives the alternative form "lēudh"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 181.
+	Language = "proto-indo-european",
+	Type = "noun",
+	Meanings = {}
+})
+
 DefineLanguageWord("Leykʷ", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
 	Language = "proto-indo-european",
 	Type = "verb",

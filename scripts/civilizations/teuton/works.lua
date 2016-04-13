@@ -27,6 +27,9 @@
 
 DefineUpgrade("upgrade-work-hildebrandslied", {
 	Name = _("Hildebrandslied"),
+	NameElements = {
+		"compound", "suffix", "high-german", "noun", "Lied"
+	},
 	Work = "scroll",
 	Civilization = "teuton",
 	Quote = "\"That Hildebrand was my father, / and I am Hadubrand. / Long ago to the east he went, / fleeing Otacher's hatred\" - Hildebrandslied (Hadubrand)"

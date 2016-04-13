@@ -809,6 +809,21 @@ DefineLanguageWord("Lauda", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Uncountable = true -- as a material, it is likely to be uncountable
 })
 
+DefineLanguageWord("Leuþa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 181.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Song"}, -- source gives the German "Lied" as the meaning
+	DerivesFrom = {"proto-indo-european", "noun", "Lēut"},
+	Gender = "neuter"
+})
+
+DefineLanguageWord("Leuþôn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 181.
+	Language = "proto-germanic",
+	Type = "verb",
+	Meanings = {"Sing"}, -- source gives the German "singen" as the meaning
+	DerivesFrom = {"proto-indo-european", "noun", "Lēut"}
+})
+
 DefineLanguageWord("Maχtiz", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "proto-germanic",
 	Type = "noun",

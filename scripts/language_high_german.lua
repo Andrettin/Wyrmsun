@@ -1542,12 +1542,12 @@ DefineLanguageWord("Land", {
 	Type = "noun",
 	Meanings = {"Land", "Country"},
 	DerivesFrom = {"middle-high-german", "noun", "Lant"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 184.
+	Gender = "neuter",
 	NumberCaseInflections = {
 		"singular", "genitive", "Landes",
 		"plural", "nominative", "Länder",
 		"plural", "genitive", "Länder"
 	},
-	Gender = "neuter",
 	AffixNameTypes = {"compound", "suffix", "singular", "province"} -- examples: "Burgenland"
 })
 
@@ -1556,6 +1556,21 @@ DefineLanguageWord("Leopold", {
 	Type = "noun",
 	Meanings = {},
 	NameTypes = {"person-male"}
+})
+
+DefineLanguageWord("Lied", { -- Source: http://www.duden.de/rechtschreibung/Lied
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"Song"},
+	DerivesFrom = {"middle-low-german", "noun", "Liet"}, -- apparently, but isn't entirely clear from source; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 181.
+	Gender = "neuter",
+	NumberCaseInflections = {
+		"singular", "genitive", "Liedes", -- alternatively also "Lieds"
+		"plural", "nominative", "Lieder",
+		"plural", "accusative", "Lieder",
+		"plural", "dative", "Liedern",
+		"plural", "genitive", "Lieder"
+	}
 })
 
 DefineLanguageWord("Lot", {

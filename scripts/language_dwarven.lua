@@ -893,6 +893,12 @@ DefineLanguageWord("Modsognir", {
 	Meanings = {}
 })
 
+DefineLanguageWord("Mol", {
+	Language = "dwarven",
+	Type = "noun",
+	Meanings = {"Ballad"}
+})
+
 DefineLanguageWord("Nabbi", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 445.
 	Language = "dwarven",
 	Type = "noun",

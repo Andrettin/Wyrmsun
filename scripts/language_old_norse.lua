@@ -986,6 +986,21 @@ DefineLanguageWord("Ljā", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	DerivesFrom = {"proto-indo-european", "verb", "Leykʷ"}
 })
 
+DefineLanguageWord("Ljôđ", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 181.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Strophe"}, -- source gives the German "Strophe" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Leuþa"},
+	Gender = "neuter"
+})
+
+DefineLanguageWord("Ljôđa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 181.
+	Language = "old-norse",
+	Type = "verb",
+	Meanings = {"Sing"}, -- source (apparently) gives the German "singen" as the meaning
+	DerivesFrom = {"proto-germanic", "verb", "Leuþôn"}
+})
+
 DefineLanguageWord("Magi", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 156.
 	Language = "old-norse",
 	Type = "noun",

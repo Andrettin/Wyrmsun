@@ -237,6 +237,13 @@ DefineLanguageWord("Hortus", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Meanings = {"Garden"}
 })
 
+DefineLanguageWord("Laus", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 181.
+	Language = "latin",
+	Type = "noun",
+	Meanings = {},
+	DerivesFrom = {"proto-indo-european", "noun", "Lēut"}
+})
+
 DefineLanguageWord("Linquō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
 	Language = "latin",
 	Type = "verb",

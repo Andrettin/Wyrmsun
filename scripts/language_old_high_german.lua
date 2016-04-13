@@ -940,6 +940,21 @@ DefineLanguageWord("Līhan", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	}
 })
 
+DefineLanguageWord("Liod", { -- source also gives the alternative form "lioth"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 181.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Song"}, -- source gives the German "Lied" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Leuþa"},
+	Gender = "neuter"
+})
+
+DefineLanguageWord("Liudôn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 181.
+	Language = "old-high-german",
+	Type = "verb",
+	Meanings = {"Sing"}, -- source (apparently) gives the German "singen" as the meaning
+	DerivesFrom = {"proto-germanic", "verb", "Leuþôn"}
+})
+
 DefineLanguageWord("Lōn", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
 	Language = "old-high-german",
 	Type = "noun",

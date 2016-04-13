@@ -139,6 +139,22 @@ DefineLanguageWord("Knecht", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	DerivesFrom = {"proto-germanic", "noun", "Knehta"} -- Old Low German "inkneht", although having the same root, appears to have a prefix, and thus this word likely does not derive from it
 })
 
+DefineLanguageWord("Lêt", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 181.
+	Language = "middle-low-german",
+	Type = "noun",
+	Meanings = {"Song"}, -- source gives the German "Lied" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Leuþa"},
+	Gender = "neuter"
+})
+
+DefineLanguageWord("Liet", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 181.
+	Language = "middle-low-german",
+	Type = "noun",
+	Meanings = {"Song"}, -- source gives the German "Lied" as the meaning
+	DerivesFrom = {"old-high-german", "noun", "Liod"}, -- apparently, but isn't entirely clear from source
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Lôt", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 181.
 	Language = "middle-low-german",
 	Type = "noun",

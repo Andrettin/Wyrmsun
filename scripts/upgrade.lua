@@ -37,6 +37,15 @@ function DefineUpgrade(upgrade_ident, data)
 		data.Parent = nil
 	end
 	
+	if (data.Work ~= nil) then
+		local preliminary_data = {}
+		if (data.Work ~= nil) then
+			preliminary_data.Work = data.Work
+		end
+		OldDefineUpgrade(upgrade_ident, preliminary_data)
+		data.Work = nil
+	end
+	
 	OldDefineUpgrade(upgrade_ident, data)
 	
 	if (CUpgrade:Get(upgrade_ident).Ability) then

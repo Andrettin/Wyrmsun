@@ -64,7 +64,8 @@ https://github.com/Andrettin/Wyrmsun
 * Grand Strategy
 - Rulers can now affect revolt risk.
 - The ruler interface now shows the ruler's trait.
-- Works without a specific author attached to them (i.e. the Alvissmol) will now have a suitable random character become the author, or an author will be generated.
+- Literary works without a specific author attached to them (i.e. the Alvissmol) will now have a suitable random character become the author, or an author will be generated.
+- Randomly-generated literary works now also appear from time to time.
 
 * Interface
 - Fixed the issue which caused the loading screen to not properly appear under SDL rendering.

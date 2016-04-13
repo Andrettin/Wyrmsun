@@ -319,6 +319,14 @@ DefineLanguageWord("Land", {
 	}
 })
 
+DefineLanguageWord("Lied", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 181.
+	Language = "dutch",
+	Type = "noun",
+	Meanings = {"Song"}, -- source gives the German "Lied" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Leuþa"},
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Lo", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
 	Language = "dutch",
 	Type = "noun",

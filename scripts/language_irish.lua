@@ -148,6 +148,20 @@ DefineLanguageWord("Land", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Gender = "feminine"
 })
 
+DefineLanguageWord("Lóid", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 181.
+	Language = "irish",
+	Type = "noun",
+	Meanings = {"Song"}, -- source gives the German "Lied" as the meaning
+	DerivesFrom = {"proto-indo-european", "noun", "Lēut"}
+})
+
+DefineLanguageWord("Luad", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 181.
+	Language = "irish",
+	Type = "noun",
+	Meanings = {"Talk", "Conversation"}, -- source gives the German "Gespräch, Rede" as the meaning
+	DerivesFrom = {"proto-indo-european", "noun", "Lēut"}
+})
+
 DefineLanguageWord("Máo", { -- this is the comparative, what is the normal version of the word? Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 6.
 	Language = "irish",
 	Type = "adjective",
