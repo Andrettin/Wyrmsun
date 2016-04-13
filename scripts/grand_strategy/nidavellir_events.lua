@@ -1024,10 +1024,14 @@ local NidavellirEvents = {
 					end
 				else
 					if (GetProvinceMilitaryScore(EventProvince.Name, false, true) > (30 * 6)) then
-						GenericDialog("Goblin Looters", "We have successfully eliminated the goblin thieves!", "+1 Prestige")
+						if (GrandStrategyFaction.Name == EventFaction.Name) then
+							GenericDialog("Goblin Looters", "We have successfully eliminated the goblin thieves!", "+1 Prestige")
+						end
 						ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
 					else
-						GenericDialog("Goblin Looters", "The thieves have beaten our forces!", "-500 Gold, -1 Prestige, Lose Troops in Province")
+						if (GrandStrategyFaction.Name == EventFaction.Name) then
+							GenericDialog("Goblin Looters", "The thieves have beaten our forces!", "-500 Gold, -1 Prestige, Lose Troops in Province")
+						end
 						ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "gold", -500)
 						ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", -1)
 						for i, unitName in ipairs(Units) do

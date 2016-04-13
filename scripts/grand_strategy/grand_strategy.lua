@@ -1682,20 +1682,10 @@ function AddGrandStrategyUnitButton(x, y, unit_type)
 	UIElements[table.getn(UIElements)]:setSize(46, 38)
 	UIElements[table.getn(UIElements)]:setFont(Fonts["game"])
 
-	local veterans = 0
-	local veteran_unit_type = GetCivilizationClassUnitType("veteran-" .. GetUnitTypeData(unit_type, "Class"), GetUnitTypeData(unit_type, "Civilization"))
-	if (veteran_unit_type ~= nil and GetUnitTypeData(unit_type, "Civilization") == GetUnitTypeData(veteran_unit_type, "Civilization")) then
-		veterans = veterans + GetProvinceUnitQuantity(SelectedProvince.Name, veteran_unit_type)
-	end
-	local heroic_unit_type = GetCivilizationClassUnitType("heroic-" .. GetUnitTypeData(unit_type, "Class"), GetUnitTypeData(unit_type, "Civilization"))
-	if (heroic_unit_type ~= nil and GetUnitTypeData(unit_type, "Civilization") == GetUnitTypeData(heroic_unit_type, "Civilization")) then
-		veterans = veterans + GetProvinceUnitQuantity(SelectedProvince.Name, heroic_unit_type)
-	end
-
 	if (GetUnitTypeData(unit_type, "Class") == "worker") then
-		UIElements[table.getn(UIElements)]:setTooltip("You have " .. GetProvinceUnitQuantity(SelectedProvince.Name, unit_type) + veterans .. " " .. GetUnitTypeName(unit_type) .. " units in " .. GetProvinceName(SelectedProvince))
+		UIElements[table.getn(UIElements)]:setTooltip("You have " .. GetProvinceUnitQuantity(SelectedProvince.Name, unit_type) .. " " .. GetUnitTypeName(unit_type) .. " units in " .. GetProvinceName(SelectedProvince))
 	else
-		UIElements[table.getn(UIElements)]:setTooltip("You have " .. GetProvinceUnitQuantity(SelectedProvince.Name, unit_type) + veterans .. " " .. GetUnitTypeName(unit_type) .. " regiments in " .. GetProvinceName(SelectedProvince))
+		UIElements[table.getn(UIElements)]:setTooltip("You have " .. GetProvinceUnitQuantity(SelectedProvince.Name, unit_type) .. " " .. GetUnitTypeName(unit_type) .. " regiments in " .. GetProvinceName(SelectedProvince))
 	end
 	
 	return UIElements[table.getn(UIElements)]
@@ -1962,6 +1952,11 @@ function DrawGrandStrategyInterface()
 
 		-- add buttons for buildings and selecting units if is an owned province and in the normal province interface setting, and show up how many workers the province has
 		if (GrandStrategyFaction ~= nil and GetProvinceOwner(SelectedProvince.Name) == GrandStrategyFaction.Name) then
+			local faction = ""
+			if (GrandStrategyFaction.Civilization == GetProvinceCivilization(SelectedProvince.Name)) then
+				faction = GrandStrategyFaction.Name
+			end
+		
 			if (GrandStrategyInterfaceState == "Province") then
 				local item_x = 0
 				local item_y = 0
@@ -1990,40 +1985,20 @@ function DrawGrandStrategyInterface()
 				
 				for i, unitName in ipairs(Units) do
 					if (IsMilitaryUnit(unitName)) then
-						local veterans = 0
-						local veteran_unit_type = GetCivilizationClassUnitType("veteran-" .. GetUnitTypeData(unitName, "Class"), GetUnitTypeData(unitName, "Civilization"))
-						if (veteran_unit_type ~= nil and GetUnitTypeData(unitName, "Civilization") == GetUnitTypeData(veteran_unit_type, "Civilization")) then
-							veterans = veterans + GetProvinceUnitQuantity(SelectedProvince.Name, veteran_unit_type)
-						else
-							veteran_unit_type = nil
-						end
-						local heroic_unit_type = GetCivilizationClassUnitType("heroic-" .. GetUnitTypeData(unitName, "Class"), GetUnitTypeData(unitName, "Civilization"))
-						if (heroic_unit_type ~= nil and GetUnitTypeData(unitName, "Civilization") == GetUnitTypeData(heroic_unit_type, "Civilization")) then
-							veterans = veterans + GetProvinceUnitQuantity(SelectedProvince.Name, heroic_unit_type)
-						else
-							heroic_unit_type = nil
-						end
-
-						if ((IsUnitAvailableForTraining(SelectedProvince, unitName) and GetUnitTypeInterfaceState(unitName) ~= "mercenary-camp") or (GetProvinceUnitQuantity(SelectedProvince.Name, unitName) + veterans > 0 and (GetUnitTypeInterfaceState(unitName) ~= "" or GetUnitTypeData(unitName, "Mercenary")))) then -- don't show available for training but not had units in resolution heights lower than 600
+						if (GetProvinceUnitQuantity(SelectedProvince.Name, unitName) > 0) then -- don't show available for training but not had units in resolution heights lower than 600
 							local icon_offset_x = Video.Width - 243 + 15 + (item_x * 56)
 							local icon_offset_y = Video.Height - 186 + 13 + (item_y * (47 + 19 + 4))
 
 							AddGrandStrategyUnitButton(icon_offset_x, icon_offset_y, unitName)
 							if (GetProvinceUnderConstructionUnitQuantity(SelectedProvince.Name, unitName) > 0) then
-								AddGrandStrategyLabel(GetProvinceUnitQuantity(SelectedProvince.Name, unitName) + veterans .. "+" .. GetProvinceUnderConstructionUnitQuantity(SelectedProvince.Name, unitName), icon_offset_x + 24, icon_offset_y + 26, Fonts["game"], true, false)
+								AddGrandStrategyLabel(GetProvinceUnitQuantity(SelectedProvince.Name, unitName) .. "+" .. GetProvinceUnderConstructionUnitQuantity(SelectedProvince.Name, unitName), icon_offset_x + 24, icon_offset_y + 26, Fonts["game"], true, false)
 							else
-								AddGrandStrategyLabel(GetProvinceUnitQuantity(SelectedProvince.Name, unitName) + veterans, icon_offset_x + 24, icon_offset_y + 26, Fonts["game"], true, false)
+								AddGrandStrategyLabel(GetProvinceUnitQuantity(SelectedProvince.Name, unitName), icon_offset_x + 24, icon_offset_y + 26, Fonts["game"], true, false)
 							end
 
 							-- add unit selection arrows
 							local b = AddGrandStrategyImageButton("", "", icon_offset_x - 2, icon_offset_y + 40, function()
-								if (heroic_unit_type ~= nil and SelectedUnits[string.gsub(heroic_unit_type, "-", "_")] > 0) then -- deselect heroes first and select them last
-									SelectedUnits[string.gsub(heroic_unit_type, "-", "_")] = SelectedUnits[string.gsub(heroic_unit_type, "-", "_")] - 1
-									DrawGrandStrategyInterface()
-								elseif (veteran_unit_type ~= nil and SelectedUnits[string.gsub(veteran_unit_type, "-", "_")] > 0) then -- deselect veterans second and select them second last
-									SelectedUnits[string.gsub(veteran_unit_type, "-", "_")] = SelectedUnits[string.gsub(veteran_unit_type, "-", "_")] - 1
-									DrawGrandStrategyInterface()
-								elseif (SelectedUnits[string.gsub(unitName, "-", "_")] > 0) then
+								if (SelectedUnits[string.gsub(unitName, "-", "_")] > 0) then
 									SelectedUnits[string.gsub(unitName, "-", "_")] = SelectedUnits[string.gsub(unitName, "-", "_")] - 1
 									DrawGrandStrategyInterface()
 								end
@@ -2044,12 +2019,6 @@ function DrawGrandStrategyInterface()
 								if (SelectedUnits[string.gsub(unitName, "-", "_")] < GetProvinceUnitQuantity(SelectedProvince.Name, unitName)) then
 									SelectedUnits[string.gsub(unitName, "-", "_")] = SelectedUnits[string.gsub(unitName, "-", "_")] + 1
 									DrawGrandStrategyInterface()
-								elseif (veteran_unit_type ~= nil and SelectedUnits[string.gsub(veteran_unit_type, "-", "_")] < GetProvinceUnitQuantity(SelectedProvince.Name, veteran_unit_type)) then
-									SelectedUnits[string.gsub(veteran_unit_type, "-", "_")] = SelectedUnits[string.gsub(veteran_unit_type, "-", "_")] + 1
-									DrawGrandStrategyInterface()
-								elseif (heroic_unit_type ~= nil and SelectedUnits[string.gsub(heroic_unit_type, "-", "_")] < GetProvinceUnitQuantity(SelectedProvince.Name, heroic_unit_type)) then
-									SelectedUnits[string.gsub(heroic_unit_type, "-", "_")] = SelectedUnits[string.gsub(heroic_unit_type, "-", "_")] + 1
-									DrawGrandStrategyInterface()
 								end
 							end)
 							b:setBaseColor(Color(0,0,0,0))
@@ -2064,14 +2033,7 @@ function DrawGrandStrategyInterface()
 							local regiment_type_name = GetUnitTypeNamePluralForm(unitName)
 							b:setTooltip("Select one ".. regiment_type_name .. " regiment")
 
-							local selected_veterans = 0
-							if (veteran_unit_type ~= nil) then
-								selected_veterans = selected_veterans + SelectedUnits[string.gsub(veteran_unit_type, "-", "_")]
-							end
-							if (heroic_unit_type ~= nil) then
-								selected_veterans = selected_veterans + SelectedUnits[string.gsub(heroic_unit_type, "-", "_")]
-							end
-							AddGrandStrategyLabel(SelectedUnits[string.gsub(unitName, "-", "_")] + selected_veterans, icon_offset_x + 24, icon_offset_y + 42, Fonts["game"], true, false)
+							AddGrandStrategyLabel(SelectedUnits[string.gsub(unitName, "-", "_")], icon_offset_x + 24, icon_offset_y + 42, Fonts["game"], true, false)
 
 							item_x = item_x + 1
 							if (item_x > 3) then
@@ -2111,7 +2073,7 @@ function DrawGrandStrategyInterface()
 				if ((GetProvinceCivilization(SelectedProvince.Name) == "teuton" or GetCivilizationData(GetProvinceCivilization(SelectedProvince.Name), "ParentCivilization") == "teuton") and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then
 					AddGrandStrategyLabel(GetUnitTypeName("unit-germanic-town-hall"), UI.InfoPanel.X + 109, UI.InfoPanel.Y + 53, Fonts["game"], true, false)
 				else
-					AddGrandStrategyLabel(GetUnitTypeName(GetCivilizationClassUnitType(GrandStrategyInterfaceState, GetProvinceCivilization(SelectedProvince.Name))), UI.InfoPanel.X + 109, UI.InfoPanel.Y + 53, Fonts["game"], true, false)
+					AddGrandStrategyLabel(GetUnitTypeName(GetFactionClassUnitType(GrandStrategyInterfaceState, GetProvinceCivilization(SelectedProvince.Name), faction)), UI.InfoPanel.X + 109, UI.InfoPanel.Y + 53, Fonts["game"], true, false)
 				end
 				
 				local item_y = -2
@@ -2192,7 +2154,7 @@ function DrawGrandStrategyInterface()
 				if ((GetProvinceCivilization(SelectedProvince.Name) == "teuton" or GetCivilizationData(GetProvinceCivilization(SelectedProvince.Name), "ParentCivilization") == "teuton") and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then -- special case for the germanic lumber mill
 					AddGrandStrategyLabel(GetUnitTypeName("unit-germanic-barracks"), UI.InfoPanel.X + 109, UI.InfoPanel.Y + 53, Fonts["game"], true, false)
 				else
-					AddGrandStrategyLabel(GetUnitTypeName(GetCivilizationClassUnitType(GrandStrategyInterfaceState, GetProvinceCivilization(SelectedProvince.Name))), UI.InfoPanel.X + 109, UI.InfoPanel.Y + 53, Fonts["game"], true, false)
+					AddGrandStrategyLabel(GetUnitTypeName(GetFactionClassUnitType(GrandStrategyInterfaceState, GetProvinceCivilization(SelectedProvince.Name), faction)), UI.InfoPanel.X + 109, UI.InfoPanel.Y + 53, Fonts["game"], true, false)
 				end
 				
 				local item_x = 0
@@ -2222,25 +2184,15 @@ function DrawGrandStrategyInterface()
 				-- add units buttons for training
 				for i, unitName in ipairs(Units) do
 					if (IsMilitaryUnit(unitName)) then
-						local veterans = 0
-						local veteran_unit_type = GetCivilizationClassUnitType("veteran-" .. GetUnitTypeData(unitName, "Class"), GetUnitTypeData(unitName, "Civilization"))
-						if (veteran_unit_type ~= nil) then
-							veterans = veterans + GetProvinceUnitQuantity(SelectedProvince.Name, veteran_unit_type)
-						end
-						local heroic_unit_type = GetCivilizationClassUnitType("heroic-" .. GetUnitTypeData(unitName, "Class"), GetUnitTypeData(unitName, "Civilization"))
-						if (heroic_unit_type ~= nil) then
-							veterans = veterans + GetProvinceUnitQuantity(SelectedProvince.Name, heroic_unit_type)
-						end
-
 						if (IsUnitAvailableForTraining(SelectedProvince, unitName) and GetUnitTypeInterfaceState(unitName) == GrandStrategyInterfaceState) then
 							local icon_offset_x = Video.Width - 243 + 15 + (item_x * 56)
 							local icon_offset_y = Video.Height - 186 + 13 + (item_y * (47 + 19 + 4))
 
 							AddGrandStrategyUnitButton(icon_offset_x, icon_offset_y, unitName)
 							if (GetProvinceUnderConstructionUnitQuantity(SelectedProvince.Name, unitName) > 0) then
-								AddGrandStrategyLabel(GetProvinceUnitQuantity(SelectedProvince.Name, unitName) + veterans .. "+" .. GetProvinceUnderConstructionUnitQuantity(SelectedProvince.Name, unitName), icon_offset_x + 24, icon_offset_y + 26, Fonts["game"], true, false)
+								AddGrandStrategyLabel(GetProvinceUnitQuantity(SelectedProvince.Name, unitName) .. "+" .. GetProvinceUnderConstructionUnitQuantity(SelectedProvince.Name, unitName), icon_offset_x + 24, icon_offset_y + 26, Fonts["game"], true, false)
 							else
-								AddGrandStrategyLabel(GetProvinceUnitQuantity(SelectedProvince.Name, unitName) + veterans, icon_offset_x + 24, icon_offset_y + 26, Fonts["game"], true, false)
+								AddGrandStrategyLabel(GetProvinceUnitQuantity(SelectedProvince.Name, unitName), icon_offset_x + 24, icon_offset_y + 26, Fonts["game"], true, false)
 							end
 
 							-- add unit training arrows
@@ -2275,7 +2227,7 @@ function DrawGrandStrategyInterface()
 							b:setPressedImage(g_rslider_p)
 							
 							local cost_tooltip = ""
-							cost_tooltip = " (costs 1 " .. GetUnitTypeName(GetCivilizationClassUnitType("worker", GetProvinceCivilization(SelectedProvince.Name))) .. " unit"
+							cost_tooltip = " (costs 1 " .. GetUnitTypeName(GetFactionClassUnitType("worker", GetProvinceCivilization(SelectedProvince.Name), faction)) .. " unit"
 							if (GetUnitTypeData(unitName, "Costs", "gold") > 0) then
 								if (cost_tooltip == "") then
 									cost_tooltip = " (costs "
@@ -2325,7 +2277,7 @@ function DrawGrandStrategyInterface()
 				if ((GetProvinceCivilization(SelectedProvince.Name) == "teuton" or GetCivilizationData(GetProvinceCivilization(SelectedProvince.Name), "ParentCivilization") == "teuton") and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then -- special case for the germanic lumber mill
 					AddGrandStrategyLabel(GetUnitTypeName("unit-germanic-carpenters-shop"), UI.InfoPanel.X + 109, UI.InfoPanel.Y + 53, Fonts["game"], true, false)
 				else
-					AddGrandStrategyLabel(GetUnitTypeName(GetCivilizationClassUnitType(GrandStrategyInterfaceState, GetProvinceCivilization(SelectedProvince.Name))), UI.InfoPanel.X + 109, UI.InfoPanel.Y + 53, Fonts["game"], true, false)
+					AddGrandStrategyLabel(GetUnitTypeName(GetFactionClassUnitType(GrandStrategyInterfaceState, GetProvinceCivilization(SelectedProvince.Name), faction)), UI.InfoPanel.X + 109, UI.InfoPanel.Y + 53, Fonts["game"], true, false)
 				end
 				
 				local item_x = 0
@@ -2350,7 +2302,7 @@ function DrawGrandStrategyInterface()
 				if ((GetProvinceCivilization(SelectedProvince.Name) == "teuton" or GetCivilizationData(GetProvinceCivilization(SelectedProvince.Name), "ParentCivilization") == "teuton") and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then -- special case for the germanic lumber mill
 					AddGrandStrategyLabel(GetUnitTypeName("unit-germanic-smithy"), UI.InfoPanel.X + 109, UI.InfoPanel.Y + 53, Fonts["game"], true, false)
 				else
-					AddGrandStrategyLabel(GetUnitTypeName(GetCivilizationClassUnitType(GrandStrategyInterfaceState, GetProvinceCivilization(SelectedProvince.Name))), UI.InfoPanel.X + 109, UI.InfoPanel.Y + 53, Fonts["game"], true, false)
+					AddGrandStrategyLabel(GetUnitTypeName(GetFactionClassUnitType(GrandStrategyInterfaceState, GetProvinceCivilization(SelectedProvince.Name), faction)), UI.InfoPanel.X + 109, UI.InfoPanel.Y + 53, Fonts["game"], true, false)
 				end
 				
 				local item_x = 0
@@ -2372,7 +2324,7 @@ function DrawGrandStrategyInterface()
 					end
 				end
 			elseif (GrandStrategyInterfaceState == "stables" or GrandStrategyInterfaceState == "temple" or GrandStrategyInterfaceState == "dock") then
-				AddGrandStrategyLabel(GetUnitTypeName(GetCivilizationClassUnitType(GrandStrategyInterfaceState, GetProvinceCivilization(SelectedProvince.Name))), UI.InfoPanel.X + 109, UI.InfoPanel.Y + 53, Fonts["game"], true, false)
+				AddGrandStrategyLabel(GetUnitTypeName(GetFactionClassUnitType(GrandStrategyInterfaceState, GetProvinceCivilization(SelectedProvince.Name), faction)), UI.InfoPanel.X + 109, UI.InfoPanel.Y + 53, Fonts["game"], true, false)
 				
 				local item_x = 0
 				local item_y = 0
@@ -2400,25 +2352,15 @@ function DrawGrandStrategyInterface()
 				local item_y = 0
 				for i, unitName in ipairs(Units) do
 					if (IsMilitaryUnit(unitName)) then
-						local veterans = 0
-						local veteran_unit_type = GetCivilizationClassUnitType("veteran-" .. GetUnitTypeData(unitName, "Class"), GetUnitTypeData(unitName, "Civilization"))
-						if (veteran_unit_type ~= nil) then
-							veterans = veterans + GetProvinceUnitQuantity(SelectedProvince.Name, veteran_unit_type)
-						end
-						local heroic_unit_type = GetCivilizationClassUnitType("heroic-" .. GetUnitTypeData(unitName, "Class"), GetUnitTypeData(unitName, "Civilization"))
-						if (heroic_unit_type ~= nil) then
-							veterans = veterans + GetProvinceUnitQuantity(SelectedProvince.Name, heroic_unit_type)
-						end
-
 						if (IsUnitAvailableForTraining(SelectedProvince, unitName) and GetUnitTypeInterfaceState(unitName) == GrandStrategyInterfaceState) then
 							local icon_offset_x = Video.Width - 243 + 15 + (item_x * 56)
 							local icon_offset_y = Video.Height - 186 + 13 + (item_y * (47 + 19 + 4))
 
 							AddGrandStrategyUnitButton(icon_offset_x, icon_offset_y, unitName)
 							if (GetProvinceUnderConstructionUnitQuantity(SelectedProvince.Name, unitName) > 0) then
-								AddGrandStrategyLabel(GetProvinceUnitQuantity(SelectedProvince.Name, unitName) + veterans .. "+" .. GetProvinceUnderConstructionUnitQuantity(SelectedProvince.Name, unitName), icon_offset_x + 24, icon_offset_y + 26, Fonts["game"], true, false)
+								AddGrandStrategyLabel(GetProvinceUnitQuantity(SelectedProvince.Name, unitName) .. "+" .. GetProvinceUnderConstructionUnitQuantity(SelectedProvince.Name, unitName), icon_offset_x + 24, icon_offset_y + 26, Fonts["game"], true, false)
 							else
-								AddGrandStrategyLabel(GetProvinceUnitQuantity(SelectedProvince.Name, unitName) + veterans, icon_offset_x + 24, icon_offset_y + 26, Fonts["game"], true, false)
+								AddGrandStrategyLabel(GetProvinceUnitQuantity(SelectedProvince.Name, unitName), icon_offset_x + 24, icon_offset_y + 26, Fonts["game"], true, false)
 							end
 
 							-- add unit training arrows
@@ -2674,21 +2616,26 @@ function AIDoTurn(ai_faction)
 	AIConsiderOffers(ai_faction)
 
 	for province_i, key in ipairs(ai_faction.OwnedProvinces) do
+		local faction = ""
+		if (ai_faction.Civilization == GetProvinceCivilization(WorldMapProvinces[key].Name)) then
+			faction = ai_faction.Name
+		end
+	
 		-- try to first research masonry, then writing, then coinage, and only then try to research other technologies
-		if (GetCivilizationClassUnitType("masonry", GetProvinceCivilization(WorldMapProvinces[key].Name)) ~= nil and CanResearchTechnology(WorldMapProvinces[key], GetCivilizationClassUnitType("masonry", GetProvinceCivilization(WorldMapProvinces[key].Name)))) then
-			ResearchTechnology(WorldMapProvinces[key], GetCivilizationClassUnitType("masonry", GetProvinceCivilization(WorldMapProvinces[key].Name)))
+		if (GetFactionClassUnitType("masonry", GetProvinceCivilization(WorldMapProvinces[key].Name), faction) ~= nil and CanResearchTechnology(WorldMapProvinces[key], GetFactionClassUnitType("masonry", GetProvinceCivilization(WorldMapProvinces[key].Name), faction))) then
+			ResearchTechnology(WorldMapProvinces[key], GetFactionClassUnitType("masonry", GetProvinceCivilization(WorldMapProvinces[key].Name), faction))
 		end
-		if (GetCivilizationClassUnitType("writing", GetProvinceCivilization(WorldMapProvinces[key].Name)) ~= nil and CanResearchTechnology(WorldMapProvinces[key], GetCivilizationClassUnitType("writing", GetProvinceCivilization(WorldMapProvinces[key].Name)))) then
-			ResearchTechnology(WorldMapProvinces[key], GetCivilizationClassUnitType("writing", GetProvinceCivilization(WorldMapProvinces[key].Name)))
+		if (GetFactionClassUnitType("writing", GetProvinceCivilization(WorldMapProvinces[key].Name), faction) ~= nil and CanResearchTechnology(WorldMapProvinces[key], GetFactionClassUnitType("writing", GetProvinceCivilization(WorldMapProvinces[key].Name), faction))) then
+			ResearchTechnology(WorldMapProvinces[key], GetFactionClassUnitType("writing", GetProvinceCivilization(WorldMapProvinces[key].Name), faction))
 		end
-		if (GetCivilizationClassUnitType("coinage", GetProvinceCivilization(WorldMapProvinces[key].Name)) ~= nil and CanResearchTechnology(WorldMapProvinces[key], GetCivilizationClassUnitType("coinage", GetProvinceCivilization(WorldMapProvinces[key].Name)))) then
-			ResearchTechnology(WorldMapProvinces[key], GetCivilizationClassUnitType("coinage", GetProvinceCivilization(WorldMapProvinces[key].Name)))
+		if (GetFactionClassUnitType("coinage", GetProvinceCivilization(WorldMapProvinces[key].Name), faction) ~= nil and CanResearchTechnology(WorldMapProvinces[key], GetFactionClassUnitType("coinage", GetProvinceCivilization(WorldMapProvinces[key].Name), faction))) then
+			ResearchTechnology(WorldMapProvinces[key], GetFactionClassUnitType("coinage", GetProvinceCivilization(WorldMapProvinces[key].Name), faction))
 		end
-		if (GetCivilizationClassUnitType("wood-plow", GetProvinceCivilization(WorldMapProvinces[key].Name)) ~= nil and CanResearchTechnology(WorldMapProvinces[key], GetCivilizationClassUnitType("wood-plow", GetProvinceCivilization(WorldMapProvinces[key].Name)))) then
-			ResearchTechnology(WorldMapProvinces[key], GetCivilizationClassUnitType("wood-plow", GetProvinceCivilization(WorldMapProvinces[key].Name)))
+		if (GetFactionClassUnitType("wood-plow", GetProvinceCivilization(WorldMapProvinces[key].Name), faction) ~= nil and CanResearchTechnology(WorldMapProvinces[key], GetFactionClassUnitType("wood-plow", GetProvinceCivilization(WorldMapProvinces[key].Name), faction))) then
+			ResearchTechnology(WorldMapProvinces[key], GetFactionClassUnitType("wood-plow", GetProvinceCivilization(WorldMapProvinces[key].Name), faction))
 		end
-		if (GetCivilizationClassUnitType("iron-tipped-wood-plow", GetProvinceCivilization(WorldMapProvinces[key].Name)) ~= nil and CanResearchTechnology(WorldMapProvinces[key], GetCivilizationClassUnitType("iron-tipped-wood-plow", GetProvinceCivilization(WorldMapProvinces[key].Name)))) then
-			ResearchTechnology(WorldMapProvinces[key], GetCivilizationClassUnitType("iron-tipped-wood-plow", GetProvinceCivilization(WorldMapProvinces[key].Name)))
+		if (GetFactionClassUnitType("iron-tipped-wood-plow", GetProvinceCivilization(WorldMapProvinces[key].Name), faction) ~= nil and CanResearchTechnology(WorldMapProvinces[key], GetFactionClassUnitType("iron-tipped-wood-plow", GetProvinceCivilization(WorldMapProvinces[key].Name), faction))) then
+			ResearchTechnology(WorldMapProvinces[key], GetFactionClassUnitType("iron-tipped-wood-plow", GetProvinceCivilization(WorldMapProvinces[key].Name), faction))
 		end
 		for i, unitName in ipairs(Units) do
 			if (string.find(unitName, "upgrade-") ~= nil) then
@@ -3088,13 +3035,15 @@ function IsBuildingAvailable(province, unit_type)
 	if (GetProvinceOwner(province.Name) == "") then
 		return false
 	end
-	
+
+	local faction = ""
+	if (GetFactionFromName(GetProvinceOwner(province.Name)).Civilization == GetProvinceCivilization(province.Name)) then
+		faction = GetProvinceOwner(province.Name)
+	end
+		
 	if (
 		GetProvinceWater(province.Name) == false
-		and (
-			(GetProvinceCivilization(province.Name) ~= GetFactionFromName(GetProvinceOwner(province.Name)).Civilization and GetCivilizationClassUnitType(GetUnitTypeData(unit_type, "Class"), GetProvinceCivilization(province.Name)) ~= unit_type)
-			or (GetProvinceCivilization(province.Name) == GetFactionFromName(GetProvinceOwner(province.Name)).Civilization and GetFactionClassUnitType(GetUnitTypeData(unit_type, "Class"), GetProvinceCivilization(province.Name), GetProvinceOwner(province.Name)) ~= unit_type)
-		)
+		and GetFactionClassUnitType(GetUnitTypeData(unit_type, "Class"), GetProvinceCivilization(province.Name), faction) ~= unit_type
 		and GetUnitTypeData(unit_type, "Class") ~= "mercenary-camp"
 	) then
 		return false
@@ -3109,9 +3058,9 @@ function IsBuildingAvailable(province, unit_type)
 	end
 	
 	local has_required_technologies = true
-	if (table.getn(GetUnitTypeRequiredTechnologies(unit_type)) > 0) then
-		for i=1,table.getn(GetUnitTypeRequiredTechnologies(unit_type)) do
-			if (GetFactionTechnology(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), GetUnitTypeRequiredTechnologies(unit_type)[i]) == false) then
+	if (table.getn(GetUnitTypeRequiredTechnologies(unit_type, GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name))) > 0) then
+		for i=1,table.getn(GetUnitTypeRequiredTechnologies(unit_type, GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name))) do
+			if (GetFactionTechnology(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), GetUnitTypeRequiredTechnologies(unit_type, GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name))[i]) == false) then
 				has_required_technologies = false
 			end
 		end
@@ -3121,16 +3070,16 @@ function IsBuildingAvailable(province, unit_type)
 	end
 	
 	local has_required_buildings = true
-	if (table.getn(GetUnitTypeRequiredBuildings(unit_type)) > 0) then
+	if (table.getn(GetUnitTypeRequiredBuildings(unit_type, GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name))) > 0) then
 		--[[
-		for i=1,table.getn(GetUnitTypeRequiredBuildings(unit_type)) do
-			if (GetProvinceSettlementBuilding(province.Name, GetUnitTypeRequiredBuildings(unit_type)[i]) == false) then
+		for i=1,table.getn(GetUnitTypeRequiredBuildings(unit_type, GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name))) do
+			if (GetProvinceSettlementBuilding(province.Name, GetUnitTypeRequiredBuildings(unit_type, GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name))[i]) == false) then
 				has_required_buildings = false
 			end
 		end
 		--]]
-		for i=1,table.getn(GetUnitTypeRequiredBuildings(unit_type)) do
-			if (ProvinceHasBuildingClass(province.Name, GetUnitTypeData(GetUnitTypeRequiredBuildings(unit_type)[i], "Class")) == false) then
+		for i=1,table.getn(GetUnitTypeRequiredBuildings(unit_type, GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name))) do
+			if (ProvinceHasBuildingClass(province.Name, GetUnitTypeData(GetUnitTypeRequiredBuildings(unit_type, GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name))[i], "Class")) == false) then
 				has_required_buildings = false
 			end
 		end
@@ -3202,11 +3151,13 @@ function IsUnitAvailableForTraining(province, unit_type)
 		return false
 	end
 	
+	local faction = ""
+	if (GetFactionFromName(GetProvinceOwner(province.Name)).Civilization == GetProvinceCivilization(province.Name)) then
+		faction = GetProvinceOwner(province.Name)
+	end
+
 	if (
-		(
-			(GetProvinceCivilization(province.Name) ~= GetFactionFromName(GetProvinceOwner(province.Name)).Civilization and GetCivilizationClassUnitType(GetUnitTypeData(unit_type, "Class"), GetProvinceCivilization(province.Name)) ~= unit_type)
-			or (GetProvinceCivilization(province.Name) == GetFactionFromName(GetProvinceOwner(province.Name)).Civilization and GetFactionClassUnitType(GetUnitTypeData(unit_type, "Class"), GetProvinceCivilization(province.Name), GetProvinceOwner(province.Name)) ~= unit_type)
-		)
+		GetFactionClassUnitType(GetUnitTypeData(unit_type, "Class"), GetProvinceCivilization(province.Name), faction) ~= unit_type
 		and GetUnitTypeInterfaceState(unit_type) ~= "mercenary-camp"
 	) then
 		return false
@@ -3217,16 +3168,16 @@ function IsUnitAvailableForTraining(province, unit_type)
 	end
 
 	local has_required_buildings = true
-	if (table.getn(GetUnitTypeRequiredBuildings(unit_type)) > 0) then
+	if (table.getn(GetUnitTypeRequiredBuildings(unit_type, GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name))) > 0) then
 		--[[
-		for i=1,table.getn(GetUnitTypeRequiredBuildings(unit_type)) do
-			if (GetProvinceSettlementBuilding(province.Name, GetUnitTypeRequiredBuildings(unit_type)[i]) == false) then
+		for i=1,table.getn(GetUnitTypeRequiredBuildings(unit_type, GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name))) do
+			if (GetProvinceSettlementBuilding(province.Name, GetUnitTypeRequiredBuildings(unit_type, GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name))[i]) == false) then
 				has_required_buildings = false
 			end
 		end
 		--]]
-		for i=1,table.getn(GetUnitTypeRequiredBuildings(unit_type)) do
-			if (GetProvinceSettlementBuilding(province.Name, GetUnitTypeRequiredBuildings(unit_type)[i]) == false) then
+		for i=1,table.getn(GetUnitTypeRequiredBuildings(unit_type, GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name))) do
+			if (GetProvinceSettlementBuilding(province.Name, GetUnitTypeRequiredBuildings(unit_type, GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name))[i]) == false) then
 				has_required_buildings = false
 			end
 		end
@@ -3239,25 +3190,35 @@ function IsUnitAvailableForTraining(province, unit_type)
 end
 
 function TrainUnit(province, unit_type)
+	local faction = ""
+	if (GetFactionFromName(GetProvinceOwner(province.Name)).Civilization == GetProvinceCivilization(province.Name)) then
+		faction = GetProvinceOwner(province.Name)
+	end
+
 	if (CanTrainUnit(province, unit_type)) then
 		SetProvinceUnderConstructionUnitQuantity(province.Name, unit_type, GetProvinceUnderConstructionUnitQuantity(province.Name, unit_type) + 1)
 		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "gold", - GetUnitTypeData(unit_type, "Costs", "gold"))
 		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "lumber", - GetUnitTypeData(unit_type, "Costs", "lumber"))
 		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "stone", - GetUnitTypeData(unit_type, "Costs", "stone"))
 		if (GetUnitTypeData(unit_type, "Class") ~= "thief") then
-			ChangeProvinceUnitQuantity(province.Name, GetCivilizationClassUnitType("worker", GetProvinceCivilization(province.Name)), -1)
+			ChangeProvinceUnitQuantity(province.Name, GetFactionClassUnitType("worker", GetProvinceCivilization(province.Name), faction), -1)
 		end
 	end
 end
 
 function TrainUnitCancel(province, unit_type)
+	local faction = ""
+	if (GetFactionFromName(GetProvinceOwner(province.Name)).Civilization == GetProvinceCivilization(province.Name)) then
+		faction = GetProvinceOwner(province.Name)
+	end
+
 	if (GetProvinceUnderConstructionUnitQuantity(province.Name, unit_type) >= 1) then
 		SetProvinceUnderConstructionUnitQuantity(province.Name, unit_type, GetProvinceUnderConstructionUnitQuantity(province.Name, unit_type) - 1)
 		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "gold", GetUnitTypeData(unit_type, "Costs", "gold"))
 		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "lumber", GetUnitTypeData(unit_type, "Costs", "lumber"))
 		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "stone", GetUnitTypeData(unit_type, "Costs", "stone"))
 		if (GetUnitTypeData(unit_type, "Class") ~= "thief") then
-			ChangeProvinceUnitQuantity(province.Name, GetCivilizationClassUnitType("worker", GetProvinceCivilization(province.Name)), 1)
+			ChangeProvinceUnitQuantity(province.Name, GetFactionClassUnitType("worker", GetProvinceCivilization(province.Name), faction), 1)
 		end
 	end
 end
@@ -3327,9 +3288,9 @@ function IsTechnologyAvailable(province, unit_type)
 	end
 
 	local has_required_technologies = true
-	if (table.getn(GetUnitTypeRequiredTechnologies(unit_type)) > 0) then
-		for i=1,table.getn(GetUnitTypeRequiredTechnologies(unit_type)) do
-			if (GetFactionTechnology(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), GetUnitTypeRequiredTechnologies(unit_type)[i]) == false) then
+	if (table.getn(GetUnitTypeRequiredTechnologies(unit_type, GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name))) > 0) then
+		for i=1,table.getn(GetUnitTypeRequiredTechnologies(unit_type, GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name))) do
+			if (GetFactionTechnology(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), GetUnitTypeRequiredTechnologies(unit_type, GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name))[i]) == false) then
 				has_required_technologies = false
 			end
 		end
@@ -3339,16 +3300,16 @@ function IsTechnologyAvailable(province, unit_type)
 	end
 	
 	local has_required_buildings = true
-	if (table.getn(GetUnitTypeRequiredBuildings(unit_type)) > 0) then
+	if (table.getn(GetUnitTypeRequiredBuildings(unit_type, GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name))) > 0) then
 		--[[
-		for i=1,table.getn(GetUnitTypeRequiredBuildings(unit_type)) do
-			if (GetProvinceSettlementBuilding(province.Name, GetUnitTypeRequiredBuildings(unit_type)[i]) == false) then
+		for i=1,table.getn(GetUnitTypeRequiredBuildings(unit_type, GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name))) do
+			if (GetProvinceSettlementBuilding(province.Name, GetUnitTypeRequiredBuildings(unit_type, GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name))[i]) == false) then
 				has_required_buildings = false
 			end
 		end
 		--]]
-		for i=1,table.getn(GetUnitTypeRequiredBuildings(unit_type)) do
-			if (ProvinceHasBuildingClass(province.Name, GetUnitTypeData(GetUnitTypeRequiredBuildings(unit_type)[i], "Class")) == false) then
+		for i=1,table.getn(GetUnitTypeRequiredBuildings(unit_type, GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name))) do
+			if (ProvinceHasBuildingClass(province.Name, GetUnitTypeData(GetUnitTypeRequiredBuildings(unit_type, GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name))[i], "Class")) == false) then
 				has_required_buildings = false
 			end
 		end
@@ -3893,163 +3854,185 @@ function GetUnitTypeInterfaceState(unit_type)
 	end
 end
 
-function GetUnitTypeRequiredBuildings(unit_type)
+function GetUnitTypeRequiredBuildings(unit_type, owner_civilization, owner_faction)
+	local civilization = ""
+	if (string.find(unit_type, "upgrade-") == nil) then
+		civilization = GetUnitTypeData(unit_type, "Civilization")
+	else
+		civilization = CUpgrade:Get(unit_type).Civilization
+	end
+	local faction = ""
+	if (civilization == owner_civilization) then
+		faction = owner_faction
+	end
+
 	local required_buildings = {}
 	if (string.find(unit_type, "upgrade-") == nil) then
 		if (GetUnitTypeData(unit_type, "Class") == "infantry") then
-			if (GetCivilizationClassUnitType("barracks", GetUnitTypeData(unit_type, "Civilization")) ~= nil) then
-				table.insert(required_buildings, GetCivilizationClassUnitType("barracks", GetUnitTypeData(unit_type, "Civilization")))
+			if (GetFactionClassUnitType("barracks", civilization, faction) ~= nil) then
+				table.insert(required_buildings, GetFactionClassUnitType("barracks", civilization, faction))
 			end
 		elseif (GetUnitTypeData(unit_type, "Class") == "spearman") then
-			if (GetCivilizationClassUnitType("barracks", GetUnitTypeData(unit_type, "Civilization")) ~= nil) then
-				table.insert(required_buildings, GetCivilizationClassUnitType("barracks", GetUnitTypeData(unit_type, "Civilization")))
+			if (GetFactionClassUnitType("barracks", civilization, faction) ~= nil) then
+				table.insert(required_buildings, GetFactionClassUnitType("barracks", civilization, faction))
 			end
 		elseif (GetUnitTypeData(unit_type, "Class") == "shooter") then
-			if (GetCivilizationClassUnitType("barracks", GetUnitTypeData(unit_type, "Civilization")) ~= nil) then
-				table.insert(required_buildings, GetCivilizationClassUnitType("barracks", GetUnitTypeData(unit_type, "Civilization")))
+			if (GetFactionClassUnitType("barracks", civilization, faction) ~= nil) then
+				table.insert(required_buildings, GetFactionClassUnitType("barracks", civilization, faction))
 			end
-			if (GetCivilizationClassUnitType("lumber-mill", GetUnitTypeData(unit_type, "Civilization")) ~= nil) then
-				table.insert(required_buildings, GetCivilizationClassUnitType("lumber-mill", GetUnitTypeData(unit_type, "Civilization")))
+			if (GetFactionClassUnitType("lumber-mill", civilization, faction) ~= nil) then
+				table.insert(required_buildings, GetFactionClassUnitType("lumber-mill", civilization, faction))
 			end
 		elseif (GetUnitTypeData(unit_type, "Class") == "cavalry") then
-			if (GetCivilizationClassUnitType("barracks", GetUnitTypeData(unit_type, "Civilization")) ~= nil) then
-				table.insert(required_buildings, GetCivilizationClassUnitType("barracks", GetUnitTypeData(unit_type, "Civilization")))
+			if (GetFactionClassUnitType("barracks", civilization, faction) ~= nil) then
+				table.insert(required_buildings, GetFactionClassUnitType("barracks", civilization, faction))
 			end
-			if (GetCivilizationClassUnitType("smithy", GetUnitTypeData(unit_type, "Civilization")) ~= nil) then
-				table.insert(required_buildings, GetCivilizationClassUnitType("smithy", GetUnitTypeData(unit_type, "Civilization")))
+			if (GetFactionClassUnitType("smithy", civilization, faction) ~= nil) then
+				table.insert(required_buildings, GetFactionClassUnitType("smithy", civilization, faction))
 			end
-			if (GetCivilizationClassUnitType("stables", GetUnitTypeData(unit_type, "Civilization")) ~= nil) then
-				table.insert(required_buildings, GetCivilizationClassUnitType("stables", GetUnitTypeData(unit_type, "Civilization")))
+			if (GetFactionClassUnitType("stables", civilization, faction) ~= nil) then
+				table.insert(required_buildings, GetFactionClassUnitType("stables", civilization, faction))
 			end
 		elseif (GetUnitTypeData(unit_type, "Class") == "siege-engine") then
-			if (GetCivilizationClassUnitType("barracks", GetUnitTypeData(unit_type, "Civilization")) ~= nil) then
-				table.insert(required_buildings, GetCivilizationClassUnitType("barracks", GetUnitTypeData(unit_type, "Civilization")))
+			if (GetFactionClassUnitType("barracks", civilization, faction) ~= nil) then
+				table.insert(required_buildings, GetFactionClassUnitType("barracks", civilization, faction))
 			end
-			if (GetCivilizationClassUnitType("lumber-mill", GetUnitTypeData(unit_type, "Civilization")) ~= nil) then
-				table.insert(required_buildings, GetCivilizationClassUnitType("lumber-mill", GetUnitTypeData(unit_type, "Civilization")))
+			if (GetFactionClassUnitType("lumber-mill", civilization, faction) ~= nil) then
+				table.insert(required_buildings, GetFactionClassUnitType("lumber-mill", civilization, faction))
 			end
-			if (GetCivilizationClassUnitType("smithy", GetUnitTypeData(unit_type, "Civilization")) ~= nil) then
-				table.insert(required_buildings, GetCivilizationClassUnitType("smithy", GetUnitTypeData(unit_type, "Civilization")))
+			if (GetFactionClassUnitType("smithy", civilization, faction) ~= nil) then
+				table.insert(required_buildings, GetFactionClassUnitType("smithy", civilization, faction))
 			end
 		elseif (GetUnitTypeData(unit_type, "Class") == "flying-rider") then
-			if (GetCivilizationClassUnitType("stronghold", GetUnitTypeData(unit_type, "Civilization")) ~= nil) then
-				table.insert(required_buildings, GetCivilizationClassUnitType("stronghold", GetUnitTypeData(unit_type, "Civilization")))
+			if (GetFactionClassUnitType("stronghold", civilization, faction) ~= nil) then
+				table.insert(required_buildings, GetFactionClassUnitType("stronghold", civilization, faction))
 			end
-			if (GetCivilizationClassUnitType("lumber-mill", GetUnitTypeData(unit_type, "Civilization")) ~= nil) then
-				table.insert(required_buildings, GetCivilizationClassUnitType("lumber-mill", GetUnitTypeData(unit_type, "Civilization")))
+			if (GetFactionClassUnitType("lumber-mill", civilization, faction) ~= nil) then
+				table.insert(required_buildings, GetFactionClassUnitType("lumber-mill", civilization, faction))
 			end
 		elseif (GetUnitTypeData(unit_type, "Class") == "glider") then
-			if (GetCivilizationClassUnitType("barracks", GetUnitTypeData(unit_type, "Civilization")) ~= nil) then
-				table.insert(required_buildings, GetCivilizationClassUnitType("barracks", GetUnitTypeData(unit_type, "Civilization")))
+			if (GetFactionClassUnitType("barracks", civilization, faction) ~= nil) then
+				table.insert(required_buildings, GetFactionClassUnitType("barracks", civilization, faction))
 			end
-			if (GetCivilizationClassUnitType("lumber-mill", GetUnitTypeData(unit_type, "Civilization")) ~= nil) then
-				table.insert(required_buildings, GetCivilizationClassUnitType("lumber-mill", GetUnitTypeData(unit_type, "Civilization")))
+			if (GetFactionClassUnitType("lumber-mill", civilization, faction) ~= nil) then
+				table.insert(required_buildings, GetFactionClassUnitType("lumber-mill", civilization, faction))
 			end
 		elseif (GetUnitTypeData(unit_type, "Class") == "barracks" or GetUnitTypeData(unit_type, "Class") == "lumber-mill" or GetUnitTypeData(unit_type, "Class") == "smithy") then
-			if (GetCivilizationClassUnitType("town-hall", GetUnitTypeData(unit_type, "Civilization")) ~= nil) then
-				table.insert(required_buildings, GetCivilizationClassUnitType("town-hall", GetUnitTypeData(unit_type, "Civilization")))
+			if (GetFactionClassUnitType("town-hall", civilization, faction) ~= nil) then
+				table.insert(required_buildings, GetFactionClassUnitType("town-hall", civilization, faction))
 			end
 		elseif (GetUnitTypeData(unit_type, "Class") == "stables") then
-			if (GetCivilizationClassUnitType("town-hall", GetUnitTypeData(unit_type, "Civilization")) ~= nil) then
-				table.insert(required_buildings, GetCivilizationClassUnitType("town-hall", GetUnitTypeData(unit_type, "Civilization")))
+			if (GetFactionClassUnitType("town-hall", civilization, faction) ~= nil) then
+				table.insert(required_buildings, GetFactionClassUnitType("town-hall", civilization, faction))
 			end
-			if (GetCivilizationClassUnitType("lumber-mill", GetUnitTypeData(unit_type, "Civilization")) ~= nil) then
-				table.insert(required_buildings, GetCivilizationClassUnitType("lumber-mill", GetUnitTypeData(unit_type, "Civilization")))
+			if (GetFactionClassUnitType("lumber-mill", civilization, faction) ~= nil) then
+				table.insert(required_buildings, GetFactionClassUnitType("lumber-mill", civilization, faction))
 			end
 		elseif (GetUnitTypeData(unit_type, "Class") == "temple") then
-			if (GetCivilizationClassUnitType("town-hall", GetUnitTypeData(unit_type, "Civilization")) ~= nil) then
-				table.insert(required_buildings, GetCivilizationClassUnitType("town-hall", GetUnitTypeData(unit_type, "Civilization")))
+			if (GetFactionClassUnitType("town-hall", civilization, faction) ~= nil) then
+				table.insert(required_buildings, GetFactionClassUnitType("town-hall", civilization, faction))
 			end
-			if (GetCivilizationClassUnitType("lumber-mill", GetUnitTypeData(unit_type, "Civilization")) ~= nil) then
-				table.insert(required_buildings, GetCivilizationClassUnitType("lumber-mill", GetUnitTypeData(unit_type, "Civilization")))
+			if (GetFactionClassUnitType("lumber-mill", civilization, faction) ~= nil) then
+				table.insert(required_buildings, GetFactionClassUnitType("lumber-mill", civilization, faction))
 			end
 		elseif (GetUnitTypeData(unit_type, "Class") == "stronghold") then
-			if (GetCivilizationClassUnitType("town-hall", GetUnitTypeData(unit_type, "Civilization")) ~= nil) then
-				table.insert(required_buildings, GetCivilizationClassUnitType("town-hall", GetUnitTypeData(unit_type, "Civilization")))
+			if (GetFactionClassUnitType("town-hall", civilization, faction) ~= nil) then
+				table.insert(required_buildings, GetFactionClassUnitType("town-hall", civilization, faction))
 			end
-			if (GetCivilizationClassUnitType("barracks", GetUnitTypeData(unit_type, "Civilization")) ~= nil) then
-				table.insert(required_buildings, GetCivilizationClassUnitType("barracks", GetUnitTypeData(unit_type, "Civilization")))
+			if (GetFactionClassUnitType("barracks", civilization, faction) ~= nil) then
+				table.insert(required_buildings, GetFactionClassUnitType("barracks", civilization, faction))
 			end
 		elseif (GetUnitTypeData(unit_type, "Class") == "dock") then
-			if (GetCivilizationClassUnitType("town-hall", GetUnitTypeData(unit_type, "Civilization")) ~= nil) then
-				table.insert(required_buildings, GetCivilizationClassUnitType("town-hall", GetUnitTypeData(unit_type, "Civilization")))
+			if (GetFactionClassUnitType("town-hall", civilization, faction) ~= nil) then
+				table.insert(required_buildings, GetFactionClassUnitType("town-hall", civilization, faction))
 			end
-			if (GetCivilizationClassUnitType("lumber-mill", GetUnitTypeData(unit_type, "Civilization")) ~= nil) then
-				table.insert(required_buildings, GetCivilizationClassUnitType("lumber-mill", GetUnitTypeData(unit_type, "Civilization")))
+			if (GetFactionClassUnitType("lumber-mill", civilization, faction) ~= nil) then
+				table.insert(required_buildings, GetFactionClassUnitType("lumber-mill", civilization, faction))
 			end
 		end
 	else
 		if (CUpgrade:Get(unit_type).Class == "melee-weapon-1" or CUpgrade:Get(unit_type).Class == "melee-weapon-2" or CUpgrade:Get(unit_type).Class == "bronze-shield" or CUpgrade:Get(unit_type).Class == "iron-shield") then
-			if (GetCivilizationClassUnitType("smithy", CUpgrade:Get(unit_type).Civilization) ~= nil) then
-				table.insert(required_buildings, GetCivilizationClassUnitType("smithy", CUpgrade:Get(unit_type).Civilization))
+			if (GetFactionClassUnitType("smithy", civilization, faction) ~= nil) then
+				table.insert(required_buildings, GetFactionClassUnitType("smithy", civilization, faction))
 			end
 		elseif (CUpgrade:Get(unit_type).Class == "long-spear" or CUpgrade:Get(unit_type).Class == "pike" or CUpgrade:Get(unit_type).Class == "ranged-projectile-1" or CUpgrade:Get(unit_type).Class == "ranged-projectile-2" or CUpgrade:Get(unit_type).Class == "wood-plow" or CUpgrade:Get(unit_type).Class == "iron-tipped-wood-plow" or CUpgrade:Get(unit_type).Class == "iron-plow" or CUpgrade:Get(unit_type).Class == "masonry") then
-			if (GetCivilizationClassUnitType("lumber-mill", CUpgrade:Get(unit_type).Civilization) ~= nil) then
-				table.insert(required_buildings, GetCivilizationClassUnitType("lumber-mill", CUpgrade:Get(unit_type).Civilization))
+			if (GetFactionClassUnitType("lumber-mill", civilization, faction) ~= nil) then
+				table.insert(required_buildings, GetFactionClassUnitType("lumber-mill", civilization, faction))
 			end
 		elseif (CUpgrade:Get(unit_type).Class == "siege-projectile-1" or CUpgrade:Get(unit_type).Class == "siege-projectile-2") then
-			if (GetCivilizationClassUnitType("smithy", CUpgrade:Get(unit_type).Civilization) ~= nil) then
-				table.insert(required_buildings, GetCivilizationClassUnitType("smithy", CUpgrade:Get(unit_type).Civilization))
+			if (GetFactionClassUnitType("smithy", civilization, faction) ~= nil) then
+				table.insert(required_buildings, GetFactionClassUnitType("smithy", civilization, faction))
 			end
-			if (GetCivilizationClassUnitType("lumber-mill", CUpgrade:Get(unit_type).Civilization) ~= nil) then
-				table.insert(required_buildings, GetCivilizationClassUnitType("lumber-mill", CUpgrade:Get(unit_type).Civilization))
+			if (GetFactionClassUnitType("lumber-mill", civilization, faction) ~= nil) then
+				table.insert(required_buildings, GetFactionClassUnitType("lumber-mill", civilization, faction))
 			end
 		elseif (CUpgrade:Get(unit_type).Class == "coinage") then
-			if (GetCivilizationClassUnitType("smithy", CUpgrade:Get(unit_type).Civilization) ~= nil) then
-				table.insert(required_buildings, GetCivilizationClassUnitType("smithy", CUpgrade:Get(unit_type).Civilization))
+			if (GetFactionClassUnitType("smithy", civilization, faction) ~= nil) then
+				table.insert(required_buildings, GetFactionClassUnitType("smithy", civilization, faction))
 			end
-			if (GetCivilizationClassUnitType("stronghold", CUpgrade:Get(unit_type).Civilization) ~= nil) then
-				table.insert(required_buildings, GetCivilizationClassUnitType("stronghold", CUpgrade:Get(unit_type).Civilization))
+			if (GetFactionClassUnitType("stronghold", civilization, faction) ~= nil) then
+				table.insert(required_buildings, GetFactionClassUnitType("stronghold", civilization, faction))
 			end
 		elseif (CUpgrade:Get(unit_type).Class == "writing") then
-			if (GetCivilizationClassUnitType("stronghold", CUpgrade:Get(unit_type).Civilization) ~= nil) then
-				table.insert(required_buildings, GetCivilizationClassUnitType("stronghold", CUpgrade:Get(unit_type).Civilization))
+			if (GetFactionClassUnitType("stronghold", civilization, faction) ~= nil) then
+				table.insert(required_buildings, GetFactionClassUnitType("stronghold", civilization, faction))
 			end
 		elseif (CUpgrade:Get(unit_type).Class == "alchemy") then
-			if (GetCivilizationClassUnitType("stronghold", CUpgrade:Get(unit_type).Civilization) ~= nil) then
-				table.insert(required_buildings, GetCivilizationClassUnitType("stronghold", CUpgrade:Get(unit_type).Civilization))
+			if (GetFactionClassUnitType("stronghold", civilization, faction) ~= nil) then
+				table.insert(required_buildings, GetFactionClassUnitType("stronghold", civilization, faction))
 			end
 		end
 	end
 	return required_buildings
 end
 
-function GetUnitTypeRequiredTechnologies(unit_type)
+function GetUnitTypeRequiredTechnologies(unit_type, owner_civilization, owner_faction)
+	local civilization = ""
+	if (string.find(unit_type, "upgrade-") == nil) then
+		civilization = GetUnitTypeData(unit_type, "Civilization")
+	else
+		civilization = CUpgrade:Get(unit_type).Civilization
+	end
+	local faction = ""
+	if (civilization == owner_civilization) then
+		faction = owner_faction
+	end
+
 	local required_technologies = {}
 	if (string.find(unit_type, "upgrade-") == nil) then
 		if (GetUnitTypeData(unit_type, "Class") == "stronghold") then
-			if (GetCivilizationClassUnitType("masonry", GetUnitTypeData(unit_type, "Civilization")) ~= nil) then
-				table.insert(required_technologies, GetCivilizationClassUnitType("masonry", GetUnitTypeData(unit_type, "Civilization")))
+			if (GetFactionClassUnitType("masonry", civilization, faction) ~= nil) then
+				table.insert(required_technologies, GetFactionClassUnitType("masonry", civilization, faction))
 			end
 		end
 	else
 		if (CUpgrade:Get(unit_type).Class == "melee-weapon-2") then
-			if (GetCivilizationClassUnitType("melee-weapon-1", CUpgrade:Get(unit_type).Civilization) ~= nil) then
-				table.insert(required_technologies, GetCivilizationClassUnitType("melee-weapon-1", CUpgrade:Get(unit_type).Civilization))
+			if (GetFactionClassUnitType("melee-weapon-1", civilization, faction) ~= nil) then
+				table.insert(required_technologies, GetFactionClassUnitType("melee-weapon-1", civilization, faction))
 			end
 		elseif (CUpgrade:Get(unit_type).Class == "pike") then
-			if (GetCivilizationClassUnitType("long-spear", CUpgrade:Get(unit_type).Civilization) ~= nil) then
-				table.insert(required_technologies, GetCivilizationClassUnitType("long-spear", CUpgrade:Get(unit_type).Civilization))
+			if (GetFactionClassUnitType("long-spear", civilization, faction) ~= nil) then
+				table.insert(required_technologies, GetFactionClassUnitType("long-spear", civilization, faction))
 			end
 		elseif (CUpgrade:Get(unit_type).Class == "iron-shield") then
-			if (GetCivilizationClassUnitType("bronze-shield", CUpgrade:Get(unit_type).Civilization) ~= nil) then
-				table.insert(required_technologies, GetCivilizationClassUnitType("bronze-shield", CUpgrade:Get(unit_type).Civilization))
+			if (GetFactionClassUnitType("bronze-shield", civilization, faction) ~= nil) then
+				table.insert(required_technologies, GetFactionClassUnitType("bronze-shield", civilization, faction))
 			end
 		elseif (CUpgrade:Get(unit_type).Class == "ranged-projectile-2") then
-			if (GetCivilizationClassUnitType("ranged-projectile-1", CUpgrade:Get(unit_type).Civilization) ~= nil) then
-				table.insert(required_technologies, GetCivilizationClassUnitType("ranged-projectile-1", CUpgrade:Get(unit_type).Civilization))
+			if (GetFactionClassUnitType("ranged-projectile-1", civilization, faction) ~= nil) then
+				table.insert(required_technologies, GetFactionClassUnitType("ranged-projectile-1", civilization, faction))
 			end
 		elseif (CUpgrade:Get(unit_type).Class == "siege-projectile-2") then
-			if (GetCivilizationClassUnitType("siege-projectile-1", CUpgrade:Get(unit_type).Civilization) ~= nil) then
-				table.insert(required_technologies, GetCivilizationClassUnitType("siege-projectile-1", CUpgrade:Get(unit_type).Civilization))
+			if (GetFactionClassUnitType("siege-projectile-1", civilization, faction) ~= nil) then
+				table.insert(required_technologies, GetFactionClassUnitType("siege-projectile-1", civilization, faction))
 			end
 		elseif (CUpgrade:Get(unit_type).Class == "iron-tipped-wood-plow") then
-			if (GetCivilizationClassUnitType("wood-plow", CUpgrade:Get(unit_type).Civilization) ~= nil) then
-				table.insert(required_technologies, GetCivilizationClassUnitType("wood-plow", CUpgrade:Get(unit_type).Civilization))
+			if (GetFactionClassUnitType("wood-plow", civilization, faction) ~= nil) then
+				table.insert(required_technologies, GetFactionClassUnitType("wood-plow", civilization, faction))
 			end
 		elseif (CUpgrade:Get(unit_type).Class == "alchemy") then
-			if (GetCivilizationClassUnitType("writing", CUpgrade:Get(unit_type).Civilization) ~= nil) then
-				table.insert(required_technologies, GetCivilizationClassUnitType("writing", CUpgrade:Get(unit_type).Civilization))
+			if (GetFactionClassUnitType("writing", civilization, faction) ~= nil) then
+				table.insert(required_technologies, GetFactionClassUnitType("writing", civilization, faction))
 			end
 		end
 	end
