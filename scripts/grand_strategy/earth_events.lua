@@ -93,7 +93,7 @@ local EarthEvents = {
 				SetProvinceSettlementBuilding("Dalmatia", "unit-teuton-town-hall", true)
 				SetProvinceSettlementBuilding("Epirus", "unit-teuton-town-hall", true)
 				SetProvinceSettlementBuilding("Franche Comte", "unit-germanic-town-hall", true)
-				SetProvinceSettlementBuilding("Latium", "unit-teuton-town-hall", true)
+				SetProvinceSettlementBuilding("Latium", "unit-latin-town-hall", true)
 				SetProvinceSettlementBuilding("Skopje", "unit-germanic-town-hall", true)
 				SetProvinceSettlementBuilding("Switzerland", "unit-germanic-town-hall", true)
 				SetProvinceSettlementBuilding("Thrace", "unit-germanic-town-hall", true)

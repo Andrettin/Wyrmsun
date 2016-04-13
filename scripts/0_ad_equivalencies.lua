@@ -123,7 +123,7 @@ Set0ADTemplateUnitTypeEquivalency("units/hele_cavalry_javelinist_b", "unit-teuto
 Set0ADTemplateUnitTypeEquivalency("units/hele_cavalry_javelinist_a", "unit-teuton-ritter") --advanced javelinist cavalry
 Set0ADTemplateUnitTypeEquivalency("units/hele_cavalry_javelinist_e", "unit-teuton-ritter") --elite javelinist cavalry
 -- Hellene structures
-Set0ADTemplateUnitTypeEquivalency("structures/hele_civil_centre", "unit-teuton-town-hall")
+Set0ADTemplateUnitTypeEquivalency("structures/hele_civil_centre", "unit-latin-town-hall")
 Set0ADTemplateUnitTypeEquivalency("structures/hele_field", "")
 Set0ADTemplateUnitTypeEquivalency("structures/hele_defense_tower", "unit-teuton-guard-tower")
 Set0ADTemplateUnitTypeEquivalency("other/hellenic_stoa", "unit-teuton-farm") --maybe a market would be a better fitting building, but its effect is similar to that of a farm
@@ -146,7 +146,7 @@ Set0ADTemplateUnitTypeEquivalency("units/mace_champion_cavalry", "unit-teuton-ri
 Set0ADTemplateUnitTypeEquivalency("units/mace_cavalry_javelinist_a", "unit-teuton-ritter")
 Set0ADTemplateUnitTypeEquivalency("units/mace_cavalry_javelinist_e", "unit-teuton-ritter")
 -- Macedonian structures
-Set0ADTemplateUnitTypeEquivalency("structures/mace_civil_centre", "unit-teuton-town-hall")
+Set0ADTemplateUnitTypeEquivalency("structures/mace_civil_centre", "unit-latin-town-hall")
 Set0ADTemplateUnitTypeEquivalency("structures/mace_outpost", "unit-teuton-watch-tower")
 Set0ADTemplateUnitTypeEquivalency("structures/mace_field", "")
 
@@ -159,7 +159,7 @@ Set0ADTemplateUnitTypeEquivalency("units/rome_infantry_javelinist_e", "unit-teut
 Set0ADTemplateUnitTypeEquivalency("units/rome_champion_infantry", "unit-teuton-swordsman")
 Set0ADTemplateUnitTypeEquivalency("units/rome_champion_cavalry", "unit-teuton-ritter")
 -- Roman structures
-Set0ADTemplateUnitTypeEquivalency("structures/rome_civil_centre", "unit-teuton-town-hall")
+Set0ADTemplateUnitTypeEquivalency("structures/rome_civil_centre", "unit-latin-town-hall")
 Set0ADTemplateUnitTypeEquivalency("structures/rome_army_camp", "unit-teuton-barracks")
 Set0ADTemplateUnitTypeEquivalency("structures/rome_outpost", "unit-teuton-watch-tower")
 Set0ADTemplateUnitTypeEquivalency("structures/rome_defense_tower", "unit-teuton-guard-tower")

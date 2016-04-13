@@ -696,6 +696,8 @@ João Victor G. Costa (Jinn):
 /graphics/goblin/icons/goblin_assassin.png (licensed under the CC0)
 /graphics/goblin/icons/goblin_spearman.png (licensed under the CC0)
 /graphics/goblin/icons/goblin_worker.png (licensed under the CC0)
+/graphics/latin/buildings/forum.png (based on the model by Wildfire Games) (licensed under the CC-BY-SA 3.0)
+/graphics/latin/buildings/forum_shadow.png (based on the model by Wildfire Games) (licensed under the CC-BY-SA 3.0)
 /graphics/missiles/big_fire.png (modified from Mikodrak's graphics) (licensed under the CC0)
 /graphics/missiles/big_fire_extra_1.png (modified from Mikodrak's graphics) (licensed under the CC0)
 /graphics/missiles/explosion.png (modified from StumpyStrust's graphics) (licensed under the CC0)
@@ -1157,3 +1159,7 @@ Vladislav "iDreamRunner":
 /graphics/neutral/items/amulet.png (licensed under the CC0)
 /graphics/neutral/items/boots.png (licensed under the CC0)
 /graphics/teuton/units/cherusci_shield.png (licensed under the CC0)
+
+Wildfire Games (http://www.wildfiregames.com/):
+/graphics/latin/buildings/forum.png (model on which Jinn's building was based) (licensed under the CC-BY-SA 3.0)
+/graphics/latin/buildings/forum_shadow.png (model on which Jinn's building was based) (licensed under the CC-BY-SA 3.0)

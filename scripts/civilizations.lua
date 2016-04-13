@@ -162,7 +162,8 @@ DefineCivilization("celt", { -- has to be defined after the germanic civilizatio
 	ParentCivilization = "germanic",
 	Adjective = "Celtic",
 	Playable = false,
-	DefaultColor = "green"
+	DefaultColor = "green",
+	CivilizationUpgrade = "upgrade-celt-civilization"
 })
 
 DefineCivilization("gnome", {
@@ -249,7 +250,8 @@ DefineCivilization("teuton", {
 	Language = "high-german",
 	ParentCivilization = "germanic",
 	Adjective = "Teutonic",
-	DefaultColor = "yellow"
+	DefaultColor = "yellow",
+	CivilizationUpgrade = "upgrade-teuton-civilization"
 	--[[
 	ProvinceNames = {
 		"Baden",
@@ -484,6 +486,8 @@ DefineCivilization("latin", {
 	ParentCivilization = "teuton",
 	Adjective = "Latin",
 	Playable = false,
+	DefaultColor = "red",
+	CivilizationUpgrade = "upgrade-latin-civilization",
 	--[[
 	SettlementNames = {
 		"Agrigentum",

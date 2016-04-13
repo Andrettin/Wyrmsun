@@ -247,6 +247,7 @@ DefineModifier("upgrade-teuton-masonry",
 	{"HitPoints", 20, "Percent"},
 	{"Armor", 5},
 	{"apply-to", "unit-teuton-town-hall"}, {"apply-to", "unit-teuton-stronghold"},
+	{"apply-to", "unit-latin-town-hall"},
 	{"apply-to", "unit-teuton-farm"}, {"apply-to", "unit-teuton-barracks"},
 	{"apply-to", "unit-teuton-lumber-mill"}, {"apply-to", "unit-teuton-smithy"},
 	{"apply-to", "unit-teuton-stables"}, {"apply-to", "unit-teuton-temple"},
@@ -256,12 +257,14 @@ DefineModifier("upgrade-teuton-masonry",
 
 DefineModifier("upgrade-teuton-coinage",
 	{"improve-production", "gold", 10},
-	{"apply-to", "unit-teuton-town-hall"}, {"apply-to", "unit-teuton-stronghold"}
+	{"apply-to", "unit-teuton-town-hall"}, {"apply-to", "unit-teuton-stronghold"},
+	{"apply-to", "unit-latin-town-hall"}
 )
 
 DefineModifier("upgrade-teuton-writing",
 	{"TimeEfficiencyBonus", 10},
 	{"apply-to", "unit-teuton-town-hall"}, {"apply-to", "unit-teuton-stronghold"},
+	{"apply-to", "unit-latin-town-hall"},
 	{"apply-to", "unit-teuton-farm"}, {"apply-to", "unit-teuton-barracks"},
 	{"apply-to", "unit-teuton-lumber-mill"}, {"apply-to", "unit-teuton-smithy"},
 --	{"apply-to", "unit-teuton-stables"}, {"apply-to", "unit-teuton-temple"},
@@ -450,12 +453,8 @@ DefineDependency("unit-teuton-stables",
 	{"unit-teuton-lumber-mill"}
 )
 
-DefineDependency("unit-teuton-ritter",
-	{"unit-teuton-smithy", "unit-teuton-stables"}
-)
-
-DefineDependency("unit-frank-horseman",
-	{"unit-teuton-smithy", "unit-teuton-stables", "upgrade-frank-tribe-faction"}
+DefineDependency("unit-teuton-swordsman",
+	{"upgrade-suebi-tribe-faction", 0, "upgrade-frank-tribe-faction", 0}
 )
 
 DefineDependency("unit-suebi-swordsman",
@@ -466,8 +465,24 @@ DefineDependency("unit-frank-swordsman",
 	{"upgrade-frank-tribe-faction"}
 )
 
+DefineDependency("unit-teuton-spearman",
+	{"upgrade-frank-tribe-faction", 0}
+)
+
 DefineDependency("unit-frank-spearman",
 	{"upgrade-frank-tribe-faction"}
+)
+
+DefineDependency("unit-teuton-ritter",
+	{"unit-teuton-smithy", "unit-teuton-stables", "upgrade-frank-tribe-faction", 0}
+)
+
+DefineDependency("unit-frank-horseman",
+	{"unit-teuton-smithy", "unit-teuton-stables", "upgrade-frank-tribe-faction"}
+)
+
+DefineDependency("unit-teuton-town-hall",
+	{"upgrade-teuton-civilization"}
 )
 
 DefineDependency("unit-teuton-temple",

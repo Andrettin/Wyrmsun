@@ -61,6 +61,9 @@ https://github.com/Andrettin/Wyrmsun
 - 2.1.5
 -----------------------------------------------------------------------
 
+* Building
+- Added Latin Forum (graphics by Wildfire Games and Jinn).
+
 * Grand Strategy
 - Rulers can now affect revolt risk.
 - The ruler interface now shows the ruler's trait.

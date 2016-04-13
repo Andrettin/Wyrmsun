@@ -87,6 +87,7 @@ DefineButton( { Pos = 13, Level = 0, Icon = "icon-rally-point",
 	Action = "rally-point",
 	Key = "r", Hint = _("Set ~!Rally Point"), Popup = "popup-commands",
 	ForUnit = {
+		"unit-latin-town-hall",
 		"unit-germanic-town-hall",
 		"unit-germanic-barracks",
 		"unit-teuton-town-hall", "unit-teuton-stronghold",
@@ -408,4 +409,5 @@ Load("scripts/civilizations/dwarf/buttons.lua")
 Load("scripts/civilizations/germanic/buttons.lua")
 Load("scripts/civilizations/gnome/buttons.lua")
 Load("scripts/civilizations/goblin/buttons.lua")
+Load("scripts/civilizations/latin/buttons.lua")
 Load("scripts/civilizations/teuton/buttons.lua")

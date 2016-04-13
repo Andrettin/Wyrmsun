@@ -131,7 +131,7 @@ DefineQuest("The Sack of Iuvavum", {
 })
 
 DefineQuest("The Razing of Opitergium", {
-	Icon = "icon-catapult-projectile-1",
+	Icon = "icon-latin-forum",
 	Description = "Leaving a trail of destruction behind them, the Marcomanni have now reached Italy and lay siege to the Roman city of Opitergium.\n\nMap: Oderzo",
 	RequiredQuest = "The Sack of Iuvavum",
 	World = "Earth",

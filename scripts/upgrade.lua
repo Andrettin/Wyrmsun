@@ -205,6 +205,7 @@ Load("scripts/civilizations/dwarf/upgrade.lua")
 Load("scripts/civilizations/germanic/upgrade.lua")
 Load("scripts/civilizations/gnome/upgrade.lua")
 Load("scripts/civilizations/goblin/upgrade.lua")
+Load("scripts/civilizations/latin/upgrade.lua")
 Load("scripts/civilizations/teuton/upgrade.lua")
 
 function DefineAllowNormalUnits(flags)
@@ -235,23 +236,34 @@ function DefineAllowNormalUnits(flags)
 						and CUpgrade:Get(unitName).TechnologyPointCost > 0
 					) then
 						PlayerUnitFlag[j] = "F"
-					elseif (flags == "RRRRRRRRRRRRRRRR") then
+					elseif (flags == "RRRRRRRRRRRRRRRR" or unitName == GetCivilizationData(GetPlayerData(j, "RaceName"), "CivilizationUpgrade")) then
 						PlayerUnitFlag[j] = "R"
 					else
 						PlayerUnitFlag[j] = "A"
 					end
 				end
 			end
-			flags = PlayerUnitFlag[0] .. PlayerUnitFlag[1] .. PlayerUnitFlag[2] .. PlayerUnitFlag[3] .. PlayerUnitFlag[4] .. PlayerUnitFlag[5] .. PlayerUnitFlag[6] .. PlayerUnitFlag[7] .. PlayerUnitFlag[8] .. PlayerUnitFlag[9] .. PlayerUnitFlag[10] .. PlayerUnitFlag[11] .. PlayerUnitFlag[12] .. PlayerUnitFlag[13] .. PlayerUnitFlag[14] .. PlayerUnitFlag[15]
-			DefineAllow(unitName, flags)
+			DefineAllow(unitName, PlayerUnitFlag[0] .. PlayerUnitFlag[1] .. PlayerUnitFlag[2] .. PlayerUnitFlag[3] .. PlayerUnitFlag[4] .. PlayerUnitFlag[5] .. PlayerUnitFlag[6] .. PlayerUnitFlag[7] .. PlayerUnitFlag[8] .. PlayerUnitFlag[9] .. PlayerUnitFlag[10] .. PlayerUnitFlag[11] .. PlayerUnitFlag[12] .. PlayerUnitFlag[13] .. PlayerUnitFlag[14] .. PlayerUnitFlag[15])
 		end
 	else
 		for i, unitName in ipairs(Units) do
-			if (flags == "RRRRRRRRRRRRRRRR" and string.find(unitName, "upgrade-") == nil) then
-				DefineAllow(unitName, "AAAAAAAAAAAAAAAA")
-			else
-				DefineAllow(unitName, flags)
+			local PlayerUnitFlag = {}
+			for j=0,15 do
+				if (string.find(unitName, "upgrade-") == nil) then
+					if (flags == "RRRRRRRRRRRRRRRR") then
+						PlayerUnitFlag[j] = "A"
+					else
+						PlayerUnitFlag[j] = string.sub(flags, j + 1, j + 1)
+					end
+				else
+					if (unitName == GetCivilizationData(GetPlayerData(j, "RaceName"), "CivilizationUpgrade")) then
+						PlayerUnitFlag[j] = "R"
+					else
+						PlayerUnitFlag[j] = string.sub(flags, j + 1, j + 1)
+					end
+				end
 			end
+			DefineAllow(unitName, PlayerUnitFlag[0] .. PlayerUnitFlag[1] .. PlayerUnitFlag[2] .. PlayerUnitFlag[3] .. PlayerUnitFlag[4] .. PlayerUnitFlag[5] .. PlayerUnitFlag[6] .. PlayerUnitFlag[7] .. PlayerUnitFlag[8] .. PlayerUnitFlag[9] .. PlayerUnitFlag[10] .. PlayerUnitFlag[11] .. PlayerUnitFlag[12] .. PlayerUnitFlag[13] .. PlayerUnitFlag[14] .. PlayerUnitFlag[15])
 		end
 	end
 end
@@ -300,9 +312,6 @@ function ApplyTechLevels()
 		"upgrade-goblin-catapult-projectile-1", "upgrade-goblin-catapult-projectile-2",
 		"upgrade-goblin-iron-tipped-wood-plow"
 	}
-	local iron_civilizations = {
-		"upgrade-teuton-civilization"
-	}
 	
 	local function IsTechnologyUnderMinimumTechLevel(technology, player)
 		if (GetArrayIncludes(bronze_upgrades, technology) and (TechLevel[player + 1] == "Agrarian (Iron)" or TechLevel[player + 1] == "Civilized (Iron)")) then -- if tech level is at least Agrarian (Iron), bronze technologies should begin researched
@@ -315,7 +324,7 @@ function ApplyTechLevels()
 	end
 	
 	local function IsTechnologyOverMaxTechLevel(technology, player)
-		if ((GetArrayIncludes(iron_upgrades, technology) or GetArrayIncludes(iron_civilizations, technology)) and (MaxTechLevel[player + 1] == "Agrarian (Bronze)" or MaxTechLevel[player + 1] == "Civilized (Bronze)")) then -- if max tech level is bronze or lower, iron technologies should not be researchable
+		if (GetArrayIncludes(iron_upgrades, technology) and (MaxTechLevel[player + 1] == "Agrarian (Bronze)" or MaxTechLevel[player + 1] == "Civilized (Bronze)")) then -- if max tech level is bronze or lower, iron technologies should not be researchable
 			return true
 		elseif (GetArrayIncludes(civilized_upgrades, technology) and (MaxTechLevel[player + 1] == "Agrarian (Bronze)" or MaxTechLevel[player + 1] == "Agrarian (Iron)")) then
 			return true
@@ -341,13 +350,6 @@ function ApplyTechLevels()
 				end
 			end
 			DefineAllow(unitName, PlayerUnitFlag[1] .. PlayerUnitFlag[2] .. PlayerUnitFlag[3] .. PlayerUnitFlag[4] .. PlayerUnitFlag[5] .. PlayerUnitFlag[6] .. PlayerUnitFlag[7] .. PlayerUnitFlag[8] .. PlayerUnitFlag[9] .. PlayerUnitFlag[10] .. PlayerUnitFlag[11] .. PlayerUnitFlag[12] .. PlayerUnitFlag[13] .. PlayerUnitFlag[14] .. PlayerUnitFlag[15] .. PlayerUnitFlag[16])
-		end
-	end
-	for j=0,15 do
-		if (GetPlayerData(j, "RaceName") == "teuton") then
-			SetPlayerData(j, "Allow", "upgrade-teuton-civilization", "R") -- ad hoc way of setting civilization upgrades
-		elseif (GetPlayerData(j, "RaceName") == "celt") then
-			SetPlayerData(j, "Allow", "upgrade-celt-civilization", "R")
 		end
 	end
 end

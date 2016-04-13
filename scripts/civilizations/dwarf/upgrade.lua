@@ -501,6 +501,18 @@ DefineDependency("unit-dwarven-gryphon-rider",
 	{"unit-dwarven-stronghold", "unit-dwarven-lumber-mill"}
 )
 
+DefineDependency("unit-dwarven-miner",
+	{"upgrade-brising-clan-faction", 0}
+)
+
 DefineDependency("unit-brising-miner",
+	{"upgrade-brising-clan-faction"}
+)
+
+DefineDependency("unit-dwarven-smithy",
+	{"upgrade-brising-clan-faction", 0}
+)
+
+DefineDependency("unit-brising-smithy",
 	{"upgrade-brising-clan-faction"}
 )

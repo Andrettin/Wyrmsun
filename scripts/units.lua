@@ -28,6 +28,8 @@
 UnitTypeFiles = {}
 
 Units = {
+	"unit-latin-town-hall",
+	"upgrade-latin-civilization",
 	"unit-germanic-worker", "unit-germanic-warrior", "unit-germanic-spearman", "unit-germanic-archer",
 	"unit-germanic-town-hall", "unit-germanic-farm", "unit-germanic-barracks",
 	"unit-germanic-carpenters-shop", "unit-germanic-smithy",
@@ -1385,6 +1387,7 @@ DefineUnitType("unit-gold-deposit", { Name = _("Gold Deposit"),
 			"distance", { Distance = 3, DistanceType = ">", Type = "unit-germanic-town-hall"},
 			"distance", { Distance = 3, DistanceType = ">", Type = "unit-gnomish-town-hall"},
 			"distance", { Distance = 3, DistanceType = ">", Type = "unit-goblin-town-hall"},
+			"distance", { Distance = 3, DistanceType = ">", Type = "unit-latin-town-hall"},
 			"distance", { Distance = 3, DistanceType = ">", Type = "unit-teuton-town-hall"},
 			"distance", { Distance = 3, DistanceType = ">", Type = "unit-teuton-stronghold"}
 		}
@@ -1422,6 +1425,7 @@ DefineUnitType("unit-silver-deposit", { Name = _("Silver Deposit"),
 			"distance", { Distance = 3, DistanceType = ">", Type = "unit-germanic-town-hall"},
 			"distance", { Distance = 3, DistanceType = ">", Type = "unit-gnomish-town-hall"},
 			"distance", { Distance = 3, DistanceType = ">", Type = "unit-goblin-town-hall"},
+			"distance", { Distance = 3, DistanceType = ">", Type = "unit-latin-town-hall"},
 			"distance", { Distance = 3, DistanceType = ">", Type = "unit-teuton-town-hall"},
 			"distance", { Distance = 3, DistanceType = ">", Type = "unit-teuton-stronghold"}
 		}
@@ -1458,6 +1462,7 @@ DefineUnitType("unit-copper-deposit", { Name = _("Copper Deposit"),
 			"distance", { Distance = 3, DistanceType = ">", Type = "unit-germanic-town-hall"},
 			"distance", { Distance = 3, DistanceType = ">", Type = "unit-gnomish-town-hall"},
 			"distance", { Distance = 3, DistanceType = ">", Type = "unit-goblin-town-hall"},
+			"distance", { Distance = 3, DistanceType = ">", Type = "unit-latin-town-hall"},
 			"distance", { Distance = 3, DistanceType = ">", Type = "unit-teuton-town-hall"},
 			"distance", { Distance = 3, DistanceType = ">", Type = "unit-teuton-stronghold"}
 		}
@@ -1505,6 +1510,7 @@ DefineUnitType("unit-coal-mine", { Name = _("Coal Mine"),
 			"distance", { Distance = 3, DistanceType = ">", Type = "unit-germanic-town-hall"},
 			"distance", { Distance = 3, DistanceType = ">", Type = "unit-gnomish-town-hall"},
 			"distance", { Distance = 3, DistanceType = ">", Type = "unit-goblin-town-hall"},
+			"distance", { Distance = 3, DistanceType = ">", Type = "unit-latin-town-hall"},
 			"distance", { Distance = 3, DistanceType = ">", Type = "unit-teuton-town-hall"},
 			"distance", { Distance = 3, DistanceType = ">", Type = "unit-teuton-stronghold"}
 		}
@@ -4469,6 +4475,7 @@ Load("scripts/civilizations/gnome/units.lua")
 Load("scripts/civilizations/goblin/units.lua")
 Load("scripts/civilizations/kobold/units.lua")
 Load("scripts/civilizations/teuton/units.lua")
+Load("scripts/civilizations/latin/units.lua")
 
 -- define the mercenary camp after the rest because it refers to unit types of the civilizations
 DefineUnitType("unit-mercenary-camp", { Name = _("Mercenary Camp"),
