@@ -340,7 +340,7 @@ DefineCharacter("Frígídá", { -- Source: Snorri Sturlson, "The Prose Edda", 19
 	DeathYear = -2800 + (30 * 1)
 })
 
-DefineCharacter("Yngve", { -- Source: Snorri Sturlson, "Heimskringla", 1844; Source: Snorri Sturlson, "The Prose Edda", 1916, p. 9; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 221.
+DefineCharacter("Yngve", { -- Source: Snorri Sturlson, "Heimskringla", 1844; Source: Snorri Sturlson, "The Prose Edda", 1916, p. 9; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 221.
 	Name = "Yngve", -- has to be defined first so that he becomes the first in line to succede Vóden in Sweden; also known as Yng or Yngvi; from him the Ynglings spring
 	Gender = "male",
 	Type = "unit-germanic-warrior",
@@ -493,7 +493,7 @@ DefineCharacter("Rerir", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p
 	Father = "Sigi"
 })
 
-DefineCharacter("Skeldu", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 221.
+DefineCharacter("Skeldu", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 8; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 221.
 	-- ancestor of the Danish kings; from him spring the Skjoldungs
 	Name = "Skeldu", -- "Skjöldr" in the source; this is a Proto-Germanic rendering of the name
 	NameElements = {"word", "proto-germanic", "noun", "Skeldu"},

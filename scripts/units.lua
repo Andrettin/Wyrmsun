@@ -249,7 +249,7 @@ DefineUnitType("unit-horse", { Name = "Horse",
 	Parent = "unit-template-fauna-unit",
 	Class = "grazer",
 	Description = _("Horses are valuable for their speed as well as their endurance, making excellent mounts. The creatures were a vital component of any army, and was an essential part of the lifestyle of the peoples of the Eurasian steppes."),
-	Quote = _("\"Glath and Gyllir, | Gler and Skeithbrimir, / Silfrintopp and Sinir, / Gisl and Falhofnir, | Golltopp and Lettfeti, / On these steeds the gods shall go / When dooms to give | each day they ride / To the ash-tree Yggdrasil.\" - Grimnismol (Grimnir)"), -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 96.
+	Quote = _("\"Glath and Gyllir, | Gler and Skeithbrimir, / Silfrintopp and Sinir, / Gisl and Falhofnir, | Golltopp and Lettfeti, / On these steeds the gods shall go / When dooms to give | each day they ride / To the ash-tree Yggdrasil.\" - Grimnismol (Grimnir)"), -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 96.
 	Image = {"file", "neutral/units/horse_brown_skin_brown_hair_brown_eyes.png", "size", {72, 72}},
 	Animations = "animations-yale", Icon = "icon-horse",
 	NeutralMinimapColor = {192, 192, 192},
@@ -275,32 +275,32 @@ DefineUnitType("unit-horse", { Name = "Horse",
 	Flesh = true,
 	Herbivore = true,
 	PersonalNames = {
-		"Alsvid", -- One of the sun horses from Norse mythology (name means "All-Swift"); Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 771; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 99.
-		"Arvak", -- One of the sun horses from Norse mythology (name means "Early Waker"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 99.
-		"Falhofnir", -- Horse from Norse mythology (name means "Hollow-Hoofed"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", pp. 96-97.
-		"Gisl", -- Horse from Norse mythology (name means "Gleaming"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 96.
-		"Glath", -- Horse from Norse mythology (name means "Joyous"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 96.
-		"Glaum", -- The horse of Atli (Attila in Norse mythology); Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 493.
-		"Gler", -- Horse from Norse mythology (name means "Shining"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 96.
-		"Golltop", -- Heimdall's horse from Norse mythology (name means "Gold-Topped"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", pp. 96-97.
-		"Grani", -- Sigurd's horse in Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", pp. 259, 303, 342.
-		"Gullfaxi", -- The giant Hrungnir's horse in Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 126.
-		"Gyllir", -- Horse from Norse mythology (name means "Golden"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 96.
-		"Lettfeti", -- Horse from Norse mythology (name means "Hollow-Hoofed"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", pp. 96-97.
-		"Melnir", -- Horse from Norse mythology (name means "Bit-Bearer"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 306.
-		"Mylnir", -- Horse from Norse mythology (name means "The Biter"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 306.
+		"Alsvid", -- One of the sun horses from Norse mythology (name means "All-Swift"); Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 771; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 99.
+		"Arvak", -- One of the sun horses from Norse mythology (name means "Early Waker"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 99.
+		"Falhofnir", -- Horse from Norse mythology (name means "Hollow-Hoofed"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 96-97.
+		"Gisl", -- Horse from Norse mythology (name means "Gleaming"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 96.
+		"Glath", -- Horse from Norse mythology (name means "Joyous"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 96.
+		"Glaum", -- The horse of Atli (Attila in Norse mythology); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 493.
+		"Gler", -- Horse from Norse mythology (name means "Shining"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 96.
+		"Golltop", -- Heimdall's horse from Norse mythology (name means "Gold-Topped"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 96-97.
+		"Grani", -- Sigurd's horse in Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 259, 303, 342.
+		"Gullfaxi", -- The giant Hrungnir's horse in Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 126.
+		"Gyllir", -- Horse from Norse mythology (name means "Golden"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 96.
+		"Lettfeti", -- Horse from Norse mythology (name means "Hollow-Hoofed"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 96-97.
+		"Melnir", -- Horse from Norse mythology (name means "Bit-Bearer"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 306.
+		"Mylnir", -- Horse from Norse mythology (name means "The Biter"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 306.
 		"Semik", -- Šemík was Horymír's horse in the Praguer legend; Source: Alena Ježková, "77 Prague Legends", 2006, p. 154.
-		"Silfrintopp", -- Horse from Norse mythology (name means "Silver-Topped"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 96.
-		"Sinir", -- Horse from Norse mythology (name means "Sinewy"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 96.
-		"Skeithbrimir", -- Horse from Norse mythology (name means "Swift-Going"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 96.
-		"Skinfaxi", -- Horse from Norse mythology (name means "Shining-Mane"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 71.
-		"Sleipnir", -- Odin's horse in Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", pp. 102, 159, 196.
-		"Sporvitnir", -- Horse from Norse mythology (name means "Spur-Wolf"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 306.
-		"Svathilfari", -- A giant's horse in Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", pp. 159, 196.
-		"Sveggjuth", -- Horse from Norse mythology (name means "Lithe"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 304.
-		"Sviputh", -- Horse from Norse mythology (name means "Swift"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 304.
-		"Vigblaer", -- Vigblær was Helgi's horse in Norse mythology (its name means "Battle-Breather"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 325.
-		"Vingskornir" -- Brynhild's horse in Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 384.
+		"Silfrintopp", -- Horse from Norse mythology (name means "Silver-Topped"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 96.
+		"Sinir", -- Horse from Norse mythology (name means "Sinewy"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 96.
+		"Skeithbrimir", -- Horse from Norse mythology (name means "Swift-Going"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 96.
+		"Skinfaxi", -- Horse from Norse mythology (name means "Shining-Mane"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 71.
+		"Sleipnir", -- Odin's horse in Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 102, 159, 196.
+		"Sporvitnir", -- Horse from Norse mythology (name means "Spur-Wolf"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 306.
+		"Svathilfari", -- A giant's horse in Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 159, 196.
+		"Sveggjuth", -- Horse from Norse mythology (name means "Lithe"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 304.
+		"Sviputh", -- Horse from Norse mythology (name means "Swift"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 304.
+		"Vigblaer", -- Vigblær was Helgi's horse in Norse mythology (its name means "Battle-Breather"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 325.
+		"Vingskornir" -- Brynhild's horse in Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 384.
 	},
 --	PersonalNamePrefixes = {"Aegi"},
 --	PersonalNameSuffixes = {"pan"},

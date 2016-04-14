@@ -73,6 +73,9 @@ https://github.com/Andrettin/Wyrmsun
 * Interface
 - Fixed the issue which caused the loading screen to not properly appear under SDL rendering.
 
+* Terrain
+- Fixed an issue with shared vision which caused cut tree and harvested rock tiles under shared vision to not be updated graphically.
+
 * Units
 - Added Dim (-5 mana), Genius (+10 mana), Intelligent (+5 mana), Pious (+5 mana) and Wise (+5 mana) traits.
 

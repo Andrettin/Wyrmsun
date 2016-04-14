@@ -38,7 +38,7 @@ function DefineUniqueItem(unique_item, data)
 	OldDefineUniqueItem(unique_item, data)
 end
 
-DefineUniqueItem("Brimir", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 102.
+DefineUniqueItem("Brimir", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 102.
 	Type = "unit-broad-sword",
 	Prefix = "upgrade-item-prefix-penetrating",
 	Suffix = "upgrade-item-suffix-of-victory",
@@ -46,7 +46,7 @@ DefineUniqueItem("Brimir", { -- Source: Henry Adams Bellows (transl.), "The Poet
 	Quote = "\"Of all the gods | is Odin the greatest, / And Sleipnir the best of steeds; / Bifrost of bridges, | Bragi of skalds, / Hobrok of hawks, | Garm of hounds, / and Brimir of swords.\" - Grimnismol (Grimnir)"
 } )
 
-DefineUniqueItem("Laevatein", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 124; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 245.
+DefineUniqueItem("Laevatein", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 124; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 245.
 	Type = "unit-broad-sword",
 	Prefix = "upgrade-item-prefix-wounding",
 	Suffix = "upgrade-item-suffix-of-slaughter",
@@ -54,7 +54,7 @@ DefineUniqueItem("Laevatein", { -- Source: Kevin Crossley-Holland, "The Norse My
 	Quote = "\"Laevatein is there | that Lopt with runes / Once made by the doors of death; / In Laegjarn's chest | by Sinmora lies it, / And nine locks fasten it firm.\" - Svipdagsmol (Fjolsvith)"
 } )
 
-DefineUniqueItem("Gram", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", pp. 351, 365.
+DefineUniqueItem("Gram", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 351, 365.
 	Type = "unit-frankish-spatha",
 	Prefix = "upgrade-item-prefix-wounding",
 	Suffix = "upgrade-item-suffix-of-victory",
@@ -63,7 +63,7 @@ DefineUniqueItem("Gram", { -- Source: Henry Adams Bellows (transl.), "The Poetic
 	Quote = "\"With thy sword between, | three nights thou sleepest / With her thou winnest | for Gunnar's wife.\" - Gripisspo (Gripir)"
 } )
 
-DefineUniqueItem("Hrotti", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 385.
+DefineUniqueItem("Hrotti", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 385.
 	Type = "unit-spatha",
 	NameElements = {"word", "dwarven", "noun", "Hrotti"},
 	Prefix = "upgrade-item-prefix-penetrating",
@@ -73,7 +73,7 @@ DefineUniqueItem("Hrotti", { -- Source: Henry Adams Bellows (transl.), "The Poet
 --	Quote = "\"There Sigurd found a mighty store of gold, and he filled two chests full thereof; he took the fear-helm and a golden mail-coat and the sword Hrotti, and many other precious things.\" - Fafnismol" -- original
 } )
 
-DefineUniqueItem("Rithil", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 380.
+DefineUniqueItem("Rithil", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 380.
 	Type = "unit-spatha",
 	NameElements = {"word", "dwarven", "adjective", "Rithil"},
 	Prefix = "upgrade-item-prefix-swift",
@@ -98,7 +98,7 @@ DefineUniqueItem("Toporik", { -- name means "hatchet" in Russian; renaming of th
 	Quote = "\"The wise Hroptatyr / Has nine sons: / Three strike, three thunder, / Three lighten.\" - Dwarven Traditional Poetry" -- Source: W. R. S. Ralston, "Songs of the Russian People", 1872, p. 90.
 } )
 
-DefineUniqueItem("Svalin", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 63; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 100.
+DefineUniqueItem("Svalin", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 63; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 100.
 	Type = "unit-bronze-shield",
 	Prefix = "upgrade-item-prefix-impregnable",
 	Suffix = "upgrade-item-suffix-of-extinguishment",
@@ -106,7 +106,7 @@ DefineUniqueItem("Svalin", { -- Source: Kevin Crossley-Holland, "The Norse Myths
 	Quote = "\"In front of the sun | does Svalin stand, / The shield for the shining god; / Mountains and sea | would be set in flames / If it fell from before the sun.\" - Grimnismol (Grimnir)"
 } )
 
-DefineUniqueItem("Brisingamen", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", pp. 177.
+DefineUniqueItem("Brisingamen", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 177.
 	Type = "unit-amulet",
 	NameElements = {
 		"compound", "prefix", "dwarven", "noun", "singular", "genitive", "Brising",
@@ -118,7 +118,7 @@ DefineUniqueItem("Brisingamen", { -- Source: Henry Adams Bellows (transl.), "The
 	Quote = "\"The dwelling great | of the dwarves was shaken, / And burst was the mighty | Brisings' necklace.\" - Dwarven Traditional Poetry"
 } )
 
-DefineUniqueItem("Andvaranaut", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", pp. 114, 360; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 21.
+DefineUniqueItem("Andvaranaut", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 114, 360; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 21.
 	Type = "unit-ring",
 	NameElements = {
 		"compound", "prefix", "dwarven", "noun", "singular", "genitive", "Andvari",
@@ -130,7 +130,7 @@ DefineUniqueItem("Andvaranaut", { -- Source: Henry Adams Bellows (transl.), "The
 	Quote = "\"Now shall the gold | that I once had / Bring their death | to warriors twain, / And evil be | for heroes eight; / Joy of my wealth | shall no dwarf win.\" - Reginsmol (Andvari)"
 } )
 
-DefineUniqueItem("Draupnir", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 241; Source: Henry Adams Bellows (transl.), "The Poetic Edda", pp. 114.
+DefineUniqueItem("Draupnir", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 241; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 114.
 	Type = "unit-ring",
 	NameElements = {"word", "dwarven", "noun", "Draupnir"},
 	Prefix = "upgrade-item-prefix-flaming",
@@ -170,7 +170,7 @@ DefineUniqueItem("Shorbear Hold", {
 	Quote = "\"Everyone to the caves, and kill those still inside!\" - Durstorn, Norlund Chieftain"
 } )
 
-DefineUniqueItem("Skidbladnir", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", pp. 101.
+DefineUniqueItem("Skidbladnir", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 101.
 	Type = "unit-dwarven-transport-ship",
 --	NameElements = {
 --		"compound", "prefix", "dwarven", "noun", "Skid",

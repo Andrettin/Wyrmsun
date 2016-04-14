@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineCharacter("Eymund", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 222.
+DefineCharacter("Eymund", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 222.
 	Name = "Eymund", -- king of Holmgarth (i.e. Russia); described as "the strongest of men"
 	NameElements = {
 --		"compound", "prefix", -- ?
@@ -40,7 +40,7 @@ DefineCharacter("Eymund", { -- Source: Henry Adams Bellows (transl.), "The Poeti
 --	DeathYear = ?
 })
 
-DefineCharacter("Halfdan the Old Skjoldung", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", pp. 221-223.
+DefineCharacter("Halfdan the Old Skjoldung", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 221-223.
 	Name = "Halfdan", -- mythical king of Denmark; had an ice-cold sword; was strengthened by king Eymund of Holmgarth and slew Sigtrygg with the ice-cold sword; married Eymund's daughter Almveig
 	NameElements = {
 		"compound", "prefix", "old-norse", "adjective", "no-case", "Halfr", -- presumably; used "no-case" to avoid the nominative ending "-r"
@@ -53,10 +53,13 @@ DefineCharacter("Halfdan the Old Skjoldung", { -- Source: Henry Adams Bellows (t
 	Civilization = "norse",
 	ProvinceOfOrigin = "Zealand", -- since he is a Danish king
 --	Year = ?,
---	DeathYear = ?
+--	DeathYear = ?,
+	HistoricalRulerships = {
+		0, 0, "norse", "Denmark"
+	}
 })
 
-DefineCharacter("Almveig", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 222.
+DefineCharacter("Almveig", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 222.
 	Name = "Almveig", -- wife of Halfdan the Old Skjoldung; also known as Alvig; bore Halfdan the Old eighteen sons (nine of them being in a single birth); the nine who were the result of a single birth were all slain, while the other nine are held to be the ancestors of the most famous heroes in Norse myths
 	NameElements = {
 		"compound", "prefix", "old-norse", "noun", "no-case", "Almr", -- presumably
@@ -71,7 +74,7 @@ DefineCharacter("Almveig", { -- Source: Henry Adams Bellows (transl.), "The Poet
 	Father = "Eymund"
 })
 
-DefineCharacter("Authi", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", pp. 221-222.
+DefineCharacter("Authi", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 221-222.
 	Name = "Authi", -- son of Halfdan the Old, from whom the Othlings spring
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
@@ -83,7 +86,7 @@ DefineCharacter("Authi", { -- Source: Henry Adams Bellows (transl.), "The Poetic
 	Mother = "Almveig" -- presumably, since she was married to Halfdan the Old
 })
 
-DefineCharacter("Ali", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 222.
+DefineCharacter("Ali", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 222.
 	Name = "Ali",
 	NameElements = {
 		"word", "old-norse", "verb", "present", "Ali" -- presumably; also, not certain if that is the present participle of the verb, or another participle form
@@ -98,7 +101,7 @@ DefineCharacter("Ali", { -- Source: Henry Adams Bellows (transl.), "The Poetic E
 	Mother = "Almveig" -- presumably, since she was married to Halfdan the Old
 })
 
-DefineCharacter("Sigtrygg", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 222.
+DefineCharacter("Sigtrygg", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 222.
 	Name = "Sigtrygg", -- Halfdan the Old slew him with an ice-cold sword
 	NameElements = {
 		"compound", "prefix", "old-norse", "noun", "no-case", "Sigr", -- presumably; used "no-case" to avoid the nominative ending "-r"
@@ -112,7 +115,7 @@ DefineCharacter("Sigtrygg", { -- Source: Henry Adams Bellows (transl.), "The Poe
 --	DeathYear = ?
 })
 
-DefineCharacter("Dag", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 223.
+DefineCharacter("Dag", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 223.
 	Name = "Dag", -- ancestor of the Döglings; married to Thora
 	NameElements = {
 		"word", "old-norse", "noun", "Dagr" -- presumably
@@ -127,7 +130,7 @@ DefineCharacter("Dag", { -- Source: Henry Adams Bellows (transl.), "The Poetic E
 	Mother = "Almveig" -- presumably, since she was married to Halfdan the Old
 })
 
-DefineCharacter("Thora", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 223.
+DefineCharacter("Thora", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 223.
 	Name = "Thora", -- married to Dag, and bore him "the bravest of fighters"
 	Gender = "female",
 	Type = "unit-teuton-archer",
@@ -137,7 +140,7 @@ DefineCharacter("Thora", { -- Source: Henry Adams Bellows (transl.), "The Poetic
 --	DeathYear = ?
 })
 
-DefineCharacter("Frathmar Dögling", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 223.
+DefineCharacter("Frathmar Dögling", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 223.
 	Name = "Frathmar",
 	FamilyName = "Dögling",
 	Gender = "male",
@@ -150,7 +153,7 @@ DefineCharacter("Frathmar Dögling", { -- Source: Henry Adams Bellows (transl.),
 	Mother = "Thora"
 })
 
-DefineCharacter("Gyrth Dögling", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 223.
+DefineCharacter("Gyrth Dögling", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 223.
 	Name = "Gyrth",
 	FamilyName = "Dögling",
 	Gender = "male",
@@ -163,7 +166,7 @@ DefineCharacter("Gyrth Dögling", { -- Source: Henry Adams Bellows (transl.), "T
 	Mother = "Thora"
 })
 
-DefineCharacter("Frekis Dögling", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 223.
+DefineCharacter("Frekis Dögling", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 223.
 	Name = "Frekis",
 	FamilyName = "Dögling",
 	Gender = "male",
@@ -176,7 +179,7 @@ DefineCharacter("Frekis Dögling", { -- Source: Henry Adams Bellows (transl.), "
 	Mother = "Thora"
 })
 
-DefineCharacter("Frekis II Dögling", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 223.
+DefineCharacter("Frekis II Dögling", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 223.
 	Name = "Frekis",
 	ExtraName = "II", -- to differentiate him from his brother
 	FamilyName = "Dögling",
@@ -190,7 +193,7 @@ DefineCharacter("Frekis II Dögling", { -- Source: Henry Adams Bellows (transl.)
 	Mother = "Thora"
 })
 
-DefineCharacter("Am Dögling", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 223.
+DefineCharacter("Am Dögling", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 223.
 	Name = "Am",
 	FamilyName = "Dögling",
 	Gender = "male",
@@ -203,7 +206,7 @@ DefineCharacter("Am Dögling", { -- Source: Henry Adams Bellows (transl.), "The 
 	Mother = "Thora"
 })
 
-DefineCharacter("Jofurmar Dögling", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 223.
+DefineCharacter("Jofurmar Dögling", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 223.
 	Name = "Jofurmar",
 	FamilyName = "Dögling",
 	Gender = "male",
@@ -216,7 +219,7 @@ DefineCharacter("Jofurmar Dögling", { -- Source: Henry Adams Bellows (transl.),
 	Mother = "Thora"
 })
 
-DefineCharacter("Alf the Old Dögling", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 223.
+DefineCharacter("Alf the Old Dögling", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 223.
 	Name = "Alf", -- apparently isn't the same Alf the Old who is father of Instein, since they have different fathers themselves
 	NameElements = {
 		"word", "old-norse", "noun", "Alfr" -- presumably
@@ -233,7 +236,7 @@ DefineCharacter("Alf the Old Dögling", { -- Source: Henry Adams Bellows (transl
 	Mother = "Thora"
 })
 
-DefineCharacter("Svan the Red", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 222.
+DefineCharacter("Svan the Red", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 222.
 	Name = "Svan",
 	ExtraName = "the Red",
 	Gender = "male",
@@ -244,7 +247,7 @@ DefineCharacter("Svan the Red", { -- Source: Kevin Crossley-Holland, "The Norse 
 --	DeathYear = ?
 })
 
-DefineCharacter("Saefari", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 222.
+DefineCharacter("Saefari", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 222.
 	Name = "Saefari",
 	NameElements = {
 		"compound", "prefix", "old-norse", "noun", "no-case", "Sær" -- presumably; used "no-case" to avoid the nominative ending "-r"
@@ -259,7 +262,7 @@ DefineCharacter("Saefari", { -- Source: Kevin Crossley-Holland, "The Norse Myths
 	Father = "Svan the Red"
 })
 
-DefineCharacter("Ulf", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 222.
+DefineCharacter("Ulf", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 222.
 	Name = "Ulf",
 	NameElements = {
 		"word", "old-norse", "noun", "Ulfr" -- presumably
@@ -273,7 +276,7 @@ DefineCharacter("Ulf", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1
 	Father = "Saefari"
 })
 
-DefineCharacter("Alf the Old", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 222.
+DefineCharacter("Alf the Old", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 222.
 	Name = "Alf",
 	NameElements = {
 		"word", "old-norse", "noun", "Alfr" -- presumably
@@ -288,7 +291,7 @@ DefineCharacter("Alf the Old", { -- Source: Kevin Crossley-Holland, "The Norse M
 	Father = "Ulf"
 })
 
-DefineCharacter("Instein", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 100-101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 222.
+DefineCharacter("Instein", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 100-101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 222.
 	Name = "Instein", -- one of the warriors of King Half of Horthaland
 	NameElements = {
 --		"compound", "prefix" -- ?
@@ -327,7 +330,7 @@ DefineCharacter("Svava", { -- Source: Kevin Crossley-Holland, "The Norse Myths",
 --	DeathYear = ?
 })
 
-DefineCharacter("Klypp", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 223.
+DefineCharacter("Klypp", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 223.
 	Name = "Klypp",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
@@ -337,7 +340,7 @@ DefineCharacter("Klypp", { -- Source: Henry Adams Bellows (transl.), "The Poetic
 --	DeathYear = ?
 })
 
-DefineCharacter("Ketil Hortha-Kari", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 223.
+DefineCharacter("Ketil Hortha-Kari", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 223.
 	Name = "Ketil", -- married to Hildigun; the semi-mythical Ketil Hortha-Kari, ancestor of many Icelandic families
 	ExtraName = "Hortha-Kari",
 	Gender = "male",
@@ -349,7 +352,7 @@ DefineCharacter("Ketil Hortha-Kari", { -- Source: Kevin Crossley-Holland, "The N
 	Father = "Klypp"
 })
 
-DefineCharacter("Hildigun", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 223.
+DefineCharacter("Hildigun", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 223.
 	Name = "Hildigun", -- married to Ketil; also known as Hildiguth
 	Gender = "female",
 	Type = "unit-teuton-archer",
@@ -361,7 +364,7 @@ DefineCharacter("Hildigun", { -- Source: Kevin Crossley-Holland, "The Norse Myth
 	Mother = "Svava"
 })
 
-DefineCharacter("Frodi", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 222.
+DefineCharacter("Frodi", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 222.
 	Name = "Frodi",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
@@ -370,9 +373,9 @@ DefineCharacter("Frodi", { -- Source: Kevin Crossley-Holland, "The Norse Myths",
 --	Year = ?,
 --	DeathYear = ?
 })
--- "Frodi came before Kari" is said later; could this be the same Frodi as this one? The Kari here is perhaps Ketil Hortha-Kari, but he came before this Frodi, not after; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", pp. 223-224.
+-- "Frodi came before Kari" is said later; could this be the same Frodi as this one? The Kari here is perhaps Ketil Hortha-Kari, but he came before this Frodi, not after; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 223-224.
 
-DefineCharacter("Friaut", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 222.
+DefineCharacter("Friaut", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 222.
 	Name = "Friaut",
 	Gender = "female",
 	Type = "unit-teuton-archer",
@@ -384,7 +387,7 @@ DefineCharacter("Friaut", { -- Source: Kevin Crossley-Holland, "The Norse Myths"
 	Mother = "Hildigun"
 })
 
-DefineCharacter("Hledis", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 222.
+DefineCharacter("Hledis", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 222.
 	Name = "Hledis", -- priestess; adorned with golden bracelets
 	Gender = "female",
 	Type = "unit-teuton-archer", -- should be priestess
@@ -396,7 +399,7 @@ DefineCharacter("Hledis", { -- Source: Kevin Crossley-Holland, "The Norse Myths"
 	Mother = "Friaut"
 })
 
-DefineCharacter("Ottar", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 100-101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 222.
+DefineCharacter("Ottar", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 100-101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 222.
 	Name = "Ottar", -- in the Norse myths, human lover of the goddess Freya; made a bet with Argantyr for who had the better lineage
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
@@ -408,7 +411,7 @@ DefineCharacter("Ottar", { -- Source: Kevin Crossley-Holland, "The Norse Myths",
 	Mother = "Hledis"
 })
 
-DefineCharacter("Nokkvi", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 224.
+DefineCharacter("Nokkvi", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 224.
 	Name = "Nokkvi",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
@@ -418,7 +421,7 @@ DefineCharacter("Nokkvi", { -- Source: Kevin Crossley-Holland, "The Norse Myths"
 --	DeathYear = ?
 })
 
-DefineCharacter("Nanna", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 224.
+DefineCharacter("Nanna", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 224.
 	Name = "Nanna", -- her son married Instein's sister
 	Gender = "female",
 	Type = "unit-teuton-archer",
@@ -429,7 +432,7 @@ DefineCharacter("Nanna", { -- Source: Kevin Crossley-Holland, "The Norse Myths",
 	Father = "Nokkvi"
 })
 
-DefineCharacter("Skekil", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 224.
+DefineCharacter("Skekil", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 224.
 	Name = "Skekil", -- also known as Skekkil
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
@@ -439,7 +442,7 @@ DefineCharacter("Skekil", { -- Source: Kevin Crossley-Holland, "The Norse Myths"
 --	DeathYear = ?
 })
 
-DefineCharacter("Olmod", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 224.
+DefineCharacter("Olmod", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 224.
 	Name = "Olmod", -- married to Skurhold; also known as Olmoth
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
@@ -450,7 +453,7 @@ DefineCharacter("Olmod", { -- Source: Kevin Crossley-Holland, "The Norse Myths",
 	Father = "Ketil Hortha-Kari"
 })
 
-DefineCharacter("Skurhold", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 101-102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 224.
+DefineCharacter("Skurhold", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 101-102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 224.
 	Name = "Skurhold", -- married to Olmod; also known as Skurhild
 	Gender = "female",
 	Type = "unit-teuton-archer",
@@ -461,7 +464,7 @@ DefineCharacter("Skurhold", { -- Source: Kevin Crossley-Holland, "The Norse Myth
 	Father = "Skekil"
 })
 
-DefineCharacter("Isulf", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 224.
+DefineCharacter("Isulf", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 224.
 	Name = "Isulf", -- also known as Isolf
 	NameElements = {
 --		"compound", "prefix", -- ?
@@ -477,7 +480,7 @@ DefineCharacter("Isulf", { -- Source: Kevin Crossley-Holland, "The Norse Myths",
 	Mother = "Skurhold" -- presumably, since she was the wife of his father
 })
 
-DefineCharacter("Osulf", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 224.
+DefineCharacter("Osulf", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 224.
 	Name = "Osulf", -- also known as Osolf
 	NameElements = {
 --		"compound", "prefix", -- ?
@@ -493,7 +496,7 @@ DefineCharacter("Osulf", { -- Source: Kevin Crossley-Holland, "The Norse Myths",
 	Mother = "Skurhold" -- presumably, since she was the wife of his father
 })
 
-DefineCharacter("Hild", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", pp. 223-224.
+DefineCharacter("Hild", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 223-224.
 	Name = "Hild",
 	NameElements = {
 		"word", "old-norse", "noun", "Hildr" -- presumably
@@ -506,7 +509,7 @@ DefineCharacter("Hild", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 
 --	DeathYear = ?
 })
 
-DefineCharacter("Half", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 222.
+DefineCharacter("Half", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 222.
 	Name = "Half", -- also known as Hoalf; king of Horthaland (the Halfsrekkar); Instein was one of his warriors
 	NameElements = {
 		"word", "old-norse", "adjective", "Halfr" -- presumably
@@ -540,7 +543,7 @@ DefineCharacter("Eyfura", { -- Source: Kevin Crossley-Holland, "The Norse Myths"
 --	DeathYear = ?
 })
 
-DefineCharacter("Hervard", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 225.
+DefineCharacter("Hervard", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 225.
 	Name = "Hervard", -- berserk; born in the island of Bolmsö long before Ottar's time; also known as Hervarth
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
@@ -552,7 +555,7 @@ DefineCharacter("Hervard", { -- Source: Kevin Crossley-Holland, "The Norse Myths
 	Mother = "Eyfura"
 })
 
-DefineCharacter("Hjorvard", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", pp. 225, 227.
+DefineCharacter("Hjorvard", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 225, 227.
 	Name = "Hjorvard", -- berserk; born in the island of Bolmsö long before Ottar's time; also known as Hjorvarth
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
@@ -564,7 +567,7 @@ DefineCharacter("Hjorvard", { -- Source: Kevin Crossley-Holland, "The Norse Myth
 	Mother = "Eyfura"
 })
 
-DefineCharacter("Hrani", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 225.
+DefineCharacter("Hrani", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 225.
 	Name = "Hrani", -- berserk; born in the island of Bolmsö long before Ottar's time
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
@@ -576,7 +579,7 @@ DefineCharacter("Hrani", { -- Source: Kevin Crossley-Holland, "The Norse Myths",
 	Mother = "Eyfura"
 })
 
-DefineCharacter("Argantyr", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 225.
+DefineCharacter("Argantyr", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 225.
 	Name = "Argantyr", -- berserk; born in the island of Bolmsö long before Ottar's time
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
@@ -588,7 +591,7 @@ DefineCharacter("Argantyr", { -- Source: Kevin Crossley-Holland, "The Norse Myth
 	Mother = "Eyfura"
 })
 
-DefineCharacter("Bui", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 225.
+DefineCharacter("Bui", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 225.
 	Name = "Bui", -- berserk; born in the island of Bolmsö long before Ottar's time
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
@@ -600,7 +603,7 @@ DefineCharacter("Bui", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1
 	Mother = "Eyfura"
 })
 
-DefineCharacter("Brami", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 225.
+DefineCharacter("Brami", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 225.
 	Name = "Brami", -- berserk; born in the island of Bolmsö long before Ottar's time
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
@@ -612,7 +615,7 @@ DefineCharacter("Brami", { -- Source: Kevin Crossley-Holland, "The Norse Myths",
 	Mother = "Eyfura"
 })
 
-DefineCharacter("Barri", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 225.
+DefineCharacter("Barri", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 225.
 	Name = "Barri", -- berserk; born in the island of Bolmsö long before Ottar's time
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
@@ -624,7 +627,7 @@ DefineCharacter("Barri", { -- Source: Kevin Crossley-Holland, "The Norse Myths",
 	Mother = "Eyfura"
 })
 
-DefineCharacter("Reifnir", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 225.
+DefineCharacter("Reifnir", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 225.
 	Name = "Reifnir", -- berserk; born in the island of Bolmsö long before Ottar's time
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
@@ -636,7 +639,7 @@ DefineCharacter("Reifnir", { -- Source: Kevin Crossley-Holland, "The Norse Myths
 	Mother = "Eyfura"
 })
 
-DefineCharacter("Tind", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 225.
+DefineCharacter("Tind", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 225.
 	Name = "Tind", -- berserk; born in the island of Bolmsö long before Ottar's time
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
@@ -648,7 +651,7 @@ DefineCharacter("Tind", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 
 	Mother = "Eyfura"
 })
 
-DefineCharacter("Tyrfing", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 225.
+DefineCharacter("Tyrfing", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 225.
 	Name = "Tyrfing", -- berserk; born in the island of Bolmsö long before Ottar's time
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
@@ -660,7 +663,7 @@ DefineCharacter("Tyrfing", { -- Source: Kevin Crossley-Holland, "The Norse Myths
 	Mother = "Eyfura"
 })
 
-DefineCharacter("Hadding", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 225.
+DefineCharacter("Hadding", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 225.
 	Name = "Hadding", -- berserk; born in the island of Bolmsö long before Ottar's time
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
@@ -672,7 +675,7 @@ DefineCharacter("Hadding", { -- Source: Kevin Crossley-Holland, "The Norse Myths
 	Mother = "Eyfura"
 })
 
-DefineCharacter("Hadding II", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 225.
+DefineCharacter("Hadding II", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 225.
 	Name = "Hadding", -- berserk; born in the island of Bolmsö long before Ottar's time
 	ExtraName = "II", -- to differentiate from his brother of the same name
 	Gender = "male",
@@ -685,7 +688,7 @@ DefineCharacter("Hadding II", { -- Source: Kevin Crossley-Holland, "The Norse My
 	Mother = "Eyfura"
 })
 
-DefineCharacter("Hvedna", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 227.
+DefineCharacter("Hvedna", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 227.
 	Name = "Hvedna", -- wife of king Halfdan of Denmark (likely to not be Halfdan the Old, who had another wife)
 	Gender = "female",
 	Type = "unit-teuton-archer",
@@ -696,7 +699,7 @@ DefineCharacter("Hvedna", { -- Source: Kevin Crossley-Holland, "The Norse Myths"
 	Father = "Hjorvard" -- her father was called Hjorvard; presumably the same berserk mentioned previously
 })
 
-DefineCharacter("Haki", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 227.
+DefineCharacter("Haki", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 227.
 	Name = "Haki", -- the best of Hvedna's sons
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
@@ -707,7 +710,7 @@ DefineCharacter("Haki", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 
 	Mother = "Hvedna"
 })
 
-DefineCharacter("Hrorek the Ring Giver", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 227.
+DefineCharacter("Hrorek the Ring Giver", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 227.
 	Name = "Hrorek", -- also known as Hrörek; was killed by his father-in-law Ivar
 	ExtraName = "the Ring Giver", -- or "Ring-Giver"
 	Gender = "male",
@@ -718,17 +721,20 @@ DefineCharacter("Hrorek the Ring Giver", { -- Source: Kevin Crossley-Holland, "T
 --	DeathYear = ?
 })
 
-DefineCharacter("Ivar", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 227.
+DefineCharacter("Ivar", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 227.
 	Name = "Ivar", -- king of Sweden
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
 	ProvinceOfOrigin = "Sweden",
 --	Year = ?,
---	DeathYear = ?
+--	DeathYear = ?,
+	HistoricalRulerships = {
+		0, 0, "norse", "Sweden"
+	}
 })
 
-DefineCharacter("Aud the Profound", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 227.
+DefineCharacter("Aud the Profound", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 227.
 	Name = "Aud", -- wife of Hrorek the Ring Giver; after her father Ivar killed her husband, she fled with her son Harald to Russia and married King Rathbard
 	ExtraName = "the Profound",
 	Gender = "female",
@@ -740,7 +746,7 @@ DefineCharacter("Aud the Profound", { -- Source: Kevin Crossley-Holland, "The No
 	Father = "Ivar"
 })
 
-DefineCharacter("Harald War Tooth", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 227.
+DefineCharacter("Harald War Tooth", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 227.
 	Name = "Harald", -- had a warring career in Norway; died in Bravalla-field at the hands of his nephew, Sigurd Ring (son of Randver)
 	ExtraName = "War Tooth", -- or "Battle-Tooth"
 	Gender = "male",
@@ -753,7 +759,7 @@ DefineCharacter("Harald War Tooth", { -- Source: Kevin Crossley-Holland, "The No
 	Mother = "Aud the Profound"
 })
 
-DefineCharacter("Rathbard", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 227.
+DefineCharacter("Rathbard", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 227.
 	Name = "Rathbard", -- king
 	NameElements = {
 		"compound", "prefix", "old-norse", "noun", "Râđ", -- presumably
@@ -767,7 +773,7 @@ DefineCharacter("Rathbard", { -- Source: Kevin Crossley-Holland, "The Norse Myth
 --	DeathYear = ?
 })
 
-DefineCharacter("Randver", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 227.
+DefineCharacter("Randver", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 227.
 	Name = "Randver",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
@@ -779,7 +785,7 @@ DefineCharacter("Randver", { -- Source: Kevin Crossley-Holland, "The Norse Myths
 	Mother = "Aud the Profound"
 })
 
-DefineCharacter("Sigurd Ring", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 227.
+DefineCharacter("Sigurd Ring", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 227.
 	Name = "Sigurd",
 	NameElements = {
 		"compound", "prefix", "old-norse", "noun", "no-case", "Sigr" -- presumably
@@ -795,7 +801,7 @@ DefineCharacter("Sigurd Ring", { -- Source: Henry Adams Bellows (transl.), "The 
 	Father = "Randver"
 })
 
-DefineCharacter("Skelfir", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 221.
+DefineCharacter("Skelfir", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 221.
 	Name = "Skelfir", -- a mythical king in "the East", from whom the Skilfings spring
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
@@ -805,7 +811,7 @@ DefineCharacter("Skelfir", { -- Source: Henry Adams Bellows (transl.), "The Poet
 --	DeathYear = ?
 })
 
-DefineCharacter("Helgi Hundingsbane Ylfing", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 221.
+DefineCharacter("Helgi Hundingsbane Ylfing", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 221.
 	Name = "Helgi",
 	ExtraName = "Hundingsbane",
 	FamilyName = "Ylfing",
@@ -817,7 +823,7 @@ DefineCharacter("Helgi Hundingsbane Ylfing", { -- Source: Henry Adams Bellows (t
 --	DeathYear = ?
 })
 
-DefineCharacter("Gautrek", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 224.
+DefineCharacter("Gautrek", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 224.
 	Name = "Gautrek",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
@@ -827,7 +833,7 @@ DefineCharacter("Gautrek", { -- Source: Henry Adams Bellows (transl.), "The Poet
 --	DeathYear = ?
 })
 
-DefineCharacter("Hrolf the Old", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 224.
+DefineCharacter("Hrolf the Old", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 224.
 	Name = "Hrolf", -- King Hrolf Gautreksson of Gautland, also known as Hrolf the Old
 	ExtraName = "the Old",
 	Gender = "male",
@@ -836,10 +842,13 @@ DefineCharacter("Hrolf the Old", { -- Source: Henry Adams Bellows (transl.), "Th
 	ProvinceOfOrigin = "Gotaland",
 --	Year = ?,
 --	DeathYear = ?,
-	Father = "Gautrek"
+	Father = "Gautrek",
+	HistoricalRulerships = {
+		0, 0, "norse", "Gautland"
+	}
 })
 
-DefineCharacter("Gunnar the Bulwark", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 224.
+DefineCharacter("Gunnar the Bulwark", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 224.
 	Name = "Gunnar",
 	ExtraName = "the Bulwark",
 	Gender = "male",
@@ -850,7 +859,7 @@ DefineCharacter("Gunnar the Bulwark", { -- Source: Henry Adams Bellows (transl.)
 --	DeathYear = ?
 })
 
-DefineCharacter("Thorkel", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 224.
+DefineCharacter("Thorkel", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 224.
 	Name = "Thorkel",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
@@ -860,7 +869,7 @@ DefineCharacter("Thorkel", { -- Source: Henry Adams Bellows (transl.), "The Poet
 --	DeathYear = ?
 })
 
-DefineCharacter("Grim the Hardy", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 224.
+DefineCharacter("Grim the Hardy", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 224.
 	Name = "Grim",
 	ExtraName = "the Hardy",
 	Gender = "male",
@@ -872,7 +881,7 @@ DefineCharacter("Grim the Hardy", { -- Source: Henry Adams Bellows (transl.), "T
 	Father = "Thorkel"
 })
 
-DefineCharacter("Thorir the Iron-Shield", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 224.
+DefineCharacter("Thorir the Iron-Shield", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 224.
 	Name = "Thorir",
 	ExtraName = "the Iron-Shield",
 	Gender = "male",
@@ -883,7 +892,7 @@ DefineCharacter("Thorir the Iron-Shield", { -- Source: Henry Adams Bellows (tran
 --	DeathYear = ?
 })
 
-DefineCharacter("Ulf the Gaper", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 224.
+DefineCharacter("Ulf the Gaper", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 224.
 	Name = "Ulf",
 	NameElements = {
 		"word", "old-norse", "noun", "Ulfr" -- presumably
@@ -897,7 +906,7 @@ DefineCharacter("Ulf the Gaper", { -- Source: Henry Adams Bellows (transl.), "Th
 --	DeathYear = ?
 })
 
-DefineCharacter("Brodd", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 224.
+DefineCharacter("Brodd", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 224.
 	Name = "Brodd",
 	NameElements = {
 		"word", "old-norse", "noun", "Broddr" -- presumably
@@ -910,7 +919,7 @@ DefineCharacter("Brodd", { -- Source: Henry Adams Bellows (transl.), "The Poetic
 --	DeathYear = ?
 })
 
-DefineCharacter("Hörvir", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 224.
+DefineCharacter("Hörvir", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 224.
 	Name = "Hörvir",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
@@ -927,7 +936,10 @@ DefineCharacter("Swerre", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vo
 	Civilization = "norse",
 	ProvinceOfOrigin = "Hordaland", -- accurate? either way this is the only Norwegian province in the game, so it makes sense to set it as the province of origin
 	Year = 1177, -- reign began
-	DeathYear = 1203 -- reign ended
+	DeathYear = 1203, -- reign ended
+	HistoricalRulerships = {
+		1177, 1203, "norse", "Norway"
+	}
 })
 
 DefineCharacter("Magnus the Saint", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 125, 128.
@@ -1017,6 +1029,11 @@ DefineCharacter("Margaret", { -- Source: Snorri Sturlson, "Heimskringla", 1844, 
 	Civilization = "norse",
 --	ProvinceOfOrigin = "?",
 	Year = 1387 -- the three northern crowns devolved to her in 1387 AD
+	HistoricalRulerships = {
+		1387, 0, "norse", "Denmark", -- the three northern crowns devolved to her in 1387 AD
+		1387, 0, "norse", "Sweden",
+		1387, 0, "norse", "Norway"
+	}
 })
 
 DefineCharacter("Henry", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 142.

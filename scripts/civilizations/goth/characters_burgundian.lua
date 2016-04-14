@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineCharacter("Gibica", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, p. 91; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 226.
+DefineCharacter("Gibica", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, p. 91; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 226.
 	Name = "Gibica", -- known as Gjuki in the Norse myths; married to Grimhild
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
@@ -37,7 +37,7 @@ DefineCharacter("Gibica", { -- Source: Norman Davies, "Vanished Kingdoms", 2012,
 	}
 })
 
-DefineCharacter("Grimhild", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", pp. 226, 519.
+DefineCharacter("Grimhild", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 226, 519.
 	Name = "Grimhild", -- married to Gibica/Gjuki; also known as Kriemhild
 	Gender = "female",
 	Type = "unit-teuton-archer",
@@ -45,7 +45,7 @@ DefineCharacter("Grimhild", { -- Source: Kevin Crossley-Holland, "The Norse Myth
 	ProvinceOfOrigin = "Franconia" -- place where the Burgundians dwelled before moving to the area of the Palatinate
 })
 
-DefineCharacter("Gundahar", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 91-94; Source: Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 226.
+DefineCharacter("Gundahar", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 91-94; Source: Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 226.
 	Name = "Gundahar", -- also known as Gunnar in Norse myths, as Günter in the Nibelungenlied, and as Gunthere in the Anglo-Saxon poem Widsith
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
@@ -62,7 +62,7 @@ DefineCharacter("Gundahar", { -- Source: Norman Davies, "Vanished Kingdoms", 201
 	}
 })
 
-DefineCharacter("Glaumvor", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 502.
+DefineCharacter("Glaumvor", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 502.
 	Name = "Glaumvor", -- name means "The Merry"; the wife of Gundahar/Gunnar in the Norse myths; "knew well to care for the needs of the guests"
 	Gender = "female",
 	Type = "unit-teuton-archer",
@@ -71,7 +71,7 @@ DefineCharacter("Glaumvor", { -- Source: Henry Adams Bellows (transl.), "The Poe
 	DateReferenceCharacter = "Gundahar" -- comes from the same generation as Gunnar/Gundahar
 })
 
-DefineCharacter("Gudrun", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, p. 94; Source: Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 226.
+DefineCharacter("Gudrun", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, p. 94; Source: Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 226.
 	Name = "Gudrun", -- Gundahar's sister in the Norse myths, in which she would first marry Siegfried (Sigurd), and then Attila (Atli); also known as Kriemhild in the Nibelungenlied
 	Gender = "female",
 	Type = "unit-teuton-archer",
@@ -81,7 +81,7 @@ DefineCharacter("Gudrun", { -- Source: Norman Davies, "Vanished Kingdoms", 2012,
 	Mother = "Grimhild"
 })
 
-DefineCharacter("Hogni", { -- Source: Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 226.
+DefineCharacter("Hogni", { -- Source: Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 226.
 	Name = "Hogni", -- brother of Gundahar/Gunnar in the Norse myths
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
@@ -91,7 +91,7 @@ DefineCharacter("Hogni", { -- Source: Source: Kevin Crossley-Holland, "The Norse
 	Mother = "Grimhild"
 })
 
-DefineCharacter("Kostbera", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", pp. 502-503.
+DefineCharacter("Kostbera", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 502-503.
 	Name = "Kostbera", -- wife of Hogni; name means "The Giver of Food"
 	Gender = "female",
 	Type = "unit-teuton-archer",
@@ -100,7 +100,7 @@ DefineCharacter("Kostbera", { -- Source: Henry Adams Bellows (transl.), "The Poe
 	ProvinceOfOrigin = "Franconia"
 })
 
-DefineCharacter("Orkning", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", pp. 509-510.
+DefineCharacter("Orkning", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 509-510.
 	Name = "Orkning", -- Kostbera's brother
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
@@ -109,7 +109,7 @@ DefineCharacter("Orkning", { -- Source: Henry Adams Bellows (transl.), "The Poet
 	DateReferenceCharacter = "Kostbera"
 })
 
-DefineCharacter("Snaevar", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", pp. 509, 517.
+DefineCharacter("Snaevar", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 509, 517.
 	Name = "Snaevar",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
@@ -119,7 +119,7 @@ DefineCharacter("Snaevar", { -- Source: Henry Adams Bellows (transl.), "The Poet
 	Mother = "Kostbera"
 })
 
-DefineCharacter("Solar", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", pp. 509, 517.
+DefineCharacter("Solar", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 509, 517.
 	Name = "Solar",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
@@ -129,7 +129,7 @@ DefineCharacter("Solar", { -- Source: Henry Adams Bellows (transl.), "The Poetic
 	Mother = "Kostbera"
 })
 
-DefineCharacter("Gotthorm", { -- Source: Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", pp. 226, 533.
+DefineCharacter("Gotthorm", { -- Source: Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 226, 533.
 	Name = "Gotthorm", -- half-brother of Gundahar/Gunnar, Hogni and Gudrun in the Norse myths; his father was not Gibica/Gjuki (who was thus his step-father); killed Sigurd at Brynhild's request
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
@@ -138,7 +138,7 @@ DefineCharacter("Gotthorm", { -- Source: Source: Kevin Crossley-Holland, "The No
 	Mother = "Grimhild"
 })
 
-DefineCharacter("Brynhild", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 226.
+DefineCharacter("Brynhild", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 226.
 	Name = "Brynhild", -- requested Gotthorm to kill Sigurd
 	Gender = "female",
 	Type = "unit-teuton-swordsman",

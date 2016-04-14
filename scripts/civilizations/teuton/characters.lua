@@ -26,7 +26,7 @@
 --
 
 -- personnages from the Volsungasaga, presumed Teuton since Sigurd was a Frank
-DefineCharacter("Volsung", { -- Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 3; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 226.
+DefineCharacter("Volsung", { -- Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 3; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 226.
 	Name = "Volsung",
 	Gender = "male",
 	Type = "unit-frank-swordsman",
@@ -34,7 +34,7 @@ DefineCharacter("Volsung", { -- Source: C. Scott Littleton, "The Germanic Sword 
 --	ProvinceOfOrigin = "?"
 })
 
-DefineCharacter("Eylimi Othling", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 226.
+DefineCharacter("Eylimi Othling", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 226.
 	Name = "Eylimi",
 	FamilyName = "Othling", -- dynasty name in the Norse myths
 	Gender = "male",
@@ -74,7 +74,7 @@ DefineCharacter("Siegmund Volsung", { -- Source: Norman Davies, "Vanished Kingdo
 	Father = "Volsung"
 })
 
-DefineCharacter("Sieglind Hraudung", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, p. 94; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 226.
+DefineCharacter("Sieglind Hraudung", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, p. 94; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 102; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 226.
 	Name = "Sieglind", -- also known as Hjordis in the Norse myths; 
 	FamilyName = "Hraudung", -- dynasty name in the Norse myths (would be better to know the German name to put here, since her given name is in German); she was also an Othling
 	Gender = "female",
@@ -106,7 +106,7 @@ DefineCharacter("Siegfried Volsung", { -- Source: Norman Davies, "Vanished Kingd
 	Mother = "Sieglind Hraudung"
 })
 
-DefineCharacter("Svanhild Volsung", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", pp. 226, 536, 538, 542, 546.
+DefineCharacter("Svanhild Volsung", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 226, 536, 538, 542, 546.
 	Name = "Svanhild", -- also called Sunilda or Sanielh; in the Norse myths was married to and killed by Jormunrek, but they could hardly have lived at the same time
 	-- suffix is likely the Old Norse noun "Hildr"
 	FamilyName = "Volsung",

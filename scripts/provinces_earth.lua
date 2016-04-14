@@ -3845,7 +3845,7 @@ DefineProvince("Tuscany", {
 DefineProvince("Ukraine", {
 	World = "Earth",
 	CulturalNames = {
-		"goth", "Danparstathir", -- name used in the Hervararsaga for a field of battle between the Goths and Huns, possibly the region of the Dnieper; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 484.
+		"goth", "Danparstathir", -- name used in the Hervararsaga for a field of battle between the Goths and Huns, possibly the region of the Dnieper; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 484.
 		"norse", "Danparstathir",
 	},
 	FactionCulturalNames = {

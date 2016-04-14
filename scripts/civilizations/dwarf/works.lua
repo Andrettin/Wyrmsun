@@ -26,7 +26,7 @@
 --
 
 DefineUpgrade("upgrade-work-alvissmol", {
-	Name = _("Alvissmol"), -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", pp. 183-194.
+	Name = _("Alvissmol"), -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 183-194.
 	NameElements = {
 		"compound", "suffix", "dwarven", "noun", "Mol"
 	},
@@ -37,7 +37,7 @@ DefineUpgrade("upgrade-work-alvissmol", {
 })
 
 DefineUpgrade("upgrade-work-fafnismol", {
-	Name = _("Fafnismol"), -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", pp. 370-385.
+	Name = _("Fafnismol"), -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 370-385.
 	NameElements = {
 		"compound", "suffix", "dwarven", "noun", "Mol"
 	},
@@ -48,7 +48,7 @@ DefineUpgrade("upgrade-work-fafnismol", {
 })
 
 DefineUpgrade("upgrade-work-reginsmol", {
-	Name = _("Reginsmol"), -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", pp. 356-369.
+	Name = _("Reginsmol"), -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 356-369.
 	NameElements = {
 		"compound", "suffix", "dwarven", "noun", "Mol"
 	},

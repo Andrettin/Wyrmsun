@@ -156,7 +156,7 @@ DefineLanguageWord("Austri", {
 	Type = "noun",
 	Meanings = {"Eastern"}, -- source gives meaning as "the Eastern"; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 771.
 	Gender = "masculine", -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 771.
-	NameTypes = {"person-male"} -- example: "Austri" (dwarf from Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 101.)
+	NameTypes = {"person-male"} -- example: "Austri" (dwarf from Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 101.)
 })
 
 DefineLanguageWord("Bafur", {
@@ -592,7 +592,7 @@ DefineLanguageWord("Grerr", {
 DefineLanguageWord("Grimnir", { -- meaning is from Old Norse, while the occurrence of the name is from Wesnoth (but it seems clear that the Wesnoth name was based on the Old Norse one)
 	Language = "dwarven",
 	Type = "noun",
-	Meanings = {"Hooded One"}, -- Source: Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 85.
+	Meanings = {"Hooded One"}, -- Source: Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 85.
 	Gender = "masculine",
 	NameTypes = {"person-male"} -- example: "Grimnir" (dwarven pathfinder from Wesnoth, Under the Burning Suns)
 })
@@ -671,7 +671,7 @@ DefineLanguageWord("Hornbori", {
 	NameTypes = {"person-male"} -- example: "Hornbori" (dwarf from Norse mythology)
 })
 
-DefineLanguageWord("Hrotti", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 385.
+DefineLanguageWord("Hrotti", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 385.
 	Language = "dwarven",
 	Type = "noun", -- correct?
 	Meanings = {"Thruster"}
@@ -730,7 +730,7 @@ DefineLanguageWord("Isuldan", {
 DefineLanguageWord("Ivaldi", {
 	Language = "dwarven",
 	Type = "noun",
-	Meanings = {"Mighty"}, -- source gives meaning as "the Mighty"; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 101.
+	Meanings = {"Mighty"}, -- source gives meaning as "the Mighty"; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 101.
 	Gender = "masculine" -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 319.
 })
 
@@ -994,7 +994,7 @@ DefineLanguageWord("Nordri", {
 	Type = "noun",
 	Meanings = {"Northern"}, -- source gives meaning as "the Northern"; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 457.
 	Gender = "masculine",
-	NameTypes = {"person-male"} -- example: "Nordri" (dwarf from Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 101.)
+	NameTypes = {"person-male"} -- example: "Nordri" (dwarf from Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 101.)
 })
 
 DefineLanguageWord("Nori", {
@@ -1111,7 +1111,7 @@ DefineLanguageWord("Relgorn", {
 	NameTypes = {"person-male"} -- example: "Relgorn" (from Wesnoth, Heir to the Throne and Delfador's Memoirs)
 })
 
-DefineLanguageWord("Rithil", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 380.
+DefineLanguageWord("Rithil", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 380.
 	Language = "dwarven",
 	Type = "adjective",
 	Meanings = {"Swift-Moving"},
@@ -1206,7 +1206,7 @@ DefineLanguageWord("Sudri", { -- Source: Richard Cleasby and Gudbrand Vigfusson,
 	Type = "noun",
 	Meanings = {"Southern"}, -- "the Southern"
 	Gender = "masculine",
-	NameTypes = {"person-male"} -- example: "Sudri" (dwarf from Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 101.)
+	NameTypes = {"person-male"} -- example: "Sudri" (dwarf from Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 101.)
 })
 
 DefineLanguageWord("Svarin", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 606.
@@ -1392,7 +1392,7 @@ DefineLanguageWord("Vestri", { -- Source: Richard Cleasby and Gudbrand Vigfusson
 	Type = "noun",
 	Meanings = {"Western"}, -- "the Western"
 	Gender = "masculine",
-	NameTypes = {"person-male"} -- example: "Vestri" (dwarf from Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", p. 101.)
+	NameTypes = {"person-male"} -- example: "Vestri" (dwarf from Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 101.)
 })
 
 DefineLanguageWord("Vellir", { -- this is the plural; from Norse mythology, "Joruvellir" = "Fields of Sand", "vellir" = "fields"
