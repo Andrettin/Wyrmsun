@@ -82,8 +82,8 @@ DefineCharacter("Pypo", {
 	Year = -1,
 	DeathYear = 40, -- last we hear of him
 	LiteraryAppearances = {"upgrade-work-the-scepter-of-fire"},
-	HistoricalRulerships = {
-		-1, 40, "gnome", "Untersberg"
+	HistoricalTitles = {
+		"head-of-state", -1, 40, "gnome", "Untersberg"
 	}
 })
 
@@ -109,8 +109,8 @@ DefineCharacter("Gylve", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p
 	Type = "unit-germanic-warrior",
 	Civilization = "basque",
 	ProvinceOfOrigin = "Scania",
-	HistoricalRulerships = {
-		0, 0, "basque", "Gylfing Tribe"
+	HistoricalTitles = {
+		"head-of-state", 0, 0, "basque", "Gylfing Tribe"
 	},
 	DateReferenceCharacter = "Vóden" -- contemporary of Vóden
 })

@@ -1313,8 +1313,7 @@ DefineLanguageWord("Johann", {
 DefineLanguageWord("Josef", {
 	Language = "high-german",
 	Type = "noun",
-	Meanings = {},
-	NameTypes = {"person-male"}
+	Meanings = {}
 })
 
 DefineLanguageWord("Joseph", {
@@ -1863,8 +1862,7 @@ DefineLanguageWord("Paul", {
 DefineLanguageWord("Peter", {
 	Language = "high-german",
 	Type = "noun",
-	Meanings = {},
-	NameTypes = {"person-male"}
+	Meanings = {}
 })
 
 DefineLanguageWord("Philipp", {
@@ -2478,6 +2476,12 @@ DefineLanguageWord("Wilhelm", {
 	Type = "noun",
 	Meanings = {},
 	NameTypes = {"person-male"}
+})
+
+DefineLanguageWord("Wilhelmina", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {}
 })
 
 DefineLanguageWord("Wolf", {

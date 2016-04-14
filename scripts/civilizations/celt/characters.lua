@@ -52,8 +52,8 @@ DefineCharacter("Aedan mac Gabrain", { -- Source: Frank Stenton, "Anglo-Saxon En
 	ProvinceOfOrigin = "Highland Scotland",
 	Year = 574, -- became king
 	-- attacked the Bernicians in 603 AD
-	HistoricalRulerships = {
-		574, 0, "celt", "Argyll"
+	HistoricalTitles = {
+		"head-of-state", 574, 0, "celt", "Argyll"
 	}
 })
 
@@ -73,8 +73,8 @@ DefineCharacter("Solomon", { -- Source: Frank Stenton, "Anglo-Saxon England", 19
 	ProvinceOfOrigin = "Wales",
 	Father = "Cynan",
 	Year = 613, -- at some point between 613 and 616, he was defeated by the Bernicians at Chester
-	HistoricalRulerships = {
-		613, 0, "celt", "Powys" -- king of Powys; at some point between 613 and 616, he was defeated by the Bernicians at Chester
+	HistoricalTitles = {
+		"head-of-state", 613, 0, "celt", "Powys" -- king of Powys; at some point between 613 and 616, he was defeated by the Bernicians at Chester
 	}
 })
 
@@ -85,8 +85,8 @@ DefineCharacter("Certic", { -- Source: Frank Stenton, "Anglo-Saxon England", 197
 	Civilization = "celt",
 --	ProvinceOfOrigin = ?
 	DateReferenceCharacter = "Edwin", -- was a contemporary of Edwin of Deira, who conquered his kingdom
-	HistoricalRulerships = {
-		0, 0, "celt", "Elmet" -- king of Elmet
+	HistoricalTitles = {
+		"head-of-state", 0, 0, "celt", "Elmet" -- king of Elmet
 	}
 })
 
@@ -99,8 +99,8 @@ DefineCharacter("Cadwallon", { -- Source: Frank Stenton, "Anglo-Saxon England", 
 	Year = 632,
 	DeathYear = 633, -- killed by Oswald of Bernicia in 633
 	ViolentDeath = true,
-	HistoricalRulerships = {
-		632, 0, "celt", "Gwynedd" -- king of Gwynedd; in 632 AD attacked Northumbria, and fought Edwin in Hatfield Chase, ending with the latter's death and that of Edwin's son Osfrith
+	HistoricalTitles = {
+		"head-of-state", 632, 0, "celt", "Gwynedd" -- king of Gwynedd; in 632 AD attacked Northumbria, and fought Edwin in Hatfield Chase, ending with the latter's death and that of Edwin's son Osfrith
 	}
 })
 
@@ -121,8 +121,8 @@ DefineCharacter("Bruide mac Beli", { -- Source: Frank Stenton, "Anglo-Saxon Engl
 	ProvinceOfOrigin = "Highland Scotland", -- son of the king of Strathclyde
 	Year = 672,
 	DeathYear = 693, -- died
-	HistoricalRulerships = {
-		672, 693, "celt", "Pict Tribe" -- became king of the Picts in 672
+	HistoricalTitles = {
+		"head-of-state", 672, 693, "celt", "Pict Tribe" -- became king of the Picts in 672
 	}
 })
 

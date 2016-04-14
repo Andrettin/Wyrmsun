@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2016 by Andrettin
+--      (c) Copyright 2015-2016 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -25,32 +25,30 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineCharacter("Clovis", { -- Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 97, 99.
-	Name = "Clovis", -- Frankish king and husband of Clothilda (daughter of the Burgundian king Chilperic); converted to Catholic Christianity
-	Gender = "male",
-	Type = "unit-frank-swordsman",
+DefineFaction("Austria", {
 	Civilization = "teuton",
---	ProvinceOfOrigin = "?",
-	DeathYear = 511 -- died
-})
-
-DefineCharacter("Bertha", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 79.
-	Name = "Bertha", -- Bertha of Paris; wife of Æthelberht of Kent; was either a Merovingian or had family links to them
-	Gender = "female",
-	Type = "unit-teuton-archer",
-	Civilization = "teuton", -- probably a Frank
-	ProvinceOfOrigin = "France", -- possibly
-	DateReferenceCharacter = "Æthelberht"
-})
-
-DefineCharacter("Dagobert", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 81.
-	Name = "Dagobert", -- kinsman of Edwin of Deira's wife
-	Gender = "male",
-	Type = "unit-teuton-swordsman",
-	Civilization = "teuton",
-	ProvinceOfOrigin = "France", -- possibly
-	DateReferenceCharacter = "Edwin", -- contemporary of Edwin of Deira
-	HistoricalTitles = {
-		"head-of-state", 0, 0, "teuton", "Francia" -- king of the Franks as Dagobert I
+	ParentFaction = "Bavaria",
+	Type = "polity",
+	Colors = {"white", "red"},
+	DefaultTier = "duchy",
+	Titles = {
+		"monarchy", "duchy", "Duchy",
+		"monarchy", "grand duchy", "Archduchy"
 	}
+})
+
+DefineFaction("Pillersdorf", { -- titular barony belonging to the Freiherr von Salzgeber already in 1848; Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 39.
+	Civilization = "teuton",
+	ParentFaction = "Austria",
+	Type = "polity",
+	Colors = {"blue"},
+	DefaultTier = "barony"
+})
+
+DefineFaction("Salzgeber", { -- titular barony granted to Peter von Salzgeber in 1853; Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 39.
+	Civilization = "teuton",
+	ParentFaction = "Austria",
+	Type = "polity",
+	Colors = {"white"},
+	DefaultTier = "barony"
 })

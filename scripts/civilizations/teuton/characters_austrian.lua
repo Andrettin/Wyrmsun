@@ -25,6 +25,73 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineCharacter("Peter von Salzgeber", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 39.
+	Name = "Peter",
+	NameElements = {"word", "high-german", "noun", "Peter"},
+	FamilyName = "von Salzgeber",
+	Gender = "male",
+	Type = "unit-teuton-swordsman", -- section chief who was the right-hand of the Minister-President (the Baron of Pillersdorf) in March of 1848
+	Civilization = "teuton",
+	ProvinceOfOrigin = "Austria", -- presumably
+	Year = 1789, -- born
+	DeathYear = 1858, -- died
+	HistoricalTitles = {
+		"head-of-state", 1853, 1858, "teuton", "Salzgeber" -- became Freiherr (Baron) of Salzgeber in 1853
+	}
+})
+
+DefineCharacter("Wilhelmina von Salzgeber", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 39.
+	Name = "Wilhelmina",
+	NameElements = {"word", "high-german", "noun", "Wilhelmina"},
+	FamilyName = "von Salzgeber", -- this is her name after marrying Peter von Salzgeber; should be set to her maiden name instead
+	Gender = "female",
+	Type = "unit-teuton-swordsman", -- baroness; should be a different unit type that is more appropriate
+	Civilization = "teuton",
+	ProvinceOfOrigin = "Austria", -- presumably
+	Year = 1801, -- born
+	DeathYear = 1860 -- died
+	-- married to Peter von Salzgeber
+})
+
+DefineCharacter("Wilhelmina the Younger von Salzgeber", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 39.
+	Name = "Wilhelmina",
+	NameElements = {"word", "high-german", "noun", "Wilhelmina"},
+	ExtraName = "the Younger", -- to differentiate her from her mother
+	FamilyName = "von Salzgeber",
+	Gender = "female",
+	Type = "unit-teuton-swordsman", -- should be a different unit type that is more appropriate
+	Civilization = "teuton",
+	ProvinceOfOrigin = "Austria", -- presumably
+	Year = 1821, -- born
+	DeathYear = 1896 -- died
+	-- married to Josef Russegger
+})
+
+DefineCharacter("Josef Russegger", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 39.
+	Name = "Josef",
+	NameElements = {"word", "high-german", "noun", "Josef"},
+	FamilyName = "Russegger",
+	Gender = "male",
+	Type = "unit-teuton-swordsman", -- bureaucrat, literate, geological researcher (also did geological scientific travels), worked as saline director in various mines in Austria (such as Wieliczka in Galicia)
+	Civilization = "teuton",
+	ProvinceOfOrigin = "Austria", -- presumably
+	Year = 1853 -- knighted (became "Ritter von Russegger")
+})
+
+DefineCharacter("von Pillersdorf", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 39.
+	Name = "von Pillersdorf", -- this is actually his family name, since we don't have his given name
+--	FamilyName = "von Pillersdorf",
+	Gender = "male",
+	Type = "unit-teuton-swordsman", -- high-ranking bureaucrat of the Finance Ministry, and later Minister-President of Austria
+	Civilization = "teuton",
+	ProvinceOfOrigin = "Austria", -- presumably
+	Year = 1848, -- became Minister-President of Austria in 1848
+	HistoricalTitles = {
+		"head-of-government", 1848, 1848, "teuton", "Austria", -- was Minister-President of Austria during 1848
+		"head-of-state", 1848, 0, "teuton", "Pillersdorf" -- was alreadyFreiherr (Baron) of Pillersdorf in 1848
+	}
+})
+
 DefineCharacter("Otto Friedländer", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 26.
 	Name = "Otto",
 	NameElements = {"word", "high-german", "noun", "Otto"},

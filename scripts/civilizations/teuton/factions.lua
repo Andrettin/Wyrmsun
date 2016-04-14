@@ -362,18 +362,6 @@ DefineFaction("Swabia", {
 	DevelopsTo = {"Holy Rome"} -- Swabia was a part of the Holy Roman Empire in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 })
 
-DefineFaction("Austria", {
-	Civilization = "teuton",
-	ParentFaction = "Bavaria",
-	Type = "polity",
-	Colors = {"white", "red"},
-	DefaultTier = "duchy",
-	Titles = {
-		"monarchy", "duchy", "Duchy",
-		"monarchy", "grand duchy", "Archduchy"
-	}
-})
-
 DefineFaction("Baden", {
 	Civilization = "teuton",
 	ParentFaction = "Swabia",
@@ -700,4 +688,5 @@ DefineFaction("Turkey", {
 	}
 })
 
+Load("scripts/civilizations/teuton/factions_austrian.lua")
 Load("scripts/civilizations/teuton/factions_english.lua")

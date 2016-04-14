@@ -54,8 +54,8 @@ DefineCharacter("Halfdan the Old Skjoldung", { -- Source: Henry Adams Bellows (t
 	ProvinceOfOrigin = "Zealand", -- since he is a Danish king
 --	Year = ?,
 --	DeathYear = ?,
-	HistoricalRulerships = {
-		0, 0, "norse", "Denmark"
+	HistoricalTitles = {
+		"head-of-state", 0, 0, "norse", "Denmark"
 	}
 })
 
@@ -729,8 +729,8 @@ DefineCharacter("Ivar", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 
 	ProvinceOfOrigin = "Sweden",
 --	Year = ?,
 --	DeathYear = ?,
-	HistoricalRulerships = {
-		0, 0, "norse", "Sweden"
+	HistoricalTitles = {
+		"head-of-state", 0, 0, "norse", "Sweden"
 	}
 })
 
@@ -843,8 +843,8 @@ DefineCharacter("Hrolf the Old", { -- Source: Henry Adams Bellows (transl.), "Th
 --	Year = ?,
 --	DeathYear = ?,
 	Father = "Gautrek",
-	HistoricalRulerships = {
-		0, 0, "norse", "Gautland"
+	HistoricalTitles = {
+		"head-of-state", 0, 0, "norse", "Gautland"
 	}
 })
 
@@ -937,8 +937,8 @@ DefineCharacter("Swerre", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vo
 	ProvinceOfOrigin = "Hordaland", -- accurate? either way this is the only Norwegian province in the game, so it makes sense to set it as the province of origin
 	Year = 1177, -- reign began
 	DeathYear = 1203, -- reign ended
-	HistoricalRulerships = {
-		1177, 1203, "norse", "Norway"
+	HistoricalTitles = {
+		"head-of-state", 1177, 1203, "norse", "Norway"
 	}
 })
 
@@ -950,8 +950,8 @@ DefineCharacter("Magnus the Saint", { -- Source: Snorri Sturlson, "Heimskringla"
 	Civilization = "norse",
 	ProvinceOfOrigin = "Orkney", -- presumably
 	DeathYear = 1129, -- presumably, since this is the date Kala was made Earl of Orkney
-	HistoricalRulerships = {
-		0, 1129, "norse", "Orkney"
+	HistoricalTitles = {
+		"head-of-state", 0, 1129, "norse", "Orkney"
 	}
 })
 
@@ -971,8 +971,8 @@ DefineCharacter("Kala", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol.
 	ProvinceOfOrigin = "Orkney", -- presumably
 	Year = 1129, -- was made Earl of Orkney
 	Father = "Koll",
-	HistoricalRulerships = {
-		1129, 0, "norse", "Orkney"
+	HistoricalTitles = {
+		"head-of-state", 1129, 0, "norse", "Orkney"
 	}
 })
 
@@ -991,8 +991,8 @@ DefineCharacter("Hakon", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
 	ProvinceOfOrigin = "Hordaland", -- only province implemented that is part of Norway; but Akershus/Oslo would be a better fit: since we only know he came from Norway, it makes sense to set the capital as his province of origin
-	HistoricalRulerships = {
-		0, 0, "norse", "Orkney" -- his son was King of Norway, so presumably he was too; date estimated; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 142.
+	HistoricalTitles = {
+		"head-of-state", 0, 0, "norse", "Orkney" -- his son was King of Norway, so presumably he was too; date estimated; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 142.
 	}
 })
 
@@ -1005,8 +1005,8 @@ DefineCharacter("Hakon Hakonson", { -- Source: Snorri Sturlson, "Heimskringla", 
 	ProvinceOfOrigin = "Hordaland", -- only province implemented that is part of Norway; but Akershus/Oslo would be a better fit: since we only know he came from Norway, it makes sense to set the capital as his province of origin
 	Year = 1261, -- annexed the Norse settlements in Greenland to Norway in 1261 AD
 	Father = "Hakon",
-	HistoricalRulerships = {
-		1261, 0, "norse", "Orkney"
+	HistoricalTitles = {
+		"head-of-state", 1261, 0, "norse", "Orkney"
 	}
 })
 
@@ -1028,11 +1028,11 @@ DefineCharacter("Margaret", { -- Source: Snorri Sturlson, "Heimskringla", 1844, 
 	Type = "unit-teuton-archer",
 	Civilization = "norse",
 --	ProvinceOfOrigin = "?",
-	Year = 1387 -- the three northern crowns devolved to her in 1387 AD
-	HistoricalRulerships = {
-		1387, 0, "norse", "Denmark", -- the three northern crowns devolved to her in 1387 AD
-		1387, 0, "norse", "Sweden",
-		1387, 0, "norse", "Norway"
+	Year = 1387, -- the three northern crowns devolved to her in 1387 AD
+	HistoricalTitles = {
+		"head-of-state", 1387, 0, "norse", "Denmark", -- the three northern crowns devolved to her in 1387 AD
+		"head-of-state", 1387, 0, "norse", "Sweden",
+		"head-of-state", 1387, 0, "norse", "Norway"
 	}
 })
 

@@ -43,8 +43,8 @@ DefineCharacter("Marcian", { -- Source: F. E. Sandbach, "The Heroic Saga-Cycle o
 	ProvinceOfOrigin = "Thrace", -- possibly not accurate, but since he was the (Eastern) Roman emperor put him there until we have better information
 	Year = 453, -- concluded a treaty with Walamer soon after he became independent in 453 AD
 	DeathYear = 462, -- by 462 AD the Roman emperor was his successor Leo
-	HistoricalRulerships = {
-		453, 462, "latin", "Rome"
+	HistoricalTitles = {
+		"head-of-state", 453, 462, "latin", "Rome"
 	}
 })
 
@@ -56,8 +56,8 @@ DefineCharacter("Leo", { -- Source: F. E. Sandbach, "The Heroic Saga-Cycle of Di
 	ProvinceOfOrigin = "Thrace", -- possibly not accurate, but since he was the (Eastern) Roman emperor put him there until we have better information
 	Year = 462, -- ruled in 462 AD when Walamer invaded Illyria because of the treaty's renouncement
 	DeathYear = 480, -- by 480 AD the ruler of Eastern Rome was Zeno
-	HistoricalRulerships = {
-		462, 480, "latin", "Rome"
+	HistoricalTitles = {
+		"head-of-state", 462, 480, "latin", "Rome"
 	}
 })
 
@@ -68,8 +68,8 @@ DefineCharacter("Zeno", { -- Source: F. E. Sandbach, "The Heroic Saga-Cycle of D
 	Civilization = "latin",
 	ProvinceOfOrigin = "Thrace", -- possibly not accurate, but since he was the (Eastern) Roman emperor put him there until we have better information
 	Year = 480, -- by 480 AD the ruler of Eastern Rome was Zeno
-	HistoricalRulerships = {
-		480, 0, "latin", "Rome"
+	HistoricalTitles = {
+		"head-of-state", 480, 0, "latin", "Rome"
 	}
 })
 

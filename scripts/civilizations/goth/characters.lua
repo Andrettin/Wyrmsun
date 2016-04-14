@@ -82,8 +82,8 @@ DefineCharacter("Airmanareiks", { -- Source: Henry Adams Bellows (transl.), "The
 	Civilization = "goth",
 	ProvinceOfOrigin = "Ukraine", -- accurate?
 	DeathYear = 376, -- died
-	HistoricalRulerships = {
-		0, 376, "goth", "Ostrogoth Tribe"
+	HistoricalTitles = {
+		"head-of-state", 0, 376, "goth", "Ostrogoth Tribe"
 	}
 })
 
@@ -110,8 +110,8 @@ DefineCharacter("Walamer Amelung", { -- Source: F. E. Sandbach, "The Heroic Saga
 	ProvinceOfOrigin = "Pannonia",
 	Year = 453, -- ruled over the Ostrogoths when Attila died and his Hunnic empire collapsed in 453 AD
 	DeathYear = 472, -- died
-	HistoricalRulerships = {
-		453, 472, "goth", "Ostrogoth Tribe"
+	HistoricalTitles = {
+		"head-of-state", 453, 472, "goth", "Ostrogoth Tribe"
 	}
 })
 
@@ -124,8 +124,8 @@ DefineCharacter("Theodemer Amelung", { -- Source: F. E. Sandbach, "The Heroic Sa
 	ProvinceOfOrigin = "Pannonia",
 	Year = 472,
 	DeathYear = 474, -- died
-	HistoricalRulerships = {
-		472, 474, "goth", "Ostrogoth Tribe" -- by 472 AD Theodemer has become king of the Ostrogoths; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, pp. 6-7.
+	HistoricalTitles = {
+		"head-of-state", 472, 474, "goth", "Ostrogoth Tribe" -- by 472 AD Theodemer has become king of the Ostrogoths; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, pp. 6-7.
 	}
 })
 
@@ -154,8 +154,8 @@ DefineCharacter("Þiudareiks Amelung", { -- Source: F. E. Sandbach, "The Heroic 
 	Year = 454, -- born (was 8 years old in 462 AD)
 	DeathYear = 526, -- died; he was put in a magnificent marble tomb in Ravenna
 	Father = "Theodemer Amelung",
-	HistoricalRulerships = {
-		474, 526, "goth", "Ostrogoth Tribe" -- In 474 AD the Ostrogoths left Pannonia to settle in Macedonia under the aegis of the Eastern Roman Emperor, and in that same year Theodemer died, being succeeded by Theoderic; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 7.
+	HistoricalTitles = {
+		"head-of-state", 474, 526, "goth", "Ostrogoth Tribe" -- In 474 AD the Ostrogoths left Pannonia to settle in Macedonia under the aegis of the Eastern Roman Emperor, and in that same year Theodemer died, being succeeded by Theoderic; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 7.
 	}
 })
 
