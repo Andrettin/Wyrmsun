@@ -98,9 +98,6 @@ if (GrandStrategyYear >= -9500) then
 end
 
 if (GrandStrategyYear >= -9000) then
-	-- Maglemose culture arises in Zealand in 9000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 37.
-	SetProvinceCivilization("Zealand", "basque")
-	
 	-- Moose likely become extinct in northwestern Europe around 9000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 146.
 end
 
@@ -190,12 +187,6 @@ end
 
 if (GrandStrategyYear >= -5800) then
 	-- Cris culture migrates from southeastern Europe and the Lower Danube Valley to the region on the western side of the Dnieper/Dniester rivers; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, pp. 107-108.
-	
-	-- Coastal Ertebolle Mesolithic sites and shell middens begin being occupied c. 5800 BC; they lived in eastern Jutland (i.e. Ertebolle itself on the Limfjord in northern Jutland, Bjornsholm), the Danish isles (the Karrebaek-Dybso Fjord sites in Zealand - which could sustain c. 250 people), and southern Sweden (Tagerup in a fjord on Scania - this site had a previous Kongemose occupation); Ertebolle people used pottery and did large-quantity fishing via traps or weirs; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 136.
-	SetProvinceOwner("Jutland", "basque", "Ertebolle Tribe")
-	SetProvinceCivilization("Jutland", "basque")
-	SetProvinceOwner("Scania", "basque", "Ertebolle Tribe")
-	SetProvinceCivilization("Scania", "basque")
 end
 
 if (GrandStrategyYear >= -5500) then
@@ -279,8 +270,6 @@ if (GrandStrategyYear >= -3950) then
 	SetProvinceCivilization("Oldenburg", "basque")
 	SetProvinceOwner("Bremen", "basque", "Funnelbeaker Tribe")
 	SetProvinceCivilization("Bremen", "basque")
-	SetProvinceOwner("Holstein", "basque", "Funnelbeaker Tribe")
-	SetProvinceCivilization("Holstein", "basque")
 	SetProvinceOwner("Lauenburg", "basque", "Funnelbeaker Tribe")
 	SetProvinceCivilization("Lauenburg", "basque")
 	SetProvinceOwner("Mecklenburg", "basque", "Funnelbeaker Tribe")
@@ -316,8 +305,7 @@ if (GrandStrategyYear >= -3200) then
 	-- Newgrange megalithic tomb built in Ireland about 3200 BC (could be an event giving prestige); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 44.
 end
 
-if (GrandStrategyYear >= -3000) then -- around this time Gylve or his ancestors should have begun to rule in Scania
-	SetProvinceOwner("Scania", "basque", "Gylfing Tribe")
+if (GrandStrategyYear >= -3000) then
 	SetProvinceUnitQuantity("Scania", "unit-germanic-warrior", 4)
 	SetProvinceUnitQuantity("Scania", "unit-germanic-archer", 4)
 	
@@ -330,17 +318,6 @@ if (GrandStrategyYear >= -2800) then -- establishment of the Single Grave Cultur
 	-- Funnel Beaker culture ends in Zealand in 2800 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 38.
 
 	-- in the Ynglinga saga, "Odin's people", the Asa, settle Scandinavia in a manner not too dissimilar from what archaeological findings tell us of Indo-European settlement in the region; thus the name "Asa Tribe" is used here to denote the Indo-European-speaking peoples who settled in Scandinavia, and were the precursors of the Germanic peoples
-	SetProvinceOwner("Jutland", "germanic", "Skeldung Tribe")
-	SetProvinceCivilization("Jutland", "germanic")
-	SetProvinceCivilization("Zealand", "germanic")
-	
-	SetProvinceOwner("Sweden", "germanic", "Asa Tribe")
-	SetProvinceCivilization("Sweden", "germanic")
-	SetProvinceOwner("Scania", "germanic", "Asa Tribe")
-	SetProvinceCivilization("Scania", "germanic")
-	SetProvinceOwner("Gotaland", "germanic", "Asa Tribe")
-	SetProvinceCivilization("Gotaland", "germanic")
-	
 	SetProvinceUnitQuantity("Astrakhan", "unit-germanic-warrior", 0)
 	SetProvinceOwner("Don", "", "")
 	SetProvinceUnitQuantity("Don", "unit-germanic-warrior", 0)
@@ -357,9 +334,6 @@ end
 
 if (GrandStrategyYear >= -2770) then -- estimated date
 	GrandStrategyEvents.YngveChieftainOfTheSwedes = nil
-	SetProvinceOwner("Sweden", "germanic", "Yngling Tribe")
-	SetProvinceOwner("Gotaland", "germanic", "Yngling Tribe")
-	SetProvinceOwner("Scania", "germanic", "Yngling Tribe")
 end
 
 if (GrandStrategyYear >= -2700) then
@@ -787,12 +761,6 @@ end
 if (GrandStrategyYear >= -325) then -- Pytheas sets out on an exploration voyage in 325 BC; Pliny (in his Natural History) gives Pytheas as an authority for the existence of the Goths; Source: Carl Waldman and Catherine Mason, "Encyclopedia of European Peoples", 2006, p. 350; Source: Pliny the Elder, "The Natural History", 37.11.
 	GrandStrategyEvents.PytheasVoyageGoths = nil
 	
-	SetProvinceOwner("Gotaland", "goth", "Goth Tribe") -- Goths are the earliest Germanic people known to inhabit Götaland; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
-	SetProvinceCivilization("Gotaland", "goth")
-	
-	SetProvinceOwner("Gotland", "goth", "Goth Tribe") -- maybe should be later?
-	AddProvinceClaim("Gotland", "goth", "Goth Tribe")
-	
 	GrandStrategyEvents.DagChieftainOfTheGoths = nil
 end
 
@@ -855,19 +823,11 @@ if (GrandStrategyYear >= -264) then
 	SetProvinceOwner("East Friesland", "teuton", "Frisian Tribe")	
 	SetProvinceCivilization("East Friesland", "teuton")
 
-	SetProvinceOwner("Holstein", "teuton", "Saxon Tribe") -- also inhabited by the Teutones
-	SetProvinceCivilization("Holstein", "teuton")
 	SetProvinceOwner("Lauenburg", "teuton", "Saxon Tribe") 
 	SetProvinceCivilization("Lauenburg", "teuton")
 	
-	SetProvinceOwner("Schleswig", "teuton", "Angle Tribe")	
-	SetProvinceCivilization("Schleswig", "teuton")
-	
 	SetProvinceOwner("Mecklenburg", "teuton", "Varini Tribe")
 	SetProvinceCivilization("Mecklenburg", "teuton")
-	
-	SetProvinceOwner("Sweden", "norse", "Swede Tribe")
-	SetProvinceCivilization("Sweden", "norse")
 	
 	SetProvinceOwner("Hither Pomerania", "goth", "Rugian Tribe")
 	SetProvinceCivilization("Hither Pomerania", "goth")
@@ -927,10 +887,6 @@ if (GrandStrategyYear >= -264) then
 	
 	SetProvinceOwner("Russia", "slav", "Budini Tribe")
 	SetProvinceCivilization("Russia", "slav")
-	
-	-- remove the Asa
-	SetProvinceOwner("Scania", "", "")
-	SetProvinceOwner("Jutland", "", "")
 end
 
 if (GrandStrategyYear >= -241) then
@@ -1128,11 +1084,6 @@ if (GrandStrategyYear >= -27) then
 	 -- 31 million people lived in Roman Asia and Africa at the "Time of Augustus"; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
 
 	-- political situation in Europe (presumably) at the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
-	SetProvinceCivilization("Zealand", "goth")
-	
-	SetProvinceOwner("Jutland", "teuton", "Charude Tribe")	
-	SetProvinceCivilization("Jutland", "teuton")
-	
 	SetProvinceOwner("Franconia", "celt", "Turone Tribe")
 	SetProvinceCivilization("Franconia", "celt")
 	
@@ -1256,8 +1207,6 @@ end
 if (GrandStrategyYear >= 200) then
 	SetProvinceOwner("Pomerelia", "", "")
 	SetProvinceOwner("Prussia", "", "")
-	SetProvinceOwner("Gotaland", "", "")
-	SetProvinceOwner("Gotland", "", "")
 	SetProvinceOwner("Ukraine", "goth", "Ostrogoth Tribe") -- The eastern goths had migrated to the area of modern Ukraine in about 200 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 	SetProvinceOwner("Wallachia", "goth", "Visigoth Tribe") -- The western goths had migrated to the area of modern Romania / ancient Dacia in about 200 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 	SetProvinceOwner("Moldavia", "goth", "Visigoth Tribe")
@@ -1482,10 +1431,6 @@ if (GrandStrategyYear >= 526) then -- political situation in 526-600 in Europe; 
 	SetProvinceOwner("Bavaria", "teuton", "Bavarian Tribe")
 	SetProvinceCivilization("Bavaria", "teuton")
 	SetProvinceOwner("Holland", "teuton", "Frisian Tribe")
-	
-	SetProvinceOwner("Scania", "norse", "Dane Tribe") -- Danes were in Scania in 526-600; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
-	SetProvinceCivilization("Scania", "norse")
-	SetProvinceCivilization("Zealand", "norse")
 end
 
 if (GrandStrategyYear >= 531) then
@@ -1696,8 +1641,6 @@ if (GrandStrategyYear >= 919) then
 	AddProvinceClaim("Brunswick", "teuton", "Saxony")
 	SetProvinceOwner("Hanover", "teuton", "Holy Rome")
 	AddProvinceClaim("Hanover", "teuton", "Saxony")
-	SetProvinceOwner("Holstein", "teuton", "Holy Rome")
-	AddProvinceClaim("Holstein", "teuton", "Saxony")
 	SetProvinceOwner("Lauenburg", "teuton", "Holy Rome")
 	AddProvinceClaim("Lauenburg", "teuton", "Saxony")
 	SetProvinceOwner("Magdeburg", "teuton", "Holy Rome")
@@ -1740,7 +1683,6 @@ if (GrandStrategyYear >= 919) then
 	-- Duchy of Venice
 	SetProvinceOwner("Venetia", "latin", "Venice")
 	
-	SetProvinceOwner("Schleswig", "norse", "Denmark")
 	SetProvinceOwner("Burgundy", "latin", "France")
 	SetProvinceOwner("France", "latin", "France")
 	SetProvinceOwner("Croatia", "slav", "Croatia")
@@ -1916,13 +1858,6 @@ if (GrandStrategyYear >= 1560) then
 	SetProvinceOwner("Switzerland", "teuton", "Switzerland")
 	SetFactionGovernmentType("teuton", "Switzerland", "republic")	
 	
-	SetProvinceOwner("Jutland", "norse", "Denmark")
-	SetProvinceOwner("Holstein", "norse", "Denmark")
-	SetProvinceOwner("Scania", "norse", "Denmark")
-	SetProvinceOwner("Gotaland", "norse", "Sweden")
-	SetProvinceOwner("Sweden", "norse", "Sweden")
-	SetProvinceOwner("Gotland", "norse", "Denmark")
-
 	SetProvinceOwner("Bavaria", "teuton", "Bavaria")
 	AddProvinceClaim("Bavaria", "teuton", "Bavaria")
 	

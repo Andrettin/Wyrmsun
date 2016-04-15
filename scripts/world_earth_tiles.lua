@@ -977,7 +977,7 @@ DefineWorldMapTile({528, 118}, {
 DefineWorldMapTile({531, 87}, {
 	World = "Earth",
 	CulturalSettlementNames = {
-		"norse", "Segiztûna", "name-elements", { -- rendering of "Sigtun" in Proto-Germanic, since the Ynglinga saga the city was founded when the cultural ancestors of the Germanic peoples (= Odin's people) first settled Scandinavia
+		"germanic", "Segiztûna", "name-elements", { -- rendering of "Sigtun" in Proto-Germanic, since the Ynglinga saga the city was founded when the cultural ancestors of the Germanic peoples (= Odin's people) first settled Scandinavia
 			"compound", "prefix", "proto-germanic", "noun", "Segiz",
 			"compound", "suffix", "proto-germanic", "noun", "Tûna"
 		},

@@ -1753,6 +1753,17 @@ DefineProvince("Gotaland", {
 		"goth", "Goth Tribe",
 		"norse", "Geat Tribe"
 	},
+	HistoricalOwners = {
+		-2800, "germanic", "Asa Tribe", -- in the Ynglinga saga, "Odin's people", the Asa, settle Scandinavia in a manner not too dissimilar from what archaeological findings tell us of Indo-European settlement in the region; thus the name "Asa Tribe" is used here to denote the Indo-European-speaking peoples who settled in Scandinavia, and were the precursors of the Germanic peoples 
+		-2770, "germanic", "Yngling Tribe", -- estimated date
+		-325, "goth", "Goth Tribe", -- Pytheas sets out on an exploration voyage in 325 BC; Pliny (in his Natural History) gives Pytheas as an authority for the existence of the Goths; Source: Carl Waldman and Catherine Mason, "Encyclopedia of European Peoples", 2006, p. 350; Source: Pliny the Elder, "The Natural History", 37.11; the Goths's earliest known homeland was Götaland; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
+		200, "", "", -- Goths migrate south about 200 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
+		1560, "norse", "Sweden" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalCultures = {
+		-2800, "germanic",
+		-325, "goth"
+	},
 	Regions = {"Europe", "Scandinavia", "West and Central Europe"}
 })
 
@@ -1771,6 +1782,18 @@ DefineProvince("Gotland", {
 	SettlementTerrain = "Plains",
 	Coastal = true,
 	Claims = {
+	},
+	HistoricalOwners = {
+		-325, "goth", "Goth Tribe", -- maybe should be later?
+		200, "", "", -- Goths migrated south about 200 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
+		1560, "norse", "Denmark" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalCultures = {
+		-325, "goth",
+		1560, "norse"
+	},
+	HistoricalClaims = {
+		-325, "goth", "Goth Tribe"
 	},
 	Regions = {"Europe", "Scandinavia", "West and Central Europe"}
 })
@@ -1959,6 +1982,19 @@ DefineProvince("Holstein", {
 		"teuton", "Holy Rome"
 	},
 	Coastal = true,
+	HistoricalOwners = {
+		-3950, "basque", "Funnelbeaker Tribe", -- Funnel Beaker culture existed in parts of Northern Europe between 7000 and 2000 BC; since the other source gives them as being present in Zealand in 3950 BC, let's place their beginnings at that date; Source: "Atlas de História Mundial", 2001, pp. 40-41.
+		-264, "teuton", "Saxon Tribe", -- also inhabited by the Teutones; Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		919, "teuton", "Holy Rome", -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+		1560, "norse", "Denmark" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalCultures = {
+		-3950, "basque",
+		-264, "teuton"
+	},
+	HistoricalClaims = {
+		919, "teuton", "Saxony" -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+	},
 	Regions = {"Europe", "Germany-Netherlands", "West and Central Europe"}
 })
 
@@ -2144,6 +2180,19 @@ DefineProvince("Jutland", {
 		"norse", "Dane Tribe",
 		"teuton", "Charude Tribe",
 		"teuton", "Jute Tribe"
+	},
+	HistoricalOwners = {
+		-5800, "basque", "Ertebolle Tribe", -- Coastal Ertebolle Mesolithic sites and shell middens begin being occupied c. 5800 BC; they lived in eastern Jutland (i.e. Ertebolle itself on the Limfjord in northern Jutland, Bjornsholm), the Danish isles (the Karrebaek-Dybso Fjord sites in Zealand - which could sustain c. 250 people), and southern Sweden (Tagerup in a fjord on Scania - this site had a previous Kongemose occupation); Ertebolle people used pottery and did large-quantity fishing via traps or weirs; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 136.
+		-2800, "germanic", "Skeldung Tribe", -- in the Ynglinga saga, "Odin's people", the Asa, settle Scandinavia in a manner not too dissimilar from what archaeological findings tell us of Indo-European settlement in the region; thus the name "Asa Tribe" is used here to denote the Indo-European-speaking peoples who settled in Scandinavia, and were the precursors of the Germanic peoples 
+		-264, "", "", -- remove the Proto-Germanics
+		-27, "teuton", "Charude Tribe", -- political situation in Europe (presumably) at the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+		1560, "norse", "Denmark" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalCultures = {
+		-5800, "basque",
+		-2800, "germanic",
+		-27, "teuton",
+		1560, "norse"
 	},
 	HistoricalSettlementBuildings = {
 		-1600, "unit-germanic-smithy", true -- bronzesmithing capabilities existed in Jutland in 1600 BC, since swords were crafted there at this date; Source: http://natmus.dk/en/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-roerby-swords/
@@ -3425,6 +3474,20 @@ DefineProvince("Scania", {
 		"basque", "Gylfing Tribe",
 		"norse", "Dane Tribe"
 	},
+	HistoricalOwners = {
+		-5800, "basque", "Ertebolle Tribe", -- Coastal Ertebolle Mesolithic sites and shell middens begin being occupied c. 5800 BC; they lived in eastern Jutland (i.e. Ertebolle itself on the Limfjord in northern Jutland, Bjornsholm), the Danish isles (the Karrebaek-Dybso Fjord sites in Zealand - which could sustain c. 250 people), and southern Sweden (Tagerup in a fjord on Scania - this site had a previous Kongemose occupation); Ertebolle people used pottery and did large-quantity fishing via traps or weirs; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 136.
+		-3000, "basque", "Gylfing Tribe", -- around this time Gylve or his ancestors should have begun to rule in Scania
+		-2800, "germanic", "Asa Tribe", -- in the Ynglinga saga, "Odin's people", the Asa, settle Scandinavia in a manner not too dissimilar from what archaeological findings tell us of Indo-European settlement in the region; thus the name "Asa Tribe" is used here to denote the Indo-European-speaking peoples who settled in Scandinavia, and were the precursors of the Germanic peoples 
+		-2770, "germanic", "Yngling Tribe", -- estimated date
+		-264, "", "", -- remove the Proto-Germanics
+		526, "norse", "Dane Tribe", -- Danes were in Scania in 526-600; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+		1560, "norse", "Denmark" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalCultures = {
+		-5800, "basque",
+		-2800, "germanic",
+		526, "norse"
+	},
 	Regions = {"Europe", "Scandinavia", "West and Central Europe"}
 })
 
@@ -3446,6 +3509,13 @@ DefineProvince("Schleswig", {
 		"teuton", "Avione Tribe"
 	},
 	Coastal = true,
+	HistoricalOwners = {
+		-264, "teuton", "Angle Tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		919, "norse", "Denmark" -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+	},
+	HistoricalCultures = {
+		-264, "teuton"
+	},
 	Regions = {"Europe", "Scandinavia", "West and Central Europe"}
 })
 
@@ -3650,6 +3720,16 @@ DefineProvince("Sweden", {
 	Claims = {
 		"germanic", "Yngling Tribe",
 		"norse", "Swede Tribe"
+	},
+	HistoricalOwners = {
+		-2800, "germanic", "Asa Tribe", -- in the Ynglinga saga, "Odin's people", the Asa, settle Scandinavia in a manner not too dissimilar from what archaeological findings tell us of Indo-European settlement in the region; thus the name "Asa Tribe" is used here to denote the Indo-European-speaking peoples who settled in Scandinavia, and were the precursors of the Germanic peoples 
+		-2770, "germanic", "Yngling Tribe", -- estimated date
+		-264, "norse", "Swede Tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		1560, "norse", "Sweden" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalCultures = {
+		-2800, "germanic",
+		-264, "norse"
 	},
 	Regions = {"Europe", "Scandinavia", "West and Central Europe"}
 })
@@ -4346,6 +4426,12 @@ DefineProvince("Zealand", {
 		-27, "goth", "Herulian Tribe", -- political situation in Europe (presumably) at the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 		526, "norse", "Dane Tribe", -- Danes were in Zealand in 526-600; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 		919, "norse", "Denmark" -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+	},
+	HistoricalCultures = {
+		-9000, "basque",
+		-2800, "germanic",
+		-27, "goth",
+		526, "norse"
 	},
 	Regions = {"Europe", "Scandinavia", "West and Central Europe"}
 })
