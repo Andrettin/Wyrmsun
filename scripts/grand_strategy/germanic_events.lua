@@ -33,7 +33,7 @@ local GermanicEvents = {
 			if (
 				EventFaction.Civilization == "germanic"
 				and EventFaction.Name == "Asa Tribe"
-				and GetFactionRuler("germanic", "Asa Tribe") == "Lorikus"
+				and GetFactionMinister("germanic", "Asa Tribe", "head-of-state") == "Lorikus"
 --				and FactionHasHero("germanic", "Asa Tribe", "Tror")
 				and GrandStrategyHeroIsAlive("Tror")
 			) then
@@ -61,7 +61,7 @@ local GermanicEvents = {
 			if (
 				EventFaction.Civilization == "germanic"
 				and EventFaction.Name == "Asa Tribe"
-				and GetFactionRuler("germanic", "Asa Tribe") == "Lorikus"
+				and GetFactionMinister("germanic", "Asa Tribe", "head-of-state") == "Lorikus"
 --				and FactionHasHero("germanic", "Asa Tribe", "Tror")
 				and GrandStrategyHeroIsAlive("Tror")
 			) then
@@ -80,7 +80,7 @@ local GermanicEvents = {
 					"Asa Tribe",
 					{"~!OK"},
 					{function(s)
-						SetFactionRuler("germanic", "Asa Tribe", "Tror")
+						SetFactionMinister("germanic", "Asa Tribe", "head-of-state", "Tror")
 						KillGrandStrategyHero("Lorikus")
 					end}
 				)
@@ -98,7 +98,7 @@ local GermanicEvents = {
 				and EventFaction.Name == "Asa Tribe"
 				and GetProvinceOwner("Astrakhan") == EventFaction.Name
 				and GetProvinceOwner("Don") == "Vana Tribe"
---				and GetFactionRuler(EventFaction.Civilization, EventFaction.Name) ~= "Lorikus" -- only begin the migration with Tror and his descendants
+--				and GetFactionMinister(EventFaction.Civilization, EventFaction.Name, "head-of-state") ~= "Lorikus" -- only begin the migration with Tror and his descendants
 				and GetProvinceUnitQuantity("Astrakhan", "unit-germanic-warrior") >= 8 -- event only happens if player has gathered enough warriors for a raid
 				and FactionHasBorderWith(Factions.AsaTribe, Factions.VanaTribe)
 				and SyncRand(100) < 33
@@ -418,7 +418,7 @@ local GermanicEvents = {
 				and ProvinceHasBorderWith(WorldMapWaterProvinces.Kattegat, WorldMapProvinces.Jutland)
 				and ProvinceHasBorderWith(WorldMapWaterProvinces.Kattegat, WorldMapProvinces.Scania)
 				and GetProvinceOwner("Scania") == "Gylfing Tribe"
-				and GetFactionRuler("basque", "Gylfing Tribe") == "Gylve"
+				and GetFactionMinister("basque", "Gylfing Tribe", "head-of-state") == "Gylve"
 --				and SyncRand(100) < 50
 			) then
 				return true
@@ -596,7 +596,7 @@ local GermanicEvents = {
 			if (
 				EventFaction.Name == "Asa Tribe"
 				and (GetProvinceOwner("Zealand") == EventFaction.Name or GetProvinceOwner("Jutland") == EventFaction.Name)
-				and GetFactionRuler(EventFaction.Civilization, EventFaction.Name) == "Voden"
+				and GetFactionMinister(EventFaction.Civilization, EventFaction.Name, "head-of-state") == "Voden"
 				and GrandStrategyHeroIsAlive("Skeldu")
 			) then
 				return true
@@ -619,7 +619,7 @@ local GermanicEvents = {
 					AddProvinceClaim("Zealand", "germanic", "Skeldung Tribe")
 				end
 				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "germanic", "Skeldung Tribe")
-				SetFactionRuler("germanic", "Skeldung Tribe", "Skeldu")
+				SetFactionMinister("germanic", "Skeldung Tribe", "head-of-state", "Skeldu")
 			end,
 			function(s)
 				EqualizeProvinceUnits(EventFaction)
@@ -634,7 +634,7 @@ local GermanicEvents = {
 					AddProvinceClaim("Zealand", "germanic", "Skeldung Tribe")
 				end
 				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "germanic", "Skeldung Tribe")
-				SetFactionRuler("germanic", "Skeldung Tribe", "Skeldu")
+				SetFactionMinister("germanic", "Skeldung Tribe", "head-of-state", "Skeldu")
 				GrandStrategyFaction = Factions.SkeldungTribe
 				SetPlayerFaction("germanic", "Skeldung Tribe")
 			end
@@ -648,7 +648,7 @@ local GermanicEvents = {
 			if (
 				EventFaction.Name == "Asa Tribe"
 				and GetProvinceOwner("Sweden") == EventFaction.Name
-				and GetFactionRuler(EventFaction.Civilization, EventFaction.Name) == "Yngve"
+				and GetFactionMinister(EventFaction.Civilization, EventFaction.Name, "head-of-state") == "Yngve"
 			) then
 				return true
 			else

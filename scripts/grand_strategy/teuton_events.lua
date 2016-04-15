@@ -257,7 +257,7 @@ local TeutonEvents = {
 		Conditions = function(s)
 			if (
 				EventFaction.Name == "Marcomanni Tribe"
-				and GetFactionRuler("teuton", "Marcomanni Tribe") == "Marbod"
+				and GetFactionMinister("teuton", "Marcomanni Tribe", "head-of-state") == "Marbod"
 			) then
 				return true
 			else

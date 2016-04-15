@@ -1788,17 +1788,9 @@ function AddGrandStrategyHeroButton(x, y, hero_name)
 	
 	b = PlayerColorImageButton("", GetFactionData(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "Color"))
 	if (SelectedHero == hero_name) then -- if hero is already selected, make icon gray
-		if (GrandStrategyHeroIsCustom(hero_name)) then
-			unit_icon = CIcon:Get(GetCustomHeroData(hero_name, "Icon")).GScale
-		else
-			unit_icon = CIcon:Get(GetCharacterData(hero_name, "Icon")).GScale
-		end
+		unit_icon = CIcon:Get(GetGrandStrategyHeroIcon(hero_name)).GScale
 	else
-		if (GrandStrategyHeroIsCustom(hero_name)) then
-			unit_icon = CIcon:Get(GetCustomHeroData(hero_name, "Icon")).G
-		else
-			unit_icon = CIcon:Get(GetCharacterData(hero_name, "Icon")).G
-		end
+		unit_icon = CIcon:Get(GetGrandStrategyHeroIcon(hero_name)).G
 	end
 	UIElements[table.getn(UIElements) + 1] = b
 	UIElements[table.getn(UIElements)]:setActionCallback(
@@ -2466,7 +2458,7 @@ function DrawGrandStrategyInterface()
 				
 				local grand_strategy_heroes = GetGrandStrategyHeroes()
 				for i = 1, table.getn(grand_strategy_heroes) do
-					if (GetProvinceHero(SelectedProvince.Name, grand_strategy_heroes[i]) == 2) then -- if a hero is moving here, remove him
+					if (GetProvinceHero(SelectedProvince.Name, grand_strategy_heroes[i]) == 2) then
 						local icon_offset_x = Video.Width - 243 + 15 + (item_x * 56)
 						local icon_offset_y = Video.Height - 186 + 13 + (item_y * 47)
 
