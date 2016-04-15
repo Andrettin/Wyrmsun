@@ -180,6 +180,8 @@ DefineUnitType("unit-template-fauna-unit", { Name = _("Fauna Unit"),
 
 DefineUnitType("unit-template-sapient-unit", { Name = _("Sapient Unit"),
 	Parent = "unit-template-unit",
+	Strength = 10,
+	Dexterity = 10,
 	Intelligence = 10,
 	Charisma = 10,
 	organic = true,
