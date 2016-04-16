@@ -120,6 +120,12 @@ DefineLanguageWord("Amboss", {
 	}
 })
 
+DefineLanguageWord("Anton", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {}
+})
+
 DefineLanguageWord("Arl", {
 	Language = "high-german",
 	Type = "noun",
@@ -201,6 +207,12 @@ DefineLanguageWord("Baden", {
 		"present", "Badend",
 		"past", "Gebadet"
 	}
+})
+
+DefineLanguageWord("Baptist", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {}
 })
 
 DefineLanguageWord("Bär", { -- Source: http://www.duden.de/rechtschreibung/Baer_Raubtier
@@ -1306,8 +1318,7 @@ DefineLanguageWord("Jakob", {
 DefineLanguageWord("Johann", {
 	Language = "high-german",
 	Type = "noun",
-	Meanings = {},
-	NameTypes = {"person-male"}
+	Meanings = {}
 })
 
 DefineLanguageWord("Josef", {
@@ -1319,8 +1330,7 @@ DefineLanguageWord("Josef", {
 DefineLanguageWord("Joseph", {
 	Language = "high-german",
 	Type = "noun",
-	Meanings = {},
-	NameTypes = {"person-male"}
+	Meanings = {}
 })
 
 DefineLanguageWord("Kaiser", {

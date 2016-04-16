@@ -37,7 +37,15 @@ DefineFaction("Austria", {
 	}
 })
 
-DefineFaction("Pillersdorf", { -- titular barony belonging to the Freiherr von Salzgeber already in 1848; Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 39.
+DefineFaction("Lasser", { -- titular barony belonging to Joseph Anton von Lasser; Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 41.
+	Civilization = "teuton",
+	ParentFaction = "Austria",
+	Type = "polity",
+	Colors = {"yellow"},
+	DefaultTier = "barony"
+})
+
+DefineFaction("Pillersdorf", { -- titular barony belonging to the Freiherr von Pillersdorf already in 1848; Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 39.
 	Civilization = "teuton",
 	ParentFaction = "Austria",
 	Type = "polity",

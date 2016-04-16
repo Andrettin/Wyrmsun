@@ -32,7 +32,7 @@ DefineCharacter("Peter von Salzgeber", { -- Source: Waltraud Heindl, "Josephinis
 	NobleFamilyNamePredicateElements = {"word", "high-german", "adposition", "Von"},
 	PlaceNameDerivedFamilyName = true, -- presumably
 	Gender = "male",
-	Type = "unit-teuton-swordsman", -- section chief who was the right-hand of the Minister-President (the Baron of Pillersdorf) in March of 1848
+	Type = "unit-teuton-ritter", -- section chief who was the right-hand of the Minister-President (the Baron of Pillersdorf) in March of 1848
 	Civilization = "teuton",
 	Faction = "Austria",
 	ProvinceOfOrigin = "Austria", -- presumably
@@ -51,7 +51,7 @@ DefineCharacter("Wilhelmina von Salzgeber", { -- Source: Waltraud Heindl, "Josep
 	NobleFamilyNamePredicateElements = {"word", "high-german", "adposition", "Von"},
 	PlaceNameDerivedFamilyName = true, -- presumably
 	Gender = "female",
-	Type = "unit-teuton-swordsman", -- baroness; should be a different unit type that is more appropriate
+	Type = "unit-teuton-archer", -- baroness; should be a different unit type that is more appropriate
 	Civilization = "teuton",
 	Faction = "Austria",
 	ProvinceOfOrigin = "Austria", -- presumably
@@ -59,6 +59,42 @@ DefineCharacter("Wilhelmina von Salzgeber", { -- Source: Waltraud Heindl, "Josep
 	DeathYear = 1860, -- died
 	Noble = true
 	-- married to Peter von Salzgeber
+})
+
+DefineCharacter("Joseph Anton von Lasser", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 41.
+	Name = "Joseph Anton",
+	NameElements = {
+		"word", "high-german", "noun", "Joseph",
+		"word", "high-german", "noun", "Anton"
+	},
+	FamilyName = "von Lasser",
+	NobleFamilyNamePredicateElements = {"word", "high-german", "adposition", "Von"},
+	PlaceNameDerivedFamilyName = true, -- presumably
+	Gender = "male",
+	Type = "unit-teuton-ritter", -- bureaucrat in the Allgemeinen Hofkammer, in 1848 a deputy in the Austrian Reichstag and in the Frankfurter Parliament; was minister without portfolio in the 1860s during the government of the Archduke Rainer-Mensdorff-Pouilly; was governor of Tyrol; in the 1870s he was a liberal deputy
+	Civilization = "teuton",
+	Faction = "Austria",
+	ProvinceOfOrigin = "Austria", -- presumably
+	Year = 1814, -- born
+	DeathYear = 1879, -- died
+	Noble = true,
+	HistoricalTitles = {
+		"head-of-state", 0, 1879, "teuton", "Lasser" -- Freiherr (Baron) of Lasser
+	}
+})
+
+DefineCharacter("Leopold Hasner", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 41.
+	Name = "Leopold",
+	NameElements = {"word", "high-german", "noun", "Leopold"},
+	FamilyName = "Hasner", -- apparently
+	Gender = "male",
+	Type = "unit-teuton-ritter", -- bureaucrat of the Finanzlandesdirektion in Prague; later bureaucrat of the Hofkammerprokuratur of Vienna; in the 1860s professor of political sciences in the University of Vienna and was head (Leiter) of the Department of Education (Unterrichtsdepartement) (which was in effect the education ministry) during the government of Prince (Fürst) Karl Auersperg
+	Civilization = "teuton",
+	Faction = "Austria",
+	ProvinceOfOrigin = "Bohemia", -- presumably
+	Year = 1818, -- born
+	DeathYear = 1891 -- died
+	-- Knight (Ritter) of Artha
 })
 
 DefineCharacter("Wilhelmina the Younger von Salzgeber", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 39.
@@ -69,7 +105,7 @@ DefineCharacter("Wilhelmina the Younger von Salzgeber", { -- Source: Waltraud He
 	NobleFamilyNamePredicateElements = {"word", "high-german", "adposition", "Von"},
 	PlaceNameDerivedFamilyName = true, -- presumably
 	Gender = "female",
-	Type = "unit-teuton-swordsman", -- should be a different unit type that is more appropriate
+	Type = "unit-teuton-archer", -- should be a different unit type that is more appropriate
 	Civilization = "teuton",
 	Faction = "Austria",
 	ProvinceOfOrigin = "Austria", -- presumably
@@ -84,7 +120,7 @@ DefineCharacter("Josef Russegger", { -- Source: Waltraud Heindl, "Josephinische 
 	NameElements = {"word", "high-german", "noun", "Josef"},
 	FamilyName = "Russegger",
 	Gender = "male",
-	Type = "unit-teuton-swordsman", -- bureaucrat, literate, geological researcher (also did geological scientific travels), worked as saline director in various mines in Austria (such as Wieliczka in Galicia)
+	Type = "unit-teuton-ritter", -- bureaucrat, literate, geological researcher (also did geological scientific travels), worked as saline director in various mines in Austria (such as Wieliczka in Galicia)
 	Civilization = "teuton",
 	Faction = "Austria",
 	ProvinceOfOrigin = "Austria", -- presumably
@@ -97,7 +133,7 @@ DefineCharacter("von Pillersdorf", { -- Source: Waltraud Heindl, "Josephinische 
 	NobleFamilyNamePredicateElements = {"word", "high-german", "adposition", "Von"},
 	PlaceNameDerivedFamilyName = true, -- presumably
 	Gender = "male",
-	Type = "unit-teuton-swordsman", -- high-ranking bureaucrat of the Finance Ministry, and later Minister-President of Austria
+	Type = "unit-teuton-ritter", -- high-ranking bureaucrat of the Finance Ministry, and later Minister-President of Austria
 	Civilization = "teuton",
 	Faction = "Austria",
 	ProvinceOfOrigin = "Austria", -- presumably
@@ -107,6 +143,25 @@ DefineCharacter("von Pillersdorf", { -- Source: Waltraud Heindl, "Josephinische 
 		"head-of-government", 1848, 1848, "teuton", "Austria", -- was Minister-President of Austria during 1848
 		"head-of-state", 1848, 0, "teuton", "Pillersdorf" -- was alreadyFreiherr (Baron) of Pillersdorf in 1848
 	}
+})
+
+DefineCharacter("Johann Baptist von Hoffinger", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 41.
+	Name = "Johann Baptist",
+	NameElements = {
+		"word", "high-german", "noun", "Johann",
+		"word", "high-german", "noun", "Baptist"
+	},
+	FamilyName = "von Hoffinger",
+	NobleFamilyNamePredicateElements = {"word", "high-german", "adposition", "Von"},
+	PlaceNameDerivedFamilyName = true, -- presumably
+	Gender = "male",
+	Type = "unit-teuton-ritter", -- Ministerialsekretär in the Police Ministry (Polizeiministerium), at least during the 1867-1869 period
+	Civilization = "teuton",
+	Faction = "Austria",
+	ProvinceOfOrigin = "Austria", -- presumably
+	Year = 1867,
+	Noble = true
+	-- Knight (Ritter) of Hoffinger
 })
 
 DefineCharacter("Otto Friedländer", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 26.

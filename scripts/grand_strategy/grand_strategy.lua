@@ -1817,12 +1817,38 @@ function AddGrandStrategyHeroButton(x, y, hero_name)
 	UIElements[table.getn(UIElements)]:setFont(Fonts["game"])
 
 	if (SelectedHero == hero_name) then
-		UIElements[table.getn(UIElements)]:setTooltip("Unselect " .. hero_name)
+		UIElements[table.getn(UIElements)]:setTooltip("Unselect " .. GetGrandStrategyHeroBestDisplayTitle(hero_name) .. " " .. hero_name)
 	else
-		UIElements[table.getn(UIElements)]:setTooltip("Select " .. hero_name)
+		UIElements[table.getn(UIElements)]:setTooltip("Select " .. GetGrandStrategyHeroBestDisplayTitle(hero_name) .. " " .. hero_name)
 	end
 	UIElements[table.getn(UIElements)]:setFrameImage(Preference.IconFrameG)
 	UIElements[table.getn(UIElements)]:setPressedFrameImage(Preference.PressedIconFrameG)
+	
+	return UIElements[table.getn(UIElements)]
+end
+
+function AddGrandStrategyMinisterButton(x, y, hero_name)
+	UIElements[table.getn(UIElements) + 1] = PlayerColorImageButton("", GetFactionData(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, "Color"))
+	UIElements[table.getn(UIElements)]:setActionCallback(
+		function()
+			PlaySound("click")
+			DrawGrandStrategyInterface()
+		end
+	)
+	GrandStrategyMenu:add(UIElements[table.getn(UIElements)], x, y)
+	UIElements[table.getn(UIElements)]:setBorderSize(0) -- Andrettin: make buttons not have the borders they previously had
+
+	local unit_icon = CIcon:Get(GetGrandStrategyHeroIcon(hero_name)).G
+--	UIElements[table.getn(UIElements)]:setBaseColor(Color(0,0,0,0))
+--	UIElements[table.getn(UIElements)]:setForegroundColor(Color(0,0,0,0))
+--	UIElements[table.getn(UIElements)]:setBackgroundColor(Color(0,0,0,0))
+	UIElements[table.getn(UIElements)]:setNormalImage(unit_icon)
+	UIElements[table.getn(UIElements)]:setPressedImage(unit_icon)
+	UIElements[table.getn(UIElements)]:setDisabledImage(unit_icon)
+	UIElements[table.getn(UIElements)]:setSize(46, 38)
+	UIElements[table.getn(UIElements)]:setFont(Fonts["game"])
+
+	UIElements[table.getn(UIElements)]:setTooltip(GetGrandStrategyHeroTooltip(hero_name))
 	
 	return UIElements[table.getn(UIElements)]
 end
@@ -2463,6 +2489,25 @@ function DrawGrandStrategyInterface()
 						local icon_offset_y = Video.Height - 186 + 13 + (item_y * 47)
 
 						AddGrandStrategyHeroButton(icon_offset_x, icon_offset_y, grand_strategy_heroes[i])
+							
+						item_x = item_x + 1
+						if (item_x > 3) then
+							item_x = 0
+							item_y = item_y + 1
+						end
+					end
+				end
+			elseif (GrandStrategyInterfaceState == "Ruler") then
+				local item_x = 0
+				local item_y = 0
+				local minister_types = {"head-of-state", "head-of-government", "finance-minister", "foreign-minister", "intelligence-minister", "interior-minister", "justice-minister", "war-minister"}
+				
+				for i = 1, table.getn(minister_types) do
+					if (GetFactionMinister(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, minister_types[i]) ~= "") then
+						local icon_offset_x = Video.Width - 243 + 15 + (item_x * 56)
+						local icon_offset_y = Video.Height - 186 + 13 + (item_y * (47 + 19 + 4))
+
+						AddGrandStrategyMinisterButton(icon_offset_x, icon_offset_y, GetFactionMinister(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, minister_types[i]))
 							
 						item_x = item_x + 1
 						if (item_x > 3) then
