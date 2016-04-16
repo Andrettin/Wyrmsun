@@ -30,29 +30,25 @@ if (OldDefineCharacter == nil) then
 end
 
 function DefineCharacter(character, data)
-	if (data.Name ~= nil or data.ExtraName ~= nil or data.FamilyName ~= nil or data.Dynasty ~= nil or data.Gender ~= nil) then
+	if (data.Civilization ~= nil or data.Faction ~= nil or data.Gender ~= nil or data.Noble ~= nil) then
 		local preliminary_data = {}
-		if (data.Name ~= nil) then
-			preliminary_data.Name = data.Name
+		if (data.Civilization ~= nil) then
+			preliminary_data.Civilization = data.Civilization
 		end
-		if (data.ExtraName ~= nil) then
-			preliminary_data.ExtraName = data.ExtraName
-		end
-		if (data.FamilyName ~= nil) then
-			preliminary_data.FamilyName = data.FamilyName
-		end
-		if (data.Dynasty ~= nil) then
-			preliminary_data.Dynasty = data.Dynasty
+		if (data.Faction ~= nil) then
+			preliminary_data.Faction = data.Faction
 		end
 		if (data.Gender ~= nil) then
 			preliminary_data.Gender = data.Gender
 		end
+		if (data.Noble ~= nil) then
+			preliminary_data.Noble = data.Noble
+		end
 		OldDefineCharacter(character, preliminary_data)
-		data.Name = nil
-		data.ExtraName = nil
-		data.FamilyName = nil
-		data.Dynasty = nil
+		data.Civilization = nil
+		data.Faction = nil
 		data.Gender = nil
+		data.Noble = nil
 	end
 	
 	OldDefineCharacter(character, data)

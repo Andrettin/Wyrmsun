@@ -29,12 +29,16 @@ DefineCharacter("Peter von Salzgeber", { -- Source: Waltraud Heindl, "Josephinis
 	Name = "Peter",
 	NameElements = {"word", "high-german", "noun", "Peter"},
 	FamilyName = "von Salzgeber",
+	NobleFamilyNamePredicateElements = {"word", "high-german", "adposition", "Von"},
+	PlaceNameDerivedFamilyName = true, -- presumably
 	Gender = "male",
 	Type = "unit-teuton-swordsman", -- section chief who was the right-hand of the Minister-President (the Baron of Pillersdorf) in March of 1848
 	Civilization = "teuton",
+	Faction = "Austria",
 	ProvinceOfOrigin = "Austria", -- presumably
 	Year = 1789, -- born
 	DeathYear = 1858, -- died
+	Noble = true,
 	HistoricalTitles = {
 		"head-of-state", 1853, 1858, "teuton", "Salzgeber" -- became Freiherr (Baron) of Salzgeber in 1853
 	}
@@ -44,12 +48,16 @@ DefineCharacter("Wilhelmina von Salzgeber", { -- Source: Waltraud Heindl, "Josep
 	Name = "Wilhelmina",
 	NameElements = {"word", "high-german", "noun", "Wilhelmina"},
 	FamilyName = "von Salzgeber", -- this is her name after marrying Peter von Salzgeber; should be set to her maiden name instead
+	NobleFamilyNamePredicateElements = {"word", "high-german", "adposition", "Von"},
+	PlaceNameDerivedFamilyName = true, -- presumably
 	Gender = "female",
 	Type = "unit-teuton-swordsman", -- baroness; should be a different unit type that is more appropriate
 	Civilization = "teuton",
+	Faction = "Austria",
 	ProvinceOfOrigin = "Austria", -- presumably
 	Year = 1801, -- born
-	DeathYear = 1860 -- died
+	DeathYear = 1860, -- died
+	Noble = true
 	-- married to Peter von Salzgeber
 })
 
@@ -58,12 +66,16 @@ DefineCharacter("Wilhelmina the Younger von Salzgeber", { -- Source: Waltraud He
 	NameElements = {"word", "high-german", "noun", "Wilhelmina"},
 	ExtraName = "the Younger", -- to differentiate her from her mother
 	FamilyName = "von Salzgeber",
+	NobleFamilyNamePredicateElements = {"word", "high-german", "adposition", "Von"},
+	PlaceNameDerivedFamilyName = true, -- presumably
 	Gender = "female",
 	Type = "unit-teuton-swordsman", -- should be a different unit type that is more appropriate
 	Civilization = "teuton",
+	Faction = "Austria",
 	ProvinceOfOrigin = "Austria", -- presumably
 	Year = 1821, -- born
-	DeathYear = 1896 -- died
+	DeathYear = 1896, -- died
+	Noble = true
 	-- married to Josef Russegger
 })
 
@@ -74,6 +86,7 @@ DefineCharacter("Josef Russegger", { -- Source: Waltraud Heindl, "Josephinische 
 	Gender = "male",
 	Type = "unit-teuton-swordsman", -- bureaucrat, literate, geological researcher (also did geological scientific travels), worked as saline director in various mines in Austria (such as Wieliczka in Galicia)
 	Civilization = "teuton",
+	Faction = "Austria",
 	ProvinceOfOrigin = "Austria", -- presumably
 	Year = 1853 -- knighted (became "Ritter von Russegger")
 })
@@ -81,11 +94,15 @@ DefineCharacter("Josef Russegger", { -- Source: Waltraud Heindl, "Josephinische 
 DefineCharacter("von Pillersdorf", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 39.
 	Name = "von Pillersdorf", -- this is actually his family name, since we don't have his given name
 --	FamilyName = "von Pillersdorf",
+	NobleFamilyNamePredicateElements = {"word", "high-german", "adposition", "Von"},
+	PlaceNameDerivedFamilyName = true, -- presumably
 	Gender = "male",
 	Type = "unit-teuton-swordsman", -- high-ranking bureaucrat of the Finance Ministry, and later Minister-President of Austria
 	Civilization = "teuton",
+	Faction = "Austria",
 	ProvinceOfOrigin = "Austria", -- presumably
 	Year = 1848, -- became Minister-President of Austria in 1848
+	Noble = true,
 	HistoricalTitles = {
 		"head-of-government", 1848, 1848, "teuton", "Austria", -- was Minister-President of Austria during 1848
 		"head-of-state", 1848, 0, "teuton", "Pillersdorf" -- was alreadyFreiherr (Baron) of Pillersdorf in 1848
@@ -103,6 +120,7 @@ DefineCharacter("Otto Friedländer", { -- Source: Waltraud Heindl, "Josephinisch
 	Gender = "male",
 	Type = "unit-teuton-worker", -- bureaucrat of the Viennese Chamber of Commerce (during the First Republic period)
 	Civilization = "teuton",
+	Faction = "Austria",
 	ProvinceOfOrigin = "Austria",
 	Year = 1889, -- born
 	DeathYear = 1963 -- died

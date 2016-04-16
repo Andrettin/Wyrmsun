@@ -30,6 +30,7 @@ DefineCharacter("Caesar", { -- Source: Heiko Steuer, "Warrior bands, war lords a
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "latin",
+	Faction = "Rome",
 	ProvinceOfOrigin = "Latium", -- correct?
 	Year = -58, -- De Bello Gallico was written 58-52 BC
 	AuthoredWorks = {"upgrade-work-de-bello-gallico"}
@@ -40,6 +41,7 @@ DefineCharacter("Marcian", { -- Source: F. E. Sandbach, "The Heroic Saga-Cycle o
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "latin",
+	Faction = "Rome",
 	ProvinceOfOrigin = "Thrace", -- possibly not accurate, but since he was the (Eastern) Roman emperor put him there until we have better information
 	Year = 453, -- concluded a treaty with Walamer soon after he became independent in 453 AD
 	DeathYear = 462, -- by 462 AD the Roman emperor was his successor Leo
@@ -53,6 +55,7 @@ DefineCharacter("Leo", { -- Source: F. E. Sandbach, "The Heroic Saga-Cycle of Di
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "latin",
+	Faction = "Rome",
 	ProvinceOfOrigin = "Thrace", -- possibly not accurate, but since he was the (Eastern) Roman emperor put him there until we have better information
 	Year = 462, -- ruled in 462 AD when Walamer invaded Illyria because of the treaty's renouncement
 	DeathYear = 480, -- by 480 AD the ruler of Eastern Rome was Zeno
@@ -66,6 +69,7 @@ DefineCharacter("Zeno", { -- Source: F. E. Sandbach, "The Heroic Saga-Cycle of D
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "latin",
+	Faction = "Rome",
 	ProvinceOfOrigin = "Thrace", -- possibly not accurate, but since he was the (Eastern) Roman emperor put him there until we have better information
 	Year = 480, -- by 480 AD the ruler of Eastern Rome was Zeno
 	HistoricalTitles = {
@@ -98,6 +102,7 @@ DefineCharacter("Geofrei Gaimar", { -- Source: Alaric Hall, "The Meanings of Elf
 	Gender = "male",
 	Type = "unit-teuton-swordsman", -- should be something more appropriate for a writer?
 	Civilization = "latin", -- should be French
+	Faction = "France",
 	ProvinceOfOrigin = "France", -- accurate?
 	Year = 1135 -- composed Estoire des Anglais c. 1135-1140 AD
 })

@@ -30,6 +30,7 @@ DefineCharacter("Clovis", { -- Source: Norman Davies, "Vanished Kingdoms", 2012,
 	Gender = "male",
 	Type = "unit-frank-swordsman",
 	Civilization = "teuton",
+	Faction = "Francia",
 --	ProvinceOfOrigin = "?",
 	DeathYear = 511 -- died
 })
@@ -39,6 +40,7 @@ DefineCharacter("Bertha", { -- Source: Frank Stenton, "Anglo-Saxon England", 197
 	Gender = "female",
 	Type = "unit-teuton-archer",
 	Civilization = "teuton", -- probably a Frank
+	Faction = "Francia",
 	ProvinceOfOrigin = "France", -- possibly
 	DateReferenceCharacter = "Æthelberht"
 })
@@ -48,6 +50,7 @@ DefineCharacter("Dagobert", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
+	Faction = "Francia",
 	ProvinceOfOrigin = "France", -- possibly
 	DateReferenceCharacter = "Edwin", -- contemporary of Edwin of Deira
 	HistoricalTitles = {

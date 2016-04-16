@@ -30,6 +30,7 @@ DefineCharacter("Maelgwn", { -- Source: Frank Stenton, "Anglo-Saxon England", 19
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "celt",
+	Faction = "Gwynedd",
 --	ProvinceOfOrigin = ?,
 	DeathYear = 547
 })
@@ -49,6 +50,7 @@ DefineCharacter("Aedan mac Gabrain", { -- Source: Frank Stenton, "Anglo-Saxon En
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "celt",
+	Faction = "Argyll",
 	ProvinceOfOrigin = "Highland Scotland",
 	Year = 574, -- became king
 	-- attacked the Bernicians in 603 AD
@@ -62,6 +64,7 @@ DefineCharacter("Cynan", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "celt",
+	Faction = "Powys", -- presumably
 	ProvinceOfOrigin = "Wales"
 })
 
@@ -70,6 +73,7 @@ DefineCharacter("Solomon", { -- Source: Frank Stenton, "Anglo-Saxon England", 19
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "celt",
+	Faction = "Powys",
 	ProvinceOfOrigin = "Wales",
 	Father = "Cynan",
 	Year = 613, -- at some point between 613 and 616, he was defeated by the Bernicians at Chester
@@ -83,6 +87,7 @@ DefineCharacter("Certic", { -- Source: Frank Stenton, "Anglo-Saxon England", 197
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "celt",
+	Faction = "Elmet",
 --	ProvinceOfOrigin = ?
 	DateReferenceCharacter = "Edwin", -- was a contemporary of Edwin of Deira, who conquered his kingdom
 	HistoricalTitles = {
@@ -95,6 +100,7 @@ DefineCharacter("Cadwallon", { -- Source: Frank Stenton, "Anglo-Saxon England", 
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "celt",
+	Faction = "Gwynedd",
 	ProvinceOfOrigin = "Wales",
 	Year = 632,
 	DeathYear = 633, -- killed by Oswald of Bernicia in 633
@@ -109,6 +115,7 @@ DefineCharacter("Cadafael", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "celt",
+	Faction = "Gwynedd",
 	ProvinceOfOrigin = "Wales",
 	Year = 654 -- went with Penda to attack Oswiu of Bernicia
 })
@@ -118,6 +125,7 @@ DefineCharacter("Bruide mac Beli", { -- Source: Frank Stenton, "Anglo-Saxon Engl
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "celt",
+	Faction = "Pict Tribe",
 	ProvinceOfOrigin = "Highland Scotland", -- son of the king of Strathclyde
 	Year = 672,
 	DeathYear = 693, -- died

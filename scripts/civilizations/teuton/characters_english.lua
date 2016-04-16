@@ -30,6 +30,7 @@ DefineCharacter("Ælle", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
+	Faction = "Deira",
 	ProvinceOfOrigin = "York",
 	DeathYear = 588, -- died
 	HistoricalTitles = {
@@ -42,6 +43,7 @@ DefineCharacter("Ida", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, 
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
+	Faction = "Bernicia",
 	ProvinceOfOrigin = "Northumberland",
 	Year = 547, -- became king of Bernicia
 	HistoricalTitles = {
@@ -58,6 +60,7 @@ DefineCharacter("Theodric", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
+	Faction = "Bernicia",
 	ProvinceOfOrigin = "Northumberland",
 	Father = "Ida",
 	HistoricalTitles = {
@@ -70,6 +73,7 @@ DefineCharacter("Æthelric", { -- Source: Frank Stenton, "Anglo-Saxon England", 
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
+	Faction = "Bernicia",
 	ProvinceOfOrigin = "Northumberland",
 	Year = 588, -- according to tradition, Æthelric acquired the kingdom of Deira upon Ælle's death in 588 AD
 	Father = "Ida", -- the source says that his son Æthelfrith was grandson of Ida
@@ -84,6 +88,7 @@ DefineCharacter("Æthelfrith", { -- Source: Frank Stenton, "Anglo-Saxon England"
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
+	Faction = "Bernicia",
 	ProvinceOfOrigin = "Northumberland",
 	Year = 593, -- beginning of reign
 	DeathYear = 616, -- died in battle against Rædwald
@@ -104,6 +109,7 @@ DefineCharacter("Ceawlin", { -- Source: Frank Stenton, "Anglo-Saxon England", 19
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
+	Faction = "Wessex",
 	ProvinceOfOrigin = "Wessex",
 	DateReferenceCharacter = "Æthelfrith", -- contemporary of Æthelfrith of Bernicia
 	HistoricalTitles = {
@@ -116,6 +122,7 @@ DefineCharacter("Edwin", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
+	Faction = "Deira",
 	ProvinceOfOrigin = "York",
 	Father = "Ælle",
 	Year = 616, -- in 616 Rædwald of East Anglia (with whom Edwin had taken refuge), fought and won against Æthelfrith of Bernicia to support Edwin's claim to the Deiran throne
@@ -136,6 +143,7 @@ DefineCharacter("Rædwald", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
+	Faction = "East Anglia",
 	ProvinceOfOrigin = "East Anglia",
 	Year = 616, -- in the summer or early fall of 616, Rædwald (supporting Edwin's claim to the Deiran throne; Edwin had taken refuge with him) engaged in a battle against Æthelfrith of Bernicia, with the location being at the southern border of Deira, where the Idle river crosses with the Lincoln-Doncaster Roman road
 	HistoricalTitles = {
@@ -148,6 +156,7 @@ DefineCharacter("Lilla", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
+	Faction = "Deira",
 	ProvinceOfOrigin = "York", -- presumably
 	DateReferenceCharacter = "Edwin",
 	Description = _("Lilla was a thegn of Edwin of Deira. He saved his lord's life by stopping an assassin from Wessex just as he was about to strike Edwin.")
@@ -158,6 +167,7 @@ DefineCharacter("Æthelberht", { -- Source: Frank Stenton, "Anglo-Saxon England"
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
+	Faction = "Kent",
 	ProvinceOfOrigin = "Kent",
 	DateReferenceCharacter = "Edwin", -- contemporary of Edwin, but probably not of the same generation, since his daughter married Edwin
 	HistoricalTitles = {
@@ -170,6 +180,7 @@ DefineCharacter("Hereric", { -- Source: Frank Stenton, "Anglo-Saxon England", 19
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
+	Faction = "Deira",
 	ProvinceOfOrigin = "York", -- was the son of a nephew of Edwin's, so presumably from Deira
 	DateReferenceCharacter = "Æthelfrith" -- was exiled by Æthelfrith of Bernicia
 	-- was poisoned and died during his stay as an exile with Certic of Elmet
@@ -180,6 +191,7 @@ DefineCharacter("Osfrith", { -- Source: Frank Stenton, "Anglo-Saxon England", 19
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
+	Faction = "Deira",
 	ProvinceOfOrigin = "York",
 	Father = "Edwin",
 	DeathYear = 632, -- died in 632 in battle against Cadwallon of Gwynedd
@@ -191,6 +203,7 @@ DefineCharacter("Penda", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
+	Faction = "Mercia",
 	ProvinceOfOrigin = "Mercia",
 	Year = 632, -- in 632, Penda (still a noble belonging to the Mercian royal house with no throne) allied himself Cadwallon of Gwynedd against Edwin of Deira
 	DeathYear = 654, -- died fighting against Oswiu of Bernicia
@@ -206,6 +219,7 @@ DefineCharacter("Osric", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
+	Faction = "Deira",
 	ProvinceOfOrigin = "York",
 	DateReferenceCharacter = "Edwin", -- was a cousin of Edwin's
 	Year = 632,
@@ -221,6 +235,7 @@ DefineCharacter("Eanfrith", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
+	Faction = "Bernicia",
 	ProvinceOfOrigin = "Northumberland",
 	Father = "Æthelfrith",
 	Year = 632,
@@ -236,6 +251,7 @@ DefineCharacter("Talorcan", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
+	Faction = "Bernicia",
 	ProvinceOfOrigin = "Northumberland",
 	Father = "Eanfrith",
 	HistoricalTitles = {
@@ -248,6 +264,7 @@ DefineCharacter("Oswald", { -- Source: Frank Stenton, "Anglo-Saxon England", 197
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
+	Faction = "Bernicia",
 	ProvinceOfOrigin = "Northumberland",
 	Father = "Æthelfrith", -- he was a brother of Eanfrith's, so presumably also a son of Æthelfrith
 	Year = 633, -- destroyed Cadwallon at Rowley Burn (south of Hexham) in 633, becoming king of both Bernicia and Deira
@@ -265,6 +282,7 @@ DefineCharacter("Eadfrith", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
+	Faction = "Deira",
 	ProvinceOfOrigin = "York",
 	Father = "Edwin"
 	-- gave himself up to Penda, who killed him
@@ -275,6 +293,7 @@ DefineCharacter("Wuscfrea", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
+	Faction = "Deira",
 	ProvinceOfOrigin = "York",
 	Father = "Edwin"
 })
@@ -284,6 +303,7 @@ DefineCharacter("Yffi", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971,
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
+	Faction = "Deira",
 	ProvinceOfOrigin = "York",
 	DateReferenceCharacter = "Wuscfrea" -- grandson of Edwin, so using Edwin's infant son Wuscfrea as the date reference character is relatively close
 })
@@ -293,6 +313,7 @@ DefineCharacter("Eanflæd", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	Gender = "female",
 	Type = "unit-teuton-archer",
 	Civilization = "teuton",
+	Faction = "Deira",
 	ProvinceOfOrigin = "York",
 	Father = "Edwin"
 	-- married to Oswiu, brother of Oswald of Bernicia
@@ -303,6 +324,7 @@ DefineCharacter("Oswiu", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
+	Faction = "Bernicia",
 	ProvinceOfOrigin = "Northumberland",
 	Father = "Æthelfrith", -- he was a brother of Oswald's, so presumably also of Eanfrith's, and as such likely also a son of Æthelfrith
 	Year = 641,
@@ -320,6 +342,7 @@ DefineCharacter("Cynegils", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
+	Faction = "Wessex",
 	ProvinceOfOrigin = "Wessex",
 	DateReferenceCharacter = "Oswald", -- contemporary of Oswald of Bernicia
 	HistoricalTitles = {
@@ -332,6 +355,7 @@ DefineCharacter("Oswine", { -- Source: Frank Stenton, "Anglo-Saxon England", 197
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
+	Faction = "Deira",
 	ProvinceOfOrigin = "York",
 	Father = "Osric",
 	Year = 641,
@@ -347,6 +371,7 @@ DefineCharacter("Æthelwald", { -- Source: Frank Stenton, "Anglo-Saxon England",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
+	Faction = "Deira",
 	ProvinceOfOrigin = "Northumberland", -- presumably, since he was a son of Oswald of Bernicia
 	Father = "Oswald",
 	Year = 651,
@@ -360,6 +385,7 @@ DefineCharacter("Æthelhere", { -- Source: Frank Stenton, "Anglo-Saxon England",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
+	Faction = "East Anglia",
 	ProvinceOfOrigin = "East Anglia",
 	Year = 654,
 	DeathYear = 654, -- in 654 went with Penda to attack Oswiu of Bernicia, resulting in Æthelhere's death
@@ -378,6 +404,7 @@ DefineCharacter("Sigeberht", { -- Source: Frank Stenton, "Anglo-Saxon England", 
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
+	Faction = "Essex",
 	ProvinceOfOrigin = "Essex",
 	DateReferenceCharacter = "Oswiu", -- friend of Oswiu of Bernicia
 	HistoricalTitles = {
@@ -390,6 +417,7 @@ DefineCharacter("Cenwalh", { -- Source: Frank Stenton, "Anglo-Saxon England", 19
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
+	Faction = "Wessex",
 	ProvinceOfOrigin = "Wessex",
 	DateReferenceCharacter = "Penda", -- was forced into exile from his lands by Penda of Mercia
 	HistoricalTitles = {
@@ -402,6 +430,7 @@ DefineCharacter("Peada", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
+	Faction = "Middle Anglia",
 	ProvinceOfOrigin = "Mercia", -- presumably, since his father was ruler of that realm
 	Father = "Penda",
 	Year = 654, -- was given the Mercian territories south of the Trent after Penda's fall, at which point he was already king of the Middle Angles
@@ -422,6 +451,7 @@ DefineCharacter("Wulfhere", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
+	Faction = "Mercia",
 	ProvinceOfOrigin = "Mercia",
 	Father = "Penda",
 	Year = 657, -- beginning of reign
@@ -437,6 +467,7 @@ DefineCharacter("Ecgfrith", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
+	Faction = "Northumbria",
 	ProvinceOfOrigin = "Northumberland", -- Northumbrian, so let's place him here
 	Father = "Oswiu",
 	Year = 674, -- defeated Wulfhere of Mercia's invasion of Northumbria in 674
@@ -454,6 +485,7 @@ DefineCharacter("Beornhæth", { -- Source: Frank Stenton, "Anglo-Saxon England",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
+	Faction = "Northumbria",
 	ProvinceOfOrigin = "Northumberland", -- Northumbrian, so let's place him here
 	DateReferenceCharacter = "Ecgfrith" -- was a contemporary of Ecgfrith's
 })
@@ -463,6 +495,7 @@ DefineCharacter("Æthelred", { -- Source: Frank Stenton, "Anglo-Saxon England", 
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
+	Faction = "Mercia",
 	ProvinceOfOrigin = "Mercia",
 	Father = "Penda", -- presumably, since he was Wulfhere of Mercia's brother
 	Year = 678 -- defeated Ecgfrith of Northumbria in a battle close to the Trent river in 678
@@ -473,6 +506,7 @@ DefineCharacter("Aldfrith", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
+	Faction = "Northumbria",
 	ProvinceOfOrigin = "Northumberland", -- Northumbrian, so let's place him here
 	Father = "Oswiu",
 	Year = 685,
@@ -491,6 +525,7 @@ DefineCharacter("Aldhelm", { -- Source: Frank Stenton, "Anglo-Saxon England", 19
 	Gender = "male",
 	Type = "unit-teuton-swordsman", -- should be something more appropriate for the composer of a riddle?
 	Civilization = "teuton",
+	Faction = "Wessex",
 	ProvinceOfOrigin = "Wessex",
 	DeathYear = 709 -- died in 709/710
 })
@@ -501,6 +536,7 @@ DefineCharacter("Osred", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
+	Faction = "Northumbria",
 	ProvinceOfOrigin = "Northumberland", -- Northumbrian, so let's place him here
 	Father = "Aldfrith",
 	Year = 697, -- began to rule in 705, when he was eight years old
@@ -516,6 +552,7 @@ DefineCharacter("Beorhtfrith", { -- Source: Frank Stenton, "Anglo-Saxon England"
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
+	Faction = "Northumbria",
 	ProvinceOfOrigin = "Northumberland", -- Northumbrian, so let's place him here
 	Year = 711 -- defeated a Pictish army in the Scottish central plain in 711
 })
@@ -529,6 +566,7 @@ DefineCharacter("Ceolwulf", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
+	Faction = "Northumbria",
 	ProvinceOfOrigin = "Northumberland", -- Northumbrian, so let's place him here
 	Year = 729,
 	DeathYear = 737,
@@ -542,6 +580,7 @@ DefineCharacter("Bede", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol.
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
+	Faction = "Essex",
 	ProvinceOfOrigin = "Essex", -- in England, so let's put in London's province
 	Year = 731, -- wrote "Historia Ecclesiastica Venerabilis Bedae" around 731 AD
 	AuthoredWorks = {"upgrade-work-historia-ecclesiastica-venerabilis-bedae"}
@@ -552,6 +591,7 @@ DefineCharacter("Eadberht", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
+	Faction = "Northumbria",
 	ProvinceOfOrigin = "Northumberland", -- Northumbrian, so let's place him here
 	Year = 737,
 	HistoricalTitles = {
@@ -566,6 +606,7 @@ DefineCharacter("Æthelbald", { -- Source: Frank Stenton, "Anglo-Saxon England",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
+	Faction = "Mercia",
 	ProvinceOfOrigin = "Mercia",
 	DateReferenceCharacter = "Eadberht", -- was a contemporary of Eadberht's
 	HistoricalTitles = {
@@ -578,6 +619,7 @@ DefineCharacter("Offa", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971,
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
+	Faction = "Northumbria",
 	ProvinceOfOrigin = "Northumberland", -- Northumbrian, so let's place him here
 	Father = "Aldfrith"
 })
@@ -587,6 +629,7 @@ DefineCharacter("Egbert", { -- Source: Frank Stenton, "Anglo-Saxon England", 197
 	Gender = "male",
 	Type = "unit-teuton-swordsman", -- should be a priest
 	Civilization = "teuton",
+	Faction = "Northumbria",
 	ProvinceOfOrigin = "Northumberland", -- Northumbrian, so let's place him here
 	DateReferenceCharacter = "Eadberht", -- was Eadberht's brother
 })
@@ -596,6 +639,7 @@ DefineCharacter("Oswulf", { -- Source: Frank Stenton, "Anglo-Saxon England", 197
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
+	Faction = "Northumbria",
 	ProvinceOfOrigin = "Northumberland", -- Northumbrian, so let's place him here
 	Father = "Eadberht",
 	DeathYear = 758 -- killed by his retainers in the summer of 758
@@ -607,6 +651,7 @@ DefineCharacter("Æthelwald Moll", { -- Source: Frank Stenton, "Anglo-Saxon Engl
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
+	Faction = "Northumbria",
 	ProvinceOfOrigin = "Northumberland", -- Northumbrian, so let's place him here
 	Year = 759,
 	HistoricalTitles = {
@@ -619,6 +664,7 @@ DefineCharacter("Alhred", { -- Source: Frank Stenton, "Anglo-Saxon England", 197
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
+	Faction = "Northumbria",
 	ProvinceOfOrigin = "Northumberland", -- Northumbrian, so let's place him here
 	Year = 765,
 	DeathYear = 774, -- end of reign
@@ -634,6 +680,7 @@ DefineCharacter("Æthelred Moll", { -- Source: Frank Stenton, "Anglo-Saxon Engla
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
+	Faction = "Northumbria",
 	ProvinceOfOrigin = "Northumberland", -- Northumbrian, so let's place him here
 	Father = "Æthelwald Moll",
 	Year = 774,
@@ -656,6 +703,7 @@ DefineCharacter("Ælfwald", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
+	Faction = "Northumbria",
 	ProvinceOfOrigin = "Northumberland", -- Northumbrian, so let's place him here
 	Year = 779, -- expelled Æthelred Moll from Northumbria
 	DeathYear = 788,
@@ -670,6 +718,7 @@ DefineCharacter("Offa of Mercia", { -- Source: Frank Stenton, "Anglo-Saxon Engla
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
+	Faction = "Mercia",
 	ProvinceOfOrigin = "Mercia",
 	Year = 792,
 	HistoricalTitles = {
@@ -682,6 +731,7 @@ DefineCharacter("Alcuin", { -- Source: Frank Stenton, "Anglo-Saxon England", 197
 	Gender = "male",
 	Type = "unit-teuton-swordsman", -- should be a unit type more appropriate for a scholar
 	Civilization = "teuton",
+	Faction = "Deira",
 	ProvinceOfOrigin = "York", -- presumably
 	Year = 782 -- moved from England to the court of Charlemagne
 })
@@ -691,6 +741,7 @@ DefineCharacter("Torhtmund", { -- Source: Frank Stenton, "Anglo-Saxon England", 
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
+	Faction = "Northumbria",
 	ProvinceOfOrigin = "Northumberland", -- Northumbrian, so let's place him here
 	DateReferenceCharacter = "Alcuin" -- was introduced by Alcuin to Charlemagne
 })
@@ -704,6 +755,7 @@ DefineCharacter("Eardwulf", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
+	Faction = "Northumbria",
 	ProvinceOfOrigin = "Northumberland", -- Northumbrian, so let's place him here
 	Year = 801,
 	DeathYear = 810, -- died
@@ -722,6 +774,7 @@ DefineCharacter("Cenwulf", { -- Source: Frank Stenton, "Anglo-Saxon England", 19
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
+	Faction = "Mercia",
 	ProvinceOfOrigin = "Mercia",
 	Year = 801,
 	HistoricalTitles = {
@@ -734,6 +787,7 @@ DefineCharacter("Eanred", { -- Source: Frank Stenton, "Anglo-Saxon England", 197
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
+	Faction = "Northumbria",
 	ProvinceOfOrigin = "Northumberland", -- Northumbrian, so let's place him here
 	Father = "Eardwulf",
 	Year = 810,
@@ -749,6 +803,7 @@ DefineCharacter("Egbert of Wessex", { -- Source: Frank Stenton, "Anglo-Saxon Eng
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton",
+	Faction = "Wessex",
 	ProvinceOfOrigin = "Wessex",
 	Year = 829,
 	HistoricalTitles = {

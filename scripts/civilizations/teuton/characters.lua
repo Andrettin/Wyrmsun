@@ -31,6 +31,7 @@ DefineCharacter("Volsung", { -- Source: C. Scott Littleton, "The Germanic Sword 
 	Gender = "male",
 	Type = "unit-frank-swordsman",
 	Civilization = "teuton",
+	Faction = "Frank Tribe",
 --	ProvinceOfOrigin = "?"
 })
 
@@ -40,6 +41,7 @@ DefineCharacter("Eylimi Othling", { -- Source: Kevin Crossley-Holland, "The Nors
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "teuton", -- Norse?
+	Faction = "Frank Tribe", -- what should it be instead, Dane Tribe?
 	ProvinceOfOrigin = "Zealand" -- since he descends from Halfdan the Old of Denmark
 })
 
@@ -49,6 +51,7 @@ DefineCharacter("Signy Volsung", { -- Source: C. Scott Littleton, "The Germanic 
 	Gender = "female",
 	Type = "unit-teuton-archer",
 	Civilization = "teuton",
+	Faction = "Frank Tribe",
 --	ProvinceOfOrigin = "?",
 	Father = "Volsung"
 	-- wedded to Siggeir
@@ -59,6 +62,7 @@ DefineCharacter("Siggeir", { -- Source: C. Scott Littleton, "The Germanic Sword 
 	Gender = "male",
 	Type = "unit-frank-swordsman",
 	Civilization = "teuton",
+	Faction = "Frank Tribe",
 --	ProvinceOfOrigin = "?",
 	DateReferenceCharacter = "Signy Volsung" -- comes from the same generation as Signy Volsung
 	-- wedded to Signy
@@ -70,6 +74,7 @@ DefineCharacter("Siegmund Volsung", { -- Source: Norman Davies, "Vanished Kingdo
 	Gender = "male",
 	Type = "unit-frank-swordsman",
 	Civilization = "teuton",
+	Faction = "Frank Tribe",
 --	ProvinceOfOrigin = "?",
 	Father = "Volsung"
 })
@@ -80,6 +85,7 @@ DefineCharacter("Sieglind Hraudung", { -- Source: Norman Davies, "Vanished Kingd
 	Gender = "female",
 	Type = "unit-teuton-archer",
 	Civilization = "teuton", -- Norse?
+	Faction = "Frank Tribe", -- seems unlikely to be correct
 	ProvinceOfOrigin = "Zealand", -- since he descends from Halfdan the Old of Denmark
 	Father = "Eylimi Othling"
 })
@@ -90,6 +96,7 @@ DefineCharacter("Sinfiotli Volsung", { -- Source: C. Scott Littleton, "The Germa
 	Gender = "male",
 	Type = "unit-frank-swordsman",
 	Civilization = "teuton",
+	Faction = "Frank Tribe",
 --	ProvinceOfOrigin = "?",
 	Father = "Siegmund Volsung",
 	Mother = "Signy Volsung"
@@ -101,6 +108,7 @@ DefineCharacter("Siegfried Volsung", { -- Source: Norman Davies, "Vanished Kingd
 	Gender = "male",
 	Type = "unit-frank-swordsman",
 	Civilization = "teuton",
+	Faction = "Frank Tribe",
 --	ProvinceOfOrigin = "?",
 	Father = "Siegmund Volsung",
 	Mother = "Sieglind Hraudung"
@@ -113,6 +121,7 @@ DefineCharacter("Svanhild Volsung", { -- Source: Henry Adams Bellows (transl.), 
 	Gender = "female",
 	Type = "unit-teuton-archer",
 	Civilization = "teuton",
+	Faction = "Frank Tribe",
 --	ProvinceOfOrigin = "?",
 	Father = "Siegfried Volsung",
 	Mother = "Gudrun"

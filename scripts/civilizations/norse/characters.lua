@@ -51,6 +51,7 @@ DefineCharacter("Halfdan the Old Skjoldung", { -- Source: Henry Adams Bellows (t
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
+	Faction = "Denmark",
 	ProvinceOfOrigin = "Zealand", -- since he is a Danish king
 --	Year = ?,
 --	DeathYear = ?,
@@ -79,6 +80,7 @@ DefineCharacter("Authi", { -- Source: Henry Adams Bellows (transl.), "The Poetic
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
+	Faction = "Denmark",
 	ProvinceOfOrigin = "Zealand", -- since his father was king of Denmark
 --	Year = ?,
 --	DeathYear = ?,
@@ -94,6 +96,7 @@ DefineCharacter("Ali", { -- Source: Henry Adams Bellows (transl.), "The Poetic E
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
+	Faction = "Denmark",
 	ProvinceOfOrigin = "Zealand", -- since his father was king of Denmark
 --	Year = ?,
 --	DeathYear = ?,
@@ -123,6 +126,7 @@ DefineCharacter("Dag", { -- Source: Henry Adams Bellows (transl.), "The Poetic E
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
+	Faction = "Denmark",
 	ProvinceOfOrigin = "Zealand", -- since his father was king of Denmark
 --	Year = ?,
 --	DeathYear = ?,
@@ -135,6 +139,7 @@ DefineCharacter("Thora", { -- Source: Henry Adams Bellows (transl.), "The Poetic
 	Gender = "female",
 	Type = "unit-teuton-archer",
 	Civilization = "norse",
+	Faction = "Denmark",
 	ProvinceOfOrigin = "Zealand", -- since her husband's father was king of Denmark
 --	Year = ?,
 --	DeathYear = ?
@@ -146,6 +151,7 @@ DefineCharacter("Frathmar Dögling", { -- Source: Henry Adams Bellows (transl.),
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
+	Faction = "Denmark",
 	ProvinceOfOrigin = "Zealand", -- since his ancestor was king of Denmark
 --	Year = ?,
 --	DeathYear = ?,
@@ -159,6 +165,7 @@ DefineCharacter("Gyrth Dögling", { -- Source: Henry Adams Bellows (transl.), "T
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
+	Faction = "Denmark",
 	ProvinceOfOrigin = "Zealand", -- since his ancestor was king of Denmark
 --	Year = ?,
 --	DeathYear = ?,
@@ -172,6 +179,7 @@ DefineCharacter("Frekis Dögling", { -- Source: Henry Adams Bellows (transl.), "
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
+	Faction = "Denmark",
 	ProvinceOfOrigin = "Zealand", -- since his ancestor was king of Denmark
 --	Year = ?,
 --	DeathYear = ?,
@@ -186,6 +194,7 @@ DefineCharacter("Frekis II Dögling", { -- Source: Henry Adams Bellows (transl.)
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
+	Faction = "Denmark",
 	ProvinceOfOrigin = "Zealand", -- since his ancestor was king of Denmark
 --	Year = ?,
 --	DeathYear = ?,
@@ -199,6 +208,7 @@ DefineCharacter("Am Dögling", { -- Source: Henry Adams Bellows (transl.), "The 
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
+	Faction = "Denmark",
 	ProvinceOfOrigin = "Zealand", -- since his ancestor was king of Denmark
 --	Year = ?,
 --	DeathYear = ?,
@@ -212,6 +222,7 @@ DefineCharacter("Jofurmar Dögling", { -- Source: Henry Adams Bellows (transl.),
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
+	Faction = "Denmark",
 	ProvinceOfOrigin = "Zealand", -- since his ancestor was king of Denmark
 --	Year = ?,
 --	DeathYear = ?,
@@ -229,6 +240,7 @@ DefineCharacter("Alf the Old Dögling", { -- Source: Henry Adams Bellows (transl
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
+	Faction = "Denmark",
 	ProvinceOfOrigin = "Zealand", -- since his ancestor was king of Denmark
 --	Year = ?,
 --	DeathYear = ?,
@@ -300,6 +312,7 @@ DefineCharacter("Instein", { -- Source: Kevin Crossley-Holland, "The Norse Myths
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
+	Faction = "Hordaland",
 	ProvinceOfOrigin = "Hordaland",
 --	Year = ?,
 --	DeathYear = ?,
@@ -392,6 +405,7 @@ DefineCharacter("Hledis", { -- Source: Kevin Crossley-Holland, "The Norse Myths"
 	Gender = "female",
 	Type = "unit-teuton-archer", -- should be priestess
 	Civilization = "norse",
+	Faction = "Hordaland",
 	ProvinceOfOrigin = "Hordaland", -- her husband was a warrior of the king of Horthaland
 --	Year = ?,
 --	DeathYear = ?,
@@ -404,6 +418,7 @@ DefineCharacter("Ottar", { -- Source: Kevin Crossley-Holland, "The Norse Myths",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
+	Faction = "Hordaland",
 	ProvinceOfOrigin = "Hordaland", -- his father was a warrior of the king of Horthaland
 --	Year = ?,
 --	DeathYear = ?,
@@ -517,6 +532,7 @@ DefineCharacter("Half", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
+	Faction = "Hordaland",
 	ProvinceOfOrigin = "Hordaland",
 --	Year = ?,
 --	DeathYear = ?,
@@ -726,6 +742,7 @@ DefineCharacter("Ivar", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
+	Faction = "Sweden",
 	ProvinceOfOrigin = "Sweden",
 --	Year = ?,
 --	DeathYear = ?,
@@ -740,6 +757,7 @@ DefineCharacter("Aud the Profound", { -- Source: Kevin Crossley-Holland, "The No
 	Gender = "female",
 	Type = "unit-teuton-archer",
 	Civilization = "norse",
+	Faction = "Sweden",
 	ProvinceOfOrigin = "Sweden", -- her father was king of Sweden
 --	Year = ?,
 --	DeathYear = ?,
@@ -752,6 +770,7 @@ DefineCharacter("Harald War Tooth", { -- Source: Kevin Crossley-Holland, "The No
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
+	Faction = "Sweden",
 	ProvinceOfOrigin = "Sweden", -- his grandfather was king of Sweden
 --	Year = ?,
 --	DeathYear = ?,
@@ -839,6 +858,7 @@ DefineCharacter("Hrolf the Old", { -- Source: Henry Adams Bellows (transl.), "Th
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
+	Faction = "Gautland",
 	ProvinceOfOrigin = "Gotaland",
 --	Year = ?,
 --	DeathYear = ?,
@@ -854,6 +874,7 @@ DefineCharacter("Gunnar the Bulwark", { -- Source: Henry Adams Bellows (transl.)
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
+	Faction = "Gautland",
 	ProvinceOfOrigin = "Gotaland", -- was in Hrolf the Old's household
 --	Year = ?,
 --	DeathYear = ?
@@ -864,6 +885,7 @@ DefineCharacter("Thorkel", { -- Source: Henry Adams Bellows (transl.), "The Poet
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
+	Faction = "Gautland",
 	ProvinceOfOrigin = "Gotaland", -- his son was in Hrolf the Old's household
 --	Year = ?,
 --	DeathYear = ?
@@ -875,6 +897,7 @@ DefineCharacter("Grim the Hardy", { -- Source: Henry Adams Bellows (transl.), "T
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
+	Faction = "Gautland",
 	ProvinceOfOrigin = "Gotaland", -- was in Hrolf the Old's household
 --	Year = ?,
 --	DeathYear = ?,
@@ -887,6 +910,7 @@ DefineCharacter("Thorir the Iron-Shield", { -- Source: Henry Adams Bellows (tran
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
+	Faction = "Gautland",
 	ProvinceOfOrigin = "Gotaland", -- was in Hrolf the Old's household
 --	Year = ?,
 --	DeathYear = ?
@@ -901,6 +925,7 @@ DefineCharacter("Ulf the Gaper", { -- Source: Henry Adams Bellows (transl.), "Th
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
+	Faction = "Gautland",
 	ProvinceOfOrigin = "Gotaland", -- was in Hrolf the Old's household
 --	Year = ?,
 --	DeathYear = ?
@@ -914,6 +939,7 @@ DefineCharacter("Brodd", { -- Source: Henry Adams Bellows (transl.), "The Poetic
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
+	Faction = "Gautland",
 	ProvinceOfOrigin = "Gotaland", -- was in Hrolf the Old's household
 --	Year = ?,
 --	DeathYear = ?
@@ -924,6 +950,7 @@ DefineCharacter("Hörvir", { -- Source: Henry Adams Bellows (transl.), "The Poet
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
+	Faction = "Gautland",
 	ProvinceOfOrigin = "Gotaland", -- was in Hrolf the Old's household
 --	Year = ?,
 --	DeathYear = ?
@@ -934,6 +961,7 @@ DefineCharacter("Swerre", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vo
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
+	Faction = "Norway",
 	ProvinceOfOrigin = "Hordaland", -- accurate? either way this is the only Norwegian province in the game, so it makes sense to set it as the province of origin
 	Year = 1177, -- reign began
 	DeathYear = 1203, -- reign ended
@@ -948,6 +976,7 @@ DefineCharacter("Magnus the Saint", { -- Source: Snorri Sturlson, "Heimskringla"
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
+	Faction = "Orkney",
 	ProvinceOfOrigin = "Orkney", -- presumably
 	DeathYear = 1129, -- presumably, since this is the date Kala was made Earl of Orkney
 	HistoricalTitles = {
@@ -960,6 +989,7 @@ DefineCharacter("Koll", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol.
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
+	Faction = "Orkney",
 	ProvinceOfOrigin = "Orkney" -- since his son was Earl of Orkney
 })
 
@@ -968,6 +998,7 @@ DefineCharacter("Kala", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol.
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
+	Faction = "Orkney",
 	ProvinceOfOrigin = "Orkney", -- presumably
 	Year = 1129, -- was made Earl of Orkney
 	Father = "Koll",
@@ -990,9 +1021,10 @@ DefineCharacter("Hakon", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
+	Faction = "Norway",
 	ProvinceOfOrigin = "Hordaland", -- only province implemented that is part of Norway; but Akershus/Oslo would be a better fit: since we only know he came from Norway, it makes sense to set the capital as his province of origin
 	HistoricalTitles = {
-		"head-of-state", 0, 0, "norse", "Orkney" -- his son was King of Norway, so presumably he was too; date estimated; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 142.
+		"head-of-state", 0, 0, "norse", "Norway" -- his son was King of Norway, so presumably he was too; date estimated; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 142.
 	}
 })
 
@@ -1002,11 +1034,12 @@ DefineCharacter("Hakon Hakonson", { -- Source: Snorri Sturlson, "Heimskringla", 
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
+	Faction = "Norway",
 	ProvinceOfOrigin = "Hordaland", -- only province implemented that is part of Norway; but Akershus/Oslo would be a better fit: since we only know he came from Norway, it makes sense to set the capital as his province of origin
 	Year = 1261, -- annexed the Norse settlements in Greenland to Norway in 1261 AD
 	Father = "Hakon",
 	HistoricalTitles = {
-		"head-of-state", 1261, 0, "norse", "Orkney"
+		"head-of-state", 1261, 0, "norse", "Norway"
 	}
 })
 
@@ -1027,6 +1060,7 @@ DefineCharacter("Margaret", { -- Source: Snorri Sturlson, "Heimskringla", 1844, 
 	Gender = "female",
 	Type = "unit-teuton-archer",
 	Civilization = "norse",
+	Faction = "Denmark",
 --	ProvinceOfOrigin = "?",
 	Year = 1387, -- the three northern crowns devolved to her in 1387 AD
 	HistoricalTitles = {

@@ -2738,6 +2738,12 @@ DefineLanguageWord("Siegfried", {
 	NameTypes = {"person-male"}
 })
 
+DefineLanguageWord("Von", {
+	Language = "high-german",
+	Type = "adposition",
+	Meanings = {"Of", "From"}
+})
+
 DefineLanguageWord("Wolfgang", {
 	Language = "high-german",
 	Type = "noun",
