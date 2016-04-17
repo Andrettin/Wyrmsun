@@ -433,6 +433,11 @@ UI.Resources[GetResourceIdByName("prestige")].IconFrame = 0
 UI.Resources[GetResourceIdByName("prestige")].IconX = Video.Width
 UI.Resources[GetResourceIdByName("prestige")].IconY = Video.Height
 
+UI.Resources[GetResourceIdByName("leadership")].G = CGraphic:New("ui/score.png", 14, 14)
+UI.Resources[GetResourceIdByName("leadership")].IconFrame = 0
+UI.Resources[GetResourceIdByName("leadership")].IconX = Video.Width
+UI.Resources[GetResourceIdByName("leadership")].IconY = Video.Height
+
 UI.TimePanel.X = Video.Width * 50 / 100
 UI.TimePanel.Y = 1
 

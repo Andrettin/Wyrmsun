@@ -71,6 +71,7 @@ https://github.com/Andrettin/Wyrmsun
 - Randomly-generated literary works now also appear from time to time.
 - Grand Strategy characters who don't have their own portrait can now be used in battle as well.
 - Noble characters with German names now receive a place-name based family name.
+- Heroes are now generated from time to time, depending on the proportion of provinces with barracks a faction has.
 
 * Interface
 - Fixed the issue which caused the loading screen to not properly appear under SDL rendering.

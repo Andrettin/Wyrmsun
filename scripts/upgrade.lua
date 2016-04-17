@@ -187,7 +187,7 @@ DefineUpgrade("upgrade-writing", {
 	Description = _("The invention of writing makes it possible for ideas and traditions to be more easily spread and preserved.\n\nEffect: +10% Time Efficiency for all buildings, changes faction from tribe to polity."),
 	Costs = {"time", 250, "gold", 900, "lumber", 1500},
 	GrandStrategyCosts = {"time", 250, "gold", 900, "lumber", 1500, "research", 2400},
-	GrandStrategyProductionEfficiencyModifier = {"research", 50}
+	GrandStrategyProductionEfficiencyModifier = {"research", 50, "leadership", 25}
 })
 
 DefineUpgrade("upgrade-alchemy", {
