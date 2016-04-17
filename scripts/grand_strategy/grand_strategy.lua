@@ -1598,29 +1598,29 @@ function AddGrandStrategyBuildingButton(x, y, unit_type)
 	UIElements[table.getn(UIElements)]:setFont(Fonts["game"])
 
 	local building_cost_tooltip = ""
-	if (GetUnitTypeData(unit_type, "Costs", "gold") > 0) then
+	if (GetFactionUnitCost(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, unit_type, "gold") > 0) then
 		if (building_cost_tooltip == "") then
 			building_cost_tooltip = " (costs "
 		else
 			building_cost_tooltip = building_cost_tooltip .. ", "
 		end
-		building_cost_tooltip = building_cost_tooltip .. GetUnitTypeData(unit_type, "Costs", "gold") .. " Gold"
+		building_cost_tooltip = building_cost_tooltip .. GetFactionUnitCost(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, unit_type, "gold") .. " Gold"
 	end
-	if (GetUnitTypeData(unit_type, "Costs", "lumber") > 0) then
+	if (GetFactionUnitCost(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, unit_type, "lumber") > 0) then
 		if (building_cost_tooltip == "") then
 			building_cost_tooltip = " (costs "
 		else
 			building_cost_tooltip = building_cost_tooltip .. " and "
 		end
-		building_cost_tooltip = building_cost_tooltip .. GetUnitTypeData(unit_type, "Costs", "lumber") .. " Lumber"
+		building_cost_tooltip = building_cost_tooltip .. GetFactionUnitCost(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, unit_type, "lumber") .. " Lumber"
 	end
-	if (GetUnitTypeData(unit_type, "Costs", "stone") > 0) then
+	if (GetFactionUnitCost(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, unit_type, "stone") > 0) then
 		if (building_cost_tooltip == "") then
 			building_cost_tooltip = " (costs "
 		else
 			building_cost_tooltip = building_cost_tooltip .. " and "
 		end
-		building_cost_tooltip = building_cost_tooltip .. GetUnitTypeData(unit_type, "Costs", "stone") .. " Stone"
+		building_cost_tooltip = building_cost_tooltip .. GetFactionUnitCost(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, unit_type, "stone") .. " Stone"
 	end
 	if (building_cost_tooltip ~= "") then
 		building_cost_tooltip = building_cost_tooltip .. ")"
@@ -2246,29 +2246,29 @@ function DrawGrandStrategyInterface()
 							
 							local cost_tooltip = ""
 							cost_tooltip = " (costs 1 " .. GetUnitTypeName(GetFactionClassUnitType("worker", GetProvinceCivilization(SelectedProvince.Name), faction)) .. " unit"
-							if (GetUnitTypeData(unitName, "Costs", "gold") > 0) then
+							if (GetFactionUnitCost(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, unitName, "gold") > 0) then
 								if (cost_tooltip == "") then
 									cost_tooltip = " (costs "
 								else
 									cost_tooltip = cost_tooltip .. ", "
 								end
-								cost_tooltip = cost_tooltip .. GetUnitTypeData(unitName, "Costs", "gold") .. " Gold"
+								cost_tooltip = cost_tooltip .. GetFactionUnitCost(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, unitName, "gold") .. " Gold"
 							end
-							if (GetUnitTypeData(unitName, "Costs", "lumber") > 0) then
+							if (GetFactionUnitCost(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, unitName, "lumber") > 0) then
 								if (cost_tooltip == "") then
 									cost_tooltip = " (costs "
 								else
 									cost_tooltip = cost_tooltip .. ", "
 								end
-								cost_tooltip = cost_tooltip .. GetUnitTypeData(unitName, "Costs", "lumber") .. " Lumber"
+								cost_tooltip = cost_tooltip .. GetFactionUnitCost(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, unitName, "lumber") .. " Lumber"
 							end
-							if (GetUnitTypeData(unitName, "Costs", "stone") > 0) then
+							if (GetFactionUnitCost(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, unitName, "stone") > 0) then
 								if (cost_tooltip == "") then
 									cost_tooltip = " (costs "
 								else
 									cost_tooltip = cost_tooltip .. ", "
 								end
-								cost_tooltip = cost_tooltip .. GetUnitTypeData(unitName, "Costs", "stone") .. " Stone"
+								cost_tooltip = cost_tooltip .. GetFactionUnitCost(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, unitName, "stone") .. " Stone"
 							end
 							if (cost_tooltip ~= "") then
 								cost_tooltip = cost_tooltip .. ")"
@@ -2413,29 +2413,29 @@ function DrawGrandStrategyInterface()
 							b:setPressedImage(g_rslider_p)
 							
 							local cost_tooltip = ""
-							if (GetUnitTypeData(unitName, "Costs", "gold") > 0) then
+							if (GetFactionUnitCost(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, unitName, "gold") > 0) then
 								if (cost_tooltip == "") then
 									cost_tooltip = " (costs "
 								else
 									cost_tooltip = cost_tooltip .. ", "
 								end
-								cost_tooltip = cost_tooltip .. GetUnitTypeData(unitName, "Costs", "gold") .. " Gold"
+								cost_tooltip = cost_tooltip .. GetFactionUnitCost(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, unitName, "gold") .. " Gold"
 							end
-							if (GetUnitTypeData(unitName, "Costs", "lumber") > 0) then
+							if (GetFactionUnitCost(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, unitName, "lumber") > 0) then
 								if (cost_tooltip == "") then
 									cost_tooltip = " (costs "
 								else
 									cost_tooltip = cost_tooltip .. " and "
 								end
-								cost_tooltip = cost_tooltip .. GetUnitTypeData(unitName, "Costs", "lumber") .. " Lumber"
+								cost_tooltip = cost_tooltip .. GetFactionUnitCost(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, unitName, "lumber") .. " Lumber"
 							end
-							if (GetUnitTypeData(unitName, "Costs", "stone") > 0) then
+							if (GetFactionUnitCost(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, unitName, "stone") > 0) then
 								if (cost_tooltip == "") then
 									cost_tooltip = " (costs "
 								else
 									cost_tooltip = cost_tooltip .. " and "
 								end
-								cost_tooltip = cost_tooltip .. GetUnitTypeData(unitName, "Costs", "stone") .. " Stone"
+								cost_tooltip = cost_tooltip .. GetFactionUnitCost(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, unitName, "stone") .. " Stone"
 							end
 							if (cost_tooltip ~= "") then
 								cost_tooltip = cost_tooltip .. ")"
@@ -3137,7 +3137,11 @@ function CanBuildStructure(province, unit_type)
 		return false
 	end
 
-	if (GetFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "gold") < GetUnitTypeData(unit_type, "Costs", "gold") or GetFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "lumber") < GetUnitTypeData(unit_type, "Costs", "lumber") or GetFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "stone") < GetUnitTypeData(unit_type, "Costs", "stone")) then
+	if (
+		GetFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), "gold") < GetFactionUnitCost(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), unit_type, "gold")
+		or GetFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), "lumber") < GetFactionUnitCost(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), unit_type, "lumber")
+		or GetFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), "stone") < GetFactionUnitCost(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), unit_type, "stone")
+	) then
 		return false
 	end
 	
@@ -3151,26 +3155,26 @@ function BuildStructure(province, unit_type)
 		end
 
 		SetProvinceCurrentConstruction(province.Name, unit_type)
-		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "gold", - GetUnitTypeData(unit_type, "Costs", "gold"))
-		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "lumber", - GetUnitTypeData(unit_type, "Costs", "lumber"))
-		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "stone", - GetUnitTypeData(unit_type, "Costs", "stone"))
+		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), "gold", - GetFactionUnitCost(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), unit_type, "gold"))
+		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), "lumber", - GetFactionUnitCost(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), unit_type, "lumber"))
+		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), "stone", - GetFactionUnitCost(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), unit_type, "stone"))
 	end
 end
 
 function CancelBuildStructure(province, unit_type)
 	if (GetProvinceCurrentConstruction(province.Name) == unit_type) then
 		SetProvinceCurrentConstruction(province.Name, "")
-		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "gold", GetUnitTypeData(unit_type, "Costs", "gold"))
-		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "lumber", GetUnitTypeData(unit_type, "Costs", "lumber"))
-		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "stone", GetUnitTypeData(unit_type, "Costs", "stone"))
+		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), "gold", GetFactionUnitCost(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), unit_type, "gold"))
+		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), "lumber", GetFactionUnitCost(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), unit_type, "lumber"))
+		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), "stone", GetFactionUnitCost(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), unit_type, "stone"))
 	end
 end
 
 function CanTrainUnit(province, unit_type)
 	if (
-		GetFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "gold") < GetUnitTypeData(unit_type, "Costs", "gold")
-		or GetFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "lumber") < GetUnitTypeData(unit_type, "Costs", "lumber")
-		or GetFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "stone") < GetUnitTypeData(unit_type, "Costs", "stone")
+		GetFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), "gold") < GetFactionUnitCost(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), unit_type, "gold")
+		or GetFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), "lumber") < GetFactionUnitCost(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), unit_type, "lumber")
+		or GetFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), "stone") < GetFactionUnitCost(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), unit_type, "stone")
 		or (GetProvinceAvailableWorkersForTraining(province.Name) < 1 and GetUnitTypeData(unit_type, "Class") ~= "thief")
 	) then
 		return false
@@ -3234,9 +3238,9 @@ function TrainUnit(province, unit_type)
 
 	if (CanTrainUnit(province, unit_type)) then
 		SetProvinceUnderConstructionUnitQuantity(province.Name, unit_type, GetProvinceUnderConstructionUnitQuantity(province.Name, unit_type) + 1)
-		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "gold", - GetUnitTypeData(unit_type, "Costs", "gold"))
-		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "lumber", - GetUnitTypeData(unit_type, "Costs", "lumber"))
-		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "stone", - GetUnitTypeData(unit_type, "Costs", "stone"))
+		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), "gold", - GetFactionUnitCost(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), unit_type, "gold"))
+		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), "lumber", - GetFactionUnitCost(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), unit_type, "lumber"))
+		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), "stone", - GetFactionUnitCost(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), unit_type, "stone"))
 		if (GetUnitTypeData(unit_type, "Class") ~= "thief") then
 			ChangeProvinceUnitQuantity(province.Name, GetFactionClassUnitType("worker", GetProvinceCivilization(province.Name), faction), -1)
 		end
@@ -3251,9 +3255,9 @@ function TrainUnitCancel(province, unit_type)
 
 	if (GetProvinceUnderConstructionUnitQuantity(province.Name, unit_type) >= 1) then
 		SetProvinceUnderConstructionUnitQuantity(province.Name, unit_type, GetProvinceUnderConstructionUnitQuantity(province.Name, unit_type) - 1)
-		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "gold", GetUnitTypeData(unit_type, "Costs", "gold"))
-		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "lumber", GetUnitTypeData(unit_type, "Costs", "lumber"))
-		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetFactionFromName(GetProvinceOwner(province.Name)).Name, "stone", GetUnitTypeData(unit_type, "Costs", "stone"))
+		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), "gold", GetFactionUnitCost(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), unit_type, "gold"))
+		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), "lumber", GetFactionUnitCost(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), unit_type, "lumber"))
+		ChangeFactionResource(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), "stone", GetFactionUnitCost(GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name), unit_type, "stone"))
 		if (GetUnitTypeData(unit_type, "Class") ~= "thief") then
 			ChangeProvinceUnitQuantity(province.Name, GetFactionClassUnitType("worker", GetProvinceCivilization(province.Name), faction), 1)
 		end

@@ -65,13 +65,15 @@ https://github.com/Andrettin/Wyrmsun
 - Added Latin Forum (graphics by Wildfire Games and Jinn).
 
 * Grand Strategy
-- Rulers can now affect revolt risk.
+- Besides rulers, polity factions can now have treasurers and marshals.
+- Rulers and ministers can now affect revolt risk.
 - The ruler interface now shows the ruler's trait.
 - Literary works without a specific author attached to them (i.e. the Alvissmol) will now have a suitable random character become the author, or an author will be generated.
 - Randomly-generated literary works now also appear from time to time.
 - Grand Strategy characters who don't have their own portrait can now be used in battle as well.
 - Noble characters with German names now receive a place-name based family name.
 - Heroes are now generated from time to time, depending on the proportion of provinces with barracks a faction has.
+- Rulers and ministers can now influence troop cost.
 
 * Interface
 - Fixed the issue which caused the loading screen to not properly appear under SDL rendering.
