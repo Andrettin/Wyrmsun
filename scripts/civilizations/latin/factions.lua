@@ -128,35 +128,21 @@ DefineFaction("France", {
 	Civilization = "latin",
 	Type = "polity",
 	Colors = {"blue", "white"},
-	DefaultTier = "kingdom",
-	Titles = {
-		"monarchy", "kingdom", "Kingdom",
-		"monarchy", "empire", "Empire",
-		"republic", "kingdom", "Republic",
-		"republic", "empire", "Republic"
-	}
+	DefaultTier = "kingdom"
 })
 
 DefineFaction("Italy", {
 	Civilization = "latin",
 	Type = "polity",
 	Colors = {"green", "red"},
-	DefaultTier = "kingdom",
-	Titles = {
-		"monarchy", "kingdom", "Kingdom",
-		"republic", "kingdom", "Republic"
-	}
+	DefaultTier = "kingdom"
 })
 
 DefineFaction("Portugal", {
 	Civilization = "latin",
 	Type = "polity",
 	Colors = {"green", "red"},
-	DefaultTier = "kingdom",
-	Titles = {
-		"monarchy", "kingdom", "Kingdom",
-		"republic", "kingdom", "Republic"
-	}
+	DefaultTier = "kingdom"
 })
 
 DefineFaction("Romania", {
@@ -174,6 +160,10 @@ DefineFaction("Moldavia", {
 	DefaultTier = "duchy",
 	Titles = {
 		"monarchy", "duchy", "Principality"
+	},
+	MinisterTitles = {
+		"head-of-state", "male", "monarchy", "duchy", "Prince",
+		"head-of-state", "female", "monarchy", "duchy", "Princess"
 	}
 })
 
@@ -182,12 +172,6 @@ DefineFaction("Rome", {
 	Type = "polity",
 	Colors = {"red", "yellow"},
 	DefaultTier = "kingdom",
-	Titles = {
-		"monarchy", "kingdom", "Kingdom",
-		"monarchy", "empire", "Empire",
-		"republic", "kingdom", "Republic",
-		"republic", "empire", "Republic"
-	},
 	HistoricalFactionDerivations = {-500, "latin", "Latin Tribe"},
 	HistoricalTechnologies = {
 		"upgrade-teuton-masonry", -264, -- Rome should already have masonry technology by then
@@ -200,10 +184,7 @@ DefineFaction("Savoy", {
 	Type = "polity",
 	ParentFaction = "Italy",
 	Colors = {"brown"},
-	DefaultTier = "duchy",
-	Titles = {
-		"monarchy", "duchy", "Duchy"
-	}
+	DefaultTier = "duchy"
 })
 
 DefineFaction("Sicily", {
@@ -211,21 +192,14 @@ DefineFaction("Sicily", {
 	Type = "polity",
 	ParentFaction = "Italy",
 	Colors = {"green"},
-	DefaultTier = "duchy",
-	Titles = {
-		"monarchy", "duchy", "Duchy"
-	}
+	DefaultTier = "duchy"
 })
 
 DefineFaction("Spain", {
 	Civilization = "latin",
 	Type = "polity",
 	Colors = {"yellow", "red"},
-	DefaultTier = "kingdom",
-	Titles = {
-		"monarchy", "kingdom", "Kingdom",
-		"republic", "kingdom", "Republic"
-	}
+	DefaultTier = "kingdom"
 })
 
 DefineFaction("Transylvania", {
@@ -235,6 +209,10 @@ DefineFaction("Transylvania", {
 	DefaultTier = "duchy",
 	Titles = {
 		"monarchy", "duchy", "Principality"
+	},
+	MinisterTitles = {
+		"head-of-state", "male", "monarchy", "duchy", "Prince",
+		"head-of-state", "female", "monarchy", "duchy", "Princess"
 	}
 })
 
@@ -257,5 +235,9 @@ DefineFaction("Wallachia", {
 	DefaultTier = "duchy",
 	Titles = {
 		"monarchy", "duchy", "Principality"
+	},
+	MinisterTitles = {
+		"head-of-state", "male", "monarchy", "duchy", "Prince",
+		"head-of-state", "female", "monarchy", "duchy", "Princess"
 	}
 })

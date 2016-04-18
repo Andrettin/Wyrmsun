@@ -32,8 +32,12 @@ DefineFaction("Austria", {
 	Colors = {"white", "red"},
 	DefaultTier = "duchy",
 	Titles = {
-		"monarchy", "duchy", "Duchy",
 		"monarchy", "grand duchy", "Archduchy"
+	},
+	MinisterTitles = {
+		"head-of-state", "male", "monarchy", "grand duchy", "Archduke",
+		"head-of-state", "female", "monarchy", "kingdom", "Archduchess",
+		"education-minister", "no-gender", "no-government-type", "no-faction-tier", "Education Director" -- Director of the Department of Education (Leiter des Unterrichtsdepartements); Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 41.
 	}
 })
 

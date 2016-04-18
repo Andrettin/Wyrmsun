@@ -129,6 +129,10 @@ DefineFaction("Kal Kartha", {
 	Titles = {
 		"monarchy", "barony", "Lordship"
 	},
+	MinisterTitles = {
+		"head-of-state", "male", "monarchy", "barony", "Lord",
+		"head-of-state", "female", "monarchy", "barony", "Lady"
+	},
 	FactionUpgrade = "upgrade-kal-kartha-faction",
 	HistoricalFactionDerivations = {400, "dwarf", "Brising Clan"},
 	HistoricalTechnologies = {
@@ -150,6 +154,10 @@ DefineFaction("Knalga", {
 	Titles = {
 		"monarchy", "barony", "Lordship"
 	},
+	MinisterTitles = {
+		"head-of-state", "male", "monarchy", "barony", "Lord",
+		"head-of-state", "female", "monarchy", "barony", "Lady"
+	},
 	FactionUpgrade = "upgrade-knalga-faction",
 	HistoricalFactionDerivations = {400, "dwarf", "Norlund Clan"},
 	HistoricalTechnologies = {
@@ -170,6 +178,10 @@ DefineFaction("Joruvellir", {
 	DefaultTier = "barony",
 	Titles = {
 		"monarchy", "barony", "Lordship"
+	},
+	MinisterTitles = {
+		"head-of-state", "male", "monarchy", "barony", "Lord",
+		"head-of-state", "female", "monarchy", "barony", "Lady"
 	},
 	FactionUpgrade = "upgrade-joruvellir-faction",
 	Description = "The arid sands of Joruvellir were first settled by a group of dwarves who had their origins in Svarinshaug.",
@@ -193,6 +205,10 @@ DefineFaction("Lyr", {
 	DefaultTier = "barony",
 	Titles = {
 		"monarchy", "barony", "Lordship"
+	},
+	MinisterTitles = {
+		"head-of-state", "male", "monarchy", "barony", "Lord",
+		"head-of-state", "female", "monarchy", "barony", "Lady"
 	},
 --	FactionUpgrade = "upgrade-lyr-faction",
 	Description = "The shining hall of Lyr was built by a number of skilled dwarven craftsmen who had split off from the Brising clan.",

@@ -2406,6 +2406,12 @@ DefineLanguageWord("Verrostet", {
 	Meanings = {"Rusty"}
 })
 
+DefineLanguageWord("Victor", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {}
+})
+
 DefineLanguageWord("Vier", {
 	Language = "high-german",
 	Type = "numeral",

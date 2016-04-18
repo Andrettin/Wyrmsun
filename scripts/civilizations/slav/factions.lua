@@ -49,10 +49,7 @@ DefineFaction("Croatia", {
 	Type = "polity",
 --	Language = "old-church-slavonic",
 	Colors = {"blue", "red"},
-	DefaultTier = "kingdom",
-	Titles = {
-		"monarchy", "kingdom", "Kingdom"
-	}
+	DefaultTier = "kingdom"
 })
 
 DefineFaction("Muscovy", {
@@ -63,6 +60,10 @@ DefineFaction("Muscovy", {
 	DefaultTier = "duchy",
 	Titles = {
 		"monarchy", "duchy", "Principality"
+	},
+	MinisterTitles = {
+		"head-of-state", "male", "monarchy", "duchy", "Prince",
+		"head-of-state", "female", "monarchy", "duchy", "Princess"
 	}
 })
 
@@ -70,10 +71,7 @@ DefineFaction("Poland", {
 	Civilization = "slav",
 	Type = "polity",
 	Colors = {"red", "white"},
-	DefaultTier = "kingdom",
-	Titles = {
-		"monarchy", "kingdom", "Kingdom"
-	}
+	DefaultTier = "kingdom"
 })
 
 DefineFaction("Russia", {
@@ -81,8 +79,5 @@ DefineFaction("Russia", {
 	Type = "polity",
 	Language = "russian",
 	Colors = {"blue", "red"},
-	DefaultTier = "empire",
-	Titles = {
-		"monarchy", "empire", "Empire"
-	}
+	DefaultTier = "empire"
 })

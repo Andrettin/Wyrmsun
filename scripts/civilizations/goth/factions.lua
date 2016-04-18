@@ -146,9 +146,6 @@ DefineFaction("Burgundy", {
 	Type = "polity",
 	Colors = {"brown"},
 	DefaultTier = "kingdom",
-	Titles = {
-		"monarchy", "kingdom", "Kingdom"
-	},
 	HistoricalFactionDerivations = {411, "goth", "Burgundian Tribe"} -- Kingdom of the Burgundians established by Gundahar (a Burgundian tribal chief) in 411 AD, with its center in Borbetomagus (Worms); Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 91-93.
 })
 
@@ -156,18 +153,12 @@ DefineFaction("Gothia", {
 	Civilization = "goth",
 	Type = "polity",
 	Colors = {"red"},
-	DefaultTier = "kingdom",
-	Titles = {
-		"monarchy", "kingdom", "Kingdom"
-	}
+	DefaultTier = "kingdom"
 })
 
 DefineFaction("Vandalia", {
 	Civilization = "goth",
 	Type = "polity",
 	Colors = {"cyan", "blue"},
-	DefaultTier = "kingdom",
-	Titles = {
-		"monarchy", "kingdom", "Kingdom"
-	}
+	DefaultTier = "kingdom"
 })

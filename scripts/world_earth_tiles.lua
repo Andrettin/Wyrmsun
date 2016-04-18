@@ -813,7 +813,7 @@ DefineWorldMapTile({520, 113}, {
 		"teuton", "Prague"
 	},
 	FactionCulturalSettlementNames = {
-		"teuton", "Marcomanni Tribe", "Bubienum" -- name of the Marcomannic capital; Source: Frederick Kohlrausch, "A History of Germany", 1844, p. 57.
+		"teuton", "Marcomanni Tribe", "Bubienum" -- name of the Marcomannic capital; also known as Marobudum; either located where modern Prague or Budweis are; Source: Frederick Kohlrausch, "A History of Germany", 1844, p. 57.
 	}
 })
 

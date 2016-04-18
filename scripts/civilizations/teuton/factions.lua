@@ -367,10 +367,7 @@ DefineFaction("Baden", {
 	ParentFaction = "Swabia",
 	Type = "polity",
 	Colors = {"black"},
-	DefaultTier = "grand duchy",
-	Titles = {
-		"monarchy", "grand duchy", "Grand Duchy"
-	}
+	DefaultTier = "grand duchy"
 })
 
 DefineFaction("Brandenburg", {
@@ -382,6 +379,10 @@ DefineFaction("Brandenburg", {
 	Titles = {
 		"monarchy", "duchy", "Margravate"
 	},
+	MinisterTitles = {
+		"head-of-state", "male", "monarchy", "duchy", "Margrave",
+		"head-of-state", "female", "monarchy", "duchy", "Margrave" -- correct?
+	},
 	DevelopsTo = {"Prussia"} -- allow Prussia to be formed by a Brandenburg that expands to encompass it
 })
 
@@ -390,10 +391,7 @@ DefineFaction("Bremen", {
 	ParentFaction = "Saxony",
 	Type = "polity",
 	Colors = {"black"},
-	DefaultTier = "duchy",
-	Titles = {
-		"monarchy", "duchy", "Duchy"
-	}
+	DefaultTier = "duchy"
 })
 
 DefineFaction("Brunswick", {
@@ -401,10 +399,7 @@ DefineFaction("Brunswick", {
 	ParentFaction = "Saxony",
 	Type = "polity",
 	Colors = {"green"},
-	DefaultTier = "duchy",
-	Titles = {
-		"monarchy", "duchy", "Duchy"
-	}
+	DefaultTier = "duchy"
 })
 
 DefineFaction("Francia", {
@@ -413,9 +408,6 @@ DefineFaction("Francia", {
 	Type = "polity",
 	Colors = {"green", "orange"},
 	DefaultTier = "kingdom",
-	Titles = {
-		"monarchy", "kingdom", "Kingdom"
-	},
 	HistoricalFactionDerivations = {481, "teuton", "Frank Tribe"}, -- In 481 AD the Franks had already established their kingdom; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
 	HistoricalTechnologies = {
 		"upgrade-teuton-coinage", 565 -- Merovingian Francia began to issue gold solidi at some point between 565 and 578 AD; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, p. 176.
@@ -428,11 +420,7 @@ DefineFaction("Netherlands", {
 	Type = "polity",
 --	Language = "dutch",
 	Colors = {"orange", "blue"},
-	DefaultTier = "kingdom",
-	Titles = {
-		"monarchy", "kingdom", "Kingdom",
-		"republic", "kingdom", "Republic"
-	}
+	DefaultTier = "kingdom"
 })
 
 DefineFaction("Drenthe", {
@@ -450,10 +438,7 @@ DefineFaction("England", {
 	Type = "polity",
 	Language = "english",
 	Colors = {"red", "white"},
-	DefaultTier = "kingdom",
-	Titles = {
-		"monarchy", "kingdom", "Kingdom"
-	}
+	DefaultTier = "kingdom"
 })
 
 DefineFaction("Austrasia", {
@@ -505,9 +490,6 @@ DefineFaction("Galicia", { -- Suebi kingdom of Galicia
 	Type = "polity",
 	Colors = {"black"},
 	DefaultTier = "kingdom",
-	Titles = {
-		"monarchy", "kingdom", "Kingdom"
-	},
 	HistoricalFactionDerivations = {486, "teuton", "Suebi Tribe"}
 })
 
@@ -547,10 +529,7 @@ DefineFaction("Jutland", {
 	ParentFaction = "Jute Tribe",
 	Type = "polity",
 	Colors = {"red", "white"},
-	DefaultTier = "duchy",
-	Titles = {
-		"monarchy", "duchy", "Duchy"
-	}
+	DefaultTier = "duchy"
 })
 
 DefineFaction("Magdeburg", {
@@ -570,9 +549,6 @@ DefineFaction("Mecklenburg", {
 	Type = "polity",
 	Colors = {"brown"},
 	DefaultTier = "grand duchy",
-	Titles = {
-		"monarchy", "grand duchy", "Grand Duchy"
-	},
 	FactionUpgrade = "upgrade-mecklenburg-faction"
 })
 
@@ -590,11 +566,7 @@ DefineFaction("Prussia", {
 	ParentFaction = "Brandenburg",
 	Type = "polity",
 	Colors = {"black", "white"},
-	DefaultTier = "duchy",
-	Titles = {
-		"monarchy", "duchy", "Duchy",
-		"monarchy", "kingdom", "Kingdom"
-	}
+	DefaultTier = "duchy"
 })
 
 DefineFaction("Scotland", {
@@ -603,10 +575,7 @@ DefineFaction("Scotland", {
 	Type = "polity",
 	Language = "english",
 	Colors = {"blue", "white"},
-	DefaultTier = "kingdom",
-	Titles = {
-		"monarchy", "kingdom", "Kingdom"
-	}
+	DefaultTier = "kingdom"
 })
 
 DefineFaction("Switzerland", {
@@ -636,10 +605,7 @@ DefineFaction("Westphalia", {
 	ParentFaction = "Saxony",
 	Type = "polity",
 	Colors = {"black"},
-	DefaultTier = "duchy",
-	Titles = {
-		"monarchy", "duchy", "Duchy"
-	}
+	DefaultTier = "duchy"
 })
 
 DefineFaction("Wurtemberg", {
@@ -647,10 +613,7 @@ DefineFaction("Wurtemberg", {
 	ParentFaction = "Swabia",
 	Type = "polity",
 	Colors = {"red"},
-	DefaultTier = "kingdom",
-	Titles = {
-		"monarchy", "kingdom", "Kingdom"
-	}
+	DefaultTier = "kingdom"
 })
 
 -- Non-Playable Polities
@@ -663,6 +626,10 @@ DefineFaction("Crimea", {
 	DefaultTier = "kingdom",
 	Titles = {
 		"monarchy", "kingdom", "Khanate"
+	},
+	MinisterTitles = {
+		"head-of-state", "male", "monarchy", "kingdom", "Khan",
+		"head-of-state", "female", "monarchy", "kingdom", "Khan" -- correct?
 	}
 })
 
@@ -671,10 +638,7 @@ DefineFaction("Hungary", {
 	Type = "polity",
 	Colors = {"green"},
 	Playable = false,
-	DefaultTier = "kingdom",
-	Titles = {
-		"monarchy", "kingdom", "Kingdom"
-	}
+	DefaultTier = "kingdom"
 })
 
 DefineFaction("Turkey", {
@@ -682,10 +646,7 @@ DefineFaction("Turkey", {
 	Type = "polity",
 	Colors = {"brown"},
 	Playable = false,
-	DefaultTier = "empire",
-	Titles = {
-		"monarchy", "empire", "Empire"
-	}
+	DefaultTier = "empire"
 })
 
 Load("scripts/civilizations/teuton/factions_austrian.lua")

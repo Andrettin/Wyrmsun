@@ -25,6 +25,14 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineUpgrade("upgrade-work-austria-and-her-future", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 46; Source: A.J.P. Taylor, The Habsburg Monarchy, 1809-1918, 1964, pp. 55-56.
+	Name = _("Austria and Her Future"),
+	Work = "scroll", -- Schrift
+	Civilization = "teuton",
+	Description = "In \"Austria and her Future\" (\"Österreich und dessen Zukunft\"), Victor Andrian-Werburg argues that the Empire is nothing and the provinces are all, arousing the opinion of the educated administrative class.",
+	Year = 1850
+})
+
 DefineUpgrade("upgrade-work-hildebrandslied", {
 	Name = _("Hildebrandslied"),
 	NameElements = {

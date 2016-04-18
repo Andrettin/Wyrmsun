@@ -104,30 +104,21 @@ DefineFaction("Epirus", {
 	Civilization = "greek",
 	Type = "polity",
 	Colors = {"yellow"},
-	DefaultTier = "kingdom",
-	Titles = {
-		"monarchy", "kingdom", "Kingdom"
-	}
+	DefaultTier = "kingdom"
 })
 
 DefineFaction("Krete", {
 	Civilization = "greek",
 	Type = "polity",
 	Colors = {"yellow"},
-	DefaultTier = "kingdom",
-	Titles = {
-		"monarchy", "kingdom", "Kingdom"
-	}
+	DefaultTier = "kingdom"
 })
 
 DefineFaction("Macedon", {
 	Civilization = "greek",
 	Type = "polity",
 	Colors = {"brown", "red"},
-	DefaultTier = "kingdom",
-	Titles = {
-		"monarchy", "kingdom", "Kingdom"
-	}
+	DefaultTier = "kingdom"
 })
 
 DefineFaction("Sparta", {
@@ -158,8 +149,5 @@ DefineFaction("Thrace", {
 	Civilization = "greek",
 	Type = "polity",
 	Colors = {"orange"},
-	DefaultTier = "kingdom",
-	Titles = {
-		"monarchy", "kingdom", "Kingdom"
-	}
+	DefaultTier = "kingdom"
 })

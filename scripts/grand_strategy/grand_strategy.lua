@@ -2500,7 +2500,7 @@ function DrawGrandStrategyInterface()
 			elseif (GrandStrategyInterfaceState == "Ruler") then
 				local item_x = 0
 				local item_y = 0
-				local minister_types = {"head-of-state", "head-of-government", "finance-minister", "foreign-minister", "intelligence-minister", "interior-minister", "justice-minister", "war-minister"}
+				local minister_types = {"head-of-state", "head-of-government", "education-minister", "finance-minister", "foreign-minister", "intelligence-minister", "interior-minister", "justice-minister", "war-minister"}
 				
 				for i = 1, table.getn(minister_types) do
 					if (GetFactionMinister(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, minister_types[i]) ~= "") then

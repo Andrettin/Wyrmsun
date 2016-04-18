@@ -57,11 +57,7 @@ DefineFaction("Denmark", {
 	Civilization = "norse",
 	Type = "polity",
 	Colors = {"red", "white"},
-	DefaultTier = "kingdom",
-	Titles = {
-		"monarchy", "kingdom", "Kingdom"
-	}
-})
+	DefaultTier = "kingdom"})
 
 DefineFaction("Gautland", {
 	Civilization = "norse",
@@ -89,10 +85,7 @@ DefineFaction("Norway", {
 	Civilization = "norse",
 	Type = "polity",
 	Colors = {"blue", "red"},
-	DefaultTier = "kingdom",
-	Titles = {
-		"monarchy", "kingdom", "Kingdom"
-	}
+	DefaultTier = "kingdom"
 })
 
 DefineFaction("Orkney", { -- Earldom of Orkney
@@ -103,6 +96,10 @@ DefineFaction("Orkney", { -- Earldom of Orkney
 	Titles = {
 		"monarchy", "duchy", "Earldom"
 	},
+	MinisterTitles = {
+		"head-of-state", "male", "monarchy", "duchy", "Earl",
+		"head-of-state", "female", "monarchy", "duchy", "Earl" -- correct?
+	},
 	DevelopsTo = {"Norway"}
 })
 
@@ -110,8 +107,5 @@ DefineFaction("Sweden", {
 	Civilization = "norse",
 	Type = "polity",
 	Colors = {"blue", "yellow"},
-	DefaultTier = "kingdom",
-	Titles = {
-		"monarchy", "kingdom", "Kingdom"
-	}
+	DefaultTier = "kingdom"
 })

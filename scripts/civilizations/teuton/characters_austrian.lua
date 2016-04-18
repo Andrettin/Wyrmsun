@@ -93,7 +93,10 @@ DefineCharacter("Leopold Hasner", { -- Source: Waltraud Heindl, "Josephinische M
 	Faction = "Austria",
 	ProvinceOfOrigin = "Bohemia", -- presumably
 	Year = 1818, -- born
-	DeathYear = 1891 -- died
+	DeathYear = 1891, -- died
+	HistoricalTitles = {
+		"education-minister", 0, 0, "teuton", "Austria"
+	}
 	-- Knight (Ritter) of Artha
 })
 
@@ -141,8 +144,24 @@ DefineCharacter("von Pillersdorf", { -- Source: Waltraud Heindl, "Josephinische 
 	Noble = true,
 	HistoricalTitles = {
 		"head-of-government", 1848, 1848, "teuton", "Austria", -- was Minister-President of Austria during 1848
-		"head-of-state", 1848, 0, "teuton", "Pillersdorf" -- was alreadyFreiherr (Baron) of Pillersdorf in 1848
+		"head-of-state", 1848, 0, "teuton", "Pillersdorf" -- was already Freiherr (Baron) of Pillersdorf in 1848
 	}
+})
+
+DefineCharacter("Victor Andrian-Werburg", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 46; Source: A.J.P. Taylor, The Habsburg Monarchy, 1809-1918, 1964, pp. 55-56.
+	Name = "Victor",
+	NameElements = {"word", "high-german", "noun", "Victor"},
+	FamilyName = "Andrian-Werburg", -- presumably
+	NobleFamilyNamePredicateElements = {"word", "high-german", "adposition", "Von"},
+	PlaceNameDerivedFamilyName = true, -- presumably
+	Gender = "male",
+	Type = "unit-teuton-swordsman", -- member of the Tyrolese provincial diet
+	Civilization = "teuton",
+	Faction = "Austria",
+	ProvinceOfOrigin = "Austria", -- Tyrol
+	Year = 1850, -- published "Austria and Her Future" (Österreich und dessen Zukunft") anonymously in 1850
+	AuthoredWorks = {"upgrade-work-austria-and-her-future"}
+	-- a "conservative thinker"
 })
 
 DefineCharacter("Johann Baptist von Hoffinger", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 41.

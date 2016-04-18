@@ -134,10 +134,7 @@ DefineFaction("Untersberg", {
 	Civilization = "gnome",
 	Type = "polity",
 	Colors = {"purple"},
-	DefaultTier = "kingdom",
-	Titles = {
-		"monarchy", "kingdom", "Kingdom"
-	}
+	DefaultTier = "kingdom"
 })
 
 DefineFaction("Khag Tribe", {
@@ -216,10 +213,7 @@ DefineFaction("Persia", {
 	Civilization = "persian",
 	Type = "polity",
 	Colors = {"yellow", "green"},
-	DefaultTier = "kingdom",
-	Titles = {
-		"monarchy", "kingdom", "Kingdom"
-	}
+	DefaultTier = "kingdom"
 })
 
 DefineFaction("Carthage", {
