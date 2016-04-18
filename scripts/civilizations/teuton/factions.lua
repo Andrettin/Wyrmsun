@@ -502,6 +502,9 @@ DefineFaction("Hesse", {
 	DefaultTier = "duchy", -- Hesse was a landgraviate in 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
 	Titles = {
 		"monarchy", "duchy", "Landgraviate"
+	},
+	HistoricalTiers = {
+		1815, "grand duchy" -- Hesse was a grand duchy in 1815-1866 (there were two German states called "Hesse" then, the Grand Duchy of Hesse and the Electorate of Hesse); Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	}
 })
 

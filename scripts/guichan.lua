@@ -1505,31 +1505,33 @@ function GameStarting()
 		end
 	end
 	
-	if (GrandStrategy and GrandStrategyBattleBaseBuilding and GrandStrategyEventMap == false) then
-		-- add workers to grand strategy battles, if base building is active
-		
-		for i=0,14 do
-			if (Map.Info.PlayerType[i] == PlayerPerson or Map.Info.PlayerType[i] == PlayerComputer) then
-				local worker_type = GetPlayerClassType("worker", i, Defender == GetPlayerData(i, "Name"))
-				if (worker_type ~= nil) then
-					for j=1,5 do
-						unit = OldCreateUnit(worker_type, i, {Players[i].StartPos.x, Players[i].StartPos.y})
-						SetUnitVariable(unit, "Starting", false)
+	if (GrandStrategy and GrandStrategyEventMap == false) then
+		if (GrandStrategyBattleBaseBuilding) then
+			-- add workers to grand strategy battles, if base building is active
+			
+			for i=0,14 do
+				if (Map.Info.PlayerType[i] == PlayerPerson or Map.Info.PlayerType[i] == PlayerComputer) then
+					local worker_type = GetPlayerClassType("worker", i, Defender == GetPlayerData(i, "Name"))
+					if (worker_type ~= nil) then
+						for j=1,5 do
+							unit = OldCreateUnit(worker_type, i, {Players[i].StartPos.x, Players[i].StartPos.y})
+							SetUnitVariable(unit, "Starting", false)
+						end
 					end
 				end
 			end
-		end
-		
-		-- add buildings for defenders of grand strategy battles, if base building is active
-		local defender_player = GetFactionPlayer(Defender)
-		for i, unitName in ipairs(Units) do
-			if (string.find(unitName, "upgrade-") == nil) then
-				if (GetUnitTypeData(unitName, "Building") and unitName ~= "unit-mercenary-camp" and GetProvinceSettlementBuilding(AttackedProvince.Name, unitName)) then
-					if (GetUnitTypeData(unitName, "Class") == "stronghold") then
-						local town_hall = FindUnitOfClass("town-hall", defender_player, true)
-						ConvertUnit(town_hall, unitName)
-					else
-						GenerateBuilding(unitName, defender_player)
+			
+			-- add buildings for defenders of grand strategy battles, if base building is active
+			local defender_player = GetFactionPlayer(Defender)
+			for i, unitName in ipairs(Units) do
+				if (string.find(unitName, "upgrade-") == nil) then
+					if (GetUnitTypeData(unitName, "Building") and unitName ~= "unit-mercenary-camp" and GetProvinceSettlementBuilding(AttackedProvince.Name, unitName)) then
+						if (GetUnitTypeData(unitName, "Class") == "stronghold") then
+							local town_hall = FindUnitOfClass("town-hall", defender_player, true)
+							ConvertUnit(town_hall, unitName)
+						else
+							GenerateBuilding(unitName, defender_player)
+						end
 					end
 				end
 			end

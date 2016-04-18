@@ -1864,7 +1864,6 @@ if (GrandStrategyYear >= 1560) then
 	SetProvinceOwner("Neumark", "teuton", "Brandenburg")
 	SetProvinceOwner("Prussia", "teuton", "Prussia")
 	
-	SetFactionTier("teuton", "Austria", "grand duchy")
 	SetProvinceOwner("Carniola", "teuton", "Austria")
 	SetProvinceOwner("Istria", "teuton", "Austria") -- the outer parts of Istria were owned by Venice, but the inner parts (including Trieste) were owned by Austria)
 	SetProvinceOwner("Silesia", "teuton", "Austria")
@@ -1973,10 +1972,6 @@ end
 
 if (GrandStrategyYear >= 1781) then -- The Serfdom Act for Bohemia and Moravia enacted in 1781 by Emperor Joseph II; Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 14.
 	GrandStrategyEvents.TheSerfdomActForBohemiaAndMoravia = nil
-end
-
-if (GrandStrategyYear >= 1815) then
-	SetFactionTier("teuton", "Hesse", "grand duchy") -- Hesse was a grand duchy in 1815-1866 (there were two German states called "Hesse" then, the Grand Duchy of Hesse and the Electorate of Hesse); Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 end
 
 if (GrandStrategyYear >= 1833) then -- Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 17.

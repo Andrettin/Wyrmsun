@@ -1563,8 +1563,7 @@ DefineLanguageWord("Land", {
 DefineLanguageWord("Leopold", {
 	Language = "high-german",
 	Type = "noun",
-	Meanings = {},
-	NameTypes = {"person-male"}
+	Meanings = {}
 })
 
 DefineLanguageWord("Lied", { -- Source: http://www.duden.de/rechtschreibung/Lied

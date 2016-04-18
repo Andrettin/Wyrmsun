@@ -148,6 +148,27 @@ DefineCharacter("von Pillersdorf", { -- Source: Waltraud Heindl, "Josephinische 
 	}
 })
 
+DefineCharacter("Franz Joseph von Habsburg", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 48.
+	Name = "Franz Joseph",
+	NameElements = {
+		"word", "high-german", "noun", "Franz",
+		"word", "high-german", "noun", "Joseph"
+	},
+	FamilyName = "von Habsburg",
+	NobleFamilyNamePredicateElements = {"word", "high-german", "adposition", "Von"},
+	PlaceNameDerivedFamilyName = true, -- presumably
+	Gender = "male",
+	Type = "unit-teuton-ritter", -- Emperor of Austria
+	Civilization = "teuton",
+	Faction = "Austria",
+	ProvinceOfOrigin = "Austria", -- presumably
+	Year = 1830, -- born (became Emperor in 1848, when he was 18 years old)
+	Noble = true,
+	HistoricalTitles = {
+		"head-of-state", 1848, 0, "teuton", "Austria" -- became Emperor of Austria in 1848
+	}
+})
+
 DefineCharacter("Victor Andrian-Werburg", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 46; Source: A.J.P. Taylor, The Habsburg Monarchy, 1809-1918, 1964, pp. 55-56.
 	Name = "Victor",
 	NameElements = {"word", "high-german", "noun", "Victor"},
