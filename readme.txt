@@ -74,6 +74,11 @@ https://github.com/Andrettin/Wyrmsun
 - Noble characters with German names now receive a place-name based family name.
 - Heroes are now generated from time to time, depending on the proportion of provinces with barracks a faction has.
 - Rulers and ministers can now influence troop cost.
+- Settlements' names are now written on the map below them, along with the name of their province.
+
+* Heroes
+- Dwarven axefighter heroes now have different weapon unit graphics when holding a mace-class weapon.
+- Dwarven axefighters and steelclads can now equip mace-class items.
 
 * Interface
 - Fixed the issue which caused the loading screen to not properly appear under SDL rendering.
