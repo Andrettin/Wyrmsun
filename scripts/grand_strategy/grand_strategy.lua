@@ -1933,6 +1933,33 @@ function AddGrandStrategyMercenaryButton(x, y, unit_type)
 	return UIElements[table.getn(UIElements)]
 end
 
+function AddGrandStrategyModifierButton(x, y, upgrade_ident)
+	UIElements[table.getn(UIElements) + 1] = ImageButton("")
+	UIElements[table.getn(UIElements)]:setActionCallback(
+		function()
+			PlaySound("click")
+			DrawGrandStrategyInterface()
+		end
+	)
+	GrandStrategyMenu:add(UIElements[table.getn(UIElements)], x, y)
+	UIElements[table.getn(UIElements)]:setBorderSize(0) -- Andrettin: make buttons not have the borders they previously had
+
+	local modifier_icon = CGraphic:New(CUpgrade:Get(upgrade_ident).ModifierGraphicFile)
+	modifier_icon:Load()
+--	UIElements[table.getn(UIElements)]:setBaseColor(Color(0,0,0,0))
+--	UIElements[table.getn(UIElements)]:setForegroundColor(Color(0,0,0,0))
+--	UIElements[table.getn(UIElements)]:setBackgroundColor(Color(0,0,0,0))
+	UIElements[table.getn(UIElements)]:setNormalImage(modifier_icon)
+	UIElements[table.getn(UIElements)]:setPressedImage(modifier_icon)
+	UIElements[table.getn(UIElements)]:setDisabledImage(modifier_icon)
+	UIElements[table.getn(UIElements)]:setSize(14, 14)
+	UIElements[table.getn(UIElements)]:setFont(Fonts["game"])
+
+	UIElements[table.getn(UIElements)]:setTooltip(CUpgrade:Get(upgrade_ident).Name .. "\n" .. GetUpgradeEffectsString(upgrade_ident, true, true))
+	
+	return UIElements[table.getn(UIElements)]
+end
+
 function DrawGrandStrategyInterface()
 	if (UIElements ~= nil) then
 		for i=1,table.getn(UIElements) do
@@ -2086,6 +2113,17 @@ function DrawGrandStrategyInterface()
 							end
 						end
 					end
+				end
+				
+				item_y = 0
+				local province_modifiers = GetGrandStrategyProvinceData(SelectedProvince.Name, "Modifiers")
+				for i = 1, table.getn(province_modifiers) do
+					local icon_offset_x = UI.InfoPanel.X
+					local icon_offset_y = UI.InfoPanel.Y + 40 + (item_y * (14 + 1))
+
+					AddGrandStrategyModifierButton(icon_offset_x, icon_offset_y, province_modifiers[i])
+
+					item_y = item_y + 1
 				end
 			elseif (GrandStrategyInterfaceState == "town-hall" or GrandStrategyInterfaceState == "stronghold") then
 				if ((GetProvinceCivilization(SelectedProvince.Name) == "teuton" or GetCivilizationData(GetProvinceCivilization(SelectedProvince.Name), "ParentCivilization") == "teuton") and FactionHasTechnologyType(GrandStrategyFaction, "masonry") == false) then
@@ -3796,7 +3834,23 @@ function GrandStrategyEvent(faction, event)
 					end
 				)
 				if (event.OptionTooltips ~= nil and event.OptionTooltips[i] ~= nil) then
-					b:setTooltip(event.OptionTooltips[i])
+					local tooltip = event.OptionTooltips[i]
+					if (EventProvince ~= nil) then
+						if (string.find(tooltip, "PROVINCE_NAME") ~= nil) then
+							tooltip = string.gsub(tooltip, "PROVINCE_NAME", GetProvinceName(EventProvince))
+						end
+						if (string.find(tooltip, "PROVINCE_SETTLEMENT_NAME") ~= nil) then
+							if (GetProvinceSettlementName(EventProvince) ~= nil) then
+								tooltip = string.gsub(tooltip, "PROVINCE_SETTLEMENT_NAME", GetProvinceSettlementName(EventProvince))
+							else
+								tooltip = string.gsub(tooltip, "PROVINCE_SETTLEMENT_NAME", GetProvinceName(EventProvince) .. "'s capital")
+							end
+						end
+						if (string.find(tooltip, "CULTURE_NAME") ~= nil) then
+							tooltip = string.gsub(tooltip, "CULTURE_NAME", GetCivilizationData(EventFaction.Civilization, "Adjective"))
+						end
+					end
+					b:setTooltip(tooltip)
 				end
 			end
 		end

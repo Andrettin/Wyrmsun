@@ -492,5 +492,6 @@ DefineModifier("upgrade-wyrm-child",
 Load("scripts/item_prefixes.lua")
 Load("scripts/item_suffixes.lua")
 Load("scripts/item_suffixes_runic.lua")
+Load("scripts/province_modifiers.lua")
 Load("scripts/traits.lua")
 Load("scripts/works.lua")
