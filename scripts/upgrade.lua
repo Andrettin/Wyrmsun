@@ -199,6 +199,16 @@ DefineUpgrade("upgrade-alchemy", {
 	GrandStrategyCosts = {"time", 250, "gold", 4000, "research", 4000}
 })
 
+DefineUpgrade("upgrade-printing-press", {
+	Name = _("Printing Press"),
+	Class = "printing-press",
+	Description = _("The invention of the printing press allowed knowledge to be more quickly and more efficiently spread."),
+	Icon = "icon-printing-press",
+	Costs = {"time", 250, "gold", 2000, "lumber", 2000},
+	GrandStrategyCosts = {"time", 250, "gold", 2000, "lumber", 2000, "research", 4000},
+	GrandStrategyProductionEfficiencyModifier = {"research", 25}
+})
+
 -- Load the different civilizations
 Load("scripts/civilizations/celt/upgrade.lua")
 Load("scripts/civilizations/dwarf/upgrade.lua")
