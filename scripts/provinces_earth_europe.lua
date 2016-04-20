@@ -153,6 +153,12 @@ DefineProvince("Andalusia", {
 	SettlementLocation = {466, 148}, -- Cordoba
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
+	HistoricalOwners = {
+		-218, "phoenician", "Carthage", -- Carthaginian territory in 218 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 32.
+		-197, "latin", "Rome", -- Hispania Tarraconensis and (most of) Farther Baetica acquired by Rome in 197 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		486, "goth", "Visigoth Tribe", -- Kingdom of the Visigoths; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		1560, "latin", "Spain" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
 	HistoricalModifiers = {
 		1504, "upgrade-university", true, -- Major university founded in Seville in 1504. Source: The Cambridge Modern History Atlas, p. 9 and Enrique Martínez Ruiz; Consuelo Maqueda, Atlas Histórico de España I, 2000, p. 225.
 		1531, "upgrade-university", true, -- University founded in Granada in 1531. Source: The Cambridge Modern History Atlas, p. 9.
@@ -282,6 +288,15 @@ DefineProvince("Aragon", {
 	Coastal = true,
 	Claims = {
 		"basque", "Cardialware Tribe"
+	},
+	HistoricalOwners = {
+		-7000, "basque", "Cardialware Tribe", -- Cardial Pottery culture existed in the eastern Iberian coast between 7000 and 2000 BC; Source: "Atlas de História Mundial", 2001, pp. 40-41.
+		-201, "latin", "Rome", -- Hither Baetica acquired by Rome in 201 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		486, "goth", "Visigoth Tribe", -- Kingdom of the Visigoths; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		1560, "latin", "Spain" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalCultures = {
+		-7000, "basque" -- Cardial Pottery culture existed in the eastern Iberian coast between 7000 and 2000 BC; Source: "Atlas de História Mundial", 2001, pp. 40-41.
 	},
 	HistoricalModifiers = {
 		1300, "upgrade-university", true, -- Major university founded in Lerida in 1300. Source: William R. Shepherd, Historical Atlas, 1923, p. 100 and Enrique Martínez Ruiz; Consuelo Maqueda, Atlas Histórico de España I, 2000, p. 225.
@@ -1018,6 +1033,11 @@ DefineProvince("Castille", {
 	SettlementLocation = {469, 141}, -- Madrid
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
+	HistoricalOwners = {
+		-197, "latin", "Rome", -- Hispania Tarraconensis and (most of) Farther Baetica acquired by Rome in 197 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		486, "goth", "Visigoth Tribe", -- Kingdom of the Visigoths; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		1560, "latin", "Spain" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
 	HistoricalModifiers = {
 		1212, "upgrade-university", true, -- University founded in Palencia in 1212. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.
 		1230, "upgrade-university", true, -- University founded in Salamanca in 1230. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.

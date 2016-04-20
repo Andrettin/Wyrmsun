@@ -160,10 +160,6 @@ if (GrandStrategyYear >= -7000) then
 	
 	-- In the Mediterranean coasts of northwestern Europe, material aspects of the Neolithic (like grinding stones and pottery) begin to appear around the 7th millenium BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 150.
 
-	-- Cardial Pottery culture existed in the eastern Iberian coast between 7000 and 2000 BC; Source: "Atlas de História Mundial", 2001, pp. 40-41.
-	SetProvinceOwner("Aragon", "basque", "Cardialware Tribe")
-	SetProvinceCivilization("Aragon", "basque")
-
 	-- Impressed Cardial Pottery culture existed in parts of the Aegean between 7000 and 2000 BC; Source: "Atlas de História Mundial", 2001, pp. 40-41.
 	SetProvinceOwner("Thessaly", "minoan", "Impressedware Tribe")
 	SetProvinceCivilization("Thessaly", "minoan")
@@ -912,12 +908,8 @@ end
 
 if (GrandStrategyYear >= -218) then
 	-- Carthaginian territory in 218 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 32.
-	SetProvinceOwner("Andalusia", "phoenician", "Carthage") -- should also include Portugal and Castille south of the Tagus, and Aragon south of the Ebrus
+	-- contains Andalusia in the province's definition; should also include Portugal and Castille south of the Tagus, and Aragon south of the Ebrus
 	SetFactionGovernmentType("phoenician", "Carthage", "republic")
-end
-
-if (GrandStrategyYear >= -201) then -- Hither Baetica acquired by Rome in 201 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-	SetProvinceOwner("Aragon", "latin", "Rome")
 end
 
 if (GrandStrategyYear >= -200) then
@@ -931,11 +923,6 @@ if (GrandStrategyYear >= -200) then
 	SetFactionDiplomacyState("greek", "Athens", "greek", "Macedon", "peace")
 	SetFactionDiplomacyState("greek", "Sparta", "greek", "Macedon", "peace")
 	SetFactionDiplomacyState("greek", "Thebes", "greek", "Macedon", "peace")
-end
-
-if (GrandStrategyYear >= -197) then -- Hispania Tarraconensis and (most of) Farther Baetica acquired by Rome in 197 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-	SetProvinceOwner("Castille", "latin", "Rome")
-	SetProvinceOwner("Andalusia", "latin", "Rome")
 end
 
 if (GrandStrategyYear >= -191) then -- Cisalpine Gaul acquired by Rome in 191 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
@@ -1356,11 +1343,6 @@ if (GrandStrategyYear >= 486) then
 	SetProvinceUnitQuantity("Corsica", "unit-germanic-warrior", 0) -- let's remove those oodles of warriors placed there to make this province difficult to conquer
 	SetProvinceOwner("Sardinia", "goth", "Vandal Tribe") -- Sardinia was a part of the Kingdom of the Vandals in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 	SetProvinceUnitQuantity("Sardinia", "unit-germanic-warrior", 0) -- let's remove those oodles of warriors placed there to make this province difficult to conquer
-	SetProvinceOwner("Castille", "goth", "Visigoth Tribe") -- Kingdom of the Visigoths; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-	SetProvinceUnitQuantity("Castille", "unit-germanic-warrior", 0)
-	SetProvinceOwner("Andalusia", "goth", "Visigoth Tribe") -- Kingdom of the Visigoths; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-	SetProvinceOwner("Aragon", "goth", "Visigoth Tribe") -- Kingdom of the Visigoths; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-	SetProvinceUnitQuantity("Aragon", "unit-germanic-warrior", 0)
 end
 
 if (GrandStrategyYear >= 488) then
@@ -1834,10 +1816,6 @@ end
 
 if (GrandStrategyYear >= 1560) then
 	-- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
-	SetProvinceOwner("Aragon", "latin", "Spain")
-	SetProvinceOwner("Castille", "latin", "Spain")
-	SetProvinceOwner("Andalusia", "latin", "Spain")
-
 	SetProvinceOwner("Aquitaine", "latin", "France")
 	SetProvinceOwner("Brittany", "latin", "France")
 	SetProvinceOwner("Provence", "latin", "France")
