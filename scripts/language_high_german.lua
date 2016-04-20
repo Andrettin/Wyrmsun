@@ -76,6 +76,12 @@ DefineLanguageWord("Albrecht", {
 	NameTypes = {"person-male"}
 })
 
+DefineLanguageWord("Alexander", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {}
+})
+
 DefineLanguageWord("Alp", {
 	Language = "high-german",
 	Type = "noun",
@@ -600,6 +606,12 @@ DefineLanguageWord("Drei", {
 	Language = "high-german",
 	Type = "numeral",
 	Number = 3
+})
+
+DefineLanguageWord("Eduard", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {}
 })
 
 DefineLanguageWord("Eisen", {
@@ -2122,6 +2134,12 @@ DefineLanguageWord("See", {
 		"singular", "genitive", "Sees",
 		"plural", "nominative", "Seen"
 	}
+})
+
+DefineLanguageWord("Seraph", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {}
 })
 
 DefineLanguageWord("Sieg", {

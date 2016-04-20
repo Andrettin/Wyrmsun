@@ -49,6 +49,14 @@ DefineFaction("Austria", {
 	-- 31.12.1851: New Year Patent (Silvesterpatent) abolishes the constitution of 1849; Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 48.
 })
 
+DefineFaction("Bach", { -- titular barony granted to Alexander Bach in 1853; Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 50.
+	Civilization = "teuton",
+	ParentFaction = "Austria",
+	Type = "polity",
+	Colors = {"blue"},
+	DefaultTier = "barony"
+})
+
 DefineFaction("Lasser", { -- titular barony belonging to Joseph Anton von Lasser; Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 41.
 	Civilization = "teuton",
 	ParentFaction = "Austria",

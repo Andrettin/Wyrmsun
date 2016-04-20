@@ -185,6 +185,63 @@ DefineCharacter("Victor Andrian-Werburg", { -- Source: Waltraud Heindl, "Josephi
 	-- a "conservative thinker"
 })
 
+DefineCharacter("Franz Seraph Stadion", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 50.
+	Name = "Franz Seraph",
+	NameElements = {
+		"word", "high-german", "noun", "Franz",
+		"word", "high-german", "noun", "Seraph"
+	},
+	FamilyName = "Stadion",
+	Gender = "male",
+	Type = "unit-teuton-ritter",
+	Civilization = "teuton",
+	Faction = "Austria",
+	ProvinceOfOrigin = "Austria", -- presumably
+	DeathYear = 1853, -- died
+	HistoricalTitles = {
+		"interior-minister", 0, 1849, "teuton", "Austria" -- Interior Minister (Innenminister) of Austria until May 1849, when he became severely ill
+	}
+	-- count (of Stadion?)
+})
+
+DefineCharacter("Alexander von Bach", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 50.
+	Name = "Alexander",
+	NameElements = {"word", "high-german", "noun", "Alexander"},
+	FamilyName = "von Bach",
+	NobleFamilyNamePredicateElements = {"word", "high-german", "adposition", "Von"},
+	PlaceNameDerivedFamilyName = true, -- presumably
+	Gender = "male",
+	Type = "unit-teuton-ritter",
+	Civilization = "teuton",
+	Faction = "Austria",
+	ProvinceOfOrigin = "Austria", -- presumably
+	Year = 1813, -- born
+	DeathYear = 1893, -- died
+	Noble = true,
+	HistoricalTitles = {
+		"interior-minister", 1849, 0, "teuton", "Austria", -- became Interior Minister (Innenminister) of Austria in 15.08.1849
+		"head-of-state", 1853, 1893, "teuton", "Bach" -- became Baron (Freiherr) of Bach in 1853
+	}
+})
+
+DefineCharacter("Eduard von Bach", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 52.
+	Name = "Eduard",
+	NameElements = {"word", "high-german", "noun", "Eduard"},
+	FamilyName = "von Bach", -- source gives him as "Eduard Bach"; it is not clear if he and his brother had the "von" predicate from birth or not
+	NobleFamilyNamePredicateElements = {"word", "high-german", "adposition", "Von"},
+	PlaceNameDerivedFamilyName = true, -- presumably
+	Gender = "male",
+	Type = "unit-teuton-ritter",
+	Civilization = "teuton",
+	Faction = "Austria",
+	ProvinceOfOrigin = "Austria", -- presumably
+	DateReferenceCharacter = "Alexander von Bach", -- brother of Alexander von Bach
+	Noble = true,
+	HistoricalTitles = {
+--		"governor", 0, 0, "Upper Austria" -- was Statthalter of Upper Austria (Oberösterreich)
+	}
+})
+
 DefineCharacter("Johann Baptist von Hoffinger", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 41.
 	Name = "Johann Baptist",
 	NameElements = {
