@@ -25,10 +25,26 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-Load("scripts/regions.lua")
---Load("scripts/provinces_earth_africa.lua")
---Load("scripts/provinces_earth_america.lua")
---Load("scripts/provinces_earth_asia.lua")
-Load("scripts/provinces_earth_europe.lua")
-Load("scripts/provinces_earth_water.lua")
-Load("scripts/provinces_nidavellir.lua")
+DefineProvince("India", {
+	World = "Earth",
+	Tiles = {},
+	Map = "maps/random/random-map-forest.smp",
+	SettlementTerrain = "Plains",
+	Coastal = true,
+	HistoricalModifiers = {
+		1817, "upgrade-college", true -- Hindu College founded in Calcutta in 1817. Source: Atlas de História Mundial, 2001, p. 24.
+	},
+	Regions = {"Asia"}
+})
+
+DefineProvince("Philippines", {
+	World = "Earth",
+	Tiles = {},
+	Map = "maps/random/random-map-forest.smp",
+	SettlementTerrain = "Plains",
+	Coastal = true,
+	HistoricalModifiers = {
+		1645, "upgrade-university", true -- University Sto Tomás founded in Manila in 1645. Source: Enrique Martínez Ruiz; Consuelo Maqueda, Atlas Histórico de España I, 2000, p. 226.
+	},
+	Regions = {"Asia"}
+})

@@ -25,10 +25,25 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineRegion("Africa", {
+})
+
+DefineRegion("America", {
+})
+
+DefineRegion("Asia", {
+})
+
 DefineRegion("British Isles", {
 	HistoricalPopulation = {
 		-4000, (2750 + 5500 / 2) -- The British Isles had between 2,750 and 5,500 people at the end of the Mesolithic; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 148.
 	}
+})
+
+DefineRegion("Caribbean", {
+})
+
+DefineRegion("Central America", {
 })
 
 DefineRegion("Cisleithania", {
@@ -117,10 +132,16 @@ DefineRegion("Italy", {
 	}
 })
 
+DefineRegion("North America", {
+})
+
 DefineRegion("Northwest Europe", {
 	HistoricalPopulation = {
 		-7000, 100000 -- At the height of the Mesolithic the population in northwestern Europe was no larger than 100,000; since the Mesolithic in Northwestern Europe began around 10,000 BC and ended about 4000 BC, its height would have been in the middle, or 7000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, pp. 144, 148.
 	}
+})
+
+DefineRegion("Oceania", {
 })
 
 DefineRegion("Poland", {
@@ -140,6 +161,9 @@ DefineRegion("Scandinavia", {
 		1401, 2000000, -- 2 million people lived in Scandinavia during the 14th century; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
 		1600, 2000000 -- 2 million people lived in Scandinavia around 1600; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
 	}
+})
+
+DefineRegion("South America", {
 })
 
 DefineRegion("West and Central Europe", {

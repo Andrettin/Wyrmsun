@@ -25,10 +25,13 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-Load("scripts/regions.lua")
---Load("scripts/provinces_earth_africa.lua")
---Load("scripts/provinces_earth_america.lua")
---Load("scripts/provinces_earth_asia.lua")
-Load("scripts/provinces_earth_europe.lua")
-Load("scripts/provinces_earth_water.lua")
-Load("scripts/provinces_nidavellir.lua")
+DefineProvince("Oyo", {
+	World = "Earth",
+	Tiles = {},
+	Map = "maps/random/random-map-forest.smp",
+	SettlementTerrain = "Plains", -- correct?
+	HistoricalModifiers = {
+		1947, "upgrade-university", true -- University founded in Ibadan in 1947. Source: David Thomson, Europe Since Napoleon, 1966, p. 863.
+	},
+	Regions = {"Africa"}
+})
