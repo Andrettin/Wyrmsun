@@ -2554,6 +2554,19 @@ function DrawGrandStrategyInterface()
 						end
 					end
 				end
+				
+				if (GetGrandStrategyProvinceData(SelectedProvince.Name, "Governor") ~= "") then
+					local icon_offset_x = Video.Width - 243 + 15 + (item_x * 56)
+					local icon_offset_y = Video.Height - 186 + 13 + (item_y * (47 + 19 + 4))
+
+					AddGrandStrategyMinisterButton(icon_offset_x, icon_offset_y, GetGrandStrategyProvinceData(SelectedProvince.Name, "Governor"))
+							
+					item_x = item_x + 1
+					if (item_x > 3) then
+						item_x = 0
+						item_y = item_y + 1
+					end
+				end
 			end
 		elseif (GetProvinceOwner(SelectedProvince.Name) ~= "" and GrandStrategyInterfaceState == "Diplomacy") then
 			if (GetFactionDiplomacyState(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, GetFactionFromName(GetProvinceOwner(SelectedProvince.Name)).Civilization, GetProvinceOwner(SelectedProvince.Name)) == "war" and GetFactionDiplomacyStateProposal(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, GetFactionFromName(GetProvinceOwner(SelectedProvince.Name)).Civilization, GetProvinceOwner(SelectedProvince.Name)) == "") then
