@@ -281,7 +281,7 @@ local TeutonEvents = {
 		Conditions = function(s)
 			if (
 				EventFaction.Name == "Marcomanni Tribe"
-				and GetProvinceOwner("Austria") == "Rome"
+				and GetProvinceOwner("Salzburg") == "Rome"
 				and GetProvinceOwner("Bohemia") == "Marcomanni Tribe"
 			) then
 				return true
@@ -302,23 +302,23 @@ local TeutonEvents = {
 					RunMap("maps/earth/salzburg.smp")
 					GrandStrategyEventMap = false
 					if (GameResult == GameVictory) then
-						AcquireProvince(WorldMapProvinces.Austria, "Marcomanni Tribe")
-						RestoreScenarioUnitsToProvince({ProvinceName = "Austria", FactionName = "Marcomanni Tribe"})
-						CenterGrandStrategyMapOnTile(WorldMapProvinces.Austria.SettlementLocation[1], WorldMapProvinces.Austria.SettlementLocation[2])
+						AcquireProvince(WorldMapProvinces.Salzburg, "Marcomanni Tribe")
+						RestoreScenarioUnitsToProvince({ProvinceName = "Salzburg", FactionName = "Marcomanni Tribe"})
+						CenterGrandStrategyMapOnTile(WorldMapProvinces.Salzburg.SettlementLocation[1], WorldMapProvinces.Salzburg.SettlementLocation[2])
 					elseif (GameResult == GameDefeat) then
-						RestoreScenarioUnitsToProvince({ProvinceName = "Austria", FactionName = "Rome"})
+						RestoreScenarioUnitsToProvince({ProvinceName = "Salzburg", FactionName = "Rome"})
 					end
 				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "Marcomanni Tribe" or wyr.preferences.AutomaticBattles)) then
-					AcquireProvince(WorldMapProvinces.Austria, "Marcomanni Tribe")
+					AcquireProvince(WorldMapProvinces.Salzburg, "Marcomanni Tribe")
 					for i, unitName in ipairs(Units) do
 						if (IsOffensiveMilitaryUnit(unitName)) then
-							SetProvinceUnitQuantity("Austria", unitName, GetProvinceUnitQuantity("Bohemia", unitName))
+							SetProvinceUnitQuantity("Salzburg", unitName, GetProvinceUnitQuantity("Bohemia", unitName))
 							SetProvinceUnitQuantity("Bohemia", unitName, 0)
 						end
 					end
 					
 					if (GrandStrategyFaction.Name == EventFaction.Name) then
-						CenterGrandStrategyMapOnTile(WorldMapProvinces.Austria.SettlementLocation[1], WorldMapProvinces.Austria.SettlementLocation[2])
+						CenterGrandStrategyMapOnTile(WorldMapProvinces.Salzburg.SettlementLocation[1], WorldMapProvinces.Salzburg.SettlementLocation[2])
 						GenericDialog("The Sack of Iuvavum", "All that was of worth in Iuvavum has been pillaged...")
 					end
 				end
@@ -337,7 +337,7 @@ local TeutonEvents = {
 			if (
 				EventFaction.Name == "Marcomanni Tribe"
 				and GetProvinceOwner("Venetia") == "Rome"
-				and GetProvinceOwner("Austria") == "Marcomanni Tribe"
+				and GetProvinceOwner("Carinthia") == "Marcomanni Tribe"
 			) then
 				return true
 			else
@@ -364,8 +364,8 @@ local TeutonEvents = {
 					AcquireProvince(WorldMapProvinces.Venetia, "Marcomanni Tribe")
 					for i, unitName in ipairs(Units) do
 						if (IsOffensiveMilitaryUnit(unitName)) then
-							SetProvinceUnitQuantity("Venetia", unitName, GetProvinceUnitQuantity("Austria", unitName))
-							SetProvinceUnitQuantity("Austria", unitName, 0)
+							SetProvinceUnitQuantity("Venetia", unitName, GetProvinceUnitQuantity("Carinthia", unitName))
+							SetProvinceUnitQuantity("Carinthia", unitName, 0)
 						end
 					end
 					if (GrandStrategyFaction.Name == EventFaction.Name) then

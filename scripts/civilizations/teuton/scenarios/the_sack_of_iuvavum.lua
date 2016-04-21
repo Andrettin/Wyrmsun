@@ -90,8 +90,8 @@ if (LoadedGame == false) then
 	--	unit = CreateUnit("unit-suebi-swordsman", 4, {Players[4].StartPos.x, Players[4].StartPos.y}) -- add Ballomar here later
 		
 		-- Roman units
-		CreateProvinceUnits("Austria", 0, 4)
-		CreateProvinceCustomHero("Austria", 0)
+		CreateProvinceUnits("Salzburg", 0, 4)
+		CreateProvinceCustomHero("Salzburg", 0)
 	end
 end
 

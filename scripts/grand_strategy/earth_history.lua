@@ -193,7 +193,6 @@ if (GrandStrategyYear >= -5500) then
 	-- Linear Pottery culture existed in parts of Central Europe between 7000 and 2000 BC; since the other source gives them as arriving in northern Poland and Germany c. 5500 BC, let's place their beginnings at that date; Source: "Atlas de História Mundial", 2001, pp. 40-41.
 	SetProvinceOwner("Franconia", "basque", "Linearware Tribe")
 	SetProvinceCivilization("Franconia", "basque")
-	SetProvinceCivilization("Austria", "basque")
 	SetProvinceOwner("Pannonia", "basque", "Linearware Tribe")
 	SetProvinceCivilization("Pannonia", "basque")
 		
@@ -546,7 +545,6 @@ if (GrandStrategyYear >= -1000) then
 end
 
 if (GrandStrategyYear >= -800) then -- Hallstatt culture in southern Germany and adjacent areas c. 800-400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 87.
-	SetProvinceCivilization("Austria", "celt")
 	SetProvinceOwner("Bavaria", "celt", "Norici Tribe")
 	SetProvinceCivilization("Bavaria", "celt")
 	SetProvinceUnitQuantity("Bavaria", "unit-germanic-warrior", 0)
@@ -1600,7 +1598,6 @@ if (GrandStrategyYear >= 919) then
 	-- Duchy of Bavaria
 	SetProvinceOwner("Bavaria", "teuton", "Holy Rome")
 	AddProvinceClaim("Bavaria", "teuton", "Bavaria")
-	AddProvinceClaim("Austria", "teuton", "Bavaria") -- Bavarian East March
 	
 	-- Duchy of Carinthia
 	SetProvinceOwner("Carniola", "teuton", "Holy Rome")

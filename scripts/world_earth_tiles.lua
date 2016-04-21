@@ -25,6 +25,8 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+Load("scripts/world_earth_tiles_austria.lua")
+
 DefineWorldMapTile({418, 73}, {
 	World = "Earth",
 	CulturalSettlementNames = {
@@ -916,15 +918,6 @@ DefineWorldMapTile({526, 110}, {
 	World = "Earth",
 	CulturalSettlementNames = {
 		"teuton", "Breslau"
-	}
-})
-
-DefineWorldMapTile({526, 118}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"celt", "Vindobona",
-		"latin", "Vindobona",
-		"teuton", "Vienna"
 	}
 })
 

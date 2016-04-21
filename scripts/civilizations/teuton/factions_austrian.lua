@@ -57,6 +57,14 @@ DefineFaction("Bach", { -- titular barony granted to Alexander Bach in 1853; Sou
 	DefaultTier = "barony"
 })
 
+DefineFaction("Carinthia", {
+	Civilization = "teuton",
+	ParentFaction = "Austria",
+	Type = "polity",
+	Colors = {"brown"},
+	DefaultTier = "duchy" -- Duchy of Carinthia within the Holy Roman Empire; political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+})
+
 DefineFaction("Lasser", { -- titular barony belonging to Joseph Anton von Lasser; Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 41.
 	Civilization = "teuton",
 	ParentFaction = "Austria",

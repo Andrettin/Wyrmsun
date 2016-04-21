@@ -78,6 +78,7 @@ https://github.com/Andrettin/Wyrmsun
 - Provinces can now have province modifiers (which appear to the left of the buildings in the province's main interface).
 - Added Library (+1 Research), Courthouse (-1% Revolt Risk), College (+1 Research) and University (+2 Research) province modifiers, which are added to provinces via events.
 - Provinces can now have governors, providing bonuses to them.
+- Split the Austria province into the new provinces of Carinthia, Lower Austria, Salzburg, Styria, Tyrol and Upper Austria.
 
 * Heroes
 - Dwarven axefighter heroes now have different weapon unit graphics when holding a mace-class weapon.

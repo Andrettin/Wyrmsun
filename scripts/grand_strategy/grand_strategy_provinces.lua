@@ -73,9 +73,6 @@ function LoadProvinces(world)
 		Augsburg = {
 			Name = "Augsburg"
 		},
-		Austria = {
-			Name = "Austria"
-		},
 		Baden = {
 			Name = "Baden"
 		},
@@ -124,6 +121,9 @@ function LoadProvinces(world)
 		},
 		Calabria = {
 			Name = "Calabria"
+		},
+		Carinthia = {
+			Name = "Carinthia"
 		},
 		Carniola = {
 			Name = "Carniola"
@@ -289,6 +289,9 @@ function LoadProvinces(world)
 		Lorraine = {
 			Name = "Lorraine"
 		},
+		LowerAustria = {
+			Name = "Lower Austria"
+		},
 		LowerLusatia = {
 			Name = "Lower Lusatia"
 		},
@@ -397,6 +400,9 @@ function LoadProvinces(world)
 				unit_germanic_warrior = 10 -- a few soldiers to stop the Vana Tribe from expanding here
 			}
 		},
+		Salzburg = {
+			Name = "Salzburg"
+		},
 		Sardinia = {
 			Name = "Sardinia"
 		},
@@ -420,6 +426,9 @@ function LoadProvinces(world)
 		},
 		Slovakia = {
 			Name = "Slovakia"
+		},
+		Styria = {
+			Name = "Styria"
 		},
 		Sussex = {
 			Name = "Sussex"
@@ -451,6 +460,9 @@ function LoadProvinces(world)
 		Tuscany = {
 			Name = "Tuscany"
 		},
+		Tyrol = {
+			Name = "Tyrol"
+		},
 		Ukraine = {
 			Name = "Ukraine",
 			Units = {
@@ -459,6 +471,9 @@ function LoadProvinces(world)
 		},
 		Umbria = {
 			Name = "Umbria"
+		},
+		UpperAustria = {
+			Name = "Upper Austria"
 		},
 		UpperLusatia = {
 			Name = "Upper Lusatia"

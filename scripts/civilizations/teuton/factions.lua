@@ -31,7 +31,7 @@ DefineFaction("Suebi Tribe", {
 	Language = "old-high-german",
 	Colors = {"black"},
 	DefaultTier = "duchy",
-	DevelopsTo = {"Galicia", "Bavaria", "Austria"},
+	DevelopsTo = {"Galicia", "Bavaria", "Austria", "Carinthia"},
 	FactionUpgrade = "upgrade-suebi-tribe-faction",
 	Description = _("The Suebi were a powerful tribe in ancient Germania, battling the Romans a number of times. From the Suebi tribes such as the Marcomanni and the Quadi would originate. In the 5th century a group of Suebi settled and conquered Galicia, establishing a kingdom there."),
 	HistoricalFactionDerivations = {-264, "germanic", "Skeldung Tribe"},
@@ -141,7 +141,7 @@ DefineFaction("Buri Tribe", {
 	ParentFaction = "Suebi Tribe", -- accurate?
 	Type = "tribe",
 	Colors = {"brown"},
-	DevelopsTo = {"Bavaria", "Galicia", "Austria"} -- accurate?
+	DevelopsTo = {"Bavaria", "Galicia", "Austria", "Carinthia"} -- accurate?
 })
 
 DefineFaction("Chamavi Tribe", {
@@ -254,7 +254,7 @@ DefineFaction("Marcomanni Tribe", {
 	ParentFaction = "Suebi Tribe",
 	Type = "tribe",
 	Colors = {"orange", "red"}, -- change to a better one?
-	DevelopsTo = {"Bavaria", "Galicia", "Austria"},
+	DevelopsTo = {"Bavaria", "Galicia", "Austria", "Carinthia"},
 	Description = _("The Marcomanni were a Suebic tribe. Eventually they migrated to the east, settling in Bohemia and expelling the local Boii tribe. In the 2nd century they fought the terrible Marcomannic Wars against the Romans. The name \"Marcomanni\" means \"march-men\", or \"frontier-men\"."),
 	HistoricalFactionDerivations = {-9, "teuton", "Suebi Tribe"},
 	HistoricalTechnologies = {
@@ -268,7 +268,7 @@ DefineFaction("Bavarian Tribe", {
 	Type = "tribe",
 	Language = "old-high-german",
 	Colors = {"cyan", "white"},
-	DevelopsTo = {"Bavaria", "Austria"},
+	DevelopsTo = {"Bavaria", "Austria", "Carinthia"},
 	FactionUpgrade = "upgrade-bavarian-tribe-faction",
 	Description = _("The Bavarians were a West Germanic people, tracing their origins to the Marcomanni. Their name means \"men of Bohemia\", an appelation they gained due to the Marcomanni having established themselves in Bohemia under Marbod. The Bavarians migrated south, giving their newly-settled land the name it has to this day, Bavaria."),
 	HistoricalFactionDerivations = {526, "teuton", "Marcomanni Tribe"}
@@ -279,7 +279,7 @@ DefineFaction("Quadi Tribe", {
 	ParentFaction = "Suebi Tribe",
 	Type = "tribe",
 	Colors = {"brown"},
-	DevelopsTo = {"Bavaria", "Galicia", "Austria"}, -- the Quadi were a Suebic tribe
+	DevelopsTo = {"Bavaria", "Galicia", "Austria", "Carinthia"}, -- the Quadi were a Suebic tribe
 	HistoricalFactionDerivations = {-9, "teuton", "Suebi Tribe"},
 	HistoricalTechnologies = {
 		"upgrade-teuton-spatha", 180 -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
@@ -291,7 +291,7 @@ DefineFaction("Semnone Tribe", {
 	ParentFaction = "Suebi Tribe",
 	Type = "tribe",
 	Colors = {"black"},
-	DevelopsTo = {"Suebi Tribe", "Bavaria", "Austria"},
+	DevelopsTo = {"Suebi Tribe", "Bavaria", "Austria", "Carinthia"},
 	HistoricalFactionDerivations = {-264, "teuton", "Suebi Tribe"},
 	HistoricalTechnologies = {
 		"upgrade-teuton-spatha", 180 -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.

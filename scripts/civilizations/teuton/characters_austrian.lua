@@ -35,7 +35,7 @@ DefineCharacter("Peter von Salzgeber", { -- Source: Waltraud Heindl, "Josephinis
 	Type = "unit-teuton-ritter", -- section chief who was the right-hand of the Minister-President (the Baron of Pillersdorf) in March of 1848
 	Civilization = "teuton",
 	Faction = "Austria",
-	ProvinceOfOrigin = "Austria", -- presumably
+	ProvinceOfOrigin = "Lower Austria", -- was presumably from Austria, put the character in the province where the Austrian capital (Vienna) is, since we don't have more specific information
 	Year = 1789, -- born
 	DeathYear = 1858, -- died
 	Noble = true,
@@ -54,7 +54,7 @@ DefineCharacter("Wilhelmina von Salzgeber", { -- Source: Waltraud Heindl, "Josep
 	Type = "unit-teuton-archer", -- baroness; should be a different unit type that is more appropriate
 	Civilization = "teuton",
 	Faction = "Austria",
-	ProvinceOfOrigin = "Austria", -- presumably
+	ProvinceOfOrigin = "Lower Austria", -- was presumably from Austria, put the character in the province where the Austrian capital (Vienna) is, since we don't have more specific information
 	Year = 1801, -- born
 	DeathYear = 1860, -- died
 	Noble = true
@@ -74,7 +74,7 @@ DefineCharacter("Joseph Anton von Lasser", { -- Source: Waltraud Heindl, "Joseph
 	Type = "unit-teuton-ritter", -- bureaucrat in the Allgemeinen Hofkammer, in 1848 a deputy in the Austrian Reichstag and in the Frankfurter Parliament; was minister without portfolio in the 1860s during the government of the Archduke Rainer-Mensdorff-Pouilly; was governor of Tyrol; in the 1870s he was a liberal deputy
 	Civilization = "teuton",
 	Faction = "Austria",
-	ProvinceOfOrigin = "Austria", -- presumably
+	ProvinceOfOrigin = "Lower Austria", -- was presumably from Austria, put the character in the province where the Austrian capital (Vienna) is, since we don't have more specific information
 	Year = 1814, -- born
 	DeathYear = 1879, -- died
 	Noble = true,
@@ -111,7 +111,7 @@ DefineCharacter("Wilhelmina the Younger von Salzgeber", { -- Source: Waltraud He
 	Type = "unit-teuton-archer", -- should be a different unit type that is more appropriate
 	Civilization = "teuton",
 	Faction = "Austria",
-	ProvinceOfOrigin = "Austria", -- presumably
+	ProvinceOfOrigin = "Lower Austria", -- was presumably from Austria, put the character in the province where the Austrian capital (Vienna) is, since we don't have more specific information
 	Year = 1821, -- born
 	DeathYear = 1896, -- died
 	Noble = true
@@ -126,7 +126,7 @@ DefineCharacter("Josef Russegger", { -- Source: Waltraud Heindl, "Josephinische 
 	Type = "unit-teuton-ritter", -- bureaucrat, literate, geological researcher (also did geological scientific travels), worked as saline director in various mines in Austria (such as Wieliczka in Galicia)
 	Civilization = "teuton",
 	Faction = "Austria",
-	ProvinceOfOrigin = "Austria", -- presumably
+	ProvinceOfOrigin = "Lower Austria", -- was presumably from Austria, put the character in the province where the Austrian capital (Vienna) is, since we don't have more specific information
 	Year = 1853 -- knighted (became "Ritter von Russegger")
 })
 
@@ -139,7 +139,7 @@ DefineCharacter("von Pillersdorf", { -- Source: Waltraud Heindl, "Josephinische 
 	Type = "unit-teuton-ritter", -- high-ranking bureaucrat of the Finance Ministry, and later Minister-President of Austria
 	Civilization = "teuton",
 	Faction = "Austria",
-	ProvinceOfOrigin = "Austria", -- presumably
+	ProvinceOfOrigin = "Lower Austria", -- was presumably from Austria, put the character in the province where the Austrian capital (Vienna) is, since we don't have more specific information
 	Year = 1848, -- became Minister-President of Austria in 1848
 	Noble = true,
 	HistoricalTitles = {
@@ -161,7 +161,7 @@ DefineCharacter("Franz Joseph von Habsburg", { -- Source: Waltraud Heindl, "Jose
 	Type = "unit-teuton-ritter", -- Emperor of Austria
 	Civilization = "teuton",
 	Faction = "Austria",
-	ProvinceOfOrigin = "Austria", -- presumably
+	ProvinceOfOrigin = "Lower Austria", -- was presumably from Austria, put the character in the province where the Austrian capital (Vienna) is, since we don't have more specific information
 	Year = 1830, -- born (became Emperor in 1848, when he was 18 years old)
 	Noble = true,
 	HistoricalTitles = {
@@ -179,7 +179,7 @@ DefineCharacter("Victor Andrian-Werburg", { -- Source: Waltraud Heindl, "Josephi
 	Type = "unit-teuton-swordsman", -- member of the Tyrolese provincial diet
 	Civilization = "teuton",
 	Faction = "Austria",
-	ProvinceOfOrigin = "Austria", -- Tyrol
+	ProvinceOfOrigin = "Tyrol",
 	Year = 1850, -- published "Austria and Her Future" (Österreich und dessen Zukunft") anonymously in 1850
 	AuthoredWorks = {"upgrade-work-austria-and-her-future"}
 	-- a "conservative thinker"
@@ -196,7 +196,7 @@ DefineCharacter("Franz Seraph Stadion", { -- Source: Waltraud Heindl, "Josephini
 	Type = "unit-teuton-ritter",
 	Civilization = "teuton",
 	Faction = "Austria",
-	ProvinceOfOrigin = "Austria", -- presumably
+	ProvinceOfOrigin = "Lower Austria", -- was presumably from Austria, put the character in the province where the Austrian capital (Vienna) is, since we don't have more specific information
 	DeathYear = 1853, -- died
 	HistoricalTitles = {
 		"interior-minister", 0, 1849, "teuton", "Austria" -- Interior Minister (Innenminister) of Austria until May 1849, when he became severely ill
@@ -214,7 +214,7 @@ DefineCharacter("Alexander von Bach", { -- Source: Waltraud Heindl, "Josephinisc
 	Type = "unit-teuton-ritter",
 	Civilization = "teuton",
 	Faction = "Austria",
-	ProvinceOfOrigin = "Austria", -- presumably
+	ProvinceOfOrigin = "Lower Austria", -- was presumably from Austria, put the character in the province where the Austrian capital (Vienna) is, since we don't have more specific information
 	Year = 1813, -- born
 	DeathYear = 1893, -- died
 	Noble = true,
@@ -234,11 +234,11 @@ DefineCharacter("Eduard von Bach", { -- Source: Waltraud Heindl, "Josephinische 
 	Type = "unit-teuton-ritter",
 	Civilization = "teuton",
 	Faction = "Austria",
-	ProvinceOfOrigin = "Austria", -- presumably
+	ProvinceOfOrigin = "Lower Austria", -- was presumably from Austria, put the character in the province where the Austrian capital (Vienna) is, since we don't have more specific information
 	DateReferenceCharacter = "Alexander von Bach", -- brother of Alexander von Bach
 	Noble = true,
 	HistoricalTitles = {
---		"governor", 0, 0, "Upper Austria" -- was Statthalter of Upper Austria (Oberösterreich)
+		"governor", 0, 0, "Upper Austria" -- was Statthalter of Upper Austria (Oberösterreich)
 	}
 })
 
@@ -255,7 +255,7 @@ DefineCharacter("Johann Baptist von Hoffinger", { -- Source: Waltraud Heindl, "J
 	Type = "unit-teuton-ritter", -- Ministerialsekretär in the Police Ministry (Polizeiministerium), at least during the 1867-1869 period
 	Civilization = "teuton",
 	Faction = "Austria",
-	ProvinceOfOrigin = "Austria", -- presumably
+	ProvinceOfOrigin = "Lower Austria", -- was presumably from Austria, put the character in the province where the Austrian capital (Vienna) is, since we don't have more specific information
 	Year = 1867,
 	Noble = true
 	-- Knight (Ritter) of Hoffinger
@@ -273,7 +273,7 @@ DefineCharacter("Otto Friedländer", { -- Source: Waltraud Heindl, "Josephinisch
 	Type = "unit-teuton-worker", -- bureaucrat of the Viennese Chamber of Commerce (during the First Republic period)
 	Civilization = "teuton",
 	Faction = "Austria",
-	ProvinceOfOrigin = "Austria",
+	ProvinceOfOrigin = "Lower Austria", -- was presumably from Austria, put the character in the province where the Austrian capital (Vienna) is, since we don't have more specific information
 	Year = 1889, -- born
 	DeathYear = 1963 -- died
 })

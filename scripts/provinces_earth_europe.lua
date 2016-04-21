@@ -452,64 +452,6 @@ DefineProvince("Augsburg", {
 	Regions = {"Europe", "Germany-Netherlands", "Roman Danube", "West and Central Europe"}
 })
 
-DefineProvince("Austria", {
-	World = "Earth",
-	CulturalNames = {
-		"celt", "Noricum",
-		"latin", "Noricum",
-		"teuton", "Austria"
-	},
-	Tiles = {
---		{127, 30}, {128, 30}, {129, 29}, {129, 30}, {130, 29}, {130, 30}, {131, 29}, {131, 30}, -- old map
-		{507, 121},
-		{508, 121},
-		{509, 121},
-		{510, 121}, {510, 122}, {510, 123}, {510, 124}, {510, 125},
-		{511, 121}, {511, 122}, {511, 123}, {511, 124}, {511, 125},
-		{512, 120}, {512, 121}, {512, 122}, {512, 123}, {512, 124},
-		{513, 120}, {513, 121}, {513, 122}, {513, 123},
-		{514, 120}, {514, 121}, {514, 122}, {514, 123},
-		{515, 120}, {515, 121}, {515, 122},
-		{516, 119}, {516, 120}, {516, 121}, {516, 122},
-		{517, 119}, {517, 120}, {517, 121}, {517, 122}, {517, 123},
-		{518, 118}, {518, 119}, {518, 120}, {518, 121}, {518, 122}, {518, 123},
-		{519, 118}, {519, 119}, {519, 120}, {519, 121}, {519, 122}, {519, 123},
-		{520, 118}, {520, 119}, {520, 120}, {520, 121}, {520, 122}, {520, 123},
-		{521, 118}, {521, 119}, {521, 120}, {521, 121}, {521, 122}, {521, 123},
-		{522, 117}, {522, 118}, {522, 119}, {522, 120}, {522, 121}, {522, 122}, {522, 123},
-		{523, 117}, {523, 118}, {523, 119}, {523, 120}, {523, 121}, {523, 122}, {523, 123}, {523, 124},
-		{524, 117}, {524, 118}, {524, 119}, {524, 120}, {524, 121}, {524, 122}, {524, 123}, {524, 124},
-		{525, 117}, {525, 118}, {525, 119}, {525, 120}, {525, 121}, {525, 122}, {525, 123},
-		{526, 117}, {526, 118}, {526, 119}, {526, 120},
-		{527, 117}, {527, 118}
-	},
-	SettlementLocation = {526, 118}, -- Vienna
-	Map = "maps/earth/salzburg.smp",
-	SettlementTerrain = "Plains",
-	Claims = {
-		"basque", "Linearware Tribe",
-		"celt", "Norici Tribe",
-		"teuton", "Austria",
-		"teuton", "Holy Rome"
-	},
-	HistoricalOwners = {
-		-- The people of the Linear Pottery culture arrived in northern Poland and Germany about 5500 BC, possessing knowledge of agriculture; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 139.
-		-- Linear Pottery culture existed in parts of Central Europe between 7000 and 2000 BC; since the other source gives them as arriving in northern Poland and Germany c. 5500 BC, let's place their beginnings at that date; Source: "Atlas de História Mundial", 2001, pp. 40-41.
-		-5500, "basque", "Linearware Tribe", -- map indicates only Lower Austria
-		-800, "celt", "Norici Tribe", -- Hallstatt culture in southern Germany and adjacent areas c. 800-400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 87.
-		-15, "latin", "Rome", -- Noricum acquired by Rome in 15 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		507, "goth", "Ostrogoth Tribe", -- political situation in 507-534 in Europe; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
-		919, "teuton", "Holy Rome", -- Bavarian East March; political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
-		1560, "teuton", "Austria" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
-	},
-	HistoricalModifiers = {
-		1365, "upgrade-university", true, -- University founded in Vienna in 1365. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.
-		1585, "upgrade-university", true, -- University founded in Graz in 1585. Source: The Cambridge Modern History Atlas, p. 9.
---		1815, "upgrade-college", true -- Imperial Polytechnic Institute of Vienna founded in 1815. Source: Silvia Fernanda de Mendonça Figueirôa, "Ciência e tecnologia no Brasil Imperial: Guilherme Schüch, Barão de Capanema (1824-1908)", 2005, p. 442.
-	},
-	Regions = {"Cisleithania", "Europe", "Germany-Netherlands", "Roman Danube", "West and Central Europe"}
-})
-
 DefineProvince("Baden", {
 	World = "Earth",
 	CulturalNames = {
@@ -981,6 +923,40 @@ DefineProvince("Calabria", {
 	Regions = {"Europe", "Italy", "West and Central Europe"}
 })
 
+DefineProvince("Carinthia", {
+	World = "Earth",
+	CulturalNames = {
+		"teuton", "Carinthia"
+	},
+	Tiles = {
+		{517, 122}, {517, 123},
+		{518, 122}, {518, 123},
+		{519, 122}, {519, 123},
+		{520, 122}, {520, 123},
+		{521, 122}, {521, 123}
+	},
+	SettlementLocation = {520, 123}, -- Klagenfurt
+	Map = "maps/random/random-map-forest.smp",
+	SettlementTerrain = "Plains",
+	Claims = {
+		"celt", "Norici Tribe",
+		"teuton", "Austria",
+		"teuton", "Carinthia",
+		"teuton", "Holy Rome"
+	},
+	HistoricalOwners = {
+		-800, "celt", "Norici Tribe", -- Hallstatt culture in southern Germany and adjacent areas c. 800-400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 87.
+		-15, "latin", "Rome", -- Noricum acquired by Rome in 15 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		507, "goth", "Ostrogoth Tribe", -- political situation in 507-534 in Europe; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
+		919, "teuton", "Holy Rome", -- Duchy of Carinthia within the Holy Roman Empire; political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+		1560, "teuton", "Austria" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalCultures = {
+		-800, "celt"
+	},
+	Regions = {"Cisleithania", "Europe", "Germany-Netherlands", "Roman Danube", "West and Central Europe"}
+})
+
 DefineProvince("Carniola", {
 	World = "Earth",
 	CulturalNames = {
@@ -990,7 +966,7 @@ DefineProvince("Carniola", {
 		{519, 124},
 		{520, 124}, {520, 125},
 		{521, 124}, {521, 125},
-		{522, 124}, {522, 125},
+		{522, 125},
 		{523, 125}
 	},
 	SettlementLocation = {521, 125}, -- Laibach/Ljubljana
@@ -2675,6 +2651,54 @@ DefineProvince("Lorraine", {
 	Regions = {"Europe", "France", "Gaul", "Northwest Europe", "West and Central Europe"}
 })
 
+DefineProvince("Lower Austria", {
+	World = "Earth",
+	CulturalNames = {
+		"teuton", "Lower Austria"
+	},
+	Tiles = {
+		{521, 119},
+		{522, 117}, {522, 118}, {522, 119},
+		{523, 117}, {523, 118}, {523, 119},
+		{524, 117}, {524, 118}, {524, 119},
+		{525, 117}, {525, 118}, {525, 119},
+		{526, 117}, {526, 118}, {526, 119}, {526, 120},
+		{527, 117}, {527, 118}
+	},
+	SettlementLocation = {526, 118}, -- Vienna
+	Map = "maps/random/random-map-forest.smp",
+	SettlementTerrain = "Plains",
+	Claims = {
+		"basque", "Linearware Tribe",
+		"celt", "Norici Tribe",
+		"teuton", "Austria",
+		"teuton", "Holy Rome"
+	},
+	HistoricalOwners = {
+		-- The people of the Linear Pottery culture arrived in northern Poland and Germany about 5500 BC, possessing knowledge of agriculture; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 139.
+		-- Linear Pottery culture existed in parts of Central Europe between 7000 and 2000 BC; since the other source gives them as arriving in northern Poland and Germany c. 5500 BC, let's place their beginnings at that date; Source: "Atlas de História Mundial", 2001, pp. 40-41.
+		-5500, "basque", "Linearware Tribe", -- map indicates only Lower Austria
+		-800, "celt", "Norici Tribe", -- Hallstatt culture in southern Germany and adjacent areas c. 800-400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 87.
+		-15, "latin", "Rome", -- Noricum acquired by Rome in 15 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		507, "goth", "Ostrogoth Tribe", -- political situation in 507-534 in Europe; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
+		919, "teuton", "Holy Rome", -- Bavarian East March; political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+		1560, "teuton", "Austria" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalClaims = {
+		919, "teuton", "Bavaria", -- Bavarian East March within the Holy Roman Empire; political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+	},
+	HistoricalCultures = {
+		-5500, "basque",
+		-800, "celt"
+	},
+	HistoricalModifiers = {
+		1365, "upgrade-university", true, -- University founded in Vienna in 1365. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.
+		1585, "upgrade-university", true, -- University founded in Graz in 1585. Source: The Cambridge Modern History Atlas, p. 9.
+--		1815, "upgrade-college", true -- Imperial Polytechnic Institute of Vienna founded in 1815. Source: Silvia Fernanda de Mendonça Figueirôa, "Ciência e tecnologia no Brasil Imperial: Guilherme Schüch, Barão de Capanema (1824-1908)", 2005, p. 442.
+	},
+	Regions = {"Cisleithania", "Europe", "Germany-Netherlands", "Roman Danube", "West and Central Europe"}
+})
+
 DefineProvince("Lower Lusatia", {
 	World = "Earth",
 	CulturalNames = {
@@ -3701,6 +3725,40 @@ DefineProvince("Russia", {
 	Regions = {"Eurasia", "Europe"}
 })
 
+DefineProvince("Salzburg", {
+	World = "Earth",
+	CulturalNames = {
+		"teuton", "Salzburg", "settlement-derived-name" -- presumably
+	},
+	Tiles = {
+		{515, 121},
+		{516, 119}, {516, 120}, {516, 121},
+		{517, 120}, {517, 121},
+		{518, 121}
+	},
+	SettlementLocation = {516, 119}, -- Salzburg
+	Map = "maps/earth/salzburg.smp",
+	SettlementTerrain = "Plains",
+	Claims = {
+		"celt", "Norici Tribe",
+		"teuton", "Austria",
+		"teuton", "Holy Rome"
+	},
+	HistoricalOwners = {
+		-800, "celt", "Norici Tribe", -- Hallstatt culture in southern Germany and adjacent areas c. 800-400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 87.
+		-15, "latin", "Rome", -- Noricum acquired by Rome in 15 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		507, "goth", "Ostrogoth Tribe", -- political situation in 507-534 in Europe; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
+		919, "teuton", "Holy Rome" -- Duchy of Bavaria within the Holy Roman Empire; political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+	},
+	HistoricalClaims = {
+		919, "teuton", "Bavaria", -- Duchy of Bavaria within the Holy Roman Empire; political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+	},
+	HistoricalCultures = {
+		-800, "celt"
+	},
+	Regions = {"Cisleithania", "Europe", "Germany-Netherlands", "Roman Danube", "West and Central Europe"}
+})
+
 DefineProvince("Sardinia", {
 	World = "Earth",
 	CulturalNames = {
@@ -3951,6 +4009,48 @@ DefineProvince("Slovakia", {
 		1465, "upgrade-university", true -- University founded in Bratislava in 1465. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.
 	},
 	Regions = {"Czechoslovakia", "Europe", "West and Central Europe"}
+})
+
+DefineProvince("Styria", {
+	World = "Earth",
+	CulturalNames = {
+		"teuton", "Styria", "name-elements", { -- Steiermark
+--			"compound", "prefix", -- ?
+			"compound", "suffix", "high-german", "noun", {"March"}, "singular", "Mark"
+		}
+	},
+	Tiles = {
+		{518, 120},
+		{519, 120}, {519, 121},
+		{520, 120}, {520, 121},
+		{521, 120}, {521, 121},
+		{522, 120}, {522, 121}, {522, 122}, {522, 123}, {522, 124},
+		{523, 120}, {523, 121}, {523, 122}, {523, 123}, {523, 124},
+		{524, 120}, {524, 121}, {524, 122}, {524, 123}, {524, 124},
+		{525, 120}, {525, 121}, {525, 122}, {525, 123}
+	},
+	SettlementLocation = {523, 121}, -- Graz
+	Map = "maps/random/random-map-forest.smp",
+	SettlementTerrain = "Plains",
+	Claims = {
+		"celt", "Norici Tribe",
+		"teuton", "Austria",
+		"teuton", "Holy Rome"
+	},
+	HistoricalOwners = {
+		-800, "celt", "Norici Tribe", -- Hallstatt culture in southern Germany and adjacent areas c. 800-400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 87.
+		-15, "latin", "Rome", -- Noricum acquired by Rome in 15 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		507, "goth", "Ostrogoth Tribe", -- political situation in 507-534 in Europe; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
+		919, "teuton", "Holy Rome", -- Duchy of Carinthia within the Holy Roman Empire; political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+		1560, "teuton", "Austria" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalClaims = {
+		919, "teuton", "Carinthia", -- Duchy of Carinthia within the Holy Roman Empire; political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+	},
+	HistoricalCultures = {
+		-800, "celt"
+	},
+	Regions = {"Cisleithania", "Europe", "Germany-Netherlands", "Roman Danube", "West and Central Europe"}
 })
 
 DefineProvince("Sussex", {
@@ -4245,6 +4345,47 @@ DefineProvince("Tuscany", {
 	Regions = {"Europe", "Italy", "West and Central Europe"}
 })
 
+DefineProvince("Tyrol", {
+	World = "Earth",
+	CulturalNames = {
+		"teuton", "Tyrol"
+	},
+	Tiles = {
+		{507, 121},
+		{508, 121},
+		{509, 121},
+		{510, 121}, {510, 122}, {510, 123}, {510, 124}, {510, 125},
+		{511, 121}, {511, 122}, {511, 123}, {511, 124}, {511, 125},
+		{512, 120}, {512, 121}, {512, 122}, {512, 123}, {512, 124},
+		{513, 120}, {513, 121}, {513, 122}, {513, 123},
+		{514, 120}, {514, 121}, {514, 122}, {514, 123},
+		{515, 120}, {515, 122},
+		{516, 122}
+	},
+	SettlementLocation = {512, 121}, -- Innsbruck
+	Map = "maps/random/random-map-forest.smp",
+	SettlementTerrain = "Mountains",
+	Claims = {
+		"celt", "Norici Tribe",
+		"teuton", "Austria",
+		"teuton", "Holy Rome"
+	},
+	HistoricalOwners = {
+		-800, "celt", "Norici Tribe", -- Hallstatt culture in southern Germany and adjacent areas c. 800-400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 87.
+		-15, "latin", "Rome", -- Raetia acquired by Rome in 15 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		507, "goth", "Ostrogoth Tribe", -- political situation in 507-534 in Europe; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
+		919, "teuton", "Holy Rome", -- Duchy of Bavaria within the Holy Roman Empire; political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+		1560, "teuton", "Austria" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalCultures = {
+		-800, "celt"
+	},
+	HistoricalClaims = {
+		919, "teuton", "Bavaria", -- Duchy of Bavaria within the Holy Roman Empire; political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+	},
+	Regions = {"Cisleithania", "Europe", "Germany-Netherlands", "Roman Danube", "West and Central Europe"}
+})
+
 DefineProvince("Ukraine", {
 	World = "Earth",
 	CulturalNames = {
@@ -4343,6 +4484,42 @@ DefineProvince("Umbria", {
 		1540, "upgrade-university", true -- University founded in Macerata in 1540. Source: The Cambridge Modern History Atlas, p. 9.
 	},
 	Regions = {"Europe", "Italy", "West and Central Europe"}
+})
+
+DefineProvince("Upper Austria", {
+	World = "Earth",
+	CulturalNames = {
+		"teuton", "Upper Austria"
+	},
+	Tiles = {
+		{517, 119},
+		{518, 118}, {518, 119},
+		{519, 118}, {519, 119},
+		{520, 118}, {520, 119},
+		{521, 118}
+	},
+	SettlementLocation = {520, 118}, -- Linz
+	Map = "maps/random/random-map-forest.smp",
+	SettlementTerrain = "Plains",
+	Claims = {
+		"celt", "Norici Tribe",
+		"teuton", "Austria",
+		"teuton", "Holy Rome"
+	},
+	HistoricalOwners = {
+		-800, "celt", "Norici Tribe", -- Hallstatt culture in southern Germany and adjacent areas c. 800-400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 87.
+		-15, "latin", "Rome", -- Noricum acquired by Rome in 15 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		507, "goth", "Ostrogoth Tribe", -- political situation in 507-534 in Europe; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
+		919, "teuton", "Holy Rome", -- Duchy of Bavaria within the Holy Roman Empire; political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+		1560, "teuton", "Austria" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalClaims = {
+		919, "teuton", "Bavaria", -- Duchy of Bavaria within the Holy Roman Empire; political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+	},
+	HistoricalCultures = {
+		-800, "celt"
+	},
+	Regions = {"Cisleithania", "Europe", "Germany-Netherlands", "Roman Danube", "West and Central Europe"}
 })
 
 DefineProvince("Upper Lusatia", {

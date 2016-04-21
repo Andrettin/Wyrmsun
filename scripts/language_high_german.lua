@@ -431,8 +431,7 @@ DefineLanguageWord("Bruck", { -- used in placenames, but not in actual speech
 	},
 	Gender = "feminine",
 	DerivesFrom = {"middle-high-german", "noun", "Brücke"}, -- presumably, since the High German word "Brücke" does come from Middle High German "Brücke"
-	NameTypes = {"settlement"}, -- example: "Bruck"
-	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- example: "Innsbruck"
+	NameTypes = {"settlement"} -- example: "Bruck"
 })
 
 DefineLanguageWord("Brücke", {
@@ -481,7 +480,7 @@ DefineLanguageWord("Burg", {
 	Gender = "feminine",
 	AffixNameTypes = {
 		"compound", "prefix", "plural", "province", -- example: "Burgenland"
-		"compound", "suffix", "singular", "settlement" -- examples: "Friedeburg", "Hamburg", "Klosterneuburg", "Marburg", "Nikolsburg", "Ödenburg", "Salzburg", "Schässburg", "Stuhlweissenburg", "Wolfsburg"
+		"compound", "suffix", "singular", "settlement" -- examples: "Friedeburg", "Hamburg", "Klosterneuburg", "Marburg", "Nikolsburg", "Ödenburg", "Schässburg", "Stuhlweissenburg", "Wolfsburg"
 	}
 })
 
@@ -810,8 +809,7 @@ DefineLanguageWord("Furt", { -- Source: http://www.duden.de/rechtschreibung/Furt
 		"plural", "accusative", "Furten",
 		"plural", "dative", "Furten",
 		"plural", "genitive", "Furten"
-	},
-	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- example: "Klagenfurt"
+	}
 })
 
 DefineLanguageWord("Gang", {
@@ -1413,8 +1411,7 @@ DefineLanguageWord("Klage", { -- Source: http://www.duden.de/rechtschreibung/Kla
 		"plural", "dative", "Klagen",
 		"plural", "genitive", "Klagen"
 	},
-	Gender = "feminine",
-	AffixNameTypes = {"compound", "prefix", "plural", "settlement"} -- example: "Klagenfurt"
+	Gender = "feminine"
 })
 
 DefineLanguageWord("Klaus", {
@@ -1679,7 +1676,7 @@ DefineLanguageWord("Mark", {
 		"plural", "genitive", "Marken"
 	},
 	NameTypes = {"person-male"},
-	AffixNameTypes = {"compound", "suffix", "singular", "province"} -- examples: "Ostmark", "Steiermark" (Styria)
+	AffixNameTypes = {"compound", "suffix", "singular", "province"} -- example: "Ostmark"
 })
 
 DefineLanguageWord("Mark", {
@@ -1994,8 +1991,7 @@ DefineLanguageWord("Salz", {
 	Type = "noun",
 	Meanings = {"Salt"},
 	Gender = "masculine",
-	Uncountable = true,
-	AffixNameTypes = {"compound", "prefix", "singular", "settlement"} -- example: Salzburg
+	Uncountable = true
 })
 
 DefineLanguageWord("Satz", {

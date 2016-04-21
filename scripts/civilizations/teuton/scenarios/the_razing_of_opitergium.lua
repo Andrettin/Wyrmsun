@@ -50,8 +50,8 @@ if (LoadedGame == false) then
 		unit = CreateUnit("unit-teuton-archer", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 	elseif (GrandStrategyEventMap) then
 		-- Marcomanni units
-		CreateProvinceUnits("Austria", 0)
-		CreateProvinceCustomHero("Austria", 0)
+		CreateProvinceUnits("Carinthia", 0)
+		CreateProvinceCustomHero("Carinthia", 0)
 	--	unit = CreateUnit("unit-suebi-swordsman", 0, {Players[0].StartPos.x, Players[0].StartPos.y}) -- add Ballomar here later
 		
 		-- Roman units
