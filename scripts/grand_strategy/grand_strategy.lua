@@ -756,7 +756,7 @@ function AttackProvince(province, faction)
 			local grand_strategy_heroes = GetGrandStrategyHeroes()
 			for i = 1, table.getn(grand_strategy_heroes) do -- kill off defending heroes if the attacking player was the victorious one
 				if (GetProvinceHero(province.Name, grand_strategy_heroes[i]) == 2) then
-					SetProvinceHero(province.Name, grand_strategy_heroes[i], 0)
+					SetProvinceHero(province.Name, grand_strategy_heroes[i], -1)
 				elseif (GetProvinceHero(province.Name, grand_strategy_heroes[i]) == 3) then
 					SetProvinceHero(province.Name, grand_strategy_heroes[i], 2)
 				end
@@ -775,7 +775,7 @@ function AttackProvince(province, faction)
 				local grand_strategy_heroes = GetGrandStrategyHeroes()
 				for i = 1, table.getn(grand_strategy_heroes) do -- kill off attacking heroes if the defending player was the victorious one
 					if (GetProvinceHero(province.Name, grand_strategy_heroes[i]) == 3) then
-						SetProvinceHero(province.Name, grand_strategy_heroes[i], 0)
+						SetProvinceHero(province.Name, grand_strategy_heroes[i], -1)
 					end
 				end
 			end

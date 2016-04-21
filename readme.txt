@@ -65,7 +65,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added Latin Forum (graphics by Wildfire Games and Jinn).
 
 * Grand Strategy
-- Besides rulers, polity factions can now have treasurers and marshals.
+- Besides rulers, polity factions can now also have treasurers and marshals.
 - Rulers and ministers can now affect revolt risk.
 - The ruler interface now shows the ruler's trait.
 - Literary works without a specific author attached to them (i.e. the Alvissmol) will now have a suitable random character become the author, or an author will be generated.
