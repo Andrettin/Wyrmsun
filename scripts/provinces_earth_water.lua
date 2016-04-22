@@ -658,7 +658,7 @@ DefineProvince("Lake Ilmen", {
 	}
 })
 
-DefineProvince("Lake Vättern", {
+DefineProvince("Lake Vattern", {
 	World = "Earth",
 	Water = true,
 --	ReferenceProvince = "Sweden",

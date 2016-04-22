@@ -32,134 +32,41 @@ function LoadProvinces(world)
 	WorldMapWaterProvinces = {}
 	
 	InitializeGrandStrategyProvinces()
+	
+	local provinces = GetGrandStrategyProvinces()
+	for i = 1,table.getn(provinces) do
+		local province_key = string.gsub(provinces[i], " ", "")
+		if (GetGrandStrategyProvinceData(provinces[i], "Water") == false) then
+			WorldMapProvinces[province_key] = {}
+			WorldMapProvinces[province_key]["Name"] = provinces[i]
+						
+			local tiles = GetProvinceData(provinces[i], "Tiles")
+			WorldMapProvinces[province_key]["Tiles"] = {}
+			for j=1,table.getn(tiles),2 do
+				table.insert(WorldMapProvinces[province_key].Tiles, {tiles[j], tiles[j + 1]})
+			end
+
+			WorldMapProvinces[province_key]["SettlementLocation"] = {GetProvinceData(provinces[i], "SettlementLocationX"), GetProvinceData(provinces[i], "SettlementLocationY")}
+			
+			WorldMapProvinces[province_key]["Coastal"] = GetProvinceData(provinces[i], "Coastal")
+		else
+			WorldMapWaterProvinces[province_key] = {}
+			WorldMapWaterProvinces[province_key]["Name"] = provinces[i]
+
+			local tiles = GetProvinceData(provinces[i], "Tiles")
+			WorldMapWaterProvinces[province_key]["Tiles"] = {}
+			for j=1,table.getn(tiles),2 do
+				table.insert(WorldMapWaterProvinces[province_key].Tiles, {tiles[j], tiles[j + 1]})
+			end
+		end
+	end
 
 	local EarthProvinces = {
-		Abruzzo = {
-			Name = "Abruzzo"
-		},
-		Aetolia = {
-			Name = "Aetolia"
-		},
-		Albania = {
-			Name = "Albania"
-		},
-		Alsace = {
-			Name = "Alsace"
-		},
-		Andalusia = {
-			Name = "Andalusia"
-		},
-		Apulia = {
-			Name = "Apulia"
-		},
-		Aquitaine = {
-			Name = "Aquitaine"
-		},
-		Aragon = {
-			Name = "Aragon"
-		},
-		Argolis = {
-			Name = "Argolis"
-		},
 		Astrakhan = {
 			Name = "Astrakhan",
 			Units = {
 				unit_germanic_warrior = 8
 			}
-		},
-		Attica = {
-			Name = "Attica"
-		},
-		Augsburg = {
-			Name = "Augsburg"
-		},
-		Baden = {
-			Name = "Baden"
-		},
-		Bavaria = {
-			Name = "Bavaria"
-		},
-		Belgium = {
-			Name = "Belgium"
-		},
-		Bessarabia = {
-			Name = "Bessarabia"
-		},
-		Boeotia = {
-			Name = "Boeotia"
-		},
-		Bohemia = {
-	--		Name = "Marcomannia",
-			Name = "Bohemia"
-		},
-		Bornholm = {
-			Name = "Bornholm"
-		},
-		Bosnia = {
-			Name = "Bosnia"
-		},
-		Brandenburg = {
-			Name = "Brandenburg"
-		},
-		Bremen = {
-			Name = "Bremen"
-		},
-		Brittany = {
-			Name = "Brittany"
-		},
-		Brunswick = {
-			Name = "Brunswick"
-		},
-		Bukowina = {
-			Name = "Bukowina"
-		},
-		Bulgaria = {
-			Name = "Bulgaria"
-		},
-		Burgundy = {
-			Name = "Burgundy"
-		},
-		Calabria = {
-			Name = "Calabria"
-		},
-		Carinthia = {
-			Name = "Carinthia"
-		},
-		Carniola = {
-			Name = "Carniola"
-		},
-		Castille = {
-			Name = "Castille"
-		},
-		Corinth = {
-			Name = "Corinth"
-		},
-		Cornwall = {
-			Name = "Cornwall"
-		},
-		Corsica = {
-			Name = "Corsica"
-		},
-		Courland = {
-			Name = "Courland"
-		},
-		Crete = {
-			Name = "Crete"
-		},
-		Crimea = {
-			Name = "Crimea"
-		},
-		Croatia = {
-			Name = "Croatia"
-		},
-		Cumbria = {
-			Name = "Cumbria"
-		},
-		Dalmatia = {
-			Name = "Dalmatia"
-		},
-		Dobruja = {
-			Name = "Dobruja"
 		},
 		Don = {
 			Name = "Don",
@@ -168,90 +75,6 @@ function LoadProvinces(world)
 				unit_germanic_warrior = 4
 			}
 		},
-		Drenthe = {
-			Name = "Drenthe"
-		},
-		Durham = {
-			Name = "Durham"
-		},
-		EastAnglia = {
-			Name = "East Anglia"
-		},
-		EastFriesland = { -- also includes Osnabrück
-			Name = "East Friesland"
-		},
-		Epirus = {
-			Name = "Epirus"
-		},
-		Essex = {
-			Name = "Essex"
-		},
-		Estonia = {
-			Name = "Estonia"
-		},
-		Euboea = { -- to make this island appear separated from Attica, it was necessary to "bump" it one tile to the north and one tile to the east into the sea
-			Name = "Euboea"
-		},
-		FartherPomerania = {
-			Name = "Farther Pomerania"
-		},
-		France = {
-			Name = "France"
-		},
-		FrancheComte = {
-			Name = "Franche Comte"
-		},
-		Franconia = {
-			Name = "Franconia"
-		},
-		Friesland = {
-			Name = "Friesland"
-		},
-		Galicia = {
-			Name = "Galicia"
-		},
-		GaliciaIberia = {
-			Name = "Gallaecia"
-		},
-		Gotaland = {
-			Name = "Gotaland"
-		},
-		Gotland = {
-			Name = "Gotland"
-		},
-		Hanover = {
-			Name = "Hanover"
-		},
-		Hesse = {
-			Name = "Hesse"
-		},
-		HighlandScotland = {
-			Name = "Highland Scotland"
-		},
-		HitherPomerania = {
-			Name = "Hither Pomerania"
-		},
-		Holland = {
-			Name = "Holland"
-		},
-		Holstein = {
-			Name = "Holstein"
-		},
-		Hordaland = {
-			Name = "Hordaland"
-		},
-		Hungary = {
-			Name = "Hungary"
-		},
-		Iceland = {
-			Name = "Iceland"
-		},
-		Ireland = {
-			Name = "Ireland"
-		},
-		Istria = {
-			Name = "Istria"
-		},
 		Jutland = {
 			Name = "Jutland",
 			Units = {
@@ -259,179 +82,11 @@ function LoadProvinces(world)
 				unit_germanic_archer = 2
 			}
 		},
-		Kent = {
-			Name = "Kent"
-		},
-		Lacedaemonia = {
-			Name = "Lacedaemonia"
-		},
-		Latium = {
-			Name = "Latium"
-		},
-		Latvia = {
-			Name = "Latvia"
-		},
-		Lauenburg = {
-			Name = "Lauenburg"
-		},
-		Liguria = {
-			Name = "Liguria"
-		},
-		Lincoln = {
-			Name = "Lincoln"
-		},
-		Lithuania = {
-			Name = "Lithuania"
-		},
-		Lombardy = {
-			Name = "Lombardy"
-		},
-		Lorraine = {
-			Name = "Lorraine"
-		},
-		LowerAustria = {
-			Name = "Lower Austria"
-		},
-		LowerLusatia = {
-			Name = "Lower Lusatia"
-		},
-		LowerRhine = {
-			Name = "Lower Rhine"
-		},
-		LowlandScotland = {
-			Name = "Lowland Scotland"
-		},
-		Macedonia = {
-			Name = "Macedonia"
-		},
-		Magdeburg = {
-			Name = "Magdeburg"
-		},
-		Malta = {
-			Name = "Malta"
-		},
-		Mazovia = {
-			Name = "Mazovia"
-		},
-		Mecklenburg = {
-			Name = "Mecklenburg"
-		},
-		Mercia = {
-			Name = "Mercia"
-		},
-		Modena = {
-			Name = "Modena"
-		},
-		Moldavia = {
-			Name = "Moldavia"
-		},
-		Montenegro = {
-			Name = "Montenegro"
-		},
-		Moravia = {
-			Name = "Moravia"
-		},
-		Moselle = {
-			Name = "Moselle"
-		},
-		Naples = {
-			Name = "Naples"
-		},
-		Neumark = {
-			Name = "Neumark"
-		},
-		Normandy = {
-			Name = "Normandy"
-		},
-		Northumberland = {
-			Name = "Northumberland"
-		},
-		Oldenburg = {
-			Name = "Oldenburg"
-		},
-		Orkney = {
-			Name = "Orkney"
-		},
-		Overijssel = {
-			Name = "Overijssel"
-		},
-		Palatinate = {
-			Name = "Palatinate"
-		},
-		Palermo = {
-			Name = "Palermo"
-		},
-		Pannonia = {
-			Name = "Pannonia"
-		},
-		Parma = {
-			Name = "Parma"
-		},
-		Piedmont = {
-			Name = "Piedmont"
-		},
-		Pomerelia = {
-			Name = "Pomerelia"
-		},
-		Portugal = {
-			Name = "Portugal"
-		},
-		Posen = {
-			Name = "Posen"
-		},
-		Provence = {
-			Name = "Provence"
-		},
-		Prussia = {
-			Name = "Prussia"
-		},
-		Rhodes = {
-			Name = "Rhodes"
-		},
-		Rhodope = {
-			Name = "Rhodope"
-		},
-		Romagna = {
-			Name = "Romagna"
-		},
 		Russia = {
 			Name = "Russia",
 			Units = {
 				unit_germanic_warrior = 10 -- a few soldiers to stop the Vana Tribe from expanding here
 			}
-		},
-		Salzburg = {
-			Name = "Salzburg"
-		},
-		Sardinia = {
-			Name = "Sardinia"
-		},
-		Savoy = {
-			Name = "Savoy"
-		},
-		Scania = {
-			Name = "Scania"
-		},
-		Schleswig = {
-			Name = "Schleswig"
-		},
-		Serbia = {
-			Name = "Serbia"
-		},
-		Silesia = {
-			Name = "Silesia"
-		},
-		Skopje = {
-			Name = "Skopje"
-		},
-		Slovakia = {
-			Name = "Slovakia"
-		},
-		Styria = {
-			Name = "Styria"
-		},
-		Sussex = {
-			Name = "Sussex"
 		},
 		Sweden = {
 			Name = "Sweden",
@@ -439,80 +94,11 @@ function LoadProvinces(world)
 				unit_germanic_warrior = 10 -- soldiers to stop the Gylfing Tribe from expanding here
 			}
 		},
-		Switzerland = {
-			Name = "Switzerland"
-		},
-		Syracuse = {
-			Name = "Syracuse"
-		},
-		Thessaly = {
-			Name = "Thessaly"
-		},
-		Thrace = {
-			Name = "Thrace"
-		},
-		Thuringia = {
-			Name = "Thuringia"
-		},
-		Transylvania = {
-			Name = "Transylvania"
-		},
-		Tuscany = {
-			Name = "Tuscany"
-		},
-		Tyrol = {
-			Name = "Tyrol"
-		},
 		Ukraine = {
 			Name = "Ukraine",
 			Units = {
 				unit_germanic_warrior = 20 -- soldiers to stop the Vana Tribe from expanding here
 			}
-		},
-		Umbria = {
-			Name = "Umbria"
-		},
-		UpperAustria = {
-			Name = "Upper Austria"
-		},
-		UpperLusatia = {
-			Name = "Upper Lusatia"
-		},
-		UpperSaxony = {
-			Name = "Upper Saxony"
-		},
-		Venetia = {
-			Name = "Venetia"
-		},
-		Vojvodina = {
-			Name = "Vojvodina"
-		},
-		Wales = {
-			Name = "Wales"
-		},
-		Wallachia = {
-			Name = "Wallachia"
-		},
-		Wessex = {
-			Name = "Wessex"
-		},
-		WestGalicia = {
-			Name = "West Galicia"
-		},
-		Westphalia = {
-			Name = "Westphalia"
-		},
-		WhiteRussia = {
-			Name = "White Russia"
-		},
-		Wurtemberg = {
-			Name = "Wurtemberg"
-		},
-		York = {
-			Name = "York"
-		},
-		Zealand = {
-			Name = "Zealand"
 		}
 	}
 	
@@ -533,13 +119,13 @@ function LoadProvinces(world)
 				unit_gnomish_duelist = 1 -- Pypo's envoy
 			}
 		},
-		CavernsOfChaincolt = {
+		CavernsofChaincolt = {
 			Name = "Caverns of Chaincolt",
 			Units = {
 				unit_goblin_spearman = 4
 			}
 		},
-		CavernsOfFlame = {
+		CavernsofFlame = {
 			Name = "Caverns of Flame",
 			Civilization = "goblin",
 			Units = { -- starting units in the Caverns of Flame scenario
@@ -644,76 +230,20 @@ function LoadProvinces(world)
 	}
 	
 	local EarthWaterProvinces = {
-		AdriaticSea = { -- Source: "Limits of Oceans and Seas", 1953, p. 17.
-			Name = "Adriatic Sea"
-		},
-		AegeanSea = { -- Source: "Limits of Oceans and Seas", 1953, p. 18.
-			Name = "Aegean Sea"
-		},
-		AlboranSea = { -- Source: "Limits of Oceans and Seas", 1953, p. 16.
-			Name = "Alboran Sea"
-		},
-		AtlanticOcean = {
-			Name = "Atlantic Ocean"
-		},
-		BalearicSea = { -- Source: "Limits of Oceans and Seas", 1953, p. 16.
-			Name = "Balearic Sea"		},
 		BalticSea = {
 			Name = "Baltic Sea", -- Source: http://www.euratlas.net/history/europe/1/index.html
 			ReferenceProvince = "Brandenburg" -- province used as a reference for this province's name
-		},
-		BayOfBiscay = {
-			Name = "Bay of Biscay"
-		},
-		BlackSea = { -- Source: "Limits of Oceans and Seas", 1953, p. 18.
-			Name = "Black Sea"
-		},
-		BristolChannel = { -- Source: "Limits of Oceans and Seas", 1953, p. 13. (see corrections as well)
-			Name = "Bristol Channel"
-		},
-		CelticSea = { -- Source: "Limits of Oceans and Seas", 1953. (see corrections)
-			Name = "Celtic Sea"
-		},
-		EasternMediterraneanSea = { -- Source: "Limits of Oceans and Seas", 1953, p. 15.
-			Name = "Eastern Mediterranean Sea"
 		},
 		EnglishChannel = {
 			Name = "English Channel",
 			ReferenceProvince = "Wessex" -- province used as a reference for this province's name
 		},
-		GulfOfBothnia = { -- Source: "Limits of Oceans and Seas", 1953, p. 5.
-			Name = "Gulf of Bothnia"
-		},
-		GulfOfFinland = { -- Source: "Limits of Oceans and Seas", 1953, p. 5.
-			Name = "Gulf of Finland"
-		},
-		GulfOfRiga = { -- Source: "Limits of Oceans and Seas", 1953, p. 5.
-			Name = "Gulf of Riga"
-		},
-		InnerSeas = { -- Source: "Limits of Oceans and Seas", 1953, p. 12.
-			Name = "Inner Seas"
-		},
-		IonianSea = { -- Source: "Limits of Oceans and Seas", 1953, p. 17.
-			Name = "Ionian Sea"
-		},
 		IrishSea = { -- Source: "Limits of Oceans and Seas", 1953, p. 12. (see corrections as well)
 			Name = "Irish Sea",
 			ReferenceProvince = "Ireland" -- province used as a reference for this province's name
 		},
-		Kattegat = { -- Source: "Limits of Oceans and Seas", 1953, p. 5.
-			Name = "Kattegat"
-		},
-		LakeBeloye = {
-			Name = "Lake Beloye"
-		},
-		LakeChudskoye = {
-			Name = "Lake Chudskoye"
-		},
-		LakeIlmen = {
-			Name = "Lake Ilmen"
-		},
 		LakeVattern = {
-			Name = "Lake Vättern",
+			Name = "Lake Vattern",
 			ReferenceProvince = "Sweden"
 		},
 		LakeWener = {
@@ -725,68 +255,26 @@ function LoadProvinces(world)
 			Name = "Libyan Sea"
 		},
 		--]]
-		LigurianSea = { -- Source: "Limits of Oceans and Seas", 1953, p. 16.
-			Name = "Ligurian Sea"
-		},
 		NorthSea = {
 			Name = "North Sea", -- Source: http://www.euratlas.net/history/europe/1/index.html
 			ReferenceProvince = "Hanover" -- province used as a reference for this province's name
 		},
-		SeaOfAzov = { -- Source: "Limits of Oceans and Seas", 1953, p. 18.
+		SeaofAzov = { -- Source: "Limits of Oceans and Seas", 1953, p. 18.
 			Name = "Sea of Azov",
 			ReferenceProvince = "Don"
-		},
-		SeaOfMarmara = { -- Source: "Limits of Oceans and Seas", 1953, p. 18.
-			Name = "Sea of Marmara"
-		},
-		Skagerrak = { -- Source: "Limits of Oceans and Seas", 1953, p. 6.
-			Name = "Skagerrak"
-		},
-		TyrrhenianSea = { -- Source: "Limits of Oceans and Seas", 1953, p. 17.
-			Name = "Tyrrhenian Sea"
-		},
-		WesternMediterraneanSea = { -- Source: "Limits of Oceans and Seas", 1953, p. 15.
-			Name = "Western Mediterranean Sea"
-		},
-		WhiteSea = {
-			Name = "White Sea"
 		}
 	}
 
 	local NidavellirWaterProvinces = {
-		DeepSea = {
-			Name = "Deep Sea"
-		},
-		LakeVrug = {
-			Name = "Lake Vrug"
-		}
 	}
 
 	local function AddProvinceTable(province_table)
 		for key, value in pairs(province_table) do
-			WorldMapProvinces[key] = {}
-			WorldMapProvinces[key]["Name"] = province_table[key].Name
-						
-			local tiles = GetProvinceData(province_table[key].Name, "Tiles")
-			WorldMapProvinces[key]["Tiles"] = {}
-			for i=1,table.getn(tiles),2 do
-				table.insert(WorldMapProvinces[key].Tiles, {tiles[i], tiles[i + 1]})
-			end
-
-			WorldMapProvinces[key]["SettlementLocation"] = {GetProvinceData(province_table[key].Name, "SettlementLocationX"), GetProvinceData(province_table[key].Name, "SettlementLocationY")}
-			
-			WorldMapProvinces[key]["Coastal"] = GetProvinceData(province_table[key].Name, "Coastal")
-			
 			if (province_table[key].Owner ~= nil) then
 				SetProvinceOwner(province_table[key].Name, GetFactionFromName(province_table[key].Owner).Civilization, province_table[key].Owner)
 			end
 			if (province_table[key].Civilization ~= nil) then
 				SetProvinceCivilization(WorldMapProvinces[key].Name, province_table[key].Civilization)
-			end
-			if (province_table[key].SettlementBuildings ~= nil) then
-				for second_key, second_value in pairs(province_table[key].SettlementBuildings) do
-					SetProvinceSettlementBuilding(WorldMapProvinces[key].Name, string.gsub(second_key, "_", "-"), province_table[key].SettlementBuildings[second_key]) -- set the province settlement building for the engine
-				end
 			end
 			if (province_table[key].Units ~= nil) then
 				for second_key, second_value in pairs(province_table[key].Units) do
@@ -798,19 +286,9 @@ function LoadProvinces(world)
 	
 	local function AddWaterProvinceTable(province_table)
 		for key, value in pairs(province_table) do
-			WorldMapWaterProvinces[key] = {}
-			WorldMapWaterProvinces[key]["Name"] = province_table[key].Name
-			SetProvinceName("", WorldMapWaterProvinces[key].Name) -- this will define a new province for the engine
-			
 			if (province_table[key].ReferenceProvince ~= nil) then
 				WorldMapWaterProvinces[key]["ReferenceProvince"] = province_table[key].ReferenceProvince
 				SetProvinceReferenceProvince(WorldMapWaterProvinces[key].Name, WorldMapProvinces[province_table[key].ReferenceProvince].Name)
-			end
-			
-			local tiles = GetProvinceData(province_table[key].Name, "Tiles")
-			WorldMapWaterProvinces[key]["Tiles"] = {}
-			for i=1,table.getn(tiles),2 do
-				table.insert(WorldMapWaterProvinces[key].Tiles, {tiles[i], tiles[i + 1]})
 			end
 		end
 	end

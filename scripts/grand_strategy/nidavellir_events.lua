@@ -296,7 +296,7 @@ local NidavellirEvents = {
 				EventFaction.Civilization == "dwarf"
 				and GetProvinceOwner("Caverns of Chaincolt") == EventFaction.Name
 				and GetProvinceCivilization("Caverns of Chaincolt") == "dwarf"
-				and ProvinceHasBuildingClass(WorldMapProvinces.CavernsOfChaincolt.Name, "town-hall")
+				and ProvinceHasBuildingClass(WorldMapProvinces.CavernsofChaincolt.Name, "town-hall")
 				and GetFactionMilitaryScore(EventFaction) > 250 -- basic infantry x 5
 			) then
 				return true
@@ -308,18 +308,18 @@ local NidavellirEvents = {
 		OptionEffects = {
 			function(s)
 				EqualizeProvinceUnits(EventFaction)
-				AcquireProvince(WorldMapProvinces.CavernsOfChaincolt, "Norlund Clan")
+				AcquireProvince(WorldMapProvinces.CavernsofChaincolt, "Norlund Clan")
 				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "dwarf", "Norlund Clan")
 			end,
 			function(s)
 				EqualizeProvinceUnits(EventFaction)
-				AcquireProvince(WorldMapProvinces.CavernsOfChaincolt, "Norlund Clan")
+				AcquireProvince(WorldMapProvinces.CavernsofChaincolt, "Norlund Clan")
 				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "dwarf", "Norlund Clan")
 				SetFactionDiplomacyState(EventFaction.Civilization, EventFaction.Name, "dwarf", "Norlund Clan", "war")
 			end,
 			function(s)
 				EqualizeProvinceUnits(EventFaction)
-				AcquireProvince(WorldMapProvinces.CavernsOfChaincolt, "Norlund Clan")
+				AcquireProvince(WorldMapProvinces.CavernsofChaincolt, "Norlund Clan")
 				AcquireFactionTechnologies(EventFaction.Civilization, EventFaction.Name, "dwarf", "Norlund Clan")
 				GrandStrategyFaction = Factions.NorlundClan
 				SetPlayerFaction("dwarf", "Norlund Clan")
@@ -431,7 +431,7 @@ local NidavellirEvents = {
 		Conditions = function(s)
 			if (
 				GetProvinceOwner("Caverns of Chaincolt") == EventFaction.Name
-				and GetProvinceHero(WorldMapProvinces.CavernsOfChaincolt.Name, "Rugnur") == 2 and GetProvinceHero(WorldMapProvinces.CavernsOfChaincolt.Name, "Baglur") == 2 and FactionHasHero(EventFaction.Civilization, EventFaction.Name, "Durstorn")
+				and GetProvinceHero("Caverns of Chaincolt", "Rugnur") == 2 and GetProvinceHero("Caverns of Chaincolt", "Baglur") == 2 and FactionHasHero(EventFaction.Civilization, EventFaction.Name, "Durstorn")
 				and GetFactionProvinceCount(Factions.Untersberg) > 0
 				and GetFactionProvinceCount(Factions.ShinsplitterClan) > 0
 				and GetFactionProvinceCount(Factions.ShorbearClan) > 0
@@ -511,7 +511,7 @@ local NidavellirEvents = {
 		Civilization = "dwarf",
 		Faction = "NorlundClan",
 		Provinces = {
-			CavernsOfChaincolt = true
+			CavernsofChaincolt = true
 		},
 		Heroes = {
 			Rugnur = true,
@@ -590,7 +590,7 @@ local NidavellirEvents = {
 		Civilization = "dwarf",
 		Faction = "NorlundClan",
 		Provinces = {
-			CavernsOfChaincolt = true
+			CavernsofChaincolt = true
 		},
 		Units = {
 			unit_gnomish_duelist = 1 -- must have a gnomish duelist in the Caverns of Chaincolt
@@ -629,7 +629,7 @@ local NidavellirEvents = {
 		Civilization = "dwarf",
 		Faction = "NorlundClan",
 		Provinces = {
-			CavernsOfChaincolt = true
+			CavernsofChaincolt = true
 		},
 		Units = {
 			unit_gnomish_duelist = 1 -- must have a gnomish duelist in the Caverns of Chaincolt
@@ -667,7 +667,7 @@ local NidavellirEvents = {
 		Civilization = "dwarf",
 		Faction = "NorlundClan",
 		Provinces = {
-			CavernsOfChaincolt = true
+			CavernsofChaincolt = true
 		},
 		Units = {
 			unit_gnomish_duelist = 1 -- must have a gnomish duelist in the Caverns of Chaincolt
@@ -799,7 +799,7 @@ local NidavellirEvents = {
 		Civilization = "dwarf",
 		Faction = "NorlundClan",
 		Provinces = {
-			CavernsOfChaincolt = true
+			CavernsofChaincolt = true
 		},
 		Heroes = {
 			Rugnur = true,
@@ -892,7 +892,7 @@ local NidavellirEvents = {
 		Civilization = "dwarf",
 		Faction = "NorlundClan",
 		Provinces = {
-			CavernsOfChaincolt = true
+			CavernsofChaincolt = true
 		},
 		Heroes = {
 			Rugnur = true,
