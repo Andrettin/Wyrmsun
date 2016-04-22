@@ -2693,7 +2693,6 @@ DefineProvince("Lower Austria", {
 	},
 	HistoricalModifiers = {
 		1365, "upgrade-university", true, -- University founded in Vienna in 1365. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.
-		1585, "upgrade-university", true, -- University founded in Graz in 1585. Source: The Cambridge Modern History Atlas, p. 9.
 --		1815, "upgrade-college", true -- Imperial Polytechnic Institute of Vienna founded in 1815. Source: Silvia Fernanda de Mendonça Figueirôa, "Ciência e tecnologia no Brasil Imperial: Guilherme Schüch, Barão de Capanema (1824-1908)", 2005, p. 442.
 	},
 	Regions = {"Cisleithania", "Europe", "Germany-Netherlands", "Roman Danube", "West and Central Europe"}
@@ -4049,6 +4048,9 @@ DefineProvince("Styria", {
 	},
 	HistoricalCultures = {
 		-800, "celt"
+	},
+	HistoricalModifiers = {
+		1585, "upgrade-university", true -- University founded in Graz in 1585. Source: The Cambridge Modern History Atlas, p. 9.
 	},
 	Regions = {"Cisleithania", "Europe", "Germany-Netherlands", "Roman Danube", "West and Central Europe"}
 })
