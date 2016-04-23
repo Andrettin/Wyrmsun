@@ -25,41 +25,9 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineProvince("Asia Minor", {
-	World = "Earth",
-	Tiles = {
-		{554, 142} -- Troy
-	},
-	SettlementLocation = {554, 142}, -- Troy
-	Map = "maps/random/random-map-forest.smp",
-	SettlementTerrain = "Plains",
-	Coastal = true,
-	Claims = {
-		"hittite", "Troy"
-	},
-	Regions = {"Asia"}
-})
-
-DefineProvince("India", {
-	World = "Earth",
-	Tiles = {},
-	Map = "maps/random/random-map-forest.smp",
-	SettlementTerrain = "Plains",
-	Coastal = true,
-	HistoricalModifiers = {
-		1817, "upgrade-college", true -- Hindu College founded in Calcutta in 1817. Source: Atlas de História Mundial, 2001, p. 24.
-	},
-	Regions = {"Asia"}
-})
-
-DefineProvince("Philippines", {
-	World = "Earth",
-	Tiles = {},
-	Map = "maps/random/random-map-forest.smp",
-	SettlementTerrain = "Plains",
-	Coastal = true,
-	HistoricalModifiers = {
-		1645, "upgrade-university", true -- University Sto Tomás founded in Manila in 1645. Source: Enrique Martínez Ruiz; Consuelo Maqueda, Atlas Histórico de España I, 2000, p. 226.
-	},
-	Regions = {"Asia"}
+DefineFaction("Troy", {
+	Civilization = "hittite",
+	Type = "polity",
+	Colors = {"red"},
+	DefaultTier = "county"
 })

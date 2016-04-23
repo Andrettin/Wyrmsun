@@ -556,9 +556,6 @@ end
 if (GrandStrategyYear >= -750) then -- Eastern Mediterranean between 750 and 625 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.	
 	-- Greek settlements existed in Greece proper, Crete, Rhodes, Asia Minor, the Ionian islands, Sinope, Trapezus, eastern Sicily, southern Italy and northern Cyprus between 750 and 625 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
 	
-	-- Phoenician settlements existed in Phoenicia proper, western north Africa, western Sicily and southern Cyprus between 750 and 625 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.	
-	SetProvinceCivilization("Palermo", "phoenician")
-
 	SetProvinceOwner("Macedonia", "greek", "Macedon")
 	
 	SetProvinceOwner("Dalmatia", "illyrian", "Illyrian Tribe")
@@ -638,11 +635,6 @@ if (GrandStrategyYear >= -500) then
 	SetFactionGovernmentType("latin", "Rome", "republic") -- should be earlier?
 	
 	-- Situation of Italy in (apparently) 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
-	-- Sicily was inhabited by the Elymians, Sicanians and Sicels
-	SetProvinceOwner("Syracuse", "latin", "Sicel Tribe")
-	SetProvinceCivilization("Syracuse", "latin")
-	SetProvinceOwner("Palermo", "latin", "Sicanian Tribe")
-	SetProvinceCivilization("Palermo", "latin")
 	
 	SetProvinceOwner("Tuscany", "etruscan", "Etruria")
 	SetProvinceOwner("Romagna", "etruscan", "Etruria")
@@ -881,12 +873,6 @@ if (GrandStrategyYear >= -264) then
 	
 	SetProvinceOwner("Russia", "slav", "Budini Tribe")
 	SetProvinceCivilization("Russia", "slav")
-end
-
-if (GrandStrategyYear >= -241) then
-	-- Sicily acquired by Rome in 241 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-	SetProvinceOwner("Palermo", "latin", "Rome")
-	SetProvinceOwner("Syracuse", "latin", "Rome") -- the city of Syracuse was acquired only in 212 BC, but overwhelming majority of the eastern side of the island was acquired in 241 BC
 end
 
 if (GrandStrategyYear >= -238) then -- Corsica and Sardinia acquired by Rome in 238 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
@@ -1388,9 +1374,6 @@ end
 
 if (GrandStrategyYear >= 507) then -- political situation in 507-534 in Europe; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
 	SetProvinceOwner("Bavaria", "goth", "Ostrogoth Tribe")
-	SetProvinceOwner("Palermo", "goth", "Ostrogoth Tribe")
-	SetProvinceUnitQuantity("Palermo", "unit-teuton-swordsman", 0) -- let's remove those oodles of warriors placed there to make this province difficult to conquer
-	SetProvinceOwner("Syracuse", "goth", "Ostrogoth Tribe")
 	SetProvinceOwner("Istria", "goth", "Ostrogoth Tribe")
 	SetProvinceOwner("Carniola", "goth", "Ostrogoth Tribe")
 	SetProvinceOwner("Croatia", "goth", "Ostrogoth Tribe")
@@ -1726,15 +1709,6 @@ if (GrandStrategyYear >= 1046) then
 	-- Robert Guiscard, a Norman, arrived in southern Italy in 1046-1047 AD, eventually conquering Calabria, and becoming duke of Apulia, Calabria and Sicily; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 233.
 end
 
-if (GrandStrategyYear >= 1061) then
-	-- Robert Guiscard invades Sicily in 1061 AD with 13 ships and 270 knights, to which 170 knights were joined in the conquest of Messina (but the source also mentions the victorious battle having 700 knights against 15,000 Muslims); Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 233.
-	SetProvinceOwner("Syracuse", "latin", "Sicily") -- Messina is on the eastern side of the island
-end
-
-if (GrandStrategyYear >= 1072) then
-	SetProvinceOwner("Palermo", "latin", "Sicily") -- Palermo was conquered by the Norman forces in Sicily in 1072 AD; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 233.
-end
-
 if (GrandStrategyYear >= 1083) then
 	GrandStrategyEvents.SaemundPriestOfTheParishOfOdda = nil
 end
@@ -1821,8 +1795,6 @@ if (GrandStrategyYear >= 1560) then
 	SetProvinceOwner("Venetia", "latin", "Venice")
 	SetFactionGovernmentType("latin", "Venice", "republic")	
 	SetProvinceOwner("Sardinia", "latin", "Spain")
-	SetProvinceOwner("Palermo", "latin", "Spain")
-	SetProvinceOwner("Syracuse", "latin", "Spain")
 
 	SetProvinceOwner("Belgium", "latin", "Spain")
 	SetProvinceOwner("Holland", "latin", "Spain")

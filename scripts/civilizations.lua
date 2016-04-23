@@ -468,12 +468,22 @@ DefineCivilization("greek", {
 	--]]
 })
 
+DefineCivilization("hittite", {
+	Display = "Hittite",
+	Visible = true,
+	Species = "human",
+--	Language = "hittite",
+	ParentCivilization = "greek",
+	Adjective = "Hittite",
+	Playable = false
+})
+
 DefineCivilization("illyrian", {
 	Display = "Illyrian",
 	Visible = true,
 	Species = "human",
 	Language = "illyrian",
-	ParentCivilization = "teuton",
+	ParentCivilization = "greek",
 	Adjective = "Illyrian",
 	Playable = false
 })
@@ -625,7 +635,7 @@ DefineCivilization("phrygian", {
 	Visible = true,
 	Species = "human",
 	Language = "phrygian",
-	ParentCivilization = "teuton",
+	ParentCivilization = "greek",
 	Adjective = "Phrygian",
 	Playable = false
 })
@@ -646,7 +656,7 @@ DefineCivilization("thracian", {
 	Visible = true,
 	Species = "human",
 	Language = "thracian",
-	ParentCivilization = "teuton",
+	ParentCivilization = "greek",
 	Adjective = "Thracian",
 	Playable = false
 })

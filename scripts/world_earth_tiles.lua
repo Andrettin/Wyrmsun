@@ -25,6 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+--Load("scripts/world_earth_tiles_asia.lua")
 Load("scripts/world_earth_tiles_austria.lua")
 
 DefineWorldMapTile({418, 73}, {
