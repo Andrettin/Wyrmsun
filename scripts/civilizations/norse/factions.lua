@@ -25,6 +25,16 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineFaction("Sitone Tribe", { -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	Civilization = "norse", -- correct?
+	Type = "tribe",
+	Colors = {"brown"},
+	DevelopsTo = {"Sweden"}, -- same general area
+	HistoricalFactionDerivations = {-264, "germanic", "Yngling Tribe"},
+	HistoricalTechnologies = {
+		"upgrade-teuton-spatha", 180 -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
+	}
+})
 DefineFaction("Swede Tribe", {
 	Civilization = "norse",
 	Type = "tribe",

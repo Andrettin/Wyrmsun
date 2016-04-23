@@ -27,6 +27,7 @@
 
 Load("scripts/civilizations/celt/factions.lua")
 Load("scripts/civilizations/dwarf/factions.lua")
+Load("scripts/civilizations/finnish/factions.lua")
 Load("scripts/civilizations/germanic/factions.lua")
 Load("scripts/civilizations/goth/factions.lua")
 Load("scripts/civilizations/greek/factions.lua")

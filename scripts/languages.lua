@@ -104,7 +104,8 @@ DefineLanguage("etruscan", {
 })
 
 DefineLanguage("finnish", {
-	Name = "Finnish"
+	Name = "Finnish",
+	SkipNameTypeInheritance = true
 })
 
 DefineLanguage("french", {

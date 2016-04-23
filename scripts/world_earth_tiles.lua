@@ -27,6 +27,8 @@
 
 --Load("scripts/world_earth_tiles_asia.lua")
 Load("scripts/world_earth_tiles_austria.lua")
+Load("scripts/world_earth_tiles_finland.lua")
+Load("scripts/world_earth_tiles_scandinavia.lua")
 
 DefineWorldMapTile({418, 73}, {
 	World = "Earth",
@@ -334,13 +336,6 @@ DefineWorldMapTile({494, 121}, {
 	}
 })
 
-DefineWorldMapTile({495, 84}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"norse", "Bergen"
-	}
-})
-
 DefineWorldMapTile({495, 132}, {
 	World = "Earth",
 	CulturalSettlementNames = {
@@ -580,13 +575,6 @@ DefineWorldMapTile({507, 107}, {
 	}
 })
 
-DefineWorldMapTile({508, 96}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"norse", "Aarhus"
-	}
-})
-
 DefineWorldMapTile({508, 101}, {
 	World = "Earth",
 	CulturalSettlementNames = {
@@ -684,14 +672,6 @@ DefineWorldMapTile({512, 131}, {
 	}
 })
 
-DefineWorldMapTile({513, 91}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"goth", "Gothenburg",
-		"norse", "Göteborg"
-	}
-})
-
 DefineWorldMapTile({513, 107}, {
 	World = "Earth",
 	CulturalSettlementNames = {
@@ -711,13 +691,6 @@ DefineWorldMapTile({514, 116}, {
 			"compound", "suffix", "high-german", "noun", "singular", "Burg"
 		}
 		-- also "Ratisbon"
-	}
-})
-
-DefineWorldMapTile({515, 97}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"norse", "Copenhagen"
 	}
 })
 
@@ -753,13 +726,6 @@ DefineWorldMapTile({515, 136}, {
 	},
 	FactionCulturalSettlementNames = {
 		"teuton", "England", "Rome"
-	}
-})
-
-DefineWorldMapTile({517, 97}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"norse", "Malmö"
 	}
 })
 
@@ -965,27 +931,6 @@ DefineWorldMapTile({528, 118}, {
 --			"compound", "prefix", -- ?
 			"compound", "suffix", "high-german", "noun", "singular", "Burg"
 		}
-	}
-})
-
-DefineWorldMapTile({531, 87}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"germanic", "Segiztûna", "name-elements", { -- rendering of "Sigtun" in Proto-Germanic, since the Ynglinga saga the city was founded when the cultural ancestors of the Germanic peoples (= Odin's people) first settled Scandinavia
-			"compound", "prefix", "proto-germanic", "noun", "Segiz",
-			"compound", "suffix", "proto-germanic", "noun", "Tûna"
-		},
-		"norse", "Sigtun", "name-elements", {
-			"compound", "prefix", "old-norse", "noun", "no-case", "Sigr", -- presumably; used "no-case" to avoid the nominative ending "-r"
-			"compound", "suffix", "old-norse", "noun", "Tûn" -- presumably
-		}
-	}
-})
-
-DefineWorldMapTile({532, 92}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"norse", "Wisby"
 	}
 })
 

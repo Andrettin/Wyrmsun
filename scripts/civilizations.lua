@@ -610,6 +610,16 @@ DefineCivilization("norse", {
 	Playable = false
 })
 
+DefineCivilization("finnish", {
+	Display = "Finnish",
+	Visible = true,
+	Species = "human",
+	Language = "finnish",
+	ParentCivilization = "norse",
+	Adjective = "Finnish",
+	Playable = false
+})
+
 DefineCivilization("persian", {
 	Display = "Persian",
 	Visible = true,
