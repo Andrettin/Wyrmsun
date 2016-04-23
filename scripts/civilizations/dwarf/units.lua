@@ -733,6 +733,92 @@ DefineUnitType("unit-dwarven-yale-rider", { Name = _("Yale Rider"),
 	}
 } )
 
+DefineUnitType("unit-dwarven-yale-lord", { Name = _("Yale Lord"),
+	Parent = "unit-template-heroic-cavalry",
+	Civilization = "dwarf",
+	Description = _("Few things are more terrifying than a yale lord leading a throng of mounted dwarves into a crushing charge. Masters of the hills, yale lords are most often present in dwarven clans living above ground."),
+	Image = {"file", "dwarf/units/yale_rider_red_hair_gray_fur.png", "size", {72, 72}},
+	Animations = "animations-melee-unit", Icon = "icon-dwarven-yale-lord",
+	DefaultEquipment = {
+		{"weapon", "unit-battle-axe"},
+--		{"shield", "unit-round-shield"}, -- commented out to make the Brising Round Shield icon appear when proper
+		{"boots", "unit-boots"}
+	},
+	Corpse = "unit-dwarven-dead-body",
+	WeaponClasses = {"axe"},
+	HackDamage = true,
+	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-round-shield", "unit-brising-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-glacial", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-the-snigill"},
+	Variations = {
+		{
+			"variation-id", "red-hair-gray-fur",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"variation-id", "red-hair-brown-fur",
+			"file", "dwarf/units/yale_rider_red_hair_brown_fur.png",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"variation-id", "black-hair-brown-fur",
+			"file", "dwarf/units/yale_rider_black_hair_brown_fur.png",
+			"icon", "icon-dwarven-yale-lord-black-hair",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"variation-id", "black-hair-gray-brown-fur",
+			"file", "dwarf/units/yale_rider_black_hair_gray_brown_fur.png",
+			"icon", "icon-dwarven-yale-lord-black-hair",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"variation-id", "blond-hair-brown-fur",
+			"file", "dwarf/units/yale_rider_blond_hair_brown_fur.png",
+			"icon", "icon-dwarven-yale-lord-blond-hair",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"variation-id", "brown-hair-brown-fur",
+			"file", "dwarf/units/yale_rider_brown_hair_brown_fur.png",
+			"icon", "icon-dwarven-yale-lord-brown-hair",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"variation-id", "brown-hair-white-fur",
+			"file", "dwarf/units/yale_rider_brown_hair_white_fur.png",
+			"icon", "icon-dwarven-yale-lord-brown-hair",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"variation-id", "gray-hair-gray-brown-fur",
+			"file", "dwarf/units/yale_rider_gray_hair_gray_brown_fur.png",
+			"icon", "icon-dwarven-yale-lord-gray-hair"
+		},
+		{
+			"variation-id", "orange-hair-brown-fur",
+			"file", "dwarf/units/yale_rider_orange_hair_brown_fur.png",
+			"icon", "icon-dwarven-yale-lord-orange-hair",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"variation-id", "orange-hair-white-fur",
+			"file", "dwarf/units/yale_rider_orange_hair_white_fur.png",
+			"icon", "icon-dwarven-yale-lord-orange-hair",
+			"upgrade-forbidden", "upgrade-old"
+		}
+	},
+	Sounds = {
+		"selected", "yale-rider-selected-group",
+		"acknowledge", "yale-rider-acknowledge",
+		"attack", "basic-dwarf-voices-attack",
+		"ready", "dwarven-yale-rider-ready",
+		"help", "basic-dwarf-voices-help",
+		"dead", "basic-dwarf-voices-dead",
+		"hit", "axe-attack",
+		"miss", "attack-miss"
+	}
+} )
+
 DefineUnitType("unit-dwarven-gryphon-rider", { Name = _("Gryphon Rider"),
 	Parent = "unit-template-flying-rider",
 	Civilization = "dwarf",

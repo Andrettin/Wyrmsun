@@ -93,6 +93,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Units
 - Added Dim (-5 mana), Genius (+10 mana), Intelligent (+5 mana), Pious (+5 mana) and Wise (+5 mana) traits.
+- Added Yale Lord (experience upgrade of the dwarven Yale Rider) (icon by Jinn).
 
 -----------------------------------------------------------------------
 - 2.1.4

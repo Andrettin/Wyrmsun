@@ -231,7 +231,7 @@ DefineModifier("upgrade-dwarven-broad-axe",
 	{"Points", 10},
 	{"apply-to", "unit-dwarven-militia"}, 
 	{"apply-to", "unit-dwarven-axefighter"}, {"apply-to", "unit-dwarven-steelclad"}, {"apply-to", "unit-dwarven-thane"},
-	{"apply-to", "unit-dwarven-yale-rider"},
+	{"apply-to", "unit-dwarven-yale-rider"}, {"apply-to", "unit-dwarven-yale-lord"},
 	{"apply-to", "unit-brising-militia"},
 	{"apply-to", "unit-surghan-mercenary-steelclad"}, {"apply-to", "unit-surghan-mercenary-thane"}
 )
@@ -241,7 +241,7 @@ DefineModifier("upgrade-dwarven-great-axe",
 	{"Points", 10},
 	{"apply-to", "unit-dwarven-militia"}, 
 	{"apply-to", "unit-dwarven-axefighter"}, {"apply-to", "unit-dwarven-steelclad"}, {"apply-to", "unit-dwarven-thane"},
-	{"apply-to", "unit-dwarven-yale-rider"},
+	{"apply-to", "unit-dwarven-yale-rider"}, {"apply-to", "unit-dwarven-yale-lord"},
 	{"apply-to", "unit-brising-militia"},
 	{"apply-to", "unit-surghan-mercenary-steelclad"}, {"apply-to", "unit-surghan-mercenary-thane"}
 )
@@ -264,7 +264,7 @@ DefineModifier("upgrade-dwarven-shield-1",
 	{"apply-to", "unit-dwarven-militia"},
 	{"apply-to", "unit-dwarven-axefighter"}, {"apply-to", "unit-dwarven-steelclad"}, {"apply-to", "unit-dwarven-thane"},
 	{"apply-to", "unit-dwarven-guard"},
-	{"apply-to", "unit-dwarven-yale-rider"},
+	{"apply-to", "unit-dwarven-yale-rider"}, {"apply-to", "unit-dwarven-yale-lord"},
 	{"apply-to", "unit-brising-militia"},
 	{"apply-to", "unit-surghan-mercenary-steelclad"}, {"apply-to", "unit-surghan-mercenary-thane"}
 )
@@ -275,7 +275,7 @@ DefineModifier("upgrade-dwarven-shield-2",
 	{"apply-to", "unit-dwarven-militia"},
 	{"apply-to", "unit-dwarven-axefighter"}, {"apply-to", "unit-dwarven-steelclad"}, {"apply-to", "unit-dwarven-thane"},
 	{"apply-to", "unit-dwarven-guard"},
-	{"apply-to", "unit-dwarven-yale-rider"},
+	{"apply-to", "unit-dwarven-yale-rider"}, {"apply-to", "unit-dwarven-yale-lord"},
 	{"apply-to", "unit-brising-militia"},
 	{"apply-to", "unit-surghan-mercenary-steelclad"}, {"apply-to", "unit-surghan-mercenary-thane"}
 )

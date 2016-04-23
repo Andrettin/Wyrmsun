@@ -104,6 +104,7 @@ local land_funcs = {
 	"unit-dwarven-pathfinder", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-dwarven-pathfinder"),
 	"unit-dwarven-explorer", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-dwarven-explorer"),
 	"unit-dwarven-yale-rider", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-dwarven-yale-rider"),
+	"unit-dwarven-yale-lord", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-dwarven-yale-lord"),
 	"unit-dwarven-ballista", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-dwarven-ballista"),
 	"unit-dwarven-gryphon-rider", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-dwarven-gryphon-rider"),
 	"unit-gnomish-recruit", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-gnomish-recruit"),

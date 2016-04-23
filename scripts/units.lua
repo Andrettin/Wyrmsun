@@ -62,7 +62,7 @@ Units = {
 	"unit-dwarven-axefighter", "unit-dwarven-steelclad", "unit-dwarven-thane",
 	"unit-dwarven-guard",
 	"unit-dwarven-scout", "unit-dwarven-pathfinder", "unit-dwarven-explorer",
-	"unit-dwarven-yale-rider", "unit-dwarven-ballista",
+	"unit-dwarven-yale-rider", "unit-dwarven-yale-lord", "unit-dwarven-ballista",
 	"unit-dwarven-gryphon-rider",
 	"unit-dwarven-transport-ship",
 	"unit-dwarven-town-hall", "unit-dwarven-stronghold",
@@ -3589,8 +3589,6 @@ DefineUnitType("unit-template-heroic-infantry", { Name = _("Heroic Infantry"),
 	Level = 3,
 	Type = "land",
 	RightMouseAction = "attack",
-	CanAttack = true,
-	CanTargetLand = true,
 	Inventory = true,
 	Mana = {Enable = true, Max = 225, Value = 225, Increase = 1},
 	DropAffixes = {"upgrade-item-suffix-of-power", "upgrade-item-suffix-of-regeneration", "upgrade-item-suffix-of-slaughter", "upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-victory", "upgrade-item-suffix-of-vision"}
@@ -3684,6 +3682,7 @@ DefineUnitType("unit-template-heroic-shooter", { Name = _("Heroic Shooter"),
 	Accuracy = 12,
 	Points = 120,
 	Level = 3,
+	Inventory = true,
 	DropAffixes = {"upgrade-item-prefix-impregnable", "upgrade-item-suffix-of-thorns"}
 } )
 
@@ -3755,8 +3754,6 @@ DefineUnitType("unit-template-cavalry", { Name = _("Cavalry"),
 	Mounted = true,
 	Flesh = true,
 	Mana = {Enable = true, Max = 150, Value = 150, Increase = 1},
-	CanCastSpell = {"spell-stun"},
-	AutoCastActive = {"spell-stun"},
 	TechnologyPointCost = 1,
 	ButtonPos = 4,
 	AiDrops = {"unit-amulet", "unit-ring"},
@@ -3769,6 +3766,26 @@ DefineUnitType("unit-template-cavalry", { Name = _("Cavalry"),
 		"step-stone", "step-stone",
 		"step-grass", "step-leaves"
 	}
+} )
+
+DefineUnitType("unit-template-heroic-cavalry", { Name = _("Heroic Cavalry"),
+	Parent = "unit-template-cavalry",
+	Class = "heroic-cavalry",
+	Costs = {"time", 0, "gold", 0},
+	Strength = 13,
+	Dexterity = 12,
+	Intelligence = 12,
+	Charisma = 12,
+	HitPoints = 90,
+	BasicDamage = 14,
+	Points = 100,
+	Level = 3,
+	TechnologyPointCost = 0,
+	Inventory = true,
+	Mana = {Enable = true, Max = 225, Value = 225, Increase = 1},
+	CanCastSpell = {"spell-stun"},
+	AutoCastActive = {"spell-stun"},
+	DropAffixes = {"upgrade-item-suffix-of-power", "upgrade-item-suffix-of-regeneration", "upgrade-item-suffix-of-slaughter", "upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-victory", "upgrade-item-suffix-of-vision"}
 } )
 
 DefineUnitType("unit-template-priest", { Name = _("Priest"),
