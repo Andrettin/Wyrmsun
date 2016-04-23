@@ -29,6 +29,7 @@
 Load("scripts/world_earth_tiles_austria.lua")
 Load("scripts/world_earth_tiles_finland.lua")
 Load("scripts/world_earth_tiles_scandinavia.lua")
+Load("scripts/world_earth_tiles_spain.lua")
 
 DefineWorldMapTile({418, 73}, {
 	World = "Earth",
@@ -47,16 +48,6 @@ DefineWorldMapTile({454, 145}, {
 	}
 })
 
-DefineWorldMapTile({456, 132}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"latin", "Lucus Augusti"
-	},
-	FactionCulturalSettlementNames = {
-		"latin", "Spain", "Corunna"
-	}
-})
-
 DefineWorldMapTile({462, 104}, {
 	World = "Earth",
 	CulturalSettlementNames = {
@@ -64,13 +55,6 @@ DefineWorldMapTile({462, 104}, {
 	},
 	FactionCulturalSettlementNames = {
 		"teuton", "England", "Dublin"
-	}
-})
-
-DefineWorldMapTile({464, 141}, {
-	World = "Earth",
-	FactionCulturalTerrainNames = {
-		"Mountains", "latin", "Spain", "Pico Almanzor" -- Source: "Philip's International School Atlas", 2006, p. 69
 	}
 })
 
@@ -91,16 +75,6 @@ DefineWorldMapTile({466, 148}, {
 	}
 })
 
-DefineWorldMapTile({469, 141}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"latin", "Complutum"
-	},
-	FactionCulturalSettlementNames = {
-		"latin", "Spain", "Madrid"
-	}
-})
-
 DefineWorldMapTile({470, 87}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
@@ -115,13 +89,6 @@ DefineWorldMapTile({470, 97}, {
 --			"compound", "prefix", -- ?
 			"compound", "suffix", "english", "noun", "singular", "Burgh"
 		}
-	}
-})
-
-DefineWorldMapTile({470, 150}, {
-	World = "Earth",
-	FactionCulturalTerrainNames = {
-		"Mountains", "latin", "Spain", "Mulhacén" -- Source: "Philip's International School Atlas", 2006, p. 69
 	}
 })
 
@@ -214,16 +181,6 @@ DefineWorldMapTile({477, 102}, {
 	}
 })
 
-DefineWorldMapTile({477, 137}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"latin", "Caesaraugusta"
-	},
-	FactionCulturalSettlementNames = {
-		"latin", "Spain", "Zaragoza"
-	}
-})
-
 DefineWorldMapTile({478, 102}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
@@ -258,13 +215,6 @@ DefineWorldMapTile({480, 111}, { -- Source: William R. Shepherd, "Historical Atl
 			"compound", "prefix", "english", "adjective", "New",
 			"compound", "suffix", "english", "noun", "singular", "Haven"
 		}
-	}
-})
-
-DefineWorldMapTile({481, 135}, {
-	World = "Earth",
-	FactionCulturalTerrainNames = {
-		"Mountains", "latin", "Spain", "Monte Perdido" -- Source: "Philip's International School Atlas", 2006, p. 69
 	}
 })
 

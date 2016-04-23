@@ -39,10 +39,29 @@ DefineFaction("Arverni Tribe", {
 	Colors = {"blue"}
 })
 
+DefineFaction("Astures Tribe", { -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	Civilization = "celt", -- correct?
+	Type = "tribe",
+	Colors = {"brown"}
+})
+
 DefineFaction("Boii Tribe", {
 	Civilization = "celt",
 	Type = "tribe",
 	Colors = {"brown"}
+})
+
+DefineFaction("Brigantes Tribe", { -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	Civilization = "celt", -- correct?
+--	Language = "welsh", -- correct?
+	Type = "tribe",
+	Colors = {"pink"}
+})
+
+DefineFaction("Cantabri Tribe", { -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	Civilization = "celt", -- correct?
+	Type = "tribe",
+	Colors = {"orange"}
 })
 
 DefineFaction("Cotini Tribe", {

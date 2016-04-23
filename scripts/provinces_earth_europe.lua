@@ -404,6 +404,46 @@ DefineProvince("Astrakhan", {
 	Regions = {"Eurasia", "Europe"}
 })
 
+DefineProvince("Asturias", {
+	World = "Earth",
+	FactionCulturalNames = {
+		"latin", "Spain", "Asturias"
+	},
+	Tiles = {
+		{459, 132},
+		{460, 132}, {460, 133},
+		{461, 132}, {461, 133},
+		{462, 132}, {462, 133},
+		{463, 132}, {463, 133},
+		{464, 132}, {464, 133},
+		{465, 132}, {465, 133},
+		{466, 133},
+		{467, 133},
+		{468, 132}, {468, 133},
+		{469, 132}, {469, 133},
+		{470, 133}
+	},
+	SettlementLocation = {463, 132}, -- Oviedo
+	Map = "maps/random/random-map-forest.smp",
+	SettlementTerrain = "Plains",
+	Claims = {
+		"celt", "Cantabri Tribe"
+	},
+	HistoricalOwners = {
+		-264, "celt", "Cantabri Tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		17, "latin", "Rome", -- Asturias acquired by Rome in 17 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		1560, "latin", "Spain" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalCultures = {
+		-264, "celt"
+	},
+	HistoricalModifiers = {
+		1580, "upgrade-university", true, -- University founded in Oviedo in 1580. Source: The Cambridge Modern History Atlas, p. 9.
+		1608, "upgrade-university", false -- University abolished in Oviedo in 1608. Source: Enrique Martínez Ruiz; Consuelo Maqueda, Atlas Histórico de España I, 2000, p. 225.
+	},
+	Regions = {"Europe", "Iberia", "West and Central Europe"}
+})
+
 DefineProvince("Attica", {
 	World = "Earth",
 	Tiles = {
@@ -986,18 +1026,18 @@ DefineProvince("Castille", {
 	},
 	Tiles = {
 --		{115, 34}, {115, 35}, {115, 36}, {116, 33}, {116, 34}, {116, 35}, {117, 33}, {117, 34}, {117, 35}, {118, 33}, {118, 34}, {118, 35}, {118, 36}, -- old map
-		{459, 132}, {459, 143}, {459, 146},
-		{460, 132}, {460, 133}, {460, 134}, {460, 136}, {460, 139}, {460, 140}, {460, 141}, {460, 142}, {460, 143}, {460, 144}, {460, 145}, {460, 146},
-		{461, 132}, {461, 133}, {461, 134}, {461, 135}, {461, 136}, {461, 138}, {461, 139}, {461, 140}, {461, 141}, {461, 142}, {461, 143}, {461, 144}, {461, 145}, {461, 146},
-		{462, 132}, {462, 133}, {462, 134}, {462, 135}, {462, 136}, {462, 137}, {462, 138}, {462, 139}, {462, 140}, {462, 141}, {462, 142}, {462, 143}, {462, 144}, {462, 145}, {462, 146},
-		{463, 132}, {463, 133}, {463, 134}, {463, 135}, {463, 136}, {463, 137}, {463, 138}, {463, 139}, {463, 140}, {463, 141}, {463, 142}, {463, 143}, {463, 144}, {463, 145}, {463, 146},
-		{464, 132}, {464, 133}, {464, 134}, {464, 135}, {464, 136}, {464, 137}, {464, 138}, {464, 139}, {464, 140}, {464, 141}, {464, 142}, {464, 143}, {464, 144}, {464, 145}, {464, 146},
-		{465, 132}, {465, 133}, {465, 134}, {465, 135}, {465, 136}, {465, 137}, {465, 138}, {465, 139}, {465, 140}, {465, 141}, {465, 142}, {465, 143}, {465, 144},
-		{466, 133}, {466, 134}, {466, 135}, {466, 136}, {466, 137}, {466, 138}, {466, 139}, {466, 140}, {466, 141}, {466, 142}, {466, 143}, {466, 144},
-		{467, 133}, {467, 134}, {467, 135}, {467, 136}, {467, 137}, {467, 138}, {467, 139}, {467, 140}, {467, 141}, {467, 142}, {467, 143}, {467, 144}, {467, 145},
-		{468, 132}, {468, 133}, {468, 134}, {468, 135}, {468, 136}, {468, 137}, {468, 138}, {468, 139}, {468, 140}, {468, 141}, {468, 142}, {468, 143}, {468, 144}, {468, 145},
-		{469, 132}, {469, 133}, {469, 134}, {469, 135}, {469, 136}, {469, 137}, {469, 138}, {469, 139}, {469, 140}, {469, 141}, {469, 142}, {469, 143}, {469, 144}, {469, 145},
-		{470, 133}, {470, 134}, {470, 135}, {470, 136}, {470, 137}, {470, 138}, {470, 139}, {470, 140}, {470, 141}, {470, 142}, {470, 143}, {470, 144}, {470, 145},
+		{459, 143}, {459, 146},
+		{460, 134}, {460, 136}, {460, 139}, {460, 140}, {460, 141}, {460, 142}, {460, 143}, {460, 144}, {460, 145}, {460, 146},
+		{461, 134}, {461, 135}, {461, 136}, {461, 138}, {461, 139}, {461, 140}, {461, 141}, {461, 142}, {461, 143}, {461, 144}, {461, 145}, {461, 146},
+		{462, 134}, {462, 135}, {462, 136}, {462, 137}, {462, 138}, {462, 139}, {462, 140}, {462, 141}, {462, 142}, {462, 143}, {462, 144}, {462, 145}, {462, 146},
+		{463, 134}, {463, 135}, {463, 136}, {463, 137}, {463, 138}, {463, 139}, {463, 140}, {463, 141}, {463, 142}, {463, 143}, {463, 144}, {463, 145}, {463, 146},
+		{464, 134}, {464, 135}, {464, 136}, {464, 137}, {464, 138}, {464, 139}, {464, 140}, {464, 141}, {464, 142}, {464, 143}, {464, 144}, {464, 145}, {464, 146},
+		{465, 134}, {465, 135}, {465, 136}, {465, 137}, {465, 138}, {465, 139}, {465, 140}, {465, 141}, {465, 142}, {465, 143}, {465, 144},
+		{466, 134}, {466, 135}, {466, 136}, {466, 137}, {466, 138}, {466, 139}, {466, 140}, {466, 141}, {466, 142}, {466, 143}, {466, 144},
+		{467, 134}, {467, 135}, {467, 136}, {467, 137}, {467, 138}, {467, 139}, {467, 140}, {467, 141}, {467, 142}, {467, 143}, {467, 144}, {467, 145},
+		{468, 134}, {468, 135}, {468, 136}, {468, 137}, {468, 138}, {468, 139}, {468, 140}, {468, 141}, {468, 142}, {468, 143}, {468, 144}, {468, 145},
+		{469, 134}, {469, 135}, {469, 136}, {469, 137}, {469, 138}, {469, 139}, {469, 140}, {469, 141}, {469, 142}, {469, 143}, {469, 144}, {469, 145},
+		{470, 134}, {470, 135}, {470, 136}, {470, 137}, {470, 138}, {470, 139}, {470, 140}, {470, 141}, {470, 142}, {470, 143}, {470, 144}, {470, 145},
 		{471, 133}, {471, 134}, {471, 135}, {471, 136}, {471, 137}, {471, 138}, {471, 139}, {471, 140}, {471, 141}, {471, 142}, {471, 143}, {471, 144}, {471, 145},
 		{472, 133}, {472, 134}, {472, 135}, {472, 136}, {472, 137}, {472, 138}, {472, 139}, {472, 140}, {472, 141}, {472, 142}, {472, 143}, {472, 144}, {472, 145},
 		{473, 133}, {473, 134}, {473, 135}, {473, 136}, {473, 137}, {473, 138}, {473, 139}, {473, 140}, {473, 141}, {473, 142}, {473, 143}, {473, 144}, {473, 145}, {473, 146},
@@ -1025,9 +1065,7 @@ DefineProvince("Castille", {
 		1550, "upgrade-university", true, -- Minor university founded in Avila in 1550. Source: Enrique Martínez Ruiz; Consuelo Maqueda, Atlas Histórico de España I, 2000, p. 225.
 		1550, "upgrade-university", true, -- Minor university founded in Osma in 1550. Source: The Cambridge Modern History Atlas, p. 9 and Enrique Martínez Ruiz; Consuelo Maqueda, Atlas Histórico de España I, 2000, p. 225.
 		1553, "upgrade-university", true, -- Minor university founded in Almagro in 1553. Source: Enrique Martínez Ruiz; Consuelo Maqueda, Atlas Histórico de España I, 2000, p. 225.
-		1580, "upgrade-university", true, -- University founded in Oviedo in 1580. Source: The Cambridge Modern History Atlas, p. 9.
 		1605, "upgrade-university", true, -- Minor university founded in Irache in 1605. Source: Enrique Martínez Ruiz; Consuelo Maqueda, Atlas Histórico de España I, 2000, p. 225.
---		1608, "upgrade-university", false, -- University abolished in Oviedo in 1608. Source: Enrique Martínez Ruiz; Consuelo Maqueda, Atlas Histórico de España I, 2000, p. 225.
 		1628, "upgrade-university", true, -- Major university founded in Pamplona in 1628. Source: Enrique Martínez Ruiz; Consuelo Maqueda, Atlas Histórico de España I, 2000, p. 225.
 --		1703, "upgrade-university", false, -- University abolished in Siguenza in 1703. Source: Enrique Martínez Ruiz; Consuelo Maqueda, Atlas Histórico de España I, 2000, p. 225.
 --		1725, "upgrade-university", false, -- Major university abolished in Pamplona in 1725. Source: Enrique Martínez Ruiz; Consuelo Maqueda, Atlas Histórico de España I, 2000, p. 225.
@@ -1254,13 +1292,16 @@ DefineProvince("Cumbria", {
 	SettlementTerrain = "Plains",
 	Coastal = true,
 	Claims = {
+		"celt", "Brigantes Tribe",
 		"teuton", "England"
 	},
 	HistoricalOwners = {
+		-264, "celt", "Brigantes Tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		43, "latin", "Rome", -- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		1560, "teuton", "England" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalCultures = {
+		-264, "celt",
 		1560, "teuton"
 	},
 	Regions = {"British Isles", "England", "Europe", "Northwest Europe", "West and Central Europe"}
@@ -5009,11 +5050,13 @@ DefineProvince("York", {
 	SettlementTerrain = "Plains",
 	Coastal = true,
 	Claims = {
+		"celt", "Brigantes Tribe",
 		"teuton", "Dere Tribe", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
 		"teuton", "England",
 		"teuton", "Northumbria"
 	},
 	HistoricalOwners = {
+		-264, "celt", "Brigantes Tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		43, "latin", "Rome", -- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		500, "teuton", "Dere Tribe", -- The Dere (a collection of Anglian peoples) were in possession of York in 500 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
 		588, "teuton", "Bernicia", -- according to tradition, Æthelric of Bernicia acquired the kingdom of Deira upon its king Ælle's death in 588 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75.
@@ -5024,6 +5067,7 @@ DefineProvince("York", {
 		588, "teuton", "Deira" -- since their king died in this year, the kingdom existed then
 	},
 	HistoricalCultures = {
+		-264, "celt",
 		500, "teuton"
 	},
 	HistoricalModifiers = {
