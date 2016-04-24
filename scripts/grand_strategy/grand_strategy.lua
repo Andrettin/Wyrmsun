@@ -812,8 +812,12 @@ function AttackProvince(province, faction)
 				for i, unitName in ipairs(Units) do
 					if (string.find(unitName, "upgrade-") == nil) then
 						if (GetProvinceUnitQuantity(WorldMapProvinces[province_key].Name, unitName) > 1) then
-							ChangeProvinceUnitQuantity(province.Name, unitName, GetProvinceUnitQuantity(WorldMapProvinces[province_key].Name, unitName) - 1)
-							ChangeProvinceUnitQuantity(WorldMapProvinces[province_key].Name, unitName, - (GetProvinceUnitQuantity(WorldMapProvinces[province_key].Name, unitName) - 1))
+							local quantity_to_move = GetProvinceUnitQuantity(WorldMapProvinces[province_key].Name, unitName)
+							if (GetUnitTypeData(unitName, "Class") == "worker") then
+								quantity_to_move = quantity_to_move - 1
+							end
+							ChangeProvinceUnitQuantity(province.Name, unitName, quantity_to_move)
+							ChangeProvinceUnitQuantity(WorldMapProvinces[province_key].Name, unitName, - quantity_to_move)
 						elseif (IsGrandStrategyBuilding(unitName) and GetProvinceSettlementBuilding(WorldMapProvinces[province_key].Name, unitName)) then
 							SetProvinceSettlementBuilding(province.Name, unitName, true)
 						end
