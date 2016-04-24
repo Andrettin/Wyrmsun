@@ -46,18 +46,51 @@ local NorseEvents = {
 			end
 			return false
 		end,
+		Persistent = true,
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				FormFactionLua(EventFaction, Factions.SwedeTribe)
-				EventFaction = Factions.SwedeTribe
-
+				local found_faction = false
 				for province_i, province_key in ipairs(EventFaction.OwnedProvinces) do
 					if (
 						GetProvinceCivilization(WorldMapProvinces[province_key].Name) == "germanic"
 					) then
-						SetProvinceCivilization(WorldMapProvinces[province_key].Name, "norse") -- change the culture of only one province, and let cultural spread do the rest
-						break
+						for key, value in pairs(Factions) do
+							if (Factions[key].Civilization == "norse" and GetFactionData(Factions[key].Civilization, Factions[key].Name, "Type") == GetFactionData(EventFaction.Civilization, EventFaction.Name, "Type") and ProvinceHasClaim(WorldMapProvinces[province_key].Name, Factions[key].Civilization, Factions[key].Name) and GetFactionProvinceCount(Factions[key]) == 0) then
+								FormFactionLua(EventFaction, Factions[key])
+								EventFaction = Factions[key]
+								found_faction = true
+								SetProvinceCivilization(WorldMapProvinces[province_key].Name, "norse") -- change the culture of only one province, and let cultural spread do the rest
+								break
+							end
+						end
+						if (found_faction) then
+							break
+						end
+					end
+				end
+				if not (found_faction) then
+					for key, value in pairs(Factions) do
+						if (Factions[key].Civilization == "norse" and GetFactionData(Factions[key].Civilization, Factions[key].Name, "Type") == GetFactionData(EventFaction.Civilization, EventFaction.Name, "Type") and GetFactionProvinceCount(Factions[key]) == 0) then
+							FormFactionLua(EventFaction, Factions[key])
+							EventFaction = Factions[key]
+							break
+						end
+					end
+					for province_i, province_key in ipairs(EventFaction.OwnedProvinces) do
+						if (
+							GetProvinceCivilization(WorldMapProvinces[province_key].Name) == "germanic"
+						) then
+							SetProvinceCivilization(WorldMapProvinces[province_key].Name, "norse") -- change the culture of only one province, and let cultural spread do the rest
+							break
+						end
+					end
+				end
+				for province_i, province_key in ipairs(EventFaction.OwnedProvinces) do -- remove claims from all provinces that are still Germanic, to make it more likely that they will split off
+					if (
+						GetProvinceCivilization(WorldMapProvinces[province_key].Name) == "germanic"
+					) then
+						RemoveProvinceClaim(WorldMapProvinces[province_key].Name, EventFaction.Civilization, EventFaction.Name)
 					end
 				end
 			end
