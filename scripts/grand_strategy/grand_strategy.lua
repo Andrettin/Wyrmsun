@@ -194,13 +194,6 @@ function RunGrandStrategyGameSetupMenu()
 				end
 			end
 
-			SelectedUnits = {}
-			for i, unitName in ipairs(Units) do
-				if (IsMilitaryUnit(unitName)) then
-					SelectedUnits[string.gsub(unitName, "-", "_")] = 0
-				end
-			end
-
 			local RandomNumber = 0
 			for x=0,GetWorldMapWidth() - 1 do
 				for y=0,GetWorldMapHeight() - 1 do
@@ -812,7 +805,31 @@ function AttackProvince(province, faction)
 	end
 	
 	if (victorious_player == Attacker) then
+		local migration = empty_province and GetFactionProvinceCount(GetFactionFromName(Attacker)) == 1
 		AcquireProvince(province, victorious_player)
+		if (migration) then
+			for province_i, province_key in ipairs(GetFactionFromName(Attacker).OwnedProvinces) do
+				for i, unitName in ipairs(Units) do
+					if (string.find(unitName, "upgrade-") == nil) then
+						if (GetProvinceUnitQuantity(WorldMapProvinces[province_key].Name, unitName) > 1) then
+							ChangeProvinceUnitQuantity(province.Name, unitName, GetProvinceUnitQuantity(WorldMapProvinces[province_key].Name, unitName) - 1)
+							ChangeProvinceUnitQuantity(WorldMapProvinces[province_key].Name, unitName, - (GetProvinceUnitQuantity(WorldMapProvinces[province_key].Name, unitName) - 1))
+						elseif (IsGrandStrategyBuilding(unitName) and GetProvinceSettlementBuilding(WorldMapProvinces[province_key].Name, unitName)) then
+							SetProvinceSettlementBuilding(province.Name, unitName, true)
+						end
+					end
+				end
+				local grand_strategy_heroes = GetGrandStrategyHeroes()
+				for i = 1, table.getn(grand_strategy_heroes) do -- kill off attacking heroes if the defending player was the victorious one
+					if (GetProvinceHero(WorldMapProvinces[province_key].Name, grand_strategy_heroes[i]) ~= 0) then
+						SetProvinceHero(province.Name, grand_strategy_heroes[i], GetProvinceHero(WorldMapProvinces[province_key].Name, grand_strategy_heroes[i]))
+					end
+				end
+				SetProvinceCivilization(province.Name, GetFactionFromName(Attacker).Civilization)
+				AcquireProvince(WorldMapProvinces[province_key], "")
+			end
+		end
+		
 		if (GrandStrategyFaction ~= nil and SelectedProvince == province) then
 			if (Attacker == GrandStrategyFaction.Name) then -- this is here to make it so the right interface state happens if the province is selected (a conquered province that is selected will have the interface state switched from diplomacy to province)
 				GrandStrategyInterfaceState = "Province"
@@ -1116,23 +1133,6 @@ function FactionHasTechnologyType(faction, technology_type)
 		end
 	end
 	return false
-end
-
-function CanAttackProvince(province, faction, province_from)
-	if (GetProvinceOwner(province.Name) == faction.Name or GetGrandStrategyProvinceData(province.Name, "Water") or (GetProvinceAttackedBy(province.Name) ~= "" and GetProvinceAttackedBy(province.Name) ~= faction.Name)) then -- province can only be attacked by one player per turn because of mechanical limitations of the current code
-		return false
-	end
-	
-	-- if is at peace or offering peace, can't attack
-	if (GetProvinceOwner(province.Name) ~= "" and (GetFactionDiplomacyState(faction.Civilization, faction.Name, GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name)) ~= "war" or GetFactionDiplomacyStateProposal(faction.Civilization, faction.Name, GetFactionFromName(GetProvinceOwner(province.Name)).Civilization, GetProvinceOwner(province.Name)) == "peace")) then
-		return false
-	end
-
-	if (ProvinceHasBorderWith(province_from, province) == false and (province.Coastal == false or ProvinceHasBuildingClass(province_from.Name, "dock") == false or ProvinceHasSecondaryBorderThroughWaterWith(province_from, province) == false)) then
-		return false
-	end
-
-	return true
 end
 
 function FactionHasBorderWith(faction, faction_to)
@@ -2044,8 +2044,8 @@ function DrawGrandStrategyInterface()
 
 							-- add unit selection arrows
 							local b = AddGrandStrategyImageButton("", "", icon_offset_x - 2, icon_offset_y + 40, function()
-								if (SelectedUnits[string.gsub(unitName, "-", "_")] > 0) then
-									SelectedUnits[string.gsub(unitName, "-", "_")] = SelectedUnits[string.gsub(unitName, "-", "_")] - 1
+								if (GetGrandStrategySelectedUnits(unitName) > 0) then
+									SetGrandStrategySelectedUnits(unitName, GetGrandStrategySelectedUnits(unitName) - 1)
 									DrawGrandStrategyInterface()
 								end
 							end)
@@ -2062,8 +2062,8 @@ function DrawGrandStrategyInterface()
 							b:setTooltip("Deselect one ".. regiment_type_name .. " regiment")
 
 							local b = AddGrandStrategyImageButton("", "", icon_offset_x + 2 + 46 - 20, icon_offset_y + 40, function()
-								if (SelectedUnits[string.gsub(unitName, "-", "_")] < GetProvinceUnitQuantity(SelectedProvince.Name, unitName)) then
-									SelectedUnits[string.gsub(unitName, "-", "_")] = SelectedUnits[string.gsub(unitName, "-", "_")] + 1
+								if (GetGrandStrategySelectedUnits(unitName) < GetProvinceUnitQuantity(SelectedProvince.Name, unitName)) then
+									SetGrandStrategySelectedUnits(unitName, GetGrandStrategySelectedUnits(unitName) + 1)
 									DrawGrandStrategyInterface()
 								end
 							end)
@@ -2079,7 +2079,7 @@ function DrawGrandStrategyInterface()
 							local regiment_type_name = GetUnitTypeNamePluralForm(unitName)
 							b:setTooltip("Select one ".. regiment_type_name .. " regiment")
 
-							AddGrandStrategyLabel(SelectedUnits[string.gsub(unitName, "-", "_")], icon_offset_x + 24, icon_offset_y + 42, Fonts["game"], true, false)
+							AddGrandStrategyLabel(GetGrandStrategySelectedUnits(unitName), icon_offset_x + 24, icon_offset_y + 42, Fonts["game"], true, false)
 
 							item_x = item_x + 1
 							if (item_x > 3) then
@@ -2666,13 +2666,13 @@ function SetSelectedProvinceLua(province)
 	if (province ~= SelectedProvince) then
 
 		-- if the player has units selected and then selects an attackable province, set those units to attack the province
-		if (SelectedProvince ~= nil and GrandStrategyFaction ~= nil and GetProvinceOwner(SelectedProvince.Name) == GrandStrategyFaction.Name and CanAttackProvince(province, GrandStrategyFaction, SelectedProvince)) then
+		if (SelectedProvince ~= nil and GrandStrategyFaction ~= nil and GetProvinceOwner(SelectedProvince.Name) == GrandStrategyFaction.Name and GetGrandStrategyProvinceData(SelectedProvince.Name, "CanAttackProvince", province.Name)) then
 			for i, unitName in ipairs(Units) do
 				if (IsMilitaryUnit(unitName)) then
-					if (SelectedUnits[string.gsub(unitName, "-", "_")] > 0) then
+					if (GetGrandStrategySelectedUnits(unitName) > 0) then
 						SetProvinceAttackedBy(province.Name, GrandStrategyFaction.Civilization, GrandStrategyFaction.Name)
-						SetProvinceAttackingUnitQuantity(province.Name, unitName, GetProvinceAttackingUnitQuantity(province.Name, unitName) + SelectedUnits[string.gsub(unitName, "-", "_")])
-						SetProvinceUnitQuantity(SelectedProvince.Name, unitName, GetProvinceUnitQuantity(SelectedProvince.Name, unitName) - SelectedUnits[string.gsub(unitName, "-", "_")])
+						SetProvinceAttackingUnitQuantity(province.Name, unitName, GetProvinceAttackingUnitQuantity(province.Name, unitName) + GetGrandStrategySelectedUnits(unitName))
+						SetProvinceUnitQuantity(SelectedProvince.Name, unitName, GetProvinceUnitQuantity(SelectedProvince.Name, unitName) - GetGrandStrategySelectedUnits(unitName))
 					end
 				end
 			end
@@ -2686,8 +2686,8 @@ function SetSelectedProvinceLua(province)
 			for i, unitName in ipairs(Units) do
 				if (IsMilitaryUnit(unitName)) then
 					if (SelectedUnits[string.gsub(unitName, "-", "_")] > 0) then
-						SetProvinceMovingUnitQuantity(province.Name, unitName, GetProvinceMovingUnitQuantity(province.Name, unitName) + SelectedUnits[string.gsub(unitName, "-", "_")])
-						SetProvinceUnitQuantity(SelectedProvince.Name, unitName, GetProvinceUnitQuantity(SelectedProvince.Name, unitName) - SelectedUnits[string.gsub(unitName, "-", "_")])
+						SetProvinceMovingUnitQuantity(province.Name, unitName, GetProvinceMovingUnitQuantity(province.Name, unitName) + GetGrandStrategySelectedUnits(unitName))
+						SetProvinceUnitQuantity(SelectedProvince.Name, unitName, GetProvinceUnitQuantity(SelectedProvince.Name, unitName) - GetGrandStrategySelectedUnits(unitName))
 					end
 				end
 			end
@@ -2707,12 +2707,10 @@ function SetSelectedProvinceLua(province)
 		end
 		SelectedProvince = province
 		SetSelectedProvince(province.Name)
-		SelectedUnits = nil
-		SelectedUnits = {}
 		SelectedHero = ""
 		for i, unitName in ipairs(Units) do
 			if (IsMilitaryUnit(unitName)) then
-				SelectedUnits[string.gsub(unitName, "-", "_")] = 0
+				SetGrandStrategySelectedUnits(unitName, 0)
 			end
 		end
 	end
@@ -2828,14 +2826,14 @@ function AIDoTurn(ai_faction)
 		for second_i, second_key in ipairs(WorldMapProvinces[key].BorderProvinces) do
 			if ((WorldMapProvinces[second_key] ~= nil and GetProvinceOwner(WorldMapProvinces[second_key].Name) ~= ai_faction.Name) or WorldMapWaterProvinces[second_key] ~= nil) then
 				if (WorldMapProvinces[second_key] ~= nil and GetGrandStrategyProvinceData(WorldMapProvinces[second_key].Name, "Water") == false) then
-					if (CanAttackProvince(WorldMapProvinces[second_key], ai_faction, WorldMapProvinces[key]) or GetProvinceAttackedBy(WorldMapProvinces[key].Name) ~= "" or AtPeace(ai_faction)) then
+					if (GetGrandStrategyProvinceData(WorldMapProvinces[key].Name, "CanAttackProvince", WorldMapProvinces[second_key].Name) or GetProvinceAttackedBy(WorldMapProvinces[key].Name) ~= "" or AtPeace(ai_faction)) then
 						borders_foreign = true -- when at war, only set borders_foreign to provinces actually threatened by the enemy, or from which an attack on an enemy can be staged (when at peace, take into account the forces of factions with whom this ai faction is at peace too for that)
 					end
-					if (GetProvinceAttackedBy(WorldMapProvinces[key].Name) == "" and CanAttackProvince(WorldMapProvinces[second_key], ai_faction, WorldMapProvinces[key])) then -- don't attack from this province if it is already being attacked
+					if (GetProvinceAttackedBy(WorldMapProvinces[key].Name) == "" and GetGrandStrategyProvinceData(WorldMapProvinces[key].Name, "CanAttackProvince", WorldMapProvinces[second_key].Name)) then -- don't attack from this province if it is already being attacked
 						if (round(GetProvinceMilitaryScore(WorldMapProvinces[second_key].Name, false, true) * 3 / 2) < GetProvinceMilitaryScore(WorldMapProvinces[key].Name, false, false)) then -- only attack if military score is 150% or greater of that of the province to be attacked
 							local province_threatened = false
 							for third_i, third_key in ipairs(WorldMapProvinces[key].BorderProvinces) do
-								if (WorldMapProvinces[third_key] ~= nil and GetProvinceOwner(WorldMapProvinces[third_key].Name) ~= ai_faction.Name and GetProvinceOwner(WorldMapProvinces[third_key].Name) ~= "" and GetGrandStrategyProvinceData(WorldMapProvinces[third_key].Name, "Water") == false and CanAttackProvince(WorldMapProvinces[key], GetFactionFromName(GetProvinceOwner(WorldMapProvinces[third_key].Name)), WorldMapProvinces[third_key])) then
+								if (WorldMapProvinces[third_key] ~= nil and GetProvinceOwner(WorldMapProvinces[third_key].Name) ~= ai_faction.Name and GetProvinceOwner(WorldMapProvinces[third_key].Name) ~= "" and GetGrandStrategyProvinceData(WorldMapProvinces[third_key].Name, "Water") == false and GetGrandStrategyProvinceData(WorldMapProvinces[third_key].Name, "CanAttackProvince", WorldMapProvinces[key].Name)) then
 									if (GetProvinceMilitaryScore(WorldMapProvinces[key].Name, false, true) < GetProvinceMilitaryScore(WorldMapProvinces[third_key].Name, false, false)) then
 										province_threatened = true
 									end
@@ -2888,14 +2886,14 @@ function AIDoTurn(ai_faction)
 			for second_i, second_key in ipairs(secondary_border_provinces_through_water) do
 				if ((WorldMapProvinces[second_key] ~= nil and GetProvinceOwner(WorldMapProvinces[second_key].Name) ~= ai_faction.Name) or WorldMapWaterProvinces[second_key] ~= nil) then
 					if (WorldMapProvinces[second_key] ~= nil and GetGrandStrategyProvinceData(WorldMapProvinces[second_key].Name, "Water") == false) then
-						if (CanAttackProvince(WorldMapProvinces[second_key], ai_faction, WorldMapProvinces[key]) or GetProvinceAttackedBy(WorldMapProvinces[key].Name) ~= "" or AtPeace(ai_faction)) then
+						if (GetGrandStrategyProvinceData(WorldMapProvinces[key].Name, "CanAttackProvince", WorldMapProvinces[second_key].Name) or GetProvinceAttackedBy(WorldMapProvinces[key].Name) ~= "" or AtPeace(ai_faction)) then
 							borders_foreign = true -- when at war, only set borders_foreign to provinces actually threatened by the enemy, or from which an attack on an enemy can be staged (when at peace, take into account the forces of factions with whom this ai faction is at peace too for that)
 						end
-						if (GetProvinceAttackedBy(WorldMapProvinces[key].Name) == "" and CanAttackProvince(WorldMapProvinces[second_key], ai_faction, WorldMapProvinces[key])) then -- don't attack from this province if it is already being attacked
+						if (GetProvinceAttackedBy(WorldMapProvinces[key].Name) == "" and GetGrandStrategyProvinceData(WorldMapProvinces[key].Name, "CanAttackProvince", WorldMapProvinces[second_key].Name)) then -- don't attack from this province if it is already being attacked
 							if (round(GetProvinceMilitaryScore(WorldMapProvinces[second_key].Name, false, true) * 3 / 2) < GetProvinceMilitaryScore(WorldMapProvinces[key].Name, false, false)) then -- only attack if military score is 150% or greater of that of the province to be attacked
 								local province_threatened = false
 								for third_i, third_key in ipairs(WorldMapProvinces[key].BorderProvinces) do
-									if (WorldMapProvinces[third_key] ~= nil and GetProvinceOwner(WorldMapProvinces[third_key].Name) ~= ai_faction.Name and GetProvinceOwner(WorldMapProvinces[third_key].Name) ~= "" and GetGrandStrategyProvinceData(WorldMapProvinces[third_key].Name, "Water") == false and CanAttackProvince(WorldMapProvinces[key], GetFactionFromName(GetProvinceOwner(WorldMapProvinces[third_key].Name)), WorldMapProvinces[third_key])) then
+									if (WorldMapProvinces[third_key] ~= nil and GetProvinceOwner(WorldMapProvinces[third_key].Name) ~= ai_faction.Name and GetProvinceOwner(WorldMapProvinces[third_key].Name) ~= "" and GetGrandStrategyProvinceData(WorldMapProvinces[third_key].Name, "Water") == false and GetGrandStrategyProvinceData(WorldMapProvinces[third_key].Name, "CanAttackProvince", WorldMapProvinces[key].Name)) then
 										if (GetProvinceMilitaryScore(WorldMapProvinces[key].Name, false, true) < GetProvinceMilitaryScore(WorldMapProvinces[third_key].Name, false, false)) then
 											province_threatened = true
 										end
@@ -2947,12 +2945,12 @@ function AIDoTurn(ai_faction)
 		for second_i, second_key in ipairs(ai_faction.DisembarkmentProvinces) do
 			if (WorldMapProvinces[second_key] ~= nil and GetProvinceOwner(WorldMapProvinces[second_key].Name) ~= ai_faction.Name) then
 				if (WorldMapProvinces[second_key] ~= nil and GetGrandStrategyProvinceData(WorldMapProvinces[second_key].Name, "Water") == false) then
-					if (GetProvinceAttackedBy(WorldMapProvinces[key].Name) == "" and CanAttackProvince(WorldMapProvinces[second_key], ai_faction, WorldMapProvinces[key])) then -- don't attack from this province if it is already being attacked
+					if (GetProvinceAttackedBy(WorldMapProvinces[key].Name) == "" and GetGrandStrategyProvinceData(WorldMapProvinces[key].Name, "CanAttackProvince", WorldMapProvinces[second_key].Name)) then -- don't attack from this province if it is already being attacked
 						borders_foreign = true
 						if (round(GetProvinceMilitaryScore(WorldMapProvinces[second_key].Name, false, true) * 3 / 2) < GetProvinceMilitaryScore(WorldMapProvinces[key].Name, false, false)) then -- only attack if military score is 150% or greater of that of the province to be attacked
 							local province_threatened = false
 							for third_i, third_key in ipairs(WorldMapProvinces[key].BorderProvinces) do
-								if (WorldMapProvinces[third_key] ~= nil and GetProvinceOwner(WorldMapProvinces[third_key].Name) ~= ai_faction.Name and GetProvinceOwner(WorldMapProvinces[third_key].Name) ~= "" and GetGrandStrategyProvinceData(WorldMapProvinces[third_key].Name, "Water") == false and CanAttackProvince(WorldMapProvinces[key], GetFactionFromName(GetProvinceOwner(WorldMapProvinces[third_key].Name)), WorldMapProvinces[third_key])) then
+								if (WorldMapProvinces[third_key] ~= nil and GetProvinceOwner(WorldMapProvinces[third_key].Name) ~= ai_faction.Name and GetProvinceOwner(WorldMapProvinces[third_key].Name) ~= "" and GetGrandStrategyProvinceData(WorldMapProvinces[third_key].Name, "Water") == false and GetGrandStrategyProvinceData(WorldMapProvinces[third_key].Name, "CanAttackProvince", WorldMapProvinces[key].Name)) then
 									if (GetProvinceMilitaryScore(WorldMapProvinces[key].Name, false, true) < GetProvinceMilitaryScore(WorldMapProvinces[third_key].Name, false, false)) then
 										province_threatened = true
 									end
@@ -3064,7 +3062,7 @@ function AIDoTurn(ai_faction)
 						local second_province_borders_foreign = false
 						for third_province_i, third_key in ipairs(WorldMapProvinces[second_key].BorderProvinces) do
 							if ((WorldMapProvinces[third_key] ~= nil and GetProvinceOwner(WorldMapProvinces[third_key].Name) ~= ai_faction.Name) or (WorldMapWaterProvinces[third_key] ~= nil and GetProvinceOwner(WorldMapWaterProvinces[third_key].Name) ~= ai_faction.Name)) then
-								if (WorldMapProvinces[third_key] ~= nil and CanAttackProvince(WorldMapProvinces[third_key], ai_faction, WorldMapProvinces[second_key]) or GetProvinceAttackedBy(WorldMapProvinces[second_key].Name) ~= "" or AtPeace(ai_faction)) then
+								if (WorldMapProvinces[third_key] ~= nil and GetGrandStrategyProvinceData(WorldMapProvinces[second_key].Name, "CanAttackProvince", WorldMapProvinces[third_key].Name) or GetProvinceAttackedBy(WorldMapProvinces[second_key].Name) ~= "" or AtPeace(ai_faction)) then
 									second_province_borders_foreign = true -- when at war, only set borders_foreign to provinces actually threatened by the enemy, or from which an attack on an enemy can be staged (when at peace, take into account the forces of factions with whom this ai faction is at peace too for that)
 									break
 								end
@@ -3481,7 +3479,6 @@ function ClearGrandStrategyVariables()
 	Factions = nil
 	WorldMapProvinces = nil
 	WorldMapWaterProvinces = nil
-	SelectedUnits = nil
 	AttackedProvince = nil
 	GrandStrategyInterfaceState = ""
 	GrandStrategyCommodities = nil

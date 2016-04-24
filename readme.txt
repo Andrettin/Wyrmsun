@@ -58,6 +58,14 @@ https://github.com/Andrettin/Wyrmsun
 ############################################################
 
 -----------------------------------------------------------------------
+- 2.1.6
+-----------------------------------------------------------------------
+
+* Grand Strategy
+- Tribal factions now get increased revolt risk the more provinces they own.
+- If tribal factions only have one province, they now migrate to a newly-conquered empty province.
+
+-----------------------------------------------------------------------
 - 2.1.5
 -----------------------------------------------------------------------
 
