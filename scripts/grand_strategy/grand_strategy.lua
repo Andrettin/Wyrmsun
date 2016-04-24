@@ -2685,7 +2685,7 @@ function SetSelectedProvinceLua(province)
 		elseif (SelectedProvince ~= nil and GrandStrategyFaction ~= nil and GetProvinceOwner(SelectedProvince.Name) == GetProvinceOwner(province.Name) and GetProvinceOwner(SelectedProvince.Name) == GrandStrategyFaction.Name) then
 			for i, unitName in ipairs(Units) do
 				if (IsMilitaryUnit(unitName)) then
-					if (SelectedUnits[string.gsub(unitName, "-", "_")] > 0) then
+					if (GetGrandStrategySelectedUnits(unitName) > 0) then
 						SetProvinceMovingUnitQuantity(province.Name, unitName, GetProvinceMovingUnitQuantity(province.Name, unitName) + GetGrandStrategySelectedUnits(unitName))
 						SetProvinceUnitQuantity(SelectedProvince.Name, unitName, GetProvinceUnitQuantity(SelectedProvince.Name, unitName) - GetGrandStrategySelectedUnits(unitName))
 					end
