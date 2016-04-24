@@ -485,7 +485,9 @@ UI.GrandStrategyEndTurnButton.Y = Video.Height - (15 * 1) - 8
 UI.GrandStrategyEndTurnButton.Text = "~!End Turn"
 UI.GrandStrategyEndTurnButton:SetCallback(
 	function()
-		EndTurn()
+		if (ProcessingEndTurn == false) then
+			EndTurn()
+		end
 	end
 )
 
