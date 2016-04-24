@@ -813,8 +813,12 @@ function AttackProvince(province, faction)
 	
 	if (victorious_player == Attacker) then
 		AcquireProvince(province, victorious_player)
-		if (GrandStrategyFaction ~= nil and Attacker == GrandStrategyFaction.Name and SelectedProvince == province) then -- this is here to make it so the right interface state happens if the province is selected (a conquered province that is selected will have the interface state switched from diplomacy to province)
-			GrandStrategyInterfaceState = "Province"
+		if (GrandStrategyFaction ~= nil and SelectedProvince == province) then
+			if (Attacker == GrandStrategyFaction.Name) then -- this is here to make it so the right interface state happens if the province is selected (a conquered province that is selected will have the interface state switched from diplomacy to province)
+				GrandStrategyInterfaceState = "Province"
+			elseif (Defender == GrandStrategyFaction.Name) then -- this is here to make it so the right interface state happens if the province is selected (a lost province that is selected will have the interface state switched from province to diplomacy)
+				GrandStrategyInterfaceState = "Diplomacy"
+			end
 		end
 		ChangeFactionResource(GetFactionFromName(Attacker).Civilization, GetFactionFromName(Attacker).Name, "prestige", attacker_prestige + 5) -- plus five for acquiring the territory
 		if (empty_province == false) then
@@ -826,9 +830,6 @@ function AttackProvince(province, faction)
 			end
 		end
 	else
-		if (GrandStrategyFaction ~= nil and Defender == GrandStrategyFaction.Name and SelectedProvince == province) then -- this is here to make it so the right interface state happens if the province is selected (a lost province that is selected will have the interface state switched from province to diplomacy)
-			GrandStrategyInterfaceState = "Diplomacy"
-		end
 		if (empty_province == false) then
 			ChangeFactionResource(GetFactionFromName(Defender).Civilization, GetFactionFromName(Defender).Name, "prestige", defender_prestige)
 		end
@@ -2092,24 +2093,30 @@ function DrawGrandStrategyInterface()
 					end
 				end
 
-				local item_x = 0
-				local item_y = -3
-				for i, unitName in ipairs(Units) do
-					if (IsGrandStrategyBuilding(unitName)) then
-						if (IsBuildingAvailable(SelectedProvince, unitName)) then
-							local icon_offset_x = UI.InfoPanel.X + 30 + (item_x * 56)
-							local icon_offset_y = UI.InfoPanel.Y + 180 + (item_y * 47) -- change to 343 to make six buildings fit -- was 340, changed to make more than six buildings fit into the screen
+				if (
+					GetGrandStrategySelectedTileX() == -1
+					or GetGrandStrategySelectedTileY() == -1
+					or (GetGrandStrategySelectedTileX() == GetGrandStrategyProvinceData(SelectedProvince.Name, "SettlementX") and GetGrandStrategySelectedTileY() == GetGrandStrategyProvinceData(SelectedProvince.Name, "SettlementY"))
+				) then
+					local item_x = 0
+					local item_y = -3
+					for i, unitName in ipairs(Units) do
+						if (IsGrandStrategyBuilding(unitName)) then
+							if (IsBuildingAvailable(SelectedProvince, unitName)) then
+								local icon_offset_x = UI.InfoPanel.X + 30 + (item_x * 56)
+								local icon_offset_y = UI.InfoPanel.Y + 180 + (item_y * 47) -- change to 343 to make six buildings fit -- was 340, changed to make more than six buildings fit into the screen
 
-							AddGrandStrategyBuildingButton(icon_offset_x, icon_offset_y, unitName)
+								AddGrandStrategyBuildingButton(icon_offset_x, icon_offset_y, unitName)
 
-							if (GetProvinceCurrentConstruction(SelectedProvince.Name) == unitName) then -- if is under construction, apply under construction graphics
-								AddUIElement("neutral/icons/build_basic_structure_transparent_background.png", icon_offset_x, icon_offset_y)
-							end
-							
-							item_x = item_x + 1
-							if (item_x > 2) then
-								item_x = 0
-								item_y = item_y + 1
+								if (GetProvinceCurrentConstruction(SelectedProvince.Name) == unitName) then -- if is under construction, apply under construction graphics
+									AddUIElement("neutral/icons/build_basic_structure_transparent_background.png", icon_offset_x, icon_offset_y)
+								end
+								
+								item_x = item_x + 1
+								if (item_x > 2) then
+									item_x = 0
+									item_y = item_y + 1
+								end
 							end
 						end
 					end
@@ -2615,7 +2622,19 @@ function DrawGrandStrategyInterface()
 		if (SelectedProvince ~= nil) then
 			if (GrandStrategyFaction ~= nil and GetProvinceOwner(SelectedProvince.Name) == GrandStrategyFaction.Name) then
 				if (GrandStrategyInterfaceState == "Province") then
-					Tip("Province Interface", "Click on a built structure (colored) to make use of its functions, and on an unbuilt one (grayed-out) to build it. The number on each unit icon represents how many units of that type are in the province, while the one between the arrows represent how many are currently selected.")
+					if (ProvinceHasBuildingClass(SelectedProvince.Name, "town-hall") == false) then
+						Tip("Building a Settlement", "Build a town hall to create a capital settlement in the province. To do so, select the province's settlement spot (the tile above the province's name on the map), and then click the grayed town hall icon.")
+					else
+						Tip("Selecting a Settlement", "To build and manage structures in a province's capital settlement, click on its tile.")
+					end
+					Tip("Province Interface", "The number on each unit icon represents how many units of that type are in the province, while the one between the arrows represent how many are currently selected.")
+					if (
+						GetGrandStrategySelectedTileX() == -1
+						or GetGrandStrategySelectedTileY() == -1
+						or (GetGrandStrategySelectedTileX() == GetGrandStrategyProvinceData(SelectedProvince.Name, "SettlementX") and GetGrandStrategySelectedTileY() == GetGrandStrategyProvinceData(SelectedProvince.Name, "SettlementY"))
+					) then
+						Tip("Settlement Interface", "Click on a built structure (colored) to make use of its functions, and on an unbuilt one (grayed-out) to build it. The number on each unit icon represents how many units of that type are in the province, while the one between the arrows represent how many are currently selected.")
+					end
 					Tip("Grand Strategy Units", "Use the arrows to select or deselect units. While units are selected, click on another province you own to move them there, or click on an enemy province to attack it.")
 					if (SelectedProvince.Coastal) then
 						Tip("Attacking Over Water", "To attack an enemy province over water, you need a dock in the coastal province where your troops are, and both provinces need to border at least one sea province in common.")
@@ -2695,8 +2714,8 @@ function SetSelectedProvinceLua(province)
 				SelectedUnits[string.gsub(unitName, "-", "_")] = 0
 			end
 		end
-		DrawGrandStrategyInterface()
 	end
+	DrawGrandStrategyInterface()
 end
 
 function AIDoTurn(ai_faction)

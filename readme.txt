@@ -80,6 +80,7 @@ https://github.com/Andrettin/Wyrmsun
 - Provinces can now have governors (if their faction is a polity), providing bonuses to them.
 - Split the Austria province into the new provinces of Carinthia, Lower Austria, Salzburg, Styria, Tyrol and Upper Austria.
 - Added Asturias, Finland and Norrland provinces.
+- Building and managing province settlement buildings now requires clicking on the settlement on the map.
 
 * Heroes
 - Dwarven axefighter heroes now have different weapon unit graphics when holding a mace-class weapon.
