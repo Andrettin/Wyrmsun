@@ -35,6 +35,7 @@ DefineFaction("Sitone Tribe", { -- Tribes in Europe between 264 BC and 180 AD; S
 		"upgrade-teuton-spatha", 180 -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
 	}
 })
+
 DefineFaction("Swede Tribe", {
 	Civilization = "norse",
 	Type = "tribe",

@@ -62,7 +62,7 @@ DefineFaction("Ertebolle Tribe", { -- based on the Ertebolle culture of Zealand 
 DefineFaction("Funnelbeaker Tribe", { -- based on the Funnel Beaker culture of Zealand - not actually a tribe, but an archaeological culture, but this is still the most appropriate way to represent it in-game
 	Civilization = "basque",
 	Type = "tribe",
-	Colors = {"red", "white"},
+	Colors = {"violet"},
 	HistoricalFactionDerivations = {-6400, "basque", "Ertebolle Tribe"}, -- Ertebolle cultured ended and Funnel Beaker culture arose in Zealand in 3950 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 37.
 	HistoricalTechnologies = {
 		"upgrade-germanic-wood-plow", -3600, -- Primitive ard (plow) appears in Northern Europe c. 3600 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 297.

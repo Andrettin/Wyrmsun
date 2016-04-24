@@ -46,7 +46,7 @@ function LoadProvinces(world)
 				table.insert(WorldMapProvinces[province_key].Tiles, {tiles[j], tiles[j + 1]})
 			end
 
-			WorldMapProvinces[province_key]["SettlementLocation"] = {GetProvinceData(provinces[i], "SettlementLocationX"), GetProvinceData(provinces[i], "SettlementLocationY")}
+			WorldMapProvinces[province_key]["SettlementLocation"] = {GetGrandStrategyProvinceData(provinces[i], "SettlementX"), GetGrandStrategyProvinceData(provinces[i], "SettlementY")}
 			
 			WorldMapProvinces[province_key]["Coastal"] = GetProvinceData(provinces[i], "Coastal")
 		else

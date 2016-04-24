@@ -81,6 +81,7 @@ https://github.com/Andrettin/Wyrmsun
 - Split the Austria province into the new provinces of Carinthia, Lower Austria, Salzburg, Styria, Tyrol and Upper Austria.
 - Added Asturias, Finland and Norrland provinces.
 - Building and managing province settlement buildings now requires clicking on the settlement on the map.
+- You can now choose where the province's settlement location will be when building a town hall in a previously empty province.
 
 * Heroes
 - Dwarven axefighter heroes now have different weapon unit graphics when holding a mace-class weapon.

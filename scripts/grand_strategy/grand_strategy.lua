@@ -2097,6 +2097,7 @@ function DrawGrandStrategyInterface()
 					GetGrandStrategySelectedTileX() == -1
 					or GetGrandStrategySelectedTileY() == -1
 					or (GetGrandStrategySelectedTileX() == GetGrandStrategyProvinceData(SelectedProvince.Name, "SettlementX") and GetGrandStrategySelectedTileY() == GetGrandStrategyProvinceData(SelectedProvince.Name, "SettlementY"))
+					or (GetProvinceCurrentConstruction(SelectedProvince.Name) == "" and ProvinceHasBuildingClass(SelectedProvince.Name, "town-hall") == false and WorldMapTileHasResource(GetGrandStrategySelectedTileX(), GetGrandStrategySelectedTileY(), "any", true) == false)
 				) then
 					local item_x = 0
 					local item_y = -3
@@ -2623,7 +2624,7 @@ function DrawGrandStrategyInterface()
 			if (GrandStrategyFaction ~= nil and GetProvinceOwner(SelectedProvince.Name) == GrandStrategyFaction.Name) then
 				if (GrandStrategyInterfaceState == "Province") then
 					if (ProvinceHasBuildingClass(SelectedProvince.Name, "town-hall") == false) then
-						Tip("Building a Settlement", "Build a town hall to create a capital settlement in the province. To do so, select the province's settlement spot (the tile above the province's name on the map), and then click the grayed town hall icon.")
+						Tip("Building a Settlement", "Build a town hall in any tile to create a capital settlement for the province. To do so, select the desired tile, and then click the grayed town hall icon.")
 					else
 						Tip("Selecting a Settlement", "To build and manage structures in a province's capital settlement, click on its tile.")
 					end

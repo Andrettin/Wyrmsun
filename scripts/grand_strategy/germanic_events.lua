@@ -465,7 +465,8 @@ local GermanicEvents = {
 								SetProvinceHero("Jutland", all_heroes[i], 0)
 							end
 						end
-						SetProvinceCurrentConstruction("Sweden", "unit-germanic-town-hall")
+						SetProvinceSettlementBuilding("Sweden", "unit-germanic-town-hall", true)
+						
 						CenterGrandStrategyMapOnTile(WorldMapProvinces.Sweden.SettlementLocation[1], WorldMapProvinces.Sweden.SettlementLocation[2])
 						ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 25)
 					elseif (GameResult == GameDefeat) then
@@ -505,7 +506,7 @@ local GermanicEvents = {
 							SetProvinceHero("Sweden", all_heroes[i], 2)
 						end
 					end
-					SetProvinceCurrentConstruction("Sweden", "unit-germanic-town-hall")
+					SetProvinceSettlementBuilding("Sweden", "unit-germanic-town-hall", true)
 					ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 25)
 					if (GrandStrategyFaction.Name == EventFaction.Name) then
 						CenterGrandStrategyMapOnTile(WorldMapProvinces.Sweden.SettlementLocation[1], WorldMapProvinces.Sweden.SettlementLocation[2])

@@ -316,7 +316,6 @@ function GenerateRandomWorldMap()
 			) then
 				SetWorldMapTileProvince(RandomX, RandomY, WorldMapProvinces[key].Name)
 				table.insert(WorldMapProvinces[key].Tiles, {RandomX, RandomY})
-				WorldMapProvinces[key].SettlementLocation = {RandomX, RandomY}
 				SetProvinceSettlementLocation(WorldMapProvinces[key].Name, RandomX, RandomY)
 				table.insert(province_seeds, {RandomX, RandomY})
 				break
@@ -570,7 +569,6 @@ function GenerateProvince(arg)
 	if not (arg.Water) then
 		-- set settlement location to one of the province's tiles randomly
 		local settlement_location_id = SyncRand(table.getn(arg.Province.Tiles)) + 1
-		arg.Province.SettlementLocation = {arg.Province.Tiles[settlement_location_id][1], arg.Province.Tiles[settlement_location_id][2]}
 		SetProvinceSettlementLocation(arg.Province.Name, arg.Province.Tiles[settlement_location_id][1], arg.Province.Tiles[settlement_location_id][2])
 
 		-- create some hill tiles in the province

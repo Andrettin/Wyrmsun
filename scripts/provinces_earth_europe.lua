@@ -2005,6 +2005,9 @@ DefineProvince("Gotaland", {
 		200, "", "", -- Goths migrate south about 200 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 		1560, "norse", "Sweden" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
+	HistoricalClaims = {
+		-2800, "germanic", "Asa Tribe"
+	},
 	HistoricalCultures = {
 		-2800, "germanic",
 		-325, "goth"
@@ -3982,6 +3985,9 @@ DefineProvince("Scania", {
 		526, "norse", "Dane Tribe", -- Danes were in Scania in 526-600; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 		1560, "norse", "Denmark" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
+	HistoricalClaims = {
+		-2800, "germanic", "Asa Tribe"
+	},
 	HistoricalCultures = {
 		-5800, "basque",
 		-2800, "germanic",
@@ -4273,6 +4279,9 @@ DefineProvince("Sweden", {
 		-2770, "germanic", "Yngling Tribe", -- estimated date
 		-264, "norse", "Swede Tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		1560, "norse", "Sweden" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalClaims = {
+		-2800, "germanic", "Asa Tribe"
 	},
 	HistoricalCultures = {
 		-2800, "germanic",
