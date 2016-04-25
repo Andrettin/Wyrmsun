@@ -805,7 +805,7 @@ function AttackProvince(province, faction)
 	end
 	
 	if (victorious_player == Attacker) then
-		local migration = empty_province and GetFactionProvinceCount(GetFactionFromName(Attacker)) == 1
+		local migration = empty_province and GetFactionProvinceCount(GetFactionFromName(Attacker)) == 1 and GetFactionData(GetFactionFromName(Attacker).Civilization, GetFactionFromName(Attacker).Name, "Type") == "tribe"
 		AcquireProvince(province, victorious_player)
 		if (migration) then
 			for province_i, province_key in ipairs(GetFactionFromName(Attacker).OwnedProvinces) do
@@ -1551,6 +1551,22 @@ function AddGrandStrategyImageButton(caption, hotkey, x, y, callback)
 	return UIElements[table.getn(UIElements)]
 end
 
+function AddGrandStrategyThinImageButton(caption, hotkey, x, y, callback)
+	local b = AddGrandStrategyImageButton(caption, hotkey, x, y, callback)
+	b:setBaseColor(Color(0,0,0,0))
+	b:setForegroundColor(Color(0,0,0,0))
+	b:setBackgroundColor(Color(0,0,0,0))
+	local g_btn = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-thinest-medium-normal.png")
+	local g_btp = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-thinest-medium-pressed.png")
+	g_btn:Load()
+	g_btp:Load()
+	b:setNormalImage(g_btn)
+	b:setPressedImage(g_btp)
+	b:setSize(99, 13)
+	b:setFont(Fonts["game"])
+	return b
+end
+				
 function AddGrandStrategyBuildingButton(x, y, unit_type)
 	local b
 	local unit_icon
@@ -2125,6 +2141,32 @@ function DrawGrandStrategyInterface()
 							end
 						end
 					end
+				elseif (GetGrandStrategyTileData({GetGrandStrategySelectedTileX(), GetGrandStrategySelectedTileY()}, "PathwayConstruction") == false) then
+					-- add a button for building a road
+					if (GetGrandStrategyTileData({GetGrandStrategySelectedTileX(), GetGrandStrategySelectedTileY()}, "Pathway", "north") == "") then
+						AddGrandStrategyThinImageButton("Build Road (~!N)", "n", UI.InfoPanel.X + 72, Video.Height - (15 * 6) - 8, function()
+							SetGrandStrategyTileData({GetGrandStrategySelectedTileX(), GetGrandStrategySelectedTileY()}, "PathwayConstruction", "road", "north")
+							DrawGrandStrategyInterface()
+						end)
+					end
+					if (GetGrandStrategyTileData({GetGrandStrategySelectedTileX(), GetGrandStrategySelectedTileY()}, "Pathway", "west") == "") then
+						AddGrandStrategyThinImageButton("Build Road (~!W)", "w", UI.InfoPanel.X + 72, Video.Height - (15 * 5) - 8, function()
+							SetGrandStrategyTileData({GetGrandStrategySelectedTileX(), GetGrandStrategySelectedTileY()}, "PathwayConstruction", "road", "west")
+							DrawGrandStrategyInterface()
+						end)
+					end
+					if (GetGrandStrategyTileData({GetGrandStrategySelectedTileX(), GetGrandStrategySelectedTileY()}, "Pathway", "east") == "") then
+						AddGrandStrategyThinImageButton("Build Road (~!E)", "e", UI.InfoPanel.X + 72, Video.Height - (15 * 4) - 8, function()
+							SetGrandStrategyTileData({GetGrandStrategySelectedTileX(), GetGrandStrategySelectedTileY()}, "PathwayConstruction", "road", "east")
+							DrawGrandStrategyInterface()
+						end)
+					end
+					if (GetGrandStrategyTileData({GetGrandStrategySelectedTileX(), GetGrandStrategySelectedTileY()}, "Pathway", "south") == "") then
+						AddGrandStrategyThinImageButton("Build Road (~!S)", "s", UI.InfoPanel.X + 72, Video.Height - (15 * 3) - 8, function()
+							SetGrandStrategyTileData({GetGrandStrategySelectedTileX(), GetGrandStrategySelectedTileY()}, "PathwayConstruction", "road", "south")
+							DrawGrandStrategyInterface()
+						end)
+					end
 				end
 				
 				item_y = 0
@@ -2585,40 +2627,18 @@ function DrawGrandStrategyInterface()
 				AddGrandStrategyLabel("At War with Us", UI.InfoPanel.X + 27, UI.InfoPanel.Y + 53, Fonts["game"], true, true)
 
 				-- add a button for offering peace
-				local b = AddGrandStrategyImageButton("Offer ~!Peace!", "p", Video.Width - 243 + 72, Video.Height - (15 * 5) - 8, function()
+				AddGrandStrategyThinImageButton("Offer ~!Peace!", "p", Video.Width - 243 + 72, Video.Height - (15 * 5) - 8, function()
 					OfferPeace(GrandStrategyFaction.Name, GetProvinceOwner(SelectedProvince.Name))
 					DrawGrandStrategyInterface()
 				end)
-				b:setBaseColor(Color(0,0,0,0))
-				b:setForegroundColor(Color(0,0,0,0))
-				b:setBackgroundColor(Color(0,0,0,0))
-				local g_btn = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-thinest-medium-normal.png")
-				local g_btp = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-thinest-medium-pressed.png")
-				g_btn:Load()
-				g_btp:Load()
-				b:setNormalImage(g_btn)
-				b:setPressedImage(g_btp)
-				b:setSize(99, 13)
-				b:setFont(Fonts["game"])
 			elseif (GetFactionDiplomacyState(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, GetFactionFromName(GetProvinceOwner(SelectedProvince.Name)).Civilization, GetProvinceOwner(SelectedProvince.Name)) == "war" and GetFactionDiplomacyStateProposal(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, GetFactionFromName(GetProvinceOwner(SelectedProvince.Name)).Civilization, GetProvinceOwner(SelectedProvince.Name)) == "peace") then
 				AddGrandStrategyLabel("At War with Us (Peace Offered)", UI.InfoPanel.X + 27, UI.InfoPanel.Y + 53, Fonts["game"], true, true)
 			elseif (CanDeclareWar(GrandStrategyFaction, GetFactionFromName(GetProvinceOwner(SelectedProvince.Name)))) then
 				-- add a button for declaring war
-				local b = AddGrandStrategyImageButton("Declare ~!War!", "w", Video.Width - 243 + 72, Video.Height - (15 * 5) - 8, function()
+				AddGrandStrategyThinImageButton("Declare ~!War!", "w", Video.Width - 243 + 72, Video.Height - (15 * 5) - 8, function()
 					DeclareWar(GrandStrategyFaction.Name, GetProvinceOwner(SelectedProvince.Name))
 					DrawGrandStrategyInterface()
 				end)
-				b:setBaseColor(Color(0,0,0,0))
-				b:setForegroundColor(Color(0,0,0,0))
-				b:setBackgroundColor(Color(0,0,0,0))
-				local g_btn = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-thinest-medium-normal.png")
-				local g_btp = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-thinest-medium-pressed.png")
-				g_btn:Load()
-				g_btp:Load()
-				b:setNormalImage(g_btn)
-				b:setPressedImage(g_btp)
-				b:setSize(99, 13)
-				b:setFont(Fonts["game"])
 			end
 		end
 	end

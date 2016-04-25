@@ -61,6 +61,10 @@ https://github.com/Andrettin/Wyrmsun
 - 2.1.7
 -----------------------------------------------------------------------
 
+* Grand Strategy
+- Fixed issue which allowed 1-province polities to migrate.
+- Fixed issue with loading grand strategy games.
+
 -----------------------------------------------------------------------
 - 2.1.6
 -----------------------------------------------------------------------
