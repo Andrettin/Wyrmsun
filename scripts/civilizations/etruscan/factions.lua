@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2015-2016 by Andrettin
+--      (c) Copyright 2016 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -25,25 +25,16 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-Load("scripts/civilizations/basque/factions.lua")
-Load("scripts/civilizations/celt/factions.lua")
-Load("scripts/civilizations/dwarf/factions.lua")
-Load("scripts/civilizations/etruscan/factions.lua")
-Load("scripts/civilizations/finnish/factions.lua")
-Load("scripts/civilizations/germanic/factions.lua")
-Load("scripts/civilizations/gnome/factions.lua")
-Load("scripts/civilizations/goblin/factions.lua")
-Load("scripts/civilizations/goth/factions.lua")
-Load("scripts/civilizations/greek/factions.lua")
-Load("scripts/civilizations/hittite/factions.lua")
-Load("scripts/civilizations/illyrian/factions.lua")
-Load("scripts/civilizations/kobold/factions.lua")
-Load("scripts/civilizations/latin/factions.lua")
-Load("scripts/civilizations/minoan/factions.lua")
-Load("scripts/civilizations/norse/factions.lua")
-Load("scripts/civilizations/persian/factions.lua")
-Load("scripts/civilizations/phoenician/factions.lua")
-Load("scripts/civilizations/phrygian/factions.lua")
-Load("scripts/civilizations/slav/factions.lua")
-Load("scripts/civilizations/teuton/factions.lua")
-Load("scripts/civilizations/thracian/factions.lua")
+DefineFaction("Etruscan Tribe", {
+	Civilization = "etruscan",
+	Type = "tribe",
+	Colors = {"yellow"},
+	DevelopsTo = {"Etruria"}
+})
+
+DefineFaction("Etruria", {
+	Civilization = "etruscan",
+	Type = "polity",
+	Colors = {"yellow"},
+	DefaultTier = "kingdom"
+})
