@@ -91,9 +91,6 @@ if (GrandStrategyYear >= -2970) then -- estimated date
 end
 
 if (GrandStrategyYear >= -1) then
-	GrandStrategyEvents.TheNorlundClan = nil
-	GrandStrategyEvents.TheShinsplitterClan = nil
-	GrandStrategyEvents.TheShorbearClan = nil
 	SetProvinceOwner("Caverns of Chaincolt", "dwarf", "Norlund Clan")
 	SetProvinceUnitQuantity("Caverns of Chaincolt", "unit-goblin-spearman", 0)
 --	SetProvinceUnitQuantity("Caverns of Chaincolt", "unit-dwarven-steelclad", 4) -- Neglur, Glinar, Kuhnar, Theganli

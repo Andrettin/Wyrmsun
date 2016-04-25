@@ -30,6 +30,7 @@ DefineFaction("Asa Tribe", {
 	Type = "tribe",
 	Colors = {"orange", "red"},
 	FactionUpgrade = "upgrade-asa-tribe-faction",
+	SplitsTo = {"Skeldung Tribe", "Volsung Tribe"},
 	Description = "The Asa are the legendary progenitors of the Germanic peoples.",
 	Background = "In the Ynglinga Saga, the Asa (another name for the Aesir) were Odin's people, who originally lived in Asaland (identified with Asia), a realm centered in the city of Asgard. They went forth from their original lands to Scandinavia and northern Central Europe, establishing themselves in those regions.",
 	HistoricalTechnologies = {

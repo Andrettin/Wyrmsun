@@ -848,9 +848,6 @@ if (GrandStrategyYear >= -264) then
 	SetProvinceOwner("Lithuania", "slav", "Aestui Tribe")
 	SetProvinceCivilization("Lithuania", "slav")
 	
-	SetProvinceOwner("Hungary", "persian", "Iazyge Tribe")
-	SetProvinceCivilization("Hungary", "persian")
-	
 	SetProvinceOwner("Galicia", "goth", "Bastarnae Tribe")
 	SetProvinceCivilization("Galicia", "goth")
 	SetProvinceOwner("Bessarabia", "goth", "Bastarnae Tribe")
@@ -1644,7 +1641,6 @@ if (GrandStrategyYear >= 919) then
 	SetProvinceOwner("Croatia", "slav", "Croatia")
 	SetProvinceCivilization("Croatia", "slav")
 	SetProvinceOwner("Pannonia", "teuton", "Hungary")
-	SetProvinceOwner("Hungary", "teuton", "Hungary")
 	SetProvinceOwner("Galicia", "slav", "Poland")
 	SetProvinceCivilization("Galicia", "slav")
 	SetProvinceOwner("Mazovia", "slav", "Poland")
@@ -1815,7 +1811,6 @@ if (GrandStrategyYear >= 1560) then
 	SetProvinceOwner("Croatia", "teuton", "Turkey")
 	SetProvinceOwner("Bosnia", "teuton", "Turkey")
 	SetProvinceOwner("Pannonia", "teuton", "Turkey")
-	SetProvinceOwner("Hungary", "teuton", "Turkey")
 	SetProvinceOwner("Vojvodina", "teuton", "Turkey")
 	
 	SetProvinceOwner("Transylvania", "latin", "Transylvania")

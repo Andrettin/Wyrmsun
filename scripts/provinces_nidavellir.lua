@@ -186,6 +186,7 @@ DefineProvince("Joruvellir", {
 	Map = "maps/random/random-map-swamp.smp",
 	SettlementTerrain = "Plains", -- should be Dark Plains, but those are not generated in random maps (yet); when there are desert tiles implemented, this should be Desert instead
 	Claims = {
+		"dwarf", "Eikinskjaldi Clan",
 		"dwarf", "Joruvellir"
 	}
 })

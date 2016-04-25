@@ -32,6 +32,7 @@ DefineFaction("Suebi Tribe", {
 	Colors = {"black"},
 	DefaultTier = "duchy",
 	DevelopsTo = {"Galicia", "Bavaria", "Austria", "Carinthia"},
+	SplitsTo = {"Buri Tribe", "Marcomanni Tribe", "Quadi Tribe", "Semnone Tribe"},
 	FactionUpgrade = "upgrade-suebi-tribe-faction",
 	Description = _("The Suebi were a powerful tribe in ancient Germania, battling the Romans a number of times. From the Suebi tribes such as the Marcomanni and the Quadi would originate. In the 5th century a group of Suebi settled and conquered Galicia, establishing a kingdom there."),
 	HistoricalFactionDerivations = {-264, "germanic", "Skeldung Tribe"},
@@ -110,6 +111,7 @@ DefineFaction("Angle Tribe", {
 	Language = "old-english",
 	Colors = {"white"},
 	DevelopsTo = {"England", "Bernicia", "Deira", "East Anglia", "Mercia", "Middle Anglia", "Northumbria", "Scotland"},
+	SplitsTo = {"Bernice Tribe", "Dere Tribe"},
 	FactionUpgrade = "upgrade-angle-tribe-faction",
 	HistoricalFactionDerivations = {-264, "germanic", "Skeldung Tribe"},
 	HistoricalTechnologies = {

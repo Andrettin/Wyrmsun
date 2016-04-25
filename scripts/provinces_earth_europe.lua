@@ -2319,6 +2319,14 @@ DefineProvince("Hungary", {
 	Claims = {
 		"persian", "Iazyge Tribe"
 	},
+	HistoricalOwners = {
+		-264, "persian", "Iazyge Tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		919, "teuton", "Hungary", -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+		1560, "teuton", "Turkey" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalCultures = {
+		-264, "persian",
+	},
 	HistoricalModifiers = {
 		1389, "upgrade-university", true, -- University founded in Budapest in 1389. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.
 --		1896, "upgrade-college", true -- Eötvos College founded in Budapest in 1896. Source: John Lukacs, Budapest 1900: a historical portrait of a city and its culture, pp. 175-176.
