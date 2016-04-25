@@ -256,7 +256,7 @@ DefineFaction("Marcomanni Tribe", {
 	ParentFaction = "Suebi Tribe",
 	Type = "tribe",
 	Colors = {"orange", "red"}, -- change to a better one?
-	DevelopsTo = {"Bavaria", "Galicia", "Austria", "Carinthia"},
+	DevelopsTo = {"Bavarian Tribe", "Bavaria", "Galicia", "Austria", "Carinthia"},
 	Description = _("The Marcomanni were a Suebic tribe. Eventually they migrated to the east, settling in Bohemia and expelling the local Boii tribe. In the 2nd century they fought the terrible Marcomannic Wars against the Romans. The name \"Marcomanni\" means \"march-men\", or \"frontier-men\"."),
 	HistoricalFactionDerivations = {-9, "teuton", "Suebi Tribe"},
 	HistoricalTechnologies = {

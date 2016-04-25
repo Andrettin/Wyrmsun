@@ -30,6 +30,7 @@ DefineFaction("Goth Tribe", {
 	Type = "tribe",
 	Colors = {"red"},
 	DevelopsTo = {"Gothia"},
+	SplitsTo = {"Bastarnae Tribe", "Burgundian Tribe", "Gepidae Tribe", "Herulian Tribe", "Lugii Tribe", "Ostrogoth Tribe", "Rugian Tribe", "Silingae Tribe", "Turcilingian Tribe", "Vandal Tribe", "Visigoth Tribe"},
 	HistoricalFactionDerivations = {-325, "germanic", "Yngling Tribe"},
 	HistoricalTechnologies = {
 		"upgrade-teuton-spatha", 180 -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
