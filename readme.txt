@@ -62,9 +62,9 @@ https://github.com/Andrettin/Wyrmsun
 -----------------------------------------------------------------------
 
 * Grand Strategy
-- Tribal factions now get increased revolt risk the more provinces they own.
-- If tribal factions only have one province, they now migrate to a newly-conquered empty province.
+- If tribal factions only have one province and attack an empty province, they now migrate to it instead of conquering it.
 - Fixed issue which could cause a crash if the player pressed the End Turn button too fast, triggering two battles at the same time.
+- Fixed issue which caused soldiers to not carry over from battles when playing with tactical battles active.
 
 -----------------------------------------------------------------------
 - 2.1.5
