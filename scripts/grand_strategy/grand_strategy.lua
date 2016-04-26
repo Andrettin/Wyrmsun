@@ -2145,7 +2145,7 @@ function DrawGrandStrategyInterface()
 						end
 					end
 				elseif (GetGrandStrategyTileData({GetGrandStrategySelectedTileX(), GetGrandStrategySelectedTileY()}, "PathwayConstruction") == false) then
-					local build_road_tooltip = "Build roads to connect resource tiles to your capital\nRoads allow more than 200 of a tile's output to be transported\nCosts 200 Gold and 200 Lumber"
+					local build_road_tooltip = "Build roads to connect resource tiles to your capital\nRoads allow more than 200 of a tile's output to be transported\nRoads between provinces allow more than 8 regiments to move or attack\nCosts 200 Gold and 200 Lumber"
 					-- add a button for building a road
 					if (GetGrandStrategyTileData({GetGrandStrategySelectedTileX(), GetGrandStrategySelectedTileY()}, "Pathway", "north") == "") then
 						AddGrandStrategyThinImageButton("Build Road (~!N)", "n", UI.InfoPanel.X + 72, Video.Height - (15 * 6) - 8, function()
