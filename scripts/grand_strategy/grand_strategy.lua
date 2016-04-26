@@ -2698,61 +2698,6 @@ function DrawGrandStrategyInterface()
 	end
 end
 
-function SetSelectedProvinceLua(province)
-	if (province ~= SelectedProvince) then
-
-		-- if the player has units selected and then selects an attackable province, set those units to attack the province
-		if (SelectedProvince ~= nil and GrandStrategyFaction ~= nil and GetProvinceOwner(SelectedProvince.Name) == GrandStrategyFaction.Name and GetGrandStrategyProvinceData(SelectedProvince.Name, "CanAttackProvince", province.Name)) then
-			for i, unitName in ipairs(Units) do
-				if (IsMilitaryUnit(unitName)) then
-					if (GetGrandStrategySelectedUnits(unitName) > 0) then
-						SetProvinceAttackedBy(province.Name, GrandStrategyFaction.Civilization, GrandStrategyFaction.Name)
-						SetProvinceAttackingUnitQuantity(province.Name, unitName, GetProvinceAttackingUnitQuantity(province.Name, unitName) + GetGrandStrategySelectedUnits(unitName))
-						SetProvinceUnitQuantity(SelectedProvince.Name, unitName, GetProvinceUnitQuantity(SelectedProvince.Name, unitName) - GetGrandStrategySelectedUnits(unitName))
-					end
-				end
-			end
-			
-			if (SelectedHero ~= "" and SelectedHero ~= nil) then
-				SetProvinceAttackedBy(province.Name, GrandStrategyFaction.Civilization, GrandStrategyFaction.Name)
-				SetProvinceHero(province.Name, SelectedHero, 3)
-				SelectedHero = ""
-			end
-		elseif (SelectedProvince ~= nil and GrandStrategyFaction ~= nil and GetProvinceOwner(SelectedProvince.Name) == GetProvinceOwner(province.Name) and GetProvinceOwner(SelectedProvince.Name) == GrandStrategyFaction.Name) then
-			for i, unitName in ipairs(Units) do
-				if (IsMilitaryUnit(unitName)) then
-					if (GetGrandStrategySelectedUnits(unitName) > 0) then
-						SetProvinceMovingUnitQuantity(province.Name, unitName, GetProvinceMovingUnitQuantity(province.Name, unitName) + GetGrandStrategySelectedUnits(unitName))
-						SetProvinceUnitQuantity(SelectedProvince.Name, unitName, GetProvinceUnitQuantity(SelectedProvince.Name, unitName) - GetGrandStrategySelectedUnits(unitName))
-					end
-				end
-			end
-			
-			if (SelectedHero ~= "" and SelectedHero ~= nil and GetProvinceHero(SelectedProvince.Name, SelectedHero) == 2) then
-				SetProvinceHero(province.Name, SelectedHero, 1)
-				SelectedHero = ""
-			end
-		end
-
-		if (GrandStrategyFaction ~= nil) then
-			if (province ~= nil and GetProvinceOwner(province.Name) ~= "" and GetGrandStrategyProvinceData(province.Name, "Water") == false and GetProvinceOwner(province.Name) ~= GrandStrategyFaction.Name) then -- if is owned by a foreign faction, use diplomacy interface, if is a self owned province or an empty one, use the normal province interface
-				GrandStrategyInterfaceState = "Diplomacy"
-			else
-				GrandStrategyInterfaceState = "Province"
-			end
-		end
-		SelectedProvince = province
-		SetSelectedProvince(province.Name)
-		SelectedHero = ""
-		for i, unitName in ipairs(Units) do
-			if (IsMilitaryUnit(unitName)) then
-				SetGrandStrategySelectedUnits(unitName, 0)
-			end
-		end
-	end
-	DrawGrandStrategyInterface()
-end
-
 function AIDoTurn(ai_faction)
 	
 	AIConsiderOffers(ai_faction)
