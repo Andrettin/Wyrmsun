@@ -68,9 +68,9 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed issue which allowed 1-province polities to migrate.
 - Fixed issue with loading grand strategy games.
 - New tribes can now split off from your tribe (settling unoccupied nearby provinces) under certain circumstances.
-- Roads can now be built (linking tiles with roads is necessary to allow them to produce over 200 output of their resource; only polities can build roads).
-- Add 1 lumber resource to Svarinshaug.
 - Factions now have capitals (identified by a crown symbol on the tile).
+- Roads can now be built (linking your faction's capital to tiles with roads is necessary to allow them to produce over 200 output of their resource; only polities can build roads).
+- Add 1 lumber resource to Svarinshaug.
 
 -----------------------------------------------------------------------
 - 2.1.6
