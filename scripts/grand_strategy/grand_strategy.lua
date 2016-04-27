@@ -1624,7 +1624,7 @@ function AddGrandStrategyBuildingButton(x, y, unit_type)
 	local building_cost_tooltip = ""
 	if (GetFactionUnitCost(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, unit_type, "gold") > 0) then
 		if (building_cost_tooltip == "") then
-			building_cost_tooltip = " (costs "
+			building_cost_tooltip = "Costs "
 		else
 			building_cost_tooltip = building_cost_tooltip .. ", "
 		end
@@ -1632,51 +1632,48 @@ function AddGrandStrategyBuildingButton(x, y, unit_type)
 	end
 	if (GetFactionUnitCost(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, unit_type, "lumber") > 0) then
 		if (building_cost_tooltip == "") then
-			building_cost_tooltip = " (costs "
+			building_cost_tooltip = "Costs "
 		else
-			building_cost_tooltip = building_cost_tooltip .. " and "
+			building_cost_tooltip = building_cost_tooltip .. ", "
 		end
 		building_cost_tooltip = building_cost_tooltip .. GetFactionUnitCost(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, unit_type, "lumber") .. " Lumber"
 	end
 	if (GetFactionUnitCost(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, unit_type, "stone") > 0) then
 		if (building_cost_tooltip == "") then
-			building_cost_tooltip = " (costs "
+			building_cost_tooltip = "Costs "
 		else
-			building_cost_tooltip = building_cost_tooltip .. " and "
+			building_cost_tooltip = building_cost_tooltip .. ", "
 		end
 		building_cost_tooltip = building_cost_tooltip .. GetFactionUnitCost(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, unit_type, "stone") .. " Stone"
-	end
-	if (building_cost_tooltip ~= "") then
-		building_cost_tooltip = building_cost_tooltip .. ")"
 	end
 	
 	local building_function_tooltip = ""
 	if (GetUnitTypeData(unit_type, "Class") == "town-hall") then
-		building_function_tooltip = " (more province information and trading of resources)"
+		building_function_tooltip = "More province information and trading of resources"
 	elseif (GetUnitTypeData(unit_type, "Class") == "stronghold") then
-		building_function_tooltip = " (more province information and trading of resources)"
+		building_function_tooltip = "More province information and trading of resources"
 	elseif (GetUnitTypeData(unit_type, "Class") == "barracks") then
-		building_function_tooltip = " (recruits units)"
+		building_function_tooltip = "Recruits units"
 	elseif (GetUnitTypeData(unit_type, "Class") == "lumber-mill") then
-		building_function_tooltip = " (researches projectile upgrades)"
+		building_function_tooltip = "Researches projectile upgrades"
 	elseif (GetUnitTypeData(unit_type, "Class") == "smithy") then
-		building_function_tooltip = " (researches melee weapon, shield and siege weapon upgrades)"
+		building_function_tooltip = "Researches melee weapon, shield and siege weapon upgrades"
 	elseif (GetUnitTypeData(unit_type, "Class") == "stables") then
-		building_function_tooltip = " (allows cavalry units to be trained)"
+		building_function_tooltip = "Allows cavalry units to be trained"
 	elseif (GetUnitTypeData(unit_type, "Class") == "temple") then
---		building_function_tooltip = " (researches upgrades)"
---		building_function_tooltip = " (allows certain random events)"
+--		building_function_tooltip = " researches upgrades"
+--		building_function_tooltip = " allows certain random events"
 	elseif (GetUnitTypeData(unit_type, "Class") == "dock") then
-		building_function_tooltip = " (allows fishing and attacking nearby coasts)"
+		building_function_tooltip = "Allows fishing and attacking nearby coasts\nConnects this province's settlement to your capital"
 	elseif (GetUnitTypeData(unit_type, "Class") == "mercenary-camp") then
-		building_function_tooltip = " (hires mercenaries)"
+		building_function_tooltip = "Hires mercenaries"
 	end
 	if (GetProvinceSettlementBuilding(SelectedProvince.Name, unit_type)) then
-		UIElements[table.getn(UIElements)]:setTooltip("Use " .. unit_type_name .. building_function_tooltip)
+		UIElements[table.getn(UIElements)]:setTooltip("Use " .. unit_type_name .. "\n" .. building_function_tooltip)
 	elseif (GetProvinceCurrentConstruction(SelectedProvince.Name) == unit_type) then
 		UIElements[table.getn(UIElements)]:setTooltip(unit_type_name .. " in " .. GetProvinceName(SelectedProvince) .. " under construction")
 	else
-		UIElements[table.getn(UIElements)]:setTooltip("Build " .. unit_type_name .. " in " .. GetProvinceName(SelectedProvince) .. building_cost_tooltip)
+		UIElements[table.getn(UIElements)]:setTooltip("Build " .. unit_type_name .. " in " .. GetProvinceName(SelectedProvince) .. "\n" .. building_cost_tooltip)
 	end
 	UIElements[table.getn(UIElements)]:setFrameImage(Preference.IconFrameG)
 	UIElements[table.getn(UIElements)]:setPressedFrameImage(Preference.PressedIconFrameG)
@@ -1753,7 +1750,7 @@ function AddGrandStrategyTechnologyButton(x, y, unit_type)
 	local cost_tooltip = ""
 	if (CUpgrade:Get(unit_type).GrandStrategyCosts[7] > 0) then -- research cost
 		if (cost_tooltip == "") then
-			cost_tooltip = " (costs "
+			cost_tooltip = "Costs "
 		else
 			cost_tooltip = cost_tooltip .. ", "
 		end
@@ -1761,7 +1758,7 @@ function AddGrandStrategyTechnologyButton(x, y, unit_type)
 	end
 	if (CUpgrade:Get(unit_type).GrandStrategyCosts[1] > 0) then -- gold cost
 		if (cost_tooltip == "") then
-			cost_tooltip = " (costs "
+			cost_tooltip = "Costs "
 		else
 			cost_tooltip = cost_tooltip .. ", "
 		end
@@ -1769,7 +1766,7 @@ function AddGrandStrategyTechnologyButton(x, y, unit_type)
 	end
 	if (CUpgrade:Get(unit_type).GrandStrategyCosts[2] > 0) then -- lumber cost
 		if (cost_tooltip == "") then
-			cost_tooltip = " (costs "
+			cost_tooltip = "Costs "
 		else
 			cost_tooltip = cost_tooltip .. ", "
 		end
@@ -1777,7 +1774,7 @@ function AddGrandStrategyTechnologyButton(x, y, unit_type)
 	end
 	if (CUpgrade:Get(unit_type).GrandStrategyCosts[5] > 0) then -- stone cost
 		if (cost_tooltip == "") then
-			cost_tooltip = " (costs "
+			cost_tooltip = "Costs "
 		else
 			cost_tooltip = cost_tooltip .. ", "
 		end
@@ -1785,20 +1782,17 @@ function AddGrandStrategyTechnologyButton(x, y, unit_type)
 	end
 	if (CUpgrade:Get(unit_type).GrandStrategyCosts[8] > 0) then -- prestige cost
 		if (cost_tooltip == "") then
-			cost_tooltip = " (costs "
+			cost_tooltip = "Costs "
 		else
 			cost_tooltip = cost_tooltip .. ", "
 		end
 		cost_tooltip = cost_tooltip .. CUpgrade:Get(unit_type).GrandStrategyCosts[8] .. " prestige"
 	end
-	if (cost_tooltip ~= "") then
-		cost_tooltip = cost_tooltip .. ")"
-	end
 
 	if (GetFactionCurrentResearch(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name) == unit_type) then
 		UIElements[table.getn(UIElements)]:setTooltip(CUpgrade:Get(unit_type).Name .. " being researched")
 	else
-		UIElements[table.getn(UIElements)]:setTooltip("Research " .. CUpgrade:Get(unit_type).Name .. cost_tooltip)
+		UIElements[table.getn(UIElements)]:setTooltip("Research " .. CUpgrade:Get(unit_type).Name .. "\n" .. cost_tooltip)
 	end
 	UIElements[table.getn(UIElements)]:setFrameImage(Preference.CommandButtonFrameG)
 	UIElements[table.getn(UIElements)]:setPressedFrameImage(Preference.CommandButtonFrameG)
@@ -1914,7 +1908,7 @@ function AddGrandStrategyMercenaryButton(x, y, unit_type)
 	local cost_tooltip = ""
 	if (GetUnitTypeData(unit_type, "Costs", "gold") > 0) then
 		if (cost_tooltip == "") then
-			cost_tooltip = " (costs "
+			cost_tooltip = "Costs "
 		else
 			cost_tooltip = cost_tooltip .. ", "
 		end
@@ -1922,26 +1916,23 @@ function AddGrandStrategyMercenaryButton(x, y, unit_type)
 	end
 	if (GetUnitTypeData(unit_type, "Costs", "lumber") > 0) then
 		if (cost_tooltip == "") then
-			cost_tooltip = " (costs "
+			cost_tooltip = "Costs "
 		else
-			cost_tooltip = cost_tooltip .. " and "
+			cost_tooltip = cost_tooltip .. ", "
 		end
 		cost_tooltip = cost_tooltip .. GetUnitTypeData(unit_type, "Costs", "lumber") * GetUnitTypeData(unit_type, "TrainQuantity") .. " Lumber"
 	end
 	if (GetUnitTypeData(unit_type, "Costs", "stone") > 0) then
 		if (cost_tooltip == "") then
-			cost_tooltip = " (costs "
+			cost_tooltip = "Costs "
 		else
-			cost_tooltip = cost_tooltip .. " and "
+			cost_tooltip = cost_tooltip .. ", "
 		end
 		cost_tooltip = cost_tooltip .. GetUnitTypeData(unit_type, "Costs", "stone") * GetUnitTypeData(unit_type, "TrainQuantity") .. " Stone"
 	end
-	if (cost_tooltip ~= "") then
-		cost_tooltip = cost_tooltip .. ")"
-	end
 							
 	if (GetUnitTypeData(unit_type, "Upkeep") > 0) then
-		cost_tooltip = cost_tooltip .. " (" .. GetUnitTypeData(unit_type, "Upkeep") * GetUnitTypeData(unit_type, "TrainQuantity") .. " Gold Upkeep)"
+		cost_tooltip = cost_tooltip .. "\n" .. GetUnitTypeData(unit_type, "Upkeep") * GetUnitTypeData(unit_type, "TrainQuantity") .. " Gold Upkeep"
 	end
 							
 	local regiment_type_name = GetUnitTypeNamePluralForm(unit_type)
@@ -2350,10 +2341,10 @@ function DrawGrandStrategyInterface()
 							b:setPressedImage(g_rslider_p)
 							
 							local cost_tooltip = ""
-							cost_tooltip = " (costs 1 " .. GetUnitTypeName(GetFactionClassUnitType("worker", GetProvinceCivilization(SelectedProvince.Name), faction)) .. " unit"
+							cost_tooltip = "Costs 1 " .. GetUnitTypeName(GetFactionClassUnitType("worker", GetProvinceCivilization(SelectedProvince.Name), faction)) .. " unit"
 							if (GetFactionUnitCost(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, unitName, "gold") > 0) then
 								if (cost_tooltip == "") then
-									cost_tooltip = " (costs "
+									cost_tooltip = "Costs "
 								else
 									cost_tooltip = cost_tooltip .. ", "
 								end
@@ -2361,7 +2352,7 @@ function DrawGrandStrategyInterface()
 							end
 							if (GetFactionUnitCost(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, unitName, "lumber") > 0) then
 								if (cost_tooltip == "") then
-									cost_tooltip = " (costs "
+									cost_tooltip = "Costs "
 								else
 									cost_tooltip = cost_tooltip .. ", "
 								end
@@ -2369,22 +2360,19 @@ function DrawGrandStrategyInterface()
 							end
 							if (GetFactionUnitCost(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, unitName, "stone") > 0) then
 								if (cost_tooltip == "") then
-									cost_tooltip = " (costs "
+									cost_tooltip = "Costs "
 								else
 									cost_tooltip = cost_tooltip .. ", "
 								end
 								cost_tooltip = cost_tooltip .. GetFactionUnitCost(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, unitName, "stone") .. " Stone"
 							end
-							if (cost_tooltip ~= "") then
-								cost_tooltip = cost_tooltip .. ")"
-							end
 							
 							if (GetUnitTypeData(unitName, "Upkeep") > 0) then
-								cost_tooltip = cost_tooltip .. " (" .. GetUnitTypeData(unitName, "Upkeep") .. " Gold Upkeep)"
+								cost_tooltip = cost_tooltip .. "\n" .. GetUnitTypeData(unitName, "Upkeep") .. " Gold Upkeep"
 							end
 							
 							local regiment_type_name = GetUnitTypeNamePluralForm(unitName)
-							b:setTooltip("Train one ".. regiment_type_name .. " regiment" .. cost_tooltip)
+							b:setTooltip("Train one ".. regiment_type_name .. " regiment" .. "\n" .. cost_tooltip)
 
 							AddGrandStrategyLabel(GetProvinceUnderConstructionUnitQuantity(SelectedProvince.Name, unitName), icon_offset_x + 24, icon_offset_y + 42, Fonts["game"], true, false)
 
@@ -2520,7 +2508,7 @@ function DrawGrandStrategyInterface()
 							local cost_tooltip = ""
 							if (GetFactionUnitCost(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, unitName, "gold") > 0) then
 								if (cost_tooltip == "") then
-									cost_tooltip = " (costs "
+									cost_tooltip = "Costs "
 								else
 									cost_tooltip = cost_tooltip .. ", "
 								end
@@ -2528,30 +2516,27 @@ function DrawGrandStrategyInterface()
 							end
 							if (GetFactionUnitCost(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, unitName, "lumber") > 0) then
 								if (cost_tooltip == "") then
-									cost_tooltip = " (costs "
+									cost_tooltip = "Costs "
 								else
-									cost_tooltip = cost_tooltip .. " and "
+									cost_tooltip = cost_tooltip .. ", "
 								end
 								cost_tooltip = cost_tooltip .. GetFactionUnitCost(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, unitName, "lumber") .. " Lumber"
 							end
 							if (GetFactionUnitCost(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, unitName, "stone") > 0) then
 								if (cost_tooltip == "") then
-									cost_tooltip = " (costs "
+									cost_tooltip = "Costs "
 								else
-									cost_tooltip = cost_tooltip .. " and "
+									cost_tooltip = cost_tooltip .. ", "
 								end
 								cost_tooltip = cost_tooltip .. GetFactionUnitCost(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name, unitName, "stone") .. " Stone"
 							end
-							if (cost_tooltip ~= "") then
-								cost_tooltip = cost_tooltip .. ")"
-							end
 							
 							if (GetUnitTypeData(unitName, "Upkeep") > 0) then
-								cost_tooltip = cost_tooltip .. " (" .. GetUnitTypeData(unitName, "Upkeep") .. " Gold Upkeep)"
+								cost_tooltip = cost_tooltip .. "\n" .. GetUnitTypeData(unitName, "Upkeep") .. " Gold Upkeep"
 							end
 							
 							local regiment_type_name = GetUnitTypeNamePluralForm(unitName)
-							b:setTooltip("Hire one ".. regiment_type_name .. " regiment" .. cost_tooltip)
+							b:setTooltip("Hire one ".. regiment_type_name .. " regiment" .. "\n" .. cost_tooltip)
 
 							AddGrandStrategyLabel(GetProvinceUnderConstructionUnitQuantity(SelectedProvince.Name, unitName), icon_offset_x + 24, icon_offset_y + 42, Fonts["game"], true, false)
 
