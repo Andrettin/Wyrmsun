@@ -50,7 +50,9 @@ DefineAiHelper(
 	{"unit-equiv", "unit-teuton-town-hall",
 	"unit-teuton-stronghold"},
 	{"unit-equiv", "unit-dwarven-town-hall",
-	"unit-dwarven-stronghold"}
+	"unit-dwarven-stronghold"},
+	{"unit-equiv", "unit-goblin-town-hall",
+	"unit-goblin-stronghold"}
 )
 
 --

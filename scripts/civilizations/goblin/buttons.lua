@@ -114,11 +114,18 @@ DefineButton( { Pos = 4, Level = 0, Icon = "icon-masonry",
 	Action = "research", Value = "upgrade-goblin-masonry",
 	Allowed = "check-single-research",
 	Key = "m", Hint = _("Research ~!Masonry"), Popup = "popup-research",
-	Description = "+20% Hit Points and +5 Armor for buildings.",
+	Description = "+20% Hit Points and +5 Armor for buildings, allows Town Halls to be upgraded to Strongholds.",
 	ForUnit = {"unit-goblin-lumber-mill"}
 } )
 
 -- Upgrades ---------------------------------------------------------
+
+DefineButton( { Pos = 2, Level = 0, Icon = "icon-goblin-stronghold",
+	Action = "upgrade-to", Value = "unit-goblin-stronghold",
+	Allowed = "check-upgrade-to",
+	Key = "s", Hint = _("Upgrade to ~!Stronghold"), Popup = "popup-building",
+	ForUnit = {"unit-goblin-town-hall"}
+} )
 
 DefineButton( { Pos = 1, Level = 1, Icon = "icon-goblin-headhunter",
 	Action = "experience-upgrade-to", Value = "unit-goblin-headhunter",

@@ -94,7 +94,7 @@ DefineUpgrade("upgrade-goblin-iron-tipped-wood-plow", {
 DefineUpgrade("upgrade-goblin-masonry", {
 	Parent = "upgrade-masonry",
 	Civilization = "goblin",
-	Description = _("Masonry is the craft of building structures from blocks, which are bound together with mortar.\n\nEffect: +20% Hit Points and +5 Armor for buildings."),
+	Description = _("Masonry is the craft of building structures from blocks, which are bound together with mortar.\n\nEffect: +20% Hit Points and +5 Armor for buildings, allows Town Halls to be upgraded to Strongholds."),
 	TechnologyPointCost = 1
 })
 
@@ -125,7 +125,8 @@ DefineModifier("upgrade-goblin-catapult-projectile-2",
 DefineModifier("upgrade-goblin-masonry",
 	{"HitPoints", 20, "Percent"},
 	{"Armor", 5},
-	{"apply-to", "unit-goblin-town-hall"}, {"apply-to", "unit-goblin-farm"}, {"apply-to", "unit-goblin-mess-hall"},
+	{"apply-to", "unit-goblin-town-hall"}, {"apply-to", "unit-goblin-stronghold"},
+	{"apply-to", "unit-goblin-farm"}, {"apply-to", "unit-goblin-mess-hall"},
 	{"apply-to", "unit-goblin-lumber-mill"}, {"apply-to", "unit-goblin-smithy"})
 
 DefineModifier("upgrade-goblin-wood-plow",
@@ -151,6 +152,10 @@ DefineDependency("upgrade-goblin-pike",
 	{"upgrade-goblin-long-spear"}
 )
 	
+DefineDependency("unit-goblin-stronghold",
+	{"unit-goblin-mess-hall", "upgrade-goblin-masonry"}
+)
+
 DefineDependency("upgrade-goblin-catapult-projectile-1",
 	{"unit-goblin-lumber-mill"}
 )

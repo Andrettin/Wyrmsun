@@ -98,7 +98,7 @@ DefineButton( { Pos = 13, Level = 0, Icon = "icon-rally-point",
 		"unit-dwarven-sentry-tower", "unit-dwarven-guard-tower",
 		"unit-gnomish-town-hall",
 		"unit-gnomish-barracks",
-		"unit-goblin-town-hall",
+		"unit-goblin-town-hall", "unit-goblin-stronghold",
 		"unit-goblin-barracks"
 	}
 } )

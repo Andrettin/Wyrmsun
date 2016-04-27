@@ -1551,6 +1551,7 @@ DefineProvince("Epirus", {
 DefineProvince("Essex", {
 	World = "Earth",
 	FactionCulturalNames = {
+		"teuton", "Angle Tribe", "Essex",
 		"teuton", "England", "Essex", "name-elements", {
 			"compound", "prefix", "english", "noun", "Es",
 			"compound", "suffix", "english", "noun", "plural", "Sex"
@@ -2488,6 +2489,7 @@ DefineProvince("Jutland", {
 DefineProvince("Kent", {
 	World = "Earth",
 	FactionCulturalNames = {
+		"teuton", "Angle Tribe", "Kent",
 		"teuton", "England", "Kent"
 	},
 	Tiles = {
@@ -3032,6 +3034,7 @@ DefineProvince("Mecklenburg", {
 DefineProvince("Mercia", {
 	World = "Earth",
 	FactionCulturalNames = {
+		"teuton", "Angle Tribe", "Mercia",
 		"teuton", "England", "Mercia"
 	},
 	Tiles = {
@@ -3351,6 +3354,7 @@ DefineProvince("Norrland", {
 DefineProvince("Northumberland", {
 	World = "Earth",
 	FactionCulturalNames = {
+		"teuton", "Angle Tribe", "Bernicia",
 		"teuton", "England", "Northumberland", "name-elements", {
 			"compound", "prefix", "english", "noun", "North", -- could also be the adjective or adverb form of this word
 --			"compound", "infix", -- the name of the Humber river
@@ -4224,6 +4228,7 @@ DefineProvince("Styria", {
 DefineProvince("Sussex", {
 	World = "Earth",
 	FactionCulturalNames = {
+		"teuton", "Angle Tribe", "Sussex",
 		"teuton", "England", "Sussex", "name-elements", {
 			"compound", "prefix", "english", "noun", "Sus",
 			"compound", "suffix", "english", "noun", "plural", "Sex"
@@ -4869,6 +4874,7 @@ DefineProvince("Wallachia", {
 DefineProvince("Wessex", {
 	World = "Earth",
 	FactionCulturalNames = {
+		"teuton", "Angle Tribe", "Wessex",
 		"teuton", "England", "Wessex", "name-elements", {
 			"compound", "prefix", "english", "noun", "Wes",
 			"compound", "suffix", "english", "noun", "plural", "Sex"
@@ -5057,6 +5063,7 @@ DefineProvince("Wurtemberg", {
 DefineProvince("York", {
 	World = "Earth",
 	FactionCulturalNames = {
+		"teuton", "Angle Tribe", "Deira",
 		"teuton", "England", "York", "settlement-derived-name" -- presumably a settlement-derived name
 	},
 	Tiles = {

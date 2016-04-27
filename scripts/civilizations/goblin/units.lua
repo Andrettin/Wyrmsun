@@ -345,7 +345,7 @@ DefineUnitType("unit-goblin-town-hall", { Name = _("Town Hall"),
 	Description = _("The town hall is the center of a goblin settlement's life."),
 	Image = {"file", "goblin/buildings/town_hall.png", "size", {128, 128}},
 	Shadow = {"file", "goblin/buildings/town_hall_shadow.png", "size", {128, 128}},
-	Animations = "animations-building", Icon = "icon-goblin-town-hall",
+	Icon = "icon-goblin-town-hall",
 	Trains = {"unit-goblin-worker"},
 	AiDrops = {"unit-boots"},
 	DropAffixes = {"upgrade-item-prefix-flaming", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-the-snigill", "upgrade-item-suffix-of-trickery"},
@@ -353,6 +353,21 @@ DefineUnitType("unit-goblin-town-hall", { Name = _("Town Hall"),
 		"help", "basic-goblin-voices-help-town"
 	}
 } )
+
+DefineUnitType("unit-goblin-stronghold", { Name = _("Stronghold"),
+	Parent = "unit-template-stronghold",
+	Civilization = "goblin",
+	Description = _("When a goblin tribe becomes large enough, it will build a stronghold in its main settlement to ward off invasions from envious lesser tribes."),
+	Image = {"file", "goblin/buildings/stronghold.png", "size", {128, 128}},
+	Shadow = {"file", "goblin/buildings/stronghold_shadow.png", "size", {128, 128}},
+	Icon = "icon-goblin-stronghold",
+	Trains = {"unit-goblin-worker"},
+	AiDrops = {"unit-short-spear", "unit-long-spear", "unit-pike", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-boots", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows"},
+	DropAffixes = {"upgrade-item-prefix-flaming", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-the-snigill", "upgrade-item-suffix-of-trickery"},
+	Sounds = {
+		"help", "basic-goblin-voices-help-town"
+	}
+})
 
 DefineUnitType("unit-goblin-farm", { Name = _("Farm"),
 	Parent = "unit-template-farm",
