@@ -2562,6 +2562,14 @@ DefineProvince("Latium", {
 		"latin", "Latin Tribe",
 		"latin", "Rome"
 	},
+	HistoricalOwners = {
+		-750, "latin", "Latin Tribe", -- Latins present in Latium by 750-625 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-500, "latin", "Rome", -- Roman territory in 500 BC; was not actually all of Latium, but only the vicinity of the city of Rome; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
+		493, "goth", "Ostrogoth Tribe" -- Ostrogoths conquered Italy in 493 AD; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, pp. 8-9; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
+	},
+	HistoricalCultures = {
+		-750, "latin"
+	},
 	HistoricalModifiers = {
 		1303, "upgrade-university", true -- University founded in Rome in 1303. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.
 	},

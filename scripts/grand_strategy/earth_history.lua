@@ -555,9 +555,6 @@ if (GrandStrategyYear >= -750) then -- Eastern Mediterranean between 750 and 625
 	SetProvinceOwner("Dalmatia", "illyrian", "Illyrian Tribe")
 	SetProvinceCivilization("Dalmatia", "illyrian")
 	
-	SetProvinceOwner("Latium", "latin", "Latin Tribe")
-	SetProvinceCivilization("Latium", "latin")
-	
 	SetProvinceOwner("Tuscany", "etruscan", "Etruscan Tribe")
 	SetProvinceCivilization("Tuscany", "etruscan")
 end
@@ -623,10 +620,6 @@ if (GrandStrategyYear >= -500) then
 	SetFactionDiplomacyState("greek", "Sparta", "persian", "Persia", "war")
 	SetFactionDiplomacyState("greek", "Corinth", "persian", "Persia", "war")
 	SetProvinceCivilization("Thrace", "thracian") -- Apsinthii
-	
-	-- Roman territory in 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
-	SetProvinceOwner("Latium", "latin", "Rome") -- was not actually all of Latium, but only the vicinity of the city of Rome
-	SetFactionGovernmentType("latin", "Rome", "republic") -- should be earlier?
 	
 	-- Situation of Italy in (apparently) 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
 	
@@ -1340,8 +1333,6 @@ if (GrandStrategyYear >= 493) then
 	-- Ostrogoths conquer Italy in 493 AD; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, pp. 8-9; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 	SetProvinceOwner("Lombardy", "goth", "Ostrogoth Tribe")
 	SetProvinceUnitQuantity("Lombardy", "unit-teuton-swordsman", 0) -- let's remove those oodles of warriors placed there to make Italy difficult to conquer
-	SetProvinceOwner("Latium", "goth", "Ostrogoth Tribe")
-	SetProvinceUnitQuantity("Latium", "unit-teuton-swordsman", 0) -- let's remove those oodles of warriors placed there to make Italy difficult to conquer
 	SetProvinceOwner("Naples", "goth", "Ostrogoth Tribe")
 	SetProvinceUnitQuantity("Naples", "unit-teuton-swordsman", 0) -- let's remove those oodles of warriors placed there to make Italy difficult to conquer
 	SetProvinceOwner("Umbria", "goth", "Ostrogoth Tribe")

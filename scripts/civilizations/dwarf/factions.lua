@@ -122,6 +122,35 @@ DefineFaction("Shorbear Clan", {
 	}
 })
 
+DefineFaction("Joruvellir", {
+	Civilization = "dwarf",
+	Type = "polity",
+	Colors = {"brown"},
+	DefaultTier = "barony",
+	Titles = {
+		"monarchy", "barony", "Lordship"
+	},
+	MinisterTitles = {
+		"head-of-state", "male", "monarchy", "barony", "Lord",
+		"head-of-state", "female", "monarchy", "barony", "Lady"
+	},
+	FactionUpgrade = "upgrade-joruvellir-faction",
+	Description = "The arid sands of Joruvellir were first settled by a group of dwarves who had their origins in Svarinshaug.",
+	HistoricalFactionDerivations = {400, "dwarf", "Brising Clan"},
+	HistoricalCapitals = {
+		400, "Joruvellir"
+	},
+	HistoricalTechnologies = {
+		"upgrade-dwarven-runewriting", 400, -- polities require writing
+		"upgrade-dwarven-coinage", 400, -- the dwarves should already have Coinage technology by then
+		"upgrade-dwarven-iron-tipped-wood-plow", 534, -- Mushroom Farms existent in Knalga (so possibly also in other polities)
+		"upgrade-dwarven-great-axe", 550, -- late iron age technologies already obtained by the dwarves by this point
+		"upgrade-dwarven-shield-2", 550, -- late iron age technologies already obtained by the dwarves by this point
+		"upgrade-dwarven-bearded-throwing-axe", 550, -- late iron age technologies already obtained by the dwarves by this point
+		"upgrade-dwarven-ballista-bolt-1", 550, -- late iron age technologies already obtained by the dwarves by this point
+	}
+})
+
 DefineFaction("Kal Kartha", {
 	Civilization = "dwarf",
 	Type = "polity",
@@ -136,6 +165,9 @@ DefineFaction("Kal Kartha", {
 	},
 	FactionUpgrade = "upgrade-kal-kartha-faction",
 	HistoricalFactionDerivations = {400, "dwarf", "Brising Clan"},
+	HistoricalCapitals = {
+		400, "Kal Kartha"
+	},
 	HistoricalTechnologies = {
 		"upgrade-dwarven-runewriting", 400, -- polities require writing
 		"upgrade-dwarven-coinage", 400, -- the dwarves should already have Coinage technology by then
@@ -161,6 +193,9 @@ DefineFaction("Knalga", {
 	},
 	FactionUpgrade = "upgrade-knalga-faction",
 	HistoricalFactionDerivations = {400, "dwarf", "Norlund Clan"},
+	HistoricalCapitals = {
+		400, "Southern Tunnels"
+	},
 	HistoricalTechnologies = {
 		"upgrade-dwarven-runewriting", 400, -- polities require writing
 		"upgrade-dwarven-coinage", 400, -- the dwarves should already have Coinage technology by then
@@ -169,32 +204,6 @@ DefineFaction("Knalga", {
 		"upgrade-dwarven-shield-2", 550, -- late iron age technologies already obtained by the dwarves by this point
 		"upgrade-dwarven-bearded-throwing-axe", 550, -- late iron age technologies already obtained by the dwarves by this point
 		"upgrade-dwarven-ballista-bolt-1", 550 -- late iron age technologies already obtained by the dwarves by this point
-	}
-})
-
-DefineFaction("Joruvellir", {
-	Civilization = "dwarf",
-	Type = "polity",
-	Colors = {"brown"},
-	DefaultTier = "barony",
-	Titles = {
-		"monarchy", "barony", "Lordship"
-	},
-	MinisterTitles = {
-		"head-of-state", "male", "monarchy", "barony", "Lord",
-		"head-of-state", "female", "monarchy", "barony", "Lady"
-	},
-	FactionUpgrade = "upgrade-joruvellir-faction",
-	Description = "The arid sands of Joruvellir were first settled by a group of dwarves who had their origins in Svarinshaug.",
-	HistoricalFactionDerivations = {400, "dwarf", "Brising Clan"},
-	HistoricalTechnologies = {
-		"upgrade-dwarven-runewriting", 400, -- polities require writing
-		"upgrade-dwarven-coinage", 400, -- the dwarves should already have Coinage technology by then
-		"upgrade-dwarven-iron-tipped-wood-plow", 534, -- Mushroom Farms existent in Knalga (so possibly also in other polities)
-		"upgrade-dwarven-great-axe", 550, -- late iron age technologies already obtained by the dwarves by this point
-		"upgrade-dwarven-shield-2", 550, -- late iron age technologies already obtained by the dwarves by this point
-		"upgrade-dwarven-bearded-throwing-axe", 550, -- late iron age technologies already obtained by the dwarves by this point
-		"upgrade-dwarven-ballista-bolt-1", 550, -- late iron age technologies already obtained by the dwarves by this point
 	}
 })
 
@@ -215,6 +224,9 @@ DefineFaction("Lyr", {
 	Description = "The shining hall of Lyr was built by a number of skilled dwarven craftsmen who had split off from the Brising clan.",
 	Background = "In Norse mythology Lyr was a magnificent hall which was built by Loki with the help of the dwarves Bari, Delling, Dori, Iri, Jari, Ori, Uni, Var and Vegdrasil. The giantess Menglad dwelled in the hall. \"Lyr\" means \"heat-holding\" in Old Norse.",
 	HistoricalFactionDerivations = {400, "dwarf", "Brising Clan"},
+	HistoricalCapitals = {
+		400, "Lyr"
+	},
 	HistoricalTechnologies = {
 		"upgrade-dwarven-runewriting", 400, -- polities require writing
 		"upgrade-dwarven-coinage", 400, -- the dwarves should already have Coinage technology by then
