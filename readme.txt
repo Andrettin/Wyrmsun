@@ -73,6 +73,10 @@ https://github.com/Andrettin/Wyrmsun
 - Building a dock in a province's settlement now connects its location to the faction capital as if there were a road to it.
 - Add 1 lumber resource to Svarinshaug.
 
+* Miscellaneous
+- Fixed a save game compatibility issue.
+- Fixed a save game loading issue.
+
 -----------------------------------------------------------------------
 - 2.1.6
 -----------------------------------------------------------------------

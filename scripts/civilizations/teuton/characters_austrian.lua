@@ -185,7 +185,7 @@ DefineCharacter("Victor Andrian-Werburg", { -- Source: Waltraud Heindl, "Josephi
 	-- a "conservative thinker"
 })
 
-DefineCharacter("Franz Seraph Stadion", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 50.
+DefineCharacter("Franz Seraph Stadion", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, pp. 50, 54-55.
 	Name = "Franz Seraph",
 	NameElements = {
 		"word", "high-german", "noun", "Franz",
@@ -197,9 +197,10 @@ DefineCharacter("Franz Seraph Stadion", { -- Source: Waltraud Heindl, "Josephini
 	Civilization = "teuton",
 	Faction = "Austria",
 	ProvinceOfOrigin = "Lower Austria", -- was presumably from Austria, put the character in the province where the Austrian capital (Vienna) is, since we don't have more specific information
+	Year = 1806, -- born
 	DeathYear = 1853, -- died
 	HistoricalTitles = {
-		"interior-minister", 0, 1849, "teuton", "Austria" -- Interior Minister (Innenminister) of Austria until May 1849, when he became severely ill
+		"interior-minister", 1848, 1849, "teuton", "Austria" -- Interior Minister (Innenminister) of Austria until May 1849, when he became severely ill; was already Interior Minister by 7.11.1818
 	}
 	-- count (of Stadion?)
 })
