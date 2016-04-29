@@ -29,6 +29,6 @@ DefineWorldMapTile({554, 142}, {
 	World = "Earth",
 	CulturalSettlementNames = {
 		"greek", "Troy",
---		"hittite", "Troy"
+		"hittite", "Troy"
 	}
 })

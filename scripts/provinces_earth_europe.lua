@@ -3794,6 +3794,18 @@ DefineProvince("Rhodope", {
 	Claims = {
 		"greek", "Thrace"
 	},
+	HistoricalOwners = {
+		-500, "persian", "Persia", -- Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
+		-450, "", "", -- Greece circa 450 BC (height of the Athenian empire); Source: William R. Shepherd, "Historical Atlas", 1911, p. 13.
+		-336, "greek", "Macedon", -- Macedonian Empire in 336-323 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 18-19.
+		-301, "greek", "Thrace", -- Kingdoms of the Diadochi about 301 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 18-19.
+		-200, "greek", "Macedon", -- Kingdoms of the Diadochi about 200 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 18-19.
+		-146, "latin", "Rome" -- Macedonia acquired by Rome in 146 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	},
+	HistoricalCultures = {
+		-1450, "phoenician", -- The isle of Thasos and the coastal areas around it were settled by the Phoenicians around 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		-550, "greek" -- Greek and Phoenician settlements about 550 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 12.
+	},
 	Regions = {"Europe", "Greece", "West and Central Europe"}
 })
 

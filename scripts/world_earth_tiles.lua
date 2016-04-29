@@ -28,6 +28,7 @@
 --Load("scripts/world_earth_tiles_asia.lua")
 Load("scripts/world_earth_tiles_austria.lua")
 Load("scripts/world_earth_tiles_finland.lua")
+Load("scripts/world_earth_tiles_greece.lua")
 Load("scripts/world_earth_tiles_scandinavia.lua")
 Load("scripts/world_earth_tiles_spain.lua")
 
@@ -966,13 +967,6 @@ DefineWorldMapTile({538, 129}, {
 	}
 })
 
-DefineWorldMapTile({538, 144}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"greek", "Nicopolis"
-	}
-})
-
 DefineWorldMapTile({540, 136}, {
 	World = "Earth",
 	CulturalSettlementNames = {
@@ -981,49 +975,10 @@ DefineWorldMapTile({540, 136}, {
 	}
 })
 
-DefineWorldMapTile({541, 145}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"greek", "Naupactus"
-	}
-})
-
-DefineWorldMapTile({542, 140}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"greek", "Aegae",
-		"latin", "Edessa"
-	}
-})
-
 DefineWorldMapTile({543, 110}, {
 	World = "Earth",
 	CulturalSettlementNames = {
 		"slav", "Lublin"
-	}
-})
-
-DefineWorldMapTile({543, 143}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"greek", "Larissa"
-	}
-})
-
-DefineWorldMapTile({543, 150}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"greek", "Sparta"
-	}
-})
-
-DefineWorldMapTile({544, 148}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"greek", "Argos"
-	},
-	FactionCulturalSettlementNames = {
-		"greek", "Mycenae", "Mycenae"
 	}
 })
 
@@ -1040,26 +995,12 @@ DefineWorldMapTile({545, 122}, {
 	}
 })
 
-DefineWorldMapTile({545, 148}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"greek", "Corinth"
-	}
-})
-
 DefineWorldMapTile({546, 134}, {
 	World = "Earth",
 	CulturalSettlementNames = {
 		"latin", "Ulpia",
 		-- Sardica
 		"slav", "Sofia"
-	}
-})
-
-DefineWorldMapTile({546, 146}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"greek", "Thebes"
 	}
 })
 
@@ -1081,14 +1022,6 @@ DefineWorldMapTile({547, 114}, {
 	}
 })
 
-DefineWorldMapTile({547, 147}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"greek", "Athens",
-		"latin", "Athens"
-	}
-})
-
 DefineWorldMapTile({548, 94}, {
 	World = "Earth",
 	CulturalSettlementNames = {
@@ -1096,26 +1029,11 @@ DefineWorldMapTile({548, 94}, {
 	}
 })
 
-DefineWorldMapTile({548, 145}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"greek", "Chalcis"
-	}
-})
-
 DefineWorldMapTile({550, 87}, {
 	World = "Earth",
 	CulturalSettlementNames = {
+		"finnish", "Tallinn", -- Estonian
 		"teuton", "Reval"
-		-- in Estonian: "Tallinn"
-	}
-})
-
-DefineWorldMapTile({551, 155}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"greek", "Knossos",
-		"latin", "Cnossus"
 	}
 })
 
@@ -1130,13 +1048,6 @@ DefineWorldMapTile({552, 119}, {
 	World = "Earth",
 	CulturalSettlementNames = {
 		"teuton", "Czernowitz"
-	}
-})
-
-DefineWorldMapTile({552, 139}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"greek", "Komotiní"
 	}
 })
 
@@ -1161,13 +1072,6 @@ DefineWorldMapTile({559, 102}, {
 	}
 })
 
-DefineWorldMapTile({559, 152}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"greek", "Ialysus"
-	}
-})
-
 DefineWorldMapTile({560, 130}, {
 	World = "Earth",
 	CulturalSettlementNames = {
@@ -1175,14 +1079,6 @@ DefineWorldMapTile({560, 130}, {
 	},
 	FactionCulturalSettlementNames = {
 		"latin", "Romania", "Constanța"
-	}
-})
-
-DefineWorldMapTile({561, 138}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"greek", "Byzantium",
-		"latin", "Constantinople"
 	}
 })
 

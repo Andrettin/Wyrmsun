@@ -1,4 +1,5 @@
 
+SetRiverCulturalName("Alpheus", "greek", "Alpheus") -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 SetRiverCulturalName("Danube", "latin", "Danuvius") -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 SetRiverCulturalName("Danube", "teuton", "Donau")
 --SetRiverCulturalName("Dnieper", "latin", "Borysthenes") -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
@@ -590,7 +591,6 @@ end
 if (GrandStrategyYear >= -550) then
 	-- Greek and Phoenician settlements about 550 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 12.
 	SetProvinceCivilization("Macedonia", "greek")
-	SetProvinceCivilization("Rhodope", "greek")
 	SetProvinceCivilization("Thrace", "greek")
 
 	SetProvinceOwner("Liguria", "celt", "Ligurian Tribe")
@@ -610,7 +610,6 @@ end
 if (GrandStrategyYear >= -500) then
 	-- Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
 	SetProvinceOwner("Macedonia", "persian", "Persia")
-	SetProvinceOwner("Rhodope", "persian", "Persia")
 	SetProvinceOwner("Thrace", "persian", "Persia")
 	
 	-- Maiden Castle hill fort build around 500 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 119.
@@ -659,7 +658,6 @@ if (GrandStrategyYear >= -450) then
 	-- Greece circa 450 BC (height of the Athenian empire); Source: William R. Shepherd, "Historical Atlas", 1911, p. 13.
 	SetProvinceOwner("Thrace", "thracian", "Apsinthii Tribe")
 	SetProvinceOwner("Macedonia", "greek", "Macedon")
-	SetProvinceOwner("Rhodope", "", "")
 	
 	SetProvinceOwner("Albania", "illyrian", "Taulantii Tribe")
 	SetProvinceCivilization("Albania", "illyrian")
@@ -705,7 +703,6 @@ end
 
 if (GrandStrategyYear >= -336) then
 	-- Macedonian Empire in 336-323 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 18-19.
-	SetProvinceOwner("Rhodope", "greek", "Macedon")
 	SetProvinceOwner("Skopje", "greek", "Macedon") -- the site of Skopje wasn't a part of the Macedonian Empire in 336 BC, but most of the modern Republic of Macedonia was
 	SetProvinceOwner("Albania", "greek", "Macedon") -- most of Albania was a part of the Macedonian Empire in 336 BC (including the city of Apollonia), but not the city of Epidamnus
 	
@@ -752,7 +749,6 @@ if (GrandStrategyYear >= -301) then
 	SetProvinceOwner("Thrace", "greek", "Thrace")
 	SetProvinceOwner("Bulgaria", "greek", "Thrace")
 	SetProvinceOwner("Dobruja", "greek", "Thrace")
-	SetProvinceOwner("Rhodope", "greek", "Thrace")
 	
 	SetProvinceOwner("Crete", "greek", "Krete")
 	SetProvinceCivilization("Crete", "greek")
@@ -882,7 +878,6 @@ end
 
 if (GrandStrategyYear >= -200) then
 	-- Kingdoms of the Diadochi about 200 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 18-19.
-	SetProvinceOwner("Rhodope", "greek", "Macedon")
 	SetProvinceOwner("Bulgaria", "", "")
 	SetProvinceOwner("Dobruja", "", "")
 	
@@ -924,7 +919,6 @@ if (GrandStrategyYear >= -146) then -- Aetolia, Attica, Boeotia, Corinth, Epirus
 	SetProvinceOwner("Euboea", "latin", "Rome")
 	SetProvinceOwner("Lacedaemonia", "latin", "Rome")
 	SetProvinceOwner("Macedonia", "latin", "Rome")
-	SetProvinceOwner("Rhodope", "latin", "Rome")
 	SetProvinceOwner("Thessaly", "latin", "Rome")
 	
 	SetProvinceOwner("Skopje", "latin", "Rome")
