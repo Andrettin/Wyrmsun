@@ -2140,15 +2140,31 @@ function DrawGrandStrategyInterface()
 					local build_road_tooltip = "Build roads to connect resource tiles to your capital\nRoads allow more than 200 of a tile's output to be transported\nCosts 200 Gold and 200 Lumber"
 					-- add a button for building a road
 					if (GetGrandStrategyTileData({GetGrandStrategySelectedTileX(), GetGrandStrategySelectedTileY()}, "CanBuildPathway", "road", "north", false)) then
-						AddGrandStrategyThinImageButton("Build Road (~!N)", "n", UI.InfoPanel.X + 72, Video.Height - (15 * 6) - 8, function()
+						AddGrandStrategyThinImageButton("Build Road N", "", UI.InfoPanel.X + 72, Video.Height - (15 * 8) - 8, function()
 							if (GetGrandStrategyTileData({GetGrandStrategySelectedTileX(), GetGrandStrategySelectedTileY()}, "CanBuildPathway", "road", "north", true)) then
 								SetGrandStrategyTileData({GetGrandStrategySelectedTileX(), GetGrandStrategySelectedTileY()}, "PathwayConstruction", "road", "north")
 							end
 							DrawGrandStrategyInterface()
 						end, build_road_tooltip)
 					end
+					if (GetGrandStrategyTileData({GetGrandStrategySelectedTileX(), GetGrandStrategySelectedTileY()}, "CanBuildPathway", "road", "northwest", false)) then
+						AddGrandStrategyThinImageButton("Build Road NW", "", UI.InfoPanel.X + 72, Video.Height - (15 * 7) - 8, function()
+							if (GetGrandStrategyTileData({GetGrandStrategySelectedTileX(), GetGrandStrategySelectedTileY()}, "CanBuildPathway", "road", "northwest", true)) then
+								SetGrandStrategyTileData({GetGrandStrategySelectedTileX(), GetGrandStrategySelectedTileY()}, "PathwayConstruction", "road", "northwest")
+							end
+							DrawGrandStrategyInterface()
+						end, build_road_tooltip)
+					end
+					if (GetGrandStrategyTileData({GetGrandStrategySelectedTileX(), GetGrandStrategySelectedTileY()}, "CanBuildPathway", "road", "northeast", false)) then
+						AddGrandStrategyThinImageButton("Build Road NE", "", UI.InfoPanel.X + 72, Video.Height - (15 * 6) - 8, function()
+							if (GetGrandStrategyTileData({GetGrandStrategySelectedTileX(), GetGrandStrategySelectedTileY()}, "CanBuildPathway", "road", "northeast", true)) then
+								SetGrandStrategyTileData({GetGrandStrategySelectedTileX(), GetGrandStrategySelectedTileY()}, "PathwayConstruction", "road", "northeast")
+							end
+							DrawGrandStrategyInterface()
+						end, build_road_tooltip)
+					end
 					if (GetGrandStrategyTileData({GetGrandStrategySelectedTileX(), GetGrandStrategySelectedTileY()}, "CanBuildPathway", "road", "west", false)) then
-						AddGrandStrategyThinImageButton("Build Road (~!W)", "w", UI.InfoPanel.X + 72, Video.Height - (15 * 5) - 8, function()
+						AddGrandStrategyThinImageButton("Build Road W", "", UI.InfoPanel.X + 72, Video.Height - (15 * 5) - 8, function()
 							if (GetGrandStrategyTileData({GetGrandStrategySelectedTileX(), GetGrandStrategySelectedTileY()}, "CanBuildPathway", "road", "west", true)) then
 								SetGrandStrategyTileData({GetGrandStrategySelectedTileX(), GetGrandStrategySelectedTileY()}, "PathwayConstruction", "road", "west")
 							end
@@ -2156,7 +2172,7 @@ function DrawGrandStrategyInterface()
 						end, build_road_tooltip)
 					end
 					if (GetGrandStrategyTileData({GetGrandStrategySelectedTileX(), GetGrandStrategySelectedTileY()}, "CanBuildPathway", "road", "east", false)) then
-						AddGrandStrategyThinImageButton("Build Roa~!d (E)", "d", UI.InfoPanel.X + 72, Video.Height - (15 * 4) - 8, function()
+						AddGrandStrategyThinImageButton("Build Road E", "", UI.InfoPanel.X + 72, Video.Height - (15 * 4) - 8, function()
 							if (GetGrandStrategyTileData({GetGrandStrategySelectedTileX(), GetGrandStrategySelectedTileY()}, "CanBuildPathway", "road", "east", true)) then
 								SetGrandStrategyTileData({GetGrandStrategySelectedTileX(), GetGrandStrategySelectedTileY()}, "PathwayConstruction", "road", "east")
 							end
@@ -2164,9 +2180,25 @@ function DrawGrandStrategyInterface()
 						end, build_road_tooltip)
 					end
 					if (GetGrandStrategyTileData({GetGrandStrategySelectedTileX(), GetGrandStrategySelectedTileY()}, "CanBuildPathway", "road", "south", false)) then
-						AddGrandStrategyThinImageButton("Build Road (~!S)", "s", UI.InfoPanel.X + 72, Video.Height - (15 * 3) - 8, function()
+						AddGrandStrategyThinImageButton("Build Road S", "", UI.InfoPanel.X + 72, Video.Height - (15 * 3) - 8, function()
 							if (GetGrandStrategyTileData({GetGrandStrategySelectedTileX(), GetGrandStrategySelectedTileY()}, "CanBuildPathway", "road", "south", true)) then
 								SetGrandStrategyTileData({GetGrandStrategySelectedTileX(), GetGrandStrategySelectedTileY()}, "PathwayConstruction", "road", "south")
+							end
+							DrawGrandStrategyInterface()
+						end, build_road_tooltip)
+					end
+					if (GetGrandStrategyTileData({GetGrandStrategySelectedTileX(), GetGrandStrategySelectedTileY()}, "CanBuildPathway", "road", "southwest", false)) then
+						AddGrandStrategyThinImageButton("Build Road SW", "", UI.InfoPanel.X + 72, Video.Height - (15 * 2) - 8, function()
+							if (GetGrandStrategyTileData({GetGrandStrategySelectedTileX(), GetGrandStrategySelectedTileY()}, "CanBuildPathway", "road", "southwest", true)) then
+								SetGrandStrategyTileData({GetGrandStrategySelectedTileX(), GetGrandStrategySelectedTileY()}, "PathwayConstruction", "road", "southwest")
+							end
+							DrawGrandStrategyInterface()
+						end, build_road_tooltip)
+					end
+					if (GetGrandStrategyTileData({GetGrandStrategySelectedTileX(), GetGrandStrategySelectedTileY()}, "CanBuildPathway", "road", "southeast", false)) then
+						AddGrandStrategyThinImageButton("Build Road SE", "", UI.InfoPanel.X + 72, Video.Height - (15 * 1) - 8, function()
+							if (GetGrandStrategyTileData({GetGrandStrategySelectedTileX(), GetGrandStrategySelectedTileY()}, "CanBuildPathway", "road", "southeast", true)) then
+								SetGrandStrategyTileData({GetGrandStrategySelectedTileX(), GetGrandStrategySelectedTileY()}, "PathwayConstruction", "road", "southeast")
 							end
 							DrawGrandStrategyInterface()
 						end, build_road_tooltip)
