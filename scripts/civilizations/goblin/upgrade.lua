@@ -127,7 +127,9 @@ DefineModifier("upgrade-goblin-masonry",
 	{"Armor", 5},
 	{"apply-to", "unit-goblin-town-hall"}, {"apply-to", "unit-goblin-stronghold"},
 	{"apply-to", "unit-goblin-farm"}, {"apply-to", "unit-goblin-mess-hall"},
-	{"apply-to", "unit-goblin-lumber-mill"}, {"apply-to", "unit-goblin-smithy"})
+	{"apply-to", "unit-goblin-lumber-mill"}, {"apply-to", "unit-goblin-smithy"},
+	{"apply-to", "unit-goblin-watch-tower"}, {"apply-to", "unit-goblin-guard-tower"}
+)
 
 DefineModifier("upgrade-goblin-wood-plow",
 	{"Supply", 1},
@@ -141,6 +143,10 @@ DefineModifier("upgrade-goblin-iron-tipped-wood-plow",
 
 DefineDependency("unit-goblin-archer",
 	{"unit-goblin-lumber-mill"})
+
+DefineDependency("unit-goblin-guard-tower",
+	{"unit-goblin-lumber-mill", "upgrade-goblin-masonry"}
+)
 
 DefineDependency("unit-goblin-war-machine",
 	{"unit-goblin-smithy", "unit-goblin-lumber-mill"})

@@ -85,6 +85,7 @@ Units = {
 	"unit-goblin-war-machine", "unit-goblin-glider",
 	"unit-goblin-town-hall", "unit-goblin-stronghold",
 	"unit-goblin-mess-hall", "unit-goblin-farm", "unit-goblin-lumber-mill", "unit-goblin-smithy",
+	"unit-goblin-watch-tower", "unit-goblin-guard-tower",
 	"upgrade-goblin-long-spear", "upgrade-goblin-pike",
 	"upgrade-goblin-catapult-projectile-1", "upgrade-goblin-catapult-projectile-2",
 	"upgrade-goblin-wood-plow", "upgrade-goblin-iron-tipped-wood-plow",

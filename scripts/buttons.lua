@@ -99,7 +99,8 @@ DefineButton( { Pos = 13, Level = 0, Icon = "icon-rally-point",
 		"unit-gnomish-town-hall",
 		"unit-gnomish-barracks",
 		"unit-goblin-town-hall", "unit-goblin-stronghold",
-		"unit-goblin-barracks"
+		"unit-goblin-barracks",
+		"unit-goblin-watch-tower", "unit-goblin-guard-tower"
 	}
 } )
   

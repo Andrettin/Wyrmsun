@@ -431,8 +431,32 @@ DefineUnitType("unit-goblin-smithy", { Name = _("Fugla Forge"),
 	}
 } )
 
+DefineUnitType("unit-goblin-watch-tower", { Name = _("Watch Tower"),
+	Parent = "unit-template-watch-tower",
+	Civilization = "goblin",
+	Description = _("Goblins are ever wary of being caught offguard by attacks from rival tribes or dwarven punitive expeditions. Their watch towers keep them informed if foes are approaching."),
+	Image = {"file", "goblin/buildings/watch_tower.png", "size", {64, 64}},
+	Shadow = {"file", "goblin/buildings/watch_tower_shadow.png", "size", {64, 64}},
+	Icon = "icon-goblin-watch-tower",
+	Sounds = {
+		"help", "basic-goblin-voices-help-town"
+	}
+} )
+
+DefineUnitType("unit-goblin-guard-tower", { Name = _("Guard Tower"),
+	Parent = "unit-template-guard-tower",
+	Civilization = "goblin",
+	Description = _("The more powerful goblin tribes protect their settlements with the placement of guard towers on their perimeters. The archers garrisoned in these structures greet approaching enemies with deadly arrows."),
+	Image = {"file", "goblin/buildings/guard_tower.png", "size", {64, 64}},
+	Shadow = {"file", "goblin/buildings/guard_tower_shadow.png", "size", {64, 64}},
+	Icon = "icon-goblin-guard-tower",
+	Sounds = {
+		"help", "basic-goblin-voices-help-town"
+	}
+} )
+
 DefineUnitType("unit-goblin-worker", {
-	Trains = {"unit-goblin-town-hall", "unit-goblin-farm", "unit-goblin-mess-hall", "unit-goblin-lumber-mill", "unit-goblin-smithy", "unit-gold-mine", "unit-silver-mine", "unit-copper-mine"}
+	Trains = {"unit-goblin-town-hall", "unit-goblin-farm", "unit-goblin-mess-hall", "unit-goblin-lumber-mill", "unit-goblin-smithy", "unit-goblin-watch-tower", "unit-gold-mine", "unit-silver-mine", "unit-copper-mine"}
 } )
 
 DefineUnitType("unit-goblin-banner", { Name = _("Goblin Banner"),
