@@ -304,7 +304,7 @@ b_o:
 
 badbuckle (Cenk Açan):
 /graphics/dwarf/units/right_arm_spear.png (modified from b_o's dwarven axefighter's arm) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
-/graphics/dwarf/units/spear.png (modified from b_o's goblin spear) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/dwarf/units/weapons/spear.png (modified from b_o's goblin spear) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 /graphics/teuton/units/ritter.png (uses b_o's horse) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 
 Bos Wars Team:
@@ -581,7 +581,9 @@ João Victor G. Costa (Jinn):
 /graphics/dwarf/ui/widgets/up-arrow-pressed.png (licensed under the CC0)
 /graphics/dwarf/ui/widgets/up-arrow-normal-slider.png (licensed under the CC0)
 /graphics/dwarf/ui/widgets/up-arrow-pressed-slider.png (licensed under the CC0)
-/graphics/dwarf/units/heater_shield.png (licensed under the CC0)
+/graphics/dwarf/units/helmets/witness_tiara.png (licensed under the CC0)
+/graphics/dwarf/units/shields/heater_shield.png (licensed under the CC0)
+/graphics/dwarf/units/weapons/mace.png (licensed under the CC0)
 /graphics/dwarf/units/miner_with_coal.png (modified from b_o's dwarven miner unit graphics) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 /graphics/dwarf/units/transport_ship.png (licensed under the CC0)
 /graphics/dwarf/units/transport_ship_water.png (licensed under the CC0)

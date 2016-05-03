@@ -73,7 +73,7 @@ DefineCharacter("Thjodrorir", { -- dwarven sage of Modsognir's clan; in Norse my
 		"compound", "suffix", "dwarven", "noun", "singular", "Rorir"
 	},
 	Gender = "male",
-	Type = "unit-dwarven-steelclad", -- should be a priest
+	Type = "unit-dwarven-witness",
 	Civilization = "dwarf",
 	Faction = "Brising Clan",
 	ProvinceOfOrigin = "Svarinshaug",

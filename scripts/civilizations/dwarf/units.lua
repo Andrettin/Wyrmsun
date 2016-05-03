@@ -121,15 +121,16 @@ DefineUnitType("unit-dwarven-axefighter", { Name = _("Axefighter"),
 	Parent = "unit-template-infantry",
 	Civilization = "dwarf",
 	Description = _("Dwarven axefighters wield mighty battle axes, which make them feared opponents in close-range combat. Veteran axefighters often use the pay they've managed to spare to purchase steel armor for themselves at the local smithy."),
-	Image = {"file", "dwarf/units/dwarf_body_warrior_shield.png", "size", {72, 72}},
+	Image = {"file", "dwarf/units/body_warrior.png", "size", {72, 72}},
 	LayerImages = {
 		{"layer", "right-arm", "file", "dwarf/units/right_arm_warrior.png"},
 		{"layer", "right-hand", "file", "dwarf/units/right_hand_warrior.png"},
+		{"layer", "left-arm", "file", "dwarf/units/left_arm_shield.png"},
 		{"layer", "clothing-right-arm", "file", "dwarf/units/shoulder_pad_right_arm_warrior.png"},
 		{"layer", "clothing-left-arm", "file", "dwarf/units/shoulder_pad_left_arm.png"},
 		{"layer", "hair", "file", "dwarf/units/red_hair_warrior.png"},
-		{"layer", "weapon", "file", "dwarf/units/axe.png"},
-		{"layer", "shield", "file", "dwarf/units/round_shield.png"}
+		{"layer", "weapon", "file", "dwarf/units/weapons/axe.png"},
+		{"layer", "shield", "file", "dwarf/units/shields/round_shield.png"}
 	},
 	Animations = "animations-dwarven-axefighter", Icon = "icon-dwarven-axefighter",
 	DefaultEquipment = {
@@ -189,7 +190,7 @@ DefineUnitType("unit-dwarven-axefighter", { Name = _("Axefighter"),
 		{
 			"layer", "weapon",
 			"variation-id", "mace",
-			"file", "dwarf/units/mace.png",
+			"file", "dwarf/units/weapons/mace.png",
 			"item-equipped", "unit-hammer",
 			"item-equipped", "unit-mining-pick"
 		},
@@ -446,14 +447,15 @@ DefineUnitType("unit-dwarven-guard", { Name = _("Guard"),
 	Parent = "unit-template-spearman",
 	Civilization = "dwarf",
 	Description = _("Dwarven guards are the first line of defense of the dwarven homelands. With their sturdy shields, they can often mount an unassailable defense against attackers."),
-	Image = {"file", "dwarf/units/dwarf_body_warrior_shield.png", "size", {72, 72}},
+	Image = {"file", "dwarf/units/body_warrior.png", "size", {72, 72}},
 	LayerImages = {
 		{"layer", "right-arm", "file", "dwarf/units/right_arm_spear.png"},
+		{"layer", "left-arm", "file", "dwarf/units/left_arm_shield.png"},
 		{"layer", "clothing-right-arm", "file", "dwarf/units/shoulder_pad_right_arm_spear.png"},
 		{"layer", "clothing-left-arm", "file", "dwarf/units/shoulder_pad_left_arm.png"},
 		{"layer", "hair", "file", "dwarf/units/brown_hair_warrior.png"},
-		{"layer", "weapon", "file", "dwarf/units/spear.png"},
-		{"layer", "shield", "file", "dwarf/units/heater_shield.png"}
+		{"layer", "weapon", "file", "dwarf/units/weapons/spear.png"},
+		{"layer", "shield", "file", "dwarf/units/shields/heater_shield.png"}
 	},
 	Animations = "animations-dwarven-axefighter", Icon = "icon-dwarven-guard",
 	DefaultEquipment = {
@@ -481,7 +483,7 @@ DefineUnitType("unit-dwarven-guard", { Name = _("Guard"),
 		"selected", "basic-dwarf-voices-selected-group",
 		"acknowledge", "basic-dwarf-voices-acknowledge",
 		"attack", "basic-dwarf-voices-attack",
---		"ready", "dwarven-axefighter-ready",
+		"ready", "basic-dwarf-voices-ready",
 		"help", "basic-dwarf-voices-help",
 		"dead", "basic-dwarf-voices-dead"
 	}
@@ -819,6 +821,46 @@ DefineUnitType("unit-dwarven-yale-lord", { Name = _("Yale Lord"),
 	}
 } )
 
+DefineUnitType("unit-dwarven-witness", { Name = _("Witness"),
+	Parent = "unit-template-priest",
+	Civilization = "dwarf",
+	Description = _("A witness functions as the eyes of the dwarves' history, a deep lore that they almost never share with outsiders. The presence of a witness inspires dwarven warriors with the knowledge that their deeds (and their deaths) will not go unrecorded. The person of a witness is considered sacred, and witnesses are often used as envoys between dwarven clans. The earliest known dwarven witness was Thjodrorir, sage of the Brising Clan. The best known of them, however, was Dvalin. He created the dwarven runes and shifted lorekeeping away from being an oral practice."),
+	Background = _("In Norse mythology, Thjodrorir was a dwarf who knew a potent magic charm. Thjodrorir is mentioned in the ~<Hovamol~>. Dvalin was a dwarf in Norse mythology who was said in the Hovamol to have taught the art of runes to his people."),
+	Image = {"file", "dwarf/units/body_warrior.png", "size", {72, 72}},
+	LayerImages = {
+		{"layer", "right-arm", "file", "dwarf/units/right_arm_warrior.png"},
+		{"layer", "right-hand", "file", "dwarf/units/right_hand_warrior.png"},
+		{"layer", "left-arm", "file", "dwarf/units/left_arm.png"},
+		{"layer", "hair", "file", "dwarf/units/gray_hair_warrior.png"},
+		{"layer", "helmet", "file", "dwarf/units/helmets/witness_tiara.png"},
+		{"layer", "weapon", "file", "dwarf/units/weapons/mace.png"}
+	},
+	Animations = "animations-dwarven-axefighter", Icon = "icon-dwarven-witness",
+	DefaultEquipment = {
+--		{"weapon", "unit-mace"},
+		{"boots", "unit-boots"}
+	},
+	Corpse = "unit-dwarven-dead-body",
+	WeaponClasses = {"mace"},
+	BluntDamage = true,
+	InvertedEastArms = true,
+	InvertedSoutheastArms = true,
+	ButtonKey = "w",
+	ButtonHint = _("Train ~!Witness"),
+	AiDrops = {"unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-glacial", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-the-snigill"},
+	Sounds = {
+		"selected", "basic-dwarf-voices-selected-group",
+		"acknowledge", "basic-dwarf-voices-acknowledge",
+		"attack", "basic-dwarf-voices-attack",
+		"ready", "basic-dwarf-voices-ready",
+		"help", "basic-dwarf-voices-help",
+		"dead", "basic-dwarf-voices-dead",
+		"hit", "mace-attack",
+		"miss", "attack-miss"
+	}
+} )
+
 DefineUnitType("unit-dwarven-gryphon-rider", { Name = _("Gryphon Rider"),
 	Parent = "unit-template-flying-rider",
 	Civilization = "dwarf",
@@ -1091,6 +1133,7 @@ DefineUnitType("unit-dwarven-temple", { Name = _("Temple"),
 	Costs = {"time", 175, "gold", 900, "lumber", 1000, "stone", 500},
 	RepairCosts = {"gold", 1, "lumber", 1, "stone", 1},
 	FireResistance = 20,
+--	Trains = {"unit-dwarven-witness", "unit-potion-of-healing"},
 	Trains = {"unit-potion-of-healing"},
 	Sounds = {
 		"help", "basic-dwarf-voices-help-town"
