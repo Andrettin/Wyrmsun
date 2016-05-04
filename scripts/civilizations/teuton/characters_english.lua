@@ -822,10 +822,33 @@ DefineCharacter("Ethelred", { -- Source: Snorri Sturlson, "Heimskringla", 1844, 
 
 DefineCharacter("Nicolas Breakspear", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 126.
 	Name = "Nicolas", -- son of a peasant employed in the Benedictine monastery of Saint Albans in Hertfordshire; was educated by the monks there; later became a cardinal and was sent on a mission to Norway to settle the Church there; was elected Pope in 1154 AD under the title of Hadrian IV
+	NameElements = {"word", "english", "noun", "Nicolas"},
 	ExtraName = "Breakspear", -- I assume this isn't his family name, but a nickname or something of the sort?
 	Gender = "male",
 	Type = "unit-teuton-swordsman", -- should be priest
 	Civilization = "teuton", -- should be English
 	ProvinceOfOrigin = "Essex", -- Hertfordshire (since his father worked there, he's probably from there)
 	Year = 1154 -- elected Pope
+})
+
+DefineCharacter("John Williamson", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 159.
+	Name = "John",
+	NameElements = {"word", "english", "noun", "John"},
+	ExtraName = "Williamson",
+	Gender = "male",
+	Type = "unit-teuton-worker", -- should be priest
+	Civilization = "teuton", -- should be English
+	ProvinceOfOrigin = "Essex", -- English (so put him in the capital province of England for lack of more precise information)
+	Year = 1429 -- became bishop of Holum (in Iceland) in 1429
+})
+
+DefineCharacter("John Garrickson", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 159.
+	Name = "John",
+	NameElements = {"word", "english", "noun", "John"},
+	ExtraName = "Garrickson",
+	Gender = "male",
+	Type = "unit-teuton-worker", -- should be priest
+	Civilization = "teuton", -- should be English
+	ProvinceOfOrigin = "Essex", -- English (so put him in the capital province of England for lack of more precise information)
+	Year = 1430 -- was bishop of Skalholt (in Iceland) in 1430
 })

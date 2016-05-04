@@ -956,6 +956,59 @@ DefineCharacter("Hörvir", { -- Source: Henry Adams Bellows (transl.), "The Poet
 --	DeathYear = ?
 })
 
+DefineCharacter("Eric Red", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 161.
+	Name = "Eric",
+	ExtraName = "Red",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Iceland",
+	Year = 986 -- in the Spring of 986 Eric Red migrated from Iceland to Greenland with Heriulf Bardson, settling in Brattalid (in Ericsfiord)
+})
+
+DefineCharacter("Heriulf Bardson", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 161.
+	Name = "Heriulf",
+	ExtraName = "Bardson",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Iceland",
+	Year = 986 -- in the Spring of 986 migrated from Iceland to Greenland with Eric Red, settling in Heriulfsness
+})
+
+DefineCharacter("Biorne", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 161.
+	Name = "Biorne",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Iceland", -- correct?
+	Father = "Heriulf Bardson",
+	Year = 986 -- was in Norway when his father Heriulf Bardson migrated from Iceland to Greenland in the Spring of 986
+})
+
+DefineCharacter("Leif", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 162-163.
+	Name = "Leif",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Iceland", -- correct?
+	Father = "Eric Red",
+	Year = 1000 -- went forth from Greenland c. 1000 with a ship he bought from Biorne to find the lands Biorne had seen; Leif's crew had 35 men
+	-- Leif named three countries he found: Hellaland (a plain of flat slaty stones), Markland (a wooded country with many cliffs of white sand) and Vinland (a country with vines and grapes)
+})
+
+DefineCharacter("Thorwald", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 163.
+	Name = "Thorwald",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Iceland", -- correct?
+	Father = "Eric Red", -- presumably, since he was Leif's brother
+	Year = 1002 -- went forth from Greenland in 1002 with Leif's ship to Vinland
+	-- Thorwald named a headland Kialarness
+	-- Thorwald died in an attack from the Skraelings (probably Indians), and was buried at a place named Crossness
+})
+
 DefineCharacter("Swerre", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 115.
 	Name = "Swerre", -- king (presumably) of Norway
 	Gender = "male",
@@ -1104,4 +1157,35 @@ DefineCharacter("Endrede", { -- Source: Snorri Sturlson, "Heimskringla", 1844, v
 	ProvinceOfOrigin = "Greenland", -- accurate?
 	Year = 1409, -- executed a marriage settlement at Garda (the episcopal seat of Greenland) in 1409
 	Father = "Andreas"
+})
+
+DefineCharacter("Magnus Eyolfson", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 159.
+	Name = "Magnus",
+	ExtraName = "Eyolfson",
+	Gender = "male",
+	Type = "unit-teuton-worker", -- should be priest
+	Civilization = "norse", -- correct?
+	ProvinceOfOrigin = "Iceland", -- correct?
+	Year = 1477 -- was bishop of Skalholt (in Iceland) in 1477
+})
+
+DefineCharacter("Thormod Torfæus", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 154-155.
+	Name = "Thormod",
+	FamilyName = "Torfæus",
+	Gender = "male",
+	Type = "unit-teuton-swordsman", -- should be something more appropriate for a writer, such as a priest
+	Civilization = "norse",
+	ProvinceOfOrigin = "Hordaland", -- Norwegian? if so, he should be where Oslo is; but since for the moment Hordaland is the only Norwegian province in the game, set it as the province of origin
+	Year = 1707, -- his "Historiae Vinlandiae Antiquae" dates from 1707
+	AuthoredWorks = {"upgrade-work-historiae-vinlandiae-antiquae"}
+})
+
+DefineCharacter("Hans Egide", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 147.
+	Name = "Hans", -- Norwegian minister who settled in Greenland
+	FamilyName = "Egide",
+	Gender = "male",
+	Type = "unit-teuton-swordsman", -- should be priest
+	Civilization = "norse",
+	ProvinceOfOrigin = "Hordaland", -- Norwegian, so he should be where Oslo is; but since for the moment Hordaland is the only Norwegian province in the game, set it as the province of origin
+	Year = 1721 -- settled in Greenland amongst the eskimos as a missionary in 1721
 })

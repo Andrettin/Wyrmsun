@@ -25,8 +25,11 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-Load("scripts/civilizations/dwarf/works.lua")
-Load("scripts/civilizations/greek/works.lua")
-Load("scripts/civilizations/latin/works.lua")
-Load("scripts/civilizations/norse/works.lua")
-Load("scripts/civilizations/teuton/works.lua")
+DefineUpgrade("upgrade-work-historiae-vinlandiae-antiquae", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 154-155.
+	Name = _("Historiae Vinlandiae Antiquae"),
+	Work = "scroll",
+	Civilization = "norse",
+	Description = "This work tells the history of the Norse settlement in Vinland, in the New World.",
+	Year = 1707
+	-- should probably have some other requirements, like a Norse civilization having been in possession of Greenland at some point
+})

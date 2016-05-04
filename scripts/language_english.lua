@@ -1632,7 +1632,6 @@ DefineLanguageWord("Jack", {
 	Language = "english",
 	Type = "noun",
 	Meanings = {},
-	Gender = "masculine",
 	NameTypes = {"person-male"}
 })
 
@@ -1640,23 +1639,19 @@ DefineLanguageWord("James", {
 	Language = "english",
 	Type = "noun",
 	Meanings = {},
-	Gender = "masculine",
 	NameTypes = {"person-male"}
 })
 
 DefineLanguageWord("John", {
 	Language = "english",
 	Type = "noun",
-	Meanings = {},
-	Gender = "masculine",
-	NameTypes = {"person-male"}
+	Meanings = {}
 })
 
 DefineLanguageWord("Joseph", {
 	Language = "english",
 	Type = "noun",
 	Meanings = {},
-	Gender = "masculine",
 	NameTypes = {"person-male"}
 })
 
@@ -1664,7 +1659,6 @@ DefineLanguageWord("Kenneth", {
 	Language = "english",
 	Type = "noun",
 	Meanings = {},
-	Gender = "masculine",
 	NameTypes = {"person-male"}
 })
 
@@ -1990,6 +1984,12 @@ DefineLanguageWord("New", {
 		"separate", "prefix", "unit-class-smithy", -- seems sensible
 		"separate", "prefix", "unit-class-lumber-mill" -- seems sensible
 	}
+})
+
+DefineLanguageWord("Nicolas", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {}
 })
 
 DefineLanguageWord("Nine", {
