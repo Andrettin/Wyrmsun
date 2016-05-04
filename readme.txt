@@ -79,6 +79,9 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed a save game compatibility issue.
 - Fixed a save game loading issue.
 
+* Units
+- Kobold Footpads can now be hired at the Mercenary Camp.
+
 -----------------------------------------------------------------------
 - 2.1.6
 -----------------------------------------------------------------------
