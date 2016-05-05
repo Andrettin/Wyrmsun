@@ -26,6 +26,7 @@
 --
 
 local traits = {
+	{"upgrade-ambitious", _("Ambitious")},
 	{"upgrade-clumsy", _("Clumsy")},
 	{"upgrade-compassionate", _("Compassionate")}, -- no current effect
 	{"upgrade-cruel", _("Cruel")},
@@ -54,10 +55,6 @@ for i = 1,table.getn(traits) do
 	u = CUpgrade:New(traits[i][1])
 	u.Name = traits[i][2]
 	u.Icon = Icons["icon-level-up"]
-	u.Class = ""
-	u.Description = ""
-	u.Quote = ""
-	u.Background = ""
 	for j = 1,7 do
 		u.Costs[j - 1] = 0
 	end
@@ -65,6 +62,12 @@ for i = 1,table.getn(traits) do
 	u.Ability = false
 	DefineAllow(traits[i][1], "AAAAAAAAAAAAAAAA")
 end
+
+DefineModifier("upgrade-ambitious",
+	{"Intelligence", 1},
+	{"Mana", 5},
+	{"Charisma", -1}
+)
 
 DefineModifier("upgrade-clumsy",
 	{"Accuracy", -1},

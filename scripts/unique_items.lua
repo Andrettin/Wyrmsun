@@ -43,7 +43,7 @@ DefineUniqueItem("Brimir", { -- Source: Henry Adams Bellows (transl.), "The Poet
 	Prefix = "upgrade-item-prefix-penetrating",
 	Suffix = "upgrade-item-suffix-of-victory",
 	Background = "Brimir was described in Norse mythology as being the best of swords.",
-	Quote = "\"Of all the gods | is Odin the greatest, / And Sleipnir the best of steeds; / Bifrost of bridges, | Bragi of skalds, / Hobrok of hawks, | Garm of hounds, / and Brimir of swords.\" - Grimnismol (Grimnir)"
+	Quote = "\"Of all the gods is Odin the greatest, / And Sleipnir the best of steeds; / Bifrost of bridges, Bragi of skalds, / Hobrok of hawks, Garm of hounds, / and Brimir of swords.\" - Grimnismol (Grimnir)"
 } )
 
 DefineUniqueItem("Laevatein", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 124; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 245.
@@ -51,7 +51,7 @@ DefineUniqueItem("Laevatein", { -- Source: Kevin Crossley-Holland, "The Norse My
 	Prefix = "upgrade-item-prefix-wounding",
 	Suffix = "upgrade-item-suffix-of-slaughter",
 	Background = "In Norse mythology, Laevatein (\"the Wounding Wand\") was a sword forged by Loki with runes at the doors of Niflheim, and was placed under nine locks in Laegjarn's chest, with Sinmora guarding over it.",
-	Quote = "\"Laevatein is there | that Lopt with runes / Once made by the doors of death; / In Laegjarn's chest | by Sinmora lies it, / And nine locks fasten it firm.\" - Svipdagsmol (Fjolsvith)"
+	Quote = "\"Laevatein is there that Lopt with runes / Once made by the doors of death; / In Laegjarn's chest by Sinmora lies it, / And nine locks fasten it firm.\" - Svipdagsmol (Fjolsvith)"
 } )
 
 DefineUniqueItem("Gram", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 351, 365.
@@ -59,8 +59,8 @@ DefineUniqueItem("Gram", { -- Source: Henry Adams Bellows (transl.), "The Poetic
 	Prefix = "upgrade-item-prefix-wounding",
 	Suffix = "upgrade-item-suffix-of-victory",
 	Background = "In Norse mythology, Gram was the sword given by Odin to Sigmund. Being later broken into pieces, the sword was reforged by Regin for Sigurd.",
---	Quote = "\"My kin, methinks, | is unknown to thee, / And so am I myself; / Sigurd my name, | and Sigmund's son, / Who smote thee thus with the sword.\" - Fafnismol (Sigurd)"
-	Quote = "\"With thy sword between, | three nights thou sleepest / With her thou winnest | for Gunnar's wife.\" - Gripisspo (Gripir)"
+--	Quote = "\"My kin, methinks, is unknown to thee, / And so am I myself; / Sigurd my name, and Sigmund's son, / Who smote thee thus with the sword.\" - Fafnismol (Sigurd)"
+	Quote = "\"With thy sword between, three nights thou sleepest / With her thou winnest for Gunnar's wife.\" - Gripisspo (Gripir)"
 } )
 
 DefineUniqueItem("Hrotti", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 385.
@@ -103,7 +103,7 @@ DefineUniqueItem("Svalin", { -- Source: Kevin Crossley-Holland, "The Norse Myths
 	Prefix = "upgrade-item-prefix-impregnable",
 	Suffix = "upgrade-item-suffix-of-extinguishment",
 	Background = "In Norse mythology, Svalin (\"the Cooling\") was the shield which stood in front of the sun, protecting the mountains and the sea from burning in flames.",
-	Quote = "\"In front of the sun | does Svalin stand, / The shield for the shining god; / Mountains and sea | would be set in flames / If it fell from before the sun.\" - Grimnismol (Grimnir)"
+	Quote = "\"In front of the sun does Svalin stand, / The shield for the shining god; / Mountains and sea would be set in flames / If it fell from before the sun.\" - Grimnismol (Grimnir)"
 } )
 
 DefineUniqueItem("Brisingamen", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 177.
@@ -115,7 +115,7 @@ DefineUniqueItem("Brisingamen", { -- Source: Henry Adams Bellows (transl.), "The
 	Prefix = "upgrade-item-prefix-flaming",
 	Suffix = "upgrade-item-suffix-of-swiftness",
 	Background = "In Norse mythology, Brisingamen (\"The Necklace of the Brisings\") was a golden necklace crafted by four dwarven smiths for the goddess Freyja.",
-	Quote = "\"The dwelling great | of the dwarves was shaken, / And burst was the mighty | Brisings' necklace.\" - Dwarven Traditional Poetry"
+	Quote = "\"The dwelling great of the dwarves was shaken, / And burst was the mighty Brisings' necklace.\" - Dwarven Traditional Poetry"
 } )
 
 DefineUniqueItem("Andvaranaut", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 114, 360; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 21.
@@ -127,7 +127,7 @@ DefineUniqueItem("Andvaranaut", { -- Source: Henry Adams Bellows (transl.), "The
 	Prefix = "upgrade-item-prefix-vicious",
 	Suffix = "upgrade-item-suffix-of-betrayal",
 	Background = "In Norse mythology, Andvaranaut (\"Andvari's Booty\") was a gold ring owned by Andvari and forcibly taken from him by Loki. Upon the ring's theft, Andvari cursed whoever would come to own it. The ring had the power to make gold.",
-	Quote = "\"Now shall the gold | that I once had / Bring their death | to warriors twain, / And evil be | for heroes eight; / Joy of my wealth | shall no dwarf win.\" - Reginsmol (Andvari)"
+	Quote = "\"Now shall the gold that I once had / Bring their death to warriors twain, / And evil be for heroes eight; / Joy of my wealth shall no dwarf win.\" - Reginsmol (Andvari)"
 } )
 
 DefineUniqueItem("Draupnir", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 241; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 114.
@@ -136,7 +136,7 @@ DefineUniqueItem("Draupnir", { -- Source: Kevin Crossley-Holland, "The Norse Myt
 	Prefix = "upgrade-item-prefix-flaming",
 	Suffix = "upgrade-item-suffix-of-power",
 	Background = "In Norse mythology, Draupnir (\"Dropper\") was a gold arm-ring crafted by the dwarves Brokk and Eitri for the Aesir. Eight rings with the same weight in gold as Draupnir dropped from it every ninth night. Draupnir was burned with Odin's son Balder in his funeral pyre.",
-	Quote = "\"The ring I wish not, | though burned it was / Of old with Modsognir's son; / In my home | is no lack of gold / In the wealth my father wields.\" - Dwarven Traditional Poetry"
+	Quote = "\"The ring I wish not, though burned it was / Of old with Modsognir's son; / In my home is no lack of gold / In the wealth my father wields.\" - Dwarven Traditional Poetry"
 } )
 
 DefineUniqueItem("The Wedding Veil", { -- Source: Alena Ježková, "77 Prague Legends", 2006, p. 31.
@@ -179,7 +179,7 @@ DefineUniqueItem("Skidbladnir", { -- Source: Henry Adams Bellows (transl.), "The
 	Prefix = "upgrade-item-prefix-impregnable",
 	Suffix = "upgrade-item-suffix-of-swiftness",
 	Description = "Skidbladnir was a ship built by the sons of Ivaldi for Modsognir. Its magnificent sail provided the sleek ship with great speed.",
-	Quote = "\"In days of old | did Ivaldi's sons / Skidbladnir fashion fair, / The best of ships | for the mighty Modsognir, / The noble child of the earth.\" - Dwarven Traditional Poetry",
+	Quote = "\"In days of old did Ivaldi's sons / Skidbladnir fashion fair, / The best of ships for the mighty Modsognir, / The noble child of the earth.\" - Dwarven Traditional Poetry",
 	Background = "Skidbladnir appeared in Norse mythology as a ship crafted by the sons of Ivaldi for Norse god Frey. The vessel was said to always have fair wind, and could be folded up until it fit into a pocket. The ship's name means \"wooden-bladed\" in Old Norse."
 } )
 

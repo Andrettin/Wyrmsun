@@ -1069,6 +1069,29 @@ DefineCharacter("Arnold", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vo
 	Year = 1121 -- ordained Bishop of Greenland by the Archbishop of Lund (in Scania)
 })
 
+DefineCharacter("Sturla Thordarson", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 188.
+	Name = "Sturla",
+	ExtraName = "Thordarson",
+	Gender = "male",
+	Type = "unit-teuton-swordsman", -- should be priest; he was a Godar (a function which was originally both priest and judge, but eventually became more and more only the latter)
+	Civilization = "norse",
+	ProvinceOfOrigin = "Iceland" -- presumably, since his son was from there
+})
+
+DefineCharacter("Snorri Sturlson", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 12, 188, 192, 195-196, 198-199; Source: Snorri Sturlson, "The Prose Edda", 1916, p. XI.
+	Name = "Snorri",
+	ExtraName = "Sturlson",
+	Gender = "male",
+	Type = "unit-teuton-swordsman", -- should probably be priest, since his father was a Godar and that was a hereditary position; was a learned man in a number of old legends and mythologies
+	Civilization = "norse",
+	ProvinceOfOrigin = "Iceland",
+	Father = "Sturla Thordarson",
+	Trait = "upgrade-ambitious", -- described as greedy, selfish, ambitious, rapacious, bold, unprincipled and of intellectual powers far above that of his contemporaries
+	Year = 1178, -- born in 1178 at Hvam, in western Iceland
+	DeathYear = 1241, -- Snorri was murdered by his three sons-in-law, Gizurr Thórvaldsson, Kolbein and Arne, in Iceland in September 1241
+	ViolentDeath = true
+})
+
 DefineCharacter("Hakon", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 142.
 	Name = "Hakon", -- his son was King of Norway, so presumably he was too
 	Gender = "male",

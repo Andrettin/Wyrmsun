@@ -134,3 +134,13 @@ DefineCharacter("Bruide mac Beli", { -- Source: Frank Stenton, "Anglo-Saxon Engl
 	}
 })
 
+DefineCharacter("Dicuil", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 40.
+	Name = "Dicuil", -- Irish monk who became notable for his scholarship
+	Gender = "male",
+	Type = "unit-germanic-warrior", -- should be priest
+	Civilization = "celt", -- presumably
+	ProvinceOfOrigin = "Ireland",
+	Year = 825, -- wrote "De Mensura Orbis Terrae"
+	AuthoredWorks = {"upgrade-work-de-mensura-orbis-terrae"}
+})
+

@@ -1491,11 +1491,6 @@ if (GrandStrategyYear >= 807) then
 	GrandStrategyEvents.TheBookOfArmagh = nil
 end
 
-if (GrandStrategyYear >= 825) then
-	GrandStrategyEvents.DicuilMonk = nil
-	GrandStrategyEvents.DeMensuraOrbisTerrae = nil
-end
-
 if (GrandStrategyYear >= 834) then
 	GrandStrategyEvents.ChurchOfUtrechtGrantCharter = nil
 end
@@ -1715,15 +1710,6 @@ end
 
 if (GrandStrategyYear >= 1169) then
 	GrandStrategyEvents.KarlAbbotOfTheMonasteryOfThingIsle = nil
-end
-
-if (GrandStrategyYear >= 1208) then -- estimated date
-	GrandStrategyEvents.SnorriSturlsonSage = nil
-end
-
-if (GrandStrategyYear >= 1241) then
-	GrandStrategyEvents.Heimskringla = nil -- should be moved to actual date of composition/publication
-	GrandStrategyEvents.SnorrisMurder = nil -- Snorri murdered by his son-in-law, Gizurr Thórvaldssoon; Source: Snorri Sturlson, "The Prose Edda", 1916, p. XI.
 end
 
 if (GrandStrategyYear >= 1261) then

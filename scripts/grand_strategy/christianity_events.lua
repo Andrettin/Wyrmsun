@@ -249,7 +249,7 @@ local ChristianityEvents = {
 		Conditions = function(s)
 			if (
 				GetProvinceOwner("Kent") == EventFaction.Name
-				and ProvinceHasBuildingClass(WorldMapProvinces.Kent.Name, "temple")
+				and ProvinceHasBuildingClass("Kent", "temple")
 			) then
 				return true
 			else
@@ -568,59 +568,6 @@ local ChristianityEvents = {
 		end,
 		RequiredEvents = {
 			FerdomnachLearnedMonkOfArmagh = true
-		},
-		Options = {"~!OK"},
-		OptionEffects = {
-			function(s)
-				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
-			end
-		},
-		OptionTooltips = {"+1 Prestige"}
-	},
-	DicuilMonk = { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 40.
-		Name = "Dicuil, Monk",
-		Description = "Dicuil is an Irish monk who has become notable for his scholarship.",
-		Conditions = function(s)
-			if (
-				GetProvinceOwner("Ireland") == EventFaction.Name
-				and GetProvinceCivilization("Ireland") == "celt"
-			) then
-				EventProvince = WorldMapProvinces.Ireland
-				return true
-			else
-				return false
-			end
-		end,
-		MinYear = 825,
-		MaxYear = 825,
-		Options = {"~!OK"},
-		OptionEffects = {
-			function(s)
-				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
-			end
-		},
-		OptionTooltips = {"+1 Prestige"}
-	},
-	DeMensuraOrbisTerrae = { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 40.
-		Name = "De Mensura Orbis Terrae",
-		Description = "The monk Dicuil has written a cosmographical work, \"De Mensura Orbis Terrae\". In it, Dicuil laments that the islands to the north of Great Britain, which had for 100 years been locations with a strong hermit presence, have now been emptied due to attacks from Norsemen.",
-		Conditions = function(s)
-			if (
-				GetProvinceOwner("Ireland") == EventFaction.Name
-				and GetProvinceCivilization("Ireland") == "celt"
-				and ( -- check if any province in Norway has Norse culture (should check only for the provinces from which those Norsemen actually attacked)
-					GetProvinceCivilization("Hordaland") == "norse"
-				)
-				and SyncRand(100) < 10
-			) then
-				return true
-			else
-				return false
-			end
-		end,
---		MaxYear = , -- when did Dicuil die?
-		RequiredEvents = {
-			DicuilMonk = true
 		},
 		Options = {"~!OK"},
 		OptionEffects = {

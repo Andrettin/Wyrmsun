@@ -471,10 +471,6 @@ for i = 1,table.getn(misc_individual_upgrades) do
 	u = CUpgrade:New(misc_individual_upgrades[i][1])
 	u.Name = misc_individual_upgrades[i][2]
 	u.Icon = Icons["icon-level-up"]
-	u.Class = ""
-	u.Description = ""
-	u.Quote = ""
-	u.Background = ""
 	for j = 1,7 do
 		u.Costs[j - 1] = 0
 	end

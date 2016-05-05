@@ -25,19 +25,11 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineUpgrade("upgrade-work-heimskringla", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 154-155.
-	Name = _("Heimskringla"),
+DefineUpgrade("upgrade-work-de-mensura-orbis-terrae", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 40.
+	Name = _("De Mensura Orbis Terrae"),
 	Work = "scroll",
-	Civilization = "norse",
-	Description = "The Heimskringla, or Chronicle of the Kings of Norway, detailed the legendary origins of the Norwegian monarchy, going on to write the stories of a long series of kings of Norway.",
---	Year = ? -- in which year was it published?
-})
-
-DefineUpgrade("upgrade-work-historiae-vinlandiae-antiquae", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 154-155.
-	Name = _("Historiae Vinlandiae Antiquae"),
-	Work = "scroll",
-	Civilization = "norse",
-	Description = "This work tells the history of the Norse settlement in Vinland, in the New World.",
-	Year = 1707
-	-- should probably have some other requirements, like a Norse civilization having been in possession of Greenland at some point
+	Civilization = "celt",
+	Description = "In this cosmographical work, the author laments that the islands to the north of Great Britain, which had for 100 years been locations with a strong hermit presence, have now been emptied due to attacks from Norsemen..",
+	Year = 825
+	-- should probably have some other requirements, like any Norwegian province being Norse-cultured (or even better, the one from which those attackers actually were)
 })

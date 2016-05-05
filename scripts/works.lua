@@ -25,6 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+Load("scripts/civilizations/celt/works.lua")
 Load("scripts/civilizations/dwarf/works.lua")
 Load("scripts/civilizations/greek/works.lua")
 Load("scripts/civilizations/latin/works.lua")

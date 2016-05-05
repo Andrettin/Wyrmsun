@@ -327,7 +327,7 @@ DefineUnitType("unit-goblin-glider", { Name = _("Glider"),
 	ButtonKey = "g",
 	ButtonHint = _("Build ~!Glider"),
 	ButtonPos = 7,
-	Traits = {"upgrade-dim", "upgrade-keen", "upgrade-limping", "upgrade-near-sighted", "upgrade-old", "upgrade-quick", "upgrade-resilient", "upgrade-slow", "upgrade-pious", "upgrade-wise"}, -- removed traits which affect damage, as this unit can't attack
+	Traits = {"upgrade-ambitious", "upgrade-dim", "upgrade-genius", "upgrade-intelligent", "upgrade-keen", "upgrade-limping", "upgrade-near-sighted", "upgrade-old", "upgrade-quick", "upgrade-resilient", "upgrade-slow", "upgrade-pious", "upgrade-wise"}, -- removed traits which affect damage, as this unit can't attack
 	Sounds = {
 		"selected", "basic-goblin-voices-selected-group",
 		"acknowledge", "glider-flying",
