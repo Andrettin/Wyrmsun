@@ -524,13 +524,12 @@ DefineCharacter("Fridleifr Skeldung", { -- Source: Snorri Sturlson, "The Prose E
 	}
 })
 
-DefineCharacter("Sæmingr", { -- Source: Snorri Sturlson, "Heimskringla", 1844; Source: Snorri Sturlson, "The Prose Edda", 1916, p. 9.
-	Name = "Sæmingr", -- Vóden's son set to rule over Norway
+DefineCharacter("Sæmingr Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, p. 212; Source: Snorri Sturlson, "The Prose Edda", 1916, p. 9.
+	Name = "Sæmingr", -- Yngve (or Vóden's) son set to rule over Norway
+	FamilyName = "Yngling",
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "germanic",
 	ProvinceOfOrigin = "Sweden",
-	Year = -2800 + (30 * 1),
-	Father = "Vóden",
-	Mother = "Frígídá" -- presumably, since she was Vóden's wife
+	Father = "Yngve"
 })
