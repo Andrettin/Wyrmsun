@@ -450,6 +450,14 @@ DefineLanguageWord("Grēdags", { -- Source: Winfred P. Lehmann, "A Grammar of Pr
 	DerivesFrom = {"proto-germanic", "adjective", "Gred"}
 })
 
+DefineLanguageWord("Gudja", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.
+	Language = "gothic",
+	Type = "noun",
+	Meanings = {"Priest"}, -- source gives the German "Priester" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Gudjan"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Gulþ", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 73.
 	Language = "gothic",
 	Type = "noun",

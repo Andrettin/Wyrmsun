@@ -899,6 +899,14 @@ DefineLanguageWord("Glöckner", {
 	}
 })
 
+DefineLanguageWord("Goethe", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {},
+	DerivesFrom = {"middle-high-german", "noun", "Göte"}, -- source is not clear if Goethe comes from Göte or Gote in Middle High German; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.
+	NameTypes = {"family"}
+})
+
 DefineLanguageWord("Gold", {
 	Language = "high-german",
 	Type = "noun",

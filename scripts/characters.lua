@@ -54,6 +54,7 @@ function DefineCharacter(character, data)
 	OldDefineCharacter(character, data)
 end
 
+Load("scripts/civilizations/finnish/characters.lua")
 Load("scripts/civilizations/germanic/characters.lua")
 Load("scripts/civilizations/goth/characters.lua")
 Load("scripts/civilizations/greek/characters.lua")

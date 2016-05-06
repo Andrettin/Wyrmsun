@@ -178,6 +178,13 @@ DefineLanguageWord("Dag", { -- Source: August Fick and Alf Torp, "Wortschatz der
 	DerivesFrom = {"proto-germanic", "noun", "Dag"}
 })
 
+DefineLanguageWord("Drohtîn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 113.
+	Language = "old-saxon",
+	Type = "noun",
+	Meanings = {"Lord (God)"}, -- source gives the German "Herr (fast immer von Gott)" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Druhtîna"}
+})
+
 DefineLanguageWord("Eiiere", { -- this is the genitive plural; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
 	Language = "old-saxon",
 	Type = "noun",

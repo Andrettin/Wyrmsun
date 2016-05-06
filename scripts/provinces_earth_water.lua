@@ -916,3 +916,5 @@ DefineProvince("White Sea", {
 	Water = true,
 	Tiles = { {145, 17}, {146, 17}, {147, 17} }
 })
+
+-- The Straits of Gibraltar were known as "Niorvasund" to the Norse; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 216.

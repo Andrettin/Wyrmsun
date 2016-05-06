@@ -97,6 +97,14 @@ DefineLanguageWord("Darm", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	DerivesFrom = {"old-saxon", "noun", "Tharm"}
 })
 
+DefineLanguageWord("Gode", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.
+	Language = "middle-low-german",
+	Type = "noun",
+	Meanings = {"Godfather"}, -- source (apparently, but not at all clear that this is the case) gives the German "Taufzeuge, Pate" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Gudjan"},
+	Gender = "masculine" -- apparently, but not at all clear that this is the case
+})
+
 DefineLanguageWord("Grâwe", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 79.
 	Language = "middle-low-german",
 	Type = "adjective",

@@ -345,7 +345,7 @@ DefineProvince("Argolis", {
 DefineProvince("Astrakhan", {
 	World = "Earth",
 	CulturalNames = {
-		"germanic", "Ansulanda", "name-elements", { -- rendering of "Asaland" in Proto-Germanic, as in the Ynglinga saga's story Asaland is the region in "Asia" in which Odin's people (here understood as the Indo-Europeans who went on to settle Scandinavia and become speakers of Proto-Germanic) used to live until they migrated to Scandinavia
+		"germanic", "Ansulanda", "name-elements", { -- rendering of "Asaland" in Proto-Germanic, as in the Ynglinga saga's story Asaland is the region in "Asia" in which Odin's people (here understood as the Indo-Europeans who went on to settle Scandinavia and become speakers of Proto-Germanic) used to live until they migrated to Scandinavia; alternatively called "Asaheim"; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 217.
 			"compound", "prefix", "proto-germanic", "noun", "singular", "Ansu",
 			"compound", "suffix", "proto-germanic", "noun", "singular", "Landa"
 		}
@@ -1368,7 +1368,7 @@ DefineProvince("Don", {
 		"greek", "Tanais", "settlement-derived-name"
 	},
 	FactionCulturalNames = {
-		"celt", "Vana Tribe", "Vanaland"
+		"celt", "Vana Tribe", "Vanaland" -- alternatively called "Vanaheim"; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 217.
 	},
 	Tiles = {
 --		{147, 30}, {148, 29}, {148, 30}, {149, 29}, {149, 30}, {150, 28}, {150, 29}, {150, 30}, -- old map
@@ -4326,6 +4326,9 @@ DefineProvince("Sweden", {
 		-2800, "germanic",
 		-264, "norse"
 	},
+	HistoricalSettlementBuildings = {
+--		-2800, "unit-teuton-temple", true -- in the Ynglinga saga, Odin erects a large temple after he arrived in Sigtun (here understood to correspond to the time when Indo-Europeans reached Scandinavia); Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 220.
+	},
 	HistoricalModifiers = {
 		1477, "upgrade-university", true -- University founded in Uppsala in 1477. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.
 	},
@@ -5178,3 +5181,5 @@ DefineProvince("Zealand", {
 	},
 	Regions = {"Europe", "Scandinavia", "West and Central Europe"}
 })
+
+-- The ancient Sarmatia was known as "Swithiod the Great" or "Swithiod the Cold" to the Norse; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 216.

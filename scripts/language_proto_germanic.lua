@@ -351,6 +351,13 @@ DefineLanguageWord("Dag", { -- Lehmann gives "dag-"; Fick gives "daga" and the a
 	Gender = "masculine" -- as given by Fick
 })
 
+DefineLanguageWord("Druhtîna", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 113.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Retinue Leader", "Prince"}, -- source gives the German "Gefolgsherr, Fürst" as the meaning
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Dur", { -- source gives "dur-"; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.2, 2.7.2.
 	Language = "proto-germanic",
 	Type = "noun",
@@ -554,6 +561,13 @@ DefineLanguageWord("Guda", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Meanings = {"God"}, -- source gives the German "Gott" as the meaning
 	DerivesFrom = {"proto-indo-european", "verb", "Ĝhutó"},
 	Gender = "masculine" -- can also be neuter
+})
+
+DefineLanguageWord("Gudjan", { -- source also gives the alternative form "gudan"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Priest"}, -- source gives the German "Priester" as the meaning
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Gulþa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 73.

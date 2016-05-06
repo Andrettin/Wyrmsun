@@ -416,6 +416,14 @@ DefineLanguageWord("Djūpr", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	DerivesFrom = {"proto-germanic", "adjective", "Déwpaz"}
 })
 
+DefineLanguageWord("Drôttinn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 113.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Prince", "Lord (God)"}, -- source gives the German "Fürst, Herr (Gott)" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Druhtîna"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Dyrr", { -- this is the nominative plural; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-norse",
 	Type = "noun",
@@ -507,6 +515,12 @@ DefineLanguageWord("Flōđ", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	DerivesFrom = {"northwest-germanic", "noun", "Flodu"}
 })
 
+DefineLanguageWord("Fogl", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.2.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Bird"}
+})
+
 DefineLanguageWord("Fōtr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-norse",
 	Type = "noun",
@@ -533,12 +547,6 @@ DefineLanguageWord("Fugl", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Language = "old-norse",
 	Type = "noun",
 	Meanings = {}
-})
-
-DefineLanguageWord("Fogl", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.2.
-	Language = "old-norse",
-	Type = "noun",
-	Meanings = {"Bird"}
 })
 
 DefineLanguageWord("Fūll", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
@@ -583,6 +591,14 @@ DefineLanguageWord("Godahus", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Type = "noun",
 	Meanings = {"Temple"}
 	-- this is a compound which has a first element related to "guð"
+})
+
+DefineLanguageWord("Gođi", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Sacerdotal and Judicial Administrator of a District"}, -- source gives the German "priesterlicher und richterlicher Vorstand eines Bezirks auf Island" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Gudjan"},
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Grâr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 79.
@@ -647,6 +663,14 @@ DefineLanguageWord("Gume", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Type = "noun",
 	Meanings = {"Man"},
 	DerivesFrom = {"proto-germanic", "noun", "Gumn"}
+})
+
+DefineLanguageWord("Gydja", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Priestess", "Goddess"}, -- source gives the German "Priesterin, Göttin" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Gudjan"},
+	Gender = "feminine"
 })
 
 DefineLanguageWord("Haddr", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 3, 8.

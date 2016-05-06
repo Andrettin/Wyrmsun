@@ -25,6 +25,294 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineCharacter("Fiölner Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 225-227.
+	Name = "Fiölner",
+	FamilyName = "Yngling",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Sweden",
+	Trait = "upgrade-mighty", -- described as powerful
+	-- in the Ynglinga saga, Fiölner was a son of Yngve, but it isn't chronologically feasible for him to be a son of Yngve given how many generations there are between him and Halfdan the Black
+	Quote = _("\"And when brave Frode came, he found / Swithiod's dark chief, Fiolner, drowned.\" - Thiodolf of Huine"),
+	HistoricalTitles = {
+		"head-of-state", 0, 0, "norse", "Swede Tribe"
+	}
+})
+
+DefineCharacter("Fridfrode Skjoldung", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 226-227.
+	Name = "Fridfrode",
+	NameElements = {
+		"compound", "prefix", "old-norse", "noun", "Friđr", -- presumably
+--		"compound", "suffix", -- ?
+	},
+	FamilyName = "Skjoldung", -- presumably
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Zealand", -- ruled in Leidre
+	DateReferenceCharacter = "Fiölner Yngling", -- he was a friend of Fiölner's
+	-- described as brave
+	HistoricalTitles = {
+		"head-of-state", 0, 0, "norse", "Dane Tribe"
+	}
+})
+
+DefineCharacter("Swegder Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 227-228.
+	Name = "Swegder",
+	FamilyName = "Yngling",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Sweden",
+	Father = "Fiölner Yngling",
+	Quote = _("\"The dauntless hero rushing on, / Passed through the yawning mouth of stone: / It yawned - it shut - the hero fell\" - Thiodolf of Huine"),
+	HistoricalTitles = {
+		"head-of-state", 0, 0, "norse", "Swede Tribe"
+	}
+})
+
+DefineCharacter("Vana", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 227.
+	Name = "Vana",
+	Gender = "female",
+	Type = "unit-germanic-archer",
+	Civilization = "celt", -- from Vanaland/Vanaheim
+	ProvinceOfOrigin = "Don"
+	-- wife of Swegder's
+})
+
+DefineCharacter("Vanland Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 227-228.
+	Name = "Vanland",
+	NameElements = {
+--		"compound", "prefix", -- ?
+		"compound", "suffix", "old-norse", "noun", "Land" -- presumably
+	},
+	FamilyName = "Yngling",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Sweden",
+	Father = "Swegder Yngling",
+	Mother = "Vana",
+	Quote = _("\"And Vanland, in a fatal hour, / Was dragg'd by Grimhild's daughter's power\" - Thiodolf of Huine"),
+	HistoricalTitles = {
+		"head-of-state", 0, 0, "norse", "Swede Tribe"
+	}
+})
+
+DefineCharacter("Aud the Rich", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 229.
+	Name = "Aud",
+	ExtraName = "the Rich",
+	Gender = "female", -- presumably, since another character named "Aud" was a female
+	Type = "unit-teuton-archer",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Sweden" -- presumably
+})
+
+DefineCharacter("Visbur Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 228-229.
+	Name = "Visbur",
+	FamilyName = "Yngling",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Finland",
+	Father = "Vanland Yngling",
+	Mother = "Drisa",
+	Quote = _("\"Have the fire-dogs' fierce tongues yelling / Lapt Visbur's blood on his own hearth?\" - Thiodolf of Huine"),
+	HistoricalTitles = {
+		"head-of-state", 0, 0, "norse", "Swede Tribe"
+	}
+	-- married the daughter of Aud the Rich
+})
+
+DefineCharacter("Gisle Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 229.
+	Name = "Gisle",
+	FamilyName = "Yngling",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Sweden",
+	Father = "Visbur Yngling"
+	-- his mother was the daughter of Aud the Rich
+})
+
+DefineCharacter("Ond Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 229.
+	Name = "Ond",
+	FamilyName = "Yngling",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Sweden",
+	Father = "Visbur Yngling"
+	-- his mother was the daughter of Aud the Rich
+})
+
+DefineCharacter("Domald Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 229-230.
+	Name = "Domald",
+	FamilyName = "Yngling",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Sweden",
+	Father = "Visbur Yngling",
+	Quote = _("\"But Domald dies by bloody arms, / Raised not by foes in war's alarms, / Raised by his Swedish liegeman's hand, / To bring good seasons to the land.\" - Thiodolf of Huine"),
+	HistoricalTitles = {
+		"head-of-state", 0, 0, "norse", "Swede Tribe"
+	}
+})
+
+DefineCharacter("Domar Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 230.
+	Name = "Domar",
+	FamilyName = "Yngling",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Sweden",
+	Father = "Domald Yngling",
+	Quote = _("\"I have asked wise men to tell / Where Domar rests, and they knew well. / Domar, on Fyrie's wide-spread ground, / Was burned, and laid on Yngve's mound.\" - Thiodolf of Huine"),
+	HistoricalTitles = {
+		"head-of-state", 0, 0, "norse", "Swede Tribe"
+	}
+})
+
+DefineCharacter("Rig Skjoldung", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 231.
+	Name = "Rig",
+	FamilyName = "Skjoldung", -- correct?
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Zealand", -- apparently from Denmark
+	HistoricalTitles = {
+		"head-of-state", 0, 0, "norse", "Dane Tribe" -- apparently
+	}
+})
+
+DefineCharacter("Daup Skjoldung", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 231.
+	Name = "Daup",
+	FamilyName = "Skjoldung", -- correct?
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Zealand", -- apparently from Denmark
+	Father = "Rig Skjoldung",
+	HistoricalTitles = {
+		"head-of-state", 0, 0, "norse", "Dane Tribe" -- apparently
+	}
+})
+
+DefineCharacter("Dan Mikillati Skjoldung", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 231.
+	Name = "Dan",
+	ExtraName = "Mikillati",
+	FamilyName = "Skjoldung", -- correct?
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Zealand",
+	Father = "Daup Skjoldung", -- presumably, since Dan Mikillati was Drott's brother, and she was a daughter of Daup
+	HistoricalTitles = {
+		"head-of-state", 0, 0, "norse", "Dane Tribe"
+	}
+})
+
+DefineCharacter("Drott Skjoldung", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 231.
+	Name = "Drott",
+	FamilyName = "Skjoldung", -- correct?
+	Gender = "female",
+	Type = "unit-teuton-archer",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Zealand", -- apparently from Denmark
+	Father = "Daup Skjoldung", 
+})
+
+DefineCharacter("Dyggve the Brave Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 230-231.
+	Name = "Dyggve",
+	ExtraName = "the Brave",
+	FamilyName = "Yngling",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Sweden",
+	Father = "Domald Yngling",
+	Mother = "Drott Skjoldung",
+	Quote = _("\"For Loke's daughter in her house / Of Yngve's race would have a spouse; / Therefore the fell-one snatched away / Brave Dyggve from the light of day.\" - Thiodolf of Huine"),
+	Trait = "upgrade-mighty", -- described as brave and mighty
+	HistoricalTitles = {
+		"head-of-state", 0, 0, "norse", "Swede Tribe"
+	}
+})
+
+DefineCharacter("Dag the Wise Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 231-233.
+	Name = "Dag",
+	NameElements = {"word", "old-norse", "noun", "Dagr"}, -- presumably
+	ExtraName = "the Wise",
+	FamilyName = "Yngling",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Sweden",
+	Father = "Dyggve the Brave Yngling",
+	Quote = _("\"Varva was ravaged, and the strife / Was ended when the monarch's life / Was ended too - the great Dag fell / By the hay-fork of a base thrall!\" - Thiodolf of Huine"),
+	Trait = "upgrade-wise", -- described as wise, brave and mighty
+	HistoricalTitles = {
+		"head-of-state", 0, 0, "norse", "Swede Tribe"
+	}
+})
+
+DefineCharacter("Agne Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 233-234.
+	Name = "Agne",
+	FamilyName = "Yngling",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Sweden",
+	Father = "Dag the Wise Yngling",
+	Quote = _("\"How do ye like her, Agne's men / Think ye that any chief again / Will court the fate your chief befell, / To ride on wooden horse to hell?\" - Thiodolf of Huine"),
+	Trait = "upgrade-mighty", -- described as powerful, celebrated and expert
+	HistoricalTitles = {
+		"head-of-state", 0, 0, "norse", "Swede Tribe"
+	}
+	-- Skialf was married to Agne after he invaded Finland, killed her father and took her and her brother to Sweden
+})
+
+DefineCharacter("Skialf", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 233-234.
+	Name = "Skialf", -- put her here rather than in the Finnish character file because that one is loaded before the Norse one, and she uses Agne Yngling as her date reference character
+	Gender = "female",
+	Type = "unit-teuton-archer",
+	Civilization = "finnish", -- presumably
+	ProvinceOfOrigin = "Finland",
+	Father = "Froste",
+	DateReferenceCharacter = "Agne Yngling", -- Skialf was married to Agne after he invaded Finland, killed her father and took her and her brother to Sweden
+	Quote = _("\"How do ye like the high-souled maid, / Who, with the grim Fate-goddess' aid, / Avenged her sire? Made Swithiod's king / Through air in golden halter swing?\" - Thiodolf of Huine")
+})
+
+DefineCharacter("Alric Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 234.
+	Name = "Alric",
+	FamilyName = "Yngling",
+	Gender = "male",
+	Type = "unit-teuton-ritter", -- horseriding described as being customary for him
+	Civilization = "norse",
+	ProvinceOfOrigin = "Sweden",
+	Father = "Agne Yngling",
+	Quote = _("\"Alric fell, by Eric slain, / Eric's life-blood dyed the plain. / Brother fell by brother's hand\" - Thiodolf of Huine"),
+	Trait = "upgrade-mighty", -- described as powerful and expert at all feats of arms
+	HistoricalTitles = {
+		"head-of-state", 0, 0, "norse", "Swede Tribe" -- Swedish king together with his brother Eric, but it was Alric's sons who went on to rule after their death
+	}
+})
+
+DefineCharacter("Eric Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 234.
+	Name = "Eric",
+	FamilyName = "Yngling",
+	Gender = "male",
+	Type = "unit-teuton-ritter", -- horseriding described as being customary for him
+	Civilization = "norse",
+	ProvinceOfOrigin = "Sweden",
+	Father = "Agne Yngling",
+	Quote = _("\"Alric fell, by Eric slain, / Eric's life-blood dyed the plain. / Brother fell by brother's hand\" - Thiodolf of Huine"),
+	Trait = "upgrade-mighty", -- described as powerful and expert at all feats of arms
+	-- Swedish king together with his brother Alric, but it was Alric's sons who went on to rule after their death
+})
+
 DefineCharacter("Eymund", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 222.
 	Name = "Eymund", -- king of Holmgarth (i.e. Russia); described as "the strongest of men"
 	NameElements = {
@@ -35,9 +323,7 @@ DefineCharacter("Eymund", { -- Source: Henry Adams Bellows (transl.), "The Poeti
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse", -- accurate?
 	Trait = "upgrade-strong",
-	ProvinceOfOrigin = "Russia",
---	Year = ?,
---	DeathYear = ?
+	ProvinceOfOrigin = "Russia"
 })
 
 DefineCharacter("Halfdan the Old Skjoldung", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 221-223.
@@ -53,8 +339,6 @@ DefineCharacter("Halfdan the Old Skjoldung", { -- Source: Henry Adams Bellows (t
 	Civilization = "norse",
 	Faction = "Denmark",
 	ProvinceOfOrigin = "Zealand", -- since he is a Danish king
---	Year = ?,
---	DeathYear = ?,
 	HistoricalTitles = {
 		"head-of-state", 0, 0, "norse", "Denmark"
 	}
@@ -70,8 +354,6 @@ DefineCharacter("Almveig", { -- Source: Henry Adams Bellows (transl.), "The Poet
 	Type = "unit-teuton-archer",
 	Civilization = "norse", -- accurate?
 	ProvinceOfOrigin = "Russia", -- since her father was king there
---	Year = ?,
---	DeathYear = ?,
 	Father = "Eymund"
 })
 
@@ -82,8 +364,6 @@ DefineCharacter("Authi", { -- Source: Henry Adams Bellows (transl.), "The Poetic
 	Civilization = "norse",
 	Faction = "Denmark",
 	ProvinceOfOrigin = "Zealand", -- since his father was king of Denmark
---	Year = ?,
---	DeathYear = ?,
 	Father = "Halfdan the Old Skjoldung",
 	Mother = "Almveig" -- presumably, since she was married to Halfdan the Old
 })
@@ -98,8 +378,6 @@ DefineCharacter("Ali", { -- Source: Henry Adams Bellows (transl.), "The Poetic E
 	Civilization = "norse",
 	Faction = "Denmark",
 	ProvinceOfOrigin = "Zealand", -- since his father was king of Denmark
---	Year = ?,
---	DeathYear = ?,
 	Father = "Halfdan the Old Skjoldung",
 	Mother = "Almveig" -- presumably, since she was married to Halfdan the Old
 })
@@ -113,25 +391,23 @@ DefineCharacter("Sigtrygg", { -- Source: Henry Adams Bellows (transl.), "The Poe
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
-	ProvinceOfOrigin = "Zealand", -- possible, since Halfdan the Old was the king of Denmark
---	Year = ?,
---	DeathYear = ?
+	ProvinceOfOrigin = "Zealand" -- possible, since Halfdan the Old was the king of Denmark
 })
 
-DefineCharacter("Dag", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 223.
-	Name = "Dag", -- ancestor of the Döglings; married to Thora
-	NameElements = {
-		"word", "old-norse", "noun", "Dagr" -- presumably
-	},
+DefineCharacter("Dag the Great", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 223; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 235.
+	Name = "Dag", -- ancestor of the Daglings; married to Thora
+	NameElements = {"word", "old-norse", "noun", "Dagr"}, -- presumably
+	ExtraName = "the Great",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
 	Faction = "Denmark",
 	ProvinceOfOrigin = "Zealand", -- since his father was king of Denmark
---	Year = ?,
---	DeathYear = ?,
 	Father = "Halfdan the Old Skjoldung",
-	Mother = "Almveig" -- presumably, since she was married to Halfdan the Old
+	Mother = "Almveig", -- presumably, since she was married to Halfdan the Old
+	HistoricalTitles = {
+		"head-of-state", 0, 0, "norse", "Dane Tribe" -- said to be a king in the Ynglinga Saga, and his ancestor was king of Denmark
+	}
 })
 
 DefineCharacter("Thora", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 223.
@@ -141,111 +417,153 @@ DefineCharacter("Thora", { -- Source: Henry Adams Bellows (transl.), "The Poetic
 	Civilization = "norse",
 	Faction = "Denmark",
 	ProvinceOfOrigin = "Zealand", -- since her husband's father was king of Denmark
---	Year = ?,
---	DeathYear = ?
 })
 
-DefineCharacter("Frathmar Dögling", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 223.
+DefineCharacter("Frathmar Dagling", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 223.
 	Name = "Frathmar",
-	FamilyName = "Dögling",
+	FamilyName = "Dagling",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
 	Faction = "Denmark",
 	ProvinceOfOrigin = "Zealand", -- since his ancestor was king of Denmark
---	Year = ?,
---	DeathYear = ?,
-	Father = "Dag",
+	Father = "Dag the Great",
 	Mother = "Thora"
 })
 
-DefineCharacter("Gyrth Dögling", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 223.
+DefineCharacter("Gyrth Dagling", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 223.
 	Name = "Gyrth",
-	FamilyName = "Dögling",
+	FamilyName = "Dagling",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
 	Faction = "Denmark",
 	ProvinceOfOrigin = "Zealand", -- since his ancestor was king of Denmark
---	Year = ?,
---	DeathYear = ?,
-	Father = "Dag",
+	Father = "Dag the Great",
 	Mother = "Thora"
 })
 
-DefineCharacter("Frekis Dögling", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 223.
+DefineCharacter("Frekis Dagling", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 223.
 	Name = "Frekis",
-	FamilyName = "Dögling",
+	FamilyName = "Dagling",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
 	Faction = "Denmark",
 	ProvinceOfOrigin = "Zealand", -- since his ancestor was king of Denmark
---	Year = ?,
---	DeathYear = ?,
-	Father = "Dag",
+	Father = "Dag the Great",
 	Mother = "Thora"
 })
 
-DefineCharacter("Frekis II Dögling", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 223.
+DefineCharacter("Frekis II Dagling", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 223.
 	Name = "Frekis",
 	ExtraName = "II", -- to differentiate him from his brother
-	FamilyName = "Dögling",
+	FamilyName = "Dagling",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
 	Faction = "Denmark",
 	ProvinceOfOrigin = "Zealand", -- since his ancestor was king of Denmark
---	Year = ?,
---	DeathYear = ?,
-	Father = "Dag",
+	Father = "Dag the Great",
 	Mother = "Thora"
 })
 
-DefineCharacter("Am Dögling", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 223.
+DefineCharacter("Am Dagling", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 223.
 	Name = "Am",
-	FamilyName = "Dögling",
+	FamilyName = "Dagling",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
 	Faction = "Denmark",
 	ProvinceOfOrigin = "Zealand", -- since his ancestor was king of Denmark
---	Year = ?,
---	DeathYear = ?,
-	Father = "Dag",
+	Father = "Dag the Great",
 	Mother = "Thora"
 })
 
-DefineCharacter("Jofurmar Dögling", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 223.
+DefineCharacter("Jofurmar Dagling", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 223.
 	Name = "Jofurmar",
-	FamilyName = "Dögling",
+	FamilyName = "Dagling",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
 	Faction = "Denmark",
 	ProvinceOfOrigin = "Zealand", -- since his ancestor was king of Denmark
---	Year = ?,
---	DeathYear = ?,
-	Father = "Dag",
+	Father = "Dag the Great",
 	Mother = "Thora"
 })
 
-DefineCharacter("Alf the Old Dögling", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 223.
+DefineCharacter("Alf the Old Dagling", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 223.
 	Name = "Alf", -- apparently isn't the same Alf the Old who is father of Instein, since they have different fathers themselves
 	NameElements = {
 		"word", "old-norse", "noun", "Alfr" -- presumably
 	},
 	ExtraName = "the Old",
-	FamilyName = "Dögling",
+	FamilyName = "Dagling",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
 	Faction = "Denmark",
 	ProvinceOfOrigin = "Zealand", -- since his ancestor was king of Denmark
---	Year = ?,
---	DeathYear = ?,
-	Father = "Dag",
+	Father = "Dag the Great",
 	Mother = "Thora"
+})
+
+DefineCharacter("Dagrid Dagling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 235.
+	Name = "Dagrid",
+	NameElements = {
+		"compound", "prefix", "old-norse", "noun", "Dagr", -- presumably
+--		"compound", "suffix", -- ?
+	},
+	FamilyName = "Dagling",
+	Gender = "female",
+	Type = "unit-teuton-archer",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Zealand", -- presumably, since her father's father was a Danish king
+	Father = "Dag the Great",
+	Mother = "Thora" -- presumably, since Dag was her father and Thora was the mother of his other children
+})
+
+DefineCharacter("Yngve Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 235-236.
+	Name = "Yngve",
+	FamilyName = "Yngling",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Sweden",
+	Father = "Alric Yngling",
+	Quote = _("\"How wretched Alf with bloody knife / Gored Yngve's heart, and Yngve's blade / Alf on the bloody threshold laid.\" - Thiodolf of Huine"),
+	Trait = "upgrade-strong" -- described as a great warrior, handsome expert in all exercises, strong and very sharp in battle, generous and full or mirth
+	-- was king of Sweden together with his brother Alf, but it was Alf's son succeeded them
+})
+
+DefineCharacter("Alf Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 235-236.
+	Name = "Alf",
+	NameElements = {"word", "old-norse", "noun", "Alfr"}, -- presumably
+	FamilyName = "Yngling",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Sweden",
+	Father = "Alric Yngling",
+	Mother = "Dagrid Dagling",
+	Quote = _("\"How wretched Alf with bloody knife / Gored Yngve's heart, and Yngve's blade / Alf on the bloody threshold laid.\" - Thiodolf of Huine"),
+	Trait = "upgrade-harsh", -- described as silent, harsh, unfriendly and wretched
+	HistoricalTitles = {
+		"head-of-state", 0, 0, "norse", "Swede Tribe" -- was king of Sweden together with his brother Yngve, and Alf's son succeeded them
+	}
+	-- married Bera
+})
+
+DefineCharacter("Bera", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 235.
+	Name = "Bera",
+	NameElements = {"word", "old-norse", "noun", "Bera"}, -- presumably
+	Gender = "female",
+	Type = "unit-teuton-archer",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Sweden", -- presumably, since her husband is from there
+	Quote = _("\"A deed of dreadful note I sing, / How by false Bera, wicked queen, / The murderous brother-hands were seen / Each raised against a brother's life\" - Thiodolf of Huine"),
+	-- married to Alf Yngling
+	-- described as agreeable, very brisk and gay, but also false and wicked
 })
 
 DefineCharacter("Svan the Red", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 222.

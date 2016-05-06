@@ -122,124 +122,45 @@ local NorseEvents = {
 			end
 		}
 	},
-	FjolneChieftainOfTheSwedes = { -- Source: Snorri Sturlson, "Heimskringla", 1844.
-		Name = "Fjolne, Chieftain of the Swedes",
-		Description = "With the death of his father, Fjolne has become our new chieftain. Besides being a powerful warrior, Fjolne is also well-capable of maintaining the peace in his realm which his father had established.",
-		Conditions = function(s)
-			if (
-				(EventFaction.Name == "Swede Tribe" or EventFaction.Name == "Sweden")
-			) then
-				return true
-			else
-				return false
-			end
-		end,
-		MinYear = -27, -- according to the Grottasongr, King Fjolnir of the Swedes lived around the same time as Augustus came to reign, establishing the Pax Romana
-		MaxYear = -27 + 30, -- the year of his death is unknown, so +30 after the start
-		RequiredEventsOr = {
-			YngveChieftainOfTheSwedes = false,
-			YngvesSickness = true
-		},
-		Options = {"~!OK"},
-		OptionEffects = {
-			function(s)
-				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
-			end
-		},
-		OptionTooltips = {"+1 Prestige"}
-	},
-	FredfrodeChieftainOfTheDanes = { -- Source: Snorri Sturlson, "Heimskringla", 1844.
-		Name = "Fredfrode, Chieftain of the Danes",
-		Description = "Fredfrode has become our new ruler in Leidre. He holds a great friendship for the chieftain of the Swedes, and both visit each other often.",
-		Conditions = function(s)
-			if (
-				(EventFaction.Name == "Dane Tribe" or EventFaction.Name == "Denmark")
-			) then
-				return true
-			else
-				return false
-			end
-		end,
-		MinYear = -27, -- according to the Grottasongr, King Fjolnir of the Swedes lived around the same time as Augustus came to reign, establishing the Pax Romana, and Fredfrode is his contemporary
-		MaxYear = -27 + 30,
-		Options = {"~!OK"},
-		OptionEffects = {
-			function(s)
-				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
-			end
-		},
-		OptionTooltips = {"+1 Prestige"}
-	},
-	FredfrodesFeast = { -- Source: Snorri Sturlson, "Heimskringla", 1844.
+	FredfrodesFeast = { -- Source: Snorri Sturlson, "Heimskringla", 1844, pp. 226-227.
 		Name = "Fredfrode's Feast",
-		Description = "The chieftain of the Danes, Fredfrode, prepared a great feast for our chieftain Fjolne in his capital of Leidre. Within Fredfrode's dwelling, there were many tall vessels filled with mead. Our chieftain, while walking through a gallery during the evening, sleepy and exceedingly drunk, slipped his foot and fell into one such vessel, drowning in mead.",
+		Description = "The chieftain of the Danes, Fredfrode, prepared a great feast for our chieftain Fiolner in his capital of Leidre. Within Fredfrode's dwelling, there were many tall vessels filled with mead. Our chieftain, while walking through a gallery during the evening, sleepy and exceedingly drunk, slipped his foot and fell into one such vessel, drowning in mead.",
 		Conditions = function(s)
 			if (
 				(EventFaction.Name == "Swede Tribe" or EventFaction.Name == "Sweden")
 				and (GetFactionProvinceCount(Factions.DaneTribe) > 0 or GetFactionProvinceCount(Factions.Denmark) > 0)
+				and GetFactionMinister("norse", EventFaction.Name, "head-of-state") == "Fiolner Yngling"
+				and GetFactionMinister("norse", "Dane Tribe", "head-of-state") == "Fridfrode Skjoldung"
+				and SyncRand(100) < 10
 			) then
 				return true
 			else
 				return false
 			end
 		end,
-		MinYear = -27 + 30,
-		MaxYear = -27 + 30,
-		RequiredEvents = {
-			FjolneChieftainOfTheSwedes = true,
-			FredfrodeChieftainOfTheDanes = true
-		},
 		Options = {"~!Oh no!"},
 		OptionEffects = {
 			function(s)
-				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", -1) -- not a particularly prestigious way of dying
+				SetFactionMinister("norse", EventFaction.Name, "head-of-state", "Swegder Yngling")
+				KillGrandStrategyHero("Fiolner Yngling")
 			end
 		},
-		OptionTooltips = {"-1 Prestige"}
+		OptionTooltips = {"Fiolner Yngling dies"}
 	},
-	SwegdeChieftainOfTheSwedes = { -- Source: Snorri Sturlson, "Heimskringla", 1844.
-		Name = "Swegde, Chieftain of the Swedes",
-		Description = "The faithful Swegde has become our chieftain.",
-		Conditions = function(s)
-			if (
-				(EventFaction.Name == "Swede Tribe" or EventFaction.Name == "Sweden")
-			) then
-				return true
-			else
-				return false
-			end
-		end,
-		MinYear = -27 + (30 * 1),
-		MaxYear = -27 + (30 * 2),
-		RequiredEventsOr = {
-			FjolneChieftainOfTheSwedes = false,
-			FredfrodesFeast = true
-		},
-		Options = {"~!OK"},
-		OptionEffects = {
-			function(s)
-				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
-			end
-		},
-		OptionTooltips = {"+1 Prestige"}
-	},
-	SwegdesJourney = { -- Source: Snorri Sturlson, "Heimskringla", 1844.
+	SwegdesJourney = { -- Source: Snorri Sturlson, "Heimskringla", 1844, p. 227.
 		Name = "Swegde's Journey",
-		Description = "Our chieftain Swegde has gone on a journey to find Wodan and his dwelling. Travelling with twelve men, he went as far as Asia Minor and the Black Sea.",
+		Description = "Our chieftain Swegde has gone on a journey to find Odin and his dwelling. Travelling with twelve men, he went as far as Asia Minor and the Black Sea.",
 		Conditions = function(s)
 			if (
 				(EventFaction.Name == "Swede Tribe" or EventFaction.Name == "Sweden")
+				and GetFactionMinister("norse", EventFaction.Name, "head-of-state") == "Swegder Yngling"
+				and SyncRand(100) < 10
 			) then
 				return true
 			else
 				return false
 			end
 		end,
-		MinYear = -27 + (30 * 1) + 25,
-		MaxYear = -27 + (30 * 1) + 25,
-		RequiredEvents = {
-			SwegdeChieftainOfTheSwedes = true
-		},
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
@@ -248,74 +169,47 @@ local NorseEvents = {
 		},
 		OptionTooltips = {"+1 Prestige"}
 	},
-	SwegdesReturn = { -- Source: Snorri Sturlson, "Heimskringla", 1844.
+	SwegdesReturn = { -- Source: Snorri Sturlson, "Heimskringla", 1844, pp. 227-228.
 		Name = "Swegde's Return",
-		Description = "After five years, Swegde returned from his journey, bringing with him a wife, Vana, and their son Vanlande. He did not manage to find Wodan, but soon afterwards he went away again to do so. He arrived in a place called Stein, where stood a stone as big as a house. During the evening, after having drunk much, Swegde and his men saw someone near the stone... There was a man standing behind a door in it, and he invited Swegde inside, claiming Wodan to be inside. Our chieftain agreed... and once inside he was murdered and was never seen again.",
+		Description = "After several years, Swegde returned from his journey, bringing with him a wife, Vana, and their son Vanland. He did not manage to find Odin, but soon afterwards he went away again to do so. He arrived in a place called Stein, where stood a stone as big as a house. During the evening, after having drunk much, Swegde and his men saw someone near the stone... There was a man standing behind a door in it, and he invited Swegde inside, claiming Odin to be inside. Our chieftain agreed... and once inside he was murdered and was never seen again.",
 		Conditions = function(s)
 			if (
 				(EventFaction.Name == "Swede Tribe" or EventFaction.Name == "Sweden")
+				and GetFactionMinister("norse", EventFaction.Name, "head-of-state") == "Swegder Yngling"
+				and SyncRand(100) < 50
 			) then
 				return true
 			else
 				return false
 			end
 		end,
-		MinYear = -27 + (30 * 2),
-		MaxYear = -27 + (30 * 2),
 		RequiredEvents = {
 			SwegdesJourney = true
 		},
 		Options = {"Oh ~!no!"},
 		OptionEffects = {
 			function(s)
-				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", -1)
+				SetProvinceHero("Sweden", "Vana", 4)
+				SetFactionMinister("norse", EventFaction.Name, "head-of-state", "Vanland Yngling")
+				KillGrandStrategyHero("Swegder Yngling")
 			end
 		},
-		OptionTooltips = {"-1 Prestige"}
+		OptionTooltips = {"Swegder Yngling dies"}
 	},
-	VanlandeChieftainOfTheSwedes = { -- Source: Snorri Sturlson, "Heimskringla", 1844.
-		Name = "Vanlande, Chieftain of the Swedes",
-		Description = "The mighty Vanlande has become our chieftain. He is a great warrior, and has a passion for traveling.",
-		Conditions = function(s)
-			if (
-				(EventFaction.Name == "Swede Tribe" or EventFaction.Name == "Sweden")
-			) then
-				return true
-			else
-				return false
-			end
-		end,
-		MinYear = -27 + (30 * 2),
-		MaxYear = -27 + (30 * 3),
-		RequiredEventsOr = {
-			SwegdeChieftainOfTheSwedes = false,
-			SwegdesReturn = true
-		},
-		Options = {"~!OK"},
-		OptionEffects = {
-			function(s)
-				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
-			end
-		},
-		OptionTooltips = {"+1 Prestige"}
-	},
-	TheWinterAbode = { -- Source: Snorri Sturlson, "Heimskringla", 1844.
+	TheWinterAbode = { -- Source: Snorri Sturlson, "Heimskringla", 1844, p. 228.
 		Name = "The Winter Abode",
-		Description = "Our chieftain Vanlande has taken up his winter abode in Finland with Snae the Old, marrying his daughter Driva. When spring came, Vanlande set out to Sweden, promising to Driva that he would return within three years.",
+		Description = "Our chieftain Vanland has taken up his winter abode in Finland with Snio the Old, marrying his daughter Drisa. When spring came, Vanland set out to Sweden, promising to Drisa that he would return within three years.",
 		Conditions = function(s)
 			if (
 				(EventFaction.Name == "Swede Tribe" or EventFaction.Name == "Sweden")
+				and GetFactionMinister("norse", EventFaction.Name, "head-of-state") == "Vanland Yngling"
+				and SyncRand(100) < 10
 			) then
 				return true
 			else
 				return false
 			end
 		end,
-		MinYear = -27 + (30 * 2) + 20,
-		MaxYear = -27 + (30 * 2) + 20,
-		RequiredEvents = {
-			VanlandeChieftainOfTheSwedes = true
-		},
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
@@ -324,30 +218,31 @@ local NorseEvents = {
 		},
 		OptionTooltips = {"+1 Prestige"}
 	},
-	HuldsCurse = { -- Source: Snorri Sturlson, "Heimskringla", 1844.
-		Name = "Huld's Curse",
-		Description = "Vanlande did not keep his promise. Even after ten years had passed, he hadn't returned to Driva's embrace... She sent the son she had with Vanlande, Visbur, to Sweden, and then bribed the witch Huld to charm Vanlande into returning to Finland, or to kill him. Vanlande felt a sudden urge to visit Finland, but his councilors and friends advised him against it. He then became quite drowsy, and went to sleep... cries were heard from his chamber, and his men rushed there, only to find him dead. His body was burnt at the river Skytaa, and a standing stone was raised for him.",
+	HuldasCurse = { -- Source: Snorri Sturlson, "Heimskringla", 1844.
+		Name = "Hulda's Curse",
+		Description = "Vanland did not keep his promise. Even after many years had passed, he hadn't returned to Drisa's embrace... She sent the son she had with Vanland, Visbur, to Sweden, and then bribed the witch Hulda to charm Vanland into returning to Finland, or to kill him. Vanland felt a sudden urge to visit Finland, but his councilors and friends advised him against it. He then became quite drowsy, and went to sleep... cries were heard from his chamber, and his men rushed there, only to find him dead. His body was burnt at the river Skytaa, and a standing stone was raised for him.",
 		Conditions = function(s)
 			if (
 				(EventFaction.Name == "Swede Tribe" or EventFaction.Name == "Sweden")
+				and GetFactionMinister("norse", EventFaction.Name, "head-of-state") == "Vanland Yngling"
+				and SyncRand(100) < 10
 			) then
 				return true
 			else
 				return false
 			end
 		end,
-		MinYear = -27 + (30 * 3),
-		MaxYear = -27 + (30 * 3),
 		RequiredEvents = {
 			TheWinterAbode = true
 		},
 		Options = {"Oh ~!no!"},
 		OptionEffects = {
 			function(s)
-				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
+				SetFactionMinister("norse", EventFaction.Name, "head-of-state", "Visbur Yngling")
+				KillGrandStrategyHero("Vanland Yngling")
 			end
 		},
-		OptionTooltips = {"+1 Prestige"}
+		OptionTooltips = {"Vanland Yngling dies"}
 	},
 	TempleAtUpsalConverted = { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 88.
 		Name = "Temple at Upsal Converted",
@@ -356,7 +251,8 @@ local NorseEvents = {
 			if (
 				GetProvinceOwner("Sweden") == EventFaction.Name
 				and GetProvinceCivilization("Sweden") == "norse"
-				-- should require Sweden to be Christian, and there to be a church in Sweden
+				and ProvinceHasBuildingClass("Sweden", "temple")
+				-- should require Sweden to be Christian
 			) then
 				return true
 			else

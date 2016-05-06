@@ -109,6 +109,13 @@ DefineLanguageWord("Dach", { -- source also gives the alternative form "Dei"; So
 	DerivesFrom = {"proto-germanic", "noun", "Dag"}
 })
 
+DefineLanguageWord("Drochten", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 113.
+	Language = "old-frisian",
+	Type = "noun",
+	Meanings = {},
+	DerivesFrom = {"proto-germanic", "noun", "Druhtîna"}
+})
+
 DefineLanguageWord("Fretho", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 128.
 	Language = "old-frisian",
 	Type = "noun",

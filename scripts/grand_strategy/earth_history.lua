@@ -5,6 +5,8 @@ SetRiverCulturalName("Danube", "teuton", "Donau")
 --SetRiverCulturalName("Dnieper", "latin", "Borysthenes") -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 --SetRiverCulturalName("Don", "greek", "Tanais")
 --SetRiverCulturalName("Don", "latin", "Tanais") -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+--SetRiverCulturalName("Don", "germanic", "Vanaquisl") -- The Tanais river is said to have been called Vanaquisl or Tanaquisl in the time of the Vana/Asa conflict in the Ynglinga saga; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 217.
+--SetRiverCulturalName("Don", "norse", "Tanais") -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 217.
 SetRiverCulturalName("Guadiana", "latin", "Anas") -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 SetRiverCulturalName("Elbe", "latin", "Albis") -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 SetRiverCulturalName("Rhine", "latin", "Rhenus") -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
@@ -1027,8 +1029,6 @@ if (GrandStrategyYear >= -27) then
 --	SetProvinceOwner("Sweden", "norse", "Swede Tribe")
 --	AcquireFactionTechnologies("germanic", "Yngling Tribe", "norse", "Swede Tribe")
 --	SetProvinceOwner("Scania", "norse", "Dane Tribe") -- the Ynglinga saga gives a Danish king (Fredfrode) living at around the same time as Fjolnir; Danes were in southern Scandinavia in 526 (so presumably this would be their dwelling place previously as well); Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
-	GrandStrategyEvents.FjolneChieftainOfTheSwedes = nil
-	GrandStrategyEvents.FredfrodeChieftainOfTheDanes = nil
 	
 	 -- 31 million people lived in Roman Asia and Africa at the "Time of Augustus"; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
 
@@ -1061,11 +1061,6 @@ if (GrandStrategyYear >= -9) then -- Marbod, king of the Suebic tribe of the Mar
 	SetProvinceUnitQuantity("Bohemia", "unit-teuton-ritter", 1) -- 4,000 horse riders
 end
 
-if (GrandStrategyYear >= 3) then -- estimated date
-	GrandStrategyEvents.FredfrodesFeast = nil
-	GrandStrategyEvents.SwegdeChieftainOfTheSwedes = nil
-end
-
 if (GrandStrategyYear >= 10) then -- Pannonia was acquired by Rome in 10 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	SetProvinceOwner("Pannonia", "latin", "Rome")
 end
@@ -1079,29 +1074,12 @@ if (GrandStrategyYear >= 20) then
 	-- Tiberius placed the Iazyges (as Roman allies) between the Danube and the Tisa around 20 AD; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
 end
 
-if (GrandStrategyYear >= 28) then -- estimated date
-	GrandStrategyEvents.SwegdesJourney = nil
-end
-
-if (GrandStrategyYear >= 33) then -- estimated date
-	GrandStrategyEvents.SwegdesReturn = nil
-	GrandStrategyEvents.VanlandeChieftainOfTheSwedes = nil
-end
-
 if (GrandStrategyYear >= 43) then
 	SetProvinceOwner("Rhodes", "latin", "Rome") -- Rhodes acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 end
 
 if (GrandStrategyYear >= 50) then
 	-- By 50 AD the greater part of the Sarmatians lived between the Tisa and the Danube; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 5.
-end
-
-if (GrandStrategyYear >= 53) then -- estimated date
-	GrandStrategyEvents.TheWinterAbode = nil
-end
-
-if (GrandStrategyYear >= 63) then -- estimated date
-	GrandStrategyEvents.HuldsCurse = nil
 end
 
 if (GrandStrategyYear >= 83) then

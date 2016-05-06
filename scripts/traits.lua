@@ -34,6 +34,7 @@ local traits = {
 	{"upgrade-dim", _("Dim")},
 	{"upgrade-generous", _("Generous")}, -- no current effect
 	{"upgrade-genius", _("Genius")},
+	{"upgrade-harsh", _("Harsh")},
 	{"upgrade-intelligent", _("Intelligent")},
 	{"upgrade-keen", _("Keen")},
 	{"upgrade-limping", _("Limping")},
@@ -76,8 +77,8 @@ DefineModifier("upgrade-clumsy",
 )
 
 DefineModifier("upgrade-cruel",
-	{"BasicDamage", 1},
-	{"Charisma", -1}
+	{"BasicDamage", 2},
+	{"Charisma", -2}
 )
 
 DefineModifier("upgrade-dextrous",
@@ -94,6 +95,11 @@ DefineModifier("upgrade-dim",
 DefineModifier("upgrade-genius",
 	{"Intelligence", 2},
 	{"Mana", 10}
+)
+
+DefineModifier("upgrade-harsh",
+	{"BasicDamage", 1},
+	{"Charisma", -1}
 )
 
 DefineModifier("upgrade-intelligent",

@@ -184,6 +184,14 @@ DefineUniqueItem("Skidbladnir", { -- Source: Henry Adams Bellows (transl.), "The
 } )
 
 --[[
+DefineUniqueItem("Varva", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 231-232.
+	Type = "unit-teuton-farm", -- should be Norse
+	Prefix = "upgrade-item-prefix-sturdy", -- should be something more fitting?
+--	Suffix = ?,
+	Quote = _("\"Varva was wasted with the sword, / And vengeance taken for the bird, / The little bird that used to bring / News to the ear of the great king.\" - Thiodolf of Huine"),
+	Background = "Varva was a farm in Jutland in ancient times. In the Ynglinga Saga it is told that the sparrow of the Swedish king Dag, which relayed news to the monarch from faraway lands, once flew to the farm. It ate some of the farmer's grain, upon which he threw stones at the sparrow, killing it. When the king discovered that the sparrow had been killed at Varva, he sent a host to exact his revenge on the farm's inhabitants. As the king was about cross Skiotan's Ford to return to Sweden, a thrall threw a hay-fork at the monarch, hitting his head and ending his life."
+} )
+
 DefineUniqueItem("Carolinum", { -- Source: Alena Ježková, "77 Prague Legends", 2006, p. 31.
 	Type = "unit-teuton-university", -- could also be a library, or perhaps a temple
 	Prefix = ?,

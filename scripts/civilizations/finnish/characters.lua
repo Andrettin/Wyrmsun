@@ -25,43 +25,47 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineProvince("Asia Minor", {
-	World = "Earth",
-	Tiles = {
-		{554, 142} -- Troy
-	},
-	SettlementLocation = {554, 142}, -- Troy
-	Map = "maps/random/random-map-forest.smp",
-	SettlementTerrain = "Plains",
-	Coastal = true,
-	Claims = {
-		"hittite", "Troy"
-	},
-	Regions = {"Asia"}
+DefineCharacter("Snio the Old", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 228.
+	Name = "Snio",
+	ExtraName = "the Old",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "finnish", -- presumably
+	ProvinceOfOrigin = "Finland"
 })
 
-DefineProvince("India", {
-	World = "Earth",
-	Tiles = {},
-	Map = "maps/random/random-map-forest.smp",
-	SettlementTerrain = "Plains",
-	Coastal = true,
-	HistoricalModifiers = {
-		1817, "upgrade-college", true -- Hindu College founded in Calcutta in 1817. Source: Atlas de História Mundial, 2001, p. 24.
-	},
-	Regions = {"Asia"}
+DefineCharacter("Drisa", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 228.
+	Name = "Drisa",
+	Gender = "female",
+	Type = "unit-teuton-archer",
+	Civilization = "finnish", -- presumably
+	ProvinceOfOrigin = "Finland",
+	Father = "Snio the Old"
 })
 
-DefineProvince("Philippines", {
-	World = "Earth",
-	Tiles = {},
-	Map = "maps/random/random-map-forest.smp",
-	SettlementTerrain = "Plains",
-	Coastal = true,
-	HistoricalModifiers = {
-		1645, "upgrade-university", true -- University Sto Tomás founded in Manila in 1645. Source: Enrique Martínez Ruiz; Consuelo Maqueda, Atlas Histórico de España I, 2000, p. 226.
-	},
-	Regions = {"Asia"}
+DefineCharacter("Hulda", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 228.
+	Name = "Hulda",
+	Gender = "female",
+	Type = "unit-teuton-archer", -- is a witch, so being a priestess would fit reasonably well
+	Civilization = "finnish", -- presumably
+	ProvinceOfOrigin = "Finland",
+	DateReferenceCharacter = "Drisa" -- placed a charm on Vanland Yngling for Drisa
 })
 
--- North Africa, Iberia and the Arabic parts of Asia were collectively known as "Serkland" to the Norse; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 216.
+DefineCharacter("Froste", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 233.
+	Name = "Froste",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "finnish", -- presumably
+	ProvinceOfOrigin = "Finland"
+})
+
+DefineCharacter("Loge", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 233.
+	Name = "Loge",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "finnish", -- presumably
+	ProvinceOfOrigin = "Finland",
+	Father = "Froste"
+})
+

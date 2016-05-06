@@ -49,7 +49,7 @@ DefineCharacter("Modsognir", { -- one of the earliest dwarven leaders; in Norse 
 })
 
 DefineCharacter("Durin", { -- deputy of Modsognir
-	Name = "Durin",
+	Name = "Durin", -- possibly the same as the Diurnir mentioned in the Ynglinga saga; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 228.
 	NameElements = {"word", "dwarven", "noun", "Durin"},
 	Gender = "male",
 	Type = "unit-dwarven-steelclad",

@@ -399,6 +399,13 @@ DefineLanguageWord("Dēop", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	DerivesFrom = {"proto-germanic", "adjective", "Déwpaz"}
 })
 
+DefineLanguageWord("Dryhten", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 113.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {},
+	DerivesFrom = {"proto-germanic", "noun", "Druhtîna"}
+})
+
 DefineLanguageWord("Duru", { -- at first the source gives "duru", but later on it gives "dor"; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.2, 2.7.2.
 	Language = "old-english",
 	Type = "noun",

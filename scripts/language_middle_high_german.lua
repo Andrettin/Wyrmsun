@@ -294,6 +294,22 @@ DefineLanguageWord("Got", { -- Source: August Fick and Alf Torp, "Wortschatz der
 	DerivesFrom = {"old-high-german", "noun", "Got"}
 })
 
+DefineLanguageWord("Gote", { -- source also gives the alternative form "gotte"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Godmother"}, -- source gives the German "Patin" as the meaning
+	DerivesFrom = {"old-high-german", "noun", "Gota"},
+	Gender = "feminine"
+})
+
+DefineLanguageWord("Göte", { -- source also gives the alternative forms "götte" and "gute"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Godfather"}, -- source gives the German "Taufzeuge, Pate" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Gudjan"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Grâ", { -- source also gives the alternative forms "grâw", "grô" and "grôw"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 79.
 	Language = "middle-high-german",
 	Type = "adjective",
@@ -804,6 +820,14 @@ DefineLanguageWord("Tagen", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Type = "verb",
 	Meanings = {"Dawn"}, -- source gives the German "tagen" as the meaning
 	DerivesFrom = {"old-high-german", "verb", "Tagên"}
+})
+
+DefineLanguageWord("Truhtîn", { -- source also gives the alternative form "trohtîn"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 113.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Lord", "Warlord", "Lord (God)"}, -- source gives the German "Herr, Kriegsherr, meist von Gott als Herrn der Heerscharen" as the meaning
+	DerivesFrom = {"old-high-german", "noun", "Truhtîn"},
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Valz", { -- source also gives the alternative forms "valze" and "velze"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 124.

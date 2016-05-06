@@ -35,3 +35,5 @@ DefineProvince("Oyo", {
 	},
 	Regions = {"Africa"}
 })
+
+-- The parts of Africa inhabited by black peoples were known as "Great Blueland" or "Blaland" to the Norse; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 216.

@@ -307,6 +307,12 @@ DefineLanguageWord("Corn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	DerivesFrom = {"proto-germanic", "noun", "Kŕnam"}
 })
 
+DefineLanguageWord("Coting", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Tribunal Head"} -- source gives the Latin "tribunus" and the German "priesterlicher Gerichtsvorsteher" as the meaning
+})
+
 DefineLanguageWord("Daram", { -- source also gives the alternative form "Darm"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 97.
 	Language = "old-high-german",
 	Type = "noun",
@@ -558,6 +564,14 @@ DefineLanguageWord("Got", { -- Fick also gives the alternative form "Cot"; Sourc
 	Type = "noun",
 	Meanings = {"God"}, -- Fick gives the German "Gott" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Guda"} -- as given by Fick
+})
+
+DefineLanguageWord("Gota", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Godmother"}, -- source gives the German "Patin" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Gudjan"},
+	Gender = "feminine"
 })
 
 DefineLanguageWord("Grâ", { -- source also gives the alternative form "crâ"; source also gives the inflected form "grâwer"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 79.
@@ -1551,15 +1565,12 @@ DefineLanguageWord("Vernawun", { -- Source: Winfred P. Lehmann, "A Grammar of Pr
 	Meanings = {"Wood-Carrying Boats"}
 })
 
-DefineLanguageWord("Zûn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 89.
+DefineLanguageWord("Truhtîn", { -- source also gives the alternative form "trohtîn"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 113.
 	Language = "old-high-german",
 	Type = "noun",
-	Meanings = {"Fence", "Hedge", "Enclosure"}, -- source gives the German "Zaun, Hecke, Gehege" as the meaning
-	DerivesFrom = {"proto-germanic", "noun", "Tûna"},
-	Gender = "masculine",
-	NumberCaseInflections = {
-		"plural", "nominative", "Zûnî"
-	}
+	Meanings = {"Lord", "Warlord", "Lord (God)"}, -- source gives the German "Herr, Kriegsherr, meist von Gott als Herrn der Heerscharen" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Druhtîna"},
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Ubir", { -- Lehmann also gives the alternative form "ubar"; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.2, 2.7.2.
@@ -1692,6 +1703,17 @@ DefineLanguageWord("Ziohan", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Type = "verb",
 	Meanings = {"Pull"}, -- derived from Proto-Germanic "Téuχanan", which has the meaning of "pull"
 	DerivesFrom = {"proto-germanic", "verb", "Téuχanan"}
+})
+
+DefineLanguageWord("Zûn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 89.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Fence", "Hedge", "Enclosure"}, -- source gives the German "Zaun, Hecke, Gehege" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Tûna"},
+	Gender = "masculine",
+	NumberCaseInflections = {
+		"plural", "nominative", "Zûnî"
+	}
 })
 
 DefineLanguageWord("Zurba", { -- source also gives the alternative form "Zurf"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 86.
