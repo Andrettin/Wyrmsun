@@ -73,7 +73,8 @@ https://github.com/Andrettin/Wyrmsun
 - Roads can now be built (linking your faction's capital to tiles with roads is necessary to allow them to produce over 200 output of their resource; only polities can build roads).
 - Building a dock in a province's settlement now connects its location to the faction capital as if there were a road to it.
 - Add 1 lumber resource tile to Svarinshaug (Nidavellir).
-- Added Thracian Sea water province to Earth.
+- Added Thracian Sea water province (Earth).
+- Added Nordland province (Earth).
 
 * Miscellaneous
 - Fixed a save game compatibility issue.

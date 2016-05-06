@@ -69,13 +69,22 @@ DefineFaction("Denmark", {
 	Civilization = "norse",
 	Type = "polity",
 	Colors = {"red", "white"},
-	DefaultTier = "kingdom"})
+	DefaultTier = "kingdom"
+})
 
 DefineFaction("Gautland", {
 	Civilization = "norse",
 	Type = "polity",
 	Colors = {"teal"},
 	DefaultTier = "kingdom"
+})
+
+DefineFaction("Halogaland", {
+	Civilization = "norse",
+	Type = "polity",
+	Colors = {"purple"},
+	DefaultTier = "kingdom",
+	DevelopsTo = {"Norway"}
 })
 
 DefineFaction("Holmgard", {

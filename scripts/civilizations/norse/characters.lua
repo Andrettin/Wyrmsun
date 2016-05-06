@@ -566,6 +566,134 @@ DefineCharacter("Bera", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol.
 	-- described as agreeable, very brisk and gay, but also false and wicked
 })
 
+DefineCharacter("Hugleik Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 236.
+	Name = "Hugleik",
+	FamilyName = "Yngling",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Sweden",
+	Father = "Alf Yngling",
+	Mother = "Bera", -- his mother was presumably Bera, since she was Alf's wife
+	-- described as very greedy
+	HistoricalTitles = {
+		"head-of-state", 0, 0, "norse", "Swede Tribe"
+	}
+})
+
+DefineCharacter("Hake", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 236-238.
+	Name = "Hake",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Sweden", -- correct?
+	DateReferenceCharacter = "Hugleik Yngling",
+	-- described as being a murderous combatant
+	HistoricalTitles = {
+		-- was king (of somewhere), and then invaded and conquered Sweden, becoming its king as well
+		"head-of-state", 0, 0, "norse", "Swede Tribe"
+	}
+	-- brother of Hagberd
+})
+
+DefineCharacter("Hagberd", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 236.
+	Name = "Hagberd",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Sweden", -- correct?
+	-- was king (of where?)
+	DateReferenceCharacter = "Hake" -- brother of Hake
+})
+
+DefineCharacter("Svipdag", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 236.
+	Name = "Svipdag",
+	NameElements = {
+--		"compound", "prefix", -- ?
+		"compound", "suffix", "old-norse", "noun", "Dagr" -- presumably
+	},
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Sweden",
+	Trait = "upgrade-mighty", -- described as a powerful combatant
+	DateReferenceCharacter = "Hugleik Yngling" -- came to the assistance of king Hugleik of Sweden when he was attacked by Hake
+	-- brother of Geigad
+})
+
+DefineCharacter("Geigad", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 236.
+	Name = "Geigad",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Sweden",
+	Trait = "upgrade-mighty", -- described as a powerful combatant
+	DateReferenceCharacter = "Hugleik Yngling" -- came to the assistance of king Hugleik of Sweden when he was attacked by Hake
+	-- brother of Svipdag
+})
+
+DefineCharacter("Starkod the Old", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 236.
+	Name = "Starkod",
+	ExtraName = "the Old",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Sweden",
+	Trait = "upgrade-old",
+	DateReferenceCharacter = "Hake" -- was a champion of Hake's
+})
+
+DefineCharacter("Jorund Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 237-238.
+	Name = "Jorund",
+	FamilyName = "Yngling",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Sweden",
+	Father = "Yngve Yngling",
+	Quote = _("\"Jorund has travelled far and wide, / But the same horse he must bestride / On which he made brave Gudlog ride. / He too must for a necklace wear / Hagbert's fell noose in middle air.\" - Thiodolf of Huine"),
+	HistoricalTitles = {
+		"head-of-state", 0, 0, "norse", "Swede Tribe"
+	}
+})
+
+DefineCharacter("Eric Yngveson Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 237.
+	Name = "Eric",
+	ExtraName = "Yngveson", -- to differentiate him from the earlier Eric Yngling
+	FamilyName = "Yngling",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Sweden",
+	Father = "Yngve Yngling",
+	Quote = _("\"By the fierce East-kings' cruel pride, / Gudlog must on the wild horse rider - / The wildest horse you e'er did see: / 'Tis Segur's steed - the gallows tree.\" - Eyvind Skaldaspiller")
+})
+
+DefineCharacter("Gudlög", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 237-238.
+	Name = "Gudlög",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Nordland",
+	DateReferenceCharacter = "Jorund Yngling", -- was captured in Denmark by Jorund and Eric Yngling, and then was killed by them
+	Quote = _("\"By the fierce East-kings' cruel pride, / Gudlog must on the wild horse rider - / The wildest horse you e'er did see: / 'Tis Segur's steed - the gallows tree.\" - Eyvind Skaldaspiller"),
+	HistoricalTitles = {
+		"head-of-state", 0, 0, "norse", "Halogaland" -- was a king, presumably of Halogaland, since his son was king of that place
+	}
+})
+
+DefineCharacter("Gylög", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 238.
+	Name = "Gylög",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Nordland",
+	Father = "Gudlög",
+	HistoricalTitles = {
+		"head-of-state", 0, 0, "norse", "Halogaland"
+	}
+})
+
 DefineCharacter("Svan the Red", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 222.
 	Name = "Svan",
 	ExtraName = "the Red",

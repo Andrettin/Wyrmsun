@@ -57,7 +57,10 @@ DefineCharacter("Froste", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vo
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "finnish", -- presumably
-	ProvinceOfOrigin = "Finland"
+	ProvinceOfOrigin = "Finland",
+	HistoricalTitles = {
+		"head-of-state", 0, 0, "finnish", "Fenni Tribe" -- he was chieftain over the Finns, and the Fenni tribe seems like a fair enough representation of that
+	}
 })
 
 DefineCharacter("Loge", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 233.
