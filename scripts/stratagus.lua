@@ -1320,22 +1320,10 @@ end
 
 --[[
 function GetCivilizationFactions(civilization)
-	if (civilization == "dwarf") then
-		return {"Norlund Clan", "Shinsplitter Clan", "Shorbear Clan"}
-	elseif (civilization == "elf") then
+	if (civilization == "elf") then
 		return {"Lintanir", "Ulfdalir", "Wesmere"}
-	elseif (civilization == "germanic") then
-		return {"Asa Tribe", "Vana Tribe"}
-	elseif (civilization == "gnome") then
-		return {"Untersberg"}
-	elseif (civilization == "goblin") then
-		return {"Goblins"}
-	elseif (civilization == "kobold") then
-		return {"Kobolds"}
 	elseif (civilization == "orc") then
 		return {"Blackeye Clan", "Bloody Sword Clan"}
-	elseif (civilization == "troll") then
-		return {"Trolls"}
 	else
 		return { }
 	end

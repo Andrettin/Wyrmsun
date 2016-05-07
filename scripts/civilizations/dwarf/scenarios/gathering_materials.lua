@@ -32,11 +32,8 @@
 if (LoadedGame == false) then
 	if (GrandStrategy == false or GrandStrategyEventMap) then
 		SetPlayerData(0, "Faction", "Norlund Clan")
-		SetPlayerData(1, "Name", "Goblins")
 		SetPlayerData(1, "Allow", "upgrade-goblin-writing", "F")
-		SetPlayerData(2, "Name", "Goblins")
 		SetPlayerData(2, "Allow", "upgrade-goblin-writing", "F")
-		SetPlayerData(3, "Name", "Goblins")
 		SetPlayerData(3, "Allow", "upgrade-goblin-writing", "F")
 		
 		SetDiplomacy(0, "enemy", 1)

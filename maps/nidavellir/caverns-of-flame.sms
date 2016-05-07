@@ -154,9 +154,6 @@ SetPlayerData(2, "Resources", "gold", 10000)
 SetPlayerData(2, "Resources", "lumber", 10000)
 SetPlayerData(2, "Resources", "stone", 5000)
 SetPlayerData(2, "Resources", "oil", 0)
-if (GrandStrategy == false) then
-	SetPlayerData(2, "Name", "Goblins")
-end
 SetAiType(2, "land-attack")
 SetStartView(3, 12, 10)
 SetPlayerData(3, "RaceName", "goblin")
@@ -164,9 +161,6 @@ SetPlayerData(3, "Resources", "gold", 10000)
 SetPlayerData(3, "Resources", "lumber", 10000)
 SetPlayerData(3, "Resources", "stone", 5000)
 SetPlayerData(3, "Resources", "oil", 0)
-if (GrandStrategy == false) then
-	SetPlayerData(3, "Name", "Goblins")
-end
 SetAiType(3, "land-attack")
 SetStartView(4, 12, 32)
 SetPlayerData(4, "RaceName", "goblin")
@@ -174,9 +168,6 @@ SetPlayerData(4, "Resources", "gold", 10000)
 SetPlayerData(4, "Resources", "lumber", 10000)
 SetPlayerData(4, "Resources", "stone", 5000)
 SetPlayerData(4, "Resources", "oil", 0)
-if (GrandStrategy == false) then
-	SetPlayerData(4, "Name", "Goblins")
-end
 SetAiType(4, "land-attack")
 SetStartView(5, 56, 32)
 SetPlayerData(5, "RaceName", "goblin")
@@ -184,9 +175,6 @@ SetPlayerData(5, "Resources", "gold", 10000)
 SetPlayerData(5, "Resources", "lumber", 10000)
 SetPlayerData(5, "Resources", "stone", 5000)
 SetPlayerData(5, "Resources", "oil", 0)
-if (GrandStrategy == false) then
-	SetPlayerData(5, "Name", "Goblins")
-end
 SetAiType(5, "land-attack")
 SetPlayerData(15, "RaceName", "neutral")
 

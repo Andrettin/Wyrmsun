@@ -1,8 +1,7 @@
 -- Stratagus Map Presentation
 
-DefinePlayerTypes("person", "person", "computer", "rescue-passive", "computer", "computer")
+DefinePlayerTypes("person", "person", "computer", "rescue-passive")
 PresentMap("Svafnir's Lair", 2, 66, 64, 1)
 MapWorld = "Nidavellir"
 MapAttacker = 1
 MapDefender = 0
---MapForTheMotherland = true
