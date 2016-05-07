@@ -65,6 +65,9 @@ https://github.com/Andrettin/Wyrmsun
 - Added Goblin Stronghold (graphics by Jinn, based on Exidelo's Goblin Town Hall).
 - Added Goblin Watch Tower and Guard Tower (graphics by Jinn).
 
+* Factions
+- Added Myridia and Stilgar Goblin polities.
+
 * Grand Strategy
 - Fixed issue which allowed 1-province polities to migrate.
 - Fixed issue with loading grand strategy games.

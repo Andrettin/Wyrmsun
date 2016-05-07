@@ -90,7 +90,7 @@ Units = {
 	"upgrade-goblin-long-spear", "upgrade-goblin-pike",
 	"upgrade-goblin-catapult-projectile-1", "upgrade-goblin-catapult-projectile-2",
 	"upgrade-goblin-wood-plow", "upgrade-goblin-iron-tipped-wood-plow",
-	"upgrade-goblin-masonry",
+	"upgrade-goblin-masonry", "upgrade-goblin-writing", "upgrade-goblin-alchemy",
 	"unit-kobold-footpad",
 	"unit-elven-swordsman",
 	"unit-orc-spearthrower", "unit-orc-sea-orc", "unit-orc-shaman",

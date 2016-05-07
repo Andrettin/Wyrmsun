@@ -76,7 +76,8 @@ DefineUnitType("unit-gnomish-worker", { Name = _("Scavenger"),
 	},
 	Variations = {
 		{
-			"variation-id", "blond-hair"
+			"variation-id", "blond-hair",
+			"upgrade-forbidden", "upgrade-old"
 		},
 		{
 			"variation-id", "gray-hair",

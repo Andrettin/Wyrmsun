@@ -36,3 +36,25 @@ DefineFaction("Lggi Tribe", {
 	Type = "tribe",
 	Colors = {"blue", "cyan"}
 })
+
+DefineFaction("Myridia", { -- invented by Jesse Crider
+	Civilization = "goblin",
+	Type = "polity",
+	Colors = {"cyan"},
+	DefaultTier = "duchy",
+	DefaultGovernmentType = "republic",
+	Titles = {
+		"republic", "duchy", "Syndicate"
+	}
+})
+
+DefineFaction("Stilgar", { -- invented by Jesse Crider
+	Civilization = "goblin",
+	Type = "polity",
+	Colors = {"blue"},
+	DefaultTier = "duchy",
+	DefaultGovernmentType = "republic",
+	Titles = {
+		"republic", "duchy", "Syndicate"
+	}
+})

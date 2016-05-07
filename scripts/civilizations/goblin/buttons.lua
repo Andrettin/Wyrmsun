@@ -118,6 +118,22 @@ DefineButton( { Pos = 4, Level = 0, Icon = "icon-masonry",
 	ForUnit = {"unit-goblin-lumber-mill"}
 } )
 
+DefineButton( { Pos = 3, Level = 0, Icon = "icon-norse-runewriting",
+	Action = "research", Value = "upgrade-goblin-writing",
+	Allowed = "check-single-research",
+	Description = _("+10% Time Efficiency for all buildings, changes faction from tribe to polity."),
+	Key = "w", Hint = _("Research ~!Writing"), Popup = "popup-research",
+	ForUnit = {"unit-goblin-stronghold"}
+} )
+
+DefineButton( { Pos = 3, Level = 0, Icon = "icon-cauldron",
+	Action = "research", Value = "upgrade-goblin-alchemy",
+	Allowed = "check-single-research",
+	Description = _("+1 Fire Damage for Archers and Headhunters, +5 Fire Damage for War Machines."),
+	Key = "a", Hint = _("Research ~!Alchemy"), Popup = "popup-research",
+	ForUnit = {"unit-goblin-stronghold"}
+} )
+
 -- Upgrades ---------------------------------------------------------
 
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-goblin-stronghold",

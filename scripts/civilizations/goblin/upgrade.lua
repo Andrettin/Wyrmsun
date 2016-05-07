@@ -98,6 +98,20 @@ DefineUpgrade("upgrade-goblin-masonry", {
 	TechnologyPointCost = 1
 })
 
+DefineUpgrade("upgrade-goblin-writing", {
+	Parent = "upgrade-writing",
+	Civilization = "goblin",
+	Icon = "icon-norse-runewriting",
+	TechnologyPointCost = 1
+})
+
+DefineUpgrade("upgrade-goblin-alchemy", {
+	Parent = "upgrade-alchemy",
+	Civilization = "teuton",
+	Description = _("Once writing had been developed, observations on the basic substances that form the world could be noted down and more easily passed on. This led to the appearance of the discipline of alchemy, mixing esoteric, scientific and philosophical postulations about the elements from which the material world is composed.\n\nEffect: +1 Fire Damage for Archers and Headhunters, +5 Fire Damage for War Machines."),
+	TechnologyPointCost = 1
+})
+
 DefineModifier("upgrade-goblin-long-spear",
 	{"BasicDamage", 2},
 	{"Points", 10},
@@ -141,6 +155,26 @@ DefineModifier("upgrade-goblin-iron-tipped-wood-plow",
 	{"apply-to", "unit-goblin-farm"}
 )
 
+DefineModifier("upgrade-goblin-writing",
+	{"TimeEfficiencyBonus", 10},
+	{"apply-to", "unit-goblin-town-hall"}, {"apply-to", "unit-goblin-stronghold"},
+	{"apply-to", "unit-goblin-farm"}, {"apply-to", "unit-goblin-mess-hall"},
+	{"apply-to", "unit-goblin-lumber-mill"}, {"apply-to", "unit-goblin-smithy"},
+	{"apply-to", "unit-goblin-watch-tower"}, {"apply-to", "unit-goblin-guard-tower"}
+)
+
+DefineModifier("upgrade-goblin-alchemy",
+	{"FireDamage", 1},
+	{"Points", 8},
+	{"apply-to", "unit-goblin-archer"}, {"apply-to", "unit-goblin-headhunter"}
+)
+
+DefineModifier("upgrade-goblin-alchemy",
+	{"FireDamage", 5},
+	{"Points", 5},
+	{"apply-to", "unit-goblin-war-machine"}
+)
+
 DefineDependency("unit-goblin-archer",
 	{"unit-goblin-lumber-mill"})
 
@@ -174,3 +208,6 @@ DefineDependency("upgrade-goblin-iron-tipped-wood-plow",
 	{"upgrade-goblin-wood-plow"}
 )
 
+DefineDependency("upgrade-goblin-alchemy",
+	{"upgrade-goblin-writing"}
+)

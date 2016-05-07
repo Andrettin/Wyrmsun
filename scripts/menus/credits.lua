@@ -188,10 +188,11 @@ function RunShowCreditsMenu()
 		"  Paolo Sammicheli",
 		"  Rob Best",
 		"  Taurus", -- Northern Rebirth maps and scenarios
-		_("Events and Quests"),
+		_("Lore"),
 		"  Andrettin",
 		"  Battle for Wesnoth Team",
 		"  Asa Swain",
+		"  Jesse Crider",
 		"  Joseph Simmons (turin)",
 		"  Lari Nieminen (zookeeper)",
 		"  Piotr Cychowski (Mist/cycholka)",

@@ -32,6 +32,13 @@ DefineLanguageWord("Bag", { -- from Mike Anderson's Tyrant
 	AffixNameTypes = {"compound", "suffix", "singular", "person-male"}
 })
 
+DefineLanguageWord("Belragor", { -- invented by Jesse Crider
+	Language = "goblin",
+	Type = "noun",
+	Meanings = {},
+	NameTypes = {"person-male"}
+})
+
 DefineLanguageWord("Dag", { -- from Mike Anderson's Tyrant
 	Language = "goblin",
 	Type = "noun",
@@ -195,6 +202,13 @@ DefineLanguageWord("Lug", { -- from Mike Anderson's Tyrant
 	Type = "noun",
 	Meanings = {},
 	AffixNameTypes = {"compound", "suffix", "singular", "person-male"}
+})
+
+DefineLanguageWord("Myrtos", { -- invented by Jesse Crider
+	Language = "goblin",
+	Type = "noun",
+	Meanings = {},
+	NameTypes = {"person-male"}
 })
 
 DefineLanguageWord("Nak", { -- from Mike Anderson's Tyrant

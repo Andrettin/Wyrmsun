@@ -150,7 +150,7 @@ DefineUpgrade("upgrade-strong", {
 DefineUpgrade("upgrade-vicious", {
 	Parent = "upgrade-trait",
 	Name = _("Vicious"),
-	Epithets = {"the Vicious", "the Butcher"}
+	Epithets = {"the Vicious", "the Butcher", "the Chirurgeon"}
 })
 
 DefineUpgrade("upgrade-weak", {
@@ -260,8 +260,8 @@ DefineModifier("upgrade-strong",
 )
 
 DefineModifier("upgrade-vicious",
-	{"BasicDamage", 2},
-	{"Charisma", -1}
+	{"BasicDamage", 3},
+	{"Charisma", -3}
 )
 
 DefineModifier("upgrade-weak",
