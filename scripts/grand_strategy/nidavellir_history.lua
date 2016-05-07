@@ -34,6 +34,32 @@ GenerateProvince({
 	MaximumSize = 300
 })
 
+GenerateProvince({
+	Province = WorldMapProvinces.Stilgar,
+	BorderProvinces = {"Peaceful Valley", "Deep Sea"},
+	Resources = {
+		gold = SyncRand(2),
+		silver = SyncRand(2),
+		copper = SyncRand(2),
+		lumber = SyncRand(3),
+		stone = SyncRand(3),
+		mushrooms = SyncRand(3) + 1
+	}
+})
+
+GenerateProvince({
+	Province = WorldMapProvinces.Myridia,
+	BorderProvinces = {"Stilgar"},
+	Resources = {
+		gold = SyncRand(2),
+		silver = SyncRand(2),
+		copper = SyncRand(2),
+		lumber = SyncRand(3),
+		stone = SyncRand(3),
+		mushrooms = SyncRand(3) + 1
+	}
+})
+
 -- generate resources for provinces
 --AddProvinceResource(WorldMapProvinces.BrownHills, "gold", 1)
 AddProvinceResource(WorldMapProvinces.BrownHills, "mushrooms", 2)
@@ -213,7 +239,7 @@ if (GrandStrategyYear >= 400) then
 end
 
 if (GrandStrategyYear >= 500) then
-	SetProvinceOwner("Highbrook Pass", "dwarf", "Shinsplitter Clan") -- The Shinsplitter clan took over the Highbrook Pass around this time
+	-- The Shinsplitter clan took over the Highbrook Pass around this time
 	SetProvinceUnitQuantity("Highbrook Pass", "unit-goblin-spearman", 0)
 	SetProvinceUnitQuantity("Highbrook Pass", "unit-goblin-archer", 0)
 	SetProvinceUnitQuantity("Highbrook Pass", "unit-dwarven-axefighter", 6) -- six dwarven ulfserkers

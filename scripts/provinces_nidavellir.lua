@@ -169,8 +169,11 @@ DefineProvince("Highbrook Pass", {
 	SettlementLocation = {35, 11},
 	Map = "maps/random/random-map-swamp.smp",
 	SettlementTerrain = "Mountains",
-	Claims = {
-		"dwarf", "Shinsplitter Clan"
+	HistoricalOwners = {
+		500, "dwarf", "Shinsplitter Clan" -- The Shinsplitter clan took over the Highbrook Pass around this time
+	},
+	HistoricalClaims = {
+		500, "dwarf", "Shinsplitter Clan"
 	},
 	HistoricalSettlementBuildings = {
 		535, "unit-dwarven-barracks", true -- the Shinsplitters were already capable of recruiting warriors in Highbrook Pass around this time
@@ -237,6 +240,19 @@ DefineProvince("Lyr", {
 	Claims = {
 		"dwarf", "Lyr"
 	}
+})
+
+DefineProvince("Myridia", {
+	World = "Nidavellir",
+	Tiles = {},
+	CulturalNames = {
+		"goblin", "Myridia"
+	},
+	Claims = {
+		"goblin", "Myridia"
+	},
+	Map = "maps/random/random-map-swamp.smp",
+	SettlementTerrain = "Plains" -- should be Dark Plains, but those are not generated in random maps (yet)
 })
 
 DefineProvince("Northern Wastelands", {
@@ -319,6 +335,19 @@ DefineProvince("Southern Tunnels", {
 		25, "unit-dwarven-lumber-mill", true, -- had the capability to train scouts
 		35, "unit-mercenary-camp", true -- at some point between 35 and 40 the Shinsplitters had the capacity to recruit mercenaries, as shown by them having hired the Surghan Mercenaries
 	}
+})
+
+DefineProvince("Stilgar", {
+	World = "Nidavellir",
+	Tiles = {},
+	CulturalNames = {
+		"goblin", "Stilgar"
+	},
+	Claims = {
+		"goblin", "Stilgar"
+	},
+	Map = "maps/random/random-map-swamp.smp",
+	SettlementTerrain = "Plains" -- should be Dark Plains, but those are not generated in random maps (yet)
 })
 
 DefineProvince("Svarinshaug", {

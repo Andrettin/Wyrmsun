@@ -78,6 +78,7 @@ https://github.com/Andrettin/Wyrmsun
 - Add 1 lumber resource tile to Svarinshaug (Nidavellir).
 - Added Thracian Sea water province (Earth).
 - Added Nordland province (Earth).
+- Added Myridia and Stilgar provinces (Nidavellir).
 
 * Miscellaneous
 - Fixed a save game compatibility issue.
