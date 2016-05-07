@@ -3948,8 +3948,8 @@ function GetUnitTypeInterfaceState(unit_type)
 			return "barracks"
 		elseif (GetUnitTypeData(unit_type, "Class") == "siege-engine") then
 			return "barracks"
-		elseif (GetUnitTypeData(unit_type, "Class") == "priest") then
-			return "barracks" -- should be temple, but make it barracks for now to allow gnomish herbalists to be trained
+--		elseif (GetUnitTypeData(unit_type, "Class") == "priest") then
+--			return "temple"
 --		elseif (GetUnitTypeData(unit_type, "Class") == "caravan") then
 --			return "barracks"
 		elseif (GetUnitTypeData(unit_type, "Class") == "glider") then
