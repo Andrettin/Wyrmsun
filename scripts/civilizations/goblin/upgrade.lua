@@ -211,3 +211,5 @@ DefineDependency("upgrade-goblin-iron-tipped-wood-plow",
 DefineDependency("upgrade-goblin-alchemy",
 	{"upgrade-goblin-writing"}
 )
+
+Load("scripts/civilizations/goblin/upgrade_faction.lua")

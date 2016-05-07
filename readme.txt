@@ -66,6 +66,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added Goblin Watch Tower and Guard Tower (graphics by Jinn).
 
 * Factions
+- Added Aelak Tribe, Issudru Tribe, Mabom Tribe and Sigre Tribe for the Goblins.
 - Added Myridia and Stilgar Goblin polities.
 
 * Grand Strategy

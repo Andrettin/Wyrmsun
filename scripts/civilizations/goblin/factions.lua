@@ -25,16 +25,46 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineFaction("Aelak Tribe", { -- invented by Jesse Crider
+	Civilization = "goblin",
+	Type = "tribe",
+	Colors = {"red"},
+	FactionUpgrade = "upgrade-aelak-tribe-faction"
+})
+
+DefineFaction("Issudru Tribe", { -- invented by Jesse Crider
+	Civilization = "goblin",
+	Type = "tribe",
+	Colors = {"black"},
+	FactionUpgrade = "upgrade-issudru-tribe-faction"
+})
+
 DefineFaction("Khag Tribe", {
 	Civilization = "goblin",
 	Type = "tribe",
-	Colors = {"blue", "cyan"}
+	Colors = {"brown"},
+	FactionUpgrade = "upgrade-khag-tribe-faction"
 })
 
 DefineFaction("Lggi Tribe", {
 	Civilization = "goblin",
 	Type = "tribe",
-	Colors = {"blue", "cyan"}
+	Colors = {"violet"},
+	FactionUpgrade = "upgrade-lggi-tribe-faction"
+})
+
+DefineFaction("Mabom Tribe", { -- invented by Jesse Crider
+	Civilization = "goblin",
+	Type = "tribe",
+	Colors = {"purple"},
+	FactionUpgrade = "upgrade-mabom-tribe-faction"
+})
+
+DefineFaction("Sigre Tribe", { -- invented by Jesse Crider
+	Civilization = "goblin",
+	Type = "tribe",
+	Colors = {"yellow"},
+	FactionUpgrade = "upgrade-sigre-tribe-faction"
 })
 
 DefineFaction("Myridia", { -- invented by Jesse Crider
