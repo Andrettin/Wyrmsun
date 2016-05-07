@@ -43,7 +43,7 @@ DefineCharacter("Fiölner Yngling", { -- Source: Snorri Sturlson, "Heimskringla"
 DefineCharacter("Fridfrode Skjoldung", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 226-227.
 	Name = "Fridfrode",
 	NameElements = {
-		"compound", "prefix", "old-norse", "noun", "Friđr", -- presumably
+		"compound", "prefix", "old-norse", "noun", "no-case", "Friđr", -- presumably
 --		"compound", "suffix", -- ?
 	},
 	FamilyName = "Skjoldung", -- presumably
@@ -511,7 +511,7 @@ DefineCharacter("Alf the Old Dagling", { -- Source: Henry Adams Bellows (transl.
 DefineCharacter("Dagrid Dagling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 235.
 	Name = "Dagrid",
 	NameElements = {
-		"compound", "prefix", "old-norse", "noun", "Dagr", -- presumably
+		"compound", "prefix", "old-norse", "noun", "no-case", "Dagr", -- presumably
 --		"compound", "suffix", -- ?
 	},
 	FamilyName = "Dagling",
@@ -692,6 +692,159 @@ DefineCharacter("Gylög", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vo
 	HistoricalTitles = {
 		"head-of-state", 0, 0, "norse", "Halogaland"
 	}
+})
+
+DefineCharacter("On the Old Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 239-240.
+	Name = "On", -- also known as Ane
+	ExtraName = "the Old",
+	FamilyName = "Yngling",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Sweden",
+	Father = "Jorund Yngling",
+	Trait = "upgrade-cruel", -- described as wise and cruel
+	Quote = _("\"In Upsal's town the cruel king / Slaughtered his sons at Odin's shrine / Slaughtered his sons with cruel knife, / To get from Odin length of life.\" - Thiodolf of Huine"),
+	HistoricalTitles = {
+		"head-of-state", 0, 0, "norse", "Swede Tribe" -- ruled intermittently at Västergotland when Uppsal was occupied by Danish invaders
+	}
+})
+
+DefineCharacter("Frode Mikillati Skjoldung", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 239.
+	Name = "Frode",
+	ExtraName = "Mikillati",
+	FamilyName = "Skjoldung", -- correct?
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Zealand",
+	Father = "Dan Mikillati Skjoldung",
+	HistoricalTitles = {
+		"head-of-state", 0, 0, "norse", "Dane Tribe"
+	}
+	-- described as peace-loving
+})
+
+DefineCharacter("Halfdan Skjoldung", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 239.
+	Name = "Halfdan",
+	NameElements = {
+		"compound", "prefix", "old-norse", "adjective", "no-case", "Halfr", -- presumably
+--		"compound", "suffix", -- ?
+	},
+	FamilyName = "Skjoldung", -- correct?
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Zealand",
+	Father = "Frode Mikillati Skjoldung",
+	HistoricalTitles = {
+		"head-of-state", 0, 0, "norse", "Dane Tribe" -- ruled jointly with his brother Fridleif
+	}
+	-- described as a great warrior
+})
+
+DefineCharacter("Fridleif Skjoldung", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 239.
+	Name = "Fridleif",
+	NameElements = {
+		"compound", "prefix", "old-norse", "noun", "no-case", "Friđr", -- presumably
+--		"compound", "suffix", -- ?
+	},
+	FamilyName = "Skjoldung", -- correct?
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Zealand",
+	Father = "Frode Mikillati Skjoldung",
+	HistoricalTitles = {
+		"head-of-state", 0, 0, "norse", "Dane Tribe" -- ruled jointly with his brother Halfdan
+	}
+	-- described as a great warrior
+})
+
+DefineCharacter("Ole the Bold Skjoldung", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 239.
+	Name = "Ole",
+	ExtraName = "the Bold",
+	FamilyName = "Skjoldung", -- correct?
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Zealand",
+	Father = "Fridleif Skjoldung",
+	HistoricalTitles = {
+		"head-of-state", 0, 0, "norse", "Swede Tribe" -- ruled over the Swedes at Upsal for 25 years
+	}
+	-- was killed by Starkad the Old (probably the same as the Starkod the Old previously mentioned)
+})
+
+DefineCharacter("Tunne", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 240-241.
+	Name = "Tunne",
+	Gender = "male",
+	Type = "unit-teuton-worker",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Sweden",
+	DateReferenceCharacter = "On the Old Yngling" -- slave who was counsellor and treasurer to On the Old of Sweden
+})
+
+DefineCharacter("Egil Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 240-241.
+	Name = "Egil",
+	FamilyName = "Yngling",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Sweden",
+	Father = "On the Old Yngling",
+	Quote = _("\"The fair-haired son of Odin's race, / Who fled before fierce Tunne's face, / Has perished by the demon-beast / Who roams the forests of the East.\" - Thiodolf of Huine"),
+	HistoricalTitles = {
+		"head-of-state", 0, 0, "norse", "Swede Tribe"
+	}
+})
+
+DefineCharacter("Frode the Bold Skjoldung", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 241-243.
+	Name = "Frode",
+	ExtraName = "the Bold",
+	FamilyName = "Skjoldung", -- correct?
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Zealand",
+	DateReferenceCharacter = "Egil Yngling", -- helped Egil Yngling to defeat Tunne's forces
+	HistoricalTitles = {
+		"head-of-state", 0, 0, "norse", "Dane Tribe"
+	}
+})
+
+DefineCharacter("Ottar Vendelcrow Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 242-243.
+	Name = "Ottar",
+	ExtraName = "Vendelcrow",
+	FamilyName = "Yngling",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Sweden",
+	Father = "Egil Yngling",
+	Quote = _("\"By Danish arms the hero bold, / Ottar the Brave, lies stiff and cold. / To Vendel's plain the corpse was borne; / By eagles' claws the corpse is torn\" - Thiodolf of Huine"),
+	HistoricalTitles = {
+		"head-of-state", 0, 0, "norse", "Swede Tribe"
+	}
+	-- described as brave
+})
+
+DefineCharacter("Vätte", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 243.
+	Name = "Vätte",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Zealand",
+	DateReferenceCharacter = "Frode the Bold Skjoldung", -- Vätte was an earl appointed by Frode the Bold to defend Denmark while he invaded Sweden
+})
+
+DefineCharacter("Faste", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 243.
+	Name = "Faste",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Zealand",
+	DateReferenceCharacter = "Frode the Bold Skjoldung", -- Faste was an earl appointed by Frode the Bold to defend Denmark while he invaded Sweden
 })
 
 DefineCharacter("Svan the Red", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 222.

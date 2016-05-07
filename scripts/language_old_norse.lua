@@ -116,7 +116,7 @@ DefineLanguageWord("Almr", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Meanings = {"Elm"}, -- source apparently gives the German "Ulme" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Alma"},
 	NumberCaseInflections = {
-		"singular", "no-case", "Almr", -- presumably (assuming the "-r" ending here is the nominative ending)
+		"singular", "no-case", "Alm", -- presumably (assuming the "-r" ending here is the nominative ending)
 	}
 })
 
@@ -406,7 +406,10 @@ DefineLanguageWord("Dagr", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Type = "noun",
 	Meanings = {"Day"}, -- source apparently gives the German "Tag" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Dag"},
-	Gender = "masculine"
+	Gender = "masculine",
+	NumberCaseInflections = {
+		"singular", "no-case", "Dag" -- presumably (assuming the "-r" ending here is the nominative ending)
+	}
 })
 
 DefineLanguageWord("Djūpr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
@@ -533,7 +536,10 @@ DefineLanguageWord("Friđr", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Type = "noun",
 	Meanings = {"Love", "Peace"}, -- source gives the German "Liebe, Friede" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Friþu"},
-	Gender = "masculine"
+	Gender = "masculine",
+	NumberCaseInflections = {
+		"singular", "no-case", "Friđ" -- presumably (assuming the "-r" ending here is the nominative ending)
+	}
 })
 
 DefineLanguageWord("Frigg", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
@@ -701,7 +707,7 @@ DefineLanguageWord("Halfr", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Meanings = {"Half"}, -- source gives the German "halb" as the meaning
 	DerivesFrom = {"proto-germanic", "adjective", "Halba"},
 	ComparisonDegreeCaseInflections = {
-		"positive", "no-case", "Halfr" -- presumably (assuming the "-r" ending here is a nominative ending)
+		"positive", "no-case", "Half" -- presumably (assuming the "-r" ending here is a nominative ending)
 	}
 })
 
