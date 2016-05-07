@@ -80,8 +80,14 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed a save game compatibility issue.
 - Fixed a save game loading issue.
 
+* Terrain
+- Trees, wood piles and logs now contain 400 lumber instead of 300.
+- Rocks now contains 400 stone instead of 300.
+- Tree stumps now contain 200 lumber instead of 150.
+
 * Units
 - Kobold Footpads can now be hired at the Mercenary Camp.
+- Units can now have epithets (i.e. the Cruel) depending on their traits.
 
 -----------------------------------------------------------------------
 - 2.1.6

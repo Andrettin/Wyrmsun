@@ -54,9 +54,9 @@ DefineDefaultResourceNames(
 
 DefineDefaultResourceAmounts(
 	"gold", 50000,
-	"lumber", 300,
+	"lumber", 400,
 	"oil", 50000,
-	"stone", 300,
+	"stone", 400,
 	"coal", 50000,
 	"silver", 50000,
 	"copper", 50000

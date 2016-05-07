@@ -25,44 +25,145 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-local traits = {
-	{"upgrade-ambitious", _("Ambitious")},
-	{"upgrade-clumsy", _("Clumsy")},
-	{"upgrade-compassionate", _("Compassionate")}, -- no current effect
-	{"upgrade-cruel", _("Cruel")},
-	{"upgrade-dextrous", _("Dextrous")},
-	{"upgrade-dim", _("Dim")},
-	{"upgrade-generous", _("Generous")}, -- no current effect
-	{"upgrade-genius", _("Genius")},
-	{"upgrade-harsh", _("Harsh")},
-	{"upgrade-intelligent", _("Intelligent")},
-	{"upgrade-keen", _("Keen")},
-	{"upgrade-limping", _("Limping")},
-	{"upgrade-mighty", _("Mighty")},
-	{"upgrade-near-sighted", _("Near-Sighted")},
-	{"upgrade-old", _("Old")},
-	{"upgrade-pious", _("Pious")},
-	{"upgrade-quick", _("Quick")},
-	{"upgrade-reckless", _("Reckless")},
-	{"upgrade-resilient", _("Resilient")},
-	{"upgrade-slow", _("Slow")},
-	{"upgrade-strong", _("Strong")},
-	{"upgrade-vicious", _("Vicious")},
-	{"upgrade-weak", _("Weak")},
-	{"upgrade-wise", _("Wise")}
-}
+DefineUpgrade("upgrade-trait", {
+	Name = _("Trait"),
+	Icon = "icon-level-up"
+})
 
-for i = 1,table.getn(traits) do
-	u = CUpgrade:New(traits[i][1])
-	u.Name = traits[i][2]
-	u.Icon = Icons["icon-level-up"]
-	for j = 1,7 do
-		u.Costs[j - 1] = 0
-	end
-	u.TechnologyPointCost = 0
-	u.Ability = false
-	DefineAllow(traits[i][1], "AAAAAAAAAAAAAAAA")
-end
+DefineUpgrade("upgrade-ambitious", {
+	Parent = "upgrade-trait",
+	Name = _("Ambitious")
+})
+
+DefineUpgrade("upgrade-clumsy", {
+	Parent = "upgrade-trait",
+	Name = _("Clumsy")
+})
+
+DefineUpgrade("upgrade-compassionate", { -- no current effect
+	Parent = "upgrade-trait",
+	Name = _("Compassionate")
+})
+
+DefineUpgrade("upgrade-cruel", {
+	Parent = "upgrade-trait",
+	Name = _("Cruel"),
+	Epithets = {"the Cruel"}
+})
+
+DefineUpgrade("upgrade-dextrous", {
+	Parent = "upgrade-trait",
+	Name = _("Dextrous")
+})
+
+DefineUpgrade("upgrade-dim", {
+	Parent = "upgrade-trait",
+	Name = _("Dim"),
+	Epithets = {"the Dim"}
+})
+
+DefineUpgrade("upgrade-generous", { -- no current effect
+	Parent = "upgrade-trait",
+	Name = _("Generous"),
+	Epithets = {"the Generous"}
+})
+
+DefineUpgrade("upgrade-genius", {
+	Parent = "upgrade-trait",
+	Name = _("Genius")
+})
+
+DefineUpgrade("upgrade-harsh", {
+	Parent = "upgrade-trait",
+	Name = _("Harsh"),
+	Epithets = {"the Harsh"}
+})
+
+DefineUpgrade("upgrade-intelligent", {
+	Parent = "upgrade-trait",
+	Name = _("Intelligent")
+})
+
+DefineUpgrade("upgrade-keen", {
+	Parent = "upgrade-trait",
+	Name = _("Keen")
+})
+
+DefineUpgrade("upgrade-limping", {
+	Parent = "upgrade-trait",
+	Name = _("Limping")
+})
+
+DefineUpgrade("upgrade-mighty", {
+	Parent = "upgrade-trait",
+	Name = _("Mighty"),
+	Epithets = {"the Mighty"}
+})
+
+DefineUpgrade("upgrade-near-sighted", {
+	Parent = "upgrade-trait",
+	Name = _("Near-Sighted")
+})
+
+DefineUpgrade("upgrade-old", {
+	Parent = "upgrade-trait",
+	Name = _("Old"),
+	Epithets = {"the Old"}
+})
+
+DefineUpgrade("upgrade-pious", {
+	Parent = "upgrade-trait",
+	Name = _("Pious"),
+	Epithets = {"the Pious"}
+})
+
+DefineUpgrade("upgrade-quick", {
+	Parent = "upgrade-trait",
+	Name = _("Quick"),
+	Epithets = {"the Quick"}
+})
+
+DefineUpgrade("upgrade-reckless", {
+	Parent = "upgrade-trait",
+	Name = _("Reckless"),
+	Epithets = {"the Reckless"}
+})
+
+DefineUpgrade("upgrade-resilient", {
+	Parent = "upgrade-trait",
+	Name = _("Resilient"),
+	Epithets = {"the Bulwark", "the Hardy", "the Iron Shield"}
+})
+
+DefineUpgrade("upgrade-slow", {
+	Parent = "upgrade-trait",
+	Name = _("Slow"),
+	Epithets = {"the Slow"}
+})
+
+DefineUpgrade("upgrade-strong", {
+	Parent = "upgrade-trait",
+	Name = _("Strong"),
+	Epithets = {"the Strong", "the Iron Hand"}
+})
+
+DefineUpgrade("upgrade-vicious", {
+	Parent = "upgrade-trait",
+	Name = _("Vicious"),
+	Epithets = {"the Vicious", "the Butcher"}
+})
+
+DefineUpgrade("upgrade-weak", {
+	Parent = "upgrade-trait",
+	Name = _("Weak"),
+	Epithets = {"the Weak"}
+})
+
+DefineUpgrade("upgrade-wise", {
+	Parent = "upgrade-trait",
+	Name = _("Wise"),
+	Epithets = {"the Wise", "the Sage"}
+})
 
 DefineModifier("upgrade-ambitious",
 	{"Intelligence", 1},

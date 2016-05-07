@@ -30,7 +30,7 @@ DefineUpgrade("upgrade-work-heimskringla", { -- Source: Snorri Sturlson, "Heimsk
 	Work = "scroll",
 	Civilization = "norse",
 	Description = "The Heimskringla, or Chronicle of the Kings of Norway, detailed the legendary origins of the Norwegian monarchy, going on to write the stories of a long series of kings of Norway.",
---	Year = ? -- in which year was it published?
+--	Year = ? -- in which year was it first published?
 })
 
 DefineUpgrade("upgrade-work-historiae-vinlandiae-antiquae", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 154-155.
