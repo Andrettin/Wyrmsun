@@ -542,7 +542,7 @@ function GenerateProvince(arg)
 		end
 	end
 	
-	-- check to see if there are no empty tiles surrounded on at least seven sides by provinces; if there are, add that tile to this province
+	-- check to see if there are no empty tiles surrounded on all sides by provinces; if there are, add that tile to this province
 	for i=1,table.getn(arg.Province.Tiles) do
 		local tile_x = arg.Province.Tiles[i][1]
 		local tile_y = arg.Province.Tiles[i][2]
@@ -551,15 +551,15 @@ function GenerateProvince(arg)
 				if (math.abs(x_offset) ~= math.abs(y_offset) and GetWorldMapTileTerrain(tile_x + x_offset, tile_y + y_offset) == "" and (tile_x + x_offset) >= 0 and tile_x + x_offset < GetWorldMapWidth() and tile_y + y_offset >= 0 and tile_y + y_offset < GetWorldMapHeight()) then
 					local second_tile_x = tile_x + x_offset
 					local second_tile_y = tile_y + y_offset
-					local empty_surround_count = 8
+					local empty_surrounded = true
 					for second_x_offset=-1,1 do
 						for second_y_offset=-1,1 do
 							if (math.abs(second_x_offset) ~= math.abs(second_y_offset) and GetWorldMapTileTerrain(second_tile_x + second_x_offset, second_tile_y + second_y_offset) == "" and (second_tile_x + second_x_offset) >= 0 and second_tile_x + second_x_offset < GetWorldMapWidth() and second_tile_y + second_y_offset >= 0 and second_tile_y + second_y_offset < GetWorldMapHeight()) then
-								empty_surround_count = empty_surround_count - 1
+								empty_surrounded = false
 							end
 						end
 					end
-					if (empty_surround_count >= 7) then
+					if (empty_surrounded) then
 						SetWorldMapTileTerrain(second_tile_x, second_tile_y, base_tile_id)
 						SetWorldMapTileProvince(second_tile_x, second_tile_y, arg.Province.Name)
 						table.insert(arg.Province.Tiles, {second_tile_x, second_tile_y})
