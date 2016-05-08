@@ -25,6 +25,55 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineCharacter("Geirthiof", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 244.
+	Name = "Geirthiof",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "teuton",
+	ProvinceOfOrigin = "Holstein", -- correct? was from "Saxonland"
+	DateReferenceCharacter = "Adils Yngling", -- Adils Yngling went on a viking expedition to raid Saxonland when Geirthiof was king there
+	HistoricalTitles = {
+		"head-of-state", 0, 0, "teuton", "Saxon Tribe" -- was king of "Saxonland"
+	}
+	-- married to Alof the Great
+})
+
+DefineCharacter("Alof the Great", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 244.
+	Name = "Alof",
+	ExtraName = "the Great",
+	Gender = "female",
+	Type = "unit-teuton-archer",
+	Civilization = "teuton",
+	ProvinceOfOrigin = "Holstein", -- correct? was from "Saxonland"
+	DateReferenceCharacter = "Geirthiof" -- married to Geirthiof
+})
+
+DefineCharacter("Yrsa", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 244-245.
+	Name = "Yrsa",
+	Gender = "female",
+	Type = "unit-teuton-archer",
+	Civilization = "teuton",
+	ProvinceOfOrigin = "Holstein", -- correct? was from "Saxonland"
+	Father = "Helge Skjoldung", 
+	Mother = "Alof the Great", 
+	Trait = "upgrade-intelligent" -- described as intelligent, as speaking well and being in all respects well behaved
+	-- captured during a viking expedition led by Adils Yngling (king of Sweden), and then taken to Sweden, where she was married to Adils and became queen; later captured by king Helge of Denmark during his invasion of Sweden and married to him
+})
+
+DefineCharacter("Rolf Krake Skjoldung", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 244-245.
+	Name = "Rolf Krake", -- placed here (despite being Norse) because his mother is Saxon, and the Saxon characters are loaded after the Norse ones
+	FamilyName = "Skjoldung", -- correct?
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Zealand",
+	Father = "Helge Skjoldung",
+	Mother = "Yrsa",
+	HistoricalTitles = {
+		"head-of-state", 0, 0, "norse", "Dane Tribe"
+	}
+})
+
 DefineCharacter("Widukind", {
 	Name = "Widukind",
 	NameElements = {

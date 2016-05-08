@@ -205,7 +205,7 @@ DefineCharacter("Franz Seraph Stadion", { -- Source: Waltraud Heindl, "Josephini
 	-- count (of Stadion?)
 })
 
-DefineCharacter("Alexander von Bach", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 50.
+DefineCharacter("Alexander von Bach", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, pp. 50, 58.
 	Name = "Alexander",
 	NameElements = {"word", "high-german", "noun", "Alexander"},
 	FamilyName = "von Bach",
@@ -220,7 +220,7 @@ DefineCharacter("Alexander von Bach", { -- Source: Waltraud Heindl, "Josephinisc
 	DeathYear = 1893, -- died
 	Noble = true,
 	HistoricalTitles = {
-		"interior-minister", 1849, 0, "teuton", "Austria", -- became Interior Minister (Innenminister) of Austria in 15.08.1849
+		"interior-minister", 1849, 1859, "teuton", "Austria", -- became Interior Minister (Innenminister) of Austria in 15.08.1849, and ceased that function in 1859
 		"head-of-state", 1853, 1893, "teuton", "Bach" -- became Baron (Freiherr) of Bach in 1853
 	}
 })

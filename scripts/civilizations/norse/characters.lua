@@ -161,7 +161,7 @@ DefineCharacter("Domald Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 
 	}
 })
 
-DefineCharacter("Domar Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 230.
+DefineCharacter("Domar Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 229-230.
 	Name = "Domar",
 	FamilyName = "Yngling",
 	Gender = "male",
@@ -370,9 +370,7 @@ DefineCharacter("Authi", { -- Source: Henry Adams Bellows (transl.), "The Poetic
 
 DefineCharacter("Ali", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 222.
 	Name = "Ali",
-	NameElements = {
-		"word", "old-norse", "verb", "present", "Ali" -- presumably; also, not certain if that is the present participle of the verb, or another participle form
-	},
+	NameElements = {"word", "old-norse", "verb", "present", "Ali"}, -- presumably; also, not certain if that is the present participle of the verb, or another participle form
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
@@ -815,7 +813,7 @@ DefineCharacter("Frode the Bold Skjoldung", { -- Source: Snorri Sturlson, "Heims
 
 DefineCharacter("Ottar Vendelcrow Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 242-243.
 	Name = "Ottar",
-	ExtraName = "Vendelcrow",
+	ExtraName = "Vendelcrow", -- nickname because of the manner of his death
 	FamilyName = "Yngling",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
@@ -845,6 +843,111 @@ DefineCharacter("Faste", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol
 	Civilization = "norse",
 	ProvinceOfOrigin = "Zealand",
 	DateReferenceCharacter = "Frode the Bold Skjoldung", -- Faste was an earl appointed by Frode the Bold to defend Denmark while he invaded Sweden
+})
+
+DefineCharacter("Adils Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 243-245.
+	Name = "Adils",
+	FamilyName = "Yngling",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Sweden",
+	Father = "Ottar Vendelcrow Yngling",
+	Quote = _("\"Witch-demons, I have heard men say, / Have taken Adils' life away.\" - Thiodolf of Huine"),
+	HistoricalTitles = {
+		"head-of-state", 0, 0, "norse", "Swede Tribe"
+	}
+})
+
+DefineCharacter("Helge Skjoldung", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 244-245.
+	Name = "Helge",
+	FamilyName = "Skjoldung", -- correct?
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Zealand",
+	Father = "Halfdan Skjoldung", -- a king Halfdan of Denmark was his father, presumably the Halfdan previously mentioned
+	HistoricalTitles = {
+		"head-of-state", 0, 0, "norse", "Dane Tribe"
+	}
+})
+
+DefineCharacter("Ali of the Uplands", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 245.
+	Name = "Ali",
+	NameElements = {"word", "old-norse", "verb", "present", "Ali"}, -- presumably; also, not certain if that is the present participle of the verb, or another participle form
+	ExtraName = "of the Uplands",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Sweden", -- correct?
+	DateReferenceCharacter = "Adils Yngling", -- fought against Adils, dying in battle
+	-- was king of the Uplands
+})
+
+DefineCharacter("Godgest", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 245.
+	Name = "Godgest",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Nordland",
+	DateReferenceCharacter = "Adils Yngling", -- Adils sent Godgest the horse Raven as a gift
+	HistoricalTitles = {
+		"head-of-state", 0, 0, "norse", "Halogaland"
+	}
+})
+
+DefineCharacter("Eystein Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 246.
+	Name = "Eystein",
+	NameElements = {
+--		"compound", "prefix" -- ?
+		"compound", "suffix", "old-norse", "noun", "Steinn" -- presumably
+	},
+	FamilyName = "Yngling",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Sweden",
+	Father = "Adils Yngling",
+	Quote = _("\"The raging tree-devourer fire / Rushed on the monarch its ire; / First fell the castle timbers, then / The roof-beams - Eystein's funeral pyre.\" - Thiodolf of Huine"),
+	HistoricalTitles = {
+		"head-of-state", 0, 0, "norse", "Swede Tribe"
+	}
+})
+
+DefineCharacter("Hogne", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 246.
+	Name = "Hogne", -- Hogne of Niardö
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Nordland" -- actually from Niardö, an island in "North Drontheim" (North Trondheim), but that province isn't in the game yet
+})
+
+DefineCharacter("Solve", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 246.
+	Name = "Solve",
+	Gender = "male",
+	Type = "unit-teuton-swordsman", -- sea-king
+	Civilization = "norse",
+	ProvinceOfOrigin = "Nordland", -- actually from Niardö, an island in "North Drontheim" (North Trondheim), but that province isn't in the game yet
+	Father = "Hogne",
+	DateReferenceCharacter = "Adils Yngling", -- Solve slew Adils by burning
+	HistoricalTitles = {
+		"head-of-state", 0, 0, "norse", "Swede Tribe" -- Solve became king of Sweden after killing Adils Yngling, but eventually he was killed and Adils' son made king
+		-- Solve had dominions in Jutland, but from the source it is not clear if he ruled over all of Jutland, or only a portion of it
+	}
+})
+
+DefineCharacter("Yngvar Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 246-247.
+	Name = "Yngvar",
+	FamilyName = "Yngling",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Sweden",
+	Father = "Eystein Yngling",
+	Quote = _("\"On Esthland's strand, o'er Swedish graves, / The East Sea sings her song of waves; / King Yngvar's dirge is ocean's roar / Resounding on the rock-ribbed shore.\" - Thiodolf of Huine"),
+	HistoricalTitles = {
+		"head-of-state", 0, 0, "norse", "Swede Tribe"
+	}
 })
 
 DefineCharacter("Svan the Red", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 222.

@@ -305,7 +305,9 @@ DefineUnitType("unit-horse", { Name = "Horse",
 		"Sveggjuth", -- Horse from Norse mythology (name means "Lithe"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 304.
 		"Sviputh", -- Horse from Norse mythology (name means "Swift"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 304.
 		"Vigblaer", -- Vigblær was Helgi's horse in Norse mythology (its name means "Battle-Breather"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 325.
-		"Vingskornir" -- Brynhild's horse in Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 384.
+		"Vingskornir", -- Brynhild's horse in Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 384.
+		"Raven", -- horse of Adils (Yngling) of Sweden; king Ali of the Uplands also had a horse with the same name; is this a translation of the name to English?; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 245.
+		"Slöngvir" -- horse of Adils (Yngling) of Sweden; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 245.
 	},
 --	PersonalNamePrefixes = {"Aegi"},
 --	PersonalNameSuffixes = {"pan"},
