@@ -919,7 +919,7 @@ DefineCharacter("Hogne", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
-	ProvinceOfOrigin = "Nordland" -- actually from Niardö, an island in "North Drontheim" (North Trondheim), but that province isn't in the game yet
+	ProvinceOfOrigin = "North Trondelag" -- from Niardö, an island in "North Drontheim" (North Trondheim)
 })
 
 DefineCharacter("Solve", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 246.
@@ -927,7 +927,7 @@ DefineCharacter("Solve", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol
 	Gender = "male",
 	Type = "unit-teuton-swordsman", -- sea-king
 	Civilization = "norse",
-	ProvinceOfOrigin = "Nordland", -- actually from Niardö, an island in "North Drontheim" (North Trondheim), but that province isn't in the game yet
+	ProvinceOfOrigin = "North Trondelag", -- from Niardö, an island in "North Drontheim" (North Trondheim)
 	Father = "Hogne",
 	DateReferenceCharacter = "Adils Yngling", -- Solve slew Adils by burning
 	HistoricalTitles = {
@@ -1717,7 +1717,7 @@ DefineCharacter("Swerre", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vo
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
 	Faction = "Norway",
-	ProvinceOfOrigin = "Hordaland", -- accurate? either way this is the only Norwegian province in the game, so it makes sense to set it as the province of origin
+	ProvinceOfOrigin = "Akershus", -- put the character in the province where the Norwegian capital is, since we don't know from where in Norway he came
 	Year = 1177, -- reign began
 	DeathYear = 1203, -- reign ended
 	HistoricalTitles = {
@@ -1800,7 +1800,7 @@ DefineCharacter("Hakon", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
 	Faction = "Norway",
-	ProvinceOfOrigin = "Hordaland", -- only province implemented that is part of Norway; but Akershus/Oslo would be a better fit: since we only know he came from Norway, it makes sense to set the capital as his province of origin
+	ProvinceOfOrigin = "Akershus", -- put the character in the province where the Norwegian capital is, since we don't know from where in Norway he came
 	HistoricalTitles = {
 		"head-of-state", 0, 0, "norse", "Norway" -- his son was King of Norway, so presumably he was too; date estimated; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 142.
 	}
@@ -1813,7 +1813,7 @@ DefineCharacter("Hakon Hakonson", { -- Source: Snorri Sturlson, "Heimskringla", 
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
 	Faction = "Norway",
-	ProvinceOfOrigin = "Hordaland", -- only province implemented that is part of Norway; but Akershus/Oslo would be a better fit: since we only know he came from Norway, it makes sense to set the capital as his province of origin
+	ProvinceOfOrigin = "Akershus", -- put the character in the province where the Norwegian capital is, since we don't know from where in Norway he came
 	Year = 1261, -- annexed the Norse settlements in Greenland to Norway in 1261 AD
 	Father = "Hakon",
 	HistoricalTitles = {
@@ -1900,7 +1900,7 @@ DefineCharacter("Thormod Torfæus", { -- Source: Snorri Sturlson, "Heimskringla"
 	Gender = "male",
 	Type = "unit-teuton-swordsman", -- should be something more appropriate for a writer, such as a priest
 	Civilization = "norse",
-	ProvinceOfOrigin = "Hordaland", -- Norwegian? if so, he should be where Oslo is; but since for the moment Hordaland is the only Norwegian province in the game, set it as the province of origin
+	ProvinceOfOrigin = "Akershus", -- Norwegian? put the character in the province where the Norwegian capital is, since we don't know from where in Norway he came (if he's Norwegian at all)
 	Year = 1707, -- his "Historiae Vinlandiae Antiquae" dates from 1707
 	AuthoredWorks = {"upgrade-work-historiae-vinlandiae-antiquae"}
 })
@@ -1911,6 +1911,6 @@ DefineCharacter("Hans Egide", { -- Source: Snorri Sturlson, "Heimskringla", 1844
 	Gender = "male",
 	Type = "unit-teuton-swordsman", -- should be priest
 	Civilization = "norse",
-	ProvinceOfOrigin = "Hordaland", -- Norwegian, so he should be where Oslo is; but since for the moment Hordaland is the only Norwegian province in the game, set it as the province of origin
+	ProvinceOfOrigin = "Akershus", -- put the character in the province where the Norwegian capital is, since we don't know from where in Norway he came
 	Year = 1721 -- settled in Greenland amongst the eskimos as a missionary in 1721
 })

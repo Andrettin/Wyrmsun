@@ -69,6 +69,26 @@ DefineProvince("Aetolia", {
 	Regions = {"Europe", "Greece", "West and Central Europe"}
 })
 
+DefineProvince("Akershus", {
+	World = "Earth",
+	Tiles = {
+		{510, 85}, {510, 86},
+		{511, 84}, {511, 85},
+		{512, 85}
+	},
+	CulturalNames = {
+		"norse", "Akershus"
+	},
+	SettlementLocation = {510, 85}, -- Oslo
+	Map = "maps/random/random-map-forest.smp",
+	SettlementTerrain = "Plains",
+	Coastal = true,
+	Claims = {
+		"norse", "Norway"
+	},
+	Regions = {"Europe", "Scandinavia", "West and Central Europe"}
+})
+
 DefineProvince("Albania", {
 	World = "Earth",
 	Tiles = {
@@ -3306,28 +3326,6 @@ DefineProvince("Nordland", {
 	Regions = {"Europe", "Scandinavia", "West and Central Europe"}
 })
 
---[[
-DefineProvince("Nord-Trondelag", {
-	World = "Earth",
-	Tiles = {
-		{510, 74},
-		{511, 72}, {511, 73}, {511, 74}, {511, 75},
-		{512, 72}, {512, 73}, {512, 74}, {512, 75},
-	},
-	CulturalNames = {
-		"norse", "Nord-Trondelag"
-	},
---	SettlementLocation = {530, 77}, -- Härnösand
-	Map = "maps/random/random-map-forest.smp",
-	SettlementTerrain = "Plains",
-	Coastal = true,
-	Claims = {
-		"norse", "Norway"
-	},
-	Regions = {"Europe", "Scandinavia", "West and Central Europe"}
-})
---]]
-
 DefineProvince("Normandy", {
 	World = "Earth",
 	Tiles = {
@@ -3376,6 +3374,8 @@ DefineProvince("Normandy", {
 DefineProvince("Norrland", {
 	World = "Earth",
 	Tiles = {
+		{519, 72},
+		{520, 71}, {520, 72}, {520, 73}, {520, 74}, {520, 75}, {520, 76}, {520, 77}, {520, 78}, {520, 79}, {520, 80}, {520, 81}, {520, 82}, {520, 83}, {520, 84},
 		{521, 68}, {521, 69}, {521, 70}, {521, 71}, {521, 72}, {521, 73}, {521, 74}, {521, 75}, {521, 76}, {521, 77}, {521, 78}, {521, 79}, {521, 80}, {521, 81}, {521, 82}, {521, 83}, {521, 84},
 		{522, 68}, {522, 69}, {522, 70}, {522, 71}, {522, 72}, {522, 73}, {522, 74}, {522, 75}, {522, 76}, {522, 77}, {522, 78}, {522, 79}, {522, 80}, {522, 81}, {522, 82}, {522, 83}, {522, 84},
 		{523, 67}, {523, 68}, {523, 69}, {523, 70}, {523, 71}, {523, 72}, {523, 73}, {523, 74}, {523, 75}, {523, 76}, {523, 77}, {523, 78}, {523, 79}, {523, 80}, {523, 81}, {523, 82}, {523, 83}, {523, 84},
@@ -3421,6 +3421,33 @@ DefineProvince("Norrland", {
 	},
 	HistoricalCultures = {
 		-264, "norse"
+	},
+	Regions = {"Europe", "Scandinavia", "West and Central Europe"}
+})
+
+DefineProvince("North Trondelag", {
+	World = "Earth",
+	Tiles = {
+		{510, 74},
+		{511, 72}, {511, 73}, {511, 74}, {511, 75},
+		{512, 72}, {512, 73}, {512, 74}, {512, 75},
+		{513, 71}, {513, 72}, {513, 73}, {513, 74}, {513, 75},
+		{514, 71}, {514, 72}, {514, 73}, {514, 74},
+		{515, 71}, {515, 72}, {515, 73},
+		{516, 71}, {516, 72}, {516, 73},
+		{517, 71}, {517, 72}, {517, 73},
+		{518, 71}, {518, 72}, {518, 73},
+		{519, 71}, {519, 73}
+	},
+	CulturalNames = {
+		"norse", "Nørd-Trøndelag"
+	},
+	SettlementLocation = {512, 73}, -- Steinkjet
+	Map = "maps/random/random-map-forest.smp",
+	SettlementTerrain = "Plains",
+	Coastal = true,
+	Claims = {
+		"norse", "Norway"
 	},
 	Regions = {"Europe", "Scandinavia", "West and Central Europe"}
 })
