@@ -94,6 +94,7 @@ https://github.com/Andrettin/Wyrmsun
 * Units
 - Kobold Footpads can now be hired at the Mercenary Camp.
 - Units can now have epithets (i.e. the Cruel) depending on their traits.
+- Workers now gain experience by harvesting resources and building structures.
 
 -----------------------------------------------------------------------
 - 2.1.6

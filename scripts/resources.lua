@@ -91,3 +91,7 @@ SetResourceGrandStrategyBuildingVariations("mushrooms", 4)
 
 SetResourceBaseLaborInput("fish", 100)
 SetResourceBaseOutput("fish", 100)
+
+SetResourceBasePrice("coal", 100)
+SetResourceBaseLaborInput("coal", 100)
+SetResourceBaseOutput("coal", 100)
