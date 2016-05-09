@@ -68,6 +68,7 @@ https://github.com/Andrettin/Wyrmsun
 * Factions
 - Added Aelak Tribe, Issudru Tribe, Mabom Tribe and Sigre Tribe for the Goblins.
 - Added Myridia and Stilgar Goblin polities.
+- Added Shellscale Tribe for the Kobolds.
 
 * Grand Strategy
 - Fixed issue which allowed 1-province polities to migrate.
