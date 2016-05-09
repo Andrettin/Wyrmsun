@@ -62,6 +62,12 @@ DefineLanguageWord("Adler", {
 	}
 })
 
+DefineLanguageWord("Adolph", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {}
+})
+
 DefineLanguageWord("Albert", {
 	Language = "high-german",
 	Type = "noun",
@@ -492,6 +498,12 @@ DefineLanguageWord("Busch", {
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Carl", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {}
+})
+
 DefineLanguageWord("Christian", {
 	Language = "high-german",
 	Type = "noun",
@@ -858,6 +870,12 @@ DefineLanguageWord("Gelb", {
 	Language = "high-german",
 	Type = "adjective",
 	Meanings = {"Yellow"}
+})
+
+DefineLanguageWord("Georg", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {}
 })
 
 DefineLanguageWord("Gerhard", {

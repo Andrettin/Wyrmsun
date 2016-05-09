@@ -77,10 +77,7 @@ DefineCharacter("Joseph Anton von Lasser", { -- Source: Waltraud Heindl, "Joseph
 	ProvinceOfOrigin = "Lower Austria", -- was presumably from Austria, put the character in the province where the Austrian capital (Vienna) is, since we don't have more specific information
 	Year = 1814, -- born
 	DeathYear = 1879, -- died
-	Noble = true,
-	HistoricalTitles = {
-		"head-of-state", 0, 1879, "teuton", "Lasser" -- Freiherr (Baron) of Lasser
-	}
+	Noble = true
 })
 
 DefineCharacter("Leopold Hasner", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 41.
@@ -202,7 +199,7 @@ DefineCharacter("Franz Seraph Stadion", { -- Source: Waltraud Heindl, "Josephini
 	HistoricalTitles = {
 		"interior-minister", 1848, 1849, "teuton", "Austria" -- Interior Minister (Innenminister) of Austria until May 1849, when he became severely ill; was already Interior Minister by 7.11.1818
 	}
-	-- count (of Stadion?)
+	-- count (of where?)
 })
 
 DefineCharacter("Alexander von Bach", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, pp. 50, 58.
@@ -243,6 +240,44 @@ DefineCharacter("Eduard von Bach", { -- Source: Waltraud Heindl, "Josephinische 
 	}
 })
 
+DefineCharacter("Anton Hye von Glunek", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, pp. 60-61.
+	Name = "Anton Hye",
+	NameElements = {"word", "high-german", "noun", "Anton"},
+	FamilyName = "von Glunek",
+	NobleFamilyNamePredicateElements = {"word", "high-german", "adposition", "Von"},
+	PlaceNameDerivedFamilyName = true, -- presumably
+	Gender = "male",
+	Type = "unit-teuton-ritter", -- was a liberal member of the Juridico-political Reading Club before 1848; from 1857 to 1867 was a section chief in the Ministry of Justice
+	Civilization = "teuton",
+	Faction = "Austria",
+	ProvinceOfOrigin = "Lower Austria", -- was presumably from Austria, put the character in the province where the Austrian capital (Vienna) is, since we don't have more specific information
+	Year = 1849, -- became part of the ministerial council of the Austrian Ministry of Justice in 1849
+	Noble = true,
+	HistoricalTitles = {
+		"justice-minister", 1867, 1867, "teuton", "Austria" -- was Justice Minister (Justizminister) of Austria from June to December of 1867
+	}
+})
+
+DefineCharacter("Adolph Pratobevera von Wiesborn",  { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 61.
+	Name = "Adolph Pratobevera",
+	NameElements = {"word", "high-german", "noun", "Adolph"},
+	FamilyName = "von Wiesborn",
+	NobleFamilyNamePredicateElements = {"word", "high-german", "adposition", "Von"},
+	PlaceNameDerivedFamilyName = true, -- presumably
+	Gender = "male",
+	Type = "unit-teuton-ritter",
+	Civilization = "teuton",
+	Faction = "Austria",
+	ProvinceOfOrigin = "Lower Austria", -- was presumably from Austria, put the character in the province where the Austrian capital (Vienna) is, since we don't have more specific information
+	Year = 1852, -- became councillor (Hofrat) in the supreme court (Oberster Gerichtshof) in 1852
+	Noble = true,
+	HistoricalTitles = {
+		"justice-minister", 1861, 1862, "teuton", "Austria", -- was Justice Minister (Justizminister) of Austria from 1861 to 1862
+		"head-of-state", 0, 0, "teuton", "Wiesborn" -- was Baron (Freiherr) of Wiesborn
+	}
+	-- had the reputation of being a freethinker
+})
+
 DefineCharacter("Johann Baptist von Hoffinger", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 41.
 	Name = "Johann Baptist",
 	NameElements = {
@@ -259,7 +294,44 @@ DefineCharacter("Johann Baptist von Hoffinger", { -- Source: Waltraud Heindl, "J
 	ProvinceOfOrigin = "Lower Austria", -- was presumably from Austria, put the character in the province where the Austrian capital (Vienna) is, since we don't have more specific information
 	Year = 1867,
 	Noble = true
-	-- Knight (Ritter) of Hoffinger
+	-- Knight (Ritter)
+})
+
+DefineCharacter("Carl von Hock",  { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 61.
+	Name = "Carl",
+	NameElements = {"word", "high-german", "noun", "Carl"},
+	FamilyName = "von Hock",
+	NobleFamilyNamePredicateElements = {"word", "high-german", "adposition", "Von"},
+	PlaceNameDerivedFamilyName = true, -- presumably
+	Gender = "male",
+	Type = "unit-teuton-ritter", -- was a section chief in the Finance Ministry
+	Civilization = "teuton",
+	Faction = "Austria",
+	ProvinceOfOrigin = "Lower Austria", -- was presumably from Austria, put the character in the province where the Austrian capital (Vienna) is, since we don't have more specific information
+	-- start year?
+	Noble = true,
+	HistoricalTitles = {
+		"head-of-state", 0, 0, "teuton", "Hock" -- was Baron (Freiherr) of Hock
+	}
+	-- economic liberal
+})
+
+DefineCharacter("Georg von Toggenburg", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 64.
+	Name = "Georg",
+	NameElements = {"word", "high-german", "noun", "Georg"},
+	FamilyName = "von Toggenburg",
+	NobleFamilyNamePredicateElements = {"word", "high-german", "adposition", "Von"},
+	PlaceNameDerivedFamilyName = true, -- presumably
+	Gender = "male",
+	Type = "unit-teuton-ritter", -- had the title of Knight (Ritter)
+	Civilization = "teuton",
+	Faction = "Austria",
+	ProvinceOfOrigin = "Lower Austria", -- was presumably from Austria, put the character in the province where the Austrian capital (Vienna) is, since we don't have more specific information
+	Year = 1860, -- became Statthalter of Venice
+	Noble = true,
+	HistoricalTitles = {
+		"governor", 1860, 1866, "Venetia" -- was Statthalter (governor) of Venice from 1860 to 1866
+	}
 })
 
 DefineCharacter("Otto Friedländer", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 26.

@@ -620,6 +620,16 @@ DefineCivilization("finnish", {
 	Playable = false
 })
 
+DefineCivilization("magyar", {
+	Display = "Magyar",
+	Visible = true,
+	Species = "human",
+--	Language = "hungarian",
+	ParentCivilization = "teuton",
+	Adjective = "Magyar",
+	Playable = false
+})
+
 DefineCivilization("persian", {
 	Display = "Persian",
 	Visible = true,

@@ -65,11 +65,11 @@ DefineFaction("Carinthia", {
 	DefaultTier = "duchy" -- Duchy of Carinthia within the Holy Roman Empire; political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 })
 
-DefineFaction("Lasser", { -- titular barony belonging to Joseph Anton von Lasser; Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 41.
+DefineFaction("Hock", { -- titular barony belonging to Carl von Hock; Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 61.
 	Civilization = "teuton",
 	ParentFaction = "Austria",
 	Type = "polity",
-	Colors = {"yellow"},
+	Colors = {"brown"},
 	DefaultTier = "barony"
 })
 
@@ -86,5 +86,13 @@ DefineFaction("Salzgeber", { -- titular barony granted to Peter von Salzgeber in
 	ParentFaction = "Austria",
 	Type = "polity",
 	Colors = {"white"},
+	DefaultTier = "barony"
+})
+
+DefineFaction("Wiesborn", { -- titular barony belonging to Adolph Pratobevera von Wiesborn; Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 61.
+	Civilization = "teuton",
+	ParentFaction = "Austria",
+	Type = "polity",
+	Colors = {"blue"},
 	DefaultTier = "barony"
 })

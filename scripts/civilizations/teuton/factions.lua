@@ -638,14 +638,6 @@ DefineFaction("Crimea", {
 	}
 })
 
-DefineFaction("Hungary", {
-	Civilization = "teuton",
-	Type = "polity",
-	Colors = {"green"},
-	Playable = false,
-	DefaultTier = "kingdom"
-})
-
 DefineFaction("Turkey", {
 	Civilization = "teuton",
 	Type = "polity",

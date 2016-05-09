@@ -190,8 +190,6 @@ if (GrandStrategyYear >= -5500) then
 	-- Linear Pottery culture existed in parts of Central Europe between 7000 and 2000 BC; since the other source gives them as arriving in northern Poland and Germany c. 5500 BC, let's place their beginnings at that date; Source: "Atlas de História Mundial", 2001, pp. 40-41.
 	SetProvinceOwner("Franconia", "basque", "Linearware Tribe")
 	SetProvinceCivilization("Franconia", "basque")
-	SetProvinceOwner("Pannonia", "basque", "Linearware Tribe")
-	SetProvinceCivilization("Pannonia", "basque")
 		
 	-- Tybrind Vig (in the coast of the Danish island of Fyn) begins being occupied around 5500 BC (it pertained to the Ertebolle culture); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 142.
 	
@@ -1061,10 +1059,6 @@ if (GrandStrategyYear >= -9) then -- Marbod, king of the Suebic tribe of the Mar
 	SetProvinceUnitQuantity("Bohemia", "unit-teuton-ritter", 1) -- 4,000 horse riders
 end
 
-if (GrandStrategyYear >= 10) then -- Pannonia was acquired by Rome in 10 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-	SetProvinceOwner("Pannonia", "latin", "Rome")
-end
-
 if (GrandStrategyYear >= 19) then
 	GrandStrategyEvents.MarbodDeposed = nil
 	SetProvinceHero("Bohemia", "Marbod", 0)
@@ -1240,12 +1234,10 @@ if (GrandStrategyYear >= 453) then
 
 	-- Walamer was king over the Ostrogoths in Pannonia (between the Danube and the Drave) when Attila's empire collapsed in 453 AD; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 6.
 	SetProvinceOwner("Ukraine", "", "")
-	SetProvinceOwner("Pannonia", "goth", "Ostrogoth Tribe")
 end
 
 if (GrandStrategyYear >= 474) then
 	-- In 474 AD the Ostrogoths left Pannonia to settle in Macedonia under the aegis of the Eastern Roman Emperor, and in that same year Theodemer died, being succeeded by Theoderic; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 7.
-	SetProvinceOwner("Pannonia", "", "")
 	SetProvinceOwner("Macedonia", "goth", "Ostrogoth Tribe")
 end
 
@@ -1598,7 +1590,6 @@ if (GrandStrategyYear >= 919) then
 	SetProvinceOwner("France", "latin", "France")
 	SetProvinceOwner("Croatia", "slav", "Croatia")
 	SetProvinceCivilization("Croatia", "slav")
-	SetProvinceOwner("Pannonia", "teuton", "Hungary")
 	SetProvinceOwner("Galicia", "slav", "Poland")
 	SetProvinceCivilization("Galicia", "slav")
 	SetProvinceOwner("Mazovia", "slav", "Poland")
@@ -1759,7 +1750,6 @@ if (GrandStrategyYear >= 1560) then
 	SetProvinceOwner("Dalmatia", "latin", "Venice")
 	SetProvinceOwner("Croatia", "teuton", "Turkey")
 	SetProvinceOwner("Bosnia", "teuton", "Turkey")
-	SetProvinceOwner("Pannonia", "teuton", "Turkey")
 	SetProvinceOwner("Vojvodina", "teuton", "Turkey")
 	
 	SetProvinceOwner("Transylvania", "latin", "Transylvania")

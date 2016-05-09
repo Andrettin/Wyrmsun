@@ -2297,8 +2297,8 @@ DefineProvince("Hordaland", {
 
 DefineProvince("Hungary", {
 	World = "Earth",
-	CulturalNames = {
-		Hungary = "Hungary"
+	FactionCulturalNames = {
+		"magyar", "Hungary", "Hungary"
 	},
 	Tiles = {
 --		{132, 29}, {132, 30}, {133, 29}, {133, 30}, {133, 31}, {134, 29}, {134, 30}, {134, 31}, {135, 29}, {135, 30}, {135, 31}, {136, 29}, -- old map
@@ -2318,11 +2318,12 @@ DefineProvince("Hungary", {
 	SettlementLocation = {535, 120}, -- Pest
 	SettlementTerrain = "Plains",
 	Claims = {
+		"magyar", "Hungary",
 		"persian", "Iazyge Tribe"
 	},
 	HistoricalOwners = {
 		-264, "persian", "Iazyge Tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		919, "teuton", "Hungary", -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+		919, "magyar", "Hungary", -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		1560, "teuton", "Turkey" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalCultures = {
@@ -3610,7 +3611,19 @@ DefineProvince("Pannonia", {
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
 	Claims = {
-		"basque", "Linearware Tribe"
+		"basque", "Linearware Tribe",
+		"magyar", "Hungary"
+	},
+	HistoricalOwners = {
+		-5500, "basque", "Linearware Tribe", -- Linear Pottery culture existed in parts of Central Europe between 7000 and 2000 BC; since the other source gives them as arriving in northern Poland and Germany c. 5500 BC, let's place their beginnings at that date; Source: "Atlas de História Mundial", 2001, pp. 40-41.
+		10, "latin", "Rome", -- Pannonia was acquired by Rome in 10 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		453, "goth", "Ostrogoth Tribe", -- Walamer was king over the Ostrogoths in Pannonia (between the Danube and the Drave) when Attila's empire collapsed in 453 AD; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 6.
+		474, "", "", -- In 474 AD the Ostrogoths left Pannonia to settle in Macedonia under the aegis of the Eastern Roman Emperor, and in that same year Theodemer died, being succeeded by Theoderic; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 7.
+		919, "magyar", "Hungary", -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+		1560, "teuton", "Turkey" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalCultures = {
+		-5500, "basque"
 	},
 	HistoricalModifiers = {
 		1367, "upgrade-university", true -- University founded in Fünfkirchen in 1367. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.
@@ -4251,7 +4264,7 @@ DefineProvince("Slovakia", {
 		-264, "celt", "Cotini Tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		-9, "teuton", "Quadi Tribe", -- if the Boii were conquered by the Marcomanni in 9 BC, the Quadi probably moved to Moravia and Slovakia at around the same time
 		526, "teuton", "Lombard Tribe", -- political situation in 526-600 in Europe; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
-		919, "teuton", "Hungary", -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+		919, "magyar", "Hungary", -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		1560, "teuton", "Austria", -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalCultures = {
