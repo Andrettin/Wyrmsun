@@ -76,7 +76,7 @@ https://github.com/Andrettin/Wyrmsun
 - New tribes can now split off from your tribe (settling unoccupied nearby provinces) under certain circumstances.
 - Factions now have capitals (identified by a crown symbol on the tile) (crown symbol graphics by Jinn).
 - Heroes being in a province is now marked by a star symbol (graphics by Jinn).
-- Roads can now be built (linking your faction's capital to tiles with roads is necessary to allow them to produce over 200 output of their resource; only polities can build roads).
+- Roads can now be built (linking your faction's capital to tiles with roads is necessary to allow them to produce over 200 output of their resource; only polities can build roads) (road graphics by Mrmo Tarius).
 - Building a dock in a province's settlement now connects its location to the faction capital as if there were a road to it.
 - Add 1 lumber resource tile to Svarinshaug (Nidavellir).
 - Added Thracian Sea water province (Earth).
