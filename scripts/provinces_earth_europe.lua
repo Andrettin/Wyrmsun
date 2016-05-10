@@ -74,7 +74,7 @@ DefineProvince("Akershus", {
 	Tiles = {
 		{510, 85}, {510, 86},
 		{511, 84}, {511, 85},
-		{512, 85},
+		{512, 84}, {512, 85},
 		{513, 85}
 	},
 	CulturalNames = {
@@ -2097,6 +2097,30 @@ DefineProvince("Hanover", {
 	Regions = {"Europe", "Germany-Netherlands", "West and Central Europe"}
 })
 
+DefineProvince("Hedmark", {
+	World = "Earth",
+	Tiles = {
+		{508, 79},
+		{509, 78}, {509, 79}, {509, 80},
+		{510, 78}, {510, 79}, {510, 80},
+		{511, 78}, {511, 79}, {511, 80}, {511, 81}, {511, 82},
+		{512, 79}, {512, 80}, {512, 81}, {512, 82}, {512, 83},
+		{513, 79}, {513, 80}, {513, 81}, {513, 82}, {513, 83}, {513, 84},
+		{514, 79}, {514, 80}, {514, 81}, {514, 82}, {514, 83}, {514, 84},
+		{515, 81}, {515, 82}, {515, 84}
+	},
+	CulturalNames = {
+		"norse", "Hedmark"
+	},
+	SettlementLocation = {512, 83}, -- Hamar
+	Map = "maps/random/random-map-forest.smp",
+	SettlementTerrain = "Plains",
+	Claims = {
+		"norse", "Norway"
+	},
+	Regions = {"Europe", "Scandinavia", "West and Central Europe"}
+})
+
 DefineProvince("Hesse", {
 	World = "Earth",
 	CulturalNames = {
@@ -3375,7 +3399,12 @@ DefineProvince("Normandy", {
 DefineProvince("Norrland", {
 	World = "Earth",
 	Tiles = {
-		{519, 72},
+		{514, 75}, {514, 76}, {514, 77}, {514, 78},
+		{515, 74}, {515, 75}, {515, 76}, {515, 77}, {515, 78}, {515, 79}, {515, 80},
+		{516, 74}, {516, 75}, {516, 76}, {516, 77}, {516, 78}, {516, 79}, {516, 80}, {516, 81}, {516, 82},
+		{517, 74}, {517, 75}, {517, 76}, {517, 77}, {517, 78}, {517, 79}, {517, 80}, {517, 81}, {517, 82},
+		{518, 74}, {518, 75}, {518, 76}, {518, 77}, {518, 78}, {518, 79}, {518, 80}, {518, 81}, {518, 82}, {518, 83},
+		{519, 72}, {519, 74}, {519, 75}, {519, 76}, {519, 77}, {519, 78}, {519, 79}, {519, 80}, {519, 81}, {519, 82}, {519, 83},
 		{520, 71}, {520, 72}, {520, 73}, {520, 74}, {520, 75}, {520, 76}, {520, 77}, {520, 78}, {520, 79}, {520, 80}, {520, 81}, {520, 82}, {520, 83}, {520, 84},
 		{521, 68}, {521, 69}, {521, 70}, {521, 71}, {521, 72}, {521, 73}, {521, 74}, {521, 75}, {521, 76}, {521, 77}, {521, 78}, {521, 79}, {521, 80}, {521, 81}, {521, 82}, {521, 83}, {521, 84},
 		{522, 68}, {522, 69}, {522, 70}, {522, 71}, {522, 72}, {522, 73}, {522, 74}, {522, 75}, {522, 76}, {522, 77}, {522, 78}, {522, 79}, {522, 80}, {522, 81}, {522, 82}, {522, 83}, {522, 84},
@@ -3432,7 +3461,7 @@ DefineProvince("North Trondelag", {
 		{510, 74},
 		{511, 72}, {511, 73}, {511, 74}, {511, 75},
 		{512, 72}, {512, 73}, {512, 74}, {512, 75},
-		{513, 71}, {513, 72}, {513, 73}, {513, 74}, {513, 75},
+		{513, 71}, {513, 72}, {513, 73}, {513, 74}, {513, 75}, {513, 76},
 		{514, 71}, {514, 72}, {514, 73}, {514, 74},
 		{515, 71}, {515, 72}, {515, 73},
 		{516, 71}, {516, 72}, {516, 73},
@@ -4138,7 +4167,8 @@ DefineProvince("Scania", {
 	Claims = {
 		"basque", "Ertebolle Tribe",
 		"basque", "Gylfing Tribe",
-		"norse", "Dane Tribe"
+		"norse", "Dane Tribe",
+		"norse", "Scania"
 	},
 	HistoricalOwners = {
 		-5800, "basque", "Ertebolle Tribe", -- Coastal Ertebolle Mesolithic sites and shell middens begin being occupied c. 5800 BC; they lived in eastern Jutland (i.e. Ertebolle itself on the Limfjord in northern Jutland, Bjornsholm), the Danish isles (the Karrebaek-Dybso Fjord sites in Zealand - which could sustain c. 250 people), and southern Sweden (Tagerup in a fjord on Scania - this site had a previous Kongemose occupation); Ertebolle people used pottery and did large-quantity fishing via traps or weirs; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 136.
@@ -4326,6 +4356,34 @@ DefineProvince("Slovakia", {
 	Regions = {"Czechoslovakia", "Europe", "West and Central Europe"}
 })
 
+DefineProvince("South Trondelag", {
+	World = "Earth",
+	Tiles = {
+		{504, 75},
+		{505, 75}, {505, 76},
+		{506, 75}, {506, 76}, {506, 78},
+		{507, 75}, {507, 76}, {507, 77}, {507, 78},
+		{508, 74}, {508, 75}, {508, 76}, {508, 77}, {508, 78},
+		{509, 73}, {509, 74}, {509, 75}, {509, 76}, {509, 77},
+		{510, 73}, {510, 75}, {510, 76}, {510, 77},
+		{511, 76}, {511, 77},
+		{512, 76}, {512, 77}, {512, 78},
+		{513, 77}, {513, 78},
+		{514, 78}
+	},
+	CulturalNames = {
+		"norse", "Sør-Trøndelag"
+	},
+	SettlementLocation = {509, 75}, -- Trondheim
+	Map = "maps/random/random-map-forest.smp",
+	SettlementTerrain = "Plains",
+	Coastal = true,
+	Claims = {
+		"norse", "Norway"
+	},
+	Regions = {"Europe", "Scandinavia", "West and Central Europe"}
+})
+
 DefineProvince("Styria", {
 	World = "Earth",
 	CulturalNames = {
@@ -4409,8 +4467,8 @@ DefineProvince("Sweden", {
 	Tiles = {
 --		{129, 20}, {130, 20}, {130, 21}, {131, 21}, {132, 21}, -- old map
 		{514, 85}, {514, 86},
-		{515, 85}, {515, 86}, {515, 87},
-		{516, 82}, {516, 83}, {516, 84}, {516, 85}, {516, 86}, {516, 87},
+		{515, 83}, {515, 85}, {515, 86}, {515, 87},
+		{516, 83}, {516, 84}, {516, 85}, {516, 86}, {516, 87},
 		{517, 83}, {517, 84}, {517, 85}, {517, 86}, {517, 87},
 		{518, 84}, {518, 85}, {518, 86},
 		{519, 84}, {519, 85}, {519, 86},

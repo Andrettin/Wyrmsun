@@ -124,6 +124,14 @@ DefineFaction("Orkney", { -- Earldom of Orkney
 	DevelopsTo = {"Norway"}
 })
 
+DefineFaction("Scania", {
+	Civilization = "norse",
+	Type = "polity",
+	Colors = {"green"},
+	DefaultTier = "kingdom",
+	DevelopsTo = {"Denmark", "Sweden"}
+})
+
 DefineFaction("Sweden", {
 	Civilization = "norse",
 	Type = "polity",

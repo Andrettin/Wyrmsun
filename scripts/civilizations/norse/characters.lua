@@ -914,8 +914,9 @@ DefineCharacter("Eystein Yngling", { -- Source: Snorri Sturlson, "Heimskringla",
 	}
 })
 
-DefineCharacter("Hogne", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 246.
-	Name = "Hogne", -- Hogne of Niardö
+DefineCharacter("Hogne of Niardö", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 246.
+	Name = "Hogne",
+	ExtraName = "of Niardö",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
@@ -928,7 +929,7 @@ DefineCharacter("Solve", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol
 	Type = "unit-teuton-swordsman", -- sea-king
 	Civilization = "norse",
 	ProvinceOfOrigin = "North Trondelag", -- from Niardö, an island in "North Drontheim" (North Trondheim)
-	Father = "Hogne",
+	Father = "Hogne of Niardö",
 	DateReferenceCharacter = "Adils Yngling", -- Solve slew Adils by burning
 	HistoricalTitles = {
 		"head-of-state", 0, 0, "norse", "Swede Tribe" -- Solve became king of Sweden after killing Adils Yngling, but eventually he was killed and Adils' son made king
@@ -948,6 +949,415 @@ DefineCharacter("Yngvar Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 
 	HistoricalTitles = {
 		"head-of-state", 0, 0, "norse", "Swede Tribe"
 	}
+})
+
+DefineCharacter("Onund Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 247-248.
+	Name = "Onund",
+	FamilyName = "Yngling",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Sweden",
+	Father = "Yngvar Yngling",
+	Quote = _("\"Or else perhaps the wood-grown land, / Which long had felt his conquering hand, / Uprose at length in deadly strife, / And pressed out Onund's hated life.\" - Thiodolf of Huine"),
+	HistoricalTitles = {
+		"head-of-state", 0, 0, "norse", "Swede Tribe"
+	}
+})
+
+DefineCharacter("Ingiald the Evil-Adviser Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 248-254.
+	Name = "Ingiald",
+	ExtraName = "the Evil-Adviser",
+	FamilyName = "Yngling",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Sweden",
+	Father = "Onund Yngling",
+	Quote = _("\"On his own hearth the fire he raised, / A deed his foemen even praised; / By his own hand he perished so, / And life for freedom did forego.\" - Thiodolf of Huine"),
+	HistoricalTitles = {
+		"head-of-state", 0, 0, "norse", "Swede Tribe"
+	}
+	-- married to Gauthild
+})
+
+DefineCharacter("Yngvar", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 248, 250.
+	Name = "Yngvar",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Sweden", -- correct?
+	DateReferenceCharacter = "Onund Yngling" -- lived during the reign of Onund over Sweden
+	-- district-king of Fiadryndaland (in Sweden)
+})
+
+DefineCharacter("Alf Yngvarson", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 248, 250.
+	Name = "Alf",
+	ExtraName = "Yngvarson", -- to differentiate him from the other Alf
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Sweden", -- correct?
+	Father = "Yngvar"
+})
+
+DefineCharacter("Agnar Yngvarson", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 248, 250.
+	Name = "Agnar",
+	ExtraName = "Yngvarson", -- to differentiate him from the other Agnar
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Sweden", -- correct?
+	Father = "Yngvar"
+})
+
+DefineCharacter("Svipdag the Blind", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 248, 253.
+	Name = "Svipdag",
+	ExtraName = "the Blind",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Sweden", -- presumably from Fiundaland, where Upsal is located
+	DateReferenceCharacter = "Onund Yngling" -- lived during the reign of Onund over Sweden
+	-- district-king of Fiundaland (in Sweden)
+	-- Ingiald Yngling's foster-father
+})
+
+DefineCharacter("Gautvid", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 248, 253.
+	Name = "Gautvid",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Sweden",
+	Father = "Svipdag the Blind"
+	-- Ingiald Yngling's foster-brother
+})
+
+DefineCharacter("Gaut", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 248-249.
+	Name = "Gaut",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Gotaland" -- presumably
+})
+
+DefineCharacter("Gautrek the Mild", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 248-249.
+	Name = "Gautrek",
+	ExtraName = "the Mild",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Gotaland", -- presumably
+	Father = "Gaut"
+})
+
+DefineCharacter("Algaut", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 248-249.
+	Name = "Algaut",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Gotaland", -- presumably
+	Father = "Gautrek the Mild",
+	HistoricalTitles = {
+		"head-of-state", 0, 0, "norse", "Geat Tribe" -- was a king - apparently of Got(a?)land
+	}
+})
+
+DefineCharacter("Olaf Skygne", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 255.
+	Name = "Olaf",
+	ExtraName = "Skygne",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Sweden" -- from Nerike
+	-- king in Nerike
+})
+
+DefineCharacter("Alofa", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 255.
+	Name = "Alofa",
+	Gender = "female",
+	Type = "unit-teuton-archer",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Sweden", -- from Nerike
+	Father = "Olaf Skygne"
+})
+
+DefineCharacter("Gauthild", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 248-249, 255.
+	Name = "Gauthild", -- name also written in the source as "Gautheld"
+	Gender = "female",
+	Type = "unit-teuton-archer",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Gotaland", -- presumably
+	Father = "Algaut",
+	Mother = "Alofa"
+})
+
+DefineCharacter("Spossniall", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 250.
+	Name = "Spossniall",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Sweden",
+	DateReferenceCharacter = "Ingiald the Evil-Adviser Yngling" -- lived during the reign of Ingiald over Sweden
+	-- (district-)king of Nerike (in Sweden)
+})
+
+DefineCharacter("Sighvat", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 250.
+	Name = "Sighvat",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Sweden", -- correct?
+	DateReferenceCharacter = "Ingiald the Evil-Adviser Yngling" -- lived during the reign of Ingiald over Sweden
+	-- (district-)king of Aattundaland (in Sweden)
+})
+
+DefineCharacter("Granmar", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 250-252.
+	Name = "Granmar",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Sweden",
+	DateReferenceCharacter = "Ingiald the Evil-Adviser Yngling" -- lived during the reign of Ingiald over Sweden
+	-- (district-)king of Sondermanland (in Sweden)
+	-- married to Hilda
+})
+
+DefineCharacter("Hogne", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 252.
+	Name = "Hogne",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Gotaland",
+	DateReferenceCharacter = "Ingiald the Evil-Adviser Yngling" -- lived during the reign of Ingiald over Sweden
+	-- ruled over East Gotaland
+})
+
+DefineCharacter("Hildur", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 252.
+	Name = "Hildur",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Gotaland",
+	Father = "Hogne"
+})
+
+DefineCharacter("Hilda", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 252.
+	Name = "Hilda",
+	Gender = "female",
+	Type = "unit-teuton-archer",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Sweden",
+	Father = "Hogne"
+	-- married to Granmar
+})
+
+DefineCharacter("Folkvid", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 251.
+	Name = "Folkvid",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Sweden", -- presumably from Fiundaland (where his father ruled), where Upsal is located
+	Father = "Svipdag the Blind"
+})
+
+DefineCharacter("Hylvid", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 251, 253.
+	Name = "Hylvid",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Sweden", -- presumably from Fiundaland (where his father ruled), where Upsal is located
+	Father = "Svipdag the Blind"
+})
+
+DefineCharacter("Ylfing", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 251.
+	Name = "Ylfing",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+--	ProvinceOfOrigin = -- ?
+})
+
+DefineCharacter("Hiorvard Ylfing", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 251-252.
+	Name = "Hiorvard",
+	FamilyName = "Ylfing",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+--	ProvinceOfOrigin = -- ?
+	Father = "Ylfing",
+	DateReferenceCharacter = "Ingiald the Evil-Adviser Yngling" -- lived during the reign of Ingiald over Sweden
+	-- was a king (of where?)
+	-- married to Hildigunna
+})
+
+DefineCharacter("Hildigunna", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 251-252.
+	Name = "Hildigunna",
+	Gender = "female",
+	Type = "unit-teuton-archer",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Sweden",
+	Father = "Granmar",
+	Mother = "Hilda"
+	-- described as beautiful
+	-- married to Hiorvard Ylfing
+})
+
+DefineCharacter("Aasa the Evil-Adviser Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 253-254.
+	Name = "Aasa",
+	ExtraName = "the Evil-Adviser",
+	FamilyName = "Yngling",
+	Gender = "female",
+	Type = "unit-teuton-archer",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Sweden",
+	Father = "Ingiald the Evil-Adviser Yngling",
+	Mother = "Gauthild"
+	-- married Gudrod (king of Scania)
+})
+
+DefineCharacter("Olaf Treefeller Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 253-255.
+	Name = "Olaf",
+	ExtraName = "Treefeller",
+	FamilyName = "Yngling",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Sweden",
+	Father = "Ingiald the Evil-Adviser Yngling",
+	Mother = "Gauthild"
+	-- his foster-father was Bove, who lived in West Gotland
+	-- married to Solveig
+})
+
+DefineCharacter("Bove", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 253-254.
+	Name = "Bove",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Gotaland", -- from West Gotaland
+	DateReferenceCharacter = "Gauthild" -- Gauthild sent her son to be fostered by Bove
+})
+
+DefineCharacter("Savre Flettir", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 253-254.
+	Name = "Savre",
+	ExtraName = "Flettir",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Gotaland", -- from West Gotaland
+	Father = "Bove"
+})
+
+DefineCharacter("Gudrod", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 254.
+	Name = "Gudrod",
+	NameElements = {
+		"compound", "prefix", "old-norse", "noun", {"God"}, "Guð" -- presumably
+--		"compound", "suffix" -- ?
+	},
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Scania",
+	DateReferenceCharacter = "Ingiald the Evil-Adviser Yngling", -- lived during the reign of Ingiald over Sweden
+	HistoricalTitles = {
+		"head-of-state", 0, 0, "norse", "Scania" -- king of Scania
+	}
+	-- married Aasa Yngling
+})
+
+DefineCharacter("Halfdan", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 254.
+	Name = "Halfdan",
+	NameElements = {
+		"compound", "prefix", "old-norse", "adjective", "no-case", "Halfr", -- presumably; used "no-case" to avoid the nominative ending "-r"
+--		"compound", "suffix", -- ?
+	},
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Scania",
+	DateReferenceCharacter = "Gudrod" -- Gudrod's brother
+})
+
+DefineCharacter("Ivar Vidfadme", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 254-255.
+	Name = "Ivar",
+	ExtraName = "Vidfadme",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Scania",
+	Father = "Halfdan",
+	HistoricalTitles = {
+		"head-of-state", 0, 0, "norse", "Scania", -- king of Scania
+		"head-of-state", 0, 0, "norse", "Swede Tribe" -- conquered Sweden
+	}
+})
+
+DefineCharacter("Solve the Old", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 255.
+	Name = "Solve",
+	ExtraName = "the Old",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Hedmark" -- correct? from the Soloer Islands
+	-- settled the Soloer Islands
+})
+
+DefineCharacter("Solve Solvesson", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 255.
+	Name = "Solve",
+	ExtraName = "Solvesson",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Hedmark", -- correct? from the Soloer Islands
+	Father = "Solve the Old"
+})
+
+DefineCharacter("Halfdan Guldtand", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 255.
+	Name = "Halfdan",
+	ExtraName = "Guldtand",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Hedmark", -- correct? from the Soloer Islands
+	Father = "Solve Solvesson"
+})
+
+DefineCharacter("Solveig", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 255.
+	Name = "Solveig", -- also known as Solva
+	Gender = "female",
+	Type = "unit-teuton-archer",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Hedmark", -- correct? from the Soloer Islands
+	Father = "Halfdan Guldtand",
+	DateReferenceCharacter = "Olaf Treefeller Yngling" -- married to Olaf Yngling
+})
+
+DefineCharacter("Ingiald Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 255.
+	Name = "Ingiald",
+	FamilyName = "Yngling",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Sweden", -- (apparently) from Vermeland
+	Father = "Olaf Treefeller Yngling",
+	Mother = "Solveig"
+})
+
+DefineCharacter("Halfdan Huitbein Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 255.
+	Name = "Halfdan",
+	NameElements = {
+		"compound", "prefix", "old-norse", "adjective", "no-case", "Halfr", -- presumably; used "no-case" to avoid the nominative ending "-r"
+--		"compound", "suffix", -- ?
+	},
+	ExtraName = "Huitbein",
+	FamilyName = "Yngling",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Sweden", -- (apparently) from Vermeland
+	Father = "Olaf Treefeller Yngling",
+	Mother = "Solveig"
 })
 
 DefineCharacter("Svan the Red", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 222.
