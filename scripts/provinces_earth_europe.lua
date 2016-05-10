@@ -3533,6 +3533,26 @@ DefineProvince("Orkney", {
 	Regions = {"British Isles", "Europe", "Northwest Europe", "West and Central Europe"}
 })
 
+DefineProvince("Ostfold", {
+	World = "Earth",
+	Tiles = {
+		{511, 86}, {511, 87},
+		{512, 86}, {512, 87},
+		{513, 86}, {513, 87}, {513, 88}
+	},
+	CulturalNames = {
+		"norse", "Østfold"
+	},
+	SettlementLocation = {511, 86}, -- Oslo
+	Map = "maps/random/random-map-forest.smp",
+	SettlementTerrain = "Plains",
+	Coastal = true,
+	Claims = {
+		"norse", "Norway"
+	},
+	Regions = {"Europe", "Scandinavia", "West and Central Europe"}
+})
+
 DefineProvince("Overijssel", {
 	World = "Earth",
 	FactionCulturalNames = {
