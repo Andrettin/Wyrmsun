@@ -74,7 +74,8 @@ DefineProvince("Akershus", {
 	Tiles = {
 		{510, 85}, {510, 86},
 		{511, 84}, {511, 85},
-		{512, 85}
+		{512, 85},
+		{513, 85}
 	},
 	CulturalNames = {
 		"norse", "Akershus"
