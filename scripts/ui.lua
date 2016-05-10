@@ -73,12 +73,12 @@ if not (ui_loaded_first_time) then
 		end
 		DefineDecorations({Index = "CarryResource", HideNeutral = false, CenterX = true,OffsetPercent = {50, 100},Method = {"sprite", {"sprite-mana"}}})
 	end
-	DefineSprites({Name = "sprite-inspire", File = "ui/strength.png", Offset = {1, 1}, Size = {16, 16}})
-	DefineSprites({Name = "sprite-slow", File = "ui/slow.png", Offset = {1, 1}, Size = {16, 16}})
-	DefineSprites({Name = "sprite-stun", File = "ui/stun.png", Offset = {1, 1}, Size = {16, 16}})
-	DefineSprites({Name = "sprite-bleeding", File = "ui/bleeding.png", Offset = {1, 1}, Size = {16, 16}})
-	DefineSprites({Name = "sprite-regeneration", File = "ui/regeneration.png", Offset = {1, 1}, Size = {16, 16}})
-	DefineSprites({Name = "sprite-level-up", File = "ui/level_up.png", Offset = {1, 1}, Size = {16, 16}})
+	DefineSprites({Name = "sprite-inspire", File = "ui/status_effects/inspire.png", Offset = {1, 1}, Size = {16, 16}})
+	DefineSprites({Name = "sprite-slow", File = "ui/status_effects/slow.png", Offset = {1, 1}, Size = {16, 16}})
+	DefineSprites({Name = "sprite-stun", File = "ui/status_effects/stun.png", Offset = {1, 1}, Size = {16, 16}})
+	DefineSprites({Name = "sprite-bleeding", File = "ui/status_effects/bleeding.png", Offset = {1, 1}, Size = {16, 16}})
+	DefineSprites({Name = "sprite-regeneration", File = "ui/status_effects/regeneration.png", Offset = {1, 1}, Size = {16, 16}})
+	DefineSprites({Name = "sprite-level-up", File = "ui/status_effects/level_up.png", Offset = {1, 1}, Size = {16, 16}})
 
 	DefineDecorations({Index = "Inspire", ShowOpponent = true, ShowWhenMax = true,
 	  Offset = {0, 0}, Method = {"static-sprite", {"sprite-inspire", 0}}})
@@ -320,7 +320,7 @@ UI.StatusLine.Width = Video.Width - 16 - 2 - 176
 UI.StatusLine.Font = Fonts["game"]
 
 -- gold
-UI.Resources[1].G = CGraphic:New("ui/gold.png", 14, 14)
+UI.Resources[1].G = CGraphic:New("ui/resources/gold.png", 14, 14)
 UI.Resources[1].IconFrame = 0
 UI.Resources[1].IconX = 154 + 0
 UI.Resources[1].IconY = 0
@@ -328,7 +328,7 @@ UI.Resources[1].TextX = 154 + 0 + 18
 UI.Resources[1].TextY = 1
 
 -- lumber
-UI.Resources[2].G = CGraphic:New("ui/lumber.png", 14, 14)
+UI.Resources[2].G = CGraphic:New("ui/resources/lumber.png", 14, 14)
 UI.Resources[2].IconFrame = 0
 UI.Resources[2].IconX = 154 + 75
 UI.Resources[2].IconY = 0
@@ -336,7 +336,7 @@ UI.Resources[2].TextX = 154 + 75 + 18
 UI.Resources[2].TextY = 1
 
 -- stone
-UI.Resources[5].G = CGraphic:New("ui/stone.png", 14, 14)
+UI.Resources[5].G = CGraphic:New("ui/resources/stone.png", 14, 14)
 UI.Resources[5].IconFrame = 0
 UI.Resources[5].IconX = 154 + 150
 UI.Resources[5].IconY = 0
@@ -344,7 +344,7 @@ UI.Resources[5].TextX = 154 + 150 + 18
 UI.Resources[5].TextY = 1
 
 -- oil
---UI.Resources[3].G = CGraphic:New("ui/oil.png", 14, 14)
+--UI.Resources[3].G = CGraphic:New("ui/resources/oil.png", 14, 14)
 --UI.Resources[3].IconFrame = 0
 --UI.Resources[3].IconX = 154 + 150
 --UI.Resources[3].IconY = 0
@@ -352,7 +352,7 @@ UI.Resources[5].TextY = 1
 --UI.Resources[3].TextY = 1
 
 -- coal
---UI.Resources[6].G = CGraphic:New("ui/coal.png", 14, 14)
+--UI.Resources[6].G = CGraphic:New("ui/resources/coal.png", 14, 14)
 --UI.Resources[6].IconFrame = 0
 --UI.Resources[6].IconX = 154 + 150
 --UI.Resources[6].IconY = 0
@@ -367,8 +367,8 @@ UI.Resources[6].TextX = -1
 UI.Resources[6].TextY = -1
 
 -- food
-if (CanAccessFile("ui/food.png")) then
-  UI.Resources[FoodCost].G = CGraphic:New("ui/food.png", 14, 14)
+if (CanAccessFile("ui/resources/food.png")) then
+  UI.Resources[FoodCost].G = CGraphic:New("ui/resources/food.png", 14, 14)
 end
 UI.Resources[FoodCost].IconFrame = 0
 UI.Resources[FoodCost].IconX = Video.Width - 138 - 99 - 26
@@ -377,8 +377,8 @@ UI.Resources[FoodCost].TextX = Video.Width - 138 + 18 - 99 - 26
 UI.Resources[FoodCost].TextY = 1
 
 -- score
-if (CanAccessFile("ui/score.png"))then
-  UI.Resources[ScoreCost].G = CGraphic:New("ui/score.png", 14, 14)
+if (CanAccessFile("ui/resources/score.png"))then
+  UI.Resources[ScoreCost].G = CGraphic:New("ui/resources/score.png", 14, 14)
 end
 UI.Resources[ScoreCost].IconFrame = 0
 UI.Resources[ScoreCost].IconX = Video.Width - 68 - 99 - 26
@@ -386,54 +386,54 @@ UI.Resources[ScoreCost].IconY = 0
 UI.Resources[ScoreCost].TextX = Video.Width - 68 + 18 - 99 - 26
 UI.Resources[ScoreCost].TextY = 1
 
-UI.Resources[ManaResCost].G = CGraphic:New("ui/mana_icon.png", 14, 14)
+UI.Resources[ManaResCost].G = CGraphic:New("ui/resources/mana_icon.png", 14, 14)
 UI.Resources[ManaResCost].IconFrame = 0
 UI.Resources[ManaResCost].IconX = -100
 UI.Resources[ManaResCost].IconY = -100
 UI.Resources[ManaResCost].TextX = -100
 UI.Resources[ManaResCost].TextY = -100
 
-UI.Resources[GetResourceIdByName("grain")].G = CGraphic:New("ui/grain.png", 14, 14)
+UI.Resources[GetResourceIdByName("grain")].G = CGraphic:New("ui/resources/grain.png", 14, 14)
 UI.Resources[GetResourceIdByName("grain")].IconFrame = 0
 UI.Resources[GetResourceIdByName("grain")].IconX = Video.Width
 UI.Resources[GetResourceIdByName("grain")].IconY = Video.Height
 
-UI.Resources[GetResourceIdByName("mushrooms")].G = CGraphic:New("ui/mushrooms.png", 14, 14)
+UI.Resources[GetResourceIdByName("mushrooms")].G = CGraphic:New("ui/resources/mushrooms.png", 14, 14)
 UI.Resources[GetResourceIdByName("mushrooms")].IconFrame = 0
 UI.Resources[GetResourceIdByName("mushrooms")].IconX = Video.Width
 UI.Resources[GetResourceIdByName("mushrooms")].IconY = Video.Height
 
-UI.Resources[GetResourceIdByName("fish")].G = CGraphic:New("ui/fish.png", 14, 14)
+UI.Resources[GetResourceIdByName("fish")].G = CGraphic:New("ui/resources/fish.png", 14, 14)
 UI.Resources[GetResourceIdByName("fish")].IconFrame = 0
 UI.Resources[GetResourceIdByName("fish")].IconX = Video.Width
 UI.Resources[GetResourceIdByName("fish")].IconY = Video.Height
 
-UI.Resources[GetResourceIdByName("silver")].G = CGraphic:New("ui/silver.png", 14, 14)
+UI.Resources[GetResourceIdByName("silver")].G = CGraphic:New("ui/resources/silver.png", 14, 14)
 UI.Resources[GetResourceIdByName("silver")].IconFrame = 0
 UI.Resources[GetResourceIdByName("silver")].IconX = Video.Width
 UI.Resources[GetResourceIdByName("silver")].IconY = Video.Height
 
-UI.Resources[GetResourceIdByName("copper")].G = CGraphic:New("ui/copper.png", 14, 14)
+UI.Resources[GetResourceIdByName("copper")].G = CGraphic:New("ui/resources/copper.png", 14, 14)
 UI.Resources[GetResourceIdByName("copper")].IconFrame = 0
 UI.Resources[GetResourceIdByName("copper")].IconX = Video.Width
 UI.Resources[GetResourceIdByName("copper")].IconY = Video.Height
 
-UI.Resources[GetResourceIdByName("labor")].G = CGraphic:New("ui/labor.png", 14, 14)
+UI.Resources[GetResourceIdByName("labor")].G = CGraphic:New("ui/resources/labor.png", 14, 14)
 UI.Resources[GetResourceIdByName("labor")].IconFrame = 0
 UI.Resources[GetResourceIdByName("labor")].IconX = Video.Width
 UI.Resources[GetResourceIdByName("labor")].IconY = Video.Height
 
-UI.Resources[GetResourceIdByName("research")].G = CGraphic:New("ui/research.png", 14, 14)
+UI.Resources[GetResourceIdByName("research")].G = CGraphic:New("ui/resources/research.png", 14, 14)
 UI.Resources[GetResourceIdByName("research")].IconFrame = 0
 UI.Resources[GetResourceIdByName("research")].IconX = Video.Width
 UI.Resources[GetResourceIdByName("research")].IconY = Video.Height
 
-UI.Resources[GetResourceIdByName("prestige")].G = CGraphic:New("ui/prestige.png", 14, 14)
+UI.Resources[GetResourceIdByName("prestige")].G = CGraphic:New("ui/resources/prestige.png", 14, 14)
 UI.Resources[GetResourceIdByName("prestige")].IconFrame = 0
 UI.Resources[GetResourceIdByName("prestige")].IconX = Video.Width
 UI.Resources[GetResourceIdByName("prestige")].IconY = Video.Height
 
-UI.Resources[GetResourceIdByName("leadership")].G = CGraphic:New("ui/score.png", 14, 14)
+UI.Resources[GetResourceIdByName("leadership")].G = CGraphic:New("ui/resources/score.png", 14, 14)
 UI.Resources[GetResourceIdByName("leadership")].IconFrame = 0
 UI.Resources[GetResourceIdByName("leadership")].IconX = Video.Width
 UI.Resources[GetResourceIdByName("leadership")].IconY = Video.Height

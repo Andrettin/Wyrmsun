@@ -27,24 +27,24 @@
 
 DefineUpgrade("upgrade-library", {
 	Name = _("Library"),
-	ModifierGraphicFile = "ui/book.png",
+	ModifierGraphicFile = "ui/modifiers/book.png",
 	GrandStrategyProductionModifier = {"research", 1}
 })
 
 DefineUpgrade("upgrade-college", {
 	Name = _("College"),
-	ModifierGraphicFile = "ui/diploma.png",
+	ModifierGraphicFile = "ui/modifiers/diploma.png",
 	GrandStrategyProductionModifier = {"research", 1}
 })
 
 DefineUpgrade("upgrade-university", {
 	Name = _("University"),
-	ModifierGraphicFile = "ui/university.png",
+	ModifierGraphicFile = "ui/modifiers/university.png",
 	GrandStrategyProductionModifier = {"research", 2}
 })
 
 DefineUpgrade("upgrade-courthouse", {
 	Name = _("Courthouse"),
-	ModifierGraphicFile = "ui/courthouse.png",
+	ModifierGraphicFile = "ui/modifiers/courthouse.png",
 	RevoltRiskModifier = -1
 })

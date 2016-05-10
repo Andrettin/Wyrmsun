@@ -2230,7 +2230,7 @@ function DrawGrandStrategyInterface()
 				for key, value in pairs(GrandStrategyCommodities) do
 					local icon_offset_y = Video.Height - 186 + 8 + (item_y * 47)
 
-					local b = AddUIElement("ui/" .. string.lower(key) .. ".png", Video.Width - 243 + 12, icon_offset_y + 3)
+					local b = AddUIElement("ui/resources/" .. string.lower(key) .. ".png", Video.Width - 243 + 12, icon_offset_y + 3)
 
 					-- add trade bid/offer arrows
 					b = AddGrandStrategyImageButton("", "", Video.Width - 243 + 112 - 2 - 24, icon_offset_y, function()

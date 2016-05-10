@@ -36,9 +36,30 @@ DefineBoolFlags("Capturable")
 DefineUnitType("unit-revealer", {})
 
 -- And declare upgrade for dependency...
+CUpgrade:New("upgrade-healing")
 CUpgrade:New("upgrade-portent")
 CUpgrade:New("upgrade-stun")
 CUpgrade:New("upgrade-puncture")
+
+DefineSpell("spell-healing",
+	"showname", _("Healing"),
+	"manacost", 2,
+	"range", 6,
+	"target", "unit",
+	"action", {
+		{"adjust-vitals", "hit-points", 1, "max-multi-cast", 4},
+		{"spawn-missile", "missile", "missile-magic-effect", "start-point", {"base", "target"}}
+	},
+	"condition", {
+		"organic", "only",
+		"Building", "false",
+		"HitPoints", {MaxValuePercent = 100}
+	},
+	"sound-when-cast", "magic-holy",
+	"depend-upgrade", "upgrade-healing",
+	"autocast", {"range", 6, "condition", {"alliance", "only", "HitPoints", {MaxValuePercent = 90}}},
+	"ai-cast", {"range", 6, "condition", {"alliance", "only", "HitPoints", {MaxValuePercent = 90}}}
+)
 
 DefineSpell("spell-herbal-cure",
 	"showname", _("Herbal Cure"),
@@ -70,6 +91,24 @@ DefineSpell("spell-portent",
 	},
 	"sound-when-cast", "magic-holy",
 	"depend-upgrade", "upgrade-portent"
+)
+
+DefineSpell("spell-inspire",
+	"showname", _("Inspire"),
+	"manacost", 25,
+	"range", 6,
+	"target", "unit",
+	"action", {
+		{"adjust-variable", {Inspire = 1000}},
+		{"spawn-missile", "missile", "missile-magic-effect", "start-point", {"base", "target"}}
+	},
+	"condition", {
+		"organic", "only",
+		"Inspire", {ExactValue = 0}
+	},
+	"sound-when-cast", "magic-holy",
+	"autocast", {"range", 6, "attacker", "only", "condition", {"Coward", "false", "alliance", "only"}},
+	"ai-cast", {"range", 6, "attacker", "only", "condition", {"Coward", "false", "alliance", "only"}}
 )
 
 DefineSpell("spell-slow",

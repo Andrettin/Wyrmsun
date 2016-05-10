@@ -194,6 +194,18 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-healing",
+	Size = {46, 38},
+	File = "neutral/icons/healing.png"
+})
+
+DefineIcon({
+	Name = "icon-inspire",
+	Size = {46, 38},
+	File = "neutral/icons/inspire.png"
+})
+
+DefineIcon({
 	Name = "icon-inventory",
 	Size = {46, 38},
 	File = "neutral/icons/inventory.png"

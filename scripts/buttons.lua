@@ -313,6 +313,12 @@ DefineButton( { Pos = 8, Level = 1, Icon = "icon-puncture",
 	}
 } )
 
+DefineButton( { Pos = 1, Level = 1, Icon = "icon-healing",
+	Action = "learn-ability", Value = "upgrade-healing",
+	Key = "h", Hint = _("Learn ~!Healing"), Popup = "popup-commands",
+	ForUnit = {"unit-dwarven-witness"}
+})
+
 DefineButton( { Pos = 16, Level = 1, Icon = "icon-cancel",
 	Action = "button", Value = 0,
 	Key = "escape", Hint = "Cancel (~<Esc~>)", Popup = "popup-commands",
@@ -379,6 +385,20 @@ DefineButton( { Pos = 16, Level = 2, Icon = "icon-cancel",
 } )
 
 -- Special Abilities ---------------------------------------------------
+
+DefineButton( { Pos = 4, Level = 0, Icon = "icon-inspire",
+	Action = "cast-spell", Value = "spell-inspire",
+	Description = "Inspires an organic unit to deal 50% more damage.",
+	Key = "i", Hint = _("~!Inspire"), Popup = "popup-commands",
+	ForUnit = {"unit-dwarven-witness"}
+})
+
+DefineButton( { Pos = 5, Level = 0, Icon = "icon-healing",
+	Action = "cast-spell", Value = "spell-healing",
+	Description = "Heals an organic unit.",
+	Key = "h", Hint = _("~!Healing"), Popup = "popup-commands",
+	ForUnit = {"unit-dwarven-witness"}
+})
 
 DefineButton( { Pos = 6, Level = 0, Icon = "icon-stun",
 	Action = "cast-spell", Value = "spell-stun",

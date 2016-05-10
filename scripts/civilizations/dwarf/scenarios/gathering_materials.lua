@@ -249,7 +249,7 @@ if (LoadedGame == false) then
 end
 
 -- show coal in the UI
-UI.Resources[6].G = CGraphic:New("ui/coal.png", 14, 14)
+UI.Resources[6].G = CGraphic:New("ui/resources/coal.png", 14, 14)
 UI.Resources[6].G:Load()
 UI.Resources[6].IconFrame = 0
 UI.Resources[6].IconX = 154 + 225
