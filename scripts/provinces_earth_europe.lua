@@ -90,6 +90,25 @@ DefineProvince("Akershus", {
 	Regions = {"Europe", "Scandinavia", "West and Central Europe"}
 })
 
+DefineProvince("Vestfold", {
+	World = "Earth",
+	Tiles = {
+		{508, 87},
+		{509, 86}, {509, 87}
+	},
+	CulturalNames = {
+		"norse", "Vestfold"
+	},
+	SettlementLocation = {509, 87}, -- Tønsberg
+	Map = "maps/random/random-map-forest.smp",
+	SettlementTerrain = "Plains",
+	Coastal = true,
+	Claims = {
+		"norse", "Norway"
+	},
+	Regions = {"Europe", "Scandinavia", "West and Central Europe"}
+})
+
 DefineProvince("Albania", {
 	World = "Earth",
 	Tiles = {

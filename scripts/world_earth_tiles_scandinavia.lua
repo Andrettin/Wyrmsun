@@ -32,6 +32,13 @@ DefineWorldMapTile({495, 84}, {
 	}
 })
 
+DefineWorldMapTile({508, 86}, {
+	World = "Earth",
+	CulturalSettlementNames = {
+		"norse", "Skiringssalr" -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 257.
+	}
+})
+
 DefineWorldMapTile({508, 96}, {
 	World = "Earth",
 	CulturalSettlementNames = {
@@ -43,6 +50,13 @@ DefineWorldMapTile({509, 75}, {
 	World = "Earth",
 	CulturalSettlementNames = {
 		"norse", "Trondheim"
+	}
+})
+
+DefineWorldMapTile({509, 87}, {
+	World = "Earth",
+	CulturalSettlementNames = {
+		"norse", "Tønsberg"
 	}
 })
 

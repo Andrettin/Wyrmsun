@@ -669,6 +669,10 @@ DefineCharacter("Eric Yngveson Yngling", { -- Source: Snorri Sturlson, "Heimskri
 
 DefineCharacter("Gudlög", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 237-238.
 	Name = "Gudlög",
+	NameElements = {
+		"compound", "prefix", "old-norse", "noun", {"God"}, "Guð" -- presumably
+--		"compound", "suffix" -- ?
+	},
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
@@ -1334,7 +1338,7 @@ DefineCharacter("Solveig", { -- Source: Snorri Sturlson, "Heimskringla", 1844, v
 	DateReferenceCharacter = "Olaf Treefeller Yngling" -- married to Olaf Yngling
 })
 
-DefineCharacter("Ingiald Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 255.
+DefineCharacter("Ingiald Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 255, 257.
 	Name = "Ingiald",
 	FamilyName = "Yngling",
 	Gender = "male",
@@ -1343,9 +1347,10 @@ DefineCharacter("Ingiald Yngling", { -- Source: Snorri Sturlson, "Heimskringla",
 	ProvinceOfOrigin = "Varmland", -- (apparently) from Vermeland
 	Father = "Olaf Treefeller Yngling",
 	Mother = "Solveig"
+	-- king of Værmeland (after his death his possessions went to his brother Halfdan)
 })
 
-DefineCharacter("Halfdan Huitbein Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 255.
+DefineCharacter("Halfdan Huitbein Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 255-257.
 	Name = "Halfdan",
 	NameElements = {
 		"compound", "prefix", "old-norse", "adjective", "no-case", "Halfr", -- presumably; used "no-case" to avoid the nominative ending "-r"
@@ -1358,7 +1363,65 @@ DefineCharacter("Halfdan Huitbein Yngling", { -- Source: Snorri Sturlson, "Heims
 	Civilization = "norse",
 	ProvinceOfOrigin = "Varmland", -- (apparently) from Vermeland
 	Father = "Olaf Treefeller Yngling",
-	Mother = "Solveig"
+	Mother = "Solveig",
+	Quote = _("\"Halfdan, esteemed by friends and foes, / Receives at last life's deep repose: / The aged man at last, though late, / Yielded in Thoten to stern fate.\" - Thiodolf of Huine")
+	-- ruled over Hedemark, and conquered Thoten, Hadeland and much of Westfold
+	-- married to Asa
+})
+
+DefineCharacter("Eystein the Severe", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 257.
+	Name = "Eystein",
+	NameElements = {
+--		"compound", "prefix" -- ?
+		"compound", "suffix", "old-norse", "noun", "Steinn" -- presumably
+	},
+	ExtraName = "the Severe",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Sweden" -- king of the Upland people (presumably Uppland in Sweden)
+})
+
+DefineCharacter("Asa", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 257.
+	Name = "Asa",
+	Gender = "female",
+	Type = "unit-teuton-archer",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Sweden", -- daughter of the "king of the Upland people" (presumably Uppland in Sweden)
+	Father = "Eystein the Severe"
+	-- married to Halfdan Huitbein Yngling
+})
+
+DefineCharacter("Eystein Halfdanson Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 257.
+	Name = "Eystein",
+	NameElements = {
+--		"compound", "prefix" -- ?
+		"compound", "suffix", "old-norse", "noun", "Steinn" -- presumably
+	},
+	ExtraName = "Halfdanson", -- to differentiate him from the other Eystein Yngling
+	FamilyName = "Yngling",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Hedmark", -- his father ruled over Hedemark
+	Father = "Halfdan Huitbein Yngling",
+	Mother = "Asa"
+	-- became king in Raumarige and Westfold after his father's death
+})
+
+DefineCharacter("Gudrod Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 257.
+	Name = "Gudrod",
+	NameElements = {
+		"compound", "prefix", "old-norse", "noun", {"God"}, "Guð" -- presumably
+--		"compound", "suffix" -- ?
+	},
+	FamilyName = "Yngling",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Hedmark", -- his father ruled over Hedemark
+	Father = "Halfdan Huitbein Yngling",
+	Mother = "Asa"
 })
 
 DefineCharacter("Svan the Red", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 222.
