@@ -80,7 +80,8 @@ https://github.com/Andrettin/Wyrmsun
 - Building a dock in a province's settlement now connects its location to the faction capital as if there were a road to it.
 - Add 1 lumber resource tile to Svarinshaug (Nidavellir).
 - Added Thracian Sea water province (Earth).
-- Added Akershus, Hedmark, Nordland, North Trondelag, Ostfold and South Trondelag provinces (Earth).
+- Added Akershus, Hedmark, Nordland, North Trondelag, Ostfold, South Trondelag provinces (Earth).
+- Split the Varmland province out of the Sweden one.
 - Added Myridia and Stilgar provinces (Nidavellir).
 
 * Miscellaneous

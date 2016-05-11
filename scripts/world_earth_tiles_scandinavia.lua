@@ -96,6 +96,13 @@ DefineWorldMapTile({517, 97}, {
 	}
 })
 
+DefineWorldMapTile({518, 86}, {
+	World = "Earth",
+	CulturalSettlementNames = {
+		"norse", "Karlstad"
+	}
+})
+
 DefineWorldMapTile({521, 64}, {
 	World = "Earth",
 	CulturalSettlementNames = {
@@ -131,3 +138,6 @@ DefineWorldMapTile({532, 92}, {
 	}
 })
 
+-- Fyrisvellir: name of the plains around Upsal-water (Sweden); Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 235.
+-- Myrkvafiord: name of a fiord in Sodermanland (Sweden); Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 251.
+-- Eydiskogr: name of a great uninhabited forest which used to cover the Swedish-Norwegian border on the south; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 256.

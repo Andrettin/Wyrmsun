@@ -1216,7 +1216,7 @@ DefineCharacter("Aasa the Evil-Adviser Yngling", { -- Source: Snorri Sturlson, "
 	-- married Gudrod (king of Scania)
 })
 
-DefineCharacter("Olaf Treefeller Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 253-255.
+DefineCharacter("Olaf Treefeller Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 253-256.
 	Name = "Olaf",
 	ExtraName = "Treefeller",
 	FamilyName = "Yngling",
@@ -1225,7 +1225,8 @@ DefineCharacter("Olaf Treefeller Yngling", { -- Source: Snorri Sturlson, "Heimsk
 	Civilization = "norse",
 	ProvinceOfOrigin = "Sweden",
 	Father = "Ingiald the Evil-Adviser Yngling",
-	Mother = "Gauthild"
+	Mother = "Gauthild",
+	Quote = _("\"The temple wolf, by the lake shores, / The corpse of Olaf now devours. / The clearer of forests died / At Odin's shrine by the lake side.\" - Thiodolf of Huine"), -- "temple wolf" in this instance means the fire which burned Olaf's body
 	-- his foster-father was Bove, who lived in West Gotland
 	-- married to Solveig
 })
@@ -1339,7 +1340,7 @@ DefineCharacter("Ingiald Yngling", { -- Source: Snorri Sturlson, "Heimskringla",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
-	ProvinceOfOrigin = "Sweden", -- (apparently) from Vermeland
+	ProvinceOfOrigin = "Varmland", -- (apparently) from Vermeland
 	Father = "Olaf Treefeller Yngling",
 	Mother = "Solveig"
 })
@@ -1355,7 +1356,7 @@ DefineCharacter("Halfdan Huitbein Yngling", { -- Source: Snorri Sturlson, "Heims
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
-	ProvinceOfOrigin = "Sweden", -- (apparently) from Vermeland
+	ProvinceOfOrigin = "Varmland", -- (apparently) from Vermeland
 	Father = "Olaf Treefeller Yngling",
 	Mother = "Solveig"
 })

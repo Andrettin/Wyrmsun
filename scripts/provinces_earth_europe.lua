@@ -4466,13 +4466,6 @@ DefineProvince("Sweden", {
 	World = "Earth",
 	Tiles = {
 --		{129, 20}, {130, 20}, {130, 21}, {131, 21}, {132, 21}, -- old map
-		{514, 85}, {514, 86},
-		{515, 83}, {515, 85}, {515, 86}, {515, 87},
-		{516, 83}, {516, 84}, {516, 85}, {516, 86}, {516, 87},
-		{517, 83}, {517, 84}, {517, 85}, {517, 86}, {517, 87},
-		{518, 84}, {518, 85}, {518, 86},
-		{519, 84}, {519, 85}, {519, 86},
-		{520, 85}, {520, 86}, {520, 87},
 		{521, 85}, {521, 86}, {521, 87}, {521, 88},
 		{522, 85}, {522, 86}, {522, 87}, {522, 88},
 		{523, 85}, {523, 86}, {523, 87}, {523, 88},
@@ -4516,6 +4509,36 @@ DefineProvince("Sweden", {
 	},
 	HistoricalModifiers = {
 		1477, "upgrade-university", true -- University founded in Uppsala in 1477. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.
+	},
+	Regions = {"Europe", "Scandinavia", "West and Central Europe"}
+})
+
+DefineProvince("Varmland", {
+	World = "Earth",
+	Tiles = {
+		{514, 85}, {514, 86},
+		{515, 83}, {515, 85}, {515, 86}, {515, 87},
+		{516, 83}, {516, 84}, {516, 85}, {516, 86}, {516, 87},
+		{517, 83}, {517, 84}, {517, 85}, {517, 86}, {517, 87},
+		{518, 84}, {518, 85}, {518, 86},
+		{519, 84}, {519, 85}, {519, 86},
+		{520, 85}, {520, 86}, {520, 87}
+	},
+	CulturalNames = {
+		"norse", "Värmland"
+	},
+	SettlementLocation = {518, 86}, -- Karlstad
+	Map = "maps/random/random-map-forest.smp",
+	SettlementTerrain = "Plains",
+	Claims = {
+		"norse", "Swede Tribe"
+	},
+	HistoricalOwners = {
+		-264, "norse", "Swede Tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		1560, "norse", "Sweden" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalCultures = {
+		-264, "norse"
 	},
 	Regions = {"Europe", "Scandinavia", "West and Central Europe"}
 })
