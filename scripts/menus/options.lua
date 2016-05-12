@@ -340,6 +340,9 @@ function SetVideoSize(width, height)
 	UI.MapArea.EndX = width - 1
 	UI.MapArea.EndY = height - 176 - 1
 	if (Video:ResizeScreen(width, height) == false) then
+		if (Video.FullScreen) then
+			GenericDialog("Resolution Change Failed", "This resolution is not available while in full screen mode for your monitor.")
+		end
 		return
 	end
 	bckground:Resize(Video.Width, Video.Height)
@@ -730,7 +733,11 @@ function RunVideoOptionsMenu()
 
 		if (fullscreen ~= Video.FullScreen) then
 			ToggleFullScreen()
-			wyr.preferences.VideoFullScreen = Video.FullScreen
+			if (wyr.preferences.VideoFullScreen == Video.FullScreen) then -- if wyr.preferences.VideoFullScreen is equal to Video.FullScreen, then that means the full screen change failed
+				GenericDialog("Full Screen Change Failed", "Full screen mode is not available for the chosen resolution for your monitor.")
+			else
+				wyr.preferences.VideoFullScreen = Video.FullScreen
+			end
 		end
 
 		SavePreferences()
