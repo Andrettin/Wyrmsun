@@ -1392,7 +1392,7 @@ DefineCharacter("Asa", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 
 	-- married to Halfdan Huitbein Yngling
 })
 
-DefineCharacter("Eystein Halfdanson Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 257.
+DefineCharacter("Eystein Halfdanson Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 257-258.
 	Name = "Eystein",
 	NameElements = {
 --		"compound", "prefix" -- ?
@@ -1405,8 +1405,10 @@ DefineCharacter("Eystein Halfdanson Yngling", { -- Source: Snorri Sturlson, "Hei
 	Civilization = "norse",
 	ProvinceOfOrigin = "Hedmark", -- his father ruled over Hedemark
 	Father = "Halfdan Huitbein Yngling",
-	Mother = "Asa"
+	Mother = "Asa",
+	Quote = _("\"Grim Hel, clutched his soul away; / And now where Vodle's ocean bay / Receives the ice-cold stream, the grave / Of Eystein stands, the good, the brave!\" - Thiodolf of Huine")
 	-- became king in Raumarige and Westfold after his father's death
+	-- married to Hilde, daughter of Eric Agnarson
 })
 
 DefineCharacter("Gudrod Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 257.
@@ -1422,6 +1424,101 @@ DefineCharacter("Gudrod Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 
 	ProvinceOfOrigin = "Hedmark", -- his father ruled over Hedemark
 	Father = "Halfdan Huitbein Yngling",
 	Mother = "Asa"
+})
+
+DefineCharacter("Sigtryg", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 257-258.
+	Name = "Sigtryg",
+	NameElements = {
+		"compound", "prefix", "old-norse", "noun", "no-case", "Sigr", -- presumably
+		"compound", "suffix", "old-norse", "adjective", "Tryggr" -- presumably
+	},
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+--	ProvinceOfOrigin = ? -- was king in the "Vend district" (where?)
+})
+
+DefineCharacter("Agnar Sigtrygson", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 257-258.
+	Name = "Agnar",
+	ExtraName = "Sigtrygson", -- to differentiate him from the other Agnar
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+--	ProvinceOfOrigin = ? -- his father was king in the "Vend district" (where?)
+	Father = "Sigtryg"
+})
+
+DefineCharacter("Eric Agnarson", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 257-258.
+	Name = "Eric",
+	ExtraName = "Agnarson", -- to differentiate him
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Vestfold", -- king in Westfold
+	Father = "Agnar Sigtrygson"
+	-- had no son, so his dominions were taken over by Halfdan Huitbein and his son Eystein after his death (Eystein was married to Eric's daughter Hilde)
+})
+
+DefineCharacter("Hilde", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 257.
+	Name = "Hilde",
+	NameElements = {"word", "old-norse", "noun", "Hildr"}, -- presumably
+	Gender = "female",
+	Type = "unit-teuton-archer",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Vestfold", -- her father was king in Westfold
+	Father = "Eric Agnarson"
+})
+
+DefineCharacter("Skiold", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 258.
+	Name = "Skiold",
+	NameElements = {"word", "old-norse", "noun", "Skjǫldr"}, -- presumably
+	Gender = "male",
+	Type = "unit-teuton-swordsman", -- was a great warlock
+	Civilization = "norse",
+--	ProvinceOfOrigin = ? -- lived in Varna (where?)
+	DateReferenceCharacter = "Eystein Halfdanson Yngling" -- Eystein Yngling, son of Halfdan Huitbein, went with ships and raided Varna
+	-- was a king
+})
+
+DefineCharacter("Halfdan the Mild Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 259.
+	Name = "Halfdan",
+	NameElements = {
+		"compound", "prefix", "old-norse", "adjective", "no-case", "Halfr", -- presumably; used "no-case" to avoid the nominative ending "-r"
+--		"compound", "suffix", -- ?
+	},
+	ExtraName = "the Mild", -- also knowns as "the Bad Entertainer"
+	FamilyName = "Yngling",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Vestfold", -- his father ruled over Vestfold
+	Father = "Eystein Halfdanson Yngling",
+	Mother = "Hilde", -- presumably, since Hilde was married to Eystein
+	Trait = "upgrade-generous", -- described as generous, and as a great warrior
+	Quote = _("\"By Hel's summons, a great king / Was called away to Odin's Thing: / King Halfdan, he who dwelt of late / At Holtar, must obey grim Fate.\" - Thiodolf of Huine")
+	-- married to Hlif, daughter of King Dag of Westmor
+	-- his chief house was Holtar (in Vestfold, Norway)
+})
+
+DefineCharacter("Dag of Westmor", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 259.
+	Name = "Dag",
+	NameElements = {"word", "old-norse", "noun", "Dagr"}, -- presumably
+	ExtraName = "of Westmor", -- to differentiate him
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+--	ProvinceOfOrigin = ?, -- was king of Westmor (where?)
+	-- married to Halfdan the Mild Yngling
+})
+
+DefineCharacter("Hlif", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 259.
+	Name = "Hlif",
+	Gender = "female",
+	Type = "unit-teuton-archer",
+	Civilization = "norse",
+--	ProvinceOfOrigin = ?, -- her father was king of Westmor (where?)
+	Father = "Dag of Westmor",
+	DateReferenceCharacter = "Halfdan the Mild Yngling" -- married to Halfdan the Mild Yngling
 })
 
 DefineCharacter("Svan the Red", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 222.
@@ -1452,9 +1549,7 @@ DefineCharacter("Saefari", { -- Source: Kevin Crossley-Holland, "The Norse Myths
 
 DefineCharacter("Ulf", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 222.
 	Name = "Ulf",
-	NameElements = {
-		"word", "old-norse", "noun", "Ulfr" -- presumably
-	},
+	NameElements = {"word", "old-norse", "noun", "Ulfr"}, -- presumably
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
