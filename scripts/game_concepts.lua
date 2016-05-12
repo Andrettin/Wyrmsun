@@ -94,8 +94,12 @@ GameConcepts = {
 
 GrandStrategyGameConcepts = {
 	AdministrativeEfficiency = {
-		Name = _("Admi~!nistrative Efficiency"),
+		Name = _("~!Administrative Efficiency"),
 		Description = _("In the Grand Strategy mode, administrative efficiency affected provinces' productivity and research output. Administrative efficiency is 100% by default, but is decreased if the province has a different culture than its owner.")
+	},
+	Capital = {
+		Name = _("~!Capital"),
+		Description = _("A faction's capital is marked by a crown symbol appearing over it. Your capital is the center of your transport network. If a faction's capital is conquered, the capital will be transferred to a settlement still under the control of the faction.")
 	},
 	--[[
 	Claims = {
@@ -110,6 +114,10 @@ GrandStrategyGameConcepts = {
 	Harvesting = {
 		Name = _("Har~!vesting"),
 		Description = _("In the Grand Strategy mode, resources are harvested by the province's population, if there are enough laborers available.")
+	},
+	Heroes = {
+		Name = _("~!Heroes"),
+		Description = _("You can use heroes to attack and defend provinces. The presence of a hero in a province is marked by a star symbol over the province's settlement.")
 	},
 	Labor = {
 		Name = _("~!Labor"),
@@ -129,7 +137,7 @@ GrandStrategyGameConcepts = {
 	},
 	Roads = {
 		Name = _("Roads"),
-		Description = _("Building a road on a tile connects it to your transport network. Roads can only be built on tiles adjacent to ones already connected to your capital.")
+		Description = _("Building a road on a tile connects it to your transport network. Roads can only be built on tiles adjacent to ones already connected to your capital. Build roads by clicking on the desired tile and then choosing a direction for the road to be built.")
 	},
 	Trade = {
 		Name = _("Tra~!de"),

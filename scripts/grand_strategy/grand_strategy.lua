@@ -1649,31 +1649,30 @@ function AddGrandStrategyBuildingButton(x, y, unit_type)
 	
 	local building_function_tooltip = ""
 	if (GetUnitTypeData(unit_type, "Class") == "town-hall") then
-		building_function_tooltip = "More province information and trading of resources"
+		building_function_tooltip = "More province information and trading of resources\nAllows resource gathering in the province\nIncreases research output"
 	elseif (GetUnitTypeData(unit_type, "Class") == "stronghold") then
-		building_function_tooltip = "More province information and trading of resources"
+		building_function_tooltip = "More province information and trading of resources\nProvides defensive towers"
 	elseif (GetUnitTypeData(unit_type, "Class") == "barracks") then
 		building_function_tooltip = "Recruits units"
 	elseif (GetUnitTypeData(unit_type, "Class") == "lumber-mill") then
-		building_function_tooltip = "Researches projectile upgrades"
+		building_function_tooltip = "Researches projectile upgrades\nIncreases lumber production efficiency by 25%\nIncreases research output"
 	elseif (GetUnitTypeData(unit_type, "Class") == "smithy") then
-		building_function_tooltip = "Researches melee weapon, shield and siege weapon upgrades"
+		building_function_tooltip = "Researches melee weapon, shield and siege weapon upgrades\nIncreases research output"
 	elseif (GetUnitTypeData(unit_type, "Class") == "stables") then
 		building_function_tooltip = "Allows cavalry units to be trained"
 	elseif (GetUnitTypeData(unit_type, "Class") == "temple") then
---		building_function_tooltip = " researches upgrades"
---		building_function_tooltip = " allows certain random events"
+		building_function_tooltip = "Increases research output"
 	elseif (GetUnitTypeData(unit_type, "Class") == "dock") then
 		building_function_tooltip = "Allows fishing and attacking nearby coasts\nConnects this province's settlement to your capital"
 	elseif (GetUnitTypeData(unit_type, "Class") == "mercenary-camp") then
-		building_function_tooltip = "Hires mercenaries"
+		building_function_tooltip = "Hires mercenaries and thieves"
 	end
 	if (GetProvinceSettlementBuilding(SelectedProvince.Name, unit_type)) then
 		UIElements[table.getn(UIElements)]:setTooltip("Use " .. unit_type_name .. "\n" .. building_function_tooltip)
 	elseif (GetProvinceCurrentConstruction(SelectedProvince.Name) == unit_type) then
 		UIElements[table.getn(UIElements)]:setTooltip(unit_type_name .. " in " .. GetProvinceName(SelectedProvince) .. " under construction")
 	else
-		UIElements[table.getn(UIElements)]:setTooltip("Build " .. unit_type_name .. " in " .. GetProvinceName(SelectedProvince) .. "\n" .. building_cost_tooltip)
+		UIElements[table.getn(UIElements)]:setTooltip("Build " .. unit_type_name .. " in " .. GetProvinceName(SelectedProvince) .. "\n" .. building_cost_tooltip .. "\n" .. building_function_tooltip)
 	end
 	UIElements[table.getn(UIElements)]:setFrameImage(Preference.IconFrameG)
 	UIElements[table.getn(UIElements)]:setPressedFrameImage(Preference.PressedIconFrameG)

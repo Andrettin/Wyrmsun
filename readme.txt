@@ -88,7 +88,7 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed a save game compatibility issue.
 - Fixed a save game loading issue.
 - Split Game Concepts section in the Encyclopedia in two: Game Concepts and Grand Strategy Concepts.
-- Added "Roads" and "Transport Capacity" entries to the Grand Strategy Concepts.
+- Added "Capital", "Roads" and "Transport Capacity" entries to the Grand Strategy Concepts.
 
 * Terrain
 - Trees, wood piles and logs now contain 400 lumber instead of 300.
