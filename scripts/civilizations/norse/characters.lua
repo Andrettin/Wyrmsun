@@ -1379,7 +1379,7 @@ DefineCharacter("Eystein the Severe", { -- Source: Snorri Sturlson, "Heimskringl
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
-	ProvinceOfOrigin = "Sweden" -- king of the Upland people (presumably Uppland in Sweden)
+	ProvinceOfOrigin = "Hedmark" -- king of the Upland people (in Norway, so presumably Oppland); put in Hedmark since its the closest Norwegian province in the game
 })
 
 DefineCharacter("Asa", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 257.
@@ -1387,7 +1387,7 @@ DefineCharacter("Asa", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 
 	Gender = "female",
 	Type = "unit-teuton-archer",
 	Civilization = "norse",
-	ProvinceOfOrigin = "Sweden", -- daughter of the "king of the Upland people" (presumably Uppland in Sweden)
+	ProvinceOfOrigin = "Hedmark", -- daughter of the "king of the Upland people" (in Norway, so presumably Oppland); put in Hedmark since its the closest Norwegian province in the game
 	Father = "Eystein the Severe"
 	-- married to Halfdan Huitbein Yngling
 })
