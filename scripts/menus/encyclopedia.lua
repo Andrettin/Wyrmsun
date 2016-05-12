@@ -70,39 +70,42 @@ function RunEncyclopediaMenu()
 		function() RunEncyclopediaFactionsCivilizationMenu() end)
 
 	menu:addFullButton(_("~!Game Concepts"), "g", offx + 208 + (113 * -1), offy + 104 + 36*2,
-		function() RunEncyclopediaGameConceptsMenu() end)
+		function() RunEncyclopediaGameConceptsMenu(false) end)
 
-	menu:addFullButton(_("~!Heroes"), "h", offx + 208 + (113 * -1), offy + 104 + 36*3,
+	menu:addFullButton(_("Grand Strateg~!y Concepts"), "y", offx + 208 + (113 * -1), offy + 104 + 36*3,
+		function() RunEncyclopediaGameConceptsMenu(true) end)
+
+	menu:addFullButton(_("~!Heroes"), "h", offx + 208 + (113 * -1), offy + 104 + 36*4,
 		function() RunEncyclopediaUnitsMenu("heroes") end)
 
-	menu:addFullButton(_("~!Items"), "i", offx + 208 + (113 * -1), offy + 104 + 36*4,
+	menu:addFullButton(_("~!Items"), "i", offx + 208 + (113 * -1), offy + 104 + 36*5,
 		function() RunEncyclopediaUnitsMenu("items") end)
 
-	menu:addFullButton(_("Magic P~!refixes"), "r", offx + 208 + (113 * -1), offy + 104 + 36*5,
+	menu:addFullButton(_("Magic P~!refixes"), "r", offx + 208 + (113 * -1), offy + 104 + 36*6,
 		function() RunEncyclopediaUnitsMenu("item_prefixes") end)
 
-	menu:addFullButton(_("Magic ~!Suffixes"), "s", offx + 208 + (113 * -1), offy + 104 + 36*6,
+	menu:addFullButton(_("Magic ~!Suffixes"), "s", offx + 208 + (113 * -1), offy + 104 + 36*7,
 		function() RunEncyclopediaUnitsMenu("item_suffixes") end)
 
-	menu:addFullButton(_("~!Mercenaries"), "m", offx + 208 + (113 * -1), offy + 104 + 36*7,
+	menu:addFullButton(_("~!Mercenaries"), "m", offx + 208 + (113 * -1), offy + 104 + 36*8,
 		function() RunEncyclopediaUnitsMenu("mercenaries") end)
 
-	menu:addFullButton(_("Runic ~!Suffixes"), "s", offx + 208 + (113 * -1), offy + 104 + 36*8,
+	menu:addFullButton(_("Runic Suffix~!es"), "e", offx + 208 + (113 * 1), offy + 104 + 36*-1,
 		function() RunEncyclopediaUnitsMenu("runic_suffixes") end)
 
-	menu:addFullButton(_("~!Technologies"), "t", offx + 208 + (113 * 1), offy + 104 + 36*-1,
+	menu:addFullButton(_("~!Technologies"), "t", offx + 208 + (113 * 1), offy + 104 + 36*0,
 		function() RunEncyclopediaUnitsMenu("technologies") end)
 
-	menu:addFullButton(_("Te~!xts"), "x", offx + 208 + (113 * 1), offy + 104 + 36*0,
+	menu:addFullButton(_("Te~!xts"), "x", offx + 208 + (113 * 1), offy + 104 + 36*1,
 		function() RunEncyclopediaTextsMenu() end)
 
-	menu:addFullButton(_("U~!niques"), "n", offx + 208 + (113 * 1), offy + 104 + 36*1,
+	menu:addFullButton(_("U~!niques"), "n", offx + 208 + (113 * 1), offy + 104 + 36*2,
 		function() RunEncyclopediaUnitsMenu("unique_items") end)
 
-	menu:addFullButton(_("~!Units"), "u", offx + 208 + (113 * 1), offy + 104 + 36*2,
+	menu:addFullButton(_("~!Units"), "u", offx + 208 + (113 * 1), offy + 104 + 36*3,
 		function() RunEncyclopediaUnitsMenu("units") end)
 
-	menu:addFullButton(_("~!Worlds"), "w", offx + 208 + (113 * 1), offy + 104 + 36*3,
+	menu:addFullButton(_("~!Worlds"), "w", offx + 208 + (113 * 1), offy + 104 + 36*4,
 		function() RunEncyclopediaWorldsMenu() end)
 
 	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * 9),
@@ -1201,12 +1204,19 @@ function OpenEncyclopediaWorldEntry(world)
 	encyclopedia_entry_menu:run()
 end
 
-function RunEncyclopediaGameConceptsMenu()
+function RunEncyclopediaGameConceptsMenu(grand_strategy)
 
 	if (RunningScenario == false) then
 		if not (IsMusicPlaying()) then
 			PlayMusicName("MenuTheme")
 		end
+	end
+	
+	local game_concepts
+	if (grand_strategy) then
+		game_concepts = GrandStrategyGameConcepts
+	else
+		game_concepts = GameConcepts
 	end
 
 	local menu = WarMenu(nil, GetBackground("ui/backgrounds/wyrm.png"))
@@ -1222,21 +1232,21 @@ function RunEncyclopediaGameConceptsMenu()
 	menu:addLabel("~<Encyclopedia: Game Concepts~>", offx + 320, offy + 104 + 36*(-4 + height_offset), nil, true)
 
 	local game_concept_x = 0
-	if (GetTableSize(GameConcepts) > 20) then
+	if (GetTableSize(game_concepts) > 20) then
 		game_concept_x = -2
-	elseif (GetTableSize(GameConcepts) > 10) then
+	elseif (GetTableSize(game_concepts) > 10) then
 		game_concept_x = -1
 	end
 	local game_concept_y = -3
 
-	for game_concept_key, game_concept_value in pairsByKeys(GameConcepts) do
+	for game_concept_key, game_concept_value in pairsByKeys(game_concepts) do
 		local game_concept_hotkey = ""		
-		if (string.find(_(GameConcepts[game_concept_key].Name), "~!") ~= nil) then
-			game_concept_hotkey = string.sub(string.match(_(GameConcepts[game_concept_key].Name), "~!%a"), 3)
+		if (string.find(_(game_concepts[game_concept_key].Name), "~!") ~= nil) then
+			game_concept_hotkey = string.sub(string.match(_(game_concepts[game_concept_key].Name), "~!%a"), 3)
 			game_concept_hotkey = string.lower(game_concept_hotkey)
 		end
-		menu:addFullButton(_(GameConcepts[game_concept_key].Name), game_concept_hotkey, offx + 208 + (113 * game_concept_x), offy + 104 + (36 * (game_concept_y + height_offset)),
-			function() OpenEncyclopediaGameConceptEntry(game_concept_key); end)
+		menu:addFullButton(_(game_concepts[game_concept_key].Name), game_concept_hotkey, offx + 208 + (113 * game_concept_x), offy + 104 + (36 * (game_concept_y + height_offset)),
+			function() OpenEncyclopediaGameConceptEntry(game_concept_key, grand_strategy); end)
 
 		if (game_concept_y > 5) then
 			game_concept_x = game_concept_x + 2
@@ -1253,18 +1263,25 @@ function RunEncyclopediaGameConceptsMenu()
 	menu:run()
 end
 
-function OpenEncyclopediaGameConceptEntry(game_concept_key)
+function OpenEncyclopediaGameConceptEntry(game_concept_key, grand_strategy)
 	if (RunningScenario == false) then
 		if not (IsMusicPlaying()) then
 			PlayMusicName("MenuTheme")
 		end
 	end
 
+	local game_concepts
+	if (grand_strategy) then
+		game_concepts = GrandStrategyGameConcepts
+	else
+		game_concepts = GameConcepts
+	end
+
 	local encyclopedia_entry_menu = WarMenu(nil, GetBackground("ui/backgrounds/wyrm.png"))
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2
 
-	encyclopedia_entry_menu:addLabel("~<" .. GameConcepts[game_concept_key].Name .. "~>", offx + 320, offy + 104 + 36*-2, nil, true)
+	encyclopedia_entry_menu:addLabel("~<" .. game_concepts[game_concept_key].Name .. "~>", offx + 320, offy + 104 + 36*-2, nil, true)
 
 	local l = MultiLineLabel()
 	l:setFont(Fonts["game"])
@@ -1272,8 +1289,8 @@ function OpenEncyclopediaGameConceptEntry(game_concept_key)
 	l:setLineWidth(Video.Width - 64)
 	encyclopedia_entry_menu:add(l, 32, offy + 104 + 36*0)
 	local description = ""
-	if (GameConcepts[game_concept_key].Description ~= nil) then
-		description = "Description: " .. GameConcepts[game_concept_key].Description
+	if (game_concepts[game_concept_key].Description ~= nil) then
+		description = "Description: " .. game_concepts[game_concept_key].Description
 	end
 	l:setCaption(description)
 			

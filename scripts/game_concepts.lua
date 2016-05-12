@@ -34,20 +34,10 @@ GameConcepts = {
 		Name = _("Accuracy/Evasion"),
 		Description = _("A unit's chance to hit another unit is determined by its accuracy relative to the target's evasion.")
 	},
-	AdministrativeEfficiency = {
-		Name = _("Admi~!nistrative Efficiency"),
-		Description = _("In Grand Strategy mode, administrative efficiency affected provinces' productivity and research output. Administrative efficiency is 100% by default, but is decreased if the province has a different culture than its owner.")
-	},
 	Backstab = {
 		Name = _("~!Backstab"),
 		Description = _("Thief units cause extra damage when attacking an organic unit from the back. Thieves attacking from the right or left rear sides will cause +50% damage, and +100% damage if attacking directly from behind.")
 	},
-	--[[
-	Claims = {
-		Name = _("Claims"),
-		Description = _("In Grand Strategy mode, claims are provinces considered to be an integral part of a country.")
-	},
-	--]]
 	DisembarkmentBonus = {
 		Name = _("Disembarkment Bonus"),
 		Description = _("Units that have a disembarkment bonus deal 50% more damage for a certain duration after having been unloaded from a transport ship.")
@@ -62,7 +52,7 @@ GameConcepts = {
 	},
 	Food = {
 		Name = _("~!Food"),
-		Description = _("Food is produced by farms in RTS mode, and determines the maximum amount of units a player can have. In Grand Strategy mode, food is produced by a province's workers employed in food-producing tiles, generating population growth and being consumed by the province's population.")
+		Description = _("Food is produced by farms in the RTS mode, and determines the maximum amount of units a player can have.")
 	},
 	GameType = {
 		Name = _("Game T~!ype"),
@@ -74,7 +64,7 @@ GameConcepts = {
 	},
 	Harvesting = {
 		Name = _("Har~!vesting"),
-		Description = _("Resources can be harvested by worker units. Gold is mined by assigning workers to gold rocks or gold mines (built on gold deposits), or to their copper and silver equivalents - which when delivered will be converted to gold. Lumber is gathered by harvesting trees or wood piles, while stone is harvested from rocks. Coal mines are used in a similar manner to gold mines, but they appear only in specific scenarios. In Grand Strategy mode, resources are harvested by the province's population, if there are enough laborers available.")
+		Description = _("Resources can be harvested by worker units. Gold is mined by assigning workers to gold rocks or gold mines (built on gold deposits), or to their copper and silver equivalents - which when delivered will be converted to gold. Lumber is gathered by harvesting trees or wood piles, while stone is harvested from rocks. Coal mines are used in a similar manner to gold mines, but they appear only in specific scenarios.")
 	},
 	Heroes = {
 		Name = _("~!Heroes"),
@@ -84,21 +74,50 @@ GameConcepts = {
 		Name = _("Ite~!ms"),
 		Description = _("Items can be picked up by units with an inventory (persistent heroes as well as Stonelords and Gryphon Riders). Items come in four types: weapons, shields, boots, rings and potions. Units can equip weapons of a particular class (i.e. Axefighters can equip axes), and non-ranged units may equip shields as well. Any unit can wear boots or drink potions; the latter can be used as a power-up by units who don't have an inventory. Equipping an item will replace the bonuses from weapon technologies with those of the item.\n\nItems are generally dropped by AI-controlled units and buildings, and possess a chance of having a magic affix. Such prefixes and suffixes affect the item's stats, changing its damage, armor and other values. Additionally, unique items also have a chance of dropping. Unique items are often better than magic items, but not necessarily. Items that are neither magic nor unique will disappear five minutes after being dropped.\n\nBesides items, units can also pick up power-ups. These are not restricted to units with inventories, and will perform effects such as restoring HP, causing a status effect or providing resources.")
 	},
-	Labor = {
-		Name = _("~!Labor"),
-		Description = _("Workers in a province produce Labor (100 for each worker), which is then used to produce resources in the province.")
-	},
 	Mercenaries = {
 		Name = _("Mer~!cenaries"),
-		Description = _("Groups of mercenaries can be hired at mercenary camps, providing the player with a few experienced warriors, no time needing to be spent in training them. Mercenaries do cost quite a bit of gold, however. Besides mercenary squads, players can also hire a maximum of 6 thieves in mercenary camps. Like mercenary groups, thieves are hired instantly.")
-	},
-	Prestige = {
-		Name = _("Pre~!stige"),
-		Description = _("Prestige is a Grand Strategy mode only resource. A faction's prestige determines its trade priority, and influences the likelihood of certain positive events. Factions with negative prestige cannot declare war. The results of battles will affect a faction's prestige.")
+		Description = _("Groups of mercenaries can be hired at mercenary camps, providing the player with a few experienced warriors, no time needing to be spent in training them. Mercenaries do cost quite a bit of gold, however. Besides mercenary squads, players can also hire thieves in mercenary camps. Like mercenary groups, thieves are hired instantly.")
 	},
 	Quests = {
 		Name = _("~!Quests"),
 		Description = _("Completing RTS quests will provide the player with technology points (which can be used to acquire further technologies for the RTS mode), along with new maps.")
+	},
+	TechTreeScreen = {
+		Name = _("~!Tech Tree Screen"),
+		Description = _("The tech tree screen allows players to spend technology points to acquire new technologies, making them available for the RTS mode.")
+	},
+	Traits = {
+		Name = _("Tra~!its"),
+		Description = _("Each organic unit has an individual personality or physical trait assigned to it, which affects its stats.\n\nClumsy: -1 Accuracy, -1 Evasion\nDextrous: +1 Accuracy, +1 Evasion\nKeen: +1 Accuracy, +1 Sight\nLimping: -2 Speed\nMighty: +2 Damage\nNear-Sighted: -1 Accuracy, -1 Sight\nOld: -1 Sight, -1 Speed\nQuick: +1 Speed\nReckless: -1 Evasion\nResilient: +5 HP\nSlow: -1 Speed\nStrong: +1 Damage \nVicious: +2 Damage\nWeak: -1 Damage")
+	}
+}
+
+GrandStrategyGameConcepts = {
+	AdministrativeEfficiency = {
+		Name = _("Admi~!nistrative Efficiency"),
+		Description = _("In the Grand Strategy mode, administrative efficiency affected provinces' productivity and research output. Administrative efficiency is 100% by default, but is decreased if the province has a different culture than its owner.")
+	},
+	--[[
+	Claims = {
+		Name = _("Claims"),
+		Description = _("In Grand Strategy mode, claims are provinces considered to be an integral part of a country.")
+	},
+	--]]
+	Food = {
+		Name = _("~!Food"),
+		Description = _("In the Grand Strategy mode, food is produced by a province's workers employed in food-producing tiles, generating population growth and being consumed by the province's population.")
+	},
+	Harvesting = {
+		Name = _("Har~!vesting"),
+		Description = _("In the Grand Strategy mode, resources are harvested by the province's population, if there are enough laborers available.")
+	},
+	Labor = {
+		Name = _("~!Labor"),
+		Description = _("Workers in a province produce Labor (100 for each worker), which is then used to produce resources in the province.")
+	},
+	Prestige = {
+		Name = _("Pre~!stige"),
+		Description = _("Prestige is a Grand Strategy mode only resource. A faction's prestige determines its trade priority, and influences the likelihood of certain positive events. Factions with negative prestige cannot declare war. The results of battles will affect a faction's prestige.")
 	},
 	Research = {
 		Name = _("~!Research"),
@@ -108,20 +127,20 @@ GameConcepts = {
 		Name = _("Rev~!olts"),
 		Description = _("In Grand Strategy mode, provinces have a chance to revolt against their owner's rule. There is a risk of revolt occurring in recently conquered provinces, as well as ones of a culture different than their owner's.")
 	},
-	TechTreeScreen = {
-		Name = _("~!Tech Tree Screen"),
-		Description = _("The tech tree screen allows players to spend technology points to acquire new technologies, making them available for the RTS mode.")
+	Roads = {
+		Name = _("Roads"),
+		Description = _("Building a road on a tile connects it to your transport network. Roads can only be built on tiles adjacent to ones already connected to your capital.")
 	},
 	Trade = {
 		Name = _("Tra~!de"),
-		Description = _("In Grand Strategy mode factions can trade commodities with one another. Trade priority depends on the faction's prestige, and the price of each commodity will vary depending on demand and supply. Trade is also conducted with provinces, with preference being given to the province's owner. Each province demands a bit of certain commodities every turn, demanding more if the price is currently low, or less if the price is too high.")
+		Description = _("In the Grand Strategy mode, factions can trade commodities with one another. Trade priority depends on the faction's prestige, and the price of each commodity will vary depending on demand and supply. Trade is also conducted with provinces, with preference being given to the province's owner. Each province demands a bit of certain commodities every turn, demanding more if the price is currently low, or less if the price is too high.")
 	},
-	Traits = {
-		Name = _("Tra~!its"),
-		Description = _("Each organic unit has an individual personality or physical trait assigned to it, which affects its stats.\n\nClumsy: -1 Accuracy, -1 Evasion\nDextrous: +1 Accuracy, +1 Evasion\nKeen: +1 Accuracy, +1 Sight\nLimping: -2 Speed\nMighty: +2 Damage\nNear-Sighted: -1 Accuracy, -1 Sight\nOld: -1 Sight, -1 Speed\nQuick: +1 Speed\nReckless: -1 Evasion\nResilient: +5 HP\nSlow: -1 Speed\nStrong: +1 Damage \nVicious: +2 Damage\nWeak: -1 Damage")
+	TransportCapacity = {
+		Name = _("Transport Capacit~!y"),
+		Description = _("Resource-producing tiles need to be properly connected to your transport network to achieve their full potential. If a tile's resource output is greater than its transport capacity, the overflowing resources will be thrown away. To increase transport capacity in a tile, build a road linking it to your capital. Building a dock on a settlement will link its tile to your transport network as well, at which point it can also serve as a transport hub from which to build roads. Note however that docks can only effectively link a settlement to the transport network if its province's coasts can be reached from a dock already otherwise connected to your transport network.")
 	},
 	Upkeep = {
 		Name = _("~!Upkeep"),
-		Description = _("In Grand Strategy mode, each military unit costs some upkeep in gold. If the upkeep is not paid, the unit will be disbanded.")
-	},
+		Description = _("In the Grand Strategy mode, each military unit costs some upkeep in gold. If the upkeep is not paid, the unit will be disbanded.")
+	}
 }
