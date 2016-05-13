@@ -27,6 +27,8 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+Load("scripts/grand_strategy/christianity_events.lua")
+
 function LoadEvents(world)
 	GrandStrategyEvents = nil
 	GrandStrategyEvents = {}
@@ -145,7 +147,7 @@ function LoadEvents(world)
 	
 	Load("scripts/grand_strategy/generic_events.lua")
 	if (world == "Earth" or world == "Random" or world == "Save") then
-		Load("scripts/grand_strategy/christianity_events.lua")
+		Load("scripts/grand_strategy/christianity_events_old.lua")
 		Load("scripts/grand_strategy/earth_events.lua")
 		Load("scripts/grand_strategy/germanic_events.lua")
 		Load("scripts/grand_strategy/latin_events.lua")

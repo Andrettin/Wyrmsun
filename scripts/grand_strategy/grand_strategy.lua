@@ -3773,7 +3773,12 @@ function GrandStrategyEvent(faction, event)
 		menu:resize(352, 352)
 		menu:setDrawMenusUnder(true)
 
-		local event_name = event.Name
+		local event_name
+		if (type(event) == "string") then
+			event_name = event
+		else
+			event_name = event.Name
+		end
 		if (EventProvince ~= nil) then
 			if (string.find(event_name, "PROVINCE_NAME") ~= nil) then
 				event_name = string.gsub(event_name, "PROVINCE_NAME", GetProvinceName(EventProvince))
@@ -3805,7 +3810,12 @@ function GrandStrategyEvent(faction, event)
 		else
 			menu:add(l, 14, 112)
 		end
-		local event_description = event.Description
+		local event_description
+		if (type(event) == "string") then
+			event_description = GetGrandStrategyEventData(event, "Description")
+		else
+			event_description = event.Description
+		end
 		if (EventProvince ~= nil) then
 			if (string.find(event_description, "PROVINCE_NAME") ~= nil) then
 				event_description = string.gsub(event_description, "PROVINCE_NAME", GetProvinceName(EventProvince))
@@ -3842,18 +3852,42 @@ function GrandStrategyEvent(faction, event)
 			menu:add(b, 0, 0)
 		end
 
-		for i=1,table.getn(event.Options) do
-			if (event.OptionConditions == nil or event.OptionConditions[i]()) then
+		local event_options
+		local event_option_effects = nil
+		local event_option_conditions = nil
+		local event_option_tooltips
+		if (type(event) == "string") then
+			event_options = GetGrandStrategyEventData(event, "Options")
+			event_option_tooltips = GetGrandStrategyEventData(event, "OptionTooltips")
+		else
+			event_options = event.Options
+			event_option_effects = event.OptionEffects
+			event_option_conditions = event.OptionConditions
+			event_option_tooltips = event.OptionTooltips
+		end
+		for i=1,table.getn(event_options) do
+			local event_option_conditions_fulfilled
+			if (type(event) == "string") then
+				event_option_conditions_fulfilled = GetGrandStrategyEventData(event, "OptionCondition", i)
+			else
+				event_option_conditions_fulfilled = event_option_conditions == nil or table.getn(event_option_conditions) == 0 or event_option_conditions[i]()
+			end
+			
+			if (event_option_conditions_fulfilled) then
 				local option_hotkey = ""		
-				if (string.find(event.Options[i], "~!") ~= nil) then
-					option_hotkey = string.sub(string.match(event.Options[i], "~!%a"), 3)
+				if (string.find(event_options[i], "~!") ~= nil) then
+					option_hotkey = string.sub(string.match(event_options[i], "~!%a"), 3)
 					option_hotkey = string.lower(option_hotkey)
 				end
 
-				local b = menu:addFullButton(event.Options[i], option_hotkey, 176 - (224 / 2), 352 - 40 * (table.getn(event.Options) - (i - 1)),
+				local b = menu:addFullButton(event_options[i], option_hotkey, 176 - (224 / 2), 352 - 40 * (table.getn(event_options) - (i - 1)),
 					function(s)
 						menu:stop()
-						event.OptionEffects[i]()
+						if (type(event) == "string") then
+							GetGrandStrategyEventData(event, "OptionEffect", i)
+						else
+							event_option_effects[i]()
+						end
 						GameResult = GameNoResult -- this is because many events start scenarios
 						CleanPlayers()
 						SetPlayerData(GetThisPlayer(), "RaceName", GrandStrategyFaction.Civilization)
@@ -3861,8 +3895,8 @@ function GrandStrategyEvent(faction, event)
 						
 					end
 				)
-				if (event.OptionTooltips ~= nil and event.OptionTooltips[i] ~= nil) then
-					local tooltip = event.OptionTooltips[i]
+				if (event_option_tooltips ~= nil and event_option_tooltips[i] ~= nil) then
+					local tooltip = event_option_tooltips[i]
 					if (EventProvince ~= nil) then
 						if (string.find(tooltip, "PROVINCE_NAME") ~= nil) then
 							tooltip = string.gsub(tooltip, "PROVINCE_NAME", GetProvinceName(EventProvince))
@@ -3883,11 +3917,15 @@ function GrandStrategyEvent(faction, event)
 			end
 		end
 		
-		if (table.getn(event.Options) == 1) then -- for events with just one option, allow enter to be used as a way to close the event dialogue
+		if (table.getn(event_options) == 1) then -- for events with just one option, allow enter to be used as a way to close the event dialogue
 			menu:addButton("", "return", -1, -1,
 				function()
 					menu:stop()
-					event.OptionEffects[1]()
+					if (type(event) == "string") then
+						GetGrandStrategyEventData(event, "OptionEffect", 1)
+					else
+						event_option_effects[1]()
+					end
 					GameResult = GameNoResult -- this is because many events start scenarios
 					CleanPlayers()
 					SetPlayerData(GetThisPlayer(), "RaceName", GrandStrategyFaction.Civilization)
@@ -3899,14 +3937,20 @@ function GrandStrategyEvent(faction, event)
 
 		menu:run()
 	else
---		event.OptionEffects[SyncRand(table.getn(event.OptionEffects)) + 1]() -- AIs choose a random option
-		event.OptionEffects[1]() -- AIs always choose the first option
+--		event_option_effects[SyncRand(table.getn(event_option_effects)) + 1]() -- AIs choose a random option
+		if (type(event) == "string") then
+			GetGrandStrategyEventData(event, "OptionEffect", 1)
+		else
+			event_option_effects[1]() -- AIs always choose the first option
+		end
 	end
 	
-	if (event.Persistent == nil or event.Persistent == false) then
-		for event_key, event_value in pairs(GrandStrategyEvents) do
-			if (GrandStrategyEvents[event_key] == event) then
-				GrandStrategyEvents[event_key] = nil
+	if (type(event) ~= "string") then
+		if (event.Persistent == nil or event.Persistent == false) then
+			for event_key, event_value in pairs(GrandStrategyEvents) do
+				if (GrandStrategyEvents[event_key] == event) then
+					GrandStrategyEvents[event_key] = nil
+				end
 			end
 		end
 	end
