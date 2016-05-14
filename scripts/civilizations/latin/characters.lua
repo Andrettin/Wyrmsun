@@ -115,3 +115,5 @@ DefineCharacter("Nicholas", { -- Source: Snorri Sturlson, "Heimskringla", 1844, 
 	ProvinceOfOrigin = "Latium", -- probably not accurate, but since we only know he was Pope, set his province of origin to Latium until we have better information
 	Year = 1448 -- sent a brief to the bishops of Skalholt and Holum in Iceland in 1448 AD
 })
+
+--Load("scripts/civilizations/latin/characters_brazilian.lua")

@@ -28,6 +28,7 @@
 --
 
 Load("scripts/grand_strategy/christianity_events.lua")
+--Load("scripts/grand_strategy/brazilian_events.lua") -- not active since the map doesn't encompass that region yet (these events will become active when the map is expanded - in a few years? - to accomodate more of the world, when we have expanded to more advanced technological periods
 
 function LoadEvents(world)
 	GrandStrategyEvents = nil

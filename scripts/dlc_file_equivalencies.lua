@@ -33,7 +33,7 @@ SetDLCFileEquivalency("dlcs/brising_faction_flair/graphics/icons/brising_strongh
 SetDLCFileEquivalency("dlcs/brising_faction_flair/graphics/icons/brising_smithy.png", "dwarf/icons/smithy.png")
 SetDLCFileEquivalency("dlcs/brising_faction_flair/graphics/icons/brising_round_shield.png", "dwarf/icons/shield_1.png")
 SetDLCFileEquivalency("dlcs/brising_faction_flair/graphics/units/brising_transport.png", "dwarf/units/transport.png")
-SetDLCFileEquivalency("dlcs/brising_faction_flair/graphics/units/brising_round_shield.png", "dwarf/units/round_shield.png")
+SetDLCFileEquivalency("dlcs/brising_faction_flair/graphics/units/brising_round_shield.png", "dwarf/units/shields/round_shield.png")
 SetDLCFileEquivalency("dlcs/brising_faction_flair/graphics/buildings/brising_town_hall.png", "dwarf/buildings/town_hall.png")
 SetDLCFileEquivalency("dlcs/brising_faction_flair/graphics/buildings/brising_stronghold.png", "dwarf/buildings/stronghold.png")
 SetDLCFileEquivalency("dlcs/brising_faction_flair/graphics/buildings/brising_smithy.png", "dwarf/buildings/smithy.png")

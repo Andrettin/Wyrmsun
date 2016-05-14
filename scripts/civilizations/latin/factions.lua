@@ -247,3 +247,5 @@ DefineFaction("Wallachia", {
 		"head-of-state", "female", "monarchy", "duchy", "Princess"
 	}
 })
+
+--Load("scripts/civilizations/latin/factions_brazilian.lua")

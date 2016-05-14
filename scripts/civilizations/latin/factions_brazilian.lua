@@ -25,32 +25,25 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineUpgrade("upgrade-library", {
-	Name = _("Library"),
-	ModifierGraphicFile = "ui/modifiers/book.png",
-	GrandStrategyProductionModifier = {"research", 1}
+DefineFaction("Brazil", {
+	Civilization = "latin",
+	Type = "polity",
+	Colors = {"green"},
+	DefaultTier = "kingdom"
 })
 
-DefineUpgrade("upgrade-college", {
-	Name = _("College"),
-	ModifierGraphicFile = "ui/modifiers/diploma.png",
-	GrandStrategyProductionModifier = {"research", 1}
+DefineFaction("Maua", { -- titular barony; Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", pp. 6-7.
+	Civilization = "latin",
+	ParentFaction = "Brazil",
+	Type = "polity",
+	Colors = {"yellow"},
+	DefaultTier = "barony"
 })
 
-DefineUpgrade("upgrade-university", {
-	Name = _("University"),
-	ModifierGraphicFile = "ui/modifiers/university.png",
-	GrandStrategyProductionModifier = {"research", 2}
-})
-
-DefineUpgrade("upgrade-courthouse", {
-	Name = _("Courthouse"),
-	ModifierGraphicFile = "ui/modifiers/courthouse.png",
-	RevoltRiskModifier = -1
-})
-
-DefineUpgrade("upgrade-tramway", { -- this modifier cannot be gotten yet; it is here to allow history to provinces as a preliminary thing for when we expand the game's technology tree to encompass the industrial era (in a few years from now?)
-	Name = _("Tram"),
-	ModifierGraphicFile = "ui/modifiers/courthouse.png", -- should be changed to its own icon later
-	AdministrativeEfficiencyModifier = 10
+DefineFaction("Rio Negro", { -- titular barony; Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", p. 9.
+	Civilization = "latin",
+	ParentFaction = "Brazil",
+	Type = "polity",
+	Colors = {"black"},
+	DefaultTier = "barony"
 })

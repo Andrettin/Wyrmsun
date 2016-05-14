@@ -25,32 +25,26 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineUpgrade("upgrade-library", {
-	Name = _("Library"),
-	ModifierGraphicFile = "ui/modifiers/book.png",
-	GrandStrategyProductionModifier = {"research", 1}
+DefineCharacter("Mauá", { -- Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", pp. 6-7.
+	Name = "Mauá", -- this was the name of his barony title, not his actual name
+	Gender = "male",
+	Type = "unit-teuton-worker", -- businessman
+	Civilization = "latin",
+	ProvinceOfOrigin = "Rio de Janeiro", -- had businesses in Rio de Janeiro
+	Year = 1861, -- became president of the Companhia de Carris de Ferro da Cidade à Boavista (tram company), in Rio de Janeiro
+	HistoricalTitles = {
+		"head-of-state", 0, 0, "latin", "Maua" -- was Baron of Mauá
+	}
 })
 
-DefineUpgrade("upgrade-college", {
-	Name = _("College"),
-	ModifierGraphicFile = "ui/modifiers/diploma.png",
-	GrandStrategyProductionModifier = {"research", 1}
-})
-
-DefineUpgrade("upgrade-university", {
-	Name = _("University"),
-	ModifierGraphicFile = "ui/modifiers/university.png",
-	GrandStrategyProductionModifier = {"research", 2}
-})
-
-DefineUpgrade("upgrade-courthouse", {
-	Name = _("Courthouse"),
-	ModifierGraphicFile = "ui/modifiers/courthouse.png",
-	RevoltRiskModifier = -1
-})
-
-DefineUpgrade("upgrade-tramway", { -- this modifier cannot be gotten yet; it is here to allow history to provinces as a preliminary thing for when we expand the game's technology tree to encompass the industrial era (in a few years from now?)
-	Name = _("Tram"),
-	ModifierGraphicFile = "ui/modifiers/courthouse.png", -- should be changed to its own icon later
-	AdministrativeEfficiencyModifier = 10
+DefineCharacter("Rio Negro", { -- Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", p. 9.
+	Name = "Rio Negro", -- this was the name of his barony title, not his actual name
+	Gender = "male",
+	Type = "unit-teuton-worker", -- had businesses
+	Civilization = "latin",
+	ProvinceOfOrigin = "Rio de Janeiro", -- had businesses in Rio de Janeiro
+	Year = 1868, -- received authorization to reactivate the Companhia de Carris de Ferro da Cidade à Boavista (tram company), in Rio de Janeiro
+	HistoricalTitles = {
+		"head-of-state", 0, 0, "latin", "Rio Negro" -- was Baron of Rio Negro
+	}
 })

@@ -8,8 +8,6 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      stratagus.lua - The craft configuration language.
---
 --      (c) Copyright 1998-2016 by Lutz Sammer, Pali Rohár and Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
@@ -37,7 +35,7 @@ DebugPrint("Stratagus default config file loading ...\n")
 wyrmsun = {}
 
 wyrmsun.Name = "Wyrmsun"
-wyrmsun.Version = "2.2.0"
+wyrmsun.Version = "2.2.1"
 wyrmsun.Homepage = ""
 wyrmsun.Licence = "GPL 2.0"
 wyrmsun.Copyright = "Copyright (c) 2013-2016 by Andrettin"

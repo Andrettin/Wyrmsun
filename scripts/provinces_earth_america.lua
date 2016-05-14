@@ -143,6 +143,9 @@ DefineProvince("Minas Gerais", {
 	Tiles = {},
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Hills",
+	Claims = {
+		"latin", "Brazil"
+	},
 	HistoricalModifiers = {
 		1750, "upgrade-college", true, -- Seminary founded in Mariana in 1750. Source: Keila Grinberg; Ricardo Salles, O Brasil Imperial, vol. I, 2009, p. 296.
 		1839, "upgrade-college", true, -- Escola de Farmácia de Ouro Preto founded in 1839. Source: Keila Grinberg; Ricardo Salles, O Brasil Imperial, vol. I, 2009, p. 296.
@@ -180,6 +183,9 @@ DefineProvince("Pernambuco", {
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
 	Coastal = true,
+	Claims = {
+		"latin", "Brazil"
+	},
 	HistoricalModifiers = {
 		1828, "upgrade-college", true -- Law college founded in Olinda in 1828. Source: Jeffrey D. Needell, “Party Formation and State-Making: The Conservative Party and the Reconstruction of the Brazilian State, 1831-1840”, Hispanic American Historical Review, vol. 81, 2001, p. 293.
 	},
@@ -206,6 +212,9 @@ DefineProvince("Rio de Janeiro", {
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
 	Coastal = true,
+	Claims = {
+		"latin", "Brazil"
+	},
 	HistoricalPopulation = {
 		-- In 1872, the population of the city of Rio de Janeiro was 274,972; Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", p. 4.
 		-- In 1890, the population of the city of Rio de Janeiro was 522,651; Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", p. 4.
@@ -213,7 +222,8 @@ DefineProvince("Rio de Janeiro", {
 		-- In 1906, the population of the city of Rio de Janeiro was 811,444; Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", p. 4.
 	},
 	HistoricalModifiers = {
-		1862, "upgrade-college", true -- Instituto Politécnico Brasileiro founded in Rio de Janeiro in 1862. Source: Silvia Fernanda de Mendonça Figueirôa, "Ciência e tecnologia no Brasil Imperial: Guilherme Schüch, Barão de Capanema (1824-1908)", 2005, p. 446.
+		1862, "upgrade-college", true, -- Instituto Politécnico Brasileiro founded in Rio de Janeiro in 1862. Source: Silvia Fernanda de Mendonça Figueirôa, "Ciência e tecnologia no Brasil Imperial: Guilherme Schüch, Barão de Capanema (1824-1908)", 2005, p. 446.
+		1868, "upgrade-tramway", true -- Trams began operation in Rio de Janeiro in 1868; Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", p. 1.
 	},
 	Regions = {"America", "South America"}
 })
@@ -236,6 +246,9 @@ DefineProvince("Sao Paulo", {
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
 	Coastal = true,
+	Claims = {
+		"latin", "Brazil"
+	},
 	HistoricalModifiers = {
 		1827, "upgrade-college", true -- Law college existent in São Paulo in 1827. Source: Otávio Tarquínio de Sousa, Bernardo Pereira de Vasconcelos, p. 66.
 	},
