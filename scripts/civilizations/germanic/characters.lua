@@ -352,7 +352,8 @@ DefineCharacter("Yngve", { -- Source: Snorri Sturlson, "Heimskringla", 1844; Sou
 	Mother = "Frígídá", -- presumably, since she was Vóden's wife
 	HistoricalTitles = {
 		"head-of-state", -2800 + (30 * 1), -2800 + (30 * 2), "germanic", "Yngling Tribe"
-	}
+	},
+	LiteraryAppearances = {"upgrade-work-ynglingatal"}
 })
 
 DefineCharacter("Vegdeg", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p. 7.

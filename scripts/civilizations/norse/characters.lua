@@ -37,7 +37,8 @@ DefineCharacter("Fiölner Yngling", { -- Source: Snorri Sturlson, "Heimskringla"
 	Quote = _("\"And when brave Frode came, he found / Swithiod's dark chief, Fiolner, drowned.\" - Thiodolf of Huine"),
 	HistoricalTitles = {
 		"head-of-state", 0, 0, "norse", "Swede Tribe"
-	}
+	},
+	LiteraryAppearances = {"upgrade-work-ynglingatal"}
 })
 
 DefineCharacter("Fridfrode Skjoldung", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 226-227.
@@ -1565,7 +1566,7 @@ DefineCharacter("Alfhild", { -- Source: Snorri Sturlson, "Heimskringla", 1844, v
 	Father = "Alfarin"
 })
 
-DefineCharacter("Olaf Geirstad-Alf Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 259-260.
+DefineCharacter("Olaf Geirstad-Alf Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 259-261.
 	Name = "Olaf",
 	ExtraName = "Geirstad-Alf",
 	FamilyName = "Yngling",
@@ -1574,7 +1575,9 @@ DefineCharacter("Olaf Geirstad-Alf Yngling", { -- Source: Snorri Sturlson, "Heim
 	Civilization = "norse",
 	ProvinceOfOrigin = "Vestfold", -- his father ruled over Vestfold
 	Father = "Gudrod the Magnificent Yngling",
-	Mother = "Alfhild"
+	Mother = "Alfhild",
+	Trait = "upgrade-strong", -- described as remarkably handsome, very strong and large of growth
+	Quote = _("\"Long while this branch of Odin's stem / Was the stout prop of Norway's realm; / Long while King Olaf with just pride / Ruled over Westfold far and wide.\" - Thiodolf of Huine")
 })
 
 DefineCharacter("Harald Redbeard", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 259-260.
@@ -1607,7 +1610,7 @@ DefineCharacter("Gyrder", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vo
 	Father = "Harald Redbeard"
 })
 
-DefineCharacter("Halfdan Gudrodson Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 260.
+DefineCharacter("Halfdan Gudrodson Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 260-261.
 	Name = "Halfdan",
 	NameElements = {
 		"compound", "prefix", "old-norse", "adjective", "no-case", "Halfr", -- presumably; used "no-case" to avoid the nominative ending "-r"
@@ -1621,6 +1624,75 @@ DefineCharacter("Halfdan Gudrodson Yngling", { -- Source: Snorri Sturlson, "Heim
 	ProvinceOfOrigin = "Vestfold", -- his father ruled over Vestfold
 	Father = "Gudrod the Magnificent Yngling",
 	Mother = "Aasa"
+})
+
+DefineCharacter("Alfgeir", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 260.
+	Name = "Alfgeir",
+	NameElements = {
+		"compound", "prefix", "old-norse", "noun", "no-case", "Alfr", -- presumably; used "no-case" to avoid the nominative ending "-r"
+--		"compound", "suffix" -- ?
+	},
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Ostfold" -- ruled over (at least) Vingulmark
+})
+
+DefineCharacter("Gandalf", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 260.
+	Name = "Gandalf",
+	NameElements = {
+--		"compound", "prefix" -- ?
+		"compound", "suffix", "old-norse", "noun", "Alfr" -- presumably
+	},
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Ostfold", -- ruled over Vingulmark
+	Father = "Alfgeir",
+	DateReferenceCharacter = "Olaf Geirstad-Alf Yngling" -- he lived during Olaf's reign
+})
+
+DefineCharacter("Eystein the Great", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 261.
+	Name = "Eystein",
+	ExtraName = "the Great",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Oppland" -- was king of Oppland
+})
+
+DefineCharacter("Hogne Eysteinson", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 261.
+	Name = "Hogne",
+	ExtraName = "Eysteinson", -- to differentiate him
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Oppland", -- his father was king of Oppland
+	Father = "Eystein the Great",
+	DateReferenceCharacter = "Olaf Geirstad-Alf Yngling" -- he lived during Olaf's reign
+})
+
+DefineCharacter("Rognvald Mountain-High Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 261.
+	Name = "Rognvald",
+	ExtraName = "Mountain-High",
+	FamilyName = "Yngling",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Vestfold", -- his father ruled over Vestfold
+	Father = "Olaf Geirstad-Alf Yngling",
+	Quote = _("\"Rognvald, who knew so well to guide / The wild sea-horses through the tide: / The 'Mountain-high' was the proud name / By which the king was known to fame.\" - Thiodolf of Huine") -- "wild sea-horses" means ships
+})
+
+DefineCharacter("Thiodolf of Huine", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 227, 261.
+	Name = "Thiodolf",
+	ExtraName = "of Huine",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Vestfold", -- he composed the Ynglingatal for Rognvald Mountain-High Yngling of Vestfold
+	DateReferenceCharacter = "Rognvald Mountain-High Yngling", -- composed the Ynglingatal for Rognvald
+	AuthoredWorks = {"upgrade-work-ynglingatal"}
 })
 
 DefineCharacter("Svan the Red", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 222.

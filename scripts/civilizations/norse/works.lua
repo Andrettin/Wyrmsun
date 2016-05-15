@@ -41,3 +41,12 @@ DefineUpgrade("upgrade-work-historiae-vinlandiae-antiquae", { -- Source: Snorri 
 	Year = 1707
 	-- should probably have some other requirements, like a Norse civilization having been in possession of Greenland at some point
 })
+
+DefineUpgrade("upgrade-work-ynglingatal", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 245, 261.
+	Name = _("Ynglingatal"),
+	Work = "scroll",
+	Civilization = "norse",
+	Description = "The Ynglingatal tells the lineage of the Yngling dynasty, legendary kings of Sweden.",
+--	Year = ?, -- in which year was it first published?
+	Quote = "\"The son of kings of Frey's great race, / First in the fray, the fight, the chase, / Fell from his steed - his clotted brains / Lie mixed with mire on Upsal's plains.\""
+})
