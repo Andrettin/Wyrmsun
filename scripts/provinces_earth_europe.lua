@@ -69,6 +69,30 @@ DefineProvince("Aetolia", {
 	Regions = {"Europe", "Greece", "West and Central Europe"}
 })
 
+DefineProvince("Agder", {
+	World = "Earth",
+	Tiles = {
+		{499, 88}, {499, 89}, {499, 90},
+		{500, 86}, {500, 87}, {500, 88}, {500, 89}, {500, 90},
+		{501, 86}, {501, 87}, {501, 88}, {501, 89}, {501, 90},
+		{502, 88}, {502, 89}, {502, 90},
+		{503, 88}, {503, 89}, {503, 90},
+		{504, 88}, {504, 89},
+		{505, 88}
+	},
+	CulturalNames = {
+		"norse", "Agder"
+	},
+	SettlementLocation = {504, 89}, -- Arendal
+	Map = "maps/random/random-map-forest.smp",
+	SettlementTerrain = "Plains",
+	Coastal = true,
+	Claims = {
+		"norse", "Norway"
+	},
+	Regions = {"Europe", "Scandinavia", "West and Central Europe"}
+})
+
 DefineProvince("Akershus", {
 	World = "Earth",
 	Tiles = {
@@ -81,25 +105,6 @@ DefineProvince("Akershus", {
 		"norse", "Akershus"
 	},
 	SettlementLocation = {510, 85}, -- Oslo
-	Map = "maps/random/random-map-forest.smp",
-	SettlementTerrain = "Plains",
-	Coastal = true,
-	Claims = {
-		"norse", "Norway"
-	},
-	Regions = {"Europe", "Scandinavia", "West and Central Europe"}
-})
-
-DefineProvince("Vestfold", {
-	World = "Earth",
-	Tiles = {
-		{508, 87},
-		{509, 86}, {509, 87}
-	},
-	CulturalNames = {
-		"norse", "Vestfold"
-	},
-	SettlementLocation = {509, 87}, -- Tønsberg
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
 	Coastal = true,
@@ -3561,6 +3566,32 @@ DefineProvince("Oldenburg", {
 	Regions = {"Europe", "Germany-Netherlands", "West and Central Europe"}
 })
 
+DefineProvince("Oppland", {
+	World = "Earth",
+	Tiles = {
+		{502, 79},
+		{503, 79}, {503, 80}, {503, 81},
+		{504, 79}, {504, 80}, {504, 81},
+		{505, 79}, {505, 80}, {505, 81}, {505, 82},
+		{506, 79}, {506, 80}, {506, 81}, {506, 82},
+		{507, 79}, {507, 80}, {507, 81}, {507, 82}, {507, 83},
+		{508, 80}, {508, 81}, {508, 82}, {508, 83},
+		{509, 81}, {509, 82}, {509, 83}, {509, 84},
+		{510, 81}, {510, 82}, {510, 83}, {510, 84},
+		{511, 83}
+	},
+	CulturalNames = {
+		"norse", "Oppland"
+	},
+	SettlementLocation = {510, 81}, -- Lillehammar
+	Map = "maps/random/random-map-forest.smp",
+	SettlementTerrain = "Plains",
+	Claims = {
+		"norse", "Norway"
+	},
+	Regions = {"Europe", "Scandinavia", "West and Central Europe"}
+})
+
 DefineProvince("Orkney", {
 	World = "Earth",
 	Tiles = {
@@ -3981,6 +4012,27 @@ DefineProvince("Rhodope", {
 		-550, "greek" -- Greek and Phoenician settlements about 550 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 12.
 	},
 	Regions = {"Europe", "Greece", "West and Central Europe"}
+})
+
+DefineProvince("Rogaland", {
+	World = "Earth",
+	Tiles = {
+		{496, 88}, {496, 89},
+		{497, 86}, {497, 87}, {497, 88}, {497, 89},
+		{498, 86}, {498, 87}, {498, 88}, {498, 89},
+		{499, 86}, {499, 87}
+	},
+	CulturalNames = {
+		"norse", "Rogaland"
+	},
+	SettlementLocation = {496, 88}, -- Stavanger
+	Map = "maps/random/random-map-forest.smp",
+	SettlementTerrain = "Plains",
+	Coastal = true,
+	Claims = {
+		"norse", "Norway"
+	},
+	Regions = {"Europe", "Scandinavia", "West and Central Europe"}
 })
 
 DefineProvince("Romagna", {
@@ -4532,36 +4584,6 @@ DefineProvince("Sweden", {
 	Regions = {"Europe", "Scandinavia", "West and Central Europe"}
 })
 
-DefineProvince("Varmland", {
-	World = "Earth",
-	Tiles = {
-		{514, 85}, {514, 86},
-		{515, 83}, {515, 85}, {515, 86}, {515, 87},
-		{516, 83}, {516, 84}, {516, 85}, {516, 86}, {516, 87},
-		{517, 83}, {517, 84}, {517, 85}, {517, 86}, {517, 87},
-		{518, 84}, {518, 85}, {518, 86},
-		{519, 84}, {519, 85}, {519, 86},
-		{520, 85}, {520, 86}, {520, 87}
-	},
-	CulturalNames = {
-		"norse", "Värmland"
-	},
-	SettlementLocation = {518, 86}, -- Karlstad
-	Map = "maps/random/random-map-forest.smp",
-	SettlementTerrain = "Plains",
-	Claims = {
-		"norse", "Swede Tribe"
-	},
-	HistoricalOwners = {
-		-264, "norse", "Swede Tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		1560, "norse", "Sweden" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
-	},
-	HistoricalCultures = {
-		-264, "norse"
-	},
-	Regions = {"Europe", "Scandinavia", "West and Central Europe"}
-})
-
 DefineProvince("Switzerland", {
 	World = "Earth",
 	CulturalNames = {
@@ -5001,6 +5023,36 @@ DefineProvince("Upper Saxony", {
 	Regions = {"Europe", "Germany-Netherlands", "West and Central Europe"}
 })
 
+DefineProvince("Varmland", {
+	World = "Earth",
+	Tiles = {
+		{514, 85}, {514, 86},
+		{515, 83}, {515, 85}, {515, 86}, {515, 87},
+		{516, 83}, {516, 84}, {516, 85}, {516, 86}, {516, 87},
+		{517, 83}, {517, 84}, {517, 85}, {517, 86}, {517, 87},
+		{518, 84}, {518, 85}, {518, 86},
+		{519, 84}, {519, 85}, {519, 86},
+		{520, 85}, {520, 86}, {520, 87}
+	},
+	CulturalNames = {
+		"norse", "Värmland"
+	},
+	SettlementLocation = {518, 86}, -- Karlstad
+	Map = "maps/random/random-map-forest.smp",
+	SettlementTerrain = "Plains",
+	Claims = {
+		"norse", "Swede Tribe"
+	},
+	HistoricalOwners = {
+		-264, "norse", "Swede Tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		1560, "norse", "Sweden" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalCultures = {
+		-264, "norse"
+	},
+	Regions = {"Europe", "Scandinavia", "West and Central Europe"}
+})
+
 DefineProvince("Venetia", {
 	World = "Earth",
 	CulturalNames = {
@@ -5031,6 +5083,25 @@ DefineProvince("Venetia", {
 		1353, "upgrade-university", true -- University founded in Cividale in 1353. Source: Atlas de História Mundial, 2001, p. 144.
 	},
 	Regions = {"Europe", "Italy", "West and Central Europe"}
+})
+
+DefineProvince("Vestfold", {
+	World = "Earth",
+	Tiles = {
+		{508, 87},
+		{509, 86}, {509, 87}
+	},
+	CulturalNames = {
+		"norse", "Vestfold"
+	},
+	SettlementLocation = {509, 87}, -- Tønsberg
+	Map = "maps/random/random-map-forest.smp",
+	SettlementTerrain = "Plains",
+	Coastal = true,
+	Claims = {
+		"norse", "Norway"
+	},
+	Regions = {"Europe", "Scandinavia", "West and Central Europe"}
 })
 
 DefineProvince("Vojvodina", {

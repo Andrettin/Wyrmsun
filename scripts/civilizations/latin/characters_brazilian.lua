@@ -48,3 +48,15 @@ DefineCharacter("Rio Negro", { -- Source: Elisabeth von der Weid, "O bonde como 
 		"head-of-state", 0, 0, "latin", "Rio Negro" -- was Baron of Rio Negro
 	}
 })
+
+DefineCharacter("Rodrigues Alves", { -- Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", p. 21.
+	Name = "Rodrigues Alves", -- this was actually his surname
+	Gender = "male",
+	Type = "unit-teuton-worker", -- should change to something more appropriate when more information is learned about him
+	Civilization = "latin",
+	ProvinceOfOrigin = "Rio de Janeiro", -- put him in Brazil's capital province since we don't know where exactly in the country he comes from
+	Year = 1902, -- elected President of Brazil in 1902
+	HistoricalTitles = {
+		"head-of-state", 1902, 0, "latin", "Brazil" -- elected President of Brazil in 1902 (did he actually also become president in that year?)
+	}
+})

@@ -166,6 +166,15 @@ DefineProvince("Nicaragua", {
 	Regions = {"America", "Central America"}
 })
 
+DefineProvince("Ontario", {
+	World = "Earth",
+	Tiles = {},
+	Map = "maps/random/random-map-forest.smp",
+	SettlementTerrain = "Plains",
+	Coastal = true,
+	Regions = {"America", "North America"}
+})
+
 DefineProvince("Paraguay", {
 	World = "Earth",
 	Tiles = {},
@@ -222,8 +231,16 @@ DefineProvince("Rio de Janeiro", {
 		-- In 1906, the population of the city of Rio de Janeiro was 811,444; Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", p. 4.
 	},
 	HistoricalModifiers = {
+		1859, "upgrade-tramway-network", true, -- the tramway line of the "Companhia de Carris de Ferro da Cidade à Boavista" (tramway company) began operations in 1859; Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", p. 6.
 		1862, "upgrade-college", true, -- Instituto Politécnico Brasileiro founded in Rio de Janeiro in 1862. Source: Silvia Fernanda de Mendonça Figueirôa, "Ciência e tecnologia no Brasil Imperial: Guilherme Schüch, Barão de Capanema (1824-1908)", 2005, p. 446.
-		1868, "upgrade-tramway", true -- Trams began operation in Rio de Janeiro in 1868; Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", p. 1.
+		1865, "upgrade-tramway-network", true, -- the "Companhia Locomotora" (tramway company) was founded in 1865; Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", p. 12.
+		1868, "upgrade-tramway-network", true, -- first part of the tramway line of the "Companhia do Caminho de Carris de Ferro do Jardim Botânico" (tramway company) was completed in 1868; Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", pp. 7-9.
+		1873, "upgrade-tramway-network", true, -- first part of the tramway lines of the "Companhia Ferro-Carril de Sao Cristovao" (tramway company) began operations in 1873; Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", pp. 9-10.
+		1873, "upgrade-tramway-network", true, -- first part of the tramway lines of the "Companhia Ferro Carril de Vila Isabel" (tramway company) began functioning in 1873; Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", p. 13.
+		1874, "upgrade-tramway-network", true, -- in 1874 the "Companhia Ferro-Carril Fluminense" (tramway company) acquired a concession for a line in the city center; Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", p. 12.
+		1884, "upgrade-tramway-network", true, -- in October 1884 the first part of tramway line of the "Companhia Ferro-Carril e Hotel Corcovado" began operations; Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", p. 18.
+		1892, "upgrade-tramway-network", true, -- the "Companhia Ferro-Carril Carioca" (tramway company) built the terminal station for their lines in the Largo da Carioca in 1892; Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", pp. 11-12.
+		1905, "upgrade-tramway-network", true, -- the "The Rio de Janeiro Tramway, Light and Power Co. Ltd." (tramway and electricity generation company) received permission to function in Brazil on 30th May 1905; Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", p. 24.
 	},
 	Regions = {"America", "South America"}
 })
@@ -250,7 +267,8 @@ DefineProvince("Sao Paulo", {
 		"latin", "Brazil"
 	},
 	HistoricalModifiers = {
-		1827, "upgrade-college", true -- Law college existent in São Paulo in 1827. Source: Otávio Tarquínio de Sousa, Bernardo Pereira de Vasconcelos, p. 66.
+		1827, "upgrade-college", true, -- Law college existent in São Paulo in 1827. Source: Otávio Tarquínio de Sousa, Bernardo Pereira de Vasconcelos, p. 66.
+		1904, "upgrade-tramway-network", true -- the "Sao Paulo Tramway Light and Power Co. Ltd." (tramway and electricity generation company) already existed by 1904; Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", pp. 20-21.
 	},
 	Regions = {"America", "South America"}
 })

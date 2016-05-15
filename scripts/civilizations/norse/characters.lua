@@ -1379,7 +1379,7 @@ DefineCharacter("Eystein the Severe", { -- Source: Snorri Sturlson, "Heimskringl
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
-	ProvinceOfOrigin = "Hedmark" -- king of the Upland people (in Norway, so presumably Oppland); put in Hedmark since its the closest Norwegian province in the game
+	ProvinceOfOrigin = "Oppland" -- king of the Upland people (in Norway, so presumably Oppland)
 })
 
 DefineCharacter("Asa", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 257.
@@ -1387,7 +1387,7 @@ DefineCharacter("Asa", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 
 	Gender = "female",
 	Type = "unit-teuton-archer",
 	Civilization = "norse",
-	ProvinceOfOrigin = "Hedmark", -- daughter of the "king of the Upland people" (in Norway, so presumably Oppland); put in Hedmark since its the closest Norwegian province in the game
+	ProvinceOfOrigin = "Oppland", -- daughter of the "king of the Upland people" (in Norway, so presumably Oppland)
 	Father = "Eystein the Severe"
 	-- married to Halfdan Huitbein Yngling
 })
@@ -1517,8 +1517,110 @@ DefineCharacter("Hlif", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol.
 	Type = "unit-teuton-archer",
 	Civilization = "norse",
 --	ProvinceOfOrigin = ?, -- her father was king of Westmor (where?)
-	Father = "Dag of Westmor",
-	DateReferenceCharacter = "Halfdan the Mild Yngling" -- married to Halfdan the Mild Yngling
+	Father = "Dag of Westmor"
+})
+
+DefineCharacter("Gudrod the Magnificent Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 259-260.
+	Name = "Gudrod",
+	NameElements = {
+		"compound", "prefix", "old-norse", "noun", {"God"}, "Guð" -- presumably
+--		"compound", "suffix" -- ?
+	},
+	ExtraName = "the Magnificent", -- also knowns as "the Hunter"
+	FamilyName = "Yngling",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Vestfold", -- his father ruled over Vestfold
+	Father = "Halfdan the Mild Yngling",
+	Mother = "Hlif", -- presumably, since Hlif was married to Halfdan
+	-- died murdered by a man under the orders of his wife Aasa
+	Quote = _("\"Gudrod is gone to his long rest, / Despite of all his haughty pride, / A traitor's spear has pierced his side\" - Thiodolf of Huine")
+	-- married to Alfhild, and after her death married Aasa (daughter of Harald Redbeard)
+	-- described as proud
+})
+
+DefineCharacter("Alfarin", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 259.
+	Name = "Alfarin",
+	NameElements = {
+		"compound", "prefix", "old-norse", "noun", "no-case", "Alfr", -- presumably; used "no-case" to avoid the nominative ending "-r"
+--		"compound", "suffix" -- ?
+	},
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Ostfold" -- king of Alfheim (the land between Glommen and Gotha rivers)
+})
+
+DefineCharacter("Alfhild", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 259.
+	Name = "Alfhild",
+	NameElements = {
+		"compound", "prefix", "old-norse", "noun", "no-case", "Alfr", -- presumably; used "no-case" to avoid the nominative ending "-r"
+		"compound", "suffix", "old-norse", "noun", "Hildr" -- presumably
+	},
+	Gender = "female",
+	Type = "unit-teuton-archer",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Ostfold", -- her father was king of Alfheim (the land between Glommen and Gotha rivers)
+	Father = "Alfarin"
+})
+
+DefineCharacter("Olaf Geirstad-Alf Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 259-260.
+	Name = "Olaf",
+	ExtraName = "Geirstad-Alf",
+	FamilyName = "Yngling",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Vestfold", -- his father ruled over Vestfold
+	Father = "Gudrod the Magnificent Yngling",
+	Mother = "Alfhild"
+})
+
+DefineCharacter("Harald Redbeard", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 259-260.
+	Name = "Harald",
+	ExtraName = "Redbeard",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Agder", -- ruled over Agder
+	HairVariation = "red-hair", -- presumably
+})
+
+DefineCharacter("Aasa", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 259-260.
+	Name = "Aasa",
+	Gender = "female",
+	Type = "unit-teuton-archer",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Agder", -- her father ruled over Agder
+	Father = "Harald Redbeard",
+	Trait = "upgrade-cruel" -- described as cruel
+	-- married Gudrod the Magnificent Yngling
+})
+
+DefineCharacter("Gyrder", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 259-260.
+	Name = "Gyrder",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Agder",
+	Father = "Harald Redbeard"
+})
+
+DefineCharacter("Halfdan Gudrodson Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 260.
+	Name = "Halfdan",
+	NameElements = {
+		"compound", "prefix", "old-norse", "adjective", "no-case", "Halfr", -- presumably; used "no-case" to avoid the nominative ending "-r"
+--		"compound", "suffix", -- ?
+	},
+	ExtraName = "Gudrodson", -- to differentiate him
+	FamilyName = "Yngling",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "norse",
+	ProvinceOfOrigin = "Vestfold", -- his father ruled over Vestfold
+	Father = "Gudrod the Magnificent Yngling",
+	Mother = "Aasa"
 })
 
 DefineCharacter("Svan the Red", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 222.

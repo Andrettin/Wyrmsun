@@ -49,8 +49,8 @@ DefineUpgrade("upgrade-courthouse", {
 	RevoltRiskModifier = -1
 })
 
-DefineUpgrade("upgrade-tramway", { -- this modifier cannot be gotten yet; it is here to allow history to provinces as a preliminary thing for when we expand the game's technology tree to encompass the industrial era (in a few years from now?)
-	Name = _("Tram"),
-	ModifierGraphicFile = "ui/modifiers/courthouse.png", -- should be changed to its own icon later
+DefineUpgrade("upgrade-tramway-network", { -- this modifier cannot be gotten yet; it is here to allow history to provinces as a preliminary thing for when we expand the game's technology tree to encompass the industrial era (in a few years from now?)
+	Name = _("Tramway Network"),
+	ModifierGraphicFile = "ui/modifiers/courthouse.png", -- should be changed to its own icon later (i.e. a tramway)
 	AdministrativeEfficiencyModifier = 10
 })

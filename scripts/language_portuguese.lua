@@ -46,6 +46,13 @@ DefineLanguageWord("Burgo", { -- Source: T. C. Donkin, "An Etymological Dictiona
 	DerivesFrom = {"gothic", "noun", "Baúrgs"} -- the source gives it as being of Germanic origin (then going on to list a series of Germanic words including this Gothic one); presumably from the Gothic in Portuguese, since it seems likely it has the same origin as the Spanish word
 })
 
+DefineLanguageWord("Macaco", {
+	Language = "portuguese",
+	Type = "noun",
+	Meanings = {"Monkey"},
+	NameTypes = {"plural", "unit-class-farm"} -- example: "Macacos" (farm in Rio de Janeiro); Source: Elisabeth von der Weid, "O bonde como elemento de expansão urbana no Rio de Janeiro", p. 13.
+})
+
 DefineLanguageWord("Rico", {
 	Language = "portuguese",
 	Type = "adjective",
