@@ -64,6 +64,7 @@ https://github.com/Andrettin/Wyrmsun
 * Grand Strategy
 - Added Agder, Oppland and Rogaland provinces (Earth).
 - Possible start dates extended to 9 BC for Earth.
+- Fixed issue with grand strategy events which could cause the game to break when ending a turn.
 
 -----------------------------------------------------------------------
 - 2.2.1

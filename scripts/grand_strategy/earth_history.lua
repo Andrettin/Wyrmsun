@@ -989,10 +989,6 @@ if (GrandStrategyYear >= -58) then -- in 58 BC Caesar fought Ariovistus' Suebi a
 --	SetFactionTechnology("celt", "Boii Tribe", "upgrade-teuton-coinage", true)
 end
 
-if (GrandStrategyYear >= -52) then
-	GrandStrategyEvents.DeBelloGallico = nil -- De Bello Gallico was written 58-52 BC
-end
-
 if (GrandStrategyYear >= -50) then -- Gaul conquered by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	SetProvinceOwner("Alsace", "latin", "Rome")
 	SetProvinceOwner("Aquitaine", "latin", "Rome")

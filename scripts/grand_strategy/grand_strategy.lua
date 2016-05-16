@@ -3854,7 +3854,6 @@ function GrandStrategyEvent(faction, event)
 		end
 
 		local event_options
-		local event_option_effects = nil
 		local event_option_conditions = nil
 		local event_option_tooltips
 		if (type(event) == "string") then
@@ -3862,7 +3861,6 @@ function GrandStrategyEvent(faction, event)
 			event_option_tooltips = GetGrandStrategyEventData(event, "OptionTooltips")
 		else
 			event_options = event.Options
-			event_option_effects = event.OptionEffects
 			event_option_conditions = event.OptionConditions
 			event_option_tooltips = event.OptionTooltips
 		end
@@ -3887,7 +3885,7 @@ function GrandStrategyEvent(faction, event)
 						if (type(event) == "string") then
 							GetGrandStrategyEventData(event, "OptionEffect", i)
 						else
-							event_option_effects[i]()
+							event.OptionEffects[i]()
 						end
 						GameResult = GameNoResult -- this is because many events start scenarios
 						CleanPlayers()
@@ -3925,7 +3923,7 @@ function GrandStrategyEvent(faction, event)
 					if (type(event) == "string") then
 						GetGrandStrategyEventData(event, "OptionEffect", 1)
 					else
-						event_option_effects[1]()
+						event.OptionEffects[1]()
 					end
 					GameResult = GameNoResult -- this is because many events start scenarios
 					CleanPlayers()
@@ -3938,11 +3936,11 @@ function GrandStrategyEvent(faction, event)
 
 		menu:run()
 	else
---		event_option_effects[SyncRand(table.getn(event_option_effects)) + 1]() -- AIs choose a random option
+--		event.OptionEffects[SyncRand(table.getn(event.OptionEffects)) + 1]() -- AIs choose a random option
 		if (type(event) == "string") then
 			GetGrandStrategyEventData(event, "OptionEffect", 1)
 		else
-			event_option_effects[1]() -- AIs always choose the first option
+			event.OptionEffects[1]() -- AIs always choose the first option
 		end
 	end
 	
