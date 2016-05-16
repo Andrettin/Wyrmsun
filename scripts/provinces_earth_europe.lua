@@ -204,6 +204,9 @@ DefineProvince("Andalusia", {
 		486, "goth", "Visigoth Tribe", -- Kingdom of the Visigoths; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		1560, "latin", "Spain" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
+	HistoricalClaims = {
+		-197, "latin", "Rome"
+	},
 	HistoricalModifiers = {
 		1504, "upgrade-university", true, -- Major university founded in Seville in 1504. Source: The Cambridge Modern History Atlas, p. 9 and Enrique Martínez Ruiz; Consuelo Maqueda, Atlas Histórico de España I, 2000, p. 225.
 		1531, "upgrade-university", true, -- University founded in Granada in 1531. Source: The Cambridge Modern History Atlas, p. 9.
@@ -343,6 +346,9 @@ DefineProvince("Aragon", {
 	HistoricalCultures = {
 		-7000, "basque" -- Cardial Pottery culture existed in the eastern Iberian coast between 7000 and 2000 BC; Source: "Atlas de História Mundial", 2001, pp. 40-41.
 	},
+	HistoricalClaims = {
+		-201, "latin", "Rome"
+	},
 	HistoricalModifiers = {
 		1300, "upgrade-university", true, -- Major university founded in Lerida in 1300. Source: William R. Shepherd, Historical Atlas, 1923, p. 100 and Enrique Martínez Ruiz; Consuelo Maqueda, Atlas Histórico de España I, 2000, p. 225.
 		1354, "upgrade-university", true, -- Major university founded in Huesca in 1354. Source: The Cambridge Modern History Atlas, 1912, p. 9, Atlas de História Mundial, 2001, p. 144 and Enrique Martínez Ruiz; Consuelo Maqueda, Atlas Histórico de España I, 2000, p. 225.
@@ -481,6 +487,9 @@ DefineProvince("Asturias", {
 	},
 	HistoricalCultures = {
 		-264, "celt"
+	},
+	HistoricalClaims = {
+		17, "latin", "Rome"
 	},
 	HistoricalModifiers = {
 		-- Pottery existent in the Cantabrian Coast in c. 4900 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 159.
@@ -1039,6 +1048,9 @@ DefineProvince("Carinthia", {
 		919, "teuton", "Holy Rome", -- Duchy of Carinthia within the Holy Roman Empire; political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		1560, "teuton", "Austria" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
+	HistoricalClaims = {
+		-15, "latin", "Rome"
+	},
 	HistoricalCultures = {
 		-800, "celt"
 	},
@@ -1102,6 +1114,9 @@ DefineProvince("Castille", {
 		-197, "latin", "Rome", -- Hispania Tarraconensis and (most of) Farther Baetica acquired by Rome in 197 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		486, "goth", "Visigoth Tribe", -- Kingdom of the Visigoths; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		1560, "latin", "Spain" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalClaims = {
+		-197, "latin", "Rome"
 	},
 	HistoricalModifiers = {
 		1212, "upgrade-university", true, -- University founded in Palencia in 1212. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.
@@ -1174,6 +1189,9 @@ DefineProvince("Cornwall", {
 	HistoricalOwners = {
 		43, "latin", "Rome", -- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		1560, "teuton", "England" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalClaims = {
+		43, "latin", "Rome"
 	},
 	Regions = {"British Isles", "England", "Europe", "Northwest Europe", "West and Central Europe"}
 })
@@ -1353,6 +1371,9 @@ DefineProvince("Cumbria", {
 		-264, "celt",
 		1560, "teuton"
 	},
+	HistoricalClaims = {
+		43, "latin", "Rome"
+	},
 	Regions = {"British Isles", "England", "Europe", "Northwest Europe", "West and Central Europe"}
 })
 
@@ -1502,6 +1523,9 @@ DefineProvince("Durham", {
 	HistoricalCultures = {
 		526, "teuton"
 	},
+	HistoricalClaims = {
+		43, "latin", "Rome"
+	},
 	HistoricalModifiers = {
 		1832, "upgrade-university", true -- University founded in Durham in 1832. Source: David Thomson, Europe Since Napoleon, 1966, p. 449.
 	},
@@ -1536,6 +1560,7 @@ DefineProvince("East Anglia", {
 		1560, "teuton", "England" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalClaims = {
+		43, "latin", "Rome",
 		616, "teuton", "East Anglia"
 	},
 	HistoricalCultures = {
@@ -1624,6 +1649,9 @@ DefineProvince("Essex", {
 	},
 	HistoricalCultures = {
 		526, "teuton"
+	},
+	HistoricalClaims = {
+		43, "latin", "Rome"
 	},
 	HistoricalModifiers = {
 		1836, "upgrade-university", true -- University founded in London in 1836. Source: David Thomson, Europe Since Napoleon, 1966, p. 449.
@@ -2008,6 +2036,9 @@ DefineProvince("Gallaecia", {
 		411, "teuton", "Suebi Tribe", -- The Suebi conquered Gallaecia in 411 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 		486, "teuton", "Galicia", -- Suebi kingdom of Galicia; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		1560, "latin", "Spain" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalClaims = {
+		-17, "latin", "Rome"
 	},
 	HistoricalModifiers = {
 		1532, "upgrade-university", true -- University founded in Santiago de Compostela in 1532. Source: The Cambridge Modern History Atlas, p. 9.
@@ -2583,6 +2614,9 @@ DefineProvince("Kent", {
 	HistoricalCultures = {
 		526, "teuton"
 	},
+	HistoricalClaims = {
+		43, "latin", "Rome"
+	},
 	Regions = {"British Isles", "England", "Europe", "Northwest Europe", "West and Central Europe"}
 })
 
@@ -2748,6 +2782,7 @@ DefineProvince("Lincoln", {
 		1560, "teuton", "England" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalClaims = {
+		43, "latin", "Rome",
 		654, "teuton", "Middle Anglia"
 	},
 	HistoricalCultures = {
@@ -2873,6 +2908,7 @@ DefineProvince("Lower Austria", {
 		1560, "teuton", "Austria" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalClaims = {
+		-15, "latin", "Rome",
 		919, "teuton", "Bavaria", -- Bavarian East March within the Holy Roman Empire; political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 	},
 	HistoricalCultures = {
@@ -2962,6 +2998,9 @@ DefineProvince("Lowland Scotland", {
 	HistoricalOwners = {
 		80, "latin", "Rome", -- The area between the Wall of Antoninus (or Severus) and Hadrian's Wall was acquired by Rome in 80 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		1560, "teuton", "Scotland" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalClaims = {
+		80, "latin", "Rome"
 	},
 	HistoricalModifiers = {
 		1450, "upgrade-university", true, -- University founded in Glasgow in 1450. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.
@@ -3144,6 +3183,7 @@ DefineProvince("Mercia", {
 		1560, "teuton", "England" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalClaims = {
+		43, "latin", "Rome",
 		632, "teuton", "Mercia"
 	},
 	HistoricalCultures = {
@@ -3406,6 +3446,7 @@ DefineProvince("Normandy", {
 		1560, "latin", "France", -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalClaims = {
+		-50, "latin", "Rome",
 		486, "teuton", "Francia"
 	},
 	HistoricalCultures = {
@@ -3538,6 +3579,7 @@ DefineProvince("Northumberland", {
 		1560, "teuton", "England" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalClaims = {
+		80, "latin", "Rome",
 		547, "teuton", "Bernicia" -- the Kingdom of Bernicia was founded in 547 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75.
 	},
 	HistoricalCultures = {
@@ -3712,6 +3754,9 @@ DefineProvince("Palermo", {
 		-750, "phoenician", -- Phoenician settlements existed in Phoenicia proper, western north Africa, western Sicily and southern Cyprus between 750 and 625 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.	
 		-500, "latin"
 	},
+	HistoricalClaims = {
+		-241, "latin", "Rome"
+	},
 	HistoricalModifiers = {
 		1394, "upgrade-university", true -- University founded in Palermo in 1394. Source: The Cambridge Modern History Atlas, p. 9.
 	},
@@ -3751,6 +3796,9 @@ DefineProvince("Pannonia", {
 	},
 	HistoricalCultures = {
 		-5500, "basque"
+	},
+	HistoricalClaims = {
+		10, "latin", "Rome"
 	},
 	HistoricalModifiers = {
 		1367, "upgrade-university", true -- University founded in Fünfkirchen in 1367. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.
@@ -3862,6 +3910,9 @@ DefineProvince("Portugal", {
 		450, "teuton", "Suebi Tribe", -- The Suebi were in possession of most of modern Portugal by around 450 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 		486, "teuton", "Galicia", -- Suebi kingdom of Galicia; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		1560, "latin", "Portugal" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalClaims = {
+		-138, "latin", "Rome"
 	},
 	HistoricalModifiers = {
 		1537, "upgrade-university", true, -- University moved from Lisbon to Coimbra in 1537. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.
@@ -4010,6 +4061,9 @@ DefineProvince("Rhodope", {
 	HistoricalCultures = {
 		-1450, "phoenician", -- The isle of Thasos and the coastal areas around it were settled by the Phoenicians around 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 		-550, "greek" -- Greek and Phoenician settlements about 550 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 12.
+	},
+	HistoricalClaims = {
+		-146, "latin", "Rome"
 	},
 	Regions = {"Europe", "Greece", "West and Central Europe"}
 })
@@ -4163,7 +4217,8 @@ DefineProvince("Salzburg", {
 		919, "teuton", "Holy Rome" -- Duchy of Bavaria within the Holy Roman Empire; political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 	},
 	HistoricalClaims = {
-		919, "teuton", "Bavaria", -- Duchy of Bavaria within the Holy Roman Empire; political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+		-15, "latin", "Rome",
+		919, "teuton", "Bavaria" -- Duchy of Bavaria within the Holy Roman Empire; political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 	},
 	HistoricalCultures = {
 		-800, "celt"
@@ -4489,6 +4544,7 @@ DefineProvince("Styria", {
 		1560, "teuton", "Austria" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalClaims = {
+		-15, "latin", "Rome",
 		919, "teuton", "Carinthia", -- Duchy of Carinthia within the Holy Roman Empire; political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 	},
 	HistoricalCultures = {
@@ -4526,6 +4582,9 @@ DefineProvince("Sussex", {
 		43, "latin", "Rome", -- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		526, "teuton", "Saxon Tribe", -- by 526 AD the Anglo-Saxons had become masters of most of Roman Britannia; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 		1560, "teuton", "England" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalClaims = {
+		43, "latin", "Rome"
 	},
 	HistoricalCultures = {
 		526, "teuton"
@@ -4645,13 +4704,16 @@ DefineProvince("Syracuse", {
 	},
 	HistoricalOwners = {
 		-500, "latin", "Sicel Tribe", -- Situation of Italy in (apparently) 500 BC; Sicily was inhabited by the Elymians, Sicanians and Sicels; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
-		-241, "latin", "Rome", -- Sicily acquired by Rome in 241 BC; the city of Syracuse was acquired only in 212 BC, but overwhelming majority of the eastern side of the island was acquired in 241 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		-241, "latin", "Rome", -- Sicily acquired by Rome in 241 BC; the city of Syracuse was acquired only in 212 BC, but the overwhelming majority of the eastern side of the island was acquired in 241 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		507, "goth", "Ostrogoth Tribe", -- political situation in 507-534 in Europe; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
 		1061, "latin", "Sicily", -- Robert Guiscard invades Sicily in 1061 AD with 13 ships and 270 knights, to which 170 knights were joined in the conquest of Messina (but the source also mentions the victorious battle having 700 knights against 15,000 Muslims); Messina is on the eastern side of the island; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 233.
 		1560, "latin", "Spain" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalCultures = {
 		-500, "latin"
+	},
+	HistoricalClaims = {
+		-241, "latin", "Rome"
 	},
 	HistoricalModifiers = {
 		1444, "upgrade-university", true, -- University founded in Catania in 1444. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.
@@ -4839,6 +4901,7 @@ DefineProvince("Tyrol", {
 		-800, "celt"
 	},
 	HistoricalClaims = {
+		-15, "latin", "Rome",
 		919, "teuton", "Bavaria", -- Duchy of Bavaria within the Holy Roman Empire; political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 	},
 	Regions = {"Cisleithania", "Europe", "Germany-Netherlands", "Roman Danube", "West and Central Europe"}
@@ -4972,7 +5035,8 @@ DefineProvince("Upper Austria", {
 		1560, "teuton", "Austria" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalClaims = {
-		919, "teuton", "Bavaria", -- Duchy of Bavaria within the Holy Roman Empire; political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+		-15, "latin", "Rome",
+		919, "teuton", "Bavaria" -- Duchy of Bavaria within the Holy Roman Empire; political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 	},
 	HistoricalCultures = {
 		-800, "celt"
@@ -5154,6 +5218,9 @@ DefineProvince("Wales", {
 		-7000, "basque",
 		613, "celt"
 	},
+	HistoricalClaims = {
+		43, "latin", "Rome"
+	},
 	Regions = {"British Isles", "England", "Europe", "Northwest Europe", "West and Central Europe"}
 })
 
@@ -5233,6 +5300,9 @@ DefineProvince("Wessex", {
 	HistoricalCultures = {
 		-7000, "basque",
 		526, "teuton"
+	},
+	HistoricalClaims = {
+		43, "latin", "Rome"
 	},
 	HistoricalModifiers = {
 		1909, "upgrade-university", true -- University founded in Bristol in 1909. Source: David Thomson, Europe Since Napoleon, 1966, p. 449.
@@ -5417,6 +5487,7 @@ DefineProvince("York", {
 		1560, "teuton", "England" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalClaims = {
+		43, "latin", "Rome",
 		588, "teuton", "Deira" -- since their king died in this year, the kingdom existed then
 	},
 	HistoricalCultures = {

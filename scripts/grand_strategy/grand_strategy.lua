@@ -355,7 +355,7 @@ function RunGrandStrategyGameSetupMenu()
 			if (old_world ~= world_list[world:getSelected() + 1]) then
 				if (GrandStrategyWorld == "Earth") then
 					date_minimum = -3000 -- beginning of the last wave of Indo-European migrations, which lasted until 2800 BC
-					date_maximum = -71 -- the Suebic king Ariovistus enters Gaul at the request of the Arverni and the Sequani to fight the Aedui
+					date_maximum = -9 -- Marbod conquers Bohemia
 --					date_maximum = 486 -- conquest of Syagrius' realm by the Frankish Merovingian king, Clovis
 --					date_maximum = 654
 					
@@ -364,6 +364,7 @@ function RunGrandStrategyGameSetupMenu()
 						"2800 BC", -- end of the last wave of the Indo-European migrations and begin of the Single Grave culture in modern Denmark
 						"71 BC", -- the Suebic king Ariovistus enters Gaul at the request of the Arverni and the Sequani to fight the Aedui
 --						"27 BC", -- Augustus assumes power in Rome
+						"9 BC", -- Marbod conquers Bohemia
 --						"486 AD", -- conquest of Syagrius' realm by the Frankish Merovingian king, Clovis
 --						"1547 AD",
 --						"1648 AD", -- Peace of Westphalia

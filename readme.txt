@@ -63,6 +63,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Grand Strategy
 - Added Agder, Oppland and Rogaland provinces (Earth).
+- Possible start dates extended to 9 BC for Earth.
 
 -----------------------------------------------------------------------
 - 2.2.1

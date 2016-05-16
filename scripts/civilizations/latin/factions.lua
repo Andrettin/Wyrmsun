@@ -174,7 +174,11 @@ DefineFaction("Rome", {
 	DefaultTier = "kingdom",
 	HistoricalFactionDerivations = {-500, "latin", "Latin Tribe"},
 	HistoricalGovernmentTypes = {
-		-500, "republic" -- correct?
+		-500, "republic", -- correct?
+		-27, "monarchy" -- Augustus assumed power in Rome; was this the date in which he actually became emperor?
+	},
+	HistoricalTiers = {
+		-27, "empire" -- Rome was an empire under Augustus
 	},
 	HistoricalCapitals = {
 		-500, "Latium" -- Rome was Rome's capital by 500 BC (this may seem like a silly remark, but even city-states may happen to change their capitals from their namesake to other cities); Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
