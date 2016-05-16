@@ -478,6 +478,10 @@ function GenerateProvince(arg)
 			end
 		end
 	end
+	
+	if (table.getn(potential_province_seed_tiles) == 0) then
+		return;
+	end
 
 	local province_seed_tile = potential_province_seed_tiles[SyncRand(table.getn(potential_province_seed_tiles)) + 1]
 
@@ -679,6 +683,11 @@ function GenerateProvince(arg)
 end
 
 function AddProvinceResource(province, resource, quantity)
+
+	if (table.getn(province.Tiles) == 0) then
+		return;
+	end
+
 	local WhileCount = 0
 	if (resource ~= "grain" and resource ~= "mushrooms" and resource ~= "fish" and quantity > math.floor(GetProvinceFoodCapacity(province.Name, true) / 100)) then
 		quantity = math.floor(GetProvinceFoodCapacity(province.Name, true) / 100)
