@@ -1587,7 +1587,7 @@ DefineCharacter("Harald Redbeard", { -- Source: Snorri Sturlson, "Heimskringla",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
 	ProvinceOfOrigin = "Agder", -- ruled over Agder
-	HairVariation = "red-hair", -- presumably
+	HairVariation = "red-hair" -- presumably
 })
 
 DefineCharacter("Aasa", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 259-260.
@@ -1610,20 +1610,23 @@ DefineCharacter("Gyrder", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vo
 	Father = "Harald Redbeard"
 })
 
-DefineCharacter("Halfdan Gudrodson Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 260-261.
+DefineCharacter("Halfdan the Black Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 260-262.
 	Name = "Halfdan",
 	NameElements = {
 		"compound", "prefix", "old-norse", "adjective", "no-case", "Halfr", -- presumably; used "no-case" to avoid the nominative ending "-r"
 --		"compound", "suffix", -- ?
 	},
-	ExtraName = "Gudrodson", -- to differentiate him
+	ExtraName = "the Black",
 	FamilyName = "Yngling",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
 	ProvinceOfOrigin = "Vestfold", -- his father ruled over Vestfold
 	Father = "Gudrod the Magnificent Yngling",
-	Mother = "Aasa"
+	Mother = "Aasa",
+	HairVariation = "black-hair",
+	Year = 841, -- reign began
+	DeathYear = 863 -- reign ended
 })
 
 DefineCharacter("Alfgeir", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 260.
