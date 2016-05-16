@@ -163,7 +163,7 @@ function AiLandAttackDefensive()
 			if (GetAiUnitType("stables") ~= nil and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("stables")) < 1 and CheckDependency(AiPlayer(), GetAiUnitType("stables"))) then
 				AiSet(GetAiUnitType("stables"), 1) -- if has a stronghold but no stables, build one
 			end
-			if ((GetAiUnitType("stables") == nil or GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("stables"))) >= 1 and GetAiUnitType("temple") ~= nil and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("temple")) < 1 and CheckDependency(AiPlayer(), GetAiUnitType("temple"))) then
+			if ((GetAiUnitType("stables") == nil or GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("stables")) >= 1) and GetAiUnitType("temple") ~= nil and GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("temple")) < 1 and CheckDependency(AiPlayer(), GetAiUnitType("temple"))) then
 				AiSet(GetAiUnitType("temple"), 1) -- if has a stronghold and stables but no temple, build one
 			end
 			if (GetAiUnitType("coinage") ~= nil and CheckDependency(AiPlayer(), GetAiUnitType("coinage"))) then

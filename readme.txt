@@ -61,6 +61,12 @@ https://github.com/Andrettin/Wyrmsun
 - 2.2.3
 -----------------------------------------------------------------------
 
+* AI
+- Fixed AI-related crash.
+
+* Units
+- Fixed issue which allowed organic units with no proper name to have epithets.
+
 -----------------------------------------------------------------------
 - 2.2.2
 -----------------------------------------------------------------------
