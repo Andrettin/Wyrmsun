@@ -25,67 +25,15 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineWorldMapTile({456, 132}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"latin", "Lucus Augusti"
-	},
-	FactionCulturalSettlementNames = {
-		"latin", "Spain", "Corunna"
-	}
-})
-
-DefineWorldMapTile({463, 132}, {
-	World = "Earth",
-	FactionCulturalSettlementNames = {
-		"latin", "Spain", "Oviedo"
-	}
-})
-
-DefineWorldMapTile({464, 141}, {
-	World = "Earth",
-	FactionCulturalTerrainNames = {
-		"Mountains", "latin", "Spain", "Pico Almanzor" -- Source: "Philip's International School Atlas", 2006, p. 69
-	}
-})
-
-DefineWorldMapTile({466, 148}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"latin", "Corduba"
-	}
-})
-
-DefineWorldMapTile({469, 141}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"latin", "Complutum"
-	},
-	FactionCulturalSettlementNames = {
-		"latin", "Spain", "Madrid"
-	}
-})
-
-DefineWorldMapTile({470, 150}, {
-	World = "Earth",
-	FactionCulturalTerrainNames = {
-		"Mountains", "latin", "Spain", "Mulhacén" -- Source: "Philip's International School Atlas", 2006, p. 69
-	}
-})
-
-DefineWorldMapTile({477, 137}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"latin", "Caesaraugusta"
-	},
-	FactionCulturalSettlementNames = {
-		"latin", "Spain", "Zaragoza"
-	}
-})
-
-DefineWorldMapTile({481, 135}, {
-	World = "Earth",
-	FactionCulturalTerrainNames = {
-		"Mountains", "latin", "Spain", "Monte Perdido" -- Source: "Philip's International School Atlas", 2006, p. 69
+DefineCharacter("Tassilo", { -- Source: "Medieval Warfare V.2", 2013, p. 8.
+	Name = "Tassilo",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "teuton",
+	Faction = "Bavaria",
+	ProvinceOfOrigin = "Bavaria",
+	Year = 784, -- revolted against Frankish rule in 784
+	HistoricalTitles = {
+		"head-of-state", 784, 787, "teuton", "Bavaria" -- revolted against Frankish rule in 784, and was forced to submit to them by Charles the Great three years later
 	}
 })

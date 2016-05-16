@@ -26,9 +26,13 @@
 --
 
 --Load("scripts/world_earth_tiles_asia.lua")
-Load("scripts/world_earth_tiles_austria.lua")
+Load("scripts/world_earth_tiles_austria.lua") -- German-speaking territories of the Empire of Austria
 Load("scripts/world_earth_tiles_finland.lua")
-Load("scripts/world_earth_tiles_greece.lua")
+Load("scripts/world_earth_tiles_france.lua") -- modern France (excluding Corsica)
+Load("scripts/world_earth_tiles_germany.lua") -- territory of Imperial Germany (excluding Alsace-Lorraine)
+Load("scripts/world_earth_tiles_greece.lua") -- territory of modern Greece
+Load("scripts/world_earth_tiles_italy.lua") -- includes Corsica since it is closer to the Italian mainland than to France, and since for centuries it belonged to Genoa
+Load("scripts/world_earth_tiles_low_countries.lua") -- Netherlands, Belgium and Luxembourg
 Load("scripts/world_earth_tiles_scandinavia.lua")
 Load("scripts/world_earth_tiles_spain.lua")
 
@@ -66,13 +70,6 @@ DefineWorldMapTile({465, 113}, {
 --			"compound", "prefix", -- ?
 			"compound", "suffix", "english", "noun", "singular", "Mouth"
 		}
-	}
-})
-
-DefineWorldMapTile({466, 148}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"latin", "Corduba"
 	}
 })
 
@@ -151,20 +148,6 @@ DefineWorldMapTile({475, 106}, {
 	}
 })
 
-DefineWorldMapTile({475, 119}, {
-	World = "Earth",
-	FactionCulturalSettlementNames = {
-		"latin", "France", "Rennes"
-	}
-})
-
-DefineWorldMapTile({475, 121}, {
-	World = "Earth",
-	FactionCulturalSettlementNames = {
-		"latin", "France", "Nantes"
-	}
-})
-
 DefineWorldMapTile({476, 110}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
@@ -219,27 +202,10 @@ DefineWorldMapTile({480, 111}, { -- Source: William R. Shepherd, "Historical Atl
 	}
 })
 
-DefineWorldMapTile({482, 115}, {
-	World = "Earth",
-	FactionCulturalSettlementNames = {
-		"latin", "France", "Rouen"
-	}
-})
-
 DefineWorldMapTile({483, 110}, { -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
 	World = "Earth",
 	FactionCulturalSettlementNames = {
 		"teuton", "England", "Dover"
-	}
-})
-
-DefineWorldMapTile({483, 132}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"latin", "Tolosa"
-	},
-	FactionCulturalSettlementNames = {
-		"latin", "France", "Toulouse"
 	}
 })
 
@@ -253,476 +219,10 @@ DefineWorldMapTile({484, 106}, { -- Source: William R. Shepherd, "Historical Atl
 	}
 })
 
-DefineWorldMapTile({486, 117}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"latin", "Lutetia"
-	},
-	FactionCulturalSettlementNames = {
-		"latin", "France", "Paris"
-	}
-})
-
-DefineWorldMapTile({492, 111}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"latin", "Aduatuca"
-	},
-	FactionCulturalSettlementNames = {
-		"teuton", "Netherlands", "Brussels"
-	}
-})
-
-DefineWorldMapTile({493, 107}, {
-	World = "Earth",
-	FactionCulturalSettlementNames = {
-		"teuton", "Netherlands", "Amsterdam"
-	}
-})
-
-DefineWorldMapTile({494, 121}, {
-	World = "Earth",
-	FactionCulturalSettlementNames = {
-		"latin", "France", "Dijon"
-	}
-})
-
-DefineWorldMapTile({495, 132}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"latin", "Massilia"
-	},
-	FactionCulturalSettlementNames = {
-		"latin", "France", "Marseilles"
-	}
-})
-
-DefineWorldMapTile({496, 104}, {
-	World = "Earth",
-	FactionCulturalSettlementNames = {
-		"teuton", "Netherlands", "Leeuwarden" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
-	}
-})
-
-DefineWorldMapTile({496, 116}, {
-	World = "Earth",
-	FactionCulturalSettlementNames = {
-		"latin", "France", "Metz"
-	}
-})
-
-DefineWorldMapTile({496, 118}, {
-	World = "Earth",
-	FactionCulturalSettlementNames = {
-		"latin", "France", "Nancy"
-	}
-})
-
-DefineWorldMapTile({496, 126}, {
-	World = "Earth",
-	FactionCulturalSettlementNames = {
-		"latin", "France", "Chambéry"
-	}
-})
-
-DefineWorldMapTile({497, 106}, {
-	World = "Earth",
-	FactionCulturalSettlementNames = {
-		"teuton", "Netherlands", "Zwolle" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
-	}
-})
-
-DefineWorldMapTile({497, 121}, {
-	World = "Earth",
-	FactionCulturalSettlementNames = {
-		"latin", "France", "Besançon"
-	}
-})
-
-DefineWorldMapTile({498, 105}, {
-	World = "Earth",
-	FactionCulturalSettlementNames = {
-		"teuton", "Netherlands", "Assen" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
-	}
-})
-
-DefineWorldMapTile({498, 111}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"latin", "Colonia Agrippina", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
-		"teuton", "Köln"
-	},
-	FactionCulturalSettlementNames = {
-		"latin", "France", "Cologne"
-	}
-})
-
-DefineWorldMapTile({500, 104}, {
-	World = "Earth",
-	FactionCulturalSettlementNames = {
-		"teuton", "Netherlands", "Emden"
-	}
-})
-
-DefineWorldMapTile({500, 109}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"teuton", "Düsseldorf"
-	}
-})
-
-DefineWorldMapTile({501, 118}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"latin", "Argentoratum", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
-		"teuton", "Strasburg", "name-elements", {
---			"compound", "prefix", -- ?
-			"compound", "suffix", "high-german", "noun", "singular", "Burg"
-		}
-	}
-})
-
 DefineWorldMapTile({501, 122}, {
 	World = "Earth",
 	CulturalSettlementNames = {
 		"teuton", "Bern"
-	}
-})
-
-DefineWorldMapTile({502, 115}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"latin", "Borbetomagus", -- not actually the same city as Kaiserslautern (Borbetomagus is Worms), but nevertheless in the Palatinate; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
-		"teuton", "Kaiserslautern", "name-elements", {
-			"compound", "prefix", "high-german", "noun", "singular", "genitive", "Kaiser",
---			"suffix" -- ?
-		}
-	}
-})
-
-DefineWorldMapTile({502, 127}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"latin", "Augusta Taurinorum"
-	},
-	FactionCulturalSettlementNames = {
-		"latin", "Italy", "Turin"
-	}
-})
-
-DefineWorldMapTile({503, 104}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"teuton", "Oldenburg", "name-elements", {
---			"compound", "prefix", -- ?
-			"compound", "suffix", "high-german", "noun", "singular", "Burg"
-		}
-	}
-})
-
-DefineWorldMapTile({503, 117}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"teuton", "Rastatt"
-	}
-})
-
-DefineWorldMapTile({504, 104}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"teuton", "Bremen"
-	}
-})
-
-DefineWorldMapTile({505, 129}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"latin", "Genua"
-	},
-	FactionCulturalSettlementNames = {
-		"latin", "Italy", "Genoa"
-	}
-})
-
-DefineWorldMapTile({505, 135}, {
-	World = "Earth",
-	FactionCulturalTerrainNames = {
-		"Mountains", "latin", "Italy", "Monte Cinto" -- Source: "Philip's International School Atlas", 2006, p. 70
-	}
-})
-
-DefineWorldMapTile({505, 144}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"latin", "Caralis"
-	},
-	FactionCulturalSettlementNames = {
-		"latin", "Italy", "Cagliari"
-	}
-})
-
-DefineWorldMapTile({506, 100}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"teuton", "Flensburg", "name-elements", {
---			"compound", "prefix", -- ?
-			"compound", "suffix", "high-german", "noun", "singular", "Burg"
-		}
-	}
-})
-
-DefineWorldMapTile({506, 109}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"teuton", "Kassel"
-	},
-	FactionCulturalSettlementNames = {
-		"teuton", "England", "Cassel"
-	}
-})
-
-DefineWorldMapTile({506, 117}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"teuton", "Stuttgart", "name-elements", {
---			"compound", "prefix", -- ?
-			"compound", "suffix", "high-german", "noun", "singular", "Gart" -- possibly? alternatively, it could be a remnant of Old (or Middle) High German "Gart" (two words were spelled like that for OHG)
-		}
-	}
-})
-
-DefineWorldMapTile({506, 126}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"latin", "Mediolanum",
-		"teuton", "Mailand"
-	},
-	FactionCulturalSettlementNames = {
-		"latin", "Italy", "Milan"
-	}
-})
-
-DefineWorldMapTile({506, 136}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"latin", "Aleria"
-	}
-})
-
-DefineWorldMapTile({506, 142}, {
-	World = "Earth",
-	FactionCulturalTerrainNames = {
-		"Mountains", "latin", "Italy", "Monti del Gennargentu" -- Source: "Philip's International School Atlas", 2006, p. 70
-	}
-})
-
-DefineWorldMapTile({507, 107}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"teuton", "Hannover"
-	},
-	FactionCulturalSettlementNames = {
-		"teuton", "England", "Hanover"
-	}
-})
-
-DefineWorldMapTile({508, 101}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"teuton", "Kiel"
-	}
-})
-
-DefineWorldMapTile({508, 114}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"teuton", "Würzburg", "name-elements", {
---			"compound", "prefix", -- ?
-			"compound", "suffix", "high-german", "noun", "singular", "Burg"
-		}
-	}
-})
-
-DefineWorldMapTile({509, 107}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"teuton", "Braunschweig"
-	},
-	FactionCulturalSettlementNames = {
-		"teuton", "England", "Brunswick"
-	}
-})
-
-DefineWorldMapTile({509, 128}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"latin", "Parma"
---		"latin", "Placentia" -- Piacenza
-	}
-})
-
-DefineWorldMapTile({510, 102}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"teuton", "Lübeck"
-	}
-})
-
-DefineWorldMapTile({510, 118}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"latin", "Augusta Vindelicorum", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
-		"teuton", "Augsburg", "name-elements", {
---			"compound", "prefix", -- ?
-			"compound", "suffix", "high-german", "noun", "singular", "Burg"
-		}
-	}
-})
-
-DefineWorldMapTile({511, 110}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"teuton", "Erfurt", "name-elements", {
---			"compound", "prefix", -- ?
-			"compound", "suffix", "high-german", "noun", "singular", "Furt"
-		}
-	}
-})
-
-DefineWorldMapTile({511, 129}, {
-	World = "Earth",
-	FactionCulturalSettlementNames = {
-		"latin", "Italy", "Modena"
-	}
-})
-
-DefineWorldMapTile({512, 103}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"teuton", "Schwerin"
-	}
-})
-
-DefineWorldMapTile({512, 129}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"latin", "Bononia"
-	},
-	FactionCulturalSettlementNames = {
-		"latin", "Italy", "Bologna"
-	}
-})
-
-DefineWorldMapTile({512, 131}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"latin", "Florentia"
-	},
-	FactionCulturalSettlementNames = {
-		"latin", "Italy", "Florence"
-	}
-})
-
-DefineWorldMapTile({513, 107}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"teuton", "Magdeburg", "name-elements", {
---			"compound", "prefix", -- ?
-			"compound", "suffix", "high-german", "noun", "singular", "Burg"
-		}
-	}
-})
-
-DefineWorldMapTile({514, 116}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"latin", "Regina Castra",
-		"teuton", "Regensburg", "name-elements", {
---			"compound", "prefix", -- ?
-			"compound", "suffix", "high-german", "noun", "singular", "Burg"
-		}
-		-- also "Ratisbon"
-	}
-})
-
-DefineWorldMapTile({515, 109}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"teuton", "Leipzig"
-	}
-})
-
-DefineWorldMapTile({515, 126}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"latin", "Aquileia",
-		"teuton", "Venedig"
-	},
-	FactionCulturalSettlementNames = {
-		"latin", "Italy", "Venice"
-	}
-})
-
-DefineWorldMapTile({515, 134}, {
-	World = "Earth",
-	FactionCulturalSettlementNames = {
-		"latin", "Italy", "Perugia"
-	}
-})
-
-DefineWorldMapTile({515, 136}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"latin", "Roma"
-	},
-	FactionCulturalSettlementNames = {
-		"teuton", "England", "Rome"
-	}
-})
-
-DefineWorldMapTile({517, 147}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"greek", "Panormus",
-		"latin", "Panormus" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 12.
-	},
-	FactionCulturalSettlementNames = {
-		"latin", "Italy", "Palermo"
-	}
-})
-
-DefineWorldMapTile({518, 106}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"teuton", "Berlin"
-	}
-})
-
-DefineWorldMapTile({518, 135}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"latin", "Amiternum"
-	},
-	FactionCulturalSettlementNames = {
-		"latin", "Italy", "L'Aquila"
-	}
-})
-
-DefineWorldMapTile({519, 126}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"latin", "Tergeste", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
-		"teuton", "Triest"
-	},
-	FactionCulturalSettlementNames = {
-		"latin", "Italy", "Trieste"
-	}
-})
-
-DefineWorldMapTile({520, 109}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"teuton", "Bautzen"
 	}
 })
 
@@ -734,31 +234,6 @@ DefineWorldMapTile({520, 113}, {
 	},
 	FactionCulturalSettlementNames = {
 		"teuton", "Marcomanni Tribe", "Bubienum" -- name of the Marcomannic capital; also known as Marobudum; either located where modern Prague or Budweis are; Source: Frederick Kohlrausch, "A History of Germany", 1844, p. 57.
-	}
-})
-
-DefineWorldMapTile({520, 139}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"greek", "Neapolis", "name-elements", {
-			"compound", "prefix", "greek", "adjective", "Nea",
-			"compound", "suffix", "greek", "noun", "singular", "Polis"
-		},
-		"latin", "Neapolis"
-	}
-})
-
-DefineWorldMapTile({521, 103}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"teuton", "Stettin"
-	}
-})
-
-DefineWorldMapTile({521, 108}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"teuton", "Guben"
 	}
 })
 
@@ -781,41 +256,6 @@ DefineWorldMapTile({521, 153}, {
 	}
 })
 
-DefineWorldMapTile({522, 106}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"teuton", "Küstrin"
-	}
-})
-
-DefineWorldMapTile({522, 148}, {
-	World = "Earth",
-	CulturalTerrainNames = {
-		"Mountains", "latin", "Etna"
-	}
-})
-
-DefineWorldMapTile({522, 150}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"greek", "Syracusae",
-		"latin", "Syracusae"
-	},
-	FactionCulturalSettlementNames = {
-		"teuton", "England", "Syracuse"
-	}
-})
-
-DefineWorldMapTile({523, 102}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"teuton", "Kolberg", "name-elements", {
---			"compound", "prefix", -- ?
-			"compound", "suffix", "high-german", "noun", "singular", "Berg"
-		}
-	}
-})
-
 DefineWorldMapTile({523, 130}, {
 	World = "Earth",
 	CulturalSettlementNames = {
@@ -832,45 +272,11 @@ DefineWorldMapTile({525, 125}, {
 	}
 })
 
-DefineWorldMapTile({526, 110}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"teuton", "Breslau"
-	}
-})
-
-DefineWorldMapTile({526, 145}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"latin", "Castra Hannibalis"
-	},
-	FactionCulturalSettlementNames = {
-		"latin", "Italy", "Catanzaro"
-	}
-})
-
 DefineWorldMapTile({527, 116}, {
 	World = "Earth",
 	CulturalSettlementNames = {
 		"slav", "Brno",
 		"teuton", "Brünn"
-	}
-})
-
-DefineWorldMapTile({527, 139}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"latin", "Barium"
-	},
-	FactionCulturalSettlementNames = {
-		"latin", "Italy", "Bari"
-	}
-})
-
-DefineWorldMapTile({528, 107}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"teuton", "Posen"
 	}
 })
 
@@ -885,14 +291,6 @@ DefineWorldMapTile({528, 118}, {
 	}
 })
 
-DefineWorldMapTile({532, 101}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"slav", "Gdańsk", -- Polish
-		"teuton", "Danzig"
-	}
-})
-
 DefineWorldMapTile({532, 131}, {
 	World = "Earth",
 	CulturalSettlementNames = {
@@ -904,7 +302,7 @@ DefineWorldMapTile({534, 120}, {
 	World = "Earth",
 	CulturalSettlementNames = {
 		"latin", "Aquincum",
---		"magyar", "Buda"
+		"magyar", "Buda"
 	}
 })
 
@@ -919,7 +317,7 @@ DefineWorldMapTile({534, 135}, {
 DefineWorldMapTile({535, 120}, {
 	World = "Earth",
 	CulturalSettlementNames = {
---		"magyar", "Pest"
+		"magyar", "Pest"
 	}
 })
 
@@ -939,16 +337,6 @@ DefineWorldMapTile({536, 138}, {
 	CulturalSettlementNames = {
 		"greek", "Epidamnus",
 		"latin", "Dyrrhachium"
-	}
-})
-
-DefineWorldMapTile({537, 100}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"teuton", "Königsberg", "name-elements", {
-			"compound", "prefix", "high-german", "noun", "singular", "genitive", "König",
-			"compound", "suffix", "high-german", "noun", "singular", "Berg"
-		}
 	}
 })
 

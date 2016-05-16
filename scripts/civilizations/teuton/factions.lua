@@ -25,6 +25,8 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+Load("scripts/civilizations/teuton/factions_frank.lua")
+
 DefineFaction("Suebi Tribe", {
 	Civilization = "teuton",
 	Type = "tribe",
@@ -38,25 +40,6 @@ DefineFaction("Suebi Tribe", {
 	HistoricalFactionDerivations = {-264, "germanic", "Skeldung Tribe"},
 	HistoricalTechnologies = {
 		"upgrade-teuton-spatha", 180 -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
-	}
-})
-
-DefineFaction("Frank Tribe", {
-	Civilization = "teuton",
-	Type = "tribe",
-	Language = "old-frankish",
-	Colors = {"green", "orange"},
-	DevelopsTo = {"Francia", "Franconia", "Austrasia", "Neustria", "Netherlands"},
-	FactionUpgrade = "upgrade-frank-tribe-faction",
-	UIFillers = {
-		"dlcs/frankish_faction_flair/graphics/ui/filler_bottom.png", 380, -181,
-		"dwarf/ui/resource.png", 0, 0,
-		"dlcs/frankish_faction_flair/graphics/ui/buttonpanel.png", -256, -200,
-		"dlcs/frankish_faction_flair/graphics/ui/infopanel.png", 0, -200
-	},
-	HistoricalFactionDerivations = {150, "germanic", "Skeldung Tribe"},
-	HistoricalTechnologies = {
-		"upgrade-frank-spatha", 180 -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
 	}
 })
 
@@ -244,6 +227,7 @@ DefineFaction("Lombard Tribe", {
 	Type = "tribe",
 	Language = "old-high-german", -- should be Lombardic
 	Colors = {"green"},
+	DevelopsTo = {"Lombardy"},
 	FactionUpgrade = "upgrade-lombard-tribe-faction",
 	HistoricalFactionDerivations = {-264, "germanic", "Skeldung Tribe"},
 	HistoricalTechnologies = {
@@ -337,7 +321,11 @@ DefineFaction("Bavaria", {
 		"monarchy", "duchy", "Duchy",
 		"monarchy", "kingdom", "Kingdom"
 	},
-	DevelopsTo = {"Holy Rome"} -- Bavaria was a part of the Holy Roman Empire in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+	DevelopsTo = {"Holy Rome"}, -- Bavaria was a part of the Holy Roman Empire in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+	HistoricalDiplomacyStates = {
+		784, "teuton", "Francia", "war", -- Bavaria revolted against Frankish rule under Tassilo in 784; Source: "Medieval Warfare V.2", 2013, p. 8.
+		787, "teuton", "Francia", "peace" -- Bavarian revolt against Frankish rule quashed by Charles the Great three years after 784; Source: "Medieval Warfare V.2", 2013, p. 8.
+	}
 })
 
 DefineFaction("Saxony", {
@@ -404,18 +392,6 @@ DefineFaction("Brunswick", {
 	DefaultTier = "duchy"
 })
 
-DefineFaction("Francia", {
-	Civilization = "teuton",
-	ParentFaction = "Frank Tribe",
-	Type = "polity",
-	Colors = {"green", "orange"},
-	DefaultTier = "kingdom",
-	HistoricalFactionDerivations = {481, "teuton", "Frank Tribe"}, -- In 481 AD the Franks had already established their kingdom; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
-	HistoricalTechnologies = {
-		"upgrade-teuton-coinage", 565 -- Merovingian Francia began to issue gold solidi at some point between 565 and 578 AD; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, p. 176.
-	}
-})
-
 DefineFaction("Netherlands", {
 	Civilization = "teuton",
 	ParentFaction = "Francia",
@@ -441,36 +417,6 @@ DefineFaction("England", {
 	Language = "english",
 	Colors = {"red", "white"},
 	DefaultTier = "kingdom"
-})
-
-DefineFaction("Austrasia", {
-	Civilization = "teuton",
-	ParentFaction = "Francia",
-	Type = "polity",
-	Language = "high-german",
-	Colors = {"pink"},
-	DefaultTier = "kingdom", -- correct?
-	DevelopsTo = {"Holy Rome", "Francia"}
-})
-
-DefineFaction("Franconia", {
-	Civilization = "teuton",
-	ParentFaction = "Francia",
-	Type = "polity",
-	Language = "high-german",
-	Colors = {"blue"},
-	DefaultTier = "duchy", -- Franconia was a duchy in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
-	DevelopsTo = {"Holy Rome", "Francia"} -- Franconia was a part of the Holy Roman Empire in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
-})
-
-DefineFaction("Neustria", {
-	Civilization = "teuton",
-	ParentFaction = "Francia",
-	Type = "polity",
-	Language = "high-german",
-	Colors = {"orange"},
-	DefaultTier = "kingdom", -- correct?
-	DevelopsTo = {"Holy Rome", "Francia"}
 })
 
 DefineFaction("Friesland", {
@@ -535,6 +481,14 @@ DefineFaction("Jutland", {
 	Type = "polity",
 	Colors = {"red", "white"},
 	DefaultTier = "duchy"
+})
+
+DefineFaction("Lombardy", {
+	Civilization = "teuton",
+	ParentFaction = "Lombard Tribe",
+	Type = "polity",
+	Colors = {"green"},
+	DefaultTier = "kingdom"
 })
 
 DefineFaction("Magdeburg", {

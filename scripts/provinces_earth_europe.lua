@@ -609,6 +609,26 @@ DefineProvince("Bavaria", {
 		"teuton", "Bavarian Tribe",
 		"teuton", "Holy Rome"
 	},
+	HistoricalOwners = {
+		-800, "celt", "Norici Tribe", -- Hallstatt culture in southern Germany and adjacent areas c. 800-400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 87.
+		-15, "latin", "Rome", -- Raetia and Vindelicia acquired by Rome in 15 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		507, "goth", "Ostrogoth Tribe", -- political situation in 507-534 in Europe; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
+		526, "teuton", "Bavarian Tribe", -- political situation in 526-600 in Europe; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+		537, "teuton", "Francia", -- region of Altbayern, Salzburg and Tyrol conquered by the Franks in 537; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
+		784, "teuton", "Bavaria", -- Bavaria revolted against Frankish rule under Tassilo in 784; Source: "Medieval Warfare V.2", 2013, p. 8.
+		787, "teuton", "Francia", -- Bavarian revolt against Frankish rule quashed by Charles the Great three years after 784; Source: "Medieval Warfare V.2", 2013, p. 8.
+		919, "teuton", "Holy Rome", -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+		1560, "teuton", "Bavaria" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalClaims = {
+		-15, "latin", "Rome",
+		537, "teuton", "Francia",
+		919, "teuton", "Bavaria" -- Political situation in Central Europe in 919-1125; Duchy of Bavaria; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+	},
+	HistoricalCultures = {
+		-800, "celt",
+		526, "teuton"
+	},
 	HistoricalModifiers = {
 		1459, "upgrade-university", true -- University founded in Ingolstadt in 1459. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.
 	},
@@ -1815,14 +1835,14 @@ DefineProvince("France", {
 		{481, 117}, {481, 118}, {481, 119}, {481, 120}, {481, 121}, {481, 122}, {481, 123}, {481, 124},
 		{482, 117}, {482, 118}, {482, 119}, {482, 120}, {482, 121}, {482, 122}, {482, 123}, {482, 124},
 		{483, 116}, {483, 117}, {483, 118}, {483, 119}, {483, 120}, {483, 121}, {483, 122}, {483, 123}, {483, 124},
-		{484, 113}, {484, 114}, {484, 115}, {484, 116}, {484, 117}, {484, 118}, {484, 119}, {484, 120}, {484, 121}, {484, 122}, {484, 123}, {484, 124}, {484, 125},
-		{485, 111}, {485, 112}, {485, 113}, {485, 114}, {485, 115}, {485, 116}, {485, 117}, {485, 118}, {485, 119}, {485, 120}, {485, 121}, {485, 122}, {485, 123}, {485, 124}, {485, 125},
-		{486, 111}, {486, 112}, {486, 113}, {486, 114}, {486, 115}, {486, 116}, {486, 117}, {486, 118}, {486, 119}, {486, 120}, {486, 121}, {486, 122}, {486, 123}, {486, 124}, {486, 125},
-		{487, 111}, {487, 112}, {487, 113}, {487, 114}, {487, 115}, {487, 116}, {487, 117}, {487, 118}, {487, 119}, {487, 120}, {487, 121}, {487, 122}, {487, 123},
-		{488, 112}, {488, 113}, {488, 114}, {488, 115}, {488, 116}, {488, 117}, {488, 118}, {488, 119}, {488, 120}, {488, 121}, {488, 122}, {488, 123},
-		{489, 112}, {489, 113}, {489, 114}, {489, 115}, {489, 116}, {489, 117}, {489, 118}, {489, 119}, {489, 120}, {489, 121}, {489, 122}, {489, 123}, {489, 124},
-		{490, 113}, {490, 114}, {490, 115}, {490, 116}, {490, 117}, {490, 118}, {490, 119}, {490, 120}, {490, 121}, {490, 122}, {490, 123}, {490, 124},
-		{491, 113}, {491, 114}, {491, 115}, {491, 116}, {491, 117}, {491, 118}, {491, 119}, {491, 122}, {491, 124}, {491, 125}, {491, 126},
+		{484, 115}, {484, 116}, {484, 117}, {484, 118}, {484, 119}, {484, 120}, {484, 121}, {484, 122}, {484, 123}, {484, 124}, {484, 125},
+		{485, 115}, {485, 116}, {485, 117}, {485, 118}, {485, 119}, {485, 120}, {485, 121}, {485, 122}, {485, 123}, {485, 124}, {485, 125},
+		{486, 115}, {486, 116}, {486, 117}, {486, 118}, {486, 119}, {486, 120}, {486, 121}, {486, 122}, {486, 123}, {486, 124}, {486, 125},
+		{487, 115}, {487, 116}, {487, 117}, {487, 118}, {487, 119}, {487, 120}, {487, 121}, {487, 122}, {487, 123},
+		{488, 115}, {488, 116}, {488, 117}, {488, 118}, {488, 119}, {488, 120}, {488, 121}, {488, 122}, {488, 123},
+		{489, 115}, {489, 116}, {489, 117}, {489, 118}, {489, 119}, {489, 120}, {489, 121}, {489, 122}, {489, 123}, {489, 124},
+		{490, 115}, {490, 116}, {490, 117}, {490, 118}, {490, 119}, {490, 120}, {490, 121}, {490, 122}, {490, 123}, {490, 124},
+		{491, 115}, {491, 116}, {491, 117}, {491, 118}, {491, 119}, {491, 122}, {491, 124}, {491, 125}, {491, 126},
 		{492, 114}, {492, 115}, {492, 116}, {492, 117}, {492, 118}, {492, 119}, {492, 124}, {492, 125}, {492, 126},
 		{493, 114}, {493, 115}, {493, 116}, {493, 117}, {493, 118}, {493, 119}, {493, 124}, {493, 125}, {493, 126},
 		{494, 115}, {494, 116}, {494, 117}, {494, 118}, {494, 119}, {494, 120},
@@ -1835,6 +1855,15 @@ DefineProvince("France", {
 		"teuton", "Neustria", -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
 --		"latin", "France"
 	},
+	HistoricalOwners = {
+		-50, "latin", "Rome", -- Gaul conquered by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		486, "teuton", "Francia", -- The Frankish Merovingian king Clovis conquers Syagrius' realm, the last Roman territory in Gaul in 486; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
+		919, "latin", "France" -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+	},
+	HistoricalClaims = {
+		-50, "latin", "Rome",
+		486, "teuton", "Francia"
+	},
 	HistoricalModifiers = {
 		1250, "upgrade-university", true, -- University existent in Paris in 1250. Source: Atlas de História Mundial, 2001, p. 144.
 		1250, "upgrade-university", true, -- University existent in Angers in 1250. Source: Atlas de História Mundial, 2001, p. 144.
@@ -1843,14 +1872,9 @@ DefineProvince("France", {
 		1431, "upgrade-university", true, -- University founded in Poitiers in 1431. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.
 		1464, "upgrade-university", true, -- University founded in Bourges in 1464. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.
 		1547, "upgrade-university", true, -- University founded in Reims in 1547. Source: The Cambridge Modern History Atlas, 1912, p. 9.
-		1582, "upgrade-university", true, -- University founded in Douai in 1582. Source: The Cambridge Modern History Atlas, 1912, p. 9.
 		1789, "upgrade-courthouse", true, -- Parlement or conseil souverain, cour des aides, cambre des comptes, court of admiralty, cour des monnaies, prévôt des maréchaux and chief court of the salt tax existent in Paris in 1789. Source: William R. Shepherd, Historical Atlas, 1911, p. 147.
-		1789, "upgrade-courthouse", true, -- Prévôt des maréchaux existent in Lille in 1789. Source: William R. Shepherd, Historical Atlas, 1911, p. 147.
 		1789, "upgrade-courthouse", true, -- Chief court of the salt tax existent in Abbeville in 1789. Source: William R. Shepherd, Historical Atlas, 1911, p. 147.
-		1789, "upgrade-courthouse", true, -- Parlement or conseil souverain existent in Arras in 1789. Source: William R. Shepherd, Historical Atlas, 1911, p. 147.
-		1789, "upgrade-courthouse", true, -- Prévôt des maréchaux existent in Amiens in 1789. Source: William R. Shepherd, Historical Atlas, 1911, p. 147.
 		1789, "upgrade-courthouse", true, -- Prévôt des maréchaux and chief court of the salt tax existent in Soissons in 1789. Source: William R. Shepherd, Historical Atlas, 1911, p. 147.
-		1789, "upgrade-courthouse", true, -- Prévôt des maréchaux existent in Valenciennes in 1789. Source: William R. Shepherd, Historical Atlas, 1911, p. 147.
 		1789, "upgrade-courthouse", true, -- Chief court of the salt tax existent in Troyes in 1789. Source: William R. Shepherd, Historical Atlas, 1911, p. 147.
 		1789, "upgrade-courthouse", true, -- Chambre des comptes existent in Nevers in 1789. Source: William R. Shepherd, Historical Atlas, 1911, p. 147.
 		1789, "upgrade-courthouse", true, -- Prévôt des maréchaux and chief court of the salt tax existent in Angers in 1789. Source: William R. Shepherd, Historical Atlas, 1911, p. 147.
@@ -1860,7 +1884,7 @@ DefineProvince("France", {
 		1789, "upgrade-courthouse", true, -- Prévôt des maréchaux and chief court of the salt tax existent in Bourges in 1789. Source: William R. Shepherd, Historical Atlas, 1911, p. 147.
 		1789, "upgrade-courthouse", true, -- Chief court of the salt tax existent in Tours in 1789. Source: William R. Shepherd, Historical Atlas, 1911, p. 147.
 		1789, "upgrade-courthouse", true, -- Prévôt des maréchaux existent in Poitiers in 1789. Source: William R. Shepherd, Historical Atlas, 1911, p. 147.
-		1789, "upgrade-courthouse", true, -- Chief court of the salt tax existent in Lyon in 1789. Source: William R. Shepherd, Historical Atlas, 1911, p. 147.
+		1789, "upgrade-courthouse", true -- Chief court of the salt tax existent in Lyon in 1789. Source: William R. Shepherd, Historical Atlas, 1911, p. 147.
 	},
 	Regions = {"Europe", "France", "Gaul", "Northwest Europe", "West and Central Europe"}
 })
@@ -3828,6 +3852,48 @@ DefineProvince("Parma", {
 	Regions = {"Europe", "Italy", "West and Central Europe"}
 })
 
+DefineProvince("Picardy", { -- also includes French Flanders, Hainaut and Artois
+	World = "Earth",
+	FactionCulturalNames = {
+		"latin", "France", "Picardy" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
+	},
+	Tiles = {
+		{484, 113}, {484, 114},
+		{485, 111}, {485, 112}, {485, 113}, {485, 114},
+		{486, 111}, {486, 112}, {486, 113}, {486, 114}, 
+		{487, 111}, {487, 112}, {487, 113}, {487, 114},
+		{488, 112}, {488, 113}, {488, 114},
+		{489, 112}, {489, 113}, {489, 114},
+		{490, 113}, {490, 114},
+		{491, 113}, {491, 114}
+	},
+	SettlementLocation = {486, 114}, -- Amiens
+	Map = "maps/random/random-map-forest.smp",
+	SettlementTerrain = "Plains",
+	Coastal = true,
+	Claims = {
+		"teuton", "Austrasia", -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
+--		"latin", "France"
+	},
+	HistoricalOwners = {
+		-50, "latin", "Rome", -- Gaul conquered by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		481, "teuton", "Francia", -- Picardy was a part of Frankish territory in 481 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
+		919, "latin", "France" -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+	},
+	HistoricalClaims = {
+		-50, "latin", "Rome",
+		481, "teuton", "Francia"
+	},
+	HistoricalModifiers = {
+		1582, "upgrade-university", true, -- University founded in Douai in 1582. Source: The Cambridge Modern History Atlas, 1912, p. 9.
+		1789, "upgrade-courthouse", true, -- Prévôt des maréchaux existent in Amiens in 1789. Source: William R. Shepherd, Historical Atlas, 1911, p. 147.
+		1789, "upgrade-courthouse", true, -- Parlement or conseil souverain existent in Arras in 1789. Source: William R. Shepherd, Historical Atlas, 1911, p. 147.
+		1789, "upgrade-courthouse", true, -- Prévôt des maréchaux existent in Lille in 1789. Source: William R. Shepherd, Historical Atlas, 1911, p. 147.
+		1789, "upgrade-courthouse", true -- Prévôt des maréchaux existent in Valenciennes in 1789. Source: William R. Shepherd, Historical Atlas, 1911, p. 147.
+	},
+	Regions = {"Europe", "France", "Gaul", "Northwest Europe", "West and Central Europe"}
+})
+
 DefineProvince("Piedmont", {
 	World = "Earth",
 	Tiles = {
@@ -4217,10 +4283,12 @@ DefineProvince("Salzburg", {
 		-800, "celt", "Norici Tribe", -- Hallstatt culture in southern Germany and adjacent areas c. 800-400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 87.
 		-15, "latin", "Rome", -- Noricum acquired by Rome in 15 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		507, "goth", "Ostrogoth Tribe", -- political situation in 507-534 in Europe; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
+		537, "teuton", "Francia", -- region of Altbayern, Salzburg and Tyrol conquered by the Franks in 537; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
 		919, "teuton", "Holy Rome" -- Duchy of Bavaria within the Holy Roman Empire; political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 	},
 	HistoricalClaims = {
 		-15, "latin", "Rome",
+		537, "teuton", "Francia",
 		919, "teuton", "Bavaria" -- Duchy of Bavaria within the Holy Roman Empire; political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 	},
 	HistoricalCultures = {
@@ -4897,6 +4965,7 @@ DefineProvince("Tyrol", {
 		-800, "celt", "Norici Tribe", -- Hallstatt culture in southern Germany and adjacent areas c. 800-400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 87.
 		-15, "latin", "Rome", -- Raetia acquired by Rome in 15 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		507, "goth", "Ostrogoth Tribe", -- political situation in 507-534 in Europe; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
+		537, "teuton", "Francia", -- region of Altbayern, Salzburg and Tyrol conquered by the Franks in 537; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
 		919, "teuton", "Holy Rome", -- Duchy of Bavaria within the Holy Roman Empire; political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		1560, "teuton", "Austria" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
@@ -4905,7 +4974,8 @@ DefineProvince("Tyrol", {
 	},
 	HistoricalClaims = {
 		-15, "latin", "Rome",
-		919, "teuton", "Bavaria", -- Duchy of Bavaria within the Holy Roman Empire; political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+		537, "teuton", "Francia",
+		784, "teuton", "Bavaria"
 	},
 	Regions = {"Cisleithania", "Europe", "Germany-Netherlands", "Roman Danube", "West and Central Europe"}
 })

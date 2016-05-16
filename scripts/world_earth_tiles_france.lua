@@ -25,67 +25,110 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineWorldMapTile({456, 132}, {
+DefineWorldMapTile({475, 119}, {
+	World = "Earth",
+	FactionCulturalSettlementNames = {
+		"latin", "France", "Rennes"
+	}
+})
+
+DefineWorldMapTile({475, 121}, {
+	World = "Earth",
+	FactionCulturalSettlementNames = {
+		"latin", "France", "Nantes"
+	}
+})
+
+DefineWorldMapTile({482, 115}, {
+	World = "Earth",
+	FactionCulturalSettlementNames = {
+		"latin", "France", "Rouen"
+	}
+})
+
+DefineWorldMapTile({483, 132}, {
 	World = "Earth",
 	CulturalSettlementNames = {
-		"latin", "Lucus Augusti"
+		"latin", "Tolosa"
 	},
 	FactionCulturalSettlementNames = {
-		"latin", "Spain", "Corunna"
+		"latin", "France", "Toulouse"
 	}
 })
 
-DefineWorldMapTile({463, 132}, {
-	World = "Earth",
-	FactionCulturalSettlementNames = {
-		"latin", "Spain", "Oviedo"
-	}
-})
-
-DefineWorldMapTile({464, 141}, {
-	World = "Earth",
-	FactionCulturalTerrainNames = {
-		"Mountains", "latin", "Spain", "Pico Almanzor" -- Source: "Philip's International School Atlas", 2006, p. 69
-	}
-})
-
-DefineWorldMapTile({466, 148}, {
+DefineWorldMapTile({486, 114}, {
 	World = "Earth",
 	CulturalSettlementNames = {
-		"latin", "Corduba"
-	}
-})
-
-DefineWorldMapTile({469, 141}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"latin", "Complutum"
+		"latin", "Samarobriva" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 	},
 	FactionCulturalSettlementNames = {
-		"latin", "Spain", "Madrid"
+		"latin", "France", "Amiens" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 	}
 })
 
-DefineWorldMapTile({470, 150}, {
-	World = "Earth",
-	FactionCulturalTerrainNames = {
-		"Mountains", "latin", "Spain", "Mulhacén" -- Source: "Philip's International School Atlas", 2006, p. 69
-	}
-})
-
-DefineWorldMapTile({477, 137}, {
+DefineWorldMapTile({486, 117}, {
 	World = "Earth",
 	CulturalSettlementNames = {
-		"latin", "Caesaraugusta"
+		"latin", "Lutetia"
 	},
 	FactionCulturalSettlementNames = {
-		"latin", "Spain", "Zaragoza"
+		"latin", "France", "Paris"
 	}
 })
 
-DefineWorldMapTile({481, 135}, {
+DefineWorldMapTile({494, 121}, {
 	World = "Earth",
-	FactionCulturalTerrainNames = {
-		"Mountains", "latin", "Spain", "Monte Perdido" -- Source: "Philip's International School Atlas", 2006, p. 69
+	FactionCulturalSettlementNames = {
+		"latin", "France", "Dijon"
 	}
 })
+
+DefineWorldMapTile({495, 132}, {
+	World = "Earth",
+	CulturalSettlementNames = {
+		"latin", "Massilia"
+	},
+	FactionCulturalSettlementNames = {
+		"latin", "France", "Marseilles"
+	}
+})
+
+DefineWorldMapTile({496, 116}, {
+	World = "Earth",
+	FactionCulturalSettlementNames = {
+		"latin", "France", "Metz"
+	}
+})
+
+DefineWorldMapTile({496, 118}, {
+	World = "Earth",
+	FactionCulturalSettlementNames = {
+		"latin", "France", "Nancy"
+	}
+})
+
+DefineWorldMapTile({496, 126}, {
+	World = "Earth",
+	FactionCulturalSettlementNames = {
+		"latin", "France", "Chambéry"
+	}
+})
+
+DefineWorldMapTile({497, 121}, {
+	World = "Earth",
+	FactionCulturalSettlementNames = {
+		"latin", "France", "Besançon"
+	}
+})
+
+DefineWorldMapTile({501, 118}, {
+	World = "Earth",
+	CulturalSettlementNames = {
+		"latin", "Argentoratum", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+		"teuton", "Strasburg", "name-elements", {
+--			"compound", "prefix", -- ?
+			"compound", "suffix", "high-german", "noun", "singular", "Burg"
+		}
+	}
+})
+

@@ -25,67 +25,48 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineWorldMapTile({456, 132}, {
+DefineWorldMapTile({492, 111}, {
 	World = "Earth",
 	CulturalSettlementNames = {
-		"latin", "Lucus Augusti"
+		"latin", "Aduatuca"
 	},
 	FactionCulturalSettlementNames = {
-		"latin", "Spain", "Corunna"
+		"teuton", "Netherlands", "Brussels"
 	}
 })
 
-DefineWorldMapTile({463, 132}, {
+DefineWorldMapTile({493, 107}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
-		"latin", "Spain", "Oviedo"
+		"teuton", "Netherlands", "Amsterdam"
 	}
 })
 
-DefineWorldMapTile({464, 141}, {
+DefineWorldMapTile({496, 104}, {
 	World = "Earth",
-	FactionCulturalTerrainNames = {
-		"Mountains", "latin", "Spain", "Pico Almanzor" -- Source: "Philip's International School Atlas", 2006, p. 69
-	}
-})
-
-DefineWorldMapTile({466, 148}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"latin", "Corduba"
-	}
-})
-
-DefineWorldMapTile({469, 141}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"latin", "Complutum"
-	},
 	FactionCulturalSettlementNames = {
-		"latin", "Spain", "Madrid"
+		"teuton", "Netherlands", "Leeuwarden" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
 	}
 })
 
-DefineWorldMapTile({470, 150}, {
+DefineWorldMapTile({497, 106}, {
 	World = "Earth",
-	FactionCulturalTerrainNames = {
-		"Mountains", "latin", "Spain", "Mulhacén" -- Source: "Philip's International School Atlas", 2006, p. 69
-	}
-})
-
-DefineWorldMapTile({477, 137}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"latin", "Caesaraugusta"
-	},
 	FactionCulturalSettlementNames = {
-		"latin", "Spain", "Zaragoza"
+		"teuton", "Netherlands", "Zwolle" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
 	}
 })
 
-DefineWorldMapTile({481, 135}, {
+DefineWorldMapTile({498, 105}, {
 	World = "Earth",
-	FactionCulturalTerrainNames = {
-		"Mountains", "latin", "Spain", "Monte Perdido" -- Source: "Philip's International School Atlas", 2006, p. 69
+	FactionCulturalSettlementNames = {
+		"teuton", "Netherlands", "Assen" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
 	}
 })
+
+DefineWorldMapTile({500, 104}, {
+	World = "Earth",
+	FactionCulturalSettlementNames = {
+		"teuton", "Netherlands", "Emden"
+	}
+})
+

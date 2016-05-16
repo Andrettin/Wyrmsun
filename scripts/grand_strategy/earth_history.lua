@@ -540,12 +540,8 @@ if (GrandStrategyYear >= -1000) then
 end
 
 if (GrandStrategyYear >= -800) then -- Hallstatt culture in southern Germany and adjacent areas c. 800-400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 87.
-	SetProvinceOwner("Bavaria", "celt", "Norici Tribe")
-	SetProvinceCivilization("Bavaria", "celt")
-	SetProvinceUnitQuantity("Bavaria", "unit-germanic-warrior", 0)
 	SetProvinceOwner("Switzerland", "celt", "Helvetii Tribe") -- already in Switzerland?
 	SetProvinceCivilization("Switzerland", "celt")
-	SetProvinceUnitQuantity("Switzerland", "unit-germanic-warrior", 0)
 end
 
 if (GrandStrategyYear >= -750) then -- Eastern Mediterranean between 750 and 625 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.	
@@ -890,13 +886,11 @@ end
 
 if (GrandStrategyYear >= -191) then -- Cisalpine Gaul acquired by Rome in 191 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	SetProvinceOwner("Lombardy", "latin", "Rome")
-	SetProvinceUnitQuantity("Lombardy", "unit-germanic-warrior", 0)
 	SetProvinceOwner("Modena", "latin", "Rome")
 	SetProvinceOwner("Parma", "latin", "Rome")
 	SetProvinceOwner("Piedmont", "latin", "Rome")
 	SetProvinceOwner("Romagna", "latin", "Rome")
 	SetProvinceOwner("Venetia", "latin", "Rome")
-	SetProvinceUnitQuantity("Venetia", "unit-germanic-warrior", 0)
 end
 
 if (GrandStrategyYear >= -175) then
@@ -994,7 +988,6 @@ if (GrandStrategyYear >= -50) then -- Gaul conquered by Rome in 50 BC; Source: W
 	SetProvinceOwner("Aquitaine", "latin", "Rome")
 	SetProvinceOwner("Brittany", "latin", "Rome")
 	SetProvinceOwner("Burgundy", "latin", "Rome")
-	SetProvinceOwner("France", "latin", "Rome")
 	SetProvinceOwner("Franche Comte", "latin", "Rome")
 	SetProvinceOwner("Lorraine", "latin", "Rome")
 	SetProvinceOwner("Lower Rhine", "latin", "Rome")
@@ -1039,7 +1032,6 @@ end
 
 if (GrandStrategyYear >= -15) then
 	-- Raetia and Vindelicia acquired by Rome in 15 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-	SetProvinceOwner("Bavaria", "latin", "Rome")
 	SetProvinceOwner("Augsburg", "latin", "Rome")
 	
 	SetProvinceOwner("Savoy", "latin", "Rome") -- Pennine Alps acquired by Rome in 15 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
@@ -1097,10 +1089,6 @@ end
 if (GrandStrategyYear >= 150) then
 	SetProvinceOwner("Holland", "teuton", "Frank Tribe") -- Franks were the people settled in the modern Netherlands in (presumably) 150 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 	SetProvinceCivilization("Holland", "teuton")
-	
-	-- Rugians shown as being in Bavaria (presumably) in 150 AD; Source William R. Shepherd's Historical Atlas, 1911, p. 45.
-	SetProvinceOwner("Bavaria", "goth", "Rugian Tribe")
-	SetProvinceOwner("Franconia", "goth", "Rugian Tribe")
 end
 
 if (GrandStrategyYear >= 166) then
@@ -1260,11 +1248,6 @@ if (GrandStrategyYear >= 481) then
 end
 
 if (GrandStrategyYear >= 486) then
-	-- The Frankish Merovingian king Clovis conquers Syagrius' realm, the last Roman territory in Gaul; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
-	SetProvinceOwner("France", "teuton", "Francia")
-	SetProvinceUnitQuantity("France", "unit-germanic-warrior", 0) -- let's remove those oodles of warriors placed there to make this province difficult to conquer
-	AddProvinceClaim("France", "teuton", "Francia")
-
 	SetProvinceOwner("Transylvania", "", "")
 	SetProvinceOwner("Corsica", "goth", "Vandal Tribe") -- Corsica was a part of the Kingdom of the Vandals in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 	SetProvinceUnitQuantity("Corsica", "unit-germanic-warrior", 0) -- let's remove those oodles of warriors placed there to make this province difficult to conquer
@@ -1291,9 +1274,7 @@ if (GrandStrategyYear >= 493) then
 	
 	-- Ostrogoths conquer Italy in 493 AD; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, pp. 8-9; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 	SetProvinceOwner("Lombardy", "goth", "Ostrogoth Tribe")
-	SetProvinceUnitQuantity("Lombardy", "unit-teuton-swordsman", 0) -- let's remove those oodles of warriors placed there to make Italy difficult to conquer
 	SetProvinceOwner("Naples", "goth", "Ostrogoth Tribe")
-	SetProvinceUnitQuantity("Naples", "unit-teuton-swordsman", 0) -- let's remove those oodles of warriors placed there to make Italy difficult to conquer
 	SetProvinceOwner("Umbria", "goth", "Ostrogoth Tribe")
 	SetProvinceOwner("Abruzzo", "goth", "Ostrogoth Tribe")
 end
@@ -1314,7 +1295,6 @@ if (GrandStrategyYear >= 506) then
 end
 
 if (GrandStrategyYear >= 507) then -- political situation in 507-534 in Europe; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
-	SetProvinceOwner("Bavaria", "goth", "Ostrogoth Tribe")
 	SetProvinceOwner("Istria", "goth", "Ostrogoth Tribe")
 	SetProvinceOwner("Carniola", "goth", "Ostrogoth Tribe")
 	SetProvinceOwner("Croatia", "goth", "Ostrogoth Tribe")
@@ -1332,8 +1312,6 @@ if (GrandStrategyYear >= 517) then
 end
 
 if (GrandStrategyYear >= 526) then -- political situation in 526-600 in Europe; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
-	SetProvinceOwner("Bavaria", "teuton", "Bavarian Tribe")
-	SetProvinceCivilization("Bavaria", "teuton")
 	SetProvinceOwner("Holland", "teuton", "Frisian Tribe")
 end
 
@@ -1360,9 +1338,6 @@ if (GrandStrategyYear >= 534) then
 end
 
 if (GrandStrategyYear >= 537) then
-	SetProvinceOwner("Bavaria", "teuton", "Francia") -- region of Altbayern, Salzburg and Tyrol conquered by the Franks in 537; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
-	AddProvinceClaim("Bavaria", "teuton", "Francia")
-	
 	SetProvinceOwner("Provence", "teuton", "Francia") -- Provence conquered by the Franks in 537; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
 	AddProvinceClaim("Provence", "teuton", "Francia")
 end
@@ -1514,10 +1489,6 @@ end
 if (GrandStrategyYear >= 919) then
 	-- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 	
-	-- Duchy of Bavaria
-	SetProvinceOwner("Bavaria", "teuton", "Holy Rome")
-	AddProvinceClaim("Bavaria", "teuton", "Bavaria")
-	
 	-- Duchy of Carinthia
 	SetProvinceOwner("Carniola", "teuton", "Holy Rome")
 	SetProvinceOwner("Istria", "teuton", "Holy Rome") -- March of Istria
@@ -1582,7 +1553,6 @@ if (GrandStrategyYear >= 919) then
 	SetProvinceOwner("Venetia", "latin", "Venice")
 	
 	SetProvinceOwner("Burgundy", "latin", "France")
-	SetProvinceOwner("France", "latin", "France")
 	SetProvinceOwner("Croatia", "slav", "Croatia")
 	SetProvinceCivilization("Croatia", "slav")
 	SetProvinceOwner("Galicia", "slav", "Poland")
@@ -1729,9 +1699,6 @@ if (GrandStrategyYear >= 1560) then
 	SetProvinceOwner("Franche Comte", "latin", "Spain")
 	SetProvinceOwner("Switzerland", "teuton", "Switzerland")
 	SetFactionGovernmentType("teuton", "Switzerland", "republic")	
-	
-	SetProvinceOwner("Bavaria", "teuton", "Bavaria")
-	AddProvinceClaim("Bavaria", "teuton", "Bavaria")
 	
 	SetProvinceOwner("Neumark", "teuton", "Brandenburg")
 	SetProvinceOwner("Prussia", "teuton", "Prussia")
