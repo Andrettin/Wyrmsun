@@ -134,6 +134,13 @@ DefineLanguageWord("Dēfrūtum", { -- Source: Winfred P. Lehmann, "A Grammar of 
 	DerivesFrom = {"proto-indo-european", "noun", "Bhru"}
 })
 
+DefineLanguageWord("Dolus", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 86.
+	Language = "latin",
+	Type = "noun",
+	Meanings = {},
+	DerivesFrom = {"proto-indo-european", "noun", "Del"}
+})
+
 DefineLanguageWord("Dūcō", { -- this is the singular first person present; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Sections 3-4.
 	Language = "latin",
 	Type = "verb",

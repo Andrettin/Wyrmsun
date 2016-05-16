@@ -1111,6 +1111,13 @@ DefineLanguageWord("Tagr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Meanings = {"Tear"}
 })
 
+DefineLanguageWord("Talzjan", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 86.
+	Language = "gothic",
+	Type = "verb",
+	Meanings = {"Lecture"}, -- source gives the German "belehren" as the meaning
+	DerivesFrom = {"proto-germanic", "verb", "Talaz"}
+})
+
 DefineLanguageWord("Þaúrp", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 100.
 	Language = "gothic",
 	Type = "noun",
@@ -1171,6 +1178,13 @@ DefineLanguageWord("Ufar", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Type = "adposition",
 	Meanings = {"Over"},
 	DerivesFrom = {"proto-germanic", "adposition", "Ufar"}
+})
+
+DefineLanguageWord("Untals", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 86.
+	Language = "gothic",
+	Type = "adjective",
+	Meanings = {"Intractable", "Indocile"}, -- source gives the German "ungefügsam, ungelehrig" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Tala"} -- apparently, but not clear from source
 })
 
 DefineLanguageWord("Us", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.

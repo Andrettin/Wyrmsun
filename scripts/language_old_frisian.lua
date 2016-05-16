@@ -514,6 +514,14 @@ DefineLanguageWord("Sûth", { -- source also gives the alternative form "Sûther
 	DerivesFrom = {"proto-germanic", "adverb", "Sunþa"}
 })
 
+DefineLanguageWord("Tale", { -- source also gives the alternative form "tele"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 86.
+	Language = "old-frisian",
+	Type = "noun",
+	Meanings = {"Number", "Narrative", "Speech"}, -- source gives the German "Zahl, Erzählung, Rede" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Talô"},
+	Gender = "feminine" -- apparently
+})
+
 DefineLanguageWord("Therm", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 97.
 	Language = "old-frisian",
 	Type = "noun",

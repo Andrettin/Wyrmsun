@@ -147,6 +147,13 @@ DefineLanguageWord("Knecht", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	DerivesFrom = {"proto-germanic", "noun", "Knehta"} -- Old Low German "inkneht", although having the same root, appears to have a prefix, and thus this word likely does not derive from it
 })
 
+DefineLanguageWord("Kringel", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 35.
+	Language = "middle-low-german",
+	Type = "noun",
+	Meanings = {"Ring", "Circle", "Round Pastry"}, -- source gives the German "Ring, Kreis, rundes Gebäck" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Krenga"}
+})
+
 DefineLanguageWord("Lêt", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 181.
 	Language = "middle-low-german",
 	Type = "noun",

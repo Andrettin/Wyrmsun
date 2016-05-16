@@ -73,6 +73,12 @@ DefineLanguageWord("Daxw", { -- source gives "daXw-"; Source: Winfred P. Lehmann
 	Meanings = {}
 })
 
+DefineLanguageWord("Del", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 86.
+	Language = "proto-indo-european",
+	Type = "noun", -- correct?
+	Meanings = {}
+})
+
 DefineLanguageWord("Deγ", { -- source also gives the alternative form "dō"; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
 	Language = "proto-indo-european",
 	Type = "verb",

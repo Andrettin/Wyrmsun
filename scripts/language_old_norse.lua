@@ -785,7 +785,11 @@ DefineLanguageWord("Heimr", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Type = "noun",
 	Meanings = {"Home", "World"}, -- source gives the German "Heimat, Welt" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Haima"},
-	Gender = "masculine"
+	Gender = "masculine",
+	NumberCaseInflections = {
+		"singular", "no-case", "Heim", -- presumably (assuming the "-r" ending here is the nominative ending)
+		"singular", "genitive", "Heims" -- correct?
+	}
 })
 
 DefineLanguageWord("Heimskr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 52.
@@ -978,6 +982,30 @@ DefineLanguageWord("Korn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Type = "noun",
 	Meanings = {"Grain"}, -- derived from Proto-Germanic "Kŕnam", which has the meaning of "grain"
 	DerivesFrom = {"proto-germanic", "noun", "Kŕnam"}
+})
+
+DefineLanguageWord("Krâ", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 35.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Angle"}, -- source gives the German "Winkel" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Krenh"},
+	Gender = "feminine"
+})
+
+DefineLanguageWord("Kringr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 35.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Circle"}, -- source gives the German "Kreis" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Krenga"},
+	Gender = "masculine"
+})
+
+DefineLanguageWord("Kringla", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 35.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Circle"}, -- source gives the German "Kreis" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Krenga"},
+	Gender = "feminine"
 })
 
 DefineLanguageWord("Kvikr", { -- source also gives "Kuikr" with the same meaning later; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.5, 2.6.2.
@@ -1478,6 +1506,22 @@ DefineLanguageWord("Syrgja", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Type = "verb",
 	Meanings = {"Worry"}, -- source gives the German "sorgen" as the meaning
 	DerivesFrom = {"proto-germanic", "verb", "Surgên"}
+})
+
+DefineLanguageWord("Tal", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 86.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Account", "Quantity", "Speech"}, -- source gives the German "Rechnung, Anzahl, Rede" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Tala"},
+	Gender = "neuter"
+})
+
+DefineLanguageWord("Tala", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 86.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Number", "Account", "Speech"}, -- source gives the German "Zahl, Rechnung, Rede" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Talô"},
+	Gender = "feminine"
 })
 
 DefineLanguageWord("Þarmr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 97.

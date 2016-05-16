@@ -42,3 +42,15 @@ DefineLanguageWord("Karer", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Type = "adjective",
 	Meanings = {"Hard", "Strict"} -- source gives the German "hart, streng" as the meaning
 })
+
+DefineLanguageWord("Toλ", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 86.
+	Language = "armenian",
+	Type = "noun",
+	Meanings = {"Line", "Row"} -- source gives the German "Linie, Reihe" as the meaning
+})
+
+DefineLanguageWord("Toλem", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 86.
+	Language = "armenian",
+	Type = "verb",
+	Meanings = {"String Together"} -- source gives the German "reihe aneinander" as the meaning
+})

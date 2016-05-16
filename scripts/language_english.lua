@@ -2836,6 +2836,14 @@ DefineLanguageWord("Swan", {
 	AffixNameTypes = {"compound", "prefix", "singular", "settlement"} -- examples: "Swansea" (Source: "Philip's International School Atlas", 2006, p. 64), "Swanscombe"
 })
 
+DefineLanguageWord("Tale", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Tale"},
+	DerivesFrom = {"old-english", "noun", "Talu"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 86.
+	Gender = "neuter"
+})
+
 DefineLanguageWord("The", {
 	Language = "english",
 	Type = "article",

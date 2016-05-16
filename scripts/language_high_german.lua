@@ -2582,6 +2582,20 @@ DefineLanguageWord("Wurm", {
 	}
 })
 
+DefineLanguageWord("Zahl", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"Number"},
+	DerivesFrom = {"middle-high-german", "noun", "Zal"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 86.
+	Gender = "feminine",
+	NumberCaseInflections = {
+		"plural", "nominative", "Zahlen",
+		"plural", "accusative", "Zahlen",
+		"plural", "dative", "Zahlen",
+		"plural", "genitive", "Zahlen"
+	}
+})
+
 DefineLanguageWord("Zaun", {
 	Language = "high-german",
 	Type = "noun",

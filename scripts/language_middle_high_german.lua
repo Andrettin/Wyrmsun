@@ -507,6 +507,25 @@ DefineLanguageWord("Kneht", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	DerivesFrom = {"old-high-german", "noun", "Cneht"}
 })
 
+DefineLanguageWord("Krinc", { -- source also gives the alternative form "kranc"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 35.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Circle", "Ring"}, -- source gives the German "Kreis, Ring" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Krenga"},
+	Gender = "masculine",
+	NumberCaseInflections = {
+		"singular", "genitive", "Kringes"
+	}
+})
+
+DefineLanguageWord("Kringel", { -- source also gives the alternative form "krengel"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 35.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Circle", "Ring"}, -- source gives the German "Kreis, Ring" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Krenga"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Künec", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 27.
 	Language = "middle-high-german",
 	Type = "noun",
@@ -903,6 +922,14 @@ DefineLanguageWord("Wurm", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Meanings = {"Worm", "Maggot", "Adder", "Viper", "Serpent"}, -- source gives the German "Wurm, Made, Natter, Schlange" as the meaning
 	DerivesFrom = {"old-high-german", "noun", "Wurm"},
 	Gender = "masculine"
+})
+
+DefineLanguageWord("Zal", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 86.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Number", "Quantity", "Enumeration", "Account", "Narrative", "Speech"}, -- source gives the German "Zahl, Anzahl, Aufzählung, Berechnung, Erzählung, Rede" as the meaning
+	DerivesFrom = {"old-high-german", "noun", "Zala"},
+	Gender = "feminine"
 })
 
 DefineLanguageWord("Zûn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 89.

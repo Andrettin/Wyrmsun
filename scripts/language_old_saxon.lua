@@ -259,6 +259,14 @@ DefineLanguageWord("Gard", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	DerivesFrom = {"proto-germanic", "noun", "Gazdaz"}
 })
 
+DefineLanguageWord("Gital", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 86.
+	Language = "old-saxon",
+	Type = "noun",
+	Meanings = {"Number", "Quantity", "Row"}, -- source gives the German "Zahl, Anzahl, Reihe" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Tala"},
+	Gender = "neuter" -- apparently
+})
+
 DefineLanguageWord("God", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.
 	Language = "old-saxon",
 	Type = "noun",
@@ -841,6 +849,14 @@ DefineLanguageWord("Êndago", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Meanings = {"Appointment"}, -- source gives the German "Termin" as the meaning
 	-- the suffix in this compound is derived from the Proto-Germanic noun "Dag"
 	Gender = "masculine"
+})
+
+DefineLanguageWord("Gêrtala", { -- apparently a compound; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 86.
+	Language = "old-saxon",
+	Type = "noun",
+	Meanings = {"Calendar"}, -- source gives the German "Kalender" as the meaning
+	Gender = "feminine" -- apparently
+	-- the second part of this compound comes from the Proto-Germanic word "talô(n)"
 })
 
 DefineLanguageWord("Mundburd", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 167.

@@ -631,6 +631,21 @@ DefineLanguageWord("Gesihþ", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	DerivesFrom = {"proto-indo-european", "verb", "Sekʷ"}
 })
 
+DefineLanguageWord("Getæl", { -- source also gives the alternative form "tæl"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 86.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Number", "Row", "Account"}, -- source gives the German "Anzahl, Reihe, Berechnung" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Tala"},
+	Gender = "neuter"
+})
+
+DefineLanguageWord("Getæl", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 86.
+	Language = "old-english",
+	Type = "adjective",
+	Meanings = {"Swift"}, -- source gives the German "rasch" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Tala"} -- apparently, but not clear from source
+})
+
 DefineLanguageWord("Gierd", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
 	Language = "old-english",
 	Type = "noun",
@@ -1628,6 +1643,14 @@ DefineLanguageWord("Táh", { -- this is the singular first person past; Source: 
 		"singular", "first-person", "past", "indicative", "Táh",
 		"plural", "first-person", "past", "indicative", "Tigon"
 	}
+})
+
+DefineLanguageWord("Talu", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 86.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Narrative", "Legal Matter", "Row"}, -- source gives the German "Erzählung, Rechtssache, Reihe" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Talô"},
+	Gender = "feminine"
 })
 
 DefineLanguageWord("Tēar", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 3, Subsection 1.

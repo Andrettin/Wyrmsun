@@ -27,6 +27,10 @@
 
 DefineUpgrade("upgrade-work-heimskringla", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 154-155.
 	Name = _("Heimskringla"),
+	NameElements = {
+		"compound", "prefix", "old-norse", "noun", "genitive", "Heimr", -- presumably
+		"compound", "suffix", "old-norse", "noun", "Kringla" -- presumably
+	},
 	Work = "scroll",
 	Civilization = "norse",
 	Description = "The Heimskringla, or Chronicle of the Kings of Norway, detailed the legendary origins of the Norwegian monarchy, going on to write the stories of a long series of kings of Norway.",
@@ -44,6 +48,9 @@ DefineUpgrade("upgrade-work-historiae-vinlandiae-antiquae", { -- Source: Snorri 
 
 DefineUpgrade("upgrade-work-ynglingatal", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 245, 261.
 	Name = _("Ynglingatal"),
+	NameElements = {
+		"compound", "suffix", "old-norse", "noun", "Tal" -- presumably
+	},
 	Work = "scroll",
 	Civilization = "norse",
 	Description = "The Ynglingatal tells the lineage of the Yngling dynasty, legendary kings of Sweden.",

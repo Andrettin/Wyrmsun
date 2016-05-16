@@ -538,6 +538,13 @@ DefineLanguageWord("Gisiht", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	DerivesFrom = {"proto-indo-european", "verb", "Sekʷ"}
 })
 
+DefineLanguageWord("Gizal", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 86.
+	Language = "old-high-german",
+	Type = "adjective",
+	Meanings = {},
+	DerivesFrom = {"proto-germanic", "noun", "Tala"} -- apparently, but not clear from source
+})
+
 DefineLanguageWord("Glanz", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 81.
 	Language = "old-high-german",
 	Type = "adjective",
@@ -1681,6 +1688,14 @@ DefineLanguageWord("Zahar", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Meanings = {"Tear"}
 })
 
+DefineLanguageWord("Zala", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 86.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Number", "Quantity", "Enumeration", "Account", "Narrative", "Speech"}, -- source gives the German "Zahl, Anzahl, Aufzählung, Berechnung, Erzählung, Rede" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Talô"},
+	Gender = "feminine"
+})
+
 DefineLanguageWord("Zeh", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
 	Language = "old-high-german",
 	Type = "verb",
@@ -1744,6 +1759,17 @@ DefineLanguageWord("Elmboum", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Type = "noun",
 	Meanings = {"Elm"} -- source apparently gives the German "Ulme" as the meaning
 	-- the first part of this compound derives from the Proto-Germanic "alma"
+})
+
+DefineLanguageWord("Jârzala", { -- apparently a compound; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 86.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Calendar"}, -- source (apparently, but not entirely clear) gives the German "Kalender" as the meaning
+	CompoundElements = {
+		"prefix", "old-high-german", "noun", "Jār", -- presumably
+		"suffix", "old-high-german", "noun", "Zala"
+	},
+	Gender = "feminine" -- apparently
 })
 
 DefineLanguageWord("Muntboro", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 167.

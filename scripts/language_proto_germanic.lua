@@ -784,6 +784,19 @@ DefineLanguageWord("Knehta", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Meanings = {}
 })
 
+DefineLanguageWord("Krenga", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 35.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Circle"}, -- source gives the German "Kreis" as the meaning
+	Gender = "masculine"
+})
+
+DefineLanguageWord("Krenh", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 35.
+	Language = "proto-germanic", -- apparently, but not entirely clear from the source
+	Type = "noun", -- correct?
+	Meanings = {}
+})
+
 DefineLanguageWord("Kŕnam", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "proto-germanic",
 	Type = "noun",
@@ -1213,6 +1226,29 @@ DefineLanguageWord("Swīnaz", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Pig"}
+})
+
+DefineLanguageWord("Tala", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 86.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Account", "Number", "Speech"}, -- source gives the German "Berechnung, Zahl, Rede" as the meaning
+	Gender = "neuter",
+	DerivesFrom = {"proto-indo-european", "noun", "Del"} -- source mentions this as a possibility
+})
+
+DefineLanguageWord("Talaz", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 86.
+	Language = "proto-germanic", -- apparently, but not entirely clear from source
+	Type = "verb", -- correct?
+	Meanings = {},
+	DerivesFrom = {"proto-indo-european", "noun", "Del"} -- source mentions this as a possibility
+})
+
+DefineLanguageWord("Talô", { -- source gives "talô(n)"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 86.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Account", "Number", "Speech"}, -- source gives the German "Berechnung, Zahl, Rede" as the meaning
+	Gender = "feminine",
+	DerivesFrom = {"proto-indo-european", "noun", "Del"} -- source mentions this as a possibility
 })
 
 DefineLanguageWord("Tandran", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 84.

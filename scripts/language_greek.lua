@@ -173,6 +173,13 @@ DefineLanguageWord("Dāḗr", { -- Source: Winfred P. Lehmann, "A Grammar of Pr
 	DerivesFrom = {"proto-indo-european", "noun", "Daxw"}
 })
 
+DefineLanguageWord("Δόλος", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 86.
+	Language = "greek",
+	Type = "noun", -- correct?
+	Meanings = {},
+	DerivesFrom = {"proto-indo-european", "noun", "Del"}
+})
+
 DefineLanguageWord("Égō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 1.
 	Language = "greek",
 	Type = "pronoun",
