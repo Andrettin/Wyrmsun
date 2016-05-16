@@ -703,12 +703,15 @@ DefineProvince("Boeotia", {
 
 DefineProvince("Bohemia", {
 	World = "Earth",
---	Name = "Marcomannia",
 	CulturalNames = {
 		"celt", "Boiohaemum",
 		"germanic", "Boiohaemum", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 		"latin", "Boiohaemum",
 		"teuton", "Böhmen"
+	},
+	FactionCulturalNames = {
+		"teuton", "Marcomanni Tribe", "Marcomannia",
+		"teuton", "Suebi Tribe", "Marcomannia"
 	},
 	Tiles = {
 --		{129, 28}, {130, 28}, {131, 28}, -- old map

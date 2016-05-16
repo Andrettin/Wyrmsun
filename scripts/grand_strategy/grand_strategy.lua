@@ -797,7 +797,7 @@ function AttackProvince(province, faction)
 				end
 				units_lost_string = units_lost_string .. units_lost[string.gsub(unitName, "-", "_")] .. " "
 				if (units_lost[string.gsub(unitName, "-", "_")] > 1) then
-					units_lost_string = units_lost_string .. GetUnitTypeNamePluralForm(unitName)
+					units_lost_string = units_lost_string .. GetUnitTypeData(unitName, "NamePlural")
 				else
 					units_lost_string = units_lost_string .. GetUnitTypeName(unitName)
 				end
@@ -1792,7 +1792,7 @@ function AddGrandStrategyTechnologyButton(x, y, unit_type)
 	if (GetFactionCurrentResearch(GrandStrategyFaction.Civilization, GrandStrategyFaction.Name) == unit_type) then
 		UIElements[table.getn(UIElements)]:setTooltip(CUpgrade:Get(unit_type).Name .. " being researched")
 	else
-		UIElements[table.getn(UIElements)]:setTooltip("Research " .. CUpgrade:Get(unit_type).Name .. "\n" .. cost_tooltip)
+		UIElements[table.getn(UIElements)]:setTooltip("Research " .. CUpgrade:Get(unit_type).Name .. "\n" .. cost_tooltip .. "\n" .. GetUpgradeEffectsString(unit_type, true, true))
 	end
 	UIElements[table.getn(UIElements)]:setFrameImage(Preference.CommandButtonFrameG)
 	UIElements[table.getn(UIElements)]:setPressedFrameImage(Preference.CommandButtonFrameG)
@@ -1935,7 +1935,7 @@ function AddGrandStrategyMercenaryButton(x, y, unit_type)
 		cost_tooltip = cost_tooltip .. "\n" .. GetUnitTypeData(unit_type, "Upkeep") * GetUnitTypeData(unit_type, "TrainQuantity") .. " Gold Upkeep"
 	end
 							
-	local regiment_type_name = GetUnitTypeNamePluralForm(unit_type)
+	local regiment_type_name = GetUnitTypeData(unit_type, "NamePlural")
 							
 	if (GetProvinceUnderConstructionUnitQuantity(SelectedProvince.Name, unit_type) > 0) then
 		UIElements[table.getn(UIElements)]:setTooltip("Cancel hiring " .. regiment_type_name)
@@ -2072,7 +2072,7 @@ function DrawGrandStrategyInterface()
 							g_lslider_p:Load()
 							b:setNormalImage(g_lslider_n)
 							b:setPressedImage(g_lslider_p)
-							local regiment_type_name = GetUnitTypeNamePluralForm(unitName)
+							local regiment_type_name = GetUnitTypeData(unitName, "NamePlural")
 							b:setTooltip("Deselect one ".. regiment_type_name .. " regiment")
 
 							local b = AddGrandStrategyImageButton("", "", icon_offset_x + 2 + 46 - 20, icon_offset_y + 40, function()
@@ -2090,7 +2090,7 @@ function DrawGrandStrategyInterface()
 							g_rslider_p:Load()
 							b:setNormalImage(g_rslider_n)
 							b:setPressedImage(g_rslider_p)
-							local regiment_type_name = GetUnitTypeNamePluralForm(unitName)
+							local regiment_type_name = GetUnitTypeData(unitName, "NamePlural")
 							b:setTooltip("Select one ".. regiment_type_name .. " regiment")
 
 							AddGrandStrategyLabel(GetGrandStrategySelectedUnits(unitName), icon_offset_x + 24, icon_offset_y + 42, Fonts["game"], true, false)
@@ -2355,7 +2355,7 @@ function DrawGrandStrategyInterface()
 							g_lslider_p:Load()
 							b:setNormalImage(g_lslider_n)
 							b:setPressedImage(g_lslider_p)
-							local regiment_type_name = GetUnitTypeNamePluralForm(unitName)
+							local regiment_type_name = GetUnitTypeData(unitName, "NamePlural")
 							b:setTooltip("Cancel training of one ".. regiment_type_name .. " regiment")
 
 							local b = AddGrandStrategyImageButton("", "", icon_offset_x + 2 + 46 - 20, icon_offset_y + 40, function()
@@ -2403,7 +2403,7 @@ function DrawGrandStrategyInterface()
 								cost_tooltip = cost_tooltip .. "\n" .. GetUnitTypeData(unitName, "Upkeep") .. " Gold Upkeep"
 							end
 							
-							local regiment_type_name = GetUnitTypeNamePluralForm(unitName)
+							local regiment_type_name = GetUnitTypeData(unitName, "NamePlural")
 							b:setTooltip("Train one ".. regiment_type_name .. " regiment" .. "\n" .. cost_tooltip)
 
 							AddGrandStrategyLabel(GetProvinceUnderConstructionUnitQuantity(SelectedProvince.Name, unitName), icon_offset_x + 24, icon_offset_y + 42, Fonts["game"], true, false)
@@ -2520,7 +2520,7 @@ function DrawGrandStrategyInterface()
 							g_lslider_p:Load()
 							b:setNormalImage(g_lslider_n)
 							b:setPressedImage(g_lslider_p)
-							local regiment_type_name = GetUnitTypeNamePluralForm(unitName)
+							local regiment_type_name = GetUnitTypeData(unitName, "NamePlural")
 							b:setTooltip("Cancel hiring of one ".. regiment_type_name .. " regiment")
 
 							local b = AddGrandStrategyImageButton("", "", icon_offset_x + 2 + 46 - 20, icon_offset_y + 40, function()
@@ -2567,7 +2567,7 @@ function DrawGrandStrategyInterface()
 								cost_tooltip = cost_tooltip .. "\n" .. GetUnitTypeData(unitName, "Upkeep") .. " Gold Upkeep"
 							end
 							
-							local regiment_type_name = GetUnitTypeNamePluralForm(unitName)
+							local regiment_type_name = GetUnitTypeData(unitName, "NamePlural")
 							b:setTooltip("Hire one ".. regiment_type_name .. " regiment" .. "\n" .. cost_tooltip)
 
 							AddGrandStrategyLabel(GetProvinceUnderConstructionUnitQuantity(SelectedProvince.Name, unitName), icon_offset_x + 24, icon_offset_y + 42, Fonts["game"], true, false)
@@ -4302,21 +4302,6 @@ function ChangeProvinceOwner(province, faction) -- used to change the owner and 
 	else
 		SetProvinceOwner(province.Name, "", "")
 	end
-end
-
-function GetUnitTypeNamePluralForm(unit_type)
-	local unit_type_name = GetUnitTypeName(unit_type) .. "s"
-	if (string.find(unit_type_name, "mans") ~= nil) then -- correct plural for "man" to "men"
-		unit_type_name = string.sub(unit_type_name, 0, -4) .. "men"
-	end
-	if (string.find(unit_type_name, "Thiefs") ~= nil) then -- correct plural for "thief" to "thieves"
-		unit_type_name = string.sub(unit_type_name, 0, -7) .. "Thieves"
-	end
-	if (string.find(unit_type_name, "Mercenarys") ~= nil) then -- correct plural for "mercenary" to "mercenaries"
-		unit_type_name = string.sub(unit_type_name, 0, -11) .. "Mercenaries"
-	end	
-	
-	return unit_type_name
 end
 
 function GetYearString(year)
