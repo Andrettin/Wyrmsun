@@ -67,7 +67,7 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed issue with grand strategy events which could cause the game to break when ending a turn.
 - The province of Bohemia is now called "Marcomannia" if it has Teuton culture and is owned by the Marcomanni Tribe, or by another Suebic tribe.
 - Building Roads now requires having researched Masonry, instead of being a polity faction.
-- Technology research buttons now displays more information about the technology's effect.
+- Technology research buttons now display more information about the technology's effect.
 
 -----------------------------------------------------------------------
 - 2.2.1
