@@ -1195,7 +1195,6 @@ if (GrandStrategyYear >= 412) then
 end
 
 if (GrandStrategyYear >= 431) then
-	GrandStrategyEvents.PalladiusBishopOfIreland = nil
 	GrandStrategyEvents.PalladiusFailure = nil
 	GrandStrategyEvents.PalladiusTheApostleOfIreland = nil
 end

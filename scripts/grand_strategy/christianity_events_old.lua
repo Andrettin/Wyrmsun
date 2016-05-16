@@ -33,6 +33,7 @@ local ChristianityEvents = {
 			if (
 				GetProvinceOwner("Ireland") == EventFaction.Name
 				and SyncRand(100) < 80
+				and GetGrandStrategyEventTriggered("Palladius, Bishop of PROVINCE_NAME")
 			) then
 				EventProvince = WorldMapProvinces.Ireland
 				return true
@@ -40,9 +41,6 @@ local ChristianityEvents = {
 				return false
 			end
 		end,
-		RequiredEvents = {
-			PalladiusBishopOfIreland = true
-		},
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
@@ -59,6 +57,7 @@ local ChristianityEvents = {
 			if (
 				GetProvinceOwner("Ireland") == EventFaction.Name
 				and SyncRand(100) < 20
+				and GetGrandStrategyEventTriggered("Palladius, Bishop of PROVINCE_NAME")
 			) then
 				EventProvince = WorldMapProvinces.Ireland
 				return true
@@ -66,9 +65,6 @@ local ChristianityEvents = {
 				return false
 			end
 		end,
-		RequiredEvents = {
-			PalladiusBishopOfIreland = true
-		},
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
