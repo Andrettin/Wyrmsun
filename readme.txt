@@ -62,7 +62,7 @@ https://github.com/Andrettin/Wyrmsun
 -----------------------------------------------------------------------
 
 * AI
-- Fixed AI-related crash.
+- Fixed an AI-related crash.
 
 * Grand Strategy
 - Split the Berry, Champagne, Lyonnais, Marche, Picardy, Poitou and Touraine provinces off the France one.
