@@ -682,6 +682,34 @@ DefineProvince("Belgium", {
 	Regions = {"Europe", "Gaul", "Germany-Netherlands", "Northwest Europe", "West and Central Europe"}
 })
 
+DefineProvince("Berry", {
+	World = "Earth",
+	FactionCulturalNames = {
+		"latin", "France", "Berry" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
+	},
+	Tiles = {
+		{484, 122}, {484, 123},
+		{485, 122}, {485, 123},
+		{486, 122}, {486, 123},
+		{487, 121}, {487, 122},
+		{488, 121}, {488, 122}
+	},
+	SettlementLocation = {487, 122}, -- Bourges
+	Map = "maps/random/random-map-forest.smp",
+	SettlementTerrain = "Plains",
+	Claims = {
+--		"latin", "France"
+	},
+	HistoricalOwners = {
+		-50, "latin", "Rome" -- Gaul conquered by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	},
+	HistoricalModifiers = {
+		1464, "upgrade-university", true, -- University founded in Bourges in 1464. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.
+		1789, "upgrade-courthouse", true -- Prévôt des maréchaux and chief court of the salt tax existent in Bourges in 1789. Source: William R. Shepherd, Historical Atlas, 1911, p. 147.
+	},
+	Regions = {"Europe", "France", "Gaul", "Northwest Europe", "West and Central Europe"}
+})
+
 DefineProvince("Bessarabia", {
 	World = "Earth",
 	Tiles = {
@@ -1893,19 +1921,17 @@ DefineProvince("France", {
 		{478, 118}, {478, 119}, {478, 120}, {478, 121},
 		{479, 118}, {479, 119}, {479, 120}, {479, 121},
 		{480, 118}, {480, 119}, {480, 120}, {480, 121}, {480, 122},
-		{481, 117}, {481, 118}, {481, 119}, {481, 120}, {481, 121},
-		{482, 117}, {482, 118}, {482, 119}, {482, 120}, {482, 121}, {482, 122}, {482, 124},
-		{483, 116}, {483, 117}, {483, 118}, {483, 119}, {483, 120}, {483, 121}, {483, 122}, {483, 123}, {483, 124},
-		{484, 115}, {484, 116}, {484, 117}, {484, 118}, {484, 119}, {484, 120}, {484, 121}, {484, 122}, {484, 123}, {484, 124}, {484, 125},
-		{485, 115}, {485, 116}, {485, 117}, {485, 118}, {485, 119}, {485, 120}, {485, 121}, {485, 122}, {485, 123}, {485, 124}, {485, 125},
-		{486, 115}, {486, 116}, {486, 117}, {486, 118}, {486, 119}, {486, 120}, {486, 121}, {486, 122}, {486, 123}, {486, 124}, {486, 125},
-		{487, 115}, {487, 116}, {487, 117}, {487, 118}, {487, 119}, {487, 120}, {487, 121}, {487, 122}, {487, 123},
-		{488, 115}, {488, 117}, {488, 118}, {488, 119}, {488, 120}, {488, 121}, {488, 122}, {488, 123},
+		{481, 117}, {481, 118}, {481, 119}, {481, 120},
+		{482, 117}, {482, 118}, {482, 119}, {482, 120},
+		{483, 116}, {483, 117}, {483, 118}, {483, 119}, {483, 120},
+		{484, 115}, {484, 116}, {484, 117}, {484, 118}, {484, 119}, {484, 120}, {484, 121},
+		{485, 115}, {485, 116}, {485, 117}, {485, 118}, {485, 119}, {485, 120}, {485, 121},
+		{486, 115}, {486, 116}, {486, 117}, {486, 118}, {486, 119}, {486, 120}, {486, 121},
+		{487, 115}, {487, 116}, {487, 117}, {487, 118}, {487, 119}, {487, 120}, {487, 123},
+		{488, 115}, {488, 117}, {488, 118}, {488, 119}, {488, 120}, {488, 123},
 		{489, 115}, {489, 120}, {489, 121}, {489, 122}, {489, 123}, {489, 124},
 		{490, 115}, {490, 120}, {490, 121}, {490, 122}, {490, 123}, {490, 124},
-		{491, 115}, {491, 122}, {491, 124}, {491, 125}, {491, 126},
-		{492, 124}, {492, 125}, {492, 126},
-		{493, 124}, {493, 125}, {493, 126}
+		{491, 115}, {491, 122}
 	},
 	SettlementLocation = {486, 117}, -- Paris
 	Map = "maps/random/random-map-forest.smp",
@@ -1930,19 +1956,13 @@ DefineProvince("France", {
 		1250, "upgrade-university", true, -- University existent in Paris in 1250. Source: Atlas de História Mundial, 2001, p. 144.
 		1250, "upgrade-university", true, -- University existent in Angers in 1250. Source: Atlas de História Mundial, 2001, p. 144.
 		1305, "upgrade-university", true, -- University founded in Orléans in 1305. Source: Atlas de História Mundial, 2001, p. 144.
-		1330, "upgrade-university", true, -- University founded in Lyon in 1330. Source: The Cambridge Modern History Atlas, 1912, p. 9.
-		1464, "upgrade-university", true, -- University founded in Bourges in 1464. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.
 		1789, "upgrade-courthouse", true, -- Parlement or conseil souverain, cour des aides, cambre des comptes, court of admiralty, cour des monnaies, prévôt des maréchaux and chief court of the salt tax existent in Paris in 1789. Source: William R. Shepherd, Historical Atlas, 1911, p. 147.
-		1789, "upgrade-courthouse", true, -- Chief court of the salt tax existent in Abbeville in 1789. Source: William R. Shepherd, Historical Atlas, 1911, p. 147.
 		1789, "upgrade-courthouse", true, -- Prévôt des maréchaux and chief court of the salt tax existent in Soissons in 1789. Source: William R. Shepherd, Historical Atlas, 1911, p. 147.
 		1789, "upgrade-courthouse", true, -- Chambre des comptes existent in Nevers in 1789. Source: William R. Shepherd, Historical Atlas, 1911, p. 147.
 		1789, "upgrade-courthouse", true, -- Prévôt des maréchaux and chief court of the salt tax existent in Angers in 1789. Source: William R. Shepherd, Historical Atlas, 1911, p. 147.
 		1789, "upgrade-courthouse", true, -- Chief court of the salt tax existent in Laval in 1789. Source: William R. Shepherd, Historical Atlas, 1911, p. 147.
 		1789, "upgrade-courthouse", true, -- Chief court of the salt tax existent in Le Mans in 1789. Source: William R. Shepherd, Historical Atlas, 1911, p. 147.
-		1789, "upgrade-courthouse", true, -- Prévôt des maréchaux and chief court of the salt tax existent in Orléans in 1789. Source: William R. Shepherd, Historical Atlas, 1911, p. 147.
-		1789, "upgrade-courthouse", true, -- Prévôt des maréchaux and chief court of the salt tax existent in Bourges in 1789. Source: William R. Shepherd, Historical Atlas, 1911, p. 147.
-		1789, "upgrade-courthouse", true, -- Chief court of the salt tax existent in Tours in 1789. Source: William R. Shepherd, Historical Atlas, 1911, p. 147.
-		1789, "upgrade-courthouse", true -- Chief court of the salt tax existent in Lyon in 1789. Source: William R. Shepherd, Historical Atlas, 1911, p. 147.
+		1789, "upgrade-courthouse", true -- Prévôt des maréchaux and chief court of the salt tax existent in Orléans in 1789. Source: William R. Shepherd, Historical Atlas, 1911, p. 147.
 	},
 	Regions = {"Europe", "France", "Gaul", "Northwest Europe", "West and Central Europe"}
 })
@@ -3114,6 +3134,32 @@ DefineProvince("Lowland Scotland", {
 	Regions = {"British Isles", "Europe", "Northwest Europe", "West and Central Europe"}
 })
 
+DefineProvince("Lyonnais", {
+	World = "Earth",
+	FactionCulturalNames = {
+		"latin", "France", "Lyonnais" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
+	},
+	Tiles = {
+		{491, 124}, {491, 125}, {491, 126},
+		{492, 124}, {492, 125}, {492, 126},
+		{493, 124}, {493, 125}, {493, 126}
+	},
+	SettlementLocation = {493, 125}, -- Lyons
+	Map = "maps/random/random-map-forest.smp",
+	SettlementTerrain = "Plains",
+	Claims = {
+--		"latin", "France"
+	},
+	HistoricalOwners = {
+		-50, "latin", "Rome" -- Gaul conquered by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	},
+	HistoricalModifiers = {
+		1330, "upgrade-university", true, -- University founded in Lyon in 1330. Source: The Cambridge Modern History Atlas, 1912, p. 9.
+		1789, "upgrade-courthouse", true -- Chief court of the salt tax existent in Lyon in 1789. Source: William R. Shepherd, Historical Atlas, 1911, p. 147.
+	},
+	Regions = {"Europe", "France", "Gaul", "Northwest Europe", "West and Central Europe"}
+})
+
 DefineProvince("Macedonia", {
 	World = "Earth",
 	Tiles = {
@@ -3187,6 +3233,30 @@ DefineProvince("Malta", {
 	Claims = {
 	},
 	Regions = {"Europe", "West and Central Europe"}
+})
+
+DefineProvince("Marche", {
+	World = "Earth",
+	FactionCulturalNames = {
+		"latin", "France", "Marche" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
+	},
+	Tiles = {
+		{482, 124},
+		{483, 123}, {483, 124},
+		{484, 124}, {484, 125},
+		{485, 124}, {485, 125},
+		{486, 124}, {486, 125}
+	},
+	SettlementLocation = {485, 124}, -- Guéret
+	Map = "maps/random/random-map-forest.smp",
+	SettlementTerrain = "Plains",
+	Claims = {
+--		"latin", "France"
+	},
+	HistoricalOwners = {
+		-50, "latin", "Rome" -- Gaul conquered by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	},
+	Regions = {"Europe", "France", "Gaul", "Northwest Europe", "West and Central Europe"}
 })
 
 DefineProvince("Mazovia", {
@@ -3979,6 +4049,7 @@ DefineProvince("Picardy", { -- also includes French Flanders, Hainaut and Artois
 	HistoricalModifiers = {
 		1582, "upgrade-university", true, -- University founded in Douai in 1582. Source: The Cambridge Modern History Atlas, 1912, p. 9.
 		1789, "upgrade-courthouse", true, -- Prévôt des maréchaux existent in Amiens in 1789. Source: William R. Shepherd, Historical Atlas, 1911, p. 147.
+		1789, "upgrade-courthouse", true, -- Chief court of the salt tax existent in Abbeville in 1789. Source: William R. Shepherd, Historical Atlas, 1911, p. 147.
 		1789, "upgrade-courthouse", true, -- Parlement or conseil souverain existent in Arras in 1789. Source: William R. Shepherd, Historical Atlas, 1911, p. 147.
 		1789, "upgrade-courthouse", true, -- Prévôt des maréchaux existent in Lille in 1789. Source: William R. Shepherd, Historical Atlas, 1911, p. 147.
 		1789, "upgrade-courthouse", true -- Prévôt des maréchaux existent in Valenciennes in 1789. Source: William R. Shepherd, Historical Atlas, 1911, p. 147.
@@ -4028,7 +4099,6 @@ DefineProvince("Poitou", {
 	SettlementTerrain = "Plains",
 	Coastal = true,
 	Claims = {
-		"teuton", "Neustria", -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
 --		"latin", "France"
 	},
 	HistoricalOwners = {
@@ -5003,6 +5073,31 @@ DefineProvince("Thuringia", {
 		1557, "upgrade-university", true -- University founded in Jena in 1557. Source: The Cambridge Modern History Atlas, 1912, p. 9.
 	},
 	Regions = {"Europe", "Germany-Netherlands", "West and Central Europe"}
+})
+
+DefineProvince("Touraine", {
+	World = "Earth",
+	FactionCulturalNames = {
+		"latin", "France", "Touraine" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
+	},
+	Tiles = {
+		{481, 121},
+		{482, 121}, {482, 122},
+		{483, 121}, {483, 122}
+	},
+	SettlementLocation = {482, 121}, -- Tours
+	Map = "maps/random/random-map-forest.smp",
+	SettlementTerrain = "Plains",
+	Claims = {
+--		"latin", "France"
+	},
+	HistoricalOwners = {
+		-50, "latin", "Rome" -- Gaul conquered by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	},
+	HistoricalModifiers = {
+		1789, "upgrade-courthouse", true -- Chief court of the salt tax existent in Tours in 1789. Source: William R. Shepherd, Historical Atlas, 1911, p. 147.
+	},
+	Regions = {"Europe", "France", "Gaul", "Northwest Europe", "West and Central Europe"}
 })
 
 DefineProvince("Transylvania", {
