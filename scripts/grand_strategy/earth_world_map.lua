@@ -7252,8 +7252,8 @@ SetWorldMapTileTerrain(480, 120, plains_id)
 SetWorldMapTileTerrain(480, 121, plains_id)
 SetWorldMapTileTerrain(480, 122, plains_id)
 SetWorldMapTileTerrain(480, 123, plains_id)
-AddWorldMapResource("grain", 480, 123, true) -- Wheat; Source: "Philip's International School Atlas", 2006, p. 59.
 SetWorldMapTileTerrain(480, 124, plains_id)
+AddWorldMapResource("grain", 480, 124, true) -- Wheat; should be in {480, 123}, but that spot is already occupied by a settlement; Source: "Philip's International School Atlas", 2006, p. 59.
 SetWorldMapTileTerrain(480, 125, plains_id)
 SetWorldMapTileTerrain(480, 126, plains_id)
 SetWorldMapTileTerrain(480, 127, plains_id)

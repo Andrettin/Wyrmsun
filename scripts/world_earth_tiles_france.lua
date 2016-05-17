@@ -39,6 +39,13 @@ DefineWorldMapTile({475, 121}, {
 	}
 })
 
+DefineWorldMapTile({480, 123}, {
+	World = "Earth",
+	FactionCulturalSettlementNames = {
+		"latin", "France", "Poitiers" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
+	}
+})
+
 DefineWorldMapTile({482, 115}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
@@ -73,6 +80,13 @@ DefineWorldMapTile({486, 117}, {
 	},
 	FactionCulturalSettlementNames = {
 		"latin", "France", "Paris"
+	}
+})
+
+DefineWorldMapTile({491, 118}, {
+	World = "Earth",
+	FactionCulturalSettlementNames = {
+		"latin", "France", "Troyes" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 	}
 })
 

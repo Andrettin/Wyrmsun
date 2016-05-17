@@ -65,7 +65,7 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed AI-related crash.
 
 * Grand Strategy
-- Split the Picardy province off France.
+- Split the Champagne, Picardy and Poitou provinces off France.
 
 * Units
 - Fixed issue which allowed organic units with no proper name to have epithets.
