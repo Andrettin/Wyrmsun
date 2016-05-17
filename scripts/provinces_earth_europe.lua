@@ -574,6 +574,10 @@ DefineProvince("Baden", {
 		"teuton", "Swabia", -- Part of the Duchy of Swabia in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		"teuton", "Holy Rome"
 	},
+	HistoricalSettlementBuildings = {
+		768, "unit-teuton-temple", true, -- Monastery or abbey existent in St. Peter during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
+		768, "unit-teuton-temple", true -- Monastery or abbey existent in Reichenau during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
+	},
 	HistoricalModifiers = {
 		1385, "upgrade-university", true, -- University founded in Heidelberg in 1385. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.
 		1455, "upgrade-university", true -- University founded in Freiburg in 1455. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.
@@ -629,6 +633,10 @@ DefineProvince("Bavaria", {
 		-800, "celt",
 		526, "teuton"
 	},
+	HistoricalSettlementBuildings = {
+		768, "unit-teuton-temple", true, -- Monastery or abbey existent in Niederaltaich during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
+		768, "unit-teuton-temple", true -- Monastery or abbey existent in Wessobrunn during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
+	},
 	HistoricalModifiers = {
 		1459, "upgrade-university", true -- University founded in Ingolstadt in 1459. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.
 	},
@@ -663,6 +671,10 @@ DefineProvince("Belgium", {
 	Claims = {
 		"celt", "Menapii Tribe",
 		"teuton", "Austrasia" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
+	},
+	HistoricalSettlementBuildings = {
+		768, "unit-teuton-temple", true, -- Monastery or abbey existent in Stavelot during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
+		768, "unit-teuton-temple", true -- Monastery or abbey existent in Echternach (in modern Luxembourg) during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 	},
 	HistoricalModifiers = {
 		1425, "upgrade-university", true -- University founded in Louvain in 1425. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.
@@ -1425,6 +1437,21 @@ DefineProvince("Dalmatia", {
 	Claims = {
 		"illyrian", "Illyrian Tribe"
 	},
+	HistoricalOwners = {
+		-750, "illyrian", "Illyrian Tribe", -- Eastern Mediterranean between 750 and 625 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
+		-219, "latin", "Rome", -- Istria and the Dalmatian coast acquired by Rome in 219 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		397, "goth", "Visigoth Tribe", -- The Visigoths migrated to the Western Balkans in 397 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
+		412, "", "", -- The Visigoths migrated to Aquitaine in 412 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
+		507, "goth", "Ostrogoth Tribe", -- political situation in 507-534 in Europe; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
+		803, "teuton", "Francia", -- Charles the Great of Francia acquired Dalmatia in 803/806 AD; Source: "Medieval Warfare V.2", 2013, p. 9.
+		1560, "latin", "Venice" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalClaims = {
+		-219, "latin", "Rome"
+	},
+	HistoricalCultures = {
+		-750, "illyrian"
+	},
 	Regions = {"Europe", "Roman Danube", "West and Central Europe"}
 })
 
@@ -1864,6 +1891,9 @@ DefineProvince("France", {
 		-50, "latin", "Rome",
 		486, "teuton", "Francia"
 	},
+	HistoricalSettlementBuildings = {
+		768, "unit-teuton-temple", true -- Monastery or abbey existent in St. Denis during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
+	},
 	HistoricalModifiers = {
 		1250, "upgrade-university", true, -- University existent in Paris in 1250. Source: Atlas de História Mundial, 2001, p. 144.
 		1250, "upgrade-university", true, -- University existent in Angers in 1250. Source: Atlas de História Mundial, 2001, p. 144.
@@ -1911,6 +1941,9 @@ DefineProvince("Franche Comte", {
 	Claims = {
 		"celt", "Sequani Tribe"
 --		"latin", "France"
+	},
+	HistoricalSettlementBuildings = {
+		768, "unit-teuton-temple", true -- Monastery or abbey existent in Luxeuil during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 	},
 	HistoricalModifiers = {
 		1422, "upgrade-university", true, -- University founded in Dôle in 1422. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.
@@ -2226,6 +2259,11 @@ DefineProvince("Hesse", {
 		"teuton", "Franconia", -- Part of the Duchy of Franconia in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		"teuton", "Hesse",
 		"teuton", "Holy Rome"
+	},
+	HistoricalSettlementBuildings = {
+		768, "unit-teuton-temple", true, -- Monastery or abbey existent in Hersfeld during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
+		768, "unit-teuton-temple", true, -- Monastery or abbey existent in Fulda during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
+		768, "unit-teuton-temple", true -- Monastery or abbey existent in Lorsch during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 	},
 	HistoricalModifiers = {
 		1527, "upgrade-university", true, -- University founded in Marburg in 1527. Source: The Cambridge Modern History Atlas, 1912, p. 9.
@@ -2701,6 +2739,9 @@ DefineProvince("Latium", {
 	HistoricalCultures = {
 		-750, "latin"
 	},
+	HistoricalSettlementBuildings = {
+		768, "unit-teuton-temple", true -- Monastery or abbey existent in Farfa during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
+	},
 	HistoricalModifiers = {
 		1303, "upgrade-university", true -- University founded in Rome in 1303. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.
 	},
@@ -2987,6 +3028,9 @@ DefineProvince("Lower Rhine", {
 	Claims = {
 		"teuton", "Austrasia", -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
 		"teuton", "Holy Rome"
+	},
+	HistoricalSettlementBuildings = {
+		768, "unit-teuton-temple", true -- Monastery or abbey existent in Prüm during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 	},
 	HistoricalModifiers = {
 		1388, "upgrade-university", true, -- University founded in Cologne in 1388. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.
@@ -3375,6 +3419,9 @@ DefineProvince("Naples", {
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
 	Coastal = true,
+	HistoricalSettlementBuildings = {
+		768, "unit-teuton-temple", true -- Monastery or abbey existent in Monte Cassino during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
+	},
 	HistoricalModifiers = {
 		1224, "upgrade-university", true, -- University founded in Naples in 1224. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.
 		1250, "upgrade-university", true -- University existent in Salerno in 1250. Source: Atlas de História Mundial, 2001, p. 144.
@@ -3478,6 +3525,9 @@ DefineProvince("Normandy", {
 	},
 	HistoricalCultures = {
 		-7000, "basque"
+	},
+	HistoricalSettlementBuildings = {
+		768, "unit-teuton-temple", true -- Monastery or abbey existent in St. Wandrille during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 	},
 	HistoricalModifiers = {
 		1437, "upgrade-university", true, -- University founded in Caen in 1437. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.
@@ -3846,6 +3896,9 @@ DefineProvince("Parma", {
 	SettlementLocation = {509, 128}, -- Parma
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
+	HistoricalSettlementBuildings = {
+		768, "unit-teuton-temple", true -- Monastery or abbey existent in Bobbio during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
+	},
 	HistoricalModifiers = {
 		1248, "upgrade-university", true -- University founded in Piacenza in 1248. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.
 	},
@@ -3883,6 +3936,10 @@ DefineProvince("Picardy", { -- also includes French Flanders, Hainaut and Artois
 	HistoricalClaims = {
 		-50, "latin", "Rome",
 		481, "teuton", "Francia"
+	},
+	HistoricalSettlementBuildings = {
+		768, "unit-teuton-temple", true, -- Monastery or abbey existent in St. Riquier during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
+		768, "unit-teuton-temple", true -- Monastery or abbey existent in Corbie during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 	},
 	HistoricalModifiers = {
 		1582, "upgrade-university", true, -- University founded in Douai in 1582. Source: The Cambridge Modern History Atlas, 1912, p. 9.
@@ -4745,6 +4802,11 @@ DefineProvince("Switzerland", {
 		"teuton", "Switzerland",
 		"teuton", "Holy Rome"
 	},
+	HistoricalSettlementBuildings = {
+		768, "unit-teuton-temple", true, -- Monastery or abbey existent in St. Gallen during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
+		768, "unit-teuton-temple", true, -- Monastery or abbey existent in Disentis during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
+		768, "unit-teuton-temple", true -- Monastery or abbey existent in St. Maurice during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
+	},
 	HistoricalModifiers = {
 		1365, "upgrade-university", true, -- University founded in Geneva in 1365. Source: Atlas de História Mundial, p. 144.
 		1459, "upgrade-university", true, -- University founded in Basel in 1459. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.
@@ -5443,6 +5505,10 @@ DefineProvince("Westphalia", {
 		"teuton", "Westphalia",
 		"teuton", "Holy Rome"
 	},
+	HistoricalSettlementBuildings = {
+		768, "unit-teuton-temple", true, -- Monastery or abbey existent in Werden during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
+		768, "unit-teuton-temple", true -- Monastery or abbey existent in Corvey during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
+	},
 	HistoricalModifiers = {
 		1614, "upgrade-university", true -- University founded in Paderborn in 1614. Source: The Cambridge Modern History Atlas, 1912, p. 9.
 	},
@@ -5517,6 +5583,10 @@ DefineProvince("Wurtemberg", {
 		"teuton", "Swabia", -- Part of the Duchy of Swabia in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		"teuton", "Wurtemberg",
 		"teuton", "Holy Rome"
+	},
+	HistoricalSettlementBuildings = {
+		768, "unit-teuton-temple", true, -- Monastery or abbey existent in Hirsau during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
+		768, "unit-teuton-temple", true -- Monastery or abbey existent in Ellwangen during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 	},
 	HistoricalModifiers = {
 		1416, "upgrade-university", true -- University founded in Tubingen in 1416. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.

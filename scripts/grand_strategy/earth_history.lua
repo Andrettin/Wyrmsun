@@ -549,9 +549,6 @@ if (GrandStrategyYear >= -750) then -- Eastern Mediterranean between 750 and 625
 	
 	SetProvinceOwner("Macedonia", "greek", "Macedon")
 	
-	SetProvinceOwner("Dalmatia", "illyrian", "Illyrian Tribe")
-	SetProvinceCivilization("Dalmatia", "illyrian")
-	
 	SetProvinceOwner("Tuscany", "etruscan", "Etruscan Tribe")
 	SetProvinceCivilization("Tuscany", "etruscan")
 end
@@ -860,12 +857,6 @@ if (GrandStrategyYear >= -229) then -- The cities of Dyrrhachium and Apollonia w
 	SetProvinceOwner("Albania", "latin", "Rome")
 end
 
-if (GrandStrategyYear >= -219) then
-	-- Istria and the Dalmatian coast acquired by Rome in 219 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-	SetProvinceOwner("Istria", "latin", "Rome")
-	SetProvinceOwner("Dalmatia", "latin", "Rome")
-end
-
 if (GrandStrategyYear >= -218) then
 	-- Carthaginian territory in 218 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 32.
 	-- contains Andalusia in the province's definition; should also include Portugal and Castille south of the Tagus, and Aragon south of the Ebrus
@@ -1150,7 +1141,6 @@ if (GrandStrategyYear >= 397) then
 	SetProvinceOwner("Bessarabia", "", "")
 	SetProvinceOwner("Wallachia", "", "")
 	SetProvinceOwner("Croatia", "goth", "Visigoth Tribe")
-	SetProvinceOwner("Dalmatia", "goth", "Visigoth Tribe")
 	SetProvinceOwner("Bosnia", "goth", "Visigoth Tribe")
 end
 
@@ -1172,10 +1162,8 @@ end
 
 if (GrandStrategyYear >= 412) then
 	SetProvinceOwner("Croatia", "", "")
-	SetProvinceOwner("Dalmatia", "", "")
 	SetProvinceOwner("Bosnia", "", "")
 	SetProvinceOwner("Aquitaine", "goth", "Visigoth Tribe") -- The Visigoths migrated to Aquitaine in 412 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
-	SetProvinceUnitQuantity("Aquitaine", "unit-germanic-warrior", 0) -- let's remove those oodles of warriors placed there to make this province difficult to conquer
 end
 
 if (GrandStrategyYear >= 431) then
@@ -1299,7 +1287,6 @@ if (GrandStrategyYear >= 507) then -- political situation in 507-534 in Europe; 
 	SetProvinceOwner("Carniola", "goth", "Ostrogoth Tribe")
 	SetProvinceOwner("Croatia", "goth", "Ostrogoth Tribe")
 	SetProvinceOwner("Bosnia", "goth", "Ostrogoth Tribe")
-	SetProvinceOwner("Dalmatia", "goth", "Ostrogoth Tribe")
 	SetProvinceOwner("Aquitaine", "teuton", "Francia") -- Aquitania conquered by the Franks in 507
 	AddProvinceClaim("Aquitaine", "teuton", "Francia")
 	
@@ -1709,7 +1696,6 @@ if (GrandStrategyYear >= 1560) then
 	SetProvinceOwner("Lower Lusatia", "teuton", "Austria")
 	SetProvinceOwner("Upper Lusatia", "teuton", "Austria")
 	
-	SetProvinceOwner("Dalmatia", "latin", "Venice")
 	SetProvinceOwner("Croatia", "teuton", "Turkey")
 	SetProvinceOwner("Bosnia", "teuton", "Turkey")
 	SetProvinceOwner("Vojvodina", "teuton", "Turkey")

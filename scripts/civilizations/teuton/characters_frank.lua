@@ -201,7 +201,7 @@ DefineCharacter("Drogo Carolingian", { -- Source: "Medieval Warfare V.2", 2013, 
 	Year = 747 -- two years after 745 his father abdicated and put Drogo in power
 })
 
-DefineCharacter("Charles the Great Carolingian", { -- Source: "Medieval Warfare V.2", 2013, p. 7.
+DefineCharacter("Charles the Great Carolingian", { -- Source: "Medieval Warfare V.2", 2013, pp. 7-9.
 	Name = "Charles",
 	ExtraName = "the Great",
 	FamilyName = "Carolingian",
@@ -211,7 +211,8 @@ DefineCharacter("Charles the Great Carolingian", { -- Source: "Medieval Warfare 
 	Faction = "Francia",
 	ProvinceOfOrigin = "Belgium", -- correct? his great-grandfather was presumably from Herstal
 	Father = "Pepin the Short Carolingian",
-	Year = 768, -- with Pepin's death in 768, Francia was split between Charles and Carloman
+	Year = 748, -- born; he was 66 years old when he died in 814
+	DeathYear = 814, -- died of illness on 28 January 814 at Aachen
 	HistoricalTitles = {
 		"head-of-state", 768, 0, "teuton", "Francia" -- succeeded his father together with Carloman in 768, and became sole ruler of the Franks in 771
 	}
@@ -230,4 +231,19 @@ DefineCharacter("Carloman the Younger Carolingian", { -- Source: "Medieval Warfa
 	Year = 751, -- born (was 20 years old when he died of illness in 771)
 	DeathYear = 771 -- died of illness
 	-- succeeded his father on the Frankish throne together with Charles in 768
+})
+
+
+DefineCharacter("Louis the Pious Carolingian", { -- Source: "Medieval Warfare V.2", 2013, p. 9.
+	Name = "Louis",
+	ExtraName = "the Pious",
+	FamilyName = "Carolingian",
+	Gender = "male",
+	Type = "unit-frank-swordsman",
+	Civilization = "teuton",
+	Faction = "Francia",
+	ProvinceOfOrigin = "Belgium", -- correct? his great-great-grandfather was presumably from Herstal
+	Father = "Charles the Great Carolingian",
+	Year = 813, -- made co-emperor with his father in 813
+	Trait = "upgrade-pious" -- presumably
 })
