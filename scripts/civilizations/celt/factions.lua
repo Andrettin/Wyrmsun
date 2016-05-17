@@ -36,7 +36,10 @@ DefineFaction("Arverni Tribe", {
 	Civilization = "celt",
 	Type = "tribe",
 --	Language = "gaulish",
-	Colors = {"blue"}
+	Colors = {"blue"},
+	HistoricalDiplomacyStates = {
+		-71, "celt", "Aedui Tribe", "war" -- The Suebic king Ariovistus enters Gaul at the request of the Arverni and the Sequani to fight the Aedui in 71 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 230.
+	}
 })
 
 DefineFaction("Astures Tribe", { -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
@@ -113,7 +116,10 @@ DefineFaction("Sequani Tribe", {
 	Civilization = "celt",
 	Type = "tribe",
 --	Language = "gaulish",
-	Colors = {"pink", "red"}
+	Colors = {"pink", "red"},
+	HistoricalDiplomacyStates = {
+		-71, "celt", "Aedui Tribe", "war" -- The Suebic king Ariovistus enters Gaul at the request of the Arverni and the Sequani to fight the Aedui in 71 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 230.
+	}
 })
 
 DefineFaction("Turone Tribe", {

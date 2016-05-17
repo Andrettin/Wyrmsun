@@ -156,6 +156,13 @@ DefineWorldMapTile({496, 126}, {
 	}
 })
 
+DefineWorldMapTile({496, 128}, {
+	World = "Earth",
+	FactionCulturalSettlementNames = {
+		"latin", "France", "Grenoble" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
+	}
+})
+
 DefineWorldMapTile({497, 121}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {

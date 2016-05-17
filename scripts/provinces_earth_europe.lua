@@ -282,6 +282,26 @@ DefineProvince("Aquitaine", {
 		"celt", "Arverni Tribe"
 --		"latin", "France"
 	},
+	HistoricalOwners = {
+		-- The Suebic king Ariovistus enters Gaul at the request of the Arverni and the Sequani to fight the Aedui in 71 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 230.
+		-- The Arverni inhabited Aquitania; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+		-71, "celt", "Arverni Tribe",
+		-50, "latin", "Rome", -- Gaul conquered by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		412, "goth", "Visigoth Tribe", -- The Visigoths migrated to Aquitaine in 412 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
+		507, "teuton", "Francia", -- political situation in 507-534 in Europe; Aquitania conquered by the Franks in 507; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
+		1560, "latin", "France" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalClaims = {
+		-50, "latin", "Rome",
+		507, "teuton", "Francia"
+	},
+	HistoricalCultures = {
+		-71, "celt"
+	},
+	HistoricalSettlementBuildings = {
+		768, "unit-teuton-temple", true, -- Archbishopric existent in Bordeaux during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
+		768, "unit-teuton-temple", true -- Archbishopric existent in Narbonne during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
+	},
 	HistoricalModifiers = {
 		1230, "upgrade-university", true, -- University founded in Toulouse in 1230. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.
 		1250, "upgrade-university", true, -- University existent in Montpellier in 1250. Source: Atlas de História Mundial, 2001, p. 144.
@@ -672,6 +692,23 @@ DefineProvince("Belgium", {
 		"celt", "Menapii Tribe",
 		"teuton", "Austrasia" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
 	},
+	HistoricalOwners = {
+		-- The Suebic king Ariovistus enters Gaul at the request of the Arverni and the Sequani to fight the Aedui in 71 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 230.
+		-- The Menapii inhabited Belgium (and probably were already present there when Ariovistus invaded Gaul); Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+		-71, "celt", "Menapii Tribe",
+		-50, "latin", "Rome", -- Gaul conquered by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		450, "teuton", "Frank Tribe", -- Frankish territory in 450 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 48.
+		481, "teuton", "Francia", -- Frankish territory in 481 AD, and the Franks had already established their kingdom; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
+		919, "teuton", "Holy Rome", -- Duchy of Lower Lorraine; Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+		1560, "latin", "Spain" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalClaims = {
+		-50, "latin", "Rome",
+		481, "teuton", "Francia"
+	},
+	HistoricalCultures = {
+		-71, "celt"
+	},
 	HistoricalSettlementBuildings = {
 		768, "unit-teuton-temple", true, -- Monastery or abbey existent in Stavelot during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 		768, "unit-teuton-temple", true -- Monastery or abbey existent in Echternach (in modern Luxembourg) during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
@@ -702,6 +739,12 @@ DefineProvince("Berry", {
 	},
 	HistoricalOwners = {
 		-50, "latin", "Rome" -- Gaul conquered by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	},
+	HistoricalClaims = {
+		-50, "latin", "Rome"
+	},
+	HistoricalSettlementBuildings = {
+		768, "unit-teuton-temple", true -- Archbishopric existent in Bourges during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 	},
 	HistoricalModifiers = {
 		1464, "upgrade-university", true, -- University founded in Bourges in 1464. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.
@@ -1056,6 +1099,19 @@ DefineProvince("Burgundy", {
 		"celt", "Aedui Tribe"
 --		"latin", "France"
 	},
+	HistoricalOwners = {
+		-- The Suebic king Ariovistus enters Gaul at the request of the Arverni and the Sequani to fight the Aedui in 71 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 230.
+		-- The Aedui inhabited modern Bourgogne; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+		-71, "celt", "Aedui Tribe",
+		-50, "latin", "Rome", -- Gaul conquered by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		919, "latin", "France" -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+	},
+	HistoricalClaims = {
+		-50, "latin", "Rome"
+	},
+	HistoricalCultures = {
+		-71, "celt"
+	},
 	HistoricalModifiers = {
 		1789, "upgrade-courthouse", true -- Parlement or conseil souverain, chambre des comptes, prévôt des maréchaux and chief court of the salt tax existent in Dijon in 1789. Source: William R. Shepherd, Historical Atlas, 1911, p. 147.
 	},
@@ -1230,6 +1286,9 @@ DefineProvince("Champagne", { -- includes Brie
 	},
 	HistoricalOwners = {
 		-50, "latin", "Rome" -- Gaul conquered by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	},
+	HistoricalClaims = {
+		-50, "latin", "Rome"
 	},
 	HistoricalSettlementBuildings = {
 		768, "unit-teuton-temple", true, -- Archbishopric existent in Reims during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
@@ -1517,6 +1576,47 @@ DefineProvince("Dalmatia", {
 		-750, "illyrian"
 	},
 	Regions = {"Europe", "Roman Danube", "West and Central Europe"}
+})
+
+DefineProvince("Dauphiny", {
+	World = "Earth",
+	FactionCulturalNames = {
+		"latin", "France", "Dauphiny" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
+	},
+	Tiles = {
+		{494, 126}, {494, 127}, {494, 128}, {494, 129},
+		{495, 126}, {495, 127}, {495, 128}, {495, 129},
+		{496, 127}, {496, 128}, {496, 129},
+		{497, 127}, {497, 128}, 
+		{498, 128}, 
+		{499, 128}
+	},
+	SettlementLocation = {496, 128}, -- Grenoble
+	Map = "maps/random/random-map-forest.smp",
+	SettlementTerrain = "Plains",
+	Claims = {
+--		"latin", "France"
+	},
+	HistoricalOwners = {
+		-121, "latin", "Rome", -- Gallia Narbonensis acquired by Rome in 121 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		534, "teuton", "Francia", -- The Burgundian realm, which included Dauphiny, was conquered by the Franks in 534; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
+		1560, "latin", "France" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalClaims = {
+		-121, "latin", "Rome",
+		534, "teuton", "Francia"
+	},
+	HistoricalSettlementBuildings = {
+		768, "unit-teuton-temple", true, -- Archbishopric existent in Vienne during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
+		768, "unit-teuton-temple", true -- Archbishopric existent in Embrun during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
+	},
+	HistoricalModifiers = {
+		1339, "upgrade-university", true, -- University founded in Grenoble in 1339. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.
+		1459, "upgrade-university", true, -- University founded in Valence in 1459. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.
+		1789, "upgrade-courthouse", true, -- Chief court of the salt tax existent in Valence in 1789. Source: William R. Shepherd, Historical Atlas, 1911, p. 147.
+		1789, "upgrade-courthouse", true -- Parlement or conseil souverain, prévôt des maréchaux and chief court of the salt tax existent in Grenoble in 1789. Source: William R. Shepherd, Historical Atlas, 1911, p. 147.
+	},
+	Regions = {"Europe", "France", "Gaul", "Northwest Europe", "West and Central Europe"}
 })
 
 DefineProvince("Dobruja", {
@@ -1905,10 +2005,6 @@ DefineProvince("Finland", {
 
 DefineProvince("France", {
 	World = "Earth",
-	CulturalNames = {
-		"celt", "Gallia Lugdunensis",
-		"latin", "Gallia Lugdunensis"
-	},
 	FactionCulturalNames = {
 		"latin", "France", "France",
 		"teuton", "Francia", "Neustria", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 53-55.
@@ -1989,6 +2085,23 @@ DefineProvince("Franche Comte", {
 	Claims = {
 		"celt", "Sequani Tribe"
 --		"latin", "France"
+	},
+	HistoricalOwners = {
+		-- The Suebic king Ariovistus enters Gaul at the request of the Arverni and the Sequani to fight the Aedui in 71 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 230.
+		-- The Sequani inhabited the Franche-Comté; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+		-71, "celt", "Sequani Tribe",
+		-50, "latin", "Rome", -- Gaul conquered by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		451, "goth", "Burgundy", -- Burgundians fought on both the Roman and Hunnic sides in the Battle of the Catalaunian Fields in (June) 451 AD; with the Roman victory, the Burgundians under Gundioc were granted more land; Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 94-95.
+		534, "teuton", "Francia", -- The Burgundian realm, which included the Franche Comté, Burgundy, Savoy and most of Switzerland, was conquered by the Franks in 534; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
+		1560, "latin", "Spain" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalClaims = {
+		-50, "latin", "Rome",
+		451, "goth", "Burgundy",
+		534, "teuton", "Francia"
+	},
+	HistoricalCultures = {
+		-71, "celt"
 	},
 	HistoricalSettlementBuildings = {
 		768, "unit-teuton-temple", true, -- Monastery or abbey existent in Luxeuil during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
@@ -2312,7 +2425,8 @@ DefineProvince("Hesse", {
 	HistoricalSettlementBuildings = {
 		768, "unit-teuton-temple", true, -- Monastery or abbey existent in Hersfeld during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 		768, "unit-teuton-temple", true, -- Monastery or abbey existent in Fulda during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
-		768, "unit-teuton-temple", true -- Monastery or abbey existent in Lorsch during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
+		768, "unit-teuton-temple", true, -- Monastery or abbey existent in Lorsch during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
+		768, "unit-teuton-stronghold", true -- Fort existent in Büraburg during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 	},
 	HistoricalModifiers = {
 		1527, "upgrade-university", true, -- University founded in Marburg in 1527. Source: The Cambridge Modern History Atlas, 1912, p. 9.
@@ -2477,6 +2591,9 @@ DefineProvince("Holstein", {
 	},
 	HistoricalClaims = {
 		919, "teuton", "Saxony" -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+	},
+	HistoricalSettlementBuildings = {
+		768, "unit-teuton-stronghold", true -- Fort existent in Esesfeld during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 	},
 	Regions = {"Europe", "Germany-Netherlands", "West and Central Europe"}
 })
@@ -3153,6 +3270,12 @@ DefineProvince("Lyonnais", {
 	HistoricalOwners = {
 		-50, "latin", "Rome" -- Gaul conquered by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	},
+	HistoricalClaims = {
+		-50, "latin", "Rome"
+	},
+	HistoricalSettlementBuildings = {
+		768, "unit-teuton-temple", true -- Archbishopric existent in Lyon during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
+	},
 	HistoricalModifiers = {
 		1330, "upgrade-university", true, -- University founded in Lyon in 1330. Source: The Cambridge Modern History Atlas, 1912, p. 9.
 		1789, "upgrade-courthouse", true -- Chief court of the salt tax existent in Lyon in 1789. Source: William R. Shepherd, Historical Atlas, 1911, p. 147.
@@ -3255,6 +3378,9 @@ DefineProvince("Marche", {
 	},
 	HistoricalOwners = {
 		-50, "latin", "Rome" -- Gaul conquered by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	},
+	HistoricalClaims = {
+		-50, "latin", "Rome"
 	},
 	Regions = {"Europe", "France", "Gaul", "Northwest Europe", "West and Central Europe"}
 })
@@ -4104,6 +4230,9 @@ DefineProvince("Poitou", {
 	HistoricalOwners = {
 		-50, "latin", "Rome" -- Gaul conquered by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	},
+	HistoricalClaims = {
+		-50, "latin", "Rome"
+	},
 	HistoricalModifiers = {
 		1431, "upgrade-university", true, -- University founded in Poitiers in 1431. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.
 		1789, "upgrade-courthouse", true -- Prévôt des maréchaux existent in Poitiers in 1789. Source: William R. Shepherd, Historical Atlas, 1911, p. 147.
@@ -4215,37 +4344,43 @@ DefineProvince("Posen", {
 
 DefineProvince("Provence", {
 	World = "Earth",
-	CulturalNames = {
-		"celt", "Gallia Narbonensis",
-		"latin", "Gallia Narbonensis"
-	},
 	FactionCulturalNames = {
 		"latin", "France", "Provence"
 	},
 	Tiles = {
 		{493, 132},
-		{494, 126}, {494, 127}, {494, 128}, {494, 129}, {494, 130}, {494, 131}, {494, 132},
-		{495, 126}, {495, 127}, {495, 128}, {495, 129}, {495, 130}, {495, 131}, {495, 132},
-		{496, 127}, {496, 128}, {496, 129}, {496, 130}, {496, 131}, {496, 132},
-		{497, 127}, {497, 128}, {497, 129}, {497, 130}, {497, 131}, {497, 132},
-		{498, 128}, {498, 129}, {498, 130}, {498, 131}, {498, 132},
-		{499, 128}, {499, 129}, {499, 130}, {499, 131},
+		{494, 130}, {494, 131}, {494, 132},
+		{495, 130}, {495, 131}, {495, 132},
+		{496, 130}, {496, 131}, {496, 132},
+		{497, 129}, {497, 130}, {497, 131}, {497, 132},
+		{498, 129}, {498, 130}, {498, 131}, {498, 132},
+		{499, 129}, {499, 130}, {499, 131},
 		{500, 130}, {500, 131},
 		{501, 130}
 	},
 	SettlementLocation = {495, 132}, -- Marseilles
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
+	Coastal = true,
 	Claims = {
 --		"latin", "France"
 	},
+	HistoricalOwners = {
+		-121, "latin", "Rome", -- Gallia Narbonensis acquired by Rome in 121 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		537, "teuton", "Francia", -- Provence conquered by the Franks in 537; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
+		1560, "latin", "France" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalClaims = {
+		-121, "latin", "Rome",
+		537, "teuton", "Francia"
+	},
+	HistoricalSettlementBuildings = {
+		768, "unit-teuton-temple", true, -- Archbishopric existent in Aix during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
+		768, "unit-teuton-temple", true -- Archbishopric existent in Arles during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
+	},
 	HistoricalModifiers = {
 		1303, "upgrade-university", true, -- University founded in Avignon in 1303. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.
-		1339, "upgrade-university", true, -- University founded in Grenoble in 1339. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.
 		1409, "upgrade-university", true, -- University founded in Aix-en-Provence in 1409. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.
-		1459, "upgrade-university", true, -- University founded in Valence in 1459. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.
-		1789, "upgrade-courthouse", true, -- Chief court of the salt tax existent in Valence in 1789. Source: William R. Shepherd, Historical Atlas, 1911, p. 147.
-		1789, "upgrade-courthouse", true, -- Parlement or conseil souverain, prévôt des maréchaux and chief court of the salt tax existent in Grenoble in 1789. Source: William R. Shepherd, Historical Atlas, 1911, p. 147.
 		1789, "upgrade-courthouse", true -- Parlement or conseil souverain, chambre des comptes, court of admiralty, chief court of the salt tax and prévôt des maréchaux existent in Aix-en-Provence in 1789. Source: William R. Shepherd, Historical Atlas, 1911, p. 147.
 	},
 	Regions = {"Europe", "France", "Gaul", "Northwest Europe", "West and Central Europe"}
@@ -4536,6 +4671,17 @@ DefineProvince("Savoy", {
 	Claims = {
 --		"latin", "France",
 --		"latin", "Savoy"
+	},
+	HistoricalOwners = {
+		-15, "latin", "Rome", -- Pennine Alps acquired by Rome in 15 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		451, "goth", "Burgundy", -- Burgundians fought on both the Roman and Hunnic sides in the Battle of the Catalaunian Fields in (June) 451 AD; with the Roman victory, the Burgundians under Gundioc were granted more land; Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 94-95.
+		534, "teuton", "Francia", -- The Burgundian realm, which included Savoy, was conquered by the Franks in 534; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
+		1560, "latin", "Savoy" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalClaims = {
+		-15, "latin", "Rome",
+		451, "goth", "Burgundy",
+		534, "teuton", "Francia"
 	},
 	HistoricalSettlementBuildings = {
 		768, "unit-teuton-temple", true -- Archbishopric existent in Tarentaise during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
@@ -5093,6 +5239,12 @@ DefineProvince("Touraine", {
 	},
 	HistoricalOwners = {
 		-50, "latin", "Rome" -- Gaul conquered by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	},
+	HistoricalClaims = {
+		-50, "latin", "Rome"
+	},
+	HistoricalSettlementBuildings = {
+		768, "unit-teuton-temple", true -- Archbishopric existent in Tours during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 	},
 	HistoricalModifiers = {
 		1789, "upgrade-courthouse", true -- Chief court of the salt tax existent in Tours in 1789. Source: William R. Shepherd, Historical Atlas, 1911, p. 147.
@@ -5680,7 +5832,9 @@ DefineProvince("Westphalia", {
 	},
 	HistoricalSettlementBuildings = {
 		768, "unit-teuton-temple", true, -- Monastery or abbey existent in Werden during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
-		768, "unit-teuton-temple", true -- Monastery or abbey existent in Corvey during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
+		768, "unit-teuton-temple", true, -- Monastery or abbey existent in Corvey during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
+		768, "unit-teuton-stronghold", true, -- Fort existent in Eresburg during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
+		768, "unit-teuton-stronghold", true -- Fort existent in Syburg during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 	},
 	HistoricalModifiers = {
 		1614, "upgrade-university", true -- University founded in Paderborn in 1614. Source: The Cambridge Modern History Atlas, 1912, p. 9.

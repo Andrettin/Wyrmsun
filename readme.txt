@@ -66,6 +66,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Grand Strategy
 - Split the Berry, Champagne, Lyonnais, Marche, Picardy, Poitou and Touraine provinces off the France one.
+- Split the Dauphiny province off the Provence one.
 
 * Units
 - Fixed issue which allowed organic units with no proper name to have epithets.

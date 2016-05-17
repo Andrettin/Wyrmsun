@@ -909,33 +909,18 @@ if (GrandStrategyYear >= -146) then -- Aetolia, Attica, Boeotia, Corinth, Epirus
 	SetProvinceOwner("Skopje", "latin", "Rome")
 end
 
-if (GrandStrategyYear >= -121) then -- Gallia Narbonensis acquired by Rome in 121 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-	SetProvinceOwner("Provence", "latin", "Rome")
-end
-
 if (GrandStrategyYear >= -74) then -- Region around Byzantium acquired by Rome in 14 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	SetProvinceOwner("Thrace", "latin", "Rome")
 end
 
 if (GrandStrategyYear >= -71) then -- The Suebic king Ariovistus enters Gaul at the request of the Arverni and the Sequani to fight the Aedui in 71 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 230.
-	SetProvinceOwner("Burgundy", "celt", "Aedui Tribe") -- Aedui inhabited modern Bourgogne; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
-	SetProvinceCivilization("Burgundy", "celt")
 	SetProvinceUnitQuantity("Burgundy", "unit-germanic-warrior", 10) -- enough troops for them to be able to hold their own (except against Ariovistus)
 	
-	SetProvinceOwner("Aquitaine", "celt", "Arverni Tribe") -- Arverni inhabited Aquitania; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
-	SetProvinceCivilization("Aquitaine", "celt")
 	SetProvinceUnitQuantity("Aquitaine", "unit-germanic-warrior", 8) -- enough troops for them to be able to hold their own
 	
-	SetProvinceOwner("Franche Comte", "celt", "Sequani Tribe") -- Sequani inhabited the Franche-Comté; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
-	SetProvinceCivilization("Franche Comte", "celt")
 	SetProvinceUnitQuantity("Franche Comte", "unit-germanic-warrior", 8) -- enough troops for them to be able to hold their own
 	
-	SetProvinceOwner("Belgium", "celt", "Menapii Tribe") -- Menapii inhabited Belgium (and probably were already present there when Ariovistus invaded Gaul); Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
-	SetProvinceCivilization("Belgium", "celt")
 	SetProvinceUnitQuantity("Belgium", "unit-germanic-warrior", 8) -- enough troops for them to be able to hold their own
-	
-	SetFactionDiplomacyState("celt", "Aedui Tribe", "celt", "Arverni Tribe", "war")
-	SetFactionDiplomacyState("celt", "Aedui Tribe", "celt", "Sequani Tribe", "war")
 	
 	SetProvinceUnitQuantity("Brandenburg", "unit-suebi-swordsman", 13) -- 135,000 (15,000 + 120,000) Germanic warriors who participated in Ariovistus' invasion of Gaul; one unit per 10,000 troops, as that is more practical for game purposes; Source: http://www.gutenberg.org/cache/epub/10657/pg10657.html
 	
@@ -976,15 +961,11 @@ end
 
 if (GrandStrategyYear >= -50) then -- Gaul conquered by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	SetProvinceOwner("Alsace", "latin", "Rome")
-	SetProvinceOwner("Aquitaine", "latin", "Rome")
 	SetProvinceOwner("Brittany", "latin", "Rome")
-	SetProvinceOwner("Burgundy", "latin", "Rome")
-	SetProvinceOwner("Franche Comte", "latin", "Rome")
 	SetProvinceOwner("Lorraine", "latin", "Rome")
 	SetProvinceOwner("Lower Rhine", "latin", "Rome")
 	SetProvinceOwner("Moselle", "latin", "Rome")
 	SetProvinceOwner("Palatinate", "latin", "Rome")
-	SetProvinceOwner("Belgium", "latin", "Rome")
 	SetProvinceOwner("Switzerland", "latin", "Rome")
 end
 
@@ -1024,8 +1005,6 @@ end
 if (GrandStrategyYear >= -15) then
 	-- Raetia and Vindelicia acquired by Rome in 15 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	SetProvinceOwner("Augsburg", "latin", "Rome")
-	
-	SetProvinceOwner("Savoy", "latin", "Rome") -- Pennine Alps acquired by Rome in 15 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 end
 
 -- Battle of Teutoburg Forest between the Cherusci chieftain Arminius' forces, and the Romans (when did this happen?); Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 231.
@@ -1163,7 +1142,7 @@ end
 if (GrandStrategyYear >= 412) then
 	SetProvinceOwner("Croatia", "", "")
 	SetProvinceOwner("Bosnia", "", "")
-	SetProvinceOwner("Aquitaine", "goth", "Visigoth Tribe") -- The Visigoths migrated to Aquitaine in 412 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
+	-- The Visigoths migrated to Aquitaine in 412 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 end
 
 if (GrandStrategyYear >= 431) then
@@ -1187,7 +1166,6 @@ if (GrandStrategyYear >= 450) then
 	SetProvinceOwner("Holland", "", "") -- Franks had left most of the modern Netherlands by 450 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 48.
 	
 	-- Frankish territory in 450 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 48.
-	SetProvinceOwner("Belgium", "teuton", "Frank Tribe")
 	SetProvinceOwner("Palatinate", "teuton", "Frank Tribe")
 	SetProvinceOwner("Lower Rhine", "teuton", "Frank Tribe")
 end
@@ -1196,8 +1174,6 @@ if (GrandStrategyYear >= 451) then
 	-- Burgundians fought on both the Roman and Hunnic sides in the Battle of the Catalaunian Fields in (June) 451 AD; with the Roman victory, the Burgundians under Gundioc were granted more land; Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 94-95.
 	SetProvinceOwner("Palatinate", "", "")
 	SetProvinceOwner("Switzerland", "goth", "Burgundy")
-	SetProvinceOwner("Savoy", "goth", "Burgundy")
-	SetProvinceOwner("Franche Comte", "goth", "Burgundy")
 end
 
 if (GrandStrategyYear >= 453) then
@@ -1214,8 +1190,6 @@ end
 
 if (GrandStrategyYear >= 481) then
 	-- Frankish territory in 481 AD, and the Franks had already established their kingdom; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
-	SetProvinceOwner("Belgium", "teuton", "Francia")
-	AddProvinceClaim("Belgium", "teuton", "Francia")
 	SetProvinceOwner("Drenthe", "teuton", "Francia")
 	AddProvinceClaim("Drenthe", "teuton", "Francia")
 	SetProvinceOwner("Lorraine", "teuton", "Francia")
@@ -1287,8 +1261,6 @@ if (GrandStrategyYear >= 507) then -- political situation in 507-534 in Europe; 
 	SetProvinceOwner("Carniola", "goth", "Ostrogoth Tribe")
 	SetProvinceOwner("Croatia", "goth", "Ostrogoth Tribe")
 	SetProvinceOwner("Bosnia", "goth", "Ostrogoth Tribe")
-	SetProvinceOwner("Aquitaine", "teuton", "Francia") -- Aquitania conquered by the Franks in 507
-	AddProvinceClaim("Aquitaine", "teuton", "Francia")
 	
 	SetProvinceOwner("Franconia", "teuton", "Thuringian Tribe")
 	SetProvinceCivilization("Franconia", "teuton")
@@ -1310,23 +1282,12 @@ if (GrandStrategyYear >= 534) then
 	-- end of Gundimar's reign over the Burgundians in 534 AD; he was proscribed, pursued and executed by the Franks, and his realm was annexed by them; Source: Norman Davies, "Vanished Kingdoms", 2012, pp. 96, 99.
 	
 	-- The Burgundian realm, which included the Franche Comté, Burgundy, Savoy and most of Switzerland, was conquered by the Franks in 534; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
-	SetProvinceOwner("Burgundy", "teuton", "Francia")
-	AddProvinceClaim("Burgundy", "teuton", "Francia")
-	SetProvinceOwner("Franche Comte", "teuton", "Francia")
-	AddProvinceClaim("Franche Comte", "teuton", "Francia")
-	SetProvinceOwner("Savoy", "teuton", "Francia")
-	AddProvinceClaim("Savoy", "teuton", "Francia")
 	SetProvinceOwner("Switzerland", "teuton", "Francia")
 	AddProvinceClaim("Switzerland", "teuton", "Francia")
 	
 	SetProvinceOwner("Corsica", "", "") -- Fall of the Vandal kingdom in 534 AD; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
 	SetProvinceOwner("Sardinia", "", "") -- Fall of the Vandal kingdom in 534 AD; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
 	
-end
-
-if (GrandStrategyYear >= 537) then
-	SetProvinceOwner("Provence", "teuton", "Francia") -- Provence conquered by the Franks in 537; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
-	AddProvinceClaim("Provence", "teuton", "Francia")
 end
 
 if (GrandStrategyYear >= 563) then
@@ -1487,7 +1448,6 @@ if (GrandStrategyYear >= 919) then
 	SetProvinceCivilization("Palatinate", "teuton")
 	
 	-- Duchy of Lower Lorraine
-	SetProvinceOwner("Belgium", "teuton", "Holy Rome")
 	SetProvinceOwner("Lower Rhine", "teuton", "Holy Rome")
 	
 	-- Duchy of Saxony
@@ -1539,7 +1499,6 @@ if (GrandStrategyYear >= 919) then
 	-- Duchy of Venice
 	SetProvinceOwner("Venetia", "latin", "Venice")
 	
-	SetProvinceOwner("Burgundy", "latin", "France")
 	SetProvinceOwner("Croatia", "slav", "Croatia")
 	SetProvinceCivilization("Croatia", "slav")
 	SetProvinceOwner("Galicia", "slav", "Poland")
@@ -1669,21 +1628,16 @@ end
 
 if (GrandStrategyYear >= 1560) then
 	-- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
-	SetProvinceOwner("Aquitaine", "latin", "France")
 	SetProvinceOwner("Brittany", "latin", "France")
-	SetProvinceOwner("Provence", "latin", "France")
 	
-	SetProvinceOwner("Savoy", "latin", "Savoy")
 	SetProvinceOwner("Venetia", "latin", "Venice")
 	SetFactionGovernmentType("latin", "Venice", "republic")	
 	SetProvinceOwner("Sardinia", "latin", "Spain")
 
-	SetProvinceOwner("Belgium", "latin", "Spain")
 	SetProvinceOwner("Holland", "latin", "Spain")
 	SetProvinceOwner("Overijssel", "latin", "Spain")
 	SetProvinceOwner("Friesland", "latin", "Spain")
 	SetProvinceOwner("Drenthe", "latin", "Spain")
-	SetProvinceOwner("Franche Comte", "latin", "Spain")
 	SetProvinceOwner("Switzerland", "teuton", "Switzerland")
 	SetFactionGovernmentType("teuton", "Switzerland", "republic")	
 	
