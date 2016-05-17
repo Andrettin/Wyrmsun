@@ -34,16 +34,6 @@
 --		['allowed check ['values]] Key = key, Hint = hint 'for-unit", "units)
 --
 
--- general commands -------------------------------
-
--- worker specific actions ---------------------------------------------------
-
-DefineButton( { Pos = 5, Level = 0, Icon = "icon-germanic-return-goods",
-	Action = "return-goods",
-	Key = "g", Hint = _("Return with ~!Goods"), Popup = "popup-commands",
-	ForUnit = {"unit-germanic-worker", "unit-teuton-worker"}
-} )
-
 -- Researches ---------------------------------------------------------
 
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-germanic-broad-sword",

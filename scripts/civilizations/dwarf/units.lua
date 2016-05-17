@@ -832,6 +832,7 @@ DefineUnitType("unit-dwarven-witness", { Name = _("Witness"),
 		{"layer", "right-arm", "file", "dwarf/units/right_arm_warrior.png"},
 		{"layer", "right-hand", "file", "dwarf/units/right_hand_warrior.png"},
 		{"layer", "left-arm", "file", "dwarf/units/left_arm.png"},
+		{"layer", "clothing", "file", "dwarf/units/robe.png"},
 		{"layer", "hair", "file", "dwarf/units/gray_hair_warrior.png"},
 		{"layer", "helmet", "file", "dwarf/units/helmets/witness_tiara.png"},
 		{"layer", "weapon", "file", "dwarf/units/weapons/mace.png"}

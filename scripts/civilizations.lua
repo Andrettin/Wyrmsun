@@ -34,7 +34,8 @@ DefineCivilization("neutral", {
 		"stop", "icon-dwarven-shield-1",
 		"attack", "icon-dwarven-battle-axe",
 		"patrol", "icon-dwarven-patrol-land",
-		"stand-ground", "icon-dwarven-stand-ground"
+		"stand-ground", "icon-dwarven-stand-ground",
+		"return-goods", "icon-dwarven-return-goods"
 	},
 	UIFillers = {
 		"dwarf/ui/filler_bottom.png", 380, -181,
@@ -79,7 +80,8 @@ DefineCivilization("dwarf", {
 		"stop", "icon-dwarven-shield-1",
 		"attack", "icon-dwarven-battle-axe",
 		"patrol", "icon-dwarven-patrol-land",
-		"stand-ground", "icon-dwarven-stand-ground"
+		"stand-ground", "icon-dwarven-stand-ground",
+		"return-goods", "icon-dwarven-return-goods"
 	},
 	UIFillers = {
 		"dwarf/ui/filler_bottom.png", 380, -181,
@@ -110,7 +112,8 @@ DefineCivilization("elf", {
 		"stop", "icon-germanic-wooden-oblong-shield",
 		"attack", "icon-germanic-short-sword",
 		"patrol", "icon-germanic-patrol-land",
-		"stand-ground", "icon-germanic-stand-ground"
+		"stand-ground", "icon-germanic-stand-ground",
+		"return-goods", "icon-germanic-return-goods"
 	},
 	UIFillers = {
 		"germanic/ui/filler_bottom.png", 380, -181,
@@ -144,7 +147,8 @@ DefineCivilization("germanic", {
 		"stop", "icon-germanic-wooden-oblong-shield",
 		"attack", "icon-germanic-short-sword",
 		"patrol", "icon-germanic-patrol-land",
-		"stand-ground", "icon-germanic-stand-ground"
+		"stand-ground", "icon-germanic-stand-ground",
+		"return-goods", "icon-germanic-return-goods"
 	},
 	UIFillers = {
 		"germanic/ui/filler_bottom.png", 380, -181,
@@ -179,7 +183,8 @@ DefineCivilization("gnome", {
 		"move", "icon-gnomish-boots",
 		"attack", "icon-gnomish-thrusting-sword-1",
 		"patrol", "icon-gnomish-patrol-land",
-		"stand-ground", "icon-germanic-stand-ground"
+		"stand-ground", "icon-germanic-stand-ground",
+		"return-goods", "icon-dwarven-return-goods"
 	}
 })
 
@@ -195,8 +200,9 @@ DefineCivilization("goblin", {
 		"move", "icon-dwarven-boots",
 		"stop", "icon-dwarven-shield-1",
 		"attack", "icon-spear",
-		"patrol", "icon-gnomish-patrol-land",
-		"stand-ground", "icon-dwarven-stand-ground"
+		"patrol", "icon-goblin-patrol-land",
+		"stand-ground", "icon-dwarven-stand-ground",
+		"return-goods", "icon-goblin-return-goods"
 	},
 	UIFillers = {
 		"dwarf/ui/filler_bottom.png", 380, -181,
@@ -232,8 +238,9 @@ DefineCivilization("orc", {
 		"move", "icon-dwarven-boots",
 		"stop", "icon-dwarven-shield-1",
 		"attack", "icon-dwarven-battle-axe",
-		"patrol", "icon-dwarven-patrol-land",
-		"stand-ground", "icon-dwarven-stand-ground"
+		"patrol", "icon-goblin-patrol-land",
+		"stand-ground", "icon-dwarven-stand-ground",
+		"return-goods", "icon-goblin-return-goods"
 	},
 	UIFillers = {
 		"dwarf/ui/filler_bottom.png", 380, -181,

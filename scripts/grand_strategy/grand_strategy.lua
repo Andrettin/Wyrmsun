@@ -96,9 +96,9 @@ function RunGrandStrategyGameSetupMenu()
 		local custom_heroes = GetCustomHeroes()
 		for i=1,table.getn(custom_heroes) do
 			if (
-				(GetCustomHeroData(custom_heroes[i], "Civilization") == faction_civilization_list[faction:getSelected() + 1])
-				or ((faction_civilization_list[faction:getSelected() + 1] == "germanic" or faction_civilization_list[faction:getSelected() + 1] == "teuton") and (GetCustomHeroData(custom_heroes[i], "Civilization") == "germanic" or GetCustomHeroData(custom_heroes[i], "Civilization") == "teuton"))
-				or (faction_civilization_list[faction:getSelected() + 1] == "dwarf" and GetCustomHeroData(custom_heroes[i], "Civilization") == "gnome")
+				GetCustomHeroData(custom_heroes[i], "Civilization") == faction_civilization_list[faction:getSelected() + 1]
+				or GetCivilizationData(GetCustomHeroData(custom_heroes[i], "Civilization"), "ParentCivilization") == faction_civilization_list[faction:getSelected() + 1]
+				or GetCustomHeroData(custom_heroes[i], "Civilization") == GetCivilizationData(faction_civilization_list[faction:getSelected() + 1], "ParentCivilization")
 			) then
 				table.insert(hero_list, custom_heroes[i])
 			end
@@ -3990,8 +3990,8 @@ function GetUnitTypeInterfaceState(unit_type)
 			return "barracks"
 		elseif (GetUnitTypeData(unit_type, "Class") == "siege-engine") then
 			return "barracks"
---		elseif (GetUnitTypeData(unit_type, "Class") == "priest") then
---			return "temple"
+		elseif (GetUnitTypeData(unit_type, "Class") == "priest") then
+			return "temple"
 --		elseif (GetUnitTypeData(unit_type, "Class") == "caravan") then
 --			return "barracks"
 		elseif (GetUnitTypeData(unit_type, "Class") == "glider") then

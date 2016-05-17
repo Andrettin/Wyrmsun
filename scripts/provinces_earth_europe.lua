@@ -1971,7 +1971,8 @@ DefineProvince("Franche Comte", {
 --		"latin", "France"
 	},
 	HistoricalSettlementBuildings = {
-		768, "unit-teuton-temple", true -- Monastery or abbey existent in Luxeuil during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
+		768, "unit-teuton-temple", true, -- Monastery or abbey existent in Luxeuil during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
+		768, "unit-teuton-temple", true -- Archbishopric existent in Besançon during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 	},
 	HistoricalModifiers = {
 		1422, "upgrade-university", true, -- University founded in Dôle in 1422. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.
@@ -2937,6 +2938,9 @@ DefineProvince("Lombardy", {
 	SettlementLocation = {506, 126}, -- Milan
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
+	HistoricalSettlementBuildings = {
+		768, "unit-teuton-temple", true -- Archbishopric existent in Milan during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
+	},
 	HistoricalModifiers = {
 		1565, "upgrade-university", true, -- University founded in Milan in 1565. Source: The Cambridge Modern History Atlas, p. 9.
 	},
@@ -3058,7 +3062,9 @@ DefineProvince("Lower Rhine", {
 		"teuton", "Holy Rome"
 	},
 	HistoricalSettlementBuildings = {
-		768, "unit-teuton-temple", true -- Monastery or abbey existent in Prüm during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
+		768, "unit-teuton-temple", true, -- Monastery or abbey existent in Prüm during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
+		768, "unit-teuton-temple", true, -- Archbishopric existent in Cologne during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
+		768, "unit-teuton-temple", true -- Archbishopric existent in Trier during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 	},
 	HistoricalModifiers = {
 		1388, "upgrade-university", true, -- University founded in Cologne in 1388. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.
@@ -3555,7 +3561,8 @@ DefineProvince("Normandy", {
 		-7000, "basque"
 	},
 	HistoricalSettlementBuildings = {
-		768, "unit-teuton-temple", true -- Monastery or abbey existent in St. Wandrille during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
+		768, "unit-teuton-temple", true, -- Monastery or abbey existent in St. Wandrille during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
+		768, "unit-teuton-temple", true -- Archbishopric existent in Rouen during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 	},
 	HistoricalModifiers = {
 		1437, "upgrade-university", true, -- University founded in Caen in 1437. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.
@@ -4293,6 +4300,9 @@ DefineProvince("Romagna", {
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
 	Coastal = true,
+	HistoricalSettlementBuildings = {
+		768, "unit-teuton-temple", true -- Archbishopric existent in Ravenna during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
+	},
 	HistoricalModifiers = {
 		1250, "upgrade-university", true, -- University existent in Bologna in 1250. Source: Atlas de História Mundial, 2001, p. 144.
 		1391, "upgrade-university", true -- University founded in Ferrara in 1391. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.
@@ -4413,6 +4423,9 @@ DefineProvince("Salzburg", {
 	HistoricalCultures = {
 		-800, "celt"
 	},
+	HistoricalSettlementBuildings = {
+		768, "unit-teuton-temple", true -- Archbishopric existent in Salzburg during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
+	},
 	Regions = {"Cisleithania", "Europe", "Germany-Netherlands", "Roman Danube", "West and Central Europe"}
 })
 
@@ -4453,6 +4466,9 @@ DefineProvince("Savoy", {
 	Claims = {
 --		"latin", "France",
 --		"latin", "Savoy"
+	},
+	HistoricalSettlementBuildings = {
+		768, "unit-teuton-temple", true -- Archbishopric existent in Tarentaise during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 	},
 	Regions = {"Europe", "France", "Gaul", "Northwest Europe", "West and Central Europe"}
 })

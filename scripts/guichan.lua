@@ -1294,9 +1294,9 @@ function RunSinglePlayerCustomGameMenu()
 		for i=1,table.getn(custom_heroes) do
 			if (
 				race:getSelected() == 0
-				or (GetCustomHeroData(custom_heroes[i], "Civilization") == new_civilization)
-				or ((new_civilization == "germanic" or new_civilization == "teuton") and (GetCustomHeroData(custom_heroes[i], "Civilization") == "germanic" or GetCustomHeroData(custom_heroes[i], "Civilization") == "teuton"))
-				or (new_civilization == "dwarf" and GetCustomHeroData(custom_heroes[i], "Civilization") == "gnome")
+				or GetCustomHeroData(custom_heroes[i], "Civilization") == new_civilization
+				or GetCivilizationData(GetCustomHeroData(custom_heroes[i], "Civilization"), "ParentCivilization") == new_civilization
+				or GetCustomHeroData(custom_heroes[i], "Civilization") == GetCivilizationData(new_civilization, "ParentCivilization")
 			) then
 				table.insert(hero_list, custom_heroes[i])
 			end

@@ -60,14 +60,6 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-dwarven-ballista-bolt-3",
 	}
 } )
 
--- Miner-specific actions ---------------------------------------------------
-
-DefineButton( { Pos = 5, Level = 0, Icon = "icon-dwarven-return-goods",
-	Action = "return-goods",
-	Key = "g", Hint = _("Return with ~!Goods"), Popup = "popup-commands",
-	ForUnit = {"unit-dwarven-miner", "unit-brising-miner", "unit-gnomish-worker", "unit-goblin-worker" }
-})
-
 -- Researches ---------------------------------------------------------
 
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-broad-axe",

@@ -101,7 +101,7 @@ function EventTriggers()
 								{"~!Continue"},
 								{function(s)
 								end},
-								"goblin/icons/greebo.png"
+								"goblin/icons/swordsman.png"
 							)
 						elseif (GetPlayerData(player, "RaceName") == "gnome") then
 							Event(
@@ -111,7 +111,7 @@ function EventTriggers()
 								{"~!Continue"},
 								{function(s)
 								end},
-								"goblin/icons/greebo.png"
+								"goblin/icons/swordsman.png"
 							)
 						end
 

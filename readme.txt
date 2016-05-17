@@ -69,6 +69,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Units
 - Fixed issue which allowed organic units with no proper name to have epithets.
+- Added Goblin Patrol and Return Goods icons (graphics by Jinn).
 
 -----------------------------------------------------------------------
 - 2.2.2

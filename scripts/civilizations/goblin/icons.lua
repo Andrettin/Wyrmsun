@@ -80,6 +80,12 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-goblin-swordsman",
+	Size = {46, 38},
+	File = "goblin/icons/swordsman.png"
+})
+
+DefineIcon({
 	Name = "icon-goblin-spearman",
 	Size = {46, 38},
 	File = "goblin/icons/goblin_spearman.png"
@@ -116,9 +122,15 @@ DefineIcon({
 })
 
 DefineIcon({
-	Name = "icon-greebo",
+	Name = "icon-goblin-patrol-land",
 	Size = {46, 38},
-	File = "goblin/icons/greebo.png"
+	File = "goblin/icons/patrol_land.png"
+})
+
+DefineIcon({
+	Name = "icon-goblin-return-goods",
+	Size = {46, 38},
+	File = "goblin/icons/return_goods.png"
 })
 
 if (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "dungeon") then
