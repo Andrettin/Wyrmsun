@@ -139,7 +139,7 @@ DefineCharacter("Dicuil", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vo
 	Gender = "male",
 	Type = "unit-germanic-warrior", -- should be priest
 	Civilization = "celt", -- presumably
-	ProvinceOfOrigin = "Ireland",
+	ProvinceOfOrigin = "Leinster", -- correct?
 	Year = 825, -- wrote "De Mensura Orbis Terrae"
 	AuthoredWorks = {"upgrade-work-de-mensura-orbis-terrae"}
 })

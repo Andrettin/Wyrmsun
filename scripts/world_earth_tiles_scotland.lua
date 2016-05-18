@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2015-2016 by Andrettin
+--      (c) Copyright 2016 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -25,27 +25,43 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineGrandStrategyEvent("Palladius, Bishop of Ireland", { -- Source: Philip Schaff, "History of the Christian Church", 1997, §14.
-	Description = "The Pope has ordained the Briton deacon Palladius as the first bishop of Ireland, sending him to administer the small community of the faithful there, and to promote Christianity amongst the non-believers.",
+DefineWorldMapTile({467, 97}, {
 	World = "Earth",
-	MinYear = 431,
-	MaxYear = 431,
-	Conditions = function(s)
-		if (
-			GetProvinceOwner("Leinster") == EventFaction.Name -- correct?
-			and GetProvinceCivilization("Essex") == "celt" -- Essex correct?
-		) then
-			EventProvince = WorldMapProvinces.Leinster
-			return true
-		else
-			return false
-		end
-	end,
-	Options = {"~!OK"},
-	OptionEffects = {
-		function(s)
-			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
-		end
-	},
-	OptionTooltips = {"+1 Prestige"}
+	FactionCulturalSettlementNames = {
+		"teuton", "England", "Glasgow"
+	}
+})
+
+DefineWorldMapTile({469, 93}, {
+	World = "Earth",
+	FactionCulturalSettlementNames = {
+		"teuton", "England", "Dumfries"
+	}
+})
+
+DefineWorldMapTile({470, 87}, {
+	World = "Earth",
+	FactionCulturalSettlementNames = {
+		"teuton", "England", "Kirkwall", "name-elements", {
+--			"compound", "prefix", -- ?
+			"compound", "suffix", "english", "noun", "singular", "Wall"
+		}
+	}
+})
+
+DefineWorldMapTile({470, 97}, {
+	World = "Earth",
+	FactionCulturalSettlementNames = {
+		"teuton", "England", "Edinburgh", "name-elements", {
+--			"compound", "prefix", -- ?
+			"compound", "suffix", "english", "noun", "singular", "Burgh"
+		}
+	}
+})
+
+DefineWorldMapTile({473, 93}, {
+	World = "Earth",
+	FactionCulturalSettlementNames = {
+		"teuton", "England", "Aberdeen"
+	}
 })

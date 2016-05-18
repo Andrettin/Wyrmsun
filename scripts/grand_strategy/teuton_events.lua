@@ -603,8 +603,8 @@ local TeutonEvents = {
 		Description = "The Scottish geologist Charles Lyell has published his Principles of Geology, in which he argues that geological processes in the past occurred the same as in the present, and throughout an enormously long period.",
 		Conditions = function(s)
 			if (
-				GetProvinceOwner("Lowland Scotland") == EventFaction.Name -- was he actually born in Highland Scotland, or in Lowland Scotland?
-				and GetProvinceCivilization("Lowland Scotland") == "teuton" -- should be English
+				GetProvinceOwner("Lothian") == EventFaction.Name -- where was he actually born in Scotland?
+				and GetProvinceCivilization("Lothian") == "teuton" -- should be English instead of Teuton
 			) then
 				return true
 			else
@@ -649,8 +649,8 @@ local TeutonEvents = {
 		Description = "The Scottish geologist Charles Lyell has published a work entitled Antiquity of Man, in which he seeks to connect theories on natural evolution, geological processes and finds of ancient objects, to provide a new understanding of prehistoric peoples.",
 		Conditions = function(s)
 			if (
-				GetProvinceOwner("Lowland Scotland") == EventFaction.Name
-				and GetProvinceCivilization("Lowland Scotland") == "teuton" -- should be English
+				GetProvinceOwner("Lothian") == EventFaction.Name
+				and GetProvinceCivilization("Lothian") == "teuton" -- should be English instead of Teuton
 			) then
 				return true
 			else

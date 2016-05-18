@@ -1301,6 +1301,38 @@ DefineProvince("Champagne", { -- includes Brie
 	Regions = {"Europe", "France", "Gaul", "Northwest Europe", "West and Central Europe"}
 })
 
+DefineProvince("Connaught", {
+	World = "Earth",
+	CulturalNames = {
+		"celt", "Connaught"
+	},
+	FactionCulturalNames = {
+		"teuton", "England", "Connaught"
+	},
+	Tiles = {
+		{452, 102}, {452, 103},
+		{453, 102}, {453, 103}, {453, 104}, {453, 105},
+		{454, 102}, {454, 103}, {454, 104}, {454, 105},
+		{455, 102}, {455, 103}, {455, 104}, {455, 105},
+		{456, 101}, {456, 102}, {456, 103}, {456, 104},
+		{457, 102}
+	},
+	SettlementLocation = {456, 103}, -- Roscommon
+	Map = "maps/random/random-map-forest.smp",
+	SettlementTerrain = "Plains",
+	Coastal = true,
+	Claims = {
+		"celt", "Gangani Tribe"
+	},
+	HistoricalOwners = {
+		-27, "celt", "Gangani Tribe" -- British tribes (apparently) in the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+	},
+	HistoricalCultures = {
+		-27, "celt"
+	},
+	Regions = {"British Isles", "Europe", "Northwest Europe", "West and Central Europe"}
+})
+
 DefineProvince("Corinth", {
 	World = "Earth",
 	Tiles = {
@@ -1342,14 +1374,19 @@ DefineProvince("Cornwall", {
 	SettlementTerrain = "Plains",
 	Coastal = true,
 	Claims = {
+		"celt", "Dumnonii Tribe",
 		"teuton", "England"
 	},
 	HistoricalOwners = {
+		-27, "celt", "Dumnonii Tribe", -- British tribes (apparently) in the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 		43, "latin", "Rome", -- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		1560, "teuton", "England" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalClaims = {
 		43, "latin", "Rome"
+	},
+	HistoricalCultures = {
+		-27, "celt"
 	},
 	Regions = {"British Isles", "England", "Europe", "Northwest Europe", "West and Central Europe"}
 })
@@ -1518,6 +1555,7 @@ DefineProvince("Cumbria", {
 	Coastal = true,
 	Claims = {
 		"celt", "Brigantes Tribe",
+		"celt", "Selgovae Tribe",
 		"teuton", "England"
 	},
 	HistoricalOwners = {
@@ -1525,12 +1563,12 @@ DefineProvince("Cumbria", {
 		43, "latin", "Rome", -- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		1560, "teuton", "England" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
+	HistoricalClaims = {
+		43, "latin", "Rome"
+	},
 	HistoricalCultures = {
 		-264, "celt",
 		1560, "teuton"
-	},
-	HistoricalClaims = {
-		43, "latin", "Rome"
 	},
 	Regions = {"British Isles", "England", "Europe", "Northwest Europe", "West and Central Europe"}
 })
@@ -1617,6 +1655,43 @@ DefineProvince("Dauphiny", {
 		1789, "upgrade-courthouse", true -- Parlement or conseil souverain, prévôt des maréchaux and chief court of the salt tax existent in Grenoble in 1789. Source: William R. Shepherd, Historical Atlas, 1911, p. 147.
 	},
 	Regions = {"Europe", "France", "Gaul", "Northwest Europe", "West and Central Europe"}
+})
+
+DefineProvince("Devon", {
+	World = "Earth",
+	FactionCulturalNames = {
+		"teuton", "Angle Tribe", "Devon",
+		"teuton", "England", "Devon"
+	},
+	Tiles = {
+		{467, 111},
+		{468, 110}, {468, 111}, {468, 112},
+		{469, 111}, {469, 112},
+		{470, 111}
+	},
+	SettlementLocation = {470, 111}, -- Exeter
+	Map = "maps/random/random-map-forest.smp",
+	SettlementTerrain = "Plains",
+	Coastal = true,
+	Claims = {
+		"basque", "Bellbeaker Tribe",
+		"celt", "Dumnonii Tribe",
+		"teuton", "England"
+	},
+	HistoricalOwners = {
+		-7000, "basque", "Bellbeaker Tribe", -- Bell Beaker culture existed in Normandy and the southwestern parts of Great Britain between 7000 and 2000 BC; Source: "Atlas de História Mundial", 2001, pp. 40-41.
+		-27, "celt", "Dumnonii Tribe", -- British tribes (apparently) in the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+		43, "latin", "Rome", -- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		1560, "teuton", "England" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalClaims = {
+		43, "latin", "Rome"
+	},
+	HistoricalCultures = {
+		-7000, "basque",
+		-27, "celt"
+	},
+	Regions = {"British Isles", "England", "Europe", "Northwest Europe", "West and Central Europe"}
 })
 
 DefineProvince("Dobruja", {
@@ -1765,9 +1840,11 @@ DefineProvince("East Anglia", {
 	SettlementTerrain = "Plains",
 	Coastal = true,
 	Claims = {
+		"celt", "Iceni Tribe",
 		"teuton", "England"
 	},
 	HistoricalOwners = {
+		-27, "celt", "Iceni Tribe", -- British tribes (apparently) in the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 		43, "latin", "Rome", -- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		526, "teuton", "Angle Tribe", -- by 526 AD the Anglo-Saxons had become masters of most of Roman Britannia; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 		616, "teuton", "East Anglia", -- we have notice that Rædwald was king of East Anglia then; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 78-79.
@@ -1778,6 +1855,7 @@ DefineProvince("East Anglia", {
 		616, "teuton", "East Anglia"
 	},
 	HistoricalCultures = {
+		-27, "celt",
 		526, "teuton"
 	},
 	Regions = {"British Isles", "England", "Europe", "Northwest Europe", "West and Central Europe"}
@@ -1854,18 +1932,21 @@ DefineProvince("Essex", {
 	SettlementTerrain = "Plains",
 	Coastal = true,
 	Claims = {
+		"celt", "Trinobantes Tribe",
 		"teuton", "England"
 	},
 	HistoricalOwners = {
+		-27, "celt", "Trinobantes Tribe", -- British tribes (apparently) in the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 		43, "latin", "Rome", -- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		526, "teuton", "Saxon Tribe", -- by 526 AD the Anglo-Saxons had become masters of most of Roman Britannia; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 		1560, "teuton", "England" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
-	HistoricalCultures = {
-		526, "teuton"
-	},
 	HistoricalClaims = {
 		43, "latin", "Rome"
+	},
+	HistoricalCultures = {
+		-27, "celt",
+		526, "teuton"
 	},
 	HistoricalModifiers = {
 		1836, "upgrade-university", true -- University founded in London in 1836. Source: David Thomson, Europe Since Napoleon, 1966, p. 449.
@@ -2268,6 +2349,40 @@ DefineProvince("Gallaecia", {
 	Regions = {"Europe", "Iberia", "West and Central Europe"}
 })
 
+DefineProvince("Galloway", {
+	World = "Earth",
+	FactionCulturalNames = {
+		"teuton", "England", "Galloway"
+	},
+	Tiles = {
+		{466, 99},
+		{467, 99},
+		{468, 98}, {468, 99},
+		{469, 98}, {469, 99},
+		{470, 98}, {470, 99}
+	},
+	SettlementLocation = {469, 99}, -- Dumfries
+	Map = "maps/random/random-map-forest.smp",
+	SettlementTerrain = "Plains",
+	Coastal = true,
+	Claims = {
+		"celt", "Sovantae Tribe",
+		"teuton", "Scotland"
+	},
+	HistoricalOwners = {
+		-27, "celt", "Sovantae Tribe", -- British tribes (apparently) in the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+		80, "latin", "Rome", -- The area between the Wall of Antoninus (or Severus) and Hadrian's Wall was acquired by Rome in 80 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		1560, "teuton", "Scotland" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalClaims = {
+		80, "latin", "Rome"
+	},
+	HistoricalCultures = {
+		-27, "celt"
+	},
+	Regions = {"British Isles", "Europe", "Northwest Europe", "West and Central Europe"}
+})
+
 DefineProvince("Gotaland", {
 	World = "Earth",
 	CulturalNames = {
@@ -2347,6 +2462,42 @@ DefineProvince("Gotland", {
 		-325, "goth", "Goth Tribe"
 	},
 	Regions = {"Europe", "Scandinavia", "West and Central Europe"}
+})
+
+DefineProvince("Gwynedd", { -- also includes Clwyd
+	World = "Earth",
+	CulturalNames = {
+		"celt", "Gwynedd"
+	},
+	Tiles = {
+		{467, 105},
+		{468, 104}, {468, 105},
+		{469, 104}, {469, 105},
+		{470, 104}, {470, 105}
+	},
+	SettlementLocation = {467, 105}, -- Caernafon
+	Map = "maps/random/random-map-forest.smp",
+	SettlementTerrain = "Plains",
+	Coastal = true,
+	Claims = {
+		"basque", "Bellbeaker Tribe",
+		"celt", "Ordovices Tribe",
+		"celt", "Gwynedd"
+	},
+	HistoricalOwners = {
+		-7000, "basque", "Bellbeaker Tribe", -- Bell Beaker culture existed in Normandy and the southwestern parts of Great Britain between 7000 and 2000 BC; Source: "Atlas de História Mundial", 2001, pp. 40-41.
+		-27, "celt", "Ordovices Tribe", -- British tribes (apparently) in the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+		43, "latin", "Rome", -- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		1560, "teuton", "England" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalCultures = {
+		-7000, "basque",
+		-27, "celt"
+	},
+	HistoricalClaims = {
+		43, "latin", "Rome"
+	},
+	Regions = {"British Isles", "England", "Europe", "Northwest Europe", "West and Central Europe"}
 })
 
 DefineProvince("Hanover", {
@@ -2438,6 +2589,7 @@ DefineProvince("Hesse", {
 DefineProvince("Highland Scotland", {
 	World = "Earth",
 	CulturalNames = {
+		"celt", "Caledonia",
 		"latin", "Caledonia"
 	},
 	FactionCulturalNames = {
@@ -2469,15 +2621,17 @@ DefineProvince("Highland Scotland", {
 	SettlementTerrain = "Hills",
 	Coastal = true,
 	Claims = {
+		"celt", "Caledonii Tribe",
 		"celt", "Pict Tribe",
 		"teuton", "Scotland" -- should be English
 	},
 	HistoricalOwners = {
+		-27, "celt", "Caledonii Tribe", -- British tribes (apparently) in the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 		395, "celt", "Pict Tribe", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 		1560, "teuton", "Scotland" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalCultures = {
-		395, "celt"
+		-27, "celt"
 	},
 	HistoricalModifiers = {
 		1413, "upgrade-university", true, -- University founded in St. Andrews in 1413. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.
@@ -2708,48 +2862,6 @@ DefineProvince("Iceland", {
 	Regions = {"Europe", "West and Central Europe"}
 })
 
-DefineProvince("Ireland", {
-	World = "Earth",
-	CulturalNames = {
-		"latin", "Hibernia"
-	},
-	Tiles = {
---		{113, 25}, {113, 26}, {114, 25}, {114, 26}, {115, 25}, {115, 26}, -- old map
-		{451, 108},
-		{452, 102}, {452, 103}, {452, 106}, {452, 107}, {452, 108},
-		{453, 102}, {453, 103}, {453, 104}, {453, 105}, {453, 106}, {453, 107}, {453, 108}, {453, 109},
-		{454, 102}, {454, 103}, {454, 104}, {454, 105}, {454, 106}, {454, 107}, {454, 108},
-		{455, 102}, {455, 103}, {455, 104}, {455, 105}, {455, 106}, {455, 107}, {455, 108},
-		{456, 99}, {456, 100}, {456, 101}, {456, 102}, {456, 103}, {456, 104}, {456, 105}, {456, 106}, {456, 107}, {456, 108},
-		{457, 99}, {457, 100}, {457, 101}, {457, 102}, {457, 103}, {457, 104}, {457, 105}, {457, 106}, {457, 107},
-		{458, 99}, {458, 100}, {458, 101}, {458, 102}, {458, 103}, {458, 104}, {458, 105}, {458, 106}, {458, 107},
-		{459, 99}, {459, 100}, {459, 101}, {459, 102}, {459, 103}, {459, 104}, {459, 105}, {459, 106}, {459, 107},
-		{460, 99}, {460, 100}, {460, 101}, {460, 102}, {460, 103}, {460, 104}, {460, 105}, {460, 106}, {460, 107},
-		{461, 99}, {461, 100}, {461, 101}, {461, 102}, {461, 103}, {461, 104}, {461, 105}, {461, 106},
-		{462, 99}, {462, 100}, {462, 101}, {462, 104}, {462, 105},
-		{463, 100}, {463, 101}
-	},
-	SettlementLocation = {462, 104}, -- Dublin
-	Map = "maps/random/random-map-forest.smp",
-	SettlementTerrain = "Plains",
-	Coastal = true,
-	Claims = {
-		"celt", "Scot Tribe"
-	},
-	HistoricalOwners = {
-		-- The Mount Sandel site (River Bann valley, Northern Ireland) was occupied in the late 9th millenium BC; in the site were found narrow-bladed, geometric microliths, wild boar bones, remains of birds such as mallard, teal, wigeon, grouse, capercaillie and snipe/woodcock, remains of fishes such as salmon, sea trout, eel and bass, hazelnuts, pears, apples and water-lilies; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 146.
-		-- Occupation of Mount Sandel in Ireland may have begun by 8000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 152.
-		395, "celt", "Scot Tribe"
-	},
-	HistoricalCultures = {
-		395, "celt"
-	},
-	HistoricalModifiers = {
-		1312, "upgrade-university", true, -- University founded in Dublin in 1312. Source: Atlas de História Mundial, p. 144.
-	},
-	Regions = {"British Isles", "Europe", "Northwest Europe", "West and Central Europe"}
-})
-
 DefineProvince("Istria", {
 	World = "Earth",
 	CulturalNames = {
@@ -2835,18 +2947,21 @@ DefineProvince("Kent", {
 	SettlementTerrain = "Plains",
 	Coastal = true,
 	Claims = {
+		"celt", "Cantii Tribe",
 		"teuton", "England"
 	},
 	HistoricalOwners = {
+		-27, "celt", "Cantii Tribe", -- British tribes (apparently) in the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 		43, "latin", "Rome", -- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		526, "teuton", "Jute Tribe", -- by 526 AD the Anglo-Saxons had become masters of most of Roman Britannia; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 		1560, "teuton", "England" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
-	HistoricalCultures = {
-		526, "teuton"
-	},
 	HistoricalClaims = {
 		43, "latin", "Rome"
+	},
+	HistoricalCultures = {
+		-27, "celt",
+		526, "teuton"
 	},
 	Regions = {"British Isles", "England", "Europe", "Northwest Europe", "West and Central Europe"}
 })
@@ -2966,6 +3081,44 @@ DefineProvince("Lauenburg", {
 	Regions = {"Europe", "Germany-Netherlands", "West and Central Europe"}
 })
 
+DefineProvince("Leinster", {
+	World = "Earth",
+	CulturalNames = {
+		"celt", "Leinster"
+	},
+	FactionCulturalNames = {
+		"teuton", "England", "Leinster"
+	},
+	Tiles = {
+--		{113, 25}, {113, 26}, {114, 25}, {114, 26}, {115, 25}, {115, 26}, -- old map
+		{457, 103}, {457, 104},
+		{458, 103}, {458, 104}, {458, 105},
+		{459, 103}, {459, 104}, {459, 105}, {459, 106},
+		{460, 103}, {460, 104}, {460, 105}, {460, 106}, {460, 107},
+		{461, 103}, {461, 104}, {461, 105}, {461, 106},
+		{462, 104}, {462, 105}
+	},
+	SettlementLocation = {462, 104}, -- Dublin
+	Map = "maps/random/random-map-forest.smp",
+	SettlementTerrain = "Plains",
+	Coastal = true,
+	Claims = {
+		"celt", "Cauci Tribe",
+		"celt", "Scot Tribe"
+	},
+	HistoricalOwners = {
+		-27, "celt", "Cauci Tribe", -- British tribes (apparently) in the time of Augustus; the Brigantes occupied the extreme south of Leinster; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+		395, "celt", "Scot Tribe" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+	},
+	HistoricalCultures = {
+		-27, "celt"
+	},
+	HistoricalModifiers = {
+		1312, "upgrade-university", true, -- University founded in Dublin in 1312. Source: Atlas de História Mundial, p. 144.
+	},
+	Regions = {"British Isles", "Europe", "Northwest Europe", "West and Central Europe"}
+})
+
 DefineProvince("Liguria", {
 	World = "Earth",
 	CulturalNames = {
@@ -3005,9 +3158,11 @@ DefineProvince("Lincoln", {
 	SettlementTerrain = "Plains",
 	Coastal = true,
 	Claims = {
+		"celt", "Coritani Tribe",
 		"teuton", "England"
 	},
 	HistoricalOwners = {
+		-27, "celt", "Coritani Tribe", -- British tribes (apparently) in the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 		43, "latin", "Rome", -- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		526, "teuton", "Angle Tribe", -- by 526 AD the Anglo-Saxons had become masters of most of Roman Britannia; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 		654, "teuton", "Middle Anglia", -- Peada was king of the Middle Angles when Penda fell; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 84.
@@ -3020,6 +3175,7 @@ DefineProvince("Lincoln", {
 		654, "teuton", "Middle Anglia"
 	},
 	HistoricalCultures = {
+		-27, "celt",
 		526, "teuton"
 	},
 	Regions = {"British Isles", "England", "Europe", "Northwest Europe", "West and Central Europe"}
@@ -3109,6 +3265,45 @@ DefineProvince("Lorraine", {
 		1789, "upgrade-courthouse", true -- Parlement or conseil souverain and prévôt des maréchaux existent in Nancy in 1789. Source: William R. Shepherd, Historical Atlas, 1911, p. 147.
 	},
 	Regions = {"Europe", "France", "Gaul", "Northwest Europe", "West and Central Europe"}
+})
+
+DefineProvince("Lothian", { -- includes Borders
+	World = "Earth",
+	CulturalNames = {
+		"latin", "Valentia" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+	},
+	FactionCulturalNames = {
+		"teuton", "England", "Lothian"
+	},
+	Tiles = {
+		{470, 97},
+		{471, 97}, {471, 98},
+		{472, 97}, {472, 98},
+		{473, 97}, {473, 98}
+	},
+	SettlementLocation = {470, 97}, -- Edinburgh
+	Map = "maps/random/random-map-forest.smp",
+	SettlementTerrain = "Hills",
+	Coastal = true,
+	Claims = {
+		"celt", "Otalini Tribe",
+		"teuton", "Scotland" -- should be English
+	},
+	HistoricalOwners = {
+		-27, "celt", "Otalini Tribe", -- British tribes (apparently) in the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+		80, "latin", "Rome", -- The area between the Wall of Antoninus (or Severus) and Hadrian's Wall was acquired by Rome in 80 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		1560, "teuton", "Scotland" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalClaims = {
+		80, "latin", "Rome"
+	},
+	HistoricalCultures = {
+		-27, "celt"
+	},
+	HistoricalModifiers = {
+		1582, "upgrade-university", true -- University founded in Edinburgh in 1582. Source: The Cambridge Modern History Atlas, p. 9.
+	},
+	Regions = {"British Isles", "Europe", "Northwest Europe", "West and Central Europe"}
 })
 
 DefineProvince("Lower Austria", {
@@ -3208,47 +3403,6 @@ DefineProvince("Lower Rhine", {
 		1454, "upgrade-university", true -- University founded in Trier in 1454. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.
 	},
 	Regions = {"Europe", "Gaul", "Germany-Netherlands", "West and Central Europe"}
-})
-
-DefineProvince("Lowland Scotland", {
-	World = "Earth",
-	CulturalNames = {
-		"latin", "Valentia" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
-	},
-	FactionCulturalNames = {
-		"teuton", "England", "Lowland Scotland",
-		"celt", "Scot Tribe", "Lowland Scotland",
-		"teuton", "Scotland", "Lowland Scotland"
-	},
-	Tiles = {
-		{466, 97}, {466, 98}, {466, 99},
-		{467, 97}, {467, 98}, {467, 99},
-		{468, 97}, {468, 98}, {468, 99},
-		{469, 97}, {469, 98}, {469, 99},
-		{470, 97}, {470, 98}, {470, 99},
-		{471, 97}, {471, 98},
-		{472, 97}, {472, 98},
-		{473, 97}, {473, 98}
-	},
-	SettlementLocation = {470, 97}, -- Edinburgh
-	Map = "maps/random/random-map-forest.smp",
-	SettlementTerrain = "Hills",
-	Coastal = true,
-	Claims = {
-		"teuton", "Scotland" -- should be English
-	},
-	HistoricalOwners = {
-		80, "latin", "Rome", -- The area between the Wall of Antoninus (or Severus) and Hadrian's Wall was acquired by Rome in 80 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		1560, "teuton", "Scotland" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
-	},
-	HistoricalClaims = {
-		80, "latin", "Rome"
-	},
-	HistoricalModifiers = {
-		1450, "upgrade-university", true, -- University founded in Glasgow in 1450. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.
-		1582, "upgrade-university", true -- University founded in Edinburgh in 1582. Source: The Cambridge Modern History Atlas, p. 9.
-	},
-	Regions = {"British Isles", "Europe", "Northwest Europe", "West and Central Europe"}
 })
 
 DefineProvince("Lyonnais", {
@@ -3472,9 +3626,11 @@ DefineProvince("Mercia", {
 	SettlementTerrain = "Plains",
 	Coastal = true,
 	Claims = {
+		"celt", "Coritani Tribe",
 		"teuton", "England"
 	},
 	HistoricalOwners = {
+		-27, "celt", "Coritani Tribe", -- British tribes (apparently) in the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 		43, "latin", "Rome", -- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		526, "teuton", "Angle Tribe", -- by 526 AD the Anglo-Saxons had become masters of most of Roman Britannia; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 		632, "teuton", "Mercia", -- Penda became king of Mercia in 632 after the demise of Edwin of Deira; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 75, 80-81, 83-84.
@@ -3488,6 +3644,7 @@ DefineProvince("Mercia", {
 		632, "teuton", "Mercia"
 	},
 	HistoricalCultures = {
+		-27, "celt",
 		526, "teuton"
 	},
 	HistoricalModifiers = {
@@ -3624,6 +3781,44 @@ DefineProvince("Moselle", {
 		1789, "upgrade-courthouse", true -- Parlement or conseil souverain and prévôt des maréchaux existent in Metz in 1789. Source: William R. Shepherd, Historical Atlas, 1911, p. 147.
 	},
 	Regions = {"Europe", "France", "Gaul", "Northwest Europe", "West and Central Europe"}
+})
+
+DefineProvince("Munster", {
+	World = "Earth",
+	CulturalNames = {
+		"celt", "Munster"
+	},
+	FactionCulturalNames = {
+		"teuton", "England", "Munster"
+	},
+	Tiles = {
+		{451, 108},
+		{452, 106}, {452, 107}, {452, 108},
+		{453, 106}, {453, 107}, {453, 108}, {453, 109},
+		{454, 106}, {454, 107}, {454, 108},
+		{455, 106}, {455, 107}, {455, 108},
+		{456, 105}, {456, 106}, {456, 107}, {456, 108},
+		{457, 105}, {457, 106}, {457, 107},
+		{458, 106}, {458, 107},
+		{459, 107}
+	},
+	SettlementLocation = {458, 106}, -- Clonmel
+	Map = "maps/random/random-map-forest.smp",
+	SettlementTerrain = "Plains",
+	Coastal = true,
+	Claims = {
+		"celt", "Gangani Tribe",
+		"celt", "Hibernii Tribe",
+		"celt", "Scot Tribe"
+	},
+	HistoricalOwners = {
+		-27, "celt", "Hibernii Tribe", -- British tribes (apparently) in the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+		395, "celt", "Scot Tribe" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+	},
+	HistoricalCultures = {
+		-27, "celt"
+	},
+	Regions = {"British Isles", "Europe", "Northwest Europe", "West and Central Europe"}
 })
 
 DefineProvince("Naples", {
@@ -4904,6 +5099,50 @@ DefineProvince("Slovakia", {
 	Regions = {"Czechoslovakia", "Europe", "West and Central Europe"}
 })
 
+DefineProvince("Somerset", {
+	World = "Earth",
+	FactionCulturalNames = {
+		"teuton", "Angle Tribe", "Somerset",
+		"teuton", "England", "Somerset", "name-elements", {
+			"compound", "prefix", "english", "noun", "Somer",
+			"compound", "suffix", "english", "noun", "Set"
+		}
+	},
+	Tiles = {
+		{469, 110},
+		{470, 110},
+		{471, 110},
+		{472, 109}, {472, 110},
+		{473, 109}, {473, 110},
+		{474, 109}, {474, 110}
+	},
+	SettlementLocation = {473, 110}, -- Wells
+	Map = "maps/random/random-map-forest.smp",
+	SettlementTerrain = "Plains",
+	Claims = {
+		"basque", "Bellbeaker Tribe",
+		"celt", "Belgae Tribe",
+		"teuton", "England"
+	},
+	HistoricalOwners = {
+		-7000, "basque", "Bellbeaker Tribe", -- Bell Beaker culture existed in Normandy and the southwestern parts of Great Britain between 7000 and 2000 BC; Source: "Atlas de História Mundial", 2001, pp. 40-41.
+		-27, "celt", "Belgae Tribe", -- British tribes (apparently) in the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+		43, "latin", "Rome", -- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		1560, "teuton", "England" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalCultures = {
+		-7000, "basque",
+		-27, "celt"
+	},
+	HistoricalClaims = {
+		43, "latin", "Rome"
+	},
+	HistoricalModifiers = {
+		1909, "upgrade-university", true -- University founded in Bristol in 1909. Source: David Thomson, Europe Since Napoleon, 1966, p. 449.
+	},
+	Regions = {"British Isles", "England", "Europe", "Northwest Europe", "West and Central Europe"}
+})
+
 DefineProvince("South Trondelag", {
 	World = "Earth",
 	Tiles = {
@@ -4930,6 +5169,46 @@ DefineProvince("South Trondelag", {
 		"norse", "Norway"
 	},
 	Regions = {"Europe", "Scandinavia", "West and Central Europe"}
+})
+
+DefineProvince("Strathclyde", {
+	World = "Earth",
+	CulturalNames = {
+		"celt", "Strathclyde"
+	},
+	FactionCulturalNames = {
+		"teuton", "England", "Strathclyde"
+	},
+	Tiles = {
+		{466, 97}, {466, 98},
+		{467, 97}, {467, 98},
+		{468, 97},
+		{469, 97}
+	},
+	SettlementLocation = {467, 97}, -- Glasgow
+	Map = "maps/random/random-map-forest.smp",
+	SettlementTerrain = "Plains",
+	Coastal = true,
+	Claims = {
+		"celt", "Damnii Tribe",
+		"celt", "Strathclyde",
+		"teuton", "Scotland"
+	},
+	HistoricalOwners = {
+		-27, "celt", "Damnii Tribe", -- British tribes (apparently) in the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+		80, "latin", "Rome", -- The area between the Wall of Antoninus (or Severus) and Hadrian's Wall was acquired by Rome in 80 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		1560, "teuton", "Scotland" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalClaims = {
+		80, "latin", "Rome"
+	},
+	HistoricalCultures = {
+		-27, "celt"
+	},
+	HistoricalModifiers = {
+		1450, "upgrade-university", true -- University founded in Glasgow in 1450. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.
+	},
+	Regions = {"British Isles", "Europe", "Northwest Europe", "West and Central Europe"}
 })
 
 DefineProvince("Styria", {
@@ -5439,6 +5718,44 @@ DefineProvince("Ukraine", {
 	Regions = {"Eurasia", "Europe"}
 })
 
+DefineProvince("Ulster", {
+	World = "Earth",
+	CulturalNames = {
+		"celt", "Ulster"
+	},
+	FactionCulturalNames = {
+		"teuton", "England", "Ulster"
+	},
+	Tiles = {
+		{456, 99}, {456, 100},
+		{457, 99}, {457, 100}, {457, 101},
+		{458, 99}, {458, 100}, {458, 101}, {458, 102},
+		{459, 99}, {459, 100}, {459, 101}, {459, 102},
+		{460, 99}, {460, 100}, {460, 101}, {460, 102},
+		{461, 99}, {461, 100}, {461, 101}, {461, 102},
+		{462, 99}, {462, 100}, {462, 101},
+		{463, 100}, {463, 101}
+	},
+	SettlementLocation = {463, 100}, -- Belfast
+	Map = "maps/random/random-map-forest.smp",
+	SettlementTerrain = "Plains",
+	Coastal = true,
+	Claims = {
+		"celt", "Darini Tribe",
+		"celt", "Scot Tribe"
+	},
+	HistoricalOwners = {
+		-- The Mount Sandel site (River Bann valley, Northern Ireland) was occupied in the late 9th millenium BC; in the site were found narrow-bladed, geometric microliths, wild boar bones, remains of birds such as mallard, teal, wigeon, grouse, capercaillie and snipe/woodcock, remains of fishes such as salmon, sea trout, eel and bass, hazelnuts, pears, apples and water-lilies; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 146.
+		-- Occupation of Mount Sandel in Ireland may have begun by 8000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 152.
+		-27, "celt", "Darini Tribe", -- British tribes (apparently) in the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+		395, "celt", "Scot Tribe" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+	},
+	HistoricalCultures = {
+		-27, "celt"
+	},
+	Regions = {"British Isles", "Europe", "Northwest Europe", "West and Central Europe"}
+})
+
 DefineProvince("Umbria", {
 	World = "Earth",
 	CulturalNames = {
@@ -5647,16 +5964,19 @@ DefineProvince("Vojvodina", {
 
 DefineProvince("Wales", {
 	World = "Earth",
+	CulturalNames = {
+		"celt", "Wales"
+	},
 	FactionCulturalNames = {
 		"teuton", "England", "Wales"
 	},
 	Tiles = {
 		{465, 108},
 		{466, 108},
-		{467, 105}, {467, 108},
-		{468, 104}, {468, 105}, {468, 106}, {468, 107}, {468, 108},
-		{469, 104}, {469, 105}, {469, 106}, {469, 107}, {469, 108}, {469, 109},
-		{470, 104}, {470, 105}, {470, 106}, {470, 107}, {470, 108}, {470, 109}
+		{467, 108},
+		{468, 106}, {468, 107}, {468, 108},
+		{469, 106}, {469, 107}, {469, 108}, {469, 109},
+		{470, 106}, {470, 107}, {470, 108}, {470, 109}
 	},
 	SettlementLocation = {470, 109}, -- Cardiff
 	Map = "maps/random/random-map-forest.smp",
@@ -5664,19 +5984,19 @@ DefineProvince("Wales", {
 	Coastal = true,
 	Claims = {
 		"basque", "Bellbeaker Tribe",
-		"celt", "Gwynedd", -- Gwynedd is in north Wales
-		"celt", "Powys", -- Powys encompassed the area between the upper Severn and the Dee rivers; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 78.
-		"teuton", "England"
+		"celt", "Silures Tribe",
+		"celt", "Powys" -- Powys encompassed the area between the upper Severn and the Dee rivers; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 78.
 	},
 	HistoricalOwners = {
 		-7000, "basque", "Bellbeaker Tribe", -- Bell Beaker culture existed in Normandy and the southwestern parts of Great Britain between 7000 and 2000 BC; Source: "Atlas de História Mundial", 2001, pp. 40-41.
+		-27, "celt", "Silures Tribe", -- British tribes (apparently) in the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 		43, "latin", "Rome", -- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		613, "celt", "Powys", -- at some point between 613 and 616, the king of Powys was defeated by the Bernicians at Chester, so the kingdom must have existed by then; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 78.
 		1560, "teuton", "England" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalCultures = {
 		-7000, "basque",
-		613, "celt"
+		-27, "celt"
 	},
 	HistoricalClaims = {
 		43, "latin", "Rome"
@@ -5729,14 +6049,10 @@ DefineProvince("Wessex", {
 		}
 	},
 	Tiles = {
-		{467, 111},
-		{468, 110}, {468, 111}, {468, 112},
-		{469, 110}, {469, 111}, {469, 112},
-		{470, 110}, {470, 111},
-		{471, 110}, {471, 111},
-		{472, 109}, {472, 110}, {472, 111},
-		{473, 108}, {473, 109}, {473, 110}, {473, 111},
-		{474, 108}, {474, 109}, {474, 110}, {474, 111},
+		{471, 111},
+		{472, 111},
+		{473, 108}, {473, 111},
+		{474, 108}, {474, 111},
 		{475, 108}, {475, 109}, {475, 110}, {475, 111},
 		{476, 108}, {476, 109}, {476, 110}, {476, 111},
 		{477, 109}, {477, 110},
@@ -5749,23 +6065,23 @@ DefineProvince("Wessex", {
 	Coastal = true,
 	Claims = {
 		"basque", "Bellbeaker Tribe",
+		"celt", "Regni Tribe",
 		"teuton", "England"
 	},
 	HistoricalOwners = {
 		-7000, "basque", "Bellbeaker Tribe", -- Bell Beaker culture existed in Normandy and the southwestern parts of Great Britain between 7000 and 2000 BC; Source: "Atlas de História Mundial", 2001, pp. 40-41.
+		-27, "celt", "Regni Tribe", -- British tribes (apparently) in the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 		43, "latin", "Rome", -- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		526, "teuton", "Saxon Tribe", -- by 526 AD the Anglo-Saxons had become masters of most of Roman Britannia; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 		1560, "teuton", "England" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalCultures = {
 		-7000, "basque",
+		-27, "celt",
 		526, "teuton"
 	},
 	HistoricalClaims = {
 		43, "latin", "Rome"
-	},
-	HistoricalModifiers = {
-		1909, "upgrade-university", true -- University founded in Bristol in 1909. Source: David Thomson, Europe Since Napoleon, 1966, p. 449.
 	},
 	Regions = {"British Isles", "England", "Europe", "Northwest Europe", "West and Central Europe"}
 })

@@ -240,7 +240,7 @@ function LoadProvinces(world)
 		},
 		IrishSea = { -- Source: "Limits of Oceans and Seas", 1953, p. 12. (see corrections as well)
 			Name = "Irish Sea",
-			ReferenceProvince = "Ireland" -- province used as a reference for this province's name
+			ReferenceProvince = "Leinster" -- province used as a reference for this province's name
 		},
 		LakeVattern = {
 			Name = "Lake Vattern",

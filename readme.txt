@@ -58,6 +58,17 @@ https://github.com/Andrettin/Wyrmsun
 ############################################################
 
 -----------------------------------------------------------------------
+- 2.2.4
+-----------------------------------------------------------------------
+
+* Grand Strategy
+- Split the Devon and Somerset provinces off the Wessex one.
+- Split the Gwynedd province off the Wales one.
+- Split the Galloway and Strathclyde provinces off the Lowland Scotland one, and renamed the latter to Lothian.
+- Split the Connaught, Munster and Ulster provinces off the Ireland one, and renamed the latter to Leinster.
+- Greatly improved the setup of British and Irish tribes for the 9 BC start date.
+
+-----------------------------------------------------------------------
 - 2.2.3
 -----------------------------------------------------------------------
 

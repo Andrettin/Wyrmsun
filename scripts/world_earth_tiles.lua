@@ -27,13 +27,16 @@
 
 --Load("scripts/world_earth_tiles_asia.lua")
 Load("scripts/world_earth_tiles_austria.lua") -- German-speaking territories of the Empire of Austria
+Load("scripts/world_earth_tiles_england.lua") -- includes Wales
 Load("scripts/world_earth_tiles_finland.lua")
 Load("scripts/world_earth_tiles_france.lua") -- modern France (excluding Corsica)
 Load("scripts/world_earth_tiles_germany.lua") -- territory of Imperial Germany (excluding Alsace-Lorraine)
 Load("scripts/world_earth_tiles_greece.lua") -- territory of modern Greece
+Load("scripts/world_earth_tiles_ireland.lua")
 Load("scripts/world_earth_tiles_italy.lua") -- includes Corsica since it is closer to the Italian mainland than to France, and since for centuries it belonged to Genoa
 Load("scripts/world_earth_tiles_low_countries.lua") -- Netherlands, Belgium and Luxembourg
 Load("scripts/world_earth_tiles_scandinavia.lua")
+Load("scripts/world_earth_tiles_scotland.lua")
 Load("scripts/world_earth_tiles_spain.lua")
 
 DefineWorldMapTile({418, 73}, {
@@ -50,172 +53,6 @@ DefineWorldMapTile({454, 145}, {
 	},
 	FactionCulturalSettlementNames = {
 		"latin", "Portugal", "Lisbon"
-	}
-})
-
-DefineWorldMapTile({462, 104}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"celt", "Eblana", -- or is this the Latin name? Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-	},
-	FactionCulturalSettlementNames = {
-		"teuton", "England", "Dublin"
-	}
-})
-
-DefineWorldMapTile({465, 113}, {
-	World = "Earth",
-	FactionCulturalSettlementNames = {
-		"teuton", "England", "Falmouth", "name-elements", {
---			"compound", "prefix", -- ?
-			"compound", "suffix", "english", "noun", "singular", "Mouth"
-		}
-	}
-})
-
-DefineWorldMapTile({470, 87}, {
-	World = "Earth",
-	FactionCulturalSettlementNames = {
-		"teuton", "England", "Kirkwall"
-	}
-})
-
-DefineWorldMapTile({470, 97}, {
-	World = "Earth",
-	FactionCulturalSettlementNames = {
-		"teuton", "England", "Edinburgh", "name-elements", {
---			"compound", "prefix", -- ?
-			"compound", "suffix", "english", "noun", "singular", "Burgh"
-		}
-	}
-})
-
-DefineWorldMapTile({471, 100}, {
-	World = "Earth",
-	FactionCulturalSettlementNames = {
-		"teuton", "England", "Carlisle"
-	}
-})
-
-DefineWorldMapTile({473, 93}, {
-	World = "Earth",
-	FactionCulturalSettlementNames = {
-		"teuton", "England", "Aberdeen"
-	}
-})
-
-DefineWorldMapTile({474, 97}, {
-	World = "Earth",
-	FactionCulturalSettlementNames = {
-		"teuton", "England", "Berwick" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
-	}
-})
-
-DefineWorldMapTile({475, 98}, {
-	World = "Earth",
-	FactionCulturalSettlementNames = {
-		"teuton", "England", "Bamburgh", "name-elements", { -- Shepherd gives it as "Bamborough" instead; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
---			"compound", "prefix", "english", -- ?
-			"compound", "suffix", "english", "noun", "Burgh" -- presumably
-		}
-	}
-})
-
-DefineWorldMapTile({475, 99}, {
-	World = "Earth",
-	FactionCulturalSettlementNames = {
-		"teuton", "England", "Newcastle", "name-elements", { -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
-			"compound", "prefix", "english", "adjective", "New", -- presumably
-			"compound", "suffix", "english", "noun", "singular", "Castle" -- presumably
-		}
-	}
-})
-
-DefineWorldMapTile({475, 100}, {
-	World = "Earth",
-	FactionCulturalSettlementNames = {
-		"teuton", "England", "Durham", "name-elements", { -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
-			"compound", "prefix", "english", "noun", "Dur", -- presumably
-			"compound", "suffix", "english", "noun", "Ham" -- presumably
-		}
-	}
-})
-
-DefineWorldMapTile({475, 106}, {
-	World = "Earth",
-	FactionCulturalSettlementNames = {
-		"teuton", "England", "Tamworth" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
-	}
-})
-
-DefineWorldMapTile({476, 110}, {
-	World = "Earth",
-	FactionCulturalSettlementNames = {
-		"teuton", "England", "Winchester", "name-elements", {
-			"compound", "prefix", "english", "noun", "singular", "Win",
-			"compound", "suffix", "english", "noun", "singular", "Chester"
-		}
-	}
-})
-
-DefineWorldMapTile({477, 102}, {
-	World = "Earth",
-	FactionCulturalSettlementNames = {
-		"teuton", "England", "York" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
-	}
-})
-
-DefineWorldMapTile({478, 102}, {
-	World = "Earth",
-	FactionCulturalSettlementNames = {
-		"teuton", "England", "Hull", "name-elements", { -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
-			"word", "english", "noun", "Hull" -- presumably
-		}
-	}
-})
-
-DefineWorldMapTile({478, 104}, { -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
-	World = "Earth",
-	FactionCulturalSettlementNames = {
-		"teuton", "England", "Lincoln"
-	}
-})
-
-DefineWorldMapTile({480, 109}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"celt", "Londinium",
-		"latin", "Londinium"
-	},
-	FactionCulturalSettlementNames = {
-		"teuton", "England", "London"
-	}
-})
-
-DefineWorldMapTile({480, 111}, { -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
-	World = "Earth",
-	FactionCulturalSettlementNames = {
-		"teuton", "England", "Newhaven", "name-elements", {
-			"compound", "prefix", "english", "adjective", "New",
-			"compound", "suffix", "english", "noun", "singular", "Haven"
-		}
-	}
-})
-
-DefineWorldMapTile({483, 110}, { -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
-	World = "Earth",
-	FactionCulturalSettlementNames = {
-		"teuton", "England", "Dover"
-	}
-})
-
-DefineWorldMapTile({484, 106}, { -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
-	World = "Earth",
-	FactionCulturalSettlementNames = {
-		"teuton", "England", "Yarmouth", "name-elements", {
---			"compound", "prefix", -- ?
-			"compound", "suffix", "english", "noun", "singular", "Mouth"
-		}
 	}
 })
 

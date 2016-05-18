@@ -25,23 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineFaction("Aedui Tribe", {
-	Civilization = "celt",
-	Type = "tribe",
---	Language = "gaulish",
-	Colors = {"green"}
-})
-
-DefineFaction("Arverni Tribe", {
-	Civilization = "celt",
-	Type = "tribe",
---	Language = "gaulish",
-	Colors = {"blue"},
-	HistoricalDiplomacyStates = {
-		-71, "celt", "Aedui Tribe", "war" -- The Suebic king Ariovistus enters Gaul at the request of the Arverni and the Sequani to fight the Aedui in 71 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 230.
-	}
-})
-
 DefineFaction("Astures Tribe", { -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	Civilization = "celt", -- correct?
 	Type = "tribe",
@@ -54,11 +37,10 @@ DefineFaction("Boii Tribe", {
 	Colors = {"brown"}
 })
 
-DefineFaction("Brigantes Tribe", { -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+DefineFaction("Caledonii Tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 	Civilization = "celt", -- correct?
---	Language = "welsh", -- correct?
 	Type = "tribe",
-	Colors = {"pink"}
+	Colors = {"brown"}
 })
 
 DefineFaction("Cantabri Tribe", { -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
@@ -67,37 +49,52 @@ DefineFaction("Cantabri Tribe", { -- Tribes in Europe between 264 BC and 180 AD;
 	Colors = {"orange"}
 })
 
+DefineFaction("Cauci Tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+	Civilization = "celt", -- correct?
+	Type = "tribe",
+	Colors = {"yellow"}
+})
+
 DefineFaction("Cotini Tribe", {
 	Civilization = "celt",
 	Type = "tribe",
 	Colors = {"teal"}
 })
 
-DefineFaction("Helvetii Tribe", {
-	Civilization = "celt",
+DefineFaction("Damnii Tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+	Civilization = "celt", -- correct?
 	Type = "tribe",
---	Language = "gaulish",
-	Colors = {"violet"} -- another color, perhaps?
+	Colors = {"pink"}
 })
 
-DefineFaction("Ligurian Tribe", {
-	Civilization = "celt", -- were they really Celts?
+DefineFaction("Darini Tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+	Civilization = "celt", -- correct?
 	Type = "tribe",
---	Language = "gaulish",
+	Colors = {"brown"}
+})
+
+DefineFaction("Gangani Tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+	Civilization = "celt", -- correct?
+	Type = "tribe",
+	Colors = {"black"}
+})
+
+DefineFaction("Hibernii Tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+	Civilization = "celt", -- correct?
+	Type = "tribe",
 	Colors = {"green"}
-})
-
-DefineFaction("Menapii Tribe", {
-	Civilization = "celt",
-	Type = "tribe",
---	Language = "gaulish",
-	Colors = {"yellow"}
 })
 
 DefineFaction("Norici Tribe", {
 	Civilization = "celt",
 	Type = "tribe",
 	Colors = {"white"} -- another color, perhaps?
+})
+
+DefineFaction("Otalini Tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+	Civilization = "celt", -- correct?
+	Type = "tribe",
+	Colors = {"purple"}
 })
 
 DefineFaction("Pict Tribe", {
@@ -112,22 +109,16 @@ DefineFaction("Scot Tribe", {
 	Colors = {"brown"}
 })
 
-DefineFaction("Sequani Tribe", {
-	Civilization = "celt",
+DefineFaction("Selgovae Tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+	Civilization = "celt", -- correct?
 	Type = "tribe",
---	Language = "gaulish",
-	Colors = {"pink", "red"},
-	HistoricalDiplomacyStates = {
-		-71, "celt", "Aedui Tribe", "war" -- The Suebic king Ariovistus enters Gaul at the request of the Arverni and the Sequani to fight the Aedui in 71 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 230.
-	}
+	Colors = {"white"}
 })
 
-DefineFaction("Turone Tribe", {
-	Civilization = "celt",
+DefineFaction("Sovantae Tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+	Civilization = "celt", -- correct?
 	Type = "tribe",
---	Language = "gaulish",
-	Colors = {"cyan"},
-	HistoricalFactionDerivations = {-27, "celt", "Boii Tribe"}
+	Colors = {"blue"}
 })
 
 -- Polities
@@ -140,43 +131,11 @@ DefineFaction("Argyll", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971,
 	DefaultTier = "kingdom"
 })
 
-DefineFaction("Elmet", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 80.
-	Civilization = "celt",
-	Type = "polity",
---	Language = "welsh", -- it was a Briton kingdom
-	Colors = {"teal"},
-	DefaultTier = "kingdom"
-})
-
-DefineFaction("Gwynedd", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 80.
-	Civilization = "celt",
-	Type = "polity",
---	Language = "welsh", -- it was a Briton kingdom
-	Colors = {"blue"},
-	DefaultTier = "kingdom"
-})
-
 DefineFaction("Meath", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 88.
 	Civilization = "celt",
 	Type = "polity",
 --	Language = "old-irish", -- it was an Irish kingdom
 	Colors = {"red"},
-	DefaultTier = "kingdom"
-})
-
-DefineFaction("Powys", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 78.
-	Civilization = "celt",
-	Type = "polity",
---	Language = "welsh", -- it was a Briton kingdom
-	Colors = {"green"},
-	DefaultTier = "kingdom"
-})
-
-DefineFaction("Strathclyde", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 85, 87.
-	Civilization = "celt",
-	Type = "polity",
---	Language = "welsh", -- it was a Briton kingdom
-	Colors = {"brown"},
 	DefaultTier = "kingdom"
 })
 
@@ -191,3 +150,6 @@ DefineFaction("Vana Tribe", {
 		"upgrade-germanic-wood-plow", -4000, -- Indo-Europeans possessed plows (as indicated by the existence of a word for plow in their vocabulary); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 104.
 	}
 })
+
+Load("scripts/civilizations/celt/factions_briton.lua")
+Load("scripts/civilizations/celt/factions_gaul.lua")

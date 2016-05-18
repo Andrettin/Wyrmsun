@@ -111,7 +111,7 @@ DefineCharacter("Berchar", { -- Source: "Medieval Warfare V.2", 2013, p. 7.
 	Type = "unit-frank-swordsman",
 	Civilization = "teuton",
 	Faction = "Neustria",
-	ProvinceOfOrigin = "Francia", -- correct?
+	ProvinceOfOrigin = "France", -- correct?
 	DeathYear = 687, -- was defeated in the Battle of Tertry against Pepin of Herstal (Mayor of the Palace of Austrasia) in 687
 	HistoricalTitles = {
 		"head-of-government", 0, 687, "teuton", "Neustria" -- was Mayor of the Palace of Neustria (presumably) until 687, when he was defeated in the Battle of Tertry

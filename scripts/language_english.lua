@@ -1954,7 +1954,7 @@ DefineLanguageWord("Mouth", {
 	Type = "noun",
 	Meanings = {"Mouth"},
 	Gender = "neuter",
-	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- examples: "Plymouth", "Portsmouth"
+	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- examples: "Portsmouth"
 })
 
 DefineLanguageWord("Nathan", {
@@ -2187,9 +2187,7 @@ DefineLanguageWord("Plank", {
 DefineLanguageWord("Ply", {
 	Language = "english",
 	Type = "noun",
-	Meanings = {},
---	Gender = "?",
-	AffixNameTypes = {"compound", "prefix", "singular", "settlement"} -- example: "Plymouth"
+	Meanings = {}
 })
 
 DefineLanguageWord("Pollard", {
@@ -2486,7 +2484,7 @@ DefineLanguageWord("Set", {
 	Meanings = {},
 	Gender = "neuter",
 	Archaic = true,
-	AffixNameTypes = {"compound", "suffix", "singular", "province"} -- examples: "Dorset", "Somerset"
+	AffixNameTypes = {"compound", "suffix", "singular", "province"} -- examples: "Dorset"
 })
 
 DefineLanguageWord("Seven", {
@@ -2660,8 +2658,7 @@ DefineLanguageWord("Somer", {
 	Meanings = {},
 	DerivesFrom = {"old-english", "noun", "Sumor"}, -- possibly, since "Summer" does
 	Gender = "neuter",
-	Archaic = true,
-	AffixNameTypes = {"compound", "prefix", "singular", "province"} -- example: "Somerset"
+	Archaic = true
 })
 
 DefineLanguageWord("Sorrow", {
@@ -3039,6 +3036,13 @@ DefineLanguageWord("Water", {
 		"compound", "prefix", "singular", "settlement", -- example: "Waterford"
 		"separate", "prefix", "singular", "terrain-mountains" -- example: "Water Crag"
 	}
+})
+
+DefineLanguageWord("Well", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Well"},
+	Gender = "neuter"
 })
 
 DefineLanguageWord("Wes", {

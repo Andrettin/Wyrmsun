@@ -28,14 +28,14 @@
 local ChristianityEvents = {
 	PalladiusFailure = { -- Source: Philip Schaff, "History of the Christian Church", 1997, §14.
 		Name = "Palladius' Failure",
-		Description = "The bishop of PROVINCE_NAME Palladius, faced with great difficulties, has desisted from his mission of promoting Christianity there. He left with his assistants for the northern parts of Great Britain, where his days ended.",
+		Description = "The bishop of Ireland Palladius, faced with great difficulties, has desisted from his mission of promoting Christianity there. He left with his assistants for the northern parts of Great Britain, where his days ended.",
 		Conditions = function(s)
 			if (
-				GetProvinceOwner("Ireland") == EventFaction.Name
+				GetProvinceOwner("Leinster") == EventFaction.Name
 				and SyncRand(100) < 80
-				and GetGrandStrategyEventTriggered("Palladius, Bishop of PROVINCE_NAME")
+				and GetGrandStrategyEventTriggered("Palladius, Bishop of Ireland")
 			) then
-				EventProvince = WorldMapProvinces.Ireland
+				EventProvince = WorldMapProvinces.Leinster
 				return true
 			else
 				return false
@@ -51,15 +51,15 @@ local ChristianityEvents = {
 		OptionTooltips = {"-1 Prestige"}
 	},
 	PalladiusTheApostleOfIreland = { -- ahistorical success of Palladius in converting the Irish
-		Name = "Palladius, the Apostle of PROVINCE_NAME",
-		Description = "Palladius has succeeded in converting the people of PROVINCE_NAME to the Christian faith!",
+		Name = "Palladius, the Apostle of Ireland",
+		Description = "Palladius has succeeded in converting the people of Ireland to the Christian faith!",
 		Conditions = function(s)
 			if (
-				GetProvinceOwner("Ireland") == EventFaction.Name
+				GetProvinceOwner("Leinster") == EventFaction.Name
 				and SyncRand(100) < 20
-				and GetGrandStrategyEventTriggered("Palladius, Bishop of PROVINCE_NAME")
+				and GetGrandStrategyEventTriggered("Palladius, Bishop of Ireland")
 			) then
-				EventProvince = WorldMapProvinces.Ireland
+				EventProvince = WorldMapProvinces.Leinster
 				return true
 			else
 				return false
@@ -77,13 +77,13 @@ local ChristianityEvents = {
 	},
 	PatrickTheApostleOfIreland = { -- Source: Philip Schaff, "History of the Christian Church", 1997, §14.
 		Name = "Patrick, the Apostle of Ireland",
-		Description = "Patrick, the son of a deacon and grandson of a priest, was brought to PROVINCE_NAME as a slave when young, where he worked for six years as a shepherd. Having ran away from PROVINCE_NAME, he later had a dream instigating him to come back to the island and help propagate the Christian faith there. After his return to PROVINCE_NAME, Patrick personally baptized many thousands, successfully gaining the island for Christianity. \"The Irish\", he said, \"who never had the knowledge of God and worshiped only idols and unclean things, have lately become the people of the Lord\".",
+		Description = "Patrick, the son of a deacon and grandson of a priest, was brought to Ireland as a slave when young, where he worked for six years as a shepherd. Having ran away from Ireland, he later had a dream instigating him to come back to the island and help propagate the Christian faith there. After his return to Ireland, Patrick personally baptized many thousands, successfully gaining the island for Christianity. \"The Irish\", he said, \"who never had the knowledge of God and worshiped only idols and unclean things, have lately become the people of the Lord\".",
 		Conditions = function(s)
 			if (
-				GetProvinceOwner("Ireland") == EventFaction.Name
-				and GetProvinceCivilization("Ireland") == "celt"
+				GetProvinceOwner("Leinster") == EventFaction.Name
+				and GetProvinceCivilization("Leinster") == "celt"
 			) then
-				EventProvince = WorldMapProvinces.Ireland
+				EventProvince = WorldMapProvinces.Leinster
 				return true
 			else
 				return false
@@ -101,13 +101,13 @@ local ChristianityEvents = {
 	},
 	SPatriciiCanticumScotticum = { -- Source: Philip Schaff, "History of the Christian Church", 1997, §15.
 		Name = "S. Patricii Canticum Scotticum",
-		Description = "Patrick wrote a hymn called S. Patricii Canticum Scotticum just before he converted the main chieftain of PROVINCE_NAME. The hymn contained a prayer invoking help for such an important task, and contained the major Christian doctrines, along with a warning against spells done by old women and smiths who abided by the pagan traditions.",
+		Description = "Patrick wrote a hymn called S. Patricii Canticum Scotticum just before he converted the main chieftain of Ireland. The hymn contained a prayer invoking help for such an important task, and contained the major Christian doctrines, along with a warning against spells done by old women and smiths who abided by the pagan traditions.",
 		Conditions = function(s)
 			if (
-				GetProvinceOwner("Ireland") == EventFaction.Name
+				GetProvinceOwner("Leinster") == EventFaction.Name
 				and SyncRand(100) < 10 -- should take a bit until Patrick writes this hymn, as his mission began in 440 and ended only in 493
 			) then
-				EventProvince = WorldMapProvinces.Ireland
+				EventProvince = WorldMapProvinces.Leinster
 				return true
 			else
 				return false
@@ -126,14 +126,14 @@ local ChristianityEvents = {
 		OptionTooltips = {"+1 Prestige"}
 	},
 	ColumbaMissionaryToScotland = { -- Source: Philip Schaff, "History of the Christian Church", 1997, §15.
-		Name = "Columba, Missionary to PROVINCE_NAME",
-		Description = "The Irish missionary Columba has arrived with twelve companions in the settlement of Hy in PROVINCE_NAME to spread the Christian faith.",
+		Name = "Columba, Missionary to Scotland",
+		Description = "The Irish missionary Columba has arrived with twelve companions in the settlement of Hy in Scotland to spread the Christian faith.",
 		Conditions = function(s)
 			if (
-				GetProvinceOwner("Lowland Scotland") == EventFaction.Name -- I couldn't find where Hy is, so this is a supposition
-				and GetProvinceCivilization("Ireland") == "celt"
+				GetProvinceOwner("Lothian") == EventFaction.Name -- I couldn't find where Hy is, so is this correct?
+				and GetProvinceCivilization("Leinster") == "celt"
 			) then
-				EventProvince = WorldMapProvinces.LowlandScotland
+				EventProvince = WorldMapProvinces.Lothian
 				return true
 			else
 				return false
@@ -156,7 +156,7 @@ local ChristianityEvents = {
 			if (
 				GetProvinceOwner("Highland Scotland") == EventFaction.Name
 				and GetProvinceCivilization("Highland Scotland") == "celt" -- there must be Picts in Highland Scotland for this event to fire
-				and GetProvinceCivilization("Ireland") == "celt"
+				and GetProvinceCivilization("Leinster") == "celt"
 			) then
 				EventProvince = WorldMapProvinces.HighlandScotland
 				return true
@@ -335,12 +335,12 @@ local ChristianityEvents = {
 		OptionTooltips = {"+1 Prestige"}
 	},
 	ColumbanusMissionaryToFrance = { -- Source: Philip Schaff, "History of the Christian Church", 1997, §15.
-		Name = "Columbanus, Missionary to PROVINCE_NAME",
-		Description = "The Irish missionary Columbanus has arrived with twelve companions in PROVINCE_NAME to spread the Christian faith.",
+		Name = "Columbanus, Missionary to France",
+		Description = "The Irish missionary Columbanus has arrived with twelve companions in France to spread the Christian faith.",
 		Conditions = function(s)
 			if (
 				GetProvinceOwner("France") == EventFaction.Name
-				and GetProvinceCivilization("Ireland") == "celt"
+				and GetProvinceCivilization("Leinster") == "celt"
 			) then
 				EventProvince = WorldMapProvinces.France
 				return true
@@ -388,7 +388,7 @@ local ChristianityEvents = {
 			if (
 				GetProvinceOwner("Franconia") == EventFaction.Name
 				and (GetProvinceCivilization("Franconia") == "germanic" or GetProvinceCivilization("Franconia") == "teuton") -- Franconia wouldn't have that name if it isn't germanic-culture (since it receives its name from the Franks, a germanic tribe)
-				and GetProvinceCivilization("Ireland") == "celt"
+				and GetProvinceCivilization("Leinster") == "celt"
 			) then
 				EventProvince = WorldMapProvinces.Franconia
 				return true
@@ -412,7 +412,7 @@ local ChristianityEvents = {
 		Conditions = function(s)
 			if (
 				GetProvinceOwner("Belgium") == EventFaction.Name
-				and GetProvinceCivilization("Ireland") == "celt"
+				and GetProvinceCivilization("Leinster") == "celt"
 			) then
 				EventProvince = WorldMapProvinces.Belgium
 				return true
@@ -459,7 +459,7 @@ local ChristianityEvents = {
 		Conditions = function(s)
 			if (
 				GetProvinceOwner("Bavaria") == EventFaction.Name
-				and GetProvinceCivilization("Ireland") == "celt"
+				and GetProvinceCivilization("Leinster") == "celt"
 			) then
 				EventProvince = WorldMapProvinces.Bavaria
 				return true
@@ -506,8 +506,8 @@ local ChristianityEvents = {
 		Description = "Ferdomnach was a learned monk belonging to the monastery of Armagh, who worked as a scribe and compiled many of the religious works extant at the time.",
 		Conditions = function(s)
 			if (
-				GetProvinceOwner("Ireland") == EventFaction.Name
-				and GetProvinceCivilization("Ireland") == "celt"
+				GetProvinceOwner("Leinster") == EventFaction.Name -- correct?
+				and GetProvinceCivilization("Leinster") == "celt"
 			) then
 				return true
 			else
@@ -529,7 +529,7 @@ local ChristianityEvents = {
 		Description = "The Book of Armargh was a compilation of a number of religious texts, written by the learned monk Ferdomnach. The book included the memoirs of St. Patrick, the Confession of St. Patrick, the Preface of Jerome to the New Testament, and many other texts.",
 		Conditions = function(s)
 			if (
-				GetProvinceOwner("Ireland") == EventFaction.Name
+				GetProvinceOwner("Leinster") == EventFaction.Name
 			) then
 				return true
 			else
@@ -607,7 +607,7 @@ local ChristianityEvents = {
 		Conditions = function(s)
 			if (
 				GetProvinceOwner("Belgium") == EventFaction.Name
-				and GetProvinceCivilization("Ireland") == "celt"
+				and GetProvinceCivilization("Leinster") == "celt"
 			) then
 				EventProvince = WorldMapProvinces.Belgium
 				return true
