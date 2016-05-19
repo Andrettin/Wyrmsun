@@ -27,8 +27,9 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-Load("scripts/grand_strategy/christianity_events.lua")
 --Load("scripts/grand_strategy/brazilian_events.lua") -- not active since the map doesn't encompass that region yet (these events will become active when the map is expanded - in a few years? - to accomodate more of the world, when we have expanded to more advanced technological periods
+Load("scripts/grand_strategy/christianity_events.lua")
+Load("scripts/grand_strategy/teuton_events.lua")
 
 function LoadEvents(world)
 	GrandStrategyEvents = nil
@@ -153,7 +154,7 @@ function LoadEvents(world)
 		Load("scripts/grand_strategy/germanic_events.lua")
 		Load("scripts/grand_strategy/latin_events.lua")
 		Load("scripts/grand_strategy/norse_events.lua")
-		Load("scripts/grand_strategy/teuton_events.lua")
+		Load("scripts/grand_strategy/teuton_events_old.lua")
 	end
 	if (world == "Nidavellir" or world == "Random" or world == "Save") then
 		Load("scripts/grand_strategy/nidavellir_events.lua")
