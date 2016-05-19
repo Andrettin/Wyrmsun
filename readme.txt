@@ -61,6 +61,9 @@ https://github.com/Andrettin/Wyrmsun
 - 2.2.4
 -----------------------------------------------------------------------
 
+* Factions
+- Added Ubii Tribe (Teuton), which gets +5% Gold processing as its faction bonus (in the grand strategy mode they get a +5% precious metal production modifier).
+
 * Grand Strategy
 - Split the Devon and Somerset provinces off the Wessex one.
 - Split the Gwynedd province off the Wales one.

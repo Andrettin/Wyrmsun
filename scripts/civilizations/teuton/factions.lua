@@ -296,6 +296,23 @@ DefineFaction("Sugambri Tribe", {
 	}
 })
 
+DefineFaction("Ubii Tribe", { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, pp. 227-228.
+	Civilization = "teuton",
+	Type = "tribe",
+	Language = "old-high-german", -- correct?
+	FactionUpgrade = "upgrade-ubii-tribe-faction",
+	Colors = {"purple"},
+	DevelopsTo = {"Cologne", "Hesse"}, -- same general area
+	Description = _("The Ubii were a West Germanic tribe who lived by the Rhine, north of the Main river. Due to their location in a central trading spot, they were more advanced than other Germanic tribes. Being allies of Rome, many of them eventually migrated west of the Rhine, dwelling around Colonia Agrippinenses (the modern Cologne). The ones who remained possibly became the Chatti."),
+	HistoricalFactionDerivations = {-55, "teuton", "Suebi Tribe"}, -- they are first mentioned in Caesar's writings in 55 BC
+	HistoricalTechnologies = {
+		"upgrade-teuton-spatha", 180 -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
+	},
+	HistoricalDiplomacyStates = {
+		-55, "teuton", "Suebi Tribe", "vassal" -- the Ubii were tributaries of the Suebi in 55 BC
+	}
+})
+
 DefineFaction("Varini Tribe", {
 	Civilization = "teuton",
 	ParentFaction = "Saxon Tribe", -- accurate?
@@ -390,6 +407,18 @@ DefineFaction("Brunswick", {
 	Type = "polity",
 	Colors = {"green"},
 	DefaultTier = "duchy"
+})
+
+DefineFaction("Cologne", {
+	Civilization = "teuton",
+	ParentFaction = "Francia", -- correct?
+	Type = "polity",
+	Language = "high-german",
+	Colors = {"white"},
+	DefaultTier = "duchy", -- Cologne was an archbishopric in 1378; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 78-79.
+	Titles = {
+		"theocracy", "duchy", "Archbishopric"
+	}
 })
 
 DefineFaction("Netherlands", {

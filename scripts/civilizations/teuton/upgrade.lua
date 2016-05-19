@@ -188,6 +188,11 @@ DefineUpgrade("upgrade-thuringian-tribe-faction", {
 	Name = _("Thuringian Tribe Faction")
 })
 
+DefineUpgrade("upgrade-ubii-tribe-faction", {
+	Name = _("Ubii Tribe Faction"),
+	GrandStrategyProductionEfficiencyModifier = {"gold", 5, "silver", 5, "copper", 5}
+})
+
 DefineUpgrade("upgrade-mecklenburg-faction", {
 	Name = _("Mecklenburg Faction")
 })
@@ -385,6 +390,11 @@ DefineModifier("upgrade-thuringian-tribe-faction",
 	{"BasicDamage", 1},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-archer"}
+)
+
+DefineModifier("upgrade-ubii-tribe-faction",
+	{"improve-production", "gold", 5}, -- the Ubii were in a central trading position, making them more advanced than other Germanic tribes
+	{"apply-to", "unit-teuton-town-hall"}, {"apply-to", "unit-teuton-stronghold"}
 )
 
 DefineModifier("upgrade-mecklenburg-faction",

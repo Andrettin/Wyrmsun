@@ -141,12 +141,6 @@ DefineLanguageWord("Χórtos", { -- Source: Winfred P. Lehmann, "A Grammar of Pr
 	Meanings = {"Garden"}
 })
 
-DefineLanguageWord("Χώμη", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 53.
-	Language = "greek",
-	Type = "noun",
-	Meanings = {"Village"} -- source gives the German "Dorf" as the meaning
-})
-
 DefineLanguageWord("Χράτος", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 48.
 	Language = "greek",
 	Type = "noun",
@@ -252,6 +246,18 @@ DefineLanguageWord("Ídmen", { -- this is the plural first person present; Sourc
 	NumberPersonTenseMoodInflections = {
 		"plural", "first-person", "present", "indicative", "Ídmen"
 	}
+})
+
+DefineLanguageWord("Κώμη", { -- Fick gives "Χώμη" instead; Source: Arnold H. Price, "Early Places Ending in -heim as Warrior Club Settlements and the Role of Soc in the Germanic Administration of Justice", 1981, p. 194; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 53.
+	Language = "greek",
+	Type = "noun",
+	Meanings = {"Village"} -- as given by Price; Fick also gives the German "Dorf" as the meaning
+})
+
+DefineLanguageWord("Κῶμος", { -- Source: Arnold H. Price, "Early Places Ending in -heim as Warrior Club Settlements and the Role of Soc in the Germanic Administration of Justice", 1981, p. 194.
+	Language = "greek",
+	Type = "noun",
+	Meanings = {"Feast"}
 })
 
 DefineLanguageWord("Κώνωπες", { -- this is the plural; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 101.

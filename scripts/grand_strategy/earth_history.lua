@@ -800,9 +800,6 @@ if (GrandStrategyYear >= -264) then
 	SetProvinceOwner("Westphalia", "teuton", "Sugambri Tribe")
 	SetProvinceCivilization("Westphalia", "teuton")
 	
-	SetProvinceOwner("Hesse", "teuton", "Chatti Tribe")
-	SetProvinceCivilization("Hesse", "teuton")
-	
 	SetProvinceOwner("Franconia", "teuton", "Hermunduri Tribe")
 	SetProvinceCivilization("Franconia", "teuton")
 	SetProvinceOwner("Upper Saxony", "teuton", "Hermunduri Tribe")
@@ -1443,7 +1440,6 @@ if (GrandStrategyYear >= 919) then
 	
 	-- Duchy of Franconia
 	SetProvinceOwner("Franconia", "teuton", "Holy Rome")
-	SetProvinceOwner("Hesse", "teuton", "Holy Rome")
 	SetProvinceOwner("Palatinate", "teuton", "Holy Rome")
 	SetProvinceCivilization("Palatinate", "teuton")
 	
@@ -1711,7 +1707,6 @@ if (GrandStrategyYear >= 1648) then
 	SetProvinceOwner("Friesland", "teuton", "Netherlands")
 	SetProvinceOwner("Drenthe", "teuton", "Netherlands")
 	SetProvinceOwner("Westphalia", "teuton", "Westphalia")
-	SetProvinceOwner("Hesse", "teuton", "Hesse")
 	SetProvinceOwner("Hither Pomerania", "norse", "Sweden")
 	SetProvinceOwner("Bremen", "norse", "Sweden")
 	

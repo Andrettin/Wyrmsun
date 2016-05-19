@@ -2568,10 +2568,19 @@ DefineProvince("Hesse", {
 	SettlementTerrain = "Plains",
 	Claims = {
 		"teuton", "Chatti Tribe",
+		"teuton", "Ubii Tribe",
 		"teuton", "Austrasia", -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
 		"teuton", "Franconia", -- Part of the Duchy of Franconia in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		"teuton", "Hesse",
-		"teuton", "Holy Rome"
+		"teuton", "Holy Rome" -- Part of the Holy Roman Empire in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+	},
+	HistoricalOwners = {
+		-55, "teuton", "Ubii Tribe", -- The Ubii dwelled north of the Main and bordering on the Rhine in 55 BC; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, pp. 227-228.
+		919, "teuton", "Holy Rome", -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+		1648, "teuton", "Hesse" -- Political situation in Central Europe in 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
+	},
+	HistoricalCultures = {
+		-55, "teuton"
 	},
 	HistoricalSettlementBuildings = {
 		768, "unit-teuton-temple", true, -- Monastery or abbey existent in Hersfeld during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
