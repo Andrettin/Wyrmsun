@@ -31,7 +31,7 @@ DefineCharacter("Maelgwn", { -- Source: Frank Stenton, "Anglo-Saxon England", 19
 	Type = "unit-germanic-warrior",
 	Civilization = "celt",
 	Faction = "Gwynedd",
---	ProvinceOfOrigin = ?,
+	ProvinceOfOrigin = "Gwynedd", -- presumably
 	DeathYear = 547
 })
 
@@ -101,7 +101,7 @@ DefineCharacter("Cadwallon", { -- Source: Frank Stenton, "Anglo-Saxon England", 
 	Type = "unit-germanic-warrior",
 	Civilization = "celt",
 	Faction = "Gwynedd",
-	ProvinceOfOrigin = "Wales",
+	ProvinceOfOrigin = "Gwynedd",
 	Year = 632,
 	DeathYear = 633, -- killed by Oswald of Bernicia in 633
 	ViolentDeath = true,
@@ -116,7 +116,7 @@ DefineCharacter("Cadafael", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	Type = "unit-germanic-warrior",
 	Civilization = "celt",
 	Faction = "Gwynedd",
-	ProvinceOfOrigin = "Wales",
+	ProvinceOfOrigin = "Gwynedd",
 	Year = 654 -- went with Penda to attack Oswiu of Bernicia
 })
 
@@ -126,7 +126,7 @@ DefineCharacter("Bruide mac Beli", { -- Source: Frank Stenton, "Anglo-Saxon Engl
 	Type = "unit-germanic-warrior",
 	Civilization = "celt",
 	Faction = "Pict Tribe",
-	ProvinceOfOrigin = "Highland Scotland", -- son of the king of Strathclyde
+	ProvinceOfOrigin = "Strathclyde", -- son of the king of Strathclyde
 	Year = 672,
 	DeathYear = 693, -- died
 	HistoricalTitles = {
