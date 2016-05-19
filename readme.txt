@@ -68,6 +68,10 @@ https://github.com/Andrettin/Wyrmsun
 - Split the Connaught, Munster and Ulster provinces off the Ireland one, and renamed the latter to Leinster.
 - Greatly improved the setup of British and Irish tribes for the 9 BC start date.
 
+* Miscellaneous
+- Improved the performance of the name generation pattern derivation when the game starts.
+- Proper names are now more consistent when changing from a civilization/faction that has one language to another that has a different one. For example, the Germanic province name "Vestalanda" now becomes "Westlant" when changing civilization to Teuton and becoming the Suebi Tribe.
+
 -----------------------------------------------------------------------
 - 2.2.3
 -----------------------------------------------------------------------
