@@ -69,6 +69,7 @@ https://github.com/Andrettin/Wyrmsun
 - Split the Gwynedd province off the Wales one.
 - Split the Galloway and Strathclyde provinces off the Lowland Scotland one, and renamed the latter to Lothian.
 - Split the Connaught, Munster and Ulster provinces off the Ireland one, and renamed the latter to Leinster.
+- Split the Liege and Luxemburg provinces off the Belgium one.
 - Greatly improved the setup of British and Irish tribes for the 9 BC start date.
 
 * Miscellaneous

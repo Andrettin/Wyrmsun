@@ -42,6 +42,31 @@ DefineFaction("Arverni Tribe", {
 	}
 })
 
+DefineFaction("Caerasi Tribe", { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 223.
+	Civilization = "celt",
+	Type = "tribe",
+--	Language = "gaulish", -- presumably
+	Colors = {"white"}
+})
+
+DefineFaction("Condrusi Tribe", { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 223.
+	Civilization = "celt",
+	Type = "tribe",
+--	Language = "gaulish", -- presumably
+	Colors = {"brown"}
+})
+
+DefineFaction("Eburones Tribe", { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, pp. 223-226.
+	Civilization = "celt",
+	Type = "tribe",
+--	Language = "gaulish", -- presumably
+	Colors = {"yellow"},
+	Description = _("The Eburones were a Gaulish tribe which dwelled largely between the Rhine and the Meuse. They fought fiercely against Caesar's Romans, but ended up being annihilated by them."),
+	HistoricalCapitals = {
+		-54, "Liege" -- in 54 the capital of the Eburones was Aduatuca
+	}
+})
+
 DefineFaction("Helvetii Tribe", {
 	Civilization = "celt",
 	Type = "tribe",
@@ -63,6 +88,27 @@ DefineFaction("Menapii Tribe", {
 	Colors = {"yellow"}
 })
 
+DefineFaction("Nervii Tribe", { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 224.
+	Civilization = "celt",
+	Type = "tribe",
+--	Language = "gaulish", -- presumably
+	Colors = {"orange"}
+})
+
+DefineFaction("Poemanni Tribe", { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 223.
+	Civilization = "celt",
+	Type = "tribe",
+--	Language = "gaulish", -- presumably
+	Colors = {"red"}
+})
+
+DefineFaction("Segni Tribe", { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 223.
+	Civilization = "celt",
+	Type = "tribe",
+--	Language = "gaulish", -- presumably
+	Colors = {"blue"}
+})
+
 DefineFaction("Sequani Tribe", {
 	Civilization = "celt",
 	Type = "tribe",
@@ -70,6 +116,17 @@ DefineFaction("Sequani Tribe", {
 	Colors = {"pink", "red"},
 	HistoricalDiplomacyStates = {
 		-71, "celt", "Aedui Tribe", "war" -- The Suebic king Ariovistus enters Gaul at the request of the Arverni and the Sequani to fight the Aedui in 71 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 230.
+	}
+})
+
+DefineFaction("Treviri Tribe", { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 223.
+	Civilization = "celt", -- a Belgic tribe
+	Type = "tribe",
+--	Language = "gaulish", -- presumably
+	Colors = {"green"},
+	HistoricalDiplomacyStates = {
+		-54, "celt", "Condrusi Tribe", "sovereign", -- in 54 BC the Condrusi were clients of the Treviri
+		-54, "celt", "Eburones Tribe", "sovereign" -- in 54 BC the Eburones were clients of the Treviri
 	}
 })
 

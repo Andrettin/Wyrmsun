@@ -25,58 +25,42 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-Load("scripts/civilizations/celt/characters_briton.lua")
-Load("scripts/civilizations/celt/characters_gaul.lua")
-
-DefineCharacter("Aedan mac Gabrain", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 77, 86.
-	Name = "Aedan", -- the king of a kingdom founded in Argyll by Irish settlers
-	FamilyName = "mac Gabrain",
+DefineCharacter("Ambiorix", { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 223.
+	Name = "Ambiorix",
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "celt",
-	Faction = "Argyll",
-	ProvinceOfOrigin = "Highland Scotland",
-	Year = 574, -- became king
-	-- attacked the Bernicians in 603 AD
+	Faction = "Eburones Tribe",
+	ProvinceOfOrigin = "Liege", -- presumably
+	Year = -54,
 	HistoricalTitles = {
-		"head-of-state", 574, 0, "celt", "Argyll"
+		"head-of-state", -54, 0, "celt", "Eburones Tribe" -- was chieftain of the Eburones tribe in 54 BC (together with Cativolcus)
 	}
 })
 
-DefineCharacter("Certic", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 80.
-	Name = "Certic",
+DefineCharacter("Cativolcus", { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, pp. 223, 225.
+	Name = "Cativolcus",
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "celt",
-	Faction = "Elmet",
---	ProvinceOfOrigin = ?
-	DateReferenceCharacter = "Edwin", -- was a contemporary of Edwin of Deira, who conquered his kingdom
-	HistoricalTitles = {
-		"head-of-state", 0, 0, "celt", "Elmet" -- king of Elmet
-	}
+	Faction = "Eburones Tribe",
+	ProvinceOfOrigin = "Liege", -- presumably
+	Year = -54,
+	DeathYear = -53, -- poisoned himself after the Romans devastated the lands of his people
+	ViolentDeath = true,
+	Trait = "upgrade-old"
+	-- was chieftain of the Eburones tribe in 54 BC (together with Ambiorix)
 })
 
-DefineCharacter("Bruide mac Beli", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 87-88.
-	Name = "Bruide mac Beli",
+DefineCharacter("Indutiomarus", { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 224.
+	Name = "Indutiomarus",
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "celt",
-	Faction = "Pict Tribe",
-	ProvinceOfOrigin = "Strathclyde", -- son of the king of Strathclyde
-	Year = 672,
-	DeathYear = 693, -- died
+	Faction = "Treviri Tribe",
+	ProvinceOfOrigin = "Liege", -- presumably
+	Year = -54,
 	HistoricalTitles = {
-		"head-of-state", 672, 693, "celt", "Pict Tribe" -- became king of the Picts in 672
+		"head-of-state", -54, 0, "celt", "Treviri Tribe" -- was chieftain of the Treviri in 54 BC
 	}
 })
-
-DefineCharacter("Dicuil", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 40.
-	Name = "Dicuil", -- Irish monk who became notable for his scholarship
-	Gender = "male",
-	Type = "unit-germanic-warrior", -- should be priest
-	Civilization = "celt", -- presumably
-	ProvinceOfOrigin = "Leinster", -- correct?
-	Year = 825, -- wrote "De Mensura Orbis Terrae"
-	AuthoredWorks = {"upgrade-work-de-mensura-orbis-terrae"}
-})
-

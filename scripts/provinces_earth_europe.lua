@@ -679,11 +679,8 @@ DefineProvince("Belgium", {
 		{490, 110}, {490, 111}, {490, 112},
 		{491, 110}, {491, 111}, {491, 112},
 		{492, 110}, {492, 111}, {492, 112}, {492, 113},
-		{493, 110}, {493, 111}, {493, 112}, {493, 113},
-		{494, 110}, {494, 111}, {494, 112}, {494, 113}, {494, 114},
-		{495, 110}, {495, 111}, {495, 112}, {495, 113}, {495, 114}, {495, 115},
-		{496, 112}, {496, 113}, {496, 114}, {496, 115},
-		{497, 115}
+		{493, 110}, {493, 111}, {493, 112},
+		{494, 110}, {494, 111}, {494, 112}
 	},
 	SettlementLocation = {492, 111}, -- Brussels
 	Map = "maps/random/random-map-forest.smp",
@@ -708,10 +705,6 @@ DefineProvince("Belgium", {
 	},
 	HistoricalCultures = {
 		-71, "celt"
-	},
-	HistoricalSettlementBuildings = {
-		768, "unit-teuton-temple", true, -- Monastery or abbey existent in Stavelot during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
-		768, "unit-teuton-temple", true -- Monastery or abbey existent in Echternach (in modern Luxembourg) during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 	},
 	HistoricalModifiers = {
 		1425, "upgrade-university", true -- University founded in Louvain in 1425. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.
@@ -3128,6 +3121,49 @@ DefineProvince("Leinster", {
 	Regions = {"British Isles", "Europe", "Northwest Europe", "West and Central Europe"}
 })
 
+DefineProvince("Liege", { -- also includes Namur and Belgian Limburg
+	World = "Earth",
+	FactionCulturalNames = {
+		"latin", "France", "Liège"
+	},
+	Tiles = {
+		{493, 112}, {493, 113},
+		{494, 112}, {494, 113},
+		{495, 110}, {495, 111}, {495, 112},
+		{496, 112},
+	},
+	SettlementLocation = {495, 112}, -- Liège
+	Map = "maps/random/random-map-forest.smp",
+	SettlementTerrain = "Plains",
+	Claims = {
+		"celt", "Caerasi Tribe", -- The Caerasi inhabited the Pagus Caroascus/Carascus in 54 BC (was that actually within the boundaries of this province?); Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 223.
+		"celt", "Condrusi Tribe", -- The Condrusi inhabited the strip of land from Namur towards Lüttich called Condruz/le Condros/Pagus Condrosius/Condruscus/Condrust/Condorusts in 54 BC; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 223.
+		"celt", "Eburones Tribe",
+		"celt", "Poemanni Tribe", -- The Poemanni inhabited the distric of Famen (also known as Pagus Falmenna/Pagus Falmenensis) in 54 BC; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 223.
+		"celt", "Segni Tribe", -- The Segni inhabited the location of the modern town of Sinei/Signei in the county of Namur in 54 BC; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 223.
+		"teuton", "Austrasia" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
+	},
+	HistoricalOwners = {
+		-54, "celt", "Eburones Tribe", -- The Eburones lived largely between the Maas and the Rhine in 54 BC (both the modern cities of Tongres and Spa were in their territory), when they entered conflict with the Romans; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, pp. 223-226.
+		-51, "", "", -- Caesar's Roman forces ravaged the Eburones' land, nigh annihilating them; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 226.
+		-50, "latin", "Rome", -- Gaul conquered by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		450, "teuton", "Frank Tribe", -- Frankish territory in 450 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 48.
+		481, "teuton", "Francia", -- Frankish territory in 481 AD, and the Franks had already established their kingdom; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
+		919, "teuton", "Holy Rome" -- Duchy of Lower Lorraine; Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+	},
+	HistoricalClaims = {
+		-50, "latin", "Rome",
+		481, "teuton", "Francia"
+	},
+	HistoricalCultures = {
+		-54, "celt"
+	},
+	HistoricalSettlementBuildings = {
+		768, "unit-teuton-temple", true, -- Monastery or abbey existent in Stavelot during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
+	},
+	Regions = {"Europe", "Gaul", "Germany-Netherlands", "Northwest Europe", "West and Central Europe"}
+})
+
 DefineProvince("Liguria", {
 	World = "Earth",
 	CulturalNames = {
@@ -3412,6 +3448,43 @@ DefineProvince("Lower Rhine", {
 		1454, "upgrade-university", true -- University founded in Trier in 1454. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.
 	},
 	Regions = {"Europe", "Gaul", "Germany-Netherlands", "West and Central Europe"}
+})
+
+DefineProvince("Luxemburg", {
+	World = "Earth",
+	CulturalNames = {
+		"teuton", "Luxemburg", "settlement-derived-name" -- presumably
+	},
+	FactionCulturalNames = {
+		"latin", "France", "Luxembourg", "settlement-derived-name" -- presumably
+	},
+	Tiles = {
+		{494, 114},
+		{495, 113}, {495, 114}, {495, 115},
+		{496, 113}, {496, 114}, {496, 115},
+		{497, 115}
+	},
+	SettlementLocation = {497, 115}, -- Luxemburg
+	Map = "maps/random/random-map-forest.smp",
+	SettlementTerrain = "Plains",
+	Claims = {
+		"teuton", "Austrasia" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
+	},
+	HistoricalOwners = {
+		-50, "latin", "Rome", -- Gaul conquered by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		450, "teuton", "Frank Tribe", -- Frankish territory in 450 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 48.
+		481, "teuton", "Francia", -- Frankish territory in 481 AD, and the Franks had already established their kingdom; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
+		919, "teuton", "Holy Rome", -- Duchy of Upper Lorraine; Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+		1560, "latin", "Spain" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalClaims = {
+		-50, "latin", "Rome",
+		481, "teuton", "Francia"
+	},
+	HistoricalSettlementBuildings = {
+		768, "unit-teuton-temple", true -- Monastery or abbey existent in Echternach (in modern Luxembourg) during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
+	},
+	Regions = {"Europe", "Gaul", "Germany-Netherlands", "Northwest Europe", "West and Central Europe"}
 })
 
 DefineProvince("Lyonnais", {

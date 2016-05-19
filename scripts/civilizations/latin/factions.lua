@@ -186,6 +186,10 @@ DefineFaction("Rome", {
 	HistoricalTechnologies = {
 		"upgrade-teuton-masonry", -264, -- Rome should already have masonry technology by then
 		"upgrade-teuton-coinage", -58 -- Silver currency existent in the Roman Republic during Caesar's time, and he issued gold currency during his campaigns in Gaul; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, p. 190.
+	},
+	HistoricalDiplomacyStates = {
+		-54, "celt", "Eburones Tribe", "war", -- the Eburones attacked the Romans in 54 BC (instigated by the Treviri, of whom they were clients); Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, pp. 223-224.
+		-54, "celt", "Nervii Tribe", "war" -- the Nervii allied with the Eburones to attack the Romans in 54 BC; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, pp. 223-224.
 	}
 })
 

@@ -97,7 +97,7 @@ DefineCharacter("Pepin of Herstal", { -- Source: "Medieval Warfare V.2", 2013, p
 	Type = "unit-frank-swordsman",
 	Civilization = "teuton",
 	Faction = "Austrasia",
-	ProvinceOfOrigin = "Belgium", -- presumably from Herstal
+	ProvinceOfOrigin = "Liege", -- presumably from Herstal
 	Year = 675,
 	DeathYear = 714, -- died
 	HistoricalTitles = {
@@ -125,7 +125,7 @@ DefineCharacter("Charles Martel", { -- Source: "Medieval Warfare V.2", 2013, p. 
 	Type = "unit-frank-swordsman",
 	Civilization = "teuton",
 	Faction = "Francia",
-	ProvinceOfOrigin = "Belgium", -- correct? his father was presumably from Herstal
+	ProvinceOfOrigin = "Liege", -- correct? his father was presumably from Herstal
 	Year = 718, -- term as Mayor of the Palace of Francia began
 	DeathYear = 741, -- died
 	Father = "Pepin of Herstal",
@@ -156,7 +156,7 @@ DefineCharacter("Pepin the Short Carolingian", { -- Source: "Medieval Warfare V.
 	Type = "unit-frank-swordsman",
 	Civilization = "teuton",
 	Faction = "Francia",
-	ProvinceOfOrigin = "Belgium", -- correct? his grandfather was presumably from Herstal
+	ProvinceOfOrigin = "Liege", -- correct? his grandfather was presumably from Herstal
 	Father = "Charles Martel",
 	Year = 741, -- with Charles Martel's death in 741, Francia was split between Pepin, Carloman and Grifo
 	DeathYear = 768, -- died
@@ -172,7 +172,7 @@ DefineCharacter("Carloman Carolingian", { -- Source: "Medieval Warfare V.2", 201
 	Type = "unit-frank-swordsman",
 	Civilization = "teuton",
 	Faction = "Francia",
-	ProvinceOfOrigin = "Belgium", -- correct? his grandfather was presumably from Herstal
+	ProvinceOfOrigin = "Liege", -- correct? his grandfather was presumably from Herstal
 	Father = "Charles Martel",
 	Year = 741 -- with Charles Martel's death in 741, Francia was split between Pepin, Carloman and Grifo
 })
@@ -184,7 +184,7 @@ DefineCharacter("Grifo Carolingian", { -- Source: "Medieval Warfare V.2", 2013, 
 	Type = "unit-frank-swordsman",
 	Civilization = "teuton",
 	Faction = "Francia",
-	ProvinceOfOrigin = "Belgium", -- correct? his grandfather was presumably from Herstal
+	ProvinceOfOrigin = "Liege", -- correct? his grandfather was presumably from Herstal
 	Father = "Charles Martel",
 	Year = 741 -- with Charles Martel's death in 741, Francia was split between Pepin, Carloman and Grifo
 })
@@ -196,7 +196,7 @@ DefineCharacter("Drogo Carolingian", { -- Source: "Medieval Warfare V.2", 2013, 
 	Type = "unit-frank-swordsman",
 	Civilization = "teuton",
 	Faction = "Francia",
-	ProvinceOfOrigin = "Belgium", -- correct? his great-grandfather was presumably from Herstal
+	ProvinceOfOrigin = "Liege", -- correct? his great-grandfather was presumably from Herstal
 	Father = "Carloman Carolingian",
 	Year = 747 -- two years after 745 his father abdicated and put Drogo in power
 })
@@ -209,7 +209,7 @@ DefineCharacter("Charles the Great Carolingian", { -- Source: "Medieval Warfare 
 	Type = "unit-frank-swordsman",
 	Civilization = "teuton",
 	Faction = "Francia",
-	ProvinceOfOrigin = "Belgium", -- correct? his great-grandfather was presumably from Herstal
+	ProvinceOfOrigin = "Liege", -- correct? his great-grandfather was presumably from Herstal
 	Father = "Pepin the Short Carolingian",
 	Year = 748, -- born; he was 66 years old when he died in 814
 	DeathYear = 814, -- died of illness on 28 January 814 at Aachen
@@ -226,7 +226,7 @@ DefineCharacter("Carloman the Younger Carolingian", { -- Source: "Medieval Warfa
 	Type = "unit-frank-swordsman",
 	Civilization = "teuton",
 	Faction = "Francia",
-	ProvinceOfOrigin = "Belgium", -- correct? his great-grandfather was presumably from Herstal
+	ProvinceOfOrigin = "Liege", -- correct? his great-grandfather was presumably from Herstal
 	Father = "Pepin the Short Carolingian",
 	Year = 751, -- born (was 20 years old when he died of illness in 771)
 	DeathYear = 771 -- died of illness
@@ -242,7 +242,7 @@ DefineCharacter("Louis the Pious Carolingian", { -- Source: "Medieval Warfare V.
 	Type = "unit-frank-swordsman",
 	Civilization = "teuton",
 	Faction = "Francia",
-	ProvinceOfOrigin = "Belgium", -- correct? his great-great-grandfather was presumably from Herstal
+	ProvinceOfOrigin = "Liege", -- correct? his great-great-grandfather was presumably from Herstal
 	Father = "Charles the Great Carolingian",
 	Year = 813, -- made co-emperor with his father in 813
 	Trait = "upgrade-pious" -- presumably
