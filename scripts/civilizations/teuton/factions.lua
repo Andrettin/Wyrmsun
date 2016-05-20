@@ -377,6 +377,24 @@ DefineFaction("Baden", {
 	DefaultTier = "grand duchy"
 })
 
+DefineFaction("Netherlands", {
+	Civilization = "teuton",
+	ParentFaction = "Francia",
+	Type = "polity",
+--	Language = "dutch",
+	Colors = {"orange", "blue"},
+	DefaultTier = "kingdom"
+})
+
+DefineFaction("Brabant", {
+	Civilization = "teuton",
+	ParentFaction = "Netherlands",
+	Type = "polity",
+	Colors = {"cyan"},
+	DefaultTier = "duchy", -- Brabant was a duchy in 1559-1600; Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
+	DevelopsTo = {"Netherlands"}
+})
+
 DefineFaction("Brandenburg", {
 	Civilization = "teuton",
 	ParentFaction = "Saxony",
@@ -419,15 +437,6 @@ DefineFaction("Cologne", {
 	Titles = {
 		"theocracy", "duchy", "Archbishopric"
 	}
-})
-
-DefineFaction("Netherlands", {
-	Civilization = "teuton",
-	ParentFaction = "Francia",
-	Type = "polity",
---	Language = "dutch",
-	Colors = {"orange", "blue"},
-	DefaultTier = "kingdom"
 })
 
 DefineFaction("Drenthe", {

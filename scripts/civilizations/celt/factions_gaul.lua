@@ -130,6 +130,13 @@ DefineFaction("Treviri Tribe", { -- Source: H. H. Howorth, "The Ethnology of Ger
 	}
 })
 
+DefineFaction("Tribocci Tribe", { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 222.
+	Civilization = "celt",
+	Type = "tribe",
+--	Language = "gaulish", -- presumably
+	Colors = {"green"}
+})
+
 DefineFaction("Turone Tribe", {
 	Civilization = "celt",
 	Type = "tribe",

@@ -2575,7 +2575,7 @@ DefineCharacter("Alf", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 
 	Gender = "male",
 	Type = "unit-teuton-swordsman", -- should be priest
 	Civilization = "norse", -- presumably
-	ProvinceOfOrigin = "Greenland", -- possibly he was from elsewhere, but we have no information about that
+--	ProvinceOfOrigin = "Greenland", -- possibly he was from elsewhere, but we have no information about that
 	DeathYear = 1378 -- died in Greenland
 })
 
@@ -2617,7 +2617,7 @@ DefineCharacter("Andreas", { -- Source: Snorri Sturlson, "Heimskringla", 1844, v
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse", -- presumably
-	ProvinceOfOrigin = "Greenland" -- accurate? his son was Bishop of Greenland
+--	ProvinceOfOrigin = "Greenland" -- accurate? his son was Bishop of Greenland
 })
 
 DefineCharacter("Endrede", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 142.
@@ -2625,7 +2625,7 @@ DefineCharacter("Endrede", { -- Source: Snorri Sturlson, "Heimskringla", 1844, v
 	Gender = "male",
 	Type = "unit-teuton-swordsman", -- should be priest
 	Civilization = "norse", -- presumably
-	ProvinceOfOrigin = "Greenland", -- accurate?
+--	ProvinceOfOrigin = "Greenland", -- accurate?
 	Year = 1409, -- executed a marriage settlement at Garda (the episcopal seat of Greenland) in 1409
 	Father = "Andreas"
 })

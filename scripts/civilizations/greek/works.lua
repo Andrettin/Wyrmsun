@@ -25,6 +25,14 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineUpgrade("upgrade-work-geography", { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 222.
+	Name = _("Geography"),
+	Work = "scroll",
+	Civilization = "greek",
+	Description = "In this work various locations and peoples throughout the known world are described.",
+	Year = 20 -- written around 20 AD
+})
+
 DefineUpgrade("upgrade-work-historia-nova", { -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 320.
 	Name = _("Historia Nova"),
 	Work = "scroll",

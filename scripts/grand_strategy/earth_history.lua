@@ -777,9 +777,6 @@ if (GrandStrategyYear >= -264) then
 	SetProvinceOwner("Hanover", "teuton", "Lombard Tribe")	
 	SetProvinceCivilization("Hanover", "teuton")
 	
-	SetProvinceOwner("Holland", "teuton", "Batavian Tribe")	
-	SetProvinceCivilization("Holland", "teuton")
-	
 	SetProvinceOwner("Friesland", "teuton", "Frisian Tribe")	
 	SetProvinceCivilization("Friesland", "teuton")
 	SetProvinceOwner("East Friesland", "teuton", "Frisian Tribe")	
@@ -931,9 +928,7 @@ if (GrandStrategyYear >= -67) then -- Crete acquired by Rome in 67 BC; Source: W
 end
 
 if (GrandStrategyYear >= -61) then -- Battle of Magetobria, in which Ariovistus defeated a number of Gaulish tribes, and afterwards established himself in Alsace and began lording over the Gauls; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 139; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 218.
-	SetProvinceOwner("Alsace", "teuton", "Suebi Tribe")
 	SetProvinceUnitQuantity("Brandenburg", "unit-suebi-swordsman", 4) -- to give them something of a defense
-	SetProvinceUnitQuantity("Alsace", "unit-germanic-warrior", 0)
 	SetProvinceUnitQuantity("Alsace", "unit-suebi-swordsman", 13)
 	SetProvinceUnitQuantity("Burgundy", "unit-germanic-warrior", 0) -- Aedui forces defeated
 	GrandStrategyEvents.TheSequanisAppeal = nil
@@ -943,7 +938,6 @@ end
 if (GrandStrategyYear >= -58) then -- in 58 BC Caesar fought Ariovistus' Suebi and the latter were terribly beaten; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 219.
 	GrandStrategyEvents.AskRomeForHelp = nil
 	GrandStrategyEvents.DivitiacusPleaForAssistance = nil
-	SetProvinceOwner("Alsace", "", "")
 	
 	-- gold (northern) Gallic currency, the gold staters, in existence when Caesar began his campaigns in Gaul; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, pp. 190-191.
 --	SetFactionTechnology("celt", "Aedui Tribe", "upgrade-teuton-coinage", true)
@@ -957,7 +951,6 @@ if (GrandStrategyYear >= -58) then -- in 58 BC Caesar fought Ariovistus' Suebi a
 end
 
 if (GrandStrategyYear >= -50) then -- Gaul conquered by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-	SetProvinceOwner("Alsace", "latin", "Rome")
 	SetProvinceOwner("Brittany", "latin", "Rome")
 	SetProvinceOwner("Lorraine", "latin", "Rome")
 	SetProvinceOwner("Lower Rhine", "latin", "Rome")
@@ -1051,11 +1044,6 @@ end
 if (GrandStrategyYear >= 142) then
 	SetProvinceOwner("Posen", "", " Tribe")
 	SetProvinceOwner("Transylvania", "goth", "Vandal Tribe") -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
-end
-
-if (GrandStrategyYear >= 150) then
-	SetProvinceOwner("Holland", "teuton", "Frank Tribe") -- Franks were the people settled in the modern Netherlands in (presumably) 150 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
-	SetProvinceCivilization("Holland", "teuton")
 end
 
 if (GrandStrategyYear >= 166) then
@@ -1160,8 +1148,6 @@ if (GrandStrategyYear >= 440) then
 end
 
 if (GrandStrategyYear >= 450) then
-	SetProvinceOwner("Holland", "", "") -- Franks had left most of the modern Netherlands by 450 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 48.
-	
 	-- Frankish territory in 450 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 48.
 	SetProvinceOwner("Palatinate", "teuton", "Frank Tribe")
 	SetProvinceOwner("Lower Rhine", "teuton", "Frank Tribe")
@@ -1199,7 +1185,6 @@ if (GrandStrategyYear >= 481) then
 	AddProvinceClaim("Overijssel", "teuton", "Francia")
 
 	-- Political situation of the territories surrounding the Frankish realm in 481-814 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
-	SetProvinceOwner("Alsace", "teuton", "Alamanni Tribe")
 	SetProvinceOwner("Baden", "teuton", "Alamanni Tribe")
 	SetProvinceOwner("Wurtemberg", "teuton", "Alamanni Tribe")
 	SetProvinceOwner("Augsburg", "teuton", "Alamanni Tribe")
@@ -1246,7 +1231,6 @@ end
 
 if (GrandStrategyYear >= 506) then
 	-- Alemanni lands (Alsace, Baden, Wurtemberg, Augsburg and etc.) conquered by the Franks in 506; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
-	SetProvinceOwner("Alsace", "teuton", "Francia")
 	SetProvinceOwner("Baden", "teuton", "Francia")
 	SetProvinceOwner("Wurtemberg", "teuton", "Francia")
 	SetProvinceOwner("Augsburg", "teuton", "Francia")
@@ -1265,10 +1249,6 @@ end
 
 if (GrandStrategyYear >= 517) then
 	-- Catholic ascendancy systematized in the Burgundian kingdom in 517 AD, in the Council of Epaon (perhaps Albon in the Dauphiné); during the Council Avitus laid out guidelines for socio-religious practice; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 99.
-end
-
-if (GrandStrategyYear >= 526) then -- political situation in 526-600 in Europe; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
-	SetProvinceOwner("Holland", "teuton", "Frisian Tribe")
 end
 
 if (GrandStrategyYear >= 531) then
@@ -1352,9 +1332,7 @@ if (GrandStrategyYear >= 731) then
 	GrandStrategyEvents.HistoriaEcclesiasticaVenerabilisBedae = nil
 end
 
-if (GrandStrategyYear >= 734) then -- Franks conquered Holland and Friesland in 734 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
-	SetProvinceOwner("Holland", "teuton", "Francia")
-	AddProvinceClaim("Holland", "teuton", "Francia")
+if (GrandStrategyYear >= 734) then
 	SetProvinceOwner("Friesland", "teuton", "Francia")
 	AddProvinceClaim("Friesland", "teuton", "Francia")
 end
@@ -1463,8 +1441,6 @@ if (GrandStrategyYear >= 919) then
 	AddProvinceClaim("Westphalia", "teuton", "Saxony")
 	
 	-- Duchy of Swabia
-	SetProvinceOwner("Alsace", "teuton", "Holy Rome")
-	SetProvinceCivilization("Alsace", "teuton")
 	SetProvinceOwner("Augsburg", "teuton", "Holy Rome")
 	SetProvinceCivilization("Augsburg", "teuton")
 	SetProvinceOwner("Baden", "teuton", "Holy Rome")
@@ -1480,7 +1456,6 @@ if (GrandStrategyYear >= 919) then
 	SetProvinceOwner("Drenthe", "teuton", "Holy Rome")
 	SetProvinceOwner("East Friesland", "teuton", "Holy Rome")
 	SetProvinceOwner("Friesland", "teuton", "Holy Rome")
-	SetProvinceOwner("Holland", "teuton", "Holy Rome")
 	SetProvinceOwner("Overijssel", "teuton", "Holy Rome")
 	
 	-- Thuringia
@@ -1630,7 +1605,6 @@ if (GrandStrategyYear >= 1560) then
 	SetFactionGovernmentType("latin", "Venice", "republic")	
 	SetProvinceOwner("Sardinia", "latin", "Spain")
 
-	SetProvinceOwner("Holland", "latin", "Spain")
 	SetProvinceOwner("Overijssel", "latin", "Spain")
 	SetProvinceOwner("Friesland", "latin", "Spain")
 	SetProvinceOwner("Drenthe", "latin", "Spain")
@@ -1702,7 +1676,6 @@ end
 
 if (GrandStrategyYear >= 1648) then
 	-- Political situation in Central Europe in 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
-	SetProvinceOwner("Holland", "teuton", "Netherlands")
 	SetProvinceOwner("Overijssel", "teuton", "Netherlands")
 	SetProvinceOwner("Friesland", "teuton", "Netherlands")
 	SetProvinceOwner("Drenthe", "teuton", "Netherlands")

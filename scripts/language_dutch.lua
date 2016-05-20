@@ -88,10 +88,7 @@ DefineLanguageWord("Bosch", {
 	Language = "dutch",
 	Type = "noun",
 	Meanings = {},
-	DerivesFrom = {"middle-dutch", "noun", "Busch"}, -- presumably
-	AffixNameTypes = {
-		"compound", "suffix", "singular", "settlement" -- example: "'s-Hertogenbosch"
-	}
+	DerivesFrom = {"middle-dutch", "noun", "Busch"} -- presumably
 })
 
 DefineLanguageWord("Braak", { -- is this really a noun? Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 331.
@@ -187,9 +184,6 @@ DefineLanguageWord("Hertog", {
 	Meanings = {"Duke"}, -- Source: http://www.vandale.nl/opzoeken?pattern=Hertog&lang=ne
 	NumberCaseInflections = {
 		"singular", "genitive", "Hertogen"
-	},
-	AffixNameTypes = {
-		"compound", "prefix", "singular", "genitive", "settlement" -- example: "'s-Hertogenbosch"
 	}
 })
 

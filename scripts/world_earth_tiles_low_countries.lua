@@ -42,6 +42,16 @@ DefineWorldMapTile({493, 107}, {
 	}
 })
 
+DefineWorldMapTile({494, 109}, {
+	World = "Earth",
+	FactionCulturalSettlementNames = {
+		"teuton", "Netherlands", "'s-Hertogenbosch", "name-elements", {
+			"compound", "prefix", "dutch", "noun", "singular", "genitive", "Hertog",
+			"compound", "suffix", "dutch", "noun", "singular", "Bosch"
+		}
+	}
+})
+
 DefineWorldMapTile({495, 111}, {
 	World = "Earth",
 	CulturalSettlementNames = {

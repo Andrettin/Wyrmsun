@@ -151,9 +151,27 @@ DefineProvince("Alsace", {
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
 	Claims = {
+		"celt", "Tribocci Tribe",
 		"teuton", "Alamanni Tribe",
 		"teuton", "Swabia", -- Part of the Duchy of Swabia in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		"teuton", "Holy Rome"				
+	},
+	HistoricalOwners = {
+		-61, "teuton", "Suebi Tribe", -- The Battle of Magetobria, in which Ariovistus defeated a number of Gaulish tribes, and afterwards established himself in Alsace and began lording over the Gauls, occurred in 61 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 139; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 218.
+		-58, "", "", -- in 58 BC Caesar fought Ariovistus' Suebi and the latter were terribly beaten; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 219.
+		-54, "celt", "Tribocci Tribe", -- the Tribocci held the lands between Strasbourg and Artzenheim (apparently) in 54 BC; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 222.
+		-50, "latin", "Rome", -- Gaul conquered by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		481, "teuton", "Alamanni Tribe", -- Political situation of the territories surrounding the Frankish realm in 481-814 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
+		506, "teuton", "Francia", -- Alemanni lands (Alsace, Baden, Wurtemberg, Augsburg and etc.) conquered by the Franks in 506; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
+		919, "teuton", "Holy Rome" -- Duchy of Swabia; Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+	},
+	HistoricalClaims = {
+		-50, "latin", "Rome",
+		506, "teuton", "Francia"
+	},
+	HistoricalCultures = {
+		-54, "celt",
+		481, "teuton"
 	},
 	HistoricalModifiers = {
 		1618, "upgrade-university", true, -- University founded in Molsheim in 1618. Source: The Cambridge Modern History Atlas, 1912, p. 9.
@@ -686,13 +704,9 @@ DefineProvince("Belgium", {
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
 	Claims = {
-		"celt", "Menapii Tribe",
 		"teuton", "Austrasia" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
 	},
 	HistoricalOwners = {
-		-- The Suebic king Ariovistus enters Gaul at the request of the Arverni and the Sequani to fight the Aedui in 71 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 230.
-		-- The Menapii inhabited Belgium (and probably were already present there when Ariovistus invaded Gaul); Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
-		-71, "celt", "Menapii Tribe",
 		-50, "latin", "Rome", -- Gaul conquered by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		450, "teuton", "Frank Tribe", -- Frankish territory in 450 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 48.
 		481, "teuton", "Francia", -- Frankish territory in 481 AD, and the Franks had already established their kingdom; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
@@ -2686,10 +2700,10 @@ DefineProvince("Holland", {
 --		{123, 26}, {123, 27}, {124, 26}, {124, 27}, -- old map
 		{490, 109},
 		{491, 108}, {491, 109},
-		{492, 107}, {492, 108}, {492, 109},
-		{493, 106}, {493, 107}, {493, 108}, {493, 109},
-		{494, 107}, {494, 108}, {494, 109},
-		{495, 107}, {495, 108}, {495, 109},
+		{492, 107}, {492, 108},
+		{493, 106}, {493, 107}, {493, 108},
+		{494, 107}, {494, 108},
+		{495, 107}, {495, 108},
 		{496, 107}, {496, 108}, {496, 109}, {496, 110}, {496, 111},
 		{497, 107}, {497, 109},
 		{498, 107}
@@ -2704,6 +2718,22 @@ DefineProvince("Holland", {
 		"teuton", "Holland",
 		"teuton", "Netherlands",
 		"teuton", "Holy Rome"
+	},
+	HistoricalOwners = {
+		-264, "teuton", "Batavian Tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		150, "teuton", "Frank Tribe", -- Franks were the people settled in the Gelderland and in the German Lower Rhine in (presumably) 150 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
+		450, "", "", -- Franks had left most of the modern Netherlands by 450 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 48.
+		526, "teuton", "Frisian Tribe", -- Political situation in 526-600 in Europe; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+		734, "teuton", "Francia", -- Franks conquered Holland and Friesland in 734 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
+		919, "teuton", "Holy Rome", -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+		1560, "latin", "Spain", -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		1648, "teuton", "Netherlands" -- Political situation in Central Europe in 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
+	},
+	HistoricalClaims = {
+		734, "teuton", "Francia"
+	},
+	HistoricalCultures = {
+		-264, "teuton"
 	},
 	HistoricalModifiers = {
 		1575, "upgrade-university", true, -- University founded in Leyden in 1575. Source: The Cambridge Modern History Atlas, p. 9.
@@ -2741,12 +2771,12 @@ DefineProvince("Holstein", {
 		919, "teuton", "Holy Rome", -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		1560, "norse", "Denmark" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
+	HistoricalClaims = {
+		919, "teuton", "Saxony" -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+	},
 	HistoricalCultures = {
 		-3950, "basque",
 		-264, "teuton"
-	},
-	HistoricalClaims = {
-		919, "teuton", "Saxony" -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 	},
 	HistoricalSettlementBuildings = {
 		768, "unit-teuton-stronghold", true -- Fort existent in Esesfeld during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
@@ -4103,6 +4133,44 @@ DefineProvince("Norrland", {
 		-264, "norse"
 	},
 	Regions = {"Europe", "Scandinavia", "West and Central Europe"}
+})
+
+DefineProvince("North Brabant", {
+	World = "Earth",
+	FactionCulturalNames = {
+		"teuton", "Netherlands", "Noord-Brabant"
+	},
+	Tiles = {
+		{492, 109},
+		{493, 109},
+		{494, 109},
+		{495, 109}
+	},
+	SettlementLocation = {494, 109}, -- 's-Hertogenbosch
+	Map = "maps/random/random-map-forest.smp",
+	SettlementTerrain = "Plains",
+	Claims = {
+		"celt", "Menapii Tribe",
+		"teuton", "Brabant",
+		"teuton", "Netherlands",
+		"teuton", "Holy Rome"
+	},
+	HistoricalOwners = {
+		-56, "celt", "Menapii Tribe", -- correct? The Menapii inhabited the part of the Rhine not far from where it meets the sea (apparently) in 56 BC; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 223.
+		-50, "latin", "Rome", -- Gaul conquered by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		481, "teuton", "Francia", -- Frankish territory in 481 AD, and the Franks had already established their kingdom; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
+		919, "teuton", "Holy Rome", -- Duchy of Lower Lorraine; Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+		1560, "latin", "Spain", -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		1648, "teuton", "Netherlands" -- Political situation in Central Europe in 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
+	},
+	HistoricalClaims = {
+		-50, "latin", "Rome",
+		481, "teuton", "Francia"
+	},
+	HistoricalCultures = {
+		-56, "celt"
+	},
+	Regions = {"Europe", "Germany-Netherlands", "Northwest Europe", "West and Central Europe"}
 })
 
 DefineProvince("North Trondelag", {

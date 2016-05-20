@@ -25,6 +25,17 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineCharacter("Strabo", { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 222.
+	Name = "Strabo",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "greek",
+--	ProvinceOfOrigin = ?,
+	Year = -60, -- born
+	DeathYear = 24, -- died
+	AuthoredWorks = {"upgrade-work-geography"}
+})
+
 DefineCharacter("Zosimus", { -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 320.
 	Name = "Zosimus",
 	Gender = "male",

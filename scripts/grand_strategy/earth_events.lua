@@ -70,7 +70,7 @@ local EarthEvents = {
 				AcquireProvince(WorldMapProvinces.Aquitaine, "Arverni Tribe")
 				AcquireProvince(WorldMapProvinces.Albania, "Taulantii Tribe")
 				AcquireProvince(WorldMapProvinces.Argolis, "Mycenae")
-				AcquireProvince(WorldMapProvinces.Belgium, "Menapii Tribe")
+				AcquireProvince(WorldMapProvinces.NorthBrabant, "Menapii Tribe")
 				AcquireProvince(WorldMapProvinces.Bohemia, "Boii Tribe")
 				AcquireProvince(WorldMapProvinces.Bulgaria, "Odrysae Tribe")
 				AcquireProvince(WorldMapProvinces.Burgundy, "Aedui Tribe")
