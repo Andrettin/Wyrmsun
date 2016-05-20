@@ -76,6 +76,10 @@ https://github.com/Andrettin/Wyrmsun
 - Improved the performance of the name generation pattern derivation when the game starts.
 - Proper names are now more consistent when changing from a civilization/faction that has one language to another that has a different one. For example, the Germanic province name "Vestalanda" now becomes "Westlant" when changing civilization to Teuton and becoming the Suebi Tribe.
 
+* Quests
+- A raft no longer appears in the A Bargain is Struck quest (Dwarf) on hard difficulty or higher.
+- The Gnomish Envoy now disappears when delivering the ruby in the A Bargain is Struck quest (Dwarf), as is more fitting with the dialogue.
+
 -----------------------------------------------------------------------
 - 2.2.3
 -----------------------------------------------------------------------

@@ -223,7 +223,6 @@ if (GrandStrategy == false) then
 		unit = CreateUnitInTransporter("unit-dwarven-scout", 2, unit)
 		SetUnitVariable(unit, "Active", false)
 	end
-	unit = CreateUnit("unit-raft", 15, {14, 32})
 elseif (GrandStrategyEventMap) then
 	SetAiType(0, "grand-strategy-battle")
 	SetAiType(1, "grand-strategy-battle")
@@ -264,7 +263,6 @@ elseif (GrandStrategyEventMap) then
 	
 	unit = CreateUnit("unit-tree-stump", 15, {43, 30})
 	unit = CreateUnit("unit-tree-stump", 15, {33, 56})
-	unit = CreateUnit("unit-raft", 15, {14, 32})
 end
 
 CreateCritters((Map.Info.MapWidth * Map.Info.MapHeight) / 512)

@@ -225,6 +225,7 @@ function RunShowCreditsMenu()
 		"  Spfnym",
 		"  Szunti",
 		"  TaShadan",
+		"  Wuzzy",
 		"  X3M",
 		"  zenorogue",
 		"",

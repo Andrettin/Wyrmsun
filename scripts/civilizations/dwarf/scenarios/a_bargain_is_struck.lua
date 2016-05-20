@@ -25,14 +25,20 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-if (GrandStrategy == false and LoadedGame == false) then
-	SetPlayerData(0, "Allow", "upgrade-dwarven-runewriting", "F")
-	SetPlayerData(1, "Allow", "upgrade-dwarven-runewriting", "F")
-	SetPlayerData(2, "Allow", "upgrade-dwarven-runewriting", "F")
-	SetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "Allow", "unit-dwarven-smithy", "F")
-	SetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "Allow", "unit-dwarven-lumber-mill", "F")
-	SetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "Allow", "unit-dwarven-sentry-tower", "F")
-	SetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "Allow", "unit-dwarven-stronghold", "F")
+if (LoadedGame == false) then
+	if not (GrandStrategy) then
+		SetPlayerData(0, "Allow", "upgrade-dwarven-runewriting", "F")
+		SetPlayerData(1, "Allow", "upgrade-dwarven-runewriting", "F")
+		SetPlayerData(2, "Allow", "upgrade-dwarven-runewriting", "F")
+		SetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "Allow", "unit-dwarven-smithy", "F")
+		SetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "Allow", "unit-dwarven-lumber-mill", "F")
+		SetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "Allow", "unit-dwarven-sentry-tower", "F")
+		SetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "Allow", "unit-dwarven-stronghold", "F")
+	end
+	
+	if (GameSettings.Difficulty <= 2) then -- if the difficulty is normal or lower, add a raft
+		unit = CreateUnit("unit-raft", 15, {14, 32})
+	end
 end
 
 -- A Bargain is Struck initial dialogue
@@ -577,12 +583,22 @@ AddTrigger(
 		return false
 	end,
 	function() 
+		local gnomish_envoy = FindUnit("unit-gnomish-duelist", GetFactionPlayer("Norlund Clan"))
+		if (gnomish_envoy == nil) then
+			gnomish_envoy = FindUnit("unit-gnomish-master-at-arms", GetFactionPlayer("Norlund Clan"))
+		end
+		if not (GetUnitVariable(gnomish_envoy, "Idle")) then
+			return true
+		end
+				
 		Event(
 			"Gnomish Envoy",
 			"Here's the stone, for you dwarves! Now, if you'll excuse me, I think I'll be taking refuge here... I don't much like fighting.",
 			player,
 			{"~!Continue"},
 			{function(s)
+				RemoveUnit(gnomish_envoy)
+			
 				local caravans_loaded = true -- are all caravans loaded?
 				local uncount = 0
 				uncount = GetUnits(GetFactionPlayer("Norlund Clan"))
@@ -661,10 +677,11 @@ AddTrigger(
 		return false
 	end,
 	function() 
-		if (
-			(IfNearUnit(player, ">=", 1, "unit-gnomish-duelist", "unit-dwarven-town-hall") or IfNearUnit(player, ">=", 1, "unit-gnomish-duelist", "unit-dwarven-stronghold") or IfNearUnit(player, ">=", 1, "unit-gnomish-master-at-arms", "unit-dwarven-town-hall") or IfNearUnit(player, ">=", 1, "unit-gnomish-master-at-arms", "unit-dwarven-stronghold"))
-			and (IfNearUnit(player, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-duelist") or IfNearUnit(player, ">=", 1, "unit-dwarven-stronghold", "unit-gnomish-duelist") or IfNearUnit(player, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-master-at-arms") or IfNearUnit(player, ">=", 1, "unit-dwarven-stronghold", "unit-gnomish-master-at-arms"))
-		) then
+		local gnomish_envoy = FindUnit("unit-gnomish-duelist", GetFactionPlayer("Norlund Clan"))
+		if (gnomish_envoy == nil) then
+			gnomish_envoy = FindUnit("unit-gnomish-master-at-arms", GetFactionPlayer("Norlund Clan"))
+		end
+		if (GetUnitVariable(gnomish_envoy, "Removed")) then
 			Event(
 				FindHero("Rugnur"),
 				"That's the last caravan! We will commence work immediately.",
@@ -710,6 +727,10 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
+		local gnomish_envoy = FindUnit("unit-gnomish-duelist", GetFactionPlayer("Norlund Clan"))
+		if (gnomish_envoy == nil) then
+			gnomish_envoy = FindUnit("unit-gnomish-master-at-arms", GetFactionPlayer("Norlund Clan"))
+		end
 		for i=0,14 do
 			-- added the SyncRand so that this trigger is unlikely to fire instead of the quest completion dialogue events
 			if (
@@ -719,8 +740,7 @@ AddTrigger(
 				and FindHero("Rugnur", i) ~= nil
 				and (IfNearUnit(i, ">=", 4, "unit-gnomish-caravan", "unit-dwarven-town-hall") or IfNearUnit(i, ">=", 4, "unit-gnomish-caravan", "unit-dwarven-stronghold"))
 				and (IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-caravan") or IfNearUnit(i, ">=", 1, "unit-dwarven-stronghold", "unit-gnomish-caravan"))
-				and (IfNearUnit(i, ">=", 1, "unit-gnomish-duelist", "unit-dwarven-town-hall") or IfNearUnit(i, ">=", 1, "unit-gnomish-duelist", "unit-dwarven-stronghold") or IfNearUnit(i, ">=", 1, "unit-gnomish-master-at-arms", "unit-dwarven-town-hall") or IfNearUnit(i, ">=", 1, "unit-gnomish-master-at-arms", "unit-dwarven-stronghold"))
-				and (IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-duelist") or IfNearUnit(i, ">=", 1, "unit-dwarven-stronghold", "unit-gnomish-duelist") or IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-master-at-arms") or IfNearUnit(i, ">=", 1, "unit-dwarven-stronghold", "unit-gnomish-master-at-arms"))
+				and GetUnitVariable(gnomish_envoy, "Removed")
 			) then
 				local caravans_loaded = true -- are all caravans loaded?
 				local uncount = 0
