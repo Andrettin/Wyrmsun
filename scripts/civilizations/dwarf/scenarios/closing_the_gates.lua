@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2014-2015 by Andrettin
+--      (c) Copyright 2014-2016 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -28,6 +28,55 @@
 if (LoadedGame == false) then
 	SetPlayerData(0, "Allow", "upgrade-dwarven-runewriting", "F")
 	SetPlayerData(1, "Allow", "upgrade-dwarven-runewriting", "F")
+	
+	local transporter
+	if (GameSettings.Difficulty == 3) then -- if the difficulty is hard, add two goblin watch towers to guard the glyphs
+		transporter = CreateUnit("unit-goblin-watch-tower", 2, {43, 50})
+		if (transporter) then
+			unit = CreateUnitInTransporter("unit-goblin-archer", 2, transporter)
+			SetUnitVariable(unit, "Active", false)
+		end
+		
+		transporter = CreateUnit("unit-goblin-watch-tower", 2, {15, 12})
+		if (transporter) then
+			unit = CreateUnitInTransporter("unit-goblin-archer", 2, transporter)
+			SetUnitVariable(unit, "Active", false)
+		end
+	end
+	
+	if (GameSettings.Difficulty == 4) then -- if the difficulty is brutal, add four goblin guard towers to guard the glyphs, garrisoned by goblin headhunters
+		transporter = CreateUnit("unit-goblin-guard-tower", 2, {43, 50})
+		if (transporter) then
+			unit = CreateUnitInTransporter("unit-goblin-headhunter", 2, transporter)
+			SetUnitVariable(unit, "Active", false)
+			unit = CreateUnitInTransporter("unit-goblin-headhunter", 2, transporter)
+			SetUnitVariable(unit, "Active", false)
+		end
+		
+		transporter = CreateUnit("unit-goblin-guard-tower", 2, {15, 12})
+		if (transporter) then
+			unit = CreateUnitInTransporter("unit-goblin-headhunter", 2, transporter)
+			SetUnitVariable(unit, "Active", false)
+			unit = CreateUnitInTransporter("unit-goblin-headhunter", 2, transporter)
+			SetUnitVariable(unit, "Active", false)
+		end
+		
+		transporter = CreateUnit("unit-goblin-guard-tower", 2, {40, 41})
+		if (transporter) then
+			unit = CreateUnitInTransporter("unit-goblin-headhunter", 2, transporter)
+			SetUnitVariable(unit, "Active", false)
+			unit = CreateUnitInTransporter("unit-goblin-headhunter", 2, transporter)
+			SetUnitVariable(unit, "Active", false)
+		end
+		
+		transporter = CreateUnit("unit-goblin-guard-tower", 2, {9, 7})
+		if (transporter) then
+			unit = CreateUnitInTransporter("unit-goblin-headhunter", 2, transporter)
+			SetUnitVariable(unit, "Active", false)
+			unit = CreateUnitInTransporter("unit-goblin-headhunter", 2, transporter)
+			SetUnitVariable(unit, "Active", false)
+		end
+	end
 end
 
 -- If Rugnur dies, any quests of the Scepter of Fire campaign currently being pursued fail

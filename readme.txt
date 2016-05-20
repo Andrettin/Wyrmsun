@@ -79,6 +79,7 @@ https://github.com/Andrettin/Wyrmsun
 * Quests
 - A raft no longer appears in the A Bargain is Struck quest (Dwarf) on hard difficulty or higher.
 - The Gnomish Envoy now disappears when delivering the ruby in the A Bargain is Struck quest (Dwarf), as is more fitting with the dialogue.
+- Added Goblin towers to defend the glyphs in the Closing the Gates quest (Dwarf) in the hard and brutal difficulties.
 
 -----------------------------------------------------------------------
 - 2.2.3
