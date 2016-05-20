@@ -71,6 +71,7 @@ https://github.com/Andrettin/Wyrmsun
 - Split the Connaught, Munster and Ulster provinces off the Ireland one, and renamed the latter to Leinster.
 - Split the Liege and Luxemburg provinces off the Belgium one.
 - Greatly improved the setup of British and Irish tribes for the 9 BC start date.
+- Added "Attacking", "Objectives" and "Units" entries to the Grand Strategy Concepts section in the encyclopedia.
 
 * Heroes
 - Fixed issue which caused the interface to break after advancing a Germanic hero to Teuton.

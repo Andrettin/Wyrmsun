@@ -97,6 +97,10 @@ GrandStrategyGameConcepts = {
 		Name = _("~!Administrative Efficiency"),
 		Description = _("In the Grand Strategy mode, administrative efficiency affected provinces' productivity and research output. Administrative efficiency is 100% by default, but is decreased if the province has a different culture than its owner.")
 	},
+	Attacking = {
+		Name = _("Attacking"),
+		Description = _("Select units (read the \"Units\" Grand Strategy Concept entry for more information on selecting units) or a hero, and then click on a province to attack it. You can only attack provinces that are not owned by any faction, or which are owned by a faction you're at war with. One-province tribes migrate to a province after attacking it, emptying their former province. The former province's population and buildings are carried over to the new one.")
+	},
 	Capital = {
 		Name = _("~!Capital"),
 		Description = _("A faction's capital is marked by a crown symbol appearing over it. Your capital is the center of your transport network. If a faction's capital is conquered, the capital will be transferred to a settlement still under the control of the faction.")
@@ -123,6 +127,10 @@ GrandStrategyGameConcepts = {
 		Name = _("~!Labor"),
 		Description = _("Workers in a province produce Labor (100 for each worker), which is then used to produce resources in the province.")
 	},
+	Objectives = {
+		Name = _("Objectives"),
+		Description = _("In the Grand Strategy mode, there are no preset objectives. You make your own goals, exploring the world at your own pace!")
+	},
 	Prestige = {
 		Name = _("Pre~!stige"),
 		Description = _("Prestige is a Grand Strategy mode only resource. A faction's prestige determines its trade priority, and influences the likelihood of certain positive events. Factions with negative prestige cannot declare war. The results of battles will affect a faction's prestige.")
@@ -146,6 +154,10 @@ GrandStrategyGameConcepts = {
 	TransportCapacity = {
 		Name = _("Transport Capacit~!y"),
 		Description = _("Resource-producing tiles need to be properly connected to your transport network to achieve their full potential. If a tile's resource output is greater than its transport capacity, the overflowing resources will be thrown away. To increase transport capacity in a tile, build a road linking it to your capital. Building a dock on a settlement will link its tile to your transport network as well, at which point it can also serve as a transport hub from which to build roads. Note however that docks can only effectively link a settlement to the transport network if its province's coasts can be reached from a dock already otherwise connected to your transport network.")
+	},
+	Units = {
+		Name = _("Units"),
+		Description = _("Worker units are generated automatically in a province as surplus food is produced. Soldiers, however, have to be trained at the barracks. To do so, click on your province's settlement. Click on the barracks button. Now unit icons will appear in the interface to the right. The right arrow below each unit will train one for you (ready on the next turn), while the left arrow cancels training. To train a unit requires one idle worker.\n\nAfter a unit is trained, you can select it in the main province interface, with the right arrow. After selecting the units, you can move to or attack another province by clicking on it.")
 	},
 	Upkeep = {
 		Name = _("~!Upkeep"),
