@@ -72,6 +72,9 @@ https://github.com/Andrettin/Wyrmsun
 - Split the Liege and Luxemburg provinces off the Belgium one.
 - Greatly improved the setup of British and Irish tribes for the 9 BC start date.
 
+* Heroes
+- Fixed issue which caused the interface to break after advancing a Germanic hero to Teuton.
+
 * Miscellaneous
 - Improved the performance of the name generation pattern derivation when the game starts.
 - Proper names are now more consistent when changing from a civilization/faction that has one language to another that has a different one. For example, the Germanic province name "Vestalanda" now becomes "Westlant" when changing civilization to Teuton and becoming the Suebi Tribe.
