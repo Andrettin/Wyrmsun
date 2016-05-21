@@ -61,6 +61,9 @@ https://github.com/Andrettin/Wyrmsun
 - 2.2.4
 -----------------------------------------------------------------------
 
+* Buildings
+- Building tooltips now show Food Supply.
+
 * Factions
 - Added Ubii Tribe (Teuton), which gets +5% Gold processing as its faction bonus (in the grand strategy mode they get a +5% precious metal production modifier).
 
@@ -85,6 +88,9 @@ https://github.com/Andrettin/Wyrmsun
 - A raft no longer appears in the A Bargain is Struck quest (Dwarf) on hard difficulty or higher.
 - The Gnomish Envoy now disappears when delivering the ruby in the A Bargain is Struck quest (Dwarf), as is more fitting with the dialogue.
 - Added Goblin towers to defend the glyphs in the Closing the Gates quest (Dwarf) in the hard and brutal difficulties.
+
+* Units
+- Unit tooltips now show their Food Cost.
 
 -----------------------------------------------------------------------
 - 2.2.3

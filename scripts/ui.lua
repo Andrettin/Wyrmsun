@@ -1043,6 +1043,9 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {AttackRange = "only", AttackFromTransporter = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Range: "), Variable = "AttackRange", Font = wyr.preferences.PopupDescriptionFont}}
 				},
+				{ 	Condition = {Supply = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Food Supply: "), Variable = "Supply", Font = wyr.preferences.PopupDescriptionFont}}
+				},
 				{ 	Condition = {TimeEfficiencyBonus = "only"}, HighlightColor = "yellow",
 					More = {"Text", {Text = Concat(
 							Concat(
@@ -1366,6 +1369,9 @@ if not (ui_loaded_first_time) then
 				},
 				{ 	Condition = {RegenerationAura = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Regeneration Aura"), Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {Demand = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Food Cost: "), Variable = "Demand", Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				-- Description
 				{ 	Margin = {1, 1}, Condition = {ButtonAction = "editor-unit"}, 
