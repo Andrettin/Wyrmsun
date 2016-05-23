@@ -455,6 +455,11 @@ Load("scripts/language_welsh.lua")
 Load("scripts/language_cornish.lua")
 Load("scripts/language_old_irish.lua")
 
+-- Latin (placed here because there are loanwords from it in Germanic languages)
+Load("scripts/language_old_latin.lua")
+Load("scripts/language_latin.lua")
+
+
 -- Germanic languages (branch of the Indo-European family)
 Load("scripts/language_proto_germanic.lua")
 Load("scripts/language_northwest_germanic.lua")
@@ -492,8 +497,6 @@ Load("scripts/language_crimean_gothic.lua")
 Load("scripts/language_burgundian.lua")
 
 -- Latin languages (branch of the Indo-European family)
-Load("scripts/language_old_latin.lua")
-Load("scripts/language_latin.lua")
 Load("scripts/language_late_latin.lua")
 Load("scripts/language_medieval_latin.lua")
 Load("scripts/language_gallo_romance.lua")

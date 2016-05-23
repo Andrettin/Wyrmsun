@@ -697,7 +697,7 @@ DefineLanguageWord("Rîche", { -- source also gives the alternative form "rîch"
 	Language = "middle-high-german",
 	Type = "noun",
 	Meanings = {"Dominion", "Realm", "Empire", "Authority"}, -- source gives the German "Herrschaft, Reich, Obrigkeit" as the meaning
-	DerivesFrom = {"old-high-german", "noun", "Rîhhi"},
+	DerivesFrom = {"old-high-german", "noun", "Rîchi"},
 	Gender = "neuter"
 })
 
@@ -705,7 +705,7 @@ DefineLanguageWord("Rîche", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Language = "middle-high-german",
 	Type = "adjective",
 	Meanings = {"Powerful", "Notable", "Rich", "Magnificent", "Splendid"}, -- source gives the German "mächtig, vornehm, reich, prächtig, herrlich" as the meaning
-	DerivesFrom = {"old-high-german", "adjective", "Rîhhi"}
+	DerivesFrom = {"old-high-german", "adjective", "Rîchi"}
 })
 
 DefineLanguageWord("Rîchen", { -- related to the Proto-Germanic noun "rîkia"; source also gives the alternative form "gerîchen"; related to Old High German preteritum "gireih"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.

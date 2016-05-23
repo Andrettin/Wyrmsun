@@ -1226,26 +1226,26 @@ DefineLanguageWord("Reht", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	DerivesFrom = {"proto-germanic", "adjective", "Reχtaz"}
 })
 
+DefineLanguageWord("Rîchi", { -- Fick also gives the alternative forms "rîhhi" and "rîche"; Green gives as "rîchi"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174; Source: D. H. Green, "From Germania to Europe: the Evidence of Language and History", 1997, p. xxix.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Dominion", "Realm", "Empire", "Authority"}, -- Fick gives the German "Herrschaft, Reich, Obrigkeit" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Rîkia"}, -- as given by Fick
+	Gender = "neuter" -- as given by Fick
+})
+
+DefineLanguageWord("Rîchi", { -- Fick also gives the alternative form "rîhhi"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174; Source: http://www.cnrtl.fr/definition/riche
+	Language = "old-high-german",
+	Type = "adjective",
+	Meanings = {"Powerful", "Notable", "Rich", "Magnificent", "Splendid"}, -- Fick gives the German "mächtig, vornehm, reich, prächtig, herrlich" as the meaning, while the TLFi gives the French "puissant"
+	DerivesFrom = {"proto-germanic", "adjective", "Rîka"} -- as given by Fick
+})
+
 DefineLanguageWord("Rîchisôn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
 	Language = "old-high-german",
 	Type = "verb",
 	Meanings = {"Rule"}, -- source gives the German "herrschen" as the meaning
 	DerivesFrom = {"proto-germanic", "verb", "Rîkisôn"}
-})
-
-DefineLanguageWord("Rîhhi", { -- source also gives the alternative forms "rîchi" and "rîche"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
-	Language = "old-high-german",
-	Type = "noun",
-	Meanings = {"Dominion", "Realm", "Empire", "Authority"}, -- source gives the German "Herrschaft, Reich, Obrigkeit" as the meaning
-	DerivesFrom = {"proto-germanic", "noun", "Rîkia"},
-	Gender = "neuter"
-})
-
-DefineLanguageWord("Rîhhi", { -- Fick also gives the alternative form "rîchi"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174; Source: http://www.cnrtl.fr/definition/riche
-	Language = "old-high-german",
-	Type = "adjective",
-	Meanings = {"Powerful", "Notable", "Rich", "Magnificent", "Splendid"}, -- Fick gives the German "mächtig, vornehm, reich, prächtig, herrlich" as the meaning, while the TLFi gives the French "puissant"
-	DerivesFrom = {"proto-germanic", "adjective", "Rîka"} -- as given by Fick
 })
 
 DefineLanguageWord("Rōt", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 236.
@@ -1634,6 +1634,13 @@ DefineLanguageWord("West", { -- source also gives the alternative form "Westar";
 	DerivesFrom = {"proto-germanic", "adverb", "Vesta"}
 })
 
+DefineLanguageWord("Wîn", { -- Source: D. H. Green, "From Germania to Europe: the Evidence of Language and History", 1997, p. xxxii.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Wine"}, -- apparently
+	DerivesFrom = {"latin", "noun", "Vinum"}
+})
+
 DefineLanguageWord("Wī̆r", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
 	Language = "old-high-german",
 	Type = "pronoun",
@@ -1759,6 +1766,16 @@ DefineLanguageWord("Elmboum", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Type = "noun",
 	Meanings = {"Elm"} -- source apparently gives the German "Ulme" as the meaning
 	-- the first part of this compound derives from the Proto-Germanic "alma"
+})
+
+DefineLanguageWord("Himilrîchi", { -- Source: D. H. Green, "From Germania to Europe: the Evidence of Language and History", 1997, p. xxxi.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Kingdom of Heaven"},
+	CompoundElements = {
+--		"prefix", "old-high-german", "noun", -- ?
+		"suffix", "old-high-german", "noun", "Rîchi"
+	}
 })
 
 DefineLanguageWord("Jârzala", { -- apparently a compound; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 86.

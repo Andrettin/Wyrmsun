@@ -50,6 +50,12 @@ DefineLanguageWord("Alucitae", { -- this is the plural; Source: Alaric Hall, "Th
 	}
 })
 
+DefineLanguageWord("Amphora", { -- Source: D. H. Green, "From Germania to Europe: the Evidence of Language and History", 1997, pp. xxxiii-xxxiv.
+	Language = "latin",
+	Type = "noun",
+	Meanings = {"Wine-Container"}
+})
+
 DefineLanguageWord("Âra", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 20.
 	Language = "latin",
 	Type = "noun",
@@ -60,6 +66,13 @@ DefineLanguageWord("Auster", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Language = "latin",
 	Type = "noun",
 	Meanings = {"South Wind"} -- source gives the German "Südwind" as the meaning
+})
+
+DefineLanguageWord("Basilica", { -- Source: D. H. Green, "From Germania to Europe: the Evidence of Language and History", 1997, p. xxxv.
+	Language = "latin",
+	Type = "noun",
+	Meanings = {"Church"},
+	DerivesFrom = {"greek", "noun", "Basilikē"}
 })
 
 DefineLanguageWord("Caesaries", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 7.
@@ -149,6 +162,13 @@ DefineLanguageWord("Dūcō", { -- this is the singular first person present; Sou
 	NumberPersonTenseMoodInflections = {
 		"singular", "first-person", "present", "indicative", "Dūcō"
 	}
+})
+
+DefineLanguageWord("Ecclesia", { -- Source: D. H. Green, "From Germania to Europe: the Evidence of Language and History", 1997, p. xxxv.
+	Language = "latin",
+	Type = "noun",
+	Meanings = {"Church"},
+	DerivesFrom = {"greek", "noun", "Ekklēsía"}
 })
 
 DefineLanguageWord("Egō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 1.
@@ -442,6 +462,12 @@ DefineLanguageWord("Vesper", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Type = "noun",
 	Meanings = {"Evening"}, -- source gives the German "Abend" as the meaning
 	DerivesFrom = {"proto-indo-european", "adverb", "Ve"}
+})
+
+DefineLanguageWord("Vinum", { -- Source: D. H. Green, "From Germania to Europe: the Evidence of Language and History", 1997, p. xxxii.
+	Language = "latin",
+	Type = "noun",
+	Meanings = {"Wine"} -- apparently
 })
 
 DefineLanguageWord("Vir", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6, 2.7.1.

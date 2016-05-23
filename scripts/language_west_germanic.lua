@@ -31,3 +31,10 @@ DefineLanguageWord("Alßinjō", { -- alternatively spelled "Alßnjō"; Source: A
 	Meanings = {"Female Elf"},
 	Gender = "feminine"
 })
+
+DefineLanguageWord("Kirika", { -- Source: D. H. Green, "From Germania to Europe: the Evidence of Language and History", 1997, p. xxxvi.
+	Language = "west-germanic",
+	Type = "noun",
+	Meanings = {"Church"},
+	DerivesFrom = {"greek", "noun", "Kyriakón"}
+})

@@ -591,6 +591,7 @@ DefineLanguageWord("Church", {
 	Language = "english",
 	Type = "noun",
 	Meanings = {"Church"},
+	DerivesFrom = {"old-english", "noun", "Cirice"}, -- presumably
 	Gender = "neuter",
 	AffixNameTypes = {
 		"separate", "prefix", "singular", "terrain-hills" -- example: "Church Hill"

@@ -625,6 +625,18 @@ DefineLanguageWord("Eduard", {
 	Meanings = {}
 })
 
+DefineLanguageWord("Eimer", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"Bucket"},
+	DerivesFrom = {"latin", "noun", "Amphora"}, -- Source: D. H. Green, "From Germania to Europe: the Evidence of Language and History", 1997, pp. xxxiii-xxxiv.
+	Gender = "masculine",
+	NumberCaseInflections = {
+		"singular", "genitive", "Eimers",
+		"plural", "dative", "Eimern"
+	}
+})
+
 DefineLanguageWord("Eisen", {
 	Language = "high-german",
 	Type = "noun",
@@ -1420,10 +1432,14 @@ DefineLanguageWord("Kirche", {
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"Church"},
-	NumberCaseInflections = {
-		"plural", "nominative", "Kirchen"
-	},
+	DerivesFrom = {"west-germanic", "noun", "Kirika"}, -- presumably
 	Gender = "feminine",
+	NumberCaseInflections = {
+		"plural", "nominative", "Kirchen",
+		"plural", "accusative", "Kirchen",
+		"plural", "dative", "Kirchen",
+		"plural", "genitive", "Kirchen"
+	},
 	AffixNameTypes = {"compound", "suffix", "plural", "settlement"} -- examples: "Fünfkirchen", "Neunkirchen", "Weisskirchen"
 })
 
@@ -2490,6 +2506,21 @@ DefineLanguageWord("Wasser", {
 	Gender = "neuter",
 	Uncountable = true,
 	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- example: "Hühnerwasser"
+})
+
+DefineLanguageWord("Wein", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"Wine"},
+	DerivesFrom = {"old-high-german", "noun", "Wîn"}, -- presumably
+	Gender = "masculine",
+	NumberCaseInflections = {
+		"singular", "genitive", "Weines", -- alternatively also "Weins"
+		"plural", "nominative", "Weine",
+		"plural", "accusative", "Weine",
+		"plural", "dative", "Weinen",
+		"plural", "genitive", "Weine"
+	}
 })
 
 DefineLanguageWord("Weiß", {

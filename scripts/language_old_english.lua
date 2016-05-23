@@ -318,6 +318,13 @@ DefineLanguageWord("Cildisc", { -- Source: Alaric Hall, "The Meanings of Elf and
 	Meanings = {"Childish"}
 })
 
+DefineLanguageWord("Cirice", { -- Source: D. H. Green, "From Germania to Europe: the Evidence of Language and History", 1997, p. xxxvi.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Church"},
+	DerivesFrom = {"west-germanic", "noun", "Kirika"}
+})
+
 DefineLanguageWord("Cniht", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 27.
 	Language = "old-english",
 	Type = "noun",

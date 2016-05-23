@@ -45,6 +45,13 @@ DefineLanguageWord("Aihʷa", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	DerivesFrom = {"proto-indo-european", "noun", "Éḱwos"}
 })
 
+DefineLanguageWord("Aíkklēsjo", { -- Source: D. H. Green, "From Germania to Europe: the Evidence of Language and History", 1997, p. xxxvi.
+	Language = "gothic",
+	Type = "noun",
+	Meanings = {"Assembly", "Congregation", "House of God", "Church"},
+	DerivesFrom = {"greek", "noun", "Ekklēsía"}
+})
+
 DefineLanguageWord("Ainlif", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
 	Language = "gothic",
 	Type = "numeral",
@@ -908,12 +915,12 @@ DefineLanguageWord("Razn", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Gender = "neuter"
 })
 
-DefineLanguageWord("Reiki", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
+DefineLanguageWord("Reiki", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174; Source: D. H. Green, "From Germania to Europe: the Evidence of Language and History", 1997, p. xxix.
 	Language = "gothic",
 	Type = "noun",
-	Meanings = {"Power", "Dominion", "Realm", "Empire"}, -- source gives the German "Macht, Herrschaft, Reich" as the meaning
-	DerivesFrom = {"proto-germanic", "noun", "Rîkia"},
-	Gender = "neuter"
+	Meanings = {"Power", "Dominion", "Realm", "Empire"}, -- Fick gives the German "Macht, Herrschaft, Reich" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Rîkia"}, -- as given by Fick
+	Gender = "neuter" -- as given by Fick
 })
 
 DefineLanguageWord("Reiks", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 174.
@@ -1148,6 +1155,12 @@ DefineLanguageWord("Þiuda", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Gender = "feminine"
 })
 
+DefineLanguageWord("Þiudans", { -- Source: D. H. Green, "From Germania to Europe: the Evidence of Language and History", 1997, p. xxxi.
+	Language = "gothic",
+	Type = "noun",
+	Meanings = {"King"}
+})
+
 DefineLanguageWord("Tiuhan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "gothic",
 	Type = "verb",
@@ -1227,6 +1240,13 @@ DefineLanguageWord("Waurms", { -- Fick gives "Vaúrms" instead"; Source: Richard
 	Meanings = {"Worm", "Serpent"}, -- probably could be extended to mean "wyrm" as well
 	DerivesFrom = {"proto-germanic", "noun", "Vurma"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
 	Gender = "masculine"
+})
+
+DefineLanguageWord("Wein", { -- Source: D. H. Green, "From Germania to Europe: the Evidence of Language and History", 1997, p. xxxii.
+	Language = "gothic",
+	Type = "noun",
+	Meanings = {"Wine"}, -- apparently
+	DerivesFrom = {"latin", "noun", "Vinum"}
 })
 
 DefineLanguageWord("Weis", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 5, Subsection 1.

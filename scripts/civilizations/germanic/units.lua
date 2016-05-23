@@ -330,6 +330,7 @@ DefineUnitType("unit-germanic-spearman", { Name = _("Spearman"),
 			"item-equipped", "unit-thrymgjol-shield"
 		}
 	},
+	HiddenInEditor = true,
 	Sounds = {
 		"selected", "basic-germanic-voices-selected-group",
 		"acknowledge", "basic-germanic-voices-acknowledge",

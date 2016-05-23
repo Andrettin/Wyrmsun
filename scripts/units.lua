@@ -766,6 +766,7 @@ DefineUnitType("unit-bee", { Name = _("Bee"),
 	Herbivore = true,
 	PierceDamage = true,
 	ChildUpgrade = "upgrade-bee-child",
+	HiddenInEditor = true,
 	Sounds = {
 		"selected", "click",
 --		"acknowledge", "bird-selected",
@@ -806,6 +807,7 @@ DefineUnitType("unit-fly", { Name = _("Fly"),
 	Detritivore = true,	
 	PierceDamage = true,
 	ChildUpgrade = "upgrade-bee-child",
+	HiddenInEditor = true,
 	Sounds = {
 		"selected", "click",
 --		"acknowledge", "bird-selected",
@@ -845,6 +847,7 @@ DefineUnitType("unit-bug", { Name = _("Bug"),
 	Insect = true,
 	Herbivore = true,
 	ChildUpgrade = "upgrade-bee-child",
+	HiddenInEditor = true,
 	Sounds = {
 		"selected", "click",
 --		"acknowledge", "bird-selected",
@@ -885,6 +888,7 @@ DefineUnitType("unit-worm", { Name = _("Worm"),
 	Detritivore = true,
 	Diminutive = true,
 	ChildUpgrade = "upgrade-bee-child",
+	HiddenInEditor = true,
 	Sounds = {
 		"selected", "click",
 --		"acknowledge", "bird-selected",
@@ -924,6 +928,7 @@ DefineUnitType("unit-snail", { Name = _("Snail"),
 	Herbivore = true,
 	Detritivore = true,
 	ChildUpgrade = "upgrade-bee-child",
+	HiddenInEditor = true,
 	Sounds = {
 		"selected", "click",
 --		"acknowledge", "bird-selected",
@@ -963,6 +968,7 @@ DefineUnitType("unit-slug", { Name = _("Slug"),
 	Herbivore = true,
 	Detritivore = true,
 	ChildUpgrade = "upgrade-bee-child",
+	HiddenInEditor = true,
 	Variations = {
 		{
 			"variation-id", "brown",
@@ -1021,6 +1027,7 @@ DefineUnitType("unit-snigill", { Name = _("Baby Snigill"),
 	Herbivore = true,
 	Detritivore = true,
 	ChildUpgrade = "upgrade-bee-child",
+	HiddenInEditor = true,
 	Sounds = {
 		"selected", "click",
 --		"acknowledge", "bird-selected",
@@ -1061,6 +1068,7 @@ DefineUnitType("unit-frog", { Name = _("Frog"),
 	Flesh = true,
 	Insectivore = true,
 	ChildUpgrade = "upgrade-child",
+	HiddenInEditor = true,
 	Variations = {
 		{
 			"variation-id", "green"
@@ -1128,6 +1136,7 @@ DefineUnitType("unit-bird", { Name = _("Bird"),
 	Insectivore = true,
 	PierceDamage = true,
 	ChildUpgrade = "upgrade-child",
+	HiddenInEditor = true,
 	Variations = {
 		{
 			"variation-id", "brown"
@@ -1181,6 +1190,7 @@ DefineUnitType("unit-crow", { Name = _("Crow"),
 	Detritivore = true,	
 	PierceDamage = true,
 	ChildUpgrade = "upgrade-child",
+	HiddenInEditor = true,
 	Sounds = {
 		"selected", "crow-selected",
 		"acknowledge", "crow-selected",
@@ -1223,6 +1233,7 @@ DefineUnitType("unit-bat", { Name = _("Bat"),
 	Insectivore = true,
 	PierceDamage = true,
 	ChildUpgrade = "upgrade-child",
+	HiddenInEditor = true,
 	Sounds = {
 		"selected", "bat-selected",
 		"acknowledge", "bat-selected",
@@ -1266,6 +1277,7 @@ DefineUnitType("unit-blood-bat", { Name = _("Blood Bat"),
 	Insectivore = true, -- so that they eat snigills
 	PierceDamage = true,
 	ChildUpgrade = "upgrade-child",
+	HiddenInEditor = true,
 	Sounds = {
 		"selected", "bat-selected",
 		"acknowledge", "bat-selected",
@@ -1310,6 +1322,7 @@ DefineUnitType("unit-dread-bat", { Name = _("Dread Bat"),
 	Insectivore = true, -- so that they eat snigills
 	PierceDamage = true,
 	ChildUpgrade = "upgrade-child",
+	HiddenInEditor = true,
 	Sounds = {
 		"selected", "bat-selected",
 		"acknowledge", "bat-selected",
@@ -3029,6 +3042,7 @@ DefineUnitType("unit-yale-excrement", { Name = _("Yale Excrement"),
 	Decoration = true,
 	NonSolid = true,
 	Detritus = true,
+	HiddenInEditor = true,
 	Variations = {
 		{
 			"variation-id", "brown"
@@ -3405,6 +3419,7 @@ DefineUnitType("unit-revealer", { Name = "Revealer",
 	Building = true, VisibleUnderFog = true,
 	Revealer = true,
 	DetectCloak = true,
+	HiddenInEditor = true,
 	Sounds = {}
 } )
 
@@ -4362,6 +4377,16 @@ DefineUnitType("unit-template-dock", { Name = _("Dock"),
 	}
 } )
 
+-- Load the different civilizations
+Load("scripts/civilizations/celt/units.lua")
+Load("scripts/civilizations/dwarf/units.lua")
+Load("scripts/civilizations/germanic/units.lua")
+Load("scripts/civilizations/gnome/units.lua")
+Load("scripts/civilizations/goblin/units.lua")
+Load("scripts/civilizations/kobold/units.lua")
+Load("scripts/civilizations/teuton/units.lua")
+Load("scripts/civilizations/latin/units.lua")
+
 -- Other civilizations' units
 
 DefineUnitType("unit-elven-swordsman", { Name = _("Swordsman"),
@@ -4373,6 +4398,7 @@ DefineUnitType("unit-elven-swordsman", { Name = _("Swordsman"),
 	Animations = "animations-dwarven-axefighter", Icon = "icon-elven-swordsman",
 	WeaponClasses = {"sword", "thrusting-sword"},
 	HackDamage = true,
+	HiddenInEditor = true,
 	Sounds = {
 		"hit", "sword-attack",
 		"miss", "attack-miss"
@@ -4389,6 +4415,7 @@ DefineUnitType("unit-orc-spearthrower", { Name = _("Spearthrower"),
 	WeaponClasses = {"javelin"},
 	PierceDamage = true,
 	Corpse = "unit-dwarven-dead-body",
+	HiddenInEditor = true,
 	Sounds = {
 		"selected", "basic-dwarf-voices-selected-group",
 		"acknowledge", "basic-dwarf-voices-acknowledge",
@@ -4422,6 +4449,7 @@ DefineUnitType("unit-orc-sea-orc", { Name = _("Sea Orc"),
 	CanTargetLand = true,
 	WeaponClasses = {"sword", "thrusting-sword"},
 	HackDamage = true,
+	HiddenInEditor = true,
 	Sounds = {
 		"hit", "sword-attack",
 		"miss", "attack-miss"
@@ -4450,7 +4478,8 @@ DefineUnitType("unit-orc-shaman", { Name = _("Shaman"),
 	RightMouseAction = "attack",
 	CanAttack = true,
 	CanTargetLand = true,
-	BluntDamage = true
+	BluntDamage = true,
+	HiddenInEditor = true
 } )
 
 DefineUnitType("unit-water-elemental", { Name = _("Water Elemental"),
@@ -4472,6 +4501,7 @@ DefineUnitType("unit-water-elemental", { Name = _("Water Elemental"),
 	RightMouseAction = "attack",
 	CanAttack = true,
 	CanTargetLand = true, CanTargetSea = true, CanTargetAir = true,
+	HiddenInEditor = true,
 	Sounds = {
 		"dead", "squishy-hit",
 		"hit", "squishy-attack",
@@ -4502,20 +4532,11 @@ DefineUnitType("unit-long-swordsman", { Name = _("Long Swordsman"),
 	WeaponClasses = {"sword"},
 	HackDamage = true,
 	NumDirections = 1,
+	HiddenInEditor = true,
 	Sounds = {
 		"selected", "click",
 		"dead", "basic-human-voices-dead"}
 } )
-
--- Load the different civilizations
-Load("scripts/civilizations/celt/units.lua")
-Load("scripts/civilizations/dwarf/units.lua")
-Load("scripts/civilizations/germanic/units.lua")
-Load("scripts/civilizations/gnome/units.lua")
-Load("scripts/civilizations/goblin/units.lua")
-Load("scripts/civilizations/kobold/units.lua")
-Load("scripts/civilizations/teuton/units.lua")
-Load("scripts/civilizations/latin/units.lua")
 
 -- define the mercenary camp after the rest because it refers to unit types of the civilizations
 DefineUnitType("unit-mercenary-camp", { Name = _("Mercenary Camp"),

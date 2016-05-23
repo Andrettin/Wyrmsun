@@ -100,6 +100,12 @@ DefineLanguageWord("Baínō", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Meanings = {"Come"} -- apparently, but not entirely clear from source
 })
 
+DefineLanguageWord("Basilikē", { -- Source: D. H. Green, "From Germania to Europe: the Evidence of Language and History", 1997, p. xxxv.
+	Language = "greek",
+	Type = "noun",
+	Meanings = {"Royal Hall", "Large Public Hall", "Church"}
+})
+
 DefineLanguageWord("Calli", { -- should be written as the original Greek name (with Greek characters)
 	Language = "greek",
 	Type = "noun",
@@ -179,6 +185,12 @@ DefineLanguageWord("Égō", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Type = "pronoun",
 	Meanings = {"I"}, -- is a cognate of Proto-Germanic "eka"/"ek", so possibly has the same meaning
 	Nominative = "Égō"
+})
+
+DefineLanguageWord("Ekklēsía", { -- Source: D. H. Green, "From Germania to Europe: the Evidence of Language and History", 1997, p. xxxv.
+	Language = "greek",
+	Type = "noun",
+	Meanings = {"Congregation", "Christian Congregation", "Church"}
 })
 
 DefineLanguageWord("Éphūn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
@@ -273,6 +285,12 @@ DefineLanguageWord("Kúrtos", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Language = "greek",
 	Type = "noun",
 	Meanings = {"Cage"}
+})
+
+DefineLanguageWord("Kyriakón", { -- Source: D. H. Green, "From Germania to Europe: the Evidence of Language and History", 1997, p. xxxv.
+	Language = "greek",
+	Type = "noun",
+	Meanings = {"That which belongs to the Lord", "That House of the Lord", "Church"}
 })
 
 DefineLanguageWord("Λύχος", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.

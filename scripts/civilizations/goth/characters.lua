@@ -86,6 +86,7 @@ DefineCharacter("Airmanareiks", { -- Source: Henry Adams Bellows (transl.), "The
 	Civilization = "goth",
 	Faction = "Ostrogoth Tribe",
 	ProvinceOfOrigin = "Ukraine", -- accurate?
+	Trait = "upgrade-cruel", -- described as generous, cruel, wrathful, faithless, savage; Source: D. H. Green, "From Germania to Europe: the Evidence of Language and History", 1997, p. xxx.
 	DeathYear = 376, -- died
 	HistoricalTitles = {
 		"head-of-state", 0, 376, "goth", "Ostrogoth Tribe"
