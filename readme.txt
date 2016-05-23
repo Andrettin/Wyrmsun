@@ -64,6 +64,7 @@ https://github.com/Andrettin/Wyrmsun
 * Editor
 - Fauna units who don't have their own icons are now hidden in the editor.
 - Units without proper unit graphics (i.e. Elven Swordsman) are now hidden in the editor.
+- Fixed an issue with the transitions of water tiles of the forest tilesets when a tile of another type was placed over them in the editor.
 
 -----------------------------------------------------------------------
 - 2.2.4
