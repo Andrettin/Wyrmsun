@@ -51,12 +51,12 @@ DefineTileset("name", "Conifer Forest (Autumn)",
 			{}},								-- 020
 		"solid", { "dirt", "image", "tilesets/forest/terrain/grass_and_dirt.png", "land", "no-building", "dirt",
 			{ 4, 5, 6, 4}},								-- 030
-		"solid", { "dark-dirt", "land", "no-building", "dirt",
-			{ 333, 334, 335, 333}},						-- 040
+		"solid", { "unused",
+			{}},										-- 040
 		"solid", { "grass", "image", "tilesets/forest/terrain/grass_and_dirt.png", "land", "grass",
 			{ 1, 2, 3, 1}},								-- 050
-		"solid", { "dark-grass", "land", "grass",
-			{ 349, 350, 351, 349}},						-- 060
+		"solid", { "unused",
+			{}},										-- 060
 		"solid", { "pine-tree", "image", "tilesets/forest/terrain/pine_tree_autumn.png", "land", "forest", "unpassable",
 			{ 18, 18, 18, 18}},							-- 070
 		"solid", { "rock", "image", "tilesets/forest/terrain/rock.png", "land", "rock", "unpassable",
