@@ -40,7 +40,6 @@ DefineUpgrade("upgrade-germanic-broad-sword", {
 	Civilization = "germanic",
 	Description = _("While the earlier short swords relied mostly on stabbing attacks, the enlarged width of the broad swords allowed germanic swordsmen to deal devastating slashing attacks.\n\nEffect: +2 Damage for Eralas."),
 	Background = _("A number of bronze age swords have been found in Denmark. They were used by men not only in combat, but also as a symbol of social status."),
-	TechnologyPointCost = 1,
 	Item = "unit-broad-sword"
 })
 
@@ -59,7 +58,6 @@ DefineUpgrade("upgrade-germanic-bronze-shield", {
 	Civilization = "germanic",
 	Description = _("Although earlier shields were made of simpler materials, the arrival of bronzeworking technologies allows Germanic craftsmen to produce bronze shields for the warriors, improving their personal protection.\n\nEffect: +2 Armor for Eralas."),
 	Background = _("A number of bronze shields have been found preserved in Danish bogs, belonging to the archaeological period known as the Nordic Bronze Age (during which many scholars posit that the linguistic change from the Proto-Indo-European to Proto-Germanic happened). Those shields were actually probably not used in battle, but in rituals related to the sun and the seasons."),
-	TechnologyPointCost = 1,
 	Item = "unit-bronze-shield"
 })
 
@@ -69,7 +67,6 @@ DefineUpgrade("upgrade-germanic-barbed-arrow", {
 	Icon = "icon-germanic-barbed-arrow",
 	Civilization = "germanic",
 	Description = _("An improvement over the basic triangular-shaped arrow, the barbed arrow is much harder to be removed from the wound after puncturing an enemy.\n\nEffect: +2 Damage for Skutans and Schutzes."),
-	TechnologyPointCost = 1,
 	Arrows = true,
 	Item = "unit-barbed-arrows"
 })

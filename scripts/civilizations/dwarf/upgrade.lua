@@ -25,52 +25,11 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-local upgrades = {
-	{
-		"upgrade-dwarven-ballista-bolt-1", _("Broadhead Ballista Bolt"), "icon-dwarven-ballista-bolt-2", "siege-projectile-1",
-		_("While the earliest dwarven ballista bolts had been little more than tree trunks cut to have more penetrating effect, these bolts exhibit a broad metal head capable of slicing enemy foes and structures alike.\n\nEffect: +15 Damage for Ballistas."),
-		"",
-		"",
-		{   250,   1000,   500,     0,     0,     0,     0,     0},
-		{   250,   1000,   500,     0,     0,     0,     0,  1500},
-		1
-	},
-	{
-		"upgrade-dwarven-ballista-bolt-2", _("Penetrating Ballista Bolt"), "icon-dwarven-ballista-bolt-3", "siege-projectile-2",
-		_("Although the slicing power of broadhead ballista bolts was a great improvement over previous bolts, it was still far from ideal. Th penetrating ballista bolts instead do not slice their targets, but concentrate their might on a single point, maximizing puncturing power and thus their capability to breach enemy walls.\n\nEffect: +15 Damage for Ballistas."),
-		"",
-		"",
-		{   250,  3000,   1000,     0,     0,     0,     0,     0},
-		{   250,  3000,   1000,     0,     0,     0,     0,  4000},
-		1
-	}
-}
-
-for i = 1,table.getn(upgrades) do
-	u = CUpgrade:New(upgrades[i][1])
-	u.Name = upgrades[i][2]
-	u.Icon = Icons[upgrades[i][3]]
-	u.Class = upgrades[i][4]
-	u.Civilization = "dwarf"
-	u.Description = upgrades[i][5]
-	u.Quote = upgrades[i][6]
-	u.Background = upgrades[i][7]
-	for j = 1,table.getn(upgrades[i][8]) do
-		u.Costs[j - 1] = upgrades[i][8][j]
-	end
-	for j = 1,table.getn(upgrades[i][9]) do
-		u.GrandStrategyCosts[j - 1] = upgrades[i][9][j]
-	end
-	u.TechnologyPointCost = upgrades[i][10]
-	u.Ability = false
-end
-
 DefineUpgrade("upgrade-dwarven-broad-axe", {
 	Parent = "upgrade-broad-axe",
 	Icon = "icon-dwarven-broad-axe",
 	Civilization = "dwarf",
 	Description = _("Dwarven smiths work hard at their craft to improve soldiers' weapons, and with the perfecting of smithing techniques the broadening of axe blades becomes possible.\n\nEffect: +2 Damage for Axefighters, Steelclads, Stonelords and Yale Riders."),
-	TechnologyPointCost = 1,
 	Item = "unit-broad-axe"
 })
 
@@ -79,7 +38,6 @@ DefineUpgrade("upgrade-dwarven-great-axe", {
 	Icon = "icon-dwarven-great-axe",
 	Civilization = "dwarf",
 	Description = _("Further innovations in dwarven smithing allow axes to be made sturdier, and often to carry double blades.\n\nEffect: +2 Damage for Axefighters, Steelclads, Stonelords and Yale Riders."),
-	TechnologyPointCost = 1,
 	Item = "unit-great-axe"
 })
 
@@ -95,7 +53,6 @@ DefineUpgrade("upgrade-dwarven-pike", {
 	Parent = "upgrade-pike",
 	Civilization = "dwarf",
 	Description = _("Much longer than previous spears, pikes can be deadly when used by disciplined groups of soldiers.\n\nEffect: +2 Damage for Guards."),
-	TechnologyPointCost = 1,
 	Item = "unit-pike"
 })
 
@@ -105,7 +62,6 @@ DefineUpgrade("upgrade-dwarven-shield-1", {
 	Icon = "icon-dwarven-shield-2",
 	Civilization = "dwarf",
 	Description = _("Earlier shields provided little more than a minimal degree of protection. With the development of heater shields, dwarven soldiers have a greater chance of survival in battle.\n\nEffect: +2 Armor for Axefighters, Steelclads, Stonelords and Yale Riders."),
-	TechnologyPointCost = 1,
 	Item = "unit-heater-shield"
 })
 
@@ -117,7 +73,6 @@ DefineUpgrade("upgrade-dwarven-shield-2", {
 	Description = _("As shield-making techniques improved, the creation of thrymgjol shields became possible. These shields receive their name from the impregnable gate crafted by the sons of the dwarf Solblindi, due to the mighty protection they give their users.\n\nEffect: +2 Armor for Axefighters, Steelclads, Stonelords and Yale Riders."),
 	Background = _("The Thrymgjol gate and its makers, the sons of the dwarf Solblindi, are mentioned in the ~<Svipdagsmol~> of Norse mythology. The name \"Thrymgjol\" means \"loud-clanging\"."),
 	Quote = _("\"Thrymgjol they call it; 'twas made by the three, / The sons of Solblindi; / And fast as a fetter the farer it holds, / Whoever shall lift the latch.\" - Dwarven Traditional Poetry (The Warder)"),
-	TechnologyPointCost = 1,
 	Item = "unit-thrymgjol-shield"
 })
 
@@ -127,7 +82,6 @@ DefineUpgrade("upgrade-dwarven-sharp-throwing-axe", {
 	Icon = "icon-dwarven-sharp-throwing-axe",
 	Civilization = "dwarf",
 	Description = _("As their craftsmanship progresses, dwarven artisans become capable of improving the basic throwing axe to have sharper blades.\n\nEffect: +2 Damage for Scouts, Pathfinders, Explorers and Gryphon Riders."),
-	TechnologyPointCost = 1,
 	Weapon = true,
 	Item = "unit-sharp-throwing-axe"
 })
@@ -138,21 +92,32 @@ DefineUpgrade("upgrade-dwarven-bearded-throwing-axe", {
 	Icon = "icon-dwarven-bearded-throwing-axe",
 	Civilization = "dwarf",
 	Description = _("The 'bearding' of throwing axes by extending the bottom of their blades is an innovation which makes them more deadly when thrown.\n\nEffect: +2 Damage for Scouts, Pathfinders, Explorers and Gryphon Riders."),
-	TechnologyPointCost = 1,
 	Weapon = true,
 	Item = "unit-bearded-throwing-axe"
 })
 
+DefineUpgrade("upgrade-dwarven-ballista-bolt-1", {
+	Parent = "upgrade-broadhead-ballista-bolt",
+	Icon = "icon-dwarven-ballista-bolt-2",
+	Civilization = "dwarf",
+	Description = _("While the earliest dwarven ballista bolts had been little more than tree trunks cut to have more penetrating effect, these bolts exhibit a broad metal head capable of slicing enemy foes and structures alike.\n\nEffect: +15 Damage for Ballistas.")
+})
+
+DefineUpgrade("upgrade-dwarven-ballista-bolt-2", {
+	Parent = "upgrade-penetrating-ballista-bolt",
+	Icon = "icon-dwarven-ballista-bolt-3",
+	Civilization = "dwarf",
+	Description = _("Although the slicing power of broadhead ballista bolts was a great improvement over previous bolts, it was still far from ideal. Th penetrating ballista bolts instead do not slice their targets, but concentrate their might on a single point, maximizing puncturing power and thus their capability to breach enemy walls.\n\nEffect: +15 Damage for Ballistas.")
+})
+
 DefineUpgrade("upgrade-dwarven-wood-plow", {
 	Parent = "upgrade-wood-plow",
-	Civilization = "dwarf",
-	TechnologyPointCost = 1
+	Civilization = "dwarf"
 })
 
 DefineUpgrade("upgrade-dwarven-iron-tipped-wood-plow", {
 	Parent = "upgrade-iron-tipped-wood-plow",
-	Civilization = "dwarf",
-	TechnologyPointCost = 1
+	Civilization = "dwarf"
 })
 
 DefineUpgrade("upgrade-dwarven-masonry", {
@@ -167,8 +132,7 @@ DefineUpgrade("upgrade-dwarven-masonry", {
 DefineUpgrade("upgrade-dwarven-coinage", {
 	Parent = "upgrade-coinage",
 	Civilization = "dwarf",
-	Icon = "icon-dwarven-coinage",
-	TechnologyPointCost = 1
+	Icon = "icon-dwarven-coinage"
 })
 
 DefineUpgrade("upgrade-dwarven-runewriting", {

@@ -411,6 +411,9 @@ igoku:
 /graphics/dwarf/icons/boots.png (later modified by Jinn) (licensed under the GPL 2.0)
 /graphics/dwarf/icons/shield_1.png (later modified by Jinn) (licensed under the GPL 2.0)
 
+Jesse Crider:
+/graphics/goblin/icons/coinage.png (the icon by Jinn was based on Jesse Crider's Goblin coin design) (licensed under the CC0)
+
 João Victor G. Costa (Jinn):
 /graphics/celt/buildings/farm.png (licensed under the CC0)
 /graphics/dwarf/buildings/barracks.png (licensed under the CC0)
@@ -713,6 +716,7 @@ João Victor G. Costa (Jinn):
 /graphics/goblin/buildings/town_hall_shadow.png (licensed under the CC0)
 /graphics/goblin/buildings/watch_tower.png (licensed under the CC0)
 /graphics/goblin/buildings/watch_tower_shadow.png (licensed under the CC0)
+/graphics/goblin/icons/coinage.png (based on Jesse Crider's Goblin coin design) (licensed under the CC0)
 /graphics/goblin/icons/goblin_archer.png (licensed under the CC0)
 /graphics/goblin/icons/goblin_assassin.png (licensed under the CC0)
 /graphics/goblin/icons/goblin_spearman.png (licensed under the CC0)

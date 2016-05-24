@@ -118,6 +118,14 @@ DefineButton( { Pos = 4, Level = 0, Icon = "icon-masonry",
 	ForUnit = {"unit-goblin-lumber-mill"}
 } )
 
+DefineButton( { Pos = 2, Level = 0, Icon = "icon-goblin-coinage",
+	Action = "research", Value = "upgrade-goblin-coinage",
+	Allowed = "check-single-research",
+	Description = _("+10% Gold Processing."),
+	Key = "c", Hint = _("Research ~!Coinage"), Popup = "popup-research",
+	ForUnit = {"unit-goblin-stronghold"}
+} )
+
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-norse-runewriting",
 	Action = "research", Value = "upgrade-goblin-writing",
 	Allowed = "check-single-research",

@@ -133,6 +133,12 @@ DefineIcon({
 	File = "goblin/icons/return_goods.png"
 })
 
+DefineIcon({
+	Name = "icon-goblin-coinage",
+	Size = {46, 38},
+	File = "goblin/icons/coinage.png"
+})
+
 if (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "dungeon") then
 	DefineIcon({
 		Name = "icon-goblin-banner",

@@ -8,8 +8,6 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      upgrade.ccl - Define the goblin dependencies and upgrades.
---
 --      (c) Copyright 2014-2016 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
@@ -27,42 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-local upgrades = {
-	{"upgrade-goblin-catapult-projectile-1", _("Catapult Granite Projectile"), "icon-catapult-projectile-2", "siege-projectile-1",
-		_("As siegecrafting techniques develop, catapult rocks made out of sandstone are replaced by ones made of granite, increasing the damage war machines can cause.\n\nEffect: +15 Damage for War Machines."),
-		"",
-		"",
-		{   250,   1000,     0,     0,     0,   500,     0,     0},
-		{   250,   1000,     0,     0,     0,   500,     0,  1500},
-		1},
-	{"upgrade-goblin-catapult-projectile-2", _("Catapult Metal Projectile"), "icon-catapult-projectile-3", "siege-projectile-2",
-		_("Advances in metalworking make it possible to use metal balls as catapult projectiles, greatly magnifying the destructive power of war machines.\n\nEffect: +15 Damage for War Machines."),
-		"",
-		"",
-		{   250,  4000,     0,     0,     0,     0,     0,     0},
-		{   250,  4000,     0,     0,     0,     0,     0,  4000},
-		1},
-}
-
-for i = 1,table.getn(upgrades) do
-	u = CUpgrade:New(upgrades[i][1])
-	u.Name = upgrades[i][2]
-	u.Icon = Icons[upgrades[i][3]]
-	u.Class = upgrades[i][4]
-	u.Civilization = "goblin"
-	u.Description = upgrades[i][5]
-	u.Quote = upgrades[i][6]
-	u.Background = upgrades[i][7]
-	for j = 1,table.getn(upgrades[i][8]) do
-		u.Costs[j - 1] = upgrades[i][8][j]
-	end
-	for j = 1,table.getn(upgrades[i][9]) do
-		u.GrandStrategyCosts[j - 1] = upgrades[i][9][j]
-	end
-	u.TechnologyPointCost = upgrades[i][10]
-	u.Ability = false
-end
-
 DefineUpgrade("upgrade-goblin-long-spear", {
 	Parent = "upgrade-long-spear",
 	Civilization = "goblin",
@@ -75,8 +37,19 @@ DefineUpgrade("upgrade-goblin-pike", {
 	Parent = "upgrade-pike",
 	Civilization = "goblin",
 	Description = _("Much longer than previous spears, pikes can be deadly when used by disciplined groups of soldiers.\n\nEffect: +2 Damage for Impalers."),
-	TechnologyPointCost = 1,
 	Item = "unit-pike"
+})
+
+DefineUpgrade("upgrade-goblin-catapult-projectile-1", {
+	Parent = "upgrade-catapult-granite-projectile",
+	Civilization = "goblin",
+	Description = _("As siegecrafting techniques develop, catapult rocks made out of sandstone are replaced by ones made of granite, increasing the damage war machines can cause.\n\nEffect: +15 Damage for War Machines.")
+})
+
+DefineUpgrade("upgrade-goblin-catapult-projectile-2", {
+	Parent = "upgrade-catapult-metal-projectile",
+	Civilization = "goblin",
+	Description = _("Advances in metalworking make it possible to use metal balls as catapult projectiles, greatly magnifying the destructive power of war machines.\n\nEffect: +15 Damage for War Machines.")
 })
 
 DefineUpgrade("upgrade-goblin-wood-plow", {
@@ -96,6 +69,12 @@ DefineUpgrade("upgrade-goblin-masonry", {
 	Civilization = "goblin",
 	Description = _("Masonry is the craft of building structures from blocks, which are bound together with mortar.\n\nEffect: +20% Hit Points and +5 Armor for buildings, allows Town Halls to be upgraded to Strongholds."),
 	TechnologyPointCost = 1
+})
+
+DefineUpgrade("upgrade-goblin-coinage", {
+	Parent = "upgrade-coinage",
+	Civilization = "goblin",
+	Icon = "icon-goblin-coinage"
 })
 
 DefineUpgrade("upgrade-goblin-writing", {
@@ -155,6 +134,11 @@ DefineModifier("upgrade-goblin-iron-tipped-wood-plow",
 	{"apply-to", "unit-goblin-farm"}
 )
 
+DefineModifier("upgrade-goblin-coinage",
+	{"improve-production", "gold", 10},
+	{"apply-to", "unit-goblin-town-hall"}, {"apply-to", "unit-goblin-stronghold"}
+)
+
 DefineModifier("upgrade-goblin-writing",
 	{"TimeEfficiencyBonus", 10},
 	{"apply-to", "unit-goblin-town-hall"}, {"apply-to", "unit-goblin-stronghold"},
@@ -206,6 +190,10 @@ DefineDependency("upgrade-goblin-catapult-projectile-2",
 
 DefineDependency("upgrade-goblin-iron-tipped-wood-plow",
 	{"upgrade-goblin-wood-plow"}
+)
+
+DefineDependency("upgrade-goblin-coinage",
+	{"unit-goblin-smithy"}
 )
 
 DefineDependency("upgrade-goblin-alchemy",
