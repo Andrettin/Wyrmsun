@@ -73,7 +73,7 @@ if not (ui_loaded_first_time) then
 		end
 		DefineDecorations({Index = "CarryResource", HideNeutral = false, CenterX = true,OffsetPercent = {50, 100},Method = {"sprite", {"sprite-mana"}}})
 	end
-	DefineSprites({Name = "sprite-leadership", File = "ui/status_effects/leadership.png", Offset = {1, 1}, Size = {14, 14}})
+	DefineSprites({Name = "sprite-leadership", File = "ui/status_effects/leadership.png", Offset = {1, 1}, Size = {16, 16}})
 	DefineSprites({Name = "sprite-inspire", File = "ui/status_effects/inspire.png", Offset = {1, 1}, Size = {16, 16}})
 	DefineSprites({Name = "sprite-slow", File = "ui/status_effects/slow.png", Offset = {1, 1}, Size = {16, 16}})
 	DefineSprites({Name = "sprite-stun", File = "ui/status_effects/stun.png", Offset = {1, 1}, Size = {16, 16}})
@@ -436,7 +436,7 @@ UI.Resources[GetResourceIdByName("prestige")].IconFrame = 0
 UI.Resources[GetResourceIdByName("prestige")].IconX = Video.Width
 UI.Resources[GetResourceIdByName("prestige")].IconY = Video.Height
 
-UI.Resources[GetResourceIdByName("leadership")].G = CGraphic:New("ui/resources/score.png", 14, 14)
+UI.Resources[GetResourceIdByName("leadership")].G = CGraphic:New("ui/resources/leadership.png", 14, 14)
 UI.Resources[GetResourceIdByName("leadership")].IconFrame = 0
 UI.Resources[GetResourceIdByName("leadership")].IconX = Video.Width
 UI.Resources[GetResourceIdByName("leadership")].IconY = Video.Height
