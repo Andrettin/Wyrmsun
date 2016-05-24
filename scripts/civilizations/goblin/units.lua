@@ -98,6 +98,35 @@ DefineUnitType("unit-goblin-worker", { Name = _("Worker"),
 	}
 } )
 
+DefineUnitType("unit-goblin-magnate", { Name = _("Magnate"),
+	Parent = "unit-template-heroic-merchant",
+	Civilization = "goblin",
+	Description = _("The Goblin syndicates always keen on profitable opportunities. Their leadership is largely drawn from magnates, extremely wealthy and savvy merchants whose scruples leave something to be desired. Engaging in trade with all sorts of people and in all kinds of goods, goblin traders often stradle the twilight zone between legality and illegality."),
+	Image = {"file", "goblin/units/rogue.png", "size", {72, 72}},
+	Animations = "animations-goblin-thief", Icon = "icon-goblin-magnate",
+	DefaultEquipment = {
+		{"boots", "unit-boots"}
+	},
+	Accuracy = 11,
+	Evasion = 15,
+	DaySightRangeBonus = -1,
+	NightSightRangeBonus = 1,
+	Corpse = "unit-goblin-dead-body",
+	WeaponClasses = {"dagger"},
+	PierceDamage = true,
+	AiDrops = {"unit-boots", "unit-cheese"},
+	Sounds = {
+		"selected", "basic-goblin-voices-selected-group",
+		"acknowledge", "basic-goblin-voices-acknowledge",
+		"attack", "basic-goblin-voices-attack",
+		"ready", "goblin-worker-ready",
+		"help", "basic-goblin-voices-help",
+		"dead", "basic-goblin-voices-dead",
+		"hit", "dagger-attack",
+		"miss", "attack-miss"
+	}
+} )
+
 DefineUnitType("unit-goblin-thief", { Name = _("Thief"),
 	Parent = "unit-template-thief",
 	Civilization = "goblin",

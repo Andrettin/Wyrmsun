@@ -79,7 +79,8 @@ Units = {
 	"upgrade-dwarven-coinage", "upgrade-dwarven-runewriting", "upgrade-dwarven-alchemy",
 	"unit-gnomish-worker", "unit-gnomish-recruit", "unit-gnomish-duelist", "unit-gnomish-master-at-arms", "unit-gnomish-herbalist", "unit-gnomish-caravan",
 	"unit-gnomish-town-hall", "unit-gnomish-farm", "unit-gnomish-barracks",
-	"unit-goblin-worker", "unit-goblin-swordsman", "unit-goblin-spearman", "unit-goblin-archer", "unit-goblin-headhunter", "unit-goblin-thief",
+	"unit-goblin-worker", "unit-goblin-magnate",
+	"unit-goblin-swordsman", "unit-goblin-spearman", "unit-goblin-archer", "unit-goblin-headhunter", "unit-goblin-thief",
 	"unit-goblin-war-machine", "unit-goblin-glider",
 	"unit-goblin-town-hall", "unit-goblin-stronghold",
 	"unit-goblin-mess-hall", "unit-goblin-farm", "unit-goblin-lumber-mill", "unit-goblin-smithy",
@@ -3538,6 +3539,57 @@ DefineUnitType("unit-template-militia", { Name = _("Militia"),
 		"step-mud", "step-mud",
 		"step-stone", "step-stone"
 	}
+} )
+
+DefineUnitType("unit-template-merchant", { Name = _("Merchant"),
+	Parent = "unit-template-sapient-unit",
+	Class = "merchant",
+	Strength = 10,
+	Dexterity = 11,
+	Intelligence = 12,
+	Charisma = 12,
+	Speed = 10,
+	HitPoints = 45,
+	TileSize = {1, 1}, BoxSize = {31, 31},
+	SightRange = 4,
+	BasicDamage = 6, Missile = "missile-none",
+	MaxAttackRange = 1,
+	Accuracy = 10,
+	Evasion = 12,
+	Priority = 50,
+	Points = 75,
+	Demand = 1,
+	Gender = "male",
+	Type = "land",
+	RightMouseAction = "attack",
+	CanAttack = true,
+	CanTargetLand = true,
+	Coward = true,
+	Flesh = true,
+	ButtonPos = 1,
+	ButtonKey = "m",
+	ButtonHint = _("Train ~!Merchant"),
+	Sounds = {
+		"step", "step-dirt",
+		"step-dirt", "step-dirt",
+		"step-gravel", "step-gravel",
+		"step-mud", "step-mud",
+		"step-stone", "step-stone",
+		"step-grass", "step-leaves"
+	}
+} )
+
+DefineUnitType("unit-template-heroic-merchant", { Name = _("Heroic Merchant"),
+	Parent = "unit-template-merchant",
+	Class = "heroic-merchant",
+	Strength = 10,
+	Dexterity = 12,
+	Intelligence = 13,
+	Charisma = 14,
+	HitPoints = 60,
+	BasicDamage = 7,
+	Evasion = 14,
+	Points = 90
 } )
 
 DefineUnitType("unit-template-infantry", { Name = _("Infantry"),

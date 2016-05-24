@@ -61,8 +61,11 @@ https://github.com/Andrettin/Wyrmsun
 - 2.2.6
 -----------------------------------------------------------------------
 
+* Units
+- Added Goblin Magnate (icon design by Jesse Crider and graphics by Jinn).
+
 * Upgrades
-- Added Coinage technology for the Goblins (icon design by Jesse Crider and pixel art by Jinn).
+- Added Coinage technology for the Goblins (icon design by Jesse Crider and graphics by Jinn).
 - Fixed issue which prevented siege projectile upgrades from showing up properly in the tech tree.
 
 -----------------------------------------------------------------------
