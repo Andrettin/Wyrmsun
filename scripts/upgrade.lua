@@ -449,6 +449,12 @@ DefineUpgrade("upgrade-eagle-eye", {
 	Ability = true
 })
 
+DefineUpgrade("upgrade-leadership", {
+	Name = _("Leadership"),
+	Icon = "icon-leadership",
+	Ability = true
+})
+
 DefineUpgrade("upgrade-mace-mastery", {
 	Name = _("Mace Mastery"),
 	Icon = "icon-mace-mastery",
@@ -502,6 +508,10 @@ DefineModifier("upgrade-deadly-precision",
 
 DefineModifier("upgrade-eagle-eye",
 	{"Accuracy", 2}
+)
+
+DefineModifier("upgrade-leadership",
+	{"LeadershipAura", 1}
 )
 
 DefineModifier("upgrade-mace-mastery",

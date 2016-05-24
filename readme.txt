@@ -61,8 +61,12 @@ https://github.com/Andrettin/Wyrmsun
 - 2.2.6
 -----------------------------------------------------------------------
 
+* Abilities
+- Added the Leadership Aura ability (graphics by Jinn), learnable by dwarven Stonelords and gnomish Masters-of-Arms. Units affected by the aura deal +10% damage.
+
 * Units
-- Added Goblin Magnate (icon design by Jesse Crider and graphics by Jinn).
+- Added Goblin Magnate (icon design by Jesse Crider and graphics by Jinn), which innately has the Leadership Aura.
+- Added "the Clever" epithet for the Intelligent trait, and "the Blessed" for the Pious trait.
 
 * Upgrades
 - Added Coinage technology for the Goblins (icon design by Jesse Crider and graphics by Jinn).

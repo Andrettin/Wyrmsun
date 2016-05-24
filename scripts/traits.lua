@@ -81,7 +81,8 @@ DefineUpgrade("upgrade-harsh", {
 
 DefineUpgrade("upgrade-intelligent", {
 	Parent = "upgrade-trait",
-	Name = _("Intelligent")
+	Name = _("Intelligent"),
+	Epithets = {"the Clever"}
 })
 
 DefineUpgrade("upgrade-keen", {
@@ -114,7 +115,7 @@ DefineUpgrade("upgrade-old", {
 DefineUpgrade("upgrade-pious", {
 	Parent = "upgrade-trait",
 	Name = _("Pious"),
-	Epithets = {"the Pious"}
+	Epithets = {"the Pious", "the Blessed"}
 })
 
 DefineUpgrade("upgrade-quick", {

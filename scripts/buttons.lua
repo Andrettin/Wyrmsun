@@ -313,6 +313,17 @@ DefineButton( { Pos = 8, Level = 1, Icon = "icon-puncture",
 	}
 } )
 
+DefineButton( { Pos = 9, Level = 1, Icon = "icon-leadership",
+	Action = "learn-ability", Value = "upgrade-leadership",
+	Key = "l", Hint = "Learn ~!Leadership Aura", Popup = "popup-commands",
+	Description = "Leadership Aura is an aura ability that increases the damage of nearby friendly units by 10%.",
+	ForUnit = {
+		"unit-dwarven-thane",
+		"unit-gnomish-master-at-arms",
+		"unit-surghan-mercenary-thane"
+	}
+} )
+
 DefineButton( { Pos = 1, Level = 1, Icon = "icon-healing",
 	Action = "learn-ability", Value = "upgrade-healing",
 	Key = "h", Hint = _("Learn ~!Healing"), Popup = "popup-commands",

@@ -3589,7 +3589,8 @@ DefineUnitType("unit-template-heroic-merchant", { Name = _("Heroic Merchant"),
 	HitPoints = 60,
 	BasicDamage = 7,
 	Evasion = 14,
-	Points = 90
+	Points = 90,
+	LeadershipAura = 1
 } )
 
 DefineUnitType("unit-template-infantry", { Name = _("Infantry"),

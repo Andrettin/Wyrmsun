@@ -812,6 +812,8 @@ João Victor G. Costa (Jinn):
 /graphics/neutral/icons/iron_plow.png (licensed under the CC0)
 /graphics/neutral/icons/iron_plow_extra_1.png (licensed under the CC0)
 /graphics/neutral/icons/labor.png (licensed under the CC0)
+/graphics/neutral/icons/leadership.png (licensed under the CC0)
+/graphics/neutral/icons/leadership_extra_1.png (licensed under the CC0)
 /graphics/neutral/icons/level_up.png (licensed under the CC0)
 /graphics/neutral/icons/long_swordsman.png (licensed under the CC0)
 /graphics/neutral/icons/potion_red.png (licensed under the CC0)

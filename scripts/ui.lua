@@ -73,6 +73,7 @@ if not (ui_loaded_first_time) then
 		end
 		DefineDecorations({Index = "CarryResource", HideNeutral = false, CenterX = true,OffsetPercent = {50, 100},Method = {"sprite", {"sprite-mana"}}})
 	end
+	DefineSprites({Name = "sprite-leadership", File = "ui/status_effects/leadership.png", Offset = {1, 1}, Size = {14, 14}})
 	DefineSprites({Name = "sprite-inspire", File = "ui/status_effects/inspire.png", Offset = {1, 1}, Size = {16, 16}})
 	DefineSprites({Name = "sprite-slow", File = "ui/status_effects/slow.png", Offset = {1, 1}, Size = {16, 16}})
 	DefineSprites({Name = "sprite-stun", File = "ui/status_effects/stun.png", Offset = {1, 1}, Size = {16, 16}})
@@ -80,6 +81,8 @@ if not (ui_loaded_first_time) then
 	DefineSprites({Name = "sprite-regeneration", File = "ui/status_effects/regeneration.png", Offset = {1, 1}, Size = {16, 16}})
 	DefineSprites({Name = "sprite-level-up", File = "ui/status_effects/level_up.png", Offset = {1, 1}, Size = {16, 16}})
 
+	DefineDecorations({Index = "Leadership", ShowOpponent = true, ShowWhenMax = true,
+	  Offset = {0, 0}, Method = {"static-sprite", {"sprite-leadership", 0}}})
 	DefineDecorations({Index = "Inspire", ShowOpponent = true, ShowWhenMax = true,
 	  Offset = {0, 0}, Method = {"static-sprite", {"sprite-inspire", 0}}})
 	DefineDecorations({Index = "Slow", ShowOpponent = true, ShowWhenMax = true,
@@ -1364,14 +1367,17 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {Speed = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Speed: "), Variable = "Speed", Font = wyr.preferences.PopupDescriptionFont}}
 				},
+				{ 	Condition = {Demand = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Food Cost: "), Variable = "Demand", Font = wyr.preferences.PopupDescriptionFont}}
+				},
 				{ 	Condition = {DisembarkmentBonus = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Disembarkment Bonus"), Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {RegenerationAura = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Regeneration Aura"), Font = wyr.preferences.PopupDescriptionFont}}
 				},
-				{ 	Condition = {Demand = "only"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = _("Food Cost: "), Variable = "Demand", Font = wyr.preferences.PopupDescriptionFont}}
+				{ 	Condition = {LeadershipAura = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Leadership Aura"), Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				-- Description
 				{ 	Margin = {1, 1}, Condition = {ButtonAction = "editor-unit"}, 
