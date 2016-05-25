@@ -40,6 +40,7 @@ Units = {
 	"unit-teuton-worker", "unit-teuton-swordsman", "unit-suebi-swordsman", "unit-frank-swordsman",
 	"unit-teuton-spearman", "unit-frank-spearman", "unit-teuton-archer",
 	"unit-teuton-ritter", "unit-frank-horseman",
+	"unit-teuton-priest", 
 	"unit-teuton-catapult",
 	"unit-teuton-kogge",
 	"unit-teuton-town-hall", "unit-teuton-stronghold",

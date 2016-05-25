@@ -862,6 +862,8 @@ João Victor G. Costa (Jinn):
 /graphics/teuton/buildings/town_hall_shadow.png (licensed under the CC0)
 /graphics/teuton/buildings/watch_tower.png (licensed under the CC0)
 /graphics/teuton/buildings/watch_tower_shadow.png (licensed under the CC0)
+/graphics/teuton/icons/cleric.png (licensed under the CC0)
+/graphics/teuton/icons/cleric_extra_1.png (licensed under the CC0)
 /graphics/teuton/icons/coinage.png (licensed under the CC0)
 /graphics/teuton/icons/iron_shield.png (licensed under the CC0)
 /graphics/teuton/icons/iron_shield_extra_1.png (licensed under the CC0)

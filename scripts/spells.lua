@@ -56,7 +56,7 @@ DefineSpell("spell-healing",
 		"HitPoints", {MaxValuePercent = 100}
 	},
 	"sound-when-cast", "magic-holy",
-	"depend-upgrade", "upgrade-healing",
+--	"depend-upgrade", "upgrade-healing",
 	"autocast", {"range", 6, "condition", {"alliance", "only", "HitPoints", {MaxValuePercent = 90}}},
 	"ai-cast", {"range", 6, "condition", {"alliance", "only", "HitPoints", {MaxValuePercent = 90}}}
 )

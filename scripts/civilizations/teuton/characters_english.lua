@@ -627,7 +627,7 @@ DefineCharacter("Offa", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971,
 DefineCharacter("Egbert", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 92.
 	Name = "Egbert", -- archbishop of York
 	Gender = "male",
-	Type = "unit-teuton-swordsman", -- should be a priest
+	Type = "unit-teuton-priest",
 	Civilization = "teuton",
 	Faction = "Northumbria",
 	ProvinceOfOrigin = "Northumberland", -- Northumbrian, so let's place him here
@@ -825,7 +825,7 @@ DefineCharacter("Nicolas Breakspear", { -- Source: Snorri Sturlson, "Heimskringl
 	NameElements = {"word", "english", "noun", "Nicolas"},
 	ExtraName = "Breakspear", -- I assume this isn't his family name, but a nickname or something of the sort?
 	Gender = "male",
-	Type = "unit-teuton-swordsman", -- should be priest
+	Type = "unit-teuton-priest",
 	Civilization = "teuton", -- should be English
 	ProvinceOfOrigin = "Essex", -- Hertfordshire (since his father worked there, he's probably from there)
 	Year = 1154 -- elected Pope
@@ -836,7 +836,7 @@ DefineCharacter("John Williamson", { -- Source: Snorri Sturlson, "Heimskringla",
 	NameElements = {"word", "english", "noun", "John"},
 	ExtraName = "Williamson",
 	Gender = "male",
-	Type = "unit-teuton-worker", -- should be priest
+	Type = "unit-teuton-priest",
 	Civilization = "teuton", -- should be English
 	ProvinceOfOrigin = "Essex", -- English (so put him in the capital province of England for lack of more precise information)
 	Year = 1429 -- became bishop of Holum (in Iceland) in 1429
@@ -847,7 +847,7 @@ DefineCharacter("John Garrickson", { -- Source: Snorri Sturlson, "Heimskringla",
 	NameElements = {"word", "english", "noun", "John"},
 	ExtraName = "Garrickson",
 	Gender = "male",
-	Type = "unit-teuton-worker", -- should be priest
+	Type = "unit-teuton-priest",
 	Civilization = "teuton", -- should be English
 	ProvinceOfOrigin = "Essex", -- English (so put him in the capital province of England for lack of more precise information)
 	Year = 1430 -- was bishop of Skalholt (in Iceland) in 1430

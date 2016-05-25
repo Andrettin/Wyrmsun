@@ -720,6 +720,48 @@ DefineUnitType("unit-frank-horseman", { Name = _("Ritter"),
 	AiDrops = {"unit-frankish-spatha"}
 })
 
+DefineUnitType("unit-teuton-priest", { Name = _("Cleric"),
+	Parent = "unit-template-priest",
+	Civilization = "teuton",
+	Description = _("Teuton clerics attend to the spiritual needs of their congregation. They store religious and secular knowledge, including prayers and medicinal techniques."),
+	Image = {"file", "human/units/human_body_warrior.png", "size", {72, 72}},
+	Shadow = {"file", "human/units/human_shadow.png", "size", {72, 72}},
+	LayerImages = {
+		{"layer", "hair", "file", "human/units/gray_hair_warrior.png"},
+		{"layer", "left-arm", "file", "human/units/human_left_arm.png"},
+		{"layer", "right-arm", "file", "human/units/human_right_arm.png"},
+		{"layer", "clothing", "file", "germanic/units/coat_warrior.png"},
+		{"layer", "clothing-left-arm", "file", "germanic/units/coat_left_arm.png"},
+		{"layer", "clothing-right-arm", "file", "germanic/units/coat_right_arm.png"},
+		{"layer", "pants", "file", "human/units/pants.png"},
+		{"layer", "boots", "file", "teuton/units/leather_shoes.png"}
+	},
+	Animations = "animations-melee-unit-new",
+	Icon = "icon-teuton-cleric",
+	DefaultEquipment = {
+--		{"weapon", "unit-mace"},
+		{"boots", "unit-boots"}
+	},
+	Corpse = "unit-human-dead-body",
+--	WeaponClasses = {"mace"},
+	BluntDamage = true,
+	ButtonKey = "c",
+	ButtonHint = _("Train ~!Cleric"),
+	CanCastSpell = {"spell-healing"},
+	AutoCastActive = {"spell-healing"},
+	AiDrops = {"unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-flaming", "upgrade-item-prefix-glacial", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-the-serpent", "upgrade-item-suffix-of-victory"},
+	Sounds = {
+		"selected", "basic-teuton-voices-selected-group",
+		"acknowledge", "basic-teuton-voices-acknowledge",
+		"ready", "basic-teuton-voices-ready",
+		"help", "basic-teuton-voices-help",
+		"dead", "basic-human-voices-dead",
+		"hit", "fist-attack",
+		"miss", "attack-miss"
+	}
+} )
+
 DefineUnitType("unit-teuton-catapult", { Name = _("Catapult"),
 	Parent = "unit-template-siege-engine",
 	Civilization = "teuton",
@@ -948,6 +990,7 @@ DefineUnitType("unit-teuton-temple", { Name = _("Temple"),
 	Image = {"file", "teuton/buildings/church.png", "size", {96, 96}},
 	Shadow = {"file", "teuton/buildings/church_shadow.png", "size", {96, 96}},
 	Icon = "icon-teuton-church",
+--	Trains = {"unit-teuton-priest", "unit-potion-of-healing"},
 	Trains = {"unit-potion-of-healing"},
 	Sounds = {
 		"help", "basic-teuton-voices-help-town"

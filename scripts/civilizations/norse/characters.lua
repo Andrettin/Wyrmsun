@@ -1849,9 +1849,9 @@ DefineCharacter("Friaut", { -- Source: Kevin Crossley-Holland, "The Norse Myths"
 })
 
 DefineCharacter("Hledis", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 101; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 222.
-	Name = "Hledis", -- priestess; adorned with golden bracelets
+	Name = "Hledis", -- adorned with golden bracelets
 	Gender = "female",
-	Type = "unit-teuton-archer", -- should be priestess
+	Type = "unit-teuton-priest", -- priestess
 	Civilization = "norse",
 	Faction = "Hordaland",
 	ProvinceOfOrigin = "Hordaland", -- her husband was a warrior of the king of Horthaland
@@ -2511,7 +2511,7 @@ DefineCharacter("Kala", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol.
 DefineCharacter("Arnold", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 142.
 	Name = "Arnold", -- Bishop of Greenland
 	Gender = "male",
-	Type = "unit-teuton-swordsman", -- should be priest
+	Type = "unit-teuton-priest",
 	Civilization = "norse", -- presumably
 	ProvinceOfOrigin = "Scania", -- presumably, since he was ordained there
 	Year = 1121 -- ordained Bishop of Greenland by the Archbishop of Lund (in Scania)
@@ -2521,7 +2521,7 @@ DefineCharacter("Sturla Thordarson", { -- Source: Snorri Sturlson, "Heimskringla
 	Name = "Sturla",
 	ExtraName = "Thordarson",
 	Gender = "male",
-	Type = "unit-teuton-swordsman", -- should be priest; he was a Godar (a function which was originally both priest and judge, but eventually became more and more only the latter)
+	Type = "unit-teuton-priest", -- he was a Godar (a function which was originally both priest and judge, but eventually became more and more only the latter)
 	Civilization = "norse",
 	ProvinceOfOrigin = "Iceland" -- presumably, since his son was from there
 })
@@ -2530,7 +2530,7 @@ DefineCharacter("Snorri Sturlson", { -- Source: Snorri Sturlson, "Heimskringla",
 	Name = "Snorri",
 	ExtraName = "Sturlson",
 	Gender = "male",
-	Type = "unit-teuton-swordsman", -- should probably be priest, since his father was a Godar and that was a hereditary position; was a learned man in a number of old legends and mythologies
+	Type = "unit-teuton-priest", -- since his father was a Godar and that was a hereditary position; was a learned man in a number of old legends and mythologies
 	Civilization = "norse",
 	ProvinceOfOrigin = "Iceland",
 	Father = "Sturla Thordarson",
@@ -2573,7 +2573,7 @@ DefineCharacter("Alf", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 
 		"word", "old-norse", "noun", "Alfr" -- presumably
 	},
 	Gender = "male",
-	Type = "unit-teuton-swordsman", -- should be priest
+	Type = "unit-teuton-priest",
 	Civilization = "norse", -- presumably
 --	ProvinceOfOrigin = "Greenland", -- possibly he was from elsewhere, but we have no information about that
 	DeathYear = 1378 -- died in Greenland
@@ -2597,7 +2597,7 @@ DefineCharacter("Margaret", { -- Source: Snorri Sturlson, "Heimskringla", 1844, 
 DefineCharacter("Henry", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 142.
 	Name = "Henry", -- appointed Bishop of Greenland, but never arrived there
 	Gender = "male",
-	Type = "unit-teuton-swordsman", -- should be priest
+	Type = "unit-teuton-priest",
 	Civilization = "norse", -- presumably
 --	ProvinceOfOrigin = "?",
 	Year = 1389 -- appointed Bishop of Greenland
@@ -2606,7 +2606,7 @@ DefineCharacter("Henry", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol
 DefineCharacter("Askil", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 142.
 	Name = "Askil", -- appointed Bishop of Greenland to succeed Henry in case he was dead; never reached Greenland
 	Gender = "male",
-	Type = "unit-teuton-swordsman", -- should be priest
+	Type = "unit-teuton-priest",
 	Civilization = "norse", -- presumably
 --	ProvinceOfOrigin = "?",
 	Year = 1406 -- appointed Bishop of Greenland to succeed Henry in case he was dead
@@ -2623,7 +2623,7 @@ DefineCharacter("Andreas", { -- Source: Snorri Sturlson, "Heimskringla", 1844, v
 DefineCharacter("Endrede", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 142.
 	Name = "Endrede", -- Bishop of Greenland
 	Gender = "male",
-	Type = "unit-teuton-swordsman", -- should be priest
+	Type = "unit-teuton-priest",
 	Civilization = "norse", -- presumably
 --	ProvinceOfOrigin = "Greenland", -- accurate?
 	Year = 1409, -- executed a marriage settlement at Garda (the episcopal seat of Greenland) in 1409
@@ -2634,7 +2634,7 @@ DefineCharacter("Magnus Eyolfson", { -- Source: Snorri Sturlson, "Heimskringla",
 	Name = "Magnus",
 	ExtraName = "Eyolfson",
 	Gender = "male",
-	Type = "unit-teuton-worker", -- should be priest
+	Type = "unit-teuton-priest",
 	Civilization = "norse", -- correct?
 	ProvinceOfOrigin = "Iceland", -- correct?
 	Year = 1477 -- was bishop of Skalholt (in Iceland) in 1477
@@ -2644,7 +2644,7 @@ DefineCharacter("Thormod Torfæus", { -- Source: Snorri Sturlson, "Heimskringla"
 	Name = "Thormod",
 	FamilyName = "Torfæus",
 	Gender = "male",
-	Type = "unit-teuton-swordsman", -- should be something more appropriate for a writer, such as a priest
+	Type = "unit-teuton-priest", -- put as a priest since there isn't any other unit type more appropriate for a writer
 	Civilization = "norse",
 	ProvinceOfOrigin = "Akershus", -- Norwegian? put the character in the province where the Norwegian capital is, since we don't know from where in Norway he came (if he's Norwegian at all)
 	Year = 1707, -- his "Historiae Vinlandiae Antiquae" dates from 1707
@@ -2655,7 +2655,7 @@ DefineCharacter("Hans Egide", { -- Source: Snorri Sturlson, "Heimskringla", 1844
 	Name = "Hans", -- Norwegian minister who settled in Greenland
 	FamilyName = "Egide",
 	Gender = "male",
-	Type = "unit-teuton-swordsman", -- should be priest
+	Type = "unit-teuton-priest",
 	Civilization = "norse",
 	ProvinceOfOrigin = "Akershus", -- put the character in the province where the Norwegian capital is, since we don't know from where in Norway he came
 	Year = 1721 -- settled in Greenland amongst the eskimos as a missionary in 1721

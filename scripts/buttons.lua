@@ -147,6 +147,7 @@ DefineButton( { Pos = 13, Level = 0, Icon = "icon-level-up",
 		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-frank-swordsman",
 		"unit-teuton-spearman", "unit-frank-spearman", "unit-teuton-archer",
 		"unit-teuton-ritter", "unit-frank-horseman",
+		"unit-teuton-priest",
 		"unit-gnomish-recruit", "unit-gnomish-duelist", "unit-gnomish-master-at-arms", "unit-gnomish-herbalist",
 		"unit-goblin-thief", "unit-goblin-swordsman", "unit-goblin-spearman", "unit-goblin-archer", "unit-goblin-headhunter",
 		"unit-kobold-footpad",
@@ -324,11 +325,13 @@ DefineButton( { Pos = 9, Level = 1, Icon = "icon-leadership",
 	}
 } )
 
+--[[
 DefineButton( { Pos = 1, Level = 1, Icon = "icon-healing",
 	Action = "learn-ability", Value = "upgrade-healing",
 	Key = "h", Hint = _("Learn ~!Healing"), Popup = "popup-commands",
 	ForUnit = {"unit-dwarven-witness"}
 })
+--]]
 
 DefineButton( { Pos = 16, Level = 1, Icon = "icon-cancel",
 	Action = "button", Value = 0,
@@ -343,6 +346,7 @@ DefineButton( { Pos = 16, Level = 1, Icon = "icon-cancel",
 		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-frank-swordsman",
 		"unit-teuton-spearman", "unit-frank-spearman",
 		"unit-teuton-archer", "unit-teuton-ritter", "unit-frank-horseman",
+		"unit-teuton-priest",
 		"unit-gnomish-recruit", "unit-gnomish-duelist", "unit-gnomish-master-at-arms", "unit-gnomish-herbalist",
 		"unit-goblin-thief", "unit-goblin-swordsman", "unit-goblin-spearman", "unit-goblin-archer", "unit-goblin-headhunter",
 		"unit-kobold-footpad",
@@ -367,6 +371,7 @@ DefineButton( { Pos = 14, Level = 0, Icon = "icon-inventory",
 		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-frank-swordsman",
 		"unit-teuton-spearman", "unit-frank-spearman",
 		"unit-teuton-archer", "unit-teuton-ritter", "unit-frank-horseman",
+		"unit-teuton-priest",
 		"unit-gnomish-recruit", "unit-gnomish-duelist", "unit-gnomish-master-at-arms", "unit-gnomish-herbalist",
 		"unit-goblin-thief", "unit-goblin-swordsman", "unit-goblin-spearman", "unit-goblin-archer", "unit-goblin-headhunter",
 		"unit-kobold-footpad",
@@ -388,6 +393,7 @@ DefineButton( { Pos = 16, Level = 2, Icon = "icon-cancel",
 		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-frank-swordsman",
 		"unit-teuton-spearman", "unit-frank-spearman",
 		"unit-teuton-archer", "unit-teuton-ritter", "unit-frank-horseman",
+		"unit-teuton-priest",
 		"unit-gnomish-recruit", "unit-gnomish-duelist", "unit-gnomish-master-at-arms", "unit-gnomish-herbalist",
 		"unit-goblin-thief", "unit-goblin-swordsman", "unit-goblin-spearman", "unit-goblin-archer", "unit-goblin-headhunter",
 		"unit-kobold-footpad",
@@ -406,7 +412,7 @@ DefineButton( { Pos = 4, Level = 0, Icon = "icon-inspire",
 
 DefineButton( { Pos = 6, Level = 0, Icon = "icon-terror",
 	Action = "cast-spell", Value = "spell-terror",
-	Description = "Makes a unit flee in terror when hit.",
+	Description = "Makes a unit flee in terror.",
 	Key = "t", Hint = _("~!Terror"), Popup = "popup-commands",
 	ForUnit = {}
 })
@@ -415,7 +421,7 @@ DefineButton( { Pos = 5, Level = 0, Icon = "icon-healing",
 	Action = "cast-spell", Value = "spell-healing",
 	Description = "Heals an organic unit.",
 	Key = "h", Hint = _("~!Healing"), Popup = "popup-commands",
-	ForUnit = {"unit-dwarven-witness"}
+	ForUnit = {"unit-teuton-priest"}
 })
 
 DefineButton( { Pos = 6, Level = 0, Icon = "icon-stun",

@@ -140,7 +140,7 @@ DefineCharacter("Ricimer", { -- Source: Norman Davies, "Vanished Kingdoms", 2012
 DefineCharacter("Adalbert", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 141.
 	Name = "Adalbert", -- archbishop of Bremen; was requested by Norse people (including from Greenland) to send clergymen to them, which he did
 	Gender = "male",
-	Type = "unit-teuton-swordsman", -- should be priest
+	Type = "unit-teuton-priest",
 	Civilization = "teuton", -- presumably
 	ProvinceOfOrigin = "Bremen", -- presumably
 	DeathYear = 1075 -- died

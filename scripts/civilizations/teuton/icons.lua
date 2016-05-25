@@ -74,6 +74,12 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-teuton-cleric",
+	Size = {46, 38},
+	File = "teuton/icons/cleric.png"
+})
+
+DefineIcon({
 	Name = "icon-teuton-catapult",
 	Size = {46, 38},
 	File = "teuton/icons/catapult.png"

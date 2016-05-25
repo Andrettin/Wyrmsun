@@ -46,7 +46,7 @@ DefineCharacter("Drisa", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol
 DefineCharacter("Hulda", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 228.
 	Name = "Hulda",
 	Gender = "female",
-	Type = "unit-teuton-archer", -- is a witch, so being a priestess would fit reasonably well
+	Type = "unit-teuton-priest",
 	Civilization = "finnish", -- presumably
 	ProvinceOfOrigin = "Finland",
 	DateReferenceCharacter = "Drisa" -- placed a charm on Vanland Yngling for Drisa
