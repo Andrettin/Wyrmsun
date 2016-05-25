@@ -127,6 +127,24 @@ DefineSpell("spell-slow",
 	"ai-cast", {"range", 10, "combat", "only", "condition", {"Coward", "false", "opponent", "only"}}
 )
 
+DefineSpell("spell-terror",
+	"showname", _("Terror"),
+	"manacost", 50,
+	"range", 6,
+	"target", "unit",
+	"action", {
+		{"adjust-variable", {Terror = 1000}},
+		{"spawn-missile", "missile", "missile-magic-effect", "start-point", {"base", "target"}}
+	},
+	"condition", {
+		"organic", "only",
+		"Terror", {ExactValue = 0}
+	},
+	"sound-when-cast", "magic-holy",
+	"autocast", {"range", 6, "attacker", "only", "condition", {"Coward", "false", "opponent", "only"}},
+	"ai-cast", {"range", 6, "attacker", "only", "condition", {"Coward", "false", "opponent", "only"}}
+)
+
 DefineSpell("spell-war-machine-spear-attack",
 	"showname", _("war machine spear attack"),
 	"manacost", 0,

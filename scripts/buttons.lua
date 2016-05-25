@@ -404,6 +404,13 @@ DefineButton( { Pos = 4, Level = 0, Icon = "icon-inspire",
 	ForUnit = {"unit-dwarven-witness"}
 })
 
+DefineButton( { Pos = 6, Level = 0, Icon = "icon-terror",
+	Action = "cast-spell", Value = "spell-terror",
+	Description = "Makes a unit flee in terror when hit.",
+	Key = "t", Hint = _("~!Terror"), Popup = "popup-commands",
+	ForUnit = {}
+})
+
 DefineButton( { Pos = 5, Level = 0, Icon = "icon-healing",
 	Action = "cast-spell", Value = "spell-healing",
 	Description = "Heals an organic unit.",

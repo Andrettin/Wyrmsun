@@ -79,6 +79,7 @@ if not (ui_loaded_first_time) then
 	DefineSprites({Name = "sprite-stun", File = "ui/status_effects/stun.png", Offset = {1, 1}, Size = {16, 16}})
 	DefineSprites({Name = "sprite-bleeding", File = "ui/status_effects/bleeding.png", Offset = {1, 1}, Size = {16, 16}})
 	DefineSprites({Name = "sprite-regeneration", File = "ui/status_effects/regeneration.png", Offset = {1, 1}, Size = {16, 16}})
+	DefineSprites({Name = "sprite-terror", File = "ui/status_effects/terror.png", Offset = {1, 1}, Size = {16, 16}})
 	DefineSprites({Name = "sprite-level-up", File = "ui/status_effects/level_up.png", Offset = {1, 1}, Size = {16, 16}})
 
 	DefineDecorations({Index = "Leadership", ShowOpponent = true, ShowWhenMax = true,
@@ -93,6 +94,8 @@ if not (ui_loaded_first_time) then
 	  Offset = {16, 16}, Method = {"static-sprite", {"sprite-bleeding", 0}}})
 	DefineDecorations({Index = "Regeneration", ShowOpponent = true, ShowWhenMax = true,
 	  Offset = {16, 16}, Method = {"static-sprite", {"sprite-regeneration", 0}}})
+	DefineDecorations({Index = "Terror", ShowOpponent = true, ShowWhenMax = true,
+	  Offset = {16, 16}, Method = {"static-sprite", {"sprite-terror", 0}}})
 	DefineDecorations({Index = "LevelUp", ShowOpponent = false, HideAllied = true, ShowWhenMax = true,
 	  Offset = {16, 16}, Method = {"static-sprite", {"sprite-level-up", 0}}})
 end

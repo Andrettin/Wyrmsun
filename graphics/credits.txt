@@ -824,6 +824,8 @@ João Victor G. Costa (Jinn):
 /graphics/neutral/icons/research.png (licensed under the CC0)
 /graphics/neutral/icons/sword_mastery.png (licensed under the CC0)
 /graphics/neutral/icons/sword_mastery_bronze.png (licensed under the CC0)
+/graphics/neutral/icons/terror.png (licensed under the CC0)
+/graphics/neutral/icons/terror_extra_1.png (licensed under the CC0)
 /graphics/neutral/icons/water_elemental.png (licensed under the CC0)
 /graphics/neutral/icons/wood_plow.png (licensed under the CC0)
 /graphics/neutral/icons/yale.png (licensed under the CC0)
