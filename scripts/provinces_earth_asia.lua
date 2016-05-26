@@ -25,6 +25,21 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineProvince("Armenia", {
+	World = "Earth",
+	Tiles = {},
+	Map = "maps/random/random-map-forest.smp",
+	SettlementTerrain = "Plains",
+	Claims = {
+		"greek", "Armenia"
+	},
+	HistoricalOwners = {
+		161, "persian", "Parthia", -- in 161 the Parthians invaded Armenia and afterwards defeated the armies stationed there; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		163, "greek", "Armenia" -- in 163 co-emperor Lucius Verus reconquered Armenia from the Parthians (presumably restoring it as a vassal state?); Source: "Ancient Warfare VII.6", 2013, p. 7.
+	},
+	Regions = {"Asia"}
+})
+
 DefineProvince("Asia Minor", {
 	World = "Earth",
 	Tiles = {
@@ -60,6 +75,17 @@ DefineProvince("Philippines", {
 	Coastal = true,
 	HistoricalModifiers = {
 		1645, "upgrade-university", true -- University Sto Tomás founded in Manila in 1645. Source: Enrique Martínez Ruiz; Consuelo Maqueda, Atlas Histórico de España I, 2000, p. 226.
+	},
+	Regions = {"Asia"}
+})
+
+DefineProvince("Syria", {
+	World = "Earth",
+	Tiles = {},
+	Map = "maps/random/random-map-forest.smp",
+	SettlementTerrain = "Plains",
+	HistoricalOwners = {
+		161, "persian", "Parthia", -- in 161 the Parthians invaded Syria and afterwards defeated the armies stationed there; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	Regions = {"Asia"}
 })

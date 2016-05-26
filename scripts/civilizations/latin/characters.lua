@@ -104,6 +104,32 @@ DefineCharacter("Commodus", { -- Source: "Ancient Warfare VII.6", 2013, p. 6.
 	}
 })
 
+DefineCharacter("Severianus", { -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+	Name = "Severianus",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "latin",
+	Faction = "Rome",
+	ProvinceOfOrigin = "Latium", -- put him in Rome's province since we don't have information on his actual province of origin
+	Year = 161,
+	HistoricalTitles = {
+--		"governor", 0, 161, "Armenia" -- was governor of Armenia until 161, when the Parthians conquered it (although Armenia was a vassal state rather than a Roman province - more research on this is necessary)
+	}
+})
+
+DefineCharacter("Attidius Cornelianus", { -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+	Name = "Attidius Cornelianus",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "latin",
+	Faction = "Rome",
+	ProvinceOfOrigin = "Latium", -- put him in Rome's province since we don't have information on his actual province of origin
+	Year = 161,
+	HistoricalTitles = {
+--		"governor", 0, 161, "Syria" -- was governor of Syria until 161, when the Parthians conquered it
+	}
+})
+
 DefineCharacter("Marcian", { -- Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 6.
 	Name = "Marcian", -- Roman emperor who concluded a treaty with the Ostrogothic king Walamer after he had become independent in 453 AD, with the Ostrogoths providing protection of the frontier while the Romans gave them a subsidy
 	Gender = "male",
