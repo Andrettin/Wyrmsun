@@ -29,6 +29,7 @@
 
 --Load("scripts/grand_strategy/brazilian_events.lua") -- not active since the map doesn't encompass that region yet (these events will become active when the map is expanded - in a few years? - to accomodate more of the world, when we have expanded to more advanced technological periods
 Load("scripts/grand_strategy/christianity_events.lua")
+Load("scripts/grand_strategy/generic_events.lua")
 Load("scripts/grand_strategy/teuton_events.lua")
 
 function LoadEvents(world)
@@ -147,7 +148,6 @@ function LoadEvents(world)
 		end
 	end
 	
-	Load("scripts/grand_strategy/generic_events.lua")
 	if (world == "Earth" or world == "Random" or world == "Save") then
 		Load("scripts/grand_strategy/christianity_events_old.lua")
 		Load("scripts/grand_strategy/earth_events.lua")

@@ -25,6 +25,8 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+-- Buildings
+
 DefineUpgrade("upgrade-library", {
 	Name = _("Library"),
 	ModifierGraphicFile = "ui/modifiers/book.png",
@@ -53,4 +55,12 @@ DefineUpgrade("upgrade-tramway-network", { -- this modifier cannot be gotten yet
 	Name = _("Tramway Network"),
 	ModifierGraphicFile = "ui/modifiers/courthouse.png", -- should be changed to its own icon later (i.e. a tramway)
 	AdministrativeEfficiencyModifier = 10
+})
+
+-- Diseases
+
+DefineUpgrade("upgrade-smallpox", {
+	Name = _("Smallpox"),
+	ModifierGraphicFile = "ui/modifiers/terror.png",
+	GrandStrategyProductionEfficiencyModifier = {"grain", -25, "mushrooms", -25, "fish", -25}
 })

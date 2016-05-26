@@ -31,7 +31,7 @@ DefineUpgrade("upgrade-work-de-bello-gallico", { -- Source: Heiko Steuer, "Warri
 	Civilization = "latin",
 --	Description = "Caesar has written his treatise on the Gallic Wars, \"De Bello Gallico\"",
 	Description = "This work is a treatise on the Gallic Wars.",
-	Year = -52, -- De Bello Gallico was written 58-52 BC
+	Year = -52 -- De Bello Gallico was written 58-52 BC
 	-- should probably have some other requirements, like events pertaining to the Gallic Wars having occurred, or Gaul having been conquered by Rome
 })
 

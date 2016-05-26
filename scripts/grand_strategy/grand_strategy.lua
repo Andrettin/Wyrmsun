@@ -3481,7 +3481,9 @@ function ClearGrandStrategyVariables()
 	Defender = nil
 	Factions = nil
 	WorldMapProvinces = nil
+	WorldMapProvinces = {}
 	WorldMapWaterProvinces = nil
+	WorldMapWaterProvinces = {}
 	AttackedProvince = nil
 	GrandStrategyInterfaceState = ""
 	GrandStrategyCommodities = nil

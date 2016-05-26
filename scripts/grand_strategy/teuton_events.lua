@@ -95,7 +95,7 @@ DefineGrandStrategyEvent("Teuton Culture Develops", {
 })
 
 DefineGrandStrategyEvent("Teuton Culture Spreads", {
-	Description = "The people of PROVINCE_NAME have adopted Teutonic culture",
+	Description = "The people of PROVINCE_NAME have adopted Teutonic culture.",
 	World = "Earth",
 	Conditions = function(s)
 		if (EventFaction.Civilization ~= "goth" and EventFaction.Civilization ~= "norse") then

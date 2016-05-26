@@ -36,6 +36,74 @@ DefineCharacter("Caesar", { -- Source: Heiko Steuer, "Warrior bands, war lords a
 	AuthoredWorks = {"upgrade-work-de-bello-gallico"}
 })
 
+DefineCharacter("Antoninus Pius", { -- Source: "Ancient Warfare VII.6", 2013, p. 6.
+	Name = "Antoninus Pius",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "latin",
+	Faction = "Rome",
+	ProvinceOfOrigin = "Latium", -- put him in Rome's province since we don't have information on his actual province of origin
+	Year = 138, -- reign began
+	DeathYear = 161, -- died
+	HistoricalTitles = {
+		"head-of-state", 138, 161, "latin", "Rome" -- Roman Emperor from 138 to 161
+	}
+})
+
+DefineCharacter("Faustina", { -- Source: "Ancient Warfare VII.6", 2013, p. 6.
+	Name = "Faustina",
+	Gender = "female",
+	Type = "unit-teuton-priest", -- correct?
+	Civilization = "latin",
+	Faction = "Rome",
+	ProvinceOfOrigin = "Latium", -- put her in Rome's province since we don't have information on her actual province of origin
+	Father = "Antoninus Pius"
+	-- married to Marcus Aurelius
+})
+
+DefineCharacter("Marcus Aurelius", { -- Source: "Ancient Warfare VII.6", 2013, p. 6.
+	Name = "Marcus Aurelius",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "latin",
+	Faction = "Rome",
+	ProvinceOfOrigin = "Latium", -- put him in Rome's province since we don't have information on his actual province of origin
+	Year = 121, -- born on 26 April 121
+	HistoricalTitles = {
+		-- was consul when he was 18 years old
+		-- in 140 he became consul a second time
+		"head-of-state", 161, 0, "latin", "Rome" -- Roman Emperor from 161 (with Lucius Verus as his co-emperor)
+	}
+	-- married to Faustina
+})
+
+DefineCharacter("Lucius Verus", { -- Source: "Ancient Warfare VII.6", 2013, p. 6.
+	Name = "Lucius Verus",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "latin",
+	Faction = "Rome",
+	ProvinceOfOrigin = "Latium", -- put him in Rome's province since we don't have information on his actual province of origin
+	Year = 161, -- became co-emperor in 161
+	HistoricalTitles = {
+		-- Roman Emperor from 161 (as co-emperor to Marcus Aurelius, but Marcus Aurelius seemed to be the one who held more power)
+	}
+})
+
+DefineCharacter("Commodus", { -- Source: "Ancient Warfare VII.6", 2013, p. 6.
+	Name = "Commodus",
+	Gender = "male",
+	Type = "unit-teuton-swordsman",
+	Civilization = "latin",
+	Faction = "Rome",
+	ProvinceOfOrigin = "Latium", -- put him in Rome's province since we don't have information on his actual province of origin
+	Father = "Marcus Aurelius",
+	Mother = "Faustina",
+	HistoricalTitles = {
+		"head-of-state", 0, 0, "latin", "Rome" -- succeeded his father as Roman Emperor
+	}
+})
+
 DefineCharacter("Marcian", { -- Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 6.
 	Name = "Marcian", -- Roman emperor who concluded a treaty with the Ostrogothic king Walamer after he had become independent in 453 AD, with the Ostrogoths providing protection of the frontier while the Romans gave them a subsidy
 	Gender = "male",

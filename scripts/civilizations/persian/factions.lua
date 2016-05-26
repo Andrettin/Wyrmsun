@@ -67,6 +67,17 @@ DefineFaction("Scythian Tribe", {
 	Colors = {"green"}
 })
 
+DefineFaction("Parthia", {
+	Civilization = "persian",
+	Type = "polity",
+	Colors = {"purple"},
+	DefaultTier = "kingdom",
+	HistoricalDiplomacyStates = {
+		161, "greek", "Armenia", "war", -- in the autumn of 161 Parthia invaded Armenia, a vassal state of Rome; Source: "Ancient Warfare VII.6", 2013, p. 6.
+		161, "latin", "Rome", "war"
+	}
+})
+
 DefineFaction("Persia", {
 	Civilization = "persian",
 	Type = "polity",

@@ -154,3 +154,13 @@ DefineFaction("Thrace", {
 	Colors = {"orange"},
 	DefaultTier = "kingdom"
 })
+
+-- Non-Playable
+
+DefineFaction("Armenia", {
+	Civilization = "greek",
+	Type = "polity",
+	Colors = {"brown"},
+	DefaultTier = "kingdom",
+	Playable = false
+})

@@ -3056,6 +3056,7 @@ DefineProvince("Latium", {
 		768, "unit-teuton-temple", true -- Monastery or abbey existent in Farfa during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 	},
 	HistoricalModifiers = {
+		166, "upgrade-smallpox", true, -- A sort of smallpox reached Rome from the east in 166; Source: "Ancient Warfare VII.6", 2013, p. 6.
 		1303, "upgrade-university", true -- University founded in Rome in 1303. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.
 	},
 	Regions = {"Europe", "Italy", "West and Central Europe"}
