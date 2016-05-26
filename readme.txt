@@ -66,6 +66,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Miscellaneous
 - Fixed issue which caused a crash when starting a multiplayer game.
+- The Technologies section of the encyclopedia is now divided in subsections according to civilization.
 
 * Units
 - Added Goblin Magnate (icon design by Jesse Crider and graphics by Jinn), which innately has the Leadership Aura.

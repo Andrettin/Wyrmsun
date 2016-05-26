@@ -94,7 +94,7 @@ function RunEncyclopediaMenu()
 		function() RunEncyclopediaUnitsMenu("runic_suffixes") end)
 
 	menu:addFullButton(_("~!Technologies"), "t", offx + 208 + (113 * 1), offy + 104 + 36*0,
-		function() RunEncyclopediaUnitsMenu("technologies") end)
+		function() RunEncyclopediaUnitsCivilizationMenu("technologies") end)
 
 	menu:addFullButton(_("Te~!xts"), "x", offx + 208 + (113 * 1), offy + 104 + 36*1,
 		function() RunEncyclopediaTextsMenu() end)
@@ -123,7 +123,147 @@ function RunEncyclopediaMenu()
 	menu:run()
 end
 
-function RunEncyclopediaUnitsMenu(state)
+function RunEncyclopediaUnitsCivilizationMenu(state)
+
+	if (RunningScenario == false) then
+		if not (IsMusicPlaying()) then
+			PlayMusicName("MenuTheme")
+		end
+	end
+
+	local menu = WarMenu(nil, GetBackground("ui/backgrounds/wyrm.png"))
+	local offx = (Video.Width - 640) / 2
+	local offy = (Video.Height - 480) / 2
+	
+	local height_offset = 2
+	if (Video.Height >= 600) then
+		height_offset = 2 -- change this to 0 if the number of civilization entries becomes too large
+	else
+		height_offset = 2
+	end
+
+	local civilizations = {}
+	
+	if (state ~= "heroes" and state ~= "item_prefixes" and state ~= "item_suffixes" and state ~= "runic_suffixes" and state ~= "unique_items") then
+		local units_table = {}
+		if not (state == "items") then
+			units_table = Units
+		else
+			units_table = GetItems()
+		end
+		for i, unitName in ipairs(units_table) do
+			if (state ~= "technologies" and string.find(unitName, "upgrade") == nil) then
+				if (
+					(
+						GetUnitTypeData(unitName, "Description") ~= ""
+						or GetUnitTypeData(unitName, "Background") ~= ""
+						or (GetUnitTypeData(unitName, "Item") and GetUnitTypeData(unitName, "Class") ~= "")
+					)
+					and string.find(unitName, "template") == nil
+					and GetUnitTypeData(unitName, "Building") == (state == "buildings")
+					and (GetUnitTypeData(unitName, "Mercenary") and GetUnitTypeData(unitName, "Building") == false) == (state == "mercenaries")
+					and GetUnitTypeData(unitName, "Item") == (state == "items")
+				) then
+					local element_civilization = GetUnitTypeData(unitName, "Civilization")
+					if (element_civilization == "") then
+						element_civilization = "neutral"
+					end
+					if (GetArrayIncludes(civilizations, element_civilization) == false) then
+						table.insert(civilizations, element_civilization)
+					end
+				end
+			elseif (state == "technologies" and string.find(unitName, "unit") == nil) then
+				if (CUpgrade:Get(unitName).Description ~= "" or CUpgrade:Get(unitName).Background ~= "") then
+					local element_civilization = CUpgrade:Get(unitName).Civilization
+					if (element_civilization == "") then
+						element_civilization = "neutral"
+					end
+					if (GetArrayIncludes(civilizations, element_civilization) == false) then
+						table.insert(civilizations, element_civilization)
+					end
+				end
+			end
+		end
+	elseif (state == "heroes") then
+		local heroes = GetCharacters()
+		for i = 1, table.getn(heroes) do
+			if (GetCharacterData(heroes[i], "Persistent") and (GetCharacterData(heroes[i], "Description") ~= "" or GetCharacterData(heroes[i], "Background") ~= "")) then
+				local element_civilization = GetCharacterData(heroes[i], "Civilization")
+				if (element_civilization == "") then
+					element_civilization = "neutral"
+				end
+				if (GetArrayIncludes(civilizations, element_civilization) == false) then
+					table.insert(civilizations, element_civilization)
+				end
+			end
+		end
+	elseif (state == "unique_items") then
+		local unique_items = GetUniqueItems()
+		for i = 1, table.getn(unique_items) do
+			if (GetUniqueItemData(unique_items[i], "Description") ~= "" or GetUniqueItemData(unique_items[i], "Background") ~= "" or GetUniqueItemData(unique_items[i], "Quote") ~= "") then
+				local element_civilization = GetUnitTypeData(GetUniqueItemData(unique_items[i], "Type"), "Civilization")
+				if (element_civilization == "") then
+					element_civilization = "neutral"
+				end
+				if (GetArrayIncludes(civilizations, element_civilization) == false) then
+					table.insert(civilizations, element_civilization)
+				end
+			end
+		end
+	end
+	
+	table.sort(civilizations)
+
+	local civilization_x = 0
+	if (GetTableSize(civilizations) > 20) then
+		civilization_x = -2
+	elseif (GetTableSize(civilizations) > 10) then
+		civilization_x = -1
+	end
+	local civilization_y = -3
+
+	for i = 1, table.getn(civilizations) do
+		menu:addFullButton(_(GetCivilizationData(civilizations[i], "Adjective") .. " " .. _(CapitalizeString(state))), "", offx + 208 + (113 * civilization_x), offy + 104 + (36 * (civilization_y + height_offset)),
+			function() RunEncyclopediaUnitsMenu(state, civilizations[i]); end)
+
+		if (civilization_y > 5 or (civilization_y > 4 and Video.Height < 600)) then
+			civilization_x = civilization_x + 2
+			civilization_y = -3
+		else
+			civilization_y = civilization_y + 1
+		end
+	end
+
+	if (state == "units") then
+		menu:addLabel("~<Encyclopedia: Units~>", offx + 320, offy + 104 + 36*-2)
+	elseif (state == "buildings") then
+		menu:addLabel("~<Encyclopedia: Buildings~>", offx + 320, offy + 104 + 36*-2)
+	elseif (state == "technologies") then
+		menu:addLabel("~<Encyclopedia: Technologies~>", offx + 320, offy + 104 + 36*-2)
+	elseif (state == "items") then
+		menu:addLabel("~<Encyclopedia: Items~>", offx + 320, offy + 104 + 36*-2)
+	elseif (state == "item_prefixes") then
+		menu:addLabel("~<Encyclopedia: Magic Prefixes~>", offx + 320, offy + 104 + 36*-2)
+	elseif (state == "item_suffixes") then
+		menu:addLabel("~<Encyclopedia: Magic Suffixes~>", offx + 320, offy + 104 + 36*-2)
+	elseif (state == "runic_suffixes") then
+		menu:addLabel("~<Encyclopedia: Runic Suffixes~>", offx + 320, offy + 104 + 36*-2)
+	elseif (state == "heroes") then
+		menu:addLabel("~<Encyclopedia: Heroes~>", offx + 320, offy + 104 + 36*-2)
+	elseif (state == "mercenaries") then
+		menu:addLabel("~<Encyclopedia: Mercenaries~>", offx + 320, offy + 104 + 36*-2)
+	elseif (state == "unique_items") then
+		menu:addLabel("~<Encyclopedia: Uniques~>", offx + 320, offy + 104 + 36*-2)
+	end
+
+--	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * (10 - height_offset) + 18),
+	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * 9),
+		function() menu:stop(); end)
+
+	menu:run()
+end
+
+function RunEncyclopediaUnitsMenu(state, civilization)
 
 	if (RunningScenario == false) then
 		if not (IsMusicPlaying()) then
@@ -165,7 +305,7 @@ function RunEncyclopediaUnitsMenu(state)
 						icon_x = icon_x + 1
 					end
 				end
-			elseif (state == "technologies" and string.find(unitName, "unit") == nil) then
+			elseif (state == "technologies" and string.find(unitName, "unit") == nil and civilization == CUpgrade:Get(unitName).Civilization) then
 				if (CUpgrade:Get(unitName).Description ~= "" or CUpgrade:Get(unitName).Background ~= "") then
 					addEncyclopediaIcon(unitName, state, menu, offx + 23 + 4 + (54 * icon_x), offy + 10 + 4 + (46 * (icon_y + 1)))
 					if (icon_x >= 10) then
@@ -265,6 +405,7 @@ function addEncyclopediaIcon(unit_name, state, menu, x, y)
 	local encyclopedia_icon_frame = 0
 	local civilization
 	local faction
+	local tooltip_string = ""
 	local tooltip_name = ""
 	local tooltip_civilization = ""
 	if (string.find(unit_name, "unit") ~= nil) then
@@ -293,11 +434,9 @@ function addEncyclopediaIcon(unit_name, state, menu, x, y)
 		faction = CUpgrade:Get(unit_name).Faction
 		tooltip_name = CUpgrade:Get(unit_name).Name
 		if (civilization ~= "") then
-			tooltip_civilization = "(" ..  _(GetCivilizationData(civilization, "Display"))
 			if (faction ~= "") then
-				tooltip_civilization = tooltip_civilization ..  ": " .. _(FullyCapitalizeString(string.gsub(faction, "-", " ")))
+				tooltip_civilization = "(" ..  _(FullyCapitalizeString(string.gsub(faction, "-", " "))) .. ")"
 			end
-			tooltip_civilization = tooltip_civilization .. ")"
 		end
 	elseif (state == "heroes") then
 		encyclopedia_icon = CIcon:Get(GetCharacterData(unit_name, "Icon")).G
@@ -326,6 +465,12 @@ function addEncyclopediaIcon(unit_name, state, menu, x, y)
 			tooltip_civilization = tooltip_civilization .. ")"
 		end
 	end
+	
+	tooltip_string = tooltip_name
+	if (tooltip_civilization ~= "") then
+		tooltip_string = tooltip_string .. " " .. tooltip_civilization
+	end
+	
 	encyclopedia_icon:Load()
 	if not (encyclopedia_icon_pressed) then
 		encyclopedia_icon_pressed = encyclopedia_icon
@@ -370,7 +515,7 @@ function addEncyclopediaIcon(unit_name, state, menu, x, y)
 	if (string.find(unit_name, "prefix") == nil and string.find(unit_name, "suffix") == nil) then
 		b:setFrameImage(Preference.IconFrameG)
 		b:setPressedFrameImage(Preference.PressedIconFrameG)
-		b:setTooltip(tooltip_name .. " " .. tooltip_civilization)
+		b:setTooltip(tooltip_string)
 	else
 		b:setBaseColor(Color(0,0,0,0))
 		b:setForegroundColor(Color(0,0,0,0))
