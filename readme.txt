@@ -64,6 +64,10 @@ https://github.com/Andrettin/Wyrmsun
 * Abilities
 - Added the Leadership Aura ability (graphics by Jinn), learnable by dwarven Stonelords and gnomish Masters-of-Arms. Units affected by the aura deal +10% damage.
 
+* Grand Strategy
+- Possible start dates extended to 165 AD for Earth.
+- The Lauenburg province has been amalgamated into Holstein.
+
 * Miscellaneous
 - Fixed issue which caused a crash when starting a multiplayer game.
 - The Technologies section of the encyclopedia is now divided in subsections according to civilization.

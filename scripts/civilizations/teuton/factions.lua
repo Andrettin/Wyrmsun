@@ -245,6 +245,10 @@ DefineFaction("Marcomanni Tribe", {
 	HistoricalFactionDerivations = {-9, "teuton", "Suebi Tribe"},
 	HistoricalTechnologies = {
 		"upgrade-teuton-spatha", 180 -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
+	},
+	HistoricalDiplomacyStates = {
+		167, "latin", "Rome", "war", -- in 167 the Marcomanni and the Quadi (with the Marcomanni seemingly leading) attacked the Romans and won a battle against 20,000 of them near Carnuntum; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		171, "latin", "Rome", "peace" -- in 171 the Romans forced the Marcomanni and the Quadi to a peace; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
 })
 
@@ -269,6 +273,10 @@ DefineFaction("Quadi Tribe", {
 	HistoricalFactionDerivations = {-9, "teuton", "Suebi Tribe"},
 	HistoricalTechnologies = {
 		"upgrade-teuton-spatha", 180 -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
+	},
+	HistoricalDiplomacyStates = {
+		167, "latin", "Rome", "war", -- in 167 the Marcomanni and the Quadi (with the Marcomanni seemingly leading) attacked the Romans and won a battle against 20,000 of them near Carnuntum; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		171, "latin", "Rome", "peace" -- in 171 the Romans forced the Marcomanni and the Quadi to a peace; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
 })
 
@@ -290,6 +298,18 @@ DefineFaction("Sugambri Tribe", {
 	Type = "tribe",
 	Colors = {"black"},
 	DevelopsTo = {"Westphalia"}, -- same general area
+	HistoricalFactionDerivations = {-264, "germanic", "Skeldung Tribe"},
+	HistoricalTechnologies = {
+		"upgrade-teuton-spatha", 180 -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
+	}
+})
+
+DefineFaction("Teuton Tribe", {
+	Civilization = "teuton",
+	ParentFaction = "Angle Tribe", -- accurate?
+	Type = "tribe",
+	Colors = {"orange"},
+	DevelopsTo = {"Jutland"}, -- same general area
 	HistoricalFactionDerivations = {-264, "germanic", "Skeldung Tribe"},
 	HistoricalTechnologies = {
 		"upgrade-teuton-spatha", 180 -- In the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
@@ -537,6 +557,9 @@ DefineFaction("Magdeburg", {
 	DefaultTier = "duchy", -- Magdeburg was an archbishopric in 1547; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 114-115.
 	Titles = {
 		"theocracy", "duchy", "Archbishopric"
+	},
+	HistoricalGovernmentTypes = {
+		1547, "theocracy" -- Political situation in Central Europe in 1547; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 114-115.
 	}
 })
 

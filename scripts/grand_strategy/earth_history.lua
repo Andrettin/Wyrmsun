@@ -187,10 +187,6 @@ if (GrandStrategyYear >= -5500) then
 	
 	-- The people of the Linear Pottery culture arrived in northern Poland and Germany about 5500 BC, possessing knowledge of agriculture; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 139.
 	
-	-- Linear Pottery culture existed in parts of Central Europe between 7000 and 2000 BC; since the other source gives them as arriving in northern Poland and Germany c. 5500 BC, let's place their beginnings at that date; Source: "Atlas de História Mundial", 2001, pp. 40-41.
-	SetProvinceOwner("Franconia", "basque", "Linearware Tribe")
-	SetProvinceCivilization("Franconia", "basque")
-		
 	-- Tybrind Vig (in the coast of the Danish island of Fyn) begins being occupied around 5500 BC (it pertained to the Ertebolle culture); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 142.
 	
 	-- The Polderweg site (Netherlands) was occupied in the late 6th millenium BC; main economic activity was pike fishing, although fishing for roach, bream, tench, eels, catfish and salmon was conducted as well; beavers and otters were the most significant animals hunted (likely for their fur), although pine marten, wild cat and polecat were also trapped for that purpose; remains of wild boar and red and roe deer were found as well; remains of ducks were found (the most important fowl food source); regarding plants acorns, hazelnut, water nut, wild apple and diverse berries were too found there; arrowheads (likely from Linearbandkeramik) were also found there, as well as bag-shaped pottery (from Linearbandkeramik areas or made in this form due to their influence); the people of the Polderweg site led a semi-nomadic life, and occupied the site only in January and February of each year; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 147.
@@ -222,16 +218,6 @@ if (GrandStrategyYear >= -4500) then
 	-- Use of cattle in traction, probably for plowing, in the Late Neolithic in the Northern Balkans, c. 4500 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 329.
 end
 
-if (GrandStrategyYear >= -4400) then
-	-- Timmendorf-Nordmole site (belonging to the Ertebolle/Ellerbek culture) in Poel isle (in Wismar Bay in Mecklenburg) began being occupied around 4400 BC; fishing gear existed there; they had dugout canoes; fish (particularly eel and cod), sea mammals and birds were caught/hunted; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 138.
-	SetProvinceOwner("Mecklenburg", "basque", "Ertebolle Tribe")
-end
-
-if (GrandStrategyYear >= -4100) then
-	-- Timmendorf-Nordmole site (belonging to the Ertebolle/Ellerbek culture) in Poel isle (in Wismar Bay in Mecklenburg) ceases being occupied around 4100 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 138.
-	SetProvinceOwner("Mecklenburg", "", "")
-end
-
 if (GrandStrategyYear >= -4000) then
 	-- Indo-European spoken at least partly in the Pontic-Caspian region between 4000 and 2000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 108.
 	
@@ -249,24 +235,6 @@ if (GrandStrategyYear >= -4000) then
 end
 
 if (GrandStrategyYear >= -3950) then
-	-- Funnel Beaker culture existed in parts of Northern Europe between 7000 and 2000 BC; since the other source gives them as being present in Zealand in 3950 BC, let's place their beginnings at that date; Source: "Atlas de História Mundial", 2001, pp. 40-41.
-	SetProvinceOwner("Friesland", "basque", "Funnelbeaker Tribe")
-	SetProvinceCivilization("Friesland", "basque")
-	SetProvinceOwner("Drenthe", "basque", "Funnelbeaker Tribe")
-	SetProvinceCivilization("Drenthe", "basque")
-	SetProvinceOwner("East Friesland", "basque", "Funnelbeaker Tribe")
-	SetProvinceCivilization("East Friesland", "basque")
-	SetProvinceOwner("Oldenburg", "basque", "Funnelbeaker Tribe")
-	SetProvinceCivilization("Oldenburg", "basque")
-	SetProvinceOwner("Bremen", "basque", "Funnelbeaker Tribe")
-	SetProvinceCivilization("Bremen", "basque")
-	SetProvinceOwner("Lauenburg", "basque", "Funnelbeaker Tribe")
-	SetProvinceCivilization("Lauenburg", "basque")
-	SetProvinceOwner("Mecklenburg", "basque", "Funnelbeaker Tribe")
-	SetProvinceCivilization("Mecklenburg", "basque")
-	SetProvinceOwner("Hither Pomerania", "basque", "Funnelbeaker Tribe")
-	SetProvinceCivilization("Hither Pomerania", "basque")
-	
 	-- Beginnings of agriculture in southern Scandinavia in 3950 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 36.
 	-- Domesticated animals begin to appear in Zealand (or perhaps even southern Scandinavia in general?) in 3950 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 37.
 end
@@ -763,46 +731,11 @@ if (GrandStrategyYear >= -264) then
 	SetProvinceOwner("Umbria", "latin", "Rome")
 	
 	-- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-	SetProvinceOwner("Bremen", "teuton", "Chauci Tribe")	
-	SetProvinceCivilization("Bremen", "teuton")
-	SetProvinceOwner("Oldenburg", "teuton", "Chauci Tribe")
-	SetProvinceCivilization("Oldenburg", "teuton")
-	AddProvinceClaim("Oldenburg", "teuton", "Chauci Tribe")
-
-	SetProvinceOwner("Brunswick", "teuton", "Cherusci Tribe")	
-	SetProvinceCivilization("Brunswick", "teuton")
-	SetProvinceOwner("Magdeburg", "teuton", "Cherusci Tribe")	
-	SetProvinceCivilization("Magdeburg", "teuton")
-	
-	SetProvinceOwner("Hanover", "teuton", "Lombard Tribe")	
-	SetProvinceCivilization("Hanover", "teuton")
-	
-	SetProvinceOwner("Friesland", "teuton", "Frisian Tribe")	
-	SetProvinceCivilization("Friesland", "teuton")
-	SetProvinceOwner("East Friesland", "teuton", "Frisian Tribe")	
-	SetProvinceCivilization("East Friesland", "teuton")
-
-	SetProvinceOwner("Lauenburg", "teuton", "Saxon Tribe") 
-	SetProvinceCivilization("Lauenburg", "teuton")
-	
-	SetProvinceOwner("Mecklenburg", "teuton", "Varini Tribe")
-	SetProvinceCivilization("Mecklenburg", "teuton")
-	
-	SetProvinceOwner("Hither Pomerania", "goth", "Rugian Tribe")
-	SetProvinceCivilization("Hither Pomerania", "goth")
-	
 	SetProvinceOwner("Farther Pomerania", "goth", "Turcilingian Tribe")
 	SetProvinceCivilization("Farther Pomerania", "goth")
 	
-	SetProvinceOwner("Westphalia", "teuton", "Sugambri Tribe")
-	SetProvinceCivilization("Westphalia", "teuton")
-	
-	SetProvinceOwner("Franconia", "teuton", "Hermunduri Tribe")
-	SetProvinceCivilization("Franconia", "teuton")
 	SetProvinceOwner("Upper Saxony", "teuton", "Hermunduri Tribe")
 	SetProvinceCivilization("Upper Saxony", "teuton")
-	SetProvinceOwner("Thuringia", "teuton", "Hermunduri Tribe")
-	SetProvinceCivilization("Thuringia", "teuton")
 	
 	SetProvinceOwner("Silesia", "goth", "Silingae Tribe")
 	SetProvinceCivilization("Silesia", "goth")
@@ -979,17 +912,7 @@ if (GrandStrategyYear >= -27) then
 --	AcquireFactionTechnologies("germanic", "Yngling Tribe", "norse", "Swede Tribe")
 --	SetProvinceOwner("Scania", "norse", "Dane Tribe") -- the Ynglinga saga gives a Danish king (Fredfrode) living at around the same time as Fjolnir; Danes were in southern Scandinavia in 526 (so presumably this would be their dwelling place previously as well); Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 	
-	 -- 31 million people lived in Roman Asia and Africa at the "Time of Augustus"; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
-
-	-- political situation in Europe (presumably) at the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
-	SetProvinceOwner("Franconia", "celt", "Turone Tribe")
-	SetProvinceCivilization("Franconia", "celt")
-	
-	SetProvinceOwner("Drenthe", "teuton", "Ampsivarii Tribe")
-	SetProvinceCivilization("Drenthe", "teuton")
-	
-	SetProvinceOwner("Overijssel", "teuton", "Chamavi Tribe")
-	SetProvinceCivilization("Overijssel", "teuton")
+	-- 31 million people lived in Roman Asia and Africa at the "Time of Augustus"; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
 end
 
 if (GrandStrategyYear >= -15) then
@@ -1094,11 +1017,6 @@ if (GrandStrategyYear >= 358) then
 	-- The Salii (Salic Franks) were attacked by the Frankish tribe of the Chamavi in 358 AD in the Batavian isle, being saved by the Romans; previously the Salii had been driven out of the region near the river Isala (in the area of Wesel) by the Chamavi; Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 320.
 end
 
-if (GrandStrategyYear >= 381) then
-	-- date estimated from Gundahar's establishment of the Kingdom of the Burgundians
-	SetProvinceOwner("Franconia", "goth", "Burgundian Tribe")
-end
-
 if (GrandStrategyYear >= 397) then
 	-- The Visigoths migrated to the Western Balkans in 397 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 	SetProvinceOwner("Moldavia", "", "")
@@ -1173,16 +1091,12 @@ end
 
 if (GrandStrategyYear >= 481) then
 	-- Frankish territory in 481 AD, and the Franks had already established their kingdom; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
-	SetProvinceOwner("Drenthe", "teuton", "Francia")
-	AddProvinceClaim("Drenthe", "teuton", "Francia")
 	SetProvinceOwner("Lorraine", "teuton", "Francia")
 	AddProvinceClaim("Lorraine", "teuton", "Francia")
 	SetProvinceOwner("Moselle", "teuton", "Francia")
 	AddProvinceClaim("Moselle", "teuton", "Francia")
 	SetProvinceOwner("Lower Rhine", "teuton", "Francia")
 	AddProvinceClaim("Lower Rhine", "teuton", "Francia")
-	SetProvinceOwner("Overijssel", "teuton", "Francia")
-	AddProvinceClaim("Overijssel", "teuton", "Francia")
 
 	-- Political situation of the territories surrounding the Frankish realm in 481-814 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
 	SetProvinceOwner("Baden", "teuton", "Alamanni Tribe")
@@ -1242,17 +1156,10 @@ if (GrandStrategyYear >= 507) then -- political situation in 507-534 in Europe; 
 	SetProvinceOwner("Carniola", "goth", "Ostrogoth Tribe")
 	SetProvinceOwner("Croatia", "goth", "Ostrogoth Tribe")
 	SetProvinceOwner("Bosnia", "goth", "Ostrogoth Tribe")
-	
-	SetProvinceOwner("Franconia", "teuton", "Thuringian Tribe")
-	SetProvinceCivilization("Franconia", "teuton")
 end
 
 if (GrandStrategyYear >= 517) then
 	-- Catholic ascendancy systematized in the Burgundian kingdom in 517 AD, in the Council of Epaon (perhaps Albon in the Dauphiné); during the Council Avitus laid out guidelines for socio-religious practice; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 99.
-end
-
-if (GrandStrategyYear >= 531) then
-	SetProvinceOwner("Franconia", "teuton", "Francia") -- Conquest of the Thuringian lands by Francia in 531 AD; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
 end
 
 if (GrandStrategyYear >= 534) then
@@ -1330,11 +1237,6 @@ end
 
 if (GrandStrategyYear >= 731) then
 	GrandStrategyEvents.HistoriaEcclesiasticaVenerabilisBedae = nil
-end
-
-if (GrandStrategyYear >= 734) then
-	SetProvinceOwner("Friesland", "teuton", "Francia")
-	AddProvinceClaim("Friesland", "teuton", "Francia")
 end
 
 if (GrandStrategyYear >= 765) then
@@ -1417,28 +1319,11 @@ if (GrandStrategyYear >= 919) then
 	SetProvinceOwner("Istria", "teuton", "Holy Rome") -- March of Istria
 	
 	-- Duchy of Franconia
-	SetProvinceOwner("Franconia", "teuton", "Holy Rome")
 	SetProvinceOwner("Palatinate", "teuton", "Holy Rome")
 	SetProvinceCivilization("Palatinate", "teuton")
 	
 	-- Duchy of Lower Lorraine
 	SetProvinceOwner("Lower Rhine", "teuton", "Holy Rome")
-	
-	-- Duchy of Saxony
-	SetProvinceOwner("Bremen", "teuton", "Holy Rome")
-	AddProvinceClaim("Bremen", "teuton", "Saxony")
-	SetProvinceOwner("Brunswick", "teuton", "Holy Rome")
-	AddProvinceClaim("Brunswick", "teuton", "Saxony")
-	SetProvinceOwner("Hanover", "teuton", "Holy Rome")
-	AddProvinceClaim("Hanover", "teuton", "Saxony")
-	SetProvinceOwner("Lauenburg", "teuton", "Holy Rome")
-	AddProvinceClaim("Lauenburg", "teuton", "Saxony")
-	SetProvinceOwner("Magdeburg", "teuton", "Holy Rome")
-	AddProvinceClaim("Magdeburg", "teuton", "Saxony")
-	SetProvinceOwner("Oldenburg", "teuton", "Holy Rome")
-	AddProvinceClaim("Oldenburg", "teuton", "Saxony")
-	SetProvinceOwner("Westphalia", "teuton", "Holy Rome")
-	AddProvinceClaim("Westphalia", "teuton", "Saxony")
 	
 	-- Duchy of Swabia
 	SetProvinceOwner("Augsburg", "teuton", "Holy Rome")
@@ -1451,16 +1336,7 @@ if (GrandStrategyYear >= 919) then
 	-- Duchy of Upper Lorraine
 	SetProvinceOwner("Lorraine", "teuton", "Holy Rome")
 	SetProvinceOwner("Moselle", "teuton", "Holy Rome")
-	
-	-- Friesland
-	SetProvinceOwner("Drenthe", "teuton", "Holy Rome")
-	SetProvinceOwner("East Friesland", "teuton", "Holy Rome")
-	SetProvinceOwner("Friesland", "teuton", "Holy Rome")
-	SetProvinceOwner("Overijssel", "teuton", "Holy Rome")
-	
-	-- Thuringia
-	SetProvinceOwner("Thuringia", "teuton", "Holy Rome")
-	
+
 	SetProvinceOwner("Upper Saxony", "teuton", "Holy Rome")
 	SetProvinceOwner("Upper Lusatia", "teuton", "Holy Rome")
 	SetProvinceCivilization("Upper Lusatia", "teuton")
@@ -1591,12 +1467,6 @@ if (GrandStrategyYear >= 1526) then -- East Prussian Land Ordinance of 1526; Sou
 	GrandStrategyEvents.TheEastPrussianLandOrdinance = nil
 end
 
-if (GrandStrategyYear >= 1547) then
-	-- Political situation in Central Europe in 1547; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 114-115.
-	SetProvinceOwner("Magdeburg", "teuton", "Magdeburg")
-	SetFactionGovernmentType("teuton", "Magdeburg", "theocracy")
-end
-
 if (GrandStrategyYear >= 1560) then
 	-- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	SetProvinceOwner("Brittany", "latin", "France")
@@ -1605,9 +1475,6 @@ if (GrandStrategyYear >= 1560) then
 	SetFactionGovernmentType("latin", "Venice", "republic")	
 	SetProvinceOwner("Sardinia", "latin", "Spain")
 
-	SetProvinceOwner("Overijssel", "latin", "Spain")
-	SetProvinceOwner("Friesland", "latin", "Spain")
-	SetProvinceOwner("Drenthe", "latin", "Spain")
 	SetProvinceOwner("Switzerland", "teuton", "Switzerland")
 	SetFactionGovernmentType("teuton", "Switzerland", "republic")	
 	
@@ -1675,14 +1542,6 @@ if (GrandStrategyYear >= 1635) then -- Saxony acquired Upper Lusatia in 1635; So
 end
 
 if (GrandStrategyYear >= 1648) then
-	-- Political situation in Central Europe in 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
-	SetProvinceOwner("Overijssel", "teuton", "Netherlands")
-	SetProvinceOwner("Friesland", "teuton", "Netherlands")
-	SetProvinceOwner("Drenthe", "teuton", "Netherlands")
-	SetProvinceOwner("Westphalia", "teuton", "Westphalia")
-	SetProvinceOwner("Hither Pomerania", "norse", "Sweden")
-	SetProvinceOwner("Bremen", "norse", "Sweden")
-	
 	 -- Farther Pomerania was acquired by Brandenburg in 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123; Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 6.
 	SetProvinceOwner("Farther Pomerania", "teuton", "Brandenburg")
 end

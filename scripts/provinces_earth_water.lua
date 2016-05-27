@@ -28,6 +28,9 @@
 DefineProvince("Adriatic Sea", { -- Source: "Limits of Oceans and Seas", 1953, p. 17.
 	World = "Earth",
 	Water = true,
+	CulturalNames = {
+		"latin", "Adriatic Sea" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+	},
 	Tiles = {
 --		{129, 32}, {130, 32}, {130, 33}, {131, 33}, {132, 33}, {132, 34}, {133, 34}, {133, 35}, -- old map
 		{515, 127}, {515, 128}, {515, 129},
@@ -199,9 +202,13 @@ DefineProvince("Baltic Sea", { -- Source: http://www.euratlas.net/history/europe
 	World = "Earth",
 	Water = true,
 --	ReferenceProvince = "Brandenburg", -- province used as a reference for this province's name
+	CulturalNames = {
+		"latin", "Suebic Sea" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+	},
 	FactionCulturalNames = {
 		"teuton", "Marcomanni Tribe", "Suebic Sea",
 		"teuton", "Quadi Tribe", "Suebic Sea",
+		"teuton", "Semnone Tribe", "Suebic Sea", -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 		"teuton", "Suebi Tribe", "Suebic Sea"
 	},
 	Tiles = {
@@ -273,6 +280,9 @@ DefineProvince("Bay of Biscay", {
 DefineProvince("Black Sea", { -- Source: "Limits of Oceans and Seas", 1953, p. 18.
 	World = "Earth",
 	Water = true,
+	CulturalNames = {
+		"latin", "Pontus Euxinos" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+	},
 	Tiles = {
 --		{140, 33}, {140, 34}, {141, 31}, {141, 32}, {141, 33}, {141, 34}, {142, 31}, {142, 32}, {142, 33}, {142, 34}, {143, 31}, {143, 32}, {143, 33}, {144, 32}, {144, 33}, {145, 31}, {145, 32}, {145, 33}, {146, 31}, {146, 32}, {146, 33}, {146, 34}, {147, 33}, {147, 34}, {148, 33}, {148, 34}, -- old map
 		{559, 133}, {559, 134}, {559, 135},
@@ -327,6 +337,18 @@ DefineProvince("Bristol Channel", { -- Source: "Limits of Oceans and Seas", 1953
 		{468, 109}
 	}
 })
+
+--[[
+DefineProvince("Caspian Sea", {
+	World = "Earth",
+	Water = true,
+	CulturalNames = {
+		"latin", "Caspian Sea" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+	},
+	Tiles = {
+	}
+})
+--]]
 
 DefineProvince("Celtic Sea", { -- Source: "Limits of Oceans and Seas", 1953. (see corrections)
 	World = "Earth",
@@ -714,7 +736,11 @@ DefineProvince("North Sea", { -- Source: http://www.euratlas.net/history/europe/
 	Water = true,
 --	ReferenceProvince = "Hanover", -- province used as a reference for this province's name
 	CulturalNames = {
-		"germanic", "German Sea"
+		"germanic", "German Ocean",
+		"goth", "German Ocean",
+		"latin", "German Ocean", -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+		"norse", "German Ocean",
+		"teuton", "German Ocean" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	Tiles = {
 --				{118, 21}, {118, 22}, {119, 20}, {119, 21}, {119, 22}, {119, 23}, {119, 24}, {120, 20}, {120, 21}, {120, 22}, {120, 23}, {120, 24}, {120, 25}, {121, 20}, {121, 21}, {121, 22}, {121, 23}, {121, 24}, {121, 25}, {121, 26}, {121, 27}, {122, 20}, {122, 21}, {122, 22}, {122, 23}, {122, 24}, {122, 25}, {122, 26}, {123, 20}, {123, 21}, {123, 22}, {123, 23}, {123, 24}, {123, 25}, {124, 22}, {124, 23}, {124, 24}, {124, 25}, {125, 22}, {125, 23}, {125, 24}, {125, 25}, {126, 22}, {127, 22}, {127, 23}, {127, 24}, {128, 23}, -- old map
@@ -837,8 +863,11 @@ DefineProvince("Thracian Sea", { -- Source: William R. Shepherd, "Historical Atl
 DefineProvince("Tyrrhenian Sea", { -- Source: "Limits of Oceans and Seas", 1953, p. 17.
 	World = "Earth",
 	Water = true,
+	CulturalNames = {
+		"latin", "Tyrrhenian Sea" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+	},
 	Tiles = {
---				{126, 37}, {127, 34}, {127, 35}, {127, 36}, {127, 37}, {128, 34}, {128, 35}, {128, 36}, {128, 37}, {129, 35}, {129, 36}, {130, 35}, {130, 36}, -- old map
+--		{126, 37}, {127, 34}, {127, 35}, {127, 36}, {127, 37}, {128, 34}, {128, 35}, {128, 36}, {128, 37}, {129, 35}, {129, 36}, {130, 35}, {130, 36}, -- old map
 		{505, 145},
 		{506, 137}, {506, 138}, {506, 144}, {506, 145},
 		{507, 133}, {507, 134}, {507, 135}, {507, 136}, {507, 137}, {507, 138}, {507, 139}, {507, 141}, {507, 142}, {507, 143}, {507, 144}, {507, 145},

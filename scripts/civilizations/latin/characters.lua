@@ -50,8 +50,9 @@ DefineCharacter("Antoninus Pius", { -- Source: "Ancient Warfare VII.6", 2013, p.
 	}
 })
 
-DefineCharacter("Faustina", { -- Source: "Ancient Warfare VII.6", 2013, p. 6.
+DefineCharacter("Faustina the Younger", { -- Source: "Ancient Warfare VII.6", 2013, pp. 6, 8.
 	Name = "Faustina",
+	ExtraName = "the Younger",
 	Gender = "female",
 	Type = "unit-teuton-priest", -- correct?
 	Civilization = "latin",
@@ -74,10 +75,10 @@ DefineCharacter("Marcus Aurelius", { -- Source: "Ancient Warfare VII.6", 2013, p
 		-- in 140 he became consul a second time
 		"head-of-state", 161, 0, "latin", "Rome" -- Roman Emperor from 161 (with Lucius Verus as his co-emperor)
 	}
-	-- married to Faustina
+	-- married to Faustina the Younger
 })
 
-DefineCharacter("Lucius Verus", { -- Source: "Ancient Warfare VII.6", 2013, p. 6.
+DefineCharacter("Lucius Verus", { -- Source: "Ancient Warfare VII.6", 2013, pp. 6-7.
 	Name = "Lucius Verus",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
@@ -85,6 +86,7 @@ DefineCharacter("Lucius Verus", { -- Source: "Ancient Warfare VII.6", 2013, p. 6
 	Faction = "Rome",
 	ProvinceOfOrigin = "Latium", -- put him in Rome's province since we don't have information on his actual province of origin
 	Year = 161, -- became co-emperor in 161
+	DeathYear = 168, -- died (apparently) in 168 of a stroke
 	HistoricalTitles = {
 		-- Roman Emperor from 161 (as co-emperor to Marcus Aurelius, but Marcus Aurelius seemed to be the one who held more power)
 	}
@@ -98,7 +100,7 @@ DefineCharacter("Commodus", { -- Source: "Ancient Warfare VII.6", 2013, p. 6.
 	Faction = "Rome",
 	ProvinceOfOrigin = "Latium", -- put him in Rome's province since we don't have information on his actual province of origin
 	Father = "Marcus Aurelius",
-	Mother = "Faustina",
+	Mother = "Faustina the Younger",
 	HistoricalTitles = {
 		"head-of-state", 0, 0, "latin", "Rome" -- succeeded his father as Roman Emperor
 	}

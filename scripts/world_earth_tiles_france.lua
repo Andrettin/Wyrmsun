@@ -90,6 +90,7 @@ DefineWorldMapTile({486, 114}, {
 DefineWorldMapTile({486, 117}, {
 	World = "Earth",
 	CulturalSettlementNames = {
+		"celt", "Lutetia",
 		"latin", "Lutetia"
 	},
 	FactionCulturalSettlementNames = {

@@ -942,6 +942,7 @@ DefineProvince("Brandenburg", {
 	HistoricalOwners = {
 		-264, "teuton", "Semnone Tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		-71, "teuton", "Suebi Tribe", -- Suebi attested in 71 BC; since the Suebi were in existence then, they were also probably already settled where Tacitus had described the Suebic Semnones as living in, since the other territories settled by Suebic tribes (Bohemia and Moravia) were only conquered later on
+		161, "teuton", "Semnone Tribe", -- The area was inhabited by the Semnones in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		1560, "teuton", "Brandenburg" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalCultures = {
@@ -973,6 +974,20 @@ DefineProvince("Bremen", {
 		"teuton", "Holy Rome"
 	},
 	Coastal = true,
+	HistoricalOwners = {
+		-3950, "basque", "Funnelbeaker Tribe", -- Funnel Beaker culture existed in parts of Northern Europe between 7000 and 2000 BC; since the other source gives them as being present in Zealand in 3950 BC, let's place their beginnings at that date; Source: "Atlas de História Mundial", 2001, pp. 40-41.
+		-264, "teuton", "Chauci Tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		161, "teuton", "Lombard Tribe", -- The area was inhabited by the Langobardi in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		919, "teuton", "Holy Rome", -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+		1648, "norse", "Sweden" -- Political situation in Central Europe in 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
+	},
+	HistoricalClaims = {
+		919, "teuton", "Saxony" -- Part of the Duchy of Saxony within the Holy Roman Empire in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+	},
+	HistoricalCultures = {
+		-3950, "basque",
+		-264, "teuton"
+	},
 	Regions = {"Europe", "Germany-Netherlands", "West and Central Europe"}
 })
 
@@ -1028,6 +1043,17 @@ DefineProvince("Brunswick", {
 		"teuton", "Cherusci Tribe",
 		"teuton", "Brunswick",
 		"teuton", "Holy Rome"
+	},
+	HistoricalOwners = {
+		-264, "teuton", "Cherusci Tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		161, "teuton", "Cherusci Tribe", -- The area was inhabited by the Cherusci in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		919, "teuton", "Holy Rome" -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+	},
+	HistoricalClaims = {
+		919, "teuton", "Saxony" -- Part of the Duchy of Saxony within the Holy Roman Empire in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+	},
+	HistoricalCultures = {
+		-264, "teuton"
 	},
 	Regions = {"Europe", "Germany-Netherlands", "West and Central Europe"}
 })
@@ -1332,7 +1358,8 @@ DefineProvince("Connaught", {
 		"celt", "Gangani Tribe"
 	},
 	HistoricalOwners = {
-		-27, "celt", "Gangani Tribe" -- British tribes (apparently) in the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+		-27, "celt", "Gangani Tribe", -- British tribes (apparently) in the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+		161, "celt", "Scot Tribe" -- The area was inhabited by the Scotti in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	HistoricalCultures = {
 		-27, "celt"
@@ -1788,6 +1815,22 @@ DefineProvince("Drenthe", {
 		"teuton", "Netherlands",
 		"teuton", "Holy Rome"
 	},
+	HistoricalOwners = {
+		-3950, "basque", "Funnelbeaker Tribe", -- Funnel Beaker culture existed in parts of Northern Europe between 7000 and 2000 BC; since the other source gives them as being present in Zealand in 3950 BC, let's place their beginnings at that date; Source: "Atlas de História Mundial", 2001, pp. 40-41.
+		-27, "teuton", "Ampsivarii Tribe", -- Political situation in Europe (presumably) at the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+		161, "teuton", "Frisian Tribe", -- Drenthe owned by the Frisii in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		481, "teuton", "Francia", -- Frankish territory in 481 AD, and the Franks had already established their kingdom; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
+		919, "teuton", "Holy Rome", -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+		1560, "latin", "Spain", -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		1648, "teuton", "Netherlands" -- Political situation in Central Europe in 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
+	},
+	HistoricalClaims = {
+		481, "teuton", "Francia"
+	},
+	HistoricalCultures = {
+		-3950, "basque",
+		-27, "teuton"
+	},
 	Regions = {"Europe", "Germany-Netherlands", "Northwest Europe", "West and Central Europe"}
 })
 
@@ -1892,6 +1935,16 @@ DefineProvince("East Friesland", { -- also includes Osnabrück
 		"teuton", "Holy Rome"
 	},
 	Coastal = true,
+	HistoricalOwners = {
+		-3950, "basque", "Funnelbeaker Tribe", -- Funnel Beaker culture existed in parts of Northern Europe between 7000 and 2000 BC; since the other source gives them as being present in Zealand in 3950 BC, let's place their beginnings at that date; Source: "Atlas de História Mundial", 2001, pp. 40-41.
+		-264, "teuton", "Frisian Tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		161, "teuton", "Chauci Tribe", -- The area was inhabited by the Chauci in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		919, "teuton", "Holy Rome" -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+	},
+	HistoricalCultures = {
+		-3950, "basque",
+		-264, "teuton"
+	},
 	Regions = {"Europe", "Germany-Netherlands", "West and Central Europe"}
 })
 
@@ -2234,6 +2287,24 @@ DefineProvince("Franconia", {
 		"teuton", "Franconia", -- Part of the Duchy of Franconia in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		"teuton", "Holy Rome"
 	},
+	HistoricalOwners = {
+		-5500, "basque", "Linearware Tribe", -- Linear Pottery culture existed in parts of Central Europe between 7000 and 2000 BC; since the other source gives them as arriving in northern Poland and Germany c. 5500 BC, let's place their beginnings at that date; Source: "Atlas de História Mundial", 2001, pp. 40-41.
+		-264, "teuton", "Hermunduri Tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		-27, "celt", "Turone Tribe", -- Political situation in Europe (presumably) at the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+		161, "teuton", "Hermunduri Tribe", -- The area was inhabited by the Hermunduri in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		507, "teuton", "Thuringian Tribe", -- Political situation in 507-534 in Europe; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
+		531, "teuton", "Francia", -- Conquest of the Thuringian lands by Francia in 531 AD; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
+		919, "teuton", "Holy Rome" -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+	},
+	HistoricalClaims = {
+		531, "teuton", "Francia"
+	},
+	HistoricalCultures = {
+		-5500, "basque",
+		-264, "teuton",
+		-27, "celt",
+		161, "teuton"
+	},
 	HistoricalModifiers = {
 		1402, "upgrade-university", true -- University founded in Wurzburg in 1402. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.
 	},
@@ -2265,6 +2336,22 @@ DefineProvince("Friesland", {
 		"teuton", "Friesland",
 		"teuton", "Netherlands",
 		"teuton", "Holy Rome"
+	},
+	HistoricalOwners = {
+		-3950, "basque", "Funnelbeaker Tribe", -- Funnel Beaker culture existed in parts of Northern Europe between 7000 and 2000 BC; since the other source gives them as being present in Zealand in 3950 BC, let's place their beginnings at that date; Source: "Atlas de História Mundial", 2001, pp. 40-41.
+		-264, "teuton", "Frisian Tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		161, "teuton", "Frisian Tribe", -- Friesland owned by the Frisii in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		734, "teuton", "Francia", -- Franks conquered Holland and Friesland in 734 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
+		919, "teuton", "Holy Rome", -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+		1560, "latin", "Spain", -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		1648, "teuton", "Netherlands" -- Political situation in Central Europe in 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
+	},
+	HistoricalClaims = {
+		734, "teuton", "Francia"
+	},
+	HistoricalCultures = {
+		-3950, "basque",
+		-264, "teuton"
 	},
 	HistoricalModifiers = {
 		1585, "upgrade-university", true -- University founded in Franeker in 1585. Source: The Cambridge Modern History Atlas, p. 9.
@@ -2379,6 +2466,7 @@ DefineProvince("Galloway", {
 	HistoricalOwners = {
 		-27, "celt", "Sovantae Tribe", -- British tribes (apparently) in the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 		80, "latin", "Rome", -- The area between the Wall of Antoninus (or Severus) and Hadrian's Wall was acquired by Rome in 80 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		161, "celt", "Selgovae Tribe", -- The area was inhabited by the Selgovae in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		1560, "teuton", "Scotland" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalClaims = {
@@ -2427,7 +2515,7 @@ DefineProvince("Gotaland", {
 		-2800, "germanic", "Asa Tribe", -- in the Ynglinga saga, "Odin's people", the Asa, settle Scandinavia in a manner not too dissimilar from what archaeological findings tell us of Indo-European settlement in the region; thus the name "Asa Tribe" is used here to denote the Indo-European-speaking peoples who settled in Scandinavia, and were the precursors of the Germanic peoples 
 		-2770, "germanic", "Yngling Tribe", -- estimated date
 		-325, "goth", "Goth Tribe", -- Pytheas sets out on an exploration voyage in 325 BC; Pliny (in his Natural History) gives Pytheas as an authority for the existence of the Goths; Source: Carl Waldman and Catherine Mason, "Encyclopedia of European Peoples", 2006, p. 350; Source: Pliny the Elder, "The Natural History", 37.11; the Goths's earliest known homeland was Götaland; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
-		200, "", "", -- Goths migrate south about 200 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
+		161, "norse", "Swede Tribe", -- The area was inhabited by the Suiones in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		1560, "norse", "Sweden" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalClaims = {
@@ -2435,7 +2523,8 @@ DefineProvince("Gotaland", {
 	},
 	HistoricalCultures = {
 		-2800, "germanic",
-		-325, "goth"
+		-325, "goth",
+		161, "norse"
 	},
 	Regions = {"Europe", "Scandinavia", "West and Central Europe"}
 })
@@ -2529,6 +2618,17 @@ DefineProvince("Hanover", {
 		"teuton", "Lombard Tribe",
 		"teuton", "Holy Rome"
 	},
+	HistoricalOwners = {
+		-264, "teuton", "Lombard Tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		161, "teuton", "Lombard Tribe", -- The area was inhabited by the Langobardi in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		919, "teuton", "Holy Rome" -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+	},
+	HistoricalClaims = {
+		919, "teuton", "Saxony" -- Part of the Duchy of Saxony within the Holy Roman Empire in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+	},
+	HistoricalCultures = {
+		-264, "teuton"
+	},
 	Regions = {"Europe", "Germany-Netherlands", "West and Central Europe"}
 })
 
@@ -2583,6 +2683,7 @@ DefineProvince("Hesse", {
 	},
 	HistoricalOwners = {
 		-55, "teuton", "Ubii Tribe", -- The Ubii dwelled north of the Main and bordering on the Rhine in 55 BC; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, pp. 227-228.
+		161, "teuton", "Chatti Tribe", -- The area was inhabited by the Chatti in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		919, "teuton", "Holy Rome", -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		1648, "teuton", "Hesse" -- Political situation in Central Europe in 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
 	},
@@ -2643,6 +2744,7 @@ DefineProvince("Highland Scotland", {
 	},
 	HistoricalOwners = {
 		-27, "celt", "Caledonii Tribe", -- British tribes (apparently) in the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+		161, "celt", "Caledonii Tribe", -- The area was inhabited by the Caledonii in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		395, "celt", "Pict Tribe", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 		1560, "teuton", "Scotland" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
@@ -2678,9 +2780,21 @@ DefineProvince("Hither Pomerania", {
 	SettlementTerrain = "Plains",
 	Claims = {
 		"basque", "Funnelbeaker Tribe",
-		"goth", "Rugian Tribe"
+		"goth", "Rugian Tribe",
+		"teuton", "Semnone Tribe"
 	},
 	Coastal = true,
+	HistoricalOwners = {
+		-3950, "basque", "Funnelbeaker Tribe", -- Funnel Beaker culture existed in parts of Northern Europe between 7000 and 2000 BC; since the other source gives them as being present in Zealand in 3950 BC, let's place their beginnings at that date; Source: "Atlas de História Mundial", 2001, pp. 40-41.
+		-264, "goth", "Rugian Tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		161, "teuton", "Semnone Tribe", -- The area was inhabited by the Semnones in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		1648, "norse", "Sweden" -- Political situation in Central Europe in 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
+	},
+	HistoricalCultures = {
+		-3950, "basque",
+		-264, "goth",
+		161, "teuton"
+	},
 	HistoricalModifiers = {
 		1456, "upgrade-university", true -- University founded in Greifswald in 1456. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.
 	},
@@ -2753,8 +2867,8 @@ DefineProvince("Holstein", {
 		{506, 101}, {506, 102},
 		{507, 101}, {507, 102}, {507, 103},
 		{508, 101}, {508, 102}, {508, 103},
-		{509, 101}, {509, 102},
-		{510, 101}
+		{509, 101}, {509, 102}, {509, 103},
+		{510, 101}, {510, 102}, {510, 103}
 	},
 	SettlementLocation = {508, 101}, -- Kiel
 	Map = "maps/random/random-map-forest.smp",
@@ -2768,6 +2882,7 @@ DefineProvince("Holstein", {
 	HistoricalOwners = {
 		-3950, "basque", "Funnelbeaker Tribe", -- Funnel Beaker culture existed in parts of Northern Europe between 7000 and 2000 BC; since the other source gives them as being present in Zealand in 3950 BC, let's place their beginnings at that date; Source: "Atlas de História Mundial", 2001, pp. 40-41.
 		-264, "teuton", "Saxon Tribe", -- also inhabited by the Teutones; Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		161, "teuton", "Saxon Tribe", -- The area was inhabited by the Saxones in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		919, "teuton", "Holy Rome", -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		1560, "norse", "Denmark" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
@@ -2941,13 +3056,15 @@ DefineProvince("Jutland", {
 		"germanic", "Skeldung Tribe",
 		"norse", "Dane Tribe",
 		"teuton", "Charude Tribe",
-		"teuton", "Jute Tribe"
+		"teuton", "Jute Tribe",
+		"teuton", "Teuton Tribe"
 	},
 	HistoricalOwners = {
 		-5800, "basque", "Ertebolle Tribe", -- Coastal Ertebolle Mesolithic sites and shell middens begin being occupied c. 5800 BC; they lived in eastern Jutland (i.e. Ertebolle itself on the Limfjord in northern Jutland, Bjornsholm), the Danish isles (the Karrebaek-Dybso Fjord sites in Zealand - which could sustain c. 250 people), and southern Sweden (Tagerup in a fjord on Scania - this site had a previous Kongemose occupation); Ertebolle people used pottery and did large-quantity fishing via traps or weirs; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 136.
 		-2800, "germanic", "Skeldung Tribe", -- in the Ynglinga saga, "Odin's people", the Asa, settle Scandinavia in a manner not too dissimilar from what archaeological findings tell us of Indo-European settlement in the region; thus the name "Asa Tribe" is used here to denote the Indo-European-speaking peoples who settled in Scandinavia, and were the precursors of the Germanic peoples 
 		-264, "", "", -- remove the Proto-Germanics
 		-27, "teuton", "Charude Tribe", -- political situation in Europe (presumably) at the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+		161, "teuton", "Teuton Tribe", -- The area was inhabited by the Teutones in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		1560, "norse", "Denmark" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalCultures = {
@@ -3090,30 +3207,6 @@ DefineProvince("Latvia", {
 	Regions = {"Europe", "West and Central Europe"}
 })
 
-DefineProvince("Lauenburg", {
-	World = "Earth",
-	CulturalNames = {
-		"teuton", "Lauenburg", "name-elements", { -- is this a settlement-derived name instead?
---			"compound", "prefix", -- ?
-			"compound", "suffix", "high-german", "noun", "singular", "Burg"
-		}
-	},
-	Tiles = {
-		{509, 103},
-		{510, 102}, {510, 103}
-	},
-	SettlementLocation = {510, 102},
-	Map = "maps/random/random-map-forest.smp",
-	SettlementTerrain = "Plains",
-	Coastal = true,
-	Claims = {
-		"basque", "Funnelbeaker Tribe",
-		"teuton", "Saxon Tribe",
-		"teuton", "Holy Rome"
-	},
-	Regions = {"Europe", "Germany-Netherlands", "West and Central Europe"}
-})
-
 DefineProvince("Leinster", {
 	World = "Earth",
 	CulturalNames = {
@@ -3141,6 +3234,7 @@ DefineProvince("Leinster", {
 	},
 	HistoricalOwners = {
 		-27, "celt", "Cauci Tribe", -- British tribes (apparently) in the time of Augustus; the Brigantes occupied the extreme south of Leinster; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+		161, "celt", "Hibernii Tribe", -- The area was inhabited by the Hibernii in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		395, "celt", "Scot Tribe" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 	},
 	HistoricalCultures = {
@@ -3368,6 +3462,7 @@ DefineProvince("Lothian", { -- includes Borders
 	HistoricalOwners = {
 		-27, "celt", "Otalini Tribe", -- British tribes (apparently) in the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 		80, "latin", "Rome", -- The area between the Wall of Antoninus (or Severus) and Hadrian's Wall was acquired by Rome in 80 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		161, "celt", "Selgovae Tribe", -- The area was inhabited by the Selgovae in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		1560, "teuton", "Scotland" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalClaims = {
@@ -3602,6 +3697,18 @@ DefineProvince("Magdeburg", {
 		"teuton", "Magdeburg",
 		"teuton", "Holy Rome"
 	},
+	HistoricalOwners = {
+		-264, "teuton", "Cherusci Tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		161, "teuton", "Lombard Tribe", -- The area was inhabited by the Langobardi in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		919, "teuton", "Holy Rome", -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+		1547, "teuton", "Magdeburg" -- Political situation in Central Europe in 1547; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 114-115.
+	},
+	HistoricalClaims = {
+		919, "teuton", "Saxony" -- Part of the Duchy of Saxony within the Holy Roman Empire in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+	},
+	HistoricalCultures = {
+		-264, "teuton"
+	},
 	HistoricalModifiers = {
 		1576, "upgrade-university", true -- University founded in Helmstadt in 1576. Source: The Cambridge Modern History Atlas, 1912, p. 9.
 	},
@@ -3710,6 +3817,19 @@ DefineProvince("Mecklenburg", {
 		"teuton", "Mecklenburg"
 	},
 	Coastal = true,
+	HistoricalOwners = {
+		-4400, "basque", "Ertebolle Tribe", -- Timmendorf-Nordmole site (belonging to the Ertebolle/Ellerbek culture) in Poel isle (in Wismar Bay in Mecklenburg) began being occupied around 4400 BC; fishing gear existed there; they had dugout canoes; fish (particularly eel and cod), sea mammals and birds were caught/hunted; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 138.
+		-4100, "", "", -- Timmendorf-Nordmole site (belonging to the Ertebolle/Ellerbek culture) in Poel isle (in Wismar Bay in Mecklenburg) ceases being occupied around 4100 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 138.
+		-3950, "basque", "Funnelbeaker Tribe", -- Funnel Beaker culture existed in parts of Northern Europe between 7000 and 2000 BC; since the other source gives them as being present in Zealand in 3950 BC, let's place their beginnings at that date; Source: "Atlas de História Mundial", 2001, pp. 40-41.
+		-264, "teuton", "Varini Tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		161, "teuton", "Saxon Tribe" -- The area was inhabited by the Saxones in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+	},
+	HistoricalCultures = {
+		-4400, "basque",
+		-4100, "",
+		-3950, "basque",
+		-264, "teuton"
+	},
 	HistoricalModifiers = {
 		1419, "upgrade-university", true -- University founded in Rostock in 1419. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.
 	},
@@ -3926,6 +4046,7 @@ DefineProvince("Munster", {
 	},
 	HistoricalOwners = {
 		-27, "celt", "Hibernii Tribe", -- British tribes (apparently) in the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+		161, "celt", "Hibernii Tribe", -- The area was inhabited by the Hibernii in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		395, "celt", "Scot Tribe" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 	},
 	HistoricalCultures = {
@@ -4227,6 +4348,7 @@ DefineProvince("Northumberland", {
 	},
 	HistoricalOwners = {
 		80, "latin", "Rome", -- The area between the Wall of Antoninus (or Severus) and Hadrian's Wall was acquired by Rome in 80 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		161, "celt", "Selgovae Tribe", -- The area was inhabited by the Selgovae in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		526, "teuton", "Bernice Tribe", -- by 526 AD the Anglo-Saxons had become masters of most of Roman Britannia; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 		547, "teuton", "Bernicia", -- the Kingdom of Bernicia was founded in 547 AD; in 600 AD, the Bernice people (who were Anglians) were centered in Bamburgh; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 74-75.
 		654, "teuton", "Northumbria", -- Northumbria unified by Oswiu of Bernicia in 654
@@ -4237,6 +4359,7 @@ DefineProvince("Northumberland", {
 		547, "teuton", "Bernicia" -- the Kingdom of Bernicia was founded in 547 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75.
 	},
 	HistoricalCultures = {
+		161, "celt",
 		526, "teuton"
 	},
 	Regions = {"British Isles", "England", "Europe", "Northwest Europe", "West and Central Europe"}
@@ -4259,6 +4382,19 @@ DefineProvince("Oldenburg", {
 		"teuton", "Holy Rome"
 	},
 	Coastal = true,
+	HistoricalOwners = {
+		-3950, "basque", "Funnelbeaker Tribe", -- Funnel Beaker culture existed in parts of Northern Europe between 7000 and 2000 BC; since the other source gives them as being present in Zealand in 3950 BC, let's place their beginnings at that date; Source: "Atlas de História Mundial", 2001, pp. 40-41.
+		-264, "teuton", "Chauci Tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		161, "teuton", "Lombard Tribe", -- The area was inhabited by the Langobardi in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		919, "teuton", "Holy Rome" -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+	},
+	HistoricalClaims = {
+		919, "teuton", "Saxony" -- Part of the Duchy of Saxony within the Holy Roman Empire in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+	},
+	HistoricalCultures = {
+		-3950, "basque",
+		-264, "teuton"
+	},
 	Regions = {"Europe", "Germany-Netherlands", "West and Central Europe"}
 })
 
@@ -4347,6 +4483,20 @@ DefineProvince("Overijssel", {
 		"teuton", "Overijssel",
 		"teuton", "Netherlands",
 		"teuton", "Holy Rome"
+	},
+	HistoricalOwners = {
+		-27, "teuton", "Chamavi Tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		161, "teuton", "Chauci Tribe", -- The area was inhabited by the Chauci in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		481, "teuton", "Francia", -- Frankish territory in 481 AD, and the Franks had already established their kingdom; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
+		919, "teuton", "Holy Rome", -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+		1560, "latin", "Spain", -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		1648, "teuton", "Netherlands" -- Political situation in Central Europe in 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
+	},
+	HistoricalClaims = {
+		481, "teuton", "Francia"
+	},
+	HistoricalCultures = {
+		-27, "teuton"
 	},
 	Regions = {"Europe", "Germany-Netherlands", "Northwest Europe", "West and Central Europe"}
 })
@@ -5037,6 +5187,9 @@ DefineProvince("Savoy", {
 
 DefineProvince("Scania", {
 	World = "Earth",
+	CulturalNames = {
+		"norse", "Scania"
+	},
 	FactionCulturalNames = {
 		"basque", "Gylfing Tribe", "Gylveland"
 	},
@@ -5070,6 +5223,7 @@ DefineProvince("Scania", {
 		-2800, "germanic", "Asa Tribe", -- in the Ynglinga saga, "Odin's people", the Asa, settle Scandinavia in a manner not too dissimilar from what archaeological findings tell us of Indo-European settlement in the region; thus the name "Asa Tribe" is used here to denote the Indo-European-speaking peoples who settled in Scandinavia, and were the precursors of the Germanic peoples 
 		-2770, "germanic", "Yngling Tribe", -- estimated date
 		-264, "", "", -- remove the Proto-Germanics
+		161, "norse", "Swede Tribe", -- The area was inhabited by the Suiones in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		526, "norse", "Dane Tribe", -- Danes were in Scania in 526-600; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 		1560, "norse", "Denmark" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
@@ -5079,7 +5233,7 @@ DefineProvince("Scania", {
 	HistoricalCultures = {
 		-5800, "basque",
 		-2800, "germanic",
-		526, "norse"
+		161, "norse"
 	},
 	Regions = {"Europe", "Scandinavia", "West and Central Europe"}
 })
@@ -5104,6 +5258,7 @@ DefineProvince("Schleswig", {
 	Coastal = true,
 	HistoricalOwners = {
 		-264, "teuton", "Angle Tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		161, "teuton", "Angle Tribe", -- The area was inhabited by the Anglii in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		919, "norse", "Denmark" -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 	},
 	HistoricalCultures = {
@@ -5348,6 +5503,7 @@ DefineProvince("Strathclyde", {
 	HistoricalOwners = {
 		-27, "celt", "Damnii Tribe", -- British tribes (apparently) in the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 		80, "latin", "Rome", -- The area between the Wall of Antoninus (or Severus) and Hadrian's Wall was acquired by Rome in 80 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		161, "celt", "Selgovae Tribe", -- The area was inhabited by the Selgovae in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		1560, "teuton", "Scotland" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalClaims = {
@@ -5644,6 +5800,14 @@ DefineProvince("Thuringia", {
 		"teuton", "Hermunduri Tribe",
 		"teuton", "Holy Rome"
 	},
+	HistoricalOwners = {
+		-264, "teuton", "Hermunduri Tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		161, "teuton", "Ubii Tribe", -- The area was inhabited by the Ubii in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		919, "teuton", "Holy Rome" -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+	},
+	HistoricalCultures = {
+		-264, "teuton"
+	},
 	HistoricalModifiers = {
 		1379, "upgrade-university", true, -- University founded in Erfurt in 1379. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.
 		1557, "upgrade-university", true -- University founded in Jena in 1557. Source: The Cambridge Modern History Atlas, 1912, p. 9.
@@ -5899,6 +6063,7 @@ DefineProvince("Ulster", {
 		-- The Mount Sandel site (River Bann valley, Northern Ireland) was occupied in the late 9th millenium BC; in the site were found narrow-bladed, geometric microliths, wild boar bones, remains of birds such as mallard, teal, wigeon, grouse, capercaillie and snipe/woodcock, remains of fishes such as salmon, sea trout, eel and bass, hazelnuts, pears, apples and water-lilies; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 146.
 		-- Occupation of Mount Sandel in Ireland may have begun by 8000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 152.
 		-27, "celt", "Darini Tribe", -- British tribes (apparently) in the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+		161, "celt", "Scot Tribe", -- The area was inhabited by the Scotti in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		395, "celt", "Scot Tribe" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 	},
 	HistoricalCultures = {
@@ -6296,6 +6461,18 @@ DefineProvince("Westphalia", {
 		"teuton", "Sugambri Tribe",
 		"teuton", "Westphalia",
 		"teuton", "Holy Rome"
+	},
+	HistoricalOwners = {
+		-264, "teuton", "Sugambri Tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		161, "teuton", "Cherusci Tribe", -- The area was inhabited by the Cherusci in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		919, "teuton", "Holy Rome", -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+		1648, "teuton", "Westphalia" -- Political situation in Central Europe in 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
+	},
+	HistoricalClaims = {
+		919, "teuton", "Saxony" -- Part of the Duchy of Saxony within the Holy Roman Empire in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+	},
+	HistoricalCultures = {
+		-264, "teuton"
 	},
 	HistoricalSettlementBuildings = {
 		768, "unit-teuton-temple", true, -- Monastery or abbey existent in Werden during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
