@@ -201,9 +201,10 @@ DefineProvince("Balearic Sea", { -- Source: "Limits of Oceans and Seas", 1953, p
 DefineProvince("Baltic Sea", { -- Source: http://www.euratlas.net/history/europe/1/index.html
 	World = "Earth",
 	Water = true,
---	ReferenceProvince = "Brandenburg", -- province used as a reference for this province's name
+	ReferenceProvince = "Hither Pomerania", -- province used as a reference for this province's name
 	CulturalNames = {
-		"latin", "Suebic Sea" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+		"latin", "Suebic Sea", -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+		"teuton", "Suebic Sea" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	FactionCulturalNames = {
 		"teuton", "Marcomanni Tribe", "Suebic Sea",
@@ -461,7 +462,7 @@ DefineProvince("Eastern Mediterranean Sea", { -- Source: "Limits of Oceans and S
 DefineProvince("English Channel", {
 	World = "Earth",
 	Water = true,
---	ReferenceProvince = "Wessex", -- province used as a reference for this province's name
+	ReferenceProvince = "Wessex", -- province used as a reference for this province's name
 	CulturalNames = {
 		"celt", "British Ocean",
 		"latin", "British Ocean"
@@ -618,7 +619,7 @@ DefineProvince("Ionian Sea", { -- Source: "Limits of Oceans and Seas", 1953, p. 
 DefineProvince("Irish Sea", { -- Source: "Limits of Oceans and Seas", 1953, p. 12. (see corrections as well)
 	World = "Earth",
 	Water = true,
---	ReferenceProvince = "Leinster", -- province used as a reference for this province's name
+	ReferenceProvince = "Leinster", -- province used as a reference for this province's name
 	CulturalNames = {
 		"latin", "Hibernian Ocean"
 	},
@@ -682,7 +683,7 @@ DefineProvince("Lake Ilmen", {
 DefineProvince("Lake Vattern", {
 	World = "Earth",
 	Water = true,
---	ReferenceProvince = "Sweden",
+	ReferenceProvince = "Sweden",
 	CulturalNames = {
 		"norse", "Lake Vättern"
 	},
@@ -694,7 +695,7 @@ DefineProvince("Lake Vattern", {
 DefineProvince("Lake Wener", { -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 120.
 	World = "Earth",
 	Water = true,
---	ReferenceProvince = "Sweden",
+	ReferenceProvince = "Sweden",
 	CulturalNames = {
 		"norse", "Lake Vänern"
 	},
@@ -734,7 +735,7 @@ DefineProvince("Ligurian Sea", { -- Source: "Limits of Oceans and Seas", 1953, p
 DefineProvince("North Sea", { -- Source: http://www.euratlas.net/history/europe/1/index.html
 	World = "Earth",
 	Water = true,
---	ReferenceProvince = "Hanover", -- province used as a reference for this province's name
+	ReferenceProvince = "Hanover", -- province used as a reference for this province's name
 	CulturalNames = {
 		"germanic", "German Ocean",
 		"goth", "German Ocean",
@@ -790,7 +791,7 @@ DefineProvince("Sea of Azov", { -- Source: "Limits of Oceans and Seas", 1953, p.
 		"greek", "Lake Maeotis",
 		"latin", "Lake Maeotis" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	},
---	ReferenceProvince = "Don",
+	ReferenceProvince = "Don",
 	Tiles = {
 		{579, 124}, {579, 125},
 		{580, 124}, {580, 125}, {580, 126},

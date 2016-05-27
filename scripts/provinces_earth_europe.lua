@@ -2087,10 +2087,19 @@ DefineProvince("Farther Pomerania", {
 	SettlementLocation = {523, 102}, -- Kolberg
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
+	Coastal = true,
 	Claims = {
+		"goth", "Rugian Tribe",
 		"goth", "Turcilingian Tribe"
 	},
-	Coastal = true,
+	HistoricalOwners = {
+		-264, "goth", "Turcilingian Tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		161, "goth", "Rugian Tribe", -- The area was inhabited by the Rugii in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		1648, "teuton", "Brandenburg" -- Farther Pomerania was acquired by Brandenburg in 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123; Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 6.
+	},
+	HistoricalCultures = {
+		-264, "goth"
+	},
 	Regions = {"Europe", "Germany-Netherlands", "West and Central Europe"}
 })
 
@@ -2394,7 +2403,17 @@ DefineProvince("Galicia", {
 	Claims = {
 		"goth", "Bastarnae Tribe",
 		"goth", "Gepidae Tribe",
-		"slav", "Poland"
+		"slav", "Poland",
+		"teuton", "Buri Tribe"
+	},
+	HistoricalOwners = {
+		-264, "goth", "Bastarnae Tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		161, "teuton", "Buri Tribe", -- The area was inhabited by the Buri in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		919, "slav", "Poland" -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+	},
+	HistoricalCultures = {
+		-264, "goth",
+		161, "teuton"
 	},
 	HistoricalModifiers = {
 		1364, "upgrade-university", true -- University founded in Krakow in 1364. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.
@@ -3281,7 +3300,8 @@ DefineProvince("Liege", { -- also includes Namur and Belgian Limburg
 		481, "teuton", "Francia"
 	},
 	HistoricalCultures = {
-		-54, "celt"
+		-54, "celt",
+		-51, ""
 	},
 	HistoricalSettlementBuildings = {
 		768, "unit-teuton-temple", true, -- Monastery or abbey existent in Stavelot during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
@@ -3541,6 +3561,18 @@ DefineProvince("Lower Lusatia", {
 	SettlementLocation = {521, 108}, -- Guben
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
+	Claims = {
+		"teuton", "Suebi Tribe",
+		"teuton", "Holy Rome"
+	},
+	HistoricalOwners = {
+		161, "teuton", "Suebi Tribe", -- The area was inhabited by the Suebi in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		919, "teuton", "Holy Rome", -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+		1560, "teuton", "Austria" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalCultures = {
+		161, "teuton"
+	},
 	HistoricalModifiers = {
 		1506, "upgrade-university", true -- University founded in Frankfort-on-the-Oder in 1506. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.
 	},
@@ -3787,6 +3819,14 @@ DefineProvince("Mazovia", {
 		"goth", "Vandal Tribe",
 		"slav", "Poland"
 	},
+	HistoricalOwners = {
+		-264, "goth", "Vandal Tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		161, "goth", "Burgundian Tribe", -- The area was inhabited by the Burgundiones in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		919, "slav", "Poland" -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+	},
+	HistoricalCultures = {
+		-264, "goth"
+	},
 	Regions = {"Europe", "Poland", "West and Central Europe"}
 })
 
@@ -3968,7 +4008,7 @@ DefineProvince("Moravia", {
 		{533, 114}
 	},
 	SettlementLocation = {527, 116}, -- Brünn
-	Map = "maps/earth/prague.smp",
+	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
 	Claims = {
 		"basque", "Linearware Tribe",
@@ -3979,6 +4019,7 @@ DefineProvince("Moravia", {
 	HistoricalOwners = {
 		-5500, "basque", "Linearware Tribe", -- Linear Pottery culture existed in parts of Central Europe between 7000 and 2000 BC; since the other source gives them as arriving in northern Poland and Germany c. 5500 BC, let's place their beginnings at that date; Source: "Atlas de História Mundial", 2001, pp. 40-41.
 		-9, "teuton", "Quadi Tribe", -- if the Boii were conquered by the Marcomanni in 9 BC, the Quadi probably moved to Moravia and Slovakia at around the same time
+		161, "teuton", "Lombard Tribe", -- The area was inhabited by the Langobardi in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		919, "teuton", "Holy Rome", -- Duchy of Bohemia; political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		1560, "teuton", "Austria", -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
@@ -4108,7 +4149,15 @@ DefineProvince("Neumark", {
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
 	Claims = {
+		"teuton", "Suebi Tribe",
 		"teuton", "Brandenburg"
+	},
+	HistoricalOwners = {
+		161, "teuton", "Suebi Tribe", -- The area was inhabited by the Suebi in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		1560, "teuton", "Brandenburg" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalCultures = {
+		161, "teuton"
 	},
 	Regions = {"Europe", "Germany-Netherlands", "West and Central Europe"}
 })
@@ -4759,13 +4808,26 @@ DefineProvince("Pomerelia", {
 	SettlementLocation = {532, 101}, -- Danzig
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
+	Coastal = true,
 	Claims = {
 		"slav", "Poland",
 		"teuton", "Prussia"
 	},
-	Coastal = true,
+	HistoricalOwners = {
+		-264, "goth", "Goth Tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		161, "goth", "Goth Tribe", -- The area was inhabited by the Gothones in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		200, "", "", -- The Goths migrated south in about 200 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
+		1560, "slav", "Poland" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalClaims = {
+		-264, "goth", "Goth Tribe"
+	},
+	HistoricalCultures = {
+		-264, "goth",
+		200, ""
+	},
 	HistoricalModifiers = {
-		1366, "upgrade-university", true -- University founded in Kulm in 1366. Source: Atlas de História Mundial, 2001, p. 144.
+		1366, "upgrade-university", true -- University founded in Kulm in 1366. Source: "Atlas de História Mundial", 2001, p. 144.
 	},
 	Regions = {"Europe", "Poland", "West and Central Europe"}
 })
@@ -5321,6 +5383,17 @@ DefineProvince("Silesia", {
 		"goth", "Lugii Tribe",
 		"goth", "Silingae Tribe"
 	},
+	HistoricalOwners = {
+		-264, "goth", "Silingae Tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		161, "teuton", "Marcomanni Tribe", -- The area was inhabited by the Marcomanni in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		919, "slav", "Poland", -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+		1560, "teuton", "Austria", -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		1740, "teuton", "Brandenburg" -- Brandenburg acquired Silesia in 1740; Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 6.
+	},
+	HistoricalCultures = {
+		-264, "goth",
+		161, "teuton"
+	},
 	Regions = {"Europe", "Germany-Netherlands", "West and Central Europe"}
 })
 
@@ -5390,7 +5463,8 @@ DefineProvince("Slovakia", {
 		-5500, "basque", "Linearware Tribe", -- Linear Pottery culture existed in parts of Central Europe between 7000 and 2000 BC; since the other source gives them as arriving in northern Poland and Germany c. 5500 BC, let's place their beginnings at that date; Source: "Atlas de História Mundial", 2001, pp. 40-41.
 		-264, "celt", "Cotini Tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		-9, "teuton", "Quadi Tribe", -- if the Boii were conquered by the Marcomanni in 9 BC, the Quadi probably moved to Moravia and Slovakia at around the same time
-		526, "teuton", "Lombard Tribe", -- political situation in 526-600 in Europe; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+		161, "teuton", "Quadi Tribe", -- The area was inhabited by the Quadi in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		526, "teuton", "Lombard Tribe", -- Political situation in 526-600 in Europe; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 		919, "magyar", "Hungary", -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		1560, "teuton", "Austria", -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
@@ -6151,6 +6225,19 @@ DefineProvince("Upper Lusatia", {
 	SettlementLocation = {520, 109}, -- Bautzen
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
+	Claims = {
+		"teuton", "Suebi Tribe",
+		"teuton", "Holy Rome"
+	},
+	HistoricalOwners = {
+		161, "teuton", "Suebi Tribe", -- The area was inhabited by the Suebi in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		919, "teuton", "Holy Rome", -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+		1560, "teuton", "Austria", -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		1635, "teuton", "Saxony" -- Saxony acquired Upper Lusatia in 1635; Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 6.
+	},
+	HistoricalCultures = {
+		161, "teuton"
+	},
 	Regions = {"Europe", "Germany-Netherlands", "West and Central Europe"}
 })
 
@@ -6171,7 +6258,16 @@ DefineProvince("Upper Saxony", {
 	SettlementTerrain = "Plains",
 	Claims = {
 		"teuton", "Hermunduri Tribe",
+		"teuton", "Suebi Tribe",
 		"teuton", "Holy Rome"
+	},
+	HistoricalOwners = {
+		-264, "teuton", "Hermunduri Tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		161, "teuton", "Suebi Tribe", -- The area was inhabited by the Suebi in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		919, "teuton", "Holy Rome" -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+	},
+	HistoricalCultures = {
+		-264, "teuton"
 	},
 	HistoricalModifiers = {
 		1409, "upgrade-university", true, -- University founded in Leipzig in 1409. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.
@@ -6429,6 +6525,15 @@ DefineProvince("West Galicia", {
 	Claims = {
 		"slav", "Venedae Tribe",
 		"slav", "Poland"
+	},
+	HistoricalOwners = {
+		-264, "slav", "Venedae Tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		161, "goth", "Vandal Tribe", -- The area was inhabited by the Vandali in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		919, "slav", "Poland" -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+	},
+	HistoricalCultures = {
+		-264, "slav",
+		161, "goth"
 	},
 	Regions = {"Europe", "Poland", "West and Central Europe"}
 })

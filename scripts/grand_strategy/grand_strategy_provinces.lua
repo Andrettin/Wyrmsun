@@ -232,45 +232,6 @@ function LoadProvinces(world)
 		}
 	}
 	
-	local EarthWaterProvinces = {
-		BalticSea = {
-			Name = "Baltic Sea", -- Source: http://www.euratlas.net/history/europe/1/index.html
-			ReferenceProvince = "Brandenburg" -- province used as a reference for this province's name
-		},
-		EnglishChannel = {
-			Name = "English Channel",
-			ReferenceProvince = "Wessex" -- province used as a reference for this province's name
-		},
-		IrishSea = { -- Source: "Limits of Oceans and Seas", 1953, p. 12. (see corrections as well)
-			Name = "Irish Sea",
-			ReferenceProvince = "Leinster" -- province used as a reference for this province's name
-		},
-		LakeVattern = {
-			Name = "Lake Vattern",
-			ReferenceProvince = "Sweden"
-		},
-		LakeWener = {
-			Name = "Lake Wener", -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 120.
-			ReferenceProvince = "Sweden"
-		},
-		--[[
-		LibyanSea = {
-			Name = "Libyan Sea"
-		},
-		--]]
-		NorthSea = {
-			Name = "North Sea", -- Source: http://www.euratlas.net/history/europe/1/index.html
-			ReferenceProvince = "Hanover" -- province used as a reference for this province's name
-		},
-		SeaofAzov = { -- Source: "Limits of Oceans and Seas", 1953, p. 18.
-			Name = "Sea of Azov",
-			ReferenceProvince = "Don"
-		}
-	}
-
-	local NidavellirWaterProvinces = {
-	}
-
 	local function AddProvinceTable(province_table)
 		for key, value in pairs(province_table) do
 			if (province_table[key].Owner ~= nil) then
@@ -287,25 +248,12 @@ function LoadProvinces(world)
 		end
 	end
 	
-	local function AddWaterProvinceTable(province_table)
-		for key, value in pairs(province_table) do
-			if (province_table[key].ReferenceProvince ~= nil) then
-				WorldMapWaterProvinces[key]["ReferenceProvince"] = province_table[key].ReferenceProvince
-				SetProvinceReferenceProvince(WorldMapWaterProvinces[key].Name, WorldMapProvinces[province_table[key].ReferenceProvince].Name)
-			end
-		end
-	end
-	
 	if (world == "Earth") then
 		AddProvinceTable(EarthProvinces)
-		AddWaterProvinceTable(EarthWaterProvinces)
 	elseif (world == "Nidavellir") then
 		AddProvinceTable(NidavellirProvinces)
-		AddWaterProvinceTable(NidavellirWaterProvinces)
 	elseif (world == "Random") then
 		AddProvinceTable(EarthProvinces)
-		AddWaterProvinceTable(EarthWaterProvinces)
 		AddProvinceTable(NidavellirProvinces)
-		AddWaterProvinceTable(NidavellirWaterProvinces)
 	end
 end

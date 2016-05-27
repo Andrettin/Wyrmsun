@@ -309,6 +309,7 @@ function RunGrandStrategyGameSetupMenu()
 		function()
 			wyr.preferences.GrandStrategyBattleBaseBuilding = battle_base_building:isMarked()
 			SavePreferences()
+			GrandStrategyBattleBaseBuilding = wyr.preferences.GrandStrategyBattleBaseBuilding
 		end
 	)
 	battle_base_building:setMarked(wyr.preferences.GrandStrategyBattleBaseBuilding)

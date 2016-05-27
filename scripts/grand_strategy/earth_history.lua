@@ -731,24 +731,10 @@ if (GrandStrategyYear >= -264) then
 	SetProvinceOwner("Umbria", "latin", "Rome")
 	
 	-- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-	SetProvinceOwner("Farther Pomerania", "goth", "Turcilingian Tribe")
-	SetProvinceCivilization("Farther Pomerania", "goth")
 	
-	SetProvinceOwner("Upper Saxony", "teuton", "Hermunduri Tribe")
-	SetProvinceCivilization("Upper Saxony", "teuton")
-	
-	SetProvinceOwner("Silesia", "goth", "Silingae Tribe")
-	SetProvinceCivilization("Silesia", "goth")
-	
-	SetProvinceOwner("Pomerelia", "goth", "Goth Tribe")
-	SetProvinceCivilization("Pomerelia", "goth")
-	AddProvinceClaim("Pomerelia", "goth", "Goth Tribe")
 	SetProvinceOwner("Prussia", "goth", "Goth Tribe")
 	SetProvinceCivilization("Prussia", "goth")
 	AddProvinceClaim("Prussia", "goth", "Goth Tribe")
-	
-	SetProvinceOwner("Mazovia", "goth", "Vandal Tribe")
-	SetProvinceCivilization("Mazovia", "goth")
 	
 	SetProvinceOwner("Posen", "goth", "Burgundian Tribe")
 	SetProvinceCivilization("Posen", "goth")
@@ -757,13 +743,8 @@ if (GrandStrategyYear >= -264) then
 	SetProvinceOwner("Lithuania", "slav", "Aestui Tribe")
 	SetProvinceCivilization("Lithuania", "slav")
 	
-	SetProvinceOwner("Galicia", "goth", "Bastarnae Tribe")
-	SetProvinceCivilization("Galicia", "goth")
 	SetProvinceOwner("Bessarabia", "goth", "Bastarnae Tribe")
 	SetProvinceCivilization("Bessarabia", "goth")
-	
-	SetProvinceOwner("West Galicia", "slav", "Venedae Tribe")
-	SetProvinceCivilization("West Galicia", "slav")
 	
 	SetProvinceOwner("Crimea", "greek", "Cimmerian Bosphorus")
 	SetProvinceCivilization("Crimea", "greek")
@@ -988,7 +969,6 @@ if (GrandStrategyYear >= 177) then
 end
 
 if (GrandStrategyYear >= 200) then
-	SetProvinceOwner("Pomerelia", "", "")
 	SetProvinceOwner("Prussia", "", "")
 	SetProvinceOwner("Ukraine", "goth", "Ostrogoth Tribe") -- The eastern goths had migrated to the area of modern Ukraine in about 200 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 	SetProvinceOwner("Wallachia", "goth", "Visigoth Tribe") -- The western goths had migrated to the area of modern Romania / ancient Dacia in about 200 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
@@ -1337,27 +1317,13 @@ if (GrandStrategyYear >= 919) then
 	SetProvinceOwner("Lorraine", "teuton", "Holy Rome")
 	SetProvinceOwner("Moselle", "teuton", "Holy Rome")
 
-	SetProvinceOwner("Upper Saxony", "teuton", "Holy Rome")
-	SetProvinceOwner("Upper Lusatia", "teuton", "Holy Rome")
-	SetProvinceCivilization("Upper Lusatia", "teuton")
-	SetProvinceOwner("Lower Lusatia", "teuton", "Holy Rome")
-	SetProvinceCivilization("Lower Lusatia", "teuton")
-	
 	-- Duchy of Venice
 	SetProvinceOwner("Venetia", "latin", "Venice")
 	
 	SetProvinceOwner("Croatia", "slav", "Croatia")
 	SetProvinceCivilization("Croatia", "slav")
-	SetProvinceOwner("Galicia", "slav", "Poland")
-	SetProvinceCivilization("Galicia", "slav")
-	SetProvinceOwner("Mazovia", "slav", "Poland")
-	SetProvinceCivilization("Mazovia", "slav")
 	SetProvinceOwner("Posen", "slav", "Poland")
 	SetProvinceCivilization("Posen", "slav")
-	SetProvinceOwner("Silesia", "slav", "Poland")
-	SetProvinceCivilization("Silesia", "slav")
-	SetProvinceOwner("West Galicia", "slav", "Poland")
-	SetProvinceCivilization("West Galicia", "slav")
 end
 
 if (GrandStrategyYear >= 965) then
@@ -1478,14 +1444,10 @@ if (GrandStrategyYear >= 1560) then
 	SetProvinceOwner("Switzerland", "teuton", "Switzerland")
 	SetFactionGovernmentType("teuton", "Switzerland", "republic")	
 	
-	SetProvinceOwner("Neumark", "teuton", "Brandenburg")
 	SetProvinceOwner("Prussia", "teuton", "Prussia")
 	
 	SetProvinceOwner("Carniola", "teuton", "Austria")
 	SetProvinceOwner("Istria", "teuton", "Austria") -- the outer parts of Istria were owned by Venice, but the inner parts (including Trieste) were owned by Austria)
-	SetProvinceOwner("Silesia", "teuton", "Austria")
-	SetProvinceOwner("Lower Lusatia", "teuton", "Austria")
-	SetProvinceOwner("Upper Lusatia", "teuton", "Austria")
 	
 	SetProvinceOwner("Croatia", "teuton", "Turkey")
 	SetProvinceOwner("Bosnia", "teuton", "Turkey")
@@ -1500,10 +1462,6 @@ if (GrandStrategyYear >= 1560) then
 	SetProvinceOwner("Don", "teuton", "Crimea")
 
 	SetProvinceOwner("Posen", "slav", "Poland")
-	SetProvinceOwner("Pomerelia", "slav", "Poland")
-	SetProvinceOwner("Galicia", "slav", "Poland")
-	SetProvinceOwner("Mazovia", "slav", "Poland")
-	SetProvinceOwner("West Galicia", "slav", "Poland")
 	SetProvinceOwner("Russia", "slav", "Muscovy")
 	SetProvinceOwner("Ukraine", "slav", "Poland")
 	SetProvinceOwner("White Russia", "slav", "Poland")
@@ -1537,15 +1495,6 @@ if (GrandStrategyYear >= 1629) then
 	SetProvinceOwner("Latvia", "norse", "Sweden") -- Sweden acquired Livonia in 1629; Source: William R. Shepherd, "Historical Atlas", 1911, p. 120.
 end
 
-if (GrandStrategyYear >= 1635) then -- Saxony acquired Upper Lusatia in 1635; Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 6.
-	SetProvinceOwner("Upper Lusatia", "teuton", "Saxony")
-end
-
-if (GrandStrategyYear >= 1648) then
-	 -- Farther Pomerania was acquired by Brandenburg in 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123; Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 6.
-	SetProvinceOwner("Farther Pomerania", "teuton", "Brandenburg")
-end
-
 if (GrandStrategyYear >= 1649) then -- Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 17.
 	GrandStrategyEvents.TheUlozhenieLawCode = nil
 end
@@ -1568,10 +1517,6 @@ end
 
 if (GrandStrategyYear >= 1733) then -- Stavnsbandet established in 1733; Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 20.
 	GrandStrategyEvents.Stavnsbandet = nil
-end
-
-if (GrandStrategyYear >= 1740) then -- Brandenburg acquired Silesia in 1740; Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 6.
-	SetProvinceOwner("Silesia", "teuton", "Brandenburg")
 end
 
 if (GrandStrategyYear >= 1781) then -- The Serfdom Act for Bohemia and Moravia enacted in 1781 by Emperor Joseph II; Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 14.
