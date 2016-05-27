@@ -621,6 +621,7 @@ DefineProvince("Irish Sea", { -- Source: "Limits of Oceans and Seas", 1953, p. 1
 	Water = true,
 	ReferenceProvince = "Leinster", -- province used as a reference for this province's name
 	CulturalNames = {
+		"celt", "Hibernian Ocean",
 		"latin", "Hibernian Ocean"
 	},
 	Tiles = {

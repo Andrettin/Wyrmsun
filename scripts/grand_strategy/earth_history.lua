@@ -162,12 +162,6 @@ if (GrandStrategyYear >= -7000) then
 	SetProvinceCivilization("Thessaly", "minoan")
 	SetProvinceOwner("Euboea", "minoan", "Impressedware Tribe")
 	SetProvinceCivilization("Euboea", "minoan")
-
-	-- Balkan Painted Pottery / Impressed Cardial Pottery culture existed in Transylvania and Wallachia between 7000 and 2000 BC; Source: "Atlas de História Mundial", 2001, pp. 40-41.
-	SetProvinceOwner("Wallachia", "minoan", "Paintedware Tribe")
-	SetProvinceCivilization("Wallachia", "minoan")
-	SetProvinceOwner("Transylvania", "minoan", "Paintedware Tribe")
-	SetProvinceCivilization("Transylvania", "minoan")
 end
 
 if (GrandStrategyYear >= -6800) then
@@ -670,8 +664,6 @@ if (GrandStrategyYear >= -336) then
 	SetProvinceOwner("Serbia", "thracian", "Triballi Tribe") -- they were also in western Bulgaria
 	SetProvinceCivilization("Serbia", "thracian")
 	
-	SetProvinceOwner("Wallachia", "thracian", "Getae Tribe")
-	SetProvinceCivilization("Wallachia", "thracian")
 	SetProvinceOwner("Dobruja", "thracian", "Getae Tribe")
 	SetProvinceCivilization("Dobruja", "thracian")
 	AddProvinceClaim("Dobruja", "thracian", "Getae Tribe")
@@ -679,12 +671,6 @@ if (GrandStrategyYear >= -336) then
 	SetProvinceOwner("Ukraine", "persian", "Scythian Tribe")
 	SetProvinceCivilization("Ukraine", "persian")
 	SetProvinceUnitQuantity("Ukraine", "unit-germanic-warrior", 0)
-	SetProvinceOwner("Moldavia", "persian", "Scythian Tribe")
-	SetProvinceCivilization("Moldavia", "persian")
-	AddProvinceClaim("Moldavia", "persian", "Scythian Tribe")
-	SetProvinceOwner("Bessarabia", "persian", "Scythian Tribe")
-	SetProvinceCivilization("Bessarabia", "persian")
-	AddProvinceClaim("Bessarabia", "persian", "Scythian Tribe")
 	
 	SetProvinceOwner("Epirus", "greek", "Epirus")
 end
@@ -742,9 +728,6 @@ if (GrandStrategyYear >= -264) then
 	
 	SetProvinceOwner("Lithuania", "slav", "Aestui Tribe")
 	SetProvinceCivilization("Lithuania", "slav")
-	
-	SetProvinceOwner("Bessarabia", "goth", "Bastarnae Tribe")
-	SetProvinceCivilization("Bessarabia", "goth")
 	
 	SetProvinceOwner("Crimea", "greek", "Cimmerian Bosphorus")
 	SetProvinceCivilization("Crimea", "greek")
@@ -939,15 +922,11 @@ if (GrandStrategyYear >= 98) then
 end
 
 if (GrandStrategyYear >= 107) then -- Dacia acquired by Rome in 107 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-	SetProvinceOwner("Moldavia", "latin", "Rome")
-	SetProvinceOwner("Transylvania", "latin", "Rome")
-	SetProvinceOwner("Wallachia", "latin", "Rome")
 	SetProvinceOwner("Vojvodina", "latin", "Rome")
 end
 
 if (GrandStrategyYear >= 142) then
-	SetProvinceOwner("Posen", "", " Tribe")
-	SetProvinceOwner("Transylvania", "goth", "Vandal Tribe") -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
+	SetProvinceOwner("Posen", "", "")
 end
 
 if (GrandStrategyYear >= 166) then
@@ -971,17 +950,11 @@ end
 if (GrandStrategyYear >= 200) then
 	SetProvinceOwner("Prussia", "", "")
 	SetProvinceOwner("Ukraine", "goth", "Ostrogoth Tribe") -- The eastern goths had migrated to the area of modern Ukraine in about 200 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
-	SetProvinceOwner("Wallachia", "goth", "Visigoth Tribe") -- The western goths had migrated to the area of modern Romania / ancient Dacia in about 200 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
-	SetProvinceOwner("Moldavia", "goth", "Visigoth Tribe")
-	SetProvinceOwner("Bessarabia", "goth", "Visigoth Tribe")
 	
 	-- Josiah Cox Russell gives 40 million people in Europe in 200 AD; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
 end
 
 if (GrandStrategyYear >= 275) then -- Dacia lost by Rome in 275 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
---	SetProvinceOwner("Moldavia", "", "")
---	SetProvinceOwner("Transylvania", "", "")
---	SetProvinceOwner("Wallachia", "", "")
 	SetProvinceOwner("Vojvodina", "", "")
 end
 
@@ -999,9 +972,6 @@ end
 
 if (GrandStrategyYear >= 397) then
 	-- The Visigoths migrated to the Western Balkans in 397 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
-	SetProvinceOwner("Moldavia", "", "")
-	SetProvinceOwner("Bessarabia", "", "")
-	SetProvinceOwner("Wallachia", "", "")
 	SetProvinceOwner("Croatia", "goth", "Visigoth Tribe")
 	SetProvinceOwner("Bosnia", "goth", "Visigoth Tribe")
 end
@@ -1086,7 +1056,6 @@ if (GrandStrategyYear >= 481) then
 end
 
 if (GrandStrategyYear >= 486) then
-	SetProvinceOwner("Transylvania", "", "")
 	SetProvinceOwner("Corsica", "goth", "Vandal Tribe") -- Corsica was a part of the Kingdom of the Vandals in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 	SetProvinceUnitQuantity("Corsica", "unit-germanic-warrior", 0) -- let's remove those oodles of warriors placed there to make this province difficult to conquer
 	SetProvinceOwner("Sardinia", "goth", "Vandal Tribe") -- Sardinia was a part of the Kingdom of the Vandals in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
@@ -1453,8 +1422,6 @@ if (GrandStrategyYear >= 1560) then
 	SetProvinceOwner("Bosnia", "teuton", "Turkey")
 	SetProvinceOwner("Vojvodina", "teuton", "Turkey")
 	
-	SetProvinceOwner("Transylvania", "latin", "Transylvania")
-	
 	SetProvinceOwner("Latvia", "teuton", "Prussia") -- Teutonic Order
 	SetProvinceOwner("Estonia", "teuton", "Prussia") -- Teutonic Order
 	
@@ -1466,10 +1433,6 @@ if (GrandStrategyYear >= 1560) then
 	SetProvinceOwner("Ukraine", "slav", "Poland")
 	SetProvinceOwner("White Russia", "slav", "Poland")
 	
-	SetProvinceOwner("Moldavia", "latin", "Moldavia")
-	SetProvinceOwner("Bukowina", "latin", "Moldavia")
-	SetProvinceOwner("Bessarabia", "latin", "Moldavia")
-	SetProvinceOwner("Wallachia", "latin", "Wallachia")
 	SetProvinceOwner("Dobruja", "teuton", "Turkey")
 end
 

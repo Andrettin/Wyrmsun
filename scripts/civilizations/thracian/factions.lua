@@ -37,6 +37,18 @@ DefineFaction("Carpi Tribe", {
 	Colors = {"blue"}
 })
 
+DefineFaction("Costoboci Tribe", {
+	Civilization = "thracian", -- correct?
+	Type = "tribe",
+	Colors = {"red"}
+})
+
+DefineFaction("Daci Tribe", {
+	Civilization = "thracian", -- correct?
+	Type = "tribe",
+	Colors = {"violet"}
+})
+
 DefineFaction("Edoni Tribe", {
 	Civilization = "thracian",
 	Type = "tribe",

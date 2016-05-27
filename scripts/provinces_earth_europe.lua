@@ -784,6 +784,21 @@ DefineProvince("Bessarabia", {
 		"goth", "Bastarnae Tribe"
 --		"latin", "Moldavia"
 	},
+	HistoricalOwners = {
+		-336, "persian", "Scythian Tribe", -- Macedonian Empire and environs in 336-323 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 18-19.
+		-264, "goth", "Bastarnae Tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		161, "goth", "Bastarnae Tribe", -- The area was inhabited by the Bastarnae (and the Costoboci to the north) in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		200, "goth", "Visigoth Tribe", -- The western goths had migrated to the area of modern Romania / ancient Dacia in about 200 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
+		397, "", "", -- The Visigoths migrated to the Western Balkans in 397 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
+		1560, "latin", "Moldavia" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalClaims = {
+		-336, "persian", "Scythian Tribe"
+	},
+	HistoricalCultures = {
+		-336, "persian",
+		-264, "goth"
+	},
 	Regions = {"Eurasia", "Europe"}
 })
 
@@ -1071,7 +1086,15 @@ DefineProvince("Bukowina", {
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
 	Claims = {
-		"slav", "Poland"
+		"slav", "Poland",
+		"thracian", "Costoboci Tribe"
+	},
+	HistoricalOwners = {
+		161, "thracian", "Costoboci Tribe", -- The area was inhabited by the Costoboci in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		1560, "latin", "Moldavia" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalCultures = {
+		161, "thracian"
 	},
 	Regions = {"Cisleithania", "Eurasia", "Europe", "Poland"}
 })
@@ -2974,11 +2997,13 @@ DefineProvince("Hungary", {
 	},
 	HistoricalOwners = {
 		-264, "persian", "Iazyge Tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		161, "goth", "Vandal Tribe", -- The area was inhabited by the Vandali in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		919, "magyar", "Hungary", -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		1560, "teuton", "Turkey" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalCultures = {
 		-264, "persian",
+		161, "goth"
 	},
 	HistoricalModifiers = {
 		1389, "upgrade-university", true, -- University founded in Budapest in 1389. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.
@@ -3969,7 +3994,26 @@ DefineProvince("Moldavia", {
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
 	Claims = {
---		"latin", "Moldavia"
+--		"latin", "Moldavia",
+		"thracian", "Costoboci Tribe"
+	},
+	HistoricalOwners = {
+		-336, "persian", "Scythian Tribe", -- Macedonian Empire and environs in 336-323 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 18-19.
+		107, "latin", "Rome", -- Dacia acquired by Rome in 107 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		161, "thracian", "Costoboci Tribe", -- The area was inhabited by the Costoboci in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		200, "goth", "Visigoth Tribe", -- The western goths had migrated to the area of modern Romania / ancient Dacia in about 200 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
+--		275, "", "", -- Dacia lost by Rome in 275 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		397, "", "", -- The Visigoths migrated to the Western Balkans in 397 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
+		1560, "latin", "Moldavia" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalClaims = {
+		-336, "persian", "Scythian Tribe",
+		107, "latin", "Rome"
+	},
+	HistoricalCultures = {
+		-336, "persian",
+		161, "thracian",
+		200, "goth"
 	},
 	Regions = {"Europe", "West and Central Europe"}
 })
@@ -5463,7 +5507,7 @@ DefineProvince("Slovakia", {
 		-5500, "basque", "Linearware Tribe", -- Linear Pottery culture existed in parts of Central Europe between 7000 and 2000 BC; since the other source gives them as arriving in northern Poland and Germany c. 5500 BC, let's place their beginnings at that date; Source: "Atlas de História Mundial", 2001, pp. 40-41.
 		-264, "celt", "Cotini Tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		-9, "teuton", "Quadi Tribe", -- if the Boii were conquered by the Marcomanni in 9 BC, the Quadi probably moved to Moravia and Slovakia at around the same time
-		161, "teuton", "Quadi Tribe", -- The area was inhabited by the Quadi in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, "teuton", "Quadi Tribe", -- Slovakia was inhabited by the Quadi in 161-180 AD (while the Cotini inhabited eastern Slovakia); Source: "Ancient Warfare VII.6", 2013, p. 7.
 		526, "teuton", "Lombard Tribe", -- Political situation in 526-600 in Europe; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 		919, "magyar", "Hungary", -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		1560, "teuton", "Austria", -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
@@ -5953,7 +5997,22 @@ DefineProvince("Transylvania", {
 	SettlementTerrain = "Plains",
 	Claims = {
 --		"latin", "Transylvania"
-		"minoan", "Paintedware Tribe"
+		"minoan", "Paintedware Tribe",
+		"thracian", "Daci Tribe"
+	},
+	HistoricalOwners = {
+		-7000, "minoan", "Paintedware Tribe", -- Balkan Painted Pottery / Impressed Cardial Pottery culture existed in Transylvania and Wallachia between 7000 and 2000 BC; Source: "Atlas de História Mundial", 2001, pp. 40-41.
+		107, "latin", "Rome", -- Dacia acquired by Rome in 107 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+--		142, "goth", "Vandal Tribe", -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
+		161, "latin", "Rome", -- The Transylvanian Carpathians were inhabited by the Daci in 161-180 AD, but the Romans held the most of Transylvania; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		275, "", "", -- Dacia lost by Rome in 275 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		1560, "latin", "Transylvania", -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalClaims = {
+		107, "latin", "Rome"
+	},
+	HistoricalCultures = {
+		-7000, "minoan"
 	},
 	HistoricalModifiers = {
 		1580, "upgrade-university", true, -- University founded in Cluj in 1580. Source: The Cambridge Modern History Atlas, p. 9.
@@ -6446,7 +6505,26 @@ DefineProvince("Wallachia", {
 	Claims = {
 --		"latin", "Wallachia",
 		"minoan", "Paintedware Tribe",
+		"thracian", "Daci Tribe",
 		"thracian", "Getae Tribe"
+	},
+	HistoricalOwners = {
+		-7000, "minoan", "Paintedware Tribe", -- Balkan Painted Pottery / Impressed Cardial Pottery culture existed in Transylvania and Wallachia between 7000 and 2000 BC; Source: "Atlas de História Mundial", 2001, pp. 40-41.
+		-336, "thracian", "Getae Tribe", -- Macedonian Empire and environs in 336-323 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 18-19.
+		107, "latin", "Rome", -- Dacia acquired by Rome in 107 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		161, "thracian", "Daci Tribe", -- The area was inhabited by the Daci (and the Roxolani) in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		200, "goth", "Visigoth Tribe", -- The western goths had migrated to the area of modern Romania / ancient Dacia in about 200 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
+--		275, "", "", -- Dacia lost by Rome in 275 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		397, "", "", -- The Visigoths migrated to the Western Balkans in 397 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
+		1560, "latin", "Wallachia" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalClaims = {
+		107, "latin", "Rome"
+	},
+	HistoricalCultures = {
+		-7000, "minoan",
+		-336, "thracian",
+		200, "goth"
 	},
 	Regions = {"Europe", "West and Central Europe"}
 })
