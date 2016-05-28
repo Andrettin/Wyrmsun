@@ -125,7 +125,7 @@ DefineFaction("Buri Tribe", {
 	Civilization = "teuton", -- accurate?
 	ParentFaction = "Suebi Tribe", -- accurate?
 	Type = "tribe",
-	Colors = {"brown"},
+	Colors = {"violet"},
 	DevelopsTo = {"Bavaria", "Galicia", "Austria", "Carinthia"}, -- accurate?
 	HistoricalFactionDerivations = {161, "teuton", "Suebi Tribe"}
 })
