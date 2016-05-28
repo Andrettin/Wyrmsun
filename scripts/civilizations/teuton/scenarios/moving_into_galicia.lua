@@ -60,8 +60,8 @@ if (LoadedGame == false) then
 		CreateProvinceCustomHero("Brandenburg", 0)
 		
 		-- Roman units
-		CreateProvinceUnits("Portugal", 1, 4)
-		CreateProvinceCustomHero("Portugal", 1)
+		CreateProvinceUnits("Douro", 1, 4)
+		CreateProvinceCustomHero("Douro", 1)
 	end
 end
 

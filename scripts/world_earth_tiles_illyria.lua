@@ -25,62 +25,65 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineWorldMapTile({512, 121}, {
+DefineWorldMapTile({523, 130}, {
 	World = "Earth",
 	CulturalSettlementNames = {
-		"teuton", "Innsbruck", "name-elements", {
---			"compound", "prefix", -- the name of the river Inn
-			"compound", "suffix", "high-german", "noun", "singular", "Bruck"
-		}
+		"latin", "Iadera", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+		"slav", "Zara"
 	}
 })
 
-DefineWorldMapTile({516, 119}, {
+DefineWorldMapTile({525, 125}, {
 	World = "Earth",
 	CulturalSettlementNames = {
-		"teuton", "Salzburg", "name-elements", {
-			"compound", "prefix", "high-german", "noun", "singular", "Salz",
-			"compound", "suffix", "high-german", "noun", "singular", "Burg"
-		}
+		"latin", "Celeta", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+		"slav", "Zagreb"
 	}
 })
 
-DefineWorldMapTile({520, 118}, {
+DefineWorldMapTile({529, 133}, {
 	World = "Earth",
 	CulturalSettlementNames = {
-		"teuton", "Linz"
+		"latin", "Narona" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
 })
 
-DefineWorldMapTile({520, 123}, {
+DefineWorldMapTile({532, 131}, {
 	World = "Earth",
 	CulturalSettlementNames = {
-		"teuton", "Klagenfurt", "name-elements", {
-			"compound", "prefix", "high-german", "noun", "plural", "Klage",
-			"compound", "suffix", "high-german", "noun", "singular", "Furt"
-		}
+		"slav", "Sarajevo"
 	}
 })
 
-DefineWorldMapTile({523, 121}, {
+DefineWorldMapTile({534, 135}, {
 	World = "Earth",
 	CulturalSettlementNames = {
-		"teuton", "Graz"
+		"latin", "Doclea", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+		"slav", "Podgorica"
 	}
 })
 
-DefineWorldMapTile({526, 118}, {
+DefineWorldMapTile({536, 138}, {
 	World = "Earth",
 	CulturalSettlementNames = {
-		"celt", "Vindobona",
-		"latin", "Vindobona", -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-		"teuton", "Wien"
+		"greek", "Epidamnus",
+		"latin", "Dyrrhachium"
 	}
 })
 
-DefineWorldMapTile({527, 119}, {
+DefineWorldMapTile({538, 129}, {
 	World = "Earth",
 	CulturalSettlementNames = {
-		"latin", "Carnuntum" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+		"latin", "Singidunum", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+		"slav", "Belgrade"
 	}
 })
+
+DefineWorldMapTile({540, 136}, {
+	World = "Earth",
+	CulturalSettlementNames = {
+		"latin", "Scupi", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+		"slav", "Skopje"
+	}
+})
+

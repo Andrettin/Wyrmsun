@@ -3694,7 +3694,7 @@ DefineProvince("Lower Austria", {
 		{524, 117}, {524, 118}, {524, 119},
 		{525, 117}, {525, 118}, {525, 119},
 		{526, 117}, {526, 118}, {526, 119}, {526, 120},
-		{527, 117}, {527, 118}
+		{527, 117}, {527, 118}, {527, 119}
 	},
 	SettlementLocation = {526, 118}, -- Vienna
 	Map = "maps/random/random-map-forest.smp",
@@ -3722,6 +3722,10 @@ DefineProvince("Lower Austria", {
 	HistoricalCultures = {
 		-5500, "basque",
 		-800, "celt"
+	},
+	HistoricalSettlementBuildings = {
+		161, "unit-teuton-barracks", true, -- Legionary base present in Vindobona in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, "unit-teuton-barracks", true -- Legionary base present in Carnuntum in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	HistoricalModifiers = {
 		1365, "upgrade-university", true, -- University founded in Vienna in 1365. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.
@@ -4868,7 +4872,7 @@ DefineProvince("Pannonia", {
 	},
 	Tiles = {
 		{526, 121}, {526, 122}, {526, 123},
-		{527, 119}, {527, 120}, {527, 121}, {527, 122}, {527, 123},
+		{527, 120}, {527, 121}, {527, 122}, {527, 123},
 		{528, 119}, {528, 120}, {528, 121}, {528, 122}, {528, 123}, {528, 124},
 		{529, 120}, {529, 121}, {529, 122}, {529, 123}, {529, 124},
 		{530, 120}, {530, 121}, {530, 122}, {530, 123}, {530, 124},
@@ -6501,7 +6505,7 @@ DefineProvince("Upper Saxony", {
 	},
 	HistoricalModifiers = {
 		1409, "upgrade-university", true, -- University founded in Leipzig in 1409. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.
---		1846, "upgrade-university", true -- Bergakademie Freiberg existent in Chemnitz in 1846. Source: Silvia Fernanda de Mendonça Figueirôa, "Ciência e tecnologia no Brasil Imperial: Guilherme Schüch, Barão de Capanema (1824-1908)", 2005, p. 443.
+--		1846, "upgrade-college", true -- Bergakademie Freiberg existent in Chemnitz in 1846. Source: Silvia Fernanda de Mendonça Figueirôa, "Ciência e tecnologia no Brasil Imperial: Guilherme Schüch, Barão de Capanema (1824-1908)", 2005, p. 443.
 	},
 	Regions = {"Europe", "Germany-Netherlands", "West and Central Europe"}
 })

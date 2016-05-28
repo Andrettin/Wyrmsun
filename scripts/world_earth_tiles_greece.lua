@@ -71,10 +71,18 @@ DefineWorldMapTile({544, 148}, {
 	}
 })
 
+DefineWorldMapTile({545, 140}, {
+	World = "Earth",
+	CulturalSettlementNames = {
+		"latin", "Thessalonica" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+	}
+})
+
 DefineWorldMapTile({545, 148}, {
 	World = "Earth",
 	CulturalSettlementNames = {
-		"greek", "Corinth"
+		"greek", "Corinth",
+		"latin", "Corinthus" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
 })
 
@@ -89,7 +97,7 @@ DefineWorldMapTile({547, 147}, {
 	World = "Earth",
 	CulturalSettlementNames = {
 		"greek", "Athens",
-		"latin", "Athens"
+		"latin", "Athenae" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
 })
 
@@ -105,6 +113,13 @@ DefineWorldMapTile({551, 155}, {
 	CulturalSettlementNames = {
 		"greek", "Knossos",
 		"latin", "Cnossus"
+	}
+})
+
+DefineWorldMapTile({551, 156}, {
+	World = "Earth",
+	CulturalSettlementNames = {
+		"latin", "Gortyna" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
 })
 
@@ -140,6 +155,7 @@ DefineWorldMapTile({561, 138}, {
 	World = "Earth",
 	CulturalSettlementNames = {
 		"greek", "Byzantium",
-		"latin", "Constantinople"
+		"latin", "Constantinople",
+		"latin", "Byzantium" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
 })

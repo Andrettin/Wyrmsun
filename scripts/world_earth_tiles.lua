@@ -32,6 +32,7 @@ Load("scripts/world_earth_tiles_finland.lua")
 Load("scripts/world_earth_tiles_france.lua") -- modern France (excluding Corsica)
 Load("scripts/world_earth_tiles_germany.lua") -- territory of Imperial Germany (excluding Alsace-Lorraine)
 Load("scripts/world_earth_tiles_greece.lua") -- territory of modern Greece
+Load("scripts/world_earth_tiles_illyria.lua") -- Western Balkans: Albania and former Yugoslavia (sans Slovenia, Vojvodina and Istria)
 Load("scripts/world_earth_tiles_ireland.lua")
 Load("scripts/world_earth_tiles_italy.lua") -- includes Corsica since it is closer to the Italian mainland than to France, and since for centuries it belonged to Genoa
 Load("scripts/world_earth_tiles_low_countries.lua") -- Netherlands, Belgium and Luxembourg
@@ -85,22 +86,6 @@ DefineWorldMapTile({521, 153}, {
 	}
 })
 
-DefineWorldMapTile({523, 130}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"latin", "Iadera", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
-		"slav", "Zara"
-	}
-})
-
-DefineWorldMapTile({525, 125}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"latin", "Celeta", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
-		"slav", "Zagreb"
-	}
-})
-
 DefineWorldMapTile({527, 116}, {
 	World = "Earth",
 	CulturalSettlementNames = {
@@ -120,26 +105,11 @@ DefineWorldMapTile({528, 118}, {
 	}
 })
 
-DefineWorldMapTile({532, 131}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"slav", "Sarajevo"
-	}
-})
-
 DefineWorldMapTile({534, 120}, {
 	World = "Earth",
 	CulturalSettlementNames = {
 		"latin", "Aquincum",
 		"magyar", "Buda"
-	}
-})
-
-DefineWorldMapTile({534, 135}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"latin", "Doclea", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
-		"slav", "Podgorica"
 	}
 })
 
@@ -161,34 +131,10 @@ DefineWorldMapTile({536, 127}, {
 	}
 })
 
-DefineWorldMapTile({536, 138}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"greek", "Epidamnus",
-		"latin", "Dyrrhachium"
-	}
-})
-
 DefineWorldMapTile({538, 107}, {
 	World = "Earth",
 	CulturalSettlementNames = {
 		"slav", "Warsaw"
-	}
-})
-
-DefineWorldMapTile({538, 129}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"latin", "Singidunum", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
-		"slav", "Belgrade"
-	}
-})
-
-DefineWorldMapTile({540, 136}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"latin", "Scupi", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
-		"slav", "Skopje"
 	}
 })
 

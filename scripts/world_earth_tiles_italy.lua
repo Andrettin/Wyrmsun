@@ -103,6 +103,9 @@ DefineWorldMapTile({511, 126}, {
 	World = "Earth",
 	CulturalSettlementNames = {
 		"latin", "Verona" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+	},
+	FactionCulturalSettlementNames = {
+		"latin", "Italy", "Verona" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
 	}
 })
 
