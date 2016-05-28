@@ -727,9 +727,6 @@ if (GrandStrategyYear >= -264) then
 	SetProvinceOwner("Lithuania", "slav", "Aestui Tribe")
 	SetProvinceCivilization("Lithuania", "slav")
 	
-	SetProvinceOwner("Crimea", "greek", "Cimmerian Bosphorus")
-	SetProvinceCivilization("Crimea", "greek")
-	
 	SetProvinceOwner("Russia", "slav", "Budini Tribe")
 	SetProvinceCivilization("Russia", "slav")
 end
@@ -1416,7 +1413,6 @@ if (GrandStrategyYear >= 1560) then
 	SetProvinceOwner("Latvia", "teuton", "Prussia") -- Teutonic Order
 	SetProvinceOwner("Estonia", "teuton", "Prussia") -- Teutonic Order
 	
-	SetProvinceOwner("Crimea", "teuton", "Crimea")
 	SetProvinceOwner("Don", "teuton", "Crimea")
 
 	SetProvinceOwner("Posen", "slav", "Poland")
