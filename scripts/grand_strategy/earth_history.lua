@@ -271,7 +271,6 @@ if (GrandStrategyYear >= -2800) then -- establishment of the Single Grave Cultur
 
 	-- in the Ynglinga saga, "Odin's people", the Asa, settle Scandinavia in a manner not too dissimilar from what archaeological findings tell us of Indo-European settlement in the region; thus the name "Asa Tribe" is used here to denote the Indo-European-speaking peoples who settled in Scandinavia, and were the precursors of the Germanic peoples
 	SetProvinceUnitQuantity("Astrakhan", "unit-germanic-warrior", 0)
-	SetProvinceOwner("Don", "", "")
 	SetProvinceUnitQuantity("Don", "unit-germanic-warrior", 0)
 
 	GrandStrategyEvents.OnTheVanaquisl = nil
@@ -1413,8 +1412,6 @@ if (GrandStrategyYear >= 1560) then
 	SetProvinceOwner("Latvia", "teuton", "Prussia") -- Teutonic Order
 	SetProvinceOwner("Estonia", "teuton", "Prussia") -- Teutonic Order
 	
-	SetProvinceOwner("Don", "teuton", "Crimea")
-
 	SetProvinceOwner("Posen", "slav", "Poland")
 	SetProvinceOwner("Russia", "slav", "Muscovy")
 	SetProvinceOwner("White Russia", "slav", "Poland")

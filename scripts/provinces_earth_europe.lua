@@ -479,6 +479,7 @@ DefineProvince("Astrakhan", {
 		-2800, "", "", -- Proto-Indo-Europeans who would give origin to the Germanic peoples concluded their migration to Scandinavia at this date
 		-336, "persian", "Sarmatian Tribe", -- Macedonian Empire (and environs) in 336-323 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 18-19.
 		-264, "persian", "Aorsi Tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		161, "persian", "Sarmatian Tribe", -- The area was inhabited by the Sarmatae in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		1557, "slav", "Muscovy", -- Astrakhan acquired by Muscovy in 1557 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalCultures = {
@@ -1815,6 +1816,15 @@ DefineProvince("Don", {
 	SettlementTerrain = "Plains",
 	Claims = {
 		"celt", "Vana Tribe"
+	},
+	HistoricalOwners = {
+		-3000, "celt", "Vana Tribe",
+		-2800, "", "",
+		161, "persian", "Sarmatian Tribe", -- The area was inhabited by the Sarmatae in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		1560, "teuton", "Crimea" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalCultures = {
+		161, "persian"
 	},
 	HistoricalSettlementBuildings = {
 		-3000, "unit-germanic-town-hall", true,
@@ -4520,7 +4530,7 @@ DefineProvince("Odeska", {
 	},
 	HistoricalOwners = {
 		-336, "persian", "Scythian Tribe", -- Macedonian Empire and environs in 336-323 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 18-19.
-		161, "goth", "Bastarnae Tribe", -- The area was inhabited by the Sarmatae in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, "goth", "Bastarnae Tribe", -- The area was inhabited by the Bastarnae in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		1560, "teuton", "Turkey" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalCultures = {

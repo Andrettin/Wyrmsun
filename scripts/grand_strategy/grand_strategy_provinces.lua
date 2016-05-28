@@ -73,7 +73,6 @@ function LoadProvinces(world)
 		},
 		Don = {
 			Name = "Don",
-			Owner = "Vana Tribe",
 			Units = {
 				unit_germanic_warrior = 4
 			}
