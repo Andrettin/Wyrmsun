@@ -203,8 +203,7 @@ DefineProvince("Baltic Sea", { -- Source: http://www.euratlas.net/history/europe
 	Water = true,
 	ReferenceProvince = "Hither Pomerania", -- province used as a reference for this province's name
 	CulturalNames = {
-		"latin", "Suebic Sea", -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-		"teuton", "Suebic Sea" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+		"latin", "Suebic Sea" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	FactionCulturalNames = {
 		"teuton", "Marcomanni Tribe", "Suebic Sea",
@@ -739,10 +738,10 @@ DefineProvince("North Sea", { -- Source: http://www.euratlas.net/history/europe/
 	ReferenceProvince = "Hanover", -- province used as a reference for this province's name
 	CulturalNames = {
 		"germanic", "German Ocean",
-		"goth", "German Ocean",
+--		"goth", "German Ocean",
 		"latin", "German Ocean", -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-		"norse", "German Ocean",
-		"teuton", "German Ocean" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+--		"norse", "German Ocean",
+--		"teuton", "German Ocean" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	Tiles = {
 --				{118, 21}, {118, 22}, {119, 20}, {119, 21}, {119, 22}, {119, 23}, {119, 24}, {120, 20}, {120, 21}, {120, 22}, {120, 23}, {120, 24}, {120, 25}, {121, 20}, {121, 21}, {121, 22}, {121, 23}, {121, 24}, {121, 25}, {121, 26}, {121, 27}, {122, 20}, {122, 21}, {122, 22}, {122, 23}, {122, 24}, {122, 25}, {122, 26}, {123, 20}, {123, 21}, {123, 22}, {123, 23}, {123, 24}, {123, 25}, {124, 22}, {124, 23}, {124, 24}, {124, 25}, {125, 22}, {125, 23}, {125, 24}, {125, 25}, {126, 22}, {127, 22}, {127, 23}, {127, 24}, {128, 23}, -- old map

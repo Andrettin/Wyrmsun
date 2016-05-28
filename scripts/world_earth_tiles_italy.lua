@@ -55,7 +55,7 @@ DefineWorldMapTile({505, 135}, {
 DefineWorldMapTile({505, 144}, {
 	World = "Earth",
 	CulturalSettlementNames = {
-		"latin", "Caralis"
+		"latin", "Caralis" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	FactionCulturalSettlementNames = {
 		"latin", "Italy", "Cagliari"
@@ -65,7 +65,7 @@ DefineWorldMapTile({505, 144}, {
 DefineWorldMapTile({506, 126}, {
 	World = "Earth",
 	CulturalSettlementNames = {
-		"latin", "Mediolanum",
+		"latin", "Mediolanum", -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 		"teuton", "Mailand"
 	},
 	FactionCulturalSettlementNames = {
@@ -76,7 +76,7 @@ DefineWorldMapTile({506, 126}, {
 DefineWorldMapTile({506, 136}, {
 	World = "Earth",
 	CulturalSettlementNames = {
-		"latin", "Aleria"
+		"latin", "Aleria" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
 })
 
@@ -96,6 +96,13 @@ DefineWorldMapTile({509, 128}, {
 	FactionCulturalSettlementNames = {
 		"latin", "Italy", "Parma",
 		"latin", "Italy", "Piacenza"
+	}
+})
+
+DefineWorldMapTile({511, 126}, {
+	World = "Earth",
+	CulturalSettlementNames = {
+		"latin", "Verona" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
 })
 
@@ -119,17 +126,33 @@ DefineWorldMapTile({512, 129}, {
 DefineWorldMapTile({512, 131}, {
 	World = "Earth",
 	CulturalSettlementNames = {
-		"latin", "Florentia"
+		"latin", "Florentia" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	FactionCulturalSettlementNames = {
 		"latin", "Italy", "Florence"
 	}
 })
 
+DefineWorldMapTile({514, 126}, {
+	World = "Earth",
+	CulturalSettlementNames = {
+		"latin", "Opitergium" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+	},
+	FactionCulturalSettlementNames = {
+		"latin", "Italy", "Oderzo" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+	}
+})
+
+DefineWorldMapTile({514, 129}, {
+	World = "Earth",
+	CulturalSettlementNames = {
+		"latin", "Ravenna" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+	}
+})
+
 DefineWorldMapTile({515, 126}, {
 	World = "Earth",
 	CulturalSettlementNames = {
-		"latin", "Aquileia",
 		"teuton", "Venedig"
 	},
 	FactionCulturalSettlementNames = {
@@ -147,7 +170,7 @@ DefineWorldMapTile({515, 134}, {
 DefineWorldMapTile({515, 136}, {
 	World = "Earth",
 	CulturalSettlementNames = {
-		"latin", "Roma"
+		"latin", "Roma" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	FactionCulturalSettlementNames = {
 		"teuton", "England", "Rome"
@@ -162,6 +185,13 @@ DefineWorldMapTile({517, 147}, {
 	},
 	FactionCulturalSettlementNames = {
 		"latin", "Italy", "Palermo"
+	}
+})
+
+DefineWorldMapTile({518, 125}, {
+	World = "Earth",
+	CulturalSettlementNames = {
+		"latin", "Aquileia" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
 })
 
@@ -193,7 +223,7 @@ DefineWorldMapTile({520, 139}, {
 			"compound", "prefix", "greek", "adjective", "Nea",
 			"compound", "suffix", "greek", "noun", "singular", "Polis"
 		},
-		"latin", "Neapolis"
+		"latin", "Neapolis" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
 })
 
@@ -208,7 +238,7 @@ DefineWorldMapTile({522, 150}, {
 	World = "Earth",
 	CulturalSettlementNames = {
 		"greek", "Syracusae",
-		"latin", "Syracusae"
+		"latin", "Syracusae" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	FactionCulturalSettlementNames = {
 		"teuton", "England", "Syracuse"
@@ -232,6 +262,13 @@ DefineWorldMapTile({527, 139}, {
 	},
 	FactionCulturalSettlementNames = {
 		"latin", "Italy", "Bari"
+	}
+})
+
+DefineWorldMapTile({530, 140}, {
+	World = "Earth",
+	CulturalSettlementNames = {
+		"latin", "Brundisium" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
 })
 
