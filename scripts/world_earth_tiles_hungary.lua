@@ -25,24 +25,66 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineWorldMapTile({554, 142}, {
+DefineWorldMapTile({528, 118}, {
 	World = "Earth",
 	CulturalSettlementNames = {
-		"greek", "Troy",
-		"hittite", "Troy"
+		"slav", "Bratislava",
+		"teuton", "Presburg", "name-elements", {
+--			"compound", "prefix", -- ?
+			"compound", "suffix", "high-german", "noun", "singular", "Burg"
+		}
 	}
 })
 
-DefineWorldMapTile({572, 156}, {
+DefineWorldMapTile({534, 120}, {
 	World = "Earth",
 	CulturalSettlementNames = {
-		"latin", "Paphus" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+		"latin", "Aquincum",
+		"magyar", "Buda"
 	}
 })
 
-DefineWorldMapTile({598, 135}, {
+DefineWorldMapTile({535, 120}, {
 	World = "Earth",
 	CulturalSettlementNames = {
-		"latin", "Phasis" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+		"magyar", "Pest"
+	}
+})
+
+DefineWorldMapTile({536, 127}, {
+	World = "Earth",
+	CulturalSettlementNames = {
+		"slav", "Novi Sad",
+		"teuton", "Neusatz", "name-elements", { -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 168.
+			"compound", "prefix", "high-german", "adjective", "Neu",
+			"compound", "suffix", "high-german", "noun", "singular", "Satz"
+		}
+	}
+})
+
+DefineWorldMapTile({545, 122}, {
+	World = "Earth",
+	CulturalSettlementNames = {
+		"teuton", "Klausenburg", "name-elements", {
+			"compound", "prefix", "high-german", "noun", "plural", "Klause",
+			"compound", "suffix", "high-german", "noun", "singular", "Burg"
+		}
+	},
+	FactionCulturalSettlementNames = {
+		"latin", "Romania", "Cluj"
+	}
+})
+
+DefineWorldMapTile({545, 126}, {
+	World = "Earth",
+	CulturalSettlementNames = {
+		"latin", "Sarmizegetusa" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+	}
+})
+
+DefineWorldMapTile({547, 125}, {
+	World = "Earth",
+	CulturalSettlementNames = {
+		"latin", "Apulum" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
 })

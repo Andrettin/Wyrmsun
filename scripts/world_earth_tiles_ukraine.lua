@@ -39,10 +39,24 @@ DefineWorldMapTile({566, 112}, {
 	}
 })
 
+DefineWorldMapTile({566, 124}, {
+	World = "Earth",
+	CulturalSettlementNames = {
+		"latin", "Tyras" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+	}
+})
+
 DefineWorldMapTile({567, 123}, {
 	World = "Earth",
 	CulturalSettlementNames = {
 		"slav", "Odesa"
+	}
+})
+
+DefineWorldMapTile({570, 122}, {
+	World = "Earth",
+	CulturalSettlementNames = {
+		"latin", "Olbia" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
 })
 
@@ -61,3 +75,9 @@ DefineWorldMapTile({576, 128}, {
 	}
 })
 
+DefineWorldMapTile({583, 127}, {
+	World = "Earth",
+	CulturalSettlementNames = {
+		"latin", "Panticapaeum" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+	}
+})

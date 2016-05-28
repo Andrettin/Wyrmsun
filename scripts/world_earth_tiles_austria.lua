@@ -62,6 +62,18 @@ DefineWorldMapTile({520, 123}, {
 	}
 })
 
+DefineWorldMapTile({521, 125}, {
+	World = "Earth",
+	CulturalSettlementNames = {
+		"latin", "Emona", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+		"slav", "Ljubljana",
+		"teuton", "Laibach", "name-elements", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+			"compound", "prefix", "high-german", "noun", "singular", "Lai",
+			"compound", "suffix", "high-german", "noun", "singular", "Bach"
+		}
+	}
+})
+
 DefineWorldMapTile({523, 121}, {
 	World = "Earth",
 	CulturalSettlementNames = {
@@ -84,3 +96,4 @@ DefineWorldMapTile({527, 119}, {
 		"latin", "Carnuntum" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
 })
+

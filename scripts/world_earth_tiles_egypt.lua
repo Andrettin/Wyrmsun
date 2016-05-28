@@ -25,24 +25,32 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineWorldMapTile({554, 142}, {
+DefineWorldMapTile({565, 167}, {
 	World = "Earth",
 	CulturalSettlementNames = {
-		"greek", "Troy",
-		"hittite", "Troy"
+		"greek", "Alexandria",
+		"latin", "Alexandria" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
 })
 
-DefineWorldMapTile({572, 156}, {
+DefineWorldMapTile({568, 171}, {
 	World = "Earth",
 	CulturalSettlementNames = {
-		"latin", "Paphus" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+		"greek", "Memphis",
+		"latin", "Memphis" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
 })
 
-DefineWorldMapTile({598, 135}, {
+DefineWorldMapTile({573, 183}, {
 	World = "Earth",
 	CulturalSettlementNames = {
-		"latin", "Phasis" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+		"latin", "Thebae" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+	}
+})
+
+DefineWorldMapTile({574, 187}, {
+	World = "Earth",
+	CulturalSettlementNames = {
+		"latin", "Syene" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
 })

@@ -1203,6 +1203,10 @@ DefineProvince("Bulgaria", {
 		"greek", "Thrace",
 		"thracian", "Odrysae Tribe"
 	},
+	HistoricalSettlementBuildings = {
+		161, "unit-teuton-barracks", true, -- Legionary base present in Novae in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, "unit-teuton-barracks", true -- Legionary base present in Durostorum in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+	},
 	Regions = {"Europe", "Roman Danube", "West and Central Europe"}
 })
 
@@ -1853,6 +1857,9 @@ DefineProvince("Dobruja", {
 	Claims = {
 		"greek", "Thrace",
 		"thracian", "Getae Tribe"
+	},
+	HistoricalSettlementBuildings = {
+		161, "unit-teuton-barracks", true -- Legionary base present in Troesmis in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	Regions = {"Europe", "Roman Danube", "West and Central Europe"}
 })
@@ -5560,6 +5567,9 @@ DefineProvince("Serbia", {
 	Claims = {
 		"thracian", "Triballi Tribe"
 	},
+	HistoricalSettlementBuildings = {
+		161, "unit-teuton-barracks", true -- Legionary base present in Viminacium in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+	},
 	Regions = {"Europe", "Roman Danube", "West and Central Europe"}
 })
 
@@ -6176,6 +6186,9 @@ DefineProvince("Transylvania", {
 	},
 	HistoricalCultures = {
 		-7000, "minoan"
+	},
+	HistoricalSettlementBuildings = {
+		161, "unit-teuton-barracks", true -- Legionary base present in Apulum in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	HistoricalModifiers = {
 		1580, "upgrade-university", true, -- University founded in Cluj in 1580. Source: The Cambridge Modern History Atlas, p. 9.

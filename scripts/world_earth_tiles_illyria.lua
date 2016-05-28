@@ -79,6 +79,13 @@ DefineWorldMapTile({538, 129}, {
 	}
 })
 
+DefineWorldMapTile({540, 129}, {
+	World = "Earth",
+	CulturalSettlementNames = {
+		"latin", "Viminacium" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+	}
+})
+
 DefineWorldMapTile({540, 136}, {
 	World = "Earth",
 	CulturalSettlementNames = {

@@ -25,24 +25,34 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineWorldMapTile({554, 142}, {
+DefineWorldMapTile({554, 129}, {
 	World = "Earth",
-	CulturalSettlementNames = {
-		"greek", "Troy",
-		"hittite", "Troy"
+	FactionCulturalSettlementNames = {
+		"latin", "Romania", "Bucharest"
 	}
 })
 
-DefineWorldMapTile({572, 156}, {
+DefineWorldMapTile({557, 121}, {
 	World = "Earth",
-	CulturalSettlementNames = {
-		"latin", "Paphus" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+	FactionCulturalSettlementNames = {
+		"latin", "Romania", "Iași"
 	}
 })
 
-DefineWorldMapTile({598, 135}, {
+DefineWorldMapTile({560, 127}, {
 	World = "Earth",
 	CulturalSettlementNames = {
-		"latin", "Phasis" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+		"latin", "Troesmis" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
 })
+
+DefineWorldMapTile({560, 130}, {
+	World = "Earth",
+	CulturalSettlementNames = {
+		"latin", "Tomi", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+	},
+	FactionCulturalSettlementNames = {
+		"latin", "Romania", "Constanța"
+	}
+})
+

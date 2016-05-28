@@ -25,6 +25,44 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineProvince("Algeria", {
+	World = "Earth",
+	Tiles = {},
+	Map = "maps/random/random-map-forest.smp",
+	SettlementTerrain = "Plains", -- correct?
+	HistoricalSettlementBuildings = {
+		161, "unit-teuton-barracks", true -- Legionary base present in Lambaesis in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+	},
+	Regions = {"Africa"}
+})
+
+DefineProvince("Egypt", {
+	World = "Earth",
+	Tiles = {},
+	Map = "maps/random/random-map-forest.smp",
+	SettlementTerrain = "Plains", -- correct?
+	HistoricalSettlementBuildings = {
+		161, "unit-teuton-barracks", true -- Legionary base present in Alexandria in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+	},
+	Regions = {"Africa"}
+})
+
+DefineProvince("Libya", {
+	World = "Earth",
+	Tiles = {},
+	Map = "maps/random/random-map-forest.smp",
+	SettlementTerrain = "Plains", -- correct?
+	Regions = {"Africa"}
+})
+
+DefineProvince("Morocco", {
+	World = "Earth",
+	Tiles = {},
+	Map = "maps/random/random-map-forest.smp",
+	SettlementTerrain = "Plains", -- correct?
+	Regions = {"Africa"}
+})
+
 DefineProvince("Oyo", {
 	World = "Earth",
 	Tiles = {},
@@ -33,6 +71,14 @@ DefineProvince("Oyo", {
 	HistoricalModifiers = {
 		1947, "upgrade-university", true -- University founded in Ibadan in 1947. Source: David Thomson, Europe Since Napoleon, 1966, p. 863.
 	},
+	Regions = {"Africa"}
+})
+
+DefineProvince("Tunisia", {
+	World = "Earth",
+	Tiles = {},
+	Map = "maps/random/random-map-forest.smp",
+	SettlementTerrain = "Plains", -- correct?
 	Regions = {"Africa"}
 })
 

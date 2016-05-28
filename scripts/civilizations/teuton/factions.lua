@@ -285,7 +285,7 @@ DefineFaction("Semnone Tribe", {
 	Civilization = "teuton",
 	ParentFaction = "Suebi Tribe",
 	Type = "tribe",
-	Colors = {"black"},
+	Colors = {"brown"},
 	DevelopsTo = {"Suebi Tribe", "Bavaria", "Austria", "Carinthia"},
 	HistoricalFactionDerivations = {-264, "teuton", "Suebi Tribe"},
 	HistoricalTechnologies = {

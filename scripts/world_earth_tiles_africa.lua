@@ -25,24 +25,58 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineWorldMapTile({554, 142}, {
+DefineWorldMapTile({464, 159}, {
 	World = "Earth",
 	CulturalSettlementNames = {
-		"greek", "Troy",
-		"hittite", "Troy"
+		"latin", "Volubilis" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
 })
 
-DefineWorldMapTile({572, 156}, {
+DefineWorldMapTile({486, 152}, {
 	World = "Earth",
 	CulturalSettlementNames = {
-		"latin", "Paphus" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+		"latin", "Caesarea" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
 })
 
-DefineWorldMapTile({598, 135}, {
+DefineWorldMapTile({497, 155}, {
 	World = "Earth",
 	CulturalSettlementNames = {
-		"latin", "Phasis" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+		"latin", "Lambaesis" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+	}
+})
+
+DefineWorldMapTile({508, 159}, {
+	World = "Earth",
+	CulturalSettlementNames = {
+		"latin", "Tacape" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+	}
+})
+
+DefineWorldMapTile({509, 151}, {
+	World = "Earth",
+	CulturalSettlementNames = {
+		"latin", "Carthago" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+	}
+})
+
+DefineWorldMapTile({521, 164}, {
+	World = "Earth",
+	CulturalSettlementNames = {
+		"latin", "Leptis Magna" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+	}
+})
+
+DefineWorldMapTile({541, 162}, {
+	World = "Earth",
+	CulturalSettlementNames = {
+		"latin", "Cyrene" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+	}
+})
+
+DefineWorldMapTile({551, 172}, {
+	World = "Earth",
+	CulturalSettlementNames = {
+		"latin", "Cyrene" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
 })
