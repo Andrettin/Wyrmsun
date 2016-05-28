@@ -771,8 +771,8 @@ DefineProvince("Bessarabia", {
 		{558, 118}, {558, 119}, {558, 120},
 		{559, 118}, {559, 119}, {559, 120}, {559, 121},
 		{560, 119}, {560, 120}, {560, 121}, {560, 122}, {560, 123}, {560, 124}, {560, 125}, {560, 126},
-		{561, 120}, {561, 121}, {561, 122}, {561, 123}, {561, 124}, {561, 125}, {561, 126},
-		{562, 121}, {562, 122}, {562, 123}, {562, 124}, {562, 125}, {562, 126},
+		{561, 119}, {561, 120}, {561, 121}, {561, 122}, {561, 123}, {561, 124}, {561, 125}, {561, 126},
+		{562, 119}, {562, 120}, {562, 121}, {562, 122}, {562, 123}, {562, 124}, {562, 125}, {562, 126},
 		{563, 122}, {563, 123}, {563, 124}, {563, 125}, {563, 126},
 		{564, 123}, {564, 124}, {564, 125},
 		{565, 124}, {565, 125}
@@ -4458,6 +4458,38 @@ DefineProvince("Northumberland", {
 	Regions = {"British Isles", "England", "Europe", "Northwest Europe", "West and Central Europe"}
 })
 
+DefineProvince("Odeska", {
+	World = "Earth",
+	CulturalNames = {
+		"slav", "Odes'ka"
+	},
+	Tiles = {
+		{563, 119}, {563, 120}, {563, 121},
+		{564, 119}, {564, 120}, {564, 121}, {564, 122},
+		{565, 119}, {565, 120}, {565, 121}, {565, 122}, {565, 123},
+		{566, 120}, {566, 121}, {566, 122}, {566, 123}, {566, 124},
+		{567, 120}, {567, 121}, {567, 122}, {567, 123},
+		{568, 121}, {568, 122}
+	},
+	SettlementLocation = {567, 123}, -- Odesa
+	Map = "maps/random/random-map-forest.smp",
+	SettlementTerrain = "Plains",
+	Claims = {
+		"goth", "Bastarnae Tribe",
+		"persian", "Scythian Tribe"
+	},
+	HistoricalOwners = {
+		-336, "persian", "Scythian Tribe", -- Macedonian Empire and environs in 336-323 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 18-19.
+		161, "goth", "Bastarnae Tribe", -- The area was inhabited by the Sarmatae in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		1560, "teuton", "Turkey" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalCultures = {
+		-336, "persian",
+		161, "goth"
+	},
+	Regions = {"Eurasia", "Europe"}
+})
+
 DefineProvince("Oldenburg", {
 	World = "Earth",
 	CulturalNames = {
@@ -6099,6 +6131,7 @@ DefineProvince("Ukraine", {
 	CulturalNames = {
 		"goth", "Danparstathir", -- name used in the Hervararsaga for a field of battle between the Goths and Huns, possibly the region of the Dnieper; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 484.
 		"norse", "Danparstathir",
+		"slav", "Ukraine"
 	},
 	FactionCulturalNames = {
 		"slav", "Muscovy", "Ukraine",
@@ -6117,17 +6150,17 @@ DefineProvince("Ukraine", {
 		{555, 110}, {555, 111}, {555, 112}, {555, 113}, {555, 114}, {555, 115}, {555, 116}, {555, 117},
 		{556, 110}, {556, 111}, {556, 112}, {556, 113}, {556, 114}, {556, 115}, {556, 116}, {556, 117},
 		{557, 110}, {557, 111}, {557, 112}, {557, 113}, {557, 114}, {557, 115}, {557, 116}, {557, 117},
-		{558, 110}, {558, 111}, {558, 112}, {558, 113}, {558, 114}, {558, 115}, {558, 116}, {558, 117},
-		{559, 110}, {559, 111}, {559, 112}, {559, 113}, {559, 114}, {559, 115}, {559, 116}, {559, 117},
-		{560, 110}, {560, 111}, {560, 112}, {560, 113}, {560, 114}, {560, 115}, {560, 116}, {560, 117}, {560, 118},
-		{561, 110}, {561, 111}, {561, 112}, {561, 113}, {561, 114}, {561, 115}, {561, 116}, {561, 117}, {561, 118}, {561, 119},
-		{562, 110}, {562, 111}, {562, 112}, {562, 113}, {562, 114}, {562, 115}, {562, 116}, {562, 117}, {562, 118}, {562, 119}, {562, 120},
-		{563, 110}, {563, 111}, {563, 112}, {563, 113}, {563, 114}, {563, 115}, {563, 116}, {563, 117}, {563, 118}, {563, 119}, {563, 120}, {563, 121},
-		{564, 110}, {564, 111}, {564, 112}, {564, 113}, {564, 114}, {564, 115}, {564, 116}, {564, 117}, {564, 118}, {564, 119}, {564, 120}, {564, 121}, {564, 122},
-		{565, 110}, {565, 111}, {565, 112}, {565, 113}, {565, 114}, {565, 115}, {565, 116}, {565, 117}, {565, 118}, {565, 119}, {565, 120}, {565, 121}, {565, 122}, {565, 123},
-		{566, 110}, {566, 111}, {566, 112}, {566, 113}, {566, 114}, {566, 115}, {566, 116}, {566, 117}, {566, 118}, {566, 119}, {566, 120}, {566, 121}, {566, 122}, {566, 123}, {566, 124},
-		{567, 109}, {567, 110}, {567, 111}, {567, 112}, {567, 113}, {567, 114}, {567, 115}, {567, 116}, {567, 117}, {567, 118}, {567, 119}, {567, 120}, {567, 121}, {567, 122}, {567, 123},
-		{568, 109}, {568, 110}, {568, 111}, {568, 112}, {568, 113}, {568, 114}, {568, 115}, {568, 116}, {568, 117}, {568, 118}, {568, 119}, {568, 120}, {568, 121}, {568, 122},
+		{558, 110}, {558, 111}, {558, 112}, {558, 113}, {558, 114}, {558, 115},
+		{559, 110}, {559, 111}, {559, 112}, {559, 113},
+		{560, 110}, {560, 111}, {560, 112}, {560, 113},
+		{561, 110}, {561, 111}, {561, 112}, {561, 113},
+		{562, 110}, {562, 111}, {562, 112}, {562, 113}, {562, 114},
+		{563, 110}, {563, 111}, {563, 112}, {563, 113}, {563, 114},
+		{564, 110}, {564, 111}, {564, 112}, {564, 113}, {564, 114}, {564, 115}, {564, 116}, {564, 118},
+		{565, 110}, {565, 111}, {565, 112}, {565, 113}, {565, 114}, {565, 115}, {565, 116}, {565, 117}, {565, 118},
+		{566, 110}, {566, 111}, {566, 112}, {566, 113}, {566, 114}, {566, 115}, {566, 116}, {566, 117}, {566, 118}, {566, 119},
+		{567, 109}, {567, 110}, {567, 111}, {567, 112}, {567, 113}, {567, 114}, {567, 115}, {567, 116}, {567, 117}, {567, 118}, {567, 119},
+		{568, 109}, {568, 110}, {568, 111}, {568, 112}, {568, 113}, {568, 114}, {568, 115}, {568, 116}, {568, 117}, {568, 118}, {568, 119}, {568, 120},
 		{569, 109}, {569, 110}, {569, 111}, {569, 112}, {569, 113}, {569, 114}, {569, 115}, {569, 116}, {569, 117}, {569, 118}, {569, 119}, {569, 120}, {569, 121}, {569, 122},
 		{570, 109}, {570, 110}, {570, 111}, {570, 112}, {570, 113}, {570, 114}, {570, 115}, {570, 116}, {570, 117}, {570, 118}, {570, 119}, {570, 120}, {570, 121}, {570, 122},
 		{571, 109}, {571, 110}, {571, 111}, {571, 112}, {571, 113}, {571, 114}, {571, 115}, {571, 116}, {571, 117}, {571, 118}, {571, 119}, {571, 120}, {571, 121}, {571, 122}, {571, 123}, {571, 124},
@@ -6162,6 +6195,18 @@ DefineProvince("Ukraine", {
 		"persian", "Roxolani Tribe",
 		"persian", "Scythian Tribe",
 		"slav", "Venedae Tribe"
+	},
+	HistoricalOwners = {
+		-336, "persian", "Scythian Tribe", -- Macedonian Empire and environs in 336-323 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 18-19.
+		-264, "persian", "Roxolani Tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		161, "persian", "Sarmatian Tribe", -- The area was inhabited by the Sarmatae in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		200, "goth", "Ostrogoth Tribe", -- The eastern goths had migrated to the area of modern Ukraine in about 200 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
+		453, "", "", -- Walamer was king over the Ostrogoths in Pannonia (between the Danube and the Drave) when Attila's empire collapsed in 453 AD (so the Ostrogoths had already migrated away from this area); Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 6.
+		1560, "slav", "Poland" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalCultures = {
+		-336, "persian",
+		200, "goth"
 	},
 	Regions = {"Eurasia", "Europe"}
 })
@@ -6414,6 +6459,39 @@ DefineProvince("Vestfold", {
 		"norse", "Norway"
 	},
 	Regions = {"Europe", "Scandinavia", "West and Central Europe"}
+})
+
+DefineProvince("Vinnytska", {
+	World = "Earth",
+	CulturalNames = {
+		"slav", "Vinnyts'ka"
+	},
+	Tiles = {
+		{558, 116}, {558, 117},
+		{559, 114}, {559, 115}, {559, 116}, {559, 117},
+		{560, 114}, {560, 115}, {560, 116}, {560, 117}, {560, 118},
+		{561, 114}, {561, 115}, {561, 116}, {561, 117}, {561, 118},
+		{562, 115}, {562, 116}, {562, 117}, {562, 118},
+		{563, 115}, {563, 116}, {563, 117}, {563, 118},
+		{564, 117}
+	},
+	SettlementLocation = {561, 116}, -- Vinnytsya
+	Map = "maps/random/random-map-forest.smp",
+	SettlementTerrain = "Plains",
+	Claims = {
+		"goth", "Bastarnae Tribe",
+		"persian", "Navari Tribe"
+	},
+	HistoricalOwners = {
+		-264, "persian", "Navari Tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		161, "goth", "Bastarnae Tribe", -- The area was inhabited by the Bastarnae in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		1560, "slav", "Poland" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalCultures = {
+		-264, "persian",
+		161, "goth"
+	},
+	Regions = {"Eurasia", "Europe"}
 })
 
 DefineProvince("Vojvodina", {

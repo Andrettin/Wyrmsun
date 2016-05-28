@@ -668,8 +668,6 @@ if (GrandStrategyYear >= -336) then
 	SetProvinceCivilization("Dobruja", "thracian")
 	AddProvinceClaim("Dobruja", "thracian", "Getae Tribe")
 	
-	SetProvinceOwner("Ukraine", "persian", "Scythian Tribe")
-	SetProvinceCivilization("Ukraine", "persian")
 	SetProvinceUnitQuantity("Ukraine", "unit-germanic-warrior", 0)
 	
 	SetProvinceOwner("Epirus", "greek", "Epirus")
@@ -731,9 +729,6 @@ if (GrandStrategyYear >= -264) then
 	
 	SetProvinceOwner("Crimea", "greek", "Cimmerian Bosphorus")
 	SetProvinceCivilization("Crimea", "greek")
-	
-	SetProvinceOwner("Ukraine", "persian", "Roxolani Tribe")
-	SetProvinceCivilization("Ukraine", "persian")
 	
 	SetProvinceOwner("Russia", "slav", "Budini Tribe")
 	SetProvinceCivilization("Russia", "slav")
@@ -948,8 +943,7 @@ if (GrandStrategyYear >= 177) then
 end
 
 if (GrandStrategyYear >= 200) then
-	SetProvinceOwner("Prussia", "", "")
-	SetProvinceOwner("Ukraine", "goth", "Ostrogoth Tribe") -- The eastern goths had migrated to the area of modern Ukraine in about 200 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
+	SetProvinceOwner("Prussia", "", "") -- The Goths had migrated away in about 200 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 	
 	-- Josiah Cox Russell gives 40 million people in Europe in 200 AD; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
 end
@@ -1029,9 +1023,6 @@ end
 
 if (GrandStrategyYear >= 453) then
 	-- Attila died and his Hunnic empire collapsed in 453 AD; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 6.
-
-	-- Walamer was king over the Ostrogoths in Pannonia (between the Danube and the Drave) when Attila's empire collapsed in 453 AD; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 6.
-	SetProvinceOwner("Ukraine", "", "")
 end
 
 if (GrandStrategyYear >= 474) then
@@ -1430,7 +1421,6 @@ if (GrandStrategyYear >= 1560) then
 
 	SetProvinceOwner("Posen", "slav", "Poland")
 	SetProvinceOwner("Russia", "slav", "Muscovy")
-	SetProvinceOwner("Ukraine", "slav", "Poland")
 	SetProvinceOwner("White Russia", "slav", "Poland")
 	
 	SetProvinceOwner("Dobruja", "teuton", "Turkey")

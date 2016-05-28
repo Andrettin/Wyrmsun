@@ -69,6 +69,7 @@ https://github.com/Andrettin/Wyrmsun
 - The Lauenburg province has been amalgamated into Holstein.
 - Fixed issue which caused workers to be reset to 1 upon loading a save game.
 - Fixed issue which caused Battle Base Building to only be active if, after checking the option, the game was closed and reopened.
+- Split the Odeska and Vinnytska provinces off the Ukraine one.
 
 * Miscellaneous
 - Fixed issue which caused a crash when starting a multiplayer game.

@@ -38,6 +38,7 @@ Load("scripts/world_earth_tiles_low_countries.lua") -- Netherlands, Belgium and 
 Load("scripts/world_earth_tiles_scandinavia.lua")
 Load("scripts/world_earth_tiles_scotland.lua")
 Load("scripts/world_earth_tiles_spain.lua")
+Load("scripts/world_earth_tiles_ukraine.lua")
 
 DefineWorldMapTile({418, 73}, {
 	World = "Earth",
@@ -312,21 +313,6 @@ DefineWorldMapTile({562, 122}, {
 	CulturalSettlementNames = {
 		"slav", "Kishinev"
 	}
-})
-
-DefineWorldMapTile({566, 112}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"slav", "Kiev"
-	}
-})
-
-DefineWorldMapTile({576, 128}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"greek", "Heraclea Chersonesus", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 18-19.
-		"slav", "Simferopol"
-	},
 })
 
 DefineWorldMapTile({587, 97}, {
