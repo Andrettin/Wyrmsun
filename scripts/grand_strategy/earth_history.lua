@@ -1,4 +1,3 @@
-
 SetRiverCulturalName("Alpheus", "greek", "Alpheus") -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 SetRiverCulturalName("Danube", "latin", "Danuvius") -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 SetRiverCulturalName("Danube", "teuton", "Donau")
@@ -13,6 +12,9 @@ SetRiverCulturalName("Rhine", "latin", "Rhenus") -- Source: William R. Shepherd,
 SetRiverCulturalName("Rhine", "teuton", "Rhein")
 SetRiverCulturalName("Tagus", "latin", "Tagus") -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 --SetRiverCulturalName("Volga", "latin", "Rha") -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+
+--SetRiverFactionCulturalName("Douro", "latin", "Portugal", "Douro") -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
+--SetRiverFactionCulturalName("Douro", "latin", "Spain", "Duero") -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
 
 --[[
 WorldMapResources = {
@@ -1043,9 +1045,9 @@ if (GrandStrategyYear >= 481) then
 end
 
 if (GrandStrategyYear >= 486) then
-	SetProvinceOwner("Corsica", "goth", "Vandal Tribe") -- Corsica was a part of the Kingdom of the Vandals in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+	SetProvinceOwner("Corsica", "goth", "Vandalia") -- Corsica was a part of the Kingdom of the Vandals in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 	SetProvinceUnitQuantity("Corsica", "unit-germanic-warrior", 0) -- let's remove those oodles of warriors placed there to make this province difficult to conquer
-	SetProvinceOwner("Sardinia", "goth", "Vandal Tribe") -- Sardinia was a part of the Kingdom of the Vandals in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+	SetProvinceOwner("Sardinia", "goth", "Vandalia") -- Sardinia was a part of the Kingdom of the Vandals in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 	SetProvinceUnitQuantity("Sardinia", "unit-germanic-warrior", 0) -- let's remove those oodles of warriors placed there to make this province difficult to conquer
 end
 

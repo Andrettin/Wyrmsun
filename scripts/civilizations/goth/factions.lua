@@ -157,9 +157,23 @@ DefineFaction("Gothia", {
 	DefaultTier = "kingdom"
 })
 
+DefineFaction("Ostrogothia", {
+	Civilization = "goth",
+	Type = "polity",
+	Colors = {"red"},
+	DefaultTier = "kingdom"
+})
+
 DefineFaction("Vandalia", {
 	Civilization = "goth",
 	Type = "polity",
 	Colors = {"cyan", "blue"},
+	DefaultTier = "kingdom"
+})
+
+DefineFaction("Visigothia", {
+	Civilization = "goth",
+	Type = "polity",
+	Colors = {"pink"},
 	DefaultTier = "kingdom"
 })

@@ -70,6 +70,8 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed issue which caused workers to be reset to 1 upon loading a save game.
 - Fixed issue which caused Battle Base Building to only be active if, after checking the option, the game was closed and reopened.
 - Split the Khersonska, Odeska and Vinnytska provinces off the Ukraine one.
+- Added a number of Latin and Celtic cultural settlement names.
+- Split Portugal into the Alentejo, Beira and Douro provinces.
 
 * Miscellaneous
 - Fixed issue which caused a crash when starting a multiplayer game.

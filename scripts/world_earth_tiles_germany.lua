@@ -28,7 +28,7 @@
 DefineWorldMapTile({498, 111}, {
 	World = "Earth",
 	CulturalSettlementNames = {
-		"latin", "Colonia Agrippina", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+		"latin", "Colonia Agrippina", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		"teuton", "Köln"
 	},
 	FactionCulturalSettlementNames = {
@@ -61,6 +61,14 @@ DefineWorldMapTile({503, 104}, {
 --			"compound", "prefix", -- ?
 			"compound", "suffix", "high-german", "noun", "singular", "Burg"
 		}
+	}
+})
+
+DefineWorldMapTile({503, 114}, {
+	World = "Earth",
+	CulturalSettlementNames = {
+		"latin", "Mogontiacum", -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+		"teuton", "Mainz"
 	}
 })
 

@@ -25,6 +25,17 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineWorldMapTile({467, 118}, {
+	World = "Earth",
+	CulturalSettlementNames = {
+		"celt", "Gesocribate",
+		"latin", "Gesocribate" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+	},
+	FactionCulturalSettlementNames = {
+		"latin", "France", "Brest" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
+	}
+})
+
 DefineWorldMapTile({475, 119}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
@@ -36,6 +47,17 @@ DefineWorldMapTile({475, 121}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
 		"latin", "France", "Nantes"
+	}
+})
+
+DefineWorldMapTile({477, 128}, {
+	World = "Earth",
+	CulturalSettlementNames = {
+		"celt", "Burdigala",
+		"latin", "Burdigala" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+	},
+	FactionCulturalSettlementNames = {
+		"latin", "France", "Bordeaux" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 	}
 })
 
@@ -60,13 +82,14 @@ DefineWorldMapTile({482, 121}, {
 	}
 })
 
-DefineWorldMapTile({483, 132}, {
+DefineWorldMapTile({484, 131}, {
 	World = "Earth",
 	CulturalSettlementNames = {
-		"latin", "Tolosa"
+		"celt", "Tolosa",
+		"latin", "Tolosa" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	FactionCulturalSettlementNames = {
-		"latin", "France", "Toulouse"
+		"latin", "France", "Toulouse" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 	}
 })
 
@@ -91,7 +114,7 @@ DefineWorldMapTile({486, 117}, {
 	World = "Earth",
 	CulturalSettlementNames = {
 		"celt", "Lutetia",
-		"latin", "Lutetia"
+		"latin", "Lutetia" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	FactionCulturalSettlementNames = {
 		"latin", "France", "Paris"
@@ -114,6 +137,10 @@ DefineWorldMapTile({491, 118}, {
 
 DefineWorldMapTile({493, 125}, {
 	World = "Earth",
+	CulturalSettlementNames = {
+		"celt", "Lugdunum",
+		"latin", "Lugdunum" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+	},
 	FactionCulturalSettlementNames = {
 		"latin", "France", "Lyons" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
 	}
@@ -129,7 +156,8 @@ DefineWorldMapTile({494, 121}, {
 DefineWorldMapTile({495, 132}, {
 	World = "Earth",
 	CulturalSettlementNames = {
-		"latin", "Massilia"
+		"celt", "Massilia",
+		"latin", "Massilia" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	FactionCulturalSettlementNames = {
 		"latin", "France", "Marseilles"
@@ -174,7 +202,8 @@ DefineWorldMapTile({497, 121}, {
 DefineWorldMapTile({501, 118}, {
 	World = "Earth",
 	CulturalSettlementNames = {
-		"latin", "Argentoratum", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+		"celt", "Argentoratum",
+		"latin", "Argentoratum", -- Ancient Warfare gives "Argentorate", while Shepherd gives "Argentoratum"; Source: "Ancient Warfare VII.6", 2013, p. 7; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 		"teuton", "Strasburg", "name-elements", {
 --			"compound", "prefix", -- ?
 			"compound", "suffix", "high-german", "noun", "singular", "Burg"

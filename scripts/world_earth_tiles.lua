@@ -35,6 +35,7 @@ Load("scripts/world_earth_tiles_greece.lua") -- territory of modern Greece
 Load("scripts/world_earth_tiles_ireland.lua")
 Load("scripts/world_earth_tiles_italy.lua") -- includes Corsica since it is closer to the Italian mainland than to France, and since for centuries it belonged to Genoa
 Load("scripts/world_earth_tiles_low_countries.lua") -- Netherlands, Belgium and Luxembourg
+Load("scripts/world_earth_tiles_portugal.lua")
 Load("scripts/world_earth_tiles_scandinavia.lua")
 Load("scripts/world_earth_tiles_scotland.lua")
 Load("scripts/world_earth_tiles_spain.lua")
@@ -44,16 +45,6 @@ DefineWorldMapTile({418, 73}, {
 	World = "Earth",
 	CulturalSettlementNames = {
 		"norse", "Reykjavik"
-	}
-})
-
-DefineWorldMapTile({454, 145}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"latin", "Olisipo"
-	},
-	FactionCulturalSettlementNames = {
-		"latin", "Portugal", "Lisbon"
 	}
 })
 

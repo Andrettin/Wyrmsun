@@ -42,6 +42,16 @@ DefineWorldMapTile({463, 132}, {
 	}
 })
 
+DefineWorldMapTile({464, 134}, {
+	World = "Earth",
+	CulturalSettlementNames = {
+		"latin", "Castra Legionis" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+	},
+	FactionCulturalSettlementNames = {
+		"latin", "Spain", "León" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83
+	}
+})
+
 DefineWorldMapTile({464, 141}, {
 	World = "Earth",
 	FactionCulturalTerrainNames = {
@@ -52,7 +62,30 @@ DefineWorldMapTile({464, 141}, {
 DefineWorldMapTile({466, 148}, {
 	World = "Earth",
 	CulturalSettlementNames = {
-		"latin", "Corduba"
+		"latin", "Corduba" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+	},
+	FactionCulturalSettlementNames = {
+		"latin", "Spain", "Córdova" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83
+	}
+})
+
+DefineWorldMapTile({467, 151}, {
+	World = "Earth",
+	CulturalSettlementNames = {
+		"latin", "Malaca" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+	},
+	FactionCulturalSettlementNames = {
+		"latin", "Spain", "Málaga" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83
+	}
+})
+
+DefineWorldMapTile({468, 142}, {
+	World = "Earth",
+	CulturalSettlementNames = {
+		"latin", "Toletum" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+	},
+	FactionCulturalSettlementNames = {
+		"latin", "Spain", "Toledo" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83
 	}
 })
 
@@ -83,9 +116,39 @@ DefineWorldMapTile({477, 137}, {
 	}
 })
 
+DefineWorldMapTile({478, 144}, {
+	World = "Earth",
+	CulturalSettlementNames = {
+		"latin", "Valentia" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+	},
+	FactionCulturalSettlementNames = {
+		"latin", "Spain", "Valencia" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83
+	}
+})
+
 DefineWorldMapTile({481, 135}, {
 	World = "Earth",
 	FactionCulturalTerrainNames = {
 		"Mountains", "latin", "Spain", "Monte Perdido" -- Source: "Philip's International School Atlas", 2006, p. 69
+	}
+})
+
+DefineWorldMapTile({483, 138}, {
+	World = "Earth",
+	CulturalSettlementNames = {
+		"latin", "Tarraco" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+	},
+	FactionCulturalSettlementNames = {
+		"latin", "Spain", "Tarragona" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83
+	}
+})
+
+DefineWorldMapTile({487, 143}, {
+	World = "Earth",
+	CulturalSettlementNames = {
+		"latin", "Palma" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+	},
+	FactionCulturalSettlementNames = {
+		"latin", "Spain", "Palma" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83
 	}
 })

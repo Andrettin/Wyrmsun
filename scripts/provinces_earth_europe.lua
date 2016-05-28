@@ -137,6 +137,37 @@ DefineProvince("Albania", {
 	Regions = {"Europe", "Greece", "West and Central Europe"}
 })
 
+DefineProvince("Alentejo", {
+	World = "Earth",
+	FactionCulturalNames = {
+		"latin", "Portugal", "Alentejo"
+	},
+	Tiles = {
+		{454, 145}, {454, 146},
+		{455, 144}, {455, 145}, {455, 146}, {455, 147}, {455, 148}, {455, 149}, {455, 150},
+		{456, 144}, {456, 145}, {456, 146}, {456, 147}, {456, 148}, {456, 149}, {456, 150},
+		{457, 143}, {457, 144}, {457, 145}, {457, 146}, {457, 147}, {457, 148}, {457, 149}, {457, 150},
+		{458, 143}, {458, 144}, {458, 145}, {458, 146}, {458, 147}, {458, 148}, {458, 149},
+		{459, 144}, {459, 145}, {459, 147}
+	},
+	SettlementLocation = {457, 146}, -- Evora
+	Map = "maps/random/random-map-forest.smp",
+	SettlementTerrain = "Plains",
+	Coastal = true,
+	Claims = {
+--		"latin", "Portugal"
+	},
+	HistoricalOwners = {
+		-138, "latin", "Rome", -- Lusitania acquired by Rome in 138 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		486, "goth", "Visigothia", -- Alentejo was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		1560, "latin", "Portugal" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalClaims = {
+		-138, "latin", "Rome"
+	},
+	Regions = {"Europe", "Iberia", "West and Central Europe"}
+})
+
 DefineProvince("Alsace", {
 	World = "Earth",
 	CulturalNames = {
@@ -172,6 +203,9 @@ DefineProvince("Alsace", {
 	HistoricalCultures = {
 		-54, "celt",
 		481, "teuton"
+	},
+	HistoricalSettlementBuildings = {
+		161, "unit-teuton-barracks", true -- Legionary base present in Argentorate in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	HistoricalModifiers = {
 		1618, "upgrade-university", true, -- University founded in Molsheim in 1618. Source: The Cambridge Modern History Atlas, 1912, p. 9.
@@ -219,7 +253,7 @@ DefineProvince("Andalusia", {
 	HistoricalOwners = {
 		-218, "phoenician", "Carthage", -- Carthaginian territory in 218 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 32.
 		-197, "latin", "Rome", -- Hispania Tarraconensis and (most of) Farther Baetica acquired by Rome in 197 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		486, "goth", "Visigoth Tribe", -- Kingdom of the Visigoths; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		486, "goth", "Visigothia", -- Kingdom of the Visigoths; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		1560, "latin", "Spain" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalClaims = {
@@ -293,7 +327,7 @@ DefineProvince("Aquitaine", {
 		{492, 127}, {492, 128}, {492, 129}, {492, 130}, {492, 131},
 		{493, 127}, {493, 128}, {493, 129}, {493, 130}, {493, 131}
 	},
-	SettlementLocation = {483, 132}, -- Toulouse
+	SettlementLocation = {484, 131}, -- Toulouse
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
 	Claims = {
@@ -378,7 +412,7 @@ DefineProvince("Aragon", {
 	HistoricalOwners = {
 		-7000, "basque", "Cardialware Tribe", -- Cardial Pottery culture existed in the eastern Iberian coast between 7000 and 2000 BC; Source: "Atlas de História Mundial", 2001, pp. 40-41.
 		-201, "latin", "Rome", -- Hither Baetica acquired by Rome in 201 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		486, "goth", "Visigoth Tribe", -- Kingdom of the Visigoths; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		486, "goth", "Visigothia", -- Kingdom of the Visigoths; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		1560, "latin", "Spain" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalCultures = {
@@ -680,6 +714,43 @@ DefineProvince("Bavaria", {
 		1459, "upgrade-university", true -- University founded in Ingolstadt in 1459. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.
 	},
 	Regions = {"Europe", "Germany-Netherlands", "Roman Danube", "West and Central Europe"}
+})
+
+DefineProvince("Beira", {
+	World = "Earth",
+	FactionCulturalNames = {
+		"latin", "Portugal", "Beira"
+	},
+	Tiles = {
+		{453, 144}, {453, 145},
+		{454, 143}, {454, 144},
+		{455, 139}, {455, 140}, {455, 141}, {455, 142}, {455, 143},
+		{456, 139}, {456, 140}, {456, 141}, {456, 142}, {456, 143},
+		{457, 139}, {457, 140}, {457, 141}, {457, 142},
+		{458, 139}, {458, 140}, {458, 141}, {458, 142},
+		{459, 139}, {459, 140}, {459, 141}, {459, 142}
+	},
+	SettlementLocation = {453, 145}, -- Lisbon
+	Map = "maps/random/random-map-forest.smp",
+	SettlementTerrain = "Plains",
+	Coastal = true,
+	Claims = {
+--		"latin", "Portugal"
+	},
+	HistoricalOwners = {
+		-138, "latin", "Rome", -- Lusitania acquired by Rome in 138 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		450, "teuton", "Suebi Tribe", -- The Suebi were in possession of most of modern Portugal (pretty much everything up to the Tagus river) by around 450 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 48.
+		486, "goth", "Visigothia", -- Portugal up to the Tagus river was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		1560, "latin", "Portugal" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalClaims = {
+		-138, "latin", "Rome"
+	},
+	HistoricalModifiers = {
+		1537, "upgrade-university", true, -- University moved from Lisbon to Coimbra in 1537. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.
+		1911, "upgrade-university", true -- University founded in Lisbon in 1911. Source: David Thomson, Europe Since Napoleon, 1966, p. 449.
+	},
+	Regions = {"Europe", "Iberia", "West and Central Europe"}
 })
 
 DefineProvince("Belgium", {
@@ -1288,11 +1359,14 @@ DefineProvince("Castille", {
 	HistoricalOwners = {
 		-- Interior "mesetas" of Iberia settled by farmers c. 4000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 157.
 		-197, "latin", "Rome", -- Hispania Tarraconensis and (most of) Farther Baetica acquired by Rome in 197 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		486, "goth", "Visigoth Tribe", -- Kingdom of the Visigoths; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		486, "goth", "Visigothia", -- Kingdom of the Visigoths; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		1560, "latin", "Spain" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalClaims = {
 		-197, "latin", "Rome"
+	},
+	HistoricalSettlementBuildings = {
+		161, "unit-teuton-barracks", true -- Legionary base present in Castra Legionis in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	HistoricalModifiers = {
 		1212, "upgrade-university", true, -- University founded in Palencia in 1212. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.
@@ -1833,6 +1907,42 @@ DefineProvince("Don", {
 		-2800, "unit-germanic-barracks", false
 	},
 	Regions = {"Eurasia", "Europe"}
+})
+
+DefineProvince("Douro", {
+	World = "Earth",
+	FactionCulturalNames = {
+		"latin", "Portugal", "Douro"
+	},
+	Tiles = {
+		{455, 136}, {455, 137}, {455, 138},
+		{456, 136}, {456, 137}, {456, 138},
+		{457, 137}, {457, 138},
+		{458, 137}, {458, 138},
+		{459, 137}, {459, 138},
+		{460, 137}, {460, 138},
+		{461, 137}
+	},
+	SettlementLocation = {456, 137}, -- Braga
+	Map = "maps/earth/braga.smp",
+	SettlementTerrain = "Plains",
+	Coastal = true,
+	Claims = {
+--		"latin", "Portugal"
+	},
+	HistoricalOwners = {
+		-138, "latin", "Rome", -- Lusitania acquired by Rome in 138 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		450, "teuton", "Suebi Tribe", -- The Suebi conquered the area between the Minho and the Douro in Portugal in 411 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
+		486, "teuton", "Galicia", -- Suebi kingdom of Galicia; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		1560, "latin", "Portugal" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalClaims = {
+		-138, "latin", "Rome"
+	},
+	HistoricalModifiers = {
+		1911, "upgrade-university", true -- University founded in Oporto in 1911. Source: David Thomson, Europe Since Napoleon, 1966, p. 449.
+	},
+	Regions = {"Europe", "Iberia", "West and Central Europe"}
 })
 
 DefineProvince("Drenthe", {
@@ -3672,6 +3782,9 @@ DefineProvince("Lower Rhine", {
 		"teuton", "Holy Rome"
 	},
 	HistoricalSettlementBuildings = {
+		161, "unit-teuton-barracks", true, -- Legionary base present in a location near Colonia Agrippina in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, "unit-teuton-barracks", true, -- Legionary base present in the area in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, "unit-teuton-barracks", true, -- Legionary base present (apparently) between the Meuse and Rhine rivers in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		768, "unit-teuton-temple", true, -- Monastery or abbey existent in Prüm during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 		768, "unit-teuton-temple", true, -- Archbishopric existent in Cologne during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 		768, "unit-teuton-temple", true -- Archbishopric existent in Trier during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
@@ -3958,7 +4071,7 @@ DefineProvince("Mercia", {
 		"teuton", "England", "Mercia"
 	},
 	Tiles = {
-		{471, 103}, {471, 104}, {471, 105}, {471, 106}, {471, 107}, {471, 108}, {471, 109},
+		{471, 103}, {471, 104}, {471, 105}, {471, 106}, {471, 107}, {471, 108},
 		{472, 102}, {472, 103}, {472, 104}, {472, 105}, {472, 106}, {472, 107}, {472, 108},
 		{473, 103}, {473, 104}, {473, 105}, {473, 106}, {473, 107},
 		{474, 104}, {474, 105}, {474, 106}, {474, 107},
@@ -4001,6 +4114,9 @@ DefineProvince("Mercia", {
 		1851, "upgrade-university", true, -- University founded in Manchester in 1851. Source: David Thomson, Europe Since Napoleon, 1966, p. 449.
 		1900, "upgrade-university", true, -- University founded in Birmingham in 1900. Source: David Thomson, Europe Since Napoleon, 1966, p. 449.
 		1903, "upgrade-university", true -- University founded in Liverpool in 1903. Source: David Thomson, Europe Since Napoleon, 1966, p. 449.
+	},
+	HistoricalSettlementBuildings = {
+		161, "unit-teuton-barracks", true -- Legionary base present in Deva in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	Regions = {"British Isles", "England", "Europe", "Northwest Europe", "West and Central Europe"}
 })
@@ -4693,6 +4809,9 @@ DefineProvince("Palatinate", {
 		"teuton", "Franconia", -- Part of the Duchy of Franconia in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		"teuton", "Holy Rome"
 	},
+	HistoricalSettlementBuildings = {
+		161, "unit-teuton-barracks", true -- Legionary base present in Mogontiacum in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+	},
 	HistoricalModifiers = {
 		1476, "upgrade-university", true, -- University founded in Mainz in 1476. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.
 		1578, "upgrade-university", true -- University founded in Neustadt in 1578. Source: The Cambridge Modern History Atlas, 1912, p. 9.
@@ -4956,48 +5075,6 @@ DefineProvince("Pomerelia", {
 		1366, "upgrade-university", true -- University founded in Kulm in 1366. Source: "Atlas de História Mundial", 2001, p. 144.
 	},
 	Regions = {"Europe", "Poland", "West and Central Europe"}
-})
-
-DefineProvince("Portugal", {
-	World = "Earth",
-	CulturalNames = {
-		"latin", "Lusitania"
-	},
-	FactionCulturalNames = {
-		"latin", "Portugal", "Portugal",
-		"latin", "Spain", "Portugal"
-	},
-	Tiles = {
---		{114, 34}, {114, 35}, {114, 36}, {114, 37}, -- old map
-		{453, 144}, {453, 145},
-		{454, 143}, {454, 144}, {454, 145}, {454, 146},
-		{455, 136}, {455, 137}, {455, 138}, {455, 139}, {455, 140}, {455, 141}, {455, 142}, {455, 143}, {455, 144}, {455, 145}, {455, 146}, {455, 147}, {455, 148}, {455, 149}, {455, 150},
-		{456, 136}, {456, 137}, {456, 138}, {456, 139}, {456, 140}, {456, 141}, {456, 142}, {456, 143}, {456, 144}, {456, 145}, {456, 146}, {456, 147}, {456, 148}, {456, 149}, {456, 150},
-		{457, 137}, {457, 138}, {457, 139}, {457, 140}, {457, 141}, {457, 142}, {457, 143}, {457, 144}, {457, 145}, {457, 146}, {457, 147}, {457, 148}, {457, 149}, {457, 150},
-		{458, 137}, {458, 138}, {458, 139}, {458, 140}, {458, 141}, {458, 142}, {458, 143}, {458, 144}, {458, 145}, {458, 146}, {458, 147}, {458, 148}, {458, 149},
-		{459, 137}, {459, 138}, {459, 139}, {459, 140}, {459, 141}, {459, 142}, {459, 144}, {459, 145}, {459, 147},
-		{460, 137}, {460, 138},
-		{461, 137}
-	},
-	SettlementLocation = {454, 145}, -- Lisbon
-	Map = "maps/earth/braga.smp",
-	SettlementTerrain = "Plains",
-	Coastal = true,
-	HistoricalOwners = {
-		-138, "latin", "Rome", -- Lusitania acquired by Rome in 138 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		450, "teuton", "Suebi Tribe", -- The Suebi were in possession of most of modern Portugal by around 450 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
-		486, "teuton", "Galicia", -- Suebi kingdom of Galicia; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-		1560, "latin", "Portugal" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
-	},
-	HistoricalClaims = {
-		-138, "latin", "Rome"
-	},
-	HistoricalModifiers = {
-		1537, "upgrade-university", true, -- University moved from Lisbon to Coimbra in 1537. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.
-		1911, "upgrade-university", true, -- University founded in Lisbon in 1911. Source: David Thomson, Europe Since Napoleon, 1966, p. 449.
-		1911, "upgrade-university", true -- University founded in Oporto in 1911. Source: David Thomson, Europe Since Napoleon, 1966, p. 449.
-	},
-	Regions = {"Europe", "Iberia", "West and Central Europe"}
 })
 
 DefineProvince("Posen", {
@@ -6574,7 +6651,8 @@ DefineProvince("Wales", {
 		{467, 108},
 		{468, 106}, {468, 107}, {468, 108},
 		{469, 106}, {469, 107}, {469, 108}, {469, 109},
-		{470, 106}, {470, 107}, {470, 108}, {470, 109}
+		{470, 106}, {470, 107}, {470, 108}, {470, 109},
+		{471, 109}
 	},
 	SettlementLocation = {470, 109}, -- Cardiff
 	Map = "maps/random/random-map-forest.smp",
@@ -6598,6 +6676,9 @@ DefineProvince("Wales", {
 	},
 	HistoricalClaims = {
 		43, "latin", "Rome"
+	},
+	HistoricalSettlementBuildings = {
+		161, "unit-teuton-barracks", true -- Legionary base present in Isca Silurum in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	Regions = {"British Isles", "England", "Europe", "Northwest Europe", "West and Central Europe"}
 })
@@ -6921,6 +7002,9 @@ DefineProvince("York", {
 	HistoricalModifiers = {
 		1904, "upgrade-university", true, -- University founded in Leeds in 1904. Source: David Thomson, Europe Since Napoleon, 1966, p. 449.
 		1905, "upgrade-university", true -- University founded in Sheffield in 1905. Source: David Thomson, Europe Since Napoleon, 1966, p. 449.
+	},
+	HistoricalSettlementBuildings = {
+		161, "unit-teuton-barracks", true -- Legionary base present in Eboracum in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	Regions = {"British Isles", "England", "Europe", "Northwest Europe", "West and Central Europe"}
 })

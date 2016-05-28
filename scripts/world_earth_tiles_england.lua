@@ -59,6 +59,27 @@ DefineWorldMapTile({471, 100}, {
 	}
 })
 
+DefineWorldMapTile({471, 104}, {
+	World = "Earth",
+	CulturalSettlementNames = {
+		"celt", "Deva",
+		"latin", "Deva" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+	},
+	FactionCulturalSettlementNames = {
+		"teuton", "England", "Chester", "name-elements", { -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
+			"word", "english", "noun", "Chester" -- presumably
+		}
+	}
+})
+
+DefineWorldMapTile({471, 109}, {
+	World = "Earth",
+	CulturalSettlementNames = {
+		"celt", "Isca Silurum",
+		"latin", "Isca Silurum" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+	}
+})
+
 DefineWorldMapTile({473, 110}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
@@ -124,6 +145,10 @@ DefineWorldMapTile({476, 110}, {
 
 DefineWorldMapTile({477, 102}, {
 	World = "Earth",
+	CulturalSettlementNames = {
+		"celt", "Eboracum",
+		"latin", "Eboracum" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+	},
 	FactionCulturalSettlementNames = {
 		"teuton", "England", "York" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
 	}
@@ -149,7 +174,7 @@ DefineWorldMapTile({480, 109}, {
 	World = "Earth",
 	CulturalSettlementNames = {
 		"celt", "Londinium",
-		"latin", "Londinium"
+		"latin", "Londinium" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	FactionCulturalSettlementNames = {
 		"teuton", "England", "London"
