@@ -3132,13 +3132,14 @@ DefineProvince("Hungary", {
 	},
 	HistoricalOwners = {
 		-264, "persian", "Iazyge Tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		161, "goth", "Vandal Tribe", -- The area was inhabited by the Vandali in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+--		161, "goth", "Vandal Tribe", -- Parts of northern Hungary were inhabited by the Vandali in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, "persian", "Iazyge Tribe", -- The area was inhabited by the Iazyges in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		919, "magyar", "Hungary", -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		1560, "teuton", "Turkey" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalCultures = {
 		-264, "persian",
-		161, "goth"
+--		161, "goth"
 	},
 	HistoricalModifiers = {
 		1389, "upgrade-university", true, -- University founded in Budapest in 1389. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.
@@ -5363,6 +5364,15 @@ DefineProvince("Russia", {
 		"slav", "Muscovy",
 		"slav", "Russia"
 	},
+	HistoricalOwners = {
+		-264, "slav", "Budini Tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+--		161, "finnish", "Fenni Tribe", -- Small parts of western Russia were inhabited by the Fenni in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+--		161, "slav", "Venedae Tribe", -- Small parts of western Russia were inhabited by the Venedi in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		1560, "slav", "Muscovy", -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalCultures = {
+		-264, "slav"
+	},
 	Regions = {"Eurasia", "Europe"}
 })
 
@@ -6936,7 +6946,17 @@ DefineProvince("White Russia", {
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
 	Claims = {
+		"finnish", "Fenni Tribe",
+		"slav", "Venedae Tribe",
 		"slav", "Poland"
+	},
+	HistoricalOwners = {
+		161, "finnish", "Fenni Tribe", -- Northern Belarus was inhabited by the Fenni in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+--		161, "slav", "Venedae Tribe", -- Southern Belarus was inhabited by the Venedi in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		1560, "slav", "Poland", -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalCultures = {
+		161, "finnish",
 	},
 	Regions = {"Eurasia", "Europe"}
 })

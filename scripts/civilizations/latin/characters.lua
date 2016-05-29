@@ -58,11 +58,12 @@ DefineCharacter("Faustina the Younger", { -- Source: "Ancient Warfare VII.6", 20
 	Civilization = "latin",
 	Faction = "Rome",
 	ProvinceOfOrigin = "Latium", -- put her in Rome's province since we don't have information on her actual province of origin
-	Father = "Antoninus Pius"
+	Father = "Antoninus Pius",
+	DeathYear = 176 -- died
 	-- married to Marcus Aurelius
 })
 
-DefineCharacter("Marcus Aurelius", { -- Source: "Ancient Warfare VII.6", 2013, p. 6.
+DefineCharacter("Marcus Aurelius", { -- Source: "Ancient Warfare VII.6", 2013, pp. 6, 8.
 	Name = "Marcus Aurelius",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
@@ -70,6 +71,7 @@ DefineCharacter("Marcus Aurelius", { -- Source: "Ancient Warfare VII.6", 2013, p
 	Faction = "Rome",
 	ProvinceOfOrigin = "Latium", -- put him in Rome's province since we don't have information on his actual province of origin
 	Year = 121, -- born on 26 April 121
+	DeathYear = 180, -- died on 17 March 180, of smallpox or cancer
 	HistoricalTitles = {
 		-- was consul when he was 18 years old
 		-- in 140 he became consul a second time

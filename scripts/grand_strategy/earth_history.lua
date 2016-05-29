@@ -727,9 +727,6 @@ if (GrandStrategyYear >= -264) then
 	
 	SetProvinceOwner("Lithuania", "slav", "Aestui Tribe")
 	SetProvinceCivilization("Lithuania", "slav")
-	
-	SetProvinceOwner("Russia", "slav", "Budini Tribe")
-	SetProvinceCivilization("Russia", "slav")
 end
 
 if (GrandStrategyYear >= -238) then -- Corsica and Sardinia acquired by Rome in 238 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
@@ -1415,8 +1412,6 @@ if (GrandStrategyYear >= 1560) then
 	SetProvinceOwner("Estonia", "teuton", "Prussia") -- Teutonic Order
 	
 	SetProvinceOwner("Posen", "slav", "Poland")
-	SetProvinceOwner("Russia", "slav", "Muscovy")
-	SetProvinceOwner("White Russia", "slav", "Poland")
 	
 	SetProvinceOwner("Dobruja", "teuton", "Turkey")
 end

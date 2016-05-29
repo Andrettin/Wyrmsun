@@ -58,7 +58,11 @@ DefineFaction("Heniochi Tribe", { -- Source: "Ancient Warfare VII.6", 2013, p. 7
 DefineFaction("Iazyge Tribe", {
 	Civilization = "persian", -- accurate?
 	Type = "tribe",
-	Colors = {"violet"}
+	Colors = {"violet"},
+	HistoricalDiplomacyStates = {
+		171, "latin", "Rome", "war", -- the Iazyges entered conflict with the Romans in (apparently) 171; Source: "Ancient Warfare VII.6", 2013, pp. 7-8.
+		175, "latin", "Rome", "peace" -- in 175 the Romans defeated the Iazyges and forced them to a peace; Source: "Ancient Warfare VII.6", 2013, p. 8.
+	}
 })
 
 DefineFaction("Navari Tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
