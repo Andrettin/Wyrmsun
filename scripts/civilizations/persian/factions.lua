@@ -25,6 +25,18 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineFaction("Abasgi Tribe", { -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+	Civilization = "persian", -- accurate?
+	Type = "tribe",
+	Colors = {"blue"}
+})
+
+DefineFaction("Alan Tribe", { -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+	Civilization = "persian", -- accurate?
+	Type = "tribe",
+	Colors = {"purple"}
+})
+
 DefineFaction("Alazone Tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	Civilization = "persian", -- accurate?
 	Type = "tribe",
@@ -32,6 +44,12 @@ DefineFaction("Alazone Tribe", { -- Source: William R. Shepherd, "Historical Atl
 })
 
 DefineFaction("Aorsi Tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	Civilization = "persian", -- accurate?
+	Type = "tribe",
+	Colors = {"violet"}
+})
+
+DefineFaction("Heniochi Tribe", { -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	Civilization = "persian", -- accurate?
 	Type = "tribe",
 	Colors = {"violet"}
@@ -67,6 +85,12 @@ DefineFaction("Scythian Tribe", {
 	Colors = {"green"}
 })
 
+DefineFaction("Sindi Tribe", { -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+	Civilization = "persian", -- accurate?
+	Type = "tribe",
+	Colors = {"white"}
+})
+
 DefineFaction("Parthia", {
 	Civilization = "persian",
 	Type = "polity",
@@ -86,4 +110,55 @@ DefineFaction("Persia", {
 	Type = "polity",
 	Colors = {"yellow", "green"},
 	DefaultTier = "kingdom"
+})
+
+-- Non-Playable
+
+DefineFaction("Agraei Tribe", { -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+	Civilization = "persian", -- should be Arabic?
+	Type = "tribe",
+	Colors = {"yellow"},
+	Playable = false
+})
+
+DefineFaction("Arab Tribe", { -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+	Civilization = "persian", -- should be Arabic
+	Type = "tribe",
+	Colors = {"green"},
+	Playable = false
+})
+
+DefineFaction("Gaetuli Tribe", { -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+	Civilization = "persian", -- should be Berber?
+	Type = "tribe",
+	Colors = {"black"},
+	Playable = false
+})
+
+DefineFaction("Garamantes Tribe", { -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+	Civilization = "persian", -- should be Berber?
+	Type = "tribe",
+	Colors = {"yellow"},
+	Playable = false
+})
+
+DefineFaction("Mauri Tribe", { -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+	Civilization = "persian", -- should be Berber?
+	Type = "tribe",
+	Colors = {"green"},
+	Playable = false
+})
+
+DefineFaction("Musulamii Tribe", { -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+	Civilization = "persian", -- should be Berber?
+	Type = "tribe",
+	Colors = {"brown"},
+	Playable = false
+})
+
+DefineFaction("Nabataei Tribe", { -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+	Civilization = "persian", -- should be Arabic?
+	Type = "tribe",
+	Colors = {"black"},
+	Playable = false
 })

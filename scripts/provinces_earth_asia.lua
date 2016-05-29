@@ -38,6 +38,24 @@ DefineProvince("Anatolia", {
 	Regions = {"Asia"}
 })
 
+DefineProvince("Arabia", {
+	World = "Earth",
+	Tiles = {},
+	Map = "maps/random/random-map-forest.smp",
+	SettlementTerrain = "Plains",
+	Claims = {
+		"persian", "Agraei Tribe",
+		"persian", "Arab Tribe",
+		"persian", "Nabataei Tribe"
+	},
+	HistoricalOwners = {
+		161, "persian", "Arab Tribe", -- The area was inhabited by the Arabes in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+--		161, "persian", "Nabataei Tribe", -- The area was inhabited by the Nabataei in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+--		161, "persian", "Agraei Tribe" -- The area was inhabited by the Agraei in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+	},
+	Regions = {"Europe"} -- should be in the provinces_earth_europe.lua file, but since the map doesn't extend this far yet, have this definition in this file for now
+})
+
 DefineProvince("Armenia", {
 	World = "Earth",
 	Tiles = {},
@@ -66,6 +84,26 @@ DefineProvince("Asia Minor", {
 		"hittite", "Troy"
 	},
 	Regions = {"Asia"}
+})
+
+DefineProvince("Caucasus", {
+	World = "Earth",
+	Tiles = {},
+	Map = "maps/random/random-map-forest.smp",
+	SettlementTerrain = "Plains",
+	Claims = {
+		"persian", "Abasgi Tribe",
+		"persian", "Alan Tribe"
+		"persian", "Heniochi Tribe"
+		"persian", "Sindi Tribe"
+	},
+	HistoricalOwners = {
+		161, "persian", "Abasgi Tribe", -- The area was inhabited by the Abasgi in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+--		161, "persian", "Heniochi Tribe", -- The area was inhabited by the Heniochi in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+--		161, "persian", "Alan Tribe", -- The area was inhabited by the Alani in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+--		161, "persian", "Sindi Tribe" -- The area was inhabited by the Sindi in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+	},
+	Regions = {"Europe"} -- should be in the provinces_earth_europe.lua file, but since the map doesn't extend this far yet, have this definition in this file for now
 })
 
 DefineProvince("India", {

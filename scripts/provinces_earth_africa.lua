@@ -30,6 +30,16 @@ DefineProvince("Algeria", {
 	Tiles = {},
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains", -- correct?
+	Claims = {
+		"persian", "Gaetuli Tribe",
+		"persian", "Mauri Tribe",
+		"persian", "Musulamii Tribe"
+	},
+	HistoricalOwners = {
+		161, "persian", "Gaetuli Tribe", -- South-central Algeria was inhabited by the Gaetuli in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, "persian", "Musulamii Tribe", -- Southeastern Algeria was inhabited by the Musulamii in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, "persian", "Mauri Tribe" -- Southwestern Algeria was inhabited by the Mauri in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+	},
 	HistoricalSettlementBuildings = {
 		161, "unit-teuton-barracks", true -- Legionary base present in Lambaesis in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
@@ -52,6 +62,12 @@ DefineProvince("Libya", {
 	Tiles = {},
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains", -- correct?
+	Claims = {
+		"persian", "Garamantes Tribe"
+	},
+	HistoricalOwners = {
+		161, "persian", "Garamantes Tribe" -- Inland western Libya was inhabited by the Garamantes in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+	},
 	Regions = {"Africa"}
 })
 
@@ -60,6 +76,12 @@ DefineProvince("Morocco", {
 	Tiles = {},
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains", -- correct?
+	Claims = {
+		"persian", "Mauri Tribe"
+	},
+	HistoricalOwners = {
+		161, "persian", "Mauri Tribe" -- Southern Morocco was inhabited by the Mauri in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+	},
 	Regions = {"Africa"}
 })
 
