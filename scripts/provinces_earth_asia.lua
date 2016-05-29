@@ -25,6 +25,19 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineProvince("Anatolia", {
+	World = "Earth",
+	Tiles = {},
+	Map = "maps/random/random-map-forest.smp",
+	SettlementTerrain = "Plains",
+	HistoricalSettlementBuildings = {
+		161, "unit-teuton-barracks", true, -- Legionary base present in Satala in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, "unit-teuton-barracks", true, -- Legionary base present in Melitene in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, "unit-teuton-barracks", true -- Legionary base present in Zeugma in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+	},
+	Regions = {"Asia"}
+})
+
 DefineProvince("Armenia", {
 	World = "Earth",
 	Tiles = {},
@@ -67,6 +80,33 @@ DefineProvince("India", {
 	Regions = {"Asia"}
 })
 
+DefineProvince("Lebanon", {
+	World = "Earth",
+	Tiles = {},
+	Map = "maps/random/random-map-forest.smp",
+	SettlementTerrain = "Plains",
+	Regions = {"Asia"}
+})
+
+DefineProvince("Mesopotamia", {
+	World = "Earth",
+	Tiles = {},
+	Map = "maps/random/random-map-forest.smp",
+	SettlementTerrain = "Plains",
+	Regions = {"Asia"}
+})
+
+DefineProvince("Palestine", {
+	World = "Earth",
+	Tiles = {},
+	Map = "maps/random/random-map-forest.smp",
+	SettlementTerrain = "Plains",
+	HistoricalSettlementBuildings = {
+		161, "unit-teuton-barracks", true -- Legionary base present in Hierosolyma in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+	},
+	Regions = {"Asia"}
+})
+
 DefineProvince("Philippines", {
 	World = "Earth",
 	Tiles = {},
@@ -86,6 +126,9 @@ DefineProvince("Syria", {
 	SettlementTerrain = "Plains",
 	HistoricalOwners = {
 		161, "persian", "Parthia", -- in 161 the Parthians invaded Syria and afterwards defeated the armies stationed there; Source: "Ancient Warfare VII.6", 2013, p. 7.
+	},
+	HistoricalSettlementBuildings = {
+		161, "unit-teuton-barracks", true -- Legionary base present in Bostra in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	Regions = {"Asia"}
 })

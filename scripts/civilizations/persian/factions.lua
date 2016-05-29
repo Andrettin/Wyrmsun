@@ -72,6 +72,9 @@ DefineFaction("Parthia", {
 	Type = "polity",
 	Colors = {"purple"},
 	DefaultTier = "kingdom",
+	HistoricalCapitals = {
+--		161, "Mesopotamia" -- Ctesiphon was the capital of Parthia in 161; Source: "Ancient Warfare VII.6", 2013, p. 7.
+	},
 	HistoricalDiplomacyStates = {
 		161, "greek", "Armenia", "war", -- in the autumn of 161 Parthia invaded Armenia, a vassal state of Rome; Source: "Ancient Warfare VII.6", 2013, p. 6.
 		161, "latin", "Rome", "war"

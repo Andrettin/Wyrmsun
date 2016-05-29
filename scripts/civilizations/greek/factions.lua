@@ -162,5 +162,8 @@ DefineFaction("Armenia", {
 	Type = "polity",
 	Colors = {"brown"},
 	DefaultTier = "kingdom",
-	Playable = false
+	Playable = false,
+	HistoricalCapitals = {
+--		161, "Armenia" -- Vagharshapat was the capital of (apparently) Armenia in 161; Source: "Ancient Warfare VII.6", 2013, p. 7.
+	}
 })
