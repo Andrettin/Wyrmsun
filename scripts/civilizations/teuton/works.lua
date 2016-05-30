@@ -51,5 +51,5 @@ DefineUpgrade("upgrade-work-historia-ecclesiastica-venerabilis-bedae", { -- Sour
 })
 
 DefineModifier("upgrade-work-hildebrandslied",
-	{"CriticalStrikeChance", 1}
+	{"BonusAgainstMounted", 1}
 )

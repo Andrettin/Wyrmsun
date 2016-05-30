@@ -62,6 +62,11 @@ DefineUpgrade("upgrade-dim", {
 	Epithets = {"the Dim"}
 })
 
+DefineUpgrade("upgrade-dutiful", {
+	Parent = "upgrade-trait",
+	Name = _("Dutiful")
+})
+
 DefineUpgrade("upgrade-generous", { -- no current effect
 	Parent = "upgrade-trait",
 	Name = _("Generous"),
@@ -192,6 +197,11 @@ DefineModifier("upgrade-dextrous",
 DefineModifier("upgrade-dim",
 	{"Intelligence", -1},
 	{"Mana", -5}
+)
+
+DefineModifier("upgrade-dutiful",
+	{"HitPoints", 3},
+	{"Mana", 2}
 )
 
 DefineModifier("upgrade-genius",

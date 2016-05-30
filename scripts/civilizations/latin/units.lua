@@ -43,6 +43,7 @@ DefineUnitType("unit-latin-town-hall", { Name = _("Forum"),
 	ButtonHint = _("Build Foru~!m"),
 	ButtonKey = "m",
 	AiDrops = {"unit-boots"},
+	DropAffixes = {"upgrade-item-prefix-flaming", "upgrade-item-prefix-quenching", "upgrade-item-prefix-storm", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-lightning", "upgrade-item-suffix-of-the-serpent", "upgrade-item-suffix-of-the-snail", "upgrade-item-suffix-of-trickery", "upgrade-work-meditations"},
 	Sounds = {
 --		"help", "basic-germanic-voices-help-town"
 	}

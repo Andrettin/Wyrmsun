@@ -35,6 +35,14 @@ DefineUpgrade("upgrade-work-de-bello-gallico", { -- Source: Heiko Steuer, "Warri
 	-- should probably have some other requirements, like events pertaining to the Gallic Wars having occurred, or Gaul having been conquered by Rome
 })
 
+DefineUpgrade("upgrade-work-meditations", { -- Source: "Ancient Warfare VII.6", 2013, pp. 8-10.
+	Name = _("Meditations"), -- known as "Ta eis heauton" in Greek ("To Himself")
+	Work = "scroll",
+	Civilization = "latin",
+	Description = "Comprising twelve books, the \"Meditations\" of Marcus Aurelius is a prime work of Roman stoicism. The author emphasizes the importance of doing one's duty and living in an austere manner, in a way reminiscent of the ideal of the Roman soldier.",
+	Year = 174 -- written during Marcus Aurelius' campaign of 174 AD
+})
+
 DefineUpgrade("upgrade-work-notitia-dignitatum", { -- Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 231.
 	Name = _("Notitia Dignitatum"),
 	Work = "scroll",
@@ -43,3 +51,7 @@ DefineUpgrade("upgrade-work-notitia-dignitatum", { -- Source: Heiko Steuer, "War
 	Description = "Among other things, this military handbook details Germanic military units, such as the Brisigavi iuniores, the Brisigavi seniores and the Lentienses.",
 	Year = 400 -- Notitia Dignitatum was written c. 400 AD
 })
+
+DefineModifier("upgrade-work-meditations",
+	{"HitPoints", 1}
+)

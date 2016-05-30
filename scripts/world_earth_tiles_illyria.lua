@@ -63,6 +63,16 @@ DefineWorldMapTile({534, 135}, {
 	}
 })
 
+DefineWorldMapTile({535, 127}, {
+	World = "Earth",
+	CulturalSettlementNames = {
+		"latin", "Sirmium" -- Source: "Ancient Warfare VII.6", 2013, p. 11.
+	},
+	FactionCulturalSettlementNames = {
+		"slav", "Serbia", "Sremska Mitrovica"
+	}
+})
+
 DefineWorldMapTile({536, 138}, {
 	World = "Earth",
 	CulturalSettlementNames = {

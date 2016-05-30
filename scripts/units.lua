@@ -178,7 +178,7 @@ DefineUnitType("unit-template-fauna-unit", { Name = _("Fauna Unit"),
 	organic = true,
 	Fauna = true,
 	SelectableByRectangle = false,
-	Traits = {"upgrade-clumsy", "upgrade-dim", "upgrade-dextrous", "upgrade-keen", "upgrade-limping", "upgrade-mighty", "upgrade-near-sighted", "upgrade-old", "upgrade-quick", "upgrade-reckless", "upgrade-resilient", "upgrade-slow", "upgrade-strong", "upgrade-weak"}
+	Traits = {"upgrade-clumsy", "upgrade-dextrous", "upgrade-dim", "upgrade-keen", "upgrade-limping", "upgrade-mighty", "upgrade-near-sighted", "upgrade-old", "upgrade-quick", "upgrade-reckless", "upgrade-resilient", "upgrade-slow", "upgrade-strong", "upgrade-weak"}
 })
 
 DefineUnitType("unit-template-sapient-unit", { Name = _("Sapient Unit"),
@@ -188,7 +188,7 @@ DefineUnitType("unit-template-sapient-unit", { Name = _("Sapient Unit"),
 	Intelligence = 10,
 	Charisma = 10,
 	organic = true,
-	Traits = {"upgrade-ambitious", "upgrade-clumsy", "upgrade-cruel", "upgrade-dim", "upgrade-dextrous", "upgrade-genius", "upgrade-intelligent", "upgrade-keen", "upgrade-limping", "upgrade-mighty", "upgrade-near-sighted", "upgrade-old", "upgrade-pious", "upgrade-quick", "upgrade-reckless", "upgrade-resilient", "upgrade-slow", "upgrade-strong", "upgrade-weak", "upgrade-wise"}
+	Traits = {"upgrade-ambitious", "upgrade-clumsy", "upgrade-cruel", "upgrade-dextrous", "upgrade-dim", "upgrade-dutiful", "upgrade-genius", "upgrade-intelligent", "upgrade-keen", "upgrade-limping", "upgrade-mighty", "upgrade-near-sighted", "upgrade-old", "upgrade-pious", "upgrade-quick", "upgrade-reckless", "upgrade-resilient", "upgrade-slow", "upgrade-strong", "upgrade-weak", "upgrade-wise"}
 })
 
 DefineUnitType("unit-rat", { Name = "Rat",

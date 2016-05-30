@@ -36,6 +36,17 @@ DefineCharacter("Strabo", { -- Source: H. H. Howorth, "The Ethnology of Germany,
 	AuthoredWorks = {"upgrade-work-geography"}
 })
 
+DefineCharacter("Galen of Pergamon", { -- Source: "Ancient Warfare VII.6", 2013, p. 10.
+	Name = "Galen",
+	ExtraName = "of Pergamon",
+	Gender = "male",
+	Type = "unit-teuton-priest", -- personal physician of the Roman emperor Marcus Aurelius; he also wrote literary works
+	Civilization = "greek", -- his mother tongue was Greek
+--	ProvinceOfOrigin = "Asia Minor",
+	Year = 130, -- born
+	DeathYear = 210 -- died
+})
+
 DefineCharacter("Zosimus", { -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 320.
 	Name = "Zosimus",
 	Gender = "male",

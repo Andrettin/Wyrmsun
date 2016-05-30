@@ -81,3 +81,11 @@ DefineFaction("Russia", {
 	Colors = {"blue", "red"},
 	DefaultTier = "empire"
 })
+
+DefineFaction("Serbia", {
+	Civilization = "slav",
+	Type = "polity",
+--	Language = "old-church-slavonic",
+	Colors = {"red"},
+	DefaultTier = "kingdom"
+})

@@ -36,6 +36,17 @@ DefineCharacter("Caesar", { -- Source: Heiko Steuer, "Warrior bands, war lords a
 	AuthoredWorks = {"upgrade-work-de-bello-gallico"}
 })
 
+DefineCharacter("Seneca", { -- Source: "Ancient Warfare VII.6", 2013, p. 9.
+	Name = "Seneca",
+	Gender = "male",
+	Type = "unit-teuton-priest", -- philosopher, of the school of Roman Stoicism
+	Civilization = "latin",
+	Faction = "Rome",
+	ProvinceOfOrigin = "Latium", -- put him in Rome's province since we don't have information on his actual province of origin
+	Year = -1, -- born
+	DeathYear = 65 -- died
+})
+
 DefineCharacter("Antoninus Pius", { -- Source: "Ancient Warfare VII.6", 2013, p. 6.
 	Name = "Antoninus Pius",
 	Gender = "male",
@@ -63,7 +74,7 @@ DefineCharacter("Faustina the Younger", { -- Source: "Ancient Warfare VII.6", 20
 	-- married to Marcus Aurelius
 })
 
-DefineCharacter("Marcus Aurelius", { -- Source: "Ancient Warfare VII.6", 2013, pp. 6, 8.
+DefineCharacter("Marcus Aurelius", { -- Source: "Ancient Warfare VII.6", 2013, pp. 6, 8, 10.
 	Name = "Marcus Aurelius",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
@@ -72,6 +83,8 @@ DefineCharacter("Marcus Aurelius", { -- Source: "Ancient Warfare VII.6", 2013, p
 	ProvinceOfOrigin = "Latium", -- put him in Rome's province since we don't have information on his actual province of origin
 	Year = 121, -- born on 26 April 121
 	DeathYear = 180, -- died on 17 March 180, of smallpox or cancer
+	Trait = "upgrade-dutiful", -- placed strong importance on doing one's duty in his "Meditations"
+	AuthoredWorks = {"upgrade-work-meditations"},
 	HistoricalTitles = {
 		-- was consul when he was 18 years old
 		-- in 140 he became consul a second time

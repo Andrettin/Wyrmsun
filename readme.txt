@@ -73,9 +73,14 @@ https://github.com/Andrettin/Wyrmsun
 - Added a number of Latin and Celtic cultural settlement names.
 - Split Portugal into the Alentejo, Beira and Douro provinces.
 
+* Literary Works
+- Added the "Meditations" literary work, which grants +1 HP. It can be dropped from the Latin Forum.
+- The Hildebrandslied now grants +1% bonus vs. mounted, instead of +1% critical strike chance.
+
 * Miscellaneous
 - Fixed issue which caused a crash when starting a multiplayer game.
 - The Technologies section of the encyclopedia is now divided in subsections according to civilization.
+- Added "Dutiful" trait (+3 HP, +2 Mana).
 
 * Units
 - Added Goblin Magnate (icon design by Jesse Crider and graphics by Jinn), which innately has the Leadership Aura.
