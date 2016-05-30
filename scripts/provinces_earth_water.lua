@@ -283,6 +283,7 @@ DefineProvince("Black Sea", { -- Source: "Limits of Oceans and Seas", 1953, p. 1
 	CulturalNames = {
 		"latin", "Pontus Euxinos" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
+	ReferenceProvince = "Crimea",
 	Tiles = {
 --		{140, 33}, {140, 34}, {141, 31}, {141, 32}, {141, 33}, {141, 34}, {142, 31}, {142, 32}, {142, 33}, {142, 34}, {143, 31}, {143, 32}, {143, 33}, {144, 32}, {144, 33}, {145, 31}, {145, 32}, {145, 33}, {146, 31}, {146, 32}, {146, 33}, {146, 34}, {147, 33}, {147, 34}, {148, 33}, {148, 34}, -- old map
 		{559, 133}, {559, 134}, {559, 135},
@@ -811,6 +812,10 @@ DefineProvince("Sea of Azov", { -- Source: "Limits of Oceans and Seas", 1953, p.
 DefineProvince("Sea of Marmara", { -- Source: "Limits of Oceans and Seas", 1953, p. 18.
 	World = "Earth",
 	Water = true,
+	CulturalNames = {
+		"greek", "Propontis" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+	},
+	ReferenceProvince = "Thrace",
 	Tiles = {
 		{554, 140}, {554, 141},
 		{555, 140}, {555, 141},
