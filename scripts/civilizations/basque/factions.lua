@@ -81,3 +81,16 @@ DefineFaction("Linearware Tribe", {
 	Type = "tribe",
 	Colors = {"yellow"}
 })
+
+DefineFaction("Sauveterrian Tribe", { -- Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, pp. 167-168.
+	Civilization = "basque", -- not actually Basque, but a pre-Indo-European people as well
+	Type = "tribe",
+	Colors = {"brown"}
+})
+
+DefineFaction("Castelnovian Tribe", { -- Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, pp. 167-168.
+	Civilization = "basque", -- not actually Basque, but a pre-Indo-European people as well
+	Type = "tribe",
+	Colors = {"white"},
+	HistoricalFactionDerivations = {-5930, "basque", "Sauveterrian Tribe"} -- succeeded the Sauveterrian culture
+})

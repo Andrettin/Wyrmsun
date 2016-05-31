@@ -237,8 +237,9 @@ DefineFaction("Venice", {
 	ParentFaction = "Italy",
 	Colors = {"red"},
 	DefaultTier = "duchy", -- Venice was a duchy in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
-	Titles = {
-		"republic", "duchy", "Republic"
+	HistoricalGovernmentTypes = {
+		919, "monarchy", -- Venice was a duchy in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+		1560, "republic" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	}
 })
 

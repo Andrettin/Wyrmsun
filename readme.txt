@@ -72,6 +72,7 @@ https://github.com/Andrettin/Wyrmsun
 - Split the Khersonska, Odeska and Vinnytska provinces off the Ukraine one.
 - Added a number of Latin and Celtic cultural settlement names.
 - Split Portugal into the Alentejo, Beira and Douro provinces.
+- Trade settings are now correctly carried over when forming a new faction.
 
 * Literary Works
 - Added the "Meditations" literary work, which grants +1 HP. It can be dropped from the Latin Forum.

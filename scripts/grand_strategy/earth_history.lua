@@ -587,9 +587,6 @@ if (GrandStrategyYear >= -500) then
 	SetProvinceOwner("Modena", "etruscan", "Etruria")
 	SetProvinceCivilization("Modena", "etruscan")
 	
-	SetProvinceOwner("Venetia", "latin", "Venetian Tribe")
-	SetProvinceCivilization("Venetia", "latin")
-	
 	SetProvinceOwner("Umbria", "latin", "Umbrian Tribe") -- the Aequians, Picentians and Sabines also inhabited this region
 	SetProvinceCivilization("Umbria", "latin")
 	
@@ -760,12 +757,10 @@ if (GrandStrategyYear >= -200) then
 end
 
 if (GrandStrategyYear >= -191) then -- Cisalpine Gaul acquired by Rome in 191 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-	SetProvinceOwner("Lombardy", "latin", "Rome")
 	SetProvinceOwner("Modena", "latin", "Rome")
 	SetProvinceOwner("Parma", "latin", "Rome")
 	SetProvinceOwner("Piedmont", "latin", "Rome")
 	SetProvinceOwner("Romagna", "latin", "Rome")
-	SetProvinceOwner("Venetia", "latin", "Rome")
 end
 
 if (GrandStrategyYear >= -175) then
@@ -1069,7 +1064,6 @@ if (GrandStrategyYear >= 493) then
 	-- Odoacer held out against Theoderic for 2 years entrenched in Ravenna, but in 493 AD the fortress fell; the terms of the surrender foresaw leaving the defenders alive, but later Theoderic suspected a plot of theirs against his life and put them (including Odoacer) to death; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, pp. 8-9.
 	
 	-- Ostrogoths conquer Italy in 493 AD; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, pp. 8-9; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
-	SetProvinceOwner("Lombardy", "goth", "Ostrogoth Tribe")
 	SetProvinceOwner("Naples", "goth", "Ostrogoth Tribe")
 	SetProvinceOwner("Umbria", "goth", "Ostrogoth Tribe")
 	SetProvinceOwner("Abruzzo", "goth", "Ostrogoth Tribe")
@@ -1089,8 +1083,7 @@ if (GrandStrategyYear >= 506) then
 	SetProvinceOwner("Palatinate", "teuton", "Francia")
 end
 
-if (GrandStrategyYear >= 507) then -- political situation in 507-534 in Europe; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
-	SetProvinceOwner("Istria", "goth", "Ostrogoth Tribe")
+if (GrandStrategyYear >= 507) then -- Political situation in 507-534 in Europe; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
 	SetProvinceOwner("Carniola", "goth", "Ostrogoth Tribe")
 	SetProvinceOwner("Croatia", "goth", "Ostrogoth Tribe")
 	SetProvinceOwner("Bosnia", "goth", "Ostrogoth Tribe")
@@ -1254,7 +1247,6 @@ if (GrandStrategyYear >= 919) then
 	
 	-- Duchy of Carinthia
 	SetProvinceOwner("Carniola", "teuton", "Holy Rome")
-	SetProvinceOwner("Istria", "teuton", "Holy Rome") -- March of Istria
 	
 	-- Duchy of Franconia
 	SetProvinceOwner("Palatinate", "teuton", "Holy Rome")
@@ -1275,9 +1267,6 @@ if (GrandStrategyYear >= 919) then
 	SetProvinceOwner("Lorraine", "teuton", "Holy Rome")
 	SetProvinceOwner("Moselle", "teuton", "Holy Rome")
 
-	-- Duchy of Venice
-	SetProvinceOwner("Venetia", "latin", "Venice")
-	
 	SetProvinceOwner("Croatia", "slav", "Croatia")
 	SetProvinceCivilization("Croatia", "slav")
 	SetProvinceOwner("Posen", "slav", "Poland")
@@ -1395,8 +1384,6 @@ if (GrandStrategyYear >= 1560) then
 	-- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	SetProvinceOwner("Brittany", "latin", "France")
 	
-	SetProvinceOwner("Venetia", "latin", "Venice")
-	SetFactionGovernmentType("latin", "Venice", "republic")	
 	SetProvinceOwner("Sardinia", "latin", "Spain")
 
 	SetProvinceOwner("Switzerland", "teuton", "Switzerland")

@@ -3204,6 +3204,21 @@ DefineProvince("Istria", {
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
 	Coastal = true,
+	Claims = {
+		"basque", "Castelnovian Tribe",
+		"teuton", "Holy Rome"
+	},
+	HistoricalOwners = {
+		-6500, "basque", "Castelnovian Tribe", -- In the Grotta dell'Edera site (near Triest) a Castelnovian fireplace was found, dated to c. 6500 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 171.
+		507, "goth", "Ostrogoth Tribe", -- Political situation in 507-534 in Europe; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
+		919, "teuton", "Holy Rome" -- March of Istria within the Duchy of Carinthia; Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+	},
+	HistoricalClaims = {
+		919, "teuton", "Carinthia" -- March of Istria within the Duchy of Carinthia; Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+	},
+	HistoricalCultures = {
+		-6500, "basque"
+	},
 	Regions = {"Europe", "Italy", "West and Central Europe"}
 })
 
@@ -3614,6 +3629,21 @@ DefineProvince("Lombardy", {
 	SettlementLocation = {506, 126}, -- Milan
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
+	Claims = {
+		"basque", "Castelnovian Tribe"
+	},
+	HistoricalOwners = {
+		-5930, "basque", "Castelnovian Tribe", -- a site belonging to the Castelnovian culture in Laghetti del Crestoso (in the Brescian Alps) was dated to 5930-5445 BC and 5849-5592; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 170.
+		-- Carbonized hazelnut shells found in the Sopra Fienile Rossino site (in the Brescian Alps), the site being dated to 5765-5528 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 170.
+		-191, "latin", "Rome", -- Cisalpine Gaul acquired by Rome in 191 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		493, "goth", "Ostrogoth Tribe" -- Ostrogoths conquer Italy in 493 AD; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, pp. 8-9; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
+	},
+	HistoricalClaims = {
+		-191, "latin", "Rome"
+	},
+	HistoricalCultures = {
+		-5930, "basque"
+	},
 	HistoricalSettlementBuildings = {
 		768, "unit-teuton-temple", true -- Archbishopric existent in Milan during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 	},
@@ -6257,11 +6287,13 @@ DefineProvince("Tyrol", {
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Mountains",
 	Claims = {
+		"basque", "Sauveterrian Tribe",
 		"celt", "Norici Tribe",
 		"teuton", "Austria",
 		"teuton", "Holy Rome"
 	},
 	HistoricalOwners = {
+		-7040, "basque", "Sauveterrian Tribe", -- a site belonging to the Sauveterrian culture existed between 7040 and 6813 BC in the Lago delle Buse; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 170.
 		-800, "celt", "Norici Tribe", -- Hallstatt culture in southern Germany and adjacent areas c. 800-400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 87.
 		-15, "latin", "Rome", -- Raetia acquired by Rome in 15 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		507, "goth", "Ostrogoth Tribe", -- political situation in 507-534 in Europe; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
@@ -6269,13 +6301,14 @@ DefineProvince("Tyrol", {
 		919, "teuton", "Holy Rome", -- Duchy of Bavaria within the Holy Roman Empire; political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		1560, "teuton", "Austria" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
-	HistoricalCultures = {
-		-800, "celt"
-	},
 	HistoricalClaims = {
 		-15, "latin", "Rome",
 		537, "teuton", "Francia",
 		784, "teuton", "Bavaria"
+	},
+	HistoricalCultures = {
+		-7040, "basque",
+		-800, "celt"
 	},
 	Regions = {"Cisleithania", "Europe", "Germany-Netherlands", "Roman Danube", "West and Central Europe"}
 })
@@ -6583,8 +6616,24 @@ DefineProvince("Venetia", {
 	SettlementTerrain = "Plains",
 	Coastal = true,
 	Claims = {
-		"latin", "Venetian Tribe"
+		"basque", "Castelnovian Tribe",
+		"basque", "Sauveterrian Tribe",
+		"latin", "Venetian Tribe",
 --		"latin", "Venice"
+	},
+	HistoricalOwners = {
+		-6500, "basque", "Sauveterrian Tribe", -- The Monteval de Sora site (in San Vito di Cadore, Belluno) belonged to the Sauveterrian culture c. 6500 BC and to the Castelnovian culture c. 5500 BC); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 170.
+		-5500, "basque", "Castelnovian Tribe",
+		-500, "latin", "Venetian Tribe", -- Situation of Italy in (apparently) 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
+		-191, "latin", "Rome", -- Cisalpine Gaul acquired by Rome in 191 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		919, "latin", "Venice" -- Duchy of Venice; Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+	},
+	HistoricalClaims = {
+		-191, "latin", "Rome"
+	},
+	HistoricalCultures = {
+		-6500, "basque",
+		-500, "latin"
 	},
 	HistoricalModifiers = {
 		1204, "upgrade-university", true, -- University founded in Vicenza in 1204. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.

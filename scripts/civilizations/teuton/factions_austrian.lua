@@ -62,7 +62,7 @@ DefineFaction("Carinthia", {
 	ParentFaction = "Austria",
 	Type = "polity",
 	Colors = {"brown"},
-	DefaultTier = "duchy" -- Duchy of Carinthia within the Holy Roman Empire; political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+	DefaultTier = "duchy" -- Duchy of Carinthia within the Holy Roman Empire; Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 })
 
 DefineFaction("Hock", { -- titular barony belonging to Carl von Hock; Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 61.
