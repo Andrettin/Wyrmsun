@@ -54,10 +54,40 @@ DefineWorldMapTile({543, 143}, {
 	}
 })
 
+DefineWorldMapTile({543, 145}, {
+	World = "Earth",
+	CulturalSettlementNames = {
+		"greek", "Delphi" -- Mycenean Greece about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+	}
+})
+
 DefineWorldMapTile({543, 150}, {
 	World = "Earth",
 	CulturalSettlementNames = {
-		"greek", "Sparta"
+		"greek", "Sparta",
+		"greek", "Amyclae", -- Mycenean Greece about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		"greek", "Gerenia" -- Mycenean Greece about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+	}
+})
+
+DefineWorldMapTile({544, 143}, {
+	World = "Earth",
+	CulturalSettlementNames = {
+		"greek", "Iolcus" -- Mycenean Greece about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+	}
+})
+
+DefineWorldMapTile({544, 144}, {
+	World = "Earth",
+	CulturalSettlementNames = {
+		"greek", "Pagasae" -- Mycenean Greece about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+	}
+})
+
+DefineWorldMapTile({544, 146}, {
+	World = "Earth",
+	CulturalSettlementNames = {
+		"greek", "Orchomerais" -- Mycenean Greece about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	}
 })
 
@@ -67,7 +97,14 @@ DefineWorldMapTile({544, 148}, {
 		"greek", "Argos"
 	},
 	FactionCulturalSettlementNames = {
-		"greek", "Mycenae", "Mycenae"
+		"greek", "Mycenae", "Mycenae" -- Mycenean Greece about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+	}
+})
+
+DefineWorldMapTile({544, 149}, {
+	World = "Earth",
+	CulturalSettlementNames = {
+		"greek", "Tiryns" -- Mycenean Greece about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	}
 })
 
@@ -78,11 +115,19 @@ DefineWorldMapTile({545, 140}, {
 	}
 })
 
+DefineWorldMapTile({545, 146}, {
+	World = "Earth",
+	CulturalSettlementNames = {
+		"greek", "Coulas" -- Mycenean Greece about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+	}
+})
+
 DefineWorldMapTile({545, 148}, {
 	World = "Earth",
 	CulturalSettlementNames = {
 		"greek", "Corinth",
-		"latin", "Corinthus" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+		"latin", "Corinthus", -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+		"greek", "Epidaurus" -- Mycenean Greece about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	}
 })
 
@@ -93,11 +138,19 @@ DefineWorldMapTile({546, 146}, {
 	}
 })
 
+DefineWorldMapTile({546, 147}, {
+	World = "Earth",
+	CulturalSettlementNames = {
+		"greek", "Eleusis" -- Mycenean Greece about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+	}
+})
+
 DefineWorldMapTile({547, 147}, {
 	World = "Earth",
 	CulturalSettlementNames = {
-		"greek", "Athens",
-		"latin", "Athenae" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+		"greek", "Athens", -- Mycenean Greece about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
+		"latin", "Athenae", -- Source: "Ancient Warfare VII.6", 2013, p. 7.
+		"greek", "Aphidnae" -- Mycenean Greece about 1450 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	}
 })
 

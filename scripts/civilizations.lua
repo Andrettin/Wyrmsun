@@ -352,6 +352,108 @@ DefineCivilization("troll", {
 	DefaultColor = "green"
 })
 
+DefineCivilization("latin", {
+	Display = "Latin",
+	Visible = true,
+	Species = "human",
+	Language = "latin",
+	ParentCivilization = "teuton",
+	Adjective = "Latin",
+	Playable = false,
+	DefaultColor = "red",
+	CivilizationUpgrade = "upgrade-latin-civilization",
+	--[[
+	SettlementNames = {
+		"Agrigentum",
+		"Alba",
+		"Aleria",
+		"Antium",
+		"Aquileia",
+		"Ardea",
+		"Ariminum",
+		"Arretium",
+		"Beneventum",
+		"Bononia",
+		"Bracara Augusta", -- Braga
+		"Brundisium",
+		"Buxentum",
+		"Capua",
+		"Caralis",
+		"Circeii",
+		"Clusium",
+		"Corfinium",
+		"Cora",
+		"Corduba",
+		"Cosa",
+		"Cremona",
+		"Croton",
+		"Cumae",
+		"Emporium",
+		"Firmum",
+		"Fregellae",
+		"Fregena",
+		"Fyrgi",
+		"Genua", -- Genoa
+		"Hatria",
+		"Heraclea",
+		"Locri",
+		"Luceria",
+		"Lucus Augusti",
+		"Mariana",
+		"Minturnae",
+		"Mutina",
+		"Narnia",
+		"Nora",
+		"Norba",
+		"Novum Castrum",
+		"Olbia",
+		"Olisipo",
+		"Opitergium", -- Oderzo
+		"Ostia",
+		"Paestum",
+		"Placentia",
+		"Puteoli",
+		"Regina Castra", -- Ratisbon/Regensburg
+		"Rhegium",
+		"Roma", -- Rome
+		"Saguntum",
+		"Salernum",
+		"Salicula",
+		"Satricum",
+		"Sena Gallica",
+		"Setia",
+		"Signia",
+		"Sinuessa",
+		"Sora",
+		"Spoletium",
+		"Sulci",
+		"Sutrium",
+		"Sybaris",
+		"Syracusae",
+		"Tarentum",
+		"Tarracina",
+		"Thurii",
+		"Toletum",
+		"Turnis Libisonis",
+		"Usellis",
+		"Velitrae",
+		"Venusia",
+		"Vibo Valentia",
+		"Vulturnus"
+	},
+	SettlementNamePrefixes = {
+		"Caesar", -- example: "Caesaraugusta"
+		"Medio", -- example: "Mediolanum" (Milan)
+		"Vindo" -- example: "Vindobona" (Vienna)
+	},
+	SettlementNameSuffixes = {
+		"augusta", -- example: Caesaraugusta
+		"bona", -- example: "Vindobona" (Vienna)
+		"lanum" -- example: "Mediolanum" (Milan)
+	}
+	--]]
+})
+
 DefineCivilization("basque", { -- represents not only the speakers of Vasconic languages, but also various pre-Indo-European cultures
 	Display = "Basque",
 	Visible = true,
@@ -367,7 +469,7 @@ DefineCivilization("etruscan", {
 	Visible = true,
 	Species = "human",
 	Language = "etruscan",
-	ParentCivilization = "teuton",
+	ParentCivilization = "latin",
 	Adjective = "Etruscan",
 	Playable = false
 })
@@ -387,7 +489,7 @@ DefineCivilization("greek", {
 	Visible = true,
 	Species = "human",
 	Language = "greek",
-	ParentCivilization = "teuton",
+	ParentCivilization = "latin",
 	Adjective = "Greek",
 	Playable = false,
 	--[[
@@ -495,114 +597,12 @@ DefineCivilization("illyrian", {
 	Playable = false
 })
 
-DefineCivilization("latin", {
-	Display = "Latin",
-	Visible = true,
-	Species = "human",
-	Language = "latin",
-	ParentCivilization = "teuton",
-	Adjective = "Latin",
-	Playable = false,
-	DefaultColor = "red",
-	CivilizationUpgrade = "upgrade-latin-civilization",
-	--[[
-	SettlementNames = {
-		"Agrigentum",
-		"Alba",
-		"Aleria",
-		"Antium",
-		"Aquileia",
-		"Ardea",
-		"Ariminum",
-		"Arretium",
-		"Beneventum",
-		"Bononia",
-		"Bracara Augusta", -- Braga
-		"Brundisium",
-		"Buxentum",
-		"Capua",
-		"Caralis",
-		"Circeii",
-		"Clusium",
-		"Corfinium",
-		"Cora",
-		"Corduba",
-		"Cosa",
-		"Cremona",
-		"Croton",
-		"Cumae",
-		"Emporium",
-		"Firmum",
-		"Fregellae",
-		"Fregena",
-		"Fyrgi",
-		"Genua", -- Genoa
-		"Hatria",
-		"Heraclea",
-		"Locri",
-		"Luceria",
-		"Lucus Augusti",
-		"Mariana",
-		"Minturnae",
-		"Mutina",
-		"Narnia",
-		"Nora",
-		"Norba",
-		"Novum Castrum",
-		"Olbia",
-		"Olisipo",
-		"Opitergium", -- Oderzo
-		"Ostia",
-		"Paestum",
-		"Placentia",
-		"Puteoli",
-		"Regina Castra", -- Ratisbon/Regensburg
-		"Rhegium",
-		"Roma", -- Rome
-		"Saguntum",
-		"Salernum",
-		"Salicula",
-		"Satricum",
-		"Sena Gallica",
-		"Setia",
-		"Signia",
-		"Sinuessa",
-		"Sora",
-		"Spoletium",
-		"Sulci",
-		"Sutrium",
-		"Sybaris",
-		"Syracusae",
-		"Tarentum",
-		"Tarracina",
-		"Thurii",
-		"Toletum",
-		"Turnis Libisonis",
-		"Usellis",
-		"Velitrae",
-		"Venusia",
-		"Vibo Valentia",
-		"Vulturnus"
-	},
-	SettlementNamePrefixes = {
-		"Caesar", -- example: "Caesaraugusta"
-		"Medio", -- example: "Mediolanum" (Milan)
-		"Vindo" -- example: "Vindobona" (Vienna)
-	},
-	SettlementNameSuffixes = {
-		"augusta", -- example: Caesaraugusta
-		"bona", -- example: "Vindobona" (Vienna)
-		"lanum" -- example: "Mediolanum" (Milan)
-	}
-	--]]
-})
-
 DefineCivilization("minoan", {
 	Display = "Minoan",
 	Visible = true,
 	Species = "human",
 	Language = "minoan",
-	ParentCivilization = "teuton",
+	ParentCivilization = "greek",
 	Adjective = "Minoan",
 	Playable = false
 })
@@ -642,7 +642,7 @@ DefineCivilization("persian", {
 	Visible = true,
 	Species = "human",
 	Language = "avestan",
-	ParentCivilization = "teuton",
+	ParentCivilization = "greek",
 	Adjective = "Persian",
 	Playable = false
 })
@@ -651,7 +651,7 @@ DefineCivilization("phoenician", {
 	Display = "Phoenician",
 	Visible = true,
 	Species = "human",
-	ParentCivilization = "teuton",
+	ParentCivilization = "persian",
 	Adjective = "Phoenician",
 	Playable = false,
 	DefaultColor = "black"
