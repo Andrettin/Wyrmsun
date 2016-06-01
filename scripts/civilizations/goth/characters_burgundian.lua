@@ -244,6 +244,7 @@ DefineCharacter("Gundimar", { -- Source: Norman Davies, "Vanished Kingdoms", 201
 	ProvinceOfOrigin = "Switzerland",
 	Year = 523, -- beginning of Gundimar's reign over the Burgundians in 523 AD; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 96.
 	DeathYear = 534, -- end of reign (was proscribed, pursued and executed by the Franks, and his realm was annexed by them)
+	ViolentDeath = true,
 	Father = "Sigismund", -- from Gibica's line (so presumably a child of Sigismund's)
 	HistoricalTitles = {
 		"head-of-state", 523, 534, "goth", "Burgundy"

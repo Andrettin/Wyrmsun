@@ -65,7 +65,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added the Leadership Aura ability (graphics by Jinn), learnable by dwarven Stonelords and gnomish Masters-of-Arms. Units affected by the aura deal +10% damage.
 
 * Grand Strategy
-- Possible start dates extended to 165 AD for Earth.
+- Possible start dates extended to 162 AD for Earth.
 - The Lauenburg province has been amalgamated into Holstein.
 - Fixed issue which caused workers to be reset to 1 upon loading a save game.
 - Fixed issue which caused Battle Base Building to only be active if, after checking the option, the game was closed and reopened.

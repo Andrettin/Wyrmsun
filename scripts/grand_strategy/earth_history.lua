@@ -186,14 +186,10 @@ if (GrandStrategyYear >= -5500) then
 	
 	-- The people of the Linear Pottery culture arrived in northern Poland and Germany about 5500 BC, possessing knowledge of agriculture; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 139.
 	
-	-- Tybrind Vig (in the coast of the Danish island of Fyn) begins being occupied around 5500 BC (it pertained to the Ertebolle culture); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 142.
-	
 	-- The Polderweg site (Netherlands) was occupied in the late 6th millenium BC; main economic activity was pike fishing, although fishing for roach, bream, tench, eels, catfish and salmon was conducted as well; beavers and otters were the most significant animals hunted (likely for their fur), although pine marten, wild cat and polecat were also trapped for that purpose; remains of wild boar and red and roe deer were found as well; remains of ducks were found (the most important fowl food source); regarding plants acorns, hazelnut, water nut, wild apple and diverse berries were too found there; arrowheads (likely from Linearbandkeramik) were also found there, as well as bag-shaped pottery (from Linearbandkeramik areas or made in this form due to their influence); the people of the Polderweg site led a semi-nomadic life, and occupied the site only in January and February of each year; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 147.
 end
 
 if (GrandStrategyYear >= -5400) then
-	-- Ringkloster (Late Mesolithic interior site in eastern Jutland, c. 20 km inland and by lake Skanderborg) begins being irregularly occupied at around 5400 BC; wild boars were hunted for their meat; pine martens and otters were hunted for their fur; the site was generally occupied between Fall and early Spring; Ringkloster may have been occupied by Ertebolle foragers, who would pass the remnant of the year at the coast; it may also have been inhabited by a people distinct from the coast-inhabitants; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 135.
-	
 	-- Dabki (Late Mesolithic inland site near Poland's Baltic coast) faced several occupations from 5400 BC; beavers, deer and ducks were hunted, and many sorts of freshwater fishes were caught, particularly pike and perch; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, pp. 135-136.
 end
 
@@ -250,10 +246,6 @@ if (GrandStrategyYear >= -3800) then
 	-- Coastal Ertebolle Mesolithic sites and shell middens cease being occupied c. 3800 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 136.
 end
 
-if (GrandStrategyYear >= -3550) then
-	-- Ringkloster (Late Mesolithic interior site in eastern Jutland, c. 20 km inland and by lake Skanderborg) ceases being irregularly occupied at around 5400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 135.
-end
-
 if (GrandStrategyYear >= -3500) then
 	-- Neolithic farming finishes spreading throughout Europe (from the Near East), specially through the Danube-Rhine axis; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 128.
 end
@@ -302,10 +294,6 @@ if (GrandStrategyYear >= -2500) then
 	-- Around 2500 BC the star Thuban in the constellation of Draco was the pole star; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 5.
 	
 	-- The Proto-Germanic language appears c. 2500 BC; Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 1.
-end
-
-if (GrandStrategyYear >= -2400) then
-	-- Corded Ware culture (neolithic) ends in Zealand in 2400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 38.
 end
 
 if (GrandStrategyYear >= -2140) then
@@ -950,7 +938,7 @@ if (GrandStrategyYear >= 325) then
 end
 
 if (GrandStrategyYear >= 357) then
-	-- Roman commander (and later emperor) Julian defeat an Alamannic army (led by their king Chnodomar and his nephew Serapio/Agenarich) in the battle of Argentoratum in 357 AD; the Alamanns counted with an alliance of five kings (Vestralp, Urius, Ursicinus, Suomer and Hortar), totalling 35,000 soldiers commanded by 17 warlords, with each leading 2,000-3,000 warriors; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 231.
+	-- Roman commander (and later emperor) Julian defeated an Alamannic army (led by their king Chnodomar and his nephew Serapio/Agenarich) in the battle of Argentoratum in 357 AD; the Alamanns counted with an alliance of five kings (Vestralp, Urius, Ursicinus, Suomer and Hortar), totalling 35,000 soldiers commanded by 17 warlords, with each leading 2,000-3,000 warriors; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 231.
 end
 
 if (GrandStrategyYear >= 358) then
