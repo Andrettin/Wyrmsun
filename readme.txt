@@ -58,6 +58,13 @@ https://github.com/Andrettin/Wyrmsun
 ############################################################
 
 -----------------------------------------------------------------------
+- 2.2.7
+-----------------------------------------------------------------------
+
+* Grand Strategy
+- Fixed an issue which caused a town hall to not be generated for the defender with battle base building in certain random circumstances, which also had the consequence of making the battle unwinnable for the attacker.
+
+-----------------------------------------------------------------------
 - 2.2.6
 -----------------------------------------------------------------------
 
