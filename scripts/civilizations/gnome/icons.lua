@@ -152,3 +152,5 @@ else
 		File = "tilesets/swamp/gnome/icons/gnomish_caravan.png"
 	})
 end
+
+Load("scripts/civilizations/gnome/icons_deep_gnome.lua")

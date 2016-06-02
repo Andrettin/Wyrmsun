@@ -29,7 +29,11 @@ DefineFaction("Acthnic Tribe", {
 	Civilization = "gnome",
 	Type = "tribe",
 	Colors = {"red"},
-	DevelopsTo = {"Untersberg"}
+	DevelopsTo = {"Acthna", "Untersberg"},
+	FactionUpgrade = "upgrade-acthnic-tribe-faction",
+	ButtonIcons = {
+		"patrol", "icon-gnomish-patrol-land-deep-gnome-red-hair"
+	}
 })
 
 DefineFaction("Cubital Tribe", {
@@ -44,6 +48,14 @@ DefineFaction("Sagan Tribe", {
 	Type = "tribe",
 	Colors = {"green"},
 	DevelopsTo = {"Untersberg"}
+})
+
+DefineFaction("Acthna", {
+	ParentFaction = "Acthnic Tribe",
+	Civilization = "gnome",
+	Type = "polity",
+	Colors = {"red"},
+	DefaultTier = "duchy"
 })
 
 DefineFaction("Untersberg", {

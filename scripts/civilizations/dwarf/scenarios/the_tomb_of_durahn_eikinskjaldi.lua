@@ -27,6 +27,18 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+if (LoadedGame == false) then
+	--SetPlayerData(0, "Faction", "Eikinskjaldi Clan")
+	SetPlayerData(0, "Faction", "Norlund Clan")
+	SetPlayerData(1, "Faction", "Untersberg")
+	SetPlayerData(1, "Name", "Raiders")
+	if (IsNetworkGame() and GrandStrategy == false) then
+		--SetPlayerData(2, "Faction", "Eikinskjaldi Clan")
+		SetPlayerData(2, "Faction", "Norlund Clan")
+		SetPlayerData(2, "Name", "Baglur")
+	end
+end
+
 AddTrigger(
 	function()
 		if (GameCycle == 0) then

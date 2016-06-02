@@ -84,6 +84,10 @@ DefineUnitType("unit-gnomish-worker", { Name = _("Scavenger"),
 			"icon", "icon-gnomish-worker-gray-hair",
 			"file", "gnome/units/gnomish_worker_gray_hair.png",
 			"file-when-loaded", "gold", "gnome/units/gnomish_worker_with_gold_gray_hair.png",
+			"file-when-loaded", "silver", "gnome/units/gnomish_worker_with_gold_gray_hair.png",
+			"file-when-loaded", "copper", "gnome/units/gnomish_worker_with_gold_gray_hair.png",
+			"file-when-loaded", "stone", "gnome/units/gnomish_worker_with_gold_gray_hair.png",
+			"file-when-loaded", "coal", "gnome/units/gnomish_worker_with_gold_gray_hair.png",
 			"file-when-loaded", "lumber", "gnome/units/gnomish_worker_with_lumber_gray_hair.png"
 		}
 	},
@@ -487,6 +491,8 @@ DefineUnitType("unit-gnomish-caravan", { Name = _("Caravan"),
 	}
 } )
 
+Load("scripts/civilizations/gnome/units_deep_gnome.lua")
+
 DefineUnitType("unit-gnomish-town-hall", { Name = _("Town Hall"),
 	Parent = "unit-template-town-hall",
 	Civilization = "gnome",
@@ -494,9 +500,10 @@ DefineUnitType("unit-gnomish-town-hall", { Name = _("Town Hall"),
 	Image = {"file", "gnome/buildings/town_hall.png", "size", {128, 128}},
 	Shadow = {"file", "gnome/buildings/town_hall_shadow.png", "size", {128, 128}},
 	Animations = "animations-building", Icon = "icon-gnomish-town-hall",
-	Trains = {"unit-gnomish-worker"},
+	Trains = {"unit-gnomish-worker", "unit-deep-gnomish-worker"},
 	AiDrops = {"unit-wool-shoes", "unit-furry-wool-shoes"},
 	DropAffixes = {"upgrade-item-prefix-jinns", "upgrade-item-prefix-penetrating", "upgrade-item-prefix-storm", "upgrade-item-prefix-vicious", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-the-jinn", "upgrade-item-suffix-of-lightning", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-the-snigill", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-trickery"},
+	DropSpells = {"spell-acthnic-allegiance"},
 	Sounds = {
 		"ready", "basic-gnome-voices-work-complete",
 		"help", "basic-gnome-voices-help-town"
@@ -523,7 +530,7 @@ DefineUnitType("unit-gnomish-barracks", { Name = _("Barracks"),
 	Image = {"file", "gnome/buildings/barracks.png", "size", {96, 96}},
 	Shadow = {"file", "gnome/buildings/barracks_shadow.png", "size", {96, 96}},
 	Animations = "animations-building", Icon = "icon-gnomish-barracks",
-	Trains = {"unit-gnomish-recruit", "unit-dwarven-scout", "unit-dwarven-yale-rider", "unit-dwarven-ballista", "unit-dwarven-gryphon-rider", "unit-gnomish-herbalist"},
+	Trains = {"unit-gnomish-recruit", "unit-deep-gnomish-recruit", "unit-dwarven-scout", "unit-dwarven-yale-rider", "unit-dwarven-ballista", "unit-dwarven-gryphon-rider", "unit-gnomish-herbalist", "unit-deep-gnomish-herbalist"},
 	AiDrops = {"unit-thrusting-sword", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-wool-shoes", "unit-furry-wool-shoes"},
 	DropAffixes = {"upgrade-item-prefix-jinns", "upgrade-item-prefix-penetrating", "upgrade-item-prefix-storm", "upgrade-item-prefix-vicious", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-the-jinn", "upgrade-item-suffix-of-lightning", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-the-snigill", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-trickery"},
 	Sounds = {
@@ -536,3 +543,6 @@ DefineUnitType("unit-gnomish-worker", { -- this is here because the buildings ne
 	Trains = {"unit-gnomish-town-hall", "unit-gnomish-farm", "unit-gnomish-barracks", "unit-dwarven-lumber-mill", "unit-dwarven-smithy", "unit-dwarven-yale-pen", "unit-dwarven-sentry-tower", "unit-dwarven-dock", "unit-gold-mine", "unit-silver-mine", "unit-copper-mine"}
 } )
 
+DefineUnitType("unit-deep-gnomish-worker", { -- this is here because the buildings need to be defined before being assigned to the miner's "Trains" array
+	Trains = {"unit-gnomish-town-hall", "unit-gnomish-farm", "unit-gnomish-barracks", "unit-dwarven-lumber-mill", "unit-dwarven-smithy", "unit-dwarven-yale-pen", "unit-dwarven-sentry-tower", "unit-dwarven-dock", "unit-gold-mine", "unit-silver-mine", "unit-copper-mine"}
+} )

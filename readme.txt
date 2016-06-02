@@ -64,6 +64,12 @@ https://github.com/Andrettin/Wyrmsun
 * Abilities
 - Added the Leadership Aura ability (graphics by Jinn), learnable by dwarven Stonelords and gnomish Masters-of-Arms. Units affected by the aura deal +10% damage.
 
+* Civilizations
+- The gnomish patrol button has been improved (by Jinn).
+
+* Factions
+- Added "Acthna" polity for the gnomes.
+
 * Grand Strategy
 - Possible start dates extended to 162 AD for Earth.
 - The Lauenburg province has been amalgamated into Holstein.
@@ -73,6 +79,10 @@ https://github.com/Andrettin/Wyrmsun
 - Added a number of Latin and Celtic cultural settlement names.
 - Split Portugal into the Alentejo, Beira and Douro provinces.
 - Trade settings are now correctly carried over when forming a new faction.
+- Added Acthna province for Nidavellir.
+
+* Items
+- Added "Scroll of Acthnic Allegiance", which transforms a gnomish unit (including gnomish custom heroes) into their faction equivalent for the Acthnic Tribe.
 
 * Literary Works
 - Added the "Meditations" literary work, which grants +1 HP. It can be dropped from the Latin Forum.
@@ -86,6 +96,7 @@ https://github.com/Andrettin/Wyrmsun
 * Units
 - Added Goblin Magnate (icon design by Jesse Crider and graphics by Jinn), which innately has the Leadership Aura.
 - Added "the Clever" epithet for the Intelligent trait, and "the Blessed" for the Pious trait.
+- Gnomes of the Acthnic Tribe and the Acthna factions now have gray skin (graphic changes by Jinn).
 
 * Upgrades
 - Added Coinage technology for the Goblins (icon design by Jesse Crider and graphics by Jinn).

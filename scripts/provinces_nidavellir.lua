@@ -25,6 +25,27 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineProvince("Acthna", {
+	World = "Nidavellir",
+	Tiles = {},
+	CulturalNames = {
+		"gnome", "Acthna"
+	},
+	Map = "maps/random/random-map-cave.smp",
+	SettlementTerrain = "Mountains",
+	Claims = {
+		"gnome", "Acthnic Tribe",
+		"gnome", "Acthna"
+	},
+	HistoricalOwners = {
+		-3000, "gnome", "Acthnic Tribe", -- maybe should be later?
+		-1, "gnome", "Acthna" -- maybe should be at another date?
+	},
+	HistoricalCultures = {
+		-3000, "gnome"
+	}
+})
+
 DefineProvince("Aurvang", {
 	World = "Nidavellir",
 	Tiles = {},

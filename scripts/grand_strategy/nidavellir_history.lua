@@ -60,6 +60,16 @@ GenerateProvince({
 	}
 })
 
+GenerateProvince({
+	Province = WorldMapProvinces.Acthna,
+	BorderProvinces = {"Brown Hills"},
+	Resources = {
+		silver = 2,
+		stone = 1,
+		mushrooms = 3
+	}
+})
+
 -- generate resources for provinces
 --AddProvinceResource(WorldMapProvinces.BrownHills, "gold", 1)
 AddProvinceResource(WorldMapProvinces.BrownHills, "mushrooms", 2)

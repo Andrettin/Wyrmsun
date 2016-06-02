@@ -82,6 +82,10 @@ DefineUnitType("unit-goblin-worker", { Name = _("Worker"),
 			"variation-id", "spiky-hair",
 			"file", "goblin/units/goblin_worker_spiky_hair.png",
 			"file-when-loaded", "gold", "goblin/units/goblin_worker_with_gold_spiky_hair.png",
+			"file-when-loaded", "silver", "goblin/units/goblin_worker_with_gold_spiky_hair.png",
+			"file-when-loaded", "copper", "goblin/units/goblin_worker_with_gold_spiky_hair.png",
+			"file-when-loaded", "stone", "goblin/units/goblin_worker_with_gold_spiky_hair.png",
+			"file-when-loaded", "coal", "goblin/units/goblin_worker_with_gold_spiky_hair.png",
 			"file-when-loaded", "lumber", "goblin/units/goblin_worker_with_lumber_spiky_hair.png"
 		}
 	},

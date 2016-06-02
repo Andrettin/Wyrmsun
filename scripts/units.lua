@@ -79,6 +79,7 @@ Units = {
 	"upgrade-dwarven-masonry",
 	"upgrade-dwarven-coinage", "upgrade-dwarven-runewriting", "upgrade-dwarven-alchemy",
 	"unit-gnomish-worker", "unit-gnomish-recruit", "unit-gnomish-duelist", "unit-gnomish-master-at-arms", "unit-gnomish-herbalist", "unit-gnomish-caravan",
+	"unit-deep-gnomish-worker", "unit-deep-gnomish-recruit", "unit-deep-gnomish-duelist", "unit-deep-gnomish-master-at-arms", "unit-deep-gnomish-herbalist",
 	"unit-gnomish-town-hall", "unit-gnomish-farm", "unit-gnomish-barracks",
 	"unit-goblin-worker", "unit-goblin-magnate",
 	"unit-goblin-swordsman", "unit-goblin-spearman", "unit-goblin-archer", "unit-goblin-headhunter", "unit-goblin-thief",
