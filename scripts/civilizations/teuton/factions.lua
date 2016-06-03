@@ -537,7 +537,11 @@ DefineFaction("Holy Rome", {
 	Language = "high-german",
 	Colors = {"yellow"},
 	DefaultTier = "empire",
-	HistoricalFactionDerivations = {919, "teuton", "Francia"}
+	HistoricalFactionDerivations = {919, "teuton", "Francia"},
+	HistoricalDiplomacyStates = {
+		985, "slav", "Bohemia", "war", -- War between Otto II and Bohemia broke out in 985; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 616.
+		987, "slav", "Bohemia", "sovereign" -- Bohemia became again a vassal of the Holy Roman Empire in 987, under heavier subjection; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 616.
+	}
 })
 
 DefineFaction("Jutland", {

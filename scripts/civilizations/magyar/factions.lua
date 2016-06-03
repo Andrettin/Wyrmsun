@@ -25,6 +25,13 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineFaction("Magyar Tribe", {
+	Civilization = "magyar",
+	Type = "tribe",
+	Colors = {"green"},
+	DevelopsTo = {"Hungary"}
+})
+
 DefineFaction("Hungary", {
 	Civilization = "magyar",
 	Type = "polity",

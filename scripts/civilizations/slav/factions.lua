@@ -44,12 +44,38 @@ DefineFaction("Venedae Tribe", { -- Source: William R. Shepherd, "Historical Atl
 	Colors = {"yellow"}
 })
 
+DefineFaction("Bohemia", {
+	Civilization = "slav",
+	Type = "polity",
+--	Language = "czech",
+	Colors = {"red"},
+	DefaultTier = "duchy",
+	HistoricalTiers = {
+		1086, "kingdom" -- Henry IV elevated Bohemia to a kingdom in 1086; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 621.
+	},
+	HistoricalDiplomacyStates = {
+		1039, "magyar", "Hungary", "alliance" -- Duke Břetislav I of Bohemia made an alliance with King Peter of Hungaryin 1039; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 619.
+	}
+})
+
 DefineFaction("Croatia", {
 	Civilization = "slav",
 	Type = "polity",
 --	Language = "old-church-slavonic",
 	Colors = {"blue", "red"},
 	DefaultTier = "kingdom"
+})
+
+DefineFaction("Moravia", {
+	Civilization = "slav",
+	Type = "polity",
+--	Language = "czech",
+	Colors = {"brown"},
+	DefaultTier = "duchy",
+	HistoricalDiplomacyStates = {
+		874, "slav", "Bohemia", "sovereign", -- The Bohemian duke Bořivoj recognized the overlorship of Svatopluk of Moravia in 874; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 607.
+		895, "slav", "Bohemia", "peace" -- The sons of Bořivoj, Spytihněv and Vratislav, recognized German overlordship over Bohemia in 895, abandoning Moravian suzerainty; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, pp. 612-613.
+	}
 })
 
 DefineFaction("Muscovy", {

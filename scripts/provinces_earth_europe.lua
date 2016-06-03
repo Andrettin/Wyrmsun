@@ -904,6 +904,7 @@ DefineProvince("Bohemia", {
 		"celt", "Boiohaemum",
 		"germanic", "Boiohaemum", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 		"latin", "Boiohaemum",
+		"slav", "Bohemia",
 		"teuton", "Böhmen"
 	},
 	FactionCulturalNames = {
@@ -932,6 +933,7 @@ DefineProvince("Bohemia", {
 	Claims = {
 		"basque", "Linearware Tribe",
 		"celt", "Boii Tribe",
+		"slav", "Bohemia",
 		"teuton", "Marcomanni Tribe",
 		"teuton", "Holy Rome"
 	},
@@ -940,13 +942,23 @@ DefineProvince("Bohemia", {
 		-400, "celt", "Boii Tribe", -- Boii attested c. 400 BC; Source: John T. Koch, "Celtic Culture: Aberdeen breviary-celticism", 2006, pp. 223-224.
 		-9, "teuton", "Marcomanni Tribe", -- Marbod, king of the Suebic tribe of the Marcomanni, conquers Bohemia
 		526, "teuton", "Bavarian Tribe", -- political situation in 526-600 in Europe; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+		788, "slav", "Bohemia", -- (Slavic) Bohemians inhabited Bohemia in 788; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 611.
 		919, "teuton", "Holy Rome", -- Duchy of Bohemia; political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		1560, "teuton", "Austria", -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalCultures = {
 		-5500, "basque",
 		-400, "celt",
-		-9, "teuton"
+		-9, "teuton",
+		788, "slav" -- (Slavic) Bohemians inhabited Bohemia in 788; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 611.
+	},
+	HistoricalSettlementBuildings = {
+		993, "unit-teuton-temple", true, -- a Benedictine monastery was founded in Břevnov (near Prague) in 993; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 615.
+		998, "unit-teuton-temple", true, -- the Benedictine monastery of St. John on the Ostrov was founded on an island in the Moldau river near Davle (south of Prague) in 999; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 615.
+		1115, "unit-teuton-temple", true, -- the Benedictine abbey of Kladruby (in German: Kladrau) was founded to the west of Pilsen in 1115; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 622.
+		1140, "unit-teuton-temple", true, -- the Premonstratensian house (monastery?) of "Mount Zion" was founded in Strahov (near Prague Castle) in 1140; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 623.
+		1213, "unit-teuton-temple", true, -- a Premonstratensian monastery was founded in Chotěšov (German: Choteschau) (southwest of Pilsen) in 1213; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 627.
+		1213, "unit-teuton-temple", true -- a Benedictine priory was founded in Politz (in Bohemia, near the Silesian Glatz) in 1213; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 627.
 	},
 	HistoricalModifiers = {
 		1347, "upgrade-university", true, -- University founded in Prague in 1347. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.
@@ -3134,6 +3146,7 @@ DefineProvince("Hungary", {
 		-264, "persian", "Iazyge Tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 --		161, "goth", "Vandal Tribe", -- Parts of northern Hungary were inhabited by the Vandali in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		161, "persian", "Iazyge Tribe", -- The area was inhabited by the Iazyges in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		896, "magyar", "Magyar Tribe", -- Magyars held the lands between the Danube and the Theiss in 896; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 610.
 		919, "magyar", "Hungary", -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		1560, "teuton", "Turkey" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
@@ -4247,6 +4260,7 @@ DefineProvince("Montenegro", {
 DefineProvince("Moravia", {
 	World = "Earth",
 	CulturalNames = {
+		"slav", "Moravia",
 		"teuton", "Mähren"
 	},
 	Tiles = {
@@ -4266,6 +4280,7 @@ DefineProvince("Moravia", {
 	SettlementTerrain = "Plains",
 	Claims = {
 		"basque", "Linearware Tribe",
+		"slav", "Moravia",
 		"teuton", "Buri Tribe",
 		"teuton", "Quadi Tribe",
 		"teuton", "Holy Rome"
@@ -4274,12 +4289,25 @@ DefineProvince("Moravia", {
 		-5500, "basque", "Linearware Tribe", -- Linear Pottery culture existed in parts of Central Europe between 7000 and 2000 BC; since the other source gives them as arriving in northern Poland and Germany c. 5500 BC, let's place their beginnings at that date; Source: "Atlas de História Mundial", 2001, pp. 40-41.
 		-9, "teuton", "Quadi Tribe", -- if the Boii were conquered by the Marcomanni in 9 BC, the Quadi probably moved to Moravia and Slovakia at around the same time
 		161, "teuton", "Lombard Tribe", -- The area was inhabited by the Langobardi in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
-		919, "teuton", "Holy Rome", -- Duchy of Bohemia; political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+		830, "slav", "Moravia", -- Mojmír was duke of Moravia 830-846; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 606.
+		869, "teuton", "East Francia", -- Moravia conquered by East Francia in 869; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 607.
+		871, "slav", "Moravia", -- Moravia rose against East Frankish domination in 871; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 607.
+		906, "magyar", "Magyar Tribe", -- Magyars conquered Moravia in 906; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 610.
+		1003, "slav", "Poland", -- Moravia conquered by Poland in 1003; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 611.
+		1030, "slav", "Bohemia", -- Moravia acquired by Boleslav I of Bohemia in 1030; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 611.
 		1560, "teuton", "Austria", -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalCultures = {
 		-5500, "basque",
-		-9, "teuton"
+		-9, "teuton",
+		830, "slav" -- Moravia inhabited by Slavic peoples at the time of Mojmír's reign; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 606.
+	},
+	HistoricalSettlementBuildings = {
+		1201, "unit-teuton-temple", true, -- a Cistercian monastery was founded in Velehrad in 1201; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 627.
+		1211, "unit-teuton-temple", true, -- a Cistercian nunnery was founded in Doubravník in 1211; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 627.
+		1225, "unit-teuton-temple", true, -- a nunnery was founded by Hedwig of Znojmo in Oslavany (or Marienthal) (near Brno) in 1225; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 627.
+		1232, "unit-teuton-temple", true, -- Queen Constance founded a cloister called "The Door to Heaven" in Tišňov in 1232; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 627.
+		1251, "unit-teuton-temple", true, -- Boček (lord of Kunštát and Poděbrady) founded a monastery in Ždár (Saar) in 1251; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 627.
 	},
 	HistoricalModifiers = {
 		1581, "upgrade-university", true, -- University founded in Olmütz in 1581. Source: The Cambridge Modern History Atlas, p. 9.
@@ -4941,6 +4969,9 @@ DefineProvince("Pannonia", {
 	},
 	HistoricalClaims = {
 		10, "latin", "Rome"
+	},
+	HistoricalSettlementBuildings = {
+		850, "unit-teuton-temple", true -- in 850 Archbishop Liutpram consecrated the first church built at Moosburg (on the Platten See, in Lower Pannonia); Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 608.
 	},
 	HistoricalModifiers = {
 		1367, "upgrade-university", true -- University founded in Fünfkirchen in 1367. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.
@@ -5731,6 +5762,9 @@ DefineProvince("Slovakia", {
 		-5500, "basque",
 		-264, "celt",
 		-9, "teuton"
+	},
+	HistoricalSettlementBuildings = {
+		830, "unit-teuton-temple", true -- a Christian church finished construction in Nitra c. 830; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 608.
 	},
 	HistoricalModifiers = {
 		1465, "upgrade-university", true -- University founded in Bratislava in 1465. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.
@@ -6559,7 +6593,8 @@ DefineProvince("Upper Saxony", {
 		919, "teuton", "Holy Rome" -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 	},
 	HistoricalCultures = {
-		-264, "teuton"
+		-264, "teuton",
+		874, "slav" -- The land between the Upper Elbe and the Saale was inhabited by the Sorbs in 874; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 607.
 	},
 	HistoricalModifiers = {
 		1409, "upgrade-university", true, -- University founded in Leipzig in 1409. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.

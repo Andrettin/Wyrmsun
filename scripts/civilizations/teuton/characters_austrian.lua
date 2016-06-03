@@ -25,6 +25,16 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineCharacter("Adalram", { -- Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 608.
+	Name = "Adalram",
+	Gender = "male",
+	Type = "unit-teuton-priest", -- Archbishop of Salzburg
+	Civilization = "teuton",
+	ProvinceOfOrigin = "Salzburg",
+	Year = 821, -- Archbishop of Salzburg from 821 on
+	DeathYear = 836, -- Archbishop of Salzburg until 836
+})
+
 DefineCharacter("Peter von Salzgeber", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 39.
 	Name = "Peter",
 	NameElements = {"word", "high-german", "noun", "Peter"},

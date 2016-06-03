@@ -30,7 +30,7 @@ DefineFaction("Frank Tribe", {
 	Type = "tribe",
 	Language = "old-frankish",
 	Colors = {"green", "orange"},
-	DevelopsTo = {"Francia", "Franconia", "Austrasia", "Neustria", "Netherlands"},
+	DevelopsTo = {"Francia", "Franconia", "Austrasia", "Neustria", "East Francia", "Netherlands"},
 	FactionUpgrade = "upgrade-frank-tribe-faction",
 	UIFillers = {
 		"dlcs/frankish_faction_flair/graphics/ui/filler_bottom.png", 380, -181,
@@ -66,12 +66,26 @@ DefineFaction("Austrasia", {
 	Civilization = "teuton",
 	ParentFaction = "Francia",
 	Type = "polity",
-	Language = "high-german",
 	Colors = {"pink"},
 	DefaultTier = "kingdom", -- correct?
-	DevelopsTo = {"Holy Rome", "Francia"},
+	DevelopsTo = {"Francia", "Holy Rome"},
 	MinisterTitles = {
 		"head-of-government", "no-gender", "monarchy", "no-faction-tier", "Mayor of the Palace" -- Source: "Medieval Warfare V.2", 2013, p. 7.
+	}
+})
+
+DefineFaction("East Francia", { -- Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 607.
+	Civilization = "teuton",
+	ParentFaction = "Francia",
+	Type = "polity",
+	Colors = {"blue"},
+	DefaultTier = "kingdom",
+	DevelopsTo = {"Holy Rome", "Francia"},
+	HistoricalFactionDerivations = {869, "teuton", "Francia"}, -- East Francia existed in 869, when it conquered Moravia; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 607.
+	HistoricalDiplomacyStates = {
+		871, "slav", "Moravia", "war", -- Moravia rose against East Frankish rule in 871; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 607.
+		874, "slav", "Moravia", "sovereign", -- Moravia submitted as a vassal (paying an annual tribute) to the East Franks in 874; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 607.
+		895, "slav", "Bohemia", "sovereign" -- The sons of Bořivoj, Spytihněv and Vratislav, recognized German overlordship over Bohemia in 895; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, pp. 612-613.
 	}
 })
 
@@ -89,10 +103,9 @@ DefineFaction("Neustria", {
 	Civilization = "teuton",
 	ParentFaction = "Francia",
 	Type = "polity",
-	Language = "high-german",
 	Colors = {"orange"},
 	DefaultTier = "kingdom", -- correct?
-	DevelopsTo = {"Holy Rome", "Francia"},
+	DevelopsTo = {"Francia", "Holy Rome"},
 	MinisterTitles = {
 		"head-of-government", "no-gender", "monarchy", "no-faction-tier", "Mayor of the Palace" -- Source: "Medieval Warfare V.2", 2013, p. 7.
 	}
