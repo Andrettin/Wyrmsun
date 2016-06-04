@@ -25,27 +25,12 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-function text_compare( a, b )
-	if (Texts[a] and Texts[b]) then
-		return Texts[a].Year < Texts[b].Year
-	end
-end
-
-function chapter_compare( a, b )
-	for text_key, text_value in pairsByKeys(Texts, text_compare) do
-		if (Texts[text_key].Chapters[a] and Texts[text_key].Chapters[b]) then
-			return Texts[text_key].Chapters[a].Index < Texts[text_key].Chapters[b].Index
-		end
-	end
-end
-
 function RunEncyclopediaMenu()
 	if (GrandStrategy) then
 		GrandStrategyGamePaused = true
 	end
 	
 	Load("scripts/game_concepts.lua")
-	Load("scripts/texts.lua")
 	Load("scripts/menus/encyclopedia_civilizations.lua")
 
 	if (RunningScenario == false) then
@@ -110,7 +95,6 @@ function RunEncyclopediaMenu()
 
 	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * 9),
 		function()
-			Texts = nil;
 			Worlds = nil;
 			CivilizationsEncyclopedia = nil;
 			menu:stop();
@@ -525,10 +509,6 @@ function addEncyclopediaIcon(unit_name, state, menu, x, y)
 end
 
 function OpenEncyclopediaUnitEntry(unit_name, state)
-	if (Texts == nil) then
-		Load("scripts/texts.lua")
-	end
-
 	if (state ~= "heroes" and state ~= "item_prefixes" and state ~= "item_suffixes" and state ~= "runic_suffixes" and state ~= "unique_items") then
 		if (state ~= "technologies" and string.find(unit_name, "upgrade") == nil) then
 			if (
@@ -833,9 +813,11 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 	
 	-- add buttons of texts related to the subject matter of the entry
 	local chapter_references = 0
-	for text_key, text_value in pairsByKeys(Texts, text_compare) do
-		for chapter_key, chapter_value in pairsByKeys(Texts[text_key].Chapters, chapter_compare) do
-			if (string.find(l:getCaption(), "~<" .. Texts[text_key].Chapters[chapter_key].Title .. "~>") ~= nil) then
+	local texts = GetTexts()
+	for i, text_name in ipairs(texts) do
+		local chapters = GetTextData(text_name, "Chapters")
+		for j=1, table.getn(chapters) do
+			if (string.find(l:getCaption(), "~<" .. chapters[j] .. "~>") ~= nil) then
 				chapter_references = chapter_references + 1
 			end
 		end
@@ -850,15 +832,16 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 	else
 		chapter_x = -2
 	end
-	for text_key, text_value in pairsByKeys(Texts, text_compare) do
-		for chapter_key, chapter_value in pairsByKeys(Texts[text_key].Chapters, chapter_compare) do
-			if (string.find(l:getCaption(), "~<" .. Texts[text_key].Chapters[chapter_key].Title .. "~>") ~= nil) then
-				if (GetTableSize(Texts[text_key].Chapters) > 1) then
-					menu:addFullButton(Texts[text_key].Chapters[chapter_key].Title, "", offx + 208 + (113 * chapter_x), offy + 104 + (36 * chapter_y),
-						function() OpenEncyclopediaText(text_key, chapter_key); end)
+	for i, text_name in ipairs(texts) do
+		local chapters = GetTextData(text_name, "Chapters")
+		for j=1, table.getn(chapters) do
+			if (string.find(l:getCaption(), "~<" .. chapters[j] .. "~>") ~= nil) then
+				if (table.getn(chapters) > 1) then
+					menu:addFullButton(chapters[j], "", offx + 208 + (113 * chapter_x), offy + 104 + (36 * chapter_y),
+						function() OpenEncyclopediaText(text_name, chapters[j]); end)
 				else
-					menu:addFullButton(Texts[text_key].Chapters[chapter_key].Title, "", offx + 208 + (113 * chapter_x), offy + 104 + (36 * chapter_y),
-						function() OpenEncyclopediaText(text_key); end)
+					menu:addFullButton(chapters[j], "", offx + 208 + (113 * chapter_x), offy + 104 + (36 * chapter_y),
+						function() OpenEncyclopediaText(text_name); end)
 				end
 				chapter_x = chapter_x + 2
 			end
@@ -884,15 +867,16 @@ function RunEncyclopediaTextsMenu()
 	
 	menu:addLabel("~<Encyclopedia: Texts~>", offx + 320, offy + 104 + 36*-2)
 
+	local texts = GetTexts()
 	local text_y = -1
-	for text_key, text_value in pairsByKeys(Texts, text_compare) do
+	for i, text_name in ipairs(texts) do
 		local text_hotkey = ""		
-		if (string.find(_(Texts[text_key].Title), "~!") ~= nil) then
-			text_hotkey = string.sub(string.match(_(Texts[text_key].Title), "~!%a"), 3)
+		if (string.find(_(text_name), "~!") ~= nil) then
+			text_hotkey = string.sub(string.match(_(text_name), "~!%a"), 3)
 			text_hotkey = string.lower(text_hotkey)
 		end
-		menu:addFullButton(Texts[text_key].Title, text_hotkey, offx + 208, offy + 104 + 36*text_y,
-			function() OpenEncyclopediaText(text_key); end)
+		menu:addFullButton(text_name, text_hotkey, offx + 208, offy + 104 + 36*text_y,
+			function() OpenEncyclopediaText(text_name); end)
 		text_y = text_y + 1
 	end
 
@@ -902,7 +886,7 @@ function RunEncyclopediaTextsMenu()
 	menu:run()
 end
 
-function OpenEncyclopediaText(text_key, chosen_chapter)
+function OpenEncyclopediaText(text_name, chosen_chapter)
 	if (RunningScenario == false) then
 		if not (IsMusicPlaying()) then
 			PlayMusicName("MenuTheme")
@@ -919,7 +903,8 @@ function OpenEncyclopediaText(text_key, chosen_chapter)
 	else
 		height_offset = 2
 	end
-	local title = encyclopedia_entry_menu:addLabel("~<" .. Texts[text_key].Title .. "~>", offx + 320, offy + 104 + 36*(-4 + height_offset), nil, true)
+	local title = encyclopedia_entry_menu:addLabel("~<" .. text_name .. "~>", Video.Width / 2, offy + 104 + 36*(-4 + height_offset), nil, true)
+	title:adjustSize()
 	title:setAlignment(MultiLineLabel.CENTER)
 
 	local l = MultiLineLabel()
@@ -932,44 +917,57 @@ function OpenEncyclopediaText(text_key, chosen_chapter)
 	l:setLineWidth(Video.Width - 64)
 	encyclopedia_entry_menu:add(l, 32, offy + 104 + 36*(-3 + height_offset))
 	
+	local chapters = GetTextData(text_name, "Chapters")
+	
 	local current_chapter
 	local current_chapter_number
 	local page_number_label = encyclopedia_entry_menu:addLabel("     ", offx + 320, (Video.Height - 90) + 18*4, Fonts["game"], true)
 	local page_number
 	local current_page = 1
 	
-	local cover_text = "\n\n" .. Texts[text_key].Author .. "\n\n" .. Texts[text_key].Year
-	if (Texts[text_key].Publisher) then
-		cover_text = cover_text .. "\n\n" .. Texts[text_key].Publisher
+	local cover_text = ""
+	if (GetTextData(text_name, "Author") ~= "") then
+		cover_text = cover_text .. "\n\n" .. GetTextData(text_name, "Author")
 	end
-	cover_text = cover_text .. "\n\n" .. Texts[text_key].CopyrightNotice
-	if (Texts[text_key].Notes) then
-		cover_text = cover_text .. "\n\n[Note: " .. Texts[text_key].Notes .. "]"
+	if (GetTextData(text_name, "Translator") ~= "") then
+		cover_text = cover_text .. "\n\n" .. GetTextData(text_name, "Translator") .. " (Translator)"
+	end
+	if (GetTextData(text_name, "Publisher") ~= "") then
+		cover_text = cover_text .. "\n\n" .. GetTextData(text_name, "Publisher")
+	end
+	if (GetTextData(text_name, "Year") ~= 0) then
+		cover_text = cover_text .. "\n\n" .. GetTextData(text_name, "Year")
+	end
+	if (GetTextData(text_name, "CopyrightNotice") ~= "") then
+		cover_text = cover_text .. "\n\n" .. GetTextData(text_name, "CopyrightNotice")
+	end
+	if (GetTextData(text_name, "Notes") ~= "") then
+		cover_text = cover_text .. "\n\n[Note: " .. GetTextData(text_name, "Notes") .. "]"
 	end
 
 	if (chosen_chapter == nil) then
 		current_chapter = "Cover"
 		current_chapter_number = 1
-		page_number = Texts[text_key].InitialPage - 1
+		page_number = GetTextData(text_name, "InitialPage") - 1
 		l:setCaption(cover_text)
 		l:setAlignment(MultiLineLabel.CENTER)
 	else
 		current_chapter = chosen_chapter
-		current_chapter_number = GetTableKeyIndex(Texts[text_key].Chapters, current_chapter, chapter_compare)
+		current_chapter_number = GetTextData(text_name, "ChapterIndex", current_chapter) + 1
 		current_page = 1
-		l:setCaption(Texts[text_key].Chapters[current_chapter].Text[current_page]);
+		l:setCaption(GetTextData(text_name, "ChapterPage", current_chapter, current_page));
 		l:setAlignment(MultiLineLabel.LEFT)
-		title:setCaption("~<" .. Texts[text_key].Chapters[current_chapter].Title .. "~>")
-		title:setAlignment(MultiLineLabel.CENTER)
+		title:setCaption("~<" .. current_chapter .. "~>")
 		title:adjustSize()
-		if not (Texts[text_key].Chapters[current_chapter].Introduction) then
-			page_number = Texts[text_key].InitialPage
-			for second_chapter_key, second_chapter_value in pairsByKeys(Texts[text_key].Chapters, chapter_compare) do
-				if (second_chapter_key == current_chapter) then
+		title:setAlignment(MultiLineLabel.CENTER)
+		if not (GetTextData(text_name, "ChapterIntroduction", current_chapter)) then
+			page_number = GetTextData(text_name, "InitialPage")
+			for i=1, table.getn(chapters) do
+				if (chapters[i] == current_chapter) then
 					break
 				end
-				if not (Texts[text_key].Chapters[second_chapter_key].Introduction) then
-					page_number = page_number + table.getn(Texts[text_key].Chapters[second_chapter_key].Text)
+				if not (GetTextData(text_name, "ChapterIntroduction", chapters[i])) then
+					page_number = page_number + GetTextData(text_name, "ChapterPageQuantity", chapters[i])
 				end
 			end
 			page_number_label:setCaption(page_number);
@@ -978,6 +976,88 @@ function OpenEncyclopediaText(text_key, chosen_chapter)
 	end
 
 	local chapter_buttons = {}
+	
+	local function SetChapter(new_chapter_name, new_page)
+		current_chapter = new_chapter_name
+		if (new_page) then
+			current_page = new_page
+		end
+		
+		if (current_chapter == "Cover") then
+			current_chapter_number = 1
+			l:setCaption(cover_text)
+			l:setAlignment(MultiLineLabel.CENTER)
+			title:setCaption("~<" .. text_name .. "~>")
+			title:adjustSize()
+			title:setAlignment(MultiLineLabel.CENTER)
+		elseif (current_chapter == "Contents") then
+			current_chapter_number = 1
+			l:setCaption("     ")
+			l:setAlignment(MultiLineLabel.CENTER)
+			title:setCaption("~<Table of Contents~>")
+			title:adjustSize()
+			title:setAlignment(MultiLineLabel.CENTER)
+			page_number = GetTextData(text_name, "InitialPage") - 1
+			page_number_label:setCaption("     ");
+
+			if (GetTextData(text_name, "ChapterQuantity") > 1) then
+				local chapter_x = 0
+				if (GetTextData(text_name, "ChapterQuantity") > 26) then
+					chapter_x = -2
+				elseif (GetTextData(text_name, "ChapterQuantity") > 13) then
+					chapter_x = -1
+				end
+				local chapter_y = -3
+				for i=1, table.getn(chapters) do
+					chapter_buttons[table.getn(chapter_buttons) + 1] = encyclopedia_entry_menu:addFullButton(chapters[i], "", offx + 208 + (113 * chapter_x), offy + 104 + (36 * (chapter_y + height_offset) - 16),
+						function()
+							for i=1,table.getn(chapter_buttons) do
+								encyclopedia_entry_menu:remove(chapter_buttons[i])
+							end
+							chapter_buttons = nil
+							chapter_buttons = {}
+
+							current_chapter = chapters[i]
+							current_chapter_number = i
+							current_page = 1
+							l:setCaption(GetTextData(text_name, "ChapterPage", current_chapter, current_page));
+							l:setAlignment(MultiLineLabel.LEFT)
+							title:setCaption("~<" .. current_chapter .. "~>")
+							title:adjustSize()
+							title:setAlignment(MultiLineLabel.CENTER)
+							page_number = GetTextData(text_name, "InitialPage")
+							for j=1, table.getn(chapters) do
+								if (j == i) then
+									break
+								end
+								if not (GetTextData(text_name, "ChapterIntroduction", chapters[j])) then
+									page_number = page_number + GetTextData(text_name, "ChapterPageQuantity", chapters[j])
+								end
+							end
+							if not (GetTextData(text_name, "ChapterIntroduction", current_chapter)) then
+								page_number_label:setCaption(page_number);
+								page_number_label:setAlignment(MultiLineLabel.CENTER)
+							else
+								page_number = page_number - 1
+							end
+						end
+					)
+					if (chapter_y > 9 or (chapter_y > 4 and Video.Height < 600)) then
+						chapter_x = chapter_x + 2
+						chapter_y = -3
+					else
+						chapter_y = chapter_y + 1
+					end
+				end
+			end
+		else
+			l:setCaption(GetTextData(text_name, "ChapterPage", current_chapter, current_page));
+			l:setAlignment(MultiLineLabel.LEFT)
+			title:setCaption("~<" .. current_chapter .. "~>")
+			title:adjustSize()
+			title:setAlignment(MultiLineLabel.CENTER)
+		end
+	end
 	
 	encyclopedia_entry_menu:addFullButton("Pre~!vious Page", "v", offx + 208 - 224 - 2, offy + 104 + (36 * (10 - height_offset) + 18),
 		function()
@@ -989,115 +1069,30 @@ function OpenEncyclopediaText(text_key, chosen_chapter)
 				chapter_buttons = nil
 				chapter_buttons = {}
 
-				current_chapter = "Cover"
-				l:setCaption(cover_text)
-				l:setAlignment(MultiLineLabel.CENTER)
-				title:setCaption("~<" .. Texts[text_key].Title .. "~>")
-				title:setAlignment(MultiLineLabel.CENTER)
-				title:adjustSize()
+				SetChapter("Cover")
 			elseif (current_page > 1) then
 				current_page = current_page - 1;
-				l:setCaption(Texts[text_key].Chapters[current_chapter].Text[current_page]);
-				if not (Texts[text_key].Chapters[current_chapter].Introduction) then
+				l:setCaption(GetTextData(text_name, "ChapterPage", current_chapter, current_page));
+				if not (GetTextData(text_name, "ChapterIntroduction", current_chapter)) then
 					page_number = page_number - 1
 					page_number_label:setCaption(page_number);
 				end
-			elseif (current_chapter_number > 1 and not Texts[text_key].Chapters[current_chapter].Introduction) then
-				current_chapter_number = current_chapter_number - 1;
-				current_chapter = GetTableIndexKey(Texts[text_key].Chapters, current_chapter_number, chapter_compare)
-				current_page = table.getn(Texts[text_key].Chapters[current_chapter].Text)
-				l:setCaption(Texts[text_key].Chapters[current_chapter].Text[current_page]);
-				title:setCaption("~<" .. Texts[text_key].Chapters[current_chapter].Title .. "~>")
-				title:setAlignment(MultiLineLabel.CENTER)
-				title:adjustSize()
-				if not (Texts[text_key].Chapters[current_chapter].Introduction) then
+			elseif (current_chapter_number > 1) then
+				if not (GetTextData(text_name, "ChapterIntroduction", current_chapter)) then
 					page_number = page_number - 1
-					page_number_label:setCaption(page_number);
-				else
-					page_number = page_number - 1
-					page_number_label:setCaption("     ");
 				end
-			elseif (current_chapter_number > 1 and Texts[text_key].Chapters[current_chapter].Introduction) then
 				current_chapter_number = current_chapter_number - 1;
-				current_chapter = GetTableIndexKey(Texts[text_key].Chapters, current_chapter_number, chapter_compare)
-				current_page = table.getn(Texts[text_key].Chapters[current_chapter].Text)
-				l:setCaption(Texts[text_key].Chapters[current_chapter].Text[current_page]);
-				title:setCaption("~<" .. Texts[text_key].Chapters[current_chapter].Title .. "~>")
-				title:setAlignment(MultiLineLabel.CENTER)
-				title:adjustSize()
-				if not (Texts[text_key].Chapters[current_chapter].Introduction) then
+				SetChapter(chapters[current_chapter_number], GetTextData(text_name, "ChapterPageQuantity", chapters[current_chapter_number]))
+				if not (GetTextData(text_name, "ChapterIntroduction", current_chapter)) then
 					page_number_label:setCaption(page_number);
 				else
 					page_number_label:setCaption("     ");
 				end
 			else
-				current_chapter = "Contents"
-				l:setCaption("     ")
-				l:setAlignment(MultiLineLabel.CENTER)
-				title:setCaption("~<Table of Contents~>")
-				title:setAlignment(MultiLineLabel.CENTER)
-				title:adjustSize()
-				page_number = Texts[text_key].InitialPage - 1
-				page_number_label:setCaption("     ");
-
-				if (GetTableSize(Texts[text_key].Chapters) > 1) then
-					local chapter_x = 0
-					if (GetTableSize(Texts[text_key].Chapters) > 26) then
-						chapter_x = -2
-					elseif (GetTableSize(Texts[text_key].Chapters) > 13) then
-						chapter_x = -1
-					end
-					local chapter_y = -3
-					for chapter_key, chapter_value in pairsByKeys(Texts[text_key].Chapters, chapter_compare) do
-						if (Texts[text_key].Chapters[chapter_key].Index > 0) then
-							chapter_buttons[table.getn(chapter_buttons) + 1] = encyclopedia_entry_menu:addFullButton(Texts[text_key].Chapters[chapter_key].Title, "", offx + 208 + (113 * chapter_x), offy + 104 + (36 * (chapter_y + height_offset) - 16),
-								function()
-									for i=1,table.getn(chapter_buttons) do
-										encyclopedia_entry_menu:remove(chapter_buttons[i])
-									end
-									chapter_buttons = nil
-									chapter_buttons = {}
-
-									current_chapter = chapter_key
-									current_chapter_number = GetTableKeyIndex(Texts[text_key].Chapters, current_chapter, chapter_compare)
-									current_page = 1
-									l:setCaption(Texts[text_key].Chapters[current_chapter].Text[current_page]);
-									l:setAlignment(MultiLineLabel.LEFT)
-									title:setCaption("~<" .. Texts[text_key].Chapters[current_chapter].Title .. "~>")
-									title:setAlignment(MultiLineLabel.CENTER)
-									title:adjustSize()
-									page_number = Texts[text_key].InitialPage
-									for second_chapter_key, second_chapter_value in pairsByKeys(Texts[text_key].Chapters, chapter_compare) do
-										if (second_chapter_key == chapter_key) then
-											break
-										end
-										if not (Texts[text_key].Chapters[second_chapter_key].Introduction) then
-											page_number = page_number + table.getn(Texts[text_key].Chapters[second_chapter_key].Text)
-										end
-									end
-									if not (Texts[text_key].Chapters[current_chapter].Introduction) then
-										page_number_label:setCaption(page_number);
-										page_number_label:setAlignment(MultiLineLabel.CENTER)
-									else
-										page_number = page_number - 1
-									end
-								end
-							)
-							if (chapter_y > 9 or (chapter_y > 4 and Video.Height < 600)) then
-								chapter_x = chapter_x + 2
-								chapter_y = -3
-							else
-								chapter_y = chapter_y + 1
-							end
-						end
-					end
+				if (GetTextData(text_name, "ChapterQuantity") > 1) then
+					SetChapter("Contents")
 				else
-					current_chapter = "Cover"
-					l:setCaption(cover_text)
-					l:setAlignment(MultiLineLabel.CENTER)
-					title:setCaption("~<" .. Texts[text_key].Title .. "~>")
-					title:setAlignment(MultiLineLabel.CENTER)
-					title:adjustSize()
+					SetChapter("Cover")
 				end
 			end
 		end
@@ -1105,77 +1100,10 @@ function OpenEncyclopediaText(text_key, chosen_chapter)
 	encyclopedia_entry_menu:addFullButton("~!Next Page", "n", offx + 208 + 224 + 2, offy + 104 + (36 * (10 - height_offset) + 18),
 		function()
 			if (current_chapter == "Cover") then
-				current_chapter = "Contents"
-				l:setCaption("     ")
-				l:setAlignment(MultiLineLabel.CENTER)
-				title:setCaption("~<Table of Contents~>")
-				title:setAlignment(MultiLineLabel.CENTER)
-				title:adjustSize()
-				
-				if (GetTableSize(Texts[text_key].Chapters) > 1) then
-					local chapter_x = 0
-					if (GetTableSize(Texts[text_key].Chapters) > 26 or (GetTableSize(Texts[text_key].Chapters) > 18 and Video.Height < 600)) then
-						chapter_x = -2
-					elseif (GetTableSize(Texts[text_key].Chapters) > 13 or (GetTableSize(Texts[text_key].Chapters) > 9 and Video.Height < 600)) then
-						chapter_x = -1
-					end
-					local chapter_y = -3
-					for chapter_key, chapter_value in pairsByKeys(Texts[text_key].Chapters, chapter_compare) do
-						if (Texts[text_key].Chapters[chapter_key].Index > 0) then
-							chapter_buttons[table.getn(chapter_buttons) + 1] = encyclopedia_entry_menu:addFullButton(Texts[text_key].Chapters[chapter_key].Title, "", offx + 208 + (113 * chapter_x), offy + 104 + (36 * (chapter_y + height_offset) - 16),
-								function()
-									for i=1,table.getn(chapter_buttons) do
-										encyclopedia_entry_menu:remove(chapter_buttons[i])
-									end
-									chapter_buttons = nil
-									chapter_buttons = {}
-
-									current_chapter = chapter_key
-									current_chapter_number = GetTableKeyIndex(Texts[text_key].Chapters, current_chapter, chapter_compare)
-									current_page = 1
-									l:setCaption(Texts[text_key].Chapters[current_chapter].Text[current_page]);
-									l:setAlignment(MultiLineLabel.LEFT)
-									title:setCaption("~<" .. Texts[text_key].Chapters[current_chapter].Title .. "~>")
-									title:setAlignment(MultiLineLabel.CENTER)
-									title:adjustSize()
-									page_number = Texts[text_key].InitialPage
-									for second_chapter_key, second_chapter_value in pairsByKeys(Texts[text_key].Chapters, chapter_compare) do
-										if (second_chapter_key == chapter_key) then
-											break
-										end
-										if not (Texts[text_key].Chapters[second_chapter_key].Introduction) then
-											page_number = page_number + table.getn(Texts[text_key].Chapters[second_chapter_key].Text)
-										end
-									end
-									if not (Texts[text_key].Chapters[current_chapter].Introduction) then
-										page_number_label:setCaption(page_number);
-										page_number_label:setAlignment(MultiLineLabel.CENTER)
-									else
-										page_number = page_number - 1
-									end
-								end
-							)
-							if (chapter_y > 9 or (chapter_y > 4 and Video.Height < 600)) then
-								chapter_x = chapter_x + 2
-								chapter_y = -3
-							else
-								chapter_y = chapter_y + 1
-							end
-						end
-					end
+				if (GetTextData(text_name, "ChapterQuantity") > 1) then
+					SetChapter("Contents")
 				else
-					current_chapter = GetTableIndexKey(Texts[text_key].Chapters, current_chapter_number, chapter_compare)
-					current_page = 1
-					l:setCaption(Texts[text_key].Chapters[current_chapter].Text[current_page]);
-					l:setAlignment(MultiLineLabel.LEFT)
-					title:setCaption("~<" .. Texts[text_key].Chapters[current_chapter].Title .. "~>")
-					title:setAlignment(MultiLineLabel.CENTER)
-					title:adjustSize()
-					if not (Texts[text_key].Chapters[current_chapter].Introduction) then
-						page_number = page_number + 1
-						page_number_label:setCaption(page_number);
-						page_number_label:setAlignment(MultiLineLabel.CENTER)
-					end
+					SetChapter(chapters[current_chapter_number], 1)
 				end
 			elseif (current_chapter == "Contents") then
 				for i=1,table.getn(chapter_buttons) do
@@ -1184,34 +1112,18 @@ function OpenEncyclopediaText(text_key, chosen_chapter)
 				chapter_buttons = nil
 				chapter_buttons = {}
 						
-				current_chapter = GetTableIndexKey(Texts[text_key].Chapters, current_chapter_number, chapter_compare)
-				current_page = 1
-				l:setCaption(Texts[text_key].Chapters[current_chapter].Text[current_page]);
-				l:setAlignment(MultiLineLabel.LEFT)
-				title:setCaption("~<" .. Texts[text_key].Chapters[current_chapter].Title .. "~>")
-				title:setAlignment(MultiLineLabel.CENTER)
-				title:adjustSize()
-				if not (Texts[text_key].Chapters[current_chapter].Introduction) then
-					page_number = page_number + 1
-					page_number_label:setCaption(page_number);
-					page_number_label:setAlignment(MultiLineLabel.CENTER)
-				end
-			elseif (current_page < table.getn(Texts[text_key].Chapters[current_chapter].Text)) then
+				SetChapter(chapters[current_chapter_number], 1)
+			elseif (current_page < GetTextData(text_name, "ChapterPageQuantity", current_chapter)) then
 				current_page = current_page + 1;
-				l:setCaption(Texts[text_key].Chapters[current_chapter].Text[current_page]);
-				if not (Texts[text_key].Chapters[current_chapter].Introduction) then
+				l:setCaption(GetTextData(text_name, "ChapterPage", current_chapter, current_page));
+				if not (GetTextData(text_name, "ChapterIntroduction", current_chapter)) then
 					page_number = page_number + 1
 					page_number_label:setCaption(page_number);
 				end
-			elseif (current_chapter_number < GetTableSize(Texts[text_key].Chapters)) then
+			elseif (current_chapter_number < GetTextData(text_name, "ChapterQuantity")) then
 				current_chapter_number = current_chapter_number + 1
-				current_chapter = GetTableIndexKey(Texts[text_key].Chapters, current_chapter_number, chapter_compare)
-				current_page = 1
-				l:setCaption(Texts[text_key].Chapters[current_chapter].Text[current_page]);
-				title:setCaption("~<" .. Texts[text_key].Chapters[current_chapter].Title .. "~>")
-				title:setAlignment(MultiLineLabel.CENTER)
-				title:adjustSize()
-				if not (Texts[text_key].Chapters[current_chapter].Introduction) then
+				SetChapter(chapters[current_chapter_number], 1)
+				if not (GetTextData(text_name, "ChapterIntroduction", current_chapter)) then
 					page_number = page_number + 1
 					page_number_label:setCaption(page_number);
 				else
@@ -1222,7 +1134,14 @@ function OpenEncyclopediaText(text_key, chosen_chapter)
 	)
 
 	encyclopedia_entry_menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * (10 - height_offset) + 18),
-		function() encyclopedia_entry_menu:stop(); end)
+		function()
+			if (GetTextData(text_name, "ChapterQuantity") > 1 and current_chapter ~= "Cover" and current_chapter ~= "Contents") then
+				SetChapter("Contents", 1)
+			else
+				encyclopedia_entry_menu:stop();
+			end
+		end
+	)
 
 	encyclopedia_entry_menu:run()
 end
@@ -1311,9 +1230,11 @@ function OpenEncyclopediaWorldEntry(world)
 			
 	-- add buttons of texts related to the subject matter of the entry
 	local chapter_references = 0
-	for text_key, text_value in pairsByKeys(Texts, text_compare) do
-		for chapter_key, chapter_value in pairsByKeys(Texts[text_key].Chapters, chapter_compare) do
-			if (string.find(l:getCaption(), "~<" .. Texts[text_key].Chapters[chapter_key].Title .. "~>") ~= nil) then
+	local texts = GetTexts()
+	for i, text_name in ipairs(texts) do
+		local chapters = GetTextData(text_name, "Chapters")
+		for j=1, table.getn(chapters) do
+			if (string.find(l:getCaption(), "~<" .. chapters[j] .. "~>") ~= nil) then
 				chapter_references = chapter_references + 1
 			end
 		end
@@ -1329,15 +1250,16 @@ function OpenEncyclopediaWorldEntry(world)
 		chapter_x = -2
 	end
 
-	for text_key, text_value in pairsByKeys(Texts, text_compare) do
-		for chapter_key, chapter_value in pairsByKeys(Texts[text_key].Chapters, chapter_compare) do
-			if (string.find(l:getCaption(), "~<" .. Texts[text_key].Chapters[chapter_key].Title .. "~>") ~= nil) then
-				if (GetTableSize(Texts[text_key].Chapters) > 1) then
-					encyclopedia_entry_menu:addFullButton(Texts[text_key].Chapters[chapter_key].Title, "", offx + 208 + (113 * chapter_x), offy + 104 + (36 * chapter_y),
-						function() OpenEncyclopediaText(text_key, chapter_key); end)
+	for i, text_name in ipairs(texts) do
+		local chapters = GetTextData(text_name, "Chapters")
+		for j=1, table.getn(chapters) do
+			if (string.find(l:getCaption(), "~<" .. chapters[j] .. "~>") ~= nil) then
+				if (table.getn(chapters) > 1) then
+					menu:addFullButton(chapters[j], "", offx + 208 + (113 * chapter_x), offy + 104 + (36 * chapter_y),
+						function() OpenEncyclopediaText(text_name, chapters[j]); end)
 				else
-					encyclopedia_entry_menu:addFullButton(Texts[text_key].Chapters[chapter_key].Title, "", offx + 208 + (113 * chapter_x), offy + 104 + (36 * chapter_y),
-						function() OpenEncyclopediaText(text_key); end)
+					menu:addFullButton(chapters[j], "", offx + 208 + (113 * chapter_x), offy + 104 + (36 * chapter_y),
+						function() OpenEncyclopediaText(text_name); end)
 				end
 				chapter_x = chapter_x + 2
 			end

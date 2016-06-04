@@ -4307,7 +4307,7 @@ DefineProvince("Moravia", {
 		1211, "unit-teuton-temple", true, -- a Cistercian nunnery was founded in Doubravník in 1211; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 627.
 		1225, "unit-teuton-temple", true, -- a nunnery was founded by Hedwig of Znojmo in Oslavany (or Marienthal) (near Brno) in 1225; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 627.
 		1232, "unit-teuton-temple", true, -- Queen Constance founded a cloister called "The Door to Heaven" in Tišňov in 1232; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 627.
-		1251, "unit-teuton-temple", true, -- Boček (lord of Kunštát and Poděbrady) founded a monastery in Ždár (Saar) in 1251; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 627.
+		1251, "unit-teuton-temple", true -- Boček (lord of Kunštát and Poděbrady) founded a monastery in Ždár (Saar) in 1251; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 627.
 	},
 	HistoricalModifiers = {
 		1581, "upgrade-university", true, -- University founded in Olmütz in 1581. Source: The Cambridge Modern History Atlas, p. 9.
