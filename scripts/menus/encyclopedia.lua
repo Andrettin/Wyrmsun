@@ -921,7 +921,8 @@ function OpenEncyclopediaText(text_name, chosen_chapter)
 	
 	local current_chapter
 	local current_chapter_number
-	local page_number_label = encyclopedia_entry_menu:addLabel("     ", offx + 320, (Video.Height - 90) + 18*4, Fonts["game"], true)
+	local page_number_label = encyclopedia_entry_menu:addLabel("     ", Video.Width / 2, (Video.Height - 90) + 18*4, Fonts["game"], true)
+	page_number_label:setAlignment(MultiLineLabel.CENTER)
 	local page_number
 	local current_page = 1
 	
@@ -959,7 +960,7 @@ function OpenEncyclopediaText(text_name, chosen_chapter)
 		l:setAlignment(MultiLineLabel.LEFT)
 		title:setCaption("~<" .. current_chapter .. "~>")
 		title:adjustSize()
-		title:setAlignment(MultiLineLabel.CENTER)
+		title:setX((Video.Width / 2) - (title:getWidth() / 2))
 		if not (GetTextData(text_name, "ChapterIntroduction", current_chapter)) then
 			page_number = GetTextData(text_name, "InitialPage")
 			for i=1, table.getn(chapters) do
@@ -971,7 +972,8 @@ function OpenEncyclopediaText(text_name, chosen_chapter)
 				end
 			end
 			page_number_label:setCaption(page_number);
-			page_number_label:setAlignment(MultiLineLabel.CENTER)
+			page_number_label:adjustSize()
+			page_number_label:setX((Video.Width / 2) - (page_number_label:getWidth() / 2))
 		end
 	end
 
@@ -989,16 +991,22 @@ function OpenEncyclopediaText(text_name, chosen_chapter)
 			l:setAlignment(MultiLineLabel.CENTER)
 			title:setCaption("~<" .. text_name .. "~>")
 			title:adjustSize()
-			title:setAlignment(MultiLineLabel.CENTER)
+			title:setX((Video.Width / 2) - (title:getWidth() / 2))
+			page_number = GetTextData(text_name, "InitialPage") - 1
+			page_number_label:setCaption("     ");
+			page_number_label:adjustSize()
+			page_number_label:setX((Video.Width / 2) - (page_number_label:getWidth() / 2))
 		elseif (current_chapter == "Contents") then
 			current_chapter_number = 1
 			l:setCaption("     ")
 			l:setAlignment(MultiLineLabel.CENTER)
 			title:setCaption("~<Table of Contents~>")
 			title:adjustSize()
-			title:setAlignment(MultiLineLabel.CENTER)
+			title:setX((Video.Width / 2) - (title:getWidth() / 2))
 			page_number = GetTextData(text_name, "InitialPage") - 1
 			page_number_label:setCaption("     ");
+			page_number_label:adjustSize()
+			page_number_label:setX((Video.Width / 2) - (page_number_label:getWidth() / 2))
 
 			if (GetTextData(text_name, "ChapterQuantity") > 1) then
 				local chapter_x = 0
@@ -1024,7 +1032,7 @@ function OpenEncyclopediaText(text_name, chosen_chapter)
 							l:setAlignment(MultiLineLabel.LEFT)
 							title:setCaption("~<" .. current_chapter .. "~>")
 							title:adjustSize()
-							title:setAlignment(MultiLineLabel.CENTER)
+							title:setX((Video.Width / 2) - (title:getWidth() / 2))
 							page_number = GetTextData(text_name, "InitialPage")
 							for j=1, table.getn(chapters) do
 								if (j == i) then
@@ -1036,7 +1044,8 @@ function OpenEncyclopediaText(text_name, chosen_chapter)
 							end
 							if not (GetTextData(text_name, "ChapterIntroduction", current_chapter)) then
 								page_number_label:setCaption(page_number);
-								page_number_label:setAlignment(MultiLineLabel.CENTER)
+								page_number_label:adjustSize()
+								page_number_label:setX((Video.Width / 2) - (page_number_label:getWidth() / 2))
 							else
 								page_number = page_number - 1
 							end
@@ -1055,7 +1064,7 @@ function OpenEncyclopediaText(text_name, chosen_chapter)
 			l:setAlignment(MultiLineLabel.LEFT)
 			title:setCaption("~<" .. current_chapter .. "~>")
 			title:adjustSize()
-			title:setAlignment(MultiLineLabel.CENTER)
+			title:setX((Video.Width / 2) - (title:getWidth() / 2))
 		end
 	end
 	
@@ -1076,6 +1085,8 @@ function OpenEncyclopediaText(text_name, chosen_chapter)
 				if not (GetTextData(text_name, "ChapterIntroduction", current_chapter)) then
 					page_number = page_number - 1
 					page_number_label:setCaption(page_number);
+					page_number_label:adjustSize()
+					page_number_label:setX((Video.Width / 2) - (page_number_label:getWidth() / 2))
 				end
 			elseif (current_chapter_number > 1) then
 				if not (GetTextData(text_name, "ChapterIntroduction", current_chapter)) then
@@ -1085,8 +1096,12 @@ function OpenEncyclopediaText(text_name, chosen_chapter)
 				SetChapter(chapters[current_chapter_number], GetTextData(text_name, "ChapterPageQuantity", chapters[current_chapter_number]))
 				if not (GetTextData(text_name, "ChapterIntroduction", current_chapter)) then
 					page_number_label:setCaption(page_number);
+					page_number_label:adjustSize()
+					page_number_label:setX((Video.Width / 2) - (page_number_label:getWidth() / 2))
 				else
 					page_number_label:setCaption("     ");
+					page_number_label:adjustSize()
+					page_number_label:setX((Video.Width / 2) - (page_number_label:getWidth() / 2))
 				end
 			else
 				if (GetTextData(text_name, "ChapterQuantity") > 1) then
@@ -1104,6 +1119,16 @@ function OpenEncyclopediaText(text_name, chosen_chapter)
 					SetChapter("Contents")
 				else
 					SetChapter(chapters[current_chapter_number], 1)
+					if not (GetTextData(text_name, "ChapterIntroduction", current_chapter)) then
+						page_number = page_number + 1
+						page_number_label:setCaption(page_number);
+						page_number_label:adjustSize()
+						page_number_label:setX((Video.Width / 2) - (page_number_label:getWidth() / 2))
+					else
+						page_number_label:setCaption("     ");
+						page_number_label:adjustSize()
+						page_number_label:setX((Video.Width / 2) - (page_number_label:getWidth() / 2))
+					end
 				end
 			elseif (current_chapter == "Contents") then
 				for i=1,table.getn(chapter_buttons) do
@@ -1119,6 +1144,8 @@ function OpenEncyclopediaText(text_name, chosen_chapter)
 				if not (GetTextData(text_name, "ChapterIntroduction", current_chapter)) then
 					page_number = page_number + 1
 					page_number_label:setCaption(page_number);
+					page_number_label:adjustSize()
+					page_number_label:setX((Video.Width / 2) - (page_number_label:getWidth() / 2))
 				end
 			elseif (current_chapter_number < GetTextData(text_name, "ChapterQuantity")) then
 				current_chapter_number = current_chapter_number + 1
@@ -1126,8 +1153,12 @@ function OpenEncyclopediaText(text_name, chosen_chapter)
 				if not (GetTextData(text_name, "ChapterIntroduction", current_chapter)) then
 					page_number = page_number + 1
 					page_number_label:setCaption(page_number);
+					page_number_label:adjustSize()
+					page_number_label:setX((Video.Width / 2) - (page_number_label:getWidth() / 2))
 				else
 					page_number_label:setCaption("     ");
+					page_number_label:adjustSize()
+					page_number_label:setX((Video.Width / 2) - (page_number_label:getWidth() / 2))
 				end
 			end
 		end
