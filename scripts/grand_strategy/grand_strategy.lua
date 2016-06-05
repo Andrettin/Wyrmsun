@@ -89,6 +89,7 @@ function RunGrandStrategyGameSetupMenu()
 	local automatic_battles
 	local battle_base_building
 	local no_randomness
+	local no_time_of_day
 
 	local function FactionChanged()
 		hero_list = nil
@@ -322,6 +323,14 @@ function RunGrandStrategyGameSetupMenu()
 		end
 	)
 	no_randomness:setMarked(wyr.preferences.NoRandomness)
+  
+	no_time_of_day = menu:addImageCheckBox(_("No Day/Night Cycle"), offx + 640 - 224 - 16, offy + 10 + 220 + 3,
+		function()
+			wyr.preferences.NoTimeOfDay = no_time_of_day:isMarked()
+			SavePreferences()
+		end
+	)
+	no_time_of_day:setMarked(wyr.preferences.NoTimeOfDay)
   
 
 	local date_label = Label(_("Date: ") .. GetYearString(GrandStrategyYear))

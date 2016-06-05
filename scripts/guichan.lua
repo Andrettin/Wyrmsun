@@ -741,7 +741,8 @@ function InitGameSettings()
 	GameSettings.Inside = false
 	GameSettings.RevealMap = 0
 	GameSettings.Tileset = nil
-	GameSettings.NoRandomness = wyr.preferences.NoRandomness
+	GameSettings.NoRandomness = false
+	GameSettings.NoTimeOfDay = false
 	TechLevel = {"", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""}
 	MaxTechLevel = {"", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""}
 end
@@ -1004,6 +1005,7 @@ function RunSinglePlayerCustomGameMenu()
 	local max_tech_level
 	local hero_dd
 	local no_randomness
+	local no_time_of_day
 	MapPersonPlayer = 0
 	PlayerFaction = ""
 
@@ -1124,6 +1126,7 @@ function RunSinglePlayerCustomGameMenu()
 				end
 			end
 			GameSettings.NoRandomness = wyr.preferences.NoRandomness
+			GameSettings.NoTimeOfDay = wyr.preferences.NoTimeOfDay
 
 			RunningScenario = true
 
@@ -1207,13 +1210,22 @@ function RunSinglePlayerCustomGameMenu()
 	)
 	hero_dd:setSize(152, 20)
 	
-	no_randomness = menu:addImageCheckBox(_("No Randomness"), offx + 640 - 224 - 16, offy + 10 + 300 + 3 + 45,
+--	no_randomness = menu:addImageCheckBox(_("No Randomness"), offx + 640 - 224 - 16, offy + 10 + 300 + 3 + 45,
+	no_randomness = menu:addImageCheckBox(_("No Randomness"), offx + 640 - 224 - 16, offy + 10 + 285 + 3 + 45,
 		function()
 			wyr.preferences.NoRandomness = no_randomness:isMarked()
 			SavePreferences()
 		end
 	)
 	no_randomness:setMarked(wyr.preferences.NoRandomness)
+
+	no_time_of_day = menu:addImageCheckBox(_("No Day/Night Cycle"), offx + 220, offy + 10 + 285 + 3 + 45,
+		function()
+			wyr.preferences.NoTimeOfDay = no_time_of_day:isMarked()
+			SavePreferences()
+		end
+	)
+	no_time_of_day:setMarked(wyr.preferences.NoTimeOfDay)
 
 	function WorldChanged()
 		scenario_list = {}

@@ -67,6 +67,12 @@ https://github.com/Andrettin/Wyrmsun
 * Grand Strategy
 - Fixed an issue which caused a town hall to not be generated for the defender with battle base building in certain random circumstances, which also had the consequence of making the battle unwinnable for the attacker.
 
+* Miscellaneous
+- Added "No Day/Night Cycle" option when starting single-player maps.
+
+* Multiplayer
+- Fixed a multiplayer crash cause which triggered when both players had different "No Randomness" settings.
+
 * Quests
 - Added a new dialogue featuring Thjodrorir in the "A Rock Home" quest (dwarf).
 

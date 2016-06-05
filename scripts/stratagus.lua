@@ -1941,6 +1941,7 @@ local defaultPreferences = {
 	PlayerColorCircle = false,
 	HotkeySetup = 0,
 	NoRandomness = false,
+	NoTimeOfDay = false,
 	AutomaticBattles = false,
 	Difficulty = 2,
 	GrandStrategyBattalionMultiplier = 1,
