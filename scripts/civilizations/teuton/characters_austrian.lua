@@ -326,6 +326,21 @@ DefineCharacter("Carl von Hock",  { -- Source: Waltraud Heindl, "Josephinische M
 	-- economic liberal
 })
 
+DefineCharacter("Bissingen", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 69.
+	Name = "Bissingen", -- likely his family name instead
+	PlaceNameDerivedFamilyName = true, -- presumably
+	Gender = "male",
+	Type = "unit-teuton-ritter", -- had the title of Graf (Count)
+	Civilization = "teuton",
+	Faction = "Austria",
+	ProvinceOfOrigin = "Tyrol", -- was Statthalter of Tyrol
+	Year = 1852, -- was Statthalter (governor) of Tyrol in 1852 when he wrote complaining of the wages of a governor
+--	Noble = true,
+	HistoricalTitles = {
+		"governor", 1852, 0, "Tyrol" -- was Statthalter (governor) of Tyrol in 1852 when he wrote complaining of the wages of a governor
+	}
+})
+
 DefineCharacter("Georg von Toggenburg", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 64.
 	Name = "Georg",
 	NameElements = {"word", "high-german", "noun", "Georg"},

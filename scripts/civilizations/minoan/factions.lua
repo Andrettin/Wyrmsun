@@ -38,10 +38,23 @@ DefineFaction("Impressedware Tribe", {
 	Colors = {"brown"}
 })
 
+DefineFaction("Lepenskivir Tribe", { -- Lepenski Vir culture; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 175.
+	Civilization = "minoan", -- not actually Minoan, but a pre-Indo-European people as well
+	Type = "tribe",
+	Colors = {"purple"}
+})
+
 DefineFaction("Paintedware Tribe", {
 	Civilization = "minoan", -- were they really culturally related to the Minoans? At least Minoan culture is a better fit for this pre-Indo-European culture than Basque, since they lived in the Balkans (closer to Crete than to the European Atlantic shores)
 	Type = "tribe",
 	Colors = {"orange"}
+})
+
+DefineFaction("Starcevo Tribe", { -- Starčevo culture; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, pp. 177-178.
+	Civilization = "minoan", -- not actually Minoan, but a pre-Indo-European people as well
+	Type = "tribe",
+	Colors = {"black"}
+	-- the Starčevo people possessed knowledge of farming and pottery c. 6000 BC
 })
 
 -- polities

@@ -650,9 +650,6 @@ if (GrandStrategyYear >= -336) then
 	SetProvinceOwner("Skopje", "greek", "Macedon") -- the site of Skopje wasn't a part of the Macedonian Empire in 336 BC, but most of the modern Republic of Macedonia was
 	SetProvinceOwner("Albania", "greek", "Macedon") -- most of Albania was a part of the Macedonian Empire in 336 BC (including the city of Apollonia), but not the city of Epidamnus
 	
-	SetProvinceOwner("Serbia", "thracian", "Triballi Tribe") -- they were also in western Bulgaria
-	SetProvinceCivilization("Serbia", "thracian")
-	
 	SetProvinceOwner("Dobruja", "thracian", "Getae Tribe")
 	SetProvinceCivilization("Dobruja", "thracian")
 	AddProvinceClaim("Dobruja", "thracian", "Getae Tribe")
@@ -842,7 +839,6 @@ end
 
 if (GrandStrategyYear >= -29) then -- Lower Moesia and Upper Moesia were acquired by Rome in 29 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	SetProvinceOwner("Bulgaria", "latin", "Rome") -- the southern half of Bulgaria was only acquired later, in 46 AD, when Thrace was acquired
-	SetProvinceOwner("Serbia", "latin", "Rome")
 	SetProvinceOwner("Dobruja", "latin", "Rome")
 end
 
@@ -897,10 +893,6 @@ if (GrandStrategyYear >= 98) then
 --	SetProvinceOwner("Sweden", "norse", "Swede Tribe") -- Swedes attested in Tacitus' Germania, from 98 AD
 end
 
-if (GrandStrategyYear >= 107) then -- Dacia acquired by Rome in 107 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-	SetProvinceOwner("Vojvodina", "latin", "Rome")
-end
-
 if (GrandStrategyYear >= 142) then
 	SetProvinceOwner("Posen", "", "")
 end
@@ -927,10 +919,6 @@ if (GrandStrategyYear >= 200) then
 	SetProvinceOwner("Prussia", "", "") -- The Goths had migrated away in about 200 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 	
 	-- Josiah Cox Russell gives 40 million people in Europe in 200 AD; Source: Josiah Cox Russell, "Medieval Population", 1937, p. 504.
-end
-
-if (GrandStrategyYear >= 275) then -- Dacia lost by Rome in 275 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-	SetProvinceOwner("Vojvodina", "", "")
 end
 
 if (GrandStrategyYear >= 325) then
@@ -1035,10 +1023,9 @@ if (GrandStrategyYear >= 486) then
 end
 
 if (GrandStrategyYear >= 488) then
-	-- Ostrogoths commissioned by the Eastern Roman Emperor to wrest control of Italy from Odoacer; as a result, the Ostrogoths marched from Moesia to Italy (this means that by 488 they were in Moesia), with a quarter of a million men, women and children; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, pp. 7-8.
+	-- Ostrogoths commissioned by the Eastern Roman Emperor in 488 to wrest control of Italy from Odoacer; as a result, the Ostrogoths marched from Moesia to Italy (this means that by 488 they were in Moesia), with a quarter of a million men, women and children; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, pp. 7-8.
 	SetProvinceOwner("Macedonia", "latin", "Rome")
 	SetProvinceOwner("Bulgaria", "goth", "Ostrogoth Tribe") -- Lower Moesia
-	SetProvinceOwner("Serbia", "goth", "Ostrogoth Tribe") -- Upper Moesia
 	SetProvinceOwner("Skopje", "goth", "Ostrogoth Tribe") -- Upper Moesia
 end
 
@@ -1384,7 +1371,6 @@ if (GrandStrategyYear >= 1560) then
 	
 	SetProvinceOwner("Croatia", "teuton", "Turkey")
 	SetProvinceOwner("Bosnia", "teuton", "Turkey")
-	SetProvinceOwner("Vojvodina", "teuton", "Turkey")
 	
 	SetProvinceOwner("Latvia", "teuton", "Prussia") -- Teutonic Order
 	SetProvinceOwner("Estonia", "teuton", "Prussia") -- Teutonic Order

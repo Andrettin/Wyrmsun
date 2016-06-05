@@ -5638,7 +5638,21 @@ DefineProvince("Serbia", {
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
 	Claims = {
+		"minoan", "Lepenskivir Tribe",
 		"thracian", "Triballi Tribe"
+	},
+	HistoricalOwners = {
+		-7000, "minoan", "Lepenskivir Tribe", -- The Lepenski Vir culture existed between c. 7000 and c. 5500 BC (they were presumably named after the site of Lepenski Vir, in Serbia); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 175.
+		-336, "thracian", "Triballi Tribe", -- they were also in western Bulgaria; Macedonian Empire and its environs in 336-323 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 18-19.
+		-29, "latin", "Rome", -- Lower Moesia and Upper Moesia were acquired by Rome in 29 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		488, "goth", "Ostrogoth Tribe" -- Ostrogoths commissioned by the Eastern Roman Emperor in 488 to wrest control of Italy from Odoacer; as a result, the Ostrogoths marched from Moesia to Italy (this means that by 488 they were in Moesia), with a quarter of a million men, women and children; Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, pp. 7-8.
+	},
+	HistoricalClaims = {
+		-29, "latin", "Rome"
+	},
+	HistoricalCultures = {
+		-7000, "minoan",
+		-336, "thracian"
 	},
 	HistoricalSettlementBuildings = {
 		161, "unit-teuton-barracks", true -- Legionary base present in Viminacium in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
@@ -6747,6 +6761,21 @@ DefineProvince("Vojvodina", {
 	SettlementLocation = {536, 127}, -- Novi Sad
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
+	Claims = {
+		"minoan", "Starcevo Tribe"
+	},
+	HistoricalOwners = {
+		-6000, "minoan", "Starcevo Tribe", -- The Starčevo culture began c. 6000 BC (they were presumably named after the site of Starčevo, in Vojvodina); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 177.
+		107, "latin", "Rome", -- Dacia acquired by Rome in 107 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		275, "", "", -- Dacia lost by Rome in 275 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		1560, "teuton", "Turkey" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalClaims = {
+		107, "latin", "Rome"
+	},
+	HistoricalCultures = {
+		-6000, "minoan"
+	},
 	Regions = {"Europe", "West and Central Europe"}
 })
 
