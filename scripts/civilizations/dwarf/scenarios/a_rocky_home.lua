@@ -41,7 +41,8 @@ if (LoadedGame == false) then
 		SetUnitVariable(unit, "Character", "Modsognir")
 		unit = CreateUnit("unit-dwarven-axefighter", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 		SetUnitVariable(unit, "Character", "Durin")
-		unit = CreateUnit("unit-dwarven-axefighter", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		unit = CreateUnit("unit-dwarven-witness", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		SetUnitVariable(unit, "Name", "Thjodrorir")
 	elseif (GrandStrategyEventMap) then
 		CreateProvinceUnits("Svarinshaug", 0, 1, false, false)
 		CreateProvinceCustomHero("Svarinshaug", 0)
@@ -55,6 +56,10 @@ if (LoadedGame == false) then
 			SetUnitVariable(unit, "Character", "Durin")
 		end
 		
+		unit = CreateUnit("unit-dwarven-witness", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		SetUnitVariable(unit, "Name", "Thjodrorir")
+		SetUnitVariable(unit, "Starting", false) -- so that he isn't carried over
+
 		if (GrandStrategyBattleBaseBuilding == false) then
 			unit = OldCreateUnit("unit-brising-miner", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 			unit = OldCreateUnit("unit-brising-miner", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
@@ -109,7 +114,7 @@ AddTrigger(
 					{"~!Continue"},
 					{function(s)
 					Event(
-						FindHero("Modsognir"), -- should be Thjodrorir
+						FindUnit("unit-dwarven-witness"),
 						"By nightfall the blood bats - or worse - will come out into the open, we need to be ready before then.",
 						player,
 						{"~!Continue"},
@@ -133,8 +138,50 @@ AddTrigger(
 	end
 )
 
--- Durin: Thjodrorir, when I was young ye were already old. Ye, wisest of our clan... what does the future have in store for us?
--- Thjodrorir: Aye, much do I know, but in this case little can I tell. 
+AddTrigger(
+	function()
+		if (GameCycle >= 1000 and GetFactionExists("Brising Clan")) then
+			player = GetFactionPlayer("Brising Clan")
+			return true
+		end
+		return false
+	end,
+	function() 
+		Event(
+			FindHero("Durin"),
+			"Thjodrorir, when I was young ye were already old. Ye, wisest of our clan... what does the future have in store for us?",
+			player,
+			{"~!Continue"},
+			{function(s)
+			Event(
+				FindUnit("unit-dwarven-witness"),
+				"Aye, much do I know, but in this case little can I tell. Though I am blessed by the great Hroptatyr with visions, I do not choose what appears before me, whether it is the future, the past, or another realm...",
+				player,
+				{"~!Continue"},
+				{function(s)
+				Event(
+					FindHero("Durin"),
+					"Another realm?",
+					player,
+					{"~!Continue"},
+					{function(s)
+					Event(
+						FindUnit("unit-dwarven-witness"),
+						"Aye. Last night I saw it in my dreams. Green fields as far as the eye could see, inhabited by a strange people. A race of giant-gnomes, calling upon Hroptatyr for victory in battle... And he answered them. Their bronze swords painted the land red with the blood of their enemies. Could our god's domain extend to such a foreign land?",
+						player,
+						{"~!Continue"},
+						{function(s)
+						end}
+					)
+					end}
+				)
+				end}
+			)
+			end}
+		)
+		return false
+	end
+)
 
 AddTrigger(
 	function()
