@@ -31,6 +31,7 @@
 Load("scripts/grand_strategy/christianity_events.lua")
 Load("scripts/grand_strategy/generic_events.lua")
 Load("scripts/grand_strategy/teuton_events.lua")
+Load("scripts/grand_strategy/uralic_events.lua")
 
 function LoadEvents(world)
 	GrandStrategyEvents = nil

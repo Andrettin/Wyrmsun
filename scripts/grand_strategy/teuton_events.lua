@@ -121,3 +121,29 @@ DefineGrandStrategyEvent("Teuton Culture Spreads", {
 	},
 	OptionTooltips = {"The culture of PROVINCE_NAME changes to Teutonic"}
 })
+
+DefineGrandStrategyEvent("The Confirmation of Seignorial Privileges", { -- Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 18.
+	Description = "The aristocrats of Livonia and Estonia have managed to acquire an official confirmation of their privileges, which in fact goes beyond a mere statement of the status quo and accepts extended privileges for the landed nobility in these provinces.",
+	World = "Earth",
+	Conditions = function(s)
+		if (
+			EventFaction.Name == "Prussia" -- should also be possible for other countries, but let's leave this here for now so that this event doesn't trigger in antiquity
+			and GetProvinceOwner("Estonia") == EventFaction.Name
+			and GetProvinceOwner("Latvia") == EventFaction.Name
+			-- should only trigger after a technology for the appropriate time period has been researched
+		) then
+			return true
+		else
+			return false
+		end
+	end,
+	HistoricalYear = 1561,
+	Options = {"~!OK"},
+	OptionEffects = {
+		function(s)
+			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "gold", 500)
+			ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "research", -5)
+		end
+	},
+	OptionTooltips = {"+500 Gold\n-5 Research", ""}
+})

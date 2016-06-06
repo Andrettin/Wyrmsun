@@ -28,5 +28,14 @@
 DefineFaction("Fenni Tribe", { -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	Civilization = "finnish", -- correct?
 	Type = "tribe",
-	Colors = {"green"}
+	Colors = {"green"},
+	DevelopsTo = {"Finland"},
+	HistoricalFactionDerivations = {-264, "uralic", "Uralic Tribe"}
+})
+
+DefineFaction("Finland", {
+	Civilization = "finnish",
+	Type = "polity",
+	Colors = {"green"},
+	DefaultTier = "grand-duchy"
 })

@@ -401,7 +401,7 @@ DefineFaction("Baden", {
 	ParentFaction = "Swabia",
 	Type = "polity",
 	Colors = {"black"},
-	DefaultTier = "grand duchy"
+	DefaultTier = "grand-duchy"
 })
 
 DefineFaction("Netherlands", {
@@ -517,7 +517,7 @@ DefineFaction("Hesse", {
 		"monarchy", "duchy", "Landgraviate"
 	},
 	HistoricalTiers = {
-		1815, "grand duchy" -- Hesse was a grand duchy in 1815-1866 (there were two German states called "Hesse" then, the Grand Duchy of Hesse and the Electorate of Hesse); Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+		1815, "grand-duchy" -- Hesse was a grand duchy in 1815-1866 (there were two German states called "Hesse" then, the Grand Duchy of Hesse and the Electorate of Hesse); Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	}
 })
 
@@ -579,7 +579,7 @@ DefineFaction("Mecklenburg", {
 	ParentFaction = "Saxony",
 	Type = "polity",
 	Colors = {"brown"},
-	DefaultTier = "grand duchy",
+	DefaultTier = "grand-duchy",
 	FactionUpgrade = "upgrade-mecklenburg-faction"
 })
 

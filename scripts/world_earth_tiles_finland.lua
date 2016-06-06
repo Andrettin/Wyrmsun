@@ -31,3 +31,10 @@ DefineWorldMapTile({550, 84}, {
 		"finnish", "Helsinki"
 	}
 })
+
+DefineWorldMapTile({561, 83}, {
+	World = "Earth",
+	CulturalSettlementNames = {
+		"norse", "Viborg"
+	}
+})

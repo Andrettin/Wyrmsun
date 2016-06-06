@@ -391,6 +391,11 @@ DefineLanguage("proto-slavic", {
 	SkipNameTypeInheritance = true
 })
 
+DefineLanguage("proto-uralic", {
+	Name = "Proto-Uralic",
+	SkipNameTypeInheritance = true
+})
+
 DefineLanguage("provencal", {
 	Name = "Provençal"
 })

@@ -1372,18 +1372,9 @@ if (GrandStrategyYear >= 1560) then
 	SetProvinceOwner("Croatia", "teuton", "Turkey")
 	SetProvinceOwner("Bosnia", "teuton", "Turkey")
 	
-	SetProvinceOwner("Latvia", "teuton", "Prussia") -- Teutonic Order
-	SetProvinceOwner("Estonia", "teuton", "Prussia") -- Teutonic Order
-	
 	SetProvinceOwner("Posen", "slav", "Poland")
 	
 	SetProvinceOwner("Dobruja", "teuton", "Turkey")
-end
-
-if (GrandStrategyYear >= 1561) then
-	GrandStrategyEvents.TheConfirmationOfSeignorialPrivilegesLivoniaEstonia = nil -- Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 18.
-	
-	SetProvinceOwner("Estonia", "norse", "Sweden") -- Estonia acquired by Sweden in 1561; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119, 120.
 end
 
 if (GrandStrategyYear >= 1586) then -- Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 14.
@@ -1396,10 +1387,6 @@ end
 
 if (GrandStrategyYear >= 1618) then -- Brandenburg acquired the Duchy of Prussia in 1618, although it remained under Polish suzerainty until 1657-1660; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123; Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 6.
 	SetProvinceOwner("Prussia", "teuton", "Brandenburg")
-end
-
-if (GrandStrategyYear >= 1629) then
-	SetProvinceOwner("Latvia", "norse", "Sweden") -- Sweden acquired Livonia in 1629; Source: William R. Shepherd, "Historical Atlas", 1911, p. 120.
 end
 
 if (GrandStrategyYear >= 1649) then -- Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 17.

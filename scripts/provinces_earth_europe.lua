@@ -1585,6 +1585,15 @@ DefineProvince("Courland", {
 	SettlementTerrain = "Plains",
 	Coastal = true,
 	Claims = {
+		"uralic", "Uralic Tribe"
+	},
+	HistoricalOwners = {
+		-9000, "uralic", "Uralic Tribe", -- The ancestors of Finno-Ugric speaking peoples settled the eastern Baltic (apparently meaning Estonia and Latvia) c. 9000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 184.
+		1560, "teuton", "Prussia", -- Teutonic Order; Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		1561, "norse", "Sweden" -- Estonia acquired by Sweden in 1561; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119, 120.
+	},
+	HistoricalCultures = {
+		-9000, "uralic" -- The ancestors of Finno-Ugric speaking peoples settled the eastern Baltic (apparently meaning Estonia and Latvia) c. 9000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 184.
 	},
 	Regions = {"Europe", "West and Central Europe"}
 })
@@ -2211,6 +2220,17 @@ DefineProvince("Estonia", {
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
 	Coastal = true,
+	Claims = {
+		"uralic", "Uralic Tribe"
+	},
+	HistoricalOwners = {
+		-9000, "uralic", "Uralic Tribe", -- The ancestors of Finno-Ugric speaking peoples settled the eastern Baltic (apparently meaning Estonia and Latvia) c. 9000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 184.
+		1560, "teuton", "Prussia", -- Teutonic Order; Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		1561, "norse", "Sweden" -- Estonia acquired by Sweden in 1561; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119, 120.
+	},
+	HistoricalCultures = {
+		-9000, "uralic" -- The ancestors of Finno-Ugric speaking peoples settled the eastern Baltic (apparently meaning Estonia and Latvia) c. 9000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 184.
+	},
 	Regions = {"Europe", "West and Central Europe"}
 })
 
@@ -2296,12 +2316,7 @@ DefineProvince("Finland", {
 		{557, 83},
 		{558, 83},
 		{559, 83},
-		{560, 83},
-		{561, 83},
-		{562, 83}, {562, 84},
-		{563, 84},
-		{564, 84},
-		{565, 84}
+		{560, 83}
 	},
 	CulturalNames = {
 		"finnish", "Finland",
@@ -2311,13 +2326,16 @@ DefineProvince("Finland", {
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
 	Claims = {
-		"finnish", "Fenni Tribe"
+		"finnish", "Fenni Tribe",
+		"uralic", "Uralic Tribe"
 	},
 	HistoricalOwners = {
+		-7500, "uralic", "Uralic Tribe",
 		-264, "finnish", "Fenni Tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		1560, "norse", "Sweden" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalCultures = {
+		-7500, "uralic", -- The ancestors of Finno-Ugric speaking peoples (or their descendants) settled the coast of the Bothian Gulf in Finland 7500-6400 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 184.
 		-264, "finnish"
 	},
 	Regions = {"Europe", "West and Central Europe"}
@@ -3202,6 +3220,41 @@ DefineProvince("Iceland", {
 	Regions = {"Europe", "West and Central Europe"}
 })
 
+DefineProvince("Ingria", {
+	World = "Earth",
+	CulturalNames = {
+		"norse", "Ingermanland",
+		"slav", "Ingria"
+	},
+	Tiles = {
+		{560, 86}, {560, 87},
+		{561, 86}, {561, 87},
+		{562, 86}, {562, 87},
+		{563, 86}, {563, 87},
+		{564, 86}, {564, 87},
+		{565, 84}, {565, 86}, {565, 87},
+		{566, 84}, {566, 85}, {566, 86}, {566, 87},
+		{567, 84}, {567, 85}, {567, 86}, {567, 87},
+		{568, 86}
+	},
+	SettlementLocation = {566, 86}, -- Saint Petersburg
+	Map = "maps/random/random-map-forest.smp",
+	SettlementTerrain = "Plains",
+	Coastal = true,
+	Claims = {
+		"slav", "Russia",
+		"uralic", "Uralic Tribe"
+	},
+	HistoricalOwners = {
+		-9000, "uralic", "Uralic Tribe", -- The ancestors of Finno-Ugric speaking peoples settled the Karelian Isthmus c. 9000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 184.
+		1560, "slav", "Muscovy" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalCultures = {
+		-9000, "uralic" -- The ancestors of Finno-Ugric speaking peoples settled the Karelian Isthmus c. 9000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 184.
+	},
+	Regions = {"Eurasia", "Europe"}
+})
+
 DefineProvince("Istria", {
 	World = "Earth",
 	CulturalNames = {
@@ -3288,6 +3341,24 @@ DefineProvince("Jutland", {
 	},
 	Regions = {"Europe", "Scandinavia", "West and Central Europe"}
 })
+
+--[[
+DefineProvince("Karelia", {
+	World = "Earth",
+	Tiles = {
+	},
+	CulturalNames = {
+		"finnish", "Karelia",
+		"slav", "Karelia"
+	},
+--	SettlementLocation = {550, 84}, -- Helsinki
+	Map = "maps/random/random-map-forest.smp",
+	SettlementTerrain = "Plains",
+	Claims = {
+	},
+	Regions = {"Eurasia", "Europe"}
+})
+--]]
 
 DefineProvince("Kent", {
 	World = "Earth",
@@ -3445,6 +3516,15 @@ DefineProvince("Latvia", {
 	SettlementTerrain = "Plains",
 	Coastal = true,
 	Claims = {
+		"uralic", "Uralic Tribe"
+	},
+	HistoricalOwners = {
+		-9000, "uralic", "Uralic Tribe", -- The ancestors of Finno-Ugric speaking peoples settled the eastern Baltic (apparently meaning Estonia and Latvia) c. 9000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 184.
+		1560, "teuton", "Prussia", -- Teutonic Order; Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		1629, "norse", "Sweden" -- Sweden acquired Livonia in 1629; Source: William R. Shepherd, "Historical Atlas", 1911, p. 120.
+	},
+	HistoricalCultures = {
+		-9000, "uralic" -- The ancestors of Finno-Ugric speaking peoples settled the eastern Baltic (apparently meaning Estonia and Latvia) c. 9000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 184.
 	},
 	Regions = {"Europe", "West and Central Europe"}
 })
@@ -5368,15 +5448,15 @@ DefineProvince("Russia", {
 --		{140, 22}, {140, 23}, {140, 24}, {140, 25}, {140, 26}, {141, 21}, {141, 22}, {141, 23}, {141, 24}, {141, 25}, {141, 26}, {142, 21}, {142, 22}, {142, 23}, {142, 24}, {142, 25}, {142, 26}, {143, 21}, {143, 22}, {143, 23}, {143, 24}, {143, 25}, {143, 26}, {144, 21}, {144, 22}, {144, 23}, {144, 24}, {144, 25}, {144, 26}, {145, 18}, {145, 19}, {145, 20}, {145, 21}, {145, 22}, {145, 23}, {145, 24}, {145, 25}, {145, 26}, {145, 27}, {146, 18}, {146, 19}, {146, 20}, {146, 21}, {146, 22}, {146, 23}, {146, 24}, {146, 25}, {146, 26}, {146, 27}, {147, 18}, {147, 19}, {147, 20}, {147, 21}, {147, 22}, {147, 23}, {147, 24}, {147, 25}, {147, 26}, {147, 27}, {148, 20}, {148, 21}, {148, 22}, {148, 23}, {148, 24}, {148, 25}, {148, 26}, {148, 27}, {148, 28}, {149, 23}, {149, 24}, {149, 25}, {149, 26}, {149, 27}, {149, 28}, {150, 23}, {150, 24}, {150, 25}, {150, 26}, {150, 27}, {151, 24}, {151, 25}, {151, 26}, {151, 27}, {151, 28}, {151, 29}, {152, 24}, {152, 25}, {152, 26}, {152, 27}, {153, 24}, {153, 25}, {153, 26}, {154, 24}, {154, 25}, -- old map
 		{558, 90}, {558, 91},
 		{559, 88}, {559, 89}, {559, 90}, {559, 91}, {559, 92}, {559, 93},
-		{560, 86}, {560, 87}, {560, 88}, {560, 89}, {560, 90}, {560, 91}, {560, 92}, {560, 93}, {560, 94}, {560, 95},
-		{561, 86}, {561, 87}, {561, 88}, {561, 89}, {561, 90}, {561, 91}, {561, 92}, {561, 93}, {561, 94}, {561, 95},
-		{562, 86}, {562, 87}, {562, 88}, {562, 89}, {562, 90}, {562, 91}, {562, 92}, {562, 93}, {562, 94}, {562, 95},
-		{563, 86}, {563, 87}, {563, 88}, {563, 89}, {563, 90}, {563, 91}, {563, 92}, {563, 93}, {563, 94}, {563, 95}, {563, 96}, {563, 97},
-		{564, 86}, {564, 87}, {564, 88}, {564, 89}, {564, 90}, {564, 91}, {564, 92}, {564, 93}, {564, 94}, {564, 95}, {564, 96}, {564, 97},
-		{565, 86}, {565, 87}, {565, 88}, {565, 89}, {565, 90}, {565, 91}, {565, 92}, {565, 93}, {565, 94}, {565, 95}, {565, 96},
-		{566, 84}, {566, 85}, {566, 86}, {566, 87}, {566, 88}, {566, 89}, {566, 90}, {566, 91}, {566, 92}, {566, 93}, {566, 94}, {566, 95}, {566, 96},
-		{567, 84}, {567, 85}, {567, 86}, {567, 87}, {567, 88}, {567, 89}, {567, 90}, {567, 91}, {567, 92}, {567, 93}, {567, 94}, {567, 95}, {567, 96},
-		{568, 86}, {568, 87}, {568, 88}, {568, 89}, {568, 91}, {568, 92}, {568, 93}, {568, 94}, {568, 95}, {568, 96}, {568, 97},
+		{560, 88}, {560, 89}, {560, 90}, {560, 91}, {560, 92}, {560, 93}, {560, 94}, {560, 95},
+		{561, 88}, {561, 89}, {561, 90}, {561, 91}, {561, 92}, {561, 93}, {561, 94}, {561, 95},
+		{562, 88}, {562, 89}, {562, 90}, {562, 91}, {562, 92}, {562, 93}, {562, 94}, {562, 95},
+		{563, 88}, {563, 89}, {563, 90}, {563, 91}, {563, 92}, {563, 93}, {563, 94}, {563, 95}, {563, 96}, {563, 97},
+		{564, 88}, {564, 89}, {564, 90}, {564, 91}, {564, 92}, {564, 93}, {564, 94}, {564, 95}, {564, 96}, {564, 97},
+		{565, 88}, {565, 89}, {565, 90}, {565, 91}, {565, 92}, {565, 93}, {565, 94}, {565, 95}, {565, 96},
+		{566, 88}, {566, 89}, {566, 90}, {566, 91}, {566, 92}, {566, 93}, {566, 94}, {566, 95}, {566, 96},
+		{567, 88}, {567, 89}, {567, 90}, {567, 91}, {567, 92}, {567, 93}, {567, 94}, {567, 95}, {567, 96},
+		{568, 87}, {568, 88}, {568, 89}, {568, 91}, {568, 92}, {568, 93}, {568, 94}, {568, 95}, {568, 96}, {568, 97},
 		{569, 86}, {569, 87}, {569, 88}, {569, 89}, {569, 91}, {569, 92}, {569, 93}, {569, 94}, {569, 95}, {569, 96}, {569, 97}, {569, 98}, {569, 99},
 		{570, 85}, {570, 86}, {570, 87}, {570, 88}, {570, 89}, {570, 90}, {570, 91}, {570, 92}, {570, 93}, {570, 94}, {570, 95}, {570, 96}, {570, 97}, {570, 98}, {570, 99}, {570, 100}, {570, 101}, {570, 105}, {570, 106}, {570, 107}, {570, 108},
 		{571, 85}, {571, 86}, {571, 87}, {571, 88}, {571, 89}, {571, 90}, {571, 91}, {571, 92}, {571, 93}, {571, 94}, {571, 95}, {571, 96}, {571, 97}, {571, 98}, {571, 99}, {571, 100}, {571, 101}, {571, 105}, {571, 106}, {571, 107}, {571, 108},
@@ -5563,10 +5643,12 @@ DefineProvince("Scania", {
 	Claims = {
 		"basque", "Ertebolle Tribe",
 		"basque", "Gylfing Tribe",
+		"basque", "Kongemose Tribe",
 		"norse", "Dane Tribe",
 		"norse", "Scania"
 	},
 	HistoricalOwners = {
+		-7000, "basque", "Kongemose Tribe", -- Kongemose culture present in Scania c. 7000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 185.
 		-5800, "basque", "Ertebolle Tribe", -- Coastal Ertebolle Mesolithic sites and shell middens begin being occupied c. 5800 BC; they lived in eastern Jutland (i.e. Ertebolle itself on the Limfjord in northern Jutland, Bjornsholm), the Danish isles (the Karrebaek-Dybso Fjord sites in Zealand - which could sustain c. 250 people), and southern Sweden (Tagerup in a fjord on Scania - this site had a previous Kongemose occupation); Ertebolle people used pottery and did large-quantity fishing via traps or weirs; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 136.
 		-3000, "basque", "Gylfing Tribe", -- around this time Gylve or his ancestors should have begun to rule in Scania
 		-2800, "germanic", "Asa Tribe", -- in the Ynglinga saga, "Odin's people", the Asa, settle Scandinavia in a manner not too dissimilar from what archaeological findings tell us of Indo-European settlement in the region; thus the name "Asa Tribe" is used here to denote the Indo-European-speaking peoples who settled in Scandinavia, and were the precursors of the Germanic peoples 
@@ -6712,6 +6794,38 @@ DefineProvince("Vestfold", {
 		"norse", "Norway"
 	},
 	Regions = {"Europe", "Scandinavia", "West and Central Europe"}
+})
+
+DefineProvince("Viborg", {
+	World = "Earth",
+	CulturalNames = {
+		"norse", "Viborg"
+	},
+	Tiles = {
+		{561, 82}, {561, 83},
+		{562, 82}, {562, 83}, {562, 84},
+		{563, 82}, {563, 83}, {563, 84},
+		{564, 81}, {564, 82}, {564, 83}, {564, 84},
+		{565, 81}, {565, 82}, {565, 83},
+		{566, 83}
+	},
+	SettlementLocation = {561, 83}, -- Viborg
+	Map = "maps/random/random-map-forest.smp",
+	SettlementTerrain = "Plains",
+	Coastal = true,
+	Claims = {
+		"finnish", "Finland",
+		"uralic", "Uralic Tribe"
+	},
+	HistoricalOwners = {
+		-9000, "uralic", "Uralic Tribe", -- The ancestors of Finno-Ugric speaking peoples settled the Karelian Isthmus c. 9000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 184.
+		1560, "norse", "Sweden" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalCultures = {
+		-9000, "uralic" -- The ancestors of Finno-Ugric speaking peoples settled the Karelian Isthmus c. 9000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 184.
+		-- A fishnet belonging to the ancestors of Finno-Ugric speaking peoples was found in Antrea (on the Karelian Isthmus), being dated c. 8500 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 184.
+	},
+	Regions = {"Eurasia", "Europe"}
 })
 
 DefineProvince("Vinnytska", {

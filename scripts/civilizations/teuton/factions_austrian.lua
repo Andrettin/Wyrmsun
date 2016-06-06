@@ -32,16 +32,16 @@ DefineFaction("Austria", {
 	Colors = {"white", "red"},
 	DefaultTier = "duchy",
 	Titles = {
-		"monarchy", "grand duchy", "Archduchy"
+		"monarchy", "grand-duchy", "Archduchy"
 	},
 	MinisterTitles = {
-		"head-of-state", "male", "monarchy", "grand duchy", "Archduke",
-		"head-of-state", "female", "monarchy", "grand duchy", "Archduchess",
+		"head-of-state", "male", "monarchy", "grand-duchy", "Archduke",
+		"head-of-state", "female", "monarchy", "grand-duchy", "Archduchess",
 		"head-of-government", "no-gender", "monarchy", "no-faction-tier", "Minister-President", -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 39.
 		"education-minister", "no-gender", "no-government-type", "no-faction-tier", "Education Director" -- Director of the Department of Education (Leiter des Unterrichtsdepartements); Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 41.
 	},
 	HistoricalTiers = {
-		1560, "grand duchy", -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		1560, "grand-duchy", -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 		1815, "empire" -- Political situation in Central Europe, 1815-1866 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	}
 	-- 04.03.1849: new constitution; Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 48.

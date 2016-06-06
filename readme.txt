@@ -66,6 +66,8 @@ https://github.com/Andrettin/Wyrmsun
 
 * Grand Strategy
 - Fixed an issue which caused a town hall to not be generated for the defender with battle base building in certain random circumstances, which also had the consequence of making the battle unwinnable for the attacker.
+- Added Ingria and Viborg provinces (Earth).
+- Added Lake Ladoga water province (Earth).
 
 * Miscellaneous
 - Added "No Day/Night Cycle" option when starting single-player maps.

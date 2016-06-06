@@ -162,6 +162,13 @@ DefineWorldMapTile({562, 122}, {
 	}
 })
 
+DefineWorldMapTile({566, 86}, {
+	World = "Earth",
+	CulturalSettlementNames = {
+		"slav", "Saint Petersburg"
+	}
+})
+
 DefineWorldMapTile({587, 97}, {
 	World = "Earth",
 	CulturalSettlementNames = {

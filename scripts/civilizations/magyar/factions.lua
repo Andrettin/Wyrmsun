@@ -29,7 +29,8 @@ DefineFaction("Magyar Tribe", {
 	Civilization = "magyar",
 	Type = "tribe",
 	Colors = {"green"},
-	DevelopsTo = {"Hungary"}
+	DevelopsTo = {"Hungary"},
+	HistoricalFactionDerivations = {896, "uralic", "Uralic Tribe"}
 })
 
 DefineFaction("Hungary", {
