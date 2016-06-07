@@ -722,6 +722,8 @@ João Victor G. Costa (Jinn):
 /graphics/goblin/icons/magnate.png (based on Jesse Crider's Goblin magnate design) (licensed under the CC0)
 /graphics/goblin/icons/patrol.png (licensed under the CC0)
 /graphics/goblin/icons/return_goods.png (licensed under the CC0)
+/graphics/goblin/icons/shaman.png (licensed under the CC0)
+/graphics/goblin/ui/cursors/goblin_gauntlet.png (licensed under the CC0)
 /graphics/latin/buildings/forum.png (based on the model by Wildfire Games) (licensed under the CC-BY-SA 3.0)
 /graphics/latin/buildings/forum_shadow.png (based on the model by Wildfire Games) (licensed under the CC-BY-SA 3.0)
 /graphics/missiles/big_fire.png (modified from Mikodrak's graphics) (licensed under the CC0)

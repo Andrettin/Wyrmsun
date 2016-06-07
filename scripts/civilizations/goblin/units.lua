@@ -301,6 +301,39 @@ DefineUnitType("unit-goblin-headhunter", { Name = _("Headhunter"),
 	}
 } )
 
+DefineUnitType("unit-goblin-shaman", { Name = _("Shaman"),
+	Parent = "unit-template-priest",
+	Civilization = "goblin",
+	Description = _("Adorned with skulls and bones, goblin shamans are steeped in the mysteries of life and death. Each shaman must choose his own path, whether it be taming the savage force of life or dealing in dark magics."),
+	Image = {"file", "goblin/units/shaman.png", "size", {72, 72}},
+	Animations = "animations-gnomish-herbalist", Icon = "icon-goblin-shaman",
+	DefaultEquipment = {
+		{"boots", "unit-boots"}
+	},
+	HitPoints = 35,
+	Accuracy = 10,
+	Evasion = 10,
+	Corpse = "unit-goblin-dead-body",
+	CanCastSpell = {"spell-terror"},
+	AutoCastActive = {"spell-terror"},
+	AiDrops = {"unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	DropAffixes = {"upgrade-item-prefix-flaming", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-the-snigill", "upgrade-item-suffix-of-trickery"},
+	HackDamage = true,
+	ButtonPos = 2,
+	ButtonKey = "s",
+	ButtonHint = _("Train ~!Shaman"),
+	Sounds = {
+		"selected", "basic-goblin-voices-selected-group",
+		"acknowledge", "basic-goblin-voices-acknowledge",
+		"attack", "basic-goblin-voices-attack",
+		"ready", "goblin-shaman-ready",
+		"help", "basic-goblin-voices-help",
+		"dead", "basic-goblin-voices-dead",
+		"hit", "dagger-attack",
+		"miss", "attack-miss"
+	}
+} )
+
 DefineUnitType("unit-goblin-war-machine", { Name = _("War Machine"),
 	Parent = "unit-template-siege-engine",
 	Civilization = "goblin",

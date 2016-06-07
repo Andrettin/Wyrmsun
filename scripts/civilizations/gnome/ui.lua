@@ -31,7 +31,7 @@ DefineCursor({
 	Name = "cursor-point",
 	Race = "gnome",
 	File = "dwarf/ui/cursors/dwarven_gauntlet.png",
-	HotSpot = {3, 2},
+	HotSpot = {3, 1},
 	Size = {28, 32}
 })
 

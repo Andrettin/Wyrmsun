@@ -122,6 +122,7 @@ local land_funcs = {
 	"unit-goblin-archer", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-goblin-archer"),
 	"unit-goblin-headhunter", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-goblin-headhunter"),
 	"unit-goblin-thief", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-goblin-thief"),
+	"unit-goblin-shaman", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-goblin-shaman"),
 	"unit-goblin-war-machine", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-goblin-war-machine"),
 	"unit-goblin-glider", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-goblin-glider"),
 	"unit-kobold-footpad", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-kobold-footpad"),
