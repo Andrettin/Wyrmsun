@@ -49,12 +49,6 @@ DefineModifier("upgrade-acthnic-tribe-faction",
 	{"apply-to", "unit-gnomish-herbalist"}, {"convert-to", "unit-deep-gnomish-herbalist"}
 )
 
-DefineModifier("upgrade-acthnic-tribe-faction",
-	{"BasicDamage", 2},
-	{"Points", 10},
-	{"apply-to", "unit-deep-gnomish-recruit"}, {"apply-to", "unit-deep-gnomish-duelist"}, {"apply-to", "unit-deep-gnomish-master-at-arms"}
-)
-
 DefineDependency("unit-gnomish-worker",
 	{"upgrade-acthnic-tribe-faction", 0}
 )

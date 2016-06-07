@@ -35,84 +35,25 @@ DefineUnitType("unit-deep-gnomish-worker", {
 	Parent = "unit-deep-gnomish-worker",
 	Civilization = "gnome",
 	Faction = "Acthnic Tribe",
-	Image = {"file", "gnome/units/gnomish_worker_deep_gnome_red_hair.png", "size", {72, 72}},
-	Icon = "icon-gnomish-worker-deep-gnome-red-hair",
-	CanGatherResources = {
-		{
-			"resource-id", "gold",
-			"file-when-loaded", "gnome/units/gnomish_worker_with_gold_deep_gnome_red_hair.png"
-		},
-		{
-			"resource-id", "silver",
-			"file-when-loaded", "gnome/units/gnomish_worker_with_gold_deep_gnome_red_hair.png"
-		},
-		{
-			"resource-id", "copper",
-			"file-when-loaded", "gnome/units/gnomish_worker_with_gold_deep_gnome_red_hair.png"
-		},
-		{
-			"resource-id", "lumber",
-			"file-when-loaded", "gnome/units/gnomish_worker_with_lumber_deep_gnome_red_hair.png"
-		},
-		{
-			"resource-id", "stone",
-			"file-when-loaded", "gnome/units/gnomish_worker_with_gold_deep_gnome_red_hair.png"
-		},
-		{
-			"resource-id", "coal",
-			"file-when-loaded", "gnome/units/gnomish_worker_with_gold_deep_gnome_red_hair.png"
-		}
-	},
+	SkinColor = "gray",
+	HairColor = "red",
 	Variations = {
 		{
 			"variation-id", "red-hair",
-			"file", "gnome/units/gnomish_worker_deep_gnome_red_hair.png",
-			"file-when-loaded", "gold", "gnome/units/gnomish_worker_with_gold_deep_gnome_red_hair.png",
-			"file-when-loaded", "silver", "gnome/units/gnomish_worker_with_gold_deep_gnome_red_hair.png",
-			"file-when-loaded", "copper", "gnome/units/gnomish_worker_with_gold_deep_gnome_red_hair.png",
-			"file-when-loaded", "stone", "gnome/units/gnomish_worker_with_gold_deep_gnome_red_hair.png",
-			"file-when-loaded", "coal", "gnome/units/gnomish_worker_with_gold_deep_gnome_red_hair.png",
-			"file-when-loaded", "lumber", "gnome/units/gnomish_worker_with_lumber_deep_gnome_red_hair.png",
-			"icon", "icon-gnomish-worker-deep-gnome-red-hair",
-			"button-icon", "patrol", "icon-gnomish-patrol-land-deep-gnome-red-hair",
 			"upgrade-forbidden", "upgrade-old"
 		},
 		{
 			"variation-id", "blond-hair",
-			"file", "gnome/units/gnomish_worker_deep_gnome_blond_hair.png",
-			"file-when-loaded", "gold", "gnome/units/gnomish_worker_with_gold_deep_gnome_blond_hair.png",
-			"file-when-loaded", "silver", "gnome/units/gnomish_worker_with_gold_deep_gnome_blond_hair.png",
-			"file-when-loaded", "copper", "gnome/units/gnomish_worker_with_gold_deep_gnome_blond_hair.png",
-			"file-when-loaded", "stone", "gnome/units/gnomish_worker_with_gold_deep_gnome_blond_hair.png",
-			"file-when-loaded", "coal", "gnome/units/gnomish_worker_with_gold_deep_gnome_blond_hair.png",
-			"file-when-loaded", "lumber", "gnome/units/gnomish_worker_with_lumber_deep_gnome_blond_hair.png",
-			"icon", "icon-gnomish-worker-deep-gnome-blond-hair",
-			"button-icon", "patrol", "icon-gnomish-patrol-land-deep-gnome-blond-hair",
+			"hair-color", "dark-blond",
 			"upgrade-forbidden", "upgrade-old"
 		},
 		{
 			"variation-id", "gray-hair",
-			"file", "gnome/units/gnomish_worker_deep_gnome_gray_hair.png",
-			"file-when-loaded", "gold", "gnome/units/gnomish_worker_with_gold_deep_gnome_gray_hair.png",
-			"file-when-loaded", "silver", "gnome/units/gnomish_worker_with_gold_deep_gnome_gray_hair.png",
-			"file-when-loaded", "copper", "gnome/units/gnomish_worker_with_gold_deep_gnome_gray_hair.png",
-			"file-when-loaded", "stone", "gnome/units/gnomish_worker_with_gold_deep_gnome_gray_hair.png",
-			"file-when-loaded", "coal", "gnome/units/gnomish_worker_with_gold_deep_gnome_gray_hair.png",
-			"file-when-loaded", "lumber", "gnome/units/gnomish_worker_with_lumber_deep_gnome_gray_hair.png",
-			"icon", "icon-gnomish-worker-deep-gnome-gray-hair",
-			"button-icon", "patrol", "icon-gnomish-patrol-land-deep-gnome-gray-hair"
+			"hair-color", "gray"
 		},
 		{
 			"variation-id", "green-hair",
-			"file", "gnome/units/gnomish_worker_deep_gnome_green_hair.png",
-			"file-when-loaded", "gold", "gnome/units/gnomish_worker_with_gold_deep_gnome_green_hair.png",
-			"file-when-loaded", "silver", "gnome/units/gnomish_worker_with_gold_deep_gnome_green_hair.png",
-			"file-when-loaded", "copper", "gnome/units/gnomish_worker_with_gold_deep_gnome_green_hair.png",
-			"file-when-loaded", "stone", "gnome/units/gnomish_worker_with_gold_deep_gnome_green_hair.png",
-			"file-when-loaded", "coal", "gnome/units/gnomish_worker_with_gold_deep_gnome_green_hair.png",
-			"file-when-loaded", "lumber", "gnome/units/gnomish_worker_with_lumber_deep_gnome_green_hair.png",
-			"icon", "icon-gnomish-worker-deep-gnome-green-hair",
-			"button-icon", "patrol", "icon-gnomish-patrol-land-deep-gnome-green-hair",
+			"hair-color", "green",
 			"upgrade-forbidden", "upgrade-old"
 		}
 	}
@@ -122,88 +63,65 @@ DefineUnitType("unit-deep-gnomish-recruit", {
 	Parent = "unit-gnomish-recruit",
 	Civilization = "gnome",
 	Faction = "Acthnic Tribe",
-	Image = {"file", "gnome/units/body_warrior_deep_gnome.png", "size", {72, 72}},
-	LayerImages = {
-		{"layer", "hair", "file", "gnome/units/hair_warrior_deep_gnome_red_hair.png"},
-		{"layer", "right-arm", "file", "gnome/units/right_arm_warrior_deep_gnome.png"},
-		{"layer", "weapon", "file", "gnome/units/thrusting_sword.png"}
-	},
-	Icon = "icon-gnomish-recruit-deep-gnome-red-hair",
+	SkinColor = "gray",
+	HairColor = "red",
 	Variations = {
 		{
 			"variation-id", "red-hair",
-			"file", "gnome/units/body_warrior_deep_gnome.png",
-			"layer-file", "hair", "gnome/units/hair_warrior_deep_gnome_red_hair.png",
-			"icon", "icon-gnomish-recruit-deep-gnome-red-hair",
-			"button-icon", "patrol", "icon-gnomish-patrol-land-deep-gnome-red-hair",
 			"upgrade-forbidden", "upgrade-old",
 			"item-not-equipped", "unit-hammer",
 			"item-not-equipped", "unit-mining-pick"
 		},
 		{
 			"variation-id", "blond-hair",
-			"file", "gnome/units/body_warrior_deep_gnome.png",
-			"layer-file", "hair", "gnome/units/hair_warrior_deep_gnome_blond_hair.png",
-			"icon", "icon-gnomish-recruit-deep-gnome-blond-hair",
-			"button-icon", "patrol", "icon-gnomish-patrol-land-deep-gnome-blond-hair",
+			"hair-color", "dark-blond",
 			"upgrade-forbidden", "upgrade-old",
 			"item-not-equipped", "unit-hammer",
 			"item-not-equipped", "unit-mining-pick"
 		},
 		{
 			"variation-id", "gray-hair",
-			"file", "gnome/units/body_warrior_deep_gnome.png",
-			"layer-file", "hair", "gnome/units/hair_warrior_deep_gnome_gray_hair.png",
-			"icon", "icon-gnomish-recruit-deep-gnome-gray-hair",
-			"button-icon", "patrol", "icon-gnomish-patrol-land-deep-gnome-gray-hair",
+			"hair-color", "gray",
 			"item-not-equipped", "unit-hammer",
 			"item-not-equipped", "unit-mining-pick"
 		},
 		{
 			"variation-id", "green-hair",
-			"file", "gnome/units/body_warrior_deep_gnome.png",
-			"layer-file", "hair", "gnome/units/hair_warrior_deep_gnome_green_hair.png",
-			"icon", "icon-gnomish-recruit-deep-gnome-green-hair",
-			"button-icon", "patrol", "icon-gnomish-patrol-land-deep-gnome-green-hair",
+			"hair-color", "green",
 			"upgrade-forbidden", "upgrade-old",
 			"item-not-equipped", "unit-hammer",
 			"item-not-equipped", "unit-mining-pick"
 		},
 		{
 			"variation-id", "red-hair",
-			"file", "gnome/units/body_warrior_slash_deep_gnome.png",
-			"layer-file", "hair", "gnome/units/hair_warrior_slash_deep_gnome_red_hair.png",
-			"icon", "icon-gnomish-recruit-deep-gnome-red-hair",
-			"button-icon", "patrol", "icon-gnomish-patrol-land-deep-gnome-red-hair",
+			"file", "gnome/units/body_warrior_slash.png",
+			"layer-file", "hair", "gnome/units/hair_warrior_slash.png",
 			"upgrade-forbidden", "upgrade-old",
 			"item-equipped", "unit-hammer",
 			"item-equipped", "unit-mining-pick"
 		},
 		{
 			"variation-id", "blond-hair",
-			"file", "gnome/units/body_warrior_slash_deep_gnome.png",
-			"layer-file", "hair", "gnome/units/hair_warrior_slash_deep_gnome_blond_hair.png",
-			"icon", "icon-gnomish-recruit-deep-gnome-blond-hair",
-			"button-icon", "patrol", "icon-gnomish-patrol-land-deep-gnome-blond-hair",
+			"file", "gnome/units/body_warrior_slash.png",
+			"layer-file", "hair", "gnome/units/hair_warrior_slash.png",
+			"hair-color", "dark-blond",
 			"upgrade-forbidden", "upgrade-old",
 			"item-equipped", "unit-hammer",
 			"item-equipped", "unit-mining-pick"
 		},
 		{
 			"variation-id", "gray-hair",
-			"file", "gnome/units/body_warrior_slash_deep_gnome.png",
-			"layer-file", "hair", "gnome/units/hair_warrior_slash_deep_gnome_gray_hair.png",
-			"icon", "icon-gnomish-recruit-deep-gnome-gray-hair",
-			"button-icon", "patrol", "icon-gnomish-patrol-land-deep-gnome-gray-hair",
+			"file", "gnome/units/body_warrior_slash.png",
+			"layer-file", "hair", "gnome/units/hair_warrior_slash.png",
+			"hair-color", "gray",
 			"item-equipped", "unit-hammer",
 			"item-equipped", "unit-mining-pick"
 		},
 		{
 			"variation-id", "green-hair",
-			"file", "gnome/units/body_warrior_slash_deep_gnome.png",
-			"layer-file", "hair", "gnome/units/hair_warrior_slash_deep_gnome_green_hair.png",
-			"icon", "icon-gnomish-recruit-deep-gnome-green-hair",
-			"button-icon", "patrol", "icon-gnomish-patrol-land-deep-gnome-green-hair",
+			"file", "gnome/units/body_warrior_slash.png",
+			"layer-file", "hair", "gnome/units/hair_warrior_slash.png",
+			"hair-color", "green",
 			"upgrade-forbidden", "upgrade-old",
 			"item-equipped", "unit-hammer",
 			"item-equipped", "unit-mining-pick"
@@ -211,14 +129,14 @@ DefineUnitType("unit-deep-gnomish-recruit", {
 		{
 			"layer", "right-arm",
 			"variation-id", "right-arm",
-			"file", "gnome/units/right_arm_warrior_deep_gnome.png",
+			"file", "gnome/units/right_arm_warrior.png",
 			"item-not-equipped", "unit-hammer",
 			"item-not-equipped", "unit-mining-pick"
 		},
 		{
 			"layer", "right-arm",
 			"variation-id", "right-arm-slash",
-			"file", "gnome/units/right_arm_warrior_slash_deep_gnome.png",
+			"file", "gnome/units/right_arm_warrior_slash.png",
 			"item-equipped", "unit-hammer",
 			"item-equipped", "unit-mining-pick"
 		},
@@ -247,88 +165,65 @@ DefineUnitType("unit-deep-gnomish-duelist", {
 	Parent = "unit-gnomish-duelist",
 	Civilization = "gnome",
 	Faction = "Acthnic Tribe",
-	Image = {"file", "gnome/units/body_warrior_deep_gnome.png", "size", {72, 72}},
-	LayerImages = {
-		{"layer", "hair", "file", "gnome/units/hair_warrior_deep_gnome_red_hair.png"},
-		{"layer", "right-arm", "file", "gnome/units/right_arm_warrior_deep_gnome.png"},
-		{"layer", "weapon", "file", "gnome/units/thrusting_sword.png"}
-	},
-	Icon = "icon-gnomish-duelist-deep-gnome-red-hair",
+	SkinColor = "gray",
+	HairColor = "red",
 	Variations = {
 		{
 			"variation-id", "red-hair",
-			"file", "gnome/units/body_warrior_deep_gnome.png",
-			"layer-file", "hair", "gnome/units/hair_warrior_deep_gnome_red_hair.png",
-			"icon", "icon-gnomish-duelist-deep-gnome-red-hair",
-			"button-icon", "patrol", "icon-gnomish-patrol-land-deep-gnome-red-hair",
 			"upgrade-forbidden", "upgrade-old",
 			"item-not-equipped", "unit-hammer",
 			"item-not-equipped", "unit-mining-pick"
 		},
 		{
 			"variation-id", "blond-hair",
-			"file", "gnome/units/body_warrior_deep_gnome.png",
-			"layer-file", "hair", "gnome/units/hair_warrior_deep_gnome_blond_hair.png",
-			"icon", "icon-gnomish-duelist-deep-gnome-blond-hair",
-			"button-icon", "patrol", "icon-gnomish-patrol-land-deep-gnome-blond-hair",
+			"hair-color", "dark-blond",
 			"upgrade-forbidden", "upgrade-old",
 			"item-not-equipped", "unit-hammer",
 			"item-not-equipped", "unit-mining-pick"
 		},
 		{
 			"variation-id", "gray-hair",
-			"file", "gnome/units/body_warrior_deep_gnome.png",
-			"layer-file", "hair", "gnome/units/hair_warrior_deep_gnome_gray_hair.png",
-			"icon", "icon-gnomish-duelist-deep-gnome-gray-hair",
-			"button-icon", "patrol", "icon-gnomish-patrol-land-deep-gnome-gray-hair",
+			"hair-color", "gray",
 			"item-not-equipped", "unit-hammer",
 			"item-not-equipped", "unit-mining-pick"
 		},
 		{
 			"variation-id", "green-hair",
-			"file", "gnome/units/body_warrior_deep_gnome.png",
-			"layer-file", "hair", "gnome/units/hair_warrior_deep_gnome_green_hair.png",
-			"icon", "icon-gnomish-duelist-deep-gnome-green-hair",
-			"button-icon", "patrol", "icon-gnomish-patrol-land-deep-gnome-green-hair",
+			"hair-color", "green",
 			"upgrade-forbidden", "upgrade-old",
 			"item-not-equipped", "unit-hammer",
 			"item-not-equipped", "unit-mining-pick"
 		},
 		{
 			"variation-id", "red-hair",
-			"file", "gnome/units/body_warrior_slash_deep_gnome.png",
-			"layer-file", "hair", "gnome/units/hair_warrior_slash_deep_gnome_red_hair.png",
-			"icon", "icon-gnomish-duelist-deep-gnome-red-hair",
-			"button-icon", "patrol", "icon-gnomish-patrol-land-deep-gnome-red-hair",
+			"file", "gnome/units/body_warrior_slash.png",
+			"layer-file", "hair", "gnome/units/hair_warrior_slash.png",
 			"upgrade-forbidden", "upgrade-old",
 			"item-equipped", "unit-hammer",
 			"item-equipped", "unit-mining-pick"
 		},
 		{
 			"variation-id", "blond-hair",
-			"file", "gnome/units/body_warrior_slash_deep_gnome.png",
-			"layer-file", "hair", "gnome/units/hair_warrior_slash_deep_gnome_blond_hair.png",
-			"icon", "icon-gnomish-duelist-deep-gnome-blond-hair",
-			"button-icon", "patrol", "icon-gnomish-patrol-land-deep-gnome-blond-hair",
+			"file", "gnome/units/body_warrior_slash.png",
+			"layer-file", "hair", "gnome/units/hair_warrior_slash.png",
+			"hair-color", "dark-blond",
 			"upgrade-forbidden", "upgrade-old",
 			"item-equipped", "unit-hammer",
 			"item-equipped", "unit-mining-pick"
 		},
 		{
 			"variation-id", "gray-hair",
-			"file", "gnome/units/body_warrior_slash_deep_gnome.png",
-			"layer-file", "hair", "gnome/units/hair_warrior_slash_deep_gnome_gray_hair.png",
-			"icon", "icon-gnomish-duelist-deep-gnome-gray-hair",
-			"button-icon", "patrol", "icon-gnomish-patrol-land-deep-gnome-gray-hair",
+			"file", "gnome/units/body_warrior_slash.png",
+			"layer-file", "hair", "gnome/units/hair_warrior_slash.png",
+			"hair-color", "gray",
 			"item-equipped", "unit-hammer",
 			"item-equipped", "unit-mining-pick"
 		},
 		{
 			"variation-id", "green-hair",
-			"file", "gnome/units/body_warrior_slash_deep_gnome.png",
-			"layer-file", "hair", "gnome/units/hair_warrior_slash_deep_gnome_green_hair.png",
-			"icon", "icon-gnomish-duelist-deep-gnome-green-hair",
-			"button-icon", "patrol", "icon-gnomish-patrol-land-deep-gnome-green-hair",
+			"file", "gnome/units/body_warrior_slash.png",
+			"layer-file", "hair", "gnome/units/hair_warrior_slash.png",
+			"hair-color", "green",
 			"upgrade-forbidden", "upgrade-old",
 			"item-equipped", "unit-hammer",
 			"item-equipped", "unit-mining-pick"
@@ -336,14 +231,14 @@ DefineUnitType("unit-deep-gnomish-duelist", {
 		{
 			"layer", "right-arm",
 			"variation-id", "right-arm",
-			"file", "gnome/units/right_arm_warrior_deep_gnome.png",
+			"file", "gnome/units/right_arm_warrior.png",
 			"item-not-equipped", "unit-hammer",
 			"item-not-equipped", "unit-mining-pick"
 		},
 		{
 			"layer", "right-arm",
 			"variation-id", "right-arm-slash",
-			"file", "gnome/units/right_arm_warrior_slash_deep_gnome.png",
+			"file", "gnome/units/right_arm_warrior_slash.png",
 			"item-equipped", "unit-hammer",
 			"item-equipped", "unit-mining-pick"
 		},
@@ -372,88 +267,65 @@ DefineUnitType("unit-deep-gnomish-master-at-arms", {
 	Parent = "unit-gnomish-master-at-arms",
 	Civilization = "gnome",
 	Faction = "Acthnic Tribe",
-	Image = {"file", "gnome/units/body_warrior_deep_gnome.png", "size", {72, 72}},
-	LayerImages = {
-		{"layer", "hair", "file", "gnome/units/hair_warrior_deep_gnome_red_hair.png"},
-		{"layer", "right-arm", "file", "gnome/units/right_arm_warrior_deep_gnome.png"},
-		{"layer", "weapon", "file", "gnome/units/thrusting_sword.png"}
-	},
-	Icon = "icon-gnomish-master-at-arms-deep-gnome-red-hair",
+	SkinColor = "gray",
+	HairColor = "red",
 	Variations = {
 		{
 			"variation-id", "red-hair",
-			"file", "gnome/units/body_warrior_deep_gnome.png",
-			"layer-file", "hair", "gnome/units/hair_warrior_deep_gnome_red_hair.png",
-			"icon", "icon-gnomish-master-at-arms-deep-gnome-red-hair",
-			"button-icon", "patrol", "icon-gnomish-patrol-land-deep-gnome-red-hair",
 			"upgrade-forbidden", "upgrade-old",
 			"item-not-equipped", "unit-hammer",
 			"item-not-equipped", "unit-mining-pick"
 		},
 		{
 			"variation-id", "blond-hair",
-			"file", "gnome/units/body_warrior_deep_gnome.png",
-			"layer-file", "hair", "gnome/units/hair_warrior_deep_gnome_blond_hair.png",
-			"icon", "icon-gnomish-master-at-arms-deep-gnome-blond-hair",
-			"button-icon", "patrol", "icon-gnomish-patrol-land-deep-gnome-blond-hair",
+			"hair-color", "dark-blond",
 			"upgrade-forbidden", "upgrade-old",
 			"item-not-equipped", "unit-hammer",
 			"item-not-equipped", "unit-mining-pick"
 		},
 		{
 			"variation-id", "gray-hair",
-			"file", "gnome/units/body_warrior_deep_gnome.png",
-			"layer-file", "hair", "gnome/units/hair_warrior_deep_gnome_gray_hair.png",
-			"icon", "icon-gnomish-master-at-arms-deep-gnome-gray-hair",
-			"button-icon", "patrol", "icon-gnomish-patrol-land-deep-gnome-gray-hair",
+			"hair-color", "gray",
 			"item-not-equipped", "unit-hammer",
 			"item-not-equipped", "unit-mining-pick"
 		},
 		{
 			"variation-id", "green-hair",
-			"file", "gnome/units/body_warrior_deep_gnome.png",
-			"layer-file", "hair", "gnome/units/hair_warrior_deep_gnome_green_hair.png",
-			"icon", "icon-gnomish-master-at-arms-deep-gnome-green-hair",
-			"button-icon", "patrol", "icon-gnomish-patrol-land-deep-gnome-green-hair",
+			"hair-color", "green",
 			"upgrade-forbidden", "upgrade-old",
 			"item-not-equipped", "unit-hammer",
 			"item-not-equipped", "unit-mining-pick"
 		},
 		{
 			"variation-id", "red-hair",
-			"file", "gnome/units/body_warrior_slash_deep_gnome.png",
-			"layer-file", "hair", "gnome/units/hair_warrior_slash_deep_gnome_red_hair.png",
-			"icon", "icon-gnomish-master-at-arms-deep-gnome-red-hair",
-			"button-icon", "patrol", "icon-gnomish-patrol-land-deep-gnome-red-hair",
+			"file", "gnome/units/body_warrior_slash.png",
+			"layer-file", "hair", "gnome/units/hair_warrior_slash.png",
 			"upgrade-forbidden", "upgrade-old",
 			"item-equipped", "unit-hammer",
 			"item-equipped", "unit-mining-pick"
 		},
 		{
 			"variation-id", "blond-hair",
-			"file", "gnome/units/body_warrior_slash_deep_gnome.png",
-			"layer-file", "hair", "gnome/units/hair_warrior_slash_deep_gnome_blond_hair.png",
-			"icon", "icon-gnomish-master-at-arms-deep-gnome-blond-hair",
-			"button-icon", "patrol", "icon-gnomish-patrol-land-deep-gnome-blond-hair",
+			"file", "gnome/units/body_warrior_slash.png",
+			"layer-file", "hair", "gnome/units/hair_warrior_slash.png",
+			"hair-color", "dark-blond",
 			"upgrade-forbidden", "upgrade-old",
 			"item-equipped", "unit-hammer",
 			"item-equipped", "unit-mining-pick"
 		},
 		{
 			"variation-id", "gray-hair",
-			"file", "gnome/units/body_warrior_slash_deep_gnome.png",
-			"layer-file", "hair", "gnome/units/hair_warrior_slash_deep_gnome_gray_hair.png",
-			"icon", "icon-gnomish-master-at-arms-deep-gnome-gray-hair",
-			"button-icon", "patrol", "icon-gnomish-patrol-land-deep-gnome-gray-hair",
+			"file", "gnome/units/body_warrior_slash.png",
+			"layer-file", "hair", "gnome/units/hair_warrior_slash.png",
+			"hair-color", "gray",
 			"item-equipped", "unit-hammer",
 			"item-equipped", "unit-mining-pick"
 		},
 		{
 			"variation-id", "green-hair",
-			"file", "gnome/units/body_warrior_slash_deep_gnome.png",
-			"layer-file", "hair", "gnome/units/hair_warrior_slash_deep_gnome_green_hair.png",
-			"icon", "icon-gnomish-master-at-arms-deep-gnome-green-hair",
-			"button-icon", "patrol", "icon-gnomish-patrol-land-deep-gnome-green-hair",
+			"file", "gnome/units/body_warrior_slash.png",
+			"layer-file", "hair", "gnome/units/hair_warrior_slash.png",
+			"hair-color", "green",
 			"upgrade-forbidden", "upgrade-old",
 			"item-equipped", "unit-hammer",
 			"item-equipped", "unit-mining-pick"
@@ -461,14 +333,14 @@ DefineUnitType("unit-deep-gnomish-master-at-arms", {
 		{
 			"layer", "right-arm",
 			"variation-id", "right-arm",
-			"file", "gnome/units/right_arm_warrior_deep_gnome.png",
+			"file", "gnome/units/right_arm_warrior.png",
 			"item-not-equipped", "unit-hammer",
 			"item-not-equipped", "unit-mining-pick"
 		},
 		{
 			"layer", "right-arm",
 			"variation-id", "right-arm-slash",
-			"file", "gnome/units/right_arm_warrior_slash_deep_gnome.png",
+			"file", "gnome/units/right_arm_warrior_slash.png",
 			"item-equipped", "unit-hammer",
 			"item-equipped", "unit-mining-pick"
 		},
@@ -497,34 +369,25 @@ DefineUnitType("unit-deep-gnomish-herbalist", {
 	Parent = "unit-gnomish-herbalist",
 	Civilization = "gnome",
 	Faction = "Acthnic Tribe",
-	Image = {"file", "gnome/units/gnomish_herbalist_deep_gnome_gray_hair.png", "size", {72, 72}},
-	Icon = "icon-gnomish-herbalist-deep-gnome-gray-hair",
+	SkinColor = "gray",
+	HairColor = "gray",
 	Variations = {
 		{
-			"variation-id", "gray-hair",
-			"file", "gnome/units/gnomish_herbalist_deep_gnome_gray_hair.png",
-			"icon", "icon-gnomish-herbalist-deep-gnome-gray-hair",
-			"button-icon", "patrol", "icon-gnomish-patrol-land-deep-gnome-gray-hair"
+			"variation-id", "gray-hair"
 		},
 		{
 			"variation-id", "blond-hair",
-			"file", "gnome/units/gnomish_herbalist_deep_gnome_blond_hair.png",
-			"icon", "icon-gnomish-herbalist-deep-gnome-blond-hair",
-			"button-icon", "patrol", "icon-gnomish-patrol-land-deep-gnome-blond-hair",
+			"hair-color", "dark-blond",
 			"upgrade-forbidden", "upgrade-old"
 		},
 		{
 			"variation-id", "green-hair",
-			"file", "gnome/units/gnomish_herbalist_deep_gnome_green_hair.png",
-			"icon", "icon-gnomish-herbalist-deep-gnome-green-hair",
-			"button-icon", "patrol", "icon-gnomish-patrol-land-deep-gnome-green-hair",
+			"hair-color", "green",
 			"upgrade-forbidden", "upgrade-old"
 		},
 		{
 			"variation-id", "red-hair",
-			"file", "gnome/units/gnomish_herbalist_deep_gnome_red_hair.png",
-			"icon", "icon-gnomish-herbalist-deep-gnome-red-hair",
-			"button-icon", "patrol", "icon-gnomish-patrol-land-deep-gnome-red-hair",
+			"hair-color", "red",
 			"upgrade-forbidden", "upgrade-old"
 		}
 	}

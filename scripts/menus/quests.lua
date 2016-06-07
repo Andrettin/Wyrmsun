@@ -286,6 +286,7 @@ function addQuestIcon(quest, menu, x, y)
 							end
 						end
 						GameSettings.NoRandomness = wyr.preferences.NoRandomness
+						GameSettings.NoTimeOfDay = wyr.preferences.NoTimeOfDay
 						GameSettings.Difficulty = wyr.preferences.Difficulty
 						if (GetQuestData(quest, "Briefing") ~= "") then
 							Briefing(quest)

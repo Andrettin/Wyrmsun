@@ -392,6 +392,8 @@ function addEncyclopediaIcon(unit_name, state, menu, x, y)
 	local tooltip_string = ""
 	local tooltip_name = ""
 	local tooltip_civilization = ""
+	local skin_color = ""
+	local hair_color = ""
 	if (string.find(unit_name, "unit") ~= nil) then
 		encyclopedia_icon = CIcon:Get(GetUnitTypeData(unit_name, "Icon")).G
 		encyclopedia_icon_frame = CIcon:Get(GetUnitTypeData(unit_name, "Icon")).Frame
@@ -405,6 +407,8 @@ function addEncyclopediaIcon(unit_name, state, menu, x, y)
 			end
 			tooltip_civilization = tooltip_civilization .. ")"
 		end
+		skin_color = GetUnitTypeData(unit_name, "SkinColor")
+		hair_color = GetUnitTypeData(unit_name, "HairColor")
 	elseif (string.find(unit_name, "upgrade") ~= nil) then
 		if (string.find(unit_name, "prefix") == nil and string.find(unit_name, "suffix") == nil) then
 			encyclopedia_icon = CUpgrade:Get(unit_name).Icon.G
@@ -479,6 +483,8 @@ function addEncyclopediaIcon(unit_name, state, menu, x, y)
 			playercolor = "gray"
 		end
 		b = PlayerColorImageButton("", playercolor)
+		b:setSkinColor(skin_color)
+		b:setHairColor(hair_color)
 	else
 		b = ImageButton(tooltip_name)
 	end
@@ -547,6 +553,8 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 	local faction
 	local tooltip_name = ""
 	local tooltip_civilization = ""
+	local skin_color = ""
+	local hair_color = ""
 	if (string.find(unit_name, "unit") ~= nil) then
 		encyclopedia_icon = CIcon:Get(GetUnitTypeData(unit_name, "Icon")).G
 		encyclopedia_icon_frame = CIcon:Get(GetUnitTypeData(unit_name, "Icon")).Frame
@@ -560,6 +568,8 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 			end
 			tooltip_civilization = tooltip_civilization .. ")"
 		end
+		skin_color = GetUnitTypeData(unit_name, "SkinColor")
+		hair_color = GetUnitTypeData(unit_name, "HairColor")
 	elseif (string.find(unit_name, "upgrade") ~= nil) then
 		if (string.find(unit_name, "prefix") == nil and string.find(unit_name, "suffix") == nil) then
 			encyclopedia_icon = CUpgrade:Get(unit_name).Icon.G
@@ -623,6 +633,8 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 		local menu_image = PlayerColorImageWidget(encyclopedia_icon, playercolor)
 		menu_image:setImageOrigin(encyclopedia_icon_x_origin, encyclopedia_icon_y_origin)
 		menu:add(menu_image, (Video.Width / 2) - 23, offy + 104 + 36*-1)
+		menu_image:setSkinColor(skin_color)
+		menu_image:setHairColor(hair_color)
 	end
 	menu:addLabel("~<" .. tooltip_name .. "~>", offx + 320, offy + 104 + 36*-2, nil, true)
 

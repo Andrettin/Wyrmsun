@@ -37,6 +37,8 @@ DefineUnitType("unit-gnomish-worker", { Name = _("Scavenger"),
 	Description = _("Scavengers serve as the main source of manual labor in the gnomish lands."),
 	Image = {"file", "gnome/units/gnomish_worker.png", "size", {72, 72}},
 	Animations = "animations-gnomish-worker", Icon = "icon-gnomish-worker",
+	SkinColor = "white",
+	HairColor = "blond",
 	DefaultEquipment = {
 		{"boots", "unit-wool-shoes"}
 	},
@@ -81,14 +83,7 @@ DefineUnitType("unit-gnomish-worker", { Name = _("Scavenger"),
 		},
 		{
 			"variation-id", "gray-hair",
-			"icon", "icon-gnomish-worker-gray-hair",
-			"file", "gnome/units/gnomish_worker_gray_hair.png",
-			"file-when-loaded", "gold", "gnome/units/gnomish_worker_with_gold_gray_hair.png",
-			"file-when-loaded", "silver", "gnome/units/gnomish_worker_with_gold_gray_hair.png",
-			"file-when-loaded", "copper", "gnome/units/gnomish_worker_with_gold_gray_hair.png",
-			"file-when-loaded", "stone", "gnome/units/gnomish_worker_with_gold_gray_hair.png",
-			"file-when-loaded", "coal", "gnome/units/gnomish_worker_with_gold_gray_hair.png",
-			"file-when-loaded", "lumber", "gnome/units/gnomish_worker_with_lumber_gray_hair.png"
+			"hair-color", "gray"
 		}
 	},
 	Sounds = {
@@ -111,11 +106,13 @@ DefineUnitType("unit-gnomish-recruit", { Name = _("Recruit"),
 	Quote = _("\"With a tremendous crash, the great mountain burst apart and a whole troop of tiny, little mountain gnomes came out, dancing grotesquely like sprites of another world.\" - The Gnomes of the Saline Mountains"),
 	Image = {"file", "gnome/units/body_warrior.png", "size", {72, 72}},
 	LayerImages = {
-		{"layer", "hair", "file", "gnome/units/blond_hair_warrior.png"},
+		{"layer", "hair", "file", "gnome/units/hair_warrior.png"},
 		{"layer", "right-arm", "file", "gnome/units/right_arm_warrior.png"},
 		{"layer", "weapon", "file", "gnome/units/thrusting_sword.png"}
 	},
 	Animations = "animations-gnomish-recruit", Icon = "icon-gnomish-recruit",
+	SkinColor = "white",
+	HairColor = "blond",
 	DefaultEquipment = {
 		{"weapon", "unit-thrusting-sword"},
 		{"shield", "unit-round-shield"},
@@ -144,24 +141,23 @@ DefineUnitType("unit-gnomish-recruit", { Name = _("Recruit"),
 		},
 		{
 			"variation-id", "gray-hair",
-			"icon", "icon-gnomish-recruit-gray-hair",
-			"layer-file", "hair", "gnome/units/gray_hair_warrior.png",
+			"hair-color", "gray",
 			"item-not-equipped", "unit-hammer",
 			"item-not-equipped", "unit-mining-pick"
 		},
 		{
 			"variation-id", "blond-hair",
 			"file", "gnome/units/body_warrior_slash.png",
-			"layer-file", "hair", "gnome/units/blond_hair_warrior_slash.png",
+			"layer-file", "hair", "gnome/units/hair_warrior_slash.png",
 			"upgrade-forbidden", "upgrade-old",
 			"item-equipped", "unit-hammer",
 			"item-equipped", "unit-mining-pick"
 		},
 		{
 			"variation-id", "gray-hair",
-			"icon", "icon-gnomish-recruit-gray-hair",
 			"file", "gnome/units/body_warrior_slash.png",
-			"layer-file", "hair", "gnome/units/gray_hair_warrior_slash.png",
+			"layer-file", "hair", "gnome/units/hair_warrior_slash.png",
+			"hair-color", "gray",
 			"item-equipped", "unit-hammer",
 			"item-equipped", "unit-mining-pick"
 		},
@@ -215,11 +211,13 @@ DefineUnitType("unit-gnomish-duelist", { Name = _("Duelist"),
 	Description = _("Veteran gnomish warriors have honed the art of fencing to a remarkable degree, making them formidable opponents in single combat."),
 	Image = {"file", "gnome/units/body_warrior.png", "size", {72, 72}},
 	LayerImages = {
-		{"layer", "hair", "file", "gnome/units/blond_hair_warrior.png"},
+		{"layer", "hair", "file", "gnome/units/hair_warrior.png"},
 		{"layer", "right-arm", "file", "gnome/units/right_arm_warrior.png"},
 		{"layer", "weapon", "file", "gnome/units/thrusting_sword.png"}
 	},
 	Animations = "animations-gnomish-recruit", Icon = "icon-gnomish-duelist",
+	SkinColor = "white",
+	HairColor = "blond",
 	DefaultEquipment = {
 		{"weapon", "unit-thrusting-sword"},
 		{"shield", "unit-round-shield"},
@@ -243,24 +241,23 @@ DefineUnitType("unit-gnomish-duelist", { Name = _("Duelist"),
 		},
 		{
 			"variation-id", "gray-hair",
-			"icon", "icon-gnomish-duelist-gray-hair",
-			"layer-file", "hair", "gnome/units/gray_hair_warrior.png",
+			"hair-color", "gray",
 			"item-not-equipped", "unit-hammer",
 			"item-not-equipped", "unit-mining-pick"
 		},
 		{
 			"variation-id", "blond-hair",
 			"file", "gnome/units/body_warrior_slash.png",
-			"layer-file", "hair", "gnome/units/blond_hair_warrior_slash.png",
+			"layer-file", "hair", "gnome/units/hair_warrior_slash.png",
 			"upgrade-forbidden", "upgrade-old",
 			"item-equipped", "unit-hammer",
 			"item-equipped", "unit-mining-pick"
 		},
 		{
 			"variation-id", "gray-hair",
-			"icon", "icon-gnomish-duelist-gray-hair",
+			"hair-color", "gray",
 			"file", "gnome/units/body_warrior_slash.png",
-			"layer-file", "hair", "gnome/units/gray_hair_warrior_slash.png",
+			"layer-file", "hair", "gnome/units/hair_warrior_slash.png",
 			"item-equipped", "unit-hammer",
 			"item-equipped", "unit-mining-pick"
 		},
@@ -313,11 +310,13 @@ DefineUnitType("unit-gnomish-master-at-arms", { Name = _("Master at Arms"),
 	Description = _("Deadly accurate, the gnomish master at arms is an extremely tough foe to defeat. Many a dwarven warrior has scorned the diminutive gnome's abilities, only to fail to deliver a single blow to the master at arms - with a fatal puncturing strike soon sealing the dwarf's fate."),
 	Image = {"file", "gnome/units/body_warrior.png", "size", {72, 72}},
 	LayerImages = {
-		{"layer", "hair", "file", "gnome/units/blond_hair_warrior.png"},
+		{"layer", "hair", "file", "gnome/units/hair_warrior.png"},
 		{"layer", "right-arm", "file", "gnome/units/right_arm_warrior.png"},
 		{"layer", "weapon", "file", "gnome/units/thrusting_sword.png"}
 	},
 	Animations = "animations-gnomish-recruit", Icon = "icon-gnomish-master-at-arms",
+	SkinColor = "white",
+	HairColor = "blond",
 	DefaultEquipment = {
 		{"weapon", "unit-thrusting-sword"},
 		{"shield", "unit-round-shield"},
@@ -343,24 +342,23 @@ DefineUnitType("unit-gnomish-master-at-arms", { Name = _("Master at Arms"),
 		},
 		{
 			"variation-id", "gray-hair",
-			"icon", "icon-gnomish-master-at-arms-gray-hair",
-			"layer-file", "hair", "gnome/units/gray_hair_warrior.png",
+			"hair-color", "gray",
 			"item-not-equipped", "unit-hammer",
 			"item-not-equipped", "unit-mining-pick"
 		},
 		{
 			"variation-id", "blond-hair",
 			"file", "gnome/units/body_warrior_slash.png",
-			"layer-file", "hair", "gnome/units/blond_hair_warrior_slash.png",
+			"layer-file", "hair", "gnome/units/hair_warrior_slash.png",
 			"upgrade-forbidden", "upgrade-old",
 			"item-equipped", "unit-hammer",
 			"item-equipped", "unit-mining-pick"
 		},
 		{
 			"variation-id", "gray-hair",
-			"icon", "icon-gnomish-master-at-arms-gray-hair",
+			"hair-color", "gray",
 			"file", "gnome/units/body_warrior_slash.png",
-			"layer-file", "hair", "gnome/units/gray_hair_warrior_slash.png",
+			"layer-file", "hair", "gnome/units/hair_warrior_slash.png",
 			"item-equipped", "unit-hammer",
 			"item-equipped", "unit-mining-pick"
 		},
@@ -413,6 +411,8 @@ DefineUnitType("unit-gnomish-herbalist", { Name = _("Herbalist"),
 	Description = _("The priests of gnomish societies, herbalists are in deep contact with nature. They honor the souls of plants while using them to concoct powerful potions and medicines."),
 	Image = {"file", "gnome/units/gnomish_herbalist.png", "size", {72, 72}},
 	Animations = "animations-gnomish-herbalist", Icon = "icon-gnomish-herbalist",
+	SkinColor = "white",
+	HairColor = "gray",
 	DefaultEquipment = {
 		{"boots", "unit-wool-shoes"}
 	},
@@ -430,11 +430,11 @@ DefineUnitType("unit-gnomish-herbalist", { Name = _("Herbalist"),
 	ButtonHint = _("Train ~!Herbalist"),
 	Variations = {
 		{
-			"variation-id", "gray-hair",
-			"file", "gnome/units/gnomish_herbalist_gray_hair.png"
+			"variation-id", "gray-hair"
 		},
 		{
 			"variation-id", "blond-hair",
+			"hair-color", "blond",
 			"upgrade-forbidden", "upgrade-old"
 		}
 	},

@@ -75,6 +75,10 @@ function CustomHeroCreationMenu(world, quest_menu)
 		variation_list = nil
 		variation_list = {}
 		local variation_ident_list = GetUnitTypeData(hero_class_ident_list[hero_class:getSelected() + 1], "Variations")
+		if (table.getn(GetUnitTypeData(hero_class_ident_list[hero_class:getSelected() + 1], "LayerVariations", "hair")) > 0) then
+			variation_ident_list = GetUnitTypeData(hero_class_ident_list[hero_class:getSelected() + 1], "LayerVariations", "hair")
+		end
+		
 		for i=1,table.getn(variation_ident_list) do
 			table.insert(variation_list, FullyCapitalizeString(string.gsub(variation_ident_list[i], "-", " ")))
 		end

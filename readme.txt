@@ -71,6 +71,8 @@ https://github.com/Andrettin/Wyrmsun
 
 * Miscellaneous
 - Added "No Day/Night Cycle" option when starting single-player maps.
+- Fixed a crash cause.
+- Added support for the engine to recolor portraits and unit graphics to obtain new skin (such as the gray skin color for deep gnomes) and hair colors.
 
 * Multiplayer
 - Fixed a multiplayer crash cause which triggered when both players had different "No Randomness" settings.

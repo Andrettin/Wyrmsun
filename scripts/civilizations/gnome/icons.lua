@@ -28,25 +28,13 @@
 DefineIcon({
 	Name = "icon-gnomish-worker",
 	Size = {46, 38},
-	File = "gnome/icons/gnomish_worker.png"
-})
-
-DefineIcon({
-	Name = "icon-gnomish-worker-gray-hair",
-	Size = {46, 38},
-	File = "gnome/icons/gnomish_worker_gray_hair.png"
+	File = "gnome/icons/worker.png"
 })
 
 DefineIcon({
 	Name = "icon-gnomish-recruit",
 	Size = {46, 38},
-	File = "gnome/icons/gnomish_recruit.png"
-})
-
-DefineIcon({
-	Name = "icon-gnomish-recruit-gray-hair",
-	Size = {46, 38},
-	File = "gnome/icons/gnomish_recruit_gray_hair.png"
+	File = "gnome/icons/recruit.png"
 })
 
 DefineIcon({
@@ -56,27 +44,15 @@ DefineIcon({
 })
 
 DefineIcon({
-	Name = "icon-gnomish-duelist-gray-hair",
-	Size = {46, 38},
-	File = "gnome/icons/duelist_gray_hair.png"
-})
-
-DefineIcon({
 	Name = "icon-gnomish-master-at-arms",
 	Size = {46, 38},
 	File = "gnome/icons/master_at_arms.png"
 })
 
 DefineIcon({
-	Name = "icon-gnomish-master-at-arms-gray-hair",
-	Size = {46, 38},
-	File = "gnome/icons/master_at_arms_gray_hair.png"
-})
-
-DefineIcon({
 	Name = "icon-gnomish-herbalist",
 	Size = {46, 38},
-	File = "gnome/icons/gnomish_herbalist.png"
+	File = "gnome/icons/herbalist.png"
 })
 
 DefineIcon({
@@ -152,5 +128,3 @@ else
 		File = "tilesets/swamp/gnome/icons/gnomish_caravan.png"
 	})
 end
-
-Load("scripts/civilizations/gnome/icons_deep_gnome.lua")

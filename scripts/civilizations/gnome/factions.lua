@@ -30,10 +30,7 @@ DefineFaction("Acthnic Tribe", {
 	Type = "tribe",
 	Colors = {"red"},
 	DevelopsTo = {"Acthna", "Untersberg"},
-	FactionUpgrade = "upgrade-acthnic-tribe-faction",
-	ButtonIcons = {
-		"patrol", "icon-gnomish-patrol-land-deep-gnome-red-hair"
-	}
+	FactionUpgrade = "upgrade-acthnic-tribe-faction"
 })
 
 DefineFaction("Cubital Tribe", {
