@@ -564,3 +564,4 @@ else
 end
 
 Load("scripts/civilizations/dwarf/icons_brising.lua")
+Load("scripts/civilizations/dwarf/icons_joruvellir.lua")

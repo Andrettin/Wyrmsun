@@ -62,7 +62,11 @@ DefineFaction("Eikinskjaldi Clan", { -- originally Oakenshield (from Dyson Logos
 	Type = "tribe",
 	Colors = {"brown"},
 	DevelopsTo = {"Joruvellir", "Kal Kartha", "Knalga", "Lyr"},
-	FactionUpgrade = "upgrade-eikinskjaldi-clan-faction",
+--	FactionUpgrade = "upgrade-eikinskjaldi-clan-faction",
+	FactionUpgrade = "upgrade-joruvellir-faction",
+	ButtonIcons = {
+		"stop", "icon-joruvellir-shield"
+	},
 	Description = _("The Eikinskjaldi clan traces its origins to Eikinskjaldi, a member of the legendary group of dwarves who migrated to the sandy plains of Joruvellir. One of Eikinskjaldi's descendants was Durahn, a mighty dwarven warlord who was buried in a rich tomb."),
 	Background = "In Norse mythology Eikinskjaldi was the name of a dwarf who migrated from Svarinshaug to Joruvellir. \"Eikinskjaldi\" means \"oaken shield\" in Old Norse."
 })
@@ -123,6 +127,7 @@ DefineFaction("Shorbear Clan", {
 })
 
 DefineFaction("Joruvellir", {
+	ParentFaction = "Eikinskjaldi Clan",
 	Civilization = "dwarf",
 	Type = "polity",
 	Colors = {"brown"},
