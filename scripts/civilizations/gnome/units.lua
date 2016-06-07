@@ -78,12 +78,44 @@ DefineUnitType("unit-gnomish-worker", { Name = _("Scavenger"),
 	},
 	Variations = {
 		{
+			"layer", "hair",
 			"variation-id", "blond-hair",
 			"upgrade-forbidden", "upgrade-old"
 		},
 		{
+			"layer", "hair",
+			"variation-id", "black-hair",
+			"upgrade-forbidden", "upgrade-old",
+			"hair-color", "black"
+		},
+		{
+			"layer", "hair",
+			"variation-id", "brown-hair",
+			"upgrade-forbidden", "upgrade-old",
+			"hair-color", "brown"
+		},
+		{
+			"layer", "hair",
+			"variation-id", "dark-blond-hair",
+			"upgrade-forbidden", "upgrade-old",
+			"hair-color", "dark-blond"
+		},
+		{
+			"layer", "hair",
 			"variation-id", "gray-hair",
 			"hair-color", "gray"
+		},
+		{
+			"layer", "hair",
+			"variation-id", "green-hair",
+			"upgrade-forbidden", "upgrade-old",
+			"hair-color", "green"
+		},
+		{
+			"layer", "hair",
+			"variation-id", "red-hair",
+			"upgrade-forbidden", "upgrade-old",
+			"hair-color", "red"
 		}
 	},
 	Sounds = {
@@ -134,19 +166,13 @@ DefineUnitType("unit-gnomish-recruit", { Name = _("Recruit"),
 	ButtonHint = _("Train ~!Recruit"),
 	Variations = {
 		{
-			"variation-id", "blond-hair",
+			"variation-id", "thrust",
 			"upgrade-forbidden", "upgrade-old",
 			"item-not-equipped", "unit-hammer",
 			"item-not-equipped", "unit-mining-pick"
 		},
 		{
-			"variation-id", "gray-hair",
-			"hair-color", "gray",
-			"item-not-equipped", "unit-hammer",
-			"item-not-equipped", "unit-mining-pick"
-		},
-		{
-			"variation-id", "blond-hair",
+			"variation-id", "slash",
 			"file", "gnome/units/body_warrior_slash.png",
 			"layer-file", "hair", "gnome/units/hair_warrior_slash.png",
 			"upgrade-forbidden", "upgrade-old",
@@ -154,12 +180,44 @@ DefineUnitType("unit-gnomish-recruit", { Name = _("Recruit"),
 			"item-equipped", "unit-mining-pick"
 		},
 		{
+			"layer", "hair",
+			"variation-id", "blond-hair",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"layer", "hair",
+			"variation-id", "black-hair",
+			"upgrade-forbidden", "upgrade-old",
+			"hair-color", "black"
+		},
+		{
+			"layer", "hair",
+			"variation-id", "brown-hair",
+			"upgrade-forbidden", "upgrade-old",
+			"hair-color", "brown"
+		},
+		{
+			"layer", "hair",
+			"variation-id", "dark-blond-hair",
+			"upgrade-forbidden", "upgrade-old",
+			"hair-color", "dark-blond"
+		},
+		{
+			"layer", "hair",
 			"variation-id", "gray-hair",
-			"file", "gnome/units/body_warrior_slash.png",
-			"layer-file", "hair", "gnome/units/hair_warrior_slash.png",
-			"hair-color", "gray",
-			"item-equipped", "unit-hammer",
-			"item-equipped", "unit-mining-pick"
+			"hair-color", "gray"
+		},
+		{
+			"layer", "hair",
+			"variation-id", "green-hair",
+			"upgrade-forbidden", "upgrade-old",
+			"hair-color", "green"
+		},
+		{
+			"layer", "hair",
+			"variation-id", "red-hair",
+			"upgrade-forbidden", "upgrade-old",
+			"hair-color", "red"
 		},
 		{
 			"layer", "right-arm",
@@ -234,19 +292,13 @@ DefineUnitType("unit-gnomish-duelist", { Name = _("Duelist"),
 	InvertedSoutheastArms = true,
 	Variations = {
 		{
-			"variation-id", "blond-hair",
+			"variation-id", "thrust",
 			"upgrade-forbidden", "upgrade-old",
 			"item-not-equipped", "unit-hammer",
 			"item-not-equipped", "unit-mining-pick"
 		},
 		{
-			"variation-id", "gray-hair",
-			"hair-color", "gray",
-			"item-not-equipped", "unit-hammer",
-			"item-not-equipped", "unit-mining-pick"
-		},
-		{
-			"variation-id", "blond-hair",
+			"variation-id", "slash",
 			"file", "gnome/units/body_warrior_slash.png",
 			"layer-file", "hair", "gnome/units/hair_warrior_slash.png",
 			"upgrade-forbidden", "upgrade-old",
@@ -254,12 +306,44 @@ DefineUnitType("unit-gnomish-duelist", { Name = _("Duelist"),
 			"item-equipped", "unit-mining-pick"
 		},
 		{
+			"layer", "hair",
+			"variation-id", "blond-hair",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"layer", "hair",
+			"variation-id", "black-hair",
+			"upgrade-forbidden", "upgrade-old",
+			"hair-color", "black"
+		},
+		{
+			"layer", "hair",
+			"variation-id", "brown-hair",
+			"upgrade-forbidden", "upgrade-old",
+			"hair-color", "brown"
+		},
+		{
+			"layer", "hair",
+			"variation-id", "dark-blond-hair",
+			"upgrade-forbidden", "upgrade-old",
+			"hair-color", "dark-blond"
+		},
+		{
+			"layer", "hair",
 			"variation-id", "gray-hair",
-			"hair-color", "gray",
-			"file", "gnome/units/body_warrior_slash.png",
-			"layer-file", "hair", "gnome/units/hair_warrior_slash.png",
-			"item-equipped", "unit-hammer",
-			"item-equipped", "unit-mining-pick"
+			"hair-color", "gray"
+		},
+		{
+			"layer", "hair",
+			"variation-id", "green-hair",
+			"upgrade-forbidden", "upgrade-old",
+			"hair-color", "green"
+		},
+		{
+			"layer", "hair",
+			"variation-id", "red-hair",
+			"upgrade-forbidden", "upgrade-old",
+			"hair-color", "red"
 		},
 		{
 			"layer", "right-arm",
@@ -335,19 +419,13 @@ DefineUnitType("unit-gnomish-master-at-arms", { Name = _("Master at Arms"),
 	InvertedSoutheastArms = true,
 	Variations = {
 		{
-			"variation-id", "blond-hair",
+			"variation-id", "thrust",
 			"upgrade-forbidden", "upgrade-old",
 			"item-not-equipped", "unit-hammer",
 			"item-not-equipped", "unit-mining-pick"
 		},
 		{
-			"variation-id", "gray-hair",
-			"hair-color", "gray",
-			"item-not-equipped", "unit-hammer",
-			"item-not-equipped", "unit-mining-pick"
-		},
-		{
-			"variation-id", "blond-hair",
+			"variation-id", "slash",
 			"file", "gnome/units/body_warrior_slash.png",
 			"layer-file", "hair", "gnome/units/hair_warrior_slash.png",
 			"upgrade-forbidden", "upgrade-old",
@@ -355,12 +433,44 @@ DefineUnitType("unit-gnomish-master-at-arms", { Name = _("Master at Arms"),
 			"item-equipped", "unit-mining-pick"
 		},
 		{
+			"layer", "hair",
+			"variation-id", "blond-hair",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"layer", "hair",
+			"variation-id", "black-hair",
+			"upgrade-forbidden", "upgrade-old",
+			"hair-color", "black"
+		},
+		{
+			"layer", "hair",
+			"variation-id", "brown-hair",
+			"upgrade-forbidden", "upgrade-old",
+			"hair-color", "brown"
+		},
+		{
+			"layer", "hair",
+			"variation-id", "dark-blond-hair",
+			"upgrade-forbidden", "upgrade-old",
+			"hair-color", "dark-blond"
+		},
+		{
+			"layer", "hair",
 			"variation-id", "gray-hair",
-			"hair-color", "gray",
-			"file", "gnome/units/body_warrior_slash.png",
-			"layer-file", "hair", "gnome/units/hair_warrior_slash.png",
-			"item-equipped", "unit-hammer",
-			"item-equipped", "unit-mining-pick"
+			"hair-color", "gray"
+		},
+		{
+			"layer", "hair",
+			"variation-id", "green-hair",
+			"upgrade-forbidden", "upgrade-old",
+			"hair-color", "green"
+		},
+		{
+			"layer", "hair",
+			"variation-id", "red-hair",
+			"upgrade-forbidden", "upgrade-old",
+			"hair-color", "red"
 		},
 		{
 			"layer", "right-arm",
@@ -430,12 +540,43 @@ DefineUnitType("unit-gnomish-herbalist", { Name = _("Herbalist"),
 	ButtonHint = _("Train ~!Herbalist"),
 	Variations = {
 		{
+			"layer", "hair",
 			"variation-id", "gray-hair"
 		},
 		{
+			"layer", "hair",
+			"variation-id", "black-hair",
+			"upgrade-forbidden", "upgrade-old",
+			"hair-color", "black"
+		},
+		{
+			"layer", "hair",
 			"variation-id", "blond-hair",
-			"hair-color", "blond",
 			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"layer", "hair",
+			"variation-id", "brown-hair",
+			"upgrade-forbidden", "upgrade-old",
+			"hair-color", "brown"
+		},
+		{
+			"layer", "hair",
+			"variation-id", "dark-blond-hair",
+			"upgrade-forbidden", "upgrade-old",
+			"hair-color", "dark-blond"
+		},
+		{
+			"layer", "hair",
+			"variation-id", "green-hair",
+			"upgrade-forbidden", "upgrade-old",
+			"hair-color", "green"
+		},
+		{
+			"layer", "hair",
+			"variation-id", "red-hair",
+			"upgrade-forbidden", "upgrade-old",
+			"hair-color", "red"
 		}
 	},
 	Sounds = {

@@ -39,22 +39,38 @@ DefineUnitType("unit-deep-gnomish-worker", {
 	HairColor = "red",
 	Variations = {
 		{
+			"layer", "hair",
 			"variation-id", "red-hair",
 			"upgrade-forbidden", "upgrade-old"
 		},
 		{
-			"variation-id", "blond-hair",
-			"hair-color", "dark-blond",
-			"upgrade-forbidden", "upgrade-old"
+			"layer", "hair",
+			"variation-id", "black-hair",
+			"upgrade-forbidden", "upgrade-old",
+			"hair-color", "black"
 		},
 		{
+			"layer", "hair",
+			"variation-id", "brown-hair",
+			"upgrade-forbidden", "upgrade-old",
+			"hair-color", "brown"
+		},
+		{
+			"layer", "hair",
+			"variation-id", "dark-blond-hair",
+			"upgrade-forbidden", "upgrade-old",
+			"hair-color", "dark-blond"
+		},
+		{
+			"layer", "hair",
 			"variation-id", "gray-hair",
 			"hair-color", "gray"
 		},
 		{
+			"layer", "hair",
 			"variation-id", "green-hair",
-			"hair-color", "green",
-			"upgrade-forbidden", "upgrade-old"
+			"upgrade-forbidden", "upgrade-old",
+			"hair-color", "green"
 		}
 	}
 } )
@@ -67,64 +83,52 @@ DefineUnitType("unit-deep-gnomish-recruit", {
 	HairColor = "red",
 	Variations = {
 		{
+			"variation-id", "thrust",
+			"upgrade-forbidden", "upgrade-old",
+			"item-not-equipped", "unit-hammer",
+			"item-not-equipped", "unit-mining-pick"
+		},
+		{
+			"variation-id", "slash",
+			"file", "gnome/units/body_warrior_slash.png",
+			"layer-file", "hair", "gnome/units/hair_warrior_slash.png",
+			"upgrade-forbidden", "upgrade-old",
+			"item-equipped", "unit-hammer",
+			"item-equipped", "unit-mining-pick"
+		},
+		{
+			"layer", "hair",
 			"variation-id", "red-hair",
-			"upgrade-forbidden", "upgrade-old",
-			"item-not-equipped", "unit-hammer",
-			"item-not-equipped", "unit-mining-pick"
+			"upgrade-forbidden", "upgrade-old"
 		},
 		{
-			"variation-id", "blond-hair",
-			"hair-color", "dark-blond",
+			"layer", "hair",
+			"variation-id", "black-hair",
 			"upgrade-forbidden", "upgrade-old",
-			"item-not-equipped", "unit-hammer",
-			"item-not-equipped", "unit-mining-pick"
+			"hair-color", "black"
 		},
 		{
+			"layer", "hair",
+			"variation-id", "brown-hair",
+			"upgrade-forbidden", "upgrade-old",
+			"hair-color", "brown"
+		},
+		{
+			"layer", "hair",
+			"variation-id", "dark-blond-hair",
+			"upgrade-forbidden", "upgrade-old",
+			"hair-color", "dark-blond"
+		},
+		{
+			"layer", "hair",
 			"variation-id", "gray-hair",
-			"hair-color", "gray",
-			"item-not-equipped", "unit-hammer",
-			"item-not-equipped", "unit-mining-pick"
+			"hair-color", "gray"
 		},
 		{
+			"layer", "hair",
 			"variation-id", "green-hair",
-			"hair-color", "green",
 			"upgrade-forbidden", "upgrade-old",
-			"item-not-equipped", "unit-hammer",
-			"item-not-equipped", "unit-mining-pick"
-		},
-		{
-			"variation-id", "red-hair",
-			"file", "gnome/units/body_warrior_slash.png",
-			"layer-file", "hair", "gnome/units/hair_warrior_slash.png",
-			"upgrade-forbidden", "upgrade-old",
-			"item-equipped", "unit-hammer",
-			"item-equipped", "unit-mining-pick"
-		},
-		{
-			"variation-id", "blond-hair",
-			"file", "gnome/units/body_warrior_slash.png",
-			"layer-file", "hair", "gnome/units/hair_warrior_slash.png",
-			"hair-color", "dark-blond",
-			"upgrade-forbidden", "upgrade-old",
-			"item-equipped", "unit-hammer",
-			"item-equipped", "unit-mining-pick"
-		},
-		{
-			"variation-id", "gray-hair",
-			"file", "gnome/units/body_warrior_slash.png",
-			"layer-file", "hair", "gnome/units/hair_warrior_slash.png",
-			"hair-color", "gray",
-			"item-equipped", "unit-hammer",
-			"item-equipped", "unit-mining-pick"
-		},
-		{
-			"variation-id", "green-hair",
-			"file", "gnome/units/body_warrior_slash.png",
-			"layer-file", "hair", "gnome/units/hair_warrior_slash.png",
-			"hair-color", "green",
-			"upgrade-forbidden", "upgrade-old",
-			"item-equipped", "unit-hammer",
-			"item-equipped", "unit-mining-pick"
+			"hair-color", "green"
 		},
 		{
 			"layer", "right-arm",
@@ -169,64 +173,52 @@ DefineUnitType("unit-deep-gnomish-duelist", {
 	HairColor = "red",
 	Variations = {
 		{
+			"variation-id", "thrust",
+			"upgrade-forbidden", "upgrade-old",
+			"item-not-equipped", "unit-hammer",
+			"item-not-equipped", "unit-mining-pick"
+		},
+		{
+			"variation-id", "slash",
+			"file", "gnome/units/body_warrior_slash.png",
+			"layer-file", "hair", "gnome/units/hair_warrior_slash.png",
+			"upgrade-forbidden", "upgrade-old",
+			"item-equipped", "unit-hammer",
+			"item-equipped", "unit-mining-pick"
+		},
+		{
+			"layer", "hair",
 			"variation-id", "red-hair",
-			"upgrade-forbidden", "upgrade-old",
-			"item-not-equipped", "unit-hammer",
-			"item-not-equipped", "unit-mining-pick"
+			"upgrade-forbidden", "upgrade-old"
 		},
 		{
-			"variation-id", "blond-hair",
-			"hair-color", "dark-blond",
+			"layer", "hair",
+			"variation-id", "black-hair",
 			"upgrade-forbidden", "upgrade-old",
-			"item-not-equipped", "unit-hammer",
-			"item-not-equipped", "unit-mining-pick"
+			"hair-color", "black"
 		},
 		{
+			"layer", "hair",
+			"variation-id", "brown-hair",
+			"upgrade-forbidden", "upgrade-old",
+			"hair-color", "brown"
+		},
+		{
+			"layer", "hair",
+			"variation-id", "dark-blond-hair",
+			"upgrade-forbidden", "upgrade-old",
+			"hair-color", "dark-blond"
+		},
+		{
+			"layer", "hair",
 			"variation-id", "gray-hair",
-			"hair-color", "gray",
-			"item-not-equipped", "unit-hammer",
-			"item-not-equipped", "unit-mining-pick"
+			"hair-color", "gray"
 		},
 		{
+			"layer", "hair",
 			"variation-id", "green-hair",
-			"hair-color", "green",
 			"upgrade-forbidden", "upgrade-old",
-			"item-not-equipped", "unit-hammer",
-			"item-not-equipped", "unit-mining-pick"
-		},
-		{
-			"variation-id", "red-hair",
-			"file", "gnome/units/body_warrior_slash.png",
-			"layer-file", "hair", "gnome/units/hair_warrior_slash.png",
-			"upgrade-forbidden", "upgrade-old",
-			"item-equipped", "unit-hammer",
-			"item-equipped", "unit-mining-pick"
-		},
-		{
-			"variation-id", "blond-hair",
-			"file", "gnome/units/body_warrior_slash.png",
-			"layer-file", "hair", "gnome/units/hair_warrior_slash.png",
-			"hair-color", "dark-blond",
-			"upgrade-forbidden", "upgrade-old",
-			"item-equipped", "unit-hammer",
-			"item-equipped", "unit-mining-pick"
-		},
-		{
-			"variation-id", "gray-hair",
-			"file", "gnome/units/body_warrior_slash.png",
-			"layer-file", "hair", "gnome/units/hair_warrior_slash.png",
-			"hair-color", "gray",
-			"item-equipped", "unit-hammer",
-			"item-equipped", "unit-mining-pick"
-		},
-		{
-			"variation-id", "green-hair",
-			"file", "gnome/units/body_warrior_slash.png",
-			"layer-file", "hair", "gnome/units/hair_warrior_slash.png",
-			"hair-color", "green",
-			"upgrade-forbidden", "upgrade-old",
-			"item-equipped", "unit-hammer",
-			"item-equipped", "unit-mining-pick"
+			"hair-color", "green"
 		},
 		{
 			"layer", "right-arm",
@@ -271,64 +263,52 @@ DefineUnitType("unit-deep-gnomish-master-at-arms", {
 	HairColor = "red",
 	Variations = {
 		{
+			"variation-id", "thrust",
+			"upgrade-forbidden", "upgrade-old",
+			"item-not-equipped", "unit-hammer",
+			"item-not-equipped", "unit-mining-pick"
+		},
+		{
+			"variation-id", "slash",
+			"file", "gnome/units/body_warrior_slash.png",
+			"layer-file", "hair", "gnome/units/hair_warrior_slash.png",
+			"upgrade-forbidden", "upgrade-old",
+			"item-equipped", "unit-hammer",
+			"item-equipped", "unit-mining-pick"
+		},
+		{
+			"layer", "hair",
 			"variation-id", "red-hair",
-			"upgrade-forbidden", "upgrade-old",
-			"item-not-equipped", "unit-hammer",
-			"item-not-equipped", "unit-mining-pick"
+			"upgrade-forbidden", "upgrade-old"
 		},
 		{
-			"variation-id", "blond-hair",
-			"hair-color", "dark-blond",
+			"layer", "hair",
+			"variation-id", "black-hair",
 			"upgrade-forbidden", "upgrade-old",
-			"item-not-equipped", "unit-hammer",
-			"item-not-equipped", "unit-mining-pick"
+			"hair-color", "black"
 		},
 		{
+			"layer", "hair",
+			"variation-id", "brown-hair",
+			"upgrade-forbidden", "upgrade-old",
+			"hair-color", "brown"
+		},
+		{
+			"layer", "hair",
+			"variation-id", "dark-blond-hair",
+			"upgrade-forbidden", "upgrade-old",
+			"hair-color", "dark-blond"
+		},
+		{
+			"layer", "hair",
 			"variation-id", "gray-hair",
-			"hair-color", "gray",
-			"item-not-equipped", "unit-hammer",
-			"item-not-equipped", "unit-mining-pick"
+			"hair-color", "gray"
 		},
 		{
+			"layer", "hair",
 			"variation-id", "green-hair",
-			"hair-color", "green",
 			"upgrade-forbidden", "upgrade-old",
-			"item-not-equipped", "unit-hammer",
-			"item-not-equipped", "unit-mining-pick"
-		},
-		{
-			"variation-id", "red-hair",
-			"file", "gnome/units/body_warrior_slash.png",
-			"layer-file", "hair", "gnome/units/hair_warrior_slash.png",
-			"upgrade-forbidden", "upgrade-old",
-			"item-equipped", "unit-hammer",
-			"item-equipped", "unit-mining-pick"
-		},
-		{
-			"variation-id", "blond-hair",
-			"file", "gnome/units/body_warrior_slash.png",
-			"layer-file", "hair", "gnome/units/hair_warrior_slash.png",
-			"hair-color", "dark-blond",
-			"upgrade-forbidden", "upgrade-old",
-			"item-equipped", "unit-hammer",
-			"item-equipped", "unit-mining-pick"
-		},
-		{
-			"variation-id", "gray-hair",
-			"file", "gnome/units/body_warrior_slash.png",
-			"layer-file", "hair", "gnome/units/hair_warrior_slash.png",
-			"hair-color", "gray",
-			"item-equipped", "unit-hammer",
-			"item-equipped", "unit-mining-pick"
-		},
-		{
-			"variation-id", "green-hair",
-			"file", "gnome/units/body_warrior_slash.png",
-			"layer-file", "hair", "gnome/units/hair_warrior_slash.png",
-			"hair-color", "green",
-			"upgrade-forbidden", "upgrade-old",
-			"item-equipped", "unit-hammer",
-			"item-equipped", "unit-mining-pick"
+			"hair-color", "green"
 		},
 		{
 			"layer", "right-arm",
@@ -370,25 +350,40 @@ DefineUnitType("unit-deep-gnomish-herbalist", {
 	Civilization = "gnome",
 	Faction = "Acthnic Tribe",
 	SkinColor = "gray",
-	HairColor = "gray",
 	Variations = {
 		{
+			"layer", "hair",
 			"variation-id", "gray-hair"
 		},
 		{
-			"variation-id", "blond-hair",
-			"hair-color", "dark-blond",
-			"upgrade-forbidden", "upgrade-old"
+			"layer", "hair",
+			"variation-id", "black-hair",
+			"upgrade-forbidden", "upgrade-old",
+			"hair-color", "black"
 		},
 		{
+			"layer", "hair",
+			"variation-id", "brown-hair",
+			"upgrade-forbidden", "upgrade-old",
+			"hair-color", "brown"
+		},
+		{
+			"layer", "hair",
+			"variation-id", "dark-blond-hair",
+			"upgrade-forbidden", "upgrade-old",
+			"hair-color", "dark-blond"
+		},
+		{
+			"layer", "hair",
 			"variation-id", "green-hair",
-			"hair-color", "green",
-			"upgrade-forbidden", "upgrade-old"
+			"upgrade-forbidden", "upgrade-old",
+			"hair-color", "green"
 		},
 		{
+			"layer", "hair",
 			"variation-id", "red-hair",
-			"hair-color", "red",
-			"upgrade-forbidden", "upgrade-old"
+			"upgrade-forbidden", "upgrade-old",
+			"hair-color", "red"
 		}
 	}
 } )
