@@ -29,6 +29,10 @@ DefineUpgrade("upgrade-acthnic-tribe-faction", {
 	Name = _("Acthnic Tribe Faction")
 })
 
+DefineUpgrade("upgrade-sagan-tribe-faction", {
+	Name = _("Sagan Tribe Faction")
+})
+
 DefineModifier("upgrade-acthnic-tribe-faction",
 	{"apply-to", "unit-gnomish-worker"}, {"convert-to", "unit-deep-gnomish-worker"}
 )
@@ -49,16 +53,36 @@ DefineModifier("upgrade-acthnic-tribe-faction",
 	{"apply-to", "unit-gnomish-herbalist"}, {"convert-to", "unit-deep-gnomish-herbalist"}
 )
 
+DefineModifier("upgrade-sagan-tribe-faction",
+	{"apply-to", "unit-gnomish-worker"}, {"convert-to", "unit-forest-gnomish-worker"}
+)
+
+DefineModifier("upgrade-sagan-tribe-faction",
+	{"apply-to", "unit-gnomish-recruit"}, {"convert-to", "unit-forest-gnomish-recruit"}
+)
+
+DefineModifier("upgrade-sagan-tribe-faction",
+	{"apply-to", "unit-gnomish-duelist"}, {"convert-to", "unit-forest-gnomish-duelist"}
+)
+
+DefineModifier("upgrade-sagan-tribe-faction",
+	{"apply-to", "unit-gnomish-master-at-arms"}, {"convert-to", "unit-forest-gnomish-master-at-arms"}
+)
+
+DefineModifier("upgrade-sagan-tribe-faction",
+	{"apply-to", "unit-gnomish-herbalist"}, {"convert-to", "unit-forest-gnomish-herbalist"}
+)
+
 DefineDependency("unit-gnomish-worker",
-	{"upgrade-acthnic-tribe-faction", 0}
+	{"upgrade-acthnic-tribe-faction", 0, "upgrade-sagan-tribe-faction", 0}
 )
 
 DefineDependency("unit-gnomish-recruit",
-	{"upgrade-acthnic-tribe-faction", 0}
+	{"upgrade-acthnic-tribe-faction", 0, "upgrade-sagan-tribe-faction", 0}
 )
 
 DefineDependency("unit-gnomish-herbalist",
-	{"upgrade-acthnic-tribe-faction", 0}
+	{"upgrade-acthnic-tribe-faction", 0, "upgrade-sagan-tribe-faction", 0}
 )
 
 DefineDependency("unit-deep-gnomish-worker",
@@ -71,4 +95,16 @@ DefineDependency("unit-deep-gnomish-recruit",
 
 DefineDependency("unit-deep-gnomish-herbalist",
 	{"upgrade-acthnic-tribe-faction"}
+)
+
+DefineDependency("unit-forest-gnomish-worker",
+	{"upgrade-sagan-tribe-faction"}
+)
+
+DefineDependency("unit-forest-gnomish-recruit",
+	{"upgrade-sagan-tribe-faction"}
+)
+
+DefineDependency("unit-forest-gnomish-herbalist",
+	{"upgrade-sagan-tribe-faction"}
 )

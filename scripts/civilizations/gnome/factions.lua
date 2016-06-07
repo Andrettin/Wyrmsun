@@ -44,7 +44,8 @@ DefineFaction("Sagan Tribe", {
 	Civilization = "gnome",
 	Type = "tribe",
 	Colors = {"green"},
-	DevelopsTo = {"Untersberg"}
+	DevelopsTo = {"Untersberg"},
+	FactionUpgrade = "upgrade-sagan-tribe-faction"
 })
 
 DefineFaction("Acthna", {

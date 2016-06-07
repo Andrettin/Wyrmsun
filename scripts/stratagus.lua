@@ -1030,7 +1030,7 @@ function StandardTriggers()
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Scavenger") == false) then
 			AddTrigger(
 				function()
-					if (table.getn(GetSelectedUnits()) > 0 and (GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-gnomish-worker" or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-deep-gnomish-worker")) then
+					if (table.getn(GetSelectedUnits()) > 0 and (GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-gnomish-worker" or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-deep-gnomish-worker" or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-forest-gnomish-worker")) then
 						return true
 					else
 						return false
@@ -1046,7 +1046,7 @@ function StandardTriggers()
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Recruit") == false) then
 			AddTrigger(
 				function()
-					if (table.getn(GetSelectedUnits()) > 0 and (GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-gnomish-recruit" or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-deep-gnomish-recruit")) then
+					if (table.getn(GetSelectedUnits()) > 0 and (GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-gnomish-recruit" or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-deep-gnomish-recruit" or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-forest-gnomish-recruit")) then
 						return true
 					else
 						return false
@@ -1062,7 +1062,7 @@ function StandardTriggers()
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Herbalist") == false) then
 			AddTrigger(
 				function()
-					if (table.getn(GetSelectedUnits()) > 0 and (GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-gnomish-herbalist" or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-deep-gnomish-herbalist")) then
+					if (table.getn(GetSelectedUnits()) > 0 and (GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-gnomish-herbalist" or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-deep-gnomish-herbalist" or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-forest-gnomish-herbalist")) then
 						return true
 					else
 						return false

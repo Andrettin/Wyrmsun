@@ -251,6 +251,24 @@ DefineSpell("spell-acthnic-allegiance",
 	"sound-when-cast", "magic-holy"
 )
 
+DefineSpell("spell-sagan-allegiance",
+	"showname", _("Sagan Allegiance"),
+	"manacost", 0,
+	"range", 0,
+	"target", "self",
+	"condition", {
+		"organic", "only",
+		"Building", "false",
+		"faction-equivalent", "gnome", "Sagan Tribe"
+	},
+	"action", {
+		{"spawn-missile", "missile", "missile-magic-effect", "start-point", {"base", "target"}},
+		{"polymorph", "civilization", "gnome", "faction", "Sagan Tribe"}
+	},
+	"item-spell", "scroll",
+	"sound-when-cast", "magic-holy"
+)
+
 DefineSpell("spell-frank-allegiance",
 	"showname", _("Frank Allegiance"),
 	"manacost", 0,

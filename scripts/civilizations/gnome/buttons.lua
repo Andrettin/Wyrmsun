@@ -39,19 +39,19 @@
 DefineButton( { Pos = 4, Level = 0, Icon = "icon-herbal-cure",
 	Action = "cast-spell", Value = "spell-herbal-cure",
 	Key = "h", Hint = _("~!Herbal Cure (per 1 HP)"), Popup = "popup-commands",
-	ForUnit = {"unit-gnomish-herbalist", "unit-deep-gnomish-herbalist"}
+	ForUnit = {"unit-gnomish-herbalist", "unit-deep-gnomish-herbalist", "unit-forest-gnomish-herbalist"}
 })
 
 DefineButton( { Pos = 1, Level = 1, Icon = "icon-portent",
 	Action = "learn-ability", Value = "upgrade-portent",
 	Key = "p", Hint = _("Learn ~!Portent"), Popup = "popup-commands",
-	ForUnit = {"unit-gnomish-herbalist", "unit-deep-gnomish-herbalist"}
+	ForUnit = {"unit-gnomish-herbalist", "unit-deep-gnomish-herbalist", "unit-forest-gnomish-herbalist"}
 })
 
 DefineButton( { Pos = 5, Level = 0, Icon = "icon-portent",
 	Action = "cast-spell", Value = "spell-portent",
 	Key = "p", Hint = _("~!Portent"), Popup = "popup-commands",
-	ForUnit = {"unit-gnomish-herbalist", "unit-deep-gnomish-herbalist"}
+	ForUnit = {"unit-gnomish-herbalist", "unit-deep-gnomish-herbalist", "unit-forest-gnomish-herbalist"}
 })
 
 -- Upgrades ---------------------------------------------------------
@@ -78,4 +78,16 @@ DefineButton( { Pos = 1, Level = 1, Icon = "icon-gnomish-master-at-arms",
 	Action = "experience-upgrade-to", Value = "unit-deep-gnomish-master-at-arms",
 	Key = "u", Hint = _("~!Upgrade to Master at Arms"), Popup = "popup-unit",
 	ForUnit = {"unit-deep-gnomish-duelist"}
+} )
+
+DefineButton( { Pos = 1, Level = 1, Icon = "icon-gnomish-duelist",
+	Action = "experience-upgrade-to", Value = "unit-forest-gnomish-duelist",
+	Key = "u", Hint = _("~!Upgrade to Duelist"), Popup = "popup-unit",
+	ForUnit = {"unit-forest-gnomish-recruit"}
+} )
+
+DefineButton( { Pos = 1, Level = 1, Icon = "icon-gnomish-master-at-arms",
+	Action = "experience-upgrade-to", Value = "unit-forest-gnomish-master-at-arms",
+	Key = "u", Hint = _("~!Upgrade to Master at Arms"), Popup = "popup-unit",
+	ForUnit = {"unit-forest-gnomish-duelist"}
 } )

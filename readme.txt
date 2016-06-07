@@ -69,6 +69,9 @@ https://github.com/Andrettin/Wyrmsun
 - Added Ingria and Viborg provinces (Earth).
 - Added Lake Ladoga water province (Earth).
 
+* Items
+- Added "Scroll of Sagan Allegiance", which transforms a gnomish unit (including gnomish custom heroes) into their faction equivalent for the Sagan Tribe.
+
 * Miscellaneous
 - Added "No Day/Night Cycle" option when starting single-player maps.
 - Fixed a crash cause.
@@ -79,6 +82,9 @@ https://github.com/Andrettin/Wyrmsun
 
 * Quests
 - Added a new dialogue featuring Thjodrorir in the "A Rock Home" quest (dwarf).
+
+* Units
+- Gnomes of the Sagan Tribe now have green skin (palette by Jinn).
 
 -----------------------------------------------------------------------
 - 2.2.6

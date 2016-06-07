@@ -31,19 +31,20 @@
 --	NOTE: Save can generate this table.
 --
 
-DefineUnitType("unit-deep-gnomish-worker", {
+DefineUnitType("unit-forest-gnomish-worker", {
 	Parent = "unit-gnomish-worker",
 	Civilization = "gnome",
-	Faction = "Acthnic Tribe",
-	SkinColor = "gray",
-	HairColor = "red",
+	Faction = "Sagan Tribe",
+	SkinColor = "light-green",
+	HairColor = "green",
 	Variations = {
 		{
-			"variation-id", "red-hair",
+			"variation-id", "blond-hair",
+			"hair-color", "blond",
 			"upgrade-forbidden", "upgrade-old"
 		},
 		{
-			"variation-id", "blond-hair",
+			"variation-id", "dark-blond-hair",
 			"hair-color", "dark-blond",
 			"upgrade-forbidden", "upgrade-old"
 		},
@@ -53,27 +54,27 @@ DefineUnitType("unit-deep-gnomish-worker", {
 		},
 		{
 			"variation-id", "green-hair",
-			"hair-color", "green",
 			"upgrade-forbidden", "upgrade-old"
 		}
 	}
 } )
 
-DefineUnitType("unit-deep-gnomish-recruit", {
+DefineUnitType("unit-forest-gnomish-recruit", {
 	Parent = "unit-gnomish-recruit",
 	Civilization = "gnome",
-	Faction = "Acthnic Tribe",
-	SkinColor = "gray",
-	HairColor = "red",
+	Faction = "Sagan Tribe",
+	SkinColor = "light-green",
+	HairColor = "green",
 	Variations = {
 		{
-			"variation-id", "red-hair",
+			"variation-id", "blond-hair",
+			"hair-color", "blond",
 			"upgrade-forbidden", "upgrade-old",
 			"item-not-equipped", "unit-hammer",
 			"item-not-equipped", "unit-mining-pick"
 		},
 		{
-			"variation-id", "blond-hair",
+			"variation-id", "dark-blond-hair",
 			"hair-color", "dark-blond",
 			"upgrade-forbidden", "upgrade-old",
 			"item-not-equipped", "unit-hammer",
@@ -93,15 +94,16 @@ DefineUnitType("unit-deep-gnomish-recruit", {
 			"item-not-equipped", "unit-mining-pick"
 		},
 		{
-			"variation-id", "red-hair",
+			"variation-id", "blond-hair",
 			"file", "gnome/units/body_warrior_slash.png",
 			"layer-file", "hair", "gnome/units/hair_warrior_slash.png",
+			"hair-color", "blond",
 			"upgrade-forbidden", "upgrade-old",
 			"item-equipped", "unit-hammer",
 			"item-equipped", "unit-mining-pick"
 		},
 		{
-			"variation-id", "blond-hair",
+			"variation-id", "dark-blond-hair",
 			"file", "gnome/units/body_warrior_slash.png",
 			"layer-file", "hair", "gnome/units/hair_warrior_slash.png",
 			"hair-color", "dark-blond",
@@ -161,21 +163,22 @@ DefineUnitType("unit-deep-gnomish-recruit", {
 	}
 } )
 
-DefineUnitType("unit-deep-gnomish-duelist", {
+DefineUnitType("unit-forest-gnomish-duelist", {
 	Parent = "unit-gnomish-duelist",
 	Civilization = "gnome",
-	Faction = "Acthnic Tribe",
-	SkinColor = "gray",
-	HairColor = "red",
+	Faction = "Sagan Tribe",
+	SkinColor = "light-green",
+	HairColor = "green",
 	Variations = {
 		{
-			"variation-id", "red-hair",
+			"variation-id", "blond-hair",
+			"hair-color", "blond",
 			"upgrade-forbidden", "upgrade-old",
 			"item-not-equipped", "unit-hammer",
 			"item-not-equipped", "unit-mining-pick"
 		},
 		{
-			"variation-id", "blond-hair",
+			"variation-id", "dark-blond-hair",
 			"hair-color", "dark-blond",
 			"upgrade-forbidden", "upgrade-old",
 			"item-not-equipped", "unit-hammer",
@@ -195,15 +198,16 @@ DefineUnitType("unit-deep-gnomish-duelist", {
 			"item-not-equipped", "unit-mining-pick"
 		},
 		{
-			"variation-id", "red-hair",
+			"variation-id", "blond-hair",
 			"file", "gnome/units/body_warrior_slash.png",
 			"layer-file", "hair", "gnome/units/hair_warrior_slash.png",
+			"hair-color", "blond",
 			"upgrade-forbidden", "upgrade-old",
 			"item-equipped", "unit-hammer",
 			"item-equipped", "unit-mining-pick"
 		},
 		{
-			"variation-id", "blond-hair",
+			"variation-id", "dark-blond-hair",
 			"file", "gnome/units/body_warrior_slash.png",
 			"layer-file", "hair", "gnome/units/hair_warrior_slash.png",
 			"hair-color", "dark-blond",
@@ -263,21 +267,22 @@ DefineUnitType("unit-deep-gnomish-duelist", {
 	}
 } )
 
-DefineUnitType("unit-deep-gnomish-master-at-arms", {
+DefineUnitType("unit-forest-gnomish-master-at-arms", {
 	Parent = "unit-gnomish-master-at-arms",
 	Civilization = "gnome",
-	Faction = "Acthnic Tribe",
-	SkinColor = "gray",
-	HairColor = "red",
+	Faction = "Sagan Tribe",
+	SkinColor = "light-green",
+	HairColor = "green",
 	Variations = {
 		{
-			"variation-id", "red-hair",
+			"variation-id", "blond-hair",
+			"hair-color", "blond",
 			"upgrade-forbidden", "upgrade-old",
 			"item-not-equipped", "unit-hammer",
 			"item-not-equipped", "unit-mining-pick"
 		},
 		{
-			"variation-id", "blond-hair",
+			"variation-id", "dark-blond-hair",
 			"hair-color", "dark-blond",
 			"upgrade-forbidden", "upgrade-old",
 			"item-not-equipped", "unit-hammer",
@@ -297,15 +302,16 @@ DefineUnitType("unit-deep-gnomish-master-at-arms", {
 			"item-not-equipped", "unit-mining-pick"
 		},
 		{
-			"variation-id", "red-hair",
+			"variation-id", "blond-hair",
 			"file", "gnome/units/body_warrior_slash.png",
 			"layer-file", "hair", "gnome/units/hair_warrior_slash.png",
+			"hair-color", "blond",
 			"upgrade-forbidden", "upgrade-old",
 			"item-equipped", "unit-hammer",
 			"item-equipped", "unit-mining-pick"
 		},
 		{
-			"variation-id", "blond-hair",
+			"variation-id", "dark-blond-hair",
 			"file", "gnome/units/body_warrior_slash.png",
 			"layer-file", "hair", "gnome/units/hair_warrior_slash.png",
 			"hair-color", "dark-blond",
@@ -365,11 +371,11 @@ DefineUnitType("unit-deep-gnomish-master-at-arms", {
 	}
 } )
 
-DefineUnitType("unit-deep-gnomish-herbalist", {
+DefineUnitType("unit-forest-gnomish-herbalist", {
 	Parent = "unit-gnomish-herbalist",
 	Civilization = "gnome",
-	Faction = "Acthnic Tribe",
-	SkinColor = "gray",
+	Faction = "Sagan Tribe",
+	SkinColor = "light-green",
 	HairColor = "gray",
 	Variations = {
 		{
@@ -377,17 +383,17 @@ DefineUnitType("unit-deep-gnomish-herbalist", {
 		},
 		{
 			"variation-id", "blond-hair",
+			"hair-color", "blond",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"variation-id", "dark-blond-hair",
 			"hair-color", "dark-blond",
 			"upgrade-forbidden", "upgrade-old"
 		},
 		{
 			"variation-id", "green-hair",
 			"hair-color", "green",
-			"upgrade-forbidden", "upgrade-old"
-		},
-		{
-			"variation-id", "red-hair",
-			"hair-color", "red",
 			"upgrade-forbidden", "upgrade-old"
 		}
 	}

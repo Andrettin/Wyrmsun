@@ -57,7 +57,7 @@ DefineButton( { Pos = 4, Level = 0, Icon = "icon-repair",
 	ForUnit = {
 		"unit-germanic-worker", "unit-teuton-worker",
 		"unit-dwarven-miner", "unit-brising-miner",
-		"unit-gnomish-worker", "unit-deep-gnomish-worker",
+		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-forest-gnomish-worker",
 		"unit-goblin-worker"
 	}
 })
@@ -68,7 +68,7 @@ DefineButton( { Pos = 5, Level = 0, Icon = "icon-harvest",
 	ForUnit = {
 		"unit-germanic-worker", "unit-teuton-worker",
 		"unit-dwarven-miner", "unit-brising-miner",
-		"unit-gnomish-worker", "unit-deep-gnomish-worker",
+		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-forest-gnomish-worker",
 		"unit-goblin-worker"
 	}
 })
@@ -77,7 +77,10 @@ DefineButton( { Pos = 13, Level = 0, Icon = "icon-build-basic-structure",
 	Action = "button", Value = 1,
 	Key = "b", Hint = _("~!Build Structure"), Popup = "popup-commands",
 	ForUnit = {
-		"unit-dwarven-miner", "unit-brising-miner", "unit-germanic-worker", "unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-goblin-worker", "unit-teuton-worker"
+		"unit-germanic-worker", "unit-teuton-worker",
+		"unit-dwarven-miner", "unit-brising-miner",
+		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-forest-gnomish-worker",
+		"unit-goblin-worker"
 	}
 })
 
@@ -150,6 +153,7 @@ DefineButton( { Pos = 13, Level = 0, Icon = "icon-level-up",
 		"unit-teuton-priest",
 		"unit-gnomish-recruit", "unit-gnomish-duelist", "unit-gnomish-master-at-arms", "unit-gnomish-herbalist",
 		"unit-deep-gnomish-recruit", "unit-deep-gnomish-duelist", "unit-deep-gnomish-master-at-arms", "unit-deep-gnomish-herbalist",
+		"unit-forest-gnomish-recruit", "unit-forest-gnomish-duelist", "unit-forest-gnomish-master-at-arms", "unit-forest-gnomish-herbalist",
 		"unit-goblin-thief", "unit-goblin-swordsman", "unit-goblin-spearman", "unit-goblin-archer", "unit-goblin-headhunter", "unit-goblin-shaman",
 		"unit-kobold-footpad",
 		"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane"
@@ -184,7 +188,7 @@ DefineButton( { Pos = 3, Level = 1, Icon = "icon-sword-mastery-bronze",
 	ForUnit = {
 		"unit-germanic-warrior",
 		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-frank-swordsman", "unit-teuton-ritter", "unit-frank-horseman",
-		"unit-gnomish-master-at-arms", "unit-deep-gnomish-master-at-arms",
+		"unit-gnomish-master-at-arms", "unit-deep-gnomish-master-at-arms", "unit-forest-gnomish-master-at-arms",
 		"unit-goblin-swordsman",
 		"unit-kobold-footpad"
 	}
@@ -198,7 +202,7 @@ DefineButton( { Pos = 3, Level = 1, Icon = "icon-sword-mastery",
 	ForUnit = {
 		"unit-germanic-warrior",
 		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-teuton-ritter",
-		"unit-gnomish-master-at-arms", "unit-deep-gnomish-master-at-arms",
+		"unit-gnomish-master-at-arms", "unit-deep-gnomish-master-at-arms", "unit-forest-gnomish-master-at-arms",
 		"unit-goblin-swordsman",
 		"unit-kobold-footpad"
 	}
@@ -238,7 +242,7 @@ DefineButton( { Pos = 5, Level = 1, Icon = "icon-critical-strike",
 		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-frank-swordsman",
 		"unit-teuton-spearman", "unit-frank-spearman",
 		"unit-teuton-archer", "unit-teuton-ritter", "unit-frank-horseman",
-		"unit-gnomish-master-at-arms", "unit-deep-gnomish-master-at-arms",
+		"unit-gnomish-master-at-arms", "unit-deep-gnomish-master-at-arms", "unit-forest-gnomish-master-at-arms",
 		"unit-goblin-thief", "unit-goblin-swordsman", "unit-goblin-spearman", "unit-goblin-headhunter",
 		"unit-kobold-footpad",
 		"unit-surghan-mercenary-thane"
@@ -257,7 +261,7 @@ DefineButton( { Pos = 5, Level = 1, Icon = "icon-deadly-precision",
 		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-frank-swordsman",
 		"unit-teuton-spearman", "unit-frank-spearman",
 		"unit-teuton-archer", "unit-teuton-ritter", "unit-frank-horseman",
-		"unit-gnomish-master-at-arms", "unit-deep-gnomish-master-at-arms",
+		"unit-gnomish-master-at-arms", "unit-deep-gnomish-master-at-arms", "unit-forest-gnomish-master-at-arms",
 		"unit-goblin-thief", "unit-goblin-swordsman", "unit-goblin-spearman", "unit-goblin-headhunter",
 		"unit-kobold-footpad",
 		"unit-surghan-mercenary-thane"
@@ -277,7 +281,7 @@ DefineButton( { Pos = 6, Level = 1, Icon = "icon-eagle-eye",
 		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-frank-swordsman",
 		"unit-teuton-spearman", "unit-frank-spearman",
 		"unit-teuton-archer", "unit-teuton-ritter", "unit-frank-horseman",
-		"unit-gnomish-master-at-arms", "unit-deep-gnomish-master-at-arms",
+		"unit-gnomish-master-at-arms", "unit-deep-gnomish-master-at-arms", "unit-forest-gnomish-master-at-arms",
 		"unit-goblin-thief", "unit-goblin-swordsman", "unit-goblin-spearman", "unit-goblin-headhunter",
 		"unit-kobold-footpad",
 		"unit-surghan-mercenary-thane"
@@ -294,7 +298,7 @@ DefineButton( { Pos = 7, Level = 1, Icon = "icon-stun",
 		"unit-germanic-warrior",
 		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-frank-swordsman",
 		"unit-teuton-ritter", "unit-frank-horseman",
-		"unit-gnomish-master-at-arms", "unit-deep-gnomish-master-at-arms",
+		"unit-gnomish-master-at-arms", "unit-deep-gnomish-master-at-arms", "unit-forest-gnomish-master-at-arms",
 		"unit-goblin-swordsman",
 		"unit-kobold-footpad",
 		"unit-surghan-mercenary-thane"
@@ -310,7 +314,7 @@ DefineButton( { Pos = 8, Level = 1, Icon = "icon-puncture",
 		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-frank-swordsman",
 		"unit-teuton-spearman", "unit-frank-spearman",
 		"unit-dwarven-guard",
-		"unit-gnomish-master-at-arms", "unit-deep-gnomish-master-at-arms",
+		"unit-gnomish-master-at-arms", "unit-deep-gnomish-master-at-arms", "unit-forest-gnomish-master-at-arms",
 		"unit-goblin-thief", "unit-goblin-swordsman", "unit-goblin-spearman"
 	}
 } )
@@ -321,7 +325,7 @@ DefineButton( { Pos = 9, Level = 1, Icon = "icon-leadership",
 	Description = "Leadership Aura is an aura ability that increases the damage of nearby friendly units by 10%.",
 	ForUnit = {
 		"unit-dwarven-thane",
-		"unit-gnomish-master-at-arms", "unit-deep-gnomish-master-at-arms",
+		"unit-gnomish-master-at-arms", "unit-deep-gnomish-master-at-arms", "unit-forest-gnomish-master-at-arms",
 		"unit-surghan-mercenary-thane"
 	}
 } )
@@ -350,6 +354,7 @@ DefineButton( { Pos = 16, Level = 1, Icon = "icon-cancel",
 		"unit-teuton-priest",
 		"unit-gnomish-recruit", "unit-gnomish-duelist", "unit-gnomish-master-at-arms", "unit-gnomish-herbalist",
 		"unit-deep-gnomish-recruit", "unit-deep-gnomish-duelist", "unit-deep-gnomish-master-at-arms", "unit-deep-gnomish-herbalist",
+		"unit-forest-gnomish-recruit", "unit-forest-gnomish-duelist", "unit-forest-gnomish-master-at-arms", "unit-forest-gnomish-herbalist",
 		"unit-goblin-thief", "unit-goblin-swordsman", "unit-goblin-spearman", "unit-goblin-archer", "unit-goblin-headhunter", "unit-goblin-shaman",
 		"unit-kobold-footpad",
 		"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane"
@@ -376,6 +381,7 @@ DefineButton( { Pos = 14, Level = 0, Icon = "icon-inventory",
 		"unit-teuton-priest",
 		"unit-gnomish-recruit", "unit-gnomish-duelist", "unit-gnomish-master-at-arms", "unit-gnomish-herbalist",
 		"unit-deep-gnomish-recruit", "unit-deep-gnomish-duelist", "unit-deep-gnomish-master-at-arms", "unit-deep-gnomish-herbalist",
+		"unit-forest-gnomish-recruit", "unit-forest-gnomish-duelist", "unit-forest-gnomish-master-at-arms", "unit-forest-gnomish-herbalist",
 		"unit-goblin-thief", "unit-goblin-swordsman", "unit-goblin-spearman", "unit-goblin-archer", "unit-goblin-headhunter", "unit-goblin-shaman",
 		"unit-kobold-footpad",
 		"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane"
@@ -399,6 +405,7 @@ DefineButton( { Pos = 16, Level = 2, Icon = "icon-cancel",
 		"unit-teuton-priest",
 		"unit-gnomish-recruit", "unit-gnomish-duelist", "unit-gnomish-master-at-arms", "unit-gnomish-herbalist",
 		"unit-deep-gnomish-recruit", "unit-deep-gnomish-duelist", "unit-deep-gnomish-master-at-arms", "unit-deep-gnomish-herbalist",
+		"unit-forest-gnomish-recruit", "unit-forest-gnomish-duelist", "unit-forest-gnomish-master-at-arms", "unit-forest-gnomish-herbalist",
 		"unit-goblin-thief", "unit-goblin-swordsman", "unit-goblin-spearman", "unit-goblin-archer", "unit-goblin-headhunter", "unit-goblin-shaman",
 		"unit-kobold-footpad",
 		"unit-surghan-mercenary-steelclad", "unit-surghan-mercenary-thane"
@@ -437,7 +444,7 @@ DefineButton( { Pos = 6, Level = 0, Icon = "icon-stun",
 		"unit-dwarven-yale-lord",
 		"unit-germanic-warrior",
 		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-frank-swordsman", "unit-teuton-ritter", "unit-frank-horseman",
-		"unit-gnomish-master-at-arms", "unit-deep-gnomish-master-at-arms",
+		"unit-gnomish-master-at-arms", "unit-deep-gnomish-master-at-arms", "unit-forest-gnomish-master-at-arms",
 		"unit-goblin-swordsman",
 		"unit-kobold-footpad",
 		"unit-surghan-mercenary-thane"
@@ -452,7 +459,7 @@ DefineButton( { Pos = 7, Level = 0, Icon = "icon-puncture",
 		"unit-germanic-warrior", "unit-germanic-spearman",
 		"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-frank-swordsman", "unit-teuton-spearman", "unit-frank-spearman",
 		"unit-dwarven-guard",
-		"unit-gnomish-master-at-arms", "unit-deep-gnomish-master-at-arms",
+		"unit-gnomish-master-at-arms", "unit-deep-gnomish-master-at-arms", "unit-forest-gnomish-master-at-arms",
 		"unit-goblin-thief", "unit-goblin-swordsman", "unit-goblin-spearman"
 	}
 })
@@ -462,7 +469,7 @@ DefineButton( { Pos = 7, Level = 0, Icon = "icon-puncture",
 DefineButton( { Pos = 16, Level = 1, Icon = "icon-cancel",
 	Action = "button", Value = 0,
 	Key = "escape", Hint = _("Cancel (~<Esc~>)"), Popup = "popup-commands",
-	ForUnit = {"unit-germanic-worker", "unit-teuton-worker", "unit-dwarven-miner", "unit-brising-miner", "unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-goblin-worker"}
+	ForUnit = {"unit-germanic-worker", "unit-teuton-worker", "unit-dwarven-miner", "unit-brising-miner", "unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-forest-gnomish-worker", "unit-goblin-worker"}
 })
 
 -- Load the buttons of all civilizations
