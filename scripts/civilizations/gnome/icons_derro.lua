@@ -25,49 +25,8 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineFaction("Acthnic Tribe", {
-	Civilization = "gnome",
-	Type = "tribe",
-	Colors = {"red"},
-	DevelopsTo = {"Acthna", "Untersberg"},
-	FactionUpgrade = "upgrade-acthnic-tribe-faction"
-})
-
-DefineFaction("Cubital Tribe", {
-	Civilization = "gnome",
-	Type = "tribe",
-	Colors = {"brown"},
-	DevelopsTo = {"Untersberg"}
-})
-
-DefineFaction("Derro Tribe", {
-	Civilization = "gnome",
-	Type = "tribe",
-	Colors = {"green"},
-	DevelopsTo = {"Acthna", "Untersberg"},
-	Playable = false,
-	FactionUpgrade = "upgrade-derro-tribe-faction"
-})
-
-DefineFaction("Sagan Tribe", {
-	Civilization = "gnome",
-	Type = "tribe",
-	Colors = {"green"},
-	DevelopsTo = {"Untersberg"},
-	FactionUpgrade = "upgrade-sagan-tribe-faction"
-})
-
-DefineFaction("Acthna", {
-	ParentFaction = "Acthnic Tribe",
-	Civilization = "gnome",
-	Type = "polity",
-	Colors = {"red"},
-	DefaultTier = "duchy"
-})
-
-DefineFaction("Untersberg", {
-	Civilization = "gnome",
-	Type = "polity",
-	Colors = {"purple"},
-	DefaultTier = "kingdom"
+DefineIcon({
+	Name = "icon-derro-worker",
+	Size = {46, 38},
+	File = "gnome/icons/derro_worker.png"
 })

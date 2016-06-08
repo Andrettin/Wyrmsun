@@ -25,49 +25,21 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineFaction("Acthnic Tribe", {
-	Civilization = "gnome",
-	Type = "tribe",
-	Colors = {"red"},
-	DevelopsTo = {"Acthna", "Untersberg"},
-	FactionUpgrade = "upgrade-acthnic-tribe-faction"
-})
+--=============================================================================
+--	Define unit-types.
+--
+--	NOTE: Save can generate this table.
+--
 
-DefineFaction("Cubital Tribe", {
+DefineUnitType("unit-derro-worker", {
+	Parent = "unit-gnomish-worker",
 	Civilization = "gnome",
-	Type = "tribe",
-	Colors = {"brown"},
-	DevelopsTo = {"Untersberg"}
-})
-
-DefineFaction("Derro Tribe", {
-	Civilization = "gnome",
-	Type = "tribe",
-	Colors = {"green"},
-	DevelopsTo = {"Acthna", "Untersberg"},
-	Playable = false,
-	FactionUpgrade = "upgrade-derro-tribe-faction"
-})
-
-DefineFaction("Sagan Tribe", {
-	Civilization = "gnome",
-	Type = "tribe",
-	Colors = {"green"},
-	DevelopsTo = {"Untersberg"},
-	FactionUpgrade = "upgrade-sagan-tribe-faction"
-})
-
-DefineFaction("Acthna", {
-	ParentFaction = "Acthnic Tribe",
-	Civilization = "gnome",
-	Type = "polity",
-	Colors = {"red"},
-	DefaultTier = "duchy"
-})
-
-DefineFaction("Untersberg", {
-	Civilization = "gnome",
-	Type = "polity",
-	Colors = {"purple"},
-	DefaultTier = "kingdom"
-})
+	Faction = "Derro Tribe",
+	Description = "Derro workers labor silently in their underground caves. Despite their lack of combat training, the sight of one of them still makes travelers wary: the axes used by these laborers to split wood could soon be splitting necks instead.",
+	SkinColor = "pale-blue",
+	HairColor = "gray",
+	Icon = "icon-derro-worker",
+	DaySightRangeBonus = -1,
+	NightSightRangeBonus = 1,
+	BasicDamage = 6
+} )

@@ -406,6 +406,7 @@ igoku:
 /graphics/dwarf/icons/shield_1.png (later modified by Jinn) (licensed under the GPL 2.0)
 
 Jesse Crider:
+/graphics/gnome/icons/derro_worker.png (licensed under the CC0)
 /graphics/goblin/icons/coinage.png (the icon by Jinn was based on Jesse Crider's Goblin coin design) (licensed under the CC0)
 /graphics/goblin/icons/magnate.png (the icon by Jinn was based on Jesse Crider's Goblin magnate design) (licensed under the CC0)
 

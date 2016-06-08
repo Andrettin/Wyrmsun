@@ -634,6 +634,7 @@ DefineUnitType("unit-gnomish-caravan", { Name = _("Caravan"),
 
 Load("scripts/civilizations/gnome/units_deep_gnome.lua")
 Load("scripts/civilizations/gnome/units_forest_gnome.lua")
+Load("scripts/civilizations/gnome/units_derro.lua")
 
 DefineUnitType("unit-gnomish-town-hall", { Name = _("Town Hall"),
 	Parent = "unit-template-town-hall",
@@ -642,7 +643,7 @@ DefineUnitType("unit-gnomish-town-hall", { Name = _("Town Hall"),
 	Image = {"file", "gnome/buildings/town_hall.png", "size", {128, 128}},
 	Shadow = {"file", "gnome/buildings/town_hall_shadow.png", "size", {128, 128}},
 	Animations = "animations-building", Icon = "icon-gnomish-town-hall",
-	Trains = {"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-forest-gnomish-worker"},
+	Trains = {"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-forest-gnomish-worker", "unit-derro-worker"},
 	AiDrops = {"unit-wool-shoes", "unit-furry-wool-shoes"},
 	DropAffixes = {"upgrade-item-prefix-jinns", "upgrade-item-prefix-penetrating", "upgrade-item-prefix-storm", "upgrade-item-prefix-vicious", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-the-jinn", "upgrade-item-suffix-of-lightning", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-the-snigill", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-trickery"},
 	DropSpells = {"spell-acthnic-allegiance", "spell-sagan-allegiance"},
@@ -690,5 +691,9 @@ DefineUnitType("unit-deep-gnomish-worker", { -- this is here because the buildin
 } )
 
 DefineUnitType("unit-forest-gnomish-worker", { -- this is here because the buildings need to be defined before being assigned to the miner's "Trains" array
+	Trains = {"unit-gnomish-town-hall", "unit-gnomish-farm", "unit-gnomish-barracks", "unit-dwarven-lumber-mill", "unit-dwarven-smithy", "unit-dwarven-yale-pen", "unit-dwarven-sentry-tower", "unit-dwarven-dock", "unit-gold-mine", "unit-silver-mine", "unit-copper-mine"}
+} )
+
+DefineUnitType("unit-derro-worker", { -- this is here because the buildings need to be defined before being assigned to the miner's "Trains" array
 	Trains = {"unit-gnomish-town-hall", "unit-gnomish-farm", "unit-gnomish-barracks", "unit-dwarven-lumber-mill", "unit-dwarven-smithy", "unit-dwarven-yale-pen", "unit-dwarven-sentry-tower", "unit-dwarven-dock", "unit-gold-mine", "unit-silver-mine", "unit-copper-mine"}
 } )

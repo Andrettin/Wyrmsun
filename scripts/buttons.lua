@@ -57,7 +57,7 @@ DefineButton( { Pos = 4, Level = 0, Icon = "icon-repair",
 	ForUnit = {
 		"unit-germanic-worker", "unit-teuton-worker",
 		"unit-dwarven-miner", "unit-brising-miner",
-		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-forest-gnomish-worker",
+		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-forest-gnomish-worker", "unit-derro-worker",
 		"unit-goblin-worker"
 	}
 })
@@ -68,7 +68,7 @@ DefineButton( { Pos = 5, Level = 0, Icon = "icon-harvest",
 	ForUnit = {
 		"unit-germanic-worker", "unit-teuton-worker",
 		"unit-dwarven-miner", "unit-brising-miner",
-		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-forest-gnomish-worker",
+		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-forest-gnomish-worker", "unit-derro-worker",
 		"unit-goblin-worker"
 	}
 })
@@ -79,7 +79,7 @@ DefineButton( { Pos = 13, Level = 0, Icon = "icon-build-basic-structure",
 	ForUnit = {
 		"unit-germanic-worker", "unit-teuton-worker",
 		"unit-dwarven-miner", "unit-brising-miner",
-		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-forest-gnomish-worker",
+		"unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-forest-gnomish-worker", "unit-derro-worker",
 		"unit-goblin-worker"
 	}
 })
@@ -469,7 +469,12 @@ DefineButton( { Pos = 7, Level = 0, Icon = "icon-puncture",
 DefineButton( { Pos = 16, Level = 1, Icon = "icon-cancel",
 	Action = "button", Value = 0,
 	Key = "escape", Hint = _("Cancel (~<Esc~>)"), Popup = "popup-commands",
-	ForUnit = {"unit-germanic-worker", "unit-teuton-worker", "unit-dwarven-miner", "unit-brising-miner", "unit-gnomish-worker", "unit-deep-gnomish-worker", "unit-forest-gnomish-worker", "unit-goblin-worker"}
+	ForUnit = {
+		"unit-germanic-worker", "unit-teuton-worker",
+		"unit-dwarven-miner", "unit-brising-miner", "unit-gnomish-worker",
+		"unit-deep-gnomish-worker", "unit-forest-gnomish-worker", "unit-derro-worker",
+		"unit-goblin-worker"
+	}
 })
 
 -- Load the buttons of all civilizations

@@ -86,6 +86,7 @@ https://github.com/Andrettin/Wyrmsun
 * Units
 - Gnomes of the Sagan Tribe now have green skin (palette by Jinn).
 - Greatly increased the quantity of hair color variations for gnomes.
+- Added Derro worker (portrait by Jesse Crider).
 
 -----------------------------------------------------------------------
 - 2.2.6

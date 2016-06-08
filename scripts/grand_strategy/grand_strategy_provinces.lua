@@ -187,7 +187,7 @@ function LoadProvinces(world)
 				unit_dwarven_axefighter = 0,
 				unit_dwarven_steelclad = 0,
 				unit_dwarven_thane = 0,
-				unit_gnomish_recruit = 4
+				unit_forest_gnomish_recruit = 4
 			}
 		},
 		Lyr = {

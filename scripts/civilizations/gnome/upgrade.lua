@@ -29,6 +29,10 @@ DefineUpgrade("upgrade-acthnic-tribe-faction", {
 	Name = _("Acthnic Tribe Faction")
 })
 
+DefineUpgrade("upgrade-derro-tribe-faction", {
+	Name = _("Derro Tribe Faction")
+})
+
 DefineUpgrade("upgrade-sagan-tribe-faction", {
 	Name = _("Sagan Tribe Faction")
 })
@@ -53,6 +57,10 @@ DefineModifier("upgrade-acthnic-tribe-faction",
 	{"apply-to", "unit-gnomish-herbalist"}, {"convert-to", "unit-deep-gnomish-herbalist"}
 )
 
+DefineModifier("upgrade-derro-tribe-faction",
+	{"apply-to", "unit-gnomish-worker"}, {"convert-to", "unit-derro-worker"}
+)
+
 DefineModifier("upgrade-sagan-tribe-faction",
 	{"apply-to", "unit-gnomish-worker"}, {"convert-to", "unit-forest-gnomish-worker"}
 )
@@ -74,7 +82,7 @@ DefineModifier("upgrade-sagan-tribe-faction",
 )
 
 DefineDependency("unit-gnomish-worker",
-	{"upgrade-acthnic-tribe-faction", 0, "upgrade-sagan-tribe-faction", 0}
+	{"upgrade-acthnic-tribe-faction", 0, "upgrade-derro-tribe-faction", 0, "upgrade-sagan-tribe-faction", 0}
 )
 
 DefineDependency("unit-gnomish-recruit",
@@ -95,6 +103,10 @@ DefineDependency("unit-deep-gnomish-recruit",
 
 DefineDependency("unit-deep-gnomish-herbalist",
 	{"upgrade-acthnic-tribe-faction"}
+)
+
+DefineDependency("unit-derro-worker",
+	{"upgrade-derro-tribe-faction"}
 )
 
 DefineDependency("unit-forest-gnomish-worker",
