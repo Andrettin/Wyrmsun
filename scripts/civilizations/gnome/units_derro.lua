@@ -41,5 +41,5 @@ DefineUnitType("unit-derro-worker", {
 	Icon = "icon-derro-worker",
 	DaySightRangeBonus = -1,
 	NightSightRangeBonus = 1,
-	BasicDamage = 6
+	BasicDamage = 6 -- +1 damage
 } )

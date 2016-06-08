@@ -87,6 +87,7 @@ https://github.com/Andrettin/Wyrmsun
 - Gnomes of the Sagan Tribe now have green skin (palette by Jinn).
 - Greatly increased the quantity of hair color variations for gnomes.
 - Added Derro worker (portrait by Jesse Crider).
+- Goblin Swordsmen, Impalers, Archers and Headhunters now have 11 Speed instead of 10.
 
 -----------------------------------------------------------------------
 - 2.2.6
