@@ -673,7 +673,7 @@ DefineUnitType("unit-gnomish-barracks", { Name = _("Barracks"),
 	Image = {"file", "gnome/buildings/barracks.png", "size", {96, 96}},
 	Shadow = {"file", "gnome/buildings/barracks_shadow.png", "size", {96, 96}},
 	Animations = "animations-building", Icon = "icon-gnomish-barracks",
-	Trains = {"unit-gnomish-recruit", "unit-deep-gnomish-recruit", "unit-forest-gnomish-recruit", "unit-dwarven-scout", "unit-dwarven-yale-rider", "unit-dwarven-ballista", "unit-dwarven-gryphon-rider", "unit-gnomish-herbalist", "unit-deep-gnomish-herbalist", "unit-forest-gnomish-herbalist"},
+	Trains = {"unit-gnomish-recruit", "unit-deep-gnomish-recruit", "unit-forest-gnomish-recruit", "unit-derro-thug", "unit-dwarven-scout", "unit-dwarven-yale-rider", "unit-dwarven-ballista", "unit-dwarven-gryphon-rider", "unit-gnomish-herbalist", "unit-deep-gnomish-herbalist", "unit-forest-gnomish-herbalist"},
 	AiDrops = {"unit-thrusting-sword", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-wool-shoes", "unit-furry-wool-shoes"},
 	DropAffixes = {"upgrade-item-prefix-jinns", "upgrade-item-prefix-penetrating", "upgrade-item-prefix-storm", "upgrade-item-prefix-vicious", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-the-jinn", "upgrade-item-suffix-of-lightning", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-the-snigill", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-trickery"},
 	Sounds = {

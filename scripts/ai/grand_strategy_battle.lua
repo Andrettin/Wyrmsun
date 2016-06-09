@@ -117,6 +117,7 @@ local land_funcs = {
 	"unit-deep-gnomish-duelist", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-deep-gnomish-duelist"),
 	"unit-deep-gnomish-master-at-arms", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-deep-gnomish-master-at-arms"),
 	"unit-deep-gnomish-herbalist", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-deep-gnomish-herbalist"),
+	"unit-derro-thug", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-derro-thug"),
 	"unit-forest-gnomish-recruit", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-forest-gnomish-recruit"),
 	"unit-forest-gnomish-duelist", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-forest-gnomish-duelist"),
 	"unit-forest-gnomish-master-at-arms", GetPlayerData(AiPlayer(), "UnitTypesCount", "unit-forest-gnomish-master-at-arms"),

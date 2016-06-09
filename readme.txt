@@ -88,6 +88,7 @@ https://github.com/Andrettin/Wyrmsun
 - Greatly increased the quantity of hair color variations for gnomes.
 - Added Derro worker (portrait by Jesse Crider).
 - Goblin Swordsmen, Impalers, Archers and Headhunters now have 11 Speed instead of 10.
+- Added Derro Thug (portrait by Jesse Crider, modified from Jinn's Gnomish Recruit portrait).
 
 -----------------------------------------------------------------------
 - 2.2.6

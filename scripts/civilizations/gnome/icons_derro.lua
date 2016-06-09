@@ -30,3 +30,9 @@ DefineIcon({
 	Size = {46, 38},
 	File = "gnome/icons/derro_worker.png"
 })
+
+DefineIcon({
+	Name = "icon-derro-thug",
+	Size = {46, 38},
+	File = "gnome/icons/derro_thug.png"
+})
