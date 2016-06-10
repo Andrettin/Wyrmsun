@@ -46,7 +46,8 @@ DefineFaction("Derro Tribe", {
 	Colors = {"green"},
 	DevelopsTo = {"Acthna", "Untersberg"},
 	Playable = false,
-	FactionUpgrade = "upgrade-derro-tribe-faction"
+	FactionUpgrade = "upgrade-derro-tribe-faction",
+	Description = "The Derro are a cruel gnomish offshoot, which separated themselves from the rest of their kin aeons ago. They dwell in the dark depths of Nidavellir's tunnels, in caves isolated even from other underground denizens. These gnomish fiends think themselves uniquely gifted, being at the same time wary and disdainful of other peoples. They see individuals of other races trespassing on their territory as a great crime, and will gladly put them in their place with the most sadistic of measures."
 })
 
 DefineFaction("Sagan Tribe", {

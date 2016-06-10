@@ -64,6 +64,9 @@ https://github.com/Andrettin/Wyrmsun
 * Editor
 - Fixed an issue which made certain unit layers not appear properly during unit placement.
 
+* Faction
+- Added the "Derro Tribe" faction for the gnomes, along with an encyclopedia entry for them.
+
 * Grand Strategy
 - Fixed an issue which caused a town hall to not be generated for the defender with battle base building in certain random circumstances, which also had the consequence of making the battle unwinnable for the attacker.
 - Added Ingria and Viborg provinces (Earth).
