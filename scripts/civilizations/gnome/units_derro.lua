@@ -53,11 +53,73 @@ DefineUnitType("unit-derro-thug", {
 	SkinColor = "pale-blue",
 	HairColor = "gray",
 	Icon = "icon-derro-thug",
-	Armor = 1, BasicDamage = 11, -- +2 damage, -1 armor
+	BasicDamage = 11, Evasion = 10, -- +2 damage, -1 evasion
 	DaySightRangeBonus = -1,
 	NightSightRangeBonus = 1,
 	ButtonKey = "t",
 	ButtonHint = _("Train ~!Thug"),
+	Variations = {
+		{
+			"variation-id", "thrust",
+			"upgrade-forbidden", "upgrade-old",
+			"item-not-equipped", "unit-hammer",
+			"item-not-equipped", "unit-mining-pick"
+		},
+		{
+			"variation-id", "slash",
+			"file", "gnome/units/body_warrior_slash.png",
+			"layer-file", "hair", "gnome/units/hair_warrior_slash.png",
+			"upgrade-forbidden", "upgrade-old",
+			"item-equipped", "unit-hammer",
+			"item-equipped", "unit-mining-pick"
+		},
+		{
+			"layer", "right-arm",
+			"variation-id", "right-arm",
+			"file", "gnome/units/right_arm_warrior.png",
+			"item-not-equipped", "unit-hammer",
+			"item-not-equipped", "unit-mining-pick"
+		},
+		{
+			"layer", "right-arm",
+			"variation-id", "right-arm-slash",
+			"file", "gnome/units/right_arm_warrior_slash.png",
+			"item-equipped", "unit-hammer",
+			"item-equipped", "unit-mining-pick"
+		},
+		{
+			"layer", "weapon",
+			"variation-id", "sword",
+			"item-not-equipped", "unit-hammer",
+			"item-not-equipped", "unit-mining-pick"
+		},
+		{
+			"layer", "weapon",
+			"variation-id", "hammer",
+			"file", "gnome/units/hammer_warrior.png",
+			"item-equipped", "unit-hammer"
+		},
+		{
+			"layer", "weapon",
+			"variation-id", "mining-pick",
+			"file", "gnome/units/mining_pick_warrior.png",
+			"item-equipped", "unit-mining-pick"
+		}
+	}
+} )
+
+DefineUnitType("unit-derro-executioner", {
+	Name = _("Executioner"),
+	Parent = "unit-gnomish-duelist",
+	Civilization = "gnome",
+	Faction = "Derro Tribe",
+	Description = "The poisonous mushroom brew which gives common Derro swordsmen their battlerage exacts a heavy price. The more it is drunk, the more the user's sanity is damaged. The most promising and vicious Derro swordsmen are taken by magisters for a harsh recovery process. Indeed, at the end of it their madness seems gone. But so is much of their personality, leaving little more than a husk, subservient to the magisters' commands.",
+	SkinColor = "pale-blue",
+	HairColor = "gray",
+	Icon = "icon-derro-executioner",
+	BasicDamage = 12, Evasion = 12, -- +2 damage, -1 evasion
+	DaySightRangeBonus = -1,
+	NightSightRangeBonus = 1,
 	Variations = {
 		{
 			"variation-id", "thrust",

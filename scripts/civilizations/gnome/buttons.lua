@@ -91,3 +91,9 @@ DefineButton( { Pos = 1, Level = 1, Icon = "icon-gnomish-master-at-arms",
 	Key = "u", Hint = _("~!Upgrade to Master at Arms"), Popup = "popup-unit",
 	ForUnit = {"unit-forest-gnomish-duelist"}
 } )
+
+DefineButton( { Pos = 1, Level = 1, Icon = "icon-derro-executioner",
+	Action = "experience-upgrade-to", Value = "unit-derro-executioner",
+	Key = "u", Hint = _("~!Upgrade to Executioner"), Popup = "popup-unit",
+	ForUnit = {"unit-derro-thug"}
+} )

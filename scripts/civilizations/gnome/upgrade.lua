@@ -65,6 +65,10 @@ DefineModifier("upgrade-derro-tribe-faction",
 	{"apply-to", "unit-gnomish-recruit"}, {"convert-to", "unit-derro-thug"}
 )
 
+DefineModifier("upgrade-derro-tribe-faction",
+	{"apply-to", "unit-gnomish-recruit"}, {"convert-to", "unit-derro-executioner"}
+)
+
 DefineModifier("upgrade-sagan-tribe-faction",
 	{"apply-to", "unit-gnomish-worker"}, {"convert-to", "unit-forest-gnomish-worker"}
 )
