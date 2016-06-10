@@ -314,6 +314,12 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-dwarven-ballista",
+	Size = {46, 38},
+	File = "dwarf/icons/ballista.png"
+})
+
+DefineIcon({
 	Name = "icon-dwarven-transport-ship",
 	Size = {46, 38},
 	File = "dwarf/icons/transport.png"
@@ -341,6 +347,12 @@ DefineIcon({
 	Name = "icon-dwarven-barracks",
 	Size = {46, 38},
 	File = "dwarf/icons/barracks.png"
+})
+
+DefineIcon({
+	Name = "icon-dwarven-lumber-mill",
+	Size = {46, 38},
+	File = "dwarf/icons/lumber_mill.png"
 })
 
 DefineIcon({
@@ -522,46 +534,6 @@ DefineIcon({
 	Size = {46, 38},
 	File = "dwarf/icons/durstorn.png"
 })
-
--- tileset-dependent icons
-
-if (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "dungeon") then
-	DefineIcon({
-		Name = "icon-dwarven-ballista",
-		Size = {46, 38},
-		File = "tilesets/swamp/dwarf/icons/dwarven_ballista.png"
-	})
-
-	DefineIcon({
-		Name = "icon-dwarven-lumber-mill",
-		Size = {46, 38},
-		File = "tilesets/swamp/dwarf/icons/lumber_mill.png"
-	})
-elseif (wyrmsun.tileset == "conifer_forest_summer" or wyrmsun.tileset == "conifer_forest_autumn" or wyrmsun.tileset == "fairlimbed_forest") then
-	DefineIcon({
-		Name = "icon-dwarven-ballista",
-		Size = {46, 38},
-		File = "tilesets/forest/dwarf/icons/dwarven_ballista.png"
-	})
-
-	DefineIcon({
-		Name = "icon-dwarven-lumber-mill",
-		Size = {46, 38},
-		File = "tilesets/forest/dwarf/icons/lumber_mill.png"
-	})
-else	
-	DefineIcon({
-		Name = "icon-dwarven-ballista",
-		Size = {46, 38},
-		File = "tilesets/swamp/dwarf/icons/dwarven_ballista.png"
-	})
-
-	DefineIcon({
-		Name = "icon-dwarven-lumber-mill",
-		Size = {46, 38},
-		File = "tilesets/swamp/dwarf/icons/lumber_mill.png"
-	})
-end
 
 Load("scripts/civilizations/dwarf/icons_brising.lua")
 Load("scripts/civilizations/dwarf/icons_joruvellir.lua")

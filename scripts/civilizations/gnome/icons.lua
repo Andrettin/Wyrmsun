@@ -56,6 +56,12 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-gnomish-caravan",
+	Size = {46, 38},
+	File = "gnome/icons/caravan.png"
+})
+
+DefineIcon({
 	Name = "icon-gnomish-town-hall",
 	Size = {46, 38},
 	File = "gnome/icons/town_hall.png"
@@ -108,25 +114,5 @@ DefineIcon({
 	Size = {46, 38},
 	File = "gnome/icons/portent.png"
 })
-
-if (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "dungeon") then
-	DefineIcon({
-		Name = "icon-gnomish-caravan",
-		Size = {46, 38},
-		File = "tilesets/swamp/gnome/icons/gnomish_caravan.png"
-	})
-elseif (wyrmsun.tileset == "conifer_forest_summer" or wyrmsun.tileset == "conifer_forest_autumn" or wyrmsun.tileset == "fairlimbed_forest") then
-	DefineIcon({
-		Name = "icon-gnomish-caravan",
-		Size = {46, 38},
-		File = "tilesets/forest/gnome/icons/gnomish_caravan.png"
-	})
-else	
-	DefineIcon({
-		Name = "icon-gnomish-caravan",
-		Size = {46, 38},
-		File = "tilesets/swamp/gnome/icons/gnomish_caravan.png"
-	})
-end
 
 Load("scripts/civilizations/gnome/icons_derro.lua")
