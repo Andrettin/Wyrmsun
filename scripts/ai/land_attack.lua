@@ -46,6 +46,11 @@ function AiLandAttack()
 			water_build[AiPlayer()] = false
 		end
 	end
+	
+	if (GetAiUnitType("town-hall") == nil or GetAiUnitType("worker") == nil) then -- if the AI's civilization has no town hall or worker, return
+		return;
+	end
+	
 	local town_halls = GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("town-hall"))
 	if (GetAiUnitType("stronghold") ~= nil) then
 		town_halls = town_halls + GetPlayerData(AiPlayer(), "UnitTypesAiActiveCount", GetAiUnitType("stronghold"))
