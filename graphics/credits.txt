@@ -393,6 +393,7 @@ Exidelo (Leo):
 /graphics/teuton/icons/suebi_swordsman_gray_hair.png (licensed under the CC0)
 /graphics/teuton/ui/cursors/teuton_gauntlet.png (licensed under the CC0)
 /graphics/tilesets/forest/terrain/grass_and_dirt.png (licensed under the CC0)
+/graphics/tilesets/forest/terrain/pine_tree.png (licensed under the CC0)
 /graphics/tilesets/forest/terrain/rock.png (licensed under the CC0)
 /graphics/tilesets/forest/terrain/water.png (licensed under the CC0)
 /graphics/ui/status_effects/bleeding.png (licensed under the CC0)
@@ -400,6 +401,9 @@ Exidelo (Leo):
 Cuzco:
 /graphics/missiles/siege_projectile_impact.png (later modified by Jinn) (licensed under the CC0)
 /graphics/ui/Menu_background_with_title.png (licensed under the CC0)
+
+Flamerage:
+/graphics/troll/icons/female_troll_worker.png (licensed under the CC0)
 
 igoku:
 /graphics/dwarf/icons/boots.png (later modified by Jinn) (licensed under the GPL 2.0)
