@@ -151,22 +151,8 @@ DefineIcon({
 	File = "goblin/icons/coinage.png"
 })
 
-if (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "dungeon") then
-	DefineIcon({
-		Name = "icon-goblin-banner",
-		Size = {46, 38},
-		File = "tilesets/swamp/goblin/icons/goblin_banner.png"
-	})
-elseif (wyrmsun.tileset == "conifer_forest_summer" or wyrmsun.tileset == "conifer_forest_autumn" or wyrmsun.tileset == "fairlimbed_forest") then
-	DefineIcon({
-		Name = "icon-goblin-banner",
-		Size = {46, 38},
-		File = "tilesets/forest/goblin/icons/goblin_banner.png"
-	})
-else	
-	DefineIcon({
-		Name = "icon-goblin-banner",
-		Size = {46, 38},
-		File = "tilesets/swamp/goblin/icons/goblin_banner.png"
-	})
-end
+DefineIcon({
+	Name = "icon-goblin-banner",
+	Size = {46, 38},
+	File = "goblin/icons/goblin_banner.png"
+})
