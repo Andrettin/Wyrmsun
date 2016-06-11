@@ -35,8 +35,10 @@ DefineTileset("name", "Fairlimbed Forest",
 	-- Slots descriptions
 	"slots", {
 		"special", {
-			"top-one-tree", 48, "mid-one-tree", 64, "bot-one-tree", 80,
+			"top-one-tree", 49, "mid-one-tree", 65, "bot-one-tree", 81,
 			"removed-tree", 16,
+			"removed-tree", 32,
+			"removed-tree", 48,
 			"growing-tree", { -1, -1, },
 			"top-one-rock", 59, "mid-one-rock", 60, "bot-one-rock", 61, -- need to update this later
 			"removed-rock", 56,

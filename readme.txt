@@ -87,6 +87,9 @@ https://github.com/Andrettin/Wyrmsun
 * Quests
 - Added a new dialogue featuring Thjodrorir in the "A Rock Home" quest (dwarf).
 
+* Terrain
+- Added new tree stump tiles (by Exidelo).
+
 * Units
 - Gnomes of the Sagan Tribe now have green skin (palette by Jinn).
 - Greatly increased the quantity of hair color variations for gnomes.
