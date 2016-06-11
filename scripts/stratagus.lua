@@ -1336,18 +1336,6 @@ function StandardTriggers()
 	end
 end
 
---[[
-function GetCivilizationFactions(civilization)
-	if (civilization == "elf") then
-		return {"Lintanir", "Ulfdalir", "Wesmere"}
-	elseif (civilization == "orc") then
-		return {"Blackeye Clan", "Bloody Sword Clan"}
-	else
-		return { }
-	end
-end
---]]
-
 function GetCivilizationAvailableFactions(civilization)
 	local civilization_factions = GetCivilizationFactionNames(civilization)
 
