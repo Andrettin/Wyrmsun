@@ -38,7 +38,7 @@ DefineUnitType("unit-derro-worker", {
 	Description = "Derro workers labor silently in their underground caves. Despite their lack of combat training, the sight of one of them still makes travelers wary: the axes used by these laborers to split wood could soon be splitting necks instead.",
 	SkinColor = "pale-blue",
 	HairColor = "gray",
-	Icon = "icon-troll-worker-female",
+	Icon = "icon-derro-worker",
 	DaySightRangeBonus = -1,
 	NightSightRangeBonus = 1,
 	BasicDamage = 6 -- +1 damage
