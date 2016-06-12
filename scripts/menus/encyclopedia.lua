@@ -1178,7 +1178,7 @@ function OpenEncyclopediaText(text_name, chosen_chapter)
 
 	encyclopedia_entry_menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * (10 - height_offset) + 18),
 		function()
-			if (GetTextData(text_name, "ChapterQuantity") > 1 and current_chapter ~= "Cover" and current_chapter ~= "Contents") then
+			if (GetTextData(text_name, "ChapterQuantity") > 1 and current_chapter ~= "Cover" and current_chapter ~= "Contents" and chosen_chapter == nil) then
 				SetChapter("Contents", 1)
 			else
 				encyclopedia_entry_menu:stop();
@@ -1298,10 +1298,10 @@ function OpenEncyclopediaWorldEntry(world)
 		for j=1, table.getn(chapters) do
 			if (string.find(l:getCaption(), "~<" .. chapters[j] .. "~>") ~= nil) then
 				if (table.getn(chapters) > 1) then
-					menu:addFullButton(chapters[j], "", offx + 208 + (113 * chapter_x), offy + 104 + (36 * chapter_y),
+					encyclopedia_entry_menu:addFullButton(chapters[j], "", offx + 208 + (113 * chapter_x), offy + 104 + (36 * chapter_y),
 						function() OpenEncyclopediaText(text_name, chapters[j]); end)
 				else
-					menu:addFullButton(chapters[j], "", offx + 208 + (113 * chapter_x), offy + 104 + (36 * chapter_y),
+					encyclopedia_entry_menu:addFullButton(chapters[j], "", offx + 208 + (113 * chapter_x), offy + 104 + (36 * chapter_y),
 						function() OpenEncyclopediaText(text_name); end)
 				end
 				chapter_x = chapter_x + 2
