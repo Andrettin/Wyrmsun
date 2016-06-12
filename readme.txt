@@ -72,6 +72,9 @@ https://github.com/Andrettin/Wyrmsun
 - Added Ingria and Viborg provinces (Earth).
 - Added Lake Ladoga water province (Earth).
 
+* Heroes
+- Derro Thugs can now be created as custom heroes for (usable for Nidavellir quests).
+
 * Items
 - Added "Scroll of Sagan Allegiance", which transforms a gnomish unit (including gnomish custom heroes) into their faction equivalent for the Sagan Tribe.
 
