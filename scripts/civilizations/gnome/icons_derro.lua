@@ -42,3 +42,9 @@ DefineIcon({
 	Size = {46, 38},
 	File = "gnome/icons/derro_executioner.png"
 })
+
+DefineIcon({
+	Name = "icon-derro-shadowguard",
+	Size = {46, 38},
+	File = "gnome/icons/derro_shadowguard.png"
+})

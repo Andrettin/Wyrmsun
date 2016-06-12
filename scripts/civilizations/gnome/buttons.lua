@@ -97,3 +97,9 @@ DefineButton( { Pos = 1, Level = 1, Icon = "icon-derro-executioner",
 	Key = "u", Hint = _("~!Upgrade to Executioner"), Popup = "popup-unit",
 	ForUnit = {"unit-derro-thug"}
 } )
+
+DefineButton( { Pos = 1, Level = 1, Icon = "icon-derro-shadowguard",
+	Action = "experience-upgrade-to", Value = "unit-derro-shadowguard",
+	Key = "u", Hint = _("~!Upgrade to Shadowguard"), Popup = "popup-unit",
+	ForUnit = {"unit-derro-executioner"}
+} )

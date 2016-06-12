@@ -411,6 +411,7 @@ igoku:
 
 Jesse Crider:
 /graphics/gnome/icons/derro_executioner.png (modified from Exidelo's Gnomish Duelist icon) (licensed under the CC0)
+/graphics/gnome/icons/derro_shadowguard.png (modified from Exidelo's Gnomish Master-at-Arms icon) (licensed under the CC0)
 /graphics/gnome/icons/derro_thug.png (modified from Jinn's Gnomish Recruit icon) (licensed under the CC0)
 /graphics/gnome/icons/derro_worker.png (licensed under the CC0)
 /graphics/goblin/icons/coinage.png (the icon by Jinn was based on Jesse Crider's Goblin coin design) (licensed under the CC0)

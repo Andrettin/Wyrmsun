@@ -170,4 +170,66 @@ DefineUnitType("unit-derro-executioner", {
 	}
 } )
 
+DefineUnitType("unit-derro-shadowguard", {
+	Name = _("Shadowguard"),
+	Parent = "unit-gnomish-master-at-arms",
+	Civilization = "gnome",
+	Faction = "Derro Tribe",
+	Description = "The executioners who prove their skill at arms and start to show a glimmer of morbid cunning are taken by the magisters to receive further training and indoctrination. They are painfully infused with ancient magics that wrack and empower the subjects' body, if they survive the rite. They then become the hidden hand of the Derro clergy, the shadowguards. The few who have fought against a shadowguard and lived often end up half-crazed, telling fantastical stories of dancing shadows.",
+	SkinColor = "pale-blue",
+	HairColor = "gray",
+	Icon = "icon-derro-shadowguard",
+	BasicDamage = 14, Evasion = 13, Armor = 3, -- +2 damage, -2 evasion, +1 armor
+	DaySightRangeBonus = -1,
+	NightSightRangeBonus = 1,
+	Variations = {
+		{
+			"variation-id", "thrust",
+			"upgrade-forbidden", "upgrade-old",
+			"item-not-equipped", "unit-hammer",
+			"item-not-equipped", "unit-mining-pick"
+		},
+		{
+			"variation-id", "slash",
+			"file", "gnome/units/body_warrior_slash.png",
+			"layer-file", "hair", "gnome/units/hair_warrior_slash.png",
+			"upgrade-forbidden", "upgrade-old",
+			"item-equipped", "unit-hammer",
+			"item-equipped", "unit-mining-pick"
+		},
+		{
+			"layer", "right-arm",
+			"variation-id", "right-arm",
+			"file", "gnome/units/right_arm_warrior.png",
+			"item-not-equipped", "unit-hammer",
+			"item-not-equipped", "unit-mining-pick"
+		},
+		{
+			"layer", "right-arm",
+			"variation-id", "right-arm-slash",
+			"file", "gnome/units/right_arm_warrior_slash.png",
+			"item-equipped", "unit-hammer",
+			"item-equipped", "unit-mining-pick"
+		},
+		{
+			"layer", "weapon",
+			"variation-id", "sword",
+			"item-not-equipped", "unit-hammer",
+			"item-not-equipped", "unit-mining-pick"
+		},
+		{
+			"layer", "weapon",
+			"variation-id", "hammer",
+			"file", "gnome/units/hammer_warrior.png",
+			"item-equipped", "unit-hammer"
+		},
+		{
+			"layer", "weapon",
+			"variation-id", "mining-pick",
+			"file", "gnome/units/mining_pick_warrior.png",
+			"item-equipped", "unit-mining-pick"
+		}
+	}
+} )
+
 -- Derro Magisters (Herbalist) - "Derro magisters are feared for their mastery of ancient magics, calling upon the primal forces of the earth with profane incantations. Legends speak of derro conjurers unleashing a host of slimes, or encasing their enemies within prisons of solid rock. Magisters are the ruling elite of Derro society, with a magical hand and a silver tongue."

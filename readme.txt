@@ -96,7 +96,8 @@ https://github.com/Andrettin/Wyrmsun
 - Added Derro worker (portrait by Jesse Crider).
 - Goblin Swordsmen, Impalers, Archers and Headhunters now have 11 Speed instead of 10.
 - Added Derro Thug (portrait by Jesse Crider, modified from Jinn's Gnomish Recruit portrait).
-- Added Derro Executioner (portrait by Jesse Crider, modified from Exidelo's Gnomish Duelist portrait).
+- Added Derro Executioner (upgrade of the Derro Thug) (portrait by Jesse Crider, modified from Exidelo's Gnomish Duelist portrait).
+- Added Derro Shadowguard (upgrade of the Derro Executioner) (portrait by Jesse Crider, modified from Exidelo's Gnomish Master-at-Arms portrait).
 
 -----------------------------------------------------------------------
 - 2.2.6
