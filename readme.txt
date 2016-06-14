@@ -74,15 +74,19 @@ https://github.com/Andrettin/Wyrmsun
 
 * Heroes
 - Derro Thugs can now be created as custom heroes for (usable for Nidavellir quests).
+- Heroes can now have a "Knowledge (Magic)" stat (seen in the unit's popup when hovering over its portrait when it is selected).
 
 * Items
 - Added "Scroll of Sagan Allegiance", which transforms a gnomish unit (including gnomish custom heroes) into their faction equivalent for the Sagan Tribe.
+- Magic and unique items now start out unidentified. They are automatically identified when characters have a sufficient Knowledge (Magic) level.
+- The Alvissmol (literary work) now increases Knowledge (Magic) by 1, instead of increasing mana.
 
 * Miscellaneous
 - Added "No Day/Night Cycle" option when starting single-player maps.
 - Fixed a crash cause.
 - Added support for the engine to recolor portraits and unit graphics to obtain new skin (such as the gray skin color for deep gnomes) and hair colors.
 - Fixed a crash which happened when playing a custom map with the "Neutral" civilization being used for an AI player.
+- Added a "Knowledge (Magic)" entry to the encyclopedia Game Concepts section, explaining how this new stat works.
 
 * Multiplayer
 - Fixed a multiplayer crash cause which triggered when both players had different "No Randomness" settings.

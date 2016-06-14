@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2015 by Andrettin
+--      (c) Copyright 2015-2016 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -137,77 +137,96 @@ DefineUpgrade("upgrade-item-prefix-wounding", {
 })
 
 DefineModifier("upgrade-item-prefix-accurate",
-	{"Accuracy", 1}
+	{"Accuracy", 1},
+	{"MagicLevel", 1}
 )
 
 DefineModifier("upgrade-item-prefix-cold",
-	{"ColdDamage", 1}
+	{"ColdDamage", 1},
+	{"MagicLevel", 2}
 )
 
 DefineModifier("upgrade-item-prefix-cruel",
-	{"BasicDamage", 1}
+	{"BasicDamage", 1},
+	{"MagicLevel", 1}
 )
 
 DefineModifier("upgrade-item-prefix-dwindling",
-	{"GiveResource", -1, "Increase"}
+	{"GiveResource", -1, "Increase"},
+	{"MagicLevel", 2}
 )
 
 DefineModifier("upgrade-item-prefix-flaming",
-	{"FireDamage", 2}
+	{"FireDamage", 2},
+	{"MagicLevel", 3}
 )
 
 DefineModifier("upgrade-item-prefix-frail",
-	{"Armor", -2}
+	{"Armor", -2},
+	{"MagicLevel", 2}
 )
 
 DefineModifier("upgrade-item-prefix-glacial",
-	{"ColdDamage", 2}
+	{"ColdDamage", 2},
+	{"MagicLevel", 3}
 )
 
 DefineModifier("upgrade-item-prefix-impregnable",
-	{"Armor", 2}
+	{"Armor", 2},
+	{"MagicLevel", 2}
 )
 
 DefineModifier("upgrade-item-prefix-industrious",
-	{"TimeEfficiencyBonus", 10}
+	{"TimeEfficiencyBonus", 10},
+	{"MagicLevel", 1}
 )
 
 DefineModifier("upgrade-item-prefix-jinns",
-	{"AirDamage", 2}
+	{"AirDamage", 2},
+	{"MagicLevel", 3}
 )
 
 DefineModifier("upgrade-item-prefix-penetrating",
-	{"PiercingDamage", 1}
+	{"PiercingDamage", 1},
+	{"MagicLevel", 2}
 )
 
 DefineModifier("upgrade-item-prefix-quenching",
-	{"FireResistance", 10}
+	{"FireResistance", 10},
+	{"MagicLevel", 1}
 )
 
 DefineModifier("upgrade-item-prefix-replenishing",
-	{"GiveResource", 1, "Increase"}
+	{"GiveResource", 1, "Increase"},
+	{"MagicLevel", 2}
 )
 
 DefineModifier("upgrade-item-prefix-storm",
-	{"LightningDamage", 1}
+	{"LightningDamage", 1},
+	{"MagicLevel", 2}
 )
 
 DefineModifier("upgrade-item-prefix-sturdy",
-	{"Armor", 1}
+	{"Armor", 1},
+	{"MagicLevel", 1}
 )
 
 DefineModifier("upgrade-item-prefix-swift",
-	{"Accuracy", 1}
+	{"Accuracy", 1},
+	{"MagicLevel", 1}
 )
 
 DefineModifier("upgrade-item-prefix-vicious",
-	{"BasicDamage", 2}
+	{"BasicDamage", 2},
+	{"MagicLevel", 2}
 )
 
 DefineModifier("upgrade-item-prefix-vulnerable",
-	{"Armor", -1}
+	{"Armor", -1},
+	{"MagicLevel", 1}
 )
 
 DefineModifier("upgrade-item-prefix-wounding",
-	{"BasicDamage", 2}
+	{"BasicDamage", 2},
+	{"MagicLevel", 2}
 )

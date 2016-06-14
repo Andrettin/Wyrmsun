@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2015 by Andrettin
+--      (c) Copyright 2015-2016 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -200,115 +200,143 @@ DefineUpgrade("upgrade-item-suffix-of-vulnerability", {
 })
 
 DefineModifier("upgrade-item-suffix-of-accuracy",
-	{"Accuracy", 1}
+	{"Accuracy", 1},
+	{"MagicLevel", 1}
 )
 
 DefineModifier("upgrade-item-suffix-of-betrayal",
-	{"Backstab", 100}
+	{"Backstab", 100},
+	{"MagicLevel", 4}
 )
 
 DefineModifier("upgrade-item-suffix-of-cold",
-	{"ColdDamage", 1}
+	{"ColdDamage", 1},
+	{"MagicLevel", 2}
 )
 
 DefineModifier("upgrade-item-suffix-of-the-colossus",
-	{"Armor", 2}
+	{"Armor", 2},
+	{"MagicLevel", 2}
 )
 
 DefineModifier("upgrade-item-suffix-of-diligence",
-	{"TimeEfficiencyBonus", 10}
+	{"TimeEfficiencyBonus", 10},
+	{"MagicLevel", 1}
 )
 
 DefineModifier("upgrade-item-suffix-of-extinguishment",
-	{"FireResistance", 30}
+	{"FireResistance", 30},
+	{"MagicLevel", 2}
 )
 
 DefineModifier("upgrade-item-suffix-of-fire",
-	{"FireDamage", 1}
+	{"FireDamage", 1},
+	{"MagicLevel", 2}
 )
 
 DefineModifier("upgrade-item-suffix-of-flame",
-	{"FireDamage", 2}
+	{"FireDamage", 2},
+	{"MagicLevel", 3}
 )
 
 DefineModifier("upgrade-item-suffix-of-frailty",
-	{"Armor", -2}
+	{"Armor", -2},
+	{"MagicLevel", 2}
 )
 
 DefineModifier("upgrade-item-suffix-of-the-jinn",
-	{"AirDamage", 2}
+	{"AirDamage", 2},
+	{"MagicLevel", 3}
 )
 
 DefineModifier("upgrade-item-suffix-of-lightning",
-	{"LightningDamage", 1}
+	{"LightningDamage", 1},
+	{"MagicLevel", 2}
 )
 
 DefineModifier("upgrade-item-suffix-of-perfuration",
-	{"PiercingDamage", 1}
+	{"PiercingDamage", 1},
+	{"MagicLevel", 2}
 )
 
 DefineModifier("upgrade-item-suffix-of-power",
 	{"BasicDamage", 1},
-	{"HitPointBonus", 5}
+	{"HitPointBonus", 5},
+	{"MagicLevel", 2}
 )
 
 DefineModifier("upgrade-item-suffix-of-regeneration",
-	{"HitPointBonus", 1, "Increase"}
+	{"HitPointBonus", 1, "Increase"},
+	{"MagicLevel", 2}
 )
 
 DefineModifier("upgrade-item-suffix-of-replenishment",
-	{"GiveResource", 1, "Increase"}
+	{"GiveResource", 1, "Increase"},
+	{"MagicLevel", 2}
 )
 
 DefineModifier("upgrade-item-suffix-of-the-serpent",
-	{"Backstab", 50}
+	{"Backstab", 50},
+	{"MagicLevel", 2}
 )
 
 DefineModifier("upgrade-item-suffix-of-slaughter",
-	{"BasicDamage", 3}
+	{"BasicDamage", 3},
+	{"MagicLevel", 3}
 )
 
 DefineModifier("upgrade-item-suffix-of-slowness",
-	{"Speed", -1}
+	{"Speed", -1},
+	{"MagicLevel", 2}
 )
 
 DefineModifier("upgrade-item-suffix-of-the-snail",
-	{"Speed", -1}
+	{"Speed", -1},
+	{"MagicLevel", 2}
 )
 
 DefineModifier("upgrade-item-suffix-of-the-snigill",
-	{"Speed", -1}
+	{"Speed", -1},
+	{"MagicLevel", 2}
 )
 
 DefineModifier("upgrade-item-suffix-of-speed",
-	{"Speed", 1}
+	{"Speed", 1},
+	{"MagicLevel", 2}
 )
 
 DefineModifier("upgrade-item-suffix-of-strength",
-	{"BasicDamage", 2}
+	{"BasicDamage", 2},
+	{"MagicLevel", 2}
 )
 
 DefineModifier("upgrade-item-suffix-of-swiftness",
 	{"Evasion", 1},
-	{"Speed", 1}
+	{"Speed", 1},
+	{"MagicLevel", 3}
 )
 
 DefineModifier("upgrade-item-suffix-of-thorns",
-	{"ThornsDamage", 1}
+	{"ThornsDamage", 1},
+	{"MagicLevel", 2}
 )
 
 DefineModifier("upgrade-item-suffix-of-trickery",
-	{"ArcaneDamage", 1}
+	{"ArcaneDamage", 1},
+	{"MagicLevel", 2}
 )
 
 DefineModifier("upgrade-item-suffix-of-victory",
-	{"BasicDamage", 3}
+	{"BasicDamage", 3},
+	{"MagicLevel", 3}
 )
 
 DefineModifier("upgrade-item-suffix-of-vision",
-	{"SightRange", 1}
+	{"SightRange", 1},
+	{"MagicLevel", 2}
 )
 
 DefineModifier("upgrade-item-suffix-of-vulnerability",
-	{"Armor", -1}
+	{"Armor", -1},
+	{"MagicLevel", 1}
 )

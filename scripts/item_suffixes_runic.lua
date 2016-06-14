@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2015 by Andrettin
+--      (c) Copyright 2015-2016 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -62,23 +62,28 @@ DefineUpgrade("upgrade-item-suffix-of-thurs", {
 
 DefineModifier("upgrade-item-suffix-of-aedi",
 	{"BasicDamage", 2},
-	{"Evasion", -1}
+	{"Evasion", -1},
+	{"MagicLevel", 1}
 )
 
 DefineModifier("upgrade-item-suffix-of-ergi",
-	{"Backstab", 50}
+	{"Backstab", 50},
+	{"MagicLevel", 2}
 )
 
 DefineModifier("upgrade-item-suffix-of-os",
-	{"ThornsDamage", 1}
+	{"ThornsDamage", 1},
+	{"MagicLevel", 2}
 )
 
 DefineModifier("upgrade-item-suffix-of-othola",
 	{"BasicDamage", 2},
-	{"Accuracy", -1}
+	{"Accuracy", -1},
+	{"MagicLevel", 2}
 )
 
 DefineModifier("upgrade-item-suffix-of-thurs",
 	{"BasicDamage", 1},
-	{"HitPointBonus", 5}
+	{"HitPointBonus", 5},
+	{"MagicLevel", 2}
 )

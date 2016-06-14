@@ -66,7 +66,7 @@ DefineUpgrade("upgrade-work-the-scepter-of-fire", {
 })
 
 DefineModifier("upgrade-work-alvissmol",
-	{"Mana", 1}
+	{"KnowledgeMagic", 1}
 )
 
 DefineModifier("upgrade-work-fafnismol",

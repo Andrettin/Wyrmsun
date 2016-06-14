@@ -74,6 +74,10 @@ GameConcepts = {
 		Name = _("Ite~!ms"),
 		Description = _("Items can be picked up by units with an inventory (persistent heroes as well as Stonelords and Gryphon Riders). Items come in four types: weapons, shields, boots, rings and potions. Units can equip weapons of a particular class (i.e. Axefighters can equip axes), and non-ranged units may equip shields as well. Any unit can wear boots or drink potions; the latter can be used as a power-up by units who don't have an inventory. Equipping an item will replace the bonuses from weapon technologies with those of the item.\n\nItems are generally dropped by AI-controlled units and buildings, and possess a chance of having a magic affix. Such prefixes and suffixes affect the item's stats, changing its damage, armor and other values. Additionally, unique items also have a chance of dropping. Unique items are often better than magic items, but not necessarily. Items that are neither magic nor unique will disappear five minutes after being dropped.\n\nBesides items, units can also pick up power-ups. These are not restricted to units with inventories, and will perform effects such as restoring HP, causing a status effect or providing resources.")
 	},
+	KnowledgeMagic = {
+		Name = _("Kno~!wledge (Magic)"),
+		Description = _("Knowledge (Magic) is a stat primarily relevant for higher-level units. When holding a magic item in the unit's inventory, it is automatically identified if the unit's Knowledge (Magic) level is high enough. The stat is increased mainly by reading the appropriate literary works.")
+	},
 	Mercenaries = {
 		Name = _("Mer~!cenaries"),
 		Description = _("Groups of mercenaries can be hired at mercenary camps, providing the player with a few experienced warriors, no time needing to be spent in training them. Mercenaries do cost quite a bit of gold, however. Besides mercenary squads, players can also hire thieves in mercenary camps. Like mercenary groups, thieves are hired instantly.")

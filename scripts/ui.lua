@@ -1380,6 +1380,9 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {Demand = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Food Cost: "), Variable = "Demand", Font = wyr.preferences.PopupDescriptionFont}}
 				},
+				{ 	Condition = {KnowledgeMagic = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Knowledge (Magic): "), Variable = "KnowledgeMagic", Font = wyr.preferences.PopupDescriptionFont}}
+				},
 				{ 	Condition = {DisembarkmentBonus = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Disembarkment Bonus"), Font = wyr.preferences.PopupDescriptionFont}}
 				},
@@ -1569,6 +1572,15 @@ if not (ui_loaded_first_time) then
 				},
 				{ 	Condition = {Bound = "only"}, TextColor = "white", HighlightColor = "yellow",
 					More = {"Text", {Text = _("Cannot be dropped"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {Identified = "false"}, TextColor = "white", HighlightColor = "yellow",
+					More = {"Text", {Text = Concat(
+						Concat(
+							_("Unidentified (requires Knowledge (Magic) "),
+							String(UnitVar("MagicLevel", "Value"))
+						),
+						_(" to identify)")
+					), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {Weapon = "only", Equippable = "only"}, HighlightColor = "yellow",
 					More = {"Text", {Text = _("Replaces weapon technology bonuses when equipped"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
@@ -1885,6 +1897,9 @@ if not (ui_loaded_first_time) then
 				},
 				{ 	Condition = {HitPointHealing = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Healing: "), Variable = "HitPointHealing", Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {KnowledgeMagic = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Knowledge (Magic): "), Variable = "KnowledgeMagic", Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				-- Description
 				{ 	Margin = {1, 1}, Condition = {HasDescription = true}, 
