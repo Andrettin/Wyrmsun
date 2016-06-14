@@ -95,45 +95,8 @@ AddTrigger(
 		return false
 	end,
 	function() 
-		Event(
-			"",
-			"After a long time wandering, a clan of dwarves led by Modsognir has arrived in Svarinshaug, seeking a new home...",
-			player,
-			{"~!Continue"},
-			{function(s)
-			Event(
-				FindHero("Modsognir"),
-				"My clansfolk, if we are to survive, we will need food and materials to build shelters for our people.",
-				player,
-				{"~!Continue"},
-				{function(s)
-				Event(
-					FindHero("Durin"),
-					"Aye. There are plenty of yales here, we should hunt some.",
-					player,
-					{"~!Continue"},
-					{function(s)
-					Event(
-						FindUnit("unit-dwarven-witness"),
-						"By nightfall the blood bats - or worse - will come out into the open, we need to be ready before then.",
-						player,
-						{"~!Continue"},
-						{function(s)
-							AddPlayerObjective(player, "- Kill 8 Yales")
-							AddPlayerObjective(player, "- Gather 800 lumber and 400 stone")
-							AddPlayerObjective(player, "- Modsognir must survive")
-							AddPlayerObjective(player, "- Durin must survive")
-						end}
-					)
-					end}
-				)
-				end}
-			)
-			end},
-			nil,
-			nil,
-			GrandStrategy
-		)
+		CallDialogue("a-rocky-home-introduction", player)
+
 		return false
 	end
 )
