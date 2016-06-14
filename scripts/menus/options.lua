@@ -164,8 +164,8 @@ function AddSoundOptions(menu, offx, offy, centerx, bottom)
 		function()
 			SetMusicEnabled(musiccheckbox:isMarked());
 			if (musiccheckbox:isMarked()) then
-				if (CurrentQuest ~= "" and GetQuestData(CurrentQuest, "MapMusic") ~= "") then
-					PlayMusicName(GetQuestData(CurrentQuest, "MapMusic"))
+				if (GetCurrentQuest() ~= "" and GetQuestData(GetCurrentQuest(), "MapMusic") ~= "") then
+					PlayMusicName(GetQuestData(GetCurrentQuest(), "MapMusic"))
 				else
 					PlayMusicByGroupAndFactionRandom("map", GetPlayerData(GetThisPlayer(), "RaceName"), GetPlayerData(GetThisPlayer(), "Faction"))
 				end

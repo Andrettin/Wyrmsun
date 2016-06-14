@@ -769,8 +769,8 @@ function RunMap(map, objective, fow, revealmap)
 	local loop = true
 	while (loop) do
 		StopMusic()
-		if (CurrentQuest ~= "" and GetQuestData(CurrentQuest, "LoadingMusic") ~= "") then
-			PlayMusicName(GetQuestData(CurrentQuest, "LoadingMusic"))
+		if (GetCurrentQuest() ~= "" and GetQuestData(GetCurrentQuest(), "LoadingMusic") ~= "") then
+			PlayMusicName(GetQuestData(GetCurrentQuest(), "LoadingMusic"))
 		else
 			PlayMusicByGroupAndSubgroupRandom("loading", GetPlayerData(GetThisPlayer(), "RaceName"))
 		end
@@ -789,7 +789,7 @@ function RunMap(map, objective, fow, revealmap)
 	end
 	RunResultsMenu(s)
 	if not (IsNetworkGame()) then
-		if (GetCivilizationTechnologyPoints(GetPlayerData(GetThisPlayer(), "RaceName")) > 0 and GameResult == GameVictory and CurrentQuest ~= "" and not IsReplayGame() and not GrandStrategy) then
+		if (GetCivilizationTechnologyPoints(GetPlayerData(GetThisPlayer(), "RaceName")) > 0 and GameResult == GameVictory and GetCurrentQuest() ~= "" and not IsReplayGame() and not GrandStrategy) then
 			RunTechTreeMenu(GetTechTreeCivilizationNumber(GetPlayerData(GetThisPlayer(), "RaceName")))
 		end
 	end
@@ -799,7 +799,7 @@ function RunMap(map, objective, fow, revealmap)
 		SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
 	end
 	
-	CurrentQuest = ""
+	SetCurrentQuest("")
 end
 
 mapname = "maps/random/random-map-swamp.smp"
@@ -1496,9 +1496,9 @@ LoadMods()
 GenerateMissingLanguageData() -- generate missing language data after loading mods, so that the function will take language data defined in mods into account
 
 function GameStarting()
-	if (CurrentQuest ~= "" and GetQuestData(CurrentQuest, "MapMusic") ~= "") then
+	if (GetCurrentQuest() ~= "" and GetQuestData(GetCurrentQuest(), "MapMusic") ~= "") then
 		StopMusic()
-		PlayMusicName(GetQuestData(CurrentQuest, "MapMusic"))
+		PlayMusicName(GetQuestData(GetCurrentQuest(), "MapMusic"))
 	else
 		StopMusic()
 		PlayMusicByGroupAndFactionRandom("map", GetPlayerData(GetThisPlayer(), "RaceName"), GetPlayerData(GetThisPlayer(), "Faction"))

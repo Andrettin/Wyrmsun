@@ -10,12 +10,12 @@ function LoadGame(s)
 		if (GameResult ~= GameRestart) then
 			loop = false
 		end
-		CurrentQuest = ""
+		SetCurrentQuest("")
 	end
 
 	RunResultsMenu()
 	if not (IsNetworkGame()) then
-		if (GetCivilizationTechnologyPoints(GetPlayerData(GetThisPlayer(), "RaceName")) > 0 and GameResult == GameVictory and CurrentQuest ~= "" and not IsReplayGame() and not GrandStrategy) then
+		if (GetCivilizationTechnologyPoints(GetPlayerData(GetThisPlayer(), "RaceName")) > 0 and GameResult == GameVictory and GetCurrentQuest() ~= "" and not IsReplayGame() and not GrandStrategy) then
 			RunTechTreeMenu(GetTechTreeCivilizationNumber(GetPlayerData(GetThisPlayer(), "RaceName")))
 		end
 	end

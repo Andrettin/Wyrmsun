@@ -398,14 +398,14 @@ function SinglePlayerTriggers()
 		end
 	end
 
-	if (CurrentQuest ~= "" and GetQuestData(CurrentQuest, "Scenario") ~= "") then
-		if (table.getn(GetQuestData(CurrentQuest, "Objectives")) > 0) then -- if quest has pre-set objectives, add them now
+	if (GetCurrentQuest() ~= "" and GetQuestData(GetCurrentQuest(), "Scenario") ~= "") then
+		if (table.getn(GetQuestData(GetCurrentQuest(), "Objectives")) > 0) then -- if quest has pre-set objectives, add them now
 			RemovePlayerObjective(GetThisPlayer(), "- Defeat your enemies")
-			for i=1, table.getn(GetQuestData(CurrentQuest, "Objectives")) do
-				AddPlayerObjective(GetThisPlayer(), GetQuestData(CurrentQuest, "Objectives")[i])
+			for i=1, table.getn(GetQuestData(GetCurrentQuest(), "Objectives")) do
+				AddPlayerObjective(GetThisPlayer(), GetQuestData(GetCurrentQuest(), "Objectives")[i])
 			end
 		end
-		Load(GetQuestData(CurrentQuest, "Scenario"))
+		Load(GetQuestData(GetCurrentQuest(), "Scenario"))
 	end
 
 	-- for now events are limited to single player

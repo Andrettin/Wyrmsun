@@ -114,7 +114,7 @@ local GermanicEvents = {
 				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Asa Tribe" and wyr.preferences.AutomaticBattles == false) then
 					GrandStrategyEventMap = true
 					GetMapInfo("maps/earth/tanais.smp")
-					CurrentQuest = "On the Vanaquisl"
+					SetCurrentQuest("On the Vanaquisl")
 					RunMap("maps/earth/tanais.smp")
 					GrandStrategyEventMap = false
 					if (GameResult == GameVictory) then
@@ -164,7 +164,7 @@ local GermanicEvents = {
 					GrandStrategyEventMap = true
 					GetMapInfo("maps/earth/tanais.smp")
 					GameSettings.Presets[0].Type = PlayerComputer
-					CurrentQuest = "On the Vanaquisl"
+					SetCurrentQuest("On the Vanaquisl")
 					RunMap("maps/earth/tanais.smp")
 					GrandStrategyEventMap = false
 					for i, unitName in ipairs(Units) do
@@ -216,7 +216,7 @@ local GermanicEvents = {
 				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Asa Tribe" and wyr.preferences.AutomaticBattles == false) then
 					GrandStrategyEventMap = true
 					GetMapInfo("maps/earth/novgorod.smp")
-					CurrentQuest = "Westward Migration"
+					SetCurrentQuest("Westward Migration")
 					RunMap("maps/earth/novgorod.smp")
 					GrandStrategyEventMap = false
 					if (GameResult == GameVictory) then
@@ -326,8 +326,8 @@ local GermanicEvents = {
 				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == EventFaction.Name and wyr.preferences.AutomaticBattles == false) then
 					GrandStrategyEventMap = true
 					GetMapInfo("maps/earth/jutland.smp")
-					GameSettings.Presets[1].Type = PlayerComputer					
-					CurrentQuest = "Northwards to the Sea"
+					GameSettings.Presets[1].Type = PlayerComputer
+					SetCurrentQuest("Northwards to the Sea")
 					RunMap("maps/earth/jutland.smp")
 					GrandStrategyEventMap = false
 					if (GameResult == GameVictory) then
@@ -432,7 +432,7 @@ local GermanicEvents = {
 				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == EventFaction.Name and wyr.preferences.AutomaticBattles == false) then
 					GrandStrategyEventMap = true
 					GetMapInfo("maps/earth/malmo.smp")
-					CurrentQuest = "Gylve's Realm"
+					SetCurrentQuest("Gylve's Realm")
 					RunMap("maps/earth/malmo.smp")
 					GrandStrategyEventMap = false
 					if (GameResult == GameVictory) then

@@ -1,7 +1,7 @@
 LoadTileModels("scripts/tilesets/swamp.lua")
 
 if (LoadedGame == false) then
-	if (CurrentQuest == "The Binding of Grafvitnir") then
+	if (GetCurrentQuest() == "The Binding of Grafvitnir") then
 		GenerateRandomMap({
 			MercenaryCamp = true,
 			RockQuantity = "medium",

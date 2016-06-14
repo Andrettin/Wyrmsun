@@ -28,7 +28,6 @@
 --
 
 RunningScenario = false
-CurrentQuest = ""
 QuestWorlds = {"~!Earth", "~!Nidavellir"}
 
 function RunQuestWorldMenu()
@@ -278,7 +277,7 @@ function addQuestIcon(quest, menu, x, y)
 				quest_menu:addFullButton("~!Play Quest", "p", 176 - (224 / 2), 352 - 40 * 2,
 					function()
 						RunningScenario = true
-						CurrentQuest = quest
+						SetCurrentQuest(quest)
 						GetMapInfo(GetQuestData(quest, "Map"))
 						for i=1,mapinfo.nplayers do
 							if ((i - 1) ~= MapPersonPlayer and mapinfo.playertypes[i] == "person") then

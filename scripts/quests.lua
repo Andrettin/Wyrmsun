@@ -184,7 +184,8 @@ DefineQuest("A Rocky Home", {
 	Y = 1,
 	PlayerColor = "white",
 	LoadingMusic = "DwarfLoading",
-	MapMusic = "DwarfTheme"
+	MapMusic = "DwarfTheme",
+	IntroductionDialogue = "a-rocky-home-introduction"
 })
 
 DefineQuest("The Mead of Wisdom", {

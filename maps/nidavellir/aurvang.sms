@@ -1,7 +1,7 @@
 LoadTileModels("scripts/tilesets/swamp.lua")
 
 if (LoadedGame == false) then
-	if (CurrentQuest == "The Necklace of the Brisings") then
+	if (GetCurrentQuest() == "The Necklace of the Brisings") then
 		GenerateRandomMap({
 			MercenaryCamp = true,
 			RockQuantity = "medium",

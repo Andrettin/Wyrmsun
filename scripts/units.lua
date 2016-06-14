@@ -2296,7 +2296,7 @@ DefineUnitType("unit-stalagmites", { Name = _("Stalagmites"),
 
 function VolcanicCraterSpit(unit) -- this is called every second
 	OrderUnit(GetUnitVariable(unit, "Player"), GetUnitVariable(unit, "Ident"), {GetUnitVariable(unit, "PosX"), GetUnitVariable(unit, "PosY")}, nil, "stop")
-	if (CurrentQuest ~= "The Wyrm") then
+	if (GetCurrentQuest() ~= "The Wyrm") then
 		if (SyncRand(10) == 0) then -- one chance in thirty to happen (that is, this is going to happen on average once every half minute)
 			if (SyncRand(2) == 0) then
 				local target_x = GetUnitVariable(unit,"PosX") + SyncRand(GetUnitVariable(unit,"AttackRange") + GetUnitTypeData(GetUnitVariable(unit, "Ident"), "TileWidth") + GetUnitVariable(unit,"AttackRange")) - GetUnitVariable(unit,"AttackRange")

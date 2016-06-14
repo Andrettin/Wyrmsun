@@ -85,24 +85,6 @@ RemovePlayerObjective(GetFactionPlayer("Brising Clan"), "- Defeat your enemies")
 
 AddTrigger(
 	function()
-		if (GameCycle == 0) then
-			return false
-		end
-		if (GetFactionExists("Brising Clan") and not PlayerHasObjective(GetFactionPlayer("Brising Clan"), "- Kill 8 Yales")) then
-			player = GetFactionPlayer("Brising Clan")
-			return true
-		end
-		return false
-	end,
-	function() 
-		CallDialogue("a-rocky-home-introduction", player)
-
-		return false
-	end
-)
-
-AddTrigger(
-	function()
 		if (GameCycle >= 1000 and GetFactionExists("Brising Clan")) then
 			player = GetFactionPlayer("Brising Clan")
 			return true

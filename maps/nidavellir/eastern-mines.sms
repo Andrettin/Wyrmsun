@@ -85,7 +85,7 @@ SetRawTile(48, 17, "Water")
 ApplyRawTiles()
 
 -- Player Setup
-if (CurrentQuest == "The Treasures of Svarinshaug") then
+if (GetCurrentQuest() == "The Treasures of Svarinshaug") then
 	SetStartView(0, 59, 53)
 else
 	SetStartView(0, 19, 47)
@@ -119,7 +119,7 @@ SetPlayerData(3, "RaceName", "goblin")
 SetAiType(3, "land-attack")
 SetPlayerData(15, "RaceName", "neutral")
 
-if (CurrentQuest == "The Treasures of Svarinshaug") then
+if (GetCurrentQuest() == "The Treasures of Svarinshaug") then
 	unit = CreateUnit("unit-dwarven-town-hall", 0, {59, 53})
 	unit = CreateUnit("unit-brising-miner", 0, {59, 53})
 	unit = CreateUnit("unit-brising-miner", 0, {59, 53})
@@ -156,7 +156,7 @@ else
 	unit = CreateUnit("unit-goblin-worker", 3, {35, 17})
 end
 
-if (CurrentQuest == "The Treasures of Svarinshaug") then
+if (GetCurrentQuest() == "The Treasures of Svarinshaug") then
 	CreateGoldMines(1, 15000, 0, Map.Info.MapWidth / 2, 0, Map.Info.MapHeight / 2, false, true)
 	CreateGoldMines(1, 15000, 0, Map.Info.MapWidth / 2, Map.Info.MapHeight / 2, Map.Info.MapHeight - 3, false, true)
 	CreateGoldMines(1, 5000, Map.Info.MapWidth / 2, Map.Info.MapWidth - 3, Map.Info.MapHeight / 2, Map.Info.MapHeight - 3, false, true) -- the starting gold mine in the Treasures of Svarinshaug quest is much smaller
