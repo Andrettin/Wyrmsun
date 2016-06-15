@@ -44,7 +44,7 @@ GameConcepts = {
 	},
 	Experience = {
 		Name = _("~!Experience"),
-		Description = _("Organic units gain experience as enemy units are killed, eventually allowing them to level up. Leveling up allows the unit to upgrade to a better unit type, or to learn one new ability.")
+		Description = _("Organic units gain experience as enemy units are killed, eventually allowing them to level up. Workers can also gain experience by harvesting resources and building structures. Leveling up allows the unit to upgrade to a better unit type, or to learn a new ability.")
 	},
 	Flanking = {
 		Name = _("Flan~!king"),

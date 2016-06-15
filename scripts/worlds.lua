@@ -35,7 +35,7 @@ DefineWorld("Alfheim", {
 })
 
 DefineWorld("Jotunheim", {
-	Description = _("The world of Jotunheim is home to orcs, ogres, cyclops and other brutal races. The environment is hostile, and orcs often have to be wary, lest a roc descend upon them and devour the green creatures. Jotunheim's sun is called Everbright, and its single moon is known as the Rapid Traveller."),
+	Description = _("The world of Jotunheim is home to ettins, orcs, ogres, cyclops and other brutal races. The environment is hostile, and orcs often have to be wary, lest a roc descend upon them and devour the green creatures. Jotunheim's sun is called Everbright, and its single moon is known as the Rapid Traveller."),
 	Background = _("Jotunheim was the world of the giants in Norse mythology. The ~<Alvissmol~> mentions that the giants call the sun \"Ever-Bright\", and the moon \"Rapid Traveller\".")
 })
 
