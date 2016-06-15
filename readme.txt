@@ -74,12 +74,14 @@ https://github.com/Andrettin/Wyrmsun
 
 * Heroes
 - Derro Thugs can now be created as custom heroes for (usable for Nidavellir quests).
-- Heroes can now have a "Knowledge (Magic)" stat (seen in the unit's popup when hovering over its portrait when it is selected).
+- Heroes can now have a "Knowledge (Magic)" stat (seen in the unit's popup when hovering over its portrait when it is selected), used for identifying magic items. For every five Knowledge (Magic) levels the unit also gains one maximum mana.
 
 * Items
 - Added "Scroll of Sagan Allegiance", which transforms a gnomish unit (including gnomish custom heroes) into their faction equivalent for the Sagan Tribe.
 - Magic and unique items now start out unidentified. They are automatically identified when characters have a sufficient Knowledge (Magic) level.
-- The Alvissmol (literary work) now increases Knowledge (Magic) by 1, instead of increasing mana.
+
+* Literary Works
+- The Alvissmol now increases Knowledge (Magic) by 1, instead of increasing mana.
 
 * Miscellaneous
 - Added "No Day/Night Cycle" option when starting single-player maps.
