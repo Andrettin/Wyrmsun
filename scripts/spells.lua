@@ -40,6 +40,7 @@ CUpgrade:New("upgrade-healing")
 CUpgrade:New("upgrade-portent")
 CUpgrade:New("upgrade-stun")
 CUpgrade:New("upgrade-puncture")
+CUpgrade:New("upgrade-unshackle")
 
 DefineSpell("spell-healing",
 	"showname", _("Healing"),
@@ -143,6 +144,25 @@ DefineSpell("spell-terror",
 	"sound-when-cast", "magic-holy",
 	"autocast", {"range", 6, "attacker", "only", "condition", {"Coward", "false", "opponent", "only"}},
 	"ai-cast", {"range", 6, "attacker", "only", "condition", {"Coward", "false", "opponent", "only"}}
+)
+
+DefineSpell("spell-unshackle",
+	"showname", _("Unshackle"),
+	"manacost", 50,
+	"range", 6,
+	"target", "unit",
+	"action", {
+--		{"adjust-variable", {Terror = 1000}}, -- should remove any form of shackled/fettered status
+		{"spawn-missile", "missile", "missile-magic-effect", "start-point", {"base", "target"}}
+	},
+	"condition", {
+		"organic", "only"
+		-- should also check whether the target is shackled/fettered in any form
+	},
+	"sound-when-cast", "magic-holy",
+--	"autocast", {"range", 6, "attacker", "only", "condition", {"Coward", "false", "opponent", "only"}}, -- should only apply if the target is shackled
+--	"ai-cast", {"range", 6, "attacker", "only", "condition", {"Coward", "false", "opponent", "only"}}, -- should only apply if the target is shackled
+	"depend-upgrade", "upgrade-unshackle"
 )
 
 DefineSpell("spell-war-machine-spear-attack",

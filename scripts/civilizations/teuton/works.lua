@@ -40,7 +40,7 @@ DefineUpgrade("upgrade-work-hildebrandslied", {
 	},
 	Work = "scroll",
 	Civilization = "teuton",
-	Quote = "\"That Hildebrand was my father, / and I am Hadubrand. / Long ago to the east he went, / fleeing Otacher's hatred\" - Hildebrandslied (Hadubrand)"
+	Quote = "\"That Hildebrand was my father,\nand I am Hadubrand.\nLong ago to the east he went,\nfleeing Otacher's hatred\"\n- Hildebrandslied (Hadubrand)"
 })
 
 DefineUpgrade("upgrade-work-historia-ecclesiastica-venerabilis-bedae", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 34.

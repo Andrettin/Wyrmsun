@@ -43,7 +43,7 @@ DefineUniqueItem("Brimir", { -- Source: Henry Adams Bellows (transl.), "The Poet
 	Prefix = "upgrade-item-prefix-penetrating",
 	Suffix = "upgrade-item-suffix-of-victory",
 	Background = "Brimir was described in Norse mythology as being the best of swords.",
-	Quote = "\"Of all the gods is Odin the greatest, / And Sleipnir the best of steeds; / Bifrost of bridges, Bragi of skalds, / Hobrok of hawks, Garm of hounds, / and Brimir of swords.\" - Grimnismol (Grimnir)"
+	Quote = "\"Of all the gods is Odin the greatest,\nAnd Sleipnir the best of steeds;\nBifrost of bridges, Bragi of skalds,\nHobrok of hawks, Garm of hounds,\nand Brimir of swords.\"\n- Grimnismol (Grimnir)"
 } )
 
 DefineUniqueItem("Laevatein", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 124; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 245.
@@ -51,7 +51,7 @@ DefineUniqueItem("Laevatein", { -- Source: Kevin Crossley-Holland, "The Norse My
 	Prefix = "upgrade-item-prefix-wounding",
 	Suffix = "upgrade-item-suffix-of-slaughter",
 	Background = "In Norse mythology, Laevatein (\"the Wounding Wand\") was a sword forged by Loki with runes at the doors of Niflheim, and was placed under nine locks in Laegjarn's chest, with Sinmora guarding over it.",
-	Quote = "\"Laevatein is there that Lopt with runes / Once made by the doors of death; / In Laegjarn's chest by Sinmora lies it, / And nine locks fasten it firm.\" - Svipdagsmol (Fjolsvith)"
+	Quote = "\"Laevatein is there that Lopt with runes\nOnce made by the doors of death;\nIn Laegjarn's chest by Sinmora lies it,\nAnd nine locks fasten it firm.\"\n- Svipdagsmol (Fjolsvith)"
 } )
 
 DefineUniqueItem("Gram", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 351, 365.
@@ -59,8 +59,8 @@ DefineUniqueItem("Gram", { -- Source: Henry Adams Bellows (transl.), "The Poetic
 	Prefix = "upgrade-item-prefix-wounding",
 	Suffix = "upgrade-item-suffix-of-victory",
 	Background = "In Norse mythology, Gram was the sword given by Odin to Sigmund. Being later broken into pieces, the sword was reforged by Regin for Sigurd.",
---	Quote = "\"My kin, methinks, is unknown to thee, / And so am I myself; / Sigurd my name, and Sigmund's son, / Who smote thee thus with the sword.\" - Fafnismol (Sigurd)"
-	Quote = "\"With thy sword between, three nights thou sleepest / With her thou winnest for Gunnar's wife.\" - Gripisspo (Gripir)"
+--	Quote = "\"My kin, methinks, is unknown to thee,\nAnd so am I myself;\nSigurd my name, and Sigmund's son,\nWho smote thee thus with the sword.\"\n- Fafnismol (Sigurd)"
+	Quote = "\"With thy sword between, three nights thou sleepest\nWith her thou winnest for Gunnar's wife.\"\n- Gripisspo (Gripir)"
 } )
 
 DefineUniqueItem("Hrotti", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 385.
@@ -69,8 +69,8 @@ DefineUniqueItem("Hrotti", { -- Source: Henry Adams Bellows (transl.), "The Poet
 	Prefix = "upgrade-item-prefix-penetrating",
 	Suffix = "upgrade-item-suffix-of-perfuration",
 	Background = "In Norse mythology, Hrotti (\"Thruster\") was Fafnir's sword, which was taken by Sigurd.",
-	Quote = "\"There he found a mighty store of gold, and he filled two chests full thereof; he took the fear-helm and a golden mail-coat and the sword Hrotti, and many other precious things.\" - Fafnismol"
---	Quote = "\"There Sigurd found a mighty store of gold, and he filled two chests full thereof; he took the fear-helm and a golden mail-coat and the sword Hrotti, and many other precious things.\" - Fafnismol" -- original
+	Quote = "\"There he found a mighty store of gold, and he filled two chests full thereof; he took the fear-helm and a golden mail-coat and the sword Hrotti, and many other precious things.\"\n- Fafnismol"
+--	Quote = "\"There Sigurd found a mighty store of gold, and he filled two chests full thereof; he took the fear-helm and a golden mail-coat and the sword Hrotti, and many other precious things.\"\n- Fafnismol" -- original
 } )
 
 DefineUniqueItem("Rithil", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 380.
@@ -79,15 +79,15 @@ DefineUniqueItem("Rithil", { -- Source: Henry Adams Bellows (transl.), "The Poet
 	Prefix = "upgrade-item-prefix-swift",
 	Suffix = "upgrade-item-suffix-of-betrayal",
 	Background = "In Norse mythology, Rithil (\"Swift-Moving\") was Regin's sword, which he used to slay his brother Fafnir. One source gives the alternate name Refil (\"Serpent\") for the sword.",
-	Quote = "\"Then Regin went up to Fafnir and cut out his heart with his sword, that was named Rithil, and then he drank blood from the wounds.\" - Fafnismol"
+	Quote = "\"Then Regin went up to Fafnir and cut out his heart with his sword, that was named Rithil, and then he drank blood from the wounds.\"\n- Fafnismol"
 } )
 
 DefineUniqueItem("The Hammer of Thursagan", {
 	Type = "unit-hammer",
 	Prefix = "upgrade-item-prefix-flaming",
 	Suffix = "upgrade-item-suffix-of-victory",
---	Quote = "\"The very tool with which our greatest runesmith made the Scepter of Fire. But it is ancient, far older than Thursagan; he was but the last to wield it, and our oldest histories hint that this very hammer was used to forge the dwarves themselves in the heart of the earth.\" - Angarthing"
-	Quote = "\"The very tool with which our greatest runesmith made the Scepter of Fire. But it is ancient, far older than Thursagan; he was but the last to wield it.\" - Angarthing"
+--	Quote = "\"The very tool with which our greatest runesmith made the Scepter of Fire. But it is ancient, far older than Thursagan; he was but the last to wield it, and our oldest histories hint that this very hammer was used to forge the dwarves themselves in the heart of the earth.\"\n- Angarthing"
+	Quote = "\"The very tool with which our greatest runesmith made the Scepter of Fire. But it is ancient, far older than Thursagan; he was but the last to wield it.\"\n- Angarthing"
 } )
 
 DefineUniqueItem("Toporik", { -- name means "hatchet" in Russian; renaming of the Axe of Perun (Perun is a god from Slavic mythology), here made into a dwarven unique throwing axe (since it wouldn't make much sense for the dwarves to have a throwing axe named after a god from a human mythology); was made a dwarven item under the following premise: many scholars associate the Axe of Perun with Thor's Mjollnir hammer in function and origin, and the latter was made by dwarves
@@ -95,7 +95,7 @@ DefineUniqueItem("Toporik", { -- name means "hatchet" in Russian; renaming of th
 	Prefix = "upgrade-item-prefix-storm",
 	Suffix = "upgrade-item-suffix-of-victory",
 	Background = "In Slavic mythology, the god Perun wielded a throwing axe. Perun's axe has often been identified with Thor's Mjollnir hammer in function and origin. The name Toporik means \"hatchet\" in Russian.",
-	Quote = "\"The wise Hroptatyr / Has nine sons: / Three strike, three thunder, / Three lighten.\" - Dwarven Traditional Poetry" -- Source: W. R. S. Ralston, "Songs of the Russian People", 1872, p. 90.
+	Quote = "\"The wise Hroptatyr\nHas nine sons:\nThree strike, three thunder,\nThree lighten.\"\n- Dwarven Traditional Poetry" -- Source: W. R. S. Ralston, "Songs of the Russian People", 1872, p. 90.
 } )
 
 DefineUniqueItem("Svalin", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 63; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 100.
@@ -103,7 +103,7 @@ DefineUniqueItem("Svalin", { -- Source: Kevin Crossley-Holland, "The Norse Myths
 	Prefix = "upgrade-item-prefix-impregnable",
 	Suffix = "upgrade-item-suffix-of-extinguishment",
 	Background = "In Norse mythology, Svalin (\"the Cooling\") was the shield which stood in front of the sun, protecting the mountains and the sea from burning in flames.",
-	Quote = "\"In front of the sun does Svalin stand, / The shield for the shining god; / Mountains and sea would be set in flames / If it fell from before the sun.\" - Grimnismol (Grimnir)"
+	Quote = "\"In front of the sun does Svalin stand,\nThe shield for the shining god;\nMountains and sea would be set in flames\nIf it fell from before the sun.\"\n- Grimnismol (Grimnir)"
 } )
 
 DefineUniqueItem("Brisingamen", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 177.
@@ -115,7 +115,7 @@ DefineUniqueItem("Brisingamen", { -- Source: Henry Adams Bellows (transl.), "The
 	Prefix = "upgrade-item-prefix-flaming",
 	Suffix = "upgrade-item-suffix-of-swiftness",
 	Background = "In Norse mythology, Brisingamen (\"The Necklace of the Brisings\") was a golden necklace crafted by four dwarven smiths for the goddess Freyja.",
-	Quote = "\"The dwelling great of the dwarves was shaken, / And burst was the mighty Brisings' necklace.\" - Dwarven Traditional Poetry"
+	Quote = "\"The dwelling great of the dwarves was shaken,\nAnd burst was the mighty Brisings' necklace.\"\n- Dwarven Traditional Poetry"
 } )
 
 DefineUniqueItem("Andvaranaut", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 114, 360; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 21.
@@ -127,7 +127,7 @@ DefineUniqueItem("Andvaranaut", { -- Source: Henry Adams Bellows (transl.), "The
 	Prefix = "upgrade-item-prefix-vicious",
 	Suffix = "upgrade-item-suffix-of-betrayal",
 	Background = "In Norse mythology, Andvaranaut (\"Andvari's Booty\") was a gold ring owned by Andvari and forcibly taken from him by Loki. Upon the ring's theft, Andvari cursed whoever would come to own it. The ring had the power to make gold.",
-	Quote = "\"Now shall the gold that I once had / Bring their death to warriors twain, / And evil be for heroes eight; / Joy of my wealth shall no dwarf win.\" - Reginsmol (Andvari)"
+	Quote = "\"Now shall the gold that I once had\nBring their death to warriors twain,\nAnd evil be for heroes eight;\nJoy of my wealth shall no dwarf win.\"\n- Reginsmol (Andvari)"
 } )
 
 DefineUniqueItem("Draupnir", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 241; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 114.
@@ -136,7 +136,7 @@ DefineUniqueItem("Draupnir", { -- Source: Kevin Crossley-Holland, "The Norse Myt
 	Prefix = "upgrade-item-prefix-flaming",
 	Suffix = "upgrade-item-suffix-of-power",
 	Background = "In Norse mythology, Draupnir (\"Dropper\") was a gold arm-ring crafted by the dwarves Brokk and Eitri for the Aesir. Eight rings with the same weight in gold as Draupnir dropped from it every ninth night. Draupnir was burned with Odin's son Balder in his funeral pyre.",
-	Quote = "\"The ring I wish not, though burned it was / Of old with Modsognir's son; / In my home is no lack of gold / In the wealth my father wields.\" - Dwarven Traditional Poetry"
+	Quote = "\"The ring I wish not, though burned it was\nOf old with Modsognir's son;\nIn my home is no lack of gold\nIn the wealth my father wields.\"\n- Dwarven Traditional Poetry"
 } )
 
 DefineUniqueItem("The Wedding Veil", { -- Source: Alena Ježková, "77 Prague Legends", 2006, p. 31.
@@ -167,7 +167,7 @@ DefineUniqueItem("Shorbear Hold", {
 	Type = "unit-dwarven-stronghold",
 	Prefix = "upgrade-item-prefix-impregnable",
 	Suffix = "upgrade-item-suffix-of-the-colossus",
-	Quote = "\"Everyone to the caves, and kill those still inside!\" - Durstorn, Norlund Chieftain"
+	Quote = "\"Everyone to the caves, and kill those still inside!\"\n- Durstorn, Norlund Chieftain"
 } )
 
 DefineUniqueItem("Skidbladnir", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 101.
@@ -179,7 +179,7 @@ DefineUniqueItem("Skidbladnir", { -- Source: Henry Adams Bellows (transl.), "The
 	Prefix = "upgrade-item-prefix-impregnable",
 	Suffix = "upgrade-item-suffix-of-swiftness",
 	Description = "Skidbladnir was a ship built by the sons of Ivaldi for Modsognir. Its magnificent sail provided the sleek ship with great speed.",
-	Quote = "\"In days of old did Ivaldi's sons / Skidbladnir fashion fair, / The best of ships for the mighty Modsognir, / The noble child of the earth.\" - Dwarven Traditional Poetry",
+	Quote = "\"In days of old did Ivaldi's sons\nSkidbladnir fashion fair,\nThe best of ships for the mighty Modsognir,\nThe noble child of the earth.\"\n- Dwarven Traditional Poetry",
 	Background = "Skidbladnir appeared in Norse mythology as a ship crafted by the sons of Ivaldi for Norse god Frey. The vessel was said to always have fair wind, and could be folded up until it fit into a pocket. The ship's name means \"wooden-bladed\" in Old Norse."
 } )
 
@@ -188,7 +188,7 @@ DefineUniqueItem("Varva", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vo
 	Type = "unit-teuton-farm", -- should be Norse
 	Prefix = "upgrade-item-prefix-sturdy", -- should be something more fitting?
 --	Suffix = ?,
-	Quote = _("\"Varva was wasted with the sword, / And vengeance taken for the bird, / The little bird that used to bring / News to the ear of the great king.\" - Thiodolf of Huine"),
+	Quote = _("\"Varva was wasted with the sword,\nAnd vengeance taken for the bird,\nThe little bird that used to bring\nNews to the ear of the great king.\"\n- Thiodolf of Huine"),
 	Background = "Varva was a farm in Jutland in ancient times. In the Ynglinga Saga it is told that the sparrow of the Swedish king Dag, which relayed news to the monarch from faraway lands, once flew to the farm. It ate some of the farmer's grain, upon which he threw stones at the sparrow, killing it. When the king discovered that the sparrow had been killed at Varva, he sent a host to exact his revenge on the farm's inhabitants. As the king was about cross Skiotan's Ford to return to Sweden, a thrall threw a hay-fork at the monarch, hitting his head and ending his life."
 } )
 

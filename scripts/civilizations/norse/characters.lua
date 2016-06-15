@@ -34,7 +34,7 @@ DefineCharacter("Fiölner Yngling", { -- Source: Snorri Sturlson, "Heimskringla"
 	ProvinceOfOrigin = "Sweden",
 	Trait = "upgrade-mighty", -- described as powerful
 	-- in the Ynglinga saga, Fiölner was a son of Yngve, but it isn't chronologically feasible for him to be a son of Yngve given how many generations there are between him and Halfdan the Black
-	Quote = _("\"And when brave Frode came, he found / Swithiod's dark chief, Fiolner, drowned.\" - Thiodolf of Huine"),
+	Quote = _("\"And when brave Frode came, he found\nSwithiod's dark chief, Fiolner, drowned.\"\n- Thiodolf of Huine"),
 	HistoricalTitles = {
 		"head-of-state", 0, 0, "norse", "Swede Tribe"
 	},
@@ -67,7 +67,7 @@ DefineCharacter("Swegder Yngling", { -- Source: Snorri Sturlson, "Heimskringla",
 	Civilization = "norse",
 	ProvinceOfOrigin = "Sweden",
 	Father = "Fiölner Yngling",
-	Quote = _("\"The dauntless hero rushing on, / Passed through the yawning mouth of stone: / It yawned - it shut - the hero fell\" - Thiodolf of Huine"),
+	Quote = _("\"The dauntless hero rushing on,\nPassed through the yawning mouth of stone:\nIt yawned - it shut - the hero fell\"\n- Thiodolf of Huine"),
 	HistoricalTitles = {
 		"head-of-state", 0, 0, "norse", "Swede Tribe"
 	}
@@ -95,7 +95,7 @@ DefineCharacter("Vanland Yngling", { -- Source: Snorri Sturlson, "Heimskringla",
 	ProvinceOfOrigin = "Sweden",
 	Father = "Swegder Yngling",
 	Mother = "Vana",
-	Quote = _("\"And Vanland, in a fatal hour, / Was dragg'd by Grimhild's daughter's power\" - Thiodolf of Huine"),
+	Quote = _("\"And Vanland, in a fatal hour,\nWas dragg'd by Grimhild's daughter's power\"\n- Thiodolf of Huine"),
 	HistoricalTitles = {
 		"head-of-state", 0, 0, "norse", "Swede Tribe"
 	}
@@ -119,7 +119,7 @@ DefineCharacter("Visbur Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 
 	ProvinceOfOrigin = "Finland",
 	Father = "Vanland Yngling",
 	Mother = "Drisa",
-	Quote = _("\"Have the fire-dogs' fierce tongues yelling / Lapt Visbur's blood on his own hearth?\" - Thiodolf of Huine"),
+	Quote = _("\"Have the fire-dogs' fierce tongues yelling\nLapt Visbur's blood on his own hearth?\"\n- Thiodolf of Huine"),
 	HistoricalTitles = {
 		"head-of-state", 0, 0, "norse", "Swede Tribe"
 	}
@@ -156,7 +156,7 @@ DefineCharacter("Domald Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 
 	Civilization = "norse",
 	ProvinceOfOrigin = "Sweden",
 	Father = "Visbur Yngling",
-	Quote = _("\"But Domald dies by bloody arms, / Raised not by foes in war's alarms, / Raised by his Swedish liegeman's hand, / To bring good seasons to the land.\" - Thiodolf of Huine"),
+	Quote = _("\"But Domald dies by bloody arms,\nRaised not by foes in war's alarms,\nRaised by his Swedish liegeman's hand,\nTo bring good seasons to the land.\"\n- Thiodolf of Huine"),
 	HistoricalTitles = {
 		"head-of-state", 0, 0, "norse", "Swede Tribe"
 	}
@@ -170,7 +170,7 @@ DefineCharacter("Domar Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1
 	Civilization = "norse",
 	ProvinceOfOrigin = "Sweden",
 	Father = "Domald Yngling",
-	Quote = _("\"I have asked wise men to tell / Where Domar rests, and they knew well. / Domar, on Fyrie's wide-spread ground, / Was burned, and laid on Yngve's mound.\" - Thiodolf of Huine"),
+	Quote = _("\"I have asked wise men to tell\nWhere Domar rests, and they knew well.\nDomar, on Fyrie's wide-spread ground,\nWas burned, and laid on Yngve's mound.\"\n- Thiodolf of Huine"),
 	HistoricalTitles = {
 		"head-of-state", 0, 0, "norse", "Swede Tribe"
 	}
@@ -235,7 +235,7 @@ DefineCharacter("Dyggve the Brave Yngling", { -- Source: Snorri Sturlson, "Heims
 	ProvinceOfOrigin = "Sweden",
 	Father = "Domald Yngling",
 	Mother = "Drott Skjoldung",
-	Quote = _("\"For Loke's daughter in her house / Of Yngve's race would have a spouse; / Therefore the fell-one snatched away / Brave Dyggve from the light of day.\" - Thiodolf of Huine"),
+	Quote = _("\"For Loke's daughter in her house\nOf Yngve's race would have a spouse;\nTherefore the fell-one snatched away\nBrave Dyggve from the light of day.\"\n- Thiodolf of Huine"),
 	Trait = "upgrade-mighty", -- described as brave and mighty
 	HistoricalTitles = {
 		"head-of-state", 0, 0, "norse", "Swede Tribe"
@@ -252,7 +252,7 @@ DefineCharacter("Dag the Wise Yngling", { -- Source: Snorri Sturlson, "Heimskrin
 	Civilization = "norse",
 	ProvinceOfOrigin = "Sweden",
 	Father = "Dyggve the Brave Yngling",
-	Quote = _("\"Varva was ravaged, and the strife / Was ended when the monarch's life / Was ended too - the great Dag fell / By the hay-fork of a base thrall!\" - Thiodolf of Huine"),
+	Quote = _("\"Varva was ravaged, and the strife\nWas ended when the monarch's life\nWas ended too - the great Dag fell\nBy the hay-fork of a base thrall!\"\n- Thiodolf of Huine"),
 	Trait = "upgrade-wise", -- described as wise, brave and mighty
 	HistoricalTitles = {
 		"head-of-state", 0, 0, "norse", "Swede Tribe"
@@ -267,7 +267,7 @@ DefineCharacter("Agne Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 18
 	Civilization = "norse",
 	ProvinceOfOrigin = "Sweden",
 	Father = "Dag the Wise Yngling",
-	Quote = _("\"How do ye like her, Agne's men / Think ye that any chief again / Will court the fate your chief befell, / To ride on wooden horse to hell?\" - Thiodolf of Huine"),
+	Quote = _("\"How do ye like her, Agne's men\nThink ye that any chief again\nWill court the fate your chief befell,\nTo ride on wooden horse to hell?\"\n- Thiodolf of Huine"),
 	Trait = "upgrade-mighty", -- described as powerful, celebrated and expert
 	HistoricalTitles = {
 		"head-of-state", 0, 0, "norse", "Swede Tribe"
@@ -283,7 +283,7 @@ DefineCharacter("Skialf", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vo
 	ProvinceOfOrigin = "Finland",
 	Father = "Froste",
 	DateReferenceCharacter = "Agne Yngling", -- Skialf was married to Agne after he invaded Finland, killed her father and took her and her brother to Sweden
-	Quote = _("\"How do ye like the high-souled maid, / Who, with the grim Fate-goddess' aid, / Avenged her sire? Made Swithiod's king / Through air in golden halter swing?\" - Thiodolf of Huine")
+	Quote = _("\"How do ye like the high-souled maid,\nWho, with the grim Fate-goddess' aid,\nAvenged her sire? Made Swithiod's king\nThrough air in golden halter swing?\"\n- Thiodolf of Huine")
 })
 
 DefineCharacter("Alric Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 234.
@@ -294,7 +294,7 @@ DefineCharacter("Alric Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1
 	Civilization = "norse",
 	ProvinceOfOrigin = "Sweden",
 	Father = "Agne Yngling",
-	Quote = _("\"Alric fell, by Eric slain, / Eric's life-blood dyed the plain. / Brother fell by brother's hand\" - Thiodolf of Huine"),
+	Quote = _("\"Alric fell, by Eric slain,\nEric's life-blood dyed the plain.\nBrother fell by brother's hand\"\n- Thiodolf of Huine"),
 	Trait = "upgrade-mighty", -- described as powerful and expert at all feats of arms
 	HistoricalTitles = {
 		"head-of-state", 0, 0, "norse", "Swede Tribe" -- Swedish king together with his brother Eric, but it was Alric's sons who went on to rule after their death
@@ -309,7 +309,7 @@ DefineCharacter("Eric Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 18
 	Civilization = "norse",
 	ProvinceOfOrigin = "Sweden",
 	Father = "Agne Yngling",
-	Quote = _("\"Alric fell, by Eric slain, / Eric's life-blood dyed the plain. / Brother fell by brother's hand\" - Thiodolf of Huine"),
+	Quote = _("\"Alric fell, by Eric slain,\nEric's life-blood dyed the plain.\nBrother fell by brother's hand\"\n- Thiodolf of Huine"),
 	Trait = "upgrade-mighty", -- described as powerful and expert at all feats of arms
 	-- Swedish king together with his brother Alric, but it was Alric's sons who went on to rule after their death
 })
@@ -530,7 +530,7 @@ DefineCharacter("Yngve Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1
 	Civilization = "norse",
 	ProvinceOfOrigin = "Sweden",
 	Father = "Alric Yngling",
-	Quote = _("\"How wretched Alf with bloody knife / Gored Yngve's heart, and Yngve's blade / Alf on the bloody threshold laid.\" - Thiodolf of Huine"),
+	Quote = _("\"How wretched Alf with bloody knife\nGored Yngve's heart, and Yngve's blade\nAlf on the bloody threshold laid.\"\n- Thiodolf of Huine"),
 	Trait = "upgrade-strong" -- described as a great warrior, handsome expert in all exercises, strong and very sharp in battle, generous and full or mirth
 	-- was king of Sweden together with his brother Alf, but it was Alf's son succeeded them
 })
@@ -545,7 +545,7 @@ DefineCharacter("Alf Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 184
 	ProvinceOfOrigin = "Sweden",
 	Father = "Alric Yngling",
 	Mother = "Dagrid Dagling",
-	Quote = _("\"How wretched Alf with bloody knife / Gored Yngve's heart, and Yngve's blade / Alf on the bloody threshold laid.\" - Thiodolf of Huine"),
+	Quote = _("\"How wretched Alf with bloody knife\nGored Yngve's heart, and Yngve's blade\nAlf on the bloody threshold laid.\"\n- Thiodolf of Huine"),
 	Trait = "upgrade-harsh", -- described as silent, harsh, unfriendly and wretched
 	HistoricalTitles = {
 		"head-of-state", 0, 0, "norse", "Swede Tribe" -- was king of Sweden together with his brother Yngve, and Alf's son succeeded them
@@ -560,7 +560,7 @@ DefineCharacter("Bera", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol.
 	Type = "unit-teuton-archer",
 	Civilization = "norse",
 	ProvinceOfOrigin = "Sweden", -- presumably, since her husband is from there
-	Quote = _("\"A deed of dreadful note I sing, / How by false Bera, wicked queen, / The murderous brother-hands were seen / Each raised against a brother's life\" - Thiodolf of Huine"),
+	Quote = _("\"A deed of dreadful note I sing,\nHow by false Bera, wicked queen,\nThe murderous brother-hands were seen\nEach raised against a brother's life\"\n- Thiodolf of Huine"),
 	-- married to Alf Yngling
 	-- described as agreeable, very brisk and gay, but also false and wicked
 })
@@ -650,7 +650,7 @@ DefineCharacter("Jorund Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 
 	Civilization = "norse",
 	ProvinceOfOrigin = "Sweden",
 	Father = "Yngve Yngling",
-	Quote = _("\"Jorund has travelled far and wide, / But the same horse he must bestride / On which he made brave Gudlog ride. / He too must for a necklace wear / Hagbert's fell noose in middle air.\" - Thiodolf of Huine"),
+	Quote = _("\"Jorund has travelled far and wide,\nBut the same horse he must bestride\nOn which he made brave Gudlog ride.\nHe too must for a necklace wear\nHagbert's fell noose in middle air.\"\n- Thiodolf of Huine"),
 	HistoricalTitles = {
 		"head-of-state", 0, 0, "norse", "Swede Tribe"
 	}
@@ -665,7 +665,7 @@ DefineCharacter("Eric Yngveson Yngling", { -- Source: Snorri Sturlson, "Heimskri
 	Civilization = "norse",
 	ProvinceOfOrigin = "Sweden",
 	Father = "Yngve Yngling",
-	Quote = _("\"By the fierce East-kings' cruel pride, / Gudlog must on the wild horse rider - / The wildest horse you e'er did see: / 'Tis Segur's steed - the gallows tree.\" - Eyvind Skaldaspiller")
+	Quote = _("\"By the fierce East-kings' cruel pride,\nGudlog must on the wild horse rider -\nThe wildest horse you e'er did see:\n'Tis Segur's steed - the gallows tree.\"\n- Eyvind Skaldaspiller")
 })
 
 DefineCharacter("Gudlög", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 237-238.
@@ -679,7 +679,7 @@ DefineCharacter("Gudlög", { -- Source: Snorri Sturlson, "Heimskringla", 1844, v
 	Civilization = "norse",
 	ProvinceOfOrigin = "Nordland",
 	DateReferenceCharacter = "Jorund Yngling", -- was captured in Denmark by Jorund and Eric Yngling, and then was killed by them
-	Quote = _("\"By the fierce East-kings' cruel pride, / Gudlog must on the wild horse rider - / The wildest horse you e'er did see: / 'Tis Segur's steed - the gallows tree.\" - Eyvind Skaldaspiller"),
+	Quote = _("\"By the fierce East-kings' cruel pride,\nGudlog must on the wild horse rider -\nThe wildest horse you e'er did see:\n'Tis Segur's steed - the gallows tree.\"\n- Eyvind Skaldaspiller"),
 	HistoricalTitles = {
 		"head-of-state", 0, 0, "norse", "Halogaland" -- was a king, presumably of Halogaland, since his son was king of that place
 	}
@@ -707,7 +707,7 @@ DefineCharacter("On the Old Yngling", { -- Source: Snorri Sturlson, "Heimskringl
 	ProvinceOfOrigin = "Sweden",
 	Father = "Jorund Yngling",
 	Trait = "upgrade-cruel", -- described as wise and cruel
-	Quote = _("\"In Upsal's town the cruel king / Slaughtered his sons at Odin's shrine / Slaughtered his sons with cruel knife, / To get from Odin length of life.\" - Thiodolf of Huine"),
+	Quote = _("\"In Upsal's town the cruel king\nSlaughtered his sons at Odin's shrine\nSlaughtered his sons with cruel knife,\nTo get from Odin length of life.\"\n- Thiodolf of Huine"),
 	HistoricalTitles = {
 		"head-of-state", 0, 0, "norse", "Swede Tribe" -- ruled intermittently at Västergotland when Uppsal was occupied by Danish invaders
 	}
@@ -796,7 +796,7 @@ DefineCharacter("Egil Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 18
 	Civilization = "norse",
 	ProvinceOfOrigin = "Sweden",
 	Father = "On the Old Yngling",
-	Quote = _("\"The fair-haired son of Odin's race, / Who fled before fierce Tunne's face, / Has perished by the demon-beast / Who roams the forests of the East.\" - Thiodolf of Huine"),
+	Quote = _("\"The fair-haired son of Odin's race,\nWho fled before fierce Tunne's face,\nHas perished by the demon-beast\nWho roams the forests of the East.\"\n- Thiodolf of Huine"),
 	HistoricalTitles = {
 		"head-of-state", 0, 0, "norse", "Swede Tribe"
 	}
@@ -825,7 +825,7 @@ DefineCharacter("Ottar Vendelcrow Yngling", { -- Source: Snorri Sturlson, "Heims
 	Civilization = "norse",
 	ProvinceOfOrigin = "Sweden",
 	Father = "Egil Yngling",
-	Quote = _("\"By Danish arms the hero bold, / Ottar the Brave, lies stiff and cold. / To Vendel's plain the corpse was borne; / By eagles' claws the corpse is torn\" - Thiodolf of Huine"),
+	Quote = _("\"By Danish arms the hero bold,\nOttar the Brave, lies stiff and cold.\nTo Vendel's plain the corpse was borne;\nBy eagles' claws the corpse is torn\"\n- Thiodolf of Huine"),
 	HistoricalTitles = {
 		"head-of-state", 0, 0, "norse", "Swede Tribe"
 	}
@@ -858,7 +858,7 @@ DefineCharacter("Adils Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1
 	Civilization = "norse",
 	ProvinceOfOrigin = "Sweden",
 	Father = "Ottar Vendelcrow Yngling",
-	Quote = _("\"Witch-demons, I have heard men say, / Have taken Adils' life away.\" - Thiodolf of Huine"),
+	Quote = _("\"Witch-demons, I have heard men say,\nHave taken Adils' life away.\"\n- Thiodolf of Huine"),
 	HistoricalTitles = {
 		"head-of-state", 0, 0, "norse", "Swede Tribe"
 	}
@@ -913,7 +913,7 @@ DefineCharacter("Eystein Yngling", { -- Source: Snorri Sturlson, "Heimskringla",
 	Civilization = "norse",
 	ProvinceOfOrigin = "Sweden",
 	Father = "Adils Yngling",
-	Quote = _("\"The raging tree-devourer fire / Rushed on the monarch its ire; / First fell the castle timbers, then / The roof-beams - Eystein's funeral pyre.\" - Thiodolf of Huine"),
+	Quote = _("\"The raging tree-devourer fire\nRushed on the monarch its ire;\nFirst fell the castle timbers, then\nThe roof-beams - Eystein's funeral pyre.\"\n- Thiodolf of Huine"),
 	HistoricalTitles = {
 		"head-of-state", 0, 0, "norse", "Swede Tribe"
 	}
@@ -950,7 +950,7 @@ DefineCharacter("Yngvar Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 
 	Civilization = "norse",
 	ProvinceOfOrigin = "Sweden",
 	Father = "Eystein Yngling",
-	Quote = _("\"On Esthland's strand, o'er Swedish graves, / The East Sea sings her song of waves; / King Yngvar's dirge is ocean's roar / Resounding on the rock-ribbed shore.\" - Thiodolf of Huine"),
+	Quote = _("\"On Esthland's strand, o'er Swedish graves,\nThe East Sea sings her song of waves;\nKing Yngvar's dirge is ocean's roar\nResounding on the rock-ribbed shore.\"\n- Thiodolf of Huine"),
 	HistoricalTitles = {
 		"head-of-state", 0, 0, "norse", "Swede Tribe"
 	}
@@ -964,7 +964,7 @@ DefineCharacter("Onund Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1
 	Civilization = "norse",
 	ProvinceOfOrigin = "Sweden",
 	Father = "Yngvar Yngling",
-	Quote = _("\"Or else perhaps the wood-grown land, / Which long had felt his conquering hand, / Uprose at length in deadly strife, / And pressed out Onund's hated life.\" - Thiodolf of Huine"),
+	Quote = _("\"Or else perhaps the wood-grown land,\nWhich long had felt his conquering hand,\nUprose at length in deadly strife,\nAnd pressed out Onund's hated life.\"\n- Thiodolf of Huine"),
 	HistoricalTitles = {
 		"head-of-state", 0, 0, "norse", "Swede Tribe"
 	}
@@ -979,7 +979,7 @@ DefineCharacter("Ingiald the Evil-Adviser Yngling", { -- Source: Snorri Sturlson
 	Civilization = "norse",
 	ProvinceOfOrigin = "Sweden",
 	Father = "Onund Yngling",
-	Quote = _("\"On his own hearth the fire he raised, / A deed his foemen even praised; / By his own hand he perished so, / And life for freedom did forego.\" - Thiodolf of Huine"),
+	Quote = _("\"On his own hearth the fire he raised,\nA deed his foemen even praised;\nBy his own hand he perished so,\nAnd life for freedom did forego.\"\n- Thiodolf of Huine"),
 	HistoricalTitles = {
 		"head-of-state", 0, 0, "norse", "Swede Tribe"
 	}
@@ -1231,7 +1231,7 @@ DefineCharacter("Olaf Treefeller Yngling", { -- Source: Snorri Sturlson, "Heimsk
 	ProvinceOfOrigin = "Sweden",
 	Father = "Ingiald the Evil-Adviser Yngling",
 	Mother = "Gauthild",
-	Quote = _("\"The temple wolf, by the lake shores, / The corpse of Olaf now devours. / The clearer of forests died / At Odin's shrine by the lake side.\" - Thiodolf of Huine"), -- "temple wolf" in this instance means the fire which burned Olaf's body
+	Quote = _("\"The temple wolf, by the lake shores,\nThe corpse of Olaf now devours.\nThe clearer of forests died\nAt Odin's shrine by the lake side.\"\n- Thiodolf of Huine"), -- "temple wolf" in this instance means the fire which burned Olaf's body
 	-- his foster-father was Bove, who lived in West Gotland
 	-- married to Solveig
 })
@@ -1365,7 +1365,7 @@ DefineCharacter("Halfdan Huitbein Yngling", { -- Source: Snorri Sturlson, "Heims
 	ProvinceOfOrigin = "Varmland", -- (apparently) from Vermeland
 	Father = "Olaf Treefeller Yngling",
 	Mother = "Solveig",
-	Quote = _("\"Halfdan, esteemed by friends and foes, / Receives at last life's deep repose: / The aged man at last, though late, / Yielded in Thoten to stern fate.\" - Thiodolf of Huine")
+	Quote = _("\"Halfdan, esteemed by friends and foes,\nReceives at last life's deep repose:\nThe aged man at last, though late,\nYielded in Thoten to stern fate.\"\n- Thiodolf of Huine")
 	-- ruled over Hedemark, and conquered Thoten, Hadeland and much of Westfold
 	-- married to Asa
 })
@@ -1407,7 +1407,7 @@ DefineCharacter("Eystein Halfdanson Yngling", { -- Source: Snorri Sturlson, "Hei
 	ProvinceOfOrigin = "Hedmark", -- his father ruled over Hedemark
 	Father = "Halfdan Huitbein Yngling",
 	Mother = "Asa",
-	Quote = _("\"Grim Hel, clutched his soul away; / And now where Vodle's ocean bay / Receives the ice-cold stream, the grave / Of Eystein stands, the good, the brave!\" - Thiodolf of Huine")
+	Quote = _("\"Grim Hel, clutched his soul away;\nAnd now where Vodle's ocean bay\nReceives the ice-cold stream, the grave\nOf Eystein stands, the good, the brave!\"\n- Thiodolf of Huine")
 	-- became king in Raumarige and Westfold after his father's death
 	-- married to Hilde, daughter of Eric Agnarson
 })
@@ -1496,7 +1496,7 @@ DefineCharacter("Halfdan the Mild Yngling", { -- Source: Snorri Sturlson, "Heims
 	Father = "Eystein Halfdanson Yngling",
 	Mother = "Hilde", -- presumably, since Hilde was married to Eystein
 	Trait = "upgrade-generous", -- described as generous, and as a great warrior
-	Quote = _("\"By Hel's summons, a great king / Was called away to Odin's Thing: / King Halfdan, he who dwelt of late / At Holtar, must obey grim Fate.\" - Thiodolf of Huine")
+	Quote = _("\"By Hel's summons, a great king\nWas called away to Odin's Thing:\nKing Halfdan, he who dwelt of late\nAt Holtar, must obey grim Fate.\"\n- Thiodolf of Huine")
 	-- married to Hlif, daughter of King Dag of Westmor
 	-- his chief house was Holtar (in Vestfold, Norway)
 })
@@ -1536,7 +1536,7 @@ DefineCharacter("Gudrod the Magnificent Yngling", { -- Source: Snorri Sturlson, 
 	Father = "Halfdan the Mild Yngling",
 	Mother = "Hlif", -- presumably, since Hlif was married to Halfdan
 	-- died murdered by a man under the orders of his wife Aasa
-	Quote = _("\"Gudrod is gone to his long rest, / Despite of all his haughty pride, / A traitor's spear has pierced his side\" - Thiodolf of Huine")
+	Quote = _("\"Gudrod is gone to his long rest,\nDespite of all his haughty pride,\nA traitor's spear has pierced his side\"\n- Thiodolf of Huine")
 	-- married to Alfhild, and after her death married Aasa (daughter of Harald Redbeard)
 	-- described as proud
 })
@@ -1577,7 +1577,7 @@ DefineCharacter("Olaf Geirstad-Alf Yngling", { -- Source: Snorri Sturlson, "Heim
 	Father = "Gudrod the Magnificent Yngling",
 	Mother = "Alfhild",
 	Trait = "upgrade-strong", -- described as remarkably handsome, very strong and large of growth
-	Quote = _("\"Long while this branch of Odin's stem / Was the stout prop of Norway's realm; / Long while King Olaf with just pride / Ruled over Westfold far and wide.\" - Thiodolf of Huine")
+	Quote = _("\"Long while this branch of Odin's stem\nWas the stout prop of Norway's realm;\nLong while King Olaf with just pride\nRuled over Westfold far and wide.\"\n- Thiodolf of Huine")
 })
 
 DefineCharacter("Harald Redbeard", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 259-260.
@@ -1684,7 +1684,7 @@ DefineCharacter("Rognvald Mountain-High Yngling", { -- Source: Snorri Sturlson, 
 	Civilization = "norse",
 	ProvinceOfOrigin = "Vestfold", -- his father ruled over Vestfold
 	Father = "Olaf Geirstad-Alf Yngling",
-	Quote = _("\"Rognvald, who knew so well to guide / The wild sea-horses through the tide: / The 'Mountain-high' was the proud name / By which the king was known to fame.\" - Thiodolf of Huine") -- "wild sea-horses" means ships
+	Quote = _("\"Rognvald, who knew so well to guide\nThe wild sea-horses through the tide:\nThe 'Mountain-high' was the proud name\nBy which the king was known to fame.\"\n- Thiodolf of Huine") -- "wild sea-horses" means ships
 })
 
 DefineCharacter("Thiodolf of Huine", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 227, 261.

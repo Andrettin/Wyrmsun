@@ -55,5 +55,5 @@ DefineUpgrade("upgrade-work-ynglingatal", { -- Source: Snorri Sturlson, "Heimskr
 	Civilization = "norse",
 	Description = "The Ynglingatal tells the lineage of the Yngling dynasty, legendary kings of Sweden.",
 --	Year = ?, -- in which year was it first published?
-	Quote = "\"The son of kings of Frey's great race, / First in the fray, the fight, the chase, / Fell from his steed - his clotted brains / Lie mixed with mire on Upsal's plains.\""
+	Quote = "\"The son of kings of Frey's great race,\nFirst in the fray, the fight, the chase,\nFell from his steed - his clotted brains\nLie mixed with mire on Upsal's plains.\""
 })

@@ -32,8 +32,8 @@ DefineUpgrade("upgrade-work-alvissmol", {
 	},
 	Work = "scroll",
 	Civilization = "dwarf",
-	Quote = "\"Alvis am I, and under the earth / My home 'neath the rocks I have; / With the thunder-thrower a word do I seek, / Let the gods their bond not break.\" - Alvissmol (Alvis)"
---	Quote = "\"Alvis am I, and under the earth / My home 'neath the rocks I have; / With the wagon-guider a word do I seek, / Let the gods their bond not break.\" - Alvissmol (Alvis)" -- original
+	Quote = "\"Alvis am I, and under the earth\n- My home 'neath the rocks I have;\nWith the thunder-thrower a word do I seek,\nLet the gods their bond not break.\"\n- Alvissmol (Alvis)"
+--	Quote = "\"Alvis am I, and under the earth\nMy home 'neath the rocks I have;\nWith the wagon-guider a word do I seek,\nLet the gods their bond not break.\"\n- Alvissmol (Alvis)" -- original
 })
 
 DefineUpgrade("upgrade-work-fafnismol", {
@@ -43,8 +43,8 @@ DefineUpgrade("upgrade-work-fafnismol", {
 	},
 	Work = "scroll",
 	Civilization = "dwarf",
-	Quote = "\"Hail to thee, warrior! Thou victory hast, / And Fafnir in fight hast slain; / Of all the dwarves who tread the earth, / Most fearless art thou, methinks.\" - Fafnismol (Regin)"
---	Quote = "\"Hail to thee, Sigurd! Thou victory hast, / And Fafnir in fight hast slain; / Of all the men who tread the earth, / Most fearless art thou, methinks.\" - Fafnismol (Regin)" -- original
+	Quote = "\"Hail to thee, warrior! Thou victory hast,\nAnd Fafnir in fight hast slain;\nOf all the dwarves who tread the earth,\nMost fearless art thou, methinks.\"\n- Fafnismol (Regin)"
+--	Quote = "\"Hail to thee, Sigurd! Thou victory hast,\nAnd Fafnir in fight hast slain;\nOf all the men who tread the earth,\nMost fearless art thou, methinks.\"\n- Fafnismol (Regin)" -- original
 })
 
 DefineUpgrade("upgrade-work-reginsmol", {
@@ -54,15 +54,15 @@ DefineUpgrade("upgrade-work-reginsmol", {
 	},
 	Work = "scroll",
 	Civilization = "dwarf",
-	Quote = "\"Here shall I foster the fearless prince, / Now Modsognir's heir | to us is come; / The noblest hero | under the mountains, / The threads of his fate all lands enfold.\" - Reginsmol (Regin)"
---	Quote = "\"Here shall I foster the fearless prince, / Now Yngvi's heir | to us is come; / The noblest hero | beneath the sun, / The threads of his fate all lands enfold.\" - Reginsmol (Regin)" -- original
+	Quote = "\"Here shall I foster the fearless prince,\nNow Modsognir's heir to us is come;\nThe noblest hero under the mountains,\nThe threads of his fate all lands enfold.\"\n- Reginsmol (Regin)"
+--	Quote = "\"Here shall I foster the fearless prince,\nNow Yngvi's heir to us is come;\nThe noblest hero beneath the sun,\nThe threads of his fate all lands enfold.\"\n- Reginsmol (Regin)" -- original
 })
 
 DefineUpgrade("upgrade-work-the-scepter-of-fire", {
 	Name = _("The Scepter of Fire"), -- from Wesnoth
 	Work = "scroll",
 	Civilization = "dwarf",
-	Quote = "\"The land of Untersberg's banner bold / Comes not from its own land; / It comes from Dwarfdom, grim and old / Made by a runesmith's hand.\" - The Scepter of Fire"
+	Quote = "\"The land of Untersberg's banner bold\nComes not from its own land;\nIt comes from Dwarfdom, grim and old\nMade by a runesmith's hand.\"\n- The Scepter of Fire"
 })
 
 DefineModifier("upgrade-work-alvissmol",

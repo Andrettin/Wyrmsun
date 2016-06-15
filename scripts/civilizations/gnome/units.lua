@@ -135,7 +135,7 @@ DefineUnitType("unit-gnomish-recruit", { Name = _("Recruit"),
 	Parent = "unit-template-infantry",
 	Civilization = "gnome",
 	Description = _("Gnomish recruits form the common soldiery of the gnomish armies. Due to their small size, they tend to attack by thrusting their swords, rather than slashing with them, seeking to strike vital points and cause more damage than their strength would allow when hacking away at enemies."),
-	Quote = _("\"With a tremendous crash, the great mountain burst apart and a whole troop of tiny, little mountain gnomes came out, dancing grotesquely like sprites of another world.\" - The Gnomes of the Saline Mountains"),
+	Quote = _("\"With a tremendous crash, the great mountain burst apart and a whole troop of tiny, little mountain gnomes came out, dancing grotesquely like sprites of another world.\"\n- The Gnomes of the Saline Mountains"),
 	Image = {"file", "gnome/units/body_warrior.png", "size", {72, 72}},
 	LayerImages = {
 		{"layer", "hair", "file", "gnome/units/hair_warrior.png"},
