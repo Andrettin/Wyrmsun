@@ -26,6 +26,12 @@
 --
 
 DefineIcon({
+	Name = "icon-latin-javelineer",
+	Size = {46, 38},
+	File = "latin/icons/javelineer.png"
+})
+
+DefineIcon({
 	Name = "icon-latin-forum",
 	Size = {46, 38},
 	File = "latin/icons/forum.png"

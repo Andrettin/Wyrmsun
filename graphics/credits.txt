@@ -375,6 +375,7 @@ Exidelo (Leo):
 /graphics/goblin/icons/glider.png (licensed under the CC0)
 /graphics/goblin/icons/goblin_thief.png (licensed under the CC0)
 /graphics/goblin/icons/swordsman.png (modified from b_o's icon) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/latin/icons/javelineer.png (licensed under the CC0)
 /graphics/neutral/decorations/volcanic_crater.png (licensed under the CC0)
 /graphics/neutral/icons/masonry.png (licensed under the CC0)
 /graphics/neutral/icons/puncture.png (licensed under the CC0)
