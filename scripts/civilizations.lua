@@ -54,6 +54,7 @@ DefineCivilization("dutch", { -- information for later use
 	ParentCivilization = "teuton",
 	Language = "dutch",
 	Adjective = "Dutch",
+	DevelopsFrom = {"teuton"},
 	ProvinceNames = {
 		"Gelderland", -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
 		"Overijssel" -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 335.
@@ -88,7 +89,8 @@ DefineCivilization("dwarf", {
 		"dwarf/ui/resource.png", 0, 0,
 		"dwarf/ui/buttonpanel.png", -256, -200,
 		"dwarf/ui/infopanel.png", 0, -200
-	}
+	},
+	Description = _("Dwarves live in the world of Nidavellir, where gnomes, goblins and kobolds also dwell. They usually prefer living in mountainous terrain or underground, and build their dwellings mostly out of stone. Dwarves are particularly talented at smithing, and ownership of precious metals is a passion for many of them.")
 })
 
 DefineCivilization("elf", {
@@ -131,9 +133,34 @@ DefineCivilization("english", { -- information for later use
 	ParentCivilization = "teuton",
 	Language = "english",
 	Adjective = "English",
-	DefaultColor = "red"
+	DefaultColor = "red",
+	DevelopsFrom = {"teuton"}
 })
 --]]
+
+DefineCivilization("ettin", {
+	Display = "Ettin",
+	Visible = true,
+	Species = "ettin",
+--	Language = "ettin",
+	Adjective = "Ettin",
+	Playable = false,
+	DefaultColor = "black",
+	ButtonIcons = {
+		"move", "icon-dwarven-boots",
+		"stop", "icon-dwarven-shield-1",
+		"attack", "icon-dwarven-battle-axe",
+		"patrol", "icon-dwarven-patrol-land",
+		"stand-ground", "icon-dwarven-stand-ground",
+		"return-goods", "icon-dwarven-return-goods"
+	},
+	UIFillers = {
+		"dwarf/ui/filler_bottom.png", 380, -181,
+		"dwarf/ui/resource.png", 0, 0,
+		"dwarf/ui/buttonpanel.png", -256, -200,
+		"dwarf/ui/infopanel.png", 0, -200
+	}
+})
 
 DefineCivilization("germanic", {
 	Display = "Germanic",
@@ -155,7 +182,8 @@ DefineCivilization("germanic", {
 		"germanic/ui/resource.png", 0, 0,
 		"germanic/ui/buttonpanel.png", -256, -200,
 		"germanic/ui/infopanel.png", 0, -200
-	}
+	},
+	Description = _("During the late Stone Age, Indo-Europeans migrated from the Pontic steppes to a number of areas in Europe and beyond, displacing, mixing with, and assimilating previous populations. Those who migrated to Scandinavia spoke their own dialect of Indo-European, which eventually would develop into Germanic. Contact with the Celtic peoples to their south was beneficial to the Germanics, as they were able to incorporate more advanced techniques from Central Europe in areas such as metalworking.")
 })
 
 DefineCivilization("celt", { -- has to be defined after the germanic civilization because it uses it as its parent civilization
@@ -167,7 +195,8 @@ DefineCivilization("celt", { -- has to be defined after the germanic civilizatio
 	Adjective = "Celtic",
 	Playable = false,
 	DefaultColor = "green",
-	CivilizationUpgrade = "upgrade-celt-civilization"
+	CivilizationUpgrade = "upgrade-celt-civilization",
+	Description = _("During the late Stone Age, Indo-Europeans migrated from the Pontic steppes to a number of areas in Europe and beyond, displacing, mixing with, and assimilating previous populations. One group of Indo-Europeans spoke a dialect which would later develop into the Celtic and Italic languages. Celtic peoples occupied large swathes of Europe, from France to the Middle Danube. They had trade contacts with Greeks and Romans, and warred a number of times with the latter. Eventually, most Celts would be conquered and assimilated by other peoples, leaving only small areas where Celtic languages were still spoken.")
 })
 
 DefineCivilization("gnome", {
@@ -185,7 +214,8 @@ DefineCivilization("gnome", {
 		"patrol", "icon-gnomish-patrol-land",
 		"stand-ground", "icon-germanic-stand-ground",
 		"return-goods", "icon-dwarven-return-goods"
-	}
+	},
+	Description = _("Gnomes usually live in the hills and forests of Nidavellir, and often seek contact with nature. Although they have a different outlook on life than the dwarves, not rarely both two peoples live side by side, with gnomish minorities permeating dwarven settlements and vice-versa. These contacts have brought much benefit to both of them, both through trade and via the spread of gnomish technologies northwards.")
 })
 
 DefineCivilization("goblin", {
@@ -224,7 +254,8 @@ DefineCivilization("kobold", {
 	ButtonIcons = {
 		"attack", "icon-gnomish-thrusting-sword-1",
 		"stand-ground", "icon-germanic-stand-ground"
-	}
+	},
+	Description = _("Kobolds live in the deep caves of Nidavellir, and worship wyrms as sacred ancestors. They share the dwarven passion for mining and metals, but not their technological advancement. Although kobolds can be inventive, their isolation from other communities has made the spread of progress to their lands more difficult. Being the sole intelligent reptilian race in Nidavellir, they feel threatened by the presence of dwarves, gnomes and goblins - all of which they call \"breastlings\".")
 })
 
 DefineCivilization("orc", {
@@ -258,10 +289,10 @@ DefineCivilization("teuton", {
 	ParentCivilization = "germanic",
 	Adjective = "Teutonic",
 	DefaultColor = "yellow",
-	CivilizationUpgrade = "upgrade-teuton-civilization"
+	CivilizationUpgrade = "upgrade-teuton-civilization",
+	DevelopsFrom = {"germanic"},
 	--[[
 	ProvinceNames = {
-		"Baden",
 		"Bayern", -- "Bayern" = "Bavaria"
 		"Holstein",
 		"Kärnten", -- "Kärnten" = "Carinthia"
@@ -274,7 +305,7 @@ DefineCivilization("teuton", {
 	ProvinceNamePrefixes = {
 		"Mecklen", -- example: "Mecklenburg"
 		"Steier" -- example: "Steiermark" (Styria)
---			"Vorarl" -- example: "Vorarlberg"
+--		"Vorarl" -- example: "Vorarlberg"
 	},
 	ProvinceNameSuffixes = {
 		"falen" -- example: "Westfalen" (Westphalia)
@@ -340,6 +371,7 @@ DefineCivilization("teuton", {
 		"weissenburg" -- "weissenburg" = "white castle"; example: "Stuhlweissenburg"
 	},
 	--]]
+	Description = _("During the Iron Age, Germanic peoples split off into three different groups - the North Germanics (like the Danes and Swedes), the East Germanics (like the Goths and Vandals) and the West Germanics (like the Suebi, Saxons and Franks). Eventually, West Germanic peoples would come to identify themselves with the demonym \"deutsch\", a term often latinized as \"teutonicus\".")
 })
 
 DefineCivilization("troll", {
@@ -452,6 +484,7 @@ DefineCivilization("latin", {
 		"lanum" -- example: "Mediolanum" (Milan)
 	}
 	--]]
+	Description = _("During the late Stone Age, Indo-Europeans migrated from the Pontic steppes to a number of areas in Europe and beyond, displacing, mixing with, and assimilating previous populations. One group of Indo-Europeans spoke a dialect which would later develop into the Celtic and Italic languages. Latins were an Italic people who inhabited Central Italy and who founded many cities, one of them being Rome. With the expansion of consolidation of Roman power, most of Italy would be latinized, and eventually large areas of the Roman empire would speak Latin as their mother tongue.")
 })
 
 DefineCivilization("basque", { -- represents not only the speakers of Vasconic languages, but also various pre-Indo-European cultures
@@ -481,7 +514,9 @@ DefineCivilization("goth", {
 	Language = "gothic",
 	ParentCivilization = "teuton",
 	Adjective = "Gothic",
-	Playable = false
+	Playable = false,
+	DevelopsFrom = {"germanic"},
+	Description = _("During the Iron Age, Germanic peoples split off into three different groups - the North Germanics (like the Danes and Swedes), the East Germanics (like the Goths and Vandals) and the West Germanics (like the Suebi, Saxons and Franks). The Goths and the Vandals played an important role in the wars and migrations of late antiquity, and apportioned a part of the Roman empire for themselves. The Visigoths (the Western Goths) settled in Spain and southern France, the Ostrogoths (the Eastern Goths) in Italy, and the Vandals in North Africa. Being a small minority relative to the populations they had conquered, eventually Goths and Vandals would assimilate into the local cultures.")
 })
 
 DefineCivilization("greek", {
@@ -575,6 +610,7 @@ DefineCivilization("greek", {
 		"Zancle" -- Messana
 	}
 	--]]
+	Description = _("During the late Stone Age, Indo-Europeans migrated from the Pontic steppes to a number of areas in Europe and beyond, displacing, mixing with, and assimilating previous populations. Those who migrated to Greece spoke their own dialect of Indo-European, which eventually would develop into Ancient Greek. Initially a backwater in comparison to the Near East, Greece would eventually become one of the main centers of civilization in antiquity, being widely renowned for the achievements of its people. The rise of the Macedonian empire spread the influence of Greek culture through much of the eastern Mediterranean, Persia, and beyond, and even after the Roman conquest Greek remained widely spoken (both as a mother tongue and as a lingua franca) in the eastern half of the Mediterranean.")
 })
 
 DefineCivilization("hittite", {
@@ -614,7 +650,9 @@ DefineCivilization("norse", {
 	Language = "old-norse",
 	ParentCivilization = "teuton",
 	Adjective = "Norse",
-	Playable = false
+	Playable = false,
+	DevelopsFrom = {"germanic"},
+	Description = _("During the Iron Age, Germanic peoples split off into three different groups - the North Germanics (like the Danes and Swedes), the East Germanics (like the Goths and Vandals) and the West Germanics (like the Suebi, Saxons and Franks). While late antiquity saw intense migration of Germanic peoples, the Danes and Swedes remained largely in Scandinavia, well beyond the developments of the Mediterranean.")
 })
 
 DefineCivilization("uralic", {
@@ -634,7 +672,8 @@ DefineCivilization("finnish", {
 	Language = "finnish",
 	ParentCivilization = "norse",
 	Adjective = "Finnish",
-	Playable = false
+	Playable = false,
+	DevelopsFrom = {"uralic"}
 })
 
 DefineCivilization("magyar", {
@@ -644,7 +683,8 @@ DefineCivilization("magyar", {
 --	Language = "hungarian",
 	ParentCivilization = "teuton",
 	Adjective = "Magyar",
-	Playable = false
+	Playable = false,
+	DevelopsFrom = {"uralic"}
 })
 
 DefineCivilization("persian", {

@@ -31,7 +31,6 @@ function RunEncyclopediaMenu()
 	end
 	
 	Load("scripts/game_concepts.lua")
-	Load("scripts/menus/encyclopedia_civilizations.lua")
 
 	if (RunningScenario == false) then
 		if not (IsMusicPlaying()) then
@@ -1429,22 +1428,27 @@ function RunEncyclopediaCivilizationsMenu()
 	end
 	menu:addLabel("~<Encyclopedia: Civilizations~>", offx + 320, offy + 104 + 36*(-4 + height_offset), nil, true)
 
+	local potential_civilizations = GetCivilizations()
+	local civilizations = {}
+	
+	for i = 1, table.getn(potential_civilizations) do
+		if (GetCivilizationData(potential_civilizations[i], "Description") ~= "") then
+			table.insert(civilizations, potential_civilizations[i])
+		end
+	end
+	table.sort(civilizations)
+
 	local civilization_x = 0
-	if (GetTableSize(CivilizationsEncyclopedia) > 20) then
+	if (GetTableSize(civilizations) > 20) then
 		civilization_x = -2
-	elseif (GetTableSize(CivilizationsEncyclopedia) > 10) then
+	elseif (GetTableSize(civilizations) > 10) then
 		civilization_x = -1
 	end
 	local civilization_y = -3
 
-	for civilization_key, civilization_value in pairsByKeys(CivilizationsEncyclopedia) do
-		local civilization_hotkey = ""		
-		if (string.find(_(CivilizationsEncyclopedia[civilization_key].Name), "~!") ~= nil) then
-			civilization_hotkey = string.sub(string.match(_(CivilizationsEncyclopedia[civilization_key].Name), "~!%a"), 3)
-			civilization_hotkey = string.lower(civilization_hotkey)
-		end
-		menu:addFullButton(_(CivilizationsEncyclopedia[civilization_key].Name), civilization_hotkey, offx + 208 + (113 * civilization_x), offy + 104 + (36 * (civilization_y + height_offset)),
-			function() OpenEncyclopediaCivilizationEntry(civilization_key); end)
+	for i = 1, table.getn(civilizations) do
+		menu:addFullButton(_(GetCivilizationData(civilizations[i], "Display")), "", offx + 208 + (113 * civilization_x), offy + 104 + (36 * (civilization_y + height_offset)),
+			function() OpenEncyclopediaCivilizationEntry(civilizations[i]); end)
 
 		if (civilization_y > 5 or (civilization_y > 4 and Video.Height < 600)) then
 			civilization_x = civilization_x + 2
@@ -1461,18 +1465,18 @@ function RunEncyclopediaCivilizationsMenu()
 	menu:run()
 end
 
-function OpenEncyclopediaCivilizationEntry(civilization_key)
+function OpenEncyclopediaCivilizationEntry(civilization)
 	if (RunningScenario == false) then
 		if not (IsMusicPlaying()) then
 			PlayMusicName("MenuTheme")
 		end
 	end
 
-	local encyclopedia_entry_menu = WarMenu(nil, GetBackground(GetCivilizationBackground(string.lower(string.gsub(civilization_key, "Human", "")))))
+	local encyclopedia_entry_menu = WarMenu(nil, GetBackground(GetCivilizationBackground(civilization)))
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2
 
-	encyclopedia_entry_menu:addLabel("~<" .. CivilizationsEncyclopedia[civilization_key].Name .. "~>", offx + 320, offy + 104 + 36*-2, nil, true)
+	encyclopedia_entry_menu:addLabel("~<" .. GetCivilizationData(civilization, "Display") .. "~>", offx + 320, offy + 104 + 36*-2, nil, true)
 
 	local l = MultiLineLabel()
 	l:setFont(Fonts["game"])
@@ -1480,28 +1484,32 @@ function OpenEncyclopediaCivilizationEntry(civilization_key)
 	l:setLineWidth(Video.Width - 64)
 	encyclopedia_entry_menu:add(l, 32, offy + 104 + 36*0)
 	local description = ""
-	if (CivilizationsEncyclopedia[civilization_key].DevelopsFrom ~= nil) then
+	local develops_from = GetCivilizationData(civilization, "DevelopsFrom")
+	table.sort(develops_from)
+	if (table.getn(develops_from) > 0) then
 		description = description .. "Develops From: "
-		for i=1,table.getn(CivilizationsEncyclopedia[civilization_key].DevelopsFrom) do
-			description = description .. CivilizationsEncyclopedia[civilization_key].DevelopsFrom[i]
-			if (i < table.getn(CivilizationsEncyclopedia[civilization_key].DevelopsFrom)) then
+		for i=1,table.getn(develops_from) do
+			description = description .. GetCivilizationData(develops_from[i], "Display")
+			if (i < table.getn(develops_from)) then
 				description = description .. ", "
 			end
 		end
 		description = description .. "\n\n"
 	end
-	if (CivilizationsEncyclopedia[civilization_key].DevelopsTo ~= nil) then
+	local develops_to = GetCivilizationData(civilization, "DevelopsTo")
+	table.sort(develops_to)
+	if (table.getn(develops_to) > 0) then
 		description = description .. "Develops To: "
-		for i=1,table.getn(CivilizationsEncyclopedia[civilization_key].DevelopsTo) do
-			description = description .. CivilizationsEncyclopedia[civilization_key].DevelopsTo[i]
-			if (i < table.getn(CivilizationsEncyclopedia[civilization_key].DevelopsTo)) then
+		for i=1,table.getn(develops_to) do
+			description = description .. GetCivilizationData(develops_to[i], "Display")
+			if (i < table.getn(develops_to)) then
 				description = description .. ", "
 			end
 		end
 		description = description .. "\n\n"
 	end
-	if (CivilizationsEncyclopedia[civilization_key].Description ~= nil) then
-		description = description .. "Description: " .. CivilizationsEncyclopedia[civilization_key].Description
+	if (GetCivilizationData(civilization, "Description") ~= "") then
+		description = description .. "Description: " .. GetCivilizationData(civilization, "Description")
 	end
 	l:setCaption(description)
 			
