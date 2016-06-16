@@ -25,40 +25,27 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-Load("scripts/deities_aesir.lua")
-Load("scripts/deities_slavic.lua")
-Load("scripts/deities_vanir.lua")
-
---[[
-DefineDeity("Indo-European Sky God", { -- real name? Source: Encyclopedia of the Barbarian World, vol. 1, p. 108
-	Civilization = "indo-european",
-	Gender = "male",
-	Major = true
+DefineDeity("frey", {
+	Name = "Frey",
+	Pantheon = "Vanir",
+	Civilizations = {"elf", "norse"}, -- is a Norse deity, but Alaric Hall proposes that the Vanir are more or less identical with the Elves, so it makes sense to make Frey an elven deity here; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 135.
+	Gender = "male"
 })
---]]
 
-DefineDeity("eloh", { -- from Under the Burning Suns (Battle for Wesnoth)
-	Name = "Eloh",
-	Civilizations = {"elf"},
+DefineDeity("freyja", {
+	Name = "Freyja",
+	Pantheon = "Vanir",
+	Civilizations = {"elf", "norse"}, -- is a Norse deity, but Alaric Hall proposes that the Vanir are more or less identical with the Elves, so it makes sense to make Freyja an elven deity here; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 135.
 	Gender = "female",
-	Major = true
+	Feasts = {
+		"Disa Blot" -- great sacrifice held in mid-winter; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 245.
+	}
 })
 
-DefineDeity("gathaarl", { -- from Tyrant
-	Name = "Gathaarl",
-	Civilizations = {"goblin"},
-	Portfolio = "Battle",
+DefineDeity("njord", { -- One of the Vanir; father of Frey and Freyja; husband of Skadi; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 248.
+	Name = "Njord",
+	Pantheon = "Vanir",
+	Civilizations = {"elf", "norse"}, -- is a Norse deity, but Alaric Hall proposes that the Vanir are more or less identical with the Elves, so it makes sense to make Njord an elven deity here; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 135.
 	Gender = "male",
-	Major = true
-	-- neutral alignment (actually "neutral -")
-	-- prefers offerings of food and weapons
-	-- offering description from Tyrant: "dissolved in a cloud of green smoke"
-	-- related upbringing text from Tyrant: "You learn to rejoice in the thrill of battle, that you should multiply to cover the earth, and that you should raise great totems to the glory of Gathaarl and the Goblin Spirits."
-})
-
-DefineDeity("griknagh", { -- From Under the Burning Suns (Battle for Wesnoth)
-	Name = "Griknagh",
-	Civilizations = {"troll"},
-	Gender = "male",
-	Major = true
+	Portfolio = "Wind and Sea"
 })

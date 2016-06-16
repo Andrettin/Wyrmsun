@@ -50,46 +50,49 @@ function RunEncyclopediaMenu()
 	menu:addFullButton(_("~!Civilizations"), "c", offx + 208 + (113 * -1), offy + 104 + 36*0,
 		function() RunEncyclopediaCivilizationsMenu() end)
 
-	menu:addFullButton(_("~!Factions"), "f", offx + 208 + (113 * -1), offy + 104 + 36*1,
+	menu:addFullButton(_("~!Deities"), "d", offx + 208 + (113 * -1), offy + 104 + 36*1,
+		function() RunEncyclopediaDeitiesMenu() end)
+
+	menu:addFullButton(_("~!Factions"), "f", offx + 208 + (113 * -1), offy + 104 + 36*2,
 		function() RunEncyclopediaFactionsCivilizationMenu() end)
 
-	menu:addFullButton(_("~!Game Concepts"), "g", offx + 208 + (113 * -1), offy + 104 + 36*2,
+	menu:addFullButton(_("~!Game Concepts"), "g", offx + 208 + (113 * -1), offy + 104 + 36*3,
 		function() RunEncyclopediaGameConceptsMenu(false) end)
 
-	menu:addFullButton(_("Grand Strateg~!y Concepts"), "y", offx + 208 + (113 * -1), offy + 104 + 36*3,
+	menu:addFullButton(_("Grand Strateg~!y Concepts"), "y", offx + 208 + (113 * -1), offy + 104 + 36*4,
 		function() RunEncyclopediaGameConceptsMenu(true) end)
 
-	menu:addFullButton(_("~!Heroes"), "h", offx + 208 + (113 * -1), offy + 104 + 36*4,
+	menu:addFullButton(_("~!Heroes"), "h", offx + 208 + (113 * -1), offy + 104 + 36*5,
 		function() RunEncyclopediaUnitsMenu("heroes") end)
 
-	menu:addFullButton(_("~!Items"), "i", offx + 208 + (113 * -1), offy + 104 + 36*5,
+	menu:addFullButton(_("~!Items"), "i", offx + 208 + (113 * -1), offy + 104 + 36*6,
 		function() RunEncyclopediaUnitsMenu("items") end)
 
-	menu:addFullButton(_("Magic P~!refixes"), "r", offx + 208 + (113 * -1), offy + 104 + 36*6,
+	menu:addFullButton(_("Magic P~!refixes"), "r", offx + 208 + (113 * -1), offy + 104 + 36*7,
 		function() RunEncyclopediaUnitsMenu("item_prefixes") end)
 
-	menu:addFullButton(_("Magic ~!Suffixes"), "s", offx + 208 + (113 * -1), offy + 104 + 36*7,
+	menu:addFullButton(_("Magic ~!Suffixes"), "s", offx + 208 + (113 * -1), offy + 104 + 36*8,
 		function() RunEncyclopediaUnitsMenu("item_suffixes") end)
 
-	menu:addFullButton(_("~!Mercenaries"), "m", offx + 208 + (113 * -1), offy + 104 + 36*8,
+	menu:addFullButton(_("~!Mercenaries"), "m", offx + 208 + (113 * 1), offy + 104 + 36*-1,
 		function() RunEncyclopediaUnitsMenu("mercenaries") end)
 
-	menu:addFullButton(_("Runic Suffix~!es"), "e", offx + 208 + (113 * 1), offy + 104 + 36*-1,
+	menu:addFullButton(_("Runic Suffix~!es"), "e", offx + 208 + (113 * 1), offy + 104 + 36*0,
 		function() RunEncyclopediaUnitsMenu("runic_suffixes") end)
 
-	menu:addFullButton(_("~!Technologies"), "t", offx + 208 + (113 * 1), offy + 104 + 36*0,
+	menu:addFullButton(_("~!Technologies"), "t", offx + 208 + (113 * 1), offy + 104 + 36*1,
 		function() RunEncyclopediaUnitsCivilizationMenu("technologies") end)
 
-	menu:addFullButton(_("Te~!xts"), "x", offx + 208 + (113 * 1), offy + 104 + 36*1,
+	menu:addFullButton(_("Te~!xts"), "x", offx + 208 + (113 * 1), offy + 104 + 36*2,
 		function() RunEncyclopediaTextsMenu() end)
 
-	menu:addFullButton(_("U~!niques"), "n", offx + 208 + (113 * 1), offy + 104 + 36*2,
+	menu:addFullButton(_("U~!niques"), "n", offx + 208 + (113 * 1), offy + 104 + 36*3,
 		function() RunEncyclopediaUnitsMenu("unique_items") end)
 
-	menu:addFullButton(_("~!Units"), "u", offx + 208 + (113 * 1), offy + 104 + 36*3,
+	menu:addFullButton(_("~!Units"), "u", offx + 208 + (113 * 1), offy + 104 + 36*4,
 		function() RunEncyclopediaUnitsMenu("units") end)
 
-	menu:addFullButton(_("~!Worlds"), "w", offx + 208 + (113 * 1), offy + 104 + 36*4,
+	menu:addFullButton(_("~!Worlds"), "w", offx + 208 + (113 * 1), offy + 104 + 36*5,
 		function() RunEncyclopediaWorldsMenu() end)
 
 	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * 9),
@@ -1668,6 +1671,141 @@ function OpenEncyclopediaFactionEntry(civilization, faction)
 		background = "Background: " .. GetFactionData(civilization, faction, "Background") .. "\n\n"
 	end
 	l:setCaption(description .. quote .. background)
+			
+	encyclopedia_entry_menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * 9),
+		function() encyclopedia_entry_menu:stop(); end)
+	encyclopedia_entry_menu:run()
+end
+
+function RunEncyclopediaDeitiesMenu()
+
+	if (RunningScenario == false) then
+		if not (IsMusicPlaying()) then
+			PlayMusicName("MenuTheme")
+		end
+	end
+
+	local menu = WarMenu(nil, GetBackground("ui/backgrounds/wyrm.png"))
+	local offx = (Video.Width - 640) / 2
+	local offy = (Video.Height - 480) / 2
+	
+	local height_offset = 2
+	if (Video.Height >= 600) then
+		height_offset = 2 -- change this to 0 if the number of deity entries becomes too large
+	else
+		height_offset = 2
+	end
+	menu:addLabel("~<Encyclopedia: Deities~>", offx + 320, offy + 104 + 36*(-4 + height_offset), nil, true)
+
+	local potential_deities = GetDeities()
+	local deities = {}
+	
+	for i = 1, table.getn(potential_deities) do
+		if (GetDeityData(potential_deities[i], "Description") ~= "") then
+			table.insert(deities, potential_deities[i])
+		end
+	end
+	table.sort(deities)
+
+	local deity_x = 0
+	if (GetTableSize(deities) > 20) then
+		deity_x = -2
+	elseif (GetTableSize(deities) > 10) then
+		deity_x = -1
+	end
+	local deity_y = -3
+
+	for i = 1, table.getn(deities) do
+		menu:addFullButton(_(GetDeityData(deities[i], "Name")), "", offx + 208 + (113 * deity_x), offy + 104 + (36 * (deity_y + height_offset)),
+			function() OpenEncyclopediaDeityEntry(deities[i]); end)
+
+		if (deity_y > 5 or (deity_y > 4 and Video.Height < 600)) then
+			deity_x = deity_x + 2
+			deity_y = -3
+		else
+			deity_y = deity_y + 1
+		end
+	end
+
+	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * 9),
+		function() menu:stop(); end)
+
+	menu:run()
+end
+
+function OpenEncyclopediaDeityEntry(deity)
+	if (RunningScenario == false) then
+		if not (IsMusicPlaying()) then
+			PlayMusicName("MenuTheme")
+		end
+	end
+
+	local encyclopedia_entry_menu = WarMenu(nil, GetBackground("ui/backgrounds/wyrm.png"))
+	local offx = (Video.Width - 640) / 2
+	local offy = (Video.Height - 480) / 2
+
+	encyclopedia_entry_menu:addLabel("~<" .. GetDeityData(deity, "Name") .. "~>", offx + 320, offy + 104 + 36*-2, nil, true)
+
+	local l = MultiLineLabel()
+	l:setFont(Fonts["game"])
+	l:setSize(Video.Width - 64, Video.Height / 2)
+	l:setLineWidth(Video.Width - 64)
+	encyclopedia_entry_menu:add(l, 32, offy + 104 + 36*0)
+	local description = ""
+	
+	if (GetDeityData(deity, "Pantheon") ~= "") then
+		description = description .. "Pantheon: " .. GetDeityData(deity, "Pantheon") .. "\n\n"
+	end
+	if (GetDeityData(deity, "Major")) then
+		description = description .. "Rank: Major\n\n"
+	else
+		description = description .. "Rank: Minor\n\n"
+	end
+	if (GetDeityData(deity, "Portfolio") ~= "") then
+		description = description .. "Portfolio: " .. GetDeityData(deity, "Portfolio") .. "\n\n"
+	end
+	
+	local civilizations = GetDeityData(deity, "Civilizations")
+	table.sort(civilizations)
+	if (table.getn(civilizations) > 0) then
+		description = description .. "Civilizations: "
+		for i=1,table.getn(civilizations) do
+			description = description .. GetCivilizationData(civilizations[i], "Display")
+			if (i < table.getn(civilizations)) then
+				description = description .. ", "
+			end
+		end
+		description = description .. "\n\n"
+	end
+	
+	local alternate_names = {}
+	for i=1,table.getn(civilizations) do
+		if (GetDeityData(deity, "CulturalName", civilizations[i]) ~= "") then
+			table.insert(alternate_names, GetDeityData(deity, "CulturalName", civilizations[i]) .. " (" .. GetCivilizationData(civilizations[i], "Display") .. ")")
+		end
+	end
+	table.sort(alternate_names)
+	if (table.getn(alternate_names) > 0) then
+		description = description .. "Alternate Names: "
+		for i=1,table.getn(alternate_names) do
+			description = description .. alternate_names[i]
+			if (i < table.getn(alternate_names)) then
+				description = description .. ", "
+			end
+		end
+		description = description .. "\n\n"
+	end
+	
+	if (GetDeityData(deity, "Description") ~= "") then
+		description = description .. "Description: " .. GetDeityData(deity, "Description") .. "\n\n"
+	end
+	if (GetDeityData(deity, "Quote") ~= "") then
+		description = description .. "Quote: " .. GetDeityData(deity, "Quote") .. "\n\n"
+	end
+	if (GetDeityData(deity, "Background") ~= "") then
+		description = description .. "Background: " .. GetDeityData(deity, "Background") .. "\n\n"
+	end
+	l:setCaption(description)
 			
 	encyclopedia_entry_menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * 9),
 		function() encyclopedia_entry_menu:stop(); end)

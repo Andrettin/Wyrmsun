@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2015 by Andrettin
+--      (c) Copyright 2015-2016 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -25,27 +25,50 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineDeity("Eloh", { -- from Under the Burning Suns (Battle for Wesnoth)
-	Civilization = "elf",
-	Gender = "female",
+DefineDeity("perun", { -- Slavic thunder-god; Source: "Germans, Avars and Slavs", p. 125
+	Name = "Perun",
+	Civilizations = {"slav"},
+	Portfolio = "Thunder",
+	Gender = "male",
 	Major = true
 })
 
-DefineDeity("Frey", {
-	Civilization = "elf", -- is a Norse deity, but Alaric Hall proposes that the Vanir are more or less identical with the Elves, so it makes sense to make Frey an elven deity here; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 135.
-	Gender = "male"
-})
-
-DefineDeity("Freyja", {
-	Civilization = "elf", -- is a Norse deity, but Alaric Hall proposes that the Vanir are more or less identical with the Elves, so it makes sense to make Freyja an elven deity here; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 135.
-	Gender = "female",
-	Feasts = {
-		"Disa Blot" -- great sacrifice held in mid-winter; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 245.
-	}
-})
-
-DefineDeity("Njord", { -- One of the Vanir; father of Frey and Freyja; husband of Skadi; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 248.
-	Civilization = "elf", -- is a Norse deity, but Alaric Hall proposes that the Vanir are more or less identical with the Elves, so it makes sense to make Njord an elven deity here; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 135.
+DefineDeity("svarog", { -- Slavic light-god; Source: "Germans, Avars and Slavs", p. 125
+	Name = "Svarog",
+	Civilizations = {"slav"},
+	Portfolio = "Light",
 	Gender = "male",
-	Portfolio = "Wind and Sea"
+	Major = true
+})
+
+DefineDeity("deva", { -- Slavic season goddess; Source: "Germans, Avars and Slavs", p. 125
+	Name = "Deva",
+	Civilizations = {"slav"},
+	Gender = "female"
+})
+
+DefineDeity("lada", { -- Slavic season goddess; Source: "Germans, Avars and Slavs", p. 125
+	Name = "Lada",
+	Civilizations = {"slav"},
+	Gender = "female"
+})
+
+DefineDeity("ogen", { -- Source: "Germans, Avars and Slavs", p. 125
+	Name = "Ogen",
+	Civilizations = {"slav"},
+	Portfolio = "Fire"
+	-- child of Svarog
+})
+
+DefineDeity("slnce", { -- the Sun; Source: "Germans, Avars and Slavs", p. 125
+	Name = "Slnce",
+	Civilizations = {"slav"},
+	Portfolio = "Sun"
+	-- child of Svarog
+})
+
+DefineDeity("vesna", { -- Slavic season goddess; Source: "Germans, Avars and Slavs", p. 125
+	Name = "Vesna",
+	Civilizations = {"slav"},
+	Gender = "female"
 })
