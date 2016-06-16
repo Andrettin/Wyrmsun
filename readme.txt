@@ -96,6 +96,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Quests
 - Added a new dialogue featuring Thjodrorir in the "A Rock Home" quest (dwarf).
+- In "The Treasures of Svarinshaug" quest, the dwarves Brokk and Eitri now have to craft the artifacts for the priests of Hroptatyr, instead of for Modsognir.
 
 * Terrain
 - Added new tree stump tiles (by Exidelo).

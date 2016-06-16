@@ -136,7 +136,7 @@ DefineUniqueItem("Draupnir", { -- Source: Kevin Crossley-Holland, "The Norse Myt
 	Prefix = "upgrade-item-prefix-flaming",
 	Suffix = "upgrade-item-suffix-of-power",
 	Background = "In Norse mythology, Draupnir (\"Dropper\") was a gold arm-ring crafted by the dwarves Brokk and Eitri for the Aesir. Eight rings with the same weight in gold as Draupnir dropped from it every ninth night. Draupnir was burned with Odin's son Balder in his funeral pyre.",
-	Quote = "\"The ring I wish not, though burned it was\nOf old with Modsognir's son;\nIn my home is no lack of gold\nIn the wealth my father wields.\"\n- Dwarven Traditional Poetry"
+	Quote = "\"The ring I wish not, though burned it was\nOf old with Hroptatyr's son;\nIn my home is no lack of gold\nIn the wealth my father wields.\"\n- Dwarven Traditional Poetry"
 } )
 
 DefineUniqueItem("The Wedding Veil", { -- Source: Alena Ježková, "77 Prague Legends", 2006, p. 31.
@@ -178,8 +178,9 @@ DefineUniqueItem("Skidbladnir", { -- Source: Henry Adams Bellows (transl.), "The
 --	},
 	Prefix = "upgrade-item-prefix-impregnable",
 	Suffix = "upgrade-item-suffix-of-swiftness",
-	Description = "Skidbladnir was a ship built by the sons of Ivaldi for Modsognir. Its magnificent sail provided the sleek ship with great speed.",
-	Quote = "\"In days of old did Ivaldi's sons\nSkidbladnir fashion fair,\nThe best of ships for the mighty Modsognir,\nThe noble child of the earth.\"\n- Dwarven Traditional Poetry",
+	Description = "Skidbladnir was a ship built by the sons of Ivaldi for the priests of Hroptatyr. Its magnificent sail provided the sleek ship with great speed.",
+--	Quote = "\"In days of old did Ivaldi's sons\nSkidbladnir fashion fair,\nThe best of ships for the bright god Frey,\nThe noble son of Njord.\"\n- Grimnismol", -- original version
+	Quote = "\"In days of old did Ivaldi's sons\nSkidbladnir fashion fair,\nThe best of ships for the bright god Hroptatyr,\nThe noble son of the earth.\"\n- Dwarven Traditional Poetry",
 	Background = "Skidbladnir appeared in Norse mythology as a ship crafted by the sons of Ivaldi for Norse god Frey. The vessel was said to always have fair wind, and could be folded up until it fit into a pocket. The ship's name means \"wooden-bladed\" in Old Norse."
 } )
 

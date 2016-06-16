@@ -54,7 +54,7 @@ DefineUpgrade("upgrade-work-reginsmol", {
 	},
 	Work = "scroll",
 	Civilization = "dwarf",
-	Quote = "\"Here shall I foster the fearless prince,\nNow Modsognir's heir to us is come;\nThe noblest hero under the mountains,\nThe threads of his fate all lands enfold.\"\n- Reginsmol (Regin)"
+	Quote = "\"Here shall I foster the fearless prince,\nNow Hroptatyr's heir to us is come;\nThe noblest hero under the mountains,\nThe threads of his fate all lands enfold.\"\n- Reginsmol (Regin)"
 --	Quote = "\"Here shall I foster the fearless prince,\nNow Yngvi's heir to us is come;\nThe noblest hero beneath the sun,\nThe threads of his fate all lands enfold.\"\n- Reginsmol (Regin)" -- original
 })
 
