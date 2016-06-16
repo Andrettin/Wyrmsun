@@ -25,6 +25,22 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineDeity("odin", { -- Known as Allfather, the Terrible One, One-eyed, Father of Battle; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 248; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75.
+	Name = "Odin",
+	Pantheon = "Aesir",
+	HomePlane = "Asgard",
+	Civilizations = {"dwarf", "germanic", "norse", "teuton"},
+	Gender = "male",
+	Major = true,
+	Portfolio = "Poetry, Battle and Death",
+	CulturalNames = {
+		"dwarf", "Hroptatyr", -- in Norse mythology, one of the names of Odin, which was used in a verse concerning a charm by the dwarf Thjodrorir in the Hovamol, who sang wisdom for "Hroptatyr" wise; name means "Crier of the Gods", "the Crying God" or "the Prophet"
+		"germanic", "Wodanaz",
+		"teuton", "Woden" -- Anglo-Saxon name for the deity
+	},
+	Description = "Odin is the chief deity of the Aesir and the father of Thor and Balder. As Woden, the royal house of Deira claimed him as their ancestor."
+})
+
 DefineDeity("aegir", { -- Married to Ran; they have their hall under the sea by the island of Hlesey; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 239.
 	Name = "Aegir",
 	Pantheon = "Aesir",
@@ -36,12 +52,13 @@ DefineDeity("aegir", { -- Married to Ran; they have their hall under the sea by 
 DefineDeity("balder", { -- Due to Loki's mischief, he was killed by Hod; Balder returns after Ragnarok; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 240; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75.
 	Name = "Balder",
 	Pantheon = "Aesir",
+	HomePlane = "Asgard",
 	Civilizations = {"norse", "teuton"},
 	Gender = "male",
 	CulturalNames = {
 		"teuton", "Bældæg" -- Anglo-Saxon name for the deity
 	},
-	Description = "The son of Odin and Frigg, Balder is known for his beauty, wisdom and gentleness. As Baeldaeg, the royal houses of both Bernicia and Wessex ascribed their descent to him."
+--	Description = "The son of Odin and Frigg, Balder is known for his beauty, wisdom and gentleness. As Baeldaeg, the royal houses of both Bernicia and Wessex ascribed their descent to him."
 })
 
 DefineDeity("bragi", { -- Son of Odin and husband of Idun; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 240.
@@ -154,21 +171,6 @@ DefineDeity("nanna", { -- Balder's wife and daughter of Nep; Source: Kevin Cross
 	Pantheon = "Aesir",
 	Civilizations = {"norse"},
 	Gender = "female"
-})
-
-DefineDeity("odin", { -- Known as Allfather, the Terrible One, One-eyed, Father of Battle; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 248; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75.
-	Name = "Odin",
-	Pantheon = "Aesir",
-	Civilizations = {"dwarf", "germanic", "norse", "teuton"},
-	Gender = "male",
-	Major = true,
-	Portfolio = "Poetry, Battle and Death",
-	CulturalNames = {
-		"dwarf", "Hroptatyr", -- in Norse mythology, one of the names of Odin, which was used in a verse concerning a charm by the dwarf Thjodrorir in the Hovamol, who sang wisdom for "Hroptatyr" wise; name means "Crier of the Gods", "the Crying God" or "the Prophet"
-		"germanic", "Wodanaz",
-		"teuton", "Woden" -- Anglo-Saxon name for the deity
-	},
-	Description = "Odin is the chief deity of the Aesir and the father of Thor and Balder. As Woden, the royal house of Deira claimed him as their ancestor."
 })
 
 DefineDeity("ring", { -- Odin's mistress; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 249.

@@ -77,22 +77,25 @@ function RunEncyclopediaMenu()
 	menu:addFullButton(_("~!Mercenaries"), "m", offx + 208 + (113 * 1), offy + 104 + 36*-1,
 		function() RunEncyclopediaUnitsMenu("mercenaries") end)
 
-	menu:addFullButton(_("Runic Suffix~!es"), "e", offx + 208 + (113 * 1), offy + 104 + 36*0,
+	menu:addFullButton(_("P~!lanes"), "l", offx + 208 + (113 * 1), offy + 104 + 36*0,
+		function() RunEncyclopediaPlanesMenu() end)
+
+	menu:addFullButton(_("Runic Suffix~!es"), "e", offx + 208 + (113 * 1), offy + 104 + 36*1,
 		function() RunEncyclopediaUnitsMenu("runic_suffixes") end)
 
-	menu:addFullButton(_("~!Technologies"), "t", offx + 208 + (113 * 1), offy + 104 + 36*1,
+	menu:addFullButton(_("~!Technologies"), "t", offx + 208 + (113 * 1), offy + 104 + 36*2,
 		function() RunEncyclopediaUnitsCivilizationMenu("technologies") end)
 
-	menu:addFullButton(_("Te~!xts"), "x", offx + 208 + (113 * 1), offy + 104 + 36*2,
+	menu:addFullButton(_("Te~!xts"), "x", offx + 208 + (113 * 1), offy + 104 + 36*3,
 		function() RunEncyclopediaTextsMenu() end)
 
-	menu:addFullButton(_("U~!niques"), "n", offx + 208 + (113 * 1), offy + 104 + 36*3,
+	menu:addFullButton(_("U~!niques"), "n", offx + 208 + (113 * 1), offy + 104 + 36*4,
 		function() RunEncyclopediaUnitsMenu("unique_items") end)
 
-	menu:addFullButton(_("~!Units"), "u", offx + 208 + (113 * 1), offy + 104 + 36*4,
+	menu:addFullButton(_("~!Units"), "u", offx + 208 + (113 * 1), offy + 104 + 36*5,
 		function() RunEncyclopediaUnitsMenu("units") end)
 
-	menu:addFullButton(_("~!Worlds"), "w", offx + 208 + (113 * 1), offy + 104 + 36*5,
+	menu:addFullButton(_("~!Worlds"), "w", offx + 208 + (113 * 1), offy + 104 + 36*6,
 		function() RunEncyclopediaWorldsMenu() end)
 
 	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * 9),
@@ -1191,6 +1194,125 @@ function OpenEncyclopediaText(text_name, chosen_chapter)
 	encyclopedia_entry_menu:run()
 end
 
+function RunEncyclopediaPlanesMenu()
+
+	if (RunningScenario == false) then
+		if not (IsMusicPlaying()) then
+			PlayMusicName("MenuTheme")
+		end
+	end
+
+	local menu = WarMenu(nil, GetBackground("ui/backgrounds/wyrm.png"))
+	local offx = (Video.Width - 640) / 2
+	local offy = (Video.Height - 480) / 2
+	
+	local height_offset = 2
+	if (Video.Height >= 600) then
+		height_offset = 2 -- change this to 0 if the number of entries becomes too large
+	else
+		height_offset = 2
+	end
+	menu:addLabel("~<Encyclopedia: Planes~>", offx + 320, offy + 104 + 36*(-4 + height_offset), nil, true)
+
+	local planes = GetPlanes()
+
+	local plane_x = 0
+	if (GetTableSize(planes) > 20) then
+		plane_x = -2
+	elseif (GetTableSize(planes) > 10) then
+		plane_x = -1
+	end
+	local plane_y = -3
+
+	for i=1,table.getn(planes) do
+		menu:addFullButton(_(GetPlaneData(planes[i], "Name")), "", offx + 208 + (113 * plane_x), offy + 104 + (36 * (plane_y + height_offset)),
+			function() OpenEncyclopediaPlaneEntry(planes[i]); end)
+
+		if (plane_y > 5 or (plane_y > 4 and Video.Height < 600)) then
+			plane_x = plane_x + 2
+			plane_y = -3
+		else
+			plane_y = plane_y + 1
+		end
+	end
+
+--	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * (10 - height_offset) + 18),
+	menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * 9),
+		function() menu:stop(); end)
+
+	menu:run()
+end
+
+function OpenEncyclopediaPlaneEntry(plane)
+	if (RunningScenario == false) then
+		if not (IsMusicPlaying()) then
+			PlayMusicName("MenuTheme")
+		end
+	end
+
+	local encyclopedia_entry_menu = WarMenu(nil, GetBackground("ui/backgrounds/wyrm.png"))
+	local offx = (Video.Width - 640) / 2
+	local offy = (Video.Height - 480) / 2
+
+	encyclopedia_entry_menu:addLabel("~<" .. plane .. "~>", offx + 320, offy + 104 + 36*-2, nil, true)
+
+	local l = MultiLineLabel()
+	l:setFont(Fonts["game"])
+	l:setSize(Video.Width - 64, Video.Height / 2)
+	l:setLineWidth(Video.Width - 64)
+	encyclopedia_entry_menu:add(l, 32, offy + 104 + 36*0)
+	local description = ""
+	if (GetPlaneData(plane, "Description") ~= "") then
+		description = description .. "Description: " .. GetPlaneData(plane, "Description")
+	end
+	if (GetPlaneData(plane, "Background") ~= "") then
+		description = description .. "\n\nBackground: " .. GetPlaneData(plane, "Background")
+	end
+	l:setCaption(description)
+			
+	-- add buttons of texts related to the subject matter of the entry
+	local chapter_references = 0
+	local texts = GetTexts()
+	for i, text_name in ipairs(texts) do
+		local chapters = GetTextData(text_name, "Chapters")
+		for j=1, table.getn(chapters) do
+			if (string.find(l:getCaption(), "~<" .. chapters[j] .. "~>") ~= nil) then
+				chapter_references = chapter_references + 1
+			end
+		end
+	end
+	
+	local chapter_x
+	local chapter_y = 8
+	if (chapter_references == 1) then
+		chapter_x = 0
+	elseif (chapter_references == 2) then
+		chapter_x = -1
+	else
+		chapter_x = -2
+	end
+
+	for i, text_name in ipairs(texts) do
+		local chapters = GetTextData(text_name, "Chapters")
+		for j=1, table.getn(chapters) do
+			if (string.find(l:getCaption(), "~<" .. chapters[j] .. "~>") ~= nil) then
+				if (table.getn(chapters) > 1) then
+					encyclopedia_entry_menu:addFullButton(chapters[j], "", offx + 208 + (113 * chapter_x), offy + 104 + (36 * chapter_y),
+						function() OpenEncyclopediaText(text_name, chapters[j]); end)
+				else
+					encyclopedia_entry_menu:addFullButton(chapters[j], "", offx + 208 + (113 * chapter_x), offy + 104 + (36 * chapter_y),
+						function() OpenEncyclopediaText(text_name); end)
+				end
+				chapter_x = chapter_x + 2
+			end
+		end
+	end
+
+	encyclopedia_entry_menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * 9),
+		function() encyclopedia_entry_menu:stop(); end)
+	encyclopedia_entry_menu:run()
+end
+
 function RunEncyclopediaWorldsMenu()
 
 	if (RunningScenario == false) then
@@ -1222,12 +1344,7 @@ function RunEncyclopediaWorldsMenu()
 	local world_y = -3
 
 	for i=1,table.getn(worlds) do
-		local world_hotkey = ""		
-		if (string.find(_(GetWorldData(worlds[i], "Name")), "~!") ~= nil) then
-			world_hotkey = string.sub(string.match(_(GetWorldData(worlds[i], "Name")), "~!%a"), 3)
-			world_hotkey = string.lower(world_hotkey)
-		end
-		menu:addFullButton(_(GetWorldData(worlds[i], "Name")), world_hotkey, offx + 208 + (113 * world_x), offy + 104 + (36 * (world_y + height_offset)),
+		menu:addFullButton(_(GetWorldData(worlds[i], "Name")), "", offx + 208 + (113 * world_x), offy + 104 + (36 * (world_y + height_offset)),
 			function() OpenEncyclopediaWorldEntry(worlds[i]); end)
 
 		if (world_y > 5 or (world_y > 4 and Video.Height < 600)) then
@@ -1264,14 +1381,16 @@ function OpenEncyclopediaWorldEntry(world)
 	l:setLineWidth(Video.Width - 64)
 	encyclopedia_entry_menu:add(l, 32, offy + 104 + 36*0)
 	local description = ""
-	local background = ""
+	if (GetWorldData(world, "Plane") ~= "") then
+		description = "Plane: " .. GetWorldData(world, "Plane") .. "\n\n"
+	end
 	if (GetWorldData(world, "Description") ~= "") then
-		description = "Description: " .. GetWorldData(world, "Description")
+		description = description .. "Description: " .. GetWorldData(world, "Description")
 	end
 	if (GetWorldData(world, "Background") ~= "") then
-		background = "\n\nBackground: " .. GetWorldData(world, "Background")
+		description = description .. "\n\nBackground: " .. GetWorldData(world, "Background")
 	end
-	l:setCaption(description .. background)
+	l:setCaption(description)
 			
 	-- add buttons of texts related to the subject matter of the entry
 	local chapter_references = 0
@@ -1755,6 +1874,9 @@ function OpenEncyclopediaDeityEntry(deity)
 	
 	if (GetDeityData(deity, "Pantheon") ~= "") then
 		description = description .. "Pantheon: " .. GetDeityData(deity, "Pantheon") .. "\n\n"
+	end
+	if (GetDeityData(deity, "HomePlane") ~= "") then
+		description = description .. "Home Plane: " .. GetDeityData(deity, "HomePlane") .. "\n\n"
 	end
 	if (GetDeityData(deity, "Major")) then
 		description = description .. "Rank: Major\n\n"

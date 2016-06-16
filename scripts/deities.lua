@@ -49,7 +49,8 @@ DefineDeity("gathaarl", { -- from Tyrant
 	Civilizations = {"goblin"},
 	Portfolio = "Battle",
 	Gender = "male",
-	Major = true
+	Major = true,
+	Description = "The chief goblin deity, Gathaarl rejoices in the bloodiness of battle. His priests preach that goblins shall procreate and multiply, so that they may cover the face of Nidavellir in green. Many goblins raise totems to Gathaarl's glory, hoping that the deity will intercede for them."
 	-- neutral alignment (actually "neutral -")
 	-- prefers offerings of food and weapons
 	-- offering description from Tyrant: "dissolved in a cloud of green smoke"
