@@ -51,5 +51,9 @@ DefineUpgrade("upgrade-work-historia-ecclesiastica-venerabilis-bedae", { -- Sour
 })
 
 DefineModifier("upgrade-work-hildebrandslied",
-	{"BonusAgainstMounted", 1}
+	{"KnowledgeWarfare", 1}
+)
+
+DefineModifier("upgrade-work-historia-ecclesiastica-venerabilis-bedae",
+	{"KnowledgeMagic", 1}
 )

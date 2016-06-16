@@ -70,13 +70,13 @@ DefineModifier("upgrade-work-alvissmol",
 )
 
 DefineModifier("upgrade-work-fafnismol",
-	{"BonusAgainstDragons", 1}
+	{"KnowledgeWarfare", 1}
 )
 
 DefineModifier("upgrade-work-reginsmol",
-	{"Backstab", 1}
+	{"KnowledgeWarfare", 1}
 )
 
 DefineModifier("upgrade-work-the-scepter-of-fire",
-	{"FireResistance", 1}
+	{"KnowledgeMagic", 1}
 )

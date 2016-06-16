@@ -1383,6 +1383,9 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {KnowledgeMagic = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Knowledge (Magic): "), Variable = "KnowledgeMagic", Font = wyr.preferences.PopupDescriptionFont}}
 				},
+				{ 	Condition = {KnowledgeWarfare = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Knowledge (Warfare): "), Variable = "KnowledgeWarfare", Font = wyr.preferences.PopupDescriptionFont}}
+				},
 				{ 	Condition = {DisembarkmentBonus = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Disembarkment Bonus"), Font = wyr.preferences.PopupDescriptionFont}}
 				},
@@ -1900,6 +1903,9 @@ if not (ui_loaded_first_time) then
 				},
 				{ 	Condition = {KnowledgeMagic = "only"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Knowledge (Magic): "), Variable = "KnowledgeMagic", Font = wyr.preferences.PopupDescriptionFont}}
+				},
+				{ 	Condition = {KnowledgeWarfare = "only"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Knowledge (Warfare): "), Variable = "KnowledgeWarfare", Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				-- Description
 				{ 	Margin = {1, 1}, Condition = {HasDescription = true}, 

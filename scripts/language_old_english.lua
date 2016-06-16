@@ -1795,6 +1795,12 @@ DefineLanguageWord("Wē", { -- Source: Sean Crist, "An Analysis of *z loss in We
 	Nominative = "Wē"
 })
 
+DefineLanguageWord("Wearg", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, p. 146.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Accursed Thing"}
+})
+
 DefineLanguageWord("Weg", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
 	Language = "old-english",
 	Type = "noun",

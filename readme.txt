@@ -74,7 +74,8 @@ https://github.com/Andrettin/Wyrmsun
 
 * Heroes
 - Derro Thugs can now be created as custom heroes for (usable for Nidavellir quests).
-- Heroes can now have a "Knowledge (Magic)" stat (seen in the unit's popup when hovering over its portrait when it is selected), used for identifying magic items. For every five Knowledge (Magic) levels the unit also gains one maximum mana.
+- Heroes now have a "Knowledge (Magic)" stat (seen in the unit's popup when hovering over its portrait when it is selected), used for identifying magic items. For every five Knowledge (Magic) levels the unit also gains one maximum mana.
+- Heroes now have a "Knowledge (Warfare)" stat (seen in the unit's popup when hovering over its portrait when it is selected). For every five Knowledge (Warfare) levels the unit gains one maximum HP.
 
 * Items
 - Added "Scroll of Sagan Allegiance", which transforms a gnomish unit (including gnomish custom heroes) into their faction equivalent for the Sagan Tribe.
@@ -82,13 +83,22 @@ https://github.com/Andrettin/Wyrmsun
 
 * Literary Works
 - The Alvissmol now increases Knowledge (Magic) by 1, instead of increasing mana.
+- The Fafnismol now increases Knowledge (Warfare) by 1, instead of increasing the bonus vs. dragons.
+- The Reginsmol now increases Knowledge (Warfare) by 1, instead of increasing the backstab bonus.
+- The Scepter of Fire now increases Knowledge (Magic) by 1, instead of increasing fire resistance.
+- The Hildebrandslied now increases Knowledge (Warfare) by 1, instead of increasing the bonus vs. mounted.
+- The Meditations now increases Knowledge (Warfare) by 1, instead of increasing HP.
+- Added "De Bello Gallico", which increases Knowledge (Warfare) by 1, and is dropped by Latin Forums.
+- Added "Notitia Dignitatum", which increases Knowledge (Warfare) by 1, and is dropped by Latin Forums.
+- Added the "Historia Ecclesiastica Venerabilis Bedae", which increases Knowledge (Magic) by 1, and is dropped by Teuton Rathauses and Burgs.
 
 * Miscellaneous
 - Added "No Day/Night Cycle" option when starting single-player maps.
 - Fixed a crash cause.
 - Added support for the engine to recolor portraits and unit graphics to obtain new skin (such as the gray skin color for deep gnomes) and hair colors.
 - Fixed a crash which happened when playing a custom map with the "Neutral" civilization being used for an AI player.
-- Added a "Knowledge (Magic)" entry to the encyclopedia Game Concepts section, explaining how this new stat works.
+- Added a "Knowledge (Magic)" entry to the encyclopedia Game Concepts section, explaining how the new stat works.
+- Added a "Knowledge (Warfare)" entry to the encyclopedia Game Concepts section, explaining how the new stat works.
 - Added a "Planes" section in the encyclopedia, explaining some of the different planes of existence in the game's lore.
 
 * Multiplayer

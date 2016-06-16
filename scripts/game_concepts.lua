@@ -78,6 +78,10 @@ GameConcepts = {
 		Name = _("Kno~!wledge (Magic)"),
 		Description = _("Knowledge (Magic) is a stat primarily relevant for higher-level units. When holding a magic item in the unit's inventory, it is automatically identified if the unit's Knowledge (Magic) level is high enough. Furthermore, for every five levels in Knowledge (Magic), the character gains one maximum mana. The stat is increased mainly by reading the appropriate literary works.")
 	},
+	KnowledgeWarfare = {
+		Name = _("Knowledge (Warfare)"),
+		Description = _("Knowledge (Magic) is a stat primarily relevant for higher-level units. For every five levels in Knowledge (Warfare), the character gains one maximum hit point. The stat is increased mainly by reading the appropriate literary works.")
+	},
 	Mercenaries = {
 		Name = _("Mer~!cenaries"),
 		Description = _("Groups of mercenaries can be hired at mercenary camps, providing the player with a few experienced warriors, no time needing to be spent in training them. Mercenaries do cost quite a bit of gold, however. Besides mercenary squads, players can also hire thieves in mercenary camps. Like mercenary groups, thieves are hired instantly.")

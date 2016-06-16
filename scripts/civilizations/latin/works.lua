@@ -52,6 +52,14 @@ DefineUpgrade("upgrade-work-notitia-dignitatum", { -- Source: Heiko Steuer, "War
 	Year = 400 -- Notitia Dignitatum was written c. 400 AD
 })
 
+DefineModifier("upgrade-work-de-bello-gallico",
+	{"KnowledgeWarfare", 1}
+)
+
 DefineModifier("upgrade-work-meditations",
-	{"HitPoints", 1}
+	{"KnowledgeWarfare", 1}
+)
+
+DefineModifier("upgrade-work-notitia-dignitatum",
+	{"KnowledgeWarfare", 1}
 )
