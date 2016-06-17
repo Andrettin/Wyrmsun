@@ -38,7 +38,7 @@ DefineDeity("odin", { -- Known as Allfather, the Terrible One, One-eyed, Father 
 		"germanic", "Wodanaz",
 		"teuton", "Woden" -- Anglo-Saxon name for the deity
 	},
-	Description = "Odin is the chief deity of the Aesir and the father of Thor and Balder. In archaic times, he revealed himself to the Germanics of Earth and the dwarves of Nidavellir, originating a priesthood on both worlds (having the appearance of a human on Earth and that of a dwarf on Nidavellir). As Woden, the royal house of Deira claimed him as their ancestor."
+	Description = "Odin is the chief deity of the Aesir and the father of Thor and Balder. In archaic times, he revealed himself to the Germanics of Earth and the dwarves of Nidavellir, originating a priesthood on both worlds (having the appearance of a human on Earth and that of a dwarf on Nidavellir). Since deities are beings made of pure magic, they can only establish a tenuous link to the material plane, with the result that Odin mostly communicates with humans and dwarves only through their dreams. As Woden, the royal house of Deira claimed him as their ancestor."
 })
 
 DefineDeity("aegir", { -- Married to Ran; they have their hall under the sea by the island of Hlesey; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 239.
