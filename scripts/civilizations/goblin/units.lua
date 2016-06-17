@@ -501,6 +501,20 @@ DefineUnitType("unit-goblin-smithy", { Name = _("Fugla Forge"),
 	}
 } )
 
+DefineUnitType("unit-goblin-temple", { Name = _("Temple"),
+	Parent = "unit-template-temple",
+	Civilization = "goblin",
+	Description = _("Goblin temples are built on sites deemed to be particularly mystic for the green-skinned creatures, a wyrm's burial ground being an esteemed choice. Around the site massive runestones are placed, readying it for goblin shamans to chaint their rituals."),
+	Image = {"file", "goblin/buildings/temple.png", "size", {96, 96}},
+	Shadow = {"file", "goblin/buildings/temple_shadow.png", "size", {96, 96}},
+	Icon = "icon-goblin-temple",
+--	Trains = {"unit-goblin-shaman", "unit-potion-of-healing"},
+	Trains = {"unit-potion-of-healing"},
+	Sounds = {
+		"help", "basic-goblin-voices-help-town"
+	}
+} )
+
 DefineUnitType("unit-goblin-watch-tower", { Name = _("Watch Tower"),
 	Parent = "unit-template-watch-tower",
 	Civilization = "goblin",
@@ -526,7 +540,7 @@ DefineUnitType("unit-goblin-guard-tower", { Name = _("Guard Tower"),
 } )
 
 DefineUnitType("unit-goblin-worker", {
-	Trains = {"unit-goblin-town-hall", "unit-goblin-farm", "unit-goblin-mess-hall", "unit-goblin-lumber-mill", "unit-goblin-smithy", "unit-goblin-watch-tower", "unit-gold-mine", "unit-silver-mine", "unit-copper-mine"}
+	Trains = {"unit-goblin-town-hall", "unit-goblin-farm", "unit-goblin-mess-hall", "unit-goblin-lumber-mill", "unit-goblin-smithy", "unit-goblin-temple", "unit-goblin-watch-tower", "unit-gold-mine", "unit-silver-mine", "unit-copper-mine"}
 } )
 
 DefineUnitType("unit-goblin-banner", { Name = _("Goblin Banner"),

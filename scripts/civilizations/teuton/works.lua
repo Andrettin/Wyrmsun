@@ -25,6 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+--[[
 DefineUpgrade("upgrade-work-austria-and-her-future", { -- Source: Waltraud Heindl, "Josephinische Mandarine", 2013, p. 46; Source: A.J.P. Taylor, The Habsburg Monarchy, 1809-1918, 1964, pp. 55-56.
 	Name = _("Austria and Her Future"),
 	Work = "scroll", -- Schrift
@@ -32,6 +33,7 @@ DefineUpgrade("upgrade-work-austria-and-her-future", { -- Source: Waltraud Heind
 	Description = "In \"Austria and her Future\" (\"Österreich und dessen Zukunft\"), Victor Andrian-Werburg argues that the Empire is nothing and the provinces are all, arousing the opinion of the educated administrative class.",
 	Year = 1850
 })
+--]]
 
 DefineUpgrade("upgrade-work-hildebrandslied", {
 	Name = _("Hildebrandslied"),
@@ -43,17 +45,8 @@ DefineUpgrade("upgrade-work-hildebrandslied", {
 	Quote = "\"That Hildebrand was my father,\nand I am Hadubrand.\nLong ago to the east he went,\nfleeing Otacher's hatred\"\n- Hildebrandslied (Hadubrand)"
 })
 
-DefineUpgrade("upgrade-work-historia-ecclesiastica-venerabilis-bedae", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 34.
-	Name = _("Historia Ecclesiastica Venerabilis Bedae"),
-	Work = "scroll",
-	Civilization = "teuton",
-	Year = 731
-})
-
 DefineModifier("upgrade-work-hildebrandslied",
 	{"KnowledgeWarfare", 1}
 )
 
-DefineModifier("upgrade-work-historia-ecclesiastica-venerabilis-bedae",
-	{"KnowledgeMagic", 1}
-)
+Load("scripts/civilizations/teuton/works_english.lua")

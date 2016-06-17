@@ -25,26 +25,14 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
---=============================================================================
---	Define unit-types.
---
---	NOTE: Save can generate this table.
---
+DefineUpgrade("upgrade-work-wid-dweorh", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, pp. 166-167.
+	Name = _("Against a Dwarf"),
+	Work = "scroll",
+	Civilization = "goblin", -- actually an Anglo-Saxon charm, but here we put is as a goblin one since this is a charm against a dwarf ("Wid Dweorh" means "Against a Dwarf")
+--	Quote = "\"That this should never scathe the sick,\nNor him who might this charm acquire,\nNor him who could this charm intone.\"\n- Against a Dwarf"
+	Quote = "\"As soon as from the land they came,\nThey then began to cool.\"\n- Against a Dwarf"
+})
 
-DefineUnitType("unit-latin-town-hall", { Name = _("Forum"),
-	Parent = "unit-template-town-hall",
-	Civilization = "latin",
-	Description = _("The forum was the main political gathering place in Latin communities."),
-	Image = {"file", "latin/buildings/forum.png", "size", {128, 128}},
-	Shadow = {"file", "latin/buildings/forum_shadow.png", "size", {128, 128}},
-	Icon = "icon-latin-forum",
-	Construction = "construction-land",
-	Trains = {"unit-teuton-worker"},
-	ButtonHint = _("Build Foru~!m"),
-	ButtonKey = "m",
-	AiDrops = {"unit-boots"},
-	DropAffixes = {"upgrade-item-prefix-flaming", "upgrade-item-prefix-quenching", "upgrade-item-prefix-storm", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-lightning", "upgrade-item-suffix-of-the-serpent", "upgrade-item-suffix-of-the-snail", "upgrade-item-suffix-of-trickery"},
-	Sounds = {
---		"help", "basic-germanic-voices-help-town"
-	}
-} )
+DefineModifier("upgrade-work-wid-dweorh",
+	{"KnowledgeMagic", 1}
+)

@@ -121,6 +121,7 @@ DefineModifier("upgrade-goblin-masonry",
 	{"apply-to", "unit-goblin-town-hall"}, {"apply-to", "unit-goblin-stronghold"},
 	{"apply-to", "unit-goblin-farm"}, {"apply-to", "unit-goblin-mess-hall"},
 	{"apply-to", "unit-goblin-lumber-mill"}, {"apply-to", "unit-goblin-smithy"},
+	{"apply-to", "unit-goblin-temple"},
 	{"apply-to", "unit-goblin-watch-tower"}, {"apply-to", "unit-goblin-guard-tower"}
 )
 
@@ -144,6 +145,7 @@ DefineModifier("upgrade-goblin-writing",
 	{"apply-to", "unit-goblin-town-hall"}, {"apply-to", "unit-goblin-stronghold"},
 	{"apply-to", "unit-goblin-farm"}, {"apply-to", "unit-goblin-mess-hall"},
 	{"apply-to", "unit-goblin-lumber-mill"}, {"apply-to", "unit-goblin-smithy"},
+--	{"apply-to", "unit-goblin-temple"},
 	{"apply-to", "unit-goblin-watch-tower"}, {"apply-to", "unit-goblin-guard-tower"}
 )
 
@@ -175,7 +177,11 @@ DefineDependency("unit-goblin-glider",
 DefineDependency("upgrade-goblin-pike",
 	{"upgrade-goblin-long-spear"}
 )
-	
+
+DefineDependency("unit-goblin-temple",
+	{"unit-goblin-lumber-mill"}
+)
+
 DefineDependency("unit-goblin-stronghold",
 	{"unit-goblin-mess-hall", "upgrade-goblin-masonry"}
 )

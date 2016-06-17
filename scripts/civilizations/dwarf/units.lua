@@ -974,7 +974,7 @@ DefineUnitType("unit-dwarven-town-hall", { Name = _("Mead Hall"),
 	FireResistance = 20,
 	ButtonHint = _("Build Mead ~!Hall"),
 	AiDrops = {"unit-boots"},
-	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-glacial", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-the-snigill", "upgrade-work-alvissmol", "upgrade-work-fafnismol", "upgrade-work-reginsmol", "upgrade-work-the-scepter-of-fire"},
+	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-glacial", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-the-snigill"},
 	Variations = {
 		{
 			"variation-id", "dwarf",
@@ -1004,7 +1004,7 @@ DefineUnitType("unit-dwarven-stronghold", { Name = _("Bastion"),
 	RepairCosts = {"gold", 1, "lumber", 1, "stone", 1},
 	FireResistance = 20,
 	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-round-shield", "unit-brising-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots"},
-	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-glacial", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-the-snigill", "upgrade-work-alvissmol", "upgrade-work-fafnismol", "upgrade-work-reginsmol", "upgrade-work-the-scepter-of-fire"},
+	DropAffixes = {"upgrade-item-prefix-cold", "upgrade-item-prefix-glacial", "upgrade-item-prefix-quenching", "upgrade-item-suffix-of-cold", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-the-snigill"},
 	Variations = {
 		{
 			"variation-id", "dwarf",

@@ -188,7 +188,7 @@ DefineCharacter("Victor Andrian-Werburg", { -- Source: Waltraud Heindl, "Josephi
 	Faction = "Austria",
 	ProvinceOfOrigin = "Tyrol",
 	Year = 1850, -- published "Austria and Her Future" (Österreich und dessen Zukunft") anonymously in 1850
-	AuthoredWorks = {"upgrade-work-austria-and-her-future"}
+--	AuthoredWorks = {"upgrade-work-austria-and-her-future"}
 	-- a "conservative thinker"
 })
 

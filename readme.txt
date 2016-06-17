@@ -88,9 +88,12 @@ https://github.com/Andrettin/Wyrmsun
 - The Scepter of Fire now increases Knowledge (Magic) by 1, instead of increasing fire resistance.
 - The Hildebrandslied now increases Knowledge (Warfare) by 1, instead of increasing the bonus vs. mounted.
 - The Meditations now increases Knowledge (Warfare) by 1, instead of increasing HP.
-- Added "De Bello Gallico", which increases Knowledge (Warfare) by 1, and is dropped by Latin Forums.
-- Added "Notitia Dignitatum", which increases Knowledge (Warfare) by 1, and is dropped by Latin Forums.
-- Added the "Historia Ecclesiastica Venerabilis Bedae", which increases Knowledge (Magic) by 1, and is dropped by Teuton Rathauses and Burgs.
+- Added "De Bello Gallico" (Latin), which increases Knowledge (Warfare) by 1.
+- Added "Notitia Dignitatum" (Latin), which increases Knowledge (Warfare) by 1.
+- Added the "Historia Ecclesiastica Venerabilis Bedae" (Teuton), which increases Knowledge (Magic) by 1.
+- Added the "Wid Faerstice" (Teuton), which increases Knowledge (Magic) by 1.
+- Added the "Against a Dwarf" (Goblin), which increases Knowledge (Magic) by 1.
+- Besides Town Halls and Strongholds, Temples can now also drop literary works.
 
 * Miscellaneous
 - Added "No Day/Night Cycle" option when starting single-player maps.

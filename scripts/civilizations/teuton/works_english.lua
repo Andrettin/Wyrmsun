@@ -25,26 +25,35 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
---=============================================================================
---	Define unit-types.
---
---	NOTE: Save can generate this table.
---
+DefineUpgrade("upgrade-work-historia-ecclesiastica-venerabilis-bedae", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 34.
+	Name = _("Historia Ecclesiastica Venerabilis Bedae"),
+	Work = "scroll",
+	Civilization = "teuton",
+	Year = 731
+})
 
-DefineUnitType("unit-latin-town-hall", { Name = _("Forum"),
-	Parent = "unit-template-town-hall",
-	Civilization = "latin",
-	Description = _("The forum was the main political gathering place in Latin communities."),
-	Image = {"file", "latin/buildings/forum.png", "size", {128, 128}},
-	Shadow = {"file", "latin/buildings/forum_shadow.png", "size", {128, 128}},
-	Icon = "icon-latin-forum",
-	Construction = "construction-land",
-	Trains = {"unit-teuton-worker"},
-	ButtonHint = _("Build Foru~!m"),
-	ButtonKey = "m",
-	AiDrops = {"unit-boots"},
-	DropAffixes = {"upgrade-item-prefix-flaming", "upgrade-item-prefix-quenching", "upgrade-item-prefix-storm", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-lightning", "upgrade-item-suffix-of-the-serpent", "upgrade-item-suffix-of-the-snail", "upgrade-item-suffix-of-trickery"},
-	Sounds = {
---		"help", "basic-germanic-voices-help-town"
-	}
-} )
+DefineUpgrade("upgrade-work-wid-faerstice", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, pp. 164-167.
+	Name = _("Wid Faerstice"),
+	Work = "scroll",
+	Civilization = "teuton",
+	Quote = "\"If herein be aught of iron,\nWork of witches, it shall melt!\"\n- Wid Faerstice"
+})
+
+DefineUpgrade("upgrade-work-wid-wennum", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, pp. 166-167.
+	Name = _("Wid Wennum"),
+	Work = "scroll",
+	Civilization = "teuton",
+	Quote = "\"Wen, wen, little wen,\nHere you shall not build, nor any dwelling have\"\n- Wid Wennum"
+})
+
+DefineModifier("upgrade-work-historia-ecclesiastica-venerabilis-bedae",
+	{"KnowledgeMagic", 1}
+)
+
+DefineModifier("upgrade-work-wid-faerstice",
+	{"KnowledgeMagic", 1}
+)
+
+DefineModifier("upgrade-work-wid-wennum",
+	{"KnowledgeMagic", 1}
+)

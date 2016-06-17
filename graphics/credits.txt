@@ -720,6 +720,8 @@ João Victor G. Costa (Jinn):
 /graphics/goblin/buildings/smithy_shadow.png (licensed under the CC0)
 /graphics/goblin/buildings/stronghold.png (modified from Exidelo's Goblin Town Hall) (licensed under the CC0)
 /graphics/goblin/buildings/stronghold_shadow.png (licensed under the CC0)
+/graphics/goblin/buildings/temple.png (licensed under the CC0)
+/graphics/goblin/buildings/temple_shadow.png (licensed under the CC0)
 /graphics/goblin/buildings/town_hall_shadow.png (licensed under the CC0)
 /graphics/goblin/buildings/watch_tower.png (licensed under the CC0)
 /graphics/goblin/buildings/watch_tower_shadow.png (licensed under the CC0)
