@@ -39,6 +39,7 @@ DefineDeity("Indo-European Sky God", { -- real name? Source: Encyclopedia of the
 
 DefineDeity("eloh", { -- from Under the Burning Suns (Battle for Wesnoth)
 	Name = "Eloh",
+	HomePlane = "Vanaheim",
 	Civilizations = {"elf"},
 	Gender = "female",
 	Major = true
@@ -46,6 +47,7 @@ DefineDeity("eloh", { -- from Under the Burning Suns (Battle for Wesnoth)
 
 DefineDeity("gathaarl", { -- from Tyrant
 	Name = "Gathaarl",
+	HomePlane = "Helheim",
 	Civilizations = {"goblin"},
 	Portfolio = "Battle",
 	Gender = "male",
@@ -59,6 +61,7 @@ DefineDeity("gathaarl", { -- from Tyrant
 
 DefineDeity("griknagh", { -- From Under the Burning Suns (Battle for Wesnoth)
 	Name = "Griknagh",
+	HomePlane = "Helheim",
 	Civilizations = {"troll"},
 	Gender = "male",
 	Major = true
