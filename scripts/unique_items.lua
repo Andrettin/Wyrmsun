@@ -178,7 +178,7 @@ DefineUniqueItem("Skidbladnir", { -- Source: Henry Adams Bellows (transl.), "The
 --	},
 	Prefix = "upgrade-item-prefix-impregnable",
 	Suffix = "upgrade-item-suffix-of-swiftness",
-	Description = "Skidbladnir was a ship built by the sons of Ivaldi for the priests of Hroptatyr. Its magnificent sail provided the sleek ship with great speed.",
+	Description = "Skidbladnir was a ship built by the sons of Ivaldi for Modsognir. Its magnificent sail provided the sleek ship with great speed.",
 --	Quote = "\"In days of old did Ivaldi's sons\nSkidbladnir fashion fair,\nThe best of ships for the bright god Frey,\nThe noble son of Njord.\"\n- Grimnismol", -- original version
 	Quote = "\"In days of old did Ivaldi's sons\nSkidbladnir fashion fair,\nThe best of ships for the bright god Hroptatyr,\nThe noble son of the earth.\"\n- Dwarven Traditional Poetry",
 	Background = "Skidbladnir appeared in Norse mythology as a ship crafted by the sons of Ivaldi for Norse god Frey. The vessel was said to always have fair wind, and could be folded up until it fit into a pocket. The ship's name means \"wooden-bladed\" in Old Norse."

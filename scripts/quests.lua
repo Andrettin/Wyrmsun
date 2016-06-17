@@ -206,7 +206,7 @@ DefineQuest("The Mead of Wisdom", {
 
 DefineQuest("The Treasures of Svarinshaug", {
 	Icon = "icon-brising-smithy",
-	Description = "The dwarven smiths Brokk and Eitri are competing with the renowned sons of Ivaldi to craft the best artifacts for the priests of Hroptatyr. To obtain the necessary high quality ores will be perilous, however, as dangerous creatures abound in the deep mines where they lay...\n\nMap: Eastern Mines",
+	Description = "The dwarven smiths Brokk and Eitri are competing with the renowned sons of Ivaldi to craft the best artifacts for Modsognir. To obtain the necessary high quality ores will be perilous, however, as dangerous creatures abound in the deep mines where they lay...\n\nMap: Eastern Mines",
 	RequiredQuest = "The Mead of Wisdom",
 	World = "Nidavellir",
 	Civilization = "dwarf",

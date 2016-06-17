@@ -107,7 +107,7 @@ AddTrigger(
 		
 		Event(
 			"",
-			"The dwarven smiths Brokk and Eitri are competing with the renowned sons of Ivaldi to craft the best artifacts for the priests of Hroptatyr. To obtain the necessary high quality ores will be perilous, however, as dangerous creatures abound in the deep mines where they lay...",
+			"The dwarven smiths Brokk and Eitri are competing with the renowned sons of Ivaldi to craft the best artifacts for Modsognir. To obtain the necessary high quality ores will be perilous, however, as dangerous creatures abound in the deep mines where they lay...",
 			player,
 			{"~!Continue"},
 			{function(s)
@@ -119,7 +119,7 @@ AddTrigger(
 				{function(s)
 				Event(
 					brokk,
-					"Excellent. We have to be careful because of the dangerous beasts, but soon enough we should have the ores for Hroptatyr's artifacts. Let us be quick, we don't want to show the results of our craftsmanship to the loremasters much after the sons of Ivaldi... they might not be as pleased, and then we will lose our bet.",
+					"Excellent. We have to be careful because of the dangerous beasts, but soon enough we should have the ores for Modsognir's artifacts. Let us be quick, we don't want to show the results of our craftsmanship to Modsognir much after the sons of Ivaldi... he might not be as pleased, and then we will lose our bet.",
 					player,
 					{"~!Continue"},
 					{function(s)
@@ -170,25 +170,25 @@ AddTrigger(
 			{function(s)
 			Event(
 				"",
-				"After arduous hours of work, the labor of Brokk and Eitri finally came to fruition. They had crafted two wondrous artifacts for Hroptatyr.",
+				"After arduous hours of work, the labor of Brokk and Eitri finally came to fruition. They had crafted two wondrous artifacts for Modsognir.",
 				player,
 				{"~!Continue"},
 				{function(s)
 				Event(
 					"",
-					"On the following day, the pair arrived at the temple of Hroptatyr. The sons of Ivaldi were already there. They too bore two gifts for the dwarven deity: a magnificent throwing spear, Gungnir, and a sleek ship, Skidbladnir. These were found excellent by the loremasters.",
+					"On the following day, the pair arrived at Modsognir's hall. The sons of Ivaldi were already there. They too bore two gifts for the dwarven chieftain: a magnificent throwing spear, Gungnir, and a sleek ship, Skidbladnir. These were found excellent by Modsognir.",
 					player,
 					{"~!Continue"},
 					{function(s)
 					Event(
 						"",
-						"The time came for Brokk and Eitri to put their artifacts forward. They lay before the sages a solid gold arm-ring, Draupnir, and a mighty hammer, Mjollnir. The priests announced their decision.",
+						"The time came for Brokk and Eitri to put their artifacts forward. They lay before their chief a solid gold arm-ring, Draupnir, and a mighty hammer, Mjollnir. Modsognir announced his decision.",
 						player,
 						{"~!Continue"},
 						{function(s)
 						Event(
 							"",
-							"Gungnir was strong, but Mjollnir was stronger. Glancing at Skidbladnir, the loremasters' judgment was that the dwarves' destinity was not on the waters, but deep within the land, surrounded by veins and artifacts of gold. And thus Brokk and Eitri won the competition, receiving a hefty sum as their prize.",
+							"Gungnir was strong, but Mjollnir was stronger. Glancing at Skidbladnir, Modsognir's judgment was that the dwarves' destinity was not on the waters, but deep within the land, surrounded by veins and artifacts of gold. And thus Brokk and Eitri won the competition, receiving a hefty sum as their prize.",
 							player,
 							{"~!Continue"},
 							{function(s)
