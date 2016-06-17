@@ -42,7 +42,7 @@ DefinePlane("Hell", {
 })
 
 DefinePlane("Material Plane", {
-	Description = _("The material plane is the normal plane of existence, where worlds such as Earth and Nidavellir are located.")
+	Description = _("The material plane is the normal plane of existence, where worlds such as Earth and Nidavellir are located. As the other planes are made of pure magic, it is almost impossible for their inhabitants to travel to the material plane, as the difference in the composition of the realms would risk the traveller's very existence.")
 })
 
 DefinePlane("Vanaheim", {
