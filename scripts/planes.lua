@@ -33,6 +33,10 @@ DefinePlane("Heaven", {
 	Description = _("Within Heaven the Abrahamic God dwells, served by a large host of angels. The forces of Heaven deplore those they deem to be false deities, such as the Aesir, a sentiment which sometimes erupts into open hostility. Their greatest enemies, however, are the demons of Hell.")
 })
 
+DefinePlane("Helheim", {
+	Description = _("Inhabited by the monstrous Hel, this realm is one of the many underworld planes. It harbors the souls of the dead who worshipped the Aesir, and yet were deemed unworthy of entry into Asgard.")
+})
+
 DefinePlane("Hell", {
 	Description = _("Hell is the home to the sadistic creatures known as demons. Though its vicious inhabitants are powerful creatures, they are kept at bay by the forces of Heaven.")
 })

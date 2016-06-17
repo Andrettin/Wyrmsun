@@ -25,11 +25,13 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-Load("scripts/civilizations/celt/works.lua")
-Load("scripts/civilizations/dwarf/works.lua")
-Load("scripts/civilizations/goblin/works.lua")
-Load("scripts/civilizations/greek/works.lua")
-Load("scripts/civilizations/latin/works.lua")
-Load("scripts/civilizations/norse/works.lua")
-Load("scripts/civilizations/teuton/works.lua")
-Load("scripts/civilizations/troll/works.lua")
+DefineUpgrade("upgrade-work-wid-aelfsogothan", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, pp. 186-189.
+	Name = _("For Elf Hiccup"),
+	Work = "scroll",
+	Civilization = "troll", -- actually an Anglo-Saxon charm, but here we put is as a troll one since this is a charm against a magic believed to be elf-caused ("Wid Aelfsogothan" means "For Elf Hiccup")
+	Quote = "\"If a person has elf hiccup, their eyes will be yellow where they should be red.\"\n- For Elf Hiccup"
+})
+
+DefineModifier("upgrade-work-wid-aelfsogothan",
+	{"KnowledgeMagic", 1}
+)
