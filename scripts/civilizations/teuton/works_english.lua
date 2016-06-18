@@ -32,6 +32,19 @@ DefineUpgrade("upgrade-work-aecer-bot", { -- Source: Felix Grendon, "The Anglo-S
 	Quote = "\"All hail, Earth, mother of men!\nBe fruitful in God's embracing arm,\nFilled with food for the needs of men.\"\n- Aecer-Bot"
 })
 
+DefineUpgrade("upgrade-work-blodseten", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, pp. 200-203.
+	Name = _("Blodseten"),
+	Work = "scroll",
+	Civilization = "teuton",
+	Quote = "\"For stanching blood in horse or man.\"\n- Blodseten"
+})
+
+DefineUpgrade("upgrade-work-gagates-craeftas", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, pp. 200-201.
+	Name = _("Gagates Craeftas"),
+	Work = "scroll",
+	Civilization = "teuton"
+})
+
 DefineUpgrade("upgrade-work-historia-ecclesiastica-venerabilis-bedae", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 34.
 	Name = _("Historia Ecclesiastica Venerabilis Bedae"),
 	Work = "scroll",
@@ -122,6 +135,12 @@ DefineUpgrade("upgrade-work-wid-faerstice", { -- Source: Felix Grendon, "The Ang
 	Quote = "\"If herein be aught of iron,\nWork of witches, it shall melt!\"\n- Wid Faerstice"
 })
 
+DefineUpgrade("upgrade-work-wid-feondes-costunge", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, pp. 200-201.
+	Name = _("Wid Feondes Costunge"),
+	Work = "scroll",
+	Civilization = "teuton"
+})
+
 DefineUpgrade("upgrade-work-wid-feos-lyre", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, pp. 178-181.
 	Name = _("Wid Feos Lyre"),
 	Work = "scroll",
@@ -148,6 +167,12 @@ DefineUpgrade("upgrade-work-wid-fleogendum-attre", { -- Source: Felix Grendon, "
 	Work = "scroll",
 	Civilization = "teuton",
 	Quote = "\"Sing over it nine times a litany, and nine times the Paternoster, and nine times this charm\"\n- Wid Fleogendum Attre"
+})
+
+DefineUpgrade("upgrade-work-wid-heafodece", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, pp. 200-201.
+	Name = _("Wid Heafodece"),
+	Work = "scroll",
+	Civilization = "teuton"
 })
 
 DefineUpgrade("upgrade-work-wid-hors-oman", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, pp. 172-173.
@@ -184,6 +209,12 @@ DefineUpgrade("upgrade-work-wid-lidwaerce", { -- Source: Felix Grendon, "The Ang
 	Quote = "\"Malignus obligavit, angelus curavit, dominus saluavit.\"\n- Wid Lidwaerce"
 })
 
+DefineUpgrade("upgrade-work-wid-maran", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, pp. 198-199.
+	Name = _("Wid Maran"),
+	Work = "scroll",
+	Civilization = "teuton"
+})
+
 DefineUpgrade("upgrade-work-wid-miclum-gonge", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, pp. 190-191.
 	Name = _("Wid Miclum Gonge"),
 	Work = "scroll",
@@ -196,6 +227,12 @@ DefineUpgrade("upgrade-work-wid-oman", { -- Source: Felix Grendon, "The Anglo-Sa
 	Work = "scroll",
 	Civilization = "teuton",
 	Quote = "\"O pars et o rillia pars et pars iniopia est alfa et o initium.\"\n- Wid Oman"
+})
+
+DefineUpgrade("upgrade-work-wid-onfealle", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, pp. 200-201.
+	Name = _("Wid Onfealle"),
+	Work = "scroll",
+	Civilization = "teuton"
 })
 
 DefineUpgrade("upgrade-work-wid-theofentum", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, pp. 168-169.
@@ -258,6 +295,14 @@ DefineModifier("upgrade-work-aecer-bot",
 	{"KnowledgeMagic", 1}
 )
 
+DefineModifier("upgrade-work-blodseten",
+	{"KnowledgeMagic", 1}
+)
+
+DefineModifier("upgrade-work-gagates-craeftas",
+	{"KnowledgeMagic", 1}
+)
+
 DefineModifier("upgrade-work-historia-ecclesiastica-venerabilis-bedae",
 	{"KnowledgeMagic", 1}
 )
@@ -310,6 +355,10 @@ DefineModifier("upgrade-work-wid-faerstice",
 	{"KnowledgeMagic", 1}
 )
 
+DefineModifier("upgrade-work-wid-feondes-costunge",
+	{"KnowledgeMagic", 1} -- could also be herbology
+)
+
 DefineModifier("upgrade-work-wid-feos-lyre",
 	{"KnowledgeMagic", 1}
 )
@@ -323,6 +372,10 @@ DefineModifier("upgrade-work-wid-fleogendan-attre",
 )
 
 DefineModifier("upgrade-work-wid-fleogendum-attre",
+	{"KnowledgeMagic", 1}
+)
+
+DefineModifier("upgrade-work-wid-heafodece",
 	{"KnowledgeMagic", 1}
 )
 
@@ -346,11 +399,19 @@ DefineModifier("upgrade-work-wid-lidwaerce",
 	{"KnowledgeMagic", 1}
 )
 
+DefineModifier("upgrade-work-wid-maran",
+	{"KnowledgeMagic", 1} -- could also be herbology
+)
+
 DefineModifier("upgrade-work-wid-miclum-gonge",
 	{"KnowledgeMagic", 1} -- could also be herbology
 )
 
 DefineModifier("upgrade-work-wid-oman",
+	{"KnowledgeMagic", 1}
+)
+
+DefineModifier("upgrade-work-wid-onfealle",
 	{"KnowledgeMagic", 1}
 )
 
