@@ -93,8 +93,8 @@ https://github.com/Andrettin/Wyrmsun
 - The Meditations now increases Knowledge (Warfare) by 1, instead of increasing HP.
 - Added "De Bello Gallico" (Latin), which increases Knowledge (Warfare) by 1.
 - Added "Notitia Dignitatum" (Latin), which increases Knowledge (Warfare) by 1.
-- Added 23 Teuton literary works which increases Knowledge (Magic) by 1.
-- Added 1 Goblin literary work which increases Knowledge (Magic) by 1.
+- Added 28 Teuton literary works which increase Knowledge (Magic) by 1.
+- Added "Against a Dwarf" (Goblin), which increases Knowledge (Magic) by 1.
 - Besides Town Halls and Strongholds, Temples can now also drop literary works.
 
 * Miscellaneous
