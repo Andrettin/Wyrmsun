@@ -30,7 +30,7 @@ DefinePlane("Asgard", {
 })
 
 DefinePlane("Heaven", {
-	Description = _("Within Heaven the Abrahamic God dwells, served by a large host of angels. The forces of Heaven deplore those they deem to be false deities, such as the Aesir, a sentiment which sometimes erupts into open hostility. Their greatest enemies, however, are the demons of Hell.")
+	Description = _("Within Heaven the monotheistic God dwells, served by a large host of angels. The forces of Heaven deplore those they deem to be false deities, such as the Aesir, a sentiment which sometimes erupts into open hostility. Their greatest enemies, however, are the demons of Hell.")
 })
 
 DefinePlane("Helheim", {
