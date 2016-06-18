@@ -42,7 +42,7 @@ DefinePlane("Hell", {
 })
 
 DefinePlane("Material Plane", {
-	Description = _("The material plane is the normal plane of existence, where worlds such as Earth and Nidavellir are located. As the other planes are made of pure magic, it is almost impossible for their inhabitants to travel to the material plane, as the difference in the composition of the realms would risk the traveller's very existence.")
+	Description = _("The material plane is the normal plane of existence, where worlds such as Earth and Nidavellir are located. As the other planes are made of pure magic, it is almost impossible for their inhabitants to travel to the material plane, as the difference in the composition of the realms would risk the traveller's very existence. The major exception being that particularly powerful mortal sorcerers are sometimes able to summon extraplanar beings for very short periods of time, maintaining their presence in a great effort of magical prowess. As more powerful extraplanar creatures are generally more rich in magic, they are also more difficult to summon.")
 })
 
 DefinePlane("Vanaheim", {

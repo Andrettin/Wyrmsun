@@ -61,6 +61,9 @@ https://github.com/Andrettin/Wyrmsun
 - 2.2.7
 -----------------------------------------------------------------------
 
+* Buildings
+- Added Goblin Temple (graphics by Jinn).
+
 * Editor
 - Fixed an issue which made certain unit layers not appear properly during unit placement.
 
@@ -90,7 +93,7 @@ https://github.com/Andrettin/Wyrmsun
 - The Meditations now increases Knowledge (Warfare) by 1, instead of increasing HP.
 - Added "De Bello Gallico" (Latin), which increases Knowledge (Warfare) by 1.
 - Added "Notitia Dignitatum" (Latin), which increases Knowledge (Warfare) by 1.
-- Added the 23 Teuton literary works which increases Knowledge (Magic) by 1.
+- Added 23 Teuton literary works which increases Knowledge (Magic) by 1.
 - Besides Town Halls and Strongholds, Temples can now also drop literary works.
 
 * Miscellaneous
@@ -120,6 +123,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added Derro Thug (portrait by Jesse Crider, modified from Jinn's Gnomish Recruit portrait).
 - Added Derro Executioner (upgrade of the Derro Thug) (portrait by Jesse Crider, modified from Exidelo's Gnomish Duelist portrait).
 - Added Derro Shadowguard (upgrade of the Derro Executioner) (portrait by Jesse Crider, modified from Exidelo's Gnomish Master-at-Arms portrait).
+- Added Goblin Shaman (unit graphics by b_o and icon by Jinn).
 
 -----------------------------------------------------------------------
 - 2.2.6
