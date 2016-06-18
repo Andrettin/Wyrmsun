@@ -59,3 +59,12 @@ DefineDeity("njord", { -- One of the Vanir; father of Frey and Freyja; husband o
 	Portfolio = "Wind and Sea",
 --	Description = "With the conclusion of the war between the Aesir and the Vanir, the two pantheons agreed to a peace, and that a few of each group should live among the other. Njord was one of the Vanir who went to dwell in Asgard with the Aesir, accompanied by his two children, Frey and Freyja. At first, the Vanir were worshipped only by elves. As the Aesir were connected to Germanic peoples through their priests, when Njord went to live in Asgard he began to be worshipped by the Germanics as well."
 })
+
+DefineDeity("eloh", { -- from Under the Burning Suns (Battle for Wesnoth)
+	Name = "Eloh",
+	Pantheon = "Vanir", -- since she is an elven deity
+	HomePlane = "Vanaheim",
+	Civilizations = {"elf"},
+	Gender = "female",
+	Major = true
+})

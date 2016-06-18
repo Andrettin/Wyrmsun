@@ -26,7 +26,9 @@
 --
 
 Load("scripts/deities_aesir.lua")
+Load("scripts/deities_olympian.lua")
 Load("scripts/deities_slavic.lua")
+Load("scripts/deities_titan.lua")
 Load("scripts/deities_vanir.lua")
 
 --[[
@@ -37,12 +39,13 @@ DefineDeity("Indo-European Sky God", { -- real name? Source: Encyclopedia of the
 })
 --]]
 
-DefineDeity("eloh", { -- from Under the Burning Suns (Battle for Wesnoth)
-	Name = "Eloh",
-	HomePlane = "Vanaheim",
-	Civilizations = {"elf"},
+DefineDeity("gaia", { -- Source: Jenny March, "Dictionary of Classical Mythology", 2014, pp. 200-201.
+	Name = "Gaia",
+	Civilizations = {"ettin", "greek"},
 	Gender = "female",
-	Major = true
+	Major = true,
+	Portfolio = "Earth",
+--	Description = "A primordial goddess, Gaia is one of the first deities to have been born. She is the mother of the Titans by Uranus. Her greatest worshippers are the ettins of Jotunheim, to whom she appeared in ages past."
 })
 
 DefineDeity("gathaarl", { -- from Tyrant

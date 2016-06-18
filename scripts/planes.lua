@@ -29,6 +29,14 @@ DefinePlane("Asgard", {
 	Description = _("The plane of Asgard is the home of the Aesir, a group of deities. Mortals who worship the Aesir go to Asgard in the afterlife, the warriors amongst them becoming einherjar at Valhalla.")
 })
 
+DefinePlane("Elysium", { -- Source: Jenny March, "Dictionary of Classical Mythology", 2014, pp. 174-175.
+	Description = _("The verdant plane of Elysium is where those favored by the deities of the Olympian pantheon go after their death. Afterlife in Elysium is pleasurable, featuring neither toil nor tears.")
+})
+
+DefinePlane("Hades", { -- Source: Jenny March, "Dictionary of Classical Mythology", 2014, pp. 211-213.
+	Description = _("The underworld plane of Hades looks much like the underground depths of many mortal worlds. The realm houses the souls of those who believed in the Olympian pantheon during their lives, and who were neither favored enough by the gods to be sent to Elysium, nor cruel enough to be sent to Tartarus. Afterlife in Hades is one of lamentation and sorrow. The plane is ruled by the deity of the same name.")
+})
+
 DefinePlane("Heaven", {
 	Description = _("Within Heaven the monotheistic God dwells, served by a large host of angels. The forces of Heaven deplore those they deem to be false deities, such as the Aesir, a sentiment which sometimes erupts into open hostility. Their greatest enemies, however, are the demons of Hell.")
 })
@@ -43,6 +51,14 @@ DefinePlane("Hell", {
 
 DefinePlane("Material Plane", {
 	Description = _("The material plane is the normal plane of existence, where worlds such as Earth and Nidavellir are located. As the other planes are made of pure magic, it is almost impossible for their inhabitants to travel to the material plane, as the difference in the composition of the realms would risk the traveller's very existence. The major exception being that particularly powerful mortal sorcerers are sometimes able to summon extraplanar beings for very short periods of time, maintaining their presence in a great effort of magical prowess. As more powerful extraplanar creatures are generally more rich in magic, they are also more difficult to summon.")
+})
+
+DefinePlane("Olympus", { -- Source: Jenny March, "Dictionary of Classical Mythology", 2014, p. 354.
+	Description = _("The realm of Olympus is the dwelling place of the pantheon of deities ruled by Zeus. Endless feasts succeed one another in the plane, nourishing the Olympian gods with ambrosia and nectar. The plane's weather is eternally sunny, so that it never winds, rains or snows, and clouds are entirely absent.")
+})
+
+DefinePlane("Tartarus", { -- Source: Jenny March, "Dictionary of Classical Mythology", 2014, p. 456.
+	Description = _("Tartarus is a dark, sinister realm. After defeat in their war with the Olympian deities, the Titans were imprisoned in Tartarus by Zeus. Particularly evil mortals who believe in the Olympian pantheon are sent to Tartarus after their death, suffering horrible punishments.")
 })
 
 DefinePlane("Vanaheim", {
