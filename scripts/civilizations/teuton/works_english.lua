@@ -81,6 +81,13 @@ DefineUpgrade("upgrade-work-wid-da-blacan-blegene", { -- Source: Felix Grendon, 
 	Quote = "\"Tigad tigad tigad\ncalicet aclu\"\n- Wid Da Blacan Blegene"
 })
 
+DefineUpgrade("upgrade-work-wid-deofolseocnesse", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, pp. 188-189.
+	Name = _("Wid Deofolseocnesse"),
+	Work = "scroll",
+	Civilization = "teuton",
+	Quote = "\"I pray you, vinca pervinca - to be had for your many advantages - that you come to me joyously, blooming with your virtues, that you endow me with such qualities that I shall be shielded and ever prosperous and unharmed by poisons and by rage.\"\n- Wid Deofolseocnesse"
+})
+
 DefineUpgrade("upgrade-work-wid-faerstice", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, pp. 164-167.
 	Name = _("Wid Faerstice"),
 	Work = "scroll",
@@ -216,6 +223,10 @@ DefineModifier("upgrade-work-wid-cyrnel",
 
 DefineModifier("upgrade-work-wid-da-blacan-blegene",
 	{"KnowledgeMagic", 1}
+)
+
+DefineModifier("upgrade-work-wid-deofolseocnesse",
+	{"KnowledgeMagic", 1} -- could also be herbology
 )
 
 DefineModifier("upgrade-work-wid-faerstice",

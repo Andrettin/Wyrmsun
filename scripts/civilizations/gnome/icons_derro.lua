@@ -44,6 +44,12 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-derro-rust-rider",
+	Size = {46, 38},
+	File = "gnome/icons/derro_rust_rider.png"
+})
+
+DefineIcon({
 	Name = "icon-derro-shadowguard",
 	Size = {46, 38},
 	File = "gnome/icons/derro_shadowguard.png"
