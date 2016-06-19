@@ -1258,13 +1258,6 @@ DefineLanguageWord("Tandran", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Gender = "masculine"
 })
 
-DefineLanguageWord("Tîva", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 88.
-	Language = "proto-germanic",
-	Type = "noun",
-	Meanings = {"God"}, -- can also mean the name of a particular god
-	Gender = "masculine"
-})
-
 DefineLanguageWord("Þarma", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 97.
 	Language = "proto-germanic",
 	Type = "noun",
@@ -1286,11 +1279,23 @@ DefineLanguageWord("Þinχanan", { -- Source: Winfred P. Lehmann, "A Grammar of 
 	Meanings = {"Thrive"}
 })
 
+DefineLanguageWord("Þingsaz", { -- Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 120.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Protector of the Thing"}
+})
+
 DefineLanguageWord("Þurpa", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 100.
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Flock", "Crowd", "Village"}, -- source gives the German "Schar, Menschenhaufen, Dorf" as the meaning
 	Gender = "neuter"
+})
+
+DefineLanguageWord("Tīwaz", { -- name of a god; Fick gives "Tîva" instead, likely an outdated reconstruction for the same word; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 115; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 88.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {}
 })
 
 DefineLanguageWord("Tûna", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 89.

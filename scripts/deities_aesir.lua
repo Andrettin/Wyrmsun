@@ -25,20 +25,59 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineDeity("odin", { -- Known as Allfather, the Terrible One, One-eyed, Father of Battle; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 248; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75.
+DefineDeity("odin", { -- Known as Allfather, the Terrible One, One-eyed, Father of Battle; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 248; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, pp. 128, 132.
 	Name = "Odin",
 	Pantheon = "Aesir",
 	HomePlane = "Asgard",
 	Civilizations = {"dwarf", "germanic", "norse", "teuton"},
 	Gender = "male",
 	Major = true,
-	Portfolio = "Poetry, Battle and Death",
+	Portfolio = "Poetry, Battle, Death and Magic",
 	CulturalNames = {
 		"dwarf", "Hroptatyr", -- in Norse mythology, one of the names of Odin, which was used in a verse concerning a charm by the dwarf Thjodrorir in the Hovamol, who sang wisdom for "Hroptatyr" wise; name means "Crier of the Gods", "the Crying God" or "the Prophet"
-		"germanic", "Wodanaz",
+		"germanic", "Wōđanaz", -- Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 128.
 		"teuton", "Woden" -- Anglo-Saxon name for the deity
 	},
 	Description = "Odin is the chief deity of the Aesir and the father of Thor and Balder. In archaic times, he revealed himself to the Germanics of Earth and the dwarves of Nidavellir, originating a priesthood on both worlds (having the appearance of a human on Earth and that of a dwarf on Nidavellir). Since deities are beings made of pure magic, they can only establish a tenuous link to the material plane. The result of this limitation is that Odin's main venue of communication with his human and dwarven followers is through their dreams. As Woden, the royal house of Deira claimed him as their ancestor."
+})
+
+DefineDeity("thor", { -- Son of Odin and Jord (Fjorgyn) and Sif's husband; known as the Thunder God and the Charioteer; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 251; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 129.
+	Name = "Thor",
+	Pantheon = "Aesir",
+	Civilizations = {"germanic", "norse"},
+	Gender = "male",
+	Major = true,
+	Portfolio = "Sky, Thunder, Fertility, Law and Order",
+	CulturalNames = {
+		"germanic", "Þunraz" -- the source gives "Þun(a)raz"; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 129.
+	},
+	Description = "Thor is the son of Odin and Jord. He is married to Sif."
+})
+
+DefineDeity("frigg", { -- First among the goddesses; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 242; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 129.
+	Name = "Frigg",
+	Pantheon = "Aesir",
+	Civilizations = {"germanic", "norse", "teuton"},
+	Gender = "female",
+	CulturalNames = {
+		"germanic", "Frijjō", -- Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 129.
+		"teuton", "Friia" -- as given in the second Merseburg charm (presumably in Old High German); Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 129.
+	},
+--	Description = "Frigg is Odin's wife and the mother of Balder."
+})
+
+DefineDeity("tyr", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 251; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, pp. 115, 133.
+	Name = "Tyr",
+	Pantheon = "Aesir",
+	Civilizations = {"germanic", "norse", "teuton"},
+	Gender = "male",
+	Portfolio = "War",
+	CulturalNames = {
+		"germanic", "Tīwaz", -- Proto-Germanic name of the god; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 115.
+		"norse", "Týr", -- Old Norse name of the god; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 115.
+		"teuton", "Ziu" -- Old High German name of the god (in Old English it was Tīw); Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 115.
+	},
+--	Description = "Tyr is the son of Odin, and is known as the bravest of the Aesir. In an effort to bind the giant wolf Fenrir, he ended up losing his hand."
 })
 
 DefineDeity("aegir", { -- Married to Ran; they have their hall under the sea by the island of Hlesey; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 239.
@@ -83,13 +122,6 @@ DefineDeity("forseti", { -- Son of Balder and Nanna; Source: Kevin Crossley-Holl
 	Civilizations = {"norse"},
 	Gender = "male",
 	Portfolio = "Justice"
-})
-
-DefineDeity("frigg", { -- Wife of Odin; mother of Balder; first among the goddesses; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 242.
-	Name = "Frigg",
-	Pantheon = "Aesir",
-	Civilizations = {"norse"},
-	Gender = "female"
 })
 
 DefineDeity("fulla", { -- Servant of Frigg; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 242.
@@ -214,23 +246,6 @@ DefineDeity("syn", { -- Aids defendants in trials; Source: Kevin Crossley-Hollan
 	Pantheon = "Aesir",
 	Civilizations = {"norse"},
 	Gender = "female"
-})
-
-DefineDeity("thor", { -- Son of Odin and Jord (Fjorgyn) and Sif's husband; known as the Thunder God and the Charioteer; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 251.
-	Name = "Thor",
-	Pantheon = "Aesir",
-	Civilizations = {"norse"},
-	Gender = "male",
-	Major = true,
-	Portfolio = "Sky, Thunder, Fertility, Law and Order"
-})
-
-DefineDeity("tyr", { -- Son of Odin; bravest of the gods; sacrificed one of his hands to bind the giant wolf Fenrir; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 251.
-	Name = "Tyr",
-	Pantheon = "Aesir",
-	Civilizations = {"norse"},
-	Gender = "male",
-	Portfolio = "War"
 })
 
 DefineDeity("ull", { -- name means "Glory" or "Brilliance"; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 251; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 494.

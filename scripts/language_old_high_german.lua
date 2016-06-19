@@ -1727,6 +1727,13 @@ DefineLanguageWord("Ziohan", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	DerivesFrom = {"proto-germanic", "verb", "Téuχanan"}
 })
 
+DefineLanguageWord("Ziu", { -- name of a god; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 115.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {},
+	DerivesFrom = {"proto-germanic", "noun", "Tīwaz"}
+})
+
 DefineLanguageWord("Zûn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 89.
 	Language = "old-high-german",
 	Type = "noun",

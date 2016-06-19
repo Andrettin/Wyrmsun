@@ -1720,6 +1720,13 @@ DefineLanguageWord("Tiohhian", { -- Source: Richard M. Runge, "The Phonetic Real
 	Meanings = {"Consider"}
 })
 
+DefineLanguageWord("Tīw", { -- name of a god; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 115.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {},
+	DerivesFrom = {"proto-germanic", "noun", "Tīwaz"}
+})
+
 DefineLanguageWord("Trēow", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
 	Language = "old-english",
 	Type = "noun",

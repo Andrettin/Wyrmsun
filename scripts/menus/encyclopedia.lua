@@ -1902,7 +1902,7 @@ function OpenEncyclopediaDeityEntry(deity)
 	
 	local alternate_names = {}
 	for i=1,table.getn(civilizations) do
-		if (GetDeityData(deity, "CulturalName", civilizations[i]) ~= "") then
+		if (GetDeityData(deity, "CulturalName", civilizations[i]) ~= "" and GetDeityData(deity, "CulturalName", civilizations[i]) ~= GetDeityData(deity, "Name")) then
 			table.insert(alternate_names, GetDeityData(deity, "CulturalName", civilizations[i]) .. " (" .. GetCivilizationData(civilizations[i], "Display") .. ")")
 		end
 	end
