@@ -205,7 +205,7 @@ if (GrandStrategy == false) then
 	end
 
 	unit = CreateUnit("unit-dwarven-stronghold", 1, {37, 32})
-	SetUnitVariable(unit, "Unique", "Shorbear Hold")
+	SetUnitVariable(unit, "Unique", "shorbear-hold")
 	if (GameSettings.Difficulty >= 3) then -- if difficulty is hard or higher
 		unit = CreateUnitInTransporter("unit-dwarven-scout", 1, unit)
 		SetUnitVariable(unit, "Active", false)
@@ -459,7 +459,7 @@ elseif (GrandStrategyEventMap) then
 	end
 
 	unit = CreateUnit("unit-dwarven-stronghold", 1, {37, 32})
-	SetUnitVariable(unit, "Unique", "Shorbear Hold")
+	SetUnitVariable(unit, "Unique", "shorbear-hold")
 
 	-- Shorbears
 	CreateProvinceUnits("Shorbear Hills", 1)

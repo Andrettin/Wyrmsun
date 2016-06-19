@@ -52,4 +52,4 @@ if (nearest_coast ~= nil) then
 end
 
 CreateGoldMines(1, 50000, 0, Map.Info.MapWidth - 3, math.floor(Map.Info.MapHeight * 3 / 4), Map.Info.MapHeight - 3, false, true)
-SetUnitVariable(unit, "Unique", "The Wedding Veil")
+SetUnitVariable(unit, "Unique", "the-wedding-veil")

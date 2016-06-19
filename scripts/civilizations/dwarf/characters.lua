@@ -112,7 +112,7 @@ DefineCharacter("Thursagan", { -- from "The Sceptre of Fire" campaign of "Battle
 	ForbiddenUpgrades = {"unit-dwarven-yale-rider"},
 	Items = {
 		{
-			"unique", "The Hammer of Thursagan",
+			"unique", "the-hammer-of-thursagan",
 			"bound", true
 		},
 	},

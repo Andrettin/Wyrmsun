@@ -32,11 +32,24 @@ DefineUpgrade("upgrade-work-aecer-bot", { -- Source: Felix Grendon, "The Anglo-S
 	Quote = "\"All hail, Earth, mother of men!\nBe fruitful in God's embracing arm,\nFilled with food for the needs of men.\"\n- Aecer-Bot"
 })
 
+DefineUpgrade("upgrade-work-be-galdorstafum", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, pp. 202-203.
+	Name = _("Be Galdorstafum"),
+	Work = "scroll",
+	Civilization = "teuton"
+})
+
 DefineUpgrade("upgrade-work-blodseten", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, pp. 200-203.
 	Name = _("Blodseten"),
 	Work = "scroll",
 	Civilization = "teuton",
 	Quote = "\"For stanching blood in horse or man.\"\n- Blodseten"
+})
+
+DefineUpgrade("upgrade-work-feld-bot", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, pp. 204-205.
+	Name = _("Feld-Bot"),
+	Work = "scroll",
+	Civilization = "teuton",
+	Quote = "\"Cont apes ut salui sint and in corda eorum.\"\n- Feld-Bot"
 })
 
 DefineUpgrade("upgrade-work-gagates-craeftas", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, pp. 200-201.
@@ -195,11 +208,30 @@ DefineUpgrade("upgrade-work-wid-huntan-bite", { -- Source: Felix Grendon, "The A
 	Civilization = "teuton"
 })
 
+DefineUpgrade("upgrade-work-wid-laetbyrde", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, pp. 206-209.
+	Name = _("Wid Laetbyrde"),
+	Work = "scroll",
+	Civilization = "teuton",
+	Quote = "\"Always have I carried with me this great strong hero\"\n- Wid Laetbyrde"
+})
+
 DefineUpgrade("upgrade-work-wid-lenctenadle", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, pp. 182-185.
 	Name = _("Wid Lenctenadle"),
 	Work = "scroll",
 	Civilization = "teuton",
 	Quote = "\"In nomine domini summi sit benedictum.\"\n- Wid Lenctenadle"
+})
+
+DefineUpgrade("upgrade-work-wid-lenctenadle-2", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, pp. 202-203.
+	Name = _("Wid Lenctenadle"),
+	Work = "scroll",
+	Civilization = "teuton"
+})
+
+DefineUpgrade("upgrade-work-wid-leodrunan", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, pp. 202-203.
+	Name = _("Wid Leodrunan"),
+	Work = "scroll",
+	Civilization = "teuton"
 })
 
 DefineUpgrade("upgrade-work-wid-lidwaerce", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, pp. 184-185.
@@ -235,6 +267,13 @@ DefineUpgrade("upgrade-work-wid-onfealle", { -- Source: Felix Grendon, "The Angl
 	Civilization = "teuton"
 })
 
+DefineUpgrade("upgrade-work-wid-theofende", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, pp. 206-207.
+	Name = _("Wid Theofende"),
+	Work = "scroll",
+	Civilization = "teuton",
+	Quote = "\"When a man steals anything from you, write this silently\"\n- Wid Theofende"
+})
+
 DefineUpgrade("upgrade-work-wid-theofentum", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, pp. 168-169.
 	Name = _("Wid Theofentum"),
 	Work = "scroll",
@@ -261,6 +300,13 @@ DefineUpgrade("upgrade-work-wid-utsiht", { -- Source: Felix Grendon, "The Anglo-
 	Work = "scroll",
 	Civilization = "teuton",
 	Quote = "\"Ecce dolgola nedit dudum\nbethecunda braethecunda\"\n- Wid Utsiht"
+})
+
+DefineUpgrade("upgrade-work-wid-utsihte", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, pp. 204-205.
+	Name = _("Wid Utsihte"),
+	Work = "scroll",
+	Civilization = "teuton",
+	Quote = "\"Ranmigan adonai eltheos mur.\"\n- Wid Utsihte"
 })
 
 DefineUpgrade("upgrade-work-wid-wambewaerce", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, pp. 198-199.
@@ -295,7 +341,15 @@ DefineModifier("upgrade-work-aecer-bot",
 	{"KnowledgeMagic", 1}
 )
 
+DefineModifier("upgrade-work-be-galdorstafum",
+	{"KnowledgeMagic", 1}
+)
+
 DefineModifier("upgrade-work-blodseten",
+	{"KnowledgeMagic", 1}
+)
+
+DefineModifier("upgrade-work-feld-bot",
 	{"KnowledgeMagic", 1}
 )
 
@@ -391,7 +445,19 @@ DefineModifier("upgrade-work-wid-huntan-bite",
 	{"KnowledgeMagic", 1}
 )
 
+DefineModifier("upgrade-work-wid-laetbyrde",
+	{"KnowledgeMagic", 1}
+)
+
 DefineModifier("upgrade-work-wid-lenctenadle",
+	{"KnowledgeMagic", 1}
+)
+
+DefineModifier("upgrade-work-wid-lenctenadle-2",
+	{"KnowledgeMagic", 1}
+)
+
+DefineModifier("upgrade-work-wid-leodrunan",
 	{"KnowledgeMagic", 1}
 )
 
@@ -415,6 +481,10 @@ DefineModifier("upgrade-work-wid-onfealle",
 	{"KnowledgeMagic", 1}
 )
 
+DefineModifier("upgrade-work-wid-theofende",
+	{"KnowledgeMagic", 1}
+)
+
 DefineModifier("upgrade-work-wid-theofentum",
 	{"KnowledgeMagic", 1}
 )
@@ -428,6 +498,10 @@ DefineModifier("upgrade-work-wid-uncudum-swyle",
 )
 
 DefineModifier("upgrade-work-wid-utsiht",
+	{"KnowledgeMagic", 1}
+)
+
+DefineModifier("upgrade-work-wid-utsihte",
 	{"KnowledgeMagic", 1}
 )
 

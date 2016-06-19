@@ -449,7 +449,7 @@ function addEncyclopediaIcon(unit_name, state, menu, x, y)
 		encyclopedia_icon_frame = CIcon:Get(GetUnitTypeData(GetUniqueItemData(unit_name, "Type"), "Icon")).Frame
 		civilization = ""
 		faction = ""
-		tooltip_name = unit_name
+		tooltip_name = GetUniqueItemData(unit_name, "Name")
 		if (civilization ~= "") then
 			tooltip_civilization = "(" ..  _(GetCivilizationData(civilization, "Display"))
 			if (faction ~= "") then
@@ -611,7 +611,7 @@ function OpenEncyclopediaUnitEntry(unit_name, state)
 		encyclopedia_icon_frame = CIcon:Get(GetUnitTypeData(GetUniqueItemData(unit_name, "Type"), "Icon")).Frame
 		civilization = ""
 		faction = ""
-		tooltip_name = unit_name
+		tooltip_name = GetUniqueItemData(unit_name, "Name")
 		if (civilization ~= "") then
 			tooltip_civilization = "(" ..  _(GetCivilizationData(civilization, "Display"))
 			if (faction ~= "") then

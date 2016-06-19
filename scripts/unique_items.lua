@@ -38,7 +38,8 @@ function DefineUniqueItem(unique_item, data)
 	OldDefineUniqueItem(unique_item, data)
 end
 
-DefineUniqueItem("Brimir", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 102.
+DefineUniqueItem("brimir", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 102.
+	Name = "Brimir",
 	Type = "unit-broad-sword",
 	Prefix = "upgrade-item-prefix-penetrating",
 	Suffix = "upgrade-item-suffix-of-victory",
@@ -46,7 +47,8 @@ DefineUniqueItem("Brimir", { -- Source: Henry Adams Bellows (transl.), "The Poet
 	Quote = "\"Of all the gods is Odin the greatest,\nAnd Sleipnir the best of steeds;\nBifrost of bridges, Bragi of skalds,\nHobrok of hawks, Garm of hounds,\nand Brimir of swords.\"\n- Grimnismol (Grimnir)"
 } )
 
-DefineUniqueItem("Laevatein", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 124; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 245.
+DefineUniqueItem("laevatein", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 124; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 245.
+	Name = "Laevatein",
 	Type = "unit-broad-sword",
 	Prefix = "upgrade-item-prefix-wounding",
 	Suffix = "upgrade-item-suffix-of-slaughter",
@@ -54,7 +56,8 @@ DefineUniqueItem("Laevatein", { -- Source: Kevin Crossley-Holland, "The Norse My
 	Quote = "\"Laevatein is there that Lopt with runes\nOnce made by the doors of death;\nIn Laegjarn's chest by Sinmora lies it,\nAnd nine locks fasten it firm.\"\n- Svipdagsmol (Fjolsvith)"
 } )
 
-DefineUniqueItem("Gram", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 351, 365.
+DefineUniqueItem("gram", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 351, 365.
+	Name = "Gram",
 	Type = "unit-frankish-spatha",
 	Prefix = "upgrade-item-prefix-wounding",
 	Suffix = "upgrade-item-suffix-of-victory",
@@ -63,7 +66,8 @@ DefineUniqueItem("Gram", { -- Source: Henry Adams Bellows (transl.), "The Poetic
 	Quote = "\"With thy sword between, three nights thou sleepest\nWith her thou winnest for Gunnar's wife.\"\n- Gripisspo (Gripir)"
 } )
 
-DefineUniqueItem("Hrotti", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 385.
+DefineUniqueItem("hrotti", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 385.
+	Name = "Hrotti",
 	Type = "unit-spatha",
 	NameElements = {"word", "dwarven", "noun", "Hrotti"},
 	Prefix = "upgrade-item-prefix-penetrating",
@@ -73,7 +77,8 @@ DefineUniqueItem("Hrotti", { -- Source: Henry Adams Bellows (transl.), "The Poet
 --	Quote = "\"There Sigurd found a mighty store of gold, and he filled two chests full thereof; he took the fear-helm and a golden mail-coat and the sword Hrotti, and many other precious things.\"\n- Fafnismol" -- original
 } )
 
-DefineUniqueItem("Rithil", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 380.
+DefineUniqueItem("rithil", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 380.
+	Name = "Rithil",
 	Type = "unit-spatha",
 	NameElements = {"word", "dwarven", "adjective", "Rithil"},
 	Prefix = "upgrade-item-prefix-swift",
@@ -82,7 +87,8 @@ DefineUniqueItem("Rithil", { -- Source: Henry Adams Bellows (transl.), "The Poet
 	Quote = "\"Then Regin went up to Fafnir and cut out his heart with his sword, that was named Rithil, and then he drank blood from the wounds.\"\n- Fafnismol"
 } )
 
-DefineUniqueItem("The Hammer of Thursagan", {
+DefineUniqueItem("the-hammer-of-thursagan", {
+	Name = "The Hammer of Thursagan",
 	Type = "unit-hammer",
 	Prefix = "upgrade-item-prefix-flaming",
 	Suffix = "upgrade-item-suffix-of-victory",
@@ -90,7 +96,8 @@ DefineUniqueItem("The Hammer of Thursagan", {
 	Quote = "\"The very tool with which our greatest runesmith made the Scepter of Fire. But it is ancient, far older than Thursagan; he was but the last to wield it.\"\n- Angarthing"
 } )
 
-DefineUniqueItem("Toporik", { -- name means "hatchet" in Russian; renaming of the Axe of Perun (Perun is a god from Slavic mythology), here made into a dwarven unique throwing axe (since it wouldn't make much sense for the dwarves to have a throwing axe named after a god from a human mythology); was made a dwarven item under the following premise: many scholars associate the Axe of Perun with Thor's Mjollnir hammer in function and origin, and the latter was made by dwarves
+DefineUniqueItem("toporik", { -- name means "hatchet" in Russian; renaming of the Axe of Perun (Perun is a god from Slavic mythology), here made into a dwarven unique throwing axe (since it wouldn't make much sense for the dwarves to have a throwing axe named after a god from a human mythology); was made a dwarven item under the following premise: many scholars associate the Axe of Perun with Thor's Mjollnir hammer in function and origin, and the latter was made by dwarves
+	Name = "Toporik",
 	Type = "unit-bearded-throwing-axe",
 	Prefix = "upgrade-item-prefix-storm",
 	Suffix = "upgrade-item-suffix-of-victory",
@@ -98,7 +105,8 @@ DefineUniqueItem("Toporik", { -- name means "hatchet" in Russian; renaming of th
 	Quote = "\"The wise Hroptatyr\nHas nine sons:\nThree strike, three thunder,\nThree lighten.\"\n- Dwarven Traditional Poetry" -- Source: W. R. S. Ralston, "Songs of the Russian People", 1872, p. 90.
 } )
 
-DefineUniqueItem("Svalin", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 63; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 100.
+DefineUniqueItem("svalin", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 63; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 100.
+	Name = "Svalin",
 	Type = "unit-bronze-shield",
 	Prefix = "upgrade-item-prefix-impregnable",
 	Suffix = "upgrade-item-suffix-of-extinguishment",
@@ -106,7 +114,8 @@ DefineUniqueItem("Svalin", { -- Source: Kevin Crossley-Holland, "The Norse Myths
 	Quote = "\"In front of the sun does Svalin stand,\nThe shield for the shining god;\nMountains and sea would be set in flames\nIf it fell from before the sun.\"\n- Grimnismol (Grimnir)"
 } )
 
-DefineUniqueItem("Brisingamen", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 177.
+DefineUniqueItem("brisingamen", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 177.
+	Name = "Brisingamen",
 	Type = "unit-amulet",
 	NameElements = {
 		"compound", "prefix", "dwarven", "noun", "singular", "genitive", "Brising",
@@ -118,7 +127,8 @@ DefineUniqueItem("Brisingamen", { -- Source: Henry Adams Bellows (transl.), "The
 	Quote = "\"The dwelling great of the dwarves was shaken,\nAnd burst was the mighty Brisings' necklace.\"\n- Dwarven Traditional Poetry"
 } )
 
-DefineUniqueItem("Andvaranaut", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 114, 360; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 21.
+DefineUniqueItem("andvaranaut", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 114, 360; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 21.
+	Name = "Andvaranaut",
 	Type = "unit-ring",
 	NameElements = {
 		"compound", "prefix", "dwarven", "noun", "singular", "genitive", "Andvari",
@@ -130,7 +140,8 @@ DefineUniqueItem("Andvaranaut", { -- Source: Henry Adams Bellows (transl.), "The
 	Quote = "\"Now shall the gold that I once had\nBring their death to warriors twain,\nAnd evil be for heroes eight;\nJoy of my wealth shall no dwarf win.\"\n- Reginsmol (Andvari)"
 } )
 
-DefineUniqueItem("Draupnir", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 241; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 114.
+DefineUniqueItem("draupnir", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 241; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 114.
+	Name = "Draupnir",
 	Type = "unit-ring",
 	NameElements = {"word", "dwarven", "noun", "Draupnir"},
 	Prefix = "upgrade-item-prefix-flaming",
@@ -139,7 +150,8 @@ DefineUniqueItem("Draupnir", { -- Source: Kevin Crossley-Holland, "The Norse Myt
 	Quote = "\"The ring I wish not, though burned it was\nOf old with Hroptatyr's son;\nIn my home is no lack of gold\nIn the wealth my father wields.\"\n- Dwarven Traditional Poetry"
 } )
 
-DefineUniqueItem("The Wedding Veil", { -- Source: Alena Ježková, "77 Prague Legends", 2006, p. 31.
+DefineUniqueItem("the-wedding-veil", { -- Source: Alena Ježková, "77 Prague Legends", 2006, p. 31.
+	Name = "The Wedding Veil",
 	Type = "unit-gold-deposit",
 	Prefix = "upgrade-item-prefix-replenishing",
 	Suffix = "upgrade-item-suffix-of-replenishment",
@@ -147,7 +159,8 @@ DefineUniqueItem("The Wedding Veil", { -- Source: Alena Ježková, "77 Prague Le
 	Background = "The Wedding Veil was a gold mine in Jilova owned by the Prague burgher Rotlev, who lived in the time of Charles IV. The mine was very profitable, but had begun to dry up. Strongly believing that it still contained much gold inside, Rotlev sold off more and more of his possessions to keep paying for the mining operations. Eventually, he had nothing left to sell. His wife then took a golden veil which he had given to her as a wedding gift, and told him to sell it. He hesitantly accepted. During the further week of mining the veil had paid for, vast gold veins were found in the mine. Rotlev was saved. He bought back his wife's veil, and the gold was so abundant that he became an even wealthier man than he had been previously. And thus the mine became known for the veil which saved its owner, receiving its name from it. With the mine's riches, Rotlev built a large house in Prague, which was later bought by the crown and became the Carolinum."
 } )
 
-DefineUniqueItem("Esel", { -- Source: Alena Ježková, "22 Böhmische Legenden", 2007, pp. 82-83.
+DefineUniqueItem("esel", { -- Source: Alena Ježková, "22 Böhmische Legenden", 2007, pp. 82-83.
+	Name = "Esel",
 	Type = "unit-silver-deposit",
 	Prefix = "upgrade-item-prefix-replenishing",
 	Suffix = "upgrade-item-suffix-of-diligence",
@@ -155,7 +168,8 @@ DefineUniqueItem("Esel", { -- Source: Alena Ježková, "22 Böhmische Legenden",
 	Background = "Esel was a very rich silver mine near Kuttenberg (Kutná Hora), in Bohemia. It was legendary for never having flooded, and it was said among the miners that as long as Esel was not filled with water, the silver mining near Kuttenberg would remain strong. In 1540, Esel suddenly began to flood, and by 1554 it was entirely submerged in water. The miners' prophecy turned true: soon after Esel's flood, the silver finds in the Kuttenberg area began to dwindle."
 } )
 
-DefineUniqueItem("Smitna", { -- Source: Alena Ježková, "22 Böhmische Legenden", 2007, p. 81.
+DefineUniqueItem("smitna", { -- Source: Alena Ježková, "22 Böhmische Legenden", 2007, p. 81.
+	Name = "Smitna",
 	Type = "unit-silver-deposit",
 	Prefix = "upgrade-item-prefix-industrious",
 	Suffix = "upgrade-item-suffix-of-diligence",
@@ -163,14 +177,16 @@ DefineUniqueItem("Smitna", { -- Source: Alena Ježková, "22 Böhmische Legenden
 	Background = "Šmitna was a silver mine near Kuttenberg (Kutná Hora), in Bohemia. It was said to be inhabited by kobolds, who would warn the miners of which parts of the mine were unsafe to dig through. In 1509 Šmitna was flooded, resulting in the drowning of 18 miners - according to legend, they had been told not to dig at a certain place by the mine's kobolds, but such warnings went unheeded."
 } )
 
-DefineUniqueItem("Shorbear Hold", {
+DefineUniqueItem("shorbear-hold", {
+	Name = "Shorbear Hold",
 	Type = "unit-dwarven-stronghold",
 	Prefix = "upgrade-item-prefix-impregnable",
 	Suffix = "upgrade-item-suffix-of-the-colossus",
 	Quote = "\"Everyone to the caves, and kill those still inside!\"\n- Durstorn, Norlund Chieftain"
 } )
 
-DefineUniqueItem("Skidbladnir", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 101.
+DefineUniqueItem("skidbladnir", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 101.
+	Name = "Skidbladnir",
 	Type = "unit-dwarven-transport-ship",
 --	NameElements = {
 --		"compound", "prefix", "dwarven", "noun", "Skid",
@@ -185,7 +201,8 @@ DefineUniqueItem("Skidbladnir", { -- Source: Henry Adams Bellows (transl.), "The
 } )
 
 --[[
-DefineUniqueItem("Varva", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 231-232.
+DefineUniqueItem("varva", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 231-232.
+	Name = "Varva",
 	Type = "unit-teuton-farm", -- should be Norse
 	Prefix = "upgrade-item-prefix-sturdy", -- should be something more fitting?
 --	Suffix = ?,
@@ -193,123 +210,141 @@ DefineUniqueItem("Varva", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vo
 	Background = "Varva was a farm in Jutland in ancient times. In the Ynglinga Saga it is told that the sparrow of the Swedish king Dag, which relayed news to the monarch from faraway lands, once flew to the farm. It ate some of the farmer's grain, upon which he threw stones at the sparrow, killing it. When the king discovered that the sparrow had been killed at Varva, he sent a host to exact his revenge on the farm's inhabitants. As the king was about cross Skiotan's Ford to return to Sweden, a thrall threw a hay-fork at the monarch, hitting his head and ending his life."
 } )
 
-DefineUniqueItem("Carolinum", { -- Source: Alena Ježková, "77 Prague Legends", 2006, p. 31.
+DefineUniqueItem("carolinum", { -- Source: Alena Ježková, "77 Prague Legends", 2006, p. 31.
+	Name = "Carolinum",
 	Type = "unit-teuton-university", -- could also be a library, or perhaps a temple
 	Prefix = ?,
 	Suffix = ?,
 	Background = "The Carolinum was the seat of the Prague University. It was first built as a residence by the rich burgher Rotlev, being later acquired by the crown and transformed into a university seat.
 } )
 
-DefineUniqueItem("Castle of Zebrak", { -- Castle of Žebrák; Source: Alena Ježková, "77 Prague Legends", 2006, p. 52.
+DefineUniqueItem("castle-of-zebrak", { -- Castle of Žebrák; Source: Alena Ježková, "77 Prague Legends", 2006, p. 52.
+	Name = "Castle of Zebrak",
 	Type = "unit-teuton-burg", -- should be a castle
 	Prefix = ?,
 	Suffix = ?
 } )
 
-DefineUniqueItem("Prague Castle", { -- Source: Alena Ježková, "77 Prague Legends", 2006, pp. 53, 61.
+DefineUniqueItem("prague-castle", { -- Source: Alena Ježková, "77 Prague Legends", 2006, pp. 53, 61.
+	Name = "Prague Castle",
 	Type = "unit-teuton-burg", -- should be a castle
 	Prefix = ?,
 	Suffix = ?
 } )
 
-DefineUniqueItem("Novy Hrad", { -- Nový Hrad; Source: Alena Ježková, "77 Prague Legends", 2006, p. 53.
+DefineUniqueItem("novy-hrad", { -- Nový Hrad; Source: Alena Ježková, "77 Prague Legends", 2006, p. 53.
+	Name = "Novy Hrad",
 	Type = "unit-teuton-burg", -- should be a castle
 	Prefix = ?,
 	Suffix = ?,
 	Background = "\"Nový Hrad\" means \"new castle\" in Czech."
 } )
 
-DefineUniqueItem("Clementinum", { -- Alena Ježková, "77 Prague Legends", 2006, p. 54.
+DefineUniqueItem("clementinum", { -- Alena Ježková, "77 Prague Legends", 2006, p. 54.
+	Name = "Clementinum",
 	Type = "unit-teuton-temple", -- should be limited to only churches
 	Prefix = ?,
 	Suffix = ?,
 	Background = "The Clementinum was a large complex of buildings built by the Jesuit Order in Prague. It encompassed six courtyards, two churches and two chapels. The complex was abandoned by the Jesuits in 1773, when Pope Clement XV dissolved their order."
 } )
 
-DefineUniqueItem("Schwarzenberg Palace", { -- Located in Prague; Source: Alena Ježková, "77 Prague Legends", 2006, p. 62.
+DefineUniqueItem("schwarzenberg-palace", { -- Located in Prague; Source: Alena Ježková, "77 Prague Legends", 2006, p. 62.
+	Name = "Schwarzenberg Palace",
 	Type = "unit-teuton-burg", -- should be a castle?
 	Prefix = ?,
 	Suffix = ?
 } )
 
-DefineUniqueItem("Daliborka", { -- Source: Alena Ježková, "77 Prague Legends", 2006, p. 88.
+DefineUniqueItem("daliborka", { -- Source: Alena Ježková, "77 Prague Legends", 2006, p. 88.
+	Name = "Daliborka",
 	Type = "unit-teuton-watch-tower",
 	Prefix = ?,
 	Suffix = ?,
 	Background = "Daliborka was a prison tower in Prague, named after its most renowned capative, Dalibor of Kozajedy."
 } )
 
-DefineUniqueItem("The White Tower", { -- Source: Alena Ježková, "77 Prague Legends", 2006, p. 88.
+DefineUniqueItem("the-white-tower", { -- Source: Alena Ježková, "77 Prague Legends", 2006, p. 88.
+	Name = "The White Tower",
 	Type = "unit-teuton-watch-tower",
 	Prefix = ?,
 	Suffix = ?,
 	Background = "The White Tower was a tower in Prague."
 } )
 
-DefineUniqueItem("Mihulka", { -- Source: Alena Ježková, "77 Prague Legends", 2006, p. 88.
+DefineUniqueItem("mihulka", { -- Source: Alena Ježková, "77 Prague Legends", 2006, p. 88.
+	Name = "Mihulka",
 	Type = "unit-teuton-watch-tower",
 	Prefix = ?,
 	Suffix = ?,
 	Background = "Mihulka was a tower in Prague."
 } )
 
-DefineUniqueItem("Ploskovice", { -- Source: Alena Ježková, "77 Prague Legends", 2006, p. 88.
+DefineUniqueItem("ploskovice", { -- Source: Alena Ježková, "77 Prague Legends", 2006, p. 88.
+	Name = "Ploskovice",
 	Type = "unit-teuton-burg",
 	Prefix = ?,
 	Suffix = ?,
 	Background = "Ploskovice was a stronghold near Litoměřice."
 } )
 
-DefineUniqueItem("Tyn Church", { -- Týn Church; Alena Ježková, "77 Prague Legends", 2006, p. 14.
+DefineUniqueItem("tyn-church", { -- Týn Church; Alena Ježková, "77 Prague Legends", 2006, p. 14.
+	Name = "Tyn Church",
 	Type = "unit-teuton-temple", -- should be limited to only churches
 	Prefix = ?,
 	Suffix = ?,
 	Background = "The Týn Church was a church in Prague."
 } )
 
-DefineUniqueItem("Ungelt", { -- Alena Ježková, "77 Prague Legends", 2006, p. 17.
+DefineUniqueItem("ungelt", { -- Alena Ježková, "77 Prague Legends", 2006, p. 17.
+	Name = "Ungelt",
 	Type = "unit-teuton-market",
 	Prefix = ?,
 	Suffix = ?,
 	Background = "Also known as the Týn Court, the Ungelt was the royal customs house in Prague."
 } )
 
-DefineUniqueItem("Rott", { -- Alena Ježková, "77 Prague Legends", 2006, p. 19.
+DefineUniqueItem("rott", { -- Alena Ježková, "77 Prague Legends", 2006, p. 19.
+	Name = "Rott",
 	Type = "unit-teuton-smithy",
 	Prefix = ?,
 	Suffix = ?,
 	Background = "The Rott ironmonger's shop was located in Prague."
 } )
 
-DefineUniqueItem("V Kotcich", { -- Alena Ježková, "77 Prague Legends", 2006, p. 32.
+DefineUniqueItem("v-kotcich", { -- Alena Ježková, "77 Prague Legends", 2006, p. 32.
+	Name = "V Kotcich",
 	Type = "unit-teuton-market",
 	Prefix = ?,
 	Suffix = ?,
 	Background = "V Kotcich was a marketplace in Prague."
 } )
 
-DefineUniqueItem("The Lion Court", { -- Alena Ježková, "77 Prague Legends", 2006, p. 90.
+DefineUniqueItem("the-lion-court", { -- Alena Ježková, "77 Prague Legends", 2006, p. 90.
+	Name = "The Lion Court",
 	Type = "unit-teuton-stables",
 	Prefix = ?,
 	Suffix = ?,
 	Background = "The Lion Court was a bestiary in Prague."
 } )
 
-DefineUniqueItem("Cernin Palace", { -- Alena Ježková, "77 Prague Legends", 2006, p. 94.
+DefineUniqueItem("cernin-palace", { -- Alena Ježková, "77 Prague Legends", 2006, p. 94.
+	Name = "Cernin Palace",
 	Type = "unit-teuton-burg",
 	Prefix = ?,
 	Suffix = ?,
 	Background = "The Černín Palace was built in the Loretánské Square in Prague for Humprecht Černín of Chudenice, the Holy Roman Empire's envoy to Venice."
 } )
 
-DefineUniqueItem("The Old New Synanogue", { -- Alena Ježková, "77 Prague Legends", 2006, p. 103.
+DefineUniqueItem("the-old-new-synanogue", { -- Alena Ježková, "77 Prague Legends", 2006, p. 103.
+	Name = "The Old New Synanogue",
 	Type = "unit-teuton-temple",
 	Prefix = ?,
 	Suffix = ?,
 	Background = "The Old New Synanogue lies in Prague."
 } )
 
-DefineUniqueItem("Na Slovanech Monastery", { -- Alena Ježková, "77 Prague Legends", 2006, pp. 126, 130.
+DefineUniqueItem("na-slovanech-monastery", { -- Alena Ježková, "77 Prague Legends", 2006, pp. 126, 130.
+	Name = "Na Slovanech Monastery",
 	Type = "unit-teuton-temple", -- previously known as Emmaeus Monastery
 	Prefix = ?,
 	Suffix = ?,
