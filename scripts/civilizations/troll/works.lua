@@ -25,12 +25,13 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineUpgrade("upgrade-work-wid-aelfadle", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, pp. 190-191.
+DefineUpgrade("upgrade-work-wid-aelfadle", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, pp. 190-191, 226.
 	Name = _("For Elf-Disease"), -- Wid Aelfadle
 	Work = "scroll",
 	Civilization = "troll", -- actually an Anglo-Saxon charm, but here we put is as a troll one since this is a charm against a disease believed to be elf-caused
 --	Quote = "\"Then go in silence, and, though something of a fearful kind or a man should come upon you, say not a single word to it until you reach the herb you marked the night before.\"\n- Wid Aelfadle" -- original
 	Quote = "\"Then go in silence, and, though something of a fearful kind or another troll should come upon you, say not a single word to it until you reach the herb you marked the night before.\"\n- For Elf-Disease"
+	-- "Elf-Disease" = bewitchment by elves
 })
 
 DefineUpgrade("upgrade-work-wid-aelfcynne", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, pp. 210-211.

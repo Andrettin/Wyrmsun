@@ -120,6 +120,12 @@ DefineLanguageWord("Almr", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	}
 })
 
+DefineLanguageWord("Anga", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, p. 228.
+	Language = "old-norse",
+	Type = "verb", -- apparently
+	Meanings = {"Sprout", "Shoot"}
+})
+
 DefineLanguageWord("Ār", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 	Language = "old-norse",
 	Type = "noun",

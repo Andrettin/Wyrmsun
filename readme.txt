@@ -105,6 +105,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added a "Knowledge (Magic)" entry to the encyclopedia Game Concepts section, explaining how the new stat works.
 - Added a "Knowledge (Warfare)" entry to the encyclopedia Game Concepts section, explaining how the new stat works.
 - Added a "Planes" section in the encyclopedia, explaining some of the different planes of existence in the game's lore.
+- Added a popup tip explaining item identification when an unidentified item is first obtained.
 
 * Multiplayer
 - Fixed a multiplayer crash cause which triggered when both players had different "No Randomness" settings.
