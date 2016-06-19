@@ -92,6 +92,12 @@ DefineUpgrade("upgrade-work-wid-blaece", { -- Source: Felix Grendon, "The Anglo-
 	Quote = "\"Take this evil, and move away with it.\"\n- Wid Blaece"
 })
 
+DefineUpgrade("upgrade-work-wid-blodrene-of-nosu", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, pp. 210-211.
+	Name = _("Wid Blodrene of Nosu"),
+	Work = "scroll",
+	Civilization = "teuton"
+})
+
 DefineUpgrade("upgrade-work-wid-ceapes-lyre", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, pp. 184-187.
 	Name = _("Wid Ceapes Lyre"),
 	Work = "scroll",
@@ -254,6 +260,19 @@ DefineUpgrade("upgrade-work-wid-miclum-gonge", { -- Source: Felix Grendon, "The 
 	Quote = "\"Tollam te artemesia, ne lassus sim in via.\"\n- Wid Miclum Gonge"
 })
 
+DefineUpgrade("upgrade-work-wid-monadseocnesse", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, pp. 208-209.
+	Name = _("Wid Monadseocnesse"),
+	Work = "scroll",
+	Civilization = "teuton"
+})
+
+DefineUpgrade("upgrade-work-wid-naedran-bite", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, pp. 212-213.
+	Name = _("Wid Naedran Bite"),
+	Work = "scroll",
+	Civilization = "teuton",
+	Quote = "\"Against snake-bite, some advise us to pronounce one word\"\n- Wid Naedran Bite"
+})
+
 DefineUpgrade("upgrade-work-wid-oman", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, pp. 172-173.
 	Name = _("Wid Oman"),
 	Work = "scroll",
@@ -263,6 +282,12 @@ DefineUpgrade("upgrade-work-wid-oman", { -- Source: Felix Grendon, "The Anglo-Sa
 
 DefineUpgrade("upgrade-work-wid-onfealle", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, pp. 200-201.
 	Name = _("Wid Onfealle"),
+	Work = "scroll",
+	Civilization = "teuton"
+})
+
+DefineUpgrade("upgrade-work-wid-swina-faer-steorfan", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, pp. 208-209.
+	Name = _("Wid Swina Faer-Steorfan"),
 	Work = "scroll",
 	Civilization = "teuton"
 })
@@ -323,6 +348,20 @@ DefineUpgrade("upgrade-work-wid-wennum", { -- Source: Felix Grendon, "The Anglo-
 	Quote = "\"Wen, wen, little wen,\nHere you shall not build, nor any dwelling have\"\n- Wid Wennum"
 })
 
+DefineUpgrade("upgrade-work-wid-wennum-2", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, pp. 212-213.
+	Name = _("Wid Wennum"),
+	Work = "scroll",
+	Civilization = "teuton",
+	Quote = "\"Do this so for nine days: he will soon be well.\"\n- Wid Wennum"
+})
+
+DefineUpgrade("upgrade-work-wid-wifgemaedlan", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, pp. 212-213.
+	Name = _("Wid Wifgemaedlan"),
+	Work = "scroll",
+	Civilization = "teuton",
+	Quote = "\"On that day the spell will not have the power to harm you.\"\n- Wid Wifgemaedlan"
+})
+
 DefineUpgrade("upgrade-work-wid-wyrme", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, pp. 168-169.
 	Name = _("Wid Wyrme"),
 	Work = "scroll",
@@ -330,11 +369,23 @@ DefineUpgrade("upgrade-work-wid-wyrme", { -- Source: Felix Grendon, "The Anglo-S
 	Quote = "\"Gonomil orgomil marbumil,\nmarbsairamum tofed tengo\"\n- Wid Wyrme"
 })
 
+DefineUpgrade("upgrade-work-wid-wyrt-forbore", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, pp. 212-213.
+	Name = _("Wid Wyrt-Forbore"),
+	Work = "scroll",
+	Civilization = "teuton"
+})
+
 DefineUpgrade("upgrade-work-wid-ymbe", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, pp. 168-169.
 	Name = _("Wid Ymbe"),
 	Work = "scroll",
 	Civilization = "teuton",
 	Quote = "\"Alight, victory-dames, sink to the ground!\nNever fly to the woodland!\"\n- Wid Ymbe"
+})
+
+DefineUpgrade("upgrade-work-with-tha-stithestan-feferas", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, pp. 210-211.
+	Name = _("With tha Stithestan Feferas"),
+	Work = "scroll",
+	Civilization = "teuton"
 })
 
 DefineModifier("upgrade-work-aecer-bot",
@@ -375,6 +426,10 @@ DefineModifier("upgrade-work-wid-aswollenum-eagum",
 
 DefineModifier("upgrade-work-wid-blaece",
 	{"KnowledgeMagic", 1} -- could also be herbology
+)
+
+DefineModifier("upgrade-work-wid-blodrene-of-nosu",
+	{"KnowledgeMagic", 1}
 )
 
 DefineModifier("upgrade-work-wid-ceapes-lyre",
@@ -473,12 +528,24 @@ DefineModifier("upgrade-work-wid-miclum-gonge",
 	{"KnowledgeMagic", 1} -- could also be herbology
 )
 
+DefineModifier("upgrade-work-wid-monadseocnesse",
+	{"KnowledgeMagic", 1}
+)
+
+DefineModifier("upgrade-work-wid-naedran-bite",
+	{"KnowledgeMagic", 1}
+)
+
 DefineModifier("upgrade-work-wid-oman",
 	{"KnowledgeMagic", 1}
 )
 
 DefineModifier("upgrade-work-wid-onfealle",
 	{"KnowledgeMagic", 1}
+)
+
+DefineModifier("upgrade-work-wid-swina-faer-steorfan",
+	{"KnowledgeMagic", 1} -- could also be herbology
 )
 
 DefineModifier("upgrade-work-wid-theofende",
@@ -513,10 +580,26 @@ DefineModifier("upgrade-work-wid-wennum",
 	{"KnowledgeMagic", 1}
 )
 
+DefineModifier("upgrade-work-wid-wennum-2",
+	{"KnowledgeMagic", 1}
+)
+
+DefineModifier("upgrade-work-wid-wifgemaedlan",
+	{"KnowledgeMagic", 1}
+)
+
 DefineModifier("upgrade-work-wid-wyrme",
+	{"KnowledgeMagic", 1}
+)
+
+DefineModifier("upgrade-work-wid-wyrt-forbore",
 	{"KnowledgeMagic", 1}
 )
 
 DefineModifier("upgrade-work-wid-ymbe",
 	{"KnowledgeMagic", 1}
+)
+
+DefineModifier("upgrade-work-with-tha-stithestan-feferas",
+	{"KnowledgeMagic", 1} -- could also be herbology
 )

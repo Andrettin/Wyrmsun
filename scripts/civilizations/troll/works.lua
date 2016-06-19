@@ -33,6 +33,19 @@ DefineUpgrade("upgrade-work-wid-aelfadle", { -- Source: Felix Grendon, "The Angl
 	Quote = "\"Then go in silence, and, though something of a fearful kind or another troll should come upon you, say not a single word to it until you reach the herb you marked the night before.\"\n- For Elf-Disease"
 })
 
+DefineUpgrade("upgrade-work-wid-aelfcynne", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, pp. 210-211.
+	Name = _("Against the Elven Race"), -- Wid Aelfcynne
+	Work = "scroll",
+	Civilization = "troll", -- actually an Anglo-Saxon charm, but here we put is as a troll one since this is a charm against elves
+	Quote = "\"Make a salve against the elven race\"\n- Against the Elven Race"
+})
+
+DefineUpgrade("upgrade-work-wid-aelfe-and-wid-sidsan", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, pp. 212-213.
+	Name = _("Against an Elf and Against Charm-Magic"), -- Wid Aelfe and Wid Sidsan
+	Work = "scroll",
+	Civilization = "troll" -- actually an Anglo-Saxon charm, but here we put is as a troll one since this is a charm against elves
+})
+
 DefineUpgrade("upgrade-work-wid-aelfsogothan", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, pp. 186-189.
 	Name = _("For Elf Hiccup"),
 	Work = "scroll",
@@ -47,8 +60,23 @@ DefineUpgrade("upgrade-work-wid-waeteraelfadle", { -- Source: Felix Grendon, "Th
 	Quote = "\"Round the wounds I have wreathed the best of healing amulets,\nThat the wounds may neither burn nor burst\"\n- For Water-Elf Disease"
 })
 
+DefineUpgrade("upgrade-work-wid-ylfa-gescotum", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, pp. 208-209.
+	Name = _("For Elf-Shot"), -- Wid Ylfa Gescotum
+	Work = "scroll",
+	Civilization = "troll", -- actually an Anglo-Saxon charm, but here we put is as a troll one since this is a charm against something believed to be elf-caused
+	Quote = "\"Be the elf who he may, this will suffice as a cure\"\n- For Elf-Shot"
+})
+
 DefineModifier("upgrade-work-wid-aelfadle",
 	{"KnowledgeMagic", 1} -- could also be herbology
+)
+
+DefineModifier("upgrade-work-wid-aelfcynne",
+	{"KnowledgeMagic", 1} -- could also be herbology
+)
+
+DefineModifier("upgrade-work-wid-aelfe-and-wid-sidsan",
+	{"KnowledgeMagic", 1}
 )
 
 DefineModifier("upgrade-work-wid-aelfsogothan",
@@ -57,4 +85,8 @@ DefineModifier("upgrade-work-wid-aelfsogothan",
 
 DefineModifier("upgrade-work-wid-waeteraelfadle",
 	{"KnowledgeMagic", 1} -- could also be herbology
+)
+
+DefineModifier("upgrade-work-wid-ylfa-gescotum",
+	{"KnowledgeMagic", 1}
 )
