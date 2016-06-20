@@ -48,7 +48,7 @@ DefineDeity("gaia", { -- Source: Jenny March, "Dictionary of Classical Mythology
 --	Description = "A primordial goddess, Gaia is one of the first deities to have been born. She is the mother of the Titans by Uranus. Her greatest worshippers are the ettins of Jotunheim, to whom she appeared in ages past."
 })
 
-DefineDeity("gathaarl", { -- from Tyrant
+DefineDeity("gathaarl", { -- from Tyrant, Goblin God of Battle
 	Name = "Gathaarl",
 	HomePlane = "Helheim",
 	Civilizations = {"goblin"},
