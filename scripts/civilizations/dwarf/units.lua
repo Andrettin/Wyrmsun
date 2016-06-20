@@ -184,8 +184,19 @@ DefineUnitType("unit-dwarven-axefighter", { Name = _("Axefighter"),
 		{
 			"layer", "weapon",
 			"variation-id", "axe",
+			"upgrade-forbidden", "upgrade-dwarven-great-axe",
 			"item-not-equipped", "unit-hammer",
-			"item-not-equipped", "unit-mining-pick"
+			"item-not-equipped", "unit-mining-pick",
+			"item-not-equipped", "unit-great-axe"
+		},
+		{
+			"layer", "weapon",
+			"variation-id", "double-axe",
+			"file", "dwarf/units/weapons/double_axe.png",
+			"upgrade-required", "upgrade-dwarven-great-axe",
+			"item-not-equipped", "unit-hammer",
+			"item-not-equipped", "unit-mining-pick",
+			"item-equipped", "unit-great-axe"
 		},
 		{
 			"layer", "weapon",
@@ -235,7 +246,18 @@ DefineUnitType("unit-dwarven-steelclad", { Name = _("Steelclad"),
 	Parent = "unit-template-veteran-infantry",
 	Civilization = "dwarf",
 	Description = _("The more experienced dwarven steelclad fighters wear heavy chain mail and plate armor, for which they are rightly famous."),
-	Image = {"file", "dwarf/units/dwarven_steelclad.png", "size", {72, 72}},
+	Image = {"file", "dwarf/units/body_warrior.png", "size", {72, 72}},
+	LayerImages = {
+		{"layer", "right-arm", "file", "dwarf/units/right_arm_warrior.png"},
+		{"layer", "right-hand", "file", "dwarf/units/right_hand_warrior.png"},
+		{"layer", "left-arm", "file", "dwarf/units/left_arm_shield.png"},
+		{"layer", "clothing-right-arm", "file", "dwarf/units/shoulder_pad_right_arm_warrior.png"},
+		{"layer", "clothing-left-arm", "file", "dwarf/units/shoulder_pad_left_arm.png"},
+		{"layer", "hair", "file", "dwarf/units/red_hair_warrior.png"},
+		{"layer", "helmet", "file", "dwarf/units/helmets/steelclad_helmet.png"},
+		{"layer", "weapon", "file", "dwarf/units/weapons/axe.png"},
+		{"layer", "shield", "file", "dwarf/units/shields/round_shield.png"}
+	},
 	Animations = "animations-dwarven-axefighter", Icon = "icon-dwarven-steelclad",
 	DefaultEquipment = {
 		{"weapon", "unit-battle-axe"},
@@ -253,92 +275,59 @@ DefineUnitType("unit-dwarven-steelclad", { Name = _("Steelclad"),
 	Variations = {
 		{
 			"variation-id", "red-hair",
-			"upgrade-forbidden", "upgrade-dwarven-great-axe",
-			"item-not-equipped", "unit-great-axe",
 			"upgrade-forbidden", "upgrade-old"
 		},
 		{
 			"variation-id", "gray-hair",
-			"file", "dwarf/units/dwarven_steelclad_gray_hair.png",
-			"icon", "icon-dwarven-steelclad-gray-hair",
+			"layer-file", "hair", "dwarf/units/gray_hair_warrior.png",
+			"icon", "icon-dwarven-axefighter-gray-hair"
+		},
+		{
+			"variation-id", "orange-hair",
+			"layer-file", "hair", "dwarf/units/orange_hair_warrior.png",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"variation-id", "blond-hair",
+			"layer-file", "hair", "dwarf/units/blond_hair_warrior.png",
+			"icon", "icon-dwarven-axefighter-blond-hair",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"variation-id", "black-hair",
+			"layer-file", "hair", "dwarf/units/black_hair_warrior.png",
+			"icon", "icon-dwarven-axefighter-black-hair",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"variation-id", "brown-hair",
+			"layer-file", "hair", "dwarf/units/brown_hair_warrior.png",
+			"icon", "icon-dwarven-axefighter-brown-hair",
+			"upgrade-forbidden", "upgrade-old"
+		},
+		{
+			"layer", "weapon",
+			"variation-id", "axe",
 			"upgrade-forbidden", "upgrade-dwarven-great-axe",
+			"item-not-equipped", "unit-hammer",
+			"item-not-equipped", "unit-mining-pick",
 			"item-not-equipped", "unit-great-axe"
 		},
 		{
-			"variation-id", "orange-hair",
-			"file", "dwarf/units/dwarven_steelclad_orange_hair.png",
-			"upgrade-forbidden", "upgrade-dwarven-great-axe",
-			"item-not-equipped", "unit-great-axe",
-			"upgrade-forbidden", "upgrade-old"
-		},
-		{
-			"variation-id", "blond-hair",
-			"file", "dwarf/units/dwarven_steelclad_blond_hair.png",
-			"icon", "icon-dwarven-steelclad-blond-hair",
-			"upgrade-forbidden", "upgrade-dwarven-great-axe",
-			"item-not-equipped", "unit-great-axe",
-			"upgrade-forbidden", "upgrade-old"
-		},
-		{
-			"variation-id", "black-hair",
-			"file", "dwarf/units/dwarven_steelclad_black_hair.png",
-			"icon", "icon-dwarven-steelclad-black-hair",
-			"upgrade-forbidden", "upgrade-dwarven-great-axe",
-			"item-not-equipped", "unit-great-axe",
-			"upgrade-forbidden", "upgrade-old"
-		},
-		{
-			"variation-id", "brown-hair",
-			"file", "dwarf/units/dwarven_steelclad_brown_hair.png",
-			"icon", "icon-dwarven-steelclad-brown-hair",
-			"upgrade-forbidden", "upgrade-dwarven-great-axe",
-			"item-not-equipped", "unit-great-axe",
-			"upgrade-forbidden", "upgrade-old"
-		},
-		-- Great Axe
-		{
-			"variation-id", "red-hair",
-			"file", "dwarf/units/dwarven_steelclad_great_axe.png",
+			"layer", "weapon",
+			"variation-id", "double-axe",
+			"file", "dwarf/units/weapons/double_axe.png",
 			"upgrade-required", "upgrade-dwarven-great-axe",
-			"item-equipped", "unit-great-axe",
-			"upgrade-forbidden", "upgrade-old"
+			"item-not-equipped", "unit-hammer",
+			"item-not-equipped", "unit-mining-pick",
+			"item-equipped", "unit-great-axe"
 		},
 		{
-			"variation-id", "gray-hair",
-			"file", "dwarf/units/dwarven_steelclad_gray_hair_great_axe.png",
-			"icon", "icon-dwarven-steelclad-gray-hair",
-			"upgrade-required", "upgrade-dwarven-great-axe"
-		},
-		{
-			"variation-id", "orange-hair",
-			"file", "dwarf/units/dwarven_steelclad_orange_hair_great_axe.png",
-			"upgrade-required", "upgrade-dwarven-great-axe",
-			"item-equipped", "unit-great-axe",
-			"upgrade-forbidden", "upgrade-old"
-		},
-		{
-			"variation-id", "blond-hair",
-			"file", "dwarf/units/dwarven_steelclad_blond_hair_great_axe.png",
-			"icon", "icon-dwarven-steelclad-blond-hair",
-			"upgrade-required", "upgrade-dwarven-great-axe",
-			"item-equipped", "unit-great-axe",
-			"upgrade-forbidden", "upgrade-old"
-		},
-		{
-			"variation-id", "black-hair",
-			"file", "dwarf/units/dwarven_steelclad_black_hair_great_axe.png",
-			"icon", "icon-dwarven-steelclad-black-hair",
-			"upgrade-required", "upgrade-dwarven-great-axe",
-			"item-equipped", "unit-great-axe",
-			"upgrade-forbidden", "upgrade-old"
-		},
-		{
-			"variation-id", "brown-hair",
-			"file", "dwarf/units/dwarven_steelclad_brown_hair_great_axe.png",
-			"icon", "icon-dwarven-steelclad-brown-hair",
-			"upgrade-required", "upgrade-dwarven-great-axe",
-			"item-equipped", "unit-great-axe",
-			"upgrade-forbidden", "upgrade-old"
+			"layer", "weapon",
+			"variation-id", "mace",
+			"file", "dwarf/units/weapons/mace.png",
+			"item-equipped", "unit-hammer",
+			"item-equipped", "unit-mining-pick"
 		},
 		{
 			"layer", "shield",
