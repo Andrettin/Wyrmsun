@@ -436,7 +436,7 @@ DefineButton( { Pos = 5, Level = 0, Icon = "icon-healing",
 	Action = "cast-spell", Value = "spell-healing",
 	Description = "Heals an organic unit.",
 	Key = "h", Hint = _("~!Healing"), Popup = "popup-commands",
-	ForUnit = {"unit-teuton-priest"}
+	ForUnit = {"unit-teuton-priest", "unit-dwarven-witness"}
 })
 
 DefineButton( { Pos = 6, Level = 0, Icon = "icon-stun",

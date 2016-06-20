@@ -1883,8 +1883,18 @@ function OpenEncyclopediaDeityEntry(deity)
 	else
 		description = description .. "Rank: Minor\n\n"
 	end
-	if (GetDeityData(deity, "Portfolio") ~= "") then
-		description = description .. "Portfolio: " .. GetDeityData(deity, "Portfolio") .. "\n\n"
+	
+	local domains = GetDeityData(deity, "Domains")
+	table.sort(domains)
+	if (table.getn(domains) > 0) then
+		description = description .. "Portfolio: "
+		for i=1,table.getn(domains) do
+			description = description .. GetDeityDomainData(domains[i], "Name")
+			if (i < table.getn(domains)) then
+				description = description .. ", "
+			end
+		end
+		description = description .. "\n\n"
 	end
 	
 	local civilizations = GetDeityData(deity, "Civilizations")

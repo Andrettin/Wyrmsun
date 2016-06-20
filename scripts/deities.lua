@@ -44,7 +44,7 @@ DefineDeity("gaia", { -- Source: Jenny March, "Dictionary of Classical Mythology
 	Civilizations = {"ettin", "greek"},
 	Gender = "female",
 	Major = true,
-	Portfolio = "Earth",
+	Domains = {"earth"},
 --	Description = "A primordial goddess, Gaia is one of the first deities to have been born. She is the mother of the Titans by Uranus. Her greatest worshippers are the ettins of Jotunheim, to whom she appeared in ages past."
 })
 
@@ -52,7 +52,7 @@ DefineDeity("gathaarl", { -- from Tyrant
 	Name = "Gathaarl",
 	HomePlane = "Helheim",
 	Civilizations = {"goblin"},
-	Portfolio = "Battle",
+	Domains = {"fear", "fertility", "war"},
 	Gender = "male",
 	Major = true,
 	Description = "The chief goblin deity, Gathaarl rejoices in the bloodiness of battle. Many goblins raise totems to Gathaarl's glory, hoping that the deity will intercede for them."

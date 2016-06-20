@@ -35,13 +35,6 @@ DefineBoolFlags("Capturable")
 --  way would be to define can-cast-spell outside unit definitions, not much of an improvement.
 DefineUnitType("unit-revealer", {})
 
--- And declare upgrade for dependency...
-CUpgrade:New("upgrade-healing")
-CUpgrade:New("upgrade-portent")
-CUpgrade:New("upgrade-stun")
-CUpgrade:New("upgrade-puncture")
-CUpgrade:New("upgrade-unshackle")
-
 DefineSpell("spell-healing",
 	"showname", _("Healing"),
 	"manacost", 2,
@@ -57,7 +50,7 @@ DefineSpell("spell-healing",
 		"HitPoints", {MaxValuePercent = 100}
 	},
 	"sound-when-cast", "magic-holy",
---	"depend-upgrade", "upgrade-healing",
+	"depend-upgrade", "upgrade-healing",
 	"autocast", {"range", 6, "condition", {"alliance", "only", "HitPoints", {MaxValuePercent = 90}}},
 	"ai-cast", {"range", 6, "condition", {"alliance", "only", "HitPoints", {MaxValuePercent = 90}}}
 )
@@ -108,6 +101,7 @@ DefineSpell("spell-inspire",
 		"Inspire", {ExactValue = 0}
 	},
 	"sound-when-cast", "magic-holy",
+	"depend-upgrade", "upgrade-inspire",
 	"autocast", {"range", 6, "attacker", "only", "condition", {"Coward", "false", "alliance", "only"}},
 	"ai-cast", {"range", 6, "attacker", "only", "condition", {"Coward", "false", "alliance", "only"}}
 )
@@ -142,6 +136,7 @@ DefineSpell("spell-terror",
 		"Terror", {ExactValue = 0}
 	},
 	"sound-when-cast", "magic-holy",
+	"depend-upgrade", "upgrade-terror",
 	"autocast", {"range", 6, "attacker", "only", "condition", {"Coward", "false", "opponent", "only"}},
 	"ai-cast", {"range", 6, "attacker", "only", "condition", {"Coward", "false", "opponent", "only"}}
 )
@@ -160,9 +155,9 @@ DefineSpell("spell-unshackle",
 		-- should also check whether the target is shackled/fettered in any form
 	},
 	"sound-when-cast", "magic-holy",
+	"depend-upgrade", "upgrade-unshackle"
 --	"autocast", {"range", 6, "attacker", "only", "condition", {"Coward", "false", "opponent", "only"}}, -- should only apply if the target is shackled
 --	"ai-cast", {"range", 6, "attacker", "only", "condition", {"Coward", "false", "opponent", "only"}}, -- should only apply if the target is shackled
-	"depend-upgrade", "upgrade-unshackle"
 )
 
 DefineSpell("spell-war-machine-spear-attack",

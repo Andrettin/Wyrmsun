@@ -51,6 +51,18 @@ DefineUpgrade("upgrade-eagle-eye", {
 	Ability = true
 })
 
+DefineUpgrade("upgrade-healing", {
+	Name = _("Healing"),
+	Icon = "icon-healing",
+	Ability = true
+})
+
+DefineUpgrade("upgrade-inspire", {
+	Name = _("Inspire"),
+	Icon = "icon-inspire",
+	Ability = true
+})
+
 DefineUpgrade("upgrade-leadership", {
 	Name = _("Leadership"),
 	Icon = "icon-leadership",
@@ -94,6 +106,12 @@ DefineUpgrade("upgrade-sword-mastery", {
 	Icon = "icon-sword-mastery",
 	Ability = true,
 	WeaponClasses = {"sword", "thrusting-sword"}
+})
+
+DefineUpgrade("upgrade-terror", {
+	Name = _("Terror"),
+	Icon = "icon-terror",
+	Ability = true
 })
 
 DefineUpgrade("upgrade-unshackle", {

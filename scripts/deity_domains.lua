@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2015-2016 by Andrettin
+--      (c) Copyright 2016 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -25,50 +25,98 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineDeity("perun", { -- Slavic thunder-god; Source: "Germans, Avars and Slavs", p. 125
-	Name = "Perun",
-	Civilizations = {"slav"},
-	Domains = {"lightning"},
-	Gender = "male",
-	Major = true
+DefineDeityDomain("air", {
+	Name = "Air"
 })
 
-DefineDeity("svarog", { -- Slavic light-god; Source: "Germans, Avars and Slavs", p. 125
-	Name = "Svarog",
-	Civilizations = {"slav"},
-	Domains = {"light"},
-	Gender = "male",
-	Major = true
+DefineDeityDomain("archery", {
+	Name = "Archery"
 })
 
-DefineDeity("deva", { -- Slavic season goddess; Source: "Germans, Avars and Slavs", p. 125
-	Name = "Deva",
-	Civilizations = {"slav"},
-	Gender = "female"
+DefineDeityDomain("death", {
+	Name = "Death"
 })
 
-DefineDeity("lada", { -- Slavic season goddess; Source: "Germans, Avars and Slavs", p. 125
-	Name = "Lada",
-	Civilizations = {"slav"},
-	Gender = "female"
+DefineDeityDomain("earth", {
+	Name = "Earth"
 })
 
-DefineDeity("ogen", { -- Source: "Germans, Avars and Slavs", p. 125
-	Name = "Ogen",
-	Civilizations = {"slav"},
-	Domains = {"fire"}
-	-- child of Svarog
+DefineDeityDomain("eloquence", {
+	Name = "Eloquence"
 })
 
-DefineDeity("slnce", { -- the Sun; Source: "Germans, Avars and Slavs", p. 125
-	Name = "Slnce",
-	Civilizations = {"slav"},
-	Domains = {"sun"}
-	-- child of Svarog
+DefineDeityDomain("fear", {
+	Name = "Fear"
 })
 
-DefineDeity("vesna", { -- Slavic season goddess; Source: "Germans, Avars and Slavs", p. 125
-	Name = "Vesna",
-	Civilizations = {"slav"},
-	Gender = "female"
+DefineDeityDomain("fertility", {
+	Name = "Fertility"
+})
+
+DefineDeityDomain("fire", {
+	Name = "Fire"
+})
+
+DefineDeityDomain("healing", {
+	Name = "Healing"
+})
+
+DefineDeityDomain("justice", {
+	Name = "Justice"
+})
+
+DefineDeityDomain("light", {
+	Name = "Light"
+})
+
+DefineDeityDomain("lightning", {
+	Name = "Lightning"
+})
+
+DefineDeityDomain("magic", {
+	Name = "Magic"
+})
+
+DefineDeityDomain("moon", {
+	Name = "Moon"
+})
+
+DefineDeityDomain("order", {
+	Name = "Order"
+})
+
+DefineDeityDomain("poetry", {
+	Name = "Poetry"
+})
+
+DefineDeityDomain("sea", {
+	Name = "Sea"
+})
+
+DefineDeityDomain("skiing", {
+	Name = "Skiing"
+})
+
+DefineDeityDomain("smithing", {
+	Name = "Smithing"
+})
+
+DefineDeityDomain("sun", {
+	Name = "Sun"
+})
+
+DefineDeityDomain("war", {
+	Name = "War"
+})
+
+DefineDeityDomain("water", {
+	Name = "Water"
+})
+
+DefineDeityDomain("wind", {
+	Name = "Wind"
+})
+
+DefineDeityDomain("wisdom", {
+	Name = "Wisdom"
 })

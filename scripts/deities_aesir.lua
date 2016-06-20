@@ -32,7 +32,7 @@ DefineDeity("odin", { -- Known as Allfather, the Terrible One, One-eyed, Father 
 	Civilizations = {"dwarf", "germanic", "norse", "teuton"},
 	Gender = "male",
 	Major = true,
-	Portfolio = "Poetry, Battle, Death and Magic",
+	Domains = {"magic", "poetry", "war"},
 	CulturalNames = {
 		"dwarf", "Hroptatyr", -- in Norse mythology, one of the names of Odin, which was used in a verse concerning a charm by the dwarf Thjodrorir in the Hovamol, who sang wisdom for "Hroptatyr" wise; name means "Crier of the Gods", "the Crying God" or "the Prophet"
 		"germanic", "Wōđanaz", -- Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 128.
@@ -47,7 +47,7 @@ DefineDeity("thor", { -- Son of Odin and Jord (Fjorgyn) and Sif's husband; known
 	Civilizations = {"germanic", "norse"},
 	Gender = "male",
 	Major = true,
-	Portfolio = "Sky, Thunder, Fertility, Law and Order",
+	Domains = {"air", "lightning", "order"},
 	CulturalNames = {
 		"germanic", "Þunraz" -- the source gives "Þun(a)raz"; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 129.
 	},
@@ -71,7 +71,7 @@ DefineDeity("tyr", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980,
 	Pantheon = "Aesir",
 	Civilizations = {"germanic", "norse", "teuton"},
 	Gender = "male",
-	Portfolio = "War",
+	Domains = {"war"},
 	CulturalNames = {
 		"germanic", "Tīwaz", -- Proto-Germanic name of the god; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 115.
 		"norse", "Týr", -- Old Norse name of the god; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 115.
@@ -85,7 +85,7 @@ DefineDeity("aegir", { -- Married to Ran; they have their hall under the sea by 
 	Pantheon = "Aesir",
 	Civilizations = {"norse"},
 	Gender = "male",
-	Portfolio = "Sea"
+	Domains = {"sea"}
 })
 
 DefineDeity("balder", { -- Due to Loki's mischief, he was killed by Hod; Balder returns after Ragnarok; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 240; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75.
@@ -105,7 +105,7 @@ DefineDeity("bragi", { -- Son of Odin and husband of Idun; Source: Kevin Crossle
 	Pantheon = "Aesir",
 	Civilizations = {"norse"},
 	Gender = "male",
-	Portfolio = "Poetry and Eloquence"
+	Domains = {"eloquence", "poetry"}
 })
 
 DefineDeity("eir", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 241.
@@ -113,7 +113,7 @@ DefineDeity("eir", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980,
 	Pantheon = "Aesir",
 	Civilizations = {"norse"},
 	Gender = "female",
-	Portfolio = "Healing"
+	Domains = {"healing"}
 })
 
 DefineDeity("forseti", { -- Son of Balder and Nanna; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 242.
@@ -121,7 +121,7 @@ DefineDeity("forseti", { -- Son of Balder and Nanna; Source: Kevin Crossley-Holl
 	Pantheon = "Aesir",
 	Civilizations = {"norse"},
 	Gender = "male",
-	Portfolio = "Justice"
+	Domains = {"justice"}
 })
 
 DefineDeity("fulla", { -- Servant of Frigg; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 242.
@@ -136,7 +136,7 @@ DefineDeity("gefion", { -- Name means "Giver"; Source: Kevin Crossley-Holland, "
 	Pantheon = "Aesir",
 	Civilizations = {"norse"},
 	Gender = "female",
-	Portfolio = "Fertility"
+	Domains = {"fertility"}
 })
 
 DefineDeity("heimdall", { -- Son of nine mothers; the horn Gjall belongs to him; is the watchman of the gods; identified with Rig (the progenitor of the three races of man); Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 244.
@@ -172,7 +172,7 @@ DefineDeity("jord", { -- Mother of Thor by Odin; name means "Earth"; also known 
 	Pantheon = "Aesir",
 	Civilizations = {"norse"},
 	Gender = "female",
-	Portfolio = "Earth"
+	Domains = {"earth"}
 })
 
 DefineDeity("lofn", { -- Goddess who favored illicit unions; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 246.
@@ -195,7 +195,7 @@ DefineDeity("mimir", { -- Wise god sent by the Aesir to seal their truce with th
 	Pantheon = "Aesir",
 	Civilizations = {"norse"},
 	Gender = "male",
-	Portfolio = "Wisdom"
+	Domains = {"wisdom"}
 })
 
 DefineDeity("nanna", { -- Balder's wife and daughter of Nep; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 248.
@@ -253,7 +253,7 @@ DefineDeity("ull", { -- name means "Glory" or "Brilliance"; Source: Kevin Crossl
 	Pantheon = "Aesir",
 	Civilizations = {"norse"},
 	Gender = "male",
-	Portfolio = "Archery and Skiing"
+	Domains = {"archery", "skiing"},
 })
 
 DefineDeity("var", { -- name means "Oath"; keeps marriage oaths and punishes those who don't fulfill them; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 252.
