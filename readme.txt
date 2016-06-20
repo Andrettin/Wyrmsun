@@ -127,6 +127,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added Derro Executioner (upgrade of the Derro Thug) (portrait by Jesse Crider, modified from Exidelo's Gnomish Duelist portrait).
 - Added Derro Shadowguard (upgrade of the Derro Executioner) (portrait by Jesse Crider, modified from Exidelo's Gnomish Master-at-Arms portrait).
 - Added Goblin Shaman (unit graphics by b_o and icon by Jinn).
+- Added Teuton Cleric (unit graphics by b_o and Jinn and icon by Jinn).
 
 -----------------------------------------------------------------------
 - 2.2.6
