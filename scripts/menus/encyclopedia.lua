@@ -1928,6 +1928,19 @@ function OpenEncyclopediaDeityEntry(deity)
 		description = description .. "\n\n"
 	end
 	
+	local abilities = GetDeityData(deity, "Abilities")
+	table.sort(abilities)
+	if (table.getn(abilities) > 0) then
+		description = description .. "Spells: "
+		for i=1,table.getn(abilities) do
+			description = description .. GetUpgradeData(abilities[i], "Name")
+			if (i < table.getn(abilities)) then
+				description = description .. ", "
+			end
+		end
+		description = description .. "\n\n"
+	end
+	
 	if (GetDeityData(deity, "Description") ~= "") then
 		description = description .. "Description: " .. GetDeityData(deity, "Description") .. "\n\n"
 	end

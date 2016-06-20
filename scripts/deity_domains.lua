@@ -46,7 +46,8 @@ DefineDeityDomain("eloquence", {
 })
 
 DefineDeityDomain("fear", {
-	Name = "Fear"
+	Name = "Fear",
+	Abilities = {"upgrade-terror"}
 })
 
 DefineDeityDomain("fertility", {
@@ -58,7 +59,8 @@ DefineDeityDomain("fire", {
 })
 
 DefineDeityDomain("healing", {
-	Name = "Healing"
+	Name = "Healing",
+	Abilities = {"upgrade-healing"}
 })
 
 DefineDeityDomain("justice", {
@@ -118,5 +120,6 @@ DefineDeityDomain("wind", {
 })
 
 DefineDeityDomain("wisdom", {
-	Name = "Wisdom"
+	Name = "Wisdom",
+	Abilities = {"upgrade-inspire"}
 })
