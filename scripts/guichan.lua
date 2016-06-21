@@ -1424,16 +1424,16 @@ function BuildProgramStartMenu()
 
 	PersistencyUpdates()
 
-	menu:addFullButton(_("~!Single Player Game"), "s", offx + 208, offy + 104 + 36*1,
+	menu:addFullButton(_("~!Single Player Game"), "s", offx + 208, offy + 104 + 36*0,
 		function() RunSinglePlayerGameMenu(); menu:stop(1) end)
-	menu:addFullButton(_("~!Multiplayer Game"), "m", offx + 208, offy + 104 + 36*2,
+	menu:addFullButton(_("~!Multiplayer Game"), "m", offx + 208, offy + 104 + 36*1,
 		function() RunMultiPlayerGameMenu(); menu:stop(1) end)
-	menu:addFullButton(_("~!Grand Strategy Game"), "g", offx + 208, offy + 104 + 36*3,
+	menu:addFullButton(_("~!Grand Strategy Game"), "g", offx + 208, offy + 104 + 36*2,
 		function() RunGrandStrategyGameSetupMenu(); menu:stop(1) end)
 --	menu:addFullButton(_("~!Replay Game"), "r", offx + 208, offy + 104 + 36*3, -- replays are broken at the moment
 --		function() RunReplayGameMenu(); menu:stop(1) end)
---	menu:addFullButton(_("~!Achievements"), "a", offx + 208, offy + 104 + 36*3,
---		function() RunAchievementsMenu(); menu:stop(1) end)
+	menu:addFullButton(_("~!Achievements"), "a", offx + 208, offy + 104 + 36*3,
+		function() RunAchievementsMenu(); menu:stop(1) end)
 	menu:addFullButton(_("~!Options"), "o", offx + 208, offy + 104 + 36*4,
 		function() RunOptionsMenu(); menu:stop(1) end)
 	menu:addFullButton(_("Map ~!Editor"), "e", offx + 208, offy + 104 + 36*5,

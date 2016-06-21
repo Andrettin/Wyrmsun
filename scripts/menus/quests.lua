@@ -254,7 +254,7 @@ function addQuestIcon(quest, menu, x, y)
 			
 			local quest_menu = WarGameMenu(panel(5))
 			quest_menu:setSize(352, 352)
-    			quest_menu:setPosition((Video.Width - quest_menu:getWidth()) / 2, (Video.Height - quest_menu:getHeight()) / 2)
+    		quest_menu:setPosition((Video.Width - quest_menu:getWidth()) / 2, (Video.Height - quest_menu:getHeight()) / 2)
 			quest_menu:addLabel(_(quest), 176, 11)
 			local quest_menu_image = PlayerColorImageWidget(questicon, GetQuestData(quest, "PlayerColor"))
 			quest_menu_image:setImageOrigin(quest_icon_x_origin, quest_icon_y_origin)	

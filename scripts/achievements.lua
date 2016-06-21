@@ -8,9 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      achievements.lua - Defines achievements.
---
---      (c) Copyright 2013-2014 by Andrettin
+--      (c) Copyright 2013-2016 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -27,26 +25,64 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-Achievements = {
-	SafePassage = {
-		Name = "Safe Passage",
-		Icon = "dwarf/icons/dwarven_steelclad",
-		Description = "Destroy the raiders during the A Bargain is Struck quest.",
-		X = 1,
-		Y = 1
-	},
-	TheScepterOfFire = {
-		Name = "The Scepter of Fire",
-		Icon = "dwarf/icons/thursagan",
-		Description = "Forge the Scepter of Fire.",
-		X = 2,
-		Y = 1
-	},
-	RugnursBravery = {
-		Name = "Rugnur's Bravery",
-		Icon = "dwarf/icons/rugnur_older",
-		Description = "Upgrade Rugnur to a Stonelord.",
-		X = 3,
-		Y = 1
-	}
-}
+DefineAchievement("the-settlement-of-scandinavia", {
+	Name = "The Settlement of Scandinavia",
+	Icon = "icon-germanic-warrior",
+	Description = "As the Asa Tribe, defeat Gylve's forces and settle Scandinavia.",
+	PlayerColor = "orange"
+})
+
+DefineAchievement("the-marcomannic-wars", {
+	Name = "The Marcomannic Wars",
+	Icon = "icon-suebi-swordsman",
+	Description = "As the Marcomanni Tribe, raze Opitergium.",
+	PlayerColor = "orange"
+})
+
+DefineAchievement("the-conquest-of-galicia", {
+	Name = "The Conquest of Galicia",
+	Icon = "icon-teuton-spatha",
+	Description = "As the Suebi Tribe, conquer Galicia.",
+	PlayerColor = "black"
+})
+
+DefineAchievement("the-blue-danube", {
+	Name = "The Blue Danube",
+	Icon = "icon-teuton-swordsman",
+	Description = "As the Bavarian Tribe, settle on the Danube.",
+	PlayerColor = "cyan"
+})
+
+DefineAchievement("the-first-dwarves", {
+	Name = "The First Dwarves",
+	Icon = "icon-modsognir",
+	Description = "As the Brising Clan, bind Grafvitnir.",
+	PlayerColor = "red"
+})
+
+DefineAchievement("safe-passage", {
+	Name = "Safe Passage",
+	Icon = "icon-dwarven-steelclad",
+	Description = "Destroy the raiders during the A Bargain is Struck quest.",
+	PlayerColor = "green"
+})
+
+DefineAchievement("rugnurs-bravery", {
+	Name = "Rugnur's Bravery",
+	Icon = "icon-rugnur-older",
+	Description = "Upgrade Rugnur to a Stonelord.",
+	PlayerColor = "red"
+})
+
+DefineAchievement("the-scepter-of-fire", {
+	Name = "The Scepter of Fire",
+	Icon = "icon-thursagan",
+	Description = "Forge the Scepter of Fire and hide it from the goblins and Shinsplitters.",
+	PlayerColor = "red"
+})
+
+DefineAchievement("deep-lore", {
+	Name = "Deep Lore",
+	Icon = "icon-scroll",
+	Description = "Read all literary works (with any character)."
+})
