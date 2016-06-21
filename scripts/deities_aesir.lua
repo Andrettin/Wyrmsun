@@ -45,11 +45,12 @@ DefineDeity("thor", { -- Son of Odin and Jord (Fjorgyn) and Sif's husband; known
 	Name = "Thor",
 	Pantheon = "Aesir",
 	HomePlane = "Asgard",
-	Civilizations = {"germanic", "norse", "teuton"},
+	Civilizations = {"dwarf", "germanic", "norse", "teuton"},
 	Gender = "male",
 	Major = true,
 	Domains = {"air", "lightning", "order"},
 	CulturalNames = {
+		"dwarf", "Vingthor", -- name used by Thor when revealing himself to the dwarf Alvis; the meaning is "Thor the Hurler"; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 185.
 		"germanic", "Þunraz", -- the source gives "Þun(a)raz"; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 129.
 		"teuton", "Thunor" -- Anglo-Saxon name for the deity; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 98-99.
 	},

@@ -32,8 +32,7 @@ DefineUpgrade("upgrade-work-alvissmol", {
 	},
 	Work = "scroll",
 	Civilization = "dwarf",
-	Quote = "\"Alvis am I, and under the earth\n- My home 'neath the rocks I have;\nWith the thunder-thrower a word do I seek,\nLet the gods their bond not break.\"\n- Alvissmol (Alvis)"
---	Quote = "\"Alvis am I, and under the earth\nMy home 'neath the rocks I have;\nWith the wagon-guider a word do I seek,\nLet the gods their bond not break.\"\n- Alvissmol (Alvis)" -- original
+	Quote = "\"Alvis am I, and under the earth\nMy home 'neath the rocks I have;\nWith the wagon-guider a word do I seek,\nLet the gods their bond not break.\"\n- Alvissmol (Alvis)"
 })
 
 DefineUpgrade("upgrade-work-fafnismol", {
