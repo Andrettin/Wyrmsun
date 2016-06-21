@@ -305,10 +305,10 @@ AddTrigger(
 					player,
 					{"~!Continue"},
 					{function(s)
+						ActionVictory()
 						if (GrandStrategy == false) then
 							SetQuestCompleted("the-binding-of-grafvitnir")
 						end
-						ActionVictory()
 					end}
 				)
 				end}

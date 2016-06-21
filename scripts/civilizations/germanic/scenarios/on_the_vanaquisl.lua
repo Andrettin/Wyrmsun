@@ -354,10 +354,10 @@ AddTrigger(
 				{"~!Continue"},
 				{function(s)
 					if (player == GetThisPlayer()) then
+						ActionVictory()
 						if (GrandStrategy == false) then
 							SetQuestCompleted("on-the-vanaquisl")
 						end
-						ActionVictory()
 					end
 				end}
 			)

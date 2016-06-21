@@ -285,10 +285,10 @@ AddTrigger(
 			{"~!Continue"},
 			{function(s)
 				if (player == GetThisPlayer()) then
+					ActionVictory()
 					if (GrandStrategy == false) then
 						SetQuestCompleted("the-tomb-of-durahn-eikinskjaldi")
 					end
-					ActionVictory()
 				end
 			end}
 		)

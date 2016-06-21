@@ -125,10 +125,10 @@ AddTrigger(
 			{"~!Continue"},
 			{function(s)
 				if (player == GetThisPlayer()) then
+					ActionVictory()
 					if (GrandStrategy == false) then
 						SetQuestCompleted("the-blue-danube")
 					end
-					ActionVictory()
 				end
 			end}
 		)

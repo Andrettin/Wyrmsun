@@ -857,10 +857,10 @@ AddTrigger(
 											{"~!Continue"},
 											{function(s)
 												if (mapinfo.description == "Caverns of Flame" and GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
+													ActionVictory()
 													if (player == GetThisPlayer() and GrandStrategy == false) then
 														SetQuestCompleted("caverns-of-flame")
 													end
-													ActionVictory()
 												end
 											end}
 										)

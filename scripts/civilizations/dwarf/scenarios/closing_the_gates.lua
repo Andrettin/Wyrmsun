@@ -556,15 +556,15 @@ AddTrigger(
 																																		{"~!Continue"},
 																																		{function(s)
 																																			RemovePlayerObjective(player, "- Have one unit standing on each glyph at the same time")
-																																			if (player == GetThisPlayer() and GrandStrategy == false) then
-																																																																											SetQuestCompleted("closing-the-gates")
-																																			end
 																																			if (mapinfo.description == "Caverns of Chaincolt") then
 																																				if (GetThisPlayer() == GetFactionPlayer("Norlund Clan")) then
 																																					ActionVictory()
 																																				else
 																																					ActionDefeat()
 																																				end
+																																			end
+																																			if (player == GetThisPlayer() and GrandStrategy == false) then
+																																																																											SetQuestCompleted("closing-the-gates")
 																																			end
 																																		end},
 																																		"icon-durstorn"

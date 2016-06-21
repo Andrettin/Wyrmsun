@@ -591,10 +591,10 @@ AddTrigger(
 						KillUnitAt("unit-dwarven-scout", GetFactionPlayer("Norlund Clan"), GetPlayerData(GetFactionPlayer("Norlund Clan"), "UnitTypesCount", "unit-dwarven-scout"), {0, 0}, {256, 256})
 					end
 					if (GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
+						ActionVictory()
 						if (player == GetThisPlayer() and GrandStrategy == false) then
 							SetQuestCompleted("the-wyrm")
 						end
-						ActionVictory()
 					elseif (GetFactionPlayer("Shinsplitter Clan") == GetThisPlayer()) then
 						Event(
 							"",

@@ -179,10 +179,10 @@ AddTrigger(
 			{"~!Continue"},
 			{function(s)
 				if (player == GetThisPlayer()) then
+					ActionVictory()
 					if (GrandStrategy == false) then
 						SetQuestCompleted("northwards-to-the-sea")
 					end
-					ActionVictory()
 				end
 			end}
 		)

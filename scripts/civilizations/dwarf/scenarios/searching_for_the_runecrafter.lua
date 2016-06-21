@@ -708,14 +708,14 @@ AddTrigger(
 																									{"~!Continue"},
 																									{function(s)
 																										RemovePlayerObjective(player, "- Find Thursagan and bring him to your Mead Hall")
-																										if (player == GetThisPlayer() and GrandStrategy == false) then
-																											SetQuestCompleted("searching-for-the-runecrafter")
-																										end
-																										if (mapinfo.description == "Northern Wastelands" and player == GetFactionPlayer("Norlund Clan")) then
+																										if (player == GetFactionPlayer("Norlund Clan")) then
 																											if (GrandStrategy) then
 																												SetProvinceSettlementBuilding("Northern Wastelands", "unit-dwarven-smithy", false)
 																											end
 																											ActionVictory()
+																										end
+																										if (player == GetThisPlayer() and GrandStrategy == false) then
+																											SetQuestCompleted("searching-for-the-runecrafter")
 																										end
 																									end}
 																								)

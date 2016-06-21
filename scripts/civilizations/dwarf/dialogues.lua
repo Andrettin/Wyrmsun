@@ -83,10 +83,10 @@ DefineDialogue("a-rocky-home-yales-hunted", {
 			"option-effects", {
 				function(s)
 					if (player == GetThisPlayer() and GetPlayerData(GetThisPlayer(), "Resources", "lumber") >= 800 and GetPlayerData(GetThisPlayer(), "Resources", "stone") >= 400) then
+						ActionVictory()
 						if (GrandStrategy == false) then
 							SetQuestCompleted("a-rocky-home")
 						end
-						ActionVictory()
 					end
 				end
 			}
@@ -108,10 +108,10 @@ DefineDialogue("a-rocky-home-materials-collected", {
 			"option-effects", {
 				function(s)
 					if (player == GetThisPlayer() and GetPlayerData(GetThisPlayer(), "UnitTypeKills", "unit-yale") >= 8) then
+						ActionVictory()
 						if (GrandStrategy == false) then
 							SetQuestCompleted("a-rocky-home")
 						end
-						ActionVictory()
 					end
 				end
 			}

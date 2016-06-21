@@ -619,9 +619,6 @@ AddTrigger(
 						{"~!Continue"},
 						{function(s)
 							RemovePlayerObjective(player, "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall")
-							if (player == GetThisPlayer() and GrandStrategy == false) then
-								SetQuestCompleted("a-bargain-is-struck")
-							end
 							if (mapinfo.description == "Chaincolt Foothills") then
 								if (GetThisPlayer() == GetFactionPlayer("Norlund Clan")) then
 									ActionVictory()
@@ -631,6 +628,9 @@ AddTrigger(
 								if (GrandStrategy) then -- if is grand strategy, begin war between Norlund Clan and Shinsplitter Clan
 									ChangeFactionResource("dwarf", "Norlund Clan", "gold", 2500) -- 5000 silver, and for our purposes silver is considered to be worth half of what gold is
 								end
+							end
+							if (player == GetThisPlayer() and GrandStrategy == false) then
+								SetQuestCompleted("a-bargain-is-struck")
 							end
 						end}
 					)
@@ -686,9 +686,6 @@ AddTrigger(
 				{"~!Continue"},
 				{function(s)
 					RemovePlayerObjective(player, "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall")
-					if (player == GetThisPlayer() and GrandStrategy == false) then
-						SetQuestCompleted("a-bargain-is-struck")
-					end
 					if (mapinfo.description == "Chaincolt Foothills") then
 						if (GetThisPlayer() == GetFactionPlayer("Norlund Clan")) then
 							ActionVictory()
@@ -698,6 +695,9 @@ AddTrigger(
 						if (GrandStrategy) then -- if is grand strategy, begin war between Norlund Clan and Shinsplitter Clan
 							ChangeFactionResource("dwarf", "Norlund Clan", "gold", 2500) -- 5000 silver, and for our purposes silver is considered to be worth half of what gold is
 						end
+					end
+					if (player == GetThisPlayer() and GrandStrategy == false) then
+						SetQuestCompleted("a-bargain-is-struck")
 					end
 				end}
 			)
@@ -755,9 +755,6 @@ AddTrigger(
 	end,
 	function() 
 		RemovePlayerObjective(player, "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall")
-		if (player == GetThisPlayer() and GrandStrategy == false) then
-			SetQuestCompleted("a-bargain-is-struck")
-		end
 		if (mapinfo.description == "Chaincolt Foothills") then
 			if (GetThisPlayer() == GetFactionPlayer("Norlund Clan")) then
 				ActionVictory()
@@ -767,6 +764,9 @@ AddTrigger(
 			if (GrandStrategy) then -- if is grand strategy, begin war between Norlund Clan and Shinsplitter Clan
 				ChangeFactionResource("dwarf", "Norlund Clan", "gold", 2500) -- 5000 silver, and for our purposes silver is considered to be worth half of what gold is
 			end
+		end
+		if (player == GetThisPlayer() and GrandStrategy == false) then
+			SetQuestCompleted("a-bargain-is-struck")
 		end
 		return false
 	end

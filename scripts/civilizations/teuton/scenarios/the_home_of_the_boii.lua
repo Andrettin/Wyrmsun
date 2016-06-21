@@ -275,10 +275,10 @@ AddTrigger(
 			{"~!Continue"},
 			{function(s)
 				if (player == GetThisPlayer()) then
+					ActionVictory()
 					if (GrandStrategy == false) then
 						SetQuestCompleted("the-home-of-the-boii")
 					end
-					ActionVictory()
 				end
 			end}
 		)

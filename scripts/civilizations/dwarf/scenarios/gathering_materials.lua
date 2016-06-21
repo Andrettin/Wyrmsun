@@ -721,17 +721,17 @@ AddTrigger(
 																																							{"~!Continue"},
 																																							{function(s)
 																																								RemovePlayerObjective(player, "- Collect 10000 gold and 20000 coal")
-																																								if (player == GetThisPlayer() and GrandStrategy == false) then
-																																									SetQuestCompleted("gathering-materials")
-	end
 																																								if (GrandStrategy) then
 																																									--ChangeFactionResource("dwarf", "Norlund Clan", "gold", 10000)
 																																									ChangeFactionResource("dwarf", "Norlund Clan", "coal", 20000)
 																																								end
-																																								if (mapinfo.description == "Eastern Mines" and GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
+																																								if (GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
 																																									ActionVictory()
 																																								end
-																																							end},
+																																																																															if (player == GetThisPlayer() and GrandStrategy == false) then
+																																									SetQuestCompleted("gathering-materials")
+	end
+end},
 																																							"icon-dwarven-steelclad"
 																																						)
 																																						end},
@@ -1042,15 +1042,15 @@ AddTrigger(
 																																				{"~!Continue"},
 																																				{function(s)
 																																					RemovePlayerObjective(player, "- Collect 10000 gold and 20000 coal")
-																																					if (player == GetThisPlayer() and GrandStrategy == false) then
-																																									SetQuestCompleted("gathering-materials")
-																																					end
 																																					if (GrandStrategy) then
 																																						--ChangeFactionResource("dwarf", "Norlund Clan", "gold", 10000)
 																																						ChangeFactionResource("dwarf", "Norlund Clan", "coal", 20000)
 																																					end
 																																					if (mapinfo.description == "Eastern Mines" and GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
 																																						ActionVictory()
+																																					end
+																																					if (player == GetThisPlayer() and GrandStrategy == false) then
+																																									SetQuestCompleted("gathering-materials")
 																																					end
 																																				end},
 																																				"icon-dwarven-steelclad"

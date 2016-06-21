@@ -1124,10 +1124,10 @@ AddTrigger(
 	end,
 	function()
 		if (GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
+			ActionVictory()
 			if (player == GetThisPlayer() and GrandStrategy == false) then
 				SetQuestCompleted("hills-of-the-shorbear-clan")
 			end
-			ActionVictory()
 		end
 		return false
 	end

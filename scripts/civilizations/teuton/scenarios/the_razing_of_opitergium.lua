@@ -123,10 +123,10 @@ AddTrigger(
 				{"~!Continue"},
 				{function(s)
 					if (player == GetThisPlayer()) then
+						ActionVictory()
 						if (GrandStrategy == false) then
 							SetQuestCompleted("the-razing-of-opitergium")
 						end
-						ActionVictory()
 					end
 				end},
 				nil,

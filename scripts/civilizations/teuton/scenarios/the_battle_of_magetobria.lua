@@ -137,10 +137,10 @@ AddTrigger(
 					{"~!Continue"},
 					{function(s)
 						if (player == GetThisPlayer()) then
+							ActionVictory()
 							if (GrandStrategy == false) then
 								SetQuestCompleted("the-battle-of-magetobria")
 							end
-							ActionVictory()
 						end
 					end},
 					nil,

@@ -202,10 +202,10 @@ AddTrigger(
 					player,
 					{"~!Continue"},
 					{function(s)
+						ActionVictory()
 						if (GrandStrategy == false) then
 							SetQuestCompleted("the-necklace-of-the-brisings")
 						end
-						ActionVictory()
 					end}
 				)
 				end}

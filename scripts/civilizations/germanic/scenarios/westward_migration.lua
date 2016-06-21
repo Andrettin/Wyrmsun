@@ -306,10 +306,10 @@ AddTrigger(
 			{"~!Continue"},
 			{function(s)
 				if (player == GetThisPlayer()) then
+					ActionVictory()
 					if (GrandStrategy == false) then
 						SetQuestCompleted("westward-migration")
 					end
-					ActionVictory()
 				end
 			end}
 		)

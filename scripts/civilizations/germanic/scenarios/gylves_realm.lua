@@ -115,10 +115,10 @@ AddTrigger(
 			{"~!Continue"},
 			{function(s)
 				if (player == GetThisPlayer()) then
+					ActionVictory()
 					if (GrandStrategy == false) then
 						SetQuestCompleted("gylves-realm")
 					end
-					ActionVictory()
 				end
 			end}
 		)

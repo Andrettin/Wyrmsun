@@ -152,10 +152,10 @@ AddTrigger(
 			{"~!Continue"},
 			{function(s)
 				if (player == GetThisPlayer()) then
+					ActionVictory()
 					if (GrandStrategy == false) then
 						SetQuestCompleted("the-sack-of-iuvavum")
 					end
-					ActionVictory()
 				end
 			end}
 		)

@@ -192,10 +192,10 @@ AddTrigger(
 							player,
 							{"~!Continue"},
 							{function(s)
+								ActionVictory()
 								if (GrandStrategy == false) then
 									SetQuestCompleted("the-treasures-of-svarinshaug")
 								end
-								ActionVictory()
 							end}
 						)
 						end}
