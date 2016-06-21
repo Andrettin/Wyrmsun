@@ -38,6 +38,11 @@ DefineDeityDomain("chaos", {
 	Abilities = {"upgrade-terror"}
 })
 
+DefineDeityDomain("darkness", {
+	Name = "Darkness",
+	Abilities = {"upgrade-terror"}
+})
+
 DefineDeityDomain("death", {
 	Name = "Death",
 	Abilities = {"upgrade-terror"}
@@ -111,6 +116,11 @@ DefineDeityDomain("smithing", {
 
 DefineDeityDomain("sun", {
 	Name = "Sun"
+})
+
+DefineDeityDomain("tyranny", {
+	Name = "Tyranny",
+	Abilities = {"upgrade-terror"}
 })
 
 DefineDeityDomain("war", {
