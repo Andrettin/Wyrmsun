@@ -126,10 +126,7 @@ AddTrigger(
 			{function(s)
 				if (player == GetThisPlayer()) then
 					if (GrandStrategy == false) then
-						if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "The Blue Danube") == false) then
-							table.insert(wyr.preferences.QuestsCompleted, "The Blue Danube")
-						end
-						SavePreferences()
+						SetQuestCompleted("the-blue-danube")
 					end
 					ActionVictory()
 				end

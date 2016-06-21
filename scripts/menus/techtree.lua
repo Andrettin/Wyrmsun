@@ -584,8 +584,11 @@ end
 function GetCivilizationTechnologyPoints(civilization)
 	local tech_points = 0
 	
-	for i=1,table.getn(wyr.preferences.QuestsCompleted) do
-		tech_points = tech_points + GetQuestTechnologyPoints(civilization, wyr.preferences.QuestsCompleted[i])
+	local quests = GetQuests()
+	for i=1,table.getn(quests) do
+		if (GetQuestData(quests[i], "Completed")) then
+			tech_points = tech_points + GetQuestTechnologyPoints(civilization, quests[i])
+		end
 	end
 
 	for i=1,table.getn(wyr.preferences.TechnologyAcquired) do
@@ -602,7 +605,7 @@ function GetAvailableCivilizationsTechTree()
 	for i=1,table.getn(civilizations) do
 		if (GetCivilizationData(civilizations[i], "Playable")) then
 			if (
-				(civilizations[i] ~= "teuton" or GetArrayIncludes(wyr.preferences.QuestsCompleted, "Gylve's Realm"))
+				(civilizations[i] ~= "teuton" or GetQuestData("gylves-realm", "Completed"))
 			) then
 				local playable_civilization_species = CapitalizeString(GetCivilizationData(civilizations[i], "Species"))
 				local playable_civilization = GetCivilizationData(civilizations[i], "Display")

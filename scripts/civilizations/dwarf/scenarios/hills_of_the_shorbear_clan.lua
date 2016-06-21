@@ -1123,12 +1123,9 @@ AddTrigger(
 		return false
 	end,
 	function()
-		if (mapinfo.description == "Shorbear Hills" and GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
+		if (GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
 			if (player == GetThisPlayer() and GrandStrategy == false) then
-				if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Hills of the Shorbear Clan") == false) then
-					table.insert(wyr.preferences.QuestsCompleted, "Hills of the Shorbear Clan")
-				end
-				SavePreferences()
+				SetQuestCompleted("hills-of-the-shorbear-clan")
 			end
 			ActionVictory()
 		end

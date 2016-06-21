@@ -84,10 +84,7 @@ DefineDialogue("a-rocky-home-yales-hunted", {
 				function(s)
 					if (player == GetThisPlayer() and GetPlayerData(GetThisPlayer(), "Resources", "lumber") >= 800 and GetPlayerData(GetThisPlayer(), "Resources", "stone") >= 400) then
 						if (GrandStrategy == false) then
-							if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "A Rocky Home") == false) then
-								table.insert(wyr.preferences.QuestsCompleted, "A Rocky Home")
-							end
-							SavePreferences()
+							SetQuestCompleted("a-rocky-home")
 						end
 						ActionVictory()
 					end
@@ -112,10 +109,7 @@ DefineDialogue("a-rocky-home-materials-collected", {
 				function(s)
 					if (player == GetThisPlayer() and GetPlayerData(GetThisPlayer(), "UnitTypeKills", "unit-yale") >= 8) then
 						if (GrandStrategy == false) then
-							if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "A Rocky Home") == false) then
-								table.insert(wyr.preferences.QuestsCompleted, "A Rocky Home")
-							end
-							SavePreferences()
+							SetQuestCompleted("a-rocky-home")
 						end
 						ActionVictory()
 					end

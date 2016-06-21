@@ -858,10 +858,7 @@ AddTrigger(
 											{function(s)
 												if (mapinfo.description == "Caverns of Flame" and GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
 													if (player == GetThisPlayer() and GrandStrategy == false) then
-														if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Caverns of Flame") == false) then
-															table.insert(wyr.preferences.QuestsCompleted, "Caverns of Flame")
-														end
-														SavePreferences()
+														SetQuestCompleted("caverns-of-flame")
 													end
 													ActionVictory()
 												end

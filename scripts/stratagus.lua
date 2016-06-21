@@ -1601,9 +1601,17 @@ function FindHero(hero, player)
 end
 
 function PersistencyUpdates()
-	if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "The Mead of Poetry")) then
-		RemoveElementFromArray(wyr.preferences.QuestsCompleted, "The Mead of Poetry")
-		table.insert(wyr.preferences.QuestsCompleted, "The Mead of Wisdom")
+	if (wyr.preferences.QuestsCompleted ~= nil) then
+		if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "The Mead of Poetry")) then
+			RemoveElementFromArray(wyr.preferences.QuestsCompleted, "The Mead of Poetry")
+			table.insert(wyr.preferences.QuestsCompleted, "The Mead of Wisdom")
+			SavePreferences()
+		end
+	
+		for i=1, table.getn(wyr.preferences.QuestsCompleted) do
+			SetQuestCompleted(wyr.preferences.QuestsCompleted[i])
+		end
+		wyr.preferences.QuestsCompleted = nil
 		SavePreferences()
 	end
 	
@@ -1954,9 +1962,7 @@ local defaultPreferences = {
 	Difficulty = 2,
 	GrandStrategyBattalionMultiplier = 1,
 	GrandStrategyBattleBaseBuilding = false,
-	QuestsCompleted = {},
 	TechnologyAcquired = {},
-	AchievementsCompleted = {},
 	TipsShown = {},
 	LastVersionPlayed = "0.0.0",
 	EnabledMods = {},
@@ -2051,6 +2057,9 @@ if (CanAccessFile("wyr/heroes.lua")) then -- keep compatibility with how heroes 
 	SaveHeroes()
 else
 	LoadHeroes() -- load persistent heroes
+end
+if (CanAccessFile("wyr/quests.lua")) then
+	Load("wyr/quests.lua")
 end
 
 DebugPrint("... ready!\n")

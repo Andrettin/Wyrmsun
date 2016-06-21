@@ -138,10 +138,7 @@ AddTrigger(
 					{function(s)
 						if (player == GetThisPlayer()) then
 							if (GrandStrategy == false) then
-								if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "The Battle of Magetobria") == false) then
-									table.insert(wyr.preferences.QuestsCompleted, "The Battle of Magetobria")
-								end
-								SavePreferences()
+								SetQuestCompleted("the-battle-of-magetobria")
 							end
 							ActionVictory()
 						end

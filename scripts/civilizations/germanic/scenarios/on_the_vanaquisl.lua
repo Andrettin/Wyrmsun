@@ -355,10 +355,7 @@ AddTrigger(
 				{function(s)
 					if (player == GetThisPlayer()) then
 						if (GrandStrategy == false) then
-							if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "On the Vanaquisl") == false) then
-								table.insert(wyr.preferences.QuestsCompleted, "On the Vanaquisl")
-							end
-							SavePreferences()
+							SetQuestCompleted("on-the-vanaquisl")
 						end
 						ActionVictory()
 					end

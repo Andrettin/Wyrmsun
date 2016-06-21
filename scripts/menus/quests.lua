@@ -98,11 +98,11 @@ function RunQuestMenu(world)
 	for i=1, table.getn(quests) do
 		if (GetQuestData(quests[i], "Hidden") == false and GetQuestData(quests[i], "World") == world) then
 			total_quest_quantity = total_quest_quantity + 1
-			if (GetQuestData(quests[i], "RequiredQuest") == "" or GetArrayIncludes(wyr.preferences.QuestsCompleted, GetQuestData(quests[i], "RequiredQuest")) or GetArrayIncludes(wyr.preferences.QuestsCompleted, quests[i])) then
+			if (GetQuestData(quests[i], "RequiredQuest") == "" or GetQuestData(GetQuestData(quests[i], "RequiredQuest"), "Completed") or GetQuestData(quests[i], "Completed")) then
 				if (GetQuestData(quests[i], "RequiredTechnology") == "" or GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetQuestData(quests[i], "RequiredTechnology"))) then
 					addQuestIcon(quests[i], menu, offx + 23 + 4 + (54 * GetQuestData(quests[i], "X")), offy + 10 + 4 + (46 * (GetQuestData(quests[i], "Y") + 1))) -- increase Y by 1 because there are few enough quests that it makes sense to make the existing quests more centralized in the interface
 				end
-				if (GetArrayIncludes(wyr.preferences.QuestsCompleted, quests[i])) then
+				if (GetQuestData(quests[i], "Completed")) then
 					completed_quest_quantity = completed_quest_quantity + 1
 				end
 			end
@@ -191,7 +191,7 @@ function RunQuestMenu(world)
 		end
 	)
 	
-	if (GetCurrentCustomHero() ~= "" and GetCustomHeroData(GetCurrentCustomHero(), "Civilization") == "germanic" and GetArrayIncludes(wyr.preferences.QuestsCompleted, "Gylve's Realm")) then
+	if (GetCurrentCustomHero() ~= "" and GetCustomHeroData(GetCurrentCustomHero(), "Civilization") == "germanic" and GetQuestData("gylves-realm", "Completed")) then
 		menu:addFullButton(_("~!Advance Hero Civilization"), "a", offx + 208 - 226, offy + 212 + (36 * 4),
 			function()
 				CustomHeroCivilizationAdvancementMenu(world, menu)
@@ -240,7 +240,7 @@ function addQuestIcon(quest, menu, x, y)
 	local quest_icon_frame = CIcon:Get(GetQuestData(quest, "Icon")).Frame
 	local questicon
 	local b
-	if (GetArrayIncludes(wyr.preferences.QuestsCompleted, quest)) then
+	if (GetQuestData(quest, "Completed")) then
 		questicon = CIcon:Get(GetQuestData(quest, "Icon")).GScale
 	else
 		questicon = CIcon:Get(GetQuestData(quest, "Icon")).G
@@ -255,7 +255,7 @@ function addQuestIcon(quest, menu, x, y)
 			local quest_menu = WarGameMenu(panel(5))
 			quest_menu:setSize(352, 352)
     		quest_menu:setPosition((Video.Width - quest_menu:getWidth()) / 2, (Video.Height - quest_menu:getHeight()) / 2)
-			quest_menu:addLabel(_(quest), 176, 11)
+			quest_menu:addLabel(_(GetQuestData(quest, "Name")), 176, 11)
 			local quest_menu_image = PlayerColorImageWidget(questicon, GetQuestData(quest, "PlayerColor"))
 			quest_menu_image:setImageOrigin(quest_icon_x_origin, quest_icon_y_origin)	
 			quest_menu:add(quest_menu_image, 153, 48)
@@ -317,7 +317,7 @@ function addQuestIcon(quest, menu, x, y)
 	b:setBorderSize(0) -- Andrettin: make buttons not have the borders they previously had
 	b:setFrameImage(Preference.IconFrameG)
 	b:setPressedFrameImage(Preference.PressedIconFrameG)
-	b:setTooltip(quest .. " (" .. GetCivilizationData(GetQuestData(quest, "Civilization"), "Display") .. ")")
+	b:setTooltip(GetQuestData(quest, "Name") .. " (" .. GetCivilizationData(GetQuestData(quest, "Civilization"), "Display") .. ")")
 	return b
 end
 

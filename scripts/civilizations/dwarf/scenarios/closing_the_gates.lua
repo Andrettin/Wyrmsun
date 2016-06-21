@@ -127,7 +127,7 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "A Bargain is Struck") and GetFactionExists("Shinsplitter Clan")) then
+		if (GetFactionExists("Shinsplitter Clan")) then
 			for i=0,14 do
 				if (GetPlayerData(i, "RaceName") == "dwarf" and (GetPlayerData(i, "Name") == "Norlund Clan" or GetPlayerData(i, "Name") == "Knalga") and FindHero("Rugnur", i) ~= nil and FindHero("Baglur", i) ~= nil and GetPlayerData(i, "UnitTypesCount", "unit-dwarven-town-hall") >= 1 and GetPlayerData(15, "UnitTypesCount", "unit-glyph") >= 6 and PlayerHasObjective(i, "- Have one unit standing on each glyph at the same time") == false) then
 					player = i
@@ -557,10 +557,7 @@ AddTrigger(
 																																		{function(s)
 																																			RemovePlayerObjective(player, "- Have one unit standing on each glyph at the same time")
 																																			if (player == GetThisPlayer() and GrandStrategy == false) then
-																																				if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Closing the Gates") == false) then
-																																					table.insert(wyr.preferences.QuestsCompleted, "Closing the Gates")
-																																				end
-																																				SavePreferences()
+																																																																											SetQuestCompleted("closing-the-gates")
 																																			end
 																																			if (mapinfo.description == "Caverns of Chaincolt") then
 																																				if (GetThisPlayer() == GetFactionPlayer("Norlund Clan")) then

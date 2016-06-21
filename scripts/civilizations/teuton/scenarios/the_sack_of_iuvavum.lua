@@ -153,10 +153,7 @@ AddTrigger(
 			{function(s)
 				if (player == GetThisPlayer()) then
 					if (GrandStrategy == false) then
-						if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "The Sack of Iuvavum") == false) then
-							table.insert(wyr.preferences.QuestsCompleted, "The Sack of Iuvavum")
-						end
-						SavePreferences()
+						SetQuestCompleted("the-sack-of-iuvavum")
 					end
 					ActionVictory()
 				end

@@ -120,10 +120,7 @@ AddTrigger(
 			{function(s)
 				if (player == GetThisPlayer()) then
 					if (GrandStrategy == false) then
-						if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Moving into Galicia") == false) then
-							table.insert(wyr.preferences.QuestsCompleted, "Moving into Galicia")
-						end
-						SavePreferences()
+						SetQuestCompleted("moving-into-galicia")
 					end
 					ActionVictory()
 				end

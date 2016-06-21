@@ -25,7 +25,8 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineQuest("On the Vanaquisl", {
+DefineQuest("on-the-vanaquisl", {
+	Name = "On the Vanaquisl",
 	Icon = "icon-germanic-warrior",
 	Description = "Having assembled a great army, we are to attack the people of Vanaland and take their lands into our possession.\n\nMap: Tanais",
 	World = "Earth",
@@ -40,10 +41,11 @@ DefineQuest("On the Vanaquisl", {
 	MapMusic = "GermanicTheme"
 })
 
-DefineQuest("Westward Migration", {
+DefineQuest("westward-migration", {
+	Name = "Westward Migration",
 	Icon = "icon-germanic-worker",
 	Description = "With expansion through Vanaland denied to us, we seek an alternative migration route to the west.\n\nMap: Holmgard",
-	RequiredQuest = "On the Vanaquisl",
+	RequiredQuest = "on-the-vanaquisl",
 	World = "Earth",
 	Civilization = "germanic",
 	TechnologyPoints = 1,
@@ -56,10 +58,11 @@ DefineQuest("Westward Migration", {
 	MapMusic = "GermanicTheme2"
 })
 
-DefineQuest("Northwards to the Sea", {
+DefineQuest("northwards-to-the-sea", {
+	Name = "Northwards to the Sea",
 	Icon = "icon-germanic-town-hall",
 	Description = "After moving southwest, we now find ourselves near a peninsula which seems promising for settlement.\n\nMap: Jutland",
-	RequiredQuest = "Westward Migration",
+	RequiredQuest = "westward-migration",
 	World = "Earth",
 	Civilization = "germanic",
 	TechnologyPoints = 2,
@@ -72,10 +75,11 @@ DefineQuest("Northwards to the Sea", {
 	MapMusic = "GermanicTheme3"
 })
 
-DefineQuest("Gylve's Realm", {
+DefineQuest("gylves-realm", {
+	Name = "Gylve's Realm",
 	Icon = "icon-germanic-barbed-arrow",
 	Description = "After establishing ourselves in Jutland and the islands of Fyen and Zealand we journeyed north, but we do not seem welcome in these new shores...\n\nMap: Malmo",
-	RequiredQuest = "Northwards to the Sea",
+	RequiredQuest = "northwards-to-the-sea",
 	World = "Earth",
 	Civilization = "germanic",
 	TechnologyPoints = 2,
@@ -88,10 +92,11 @@ DefineQuest("Gylve's Realm", {
 --	MapMusic = "GermanicTheme4"
 })
 
-DefineQuest("The Battle of Magetobria", {
+DefineQuest("the-battle-of-magetobria", {
+	Name = "The Battle of Magetobria",
 	Icon = "icon-suebi-swordsman",
 	Description = "Under the leadership of Ariovistus, we have crossed the Rhine to aid the Sequani and the Arverni in defeating the Aedui, and now an Aedui army approaches the Sequani settlement of Magetobria...\n\nMap: Belfort",
-	RequiredQuest = "Gylve's Realm",
+	RequiredQuest = "gylves-realm",
 	World = "Earth",
 	Civilization = "teuton",
 	TechnologyPoints = 3,
@@ -102,10 +107,11 @@ DefineQuest("The Battle of Magetobria", {
 	PlayerColor = "black"
 })
 
-DefineQuest("The Home of the Boii", {
+DefineQuest("the-home-of-the-boii", {
+	Name = "The Home of the Boii",
 	Icon = "icon-marbod",
 	Description = "After a devastating conflict with the Romans, Marbod seeks to lead the tribe of the Marcomanni to safer lands.\n\nMap: Prague",
-	RequiredQuest = "The Battle of Magetobria",
+	RequiredQuest = "the-battle-of-magetobria",
 	World = "Earth",
 	Civilization = "teuton",
 	TechnologyPoints = 4,
@@ -116,10 +122,11 @@ DefineQuest("The Home of the Boii", {
 	PlayerColor = "orange"
 })
 
-DefineQuest("The Sack of Iuvavum", {
+DefineQuest("the-sack-of-iuvavum", {
+	Name = "The Sack of Iuvavum",
 	Icon = "icon-teuton-spatha",
 	Description = "Almost two centuries after the time of Marbod, the Marcomanni chieftain Ballomar has gathered more than a dozen Germanic tribes in an alliance to invade the Roman Empire.\n\nMap: Salzburg",
-	RequiredQuest = "The Home of the Boii",
+	RequiredQuest = "the-home-of-the-boii",
 	World = "Earth",
 	Civilization = "teuton",
 	TechnologyPoints = 3,
@@ -130,10 +137,11 @@ DefineQuest("The Sack of Iuvavum", {
 	PlayerColor = "orange"
 })
 
-DefineQuest("The Razing of Opitergium", {
+DefineQuest("the-razing-of-opitergium", {
+	Name = "The Razing of Opitergium",
 	Icon = "icon-latin-forum",
 	Description = "Leaving a trail of destruction behind them, the Marcomanni have now reached Italy and lay siege to the Roman city of Opitergium.\n\nMap: Oderzo",
-	RequiredQuest = "The Sack of Iuvavum",
+	RequiredQuest = "the-sack-of-iuvavum",
 	World = "Earth",
 	Civilization = "teuton",
 	TechnologyPoints = 3,
@@ -144,10 +152,11 @@ DefineQuest("The Razing of Opitergium", {
 	PlayerColor = "orange"
 })
 
-DefineQuest("Moving into Galicia", { -- happened in 411 AD
+DefineQuest("moving-into-galicia", { -- happened in 411 AD
+	Name = "Moving into Galicia",
 	Icon = "icon-teuton-town-hall",
 	Description = "Times are changing. The Roman Empire, once invincible, is now falling prey to a conjunction of domestic troubles and external pressures. A group of Suebi has decided to take on this opportunity, moving into the Roman province of Galicia...\n\nMap: Braga",
-	RequiredQuest = "The Razing of Opitergium",
+	RequiredQuest = "the-razing-of-opitergium",
 	World = "Earth",
 	Civilization = "teuton",
 	TechnologyPoints = 3,
@@ -158,10 +167,11 @@ DefineQuest("Moving into Galicia", { -- happened in 411 AD
 	PlayerColor = "black"
 })
 
-DefineQuest("The Blue Danube", {
+DefineQuest("the-blue-danube", {
+	Name = "The Blue Danube",
 	Icon = "icon-teuton-swordsman",
 	Description = "As time passed, the Marcomanni abandoned their old name and adopted a new one - that of the Bavarians. Expelled from Bohemia by the Lombards, they must now seek a home on the margins of the Danube, facing the forces of the crumbling Roman Empire, if need be.\n\nMap: Regensburg",
-	RequiredQuest = "The Razing of Opitergium",
+	RequiredQuest = "the-razing-of-opitergium",
 	World = "Earth",
 	Civilization = "teuton",
 	TechnologyPoints = 4,
@@ -172,7 +182,8 @@ DefineQuest("The Blue Danube", {
 	PlayerColor = "cyan"
 })
 
-DefineQuest("A Rocky Home", {
+DefineQuest("a-rocky-home", {
+	Name = "A Rocky Home",
 	Icon = "icon-modsognir",
 	Description = "A clan of dwarves led by Modsognir has arrived in Svarinshaug, seeking a new home. Beset by hostile natural forces on all sides, can they survive their first winter?\n\nMap: Svarinshaug",
 	World = "Nidavellir",
@@ -188,10 +199,11 @@ DefineQuest("A Rocky Home", {
 	IntroductionDialogue = "a-rocky-home-introduction"
 })
 
-DefineQuest("The Mead of Wisdom", {
+DefineQuest("the-mead-of-wisdom", {
+	Name = "The Mead of Wisdom",
 	Icon = "icon-durin",
 	Description = "The sage of Modsognir's clan has disappeared, taken by two dwarves called Fjalar and Galar. Modsognir has sent Durin to enter their hall, rescue the sage - or what remains of him - and bring the evil pair to justice.\n\nMap: Fjalar's and Galar's Hall",
-	RequiredQuest = "A Rocky Home",
+	RequiredQuest = "a-rocky-home",
 	World = "Nidavellir",
 	Civilization = "dwarf",
 	TechnologyPoints = 2,
@@ -204,10 +216,11 @@ DefineQuest("The Mead of Wisdom", {
 	MapMusic = "DwarfTheme2"
 })
 
-DefineQuest("The Treasures of Svarinshaug", {
+DefineQuest("the-treasures-of-svarinshaug", {
+	Name = "The Treasures of Svarinshaug",
 	Icon = "icon-brising-smithy",
 	Description = "The dwarven smiths Brokk and Eitri are competing with the renowned sons of Ivaldi to craft the best artifacts for Modsognir. To obtain the necessary high quality ores will be perilous, however, as dangerous creatures abound in the deep mines where they lay...\n\nMap: Eastern Mines",
-	RequiredQuest = "The Mead of Wisdom",
+	RequiredQuest = "the-mead-of-wisdom",
 	World = "Nidavellir",
 	Civilization = "dwarf",
 	TechnologyPoints = 3,
@@ -220,10 +233,11 @@ DefineQuest("The Treasures of Svarinshaug", {
 --	MapMusic = "DwarfTheme3"
 })
 
-DefineQuest("The Necklace of the Brisings", {
+DefineQuest("the-necklace-of-the-brisings", {
+	Name = "The Necklace of the Brisings",
 	Icon = "icon-dwarven-steelclad",
 	Description = "The necklace made for Modsognir's wife by a group of four dwarven smiths has been stolen! The culprits, a band of local dwarven thieves, sneaked away with the necklace last night, going back to their hideout. We must recover the necklace from these bandits!\n\nMap: Aurvang",
-	RequiredQuest = "The Treasures of Svarinshaug",
+	RequiredQuest = "the-treasures-of-svarinshaug",
 	World = "Nidavellir",
 	Civilization = "dwarf",
 	TechnologyPoints = 3,
@@ -236,10 +250,11 @@ DefineQuest("The Necklace of the Brisings", {
 --	MapMusic = "DwarfTheme4"
 })
 
-DefineQuest("The Binding of Grafvitnir", {
+DefineQuest("the-binding-of-grafvitnir", {
+	Name = "The Binding of Grafvitnir",
 	Icon = "icon-wyrm",
 	Description = "The colossal wyrm Grafvitnir threatens the survival of the fledgling dwarves, who have little chance of slaying the monstrous creature. The only hope rests in getting close enough to bind Grafvitnir with a powerful fetter crafted by the clan's talented smiths.\n\nMap: Grafvitnir's Lair",
-	RequiredQuest = "The Necklace of the Brisings",
+	RequiredQuest = "the-necklace-of-the-brisings",
 	World = "Nidavellir",
 	Civilization = "dwarf",
 	TechnologyPoints = 2,
@@ -250,10 +265,11 @@ DefineQuest("The Binding of Grafvitnir", {
 	PlayerColor = "black"
 })
 
-DefineQuest("The Tomb of Durahn Eikinskjaldi", {
+DefineQuest("the-tomb-of-durahn-eikinskjaldi", {
+	Name = "The Tomb of Durahn Eikinskjaldi",
 	Icon = "icon-dwarven-shield-3",
 	Description = "The dwarves of the Eikinskjaldi Clan need to recover Durahn Eikinskjaldi's skull to prove their claim in the lordship of Joruvellir, but Durahn's tomb has fallen prey to a band of gnomish raiders...\n\nMap: Tomb of Durahn Eikinskjaldi",
-	RequiredQuest = "The Binding of Grafvitnir",
+	RequiredQuest = "the-binding-of-grafvitnir",
 	World = "Nidavellir",
 	Civilization = "dwarf",
 	TechnologyPoints = 2,
@@ -264,10 +280,11 @@ DefineQuest("The Tomb of Durahn Eikinskjaldi", {
 	PlayerColor = "brown"
 })
 
-DefineQuest("A Bargain is Struck", {
+DefineQuest("a-bargain-is-struck", {
+	Name = "A Bargain is Struck",
 	Icon = "icon-rugnur",
 	Description = "A gnomish monarch arrives at a small border outpost led by Rugnur, asking that his clan craft a special scepter for him.\n\nMap: Chaincolt Foothills",
-	RequiredQuest = "The Tomb of Durahn Eikinskjaldi",
+	RequiredQuest = "the-tomb-of-durahn-eikinskjaldi",
 	World = "Nidavellir",
 	Civilization = "dwarf",
 	TechnologyPoints = 2,
@@ -279,10 +296,11 @@ DefineQuest("A Bargain is Struck", {
 	MapMusic = "ABargainIsStruck"
 })
 
-DefineQuest("Closing the Gates", {
+DefineQuest("closing-the-gates", {
+	Name = "Closing the Gates",
 	Icon = "icon-baglur",
 	Description = "Having retreated from the raiders' onslaught, Rugnur reaches the gates of his clan's tunnels.\n\nMap: Caverns of Chaincolt",
-	RequiredQuest = "A Bargain is Struck",
+	RequiredQuest = "a-bargain-is-struck",
 	World = "Nidavellir",
 	Civilization = "dwarf",
 	TechnologyPoints = 2,
@@ -294,10 +312,11 @@ DefineQuest("Closing the Gates", {
 	MapMusic = "ClosingTheGates"
 })
 
-DefineQuest("Searching for the Runecrafter", {
+DefineQuest("searching-for-the-runecrafter", {
+	Name = "Searching for the Runecrafter",
 	Icon = "icon-thursagan",
 	Description = "Rugnur's expedition reaches the northlands, and begin to search for the runesmith named Thursagan - the sage of fire.\n\nMap: Northern Wastelands",
-	RequiredQuest = "Closing the Gates",
+	RequiredQuest = "closing-the-gates",
 	World = "Nidavellir",
 	Civilization = "dwarf",
 	TechnologyPoints = 2,
@@ -309,10 +328,11 @@ DefineQuest("Searching for the Runecrafter", {
 	MapMusic = "SearchingForTheRunecrafter"
 })
 
-DefineQuest("Gathering Materials", {
+DefineQuest("gathering-materials", {
+	Name = "Gathering Materials",
 	Icon = "icon-dwarven-miner",
 	Description = "Rugnur and his brave companions, having spent two years harvesting materials in the tunnels of the eastern mines, now venture into the very heart of the goblins' territory to obtain the last materials needed...\n\nMap: Eastern Mines",
-	RequiredQuest = "Searching for the Runecrafter",
+	RequiredQuest = "searching-for-the-runecrafter",
 	World = "Nidavellir",
 	Civilization = "dwarf",
 	TechnologyPoints = 2,
@@ -324,10 +344,11 @@ DefineQuest("Gathering Materials", {
 	MapMusic = "GatheringMaterials"
 })
 
-DefineQuest("Hills of the Shorbear Clan", {
+DefineQuest("hills-of-the-shorbear-clan", {
+	Name = "Hills of the Shorbear Clan",
 	Icon = "icon-durstorn",
 	Description = "Durstorn, Rugnur and their companions travel to the hills of the Shorbear Clan, seeking access to that tribe's magnificent tools, which are needed to craft the Scepter of Fire.\n\nMap: Shorbear Hills",
-	RequiredQuest = "Gathering Materials",
+	RequiredQuest = "gathering-materials",
 	World = "Nidavellir",
 	Civilization = "dwarf",
 	TechnologyPoints = 3,
@@ -339,10 +360,11 @@ DefineQuest("Hills of the Shorbear Clan", {
 	MapMusic = "HillsOfTheShorbearClan"
 })
 
-DefineQuest("The Wyrm", {
+DefineQuest("the-wyrm", {
+	Name = "The Wyrm",
 	Icon = "icon-wyrm-vicious",
 	Description = "Rugnur's dwarves delve deep into underground caves, seeking to escape from the Shinsplitter Clan. However, the section of the old eastern mines that they reached had long since become the lair of Svafnir... the wyrm.\n\nMap: Svafnir's Lair",
-	RequiredQuest = "Hills of the Shorbear Clan",
+	RequiredQuest = "hills-of-the-shorbear-clan",
 	World = "Nidavellir",
 	Civilization = "dwarf",
 	TechnologyPoints = 2,
@@ -354,10 +376,11 @@ DefineQuest("The Wyrm", {
 	MapMusic = "TheWyrm"
 })
 
-DefineQuest("Caverns of Flame", {
+DefineQuest("caverns-of-flame", {
+	Name = "Caverns of Flame",
 	Icon = "icon-goblin-swordsman",
 	Description = "Rugnur and his companions reach deep into the Caverns of Flame, where they find an ancient dwarven mechanism which may just allow them to prevent the Shinsplitters from getting their hands on the Scepter.\n\nMap: Caverns of Flame",
-	RequiredQuest = "The Wyrm",
+	RequiredQuest = "the-wyrm",
 	World = "Nidavellir",
 	Civilization = "dwarf",
 	TechnologyPoints = 2,
@@ -370,7 +393,8 @@ DefineQuest("Caverns of Flame", {
 })
 
 --[[
-DefineQuest("Last Stand at the Forge", {
+DefineQuest("last-stand-at-the-forge", {
+	Name = "Last Stand at the Forge",
 	Icon = "icon-dwarven-smithy",
 	Description = "Goblins are overruning dwarven settlements in the region of the Caverns of Flame. The volcanic forge must be defended, lest the goblins be able to use it to craft wondrous weapon with which they could inflict even more damage on dwarven societies.\n\nMap: Svafnir's Lair",
 	RequiredTechnology = "upgrade-dwarven-alchemy",
@@ -384,12 +408,13 @@ DefineQuest("Last Stand at the Forge", {
 })
 --]]
 
-DefineQuest("Andvari's Gold", {
+DefineQuest("andvaris-gold", {
+	Name = "Andvari's Gold",
 	Icon = "icon-gold",
 	Description = "Regin has asked you to help him take Andvari's gold forcibly, giving promises of great wealth.",
 	World = "Nidavellir",
 	Civilization = "dwarf",
-	RequiredQuest = "The Binding of Grafvitnir", -- this happens long after Modsognir's time
+	RequiredQuest = "the-binding-of-grafvitnir", -- this happens long after Modsognir's time
 	QuestGiver = "Regin",
 	Area = "Andvari's Falls",
 	StartSpeech = "Listen... there is a dwarf who lives near here, called Andvari. He has gathered a large gold hoard, by methods unknown. For me alone, it would be too risky to wrest the gold from Andvari. But with your help... can I count on it?",
@@ -398,12 +423,13 @@ DefineQuest("Andvari's Gold", {
 	Hidden = true
 })
 
-DefineQuest("Fafnir's Hoard", {
+DefineQuest("fafnirs-hoard", {
+	Name = "Fafnir's Hoard",
 	Icon = "icon-wyrm-vicious",
 	Description = "Andvari's gold hoard has been taken by the kobolds who care for the wyrm Fafnir. If you and Regin are to recover the gold, you must enter Fafnir's perilous domain and slay the giant beast.",
 	World = "Nidavellir",
 	Civilization = "dwarf",
-	RequiredQuest = "Andvari's Gold",
+	RequiredQuest = "andvaris-gold",
 	QuestGiver = "Regin",
 	Area = "Gnitaheith",
 	StartSpeech = "Andvari's gold hoard was taken by a group of treacherous kobolds, who took it to the lair of their wyrm, Fafnir. To recover the precious metal, we must enter the wyrm's lair.",
@@ -412,7 +438,8 @@ DefineQuest("Fafnir's Hoard", {
 	Hidden = true
 })
 
-DefineQuest("Tror's Inheritance", {
+DefineQuest("trors-inheritance", {
+	Name = "Tror's Inheritance",
 	Icon = "icon-germanic-short-sword",
 	Description = "The young Tror has come of age, and requested you bring his father's weapons to him.",
 	World = "Earth",
@@ -425,7 +452,8 @@ DefineQuest("Tror's Inheritance", {
 	Hidden = true
 })
 
-DefineQuest("Ottar's Lineage", {
+DefineQuest("ottars-lineage", {
+	Name = "Ottar's Lineage",
 	Icon = "icon-teuton-swordsman",
 	Description = "Ottar has bet his entire inheritance against Argantyr, to see who has the better lineage. He now asks you to take him to a seeress who can tell him about his bloodline.",
 	World = "Earth",

@@ -180,10 +180,7 @@ AddTrigger(
 			{function(s)
 				if (player == GetThisPlayer()) then
 					if (GrandStrategy == false) then
-						if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Northwards to the Sea") == false) then
-							table.insert(wyr.preferences.QuestsCompleted, "Northwards to the Sea")
-						end
-						SavePreferences()
+						SetQuestCompleted("northwards-to-the-sea")
 					end
 					ActionVictory()
 				end

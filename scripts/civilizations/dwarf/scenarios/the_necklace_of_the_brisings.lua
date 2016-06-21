@@ -203,10 +203,7 @@ AddTrigger(
 					{"~!Continue"},
 					{function(s)
 						if (GrandStrategy == false) then
-							if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "The Necklace of the Brisings") == false) then
-								table.insert(wyr.preferences.QuestsCompleted, "The Necklace of the Brisings")
-							end
-							SavePreferences()
+							SetQuestCompleted("the-necklace-of-the-brisings")
 						end
 						ActionVictory()
 					end}

@@ -193,10 +193,7 @@ AddTrigger(
 							{"~!Continue"},
 							{function(s)
 								if (GrandStrategy == false) then
-									if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "The Treasures of Svarinshaug") == false) then
-										table.insert(wyr.preferences.QuestsCompleted, "The Treasures of Svarinshaug")
-									end
-									SavePreferences()
+									SetQuestCompleted("the-treasures-of-svarinshaug")
 								end
 								ActionVictory()
 							end}

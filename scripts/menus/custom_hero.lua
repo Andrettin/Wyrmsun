@@ -37,7 +37,7 @@ function CustomHeroCreationMenu(world, quest_menu)
 	local hero_civilization_list = {}
 	if (world == "Earth") then
 		table.insert(hero_civilization_list, "Germanic")
-		if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Gylve's Realm")) then
+		if (GetQuestData("gylves-realm", "Completed")) then
 			table.insert(hero_civilization_list, "Teuton")
 		end
 	elseif (world == "Nidavellir") then
@@ -206,7 +206,7 @@ function CustomHeroCivilizationAdvancementMenu(world, quest_menu)
 	local sizeY = 352
 
 	local hero_civilization_list = {}
-	if (GetCustomHeroData(GetCurrentCustomHero(), "Civilization") == "germanic" and GetArrayIncludes(wyr.preferences.QuestsCompleted, "Gylve's Realm")) then
+	if (GetCustomHeroData(GetCurrentCustomHero(), "Civilization") == "germanic" and GetQuestData("gylves-realm", "Completed")) then
 		table.insert(hero_civilization_list, "Teuton")
 	end
 	

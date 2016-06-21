@@ -1235,7 +1235,7 @@ function RunSinglePlayerCustomGameMenu()
 			MapRequiredQuest = ""
 			GetMapInfo(maps[i])
 			if (MapWorld == world_list[world:getSelected() + 1] or (MapWorld == "" and world_list[world:getSelected() + 1] == "Custom")) then
-				if (MapRequiredQuest == "" or GetArrayIncludes(wyr.preferences.QuestsCompleted, MapRequiredQuest)) then
+				if (MapRequiredQuest == "" or GetQuestData(MapRequiredQuest, "Completed")) then
 					if (mapinfo.npersonplayers > 0) then
 						local map_description = _(mapinfo.description)
 						if (map_description == "") then

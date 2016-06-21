@@ -116,10 +116,7 @@ AddTrigger(
 			{function(s)
 				if (player == GetThisPlayer()) then
 					if (GrandStrategy == false) then
-						if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Gylve's Realm") == false) then
-							table.insert(wyr.preferences.QuestsCompleted, "Gylve's Realm")
-						end
-						SavePreferences()
+						SetQuestCompleted("gylves-realm")
 					end
 					ActionVictory()
 				end

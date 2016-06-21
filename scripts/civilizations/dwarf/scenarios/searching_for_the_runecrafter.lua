@@ -709,10 +709,7 @@ AddTrigger(
 																									{function(s)
 																										RemovePlayerObjective(player, "- Find Thursagan and bring him to your Mead Hall")
 																										if (player == GetThisPlayer() and GrandStrategy == false) then
-																											if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Searching for the Runecrafter") == false) then
-																												table.insert(wyr.preferences.QuestsCompleted, "Searching for the Runecrafter")
-																											end
-																											SavePreferences()
+																											SetQuestCompleted("searching-for-the-runecrafter")
 																										end
 																										if (mapinfo.description == "Northern Wastelands" and player == GetFactionPlayer("Norlund Clan")) then
 																											if (GrandStrategy) then

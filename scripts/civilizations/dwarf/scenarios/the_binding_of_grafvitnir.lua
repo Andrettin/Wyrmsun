@@ -306,10 +306,7 @@ AddTrigger(
 					{"~!Continue"},
 					{function(s)
 						if (GrandStrategy == false) then
-							if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "The Binding of Grafvitnir") == false) then
-								table.insert(wyr.preferences.QuestsCompleted, "The Binding of Grafvitnir")
-							end
-							SavePreferences()
+							SetQuestCompleted("the-binding-of-grafvitnir")
 						end
 						ActionVictory()
 					end}

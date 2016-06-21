@@ -620,10 +620,7 @@ AddTrigger(
 						{function(s)
 							RemovePlayerObjective(player, "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall")
 							if (player == GetThisPlayer() and GrandStrategy == false) then
-								if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "A Bargain is Struck") == false) then
-									table.insert(wyr.preferences.QuestsCompleted, "A Bargain is Struck")
-								end
-								SavePreferences()
+								SetQuestCompleted("a-bargain-is-struck")
 							end
 							if (mapinfo.description == "Chaincolt Foothills") then
 								if (GetThisPlayer() == GetFactionPlayer("Norlund Clan")) then
@@ -690,10 +687,7 @@ AddTrigger(
 				{function(s)
 					RemovePlayerObjective(player, "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall")
 					if (player == GetThisPlayer() and GrandStrategy == false) then
-						if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "A Bargain is Struck") == false) then
-							table.insert(wyr.preferences.QuestsCompleted, "A Bargain is Struck")
-						end
-						SavePreferences()
+						SetQuestCompleted("a-bargain-is-struck")
 					end
 					if (mapinfo.description == "Chaincolt Foothills") then
 						if (GetThisPlayer() == GetFactionPlayer("Norlund Clan")) then
@@ -762,10 +756,7 @@ AddTrigger(
 	function() 
 		RemovePlayerObjective(player, "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall")
 		if (player == GetThisPlayer() and GrandStrategy == false) then
-			if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "A Bargain is Struck") == false) then
-				table.insert(wyr.preferences.QuestsCompleted, "A Bargain is Struck")
-			end
-			SavePreferences()
+			SetQuestCompleted("a-bargain-is-struck")
 		end
 		if (mapinfo.description == "Chaincolt Foothills") then
 			if (GetThisPlayer() == GetFactionPlayer("Norlund Clan")) then

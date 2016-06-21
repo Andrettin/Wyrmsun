@@ -276,10 +276,7 @@ AddTrigger(
 			{function(s)
 				if (player == GetThisPlayer()) then
 					if (GrandStrategy == false) then
-						if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "The Home of the Boii") == false) then
-							table.insert(wyr.preferences.QuestsCompleted, "The Home of the Boii")
-						end
-						SavePreferences()
+						SetQuestCompleted("the-home-of-the-boii")
 					end
 					ActionVictory()
 				end

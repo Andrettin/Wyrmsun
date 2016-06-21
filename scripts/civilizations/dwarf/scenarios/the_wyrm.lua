@@ -592,10 +592,7 @@ AddTrigger(
 					end
 					if (GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
 						if (player == GetThisPlayer() and GrandStrategy == false) then
-							if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "The Wyrm") == false) then
-								table.insert(wyr.preferences.QuestsCompleted, "The Wyrm")
-							end
-							SavePreferences()
+							SetQuestCompleted("the-wyrm")
 						end
 						ActionVictory()
 					elseif (GetFactionPlayer("Shinsplitter Clan") == GetThisPlayer()) then

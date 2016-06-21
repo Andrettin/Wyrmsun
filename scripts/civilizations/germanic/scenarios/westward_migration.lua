@@ -307,10 +307,7 @@ AddTrigger(
 			{function(s)
 				if (player == GetThisPlayer()) then
 					if (GrandStrategy == false) then
-						if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "Westward Migration") == false) then
-							table.insert(wyr.preferences.QuestsCompleted, "Westward Migration")
-						end
-						SavePreferences()
+						SetQuestCompleted("westward-migration")
 					end
 					ActionVictory()
 				end

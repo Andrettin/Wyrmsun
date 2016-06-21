@@ -286,10 +286,7 @@ AddTrigger(
 			{function(s)
 				if (player == GetThisPlayer()) then
 					if (GrandStrategy == false) then
-						if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "The Tomb of Durahn Eikinskjaldi") == false) then
-							table.insert(wyr.preferences.QuestsCompleted, "The Tomb of Durahn Eikinskjaldi")
-						end
-						SavePreferences()
+						SetQuestCompleted("the-tomb-of-durahn-eikinskjaldi")
 					end
 					ActionVictory()
 				end

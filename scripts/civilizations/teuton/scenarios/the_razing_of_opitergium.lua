@@ -124,10 +124,7 @@ AddTrigger(
 				{function(s)
 					if (player == GetThisPlayer()) then
 						if (GrandStrategy == false) then
-							if (GetArrayIncludes(wyr.preferences.QuestsCompleted, "The Razing of Opitergium") == false) then
-								table.insert(wyr.preferences.QuestsCompleted, "The Razing of Opitergium")
-							end
-							SavePreferences()
+							SetQuestCompleted("the-razing-of-opitergium")
 						end
 						ActionVictory()
 					end
