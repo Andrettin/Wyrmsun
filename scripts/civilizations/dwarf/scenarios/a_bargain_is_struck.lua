@@ -891,27 +891,19 @@ AddTrigger(
 		return false
 	end,
 	function() 
-		RemovePlayerObjective(player, "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall")
-		RemovePlayerObjective(player, "- Have one unit standing on each glyph at the same time")
-		RemovePlayerObjective(player, "- Find Thursagan and bring him to your Mead Hall")
-		RemovePlayerObjective(player, "- Mine 10000 gold and 20000 coal")
-		RemovePlayerObjective(player, "- Defeat Glonoin, the Shorbear Clan leader")
-		RemovePlayerObjective(player, "- Have all heroes in the Shorbear caves while no enemies are in the caves")
-		if (mapinfo.description == "Chaincolt Foothills" or mapinfo.description == "Caverns of Chaincolt" or mapinfo.description == "Northern Wastelands" or mapinfo.description == "Eastern Mines" or mapinfo.description == "Shorbear Hills" or mapinfo.description == "Svafnir's Lair" or mapinfo.description == "Caverns of Flame") then
-			if (GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
-				ActionDefeat()
-				if (GrandStrategy) then
-					if (PlayerHasObjective(GetThisPlayer(), "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall")) then
-						ChangeFactionResource("dwarf", "Shinsplitter Clan", "gold", 2500) -- give the funds for Shinsplitter Clan if they managed to successfully stop the shipment
-					end
-					if (PlayerHasObjective(GetThisPlayer(), "- Have one unit standing on each glyph at the same time")) then
-						ChangeFactionResource("dwarf", "Norlund Clan", "gold", -2500)
-						ChangeFactionResource("dwarf", "Shinsplitter Clan", "gold", 2500)
-						-- if defenses have been breached, then the Shinsplitter Clan conquers the province
-						SetProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-duelist", 0) -- kill off the gnomish envoy if the province has been conquered
-						SetProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-master-at-arms", 0)
-						AcquireProvince(WorldMapProvinces.CavernsofChaincolt, "Shinsplitter Clan")
-					end
+		if (GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
+			ActionDefeat()
+			if (GrandStrategy) then
+				if (PlayerHasObjective(GetThisPlayer(), "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall")) then
+					ChangeFactionResource("dwarf", "Shinsplitter Clan", "gold", 2500) -- give the funds for Shinsplitter Clan if they managed to successfully stop the shipment
+				end
+				if (PlayerHasObjective(GetThisPlayer(), "- Have one unit standing on each glyph at the same time")) then
+					ChangeFactionResource("dwarf", "Norlund Clan", "gold", -2500)
+					ChangeFactionResource("dwarf", "Shinsplitter Clan", "gold", 2500)
+					-- if defenses have been breached, then the Shinsplitter Clan conquers the province
+					SetProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-duelist", 0) -- kill off the gnomish envoy if the province has been conquered
+					SetProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-master-at-arms", 0)
+					AcquireProvince(WorldMapProvinces.CavernsofChaincolt, "Shinsplitter Clan")
 				end
 			end
 		end
@@ -925,22 +917,16 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if ((PlayerHasObjective(GetThisPlayer(), "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall") or PlayerHasObjective(GetThisPlayer(), "- Find Thursagan and bring him to your Mead Hall") or PlayerHasObjective(GetThisPlayer(), "- Defeat Glonoin, the Shorbear Clan leader") or PlayerHasObjective(GetThisPlayer(), "- Have all heroes in the Shorbear caves while no enemies are in the caves") or PlayerHasObjective(GetThisPlayer(), "- Move the Gnomish Envoy to the southern border east of the river")) and GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-gnomish-duelist") < 1 and GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-gnomish-master-at-arms") < 1) then
+		if (PlayerHasObjective(GetThisPlayer(), "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall") and GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-gnomish-duelist") < 1 and GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-gnomish-master-at-arms") < 1) then
 			player = GetThisPlayer()
 			return true
 		end
 		return false
 	end,
 	function()
-		RemovePlayerObjective(player, "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall")
-		RemovePlayerObjective(player, "- Find Thursagan and bring him to your Mead Hall")
-		RemovePlayerObjective(player, "- Defeat Glonoin, the Shorbear Clan leader")
-		RemovePlayerObjective(player, "- Have all heroes in the Shorbear caves while no enemies are in the caves")
-		if (mapinfo.description == "Chaincolt Foothills" or mapinfo.description == "Northern Wastelands" or mapinfo.description == "Shorbear Hills") then
-			ActionDefeat()
-			if (GrandStrategy and PlayerHasObjective(GetThisPlayer(), "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall")) then
-				ChangeFactionResource("dwarf", "Shinsplitter Clan", "gold", 2500) -- give the funds for Shinsplitter Clan if they managed to successfully stop the shipment
-			end
+		ActionDefeat()
+		if (GrandStrategy and PlayerHasObjective(GetThisPlayer(), "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall")) then
+			ChangeFactionResource("dwarf", "Shinsplitter Clan", "gold", 2500) -- give the funds for Shinsplitter Clan if they managed to successfully stop the shipment
 		end
 		return false
 	end
@@ -972,3 +958,20 @@ AddTrigger(
 --		return false
 --	end
 --)
+
+-- if the raiders have been destroyed, grant the corresponding achievement
+AddTrigger(
+	function()
+		if (GameCycle == 0) then
+			return false
+		end
+		if (GetFactionPlayer("Norlund Clan") == GetThisPlayer() and PlayerHasObjective(GetThisPlayer(), "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall") and GrandStrategy == false and GetNumRivals(GetThisPlayer()) == 0) then
+			return true
+		end
+		return false
+	end,
+	function() 
+		SetAchievementObtained("safe-passage")
+		return false
+	end
+)

@@ -65,14 +65,15 @@ DefineAchievement("the-first-dwarves", {
 	RequiredQuests = {"the-binding-of-grafvitnir"}
 })
 
---[[
 DefineAchievement("safe-passage", {
 	Name = "Safe Passage",
 	Icon = "icon-dwarven-steelclad",
 	Description = "Destroy the raiders during the A Bargain is Struck quest.",
-	PlayerColor = "green"
+	PlayerColor = "green",
+	Unobtainable = true -- it is obtainable only through triggers
 })
 
+--[[
 DefineAchievement("rugnurs-bravery", {
 	Name = "Rugnur's Bravery",
 	Icon = "icon-rugnur-older",
