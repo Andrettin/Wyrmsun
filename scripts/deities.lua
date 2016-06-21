@@ -52,10 +52,10 @@ DefineDeity("gathaarl", { -- from Tyrant, Goblin God of Battle
 	Name = "Gathaarl",
 	HomePlane = "Helheim",
 	Civilizations = {"goblin"},
-	Domains = {"fear", "fertility", "war"},
+	Domains = {"chaos", "earth", "war"},
 	Gender = "male",
 	Major = true,
-	Description = "The chief goblin deity, Gathaarl rejoices in the bloodiness of battle. Many goblins raise totems to Gathaarl's glory, hoping that the deity will intercede for them."
+	Description = "The chief goblin deity, Gathaarl rejoices in the bloodiness of battle. The god's priests preach that goblins procreate and multiply, so that they may have an edge against their enemies. Many goblins raise totems to Gathaarl's glory, hoping that the deity will intercede for them."
 	-- neutral alignment (actually "neutral -")
 	-- prefers offerings of food and weapons
 	-- offering description from Tyrant: "dissolved in a cloud of green smoke"

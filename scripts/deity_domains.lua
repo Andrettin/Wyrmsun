@@ -33,8 +33,14 @@ DefineDeityDomain("archery", {
 	Name = "Archery"
 })
 
+DefineDeityDomain("chaos", {
+	Name = "Chaos",
+	Abilities = {"upgrade-terror"}
+})
+
 DefineDeityDomain("death", {
-	Name = "Death"
+	Name = "Death",
+	Abilities = {"upgrade-terror"}
 })
 
 DefineDeityDomain("earth", {
