@@ -1240,7 +1240,6 @@ DefineUnitType("unit-surghan-mercenary-steelclad", { Name = _("Surghan Mercenary
 	Civilization = "dwarf",
 	Description = _("These scoundrels will hire their axes to the largest bidder, no questions asked. They have participated in a number of engagements, the most dangerous of which was the pursuit of a group of dwarves into the lair of the wyrm Svafnir and beyond."),
 	Quote = _("\"It must be one of those Surghan mercenaries. I'll bet those Shinsplitters have hired more of them. That's bad news for us, for they are deadly, combat-hardened warriors.\"\n- Baglur, Retired Norlund Warrior"),
-	Image = {"file", "dwarf/units/dwarven_steelclad.png", "size", {72, 72}},
 	Animations = "animations-dwarven-axefighter", Icon = "icon-surghan-mercenary-steelclad",
 	Costs = {"time", 0, "gold", 900, "lumber", 0},
 	TrainQuantity = 4,
@@ -1251,12 +1250,42 @@ DefineUnitType("unit-surghan-mercenary-steelclad", { Name = _("Surghan Mercenary
 	Variations = {
 		{
 			"variation-id", "red-hair",
-			"upgrade-forbidden", "upgrade-dwarven-great-axe"
+			"upgrade-forbidden", "upgrade-old"
 		},
 		{
-			"variation-id", "red-hair",
-			"file", "dwarf/units/dwarven_steelclad_great_axe.png",
-			"upgrade-required", "upgrade-dwarven-great-axe"
+			"layer", "weapon",
+			"variation-id", "axe",
+			"upgrade-forbidden", "upgrade-dwarven-great-axe",
+			"item-not-equipped", "unit-hammer",
+			"item-not-equipped", "unit-mining-pick",
+			"item-not-equipped", "unit-great-axe"
+		},
+		{
+			"layer", "weapon",
+			"variation-id", "double-axe",
+			"file", "dwarf/units/weapons/double_axe.png",
+			"upgrade-required", "upgrade-dwarven-great-axe",
+			"item-not-equipped", "unit-hammer",
+			"item-not-equipped", "unit-mining-pick",
+			"item-equipped", "unit-great-axe"
+		},
+		{
+			"layer", "weapon",
+			"variation-id", "mace",
+			"file", "dwarf/units/weapons/mace.png",
+			"item-equipped", "unit-hammer",
+			"item-equipped", "unit-mining-pick"
+		},
+		{
+			"layer", "shield",
+			"variation-id", "round-shield",
+			"item-not-equipped", "unit-brising-round-shield"
+		},
+		{
+			"layer", "shield",
+			"variation-id", "brising-round-shield",
+			"file", "dlcs/brising_faction_flair/graphics/units/brising_round_shield.png",
+			"item-equipped", "unit-brising-round-shield"
 		}
 	}
 } )
