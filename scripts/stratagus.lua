@@ -2058,9 +2058,6 @@ if (CanAccessFile("wyr/heroes.lua")) then -- keep compatibility with how heroes 
 else
 	LoadHeroes() -- load persistent heroes
 end
-if (CanAccessFile("wyr/quests.lua")) then
-	Load("wyr/quests.lua")
-end
 
 DebugPrint("... ready!\n")
 

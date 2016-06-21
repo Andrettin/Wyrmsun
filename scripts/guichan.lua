@@ -1424,6 +1424,10 @@ function BuildProgramStartMenu()
 
 	PersistencyUpdates()
 
+	if (CanAccessFile("wyr/quests.lua")) then
+		Load("wyr/quests.lua") -- load the quests here, so that the achievement unlocked dialogs can appear properly
+	end
+	
 	menu:addFullButton(_("~!Single Player Game"), "s", offx + 208, offy + 104 + 36*0,
 		function() RunSinglePlayerGameMenu(); menu:stop(1) end)
 	menu:addFullButton(_("~!Multiplayer Game"), "m", offx + 208, offy + 104 + 36*1,

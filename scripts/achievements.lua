@@ -29,37 +29,43 @@ DefineAchievement("the-settlement-of-scandinavia", {
 	Name = "The Settlement of Scandinavia",
 	Icon = "icon-germanic-warrior",
 	Description = "As the Asa Tribe, defeat Gylve's forces and settle Scandinavia.",
-	PlayerColor = "orange"
+	PlayerColor = "orange",
+	RequiredQuests = {"gylves-realm"}
 })
 
 DefineAchievement("the-marcomannic-wars", {
 	Name = "The Marcomannic Wars",
 	Icon = "icon-suebi-swordsman",
 	Description = "As the Marcomanni Tribe, raze Opitergium.",
-	PlayerColor = "orange"
+	PlayerColor = "orange",
+	RequiredQuests = {"the-razing-of-opitergium"}
 })
 
 DefineAchievement("the-conquest-of-galicia", {
 	Name = "The Conquest of Galicia",
 	Icon = "icon-teuton-spatha",
 	Description = "As the Suebi Tribe, conquer Galicia.",
-	PlayerColor = "black"
+	PlayerColor = "black",
+	RequiredQuests = {"moving-into-galicia"}
 })
 
 DefineAchievement("the-blue-danube", {
 	Name = "The Blue Danube",
 	Icon = "icon-teuton-swordsman",
 	Description = "As the Bavarian Tribe, settle on the Danube.",
-	PlayerColor = "cyan"
+	PlayerColor = "cyan",
+	RequiredQuests = {"the-blue-danube"}
 })
 
 DefineAchievement("the-first-dwarves", {
 	Name = "The First Dwarves",
 	Icon = "icon-modsognir",
-	Description = "As the Brising Clan, bind Grafvitnir.",
-	PlayerColor = "red"
+	Description = "As the Brising Clan, survive Grafvitnir and settle in Svarinshaug.",
+	PlayerColor = "red",
+	RequiredQuests = {"the-binding-of-grafvitnir"}
 })
 
+--[[
 DefineAchievement("safe-passage", {
 	Name = "Safe Passage",
 	Icon = "icon-dwarven-steelclad",
@@ -73,16 +79,20 @@ DefineAchievement("rugnurs-bravery", {
 	Description = "Upgrade Rugnur to a Stonelord.",
 	PlayerColor = "red"
 })
+--]]
 
 DefineAchievement("the-scepter-of-fire", {
 	Name = "The Scepter of Fire",
 	Icon = "icon-thursagan",
 	Description = "Forge the Scepter of Fire and hide it from the goblins and Shinsplitters.",
-	PlayerColor = "red"
+	PlayerColor = "red",
+	RequiredQuests = {"caverns-of-flame"}
 })
 
+--[[
 DefineAchievement("deep-lore", {
 	Name = "Deep Lore",
 	Icon = "icon-scroll",
 	Description = "Read all literary works (with any character)."
 })
+--]]

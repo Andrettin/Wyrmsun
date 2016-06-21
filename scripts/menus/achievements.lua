@@ -62,7 +62,7 @@ function addAchievementIcon(achievement, menu, x, y)
 	local achievement_icon_frame = CIcon:Get(GetAchievementData(achievement, "Icon")).Frame
 	local achievement_icon = CIcon:Get(GetAchievementData(achievement, "Icon")).G
 	local b = PlayerColorImageButton("", GetAchievementData(achievement, "PlayerColor"))
-	if (GetArrayIncludes(wyr.preferences.AchievementsCompleted, achievement) == false) then
+	if (GetAchievementData(achievement, "Obtained") == false) then
 		b:setTransparency(66)
 	end
 	local achievement_icon_x_origin = (achievement_icon_frame * 46) % achievement_icon:getGraphicWidth()
