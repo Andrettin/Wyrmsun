@@ -83,7 +83,7 @@ local TeutonEvents = {
 				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Suebi Tribe" and wyr.preferences.AutomaticBattles == false) then
 					GrandStrategyEventMap = true
 					GetMapInfo("maps/earth/belfort.smp")
-					SetCurrentQuest("The Battle of Magetobria")
+					SetCurrentQuest("the-battle-of-magetobria")
 					RunMap("maps/earth/belfort.smp")
 					GrandStrategyEventMap = false
 					if (GameResult == GameVictory) then
@@ -150,7 +150,7 @@ local TeutonEvents = {
 					SetPlayerFaction("teuton", "Marcomanni Tribe")
 					GrandStrategyEventMap = true
 					GetMapInfo("maps/earth/prague.smp")
-					SetCurrentQuest("The Home of the Boii")
+					SetCurrentQuest("the-home-of-the-boii")
 					RunMap("maps/earth/prague.smp")
 					GrandStrategyEventMap = false
 					if (GameResult == GameVictory) then
@@ -232,7 +232,7 @@ local TeutonEvents = {
 					GameSettings.Presets[0].Type = PlayerComputer
 					GrandStrategyEventMap = true
 					GetMapInfo("maps/earth/salzburg.smp")
-					SetCurrentQuest("The Sack of Iuvavum")
+					SetCurrentQuest("the-sack-of-iuvavum")
 					RunMap("maps/earth/salzburg.smp")
 					GrandStrategyEventMap = false
 					if (GameResult == GameVictory) then
@@ -284,7 +284,7 @@ local TeutonEvents = {
 				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Marcomanni Tribe" and wyr.preferences.AutomaticBattles == false) then
 					GrandStrategyEventMap = true
 					GetMapInfo("maps/earth/oderzo.smp")
-					SetCurrentQuest("The Razing of Opitergium")
+					SetCurrentQuest("the-razing-of-opitergium")
 					RunMap("maps/earth/oderzo.smp")
 					GrandStrategyEventMap = false
 					if (GameResult == GameVictory) then

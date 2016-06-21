@@ -39,6 +39,6 @@ if (LoadedGame == false) then
 	})
 end
 
-if (GetCurrentQuest() == "On the Vanaquisl") then
+if (GetCurrentQuest() == "on-the-vanaquisl") then
 	SetAiType(1, "passive")
 end

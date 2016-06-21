@@ -53,7 +53,7 @@ local NidavellirEvents = {
 
 					GrandStrategyEventMap = true
 					GetMapInfo("maps/nidavellir/svarinshaug.smp")
-					SetCurrentQuest("A Rocky Home")
+					SetCurrentQuest("a-rocky-home")
 					RunMap("maps/nidavellir/svarinshaug.smp")
 					GrandStrategyEventMap = false
 					
@@ -109,7 +109,7 @@ local NidavellirEvents = {
 
 					GrandStrategyEventMap = true
 					GetMapInfo("maps/nidavellir/fjalars-and-galars-hall.smp")
-					SetCurrentQuest("The Mead of Wisdom")
+					SetCurrentQuest("the-mead-of-wisdom")
 					RunMap("maps/nidavellir/fjalars-and-galars-hall.smp")
 					GrandStrategyEventMap = false
 					
@@ -159,7 +159,7 @@ local NidavellirEvents = {
 				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Brising Clan" and wyr.preferences.AutomaticBattles == false) then
 					GrandStrategyEventMap = true
 					GetMapInfo("maps/nidavellir/eastern-mines.smp")
-					SetCurrentQuest("The Treasures of Svarinshaug")
+					SetCurrentQuest("the-treasures-of-svarinshaug")
 					RunMap("maps/nidavellir/eastern-mines.smp")
 					GrandStrategyEventMap = false
 					
@@ -209,7 +209,7 @@ local NidavellirEvents = {
 
 					GrandStrategyEventMap = true
 					GetMapInfo("maps/nidavellir/aurvang.smp")
-					SetCurrentQuest("The Necklace of the Brisings")
+					SetCurrentQuest("the-necklace-of-the-brisings")
 					RunMap("maps/nidavellir/aurvang.smp")
 					GrandStrategyEventMap = false
 					
@@ -268,9 +268,9 @@ local NidavellirEvents = {
 					SetProvinceHero("Svarinshaug", "Durin", 2)
 					
 					GrandStrategyEventMap = true
-					GetMapInfo(GetQuestData("The Binding of Grafvitnir", "Map"))
-					SetCurrentQuest("The Binding of Grafvitnir")
-					RunMap(GetQuestData("The Binding of Grafvitnir", "Map"))
+					GetMapInfo(GetQuestData("the-binding-of-grafvitnir", "Map"))
+					SetCurrentQuest("the-binding-of-grafvitnir")
+					RunMap(GetQuestData("the-binding-of-grafvitnir", "Map"))
 					GrandStrategyEventMap = false
 					
 					RestoreScenarioUnitsToProvince({ProvinceName = "Svarinshaug", FactionName = "Brising Clan", Heroes = {"Modsognir", "Durin"}})
@@ -337,7 +337,7 @@ local NidavellirEvents = {
 
 				GrandStrategyEventMap = true
 				GetMapInfo("maps/nidavellir/chaincolt-foothills.smp")
-				SetCurrentQuest("A Bargain is Struck")
+				SetCurrentQuest("a-bargain-is-struck")
 				RunMap("maps/nidavellir/chaincolt-foothills.smp")
 				GrandStrategyEventMap = false
 
@@ -375,7 +375,7 @@ local NidavellirEvents = {
 
 				GrandStrategyEventMap = true
 				GetMapInfo("maps/nidavellir/chaincolt-foothills.smp")
-				SetCurrentQuest("A Bargain is Struck")
+				SetCurrentQuest("a-bargain-is-struck")
 				RunMap("maps/nidavellir/chaincolt-foothills.smp")
 				GrandStrategyEventMap = false
 
@@ -412,7 +412,7 @@ local NidavellirEvents = {
 
 				GrandStrategyEventMap = true
 				GetMapInfo("maps/nidavellir/caverns-of-chaincolt.smp")
-				SetCurrentQuest("Closing the Gates")
+				SetCurrentQuest("closing-the-gates")
 				RunMap("maps/nidavellir/caverns-of-chaincolt.smp")
 				GrandStrategyEventMap = false
 
@@ -451,7 +451,7 @@ local NidavellirEvents = {
 
 				GrandStrategyEventMap = true
 				GetMapInfo("maps/nidavellir/caverns-of-chaincolt.smp")
-				SetCurrentQuest("Closing the Gates")
+				SetCurrentQuest("closing-the-gates")
 				RunMap("maps/nidavellir/caverns-of-chaincolt.smp")
 				GrandStrategyEventMap = false
 
@@ -492,7 +492,7 @@ local NidavellirEvents = {
 			if ("Norlund Clan" == GrandStrategyFaction.Name and wyr.preferences.AutomaticBattles == false) then
 				GrandStrategyEventMap = true
 				GetMapInfo("maps/nidavellir/northern-wastelands.smp")
-				SetCurrentQuest("Searching for the Runecrafter")
+				SetCurrentQuest("searching-for-the-runecrafter")
 				RunMap("maps/nidavellir/northern-wastelands.smp")
 				GrandStrategyEventMap = false
 
@@ -532,7 +532,7 @@ local NidavellirEvents = {
 			if ("Norlund Clan" == GrandStrategyFaction.Name and wyr.preferences.AutomaticBattles == false) then
 				GrandStrategyEventMap = true
 				GetMapInfo("maps/nidavellir/eastern-mines.smp")
-				SetCurrentQuest("Gathering Materials")
+				SetCurrentQuest("gathering-materials")
 				RunMap("maps/nidavellir/eastern-mines.smp")
 				GrandStrategyEventMap = false
 
@@ -573,7 +573,7 @@ local NidavellirEvents = {
 			if ("Norlund Clan" == GrandStrategyFaction.Name and wyr.preferences.AutomaticBattles == false) then
 				GrandStrategyEventMap = true
 				GetMapInfo("maps/nidavellir/shorbear-hills.smp")
-				SetCurrentQuest("Hills of the Shorbear Clan")
+				SetCurrentQuest("hills-of-the-shorbear-clan")
 				RunMap("maps/nidavellir/shorbear-hills.smp")
 				GrandStrategyEventMap = false
 
@@ -630,7 +630,7 @@ local NidavellirEvents = {
 				GameSettings.Presets[1].Type = PlayerComputer
 				GrandStrategyEventMap = true
 				GetMapInfo("maps/nidavellir/shorbear-hills.smp")
-				SetCurrentQuest("Hills of the Shorbear Clan")
+				SetCurrentQuest("hills-of-the-shorbear-clan")
 				RunMap("maps/nidavellir/shorbear-hills.smp")
 				GrandStrategyEventMap = false
 
@@ -663,7 +663,7 @@ local NidavellirEvents = {
 				GameSettings.Presets[2].Type = PlayerComputer
 				GrandStrategyEventMap = true
 				GetMapInfo("maps/nidavellir/shorbear-hills.smp")
-				SetCurrentQuest("Hills of the Shorbear Clan")
+				SetCurrentQuest("hills-of-the-shorbear-clan")
 				RunMap("maps/nidavellir/shorbear-hills.smp")
 				GrandStrategyEventMap = false
 
@@ -708,7 +708,7 @@ local NidavellirEvents = {
 			
 				GrandStrategyEventMap = true
 				GetMapInfo("maps/nidavellir/svafnirs-lair.smp")
-				SetCurrentQuest("The Wyrm")
+				SetCurrentQuest("the-wyrm")
 				RunMap("maps/nidavellir/svafnirs-lair.smp")
 				GrandStrategyEventMap = false
 
@@ -754,7 +754,7 @@ local NidavellirEvents = {
 				GrandStrategyEventMap = true
 				GameSettings.Presets[0].Type = PlayerComputer
 				GetMapInfo("maps/nidavellir/svafnirs-lair.smp")
-				SetCurrentQuest("The Wyrm")
+				SetCurrentQuest("the-wyrm")
 				RunMap("maps/nidavellir/svafnirs-lair.smp")
 				GrandStrategyEventMap = false
 
@@ -794,7 +794,7 @@ local NidavellirEvents = {
 			if ("Norlund Clan" == GrandStrategyFaction.Name and wyr.preferences.AutomaticBattles == false) then
 				GrandStrategyEventMap = true
 				GetMapInfo("maps/nidavellir/caverns-of-flame.smp")
-				SetCurrentQuest("Caverns of Flame")
+				SetCurrentQuest("caverns-of-flame")
 				RunMap("maps/nidavellir/caverns-of-flame.smp")
 				GrandStrategyEventMap = false
 
@@ -845,7 +845,7 @@ local NidavellirEvents = {
 				GrandStrategyEventMap = true
 				GameSettings.Presets[0].Type = PlayerComputer
 				GetMapInfo("maps/nidavellir/caverns-of-flame.smp")
-				SetCurrentQuest("Caverns of Flame")
+				SetCurrentQuest("caverns-of-flame")
 				RunMap("maps/nidavellir/caverns-of-flame.smp")
 				GrandStrategyEventMap = false
 

@@ -1,6 +1,6 @@
 -- Stratagus Map Presentation
 
-if (GetCurrentQuest() == "A Rocky Home") then
+if (GetCurrentQuest() == "a-rocky-home") then
 	DefinePlayerTypes("person")
 else
 	DefinePlayerTypes("person", "person")

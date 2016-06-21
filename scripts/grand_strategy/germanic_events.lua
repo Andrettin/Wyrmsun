@@ -114,7 +114,7 @@ local GermanicEvents = {
 				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Asa Tribe" and wyr.preferences.AutomaticBattles == false) then
 					GrandStrategyEventMap = true
 					GetMapInfo("maps/earth/tanais.smp")
-					SetCurrentQuest("On the Vanaquisl")
+					SetCurrentQuest("on-the-vanaquisl")
 					RunMap("maps/earth/tanais.smp")
 					GrandStrategyEventMap = false
 					if (GameResult == GameVictory) then
@@ -164,7 +164,7 @@ local GermanicEvents = {
 					GrandStrategyEventMap = true
 					GetMapInfo("maps/earth/tanais.smp")
 					GameSettings.Presets[0].Type = PlayerComputer
-					SetCurrentQuest("On the Vanaquisl")
+					SetCurrentQuest("on-the-vanaquisl")
 					RunMap("maps/earth/tanais.smp")
 					GrandStrategyEventMap = false
 					for i, unitName in ipairs(Units) do
@@ -216,7 +216,7 @@ local GermanicEvents = {
 				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "Asa Tribe" and wyr.preferences.AutomaticBattles == false) then
 					GrandStrategyEventMap = true
 					GetMapInfo("maps/earth/novgorod.smp")
-					SetCurrentQuest("Westward Migration")
+					SetCurrentQuest("westward-migration")
 					RunMap("maps/earth/novgorod.smp")
 					GrandStrategyEventMap = false
 					if (GameResult == GameVictory) then
@@ -327,7 +327,7 @@ local GermanicEvents = {
 					GrandStrategyEventMap = true
 					GetMapInfo("maps/earth/jutland.smp")
 					GameSettings.Presets[1].Type = PlayerComputer
-					SetCurrentQuest("Northwards to the Sea")
+					SetCurrentQuest("northwards-to-the-sea")
 					RunMap("maps/earth/jutland.smp")
 					GrandStrategyEventMap = false
 					if (GameResult == GameVictory) then
@@ -432,7 +432,7 @@ local GermanicEvents = {
 				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == EventFaction.Name and wyr.preferences.AutomaticBattles == false) then
 					GrandStrategyEventMap = true
 					GetMapInfo("maps/earth/malmo.smp")
-					SetCurrentQuest("Gylve's Realm")
+					SetCurrentQuest("gylves-realm")
 					RunMap("maps/earth/malmo.smp")
 					GrandStrategyEventMap = false
 					if (GameResult == GameVictory) then

@@ -34,11 +34,11 @@ if (LoadedGame == false) then
 			{-2, -2, -2, -2, -2, -2, -2, -2}
 		},
 		WorkerQuantity = 5,
-		NoTownHall = ((GrandStrategy and GrandStrategyBattleBaseBuilding == false) or GetCurrentQuest() == "Westward Migration"),
-		NoDeposits = ((GrandStrategy and GrandStrategyBattleBaseBuilding == false) or GetCurrentQuest() == "Westward Migration")
+		NoTownHall = ((GrandStrategy and GrandStrategyBattleBaseBuilding == false) or GetCurrentQuest() == "westward-migration"),
+		NoDeposits = ((GrandStrategy and GrandStrategyBattleBaseBuilding == false) or GetCurrentQuest() == "westward-migration")
 	})
 	
-	if (GetCurrentQuest() == "Westward Migration") then
+	if (GetCurrentQuest() == "westward-migration") then
 		SetAiType(1, "passive")
 	end
 end

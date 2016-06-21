@@ -1,6 +1,6 @@
 -- Stratagus Map Presentation
 
-if (GetCurrentQuest() == "The Home of the Boii") then
+if (GetCurrentQuest() == "the-home-of-the-boii") then
 	DefinePlayerTypes("person", "computer", "rescue-passive", "rescue-passive", "rescue-passive")
 elseif (GrandStrategy == false or GrandStrategyEventMap) then
 	DefinePlayerTypes("person", "computer")
