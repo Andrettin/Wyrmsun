@@ -1189,42 +1189,7 @@ DefineUnitType("unit-dwarven-miner", { -- this is here because the buildings nee
 	Trains = {"unit-dwarven-town-hall", "unit-dwarven-mushroom-farm", "unit-dwarven-barracks", "unit-dwarven-lumber-mill", "unit-dwarven-smithy", "unit-dwarven-yale-pen", "unit-dwarven-temple", "unit-dwarven-sentry-tower", "unit-dwarven-dock", "unit-gold-mine", "unit-silver-mine", "unit-copper-mine"}
 } )
 
-DefineUnitType("unit-brising-miner", {
-	Parent = "unit-dwarven-miner",
-	Civilization = "dwarf",
-	Faction = "Brising Clan",
-	Icon = "icon-brising-miner",
-	HitPoints = 40, -- +10 HP
-	Points = 35 -- +5 points
-} )
-
-DefineUnitType("unit-brising-militia", {
-	Parent = "unit-dwarven-militia",
-	Civilization = "dwarf",
-	Faction = "Brising Clan",
-	Icon = "icon-brising-militia",
-	DefaultEquipment = {
-		{"shield", "unit-brising-round-shield"}
-	},
-	HitPoints = 40, -- +10 HP
-	Points = 35, -- +5 points
-	AiDrops = {"unit-brising-round-shield"}
-} )
-
-DefineUnitType("unit-brising-smithy", {
-	Parent = "unit-dwarven-smithy",
-	Civilization = "dwarf",
-	Faction = "Brising Clan",
-	Image = {"file", "dlcs/brising_faction_flair/graphics/buildings/brising_smithy.png", "size", {96, 96}},
-	Shadow = {"file", "dlcs/brising_faction_flair/graphics/buildings/brising_smithy_shadow.png", "size", {96, 96}},
-	Icon = "icon-brising-smithy",
-	TimeEfficiencyBonus = 50, -- +50% Time Efficiency Bonus
-	AiDrops = {"unit-brising-round-shield"}
-} )
-
-DefineUnitType("unit-brising-miner", { -- this is here because the buildings need to be defined before being assigned to the miner's "Trains" array
-	Trains = {"unit-dwarven-town-hall", "unit-dwarven-mushroom-farm", "unit-dwarven-barracks", "unit-dwarven-lumber-mill", "unit-brising-smithy", "unit-dwarven-yale-pen", "unit-dwarven-temple", "unit-dwarven-sentry-tower", "unit-dwarven-dock", "unit-gold-mine", "unit-silver-mine", "unit-copper-mine"}
-} )
+Load("scripts/civilizations/dwarf/units_brising.lua")
 
 DefineUnitType("unit-dwarven-town-hall", {
 	Trains = {"unit-dwarven-miner", "unit-brising-miner"},
