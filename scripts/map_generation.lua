@@ -1409,8 +1409,9 @@ function CreateCreeps(player, creep_type, creep_number, min_x, max_x, min_y, max
 		local RandomX = 0
 		local RandomY = 0
 		local Count = 0
+		local WhileCount = 0
 		Count = creep_number
-		while (Count > 0) do
+		while (Count > 0 and WhileCount < creep_number * 100) do
 			RandomX = SyncRand(max_x - min_x + 1) + min_x
 			RandomY = SyncRand(max_y - min_y + 1) + min_y
 			if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false) then
@@ -1427,6 +1428,7 @@ function CreateCreeps(player, creep_type, creep_number, min_x, max_x, min_y, max
 					Count = Count - 1
 				end
 			end
+			WhileCount = WhileCount + 1
 		end
 	end
 end
@@ -1484,9 +1486,10 @@ function CreateWyrms(wyrm_number)
 	local RandomX = 0
 	local RandomY = 0
 	local Count = 0
+	local WhileCount = 0
 
 	Count = wyrm_number
-	while (Count > 0) do
+	while (Count > 0 and WhileCount < wyrm_number * 100) do
 		RandomX = SyncRand(Map.Info.MapWidth)
 		RandomY = SyncRand(Map.Info.MapHeight)
 		if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false) then
@@ -1500,6 +1503,7 @@ function CreateWyrms(wyrm_number)
 				Count = Count - 1
 			end
 		end
+		WhileCount = WhileCount + 1
 	end
 end
 
@@ -2695,7 +2699,8 @@ function FindAppropriateTileTypeSpawnPoint(tile_type)
 	local RandomX = 0
 	local RandomY = 0
 	local location_found = false
-	while (location_found == false) do
+	local WhileCount = 0
+	while (location_found == false and WhileCount < 10000) do
 		RandomX = SyncRand(Map.Info.MapWidth)
 		RandomY = SyncRand(Map.Info.MapHeight)
 		
@@ -2711,6 +2716,7 @@ function FindAppropriateTileTypeSpawnPoint(tile_type)
 				end
 			end
 		end
+		WhileCount = WhileCount + 1
 	end
 	return {RandomX, RandomY}
 
@@ -2720,7 +2726,8 @@ function FindAppropriatePlayerSpawnPoint(min_x, max_x, min_y, max_y)
 	local RandomX = 0
 	local RandomY = 0
 	local location_found = false
-	while (location_found == false) do
+	local WhileCount = 0
+	while (location_found == false and WhileCount < 10000) do
 		RandomX = SyncRand(max_x - min_x + 1) + min_x
 		RandomY = SyncRand(max_y - min_y + 1) + min_y
 		
@@ -2737,6 +2744,7 @@ function FindAppropriatePlayerSpawnPoint(min_x, max_x, min_y, max_y)
 				location_found = true
 			end
 		end
+		WhileCount = WhileCount + 1
 	end
 	return {RandomX, RandomY}
 end
@@ -3465,7 +3473,8 @@ end
 function MakeRandomPath(x1, y1, x2, y2, x3, y3, x4, y4, c, diagonals)
 	local dx
 	local dy
-	while ((x1 ~= x2) or (y1 ~= y2)) do
+	local WhileCount = 0
+	while (((x1 ~= x2) or (y1 ~= y2)) and WhileCount < 10000) do
 		SetRawTile(x1, y1, c)
 		if (dice(1, 3) == 1) then
 			dx = sign(x2 - x1)
@@ -3489,6 +3498,7 @@ function MakeRandomPath(x1, y1, x2, y2, x3, y3, x4, y4, c, diagonals)
 		y1 = y1 + dy
 		x1 = middle(x3, x1, x4)
 		y1 = middle(y3, y1, y4)
+		WhileCount = WhileCount + 1
 	end
 	SetRawTile(x2, y2, c)
 end
@@ -3861,14 +3871,17 @@ function CreateStartingBuilding(player, building_type)
 		height = 3
 	end
 	local building_built = false
-	while (building_built == false) do
+	local WhileCount = 0
+	while (building_built == false and WhileCount < 10000) do
 		local road_tile
 		local road_found = false
-		while (road_found == false) do
+		local SecondWhileCount = 0
+		while (road_found == false and SecondWhileCount < 10000) do
 			road_tile = {(Players[player].StartPos.x + (SyncRand(32) - 16)), (Players[player].StartPos.y + (SyncRand(32) - 16))}
 			if (RawTile(road_tile[1], road_tile[2]) == "Road") then
 				road_found = true
 			end
+			SecondWhileCount = SecondWhileCount + 1
 		end
 		RandomNumber = SyncRand(4) -- which direction the building will be created
 		local building_spawn_point
@@ -3905,6 +3918,7 @@ function CreateStartingBuilding(player, building_type)
 			end
 			building_built = true
 		end
+		WhileCount = WhileCount + 1
 	end
 end
 
