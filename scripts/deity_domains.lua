@@ -131,6 +131,9 @@ DefineDeityDomain("water", {
 	Name = "Water"
 })
 
+DefineDeityDomain("wealth", {
+	Name = "Wealth"
+})
 DefineDeityDomain("wind", {
 	Name = "Wind"
 })

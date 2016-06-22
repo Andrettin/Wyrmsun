@@ -139,6 +139,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added Goblin Shaman (unit graphics by b_o and icon by Jinn).
 - Added Teuton Cleric (unit graphics by b_o and Jinn and icon by Jinn).
 - As with Steelclads, dwarven Axefighters now also change the graphics of their weapons when the Great Axe upgrade is researched.
+- Priest units can now be trained at temples.
 
 -----------------------------------------------------------------------
 - 2.2.6

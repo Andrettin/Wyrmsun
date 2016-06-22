@@ -678,8 +678,7 @@ DefineUnitType("unit-teuton-temple", { Name = _("Temple"),
 	Image = {"file", "teuton/buildings/church.png", "size", {96, 96}},
 	Shadow = {"file", "teuton/buildings/church_shadow.png", "size", {96, 96}},
 	Icon = "icon-teuton-church",
---	Trains = {"unit-teuton-priest", "unit-potion-of-healing"},
-	Trains = {"unit-potion-of-healing"},
+	Trains = {"unit-teuton-priest", "unit-potion-of-healing"},
 	Sounds = {
 		"help", "basic-teuton-voices-help-town"
 	}

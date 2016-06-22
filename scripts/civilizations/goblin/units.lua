@@ -509,8 +509,7 @@ DefineUnitType("unit-goblin-temple", { Name = _("Temple"),
 	Image = {"file", "goblin/buildings/temple.png", "size", {96, 96}},
 	Shadow = {"file", "goblin/buildings/temple_shadow.png", "size", {96, 96}},
 	Icon = "icon-goblin-temple",
---	Trains = {"unit-goblin-shaman", "unit-potion-of-healing"},
-	Trains = {"unit-potion-of-healing"},
+	Trains = {"unit-goblin-shaman", "unit-potion-of-healing"},
 	Sounds = {
 		"help", "basic-goblin-voices-help-town"
 	}

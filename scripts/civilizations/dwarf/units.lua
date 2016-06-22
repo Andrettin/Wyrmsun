@@ -1127,8 +1127,7 @@ DefineUnitType("unit-dwarven-temple", { Name = _("Temple"),
 	Costs = {"time", 175, "gold", 900, "lumber", 1000, "stone", 500},
 	RepairCosts = {"gold", 1, "lumber", 1, "stone", 1},
 	FireResistance = 20,
---	Trains = {"unit-dwarven-witness", "unit-potion-of-healing"},
-	Trains = {"unit-potion-of-healing"},
+	Trains = {"unit-dwarven-witness", "unit-potion-of-healing"},
 	Sounds = {
 		"help", "basic-dwarf-voices-help-town"
 	}
