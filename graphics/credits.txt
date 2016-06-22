@@ -111,6 +111,7 @@ b_o:
 /graphics/human/units/human_left_arm.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 /graphics/human/units/human_left_arm_shield.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 /graphics/human/units/human_right_arm.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
+/graphics/human/units/human_right_hand.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 /graphics/human/units/human_shadow.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 /graphics/human/units/pants.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 /graphics/human/units/shoes.png (licensed under the GPL 2.0 and the CC-BY-SA 3.0)

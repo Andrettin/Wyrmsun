@@ -100,6 +100,7 @@ DefineUnitType("unit-germanic-warrior", { Name = _("Erala"), -- Erala = "Warrior
 		{"layer", "hair", "file", "human/units/blond_hair_warrior.png"},
 		{"layer", "left-arm", "file", "human/units/human_left_arm.png"},
 		{"layer", "right-arm", "file", "human/units/human_right_arm.png"},
+		{"layer", "right-hand", "file", "human/units/human_right_hand.png"},
 		{"layer", "clothing", "file", "germanic/units/coat_warrior.png"},
 		{"layer", "clothing-left-arm", "file", "germanic/units/coat_left_arm.png"},
 		{"layer", "clothing-right-arm", "file", "germanic/units/coat_right_arm.png"},
