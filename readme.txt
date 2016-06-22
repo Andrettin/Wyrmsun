@@ -80,6 +80,8 @@ https://github.com/Andrettin/Wyrmsun
 - Derro Thugs can now be created as custom heroes for (usable for Nidavellir quests).
 - Heroes now have a "Knowledge (Magic)" stat (seen in the unit's popup when hovering over its portrait when it is selected), used for identifying magic items. For every five Knowledge (Magic) levels the unit also gains one maximum mana.
 - Heroes now have a "Knowledge (Warfare)" stat (seen in the unit's popup when hovering over its portrait when it is selected). For every five Knowledge (Warfare) levels the unit gains one maximum HP.
+- The effect of the "Suebi Allegiance" and other similar scroll effects is now described when hovering over the scroll in the inventory.
+- The effect of the "Detachment" scroll effect is now described when hovering over the scroll in the inventory.
 
 * Items
 - Added "Scroll of Sagan Allegiance", which transforms a gnomish unit (including gnomish custom heroes) into their faction equivalent for the Sagan Tribe.
