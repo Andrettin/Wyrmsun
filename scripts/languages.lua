@@ -98,6 +98,10 @@ DefineLanguage("crimean-gothic", {
 	Name = "Crimean Gothic"
 })
 
+DefineLanguage("czech", {
+	Name = "Czech"
+})
+
 DefineLanguage("danish", {
 	Name = "Danish"
 })
@@ -313,6 +317,10 @@ DefineLanguage("northwest-germanic", {
 
 DefineLanguage("norwegian", {
 	Name = "Norwegian"
+})
+
+DefineLanguage("old-bulgarian", {
+	Name = "Old Bulgarian"
 })
 
 DefineLanguage("old-church-slavonic", {
@@ -556,8 +564,10 @@ Load("scripts/language_english.lua") -- put it here since it uses words of Old F
 
 -- Slavic languages (branch of the Indo-European family)
 Load("scripts/language_old_church_slavonic.lua")
+Load("scripts/language_old_bulgarian.lua")
 Load("scripts/language_russian.lua")
 Load("scripts/language_ukrainian.lua")
+Load("scripts/language_czech.lua")
 
 -- Non-Indo-European languages
 Load("scripts/language_finnish.lua")

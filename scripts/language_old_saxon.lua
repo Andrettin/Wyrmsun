@@ -686,6 +686,12 @@ DefineLanguageWord("Sêu", { -- source also gives the alternative form "sêo"; S
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Sibbia", { -- Source: H. Munro Chadwick, "The Oak and the Thunder-God", 1900, p. 25.
+	Language = "old-saxon",
+	Type = "noun",
+	Meanings = {"Relationship"}
+})
+
 DefineLanguageWord("Sigi", { -- source gives "sigi- (drohtin)"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 214.
 	Language = "old-saxon",
 	Type = "noun", -- correct?

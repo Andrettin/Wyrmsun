@@ -1366,6 +1366,13 @@ DefineLanguageWord("Síða", { -- Source: Alaric Hall, "The Meanings of Elf and 
 	Meanings = {"Work Magic"}
 })
 
+DefineLanguageWord("Sifiar", { -- Source: H. Munro Chadwick, "The Oak and the Thunder-God", 1900, p. 25.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Relationship"},
+	GrammaticalNumber = "plural" -- the word is inherently plural
+})
+
 DefineLanguageWord("Sigr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 214.
 	Language = "old-norse",
 	Type = "noun",

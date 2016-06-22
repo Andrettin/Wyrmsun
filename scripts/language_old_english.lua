@@ -120,6 +120,12 @@ DefineLanguageWord("Bearn", { -- Source: Richard M. Runge, "The Phonetic Realiza
 	Meanings = {"Child"}
 })
 
+DefineLanguageWord("Bearu", { -- Source: H. Munro Chadwick, "The Oak and the Thunder-God", 1900, p. 30.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Grove"}
+})
+
 DefineLanguageWord("Bece", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 133.
 	Language = "old-english",
 	Type = "noun",
@@ -540,6 +546,12 @@ DefineLanguageWord("Fīf", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Type = "numeral",
 	Number = 5,
 	DerivesFrom = {"proto-germanic", "numeral", "Fimfe"}
+})
+
+DefineLanguageWord("Firgen", { -- Source: H. Munro Chadwick, "The Oak and the Thunder-God", 1900, p. 25.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Forest"}
 })
 
 DefineLanguageWord("Fisc", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 241.
@@ -1489,6 +1501,12 @@ DefineLanguageWord("Sēon", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	}
 })
 
+DefineLanguageWord("Sib", { -- Source: H. Munro Chadwick, "The Oak and the Thunder-God", 1900, p. 25.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Relationship", "Friendship", "Peace"}
+})
+
 DefineLanguageWord("Sige", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 214.
 	Language = "old-english",
 	Type = "noun",
@@ -1701,6 +1719,12 @@ DefineLanguageWord("Þorp", { -- source also gives the alternative form "Þrop";
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Þrȳþ", { -- Source: H. Munro Chadwick, "The Oak and the Thunder-God", 1900, p. 25.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Strength"}
+})
+
 DefineLanguageWord("Þunorrad", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 169.
 	Language = "old-english",
 	Type = "noun",
@@ -1793,6 +1817,12 @@ DefineLanguageWord("Wæpnedmann", { -- Source: Alaric Hall, "The Meanings of Elf
 	Language = "old-english",
 	Type = "noun",
 	Meanings = {"Armed Person"}
+})
+
+DefineLanguageWord("Wald", { -- Source: H. Munro Chadwick, "The Oak and the Thunder-God", 1900, p. 31.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Forest"}
 })
 
 DefineLanguageWord("Wē", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.

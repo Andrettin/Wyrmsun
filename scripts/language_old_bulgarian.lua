@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2015-2016 by Andrettin
+--      (c) Copyright 2016 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -25,50 +25,8 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineDeity("perun", { -- Slavic thunder-god; Source: "Germans, Avars and Slavs", p. 125; Source: H. Munro Chadwick, "The Oak and the Thunder-God", 1900, p. 27.
-	Name = "Perun",
-	Civilizations = {"slav"},
-	Gender = "male",
-	Major = true,
-	Domains = {"lightning"}
-})
-
-DefineDeity("svarog", { -- Slavic light-god; Source: "Germans, Avars and Slavs", p. 125
-	Name = "Svarog",
-	Civilizations = {"slav"},
-	Gender = "male",
-	Major = true,
-	Domains = {"light"}
-})
-
-DefineDeity("deva", { -- Slavic season goddess; Source: "Germans, Avars and Slavs", p. 125
-	Name = "Deva",
-	Civilizations = {"slav"},
-	Gender = "female"
-})
-
-DefineDeity("lada", { -- Slavic season goddess; Source: "Germans, Avars and Slavs", p. 125
-	Name = "Lada",
-	Civilizations = {"slav"},
-	Gender = "female"
-})
-
-DefineDeity("ogen", { -- Source: "Germans, Avars and Slavs", p. 125
-	Name = "Ogen",
-	Civilizations = {"slav"},
-	Domains = {"fire"}
-	-- child of Svarog
-})
-
-DefineDeity("slnce", { -- the Sun; Source: "Germans, Avars and Slavs", p. 125
-	Name = "Slnce",
-	Civilizations = {"slav"},
-	Domains = {"sun"}
-	-- child of Svarog
-})
-
-DefineDeity("vesna", { -- Slavic season goddess; Source: "Germans, Avars and Slavs", p. 125
-	Name = "Vesna",
-	Civilizations = {"slav"},
-	Gender = "female"
+DefineLanguageWord("Kamy", { -- Source: H. Munro Chadwick, "The Oak and the Thunder-God", 1900, p. 24.
+	Language = "old-bulgarian",
+	Type = "noun",
+	Meanings = {"Stone"}
 })

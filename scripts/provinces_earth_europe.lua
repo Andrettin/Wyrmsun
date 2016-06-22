@@ -3702,7 +3702,7 @@ DefineProvince("Lithuania", {
 	SettlementTerrain = "Plains",
 	Coastal = true,
 	Claims = {
-		"slav", "Aestui Tribe"
+		"baltic", "Aestui Tribe"
 	},
 	Regions = {"Europe", "West and Central Europe"}
 })

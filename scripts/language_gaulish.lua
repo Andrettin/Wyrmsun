@@ -57,6 +57,12 @@ DefineLanguageWord("Longo", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Meanings = {"Long"}
 })
 
+DefineLanguageWord("Nemeton", { -- Source: H. Munro Chadwick, "The Oak and the Thunder-God", 1900, p. 34.
+	Language = "gaulish",
+	Type = "noun",
+	Meanings = {"Temple", "Grove"}
+})
+
 DefineLanguageWord("Ritu", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 121.
 	Language = "gaulish",
 	Type = "noun",

@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2015 by Andrettin
+--      (c) Copyright 2015-2016 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -84,4 +84,10 @@ DefineLanguageWord("Rhŷd", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Language = "welsh",
 	Type = "noun",
 	Meanings = {"Ford"} -- source gives the German "Furt" as the meaning
+})
+
+DefineLanguageWord("Taran", { -- Source: H. Munro Chadwick, "The Oak and the Thunder-God", 1900, p. 26.
+	Language = "welsh",
+	Type = "noun",
+	Meanings = {"Thunder"}
 })

@@ -143,6 +143,11 @@ DefineLanguageWord("Pẽkus", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Meanings = {}
 })
 
+DefineLanguageWord("Perkúnas", { -- Source: H. Munro Chadwick, "The Oak and the Thunder-God", 1900, p. 26.
+	Language = "lithuanian",
+	Type = "noun",
+	Meanings = {"Thunder"}
+})
 DefineLanguageWord("Pū́lias", { -- this is the plural; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "lithuanian",
 	Type = "noun",

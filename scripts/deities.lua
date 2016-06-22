@@ -26,6 +26,8 @@
 --
 
 Load("scripts/deities_aesir.lua")
+Load("scripts/deities_baltic.lua")
+Load("scripts/deities_celtic.lua")
 Load("scripts/deities_olympian.lua")
 Load("scripts/deities_slavic.lua")
 Load("scripts/deities_titan.lua")
@@ -77,6 +79,6 @@ DefineDeity("mzivult", { -- by Jesse Crider
 	Domains = {"tyranny", "earth", "darkness"},
 	Gender = "male",
 	Major = true,
---	Description = "Known as the Obsidian Tyrant, Mzivult is the chief Derro deity. One of Mzivult's epithets is that of Herfiligreikrodd (\"wretched tree voice\" in the Derro language), as Mzivult embodies the corrupted root of the interplanar tree Yggdrasil which lies on Helheim. His influence is sometimes strong enough to make branches of Yggdrasil bear his eye-shaped fruits, known as Mzivult's Eyes. It is said those who eat them obtain tremendous eloquence, being able to sway masses by speaking to their innermost fears and desires."
+--	Description = "Known as the Obsidian Tyrant, Mzivult is the chief Derro deity. One of Mzivult's epithets is that of Herfiligreikrodd (\"wretched tree voice\" in the Derro language), as Mzivult embodies the corrupted root of the interplanar tree Yggdrasil which lies on Helheim. His influence is sometimes strong enough to make branches of Yggdrasil bear his eye-shaped fruits, known as Mzivult's Eyes. It is said those who eat them obtain tremendous eloquence, being able to sway masses by speaking to their innermost fears and desires. In archaic ages, Mzivult revealed himself to the Derro magisters, imparting them with his knowledge of dark magic."
 })
 

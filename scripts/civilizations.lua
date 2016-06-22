@@ -656,6 +656,16 @@ DefineCivilization("norse", {
 	Description = _("During the Iron Age, Germanic peoples split off into three different groups - the North Germanics (like the Danes and Swedes), the East Germanics (like the Goths and Vandals) and the West Germanics (like the Suebi, Saxons and Franks). While late antiquity saw intense migration of Germanic peoples, the Danes and Swedes remained largely in Scandinavia, well beyond the developments of the Mediterranean.")
 })
 
+DefineCivilization("baltic", {
+	Display = "Baltic",
+	Visible = true,
+	Species = "human",
+--	Language = "lithuanian",
+	ParentCivilization = "norse",
+	Adjective = "Baltic",
+	Playable = false
+})
+
 DefineCivilization("uralic", {
 	Display = "Uralic",
 	Visible = true,

@@ -362,6 +362,12 @@ DefineLanguageWord("Faíhu", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	DerivesFrom = {"proto-germanic", "noun", "Fehu"}
 })
 
+DefineLanguageWord("Fairguni", { -- Source: H. Munro Chadwick, "The Oak and the Thunder-God", 1900, p. 25.
+	Language = "gothic",
+	Type = "noun",
+	Meanings = {"Mountain"}
+})
+
 DefineLanguageWord("Filu", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.2.
 	Language = "gothic",
 	Type = "adjective", -- correct? inferred from the meaning
@@ -983,6 +989,12 @@ DefineLanguageWord("Saúrgan", { -- Source: August Fick and Alf Torp, "Wortschat
 	Type = "verb",
 	Meanings = {"Worry"}, -- source gives the German "sorgen" as the meaning
 	DerivesFrom = {"proto-germanic", "verb", "Surgên"}
+})
+
+DefineLanguageWord("Sibja", { -- Source: H. Munro Chadwick, "The Oak and the Thunder-God", 1900, p. 25.
+	Language = "gothic",
+	Type = "noun",
+	Meanings = {"Relationship"}
 })
 
 DefineLanguageWord("Sibun", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.

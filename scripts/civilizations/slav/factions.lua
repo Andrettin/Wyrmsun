@@ -25,13 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineFaction("Aestui Tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-	Civilization = "slav", -- actually they were apparently Baltic (this needs to be confirmed), but let's make them Slavic to not have too many NPC civilizations in the game
-	Type = "tribe",
---	Language = "lithuanian",
-	Colors = {"green"}
-})
-
 DefineFaction("Budini Tribe", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	Civilization = "slav", -- accurate?
 	Type = "tribe",

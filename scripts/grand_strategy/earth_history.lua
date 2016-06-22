@@ -710,7 +710,7 @@ if (GrandStrategyYear >= -264) then
 	SetProvinceCivilization("Posen", "goth")
 	AddProvinceClaim("Posen", "goth", "Burgundian Tribe")	
 	
-	SetProvinceOwner("Lithuania", "slav", "Aestui Tribe")
+	SetProvinceOwner("Lithuania", "baltic", "Aestui Tribe")
 	SetProvinceCivilization("Lithuania", "slav")
 end
 

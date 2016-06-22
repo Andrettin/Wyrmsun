@@ -1348,6 +1348,12 @@ DefineLanguageWord("Silabar", { -- source also gives the alternative forms "Sila
 	Gender = "neuter"
 })
 
+DefineLanguageWord("Sippa", { -- Source: H. Munro Chadwick, "The Oak and the Thunder-God", 1900, p. 25.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Relationship", "Friendship", "Peace"}
+})
+
 DefineLanguageWord("Skatewen", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
 	Language = "old-high-german",
 	Type = "verb",
@@ -1592,6 +1598,12 @@ DefineLanguageWord("Urlaga", { -- Source: Sean Crist, "An Analysis of *z loss in
 	Type = "noun",
 	Meanings = {"Fate"},
 	Gender = "feminine"
+})
+
+DefineLanguageWord("Wald", { -- Source: H. Munro Chadwick, "The Oak and the Thunder-God", 1900, p. 31.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Forest"}
 })
 
 DefineLanguageWord("Weg", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.

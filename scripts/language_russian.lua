@@ -36,3 +36,9 @@ DefineLanguageWord("Mozga", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Type = "noun",
 	Meanings = {"Blood"}
 })
+
+DefineLanguageWord("Perun", { -- Source: H. Munro Chadwick, "The Oak and the Thunder-God", 1900, p. 27.
+	Language = "russian",
+	Type = "noun",
+	Meanings = {"Thunderbolt"}
+})

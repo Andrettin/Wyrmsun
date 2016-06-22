@@ -25,6 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+Load("scripts/civilizations/baltic/factions.lua")
 Load("scripts/civilizations/basque/factions.lua")
 Load("scripts/civilizations/celt/factions.lua")
 Load("scripts/civilizations/dwarf/factions.lua")
