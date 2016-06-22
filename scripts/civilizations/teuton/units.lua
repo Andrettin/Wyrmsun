@@ -560,7 +560,7 @@ DefineUnitType("unit-teuton-farm", { Name = _("Farm"),
 	}
 } )
 
-DefineUnitType("unit-teuton-barracks", { Name = _("Barracks"),
+DefineUnitType("unit-teuton-barracks", {
 	Parent = "unit-template-barracks",
 	Civilization = "teuton",
 	Description = _("Though they have always been fierce, as ages passed Teuton armies became more and more disciplined. In these structures their soldiers train for coming battles with their foes."),
@@ -617,7 +617,7 @@ DefineUnitType("unit-teuton-lumber-mill", { Name = _("Lumber Mill"),
 	}
 } )
 
-DefineUnitType("unit-teuton-smithy", { Name = _("Smithy"),
+DefineUnitType("unit-teuton-smithy", {
 	Parent = "unit-template-smithy",
 	Civilization = "teuton",
 	Description = _("It is in these smithies that teuton craftsmen prepare and seek to continuously improve the arms warriors will wield into battle."),

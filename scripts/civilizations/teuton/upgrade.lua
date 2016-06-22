@@ -163,19 +163,21 @@ DefineModifier("upgrade-teuton-catapult-projectile-2",
 
 DefineModifier("upgrade-teuton-iron-tipped-wood-plow",
 	{"Supply", 1},
-	{"apply-to", "unit-teuton-farm"}
+	{"apply-to", "unit-teuton-farm"}, {"apply-to", "unit-latin-farm"}
 )
 
 DefineModifier("upgrade-teuton-masonry",
 	{"HitPoints", 20, "Percent"},
 	{"Armor", 5},
 	{"apply-to", "unit-teuton-town-hall"}, {"apply-to", "unit-teuton-stronghold"},
-	{"apply-to", "unit-latin-town-hall"},
 	{"apply-to", "unit-teuton-farm"}, {"apply-to", "unit-teuton-barracks"},
 	{"apply-to", "unit-teuton-lumber-mill"}, {"apply-to", "unit-teuton-smithy"},
 	{"apply-to", "unit-teuton-stables"}, {"apply-to", "unit-teuton-temple"},
 	{"apply-to", "unit-teuton-watch-tower"}, {"apply-to", "unit-teuton-guard-tower"},
-	{"apply-to", "unit-teuton-dock"}
+	{"apply-to", "unit-teuton-dock"},
+	{"apply-to", "unit-latin-town-hall"},
+	{"apply-to", "unit-latin-farm"}, {"apply-to", "unit-latin-barracks"},
+	{"apply-to", "unit-latin-smithy"}
 )
 
 DefineModifier("upgrade-teuton-coinage",
@@ -187,12 +189,14 @@ DefineModifier("upgrade-teuton-coinage",
 DefineModifier("upgrade-teuton-writing",
 	{"TimeEfficiencyBonus", 10},
 	{"apply-to", "unit-teuton-town-hall"}, {"apply-to", "unit-teuton-stronghold"},
-	{"apply-to", "unit-latin-town-hall"},
 	{"apply-to", "unit-teuton-farm"}, {"apply-to", "unit-teuton-barracks"},
 	{"apply-to", "unit-teuton-lumber-mill"}, {"apply-to", "unit-teuton-smithy"},
 --	{"apply-to", "unit-teuton-stables"}, {"apply-to", "unit-teuton-temple"},
 	{"apply-to", "unit-teuton-watch-tower"}, {"apply-to", "unit-teuton-guard-tower"},
-	{"apply-to", "unit-teuton-dock"}
+	{"apply-to", "unit-teuton-dock"},
+	{"apply-to", "unit-latin-town-hall"},
+	{"apply-to", "unit-latin-farm"}, {"apply-to", "unit-latin-barracks"},
+	{"apply-to", "unit-latin-smithy"}
 )
 
 DefineModifier("upgrade-teuton-alchemy",
@@ -254,7 +258,7 @@ DefineDependency("unit-teuton-guard-tower",
 )
 
 DefineDependency("unit-teuton-catapult",
-	{"unit-teuton-smithy", "unit-teuton-lumber-mill"}
+	{"unit-teuton-smithy", "unit-teuton-lumber-mill"}, "or", {"unit-latin-smithy", "unit-teuton-lumber-mill"}
 )
 
 DefineDependency("upgrade-teuton-spatha",
@@ -290,11 +294,11 @@ DefineDependency("upgrade-teuton-iron-tipped-wood-plow",
 )
 
 DefineDependency("unit-teuton-stronghold",
-	{"unit-teuton-barracks", "upgrade-teuton-masonry"}
+	{"unit-teuton-barracks", "upgrade-teuton-masonry"}, "or", {"unit-latin-barracks", "upgrade-teuton-masonry"}
 )
 
 DefineDependency("upgrade-teuton-coinage",
-	{"unit-teuton-smithy"}
+	{"unit-teuton-smithy"}, "or", {"unit-latin-smithy"}
 )
 
 DefineDependency("upgrade-teuton-alchemy",
@@ -326,7 +330,7 @@ DefineDependency("unit-frank-spearman",
 )
 
 DefineDependency("unit-teuton-ritter",
-	{"unit-teuton-smithy", "unit-teuton-stables", "upgrade-frank-tribe-faction", 0}
+	{"unit-teuton-smithy", "unit-teuton-stables", "upgrade-frank-tribe-faction", 0}, "or", {"unit-latin-smithy", "unit-teuton-stables"}
 )
 
 DefineDependency("unit-frank-horseman",

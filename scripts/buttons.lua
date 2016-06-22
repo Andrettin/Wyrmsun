@@ -91,6 +91,7 @@ DefineButton( { Pos = 13, Level = 0, Icon = "icon-rally-point",
 	Key = "r", Hint = _("Set ~!Rally Point"), Popup = "popup-commands",
 	ForUnit = {
 		"unit-latin-town-hall",
+		"unit-latin-barracks",
 		"unit-germanic-town-hall",
 		"unit-germanic-barracks",
 		"unit-teuton-town-hall", "unit-teuton-stronghold",

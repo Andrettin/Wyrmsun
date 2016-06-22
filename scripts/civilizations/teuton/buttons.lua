@@ -108,7 +108,7 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-teuton-spatha",
 	Allowed = "check-single-research",
 	Key = "p", Hint = _("Research S~!patha"), Popup = "popup-research",
 	Description = "+2 Damage for Kriegers and Ritters.",
-	ForUnit = {"unit-teuton-smithy"}
+	ForUnit = {"unit-teuton-smithy", "unit-latin-smithy"}
 } )
 
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-frankish-spatha",
@@ -124,7 +124,7 @@ DefineButton( { Pos = 2, Level = 0, Icon = "icon-teuton-iron-shield",
 	Allowed = "check-single-research",
 	Key = "s", Hint = _("Research Iron ~!Shield"), Popup = "popup-research",
 	Description = "+2 Armor for Kriegers, Speerkampfers and Ritters.",
-	ForUnit = {"unit-teuton-smithy"}
+	ForUnit = {"unit-teuton-smithy", "unit-latin-smithy"}
 } )
 
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-catapult-projectile-2",
@@ -132,7 +132,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-catapult-projectile-2",
 	Allowed = "check-single-research",
 	Key = "c", Hint = _("Research Granite ~!Catapult Projectile"), Popup = "popup-research",
 	Description = "+15 Damage for Catapults.",
-	ForUnit = {"unit-teuton-smithy"}
+	ForUnit = {"unit-teuton-smithy", "unit-latin-smithy"}
 } )
 
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-catapult-projectile-3",
@@ -140,7 +140,7 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-catapult-projectile-3",
 	Allowed = "check-single-research",
 	Key = "c", Hint = _("Research Metal ~!Catapult Projectile"), Popup = "popup-research",
 	Description = "+15 Damage for Catapults.",
-	ForUnit = {"unit-teuton-smithy"}
+	ForUnit = {"unit-teuton-smithy", "unit-latin-smithy"}
 } )
 
 DefineButton( { Pos = 1, Level = 0, Icon = "icon-pike",

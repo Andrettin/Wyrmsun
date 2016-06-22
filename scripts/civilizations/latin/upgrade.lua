@@ -40,11 +40,19 @@ DefineModifier("upgrade-latin-civilization",
 )
 
 DefineModifier("upgrade-latin-civilization",
-	{"apply-to", "unit-germanic-farm"}, {"convert-to", "unit-teuton-farm"}
+	{"apply-to", "unit-germanic-farm"}, {"convert-to", "unit-latin-farm"}
 )
 
 DefineModifier("upgrade-latin-civilization",
-	{"apply-to", "unit-germanic-barracks"}, {"convert-to", "unit-teuton-barracks"}
+	{"apply-to", "unit-teuton-farm"}, {"convert-to", "unit-latin-farm"}
+)
+
+DefineModifier("upgrade-latin-civilization",
+	{"apply-to", "unit-germanic-barracks"}, {"convert-to", "unit-latin-barracks"}
+)
+
+DefineModifier("upgrade-latin-civilization",
+	{"apply-to", "unit-teuton-barracks"}, {"convert-to", "unit-latin-barracks"}
 )
 
 DefineModifier("upgrade-latin-civilization",
@@ -52,7 +60,11 @@ DefineModifier("upgrade-latin-civilization",
 )
 
 DefineModifier("upgrade-latin-civilization",
-	{"apply-to", "unit-germanic-smithy"}, {"convert-to", "unit-teuton-smithy"}
+	{"apply-to", "unit-germanic-smithy"}, {"convert-to", "unit-latin-smithy"}
+)
+
+DefineModifier("upgrade-latin-civilization",
+	{"apply-to", "unit-teuton-smithy"}, {"convert-to", "unit-latin-smithy"}
 )
 
 DefineModifier("upgrade-latin-civilization",
@@ -72,5 +84,17 @@ DefineModifier("upgrade-latin-civilization",
 )
 
 DefineDependency("unit-latin-town-hall",
+	{"upgrade-latin-civilization"}
+)
+
+DefineDependency("unit-latin-farm",
+	{"upgrade-latin-civilization"}
+)
+
+DefineDependency("unit-latin-barracks",
+	{"upgrade-latin-civilization"}
+)
+
+DefineDependency("unit-latin-smithy",
 	{"upgrade-latin-civilization"}
 )

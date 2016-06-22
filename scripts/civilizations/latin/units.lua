@@ -31,10 +31,11 @@
 --	NOTE: Save can generate this table.
 --
 
-DefineUnitType("unit-latin-town-hall", { Name = _("Forum"),
+DefineUnitType("unit-latin-town-hall", {
+	Name = _("Forum"),
 	Parent = "unit-template-town-hall",
 	Civilization = "latin",
-	Description = _("The forum was the main political gathering place in Latin communities."),
+	Description = _("The forum is the main political gathering place in Latin communities."),
 	Image = {"file", "latin/buildings/forum.png", "size", {128, 128}},
 	Shadow = {"file", "latin/buildings/forum_shadow.png", "size", {128, 128}},
 	Icon = "icon-latin-forum",
@@ -43,6 +44,48 @@ DefineUnitType("unit-latin-town-hall", { Name = _("Forum"),
 	ButtonHint = _("Build Foru~!m"),
 	ButtonKey = "m",
 	AiDrops = {"unit-boots"},
+	DropAffixes = {"upgrade-item-prefix-flaming", "upgrade-item-prefix-quenching", "upgrade-item-prefix-storm", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-lightning", "upgrade-item-suffix-of-the-serpent", "upgrade-item-suffix-of-the-snail", "upgrade-item-suffix-of-trickery"},
+	Sounds = {
+--		"help", "basic-germanic-voices-help-town"
+	}
+} )
+
+DefineUnitType("unit-latin-farm", {
+	Parent = "unit-template-farm",
+	Civilization = "latin",
+	Description = _("Farms are essential for supporting a settlement's population."),
+	Image = {"file", "latin/buildings/farm.png", "size", {64, 64}},
+	Shadow = {"file", "latin/buildings/farm_shadow.png", "size", {64, 64}},
+	Icon = "icon-latin-farm",
+	Sounds = {
+--		"help", "basic-germanic-voices-help-town",
+	}
+} )
+
+DefineUnitType("unit-latin-barracks", {
+	Parent = "unit-template-barracks",
+	Civilization = "latin",
+	Description = _("The Latin barracks is the training place for their formidable legionary troops."),
+	Image = {"file", "latin/buildings/barracks.png", "size", {96, 96}},
+	Shadow = {"file", "latin/buildings/barracks_shadow.png", "size", {96, 96}},
+	Icon = "icon-latin-barracks",
+	Trains = {"unit-teuton-swordsman", "unit-teuton-spearman", "unit-teuton-archer", "unit-teuton-ritter", "unit-teuton-catapult"},
+	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-boots", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows"},
+	DropAffixes = {"upgrade-item-prefix-flaming", "upgrade-item-prefix-quenching", "upgrade-item-prefix-storm", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-lightning", "upgrade-item-suffix-of-the-serpent", "upgrade-item-suffix-of-the-snail", "upgrade-item-suffix-of-trickery"},
+	Sounds = {
+--		"help", "basic-germanic-voices-help-town"
+	}
+} )
+
+DefineUnitType("unit-latin-smithy", {
+	Parent = "unit-template-smithy",
+	Civilization = "latin",
+	Description = _("Latin smithies provide the javelins, swords and other equipment that legionaries require in battle."),
+	Image = {"file", "latin/buildings/smithy.png", "size", {96, 96}},
+	Shadow = {"file", "latin/buildings/smithy_shadow.png", "size", {96, 96}},
+	Icon = "icon-latin-smithy",
+	TechnologyPointCost = 1,
+	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-spatha", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield"},
 	DropAffixes = {"upgrade-item-prefix-flaming", "upgrade-item-prefix-quenching", "upgrade-item-prefix-storm", "upgrade-item-suffix-of-extinguishment", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-lightning", "upgrade-item-suffix-of-the-serpent", "upgrade-item-suffix-of-the-snail", "upgrade-item-suffix-of-trickery"},
 	Sounds = {
 --		"help", "basic-germanic-voices-help-town"

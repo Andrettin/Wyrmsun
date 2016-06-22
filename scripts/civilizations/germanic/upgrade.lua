@@ -109,7 +109,7 @@ DefineModifier("upgrade-germanic-barbed-arrow",
 
 DefineModifier("upgrade-germanic-wood-plow",
 	{"Supply", 1},
-	{"apply-to", "unit-germanic-farm"}, {"apply-to", "unit-teuton-farm"}
+	{"apply-to", "unit-germanic-farm"}, {"apply-to", "unit-teuton-farm"}, {"apply-to", "unit-latin-farm"}
 )
 
 DefineModifier("upgrade-teuton-civilization",

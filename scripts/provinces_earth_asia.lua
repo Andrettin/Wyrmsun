@@ -31,9 +31,9 @@ DefineProvince("Anatolia", {
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
 	HistoricalSettlementBuildings = {
-		161, "unit-teuton-barracks", true, -- Legionary base present in Satala in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
-		161, "unit-teuton-barracks", true, -- Legionary base present in Melitene in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
-		161, "unit-teuton-barracks", true -- Legionary base present in Zeugma in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, "unit-latin-barracks", true, -- Legionary base present in Satala in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, "unit-latin-barracks", true, -- Legionary base present in Melitene in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, "unit-latin-barracks", true -- Legionary base present in Zeugma in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	Regions = {"Asia"}
 })
@@ -140,7 +140,7 @@ DefineProvince("Palestine", {
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains",
 	HistoricalSettlementBuildings = {
-		161, "unit-teuton-barracks", true -- Legionary base present in Hierosolyma in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, "unit-latin-barracks", true -- Legionary base present in Hierosolyma in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	Regions = {"Asia"}
 })
@@ -166,7 +166,7 @@ DefineProvince("Syria", {
 		161, "persian", "Parthia", -- in 161 the Parthians invaded Syria and afterwards defeated the armies stationed there; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	HistoricalSettlementBuildings = {
-		161, "unit-teuton-barracks", true -- Legionary base present in Bostra in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, "unit-latin-barracks", true -- Legionary base present in Bostra in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	Regions = {"Asia"}
 })

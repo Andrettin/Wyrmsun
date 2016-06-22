@@ -30,3 +30,21 @@ DefineButton( { Pos = 1, Level = 1, Icon = "icon-latin-forum",
 	Key = "m", Hint = _("Build Foru~!m"),
 	ForUnit = {"unit-teuton-worker"}
 } )
+
+DefineButton( { Pos = 2, Level = 1, Icon = "icon-latin-farm",
+	Action = "build", Value = "unit-latin-farm", Popup = "popup-building",
+	Key = "f", Hint = _("Build ~!Farm"),
+	ForUnit = {"unit-teuton-worker"}
+} )
+
+DefineButton( { Pos = 3, Level = 1, Icon = "icon-latin-barracks",
+	Action = "build", Value = "unit-latin-barracks", Popup = "popup-building",
+	Key = "b", Hint = _("Build ~!Barracks"),
+	ForUnit = {"unit-teuton-worker"}
+} )
+
+DefineButton( { Pos = 5, Level = 1, Icon = "icon-latin-smithy",
+	Action = "build", Value = "unit-latin-smithy", Popup = "popup-building",
+	Key = "s", Hint = _("Build ~!Smithy"),
+	ForUnit = {"unit-teuton-worker"}
+} )

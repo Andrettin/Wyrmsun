@@ -28,7 +28,7 @@
 UnitTypeFiles = {}
 
 Units = {
-	"unit-latin-town-hall",
+	"unit-latin-town-hall", "unit-latin-farm", "unit-latin-barracks", "unit-latin-smithy",
 	"upgrade-latin-civilization",
 	"unit-germanic-worker", "unit-germanic-warrior", "unit-germanic-spearman", "unit-germanic-archer",
 	"unit-germanic-town-hall", "unit-germanic-farm", "unit-germanic-barracks",
@@ -4028,7 +4028,8 @@ DefineUnitType("unit-template-transport-ship", { Name = _("Transport"),
 	}
 })
 
-DefineUnitType("unit-template-town-hall", { Name = _("Town Hall"),
+DefineUnitType("unit-template-town-hall", {
+	Name = _("Town Hall"),
 	Parent = "unit-template-building",
 	Class = "town-hall",
 	Costs = {"time", 255, "gold", 1200, "lumber", 2400},
@@ -4069,7 +4070,8 @@ DefineUnitType("unit-template-town-hall", { Name = _("Town Hall"),
 	}
 } )
 
-DefineUnitType("unit-template-stronghold", { Name = _("Stronghold"),
+DefineUnitType("unit-template-stronghold", {
+	Name = _("Stronghold"),
 	Parent = "unit-template-town-hall",
 	Class = "stronghold",
 	Costs = {"time", 200, "gold", 2000, "lumber", 2100, "stone", 1500},
@@ -4095,7 +4097,8 @@ DefineUnitType("unit-template-stronghold", { Name = _("Stronghold"),
 	}
 } )
 
-DefineUnitType("unit-template-farm", { Name = _("Farm"),
+DefineUnitType("unit-template-farm", {
+	Name = _("Farm"),
 	Parent = "unit-template-building",
 	Class = "farm",
 	Costs = {"time", 100, "gold", 500, "lumber", 750},
@@ -4132,7 +4135,8 @@ DefineUnitType("unit-template-farm", { Name = _("Farm"),
 	}
 } )
 
-DefineUnitType("unit-template-barracks", { Name = _("Barracks"),
+DefineUnitType("unit-template-barracks", {
+	Name = _("Barracks"),
 	Parent = "unit-template-building",
 	Class = "barracks",
 	Costs = {"time", 200, "gold", 700, "lumber", 1350},
@@ -4168,7 +4172,8 @@ DefineUnitType("unit-template-barracks", { Name = _("Barracks"),
 	}
 } )
 
-DefineUnitType("unit-template-lumber-mill", { Name = _("Lumber Mill"),
+DefineUnitType("unit-template-lumber-mill", {
+	Name = _("Lumber Mill"),
 	Parent = "unit-template-building",
 	Class = "lumber-mill",
 	Costs = {"time", 150, "gold", 600, "lumber", 1350},
@@ -4207,7 +4212,8 @@ DefineUnitType("unit-template-lumber-mill", { Name = _("Lumber Mill"),
 	}
 } )
 
-DefineUnitType("unit-template-smithy", { Name = _("Smithy"),
+DefineUnitType("unit-template-smithy", {
+	Name = _("Smithy"),
 	Parent = "unit-template-building",
 	Class = "smithy",
 --	Costs = {"time", 200, "gold", 800, "lumber", 450, "oil", 100},

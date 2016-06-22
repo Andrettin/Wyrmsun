@@ -471,7 +471,7 @@ local NorseEvents = {
 				EventFaction.Name == "Denmark"
 				and GetProvinceOwner("Zealand") == EventFaction.Name
 				and GetProvinceCivilization("Zealand") == "norse" -- because the name "Vornedskabet" is specific to the Danish language
-				and GetProvinceSettlementBuilding(WorldMapProvinces.Zealand.Name, "unit-teuton-barracks")
+				and GetProvinceSettlementBuilding("Zealand", "unit-teuton-barracks")
 				-- should only trigger after a technology for the appropriate time period has been researched
 			) then
 				return true

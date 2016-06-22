@@ -41,7 +41,7 @@ DefineProvince("Algeria", {
 		161, "persian", "Mauri Tribe" -- Southwestern Algeria was inhabited by the Mauri in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	HistoricalSettlementBuildings = {
-		161, "unit-teuton-barracks", true -- Legionary base present in Lambaesis in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, "unit-latin-barracks", true -- Legionary base present in Lambaesis in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	Regions = {"Africa"}
 })
@@ -52,7 +52,7 @@ DefineProvince("Egypt", {
 	Map = "maps/random/random-map-forest.smp",
 	SettlementTerrain = "Plains", -- correct?
 	HistoricalSettlementBuildings = {
-		161, "unit-teuton-barracks", true -- Legionary base present in Alexandria in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, "unit-latin-barracks", true -- Legionary base present in Alexandria in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	Regions = {"Africa"}
 })

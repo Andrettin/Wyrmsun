@@ -36,3 +36,21 @@ DefineIcon({
 	Size = {46, 38},
 	File = "latin/icons/forum.png"
 })
+
+DefineIcon({
+	Name = "icon-latin-farm",
+	Size = {46, 38},
+	File = "latin/icons/farm.png"
+})
+
+DefineIcon({
+	Name = "icon-latin-barracks",
+	Size = {46, 38},
+	File = "latin/icons/barracks.png"
+})
+
+DefineIcon({
+	Name = "icon-latin-smithy",
+	Size = {46, 38},
+	File = "latin/icons/smithy.png"
+})

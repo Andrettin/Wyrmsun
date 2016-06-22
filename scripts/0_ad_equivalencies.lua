@@ -126,9 +126,9 @@ Set0ADTemplateUnitTypeEquivalency("units/hele_cavalry_javelinist_e", "unit-teuto
 Set0ADTemplateUnitTypeEquivalency("structures/hele_civil_centre", "unit-latin-town-hall")
 Set0ADTemplateUnitTypeEquivalency("structures/hele_field", "")
 Set0ADTemplateUnitTypeEquivalency("structures/hele_defense_tower", "unit-teuton-guard-tower")
-Set0ADTemplateUnitTypeEquivalency("other/hellenic_stoa", "unit-teuton-farm") --maybe a market would be a better fitting building, but its effect is similar to that of a farm
-Set0ADTemplateUnitTypeEquivalency("other/hellenic_royal_stoa", "unit-teuton-barracks") --maybe a market would be a better fitting building for its description, but it allows recruiting military units) otherwise its effect is similar to that of a farm
-Set0ADTemplateUnitTypeEquivalency("other/unfinished_greek_temple", "") --should be a temple
+Set0ADTemplateUnitTypeEquivalency("other/hellenic_stoa", "unit-latin-farm") --maybe a market would be a better fitting building, but its effect is similar to that of a farm
+Set0ADTemplateUnitTypeEquivalency("other/hellenic_royal_stoa", "unit-latin-barracks") --maybe a market would be a better fitting building for its description, but it allows recruiting military units) otherwise its effect is similar to that of a farm
+Set0ADTemplateUnitTypeEquivalency("other/unfinished_greek_temple", "unit-teuton-temple")
 -- Hellene heroes
 Set0ADTemplateUnitTypeEquivalency("units/hele_hero_themistocles", "unit-teuton-swordsman")
 
@@ -160,10 +160,10 @@ Set0ADTemplateUnitTypeEquivalency("units/rome_champion_infantry", "unit-teuton-s
 Set0ADTemplateUnitTypeEquivalency("units/rome_champion_cavalry", "unit-teuton-ritter")
 -- Roman structures
 Set0ADTemplateUnitTypeEquivalency("structures/rome_civil_centre", "unit-latin-town-hall")
-Set0ADTemplateUnitTypeEquivalency("structures/rome_army_camp", "unit-teuton-barracks")
+Set0ADTemplateUnitTypeEquivalency("structures/rome_army_camp", "unit-latin-barracks")
 Set0ADTemplateUnitTypeEquivalency("structures/rome_outpost", "unit-teuton-watch-tower")
 Set0ADTemplateUnitTypeEquivalency("structures/rome_defense_tower", "unit-teuton-guard-tower")
-Set0ADTemplateUnitTypeEquivalency("structures/rome_tent", "unit-teuton-farm")
+Set0ADTemplateUnitTypeEquivalency("structures/rome_tent", "unit-latin-farm")
 -- Roman heroes
 Set0ADTemplateUnitTypeEquivalency("units/rome_hero_marcellus", "unit-teuton-ritter") -- cavalry swordsman
 

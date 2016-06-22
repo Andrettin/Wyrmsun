@@ -205,7 +205,7 @@ DefineProvince("Alsace", {
 		481, "teuton"
 	},
 	HistoricalSettlementBuildings = {
-		161, "unit-teuton-barracks", true -- Legionary base present in Argentorate in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, "unit-latin-barracks", true -- Legionary base present in Argentorate in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	HistoricalModifiers = {
 		1618, "upgrade-university", true, -- University founded in Molsheim in 1618. Source: The Cambridge Modern History Atlas, 1912, p. 9.
@@ -1216,8 +1216,8 @@ DefineProvince("Bulgaria", {
 		"thracian", "Odrysae Tribe"
 	},
 	HistoricalSettlementBuildings = {
-		161, "unit-teuton-barracks", true, -- Legionary base present in Novae in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
-		161, "unit-teuton-barracks", true -- Legionary base present in Durostorum in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, "unit-latin-barracks", true, -- Legionary base present in Novae in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, "unit-latin-barracks", true -- Legionary base present in Durostorum in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	Regions = {"Europe", "Roman Danube", "West and Central Europe"}
 })
@@ -1382,7 +1382,7 @@ DefineProvince("Castille", {
 		-197, "latin", "Rome"
 	},
 	HistoricalSettlementBuildings = {
-		161, "unit-teuton-barracks", true -- Legionary base present in Castra Legionis in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, "unit-latin-barracks", true -- Legionary base present in Castra Legionis in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	HistoricalModifiers = {
 		1212, "upgrade-university", true, -- University founded in Palencia in 1212. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.
@@ -1880,7 +1880,7 @@ DefineProvince("Dobruja", {
 		"thracian", "Getae Tribe"
 	},
 	HistoricalSettlementBuildings = {
-		161, "unit-teuton-barracks", true -- Legionary base present in Troesmis in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, "unit-latin-barracks", true -- Legionary base present in Troesmis in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	Regions = {"Europe", "Roman Danube", "West and Central Europe"}
 })
@@ -3857,8 +3857,8 @@ DefineProvince("Lower Austria", {
 		-800, "celt"
 	},
 	HistoricalSettlementBuildings = {
-		161, "unit-teuton-barracks", true, -- Legionary base present in Vindobona in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
-		161, "unit-teuton-barracks", true -- Legionary base present in Carnuntum in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, "unit-latin-barracks", true, -- Legionary base present in Vindobona in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, "unit-latin-barracks", true -- Legionary base present in Carnuntum in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	HistoricalModifiers = {
 		1365, "upgrade-university", true, -- University founded in Vienna in 1365. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.
@@ -3919,9 +3919,9 @@ DefineProvince("Lower Rhine", {
 		"teuton", "Holy Rome"
 	},
 	HistoricalSettlementBuildings = {
-		161, "unit-teuton-barracks", true, -- Legionary base present in a location near Colonia Agrippina in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
-		161, "unit-teuton-barracks", true, -- Legionary base present in the area in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
-		161, "unit-teuton-barracks", true, -- Legionary base present (apparently) between the Meuse and Rhine rivers in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, "unit-latin-barracks", true, -- Legionary base present in a location near Colonia Agrippina in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, "unit-latin-barracks", true, -- Legionary base present in the area in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, "unit-latin-barracks", true, -- Legionary base present (apparently) between the Meuse and Rhine rivers in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		768, "unit-teuton-temple", true, -- Monastery or abbey existent in Prüm during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 		768, "unit-teuton-temple", true, -- Archbishopric existent in Cologne during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 		768, "unit-teuton-temple", true -- Archbishopric existent in Trier during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
@@ -4253,7 +4253,7 @@ DefineProvince("Mercia", {
 		1903, "upgrade-university", true -- University founded in Liverpool in 1903. Source: David Thomson, Europe Since Napoleon, 1966, p. 449.
 	},
 	HistoricalSettlementBuildings = {
-		161, "unit-teuton-barracks", true -- Legionary base present in Deva in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, "unit-latin-barracks", true -- Legionary base present in Deva in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	Regions = {"British Isles", "England", "Europe", "Northwest Europe", "West and Central Europe"}
 })
@@ -4962,7 +4962,7 @@ DefineProvince("Palatinate", {
 		"teuton", "Holy Rome"
 	},
 	HistoricalSettlementBuildings = {
-		161, "unit-teuton-barracks", true -- Legionary base present in Mogontiacum in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, "unit-latin-barracks", true -- Legionary base present in Mogontiacum in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	HistoricalModifiers = {
 		1476, "upgrade-university", true, -- University founded in Mainz in 1476. Source: William R. Shepherd, Historical Atlas, 1923, p. 100.
@@ -5737,7 +5737,7 @@ DefineProvince("Serbia", {
 		-336, "thracian"
 	},
 	HistoricalSettlementBuildings = {
-		161, "unit-teuton-barracks", true -- Legionary base present in Viminacium in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, "unit-latin-barracks", true -- Legionary base present in Viminacium in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	Regions = {"Europe", "Roman Danube", "West and Central Europe"}
 })
@@ -6360,7 +6360,7 @@ DefineProvince("Transylvania", {
 		-7000, "minoan"
 	},
 	HistoricalSettlementBuildings = {
-		161, "unit-teuton-barracks", true -- Legionary base present in Apulum in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, "unit-latin-barracks", true -- Legionary base present in Apulum in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	HistoricalModifiers = {
 		1580, "upgrade-university", true, -- University founded in Cluj in 1580. Source: The Cambridge Modern History Atlas, p. 9.
@@ -6934,7 +6934,7 @@ DefineProvince("Wales", {
 		43, "latin", "Rome"
 	},
 	HistoricalSettlementBuildings = {
-		161, "unit-teuton-barracks", true -- Legionary base present in Isca Silurum in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, "unit-latin-barracks", true -- Legionary base present in Isca Silurum in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	Regions = {"British Isles", "England", "Europe", "Northwest Europe", "West and Central Europe"}
 })
@@ -7270,7 +7270,7 @@ DefineProvince("York", {
 		1905, "upgrade-university", true -- University founded in Sheffield in 1905. Source: David Thomson, Europe Since Napoleon, 1966, p. 449.
 	},
 	HistoricalSettlementBuildings = {
-		161, "unit-teuton-barracks", true -- Legionary base present in Eboracum in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, "unit-latin-barracks", true -- Legionary base present in Eboracum in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 	},
 	Regions = {"British Isles", "England", "Europe", "Northwest Europe", "West and Central Europe"}
 })
