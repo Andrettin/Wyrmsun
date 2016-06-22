@@ -57,9 +57,18 @@ DefineAchievement("the-blue-danube", {
 	RequiredQuests = {"the-blue-danube"}
 })
 
+DefineAchievement("the-mightiest-made", {
+	Name = "The Mightiest Made",
+	Icon = "icon-modsognir",
+	Description = "Reach level 10 with Modsognir.",
+	PlayerColor = "red",
+	Character = "Modsognir",
+	CharacterLevel = 10
+})
+
 DefineAchievement("the-first-dwarves", {
 	Name = "The First Dwarves",
-	Icon = "icon-modsognir",
+	Icon = "icon-brising-miner",
 	Description = "As the Brising Clan, survive Grafvitnir and settle in Svarinshaug.",
 	PlayerColor = "red",
 	RequiredQuests = {"the-binding-of-grafvitnir"}
@@ -70,17 +79,17 @@ DefineAchievement("safe-passage", {
 	Icon = "icon-dwarven-steelclad",
 	Description = "Destroy the raiders during the A Bargain is Struck quest.",
 	PlayerColor = "green",
-	Unobtainable = true -- it is obtainable only through triggers
+	Unobtainable = true -- it is obtainable only through a trigger
 })
 
---[[
 DefineAchievement("rugnurs-bravery", {
 	Name = "Rugnur's Bravery",
 	Icon = "icon-rugnur-older",
 	Description = "Upgrade Rugnur to a Stonelord.",
-	PlayerColor = "red"
+	PlayerColor = "red",
+	Character = "Rugnur",
+	CharacterType = "unit-dwarven-thane"
 })
---]]
 
 DefineAchievement("the-scepter-of-fire", {
 	Name = "The Scepter of Fire",
@@ -91,23 +100,29 @@ DefineAchievement("the-scepter-of-fire", {
 })
 
 --[[
+DefineAchievement("the-ancient-charms", {
+	Name = "The Ancient Charms",
+	Icon = "icon-scroll",
+	Description = "Read all Teuton literary works (with any custom hero)."
+})
+
 DefineAchievement("deep-lore", {
 	Name = "Deep Lore",
 	Icon = "icon-scroll",
-	Description = "Read all literary works (with any character)."
+	Description = "Read all dwarven literary works (with any custom hero)."
 })
 --]]
 
-DefineAchievement("prestigious", {
-	Name = "Prestigious",
-	Icon = "icon-heater-shield",
+DefineAchievement("paragon", {
+	Name = "Paragon",
+	Icon = "icon-level-up",
 	Description = "Reach level 10 with any custom hero.",
 	CharacterLevel = 10
 })
 
 DefineAchievement("legendary", {
 	Name = "Legendary",
-	Icon = "icon-level-up",
+	Icon = "icon-leadership",
 	Description = "Reach level 20 with any custom hero.",
 	CharacterLevel = 20
 })

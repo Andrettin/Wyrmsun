@@ -107,6 +107,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added a "Planes" section in the encyclopedia, explaining some of the different planes of existence in the game's lore.
 - Added a popup tip explaining item identification when an unidentified item is first obtained.
 - Language patterns are now cached, so that the game no longer has to recalculate them on every launch.
+- Added achievements to the game. The achievement screen can be accessed from the main menu.
 
 * Multiplayer
 - Fixed a multiplayer crash cause which triggered when both players had different "No Randomness" settings.
