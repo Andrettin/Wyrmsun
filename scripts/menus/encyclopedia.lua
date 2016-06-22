@@ -1777,19 +1777,22 @@ function OpenEncyclopediaFactionEntry(civilization, faction)
 	l:setSize(Video.Width - 64, Video.Height / 2)
 	l:setLineWidth(Video.Width - 64)
 	encyclopedia_entry_menu:add(l, 32, offy + 104 + 36*0)
+	local effects = GetFactionEffectsString(civilization, faction)
 	local description = ""
-	local quote = ""
-	local background = ""
+	description = "Color: " .. CapitalizeString(GetFactionData(civilization, faction, "Color")) .. "\n\n"
+	if (effects ~= "") then
+		description = description .. "Effects: " .. effects .. "\n\n"
+	end
 	if (GetFactionData(civilization, faction, "Description") ~= "") then
-		description = "Description: " .. GetFactionData(civilization, faction, "Description") .. "\n\n"
+		description = description .. "Description: " .. GetFactionData(civilization, faction, "Description") .. "\n\n"
 	end
 	if (GetFactionData(civilization, faction, "Quote") ~= "") then
-		quote = "Quote: " .. GetFactionData(civilization, faction, "Quote") .. "\n\n"
+		description = description .. "Quote: " .. GetFactionData(civilization, faction, "Quote") .. "\n\n"
 	end
 	if (GetFactionData(civilization, faction, "Background") ~= "") then
-		background = "Background: " .. GetFactionData(civilization, faction, "Background") .. "\n\n"
+		description = description .. "Background: " .. GetFactionData(civilization, faction, "Background") .. "\n\n"
 	end
-	l:setCaption(description .. quote .. background)
+	l:setCaption(description)
 			
 	encyclopedia_entry_menu:addFullButton(_("~!Previous Menu"), "p", offx + 208, offy + 104 + (36 * 9),
 		function() encyclopedia_entry_menu:stop(); end)
