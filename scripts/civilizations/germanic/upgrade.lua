@@ -77,22 +77,6 @@ DefineUpgrade("upgrade-germanic-wood-plow", {
 	TechnologyPointCost = 1
 })
 
-DefineUpgrade("upgrade-asa-tribe-faction", {
-	Name = _("Asa Tribe Faction")
-})
-
-DefineUpgrade("upgrade-skeldung-tribe-faction", {
-	Name = _("Skeldung Tribe Faction")
-})
-
-DefineUpgrade("upgrade-volsung-tribe-faction", {
-	Name = _("Volsung Tribe Faction")
-})
-
-DefineUpgrade("upgrade-yngling-tribe-faction", {
-	Name = _("Yngling Tribe Faction")
-})
-
 DefineModifier("upgrade-germanic-broad-sword",
 	{"BasicDamage", 2},
 	{"Points", 10},
@@ -132,31 +116,7 @@ DefineModifier("upgrade-teuton-civilization",
 	{"change-civilization-to", "teuton"}
 )
 
-DefineModifier("upgrade-asa-tribe-faction",
-	{"BasicDamage", 1},
-	{"HitPoints", 5},
-	{"Points", 10},
-	{"apply-to", "unit-germanic-warrior"}
-)
-
-DefineModifier("upgrade-skeldung-tribe-faction",
-	{"BasicDamage", 1},
-	{"Armor", 1},
-	{"Points", 10},
-	{"apply-to", "unit-germanic-warrior"}
-)
-
-DefineModifier("upgrade-volsung-tribe-faction",
-	{"BasicDamage", 2},
-	{"Points", 10},
-	{"apply-to", "unit-germanic-warrior"}
-)
-
-DefineModifier("upgrade-yngling-tribe-faction",
-	{"BasicDamage", 1},
-	{"Points", 10},
-	{"apply-to", "unit-germanic-archer"}
-)
+Load("scripts/civilizations/germanic/upgrade_faction.lua")
 
 DefineDependency("unit-germanic-archer",
 	{"unit-germanic-carpenters-shop"}

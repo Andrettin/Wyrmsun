@@ -708,7 +708,7 @@ function Tip(tip_name, tip_description)
 	end
 end
 
-function GenericDialog(title, message, tooltip)
+function GenericDialog(title, message, tooltip, icon, player_color)
 	if (GameRunning and not IsNetworkGame()) then
 		SetGamePaused(true)
 	elseif (GrandStrategy) then
@@ -716,6 +716,11 @@ function GenericDialog(title, message, tooltip)
 	end
 	
 	local menu
+	local icon_graphics
+	
+	if (icon) then
+		icon_graphics = CIcon:Get(icon).G
+	end
 	
 	if (GameRunning or Editor.Running ~= EditorNotRunning) then
 		menu = WarGameMenu(panel(1))
@@ -725,12 +730,24 @@ function GenericDialog(title, message, tooltip)
 	end
 
 	menu:addLabel(_(title), 128, 11)
+	
+	if (icon) then
+		if not (player_color) then
+			player_color = "red"
+		end
+		local icon_widget = PlayerColorImageWidget(icon_graphics, player_color)
+		menu:add(icon_widget, 105, 48)
+	end
 
 	local l = MultiLineLabel()
 	l:setFont(Fonts["game"])
 	l:setSize(228, 256)
 	l:setLineWidth(228)
-	menu:add(l, 14, 35)
+	if (icon) then
+		menu:add(l, 14, 112)
+	else
+		menu:add(l, 14, 35)
+	end
 	l:setCaption(_(message))
 
 	local ok_button = menu:addFullButton("~!OK", "o", 16, 248 - (36 * 0),
