@@ -32,6 +32,7 @@ DefineFaction("Frank Tribe", {
 	Colors = {"green", "orange"},
 	DevelopsTo = {"Francia", "Franconia", "Austrasia", "Neustria", "East Francia", "Netherlands"},
 	FactionUpgrade = "upgrade-frank-tribe-faction",
+	Description = "The Franks are one of the most powerful Germanic tribes to have existed. From their humble beginnings in their dwellings along the Rhine, they eventually managed to conquer the entirety of Gaul and much of Central Europe.",
 	UIFillers = {
 		"dlcs/frankish_faction_flair/graphics/ui/filler_bottom.png", 380, -181,
 		"dwarf/ui/resource.png", 0, 0,
