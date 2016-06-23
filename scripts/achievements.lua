@@ -28,7 +28,7 @@
 DefineAchievement("the-settlement-of-scandinavia", {
 	Name = "The Settlement of Scandinavia",
 	Icon = "icon-germanic-warrior",
-	Description = "As the Asa Tribe, defeat Gylve's forces and settle Scandinavia.",
+	Description = "Complete the Gylve's Realm mission.",
 	PlayerColor = "orange",
 	RequiredQuests = {"gylves-realm"}
 })
@@ -36,7 +36,7 @@ DefineAchievement("the-settlement-of-scandinavia", {
 DefineAchievement("the-marcomannic-wars", {
 	Name = "The Marcomannic Wars",
 	Icon = "icon-suebi-swordsman",
-	Description = "As the Marcomanni Tribe, raze Opitergium.",
+	Description = "Complete The Razing of Opitergium mission.",
 	PlayerColor = "orange",
 	RequiredQuests = {"the-razing-of-opitergium"}
 })
@@ -44,7 +44,7 @@ DefineAchievement("the-marcomannic-wars", {
 DefineAchievement("the-conquest-of-galicia", {
 	Name = "The Conquest of Galicia",
 	Icon = "icon-teuton-spatha",
-	Description = "As the Suebi Tribe, conquer Galicia.",
+	Description = "Complete the Moving into Galicia mission.",
 	PlayerColor = "black",
 	RequiredQuests = {"moving-into-galicia"}
 })
@@ -52,7 +52,7 @@ DefineAchievement("the-conquest-of-galicia", {
 DefineAchievement("the-blue-danube", {
 	Name = "The Blue Danube",
 	Icon = "icon-teuton-swordsman",
-	Description = "As the Bavarian Tribe, settle on the Danube.",
+	Description = "Complete The Blue Danube mission.",
 	PlayerColor = "cyan",
 	RequiredQuests = {"the-blue-danube"}
 })
@@ -69,7 +69,7 @@ DefineAchievement("the-mightiest-made", {
 DefineAchievement("the-first-dwarves", {
 	Name = "The First Dwarves",
 	Icon = "icon-brising-miner",
-	Description = "As the Brising Clan, survive Grafvitnir and settle in Svarinshaug.",
+	Description = "Complete The Binding of Grafvitnir mission.",
 	PlayerColor = "red",
 	RequiredQuests = {"the-binding-of-grafvitnir"}
 })
@@ -95,7 +95,7 @@ DefineAchievement("rugnurs-bravery", {
 DefineAchievement("the-scepter-of-fire", {
 	Name = "The Scepter of Fire",
 	Icon = "icon-thursagan",
-	Description = "Forge the Scepter of Fire and hide it from the goblins and Shinsplitters.",
+	Description = "Complete the Caverns of Flame mission.",
 	PlayerColor = "red",
 	RequiredQuests = {"caverns-of-flame"}
 })
@@ -121,8 +121,8 @@ DefineAchievement("paragon", {
 	CharacterLevel = 10
 })
 
-DefineAchievement("legendary", {
-	Name = "Legendary",
+DefineAchievement("legend", {
+	Name = "Legend",
 	Icon = "icon-leadership",
 	Description = "Reach level 20 with any custom hero.",
 	CharacterLevel = 20
