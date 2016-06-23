@@ -25,11 +25,9 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineDeity("Perkuno", { -- Source: H. Munro Chadwick, "The Oak and the Thunder-God", 1900, pp. 26-27, 32.
-	Name = "Taran",
-	Civilizations = {"baltic"}, -- worshiped by the Old Prussians
-	Gender = "male",
-	Major = true,
-	Domains = {"air", "fire", "order"}, -- maybe wood?
---	Description = "Perkuno is a thunder god who is believed to have a mystic connection to an oak at Romove, where an eternal fire is said to burn. When thunderstorms occurred, his priests visited the oak to try to communicate with him. Perkuno appears as a middle-aged man with a black beard and possessing a wrathful expression, with his head being crowned by flames. The Baltic Prussians attributed their fundamental laws to him. Perkuno's symbol is the perpetual fire."
+DefineLanguageWord("Perendī́", { -- source also gives the alternative form "perndī́"; Source: H. Munro Chadwick, "The Oak and the Thunder-God", 1900, pp. 35-36.
+	Language = "albanian",
+	Type = "noun",
+	Meanings = {"God"},
+	DerivesFrom = {"proto-indo-european", "noun", "Perkṷus"} -- the source mentions this as a possibility
 })

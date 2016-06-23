@@ -61,6 +61,10 @@ if not (LanguageCacheOutdated) then
 	return;
 end
 
+DefineLanguage("albanian", {
+	Name = "Albanian"
+})
+
 DefineLanguage("armenian", {
 	Name = "Armenian"
 })

@@ -163,6 +163,12 @@ DefineLanguageWord("Darbhá", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Devas", { -- Source: H. Munro Chadwick, "The Oak and the Thunder-God", 1900, p. 39.
+	Language = "sanskrit",
+	Type = "noun",
+	Meanings = {"God"}
+})
+
 DefineLanguageWord("Devŗ́", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.2.
 	Language = "sanskrit",
 	Type = "noun",
@@ -180,6 +186,13 @@ DefineLanguageWord("Duhitā́", { -- Source: Winfred P. Lehmann, "A Grammar of P
 	Language = "sanskrit",
 	Type = "noun",
 	Meanings = {"Daughter"}
+})
+
+DefineLanguageWord("Dyāus", { -- Source: H. Munro Chadwick, "The Oak and the Thunder-God", 1900, p. 39.
+	Language = "sanskrit",
+	Type = "noun",
+	Meanings = {"Sky", "Day"},
+	DerivesFrom = {"proto-indo-european", "noun", "Deiṷos"}
 })
 
 DefineLanguageWord("Gámati", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 5.

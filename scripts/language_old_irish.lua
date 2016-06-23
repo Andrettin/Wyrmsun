@@ -31,6 +31,12 @@ DefineLanguageWord("Cacht", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Meanings = {"Female Slave"}
 })
 
+DefineLanguageWord("Dia", { -- Source: H. Munro Chadwick, "The Oak and the Thunder-God", 1900, p. 39.
+	Language = "old-irish",
+	Type = "noun",
+	Meanings = {"God"}
+})
+
 DefineLanguageWord("Fēn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
 	Language = "old-irish",
 	Type = "noun",

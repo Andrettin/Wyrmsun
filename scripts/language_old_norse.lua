@@ -1582,6 +1582,13 @@ DefineLanguageWord("Þyrpast", { -- Source: August Fick and Alf Torp, "Wortschat
 	DerivesFrom = {"proto-germanic", "noun", "Þurpa"}
 })
 
+DefineLanguageWord("Tívar", { -- Source: H. Munro Chadwick, "The Oak and the Thunder-God", 1900, p. 39.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"God"},
+	GrammaticalNumber = "plural" -- the word is inherently plural
+})
+
 DefineLanguageWord("Torf", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 86.
 	Language = "old-norse",
 	Type = "noun",

@@ -73,6 +73,12 @@ DefineLanguageWord("Daxw", { -- source gives "daXw-"; Source: Winfred P. Lehmann
 	Meanings = {}
 })
 
+DefineLanguageWord("Deiṷos", { -- Source: H. Munro Chadwick, "The Oak and the Thunder-God", 1900, pp. 39-40.
+	Language = "proto-indo-european",
+	Type = "noun",
+	Meanings = {"God"}
+})
+
 DefineLanguageWord("Del", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 86.
 	Language = "proto-indo-european",
 	Type = "noun", -- correct?
@@ -227,6 +233,12 @@ DefineLanguageWord("Oh", { -- source gives "oH-"; Source: Winfred P. Lehmann, "A
 	Language = "proto-indo-european",
 	Type = "noun", -- unclear from the source
 	Meanings = {}
+})
+
+DefineLanguageWord("Perkṷus", { -- Source: H. Munro Chadwick, "The Oak and the Thunder-God", 1900, p. 35.
+	Language = "proto-indo-european",
+	Type = "noun",
+	Meanings = {"Oak"}
 })
 
 DefineLanguageWord("Pryx", { -- source gives "pr-y-X-"; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.

@@ -147,6 +147,19 @@ DefineLanguageWord("Dēfrūtum", { -- Source: Winfred P. Lehmann, "A Grammar of 
 	DerivesFrom = {"proto-indo-european", "noun", "Bhru"}
 })
 
+DefineLanguageWord("Deus", { -- source also gives the alternative form "dīuus"; Source: H. Munro Chadwick, "The Oak and the Thunder-God", 1900, p. 39.
+	Language = "latin",
+	Type = "noun",
+	Meanings = {"God"}
+})
+
+DefineLanguageWord("Diēs", { -- Source: H. Munro Chadwick, "The Oak and the Thunder-God", 1900, p. 39.
+	Language = "latin",
+	Type = "noun",
+	Meanings = {"Day"},
+	DerivesFrom = {"proto-indo-european", "noun", "Deiṷos"}
+})
+
 DefineLanguageWord("Dolus", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 86.
 	Language = "latin",
 	Type = "noun",
@@ -348,6 +361,13 @@ DefineLanguageWord("Pecu", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 	Language = "latin",
 	Type = "noun",
 	Meanings = {"Herd"}
+})
+
+DefineLanguageWord("Quercus", { -- Source: H. Munro Chadwick, "The Oak and the Thunder-God", 1900, p. 35.
+	Language = "latin",
+	Type = "noun",
+	Meanings = {"Oak"},
+	DerivesFrom = {"proto-indo-european", "noun", "Perkṷus"}
 })
 
 DefineLanguageWord("Quod", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
