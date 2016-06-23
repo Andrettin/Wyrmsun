@@ -32,7 +32,7 @@ DefineDeity("odin", { -- Known as Allfather, the Terrible One, One-eyed, Father 
 	Civilizations = {"dwarf", "germanic", "norse", "teuton"},
 	Gender = "male",
 	Major = true,
-	Domains = {"magic", "war", "wisdom"},
+	Domains = {"aether", "courage", "wisdom"},
 	CulturalNames = {
 		"dwarf", "Hroptatyr", -- in Norse mythology, one of the names of Odin, which was used in a verse concerning a charm by the dwarf Thjodrorir in the Hovamol, who sang wisdom for "Hroptatyr" wise; name means "Crier of the Gods", "the Crying God" or "the Prophet"
 		"germanic", "Wōđanaz", -- Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 128.
@@ -48,7 +48,7 @@ DefineDeity("thor", { -- Son of Odin and Jord (Fjorgyn) and Sif's husband; known
 	Civilizations = {"dwarf", "germanic", "norse", "teuton"},
 	Gender = "male",
 	Major = true,
-	Domains = {"air", "lightning", "order"},
+	Domains = {"air", "courage", "order"},
 	CulturalNames = {
 		"dwarf", "Vingthor", -- name used by Thor when revealing himself to the dwarf Alvis; the meaning is "Thor the Hurler"; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 185.
 		"germanic", "Þunraz", -- Buchholz gives "Þun(a)raz"; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 129.
@@ -74,7 +74,7 @@ DefineDeity("tyr", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980,
 	Pantheon = "Aesir",
 	Civilizations = {"germanic", "norse", "teuton"},
 	Gender = "male",
-	Domains = {"war"},
+	Domains = {"courage"}, -- god of war
 	CulturalNames = {
 		"germanic", "Tīwaz", -- Proto-Germanic name of the god; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 115.
 		"norse", "Týr", -- Old Norse name of the god; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 115.
@@ -88,7 +88,7 @@ DefineDeity("aegir", { -- Married to Ran; they have their hall under the sea by 
 	Pantheon = "Aesir",
 	Civilizations = {"norse"},
 	Gender = "male",
-	Domains = {"sea"}
+	Domains = {"water"} -- god of the sea
 })
 
 DefineDeity("balder", { -- Due to Loki's mischief, he was killed by Hod; Balder returns after Ragnarok; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 240; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75.
@@ -108,7 +108,7 @@ DefineDeity("bragi", { -- Son of Odin and husband of Idun; Source: Kevin Crossle
 	Pantheon = "Aesir",
 	Civilizations = {"norse"},
 	Gender = "male",
-	Domains = {"eloquence", "poetry"}
+	Domains = {} -- god of eloquence and poetry
 })
 
 DefineDeity("eir", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 241.
@@ -116,7 +116,7 @@ DefineDeity("eir", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980,
 	Pantheon = "Aesir",
 	Civilizations = {"norse"},
 	Gender = "female",
-	Domains = {"healing"}
+	Domains = {"life"} -- god of healing
 })
 
 DefineDeity("forseti", { -- Son of Balder and Nanna; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 242.
@@ -124,7 +124,7 @@ DefineDeity("forseti", { -- Son of Balder and Nanna; Source: Kevin Crossley-Holl
 	Pantheon = "Aesir",
 	Civilizations = {"norse"},
 	Gender = "male",
-	Domains = {"justice"}
+	Domains = {"justice"} -- god of justice
 })
 
 DefineDeity("fulla", { -- Servant of Frigg; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 242.
@@ -139,7 +139,7 @@ DefineDeity("gefion", { -- Name means "Giver"; Source: Kevin Crossley-Holland, "
 	Pantheon = "Aesir",
 	Civilizations = {"norse"},
 	Gender = "female",
-	Domains = {"fertility"}
+	Domains = {"earth"} -- goddess of fertility
 })
 
 DefineDeity("heimdall", { -- Son of nine mothers; the horn Gjall belongs to him; is the watchman of the gods; identified with Rig (the progenitor of the three races of man); Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 244.
@@ -256,7 +256,7 @@ DefineDeity("ull", { -- name means "Glory" or "Brilliance"; Source: Kevin Crossl
 	Pantheon = "Aesir",
 	Civilizations = {"norse"},
 	Gender = "male",
-	Domains = {"archery", "skiing"},
+	Domains = {}, -- god of archery and skiing
 })
 
 DefineDeity("var", { -- name means "Oath"; keeps marriage oaths and punishes those who don't fulfill them; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 252.

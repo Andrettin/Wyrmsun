@@ -30,7 +30,7 @@ DefineDeity("perun", { -- Slavic thunder-god; Source: "Germans, Avars and Slavs"
 	Civilizations = {"slav"},
 	Gender = "male",
 	Major = true,
-	Domains = {"lightning"}
+	Domains = {"air"}
 })
 
 DefineDeity("svarog", { -- Slavic light-god; Source: "Germans, Avars and Slavs", p. 125
@@ -63,7 +63,7 @@ DefineDeity("ogen", { -- Source: "Germans, Avars and Slavs", p. 125
 DefineDeity("slnce", { -- the Sun; Source: "Germans, Avars and Slavs", p. 125
 	Name = "Slnce",
 	Civilizations = {"slav"},
-	Domains = {"sun"}
+	Domains = {"fire"} -- deity of the sun
 	-- child of Svarog
 })
 

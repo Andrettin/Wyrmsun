@@ -29,5 +29,5 @@ DefineDeity("taranos", { -- Source: H. Munro Chadwick, "The Oak and the Thunder-
 	Name = "Taranos",
 	Civilizations = {"celt"},
 	Gender = "male",
-	Domains = {"lightning"}
+	Domains = {"air"}
 })

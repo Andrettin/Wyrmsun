@@ -46,15 +46,15 @@ DefineDeity("gaia", { -- Source: Jenny March, "Dictionary of Classical Mythology
 	Civilizations = {"ettin", "greek"},
 	Gender = "female",
 	Major = true,
-	Domains = {"earth"},
---	Description = "A primordial goddess, Gaia is one of the first deities to have been born. She is the mother of the Titans by Uranus. Her greatest worshippers are the ettins of Jotunheim, to whom she appeared in ages past."
+	Domains = {"earth", "chaos"},
+--	Description = "A primordial goddess, Gaia is one of the first deities to have been born. She is the mother of the Titans by Uranus. Her greatest worshipers are the ettins of Jotunheim, to whom she appeared in ages past."
 })
 
 DefineDeity("gathaarl", { -- from Tyrant, Goblin God of Battle
 	Name = "Gathaarl",
 	HomePlane = "Helheim",
 	Civilizations = {"goblin"},
-	Domains = {"chaos", "earth", "war"},
+	Domains = {"chaos", "earth", "wrath"},
 	Gender = "male",
 	Major = true,
 	Description = "The chief goblin deity, Gathaarl rejoices in the bloodiness of battle. The god's priests preach that goblins procreate and multiply, so that they may have an edge against their enemies. Many goblins raise totems to Gathaarl's glory, hoping that the deity will intercede for them."
@@ -76,7 +76,7 @@ DefineDeity("mzivult", { -- by Jesse Crider
 	Name = "Mzivult",
 	HomePlane = "Helheim",
 	Civilizations = {"gnome"}, -- Derro deity
-	Domains = {"tyranny", "earth", "darkness"},
+	Domains = {"wrath", "earth", "darkness"},
 	Gender = "male",
 	Major = true,
 --	Description = "Known as the Obsidian Tyrant, Mzivult is the chief Derro deity. One of Mzivult's epithets is that of Herfiligreikrodd (\"wretched tree voice\" in the Derro language), as Mzivult embodies the corrupted root of the interplanar tree Yggdrasil which lies on Helheim. His influence is sometimes strong enough to make branches of Yggdrasil bear his eye-shaped fruits, known as Mzivult's Eyes. It is said those who eat them obtain tremendous eloquence, being able to sway masses by speaking to their innermost fears and desires. In archaic ages, Mzivult revealed himself to the Derro magisters, imparting them with his knowledge of dark magic."

@@ -25,120 +25,134 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+-- The Five Classical Elements
+
 DefineDeityDomain("air", {
 	Name = "Air"
-})
-
-DefineDeityDomain("archery", {
-	Name = "Archery"
-})
-
-DefineDeityDomain("chaos", {
-	Name = "Chaos",
-	Abilities = {"upgrade-terror"}
-})
-
-DefineDeityDomain("darkness", {
-	Name = "Darkness",
-	Abilities = {"upgrade-terror"}
-})
-
-DefineDeityDomain("death", {
-	Name = "Death",
-	Abilities = {"upgrade-terror"}
 })
 
 DefineDeityDomain("earth", {
 	Name = "Earth"
 })
 
-DefineDeityDomain("eloquence", {
-	Name = "Eloquence"
-})
-
-DefineDeityDomain("fear", {
-	Name = "Fear",
-	Abilities = {"upgrade-terror"}
-})
-
-DefineDeityDomain("fertility", {
-	Name = "Fertility"
-})
-
 DefineDeityDomain("fire", {
 	Name = "Fire"
-})
-
-DefineDeityDomain("healing", {
-	Name = "Healing",
-	Abilities = {"upgrade-healing"}
-})
-
-DefineDeityDomain("justice", {
-	Name = "Justice"
-})
-
-DefineDeityDomain("light", {
-	Name = "Light"
-})
-
-DefineDeityDomain("lightning", {
-	Name = "Lightning"
-})
-
-DefineDeityDomain("magic", {
-	Name = "Magic"
-})
-
-DefineDeityDomain("moon", {
-	Name = "Moon"
-})
-
-DefineDeityDomain("order", {
-	Name = "Order"
-})
-
-DefineDeityDomain("poetry", {
-	Name = "Poetry"
-})
-
-DefineDeityDomain("sea", {
-	Name = "Sea"
-})
-
-DefineDeityDomain("skiing", {
-	Name = "Skiing"
-})
-
-DefineDeityDomain("smithing", {
-	Name = "Smithing"
-})
-
-DefineDeityDomain("sun", {
-	Name = "Sun"
-})
-
-DefineDeityDomain("tyranny", {
-	Name = "Tyranny",
-	Abilities = {"upgrade-terror"}
-})
-
-DefineDeityDomain("war", {
-	Name = "War"
 })
 
 DefineDeityDomain("water", {
 	Name = "Water"
 })
 
-DefineDeityDomain("wealth", {
-	Name = "Wealth"
+DefineDeityDomain("aether", {
+	Name = "Aether"
 })
-DefineDeityDomain("wind", {
-	Name = "Wind"
+
+-- Chinese Elements (which aren't present in the classical ones)
+
+DefineDeityDomain("metal", {
+	Name = "Metal"
+})
+
+DefineDeityDomain("wood", {
+	Name = "Wood"
+})
+
+-- Chaos and Order
+
+DefineDeityDomain("chaos", {
+	Name = "Chaos",
+	Abilities = {"upgrade-terror"}
+})
+
+DefineDeityDomain("order", {
+	Name = "Order"
+})
+
+-- Life and Death
+
+DefineDeityDomain("death", {
+	Name = "Death",
+	Abilities = {"upgrade-terror"}
+})
+
+DefineDeityDomain("life", {
+	Name = "Life",
+	Abilities = {"upgrade-healing"}
+})
+
+-- Darkness and Light (Yin and Yang)
+
+DefineDeityDomain("darkness", {
+	Name = "Darkness",
+	Abilities = {"upgrade-terror"}
+})
+
+DefineDeityDomain("light", {
+	Name = "Light"
+})
+
+-- Four Cardinal Virtues
+
+DefineDeityDomain("courage", {
+	Name = "Courage",
+	Abilities = {"upgrade-inspire"}
+})
+
+DefineDeityDomain("justice", {
+	Name = "Justice",
+	Abilities = {"upgrade-inspire"}
+})
+
+DefineDeityDomain("temperance", {
+	Name = "Temperance"
 })
 
 DefineDeityDomain("wisdom", {
 	Name = "Wisdom",
 	Abilities = {"upgrade-inspire"}
+})
+
+-- Three Theological Virtues
+
+DefineDeityDomain("charity", {
+	Name = "Charity"
+})
+
+DefineDeityDomain("faith", {
+	Name = "Faith"
+})
+
+DefineDeityDomain("hope", {
+	Name = "Hope"
+})
+
+-- Seven Sins
+
+DefineDeityDomain("envy", {
+	Name = "Envy"
+})
+
+DefineDeityDomain("gluttony", {
+	Name = "Gluttony"
+})
+
+DefineDeityDomain("greed", {
+	Name = "Greed"
+})
+
+DefineDeityDomain("lust", {
+	Name = "Lust"
+})
+
+DefineDeityDomain("pride", {
+	Name = "Pride"
+})
+
+DefineDeityDomain("sloth", {
+	Name = "Sloth"
+})
+
+DefineDeityDomain("wrath", {
+	Name = "Wrath",
+	Abilities = {"upgrade-terror"}
 })
