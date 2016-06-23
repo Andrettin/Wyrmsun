@@ -965,7 +965,7 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if (GetFactionPlayer("Norlund Clan") == GetThisPlayer() and PlayerHasObjective(GetThisPlayer(), "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall") and GrandStrategy == false and GetNumRivals(GetThisPlayer()) == 0) then
+		if (GetFactionPlayer("Norlund Clan") == GetThisPlayer() and PlayerHasObjective(GetThisPlayer(), "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall") and GrandStrategy == false and GetNumRivals(GetThisPlayer()) == 0 and GameSettings.Difficulty >= GetAchievementData("safe-passage", "Difficulty")) then
 			return true
 		end
 		return false

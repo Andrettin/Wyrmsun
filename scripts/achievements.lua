@@ -77,9 +77,10 @@ DefineAchievement("the-first-dwarves", {
 DefineAchievement("safe-passage", {
 	Name = "Safe Passage",
 	Icon = "icon-dwarven-steelclad",
-	Description = "Destroy the raiders during the A Bargain is Struck quest.",
+	Description = "Destroy the raiders during the A Bargain is Struck quest on Hard difficulty or higher.",
 	PlayerColor = "green",
-	Unobtainable = true -- it is obtainable only through a trigger
+	Unobtainable = true, -- it is obtainable only through a trigger
+	Difficulty = 3
 })
 
 DefineAchievement("rugnurs-bravery", {
