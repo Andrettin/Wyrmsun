@@ -258,7 +258,7 @@ AddTrigger(
 					if (player == GetThisPlayer()) then
 						ActionVictory()
 						if (GrandStrategy == false) then
-							SetQuestCompleted("the-mead-of-wisdom")
+							SetQuestCompleted("the-mead-of-wisdom", GameSettings.Difficulty)
 						end
 					end
 				end}

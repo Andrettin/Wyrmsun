@@ -154,7 +154,7 @@ AddTrigger(
 				if (player == GetThisPlayer()) then
 					ActionVictory()
 					if (GrandStrategy == false) then
-						SetQuestCompleted("the-sack-of-iuvavum")
+						SetQuestCompleted("the-sack-of-iuvavum", GameSettings.Difficulty)
 					end
 				end
 			end}

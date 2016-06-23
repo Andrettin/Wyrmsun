@@ -181,7 +181,7 @@ AddTrigger(
 				if (player == GetThisPlayer()) then
 					ActionVictory()
 					if (GrandStrategy == false) then
-						SetQuestCompleted("northwards-to-the-sea")
+						SetQuestCompleted("northwards-to-the-sea", GameSettings.Difficulty)
 					end
 				end
 			end}

@@ -121,7 +121,7 @@ AddTrigger(
 				if (player == GetThisPlayer()) then
 					ActionVictory()
 					if (GrandStrategy == false) then
-						SetQuestCompleted("moving-into-galicia")
+						SetQuestCompleted("moving-into-galicia", GameSettings.Difficulty)
 					end
 				end
 			end}

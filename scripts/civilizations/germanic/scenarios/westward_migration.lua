@@ -308,7 +308,7 @@ AddTrigger(
 				if (player == GetThisPlayer()) then
 					ActionVictory()
 					if (GrandStrategy == false) then
-						SetQuestCompleted("westward-migration")
+						SetQuestCompleted("westward-migration", GameSettings.Difficulty)
 					end
 				end
 			end}

@@ -277,7 +277,7 @@ AddTrigger(
 				if (player == GetThisPlayer()) then
 					ActionVictory()
 					if (GrandStrategy == false) then
-						SetQuestCompleted("the-home-of-the-boii")
+						SetQuestCompleted("the-home-of-the-boii", GameSettings.Difficulty)
 					end
 				end
 			end}

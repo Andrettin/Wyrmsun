@@ -204,7 +204,7 @@ AddTrigger(
 					{function(s)
 						ActionVictory()
 						if (GrandStrategy == false) then
-							SetQuestCompleted("the-necklace-of-the-brisings")
+							SetQuestCompleted("the-necklace-of-the-brisings", GameSettings.Difficulty)
 						end
 					end}
 				)

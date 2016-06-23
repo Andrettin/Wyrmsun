@@ -564,7 +564,7 @@ AddTrigger(
 																																				end
 																																			end
 																																			if (player == GetThisPlayer() and GrandStrategy == false) then
-																																																																											SetQuestCompleted("closing-the-gates")
+																																																																											SetQuestCompleted("closing-the-gates", GameSettings.Difficulty)
 																																			end
 																																		end},
 																																		"icon-durstorn"

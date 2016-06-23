@@ -356,7 +356,7 @@ AddTrigger(
 					if (player == GetThisPlayer()) then
 						ActionVictory()
 						if (GrandStrategy == false) then
-							SetQuestCompleted("on-the-vanaquisl")
+							SetQuestCompleted("on-the-vanaquisl", GameSettings.Difficulty)
 						end
 					end
 				end}

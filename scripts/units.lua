@@ -1838,7 +1838,7 @@ DefineUnitType("unit-mushroom", { Name = "Mushroom",
 	NumDirections = 1,
 	Indestructible = true,
 	VisibleUnderFog = true,
-	NonSolid = true, 
+	Diminutive = true,
 	Variations = {
 		{
 			"variation-id", "red"
@@ -1872,7 +1872,7 @@ DefineUnitType("unit-mushroom-patch", { Name = "Mushroom Patch",
 	NumDirections = 1,
 	Indestructible = true,
 	VisibleUnderFog = true,
-	NonSolid = true,
+	Diminutive = true,
 	Variations = {
 		{
 			"variation-id", "red"
@@ -1906,7 +1906,7 @@ DefineUnitType("unit-flowers", { Name = "Flowers",
 	NumDirections = 1,
 	Indestructible = true,
 	VisibleUnderFog = true,
-	NonSolid = true,
+	Diminutive = true,
 	Vegetable = true,
 	Variations = {
 		{
@@ -1956,7 +1956,7 @@ DefineUnitType("unit-large-flower", { Name = "Large Flower",
 	NumDirections = 1,
 	Indestructible = true,
 	VisibleUnderFog = true,
-	NonSolid = true,
+	Diminutive = true,
 	Vegetable = true,
 	Variations = {
 		{
@@ -2056,7 +2056,7 @@ DefineUnitType("unit-twigs", { Name = _("Twigs"),
 	NumDirections = 1,
 	Indestructible = true,
 	VisibleUnderFog = true,
-	NonSolid = true,
+	Diminutive = true,
 	Variations = {
 		{
 			"variation-id", "1"
@@ -2175,7 +2175,7 @@ DefineUnitType("unit-bones", { Name = "Bones",
 	NumDirections = 1,
 	Indestructible = true,
 	VisibleUnderFog = true,
-	NonSolid = true,
+	Diminutive = true,
 	Variations = {
 		{
 			"variation-id", "1"
@@ -2278,7 +2278,7 @@ DefineUnitType("unit-stalagmites", { Name = _("Stalagmites"),
 	NumDirections = 1,
 	Indestructible = true,
 	VisibleUnderFog = true,
-	NonSolid = true, 
+	Diminutive = true,
 	Variations = {
 		{
 			"variation-id", "1"
@@ -2611,7 +2611,7 @@ DefineUnitType("unit-floor-decoration", { Name = "Floor Decoration",
 	NumDirections = 1,
 	Indestructible = true,
 	VisibleUnderFog = true,
-	NonSolid = true,
+	Diminutive = true,
 	Variations = {
 		{
 			"variation-id", "1"
@@ -3048,7 +3048,7 @@ DefineUnitType("unit-yale-excrement", { Name = _("Yale Excrement"),
 	Type = "land",
 	IsNotSelectable = true,
 	Decoration = true,
-	NonSolid = true,
+	Diminutive = true,
 	Detritus = true,
 	HiddenInEditor = true,
 	Variations = {

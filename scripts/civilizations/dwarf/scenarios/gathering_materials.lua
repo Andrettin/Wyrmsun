@@ -729,7 +729,7 @@ AddTrigger(
 																																									ActionVictory()
 																																								end
 																																																																															if (player == GetThisPlayer() and GrandStrategy == false) then
-																																									SetQuestCompleted("gathering-materials")
+																																									SetQuestCompleted("gathering-materials", GameSettings.Difficulty)
 	end
 end},
 																																							"icon-dwarven-steelclad"
@@ -1050,7 +1050,7 @@ AddTrigger(
 																																						ActionVictory()
 																																					end
 																																					if (player == GetThisPlayer() and GrandStrategy == false) then
-																																									SetQuestCompleted("gathering-materials")
+																																									SetQuestCompleted("gathering-materials", GameSettings.Difficulty)
 																																					end
 																																				end},
 																																				"icon-dwarven-steelclad"

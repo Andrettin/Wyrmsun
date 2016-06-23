@@ -630,7 +630,7 @@ AddTrigger(
 								end
 							end
 							if (player == GetThisPlayer() and GrandStrategy == false) then
-								SetQuestCompleted("a-bargain-is-struck")
+								SetQuestCompleted("a-bargain-is-struck", GameSettings.Difficulty)
 							end
 						end}
 					)
@@ -697,7 +697,7 @@ AddTrigger(
 						end
 					end
 					if (player == GetThisPlayer() and GrandStrategy == false) then
-						SetQuestCompleted("a-bargain-is-struck")
+						SetQuestCompleted("a-bargain-is-struck", GameSettings.Difficulty)
 					end
 				end}
 			)
@@ -766,7 +766,7 @@ AddTrigger(
 			end
 		end
 		if (player == GetThisPlayer() and GrandStrategy == false) then
-			SetQuestCompleted("a-bargain-is-struck")
+			SetQuestCompleted("a-bargain-is-struck", GameSettings.Difficulty)
 		end
 		return false
 	end

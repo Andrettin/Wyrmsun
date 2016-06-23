@@ -593,7 +593,7 @@ AddTrigger(
 					if (GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
 						ActionVictory()
 						if (player == GetThisPlayer() and GrandStrategy == false) then
-							SetQuestCompleted("the-wyrm")
+							SetQuestCompleted("the-wyrm", GameSettings.Difficulty)
 						end
 					elseif (GetFactionPlayer("Shinsplitter Clan") == GetThisPlayer()) then
 						Event(

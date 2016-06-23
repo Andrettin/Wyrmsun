@@ -125,7 +125,7 @@ AddTrigger(
 					if (player == GetThisPlayer()) then
 						ActionVictory()
 						if (GrandStrategy == false) then
-							SetQuestCompleted("the-razing-of-opitergium")
+							SetQuestCompleted("the-razing-of-opitergium", GameSettings.Difficulty)
 						end
 					end
 				end},

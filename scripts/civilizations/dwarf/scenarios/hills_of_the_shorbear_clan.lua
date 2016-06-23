@@ -1126,7 +1126,7 @@ AddTrigger(
 		if (GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
 			ActionVictory()
 			if (player == GetThisPlayer() and GrandStrategy == false) then
-				SetQuestCompleted("hills-of-the-shorbear-clan")
+				SetQuestCompleted("hills-of-the-shorbear-clan", GameSettings.Difficulty)
 			end
 		end
 		return false

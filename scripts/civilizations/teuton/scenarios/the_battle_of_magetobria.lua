@@ -139,7 +139,7 @@ AddTrigger(
 						if (player == GetThisPlayer()) then
 							ActionVictory()
 							if (GrandStrategy == false) then
-								SetQuestCompleted("the-battle-of-magetobria")
+								SetQuestCompleted("the-battle-of-magetobria", GameSettings.Difficulty)
 							end
 						end
 					end},

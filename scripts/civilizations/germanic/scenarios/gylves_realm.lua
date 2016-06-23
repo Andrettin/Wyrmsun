@@ -117,7 +117,7 @@ AddTrigger(
 				if (player == GetThisPlayer()) then
 					ActionVictory()
 					if (GrandStrategy == false) then
-						SetQuestCompleted("gylves-realm")
+						SetQuestCompleted("gylves-realm", GameSettings.Difficulty)
 					end
 				end
 			end}

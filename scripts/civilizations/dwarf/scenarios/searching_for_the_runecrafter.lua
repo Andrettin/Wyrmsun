@@ -715,7 +715,7 @@ AddTrigger(
 																											ActionVictory()
 																										end
 																										if (player == GetThisPlayer() and GrandStrategy == false) then
-																											SetQuestCompleted("searching-for-the-runecrafter")
+																											SetQuestCompleted("searching-for-the-runecrafter", GameSettings.Difficulty)
 																										end
 																									end}
 																								)

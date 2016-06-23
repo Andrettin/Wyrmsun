@@ -72,6 +72,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Editor
 - Fixed an issue which made certain unit layers not appear properly during unit placement.
+- Units are now removed if the terrain below them is changed to become incompatible with them.
 
 * Factions
 - Added the "Derro Tribe" faction for the gnomes, along with an encyclopedia entry for them.
@@ -124,6 +125,7 @@ https://github.com/Andrettin/Wyrmsun
 * Quests
 - Added a new dialogue featuring Thjodrorir in the "A Rock Home" quest (dwarf).
 - In "The Treasures of Svarinshaug" quest, the dwarves Brokk and Eitri now have to craft the artifacts for the priests of Hroptatyr, instead of for Modsognir.
+- The game now saves in which difficulty you completed a quest. Quests completed before this version of the game are marked as having been completed under the Normal difficulty.
 
 * Terrain
 - Added new tree stump tiles (by Exidelo).

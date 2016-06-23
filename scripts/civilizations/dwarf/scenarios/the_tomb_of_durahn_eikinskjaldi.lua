@@ -287,7 +287,7 @@ AddTrigger(
 				if (player == GetThisPlayer()) then
 					ActionVictory()
 					if (GrandStrategy == false) then
-						SetQuestCompleted("the-tomb-of-durahn-eikinskjaldi")
+						SetQuestCompleted("the-tomb-of-durahn-eikinskjaldi", GameSettings.Difficulty)
 					end
 				end
 			end}

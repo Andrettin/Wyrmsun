@@ -317,7 +317,20 @@ function addQuestIcon(quest, menu, x, y)
 	b:setBorderSize(0) -- Andrettin: make buttons not have the borders they previously had
 	b:setFrameImage(Preference.IconFrameG)
 	b:setPressedFrameImage(Preference.PressedIconFrameG)
-	b:setTooltip(GetQuestData(quest, "Name") .. " (" .. GetCivilizationData(GetQuestData(quest, "Civilization"), "Display") .. ")")
+	local tooltip = GetQuestData(quest, "Name") .. " (" .. GetCivilizationData(GetQuestData(quest, "Civilization"), "Display") .. ")"
+	if (GetQuestData(quest, "HighestCompletedDifficulty") >= 1) then
+		tooltip = tooltip .. "\nHighest Completed Difficulty: "
+		if (GetQuestData(quest, "HighestCompletedDifficulty") == 1) then
+			tooltip = tooltip .. "Easy"
+		elseif (GetQuestData(quest, "HighestCompletedDifficulty") == 2) then
+			tooltip = tooltip .. "Normal"
+		elseif (GetQuestData(quest, "HighestCompletedDifficulty") == 3) then
+			tooltip = tooltip .. "Hard"
+		elseif (GetQuestData(quest, "HighestCompletedDifficulty") == 4) then
+			tooltip = tooltip .. "Brutal"
+		end
+	end
+	b:setTooltip(tooltip)
 	return b
 end
 

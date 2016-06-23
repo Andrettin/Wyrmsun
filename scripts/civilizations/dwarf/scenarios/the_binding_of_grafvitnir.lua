@@ -307,7 +307,7 @@ AddTrigger(
 					{function(s)
 						ActionVictory()
 						if (GrandStrategy == false) then
-							SetQuestCompleted("the-binding-of-grafvitnir")
+							SetQuestCompleted("the-binding-of-grafvitnir", GameSettings.Difficulty)
 						end
 					end}
 				)

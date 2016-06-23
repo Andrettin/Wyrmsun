@@ -127,7 +127,7 @@ AddTrigger(
 				if (player == GetThisPlayer()) then
 					ActionVictory()
 					if (GrandStrategy == false) then
-						SetQuestCompleted("the-blue-danube")
+						SetQuestCompleted("the-blue-danube", GameSettings.Difficulty)
 					end
 				end
 			end}
