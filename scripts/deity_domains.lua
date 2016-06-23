@@ -108,8 +108,7 @@ DefineDeityDomain("temperance", {
 })
 
 DefineDeityDomain("wisdom", {
-	Name = "Wisdom",
-	Abilities = {"upgrade-inspire"}
+	Name = "Wisdom"
 })
 
 -- Three Theological Virtues
