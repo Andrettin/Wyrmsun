@@ -1914,16 +1914,16 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {HasDescription = true}, HighlightColor = "yellow",
 					More = {"ButtonInfo", {InfoType = "Description", MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 				},
-				{ 	Margin = {1, 1}, Condition = {Unique = "only", Quote = true},
+				{ 	Margin = {1, 1}, Condition = {Unique = "only", Identified = "only", Quote = true},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				}, 
-				{ 	Margin = {1, 1}, Condition = {Work = "only", Quote = true},
+				{ 	Margin = {1, 1}, Condition = {Work = "only", Unique = "false", Quote = true},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				}, 
-				{ 	Condition = {Unique = "only", Quote = true}, HighlightColor = "yellow",
+				{ 	Condition = {Unique = "only", Identified = "only", Quote = true}, HighlightColor = "yellow",
 					More = {"Text", {Text = UnitQuote("Unit"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 				},
-				{ 	Condition = {Work = "only", Quote = true}, HighlightColor = "yellow",
+				{ 	Condition = {Work = "only", Unique = "false", Quote = true}, HighlightColor = "yellow",
 					More = {"Text", {Text = UnitQuote("Unit"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
 				},
 		}	

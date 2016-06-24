@@ -150,6 +150,16 @@ DefineUniqueItem("draupnir", { -- Source: Kevin Crossley-Holland, "The Norse Myt
 	Quote = "\"The ring I wish not, though burned it was\nOf old with Hroptatyr's son;\nIn my home is no lack of gold\nIn the wealth my father wields.\"\n- Dwarven Traditional Poetry"
 } )
 
+--[[
+DefineUniqueItem("thusagans-book", { -- From Battle for Wesnoth: The Hammer of Thursagan
+	Name = "Thursagan's Book",
+	Type = "unit-book",
+	Work = "upgrade-work-thursagans-book",
+	Description = "Thursagan's Book contains an enormous amount of rune lore, written by the legendary arcanister himself. It was found in Knalga in 550 by the Order of Loremasters, and its code was deciphered only with difficulty.",
+	Quote = "\"But it might be that, with the book and the Hammer in hand, we could train and initiate runesmiths once more.\"\n- Angarthing, Dwarven Witness"
+} )
+--]]
+
 DefineUniqueItem("the-wedding-veil", { -- Source: Alena Ježková, "77 Prague Legends", 2006, p. 31.
 	Name = "The Wedding Veil",
 	Type = "unit-gold-deposit",

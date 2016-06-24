@@ -25,8 +25,8 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineUpgrade("upgrade-work-alvissmol", {
-	Name = _("Alvissmol"), -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 183-194.
+DefineUpgrade("upgrade-work-alvissmol", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 183-194.
+	Name = _("Alvissmol"),
 	NameElements = {
 		"compound", "suffix", "dwarven", "noun", "Mol"
 	},
@@ -35,8 +35,8 @@ DefineUpgrade("upgrade-work-alvissmol", {
 	Quote = "\"Alvis am I, and under the earth\nMy home 'neath the rocks I have;\nWith the wagon-guider a word do I seek,\nLet the gods their bond not break.\"\n- Alvissmol (Alvis)"
 })
 
-DefineUpgrade("upgrade-work-fafnismol", {
-	Name = _("Fafnismol"), -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 370-385.
+DefineUpgrade("upgrade-work-fafnismol", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 370-385.
+	Name = _("Fafnismol"),
 	NameElements = {
 		"compound", "suffix", "dwarven", "noun", "Mol"
 	},
@@ -46,8 +46,8 @@ DefineUpgrade("upgrade-work-fafnismol", {
 --	Quote = "\"Hail to thee, Sigurd! Thou victory hast,\nAnd Fafnir in fight hast slain;\nOf all the men who tread the earth,\nMost fearless art thou, methinks.\"\n- Fafnismol (Regin)" -- original
 })
 
-DefineUpgrade("upgrade-work-reginsmol", {
-	Name = _("Reginsmol"), -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 356-369.
+DefineUpgrade("upgrade-work-reginsmol", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 356-369.
+	Name = _("Reginsmol"),
 	NameElements = {
 		"compound", "suffix", "dwarven", "noun", "Mol"
 	},
@@ -64,6 +64,13 @@ DefineUpgrade("upgrade-work-the-scepter-of-fire", {
 	Quote = "\"The land of Untersberg's banner bold\nComes not from its own land;\nIt comes from Dwarfdom, grim and old\nMade by a runesmith's hand.\"\n- The Scepter of Fire"
 })
 
+DefineUpgrade("upgrade-work-thursagans-book", { -- From Battle for Wesnoth: The Hammer of Thursagan
+	Name = _("Thursagan's Book"),
+	Work = "scroll",
+	Civilization = "dwarf",
+	UniqueOnly = true
+})
+
 DefineModifier("upgrade-work-alvissmol",
 	{"KnowledgeMagic", 1}
 )
@@ -78,4 +85,9 @@ DefineModifier("upgrade-work-reginsmol",
 
 DefineModifier("upgrade-work-the-scepter-of-fire",
 	{"KnowledgeMagic", 1}
+)
+
+DefineModifier("upgrade-work-thursagans-book",
+	{"KnowledgeMagic", 3},
+	{"FireResistance", 5}
 )
