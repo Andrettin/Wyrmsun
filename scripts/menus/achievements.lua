@@ -37,6 +37,8 @@ function RunAchievementsMenu()
 	local offx = (Video.Width - 640) / 2
 	local offy = (Video.Height - 480) / 2
 	
+	menu:addLabel(_("~<Achievements~>"), offx + 320, offy + 104 + 36*-2)
+
 	local item_x = 1
 	local item_y = 1
 	local achievements = GetAchievements()
