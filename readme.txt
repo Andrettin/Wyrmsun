@@ -62,11 +62,11 @@ https://github.com/Andrettin/Wyrmsun
 -----------------------------------------------------------------------
 
 * Abilities
-- Aura abilities are now also applied to garrisoned within range.
+- Aura abilities are now also applied to garrisoned units within range.
 
 * Buildings
 - Added Goblin Temple (graphics by Jinn).
-- Added Latin Farms (graphics by Wildfire Games and Jinn).
+- Added Latin Farm (graphics by Wildfire Games and Jinn).
 - Added Latin Barracks (graphics by Wildfire Games and Jinn).
 - Added Latin Smithy (graphics by Wildfire Games and Jinn).
 
