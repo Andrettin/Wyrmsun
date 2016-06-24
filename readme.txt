@@ -69,6 +69,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added Latin Farm (graphics by Wildfire Games and Jinn).
 - Added Latin Barracks (graphics by Wildfire Games and Jinn).
 - Added Latin Smithy (graphics by Wildfire Games and Jinn).
+- Changed the Germanic Carpenter's Shop hotkey to R.
 
 * Editor
 - Fixed an issue which made certain unit layers not appear properly during unit placement.
@@ -123,9 +124,11 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed a multiplayer crash cause which triggered when both players had different "No Randomness" settings.
 
 * Quests
-- Added a new dialogue featuring Thjodrorir in the "A Rock Home" quest (dwarf).
-- In "The Treasures of Svarinshaug" quest, the dwarves Brokk and Eitri now have to craft the artifacts for the priests of Hroptatyr, instead of for Modsognir.
+- Added a new dialogue featuring Thjodrorir in the "A Rocky Home" quest (dwarf).
+- In "The Treasures of Svarinshaug" quest (dwarf), the dwarves Brokk and Eitri now have to craft the artifacts for the priests of Hroptatyr, instead of for Modsognir.
 - The game now saves in which difficulty you completed a quest. Quests completed before this version of the game are marked as having been completed under the Normal difficulty.
+- "The Binding of Grafvitnir" quest (dwarf) now grants 3 Technology Points instead of 2.
+- "The Battle of Magetobria" quest (Teuton) now grants 4 Technology Points instead of 3.
 
 * Terrain
 - Added new tree stump tiles (by Exidelo).
@@ -141,7 +144,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added Goblin Shaman (unit graphics by b_o and icon by Jinn).
 - Added Teuton Cleric (unit graphics by b_o and Jinn and icon by Jinn).
 - As with Steelclads, dwarven Axefighters now also change the graphics of their weapons when the Great Axe upgrade is researched.
-- Priest units can now be trained at temples.
+- Priest units can now be trained at temples, for the dwarves and the Teutons.
 
 -----------------------------------------------------------------------
 - 2.2.6
