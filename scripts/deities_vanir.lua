@@ -30,6 +30,7 @@ DefineDeity("frey", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980
 	Pantheon = "Vanir",
 	HomePlane = "Vanaheim",
 	Civilizations = {"elf", "germanic", "norse"}, -- Alaric Hall proposes that the Vanir are more or less identical with the elves, so it makes sense to make Frey an elven deity as well; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 135.
+	Religions = {"paganism"},
 	Gender = "male",
 	Major = true,
 	Domains = {"earth"}, -- fertility god
@@ -44,6 +45,7 @@ DefineDeity("freyja", { -- Source: Peter Buchholz, "Perspectives for Historical 
 	Pantheon = "Vanir",
 	HomePlane = "Vanaheim",
 	Civilizations = {"elf", "germanic", "norse"}, -- Alaric Hall proposes that the Vanir are more or less identical with the elves, so it makes sense to make Freyja an elven deity as well; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 135.
+	Religions = {"paganism"},
 	Gender = "female",
 	Major = true,
 	Domains = {"earth"}, -- fertility goddess
@@ -61,6 +63,7 @@ DefineDeity("gullveig", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 
 	Pantheon = "Vanir",
 	HomePlane = "Vanaheim",
 	Civilizations = {"elf", "norse"}, -- Alaric Hall proposes that the Vanir are more or less identical with the elves, so it makes sense to make Gullveig an elven deity as well; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 135.
+	Religions = {"paganism"},
 	Gender = "female",
 	Domains = {"greed"},
 --	Description = "A gold-loving goddess, Gullveig was burned alive during a visit to the Aesir for her greed. Three times she was burned, and three times she was reborn. The Asgardian treatment of the goddess caused the Aesir-Vanir War. Gullveig is feared for her work of dark magic."
@@ -71,6 +74,7 @@ DefineDeity("njord", { -- Husband of Skadi; Source: Kevin Crossley-Holland, "The
 	Pantheon = "Vanir",
 	HomePlane = "Vanaheim",
 	Civilizations = {"elf", "germanic", "norse"}, -- Alaric Hall proposes that the Vanir are more or less identical with the elves, so it makes sense to make Njord an elven deity as well; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 135.
+	Religions = {"paganism"},
 	Gender = "male",
 	Domains = {"water", "air"}, -- god of the Sea and Wind
 	CulturalNames = {
@@ -84,6 +88,7 @@ DefineDeity("eloh", { -- from Under the Burning Suns (Battle for Wesnoth)
 	Pantheon = "Vanir", -- since she is an elven deity
 	HomePlane = "Vanaheim",
 	Civilizations = {"elf"},
+	Religions = {"paganism"},
 	Gender = "female",
 	Major = true
 })

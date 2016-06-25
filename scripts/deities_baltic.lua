@@ -28,6 +28,7 @@
 DefineDeity("Perkuno", { -- Source: H. Munro Chadwick, "The Oak and the Thunder-God", 1900, pp. 26-27, 32.
 	Name = "Taran",
 	Civilizations = {"baltic"}, -- worshiped by the Old Prussians
+	Religions = {"paganism"},
 	Gender = "male",
 	Major = true,
 	Domains = {"air", "fire", "order"}, -- maybe wood?

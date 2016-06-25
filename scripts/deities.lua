@@ -44,6 +44,7 @@ DefineDeity("Indo-European Sky God", { -- real name? Source: Encyclopedia of the
 DefineDeity("gaia", { -- Source: Jenny March, "Dictionary of Classical Mythology", 2014, pp. 200-201.
 	Name = "Gaia",
 	Civilizations = {"ettin", "greek"},
+	Religions = {"paganism"},
 	Gender = "female",
 	Major = true,
 	Domains = {"earth", "chaos"},
@@ -54,6 +55,7 @@ DefineDeity("gathaarl", { -- from Tyrant, Goblin God of Battle
 	Name = "Gathaarl",
 	HomePlane = "Helheim",
 	Civilizations = {"goblin"},
+	Religions = {"paganism"},
 	Domains = {"chaos", "earth", "wrath"},
 	Gender = "male",
 	Major = true,
@@ -68,6 +70,7 @@ DefineDeity("griknagh", { -- From Under the Burning Suns (Battle for Wesnoth)
 	Name = "Griknagh",
 	HomePlane = "Helheim",
 	Civilizations = {"troll"},
+	Religions = {"paganism"},
 	Gender = "male",
 	Major = true
 })
@@ -76,6 +79,7 @@ DefineDeity("mzivult", { -- by Jesse Crider
 	Name = "Mzivult",
 	HomePlane = "Helheim",
 	Civilizations = {"gnome"}, -- Derro deity
+	Religions = {"paganism"},
 	Domains = {"wrath", "earth", "darkness"},
 	Gender = "male",
 	Major = true,

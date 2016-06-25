@@ -30,6 +30,7 @@ DefineDeity("odin", { -- Known as Allfather, the Terrible One, One-eyed, Father 
 	Pantheon = "Aesir",
 	HomePlane = "Asgard",
 	Civilizations = {"dwarf", "germanic", "norse", "teuton"},
+	Religions = {"paganism"},
 	Gender = "male",
 	Major = true,
 	Domains = {"aether", "courage", "wisdom"},
@@ -47,6 +48,7 @@ DefineDeity("thor", { -- Son of Odin and Jord (Fjorgyn) and Sif's husband; known
 	Pantheon = "Aesir",
 	HomePlane = "Asgard",
 	Civilizations = {"dwarf", "germanic", "norse", "teuton"},
+	Religions = {"paganism"},
 	Gender = "male",
 	Major = true,
 	Domains = {"air", "courage", "order"},
@@ -62,6 +64,7 @@ DefineDeity("frigg", { -- First among the goddesses; Source: Kevin Crossley-Holl
 	Name = "Frigg",
 	Pantheon = "Aesir",
 	Civilizations = {"germanic", "norse", "teuton"},
+	Religions = {"paganism"},
 	Gender = "female",
 	CulturalNames = {
 		"germanic", "Frijjō", -- Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 129.
@@ -74,19 +77,21 @@ DefineDeity("sol", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980,
 	Name = "Sol",
 	Pantheon = "Aesir",
 	Civilizations = {"germanic", "norse", "teuton"},
+	Religions = {"paganism"},
 	Gender = "female",
 	Domains = {"fire"}, -- goddess of the sun
 	CulturalNames = {
 		"germanic", "Sunōn", -- a sun chariot artifact belonging to the Nordic Bronze Age was found in Trundholm Mose (in Zealand, Denmark), having an aspect similar to that ascribed to Sol in Norse mythology; Winfred P. Lehmann gives the word for sun in Proto-Germanic as "Sunōn", which seems very possible to be the word which gave origin to the Old High German name of the deity, "Sunna" (and Lehmann gives an Old High German "Sunno" as being a reflex of "Sunōn", too); Source: http://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-sun-chariot/; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
 		"teuton", "Sunna" -- The second Merseburg charm (written in Old High German) attests a deity named Sunna, which seems likely to be the Old High German name for Sol; in the charm her sister is Sinhtgunt; Source: Susan D. Fuller, "Pagan Charms in Tenth-Century Saxony? The Function of the Merseburg Charms", 1909, p. 162.
 	},
---	Description = "Sol is a sun goddess and the daughter of Mundilfari. Due to her association with the mighty star, she was believed by the Germanics to carry the sun in her chariot with the horses Arvak and Alsvid."
+--	Description = "Sol is a sun goddess and the daughter of Mundilfari. Due to her association with the mighty star, she was believed by the Germanics to carry the sun in her chariot with the horses Arvak and Alsvid. In truth, however, Sol is linked to the abstract concept of a sun, rather than to a particular one."
 })
 
 DefineDeity("tyr", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 251; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, pp. 115, 133.
 	Name = "Tyr",
 	Pantheon = "Aesir",
 	Civilizations = {"germanic", "norse", "teuton"},
+	Religions = {"paganism"},
 	Gender = "male",
 	Domains = {"courage"}, -- god of war
 	CulturalNames = {
@@ -101,6 +106,7 @@ DefineDeity("aegir", { -- Married to Ran; they have their hall under the sea by 
 	Name = "Aegir",
 	Pantheon = "Aesir",
 	Civilizations = {"norse"},
+	Religions = {"paganism"},
 	Gender = "male",
 	Domains = {"water"} -- god of the sea
 })
@@ -110,6 +116,7 @@ DefineDeity("balder", { -- Due to Loki's mischief, he was killed by Hod; Balder 
 	Pantheon = "Aesir",
 	HomePlane = "Asgard",
 	Civilizations = {"norse", "teuton"},
+	Religions = {"paganism"},
 	Gender = "male",
 	CulturalNames = {
 		"teuton", "Bældæg", -- Anglo-Saxon name for the deity
@@ -121,6 +128,7 @@ DefineDeity("bragi", { -- Son of Odin and husband of Idun; Source: Kevin Crossle
 	Name = "Bragi",
 	Pantheon = "Aesir",
 	Civilizations = {"norse"},
+	Religions = {"paganism"},
 	Gender = "male",
 	Domains = {} -- god of eloquence and poetry
 })
@@ -129,6 +137,7 @@ DefineDeity("eir", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980,
 	Name = "Eir",
 	Pantheon = "Aesir",
 	Civilizations = {"norse"},
+	Religions = {"paganism"},
 	Gender = "female",
 	Domains = {"life"} -- god of healing
 })
@@ -137,6 +146,7 @@ DefineDeity("forseti", { -- Son of Balder and Nanna; Source: Kevin Crossley-Holl
 	Name = "Forseti",
 	Pantheon = "Aesir",
 	Civilizations = {"norse"},
+	Religions = {"paganism"},
 	Gender = "male",
 	Domains = {"justice"} -- god of justice
 })
@@ -145,6 +155,7 @@ DefineDeity("fulla", { -- Servant of Frigg; Source: Kevin Crossley-Holland, "The
 	Name = "Fulla",
 	Pantheon = "Aesir",
 	Civilizations = {"norse"},
+	Religions = {"paganism"},
 	Gender = "female"
 })
 
@@ -152,6 +163,7 @@ DefineDeity("gefion", { -- Name means "Giver"; Source: Kevin Crossley-Holland, "
 	Name = "Gefion",
 	Pantheon = "Aesir",
 	Civilizations = {"norse"},
+	Religions = {"paganism"},
 	Gender = "female",
 	Domains = {"earth"} -- goddess of fertility
 })
@@ -160,6 +172,7 @@ DefineDeity("heimdall", { -- Son of nine mothers; the horn Gjall belongs to him;
 	Name = "Heimdall",
 	Pantheon = "Aesir",
 	Civilizations = {"norse"},
+	Religions = {"paganism"},
 	Gender = "male"
 })
 
@@ -167,6 +180,7 @@ DefineDeity("hod", { -- Blind god, who through Loki's mischief killed his brothe
 	Name = "Hod",
 	Pantheon = "Aesir",
 	Civilizations = {"norse"},
+	Religions = {"paganism"},
 	Gender = "male"
 })
 
@@ -174,6 +188,7 @@ DefineDeity("honir", { -- Long-legged god; indecisive; sent by the Aesir to the 
 	Name = "Honir",
 	Pantheon = "Aesir",
 	Civilizations = {"norse"},
+	Religions = {"paganism"},
 	Gender = "male"
 })
 
@@ -181,6 +196,7 @@ DefineDeity("idun", { -- Wife of Bragi; she takes care of the golden apples of y
 	Name = "Idun",
 	Pantheon = "Aesir",
 	Civilizations = {"norse"},
+	Religions = {"paganism"},
 	Gender = "female"
 })
 
@@ -188,6 +204,7 @@ DefineDeity("jord", { -- Mother of Thor by Odin; name means "Earth"; also known 
 	Name = "Jord",
 	Pantheon = "Aesir",
 	Civilizations = {"norse"},
+	Religions = {"paganism"},
 	Gender = "female",
 	Domains = {"earth"}
 })
@@ -196,6 +213,7 @@ DefineDeity("lofn", { -- Goddess who favored illicit unions; Source: Kevin Cross
 	Name = "Lofn",
 	Pantheon = "Aesir",
 	Civilizations = {"norse"},
+	Religions = {"paganism"},
 	Gender = "female"
 })
 
@@ -203,6 +221,7 @@ DefineDeity("loki", { -- Son of two giants; attractive, mischief-making and ambi
 	Name = "Loki",
 	Pantheon = "Aesir",
 	Civilizations = {"norse"},
+	Religions = {"paganism"},
 	Gender = "male",
 	Major = true
 })
@@ -211,6 +230,7 @@ DefineDeity("mimir", { -- Wise god sent by the Aesir to seal their truce with th
 	Name = "Mimir",
 	Pantheon = "Aesir",
 	Civilizations = {"norse"},
+	Religions = {"paganism"},
 	Gender = "male",
 	Domains = {"wisdom"}
 })
@@ -219,6 +239,7 @@ DefineDeity("nanna", { -- Balder's wife and daughter of Nep; Source: Kevin Cross
 	Name = "Nanna",
 	Pantheon = "Aesir",
 	Civilizations = {"norse"},
+	Religions = {"paganism"},
 	Gender = "female"
 })
 
@@ -226,6 +247,7 @@ DefineDeity("ring", { -- Odin's mistress; Source: Kevin Crossley-Holland, "The N
 	Name = "Ring",
 	Pantheon = "Aesir",
 	Civilizations = {"norse"},
+	Religions = {"paganism"},
 	Gender = "female"
 })
 
@@ -233,6 +255,7 @@ DefineDeity("saga", { -- Drinks every day with Odin in her hall, Sokkvabekk; Sou
 	Name = "Saga",
 	Pantheon = "Aesir",
 	Civilizations = {"norse"},
+	Religions = {"paganism"},
 	Gender = "female"
 })
 
@@ -240,6 +263,7 @@ DefineDeity("seaxneat", { -- also called Saxnoth; "The Conquest of Saxony", p. 9
 	Name = "Seaxneat",
 	Pantheon = "Aesir",
 	Civilizations = {"teuton"},
+	Religions = {"paganism"},
 	Gender = "male"
 	-- Seaxneat was a Germanic deity, but was he actually considered one of the Aesir?
 })
@@ -248,6 +272,7 @@ DefineDeity("sif", { -- Thor's wife; had golden hair, which were cut by Loki; So
 	Name = "Sif",
 	Pantheon = "Aesir",
 	Civilizations = {"norse"},
+	Religions = {"paganism"},
 	Gender = "female"
 })
 
@@ -255,6 +280,7 @@ DefineDeity("sjofn", { -- Inspired human passion; Source: Kevin Crossley-Holland
 	Name = "Sjofn",
 	Pantheon = "Aesir",
 	Civilizations = {"norse"},
+	Religions = {"paganism"},
 	Gender = "female"
 })
 
@@ -262,6 +288,7 @@ DefineDeity("syn", { -- Aids defendants in trials; Source: Kevin Crossley-Hollan
 	Name = "Syn",
 	Pantheon = "Aesir",
 	Civilizations = {"norse"},
+	Religions = {"paganism"},
 	Gender = "female"
 })
 
@@ -269,6 +296,7 @@ DefineDeity("ull", { -- name means "Glory" or "Brilliance"; Source: Kevin Crossl
 	Name = "Ull",
 	Pantheon = "Aesir",
 	Civilizations = {"norse"},
+	Religions = {"paganism"},
 	Gender = "male",
 	Domains = {}, -- god of archery and skiing
 })
@@ -277,6 +305,7 @@ DefineDeity("var", { -- name means "Oath"; keeps marriage oaths and punishes tho
 	Name = "Var",
 	Pantheon = "Aesir",
 	Civilizations = {"norse"},
+	Religions = {"paganism"},
 	Gender = "female"
 })
 
@@ -284,5 +313,6 @@ DefineDeity("vor", { -- nothing could be kept hidden from her; Source: Kevin Cro
 	Name = "Vor",
 	Pantheon = "Aesir",
 	Civilizations = {"norse"},
+	Religions = {"paganism"},
 	Gender = "female"
 })

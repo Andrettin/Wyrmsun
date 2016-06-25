@@ -28,6 +28,7 @@
 DefineDeity("perun", { -- Slavic thunder-god; Source: "Germans, Avars and Slavs", p. 125; Source: H. Munro Chadwick, "The Oak and the Thunder-God", 1900, p. 27.
 	Name = "Perun",
 	Civilizations = {"slav"},
+	Religions = {"paganism"},
 	Gender = "male",
 	Major = true,
 	Domains = {"air"}
@@ -36,6 +37,7 @@ DefineDeity("perun", { -- Slavic thunder-god; Source: "Germans, Avars and Slavs"
 DefineDeity("svarog", { -- Slavic light-god; Source: "Germans, Avars and Slavs", p. 125
 	Name = "Svarog",
 	Civilizations = {"slav"},
+	Religions = {"paganism"},
 	Gender = "male",
 	Major = true,
 	Domains = {"light"}
@@ -44,18 +46,21 @@ DefineDeity("svarog", { -- Slavic light-god; Source: "Germans, Avars and Slavs",
 DefineDeity("deva", { -- Slavic season goddess; Source: "Germans, Avars and Slavs", p. 125
 	Name = "Deva",
 	Civilizations = {"slav"},
+	Religions = {"paganism"},
 	Gender = "female"
 })
 
 DefineDeity("lada", { -- Slavic season goddess; Source: "Germans, Avars and Slavs", p. 125
 	Name = "Lada",
 	Civilizations = {"slav"},
+	Religions = {"paganism"},
 	Gender = "female"
 })
 
 DefineDeity("ogen", { -- Source: "Germans, Avars and Slavs", p. 125
 	Name = "Ogen",
 	Civilizations = {"slav"},
+	Religions = {"paganism"},
 	Domains = {"fire"}
 	-- child of Svarog
 })
@@ -63,6 +68,7 @@ DefineDeity("ogen", { -- Source: "Germans, Avars and Slavs", p. 125
 DefineDeity("slnce", { -- the Sun; Source: "Germans, Avars and Slavs", p. 125
 	Name = "Slnce",
 	Civilizations = {"slav"},
+	Religions = {"paganism"},
 	Domains = {"fire"} -- deity of the sun
 	-- child of Svarog
 })
@@ -70,5 +76,6 @@ DefineDeity("slnce", { -- the Sun; Source: "Germans, Avars and Slavs", p. 125
 DefineDeity("vesna", { -- Slavic season goddess; Source: "Germans, Avars and Slavs", p. 125
 	Name = "Vesna",
 	Civilizations = {"slav"},
+	Religions = {"paganism"},
 	Gender = "female"
 })

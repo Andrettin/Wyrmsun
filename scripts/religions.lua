@@ -25,10 +25,31 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineDeity("taranos", { -- Source: H. Munro Chadwick, "The Oak and the Thunder-God", 1900, pp. 26, 28.
-	Name = "Taranos",
-	Civilizations = {"celt"},
-	Religions = {"paganism"},
-	Gender = "male",
-	Domains = {"air"}
+DefineReligion("buddhism", {
+	Name = "Buddhism"
+})
+
+DefineReligion("christianity", {
+	Name = "Christianity"
+})
+
+DefineReligion("hinduism", {
+	Name = "Hinduism"
+})
+
+DefineReligion("islam", {
+	Name = "Islam"
+})
+
+DefineReligion("judaism", {
+	Name = "Judaism"
+})
+
+DefineReligion("paganism", {
+	Name = "Paganism",
+	CulturalDeities = true
+})
+
+DefineReligion("zoroastrianism", {
+	Name = "Zoroastrianism"
 })
