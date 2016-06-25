@@ -36,7 +36,8 @@ DefineDeity("odin", { -- Known as Allfather, the Terrible One, One-eyed, Father 
 	CulturalNames = {
 		"dwarf", "Hroptatyr", -- in Norse mythology, one of the names of Odin, which was used in a verse concerning a charm by the dwarf Thjodrorir in the Hovamol, who sang wisdom for "Hroptatyr" wise; name means "Crier of the Gods", "the Crying God" or "the Prophet"
 		"germanic", "Wōđanaz", -- Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 128.
-		"teuton", "Woden" -- Anglo-Saxon name for the deity
+--		"teuton", "Woden", -- Anglo-Saxon name for the deity
+		"teuton", "Wodan" -- Old High German name for the deity, as seen in the second Merseburg charm; Source: Susan D. Fuller, "Pagan Charms in Tenth-Century Saxony? The Function of the Merseburg Charms", 1909, p. 162.
 	},
 	Description = "Odin is the chief deity of the Aesir and the father of Thor and Balder. In archaic times, he revealed himself to the Germanics of Earth and the dwarves of Nidavellir, originating a priesthood on both worlds (having the appearance of a human on Earth and that of a dwarf on Nidavellir). Since deities are beings made of pure magic, they can only establish a tenuous link to the material plane. The result of this limitation is that Odin's main venue of communication with his human and dwarven followers is through their dreams. As Woden, the royal house of Deira claimed him as their ancestor."
 })
@@ -64,9 +65,22 @@ DefineDeity("frigg", { -- First among the goddesses; Source: Kevin Crossley-Holl
 	Gender = "female",
 	CulturalNames = {
 		"germanic", "Frijjō", -- Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 129.
-		"teuton", "Friia" -- as given in the second Merseburg charm (presumably in Old High German); Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 129.
+		"teuton", "Friia" -- as given in the second Merseburg charm (which is in Old High German); in the charm Volla is described as being her sister; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 129; Source: Susan D. Fuller, "Pagan Charms in Tenth-Century Saxony? The Function of the Merseburg Charms", 1909, p. 162.
 	},
 --	Description = "Frigg is Odin's wife and the mother of Balder."
+})
+
+DefineDeity("sol", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 5-6, 250.
+	Name = "Sol",
+	Pantheon = "Aesir",
+	Civilizations = {"germanic", "norse", "teuton"},
+	Gender = "female",
+	Domains = {"fire"}, -- goddess of the sun
+	CulturalNames = {
+		"germanic", "Sunōn", -- a sun chariot artifact belonging to the Nordic Bronze Age was found in Trundholm Mose (in Zealand, Denmark), having an aspect similar to that ascribed to Sol in Norse mythology; Winfred P. Lehmann gives the word for sun in Proto-Germanic as "Sunōn", which seems very possible to be the word which gave origin to the Old High German name of the deity, "Sunna" (and Lehmann gives an Old High German "Sunno" as being a reflex of "Sunōn", too); Source: http://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-sun-chariot/; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.
+		"teuton", "Sunna" -- The second Merseburg charm (written in Old High German) attests a deity named Sunna, which seems likely to be the Old High German name for Sol; in the charm her sister is Sinhtgunt; Source: Susan D. Fuller, "Pagan Charms in Tenth-Century Saxony? The Function of the Merseburg Charms", 1909, p. 162.
+	},
+--	Description = "Sol is a sun goddess and the daughter of Mundilfari. Due to her association with the mighty star, she was believed by the Germanics to carry the sun in her chariot with the horses Arvak and Alsvid."
 })
 
 DefineDeity("tyr", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 251; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, pp. 115, 133.
@@ -98,7 +112,7 @@ DefineDeity("balder", { -- Due to Loki's mischief, he was killed by Hod; Balder 
 	Civilizations = {"norse", "teuton"},
 	Gender = "male",
 	CulturalNames = {
-		"teuton", "Bældæg" -- Anglo-Saxon name for the deity
+		"teuton", "Bældæg", -- Anglo-Saxon name for the deity
 	},
 --	Description = "The son of Odin and Frigg, Balder is known for his beauty, wisdom and gentleness. As Baeldaeg, the royal houses of both Bernicia and Wessex ascribed their descent to him."
 })

@@ -45,8 +45,30 @@ DefineUpgrade("upgrade-work-hildebrandslied", {
 	Quote = "\"That Hildebrand was my father,\nand I am Hadubrand.\nLong ago to the east he went,\nfleeing Otacher's hatred\"\n- Hildebrandslied (Hadubrand)"
 })
 
+DefineUpgrade("upgrade-work-merseburg-charm-1", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, pp. 110-111; Source: Susan D. Fuller, "Pagan Charms in Tenth-Century Saxony? The Function of the Merseburg Charms", 1909, p. 162.
+	Name = _("Invar Vigandum"), -- part of the original text meaning "escape from the foe", chosen here as its title
+	Work = "scroll",
+	Civilization = "teuton", -- written in Old High German
+	Quote = "The Idisi once alighted, alighted yonder.\nSome riveted fetters, others stemmed the war tide,\nOthers hammered upon the chains:\nSlip from shackles, escape from the foe!\n- Invar Vigandum" -- translation by Felix Grendon (and thus in the public domain); the Idisi are divine women, possibly valkyries
+})
+
+DefineUpgrade("upgrade-work-merseburg-charm-2", { -- Source: Susan D. Fuller, "Pagan Charms in Tenth-Century Saxony? The Function of the Merseburg Charms", 1909, p. 162; Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, pp. 111, 149.
+	Name = _("Sose Gelimida Sin"), -- part of the original text, chosen here as its title
+	Work = "scroll",
+	Civilization = "teuton", -- written in Old High German
+	Quote = "Limb to limb as they were glued together.\n- Sose Gelimida Sin" -- translation in Felix Grendon's article (and thus in the public domain)
+})
+
 DefineModifier("upgrade-work-hildebrandslied",
 	{"KnowledgeWarfare", 1}
+)
+
+DefineModifier("upgrade-work-merseburg-charm-1",
+	{"KnowledgeMagic", 1}
+)
+
+DefineModifier("upgrade-work-merseburg-charm-2",
+	{"KnowledgeMagic", 1}
 )
 
 Load("scripts/civilizations/teuton/works_english.lua")

@@ -114,13 +114,6 @@ DefineUpgrade("upgrade-terror", {
 	Ability = true
 })
 
-DefineUpgrade("upgrade-unshackle", {
-	Name = _("Unshackle"),
-	Icon = "icon-axe-mastery",
-	Ability = true,
-	Quote = "The Idisi once alighted, alighted yonder.\nSome riveted fetters, others stemmed the war tide,\nOthers hammered upon the chains:\nSlip from shackles, escape from the foe!\n- Medieval German Charm" -- the Idisi are divine women, possibly valkyries; Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, pp. 110-111.
-})
-
 DefineModifier("upgrade-axe-mastery",
 	{"BasicDamage", 2}
 )

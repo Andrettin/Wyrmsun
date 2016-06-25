@@ -88,3 +88,19 @@ DefineCharacter("Widukind", {
 --	Year = ?,
 --	DeathYear = ?
 })
+
+DefineCharacter("Henry of Saxony", { -- Source: Susan D. Fuller, "Pagan Charms in Tenth-Century Saxony? The Function of the Merseburg Charms", 1909, pp. 166-167.
+	Name = "Henry",
+	ExtraName = "of Saxony", -- to differentiate him
+	Gender = "male",
+	Type = "unit-teuton-ritter", -- noble, and during his reign horses were made a main element of the Saxon military
+	Civilization = "teuton",
+	ProvinceOfOrigin = "Hannover", -- correct?
+--	Noble = true,
+	Year = 919, -- reign began
+	DeathYear = 936, -- reign ended
+	HistoricalTitles = {
+		"head-of-state", 919, 936, "teuton", "Holy Rome",
+		"head-of-state", 919, 936, "teuton", "Saxony" -- duke of Saxony (from when until when? here we use the same dates as for his other title)
+	}
+})

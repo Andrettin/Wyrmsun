@@ -2594,8 +2594,9 @@ DefineCharacter("Margaret", { -- Source: Snorri Sturlson, "Heimskringla", 1844, 
 	}
 })
 
-DefineCharacter("Henry", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 142.
+DefineCharacter("Henry of Greenland", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 142.
 	Name = "Henry", -- appointed Bishop of Greenland, but never arrived there
+	ExtraName = "of Greenland", -- to differentiate him
 	Gender = "male",
 	Type = "unit-teuton-priest",
 	Civilization = "norse", -- presumably
