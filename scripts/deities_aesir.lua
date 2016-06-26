@@ -69,8 +69,18 @@ DefineDeity("frigg", { -- First among the goddesses; Source: Kevin Crossley-Holl
 	CulturalNames = {
 		"germanic", "Frijjō", -- Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 129.
 		"teuton", "Friia" -- as given in the second Merseburg charm (which is in Old High German); in the charm Volla is described as being her sister; Source: Peter Buchholz, "Perspectives for Historical Research in Germanic Religion", 1968, p. 129; Source: Susan D. Fuller, "Pagan Charms in Tenth-Century Saxony? The Function of the Merseburg Charms", 1909, p. 162.
+		-- "Frig" is the Anglo-Saxon name for the goddess; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 98.
 	},
 --	Description = "Frigg is Odin's wife and the mother of Balder."
+})
+
+DefineDeity("seaxneat", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 98.
+	Name = "Seaxneat",
+	Pantheon = "Aesir", -- Seaxneat was a Germanic (Anglo-Saxon) deity, but was he actually considered one of the Aesir?
+	Civilizations = {"teuton"},
+	Religions = {"paganism"},
+	Gender = "male",
+--	Description = "Seaxneat was claimed by the royal house of Essex as their ancestor."
 })
 
 DefineDeity("sol", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 5-6, 250.
@@ -275,15 +285,6 @@ DefineDeity("saga", { -- Drinks every day with Odin in her hall, Sokkvabekk; Sou
 	Civilizations = {"norse"},
 	Religions = {"paganism"},
 	Gender = "female"
-})
-
-DefineDeity("seaxneat", { -- also called Saxnoth; "The Conquest of Saxony", p. 9
-	Name = "Seaxneat",
-	Pantheon = "Aesir",
-	Civilizations = {"teuton"},
-	Religions = {"paganism"},
-	Gender = "male"
-	-- Seaxneat was a Germanic deity, but was he actually considered one of the Aesir?
 })
 
 DefineDeity("sif", { -- Thor's wife; had golden hair, which were cut by Loki; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 249.
