@@ -142,6 +142,15 @@ DefineDeity("eir", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980,
 	Domains = {"life"} -- god of healing
 })
 
+DefineDeity("eostre", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 97.
+	Name = "Eostre",
+	Pantheon = "Aesir",
+	HomePlane = "Asgard",
+	Civilizations = {"teuton"}, -- Anglo-Saxon goddess
+	Religions = {"paganism"},
+	Gender = "female"
+})
+
 DefineDeity("forseti", { -- Son of Balder and Nanna; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 242.
 	Name = "Forseti",
 	Pantheon = "Aesir",
@@ -190,6 +199,15 @@ DefineDeity("honir", { -- Long-legged god; indecisive; sent by the Aesir to the 
 	Civilizations = {"norse"},
 	Religions = {"paganism"},
 	Gender = "male"
+})
+
+DefineDeity("hretha", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 97.
+	Name = "Hretha",
+	Pantheon = "Aesir",
+	HomePlane = "Asgard",
+	Civilizations = {"teuton"}, -- Anglo-Saxon goddess
+	Religions = {"paganism"},
+	Gender = "female"
 })
 
 DefineDeity("idun", { -- Wife of Bragi; she takes care of the golden apples of youth; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 246.

@@ -2015,6 +2015,7 @@ function DrawGrandStrategyInterface()
 
 	if (GrandStrategyFaction ~= nil) then
 		AddGrandStrategyLabel(GrandStrategyFaction.Name .. ", " .. GetYearString(GrandStrategyYear), 81, Video.Height - 186 + 8, Fonts["game"], true, false)
+--		AddGrandStrategyLabel(GrandStrategyFaction.Name .. ", " .. GetCivilizationData(GrandStrategyFaction.Civilization, "MonthName", "january") .. ", " .. GetYearString(GrandStrategyYear), 81, Video.Height - 186 + 8, Fonts["game"], true, false)
 	end
 	
 	if (SelectedProvince ~= nil) then

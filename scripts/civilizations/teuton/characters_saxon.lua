@@ -95,7 +95,7 @@ DefineCharacter("Henry of Saxony", { -- Source: Susan D. Fuller, "Pagan Charms i
 	Gender = "male",
 	Type = "unit-teuton-ritter", -- noble, and during his reign horses were made a main element of the Saxon military
 	Civilization = "teuton",
-	ProvinceOfOrigin = "Hannover", -- correct?
+	ProvinceOfOrigin = "Hanover", -- correct?
 --	Noble = true,
 	Year = 919, -- reign began
 	DeathYear = 936, -- reign ended
