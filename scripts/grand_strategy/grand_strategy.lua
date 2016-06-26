@@ -38,6 +38,7 @@ GrandStrategyBattleBaseBuilding = wyr.preferences.GrandStrategyBattleBaseBuildin
 GrandStrategyMapWidthIndent = 0
 GrandStrategyMapHeightIndent = 0
 PopulationGrowthThreshold = 2000
+MonthsPerTurn = 12
 
 function RunGrandStrategyGameSetupMenu()
 	GrandStrategyMapWidth = Video.Width + 64
@@ -45,6 +46,7 @@ function RunGrandStrategyGameSetupMenu()
 	WorldMapOffsetX = 0
 	WorldMapOffsetY = 0
 	GrandStrategyYear = 0
+	GrandStrategyMonth = 0
 	GrandStrategyFaction = nil
 	SelectedProvince = nil
 	SelectedHero = ""
@@ -480,7 +482,7 @@ function RunGrandStrategyGame()
 end
 
 function EndTurn()
-	if (GrandStrategyYear % 10 == 0) then
+	if (GrandStrategyYear % 10 == 0 and GrandStrategyMonth == 0) then
 		GrandStrategyGameSave("autosave")
 	end
 
@@ -571,9 +573,13 @@ function EndTurn()
 
 	DoProspection()
 	
-	GrandStrategyYear = GrandStrategyYear + 1;
-	if (GrandStrategyYear == 0) then -- the year 0 AD didn't exist
+	GrandStrategyMonth = GrandStrategyMonth + MonthsPerTurn;
+	if (GrandStrategyMonth >= 12) then
+		GrandStrategyMonth = 0;
 		GrandStrategyYear = GrandStrategyYear + 1;
+		if (GrandStrategyYear == 0) then -- the year 0 AD didn't exist
+			GrandStrategyYear = GrandStrategyYear + 1;
+		end
 	end
 
 	DoEvents()
@@ -1439,6 +1445,7 @@ function RunGrandStrategyLoadGameMenu()
 			GameResult = GameNoResult
 			Load("save/grand_strategy/" .. saved_games_list[saved_games:getSelected() + 1] .. ".lua")
 			GrandStrategyYear = wyr[saved_games_list[saved_games:getSelected() + 1]].SavedGrandStrategyYear
+			GrandStrategyMonth = wyr[saved_games_list[saved_games:getSelected() + 1]].SavedGrandStrategyMonth
 			for x=0,GetWorldMapWidth() - 1 do
 				for y=0,GetWorldMapHeight() - 1 do
 					CalculateWorldMapTileGraphicTile(x, y)
@@ -2014,8 +2021,11 @@ function DrawGrandStrategyInterface()
 	GrandStrategyLabels = {}
 
 	if (GrandStrategyFaction ~= nil) then
-		AddGrandStrategyLabel(GrandStrategyFaction.Name .. ", " .. GetYearString(GrandStrategyYear), 81, Video.Height - 186 + 8, Fonts["game"], true, false)
---		AddGrandStrategyLabel(GrandStrategyFaction.Name .. ", " .. GetCivilizationData(GrandStrategyFaction.Civilization, "MonthName", "january") .. ", " .. GetYearString(GrandStrategyYear), 81, Video.Height - 186 + 8, Fonts["game"], true, false)
+		if (MonthsPerTurn == 12) then
+			AddGrandStrategyLabel(GrandStrategyFaction.Name .. ", " .. GetYearString(GrandStrategyYear), 81, Video.Height - 186 + 8, Fonts["game"], true, false)
+		else
+			AddGrandStrategyLabel(GrandStrategyFaction.Name .. ", " .. GetCivilizationData(GrandStrategyFaction.Civilization, "MonthName", GetMonthNameById(GrandStrategyMonth)) .. ", " .. GetYearString(GrandStrategyYear), 81, Video.Height - 186 + 8, Fonts["game"], true, false)
+		end
 	end
 	
 	if (SelectedProvince ~= nil) then
@@ -3486,6 +3496,7 @@ function ClearGrandStrategyVariables()
 	WorldMapOffsetY = 0
 	GrandStrategyWorld = ""
 	GrandStrategyYear = 0
+	GrandStrategyMonth = 0
 	GrandStrategyFaction = nil
 	SelectedProvince = nil
 	SelectedHero = ""
@@ -4227,6 +4238,7 @@ function GrandStrategyGameSave(name)
 	wyr[name] = {
 		SavedGrandStrategyFactionName = GrandStrategyFaction.Name,
 		SavedGrandStrategyYear = GrandStrategyYear,
+		SavedGrandStrategyMonth = GrandStrategyMonth,
 		SavedGrandStrategyWorld = GrandStrategyWorld,
 		SavedWorldMapProvinces = WorldMapProvinces,
 		SavedWorldMapWaterProvinces = WorldMapWaterProvinces,
