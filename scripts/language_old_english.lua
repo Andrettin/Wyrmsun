@@ -412,11 +412,23 @@ DefineLanguageWord("Dēop", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	DerivesFrom = {"proto-germanic", "adjective", "Déwpaz"}
 })
 
+DefineLanguageWord("Done", { -- appears in the field-name "Wedone"; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 101.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {}
+})
+
 DefineLanguageWord("Dryhten", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 113.
 	Language = "old-english",
 	Type = "noun",
 	Meanings = {},
 	DerivesFrom = {"proto-germanic", "noun", "Druhtîna"}
+})
+
+DefineLanguageWord("Dun", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 101.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Hill"}
 })
 
 DefineLanguageWord("Duru", { -- at first the source gives "duru", but later on it gives "dor"; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.2, 2.7.2.
@@ -442,6 +454,12 @@ DefineLanguageWord("Ealdorneru", { -- Source: Sean Crist, "An Analysis of *z los
 	Type = "noun",
 	Meanings = {"Saving of a Life"},
 	Gender = "feminine"
+})
+
+DefineLanguageWord("Ealh", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 101.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Temple"}
 })
 
 DefineLanguageWord("Éast", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 12.
@@ -834,6 +852,12 @@ DefineLanguageWord("Heard", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	DerivesFrom = {"proto-germanic", "adjective", "Hardu"}
 })
 
+DefineLanguageWord("Hearh", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 101.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Hill Sanctuary"}
+})
+
 DefineLanguageWord("Hearpestre", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, pp. 77-78.
 	Language = "old-english",
 	Type = "noun",
@@ -1042,6 +1066,12 @@ DefineLanguageWord("Léad", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Meanings = {"Lead", "Cauldron"}, -- source gives the German "Blei, Kessel" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Lauda"},
 	Gender = "neuter"
+})
+
+DefineLanguageWord("Leah", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 101.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Grove"}
 })
 
 DefineLanguageWord("Leoðurun", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 124.
@@ -1825,6 +1855,12 @@ DefineLanguageWord("Wald", { -- Source: H. Munro Chadwick, "The Oak and the Thun
 	Meanings = {"Forest"}
 })
 
+DefineLanguageWord("We", { -- alternative form of "weoh" which appears in the field-name "Wedone"; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 101.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Idol", "Shrine", "Sacred Precinct"}
+})
+
 DefineLanguageWord("Wē", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
 	Language = "old-english",
 	Type = "pronoun",
@@ -1849,6 +1885,18 @@ DefineLanguageWord("Wel", { -- Source: Richard M. Runge, "The Phonetic Realizati
 	Type = "adverb",
 	Meanings = {"Well", "Indeed"}, -- Runge gives "Well", while Lehmann gives "Indeed"
 	DerivesFrom = {"proto-germanic", "adverb", "Wela"} -- as given by Lehmann
+})
+
+DefineLanguageWord("Weo", { -- alternative form of "weoh" which appears in the field-name "Weoland"; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 101.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Idol", "Shrine", "Sacred Precinct"}
+})
+
+DefineLanguageWord("Weoh", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 101.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Idol", "Shrine", "Sacred Precinct"}
 })
 
 DefineLanguageWord("Wer", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
@@ -1878,6 +1926,12 @@ DefineLanguageWord("West", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Type = "adverb",
 	Meanings = {"West"}, -- source gives the German "West" as the meaning
 	DerivesFrom = {"proto-germanic", "adverb", "Vesta"}
+})
+
+DefineLanguageWord("Wiella", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 101.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Spring"}
 })
 
 DefineLanguageWord("Wif", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 85.

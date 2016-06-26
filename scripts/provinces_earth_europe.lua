@@ -2172,6 +2172,7 @@ DefineProvince("Essex", {
 	Coastal = true,
 	Claims = {
 		"celt", "Trinobantes Tribe",
+		"teuton", "Gumeninga Tribe", -- the Gumeningas were present in Harrow on the Hill (which was in Old English called "Gumeninga hearh"); Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 101.
 		"teuton", "England"
 	},
 	HistoricalOwners = {

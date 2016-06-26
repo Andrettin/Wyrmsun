@@ -49,6 +49,10 @@ DefineUpgrade("upgrade-frisian-tribe-faction", {
 	Name = _("Frisian Tribe Faction")
 })
 
+DefineUpgrade("upgrade-gumeninga-tribe-faction", {
+	Name = _("Gumeninga Tribe Faction")
+})
+
 DefineUpgrade("upgrade-lombard-tribe-faction", {
 	Name = _("Lombard Tribe Faction")
 })
@@ -116,6 +120,12 @@ DefineModifier("upgrade-frisian-tribe-faction",
 	{"HitPoints", 5},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-swordsman"}
+)
+
+DefineModifier("upgrade-gumeninga-tribe-faction",
+	{"Mana", 30},
+	{"Points", 10},
+	{"apply-to", "unit-teuton-priest"}
 )
 
 DefineModifier("upgrade-lombard-tribe-faction",

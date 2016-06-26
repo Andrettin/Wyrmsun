@@ -49,6 +49,18 @@ DefineFaction("Dere Tribe", { -- Source: Frank Stenton, "Anglo-Saxon England", 1
 	HistoricalFactionDerivations = {500, "teuton", "Angle Tribe"} -- The Dere (a collection of Anglian peoples) were in possession of York in 500 AD; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 74.
 })
 
+DefineFaction("Gumeninga Tribe", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 101.
+	Civilization = "teuton",
+	ParentFaction = "Angle Tribe",
+	Type = "tribe",
+	Language = "old-english",
+	Colors = {"brown"},
+	DevelopsTo = {"England"},
+	FactionUpgrade = "upgrade-gumeninga-tribe-faction", -- since all we know about them is their religious location, it makes sense to give them a priest-related bonus
+	Description = "The Gumeningas were an Anglo-Saxon tribe who inhabited the area of Middlesex.",
+	Background = "The name of the Gumeningas was present in the place name \"Gumeninga hearh\" (the Old English name for Harrow on the Hill), meaning \"the holy place of the Gumeningas\"."
+})
+
 DefineFaction("Bernicia", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 75.
 	Civilization = "teuton",
 	ParentFaction = "Bernice Tribe",

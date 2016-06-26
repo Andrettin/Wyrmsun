@@ -96,6 +96,32 @@ DefineWorldMapTile({474, 97}, {
 	}
 })
 
+DefineWorldMapTile({474, 109}, {
+	World = "Earth",
+	FactionCulturalSettlementNames = {
+		"teuton", "England", "Wootton Bassett"
+	},
+	FactionCulturalResourceNames = {
+		"grain", "teuton", "Angle Tribe", "Weoland", "name-elements", { -- Old English field-name; Weoland was near the location of Wootton Bassett; the first part of the name is formed by a variant of the Old English word "weoh"; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 101.
+			"compound", "prefix", "old-english", "noun", "Weo",
+			"compound", "suffix", "old-english", "noun", "Land" -- presumably
+		}
+	}
+})
+
+DefineWorldMapTile({474, 111}, {
+	World = "Earth",
+	FactionCulturalSettlementNames = {
+		"teuton", "England", "Damerham"
+	},
+	FactionCulturalResourceNames = {
+		"grain", "teuton", "Angle Tribe", "Wedone", "name-elements", { -- Old English field-name; Wedone was near the location of Damerham; the first part of the name is formed by a variant of the Old English word "weoh"; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 101.
+			"compound", "prefix", "old-english", "noun", "We",
+			"compound", "suffix", "old-english", "noun", "Done"
+		}
+	}
+})
+
 DefineWorldMapTile({475, 98}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
@@ -154,6 +180,13 @@ DefineWorldMapTile({477, 102}, {
 	}
 })
 
+DefineWorldMapTile({477, 110}, {
+	World = "Earth",
+	FactionCulturalSettlementNames = {
+		"teuton", "England", "Farnham"
+	}
+})
+
 DefineWorldMapTile({478, 102}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
@@ -167,6 +200,17 @@ DefineWorldMapTile({478, 104}, { -- Source: William R. Shepherd, "Historical Atl
 	World = "Earth",
 	FactionCulturalSettlementNames = {
 		"teuton", "England", "Lincoln"
+	}
+})
+
+DefineWorldMapTile({479, 109}, {
+	World = "Earth",
+	FactionCulturalSettlementNames = {
+		"teuton", "Angle Tribe", "Gumeninga Hearh", "name-elements", { -- Old English name of Harrow on the Hill; the name means "the holy place of the Gumeningas"; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 101.
+			-- the prefix is a demonym (of the Gumeningas)
+			"separate", "suffix", "old-english", "noun", "Hearh"
+		},
+		"teuton", "England", "Harrow on the Hill"
 	}
 })
 
