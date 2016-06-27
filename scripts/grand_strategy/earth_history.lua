@@ -1,24 +1,3 @@
-SetRiverCulturalName("Achelos", "greek", "Achelos") -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
-SetRiverCulturalName("Alpheus", "greek", "Alpheus") -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
-SetRiverCulturalName("Danube", "latin", "Danuvius") -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-SetRiverCulturalName("Danube", "teuton", "Donau")
---SetRiverCulturalName("Dnieper", "latin", "Borysthenes") -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
---SetRiverCulturalName("Don", "greek", "Tanais")
---SetRiverCulturalName("Don", "latin", "Tanais") -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
---SetRiverCulturalName("Don", "germanic", "Vanaquisl") -- The Tanais river is said to have been called Vanaquisl or Tanaquisl in the time of the Vana/Asa conflict in the Ynglinga saga; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 217.
---SetRiverCulturalName("Don", "norse", "Tanais") -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 217.
-SetRiverCulturalName("Eurotas", "greek", "Eurotas") -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
-SetRiverCulturalName("Guadiana", "latin", "Anas") -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-SetRiverCulturalName("Elbe", "latin", "Albis") -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-SetRiverCulturalName("Peneus", "greek", "Peneus") -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
-SetRiverCulturalName("Rhine", "latin", "Rhenus") -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-SetRiverCulturalName("Rhine", "teuton", "Rhein")
-SetRiverCulturalName("Tagus", "latin", "Tagus") -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
---SetRiverCulturalName("Volga", "latin", "Rha") -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-
---SetRiverFactionCulturalName("Douro", "latin", "Portugal", "Douro") -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
---SetRiverFactionCulturalName("Douro", "latin", "Spain", "Duero") -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
-
 --[[
 WorldMapResources = {
 	Gold = {

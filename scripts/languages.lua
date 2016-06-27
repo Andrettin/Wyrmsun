@@ -130,6 +130,18 @@ DefineLanguage("english", {
 		"plural", "genitive", "compound", "s"
 	},
 	NameTranslations = {
+		-- Old English to English
+		"Abban", "Abing", -- Abbandun -> Abingdon; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"Abbandun", "Abingdon", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"Abbodes", "Abbots", -- Abbodesbyrig -> Abbotsbury; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"Abbodesbyrig", "Abbotsbury", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"Ægeles", "Ayles", -- Ægelesburg -> Aylesbury, Ægelesford -> Aylesford; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"Ægelesburg", "Aylesbury", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"Ægelesford", "Aylesford", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"Æthelingaig", "Athelney", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"Burg", "Bury", -- Ægelesburg -> Aylesbury; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"Byrig", "Bury", -- Abbodesbyrig -> Abbotsbury; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"Dun", "Don", -- Abbandun -> Abingdon; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		-- German to English
 		"Bernhard", "Bernard",
 		"Franz", "Francis",
