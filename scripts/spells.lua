@@ -179,6 +179,7 @@ DefineSpell("spell-axe-twirl",
 
 DefineSpell("spell-forgetfulness",
 	"showname", _("Forgetfulness"),
+	"description", _("Allows the unit to repick its experience upgrades"),
 	"manacost", 0,
 	"range", 0,
 	"target", "self",
