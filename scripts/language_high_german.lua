@@ -2479,6 +2479,12 @@ DefineLanguageWord("Violett", {
 	Meanings = {"Violet"}
 })
 
+DefineLanguageWord("Von", {
+	Language = "high-german",
+	Type = "adposition",
+	Meanings = {"Of", "From"}
+})
+
 DefineLanguageWord("Vor", {
 	Language = "high-german",
 	Type = "adposition",
@@ -2490,6 +2496,21 @@ DefineLanguageWord("Waid", { -- Source: Sean Crist, "An Analysis of *z loss in W
 	Type = "noun",
 	Meanings = {"Woad"},
 	DerivesFrom = {"proto-germanic", "noun", "Waida"}
+})
+
+DefineLanguageWord("Wald", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"Forest"},
+	DerivesFrom = {"middle-high-german", "noun", "Walt"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 203.
+	Gender = "masculine",
+	NumberCaseInflections = {
+		"singular", "genitive", "Waldes", -- alternatively also "Walds"
+		"plural", "nominative", "Wälder",
+		"plural", "accusative", "Wälder",
+		"plural", "dative", "Wäldern",
+		"plural", "genitive", "Wälder"
+	}
 })
 
 DefineLanguageWord("Walter", {
@@ -2836,12 +2857,6 @@ DefineLanguageWord("Siegfried", {
 		"suffix", "high-german", "noun", "Fried"
 	},
 	NameTypes = {"person-male"}
-})
-
-DefineLanguageWord("Von", {
-	Language = "high-german",
-	Type = "adposition",
-	Meanings = {"Of", "From"}
 })
 
 DefineLanguageWord("Wolfgang", {

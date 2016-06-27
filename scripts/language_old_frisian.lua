@@ -560,6 +560,14 @@ DefineLanguageWord("Turf", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Wald", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 203.
+	Language = "old-frisian",
+	Type = "noun",
+	Meanings = {"Forest"}, -- source gives the German "Wald" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Valþu"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Wêd", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 4.
 	Language = "old-frisian",
 	Type = "noun",

@@ -1868,6 +1868,14 @@ DefineLanguageWord("Wē", { -- Source: Sean Crist, "An Analysis of *z loss in We
 	Nominative = "Wē"
 })
 
+DefineLanguageWord("Weald", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 203.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Forest", "Foliage"}, -- source gives the German "Wald, poet. auch Laubwerk" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Valþu"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Wearg", { -- Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, p. 146.
 	Language = "old-english",
 	Type = "noun",

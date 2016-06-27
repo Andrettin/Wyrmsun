@@ -786,6 +786,14 @@ DefineLanguageWord("Treuua", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Meanings = {"Faithfulness"}
 })
 
+DefineLanguageWord("Wald", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 203.
+	Language = "old-saxon",
+	Type = "noun",
+	Meanings = {"Forest", "Wilderness"}, -- source gives the German "Wald, Wildnis" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Valþu"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Weg", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.
 	Language = "old-saxon",
 	Type = "noun",

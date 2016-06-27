@@ -1600,10 +1600,12 @@ DefineLanguageWord("Urlaga", { -- Source: Sean Crist, "An Analysis of *z loss in
 	Gender = "feminine"
 })
 
-DefineLanguageWord("Wald", { -- Source: H. Munro Chadwick, "The Oak and the Thunder-God", 1900, p. 31.
+DefineLanguageWord("Wald", { -- Fick also gives the alternative form "walth"; Source: H. Munro Chadwick, "The Oak and the Thunder-God", 1900, p. 31; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 203.
 	Language = "old-high-german",
 	Type = "noun",
-	Meanings = {"Forest"}
+	Meanings = {"Forest"}, -- as given by Chadwick; Fick gives the German "Wald" and the Latin "saltus" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Valþu"}, -- as given by Fick
+	Gender = "masculine" -- as given by Fick
 })
 
 DefineLanguageWord("Weg", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 240.

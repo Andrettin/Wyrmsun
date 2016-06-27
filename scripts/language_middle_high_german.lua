@@ -90,10 +90,10 @@ DefineLanguageWord("Berc", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Type = "noun",
 	Meanings = {"Mountain", "Hill"}, -- source gives "Berg" as the meaning
 	DerivesFrom = {"old-high-german", "noun", "Berg"},
+	Gender = "masculine",
 	NumberCaseInflections = {
 		"singular", "genitive", "Berges"
-	},
-	Gender = "masculine"
+	}
 })
 
 DefineLanguageWord("Blâ", { -- source also gives the inflected form "blâwer"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 147.
@@ -879,6 +879,17 @@ DefineLanguageWord("Vurt", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Meanings = {"Ford", "Path", "Riverbed"}, -- source gives the German "Furt, Weg, Flußbett" as the meaning
 	DerivesFrom = {"old-high-german", "noun", "Furt"},
 	Gender = "masculine"
+})
+
+DefineLanguageWord("Walt", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 203.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Forest", "Forest Wood", "Shrubbery"}, -- source gives the German "Wald, Waldholz, Buschwerk" as the meaning
+	DerivesFrom = {"old-high-german", "noun", "Wald"},
+	Gender = "masculine",
+	NumberCaseInflections = {
+		"singular", "genitive", "Waldes"
+	}
 })
 
 DefineLanguageWord("Warb", { -- Source: http://www.cnrtl.fr/definition/barguigner

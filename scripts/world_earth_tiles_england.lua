@@ -88,6 +88,14 @@ DefineWorldMapTile({471, 110}, {
 	}
 })
 
+DefineWorldMapTile({472, 110}, {
+	World = "Earth",
+	FactionCulturalSettlementNames = {
+		"teuton", "Angle Tribe", "Alre", -- Old English name of Aller; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"teuton", "England", "Aller"
+	}
+})
+
 DefineWorldMapTile({472, 111}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
@@ -125,6 +133,17 @@ DefineWorldMapTile({474, 109}, {
 			"compound", "prefix", "old-english", "noun", "Weo",
 			"compound", "suffix", "old-english", "noun", "Land" -- presumably
 		}
+	}
+})
+
+DefineWorldMapTile({474, 110}, {
+	World = "Earth",
+	FactionCulturalSettlementNames = {
+		"teuton", "Angle Tribe", "Ambresbyrig", "name-elements", { -- Old English name of Amesbury; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+			-- "compound", "prefix", "old-english", -- ?
+			"compound", "suffix", "old-english", "noun", "plural", "Burg" -- presumably
+		},
+		"teuton", "England", "Amesbury"
 	}
 })
 
@@ -205,10 +224,12 @@ DefineWorldMapTile({476, 109}, {
 DefineWorldMapTile({476, 110}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
+		"teuton", "Angle Tribe", "Andeferas", -- Old English name of Andover; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"teuton", "England", "Winchester", "name-elements", {
 			"compound", "prefix", "english", "noun", "singular", "Win",
 			"compound", "suffix", "english", "noun", "singular", "Chester"
-		}
+		},
+		"teuton", "England", "Andover"
 	}
 })
 
@@ -265,6 +286,17 @@ DefineWorldMapTile({479, 109}, {
 			"separate", "suffix", "old-english", "noun", "Hearh"
 		},
 		"teuton", "England", "Harrow on the Hill"
+	}
+})
+
+DefineWorldMapTile({479, 110}, {
+	World = "Earth",
+	FactionCulturalTerrainNames = {
+		"Conifer Forest", "teuton", "Angle Tribe", "Andredesweald", "name-elements", { -- Old English name of The Weald; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+			-- "compound", "prefix", "old-english", -- ?
+			"compound", "suffix", "old-english", "noun", "Weald" -- presumably
+		},
+		"Conifer Forest", "teuton", "England", "The Weald" -- The Weald was a forest, but of what kind?
 	}
 })
 

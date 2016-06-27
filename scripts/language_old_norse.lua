@@ -1740,6 +1740,14 @@ DefineLanguageWord("Vita", { -- Source: Richard M. Runge, "The Phonetic Realizat
 	}
 })
 
+DefineLanguageWord("Vǫllr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 203.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Field"}, -- source gives the Latin "campus" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Valþu"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Wel", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.1.
 	Language = "old-norse",
 	Type = "adverb",

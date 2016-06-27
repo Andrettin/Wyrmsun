@@ -139,8 +139,12 @@ DefineLanguage("english", {
 		"Ægelesburg", "Aylesbury", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"Ægelesford", "Aylesford", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"Æthelingaig", "Athelney", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"Alre", "Aller", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"Ambres", "Ames", -- Ambresbyrig -> Amesbury; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"Ambresbyrig", "Amesbury", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"Andeferas", "Andover", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"Burg", "Bury", -- Ægelesburg -> Aylesbury; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-		"Byrig", "Bury", -- Abbodesbyrig -> Abbotsbury; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"Byrig", "Bury", -- Abbodesbyrig -> Abbotsbury, Ambresbyrig -> Amesbury; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"Dun", "Don", -- Abbandun -> Abingdon; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		-- German to English
 		"Bernhard", "Bernard",

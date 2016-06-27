@@ -7242,7 +7242,7 @@ SetWorldMapTileTerrain(479, 107, plains_id)
 SetWorldMapTileTerrain(479, 108, plains_id)
 AddWorldMapResource("grain", 479, 108, true) -- Wheat; Source: "Philip's International School Atlas", 2006, p. 59.
 SetWorldMapTileTerrain(479, 109, plains_id)
-SetWorldMapTileTerrain(479, 110, plains_id)
+SetWorldMapTileTerrain(479, 110, conifer_forest_id) -- The Weald; it was a forest, but of what kind?
 SetWorldMapTileTerrain(479, 111, plains_id)
 SetWorldMapTileTerrain(479, 112, water_id)
 SetWorldMapTileTerrain(479, 113, water_id)

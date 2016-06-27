@@ -1336,6 +1336,13 @@ DefineLanguageWord("Vaigô", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Gender = "feminine"
 })
 
+DefineLanguageWord("Valþu", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 203.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Forest"}, -- source gives the German "Wald" as the meaning
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Vesta", { -- source also gives the alternative form "Vestra"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 204.
 	Language = "proto-germanic",
 	Type = "adverb",

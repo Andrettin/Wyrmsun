@@ -3039,6 +3039,14 @@ DefineLanguageWord("Water", {
 	}
 })
 
+DefineLanguageWord("Weald", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 203.
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Weald", "Forest"}, -- source gives the German "Wald, Haide" as the meaning
+	DerivesFrom = {"old-english", "noun", "Weald"},
+	Gender = "neuter" -- presumably
+})
+
 DefineLanguageWord("Well", {
 	Language = "english",
 	Type = "noun",
@@ -3165,6 +3173,14 @@ DefineLanguageWord("Windy", {
 	AffixNameTypes = {
 		"separate", "prefix", "terrain-hills" -- example: "Windy Ridge"
 	}
+})
+
+DefineLanguageWord("Wold", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 203.
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Wold", "Forest", "Layer"}, -- source gives the German "Wald, Haide, Ebene" as the meaning
+	DerivesFrom = {"old-english", "noun", "Weald"},
+	Gender = "neuter" -- presumably
 })
 
 DefineLanguageWord("Wolf", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
