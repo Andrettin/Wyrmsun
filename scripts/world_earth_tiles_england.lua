@@ -217,7 +217,12 @@ DefineWorldMapTile({476, 109}, {
 			-- "compound", "prefix", "old-english", -- ?
 			"compound", "suffix", "old-english", "noun", "Dun" -- presumably
 		},
-		"teuton", "England", "Abingdon"
+		"teuton", "Angle Tribe", "Bænesingtun", "name-elements", { -- Old English name of Bensington; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+			-- "compound", "prefix", "old-english", -- ?
+			"compound", "suffix", "old-english", "noun", "Tûn" -- presumably
+		},
+		"teuton", "England", "Abingdon",
+		"teuton", "England", "Bensington"
 	}
 })
 
@@ -321,6 +326,17 @@ DefineWorldMapTile({480, 111}, { -- Source: William R. Shepherd, "Historical Atl
 	}
 })
 
+DefineWorldMapTile({481, 109}, {
+	World = "Earth",
+	FactionCulturalSettlementNames = {
+		"teuton", "Angle Tribe", "Assandun", "name-elements", { -- Old English name of Ashingdon; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+			-- "compound", "prefix", "old-english", -- ?
+			"compound", "suffix", "old-english", "noun", "Dun" -- presumably
+		},
+		"teuton", "England", "Ashingdon"
+	}
+})
+
 DefineWorldMapTile({481, 110}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {
@@ -329,6 +345,14 @@ DefineWorldMapTile({481, 110}, {
 			"compound", "suffix", "old-english", "noun", "Ford" -- presumably
 		},
 		"teuton", "England", "Aylesford"
+	}
+})
+
+DefineWorldMapTile({482, 110}, {
+	World = "Earth",
+	FactionCulturalSettlementNames = {
+		"teuton", "Angle Tribe", "Apuldre", -- Old English name of Appledore; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"teuton", "England", "Appledore"
 	}
 })
 

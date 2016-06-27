@@ -100,6 +100,13 @@ DefineRiver("Guadiana", {
 	}
 })
 
+DefineRiver("Orwell", {
+	World = "Earth",
+	FactionCulturalNames = {
+		"teuton", "Angle Tribe", "Arwe" -- Old English name of the Orwell River (the source isn't explicit on which Avon River this refers to, but it is presumably this one); Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+	}
+})
+
 DefineRiver("Peneus", {
 	World = "Earth",
 	CulturalNames = {
@@ -120,6 +127,10 @@ DefineRiver("Tagus", {
 	CulturalNames = {
 		"latin", "Tagus" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	}
+})
+
+DefineRiver("Thames", {
+	World = "Earth"
 })
 
 DefineRiver("Volga", {
