@@ -93,11 +93,31 @@ DefineRiver("Eurotas", {
 	}
 })
 
+DefineRiver("Garonne", {
+	World = "Earth"
+})
+
 DefineRiver("Guadiana", {
 	World = "Earth",
 	CulturalNames = {
 		"latin", "Anas" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	}
+})
+
+DefineRiver("Minho", {
+	World = "Earth"
+})
+
+DefineRiver("Narova", {
+	World = "Earth"
+})
+
+DefineRiver("Neva", {
+	World = "Earth"
+})
+
+DefineRiver("Oder", {
+	World = "Earth"
 })
 
 DefineRiver("Orwell", {
@@ -120,6 +140,14 @@ DefineRiver("Rhine", {
 		"latin", "Rhenus", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		"teuton", "Rhein"
 	}
+})
+
+DefineRiver("Sado", {
+	World = "Earth"
+})
+
+DefineRiver("Seine", {
+	World = "Earth"
 })
 
 DefineRiver("Tagus", {
