@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineDialogue("pypos-gold-introduction", { -- Source: Franz Hartmann, "Among the Gnomes", 1895, pp. 12-14.
+DefineDialogue("pypos-gold-introduction", { -- Source: Franz Hartmann, "Among the Gnomes", 1895, pp. 10-20.
 	Nodes = {
 		{
 			"text", "A dwarven noble arrives in Untersberg, together with his entourage...",

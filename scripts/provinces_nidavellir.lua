@@ -389,10 +389,13 @@ DefineProvince("Untersberg", {
 	World = "Nidavellir",
 	Tiles = {},
 	CulturalNames = {
-		"gnome", "Untersberg"
+		"gnome", "Untersberg"--[[, "name-elements", {
+			"compound", "prefix", "gnomish", "noun", "genitive", "Unter",
+			"compound", "suffix", "gnomish", "noun", "Berg"
+		}--]]
 	},
 	Map = "maps/random/random-map-swamp.smp",
-	SettlementTerrain = "Hills",
+	SettlementTerrain = "Mountains",
 	Claims = {
 		"gnome", "Untersberg"
 	},

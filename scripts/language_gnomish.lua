@@ -33,11 +33,16 @@ DefineLanguageWord("Adalga", {
 	NameTypes = {"person-female"}
 })
 
+DefineLanguageWord("Berg", { -- appears in "Untersberg", which is given as the "mountain of the lower world"; Source: Franz Hartmann, "Among the Gnomes", 1895, p. 1.
+	Language = "gnomish",
+	Type = "noun",
+	Meanings = {"Mountain"}
+})
+
 DefineLanguageWord("Bimbam", {
 	Language = "gnomish",
 	Type = "noun",
 	Meanings = {},
-	Gender = "masculine", -- presumably, since it is a masculine personal name
 	NameTypes = {"person-male"}
 })
 
@@ -45,7 +50,6 @@ DefineLanguageWord("Clavo", {
 	Language = "gnomish",
 	Type = "noun",
 	Meanings = {},
-	Gender = "masculine", -- presumably, since it is a masculine personal name
 	NameTypes = {"person-male"}
 })
 
@@ -53,7 +57,6 @@ DefineLanguageWord("Cravatu", {
 	Language = "gnomish",
 	Type = "noun",
 	Meanings = {},
-	Gender = "masculine", -- presumably, since it is a masculine personal name
 	NameTypes = {"person-male"}
 })
 
@@ -61,7 +64,6 @@ DefineLanguageWord("Kalutho", {
 	Language = "gnomish",
 	Type = "noun",
 	Meanings = {},
-	Gender = "masculine", -- presumably, since it is a masculine personal name
 	NameTypes = {"person-male"}
 })
 
@@ -71,17 +73,24 @@ DefineLanguageWord("Leffas", {
 	Meanings = {"Soul of a Plant", "Soul of a Stone", "Soul of a Tree"}
 })
 
-DefineLanguageWord("Pypo", {
+DefineLanguageWord("Pypo", { -- name of a gnome; Source: Franz Hartmann, "Among the Gnomes", 1895, p. 13.
 	Language = "gnomish",
 	Type = "noun",
-	Meanings = {},
-	Gender = "masculine" -- presumably, since it is a masculine personal name
+	Meanings = {}
 })
 
 DefineLanguageWord("Rubezahl", {
 	Language = "gnomish",
 	Type = "noun",
 	Meanings = {},
-	Gender = "masculine", -- presumably, since it is a masculine personal name
 	NameTypes = {"person-male"}
+})
+
+DefineLanguageWord("Unter", { -- appears in "Untersberg", which is given as the "mountain of the lower world"; Source: Franz Hartmann, "Among the Gnomes", 1895, p. 1.
+	Language = "gnomish",
+	Type = "noun",
+	Meanings = {"Lower World"},
+	NumberCaseInflections = {
+		"singular", "genitive", "Unters"
+	}
 })
