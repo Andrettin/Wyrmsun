@@ -413,7 +413,7 @@ AddTrigger(
 										{function(s)
 										Event(
 											"Durstorn",
-											"Ha! There hasn't been a war since that fool Dursil tried to get the better of Pypo I, why would someone attack us now?",
+											"Ha! There hasn't been a war since that fool rider tried to get the better of Pypo I, why would someone attack us now?",
 											player,
 											{"~!Continue"},
 											{function(s)

@@ -271,7 +271,7 @@ function addQuestIcon(quest, menu, x, y)
 			l:setSize(324, 208)
 			l:setLineWidth(324)
 			quest_menu:add(l, 14, 112)
-			local quest_description = GetQuestData(quest, "Description") .. "\n\nRewards: " .. tostring(GetQuestData(quest, "TechnologyPoints")) .. " " .. GetCivilizationData(GetQuestData(quest, "Civilization"), "Display")
+			local quest_description = GetQuestData(quest, "Description") .. "\n\nRewards: " .. tostring(GetQuestData(quest, "TechnologyPoints")) .. " " .. GetCivilizationData(GetQuestData(quest, "Civilization"), "Adjective")
 			if (GetQuestData(quest, "TechnologyPoints") > 1) then
 				quest_description = quest_description .. " Technology Points."
 			else

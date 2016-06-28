@@ -65,7 +65,7 @@ DefineProvince("Brown Hills", {
 	},
 	SettlementLocation = {25, 26},
 	Map = "maps/nidavellir/brown-hills.smp",
-	SettlementTerrain = "Hills", -- should be DkPl?
+	SettlementTerrain = "Hills", -- should be Dark Plains?
 	Claims = {
 		"gnome", "Untersberg"
 	},
@@ -384,7 +384,23 @@ DefineProvince("Svarinshaug", {
 		"dwarf", "Brising Clan"
 	}
 })
-	
+
+DefineProvince("Untersberg", {
+	World = "Nidavellir",
+	Tiles = {},
+	CulturalNames = {
+		"gnome", "Untersberg"
+	},
+	Map = "maps/random/random-map-swamp.smp",
+	SettlementTerrain = "Hills",
+	Claims = {
+		"gnome", "Untersberg"
+	},
+	HistoricalCultures = {
+		-3000, "gnome"
+	}
+})
+
 DefineProvince("Deep Sea", {
 	World = "Nidavellir",
 	Water = true,

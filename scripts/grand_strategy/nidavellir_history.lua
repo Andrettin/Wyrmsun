@@ -61,8 +61,19 @@ GenerateProvince({
 })
 
 GenerateProvince({
-	Province = WorldMapProvinces.Acthna,
+	Province = WorldMapProvinces.Untersberg,
 	BorderProvinces = {"Brown Hills"},
+	Resources = {
+		gold = 2,
+		lumber = 1,
+		stone = 1,
+		mushrooms = 4
+	}
+})
+
+GenerateProvince({
+	Province = WorldMapProvinces.Acthna,
+	BorderProvinces = {"Untersberg"},
 	Resources = {
 		silver = 2,
 		stone = 1,

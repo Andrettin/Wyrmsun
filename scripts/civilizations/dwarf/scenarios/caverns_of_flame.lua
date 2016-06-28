@@ -821,7 +821,7 @@ AddTrigger(
 						{function(s)
 						Event(
 							"",
-							"And a surviving gryphon rider followed the envoy. I know not how. But the gryphon rider made his way south, to the Brown Hills, and reached them about the time that the envoy did.",
+							"And a surviving gryphon rider followed the envoy. I know not how. But the gryphon rider made his way south, to Untersberg, and reached them about the time that the envoy did.",
 							player,
 							{"~!Continue"},
 							{function(s)
@@ -856,7 +856,7 @@ AddTrigger(
 											player,
 											{"~!Continue"},
 											{function(s)
-												if (mapinfo.description == "Caverns of Flame" and GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
+												if (GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
 													ActionVictory()
 													if (player == GetThisPlayer() and GrandStrategy == false) then
 														SetQuestCompleted("caverns-of-flame", GameSettings.Difficulty)

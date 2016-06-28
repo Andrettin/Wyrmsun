@@ -56,6 +56,7 @@ end
 
 Load("scripts/civilizations/finnish/characters.lua")
 Load("scripts/civilizations/germanic/characters.lua")
+Load("scripts/civilizations/gnome/characters.lua")
 Load("scripts/civilizations/goth/characters.lua")
 Load("scripts/civilizations/greek/characters.lua")
 Load("scripts/civilizations/latin/characters.lua")
@@ -67,23 +68,6 @@ Load("scripts/civilizations/slav/characters.lua") -- define after Teuton ones, b
 -- load characters of fictional species afterwards, since many of them use human characters as a date reference
 Load("scripts/civilizations/dwarf/characters.lua")
 Load("scripts/civilizations/elf/characters.lua")
-
--- Gnome heroes
-
-DefineCharacter("Pypo", {
-	Name = "Pypo",
-	NameElements = {"word", "gnomish", "noun", "Pypo"},
-	Gender = "male",
-	Type = "unit-gnomish-master-at-arms",
-	Civilization = "gnome",
-	ProvinceOfOrigin = "Brown Hills",
-	Year = -1,
-	DeathYear = 40, -- last we hear of him
-	LiteraryAppearances = {"upgrade-work-the-scepter-of-fire"},
-	HistoricalTitles = {
-		"head-of-state", -1, 40, "gnome", "Untersberg"
-	}
-})
 
 -- Goblin heroes
 

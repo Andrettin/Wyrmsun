@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2013-2016 by Andrettin
+--      (c) Copyright 2015-2016 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -25,8 +25,17 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-Load("scripts/civilizations/dwarf/quests.lua")
-Load("scripts/civilizations/germanic/quests.lua")
-Load("scripts/civilizations/gnome/quests.lua")
-Load("scripts/civilizations/norse/quests.lua")
-Load("scripts/civilizations/teuton/quests.lua")
+DefineCharacter("Pypo", { -- Source: Franz Hartmann, "Among the Gnomes", 1895, p. 13.
+	Name = "Pypo",
+	NameElements = {"word", "gnomish", "noun", "Pypo"},
+	Gender = "male",
+	Type = "unit-gnomish-master-at-arms",
+	Civilization = "gnome",
+	ProvinceOfOrigin = "Untersberg",
+	Year = -1,
+	DeathYear = 40, -- last we hear of him
+	Quote = "Know, you creeping worm of the earth, I am Pypo, the king of the gnomes.",
+	HistoricalTitles = {
+		"head-of-state", -1, 40, "gnome", "Untersberg"
+	}
+})

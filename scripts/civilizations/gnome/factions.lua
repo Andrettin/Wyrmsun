@@ -66,9 +66,9 @@ DefineFaction("Acthna", {
 	DefaultTier = "duchy"
 })
 
-DefineFaction("Untersberg", {
+DefineFaction("Untersberg", { -- Source: Franz Hartmann, "Among the Gnomes", 1895, pp. 1, 12-13.
 	Civilization = "gnome",
 	Type = "polity",
-	Colors = {"purple"},
+	Colors = {"blue"}, -- the king of Untersberg, Pypo, wore a steel-blue gown; Source: Franz Hartmann, "Among the Gnomes", 1895, pp. 12-13.
 	DefaultTier = "kingdom"
 })

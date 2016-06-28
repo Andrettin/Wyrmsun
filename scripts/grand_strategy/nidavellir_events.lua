@@ -342,7 +342,7 @@ local NidavellirEvents = {
 				GrandStrategyEventMap = false
 
 				RestoreScenarioUnitsToProvince({ProvinceName = "Caverns of Chaincolt", FactionName = "Norlund Clan", Heroes = {"Rugnur"}})
-				RestoreScenarioUnitsToProvince({ProvinceName = "Brown Hills", FactionName = "Untersberg"})
+				RestoreScenarioUnitsToProvince({ProvinceName = "Untersberg", FactionName = "Untersberg"})
 				RestoreScenarioUnitsToProvince({ProvinceName = "Southern Tunnels", FactionName = "Shinsplitter Clan"})
 			end
 			if (("Norlund Clan" ~= GrandStrategyFaction.Name or wyr.preferences.AutomaticBattles) and ("Shinsplitter Clan" ~= GrandStrategyFaction.Name or wyr.preferences.AutomaticBattles)) then -- if neither Norlund Clan nor Shinsplitter Clan are played by the human player, then enact the effects of the bargain between the gnomes and Rugnur successfully being struck
@@ -380,7 +380,7 @@ local NidavellirEvents = {
 				GrandStrategyEventMap = false
 
 				RestoreScenarioUnitsToProvince({ProvinceName = "Caverns of Chaincolt", FactionName = "Norlund Clan", Heroes = {"Rugnur"}})
-				RestoreScenarioUnitsToProvince({ProvinceName = "Brown Hills", FactionName = "Untersberg"})
+				RestoreScenarioUnitsToProvince({ProvinceName = "Untersberg", FactionName = "Untersberg"})
 				RestoreScenarioUnitsToProvince({ProvinceName = "Southern Tunnels", FactionName = "Shinsplitter Clan"})
 			end
 			if (GrandStrategyFaction.Name == "Shinsplitter Clan" and wyr.preferences.AutomaticBattles) then
@@ -606,7 +606,7 @@ local NidavellirEvents = {
 				
 				SetProvinceHero("Caverns of Chaincolt", "Durstorn", 0) -- Durstorn is killed in a conflict between him and other members of the clan
 				ChangeProvinceUnitQuantity("Caverns of Chaincolt", "unit-gnomish-duelist", -1) -- the gnomish envoy returns south
-				ChangeProvinceUnitQuantity("Brown Hills", "unit-gnomish-duelist", 1)
+				ChangeProvinceUnitQuantity("Untersberg", "unit-gnomish-duelist", 1)
 	
 				AcquireProvince(WorldMapProvinces.ShorbearHills, "Shinsplitter Clan")
 				if (GrandStrategyFaction.Name == "Norlund Clan" and wyr.preferences.AutomaticBattles) then

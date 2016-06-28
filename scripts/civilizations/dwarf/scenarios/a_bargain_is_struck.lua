@@ -97,7 +97,7 @@ AddTrigger(
 					{function(s)
 					Event(
 						"",
-						"Our story begins in a small border outpost in the southern hills of Knalga, with a young dwarf, named Rugnur, in charge of it. And with the gnomish king of Untersberg, Pypo I, riding up the road from the Brown Hills with an army behind him...",
+						"Our story begins in a small border outpost in the southern hills of Knalga, with a young dwarf, named Rugnur, in charge of it. And with the gnomish king of Untersberg, Pypo I, riding up the road from Untersberg with an army behind him...",
 						player,
 						{"~!Continue"},
 						{function(s)

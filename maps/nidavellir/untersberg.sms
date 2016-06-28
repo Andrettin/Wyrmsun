@@ -1,0 +1,30 @@
+LoadTileModels("scripts/tilesets/swamp.lua")
+
+if (LoadedGame == false) then
+	if (GetCurrentQuest() == "pypos-gold") then
+		GenerateRandomMap({
+			MercenaryCamp = true,
+			RockQuantity = "high",
+			TreeQuantity = "medium",
+			RoughLandQuantity = "high",
+			WaterQuantity = "low",
+			WorkerQuantity = 0,
+			NoFlyingCreeps = true, -- too early a mission to add such perils
+			PlayerCivilizations = {"gnome", "dwarf"},
+			PlayerBuildings = {
+				{"Farm", "Farm"},
+				{"Barracks", "Farm", "Farm", "Watch Tower", "Watch Tower"}
+			}
+		})
+	else
+		GenerateRandomMap({
+			MercenaryCamp = true,
+			RockQuantity = "high",
+			TreeQuantity = "medium",
+			RoughLandQuantity = "high",
+			WaterQuantity = "low",
+			WorkerQuantity = 5,
+			PlayerCivilizations = {"dwarf", "dwarf"}
+		})
+	end
+end
