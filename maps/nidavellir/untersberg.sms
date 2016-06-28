@@ -8,13 +8,9 @@ if (LoadedGame == false) then
 			TreeQuantity = "medium",
 			RoughLandQuantity = "high",
 			WaterQuantity = "low",
-			WorkerQuantity = 0,
+			WorkerQuantity = 5,
 			NoFlyingCreeps = true, -- too early a mission to add such perils
-			PlayerCivilizations = {"gnome", "dwarf"},
-			PlayerBuildings = {
-				{"Farm", "Farm"},
-				{"Barracks", "Farm", "Farm", "Watch Tower", "Watch Tower"}
-			}
+			PlayerCivilizations = {"gnome", "dwarf"}
 		})
 	else
 		GenerateRandomMap({

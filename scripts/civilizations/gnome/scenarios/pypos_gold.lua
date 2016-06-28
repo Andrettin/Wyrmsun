@@ -26,12 +26,16 @@
 --
 
 if (LoadedGame == false) then
-	if not (GrandStrategy) then
-		SetPlayerData(1, "Allow", "upgrade-dwarven-runewriting", "F")
-	end
 	SetPlayerData(0, "RaceName", "gnome")
 	SetPlayerData(0, "Faction", "Untersberg")
 	SetPlayerData(1, "RaceName", "dwarf")
+	SetPlayerData(1, "Faction", "Random")
+	if not (GrandStrategy) then
+		SetPlayerData(1, "Allow", "unit-dwarven-smithy", "F")
+		SetPlayerData(1, "Allow", "unit-dwarven-lumber-mill", "F")
+		SetPlayerData(1, "Allow", "unit-dwarven-stronghold", "F")
+		SetPlayerData(1, "Allow", "upgrade-dwarven-runewriting", "F")
+	end
 	
 	if not (GrandStrategy) then
 		unit = CreateUnit("unit-gnomish-master-at-arms", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
@@ -49,9 +53,13 @@ if (LoadedGame == false) then
 
 	unit = CreateUnit("unit-dwarven-yale-rider", 1, {Players[1].StartPos.x, Players[1].StartPos.y}) -- dwarven noble
 	SetUnitVariable(unit, "Starting", false)
+	SetUnitVariable(unit, "Active", false)
 	unit = CreateUnit("unit-dwarven-witness", 1, {Players[1].StartPos.x, Players[1].StartPos.y}) -- old wise and faithful steward to the dwarven noble
 	SetUnitVariable(unit, "Starting", false)
+	SetUnitVariable(unit, "Active", false)
 	AcquireTrait(unit, "upgrade-old")
+	
+	GameTimeOfDay = 5 -- the scenario happens in a gloomy evening in Autumn
 end
 
 RemovePlayerObjective(GetFactionPlayer("Untersberg"), "- Defeat your enemies")

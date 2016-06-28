@@ -36,5 +36,5 @@ DefineQuest("pypos-gold", { -- Source: Franz Hartmann, "Among the Gnomes", 1895,
 	Scenario = "scripts/civilizations/gnome/scenarios/pypos_gold.lua",
 	PlayerColor = "blue",
 	IntroductionDialogue = "pypos-gold-introduction",
-	Hidden = true
+--	Hidden = true
 })

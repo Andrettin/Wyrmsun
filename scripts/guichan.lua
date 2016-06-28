@@ -782,7 +782,7 @@ function RunMap(map, objective, fow, revealmap)
 		if revealmap == true then
 			RevealMap()
 		end
-		StartMap(map)
+		StartMap(map, true)
 		if GameResult ~= GameRestart then
 			loop = false
 		end

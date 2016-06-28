@@ -27,10 +27,6 @@
 
 function EventTriggers()
 
-	if (GameSettings.Opponents <= 0 and GameSettings.GameType == -1 and GameSettings.NumUnits <= 0 and GameSettings.Resources <= 0 and (GrandStrategy == false or GrandStrategyEventMap)) then
-		Load("scripts/civilizations/gnome/events.lua")
-	end
-
 	-- Greebo's Shinies
 	-- based on elements from the Descending into Darkness scenario of the Under the Burning Suns campaign from Battle for Wesnoth
 	-- only appears in terrains which exist in Nidavellir (substitute for checking if there is a goblin faction, as a goblin civilization hasn't yet been implemented)
