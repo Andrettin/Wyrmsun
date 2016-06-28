@@ -28,17 +28,17 @@
 DefineAchievement("the-settlement-of-scandinavia", {
 	Name = "The Settlement of Scandinavia",
 	Icon = "icon-germanic-warrior",
-	Description = "Complete the Gylve's Realm mission.",
+	Description = "Complete the On the Vanaquisl, Westward Migration, Northwards to the Sea and Gylve's Realm missions.",
 	PlayerColor = "orange",
-	RequiredQuests = {"gylves-realm"}
+	RequiredQuests = {"on-the-vanaquisl", "westward-migration", "northwards-to-the-sea", "gylves-realm"}
 })
 
 DefineAchievement("the-marcomannic-wars", {
 	Name = "The Marcomannic Wars",
 	Icon = "icon-suebi-swordsman",
-	Description = "Complete The Razing of Opitergium mission.",
+	Description = "Complete The Sack of Iuvavum and The Razing of Opitergium missions.",
 	PlayerColor = "orange",
-	RequiredQuests = {"the-razing-of-opitergium"}
+	RequiredQuests = {"the-sack-of-iuvavum", "the-razing-of-opitergium"}
 })
 
 DefineAchievement("the-conquest-of-galicia", {
@@ -69,9 +69,9 @@ DefineAchievement("the-mightiest-made", {
 DefineAchievement("the-first-dwarves", {
 	Name = "The First Dwarves",
 	Icon = "icon-brising-miner",
-	Description = "Complete The Binding of Grafvitnir mission.",
+	Description = "Complete the A Rocky Home, The Mead of Wisdom, The Treasures of Svarinshaug, The Necklace of the Brisings and The Binding of Grafvitnir missions.",
 	PlayerColor = "red",
-	RequiredQuests = {"the-binding-of-grafvitnir"}
+	RequiredQuests = {"a-rocky-home", "the-mead-of-wisdom", "the-treasures-of-svarinshaug", "the-necklace-of-the-brisings", "the-binding-of-grafvitnir"}
 })
 
 DefineAchievement("safe-passage", {
@@ -95,9 +95,9 @@ DefineAchievement("rugnurs-bravery", {
 DefineAchievement("the-scepter-of-fire", {
 	Name = "The Scepter of Fire",
 	Icon = "icon-thursagan",
-	Description = "Complete the Caverns of Flame mission.",
+	Description = "Complete the A Bargain is Struck, Closing the Gates, Searching for the Runecrafter, Gathering Materials, Hills of the Shorbear Clan, The Wyrm and Caverns of Flame missions.",
 	PlayerColor = "red",
-	RequiredQuests = {"caverns-of-flame"}
+	RequiredQuests = {"a-bargain-is-struck", "closing-the-gates", "searching-for-the-runecrafter", "gathering-materials", "hills-of-the-shorbear-clan", "the-wyrm", "caverns-of-flame"}
 })
 
 --[[

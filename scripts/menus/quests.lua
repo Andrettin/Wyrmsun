@@ -92,13 +92,21 @@ function RunQuestMenu(world)
 
 	local completed_quest_quantity = 0
 	local total_quest_quantity = 0
+	local item_x = 1
+	local item_y = 1
 	local quests = GetQuests()
 	for i=1, table.getn(quests) do
 		if (GetQuestData(quests[i], "Hidden") == false and GetQuestData(quests[i], "World") == world) then
 			total_quest_quantity = total_quest_quantity + 1
 			if (GetQuestData(quests[i], "RequiredQuest") == "" or GetQuestData(GetQuestData(quests[i], "RequiredQuest"), "Completed") or GetQuestData(quests[i], "Completed")) then
 				if (GetQuestData(quests[i], "RequiredTechnology") == "" or GetArrayIncludes(wyr.preferences.TechnologyAcquired, GetQuestData(quests[i], "RequiredTechnology"))) then
-					addQuestIcon(quests[i], menu, offx + 23 + 4 + (54 * GetQuestData(quests[i], "X")), offy + 10 + 4 + (46 * (GetQuestData(quests[i], "Y") + 1))) -- increase Y by 1 because there are few enough quests that it makes sense to make the existing quests more centralized in the interface
+					addQuestIcon(quests[i], menu, offx + 23 + 4 + (54 * item_x), offy + 10 + 4 + (46 * (item_y + 1))) -- increase Y by 1 because there are few enough quests that it makes sense to make the existing quests more centralized in the interface
+			
+					item_x = item_x + 1
+					if (item_x > 9) then
+						item_x = 1
+						item_y = item_y + 1
+					end
 				end
 				if (GetQuestData(quests[i], "Completed")) then
 					completed_quest_quantity = completed_quest_quantity + 1

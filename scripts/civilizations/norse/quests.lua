@@ -25,7 +25,30 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-Load("scripts/civilizations/dwarf/quests.lua")
-Load("scripts/civilizations/germanic/quests.lua")
-Load("scripts/civilizations/norse/quests.lua")
-Load("scripts/civilizations/teuton/quests.lua")
+DefineQuest("trors-inheritance", {
+	Name = "Tror's Inheritance",
+	Icon = "icon-germanic-short-sword",
+	Description = "The young Tror has come of age, and requested you bring his father's weapons to him.",
+	World = "Earth",
+	Civilization = "germanic",
+	QuestGiver = "Tror",
+	Area = "Asaland",
+	StartSpeech = "I am finally old enough to receive my father's weapons. Would you be so kind and get them for me from chieftain Lorikus?",
+	InProgressSpeech = "Long have I waited for this moment...",
+	CompletionSpeech = "I am grateful to you. I have now finally became the warrior I was meant to be.",
+	Hidden = true
+})
+
+DefineQuest("ottars-lineage", {
+	Name = "Ottar's Lineage",
+	Icon = "icon-teuton-swordsman",
+	Description = "Ottar has bet his entire inheritance against Argantyr, to see who has the better lineage. He now asks you to take him to a seeress who can tell him about his bloodline.",
+	World = "Earth",
+	Civilization = "norse",
+	QuestGiver = "Ottar",
+	Area = "Hordaland",
+	StartSpeech = "In the heat of a discussion, me and Argantyr have made a bet - to see who has the better lineage. Each of us has put our entire inheritance at stake. There is a seeress who can tell me about my bloodline - would you escort me to her?",
+	InProgressSpeech = "Everything is at stake...",
+	CompletionSpeech = "Me, a kinsman of Siegfried! The bet is as good as won.",
+	Hidden = true
+})
