@@ -251,6 +251,14 @@ DefineLanguageWord("Smit", { -- source also gives the alternative form "Smet"; S
 	DerivesFrom = {"old-saxon", "noun", "Smiđ"}
 })
 
+DefineLanguageWord("Stapel", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 241.
+	Language = "middle-low-german",
+	Type = "noun",
+	Meanings = {"Column", "Document", "Church Tower", "Piled Horde", "Stockyard"}, -- source gives the German "Säule, Unterlage, aufgeschichteter Haufe, Stapelplatz" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Stapula"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Sûd", { -- source also gives the alternative form "sûder"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.
 	Language = "middle-low-german",
 	Type = "adverb",

@@ -105,8 +105,7 @@ DefineLanguageWord("Barn", {
 	Language = "english",
 	Type = "noun",
 	Meanings = {"Barn"},
-	Gender = "neuter",
-	AffixNameTypes = {"compound", "prefix", "singular", "settlement"} -- example: "Barnstaple"; Source: "Philip's International School Atlas", 2006, p. 64.
+	Gender = "neuter"
 })
 
 DefineLanguageWord("Barrow", {
@@ -145,6 +144,14 @@ DefineLanguageWord("Beacon", {
 	AffixNameTypes = {
 		"separate", "prefix", "singular", "terrain-hills" -- example: "Beacon Hill"
 	}
+})
+
+DefineLanguageWord("Beam", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Beam"},
+	DerivesFrom = {"old-english", "noun", "Béam"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 133.
+	Gender = "neuter"
 })
 
 DefineLanguageWord("Bean", {
@@ -314,6 +321,14 @@ DefineLanguageWord("Board", {
 	DerivesFrom = {"old-english", "noun", "Bord"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, pp. 135-136.
 	Gender = "neuter",
 	AffixNameTypes = {"separate", "suffix", "singular", "unit-class-lumber-mill"} -- seems sensible
+})
+
+DefineLanguageWord("Bone", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Bone"},
+	DerivesFrom = {"old-english", "noun", "Bân"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 133.
+	Gender = "neuter"
 })
 
 DefineLanguageWord("Borough", {
@@ -2717,8 +2732,8 @@ DefineLanguageWord("Staple", {
 	Language = "english",
 	Type = "noun",
 	Meanings = {"Staple"},
-	Gender = "neuter",
-	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- example: "Barnstaple"; Source: "Philip's International School Atlas", 2006, p. 64.
+	DerivesFrom = {"old-english", "noun", "Stapol"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 241.
+	Gender = "neuter"
 })
 
 DefineLanguageWord("Stead", {

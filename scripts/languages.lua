@@ -135,7 +135,8 @@ DefineLanguage("english", {
 		"Abbandun", "Abingdon", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"Abbodes", "Abbots", -- Abbodesbyrig -> Abbotsbury; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"Abbodesbyrig", "Abbotsbury", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-		"Ægeles", "Ayles", -- Ægelesburg -> Aylesbury, Ægelesford -> Aylesford; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"Ægeles", "Ayles", -- Ægelesburg -> Aylesbury; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"Ægeles", "Ayles", -- Ægelesford -> Aylesford; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"Ægelesburg", "Aylesbury", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"Ægelesford", "Aylesford", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"Æthelingaig", "Athelney", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
@@ -147,11 +148,23 @@ DefineLanguage("english", {
 		"Arwe", "Orwell", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"Assan", "Ashing", -- Assandun -> Ashingdon; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"Assandun", "Ashingdon", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"Badecanwiellon", "Bakewell", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"Bænesing", "Bensing", -- Bænesingtun -> Bensington; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"Bænesingtun", "Bensington", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"Bancornaburg", "Bangor", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"Bardan", "Barn", -- Bardanstapol -> Barnstaple; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"Bardanstapol", "Barnstaple", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"Basengum", "Basing", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"Bathum", "Bath", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"Beam", "Ben", -- Beamfleot -> Benfleet; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"Beamfleot", "Benfleet", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"Burg", "Bury", -- Ægelesburg -> Aylesbury; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-		"Byrig", "Bury", -- Abbodesbyrig -> Abbotsbury, Ambresbyrig -> Amesbury; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
-		"Dun", "Don", -- Abbandun -> Abingdon, Assandun -> Ashingdon; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"Byrig", "Bury", -- Abbodesbyrig -> Abbotsbury; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"Byrig", "Bury", -- Ambresbyrig -> Amesbury; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"Dun", "Don", -- Abbandun -> Abingdon; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"Dun", "Don", -- Assandun -> Ashingdon; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"Fleot", "Fleet", -- Beamfleot -> Benfleet; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
+		"Stapol", "Staple", -- Bardanstapol -> Barnstaple; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		"Tun", "Ton", -- Bænesingtun -> Bensington; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		-- German to English
 		"Bernhard", "Bernard",

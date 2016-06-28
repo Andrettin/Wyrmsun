@@ -178,6 +178,14 @@ DefineLanguageWord("Aviliuþ", { -- Source: August Fick and Alf Torp, "Wortschat
 	Gender = "neuter"
 })
 
+DefineLanguageWord("Bagms", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 134.
+	Language = "gothic",
+	Type = "noun",
+	Meanings = {"Tree"}, -- source gives the German "Baum" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Bagma"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Bairan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "gothic",
 	Type = "verb",

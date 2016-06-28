@@ -260,11 +260,42 @@ DefineLanguageWord("Bart", { -- Source: http://www.duden.de/rechtschreibung/Bart
 	}
 })
 
+DefineLanguageWord("Baum", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"Tree"},
+	DerivesFrom = {"middle-high-german", "noun", "Boum"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 134.
+	Gender = "masculine",
+	NumberCaseInflections = {
+		"singular", "genitive", "Baumes", -- alternatively also "Baums"
+		"plural", "nominative", "Bäume",
+		"plural", "accusative", "Bäume",
+		"plural", "dative", "Bäumen",
+		"plural", "genitive", "Bäume"
+	}
+})
+
+DefineLanguageWord("Bein", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"Leg"},
+	DerivesFrom = {"middle-high-german", "noun", "Bein"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 133.
+	Gender = "neuter",
+	NumberCaseInflections = {
+		"singular", "genitive", "Beines", -- alternatively also "Beins"
+		"plural", "nominative", "Beine",
+		"plural", "accusative", "Beine",
+		"plural", "dative", "Beinen",
+		"plural", "genitive", "Beine"
+	}
+})
+
 DefineLanguageWord("Berg", {
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {"Mountain", "Hill"},
 	DerivesFrom = {"middle-high-german", "noun", "Berc"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
+	Gender = "masculine",
 	NumberCaseInflections = {
 		"singular", "genitive", "Berges", -- alternatively also "Bergs"
 		"plural", "nominative", "Berge",
@@ -272,7 +303,6 @@ DefineLanguageWord("Berg", {
 		"plural", "dative", "Bergen",
 		"plural", "genitive", "Berge"
 	},
-	Gender = "masculine",
 	AffixNameTypes = {
 		"compound", "suffix", "singular", "settlement", -- examples: "Adelsberg", "Hartberg", "Spielberg", "Wolfsberg"
 		"compound", "suffix", "singular", "province", -- example: "Vorarlberg" (Vorarlberg is a special case, however - ideally we should generate mountain names like "Arlberg", and then have the possibility of adding the prefix "Vor" regarding the mountain, if it is on the edge of the province
@@ -2290,6 +2320,20 @@ DefineLanguageWord("Stadt", {
 		"plural", "genitive", "Städte"
 	},
 	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- examples: "Darmstadt", "Eisenstadt", "Freistadt", "Josefstadt", "Kronstadt", "Leopoldstadt", "Neustadt"
+})
+
+DefineLanguageWord("Staffel", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"Scale"},
+	DerivesFrom = {"middle-high-german", "noun", "Stapfel"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 241.
+	Gender = "feminine",
+	NumberCaseInflections = {
+		"plural", "nominative", "Staffeln",
+		"plural", "accusative", "Staffeln",
+		"plural", "dative", "Staffeln",
+		"plural", "genitive", "Staffeln"
+	}
 })
 
 DefineLanguageWord("Stein", {

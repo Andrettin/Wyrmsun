@@ -102,6 +102,14 @@ DefineLanguageWord("Barta", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	DerivesFrom = {"proto-germanic", "noun", "Barda"}
 })
 
+DefineLanguageWord("Bein", { -- source also gives the alternative form "pein"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 133.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Leg"}, -- source gives the German "Bein" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Baina"},
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Beran", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "old-high-german",
 	Type = "verb",
@@ -185,6 +193,14 @@ DefineLanguageWord("Bort", { -- Source: http://www.cnrtl.fr/definition/bord
 	Type = "noun",
 	Meanings = {"Edge", "Ridge", "Edge of a Ship"}, -- source gives the French "bord, arête; bord de navire" as the meaning
 	DerivesFrom = {"proto-indo-european", "noun", "Bhrdho"}
+})
+
+DefineLanguageWord("Boum", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 134.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Tree"}, -- source gives the German "Baum" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Bagma"},
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Brant", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136; Source: http://www.cnrtl.fr/definition/brand
@@ -1437,6 +1453,14 @@ DefineLanguageWord("Standan", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Language = "old-high-german",
 	Type = "verb",
 	Meanings = {"Stand"}
+})
+
+DefineLanguageWord("Staphal", { -- source also gives the alternative forms "staffal" and "stafol"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 241.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Tier", "Foot Stand"}, -- source gives the German "Stufe, Fußgestell" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Stapula"},
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Stein", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 245.

@@ -41,6 +41,14 @@ DefineLanguageWord("Bræda", { -- vernacular; Source: August Fick and Alf Torp, 
 	Gender = "feminine"
 })
 
+DefineLanguageWord("Buna", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 133.
+	Language = "norwegian",
+	Type = "noun",
+	Meanings = {"Bone Tube", "Calfbone"}, -- source gives the German "Knochenröhre, Wadenbein" as the meaning
+	DerivesFrom = {"proto-indo-european", "noun", "Bhənā"},
+	Gender = "feminine"
+})
+
 DefineLanguageWord("Busk", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 143.
 	Language = "norwegian",
 	Type = "noun",

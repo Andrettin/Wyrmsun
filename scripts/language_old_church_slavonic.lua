@@ -25,6 +25,13 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineLanguageWord("Bedro", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 133.
+	Language = "old-church-slavonic",
+	Type = "noun",
+	Meanings = {"Thig"}, -- source gives the German "Schenkel" as the meaning
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Běžą", { -- source also gives the alternate form "Běžati"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 133.
 	Language = "old-church-slavonic",
 	Type = "verb", -- correct?

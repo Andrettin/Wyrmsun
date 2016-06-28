@@ -31,6 +31,12 @@ DefineLanguageWord("Bheg", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Meanings = {"Run"} -- source gives the German "Laufen" as the meaning
 })
 
+DefineLanguageWord("Bhənā", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 133.
+	Language = "proto-indo-european",
+	Type = "noun", -- correct?
+	Meanings = {}
+})
+
 DefineLanguageWord("Bheredh", { -- Source: http://www.cnrtl.fr/definition/bord
 	Language = "proto-indo-european",
 	Type = "verb",
@@ -46,6 +52,18 @@ DefineLanguageWord("Bhew", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-
 DefineLanguageWord("Bhewdh", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
 	Language = "proto-indo-european",
 	Type = "verb",
+	Meanings = {}
+})
+
+DefineLanguageWord("Bhoino", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 133.
+	Language = "proto-indo-european",
+	Type = "noun", -- correct?
+	Meanings = {}
+})
+
+DefineLanguageWord("Bhoumo", { -- source gives "bhou(ə)mo"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 134.
+	Language = "proto-indo-european",
+	Type = "noun", -- correct?
 	Meanings = {}
 })
 

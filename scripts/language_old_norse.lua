@@ -163,6 +163,14 @@ DefineLanguageWord("Bađ", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Gender = "neuter"
 })
 
+DefineLanguageWord("Bađmr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 134.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Tree"}, -- source gives the German "Baum" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Bagma"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Barđ", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
 	Language = "old-norse",
 	Type = "noun",
@@ -186,6 +194,20 @@ DefineLanguageWord("Bauþ", { -- Source: Winfred P. Lehmann, "A Grammar of Proto
 	Participles = {
 		"past", "Bauþ" -- "offered"
 	}
+})
+
+DefineLanguageWord("Bein", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 133.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Bone", "Leg"}, -- source gives the German "Knochen, Bein" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Baina"},
+	Gender = "neuter"
+})
+
+DefineLanguageWord("Beinn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 133.
+	Language = "old-norse",
+	Type = "adjective", -- or was the adverb meant instead?
+	Meanings = {"Straight"} -- source gives the German "gerade" as the meaning
 })
 
 DefineLanguageWord("Bekkr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 133.
@@ -1475,6 +1497,14 @@ DefineLanguageWord("Stīga", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Type = "verb",
 	Meanings = {"Climb"},
 	DerivesFrom = {"proto-germanic", "verb", "Steig"}
+})
+
+DefineLanguageWord("Stǫpull", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 241.
+	Language = "old-norse",
+	Type = "noun",
+	Meanings = {"Pole", "Pillar", "Church Tower"}, -- source gives the German "Pfoste, Pfeiler, Kirchturm" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Stapula"},
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Suđr", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.

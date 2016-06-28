@@ -203,6 +203,12 @@ DefineLanguageWord("Far", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-G
 	Meanings = {"Wheat", "Spelt"} -- the word means one of these, not both
 })
 
+DefineLanguageWord("Fĕmur", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 133.
+	Language = "latin",
+	Type = "noun",
+	Meanings = {}
+})
+
 DefineLanguageWord("Ferō", { -- this is the singular first person present; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "latin",
 	Type = "verb",

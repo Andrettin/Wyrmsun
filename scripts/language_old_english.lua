@@ -52,7 +52,7 @@ DefineLanguageWord("Ærn", { -- Source: Sean Crist, "An Analysis of *z loss in W
 DefineLanguageWord("Æþela", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 14.
 	Language = "old-english",
 	Type = "noun",
-	Meanings = {"Noble Birth"}, -- source gives "edle Geburt" as the meaning
+	Meanings = {"Noble Birth"}, -- source gives the German "edle Geburt" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Aþala"},
 	Gender = "feminine"
 })
@@ -104,6 +104,22 @@ DefineLanguageWord("Bæþ", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Meanings = {"Bath", "Baths"}, -- source gives the German "Bad" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Baþa"},
 	Gender = "neuter"
+})
+
+DefineLanguageWord("Bân", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 133.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Leg"}, -- source gives the German "Bein" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Baina"},
+	Gender = "neuter"
+})
+
+DefineLanguageWord("Béam", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 134.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Tree", "Beam"}, -- source gives the German "Baum, Balken" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Bagma"},
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Beard", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
@@ -1626,6 +1642,14 @@ DefineLanguageWord("Standan", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Language = "old-english",
 	Type = "verb",
 	Meanings = {"Stand"}
+})
+
+DefineLanguageWord("Stapol", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 241.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Pillar", "Foundation", "Bustard"}, -- source gives the German "Pfeiler, Grundlage, Trappe" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Stapula"},
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Stīgan", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 2.

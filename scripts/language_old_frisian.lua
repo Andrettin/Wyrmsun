@@ -32,6 +32,22 @@ DefineLanguageWord("Âster", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	DerivesFrom = {"proto-germanic", "adverb", "Austa"}
 })
 
+DefineLanguageWord("Bâm", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 134.
+	Language = "old-frisian",
+	Type = "noun",
+	Meanings = {"Tree", "Beam"}, -- source gives the German "Baum, Balken" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Bagma"},
+	Gender = "masculine"
+})
+
+DefineLanguageWord("Bên", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 133.
+	Language = "old-frisian",
+	Type = "noun",
+	Meanings = {"Leg"}, -- source gives the German "Bein" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Baina"},
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Berch", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
 	Language = "old-frisian",
 	Type = "noun",
@@ -92,6 +108,13 @@ DefineLanguageWord("Bregge", { -- source also gives the alternative form "Brigge
 	Meanings = {"Bridge"}, -- source gives the German "Brücke" as the meaning
 	Gender = "feminine",
 	DerivesFrom = {"proto-germanic", "noun", "Brugjô"}
+})
+
+DefineLanguageWord("Bunka", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 133.
+	Language = "old-frisian",
+	Type = "noun",
+	Meanings = {"Bone", "Hip Bone"}, -- source gives the German "Knochen, Hüftknochen" as the meaning
+	DerivesFrom = {"proto-indo-european", "noun", "Bhənā"} -- source indicates this as a possibility
 })
 
 DefineLanguageWord("Burch", { -- source gives "Bur(i)ch"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
@@ -489,6 +512,13 @@ DefineLanguageWord("Smithe", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Type = "noun",
 	Meanings = {"Smithy"}, -- source gives the German "Schmiede" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Smiþjôn"}
+})
+
+DefineLanguageWord("Stapul", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 241.
+	Language = "old-frisian",
+	Type = "noun",
+	Meanings = {"Executioner's Block", "Dental Crown"}, -- source gives the German "Richtblock, die Krone eines Zahnes" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Stapula"}
 })
 
 DefineLanguageWord("Stên", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 245.

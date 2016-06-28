@@ -85,6 +85,14 @@ DefineLanguageWord("Bat", { -- Source: August Fick and Alf Torp, "Wortschatz der
 	Gender = "neuter"
 })
 
+DefineLanguageWord("Bein", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 133.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Leg"}, -- source gives the German "Bein" as the meaning
+	DerivesFrom = {"old-high-german", "noun", "Bein"},
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Berc", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
 	Language = "middle-high-german",
 	Type = "noun",
@@ -125,6 +133,14 @@ DefineLanguageWord("Bluost", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Meanings = {"Blossom"}, -- apparently, but it is not clear from the source
 	DerivesFrom = {"proto-germanic", "noun", "Blôma"},
 	Gender = "feminine"
+})
+
+DefineLanguageWord("Boum", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 134.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Tree"}, -- source gives the German "Baum" as the meaning
+	DerivesFrom = {"old-high-german", "noun", "Boum"},
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Brant", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136; Source: http://www.cnrtl.fr/definition/brand
@@ -177,6 +193,13 @@ DefineLanguageWord("Brunst", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Meanings = {"Burning", "Fire"}, -- source gives the German "Brennen, Brand"
 	DerivesFrom = {"old-high-german", "noun", "Brunst"},
 	Gender = "feminine"
+})
+
+DefineLanguageWord("Bunk", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 133.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Bone", "Hip Bone"}, -- source gives the German "Knochen, Hüftknochen" as the meaning
+	DerivesFrom = {"proto-indo-european", "noun", "Bhənā"} -- source indicates this as a possibility
 })
 
 DefineLanguageWord("Burc", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 137.
@@ -790,6 +813,14 @@ DefineLanguageWord("Smit", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Type = "noun",
 	Meanings = {"Smith", "Skilled Metalworker"}, -- source gives the German "Schmied, (kunstfertiger) Arbeiter in Metall"
 	DerivesFrom = {"old-high-german", "noun", "Smid"},
+	Gender = "masculine"
+})
+
+DefineLanguageWord("Stapfel", { -- source also gives the alternative form "staffel"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 241.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Tier", "Foot Stand"}, -- source gives the German "Stufe, Fußgestell" as the meaning
+	DerivesFrom = {"old-high-german", "noun", "Staphal"},
 	Gender = "masculine"
 })
 

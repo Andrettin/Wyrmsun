@@ -56,6 +56,14 @@ DefineLanguageWord("Beki", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Bên", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 133.
+	Language = "old-saxon",
+	Type = "noun",
+	Meanings = {"Leg"}, -- source gives the German "Bein" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Baina"},
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Beran", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.
 	Language = "old-saxon",
 	Type = "verb",
@@ -115,6 +123,14 @@ DefineLanguageWord("Blômo", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Type = "noun",
 	Meanings = {"Flower"}, -- source gives the German "Blume" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Blôma"},
+	Gender = "masculine"
+})
+
+DefineLanguageWord("Bôm", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 134.
+	Language = "old-saxon",
+	Type = "noun",
+	Meanings = {"Tree", "Beam"}, -- source gives the German "Baum, Balken" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Bagma"},
 	Gender = "masculine"
 })
 

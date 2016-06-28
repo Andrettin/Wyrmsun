@@ -126,6 +126,22 @@ DefineLanguageWord("Austrô", { -- source gives "Austrô(n)"; Source: August Fic
 	Gender = "feminine"
 })
 
+DefineLanguageWord("Bagma", { -- source also gives the alternative form "bauma"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 134.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Tree"}, -- source gives the German "Baum" as the meaning
+	DerivesFrom = {"proto-indo-european", "noun", "Bhoumo"}, -- source mentions this as a possibility
+	Gender = "masculine"
+})
+
+DefineLanguageWord("Baina", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 133.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Leg", "Bone"}, -- source gives the German "Bein" and the Latin "os, crus" as the meaning
+	DerivesFrom = {"proto-indo-european", "noun", "Bhoino"}, -- source mentions this as a possibility
+	Gender = "neuter"
+})
+
 DefineLanguageWord("Baki", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 133.
 	Language = "proto-germanic",
 	Type = "noun",
@@ -1172,6 +1188,13 @@ DefineLanguageWord("Staina", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Stone"}, -- source gives the German "Stein" as the meaning
+	Gender = "masculine"
+})
+
+DefineLanguageWord("Stapula", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 241.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Tier", "Pole"}, -- source gives the German "Stufe, Pfosten" as the meaning
 	Gender = "masculine"
 })
 
