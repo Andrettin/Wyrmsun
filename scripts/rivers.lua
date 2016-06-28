@@ -54,6 +54,13 @@ DefineRiver("Danube", {
 	}
 })
 
+DefineRiver("Dee", { -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
+	World = "Earth",
+	FactionCulturalNames = {
+		"teuton", "England", "Dee" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
+	}
+})
+
 DefineRiver("Dnieper", {
 	World = "Earth",
 	CulturalNames = {
@@ -146,19 +153,32 @@ DefineRiver("Sado", {
 	World = "Earth"
 })
 
-DefineRiver("Seine", {
-	World = "Earth"
+DefineRiver("Seine", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
+	World = "Earth",
+	FactionCulturalNames = {
+		"latin", "France", "Seine" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
+	}
 })
 
-DefineRiver("Tagus", {
+DefineRiver("Severn", { -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
+	World = "Earth",
+	FactionCulturalNames = {
+		"teuton", "England", "Severn" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
+	}
+})
+
+DefineRiver("Tagus", { -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
 	World = "Earth",
 	CulturalNames = {
 		"latin", "Tagus" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	}
 })
 
-DefineRiver("Thames", {
-	World = "Earth"
+DefineRiver("Thames", { -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
+	World = "Earth",
+	FactionCulturalNames = {
+		"teuton", "England", "Thames" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 185.
+	}
 })
 
 DefineRiver("Volga", {
