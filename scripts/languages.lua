@@ -32,7 +32,7 @@ if (CanAccessFile("cache/languages.lua")) then
 	local fileslist = ListFilesInDirectory("scripts/")
 	for i,f in ipairs(fileslist) do
 		local file_name = "scripts/" .. f
-		if ((string.find(file_name, "language") ~= nil or string.find(file_name, "province") ~= nil or string.find(file_name, "tiles") ~= nil or string.find(file_name, "character") ~= nil or string.find(file_name, "unique_item") ~= nil) and GetFileLastModified(file_name) > language_cache_date) then
+		if ((string.find(file_name, "language") ~= nil or string.find(file_name, "province") ~= nil or string.find(file_name, "tiles") ~= nil or string.find(file_name, "character") ~= nil or string.find(file_name, "unique_item") ~= nil or string.find(file_name, "works") ~= nil) and GetFileLastModified(file_name) > language_cache_date) then
 			LanguageCacheOutdated = true
 			break
 		end
@@ -45,7 +45,7 @@ if (CanAccessFile("cache/languages.lua")) then
 			local fileslist = ListFilesInDirectory(directory)
 			for second_i,second_f in ipairs(fileslist) do
 				local file_name = "scripts/" .. directory .. second_f
-				if ((string.find(file_name, "character") ~= nil or string.find(file_name, "unique_item") ~= nil) and GetFileLastModified(file_name) > language_cache_date) then
+				if ((string.find(file_name, "character") ~= nil or string.find(file_name, "unique_item") ~= nil or string.find(file_name, "works") ~= nil) and GetFileLastModified(file_name) > language_cache_date) then
 					LanguageCacheOutdated = true
 					break
 				end

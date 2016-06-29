@@ -25,12 +25,14 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-Load("scripts/civilizations/celt/works.lua")
-Load("scripts/civilizations/dwarf/works.lua")
-Load("scripts/civilizations/gnome/works.lua")
-Load("scripts/civilizations/goblin/works.lua")
-Load("scripts/civilizations/greek/works.lua")
-Load("scripts/civilizations/latin/works.lua")
-Load("scripts/civilizations/norse/works.lua")
-Load("scripts/civilizations/teuton/works.lua")
-Load("scripts/civilizations/troll/works.lua")
+DefineUpgrade("upgrade-work-o-foolish-mortal", { -- a piece of gnomish poetry; Source: Felix Grendon, "The Anglo-Saxon Charms", 1909, pp. 212-213.
+	Name = _("O Foolish Outsider"), -- part of the text (in the original "O foolish mortal", but here we change it to "O foolish outsider" since in the Wyrmsun universe gnomes are not supernatural creatures)
+	Work = "scroll",
+	Civilization = "gnome",
+	Quote = "\"O foolish outsider, by dull senses bound;\nWithin thyself the gnome must be found.\nKnow thou thyself, and by self-knowledge know\nThe lives above and in the world below.\nIn every sphere each being knows its own;\nTo gnomes only gnomes can be shown.\"\n- O Foolish Outsider"
+	-- Original text: "\"O foolish mortal, by dull senses bound;\nWithin thyself the spirit must be found.\nKnow thou thyself, and by self-knowledge know\nThe lives above and in the world below.\nIn every sphere each being knows its own;\nTo spirits only spirits can be shown.\""
+})
+
+DefineModifier("upgrade-work-o-foolish-mortal",
+	{"KnowledgeMagic", 1}
+)

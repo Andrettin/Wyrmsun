@@ -73,7 +73,7 @@ DefineLanguageWord("Leffas", {
 	Meanings = {"Soul of a Plant", "Soul of a Stone", "Soul of a Tree"}
 })
 
-DefineLanguageWord("Pypo", { -- name of a gnome; Source: Franz Hartmann, "Among the Gnomes", 1895, p. 13.
+DefineLanguageWord("Pypo", { -- name of a male gnome; Source: Franz Hartmann, "Among the Gnomes", 1895, p. 13.
 	Language = "gnomish",
 	Type = "noun",
 	Meanings = {}

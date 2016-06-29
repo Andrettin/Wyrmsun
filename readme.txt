@@ -107,6 +107,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added "Notitia Dignitatum" (Latin), which increases Knowledge (Warfare) by 1.
 - Added 56 Teuton literary works which increase Knowledge (Magic) by 1.
 - Added 3 goblin literary works which increase Knowledge (Magic) by 1.
+- Added 2 gnomish literary works which increase Knowledge (Magic) by 1.
 - Besides Town Halls and Strongholds, Temples can now also drop literary works.
 
 * Miscellaneous

@@ -1921,10 +1921,10 @@ if not (ui_loaded_first_time) then
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				}, 
 				{ 	Condition = {Unique = "only", Identified = "only", Quote = true}, HighlightColor = "yellow",
-					More = {"Text", {Text = UnitQuote("Unit"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = UnitQuote("Unit"), MaxWidth = math.max(256, Video.Width / 5), Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {Work = "only", Unique = "false", Quote = true}, HighlightColor = "yellow",
-					More = {"Text", {Text = UnitQuote("Unit"), MaxWidth = Video.Width / 5, Font = wyr.preferences.PopupDescriptionFont}}
+					More = {"Text", {Text = UnitQuote("Unit"), MaxWidth = math.max(256, Video.Width / 5), Font = wyr.preferences.PopupDescriptionFont}}
 				},
 		}	
 	})

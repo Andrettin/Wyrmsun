@@ -402,6 +402,10 @@ DefineProvince("Untersberg", {
 	HistoricalCultures = {
 		-3000, "gnome"
 	}
+	-- on the surface of Untersberg, there is a cave called the Wyrm's Den (in the original it is called Dragon's Den), where in older times a wyrm lived (and devoured many sentient beings); the Wyrm's Den is 5800 feet above the sea level; Source: Franz Hartmann, "Among the Gnomes", 1895, pp. 26, 50.
+	-- in 1529, the gnomes of Untersberg were visited for 10 days by an outsider; Source: Franz Hartmann, "Among the Gnomes", 1895, p. 35.
+	-- the gnomes of Untersberg were visited by an expedition on the 23rd of June in an unknown year; this happened after the Manchester-Liverpool railway line was already projected, but before (intercity? probably) railways were in action; Source: Franz Hartmann, "Among the Gnomes", 1895, pp. 24, 40-41.
+	-- note: the project of the Liverpool-Manchester line was first discussed in 1822; Source: Henry Booth, "An Account of the Liverpool and Manchester Railway", 1830, p. 3.
 })
 
 DefineProvince("Deep Sea", {
