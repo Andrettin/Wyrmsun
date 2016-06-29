@@ -397,6 +397,9 @@ DefineProvince("Untersberg", {
 	Map = "maps/random/random-map-swamp.smp",
 	SettlementTerrain = "Mountains",
 	Claims = {
+		"gnome", "Cubital Tribe",
+		"gnome", "Sagan Tribe",
+		"gnome", "Vulcan Tribe",
 		"gnome", "Untersberg"
 	},
 	HistoricalCultures = {

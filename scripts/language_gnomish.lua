@@ -25,12 +25,16 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageWord("Adalga", {
+DefineLanguageWord("Acthna", { -- Source: Franz Hartmann, "Among the Gnomes", 1895, p. 158.
 	Language = "gnomish",
 	Type = "noun",
-	Meanings = {},
-	Gender = "feminine", -- presumably, since it is a feminine personal name
-	NameTypes = {"person-female"}
+	Meanings = {"Subterranean Fire"}
+})
+
+DefineLanguageWord("Adalga", { -- name of a female gnome; Source: Franz Hartmann, "Among the Gnomes", 1895, p. 79.
+	Language = "gnomish",
+	Type = "noun",
+	Meanings = {}
 })
 
 DefineLanguageWord("Berg", { -- appears in "Untersberg", which is given as the "mountain of the lower world"; Source: Franz Hartmann, "Among the Gnomes", 1895, p. 1.
@@ -39,38 +43,40 @@ DefineLanguageWord("Berg", { -- appears in "Untersberg", which is given as the "
 	Meanings = {"Mountain"}
 })
 
-DefineLanguageWord("Bimbam", {
+DefineLanguageWord("Bimbam", { -- name of a male gnome; Source: Franz Hartmann, "Among the Gnomes", 1895, p. 79.
 	Language = "gnomish",
 	Type = "noun",
-	Meanings = {},
-	NameTypes = {"person-male"}
+	Meanings = {}
 })
 
-DefineLanguageWord("Clavo", {
+DefineLanguageWord("Clavo", { -- Source: Franz Hartmann, "Among the Gnomes", 1895, p. 106.
 	Language = "gnomish",
 	Type = "noun",
-	Meanings = {},
-	NameTypes = {"person-male"}
+	Meanings = {}
 })
 
-DefineLanguageWord("Cravatu", {
+DefineLanguageWord("Cravatu", { -- name of a male gnome; Source: Franz Hartmann, "Among the Gnomes", 1895, p. 97.
 	Language = "gnomish",
 	Type = "noun",
-	Meanings = {},
-	NameTypes = {"person-male"}
+	Meanings = {}
 })
 
-DefineLanguageWord("Kalutho", {
+DefineLanguageWord("Gnana", { -- name of the capital of Untersberg; Source: Franz Hartmann, "Among the Gnomes", 1895, p. 179.
 	Language = "gnomish",
 	Type = "noun",
-	Meanings = {},
-	NameTypes = {"person-male"}
+	Meanings = {}
 })
 
-DefineLanguageWord("Leffas", {
+DefineLanguageWord("Kalutho", { -- name of an (apparently male) gnome; Source: Franz Hartmann, "Among the Gnomes", 1895, p. 13.
 	Language = "gnomish",
 	Type = "noun",
-	Meanings = {"Soul of a Plant", "Soul of a Stone", "Soul of a Tree"}
+	Meanings = {}
+})
+
+DefineLanguageWord("Leffas", { -- Source: Franz Hartmann, "Among the Gnomes", 1895, p. 159.
+	Language = "gnomish",
+	Type = "noun",
+	Meanings = {"Plant Soul", "Stone Soul", "Tree Soul"}
 })
 
 DefineLanguageWord("Pypo", { -- name of a male gnome; Source: Franz Hartmann, "Among the Gnomes", 1895, p. 13.

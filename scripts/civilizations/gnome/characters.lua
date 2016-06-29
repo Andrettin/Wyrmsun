@@ -34,8 +34,74 @@ DefineCharacter("Pypo", { -- Source: Franz Hartmann, "Among the Gnomes", 1895, p
 	ProvinceOfOrigin = "Untersberg",
 	Year = -1,
 	DeathYear = 40, -- last we hear of him
-	Quote = "Know, you creeping worm of the earth, I am Pypo, the king of the gnomes.",
+	Quote = _("\"Know, you creeping worm of the earth, I am Pypo, the king of the gnomes.\"\n- Pypo, King of Untersberg"),
 	HistoricalTitles = {
 		"head-of-state", -1, 40, "gnome", "Untersberg"
 	}
+})
+
+DefineCharacter("Bimbam", { -- Source: Franz Hartmann, "Among the Gnomes", 1895, pp. 79, 103-104.
+	Name = "Bimbam",
+	NameElements = {"word", "gnomish", "noun", "Bimbam"},
+	Gender = "male",
+	Type = "unit-gnomish-master-at-arms", -- king
+	Civilization = "gnome",
+	ProvinceOfOrigin = "Untersberg",
+	HairVariation = "blond-hair", -- had a yellow beard
+	HistoricalTitles = {
+--		"head-of-state", 0, 0, "gnome", "Untersberg" -- Bimbam I of Untersberg
+	}
+	-- had a noble bearing, was medium-sized, wore a crown with many stars (the greatest of which was a large carbuncle)
+})
+
+DefineCharacter("Cravatu", { -- Source: Franz Hartmann, "Among the Gnomes", 1895, pp. 96-97.
+	Name = "Cravatu",
+	NameElements = {"word", "gnomish", "noun", "Cravatu"},
+	Gender = "male",
+	Type = "unit-gnomish-master-at-arms",
+	Civilization = "gnome",
+	ProvinceOfOrigin = "Untersberg",
+	Trait = "upgrade-wise", -- had a venerable aspect
+	HairVariation = "gray-hair", -- had a white beard
+	HistoricalTitles = {
+--		"head-of-government", 0, 0, "gnome", "Untersberg" -- Prince Cravatu, minister to King Bimbam I of Untersberg (apparently in a position analogous to a head of government, but that is not certain)
+	}
+	-- dressed in a black cloak or cape, short trousers, stockings and buckled shoes
+})
+
+DefineCharacter("Adalga", { -- Source: Franz Hartmann, "Among the Gnomes", 1895, pp. 78-79, 148-149, 172.
+	Name = "Adalga",
+	NameElements = {"word", "gnomish", "noun", "Adalga"},
+	Gender = "female",
+	Type = "unit-gnomish-herbalist", -- actually a princess
+	Civilization = "gnome",
+	Faction = "Sagan Tribe", -- Adalga belonged to the Sagan tribe
+	ProvinceOfOrigin = "Untersberg",
+	Father = "Bimbam",
+	HairVariation = "blond-hair", -- had long golden hair
+	-- simple in her way of thinking, pure in her affection, natural and sincere
+	Quote = _("\"My name is Adalga, I am the daughter of Bimbam I, king of the gnomes. But what are you?\"\n- Adalga, Princess of Untersberg")
+})
+
+DefineCharacter("Kalutho", { -- Source: Franz Hartmann, "Among the Gnomes", 1895, p. 104.
+	Name = "Kalutho",
+	NameElements = {"word", "gnomish", "noun", "Kalutho"},
+	Gender = "male",
+	Type = "unit-gnomish-herbalist", -- part of his duties was tending to the roots of plants on the eastern side of Untersberg
+	Civilization = "gnome",
+	ProvinceOfOrigin = "Untersberg"
+})
+
+DefineCharacter("Clavo", { -- Source: Franz Hartmann, "Among the Gnomes", 1895, p. 106.
+	Name = "Clavo",
+	NameElements = {"word", "gnomish", "noun", "Clavo"},
+	Gender = "male",
+	Type = "unit-gnomish-master-at-arms", -- general
+	Civilization = "gnome",
+	ProvinceOfOrigin = "Untersberg",
+	Trait = "upgrade-quick", -- robust and very quick
+	HistoricalTitles = {
+--		"war-minister", 0, 0, "gnome", "Untersberg" -- commanding general of the army of Untersberg
+	}
+	-- carried a scabbard by his side
 })

@@ -65,3 +65,12 @@ DefineWorldMapTile({50, 13}, {
 		"dwarf", "Lyr", "name-elements", {"word", "dwarven", "adjective", "Lyr"}
 	}
 })
+
+DefineWorldMapTile({-1, -1}, { -- having no coordinates means it will be randomly placed in the map, according to its settings
+	World = "Nidavellir",
+	Province = "Untersberg",
+	Capital = true,
+	CulturalSettlementNames = {
+		"gnome", "Gnana"--, "name-elements", {"word", "gnomish", "noun", "Gnana"} -- capital of Untersberg; Source: Franz Hartmann, "Among the Gnomes", 1895, p. 179.
+	}
+})
