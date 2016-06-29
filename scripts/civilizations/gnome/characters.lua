@@ -46,6 +46,7 @@ DefineCharacter("Bimbam", { -- Source: Franz Hartmann, "Among the Gnomes", 1895,
 	Gender = "male",
 	Type = "unit-gnomish-master-at-arms", -- king
 	Civilization = "gnome",
+--	Faction = "Sagan Tribe", -- Bimbam belonged to the Sagan tribe (since his characteristics in the Among the Gnomes story, like being able to elongate himself, fit with what is described of the Sagans)
 	ProvinceOfOrigin = "Untersberg",
 	HairVariation = "blond-hair", -- had a yellow beard
 	HistoricalTitles = {
@@ -62,10 +63,8 @@ DefineCharacter("Cravatu", { -- Source: Franz Hartmann, "Among the Gnomes", 1895
 	Civilization = "gnome",
 	ProvinceOfOrigin = "Untersberg",
 	Trait = "upgrade-wise", -- had a venerable aspect
-	HairVariation = "gray-hair", -- had a white beard
-	HistoricalTitles = {
---		"head-of-government", 0, 0, "gnome", "Untersberg" -- Prince Cravatu, minister to King Bimbam I of Untersberg (apparently in a position analogous to a head of government, but that is not certain)
-	}
+	HairVariation = "gray-hair" -- had a white beard
+	-- Prince Cravatu, minister to King Bimbam I of Untersberg
 	-- dressed in a black cloak or cape, short trousers, stockings and buckled shoes
 })
 
@@ -75,7 +74,7 @@ DefineCharacter("Adalga", { -- Source: Franz Hartmann, "Among the Gnomes", 1895,
 	Gender = "female",
 	Type = "unit-gnomish-herbalist", -- actually a princess
 	Civilization = "gnome",
-	Faction = "Sagan Tribe", -- Adalga belonged to the Sagan tribe
+--	Faction = "Sagan Tribe", -- Adalga belonged to the Sagan tribe
 	ProvinceOfOrigin = "Untersberg",
 	Father = "Bimbam",
 	HairVariation = "blond-hair", -- had long golden hair

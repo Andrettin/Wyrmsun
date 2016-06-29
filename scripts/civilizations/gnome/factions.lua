@@ -85,7 +85,12 @@ DefineFaction("Untersberg", { -- Source: Franz Hartmann, "Among the Gnomes", 189
 	Type = "polity",
 	Colors = {"blue"}, -- the king of Untersberg, Pypo, wore a steel-blue gown; Source: Franz Hartmann, "Among the Gnomes", 1895, pp. 12-13.
 	DefaultTier = "kingdom",
+	MinisterTitles = {
+		"head-of-government", "no-gender", "no-government-type", "no-faction-tier", "Grand Chancellor", -- Source: Franz Hartmann, "Among the Gnomes", 1895, pp. 201, 206.
+		"education-minister", "no-gender", "no-government-type", "no-faction-tier", "Superintendent of Public Schools" -- Source: Franz Hartmann, "Among the Gnomes", 1895, p. 201.
+	},
 	HistoricalCapitals = {
 		-3000, "Untersberg"
 	}
+	-- Untersberg had an "Order of the Bullfrog" in Among the Gnomes (should be changed to an animal which exists in Nidavellir); Source: Franz Hartmann, "Among the Gnomes", 1895, p. 201.
 })
