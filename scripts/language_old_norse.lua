@@ -30,7 +30,7 @@ DefineLanguageWord("Ađal", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Type = "noun",
 	Meanings = {"Nature", "Character"}, -- source gives "natura, indoles" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Aþala"},
-Gender = "neuter"
+	Gender = "neuter"
 })
 
 DefineLanguageWord("Ađalskâli", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 14.

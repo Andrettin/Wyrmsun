@@ -30,3 +30,10 @@ DefineLanguageWord("Perun", { -- Source: H. Munro Chadwick, "The Oak and the Thu
 	Type = "noun",
 	Meanings = {"Thunderbolt"}
 })
+
+DefineLanguageWord("Šemík", { -- name of Horymír's horse in the Praguer legend; Source: Alena Ježková, "77 Prague Legends", 2006, p. 154.
+	Language = "czech",
+	Type = "noun",
+	Meanings = {}
+})
+

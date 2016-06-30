@@ -59,7 +59,7 @@ DefineCharacter("Cravatu", { -- Source: Franz Hartmann, "Among the Gnomes", 1895
 	Name = "Cravatu",
 	NameElements = {"word", "gnomish", "noun", "Cravatu"},
 	Gender = "male",
-	Type = "unit-gnomish-master-at-arms",
+	Type = "unit-gnomish-herbalist",
 	Civilization = "gnome",
 	ProvinceOfOrigin = "Untersberg",
 	Trait = "upgrade-wise", -- had a venerable aspect

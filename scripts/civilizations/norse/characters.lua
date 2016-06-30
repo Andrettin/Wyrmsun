@@ -59,8 +59,8 @@ DefineCharacter("Fridfrode Skjoldung", { -- Source: Snorri Sturlson, "Heimskring
 	}
 })
 
-DefineCharacter("Swegder Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 227-228.
-	Name = "Swegder",
+DefineCharacter("Svegðir Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 227-228; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 608.
+	Name = "Svegðir", -- as given by Cleasby; in the Heimskringla translation it is given as "Swegder" instead
 	FamilyName = "Yngling",
 	Gender = "male",
 	Type = "unit-teuton-swordsman",
@@ -79,7 +79,7 @@ DefineCharacter("Vana", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol.
 	Type = "unit-germanic-archer",
 	Civilization = "celt", -- from Vanaland/Vanaheim
 	ProvinceOfOrigin = "Don"
-	-- wife of Swegder's
+	-- wife of Svegðir's
 })
 
 DefineCharacter("Vanland Yngling", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 227-228.
@@ -93,7 +93,7 @@ DefineCharacter("Vanland Yngling", { -- Source: Snorri Sturlson, "Heimskringla",
 	Type = "unit-teuton-swordsman",
 	Civilization = "norse",
 	ProvinceOfOrigin = "Sweden",
-	Father = "Swegder Yngling",
+	Father = "Svegðir Yngling",
 	Mother = "Vana",
 	Quote = _("\"And Vanland, in a fatal hour,\nWas dragg'd by Grimhild's daughter's power\"\n- Thiodolf of Huine"),
 	HistoricalTitles = {

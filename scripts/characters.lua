@@ -30,13 +30,16 @@ if (OldDefineCharacter == nil) then
 end
 
 function DefineCharacter(character, data)
-	if (data.Civilization ~= nil or data.Faction ~= nil or data.Gender ~= nil or data.Noble ~= nil) then
+	if (data.Civilization ~= nil or data.Faction ~= nil or data.Type ~= nil or data.Gender ~= nil or data.Noble ~= nil) then
 		local preliminary_data = {}
 		if (data.Civilization ~= nil) then
 			preliminary_data.Civilization = data.Civilization
 		end
 		if (data.Faction ~= nil) then
 			preliminary_data.Faction = data.Faction
+		end
+		if (data.Type ~= nil) then
+			preliminary_data.Type = data.Type
 		end
 		if (data.Gender ~= nil) then
 			preliminary_data.Gender = data.Gender
@@ -47,9 +50,12 @@ function DefineCharacter(character, data)
 		OldDefineCharacter(character, preliminary_data)
 		data.Civilization = nil
 		data.Faction = nil
+		data.Type = nil
 		data.Gender = nil
 		data.Noble = nil
 	end
+	
+	data.Defined = true
 	
 	OldDefineCharacter(character, data)
 end
@@ -108,3 +114,6 @@ DefineCharacter("Attila", { -- Source: Norman Davies, "Vanished Kingdoms", 2012,
 	Year = 437, -- invasion of Gundahar's kingdom in 437 AD by Attila's Huns
 	DeathYear = 453 -- died
 })
+
+-- load the unique animals
+Load("scripts/characters_fauna.lua")

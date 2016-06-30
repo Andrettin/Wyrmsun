@@ -74,3 +74,12 @@ DefineWorldMapTile({-1, -1}, { -- having no coordinates means it will be randoml
 		"gnome", "Gnana"--, "name-elements", {"word", "gnomish", "noun", "Gnana"} -- capital of Untersberg; Source: Franz Hartmann, "Among the Gnomes", 1895, p. 179.
 	}
 })
+
+DefineWorldMapTile({-1, -1}, { -- a cave called the Wyrm's Den (in Among the Gnomes it was called Dragon's Den), where in older times a wyrm lived (and devoured many sentient beings); the Wyrm's Den is 5800 feet above the sea level; Source: Franz Hartmann, "Among the Gnomes", 1895, pp. 26, 50.
+	World = "Nidavellir",
+	Province = "Untersberg", -- is the surface of the Untersberg itself
+	Terrain = "Mountains",
+	CulturalTerrainNames = {
+		"Mountains", "gnome", "Wyrm's Den"
+	}
+})

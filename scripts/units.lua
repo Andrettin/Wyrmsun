@@ -198,6 +198,7 @@ DefineUnitType("unit-template-sapient-unit", { Name = _("Sapient Unit"),
 
 DefineUnitType("unit-rat", { Name = "Rat",
 	Parent = "unit-template-fauna-unit",
+	Species = "rat",
 	Class = "vermin",
 	Description = _("Rats are rodents of medium size and long tails. They usually live in forests or within human dwellings. They are often reviled for their carrying of diseases."),
 	Image = {"file", "neutral/units/rat.png", "size", {72, 72}},
@@ -223,7 +224,6 @@ DefineUnitType("unit-rat", { Name = "Rat",
 	RandomMovementDistance = 3,
 	Flesh = true,
 	Carnivore = true,
-	ChildUpgrade = "upgrade-child",
 	PierceDamage = true,
 	Variations = {
 		{
@@ -257,6 +257,7 @@ DefineUnitType("unit-rat", { Name = "Rat",
 
 DefineUnitType("unit-horse", { Name = "Horse",
 	Parent = "unit-template-fauna-unit",
+	Species = "horse",
 	Class = "grazer",
 	Description = _("Horses are valuable for their speed as well as their endurance, making excellent mounts. The creatures were a vital component of any army, and was an essential part of the lifestyle of the peoples of the Eurasian steppes."),
 	Quote = _("\"Glath and Gyllir, Gler and Skeithbrimir,\nSilfrintopp and Sinir,\nGisl and Falhofnir, Golltopp and Lettfeti,\nOn these steeds the gods shall go\nWhen dooms to give each day they ride\nTo the ash-tree Yggdrasil.\"\n- Grimnismol (Grimnir)"), -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 96.
@@ -281,42 +282,8 @@ DefineUnitType("unit-horse", { Name = "Horse",
 	RandomMovementProbability = 1,
 	BoardSize = 100, -- to prevent this unit from being loaded into transporters
 	RandomMovementDistance = 6,
---	PeopleAversion = true,
 	Flesh = true,
 	Herbivore = true,
-	PersonalNames = {
-		"Alsvid", -- One of the sun horses from Norse mythology (name means "All-Swift"); Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 771; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 99.
-		"Arvak", -- One of the sun horses from Norse mythology (name means "Early Waker"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 99.
-		"Falhofnir", -- Horse from Norse mythology (name means "Hollow-Hoofed"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 96-97.
-		"Gisl", -- Horse from Norse mythology (name means "Gleaming"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 96.
-		"Glath", -- Horse from Norse mythology (name means "Joyous"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 96.
-		"Glaum", -- The horse of Atli (Attila in Norse mythology); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 493.
-		"Gler", -- Horse from Norse mythology (name means "Shining"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 96.
-		"Golltop", -- Heimdall's horse from Norse mythology (name means "Gold-Topped"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 96-97.
-		"Grani", -- Sigurd's horse in Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 259, 303, 342.
-		"Gullfaxi", -- The giant Hrungnir's horse in Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 126.
-		"Gyllir", -- Horse from Norse mythology (name means "Golden"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 96.
-		"Lettfeti", -- Horse from Norse mythology (name means "Hollow-Hoofed"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 96-97.
-		"Melnir", -- Horse from Norse mythology (name means "Bit-Bearer"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 306.
-		"Mylnir", -- Horse from Norse mythology (name means "The Biter"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 306.
-		"Semik", -- Šemík was Horymír's horse in the Praguer legend; Source: Alena Ježková, "77 Prague Legends", 2006, p. 154.
-		"Silfrintopp", -- Horse from Norse mythology (name means "Silver-Topped"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 96.
-		"Sinir", -- Horse from Norse mythology (name means "Sinewy"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 96.
-		"Skeithbrimir", -- Horse from Norse mythology (name means "Swift-Going"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 96.
-		"Skinfaxi", -- Horse from Norse mythology (name means "Shining-Mane"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 71.
-		"Sleipnir", -- Odin's horse in Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 102, 159, 196.
-		"Sporvitnir", -- Horse from Norse mythology (name means "Spur-Wolf"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 306.
-		"Svathilfari", -- A giant's horse in Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 159, 196.
-		"Sveggjuth", -- Horse from Norse mythology (name means "Lithe"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 304.
-		"Sviputh", -- Horse from Norse mythology (name means "Swift"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 304.
-		"Vigblaer", -- Vigblær was Helgi's horse in Norse mythology (its name means "Battle-Breather"); Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 325.
-		"Vingskornir", -- Brynhild's horse in Norse mythology; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 384.
-		"Raven", -- horse of Adils (Yngling) of Sweden; king Ali of the Uplands also had a horse with the same name; is this a translation of the name to English?; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 245.
-		"Slöngvir" -- horse of Adils (Yngling) of Sweden; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 245.
-	},
---	PersonalNamePrefixes = {"Aegi"},
---	PersonalNameSuffixes = {"pan"},
-	ChildUpgrade = "upgrade-child",
 	Excrement = "unit-yale-excrement",
 	BluntDamage = true,
 	Coward = true,
@@ -358,6 +325,7 @@ DefineUnitType("unit-horse", { Name = "Horse",
 
 DefineUnitType("unit-yale", { Name = "Yale",
 	Parent = "unit-template-fauna-unit",
+	Species = "yale",
 	Class = "grazer",
 	Description = _("Yales are caprid creatures who inhabit Nidavellir. They have sturdy, golden tusks and horns, and their fur is covered by golden spots. Dwarves often use them as mounts or as beasts of carry."),
 	Image = {"file", "neutral/units/yale.png", "size", {72, 72}},
@@ -387,7 +355,6 @@ DefineUnitType("unit-yale", { Name = "Yale",
 	PersonalNames = {"Amaltheia", "Heidrun", "Banebdjedet", "Heryshaf", "Khnum"}, -- names of mythological caprids: Aegipan (figure from Greek mythology which is represented by the constellation Capricorn; name means "Goat-Pan" or "Goat-All"), Amaltheia (female goat from Greek mythology who fed child Zeus), Heidrun (female goat from Norse mythology); Banebdjedet, Heryshaf and Khnum are names of ram-headed Egyptian deities; Tanngnost ("Tooth Grinder", one of the goats who pulls Thor's chariot); Tanngrisni ("Gat-Tooth", one of the goats who pulls Thor's chariot)
 	PersonalNamePrefixes = {"Aegi", "Tann"},
 	PersonalNameSuffixes = {"gnost", "grisni", "pan"},
-	ChildUpgrade = "upgrade-child",
 	Excrement = "unit-yale-excrement",
 	BluntDamage = true,
 	Variations = {
@@ -443,6 +410,7 @@ DefineUnitType("unit-yale", { Name = "Yale",
 
 DefineUnitType("unit-gryphon", { Name = _("Gryphon"),
 	Parent = "unit-template-fauna-unit",
+	Species = "gryphon",
 	Class = "flying-predator",
 	Description = _("Gryphons dwell in the dwarven homeworld of Nidavellir, predating smaller animals such as yales. Although many gryphons can be seen in the wild, dwarves have been domesticating the beasts for aeons, riding them into battle. The Gryphon Mountain is the greatest nesting area for wild gryphons."),
 	Quote = _("\"What's this? Gryphons in my castle? Remove the beasts!\" - Relgorn, Chieftain of the Norlund Clan"),
@@ -473,7 +441,6 @@ DefineUnitType("unit-gryphon", { Name = _("Gryphon"),
 	Flesh = true,
 	Carnivore = true,
 	BoardSize = 100, -- to prevent this unit from being loaded into transporters
-	ChildUpgrade = "upgrade-gryphon-child",
 	PierceDamage = true,
 	PersonalNames = {
 		"Graa", "Greaa", "Gree", "Kaaa", "Kaasa", "Kassshh", "Kayya", "Kessshh", "Keyya", "Kiira", "Korra", "Korro", "Kraa", "Kuu", "Kzaaa", "Kzuuu",
@@ -520,6 +487,7 @@ DefineUnitType("unit-gryphon", { Name = _("Gryphon"),
 
 DefineUnitType("unit-wyrm", { Name = _("Wyrm"),
 	Parent = "unit-template-fauna-unit",
+	Species = "wyrm",
 	Class = "predator",
 	Description = _("These enormous creatures dwell in Nidavellir's underground, living off the meat of animals and intelligent beings alike. Wyrms are as territorial as they are rare, and will attack any that they perceive as a threat. Kobolds worship these beasts, believing them to be their ancestors. Some tribes go as far as living near a wyrm's lair, keeping it harmless by maintaining a low profile and feeding it well - sometimes even with offerings of kobolds."),
 	Quote = _("\"More wyrms there are beneath the ash\nThan an unwise ape would think;\nGoin and Moin, Grafvitnir's sons,\nGrabak and Grafvolluth,\nOfnir and Svafnir shall ever, methinks,\nGnaw at the twigs of the tree.\"\n- Dwarven Traditional Poetry"),
@@ -551,7 +519,6 @@ DefineUnitType("unit-wyrm", { Name = _("Wyrm"),
 	Flesh = true,
 	Carnivore = true,
 	Dragon = true,
-	ChildUpgrade = "upgrade-wyrm-child",
 	PersonalNames = {"Goin", "Jormungand", "Ladon", "Moin", "Ofnir", "Svafnir"}, -- Grabak = Gray-Back, Midgardsorm = Midgard Serpent, Nidhogg = Corpse Tearer / The Dread Biter, Ofnir = The Bewilderer, Svafnir = The Sleep-Bringer
 	PersonalNamePrefixes = {"Gra", "Graf", "Nid"}, -- Gra = Gray, Graf = Gnawer / Gnawing, Nid = Corpse / Dread
 	PersonalNameSuffixes = {"bak", "hogg", "orm", "vitnir", "volluth"}, -- Bak = Back, Hogg = Tearer / Biter, Orm = Serpent, Vitnir = Wolf, Volluth = Field
@@ -631,6 +598,7 @@ DefineUnitType("unit-wyrm", { Name = _("Wyrm"),
 
 DefineUnitType("unit-slime", { Name = _("Slime"),
 	Parent = "unit-template-fauna-unit",
+	Species = "slime",
 	Class = "slime",
 	Description = _("Slimes are amorphous organic beings which can be found throughout the dark plains and caves of Nidavellir. Little is known about their composition, except that they are acidic to the touch."),
 	Image = {"file", "neutral/units/slime_small.png", "size", {32, 32}},
@@ -661,7 +629,6 @@ DefineUnitType("unit-slime", { Name = _("Slime"),
 	Slime = true,
 	Detritivore = true,	
 	Carnivore = true,	
-	ChildUpgrade = "upgrade-child",
 	BluntDamage = true,
 	Traits = {"upgrade-mighty", "upgrade-strong", "upgrade-weak", "upgrade-old", "upgrade-quick", "upgrade-resilient", "upgrade-slow"}, -- slimes have a more limited selection of traits, since they have a rather different biology
 	Variations = {
@@ -747,6 +714,7 @@ DefineUnitType("unit-slime", { Name = _("Slime"),
 
 DefineUnitType("unit-bee", { Name = _("Bee"),
 	Parent = "unit-template-fauna-unit",
+	Species = "bee",
 	Image = {"file", "neutral/units/bee.png", "size", {6, 6}},
 	Animations = "animations-bee", Icon = "icon-gryphon",
 	NeutralMinimapColor = {192, 192, 192},
@@ -773,7 +741,6 @@ DefineUnitType("unit-bee", { Name = _("Bee"),
 	Insect = true,
 	Herbivore = true,
 	PierceDamage = true,
-	ChildUpgrade = "upgrade-bee-child",
 	HiddenInEditor = true,
 	Sounds = {
 		"selected", "click",
@@ -788,6 +755,7 @@ DefineUnitType("unit-bee", { Name = _("Bee"),
 
 DefineUnitType("unit-fly", { Name = _("Fly"),
 	Parent = "unit-template-fauna-unit",
+	Species = "fly",
 	Image = {"file", "neutral/units/fly.png", "size", {6, 6}},
 	Animations = "animations-bee", Icon = "icon-gryphon",
 	NeutralMinimapColor = {192, 192, 192},
@@ -814,7 +782,6 @@ DefineUnitType("unit-fly", { Name = _("Fly"),
 	Insect = true,
 	Detritivore = true,	
 	PierceDamage = true,
-	ChildUpgrade = "upgrade-bee-child",
 	HiddenInEditor = true,
 	Sounds = {
 		"selected", "click",
@@ -829,6 +796,7 @@ DefineUnitType("unit-fly", { Name = _("Fly"),
 
 DefineUnitType("unit-bug", { Name = _("Bug"),
 	Parent = "unit-template-fauna-unit",
+	Species = "bug",
 	Image = {"file", "neutral/units/bug.png", "size", {6, 6}},
 	Animations = "animations-bee", Icon = "icon-gryphon",
 	NeutralMinimapColor = {192, 192, 192},
@@ -854,7 +822,6 @@ DefineUnitType("unit-bug", { Name = _("Bug"),
 	Coward = true,
 	Insect = true,
 	Herbivore = true,
-	ChildUpgrade = "upgrade-bee-child",
 	HiddenInEditor = true,
 	Sounds = {
 		"selected", "click",
@@ -869,6 +836,7 @@ DefineUnitType("unit-bug", { Name = _("Bug"),
 
 DefineUnitType("unit-worm", { Name = _("Worm"),
 	Parent = "unit-template-fauna-unit",
+	Species = "worm",
 	Image = {"file", "neutral/units/worm.png", "size", {72, 72}},
 	Animations = "animations-worm", Icon = "icon-rat",
 	NeutralMinimapColor = {192, 192, 192},
@@ -895,7 +863,6 @@ DefineUnitType("unit-worm", { Name = _("Worm"),
 	Herbivore = true,
 	Detritivore = true,
 	Diminutive = true,
-	ChildUpgrade = "upgrade-bee-child",
 	HiddenInEditor = true,
 	Sounds = {
 		"selected", "click",
@@ -910,6 +877,7 @@ DefineUnitType("unit-worm", { Name = _("Worm"),
 
 DefineUnitType("unit-snail", { Name = _("Snail"),
 	Parent = "unit-template-fauna-unit",
+	Species = "snail",
 	Image = {"file", "neutral/units/snail.png", "size", {32, 32}},
 	Animations = "animations-snail", Icon = "icon-rat",
 	NeutralMinimapColor = {192, 192, 192},
@@ -935,7 +903,6 @@ DefineUnitType("unit-snail", { Name = _("Snail"),
 	Insect = true,
 	Herbivore = true,
 	Detritivore = true,
-	ChildUpgrade = "upgrade-bee-child",
 	HiddenInEditor = true,
 	Sounds = {
 		"selected", "click",
@@ -950,6 +917,7 @@ DefineUnitType("unit-snail", { Name = _("Snail"),
 
 DefineUnitType("unit-slug", { Name = _("Slug"),
 	Parent = "unit-template-fauna-unit",
+	Species = "slug",
 	Image = {"file", "neutral/units/slug.png", "size", {32, 32}},
 	Animations = "animations-slug", Icon = "icon-rat",
 	NeutralMinimapColor = {192, 192, 192},
@@ -975,7 +943,6 @@ DefineUnitType("unit-slug", { Name = _("Slug"),
 	Insect = true,
 	Herbivore = true,
 	Detritivore = true,
-	ChildUpgrade = "upgrade-bee-child",
 	HiddenInEditor = true,
 	Variations = {
 		{
@@ -1009,6 +976,7 @@ DefineUnitType("unit-slug", { Name = _("Slug"),
 
 DefineUnitType("unit-snigill", { Name = _("Baby Snigill"),
 	Parent = "unit-template-fauna-unit",
+	Species = "snigill",
 	Image = {"file", "neutral/units/snail_blue_purple_shell.png", "size", {32, 32}},
 	Animations = "animations-snail", Icon = "icon-rat",
 	NeutralMinimapColor = {192, 192, 192},
@@ -1034,7 +1002,6 @@ DefineUnitType("unit-snigill", { Name = _("Baby Snigill"),
 	Insect = true,
 	Herbivore = true,
 	Detritivore = true,
-	ChildUpgrade = "upgrade-bee-child",
 	HiddenInEditor = true,
 	Sounds = {
 		"selected", "click",
@@ -1049,6 +1016,7 @@ DefineUnitType("unit-snigill", { Name = _("Baby Snigill"),
 
 DefineUnitType("unit-frog", { Name = _("Frog"),
 	Parent = "unit-template-fauna-unit",
+	Species = "frog",
 	--Description = _("Frog"),
 	--Background = _(" A \"Frog\" is a kind of \"Amphibian\"."),
 	Image = {"file", "graphics/neutral/units/frog.png", "size", {18, 18}},
@@ -1075,7 +1043,6 @@ DefineUnitType("unit-frog", { Name = _("Frog"),
 	RandomMovementDistance = 1,
 	Flesh = true,
 	Insectivore = true,
-	ChildUpgrade = "upgrade-child",
 	HiddenInEditor = true,
 	Variations = {
 		{
@@ -1119,6 +1086,7 @@ DefineUnitType("unit-frog", { Name = _("Frog"),
 
 DefineUnitType("unit-bird", { Name = _("Bird"),
 	Parent = "unit-template-fauna-unit",
+	Species = "bird",
 	Image = {"file", "neutral/units/bird_brown.png", "size", {32, 32}},
 	Animations = "animations-bird", Icon = "icon-gryphon",
 	NeutralMinimapColor = {192, 192, 192},
@@ -1143,7 +1111,6 @@ DefineUnitType("unit-bird", { Name = _("Bird"),
 	Flesh = true,
 	Insectivore = true,
 	PierceDamage = true,
-	ChildUpgrade = "upgrade-child",
 	HiddenInEditor = true,
 	Variations = {
 		{
@@ -1172,6 +1139,7 @@ DefineUnitType("unit-bird", { Name = _("Bird"),
 
 DefineUnitType("unit-crow", { Name = _("Crow"),
 	Parent = "unit-template-fauna-unit",
+	Species = "crow",
 	Image = {"file", "neutral/units/bird_black.png", "size", {32, 32}},
 	Animations = "animations-bird", Icon = "icon-gryphon",
 	NeutralMinimapColor = {192, 192, 192},
@@ -1197,7 +1165,6 @@ DefineUnitType("unit-crow", { Name = _("Crow"),
 	Insectivore = true,
 	Detritivore = true,	
 	PierceDamage = true,
-	ChildUpgrade = "upgrade-child",
 	HiddenInEditor = true,
 	Sounds = {
 		"selected", "crow-selected",
@@ -1213,6 +1180,7 @@ DefineUnitType("unit-crow", { Name = _("Crow"),
 
 DefineUnitType("unit-bat", { Name = _("Bat"),
 	Parent = "unit-template-fauna-unit",
+	Species = "bat",
 	Image = {"file", "neutral/units/bat.png", "size", {32, 32}},
 	Animations = "animations-bird", Icon = "icon-rat",
 	NeutralMinimapColor = {192, 192, 192},
@@ -1240,7 +1208,6 @@ DefineUnitType("unit-bat", { Name = _("Bat"),
 	Flesh = true,
 	Insectivore = true,
 	PierceDamage = true,
-	ChildUpgrade = "upgrade-child",
 	HiddenInEditor = true,
 	Sounds = {
 		"selected", "bat-selected",
@@ -1255,6 +1222,7 @@ DefineUnitType("unit-bat", { Name = _("Bat"),
 
 DefineUnitType("unit-blood-bat", { Name = _("Blood Bat"),
 	Parent = "unit-template-fauna-unit",
+	Species = "blood-bat",
 	Image = {"file", "neutral/units/blood_bat.png", "size", {64, 64}},
 	Animations = "animations-bird", Icon = "icon-rat",
 	NeutralMinimapColor = {192, 192, 192},
@@ -1284,7 +1252,6 @@ DefineUnitType("unit-blood-bat", { Name = _("Blood Bat"),
 	Carnivore = true,
 	Insectivore = true, -- so that they eat snigills
 	PierceDamage = true,
-	ChildUpgrade = "upgrade-child",
 	HiddenInEditor = true,
 	Sounds = {
 		"selected", "bat-selected",
@@ -1299,6 +1266,7 @@ DefineUnitType("unit-blood-bat", { Name = _("Blood Bat"),
 
 DefineUnitType("unit-dread-bat", { Name = _("Dread Bat"),
 	Parent = "unit-template-fauna-unit",
+	Species = "dread-bat",
 	Image = {"file", "neutral/units/dread_bat.png", "size", {64, 64}},
 	Animations = "animations-bird", Icon = "icon-rat",
 	NeutralMinimapColor = {192, 192, 192},
@@ -1329,7 +1297,6 @@ DefineUnitType("unit-dread-bat", { Name = _("Dread Bat"),
 	Carnivore = true,
 	Insectivore = true, -- so that they eat snigills
 	PierceDamage = true,
-	ChildUpgrade = "upgrade-child",
 	HiddenInEditor = true,
 	Sounds = {
 		"selected", "bat-selected",
