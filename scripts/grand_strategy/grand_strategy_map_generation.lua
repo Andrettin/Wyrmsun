@@ -611,6 +611,46 @@ function GenerateProvince(arg)
 			end
 		end
 
+		-- create some mountain tiles in the province
+		-- first generate the mountain seeds
+		local mountain_seeds = {}
+		for i=1,table.getn(arg.Province.Tiles) do
+			local tile_x = arg.Province.Tiles[i][1]
+			local tile_y = arg.Province.Tiles[i][2]
+			if (SyncRand(8) == 0) then -- 12.5% chance to generate a mountain seed on one of the province's tiles
+				if (GetWorldMapTileTerrain(tile_x, tile_y) == "Hills") then
+					SetWorldMapTileTerrain(tile_x, tile_y, GetWorldMapTerrainTypeId("Mountains"))
+					table.insert(mountain_seeds, {tile_x, tile_y})
+					break
+				end
+			end
+		end
+		
+		-- now allow the mountain seeds to expand
+		for i=1,100 do
+			local new_mountain_seeds = {}
+			for j=1,table.getn(mountain_seeds) do
+				for x_offset=-1,1 do
+					for y_offset=-1,1 do
+						if (GetWorldMapTileProvinceName(mountain_seeds[j][1] + x_offset, mountain_seeds[j][2] + y_offset) == arg.Province.Name and math.abs(x_offset) ~= math.abs(y_offset) and not (mountain_seeds[j][1] + x_offset == arg.Province.SettlementLocation[1] and mountain_seeds[j][2] + y_offset == arg.Province.SettlementLocation[2])) then
+							if (GetWorldMapTileTerrain(mountain_seeds[j][1] + x_offset, mountain_seeds[j][2] + y_offset) == "Hills") then
+								local RandomNumber = SyncRand(100)
+								if (RandomNumber < 33) then
+									SetWorldMapTileTerrain(mountain_seeds[j][1] + x_offset, mountain_seeds[j][2] + y_offset, GetWorldMapTerrainTypeId("Mountains"))
+									table.insert(new_mountain_seeds, {mountain_seeds[j][1] + x_offset, mountain_seeds[j][2] + y_offset})
+								end
+							end
+						end
+					end
+				end
+			end
+			mountain_seeds = nil
+			mountain_seeds = new_mountain_seeds
+			if (table.getn(mountain_seeds) < 1) then
+				break
+			end
+		end
+		
 		-- create some forest tiles in the province
 		-- first generate the forest seeds
 		local forest_seeds = {}
