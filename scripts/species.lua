@@ -104,6 +104,28 @@ DefineSpecies("rat", { -- http://www.itis.gov/servlet/SingleRpt/SingleRpt?search
 	ChildUpgrade = "upgrade-child"
 })
 
+DefineSpecies("squirrel", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=632439
+	Name = "Squirrel", -- Eurasian Red Squirrel
+	Kingdom = "animalia",
+	Subkingdom = "bilateria",
+	Infrakingdom = "deuterostomia",
+	Phylum = "chordata",
+	Subphylum = "vertebrata",
+	Infraphylum = "gnathostomata",
+	Superclass = "tetrapoda",
+	Class = "mammalia",
+	Subclass = "theria",
+	Infraclass = "eutheria",
+	Order = "rodentia",
+	Suborder = "sciuromorpha",
+	Family = "sciuridae",
+	Subfamily = "sciurinae",
+	Tribe = "sciurini",
+	Genus = "sciurus",
+	Species = "vulgaris",
+	ChildUpgrade = "upgrade-child"
+})
+
 DefineSpecies("bat", {
 	Name = "Bat",
 	ChildUpgrade = "upgrade-child"

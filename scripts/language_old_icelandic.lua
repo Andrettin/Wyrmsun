@@ -229,6 +229,16 @@ DefineLanguageWord("Mylnir", { -- Source: Henry Adams Bellows (transl.), "The Po
 	Meanings = {"Biter"}
 })
 
+DefineLanguageWord("Rati", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 483.
+	Language = "old-icelandic",
+	Type = "noun",
+	Meanings = {"Traveller", "Demoniac", "Raver", "Madman"},
+	Gender = "masculine",
+	NumberCaseInflections = {
+		"singular", "genitive", "Rata" -- presumably, due to the writing in compounds using this word, like "ratalegr" and "rata-skapr"
+	}
+})
+
 DefineLanguageWord("Reyrr", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.
 	Language = "old-icelandic",
 	Type = "noun",
@@ -372,6 +382,14 @@ DefineLanguageWord("Toppr", { -- Source: Richard Cleasby and Gudbrand Vigfusson,
 	Type = "noun",
 	Meanings = {"Tuft", "Lock of Hair"},
 	Gender = "masculine"
+})
+
+DefineLanguageWord("Toskr", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 638.
+	Language = "old-icelandic",
+	Type = "noun",
+	Meanings = {"Tusk", "Tooth"},
+	Gender = "masculine",
+	DerivesFrom = {"proto-germanic", "noun", "Tunþska"} -- presumably, since Fick lists that as the word from which words like "tusk" (English) come from, and Cleasby lists such words as cognates of "toskr"
 })
 
 DefineLanguageWord("Tuǽr", { -- Source: Richard M. Runge, "The Phonetic Realization of Proto-Germanic /r/", 1973, p. 242.

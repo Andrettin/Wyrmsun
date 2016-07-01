@@ -96,6 +96,13 @@ DefineUnitType("unit-rat", {
 	}
 } )
 
+DefineUnitType("unit-squirrel", {
+	Name = "Squirrel",
+	Parent = "unit-rat",
+	Species = "squirrel",
+	HiddenInEditor = true
+})
+
 DefineUnitType("unit-horse", {
 	Name = "Horse",
 	Parent = "unit-template-fauna-unit",

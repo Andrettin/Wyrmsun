@@ -311,3 +311,15 @@ DefineCharacter("Tanngrisnir", { -- Source: Richard Cleasby and Gudbrand Vigfuss
 	Type = "unit-goat",
 	Gender = "male" -- presumably
 })
+
+-- Squirrels
+
+DefineCharacter("Ratatoskr", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, pp. 317, 483, 638; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 97.
+	Name = "Ratatoskr", -- squirrel in Norse mythology; Cleasby gives the meaning of the name as "Tusk the traveller" or "the climber Tusk", while Bellows gives the meaning as "The Swift-Tusked"
+	NameElements = {
+		"compound", "prefix", "old-icelandic", "noun", "genitive", "Rati", -- presumably the genitive form
+		"compound", "suffix", "old-icelandic", "noun", "Toskr"
+	},
+	Type = "unit-squirrel",
+	Quote = "\"Ratatosk is the squirrel who there shall run\nOn the ash-tree Yggdrasil\"\n- Grimnismol"
+})
