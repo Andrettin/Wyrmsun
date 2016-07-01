@@ -31,6 +31,13 @@ DefineLanguageWord("Cūdō", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Meanings = {"Strike"}
 })
 
+DefineLanguageWord("Gnīde", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.
+	Language = "latvian",
+	Type = "noun",
+	Meanings = {"Sharp and Scabby Skin"}, -- source gives the German "eine scharfe, schäbige Haut" as the meaning
+	DerivesFrom = {"proto-indo-european", "noun", "Ghni"}
+})
+
 DefineLanguageWord("Kukurs", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 54.
 	Language = "latvian",
 	Type = "noun",

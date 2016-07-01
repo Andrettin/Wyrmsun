@@ -37,6 +37,13 @@ DefineLanguageWord("Brathu", { -- Source: Sean Crist, "An Analysis of *z loss in
 	Meanings = {"Prick", "Bite"}
 })
 
+DefineLanguageWord("Dant", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 84.
+	Language = "welsh",
+	Type = "noun",
+	Meanings = {},
+	DerivesFrom = {"proto-indo-european", "noun", "Dont"}
+})
+
 DefineLanguageWord("Erw", { -- this is the genitive; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "welsh",
 	Type = "noun",

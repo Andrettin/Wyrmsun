@@ -156,6 +156,17 @@ DefineLanguageWord("Dáhati", { -- given the meaning, this is presumably the thi
 	}
 })
 
+DefineLanguageWord("Dán", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 84.
+	Language = "sanskrit",
+	Type = "noun",
+	Meanings = {},
+	DerivesFrom = {"proto-indo-european", "noun", "Dont"},
+	Gender = "masculine",
+	NumberCaseInflections = {
+		"singular", "genitive", "Datás"
+	}
+})
+
 DefineLanguageWord("Darbhá", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 86.
 	Language = "sanskrit",
 	Type = "noun",

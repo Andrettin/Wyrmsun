@@ -61,6 +61,10 @@ if not (LanguageCacheOutdated) then
 	return;
 end
 
+DefineLanguage("aeolic", { -- should this be a dialect of Greek?
+	Name = "Aeolic"
+})
+
 DefineLanguage("albanian", {
 	Name = "Albanian"
 })
@@ -80,6 +84,10 @@ DefineLanguage("avestan", {
 
 DefineLanguage("basque", {
 	Name = "Basque"
+})
+
+DefineLanguage("bavarian", {
+	Name = "Bavarian"
 })
 
 DefineLanguage("british", {
@@ -506,6 +514,10 @@ DefineLanguage("thracian", {
 	SkipNameTypeInheritance = true
 })
 
+DefineLanguage("tyrolean", {
+	Name = "Tyrolean"
+})
+
 DefineLanguage("ukrainian", {
 	Name = "Ukrainian"
 })
@@ -529,6 +541,7 @@ Load("scripts/language_avestan.lua")
 Load("scripts/language_latvian.lua")
 Load("scripts/language_lithuanian.lua")
 Load("scripts/language_greek.lua")
+Load("scripts/language_aeolic.lua")
 Load("scripts/language_old_prussian.lua")
 Load("scripts/language_oscan.lua")
 Load("scripts/language_sanskrit.lua")
@@ -571,6 +584,8 @@ Load("scripts/language_old_high_german.lua")
 Load("scripts/language_middle_high_german.lua")
 Load("scripts/language_old_saxon.lua")
 Load("scripts/language_middle_low_german.lua")
+Load("scripts/language_bavarian.lua")
+Load("scripts/language_tyrolean.lua")
 Load("scripts/language_high_german.lua")
 Load("scripts/language_old_frankish.lua")
 Load("scripts/language_middle_dutch.lua")

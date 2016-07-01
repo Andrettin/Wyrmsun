@@ -2940,6 +2940,17 @@ DefineLanguageWord("Tongue", {
 	}
 })
 
+DefineLanguageWord("Tooth", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Tooth"},
+	DerivesFrom = {"old-english", "noun", "Tôþ"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 84.
+	Gender = "neuter",
+	NumberCaseInflections = {
+		"plural", "nominative", "Teeth"
+	}
+})
+
 DefineLanguageWord("Top", {
 	Language = "english",
 	Type = "noun",
@@ -2998,6 +3009,14 @@ DefineLanguageWord("Turf", {
 	Type = "noun",
 	Meanings = {"Turf"},
 	DerivesFrom = {"old-english", "noun", "Turf"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 86.
+	Gender = "neuter"
+})
+
+DefineLanguageWord("Tusk", {
+	Language = "english",
+	Type = "noun",
+	Meanings = {"Tusk"},
+	DerivesFrom = {"old-english", "noun", "Tûx"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 84.
 	Gender = "neuter"
 })
 

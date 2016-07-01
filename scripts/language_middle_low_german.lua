@@ -97,6 +97,27 @@ DefineLanguageWord("Darm", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	DerivesFrom = {"old-saxon", "noun", "Tharm"}
 })
 
+DefineLanguageWord("Gnîden", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.
+	Language = "middle-low-german",
+	Type = "verb", -- (apparently) a strong verb
+	Meanings = {"Rub"}, -- source (apparently) gives the German "reiben" as the meaning
+	DerivesFrom = {"proto-germanic", "verb", "Gnid"}
+})
+
+DefineLanguageWord("Gnist", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.
+	Language = "middle-low-german",
+	Type = "noun",
+	Meanings = {"Mange"}, -- source gives the German "Räude" as the meaning
+	DerivesFrom = {"proto-germanic", "verb", "Gnid"}
+})
+
+DefineLanguageWord("Gnisteren", { -- source also gives the alternative form "knisteren"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.
+	Language = "middle-low-german",
+	Type = "verb", --
+	Meanings = {"Grate"}, -- source gives the German "knirschen" and the Latin "stridere" as the meaning
+	DerivesFrom = {"proto-germanic", "verb", "Gnid"}
+})
+
 DefineLanguageWord("Gode", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.
 	Language = "middle-low-german",
 	Type = "noun",

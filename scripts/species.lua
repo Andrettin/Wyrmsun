@@ -25,6 +25,85 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineSpecies("goat", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180715
+	Name = "Goat",
+	Kingdom = "animalia",
+	Subkingdom = "bilateria",
+	Infrakingdom = "deuterostomia",
+	Phylum = "chordata",
+	Subphylum = "vertebrata",
+	Infraphylum = "gnathostomata",
+	Superclass = "tetrapoda",
+	Class = "mammalia",
+	Subclass = "theria",
+	Infraclass = "eutheria",
+	Order = "artiodactyla",
+	Family = "bovidae",
+	Subfamily = "caprinae",
+	Genus = "capra",
+	Species = "hircus",
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("yale", {
+	Name = "Yale",
+	Kingdom = "animalia",
+	Subkingdom = "bilateria",
+	Infrakingdom = "deuterostomia",
+	Phylum = "chordata",
+	Subphylum = "vertebrata",
+	Infraphylum = "gnathostomata",
+	Superclass = "tetrapoda",
+	Class = "mammalia",
+	Subclass = "theria",
+	Infraclass = "eutheria",
+	Order = "artiodactyla",
+	Family = "bovidae",
+	Subfamily = "caprinae",
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("horse", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180691
+	Name = "Horse",
+	Kingdom = "animalia",
+	Subkingdom = "bilateria",
+	Infrakingdom = "deuterostomia",
+	Phylum = "chordata",
+	Subphylum = "vertebrata",
+	Infraphylum = "gnathostomata",
+	Superclass = "tetrapoda",
+	Class = "mammalia",
+	Subclass = "theria",
+	Infraclass = "eutheria",
+	Order = "perissodactyla",
+	Family = "equidae",
+	Genus = "equus",
+	Species = "caballus",
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("rat", { -- http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180363
+	Name = "Rat",
+	Kingdom = "animalia",
+	Subkingdom = "bilateria",
+	Infrakingdom = "deuterostomia",
+	Phylum = "chordata",
+	Subphylum = "vertebrata",
+	Infraphylum = "gnathostomata",
+	Superclass = "tetrapoda",
+	Class = "mammalia",
+	Subclass = "theria",
+	Infraclass = "eutheria",
+	Order = "rodentia",
+	Suborder = "myomorpha",
+	Superfamily = "muroidea",
+	Family = "muridae",
+	Subfamily = "murinae",
+	Genus = "rattus",
+	Species = "norvegicus",
+	ChildUpgrade = "upgrade-child"
+})
+
 DefineSpecies("bat", {
 	Name = "Bat",
 	ChildUpgrade = "upgrade-child"
@@ -75,17 +154,6 @@ DefineSpecies("gryphon", {
 	ChildUpgrade = "upgrade-gryphon-child"
 })
 
-DefineSpecies("horse", {
-	Name = "Horse",
-	Family = "equinid",
-	ChildUpgrade = "upgrade-child"
-})
-
-DefineSpecies("rat", {
-	Name = "Rat",
-	ChildUpgrade = "upgrade-child"
-})
-
 DefineSpecies("slime", {
 	Name = "Slime",
 	ChildUpgrade = "upgrade-child"
@@ -114,10 +182,4 @@ DefineSpecies("worm", {
 DefineSpecies("wyrm", {
 	Name = "Wyrm",
 	ChildUpgrade = "upgrade-wyrm-child"
-})
-
-DefineSpecies("yale", {
-	Name = "Yale",
-	Family = "caprid",
-	ChildUpgrade = "upgrade-child"
 })

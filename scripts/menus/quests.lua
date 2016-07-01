@@ -205,7 +205,7 @@ function RunQuestMenu(world)
 		)
 	end
 
-	menu:addFullButton(_("~!Delete Custom Hero"), "h", offx + 208 + 226, offy + 212 + (36 * 4),
+	menu:addFullButton(_("~!Delete Custom Hero"), "d", offx + 208 + 226, offy + 212 + (36 * 4),
 		function()
 			if (GetCurrentCustomHero() ~= "") then
 				local confirm = WarGameMenu(panel(4))

@@ -147,6 +147,13 @@ DefineLanguageWord("Dēfrūtum", { -- Source: Winfred P. Lehmann, "A Grammar of 
 	DerivesFrom = {"proto-indo-european", "noun", "Bhru"}
 })
 
+DefineLanguageWord("Dens", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 84.
+	Language = "latin",
+	Type = "noun",
+	Meanings = {},
+	DerivesFrom = {"proto-indo-european", "noun", "Dont"}
+})
+
 DefineLanguageWord("Deus", { -- source also gives the alternative form "dīuus"; Source: H. Munro Chadwick, "The Oak and the Thunder-God", 1900, p. 39.
 	Language = "latin",
 	Type = "noun",

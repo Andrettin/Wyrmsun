@@ -568,6 +568,13 @@ DefineLanguageWord("Glanz", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	DerivesFrom = {"proto-germanic", "verb", "Glent"}
 })
 
+DefineLanguageWord("Gnîtan", { -- source also gives the alternative form "knîtan"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.
+	Language = "old-high-german",
+	Type = "verb", -- a strong verb
+	Meanings = {"Rub"}, -- source gives the German "reiben" as the meaning
+	DerivesFrom = {"proto-germanic", "verb", "Gnid"}
+})
+
 DefineLanguageWord("Gold", { -- source also gives the alternative form "Cold"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 73.
 	Language = "old-high-german",
 	Type = "noun",
@@ -1739,6 +1746,17 @@ DefineLanguageWord("Zala", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Meanings = {"Number", "Quantity", "Enumeration", "Account", "Narrative", "Speech"}, -- source gives the German "Zahl, Anzahl, Aufzählung, Berechnung, Erzählung, Rede" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Talô"},
 	Gender = "feminine"
+})
+
+DefineLanguageWord("Zan", { -- source also gives the alternative form "zand"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 84.
+	Language = "old-high-german",
+	Type = "noun",
+	Meanings = {"Tooth"}, -- source gives the German "Zahn" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Tanþ"},
+	Gender = "masculine",
+	NumberCaseInflections = {
+		"plural", "nominative", "Zendî" -- source also gives the alternative form "zeni̊"
+	}
 })
 
 DefineLanguageWord("Zeh", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.

@@ -538,6 +538,13 @@ DefineLanguageWord("Glôdi", { -- Source: August Fick and Alf Torp, "Wortschatz 
 	Gender = "feminine"
 })
 
+DefineLanguageWord("Gnid", { -- source also gives the alternative forms "gnîdan" and "gnaid"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.
+	Language = "proto-germanic",
+	Type = "verb",
+	Meanings = {"Rub"}, -- source gives the German "reiben" as the meaning
+	DerivesFrom = {"proto-indo-european", "noun", "Ghni"}
+})
+
 DefineLanguageWord("Gôm", { -- source also gives the forms "Gam" and "Gim"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 71.
 	Language = "proto-germanic",
 	Type = "noun",
@@ -1281,6 +1288,17 @@ DefineLanguageWord("Tandran", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Gender = "masculine"
 })
 
+DefineLanguageWord("Tanþ", { -- source gives "tanþ-"; source also gives the alternative form "tunþ-"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 84.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {"Tooth"}, -- source gives the German "Zahn" as the meaning
+	DerivesFrom = {"proto-indo-european", "noun", "Dont"},
+	Gender = "masculine",
+	NumberCaseInflections = {
+		"plural", "nominative", "Tanþiz" -- apparently
+	}
+})
+
 DefineLanguageWord("Þarma", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 97.
 	Language = "proto-germanic",
 	Type = "noun",
@@ -1325,6 +1343,13 @@ DefineLanguageWord("Tûna", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Language = "proto-germanic",
 	Type = "noun",
 	Meanings = {"Fence", "Enclosure"} -- source gives the German "Zaun, Gehege" as the meaning
+})
+
+DefineLanguageWord("Tunþska", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 84.
+	Language = "proto-germanic",
+	Type = "noun",
+	Meanings = {},
+	DerivesFrom = {"proto-indo-european", "noun", "Dont"}
 })
 
 DefineLanguageWord("Turba", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 86.

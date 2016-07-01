@@ -574,6 +574,14 @@ DefineLanguageWord("Thorp", { -- source also gives the alternative form "Therp";
 	DerivesFrom = {"proto-germanic", "noun", "Þurpa"}
 })
 
+DefineLanguageWord("Tôth", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 84.
+	Language = "old-frisian",
+	Type = "noun",
+	Meanings = {"Tooth"}, -- source (apparently) gives the German "Zahn" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Tanþ"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Tûn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 89.
 	Language = "old-frisian",
 	Type = "noun",
@@ -588,6 +596,13 @@ DefineLanguageWord("Turf", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Meanings = {"Lawn", "Turf"}, -- source gives the German "Rasen" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Turba"},
 	Gender = "masculine"
+})
+
+DefineLanguageWord("Tusk", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 84.
+	Language = "old-frisian",
+	Type = "noun",
+	Meanings = {"Tusk"}, -- source gives the German "Fangzahn" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Tunþska"}
 })
 
 DefineLanguageWord("Wald", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 203.

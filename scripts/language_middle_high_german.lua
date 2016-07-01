@@ -299,6 +299,21 @@ DefineLanguageWord("Glinzen", { -- strong verb; Source: August Fick and Alf Torp
 	DerivesFrom = {"proto-germanic", "verb", "Glent"}
 })
 
+DefineLanguageWord("Gnîst", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Filth Firmly Sitting at the Head Skin", "Scab"}, -- source gives the German "fest auf der Kopfhaut sitzender Schmutz, Grind" as the meaning
+	DerivesFrom = {"proto-germanic", "verb", "Gnid"},
+	Gender = "masculine"
+})
+
+DefineLanguageWord("Gnîten", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.
+	Language = "middle-high-german",
+	Type = "verb", -- a strong verb
+	Meanings = {"Rub"}, -- source gives the German "reiben" as the meaning
+	DerivesFrom = {"old-high-german", "verb", "Gnîtan"}
+})
+
 DefineLanguageWord("Golt", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 73.
 	Language = "middle-high-german",
 	Type = "noun",
@@ -972,6 +987,14 @@ DefineLanguageWord("Zal", { -- Source: August Fick and Alf Torp, "Wortschatz der
 	Meanings = {"Number", "Quantity", "Enumeration", "Account", "Narrative", "Speech"}, -- source gives the German "Zahl, Anzahl, Aufzählung, Berechnung, Erzählung, Rede" as the meaning
 	DerivesFrom = {"old-high-german", "noun", "Zala"},
 	Gender = "feminine"
+})
+
+DefineLanguageWord("Zan", { -- source also gives the alternative form "zant"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 84.
+	Language = "middle-high-german",
+	Type = "noun",
+	Meanings = {"Tooth"}, -- source gives the German "Zahn" as the meaning
+	DerivesFrom = {"old-high-german", "noun", "Zan"},
+	Gender = "masculine"
 })
 
 DefineLanguageWord("Zûn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 89.

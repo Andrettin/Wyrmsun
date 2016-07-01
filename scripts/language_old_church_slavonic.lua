@@ -70,6 +70,13 @@ DefineLanguageWord("Ględěti", { -- source also gives the alternative form "gl�
 	Meanings = {"Look"} -- source gives the German "schauen" as the meaning
 })
 
+DefineLanguageWord("Gniti", { -- source also gives the alternative form "gnoj"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, pp. 76-77.
+	Language = "old-church-slavonic",
+	Type = "verb",
+	Meanings = {"Rot"}, -- source gives the German "faulen" as the meaning
+	DerivesFrom = {"proto-indo-european", "noun", "Ghni"}
+})
+
 DefineLanguageWord("Klasŭ", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 50.
 	Language = "old-church-slavonic",
 	Type = "noun",

@@ -1200,6 +1200,14 @@ DefineLanguageWord("Triggws", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Meanings = {"Faithful"}
 })
 
+DefineLanguageWord("Tunpus", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 84.
+	Language = "gothic",
+	Type = "noun",
+	Meanings = {"Tooth"}, -- source gives the German "Zahn" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Tanþ"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Twalif", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
 	Language = "gothic",
 	Type = "numeral",

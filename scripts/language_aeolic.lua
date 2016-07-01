@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2015-2016 by Andrettin
+--      (c) Copyright 2016 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -25,46 +25,12 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageWord("Cacht", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 4.
-	Language = "old-irish",
-	Type = "noun",
-	Meanings = {"Female Slave"}
-})
-
-DefineLanguageWord("Dét", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 84.
-	Language = "old-irish",
+DefineLanguageWord("Ἔδοντες", { -- this is the plural; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 84.
+	Language = "aeolic",
 	Type = "noun",
 	Meanings = {},
-	DerivesFrom = {"proto-indo-european", "noun", "Dont"}
-})
-
-DefineLanguageWord("Dia", { -- Source: H. Munro Chadwick, "The Oak and the Thunder-God", 1900, p. 39.
-	Language = "old-irish",
-	Type = "noun",
-	Meanings = {"God"}
-})
-
-DefineLanguageWord("Fēn", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
-	Language = "old-irish",
-	Type = "noun",
-	Meanings = {"Wagon"}
-})
-
-DefineLanguageWord("Fer", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
-	Language = "old-irish",
-	Type = "noun",
-	Meanings = {},
-	DerivesFrom = {"proto-indo-european", "noun", "Wiros"}
-})
-
-DefineLanguageWord("Giús", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 4.
-	Language = "old-irish",
-	Type = "noun",
-	Meanings = {"Fir"}
-})
-
-DefineLanguageWord("Tur", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
-	Language = "old-irish",
-	Type = "adjective",
-	Meanings = {"Dry"}
+	DerivesFrom = {"proto-indo-european", "noun", "Dont"},
+	NumberCaseInflections = {
+		"plural", "nominative", "Ἔδοντες"
+	}
 })

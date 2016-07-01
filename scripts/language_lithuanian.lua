@@ -76,6 +76,14 @@ DefineLanguageWord("Dȧ́gas", { -- source also gives the alternative form "dag�
 	Meanings = {"Harvest Season"} -- source gives the German "Erntezeit" as the meaning
 })
 
+DefineLanguageWord("Dantìs", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 84.
+	Language = "lithuanian",
+	Type = "noun",
+	Meanings = {"Tooth"}, -- source gives the German "Zahn" as the meaning
+	DerivesFrom = {"proto-indo-european", "noun", "Dont"},
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Degù", { -- source also gives the alternative form "dègti"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 106.
 	Language = "lithuanian",
 	Type = "verb",

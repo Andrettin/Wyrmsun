@@ -31,6 +31,13 @@ DefineLanguageWord("Amar̄n", { -- Source: August Fick and Alf Torp, "Wortschatz
 	Meanings = {"Summer"} -- source gives the German "Sommer, am Jahr" as the meaning
 })
 
+DefineLanguageWord("Atamn", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 84.
+	Language = "armenian",
+	Type = "noun",
+	Meanings = {},
+	DerivesFrom = {"proto-indo-european", "noun", "Dont"}
+})
+
 DefineLanguageWord("Hur", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 127.
 	Language = "armenian",
 	Type = "noun",

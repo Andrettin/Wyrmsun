@@ -774,6 +774,17 @@ DefineLanguageWord("Sûtharliuti", { -- Source: August Fick and Alf Torp, "Worts
 	Meanings = {"Southern People"} -- source gives the German "Südleute" as the meaning
 })
 
+DefineLanguageWord("Tand", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 84.
+	Language = "old-saxon", -- Old Low German
+	Type = "noun",
+	Meanings = {"Tooth"}, -- source (apparently) gives the German "Zahn" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Tanþ"},
+	Gender = "masculine",
+	NumberCaseInflections = {
+		"plural", "nominative", "Tends"
+	}
+})
+
 DefineLanguageWord("Tharm", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 97.
 	Language = "old-saxon", -- source gives Old Low German
 	Type = "noun",

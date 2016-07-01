@@ -131,11 +131,33 @@ DefineLanguageWord("Gler", { -- a horse name; Source: Henry Adams Bellows (trans
 	Meanings = {"Shining"}
 })
 
+DefineLanguageWord("Gnísta", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, pp. 206-207.
+	Language = "old-icelandic",
+	Type = "verb",
+	Meanings = {"Gnash the Teeth", "Snarl"},
+	DerivesFrom = {"old-norse", "verb", "Gnîsta"}, -- presumably
+	Replaces = {"old-norse", "verb", "Gnîsta"} -- presumably
+})
+
+DefineLanguageWord("Gnjóstr", { -- appears in the name of a male goat; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, pp. 207, 625.
+	Language = "old-icelandic",
+	Type = "noun",
+	Meanings = {"Gnasher"}, -- presumably, since Tanngnjóstr means "Teeth-gnasher"
+	DerivesFrom = {"old-norse", "verb", "Gnîsta"}, -- presumably, since "gnísta" presumably does
+	Gender = "masculine"
+})
+
 DefineLanguageWord("Gráni", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 212.
 	Language = "old-icelandic",
 	Type = "noun",
 	Meanings = {"Gray Horse"},
 	Gender = "masculine"
+})
+
+DefineLanguageWord("Grisnir", { -- appears in the name of a male goat; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 625.
+	Language = "old-icelandic",
+	Type = "noun",
+	Meanings = {"Gat"} -- presumably, since Tanngrisni means "Gat-Tooth" (according to another source which wasn't noted down)
 })
 
 DefineLanguageWord("Gull", { -- earlier spelt as "goll"; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 220.
@@ -151,6 +173,12 @@ DefineLanguageWord("Gyllir", { -- a horse name; Source: Henry Adams Bellows (tra
 	Language = "old-icelandic",
 	Type = "adjective",
 	Meanings = {"Golden"}
+})
+
+DefineLanguageWord("Heidrun", { -- name of a female goat
+	Language = "old-icelandic",
+	Type = "noun",
+	Meanings = {}
 })
 
 DefineLanguageWord("Hófnir", { -- appears in the horse name "Falhofnír"; Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, pp. 96-97; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 139.
@@ -320,6 +348,23 @@ DefineLanguageWord("Svipr", { -- Source: Richard Cleasby and Gudbrand Vigfusson,
 		"singular", "no-case", "Svip", -- presumably (assuming the "-r" ending here is the nominative ending)
 		"plural", "nominative", "Svipir"
 	}
+})
+
+DefineLanguageWord("Tann", { -- appears in the names of male goats; older form of "tönn"; source also gives the alternative form "tannr"; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, pp. 625, 648.
+	Language = "old-icelandic",
+	Type = "noun",
+	Meanings = {"Tooth", "Tusk"}, -- presumably, since that is the meaning of "tönn", and "tann" has the meaning of "tooth" in compounds
+	Gender = "masculine",
+	DerivesFrom = {"old-norse", "noun", "Tǫnn"} -- presumably
+})
+
+DefineLanguageWord("Tönn", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 648.
+	Language = "old-icelandic",
+	Type = "noun",
+	Meanings = {"Tooth", "Tusk"},
+	Gender = "feminine",
+	DerivesFrom = {"old-norse", "noun", "Tǫnn"}, -- presumably
+	Replaces = {"old-norse", "noun", "Tǫnn"} -- presumably
 })
 
 DefineLanguageWord("Toppr", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 636.

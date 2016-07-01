@@ -2692,6 +2692,21 @@ DefineLanguageWord("Zahl", {
 	}
 })
 
+DefineLanguageWord("Zahn", {
+	Language = "high-german",
+	Type = "noun",
+	Meanings = {"Tooth"},
+	DerivesFrom = {"middle-high-german", "noun", "Zan"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 84.
+	Gender = "masculine",
+	NumberCaseInflections = {
+		"singular", "genitive", "Zahnes", -- alternatively also "Zahns"
+		"plural", "nominative", "Zähne",
+		"plural", "accusative", "Zähne",
+		"plural", "dative", "Zähnen",
+		"plural", "genitive", "Zähne"
+	}
+})
+
 DefineLanguageWord("Zaun", {
 	Language = "high-german",
 	Type = "noun",

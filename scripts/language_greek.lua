@@ -52,6 +52,12 @@ DefineLanguageWord("Acragas", { -- should be written as the original Greek name 
 	NameTypes = {"settlement"} -- example: "Acragas" (Agrigentum)
 })
 
+DefineLanguageWord("Aegi", { -- appears in the name of a goat
+	Language = "greek",
+	Type = "noun",
+	Meanings = {"Goat"} -- presumably, since "Aegipan" means "Goat-Pan" or "Goat-All"
+})
+
 DefineLanguageWord("Agathe", { -- should be written as the original Greek name (with Greek characters)
 	Language = "greek",
 	Type = "noun",
@@ -78,6 +84,12 @@ DefineLanguageWord("Alonae", { -- should be written as the original Greek name (
 	Type = "noun",
 	Meanings = {},
 	NameTypes = {"settlement"} -- example: "Alonae"
+})
+
+DefineLanguageWord("Amaltheia", { -- name of a female goat
+	Language = "greek",
+	Type = "noun",
+	Meanings = {}
 })
 
 DefineLanguageWord("Amisus", { -- should be written as the original Greek name (with Greek characters)
@@ -369,6 +381,13 @@ DefineLanguageWord("Óχos", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	Meanings = {"Wagon"}
 })
 
+DefineLanguageWord("Ὀδούς", { -- source also gives the alternative form "ὀδόντος"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 84.
+	Language = "greek",
+	Type = "noun",
+	Meanings = {},
+	DerivesFrom = {"proto-indo-european", "noun", "Dont"}
+})
+
 DefineLanguageWord("Oktṓ", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "greek",
 	Type = "numeral",
@@ -405,6 +424,12 @@ DefineLanguageWord("Orektós", { -- Source: Winfred P. Lehmann, "A Grammar of Pr
 	Language = "greek",
 	Type = "adjective",
 	Meanings = {"Straight"}
+})
+
+DefineLanguageWord("Pan", { -- appears in the name of a goat
+	Language = "greek",
+	Type = "adjective",
+	Meanings = {"All"} -- presumably, since "Aegipan" means "Goat-Pan" or "Goat-All"
 })
 
 DefineLanguageWord("Patḗr", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.

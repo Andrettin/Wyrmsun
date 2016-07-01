@@ -713,6 +713,13 @@ DefineLanguageWord("Glīwmǣden", { -- Source: Alaric Hall, "The Meanings of Elf
 	Gender = "feminine" -- presumably, given the source is talking about occupations for women
 })
 
+DefineLanguageWord("Gnîdan", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.
+	Language = "old-english",
+	Type = "verb", -- strong verb
+	Meanings = {"Rub"}, -- source gives the German "reiben" as the meaning
+	DerivesFrom = {"proto-germanic", "verb", "Gnid"}
+})
+
 DefineLanguageWord("God", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 89; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.2; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.
 	Language = "old-english",
 	Type = "noun",
@@ -1805,6 +1812,17 @@ DefineLanguageWord("Tīw", { -- name of a god; Source: Peter Buchholz, "Perspect
 	DerivesFrom = {"proto-germanic", "noun", "Tīwaz"}
 })
 
+DefineLanguageWord("Tôþ", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 84.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Tooth"}, -- source (apparently) gives the German "Zahn" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Tanþ"},
+	Gender = "masculine",
+	NumberCaseInflections = {
+		"plural", "nominative", "Têþ"
+	}
+})
+
 DefineLanguageWord("Trēow", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.6.1.
 	Language = "old-english",
 	Type = "noun",
@@ -1831,6 +1849,13 @@ DefineLanguageWord("Tûn", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Meanings = {"Fence Around the House", "Garden", "Court", "Village", "City", "Town"}, -- source gives the German "Zaun um das Haus, Garten, Hof, Dorf, Stadt" as the meaning
 	DerivesFrom = {"proto-germanic", "noun", "Tûna"},
 	Gender = "masculine"
+})
+
+DefineLanguageWord("Tûx", { -- source also gives the alternative form "Tûsc"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 84.
+	Language = "old-english",
+	Type = "noun",
+	Meanings = {"Tusk"}, -- source gives the German "Fangzahn" as the meaning
+	DerivesFrom = {"proto-germanic", "noun", "Tunþska"}
 })
 
 DefineLanguageWord("Twīn", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, pp. 1, 6.

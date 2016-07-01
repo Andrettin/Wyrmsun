@@ -265,3 +265,49 @@ DefineCharacter("Vingskornir", { -- Source: Henry Adams Bellows (transl.), "The 
 	NameElements = {"word", "old-icelandic", "noun", "Vingskornir"},
 	Type = "unit-horse"
 })
+
+-- Goats
+
+DefineCharacter("Aegipan", {
+	Name = "Aegipan", -- figure from Greek mythology which is represented by the constellation Capricorn; name means "Goat-Pan" or "Goat-All"
+	NameElements = {
+		"compound", "prefix", "greek", "noun", "Aegi",
+		"compound", "suffix", "greek", "adjective", "Pan"
+	},
+	Type = "unit-goat",
+	Gender = "male" -- presumably
+})
+
+DefineCharacter("Amaltheia", {
+	Name = "Amaltheia", -- female goat from Greek mythology who fed child Zeus
+	NameElements = {"word", "greek", "noun", "Amaltheia"},
+	Type = "unit-goat",
+	Gender = "female"
+})
+
+DefineCharacter("Heidrun", {
+	Name = "Heidrun", -- female goat from Norse mythology
+	NameElements = {"word", "old-icelandic", "noun", "Heidrun"},
+	Type = "unit-goat",
+	Gender = "female"
+})
+
+DefineCharacter("Tanngnjóstr", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 207.
+	Name = "Tanngnjóstr", -- one of Thor's male goats; the name means "Teeth-gnasher"
+	NameElements = {
+		"compound", "prefix", "old-icelandic", "noun", "Tann",
+		"compound", "suffix", "old-icelandic", "noun", "Gnjóstr"
+	},
+	Type = "unit-goat",
+	Gender = "male"
+})
+
+DefineCharacter("Tanngrisnir", { -- Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 625.
+	Name = "Tanngrisnir", -- according to another source (which wasn't noted down) "Gat-Tooth", one of the goats who pulls Thor's chariot
+	NameElements = {
+		"compound", "prefix", "old-icelandic", "noun", "Tann",
+		"compound", "suffix", "old-icelandic", "noun", "Grisnir"
+	},
+	Type = "unit-goat",
+	Gender = "male" -- presumably
+})

@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2015-2016 by Andrettin
+--      (c) Copyright 2015 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -25,27 +25,10 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageWord("Berlóga", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 136.
-	Language = "russian",
+DefineLanguageWord("Gnist", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 76.
+	Language = "bavarian",
 	Type = "noun",
-	Meanings = {"Wild Camp", "Bear Camp"} -- source gives the German "Wildlager, Bärenlager" as the meaning
+	Meanings = {"Rubbish"}, -- source gives the Latin "quisquiliae" as the meaning
+	DerivesFrom = {"middle-high-german", "noun", "Gnîst"}
 })
 
-DefineLanguageWord("Gnitŭ", { -- source also gives the alternative form "gnoj"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, pp. 76-77.
-	Language = "russian",
-	Type = "noun",
-	Meanings = {"Filth"}, -- source gives the German "Schmutz" as the meaning
-	DerivesFrom = {"proto-indo-european", "noun", "Ghni"}
-})
-
-DefineLanguageWord("Mozga", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 9.
-	Language = "russian",
-	Type = "noun",
-	Meanings = {"Blood"}
-})
-
-DefineLanguageWord("Perun", { -- Source: H. Munro Chadwick, "The Oak and the Thunder-God", 1900, p. 27.
-	Language = "russian",
-	Type = "noun",
-	Meanings = {"Thunderbolt"}
-})

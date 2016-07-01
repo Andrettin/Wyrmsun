@@ -8,9 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      events.lua - Defines events for the Germanic civilization.
---
---      (c) Copyright 2014 by Andrettin
+--      (c) Copyright 2014-2016 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -78,11 +76,11 @@ if (LoadedGame == false) then
 		if (GameSettings.Difficulty == 1) then -- if difficulty is easy
 			CreateCreeps(1, "unit-germanic-warrior", 4, Map.Info.MapWidth / 4, Map.Info.MapWidth * 7 / 8, Map.Info.MapHeight / 6, Map.Info.MapHeight * 5 / 6)
 		elseif (GameSettings.Difficulty == 2) then -- if difficulty is normal
-			CreateCreeps(1, "unit-germanic-warrior", 9, Map.Info.MapWidth / 4, Map.Info.MapWidth * 7 / 8, Map.Info.MapHeight / 6, Map.Info.MapHeight * 5 / 6)
+			CreateCreeps(1, "unit-teuton-stables", 9, Map.Info.MapWidth / 4, Map.Info.MapWidth * 7 / 8, Map.Info.MapHeight / 6, Map.Info.MapHeight * 5 / 6)
 		elseif (GameSettings.Difficulty == 3) then -- if difficulty is hard
 			CreateCreeps(1, "unit-germanic-warrior", 18, Map.Info.MapWidth / 4, Map.Info.MapWidth * 7 / 8, Map.Info.MapHeight / 6, Map.Info.MapHeight * 5 / 6)
 		elseif (GameSettings.Difficulty == 4) then -- if difficulty is brutal
-			CreateCreeps(1, "unit-germanic-warrior", 36, Map.Info.MapWidth / 4, Map.Info.MapWidth * 7 / 8, Map.Info.MapHeight / 6, Map.Info.MapHeight * 5 / 6)
+			CreateCreeps(1, "unit-teuton-stables", 36, Map.Info.MapWidth / 4, Map.Info.MapWidth * 7 / 8, Map.Info.MapHeight / 6, Map.Info.MapHeight * 5 / 6)
 		end
 	elseif (GrandStrategyEventMap) then
 		-- Asa units
