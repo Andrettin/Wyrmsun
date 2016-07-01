@@ -31,7 +31,7 @@ DefineDeity("perun", { -- Slavic thunder-god; Source: "Germans, Avars and Slavs"
 	Religions = {"paganism"},
 	Gender = "male",
 	Major = true,
-	Domains = {"air"}
+	Domains = {"lightning"}
 })
 
 DefineDeity("svarog", { -- Slavic light-god; Source: "Germans, Avars and Slavs", p. 125

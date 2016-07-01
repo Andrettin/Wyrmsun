@@ -57,6 +57,16 @@ DefineDeityDomain("wood", {
 	Name = "Wood"
 })
 
+-- Other Elements
+
+DefineDeityDomain("cold", {
+	Name = "Cold"
+})
+
+DefineDeityDomain("lightning", {
+	Name = "Lightning"
+})
+
 -- Chaos and Order
 
 DefineDeityDomain("chaos", {

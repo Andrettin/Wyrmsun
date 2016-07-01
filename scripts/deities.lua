@@ -28,6 +28,7 @@
 Load("scripts/deities_aesir.lua")
 Load("scripts/deities_baltic.lua")
 Load("scripts/deities_celtic.lua")
+Load("scripts/deities_egyptian.lua")
 Load("scripts/deities_olympian.lua")
 Load("scripts/deities_slavic.lua")
 Load("scripts/deities_titan.lua")

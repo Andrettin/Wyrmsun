@@ -25,10 +25,11 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineDeity("taranos", { -- Source: H. Munro Chadwick, "The Oak and the Thunder-God", 1900, pp. 26, 28.
-	Name = "Taranos",
-	Civilizations = {"celt"},
+DefineDeity("bes", { -- Source: Warren R. Dawson, "Pygmies and Dwarfs in Ancient Egypt", 1938, p. 186; Source: Kamyar Abdi, "Bes in the Achaemenid Empire", 1999, p. 114.
+	Name = "Bes",
+	Civilizations = {"dwarf", "egyptian"},
 	Religions = {"paganism"},
 	Gender = "male",
-	Domains = {"lightning"}
+	Domains = {"life"},
+--	Description = "The god Bes has a dwarf-like appearance. The deity wards childbirths, bestows luck and prosperity on families and protects against malignant beings. Having taken an interest in the dwarves of Nidavellir, Bes sought to made contact with them and establish a priesthood in the world, and became specially popular among the inhabitants of Joruvellir. On Earth he is worshiped by Egyptians."
 })

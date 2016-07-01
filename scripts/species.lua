@@ -60,6 +60,7 @@ DefineSpecies("yale", {
 	Order = "artiodactyla",
 	Family = "bovidae",
 	Subfamily = "caprinae",
+	Genus = "eale",
 	ChildUpgrade = "upgrade-child"
 })
 
