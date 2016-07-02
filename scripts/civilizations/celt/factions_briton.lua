@@ -97,6 +97,17 @@ DefineFaction("Trinobantes Tribe", { -- Source: William R. Shepherd, "Historical
 
 -- Polities
 
+DefineFaction("Dyfed", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 9.
+	Civilization = "celt",
+	Type = "polity",
+--	Language = "welsh", -- it was a Welsh principality
+	Colors = {"red"},
+	DefaultTier = "duchy",
+	Titles = {
+		"monarchy", "duchy", "Principality"
+	}
+})
+
 DefineFaction("Elmet", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 80.
 	Civilization = "celt",
 	Type = "polity",

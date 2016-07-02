@@ -570,6 +570,9 @@ function GenerateProvince(arg)
 		-- set settlement location to one of the province's tiles randomly
 		local settlement_location_id = SyncRand(table.getn(arg.Province.Tiles)) + 1
 		SetProvinceSettlementLocation(arg.Province.Name, arg.Province.Tiles[settlement_location_id][1], arg.Province.Tiles[settlement_location_id][2])
+		if (GetProvinceData(arg.Province.Name, "SettlementTerrain") ~= "" and GetProvinceData(arg.Province.Name, "SettlementTerrain") ~= "Plains") then -- if the "settlement terrain" field is used for the province, set the settlement location's terrain accordingly (don't use plains since there's no transition yet between dark plains and plains, so plains are used as the "settlement terrain" of some Nidavellir provinces, for proper generation for the random world map)
+			SetWorldMapTileTerrain(arg.Province.Tiles[settlement_location_id][1], arg.Province.Tiles[settlement_location_id][2], GetWorldMapTerrainTypeId(GetProvinceData(arg.Province.Name, "SettlementTerrain")))
+		end
 
 		-- create some hill tiles in the province
 		-- first generate the hill seeds
@@ -577,7 +580,9 @@ function GenerateProvince(arg)
 		for i=1,table.getn(arg.Province.Tiles) do
 			local tile_x = arg.Province.Tiles[i][1]
 			local tile_y = arg.Province.Tiles[i][2]
-			if (SyncRand(8) == 0) then -- 12.5% chance to generate a hill seed on one of the province's tiles
+			if (GetWorldMapTileTerrain(tile_x, tile_y) == "Hills" or GetWorldMapTileTerrain(tile_x, tile_y) == "Mountains") then -- if there is already a tile of this terrain in the province (i.e. used as the settlement terrain), use it as a seed; also use already-set mountains as hill seeds
+				table.insert(hill_seeds, {tile_x, tile_y})
+			elseif ((tile_x ~= arg.Province.SettlementLocation[1] or tile_y ~= arg.Province.SettlementLocation[2]) and SyncRand(8) == 0) then -- 12.5% chance to generate a hill seed on one of the province's tiles
 				if (GetWorldMapTileTerrain(tile_x, tile_y) == "Plains" or GetWorldMapTileTerrain(tile_x, tile_y) == "Dark Plains") then
 					SetWorldMapTileTerrain(tile_x, tile_y, GetWorldMapTerrainTypeId("Hills"))
 					table.insert(hill_seeds, {tile_x, tile_y})
@@ -617,7 +622,9 @@ function GenerateProvince(arg)
 		for i=1,table.getn(arg.Province.Tiles) do
 			local tile_x = arg.Province.Tiles[i][1]
 			local tile_y = arg.Province.Tiles[i][2]
-			if (SyncRand(8) == 0) then -- 12.5% chance to generate a mountain seed on one of the province's tiles
+			if (GetWorldMapTileTerrain(tile_x, tile_y) == "Mountains") then -- if there is already a tile of this terrain in the province (i.e. used as the settlement terrain), use it as a seed
+				table.insert(mountain_seeds, {tile_x, tile_y})
+			elseif ((tile_x ~= arg.Province.SettlementLocation[1] or tile_y ~= arg.Province.SettlementLocation[2]) and SyncRand(8) == 0) then -- 12.5% chance to generate a mountain seed on one of the province's tiles
 				if (GetWorldMapTileTerrain(tile_x, tile_y) == "Hills") then
 					SetWorldMapTileTerrain(tile_x, tile_y, GetWorldMapTerrainTypeId("Mountains"))
 					table.insert(mountain_seeds, {tile_x, tile_y})
@@ -657,7 +664,9 @@ function GenerateProvince(arg)
 		for i=1,table.getn(arg.Province.Tiles) do
 			local tile_x = arg.Province.Tiles[i][1]
 			local tile_y = arg.Province.Tiles[i][2]
-			if (SyncRand(8) == 0) then -- 12.5% chance to generate a forest seed on one of the province's tiles
+			if (GetWorldMapTileTerrain(tile_x, tile_y) == "Scrub Forest" or GetWorldMapTileTerrain(tile_x, tile_y) == "Conifer Forest") then -- if there is already a tile of this terrain in the province (i.e. used as the settlement terrain), use it as a seed
+				table.insert(forest_seeds, {tile_x, tile_y})
+			elseif ((tile_x ~= arg.Province.SettlementLocation[1] or tile_y ~= arg.Province.SettlementLocation[2]) and SyncRand(8) == 0) then -- 12.5% chance to generate a forest seed on one of the province's tiles
 				if (GetWorldMapTileTerrain(tile_x, tile_y) == "Plains") then
 					if (arg.Province.Tiles[i] ~= arg.Province.SettlementLocation) then
 						if (tile_y >= (GetWorldMapHeight() / 4) and tile_y < (GetWorldMapHeight() - (GetWorldMapHeight() / 4))) then

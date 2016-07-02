@@ -46,6 +46,7 @@ Load("scripts/world_earth_tiles_scandinavia.lua")
 Load("scripts/world_earth_tiles_scotland.lua")
 Load("scripts/world_earth_tiles_spain.lua")
 Load("scripts/world_earth_tiles_ukraine.lua")
+Load("scripts/world_earth_tiles_wales.lua")
 
 DefineWorldMapTile({418, 73}, {
 	World = "Earth",
