@@ -25,6 +25,18 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineLanguageWord("Anghlod", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 119.
+	Language = "welsh",
+	Type = "noun",
+	Meanings = {"Verbal Invective"} -- source gives the German "verbale Schmähung" as the meaning
+})
+
+DefineLanguageWord("Arglwydd", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 119.
+	Language = "welsh",
+	Type = "noun",
+	Meanings = {"Lord", "Commander"} -- source gives the German "Herr, Gebieter" as the meaning
+})
+
 DefineLanguageWord("Aryant", { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 217.
 	Language = "welsh",
 	Type = "noun",
@@ -35,6 +47,31 @@ DefineLanguageWord("Brathu", { -- Source: Sean Crist, "An Analysis of *z loss in
 	Language = "welsh",
 	Type = "verb",
 	Meanings = {"Prick", "Bite"}
+})
+
+DefineLanguageWord("Bryd", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 117.
+	Language = "welsh",
+	Type = "noun",
+	Meanings = {"Mind"} -- source gives the German "Sinn" as the meaning
+})
+
+DefineLanguageWord("Cant", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 117.
+	Language = "welsh",
+	Type = "numeral",
+	Number = 100 -- source gives the German "hundert" as the meaning
+})
+
+DefineLanguageWord("Cerennydd", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 119.
+	Language = "welsh",
+	Type = "noun",
+	Meanings = {"Peace Treaty", "Peace"}, -- source gives the German "ein Friedensvertrag zwischen zwei Königreichen oder auch der dadurch (wieder-)hergestellte Friede" as the meaning
+	DerivesFrom = {"proto-celtic", "noun", "Karantion"}
+})
+
+DefineLanguageWord("Coron", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 119.
+	Language = "welsh",
+	Type = "noun",
+	Meanings = {"Crown"} -- source gives the German "Krone" as the meaning
 })
 
 DefineLanguageWord("Dant", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 84.
@@ -51,6 +88,12 @@ DefineLanguageWord("Erw", { -- this is the genitive; Source: Winfred P. Lehmann,
 	NumberCaseInflections = {
 		"singular", "genitive", "Erw"
 	}
+})
+
+DefineLanguageWord("Gwas Ystafell", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 120.
+	Language = "welsh",
+	Type = "noun",
+	Meanings = {"Chamberlain"} -- source gives the German "Kammerdiener" as the meaning
 })
 
 DefineLanguageWord("Hâf", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.
@@ -81,10 +124,28 @@ DefineLanguageWord("Ieu", { -- this is the comparative; Source: Winfred P. Lehma
 	}
 })
 
+DefineLanguageWord("Meddwl", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 117.
+	Language = "welsh",
+	Type = "noun",
+	Meanings = {"Mind"} -- source gives the German "Sinn" as the meaning
+})
+
 DefineLanguageWord("Mwyalch", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 155.
 	Language = "welsh",
 	Type = "noun",
 	Meanings = {"Blackbird", "Merl", "Thrush"} -- source gives the German "Amsel, Drossel" as the meaning
+})
+
+DefineLanguageWord("Pryderi", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 33.
+	Language = "welsh",
+	Type = "noun",
+	Meanings = {"Worry"} -- source gives the German "die Sorge" as the meaning
+})
+
+DefineLanguageWord("Pwyll", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 117.
+	Language = "welsh",
+	Type = "noun",
+	Meanings = {"Wit"} -- source gives the German "Verstand" as the meaning
 })
 
 DefineLanguageWord("Rhŷd", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 121.
@@ -93,8 +154,56 @@ DefineLanguageWord("Rhŷd", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Meanings = {"Ford"} -- source gives the German "Furt" as the meaning
 })
 
+DefineLanguageWord("Talaith", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 119.
+	Language = "welsh",
+	Type = "noun",
+	Meanings = {"Diadem"} -- source gives the German "Diadem" as the meaning
+})
+
 DefineLanguageWord("Taran", { -- Source: H. Munro Chadwick, "The Oak and the Thunder-God", 1900, p. 26.
 	Language = "welsh",
 	Type = "noun",
 	Meanings = {"Thunder"}
+})
+
+DefineLanguageWord("Tref", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 117.
+	Language = "welsh",
+	Type = "noun",
+	Meanings = {"Homestead"} -- source gives the German "Gehöft" as the meaning
+})
+
+DefineLanguageWord("Troed", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 118.
+	Language = "welsh",
+	Type = "noun",
+	Meanings = {"Foot"} -- source gives the German "Fuß" as the meaning
+})
+
+DefineLanguageWord("Unben", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 119.
+	Language = "welsh",
+	Type = "noun", -- correct?
+	Meanings = {"My Lord"} -- source gives the German "mein Herr" as the meaning
+})
+
+DefineLanguageWord("Wyneb", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 119.
+	Language = "welsh",
+	Type = "noun",
+	Meanings = {"Honor"} -- source gives the German "Ehre" as the meaning
+})
+
+DefineLanguageWord("Ystafell", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 120.
+	Language = "welsh",
+	Type = "noun",
+	Meanings = {"Bedchamber of the Head of the Household"} -- source gives the German "Schlafgemach des Hausherrn" as the meaning
+})
+
+-- Compounds
+
+DefineLanguageWord("Cantref", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 117.
+	Language = "welsh",
+	Type = "noun",
+	Meanings = {"Medieval Administrative Unit"},
+	CompoundElements = {
+		"prefix", "welsh", "numeral", "Cant",
+		"suffix", "welsh", "noun", "Tref"
+	}
 })

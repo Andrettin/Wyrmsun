@@ -63,6 +63,12 @@ DefineLanguageWord("Giús", { -- Source: Sean Crist, "An Analysis of *z loss in 
 	Meanings = {"Fir"}
 })
 
+DefineLanguageWord("Traig", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 118.
+	Language = "old-irish",
+	Type = "noun",
+	Meanings = {"Foot"} -- source gives the German "Fuß" as the meaning
+})
+
 DefineLanguageWord("Tur", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 3.
 	Language = "old-irish",
 	Type = "adjective",

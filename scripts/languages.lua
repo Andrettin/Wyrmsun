@@ -548,6 +548,7 @@ Load("scripts/language_sanskrit.lua")
 Load("scripts/language_umbrian.lua")
 
 -- Celtic languages (branch of the Indo-European family)
+Load("scripts/language_proto_celtic.lua")
 Load("scripts/language_old_gaulish.lua")
 Load("scripts/language_gaulish.lua")
 Load("scripts/language_armorican.lua")

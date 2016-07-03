@@ -25,6 +25,118 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineCharacter("Pwyll", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 9.
+	Name = "Pwyll",
+	NameElements = {"word", "welsh", "noun", "Pwyll"},
+	Gender = "male",
+	Type = "unit-germanic-warrior",
+	Civilization = "celt",
+	Faction = "Dyfed",
+	ProvinceOfOrigin = "Dyfed", -- presumably
+	HistoricalTitles = {
+--		"head-of-state", 0, 0, "celt", "Dyfed" -- prince of Dyfed, lord of the seven Cantrefis of Dyfed
+	}
+	-- married to Rhiannon
+})
+
+DefineCharacter("Hefeydd the Old", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 20.
+	Name = "Hefeydd",
+	ExtraName = "the Old",
+	Gender = "male",
+	Type = "unit-germanic-warrior",
+	Civilization = "celt",
+--	ProvinceOfOrigin = ?
+})
+
+DefineCharacter("Rhiannon", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 20.
+	Name = "Rhiannon",
+	Gender = "female",
+	Type = "unit-germanic-archer",
+	Civilization = "celt",
+--	ProvinceOfOrigin = ?
+	Father = "Hefeydd the Old"
+	-- married to Pwyll
+})
+
+DefineCharacter("Clud", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 21.
+	Name = "Clud",
+	Gender = "male",
+	Type = "unit-germanic-warrior",
+	Civilization = "celt",
+--	ProvinceOfOrigin = ?
+})
+
+DefineCharacter("Gwawl", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 21.
+	Name = "Gwawl",
+	Gender = "male",
+	Type = "unit-germanic-warrior",
+	Civilization = "celt",
+--	ProvinceOfOrigin = ?
+	Father = "Clud"
+})
+
+DefineCharacter("Teyrnon Twryf Liant", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 29.
+	Name = "Teyrnon Twryf Liant",
+	Gender = "male",
+	Type = "unit-germanic-warrior",
+	Civilization = "celt",
+--	ProvinceOfOrigin = ?
+	HistoricalTitles = {
+		"head-of-state", 0, 0, "celt", "Gwent Is Coed" -- lord of Gwent Is Coed
+	}
+})
+
+DefineCharacter("Pryderi", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, pp. 31, 33-35.
+	Name = "Pryderi", -- also known as "Gwri"
+	NameElements = {"word", "welsh", "noun", "Pryderi"},
+	Gender = "male",
+	Type = "unit-germanic-warrior",
+	Civilization = "celt",
+--	ProvinceOfOrigin = ?
+	HairVariation = "blond-hair", -- had golden yellow hair
+	Father = "Pwyll",
+	Mother = "Rhiannon",
+	HistoricalTitles = {
+		"head-of-state", 0, 0, "celt", "Gwent Is Coed" -- prince of Dyfed
+	}
+	-- married to Cigfa
+})
+
+DefineCharacter("Casnar Wledig", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 35.
+	Name = "Casnar Wledig",
+	Gender = "male",
+	Type = "unit-germanic-warrior",
+	Civilization = "celt",
+--	ProvinceOfOrigin = ?
+})
+
+DefineCharacter("Gloyw Wallt Lydan", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 35.
+	Name = "Gloyw Wallt Lydan",
+	Gender = "male",
+	Type = "unit-germanic-warrior",
+	Civilization = "celt",
+--	ProvinceOfOrigin = ?
+	Father = "Casnar Wledig"
+})
+
+DefineCharacter("Gwyn Gohoyw", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 35.
+	Name = "Gwyn Gohoyw",
+	Gender = "male",
+	Type = "unit-germanic-warrior",
+	Civilization = "celt",
+--	ProvinceOfOrigin = ?
+	Father = "Gloyw Wallt Lydan"
+})
+
+DefineCharacter("Cigfa", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 35.
+	Name = "Cigfa",
+	Gender = "female",
+	Type = "unit-germanic-archer",
+	Civilization = "celt",
+--	ProvinceOfOrigin = ?
+	Father = "Gwyn Gohoyw"
+})
+
 DefineCharacter("Maelgwn", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 76.
 	Name = "Maelgwn", -- Maelgwn of Gwynedd
 	Gender = "male",

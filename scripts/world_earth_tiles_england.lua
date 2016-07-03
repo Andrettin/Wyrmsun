@@ -95,14 +95,6 @@ DefineWorldMapTile({471, 105}, {
 	}
 })
 
-DefineWorldMapTile({471, 109}, {
-	World = "Earth",
-	CulturalSettlementNames = {
-		"celt", "Isca Silurum",
-		"latin", "Isca Silurum" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-	}
-})
-
 DefineWorldMapTile({471, 110}, {
 	World = "Earth",
 	FactionCulturalSettlementNames = {

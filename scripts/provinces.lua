@@ -26,6 +26,7 @@
 --
 
 Load("scripts/regions.lua")
+--Load("scripts/provinces_alfheim.lua")
 --Load("scripts/provinces_earth_africa.lua")
 --Load("scripts/provinces_earth_america.lua")
 --Load("scripts/provinces_earth_asia.lua")

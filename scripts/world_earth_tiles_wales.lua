@@ -28,6 +28,27 @@
 DefineWorldMapTile({466, 108}, {
 	World = "Earth",
 	CulturalSettlementNames = {
-		"celt", "Arberth" -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, pp. 8-9.
+		"celt", "Arberth" -- Welsh; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, pp. 8-9.
+	},
+	CulturalTerrainNames = {
+		"Hills", "celt", "Gorsedd Arberth" -- name of a hill near Arbert; Welsh; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 16.
+	}
+})
+
+DefineWorldMapTile({467, 108}, {
+	World = "Earth",
+	CulturalSettlementNames = {
+		"celt", "Moridunum" -- main settlement of the Demetae tribe; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 117.
+	},
+	Claims = {
+		"celt", "Demetae Tribe"
+	}
+})
+
+DefineWorldMapTile({471, 109}, {
+	World = "Earth",
+	CulturalSettlementNames = {
+		"celt", "Isca Silurum",
+		"latin", "Isca Silurum" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
 })

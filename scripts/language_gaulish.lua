@@ -74,3 +74,9 @@ DefineLanguageWord("Samo", { -- Source: http://www.cnrtl.fr/definition/sombre//3
 	Type = "noun",
 	Meanings = {"Summer"} -- source gives the French "été" as the meaning
 })
+
+DefineLanguageWord("Vertragos", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 118.
+	Language = "gaulish",
+	Type = "noun",
+	Meanings = {}
+})

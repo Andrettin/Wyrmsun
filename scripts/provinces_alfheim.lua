@@ -25,32 +25,64 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineFaction("Annwn", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, pp. 10, 119-120.
-	Civilization = "elf", -- Annwn was an otherworld in Welsh legends; here we make it an elven kingdom, as (Celtic) fairies are amalgamated into elves in Wyrmsun (which makes particular sense given that in English the two were amalgamated historically as well)
-	Type = "polity",
-	Colors = {"white"},
-	DefaultTier = "kingdom", -- Arawn was king of Annwn
-	Description = "Annwn is an elven kingdom, famous for the civil war fought between Arawn and Hafgan for its throne."
+DefineProvince("Aethenwood", { -- from Wesnoth
+	World = "Alfheim",
+	Tiles = {},
+	CulturalNames = {
+		"elf", "Aethenwood"
+	},
+	Map = "maps/random/random-map-fairlimbed-forest.smp",
+	SettlementTerrain = "Conifer Forest"
 })
 
-DefineFaction("Lintanir", {
-	Civilization = "elf",
-	Type = "polity",
-	Colors = {"red"},
-	DefaultTier = "kingdom"
+DefineProvince("Annwn", {
+	World = "Alfheim",
+	Tiles = {},
+	CulturalNames = {
+		"elf", "Annwn"
+	},
+	Map = "maps/random/random-map-fairlimbed-forest.smp",
+	SettlementTerrain = "Plains",
+	Claims = {
+		"elf", "Annwn"
+	}
 })
 
-DefineFaction("Ulfdalir", {
-	Civilization = "elf",
-	Type = "polity",
-	Colors = {"black"},
-	DefaultTier = "kingdom", -- because Volund's father was a king (though of Finland in the original myth)
-	Description = "Ulfdalir was one of the main participants in the Winter War. Facing an attack by a neighboring elven realm, they allied themselves with the frost trolls to the north."
+DefineProvince("Lintanir", { -- from Wesnoth
+	World = "Alfheim",
+	Tiles = {},
+	CulturalNames = {
+		"elf", "Lintanir"
+	},
+	Map = "maps/random/random-map-fairlimbed-forest.smp",
+	SettlementTerrain = "Conifer Forest",
+	Claims = {
+		"elf", "Lintanir"
+	}
 })
 
-DefineFaction("Wesmere", {
-	Civilization = "elf",
-	Type = "polity",
-	Colors = {"green"},
-	DefaultTier = "kingdom"
+DefineProvince("Ulfdalir", {
+	World = "Alfheim",
+	Tiles = {},
+	CulturalNames = {
+		"elf", "Ulfdalir"
+	},
+	Map = "maps/random/random-map-fairlimbed-forest.smp",
+	SettlementTerrain = "Plains",
+	Claims = {
+		"elf", "Ulfdalir"
+	}
+})
+
+DefineProvince("Wesmere", { -- from Wesnoth
+	World = "Alfheim",
+	Tiles = {},
+	CulturalNames = {
+		"elf", "Wesmere"
+	},
+	Map = "maps/random/random-map-fairlimbed-forest.smp",
+	SettlementTerrain = "Conifer Forest",
+	Claims = {
+		"elf", "Wesmere"
+	}
 })

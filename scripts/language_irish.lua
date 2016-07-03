@@ -25,6 +25,11 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineLanguageWord("Áer", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 119.
+	Language = "irish",
+	Type = "noun",
+	Meanings = {"Verbal Invective"} -- source gives the German "verbale Schmähung" as the meaning
+})
 
 DefineLanguageWord("Arget", { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 217.
 	Language = "irish",
@@ -80,11 +85,24 @@ DefineLanguageWord("Búal", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	DerivesFrom = {"proto-indo-european", "verb", "Bheg"}
 })
 
+DefineLanguageWord("Cairde", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 119.
+	Language = "irish",
+	Type = "noun",
+	Meanings = {"Peace Treaty", "Peace"}, -- source gives the German "ein Friedensvertrag zwischen zwei Königreichen oder auch der dadurch (wieder-)hergestellte Friede" as the meaning
+	DerivesFrom = {"proto-celtic", "noun", "Karantion"}
+})
+
 DefineLanguageWord("Ceallach", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 50.
 	Language = "irish",
 	Type = "noun",
 	Meanings = {"War"}, -- source gives the German "Krieg" as the meaning
 	DerivesFrom = {"proto-indo-european", "noun", "Keld"}
+})
+
+DefineLanguageWord("Cíall", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 117.
+	Language = "irish",
+	Type = "noun",
+	Meanings = {"Wit"} -- source gives the German "Verstand" as the meaning
 })
 
 DefineLanguageWord("Cnú", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 58.
@@ -95,6 +113,12 @@ DefineLanguageWord("Cnú", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Gender = "feminine"
 })
 
+DefineLanguageWord("Corann", { -- source also gives the alternative form "coróin"; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 119.
+	Language = "irish",
+	Type = "noun",
+	Meanings = {"Crown"} -- source gives the German "Krone" as the meaning
+})
+
 DefineLanguageWord("Dún", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 89.
 	Language = "irish",
 	Type = "noun",
@@ -102,6 +126,12 @@ DefineLanguageWord("Dún", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	NumberCaseInflections = {
 		"singular", "genitive", "Dúne"
 	}
+})
+
+DefineLanguageWord("Enech", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 119.
+	Language = "irish",
+	Type = "noun",
+	Meanings = {"Honor"} -- source gives the German "Ehre" as the meaning
 })
 
 DefineLanguageWord("Fescor", { -- source also gives the alternative form "Ἑστέρα"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 204.
@@ -189,6 +219,12 @@ DefineLanguageWord("Mían", { -- Source: August Fick and Alf Torp, "Wortschatz d
 	Language = "irish",
 	Type = "noun",
 	Meanings = {"Metal"} -- source gives the German "Metall"
+})
+
+DefineLanguageWord("Mind", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 119.
+	Language = "irish",
+	Type = "noun",
+	Meanings = {"Diadem"} -- source gives the German "Diadem" as the meaning
 })
 
 DefineLanguageWord("Mruig", { -- source also gives the alternative form "Bruig"; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 160.

@@ -1631,7 +1631,13 @@ function OpenEncyclopediaCivilizationEntry(civilization)
 		description = description .. "\n\n"
 	end
 	if (GetCivilizationData(civilization, "Description") ~= "") then
-		description = description .. "Description: " .. GetCivilizationData(civilization, "Description")
+		description = description .. "Description: " .. GetCivilizationData(civilization, "Description") .. "\n\n"
+	end
+	if (GetCivilizationData(civilization, "Quote") ~= "") then
+		description = description .. "Quote: " .. GetCivilizationData(civilization, "Quote") .. "\n\n"
+	end
+	if (GetCivilizationData(civilization, "Background") ~= "") then
+		description = description .. "Background: " .. GetCivilizationData(civilization, "Background") .. "\n\n"
 	end
 	l:setCaption(description)
 			

@@ -25,32 +25,15 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineFaction("Annwn", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, pp. 10, 119-120.
-	Civilization = "elf", -- Annwn was an otherworld in Welsh legends; here we make it an elven kingdom, as (Celtic) fairies are amalgamated into elves in Wyrmsun (which makes particular sense given that in English the two were amalgamated historically as well)
-	Type = "polity",
-	Colors = {"white"},
-	DefaultTier = "kingdom", -- Arawn was king of Annwn
-	Description = "Annwn is an elven kingdom, famous for the civil war fought between Arawn and Hafgan for its throne."
+DefineLanguageWord("Dumno", { -- source gives "dumno-"; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 120.
+	Language = "proto-celtic",
+	Type = "noun",
+	Meanings = {"World"} -- source gives the German "Welt" as the meaning
 })
 
-DefineFaction("Lintanir", {
-	Civilization = "elf",
-	Type = "polity",
-	Colors = {"red"},
-	DefaultTier = "kingdom"
+DefineLanguageWord("Karantion", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 119.
+	Language = "proto-celtic",
+	Type = "noun",
+	Meanings = {}
 })
 
-DefineFaction("Ulfdalir", {
-	Civilization = "elf",
-	Type = "polity",
-	Colors = {"black"},
-	DefaultTier = "kingdom", -- because Volund's father was a king (though of Finland in the original myth)
-	Description = "Ulfdalir was one of the main participants in the Winter War. Facing an attack by a neighboring elven realm, they allied themselves with the frost trolls to the north."
-})
-
-DefineFaction("Wesmere", {
-	Civilization = "elf",
-	Type = "polity",
-	Colors = {"green"},
-	DefaultTier = "kingdom"
-})

@@ -30,7 +30,7 @@
 Load("scripts/world_earth_tiles_austria.lua") -- German-speaking territories of the Empire of Austria, as well as Carniola
 Load("scripts/world_earth_tiles_bulgaria.lua")
 --Load("scripts/world_earth_tiles_egypt.lua")
-Load("scripts/world_earth_tiles_england.lua") -- includes Wales
+Load("scripts/world_earth_tiles_england.lua")
 Load("scripts/world_earth_tiles_finland.lua")
 Load("scripts/world_earth_tiles_france.lua") -- modern France (excluding Corsica)
 Load("scripts/world_earth_tiles_germany.lua") -- territory of Imperial Germany (excluding Alsace-Lorraine)

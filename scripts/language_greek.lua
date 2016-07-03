@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2015 by Andrettin
+--      (c) Copyright 2015-2016 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -553,6 +553,12 @@ DefineLanguageWord("Thúrā", { -- Source: Winfred P. Lehmann, "A Grammar of Pro
 	Language = "greek",
 	Type = "noun",
 	Meanings = {"Door"}
+})
+
+DefineLanguageWord("Τρέχω", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 118.
+	Language = "greek",
+	Type = "verb",
+	Meanings = {"Run"} -- source gives the German "laufen" as the meaning
 })
 
 DefineLanguageWord("Τύρβη", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 100.

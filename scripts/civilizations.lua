@@ -122,7 +122,9 @@ DefineCivilization("elf", {
 		"germanic/ui/resource.png", 0, 0,
 		"germanic/ui/buttonpanel.png", -256, -200,
 		"germanic/ui/infopanel.png", 0, -200
-	}
+	},
+	Description = "The lush world of Alfheim contains a myriad forests, many of which are inhabited by elves. Being a subtle folk, elves hold magical skills in great steem, and they are more prone to intrigue than open warfare.",
+	Background = "The elves of Wyrmsun incorporate elements both of the elves of Norse mythology and the Celtic fairies. This follows the amalgamation of the two types of beings in English folklore."
 })
 
 --[[

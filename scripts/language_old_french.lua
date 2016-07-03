@@ -66,3 +66,10 @@ DefineLanguageWord("Hamie", { -- Source: http://www.cnrtl.fr/definition/Amad%E9
 	Meanings = {"Bar"}, -- source gives the French "barre" as the meaning
 	DerivesFrom = {"old-frankish", "noun", "Haimithi"} -- apparently
 })
+
+DefineLanguageWord("Vautre", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 118.
+	Language = "old-french",
+	Type = "noun",
+	Meanings = {"Hunting Dog"}, -- source gives the German "Jagdhund" as the meaning
+	DerivesFrom = {"gaulish", "noun", "Vertragos"}
+})

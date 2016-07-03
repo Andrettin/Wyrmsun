@@ -2050,6 +2050,41 @@ DefineProvince("Durham", {
 	Regions = {"British Isles", "England", "Europe", "Northwest Europe", "West and Central Europe"}
 })
 
+DefineProvince("Dyfed", {
+	World = "Earth",
+	CulturalNames = {
+		"celt", "Dyfed",
+		"latin", "Demetia" -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 117.
+	},
+	Tiles = {
+		{465, 108},
+		{466, 108},
+		{467, 108},
+		{468, 107}, {468, 108}
+	},
+	SettlementLocation = {466, 108}, -- Arberth
+	Map = "maps/random/random-map-forest.smp",
+	SettlementTerrain = "Plains",
+	Coastal = true,
+	Claims = {
+		"basque", "Bellbeaker Tribe",
+		"celt", "Demetae Tribe", -- The main settlement of the Demetae was Moridunum (modern Carmarthen); Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 117.
+		"celt", "Dyfed"
+	},
+	HistoricalOwners = {
+		-7000, "basque", "Bellbeaker Tribe", -- Bell Beaker culture existed in Normandy and the southwestern parts of Great Britain between 7000 and 2000 BC; Source: "Atlas de História Mundial", 2001, pp. 40-41.
+		43, "latin", "Rome", -- Britannia acquired by Rome in 43 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		1560, "teuton", "England" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+	},
+	HistoricalCultures = {
+		-7000, "basque"
+	},
+	HistoricalClaims = {
+		43, "latin", "Rome"
+	},
+	Regions = {"British Isles", "England", "Europe", "Northwest Europe", "West and Central Europe"}
+})
+
 DefineProvince("East Anglia", {
 	World = "Earth",
 	FactionCulturalNames = {
@@ -6903,10 +6938,7 @@ DefineProvince("Wales", {
 		"teuton", "England", "Wales"
 	},
 	Tiles = {
-		{465, 108},
-		{466, 108},
-		{467, 108},
-		{468, 106}, {468, 107}, {468, 108},
+		{468, 106},
 		{469, 106}, {469, 107}, {469, 108}, {469, 109},
 		{470, 106}, {470, 107}, {470, 108}, {470, 109},
 		{471, 109}
