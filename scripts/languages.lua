@@ -50,10 +50,10 @@ if (CanAccessFile("cache/languages.lua")) then
 			
 		local dirs = ListDirsInDirectory("scripts/languages/")
 		for i,f in ipairs(dirs) do
-			local directory = f .. "/"
+			local directory = "scripts/languages/" .. f .. "/"
 			local fileslist = ListFilesInDirectory(directory)
 			for second_i,second_f in ipairs(fileslist) do
-				local file_name = "scripts/languages/" .. directory .. second_f
+				local file_name = directory .. second_f
 				if (GetFileLastModified(file_name) > language_cache_date) then
 					LanguageCacheOutdated = true
 					break
@@ -65,10 +65,10 @@ if (CanAccessFile("cache/languages.lua")) then
 	if (LanguageCacheOutdated == false) then
 		local dirs = ListDirsInDirectory("scripts/civilizations/")
 		for i,f in ipairs(dirs) do
-			local directory = f .. "/"
+			local directory = "scripts/civilizations/" .. f .. "/"
 			local fileslist = ListFilesInDirectory(directory)
 			for second_i,second_f in ipairs(fileslist) do
-				local file_name = "scripts/civilizations/" .. directory .. second_f
+				local file_name = directory .. second_f
 				if ((string.find(file_name, "character") ~= nil or string.find(file_name, "unique_item") ~= nil or string.find(file_name, "works") ~= nil) and GetFileLastModified(file_name) > language_cache_date) then
 					LanguageCacheOutdated = true
 					break
