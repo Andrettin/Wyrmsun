@@ -25,16 +25,11 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineQuest("pypos-gold", { -- Source: Franz Hartmann, "Among the Gnomes", 1895, pp. 12-21.
-	Name = "Pypo's Gold",
-	Icon = "icon-gnomish-master-at-arms",
-	Description = "An impoverished dwarven noble seeks the gold of the gnomes of Untersberg.\n\nMap: Untersberg",
-	World = "Nidavellir",
-	Civilization = "gnome",
-	TechnologyPoints = 3,
-	Map = "maps/nidavellir/untersberg.smp",
-	Scenario = "scripts/civilizations/gnome/scenarios/pypos_gold.lua",
-	PlayerColor = "blue",
-	IntroductionDialogue = "pypos-gold-introduction",
-	Hidden = true
+DefineLanguageWord("Gourme", {
+	Language = "french",
+	Type = "noun",
+	Meanings = {"Strangles", "Strepcoccus equi"},
+	DerivesFrom = {"old-provencal", "noun", "Vorm"}, -- Source: http://www.cnrtl.fr/definition/gourme
+	Gender = "feminine"
 })
+

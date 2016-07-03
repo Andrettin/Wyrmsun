@@ -26,43 +26,36 @@
 --
 
 if (LoadedGame == false) then
-	SetPlayerData(0, "RaceName", "gnome")
-	SetPlayerData(0, "Faction", "Untersberg")
-	SetPlayerData(1, "RaceName", "dwarf")
-	SetPlayerData(1, "Faction", "Random")
+	SetPlayerData(0, "RaceName", "elf")
+	SetPlayerData(0, "Faction", "Annwn")
+	SetPlayerData(1, "RaceName", "elf")
+	SetPlayerData(1, "Faction", "Annwn")
+	SetPlayerData(1, "Name", "Annwn (Hafgan)")
 	if not (GrandStrategy) then
-		SetPlayerData(1, "Allow", "unit-dwarven-smithy", "F")
-		SetPlayerData(1, "Allow", "unit-dwarven-lumber-mill", "F")
-		SetPlayerData(1, "Allow", "unit-dwarven-stronghold", "F")
-		SetPlayerData(1, "Allow", "upgrade-dwarven-runewriting", "F")
+--		SetPlayerData(1, "Allow", "unit-dwarven-smithy", "F")
+--		SetPlayerData(1, "Allow", "unit-dwarven-lumber-mill", "F")
+--		SetPlayerData(1, "Allow", "unit-dwarven-stronghold", "F")
+--		SetPlayerData(1, "Allow", "upgrade-dwarven-runewriting", "F")
 	end
 	
 	if not (GrandStrategy) then
-		unit = CreateUnit("unit-gnomish-master-at-arms", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		SetUnitVariable(unit, "Character", "Pypo")
+		unit = CreateUnit("unit-elven-swordsman", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		SetUnitVariable(unit, "Character", "Arawn")
 	elseif (GrandStrategyEventMap) then
-		CreateProvinceUnits("Untersberg", 0, 1, false, false)
-		CreateProvinceCustomHero("Untersberg", 0)
+		CreateProvinceUnits("Annwn", 0, 1, false, false)
+		CreateProvinceCustomHero("Annwn", 0)
 	
-		if (FactionHasHero("gnome", "Untersberg", "Pypo")) then
-			unit = CreateUnit(GetGrandStrategyHeroUnitType("Pypo"), 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-			SetUnitVariable(unit, "Character", "Pypo")
+		if (FactionHasHero("elf", "Annwn", "Arawn")) then
+			unit = CreateUnit(GetGrandStrategyHeroUnitType("Arawn"), 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+			SetUnitVariable(unit, "Character", "Arawn")
 		end
-		
 	end
 
-	unit = CreateUnit("unit-dwarven-yale-rider", 1, {Players[1].StartPos.x, Players[1].StartPos.y}) -- dwarven noble
-	SetUnitVariable(unit, "Starting", false)
-	SetUnitVariable(unit, "Active", false)
-	unit = CreateUnit("unit-dwarven-witness", 1, {Players[1].StartPos.x, Players[1].StartPos.y}) -- old wise and faithful steward to the dwarven noble
-	SetUnitVariable(unit, "Starting", false)
-	SetUnitVariable(unit, "Active", false)
-	AcquireTrait(unit, "upgrade-old")
-	
-	GameTimeOfDay = 5 -- the scenario happens in a gloomy evening in Autumn
+	unit = CreateUnit("unit-elven-swordsman", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+	SetUnitVariable(unit, "Character", "Hafgan")
 end
 
-RemovePlayerObjective(GetFactionPlayer("Untersberg"), "- Defeat your enemies")
+RemovePlayerObjective(GetFactionPlayer("Annwn"), "- Defeat your enemies")
 
 AddTrigger(
 	function()
@@ -75,7 +68,7 @@ AddTrigger(
 	function()
 		ActionVictory()
 		if (player == GetThisPlayer() and GrandStrategy == false) then
-			SetQuestCompleted("pypos-gold", GameSettings.Difficulty)
+			SetQuestCompleted("the-two-kings-of-annwn", GameSettings.Difficulty)
 		end
 		return false
 	end
@@ -83,7 +76,7 @@ AddTrigger(
 
 AddTrigger(
 	function()
-		if (PlayerHasObjective(GetThisPlayer(), "- Pypo must survive") and FindHero("Pypo", GetThisPlayer()) == nil) then
+		if (PlayerHasObjective(GetThisPlayer(), "- Arawn must survive") and FindHero("Arawn", GetThisPlayer()) == nil) then
 			player = GetThisPlayer()
 			return true
 		end

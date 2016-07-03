@@ -1,0 +1,23 @@
+LoadTileModels("scripts/tilesets/fairlimbed_forest.lua")
+
+if (LoadedGame == false) then
+	if (GetCurrentQuest() == "the-two-kings-of-annwn") then
+		GenerateRandomMap({
+			RockQuantity = "low",
+			TreeQuantity = "medium",
+			WaterQuantity = "low",
+			RoughLandQuantity = "low",
+			WorkerQuantity = 5,
+			NoFlyingCreeps = true, -- too early a mission to add such perils
+			PlayerCivilizations = {"elf", "elf"}
+		})
+	else
+		GenerateRandomMap({
+			RockQuantity = "low",
+			TreeQuantity = "medium",
+			WaterQuantity = "low",
+			RoughLandQuantity = "low",
+			WorkerQuantity = 5
+		})
+	end
+end

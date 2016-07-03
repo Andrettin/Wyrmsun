@@ -45,13 +45,6 @@ DefineLanguageWord("Aihʷa", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	DerivesFrom = {"proto-indo-european", "noun", "Éḱwos"}
 })
 
-DefineLanguageWord("Aíkklēsjo", { -- Source: D. H. Green, "From Germania to Europe: the Evidence of Language and History", 1997, p. xxxvi.
-	Language = "gothic",
-	Type = "noun",
-	Meanings = {"Assembly", "Congregation", "House of God", "Church"},
-	DerivesFrom = {"greek", "noun", "Ekklēsía"}
-})
-
 DefineLanguageWord("Ainlif", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 9.
 	Language = "gothic",
 	Type = "numeral",
@@ -1268,13 +1261,6 @@ DefineLanguageWord("Waurms", { -- Fick gives "Vaúrms" instead"; Source: Richard
 	Meanings = {"Worm", "Serpent"}, -- probably could be extended to mean "wyrm" as well
 	DerivesFrom = {"proto-germanic", "noun", "Vurma"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 209.
 	Gender = "masculine"
-})
-
-DefineLanguageWord("Wein", { -- Source: D. H. Green, "From Germania to Europe: the Evidence of Language and History", 1997, p. xxxii.
-	Language = "gothic",
-	Type = "noun",
-	Meanings = {"Wine"}, -- apparently
-	DerivesFrom = {"latin", "noun", "Vinum"}
 })
 
 DefineLanguageWord("Weis", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 5, Subsection 1.

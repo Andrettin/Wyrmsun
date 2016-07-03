@@ -170,14 +170,6 @@ DefineLanguageWord("Garou", {
 	Gender = "masculine"
 })
 
-DefineLanguageWord("Gourme", {
-	Language = "french",
-	Type = "noun",
-	Meanings = {"Strangles", "Strepcoccus equi"},
-	DerivesFrom = {"old-provencal", "noun", "Vorm"}, -- Source: http://www.cnrtl.fr/definition/gourme
-	Gender = "feminine"
-})
-
 DefineLanguageWord("Gris", {
 	Language = "french",
 	Type = "noun",

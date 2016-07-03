@@ -655,18 +655,6 @@ DefineLanguageWord("Eduard", {
 	Meanings = {}
 })
 
-DefineLanguageWord("Eimer", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {"Bucket"},
-	DerivesFrom = {"latin", "noun", "Amphora"}, -- Source: D. H. Green, "From Germania to Europe: the Evidence of Language and History", 1997, pp. xxxiii-xxxiv.
-	Gender = "masculine",
-	NumberCaseInflections = {
-		"singular", "genitive", "Eimers",
-		"plural", "dative", "Eimern"
-	}
-})
-
 DefineLanguageWord("Eisen", {
 	Language = "high-german",
 	Type = "noun",
@@ -1098,20 +1086,6 @@ DefineLanguageWord("Halb", {
 	DerivesFrom = {"middle-high-german", "adjective", "Halp"} -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 51.
 })
 
-DefineLanguageWord("Hälfte", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {"Half"},
-	DerivesFrom = {"middle-low-german", "noun", "Helfte"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 51.
-	Gender = "feminine",
-	NumberCaseInflections = {
-		"plural", "nominative", "Hälften",
-		"plural", "accusative", "Hälften",
-		"plural", "dative", "Hälften",
-		"plural", "genitive", "Hälften"
-	}
-})
-
 DefineLanguageWord("Hals", {
 	Language = "high-german",
 	Type = "noun",
@@ -1458,21 +1432,6 @@ DefineLanguageWord("Kind", {
 	}
 })
 
-DefineLanguageWord("Kirche", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {"Church"},
-	DerivesFrom = {"west-germanic", "noun", "Kirika"}, -- presumably
-	Gender = "feminine",
-	NumberCaseInflections = {
-		"plural", "nominative", "Kirchen",
-		"plural", "accusative", "Kirchen",
-		"plural", "dative", "Kirchen",
-		"plural", "genitive", "Kirchen"
-	},
-	AffixNameTypes = {"compound", "suffix", "plural", "settlement"} -- examples: "Fünfkirchen", "Neunkirchen", "Weisskirchen"
-})
-
 DefineLanguageWord("Klage", { -- Source: http://www.duden.de/rechtschreibung/Klage
 	Language = "high-german",
 	Type = "noun",
@@ -1645,21 +1604,6 @@ DefineLanguageWord("Leopold", {
 	Language = "high-german",
 	Type = "noun",
 	Meanings = {}
-})
-
-DefineLanguageWord("Lied", { -- Source: http://www.duden.de/rechtschreibung/Lied
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {"Song"},
-	DerivesFrom = {"middle-low-german", "noun", "Liet"}, -- apparently, but isn't entirely clear from source; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 181.
-	Gender = "neuter",
-	NumberCaseInflections = {
-		"singular", "genitive", "Liedes", -- alternatively also "Lieds"
-		"plural", "nominative", "Lieder",
-		"plural", "accusative", "Lieder",
-		"plural", "dative", "Liedern",
-		"plural", "genitive", "Lieder"
-	}
 })
 
 DefineLanguageWord("Lot", {
@@ -2372,22 +2316,6 @@ DefineLanguageWord("Stuhl", {
 	AffixNameTypes = {"compound", "prefix", "singular", "settlement"} -- example: "Stuhlweissenburg"
 })
 
-DefineLanguageWord("Süd", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {"South"},
-	DerivesFrom = {"middle-low-german", "adverb", "Sûd"}, -- High German "Süd" comes from the Low German, according to the source; Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 223.
-	Gender = "masculine"
-})
-
-DefineLanguageWord("Süden", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {"South"},
-	DerivesFrom = {"middle-low-german", "adverb", "Sûd"}, -- seems sensible, considering "Süd" comes the Low German
-	Gender = "masculine"
-})
-
 DefineLanguageWord("Tag", {
 	Language = "high-german",
 	Type = "noun",
@@ -2469,19 +2397,6 @@ DefineLanguageWord("Tobias", {
 	Type = "noun",
 	Meanings = {},
 	NameTypes = {"person-male"}
-})
-
-DefineLanguageWord("Torf", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {"Peat"},
-	DerivesFrom = {"middle-low-german", "noun", "Torf"}, -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 86.
-	Gender = "masculine",
-	NumberCaseInflections = {
-		"singular", "genitive", "Torfs", -- alternatively also "Torfes"
-		"plural", "nominative", "Torfe"
-	},
-	AffixNameTypes = {"compound", "prefix", "singular", "settlement"} -- example: "Torfhaus"
 })
 
 DefineLanguageWord("Turm", {
@@ -2571,21 +2486,6 @@ DefineLanguageWord("Wasser", {
 	Gender = "neuter",
 	Uncountable = true,
 	AffixNameTypes = {"compound", "suffix", "singular", "settlement"} -- example: "Hühnerwasser"
-})
-
-DefineLanguageWord("Wein", {
-	Language = "high-german",
-	Type = "noun",
-	Meanings = {"Wine"},
-	DerivesFrom = {"old-high-german", "noun", "Wîn"}, -- presumably
-	Gender = "masculine",
-	NumberCaseInflections = {
-		"singular", "genitive", "Weines", -- alternatively also "Weins"
-		"plural", "nominative", "Weine",
-		"plural", "accusative", "Weine",
-		"plural", "dative", "Weinen",
-		"plural", "genitive", "Weine"
-	}
 })
 
 DefineLanguageWord("Weiß", {

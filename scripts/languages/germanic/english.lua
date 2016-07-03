@@ -602,17 +602,6 @@ DefineLanguageWord("Christopher", {
 	NameTypes = {"person-male"}
 })
 
-DefineLanguageWord("Church", {
-	Language = "english",
-	Type = "noun",
-	Meanings = {"Church"},
-	DerivesFrom = {"old-english", "noun", "Cirice"}, -- presumably
-	Gender = "neuter",
-	AffixNameTypes = {
-		"separate", "prefix", "singular", "terrain-hills" -- example: "Church Hill"
-	}
-})
-
 DefineLanguageWord("Cold", {
 	Language = "english",
 	Type = "adjective",
@@ -1384,15 +1373,6 @@ DefineLanguageWord("Harry", {
 	Meanings = {},
 	Gender = "masculine",
 	NameTypes = {"person-male"}
-})
-
-DefineLanguageWord("Hauberk", {
-	Language = "english",
-	Type = "noun",
-	Meanings = {"Hauberk"},
-	DerivesFrom = {"old-french", "noun", "Halberc"}, -- Merriam-Webster gives "Hauberc" instead; Source: http://www.merriam-webster.com/dictionary/hauberk
-	Gender = "neuter",
-	AffixNameTypes = {"separate", "suffix", "singular", "unit-class-smithy"} -- seems sensible
 })
 
 DefineLanguageWord("Haven", {

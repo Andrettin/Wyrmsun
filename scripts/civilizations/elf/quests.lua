@@ -25,16 +25,16 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineQuest("pypos-gold", { -- Source: Franz Hartmann, "Among the Gnomes", 1895, pp. 12-21.
-	Name = "Pypo's Gold",
-	Icon = "icon-gnomish-master-at-arms",
-	Description = "An impoverished dwarven noble seeks the gold of the gnomes of Untersberg.\n\nMap: Untersberg",
-	World = "Nidavellir",
-	Civilization = "gnome",
+DefineQuest("the-two-kings-of-annwn", {
+	Name = "The Two Kings of Annwn",
+	Icon = "icon-elven-swordsman",
+	Description = "The realm of Annwn has fallen into civil war, as Hafgan claimed king Arawn's throne. Arawn has gathered his forces, and is marching to meet the troops of the usurper in battle...\n\nMap: Annwn",
+	World = "Alfheim",
+	Civilization = "elf",
 	TechnologyPoints = 3,
-	Map = "maps/nidavellir/untersberg.smp",
-	Scenario = "scripts/civilizations/gnome/scenarios/pypos_gold.lua",
-	PlayerColor = "blue",
-	IntroductionDialogue = "pypos-gold-introduction",
+	Map = "maps/alfheim/annwn.smp",
+	Scenario = "scripts/civilizations/elf/scenarios/the_two_kings_of_annwn.lua",
+	PlayerColor = "white",
+	IntroductionDialogue = "the-two-kings-of-annwn-introduction",
 	Hidden = true
 })

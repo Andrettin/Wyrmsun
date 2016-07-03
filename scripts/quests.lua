@@ -26,6 +26,7 @@
 --
 
 Load("scripts/civilizations/dwarf/quests.lua")
+Load("scripts/civilizations/elf/quests.lua")
 Load("scripts/civilizations/germanic/quests.lua")
 Load("scripts/civilizations/gnome/quests.lua")
 Load("scripts/civilizations/norse/quests.lua")

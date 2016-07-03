@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2016 by Andrettin
+--      (c) Copyright 2015-2016 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -25,29 +25,9 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageWord("Burges", { -- Source: T. C. Donkin, "An Etymological Dictionary of the Romance Languages", 1864, p. 84.
-	Language = "spanish",
-	Type = "noun", -- correct?
-	Meanings = {},
-	DerivesFrom = {"late-latin", "noun", "Burgus"}
-})
-
-DefineLanguageWord("Burgo", { -- Source: T. C. Donkin, "An Etymological Dictionary of the Romance Languages", 1864, p. 84.
-	Language = "spanish",
+DefineLanguageWord("Teulu", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 121.
+	Language = "modern-welsh",
 	Type = "noun",
-	Meanings = {"Small Town", "Borough"},
-	DerivesFrom = {"gothic", "noun", "Baúrgs"}, -- the source gives it as being of Germanic origin (then going on to list a series of Germanic words including this Gothic one); presumably from the Gothic in Spanish since they were the Germanic people who settled in Spain
-	NumberCaseInflections = {
-		"plural", "nominative", "Burgos"
-	},
-	NameTypes = {
-		"plural", "settlement" -- the Spanish town of Burgos
-	}
-})
-
-DefineLanguageWord("Rico", {
-	Language = "spanish",
-	Type = "adjective",
-	Meanings = {"Rich"},
-	DerivesFrom = {"gothic", "adjective", "Reiks"} -- Source: http://www.cnrtl.fr/definition/riche
+	Meanings = {"Family"}, -- source gives the German "Familie" as the meaning
+	DerivesFrom = {"middle-welsh", "noun", "Teulu"}
 })

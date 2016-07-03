@@ -90,6 +90,12 @@ DefineLanguageWord("Erw", { -- this is the genitive; Source: Winfred P. Lehmann,
 	}
 })
 
+DefineLanguageWord("Gwas", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 120.
+	Language = "welsh",
+	Type = "noun",
+	Meanings = {"Servant"} -- source gives the German "Diener" as the meaning
+})
+
 DefineLanguageWord("Gwas Ystafell", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 120.
 	Language = "welsh",
 	Type = "noun",
@@ -122,6 +128,12 @@ DefineLanguageWord("Ieu", { -- this is the comparative; Source: Winfred P. Lehma
 	ComparisonDegreeCaseInflections = {
 		"comparative", "Ieu"
 	}
+})
+
+DefineLanguageWord("March", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 120.
+	Language = "welsh",
+	Type = "noun",
+	Meanings = {"Horse"} -- source gives the German "Pferd" as the meaning
 })
 
 DefineLanguageWord("Meddwl", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 117.

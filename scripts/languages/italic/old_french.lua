@@ -67,6 +67,12 @@ DefineLanguageWord("Hamie", { -- Source: http://www.cnrtl.fr/definition/Amad%E9
 	DerivesFrom = {"old-frankish", "noun", "Haimithi"} -- apparently
 })
 
+DefineLanguageWord("Paile", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 121.
+	Language = "old-french",
+	Type = "noun",
+	Meanings = {}
+})
+
 DefineLanguageWord("Vautre", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 118.
 	Language = "old-french",
 	Type = "noun",

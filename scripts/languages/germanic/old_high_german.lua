@@ -1679,13 +1679,6 @@ DefineLanguageWord("West", { -- source also gives the alternative form "Westar";
 	DerivesFrom = {"proto-germanic", "adverb", "Vesta"}
 })
 
-DefineLanguageWord("Wîn", { -- Source: D. H. Green, "From Germania to Europe: the Evidence of Language and History", 1997, p. xxxii.
-	Language = "old-high-german",
-	Type = "noun",
-	Meanings = {"Wine"}, -- apparently
-	DerivesFrom = {"latin", "noun", "Vinum"}
-})
-
 DefineLanguageWord("Wī̆r", { -- Source: Sean Crist, "An Analysis of *z loss in West Germanic", 2002, p. 1.
 	Language = "old-high-german",
 	Type = "pronoun",

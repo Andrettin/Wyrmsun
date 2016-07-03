@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2015 by Andrettin
+--      (c) Copyright 2015-2016 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -25,16 +25,18 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageWord("Alßinjō", { -- alternatively spelled "Alßnjō"; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 89.
-	Language = "west-germanic",
-	Type = "noun",
-	Meanings = {"Female Elf"},
-	Gender = "feminine"
+DefineLanguage("latvian", {
+	Name = "Latvian",
+	Family = "baltic"
 })
 
-DefineLanguageWord("Kirika", { -- Source: D. H. Green, "From Germania to Europe: the Evidence of Language and History", 1997, p. xxxvi.
-	Language = "west-germanic",
-	Type = "noun",
-	Meanings = {"Church"},
-	DerivesFrom = {"greek", "noun", "Kyriakón"}
+DefineLanguage("lithuanian", {
+	Name = "Lithuanian",
+	Family = "baltic"
 })
+
+DefineLanguage("old-prussian", {
+	Name = "Old Prussian",
+	Family = "baltic"
+})
+

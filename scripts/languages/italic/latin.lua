@@ -344,6 +344,12 @@ DefineLanguageWord("Molere", { -- Source: Winfred P. Lehmann, "A Grammar of Prot
 	-- also given as "Molō" (if it is indeed the same word); Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 2, Section 6.
 })
 
+DefineLanguageWord("Numerus", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 121.
+	Language = "latin",
+	Type = "noun",
+	Meanings = {}
+})
+
 DefineLanguageWord("Nux", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 58.
 	Language = "latin",
 	Type = "noun",
@@ -408,6 +414,12 @@ DefineLanguageWord("Rêx", { -- Source: August Fick and Alf Torp, "Wortschatz de
 	Type = "noun",
 	Meanings = {},
 	DerivesFrom = {"proto-indo-european", "noun", "Reĝ"}
+})
+
+DefineLanguageWord("Saeta", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 121.
+	Language = "latin",
+	Type = "noun",
+	Meanings = {}
 })
 
 DefineLanguageWord("Scrībere", { -- Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, Chapter 1, Section 2.

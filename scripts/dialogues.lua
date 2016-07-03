@@ -28,4 +28,5 @@
 player = 0
 
 Load("scripts/civilizations/dwarf/dialogues.lua")
+Load("scripts/civilizations/elf/dialogues.lua")
 Load("scripts/civilizations/gnome/dialogues.lua")
