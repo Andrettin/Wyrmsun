@@ -567,6 +567,29 @@ function GenerateProvince(arg)
 	end
 	
 	if not (arg.Water) then
+		local hill_seeds = {}
+		local mountain_seeds = {}
+		local forest_seeds = {}
+		
+		-- add the suitable border tiles from neighboring provinces to the appropriate terrain seed arrays (so that, i.e. hills can expand into the province from a neighboring one)
+		for i=1,table.getn(arg.Province.Tiles) do
+			local tile_x = arg.Province.Tiles[i][1]
+			local tile_y = arg.Province.Tiles[i][2]
+			for x_offset=-1,1 do
+				for y_offset=-1,1 do
+					if (math.abs(x_offset) ~= math.abs(y_offset) and (tile_x + x_offset) >= 0 and tile_x + x_offset < GetWorldMapWidth() and tile_y + y_offset >= 0 and tile_y + y_offset < GetWorldMapHeight() and GetWorldMapTileProvinceName(tile_x + x_offset, tile_y + y_offset) ~= "" and GetWorldMapTileProvinceName(tile_x + x_offset, tile_y + y_offset) ~= arg.Province.Name) then
+						if (GetWorldMapTileTerrain(tile_x + x_offset, tile_y + y_offset) == "Hills") then
+							table.insert(hill_seeds, {tile_x + x_offset, tile_y + y_offset})
+						elseif (GetWorldMapTileTerrain(tile_x + x_offset, tile_y + y_offset) == "Mountains") then
+							table.insert(mountain_seeds, {tile_x + x_offset, tile_y + y_offset})
+						elseif (GetWorldMapTileTerrain(tile_x + x_offset, tile_y + y_offset) == "Scrub Forest" or GetWorldMapTileTerrain(tile_x + x_offset, tile_y + y_offset) == "Conifer Forest") then
+							table.insert(forest_seeds, {tile_x + x_offset, tile_y + y_offset})
+						end
+					end
+				end
+			end
+		end
+	
 		-- set settlement location to one of the province's tiles randomly
 		local settlement_location_id = SyncRand(table.getn(arg.Province.Tiles)) + 1
 		SetProvinceSettlementLocation(arg.Province.Name, arg.Province.Tiles[settlement_location_id][1], arg.Province.Tiles[settlement_location_id][2])
@@ -576,7 +599,6 @@ function GenerateProvince(arg)
 
 		-- create some hill tiles in the province
 		-- first generate the hill seeds
-		local hill_seeds = {}
 		for i=1,table.getn(arg.Province.Tiles) do
 			local tile_x = arg.Province.Tiles[i][1]
 			local tile_y = arg.Province.Tiles[i][2]
@@ -618,7 +640,6 @@ function GenerateProvince(arg)
 
 		-- create some mountain tiles in the province
 		-- first generate the mountain seeds
-		local mountain_seeds = {}
 		for i=1,table.getn(arg.Province.Tiles) do
 			local tile_x = arg.Province.Tiles[i][1]
 			local tile_y = arg.Province.Tiles[i][2]
@@ -660,7 +681,6 @@ function GenerateProvince(arg)
 		
 		-- create some forest tiles in the province
 		-- first generate the forest seeds
-		local forest_seeds = {}
 		for i=1,table.getn(arg.Province.Tiles) do
 			local tile_x = arg.Province.Tiles[i][1]
 			local tile_y = arg.Province.Tiles[i][2]
