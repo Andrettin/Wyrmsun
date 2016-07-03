@@ -202,6 +202,12 @@ DefineLanguageWord("Wyneb", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch
 	Meanings = {"Honor"} -- source gives the German "Ehre" as the meaning
 })
 
+DefineLanguageWord("Ymddiddan", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 121.
+	Language = "welsh",
+	Type = "noun",
+	Meanings = {"Conversation"} -- source gives the German "Unterhaltung" as the meaning
+})
+
 DefineLanguageWord("Ystafell", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 120.
 	Language = "welsh",
 	Type = "noun",

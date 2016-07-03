@@ -32,7 +32,7 @@ DefineCharacter("Pwyll", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch de
 	Type = "unit-germanic-warrior",
 	Civilization = "celt",
 	Faction = "Dyfed",
-	ProvinceOfOrigin = "Dyfed", -- presumably
+	ProvinceOfOrigin = "Dyfed",
 	HistoricalTitles = {
 --		"head-of-state", 0, 0, "celt", "Dyfed" -- prince of Dyfed, lord of the seven Cantrefis of Dyfed
 	}
@@ -80,10 +80,18 @@ DefineCharacter("Teyrnon Twryf Liant", { -- Source: Bernhard Maier (trans.), "Da
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "celt",
---	ProvinceOfOrigin = ?
+	ProvinceOfOrigin = "Wales", -- Gwent Is Coed
 	HistoricalTitles = {
 		"head-of-state", 0, 0, "celt", "Gwent Is Coed" -- lord of Gwent Is Coed
 	}
+})
+
+DefineCharacter("Pendaran Dyfed", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 21.
+	Name = "Pendaran Dyfed",
+	Gender = "male",
+	Type = "unit-germanic-warrior",
+	Civilization = "celt",
+	ProvinceOfOrigin = "Dyfed"
 })
 
 DefineCharacter("Pryderi", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, pp. 31, 33-35.
@@ -92,7 +100,7 @@ DefineCharacter("Pryderi", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch 
 	Gender = "male",
 	Type = "unit-germanic-warrior",
 	Civilization = "celt",
---	ProvinceOfOrigin = ?
+	ProvinceOfOrigin = "Dyfed",
 	HairVariation = "blond-hair", -- had golden yellow hair
 	Father = "Pwyll",
 	Mother = "Rhiannon",

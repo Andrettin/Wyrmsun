@@ -28,6 +28,7 @@
 if (LoadedGame == false) then
 	SetPlayerData(0, "RaceName", "elf")
 	SetPlayerData(0, "Faction", "Annwn")
+	SetPlayerData(0, "Name", "Annwn (Arawn)")
 	SetPlayerData(1, "RaceName", "elf")
 	SetPlayerData(1, "Faction", "Annwn")
 	SetPlayerData(1, "Name", "Annwn (Hafgan)")
@@ -53,23 +54,26 @@ if (LoadedGame == false) then
 
 	unit = CreateUnit("unit-elven-swordsman", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
 	SetUnitVariable(unit, "Character", "Hafgan")
+	SetUnitVariable(unit, "Active", false)
+	
+	unit = CreateUnit("unit-elven-swordsman", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+	SetUnitVariable(unit, "Active", false)
+	unit = CreateUnit("unit-elven-swordsman", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+	SetUnitVariable(unit, "Active", false)
 end
 
-RemovePlayerObjective(GetFactionPlayer("Annwn"), "- Defeat your enemies")
+RemovePlayerObjective(GetFactionPlayer("Annwn (Arawn)"), "- Defeat your enemies")
 
 AddTrigger(
 	function()
-		if (GetNumRivals(GetThisPlayer()) == 0) then
+		if (FindHero("Hafgan", GetFactionPlayer("Annwn (Hafgan)")) == nil) then
 			player = GetThisPlayer()
 			return true
 		end
 		return false
 	end,
 	function()
-		ActionVictory()
-		if (player == GetThisPlayer() and GrandStrategy == false) then
-			SetQuestCompleted("the-two-kings-of-annwn", GameSettings.Difficulty)
-		end
+		CallDialogue("the-two-kings-of-annwn-hafgan-dies", player)
 		return false
 	end
 )

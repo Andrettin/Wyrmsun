@@ -28,7 +28,7 @@
 DefineQuest("the-two-kings-of-annwn", {
 	Name = "The Two Kings of Annwn",
 	Icon = "icon-elven-swordsman",
-	Description = "The realm of Annwn has fallen into civil war, as Hafgan claimed king Arawn's throne. Arawn has gathered his forces, and is marching to meet the troops of the usurper in battle...\n\nMap: Annwn",
+	Description = "The kingdom of Annwn has fallen into civil war. The scheming Hafgan has claimed king Arawn's throne, with many of the realm's nobles pledging allegiance to him, while others remained loyal to the king. Arawn now marches with his followers to combat Hafgan and his supporters...\n\nMap: Annwn",
 	World = "Alfheim",
 	Civilization = "elf",
 	TechnologyPoints = 3,
