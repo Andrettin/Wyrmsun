@@ -84,6 +84,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added Ingria and Viborg provinces (Earth).
 - Added Lake Ladoga water province (Earth).
 - Added Untersberg province (Nidavellir).
+- Years in Nidavellir are counted based on the foundation of Untersberg. Instead of "BC" and "AD", BU (Before Untersberg) and YU (Years Untersberg) are used when playing a Nidavellirian civilization.
 
 * Heroes
 - Derro Thugs can now be created as custom heroes for (usable for Nidavellir quests).

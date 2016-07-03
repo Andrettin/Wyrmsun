@@ -237,7 +237,7 @@ DefineCharacter("Dain", { -- dwarven mastersmith; Source: Kevin Crossley-Holland
 	Gender = "male",
 	Type = "unit-dwarven-steelclad", -- should be a runesmith
 	Civilization = "dwarf",
-	ProvinceOfOrigin = "Svarinshaug",
+--	ProvinceOfOrigin = "Svarinshaug",
 	DateReferenceCharacter = "Ottar" -- contemporary of Ottar
 })
 
@@ -247,6 +247,6 @@ DefineCharacter("Nabbi", { -- dwarven mastersmith; Source: Kevin Crossley-Hollan
 	Gender = "male",
 	Type = "unit-dwarven-steelclad", -- should be a runesmith
 	Civilization = "dwarf",
-	ProvinceOfOrigin = "Svarinshaug",
+--	ProvinceOfOrigin = "Svarinshaug",
 	DateReferenceCharacter = "Ottar" -- contemporary of Ottar
 })

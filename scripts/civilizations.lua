@@ -76,6 +76,8 @@ DefineCivilization("dwarf", {
 	Language = "dwarven",
 	Adjective = "Dwarven",
 	DefaultColor = "red",
+	NegativeYearLabel = "BU", -- Before Untersberg
+	YearLabel = "YU", -- Years Untersberg
 	ButtonIcons = {
 		"move", "icon-dwarven-boots",
 		"stop", "icon-dwarven-shield-1",
@@ -211,6 +213,8 @@ DefineCivilization("gnome", {
 	Adjective = "Gnomish",
 	Playable = false,
 	DefaultColor = "blue",
+	NegativeYearLabel = "BU", -- Before Untersberg
+	YearLabel = "YU", -- Years Untersberg
 	ButtonIcons = {
 		"move", "icon-gnomish-boots",
 		"attack", "icon-gnomish-thrusting-sword-1",
@@ -229,6 +233,8 @@ DefineCivilization("goblin", {
 	Adjective = "Goblin",
 	Playable = false,
 	DefaultColor = "teal",
+	NegativeYearLabel = "BU", -- Before Untersberg
+	YearLabel = "YU", -- Years Untersberg
 	ButtonIcons = {
 		"move", "icon-dwarven-boots",
 		"stop", "icon-dwarven-shield-1",
@@ -254,6 +260,8 @@ DefineCivilization("kobold", {
 	Adjective = "Kobold",
 	Playable = false,
 	DefaultColor = "violet",
+	NegativeYearLabel = "BU", -- Before Untersberg
+	YearLabel = "YU", -- Years Untersberg
 	ButtonIcons = {
 		"attack", "icon-gnomish-thrusting-sword-1",
 		"stand-ground", "icon-germanic-stand-ground"

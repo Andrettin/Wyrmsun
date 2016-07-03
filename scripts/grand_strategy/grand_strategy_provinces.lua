@@ -112,11 +112,6 @@ function LoadProvinces(world)
 				unit_dwarven_axefighter = 3
 			}
 		},
-		BrownHills = {
-			Name = "Brown Hills",
-			Owner = "Untersberg",
-			Civilization = "gnome"
-		},
 		CavernsofChaincolt = {
 			Name = "Caverns of Chaincolt",
 			Units = {
@@ -227,8 +222,6 @@ function LoadProvinces(world)
 		},
 		Untersberg = {
 			Name = "Untersberg",
-			Owner = "Untersberg",
-			Civilization = "gnome",
 			Units = {
 				unit_gnomish_duelist = 1 -- Pypo's envoy
 			}

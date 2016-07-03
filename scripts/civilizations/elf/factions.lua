@@ -28,7 +28,7 @@
 DefineFaction("Annwn", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, pp. 10, 119-120.
 	Civilization = "elf", -- Annwn was an otherworld in Welsh legends; here we make it an elven kingdom, as (Celtic) fairies are amalgamated into elves in Wyrmsun (which makes particular sense given that in English the two were amalgamated historically as well)
 	Type = "polity",
-	Colors = {"white"},
+	Colors = {"brown"},
 	DefaultTier = "kingdom", -- Arawn was king of Annwn
 	Description = "Annwn is an elven kingdom, famous for the civil war fought between Arawn and Hafgan for its throne."
 })

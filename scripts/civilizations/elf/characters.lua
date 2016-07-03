@@ -25,16 +25,18 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineCharacter("Arawn", { -- Arawn was king of the otherworld Annwn in Welsh legends; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, pp. 10, 119-120.
+DefineCharacter("Arawn", { -- Arawn was king of the otherworld Annwn in Welsh legends; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, pp. 10, 16, 119-120.
 	Name = "Arawn",
 	Gender = "male",
-	Type = "unit-elven-swordsman",
+	Type = "unit-elven-swordsman", -- should be a rider
 	Civilization = "elf",
 	Faction = "Annwn",
 --	ProvinceOfOrigin = "Annwn",
+	Trait = "upgrade-wise",
 	HistoricalTitles = {
 --		"head-of-state", 0, 0, "elf", "Annwn" -- king of Annwn
 	}
+	-- wore gray-brown clothing when hunting, along with a hunting horn hanging over his neck
 })
 
 DefineCharacter("Hafgan", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 11.

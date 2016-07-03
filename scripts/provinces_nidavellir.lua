@@ -35,11 +35,12 @@ DefineProvince("Acthna", {
 	SettlementTerrain = "Mountains",
 	Claims = {
 		"gnome", "Acthnic Tribe",
-		"gnome", "Acthna"
+		"gnome", "Acthna",
+		"gnome", "Untersberg"
 	},
 	HistoricalOwners = {
 		-3000, "gnome", "Acthnic Tribe", -- maybe should be later?
-		-1, "gnome", "Acthna" -- maybe should be at another date?
+		1, "gnome", "Acthna" -- maybe should be at another date?
 	},
 	HistoricalCultures = {
 		-3000, "gnome"
@@ -68,6 +69,12 @@ DefineProvince("Brown Hills", {
 	SettlementTerrain = "Hills", -- should be Dark Plains?
 	Claims = {
 		"gnome", "Untersberg"
+	},
+	HistoricalOwners = {
+		1, "gnome", "Untersberg"
+	},
+	HistoricalCultures = {
+		1, "gnome" -- maybe should be at another date
 	},
 	HistoricalSettlementBuildings = {
 		25, "unit-gnomish-barracks", true -- has capability to train soldiers
@@ -401,6 +408,10 @@ DefineProvince("Untersberg", {
 		"gnome", "Sagan Tribe",
 		"gnome", "Vulcan Tribe",
 		"gnome", "Untersberg"
+	},
+	HistoricalOwners = {
+		-3000, "gnome", "Sagan Tribe",
+		1, "gnome", "Untersberg"
 	},
 	HistoricalCultures = {
 		-3000, "gnome"

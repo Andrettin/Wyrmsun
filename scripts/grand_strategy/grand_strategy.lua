@@ -2022,9 +2022,9 @@ function DrawGrandStrategyInterface()
 
 	if (GrandStrategyFaction ~= nil) then
 		if (MonthsPerTurn == 12) then
-			AddGrandStrategyLabel(GrandStrategyFaction.Name .. ", " .. GetYearString(GrandStrategyYear), 81, Video.Height - 186 + 8, Fonts["game"], true, false)
+			AddGrandStrategyLabel(GrandStrategyFaction.Name .. ", " .. GetYearString(GrandStrategyYear, GrandStrategyFaction.Civilization), 81, Video.Height - 186 + 8, Fonts["game"], true, false)
 		else
-			AddGrandStrategyLabel(GrandStrategyFaction.Name .. ", " .. GetCivilizationData(GrandStrategyFaction.Civilization, "MonthName", GetMonthNameById(GrandStrategyMonth)) .. ", " .. GetYearString(GrandStrategyYear), 81, Video.Height - 186 + 8, Fonts["game"], true, false)
+			AddGrandStrategyLabel(GrandStrategyFaction.Name .. ", " .. GetCivilizationData(GrandStrategyFaction.Civilization, "MonthName", GetMonthNameById(GrandStrategyMonth)) .. ", " .. GetYearString(GrandStrategyYear, GrandStrategyFaction.Civilization), 81, Video.Height - 186 + 8, Fonts["game"], true, false)
 		end
 	end
 	
@@ -4334,11 +4334,25 @@ function ChangeProvinceOwner(province, faction) -- used to change the owner and 
 	end
 end
 
-function GetYearString(year)
+function GetYearString(year, civilization)
+	if (civilization ~= nil and GetCivilizationData(civilization, "CalendarStartingYear") ~= 0) then
+		year = year - 1 + GetCivilizationData(civilization, "CalendarStartingYear")
+	end
+
+	local year_label = "AD"
+	if (civilization ~= nil and GetCivilizationData(civilization, "YearLabel") ~= "") then
+		year_label = GetCivilizationData(civilization, "YearLabel")
+	end
+
+	local negative_year_label = "BC"
+	if (civilization ~= nil and GetCivilizationData(civilization, "NegativeYearLabel") ~= "") then
+		negative_year_label = GetCivilizationData(civilization, "NegativeYearLabel")
+	end
+
 	if (year >= 0) then
-		return year .. " AD"
+		return year .. " " .. year_label
 	else
-		return (year * -1) .. " BC"
+		return (year * -1) .. " " .. negative_year_label
 	end
 end
 

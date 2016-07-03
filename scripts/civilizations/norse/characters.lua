@@ -1641,8 +1641,9 @@ DefineCharacter("Alfgeir", { -- Source: Snorri Sturlson, "Heimskringla", 1844, v
 	ProvinceOfOrigin = "Ostfold" -- ruled over (at least) Vingulmark
 })
 
-DefineCharacter("Gandalf", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 260.
+DefineCharacter("Gandalf of Vingulmark", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 260.
 	Name = "Gandalf",
+	ExtraName = "of Vingulmark", -- to differentiate him
 	NameElements = {
 --		"compound", "prefix" -- ?
 		"compound", "suffix", "old-norse", "noun", "Alfr" -- presumably
