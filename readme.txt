@@ -86,6 +86,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added Untersberg province (Nidavellir).
 - Years in Nidavellir are counted based on the foundation of Untersberg. Instead of "BC" and "AD", BU (Before Untersberg) and YU (Years Untersberg) are used when playing a Nidavellirian civilization.
 - Added rivers to the grand strategy mode (graphics by Mrmo Tarius). Settlements placed on a river can fish for food.
+- Added the Achelos, Alpheus, Avon, Danube, Dee, Douro, Elbe, Eurotas, Garonne, Minho, Narova, Neva, Oder, Peneus, Rhine, Sado, Seine, Severn, Tagus and Thames rivers to the Earth world map.
 
 * Heroes
 - Derro Thugs can now be created as custom heroes for (usable for Nidavellir quests).
