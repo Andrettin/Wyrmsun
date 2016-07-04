@@ -121,7 +121,7 @@ GrandStrategyGameConcepts = {
 	--]]
 	Food = {
 		Name = _("~!Food"),
-		Description = _("In the Grand Strategy mode, food is produced by a province's workers employed in food-producing tiles, generating population growth and being consumed by the province's population.")
+		Description = _("In the Grand Strategy mode, food is produced by a province's workers employed in food-producing tiles, generating population growth and being consumed by the province's population. Settlements adjacent to coasts or placed on rivers can fish for food.")
 	},
 	Harvesting = {
 		Name = _("Har~!vesting"),

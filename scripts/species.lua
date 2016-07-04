@@ -25,6 +25,18 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineSpecies("adelobasileus", { -- Spencer G. Lucas and Zhexi Luo, "Adelobasileus from the Upper Triassic of West Texas: The Oldest Mammal", 1993, p. 309.
+	Name = "Adelobasileus",
+	Genus = "adelobasileus",
+	Species = "cromptoni",
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("ilingoceros", {
+	Name = "Ilingoceros",
+	ChildUpgrade = "upgrade-child"
+})
+
 DefineSpecies("goat", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180715
 	Name = "Goat",
 	Kingdom = "animalia",
@@ -42,7 +54,8 @@ DefineSpecies("goat", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleR
 	Subfamily = "caprinae",
 	Genus = "capra",
 	Species = "hircus",
-	ChildUpgrade = "upgrade-child"
+	ChildUpgrade = "upgrade-child",
+	EvolvesFrom = {"ilingoceros"}
 })
 
 DefineSpecies("yale", {
@@ -61,7 +74,8 @@ DefineSpecies("yale", {
 	Family = "bovidae",
 	Subfamily = "caprinae",
 	Genus = "eale",
-	ChildUpgrade = "upgrade-child"
+	ChildUpgrade = "upgrade-child",
+	EvolvesFrom = {"ilingoceros"}
 })
 
 DefineSpecies("horse", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180691
