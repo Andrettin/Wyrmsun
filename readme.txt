@@ -66,6 +66,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Units
 - Insects no longer show up in the minimap.
+- Added Adelobasileus (prehistoric mammal-like animal) (icon by Mrmo Tarius, modified from Jinn's rat icon).
 
 -----------------------------------------------------------------------
 - 2.3.0

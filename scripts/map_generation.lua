@@ -1370,28 +1370,16 @@ function GetRandomCritterUnitType()
 	local critter_unit_type
 	local RandomNumber = 0
 	if (wyrmsun.tileset == "conifer_forest_summer" or wyrmsun.tileset == "conifer_forest_autumn") then
-		RandomNumber = SyncRand(11)
+		RandomNumber = SyncRand(5)
 		if (RandomNumber == 0) then
 			critter_unit_type = "unit-rat"
 		elseif (RandomNumber == 1) then
 			critter_unit_type = "unit-bird"
 		elseif (RandomNumber == 2) then
-			critter_unit_type = "unit-bee"
-		elseif (RandomNumber == 3) then
-			critter_unit_type = "unit-fly"
-		elseif (RandomNumber == 4) then
-			critter_unit_type = "unit-bug"
-		elseif (RandomNumber == 5) then
-			critter_unit_type = "unit-snail"
-		elseif (RandomNumber == 6) then
-			critter_unit_type = "unit-slug"
-		elseif (RandomNumber == 7) then
-			critter_unit_type = "unit-worm"
-		elseif (RandomNumber == 8) then
 			critter_unit_type = "unit-crow"
-		elseif (RandomNumber == 9) then
+		elseif (RandomNumber == 3) then
 			critter_unit_type = "unit-frog"
-		elseif (RandomNumber == 10) then
+		elseif (RandomNumber == 4) then
 			critter_unit_type = "unit-horse"
 		end
 	elseif (wyrmsun.tileset == "dungeon") then
