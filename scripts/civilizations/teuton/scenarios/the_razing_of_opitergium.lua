@@ -103,7 +103,7 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if (GetFactionExists("Marcomanni Tribe") and PlayerHasObjective(GetFactionPlayer("Marcomanni Tribe"), "- Destroy Opitergium") and GetPlayerData(GetFactionPlayer("Rome"), "TotalNumUnits") == 0) then
+		if (GetFactionExists("Marcomanni Tribe") and PlayerHasObjective(GetFactionPlayer("Marcomanni Tribe"), "- Destroy Opitergium") and GetPlayerData(GetFactionPlayer("Rome"), "TotalNumUnitsConstructed") == 0) then
 			player = GetFactionPlayer("Marcomanni Tribe")
 			return true
 		end

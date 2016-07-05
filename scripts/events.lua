@@ -339,7 +339,7 @@ function EventTriggers()
 				return false
 			end
 			if (GetFactionExists("Varva")) then
-				if (GetPlayerData(GetFactionPlayer("Varva"), "TotalNumUnits") == 0) then
+				if (GetPlayerData(GetFactionPlayer("Varva"), "TotalNumUnitsConstructed") == 0) then
 					for i=0,14 do
 						if (GetPlayerData(i, "RaceName") == "norse" and GetPlayerData(i, "Name") == "Sweden") then
 							player = i

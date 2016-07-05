@@ -105,7 +105,7 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if (GetFactionExists("Suebi Tribe") and PlayerHasObjective(GetFactionPlayer("Suebi Tribe"), "- Take Bracara Augusta") and GetPlayerData(GetFactionPlayer("Rome"), "TotalNumUnits") == 0) then
+		if (GetFactionExists("Suebi Tribe") and PlayerHasObjective(GetFactionPlayer("Suebi Tribe"), "- Take Bracara Augusta") and GetPlayerData(GetFactionPlayer("Rome"), "TotalNumUnitsConstructed") == 0) then
 			player = GetFactionPlayer("Suebi Tribe")
 			return true
 		end

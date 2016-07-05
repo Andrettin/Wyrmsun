@@ -1139,7 +1139,7 @@ AddTrigger(
 			return false
 		end
 		if (GetFactionPlayer("Shinsplitter Clan") == GetThisPlayer() and PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have all heroes in the Shorbear caves while no enemies are in the caves")) then
-			if (GetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "TotalNumUnits") < 1) then
+			if (GetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "TotalNumUnitsConstructed") < 1) then
 				player = GetFactionPlayer("Shinsplitter Clan")
 				return true
 			end
@@ -1171,7 +1171,7 @@ AddTrigger(
 			return false
 		end
 		if (GetFactionPlayer("Shorbear Clan") == GetThisPlayer() and PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Have all heroes in the Shorbear caves while no enemies are in the caves")) then
-			if (GetPlayerData(GetFactionPlayer("Shorbear Clan"), "TotalNumUnits") < 1) then
+			if (GetPlayerData(GetFactionPlayer("Shorbear Clan"), "TotalNumUnitsConstructed") < 1) then
 				player = GetFactionPlayer("Shorbear Clan")
 				return true
 			end

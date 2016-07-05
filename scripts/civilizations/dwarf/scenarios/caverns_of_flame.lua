@@ -316,7 +316,7 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if (PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Explore as much of the cave as possible") and GetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "TotalNumUnits") < 1 and (GameCycle > 750 or (GetThisPlayer() == GetFactionPlayer("Shinsplitter Clan") and GameCycle > 350))) then
+		if (PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Explore as much of the cave as possible") and GetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "TotalNumUnitsConstructed") < 1 and (GameCycle > 750 or (GetThisPlayer() == GetFactionPlayer("Shinsplitter Clan") and GameCycle > 350))) then
 			player = GetFactionPlayer("Norlund Clan")
 			return true
 		end
@@ -777,7 +777,7 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if (GetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "TotalNumUnits") < 1 and PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Distract the Shinsplitters until the volcano erupts and kills them")) then
+		if (GetPlayerData(GetFactionPlayer("Shinsplitter Clan"), "TotalNumUnitsConstructed") < 1 and PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Distract the Shinsplitters until the volcano erupts and kills them")) then
 			player = GetFactionPlayer("Norlund Clan")
 			return true
 		end

@@ -252,7 +252,7 @@ AddTrigger(
 				end
 			end
 			
-			if (GetPlayerData(GetFactionPlayer("Svafnir"), "TotalNumUnits") > 1) then -- the wyrm and kobolds only attack after the kobolds have been generated, and they don't attack if the player is the Shinsplitter Clan
+			if (GetPlayerData(GetFactionPlayer("Svafnir"), "TotalNumUnitsConstructed") > 1) then -- the wyrm and kobolds only attack after the kobolds have been generated, and they don't attack if the player is the Shinsplitter Clan
 				uncount = 0
 				uncount = GetUnits(GetFactionPlayer("Svafnir"))
 				for unit1 = 1,table.getn(uncount) do 

@@ -283,7 +283,7 @@ DefineVariables(
 function SinglePlayerTriggers()
 	AddTrigger(
 		function()
-			local total_units = GetPlayerData(GetThisPlayer(), "TotalNumUnits") - GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-goblin-glider")
+			local total_units = GetPlayerData(GetThisPlayer(), "TotalNumUnitsConstructed") - GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-goblin-glider")
 			total_units = total_units - GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-gold-mine") - GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-silver-mine") - GetPlayerData(GetThisPlayer(), "UnitTypesCount", "unit-copper-mine")
 			if (GetCivilizationClassUnitType("farm", GetPlayerData(GetThisPlayer(), "RaceName")) ~= nil) then
 				total_units = total_units - GetPlayerData(GetThisPlayer(), "UnitTypesCount", GetCivilizationClassUnitType("farm", GetPlayerData(GetThisPlayer(), "RaceName")))
@@ -1407,7 +1407,7 @@ function GetNumRivals(player)
 	local rival_count = 0
 	for i=0,14 do
 		if (player ~= i and (Players[i].Type == PlayerPerson or Players[i].Type == PlayerComputer) and (Players[player]:IsAllied(Players[i]) == false or Players[i]:IsAllied(Players[player]) == false)) then
-			local total_units = GetPlayerData(i, "TotalNumUnits") - GetPlayerData(i, "UnitTypesCount", "unit-goblin-glider")
+			local total_units = GetPlayerData(i, "TotalNumUnitsConstructed") - GetPlayerData(i, "UnitTypesCount", "unit-goblin-glider")
 			total_units = total_units - GetPlayerData(i, "UnitTypesCount", "unit-gold-mine") - GetPlayerData(i, "UnitTypesCount", "unit-silver-mine") - GetPlayerData(i, "UnitTypesCount", "unit-copper-mine")
 			if (GetCivilizationClassUnitType("farm", GetPlayerData(i, "RaceName")) ~= nil) then
 				total_units = total_units - GetPlayerData(i, "UnitTypesCount", GetCivilizationClassUnitType("farm", GetPlayerData(i, "RaceName")))
@@ -1424,7 +1424,7 @@ function GetNumAllies(player)
 	local ally_count = 0
 	for i=0,14 do
 		if (player ~= i and (Players[i].Type == PlayerPerson or Players[i].Type == PlayerComputer) and Players[player]:IsAllied(Players[i]) and Players[i]:IsAllied(Players[player])) then
-			if (GetPlayerData(i, "TotalNumUnits") > 0) then
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0) then
 				ally_count = ally_count + 1
 			end
 		end
