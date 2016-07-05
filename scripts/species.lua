@@ -121,11 +121,12 @@ DefineSpeciesFamily("sciuridae", { -- Source: http://www.itis.gov/servlet/Single
 	Suborder = "sciuromorpha"
 })
 
-DefineSpecies("adelobasileus", { -- Source: Spencer G. Lucas and Zhexi Luo, "Adelobasileus from the Upper Triassic of West Texas: The Oldest Mammal", 1993, p. 309.
+DefineSpecies("adelobasileus", { -- Source: Spencer G. Lucas and Zhexi Luo, "Adelobasileus from the Upper Triassic of West Texas: The Oldest Mammal", 1993, p. 309; Source: http://fossilworks.org/bridge.pl?action=taxonInfo&taxon_no=86341
 	Name = "Adelobasileus",
 	Genus = "adelobasileus",
 	Species = "cromptoni",
 	ChildUpgrade = "upgrade-child"
+	-- scansorial insectivore
 })
 
 DefineSpecies("ilingoceros", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=42728
@@ -219,6 +220,7 @@ DefineSpecies("dwarf", {
 	Species = "sapiens",
 	EvolvesFrom = {"australopithecus"}, -- could descend from another closely-related species instead; dwarves and gnomes should have a common ancestor
 	Sapient = true
+	-- in prehistoric times, the ancestors of dwarves and gnomes were transported to Nidavellir by the magic of the Aesir
 })
 
 DefineSpecies("elf", {
