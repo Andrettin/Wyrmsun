@@ -90,7 +90,7 @@ DefineButton( { Pos = 3, Level = 1, Icon = "icon-teuton-barracks",
   
 DefineButton( { Pos = 4, Level = 1, Icon = "icon-germanic-carpenters-shop",
 	Action = "build", Value = "unit-teuton-lumber-mill",
-	Key = "p", Hint = _("Build Car~!penter's Shop"), Popup = "popup-building",
+	Key = "r", Hint = _("Build Ca~!rpenter's Shop"), Popup = "popup-building",
 	ForUnit = {"unit-teuton-worker"}
 } )
 
