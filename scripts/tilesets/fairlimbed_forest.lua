@@ -31,6 +31,7 @@
 --	(define-tileset ident class name image palette slots animations)
 --
 DefineTileset("name", "Fairlimbed Forest",
+	"ident", "fairlimbed-forest",
 	"image", "tilesets/forest/terrain/forest.png",
 	-- Slots descriptions
 	"slots", {
@@ -201,6 +202,5 @@ DefineTileset("name", "Fairlimbed Forest",
 
 BuildTilesetTables()
 
-wyrmsun.tileset = "fairlimbed_forest"
 Load("scripts/scripts.lua")
 

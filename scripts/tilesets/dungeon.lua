@@ -33,6 +33,7 @@
 --	(define-tileset ident class name image palette slots animations)
 --
 DefineTileset("name", "Dungeon",
+	"ident", "dungeon",
   "image", "tilesets/dungeon/terrain/dungeon.png",
   -- Slots descriptions
   "slots", { "special", {
@@ -213,6 +214,5 @@ DefineTileset("name", "Dungeon",
 
 BuildTilesetTables()
 
-wyrmsun.tileset = "dungeon"
 Load("scripts/scripts.lua")
 GameSettings.Inside = true

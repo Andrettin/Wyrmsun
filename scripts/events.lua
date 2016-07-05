@@ -31,7 +31,7 @@ function EventTriggers()
 	-- based on elements from the Descending into Darkness scenario of the Under the Burning Suns campaign from Battle for Wesnoth
 	-- only appears in terrains which exist in Nidavellir (substitute for checking if there is a goblin faction, as a goblin civilization hasn't yet been implemented)
 	-- Greebo inhabits a cave, so he can only appear in the map if there is a sufficient number of rocks in it
-	if ((wyrmsun.tileset == "swamp" or wyrmsun.tileset == "cave") and GetTileTerrainFlagCount("rock") >= 2048) then
+	if ((GetCurrentTileset() == "swamp" or GetCurrentTileset() == "cave") and GetTileTerrainFlagCount("rock") >= 2048) then
 		AddTrigger(
 			function()
 				if (GameCycle == 0) then
@@ -262,7 +262,7 @@ function EventTriggers()
 		)
 	end
 	
-	if (wyrmsun.tileset == "dungeon") then
+	if (GetCurrentTileset() == "dungeon") then
 		-- Soldier offers training
 		AddTrigger(
 			function()

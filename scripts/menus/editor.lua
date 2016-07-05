@@ -560,7 +560,7 @@ function RunEditorMapProperties()
 
 	menu:addLabel("Tileset: ", 45, 36 * 4, nil, false)
 
-	local list = { "Cave", "Conifer Forest (Summer)", "Conifer Forest (Autumn)", "Dungeon", "Fairlimbed Forest", "Swamp"}
+	local list = {}
 	for i=table.getn(list)+1, table.getn(editor_tilesets) do
 		table.insert(list, FullyCapitalizeString(string.gsub(editor_tilesets[i], "_", " ")))
 	end

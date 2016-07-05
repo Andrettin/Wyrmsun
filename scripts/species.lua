@@ -148,6 +148,7 @@ DefineSpecies("aragoral", { -- Source: http://fossilworks.org/bridge.pl?action=t
 	Genus = "aragoral",
 	Species = "mudejar", -- sole species of the Aragoral genus
 	Homeworld = "Earth",
+	EvolvesFrom = {"adelobasileus"}, -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
 	ChildUpgrade = "upgrade-child"
 	-- ground dwelling grazer-browser
 })
@@ -180,7 +181,8 @@ DefineSpecies("horse", { -- Source: http://www.itis.gov/servlet/SingleRpt/Single
 	Genus = "equus",
 	Species = "caballus",
 	Homeworld = "Earth",
-	Environments = {"conifer_forest_summer", "conifer_forest_autumn"}, -- correct?
+	Environments = {"conifer-forest-summer", "conifer-forest-autumn"}, -- correct?
+	EvolvesFrom = {"adelobasileus"}, -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
 	ChildUpgrade = "upgrade-child"
 })
 
@@ -191,7 +193,8 @@ DefineSpecies("rat", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRp
 	Genus = "rattus",
 	Species = "norvegicus",
 	Homeworld = "Earth",
-	Environments = {"conifer_forest_summer", "conifer_forest_autumn", "cave"}, -- correct?
+	Environments = {"conifer-forest-summer", "conifer-forest-autumn", "cave"}, -- correct?
+	EvolvesFrom = {"adelobasileus"}, -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
 	ChildUpgrade = "upgrade-child"
 })
 
@@ -203,6 +206,7 @@ DefineSpecies("squirrel", { -- Source: http://www.itis.gov/servlet/SingleRpt/Sin
 	Genus = "sciurus",
 	Species = "vulgaris",
 	Homeworld = "Earth",
+	EvolvesFrom = {"adelobasileus"}, -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
 	ChildUpgrade = "upgrade-child"
 })
 
@@ -223,6 +227,7 @@ DefineSpecies("australopithecus", {
 	Genus = "australopithecus",
 	Species = "afarensis",
 	Homeworld = "Earth",
+	EvolvesFrom = {"adelobasileus"}, -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
 	ChildUpgrade = "upgrade-child"
 })
 
@@ -320,20 +325,21 @@ DefineSpecies("bat", {
 	Name = "Bat",
 	Homeworld = "Earth",
 	Environments = {"cave"}, -- correct?
+	EvolvesFrom = {"adelobasileus"}, -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
 	ChildUpgrade = "upgrade-child"
 })
 
 DefineSpecies("bee", {
 	Name = "Bee",
 	Homeworld = "Earth",
-	Environments = {"conifer_forest_summer", "conifer_forest_autumn"}, -- correct?
+	Environments = {"conifer-forest-summer", "conifer-forest-autumn"}, -- correct?
 	ChildUpgrade = "upgrade-bee-child"
 })
 
 DefineSpecies("bird", {
 	Name = "Bird",
 	Homeworld = "Earth",
-	Environments = {"conifer_forest_summer", "conifer_forest_autumn"}, -- correct?
+	Environments = {"conifer-forest-summer", "conifer-forest-autumn"}, -- correct?
 	ChildUpgrade = "upgrade-child"
 })
 
@@ -341,20 +347,21 @@ DefineSpecies("blood-bat", {
 	Name = "Blood Bat",
 	Homeworld = "Nidavellir",
 	Environments = {"cave", "swamp"},
+	EvolvesFrom = {"adelobasileus"}, -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
 	ChildUpgrade = "upgrade-child"
 })
 
 DefineSpecies("bug", {
 	Name = "Bug",
 	Homeworld = "Earth",
-	Environments = {"conifer_forest_summer", "conifer_forest_autumn"}, -- correct?
+	Environments = {"conifer-forest-summer", "conifer-forest-autumn"}, -- correct?
 	ChildUpgrade = "upgrade-bee-child"
 })
 
 DefineSpecies("crow", {
 	Name = "Crow",
 	Homeworld = "Earth",
-	Environments = {"conifer_forest_summer", "conifer_forest_autumn"}, -- correct?
+	Environments = {"conifer-forest-summer", "conifer-forest-autumn"}, -- correct?
 	ChildUpgrade = "upgrade-child"
 })
 
@@ -362,20 +369,21 @@ DefineSpecies("dread-bat", {
 	Name = "Dread Bat",
 	Homeworld = "Nidavellir",
 	Environments = {"cave", "swamp"}, -- correct?
+	EvolvesFrom = {"adelobasileus"}, -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
 	ChildUpgrade = "upgrade-child"
 })
 
 DefineSpecies("fly", {
 	Name = "Fly",
 	Homeworld = "Earth",
-	Environments = {"conifer_forest_summer", "conifer_forest_autumn"}, -- correct?
+	Environments = {"conifer-forest-summer", "conifer-forest-autumn"}, -- correct?
 	ChildUpgrade = "upgrade-bee-child"
 })
 
 DefineSpecies("frog", {
 	Name = "Frog",
 	Homeworld = "Earth",
-	Environments = {"conifer_forest_summer", "conifer_forest_autumn"}, -- correct?
+	Environments = {"conifer-forest-summer", "conifer-forest-autumn"}, -- correct?
 	ChildUpgrade = "upgrade-child"
 })
 
@@ -396,14 +404,14 @@ DefineSpecies("slime", {
 DefineSpecies("slug", {
 	Name = "Slug",
 	Homeworld = "Earth",
-	Environments = {"conifer_forest_summer", "conifer_forest_autumn"}, -- correct?
+	Environments = {"conifer-forest-summer", "conifer-forest-autumn"}, -- correct?
 	ChildUpgrade = "upgrade-bee-child"
 })
 
 DefineSpecies("snail", {
 	Name = "Snail",
 	Homeworld = "Earth",
-	Environments = {"conifer_forest_summer", "conifer_forest_autumn"}, -- correct?
+	Environments = {"conifer-forest-summer", "conifer-forest-autumn"}, -- correct?
 	ChildUpgrade = "upgrade-bee-child"
 })
 
@@ -417,7 +425,7 @@ DefineSpecies("snigill", {
 DefineSpecies("worm", {
 	Name = "Worm",
 	Homeworld = "Earth",
-	Environments = {"conifer_forest_summer", "conifer_forest_autumn"}, -- correct?
+	Environments = {"conifer-forest-summer", "conifer-forest-autumn"}, -- correct?
 	ChildUpgrade = "upgrade-bee-child"
 })
 

@@ -31,6 +31,7 @@
 --	(define-tileset ident class name image palette slots animations)
 --
 DefineTileset("name", "Swamp",
+	"ident", "swamp",
   "image", "tilesets/swamp/terrain/swamp.png",
   -- Slots descriptions
   "slots", { "special", {
@@ -194,6 +195,5 @@ DefineTileset("name", "Swamp",
 
 BuildTilesetTables()
 
-wyrmsun.tileset = "swamp"
 Load("scripts/scripts.lua")
 

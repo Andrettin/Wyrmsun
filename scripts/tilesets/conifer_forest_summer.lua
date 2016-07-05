@@ -31,6 +31,7 @@
 --	(define-tileset ident class name image palette slots animations)
 --
 DefineTileset("name", "Conifer Forest (Summer)",
+	"ident", "conifer-forest-summer",
 	"image", "tilesets/forest/terrain/forest.png",
 	-- Slots descriptions
 	"slots", {
@@ -201,5 +202,4 @@ DefineTileset("name", "Conifer Forest (Summer)",
 
 BuildTilesetTables()
 
-wyrmsun.tileset = "conifer_forest_summer"
 Load("scripts/scripts.lua")

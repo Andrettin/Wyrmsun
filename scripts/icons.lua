@@ -741,7 +741,7 @@ DefineIcon({
 
 -- tileset-dependent icons
 
-if (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "dungeon") then
+if (GetCurrentTileset() == "swamp" or GetCurrentTileset() == "dungeon") then
 	DefineIcon({
 		Name = "icon-rat",
 		Size = {46, 38},
@@ -807,7 +807,7 @@ if (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "dungeon") then
 		Size = {46, 38},
 		File = "tilesets/swamp/neutral/icons/wyrm_skeleton.png"
 	})
-elseif (wyrmsun.tileset == "conifer_forest_summer" or wyrmsun.tileset == "conifer_forest_autumn" or wyrmsun.tileset == "fairlimbed_forest") then
+elseif (GetCurrentTileset() == "conifer-forest-summer" or GetCurrentTileset() == "conifer-forest-autumn" or GetCurrentTileset() == "fairlimbed-forest") then
 	DefineIcon({
 		Name = "icon-rat",
 		Size = {46, 38},

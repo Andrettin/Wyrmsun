@@ -34,7 +34,7 @@ Load("scripts/constructions.lua")
 
 --StopMusic()
 
-if (wyrmsun.tileset == "cave") then -- ugly way to make sure the cave water appears properly
+if (GetCurrentTileset() == "cave") then -- ugly way to make sure the cave water appears properly
 	ClearAllColorCyclingRange()
 	AddColorCyclingRange(38, 46) -- water
 else

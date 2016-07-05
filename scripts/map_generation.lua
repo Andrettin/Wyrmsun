@@ -1323,12 +1323,24 @@ function CreateCritters(arg)
 			if (
 				species ~= ""
 				and GetUnitTypeData(unit_type_list[i], "Fauna")
-				and GetArrayIncludes(GetSpeciesData(species, "Environments"), wyrmsun.tileset)
+				and GetArrayIncludes(GetSpeciesData(species, "Environments"), GetCurrentTileset())
 				and (MapWorld == "" or MapWorld == "Random" or MapWorld == GetSpeciesData(species, "Homeworld"))
 				and (GetUnitTypeData(unit_type_list[i], "Type") ~= "fly" or GetUnitTypeData(unit_type_list[i], "Predator") == false or not arg.NoFlyingCreeps)
 				and (GetUnitTypeData(unit_type_list[i], "Level") < 3 or GetUnitTypeData(unit_type_list[i], "Predator") == false or not arg.NoMightyCreeps)
 			) then
-				table.insert(critter_types, unit_type_list[i])
+				local critter_unit_type = unit_type_list[i]
+				-- if there is a species this one can evolve from, use it instead, but only if we aren't playing a quest or in the grand strategy mode; in custom maps species can evolve to descendants
+				if (GetCurrentQuest() == "" and GrandStrategy == false) then
+					local evolves_from_list = GetSpeciesData(species, "EvolvesFrom")
+					while (table.getn(evolves_from_list) > 0) do
+						species = evolves_from_list[SyncRand(table.getn(evolves_from_list)) + 1]
+						if (GetSpeciesData(species, "Type") ~= "") then
+							critter_unit_type = GetSpeciesData(species, "Type")
+						end
+						evolves_from_list = GetSpeciesData(species, "EvolvesFrom")
+					end
+				end
+				table.insert(critter_types, critter_unit_type)
 			end
 		end
 
@@ -1369,7 +1381,7 @@ end
 function GetRandomCritterUnitType()
 	local critter_unit_type
 	local RandomNumber = 0
-	if (wyrmsun.tileset == "conifer_forest_summer" or wyrmsun.tileset == "conifer_forest_autumn") then
+	if (GetCurrentTileset() == "conifer-forest-summer" or GetCurrentTileset() == "conifer-forest-autumn") then
 		RandomNumber = SyncRand(5)
 		if (RandomNumber == 0) then
 			critter_unit_type = "unit-rat"
@@ -1382,7 +1394,7 @@ function GetRandomCritterUnitType()
 		elseif (RandomNumber == 4) then
 			critter_unit_type = "unit-horse"
 		end
-	elseif (wyrmsun.tileset == "dungeon") then
+	elseif (GetCurrentTileset() == "dungeon") then
 		RandomNumber = SyncRand(3)
 		if (RandomNumber == 0) then
 			critter_unit_type = "unit-slime"
@@ -1391,7 +1403,7 @@ function GetRandomCritterUnitType()
 		elseif (RandomNumber == 2) then
 			critter_unit_type = "unit-rat"
 		end
-	elseif (wyrmsun.tileset == "swamp") then
+	elseif (GetCurrentTileset() == "swamp") then
 		RandomNumber = SyncRand(3)
 		if (RandomNumber == 0) then
 			critter_unit_type = "unit-slime"
@@ -1400,7 +1412,7 @@ function GetRandomCritterUnitType()
 		elseif (RandomNumber == 2) then
 			critter_unit_type = "unit-snigill"
 		end
-	elseif (wyrmsun.tileset == "cave") then
+	elseif (GetCurrentTileset() == "cave") then
 		RandomNumber = SyncRand(4)
 		if (RandomNumber == 0) then
 			critter_unit_type = "unit-slime"
@@ -1515,17 +1527,17 @@ function CreateDecorations()
 					unit = CreateUnit("unit-mushroom-patch", 15, {RandomX, RandomY})
 					Count = Count - 1
 				elseif (RandomNumber >= 200 and RandomNumber < 300) then
-					if (wyrmsun.tileset ~= "dungeon" and wyrmsun.tileset ~= "cave") then
+					if (GetCurrentTileset() ~= "dungeon" and GetCurrentTileset() ~= "cave") then
 						unit = CreateUnit("unit-flowers", 15, {RandomX, RandomY})
 						Count = Count - 1
 					end
 				elseif (RandomNumber >= 300 and RandomNumber < 400) then
-					if (wyrmsun.tileset ~= "dungeon" and wyrmsun.tileset ~= "cave") then
+					if (GetCurrentTileset() ~= "dungeon" and GetCurrentTileset() ~= "cave") then
 						unit = CreateUnit("unit-large-flower", 15, {RandomX, RandomY})
 						Count = Count - 1
 					end
 				elseif (RandomNumber >= 400 and RandomNumber < 600) then
-					if (wyrmsun.tileset == "cave" and SyncRand(2) == 0) then
+					if (GetCurrentTileset() == "cave" and SyncRand(2) == 0) then
 						unit = CreateUnit("unit-stalagmites", 15, {RandomX, RandomY})
 						Count = Count - 1
 					else
@@ -1533,20 +1545,20 @@ function CreateDecorations()
 						Count = Count - 1
 					end
 				elseif (RandomNumber >= 600 and RandomNumber < 800) then
-					if (wyrmsun.tileset ~= "dungeon" and wyrmsun.tileset ~= "cave") then
+					if (GetCurrentTileset() ~= "dungeon" and GetCurrentTileset() ~= "cave") then
 						unit = CreateUnit("unit-twigs", 15, {RandomX, RandomY})
 						Count = Count - 1
-					elseif (wyrmsun.tileset == "dungeon" and GetTileTerrainName(RandomX, RandomY) == "floor") then
+					elseif (GetCurrentTileset() == "dungeon" and GetTileTerrainName(RandomX, RandomY) == "floor") then
 						unit = CreateUnit("unit-floor-decoration", 15, {RandomX, RandomY})
 						Count = Count - 1
 					end
 				elseif (RandomNumber >= 800 and RandomNumber < 875) then
-					if (wyrmsun.tileset ~= "dungeon" and wyrmsun.tileset ~= "cave") then
+					if (GetCurrentTileset() ~= "dungeon" and GetCurrentTileset() ~= "cave") then
 						unit = CreateUnit("unit-fern", 15, {RandomX, RandomY})
 						Count = Count - 1
 					end
 				elseif (RandomNumber >= 875 and RandomNumber < 900) then
-					if (wyrmsun.tileset ~= "dungeon" and wyrmsun.tileset ~= "cave") then
+					if (GetCurrentTileset() ~= "dungeon" and GetCurrentTileset() ~= "cave") then
 						unit = CreateUnit("unit-log", 15, {RandomX, RandomY})
 						Count = Count - 1
 					end
@@ -1554,7 +1566,7 @@ function CreateDecorations()
 					unit = CreateUnit("unit-bones", 15, {RandomX, RandomY})
 					Count = Count - 1
 				elseif (RandomNumber >= 999) then
-					if (wyrmsun.tileset == "swamp") then
+					if (GetCurrentTileset() == "swamp") then
 						unit = CreateUnit("unit-wyrm-skeleton", 15, {RandomX, RandomY})
 						Count = Count - 1
 					else
@@ -1584,19 +1596,19 @@ function CreatePlayers(min_x, max_x, min_y, max_y, mixed_civilizations, town_hal
 	for i=0,14 do
 		if (Map.Info.PlayerType[i] == PlayerPerson or Map.Info.PlayerType[i] == PlayerComputer) then
 			local possible_civilizations = {}
-			if ((wyrmsun.tileset == "cave" or wyrmsun.tileset == "swamp" or mixed_civilizations) and table.getn(GetCivilizationAvailableFactions("dwarf")) > 0) then
+			if ((GetCurrentTileset() == "cave" or GetCurrentTileset() == "swamp" or mixed_civilizations) and table.getn(GetCivilizationAvailableFactions("dwarf")) > 0) then
 				table.insert(possible_civilizations, "dwarf")
 			end
-			if ((wyrmsun.tileset == "conifer_forest_summer" or wyrmsun.tileset == "conifer_forest_autumn" or wyrmsun.tileset == "fairlimbed_forest" or mixed_civilizations) and table.getn(GetCivilizationAvailableFactions("germanic")) > 0 and (TechLevel[i + 1] == "" or TechLevel[i + 1] == "Agrarian (Bronze)" or TechLevel[i + 1] == "Civilized (Bronze)")) then -- allow germanic humans in elven forests since there is no elven civilization yet
+			if ((GetCurrentTileset() == "conifer-forest-summer" or GetCurrentTileset() == "conifer-forest-autumn" or GetCurrentTileset() == "fairlimbed-forest" or mixed_civilizations) and table.getn(GetCivilizationAvailableFactions("germanic")) > 0 and (TechLevel[i + 1] == "" or TechLevel[i + 1] == "Agrarian (Bronze)" or TechLevel[i + 1] == "Civilized (Bronze)")) then -- allow germanic humans in elven forests since there is no elven civilization yet
 				table.insert(possible_civilizations, "germanic")
 			end
-			if ((wyrmsun.tileset == "conifer_forest_summer" or wyrmsun.tileset == "conifer_forest_autumn" or wyrmsun.tileset == "fairlimbed_forest" or mixed_civilizations) and table.getn(GetCivilizationAvailableFactions("teuton")) > 0 and (TechLevel[i + 1] == "Agrarian (Iron)" or TechLevel[i + 1] == "Civilized (Iron)")) then -- allow germanic humans in elven forests since there is no elven civilization yet
+			if ((GetCurrentTileset() == "conifer-forest-summer" or GetCurrentTileset() == "conifer-forest-autumn" or GetCurrentTileset() == "fairlimbed-forest" or mixed_civilizations) and table.getn(GetCivilizationAvailableFactions("teuton")) > 0 and (TechLevel[i + 1] == "Agrarian (Iron)" or TechLevel[i + 1] == "Civilized (Iron)")) then -- allow germanic humans in elven forests since there is no elven civilization yet
 				table.insert(possible_civilizations, "teuton")
 			end
-			if (GetPlayerData(i, "AiEnabled") and (wyrmsun.tileset == "cave" or wyrmsun.tileset == "swamp" or wyrmsun.tileset == "fairlimbed_forest" or mixed_civilizations) and table.getn(GetCivilizationAvailableFactions("gnome")) > 0) then -- allow gnomes in elven forests since there is no elven civilization yet
+			if (GetPlayerData(i, "AiEnabled") and (GetCurrentTileset() == "cave" or GetCurrentTileset() == "swamp" or GetCurrentTileset() == "fairlimbed-forest" or mixed_civilizations) and table.getn(GetCivilizationAvailableFactions("gnome")) > 0) then -- allow gnomes in elven forests since there is no elven civilization yet
 				table.insert(possible_civilizations, "gnome")
 			end
-			if (GetPlayerData(i, "AiEnabled") and (wyrmsun.tileset == "cave" or wyrmsun.tileset == "swamp" or mixed_civilizations) and table.getn(GetCivilizationAvailableFactions("goblin")) > 0) then
+			if (GetPlayerData(i, "AiEnabled") and (GetCurrentTileset() == "cave" or GetCurrentTileset() == "swamp" or mixed_civilizations) and table.getn(GetCivilizationAvailableFactions("goblin")) > 0) then
 				table.insert(possible_civilizations, "goblin")
 			end
 			if (table.getn(possible_civilizations) < 1) then
@@ -2075,9 +2087,9 @@ function GenerateRandomMap(arg)
 
 		CreateCritters(arg)
 
-		if (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "conifer_forest_summer" or wyrmsun.tileset == "conifer_forest_autumn" or wyrmsun.tileset == "fairlimbed_forest") then
+		if (GetCurrentTileset() == "swamp" or GetCurrentTileset() == "conifer-forest-summer" or GetCurrentTileset() == "conifer-forest-autumn" or GetCurrentTileset() == "fairlimbed-forest") then
 			CreateNeutralBuildings("unit-tree-stump", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, symmetric)
-		elseif (wyrmsun.tileset == "cave") then
+		elseif (GetCurrentTileset() == "cave") then
 			CreateNeutralBuildings("unit-hole", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, symmetric)
 		end
 		
@@ -2144,7 +2156,7 @@ function ApplyRawTiles()
 				if (SyncRand(4) <= 2) then
 					unit = CreateUnit("unit-mushroom-patch", 15, {x, y})
 				end
-			elseif (RawTile(x, y) == "Tree" and (wyrmsun.tileset == "cave" or wyrmsun.tileset == "dungeon")) then -- if the cave or dungeon tileset is being used, then the trees are wood pile objects instead, and the tile is set to buildable land
+			elseif (RawTile(x, y) == "Tree" and (GetCurrentTileset() == "cave" or GetCurrentTileset() == "dungeon")) then -- if the cave or dungeon tileset is being used, then the trees are wood pile objects instead, and the tile is set to buildable land
 				SetRawTile(x, y, "Land")
 				unit = CreateUnit("unit-wood-pile", 15, {x, y})
 			elseif (RawTile(x, y) == "Door") then
@@ -2574,7 +2586,7 @@ function ApplyRawTiles()
 				end
 			elseif (RawTile(x, y) == "Wall") then
 				local wall_hp = 40
-				if (wyrmsun.tileset == "dungeon") then -- make walls practically indestructible in dungeons
+				if (GetCurrentTileset() == "dungeon") then -- make walls practically indestructible in dungeons
 					wall_hp = 255
 				end
 				if (RawTile(x, y + 1) ~= "Wall") then
@@ -2794,7 +2806,7 @@ function AdjustRawMapTileIrregularities(min_x, max_x, min_y, max_y, count, adjus
 				if (SyncRand(4) <= 2) then
 					unit = CreateUnit("unit-mushroom-patch", 15, {x, y})
 				end
-			elseif (RawTile(x, y) == "Tree" and wyrmsun.tileset == "cave" or wyrmsun.tileset == "dungeon") then -- if the cave or dungeon tileset is being used, then the trees are wood pile objects instead, and the tile is set to buildable land
+			elseif (RawTile(x, y) == "Tree" and GetCurrentTileset() == "cave" or GetCurrentTileset() == "dungeon") then -- if the cave or dungeon tileset is being used, then the trees are wood pile objects instead, and the tile is set to buildable land
 				SetRawTile(x, y, "Land")
 				unit = CreateUnit("unit-wood-pile", 15, {x, y})
 			end
@@ -3757,9 +3769,9 @@ function GenerateTown(layout, town_player, town_player_civilization, town_player
 
 	CreateCritters()
 
-	if (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "conifer_forest_summer" or wyrmsun.tileset == "conifer_forest_autumn" or wyrmsun.tileset == "fairlimbed_forest") then
+	if (GetCurrentTileset() == "swamp" or GetCurrentTileset() == "conifer-forest-summer" or GetCurrentTileset() == "conifer-forest-autumn" or GetCurrentTileset() == "fairlimbed-forest") then
 		CreateNeutralBuildings("unit-tree-stump", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, false)
-	elseif (wyrmsun.tileset == "cave") then
+	elseif (GetCurrentTileset() == "cave") then
 		CreateNeutralBuildings("unit-hole", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, false)
 	end
 
@@ -3914,13 +3926,13 @@ function GenerateValley(direction, lake_quantity, mixed_civilizations)
 	
 --	GenerateRoughLand((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 8)
 
-	if (wyrmsun.tileset == "conifer_forest_summer" or wyrmsun.tileset == "conifer_forest_autumn" or wyrmsun.tileset == "fairlimbed_forest") then
+	if (GetCurrentTileset() == "conifer-forest-summer" or GetCurrentTileset() == "conifer-forest-autumn" or GetCurrentTileset() == "fairlimbed-forest") then
 --		GenerateDarkRoughLand((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 128, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight, "Rough")
 	end
 
 	GenerateTrees((Map.Info.MapWidth * Map.Info.MapHeight) / 32, (Map.Info.MapWidth * Map.Info.MapHeight) / 16, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
 
-	if (wyrmsun.tileset == "conifer_forest_summer" or wyrmsun.tileset == "conifer_forest_autumn" or wyrmsun.tileset == "fairlimbed_forest") then
+	if (GetCurrentTileset() == "conifer-forest-summer" or GetCurrentTileset() == "conifer-forest-autumn" or GetCurrentTileset() == "fairlimbed-forest") then
 --		GenerateDarkLand((Map.Info.MapWidth * Map.Info.MapHeight) / 1024, (Map.Info.MapWidth * Map.Info.MapHeight) / 128, 0, Map.Info.MapWidth, 0, Map.Info.MapHeight)
 	end
 
@@ -3941,7 +3953,7 @@ function GenerateValley(direction, lake_quantity, mixed_civilizations)
 	if (GrandStrategy == false or GrandStrategyBattleBaseBuilding) then
 		CreateGoldSpots((Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight - 3, symmetric)
 
-		if (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "cave") then
+		if (GetCurrentTileset() == "swamp" or GetCurrentTileset() == "cave") then
 			CreateNeutralBuildings("unit-mercenary-camp", 1, 0, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight - 3, symmetric)
 		end
 	end
@@ -3950,9 +3962,9 @@ function GenerateValley(direction, lake_quantity, mixed_civilizations)
 	
 	CreateCritters()
 
-	if (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "conifer_forest_summer" or wyrmsun.tileset == "conifer_forest_autumn" or wyrmsun.tileset == "fairlimbed_forest") then
+	if (GetCurrentTileset() == "swamp" or GetCurrentTileset() == "conifer-forest-summer" or GetCurrentTileset() == "conifer-forest-autumn" or GetCurrentTileset() == "fairlimbed-forest") then
 		CreateNeutralBuildings("unit-tree-stump", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, false)
-	elseif (wyrmsun.tileset == "cave") then
+	elseif (GetCurrentTileset() == "cave") then
 		CreateNeutralBuildings("unit-hole", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, false)
 	end
 	
@@ -5864,7 +5876,7 @@ function GenerateCave(town_halls, symmetric)
 
 	CreateCritters()
 
-	if (wyrmsun.tileset == "cave") then
+	if (GetCurrentTileset() == "cave") then
 		CreateNeutralBuildings("unit-hole", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, symmetric)
 		local uncount = 0
 		uncount = GetUnits(15)
@@ -5953,7 +5965,7 @@ function FillStumps()
 			end
 		end
 	end
-	if (wyrmsun.tileset == "conifest_forest_summer" or wyrmsun.tileset == "conifer_forest_autumn") then
+	if (GetCurrentTileset() == "conifest-forest-summer" or GetCurrentTileset() == "conifer-forest-autumn") then
 		for i = 1,table.getn(stumps) do 
 			if (stumps[i]) then
 				if (SyncRand(2) == 0) then
@@ -5961,7 +5973,7 @@ function FillStumps()
 				end
 			end
 		end
-	elseif (wyrmsun.tileset == "swamp") then
+	elseif (GetCurrentTileset() == "swamp") then
 		for i = 1,table.getn(stumps) do 
 			if (stumps[i]) then
 				if (SyncRand(2) == 0) then
@@ -5974,7 +5986,7 @@ function FillStumps()
 				end
 			end
 		end
-	elseif (wyrmsun.tileset == "cave") then
+	elseif (GetCurrentTileset() == "cave") then
 		for i = 1,table.getn(uncount) do 
 			if (stumps[i]) then
 				if (SyncRand(2) == 0) then
