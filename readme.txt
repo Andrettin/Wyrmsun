@@ -70,6 +70,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added Latin Barracks (graphics by Wildfire Games and Jinn).
 - Added Latin Smithy (graphics by Wildfire Games and Jinn).
 - Changed the Germanic Carpenter's Shop hotkey to R.
+- Fixed issue which caused buildings abandoned by workers to very slowly self-construct.
 
 * Editor
 - Fixed an issue which made certain unit layers not appear properly during unit placement.
