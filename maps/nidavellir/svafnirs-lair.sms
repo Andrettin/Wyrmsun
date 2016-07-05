@@ -419,4 +419,4 @@ if (LoadedGame == false) then
 	end
 end
 
-CreateCritters((Map.Info.MapWidth * Map.Info.MapHeight) / 512)
+CreateCritters()

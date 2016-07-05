@@ -8,8 +8,6 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      map_generation.lua - Defines the map generation scripts.
---
 --      (c) Copyright 2013-2016 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
@@ -1309,31 +1307,58 @@ function CreateNeutralBuildings(building_type, building_number, min_x, max_x, mi
 	end
 end
 
-function CreateCritters(critter_number)
+function CreateCritters(arg)
 	if (LoadedGame == false) then
+		local critter_number = (Map.Info.MapWidth * Map.Info.MapHeight) / 512
 		local RandomNumber = 0
 		local RandomX = 0
 		local RandomY = 0
 		local Count = critter_number
 		local WhileCount = 0
+		
+		local unit_type_list = GetUnitTypes()
+		local critter_types = {}
+		for i=1,table.getn(unit_type_list) do
+			local species = GetUnitTypeData(unit_type_list[i], "Species")
+			if (
+				species ~= ""
+				and GetUnitTypeData(unit_type_list[i], "Fauna")
+				and GetArrayIncludes(GetSpeciesData(species, "Environments"), wyrmsun.tileset)
+				and (MapWorld == "" or MapWorld == "Random" or MapWorld == GetSpeciesData(species, "Homeworld"))
+				and (GetUnitTypeData(unit_type_list[i], "Type") ~= "fly" or GetUnitTypeData(unit_type_list[i], "Predator") == false or not arg.NoFlyingCreeps)
+				and (GetUnitTypeData(unit_type_list[i], "Level") < 3 or GetUnitTypeData(unit_type_list[i], "Predator") == false or not arg.NoMightyCreeps)
+			) then
+				table.insert(critter_types, unit_type_list[i])
+			end
+		end
+
+		if (table.getn(critter_types) == 0) then
+			return;
+		end
+		
 		-- create critters
 		while (Count > 0 and WhileCount < critter_number * 100) do
-			local critter_unit_type = GetRandomCritterUnitType()
+			local critter_unit_type = critter_types[SyncRand(table.getn(critter_types)) + 1]
 			if (critter_unit_type == "") then
 				Count = 0
 				break
 			end
 			RandomX = SyncRand(Map.Info.MapWidth)
 			RandomY = SyncRand(Map.Info.MapHeight)
-			if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false) then
+			if (
+				(GetUnitTypeData(critter_unit_type, "Type") == "land" and GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false)
+				or (GetUnitTypeData(critter_unit_type, "Type") == "naval" and GetTileTerrainHasFlag(RandomX, RandomY, "water") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false)
+				or (GetUnitTypeData(critter_unit_type, "Type") == "fly-low" and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false)
+				or (GetUnitTypeData(critter_unit_type, "Type") == "fly" and GetTileTerrainHasFlag(RandomX, RandomY, "air-unpassable") == false)
+			) then
 				local unit_quantity = 0
 				for i=0,14 do
-					unit_quantity = unit_quantity + GetNumUnitsAt(i, "any", {RandomX - 12, RandomY - 12}, {RandomX + 12, RandomY + 12})
+					unit_quantity = unit_quantity + GetNumUnitsAt(i, "any", {RandomX - 16, RandomY - 16}, {RandomX + 16, RandomY + 16})
 				end
 
 				if (unit_quantity < 1) then
 					unit = CreateUnit(critter_unit_type, 15, {RandomX, RandomY})
-					Count = Count - 1
+					Count = Count - GetUnitTypeData(critter_unit_type, "Demand")
 				end
 			end
 			WhileCount = WhileCount + 1
@@ -1452,58 +1477,6 @@ function CreateDecorationObjects(unit_type, unit_number, base_tile, mixed_tile, 
 			end
 			WhileCount = WhileCount + 1
 		end
-	end
-end
-
-function CreateGryphons(gryphon_number)
-	if (LoadedGame == false) then
-		local RandomX = 0
-		local RandomY = 0
-		local Count = 0
-		local WhileCount = 0
-
-		Count = gryphon_number
-		while (Count > 0 and WhileCount < gryphon_number * 100) do
-			RandomX = SyncRand(Map.Info.MapWidth)
-			RandomY = SyncRand(Map.Info.MapHeight)
-			if (GetTileTerrainHasFlag(RandomX, RandomY, "rock")) then -- gryphons appear preferentially on mountainous parts
-				local unit_quantity = 0
-				for i=0,14 do
-					unit_quantity = unit_quantity + GetNumUnitsAt(i, "any", {RandomX - 12, RandomY - 12}, {RandomX + 12, RandomY + 12})
-				end
-
-				if (unit_quantity < 1) then -- gryphons don't like much being near inhabited areas
-					unit = CreateUnit("unit-gryphon", 15, {RandomX, RandomY})
-					Count = Count - 1
-				end
-			end
-			WhileCount = WhileCount + 1
-		end
-	end
-end
-
-function CreateWyrms(wyrm_number)
-	local RandomX = 0
-	local RandomY = 0
-	local Count = 0
-	local WhileCount = 0
-
-	Count = wyrm_number
-	while (Count > 0 and WhileCount < wyrm_number * 100) do
-		RandomX = SyncRand(Map.Info.MapWidth)
-		RandomY = SyncRand(Map.Info.MapHeight)
-		if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false) then
-			local unit_quantity = 0
-			for i=0,14 do
-				unit_quantity = unit_quantity + GetNumUnitsAt(i, "any", {RandomX - 16, RandomY - 16}, {RandomX + 16, RandomY + 16})
-			end
-
-			if (unit_quantity < 1) then -- wyrms shouldn't start near a settlement, or the player will be destroyed
-				unit = CreateUnit("unit-wyrm", 15, {RandomX, RandomY})
-				Count = Count - 1
-			end
-		end
-		WhileCount = WhileCount + 1
 	end
 end
 
@@ -2112,15 +2085,7 @@ function GenerateRandomMap(arg)
 	--		end
 	--	end
 
-		CreateCritters((Map.Info.MapWidth * Map.Info.MapHeight) / 512)
-
-		if (wyrmsun.tileset == "swamp" and not arg.NoFlyingCreeps) then
-			CreateGryphons((Map.Info.MapWidth * Map.Info.MapHeight) / 8192)
-		end
-
-		if ((wyrmsun.tileset == "swamp" or wyrmsun.tileset == "cave") and not arg.NoMightyCreeps and SyncRand(100) < 20) then -- 20% chance that the map will contain a wyrm
-			CreateCreeps(15, "unit-wyrm", 1, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2)
-		end
+		CreateCritters(arg)
 
 		if (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "conifer_forest_summer" or wyrmsun.tileset == "conifer_forest_autumn" or wyrmsun.tileset == "fairlimbed_forest") then
 			CreateNeutralBuildings("unit-tree-stump", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, symmetric)
@@ -3802,7 +3767,7 @@ function GenerateTown(layout, town_player, town_player_civilization, town_player
 		end
 	end
 
-	CreateCritters((Map.Info.MapWidth * Map.Info.MapHeight) / 512)
+	CreateCritters()
 
 	if (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "conifer_forest_summer" or wyrmsun.tileset == "conifer_forest_autumn" or wyrmsun.tileset == "fairlimbed_forest") then
 		CreateNeutralBuildings("unit-tree-stump", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, false)
@@ -3995,15 +3960,7 @@ function GenerateValley(direction, lake_quantity, mixed_civilizations)
 
 	CreateRoamingFog((Map.Info.MapWidth * Map.Info.MapHeight) / 4096)
 	
-	CreateCritters((Map.Info.MapWidth * Map.Info.MapHeight) / 512)
-
-	if (wyrmsun.tileset == "swamp") then
-		CreateGryphons((Map.Info.MapWidth * Map.Info.MapHeight) / 8192)
-	end
-
---	if ((wyrmsun.tileset == "swamp" or wyrmsun.tileset == "cave") and SyncRand(100) < 20) then -- 20% chance that the map will contain a wyrm
---		CreateWyrms(1) -- deactivated for now because it is not yet possible to have hostile neutral creatures
---	end
+	CreateCritters()
 
 	if (wyrmsun.tileset == "swamp" or wyrmsun.tileset == "conifer_forest_summer" or wyrmsun.tileset == "conifer_forest_autumn" or wyrmsun.tileset == "fairlimbed_forest") then
 		CreateNeutralBuildings("unit-tree-stump", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, false)
@@ -5917,13 +5874,7 @@ function GenerateCave(town_halls, symmetric)
 
 	CreateGoldSpots((Map.Info.MapWidth * Map.Info.MapHeight) / 2048, 0, Map.Info.MapWidth - 3, 0, Map.Info.MapHeight - 3, symmetric)
 
-	CreateCritters((Map.Info.MapWidth * Map.Info.MapHeight) / 512)
-	CreateCreeps(15, "unit-bat", (Map.Info.MapWidth * Map.Info.MapHeight) / 1024, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2)
-	CreateCreeps(15, "unit-rat", (Map.Info.MapWidth * Map.Info.MapHeight) / 1024, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2)
-
-	--if (SyncRand(100) < 20) then -- 20% chance that the map will contain a wyrm
-	--	CreateWyrms(1) -- deactivated for now because it is not yet possible to have hostile neutral creatures
-	--end
+	CreateCritters()
 
 	if (wyrmsun.tileset == "cave") then
 		CreateNeutralBuildings("unit-hole", (Map.Info.MapWidth * Map.Info.MapHeight) / 4096, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2, symmetric)

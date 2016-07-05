@@ -315,9 +315,9 @@ end
 
 if (LoadedGame == false) then
 	-- create some gryphons
-	CreateGryphons(3)
+	CreateCreeps("unit-gryphon", 3, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2)
 
-	CreateCritters((Map.Info.MapWidth * Map.Info.MapHeight) / 512)
+	CreateCritters()
 
 	CreateRoamingFog((Map.Info.MapWidth * Map.Info.MapHeight) / 1024) -- should be particularly foggy
 

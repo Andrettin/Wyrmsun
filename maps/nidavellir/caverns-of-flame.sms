@@ -560,7 +560,7 @@ for unit1 = 1,table.getn(uncount) do
 end
 
 
-CreateCritters((Map.Info.MapWidth * Map.Info.MapHeight) / 512)
+CreateCritters()
 
 -- in grand strategy mode, give the defender two guard towers if a stronghold is built
 if (GrandStrategy and GrandStrategyEventMap == false and ProvinceHasBuildingClass(AttackedProvince.Name, "stronghold")) then

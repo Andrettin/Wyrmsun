@@ -528,7 +528,7 @@ unit = CreateUnit("unit-gold-rock", 15, {42, 1})
 
 unit = CreateUnit("unit-glyph", 15, {69, 14}) -- cave entrance marker
 
-CreateCritters((Map.Info.MapWidth * Map.Info.MapHeight) / 512)
+CreateCritters()
 
 CreateRoamingFog((Map.Info.MapWidth * Map.Info.MapHeight) / 4096)
 

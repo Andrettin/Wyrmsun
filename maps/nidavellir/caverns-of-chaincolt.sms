@@ -310,7 +310,7 @@ if (GrandStrategy and GrandStrategyEventMap) then
 	end
 end
 
-CreateCritters((Map.Info.MapWidth * Map.Info.MapHeight) / 512)
+CreateCritters()
 
 -- in a grand strategy battle, give the defender two guard towers if a stronghold is built
 if (GrandStrategy and GrandStrategyEventMap == false and ProvinceHasBuildingClass(AttackedProvince.Name, "stronghold")) then

@@ -64,6 +64,9 @@ https://github.com/Andrettin/Wyrmsun
 * Buildings
 - Fixed issue which caused buying potions from temples to be queued while a priest was being trained, instead of happening immediately.
 
+* Units
+- Insects no longer show up in the minimap.
+
 -----------------------------------------------------------------------
 - 2.3.0
 -----------------------------------------------------------------------

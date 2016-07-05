@@ -125,6 +125,7 @@ DefineSpecies("adelobasileus", { -- Source: Spencer G. Lucas and Zhexi Luo, "Ade
 	Name = "Adelobasileus",
 	Genus = "adelobasileus",
 	Species = "cromptoni",
+	Homeworld = "Earth",
 	ChildUpgrade = "upgrade-child"
 	-- scansorial insectivore
 })
@@ -134,8 +135,9 @@ DefineSpecies("ilingoceros", { -- Source: http://fossilworks.org/bridge.pl?a=tax
 	Family = "antilocapridae",
 	Genus = "ilingoceros",
 	Species = "alexandrae", -- type species of the Ilingoceros genus
-	ChildUpgrade = "upgrade-child",
-	EvolvesFrom = {"adelobasileus"} -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
+	Homeworld = "Earth",
+	EvolvesFrom = {"adelobasileus"}, -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
+	ChildUpgrade = "upgrade-child"
 	-- ground dwelling browser-grazer
 })
 
@@ -145,6 +147,7 @@ DefineSpecies("aragoral", { -- Source: http://fossilworks.org/bridge.pl?action=t
 	Subfamily = "caprinae",
 	Genus = "aragoral",
 	Species = "mudejar", -- sole species of the Aragoral genus
+	Homeworld = "Earth",
 	ChildUpgrade = "upgrade-child"
 	-- ground dwelling grazer-browser
 })
@@ -155,8 +158,9 @@ DefineSpecies("goat", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleR
 	Subfamily = "caprinae",
 	Genus = "capra",
 	Species = "hircus",
-	ChildUpgrade = "upgrade-child",
-	EvolvesFrom = {"aragoral"} -- oldest member of the Caprinae subfamily
+	Homeworld = "Earth",
+	EvolvesFrom = {"aragoral"}, -- oldest member of the Caprinae subfamily
+	ChildUpgrade = "upgrade-child"
 })
 
 DefineSpecies("yale", {
@@ -164,8 +168,10 @@ DefineSpecies("yale", {
 	Family = "bovidae",
 	Subfamily = "caprinae",
 	Genus = "eale",
-	ChildUpgrade = "upgrade-child",
-	EvolvesFrom = {"aragoral"} -- oldest member of the Caprinae subfamily
+	Homeworld = "Nidavellir",
+	Environments = {"swamp"}, -- should be dark plains
+	EvolvesFrom = {"aragoral"}, -- oldest member of the Caprinae subfamily
+	ChildUpgrade = "upgrade-child"
 })
 
 DefineSpecies("horse", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180691
@@ -173,6 +179,8 @@ DefineSpecies("horse", { -- Source: http://www.itis.gov/servlet/SingleRpt/Single
 	Family = "equidae",
 	Genus = "equus",
 	Species = "caballus",
+	Homeworld = "Earth",
+	Environments = {"conifer_forest_summer", "conifer_forest_autumn"}, -- correct?
 	ChildUpgrade = "upgrade-child"
 })
 
@@ -182,6 +190,8 @@ DefineSpecies("rat", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRp
 	Subfamily = "murinae",
 	Genus = "rattus",
 	Species = "norvegicus",
+	Homeworld = "Earth",
+	Environments = {"conifer_forest_summer", "conifer_forest_autumn", "cave"}, -- correct?
 	ChildUpgrade = "upgrade-child"
 })
 
@@ -192,6 +202,7 @@ DefineSpecies("squirrel", { -- Source: http://www.itis.gov/servlet/SingleRpt/Sin
 	Tribe = "sciurini",
 	Genus = "sciurus",
 	Species = "vulgaris",
+	Homeworld = "Earth",
 	ChildUpgrade = "upgrade-child"
 })
 
@@ -200,6 +211,7 @@ DefineSpecies("proailurus", { -- Source: http://fossilworks.org/bridge.pl?action
 	Genus = "proailurus",
 	Species = "lemanensis", -- sole species of the Proailurus genus
 	ChildUpgrade = "upgrade-child",
+	Homeworld = "Earth",
 	EvolvesFrom = {"adelobasileus"} -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
 	-- ground dwelling carnivore-omnivore
 	-- likely ancestor of sabertooths and modern cats; Source: http://www.wildworldvisuals.com/product/proailurus/
@@ -210,6 +222,7 @@ DefineSpecies("australopithecus", {
 	Family = "hominidae", -- Source: http://fossilworks.org/bridge.pl?action=taxonInfo&taxon_no=40900 ; Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=83061
 	Genus = "australopithecus",
 	Species = "afarensis",
+	Homeworld = "Earth",
 	ChildUpgrade = "upgrade-child"
 })
 
@@ -218,6 +231,7 @@ DefineSpecies("dwarf", {
 	Family = "hominidae",
 	Genus = "nanus", -- "dwarf" in Latin
 	Species = "sapiens",
+	Homeworld = "Nidavellir",
 	EvolvesFrom = {"australopithecus"}, -- could descend from another closely-related species instead; dwarves and gnomes should have a common ancestor
 	Sapient = true
 	-- in prehistoric times, the ancestors of dwarves and gnomes were transported to Nidavellir by the magic of the Aesir
@@ -228,6 +242,7 @@ DefineSpecies("elf", {
 	Family = "hominidae",
 	Genus = "alfus", -- "elf" in Latin
 	Species = "sapiens",
+	Homeworld = "Alfheim",
 	EvolvesFrom = {"australopithecus"}, -- could descend from another closely-related species instead
 	Sapient = true
 })
@@ -237,6 +252,7 @@ DefineSpecies("gnome", {
 	Family = "hominidae",
 	Genus = "gnomus", -- "gnome" in Latin
 	Species = "sapiens",
+	Homeworld = "Nidavellir",
 	EvolvesFrom = {"australopithecus"}, -- could descend from another closely-related species instead; dwarves and gnomes should have a common ancestor
 	Sapient = true
 	-- in prehistoric times, the ancestors of dwarves and gnomes were transported to Nidavellir by the magic of the Aesir
@@ -247,6 +263,7 @@ DefineSpecies("derro", {
 	Family = "hominidae",
 	Genus = "gnomus", -- "gnome" in Latin
 	Species = "detrimenti", -- "detrimental" in Latin
+	Homeworld = "Nidavellir",
 	EvolvesFrom = {"australopithecus"}, -- could descend from another closely-related species instead; dwarves and gnomes should have a common ancestor
 	Sapient = true
 	-- in prehistoric times, the ancestors of dwarves and gnomes were transported to Nidavellir by the magic of the Aesir
@@ -258,6 +275,7 @@ DefineSpecies("human", { -- Source: http://www.itis.gov/servlet/SingleRpt/Single
 	Subfamily = "homininae",
 	Genus = "homo",
 	Species = "sapiens",
+	Homeworld = "Earth",
 	EvolvesFrom = {"australopithecus"}, -- possibly
 	Sapient = true
 })
@@ -266,6 +284,7 @@ DefineSpecies("ettin", {
 	Name = "Ettin",
 	Genus = "gigans", -- "giant" in Latin
 	Species = "sapiens",
+	Homeworld = "Jotunheim",
 	Sapient = true
 })
 
@@ -273,11 +292,13 @@ DefineSpecies("goblin", {
 	Name = "Goblin",
 	Genus = "gobelinus", -- "goblin" in Latin
 	Species = "sapiens",
+	Homeworld = "Nidavellir",
 	Sapient = true
 })
 
 DefineSpecies("kobold", { -- reptilian
 	Name = "Kobold",
+	Homeworld = "Nidavellir",
 	Sapient = true
 })
 
@@ -285,90 +306,124 @@ DefineSpecies("orc", {
 	Name = "Orc",
 	Genus = "orcus", -- "orc" in Latin
 	Species = "sapiens",
+	Homeworld = "Jotunheim",
 	Sapient = true
 })
 
 DefineSpecies("troll", {
 	Name = "Troll",
+	Homeworld = "Alfheim",
 	Sapient = true
 })
 
 DefineSpecies("bat", {
 	Name = "Bat",
+	Homeworld = "Earth",
+	Environments = {"cave"}, -- correct?
 	ChildUpgrade = "upgrade-child"
 })
 
 DefineSpecies("bee", {
 	Name = "Bee",
+	Homeworld = "Earth",
+	Environments = {"conifer_forest_summer", "conifer_forest_autumn"}, -- correct?
 	ChildUpgrade = "upgrade-bee-child"
 })
 
 DefineSpecies("bird", {
 	Name = "Bird",
+	Homeworld = "Earth",
+	Environments = {"conifer_forest_summer", "conifer_forest_autumn"}, -- correct?
 	ChildUpgrade = "upgrade-child"
 })
 
 DefineSpecies("blood-bat", {
 	Name = "Blood Bat",
+	Homeworld = "Nidavellir",
+	Environments = {"cave", "swamp"},
 	ChildUpgrade = "upgrade-child"
 })
 
 DefineSpecies("bug", {
 	Name = "Bug",
+	Homeworld = "Earth",
+	Environments = {"conifer_forest_summer", "conifer_forest_autumn"}, -- correct?
 	ChildUpgrade = "upgrade-bee-child"
 })
 
 DefineSpecies("crow", {
 	Name = "Crow",
+	Homeworld = "Earth",
+	Environments = {"conifer_forest_summer", "conifer_forest_autumn"}, -- correct?
 	ChildUpgrade = "upgrade-child"
 })
 
 DefineSpecies("dread-bat", {
 	Name = "Dread Bat",
+	Homeworld = "Nidavellir",
+	Environments = {"cave", "swamp"}, -- correct?
 	ChildUpgrade = "upgrade-child"
 })
 
 DefineSpecies("fly", {
 	Name = "Fly",
+	Homeworld = "Earth",
+	Environments = {"conifer_forest_summer", "conifer_forest_autumn"}, -- correct?
 	ChildUpgrade = "upgrade-bee-child"
 })
 
 DefineSpecies("frog", {
 	Name = "Frog",
+	Homeworld = "Earth",
+	Environments = {"conifer_forest_summer", "conifer_forest_autumn"}, -- correct?
 	ChildUpgrade = "upgrade-child"
 })
 
 DefineSpecies("gryphon", {
 	Name = "Gryphon",
+	Homeworld = "Nidavellir",
+	Environments = {"swamp"}, -- should be dark plains
 	ChildUpgrade = "upgrade-gryphon-child"
 })
 
 DefineSpecies("slime", {
 	Name = "Slime",
+	Homeworld = "Nidavellir",
+	Environments = {"cave", "swamp"},
 	ChildUpgrade = "upgrade-child"
 })
 
 DefineSpecies("slug", {
 	Name = "Slug",
+	Homeworld = "Earth",
+	Environments = {"conifer_forest_summer", "conifer_forest_autumn"}, -- correct?
 	ChildUpgrade = "upgrade-bee-child"
 })
 
 DefineSpecies("snail", {
 	Name = "Snail",
+	Homeworld = "Earth",
+	Environments = {"conifer_forest_summer", "conifer_forest_autumn"}, -- correct?
 	ChildUpgrade = "upgrade-bee-child"
 })
 
 DefineSpecies("snigill", {
 	Name = "Snigill",
+	Homeworld = "Nidavellir",
+	Environments = {"swamp", "cave"},
 	ChildUpgrade = "upgrade-bee-child"
 })
 
 DefineSpecies("worm", {
 	Name = "Worm",
+	Homeworld = "Earth",
+	Environments = {"conifer_forest_summer", "conifer_forest_autumn"}, -- correct?
 	ChildUpgrade = "upgrade-bee-child"
 })
 
 DefineSpecies("wyrm", {
 	Name = "Wyrm",
+	Homeworld = "Nidavellir",
+	Environments = {"swamp", "cave"},
 	ChildUpgrade = "upgrade-wyrm-child"
 })

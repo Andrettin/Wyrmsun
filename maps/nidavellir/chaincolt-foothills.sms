@@ -265,7 +265,7 @@ elseif (GrandStrategyEventMap) then
 	unit = CreateUnit("unit-tree-stump", 15, {33, 56})
 end
 
-CreateCritters((Map.Info.MapWidth * Map.Info.MapHeight) / 512)
+CreateCritters()
 
 CreateRoamingFog((Map.Info.MapWidth * Map.Info.MapHeight) / 4096)
 
