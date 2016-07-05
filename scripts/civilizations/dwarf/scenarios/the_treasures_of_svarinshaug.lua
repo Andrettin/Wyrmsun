@@ -33,11 +33,11 @@ if (LoadedGame == false) then
 	
 	if not (GrandStrategy) then
 		unit = CreateUnit("unit-dwarven-steelclad", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		SetUnitVariable(unit, "Name", "Brokk")
 		AcquireTrait(unit, "upgrade-keen")
+		SetUnitVariable(unit, "Name", "Brokk")
 		unit = CreateUnit("unit-dwarven-steelclad", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
-		SetUnitVariable(unit, "Name", "Eitri")
 		AcquireTrait(unit, "upgrade-dextrous")
+		SetUnitVariable(unit, "Name", "Eitri")
 		unit = CreateUnit("unit-dwarven-scout", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 	elseif (GrandStrategyEventMap) then
 		unit = CreateUnit("unit-dwarven-steelclad", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
