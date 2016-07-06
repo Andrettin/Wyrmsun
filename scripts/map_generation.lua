@@ -1327,6 +1327,7 @@ function CreateCritters(arg)
 				and (MapWorld == "" or MapWorld == "Random" or MapWorld == GetSpeciesData(species, "Homeworld"))
 				and (GetUnitTypeData(unit_type_list[i], "Type") ~= "fly" or GetUnitTypeData(unit_type_list[i], "Predator") == false or not arg.NoFlyingCreeps)
 				and (GetUnitTypeData(unit_type_list[i], "Level") < 3 or GetUnitTypeData(unit_type_list[i], "Predator") == false or not arg.NoMightyCreeps)
+				and (table.getn(GetSpeciesData(species, "EvolvesTo")) == 0 or (GetCurrentQuest() == "" and GrandStrategy == false)) -- don't generate prehistoric fauna if playing a quest or the grand strategy mode
 			) then
 				local critter_unit_type = unit_type_list[i]
 				-- if there is a species this one can evolve from, use it instead, but only if we aren't playing a quest or in the grand strategy mode; in custom maps species can evolve to descendants
