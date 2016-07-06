@@ -1377,7 +1377,7 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {Speed = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Speed: "), Variable = "Speed", Font = wyr.preferences.PopupDescriptionFont}}
 				},
-				{ 	Condition = {Demand = "only"}, HighlightColor = "yellow",
+				{ 	Condition = {Demand = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Food Cost: "), Variable = "Demand", Font = wyr.preferences.PopupDescriptionFont}}
 				},
 				{ 	Condition = {KnowledgeMagic = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",

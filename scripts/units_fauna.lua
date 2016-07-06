@@ -66,6 +66,7 @@ DefineUnitType("unit-adelobasileus", {
 	Flesh = true,
 	Insectivore = true,
 	PierceDamage = true,
+	Coward = true,
 	Sounds = {
 		"selected", "click",
 --		"acknowledge", "critter-acknowledge",
