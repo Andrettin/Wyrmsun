@@ -150,7 +150,7 @@ DefineUpgrade("upgrade-slow", {
 DefineUpgrade("upgrade-strong", {
 	Parent = "upgrade-trait",
 	Name = _("Strong"),
-	Epithets = {"the Strong", "the Iron Hand"}
+	Epithets = {"the Strong"}
 })
 
 DefineUpgrade("upgrade-vicious", {

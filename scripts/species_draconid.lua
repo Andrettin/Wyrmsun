@@ -33,6 +33,7 @@ DefineSpeciesFamily("draconidae", {
 DefineSpecies("kobold", {
 	Name = "Kobold",
 	Family = "draconidae",
+	Species = "sapiens",
 	Homeworld = "Nidavellir",
 	EvolvesFrom = {"tyrannosaurus-rex"}, -- seems sensible, given how the Tyrannosaurus rex has dragon-like features, so it could be an ancestors to mythical dragons
 	Sapient = true

@@ -25,44 +25,17 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSpeciesClass("aves", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=174371
-	Name = "Aves",
-	Phylum = "chordata",
-	Subphylum = "vertebrata",
-	Infraphylum = "gnathostomata",
-	Superclass = "tetrapoda"
-})
-
-DefineSpeciesOrder("accipitriformes", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=823961
-	Name = "Accipitriformes",
-	Class = "aves"
-})
-
-DefineSpeciesFamily("accipitridae", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=175280
-	Name = "Accipitridae",
+DefineSpeciesFamily("gryphidae", {
+	Name = "Gryphidae",
 	Order = "accipitriformes"
 })
 
-DefineSpecies("bald-eagle", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=175420
-	Name = "Bald Eagle",
-	Family = "accipitridae",
-	Genus = "haliaeetus",
-	Species = "leucocephalus",
-	Homeworld = "Earth",
-	Environments = {"conifer-forest-summer", "conifer-forest-autumn"}, -- correct?
-	ChildUpgrade = "upgrade-child"
-})
-
-DefineSpecies("bird", {
-	Name = "Bird",
-	Homeworld = "Earth",
-	Environments = {"conifer-forest-summer", "conifer-forest-autumn"}, -- correct?
-	ChildUpgrade = "upgrade-child"
-})
-
-DefineSpecies("crow", {
-	Name = "Crow",
-	Homeworld = "Earth",
-	Environments = {"conifer-forest-summer", "conifer-forest-autumn"}, -- correct?
-	ChildUpgrade = "upgrade-child"
+DefineSpecies("gryphon", {
+	Name = "Gryphon",
+	Family = "gryphidae",
+	Genus = "gryphus", -- "gryphon" in Latin
+	Species = "aquila", -- "eagle" in Latin
+	Homeworld = "Nidavellir",
+	Environments = {"swamp"}, -- should be dark plains
+	ChildUpgrade = "upgrade-gryphon-child"
 })

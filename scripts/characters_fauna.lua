@@ -397,3 +397,54 @@ DefineCharacter("Svafnir", { -- Wyrm/dragon in Norse mythology
 	NameElements = {"word", "old-icelandic", "noun", "Svafnir"},
 	Type = "unit-wyrm"
 })
+
+-- Gryphons
+
+DefineCharacter("Graak", { -- gryphon in Battle for Wesnoth: Heir to the Throne
+	Name = "Graak",
+	NameElements = {"word", "gryphon", "noun", "Graak"},
+	Type = "unit-gryphon",
+	ProvinceOfOrigin = "Gryphon Mountain"
+})
+
+DefineCharacter("Graik", { -- gryphon in Battle for Wesnoth: Heir to the Throne
+	Name = "Graik",
+	NameElements = {"word", "gryphon", "noun", "Graik"},
+	Type = "unit-gryphon",
+	ProvinceOfOrigin = "Gryphon Mountain"
+})
+
+DefineCharacter("Griak", { -- gryphon in Battle for Wesnoth: Heir to the Throne
+	Name = "Griak",
+	NameElements = {"word", "gryphon", "noun", "Griak"},
+	Type = "unit-gryphon",
+	ProvinceOfOrigin = "Gryphon Mountain"
+})
+
+DefineCharacter("Grook", { -- gryphon in Battle for Wesnoth: Heir to the Throne
+	Name = "Grook",
+	NameElements = {"word", "gryphon", "noun", "Grook"},
+	Type = "unit-gryphon",
+	ProvinceOfOrigin = "Gryphon Mountain"
+})
+
+DefineCharacter("Gruak", { -- gryphon in Battle for Wesnoth: Heir to the Throne
+	Name = "Gruak",
+	NameElements = {"word", "gryphon", "noun", "Gruak"},
+	Type = "unit-gryphon",
+	ProvinceOfOrigin = "Gryphon Mountain"
+})
+
+DefineCharacter("Kawn", { -- gryphon in Battle for Wesnoth: The Sceptre of Fire
+	Name = "Kawn",
+	NameElements = {"word", "gryphon", "noun", "Kawn"},
+	Type = "unit-gryphon",
+	ProvinceOfOrigin = "Northern Wastelands"
+})
+
+DefineCharacter("Krawg", { -- gryphon in Battle for Wesnoth: The Sceptre of Fire
+	Name = "Krawg",
+	NameElements = {"word", "gryphon", "noun", "Krawg"},
+	Type = "unit-gryphon",
+	ProvinceOfOrigin = "Northern Wastelands"
+})

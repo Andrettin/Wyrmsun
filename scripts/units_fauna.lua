@@ -89,7 +89,7 @@ DefineUnitType("unit-rat", {
 	Parent = "unit-template-fauna-unit",
 	Species = "rat",
 	Class = "vermin",
-	Description = _("Rats are rodents of medium size and long tails. They usually live in forests or within human dwellings. They are often reviled for their carrying of diseases."),
+	Description = _("Rats are rodents of medium size and long tails. They usually live in forests or within human dwellings. They are often reviled due to carrying diseases."),
 	Image = {"file", "neutral/units/rat.png", "size", {72, 72}},
 	Animations = "animations-rat", Icon = "icon-rat",
 	NeutralMinimapColor = {192, 192, 192},
@@ -346,11 +346,6 @@ DefineUnitType("unit-gryphon", {
 	Carnivore = true,
 	BoardSize = 100, -- to prevent this unit from being loaded into transporters
 	PierceDamage = true,
-	PersonalNames = {
-		"Graa", "Greaa", "Gree", "Kaaa", "Kaasa", "Kassshh", "Kayya", "Kessshh", "Keyya", "Kiira", "Korra", "Korro", "Kraa", "Kuu", "Kzaaa", "Kzuuu",
-		"Kawn", "Krawg", -- names from the "Sceptre of Fire" Wesnoth campaign
-		"Graak", "Graik", "Griak", "Grook", "Gruak" -- names from the "Gryphon Mountain" scenario of the "Heir to the Throne" Wesnoth campaign
-	},
 	Variations = {
 		--[[
 		{
