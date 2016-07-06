@@ -25,71 +25,51 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSpeciesPhylum("chordata", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=158852
-	Name = "Chordata",
-	Kingdom = "animalia",
-	Subkingdom = "bilateria",
-	Infrakingdom = "deuterostomia"
+DefineSpeciesClass("aves", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=174371
+	Name = "Aves",
+	Phylum = "chordata",
+	Subphylum = "vertebrata",
+	Infraphylum = "gnathostomata",
+	Superclass = "tetrapoda"
 })
 
-DefineSpecies("bee", {
-	Name = "Bee",
+DefineSpeciesOrder("accipitriformes", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=823961
+	Name = "Accipitriformes",
+	Class = "aves"
+})
+
+DefineSpeciesFamily("accipitridae", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=175280
+	Name = "Accipitridae",
+	Order = "accipitriformes"
+})
+
+DefineSpecies("bald-eagle", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=175420
+	Name = "Bald Eagle",
+	Family = "accipitridae",
+	Genus = "haliaeetus",
+	Species = "leucocephalus",
 	Homeworld = "Earth",
 	Environments = {"conifer-forest-summer", "conifer-forest-autumn"}, -- correct?
-	ChildUpgrade = "upgrade-bee-child"
-})
-
-DefineSpecies("bug", {
-	Name = "Bug",
-	Homeworld = "Earth",
-	Environments = {"conifer-forest-summer", "conifer-forest-autumn"}, -- correct?
-	ChildUpgrade = "upgrade-bee-child"
-})
-
-DefineSpecies("fly", {
-	Name = "Fly",
-	Homeworld = "Earth",
-	Environments = {"conifer-forest-summer", "conifer-forest-autumn"}, -- correct?
-	ChildUpgrade = "upgrade-bee-child"
-})
-
-DefineSpecies("slime", {
-	Name = "Slime",
-	Homeworld = "Nidavellir",
-	Environments = {"cave", "swamp"},
 	ChildUpgrade = "upgrade-child"
 })
 
-DefineSpecies("slug", {
-	Name = "Slug",
+DefineSpecies("bird", {
+	Name = "Bird",
 	Homeworld = "Earth",
 	Environments = {"conifer-forest-summer", "conifer-forest-autumn"}, -- correct?
-	ChildUpgrade = "upgrade-bee-child"
+	ChildUpgrade = "upgrade-child"
 })
 
-DefineSpecies("snail", {
-	Name = "Snail",
+DefineSpecies("crow", {
+	Name = "Crow",
 	Homeworld = "Earth",
 	Environments = {"conifer-forest-summer", "conifer-forest-autumn"}, -- correct?
-	ChildUpgrade = "upgrade-bee-child"
+	ChildUpgrade = "upgrade-child"
 })
 
-DefineSpecies("snigill", {
-	Name = "Snigill",
+DefineSpecies("gryphon", {
+	Name = "Gryphon",
 	Homeworld = "Nidavellir",
-	Environments = {"swamp", "cave"},
-	ChildUpgrade = "upgrade-bee-child"
+	Environments = {"swamp"}, -- should be dark plains
+	ChildUpgrade = "upgrade-gryphon-child"
 })
-
-DefineSpecies("worm", {
-	Name = "Worm",
-	Homeworld = "Earth",
-	Environments = {"conifer-forest-summer", "conifer-forest-autumn"}, -- correct?
-	ChildUpgrade = "upgrade-bee-child"
-})
-
-Load("scripts/species_amphibian.lua")
-Load("scripts/species_reptilian.lua")
-Load("scripts/species_avian.lua")
-Load("scripts/species_mammalian.lua")
-Load("scripts/species_draconid.lua") -- mythical dragons and dragon-like creatures

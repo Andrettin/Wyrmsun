@@ -323,3 +323,77 @@ DefineCharacter("Ratatoskr", { -- Source: Richard Cleasby and Gudbrand Vigfusson
 	Type = "unit-squirrel",
 	Quote = "\"Ratatosk is the squirrel who there shall run\nOn the ash-tree Yggdrasil\"\n- Grimnismol"
 })
+
+-- Wyrms
+
+DefineCharacter("Goin", { -- Wyrm/dragon in Norse mythology
+	Name = "Goin",
+	NameElements = {"word", "old-icelandic", "noun", "Goin"},
+	Type = "unit-wyrm"
+})
+
+DefineCharacter("Grabak", { -- Wyrm/dragon in Norse mythology
+	Name = "Grabak",
+	NameElements = {
+		"compound", "prefix", "old-icelandic", "adjective", "Gra",
+		"compound", "suffix", "old-icelandic", "noun", "Bak"
+	},
+	Type = "unit-wyrm"
+})
+
+DefineCharacter("Grafvitnir", { -- Wyrm/dragon in Norse mythology
+	Name = "Grafvitnir",
+	NameElements = {
+		"compound", "prefix", "old-icelandic", "noun", "Graf",
+		"compound", "suffix", "old-icelandic", "noun", "Vitnir"
+	},
+	Type = "unit-wyrm"
+})
+
+DefineCharacter("Grafvolluth", { -- Wyrm/dragon in Norse mythology
+	Name = "Grafvolluth",
+	NameElements = {
+		"compound", "prefix", "old-icelandic", "noun", "Graf",
+		"compound", "suffix", "old-icelandic", "noun", "Volluth"
+	},
+	Type = "unit-wyrm"
+})
+
+DefineCharacter("Jormungand", { -- Wyrm/dragon in Norse mythology
+	Name = "Jormungand",
+	NameElements = {"word", "old-icelandic", "noun", "Jormungand"},
+	Type = "unit-wyrm"
+})
+
+DefineCharacter("Ladon", { -- Wyrm/dragon in Norse mythology
+	Name = "Ladon",
+	NameElements = {"word", "greek", "noun", "Ladon"},
+	Type = "unit-wyrm"
+})
+
+DefineCharacter("Moin", { -- Wyrm/dragon in Norse mythology
+	Name = "Moin",
+	NameElements = {"word", "old-icelandic", "noun", "Moin"},
+	Type = "unit-wyrm"
+})
+
+DefineCharacter("Nidhogg", { -- Wyrm/dragon in Norse mythology
+	Name = "Nidhogg",
+	NameElements = {
+		"compound", "prefix", "old-icelandic", "noun", "Nid",
+		"compound", "suffix", "old-icelandic", "noun", "Hogg"
+	},
+	Type = "unit-wyrm"
+})
+
+DefineCharacter("Ofnir", { -- Wyrm/dragon in Norse mythology
+	Name = "Ofnir",
+	NameElements = {"word", "old-icelandic", "noun", "Ofnir"},
+	Type = "unit-wyrm"
+})
+
+DefineCharacter("Svafnir", { -- Wyrm/dragon in Norse mythology
+	Name = "Svafnir",
+	NameElements = {"word", "old-icelandic", "noun", "Svafnir"},
+	Type = "unit-wyrm"
+})

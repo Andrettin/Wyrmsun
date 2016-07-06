@@ -41,7 +41,7 @@ DefineUnitType("unit-adelobasileus", {
 	Parent = "unit-template-fauna-unit",
 	Species = "adelobasileus",
 	Class = "arboreal-insectivore",
-	Description = _("The Adelobasileus was one of the earliest mammal or mammal-like animals to have lived. It lived in trees, and its diet consisted of insects."),
+	Description = _("The Adelobasileus was one of the earliest mammal-like animals to have lived, and is possibly a common ancestor of all mammals. It lived in trees, and its diet consisted of insects."),
 	Image = {"file", "neutral/units/rat_light_gray_fur.png", "size", {72, 72}},
 	Animations = "animations-rat", Icon = "icon-adelobasileus",
 	NeutralMinimapColor = {192, 192, 192},
@@ -422,9 +422,6 @@ DefineUnitType("unit-wyrm", { Name = _("Wyrm"),
 	Flesh = true,
 	Carnivore = true,
 	Dragon = true,
-	PersonalNames = {"Goin", "Jormungand", "Ladon", "Moin", "Ofnir", "Svafnir"}, -- Grabak = Gray-Back, Midgardsorm = Midgard Serpent, Nidhogg = Corpse Tearer / The Dread Biter, Ofnir = The Bewilderer, Svafnir = The Sleep-Bringer
-	PersonalNamePrefixes = {"Gra", "Graf", "Nid"}, -- Gra = Gray, Graf = Gnawer / Gnawing, Nid = Corpse / Dread
-	PersonalNameSuffixes = {"bak", "hogg", "orm", "vitnir", "volluth"}, -- Bak = Back, Hogg = Tearer / Biter, Orm = Serpent, Vitnir = Wolf, Volluth = Field
 	PierceDamage = true,
 	Variations = {
 		--[[

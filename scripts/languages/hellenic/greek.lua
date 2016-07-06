@@ -312,6 +312,12 @@ DefineLanguageWord("Λύχος", { -- Source: August Fick and Alf Torp, "Wortsch
 	DerivesFrom = {"proto-indo-european", "noun", "Vl̥qo"}
 })
 
+DefineLanguageWord("Ladon", { -- name of a wyrm/dragon in Greek mythology
+	Language = "greek",
+	Type = "noun",
+	Meanings = {}
+})
+
 DefineLanguageWord("Μάρη", { -- Source: August Fick and Alf Torp, "Wortschatz der Germanischen Spracheinheit", 2006, p. 167.
 	Language = "greek",
 	Type = "noun",
