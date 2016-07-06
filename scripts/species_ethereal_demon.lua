@@ -25,20 +25,65 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSpecies("einherjar", {
-	Name = "Einherjar",
-	HomePlane = "Asgard",
-	Sapient = true,
-	Description = "The Einherjar were originally souls of mortals who believed in the Aesir and ascended to Asgard. Being deemed worthy warriors, they were accepted into Valhalla and became mighty Einherjar."
+DefineSpeciesPhylum("demonia", {
+	Name = "Demonia",
+	Kingdom = "aetheria"
 })
 
-DefineSpecies("valkyrie", {
-	Name = "Valkyrie",
-	HomePlane = "Asgard",
-	Sapient = true,
-	Description = "The Valkyries are warrior maidens who dwell in Asgard, greeting the souls of powerful mortals into Valhalla."
+DefineSpeciesClass("acedia", {
+	Name = "Acedia", -- "sloth" in Latin
+	Phylum = "demonia"
 })
 
-Load("scripts/species_ethereal_angel.lua")
-Load("scripts/species_ethereal_demon.lua")
-Load("scripts/species_ethereal_elemental.lua")
+DefineSpeciesClass("avaritia", {
+	Name = "Avaritia", -- "greed" in Latin
+	Phylum = "demonia"
+})
+
+DefineSpeciesClass("gula", {
+	Name = "Gula", -- "gluttony" in Latin
+	Phylum = "demonia"
+})
+
+DefineSpeciesClass("invidia", {
+	Name = "Invidia", -- "envy" in Latin
+	Phylum = "demonia"
+})
+
+DefineSpeciesClass("ira", {
+	Name = "Ira", -- "wrath" in Latin
+	Phylum = "demonia"
+})
+
+DefineSpeciesClass("luxuria", {
+	Name = "Luxuria", -- "lust" in Latin
+	Phylum = "demonia"
+})
+
+DefineSpeciesClass("superbia", {
+	Name = "Superbia", -- "pride" in Latin
+	Phylum = "demonia"
+})
+
+DefineSpecies("imp", {
+	Name = "Imp",
+	-- Class: Invidia
+	HomePlane = "Hell",
+	Sapient = true
+})
+
+DefineSpecies("ixthala-demon", { -- from Wesnoth
+	Name = "Ixthala Demon",
+	-- Class: Ira
+	Genus = "ixthala",
+	Species = "ignis",
+	HomePlane = "Hell",
+	Sapient = true
+})
+
+DefineSpecies("succubus", {
+	Name = "Succubus",
+	-- Class: Luxuria
+	HomePlane = "Hell",
+	Sapient = true
+})

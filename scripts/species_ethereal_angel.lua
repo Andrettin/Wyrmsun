@@ -25,20 +25,20 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSpecies("einherjar", {
-	Name = "Einherjar",
-	HomePlane = "Asgard",
-	Sapient = true,
-	Description = "The Einherjar were originally souls of mortals who believed in the Aesir and ascended to Asgard. Being deemed worthy warriors, they were accepted into Valhalla and became mighty Einherjar."
+DefineSpeciesPhylum("angelia", {
+	Name = "Angelia",
+	Kingdom = "aetheria"
 })
 
-DefineSpecies("valkyrie", {
-	Name = "Valkyrie",
-	HomePlane = "Asgard",
-	Sapient = true,
-	Description = "The Valkyries are warrior maidens who dwell in Asgard, greeting the souls of powerful mortals into Valhalla."
+DefineSpecies("angel", {
+	Name = "Angel",
+	HomePlane = "Heaven",
+	Sapient = true
 })
 
-Load("scripts/species_ethereal_angel.lua")
-Load("scripts/species_ethereal_demon.lua")
-Load("scripts/species_ethereal_elemental.lua")
+DefineSpecies("archangel", {
+	Name = "Archangel",
+	HomePlane = "Heaven",
+	Sapient = true
+})
+

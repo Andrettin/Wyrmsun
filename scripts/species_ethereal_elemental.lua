@@ -25,20 +25,70 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSpecies("einherjar", {
-	Name = "Einherjar",
-	HomePlane = "Asgard",
-	Sapient = true,
-	Description = "The Einherjar were originally souls of mortals who believed in the Aesir and ascended to Asgard. Being deemed worthy warriors, they were accepted into Valhalla and became mighty Einherjar."
+DefineSpeciesPhylum("elementia", {
+	Name = "Elementia",
+	Kingdom = "aetheria"
 })
 
-DefineSpecies("valkyrie", {
-	Name = "Valkyrie",
-	HomePlane = "Asgard",
-	Sapient = true,
-	Description = "The Valkyries are warrior maidens who dwell in Asgard, greeting the souls of powerful mortals into Valhalla."
+DefineSpeciesClass("aer", {
+	Name = "Aer", -- "air" in Latin
+	Phylum = "elementia"
 })
 
-Load("scripts/species_ethereal_angel.lua")
-Load("scripts/species_ethereal_demon.lua")
-Load("scripts/species_ethereal_elemental.lua")
+DefineSpeciesClass("aqua", {
+	Name = "Aqua", -- "water" in Latin
+	Phylum = "elementia"
+})
+
+DefineSpeciesClass("ignis", {
+	Name = "Ignis", -- "fire" in Latin
+	Phylum = "elementia"
+})
+
+DefineSpeciesClass("terra", {
+	Name = "Terra", -- "earth" in Latin
+	Phylum = "elementia"
+})
+
+DefineSpecies("air-elemental", {
+	Name = "Air Elemental",
+	HomePlane = "Olympus", -- change this to something else?
+	Sapient = true
+})
+
+DefineSpecies("djinn", {
+	Name = "Djinn",
+	-- Class: Aer
+	HomePlane = "Olympus", -- change this to something else?
+	Sapient = true
+})
+
+DefineSpecies("earth-elemental", {
+	Name = "Earth Elemental",
+	HomePlane = "Tartarus", -- change this to something else?
+	Sapient = true
+})
+
+DefineSpecies("efreet", {
+	Name = "Efreet",
+	-- Class: Ignis
+	HomePlane = "Hades", -- change this to something else?
+	Sapient = true
+})
+
+DefineSpecies("fire-elemental", {
+	Name = "Fire Elemental",
+	HomePlane = "Hades", -- change this to something else?
+	Sapient = true
+})
+
+DefineSpecies("phoenix", {
+	Name = "Phoenix"
+	-- Class: Ignis
+})
+
+DefineSpecies("water-elemental", {
+	Name = "Water Elemental",
+	Sapient = true
+})
+
