@@ -1262,6 +1262,43 @@ function OpenEncyclopediaPlaneEntry(plane)
 	l:setLineWidth(Video.Width - 64)
 	encyclopedia_entry_menu:add(l, 32, offy + 104 + 36*0)
 	local description = ""
+	
+	local species = GetPlaneData(plane, "Species")
+	table.sort(species)
+	if (table.getn(species) > 0) then
+		local sapient_species = {}
+		local fauna_species = {}
+		for i = 1, table.getn(species) do
+			if (GetSpeciesData(species[i], "Prehistoric") == false) then -- don't show prehistoric species
+				if (GetSpeciesData(species[i], "Sapient")) then
+					table.insert(sapient_species, species[i])
+				else
+					table.insert(fauna_species, species[i])
+				end
+			end
+		end
+		if (table.getn(sapient_species) > 0) then
+			description = description .. "Sapient Inhabitants: "
+			for i = 1, table.getn(sapient_species) do
+				description = description .. GetPluralForm(GetSpeciesData(sapient_species[i], "Name"))
+				if (i < table.getn(sapient_species)) then
+					description = description .. ", "
+				end
+			end
+			description = description .. "\n\n"
+		end
+		if (table.getn(fauna_species) > 0) then
+			description = description .. "Fauna: "
+			for i = 1, table.getn(fauna_species) do
+				description = description .. GetPluralForm(GetSpeciesData(fauna_species[i], "Name"))
+				if (i < table.getn(fauna_species)) then
+					description = description .. ", "
+				end
+			end
+			description = description .. "\n\n"
+		end		
+	end
+	
 	if (GetPlaneData(plane, "Description") ~= "") then
 		description = description .. "Description: " .. GetPlaneData(plane, "Description")
 	end

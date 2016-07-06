@@ -66,6 +66,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Miscellaneous
 - The entry for each world in the encyclopedia now displays a list of its sapient inhabitants and its fauna.
+- The inhabitants of each plane now appear in a list in their encyclopedia entry.
 
 * Units
 - Insects no longer show up in the minimap.
