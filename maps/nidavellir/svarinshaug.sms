@@ -26,7 +26,3 @@ if (GameSettings.Difficulty == 3) then -- if difficulty is hard
 elseif (GameSettings.Difficulty == 4) then -- if difficulty is brutal
 	CreateCreeps(15, "unit-wyrm", 3, 0, Map.Info.MapWidth - 2, 0, Map.Info.MapHeight - 2)
 end
-
-if (LoadedGame == false) then
-	FillStumps()
-end

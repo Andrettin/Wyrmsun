@@ -124,6 +124,7 @@ local tips = {
 
 	-- Building-related tips
 	"Temples regenerate the health of nearby organic units.",
+	"Severely burning buildings keep losing health if left unrepaired.",
 	
 	-- Technology-related tips
 	"Researching a Writing upgrade will allow your faction to advance from a tribal one to a polity.",

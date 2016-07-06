@@ -67,6 +67,8 @@ https://github.com/Andrettin/Wyrmsun
 * Units
 - Insects no longer show up in the minimap.
 - Added Adelobasileus (prehistoric mammal-like animal) (icon by Mrmo Tarius, modified from Jinn's rat icon).
+- Animals now seek shelter in stumps and holes at night (or day, if they are nocturnal).
+- Increased the probability that birds and bats will have offspring.
 
 -----------------------------------------------------------------------
 - 2.3.0
