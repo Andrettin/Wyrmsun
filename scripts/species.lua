@@ -94,3 +94,4 @@ Load("scripts/species_avian.lua")
 Load("scripts/species_mammalian.lua")
 Load("scripts/species_draconid.lua") -- mythical dragons and dragon-like creatures
 Load("scripts/species_gryphid.lua") -- mythical gryphons
+Load("scripts/species_tree.lua")

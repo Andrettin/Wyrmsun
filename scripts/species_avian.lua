@@ -49,7 +49,7 @@ DefineSpecies("bald-eagle", { -- Source: http://www.itis.gov/servlet/SingleRpt/S
 	Genus = "haliaeetus",
 	Species = "leucocephalus",
 	Homeworld = "Earth",
-	Environments = {"conifer-forest-summer", "conifer-forest-autumn"}, -- correct?
+--	Environments = {"conifer-forest-summer", "conifer-forest-autumn"}, -- correct?
 	ChildUpgrade = "upgrade-child"
 })
 
@@ -65,4 +65,10 @@ DefineSpecies("crow", {
 	Homeworld = "Earth",
 	Environments = {"conifer-forest-summer", "conifer-forest-autumn"}, -- correct?
 	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("roc", {
+	Name = "Roc",
+	Homeworld = "Jotunheim",
+	ChildUpgrade = "upgrade-gryphon-child"
 })

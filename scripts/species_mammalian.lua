@@ -104,6 +104,7 @@ DefineSpecies("ilingoceros", { -- Source: http://fossilworks.org/bridge.pl?a=tax
 	Species = "alexandrae", -- type species of the Ilingoceros genus
 	Homeworld = "Earth",
 	EvolvesFrom = {"adelobasileus"}, -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
+	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
 	-- ground dwelling browser-grazer
 })
@@ -116,6 +117,7 @@ DefineSpecies("aragoral", { -- Source: http://fossilworks.org/bridge.pl?action=t
 	Species = "mudejar", -- sole species of the Aragoral genus
 	Homeworld = "Earth",
 	EvolvesFrom = {"adelobasileus"}, -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
+	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
 	-- ground dwelling grazer-browser
 })
@@ -181,9 +183,10 @@ DefineSpecies("proailurus", { -- Source: http://fossilworks.org/bridge.pl?action
 	Name = "Proailurus",
 	Genus = "proailurus",
 	Species = "lemanensis", -- sole species of the Proailurus genus
-	ChildUpgrade = "upgrade-child",
 	Homeworld = "Earth",
-	EvolvesFrom = {"adelobasileus"} -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
+	EvolvesFrom = {"adelobasileus"}, -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
 	-- ground dwelling carnivore-omnivore
 	-- likely ancestor of sabertooths and modern cats; Source: http://www.wildworldvisuals.com/product/proailurus/
 })
@@ -195,92 +198,16 @@ DefineSpecies("australopithecus", {
 	Species = "afarensis",
 	Homeworld = "Earth",
 	EvolvesFrom = {"adelobasileus"}, -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
+	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
 })
 
-DefineSpecies("dwarf", {
-	Name = "Dwarf",
-	Family = "hominidae",
-	Genus = "nanus", -- "dwarf" in Latin
-	Species = "sapiens",
-	Homeworld = "Nidavellir",
-	EvolvesFrom = {"australopithecus"}, -- could descend from another closely-related species instead; dwarves and gnomes should have a common ancestor
-	Sapient = true
-	-- in prehistoric times, the ancestors of dwarves and gnomes were transported to Nidavellir by the magic of the Aesir
-})
-
-DefineSpecies("elf", {
-	Name = "Elf",
-	Family = "hominidae",
-	Genus = "alfus", -- "elf" in Latin
-	Species = "sapiens",
+DefineSpecies("unicorn", {
+	Name = "Unicorn",
 	Homeworld = "Alfheim",
-	EvolvesFrom = {"australopithecus"}, -- could descend from another closely-related species instead
-	Sapient = true
+	ChildUpgrade = "upgrade-child"
 })
 
-DefineSpecies("gnome", {
-	Name = "Gnome",
-	Family = "hominidae",
-	Genus = "gnomus", -- "gnome" in Latin
-	Species = "sapiens",
-	Homeworld = "Nidavellir",
-	EvolvesFrom = {"australopithecus"}, -- could descend from another closely-related species instead; dwarves and gnomes should have a common ancestor
-	Sapient = true
-	-- in prehistoric times, the ancestors of dwarves and gnomes were transported to Nidavellir by the magic of the Aesir
-})
-
-DefineSpecies("derro", {
-	Name = "Derro",
-	Family = "hominidae",
-	Genus = "gnomus", -- "gnome" in Latin
-	Species = "detrimenti", -- "detrimental" in Latin
-	Homeworld = "Nidavellir",
-	EvolvesFrom = {"australopithecus"}, -- could descend from another closely-related species instead; dwarves and gnomes should have a common ancestor
-	Sapient = true
-	-- in prehistoric times, the ancestors of dwarves and gnomes were transported to Nidavellir by the magic of the Aesir
-})
-
-DefineSpecies("human", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180092
-	Name = "Human",
-	Family = "hominidae",
-	Subfamily = "homininae",
-	Genus = "homo",
-	Species = "sapiens",
-	Homeworld = "Earth",
-	EvolvesFrom = {"australopithecus"}, -- possibly
-	Sapient = true
-})
-
-DefineSpecies("ettin", {
-	Name = "Ettin",
-	Genus = "gigans", -- "giant" in Latin
-	Species = "sapiens",
-	Homeworld = "Jotunheim",
-	Sapient = true
-})
-
-DefineSpecies("goblin", {
-	Name = "Goblin",
-	Genus = "gobelinus", -- "goblin" in Latin
-	Species = "sapiens",
-	Homeworld = "Nidavellir",
-	Sapient = true
-})
-
-DefineSpecies("orc", {
-	Name = "Orc",
-	Genus = "orcus", -- "orc" in Latin
-	Species = "sapiens",
-	Homeworld = "Jotunheim",
-	Sapient = true
-})
-
-DefineSpecies("troll", {
-	Name = "Troll",
-	Homeworld = "Alfheim",
-	Sapient = true
-})
 
 DefineSpecies("bat", {
 	Name = "Bat",
@@ -306,3 +233,121 @@ DefineSpecies("dread-bat", {
 	ChildUpgrade = "upgrade-child"
 })
 
+DefineSpecies("cyclops", {
+	Name = "Cyclops",
+	Genus = "gigans", -- "giant" in Latin; cyclops are of the same genus as ettins
+	Species = "cyclops",
+	Homeworld = "Jotunheim",
+	Sapient = true
+})
+
+DefineSpecies("derro", {
+	Name = "Derro",
+	Family = "hominidae",
+	Genus = "gnomus", -- "gnome" in Latin
+	Species = "detrimenti", -- "detrimental" in Latin
+	Homeworld = "Nidavellir",
+	EvolvesFrom = {"australopithecus"}, -- could descend from another closely-related species instead; dwarves and gnomes should have a common ancestor
+	Sapient = true
+	-- in prehistoric times, the ancestors of dwarves and gnomes were transported to Nidavellir by the magic of the Aesir
+})
+
+DefineSpecies("dwarf", {
+	Name = "Dwarf",
+	Family = "hominidae",
+	Genus = "nanus", -- "dwarf" in Latin
+	Species = "sapiens",
+	Homeworld = "Nidavellir",
+	EvolvesFrom = {"australopithecus"}, -- could descend from another closely-related species instead; dwarves and gnomes should have a common ancestor
+	Sapient = true
+	-- in prehistoric times, the ancestors of dwarves and gnomes were transported to Nidavellir by the magic of the Aesir
+})
+
+DefineSpecies("elf", {
+	Name = "Elf",
+	Family = "hominidae",
+	Genus = "alfus", -- "elf" in Latin
+	Species = "sapiens",
+	Homeworld = "Alfheim",
+	EvolvesFrom = {"australopithecus"}, -- could descend from another closely-related species instead
+	Sapient = true
+})
+
+DefineSpecies("ettin", {
+	Name = "Ettin",
+	Genus = "gigans", -- "giant" in Latin
+	Species = "sapiens",
+	Homeworld = "Jotunheim",
+	Sapient = true
+})
+
+DefineSpecies("gnoll", {
+	Name = "Gnoll",
+	Homeworld = "Alfheim",
+	Sapient = true
+})
+
+DefineSpecies("gnome", {
+	Name = "Gnome",
+	Family = "hominidae",
+	Genus = "gnomus", -- "gnome" in Latin
+	Species = "sapiens",
+	Homeworld = "Nidavellir",
+	EvolvesFrom = {"australopithecus"}, -- could descend from another closely-related species instead; dwarves and gnomes should have a common ancestor
+	Sapient = true
+	-- in prehistoric times, the ancestors of dwarves and gnomes were transported to Nidavellir by the magic of the Aesir
+})
+
+DefineSpecies("goblin", {
+	Name = "Goblin",
+	Genus = "gobelinus", -- "goblin" in Latin
+	Species = "brevis", -- "small"/"short" in Latin (as it is smaller than a hobgoblin)
+	Homeworld = "Nidavellir",
+	Sapient = true
+})
+
+DefineSpecies("hobgoblin", {
+	Name = "Hobgoblin",
+	Genus = "gobelinus", -- "goblin" in Latin
+	Species = "magnus", -- "big" in Latin" (as it is bigger than a goblin)
+	Homeworld = "Nidavellir",
+	Sapient = true
+})
+
+DefineSpecies("human", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180092
+	Name = "Human",
+	Family = "hominidae",
+	Subfamily = "homininae",
+	Genus = "homo",
+	Species = "sapiens",
+	Homeworld = "Earth",
+	EvolvesFrom = {"australopithecus"}, -- possibly
+	Sapient = true
+})
+
+DefineSpecies("minotaur", {
+	Name = "Minotaur",
+	Homeworld = "Jotunheim",
+	Sapient = true
+})
+
+DefineSpecies("ogre", {
+	Name = "Ogre",
+	Species = "sapiens",
+	Homeworld = "Jotunheim",
+	Sapient = true
+})
+
+DefineSpecies("orc", {
+	Name = "Orc",
+	Genus = "orcus", -- "orc" in Latin
+	Species = "sapiens",
+	Homeworld = "Jotunheim",
+	Sapient = true
+})
+
+DefineSpecies("troll", {
+	Name = "Troll",
+	Homeworld = "Alfheim",
+	Sapient = true
+})

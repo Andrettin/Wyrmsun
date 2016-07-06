@@ -64,6 +64,9 @@ https://github.com/Andrettin/Wyrmsun
 * Buildings
 - Fixed issue which caused buying potions from temples to be queued while a priest was being trained, instead of happening immediately.
 
+* Miscellaneous
+- The entry for each world in the encyclopedia now displays a list of its sapient inhabitants and its fauna.
+
 * Units
 - Insects no longer show up in the minimap.
 - Added Adelobasileus (prehistoric mammal-like animal) (icon by Mrmo Tarius, modified from Jinn's rat icon).

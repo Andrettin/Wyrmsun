@@ -25,41 +25,9 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSpeciesFamily("draconidae", {
-	Name = "Draconidae",
-	Order = "saurischia"
-})
-
-DefineSpecies("dragon", {
-	Name = "Dragon",
-	Family = "draconidae",
+DefineSpecies("wose", {
+	Name = "Wose",
 	Homeworld = "Alfheim",
-	ChildUpgrade = "upgrade-child"
+	Environments = {"fairlimbed-forest"},
+	Sapient = true -- sentient tree-like being
 })
-
-DefineSpecies("kobold", {
-	Name = "Kobold",
-	Family = "draconidae",
-	Species = "sapiens",
-	Homeworld = "Nidavellir",
-	EvolvesFrom = {"tyrannosaurus-rex"}, -- seems sensible, given how the Tyrannosaurus rex has dragon-like features, so it could be an ancestors to mythical dragons
-	Sapient = true
-	-- Kobolds believe that they are descendants of wyrms, but in truth they share a common ancestor
-})
-
-DefineSpecies("wyrm", {
-	Name = "Wyrm",
-	Family = "draconidae",
-	Homeworld = "Nidavellir",
-	Environments = {"swamp", "cave"},
-	EvolvesFrom = {"tyrannosaurus-rex"}, -- seems sensible, given how the Tyrannosaurus rex has dragon-like features, so it could be an ancestors to mythical dragons
-	ChildUpgrade = "upgrade-wyrm-child"
-})
-
-DefineSpecies("wyvern", {
-	Name = "Wyvern",
-	Family = "draconidae",
-	Homeworld = "Jotunheim",
-	ChildUpgrade = "upgrade-child"
-})
-

@@ -59,6 +59,6 @@ DefineWorld("Nidavellir", {
 
 DefineWorld("Niflheim", {
 	Plane = "Material Plane",
-	Description = _("A dark, cold world, Niflheim is inhabited by elemental creatures who can thrive in its freezing conditions."),
+	Description = _("A dark, cold world, Niflheim is inhabited by resilient creatures who can thrive in its freezing conditions."),
 	Background = _("Niflheim was the ice world of Norse mythology, the encounter of its cold with Niflheim's heat resulting in the creation of the cosmos. Hel was a part of Niflheim.")
 })

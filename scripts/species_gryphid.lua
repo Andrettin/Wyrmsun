@@ -34,8 +34,20 @@ DefineSpecies("gryphon", {
 	Name = "Gryphon",
 	Family = "gryphidae",
 	Genus = "gryphus", -- "gryphon" in Latin
-	Species = "aquila", -- "eagle" in Latin
+	Species = "leo", -- "lion" in Latin
 	Homeworld = "Nidavellir",
 	Environments = {"swamp"}, -- should be dark plains
 	ChildUpgrade = "upgrade-gryphon-child"
+	-- in mythology, a gryphon is half-eagle and half-lion; but in the Wyrmsun universe, it is entirely avian, although with the body built like a gryphon
+})
+
+DefineSpecies("hippogryph", {
+	Name = "Hippogryph",
+	Family = "gryphidae",
+	Genus = "hippogryphus", -- rendering of "hippogryph" in Latin
+	Species = "equus", -- "horse" in Latin (the "horse" element is already present in the "hippo" of the genus, but since there it is Greek and here Latin, it doesn't look too repetitive)
+	Homeworld = "Alfheim",
+	Environments = {"fairlimbed-forest"},
+	ChildUpgrade = "upgrade-gryphon-child"
+	-- in mythology, a hippogryph is half-eagle and half-horse; but in the Wyrmsun universe, it is entirely avian, although with the body built like an hippogryph
 })

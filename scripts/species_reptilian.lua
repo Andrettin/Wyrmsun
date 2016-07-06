@@ -60,8 +60,21 @@ DefineSpecies("adelobasileus", { -- Source: Spencer G. Lucas and Zhexi Luo, "Ade
 	Species = "cromptoni",
 	Homeworld = "Earth",
 	Environments = {"conifer-forest-summer", "conifer-forest-autumn"}, -- correct?
+	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
 	-- scansorial insectivore
+})
+
+DefineSpecies("basilisk", {
+	Name = "Basilisk",
+	Homeworld = "Alfheim",
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("hydra", {
+	Name = "Hydra",
+	Homeworld = "Jotunheim",
+	ChildUpgrade = "upgrade-child"
 })
 
 DefineSpecies("tyrannosaurus-rex", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=54833 ; Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_species?gen_id=1206683
@@ -70,6 +83,7 @@ DefineSpecies("tyrannosaurus-rex", { -- Source: http://fossilworks.org/bridge.pl
 	Species = "rex",
 	Homeworld = "Earth",
 	Family = "tyrannosauridae",
+	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
 	-- weighted 3.97 tons
 	-- ground dwelling carnivore
