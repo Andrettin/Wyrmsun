@@ -35,7 +35,6 @@ DefineSpecies("proailurus", { -- Source: http://fossilworks.org/bridge.pl?action
 	Name = "Proailurus",
 	Family = "felidae",
 	Genus = "proailurus",
-	Species = "lemanensis", -- sole species of the Proailurus genus
 	Homeworld = "Earth",
 	EvolvesFrom = {"nimravus"}, -- possibly, since Nimravus is an earlier feliform
 	Era = "oligocene",

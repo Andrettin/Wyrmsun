@@ -101,6 +101,7 @@ Load("scripts/species_canid.lua")
 Load("scripts/species_equid.lua")
 Load("scripts/species_felid.lua")
 Load("scripts/species_primate.lua")
+Load("scripts/species_suid.lua")
 
 Load("scripts/species_draconid.lua") -- mythical dragons and dragon-like creatures
 Load("scripts/species_gryphid.lua") -- mythical gryphons

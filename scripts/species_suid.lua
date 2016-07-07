@@ -25,52 +25,32 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSpeciesFamily("bovidae", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180704
-	Name = "Bovidae",
+DefineSpeciesFamily("suidae", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180720
+	Name = "Suidae",
 	Order = "artiodactyla"
 })
 
-DefineSpecies("aragoral", { -- Source: http://fossilworks.org/bridge.pl?action=taxonInfo&taxon_no=86341
-	Name = "Aragoral",
-	Family = "bovidae",
-	Subfamily = "caprinae",
-	Genus = "aragoral",
+DefineSpecies("bunolistriodon", { -- Source: http://fossilworks.org/bridge.pl?action=taxonInfo&taxon_no=42384
+	Name = "Bunolistriodon",
+	Family = "suidae",
+	Subfamily = "listriodontinae",
+	Genus = "bunolistriodon",
 	Homeworld = "Earth",
-	EvolvesFrom = {"diacodexis"}, -- presumably, since Ilingoceros does
+	EvolvesFrom = {"helohyus"},
 	Era = "miocene",
-	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
-	-- ground dwelling grazer-browser
+	-- ground dwelling omnivore
 })
 
-DefineSpecies("goat", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180715
-	Name = "Goat",
-	Family = "bovidae",
-	Subfamily = "caprinae",
-	Genus = "capra",
-	Species = "hircus",
+DefineSpecies("boar", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180722
+	Name = "Boar",
+	Family = "suidae",
+	Subfamily = "suinae",
+	Tribe = "suini",
+	Genus = "sus",
+	Species = "scrofa",
 	Homeworld = "Earth",
-	EvolvesFrom = {"aragoral"}, -- oldest member of the Caprinae subfamily
+	EvolvesFrom = {"bunolistriodon"}, -- possibly, since Bunolistriodon was an earlier suid
 	Era = "holocene",
 	ChildUpgrade = "upgrade-child"
-})
-
-DefineSpecies("yale", {
-	Name = "Yale",
-	Family = "bovidae",
-	Subfamily = "caprinae",
-	Genus = "eale",
-	Homeworld = "Nidavellir",
-	Environments = {"swamp"}, -- should be dark plains
-	EvolvesFrom = {"aragoral"}, -- oldest member of the Caprinae subfamily
-	Era = "holocene",
-	ChildUpgrade = "upgrade-child"
-})
-
-DefineSpecies("minotaur", {
-	Name = "Minotaur",
-	Family = "bovidae",
-	Homeworld = "Jotunheim",
-	Era = "holocene",
-	Sapient = true
 })

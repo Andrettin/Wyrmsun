@@ -47,6 +47,11 @@ DefineSpeciesOrder("carnivora", { -- Source: http://www.itis.gov/servlet/SingleR
 	Infraclass = "eutheria"
 })
 
+DefineSpeciesOrder("eutriconodonta", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=67671
+	Name = "Eutriconodonta",
+	Class = "mammalia"
+})
+
 DefineSpeciesOrder("perissodactyla", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180687
 	Name = "Perissodactyla",
 	Class = "mammalia",
@@ -56,6 +61,16 @@ DefineSpeciesOrder("perissodactyla", { -- Source: http://www.itis.gov/servlet/Si
 
 DefineSpeciesFamily("antilocapridae", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=552305
 	Name = "Antilocapridae",
+	Order = "artiodactyla"
+})
+
+DefineSpeciesFamily("gobiconodontidae", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=67668
+	Name = "Gobiconodontidae",
+	Order = "eutriconodonta"
+})
+
+DefineSpeciesFamily("helohyidae", { -- Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_genera?fam_id=111988
+	Name = "Helohyidae",
 	Order = "artiodactyla"
 })
 
@@ -218,7 +233,6 @@ DefineSpecies("nimravus", { -- Source: http://fossilworks.org/bridge.pl?action=t
 	Family = "nimravidae",
 	Subfamily = "nimravinae",
 	Genus = "nimravus",
-	Species = "mongoliensis", -- oldest Nimravus species; Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=332927
 	Homeworld = "Earth",
 	EvolvesFrom = {"amphicyon", "hemicyon", "miacis"},
 	Era = "eocene",
@@ -407,19 +421,16 @@ DefineSpecies("pachyrukhos", {
 	ChildUpgrade = "upgrade-child"
 })
 
-DefineSpecies("helohyus", {
+DefineSpecies("helohyus", { -- Source: http://fossilworks.org/bridge.pl?action=taxonInfo&taxon_no=42348 ; Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_species?gen_id=1446494
 	Name = "Helohyus",
+	Family = "helohyidae",
+	Genus = "helohyus",
 	Homeworld = "Earth",
 	EvolvesFrom = {"chriacus", "phenacodus"},
+	Era = "eocene",
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
-})
-
-DefineSpecies("boar", {
-	Name = "Boar",
-	Homeworld = "Earth",
-	EvolvesFrom = {"helohyus"},
-	ChildUpgrade = "upgrade-child"
+	-- amphibious herbivore-omnivore
 })
 
 DefineSpecies("hippopotamus", {
@@ -612,6 +623,19 @@ DefineSpecies("uintathere", {
 	EvolvesFrom = {"crusafontia", "leptictidium", "zalambdalestes"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("repenomamus-giganticus", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=67606
+	Name = "Repenomamus Giganticus",
+	Family = "gobiconodontidae",
+	Genus = "repenomamus",
+	Species = "giganticus",
+	Homeworld = "Earth",
+	EvolvesFrom = {"adelobasileus"}, -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
+	Era = "cretaceous",
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+	-- ground dwelling carnivore
 })
 
 DefineSpecies("gnoll", {
