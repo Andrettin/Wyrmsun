@@ -47,54 +47,282 @@ DefineSpeciesOrder("perissodactyla", { -- Source: http://www.itis.gov/servlet/Si
 	Infraclass = "eutheria"
 })
 
-DefineSpeciesOrder("primates", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180089
-	Name = "Primates",
-	Class = "mammalia",
-	Subclass = "theria",
-	Infraclass = "eutheria"
-})
-
-DefineSpeciesOrder("rodentia", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180130
-	Name = "Rodentia",
-	Class = "mammalia",
-	Subclass = "theria",
-	Infraclass = "eutheria"
-})
-
 DefineSpeciesFamily("antilocapridae", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=552305
 	Name = "Antilocapridae",
 	Order = "artiodactyla"
 })
 
-DefineSpeciesFamily("bovidae", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180704
-	Name = "Bovidae",
-	Order = "artiodactyla"
+DefineSpecies("alphadon", {
+	Name = "Alphadon",
+	Homeworld = "Earth",
+--	EvolvesFrom = {"dicynodon", "dimetrodon", "lycaenops", "lystrosaurus", "thrinaxodon"},
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
 })
 
-DefineSpeciesFamily("equidae", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180688
-	Name = "Equidae",
-	Order = "perissodactyla"
+DefineSpecies("crusafontia", {
+	Name = "Crusafontia",
+	Homeworld = "Earth",
+--	EvolvesFrom = {"dicynodon", "dimetrodon", "lycaenops", "lystrosaurus", "thrinaxodon"},
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
 })
 
-DefineSpeciesFamily("hominidae", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180090
-	Name = "Hominidae",
-	Order = "primates",
-	Suborder = "haplorrhini",
-	Infraorder = "simiiformes",
-	Superfamily = "hominoidea"
+DefineSpecies("leptictidium", {
+	Name = "Leptictidium",
+	Homeworld = "Earth",
+--	EvolvesFrom = {"dicynodon", "dimetrodon", "lycaenops", "lystrosaurus", "thrinaxodon"},
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
 })
 
-DefineSpeciesFamily("muridae", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180360
-	Name = "Muridae",
-	Order = "rodentia",
-	Suborder = "myomorpha",
-	Superfamily = "muroidea"
+DefineSpecies("megazostrodon", {
+	Name = "Megazostrodon",
+	Homeworld = "Earth",
+--	EvolvesFrom = {"dicynodon", "dimetrodon", "lycaenops", "lystrosaurus", "thrinaxodon"},
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
 })
 
-DefineSpeciesFamily("sciuridae", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180135
-	Name = "Sciuridae",
-	Order = "rodentia",
-	Suborder = "sciuromorpha"
+DefineSpecies("zalambdalestes", {
+	Name = "Zalambdalestes",
+	Homeworld = "Earth",
+--	EvolvesFrom = {"dicynodon", "dimetrodon", "lycaenops", "lystrosaurus", "thrinaxodon"},
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("amphicyon", {
+	Name = "Amphicyon",
+	Homeworld = "Earth",
+	EvolvesFrom = {
+		"adelobasileus", -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
+--		"alphadon", "leptictidium", "zalambdalestes"
+	},
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("borhyaena", {
+	Name = "Borhyaena",
+	Homeworld = "Earth",
+	EvolvesFrom = {"alphadon"},
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("thylacosmilus", {
+	Name = "Thylacosmilus",
+	Homeworld = "Earth",
+	EvolvesFrom = {"borhyaena"},
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("chriacus", {
+	Name = "Chriacus",
+	Homeworld = "Earth",
+	EvolvesFrom = {
+		"adelobasileus", -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
+--		"crusafontia", "megazostrodon", "zalambdalestes"
+	},
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("hemicyon", {
+	Name = "Hemicyon",
+	Homeworld = "Earth",
+	EvolvesFrom = {
+		"adelobasileus", -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
+--		"alphadon", "leptictidium", "zalambdalestes"
+	},
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("marsupial-mouse", {
+	Name = "Marsupial Mouse",
+	Homeworld = "Earth",
+	EvolvesFrom = {"alphadon", "crusafontia", "megazostrodon"},
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("miacis", {
+	Name = "Miacis",
+	Homeworld = "Earth",
+	EvolvesFrom = {
+		"adelobasileus", -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
+--		"crusafontia", "megazostrodon", "zalambdalestes"
+	},
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("possum", {
+	Name = "Possum",
+	Homeworld = "Earth",
+	EvolvesFrom = {"alphadon", "crusafontia", "megazostrodon"},
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("rabbit", {
+	Name = "Rabbit",
+	Homeworld = "Earth",
+	EvolvesFrom = {
+		"adelobasileus", -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
+--		"alphadon", "leptictidium", "zalambdalestes"
+	},
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("thylacoleo", {
+	Name = "Thylacoleo",
+	Homeworld = "Earth",
+	EvolvesFrom = {"alphadon"},
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("thylacinus", {
+	Name = "Thylacinus",
+	Homeworld = "Earth",
+	EvolvesFrom = {"thylacoleo"},
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("bear", {
+	Name = "Bear",
+	Homeworld = "Earth",
+	EvolvesFrom = {"amphicyon", "hemicyon", "miacis"},
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("chapalmalania", {
+	Name = "Chapalmalania",
+	Homeworld = "Earth",
+	EvolvesFrom = {"amphicyon", "hemicyon", "miacis"},
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("hyena", {
+	Name = "Hyena",
+	Homeworld = "Earth",
+	EvolvesFrom = {"amphicyon", "hemicyon", "miacis"},
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("nimravus", {
+	Name = "Nimravus",
+	Homeworld = "Earth",
+	EvolvesFrom = {"amphicyon", "hemicyon", "miacis"},
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("raccoon", {
+	Name = "Raccoon",
+	Homeworld = "Earth",
+	EvolvesFrom = {"amphicyon", "hemicyon", "miacis"},
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("weasel", {
+	Name = "Weasel",
+	Homeworld = "Earth",
+	EvolvesFrom = {"miacis"},
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("kangaroo", {
+	Name = "Kangaroo",
+	Homeworld = "Earth",
+	EvolvesFrom = {"marsupial-mouse", "possum"},
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("koala", {
+	Name = "Koala",
+	Homeworld = "Earth",
+	EvolvesFrom = {"marsupial-mouse", "possum"},
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("procoptodon", {
+	Name = "Procoptodon",
+	Homeworld = "Earth",
+	EvolvesFrom = {"marsupial-mouse", "possum"},
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("wombat", {
+	Name = "Wombat",
+	Homeworld = "Earth",
+	EvolvesFrom = {"marsupial-mouse", "possum"},
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("diprotodon", {
+	Name = "Diprotodon",
+	Homeworld = "Earth",
+	EvolvesFrom = {"wombat"},
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("palorchestes", {
+	Name = "Palorchestes",
+	Homeworld = "Earth",
+	EvolvesFrom = {"wombat"},
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("hyopsodus", {
+	Name = "Hyopsodus",
+	Homeworld = "Earth",
+	EvolvesFrom = {
+		"adelobasileus", -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
+--		"leptictidium", "zalambdalestes"
+	},
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("phenacodus", {
+	Name = "Phenacodus",
+	Homeworld = "Earth",
+	EvolvesFrom = {
+		"adelobasileus", -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
+--		"alphadon", "zalambdalestes"
+	},
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("diacodexis", {
+	Name = "Diacodexis",
+	Homeworld = "Earth",
+	EvolvesFrom = {"chriacus", "hyopsodus", "phenacodus"},
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("deer", {
+	Name = "Deer",
+	Homeworld = "Earth",
+	EvolvesFrom = {"diacodexis"},
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("giraffe", {
+	Name = "Giraffe",
+	Homeworld = "Earth",
+	EvolvesFrom = {"diacodexis"},
+	ChildUpgrade = "upgrade-child"
 })
 
 DefineSpecies("ilingoceros", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=42728
@@ -103,79 +331,186 @@ DefineSpecies("ilingoceros", { -- Source: http://fossilworks.org/bridge.pl?a=tax
 	Genus = "ilingoceros",
 	Species = "alexandrae", -- type species of the Ilingoceros genus
 	Homeworld = "Earth",
-	EvolvesFrom = {"adelobasileus"}, -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
+	EvolvesFrom = {"diacodexis"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
 	-- ground dwelling browser-grazer
 })
 
-DefineSpecies("aragoral", { -- Source: http://fossilworks.org/bridge.pl?action=taxonInfo&taxon_no=86341
-	Name = "Aragoral",
-	Family = "bovidae",
-	Subfamily = "caprinae",
-	Genus = "aragoral",
-	Species = "mudejar", -- sole species of the Aragoral genus
+DefineSpecies("megaloceros", {
+	Name = "Megaloceros",
 	Homeworld = "Earth",
-	EvolvesFrom = {"adelobasileus"}, -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
+	EvolvesFrom = {"diacodexis"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
-	-- ground dwelling grazer-browser
 })
 
-DefineSpecies("goat", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180715
-	Name = "Goat",
-	Family = "bovidae",
-	Subfamily = "caprinae",
-	Genus = "capra",
-	Species = "hircus",
+DefineSpecies("antelope", {
+	Name = "Antelope",
 	Homeworld = "Earth",
-	EvolvesFrom = {"aragoral"}, -- oldest member of the Caprinae subfamily
+	EvolvesFrom = {"ilingoceros"},
 	ChildUpgrade = "upgrade-child"
 })
 
-DefineSpecies("yale", {
-	Name = "Yale",
-	Family = "bovidae",
-	Subfamily = "caprinae",
-	Genus = "eale",
-	Homeworld = "Nidavellir",
-	Environments = {"swamp"}, -- should be dark plains
-	EvolvesFrom = {"aragoral"}, -- oldest member of the Caprinae subfamily
+DefineSpecies("bison", {
+	Name = "Bison",
+	Homeworld = "Earth",
+	EvolvesFrom = {"ilingoceros"},
 	ChildUpgrade = "upgrade-child"
 })
 
-DefineSpecies("horse", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180691
-	Name = "Horse",
-	Family = "equidae",
-	Genus = "equus",
-	Species = "caballus",
+DefineSpecies("didolodus", {
+	Name = "Didolodus",
 	Homeworld = "Earth",
-	Environments = {"conifer-forest-summer", "conifer-forest-autumn"}, -- correct?
-	EvolvesFrom = {"adelobasileus"}, -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
+	EvolvesFrom = {"chriacus", "hyopsodus"},
+	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
 })
 
-DefineSpecies("rat", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180363
-	Name = "Rat",
-	Family = "muridae",
-	Subfamily = "murinae",
-	Genus = "rattus",
-	Species = "norvegicus",
+DefineSpecies("astrapotherium", {
+	Name = "Astrapotherium",
 	Homeworld = "Earth",
-	Environments = {"conifer-forest-summer", "conifer-forest-autumn", "cave"}, -- correct?
-	EvolvesFrom = {"adelobasileus"}, -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
+	EvolvesFrom = {"didolodus"},
+	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
 })
 
-DefineSpecies("squirrel", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=632439
-	Name = "Squirrel", -- Eurasian Red Squirrel
-	Family = "sciuridae",
-	Subfamily = "sciurinae",
-	Tribe = "sciurini",
-	Genus = "sciurus",
-	Species = "vulgaris",
+DefineSpecies("diadiaphorus", {
+	Name = "Diadiaphorus",
 	Homeworld = "Earth",
-	EvolvesFrom = {"adelobasileus"}, -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
+	EvolvesFrom = {"didolodus"},
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("macrauchenia", {
+	Name = "Macrauchenia",
+	Homeworld = "Earth",
+	EvolvesFrom = {"diadiaphorus"},
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("scarrittia", {
+	Name = "Scarrittia",
+	Homeworld = "Earth",
+	EvolvesFrom = {"didolodus"},
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("pachyrukhos", {
+	Name = "Pachyrukhos",
+	Homeworld = "Earth",
+	EvolvesFrom = {"scarrittia"},
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("helohyus", {
+	Name = "Helohyus",
+	Homeworld = "Earth",
+	EvolvesFrom = {"chriacus", "phenacodus"},
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("boar", {
+	Name = "Boar",
+	Homeworld = "Earth",
+	EvolvesFrom = {"helohyus"},
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("hippopotamus", {
+	Name = "Hippopotamus",
+	Homeworld = "Earth",
+	EvolvesFrom = {"helohyus"},
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("mesonyx", {
+	Name = "Mesonyx",
+	Homeworld = "Earth",
+	EvolvesFrom = {"chriacus", "hyopsodus", "phenacodus"},
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("palaeotherium", {
+	Name = "Palaeotherium",
+	Homeworld = "Earth",
+	EvolvesFrom = {"phenacodus"},
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("coelodonta", {
+	Name = "Coelodonta",
+	Homeworld = "Earth",
+	EvolvesFrom = {"palaeotherium"},
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("indricotherium", {
+	Name = "Indricotherium",
+	Homeworld = "Earth",
+	EvolvesFrom = {"palaeotherium"},
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("rhinoceros", {
+	Name = "Rhinoceros",
+	Homeworld = "Earth",
+	EvolvesFrom = {"palaeotherium"},
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("phiomia", {
+	Name = "Phiomia",
+	Homeworld = "Earth",
+	EvolvesFrom = {"chriacus", "hyopsodus", "phenacodus"},
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("elephant", {
+	Name = "Elephant",
+	Homeworld = "Earth",
+	EvolvesFrom = {"phiomia"},
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("mammoth", {
+	Name = "Mammoth",
+	Homeworld = "Earth",
+	EvolvesFrom = {"phiomia"},
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("platybeledon", {
+	Name = "Platybeledon",
+	Homeworld = "Earth",
+	EvolvesFrom = {"phiomia"},
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("poebrodon", {
+	Name = "Poebrodon",
+	Homeworld = "Earth",
+	EvolvesFrom = {"chriacus", "hyopsodus"},
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("camel", {
+	Name = "Camel",
+	Homeworld = "Earth",
+	EvolvesFrom = {"poebrodon"},
 	ChildUpgrade = "upgrade-child"
 })
 
@@ -191,29 +526,14 @@ DefineSpecies("proailurus", { -- Source: http://fossilworks.org/bridge.pl?action
 	-- likely ancestor of sabertooths and modern cats; Source: http://www.wildworldvisuals.com/product/proailurus/
 })
 
-DefineSpecies("australopithecus", {
-	Name = "Australopithecus",
-	Family = "hominidae", -- Source: http://fossilworks.org/bridge.pl?action=taxonInfo&taxon_no=40900 ; Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=83061
-	Genus = "australopithecus",
-	Species = "afarensis",
-	Homeworld = "Earth",
-	EvolvesFrom = {"adelobasileus"}, -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
-})
-
-DefineSpecies("unicorn", {
-	Name = "Unicorn",
-	Homeworld = "Alfheim",
-	ChildUpgrade = "upgrade-child"
-})
-
-
 DefineSpecies("bat", {
 	Name = "Bat",
 	Homeworld = "Earth",
 	Environments = {"cave"}, -- correct?
-	EvolvesFrom = {"adelobasileus"}, -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
+	EvolvesFrom = {
+		"adelobasileus", -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
+--		"leptictidium", "zalambdalestes"
+	},
 	ChildUpgrade = "upgrade-child"
 })
 
@@ -221,7 +541,10 @@ DefineSpecies("blood-bat", {
 	Name = "Blood Bat",
 	Homeworld = "Nidavellir",
 	Environments = {"cave", "swamp"},
-	EvolvesFrom = {"adelobasileus"}, -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
+	EvolvesFrom = { -- has a common ancestor with bats
+		"adelobasileus", -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
+--		"leptictidium", "zalambdalestes"
+	},
 	ChildUpgrade = "upgrade-child"
 })
 
@@ -229,125 +552,92 @@ DefineSpecies("dread-bat", {
 	Name = "Dread Bat",
 	Homeworld = "Nidavellir",
 	Environments = {"cave", "swamp"}, -- correct?
-	EvolvesFrom = {"adelobasileus"}, -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
+	EvolvesFrom = { -- has a common ancestor with bats
+		"adelobasileus", -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
+--		"leptictidium", "zalambdalestes"
+	},
 	ChildUpgrade = "upgrade-child"
 })
 
-DefineSpecies("cyclops", {
-	Name = "Cyclops",
-	Genus = "gigans", -- "giant" in Latin; cyclops are of the same genus as ettins
-	Species = "cyclops",
-	Homeworld = "Jotunheim",
-	Sapient = true
+DefineSpecies("hyaenodon", {
+	Name = "Hyaenodon",
+	Homeworld = "Earth",
+	EvolvesFrom = {"crusafontia", "megazostrodon", "zalambdalestes"},
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
 })
 
-DefineSpecies("derro", {
-	Name = "Derro",
-	Family = "hominidae",
-	Genus = "gnomus", -- "gnome" in Latin
-	Species = "detrimenti", -- "detrimental" in Latin
-	Homeworld = "Nidavellir",
-	EvolvesFrom = {"australopithecus"}, -- could descend from another closely-related species instead; dwarves and gnomes should have a common ancestor
-	Sapient = true
-	-- in prehistoric times, the ancestors of dwarves and gnomes were transported to Nidavellir by the magic of the Aesir
+DefineSpecies("metacheiromys", {
+	Name = "Metacheiromys",
+	Homeworld = "Earth",
+	EvolvesFrom = {"crusafontia", "megazostrodon", "zalambdalestes"},
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
 })
 
-DefineSpecies("dwarf", {
-	Name = "Dwarf",
-	Family = "hominidae",
-	Genus = "nanus", -- "dwarf" in Latin
-	Species = "sapiens",
-	Homeworld = "Nidavellir",
-	EvolvesFrom = {"australopithecus"}, -- could descend from another closely-related species instead; dwarves and gnomes should have a common ancestor
-	Sapient = true
-	-- in prehistoric times, the ancestors of dwarves and gnomes were transported to Nidavellir by the magic of the Aesir
+DefineSpecies("armadillo", {
+	Name = "Armadillo",
+	Homeworld = "Earth",
+	EvolvesFrom = {"metacheiromys"},
+	ChildUpgrade = "upgrade-child"
 })
 
-DefineSpecies("elf", {
-	Name = "Elf",
-	Family = "hominidae",
-	Genus = "alfus", -- "elf" in Latin
-	Species = "sapiens",
-	Homeworld = "Alfheim",
-	EvolvesFrom = {"australopithecus"}, -- could descend from another closely-related species instead
-	Sapient = true
+DefineSpecies("glyptotherium", {
+	Name = "Glyptotherium",
+	Homeworld = "Earth",
+	EvolvesFrom = {"metacheiromys"},
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
 })
 
-DefineSpecies("ettin", {
-	Name = "Ettin",
-	Genus = "gigans", -- "giant" in Latin
-	Species = "sapiens",
-	Homeworld = "Jotunheim",
-	Sapient = true
+DefineSpecies("hedgehog", {
+	Name = "Hedgehog",
+	Homeworld = "Earth",
+	EvolvesFrom = {"zalambdalestes"},
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("megatherium", {
+	Name = "Megatherium",
+	Homeworld = "Earth",
+	EvolvesFrom = {"metacheiromys"},
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("sloth", {
+	Name = "Sloth",
+	Homeworld = "Earth",
+	EvolvesFrom = {"metacheiromys"},
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("steropodon", {
+	Name = "Steropodon",
+	Homeworld = "Earth",
+	EvolvesFrom = {"megazostrodon"},
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("platypus", {
+	Name = "Platypus",
+	Homeworld = "Earth",
+	EvolvesFrom = {"steropodon"},
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("uintathere", {
+	Name = "Uintathere",
+	Homeworld = "Earth",
+	EvolvesFrom = {"crusafontia", "leptictidium", "zalambdalestes"},
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
 })
 
 DefineSpecies("gnoll", {
 	Name = "Gnoll",
 	Homeworld = "Alfheim",
-	Sapient = true
-})
-
-DefineSpecies("gnome", {
-	Name = "Gnome",
-	Family = "hominidae",
-	Genus = "gnomus", -- "gnome" in Latin
-	Species = "sapiens",
-	Homeworld = "Nidavellir",
-	EvolvesFrom = {"australopithecus"}, -- could descend from another closely-related species instead; dwarves and gnomes should have a common ancestor
-	Sapient = true
-	-- in prehistoric times, the ancestors of dwarves and gnomes were transported to Nidavellir by the magic of the Aesir
-})
-
-DefineSpecies("goblin", {
-	Name = "Goblin",
-	Genus = "gobelinus", -- "goblin" in Latin
-	Species = "brevis", -- "small"/"short" in Latin (as it is smaller than a hobgoblin)
-	Homeworld = "Nidavellir",
-	Sapient = true
-})
-
-DefineSpecies("hobgoblin", {
-	Name = "Hobgoblin",
-	Genus = "gobelinus", -- "goblin" in Latin
-	Species = "magnus", -- "big" in Latin" (as it is bigger than a goblin)
-	Homeworld = "Nidavellir",
-	Sapient = true
-})
-
-DefineSpecies("human", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180092
-	Name = "Human",
-	Family = "hominidae",
-	Subfamily = "homininae",
-	Genus = "homo",
-	Species = "sapiens",
-	Homeworld = "Earth",
-	EvolvesFrom = {"australopithecus"}, -- possibly
-	Sapient = true
-})
-
-DefineSpecies("minotaur", {
-	Name = "Minotaur",
-	Homeworld = "Jotunheim",
-	Sapient = true
-})
-
-DefineSpecies("ogre", {
-	Name = "Ogre",
-	Species = "sapiens",
-	Homeworld = "Jotunheim",
-	Sapient = true
-})
-
-DefineSpecies("orc", {
-	Name = "Orc",
-	Genus = "orcus", -- "orc" in Latin
-	Species = "sapiens",
-	Homeworld = "Jotunheim",
-	Sapient = true
-})
-
-DefineSpecies("troll", {
-	Name = "Troll",
-	Homeworld = "Alfheim",
+	EvolvesFrom = {"amphicyon", "hemicyon", "miacis"}, -- common ancestor with hyenas
 	Sapient = true
 })

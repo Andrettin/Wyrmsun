@@ -25,31 +25,34 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSpeciesFamily("gryphidae", {
-	Name = "Gryphidae",
-	Order = "accipitriformes"
+DefineSpeciesFamily("equidae", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180688
+	Name = "Equidae",
+	Order = "perissodactyla"
 })
 
-DefineSpecies("gryphon", {
-	Name = "Gryphon",
-	Family = "gryphidae",
-	Genus = "gryphus", -- "gryphon" in Latin
-	Species = "leo", -- "lion" in Latin
-	Homeworld = "Nidavellir",
-	Environments = {"swamp"}, -- should be dark plains
-	EvolvesFrom = {"hoatzin"}, -- the Gryphon has a common ancestor with eagles
-	ChildUpgrade = "upgrade-gryphon-child"
-	-- in mythology, a gryphon is half-eagle and half-lion; but in the Wyrmsun universe, it is entirely avian, although with the body built like a gryphon
+DefineSpecies("parahippus", {
+	Name = "Parahippus",
+	Homeworld = "Earth",
+	EvolvesFrom = {"palaeotherium"},
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
 })
 
-DefineSpecies("hippogryph", {
-	Name = "Hippogryph",
-	Family = "gryphidae",
-	Genus = "hippogryphus", -- rendering of "hippogryph" in Latin
-	Species = "equus", -- "horse" in Latin (the "horse" element is already present in the "hippo" of the genus, but since there it is Greek and here Latin, it doesn't look too repetitive)
+DefineSpecies("horse", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180691
+	Name = "Horse",
+	Family = "equidae",
+	Genus = "equus",
+	Species = "caballus",
+	Homeworld = "Earth",
+	Environments = {"conifer-forest-summer", "conifer-forest-autumn"}, -- correct?
+	EvolvesFrom = {"parahippus"},
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("unicorn", {
+	Name = "Unicorn",
 	Homeworld = "Alfheim",
-	Environments = {"fairlimbed-forest"},
-	EvolvesFrom = {"hoatzin"}, -- the Hippogryph has a common ancestor with eagles
-	ChildUpgrade = "upgrade-gryphon-child"
-	-- in mythology, a hippogryph is half-eagle and half-horse; but in the Wyrmsun universe, it is entirely avian, although with the body built like an hippogryph
+	EvolvesFrom = {"parahippus"}, -- has a common ancestor with horses
+	ChildUpgrade = "upgrade-child"
 })
+

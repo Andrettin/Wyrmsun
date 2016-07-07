@@ -25,31 +25,24 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSpeciesFamily("gryphidae", {
-	Name = "Gryphidae",
-	Order = "accipitriformes"
+DefineSpecies("lion", {
+	Name = "Lion",
+	Homeworld = "Earth",
+	EvolvesFrom = {"nimravus"},
+	ChildUpgrade = "upgrade-child"
 })
 
-DefineSpecies("gryphon", {
-	Name = "Gryphon",
-	Family = "gryphidae",
-	Genus = "gryphus", -- "gryphon" in Latin
-	Species = "leo", -- "lion" in Latin
-	Homeworld = "Nidavellir",
-	Environments = {"swamp"}, -- should be dark plains
-	EvolvesFrom = {"hoatzin"}, -- the Gryphon has a common ancestor with eagles
-	ChildUpgrade = "upgrade-gryphon-child"
-	-- in mythology, a gryphon is half-eagle and half-lion; but in the Wyrmsun universe, it is entirely avian, although with the body built like a gryphon
+DefineSpecies("sabertooth", {
+	Name = "Sabertooth",
+	Homeworld = "Earth",
+	EvolvesFrom = {"nimravus"},
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
 })
 
-DefineSpecies("hippogryph", {
-	Name = "Hippogryph",
-	Family = "gryphidae",
-	Genus = "hippogryphus", -- rendering of "hippogryph" in Latin
-	Species = "equus", -- "horse" in Latin (the "horse" element is already present in the "hippo" of the genus, but since there it is Greek and here Latin, it doesn't look too repetitive)
-	Homeworld = "Alfheim",
-	Environments = {"fairlimbed-forest"},
-	EvolvesFrom = {"hoatzin"}, -- the Hippogryph has a common ancestor with eagles
-	ChildUpgrade = "upgrade-gryphon-child"
-	-- in mythology, a hippogryph is half-eagle and half-horse; but in the Wyrmsun universe, it is entirely avian, although with the body built like an hippogryph
+DefineSpecies("tiger", {
+	Name = "Tiger",
+	Homeworld = "Earth",
+	EvolvesFrom = {"nimravus"},
+	ChildUpgrade = "upgrade-child"
 })

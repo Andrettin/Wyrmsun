@@ -43,6 +43,46 @@ DefineSpeciesFamily("accipitridae", { -- Source: http://www.itis.gov/servlet/Sin
 	Order = "accipitriformes"
 })
 
+DefineSpecies("archaeopteryx", {
+	Name = "Archaeopteryx",
+	Homeworld = "Earth",
+--	EvolvesFrom = {"compsognathus", "deinonychus", "saltopus"},
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("gallimimus", {
+	Name = "Gallimimus",
+	Homeworld = "Earth",
+	EvolvesFrom = {"compsognathus", "deinonychus"},
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("ichthyornis", {
+	Name = "Ichthyornis",
+	Homeworld = "Earth",
+	EvolvesFrom = {"archaeopteryx", "gallimimus"},
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("presbyornis", {
+	Name = "Presbyornis",
+	Homeworld = "Earth",
+	EvolvesFrom = {"archaeopteryx", "gallimimus"},
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("hoatzin", {
+	Name = "Hoatzin",
+	Homeworld = "Earth",
+	EvolvesFrom = {"ichthyornis", "presbyornis"},
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+})
+
 DefineSpecies("bald-eagle", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=175420
 	Name = "Bald Eagle",
 	Family = "accipitridae",
@@ -50,6 +90,7 @@ DefineSpecies("bald-eagle", { -- Source: http://www.itis.gov/servlet/SingleRpt/S
 	Species = "leucocephalus",
 	Homeworld = "Earth",
 --	Environments = {"conifer-forest-summer", "conifer-forest-autumn"}, -- correct?
+	EvolvesFrom = {"hoatzin"}, -- all eagles should be set to evolve from it
 	ChildUpgrade = "upgrade-child"
 })
 
@@ -57,6 +98,7 @@ DefineSpecies("bird", {
 	Name = "Bird",
 	Homeworld = "Earth",
 	Environments = {"conifer-forest-summer", "conifer-forest-autumn"}, -- correct?
+	EvolvesFrom = {"ichthyornis", "presbyornis"}, -- seems sensible, given the songbird descends from these
 	ChildUpgrade = "upgrade-child"
 })
 
@@ -64,11 +106,78 @@ DefineSpecies("crow", {
 	Name = "Crow",
 	Homeworld = "Earth",
 	Environments = {"conifer-forest-summer", "conifer-forest-autumn"}, -- correct?
+	EvolvesFrom = {"ichthyornis", "presbyornis"}, -- seems sensible, given the songbird descends from these
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("diatryma", {
+	Name = "Diatryma",
+	Homeworld = "Earth",
+	EvolvesFrom = {"ichthyornis", "presbyornis"},
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("duck", {
+	Name = "Duck",
+	Homeworld = "Earth",
+	EvolvesFrom = {"ichthyornis", "presbyornis"},
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("ostrich", {
+	Name = "Ostrich",
+	Homeworld = "Earth",
+	EvolvesFrom = {"ichthyornis", "presbyornis"},
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("owl", {
+	Name = "Owl",
+	Homeworld = "Earth",
+	EvolvesFrom = {"ichthyornis", "presbyornis"},
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("parrot", {
+	Name = "Parrot",
+	Homeworld = "Earth",
+	EvolvesFrom = {"hoatzin"},
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("passenger-pigeon", {
+	Name = "Passenger Pigeon",
+	Homeworld = "Earth",
+	EvolvesFrom = {"hoatzin"},
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("pelican", {
+	Name = "Pelican",
+	Homeworld = "Earth",
+	EvolvesFrom = {"ichthyornis", "presbyornis"},
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("phorusrhacus", {
+	Name = "Phorusrhacus",
+	Homeworld = "Earth",
+	EvolvesFrom = {"ichthyornis", "presbyornis"},
+	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
 })
 
 DefineSpecies("roc", {
 	Name = "Roc",
 	Homeworld = "Jotunheim",
+	EvolvesFrom = {"hoatzin"}, -- the Roc has a common ancestor with eagles
 	ChildUpgrade = "upgrade-gryphon-child"
+})
+
+DefineSpecies("songbird", {
+	Name = "Songbird",
+	Homeworld = "Earth",
+	EvolvesFrom = {"ichthyornis", "presbyornis"},
+	ChildUpgrade = "upgrade-child"
 })

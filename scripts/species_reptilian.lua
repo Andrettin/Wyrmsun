@@ -53,6 +53,59 @@ DefineSpeciesFamily("tyrannosauridae", { -- Source: http://www.marine.csiro.au/m
 	Order = "saurischia"
 })
 
+DefineSpecies("allosaurus", {
+	Name = "Allosaurus",
+	Homeworld = "Earth",
+--	EvolvesFrom = {"saltopus"},
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("compsognathus", {
+	Name = "Compsognathus",
+	Homeworld = "Earth",
+--	EvolvesFrom = {"ornithosuchus", "saltopus", "ticinosuchus"},
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("deinonychus", {
+	Name = "Deinonychus",
+	Homeworld = "Earth",
+--	EvolvesFrom = {"dryosaurus", "saltopus"},
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("dilophosaurus", {
+	Name = "Dilophosaurus",
+	Homeworld = "Earth",
+--	EvolvesFrom = {"ornithosuchus", "saltopus"},
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("tyrannosaurus-rex", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=54833 ; Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_species?gen_id=1206683
+	Name = "Tyrannosaurus Rex",
+	Genus = "tyrannosaurus",
+	Species = "rex",
+	Homeworld = "Earth",
+	Family = "tyrannosauridae",
+	EvolvesFrom = {"allosaurus", "dilophosaurus"}, -- should be ancestors to all Tyrannosauruses
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+	-- weighted 3.97 tons
+	-- ground dwelling carnivore
+})
+
+DefineSpecies("velociraptor", {
+	Name = "Velociraptor",
+	Homeworld = "Earth",
+	EvolvesFrom = {"compsognathus", "deinonychus"},
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+})
+
 DefineSpecies("adelobasileus", { -- Source: Spencer G. Lucas and Zhexi Luo, "Adelobasileus from the Upper Triassic of West Texas: The Oldest Mammal", 1993, p. 309; Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=53175 ; Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_species?gen_id=1196072
 	Name = "Adelobasileus",
 	Family = "synapsida",
@@ -77,14 +130,3 @@ DefineSpecies("hydra", {
 	ChildUpgrade = "upgrade-child"
 })
 
-DefineSpecies("tyrannosaurus-rex", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=54833 ; Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_species?gen_id=1206683
-	Name = "Tyrannosaurus Rex",
-	Genus = "tyrannosaurus",
-	Species = "rex",
-	Homeworld = "Earth",
-	Family = "tyrannosauridae",
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
-	-- weighted 3.97 tons
-	-- ground dwelling carnivore
-})
