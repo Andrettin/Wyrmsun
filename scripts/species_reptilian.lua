@@ -56,7 +56,7 @@ DefineSpeciesFamily("tyrannosauridae", { -- Source: http://www.marine.csiro.au/m
 DefineSpecies("edaphosaurus", {
 	Name = "Edaphosaurus",
 	Homeworld = "Earth",
---	EvolvesFrom = {"hylonomus", "pantylus", "tuditanus"},
+	EvolvesFrom = {"hylonomus", "pantylus", "tuditanus"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
 })
@@ -64,7 +64,7 @@ DefineSpecies("edaphosaurus", {
 DefineSpecies("pareiasaurus", {
 	Name = "Pareiasaurus",
 	Homeworld = "Earth",
---	EvolvesFrom = {"diadectes", "hylonomus", "pantylus", "platyhystrix", "tuditanus"},
+	EvolvesFrom = {"diadectes", "hylonomus", "pantylus", "platyhystrix", "tuditanus"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
 })
@@ -72,7 +72,7 @@ DefineSpecies("pareiasaurus", {
 DefineSpecies("petrolacosaurus", {
 	Name = "Petrolacosaurus",
 	Homeworld = "Earth",
---	EvolvesFrom = {"hylonomus", "pantylus", "peltobatrachus", "platyhystrix", "tuditanus"},
+	EvolvesFrom = {"hylonomus", "pantylus", "peltobatrachus", "platyhystrix", "tuditanus"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
 })
@@ -80,7 +80,7 @@ DefineSpecies("petrolacosaurus", {
 DefineSpecies("sphenacodon", {
 	Name = "Sphenacodon",
 	Homeworld = "Earth",
---	EvolvesFrom = {"diadectes", "peltobatrachus", "platyhystrix", "seymouria"},
+	EvolvesFrom = {"diadectes", "peltobatrachus", "platyhystrix", "seymouria"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
 })
@@ -88,7 +88,7 @@ DefineSpecies("sphenacodon", {
 DefineSpecies("thadeosaurus", {
 	Name = "Thadeosaurus",
 	Homeworld = "Earth",
---	EvolvesFrom = {"diadectes", "petrolacosaurus", "seymouria"},
+	EvolvesFrom = {"diadectes", "petrolacosaurus", "seymouria"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
 })

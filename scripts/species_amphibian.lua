@@ -25,10 +25,146 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineSpecies("acanthostega", {
+	Name = "Acanthostega",
+	Homeworld = "Earth",
+	EvolvesFrom = {"rhipidistian fish"},
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("elginerpeton", {
+	Name = "Elginerpeton",
+	Homeworld = "Earth",
+	EvolvesFrom = {"rhipidistian fish"},
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("hylerpeton", {
+	Name = "Hylerpeton",
+	Homeworld = "Earth",
+	EvolvesFrom = {"rhipidistian fish"},
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("ichthyostega", {
+	Name = "Ichthyostega",
+	Homeworld = "Earth",
+	EvolvesFrom = {"rhipidistian fish"},
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("tulerpeton", {
+	Name = "Tulerpeton",
+	Homeworld = "Earth",
+	EvolvesFrom = {"rhipidistian fish"},
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("ventastega", {
+	Name = "Ventastega",
+	Homeworld = "Earth",
+	EvolvesFrom = {"rhipidistian fish"},
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("aistopod", {
+	Name = "Aistopod",
+	Homeworld = "Earth",
+	EvolvesFrom = {"elginerpeton", "hylerpeton", "tulerpeton"},
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("cacops", {
+	Name = "Cacops",
+	Homeworld = "Earth",
+	EvolvesFrom = {"acanthostega", "ichthyostega", "ventastega"},
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("diplocaulus", {
+	Name = "Diplocaulus",
+	Homeworld = "Earth",
+	EvolvesFrom = {"elginerpeton", "ichthyostega", "tulerpeton"},
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("eogyrinus", {
+	Name = "Eogyrinus",
+	Homeworld = "Earth",
+	EvolvesFrom = {"elginerpeton", "hylerpeton", "ventastega"},
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("greererpeton", {
+	Name = "Greererpeton",
+	Homeworld = "Earth",
+	EvolvesFrom = {"acanthostega", "ichthyostega", "tulerpeton"},
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("diadectes", {
+	Name = "Diadectes",
+	Homeworld = "Earth",
+	EvolvesFrom = {"cacops", "diplocaulus", "eogyrinus", "greererpeton"},
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("pantylus", {
+	Name = "Pantylus",
+	Homeworld = "Earth",
+	EvolvesFrom = {"aistopod", "diplocaulus"},
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("peltobatrachus", {
+	Name = "Peltobatrachus",
+	Homeworld = "Earth",
+	EvolvesFrom = {"cacops", "eogyrinus", "greererpeton"},
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("platyhystrix", {
+	Name = "Platyhystrix",
+	Homeworld = "Earth",
+	EvolvesFrom = {"cacops", "eogyrinus", "greererpeton"},
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("seymouria", {
+	Name = "Seymouria",
+	Homeworld = "Earth",
+	EvolvesFrom = {"acanthostega", "hylerpeton", "ventastega"},
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("tuditanus", {
+	Name = "Tuditanus",
+	Homeworld = "Earth",
+	EvolvesFrom = {"aistopod", "diplocaulus"},
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+})
+
 DefineSpecies("hylonomus", {
 	Name = "Hylonomus",
 	Homeworld = "Earth",
---	EvolvesFrom = {"diadectes", "pantylus", "peltobatrachus", "platyhystrix", "seymouria", "tuditanus"},
+	EvolvesFrom = {"diadectes", "pantylus", "peltobatrachus", "platyhystrix", "seymouria", "tuditanus"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
 })
@@ -37,6 +173,13 @@ DefineSpecies("frog", {
 	Name = "Frog",
 	Homeworld = "Earth",
 	Environments = {"conifer-forest-summer", "conifer-forest-autumn"}, -- correct?
+	EvolvesFrom = {"peltobatrachus", "platyhystrix"},
 	ChildUpgrade = "upgrade-child"
 })
 
+DefineSpecies("salamander", {
+	Name = "Salamander",
+	Homeworld = "Earth",
+	EvolvesFrom = {"peltobatrachus", "platyhystrix"},
+	ChildUpgrade = "upgrade-child"
+})

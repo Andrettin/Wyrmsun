@@ -90,6 +90,7 @@ DefineSpecies("worm", {
 	ChildUpgrade = "upgrade-bee-child"
 })
 
+Load("scripts/species_fish.lua")
 Load("scripts/species_amphibian.lua")
 Load("scripts/species_reptilian.lua")
 Load("scripts/species_avian.lua")
