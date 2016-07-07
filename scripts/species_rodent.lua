@@ -60,6 +60,16 @@ DefineSpecies("beaver", {
 	ChildUpgrade = "upgrade-child"
 })
 
+DefineSpecies("carrat", { -- rodent with the morphology akin to that of a canid; goblins keep this beast as a mount
+	Name = "Carrat",
+	Family = "muridae", -- same as rats
+	Homeworld = "Nidavellir",
+	Environments = {"cave", "swamp"},
+	EvolvesFrom = {"ischyromys"}, -- shares a common ancestor with rats
+	Era = "holocene",
+	ChildUpgrade = "upgrade-child"
+})
+
 DefineSpecies("mouse", {
 	Name = "Mouse",
 	Homeworld = "Earth",

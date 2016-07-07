@@ -54,3 +54,15 @@ DefineSpecies("boar", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleR
 	Era = "holocene",
 	ChildUpgrade = "upgrade-child"
 })
+
+DefineSpecies("gullinbursti", { -- named after the mythical boar (in Norse mythology) Gullinbursti
+	Name = "Gullinbursti",
+	Family = "suidae",
+	Genus = "seta", -- "bristle" in Latin
+	Species = "aurea", -- "golden" in Latin
+	Homeworld = "Nidavellir",
+	Environments = {"swamp"},
+	EvolvesFrom = {"bunolistriodon"}, -- possibly, since Bunolistriodon was an earlier suid
+	Era = "holocene",
+	ChildUpgrade = "upgrade-child"
+})
