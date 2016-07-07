@@ -25,6 +25,8 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+-- Note: When setting which species evolves to which, keep in mind that species should only evolve to those of a later period; only set two species in the same era to evolve into one another if you have good evidence that that happened historically
+
 DefineSpeciesPhylum("chordata", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=158852
 	Name = "Chordata",
 	Kingdom = "animalia",

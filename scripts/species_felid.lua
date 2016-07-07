@@ -25,24 +25,54 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSpecies("lion", {
-	Name = "Lion",
+DefineSpeciesFamily("felidae", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180580
+	Name = "Felidae",
+	Order = "carnivora",
+	Suborder = "feliformia"
+})
+
+DefineSpecies("proailurus", { -- Source: http://fossilworks.org/bridge.pl?action=taxonInfo&taxon_no=41069 ; Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_species?gen_id=1340242
+	Name = "Proailurus",
+	Family = "felidae",
+	Genus = "proailurus",
+	Species = "lemanensis", -- sole species of the Proailurus genus
 	Homeworld = "Earth",
-	EvolvesFrom = {"nimravus"},
+	EvolvesFrom = {"nimravus"}, -- possibly, since Nimravus is an earlier feliform
+	Era = "oligocene",
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+	-- ground dwelling carnivore-omnivore
+	-- likely ancestor of sabertooths and modern cats; Source: http://www.wildworldvisuals.com/product/proailurus/
+})
+
+DefineSpecies("lion", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=183803
+	Name = "Lion",
+	Family = "felidae",
+	Subfamily = "pantherinae",
+	Genus = "panthera",
+	Species = "leo",
+	Homeworld = "Earth",
+	EvolvesFrom = {"proailurus"}, -- possibly, since Proailurus is a much earlier felid
+	Era = "holocene",
 	ChildUpgrade = "upgrade-child"
 })
 
 DefineSpecies("sabertooth", {
 	Name = "Sabertooth",
 	Homeworld = "Earth",
-	EvolvesFrom = {"nimravus"},
+	EvolvesFrom = {"proailurus"}, -- possibly, since Proailurus is a much earlier felid
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
 })
 
-DefineSpecies("tiger", {
+DefineSpecies("tiger", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=183805
 	Name = "Tiger",
+	Family = "felidae",
+	Subfamily = "pantherinae",
+	Genus = "panthera",
+	Species = "tigris",
 	Homeworld = "Earth",
-	EvolvesFrom = {"nimravus"},
+	EvolvesFrom = {"proailurus"}, -- possibly, since Proailurus is a much earlier felid
+	Era = "holocene",
 	ChildUpgrade = "upgrade-child"
 })

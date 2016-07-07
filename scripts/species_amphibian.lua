@@ -25,6 +25,14 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineSpecies("hylonomus", {
+	Name = "Hylonomus",
+	Homeworld = "Earth",
+--	EvolvesFrom = {"diadectes", "pantylus", "peltobatrachus", "platyhystrix", "seymouria", "tuditanus"},
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+})
+
 DefineSpecies("frog", {
 	Name = "Frog",
 	Homeworld = "Earth",

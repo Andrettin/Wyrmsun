@@ -53,6 +53,7 @@ DefineSpecies("unicorn", {
 	Name = "Unicorn",
 	Homeworld = "Alfheim",
 	EvolvesFrom = {"parahippus"}, -- has a common ancestor with horses
+	Era = "holocene",
 	ChildUpgrade = "upgrade-child"
 })
 

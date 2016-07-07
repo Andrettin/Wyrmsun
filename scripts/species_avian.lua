@@ -46,7 +46,7 @@ DefineSpeciesFamily("accipitridae", { -- Source: http://www.itis.gov/servlet/Sin
 DefineSpecies("archaeopteryx", {
 	Name = "Archaeopteryx",
 	Homeworld = "Earth",
---	EvolvesFrom = {"compsognathus", "deinonychus", "saltopus"},
+	EvolvesFrom = {"compsognathus", "deinonychus", "saltopus"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
 })
@@ -99,7 +99,7 @@ DefineSpecies("bird", {
 	Name = "Bird",
 	Homeworld = "Earth",
 	Environments = {"conifer-forest-summer", "conifer-forest-autumn"}, -- correct?
-	EvolvesFrom = {"ichthyornis", "presbyornis"}, -- seems sensible, given the songbird descends from these
+	EvolvesFrom = {"ichthyornis", "presbyornis"}, -- seems sensible, given the songbird is set to descend from these
 	ChildUpgrade = "upgrade-child"
 })
 
@@ -107,7 +107,7 @@ DefineSpecies("crow", {
 	Name = "Crow",
 	Homeworld = "Earth",
 	Environments = {"conifer-forest-summer", "conifer-forest-autumn"}, -- correct?
-	EvolvesFrom = {"ichthyornis", "presbyornis"}, -- seems sensible, given the songbird descends from these
+	EvolvesFrom = {"ichthyornis", "presbyornis"}, -- seems sensible, given the songbird is set to descend from these
 	ChildUpgrade = "upgrade-child"
 })
 
@@ -173,6 +173,7 @@ DefineSpecies("roc", {
 	Name = "Roc",
 	Homeworld = "Jotunheim",
 	EvolvesFrom = {"hoatzin"}, -- the Roc has a common ancestor with eagles
+	Era = "holocene",
 	ChildUpgrade = "upgrade-gryphon-child"
 })
 

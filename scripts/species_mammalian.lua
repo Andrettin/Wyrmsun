@@ -40,6 +40,13 @@ DefineSpeciesOrder("artiodactyla", { -- Source: http://www.itis.gov/servlet/Sing
 	Infraclass = "eutheria"
 })
 
+DefineSpeciesOrder("carnivora", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180539
+	Name = "Carnivora",
+	Class = "mammalia",
+	Subclass = "theria",
+	Infraclass = "eutheria"
+})
+
 DefineSpeciesOrder("perissodactyla", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180687
 	Name = "Perissodactyla",
 	Class = "mammalia",
@@ -50,6 +57,12 @@ DefineSpeciesOrder("perissodactyla", { -- Source: http://www.itis.gov/servlet/Si
 DefineSpeciesFamily("antilocapridae", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=552305
 	Name = "Antilocapridae",
 	Order = "artiodactyla"
+})
+
+DefineSpeciesFamily("nimravidae", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=41036
+	Name = "Nimravidae",
+	Order = "carnivora",
+	Suborder = "feliformia"
 })
 
 DefineSpecies("alphadon", {
@@ -200,12 +213,18 @@ DefineSpecies("hyena", {
 	ChildUpgrade = "upgrade-child"
 })
 
-DefineSpecies("nimravus", {
+DefineSpecies("nimravus", { -- Source: http://fossilworks.org/bridge.pl?action=taxonInfo&taxon_no=41043 ; Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_species?gen_id=1067195
 	Name = "Nimravus",
+	Family = "nimravidae",
+	Subfamily = "nimravinae",
+	Genus = "nimravus",
+	Species = "mongoliensis", -- oldest Nimravus species; Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=332927
 	Homeworld = "Earth",
 	EvolvesFrom = {"amphicyon", "hemicyon", "miacis"},
+	Era = "eocene",
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
+	-- ground dwelling carnivore
 })
 
 DefineSpecies("raccoon", {
@@ -493,18 +512,6 @@ DefineSpecies("camel", {
 	Homeworld = "Earth",
 	EvolvesFrom = {"poebrodon"},
 	ChildUpgrade = "upgrade-child"
-})
-
-DefineSpecies("proailurus", { -- Source: http://fossilworks.org/bridge.pl?action=taxonInfo&taxon_no=40900#
-	Name = "Proailurus",
-	Genus = "proailurus",
-	Species = "lemanensis", -- sole species of the Proailurus genus
-	Homeworld = "Earth",
-	EvolvesFrom = {"adelobasileus"}, -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
-	-- ground dwelling carnivore-omnivore
-	-- likely ancestor of sabertooths and modern cats; Source: http://www.wildworldvisuals.com/product/proailurus/
 })
 
 DefineSpecies("bat", {
