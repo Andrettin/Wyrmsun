@@ -55,7 +55,7 @@ DefineSpeciesFamily("antilocapridae", { -- Source: http://www.itis.gov/servlet/S
 DefineSpecies("alphadon", {
 	Name = "Alphadon",
 	Homeworld = "Earth",
---	EvolvesFrom = {"dicynodon", "dimetrodon", "lycaenops", "lystrosaurus", "thrinaxodon"},
+	EvolvesFrom = {"adelobasileus"}, -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
 })
@@ -63,7 +63,7 @@ DefineSpecies("alphadon", {
 DefineSpecies("crusafontia", {
 	Name = "Crusafontia",
 	Homeworld = "Earth",
---	EvolvesFrom = {"dicynodon", "dimetrodon", "lycaenops", "lystrosaurus", "thrinaxodon"},
+	EvolvesFrom = {"adelobasileus"}, -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
 })
@@ -71,7 +71,7 @@ DefineSpecies("crusafontia", {
 DefineSpecies("leptictidium", {
 	Name = "Leptictidium",
 	Homeworld = "Earth",
---	EvolvesFrom = {"dicynodon", "dimetrodon", "lycaenops", "lystrosaurus", "thrinaxodon"},
+	EvolvesFrom = {"adelobasileus"}, -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
 })
@@ -80,6 +80,7 @@ DefineSpecies("megazostrodon", {
 	Name = "Megazostrodon",
 	Homeworld = "Earth",
 --	EvolvesFrom = {"dicynodon", "dimetrodon", "lycaenops", "lystrosaurus", "thrinaxodon"},
+	EvolvesFrom = {"adelobasileus"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
 })
@@ -87,7 +88,7 @@ DefineSpecies("megazostrodon", {
 DefineSpecies("zalambdalestes", {
 	Name = "Zalambdalestes",
 	Homeworld = "Earth",
---	EvolvesFrom = {"dicynodon", "dimetrodon", "lycaenops", "lystrosaurus", "thrinaxodon"},
+	EvolvesFrom = {"adelobasileus"}, -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
 })
@@ -95,10 +96,7 @@ DefineSpecies("zalambdalestes", {
 DefineSpecies("amphicyon", {
 	Name = "Amphicyon",
 	Homeworld = "Earth",
-	EvolvesFrom = {
-		"adelobasileus", -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
---		"alphadon", "leptictidium", "zalambdalestes"
-	},
+	EvolvesFrom = {"alphadon", "leptictidium", "zalambdalestes"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
 })
@@ -122,10 +120,7 @@ DefineSpecies("thylacosmilus", {
 DefineSpecies("chriacus", {
 	Name = "Chriacus",
 	Homeworld = "Earth",
-	EvolvesFrom = {
-		"adelobasileus", -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
---		"crusafontia", "megazostrodon", "zalambdalestes"
-	},
+	EvolvesFrom = {"crusafontia", "megazostrodon", "zalambdalestes"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
 })
@@ -133,10 +128,7 @@ DefineSpecies("chriacus", {
 DefineSpecies("hemicyon", {
 	Name = "Hemicyon",
 	Homeworld = "Earth",
-	EvolvesFrom = {
-		"adelobasileus", -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
---		"alphadon", "leptictidium", "zalambdalestes"
-	},
+	EvolvesFrom = {"alphadon", "leptictidium", "zalambdalestes"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
 })
@@ -151,10 +143,7 @@ DefineSpecies("marsupial-mouse", {
 DefineSpecies("miacis", {
 	Name = "Miacis",
 	Homeworld = "Earth",
-	EvolvesFrom = {
-		"adelobasileus", -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
---		"crusafontia", "megazostrodon", "zalambdalestes"
-	},
+	EvolvesFrom = {"crusafontia", "megazostrodon", "zalambdalestes"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
 })
@@ -169,10 +158,7 @@ DefineSpecies("possum", {
 DefineSpecies("rabbit", {
 	Name = "Rabbit",
 	Homeworld = "Earth",
-	EvolvesFrom = {
-		"adelobasileus", -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
---		"alphadon", "leptictidium", "zalambdalestes"
-	},
+	EvolvesFrom = {"alphadon", "leptictidium", "zalambdalestes"},
 	ChildUpgrade = "upgrade-child"
 })
 
@@ -284,10 +270,7 @@ DefineSpecies("palorchestes", {
 DefineSpecies("hyopsodus", {
 	Name = "Hyopsodus",
 	Homeworld = "Earth",
-	EvolvesFrom = {
-		"adelobasileus", -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
---		"leptictidium", "zalambdalestes"
-	},
+	EvolvesFrom = {"leptictidium", "zalambdalestes"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
 })
@@ -295,10 +278,7 @@ DefineSpecies("hyopsodus", {
 DefineSpecies("phenacodus", {
 	Name = "Phenacodus",
 	Homeworld = "Earth",
-	EvolvesFrom = {
-		"adelobasileus", -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
---		"alphadon", "zalambdalestes"
-	},
+	EvolvesFrom = {"alphadon", "zalambdalestes"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
 })
@@ -332,6 +312,7 @@ DefineSpecies("ilingoceros", { -- Source: http://fossilworks.org/bridge.pl?a=tax
 	Species = "alexandrae", -- type species of the Ilingoceros genus
 	Homeworld = "Earth",
 	EvolvesFrom = {"diacodexis"},
+	Era = "miocene",
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
 	-- ground dwelling browser-grazer
@@ -530,10 +511,7 @@ DefineSpecies("bat", {
 	Name = "Bat",
 	Homeworld = "Earth",
 	Environments = {"cave"}, -- correct?
-	EvolvesFrom = {
-		"adelobasileus", -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
---		"leptictidium", "zalambdalestes"
-	},
+	EvolvesFrom = {"leptictidium", "zalambdalestes"},
 	ChildUpgrade = "upgrade-child"
 })
 
@@ -541,10 +519,7 @@ DefineSpecies("blood-bat", {
 	Name = "Blood Bat",
 	Homeworld = "Nidavellir",
 	Environments = {"cave", "swamp"},
-	EvolvesFrom = { -- has a common ancestor with bats
-		"adelobasileus", -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
---		"leptictidium", "zalambdalestes"
-	},
+	EvolvesFrom = {"leptictidium", "zalambdalestes"}, -- has a common ancestor with bats
 	ChildUpgrade = "upgrade-child"
 })
 
@@ -552,10 +527,7 @@ DefineSpecies("dread-bat", {
 	Name = "Dread Bat",
 	Homeworld = "Nidavellir",
 	Environments = {"cave", "swamp"}, -- correct?
-	EvolvesFrom = { -- has a common ancestor with bats
-		"adelobasileus", -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
---		"leptictidium", "zalambdalestes"
-	},
+	EvolvesFrom = {"leptictidium", "zalambdalestes"}, -- has a common ancestor with bats
 	ChildUpgrade = "upgrade-child"
 })
 

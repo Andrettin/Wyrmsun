@@ -91,6 +91,7 @@ DefineSpecies("bald-eagle", { -- Source: http://www.itis.gov/servlet/SingleRpt/S
 	Homeworld = "Earth",
 --	Environments = {"conifer-forest-summer", "conifer-forest-autumn"}, -- correct?
 	EvolvesFrom = {"hoatzin"}, -- all eagles should be set to evolve from it
+	Era = "holocene",
 	ChildUpgrade = "upgrade-child"
 })
 

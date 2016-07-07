@@ -92,6 +92,7 @@ DefineSpecies("tyrannosaurus-rex", { -- Source: http://fossilworks.org/bridge.pl
 	Homeworld = "Earth",
 	Family = "tyrannosauridae",
 	EvolvesFrom = {"allosaurus", "dilophosaurus"}, -- should be ancestors to all Tyrannosauruses
+	Era = "cretaceous",
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
 	-- weighted 3.97 tons
@@ -113,6 +114,8 @@ DefineSpecies("adelobasileus", { -- Source: Spencer G. Lucas and Zhexi Luo, "Ade
 	Species = "cromptoni",
 	Homeworld = "Earth",
 	Environments = {"conifer-forest-summer", "conifer-forest-autumn"}, -- correct?
+--	EvolvesFrom = {"dicynodon", "dimetrodon", "lycaenops", "lystrosaurus", "thrinaxodon"},
+	Era = "triassic",
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
 	-- scansorial insectivore

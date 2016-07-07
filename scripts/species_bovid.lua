@@ -37,7 +37,8 @@ DefineSpecies("aragoral", { -- Source: http://fossilworks.org/bridge.pl?action=t
 	Genus = "aragoral",
 	Species = "mudejar", -- sole species of the Aragoral genus
 	Homeworld = "Earth",
-	EvolvesFrom = {"ilingoceros"},
+	EvolvesFrom = {"diacodexis"}, -- presumably, since Ilingoceros does
+	Era = "miocene",
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
 	-- ground dwelling grazer-browser
@@ -51,6 +52,7 @@ DefineSpecies("goat", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleR
 	Species = "hircus",
 	Homeworld = "Earth",
 	EvolvesFrom = {"aragoral"}, -- oldest member of the Caprinae subfamily
+	Era = "holocene",
 	ChildUpgrade = "upgrade-child"
 })
 
@@ -62,6 +64,7 @@ DefineSpecies("yale", {
 	Homeworld = "Nidavellir",
 	Environments = {"swamp"}, -- should be dark plains
 	EvolvesFrom = {"aragoral"}, -- oldest member of the Caprinae subfamily
+	Era = "holocene",
 	ChildUpgrade = "upgrade-child"
 })
 
@@ -69,5 +72,6 @@ DefineSpecies("minotaur", {
 	Name = "Minotaur",
 	Family = "bovidae",
 	Homeworld = "Jotunheim",
+	Era = "holocene",
 	Sapient = true
 })

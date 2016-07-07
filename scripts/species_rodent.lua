@@ -48,10 +48,7 @@ DefineSpeciesFamily("sciuridae", { -- Source: http://www.itis.gov/servlet/Single
 DefineSpecies("ischyromys", {
 	Name = "Ischyromys",
 	Homeworld = "Earth",
-	EvolvesFrom = {
-		"adelobasileus", -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
---		"alphadon", "crusafontia", "leptictidium", "megazostrodon", "zalambdalestes"
-	},
+	EvolvesFrom = {"alphadon", "crusafontia", "leptictidium", "megazostrodon", "zalambdalestes"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
 })
