@@ -28,7 +28,7 @@
 UnitTypeFiles = {}
 
 Units = {
-	"unit-latin-town-hall", "unit-latin-farm", "unit-latin-barracks", "unit-latin-smithy",
+	"unit-latin-town-hall", "unit-latin-farm", "unit-latin-barracks", "unit-latin-smithy", "unit-latin-stables",
 	"upgrade-latin-civilization",
 	"unit-germanic-worker", "unit-germanic-warrior", "unit-germanic-spearman", "unit-germanic-archer",
 	"unit-germanic-town-hall", "unit-germanic-farm", "unit-germanic-barracks",
@@ -91,6 +91,7 @@ Units = {
 	"unit-goblin-town-hall", "unit-goblin-stronghold",
 	"unit-goblin-mess-hall", "unit-goblin-farm", "unit-goblin-lumber-mill", "unit-goblin-smithy", "unit-goblin-temple",
 	"unit-goblin-watch-tower", "unit-goblin-guard-tower",
+	"unit-goblin-dock",
 	"upgrade-goblin-long-spear", "upgrade-goblin-pike",
 	"upgrade-goblin-catapult-projectile-1", "upgrade-goblin-catapult-projectile-2",
 	"upgrade-goblin-wood-plow", "upgrade-goblin-iron-tipped-wood-plow",
@@ -3097,7 +3098,8 @@ DefineUnitType("unit-template-smithy", {
 	}
 } )
 
-DefineUnitType("unit-template-stables", { Name = _("Stables"),
+DefineUnitType("unit-template-stables", {
+	Name = _("Stables"),
 	Parent = "unit-template-building",
 	Class = "stables",
 	Costs = {"time", 150, "gold", 1000, "lumber", 900},
@@ -3254,7 +3256,8 @@ DefineUnitType("unit-template-guard-tower", { Name = _("Guard Tower"),
 	}
 } )
 
-DefineUnitType("unit-template-dock", { Name = _("Dock"),
+DefineUnitType("unit-template-dock", {
+	Name = _("Dock"),
 	Parent = "unit-template-building",
 	Class = "dock",
 	Costs = {"time", 200, "gold", 800, "lumber", 1350},

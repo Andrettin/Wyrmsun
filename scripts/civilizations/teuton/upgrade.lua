@@ -177,7 +177,8 @@ DefineModifier("upgrade-teuton-masonry",
 	{"apply-to", "unit-teuton-dock"},
 	{"apply-to", "unit-latin-town-hall"},
 	{"apply-to", "unit-latin-farm"}, {"apply-to", "unit-latin-barracks"},
-	{"apply-to", "unit-latin-smithy"}
+	{"apply-to", "unit-latin-smithy"},
+	{"apply-to", "unit-latin-stables"}
 )
 
 DefineModifier("upgrade-teuton-coinage",
@@ -197,6 +198,7 @@ DefineModifier("upgrade-teuton-writing",
 	{"apply-to", "unit-latin-town-hall"},
 	{"apply-to", "unit-latin-farm"}, {"apply-to", "unit-latin-barracks"},
 	{"apply-to", "unit-latin-smithy"}
+--	{"apply-to", "unit-latin-stables"}
 )
 
 DefineModifier("upgrade-teuton-alchemy",
@@ -330,7 +332,7 @@ DefineDependency("unit-frank-spearman",
 )
 
 DefineDependency("unit-teuton-ritter",
-	{"unit-teuton-smithy", "unit-teuton-stables", "upgrade-frank-tribe-faction", 0}, "or", {"unit-latin-smithy", "unit-teuton-stables"}
+	{"unit-teuton-smithy", "unit-teuton-stables", "upgrade-frank-tribe-faction", 0, "upgrade-latin-civilization", 0}, "or", {"unit-latin-smithy", "unit-latin-stables"}
 )
 
 DefineDependency("unit-frank-horseman",
@@ -338,7 +340,19 @@ DefineDependency("unit-frank-horseman",
 )
 
 DefineDependency("unit-teuton-town-hall",
-	{"upgrade-teuton-civilization"}
+	{"upgrade-teuton-civilization", "upgrade-latin-civilization", 0}
+)
+
+DefineDependency("unit-teuton-farm",
+	{"upgrade-latin-civilization", 0}
+)
+
+DefineDependency("unit-teuton-barracks",
+	{"upgrade-latin-civilization", 0}
+)
+
+DefineDependency("unit-teuton-smithy",
+	{"upgrade-latin-civilization", 0}
 )
 
 DefineDependency("unit-teuton-temple",

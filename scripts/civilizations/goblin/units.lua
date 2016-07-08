@@ -539,8 +539,21 @@ DefineUnitType("unit-goblin-guard-tower", { Name = _("Guard Tower"),
 	}
 } )
 
+DefineUnitType("unit-goblin-dock", {
+	Parent = "unit-template-dock",
+	Civilization = "goblin",
+	Description = _("Goblins make for crafty shipwrights. Focusing in sleek and fast ships, goblin shipyards produce many vessels used by their kind for piracy."),
+	Image = {"file", "goblin/buildings/dock.png", "size", {96, 96}},
+	Shadow = {"file", "goblin/buildings/dock_shadow.png", "size", {96, 96}},
+	Icon = "icon-goblin-dock",
+--	Trains = {"unit-dwarven-transport-ship"},
+	Sounds = {
+		"help", "basic-goblin-voices-help-town"
+	}
+} )
+
 DefineUnitType("unit-goblin-worker", {
-	Trains = {"unit-goblin-town-hall", "unit-goblin-farm", "unit-goblin-mess-hall", "unit-goblin-lumber-mill", "unit-goblin-smithy", "unit-goblin-temple", "unit-goblin-watch-tower", "unit-gold-mine", "unit-silver-mine", "unit-copper-mine"}
+	Trains = {"unit-goblin-town-hall", "unit-goblin-farm", "unit-goblin-mess-hall", "unit-goblin-lumber-mill", "unit-goblin-smithy", "unit-goblin-temple", "unit-goblin-watch-tower", "unit-goblin-dock", "unit-gold-mine", "unit-silver-mine", "unit-copper-mine"}
 } )
 
 DefineUnitType("unit-goblin-banner", { Name = _("Goblin Banner"),

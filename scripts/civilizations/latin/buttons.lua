@@ -48,3 +48,9 @@ DefineButton( { Pos = 5, Level = 1, Icon = "icon-latin-smithy",
 	Key = "s", Hint = _("Build ~!Smithy"),
 	ForUnit = {"unit-teuton-worker"}
 } )
+
+DefineButton( { Pos = 6, Level = 1, Icon = "icon-latin-stables",
+	Action = "build", Value = "unit-latin-stables", Popup = "popup-building",
+	Key = "e", Hint = _("Build Stabl~!es"),
+	ForUnit = {"unit-teuton-worker"}
+} )

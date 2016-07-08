@@ -68,6 +68,10 @@ DefineModifier("upgrade-latin-civilization",
 )
 
 DefineModifier("upgrade-latin-civilization",
+	{"apply-to", "unit-teuton-stables"}, {"convert-to", "unit-latin-stables"}
+)
+
+DefineModifier("upgrade-latin-civilization",
 	{"apply-to", "unit-germanic-worker"}, {"convert-to", "unit-teuton-worker"}
 )
 
@@ -97,4 +101,8 @@ DefineDependency("unit-latin-barracks",
 
 DefineDependency("unit-latin-smithy",
 	{"upgrade-latin-civilization"}
+)
+
+DefineDependency("unit-latin-stables",
+	{"upgrade-latin-civilization", "unit-teuton-lumber-mill"}
 )

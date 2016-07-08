@@ -63,6 +63,8 @@ https://github.com/Andrettin/Wyrmsun
 
 * Buildings
 - Fixed issue which caused buying potions from temples to be queued while a priest was being trained, instead of happening immediately.
+- Added Goblin Dock (graphics by Jinn).
+- Added Latin Stables (graphics by Wildfire Games and Jinn).
 
 * Miscellaneous
 - The entry for each world in the encyclopedia now displays a list of its sapient inhabitants and its fauna.

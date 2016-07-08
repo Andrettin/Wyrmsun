@@ -646,7 +646,7 @@ DefineUnitType("unit-teuton-smithy", {
 	}
 } )
 
-DefineUnitType("unit-teuton-stables", { Name = _("Stables"),
+DefineUnitType("unit-teuton-stables", {
 	Parent = "unit-template-stables",
 	Civilization = "teuton",
 	Description = _("The fierce Teutons are renowned for their heavy cavalry. Any military center of import will have stables to provide the well-bred horses such forces require."),

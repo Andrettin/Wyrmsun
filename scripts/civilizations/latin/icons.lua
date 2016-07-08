@@ -54,3 +54,9 @@ DefineIcon({
 	Size = {46, 38},
 	File = "latin/icons/smithy.png"
 })
+
+DefineIcon({
+	Name = "icon-latin-stables",
+	Size = {46, 38},
+	File = "latin/icons/stables.png"
+})

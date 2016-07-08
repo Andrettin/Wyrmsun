@@ -91,3 +91,17 @@ DefineUnitType("unit-latin-smithy", {
 --		"help", "basic-germanic-voices-help-town"
 	}
 } )
+
+DefineUnitType("unit-latin-stables", {
+	Parent = "unit-template-stables",
+	Civilization = "latin",
+	Description = _("Roman stables provide horses for their cavalry troops, as well as for several other uses, as in agriculture."),
+	Image = {"file", "latin/buildings/stables.png", "size", {96, 96}},
+	Shadow = {"file", "latin/buildings/stables_shadow.png", "size", {96, 96}},
+	Icon = "icon-latin-stables",
+	TechnologyPointCost = 1,
+	Drops = {"unit-horse"},
+	Sounds = {
+--		"help", "basic-teuton-voices-help-town"
+	}
+} )
