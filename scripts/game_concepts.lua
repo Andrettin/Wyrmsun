@@ -76,7 +76,7 @@ GameConcepts = {
 	},
 	KnowledgeMagic = {
 		Name = _("Kno~!wledge (Magic)"),
-		Description = _("Knowledge (Magic) is a stat primarily relevant for higher-level units. When holding a magic item in the unit's inventory, it is automatically identified if the unit's Knowledge (Magic) level is high enough. Furthermore, for every five levels in Knowledge (Magic), the character gains one maximum mana. The stat is increased mainly by reading the appropriate literary works.")
+		Description = _("Knowledge (Magic) is a stat primarily relevant for higher-level units. When holding a magic item in the unit's inventory, it is automatically identified if the unit's Knowledge (Magic) level is high enough. Furthermore, for every five levels in Knowledge (Magic), the character gains one maximum mana. The stat is increased mainly by reading the appropriate literary works, which are usually dropped from town halls and temples.")
 	},
 	KnowledgeWarfare = {
 		Name = _("Knowledge (Warfare)"),
