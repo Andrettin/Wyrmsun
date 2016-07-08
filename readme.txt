@@ -66,6 +66,12 @@ https://github.com/Andrettin/Wyrmsun
 - Added Goblin Dock (graphics by Jinn).
 - Added Latin Stables (graphics by Wildfire Games and Jinn).
 
+* Items
+- Added Book item (icon by Mrmo Tarius); literary works contained in books will increase their respective Knowledge sphere by 3 rather than 1.
+- Added Book of Retraining, which allows a character to repick their abilities.
+- Added the unique Thursagan's Book, which not only increases Knowledge (Magic) by 3, but also gives the character a permanent bonus to fire resistance.
+- The literary works "De Bello Gallico", "Meditations", "Notitia Dignitatum" and "Historia Ecclesiastica Venerabilis Bedae" are now books instead of scrolls.
+
 * Miscellaneous
 - The entry for each world in the encyclopedia now displays a list of its sapient inhabitants and its fauna.
 - The inhabitants of each plane now appear in a list in their encyclopedia entry.

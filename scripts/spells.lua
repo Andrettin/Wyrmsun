@@ -177,19 +177,6 @@ DefineSpell("spell-axe-twirl",
 	"ai-cast", {"range", 1, "condition", {"alliance", "false", "opponent", "only", "AirUnit", "false"}}
 )
 
-DefineSpell("spell-forgetfulness",
-	"showname", _("Forgetfulness"),
-	"description", _("Allows the unit to repick its experience upgrades"),
-	"manacost", 0,
-	"range", 0,
-	"target", "self",
-	"action", {
-		{"spawn-missile", "missile", "missile-magic-effect", "start-point", {"base", "target"}},
-		{"retrain"}
-	},
-	"sound-when-cast", "magic-holy"
-)
-
 DefineSpell("spell-stun",
 	"showname", _("Stun"),
 	"manacost", 50,
@@ -227,6 +214,36 @@ DefineSpell("spell-puncture",
 	"autocast", {"range", 6, "combat", "only", "condition", {"Coward", "false", "opponent", "only", "Bleeding", {ExactValue = 0}}},
 	"ai-cast", {"range", 6, "combat", "only", "condition", {"Coward", "false", "opponent", "only", "Bleeding", {ExactValue = 0}}},
 	"depend-upgrade", "upgrade-puncture"
+)
+
+-- scroll/book spells
+
+DefineSpell("spell-forgetfulness",
+	"showname", _("Forgetfulness"),
+	"description", _("Allows the unit to repick its experience upgrades"),
+	"manacost", 0,
+	"range", 0,
+	"target", "self",
+	"action", {
+		{"spawn-missile", "missile", "missile-magic-effect", "start-point", {"base", "target"}},
+		{"retrain"}
+	},
+	"item-spell", "scroll",
+	"sound-when-cast", "magic-holy"
+)
+
+DefineSpell("spell-retraining",
+	"showname", _("Retraining"),
+	"description", _("Allows the unit to repick its experience upgrades"),
+	"manacost", 0,
+	"range", 0,
+	"target", "self",
+	"action", {
+		{"spawn-missile", "missile", "missile-magic-effect", "start-point", {"base", "target"}},
+		{"retrain"}
+	},
+	"item-spell", "book",
+	"sound-when-cast", "magic-holy"
 )
 
 -- spells to change units to their faction equivalents

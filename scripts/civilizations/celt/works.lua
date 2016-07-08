@@ -27,7 +27,7 @@
 
 DefineUpgrade("upgrade-work-de-mensura-orbis-terrae", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 40.
 	Name = _("De Mensura Orbis Terrae"),
-	Work = "scroll",
+	Work = "book",
 	Civilization = "celt",
 	Description = "In this cosmographical work, the author laments that the islands to the north of Great Britain, which had for 100 years been locations with a strong hermit presence, have now been emptied due to attacks from Norsemen..",
 	Year = 825

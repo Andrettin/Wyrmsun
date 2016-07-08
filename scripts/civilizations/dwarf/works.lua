@@ -66,7 +66,7 @@ DefineUpgrade("upgrade-work-the-scepter-of-fire", {
 
 DefineUpgrade("upgrade-work-thursagans-book", { -- From Battle for Wesnoth: The Hammer of Thursagan
 	Name = _("Thursagan's Book"),
-	Work = "scroll",
+	Work = "book",
 	Civilization = "dwarf",
 	UniqueOnly = true
 })

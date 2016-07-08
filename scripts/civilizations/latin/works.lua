@@ -27,7 +27,7 @@
 
 DefineUpgrade("upgrade-work-de-bello-gallico", { -- Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 227.
 	Name = _("De Bello Gallico"),
-	Work = "scroll",
+	Work = "book",
 	Civilization = "latin",
 --	Description = "Caesar has written his treatise on the Gallic Wars, \"De Bello Gallico\"",
 	Description = "This work is a treatise on the Gallic Wars.",
@@ -37,7 +37,7 @@ DefineUpgrade("upgrade-work-de-bello-gallico", { -- Source: Heiko Steuer, "Warri
 
 DefineUpgrade("upgrade-work-meditations", { -- Source: "Ancient Warfare VII.6", 2013, pp. 8-10.
 	Name = _("Meditations"), -- known as "Ta eis heauton" in Greek ("To Himself")
-	Work = "scroll",
+	Work = "book",
 	Civilization = "latin",
 	Description = "Comprising twelve books, the \"Meditations\" of Marcus Aurelius is a prime work of Roman stoicism. The author emphasizes the importance of doing one's duty and living in an austere manner, in a way reminiscent of the ideal of the Roman soldier.",
 	Year = 174 -- written during Marcus Aurelius' campaign of 174 AD
@@ -45,7 +45,7 @@ DefineUpgrade("upgrade-work-meditations", { -- Source: "Ancient Warfare VII.6", 
 
 DefineUpgrade("upgrade-work-notitia-dignitatum", { -- Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 231.
 	Name = _("Notitia Dignitatum"),
-	Work = "scroll",
+	Work = "book",
 	Civilization = "latin",
 --	Description = "A new military handbook has been written, the \"Notitia Dignitatum\". Among other things, the manual details Germanic military units, such as the Brisigavi iuniores, the Brisigavi seniores and the Lentienses.",
 	Description = "Among other things, this military handbook details Germanic military units, such as the Brisigavi iuniores, the Brisigavi seniores and the Lentienses.",
@@ -53,13 +53,13 @@ DefineUpgrade("upgrade-work-notitia-dignitatum", { -- Source: Heiko Steuer, "War
 })
 
 DefineModifier("upgrade-work-de-bello-gallico",
-	{"KnowledgeWarfare", 1}
+	{"KnowledgeWarfare", 3}
 )
 
 DefineModifier("upgrade-work-meditations",
-	{"KnowledgeWarfare", 1}
+	{"KnowledgeWarfare", 3}
 )
 
 DefineModifier("upgrade-work-notitia-dignitatum",
-	{"KnowledgeWarfare", 1}
+	{"KnowledgeWarfare", 3}
 )

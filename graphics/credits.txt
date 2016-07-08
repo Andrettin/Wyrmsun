@@ -1180,6 +1180,8 @@ Mikodrak:
 
 Mrmo Tarius:
 /graphics/neutral/icons/adelobasileus.png (modified from Jinn's rat icon) (licensed under the CC0)
+/graphics/neutral/icons/book_blue.png (licensed under the CC0)
+/graphics/neutral/icons/book_red.png (licensed under the CC0)
 /graphics/neutral/icons/printing_press.png (licensed under the CC0)
 /graphics/neutral/icons/serfdom.png (licensed under the CC0)
 /graphics/teuton/icons/saxon_archer.png (later modified by Jinn) (licensed under the CC0)

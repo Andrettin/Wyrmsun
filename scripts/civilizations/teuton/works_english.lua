@@ -60,7 +60,7 @@ DefineUpgrade("upgrade-work-gagates-craeftas", { -- Source: Felix Grendon, "The 
 
 DefineUpgrade("upgrade-work-historia-ecclesiastica-venerabilis-bedae", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 34.
 	Name = _("Historia Ecclesiastica Venerabilis Bedae"),
-	Work = "scroll",
+	Work = "book",
 	Civilization = "teuton",
 	Year = 731
 })
@@ -409,7 +409,7 @@ DefineModifier("upgrade-work-gagates-craeftas",
 )
 
 DefineModifier("upgrade-work-historia-ecclesiastica-venerabilis-bedae",
-	{"KnowledgeMagic", 1}
+	{"KnowledgeMagic", 3}
 )
 
 DefineModifier("upgrade-work-nigon-wyrta-galdor",

@@ -31,7 +31,7 @@ DefineUpgrade("upgrade-work-heimskringla", { -- Source: Snorri Sturlson, "Heimsk
 		"compound", "prefix", "old-norse", "noun", "genitive", "Heimr", -- presumably
 		"compound", "suffix", "old-norse", "noun", "Kringla" -- presumably
 	},
-	Work = "scroll",
+	Work = "book",
 	Civilization = "norse",
 	Description = "The Heimskringla, or Chronicle of the Kings of Norway, detailed the legendary origins of the Norwegian monarchy, going on to write the stories of a long series of kings of Norway.",
 --	Year = ? -- in which year was it first published?
@@ -39,7 +39,7 @@ DefineUpgrade("upgrade-work-heimskringla", { -- Source: Snorri Sturlson, "Heimsk
 
 DefineUpgrade("upgrade-work-historiae-vinlandiae-antiquae", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 154-155.
 	Name = _("Historiae Vinlandiae Antiquae"),
-	Work = "scroll",
+	Work = "book",
 	Civilization = "norse",
 	Description = "This work tells the history of the Norse settlement in Vinland, in the New World.",
 	Year = 1707

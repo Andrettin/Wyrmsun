@@ -109,7 +109,7 @@ DefineAchievement("the-ancient-charms", {
 
 DefineAchievement("deep-lore", {
 	Name = "Deep Lore",
-	Icon = "icon-scroll",
+	Icon = "icon-book-red",
 	Description = "Read all dwarven literary works (with any custom hero)."
 })
 --]]

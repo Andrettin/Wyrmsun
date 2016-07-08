@@ -584,6 +584,18 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-book-red",
+	Size = {46, 38},
+	File = "neutral/icons/book_red.png"
+})
+
+DefineIcon({
+	Name = "icon-book-blue",
+	Size = {46, 38},
+	File = "neutral/icons/book_blue.png"
+})
+
+DefineIcon({
 	Name = "icon-caltrops",
 	Size = {46, 38},
 	File = "neutral/icons/caltrops.png"

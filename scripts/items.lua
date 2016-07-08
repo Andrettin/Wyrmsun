@@ -351,11 +351,23 @@ DefineUnitType("unit-potion-of-healing", { Name = _("Potion of Healing"),
 	} 
 } )
 
-DefineUnitType("unit-scroll", { Name = _("Scroll"),
+DefineUnitType("unit-scroll", {
+	Name = _("Scroll"),
 	Parent = "unit-template-item",
 	Image = {"file", "neutral/items/scroll.png", "size", {32, 32}},
 	Icon = "icon-scroll",
 	ItemClass = "scroll",
+	Sounds = {
+		"used", "scroll"
+	} 
+} )
+
+DefineUnitType("unit-book", {
+	Name = _("Book"),
+	Parent = "unit-template-item",
+	Image = {"file", "neutral/items/book.png", "size", {32, 32}},
+	Icon = "icon-book-red",
+	ItemClass = "book",
 	Sounds = {
 		"used", "scroll"
 	} 

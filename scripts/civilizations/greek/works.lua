@@ -27,7 +27,7 @@
 
 DefineUpgrade("upgrade-work-geography", { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 222.
 	Name = _("Geography"),
-	Work = "scroll",
+	Work = "book",
 	Civilization = "greek",
 	Description = "In this work various locations and peoples throughout the known world are described.",
 	Year = 20 -- written around 20 AD
@@ -35,7 +35,7 @@ DefineUpgrade("upgrade-work-geography", { -- Source: H. H. Howorth, "The Ethnolo
 
 DefineUpgrade("upgrade-work-historia-nova", { -- Source: B. H. Slicher van Bath, "Dutch Tribal Problems", 1949, p. 320.
 	Name = _("Historia Nova"),
-	Work = "scroll",
+	Work = "book",
 	Civilization = "greek",
 	Description = "In this work events that occurred as far away as the Netherlands are described.",
 	Year = 500 -- written around 500 AD
