@@ -47,8 +47,28 @@ DefineSpeciesOrder("carnivora", { -- Source: http://www.itis.gov/servlet/SingleR
 	Infraclass = "eutheria"
 })
 
+DefineSpeciesOrder("didelphimorphia", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=67664 ; Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_family?ordername=Didelphimorphia
+	Name = "Didelphimorphia",
+	Class = "mammalia"
+})
+
+DefineSpeciesOrder("docodonta", { -- Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_family?ordername=Docodonta
+	Name = "Docodonta",
+	Class = "mammalia"
+})
+
+DefineSpeciesOrder("dryolestida", { -- Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_family?ordername=Dryolestida
+	Name = "Dryolestida",
+	Class = "mammalia"
+})
+
 DefineSpeciesOrder("eutriconodonta", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=67671
 	Name = "Eutriconodonta",
+	Class = "mammalia"
+})
+
+DefineSpeciesOrder("leptictida", { -- Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_family?ordername=Leptictida
+	Name = "Leptictida",
 	Class = "mammalia"
 })
 
@@ -59,9 +79,24 @@ DefineSpeciesOrder("perissodactyla", { -- Source: http://www.itis.gov/servlet/Si
 	Infraclass = "eutheria"
 })
 
+DefineSpeciesOrder("pilosa", { -- Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_family?ordername=Pilosa
+	Name = "Pilosa",
+	Class = "mammalia"
+})
+
+DefineSpeciesFamily("alphadontidae", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=67663
+	Name = "Alphadontidae",
+	Order = "didelphimorphia"
+})
+
 DefineSpeciesFamily("antilocapridae", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=552305
 	Name = "Antilocapridae",
 	Order = "artiodactyla"
+})
+
+DefineSpeciesFamily("dryolestidae", { -- Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_genera?fam_id=102271
+	Name = "Dryolestidae",
+	Order = "dryolestida"
 })
 
 DefineSpeciesFamily("gobiconodontidae", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=67668
@@ -74,51 +109,89 @@ DefineSpeciesFamily("helohyidae", { -- Source: http://www.marine.csiro.au/mirror
 	Order = "artiodactyla"
 })
 
+DefineSpeciesFamily("megazostrodontidae", { -- Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_genera?fam_id=102913
+	Name = "Megazostrodontidae",
+	Order = "docodonta"
+})
+
 DefineSpeciesFamily("nimravidae", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=41036
 	Name = "Nimravidae",
 	Order = "carnivora",
 	Suborder = "feliformia"
 })
 
-DefineSpecies("alphadon", {
+DefineSpeciesFamily("pseudorhyncocyonidae", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=40266 ; Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_genera?fam_id=117472
+	Name = "Pseudorhyncocyonidae",
+	Order = "leptictida"
+})
+
+DefineSpeciesFamily("zalambdalestidae", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=40215 ; Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_genera?fam_id=103552
+	Name = "Zalambdalestidae",
+	Order = "pilosa"
+})
+
+DefineSpecies("alphadon", { -- Source: http://fossilworks.org/bridge.pl?action=taxonInfo&taxon_no=39947
 	Name = "Alphadon",
+	Family = "alphadontidae",
+	Genus = "alphadon",
 	Homeworld = "Earth",
 	EvolvesFrom = {"adelobasileus"}, -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
+	Era = "cretaceous",
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
+	-- scansorial omnivore
 })
 
-DefineSpecies("crusafontia", {
+DefineSpecies("crusafontia", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=39892 ; Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_species?gen_id=1010900
 	Name = "Crusafontia",
+	Family = "dryolestidae",
+	Genus = "crusafontia",
+	Species = "cuencana", -- type species of the Crusafontia genus
 	Homeworld = "Earth",
 	EvolvesFrom = {"adelobasileus"}, -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
+	Era = "cretaceous",
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
+	-- scansorial insectivore
 })
 
-DefineSpecies("leptictidium", {
+DefineSpecies("leptictidium", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=40267
 	Name = "Leptictidium",
+	Family = "pseudorhyncocyonidae",
+	Genus = "leptictidium",
+	Species = "auderiense", -- type species of the Leptictidium genus
 	Homeworld = "Earth",
 	EvolvesFrom = {"adelobasileus"}, -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
+	Era = "eocene",
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
+	-- scansorial insectivore
 })
 
-DefineSpecies("megazostrodon", {
+DefineSpecies("megazostrodon", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=39752 ; Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_species?gen_id=1017806
 	Name = "Megazostrodon",
-	Homeworld = "Earth",
---	EvolvesFrom = {"dicynodon", "dimetrodon", "lycaenops", "lystrosaurus", "thrinaxodon"},
-	EvolvesFrom = {"adelobasileus"},
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
-})
-
-DefineSpecies("zalambdalestes", {
-	Name = "Zalambdalestes",
+	Family = "megazostrodontidae",
+	Genus = "megazostrodon",
+	Species = "rudnerae", -- type species of the Megazostrodon genus
 	Homeworld = "Earth",
 	EvolvesFrom = {"adelobasileus"}, -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
+	Era = "jurassic",
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
+	-- scansorial insectivore
+})
+
+DefineSpecies("zalambdalestes", { -- Source: http://fossilworks.org/bridge.pl?action=taxonInfo&taxon_no=40217
+	Name = "Zalambdalestes",
+	Family = "zalambdalestidae",
+	Genus = "zalambdalestes",
+	Species = "lechei", -- type species of the Zalambdalestes genus
+	Homeworld = "Earth",
+	EvolvesFrom = {"adelobasileus"}, -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
+	Era = "cretaceous",
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+	-- ground-dwelling insectivore
 })
 
 DefineSpecies("amphicyon", {

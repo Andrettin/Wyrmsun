@@ -39,7 +39,8 @@ DefineSpecies("aragoral", { -- Source: http://fossilworks.org/bridge.pl?action=t
 	EvolvesFrom = {"diacodexis"}, -- presumably, since Ilingoceros does
 	Era = "miocene",
 	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	ChildUpgrade = "upgrade-child",
+	Description = "The aragorals are the oldest caprines to have existed. The Aesir transported a few of them to Nidavellir, where they eventually evolved into yales."
 	-- ground dwelling grazer-browser
 })
 

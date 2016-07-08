@@ -95,12 +95,12 @@ Load("scripts/species_amphibian.lua")
 Load("scripts/species_reptilian.lua")
 Load("scripts/species_avian.lua")
 Load("scripts/species_mammalian.lua")
-Load("scripts/species_rodent.lua")
 Load("scripts/species_bovid.lua")
 Load("scripts/species_canid.lua")
 Load("scripts/species_equid.lua")
 Load("scripts/species_felid.lua")
 Load("scripts/species_primate.lua")
+Load("scripts/species_rodent.lua")
 Load("scripts/species_suid.lua")
 
 Load("scripts/species_draconid.lua") -- mythical dragons and dragon-like creatures

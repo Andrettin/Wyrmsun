@@ -323,7 +323,8 @@ DefineSpecies("tyrannosaurus-rex", { -- Source: http://fossilworks.org/bridge.pl
 	EvolvesFrom = {"allosaurus", "dilophosaurus"}, -- should be ancestors to all Tyrannosauruses
 	Era = "cretaceous",
 	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
+	ChildUpgrade = "upgrade-child",
+	Description = "The mighty tyrannosaurus rex was a fierce predator. The goddess Gaia brought a few of them to Jotunheim, where they originated the first draconic creatures."
 	-- weighted 3.97 tons
 	-- ground dwelling carnivore
 })
