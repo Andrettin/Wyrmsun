@@ -57,3 +57,10 @@ DefineSpecies("unicorn", {
 	ChildUpgrade = "upgrade-child"
 })
 
+DefineSpecies("centaur", {
+	Name = "Centaur",
+	Homeworld = "Alfheim",
+	EvolvesFrom = {"parahippus"}, -- has a common ancestor with horses
+	Sapient = true
+	-- in Wyrmsun, centaurs are entirely equid, rather than being half-horse, half-human; they keep the same morphology, however; this means that they have a humanoid upper body, but with equid features like fur throughout the body and horse-like facial features
+})

@@ -1350,7 +1350,7 @@ function CreateCritters(arg)
 		end
 		
 		-- create critters
-		while (Count > 0 and WhileCount < critter_number * 100) do
+		while (Count > 0 and WhileCount < critter_number * 1000) do
 			local critter_unit_type = critter_types[SyncRand(table.getn(critter_types)) + 1]
 			if (critter_unit_type == "") then
 				Count = 0
