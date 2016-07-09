@@ -30,12 +30,72 @@ DefineSpeciesFamily("equidae", { -- Source: http://www.itis.gov/servlet/SingleRp
 	Order = "perissodactyla"
 })
 
-DefineSpecies("parahippus", {
-	Name = "Parahippus",
+DefineSpecies("mesohippus", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=43010
+	Name = "Mesohippus",
+	Family = "equidae",
+	Subfamily = "anchitheriinae",
+	Genus = "mesohippus",
 	Homeworld = "Earth",
 	EvolvesFrom = {"palaeotherium"},
+	Era = "eocene",
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
+	-- ground dwelling browser
+})
+
+DefineSpecies("merychippus", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=43009
+	Name = "Merychippus",
+	Family = "equidae",
+	Subfamily = "equinae",
+	Genus = "merychippus",
+	Homeworld = "Earth",
+	EvolvesFrom = {"mesohippus"}, -- earlier equid
+	Era = "miocene",
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+	-- ground dwelling grazer-browser
+})
+
+DefineSpecies("nannippus", { -- Source: http://fossilworks.org/?a=taxonInfo&taxon_no=43012
+	Name = "Nannippus",
+	Family = "equidae",
+	Subfamily = "equinae",
+	Tribe = "hipparionini",
+	Genus = "nannippus",
+	Homeworld = "Earth",
+	EvolvesFrom = {"mesohippus"}, -- earlier equid
+	Era = "miocene",
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+	-- ground dwelling grazer
+})
+
+DefineSpecies("parahippus", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=43016
+	Name = "Parahippus",
+	Family = "equidae",
+	Subfamily = "anchitheriinae",
+	Genus = "parahippus",
+	Species = "cognatus", -- type species of the Parahippus genus
+	Homeworld = "Earth",
+	EvolvesFrom = {"mesohippus"}, -- earlier equid
+	Era = "miocene", -- also occurred in the Oligocene, but in a much lesser frequency; Parahippus cognatus (the type species) is given as appearing only in the Miocene, Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=44053
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+	-- ground dwelling browser
+})
+
+DefineSpecies("pliohippus", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=43019
+	Name = "Pliohippus",
+	Family = "equidae",
+	Subfamily = "equinae",
+	Tribe = "equini",
+	Genus = "pliohippus",
+	Homeworld = "Earth",
+	EvolvesFrom = {"mesohippus"}, -- earlier equid
+	Era = "miocene",
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+	-- ground dwelling browser
 })
 
 DefineSpecies("horse", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180691
@@ -45,14 +105,14 @@ DefineSpecies("horse", { -- Source: http://www.itis.gov/servlet/SingleRpt/Single
 	Species = "caballus",
 	Homeworld = "Earth",
 	Environments = {"conifer-forest-summer", "conifer-forest-autumn"}, -- correct?
-	EvolvesFrom = {"parahippus"},
+	EvolvesFrom = {"merychippus", "nannippus", "parahippus", "pliohippus"}, -- earlier equids
 	ChildUpgrade = "upgrade-child"
 })
 
 DefineSpecies("unicorn", {
 	Name = "Unicorn",
 	Homeworld = "Alfheim",
-	EvolvesFrom = {"parahippus"}, -- has a common ancestor with horses
+	EvolvesFrom = {"merychippus", "nannippus", "parahippus", "pliohippus"}, -- earlier equids
 	Era = "holocene",
 	ChildUpgrade = "upgrade-child"
 })
@@ -60,7 +120,7 @@ DefineSpecies("unicorn", {
 DefineSpecies("centaur", {
 	Name = "Centaur",
 	Homeworld = "Alfheim",
-	EvolvesFrom = {"parahippus"}, -- has a common ancestor with horses
+	EvolvesFrom = {"merychippus", "nannippus", "parahippus", "pliohippus"}, -- earlier equids
 	Sapient = true
 	-- in Wyrmsun, centaurs are entirely equid, rather than being half-horse, half-human; they keep the same morphology, however; this means that they have a humanoid upper body, but with equid features like fur throughout the body and horse-like facial features
 })
