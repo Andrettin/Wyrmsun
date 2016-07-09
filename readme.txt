@@ -81,6 +81,11 @@ https://github.com/Andrettin/Wyrmsun
 - Updated the "Knowledge (Magic)" Game Concepts entry to say that literary works are usually dropped from town halls and temples.
 - Fixed an issue which caused the key scroll speed preferences to not be loaded at game start.
 
+* Quest
+- The Mercenary Camp is no longer present in The Binding of Graftvitnir quest, as the player couldn't hire from it anyway (since farms can't be be built during the mission).
+- Decreased the quantity of enemies in The Binding of Grafvitnir quest, and decreased the amount of kobolds guarding Grafvitnir.
+- Fixed issue which prevented the Hills of the Shorbear Clan mission from being completed.
+
 * Units
 - Insects no longer show up in the minimap.
 - Added Adelobasileus (prehistoric mammal-like animal) (icon by Mrmo Tarius, modified from Jinn's rat icon). This creature appears only in custom maps.

@@ -1308,6 +1308,9 @@ function CreateNeutralBuildings(building_type, building_number, min_x, max_x, mi
 end
 
 function CreateCritters(arg)
+	if (arg == nil) then
+		arg = {}
+	end
 	if (LoadedGame == false) then
 		local critter_number = (Map.Info.MapWidth * Map.Info.MapHeight) / 512
 		local RandomNumber = 0

@@ -3,7 +3,6 @@ LoadTileModels("scripts/tilesets/swamp.lua")
 if (LoadedGame == false) then
 	if (GetCurrentQuest() == "the-binding-of-grafvitnir") then
 		GenerateRandomMap({
-			MercenaryCamp = true,
 			RockQuantity = "medium",
 			TreeQuantity = "medium",
 			WaterQuantity = "medium",

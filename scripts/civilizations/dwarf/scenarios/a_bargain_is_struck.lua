@@ -678,7 +678,7 @@ AddTrigger(
 		if (gnomish_envoy == nil) then
 			gnomish_envoy = FindUnit("unit-gnomish-master-at-arms", GetFactionPlayer("Norlund Clan"))
 		end
-		if (GetUnitVariable(gnomish_envoy, "Removed")) then
+		if (GetUnitVariable(gnomish_envoy, "Removed") and GetUnitVariable(gnomish_envoy, "Container") == -1) then
 			Event(
 				FindHero("Rugnur"),
 				"That's the last caravan! We will commence work immediately.",
@@ -734,7 +734,7 @@ AddTrigger(
 				and FindHero("Rugnur", i) ~= nil
 				and (IfNearUnit(i, ">=", 4, "unit-gnomish-caravan", "unit-dwarven-town-hall") or IfNearUnit(i, ">=", 4, "unit-gnomish-caravan", "unit-dwarven-stronghold"))
 				and (IfNearUnit(i, ">=", 1, "unit-dwarven-town-hall", "unit-gnomish-caravan") or IfNearUnit(i, ">=", 1, "unit-dwarven-stronghold", "unit-gnomish-caravan"))
-				and GetUnitVariable(gnomish_envoy, "Removed")
+				and GetUnitVariable(gnomish_envoy, "Removed") and GetUnitVariable(gnomish_envoy, "Container") == -1
 			) then
 				local caravans_loaded = true -- are all caravans loaded?
 				local uncount = 0

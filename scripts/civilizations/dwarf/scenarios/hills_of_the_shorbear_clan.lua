@@ -1116,7 +1116,11 @@ AddTrigger(
 		if (GameCycle == 0) then
 			return false
 		end
-		if (PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Move Rugnur to the northeast cave entrance") and UnitIsAt(FindHero("Rugnur"), {69, 14}, {69, 14}) and (GetNumUnitsAt(GetFactionPlayer("Norlund Clan"), "unit-gnomish-duelist", {44, 76}, {256, 256}) + GetNumUnitsAt(GetFactionPlayer("Norlund Clan"), "unit-gnomish-master-at-arms", {44, 76}, {256, 256})) >= 1) then
+		local gnomish_envoy = FindUnit("unit-gnomish-duelist", GetFactionPlayer("Norlund Clan"))
+		if (gnomish_envoy == nil) then
+			gnomish_envoy = FindUnit("unit-gnomish-master-at-arms", GetFactionPlayer("Norlund Clan"))
+		end
+		if (PlayerHasObjective(GetFactionPlayer("Norlund Clan"), "- Move Rugnur to the northeast cave entrance") and GetUnitVariable(FindHero("Rugnur"), "Removed") and GetUnitVariable(FindHero("Rugnur"), "Container") == -1 and GetUnitVariable(gnomish_envoy, "Removed") and GetUnitVariable(gnomish_envoy, "Container") == -1) then
 			player = GetFactionPlayer("Norlund Clan")
 			return true
 		end
