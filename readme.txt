@@ -79,6 +79,7 @@ https://github.com/Andrettin/Wyrmsun
 - The entry for each world in the encyclopedia now displays a list of its sapient inhabitants and its fauna.
 - The inhabitants of each plane now appear in a list in their encyclopedia entry.
 - Updated the "Knowledge (Magic)" Game Concepts entry to say that literary works are usually dropped from town halls and temples.
+- Fixed an issue which caused the key scroll speed preferences to not be loaded at game start.
 
 * Units
 - Insects no longer show up in the minimap.
