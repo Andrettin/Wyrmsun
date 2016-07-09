@@ -42,7 +42,7 @@ DefineUnitType("unit-adelobasileus", {
 	Species = "adelobasileus",
 	Class = "arboreal-insectivore",
 	Description = _("The Adelobasileus was one of the earliest mammal-like animals to have lived, and is possibly a common ancestor of all mammals. It lived in trees, and its diet consisted of insects."),
-	Image = {"file", "neutral/units/rat_light_gray_fur.png", "size", {72, 72}},
+	Image = {"file", "neutral/units/rat_light_gray_fur_short_tail.png", "size", {72, 72}},
 	Animations = "animations-rat", Icon = "icon-adelobasileus",
 	NeutralMinimapColor = {192, 192, 192},
 	Speed = 8,

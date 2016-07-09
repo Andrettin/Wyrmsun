@@ -27,6 +27,8 @@
 
 -- Note: When setting which species evolves to which, keep in mind that species should only evolve to those of a later period; only set two species in the same era to evolve into one another if you have good evidence that that happened historically
 
+-- Note: When assigning species to fictional worlds, it is best to keep all species of the same genus in a single world.
+
 DefineSpeciesPhylum("chordata", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=158852
 	Name = "Chordata",
 	Kingdom = "animalia",

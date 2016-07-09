@@ -30,11 +30,81 @@ DefineSpeciesFamily("draconidae", {
 	Order = "saurischia"
 })
 
-DefineSpecies("dragon", {
-	Name = "Dragon",
+DefineSpecies("black-dragon", {
+	Name = "Black Dragon",
 	Family = "draconidae",
-	Homeworld = "Alfheim",
-	ChildUpgrade = "upgrade-child"
+	Genus = "draco", -- "dragon" in Latin
+	Species = "nigrans", -- "black" in Latin
+	Family = "draconidae",
+	Homeworld = "Jotunheim",
+	EvolvesFrom = {"tyrannosaurus-rex"}, -- seems sensible, given how the Tyrannosaurus rex has dragon-like features, so it could be an ancestor to mythical dragons
+	ChildUpgrade = "upgrade-wyrm-child"
+})
+
+DefineSpecies("blue-dragon", {
+	Name = "Blue Dragon",
+	Family = "draconidae",
+	Genus = "draco", -- "dragon" in Latin
+	Species = "caeruleus", -- "blue" in Latin
+	Family = "draconidae",
+	Homeworld = "Jotunheim",
+	EvolvesFrom = {"tyrannosaurus-rex"}, -- seems sensible, given how the Tyrannosaurus rex has dragon-like features, so it could be an ancestor to mythical dragons
+	ChildUpgrade = "upgrade-wyrm-child"
+})
+
+DefineSpecies("brass-dragon", {
+	Name = "Brass Dragon",
+	Family = "draconidae",
+	Genus = "draco", -- "dragon" in Latin
+	Species = "orichalcinus", -- "brass" in Latin
+	Family = "draconidae",
+	Homeworld = "Jotunheim",
+	EvolvesFrom = {"tyrannosaurus-rex"}, -- seems sensible, given how the Tyrannosaurus rex has dragon-like features, so it could be an ancestor to mythical dragons
+	ChildUpgrade = "upgrade-wyrm-child"
+})
+
+DefineSpecies("bronze-dragon", {
+	Name = "Bronze Dragon",
+	Family = "draconidae",
+	Genus = "draco", -- "dragon" in Latin
+	Species = "aeneolus", -- "bronze" in Latin
+	Family = "draconidae",
+	Homeworld = "Jotunheim",
+	EvolvesFrom = {"tyrannosaurus-rex"}, -- seems sensible, given how the Tyrannosaurus rex has dragon-like features, so it could be an ancestor to mythical dragons
+	ChildUpgrade = "upgrade-wyrm-child"
+})
+
+DefineSpecies("copper-dragon", {
+	Name = "Copper Dragon",
+	Family = "draconidae",
+	Genus = "draco", -- "dragon" in Latin
+	Species = "chalceus", -- "copper" in Latin
+	Family = "draconidae",
+	Homeworld = "Jotunheim",
+	EvolvesFrom = {"tyrannosaurus-rex"}, -- seems sensible, given how the Tyrannosaurus rex has dragon-like features, so it could be an ancestor to mythical dragons
+	ChildUpgrade = "upgrade-wyrm-child"
+})
+
+DefineSpecies("gold-dragon", {
+	Name = "Gold Dragon",
+	Family = "draconidae",
+	Genus = "draco", -- "dragon" in Latin
+	Species = "aureus", -- "gold" in Latin
+	Family = "draconidae",
+	Homeworld = "Jotunheim",
+	EvolvesFrom = {"tyrannosaurus-rex"}, -- seems sensible, given how the Tyrannosaurus rex has dragon-like features, so it could be an ancestor to mythical dragons
+	ChildUpgrade = "upgrade-wyrm-child"
+})
+
+DefineSpecies("green-dragon", {
+	Name = "Green Dragon",
+	Family = "draconidae",
+	Genus = "draco", -- "dragon" in Latin
+	Species = "viridis", -- "green" in Latin
+	Family = "draconidae",
+	Homeworld = "Jotunheim",
+	EvolvesFrom = {"tyrannosaurus-rex"}, -- seems sensible, given how the Tyrannosaurus rex has dragon-like features, so it could be an ancestor to mythical dragons
+	ChildUpgrade = "upgrade-wyrm-child"
 })
 
 DefineSpecies("kobold", {
@@ -42,9 +112,42 @@ DefineSpecies("kobold", {
 	Family = "draconidae",
 	Species = "sapiens",
 	Homeworld = "Nidavellir",
-	EvolvesFrom = {"tyrannosaurus-rex"}, -- seems sensible, given how the Tyrannosaurus rex has dragon-like features, so it could be an ancestors to mythical dragons
+	EvolvesFrom = {"tyrannosaurus-rex"}, -- seems sensible, given how the Tyrannosaurus rex has dragon-like features, so it could be an ancestor to mythical dragons
 	Sapient = true
 	-- Kobolds believe that they are descendants of wyrms, but in truth they share a common ancestor
+})
+
+DefineSpecies("red-dragon", {
+	Name = "Red Dragon",
+	Family = "draconidae",
+	Genus = "draco", -- "dragon" in Latin
+	Species = "rubeus", -- "red" in Latin
+	Family = "draconidae",
+	Homeworld = "Jotunheim",
+	EvolvesFrom = {"tyrannosaurus-rex"}, -- seems sensible, given how the Tyrannosaurus rex has dragon-like features, so it could be an ancestor to mythical dragons
+	ChildUpgrade = "upgrade-wyrm-child"
+})
+
+DefineSpecies("silver-dragon", {
+	Name = "Silver Dragon",
+	Family = "draconidae",
+	Genus = "draco", -- "dragon" in Latin
+	Species = "argenteus", -- "silver" in Latin
+	Family = "draconidae",
+	Homeworld = "Jotunheim",
+	EvolvesFrom = {"tyrannosaurus-rex"}, -- seems sensible, given how the Tyrannosaurus rex has dragon-like features, so it could be an ancestor to mythical dragons
+	ChildUpgrade = "upgrade-wyrm-child"
+})
+
+DefineSpecies("white-dragon", {
+	Name = "White Dragon",
+	Family = "draconidae",
+	Genus = "draco", -- "dragon" in Latin
+	Species = "albus", -- "white" in Latin
+	Family = "draconidae",
+	Homeworld = "Jotunheim",
+	EvolvesFrom = {"tyrannosaurus-rex"}, -- seems sensible, given how the Tyrannosaurus rex has dragon-like features, so it could be an ancestor to mythical dragons
+	ChildUpgrade = "upgrade-wyrm-child"
 })
 
 DefineSpecies("wyrm", {
@@ -52,7 +155,7 @@ DefineSpecies("wyrm", {
 	Family = "draconidae",
 	Homeworld = "Nidavellir",
 	Environments = {"swamp", "cave"},
-	EvolvesFrom = {"tyrannosaurus-rex"}, -- seems sensible, given how the Tyrannosaurus rex has dragon-like features, so it could be an ancestors to mythical dragons
+	EvolvesFrom = {"tyrannosaurus-rex"}, -- seems sensible, given how the Tyrannosaurus rex has dragon-like features, so it could be an ancestor to mythical dragons
 	ChildUpgrade = "upgrade-wyrm-child"
 })
 

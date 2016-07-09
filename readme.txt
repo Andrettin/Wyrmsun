@@ -66,6 +66,9 @@ https://github.com/Andrettin/Wyrmsun
 - Added Goblin Dock (graphics by Jinn).
 - Added Latin Stables (graphics by Wildfire Games and Jinn).
 
+* Heroes
+- Fixed issue which prevented a Schutze hero from being created.
+
 * Items
 - Added Book item (icon by Mrmo Tarius); literary works contained in books will increase their respective Knowledge sphere by 3 rather than 1.
 - Added Book of Retraining, which allows a character to repick their abilities.

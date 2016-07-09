@@ -173,14 +173,17 @@ function CustomHeroCreationMenu(world, quest_menu)
 			elseif (IsNameValidForCustomHero(hero_name:getText(), hero_family_name:getText()) == false) then
 				GenericDialog("Error", "The custom hero's name is invalid.")
 			else
-				DefineCustomHero(hero_full_name, {
+				local hero_data = {
 					Name = hero_name:getText(),
 					FamilyName = hero_family_name:getText(),
 					Civilization = string.lower(hero_civilization_list[hero_civilization:getSelected() + 1]),
 					Type = hero_class_ident_list[hero_class:getSelected() + 1],
 					Trait = trait_ident_list[trait:getSelected() + 1],
-					HairVariation = string.lower(string.gsub(variation_list[variation:getSelected() + 1], " ", "-"))
-				})
+				}
+				if (table.getn(variation_list) > 0) then
+					hero_data.HairVariation = string.lower(string.gsub(variation_list[variation:getSelected() + 1], " ", "-"))
+				end
+				DefineCustomHero(hero_full_name, hero_data)
 				SaveCustomHero(hero_full_name)
 				menu:stop()
 				quest_menu:stop()
