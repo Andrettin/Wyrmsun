@@ -333,13 +333,11 @@ DefineButton( { Pos = 9, Level = 1, Icon = "icon-leadership",
 	}
 } )
 
---[[
 DefineButton( { Pos = 1, Level = 1, Icon = "icon-healing",
 	Action = "learn-ability", Value = "upgrade-healing",
 	Key = "h", Hint = _("Learn ~!Healing"), Popup = "popup-commands",
 	ForUnit = {"unit-dwarven-witness"}
 })
---]]
 
 DefineButton( { Pos = 16, Level = 1, Icon = "icon-cancel",
 	Action = "button", Value = 0,

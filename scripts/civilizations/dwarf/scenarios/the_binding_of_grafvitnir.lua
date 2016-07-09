@@ -45,6 +45,14 @@ if (LoadedGame == false) then
 		unit = CreateUnit("unit-dwarven-axefighter", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 		unit = CreateUnit("unit-dwarven-scout", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
 		unit = CreateUnit("unit-dwarven-scout", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		unit = CreateUnit("unit-dwarven-witness", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+		IncreaseUnitLevel(unit, 1)
+		AcquireAbility(unit, "upgrade-healing")
+		if (GameSettings.Difficulty == 1) then -- give the player a second healer on easy difficulty
+			unit = CreateUnit("unit-dwarven-witness", 0, {Players[0].StartPos.x, Players[0].StartPos.y})
+			IncreaseUnitLevel(unit, 1)
+			AcquireAbility(unit, "upgrade-healing")
+		end
 	elseif (GrandStrategyEventMap) then
 		CreateProvinceUnits("Svarinshaug", 0, 1, false, true)
 		CreateProvinceCustomHero("Svarinshaug", 0)
@@ -61,13 +69,13 @@ if (LoadedGame == false) then
 	
 	-- Grafvitnir and his kobold defenders
 	if (GameSettings.Difficulty == 1) then
-		CreateCreeps(1, "unit-kobold-footpad", 16, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
+		CreateCreeps(1, "unit-kobold-footpad", 18, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
 	elseif (GameSettings.Difficulty == 2) then
-		CreateCreeps(1, "unit-kobold-footpad", 32, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
+		CreateCreeps(1, "unit-kobold-footpad", 36, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
 	elseif (GameSettings.Difficulty == 3) then
-		CreateCreeps(1, "unit-kobold-footpad", 48, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
+		CreateCreeps(1, "unit-kobold-footpad", 54, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
 	elseif (GameSettings.Difficulty == 4) then
-		CreateCreeps(1, "unit-kobold-footpad", 64, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
+		CreateCreeps(1, "unit-kobold-footpad", 72, 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
 	end
 	unit = CreateUnit("unit-wyrm", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
 	SetUnitVariable(unit, "Name", "Grafvitnir")
@@ -78,7 +86,11 @@ if (LoadedGame == false) then
 	SetUnitVariable(unit, "Active", false)
 	unit = CreateUnit("unit-kobold-footpad", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
 	SetUnitVariable(unit, "Active", false)
+	unit = CreateUnit("unit-kobold-footpad", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+	SetUnitVariable(unit, "Active", false)
 	if (GameSettings.Difficulty >= 2) then
+		unit = CreateUnit("unit-kobold-footpad", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
+		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-kobold-footpad", 1, {Players[1].StartPos.x, Players[1].StartPos.y})
 		SetUnitVariable(unit, "Active", false)
 	end

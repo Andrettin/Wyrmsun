@@ -61,6 +61,9 @@ https://github.com/Andrettin/Wyrmsun
 - 2.3.1
 -----------------------------------------------------------------------
 
+* Abilities
+- Dwarven Witnesses can now learn Healing when leveling up.
+
 * Buildings
 - Fixed issue which caused buying potions from temples to be queued while a priest was being trained, instead of happening immediately.
 - Added Goblin Dock (graphics by Jinn).
@@ -83,7 +86,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Quest
 - The Mercenary Camp is no longer present in The Binding of Graftvitnir quest, as the player couldn't hire from it anyway (since farms can't be be built during the mission).
-- Decreased the quantity of enemies in The Binding of Grafvitnir quest, and decreased the amount of kobolds guarding Grafvitnir.
+- The player now starts with a dwarven Witness who can heal in The Binding of Grafvitnir quest. On easy difficulty the player gets two healers instead.
 - Fixed issue which prevented the Hills of the Shorbear Clan mission from being completed.
 
 * Units
