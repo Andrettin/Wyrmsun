@@ -64,6 +64,14 @@ https://github.com/Andrettin/Wyrmsun
 * Editor
 - Fixed issue which caused certain custom units to be transformed into pre-existing ones when the map starts.
 
+* Quests
+- Goblin Barbarians and Warlords are now present in the Caverns of Flame quest.
+
+* Units
+- Added Goblin Barbarian (upgrade of the Swordsman) (icon by Jesse Crider, modified from b_o's and Leo's Goblin Swordsman icon).
+- Added Goblin Warlord (upgrade of the Barbarian) (icon by Jesse Crider).
+- Added Goblin Shadowstalker (upgrade of the Headhunter) (icon by Jesse Crider, modified from Jinn's Goblin Headhunter icon).
+
 -----------------------------------------------------------------------
 - 2.3.1
 -----------------------------------------------------------------------

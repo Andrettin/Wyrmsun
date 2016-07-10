@@ -412,8 +412,12 @@ Jesse Crider:
 /graphics/gnome/icons/derro_thug.png (modified from Jinn's Gnomish Recruit icon) (licensed under the CC0)
 /graphics/gnome/icons/derro_worker.png (licensed under the CC0)
 /graphics/gnome/icons/derro_writing.png (licensed under the CC0)
+/graphics/goblin/icons/barbarian.png (modified from b_o's and Leo's Goblin Swordsman icon) (licensed under the CC0)
 /graphics/goblin/icons/coinage.png (the icon by Jinn was based on Jesse Crider's Goblin coin design) (licensed under the CC0)
 /graphics/goblin/icons/magnate.png (the icon by Jinn was based on Jesse Crider's Goblin magnate design) (licensed under the CC0)
+/graphics/goblin/icons/militia.png (modified from Jinn's Goblin Worker icon) (licensed under the CC0)
+/graphics/goblin/icons/shadowstalker.png (modified from Jinn's Goblin Headhunter icon) (licensed under the CC0)
+/graphics/goblin/icons/warlord.png (licensed under the CC0)
 
 João Victor G. Costa (Jinn):
 /graphics/celt/buildings/farm.png (licensed under the CC0)

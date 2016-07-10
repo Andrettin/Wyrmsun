@@ -90,7 +90,7 @@ DefineUnitType("unit-dwarven-miner", { Name = _("Miner"),
 	}
 } )
 
-DefineUnitType("unit-dwarven-militia", { Name = _("Militia"),
+DefineUnitType("unit-dwarven-militia", {
 	Parent = "unit-template-militia",
 	Civilization = "dwarf",
 	Description = _("When enemies approach, dwarven miners pick up arms from the nearest storage center in defense of their homelands."),
@@ -242,7 +242,8 @@ DefineUnitType("unit-dwarven-axefighter", { Name = _("Axefighter"),
 	}
 } )
 
-DefineUnitType("unit-dwarven-steelclad", { Name = _("Steelclad"),
+DefineUnitType("unit-dwarven-steelclad", {
+	Name = _("Steelclad"),
 	Parent = "unit-template-veteran-infantry",
 	Civilization = "dwarf",
 	Description = _("The more experienced dwarven steelclad fighters wear heavy chain mail and plate armor, for which they are rightly famous."),
@@ -266,6 +267,7 @@ DefineUnitType("unit-dwarven-steelclad", { Name = _("Steelclad"),
 	},
 	Costs = {"time", 90, "gold", 825, "lumber", 75},
 	Armor = 4,
+	Corpse = "unit-dwarven-dead-body",
 	WeaponClasses = {"axe", "mace"},
 	HackDamage = true,
 	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-round-shield", "unit-brising-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
@@ -366,7 +368,8 @@ DefineUnitType("unit-dwarven-steelclad", { Name = _("Steelclad"),
 	}
 })
 
-DefineUnitType("unit-dwarven-thane", { Name = _("Stonelord"),
+DefineUnitType("unit-dwarven-thane", {
+	Name = _("Stonelord"),
 	Parent = "unit-template-heroic-infantry",
 	Civilization = "dwarf",
 	Description = _("Clad in shining armor, these dwarves look like kings from under the mountains. They wield the axe with masterful skill, and though slow on their feet, these dwarves are a testament to the prowess of their kin. Stonelords can yield varied political power, ranging from local chiefs to rulers of realms. One of the first stonelords was Modsognir, the legendary chieftain who led his tribe against the perils of Svarinshaug."),

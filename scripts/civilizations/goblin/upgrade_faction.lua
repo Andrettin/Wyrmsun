@@ -48,7 +48,7 @@ DefineModifier("upgrade-sigre-tribe-faction",
 	{"Accuracy", 1},
 	{"HitPoints", -5},
 	{"Points", 10},
-	{"apply-to", "unit-goblin-archer"}, {"apply-to", "unit-goblin-headhunter"}
+	{"apply-to", "unit-goblin-archer"}, {"apply-to", "unit-goblin-headhunter"}, {"apply-to", "unit-goblin-shadowstalker"}
 )
 
 DefineModifier("upgrade-khag-tribe-faction",

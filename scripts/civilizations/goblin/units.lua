@@ -31,7 +31,8 @@
 --	NOTE: Save can generate this table.
 --
 
-DefineUnitType("unit-goblin-worker", { Name = _("Worker"),
+DefineUnitType("unit-goblin-worker", {
+	Name = _("Worker"),
 	Parent = "unit-template-worker",
 	Civilization = "goblin",
 	Description = _("Goblin workers do not live an enviable life. Those that have the opportunity seek to become warriors instead, a position in which they can obtain much better food and everyday commodities by raiding."),
@@ -102,6 +103,42 @@ DefineUnitType("unit-goblin-worker", { Name = _("Worker"),
 	}
 } )
 
+DefineUnitType("unit-goblin-militia", {
+	Parent = "unit-template-militia",
+	Civilization = "goblin",
+	Description = _("Poorly-equipped and badly-trained, goblin militia are the last line of defense against enemy invasions."),
+	Image = {"file", "goblin/units/goblin_worker.png", "size", {72, 72}},
+	Animations = "animations-gnomish-worker", Icon = "icon-goblin-militia",
+	DefaultEquipment = {
+		{"boots", "unit-boots"}
+	},
+	DaySightRangeBonus = -1,
+	NightSightRangeBonus = 1,
+	Corpse = "unit-goblin-dead-body",
+	WeaponClasses = {"sword"},
+	HackDamage = true,
+	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-short-sword", "unit-broad-sword", "unit-boots", "unit-cheese"},
+	Variations = {
+		{
+			"variation-id", "bald"
+		},
+		{
+			"variation-id", "spiky-hair",
+			"file", "goblin/units/goblin_worker_spiky_hair.png"
+		}
+	},
+	Sounds = {
+		"selected", "basic-goblin-voices-selected-group",
+		"acknowledge", "basic-goblin-voices-acknowledge",
+		"attack", "basic-goblin-voices-attack",
+		"ready", "goblin-worker-ready",
+		"help", "basic-goblin-voices-help",
+		"dead", "basic-goblin-voices-dead",
+		"hit", "sword-attack",
+		"miss", "attack-miss"
+	}
+} )
+
 DefineUnitType("unit-goblin-magnate", { Name = _("Magnate"),
 	Parent = "unit-template-heroic-merchant",
 	Civilization = "goblin",
@@ -164,7 +201,8 @@ DefineUnitType("unit-goblin-thief", { Name = _("Thief"),
 	}
 } )
 
-DefineUnitType("unit-goblin-swordsman", { Name = _("Swordsman"),
+DefineUnitType("unit-goblin-swordsman", {
+	Name = _("Swordsman"),
 	Parent = "unit-template-infantry",
 	Civilization = "goblin",
 	Image = {"file", "goblin/units/goblin_swordsman.png", "size", {72, 72}},
@@ -188,6 +226,77 @@ DefineUnitType("unit-goblin-swordsman", { Name = _("Swordsman"),
 	ButtonHint = _("Train ~!Swordsman"),
 	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	DropAffixes = {"upgrade-item-prefix-penetrating", "upgrade-item-prefix-vicious", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-the-snigill", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-trickery"}, -- allow more magic enchantments than normal to compensate for the unit not being able to upgrade
+	Corpse = "unit-goblin-dead-body",
+	Sounds = {
+		"selected", "basic-goblin-voices-selected-group",
+		"acknowledge", "basic-goblin-voices-acknowledge",
+		"attack", "basic-goblin-voices-attack",
+--		"ready", "goblin-impaler-ready",
+		"help", "basic-goblin-voices-help",
+		"dead", "basic-goblin-voices-dead",
+		"hit", "sword-attack",
+		"miss", "attack-miss"
+	}
+} )
+
+DefineUnitType("unit-goblin-barbarian", {
+	Name = _("Barbarian"),
+	Parent = "unit-template-veteran-infantry",
+	Civilization = "goblin",
+	Description = _("Goblin barbarians are savage warriors, who often partake in raids against dwarves, gnomes or rival tribes. Combining skilled swordsmanship with a lust for battle, they are dangerous foes."),
+	Image = {"file", "goblin/units/goblin_swordsman.png", "size", {72, 72}},
+	Animations = "animations-goblin-swordsman", Icon = "icon-goblin-barbarian",
+	DefaultEquipment = {
+		{"weapon", "unit-short-sword"},
+		{"shield", "unit-round-shield"},
+		{"boots", "unit-boots"}
+	},
+	HitPoints = 65,
+	Accuracy = 12,
+	Evasion = 12,
+	Speed = 11,
+	DaySightRangeBonus = -1,
+	NightSightRangeBonus = 1,
+	WeaponClasses = {"sword", "thrusting-sword"},
+	HackDamage = true,
+	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	DropAffixes = {"upgrade-item-prefix-penetrating", "upgrade-item-prefix-vicious", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-the-snigill", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-trickery"},
+	Corpse = "unit-goblin-dead-body",
+	Sounds = {
+		"selected", "basic-goblin-voices-selected-group",
+		"acknowledge", "basic-goblin-voices-acknowledge",
+		"attack", "basic-goblin-voices-attack",
+--		"ready", "goblin-impaler-ready",
+		"help", "basic-goblin-voices-help",
+		"dead", "basic-goblin-voices-dead",
+		"hit", "sword-attack",
+		"miss", "attack-miss"
+	}
+})
+
+DefineUnitType("unit-goblin-warlord", {
+	Name = _("Warlord"),
+	Parent = "unit-template-heroic-infantry",
+	Civilization = "goblin",
+	Description = _("Goblin warlords lead their tribes with savage bloodlust into battle. These fearsome warriors seek to emulate the goblin deity, Gathaarl, and his love for combat."),
+	Image = {"file", "goblin/units/goblin_swordsman.png", "size", {72, 72}},
+	Animations = "animations-goblin-swordsman", Icon = "icon-goblin-warlord",
+	DefaultEquipment = {
+		{"weapon", "unit-short-sword"},
+		{"shield", "unit-round-shield"},
+		{"boots", "unit-boots"}
+	},
+	Armor = 4,
+	HitPoints = 80,
+	Accuracy = 12,
+	Evasion = 12,
+	Speed = 11,
+	DaySightRangeBonus = -1,
+	NightSightRangeBonus = 1,
+	WeaponClasses = {"sword", "thrusting-sword"},
+	HackDamage = true,
+	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	DropAffixes = {"upgrade-item-prefix-penetrating", "upgrade-item-prefix-vicious", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-the-snigill", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-trickery"},
 	Corpse = "unit-goblin-dead-body",
 	Sounds = {
 		"selected", "basic-goblin-voices-selected-group",
@@ -270,7 +379,8 @@ DefineUnitType("unit-goblin-archer", { Name = _("Archer"),
 	}
 } )
 
-DefineUnitType("unit-goblin-headhunter", { Name = _("Headhunter"),
+DefineUnitType("unit-goblin-headhunter", {
+	Name = _("Headhunter"),
 	Parent = "unit-template-veteran-shooter",
 	Civilization = "goblin",
 	Description = _("Goblin headhunters are lethally accurate assassins, who revel in the suffering of their victims."),
@@ -282,6 +392,42 @@ DefineUnitType("unit-goblin-headhunter", { Name = _("Headhunter"),
 	},
 	HitPoints = 40,
 	Accuracy = 13,
+	Evasion = 12,
+	Speed = 11,
+	DaySightRangeBonus = -1,
+	NightSightRangeBonus = 1,
+	Missile = "missile-goblin-arrow",
+	FireMissile = "missile-flaming-goblin-arrow",
+	Corpse = "unit-goblin-dead-body",
+	WeaponClasses = {"bow"},
+	PierceDamage = true,
+	AiDrops = {"unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	DropAffixes = {"upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-the-snigill", "upgrade-item-suffix-of-trickery"},
+	Sounds = {
+		"selected", "basic-goblin-voices-selected-group",
+		"acknowledge", "basic-goblin-voices-acknowledge",
+		"attack", "basic-goblin-voices-attack",
+		"ready", "goblin-archer-ready",
+		"help", "basic-goblin-voices-help",
+		"dead", "basic-goblin-voices-dead",
+		"hit", "dagger-attack",
+		"miss", "attack-miss"
+	}
+} )
+
+DefineUnitType("unit-goblin-shadowstalker", {
+	Name = _("Shadowstalker"),
+	Parent = "unit-template-heroic-shooter",
+	Civilization = "goblin",
+	Description = _("Shadowstalkers are the most accomplished and deadly of goblin archers. Swift and stealthy, they finish their targets with sniping precision."),
+	Image = {"file", "goblin/units/goblin_archer.png", "size", {72, 72}},
+	Animations = "animations-goblin-archer", Icon = "icon-goblin-shadowstalker",
+	DefaultEquipment = {
+		{"boots", "unit-boots"},
+		{"arrows", "unit-arrows"}
+	},
+	HitPoints = 50,
+	Accuracy = 14,
 	Evasion = 12,
 	Speed = 11,
 	DaySightRangeBonus = -1,

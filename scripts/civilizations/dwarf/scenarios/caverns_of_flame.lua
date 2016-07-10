@@ -531,7 +531,7 @@ AddTrigger(
 			local uncount = 0
 			uncount = GetUnits(GetFactionPlayer("Norlund Clan"))
 			for unit1 = 1,table.getn(uncount) do 
-				local unit_quantity = GetNumUnitsAt(-1, "unit-goblin-swordsman", {GetUnitVariable(uncount[unit1],"PosX") - 4, GetUnitVariable(uncount[unit1],"PosY") - 4}, {GetUnitVariable(uncount[unit1],"PosX") + 4, GetUnitVariable(uncount[unit1],"PosY") + 4})
+				local unit_quantity = GetNumUnitsAt(-1, "unit-goblin-swordsman", {GetUnitVariable(uncount[unit1],"PosX") - 4, GetUnitVariable(uncount[unit1],"PosY") - 4}, {GetUnitVariable(uncount[unit1],"PosX") + 4, GetUnitVariable(uncount[unit1],"PosY") + 4}) + GetNumUnitsAt(-1, "unit-goblin-barbarian", {GetUnitVariable(uncount[unit1],"PosX") - 4, GetUnitVariable(uncount[unit1],"PosY") - 4}, {GetUnitVariable(uncount[unit1],"PosX") + 4, GetUnitVariable(uncount[unit1],"PosY") + 4}) + GetNumUnitsAt(-1, "unit-goblin-warlord", {GetUnitVariable(uncount[unit1],"PosX") - 4, GetUnitVariable(uncount[unit1],"PosY") - 4}, {GetUnitVariable(uncount[unit1],"PosX") + 4, GetUnitVariable(uncount[unit1],"PosY") + 4})
 				if (unit_quantity > 0 and GetNumUnitsAt(-1, "unit-glyph", {GetUnitVariable(uncount[unit1],"PosX") - 8, GetUnitVariable(uncount[unit1],"PosY") - 8}, {GetUnitVariable(uncount[unit1],"PosX") + 8, GetUnitVariable(uncount[unit1],"PosY") + 8}) > 0) then
 					player = GetFactionPlayer("Norlund Clan")
 					return true

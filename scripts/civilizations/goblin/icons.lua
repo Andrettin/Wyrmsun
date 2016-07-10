@@ -92,6 +92,12 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-goblin-militia",
+	Size = {46, 38},
+	File = "goblin/icons/militia.png"
+})
+
+DefineIcon({
 	Name = "icon-goblin-magnate",
 	Size = {46, 38},
 	File = "goblin/icons/magnate.png"
@@ -101,6 +107,18 @@ DefineIcon({
 	Name = "icon-goblin-swordsman",
 	Size = {46, 38},
 	File = "goblin/icons/swordsman.png"
+})
+
+DefineIcon({
+	Name = "icon-goblin-barbarian",
+	Size = {46, 38},
+	File = "goblin/icons/barbarian.png"
+})
+
+DefineIcon({
+	Name = "icon-goblin-warlord",
+	Size = {46, 38},
+	File = "goblin/icons/warlord.png"
 })
 
 DefineIcon({
@@ -119,6 +137,12 @@ DefineIcon({
 	Name = "icon-goblin-headhunter",
 	Size = {46, 38},
 	File = "goblin/icons/headhunter.png"
+})
+
+DefineIcon({
+	Name = "icon-goblin-shadowstalker",
+	Size = {46, 38},
+	File = "goblin/icons/shadowstalker.png"
 })
 
 DefineIcon({
