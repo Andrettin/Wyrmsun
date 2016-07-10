@@ -1455,6 +1455,7 @@ function EditorCreateUnitType()
 			else
 				local unit_type_definition = {
 					Name = unit_type_name:getText(),
+					Class = "",
 					Mod = Map.Info.Filename
 				}				
 				if (unit_types_list[parent_unit_type:getSelected() + 1] ~= "") then

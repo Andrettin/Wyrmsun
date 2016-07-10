@@ -35,7 +35,7 @@ DebugPrint("Stratagus default config file loading ...\n")
 wyrmsun = {}
 
 wyrmsun.Name = "Wyrmsun"
-wyrmsun.Version = "2.3.1"
+wyrmsun.Version = "2.3.2"
 wyrmsun.Homepage = ""
 wyrmsun.Licence = "GPL 2.0"
 wyrmsun.Copyright = "Copyright (c) 2013-2016 by Andrettin"
@@ -1917,7 +1917,9 @@ local function CompleteMissingValues(table, defaultTable)
 end
 
 wyr = {preferences = {}}
-Load("preferences.lua")
+if (CanAccessFile("preferences.lua")) then
+	Load("preferences.lua")
+end
 local defaultPreferences = {
 	DoubleClickDelayInMs = 300,     --  For the wanted double-click delay (in ms).
 	EffectsEnabled = true,
