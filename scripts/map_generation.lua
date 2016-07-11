@@ -1312,7 +1312,7 @@ function CreateCritters(arg)
 		arg = {}
 	end
 	if (LoadedGame == false) then
-		local critter_number = (Map.Info.MapWidth * Map.Info.MapHeight) / 512
+		local critter_number = (Map.Info.MapWidth * Map.Info.MapHeight) / 256
 		local RandomNumber = 0
 		local RandomX = 0
 		local RandomY = 0
