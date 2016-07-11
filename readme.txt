@@ -80,6 +80,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added Goblin Warlord (upgrade of the Barbarian) (icon by Jesse Crider).
 - Added Goblin Shadowstalker (upgrade of the Headhunter) (icon by Jesse Crider, modified from Jinn's Goblin Headhunter icon).
 - Ordinary enemy units now drop items in non-base-based missions (that is, ones in which no player owns or has ever owned a town hall).
+- Fixed issue which caused unit individual upgrades to not be saved properly in saved games.
 
 -----------------------------------------------------------------------
 - 2.3.1
