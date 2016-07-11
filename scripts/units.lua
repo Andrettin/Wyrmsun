@@ -1630,7 +1630,8 @@ DefineUnitType("unit-gold-coins", { Name = _("Gold Coins"),
 	} 
 } )
 
-DefineUnitType("unit-gold-sack", { Name = _("Gold Sack"),
+DefineUnitType("unit-gold-sack", {
+	Name = _("Gold Sack"),
 	Image = {"file", "neutral/items/gold_sack.png", "size", {16, 14}},
 	Animations = "animations-item", Icon = "icon-gold-sack",
 	NeutralMinimapColor = {255, 255, 0},
