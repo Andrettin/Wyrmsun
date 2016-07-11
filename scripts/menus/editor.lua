@@ -28,6 +28,12 @@ function GetUnitGraphics()
 				table.insert(unit_graphics_list, dirlist[j] .. "units/" .. f)
 			end
 		end
+		if (GetArrayIncludes(ListDirsInDirectory("graphics/" .. dirlist[j]), "items")) then
+			local fileslist = ListFilesInDirectory("graphics/" .. dirlist[j] .. "items/")
+			for i,f in ipairs(fileslist) do
+				table.insert(unit_graphics_list, dirlist[j] .. "items/" .. f)
+			end
+		end
 	end
 	
 	u = 1
@@ -1652,7 +1658,6 @@ function EditUnitTypePropertiesGraphics(unit_type)
 	unit_graphics_label = menu:addLabel(_("Graphics:"), 10, 14 + 36 * 1, Fonts["game"], false)
 	unit_graphics = menu:addDropDown(unit_graphics_list, (sizeX / 2) - 60 - 10, 11 + 36 * 1, function(dd) end)
 	unit_graphics:setSize(236, 20)
-	unit_graphics:setSelected(GetElementIndexFromArray(unit_graphics_list, GetUnitTypeData(unit_type, "Image")) - 1)
 	if (GetUnitTypeData(unit_type, "Image") == "") then
 		unit_graphics:setSelected(0)
 	else

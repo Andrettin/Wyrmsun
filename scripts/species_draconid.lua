@@ -128,6 +128,17 @@ DefineSpecies("red-dragon", {
 	ChildUpgrade = "upgrade-wyrm-child"
 })
 
+DefineSpecies("rust-dragon", {
+	Name = "Rust Dragon",
+	Family = "draconidae",
+	Genus = "draco", -- "dragon" in Latin
+	Species = "ferrugo", -- "brass" in Latin
+	Family = "draconidae",
+	Homeworld = "Jotunheim",
+	EvolvesFrom = {"tyrannosaurus-rex"}, -- seems sensible, given how the Tyrannosaurus rex has dragon-like features, so it could be an ancestor to mythical dragons
+	ChildUpgrade = "upgrade-wyrm-child"
+})
+
 DefineSpecies("silver-dragon", {
 	Name = "Silver Dragon",
 	Family = "draconidae",

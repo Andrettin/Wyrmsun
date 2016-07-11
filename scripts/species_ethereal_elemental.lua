@@ -82,11 +82,6 @@ DefineSpecies("fire-elemental", {
 	Sapient = true
 })
 
-DefineSpecies("phoenix", {
-	Name = "Phoenix"
-	-- Class: Ignis
-})
-
 DefineSpecies("water-elemental", {
 	Name = "Water Elemental",
 	Sapient = true
