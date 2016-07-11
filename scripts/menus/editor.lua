@@ -1539,7 +1539,7 @@ function EditUnitTypeProperties(unit_type)
 		end
 	)
 
-	local training_properties_button = menu:addFullButton(_("~!Training"), "t", (sizeX / 2) - (224 / 2), sizeY - 40 - (36 * 2),
+	local training_properties_button = menu:addFullButton(_("~!Train/Drop"), "t", (sizeX / 2) - (224 / 2), sizeY - 40 - (36 * 2),
 		function()
 			EditUnitTypePropertiesTraining(unit_type)
 		end
@@ -2114,13 +2114,21 @@ function EditUnitTypePropertiesTraining(unit_type)
 
 	local unit_type_list = GetUnitTypes()
 	local trained_unit_type_list = GetUnitTypeData(unit_type, "Trains", Map.Info.Filename)
+	local dropped_unit_type_list = GetUnitTypeData(unit_type, "AiDrops", Map.Info.Filename)
 	
 	local trains
 	local trains_label
 	local trains_checkbox
+	local drops
+	local drops_label
+	local drops_checkbox
   
 	local function TrainedUnitTypeChanged()
 		trains_checkbox:setMarked(GetArrayIncludes(trained_unit_type_list, unit_type_list[trains:getSelected() + 1]))
+	end
+	
+	local function DroppedUnitTypeChanged()
+		drops_checkbox:setMarked(GetArrayIncludes(dropped_unit_type_list, unit_type_list[drops:getSelected() + 1]))
 	end
 	
 	trains_label = menu:addLabel(_("Trains:"), 10, 14 + 36 * 1, Fonts["game"], false)
@@ -2139,7 +2147,24 @@ function EditUnitTypePropertiesTraining(unit_type)
 		end
 	end)
 
+	drops_label = menu:addLabel(_("Drops:"), 10, 14 + 36 * 1, Fonts["game"], false)
+	drops = menu:addDropDown(unit_type_list, (sizeX / 2) - 60 - 10, 11 + 36 * 1, function(dd) DroppedUnitTypeChanged() end)
+	drops:setSize(236 - 19 - 10, 20)
+	drops:setSelected(0)
+	
+	drops_checkbox = menu:addImageCheckBox("", sizeX - 19 - 10, 11 + 36 * 1,
+	function()
+		if (drops_checkbox:isMarked()) then
+			if (GetArrayIncludes(dropped_unit_type_list, unit_type_list[drops:getSelected() + 1]) == false) then
+				table.insert(dropped_unit_type_list, unit_type_list[drops:getSelected() + 1])
+			end
+		else
+			RemoveElementFromArray(dropped_unit_type_list, unit_type_list[drops:getSelected() + 1])
+		end
+	end)
+
 	TrainedUnitTypeChanged()
+	DroppedUnitTypeChanged()
 	
 	menu:addLabel(_("Button Pos:"), 10, 12 + 36 * 2, Fonts["game"], false)
 	local button_pos_value = menu:addTextInputField(GetUnitTypeData(unit_type, "ButtonPos"), (sizeX / 2) - 60 - 10, 11 + 36 * 2, 60)
@@ -2179,6 +2204,9 @@ function EditUnitTypePropertiesTraining(unit_type)
 					if (trained_unit_type_list ~= GetUnitTypeData(unit_type, "Trains")) then
 						SetModTrains(Map.Info.Filename, unit_type, trained_unit_type_list)
 					end
+				end
+				if (dropped_unit_type_list ~= GetUnitTypeData(unit_type, "AiDrops")) then
+					SetModDrops(Map.Info.Filename, unit_type, dropped_unit_type_list)
 				end
 
 				menu:stop()
