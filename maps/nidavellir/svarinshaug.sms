@@ -6,6 +6,7 @@ if (LoadedGame == false) then
 		TreeQuantity = "low",
 		WaterQuantity = "low",
 		RoughLandQuantity = "medium",
+		NoPredators = true,
 		NoFlyingCreeps = true,
 		NoMightyCreeps = true,
 		WorkerQuantity = 3,
