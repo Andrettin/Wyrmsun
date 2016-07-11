@@ -265,6 +265,13 @@ elseif (GrandStrategyEventMap) then
 	unit = CreateUnit("unit-tree-stump", 15, {33, 56})
 end
 
-CreateCritters()
+local arg = {}
+
+if (GetCurrentQuest() == "a-bargain-is-struck") then
+	arg.NoFlyingCreeps = true
+	arg.NoMightyCreeps = true
+end
+
+CreateCritters(arg)
 
 CreateRoamingFog((Map.Info.MapWidth * Map.Info.MapHeight) / 4096)
