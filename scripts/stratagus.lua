@@ -2059,13 +2059,6 @@ Load("scripts/grand_strategy/grand_strategy_events.lua")
 
 Load("scripts/0_ad_equivalencies.lua")
 
-if (CanAccessFile("wyr/heroes.lua")) then -- keep compatibility with how heroes were saved before
-	Load("heroes.lua")
-	SaveHeroes()
-else
-	LoadHeroes() -- load persistent heroes
-end
-
 DebugPrint("... ready!\n")
 
 --Convert0ADMap("maps/The Massacre of Delphi.xml")

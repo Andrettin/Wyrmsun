@@ -1498,6 +1498,14 @@ SetGrabMouse(wyr.preferences.GrabMouse)
 LoadDLCs()
 LoadMods()
 
+-- load heroes after the DLCs and mods, so that they can use mod-specific items
+if (CanAccessFile("wyr/heroes.lua")) then -- keep compatibility with how heroes were saved before
+	Load("heroes.lua")
+	SaveHeroes()
+else
+	LoadHeroes() -- load persistent heroes
+end
+
 if (LanguageCacheOutdated) then
 	GenerateMissingLanguageData() -- generate missing language data after loading mods, so that the function will take language data defined in mods into account
 end

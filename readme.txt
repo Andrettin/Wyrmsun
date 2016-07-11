@@ -64,6 +64,7 @@ https://github.com/Andrettin/Wyrmsun
 * Editor
 - Fixed issue which caused certain custom units to be transformed into pre-existing ones when the map starts.
 - Fixed issue which caused the interface for setting graphics for custom item types to not work.
+- A unit type's drops may now be set through the editor.
 
 * Quests
 - Goblin Barbarians and Warlords are now present in the Caverns of Flame quest.
