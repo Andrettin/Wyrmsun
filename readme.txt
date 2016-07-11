@@ -66,6 +66,9 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed issue which caused the interface for setting graphics for custom item types to not work.
 - A unit type's drops may now be set through the editor.
 
+* Maps
+- Increased quantity of fauna units generated in maps.
+
 * Quests
 - Goblin Barbarians and Warlords are now present in the Caverns of Flame quest.
 
