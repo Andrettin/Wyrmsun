@@ -55,7 +55,7 @@ DefineUnitType("unit-short-sword", { Name = _("Short Sword"),
 	BasicDamage = 0
 } )
 
-DefineUnitType("unit-goblin-broad-sword", {
+DefineUnitType("unit-goblin-short-sword", {
 	Parent = "unit-short-sword",
 	Image = {"file", "teuton/items/long_iron_sword.png", "size", {32, 32}},
 	Icon = "icon-goblin-short-sword"
