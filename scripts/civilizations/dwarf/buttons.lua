@@ -66,7 +66,7 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-broad-axe",
 	Action = "research", Value = "upgrade-dwarven-broad-axe",
 	Allowed = "check-single-research",
 	Key = "a", Hint = _("Research Broad ~!Axe"), Popup = "popup-research",
-	Description = _("+2 Damage for Axefighters, Steelclads, Stonelords and Yale Riders."),
+	Description = _("+2 Damage for Axefighters, Steelclads, Stonelords, Yale Riders and Yale Lords."),
 	ForUnit = {"unit-dwarven-smithy", "unit-brising-smithy"}
 } )
 
@@ -74,7 +74,7 @@ DefineButton( { Pos = 1, Level = 0, Icon = "icon-dwarven-great-axe",
 	Action = "research", Value = "upgrade-dwarven-great-axe",
 	Allowed = "check-single-research",
 	Key = "a", Hint = _("Research Great ~!Axe"), Popup = "popup-research",
-	Description = _("+2 Damage for Axefighters, Steelclads, Stonelords and Yale Riders."),
+	Description = _("+2 Damage for Axefighters, Steelclads, Stonelords, Yale Riders and Yale Lords."),
 	ForUnit = {"unit-dwarven-smithy", "unit-brising-smithy"}
 } )
 

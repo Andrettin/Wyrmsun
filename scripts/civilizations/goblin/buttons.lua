@@ -62,6 +62,22 @@ DefineButton( { Pos = 3, Level = 0, Icon = "icon-catapult-projectile-3",
 
 -- Researches ---------------------------------------------------------
 
+DefineButton( { Pos = 1, Level = 0, Icon = "icon-goblin-broad-sword",
+	Action = "research", Value = "upgrade-goblin-broad-sword",
+	Allowed = "check-single-research",
+	Key = "w", Hint = _("Research Broad S~!word"), Popup = "popup-research",
+	Description = _("+2 Damage for Swordsmen, Barbarians and Warlords."),
+	ForUnit = {"unit-goblin-smithy"}
+} )
+
+DefineButton( { Pos = 1, Level = 0, Icon = "icon-goblin-long-sword",
+	Action = "research", Value = "upgrade-goblin-long-sword",
+	Allowed = "check-single-research",
+	Key = "w", Hint = _("Research Long S~!word"), Popup = "popup-research",
+	Description = _("+2 Damage for Swordsmen, Barbarians and Warlords."),
+	ForUnit = {"unit-goblin-smithy"}
+} )
+
 DefineButton( { Pos = 3, Level = 0, Icon = "icon-catapult-projectile-2",
 	Action = "research", Value = "upgrade-goblin-catapult-projectile-1",
 	Allowed = "check-single-research",

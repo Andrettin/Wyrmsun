@@ -55,6 +55,12 @@ DefineUnitType("unit-short-sword", { Name = _("Short Sword"),
 	BasicDamage = 0
 } )
 
+DefineUnitType("unit-goblin-broad-sword", {
+	Parent = "unit-short-sword",
+	Image = {"file", "teuton/items/long_iron_sword.png", "size", {32, 32}},
+	Icon = "icon-goblin-short-sword"
+} )
+
 DefineUnitType("unit-broad-sword", { Name = _("Broad Sword"),
 	Parent = "unit-template-item",
 	Image = {"file", "germanic/items/broad_bronze_sword.png", "size", {32, 32}},
@@ -64,6 +70,12 @@ DefineUnitType("unit-broad-sword", { Name = _("Broad Sword"),
 		{"stand-ground", "icon-germanic-stand-ground"}
 	},
 	BasicDamage = 2
+} )
+
+DefineUnitType("unit-goblin-broad-sword", {
+	Parent = "unit-broad-sword",
+	Image = {"file", "teuton/items/long_iron_sword.png", "size", {32, 32}},
+	Icon = "icon-goblin-broad-sword"
 } )
 
 DefineUnitType("unit-spatha", { Name = _("Spatha"),
@@ -80,6 +92,11 @@ DefineUnitType("unit-spatha", { Name = _("Spatha"),
 DefineUnitType("unit-frankish-spatha", { Name = _("Frankish Spatha"),
 	Parent = "unit-spatha",
 	Icon = "icon-frankish-spatha"
+} )
+
+DefineUnitType("unit-goblin-long-sword", {
+	Parent = "unit-spatha",
+	Icon = "icon-goblin-long-sword"
 } )
 
 DefineUnitType("unit-thrusting-sword", { Name = _("Thrusting Sword"),

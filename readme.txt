@@ -82,6 +82,9 @@ https://github.com/Andrettin/Wyrmsun
 - Ordinary enemy units now drop items in non-base-based missions (that is, ones in which no player owns or has ever owned a town hall).
 - Fixed issue which caused unit individual upgrades to not be saved properly in saved games.
 
+* Upgrades
+- Added goblin Broad Sword and Long Sword upgrades (icons by Jinn).
+
 -----------------------------------------------------------------------
 - 2.3.1
 -----------------------------------------------------------------------

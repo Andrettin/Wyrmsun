@@ -238,9 +238,9 @@ DefineCivilization("goblin", {
 	ButtonIcons = {
 		"move", "icon-dwarven-boots",
 		"stop", "icon-dwarven-shield-1",
-		"attack", "icon-spear",
+		"attack", "icon-goblin-short-sword",
 		"patrol", "icon-goblin-patrol-land",
-		"stand-ground", "icon-dwarven-stand-ground",
+		"stand-ground", "icon-germanic-stand-ground",
 		"return-goods", "icon-goblin-return-goods"
 	},
 	UIFillers = {

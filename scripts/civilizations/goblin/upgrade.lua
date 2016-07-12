@@ -25,6 +25,22 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineUpgrade("upgrade-goblin-broad-sword", {
+	Parent = "upgrade-broad-sword",
+	Icon = "icon-goblin-broad-sword",
+	Civilization = "goblin",
+	Description = _("Made for swift and lethal attacks, goblin broad swords leave bitter memories in raided settlements.\n\nEffect: +2 Damage for Swordsmen, Barbarians and Warlords."),
+	Item = "unit-goblin-broad-sword"
+})
+
+DefineUpgrade("upgrade-goblin-long-sword", {
+	Parent = "upgrade-long-sword",
+	Icon = "icon-goblin-long-sword",
+	Civilization = "goblin",
+	Description = _("There are few sights more terrifying for dwarven frontier settlements than a charging goblin army entirely equipped with these deadly long swords.\n\nEffect: +2 Damage for Swordsmen, Barbarians and Warlords."),
+	Item = "unit-goblin-long-sword"
+})
+
 DefineUpgrade("upgrade-goblin-long-spear", {
 	Parent = "upgrade-long-spear",
 	Civilization = "goblin",
@@ -90,6 +106,20 @@ DefineUpgrade("upgrade-goblin-alchemy", {
 	Description = _("Once writing had been developed, observations on the basic substances that form the world could be noted down and more easily passed on. This led to the appearance of the discipline of alchemy, mixing esoteric, scientific and philosophical postulations about the elements from which the material world is composed.\n\nEffect: +1 Fire Damage for Archers and Headhunters, +5 Fire Damage for War Machines."),
 	TechnologyPointCost = 1
 })
+
+DefineModifier("upgrade-goblin-broad-sword",
+	{"BasicDamage", 2},
+	{"Points", 10},
+	{"apply-to", "unit-goblin-militia"}, 
+	{"apply-to", "unit-goblin-swordsman"}, {"apply-to", "unit-goblin-barbarian"}, {"apply-to", "unit-goblin-warlord"}
+)
+
+DefineModifier("upgrade-goblin-long-sword",
+	{"BasicDamage", 2},
+	{"Points", 10},
+	{"apply-to", "unit-goblin-militia"}, 
+	{"apply-to", "unit-goblin-swordsman"}, {"apply-to", "unit-goblin-barbarian"}, {"apply-to", "unit-goblin-warlord"}
+)
 
 DefineModifier("upgrade-goblin-long-spear",
 	{"BasicDamage", 2},
@@ -164,7 +194,12 @@ DefineModifier("upgrade-goblin-alchemy",
 )
 
 DefineDependency("unit-goblin-archer",
-	{"unit-goblin-lumber-mill"})
+	{"unit-goblin-lumber-mill"}
+)
+
+DefineDependency("upgrade-goblin-long-sword",
+	{"upgrade-goblin-broad-sword"}
+)
 
 DefineDependency("unit-goblin-guard-tower",
 	{"unit-goblin-lumber-mill", "upgrade-goblin-masonry"}

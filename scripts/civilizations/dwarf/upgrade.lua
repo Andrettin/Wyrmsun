@@ -29,7 +29,7 @@ DefineUpgrade("upgrade-dwarven-broad-axe", {
 	Parent = "upgrade-broad-axe",
 	Icon = "icon-dwarven-broad-axe",
 	Civilization = "dwarf",
-	Description = _("Dwarven smiths work hard at their craft to improve soldiers' weapons, and with the perfecting of smithing techniques the broadening of axe blades becomes possible.\n\nEffect: +2 Damage for Axefighters, Steelclads, Stonelords and Yale Riders."),
+	Description = _("Dwarven smiths work hard at their craft to improve soldiers' weapons, and with the perfecting of smithing techniques the broadening of axe blades becomes possible.\n\nEffect: +2 Damage for Axefighters, Steelclads, Stonelords, Yale Riders and Yale Lords."),
 	Item = "unit-broad-axe"
 })
 
@@ -37,7 +37,7 @@ DefineUpgrade("upgrade-dwarven-great-axe", {
 	Parent = "upgrade-great-axe",
 	Icon = "icon-dwarven-great-axe",
 	Civilization = "dwarf",
-	Description = _("Further innovations in dwarven smithing allow axes to be made sturdier, and often to carry double blades.\n\nEffect: +2 Damage for Axefighters, Steelclads, Stonelords and Yale Riders."),
+	Description = _("Further innovations in dwarven smithing allow axes to be made sturdier, and often to carry double blades.\n\nEffect: +2 Damage for Axefighters, Steelclads, Stonelords, Yale Riders and Yale Lords."),
 	Item = "unit-great-axe"
 })
 

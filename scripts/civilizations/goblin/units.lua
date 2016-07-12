@@ -117,7 +117,7 @@ DefineUnitType("unit-goblin-militia", {
 	Corpse = "unit-goblin-dead-body",
 	WeaponClasses = {"sword"},
 	HackDamage = true,
-	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-short-sword", "unit-broad-sword", "unit-boots", "unit-cheese"},
+	AiDrops = {"unit-hammer", "unit-mining-pick", "unit-goblin-short-sword", "unit-goblin-broad-sword", "unit-goblin-long-sword", "unit-boots", "unit-cheese"},
 	Variations = {
 		{
 			"variation-id", "bald"
@@ -209,7 +209,7 @@ DefineUnitType("unit-goblin-swordsman", {
 	Description = _("Goblin swordsmen are amongst the most savage of their kind. With weapons in hand, they gleefully hack through their enemies' flesh."),
 	Animations = "animations-goblin-swordsman", Icon = "icon-goblin-swordsman",
 	DefaultEquipment = {
-		{"weapon", "unit-short-sword"},
+		{"weapon", "unit-goblin-short-sword"},
 		{"shield", "unit-round-shield"},
 		{"boots", "unit-boots"}
 	},
@@ -224,7 +224,7 @@ DefineUnitType("unit-goblin-swordsman", {
 	HackDamage = true,
 	ButtonKey = "s",
 	ButtonHint = _("Train ~!Swordsman"),
-	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	AiDrops = {"unit-goblin-short-sword", "unit-goblin-broad-sword", "unit-goblin-long-sword", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	DropAffixes = {"upgrade-item-prefix-penetrating", "upgrade-item-prefix-vicious", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-the-snigill", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-trickery"}, -- allow more magic enchantments than normal to compensate for the unit not being able to upgrade
 	Corpse = "unit-goblin-dead-body",
 	Sounds = {
@@ -247,7 +247,7 @@ DefineUnitType("unit-goblin-barbarian", {
 	Image = {"file", "goblin/units/goblin_swordsman.png", "size", {72, 72}},
 	Animations = "animations-goblin-swordsman", Icon = "icon-goblin-barbarian",
 	DefaultEquipment = {
-		{"weapon", "unit-short-sword"},
+		{"weapon", "unit-goblin-short-sword"},
 		{"shield", "unit-round-shield"},
 		{"boots", "unit-boots"}
 	},
@@ -259,7 +259,7 @@ DefineUnitType("unit-goblin-barbarian", {
 	NightSightRangeBonus = 1,
 	WeaponClasses = {"sword", "thrusting-sword"},
 	HackDamage = true,
-	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	AiDrops = {"unit-goblin-short-sword", "unit-goblin-broad-sword", "unit-goblin-long-sword", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	DropAffixes = {"upgrade-item-prefix-penetrating", "upgrade-item-prefix-vicious", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-the-snigill", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-trickery"},
 	Corpse = "unit-goblin-dead-body",
 	Sounds = {
@@ -282,7 +282,7 @@ DefineUnitType("unit-goblin-warlord", {
 	Image = {"file", "goblin/units/goblin_swordsman.png", "size", {72, 72}},
 	Animations = "animations-goblin-swordsman", Icon = "icon-goblin-warlord",
 	DefaultEquipment = {
-		{"weapon", "unit-short-sword"},
+		{"weapon", "unit-goblin-short-sword"},
 		{"shield", "unit-round-shield"},
 		{"boots", "unit-boots"}
 	},
@@ -295,7 +295,7 @@ DefineUnitType("unit-goblin-warlord", {
 	NightSightRangeBonus = 1,
 	WeaponClasses = {"sword", "thrusting-sword"},
 	HackDamage = true,
-	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
+	AiDrops = {"unit-goblin-short-sword", "unit-goblin-broad-sword", "unit-goblin-long-sword", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-boots", "unit-cheese", "unit-potion-of-healing"},
 	DropAffixes = {"upgrade-item-prefix-penetrating", "upgrade-item-prefix-vicious", "upgrade-item-prefix-wounding", "upgrade-item-suffix-of-betrayal", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-perfuration", "upgrade-item-suffix-of-slowness", "upgrade-item-suffix-of-the-snigill", "upgrade-item-suffix-of-speed", "upgrade-item-suffix-of-swiftness", "upgrade-item-suffix-of-trickery"},
 	Corpse = "unit-goblin-dead-body",
 	Sounds = {
@@ -610,7 +610,7 @@ DefineUnitType("unit-goblin-mess-hall", { Name = _("Mess Hall"),
 	Trains = {"unit-goblin-swordsman", "unit-goblin-spearman", "unit-goblin-archer", "unit-goblin-war-machine", "unit-goblin-glider"},
 	ButtonKey = "m",
 	ButtonHint = _("Build ~!Mess Hall"),
-	AiDrops = {"unit-short-spear", "unit-long-spear", "unit-pike", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-boots", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows"},
+	AiDrops = {"unit-goblin-short-sword", "unit-goblin-broad-sword", "unit-goblin-long-sword", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield", "unit-boots", "unit-arrows", "unit-barbed-arrows", "unit-bodkin-arrows"},
 	DropAffixes = {"upgrade-item-prefix-flaming", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-the-snigill", "upgrade-item-suffix-of-trickery"},
 	Sounds = {
 		"help", "basic-goblin-voices-help-town"
@@ -641,7 +641,7 @@ DefineUnitType("unit-goblin-smithy", { Name = _("Fugla Forge"),
 	Icon = "icon-goblin-smithy",
 	ButtonKey = "o",
 	ButtonHint = _("Build Fugla F~!orge"),
-	AiDrops = {"unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield"},
+	AiDrops = {"unit-goblin-short-sword", "unit-goblin-broad-sword", "unit-goblin-long-sword", "unit-wooden-shield", "unit-bronze-shield", "unit-iron-shield"},
 	DropAffixes = {"upgrade-item-prefix-flaming", "upgrade-item-suffix-of-fire", "upgrade-item-suffix-of-flame", "upgrade-item-suffix-of-the-snigill", "upgrade-item-suffix-of-trickery"},
 	Sounds = {
 		"help", "basic-goblin-voices-help-town"

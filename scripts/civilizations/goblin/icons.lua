@@ -170,6 +170,24 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-goblin-short-sword",
+	Size = {46, 38},
+	File = "goblin/icons/short_sword.png"
+})
+
+DefineIcon({
+	Name = "icon-goblin-broad-sword",
+	Size = {46, 38},
+	File = "goblin/icons/broad_sword.png"
+})
+
+DefineIcon({
+	Name = "icon-goblin-long-sword",
+	Size = {46, 38},
+	File = "goblin/icons/long_sword.png"
+})
+
+DefineIcon({
 	Name = "icon-goblin-patrol-land",
 	Size = {46, 38},
 	File = "goblin/icons/patrol_land.png"
