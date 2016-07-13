@@ -1191,6 +1191,8 @@ Mrmo Tarius:
 /graphics/neutral/icons/book_red.png (licensed under the CC0)
 /graphics/neutral/icons/printing_press.png (licensed under the CC0)
 /graphics/neutral/icons/serfdom.png (licensed under the CC0)
+/graphics/neutral/icons/unicorn.png (modified from Jinn's horse icon) (licensed under the CC0)
+/graphics/neutral/icons/unicorn_extra_1.png (modified from Jinn's horse icon) (licensed under the CC0)
 /graphics/teuton/icons/saxon_archer.png (later modified by Jinn) (licensed under the CC0)
 /graphics/tilesets/world/terrain/river_east.png (licensed under the CC0)
 /graphics/tilesets/world/terrain/river_east_waterfall.png (licensed under the CC0)
