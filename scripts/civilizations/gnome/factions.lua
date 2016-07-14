@@ -45,7 +45,7 @@ DefineFaction("Cubital Tribe", { -- Source: Franz Hartmann, "Among the Gnomes", 
 DefineFaction("Derro Tribe", {
 	Civilization = "gnome",
 	Type = "tribe",
-	Colors = {"green"},
+	Colors = {"black", "purple", "violet"},
 	DevelopsTo = {"Acthna", "Untersberg"},
 	Playable = false,
 	FactionUpgrade = "upgrade-derro-tribe-faction",
@@ -77,6 +77,20 @@ DefineFaction("Acthna", {
 	DefaultTier = "duchy",
 	HistoricalCapitals = {
 		-3000, "Acthna"
+	}
+})
+
+DefineFaction("Du'urdin", {
+	ParentFaction = "Derro Tribe",
+	Civilization = "gnome",
+	Type = "polity",
+	Colors = {"black", "purple", "violet"},
+	DefaultTier = "kingdom",
+	Titles = {
+		"monarchy", "kingdom", "Dominion"
+	},
+	HistoricalCapitals = {
+		-3000, "Du'urdin"
 	}
 })
 

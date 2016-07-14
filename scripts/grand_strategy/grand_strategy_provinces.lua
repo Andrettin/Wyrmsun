@@ -39,6 +39,7 @@ function LoadProvinces(world)
 	local provinces = GetGrandStrategyProvinces()
 	for i = 1,table.getn(provinces) do
 		local province_key = string.gsub(provinces[i], " ", "")
+		province_key = string.gsub(province_key, "'", "")
 		if (GetGrandStrategyProvinceData(provinces[i], "Water") == false) then
 			WorldMapProvinces[province_key] = {}
 			WorldMapProvinces[province_key]["Name"] = provinces[i]

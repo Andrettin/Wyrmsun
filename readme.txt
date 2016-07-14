@@ -66,6 +66,12 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed issue which caused the interface for setting graphics for custom item types to not work.
 - A unit type's drops may now be set through the editor.
 
+* Factions
+- Added Du'urdin gnomish polity.
+
+* Grand Strategy
+- Added Du'urdin province (Nidavellir).
+
 * Items
 - Fixed issue which caused a crash when a gryphon rider read a Scroll of Forgetfulness or a Book of Retraining.
 
