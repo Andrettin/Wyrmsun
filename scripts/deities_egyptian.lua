@@ -33,3 +33,30 @@ DefineDeity("bes", { -- Source: Warren R. Dawson, "Pygmies and Dwarfs in Ancient
 	Domains = {"life"},
 --	Description = "The god Bes has a dwarf-like appearance. The deity wards childbirths, bestows luck and prosperity on families and protects against malignant beings. Having taken an interest in the dwarves of Nidavellir, Bes sought to made contact with them and establish a priesthood in the world, and became specially popular among the inhabitants of Joruvellir. On Earth he is worshiped by Egyptians."
 })
+
+DefineDeity("geb", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 30.
+	Name = "Geb",
+	Civilizations = {"egyptian"},
+	Religions = {"paganism"},
+	Gender = "male",
+	Domains = {"earth"},
+--	Description = "Geb is a god of earth and fate."
+})
+
+DefineDeity("hathor", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 13, 29.
+	Name = "Hathor",
+	Civilizations = {"egyptian", "minotaur"},
+	Religions = {"paganism"},
+	Gender = "female",
+	Domains = {"air"},
+--	Description = "Hathor is a celestial goddess. She appears in the form of a cow, and is held as a goddess of happiness. On Earth Hathor is worshiped by the Egyptians, and she also enjoys a priesthood amongst the minotaurs of Jotunheim."
+})
+
+DefineDeity("sobek", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 25.
+	Name = "Sobek",
+	Civilizations = {"egyptian"},
+	Religions = {"paganism"},
+	Gender = "male",
+	Domains = {"water"},
+--	Description = "A god who takes the shape of a crocodile, Sobek holds aquatic animals as his domain. He is also linked to vegetation growth."
+})

@@ -30,6 +30,10 @@ DefinePlane("Asgard", {
 	Description = _("The plane of Asgard is the home of the Aesir, a group of deities. Mortals who worship the Aesir go to Asgard in the afterlife, the warriors amongst them becoming einherjar at Valhalla.")
 })
 
+DefinePlane("Duat", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 15.
+	Description = _("Duat is the plane in which those who believe in the Pharaonic pantheon experience their afterlife.")
+})
+
 DefinePlane("Elysium", { -- Source: Jenny March, "Dictionary of Classical Mythology", 2014, pp. 174-175.
 	Description = _("The verdant plane of Elysium is where those favored by the deities of the Olympian pantheon go after their death. Afterlife in Elysium is pleasurable, featuring neither toil nor tears.")
 })

@@ -27,6 +27,7 @@
 
 Load("scripts/civilizations/celt/works.lua")
 Load("scripts/civilizations/dwarf/works.lua")
+Load("scripts/civilizations/egyptian/works.lua")
 Load("scripts/civilizations/gnome/works.lua")
 Load("scripts/civilizations/goblin/works.lua")
 Load("scripts/civilizations/greek/works.lua")

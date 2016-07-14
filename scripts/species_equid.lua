@@ -109,6 +109,15 @@ DefineSpecies("horse", { -- Source: http://www.itis.gov/servlet/SingleRpt/Single
 	ChildUpgrade = "upgrade-child"
 })
 
+DefineSpecies("pegasus", {
+	Name = "Pegasus",
+	Homeworld = "Alfheim",
+	EvolvesFrom = {"merychippus", "nannippus", "parahippus", "pliohippus"}, -- earlier equids
+	Era = "holocene",
+	ChildUpgrade = "upgrade-child"
+	-- in Wyrmsun, the wings of pegasuses are not avian, having fur instead of feathers
+})
+
 DefineSpecies("unicorn", {
 	Name = "Unicorn",
 	Homeworld = "Alfheim",

@@ -269,6 +269,15 @@ DefineCivilization("kobold", {
 	Description = _("Kobolds live in the deep caves of Nidavellir, and worship wyrms as sacred ancestors. They share the dwarven passion for mining and metals, but not their technological advancement. Although kobolds can be inventive, their isolation from other communities has made the spread of progress to their lands more difficult. Being the sole intelligent reptilian race in Nidavellir, they feel threatened by the presence of dwarves, gnomes and goblins - all of which they call \"breastlings\".")
 })
 
+DefineCivilization("minotaur", {
+	Display = "Minotaur",
+	Visible = true,
+	Species = "minotaur",
+	Adjective = "Minotaur",
+	Playable = false,
+	DefaultColor = "red"
+})
+
 DefineCivilization("orc", {
 	Display = "Orc",
 	Visible = true,
