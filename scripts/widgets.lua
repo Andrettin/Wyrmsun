@@ -147,6 +147,46 @@ DefineButtonStyle("network-gnome", {
 	},
 })
 
+DefineButtonStyle("main-goblin", {
+	Size = {99, 13},
+	Font = "game",
+	TextNormalColor = "white",
+	TextReverseColor = "yellow",
+	TextAlign = "Center",
+	TextPos = {50, 0},
+	Default = {
+		File = "goblin/ui/widgets/button-thinest-medium-normal.png", Size = {99, 13}, Frame = 0,
+	},
+	Hover = {
+		TextNormalColor = "yellow",
+	},
+	Clicked = {
+		File = "goblin/ui/widgets/button-thinest-medium-pressed.png", Size = {99, 13}, Frame = 0,
+		TextNormalColor = "yellow",
+		TextPos = {51, 1},
+	},
+})
+
+DefineButtonStyle("network-goblin", {
+	Size = {80, 20},
+	Font = "game",
+	TextNormalColor = "white",
+	TextReverseColor = "yellow",
+	TextAlign = "Center",
+	TextPos = {40, 4},
+	Default = {
+		File = "goblin/ui/widgets/button-thin-small-normal.png", Size = {80, 20}, Frame = 0,
+	},
+	Hover = {
+		TextNormalColor = "yellow",
+	},
+	Clicked = {
+		File = "goblin/ui/widgets/button-thin-small-pressed.png", Size = {80, 20}, Frame = 0,
+		TextNormalColor = "yellow",
+		TextPos = {42, 6},
+	},
+})
+
 DefineButtonStyle("icon", {
 	Size = {46, 38},
 	Font = "game",

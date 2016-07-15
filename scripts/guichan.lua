@@ -48,21 +48,13 @@ wyrmsun_logo_widget = ImageWidget(wyrmsun_logo)
 
 function panel(n)
 	local panels = {}
-	if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
+	if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf" or GetPlayerData(GetThisPlayer(), "RaceName") == "germanic" or GetPlayerData(GetThisPlayer(), "RaceName") == "goblin") then
 		panels = {
-			"dwarf/ui/panel_1.png",
-			"dwarf/ui/panel_2.png",
-			"dwarf/ui/panel_3.png",
-			"dwarf/ui/panel_4.png",
-			"dwarf/ui/panel_5.png"
-		}
-	elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "germanic") then
-		panels = {
-			"germanic/ui/panel_1.png",
-			"germanic/ui/panel_2.png",
-			"germanic/ui/panel_3.png",
-			"germanic/ui/panel_4.png",
-			"germanic/ui/panel_5.png"
+			GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/panel_1.png",
+			GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/panel_2.png",
+			GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/panel_3.png",
+			GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/panel_4.png",
+			GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/panel_5.png"
 		}
 	elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "teuton") then
 		panels = {
@@ -171,18 +163,10 @@ function AddMenuHelpers(menu)
 		local g_bln
 		local g_blp
 		local g_blg
-		if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
-			g_bln = CGraphic:New("dwarf/ui/widgets/button-large-normal.png")
-			g_blp = CGraphic:New("dwarf/ui/widgets/button-large-pressed.png")
-			g_blg = CGraphic:New("dwarf/ui/widgets/button-large-grayed.png")
-		elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "germanic") then
-			g_bln = CGraphic:New("germanic/ui/widgets/button-large-normal.png")
-			g_blp = CGraphic:New("germanic/ui/widgets/button-large-pressed.png")
-			g_blg = CGraphic:New("germanic/ui/widgets/button-large-grayed.png")
-		elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "gnome") then
-			g_bln = CGraphic:New("gnome/ui/widgets/button-large-normal.png")
-			g_blp = CGraphic:New("gnome/ui/widgets/button-large-pressed.png")
-			g_blg = CGraphic:New("gnome/ui/widgets/button-large-grayed.png")
+		if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf" or GetPlayerData(GetThisPlayer(), "RaceName") == "germanic" or GetPlayerData(GetThisPlayer(), "RaceName") == "gnome" or GetPlayerData(GetThisPlayer(), "RaceName") == "goblin") then
+			g_bln = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-large-normal.png")
+			g_blp = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-large-pressed.png")
+			g_blg = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-large-grayed.png")
 		elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "teuton") then
 			g_bln = CGraphic:New("germanic/ui/widgets/button-large-normal.png")
 			g_blp = CGraphic:New("germanic/ui/widgets/button-large-pressed.png")
@@ -213,18 +197,10 @@ function AddMenuHelpers(menu)
 	local g_bsn
 	local g_bsp
 	local g_bsg
-	if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
-		g_bsn = CGraphic:New("dwarf/ui/widgets/button-small-normal.png")
-		g_bsp = CGraphic:New("dwarf/ui/widgets/button-small-pressed.png")
-		g_bsg = CGraphic:New("dwarf/ui/widgets/button-small-grayed.png")
-	elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "germanic") then
-		g_bsn = CGraphic:New("germanic/ui/widgets/button-small-normal.png")
-		g_bsp = CGraphic:New("germanic/ui/widgets/button-small-pressed.png")
-		g_bsg = CGraphic:New("germanic/ui/widgets/button-small-grayed.png")
-	elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "gnome") then
-		g_bsn = CGraphic:New("gnome/ui/widgets/button-small-normal.png")
-		g_bsp = CGraphic:New("gnome/ui/widgets/button-small-pressed.png")
-		g_bsg = CGraphic:New("gnome/ui/widgets/button-small-grayed.png")
+	if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf" or GetPlayerData(GetThisPlayer(), "RaceName") == "germanic" or GetPlayerData(GetThisPlayer(), "RaceName") == "gnome" or GetPlayerData(GetThisPlayer(), "RaceName") == "goblin") then
+		g_bsn = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-small-normal.png")
+		g_bsp = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-small-pressed.png")
+		g_bsg = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/button-small-grayed.png")
 	elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "teuton") then
 		g_bsn = CGraphic:New("germanic/ui/widgets/button-small-normal.png")
 		g_bsp = CGraphic:New("germanic/ui/widgets/button-small-pressed.png")
@@ -262,12 +238,9 @@ function AddMenuHelpers(menu)
 	b:setBackgroundColor(Color(0,0,0,0))
 	local g_lslider_n
 	local g_lslider_p
-	if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
-		g_lslider_n = CGraphic:New("dwarf/ui/widgets/left-arrow-normal.png")
-		g_lslider_p = CGraphic:New("dwarf/ui/widgets/left-arrow-pressed.png")
-	elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "germanic") then
-		g_lslider_n = CGraphic:New("germanic/ui/widgets/left-arrow-normal.png")
-		g_lslider_p = CGraphic:New("germanic/ui/widgets/left-arrow-pressed.png")
+	if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf" or GetPlayerData(GetThisPlayer(), "RaceName") == "germanic" or GetPlayerData(GetThisPlayer(), "RaceName") == "goblin") then
+		g_lslider_n = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/left-arrow-normal.png")
+		g_lslider_p = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/left-arrow-pressed.png")
 	elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "teuton") then
 		g_lslider_n = CGraphic:New("germanic/ui/widgets/left-arrow-normal.png")
 		g_lslider_p = CGraphic:New("germanic/ui/widgets/left-arrow-pressed.png")
@@ -289,12 +262,9 @@ function AddMenuHelpers(menu)
 	-- New Slider Functions
 	local g_marker
 	local g_slider
-	if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
-		g_marker = CGraphic:New("dwarf/ui/widgets/slider-knob.png")
-		g_slider = CGraphic:New("dwarf/ui/widgets/slider-bar-normal.png")
-	elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "germanic") then
-		g_marker = CGraphic:New("germanic/ui/widgets/slider-knob.png")
-		g_slider = CGraphic:New("germanic/ui/widgets/slider-bar-normal.png")
+	if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf" or GetPlayerData(GetThisPlayer(), "RaceName") == "germanic" or GetPlayerData(GetThisPlayer(), "RaceName") == "goblin") then
+		g_marker = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/slider-knob.png")
+		g_slider = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/slider-bar-normal.png")
 	elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "teuton") then
 		g_marker = CGraphic:New("germanic/ui/widgets/slider-knob.png")
 		g_slider = CGraphic:New("germanic/ui/widgets/slider-bar-normal.png")
@@ -320,12 +290,9 @@ function AddMenuHelpers(menu)
 	b:setBackgroundColor(Color(0,0,0,0))
 	local g_rslider_n
 	local g_rslider_p
-	if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
-		g_rslider_n = CGraphic:New("dwarf/ui/widgets/right-arrow-normal.png")
-		g_rslider_p = CGraphic:New("dwarf/ui/widgets/right-arrow-pressed.png")
-	elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "germanic") then
-		g_rslider_n = CGraphic:New("germanic/ui/widgets/right-arrow-normal.png")
-		g_rslider_p = CGraphic:New("germanic/ui/widgets/right-arrow-pressed.png")
+	if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf" or GetPlayerData(GetThisPlayer(), "RaceName") == "germanic" or GetPlayerData(GetThisPlayer(), "RaceName") == "goblin") then
+		g_rslider_n = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/right-arrow-normal.png")
+		g_rslider_p = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/right-arrow-pressed.png")
 	elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "teuton") then
 		g_rslider_n = CGraphic:New("germanic/ui/widgets/right-arrow-normal.png")
 		g_rslider_p = CGraphic:New("germanic/ui/widgets/right-arrow-pressed.png")
@@ -512,16 +479,11 @@ function AddMenuHelpers(menu)
 	local g_checkbox_off2
 	local g_checkbox_on
 	local g_checkbox_on2
-	if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
-		g_checkbox_off = CGraphic:New("dwarf/ui/widgets/radio-normal-unselected.png")
-		g_checkbox_off2 = CGraphic:New("dwarf/ui/widgets/radio-pressed-unselected.png")
-		g_checkbox_on = CGraphic:New("dwarf/ui/widgets/radio-normal-selected.png")
-		g_checkbox_on2 = CGraphic:New("dwarf/ui/widgets/radio-pressed-selected.png")
-	elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "germanic") then
-		g_checkbox_off = CGraphic:New("germanic/ui/widgets/radio-normal-unselected.png")
-		g_checkbox_off2 = CGraphic:New("germanic/ui/widgets/radio-pressed-unselected.png")
-		g_checkbox_on = CGraphic:New("germanic/ui/widgets/radio-normal-selected.png")
-		g_checkbox_on2 = CGraphic:New("germanic/ui/widgets/radio-pressed-selected.png")
+	if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf" or GetPlayerData(GetThisPlayer(), "RaceName") == "germanic" or GetPlayerData(GetThisPlayer(), "RaceName") == "goblin") then
+		g_checkbox_off = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/radio-normal-unselected.png")
+		g_checkbox_off2 = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/radio-pressed-unselected.png")
+		g_checkbox_on = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/radio-normal-selected.png")
+		g_checkbox_on2 = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/radio-pressed-selected.png")
 	elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "teuton") then
 		g_checkbox_off = CGraphic:New("germanic/ui/widgets/radio-normal-unselected.png")
 		g_checkbox_off2 = CGraphic:New("germanic/ui/widgets/radio-pressed-unselected.png")
@@ -571,16 +533,11 @@ function AddMenuHelpers(menu)
 	local g_radio_off2
 	local g_radio_on
 	local g_radio_on2
-	if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
-		g_radio_off = CGraphic:New("dwarf/ui/widgets/radio-normal-unselected.png")
-		g_radio_off2 = CGraphic:New("dwarf/ui/widgets/radio-pressed-unselected.png")
-		g_radio_on = CGraphic:New("dwarf/ui/widgets/radio-normal-selected.png")
-		g_radio_on2 = CGraphic:New("dwarf/ui/widgets/radio-pressed-selected.png")
-	elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "germanic") then
-		g_radio_off = CGraphic:New("germanic/ui/widgets/radio-normal-unselected.png")
-		g_radio_off2 = CGraphic:New("germanic/ui/widgets/radio-pressed-unselected.png")
-		g_radio_on = CGraphic:New("germanic/ui/widgets/radio-normal-selected.png")
-		g_radio_on2 = CGraphic:New("germanic/ui/widgets/radio-pressed-selected.png")
+	if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf" or GetPlayerData(GetThisPlayer(), "RaceName") == "germanic" or GetPlayerData(GetThisPlayer(), "RaceName") == "goblin") then
+		g_radio_off = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/radio-normal-unselected.png")
+		g_radio_off2 = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/radio-pressed-unselected.png")
+		g_radio_on = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/radio-normal-selected.png")
+		g_radio_on2 = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/radio-pressed-selected.png")
 	elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "teuton") then
 		g_radio_off = CGraphic:New("germanic/ui/widgets/radio-normal-unselected.png")
 		g_radio_off2 = CGraphic:New("germanic/ui/widgets/radio-pressed-unselected.png")
@@ -617,14 +574,10 @@ function AddMenuHelpers(menu)
 		local g_bar
 		local g_dslider_n
 		local g_dslider_p
-		if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf") then
-			g_bar = CGraphic:New("dwarf/ui/widgets/pulldown-bar-normal.png")
-			g_dslider_n = CGraphic:New("dwarf/ui/widgets/down-arrow-normal.png")
-			g_dslider_p = CGraphic:New("dwarf/ui/widgets/down-arrow-pressed.png")
-		elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "germanic") then
-			g_bar = CGraphic:New("germanic/ui/widgets/pulldown-bar-normal.png")
-			g_dslider_n = CGraphic:New("germanic/ui/widgets/down-arrow-normal.png")
-			g_dslider_p = CGraphic:New("germanic/ui/widgets/down-arrow-pressed.png")
+		if (GetPlayerData(GetThisPlayer(), "RaceName") == "dwarf" or GetPlayerData(GetThisPlayer(), "RaceName") == "germanic" or GetPlayerData(GetThisPlayer(), "RaceName") == "goblin") then
+			g_bar = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/pulldown-bar-normal.png")
+			g_dslider_n = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/down-arrow-normal.png")
+			g_dslider_p = CGraphic:New(GetPlayerData(GetThisPlayer(), "RaceName") .. "/ui/widgets/down-arrow-pressed.png")
 		elseif (GetPlayerData(GetThisPlayer(), "RaceName") == "teuton") then
 			g_bar = CGraphic:New("germanic/ui/widgets/pulldown-bar-normal.png")
 			g_dslider_n = CGraphic:New("germanic/ui/widgets/down-arrow-normal.png")

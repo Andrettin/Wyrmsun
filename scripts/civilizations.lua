@@ -244,10 +244,10 @@ DefineCivilization("goblin", {
 		"return-goods", "icon-goblin-return-goods"
 	},
 	UIFillers = {
-		"dwarf/ui/filler_bottom.png", 380, -181,
-		"dwarf/ui/resource.png", 0, 0,
-		"dwarf/ui/buttonpanel.png", -256, -200,
-		"dwarf/ui/infopanel.png", 0, -200
+		"goblin/ui/filler_bottom.png", 380, -181,
+		"goblin/ui/resource.png", 0, 0,
+		"goblin/ui/buttonpanel.png", -256, -200,
+		"goblin/ui/infopanel.png", 0, -200
 	}
 })
 

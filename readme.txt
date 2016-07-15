@@ -61,6 +61,9 @@ https://github.com/Andrettin/Wyrmsun
 - 2.3.2
 -----------------------------------------------------------------------
 
+* Civilizations
+- Added Goblin UI (graphics by Jinn).
+
 * Editor
 - Fixed issue which caused certain custom units to be transformed into pre-existing ones when the map starts.
 - Fixed issue which caused the interface for setting graphics for custom item types to not work.

@@ -38,5 +38,5 @@ DefineCursor({
 UI.NormalFontColor = "white"
 UI.ReverseFontColor = "yellow"
 
-UI.MenuButton.Style = FindButtonStyle("main-gnome")
-UI.NetworkDiplomacyButton.Style = FindButtonStyle("main-gnome")
+UI.MenuButton.Style = FindButtonStyle("main-goblin")
+UI.NetworkDiplomacyButton.Style = FindButtonStyle("main-goblin")
