@@ -62,6 +62,7 @@ GenerateProvince({
 
 GenerateProvince({
 	Province = WorldMapProvinces.Tenebris,
+	BorderProvinces = {"Myridia", "Deep Sea"},
 	Resources = {
 		gold = SyncRand(2),
 		silver = SyncRand(2),
@@ -74,6 +75,7 @@ GenerateProvince({
 
 GenerateProvince({
 	Province = WorldMapProvinces.Ezmarria,
+	BorderProvinces = {"Tenebris", "Deep Sea"},
 	Resources = {
 		gold = SyncRand(2),
 		silver = SyncRand(2),
