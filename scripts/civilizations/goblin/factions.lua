@@ -67,6 +67,18 @@ DefineFaction("Sigre Tribe", { -- invented by Jesse Crider
 	FactionUpgrade = "upgrade-sigre-tribe-faction"
 })
 
+DefineFaction("Ezmarria", { -- invented by Jesse Crider
+	Civilization = "goblin",
+	Type = "polity",
+	Colors = {"white"},
+	DefaultTier = "duchy",
+	DefaultGovernmentType = "republic",
+	Titles = {
+		"republic", "duchy", "Syndicate"
+	},
+	Description = _("The Ezmarrian Syndicate is known for its dedication to scientific progress, which often results in the neglection of economic and military power. Many goblin technological breakthroughs were made in Ezmarria, this knowledge being sold at a hefty price to other nations.")
+})
+
 DefineFaction("Myridia", { -- invented by Jesse Crider
 	Civilization = "goblin",
 	Type = "polity",
@@ -75,7 +87,8 @@ DefineFaction("Myridia", { -- invented by Jesse Crider
 	DefaultGovernmentType = "republic",
 	Titles = {
 		"republic", "duchy", "Syndicate"
-	}
+	},
+	Description = _("The Myridian Syndicate is known as a conglomerate of merchants and mercenaries of utmost immoral caliber. Many of those who could not pay what they owed the syndicate claim that it is composed of sadistic dark minds, who torment their debtors endlessly until they finally manage to extract payment.")
 })
 
 DefineFaction("Stilgar", { -- invented by Jesse Crider
@@ -86,5 +99,18 @@ DefineFaction("Stilgar", { -- invented by Jesse Crider
 	DefaultGovernmentType = "republic",
 	Titles = {
 		"republic", "duchy", "Syndicate"
-	}
+	},
+	Description = _("The Stilgar Syndicate is renowned for its honorable reputation in doing business. They are one of the few goblin syndicates who can be trusted in upholding their end of an agreement.")
+})
+
+DefineFaction("Tenebris", { -- invented by Jesse Crider
+	Civilization = "goblin",
+	Type = "polity",
+	Colors = {"black"},
+	DefaultTier = "duchy",
+	DefaultGovernmentType = "republic",
+	Titles = {
+		"republic", "duchy", "Syndicate"
+	},
+	Description = _("The Tenebris Syndicate is mistrusted by most goblins. Due to the prevalence of mysticism in it, the syndicate is thought of as more of a land of witches and occultists than a true syndicate.")
 })

@@ -61,6 +61,32 @@ GenerateProvince({
 })
 
 GenerateProvince({
+	Province = WorldMapProvinces.Tenebris,
+	BorderProvinces = {"Myridia"},
+	Resources = {
+		gold = SyncRand(2),
+		silver = SyncRand(2),
+		copper = SyncRand(2),
+		lumber = SyncRand(3),
+		stone = SyncRand(3),
+		mushrooms = SyncRand(3) + 1
+	}
+})
+
+GenerateProvince({
+	Province = WorldMapProvinces.Ezmarria,
+	BorderProvinces = {"Tenebris"},
+	Resources = {
+		gold = SyncRand(2),
+		silver = SyncRand(2),
+		copper = SyncRand(2),
+		lumber = SyncRand(3),
+		stone = SyncRand(3),
+		mushrooms = SyncRand(3) + 1
+	}
+})
+
+GenerateProvince({
 	Province = WorldMapProvinces.Untersberg,
 	BorderProvinces = {"Brown Hills"},
 	Resources = {

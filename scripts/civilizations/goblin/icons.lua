@@ -210,3 +210,27 @@ DefineIcon({
 	Size = {46, 38},
 	File = "goblin/icons/goblin_banner.png"
 })
+
+DefineIcon({
+	Name = "icon-agniss",
+	Size = {46, 38},
+	File = "goblin/icons/agniss.png"
+})
+
+DefineIcon({
+	Name = "icon-dremac-paarsins",
+	Size = {46, 38},
+	File = "goblin/icons/dremac_paarsins.png"
+})
+
+DefineIcon({
+	Name = "icon-ioun",
+	Size = {46, 38},
+	File = "goblin/icons/ioun.png"
+})
+
+DefineIcon({
+	Name = "icon-orza-chahax",
+	Size = {46, 38},
+	File = "goblin/icons/orza_chahax.png"
+})

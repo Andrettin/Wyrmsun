@@ -173,6 +173,19 @@ DefineProvince("Eastern Mines", {
 	SettlementTerrain = "Hills"
 })
 
+DefineProvince("Ezmarria", {
+	World = "Nidavellir",
+	Tiles = {},
+	CulturalNames = {
+		"goblin", "Ezmarria"
+	},
+	Claims = {
+		"goblin", "Ezmarria"
+	},
+	Map = "maps/random/random-map-swamp.smp",
+	SettlementTerrain = "Plains" -- should be Dark Plains, but those are not generated in random maps (yet)
+})
+
 DefineProvince("Gryphon Mountain", {
 	World = "Nidavellir",
 	Tiles = { {24, 22}, {24, 23}, {25, 20}, {25, 21}, {25, 22}, {25, 23}, {26, 20}, {26, 21}, {26, 22}, {26, 23}, {27, 20}, {27, 21}, {27, 22}, {27, 23}, {27, 24}, {27, 25}, {28, 20}, {28, 21}, {28, 22}, {28, 23}, {28, 24}, {28, 25}, {28, 26}, {28, 27}, {29, 21}, {29, 22}, {29, 23}, {29, 24}, {29, 25}, {29, 26}, {29, 27}, {30, 21}, {30, 23}, {30, 24}, {30, 25}, {30, 26}, {30, 27}, {31, 23}, {31, 24}, {31, 25}, {31, 26}, {32, 23}, {32, 24} },
@@ -411,6 +424,19 @@ DefineProvince("Svarinshaug", {
 	Claims = {
 		"dwarf", "Brising Clan"
 	}
+})
+
+DefineProvince("Tenebris", {
+	World = "Nidavellir",
+	Tiles = {},
+	CulturalNames = {
+		"goblin", "Tenebris"
+	},
+	Claims = {
+		"goblin", "Tenebris"
+	},
+	Map = "maps/random/random-map-swamp.smp",
+	SettlementTerrain = "Plains" -- should be Dark Plains, but those are not generated in random maps (yet)
 })
 
 DefineProvince("Untersberg", {

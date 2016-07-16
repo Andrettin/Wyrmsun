@@ -63,6 +63,7 @@ end
 Load("scripts/civilizations/finnish/characters.lua")
 Load("scripts/civilizations/germanic/characters.lua")
 Load("scripts/civilizations/gnome/characters.lua")
+Load("scripts/civilizations/goblin/characters.lua")
 Load("scripts/civilizations/goth/characters.lua")
 Load("scripts/civilizations/greek/characters.lua")
 Load("scripts/civilizations/latin/characters.lua")
@@ -74,20 +75,6 @@ Load("scripts/civilizations/slav/characters.lua") -- define after Teuton ones, b
 -- load characters of fictional species afterwards, since many of them use human characters as a date reference
 Load("scripts/civilizations/dwarf/characters.lua")
 Load("scripts/civilizations/elf/characters.lua")
-
--- Goblin heroes
-
-DefineCharacter("Greebo", {
-	Name = "Greebo",
-	NameElements = {"word", "goblin", "noun", "Greebo"},
-	Gender = "male",
-	Type = "unit-goblin-spearman",
-	Civilization = "goblin",
-	Description = _("Greebo is a scoundrel, simply put. He lives in a rocky hideout, and survives by stealing from the farms in the region. He is quick to thrust his short sword into those who get in his way, holding love only for his baby child."),
-	Trait = "upgrade-strong", -- seems appropriate, but maybe something else for this character would be better?
-	ProvinceOfOrigin = "Caverns of Flame", -- placeholder (this character needs to have a province of origin since he has a hero unit type)
-	Year = 3000, -- placeholder (this character needs to have a year since he has a hero unit type)
-})
 
 -- Basque heroes
 

@@ -333,6 +333,19 @@ function RunEncyclopediaUnitsMenu(state, civilization)
 		end
 	elseif (state == "heroes") then
 		local heroes = GetCharacters()
+		
+		local function compare_hero(a,b)
+			if (GetCharacterData(a, "Civilization") ~= GetCharacterData(b, "Civilization")) then
+				return GetCharacterData(a, "Civilization") < GetCharacterData(b, "Civilization")
+			elseif (GetCharacterData(a, "Faction") ~= GetCharacterData(b, "Faction")) then
+				return GetCharacterData(a, "Faction") < GetCharacterData(b, "Faction")
+			else
+				return a < b
+			end
+		end
+		
+		table.sort(heroes, compare_hero)
+		
 		for i = 1, table.getn(heroes) do
 			if (GetCharacterData(heroes[i], "Persistent") and (GetCharacterData(heroes[i], "Description") ~= "" or GetCharacterData(heroes[i], "Background") ~= "")) then
 				addEncyclopediaIcon(heroes[i], state, menu, offx + 23 + 4 + (54 * icon_x), offy + 10 + 4 + (46 * (icon_y + 1)))

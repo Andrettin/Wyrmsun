@@ -5435,6 +5435,19 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 									if (FindHero("Durstorn") == nil) then
 										table.insert(available_heroes, "Durstorn")
 									end
+								elseif (player_civilization == "goblin") then
+									if (FindHero("Agniss Tenebris") == nil) then
+										table.insert(available_heroes, "Agniss Tenebris")
+									end
+									if (FindHero("Dremac Paarsins") == nil) then
+										table.insert(available_heroes, "Dremac Paarsins")
+									end
+									if (FindHero("Ioun Stilgar") == nil) then
+										table.insert(available_heroes, "Ioun Stilgar")
+									end
+									if (FindHero("Orza Chahax") == nil) then
+										table.insert(available_heroes, "Orza Chahax")
+									end
 								end
 								local chosen_hero = available_heroes[SyncRand(table.getn(available_heroes)) + 1]
 								unit = CreateUnit(GetCharacterData(chosen_hero, "Type"), 0, {RandomX, RandomY})
@@ -5516,6 +5529,19 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 									end
 									if (FindHero("Durstorn") == nil) then
 										table.insert(available_heroes, "Durstorn")
+									end
+								elseif (second_player_civilization == "goblin") then
+									if (FindHero("Agniss Tenebris") == nil) then
+										table.insert(available_heroes, "Agniss Tenebris")
+									end
+									if (FindHero("Dremac Paarsins") == nil) then
+										table.insert(available_heroes, "Dremac Paarsins")
+									end
+									if (FindHero("Ioun Stilgar") == nil) then
+										table.insert(available_heroes, "Ioun Stilgar")
+									end
+									if (FindHero("Orza Chahax") == nil) then
+										table.insert(available_heroes, "Orza Chahax")
 									end
 								end
 								local chosen_hero = available_heroes[SyncRand(table.getn(available_heroes)) + 1]
