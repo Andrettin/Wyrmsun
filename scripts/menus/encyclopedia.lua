@@ -25,6 +25,16 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+function GetGenusCommonName(genus)
+	if (genus == "draco") then
+		return "Dragon"
+	elseif (genus == "panthera") then
+		return "Panther"
+	else
+		return CapitalizeString(genus)
+	end
+end
+
 function RunEncyclopediaMenu()
 	if (GrandStrategy) then
 		GrandStrategyGamePaused = true
@@ -1281,15 +1291,23 @@ function OpenEncyclopediaPlaneEntry(plane)
 	if (table.getn(species) > 0) then
 		local sapient_species = {}
 		local fauna_species = {}
+		local fauna_genuses = {}
 		for i = 1, table.getn(species) do
 			if (GetSpeciesData(species[i], "Prehistoric") == false) then -- don't show prehistoric species
 				if (GetSpeciesData(species[i], "Sapient")) then
 					table.insert(sapient_species, species[i])
 				else
-					table.insert(fauna_species, species[i])
+					local genus = GetGenusCommonName(GetSpeciesData(species[i], "Genus"))
+					if (genus == "" or GetArrayIncludes(fauna_genuses, genus) == false) then
+						table.insert(fauna_species, GetSpeciesData(species[i], "Name"))
+						table.insert(fauna_genuses, genus)
+					else
+						fauna_species[GetElementIndexFromArray(fauna_genuses, genus)] = genus
+					end
 				end
 			end
 		end
+		table.sort(fauna_species)
 		if (table.getn(sapient_species) > 0) then
 			description = description .. "Sapient Inhabitants: "
 			for i = 1, table.getn(sapient_species) do
@@ -1303,7 +1321,7 @@ function OpenEncyclopediaPlaneEntry(plane)
 		if (table.getn(fauna_species) > 0) then
 			description = description .. "Fauna: "
 			for i = 1, table.getn(fauna_species) do
-				description = description .. GetPluralForm(GetSpeciesData(fauna_species[i], "Name"))
+				description = description .. GetPluralForm(fauna_species[i])
 				if (i < table.getn(fauna_species)) then
 					description = description .. ", "
 				end
@@ -1439,15 +1457,23 @@ function OpenEncyclopediaWorldEntry(world)
 	if (table.getn(species) > 0) then
 		local sapient_species = {}
 		local fauna_species = {}
+		local fauna_genuses = {}
 		for i = 1, table.getn(species) do
 			if (GetSpeciesData(species[i], "Prehistoric") == false) then -- don't show prehistoric species
 				if (GetSpeciesData(species[i], "Sapient")) then
 					table.insert(sapient_species, species[i])
 				else
-					table.insert(fauna_species, species[i])
+					local genus = GetGenusCommonName(GetSpeciesData(species[i], "Genus"))
+					if (genus == "" or GetArrayIncludes(fauna_genuses, genus) == false) then
+						table.insert(fauna_species, GetSpeciesData(species[i], "Name"))
+						table.insert(fauna_genuses, genus)
+					else
+						fauna_species[GetElementIndexFromArray(fauna_genuses, genus)] = genus
+					end
 				end
 			end
 		end
+		table.sort(fauna_species)
 		if (table.getn(sapient_species) > 0) then
 			description = description .. "Sapient Inhabitants: "
 			for i = 1, table.getn(sapient_species) do
@@ -1461,7 +1487,7 @@ function OpenEncyclopediaWorldEntry(world)
 		if (table.getn(fauna_species) > 0) then
 			description = description .. "Fauna: "
 			for i = 1, table.getn(fauna_species) do
-				description = description .. GetPluralForm(GetSpeciesData(fauna_species[i], "Name"))
+				description = description .. GetPluralForm(fauna_species[i])
 				if (i < table.getn(fauna_species)) then
 					description = description .. ", "
 				end

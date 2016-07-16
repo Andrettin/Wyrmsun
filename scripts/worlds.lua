@@ -34,7 +34,7 @@ DefineWorld("Alfheim", {
 
 DefineWorld("Earth", {
 	Plane = "Material Plane",
-	Description = _("The home planet of human beings, a myriad of generations have been born and died on Earth. History has witnessed the rise and fall of innumerous great powers, with few being able to stand the test of time. The first human civilization was Sumeria, and later times saw the appearance of the ancient Greeks and Romans. The mapping of the world progressed slowly, but steadily. The advancement of naval techniques in the 15th and 16h centuries allowed the world's oceans to be explored, and by the late 19th century the inner part of the continents had been fully mapped. The 20th century saw the beginnings of space exploration, with a man setting foot on the moon for the first time. By the 22nd century spacefaring had become common."),
+	Description = _("The home planet of human beings, a myriad of generations has been born and died on Earth. History has witnessed the rise and fall of innumerous great powers, with few being able to stand the test of time. The first human civilization was Sumeria, and later times saw the appearance of the ancient Greeks and Romans. The mapping of the world progressed slowly, but steadily. The advancement of naval techniques in the 15th and 16h centuries allowed the world's oceans to be explored, and by the late 19th century the inner part of the continents had been fully mapped. The 20th century saw the beginnings of space exploration, with a man setting foot on the moon for the first time. By the 22nd century spacefaring had become common."),
 	BaseTerrain = "Plains"
 })
 
