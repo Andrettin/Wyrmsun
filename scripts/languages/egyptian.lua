@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2016 by Andrettin
+--      (c) Copyright 2015 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -25,34 +25,44 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSpecies("akh", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 37-38.
-	Name = "Akh",
-	HomePlane = "Duat",
-	Sapient = true,
-	Description = "The akhs are powerful luminescent spirits who dwell in Duat."
+DefineLanguageWord("Ba", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 36.
+	Language = "egyptian",
+	Type = "noun",
+	Meanings = {"Soul"}
 })
 
-DefineSpecies("akh-iqer", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 38.
-	Name = "Akh-Iqer",
-	HomePlane = "Duat",
-	Sapient = true,
-	Description = "An akh-iqer is a particularly mighty akh, who claims to have achieved perfection."
+DefineLanguageWord("Djet", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 33.
+	Language = "egyptian",
+	Type = "noun",
+	Meanings = {"Body"}
 })
 
-DefineSpecies("einherjar", {
-	Name = "Einherjar",
-	HomePlane = "Asgard",
-	Sapient = true,
-	Description = "The Einherjar were originally souls of mortals who believed in the Aesir and ascended to Asgard. Being deemed worthy warriors, they were accepted into Valhalla and became mighty Einherjar."
+DefineLanguageWord("Hau", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 33.
+	Language = "egyptian",
+	Type = "noun",
+	Meanings = {"Body", "Limbs"} -- source gives the Portuguese "corpo" and "membros" as the meaning
 })
 
-DefineSpecies("valkyrie", {
-	Name = "Valkyrie",
-	HomePlane = "Asgard",
-	Sapient = true,
-	Description = "The Valkyries are warrior maidens who dwell in Asgard, greeting the souls of powerful mortals into Valhalla."
+DefineLanguageWord("Ib", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 34.
+	Language = "egyptian",
+	Type = "noun",
+	Meanings = {"Heart"}
 })
 
-Load("scripts/species_ethereal_angel.lua")
-Load("scripts/species_ethereal_demon.lua")
-Load("scripts/species_ethereal_elemental.lua")
+DefineLanguageWord("Khet", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 33.
+	Language = "egyptian",
+	Type = "noun",
+	Meanings = {"Body", "Womb"} -- source gives the Portuguese "corpo" and "ventre" as the meaning
+})
+
+DefineLanguageWord("Kau", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 35.
+	Language = "egyptian",
+	Type = "noun", -- correct?
+	Meanings = {"Feeding"} -- source gives the Portuguese "alimentação" as the meaning
+})
+
+DefineLanguageWord("Ren", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 36.
+	Language = "egyptian",
+	Type = "noun",
+	Meanings = {"Name"}
+})
