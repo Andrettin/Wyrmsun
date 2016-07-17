@@ -165,3 +165,9 @@ DefineDeityDomain("wrath", {
 	Name = "Wrath",
 	Abilities = {"upgrade-terror"}
 })
+
+-- Skills
+
+DefineDeityDomain("archery", {
+	Name = "Archery"
+})

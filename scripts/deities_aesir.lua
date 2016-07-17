@@ -317,7 +317,7 @@ DefineDeity("ull", { -- name means "Glory" or "Brilliance"; Source: Kevin Crossl
 	Civilizations = {"norse"},
 	Religions = {"paganism"},
 	Gender = "male",
-	Domains = {}, -- god of archery and skiing
+	Domains = {"archery"}, -- god of archery and skiing
 })
 
 DefineDeity("var", { -- name means "Oath"; keeps marriage oaths and punishes those who don't fulfill them; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 252.

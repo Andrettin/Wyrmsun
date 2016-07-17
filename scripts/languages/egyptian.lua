@@ -8,7 +8,7 @@
 --                        T H E   W A R   B E G I N S
 --         Stratagus - A free fantasy real time strategy game engine
 --
---      (c) Copyright 2015 by Andrettin
+--      (c) Copyright 2016 by Andrettin
 --
 --      This program is free software; you can redistribute it and/or modify
 --      it under the terms of the GNU General Public License as published by
@@ -29,6 +29,12 @@ DefineLanguageWord("Ba", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1
 	Language = "egyptian",
 	Type = "noun",
 	Meanings = {"Soul"}
+})
+
+DefineLanguageWord("Djeser", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 44.
+	Language = "egyptian",
+	Type = "noun",
+	Meanings = {"Sacred"}
 })
 
 DefineLanguageWord("Djet", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 33.
@@ -59,6 +65,18 @@ DefineLanguageWord("Kau", { -- Source: Claude Traunecker, "Os Deuses do Egito", 
 	Language = "egyptian",
 	Type = "noun", -- correct?
 	Meanings = {"Feeding"} -- source gives the Portuguese "alimentação" as the meaning
+})
+
+DefineLanguageWord("Netjery", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 43.
+	Language = "egyptian",
+	Type = "noun",
+	Meanings = {"Divine", "Ritualized"}
+})
+
+DefineLanguageWord("Ntr", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 42.
+	Language = "egyptian",
+	Type = "noun",
+	Meanings = {"God"}
 })
 
 DefineLanguageWord("Ren", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 36.

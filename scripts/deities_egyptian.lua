@@ -25,6 +25,24 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineDeity("ra", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 41.
+	Name = "Ra",
+	Civilizations = {"egyptian"},
+	Religions = {"paganism"},
+	Gender = "male",
+	Domains = {"fire"},
+--	Description = "Ra is a mighty sun god."
+})
+
+DefineDeity("amon", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 44.
+	Name = "Amon",
+	Civilizations = {"egyptian"},
+	Religions = {"paganism"},
+	Gender = "male",
+	Domains = {"aether"},
+--	Description = "\"The hidden\", Amon is a god associated with invisible powers."
+})
+
 DefineDeity("bes", { -- Source: Warren R. Dawson, "Pygmies and Dwarfs in Ancient Egypt", 1938, p. 186; Source: Kamyar Abdi, "Bes in the Achaemenid Empire", 1999, p. 114.
 	Name = "Bes",
 	Civilizations = {"dwarf", "egyptian"},
@@ -52,6 +70,96 @@ DefineDeity("hathor", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992
 --	Description = "Hathor is a celestial goddess. She appears in the form of a cow, and is held as a goddess of happiness. On Earth Hathor is worshiped by the Egyptians, and she also enjoys a priesthood amongst the minotaurs of Jotunheim."
 })
 
+DefineDeity("heka", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 44.
+	Name = "Heka",
+	Civilizations = {"egyptian"},
+	Religions = {"paganism"},
+	Gender = "male",
+	Domains = {"aether"},
+--	Description = "Heka is a deity of magic."
+})
+
+DefineDeity("horus", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 41.
+	Name = "Horus",
+	Civilizations = {"egyptian"},
+	Religions = {"paganism"},
+	Gender = "male",
+	Domains = {},
+--	Description = "Horus is a god who takes the shape of a falcon."
+})
+
+DefineDeity("hu", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 44.
+	Name = "Hu",
+	Civilizations = {"egyptian"},
+	Religions = {"paganism"},
+	Gender = "male",
+	Domains = {},
+--	Description = "Hu is a deity of the word."
+})
+
+DefineDeity("khonsu", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 44.
+	Name = "Khonsu",
+	Civilizations = {"egyptian"},
+	Religions = {"paganism"},
+	Gender = "male",
+	Domains = {},
+--	Description = "\"The one who comes and goes\", Khonsu is a moon god."
+})
+
+DefineDeity("mafdet", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 44.
+	Name = "Mafdet",
+	Civilizations = {"egyptian"},
+	Religions = {"paganism"},
+	Gender = "female",
+	Domains = {},
+--	Description = "\"The runner\", Mafdet is a goddess who takes the shape of a panther."
+})
+
+DefineDeity("min", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 40.
+	Name = "Min",
+	Civilizations = {"egyptian"},
+	Religions = {"paganism"},
+	Gender = "male",
+	Domains = {"lightning"},
+--	Description = "Min is a god of lightning."
+})
+
+DefineDeity("neith", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 40.
+	Name = "Neith",
+	Civilizations = {"egyptian"},
+	Religions = {"paganism"},
+	Gender = "female",
+	Domains = {"archery"},
+--	Description = "Neith is a goddess famed for her arrows."
+})
+
+DefineDeity("nekhbet", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 42.
+	Name = "Nekhbet",
+	Civilizations = {"egyptian"},
+	Religions = {"paganism"},
+	Gender = "male",
+	Domains = {},
+--	Description = "Nekhbet takes the form of a vulture, and is associated with the arid deserts."
+})
+
+DefineDeity("pakhet", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 44.
+	Name = "Pakhet",
+	Civilizations = {"egyptian"},
+	Religions = {"paganism"},
+	Gender = "female",
+	Domains = {},
+--	Description = "\"The dilacerator\", Pakhet is a goddess who takes the form of a lioness."
+})
+
+DefineDeity("sia", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 44.
+	Name = "Sia",
+	Civilizations = {"egyptian"},
+	Religions = {"paganism"},
+	Gender = "male",
+	Domains = {},
+--	Description = "Sia is a deity of thought."
+})
+
 DefineDeity("sobek", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 25.
 	Name = "Sobek",
 	Civilizations = {"egyptian"},
@@ -60,3 +168,22 @@ DefineDeity("sobek", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992,
 	Domains = {"water"},
 --	Description = "A god who takes the shape of a crocodile, Sobek holds aquatic animals as his domain. He is also linked to vegetation growth."
 })
+
+DefineDeity("uadjit", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 42.
+	Name = "Uadjit",
+	Civilizations = {"egyptian"},
+	Religions = {"paganism"},
+	Gender = "female",
+	Domains = {},
+--	Description = "A serpent-shaped goddess, Uadjit is associated with swamps and fertile valleys."
+})
+
+DefineDeity("upuaut", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 44.
+	Name = "Upuaut",
+	Civilizations = {"egyptian"},
+	Religions = {"paganism"},
+	Gender = "male",
+	Domains = {},
+--	Description = "\"The opener of paths\", Upuaut is a god who takes the form of a jackal."
+})
+
