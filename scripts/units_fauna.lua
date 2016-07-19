@@ -376,14 +376,14 @@ DefineUnitType("unit-frog", { Name = _("Frog"),
 	  }
 } )
 
-DefineUnitType("unit-adelobasileus", {
+DefineUnitType("unit-adelobasileus-cromptoni", {
 	Name = "Adelobasileus",
 	Parent = "unit-template-fauna-unit",
-	Species = "adelobasileus",
+	Species = "adelobasileus-cromptoni",
 	Class = "arboreal-insectivore",
 	Description = _("The Adelobasileus was one of the earliest mammal-like animals to have lived, and is possibly a common ancestor of all mammals. It lived in trees, and its diet consisted of insects."),
 	Image = {"file", "neutral/units/rat_light_gray_fur_short_tail.png", "size", {72, 72}},
-	Animations = "animations-rat", Icon = "icon-adelobasileus",
+	Animations = "animations-rat", Icon = "icon-adelobasileus-cromptoni",
 	Speed = 8,
 	HitPoints = 5,
 	DrawLevel = 35,

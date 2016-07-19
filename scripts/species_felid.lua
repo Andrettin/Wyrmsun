@@ -31,9 +31,20 @@ DefineSpeciesFamily("felidae", { -- Source: http://www.itis.gov/servlet/SingleRp
 	Suborder = "feliformia"
 })
 
+DefineSpeciesGenus("panthera", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180592
+	Name = "Panthera",
+	CommonName = "Panther",
+	Family = "felidae",
+	Subfamily = "pantherinae"
+})
+
+DefineSpeciesGenus("proailurus", { -- Source: http://fossilworks.org/bridge.pl?action=taxonInfo&taxon_no=41069 ; Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_species?gen_id=1340242
+	Name = "Proailurus",
+	Family = "felidae"
+})
+
 DefineSpecies("proailurus", { -- Source: http://fossilworks.org/bridge.pl?action=taxonInfo&taxon_no=41069 ; Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_species?gen_id=1340242
 	Name = "Proailurus",
-	Family = "felidae",
 	Genus = "proailurus",
 	Homeworld = "Earth",
 	EvolvesFrom = {"nimravus"}, -- possibly, since Nimravus is an earlier feliform
@@ -46,8 +57,6 @@ DefineSpecies("proailurus", { -- Source: http://fossilworks.org/bridge.pl?action
 
 DefineSpecies("lion", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=183803
 	Name = "Lion",
-	Family = "felidae",
-	Subfamily = "pantherinae",
 	Genus = "panthera",
 	Species = "leo",
 	Homeworld = "Earth",
@@ -66,8 +75,6 @@ DefineSpecies("sabertooth", {
 
 DefineSpecies("tiger", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=183805
 	Name = "Tiger",
-	Family = "felidae",
-	Subfamily = "pantherinae",
 	Genus = "panthera",
 	Species = "tigris",
 	Homeworld = "Earth",

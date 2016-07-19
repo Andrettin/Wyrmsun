@@ -30,10 +30,27 @@ DefineSpeciesFamily("suidae", { -- Source: http://www.itis.gov/servlet/SingleRpt
 	Order = "artiodactyla"
 })
 
-DefineSpecies("bunolistriodon", { -- Source: http://fossilworks.org/bridge.pl?action=taxonInfo&taxon_no=42384
+DefineSpeciesGenus("bunolistriodon", { -- Source: http://fossilworks.org/bridge.pl?action=taxonInfo&taxon_no=42384
 	Name = "Bunolistriodon",
 	Family = "suidae",
-	Subfamily = "listriodontinae",
+	Subfamily = "listriodontinae"
+})
+
+DefineSpeciesGenus("seta", { -- fictional genus
+	Name = "Seta",
+	Family = "suidae"
+})
+
+DefineSpeciesGenus("sus", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180721
+	Name = "Sus",
+	CommonName = "Pig",
+	Family = "suidae",
+	Subfamily = "suinae",
+	Tribe = "suini"
+})
+
+DefineSpecies("bunolistriodon", { -- Source: http://fossilworks.org/bridge.pl?action=taxonInfo&taxon_no=42384
+	Name = "Bunolistriodon",
 	Genus = "bunolistriodon",
 	Homeworld = "Earth",
 	EvolvesFrom = {"helohyus"},
@@ -44,9 +61,6 @@ DefineSpecies("bunolistriodon", { -- Source: http://fossilworks.org/bridge.pl?ac
 
 DefineSpecies("boar", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180722
 	Name = "Boar",
-	Family = "suidae",
-	Subfamily = "suinae",
-	Tribe = "suini",
 	Genus = "sus",
 	Species = "scrofa",
 	Homeworld = "Earth",
@@ -57,7 +71,6 @@ DefineSpecies("boar", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleR
 
 DefineSpecies("gullinbursti", { -- named after the mythical boar (in Norse mythology) Gullinbursti
 	Name = "Gullinbursti",
-	Family = "suidae",
 	Genus = "seta", -- "bristle" in Latin
 	Species = "aurea", -- "golden" in Latin
 	Homeworld = "Nidavellir",

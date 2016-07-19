@@ -26,10 +26,8 @@
 --
 
 function GetGenusCommonName(genus)
-	if (genus == "draco") then
-		return "Dragon"
-	elseif (genus == "panthera") then
-		return "Panther"
+	if (genus ~= "" and GetSpeciesGenusData(genus, "CommonName") ~= "") then
+		return GetSpeciesGenusData(genus, "CommonName")
 	else
 		return CapitalizeString(genus)
 	end

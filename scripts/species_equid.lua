@@ -30,10 +30,63 @@ DefineSpeciesFamily("equidae", { -- Source: http://www.itis.gov/servlet/SingleRp
 	Order = "perissodactyla"
 })
 
-DefineSpecies("mesohippus", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=43010
+DefineSpeciesGenus("centaurus", {
+	Name = "Centaurus",
+	CommonName = "Centaur",
+	Family = "equidae"
+})
+
+DefineSpeciesGenus("equus", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180689
+	Name = "Equus",
+	Family = "equidae"
+})
+
+DefineSpeciesGenus("merychippus", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=43009
+	Name = "Merychippus",
+	Family = "equidae",
+	Subfamily = "equinae"
+})
+
+DefineSpeciesGenus("mesohippus", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=43010
 	Name = "Mesohippus",
 	Family = "equidae",
-	Subfamily = "anchitheriinae",
+	Subfamily = "anchitheriinae"
+})
+
+DefineSpeciesGenus("nannippus", { -- Source: http://fossilworks.org/?a=taxonInfo&taxon_no=43012
+	Name = "Nannippus",
+	Family = "equidae",
+	Subfamily = "equinae",
+	Tribe = "hipparionini"
+})
+
+DefineSpeciesGenus("parahippus", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=43016
+	Name = "Parahippus",
+	Family = "equidae",
+	Subfamily = "anchitheriinae"
+})
+
+DefineSpeciesGenus("pegasus", {
+	Name = "Pegasus",
+	CommonName = "Pegasus",
+	Family = "equidae"
+})
+
+DefineSpeciesGenus("pliohippus", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=43019
+	Name = "Pliohippus",
+	Family = "equidae",
+	Subfamily = "equinae",
+	Tribe = "equini"
+})
+
+DefineSpeciesGenus("unicornis", {
+	Name = "Unicornis",
+	CommonName = "Unicorn",
+	Family = "equidae"
+})
+
+DefineSpecies("mesohippus", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=43010
+	Name = "Mesohippus",
 	Genus = "mesohippus",
 	Homeworld = "Earth",
 	EvolvesFrom = {"palaeotherium"},
@@ -45,8 +98,6 @@ DefineSpecies("mesohippus", { -- Source: http://fossilworks.org/bridge.pl?a=taxo
 
 DefineSpecies("merychippus", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=43009
 	Name = "Merychippus",
-	Family = "equidae",
-	Subfamily = "equinae",
 	Genus = "merychippus",
 	Homeworld = "Earth",
 	EvolvesFrom = {"mesohippus"}, -- earlier equid
@@ -58,9 +109,6 @@ DefineSpecies("merychippus", { -- Source: http://fossilworks.org/bridge.pl?a=tax
 
 DefineSpecies("nannippus", { -- Source: http://fossilworks.org/?a=taxonInfo&taxon_no=43012
 	Name = "Nannippus",
-	Family = "equidae",
-	Subfamily = "equinae",
-	Tribe = "hipparionini",
 	Genus = "nannippus",
 	Homeworld = "Earth",
 	EvolvesFrom = {"mesohippus"}, -- earlier equid
@@ -72,8 +120,6 @@ DefineSpecies("nannippus", { -- Source: http://fossilworks.org/?a=taxonInfo&taxo
 
 DefineSpecies("parahippus", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=43016
 	Name = "Parahippus",
-	Family = "equidae",
-	Subfamily = "anchitheriinae",
 	Genus = "parahippus",
 	Species = "cognatus", -- type species of the Parahippus genus
 	Homeworld = "Earth",
@@ -86,9 +132,6 @@ DefineSpecies("parahippus", { -- Source: http://fossilworks.org/bridge.pl?a=taxo
 
 DefineSpecies("pliohippus", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=43019
 	Name = "Pliohippus",
-	Family = "equidae",
-	Subfamily = "equinae",
-	Tribe = "equini",
 	Genus = "pliohippus",
 	Homeworld = "Earth",
 	EvolvesFrom = {"mesohippus"}, -- earlier equid
@@ -100,7 +143,6 @@ DefineSpecies("pliohippus", { -- Source: http://fossilworks.org/bridge.pl?a=taxo
 
 DefineSpecies("horse", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180691
 	Name = "Horse",
-	Family = "equidae",
 	Genus = "equus",
 	Species = "caballus",
 	Homeworld = "Earth",
@@ -111,6 +153,7 @@ DefineSpecies("horse", { -- Source: http://www.itis.gov/servlet/SingleRpt/Single
 
 DefineSpecies("pegasus", {
 	Name = "Pegasus",
+	Genus = "pegasus",
 	Homeworld = "Alfheim",
 	EvolvesFrom = {"merychippus", "nannippus", "parahippus", "pliohippus"}, -- earlier equids
 	Era = "holocene",
@@ -120,6 +163,7 @@ DefineSpecies("pegasus", {
 
 DefineSpecies("unicorn", {
 	Name = "Unicorn",
+	Genus = "unicornis",
 	Homeworld = "Alfheim",
 	EvolvesFrom = {"merychippus", "nannippus", "parahippus", "pliohippus"}, -- earlier equids
 	Era = "holocene",
@@ -128,6 +172,7 @@ DefineSpecies("unicorn", {
 
 DefineSpecies("centaur", {
 	Name = "Centaur",
+	Genus = "centaurus",
 	Homeworld = "Alfheim",
 	EvolvesFrom = {"merychippus", "nannippus", "parahippus", "pliohippus"}, -- earlier equids
 	Sapient = true

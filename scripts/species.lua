@@ -102,6 +102,7 @@ Load("scripts/species_canid.lua")
 Load("scripts/species_equid.lua")
 Load("scripts/species_felid.lua")
 Load("scripts/species_primate.lua")
+Load("scripts/species_rhinocerotid.lua")
 Load("scripts/species_rodent.lua")
 Load("scripts/species_suid.lua")
 

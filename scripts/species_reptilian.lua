@@ -53,6 +53,17 @@ DefineSpeciesFamily("tyrannosauridae", { -- Source: http://www.marine.csiro.au/m
 	Order = "saurischia"
 })
 
+DefineSpeciesGenus("adelobasileus", { -- Source: Spencer G. Lucas and Zhexi Luo, "Adelobasileus from the Upper Triassic of West Texas: The Oldest Mammal", 1993, p. 309; Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=53175 ; Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_species?gen_id=1196072
+	Name = "Adelobasileus",
+	Family = "synapsida"
+})
+	
+DefineSpeciesGenus("tyrannosaurus", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=38613
+	Name = "Tyrannosaurus",
+	CommonName = "Tyrannosaur",
+	Family = "tyrannosauridae"
+})
+
 DefineSpecies("edaphosaurus", {
 	Name = "Edaphosaurus",
 	Homeworld = "Earth",
@@ -319,7 +330,6 @@ DefineSpecies("tyrannosaurus-rex", { -- Source: http://fossilworks.org/bridge.pl
 	Genus = "tyrannosaurus",
 	Species = "rex",
 	Homeworld = "Earth",
-	Family = "tyrannosauridae",
 	EvolvesFrom = {"allosaurus", "dilophosaurus"}, -- should be ancestors to all Tyrannosauruses
 	Era = "cretaceous",
 	Prehistoric = true,
@@ -369,9 +379,8 @@ DefineSpecies("thrinaxodon", {
 	ChildUpgrade = "upgrade-child"
 })
 
-DefineSpecies("adelobasileus", { -- Source: Spencer G. Lucas and Zhexi Luo, "Adelobasileus from the Upper Triassic of West Texas: The Oldest Mammal", 1993, p. 309; Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=53175 ; Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_species?gen_id=1196072
+DefineSpecies("adelobasileus-cromptoni", { -- Source: Spencer G. Lucas and Zhexi Luo, "Adelobasileus from the Upper Triassic of West Texas: The Oldest Mammal", 1993, p. 309; Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=53175 ; Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_species?gen_id=1196072
 	Name = "Adelobasileus",
-	Family = "synapsida",
 	Genus = "adelobasileus",
 	Species = "cromptoni",
 	Homeworld = "Earth",

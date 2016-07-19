@@ -30,10 +30,21 @@ DefineSpeciesFamily("gryphidae", {
 	Order = "accipitriformes"
 })
 
+DefineSpeciesGenus("gryphus", {
+	Name = "Gryphus", -- "gryphon" in Latin
+	CommonName = "Gryphon",
+	Family = "gryphidae"
+})
+
+DefineSpeciesGenus("hippogryphus", {
+	Name = "Hippogryphus", -- rendering of "hippogryph" in Latin
+	CommonName = "Hippogryph",
+	Family = "gryphidae"
+})
+
 DefineSpecies("gryphon", {
 	Name = "Gryphon",
-	Family = "gryphidae",
-	Genus = "gryphus", -- "gryphon" in Latin
+	Genus = "gryphus",
 	Species = "leo", -- "lion" in Latin
 	Homeworld = "Nidavellir",
 	Environments = {"swamp"}, -- should be dark plains
@@ -45,8 +56,7 @@ DefineSpecies("gryphon", {
 
 DefineSpecies("hippogryph", {
 	Name = "Hippogryph",
-	Family = "gryphidae",
-	Genus = "hippogryphus", -- rendering of "hippogryph" in Latin
+	Genus = "hippogryphus",
 	Species = "equus", -- "horse" in Latin (the "horse" element is already present in the "hippo" of the genus, but since there it is Greek and here Latin, it doesn't look too repetitive)
 	Homeworld = "Alfheim",
 	Environments = {"fairlimbed-forest"},

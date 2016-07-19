@@ -40,6 +40,51 @@ DefineSpeciesFamily("hominidae", { -- Source: http://www.itis.gov/servlet/Single
 	Superfamily = "hominoidea"
 })
 
+DefineSpeciesGenus("alfus", {
+	Name = "Alfus", -- "elf" in Latin
+	CommonName = "Elf",
+	Family = "hominidae"
+})
+
+DefineSpeciesGenus("australopithecus", {
+	Name = "Australopithecus",
+	Family = "hominidae" -- Source: http://fossilworks.org/bridge.pl?action=taxonInfo&taxon_no=40900 ; Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=83061
+})
+
+DefineSpeciesGenus("gigans", {
+	Name = "Gigans", -- "giant" in Latin
+	CommonName = "Giant"
+})
+
+DefineSpeciesGenus("gnomus", {
+	Name = "Gnomus", -- "gnome" in Latin
+	CommonName = "Gnome",
+	Family = "hominidae"
+})
+
+DefineSpeciesGenus("gobelinus", {
+	Name = "Gobelinus", -- "goblin" in Latin
+	CommonName = "Goblin"
+})
+
+DefineSpeciesGenus("homo", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180091
+	Name = "Homo",
+	CommonName = "Human",
+	Family = "hominidae",
+	Subfamily = "homininae"
+})
+
+DefineSpeciesGenus("nanus", {
+	Name = "Nanus", -- "dwarf" in Latin
+	CommonName = "Dwarf",
+	Family = "hominidae"
+})
+
+DefineSpeciesGenus("orcus", {
+	Name = "Orcus", -- "orc" in Latin
+	CommonName = "Orc"
+})
+
 DefineSpecies("plesiadapis", {
 	Name = "Plesiadapis",
 	Homeworld = "Earth",
@@ -79,7 +124,6 @@ DefineSpecies("chimpanzee", {
 
 DefineSpecies("australopithecus", {
 	Name = "Australopithecus",
-	Family = "hominidae", -- Source: http://fossilworks.org/bridge.pl?action=taxonInfo&taxon_no=40900 ; Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=83061
 	Genus = "australopithecus",
 	Species = "afarensis", -- the Australopithecus afarensis is also known as Praeanthropus africanus; Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=83054
 	Homeworld = "Earth",
@@ -99,7 +143,6 @@ DefineSpecies("cyclops", {
 
 DefineSpecies("derro", {
 	Name = "Derro",
-	Family = "hominidae",
 	Genus = "gnomus", -- "gnome" in Latin
 	Species = "detrimenti", -- "detrimental" in Latin
 	Homeworld = "Nidavellir",
@@ -111,7 +154,6 @@ DefineSpecies("derro", {
 
 DefineSpecies("dwarf", {
 	Name = "Dwarf",
-	Family = "hominidae",
 	Genus = "nanus", -- "dwarf" in Latin
 	Species = "sapiens",
 	Homeworld = "Nidavellir",
@@ -123,7 +165,6 @@ DefineSpecies("dwarf", {
 
 DefineSpecies("elf", {
 	Name = "Elf",
-	Family = "hominidae",
 	Genus = "alfus", -- "elf" in Latin
 	Species = "sapiens",
 	Homeworld = "Alfheim",
@@ -143,7 +184,6 @@ DefineSpecies("ettin", {
 
 DefineSpecies("gnome", {
 	Name = "Gnome",
-	Family = "hominidae",
 	Genus = "gnomus", -- "gnome" in Latin
 	Species = "sapiens",
 	Homeworld = "Nidavellir",
@@ -173,8 +213,6 @@ DefineSpecies("hobgoblin", {
 
 DefineSpecies("human", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180092
 	Name = "Human",
-	Family = "hominidae",
-	Subfamily = "homininae",
 	Genus = "homo",
 	Species = "sapiens",
 	Homeworld = "Earth",

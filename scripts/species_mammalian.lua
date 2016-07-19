@@ -130,12 +130,57 @@ DefineSpeciesFamily("zalambdalestidae", { -- Source: http://fossilworks.org/brid
 	Order = "pilosa"
 })
 
+DefineSpeciesGenus("alphadon", { -- Source: http://fossilworks.org/bridge.pl?action=taxonInfo&taxon_no=39947
+	Name = "Alphadon",
+	Family = "alphadontidae"
+})
+
+DefineSpeciesGenus("crusafontia", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=39892 ; Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_species?gen_id=1010900
+	Name = "Crusafontia",
+	Family = "dryolestidae"
+})
+
+DefineSpeciesGenus("helohyus", { -- Source: http://fossilworks.org/bridge.pl?action=taxonInfo&taxon_no=42348 ; Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_species?gen_id=1446494
+	Name = "Helohyus",
+	Family = "helohyidae"
+})
+
+DefineSpeciesGenus("ilingoceros", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=42728
+	Name = "Ilingoceros",
+	Family = "antilocapridae"
+})
+
+DefineSpeciesGenus("leptictidium", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=40267
+	Name = "Leptictidium",
+	Family = "pseudorhyncocyonidae"
+})
+
+DefineSpeciesGenus("megazostrodon", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=39752 ; Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_species?gen_id=1017806
+	Name = "Megazostrodon",
+	Family = "megazostrodontidae"
+})
+
+DefineSpeciesGenus("nimravus", { -- Source: http://fossilworks.org/bridge.pl?action=taxonInfo&taxon_no=41043 ; Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_species?gen_id=1067195
+	Name = "Nimravus",
+	Family = "nimravidae",
+	Subfamily = "nimravinae"
+})
+
+DefineSpeciesGenus("repenomamus", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=67605
+	Name = "Repenomamus",
+	Family = "gobiconodontidae"
+})
+
+DefineSpeciesGenus("zalambdalestes", { -- Source: http://fossilworks.org/bridge.pl?action=taxonInfo&taxon_no=40217
+	Name = "Zalambdalestes",
+	Family = "zalambdalestidae"
+})
+
 DefineSpecies("alphadon", { -- Source: http://fossilworks.org/bridge.pl?action=taxonInfo&taxon_no=39947
 	Name = "Alphadon",
-	Family = "alphadontidae",
 	Genus = "alphadon",
 	Homeworld = "Earth",
-	EvolvesFrom = {"adelobasileus"}, -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
+	EvolvesFrom = {"adelobasileus-cromptoni"}, -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
 	Era = "cretaceous",
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -144,11 +189,10 @@ DefineSpecies("alphadon", { -- Source: http://fossilworks.org/bridge.pl?action=t
 
 DefineSpecies("crusafontia", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=39892 ; Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_species?gen_id=1010900
 	Name = "Crusafontia",
-	Family = "dryolestidae",
 	Genus = "crusafontia",
 	Species = "cuencana", -- type species of the Crusafontia genus
 	Homeworld = "Earth",
-	EvolvesFrom = {"adelobasileus"}, -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
+	EvolvesFrom = {"adelobasileus-cromptoni"}, -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
 	Era = "cretaceous",
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -157,11 +201,10 @@ DefineSpecies("crusafontia", { -- Source: http://fossilworks.org/bridge.pl?a=tax
 
 DefineSpecies("leptictidium", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=40267
 	Name = "Leptictidium",
-	Family = "pseudorhyncocyonidae",
 	Genus = "leptictidium",
 	Species = "auderiense", -- type species of the Leptictidium genus
 	Homeworld = "Earth",
-	EvolvesFrom = {"adelobasileus"}, -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
+	EvolvesFrom = {"adelobasileus-cromptoni"}, -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
 	Era = "eocene",
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -170,11 +213,10 @@ DefineSpecies("leptictidium", { -- Source: http://fossilworks.org/bridge.pl?a=ta
 
 DefineSpecies("megazostrodon", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=39752 ; Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_species?gen_id=1017806
 	Name = "Megazostrodon",
-	Family = "megazostrodontidae",
 	Genus = "megazostrodon",
 	Species = "rudnerae", -- type species of the Megazostrodon genus
 	Homeworld = "Earth",
-	EvolvesFrom = {"adelobasileus"}, -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
+	EvolvesFrom = {"adelobasileus-cromptoni"}, -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
 	Era = "jurassic",
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -183,11 +225,10 @@ DefineSpecies("megazostrodon", { -- Source: http://fossilworks.org/bridge.pl?a=t
 
 DefineSpecies("zalambdalestes", { -- Source: http://fossilworks.org/bridge.pl?action=taxonInfo&taxon_no=40217
 	Name = "Zalambdalestes",
-	Family = "zalambdalestidae",
 	Genus = "zalambdalestes",
 	Species = "lechei", -- type species of the Zalambdalestes genus
 	Homeworld = "Earth",
-	EvolvesFrom = {"adelobasileus"}, -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
+	EvolvesFrom = {"adelobasileus-cromptoni"}, -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
 	Era = "cretaceous",
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -303,8 +344,6 @@ DefineSpecies("hyena", {
 
 DefineSpecies("nimravus", { -- Source: http://fossilworks.org/bridge.pl?action=taxonInfo&taxon_no=41043 ; Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_species?gen_id=1067195
 	Name = "Nimravus",
-	Family = "nimravidae",
-	Subfamily = "nimravinae",
 	Genus = "nimravus",
 	Homeworld = "Earth",
 	EvolvesFrom = {"amphicyon", "hemicyon", "miacis"},
@@ -413,7 +452,6 @@ DefineSpecies("giraffe", {
 
 DefineSpecies("ilingoceros", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=42728
 	Name = "Ilingoceros",
-	Family = "antilocapridae",
 	Genus = "ilingoceros",
 	Species = "alexandrae", -- type species of the Ilingoceros genus
 	Homeworld = "Earth",
@@ -496,7 +534,6 @@ DefineSpecies("pachyrukhos", {
 
 DefineSpecies("helohyus", { -- Source: http://fossilworks.org/bridge.pl?action=taxonInfo&taxon_no=42348 ; Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_species?gen_id=1446494
 	Name = "Helohyus",
-	Family = "helohyidae",
 	Genus = "helohyus",
 	Homeworld = "Earth",
 	EvolvesFrom = {"chriacus", "phenacodus"},
@@ -542,13 +579,6 @@ DefineSpecies("indricotherium", {
 	Homeworld = "Earth",
 	EvolvesFrom = {"palaeotherium"},
 	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
-})
-
-DefineSpecies("rhinoceros", {
-	Name = "Rhinoceros",
-	Homeworld = "Earth",
-	EvolvesFrom = {"palaeotherium"},
 	ChildUpgrade = "upgrade-child"
 })
 
@@ -700,11 +730,10 @@ DefineSpecies("uintathere", {
 
 DefineSpecies("repenomamus-giganticus", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=67606
 	Name = "Repenomamus Giganticus",
-	Family = "gobiconodontidae",
 	Genus = "repenomamus",
 	Species = "giganticus",
 	Homeworld = "Earth",
-	EvolvesFrom = {"adelobasileus"}, -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
+	EvolvesFrom = {"adelobasileus-cromptoni"}, -- possibly, since Adelobasileus is a very early mammal (or is related to the earliest mammals)
 	Era = "cretaceous",
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"

@@ -30,12 +30,16 @@ DefineSpeciesFamily("draconidae", {
 	Order = "saurischia"
 })
 
+DefineSpeciesGenus("draco", {
+	Name = "Draco", -- "dragon" in Latin
+	CommonName = "Dragon",
+	Family = "draconidae"
+})
+
 DefineSpecies("black-dragon", {
 	Name = "Black Dragon",
-	Family = "draconidae",
-	Genus = "draco", -- "dragon" in Latin
+	Genus = "draco",
 	Species = "nigrans", -- "black" in Latin
-	Family = "draconidae",
 	Homeworld = "Jotunheim",
 	EvolvesFrom = {"tyrannosaurus-rex"}, -- seems sensible, given how the Tyrannosaurus rex has dragon-like features, so it could be an ancestor to mythical dragons
 	ChildUpgrade = "upgrade-wyrm-child"
@@ -43,10 +47,8 @@ DefineSpecies("black-dragon", {
 
 DefineSpecies("blue-dragon", {
 	Name = "Blue Dragon",
-	Family = "draconidae",
-	Genus = "draco", -- "dragon" in Latin
+	Genus = "draco",
 	Species = "caeruleus", -- "blue" in Latin
-	Family = "draconidae",
 	Homeworld = "Jotunheim",
 	EvolvesFrom = {"tyrannosaurus-rex"}, -- seems sensible, given how the Tyrannosaurus rex has dragon-like features, so it could be an ancestor to mythical dragons
 	ChildUpgrade = "upgrade-wyrm-child"
@@ -54,10 +56,8 @@ DefineSpecies("blue-dragon", {
 
 DefineSpecies("brass-dragon", {
 	Name = "Brass Dragon",
-	Family = "draconidae",
-	Genus = "draco", -- "dragon" in Latin
+	Genus = "draco",
 	Species = "orichalcinus", -- "brass" in Latin
-	Family = "draconidae",
 	Homeworld = "Jotunheim",
 	EvolvesFrom = {"tyrannosaurus-rex"}, -- seems sensible, given how the Tyrannosaurus rex has dragon-like features, so it could be an ancestor to mythical dragons
 	ChildUpgrade = "upgrade-wyrm-child"
@@ -65,10 +65,8 @@ DefineSpecies("brass-dragon", {
 
 DefineSpecies("bronze-dragon", {
 	Name = "Bronze Dragon",
-	Family = "draconidae",
-	Genus = "draco", -- "dragon" in Latin
+	Genus = "draco",
 	Species = "aeneolus", -- "bronze" in Latin
-	Family = "draconidae",
 	Homeworld = "Jotunheim",
 	EvolvesFrom = {"tyrannosaurus-rex"}, -- seems sensible, given how the Tyrannosaurus rex has dragon-like features, so it could be an ancestor to mythical dragons
 	ChildUpgrade = "upgrade-wyrm-child"
@@ -76,10 +74,8 @@ DefineSpecies("bronze-dragon", {
 
 DefineSpecies("copper-dragon", {
 	Name = "Copper Dragon",
-	Family = "draconidae",
-	Genus = "draco", -- "dragon" in Latin
+	Genus = "draco",
 	Species = "chalceus", -- "copper" in Latin
-	Family = "draconidae",
 	Homeworld = "Jotunheim",
 	EvolvesFrom = {"tyrannosaurus-rex"}, -- seems sensible, given how the Tyrannosaurus rex has dragon-like features, so it could be an ancestor to mythical dragons
 	ChildUpgrade = "upgrade-wyrm-child"
@@ -87,10 +83,8 @@ DefineSpecies("copper-dragon", {
 
 DefineSpecies("gold-dragon", {
 	Name = "Gold Dragon",
-	Family = "draconidae",
-	Genus = "draco", -- "dragon" in Latin
+	Genus = "draco",
 	Species = "aureus", -- "gold" in Latin
-	Family = "draconidae",
 	Homeworld = "Jotunheim",
 	EvolvesFrom = {"tyrannosaurus-rex"}, -- seems sensible, given how the Tyrannosaurus rex has dragon-like features, so it could be an ancestor to mythical dragons
 	ChildUpgrade = "upgrade-wyrm-child"
@@ -98,10 +92,8 @@ DefineSpecies("gold-dragon", {
 
 DefineSpecies("green-dragon", {
 	Name = "Green Dragon",
-	Family = "draconidae",
-	Genus = "draco", -- "dragon" in Latin
+	Genus = "draco",
 	Species = "viridis", -- "green" in Latin
-	Family = "draconidae",
 	Homeworld = "Jotunheim",
 	EvolvesFrom = {"tyrannosaurus-rex"}, -- seems sensible, given how the Tyrannosaurus rex has dragon-like features, so it could be an ancestor to mythical dragons
 	ChildUpgrade = "upgrade-wyrm-child"
@@ -109,7 +101,7 @@ DefineSpecies("green-dragon", {
 
 DefineSpecies("kobold", {
 	Name = "Kobold",
-	Family = "draconidae",
+--	Family = "draconidae",
 	Species = "sapiens",
 	Homeworld = "Nidavellir",
 	EvolvesFrom = {"tyrannosaurus-rex"}, -- seems sensible, given how the Tyrannosaurus rex has dragon-like features, so it could be an ancestor to mythical dragons
@@ -119,10 +111,8 @@ DefineSpecies("kobold", {
 
 DefineSpecies("red-dragon", {
 	Name = "Red Dragon",
-	Family = "draconidae",
-	Genus = "draco", -- "dragon" in Latin
+	Genus = "draco",
 	Species = "rubeus", -- "red" in Latin
-	Family = "draconidae",
 	Homeworld = "Jotunheim",
 	EvolvesFrom = {"tyrannosaurus-rex"}, -- seems sensible, given how the Tyrannosaurus rex has dragon-like features, so it could be an ancestor to mythical dragons
 	ChildUpgrade = "upgrade-wyrm-child"
@@ -130,10 +120,8 @@ DefineSpecies("red-dragon", {
 
 DefineSpecies("rust-dragon", {
 	Name = "Rust Dragon",
-	Family = "draconidae",
-	Genus = "draco", -- "dragon" in Latin
+	Genus = "draco",
 	Species = "ferrugo", -- "brass" in Latin
-	Family = "draconidae",
 	Homeworld = "Jotunheim",
 	EvolvesFrom = {"tyrannosaurus-rex"}, -- seems sensible, given how the Tyrannosaurus rex has dragon-like features, so it could be an ancestor to mythical dragons
 	ChildUpgrade = "upgrade-wyrm-child"
@@ -141,10 +129,8 @@ DefineSpecies("rust-dragon", {
 
 DefineSpecies("silver-dragon", {
 	Name = "Silver Dragon",
-	Family = "draconidae",
-	Genus = "draco", -- "dragon" in Latin
+	Genus = "draco",
 	Species = "argenteus", -- "silver" in Latin
-	Family = "draconidae",
 	Homeworld = "Jotunheim",
 	EvolvesFrom = {"tyrannosaurus-rex"}, -- seems sensible, given how the Tyrannosaurus rex has dragon-like features, so it could be an ancestor to mythical dragons
 	ChildUpgrade = "upgrade-wyrm-child"
@@ -152,10 +138,8 @@ DefineSpecies("silver-dragon", {
 
 DefineSpecies("white-dragon", {
 	Name = "White Dragon",
-	Family = "draconidae",
-	Genus = "draco", -- "dragon" in Latin
+	Genus = "draco",
 	Species = "albus", -- "white" in Latin
-	Family = "draconidae",
 	Homeworld = "Jotunheim",
 	EvolvesFrom = {"tyrannosaurus-rex"}, -- seems sensible, given how the Tyrannosaurus rex has dragon-like features, so it could be an ancestor to mythical dragons
 	ChildUpgrade = "upgrade-wyrm-child"
@@ -163,7 +147,7 @@ DefineSpecies("white-dragon", {
 
 DefineSpecies("wyrm", {
 	Name = "Wyrm",
-	Family = "draconidae",
+--	Family = "draconidae",
 	Homeworld = "Nidavellir",
 	Environments = {"swamp", "cave"},
 	EvolvesFrom = {"tyrannosaurus-rex"}, -- seems sensible, given how the Tyrannosaurus rex has dragon-like features, so it could be an ancestor to mythical dragons
@@ -172,7 +156,7 @@ DefineSpecies("wyrm", {
 
 DefineSpecies("wyvern", {
 	Name = "Wyvern",
-	Family = "draconidae",
+--	Family = "draconidae",
 	Homeworld = "Jotunheim",
 	ChildUpgrade = "upgrade-child"
 })

@@ -45,6 +45,21 @@ DefineSpeciesFamily("sciuridae", { -- Source: http://www.itis.gov/servlet/Single
 	Suborder = "sciuromorpha"
 })
 
+DefineSpeciesGenus("rattus", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180361
+	Name = "Rattus",
+	CommonName = "Rat",
+	Family = "muridae",
+	Subfamily = "murinae",
+})
+
+DefineSpeciesGenus("sciurus", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180171
+	Name = "Sciurus",
+	CommonName = "Squirrel",
+	Family = "sciuridae",
+	Subfamily = "sciurinae",
+	Tribe = "sciurini"
+})
+
 DefineSpecies("ischyromys", {
 	Name = "Ischyromys",
 	Homeworld = "Earth",
@@ -62,7 +77,7 @@ DefineSpecies("beaver", {
 
 DefineSpecies("carrat", { -- rodent with the morphology akin to that of a canid; goblins keep this beast as a mount
 	Name = "Carrat",
-	Family = "muridae", -- same as rats
+--	Family = "muridae", -- same as rats
 	Homeworld = "Nidavellir",
 	Environments = {"cave", "swamp"},
 	EvolvesFrom = {"ischyromys"}, -- shares a common ancestor with rats
@@ -79,8 +94,6 @@ DefineSpecies("mouse", {
 
 DefineSpecies("rat", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180363
 	Name = "Rat",
-	Family = "muridae",
-	Subfamily = "murinae",
 	Genus = "rattus",
 	Species = "norvegicus",
 	Homeworld = "Earth",
@@ -91,9 +104,6 @@ DefineSpecies("rat", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRp
 
 DefineSpecies("squirrel", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=632439
 	Name = "Squirrel", -- Eurasian Red Squirrel
-	Family = "sciuridae",
-	Subfamily = "sciurinae",
-	Tribe = "sciurini",
 	Genus = "sciurus",
 	Species = "vulgaris",
 	Homeworld = "Earth",

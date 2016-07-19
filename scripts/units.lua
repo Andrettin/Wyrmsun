@@ -102,7 +102,7 @@ Units = {
 	"unit-kobold-footpad",
 	"unit-elven-swordsman",
 	"unit-orc-spearthrower", "unit-orc-sea-orc", "unit-orc-shaman",
-	"unit-adelobasileus", "unit-rat", "unit-horse",
+	"unit-adelobasileus-cromptoni", "unit-rat", "unit-horse",
 	"unit-slime", "unit-yale", "unit-gryphon", "unit-wyrm", "unit-water-elemental",
 	"unit-gold-rock", "unit-gold-deposit", "unit-gold-mine",
 	"unit-silver-rock", "unit-silver-deposit", "unit-silver-mine",

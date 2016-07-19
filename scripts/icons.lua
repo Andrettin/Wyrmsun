@@ -344,9 +344,9 @@ DefineIcon({
 })
 
 DefineIcon({
-	Name = "icon-adelobasileus",
+	Name = "icon-adelobasileus-cromptoni",
 	Size = {46, 38},
-	File = "neutral/icons/adelobasileus.png"
+	File = "neutral/icons/adelobasileus_cromptoni.png"
 })
 	
 DefineIcon({

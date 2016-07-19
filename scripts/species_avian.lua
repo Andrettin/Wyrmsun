@@ -43,6 +43,11 @@ DefineSpeciesFamily("accipitridae", { -- Source: http://www.itis.gov/servlet/Sin
 	Order = "accipitriformes"
 })
 
+DefineSpeciesGenus("haliaeetus", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=175418
+	Name = "Haliaeetus",
+	Family = "accipitridae"
+})
+
 DefineSpecies("archaeopteryx", {
 	Name = "Archaeopteryx",
 	Homeworld = "Earth",
@@ -85,7 +90,6 @@ DefineSpecies("hoatzin", {
 
 DefineSpecies("bald-eagle", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=175420
 	Name = "Bald Eagle",
-	Family = "accipitridae",
 	Genus = "haliaeetus",
 	Species = "leucocephalus",
 	Homeworld = "Earth",

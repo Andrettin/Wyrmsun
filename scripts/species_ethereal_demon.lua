@@ -75,7 +75,7 @@ DefineSpecies("imp", {
 DefineSpecies("ixthala-demon", { -- from Wesnoth
 	Name = "Ixthala Demon",
 	-- Class: Ira
-	Genus = "ixthala",
+--	Genus = "ixthala",
 	Species = "ignis",
 	HomePlane = "Hell",
 	Sapient = true

@@ -30,10 +30,27 @@ DefineSpeciesFamily("bovidae", { -- Source: http://www.itis.gov/servlet/SingleRp
 	Order = "artiodactyla"
 })
 
-DefineSpecies("aragoral", { -- Source: http://fossilworks.org/bridge.pl?action=taxonInfo&taxon_no=86341
+DefineSpeciesGenus("aragoral", { -- Source: http://fossilworks.org/bridge.pl?action=taxonInfo&taxon_no=86341
 	Name = "Aragoral",
 	Family = "bovidae",
-	Subfamily = "caprinae",
+	Subfamily = "caprinae"
+})
+
+DefineSpeciesGenus("capra", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180714
+	Name = "Capra",
+	Family = "bovidae",
+	Subfamily = "caprinae"
+})
+	
+DefineSpeciesGenus("eale", {
+	Name = "Eale",
+	CommonName = "Yale",
+	Family = "bovidae",
+	Subfamily = "caprinae"
+})
+	
+DefineSpecies("aragoral", { -- Source: http://fossilworks.org/bridge.pl?action=taxonInfo&taxon_no=86341
+	Name = "Aragoral",
 	Genus = "aragoral",
 	Homeworld = "Earth",
 	EvolvesFrom = {"diacodexis"}, -- presumably, since Ilingoceros does
@@ -46,8 +63,6 @@ DefineSpecies("aragoral", { -- Source: http://fossilworks.org/bridge.pl?action=t
 
 DefineSpecies("goat", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180715
 	Name = "Goat",
-	Family = "bovidae",
-	Subfamily = "caprinae",
 	Genus = "capra",
 	Species = "hircus",
 	Homeworld = "Earth",
@@ -58,8 +73,6 @@ DefineSpecies("goat", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleR
 
 DefineSpecies("yale", {
 	Name = "Yale",
-	Family = "bovidae",
-	Subfamily = "caprinae",
 	Genus = "eale",
 	Homeworld = "Nidavellir",
 	Environments = {"swamp"}, -- should be dark plains
@@ -70,7 +83,7 @@ DefineSpecies("yale", {
 
 DefineSpecies("minotaur", {
 	Name = "Minotaur",
-	Family = "bovidae",
+--	Family = "bovidae",
 	Homeworld = "Jotunheim",
 	Era = "holocene",
 	Sapient = true
