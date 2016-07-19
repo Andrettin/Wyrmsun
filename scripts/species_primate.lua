@@ -42,7 +42,7 @@ DefineSpeciesFamily("hominidae", { -- Source: http://www.itis.gov/servlet/Single
 
 DefineSpeciesGenus("alfus", {
 	Name = "Alfus", -- "elf" in Latin
-	CommonName = "Elf",
+	CommonName = "Elfoid",
 	Family = "hominidae"
 })
 
@@ -58,31 +58,31 @@ DefineSpeciesGenus("gigans", {
 
 DefineSpeciesGenus("gnomus", {
 	Name = "Gnomus", -- "gnome" in Latin
-	CommonName = "Gnome",
+	CommonName = "Gnomoid",
 	Family = "hominidae"
 })
 
 DefineSpeciesGenus("gobelinus", {
 	Name = "Gobelinus", -- "goblin" in Latin
-	CommonName = "Goblin"
+	CommonName = "Goblinoid"
 })
 
 DefineSpeciesGenus("homo", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180091
 	Name = "Homo",
-	CommonName = "Human",
+	CommonName = "Hominoid",
 	Family = "hominidae",
 	Subfamily = "homininae"
 })
 
 DefineSpeciesGenus("nanus", {
 	Name = "Nanus", -- "dwarf" in Latin
-	CommonName = "Dwarf",
+	CommonName = "Dwarfoid",
 	Family = "hominidae"
 })
 
 DefineSpeciesGenus("orcus", {
 	Name = "Orcus", -- "orc" in Latin
-	CommonName = "Orc"
+	CommonName = "Orcoid"
 })
 
 DefineSpecies("plesiadapis", {
