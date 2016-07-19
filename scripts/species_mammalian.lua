@@ -33,20 +33,6 @@ DefineSpeciesClass("mammalia", { -- Source: http://www.itis.gov/servlet/SingleRp
 	Superclass = "tetrapoda"
 })
 
-DefineSpeciesOrder("artiodactyla", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180692
-	Name = "Artiodactyla",
-	Class = "mammalia",
-	Subclass = "theria",
-	Infraclass = "eutheria"
-})
-
-DefineSpeciesOrder("carnivora", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180539
-	Name = "Carnivora",
-	Class = "mammalia",
-	Subclass = "theria",
-	Infraclass = "eutheria"
-})
-
 DefineSpeciesOrder("didelphimorphia", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=67664 ; Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_family?ordername=Didelphimorphia
 	Name = "Didelphimorphia",
 	Class = "mammalia"
@@ -89,11 +75,6 @@ DefineSpeciesFamily("alphadontidae", { -- Source: http://fossilworks.org/bridge.
 	Order = "didelphimorphia"
 })
 
-DefineSpeciesFamily("antilocapridae", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=552305
-	Name = "Antilocapridae",
-	Order = "artiodactyla"
-})
-
 DefineSpeciesFamily("dryolestidae", { -- Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_genera?fam_id=102271
 	Name = "Dryolestidae",
 	Order = "dryolestida"
@@ -104,20 +85,9 @@ DefineSpeciesFamily("gobiconodontidae", { -- Source: http://fossilworks.org/brid
 	Order = "eutriconodonta"
 })
 
-DefineSpeciesFamily("helohyidae", { -- Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_genera?fam_id=111988
-	Name = "Helohyidae",
-	Order = "artiodactyla"
-})
-
 DefineSpeciesFamily("megazostrodontidae", { -- Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_genera?fam_id=102913
 	Name = "Megazostrodontidae",
 	Order = "docodonta"
-})
-
-DefineSpeciesFamily("nimravidae", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=41036
-	Name = "Nimravidae",
-	Order = "carnivora",
-	Suborder = "feliformia"
 })
 
 DefineSpeciesFamily("pseudorhyncocyonidae", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=40266 ; Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_genera?fam_id=117472
@@ -140,16 +110,6 @@ DefineSpeciesGenus("crusafontia", { -- Source: http://fossilworks.org/bridge.pl?
 	Family = "dryolestidae"
 })
 
-DefineSpeciesGenus("helohyus", { -- Source: http://fossilworks.org/bridge.pl?action=taxonInfo&taxon_no=42348 ; Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_species?gen_id=1446494
-	Name = "Helohyus",
-	Family = "helohyidae"
-})
-
-DefineSpeciesGenus("ilingoceros", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=42728
-	Name = "Ilingoceros",
-	Family = "antilocapridae"
-})
-
 DefineSpeciesGenus("leptictidium", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=40267
 	Name = "Leptictidium",
 	Family = "pseudorhyncocyonidae"
@@ -158,12 +118,6 @@ DefineSpeciesGenus("leptictidium", { -- Source: http://fossilworks.org/bridge.pl
 DefineSpeciesGenus("megazostrodon", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=39752 ; Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_species?gen_id=1017806
 	Name = "Megazostrodon",
 	Family = "megazostrodontidae"
-})
-
-DefineSpeciesGenus("nimravus", { -- Source: http://fossilworks.org/bridge.pl?action=taxonInfo&taxon_no=41043 ; Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_species?gen_id=1067195
-	Name = "Nimravus",
-	Family = "nimravidae",
-	Subfamily = "nimravinae"
 })
 
 DefineSpeciesGenus("repenomamus", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=67605
@@ -233,14 +187,6 @@ DefineSpecies("zalambdalestes", { -- Source: http://fossilworks.org/bridge.pl?ac
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
 	-- ground-dwelling insectivore
-})
-
-DefineSpecies("amphicyon", {
-	Name = "Amphicyon",
-	Homeworld = "Earth",
-	EvolvesFrom = {"alphadon", "leptictidium", "zalambdalestes"},
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
 })
 
 DefineSpecies("borhyaena", {
@@ -320,46 +266,6 @@ DefineSpecies("thylacinus", {
 	ChildUpgrade = "upgrade-child"
 })
 
-DefineSpecies("bear", {
-	Name = "Bear",
-	Homeworld = "Earth",
-	EvolvesFrom = {"amphicyon", "hemicyon", "miacis"},
-	ChildUpgrade = "upgrade-child"
-})
-
-DefineSpecies("chapalmalania", {
-	Name = "Chapalmalania",
-	Homeworld = "Earth",
-	EvolvesFrom = {"amphicyon", "hemicyon", "miacis"},
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
-})
-
-DefineSpecies("hyena", {
-	Name = "Hyena",
-	Homeworld = "Earth",
-	EvolvesFrom = {"amphicyon", "hemicyon", "miacis"},
-	ChildUpgrade = "upgrade-child"
-})
-
-DefineSpecies("nimravus", { -- Source: http://fossilworks.org/bridge.pl?action=taxonInfo&taxon_no=41043 ; Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_species?gen_id=1067195
-	Name = "Nimravus",
-	Genus = "nimravus",
-	Homeworld = "Earth",
-	EvolvesFrom = {"amphicyon", "hemicyon", "miacis"},
-	Era = "eocene",
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
-	-- ground dwelling carnivore
-})
-
-DefineSpecies("raccoon", {
-	Name = "Raccoon",
-	Homeworld = "Earth",
-	EvolvesFrom = {"amphicyon", "hemicyon", "miacis"},
-	ChildUpgrade = "upgrade-child"
-})
-
 DefineSpecies("weasel", {
 	Name = "Weasel",
 	Homeworld = "Earth",
@@ -428,62 +334,6 @@ DefineSpecies("phenacodus", {
 	ChildUpgrade = "upgrade-child"
 })
 
-DefineSpecies("diacodexis", {
-	Name = "Diacodexis",
-	Homeworld = "Earth",
-	EvolvesFrom = {"chriacus", "hyopsodus", "phenacodus"},
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
-})
-
-DefineSpecies("deer", {
-	Name = "Deer",
-	Homeworld = "Earth",
-	EvolvesFrom = {"diacodexis"},
-	ChildUpgrade = "upgrade-child"
-})
-
-DefineSpecies("giraffe", {
-	Name = "Giraffe",
-	Homeworld = "Earth",
-	EvolvesFrom = {"diacodexis"},
-	ChildUpgrade = "upgrade-child"
-})
-
-DefineSpecies("ilingoceros", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=42728
-	Name = "Ilingoceros",
-	Genus = "ilingoceros",
-	Species = "alexandrae", -- type species of the Ilingoceros genus
-	Homeworld = "Earth",
-	EvolvesFrom = {"diacodexis"},
-	Era = "miocene",
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
-	-- ground dwelling browser-grazer
-})
-
-DefineSpecies("megaloceros", {
-	Name = "Megaloceros",
-	Homeworld = "Earth",
-	EvolvesFrom = {"diacodexis"},
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
-})
-
-DefineSpecies("antelope", {
-	Name = "Antelope",
-	Homeworld = "Earth",
-	EvolvesFrom = {"ilingoceros"},
-	ChildUpgrade = "upgrade-child"
-})
-
-DefineSpecies("bison", {
-	Name = "Bison",
-	Homeworld = "Earth",
-	EvolvesFrom = {"ilingoceros"},
-	ChildUpgrade = "upgrade-child"
-})
-
 DefineSpecies("didolodus", {
 	Name = "Didolodus",
 	Homeworld = "Earth",
@@ -529,24 +379,6 @@ DefineSpecies("pachyrukhos", {
 	Homeworld = "Earth",
 	EvolvesFrom = {"scarrittia"},
 	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
-})
-
-DefineSpecies("helohyus", { -- Source: http://fossilworks.org/bridge.pl?action=taxonInfo&taxon_no=42348 ; Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_species?gen_id=1446494
-	Name = "Helohyus",
-	Genus = "helohyus",
-	Homeworld = "Earth",
-	EvolvesFrom = {"chriacus", "phenacodus"},
-	Era = "eocene",
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
-	-- amphibious herbivore-omnivore
-})
-
-DefineSpecies("hippopotamus", {
-	Name = "Hippopotamus",
-	Homeworld = "Earth",
-	EvolvesFrom = {"helohyus"},
 	ChildUpgrade = "upgrade-child"
 })
 
@@ -738,11 +570,4 @@ DefineSpecies("repenomamus-giganticus", { -- Source: http://fossilworks.org/brid
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
 	-- ground dwelling carnivore
-})
-
-DefineSpecies("gnoll", {
-	Name = "Gnoll",
-	Homeworld = "Alfheim",
-	EvolvesFrom = {"amphicyon", "hemicyon", "miacis"}, -- common ancestor with hyenas
-	Sapient = true
 })

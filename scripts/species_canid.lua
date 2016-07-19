@@ -28,7 +28,7 @@
 DefineSpecies("osteoborus", {
 	Name = "Osteoborus",
 	Homeworld = "Earth",
-	EvolvesFrom = {"amphicyon", "hemicyon", "miacis"},
+	EvolvesFrom = {"amphicyon-major", "hemicyon", "miacis"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
 })

@@ -43,12 +43,12 @@ DefineSpeciesGenus("rhinoceros", { -- Source: http://www.itis.gov/servlet/Single
 })
 
 DefineSpecies("hispanotherium-matritense", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 18.
-	Name = "Madrilenian Hispanotherium",
+	Name = "Hispanotherium", -- Madrilenian Hispanotherium
 	Genus = "hispanotherium",
 	Species = "matritense",
 	Homeworld = "Earth",
 	EvolvesFrom = {"palaeotherium"},
---	Era = "cretaceous",
+	Era = "miocene", -- Middle Aragonian
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
 	-- dwelled in open environments which possessed few trees
