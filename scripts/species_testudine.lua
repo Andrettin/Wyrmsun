@@ -25,58 +25,38 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSpeciesFamily("suidae", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180720
-	Name = "Suidae",
-	Order = "artiodactyla"
+DefineSpeciesOrder("testudines", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=56475
+	Name = "Testudines",
+	Class = "reptilia"
 })
 
-DefineSpeciesGenus("bunolistriodon", { -- Source: http://fossilworks.org/bridge.pl?action=taxonInfo&taxon_no=42384
-	Name = "Bunolistriodon",
-	Family = "suidae",
-	Subfamily = "listriodontinae"
+DefineSpeciesFamily("testudinidae", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=37739
+	Name = "Testudinidae",
+	Order = "testudines",
+	Suborder = "cryptodira",
+	Superfamily = "testudinoidea"
 })
 
-DefineSpeciesGenus("seta", { -- fictional genus
-	Name = "Seta",
-	Family = "suidae"
+DefineSpeciesGenus("geochelone", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 18; Source: http://fossilworks.org/bridge.pl?action=taxonInfo&taxon_no=37740
+	Name = "Geochelone",
+	Family = "testudinidae"
 })
 
-DefineSpeciesGenus("sus", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180721
-	Name = "Sus",
-	CommonName = "Pig",
-	Family = "suidae",
-	Subfamily = "suinae",
-	Tribe = "suini"
-})
-
-DefineSpecies("bunolistriodon-lockarti", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 19.
-	Name = "Bunolistriodon",
-	Genus = "bunolistriodon",
-	Species = "lockarti",
+DefineSpecies("geochelone-bolivari", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 18.
+	Name = "Geochelone", -- Giant Tortoise
+	Genus = "geochelone",
+	Species = "bolivari",
 	Homeworld = "Earth",
-	EvolvesFrom = {"helohyus"},
-	Era = "miocene",
+	EvolvesFrom = {"pareiasaurus"},
+	Era = "miocene", -- Middle Aragonian
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
 })
 
-DefineSpecies("boar", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180722
-	Name = "Boar",
-	Genus = "sus",
-	Species = "scrofa",
+DefineSpecies("tortoise", {
+	Name = "Tortoise",
 	Homeworld = "Earth",
-	EvolvesFrom = {"bunolistriodon-lockarti"}, -- Bunolistriodon was an earlier suid
-	Era = "holocene",
-	ChildUpgrade = "upgrade-child"
-})
-
-DefineSpecies("gullinbursti", { -- named after the mythical boar (in Norse mythology) Gullinbursti
-	Name = "Gullinbursti",
-	Genus = "seta", -- "bristle" in Latin
-	Species = "aurea", -- "golden" in Latin
-	Homeworld = "Nidavellir",
-	Environments = {"swamp"},
-	EvolvesFrom = {"bunolistriodon-lockarti"}, -- Bunolistriodon was an earlier suid
+	EvolvesFrom = {"geochelone-bolivari"}, -- earlier tortoise
 	Era = "holocene",
 	ChildUpgrade = "upgrade-child"
 })

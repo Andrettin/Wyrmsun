@@ -70,6 +70,11 @@ DefineSpeciesOrder("pilosa", { -- Source: http://www.marine.csiro.au/mirrorsearc
 	Class = "mammalia"
 })
 
+DefineSpeciesOrder("uranotheria", { -- Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_family?ordername=Uranotheria
+	Name = "Uranotheria",
+	Class = "mammalia"
+})
+
 DefineSpeciesFamily("alphadontidae", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=67663
 	Name = "Alphadontidae",
 	Order = "didelphimorphia"
@@ -83,6 +88,12 @@ DefineSpeciesFamily("dryolestidae", { -- Source: http://www.marine.csiro.au/mirr
 DefineSpeciesFamily("gobiconodontidae", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=67668
 	Name = "Gobiconodontidae",
 	Order = "eutriconodonta"
+})
+
+DefineSpeciesFamily("gomphotheriidae", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=43240
+	Name = "Gomphotheriidae",
+	Order = "uranotheria", -- Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_genera?fam_id=103516
+	Superfamily = "gomphotherioidea"
 })
 
 DefineSpeciesFamily("megazostrodontidae", { -- Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_genera?fam_id=102913
@@ -108,6 +119,11 @@ DefineSpeciesGenus("alphadon", { -- Source: http://fossilworks.org/bridge.pl?act
 DefineSpeciesGenus("crusafontia", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=39892 ; Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_species?gen_id=1010900
 	Name = "Crusafontia",
 	Family = "dryolestidae"
+})
+
+DefineSpeciesGenus("gomphotherium", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 19; Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=43247
+	Name = "Gomphotherium",
+	Family = "gomphotheriidae"
 })
 
 DefineSpeciesGenus("leptictidium", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=40267
@@ -420,6 +436,18 @@ DefineSpecies("phiomia", {
 	EvolvesFrom = {"chriacus", "hyopsodus", "phenacodus"},
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("gomphotherium-angustidens", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 19.
+	Name = "Gomphotherium", -- Gomphotherium angustidens
+	Genus = "gomphotherium",
+	Species = "angustidens",
+	Homeworld = "Earth",
+	EvolvesFrom = {"phiomia"},
+	Era = "miocene", -- Middle Aragonian
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+	-- mastodon
 })
 
 DefineSpecies("elephant", {

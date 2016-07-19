@@ -37,6 +37,12 @@ DefineSpeciesFamily("antilocapridae", { -- Source: http://www.itis.gov/servlet/S
 	Order = "artiodactyla"
 })
 
+DefineSpeciesFamily("cainotheriidae", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=67948
+	Name = "Cainotheriidae",
+	Order = "artiodactyla",
+	Suborder = "tylopoda"
+})
+
 DefineSpeciesFamily("helohyidae", { -- Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_genera?fam_id=111988
 	Name = "Helohyidae",
 	Order = "artiodactyla"
@@ -45,6 +51,11 @@ DefineSpeciesFamily("helohyidae", { -- Source: http://www.marine.csiro.au/mirror
 DefineSpeciesFamily("palaeomerycidae", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=42624
 	Name = "Palaeomerycidae",
 	Order = "artiodactyla"
+})
+
+DefineSpeciesGenus("cainotherium", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 19.
+	Name = "Cainotherium",
+	Family = "cainotheriidae" -- Source: http://fossilworks.org/bridge.pl?action=taxonInfo&taxon_no=77399
 })
 
 DefineSpeciesGenus("ilingoceros", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=42728
@@ -80,6 +91,17 @@ DefineSpecies("helohyus", { -- Source: http://fossilworks.org/bridge.pl?action=t
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
 	-- amphibious herbivore-omnivore
+})
+
+DefineSpecies("cainotherium-miocaenicum", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 19.
+	Name = "Cainotherium",
+	Genus = "cainotherium",
+	Species = "miocaenicum",
+	Homeworld = "Earth",
+	EvolvesFrom = {"diacodexis"},
+	Era = "miocene", -- Middle Aragonian
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
 })
 
 DefineSpecies("deer", {

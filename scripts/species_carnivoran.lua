@@ -62,6 +62,7 @@ DefineSpecies("amphicyon-major", { -- Source: Mauricio Antón and Jorge Morales,
 	Species = "major",
 	Homeworld = "Earth",
 	EvolvesFrom = {"alphadon", "leptictidium", "zalambdalestes"},
+	Era = "miocene", -- Middle Aragonian
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
 })
@@ -92,7 +93,8 @@ DefineSpecies("nimravus", { -- Source: http://fossilworks.org/bridge.pl?action=t
 	Name = "Nimravus",
 	Genus = "nimravus",
 	Homeworld = "Earth",
-	EvolvesFrom = {"amphicyon-major", "hemicyon", "miacis"},
+--	EvolvesFrom = {"amphicyon-major", "hemicyon", "miacis"},
+	EvolvesFrom = {"hemicyon", "miacis"},
 	Era = "eocene",
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"

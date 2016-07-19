@@ -158,13 +158,6 @@ DefineSpecies("ticinosuchus", {
 	ChildUpgrade = "upgrade-child"
 })
 
-DefineSpecies("tortoise", {
-	Name = "Tortoise",
-	Homeworld = "Earth",
-	EvolvesFrom = {"pareiasaurus"},
-	ChildUpgrade = "upgrade-child"
-})
-
 DefineSpecies("allosaurus", {
 	Name = "Allosaurus",
 	Homeworld = "Earth",

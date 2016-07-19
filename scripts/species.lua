@@ -94,7 +94,10 @@ DefineSpecies("worm", {
 
 Load("scripts/species_fish.lua")
 Load("scripts/species_amphibian.lua")
+
 Load("scripts/species_reptilian.lua")
+Load("scripts/species_testudine.lua")
+
 Load("scripts/species_avian.lua")
 
 Load("scripts/species_mammalian.lua")
