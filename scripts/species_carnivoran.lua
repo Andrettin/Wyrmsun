@@ -25,11 +25,16 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSpeciesOrder("carnivora", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180539
+DefineSpeciesOrder("carnivora", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 32-33; Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180539
 	Name = "Carnivora",
 	Class = "mammalia",
 	Subclass = "theria",
 	Infraclass = "eutheria"
+})
+
+DefineSpeciesFamily("ailuridae", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 32-33.
+	Name = "Ailuridae",
+	Order = "carnivora"
 })
 
 DefineSpeciesFamily("amphicyonidae", { -- Source: http://fossilworks.org/?a=taxonInfo&taxon_no=41266
@@ -38,10 +43,65 @@ DefineSpeciesFamily("amphicyonidae", { -- Source: http://fossilworks.org/?a=taxo
 	Suborder = "caniformia"
 })
 
+DefineSpeciesFamily("eupleridae", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 32-33.
+	Name = "Eupleridae",
+	Order = "carnivora"
+})
+
+DefineSpeciesFamily("herpestidae", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 32-33.
+	Name = "Herpestidae",
+	Order = "carnivora"
+})
+
+DefineSpeciesFamily("hyaenidae", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 32-33.
+	Name = "Hyaenidae",
+	Order = "carnivora"
+})
+
+DefineSpeciesFamily("mephitidae", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 32-33.
+	Name = "Mephitidae",
+	Order = "carnivora"
+})
+
+DefineSpeciesFamily("mustelidae", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 32-33.
+	Name = "Mustelidae",
+	Order = "carnivora"
+})
+
 DefineSpeciesFamily("nimravidae", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=41036
 	Name = "Nimravidae",
 	Order = "carnivora",
 	Suborder = "feliformia"
+})
+
+DefineSpeciesFamily("odobenidae", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 32-33.
+	Name = "Odobenidae",
+	Order = "carnivora"
+})
+
+DefineSpeciesFamily("otariidae", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 32-33.
+	Name = "Otariidae",
+	Order = "carnivora"
+})
+
+DefineSpeciesFamily("phocidae", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 32-33.
+	Name = "Phocidae",
+	Order = "carnivora"
+})
+
+DefineSpeciesFamily("procyonidae", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 32-33.
+	Name = "Procyonidae",
+	Order = "carnivora"
+})
+
+DefineSpeciesFamily("ursidae", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 32-33.
+	Name = "Ursidae",
+	Order = "carnivora"
+})
+
+DefineSpeciesFamily("viverridae", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 32-33.
+	Name = "Viverridae",
+	Order = "carnivora"
 })
 
 DefineSpeciesGenus("amphicyon", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 18.
@@ -61,6 +121,7 @@ DefineSpecies("amphicyon-major", { -- Source: Mauricio Antón and Jorge Morales,
 	Genus = "amphicyon",
 	Species = "major",
 	Homeworld = "Earth",
+	Environments = {"plains"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"alphadon", "leptictidium", "zalambdalestes"},
 	Era = "miocene", -- Middle Aragonian
 	Prehistoric = true,

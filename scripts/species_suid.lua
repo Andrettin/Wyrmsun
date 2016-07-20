@@ -54,6 +54,7 @@ DefineSpecies("bunolistriodon-lockarti", { -- Source: Mauricio Antón and Jorge 
 	Genus = "bunolistriodon",
 	Species = "lockarti",
 	Homeworld = "Earth",
+	Environments = {"plains"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"helohyus"},
 	Era = "miocene",
 	Prehistoric = true,
@@ -75,7 +76,7 @@ DefineSpecies("gullinbursti", { -- named after the mythical boar (in Norse mytho
 	Genus = "seta", -- "bristle" in Latin
 	Species = "aurea", -- "golden" in Latin
 	Homeworld = "Nidavellir",
-	Environments = {"swamp"},
+	Environments = {"swamp"}, -- should be dark plains
 	EvolvesFrom = {"bunolistriodon-lockarti"}, -- Bunolistriodon was an earlier suid
 	Era = "holocene",
 	ChildUpgrade = "upgrade-child"

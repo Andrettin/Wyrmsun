@@ -98,6 +98,7 @@ DefineSpecies("cainotherium-miocaenicum", { -- Source: Mauricio Antón and Jorge
 	Genus = "cainotherium",
 	Species = "miocaenicum",
 	Homeworld = "Earth",
+	Environments = {"plains"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"diacodexis"},
 	Era = "miocene", -- Middle Aragonian
 	Prehistoric = true,
@@ -150,6 +151,7 @@ DefineSpecies("triceromeryx-pachecoi", { -- Source: Mauricio Antón and Jorge Mo
 	Genus = "triceromeryx",
 	Species = "pachecoi",
 	Homeworld = "Earth",
+	Environments = {"plains"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"diacodexis"},
 	Era = "miocene", -- Middle Aragonian
 	Prehistoric = true,

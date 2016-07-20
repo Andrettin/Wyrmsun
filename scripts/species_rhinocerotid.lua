@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSpeciesFamily("rhinocerotidae", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=624916
+DefineSpeciesFamily("rhinocerotidae", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 32-33; Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=624916
 	Name = "Rhinocerotidae",
 	Order = "perissodactyla"
 })
@@ -47,6 +47,7 @@ DefineSpecies("hispanotherium-matritense", { -- Source: Mauricio Antón and Jorg
 	Genus = "hispanotherium",
 	Species = "matritense",
 	Homeworld = "Earth",
+	Environments = {"plains"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"palaeotherium"},
 	Era = "miocene", -- Middle Aragonian
 	Prehistoric = true,

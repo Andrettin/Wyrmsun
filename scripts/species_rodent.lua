@@ -25,11 +25,18 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSpeciesOrder("rodentia", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180130
+DefineSpeciesOrder("rodentia", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 32-33; Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180130
 	Name = "Rodentia",
 	Class = "mammalia",
 	Subclass = "theria",
 	Infraclass = "eutheria"
+})
+
+DefineSpeciesFamily("cricetidae", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=41724
+	Name = "Cricetidae",
+	Order = "rodentia", -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=970141
+	Suborder = "myomorpha", -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=970141
+	Superfamily = "muroidea"
 })
 
 DefineSpeciesFamily("muridae", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180360
@@ -45,11 +52,17 @@ DefineSpeciesFamily("sciuridae", { -- Source: http://www.itis.gov/servlet/Single
 	Suborder = "sciuromorpha"
 })
 
+DefineSpeciesGenus("megacricetodon", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 37; Source: http://fossilworks.org/bridge.pl?action=taxonInfo&taxon_no=121093
+	Name = "Megacricetodon",
+	Family = "cricetidae",
+	Subfamily = "cricetinae"
+})
+
 DefineSpeciesGenus("rattus", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180361
 	Name = "Rattus",
 	CommonName = "Rat",
 	Family = "muridae",
-	Subfamily = "murinae",
+	Subfamily = "murinae"
 })
 
 DefineSpeciesGenus("sciurus", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180171
@@ -68,10 +81,25 @@ DefineSpecies("ischyromys", {
 	ChildUpgrade = "upgrade-child"
 })
 
+DefineSpecies("megacricetodon-collongensis", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 37.
+	Name = "Megacricetodon", -- Megacricetodon collongensis
+	Genus = "megacricetodon",
+	Species = "collongensis",
+	Homeworld = "Earth",
+	Environments = {"plains"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
+	EvolvesFrom = {"ischyromys"},
+	Era = "miocene", -- Middle Miocene
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+	-- had an omnivore diet with a high proportion of insects
+	-- lived in Europe
+	-- had a length of 8-13 cm
+})
+
 DefineSpecies("beaver", {
 	Name = "Beaver",
 	Homeworld = "Earth",
-	EvolvesFrom = {"ischyromys"},
+	EvolvesFrom = {"megacricetodon-collongensis"}, -- earlier rodent
 	ChildUpgrade = "upgrade-child"
 })
 
@@ -80,7 +108,7 @@ DefineSpecies("carrat", { -- rodent with the morphology akin to that of a canid;
 --	Family = "muridae", -- same as rats
 	Homeworld = "Nidavellir",
 	Environments = {"cave", "swamp"},
-	EvolvesFrom = {"ischyromys"}, -- shares a common ancestor with rats
+	EvolvesFrom = {"megacricetodon-collongensis"}, -- shares a common ancestor with rats
 	Era = "holocene",
 	ChildUpgrade = "upgrade-child"
 })
@@ -88,7 +116,7 @@ DefineSpecies("carrat", { -- rodent with the morphology akin to that of a canid;
 DefineSpecies("mouse", {
 	Name = "Mouse",
 	Homeworld = "Earth",
-	EvolvesFrom = {"ischyromys"},
+	EvolvesFrom = {"megacricetodon-collongensis"}, -- earlier rodent
 	ChildUpgrade = "upgrade-child"
 })
 
@@ -98,7 +126,7 @@ DefineSpecies("rat", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRp
 	Species = "norvegicus",
 	Homeworld = "Earth",
 	Environments = {"conifer-forest-summer", "conifer-forest-autumn", "cave"}, -- correct?
-	EvolvesFrom = {"ischyromys"}, -- seems sensible, since the mouse also does
+	EvolvesFrom = {"megacricetodon-collongensis"}, -- earlier rodent
 	ChildUpgrade = "upgrade-child"
 })
 
@@ -107,7 +135,7 @@ DefineSpecies("squirrel", { -- Source: http://www.itis.gov/servlet/SingleRpt/Sin
 	Genus = "sciurus",
 	Species = "vulgaris",
 	Homeworld = "Earth",
-	EvolvesFrom = {"ischyromys"},
+	EvolvesFrom = {"megacricetodon-collongensis"}, -- earlier rodent
 	ChildUpgrade = "upgrade-child"
 })
 

@@ -37,16 +37,22 @@ DefineSpeciesFamily("testudinidae", { -- Source: http://fossilworks.org/bridge.p
 	Superfamily = "testudinoidea"
 })
 
-DefineSpeciesGenus("geochelone", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 18; Source: http://fossilworks.org/bridge.pl?action=taxonInfo&taxon_no=37740
+DefineSpeciesGenus("cheirogaster", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 35; Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=268039
+	Name = "Cheirogaster",
+--	Order = "testudines"
+})
+
+DefineSpeciesGenus("geochelone", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 18; Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=173853
 	Name = "Geochelone",
 	Family = "testudinidae"
 })
 
-DefineSpecies("geochelone-bolivari", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 18.
-	Name = "Geochelone", -- Giant Tortoise
-	Genus = "geochelone",
+DefineSpecies("cheirogaster-bolivari", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 18, 35.
+	Name = "Cheirogaster", -- Giant Tortoise
+	Genus = "cheirogaster", -- on page 18 the species is given as "Geochelone bolivari" (with a reconstruction being provided), but on page 35 the same reconstruction is assigned to the Cheirogaster genus, of fossils "found in the Bolívar street"; furthermore, in fossilworks.org (http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=268039) there is no entry for a Geochelone bolivari, but there is a Cheirogaster bolivari
 	Species = "bolivari",
 	Homeworld = "Earth",
+	Environments = {"plains"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"pareiasaurus"},
 	Era = "miocene", -- Middle Aragonian
 	Prehistoric = true,
@@ -56,7 +62,7 @@ DefineSpecies("geochelone-bolivari", { -- Source: Mauricio Antón and Jorge Mora
 DefineSpecies("tortoise", {
 	Name = "Tortoise",
 	Homeworld = "Earth",
-	EvolvesFrom = {"geochelone-bolivari"}, -- earlier tortoise
+	EvolvesFrom = {"cheirogaster-bolivari"}, -- earlier tortoise
 	Era = "holocene",
 	ChildUpgrade = "upgrade-child"
 })
