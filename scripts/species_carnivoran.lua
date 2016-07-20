@@ -53,9 +53,10 @@ DefineSpeciesFamily("herpestidae", { -- Source: Mauricio Antón and Jorge Morale
 	Order = "carnivora"
 })
 
-DefineSpeciesFamily("hyaenidae", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 32-33.
+DefineSpeciesFamily("hyaenidae", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 32-33; Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=621756
 	Name = "Hyaenidae",
-	Order = "carnivora"
+	Order = "carnivora",
+	Suborder = "feliformia"
 })
 
 DefineSpeciesFamily("mephitidae", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 32-33.
@@ -63,9 +64,10 @@ DefineSpeciesFamily("mephitidae", { -- Source: Mauricio Antón and Jorge Morales
 	Order = "carnivora"
 })
 
-DefineSpeciesFamily("mustelidae", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 32-33.
+DefineSpeciesFamily("mustelidae", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 32-33; Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180545
 	Name = "Mustelidae",
-	Order = "carnivora"
+	Order = "carnivora",
+	Suborder = "caniformia"
 })
 
 DefineSpeciesFamily("nimravidae", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=41036
@@ -110,10 +112,22 @@ DefineSpeciesGenus("amphicyon", { -- Source: Mauricio Antón and Jorge Morales, 
 	Subfamily = "amphicyoninae" -- Source: http://fossilworks.org/?a=taxonInfo&taxon_no=41271
 })
 
+DefineSpeciesGenus("eomellivora", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 38; Source: http://fossilworks.org/bridge.pl?action=taxonInfo&taxon_no=41109
+	Name = "Eomellivora",
+	Family = "mustelidae",
+	Subfamily = "mustelinae",
+	Tribe = "ischyrictini"
+})
+
 DefineSpeciesGenus("nimravus", { -- Source: http://fossilworks.org/bridge.pl?action=taxonInfo&taxon_no=41043 ; Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_species?gen_id=1067195
 	Name = "Nimravus",
 	Family = "nimravidae",
 	Subfamily = "nimravinae"
+})
+
+DefineSpeciesGenus("protictitherium", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 39; Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=41034
+	Name = "Protictitherium",
+	Family = "hyaenidae"
 })
 
 DefineSpecies("amphicyon-major", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 18.
@@ -126,6 +140,38 @@ DefineSpecies("amphicyon-major", { -- Source: Mauricio Antón and Jorge Morales,
 	Era = "miocene", -- Middle Aragonian
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("eomellivora-wimani", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 38.
+	Name = "Eomellivora",
+	Genus = "eomellivora",
+	Species = "wimani",
+	Homeworld = "Earth",
+	Environments = {"plains"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
+	EvolvesFrom = {"alphadon", "leptictidium", "zalambdalestes"}, -- common ancestor with Amphicyon, which was also a carnivoran
+	Era = "miocene", -- Upper Miocene
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+	-- 60 cm tall up to the shoulder
+	-- lived in Eurasia
+	-- inhabited relatively open areas
+	-- was a hunter and opportunely also a carrion-eater
+})
+
+DefineSpecies("protictitherium-crassum", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 39.
+	Name = "Protictitherium",
+	Genus = "protictitherium",
+	Species = "crassum",
+	Homeworld = "Earth",
+	Environments = {"plains"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
+--	EvolvesFrom = {"amphicyon", "hemicyon", "miacis"},
+	EvolvesFrom = {"hemicyon", "miacis"},
+	Era = "miocene", -- Middle and Upper Miocene
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+	-- 30 cm tall up to the shoulder
+	-- lived in Eurasia
+	-- a large proportion of its diet was carrion, but also hunted small prey like rodents and lagomorphs
 })
 
 DefineSpecies("bear", {
@@ -146,7 +192,7 @@ DefineSpecies("chapalmalania", {
 DefineSpecies("hyena", {
 	Name = "Hyena",
 	Homeworld = "Earth",
-	EvolvesFrom = {"amphicyon-major", "hemicyon", "miacis"},
+	EvolvesFrom = {"protictitherium-crassum"}, -- earlier hyenid
 	ChildUpgrade = "upgrade-child"
 })
 
@@ -154,7 +200,7 @@ DefineSpecies("nimravus", { -- Source: http://fossilworks.org/bridge.pl?action=t
 	Name = "Nimravus",
 	Genus = "nimravus",
 	Homeworld = "Earth",
---	EvolvesFrom = {"amphicyon-major", "hemicyon", "miacis"},
+--	EvolvesFrom = {"amphicyon", "hemicyon", "miacis"},
 	EvolvesFrom = {"hemicyon", "miacis"},
 	Era = "eocene",
 	Prehistoric = true,
