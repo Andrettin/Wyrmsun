@@ -53,6 +53,6 @@ DefineSpecies("valkyrie", {
 	Description = "The Valkyries are warrior maidens who dwell in Asgard, greeting the souls of powerful mortals into Valhalla."
 })
 
-Load("scripts/species_ethereal_angel.lua")
-Load("scripts/species_ethereal_demon.lua")
-Load("scripts/species_ethereal_elemental.lua")
+Load("scripts/species/ethereal/angel.lua")
+Load("scripts/species/ethereal/demon.lua")
+Load("scripts/species/ethereal/elemental.lua")

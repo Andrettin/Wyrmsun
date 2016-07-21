@@ -309,14 +309,6 @@ DefineSpecies("chriacus", {
 	ChildUpgrade = "upgrade-child"
 })
 
-DefineSpecies("hemicyon", {
-	Name = "Hemicyon",
-	Homeworld = "Earth",
-	EvolvesFrom = {"alphadon", "leptictidium", "zalambdalestes"},
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
-})
-
 DefineSpecies("marsupial-mouse", {
 	Name = "Marsupial Mouse",
 	Homeworld = "Earth",
@@ -695,3 +687,10 @@ DefineSpecies("galerix-exilis", { -- Source: Mauricio Antón and Jorge Morales, 
 	-- lived in Europe
 	-- had a length of 10-15 cm
 })
+
+Load("scripts/species/mammal/artiodactyl/artiodactyl.lua")
+Load("scripts/species/mammal/carnivoran/carnivoran.lua")
+Load("scripts/species/mammal/perissodactyl/equid.lua")
+Load("scripts/species/mammal/perissodactyl/rhinocerotid.lua")
+Load("scripts/species/mammal/primate.lua")
+Load("scripts/species/mammal/rodent.lua")

@@ -171,3 +171,6 @@ DefineSpecies("bison", {
 	EvolvesFrom = {"ilingoceros"},
 	ChildUpgrade = "upgrade-child"
 })
+
+Load("scripts/species/mammal/artiodactyl/bovid.lua")
+Load("scripts/species/mammal/artiodactyl/suid.lua")

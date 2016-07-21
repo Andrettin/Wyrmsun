@@ -32,17 +32,6 @@ DefineSpeciesOrder("carnivora", { -- Source: Mauricio Antón and Jorge Morales, 
 	Infraclass = "eutheria"
 })
 
-DefineSpeciesFamily("ailuridae", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 32-33.
-	Name = "Ailuridae",
-	Order = "carnivora"
-})
-
-DefineSpeciesFamily("amphicyonidae", { -- Source: http://fossilworks.org/?a=taxonInfo&taxon_no=41266
-	Name = "Amphicyonidae",
-	Order = "carnivora",
-	Suborder = "caniformia"
-})
-
 DefineSpeciesFamily("eupleridae", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 32-33.
 	Name = "Eupleridae",
 	Order = "carnivora"
@@ -51,12 +40,6 @@ DefineSpeciesFamily("eupleridae", { -- Source: Mauricio Antón and Jorge Morales
 DefineSpeciesFamily("herpestidae", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 32-33.
 	Name = "Herpestidae",
 	Order = "carnivora"
-})
-
-DefineSpeciesFamily("hyaenidae", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 32-33; Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=621756
-	Name = "Hyaenidae",
-	Order = "carnivora",
-	Suborder = "feliformia"
 })
 
 DefineSpeciesFamily("mephitidae", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 32-33.
@@ -96,50 +79,20 @@ DefineSpeciesFamily("procyonidae", { -- Source: Mauricio Antón and Jorge Morale
 	Order = "carnivora"
 })
 
-DefineSpeciesFamily("ursidae", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 32-33.
-	Name = "Ursidae",
-	Order = "carnivora"
-})
-
 DefineSpeciesFamily("viverridae", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 32-33.
 	Name = "Viverridae",
 	Order = "carnivora"
 })
 
-DefineSpeciesGenus("amphicyon", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 18.
-	Name = "Amphicyon",
-	Family = "amphicyonidae", -- Source: http://fossilworks.org/?a=taxonInfo&taxon_no=41271
-	Subfamily = "amphicyoninae" -- Source: http://fossilworks.org/?a=taxonInfo&taxon_no=41271
-})
-
-DefineSpeciesGenus("eomellivora", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 38; Source: http://fossilworks.org/bridge.pl?action=taxonInfo&taxon_no=41109
+DefineSpeciesGenus("eomellivora", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 38.
 	Name = "Eomellivora",
-	Family = "mustelidae",
-	Subfamily = "mustelinae",
-	Tribe = "ischyrictini"
+	Family = "mustelidae"
 })
 
 DefineSpeciesGenus("nimravus", { -- Source: http://fossilworks.org/bridge.pl?action=taxonInfo&taxon_no=41043 ; Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_species?gen_id=1067195
 	Name = "Nimravus",
 	Family = "nimravidae",
 	Subfamily = "nimravinae"
-})
-
-DefineSpeciesGenus("protictitherium", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 39; Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=41034
-	Name = "Protictitherium",
-	Family = "hyaenidae"
-})
-
-DefineSpecies("amphicyon-major", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 18.
-	Name = "Amphicyon",
-	Genus = "amphicyon",
-	Species = "major",
-	Homeworld = "Earth",
-	Environments = {"plains"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
-	EvolvesFrom = {"alphadon", "leptictidium", "zalambdalestes"},
-	Era = "miocene", -- Middle Aragonian
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
 })
 
 DefineSpecies("eomellivora-wimani", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 38.
@@ -158,41 +111,14 @@ DefineSpecies("eomellivora-wimani", { -- Source: Mauricio Antón and Jorge Moral
 	-- was a hunter and opportunely also a carrion-eater
 })
 
-DefineSpecies("protictitherium-crassum", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 39.
-	Name = "Protictitherium",
-	Genus = "protictitherium",
-	Species = "crassum",
-	Homeworld = "Earth",
-	Environments = {"plains"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
---	EvolvesFrom = {"amphicyon", "hemicyon", "miacis"},
-	EvolvesFrom = {"hemicyon", "miacis"},
-	Era = "miocene", -- Middle and Upper Miocene
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
-	-- 30 cm tall up to the shoulder
-	-- lived in Eurasia
-	-- a large proportion of its diet was carrion, but also hunted small prey like rodents and lagomorphs
-})
-
-DefineSpecies("bear", {
-	Name = "Bear",
-	Homeworld = "Earth",
-	EvolvesFrom = {"amphicyon-major", "hemicyon", "miacis"},
-	ChildUpgrade = "upgrade-child"
-})
+Load("scripts/species/mammal/carnivoran/amphicyonid.lua")
+Load("scripts/species/mammal/carnivoran/ursid.lua")
 
 DefineSpecies("chapalmalania", {
 	Name = "Chapalmalania",
 	Homeworld = "Earth",
-	EvolvesFrom = {"amphicyon-major", "hemicyon", "miacis"},
+	EvolvesFrom = {"amphicyon-giganteus", "amphicyon-major", "hemicyon-sansaniense", "miacis"},
 	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
-})
-
-DefineSpecies("hyena", {
-	Name = "Hyena",
-	Homeworld = "Earth",
-	EvolvesFrom = {"protictitherium-crassum"}, -- earlier hyenid
 	ChildUpgrade = "upgrade-child"
 })
 
@@ -201,7 +127,8 @@ DefineSpecies("nimravus", { -- Source: http://fossilworks.org/bridge.pl?action=t
 	Genus = "nimravus",
 	Homeworld = "Earth",
 --	EvolvesFrom = {"amphicyon", "hemicyon", "miacis"},
-	EvolvesFrom = {"hemicyon", "miacis"},
+--	EvolvesFrom = {"alphadon", "leptictidium", "zalambdalestes", "miacis"},
+	EvolvesFrom = {"alphadon", "zalambdalestes", "miacis"},
 	Era = "eocene",
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
@@ -211,13 +138,12 @@ DefineSpecies("nimravus", { -- Source: http://fossilworks.org/bridge.pl?action=t
 DefineSpecies("raccoon", {
 	Name = "Raccoon",
 	Homeworld = "Earth",
-	EvolvesFrom = {"amphicyon-major", "hemicyon", "miacis"},
+	EvolvesFrom = {"amphicyon-giganteus", "amphicyon-major", "hemicyon-sansaniense", "miacis"},
 	ChildUpgrade = "upgrade-child"
 })
 
-DefineSpecies("gnoll", {
-	Name = "Gnoll",
-	Homeworld = "Alfheim",
-	EvolvesFrom = {"amphicyon-major", "hemicyon", "miacis"}, -- common ancestor with hyenas
-	Sapient = true
-})
+Load("scripts/species/mammal/carnivoran/ailurid.lua")
+Load("scripts/species/mammal/carnivoran/canid.lua")
+Load("scripts/species/mammal/carnivoran/felid.lua")
+Load("scripts/species/mammal/carnivoran/hyenid.lua")
+Load("scripts/species/mammal/carnivoran/ursid.lua")

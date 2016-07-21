@@ -92,28 +92,12 @@ DefineSpecies("worm", {
 	ChildUpgrade = "upgrade-bee-child"
 })
 
-Load("scripts/species_fish.lua")
-Load("scripts/species_amphibian.lua")
+Load("scripts/species/fish/fish.lua")
+Load("scripts/species/amphibian/amphibian.lua")
+Load("scripts/species/reptile/reptile.lua")
+Load("scripts/species/avian/avian.lua")
+Load("scripts/species/mammal/mammal.lua")
 
-Load("scripts/species_reptilian.lua")
-Load("scripts/species_testudine.lua")
+Load("scripts/species/tree.lua")
 
-Load("scripts/species_avian.lua")
-
-Load("scripts/species_mammalian.lua")
-Load("scripts/species_artiodactyl.lua")
-Load("scripts/species_carnivoran.lua")
-Load("scripts/species_bovid.lua")
-Load("scripts/species_canid.lua")
-Load("scripts/species_equid.lua")
-Load("scripts/species_felid.lua")
-Load("scripts/species_primate.lua")
-Load("scripts/species_rhinocerotid.lua")
-Load("scripts/species_rodent.lua")
-Load("scripts/species_suid.lua")
-
-Load("scripts/species_draconid.lua") -- mythical dragons and dragon-like creatures
-Load("scripts/species_gryphid.lua") -- mythical gryphons
-Load("scripts/species_tree.lua")
-
-Load("scripts/species_ethereal.lua") -- ethereal beings (that is, ones made of pure magic substance)
+Load("scripts/species/ethereal/ethereal.lua") -- ethereal beings (that is, ones made of pure magic substance)

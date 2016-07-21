@@ -404,3 +404,5 @@ DefineSpecies("hydra", {
 	ChildUpgrade = "upgrade-child"
 })
 
+Load("scripts/species/reptile/testudine.lua")
+Load("scripts/species/reptile/draconid.lua") -- mythical dragons and dragon-like creatures

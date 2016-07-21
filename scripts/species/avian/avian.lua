@@ -187,3 +187,5 @@ DefineSpecies("songbird", {
 	EvolvesFrom = {"ichthyornis", "presbyornis"},
 	ChildUpgrade = "upgrade-child"
 })
+
+Load("scripts/species/avian/gryphid.lua") -- mythical gryphons
