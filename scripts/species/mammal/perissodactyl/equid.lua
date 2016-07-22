@@ -89,6 +89,11 @@ DefineSpeciesGenus("pliohippus", { -- Source: http://fossilworks.org/bridge.pl?a
 	Tribe = "equini"
 })
 
+DefineSpeciesGenus("sleipnir", {
+	Name = "Sleipnir",
+	Family = "equidae"
+})
+
 DefineSpeciesGenus("unicornis", {
 	Name = "Unicornis",
 	CommonName = "Unicorn",
@@ -209,6 +214,17 @@ DefineSpecies("pegasus", {
 	Era = "holocene",
 	ChildUpgrade = "upgrade-child"
 	-- in Wyrmsun, the wings of pegasuses are not avian, having fur instead of feathers
+})
+
+DefineSpecies("sleipnir", {
+	Name = "Sleipnir", -- eight-legged horse from Norse mythology
+	Genus = "sleipnir",
+	Species = "polypus", -- "many feet" in Latin
+	Homeworld = "Jotunheim", -- perhaps should be in Alfheim instead?
+	EvolvesFrom = {"anchitherium-cursor", "hipparion-primigenium", "merychippus", "nannippus", "parahippus", "pliohippus"}, -- earlier equids
+	Era = "holocene",
+	ChildUpgrade = "upgrade-child"
+	-- could be made of the suitable size to be mounted by a giant, and thus used for ettin cavalry (as in Norse mythology Sleipnir is the child of a giant's horse)
 })
 
 DefineSpecies("unicorn", {

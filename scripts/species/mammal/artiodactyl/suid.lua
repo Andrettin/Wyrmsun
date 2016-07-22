@@ -30,10 +30,21 @@ DefineSpeciesFamily("suidae", { -- Source: http://www.itis.gov/servlet/SingleRpt
 	Order = "artiodactyla"
 })
 
-DefineSpeciesGenus("bunolistriodon", { -- Source: http://fossilworks.org/bridge.pl?action=taxonInfo&taxon_no=42384
+DefineSpeciesGenus("bunolistriodon", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 19, 56.
 	Name = "Bunolistriodon",
 	Family = "suidae",
 	Subfamily = "listriodontinae"
+})
+
+DefineSpeciesGenus("conohyus", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 56-57.
+	Name = "Conohyus",
+	Family = "suidae",
+	Subfamily = "tetraconodontinae"
+})
+
+DefineSpeciesGenus("microstonyx", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 56-57.
+	Name = "Microstonyx",
+	Family = "suidae"
 })
 
 DefineSpeciesGenus("seta", { -- fictional genus
@@ -49,16 +60,50 @@ DefineSpeciesGenus("sus", { -- Source: http://www.itis.gov/servlet/SingleRpt/Sin
 	Tribe = "suini"
 })
 
-DefineSpecies("bunolistriodon-lockarti", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 19.
-	Name = "Bunolistriodon",
+DefineSpecies("bunolistriodon-lockarti", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 19, 56.
+	Name = "Bunolistriodon", -- Bunolistriodon lockarti
 	Genus = "bunolistriodon",
 	Species = "lockarti",
 	Homeworld = "Earth",
 	Environments = {"plains"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"helohyus"},
-	Era = "miocene",
+	Era = "miocene", -- Middle Miocene
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
+	-- primarily herbivore
+	-- 65cm shoulder height
+	-- lived in Eurasia
+})
+
+DefineSpecies("conohyus-simorrense", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 56-57.
+	Name = "Conohyus", -- Conohyus simorrense
+	Genus = "conohyus",
+	Species = "simorrense",
+	Homeworld = "Earth",
+	Environments = {"plains"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
+	EvolvesFrom = {"helohyus"},
+	Era = "miocene", -- Middle Miocene
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+	-- 60cm shoulder height
+	-- lived in Eurasia and Africa
+	-- could chew hard objects like bones
+	-- carrion was probably an important part of its diet
+})
+
+DefineSpecies("microstonyx-major", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 56-57.
+	Name = "Microstonyx", -- Microstonyx major
+	Genus = "microstonyx",
+	Species = "major",
+	Homeworld = "Earth",
+	Environments = {"plains"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
+	EvolvesFrom = {"helohyus"},
+	Era = "miocene", -- Upper Miocene
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+	-- lived in Eurasia
+	-- 100 cm shoulder height
+	-- weighted about 300kg
 })
 
 DefineSpecies("boar", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180722
@@ -66,7 +111,7 @@ DefineSpecies("boar", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleR
 	Genus = "sus",
 	Species = "scrofa",
 	Homeworld = "Earth",
-	EvolvesFrom = {"bunolistriodon-lockarti"}, -- Bunolistriodon was an earlier suid
+	EvolvesFrom = {"bunolistriodon-lockarti", "conohyus-simorrense", "microstonyx-major"}, -- earlier suids
 	Era = "holocene",
 	ChildUpgrade = "upgrade-child"
 })
@@ -77,7 +122,7 @@ DefineSpecies("gullinbursti", { -- named after the mythical boar (in Norse mytho
 	Species = "aurea", -- "golden" in Latin
 	Homeworld = "Nidavellir",
 	Environments = {"swamp"}, -- should be dark plains
-	EvolvesFrom = {"bunolistriodon-lockarti"}, -- Bunolistriodon was an earlier suid
+	EvolvesFrom = {"bunolistriodon-lockarti", "conohyus-simorrense", "microstonyx-major"}, -- earlier suids
 	Era = "holocene",
 	ChildUpgrade = "upgrade-child"
 })

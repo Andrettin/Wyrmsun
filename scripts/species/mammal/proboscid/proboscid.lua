@@ -100,7 +100,7 @@ DefineSpecies("gomphotherium-angustidens", { -- Source: Mauricio Antón and Jorg
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
 	-- grazer
-	-- ate soft vegetables
+	-- ate soft vegetals
 	-- robust, with its mass being comparable to that of an Indian elephant
 	-- 2.2m shoulder height
 	-- lived in Eurasia, Africa and North America

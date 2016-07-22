@@ -25,16 +25,19 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSpeciesFamily("rhinocerotidae", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 32-33; Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=624916
+DefineSpeciesFamily("rhinocerotidae", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 32-33.
 	Name = "Rhinocerotidae",
 	Order = "perissodactyla"
 })
 
-DefineSpeciesGenus("hispanotherium", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 18.
+DefineSpeciesGenus("aceratherium", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 54-55.
+	Name = "Aceratherium",
+	Family = "rhinocerotidae"
+})
+
+DefineSpeciesGenus("hispanotherium", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 18, 54-55.
 	Name = "Hispanotherium",
-	Family = "rhinocerotidae", -- Source: http://fossilworks.org/?a=taxonInfo&taxon_no=56993
-	Subfamily = "rhinocerotinae", -- Source: http://fossilworks.org/?a=taxonInfo&taxon_no=97723
-	Tribe = "elasmotheriini" -- Source: http://fossilworks.org/bridge.pl?action=taxonInfo&taxon_no=43207
+	Family = "rhinocerotidae"
 })
 
 DefineSpeciesGenus("rhinoceros", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=624934
@@ -42,17 +45,36 @@ DefineSpeciesGenus("rhinoceros", { -- Source: http://www.itis.gov/servlet/Single
 	Family = "rhinocerotidae"
 })
 
-DefineSpecies("hispanotherium-matritense", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 18.
+DefineSpecies("aceratherium-incisivum", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 54-55.
+	Name = "Aceratherium", -- Aceratherium incisivum
+	Genus = "aceratherium",
+	Species = "incisivum",
+	Homeworld = "Earth",
+	Environments = {"plains"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
+	EvolvesFrom = {"palaeotherium"},
+	Era = "miocene",
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+	-- lived in Western Europe
+	-- 120cm shoulder height
+	-- adapted to eat soft vegetals like bush leaves and fruits, but could also eat a larger range of vegetals according to the situation
+})
+
+DefineSpecies("hispanotherium-matritense", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 18, 54-55.
 	Name = "Hispanotherium", -- Madrilenian Hispanotherium
 	Genus = "hispanotherium",
 	Species = "matritense",
 	Homeworld = "Earth",
 	Environments = {"plains"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"palaeotherium"},
-	Era = "miocene", -- Middle Aragonian
+	Era = "miocene", -- Middle and Upper Miocene
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
 	-- dwelled in open environments which possessed few trees
+	-- lived in Western Europe, Turkey and China
+	-- 100cm shoulder height
+	-- its teeth were adapted to eat hard vegetable matter
+	-- adapted to running and to open and dry spaces
 })
 
 DefineSpecies("rhinoceros-unicornis", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=625005
@@ -60,7 +82,7 @@ DefineSpecies("rhinoceros-unicornis", { -- Source: http://www.itis.gov/servlet/S
 	Genus = "rhinoceros",
 	Species = "unicornis",
 	Homeworld = "Earth",
-	EvolvesFrom = {"hispanotherium-matritense"}, -- earlier Rhinocerotid
+	EvolvesFrom = {"aceratherium-incisivum", "hispanotherium-matritense"}, -- earlier Rhinocerotids
 	Era = "holocene",
 	ChildUpgrade = "upgrade-child"
 })

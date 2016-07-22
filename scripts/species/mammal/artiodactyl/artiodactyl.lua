@@ -48,14 +48,29 @@ DefineSpeciesFamily("helohyidae", { -- Source: http://www.marine.csiro.au/mirror
 	Order = "artiodactyla"
 })
 
+DefineSpeciesFamily("moschidae", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=624921
+	Name = "Moschidae",
+	Order = "artiodactyla"
+})
+
 DefineSpeciesFamily("palaeomerycidae", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=42624
 	Name = "Palaeomerycidae",
+	Order = "artiodactyla"
+})
+
+DefineSpeciesFamily("tragulidae", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=624919
+	Name = "Tragulidae",
 	Order = "artiodactyla"
 })
 
 DefineSpeciesGenus("cainotherium", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 19.
 	Name = "Cainotherium",
 	Family = "cainotheriidae" -- Source: http://fossilworks.org/bridge.pl?action=taxonInfo&taxon_no=77399
+})
+
+DefineSpeciesGenus("dorcatherium", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 58-59.
+	Name = "Dorcatherium",
+	Family = "tragulidae"
 })
 
 DefineSpeciesGenus("ilingoceros", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=42728
@@ -105,25 +120,19 @@ DefineSpecies("cainotherium-miocaenicum", { -- Source: Mauricio Antón and Jorge
 	ChildUpgrade = "upgrade-child"
 })
 
-DefineSpecies("deer", {
-	Name = "Deer",
+DefineSpecies("dorcatherium-crassum", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 58-59.
+	Name = "Dorcatherium", -- Dorcatherium crassum
+	Genus = "dorcatherium",
+	Species = "crassum",
 	Homeworld = "Earth",
+	Environments = {"plains"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"diacodexis"},
+	Era = "miocene", -- Lower Miocene to the Lower Pliocene
+	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
-})
-
-DefineSpecies("giraffe", {
-	Name = "Giraffe",
-	Homeworld = "Earth",
-	EvolvesFrom = {"diacodexis"},
-	ChildUpgrade = "upgrade-child"
-})
-
-DefineSpecies("hippopotamus", {
-	Name = "Hippopotamus",
-	Homeworld = "Earth",
-	EvolvesFrom = {"helohyus"},
-	ChildUpgrade = "upgrade-child"
+	-- lived in Eurasia and Africa
+	-- 25-80cm shoulder height
+	-- ate fruits and leaves, as well as worms and other invertebrates
 })
 
 DefineSpecies("ilingoceros", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=42728
@@ -169,6 +178,27 @@ DefineSpecies("bison", {
 	Name = "Bison",
 	Homeworld = "Earth",
 	EvolvesFrom = {"ilingoceros"},
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("deer", {
+	Name = "Deer",
+	Homeworld = "Earth",
+	EvolvesFrom = {"diacodexis"},
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("giraffe", {
+	Name = "Giraffe",
+	Homeworld = "Earth",
+	EvolvesFrom = {"diacodexis"},
+	ChildUpgrade = "upgrade-child"
+})
+
+DefineSpecies("hippopotamus", {
+	Name = "Hippopotamus",
+	Homeworld = "Earth",
+	EvolvesFrom = {"helohyus"},
 	ChildUpgrade = "upgrade-child"
 })
 
