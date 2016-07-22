@@ -30,6 +30,11 @@ DefineSpeciesFamily("equidae", { -- Source: Mauricio Antón and Jorge Morales, "
 	Order = "perissodactyla"
 })
 
+DefineSpeciesGenus("anchitherium", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 52-53.
+	Name = "Anchitherium",
+	Family = "equidae"
+})
+
 DefineSpeciesGenus("centaurus", {
 	Name = "Centaurus",
 	CommonName = "Centaur",
@@ -38,6 +43,11 @@ DefineSpeciesGenus("centaurus", {
 
 DefineSpeciesGenus("equus", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180689
 	Name = "Equus",
+	Family = "equidae"
+})
+
+DefineSpeciesGenus("hipparion", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 52-53.
+	Name = "Hipparion",
 	Family = "equidae"
 })
 
@@ -96,6 +106,46 @@ DefineSpecies("mesohippus", { -- Source: http://fossilworks.org/bridge.pl?a=taxo
 	-- ground dwelling browser
 })
 
+DefineSpecies("anchitherium-alberdiae", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 52-53.
+	Name = "Alberd Anchitherium", -- Anchitherium alberdiae
+	Genus = "anchitherium",
+	Species = "alberdiae",
+	Homeworld = "Earth",
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+	-- present in Madrid
+})
+
+DefineSpecies("anchitherium-cursor", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 52-53.
+	Name = "Anchitherium", -- Anchitherium cursor
+	Genus = "anchitherium",
+	Species = "cursor",
+	Homeworld = "Earth",
+	Environments = {"plains"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
+	EvolvesFrom = {"mesohippus"}, -- earlier equid
+	Era = "miocene", -- Middle Miocene
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+	-- lived in Madrid
+	-- 100cm shoulder height
+	-- great runner
+})
+
+DefineSpecies("hipparion-primigenium", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 52-53.
+	Name = "Hipparion", -- Hipparion primigenium
+	Genus = "hipparion",
+	Species = "primigenium",
+	Homeworld = "Earth",
+	Environments = {"plains"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
+	EvolvesFrom = {"mesohippus"}, -- earlier equid
+	Era = "miocene", -- Upper Miocene
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+	-- 135cm shoulder height
+	-- lived in Eurasia
+	-- their teeth allowed them to eat almost any kind of vegetable (including harder and more fibrous ones)
+})
+
 DefineSpecies("merychippus", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=43009
 	Name = "Merychippus",
 	Genus = "merychippus",
@@ -147,7 +197,7 @@ DefineSpecies("horse", { -- Source: http://www.itis.gov/servlet/SingleRpt/Single
 	Species = "caballus",
 	Homeworld = "Earth",
 	Environments = {"conifer-forest-summer", "conifer-forest-autumn"}, -- correct?
-	EvolvesFrom = {"merychippus", "nannippus", "parahippus", "pliohippus"}, -- earlier equids
+	EvolvesFrom = {"anchitherium-cursor", "hipparion-primigenium", "merychippus", "nannippus", "parahippus", "pliohippus"}, -- earlier equids
 	ChildUpgrade = "upgrade-child"
 })
 
@@ -155,7 +205,7 @@ DefineSpecies("pegasus", {
 	Name = "Pegasus",
 	Genus = "pegasus",
 	Homeworld = "Alfheim",
-	EvolvesFrom = {"merychippus", "nannippus", "parahippus", "pliohippus"}, -- earlier equids
+	EvolvesFrom = {"anchitherium-cursor", "hipparion-primigenium", "merychippus", "nannippus", "parahippus", "pliohippus"}, -- earlier equids
 	Era = "holocene",
 	ChildUpgrade = "upgrade-child"
 	-- in Wyrmsun, the wings of pegasuses are not avian, having fur instead of feathers
@@ -165,7 +215,7 @@ DefineSpecies("unicorn", {
 	Name = "Unicorn",
 	Genus = "unicornis",
 	Homeworld = "Alfheim",
-	EvolvesFrom = {"merychippus", "nannippus", "parahippus", "pliohippus"}, -- earlier equids
+	EvolvesFrom = {"anchitherium-cursor", "hipparion-primigenium", "merychippus", "nannippus", "parahippus", "pliohippus"}, -- earlier equids
 	Era = "holocene",
 	ChildUpgrade = "upgrade-child"
 })
@@ -174,7 +224,7 @@ DefineSpecies("centaur", {
 	Name = "Centaur",
 	Genus = "centaurus",
 	Homeworld = "Alfheim",
-	EvolvesFrom = {"merychippus", "nannippus", "parahippus", "pliohippus"}, -- earlier equids
+	EvolvesFrom = {"anchitherium-cursor", "hipparion-primigenium", "merychippus", "nannippus", "parahippus", "pliohippus"}, -- earlier equids
 	Sapient = true
 	-- in Wyrmsun, centaurs are entirely equid, rather than being half-horse, half-human; they keep the same morphology, however; this means that they have a humanoid upper body, but with equid features like fur throughout the body and horse-like facial features
 })

@@ -88,13 +88,6 @@ DefineSpeciesOrder("marsupialia", { -- Source: Mauricio Antón and Jorge Morales
 	Class = "mammalia"
 })
 
-DefineSpeciesOrder("perissodactyla", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 32-33; Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180687
-	Name = "Perissodactyla",
-	Class = "mammalia",
-	Subclass = "theria",
-	Infraclass = "eutheria"
-})
-
 DefineSpeciesOrder("pholidota", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 32-33.
 	Name = "Pholidota",
 	Class = "mammalia"
@@ -102,11 +95,6 @@ DefineSpeciesOrder("pholidota", { -- Source: Mauricio Antón and Jorge Morales, 
 
 DefineSpeciesOrder("pilosa", { -- Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_family?ordername=Pilosa
 	Name = "Pilosa",
-	Class = "mammalia"
-})
-
-DefineSpeciesOrder("proboscidea", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 32-33.
-	Name = "Proboscidea",
 	Class = "mammalia"
 })
 
@@ -125,11 +113,6 @@ DefineSpeciesOrder("tenrecomorpha", { -- Source: Mauricio Antón and Jorge Moral
 	Class = "mammalia"
 })
 
-DefineSpeciesOrder("uranotheria", { -- Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_family?ordername=Uranotheria
-	Name = "Uranotheria",
-	Class = "mammalia"
-})
-
 DefineSpeciesOrder("xenarthra", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 32-33.
 	Name = "Xenarthra",
 	Class = "mammalia"
@@ -138,11 +121,6 @@ DefineSpeciesOrder("xenarthra", { -- Source: Mauricio Antón and Jorge Morales, 
 DefineSpeciesFamily("alphadontidae", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=67663
 	Name = "Alphadontidae",
 	Order = "didelphimorphia"
-})
-
-DefineSpeciesFamily("chalicotheriidae", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 32-33.
-	Name = "Chalicotheriidae",
-	Order = "perissodactyla"
 })
 
 DefineSpeciesFamily("dryolestidae", { -- Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_genera?fam_id=102271
@@ -160,12 +138,6 @@ DefineSpeciesFamily("gobiconodontidae", { -- Source: http://fossilworks.org/brid
 	Order = "eutriconodonta"
 })
 
-DefineSpeciesFamily("gomphotheriidae", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=43240
-	Name = "Gomphotheriidae",
-	Order = "uranotheria", -- Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_genera?fam_id=103516
-	Superfamily = "gomphotherioidea"
-})
-
 DefineSpeciesFamily("megazostrodontidae", { -- Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_genera?fam_id=102913
 	Name = "Megazostrodontidae",
 	Order = "docodonta"
@@ -174,11 +146,6 @@ DefineSpeciesFamily("megazostrodontidae", { -- Source: http://www.marine.csiro.a
 DefineSpeciesFamily("pseudorhyncocyonidae", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=40266 ; Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_genera?fam_id=117472
 	Name = "Pseudorhyncocyonidae",
 	Order = "leptictida"
-})
-
-DefineSpeciesFamily("tapiridae", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 32-33.
-	Name = "Tapiridae",
-	Order = "perissodactyla"
 })
 
 DefineSpeciesFamily("zalambdalestidae", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=40215 ; Source: http://www.marine.csiro.au/mirrorsearch/ir_search.list_genera?fam_id=103552
@@ -199,11 +166,6 @@ DefineSpeciesGenus("crusafontia", { -- Source: http://fossilworks.org/bridge.pl?
 DefineSpeciesGenus("galerix", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 37; Source: http://fossilworks.org/bridge.pl?action=taxonInfo&taxon_no=40376
 	Name = "Galerix",
 	Family = "erinaceidae"
-})
-
-DefineSpeciesGenus("gomphotherium", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 19; Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=43247
-	Name = "Gomphotherium",
-	Family = "gomphotheriidae"
 })
 
 DefineSpeciesGenus("leptictidium", { -- Source: http://fossilworks.org/bridge.pl?a=taxonInfo&taxon_no=40267
@@ -478,74 +440,6 @@ DefineSpecies("mesonyx", {
 	ChildUpgrade = "upgrade-child"
 })
 
-DefineSpecies("palaeotherium", {
-	Name = "Palaeotherium",
-	Homeworld = "Earth",
-	EvolvesFrom = {"phenacodus"},
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
-})
-
-DefineSpecies("coelodonta", {
-	Name = "Coelodonta",
-	Homeworld = "Earth",
-	EvolvesFrom = {"palaeotherium"},
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
-})
-
-DefineSpecies("indricotherium", {
-	Name = "Indricotherium",
-	Homeworld = "Earth",
-	EvolvesFrom = {"palaeotherium"},
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
-})
-
-DefineSpecies("phiomia", {
-	Name = "Phiomia",
-	Homeworld = "Earth",
-	EvolvesFrom = {"chriacus", "hyopsodus", "phenacodus"},
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
-})
-
-DefineSpecies("gomphotherium-angustidens", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 19.
-	Name = "Gomphotherium", -- Gomphotherium angustidens
-	Genus = "gomphotherium",
-	Species = "angustidens",
-	Homeworld = "Earth",
-	Environments = {"plains"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
-	EvolvesFrom = {"phiomia"},
-	Era = "miocene", -- Middle Aragonian
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
-	-- mastodon
-})
-
-DefineSpecies("elephant", {
-	Name = "Elephant",
-	Homeworld = "Earth",
-	EvolvesFrom = {"phiomia"},
-	ChildUpgrade = "upgrade-child"
-})
-
-DefineSpecies("mammoth", {
-	Name = "Mammoth",
-	Homeworld = "Earth",
-	EvolvesFrom = {"phiomia"},
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
-})
-
-DefineSpecies("platybeledon", {
-	Name = "Platybeledon",
-	Homeworld = "Earth",
-	EvolvesFrom = {"phiomia"},
-	Prehistoric = true,
-	ChildUpgrade = "upgrade-child"
-})
-
 DefineSpecies("poebrodon", {
 	Name = "Poebrodon",
 	Homeworld = "Earth",
@@ -690,7 +584,7 @@ DefineSpecies("galerix-exilis", { -- Source: Mauricio Antón and Jorge Morales, 
 
 Load("scripts/species/mammal/artiodactyl/artiodactyl.lua")
 Load("scripts/species/mammal/carnivoran/carnivoran.lua")
-Load("scripts/species/mammal/perissodactyl/equid.lua")
-Load("scripts/species/mammal/perissodactyl/rhinocerotid.lua")
+Load("scripts/species/mammal/perissodactyl/perissodactyl.lua")
+Load("scripts/species/mammal/proboscid/proboscid.lua")
 Load("scripts/species/mammal/primate.lua")
 Load("scripts/species/mammal/rodent.lua")
