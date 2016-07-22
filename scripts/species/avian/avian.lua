@@ -89,12 +89,12 @@ DefineSpecies("hoatzin", {
 })
 
 DefineSpecies("bald-eagle", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=175420
-	Name = "Bald Eagle",
+	Name = "Eagle", -- Bald Eagle
 	Genus = "haliaeetus",
 	Species = "leucocephalus",
 	Homeworld = "Earth",
 --	Environments = {"conifer-forest-summer", "conifer-forest-autumn"}, -- correct?
-	EvolvesFrom = {"hoatzin"}, -- all eagles should be set to evolve from it
+	EvolvesFrom = {"hoatzin"},
 	Era = "holocene",
 	ChildUpgrade = "upgrade-child"
 })
