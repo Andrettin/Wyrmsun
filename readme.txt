@@ -61,6 +61,9 @@ https://github.com/Andrettin/Wyrmsun
 - 2.3.2
 -----------------------------------------------------------------------
 
+* Buildings
+- Rally points are now correctly stored when saving a game.
+
 * Civilizations
 - Added Goblin UI (graphics by Jinn).
 
