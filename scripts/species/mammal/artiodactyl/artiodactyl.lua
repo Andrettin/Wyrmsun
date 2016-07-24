@@ -83,6 +83,11 @@ DefineSpeciesGenus("helohyus", { -- Source: http://fossilworks.org/bridge.pl?act
 	Family = "helohyidae"
 })
 
+DefineSpeciesGenus("micromeryx", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 58-59.
+	Name = "Micromeryx",
+	Family = "moschidae"
+})
+
 DefineSpeciesGenus("triceromeryx", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 18.
 	Name = "Triceromeryx",
 	Family = "palaeomerycidae", -- Source: http://fossilworks.org/bridge.pl?action=taxonInfo&taxon_no=42710
@@ -155,6 +160,32 @@ DefineSpecies("megaloceros", {
 	ChildUpgrade = "upgrade-child"
 })
 
+DefineSpecies("micromeryx-azanzae", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 58-59.
+	Name = "Micromeryx", -- Micromeryx azanzae
+	Genus = "micromeryx",
+	Species = "azanzae",
+	Homeworld = "Earth",
+	Environments = {"plains"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
+	EvolvesFrom = {"diacodexis"},
+	Era = "miocene", -- end of the Middle Miocene and beginning of the Upper Miocene
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+	-- 35-38cm shoulder height
+	-- lived in Spain
+	-- used its large upper canine teeth to fight with other males for females
+})
+
+DefineSpecies("micromeryx-soriae", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 58-59.
+	Name = "Micromeryx Soriae", -- Micromeryx soriae
+	Genus = "micromeryx",
+	Species = "soriae",
+	Homeworld = "Earth",
+	EvolvesFrom = {"diacodexis"},
+	Era = "miocene", -- Upper Vallensian
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+})
+
 DefineSpecies("triceromeryx-pachecoi", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 18.
 	Name = "Triceromeryx",
 	Genus = "triceromeryx",
@@ -181,13 +212,6 @@ DefineSpecies("bison", {
 	ChildUpgrade = "upgrade-child"
 })
 
-DefineSpecies("deer", {
-	Name = "Deer",
-	Homeworld = "Earth",
-	EvolvesFrom = {"diacodexis"},
-	ChildUpgrade = "upgrade-child"
-})
-
 DefineSpecies("giraffe", {
 	Name = "Giraffe",
 	Homeworld = "Earth",
@@ -203,4 +227,5 @@ DefineSpecies("hippopotamus", {
 })
 
 Load("scripts/species/mammal/artiodactyl/bovid.lua")
+Load("scripts/species/mammal/artiodactyl/cervid.lua")
 Load("scripts/species/mammal/artiodactyl/suid.lua")

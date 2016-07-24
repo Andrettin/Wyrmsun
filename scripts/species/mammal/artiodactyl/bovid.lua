@@ -49,6 +49,11 @@ DefineSpeciesGenus("eale", {
 	Subfamily = "caprinae"
 })
 	
+DefineSpeciesGenus("tethytragus", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 60-61.
+	Name = "Tethytragus",
+	Family = "bovidae"
+})
+
 DefineSpecies("aragoral", { -- Source: http://fossilworks.org/bridge.pl?action=taxonInfo&taxon_no=86341
 	Name = "Aragoral",
 	Genus = "aragoral",
@@ -59,6 +64,20 @@ DefineSpecies("aragoral", { -- Source: http://fossilworks.org/bridge.pl?action=t
 	ChildUpgrade = "upgrade-child",
 	Description = "The aragorals are the oldest caprines to have existed. The Aesir transported a few of them to Nidavellir, where they eventually evolved into yales."
 	-- ground dwelling grazer-browser
+})
+
+DefineSpecies("tethytragus-langai", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 60-61.
+	Name = "Tethytragus", -- Tethytragus langai
+	Genus = "tethytragus",
+	Species = "langai",
+	Homeworld = "Earth",
+	Environments = {"plains"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
+	EvolvesFrom = {"diacodexis"},
+	Era = "miocene", -- Middle Miocene
+	Prehistoric = true,
+	ChildUpgrade = "upgrade-child"
+	-- 70cm shoulder height
+	-- lived in Spain
 })
 
 DefineSpecies("goat", { -- Source: http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=180715
