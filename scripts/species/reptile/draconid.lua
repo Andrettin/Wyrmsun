@@ -36,6 +36,12 @@ DefineSpeciesGenus("draco", {
 	Family = "draconidae"
 })
 
+DefineSpeciesGenus("vurmus", {
+	Name = "Vurmus", -- tentative rendering of "wyrm" in Latin
+	CommonName = "Wyrm",
+	Family = "draconidae"
+})
+
 DefineSpecies("black-dragon", {
 	Name = "Black Dragon",
 	Genus = "draco",
@@ -147,10 +153,11 @@ DefineSpecies("white-dragon", {
 
 DefineSpecies("wyrm", {
 	Name = "Wyrm",
---	Family = "draconidae",
+	Genus = "vurmus",
 	Homeworld = "Nidavellir",
 	Environments = {"swamp", "cave"},
 	EvolvesFrom = {"tyrannosaurus-rex"}, -- seems sensible, given how the Tyrannosaurus rex has dragon-like features, so it could be an ancestor to mythical dragons
+	Era = "holocene",
 	ChildUpgrade = "upgrade-wyrm-child"
 })
 

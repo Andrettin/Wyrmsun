@@ -88,10 +88,9 @@ DefineSpeciesGenus("micromeryx", { -- Source: Mauricio Antón and Jorge Morales,
 	Family = "moschidae"
 })
 
-DefineSpeciesGenus("triceromeryx", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 18.
+DefineSpeciesGenus("triceromeryx", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 18, 64-65.
 	Name = "Triceromeryx",
-	Family = "palaeomerycidae", -- Source: http://fossilworks.org/bridge.pl?action=taxonInfo&taxon_no=42710
-	Subfamily = "palaeomerycinae" -- Source: http://fossilworks.org/bridge.pl?action=taxonInfo&taxon_no=42710
+	Family = "palaeomerycidae"
 })
 
 DefineSpecies("diacodexis", {
@@ -173,6 +172,7 @@ DefineSpecies("micromeryx-azanzae", { -- Source: Mauricio Antón and Jorge Moral
 	-- 35-38cm shoulder height
 	-- lived in Spain
 	-- used its large upper canine teeth to fight with other males for females
+	-- males have large canine teeth
 })
 
 DefineSpecies("micromeryx-soriae", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 58-59.
@@ -186,16 +186,18 @@ DefineSpecies("micromeryx-soriae", { -- Source: Mauricio Antón and Jorge Morale
 	ChildUpgrade = "upgrade-child"
 })
 
-DefineSpecies("triceromeryx-pachecoi", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, p. 18.
+DefineSpecies("triceromeryx-pachecoi", { -- Source: Mauricio Antón and Jorge Morales, "Madrid antes del hombre", 2009, pp. 18, 64-65.
 	Name = "Triceromeryx",
 	Genus = "triceromeryx",
 	Species = "pachecoi",
 	Homeworld = "Earth",
 	Environments = {"plains"}, -- this species lived in Miocene Madrid, which was mostly arid with a swampy lake in the middle
 	EvolvesFrom = {"diacodexis"},
-	Era = "miocene", -- Middle Aragonian
+	Era = "miocene", -- Middle Miocene
 	Prehistoric = true,
 	ChildUpgrade = "upgrade-child"
+	-- 125cm shoulder height
+	-- lived in Spain
 })
 
 DefineSpecies("antelope", {
