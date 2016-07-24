@@ -142,6 +142,15 @@ DefineDeity("nekhbet", { -- Source: Claude Traunecker, "Os Deuses do Egito", 199
 --	Description = "Nekhbet takes the form of a vulture, and is associated with the arid deserts."
 })
 
+DefineDeity("nut", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 47.
+	Name = "Nut",
+	Civilizations = {"egyptian"},
+	Religions = {"paganism"},
+	Gender = "female",
+	Domains = {"air"},
+--	Description = "Nut is a sky goddess."
+})
+
 DefineDeity("pakhet", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 44.
 	Name = "Pakhet",
 	Civilizations = {"egyptian"},
@@ -149,6 +158,15 @@ DefineDeity("pakhet", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992
 	Gender = "female",
 	Domains = {},
 --	Description = "\"The dilacerator\", Pakhet is a goddess who takes the form of a lioness."
+})
+
+DefineDeity("shu", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 48.
+	Name = "Shu",
+	Civilizations = {"egyptian"},
+	Religions = {"paganism"},
+	Gender = "male",
+	Domains = {"air"},
+--	Description = "Shu is a deity associated with the connection between earth and sky."
 })
 
 DefineDeity("sia", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 44.

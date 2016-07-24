@@ -84,3 +84,9 @@ DefineLanguageWord("Ren", { -- Source: Claude Traunecker, "Os Deuses do Egito", 
 	Type = "noun",
 	Meanings = {"Name"}
 })
+
+DefineLanguageWord("Sekhem", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 49.
+	Language = "egyptian",
+	Type = "noun",
+	Meanings = {"Force"} -- apparently
+})

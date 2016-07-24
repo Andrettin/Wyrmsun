@@ -73,6 +73,12 @@ DefineUpgrade("upgrade-work-great-hymn-to-the-nile", { -- Source: Claude Traunec
 	Civilization = "egyptian"
 })
 
+DefineUpgrade("upgrade-work-hymn-to-amon", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 49.
+	Name = _("Hymn to Amon"),
+	Work = "scroll",
+	Civilization = "egyptian"
+})
+
 DefineUpgrade("upgrade-work-tale-of-the-god-of-the-sea", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 17.
 	Name = _("Tale of the God of the Sea"),
 	Work = "scroll",
@@ -82,6 +88,18 @@ DefineUpgrade("upgrade-work-tale-of-the-god-of-the-sea", { -- Source: Claude Tra
 DefineUpgrade("upgrade-work-tale-of-two-brothers", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 16-17.
 	Name = _("Tale of Two Brothers"),
 	Work = "scroll",
+	Civilization = "egyptian"
+})
+
+DefineUpgrade("upgrade-work-texts-of-the-pyramids", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 49.
+	Name = _("Texts of the Pyramids"),
+	Work = "book",
+	Civilization = "egyptian"
+})
+
+DefineUpgrade("upgrade-work-texts-of-the-sarcophaguses", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 48.
+	Name = _("Texts of the Sarcophaguses"),
+	Work = "book",
 	Civilization = "egyptian"
 })
 
@@ -117,10 +135,22 @@ DefineModifier("upgrade-work-great-hymn-to-the-nile",
 	{"KnowledgeMagic", 1}
 )
 
+DefineModifier("upgrade-work-hymn-to-amon",
+	{"KnowledgeMagic", 1}
+)
+
 DefineModifier("upgrade-work-tale-of-the-god-of-the-sea",
 	{"KnowledgeMagic", 1}
 )
 
 DefineModifier("upgrade-work-tale-of-two-brothers",
 	{"KnowledgeMagic", 1}
+)
+
+DefineModifier("upgrade-work-texts-of-the-pyramids",
+	{"KnowledgeMagic", 3}
+)
+
+DefineModifier("upgrade-work-texts-of-the-sarcophaguses",
+	{"KnowledgeMagic", 3}
 )

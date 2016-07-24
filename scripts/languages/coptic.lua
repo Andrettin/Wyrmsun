@@ -31,3 +31,10 @@ DefineLanguageWord("Nute", { -- Source: Claude Traunecker, "Os Deuses do Egito",
 	Meanings = {"God"},
 	DerivesFrom = {"egyptian", "noun", "Ntr"}
 })
+
+DefineLanguageWord("Shishem", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 49.
+	Language = "coptic",
+	Type = "noun",
+	Meanings = {"Shadow", "Ghost", "Specter"},
+	DerivesFrom = {"egyptian", "noun", "Sekhem"}
+})
