@@ -31,6 +31,7 @@ DefineDeity("ra", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p.
 	Religions = {"paganism"},
 	Gender = "male",
 	Domains = {"fire"},
+	Major = true,
 --	Description = "Ra is a mighty sun god."
 })
 
@@ -79,13 +80,13 @@ DefineDeity("heka", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, 
 --	Description = "Heka is a deity of magic."
 })
 
-DefineDeity("horus", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 41.
+DefineDeity("horus", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 41, 55.
 	Name = "Horus",
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "male",
 	Domains = {},
---	Description = "Horus is a god who takes the shape of a falcon."
+--	Description = "Horus is a god who takes the shape of a falcon. His mother is Isis."
 })
 
 DefineDeity("hu", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 44.
@@ -95,6 +96,15 @@ DefineDeity("hu", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p.
 	Gender = "male",
 	Domains = {},
 --	Description = "Hu is a deity of the word."
+})
+
+DefineDeity("isis", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 55.
+	Name = "Isis",
+	Civilizations = {"egyptian"},
+	Religions = {"paganism"},
+	Gender = "female",
+	Domains = {},
+--	Description = "Isis is the mother of Horus."
 })
 
 DefineDeity("khonsu", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 44.
@@ -142,13 +152,22 @@ DefineDeity("nekhbet", { -- Source: Claude Traunecker, "Os Deuses do Egito", 199
 --	Description = "Nekhbet takes the form of a vulture, and is associated with the arid deserts."
 })
 
-DefineDeity("nut", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 47.
+DefineDeity("nut", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 47, 50.
 	Name = "Nut",
-	Civilizations = {"egyptian"},
+	Civilizations = {"egyptian", "minotaur"},
 	Religions = {"paganism"},
 	Gender = "female",
 	Domains = {"air"},
---	Description = "Nut is a sky goddess."
+--	Description = "Nut is a sky goddess who takes the shape of a cow."
+})
+
+DefineDeity("osiris", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 51.
+	Name = "Osiris",
+	Civilizations = {"egyptian"},
+	Religions = {"paganism"},
+	Gender = "male",
+	Domains = {"death"},
+--	Description = "Osiris is a god who rules over the underworld plane of Imduat."
 })
 
 DefineDeity("pakhet", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 44.
@@ -185,6 +204,15 @@ DefineDeity("sobek", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992,
 	Gender = "male",
 	Domains = {"water"},
 --	Description = "A god who takes the shape of a crocodile, Sobek holds aquatic animals as his domain. He is also linked to vegetation growth."
+})
+
+DefineDeity("thot", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 55.
+	Name = "Thot",
+	Civilizations = {"egyptian"},
+	Religions = {"paganism"},
+	Gender = "male",
+	Domains = {},
+--	Description = "Thot is a god of writing and knowledge."
 })
 
 DefineDeity("uadjit", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 42.

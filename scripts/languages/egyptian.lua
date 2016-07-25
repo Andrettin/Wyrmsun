@@ -25,6 +25,12 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineLanguageWord("At", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 454.
+	Language = "egyptian",
+	Type = "noun",
+	Meanings = {"Instant", "Sudden Attack", "Power"}
+})
+
 DefineLanguageWord("Ba", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 36.
 	Language = "egyptian",
 	Type = "noun",

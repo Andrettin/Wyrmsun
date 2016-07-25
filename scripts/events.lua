@@ -283,7 +283,7 @@ function EventTriggers()
 			end,
 			function()
 				Event(
-					"Seasoned Swordsman",
+					FindUnit("unit-long-swordsman"),
 					"Thanks for freeing me from my captors. They imprisoned me hoping to ransom me for gold, but it turns out I am naught but a wandering knight, with no baron of a father to pay for my freedom. So they just left me here to rot... I can't reward you with gold, but I will teach you what I know about personal combat.",
 					player,
 					{"~!OK (+100 XP)"},
@@ -294,8 +294,7 @@ function EventTriggers()
 							SetUnitVariable(uncount[unit1], "Xp", GetUnitVariable(uncount[unit1], "Xp", "Max") + 100, "Max")
 							SetUnitVariable(uncount[unit1], "Xp", GetUnitVariable(uncount[unit1], "Xp", "Max"))
 						end
-					end},
-					"neutral/icons/long_swordsman.png"
+					end}
 				)
 				
 				return false
@@ -553,7 +552,11 @@ function Event(speaker, event_description, player, options, option_effects, even
 		menu:resize(352, 352)
 
 		if (type(speaker) == "number") then
-			menu:addLabel(_(GetUnitVariable(speaker, "Name")), 176, 11)
+			if (GetUnitVariable(speaker, "Name") ~= "") then
+				menu:addLabel(_(GetUnitVariable(speaker, "Name")), 176, 11)
+			else
+				menu:addLabel(_(GetUnitTypeData(GetUnitVariable(speaker, "Ident"), "Name")), 176, 11)
+			end
 		elseif (type(speaker) == "string") then
 			menu:addLabel(_(speaker), 176, 11)
 		end

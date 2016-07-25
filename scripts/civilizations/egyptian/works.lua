@@ -67,14 +67,38 @@ DefineUpgrade("upgrade-work-book-of-imduat", { -- Source: Claude Traunecker, "Os
 	Civilization = "egyptian"
 })
 
+DefineUpgrade("upgrade-work-book-of-nut", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 50.
+	Name = _("Book of Nut"),
+	Work = "book",
+	Civilization = "egyptian"
+})
+
 DefineUpgrade("upgrade-work-great-hymn-to-the-nile", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 16.
 	Name = _("Great Hymn to the Nile"),
 	Work = "scroll",
 	Civilization = "egyptian"
 })
 
-DefineUpgrade("upgrade-work-hymn-to-amon", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 49.
+DefineUpgrade("upgrade-work-hymn-to-amon", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 49, 52.
 	Name = _("Hymn to Amon"),
+	Work = "scroll",
+	Civilization = "egyptian"
+})
+
+DefineUpgrade("upgrade-work-hymn-to-aton", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 55.
+	Name = _("Hymn to Aton"),
+	Work = "scroll",
+	Civilization = "egyptian"
+})
+
+DefineUpgrade("upgrade-work-naos-of-ismailia", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 52.
+	Name = _("Naos of Ismailia"),
+	Work = "scroll",
+	Civilization = "egyptian"
+})
+
+DefineUpgrade("upgrade-work-prophecy-of-neferty", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 51.
+	Name = _("Prophecy of Neferty"),
 	Work = "scroll",
 	Civilization = "egyptian"
 })
@@ -85,13 +109,19 @@ DefineUpgrade("upgrade-work-tale-of-the-god-of-the-sea", { -- Source: Claude Tra
 	Civilization = "egyptian"
 })
 
+DefineUpgrade("upgrade-work-tale-of-the-ghost", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 52.
+	Name = _("Tale of the Ghost"),
+	Work = "scroll",
+	Civilization = "egyptian"
+})
+
 DefineUpgrade("upgrade-work-tale-of-two-brothers", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 16-17.
 	Name = _("Tale of Two Brothers"),
 	Work = "scroll",
 	Civilization = "egyptian"
 })
 
-DefineUpgrade("upgrade-work-texts-of-the-pyramids", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 49.
+DefineUpgrade("upgrade-work-texts-of-the-pyramids", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 49, 52.
 	Name = _("Texts of the Pyramids"),
 	Work = "book",
 	Civilization = "egyptian"
@@ -131,6 +161,10 @@ DefineModifier("upgrade-work-book-of-imduat",
 	{"KnowledgeMagic", 3}
 )
 
+DefineModifier("upgrade-work-book-of-nut",
+	{"KnowledgeMagic", 3}
+)
+
 DefineModifier("upgrade-work-great-hymn-to-the-nile",
 	{"KnowledgeMagic", 1}
 )
@@ -139,7 +173,23 @@ DefineModifier("upgrade-work-hymn-to-amon",
 	{"KnowledgeMagic", 1}
 )
 
+DefineModifier("upgrade-work-hymn-to-aton",
+	{"KnowledgeMagic", 1}
+)
+
+DefineModifier("upgrade-work-naos-of-ismailia",
+	{"KnowledgeMagic", 1}
+)
+
+DefineModifier("upgrade-work-prophecy-of-neferty",
+	{"KnowledgeMagic", 1}
+)
+
 DefineModifier("upgrade-work-tale-of-the-god-of-the-sea",
+	{"KnowledgeMagic", 1}
+)
+
+DefineModifier("upgrade-work-tale-of-the-ghost",
 	{"KnowledgeMagic", 1}
 )
 

@@ -171,3 +171,7 @@ DefineDeityDomain("wrath", {
 DefineDeityDomain("archery", {
 	Name = "Archery"
 })
+
+DefineDeityDomain("metalworking", {
+	Name = "Metalworking"
+})
