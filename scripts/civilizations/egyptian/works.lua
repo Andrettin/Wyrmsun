@@ -121,6 +121,12 @@ DefineUpgrade("upgrade-work-tale-of-two-brothers", { -- Source: Claude Traunecke
 	Civilization = "egyptian"
 })
 
+DefineUpgrade("upgrade-work-teachings-of-ani", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 57.
+	Name = _("Teachings of Ani"),
+	Work = "scroll",
+	Civilization = "egyptian"
+})
+
 DefineUpgrade("upgrade-work-texts-of-the-pyramids", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 49, 52.
 	Name = _("Texts of the Pyramids"),
 	Work = "book",
@@ -194,6 +200,10 @@ DefineModifier("upgrade-work-tale-of-the-ghost",
 )
 
 DefineModifier("upgrade-work-tale-of-two-brothers",
+	{"KnowledgeMagic", 1}
+)
+
+DefineModifier("upgrade-work-teachings-of-ani",
 	{"KnowledgeMagic", 1}
 )
 

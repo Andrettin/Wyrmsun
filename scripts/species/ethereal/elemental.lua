@@ -84,6 +84,7 @@ DefineSpecies("fire-elemental", {
 
 DefineSpecies("water-elemental", {
 	Name = "Water Elemental",
+	HomePlane = "Nun",
 	Sapient = true
 })
 

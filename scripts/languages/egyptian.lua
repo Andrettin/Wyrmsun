@@ -37,6 +37,12 @@ DefineLanguageWord("Ba", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1
 	Meanings = {"Soul"}
 })
 
+DefineLanguageWord("Djed", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 66.
+	Language = "egyptian",
+	Type = "adjective",
+	Meanings = {"Stable"}
+})
+
 DefineLanguageWord("Djeser", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 44.
 	Language = "egyptian",
 	Type = "noun",
@@ -59,6 +65,18 @@ DefineLanguageWord("Ib", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1
 	Language = "egyptian",
 	Type = "noun",
 	Meanings = {"Heart"}
+})
+
+DefineLanguageWord("Ir", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 59.
+	Language = "egyptian",
+	Type = "verb",
+	Meanings = {"Make"}
+})
+
+DefineLanguageWord("Iuf", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 61.
+	Language = "egyptian",
+	Type = "noun",
+	Meanings = {"Flesh"}
 })
 
 DefineLanguageWord("Khet", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 33.

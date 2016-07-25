@@ -59,6 +59,10 @@ DefinePlane("Material Plane", {
 	Description = _("The material plane is the normal plane of existence, where worlds such as Earth and Nidavellir are located. As the other planes are made of pure magic, it is almost impossible for their inhabitants to travel to the material plane, as the difference in the composition of the realms would risk the traveller's very existence. The major exception being that particularly powerful mortal sorcerers are sometimes able to summon extraplanar beings for very short periods of time, maintaining their presence in a great effort of magical prowess. As more powerful extraplanar creatures are generally more rich in magic, they are also more difficult to summon.")
 })
 
+DefinePlane("Nun", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 50.
+	Description = _("Nun is a primordial water plane, which is sometimes used as refuge by the deities of the Pharaonic pantheon.")
+})
+
 DefinePlane("Olympus", { -- Source: Jenny March, "Dictionary of Classical Mythology", 2014, p. 354.
 	Description = _("The realm of Olympus is the dwelling place of the pantheon of deities ruled by Zeus. Endless feasts succeed one another in the plane, nourishing the Olympian gods with ambrosia and nectar. The plane's weather is eternally sunny, so that it never winds, rains or snows, and clouds are entirely absent.")
 })
