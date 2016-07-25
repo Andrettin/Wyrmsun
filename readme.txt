@@ -83,6 +83,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Maps
 - Increased quantity of fauna units generated in maps.
+- Fixed issue which caused a crash when approaching the long swordsman in random dungeons.
 
 * Quests
 - Goblin Barbarians and Warlords are now present in the Caverns of Flame quest.
