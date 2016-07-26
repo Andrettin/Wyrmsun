@@ -931,7 +931,8 @@ DefineUnitType("unit-dwarven-ballista", { Name = _("Ballista"),
 	}
 })
 
-DefineUnitType("unit-dwarven-transport-ship", { Name = _("Transport"),
+DefineUnitType("unit-dwarven-transport-ship", {
+	Name = _("Transport"),
 	Parent = "unit-template-transport-ship",
 	Civilization = "dwarf",
 	Description = _("Sailing the Deep Sea and underground rivers alike, these ships are manned by hearty dwarven crews. Every journey brings back new tales, be it of a kobold dwarf-eating tribe, or of treacherous goblin pirates..."),

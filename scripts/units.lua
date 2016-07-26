@@ -89,6 +89,7 @@ Units = {
 	"unit-goblin-swordsman", "unit-goblin-barbarian", "unit-goblin-warlord", "unit-goblin-spearman",
 	"unit-goblin-archer", "unit-goblin-headhunter", "unit-goblin-shadowstalker", "unit-goblin-thief", "unit-goblin-shaman",
 	"unit-goblin-war-machine", "unit-goblin-glider",
+	"unit-goblin-transport-ship",
 	"unit-goblin-town-hall", "unit-goblin-stronghold",
 	"unit-goblin-mess-hall", "unit-goblin-farm", "unit-goblin-lumber-mill", "unit-goblin-smithy", "unit-goblin-temple",
 	"unit-goblin-watch-tower", "unit-goblin-guard-tower",

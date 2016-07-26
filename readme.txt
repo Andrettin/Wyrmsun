@@ -94,6 +94,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added Goblin Shadowstalker (upgrade of the Headhunter) (icon by Jesse Crider, modified from Jinn's Goblin Headhunter icon).
 - Ordinary enemy units now drop items in non-base-based missions (that is, ones in which no player owns or has ever owned a town hall).
 - Fixed issue which caused unit individual upgrades to not be saved properly in saved games.
+- Added Goblin transport ship (graphics by Jinn).
 
 * Upgrades
 - Added goblin Broad Sword and Long Sword upgrades (icons by Jinn).

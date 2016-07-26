@@ -554,7 +554,20 @@ DefineUnitType("unit-goblin-glider", { Name = _("Glider"),
 		"dead", "basic-goblin-voices-dead"
 	}
 } )
- 
+
+DefineUnitType("unit-goblin-transport-ship", {
+	Name = _("Transport"),
+	Parent = "unit-template-transport-ship",
+	Civilization = "goblin",
+	Description = _("The sleek goblin merchant ships are present in nearly every port of the Deep Sea. The origin of their cargoes is not always reputable, as goblin merchants are known for selling pirated or smuggled goods. The swiftness of these vessels makes them excellent blockade runners."),
+	Image = {"file", "goblin/units/transport.png", "size", {72, 72}},
+	LightImage = {"file", "goblin/units/transport_water.png"},
+	Icon = "icon-goblin-transport-ship",
+	Speed = 11, -- +1 speed
+	Sounds = {
+		"help", "basic-goblin-voices-help"
+	}
+})
 
 DefineUnitType("unit-goblin-town-hall", { Name = _("Town Hall"),
 	Parent = "unit-template-town-hall",
@@ -692,7 +705,7 @@ DefineUnitType("unit-goblin-dock", {
 	Image = {"file", "goblin/buildings/dock.png", "size", {96, 96}},
 	Shadow = {"file", "goblin/buildings/dock_shadow.png", "size", {96, 96}},
 	Icon = "icon-goblin-dock",
---	Trains = {"unit-dwarven-transport-ship"},
+	Trains = {"unit-goblin-transport-ship"},
 	Sounds = {
 		"help", "basic-goblin-voices-help-town"
 	}

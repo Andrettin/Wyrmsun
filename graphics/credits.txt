@@ -782,6 +782,8 @@ João Victor G. Costa (Jinn):
 /graphics/goblin/ui/widgets/up-arrow-normal-slider.png (licensed under the CC0)
 /graphics/goblin/ui/widgets/up-arrow-pressed-slider.png (licensed under the CC0)
 /graphics/goblin/ui/widgets/vertical-slider-bar-normal.png (licensed under the CC0)
+/graphics/goblin/units/transport_ship.png (licensed under the CC0)
+/graphics/goblin/units/transport_ship_water.png (licensed under the CC0)
 /graphics/latin/buildings/barracks.png (based on the model by Wildfire Games) (licensed under the CC-BY-SA 3.0)
 /graphics/latin/buildings/barracks_shadow.png (based on the model by Wildfire Games) (licensed under the CC-BY-SA 3.0)
 /graphics/latin/buildings/farm.png (based on the model by Wildfire Games) (licensed under the CC-BY-SA 3.0)

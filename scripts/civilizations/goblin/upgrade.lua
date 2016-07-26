@@ -247,4 +247,8 @@ DefineDependency("upgrade-goblin-alchemy",
 	{"upgrade-goblin-writing"}
 )
 
+DefineDependency("unit-goblin-transport-ship",
+	{"unit-goblin-lumber-mill"}
+)
+
 Load("scripts/civilizations/goblin/upgrade_faction.lua")
