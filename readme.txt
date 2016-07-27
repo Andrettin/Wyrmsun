@@ -61,6 +61,9 @@ https://github.com/Andrettin/Wyrmsun
 - 2.3.2
 -----------------------------------------------------------------------
 
+* Abilities
+- Fixed close-quarters pathing issue for units' autocast for abilities like Stun.
+
 * Buildings
 - Rally points are now correctly stored when saving a game.
 
