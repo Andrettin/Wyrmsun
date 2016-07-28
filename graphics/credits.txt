@@ -404,6 +404,8 @@ igoku:
 /graphics/dwarf/icons/shield_1.png (later modified by Jinn) (licensed under the GPL 2.0)
 
 Jesse Crider:
+/graphics/gnome/icons/book.png (licensed under the CC0)
+/graphics/gnome/icons/coinage.png (licensed under the CC0)
 /graphics/gnome/icons/derro_coinage.png (licensed under the CC0)
 /graphics/gnome/icons/derro_executioner.png (modified from Exidelo's Gnomish Duelist icon) (licensed under the CC0)
 /graphics/gnome/icons/derro_magister.png (licensed under the CC0)
