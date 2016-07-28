@@ -231,7 +231,6 @@ DefineCivilization("goblin", {
 	Species = "goblin",
 	Language = "goblin",
 	Adjective = "Goblin",
-	Playable = false,
 	DefaultColor = "teal",
 	NegativeYearLabel = "BU", -- Before Untersberg
 	YearLabel = "YU", -- Years Untersberg

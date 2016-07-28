@@ -68,13 +68,7 @@ function RunQuestWorldMenu()
 end
 
 function RunQuestMenu(world)
---	if (world == "Earth") then
---		SetPlayerData(GetThisPlayer(), "RaceName", "germanic")
---	elseif (world == "Nidavellir") then
---		SetPlayerData(GetThisPlayer(), "RaceName", "dwarf")
---	else
-		SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
---	end
+	SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
 
 	if not (IsMusicPlaying()) then
 		PlayMusicName("MenuTheme")
@@ -174,6 +168,7 @@ function RunQuestMenu(world)
 			(world == "Earth" and (GetCustomHeroData(custom_heroes[i], "Civilization") == "germanic" or GetCustomHeroData(custom_heroes[i], "Civilization") == "teuton"))
 			or (world == "Nidavellir" and GetCustomHeroData(custom_heroes[i], "Civilization") == "dwarf")
 			or (world == "Nidavellir" and GetCustomHeroData(custom_heroes[i], "Civilization") == "gnome")
+			or (world == "Nidavellir" and GetCustomHeroData(custom_heroes[i], "Civilization") == "goblin")
 		) then
 			table.insert(hero_list, custom_heroes[i])
 		end

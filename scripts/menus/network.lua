@@ -147,7 +147,7 @@ function RunJoiningMapMenu(s)
   computer_opponents:setMarked(ServerSetupState.Opponents > 0)
 
   menu:writeText("Civilization:", sx, sy*11)
-  local civilization_list = {_("Map Default"), _("Dwarf"), _("Human - Germanic")}
+  local civilization_list = {_("Map Default"), _("Dwarf"), _("Goblin"), _("Human - Germanic")}
   local race = menu:addDropDown(civilization_list, sx + 100, sy*11,
     function(dd)
 	  if (civilization_list[dd:getSelected() + 1] ~= _("Map Default")) then
@@ -380,7 +380,7 @@ function RunServerMultiGameMenu(map, description, numplayers)
   computer_opponents:setMarked(false)
 
   menu:writeText("Civilization:", sx, sy*11)
-   local civilization_list = {_("Map Default"), _("Dwarf"), _("Human - Germanic")}
+   local civilization_list = {_("Map Default"), _("Dwarf"), _("Goblin"), _("Human - Germanic")}
    d = menu:addDropDown(civilization_list, sx + 100, sy*11,
     function(dd)
 	  if (civilization_list[dd:getSelected() + 1] ~= _("Map Default")) then

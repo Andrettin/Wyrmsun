@@ -435,8 +435,8 @@ function RunGrandStrategyGameSetupMenu()
 					end
 				end
 			else
-				faction_list = {"Asa Tribe", "Brising Clan"}
-				faction_civilization_list = {"germanic", "dwarf"}
+				faction_list = {"Asa Tribe", "Brising Clan", "Eikinskjaldi Clan", "Khag Tribe", "Lggi Tribe", "Norlund Clan", "Shinsplitter Clan", "Shorbear Clan"}
+				faction_civilization_list = {"dwarf", "germanic", "goblin"}
 			end
 
 			faction:setList(faction_list)

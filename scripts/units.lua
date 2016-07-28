@@ -2436,7 +2436,8 @@ DefineUnitType("unit-template-merchant", { Name = _("Merchant"),
 	}
 } )
 
-DefineUnitType("unit-template-heroic-merchant", { Name = _("Heroic Merchant"),
+DefineUnitType("unit-template-heroic-merchant", {
+	Name = _("Heroic Merchant"),
 	Parent = "unit-template-merchant",
 	Class = "heroic-merchant",
 	Strength = 10,
@@ -2447,10 +2448,12 @@ DefineUnitType("unit-template-heroic-merchant", { Name = _("Heroic Merchant"),
 	BasicDamage = 7,
 	Evasion = 14,
 	Points = 90,
+	Level = 3,
 	LeadershipAura = 1
 } )
 
-DefineUnitType("unit-template-infantry", { Name = _("Infantry"),
+DefineUnitType("unit-template-infantry", {
+	Name = _("Infantry"),
 	Parent = "unit-template-sapient-unit",
 	Class = "infantry",
 	Costs = {"time", 60, "gold", 600},
@@ -2800,7 +2803,8 @@ DefineUnitType("unit-template-flying-rider", { Name = _("Flying Rider"),
 	}
 } )
 
-DefineUnitType("unit-template-siege-engine", { Name = _("Siege Engine"),
+DefineUnitType("unit-template-siege-engine", {
+	Name = _("Siege Engine"),
 	Parent = "unit-template-unit",
 	Class = "siege-engine",
 	Costs = {"time", 250, "gold", 900, "lumber", 900},

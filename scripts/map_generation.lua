@@ -1613,7 +1613,7 @@ function CreatePlayers(min_x, max_x, min_y, max_y, mixed_civilizations, town_hal
 			if (GetPlayerData(i, "AiEnabled") and (GetCurrentTileset() == "cave" or GetCurrentTileset() == "swamp" or GetCurrentTileset() == "fairlimbed-forest" or mixed_civilizations) and table.getn(GetCivilizationAvailableFactions("gnome")) > 0) then -- allow gnomes in elven forests since there is no elven civilization yet
 				table.insert(possible_civilizations, "gnome")
 			end
-			if (GetPlayerData(i, "AiEnabled") and (GetCurrentTileset() == "cave" or GetCurrentTileset() == "swamp" or mixed_civilizations) and table.getn(GetCivilizationAvailableFactions("goblin")) > 0) then
+			if ((GetCurrentTileset() == "cave" or GetCurrentTileset() == "swamp" or mixed_civilizations) and table.getn(GetCivilizationAvailableFactions("goblin")) > 0) then
 				table.insert(possible_civilizations, "goblin")
 			end
 			if (table.getn(possible_civilizations) < 1) then

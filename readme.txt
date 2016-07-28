@@ -68,6 +68,7 @@ https://github.com/Andrettin/Wyrmsun
 - Rally points are now correctly stored when saving a game.
 
 * Civilizations
+- The Goblins are now playable.
 - Added Goblin UI (graphics by Jinn).
 
 * Editor
@@ -81,6 +82,9 @@ https://github.com/Andrettin/Wyrmsun
 * Grand Strategy
 - Added Du'urdin province (Nidavellir).
 
+* Heroes
+- Goblin custom heroes can now be created.
+
 * Items
 - Fixed issue which caused a crash when a gryphon rider read a Scroll of Forgetfulness or a Book of Retraining.
 
@@ -90,6 +94,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Quests
 - Goblin Barbarians and Warlords are now present in the Caverns of Flame quest.
+- Goblin custom heroes can now be used for dwarven quests.
 
 * Units
 - Added Goblin Barbarian (upgrade of the Swordsman) (icon by Jesse Crider, modified from b_o's and Leo's Goblin Swordsman icon).
@@ -97,7 +102,8 @@ https://github.com/Andrettin/Wyrmsun
 - Added Goblin Shadowstalker (upgrade of the Headhunter) (icon by Jesse Crider, modified from Jinn's Goblin Headhunter icon).
 - Ordinary enemy units now drop items in non-base-based missions (that is, ones in which no player owns or has ever owned a town hall).
 - Fixed issue which caused unit individual upgrades to not be saved properly in saved games.
-- Added Goblin transport ship (graphics by Jinn).
+- Added Goblin Transport ship (graphics by Jinn).
+- Goblin Gliders are now mechanical units.
 
 * Upgrades
 - Added goblin Broad Sword and Long Sword upgrades (icons by Jinn).

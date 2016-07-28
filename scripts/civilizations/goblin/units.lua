@@ -507,17 +507,17 @@ DefineUnitType("unit-goblin-war-machine", { Name = _("War Machine"),
 	}
 } )
 
-DefineUnitType("unit-goblin-glider", { Name = _("Glider"),
-	Parent = "unit-template-sapient-unit",
+DefineUnitType("unit-goblin-glider", {
+	Name = _("Glider"),
+	Parent = "unit-template-unit",
 	Class = "glider",
 	Civilization = "goblin",
 	Description = _("A brainchild of goblin inventiveness, gliders are used to scout ahead and determine enemy positions."),
 	Image = {"file", "goblin/units/glider.png", "size", {100, 100}},
 	Animations = "animations-goblin-glider", Icon = "icon-goblin-glider",
-	DefaultEquipment = {
-		{"boots", "unit-boots"}
-	},
 	Costs = {"time", 65, "gold", 500, "lumber", 300},
+	RepairHp = 4,
+	RepairCosts = {"gold", 1, "lumber", 1},
 	NeutralMinimapColor = {192, 192, 192},
 	Intelligence = 11,
 	Speed = 14,
@@ -539,12 +539,10 @@ DefineUnitType("unit-goblin-glider", { Name = _("Glider"),
 	RightMouseAction = "move",
 	DetectCloak = true,
 	Coward = true,
-	Flesh = true,
 	BoardSize = 100, -- to prevent this unit from being loaded into transporters
 	ButtonKey = "g",
 	ButtonHint = _("Build ~!Glider"),
 	ButtonPos = 7,
-	Traits = {"upgrade-ambitious", "upgrade-dim", "upgrade-genius", "upgrade-intelligent", "upgrade-keen", "upgrade-limping", "upgrade-near-sighted", "upgrade-old", "upgrade-quick", "upgrade-resilient", "upgrade-slow", "upgrade-pious", "upgrade-wise"}, -- removed traits which affect damage, as this unit can't attack
 	Sounds = {
 		"selected", "basic-goblin-voices-selected-group",
 		"acknowledge", "glider-flying",
@@ -560,7 +558,7 @@ DefineUnitType("unit-goblin-transport-ship", {
 	Parent = "unit-template-transport-ship",
 	Civilization = "goblin",
 	Description = _("The sleek goblin merchant ships are present in nearly every port of the Deep Sea. The origin of their cargoes is not always reputable, as goblin merchants are known for selling pirated or smuggled goods. The swiftness of these vessels makes them excellent blockade runners."),
-	Image = {"file", "goblin/units/transport.png", "size", {72, 72}},
+	Image = {"file", "goblin/units/transport.png", "size", {100, 100}},
 	LightImage = {"file", "goblin/units/transport_water.png"},
 	Icon = "icon-goblin-transport-ship",
 	Speed = 11, -- +1 speed

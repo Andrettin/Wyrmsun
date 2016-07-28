@@ -43,6 +43,7 @@ function CustomHeroCreationMenu(world, quest_menu)
 	elseif (world == "Nidavellir") then
 		table.insert(hero_civilization_list, "Dwarf")
 		table.insert(hero_civilization_list, "Gnome")
+		table.insert(hero_civilization_list, "Goblin")
 	end
 	local hero_class_ident_list = {}
 	local hero_class_list = {}
@@ -115,6 +116,7 @@ function CustomHeroCreationMenu(world, quest_menu)
 				and GetUnitTypeData(unitName, "Class") ~= "militia"
 				and unitName ~= "unit-germanic-spearman"
 				and GetUnitTypeData(unitName, "Class") ~= "priest"
+				and GetUnitTypeData(unitName, "Class") ~= "thief" -- no dagger units yet
 				and GetUnitTypeData(unitName, "Level") == 1
 				and GetUnitTypeData(unitName, "organic")
 			) then
