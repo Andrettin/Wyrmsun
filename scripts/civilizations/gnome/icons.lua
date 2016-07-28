@@ -104,6 +104,18 @@ DefineIcon({
 })
 
 DefineIcon({
+	Name = "icon-gnomish-book",
+	Size = {46, 38},
+	File = "gnome/icons/book.png"
+})
+
+DefineIcon({
+	Name = "icon-gnomish-coinage",
+	Size = {46, 38},
+	File = "gnome/icons/coinage.png"
+})
+
+DefineIcon({
 	Name = "icon-herbal-cure",
 	Size = {46, 38},
 	File = "gnome/icons/herbal_cure.png"
