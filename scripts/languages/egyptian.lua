@@ -25,10 +25,22 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineLanguageWord("Ankh", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 67, 71.
+	Language = "egyptian",
+	Type = "noun",
+	Meanings = {"Winged Cross", "Life"}
+})
+
 DefineLanguageWord("At", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 454.
 	Language = "egyptian",
 	Type = "noun",
 	Meanings = {"Instant", "Sudden Attack", "Power"}
+})
+
+DefineLanguageWord("Atef", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 70.
+	Language = "egyptian",
+	Type = "noun",
+	Meanings = {"Crown"}
 })
 
 DefineLanguageWord("Ba", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 36.
@@ -55,10 +67,28 @@ DefineLanguageWord("Djet", { -- Source: Claude Traunecker, "Os Deuses do Egito",
 	Meanings = {"Body"}
 })
 
+DefineLanguageWord("Geb", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 68.
+	Language = "egyptian",
+	Type = "noun",
+	Meanings = {"Goose"}
+})
+
 DefineLanguageWord("Hau", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 33.
 	Language = "egyptian",
 	Type = "noun",
 	Meanings = {"Body", "Limbs"} -- source gives the Portuguese "corpo" and "membros" as the meaning
+})
+
+DefineLanguageWord("Heqa", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 68.
+	Language = "egyptian",
+	Type = "noun",
+	Meanings = {"Sheepherd's Staff"}
+})
+
+DefineLanguageWord("Hut", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 68.
+	Language = "egyptian",
+	Type = "noun",
+	Meanings = {"Dwelling"}
 })
 
 DefineLanguageWord("Ib", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 34.
@@ -91,6 +121,12 @@ DefineLanguageWord("Kau", { -- Source: Claude Traunecker, "Os Deuses do Egito", 
 	Meanings = {"Feeding"} -- source gives the Portuguese "alimentação" as the meaning
 })
 
+DefineLanguageWord("Nekhekh", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 68, 71.
+	Language = "egyptian",
+	Type = "noun",
+	Meanings = {"Whip"}
+})
+
 DefineLanguageWord("Netjery", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 43.
 	Language = "egyptian",
 	Type = "noun",
@@ -114,3 +150,16 @@ DefineLanguageWord("Sekhem", { -- Source: Claude Traunecker, "Os Deuses do Egito
 	Type = "noun",
 	Meanings = {"Force"} -- apparently
 })
+
+DefineLanguageWord("Uas", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 67.
+	Language = "egyptian",
+	Type = "noun",
+	Meanings = {"Scepter"}
+})
+
+DefineLanguageWord("Uasi", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 68.
+	Language = "egyptian",
+	Type = "verb",
+	Meanings = {"Fall in Ruins"}
+})
+

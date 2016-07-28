@@ -44,13 +44,22 @@ DefineDeity("amon", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, 
 --	Description = "\"The hidden\", Amon is a god associated with invisible powers. The deity is also related to the winds. Sometimes Amon takes the form of a ram or a goose."
 })
 
-DefineDeity("anubis", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 64.
-	Name = "Anubis",
+DefineDeity("andjety", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 68.
+	Name = "Andjety",
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "male",
 	Domains = {},
---	Description = "Anubis is a god who appears as an anthropomorphic canine."
+--	Description = "Andjety is a mysterious god worshiped in the ninth nome of Lower Egypt, wearing a heqa (a sheepherd's staff) and a nekhekh (a lash)."
+})
+
+DefineDeity("anubis", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 64, 72.
+	Name = "Anubis",
+	Civilizations = {"egyptian"},
+	Religions = {"paganism"},
+	Gender = "male",
+	Domains = {"death"},
+--	Description = "Anubis is a god of embalming and guards over necropolises. He appears as an anthropomorphic canine."
 })
 
 DefineDeity("anuquis", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 66.
@@ -89,13 +98,13 @@ DefineDeity("geb", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p
 --	Description = "Geb is a god of earth and fate."
 })
 
-DefineDeity("hathor", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 13, 29, 61.
+DefineDeity("hathor", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 13, 29, 61, 68.
 	Name = "Hathor",
 	Civilizations = {"egyptian", "minotaur"},
 	Religions = {"paganism"},
 	Gender = "female",
 	Domains = {"air"},
---	Description = "Hathor is a celestial goddess. She appears in the form of a cow, and is held as a goddess of happiness and love. On Earth Hathor is worshiped by the Egyptians, and she also enjoys a priesthood amongst the minotaurs of Jotunheim."
+--	Description = "Hathor is a celestial goddess. She appears in the form of a cow, and is held as a goddess of happiness and love. On Earth Hathor is worshiped by the Egyptians, and she also enjoys a priesthood amongst the minotaurs of Jotunheim. One of Hathor's symbols was the papyrus reed."
 })
 
 DefineDeity("heka", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 44.
@@ -105,6 +114,15 @@ DefineDeity("heka", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, 
 	Gender = "male",
 	Domains = {"aether"},
 --	Description = "Heka is a deity of magic."
+})
+
+DefineDeity("heket", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 72.
+	Name = "Heket",
+	Civilizations = {"egyptian"},
+	Religions = {"paganism"},
+	Gender = "female",
+	Domains = {"life"},
+--	Description = "Heket is a goddess of births who takes the form of a frog."
 })
 
 DefineDeity("horus", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 41, 55, 66.
@@ -152,13 +170,13 @@ DefineDeity("khnum", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992,
 --	Description = "Khnum is a god known to take the shape of a ram."
 })
 
-DefineDeity("khonsu", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 44.
+DefineDeity("khonsu", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 44, 66.
 	Name = "Khonsu",
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "male",
 	Domains = {},
---	Description = "\"The one who comes and goes\", Khonsu is a moon god."
+--	Description = "\"The one who comes and goes\", Khonsu is a moon god who takes the appearance of a mummy."
 })
 
 DefineDeity("mafdet", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 44.
@@ -170,13 +188,13 @@ DefineDeity("mafdet", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992
 --	Description = "\"The runner\", Mafdet is a goddess who takes the shape of a panther."
 })
 
-DefineDeity("min", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 40.
+DefineDeity("min", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 40, 66.
 	Name = "Min",
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "male",
 	Domains = {"lightning"},
---	Description = "Min is a god of lightning."
+--	Description = "Min is a god of lightning who appears as a mummy."
 })
 
 DefineDeity("neith", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 40.
@@ -206,13 +224,13 @@ DefineDeity("nut", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p
 --	Description = "Nut is a sky goddess who takes the shape of a cow."
 })
 
-DefineDeity("osiris", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 51, 61.
+DefineDeity("osiris", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 51, 61, 66, 68.
 	Name = "Osiris",
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "male",
 	Domains = {"death", "life"},
---	Description = "Osiris is a god who rules over the underworld plane of Duat. He is a deity both of death and fertility."
+--	Description = "Osiris is a god who rules over the underworld plane of Duat. He is a deity both of death and fertility, and has the appearance of a mummy. Osiris equips a heqa (a sheepherd's staff) and a nekhekh (a lash)."
 })
 
 DefineDeity("pakhet", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 44.
@@ -222,6 +240,15 @@ DefineDeity("pakhet", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992
 	Gender = "female",
 	Domains = {},
 --	Description = "\"The dilacerator\", Pakhet is a goddess who takes the form of a lioness."
+})
+
+DefineDeity("ptah", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 66.
+	Name = "Ptah",
+	Civilizations = {"egyptian"},
+	Religions = {"paganism"},
+	Gender = "male",
+	Domains = {},
+--	Description = "Ptah is a god who is represented as a mummy."
 })
 
 DefineDeity("shu", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 48.
@@ -251,13 +278,13 @@ DefineDeity("sobek", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992,
 --	Description = "A god who takes the shape of a crocodile, Sobek holds aquatic animals as his domain. He is also linked to vegetation growth."
 })
 
-DefineDeity("thot", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 55, 64, 66.
+DefineDeity("thot", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 55, 64, 66, 68.
 	Name = "Thot",
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "male",
 	Domains = {},
---	Description = "Thot is a god of writing and knowledge. He appears as an anthropomorphic ibis. Sometimes Thot takes the form of an ibis itself, or even a baboon."
+--	Description = "Thot is a god of writing and knowledge. He appears as an anthropomorphic ibis, equipped with a scribe's utensil. Sometimes Thot takes the form of an ibis itself, or even a baboon."
 })
 
 DefineDeity("uadjit", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 42.

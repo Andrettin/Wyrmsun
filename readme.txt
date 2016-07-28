@@ -20,7 +20,7 @@ In the Wyrmsun universe a myriad of inhabited planets exist. Humans dwell on Ear
 
 Features:
 - Retro-style graphics
-- 2 playable civilizations, and a number of non-playable ones
+- 3 playable civilizations, and a number of non-playable ones
 - 23 quests to play, earning technology points which can be used to obtain new units, buildings and technologies
 - Dozens of units, buildings and technologies
 - Personal names and traits for units
