@@ -1316,7 +1316,8 @@ DefineUnitType("unit-stairs", { Name = _("Stairs"),
 	Sounds = {} }
 )
 
-DefineUnitType("unit-door", { Name = _("Door"),
+DefineUnitType("unit-door", {
+	Name = _("Door"),
 	Image = {"file", "tilesets/dungeon/neutral/decorations/door_left.png", "size", {32, 32}},
 	Animations = "animations-door", Icon = "icon-door",
 	NeutralMinimapColor = {128, 128, 0},
@@ -1344,9 +1345,12 @@ DefineUnitType("unit-door", { Name = _("Door"),
 	},
 	Sounds = {
 		"selected", "click",
-		"dead", "building-destroyed"} } )
+		"dead", "building-destroyed"
+	}
+})
 
-DefineUnitType("unit-shelf", { Name = "Shelf",
+DefineUnitType("unit-shelf", {
+	Name = "Shelf",
 	Image = {"file", "neutral/decorations/shelf.png", "size", {32, 32}},
 	Animations = "animations-decoration", Icon = "icon-shelf",
 	Speed = 0,

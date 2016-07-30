@@ -103,5 +103,11 @@ DefineCharacter("Attila", { -- Source: Norman Davies, "Vanished Kingdoms", 2012,
 	DeathYear = 453 -- died
 })
 
+DefineCharacter("Tutu", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 86.
+	Name = "Tutu", -- a sphinx from Egyptian mythology; the same as the Greek "Titoés"
+	Gender = "female",
+	Type = "unit-yale" -- change this later
+})
+
 -- load the unique animals
 Load("scripts/characters_fauna.lua")
