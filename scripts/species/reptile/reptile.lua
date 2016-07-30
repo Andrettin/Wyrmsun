@@ -404,5 +404,13 @@ DefineSpecies("hydra", {
 	ChildUpgrade = "upgrade-child"
 })
 
+DefineSpecies("saurian", { -- from Wesnoth
+	Name = "Saurian",
+	Species = "sapiens",
+--	Homeworld = ?
+	Sapient = true
+	-- sapient species evolved from dinosaurs
+})
+
 Load("scripts/species/reptile/testudine.lua")
 Load("scripts/species/reptile/draconid.lua") -- mythical dragons and dragon-like creatures

@@ -105,16 +105,6 @@ DefineSpecies("green-dragon", {
 	ChildUpgrade = "upgrade-wyrm-child"
 })
 
-DefineSpecies("kobold", {
-	Name = "Kobold",
---	Family = "draconidae",
-	Species = "sapiens",
-	Homeworld = "Nidavellir",
-	EvolvesFrom = {"tyrannosaurus-rex"}, -- seems sensible, given how the Tyrannosaurus rex has dragon-like features, so it could be an ancestor to mythical dragons
-	Sapient = true
-	-- Kobolds believe that they are descendants of wyrms, but in truth they share a common ancestor
-})
-
 DefineSpecies("red-dragon", {
 	Name = "Red Dragon",
 	Genus = "draco",
@@ -168,3 +158,12 @@ DefineSpecies("wyvern", {
 	ChildUpgrade = "upgrade-child"
 })
 
+DefineSpecies("kobold", {
+	Name = "Kobold",
+--	Family = "draconidae",
+	Species = "sapiens",
+	Homeworld = "Nidavellir",
+	EvolvesFrom = {"tyrannosaurus-rex"}, -- seems sensible, given how the Tyrannosaurus rex has dragon-like features, so it could be an ancestor to mythical dragons
+	Sapient = true
+	-- Kobolds believe that they are descendants of wyrms, but in truth they share a common ancestor
+})

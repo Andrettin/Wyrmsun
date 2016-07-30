@@ -25,13 +25,13 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineLanguageWord("Ankh", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 67, 71.
+DefineLanguageWord("Ankh", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 67, 71, 76.
 	Language = "egyptian",
 	Type = "noun",
 	Meanings = {"Winged Cross", "Life"}
 })
 
-DefineLanguageWord("At", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 454.
+DefineLanguageWord("At", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 54.
 	Language = "egyptian",
 	Type = "noun",
 	Meanings = {"Instant", "Sudden Attack", "Power"}
@@ -103,6 +103,12 @@ DefineLanguageWord("Ir", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1
 	Meanings = {"Make"}
 })
 
+DefineLanguageWord("Isi", { -- male personal name; Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 81.
+	Language = "egyptian",
+	Type = "noun",
+	Meanings = {}
+})
+
 DefineLanguageWord("Iuf", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 61.
 	Language = "egyptian",
 	Type = "noun",
@@ -151,10 +157,10 @@ DefineLanguageWord("Sekhem", { -- Source: Claude Traunecker, "Os Deuses do Egito
 	Meanings = {"Force"} -- apparently
 })
 
-DefineLanguageWord("Uas", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 67.
+DefineLanguageWord("Uas", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 67, 76.
 	Language = "egyptian",
 	Type = "noun",
-	Meanings = {"Scepter"}
+	Meanings = {"Scepter", "Order"}
 })
 
 DefineLanguageWord("Uasi", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 68.

@@ -108,6 +108,7 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed issue which caused unit individual upgrades to not be saved properly in saved games.
 - Added Goblin Transport ship (graphics by Jinn).
 - Goblin Gliders are now mechanical units.
+- Dwarven Pathfinders can now upgrade to Gryphon Riders when leveling up.
 
 * Upgrades
 - Added goblin Broad Sword and Long Sword upgrades (icons by Jinn).

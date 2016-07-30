@@ -498,6 +498,27 @@ DefineButton( { Pos = 1, Level = 1, Icon = "icon-dwarven-explorer-gray-hair",
 	ForUnit = {"unit-dwarven-pathfinder"}
 } )
 
+DefineButton( { Pos = 2, Level = 1, Icon = "icon-dwarven-gryphon-rider-red-hair",
+	Action = "experience-upgrade-to", Value = "unit-dwarven-gryphon-rider",
+	Allowed = "check-unit-variable", AllowArg = {"Variation", "Value", "==", "0"},
+	Key = "g", Hint = _("Upgrade to ~!Gryphon Rider"), Popup = "popup-unit",
+	ForUnit = {"unit-dwarven-pathfinder"}
+} )
+
+DefineButton( { Pos = 2, Level = 1, Icon = "icon-dwarven-gryphon-rider-brown-hair",
+	Action = "experience-upgrade-to", Value = "unit-dwarven-gryphon-rider",
+	Allowed = "check-unit-variable", AllowArg = {"Variation", "Value", "==", "1"},
+	Key = "g", Hint = _("Upgrade to ~!Gryphon Rider"), Popup = "popup-unit",
+	ForUnit = {"unit-dwarven-pathfinder"}
+} )
+
+DefineButton( { Pos = 2, Level = 1, Icon = "icon-dwarven-gryphon-rider",
+	Action = "experience-upgrade-to", Value = "unit-dwarven-gryphon-rider",
+	Allowed = "check-unit-variable", AllowArg = {"Variation", "Value", "==", "2"},
+	Key = "g", Hint = _("Upgrade to ~!Gryphon Rider"), Popup = "popup-unit",
+	ForUnit = {"unit-dwarven-pathfinder"}
+} )
+
 DefineButton( { Pos = 2, Level = 0, Icon = "icon-dwarven-stronghold",
 	Action = "upgrade-to", Value = "unit-dwarven-stronghold",
 	Allowed = "check-upgrade-to",
