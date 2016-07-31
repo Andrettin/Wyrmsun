@@ -231,6 +231,7 @@ DefineSpecies("unicorn", {
 	Name = "Unicorn",
 	Genus = "unicornis",
 	Homeworld = "Alfheim",
+	Environments = {"fairlimbed-forest"},
 	EvolvesFrom = {"anchitherium-cursor", "hipparion-primigenium", "merychippus", "nannippus", "parahippus", "pliohippus"}, -- earlier equids
 	Era = "holocene",
 	ChildUpgrade = "upgrade-child"

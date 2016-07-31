@@ -595,6 +595,59 @@ DefineUnitType("unit-horse", {
 	}
 } )
 
+DefineUnitType("unit-unicorn", {
+	Name = "Unicorn",
+	Parent = "unit-template-fauna-unit",
+	Species = "unicorn",
+	Class = "grazer",
+	Description = _("Unicorns inhabit the woods of Alfheim, frequently being used by elves as mounts."),
+	Image = {"file", "neutral/units/unicorn.png", "size", {72, 72}},
+	Animations = "animations-yale", Icon = "icon-unicorn",
+	Strength = 20,
+	Dexterity = 17,
+	Intelligence = 2, -- same as a horse
+	Charisma = 6, -- same as a horse
+	Speed = 13,
+	HitPoints = 45, -- more resilient than a horse, +15 hit points
+	TileSize = {1, 1}, BoxSize = {31, 31},
+	SightRange = 4,
+	BasicDamage = 4, Missile = "missile-none",
+	MaxAttackRange = 1,
+	Accuracy = 12, -- more dextrous than a horse
+	Evasion = 12, -- more dextrous than a horse
+	Priority = 37,
+	Points = 25,
+	Demand = 1,
+	Type = "land",
+	RightMouseAction = "move",
+	CanAttack = true,
+	CanTargetLand = true,
+	RandomMovementProbability = 1,
+	BoardSize = 100, -- to prevent this unit from being loaded into transporters
+	RandomMovementDistance = 6,
+	Flesh = true,
+	Herbivore = true,
+	Excrement = "unit-yale-excrement",
+	PiercingDamage = true,
+	Sounds = {
+		"selected", "horse-selected",
+		"acknowledge", "horse-idle",
+		"attack", "horse-attack",
+		"idle", "horse-idle",
+		"ready", "horse-idle",
+--		"help", "critter-help",
+		"dead", "horse-dead",
+		"hit", "bite-attack",
+		"miss", "attack-miss",
+		"step", "step-dirt",
+		"step-dirt", "step-dirt",
+		"step-gravel", "step-gravel",
+		"step-mud", "step-mud",
+		"step-stone", "step-stone",
+		"step-grass", "step-leaves"
+	}
+} )
+
 DefineUnitType("unit-yale", {
 	Name = "Yale",
 	Parent = "unit-template-fauna-unit",
