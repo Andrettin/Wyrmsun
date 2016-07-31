@@ -244,7 +244,8 @@ DefineModifier("upgrade-dwarven-masonry",
 	{"apply-to", "unit-dwarven-town-hall"}, {"apply-to", "unit-dwarven-stronghold"},
 	{"apply-to", "unit-dwarven-mushroom-farm"}, {"apply-to", "unit-dwarven-barracks"},
 	{"apply-to", "unit-dwarven-lumber-mill"}, {"apply-to", "unit-dwarven-smithy"}, {"apply-to", "unit-brising-smithy"},
-	{"apply-to", "unit-dwarven-yale-pen"}, {"apply-to", "unit-dwarven-temple"},
+	{"apply-to", "unit-dwarven-yale-pen"}, {"apply-to", "unit-joruvellir-yale-pen"},
+	{"apply-to", "unit-dwarven-temple"},
 	{"apply-to", "unit-dwarven-sentry-tower"}, {"apply-to", "unit-dwarven-guard-tower"},
 	{"apply-to", "unit-dwarven-dock"}
 )
@@ -259,7 +260,8 @@ DefineModifier("upgrade-dwarven-runewriting",
 	{"apply-to", "unit-dwarven-town-hall"}, {"apply-to", "unit-dwarven-stronghold"},
 	{"apply-to", "unit-dwarven-mushroom-farm"}, {"apply-to", "unit-dwarven-barracks"},
 	{"apply-to", "unit-dwarven-lumber-mill"}, {"apply-to", "unit-dwarven-smithy"}, {"apply-to", "unit-brising-smithy"},
---	{"apply-to", "unit-dwarven-yale-pen"}, {"apply-to", "unit-dwarven-temple"},
+--	{"apply-to", "unit-dwarven-yale-pen"}, {"apply-to", "unit-joruvellir-yale-pen"},
+--	{"apply-to", "unit-dwarven-temple"},
 	{"apply-to", "unit-dwarven-sentry-tower"}, {"apply-to", "unit-dwarven-guard-tower"},
 	{"apply-to", "unit-dwarven-dock"}
 )
@@ -331,11 +333,15 @@ DefineDependency("unit-dwarven-ballista",
 )
 
 DefineDependency("unit-dwarven-yale-pen",
-	{"unit-dwarven-lumber-mill"}
+	{"unit-dwarven-lumber-mill", "upgrade-joruvellir-faction", 0}
+)
+
+DefineDependency("unit-joruvellir-yale-pen",
+	{"unit-dwarven-lumber-mill", "upgrade-joruvellir-faction"}
 )
 
 DefineDependency("unit-dwarven-yale-rider",
-	{"unit-dwarven-smithy", "unit-dwarven-yale-pen"}, "or", {"unit-brising-smithy", "unit-dwarven-yale-pen"}
+	{"unit-dwarven-smithy", "unit-dwarven-yale-pen"}, "or", {"unit-brising-smithy", "unit-dwarven-yale-pen"}, "or", {"unit-dwarven-smithy", "unit-joruvellir-yale-pen"}
 )
 
 DefineDependency("unit-dwarven-temple",

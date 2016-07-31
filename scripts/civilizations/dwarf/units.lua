@@ -1100,7 +1100,8 @@ DefineUnitType("unit-dwarven-smithy", { Name = _("Smithy"),
 	}
 } )
 
-DefineUnitType("unit-dwarven-yale-pen", { Name = _("Yale Pen"),
+DefineUnitType("unit-dwarven-yale-pen", {
+	Name = _("Yale Pen"),
 	Parent = "unit-template-stables",
 	Civilization = "dwarf",
 	Description = _("Although the underground dwarves shun mounted combat, their wild hill-dwelling kin cherish it as a noble tradition. The mobility given by the yale is crucial for traversing their homelands' hills and peaks. Dwarves have been breeding yales since time immemorial, the animals being valuable not only as mounts, but also as beasts of carry."),
@@ -1189,8 +1190,10 @@ DefineUnitType("unit-dwarven-dock", { Name = _("Dock"),
 	}
 } )
 
+Load("scripts/civilizations/dwarf/units_joruvellir.lua")
+
 DefineUnitType("unit-dwarven-miner", { -- this is here because the buildings need to be defined before being assigned to the miner's "Trains" array
-	Trains = {"unit-dwarven-town-hall", "unit-dwarven-mushroom-farm", "unit-dwarven-barracks", "unit-dwarven-lumber-mill", "unit-dwarven-smithy", "unit-dwarven-yale-pen", "unit-dwarven-temple", "unit-dwarven-sentry-tower", "unit-dwarven-dock", "unit-gold-mine", "unit-silver-mine", "unit-copper-mine"}
+	Trains = {"unit-dwarven-town-hall", "unit-dwarven-mushroom-farm", "unit-dwarven-barracks", "unit-dwarven-lumber-mill", "unit-dwarven-smithy", "unit-dwarven-yale-pen", "unit-joruvellir-yale-pen", "unit-dwarven-temple", "unit-dwarven-sentry-tower", "unit-dwarven-dock", "unit-gold-mine", "unit-silver-mine", "unit-copper-mine"}
 } )
 
 Load("scripts/civilizations/dwarf/units_brising.lua")

@@ -117,6 +117,10 @@ DefineModifier("upgrade-joruvellir-faction",
 	{"apply-to", "unit-dwarven-scout"}, {"apply-to", "unit-dwarven-pathfinder"}, {"apply-to", "unit-dwarven-explorer"}
 )
 
+DefineModifier("upgrade-joruvellir-faction",
+	{"apply-to", "unit-dwarven-yale-pen"}, {"convert-to", "unit-joruvellir-yale-pen"}
+)
+
 DefineModifier("upgrade-kal-kartha-faction",
 	{"BasicDamage", 3},
 	{"HitPoints", -5},

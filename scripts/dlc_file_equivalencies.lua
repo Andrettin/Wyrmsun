@@ -63,4 +63,7 @@ SetDLCFileEquivalency("dlcs/frankish_faction_flair/graphics/ui/filler_bottom.png
 SetDLCFileEquivalency("dlcs/frankish_faction_flair/graphics/ui/infopanel.png", "germanic/ui/infopanel.png")
 SetDLCFileEquivalency("dlcs/frankish_faction_flair/graphics/units/frank_horseman_shield.png", "teuton/units/ritter_shield.png")
 
+SetDLCFileEquivalency("dlcs/joruvellir_faction_flair/graphics/icons/joruvellir_yale_pen.png", "dwarf/icons/yale_pen.png")
 SetDLCFileEquivalency("dlcs/joruvellir_faction_flair/graphics/icons/joruvellir_shield.png", "dwarf/icons/shield_1.png")
+SetDLCFileEquivalency("dlcs/joruvellir_faction_flair/graphics/buildings/joruvellir_yale_pen.png", "dwarf/buildings/yale_pen.png")
+SetDLCFileEquivalency("dlcs/joruvellir_faction_flair/graphics/buildings/joruvellir_yale_pen_shadow.png", "dwarf/buildings/yale_pen_shadow.png")
