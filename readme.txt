@@ -75,6 +75,7 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed issue which caused certain custom units to be transformed into pre-existing ones when the map starts.
 - Fixed issue which caused the interface for setting graphics for custom item types to not work.
 - A unit type's drops may now be set through the editor.
+- Fixed crash which happened when trying to place a custom unit based on the "unit-template-sapient-unit" template.
 
 * Factions
 - Added Du'urdin gnomish polity.

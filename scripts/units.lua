@@ -165,6 +165,7 @@ Load("scripts/anim.lua")
 --	NOTE: Save can generate this table.
 --
 DefineUnitType("unit-template-unit", { Name = _("Unit"),
+	TileSize = {1, 1}, BoxSize = {31, 31}, -- default tile and box size
 	Animations = "animations-melee-unit-new",
 	DrawLevel = 40,
 	SelectableByRectangle = true,
@@ -173,6 +174,7 @@ DefineUnitType("unit-template-unit", { Name = _("Unit"),
 })
 
 DefineUnitType("unit-template-building", { Name = _("Building"),
+	TileSize = {2, 2}, BoxSize = {63, 63}, -- default tile and box size
 	Animations = "animations-building",
 	DrawLevel = 40,
 	Building = true,
