@@ -107,13 +107,13 @@ DefineDeity("bes", { -- Source: Warren R. Dawson, "Pygmies and Dwarfs in Ancient
 --	Description = "The god Bes has a dwarf-like appearance. The deity wards childbirths, bestows luck and prosperity on families and protects against malignant beings. Having taken an interest in the dwarves of Nidavellir, Bes sought to made contact with them and establish a priesthood in the world, and became specially popular among the inhabitants of Joruvellir. On Earth he is worshiped by Egyptians."
 })
 
-DefineDeity("geb", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 30.
+DefineDeity("geb", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 30, 91.
 	Name = "Geb",
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "male",
 	Domains = {"earth"},
---	Description = "Geb is a god of earth and fate."
+--	Description = "Geb is a god of earth and fate. Geb is the son of Shu."
 })
 
 DefineDeity("hathor", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 13, 29, 61, 68, 74.
@@ -305,7 +305,7 @@ DefineDeity("neith", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992,
 --	Description = "Neith is a goddess famed for her arrows."
 })
 
-DefineDeity("nekhbet", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 42, 78, 86.
+DefineDeity("nekhbet", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 42, 78, 86, 91.
 	Name = "Nekhbet",
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
@@ -323,13 +323,13 @@ DefineDeity("neper", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992,
 --	Description = "Neper is a god who takes the shape of a grain."
 })
 
-DefineDeity("nut", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 47, 50.
+DefineDeity("nut", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 47, 50, 91.
 	Name = "Nut",
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "female",
 	Domains = {"air"},
---	Description = "Nut is a sky goddess who takes the shape of a cow."
+--	Description = "Nut is a sky goddess who takes the shape of a cow. Nut is the daughter of Shu."
 })
 
 DefineDeity("osiris", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 51, 61, 66, 68.
@@ -396,13 +396,13 @@ DefineDeity("shesmu", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992
 --	Description = "Shesmu is a god of wine-pressing, olive oil and perfume."
 })
 
-DefineDeity("shu", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 48.
+DefineDeity("shu", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 48, 91.
 	Name = "Shu",
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "male",
-	Domains = {"air"},
---	Description = "Shu is a deity associated with the connection between earth and sky."
+	Domains = {},
+--	Description = "Shu is a deity associated with the space between earth and sky. Shu is the father of Nut and Geb."
 })
 
 DefineDeity("sia", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 44, 78.

@@ -157,6 +157,12 @@ DefineLanguageWord("Sekhem", { -- Source: Claude Traunecker, "Os Deuses do Egito
 	Meanings = {"Force"} -- apparently
 })
 
+DefineLanguageWord("Seti", { -- male personal name; Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 90.
+	Language = "egyptian",
+	Type = "noun",
+	Meanings = {}
+})
+
 DefineLanguageWord("Uas", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 67, 76.
 	Language = "egyptian",
 	Type = "noun",

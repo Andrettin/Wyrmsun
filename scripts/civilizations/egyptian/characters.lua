@@ -37,3 +37,16 @@ DefineCharacter("Isi", { -- Source: Claude Traunecker, "Os Deuses do Egito", 199
 --		"governor", -2460, 0, "Edfu" -- governor of the nome of Edfu c. 2460 BC
 	}
 })
+
+DefineCharacter("Seti", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 90.
+	Name = "Seti", -- Seti I of Egypt
+	NameElements = {"word", "egyptian", "noun", "Seti"},
+	Gender = "male",
+	Type = "unit-germanic-warrior",
+	Civilization = "egyptian",
+	Year = -1303, -- reign began
+	DeathYear = -1290, -- reign end
+	HistoricalTitles = {
+--		"head-of-state", -2460, 0, "Edfu" -- king of Egypt 1303-1290 BC
+	}
+})
