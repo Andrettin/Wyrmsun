@@ -55,6 +55,12 @@ DefineUpgrade("upgrade-work-book-of-doors", { -- Source: Claude Traunecker, "Os 
 	Civilization = "egyptian"
 })
 
+DefineUpgrade("upgrade-work-book-of-the-earth", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 93.
+	Name = _("Book of the Earth"),
+	Work = "book",
+	Civilization = "egyptian"
+})
+
 DefineUpgrade("upgrade-work-book-of-fayum", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 18.
 	Name = _("Book of Fayum"),
 	Work = "book",
@@ -162,6 +168,10 @@ DefineModifier("upgrade-work-book-of-the-dead",
 )
 
 DefineModifier("upgrade-work-book-of-doors",
+	{"KnowledgeMagic", 3}
+)
+
+DefineModifier("upgrade-work-book-of-the-earth",
 	{"KnowledgeMagic", 3}
 )
 

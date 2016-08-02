@@ -49,6 +49,12 @@ DefineLanguageWord("Ba", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1
 	Meanings = {"Soul"}
 })
 
+DefineLanguageWord("Ben", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 98.
+	Language = "egyptian",
+	Type = "verb",
+	Meanings = {"Swell", "Be Full", "Be Fat"}
+})
+
 DefineLanguageWord("Djed", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 66.
 	Language = "egyptian",
 	Type = "adjective",
@@ -103,6 +109,12 @@ DefineLanguageWord("Ir", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1
 	Meanings = {"Make"}
 })
 
+DefineLanguageWord("Irto", { -- name of a serpent in Egyptian mythology; Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 101.
+	Language = "egyptian",
+	Type = "noun",
+	Meanings = {"One Who Made the Earth"}
+})
+
 DefineLanguageWord("Isi", { -- male personal name; Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 81.
 	Language = "egyptian",
 	Type = "noun",
@@ -143,6 +155,12 @@ DefineLanguageWord("Ntr", { -- Source: Claude Traunecker, "Os Deuses do Egito", 
 	Language = "egyptian",
 	Type = "noun",
 	Meanings = {"God"}
+})
+
+DefineLanguageWord("Nun", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 92.
+	Language = "egyptian",
+	Type = "noun",
+	Meanings = {"Liquid Inertia", "Primordial Waters"}
 })
 
 DefineLanguageWord("Ren", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 36.

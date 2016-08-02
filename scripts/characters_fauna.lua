@@ -324,6 +324,16 @@ DefineCharacter("Ratatoskr", { -- Source: Richard Cleasby and Gudbrand Vigfusson
 	Quote = "\"Ratatosk is the squirrel who there shall run\nOn the ash-tree Yggdrasil\"\n- Grimnismol"
 })
 
+-- Serpents
+
+--[[
+DefineCharacter("Irto", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 101.
+	Name = "Irto", -- serpent which appears in Egyptian mythology
+	NameElements = {"word", "egyptian", "noun", "Irto"},
+	Type = "unit-serpent"
+})
+--]]
+
 -- Wyrms
 
 DefineCharacter("Goin", { -- Wyrm/dragon in Norse mythology

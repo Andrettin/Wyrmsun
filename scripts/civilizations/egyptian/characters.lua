@@ -49,4 +49,5 @@ DefineCharacter("Seti", { -- Source: Claude Traunecker, "Os Deuses do Egito", 19
 	HistoricalTitles = {
 --		"head-of-state", -2460, 0, "Edfu" -- king of Egypt 1303-1290 BC
 	}
+	-- was buried in Abydos
 })
