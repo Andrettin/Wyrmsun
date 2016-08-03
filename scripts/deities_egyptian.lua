@@ -25,14 +25,24 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineDeity("ra", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 41.
+DefineDeity("aton", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 113-114.
+	Name = "Aton",
+	Civilizations = {"egyptian"},
+	Religions = {"paganism"}, -- actually a form of monotheism in which the existence of other deities was sometimes accepted as well (was it henotheism?)
+	Gender = "male",
+	Domains = {"fire"},
+	Major = true,
+--	Description = "Aton is a solar deity, believed by its followers to be the only god in existence."
+})
+
+DefineDeity("ra", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 41, 104.
 	Name = "Ra",
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "male",
 	Domains = {"fire"},
 	Major = true,
---	Description = "Ra is a mighty sun god."
+--	Description = "Ra is a mighty sun god. He is the son of Neith."
 })
 
 DefineDeity("akhsu", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 85.
@@ -325,13 +335,14 @@ DefineDeity("neftis", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992
 --	Description = "Neftis is the daughter of Geb and Nut."
 })
 
-DefineDeity("neith", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 40.
+DefineDeity("neith", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 40, 104.
 	Name = "Neith",
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "female",
-	Domains = {"archery"},
---	Description = "Neith is a goddess famed for her arrows."
+	HomePlane = "Nun",
+	Domains = {"archery", "water"},
+--	Description = "Neith is a goddess famed for her arrows. She takes the form of a cow or a fish. She is the mother of Ra."
 })
 
 DefineDeity("nekhbet", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 42, 78, 86, 91.
@@ -371,14 +382,14 @@ DefineDeity("nut", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p
 --	Description = "Nut is a sky goddess who takes the shape of a cow. Nut is the daughter of Shu and Tefnut."
 })
 
-DefineDeity("osiris", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 51, 61, 66, 68, 96.
+DefineDeity("osiris", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 51, 61, 66, 68, 96, 109-110.
 	Name = "Osiris",
 	Civilizations = {"egyptian"},
 	Religions = {"paganism"},
 	Gender = "male",
 	HomePlane = "Duat",
 	Domains = {"death", "life"},
---	Description = "Osiris is a god who rules over the underworld plane of Duat. He is a deity both of death and fertility, and has the appearance of a mummy. Osiris uses a heqa (a sheepherd's staff) and a nekhekh (a lash). He is the son of Geb and Nut."
+--	Description = "Osiris is a god who rules over the underworld plane of Duat. He is a deity royalty, death and fertility, and has the appearance of a mummy. Osiris uses a heqa (a sheepherd's staff) and a nekhekh (a lash). He is the son of Geb and Nut. Osiris was murdered by his brother Seth, but came back to life thanks to the magic of Isis and Neftis."
 })
 
 DefineDeity("pakhet", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 44.

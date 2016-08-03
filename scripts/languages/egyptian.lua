@@ -25,10 +25,22 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
+DefineLanguageWord("Amenofis", { -- male personal name; Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 112.
+	Language = "egyptian",
+	Type = "noun",
+	Meanings = {}
+})
+
 DefineLanguageWord("Ankh", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 67, 71, 76.
 	Language = "egyptian",
 	Type = "noun",
 	Meanings = {"Winged Cross", "Life"}
+})
+
+DefineLanguageWord("Apofis", { -- name of a serpent in Egyptian mythology; Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 104.
+	Language = "egyptian",
+	Type = "noun",
+	Meanings = {}
 })
 
 DefineLanguageWord("At", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 54.
@@ -137,6 +149,12 @@ DefineLanguageWord("Kau", { -- Source: Claude Traunecker, "Os Deuses do Egito", 
 	Language = "egyptian",
 	Type = "noun", -- correct?
 	Meanings = {"Feeding"} -- source gives the Portuguese "alimentação" as the meaning
+})
+
+DefineLanguageWord("Kematef", { -- name of a serpent in Egyptian mythology; Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 106.
+	Language = "egyptian",
+	Type = "noun",
+	Meanings = {"One Who Ended Its Time"}
 })
 
 DefineLanguageWord("Nekhekh", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 68, 71.

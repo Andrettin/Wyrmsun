@@ -38,6 +38,20 @@ DefineCharacter("Isi", { -- Source: Claude Traunecker, "Os Deuses do Egito", 199
 	}
 })
 
+DefineCharacter("Amenofis", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 112-114.
+	Name = "Amenofis", -- Amenofis IV of Egypt; took the name of Akhenaton in the sixth year of his reign
+	NameElements = {"word", "egyptian", "noun", "Amenofis"},
+	Gender = "male",
+	Type = "unit-germanic-warrior",
+	Civilization = "egyptian",
+	Year = -1352, -- reign began
+	DeathYear = -1338, -- reign end
+	Trait = "upgrade-pious", -- described as mystic and authoritarian
+	HistoricalTitles = {
+--		"head-of-state", -1352, -1338, "egyptian", "Egypt" -- king of Egypt 1352-1338 BC
+	}
+})
+
 DefineCharacter("Seti", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 90.
 	Name = "Seti", -- Seti I of Egypt
 	NameElements = {"word", "egyptian", "noun", "Seti"},
@@ -47,7 +61,7 @@ DefineCharacter("Seti", { -- Source: Claude Traunecker, "Os Deuses do Egito", 19
 	Year = -1303, -- reign began
 	DeathYear = -1290, -- reign end
 	HistoricalTitles = {
---		"head-of-state", -2460, 0, "Edfu" -- king of Egypt 1303-1290 BC
+--		"head-of-state", -1303, -1290, "egyptian", "Egypt" -- king of Egypt 1303-1290 BC
 	}
 	-- was buried in Abydos
 })

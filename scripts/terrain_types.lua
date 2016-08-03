@@ -26,7 +26,8 @@
 --
 
 DefineTerrainType("dirt", {
-	Name = "Dirt"
+	Name = "Dirt",
+	SolidGraphics = {"terrain/dirt/dirt_1.png", "terrain/dirt/dirt_2.png", "terrain/dirt/dirt_3.png"}
 })
 
 DefineTerrainType("mud", {
@@ -52,7 +53,8 @@ DefineTerrainType("dry-mud", {
 DefineTerrainType("grass", {
 	Name = "Grass",
 	Buildable = true,
-	BorderTerrains = {"dirt"}
+	BorderTerrains = {"dirt"},
+	SolidGraphics = {"terrain/grass/grass_1.png", "terrain/grass/grass_2.png", "terrain/grass/grass_3.png"}
 })
 
 DefineTerrainType("shallow-water", {
@@ -75,35 +77,58 @@ DefineTerrainType("rug", {
 DefineTerrainType("dungeon-wall", {
 	Name = "Dungeon Wall",
 	Buildable = true,
-	BaseTerrain = "floor"
+	DefaultBaseTerrain = "floor",
+	Overlay = true
 })
 
 DefineTerrainType("cave-wall", {
 	Name = "Cave Wall",
-	BaseTerrain = "rockbound-cave-floor"
+	DefaultBaseTerrain = "rockbound-cave-floor",
+	Overlay = true
 })
 
 DefineTerrainType("rock", {
 	Name = "Rock",
-	BaseTerrain = "dirt"
+	DefaultBaseTerrain = "dirt",
+	Overlay = true
 })
 
 DefineTerrainType("swamp-rock", {
 	Name = "Rock (Swamp)",
-	BaseTerrain = "mud"
+	DefaultBaseTerrain = "mud",
+	Overlay = true,
+	SolidGraphics = {"terrain/rock/rock_1.png", "terrain/rock/rock_2.png", "terrain/rock/rock_3.png"}
 })
 
 DefineTerrainType("fairlimbed-tree", {
 	Name = "Fairlimbed Tree",
-	BaseTerrain = "grass"
+	DefaultBaseTerrain = "grass",
+	Overlay = true
 })
 
 DefineTerrainType("flamefood-tree", {
 	Name = "Flamefood Tree",
-	BaseTerrain = "dry-mud"
+	DefaultBaseTerrain = "dry-mud",
+	Overlay = true
 })
 
 DefineTerrainType("pine-tree", {
 	Name = "Pine Tree",
-	BaseTerrain = "grass"
+	DefaultBaseTerrain = "grass",
+	Overlay = true,
+	SolidGraphics = {"terrain/pine_tree/pine_tree.png"},
+	TransitionGraphics = {
+		"any", "north", "terrain/pine_tree/pine_tree_north.png",
+		"any", "south", "terrain/pine_tree/pine_tree_south.png",
+		"any", "west", "terrain/pine_tree/pine_tree_west.png",
+		"any", "east", "terrain/pine_tree/pine_tree_east.png",
+		"any", "northwest-outer", "terrain/pine_tree/pine_tree_northwest_outer.png",
+		"any", "northeast-outer", "terrain/pine_tree/pine_tree_northeast_outer.png",
+		"any", "southwest-outer", "terrain/pine_tree/pine_tree_southwest_outer.png",
+		"any", "southeast-outer", "terrain/pine_tree/pine_tree_southeast_outer.png",
+		"any", "northwest-inner", "terrain/pine_tree/pine_tree_northwest_inner.png",
+		"any", "northeast-inner", "terrain/pine_tree/pine_tree_northeast_inner.png",
+		"any", "southwest-inner", "terrain/pine_tree/pine_tree_southwest_inner.png",
+		"any", "southeast-inner", "terrain/pine_tree/pine_tree_southeast_inner.png"
+	}
 })

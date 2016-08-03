@@ -327,9 +327,21 @@ DefineCharacter("Ratatoskr", { -- Source: Richard Cleasby and Gudbrand Vigfusson
 -- Serpents
 
 --[[
-DefineCharacter("Irto", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 101.
-	Name = "Irto", -- serpent which appears in Egyptian mythology
+DefineCharacter("Apofis", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 104, 107.
+	Name = "Apofis", -- serpent which appears in Egyptian mythology, which represented the utter lack of order
+	NameElements = {"word", "egyptian", "noun", "Apofis"},
+	Type = "unit-serpent"
+})
+
+DefineCharacter("Irto", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, pp. 101, 103-104.
+	Name = "Irto", -- serpent which appears in Egyptian mythology, having created the earth
 	NameElements = {"word", "egyptian", "noun", "Irto"},
+	Type = "unit-serpent"
+})
+
+DefineCharacter("Kematef", { -- Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 104.
+	Name = "Kematef", -- serpent which appears in Egyptian mythology
+	NameElements = {"word", "egyptian", "noun", "Kematef"},
 	Type = "unit-serpent"
 })
 --]]

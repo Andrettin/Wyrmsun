@@ -80,3 +80,5 @@ DefineWorldMapTile({551, 172}, {
 		"latin", "Cyrene" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
 })
+
+-- Akhetaton was founded by Amenofis IV (Akhenaton) of Egypt in the sixth year of his reign (which began in 1352 BC), in the location of Tell el-Amarna, being dedicated to the god Aton; Source: Claude Traunecker, "Os Deuses do Egito", 1992, p. 113.
