@@ -4142,7 +4142,7 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 					SecondWhileCount = SecondWhileCount + 1
 				end
 				
-				GenerateDarkLand(1, SyncRand(6), min_x, max_x, min_y, max_y)
+--				GenerateDarkLand(1, SyncRand(6), min_x, max_x, min_y, max_y)
 			elseif (SecondRandomNumber < 15) then -- scholar's room
 				if (hostile_dungeon_player_civilization == "gnome") then -- only gnomes have priests for now
 					SecondRandomX = 0
