@@ -34,6 +34,7 @@ DefineTerrainType("dirt", {
 DefineTerrainType("mud", {
 	Name = "Mud",
 	Flags = {"land", "no-building", "mud"},
+	BorderTerrains = {"dirt"},
 	SolidGraphics = {"terrain/mud/mud_1.png", "terrain/mud/mud_2.png", "terrain/mud/mud_3.png"}
 })
 
@@ -68,7 +69,7 @@ DefineTerrainType("grass", {
 DefineTerrainType("shallow-water", {
 	Name = "Shallow Water",
 	Flags = {"water"},
-	BorderTerrains = {"dirt", "mud", "rockbound-cave-floor"}
+	BorderTerrains = {"dirt", "mud", "rockbound-cave-floor", "cave-floor"}
 })
 
 DefineTerrainType("floor", {
@@ -88,28 +89,29 @@ DefineTerrainType("rug", {
 DefineTerrainType("dungeon-wall", {
 	Name = "Dungeon Wall",
 	Buildable = true,
-	DefaultBaseTerrain = "floor",
+	BaseTerrains = {"floor"},
 	Overlay = true,
 	Flags = {"land", "wall", "unpassable", "air-unpassable"}
 })
 
 DefineTerrainType("cave-wall", {
 	Name = "Cave Wall",
-	DefaultBaseTerrain = "rockbound-cave-floor",
+	BaseTerrains = {"rockbound-cave-floor"},
 	Overlay = true,
 	Flags = {"land", "rock", "unpassable", "air-unpassable"}
 })
 
 DefineTerrainType("rock", {
 	Name = "Rock",
-	DefaultBaseTerrain = "dirt",
+	BaseTerrains = {"dirt", "mud"},
 	Overlay = true,
-	Flags = {"land", "rock", "unpassable"}
+	Flags = {"land", "rock", "unpassable"},
+	SolidGraphics = {"terrain/rock/rock_1.png", "terrain/rock/rock_2.png", "terrain/rock/rock_3.png"}
 })
 
-DefineTerrainType("swamp-rock", {
-	Name = "Rock (Swamp)",
-	DefaultBaseTerrain = "mud",
+DefineTerrainType("rock-swamp", {
+	Name = "Rock",
+	BaseTerrains = {"mud"},
 	Overlay = true,
 	Flags = {"land", "rock", "unpassable"},
 	SolidGraphics = {"terrain/rock/rock_1.png", "terrain/rock/rock_2.png", "terrain/rock/rock_3.png"}
@@ -117,21 +119,21 @@ DefineTerrainType("swamp-rock", {
 
 DefineTerrainType("fairlimbed-tree", {
 	Name = "Fairlimbed Tree",
-	DefaultBaseTerrain = "grass",
+	BaseTerrains = {"grass"},
 	Overlay = true,
 	Flags = {"land", "forest", "unpassable"}
 })
 
 DefineTerrainType("flamefood-tree", {
 	Name = "Flamefood Tree",
-	DefaultBaseTerrain = "dry-mud",
+	BaseTerrains = {"dry-mud"},
 	Overlay = true,
 	Flags = {"land", "forest", "unpassable"}
 })
 
 DefineTerrainType("pine-tree", {
 	Name = "Pine Tree",
-	DefaultBaseTerrain = "grass",
+	BaseTerrains = {"grass"},
 	Overlay = true,
 	Flags = {"land", "forest", "unpassable"},
 	SolidGraphics = {"terrain/pine_tree/pine_tree.png"},

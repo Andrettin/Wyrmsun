@@ -54,9 +54,9 @@ DefineTileset("name", "Swamp",
     { 346, 347, 348, 346}},						-- 050
   "solid", { "unused",
     {}},								-- 060
-  "solid", { "tree", "land", "forest", "unpassable",
+  "solid", { "flamefood-tree", "land", "forest", "unpassable",
     { 125, 125, 125, 125}},						-- 070
-  "solid", { "rock", "image", "tilesets/swamp/terrain/rock.png", "land", "rock", "unpassable",
+  "solid", { "rock-swamp", "image", "tilesets/swamp/terrain/rock.png", "land", "rock", "unpassable",
     { 18, 21, 24, 18}},						-- 080
   "solid", { "unused",
     {}},								-- 090
@@ -123,7 +123,7 @@ DefineTileset("name", "Swamp",
     { 200, 200},							-- 3D0
     {},									-- 3E0
     {}},								-- 3F0
-  "mixed", { "rock", "mud", "land", "rock", "unpassable",
+  "mixed", { "rock-swamp", "mud", "land", "rock", "unpassable",
     { 35, 38, 35},							-- 400
     { 33, 36, 33},							-- 410
     { 34, 37, 40},							-- 420
@@ -174,7 +174,7 @@ DefineTileset("name", "Swamp",
     { 260, 260},							-- 6D0
     {},									-- 6E0
     {}},								-- 6F0
-  "mixed", { "tree", "dry-mud", "land", "forest", "unpassable",
+  "mixed", { "flamefood-tree", "dry-mud", "land", "forest", "unpassable",
     { 110, 110, 110},							-- 700
     { 102, 102, 102},							-- 710
     { 124, 136, 124},							-- 720

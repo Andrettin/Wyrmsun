@@ -26,6 +26,7 @@
 --
 
 function EventTriggers()
+--	Load("scripts/civilizations/germanic/triggers.lua")
 
 	-- Greebo's Shinies
 	-- based on elements from the Descending into Darkness scenario of the Under the Burning Suns campaign from Battle for Wesnoth

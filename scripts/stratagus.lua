@@ -409,7 +409,7 @@ function SinglePlayerTriggers()
 	end
 
 	-- for now events are limited to single player
-	if (not IsNetworkGame()) then
+	if (not IsNetworkGame() and GetCurrentQuest() == "" and GrandStrategy == false) then -- only in custom games
 		EventTriggers()
 	end
 
