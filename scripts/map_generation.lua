@@ -1553,7 +1553,7 @@ function CreateDecorations()
 					if (GetCurrentTileset() ~= "dungeon" and GetCurrentTileset() ~= "cave") then
 						unit = CreateUnit("unit-twigs", 15, {RandomX, RandomY})
 						Count = Count - 1
-					elseif (GetCurrentTileset() == "dungeon" and GetTileTerrainName(RandomX, RandomY) == "floor") then
+					elseif (GetCurrentTileset() == "dungeon" and GetTileTerrainName(RandomX, RandomY) == "floor" and GetTileTerrainMixedName(RandomX, RandomY) == "") then
 						unit = CreateUnit("unit-floor-decoration", 15, {RandomX, RandomY})
 						Count = Count - 1
 					end
