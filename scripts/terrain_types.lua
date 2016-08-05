@@ -151,6 +151,7 @@ DefineTerrainType("shallow-water", {
 	InnerBorderTerrains = {"dirt", "mud", "rockbound-cave-floor", "cave-floor"},
 	Graphics = "terrain/deep_water.png",
 	SolidTiles = {1},
+	SolidAnimationFrames = 5,
 	TransitionTiles = {
 		"any", "north", 24,
 		"any", "north", 26,
