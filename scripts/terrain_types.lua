@@ -35,7 +35,7 @@ DefineTerrainType("dirt", {
 DefineTerrainType("mud", {
 	Name = "Mud",
 	Flags = {"land", "no-building", "mud"},
-	BorderTerrains = {"dirt"},
+	InnerBorderTerrains = {"dirt"},
 --	SolidGraphics = {"terrain/mud/mud_1.png", "terrain/mud/mud_2.png", "terrain/mud/mud_3.png"}
 })
 
@@ -48,45 +48,49 @@ DefineTerrainType("cave-floor", {
 	Name = "Cave Floor",
 	Buildable = true,
 	Flags = {"land", "stone-floor"},
-	BorderTerrains = {"rockbound-cave-floor"}
+	OuterBorderTerrains = {"rockbound-cave-floor"}
 })
 
 DefineTerrainType("dry-mud", {
 	Name = "Dry Mud",
 	Buildable = true,
 	Flags = {"land", "mud"},
-	BorderTerrains = {"mud"},
+	OuterBorderTerrains = {"mud"},
 	Graphics = "terrain/dry_mud.png",
 	SolidTiles = {17, 20, 23},
-	TransitionTiles = {
-		"any", "north", 1,
-		"any", "north", 4,
-		"any", "north", 7,
-		"any", "south", 33,
-		"any", "south", 36,
-		"any", "south", 39,
-		"any", "west", 16,
-		"any", "west", 19,
-		"any", "west", 22,
-		"any", "east", 18,
-		"any", "east", 21,
-		"any", "east", 24,
-		"any", "northwest-outer", 0,
-		"any", "northwest-outer", 3,
-		"any", "northeast-outer", 2,
-		"any", "northeast-outer", 5,
-		"any", "southwest-outer", 32,
-		"any", "southwest-outer", 35,
-		"any", "southeast-outer", 34,
-		"any", "southeast-outer", 37,
-		"any", "northwest-inner", 48,
-		"any", "northwest-inner", 50,
-		"any", "northeast-inner", 49,
-		"any", "northeast-inner", 51,
-		"any", "southwest-inner", 64,
-		"any", "southwest-inner", 66,
-		"any", "southeast-inner", 65,
-		"any", "southeast-inner", 67
+	AdjacentTransitionTiles = {
+		"any", "north", 33,
+		"any", "north", 36,
+		"any", "north", 39,
+		"any", "south", 1,
+		"any", "south", 4,
+		"any", "south", 7,
+		"any", "west", 18,
+		"any", "west", 21,
+		"any", "west", 24,
+		"any", "east", 16,
+		"any", "east", 19,
+		"any", "east", 22,
+		"any", "northwest-outer", 65,
+		"any", "northwest-outer", 67,
+		"any", "northeast-outer", 64,
+		"any", "northeast-outer", 66,
+		"any", "southwest-outer", 49,
+		"any", "southwest-outer", 51,
+		"any", "southeast-outer", 48,
+		"any", "southeast-outer", 50,
+		"any", "northwest-inner", 34,
+		"any", "northwest-inner", 37,
+		"any", "northeast-inner", 32,
+		"any", "northeast-inner", 35,
+		"any", "southwest-inner", 2,
+		"any", "southwest-inner", 5,
+		"any", "southeast-inner", 0,
+		"any", "southeast-inner", 3,
+		"any", "northwest-southeast-inner", 80,
+		"any", "northwest-southeast-inner", 96,
+		"any", "northeast-southwest-inner", 81,
+		"any", "northeast-southwest-inner", 97
 	}
 })
 
@@ -94,67 +98,71 @@ DefineTerrainType("grass", {
 	Name = "Grass",
 	Buildable = true,
 	Flags = {"land", "grass"},
-	BorderTerrains = {"dirt"},
+	OuterBorderTerrains = {"dirt"},
 	Graphics = "terrain/grass.png",
 	SolidTiles = {1, 2, 3},
-	TransitionTiles = {
-		"any", "north", 28,
-		"any", "north", 30,
-		"any", "north", 32,
-		"any", "south", 22,
-		"any", "south", 24,
-		"any", "south", 26,
-		"any", "west", 29,
-		"any", "west", 31,
-		"any", "west", 33,
-		"any", "east", 21,
-		"any", "east", 23,
-		"any", "east", 25,
-		"any", "northwest-outer", 35,
-		"any", "northwest-outer", 37,
-		"any", "northwest-outer", 39,
-		"any", "northeast-outer", 36,
-		"any", "northeast-outer", 38,
-		"any", "northeast-outer", 40,
-		"any", "southwest-outer", 42,
-		"any", "southwest-outer", 44,
-		"any", "southwest-outer", 46,
-		"any", "southeast-outer", 43,
-		"any", "southeast-outer", 45,
-		"any", "southeast-outer", 47,
-		"any", "northwest-inner", 15,
-		"any", "northwest-inner", 17,
-		"any", "northwest-inner", 19,
-		"any", "northeast-inner", 14,
-		"any", "northeast-inner", 16,
-		"any", "northeast-inner", 18,
-		"any", "southwest-inner", 8,
-		"any", "southwest-inner", 10,
-		"any", "southwest-inner", 12,
-		"any", "southeast-inner", 7,
-		"any", "southeast-inner", 9,
-		"any", "southeast-inner", 11
+	AdjacentTransitionTiles = {
+		"any", "north", 22,
+		"any", "north", 24,
+		"any", "north", 26,
+		"any", "south", 28,
+		"any", "south", 30,
+		"any", "south", 32,
+		"any", "west", 21,
+		"any", "west", 23,
+		"any", "west", 25,
+		"any", "east", 29,
+		"any", "east", 31,
+		"any", "east", 33,
+		"any", "northwest-outer", 7,
+		"any", "northwest-outer", 9,
+		"any", "northwest-outer", 11,
+		"any", "northeast-outer", 8,
+		"any", "northeast-outer", 10,
+		"any", "northeast-outer", 12,
+		"any", "southwest-outer", 14,
+		"any", "southwest-outer", 16,
+		"any", "southwest-outer", 18,
+		"any", "southeast-outer", 15,
+		"any", "southeast-outer", 17,
+		"any", "southeast-outer", 19,
+		"any", "northwest-inner", 43,
+		"any", "northwest-inner", 45,
+		"any", "northwest-inner", 47,
+		"any", "northeast-inner", 42,
+		"any", "northeast-inner", 44,
+		"any", "northeast-inner", 46,
+		"any", "southwest-inner", 36,
+		"any", "southwest-inner", 38,
+		"any", "southwest-inner", 40,
+		"any", "southeast-inner", 35,
+		"any", "southeast-inner", 37,
+		"any", "southeast-inner", 39,
+		"any", "northwest-southeast-inner", 51,
+		"any", "northwest-southeast-inner", 52,
+		"any", "northeast-southwest-inner", 49,
+		"any", "northeast-southwest-inner", 50
 	}
 })
 
 DefineTerrainType("shallow-water", {
 	Name = "Shallow Water",
 	Flags = {"water"},
-	BorderTerrains = {"dirt", "mud", "rockbound-cave-floor", "cave-floor"}
+	InnerBorderTerrains = {"dirt", "mud", "rockbound-cave-floor", "cave-floor"}
 })
 
 DefineTerrainType("floor", {
 	Name = "Floor",
 	Buildable = true,
 	Flags = {"land", "stone-floor"},
-	BorderTerrains = {"rockbound-cave-floor"}
+	OuterBorderTerrains = {"rockbound-cave-floor"}
 })
 
 DefineTerrainType("rug", {
 	Name = "Rug",
 	Buildable = true,
 	Flags = {"land", "grass"},
-	BorderTerrains = {"floor"}
+	OuterBorderTerrains = {"floor"}
 })
 
 DefineTerrainType("dungeon-wall", {
@@ -177,7 +185,51 @@ DefineTerrainType("rock", {
 	BaseTerrains = {"dirt", "mud"},
 	Overlay = true,
 	Flags = {"land", "rock", "unpassable"},
---	SolidGraphics = {"terrain/rock/rock_1.png", "terrain/rock/rock_2.png", "terrain/rock/rock_3.png"}
+	Graphics = "terrain/rock.png",
+	SolidTiles = {1, 2, 3},
+--	DestroyedTiles = {56, 57, 58},
+	TransitionTiles = {
+		"any", "north", 22,
+		"any", "north", 24,
+		"any", "north", 26,
+		"any", "south", 28,
+		"any", "south", 30,
+		"any", "south", 32,
+		"any", "west", 21,
+		"any", "west", 23,
+		"any", "west", 25,
+		"any", "east", 29,
+		"any", "east", 31,
+		"any", "east", 33,
+		"any", "northwest-outer", 7,
+		"any", "northwest-outer", 9,
+		"any", "northwest-outer", 11,
+		"any", "northeast-outer", 8,
+		"any", "northeast-outer", 10,
+		"any", "northeast-outer", 12,
+		"any", "southwest-outer", 14,
+		"any", "southwest-outer", 16,
+		"any", "southwest-outer", 18,
+		"any", "southeast-outer", 15,
+		"any", "southeast-outer", 17,
+		"any", "southeast-outer", 19,
+		"any", "northwest-inner", 43,
+		"any", "northwest-inner", 45,
+		"any", "northwest-inner", 47,
+		"any", "northeast-inner", 42,
+		"any", "northeast-inner", 44,
+		"any", "northeast-inner", 46,
+		"any", "southwest-inner", 36,
+		"any", "southwest-inner", 38,
+		"any", "southwest-inner", 40,
+		"any", "southeast-inner", 35,
+		"any", "southeast-inner", 37,
+		"any", "southeast-inner", 39,
+		"any", "northwest-southeast-inner", 51,
+		"any", "northwest-southeast-inner", 52,
+		"any", "northeast-southwest-inner", 49,
+		"any", "northeast-southwest-inner", 50
+	}
 })
 
 DefineTerrainType("rock-swamp", {
@@ -192,7 +244,28 @@ DefineTerrainType("fairlimbed-tree", {
 	Name = "Fairlimbed Tree",
 	BaseTerrains = {"grass"},
 	Overlay = true,
-	Flags = {"land", "forest", "unpassable"}
+	Flags = {"land", "forest", "unpassable"},
+	Graphics = "terrain/fairlimbed_tree.png",
+	SolidTiles = {18},
+--	DestroyedTiles = {16, 32, 48},
+	TransitionTiles = {
+		"any", "north", 2,
+		"any", "south", 34,
+		"any", "south", 37,
+		"any", "west", 17,
+		"any", "east", 19,
+		"any", "northwest-outer", 1,
+		"any", "northeast-outer", 3,
+		"any", "southwest-outer", 33,
+		"any", "southwest-outer", 36,
+		"any", "southeast-outer", 35,
+		"any", "northwest-inner", 10,
+		"any", "northeast-inner", 11,
+		"any", "southwest-inner", 26,
+		"any", "southeast-inner", 27,
+		"any", "northwest-southeast-inner", 30,
+		"any", "northeast-southwest-inner", 14
+	}
 })
 
 DefineTerrainType("flamefood-tree", {
@@ -207,21 +280,23 @@ DefineTerrainType("pine-tree", {
 	BaseTerrains = {"grass"},
 	Overlay = true,
 	Flags = {"land", "forest", "unpassable"},
-	--[[
-	SolidGraphics = {"terrain/pine_tree/pine_tree.png"},
-	TransitionGraphics = {
-		"any", "north", "terrain/pine_tree/pine_tree_north.png",
-		"any", "south", "terrain/pine_tree/pine_tree_south.png",
-		"any", "west", "terrain/pine_tree/pine_tree_west.png",
-		"any", "east", "terrain/pine_tree/pine_tree_east.png",
-		"any", "northwest-outer", "terrain/pine_tree/pine_tree_northwest_outer.png",
-		"any", "northeast-outer", "terrain/pine_tree/pine_tree_northeast_outer.png",
-		"any", "southwest-outer", "terrain/pine_tree/pine_tree_southwest_outer.png",
-		"any", "southeast-outer", "terrain/pine_tree/pine_tree_southeast_outer.png",
-		"any", "northwest-inner", "terrain/pine_tree/pine_tree_northwest_inner.png",
-		"any", "northeast-inner", "terrain/pine_tree/pine_tree_northeast_inner.png",
-		"any", "southwest-inner", "terrain/pine_tree/pine_tree_southwest_inner.png",
-		"any", "southeast-inner", "terrain/pine_tree/pine_tree_southeast_inner.png"
+	Graphics = "terrain/pine_tree.png",
+	SolidTiles = {18},
+--	DestroyedTiles = {16, 32, 48},
+	TransitionTiles = {
+		"any", "north", 2,
+		"any", "south", 34,
+		"any", "west", 17,
+		"any", "east", 19,
+		"any", "northwest-outer", 1,
+		"any", "northeast-outer", 3,
+		"any", "southwest-outer", 33,
+		"any", "southeast-outer", 35,
+		"any", "northwest-inner", 10,
+		"any", "northeast-inner", 11,
+		"any", "southwest-inner", 26,
+		"any", "southeast-inner", 27,
+		"any", "northwest-southeast-inner", 30,
+		"any", "northeast-southwest-inner", 14
 	}
-	--]]
 })
