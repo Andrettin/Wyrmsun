@@ -608,6 +608,7 @@ João Victor G. Costa (Jinn):
 /graphics/dwarf/units/transport_ship.png (licensed under the CC0)
 /graphics/dwarf/units/transport_ship_water.png (licensed under the CC0)
 /graphics/elf/icons/elven_swordsman.png (licensed under the CC0)
+/graphics/ettin/units/ettin.png (modified from b_o's dwarven scout graphics) (licensed under the GPL 2.0 and the CC-BY-SA 3.0)
 /graphics/germanic/buildings/barracks.png (licensed under the CC0)
 /graphics/germanic/buildings/barracks_shadow.png (licensed under the CC0)
 /graphics/germanic/buildings/carpenters_shop_shadow.png (licensed under the CC0)
