@@ -76,6 +76,9 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed issue which caused the interface for setting graphics for custom item types to not work.
 - A unit type's drops may now be set through the editor.
 - Fixed crash which happened when trying to place a custom unit based on the "unit-template-sapient-unit" template.
+- Fixed issue which caused magic affixes set to items to not be saved if the item type didn't have any uniques.
+- Fixed issue which caused a crash when viewing the properties of amulets and books.
+- Which literary work a scroll or book contains can now be set in the editor.
 
 * Factions
 - Added Du'urdin gnomish polity.

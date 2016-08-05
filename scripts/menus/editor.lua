@@ -1272,15 +1272,18 @@ function EditUnitProperties()
 	local trait_list = GetUnitTypeData(GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Ident"), "Traits")
 	local prefix_list = GetUnitTypeData(GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Ident"), "Prefixes")
 	local suffix_list = GetUnitTypeData(GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Ident"), "Suffixes")
+	local work_list = GetUnitTypeData(GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Ident"), "Works")
 	local unique_list = GetUnitTypeData(GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Ident"), "Uniques")
 	table.insert(trait_list, "") -- for if the unit has no trait
 	table.insert(prefix_list, "") -- for if the unit has no prefix
 	table.insert(suffix_list, "") -- for if the unit has no suffix
+	table.insert(work_list, "") -- for if the unit has no literary work
 	table.insert(unique_list, "") -- for if the unit has no unique
 
 	local display_trait_list = {}
 	local display_prefix_list = {}
 	local display_suffix_list = {}
+	local display_work_list = {}
 	
 	for i=1,table.getn(trait_list) do
 		table.insert(display_trait_list, tostring(string.gsub(trait_list[i], "upgrade%-", "")))
@@ -1291,6 +1294,9 @@ function EditUnitProperties()
 	for i=1,table.getn(suffix_list) do
 		table.insert(display_suffix_list, tostring(string.gsub(suffix_list[i], "upgrade%-item%-suffix%-", "")))
 	end
+	for i=1,table.getn(work_list) do
+		table.insert(display_work_list, tostring(string.gsub(work_list[i], "upgrade%-work%-", "")))
+	end
 	
 	
 	local unit_trait
@@ -1298,6 +1304,8 @@ function EditUnitProperties()
 	local unit_prefix_label
 	local unit_suffix
 	local unit_suffix_label
+	local unit_work
+	local unit_work_label
 	local unit_unique
 	local activeCheckBox
 	local resource = GetUnitUnderCursor().Type.GivesResource
@@ -1308,15 +1316,30 @@ function EditUnitProperties()
 			local has_unique = unique_list[unit_unique:getSelected() + 1] ~= ""
 			name_value:setVisible(has_unique == false)
 			name_label:setVisible(has_unique == false)
-			unit_prefix:setVisible(has_unique == false)
-			unit_prefix_label:setVisible(has_unique == false)
-			unit_suffix:setVisible(has_unique == false)
-			unit_suffix_label:setVisible(has_unique == false)
+			if (unit_prefix) then
+				unit_prefix:setVisible(has_unique == false)
+				unit_prefix_label:setVisible(has_unique == false)
+			end
+			if (unit_suffix) then
+				unit_suffix:setVisible(has_unique == false)
+				unit_suffix_label:setVisible(has_unique == false)
+			end
+			if (unit_work) then
+				unit_work:setVisible(has_unique == false)
+				unit_work_label:setVisible(has_unique == false)
+			end
 			
 			if not (has_unique) then
 				name_value:setText("")
-				unit_prefix:setSelected(GetElementIndexFromArray(prefix_list, "") - 1)
-				unit_suffix:setSelected(GetElementIndexFromArray(suffix_list, "") - 1)
+				if (unit_prefix) then
+					unit_prefix:setSelected(GetElementIndexFromArray(prefix_list, "") - 1)
+				end
+				if (unit_suffix) then
+					unit_suffix:setSelected(GetElementIndexFromArray(suffix_list, "") - 1)
+				end
+				if (unit_work) then
+					unit_work:setSelected(GetElementIndexFromArray(work_list, "") - 1)
+				end
 			end
 		end
 	end	
@@ -1340,6 +1363,12 @@ function EditUnitProperties()
 			unit_suffix = menu:addDropDown(display_suffix_list, math.floor(sizeX * 3 / 4) - 60, 11 + (36 * 4), function(dd) end)
 			unit_suffix:setSize(120, 20)
 			unit_suffix:setSelected(GetElementIndexFromArray(suffix_list, GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Suffix")) - 1)
+		end
+		if (table.getn(GetUnitTypeData(GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Ident"), "Works")) > 0) then
+			unit_work_label = menu:addLabel(_("Work"), sizeX / 4, 11 + (36 * 3))
+			unit_work = menu:addDropDown(display_work_list, (sizeX / 4) - 60, 11 + (36 * 4), function(dd) end)
+			unit_work:setSize(120, 20)
+			unit_work:setSelected(GetElementIndexFromArray(work_list, GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Work")) - 1)
 		end
 		if (table.getn(unique_list) > 1) then
 			menu:addLabel(_("Unique"), sizeX / 4, 11 + (36 * 5))
@@ -1383,12 +1412,15 @@ function EditUnitProperties()
 					end
 				end
 				if (GetUnitBoolFlag(UnitNumber(GetUnitUnderCursor()), "organic") == false and GetUnitBoolFlag(UnitNumber(GetUnitUnderCursor()), "Decoration") == false) then
-					if (table.getn(unique_list) > 1 and unique_list[unit_unique:getSelected() + 1] == "") then
+					if (table.getn(unique_list) == 1 or unique_list[unit_unique:getSelected() + 1] == "") then
 						if (table.getn(GetUnitTypeData(GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Ident"), "Prefixes")) > 0 and prefix_list[unit_prefix:getSelected() + 1] ~= GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Prefix")) then
 							SetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Prefix", prefix_list[unit_prefix:getSelected() + 1])
 						end
 						if (table.getn(GetUnitTypeData(GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Ident"), "Suffixes")) > 0 and suffix_list[unit_suffix:getSelected() + 1] ~= GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Suffix")) then
 							SetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Suffix", suffix_list[unit_suffix:getSelected() + 1])
+						end
+						if (table.getn(GetUnitTypeData(GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Ident"), "Works")) > 0 and work_list[unit_work:getSelected() + 1] ~= GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Work")) then
+							SetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Work", work_list[unit_work:getSelected() + 1])
 						end
 					end
 					if (table.getn(unique_list) > 1 and unique_list[unit_unique:getSelected() + 1] ~= GetUnitVariable(UnitNumber(GetUnitUnderCursor()), "Unique") and unique_list[unit_unique:getSelected() + 1] ~= "") then
