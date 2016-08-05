@@ -42,14 +42,52 @@ DefineTerrainType("mud", {
 
 DefineTerrainType("rockbound-cave-floor", {
 	Name = "Rockbound Cave Floor",
-	Flags = {"land", "no-building", "gravel"}
+	Flags = {"land", "no-building", "gravel"},
+	Graphics = "terrain/rockbound_cave_floor.png",
+	SolidTiles = {0, 1, 2}
 })
 
 DefineTerrainType("cave-floor", {
 	Name = "Cave Floor",
 	Buildable = true,
 	Flags = {"land", "stone-floor"},
-	OuterBorderTerrains = {"rockbound-cave-floor"}
+	OuterBorderTerrains = {"rockbound-cave-floor"},
+	Graphics = "terrain/cave_floor.png",
+	SolidTiles = {17, 20, 23},
+	AdjacentTransitionTiles = {
+		"any", "north", 33,
+		"any", "north", 36,
+		"any", "north", 39,
+		"any", "south", 1,
+		"any", "south", 4,
+		"any", "south", 7,
+		"any", "west", 18,
+		"any", "west", 21,
+		"any", "west", 24,
+		"any", "east", 16,
+		"any", "east", 19,
+		"any", "east", 22,
+		"any", "northwest-outer", 65,
+		"any", "northwest-outer", 67,
+		"any", "northeast-outer", 64,
+		"any", "northeast-outer", 66,
+		"any", "southwest-outer", 49,
+		"any", "southwest-outer", 51,
+		"any", "southeast-outer", 48,
+		"any", "southeast-outer", 50,
+		"any", "northwest-inner", 34,
+		"any", "northwest-inner", 37,
+		"any", "northeast-inner", 32,
+		"any", "northeast-inner", 35,
+		"any", "southwest-inner", 2,
+		"any", "southwest-inner", 5,
+		"any", "southeast-inner", 0,
+		"any", "southeast-inner", 3,
+		"any", "northwest-southeast-inner", 80,
+		"any", "northwest-southeast-inner", 96,
+		"any", "northeast-southwest-inner", 81,
+		"any", "northeast-southwest-inner", 97
+	}
 })
 
 DefineTerrainType("dry-mud", {
@@ -239,6 +277,48 @@ DefineTerrainType("shallow-water-swamp", {
 	}
 })
 
+DefineTerrainType("gray-shallow-water", {
+	Name = "Gray Shallow Water",
+	Flags = {"water"},
+	InnerBorderTerrains = {"dirt", "mud", "rockbound-cave-floor", "cave-floor"},
+	Graphics = "terrain/gray_shallow_water.png",
+	SolidTiles = {17, 20, 23},
+	TransitionTiles = {
+		"any", "north", 1,
+		"any", "north", 4,
+		"any", "north", 7,
+		"any", "south", 33,
+		"any", "south", 36,
+		"any", "south", 39,
+		"any", "west", 16,
+		"any", "west", 19,
+		"any", "west", 22,
+		"any", "east", 18,
+		"any", "east", 21,
+		"any", "east", 24,
+		"any", "northwest-outer", 0,
+		"any", "northwest-outer", 3,
+		"any", "northeast-outer", 2,
+		"any", "northeast-outer", 5,
+		"any", "southwest-outer", 32,
+		"any", "southwest-outer", 35,
+		"any", "southeast-outer", 34,
+		"any", "southeast-outer", 37,
+		"any", "northwest-inner", 48,
+		"any", "northwest-inner", 50,
+		"any", "northeast-inner", 49,
+		"any", "northeast-inner", 51,
+		"any", "southwest-inner", 64,
+		"any", "southwest-inner", 66,
+		"any", "southeast-inner", 65,
+		"any", "southeast-inner", 67,
+		"any", "northwest-southeast-inner", 81,
+		"any", "northwest-southeast-inner", 97,
+		"any", "northeast-southwest-inner", 80,
+		"any", "northeast-southwest-inner", 96
+	}
+})
+
 DefineTerrainType("floor", {
 	Name = "Floor",
 	Buildable = true,
@@ -265,7 +345,40 @@ DefineTerrainType("cave-wall", {
 	Name = "Cave Wall",
 	BaseTerrains = {"rockbound-cave-floor"},
 	Overlay = true,
-	Flags = {"land", "rock", "unpassable", "air-unpassable"}
+	Flags = {"land", "rock", "unpassable", "air-unpassable"},
+	Graphics = "terrain/cave_wall.png",
+	SolidTiles = {18},
+	DestroyedTiles = {16},
+	TransitionTiles = {
+		"any", "north", 2,
+		"any", "north", 5,
+		"any", "north", 8,
+		"any", "south", 34,
+		"any", "south", 37,
+		"any", "south", 40,
+		"any", "west", 17,
+		"any", "west", 20,
+		"any", "west", 23,
+		"any", "east", 19,
+		"any", "east", 22,
+		"any", "east", 25,
+		"any", "northwest-outer", 1,
+		"any", "northwest-outer", 4,
+		"any", "northeast-outer", 3,
+		"any", "northeast-outer", 6,
+		"any", "southwest-outer", 33,
+		"any", "southwest-outer", 36,
+		"any", "southeast-outer", 35,
+		"any", "southeast-outer", 38,
+		"any", "northwest-inner", 10,
+		"any", "northeast-inner", 11,
+		"any", "southwest-inner", 26,
+		"any", "southeast-inner", 27,
+		"any", "northwest-southeast-inner", 30,
+		"any", "northwest-southeast-inner", 31,
+		"any", "northeast-southwest-inner", 14,
+		"any", "northeast-southwest-inner", 15
+	}
 })
 
 DefineTerrainType("rock", {

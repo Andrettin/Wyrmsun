@@ -74,7 +74,7 @@ DefineTileset("name", "Dungeon",
     {}},								-- 0E0
   "solid", { "unused",
     {}},								-- 0F0
-  "mixed", { "deep-water", "shallow-water", "water",
+  "mixed", { "deep-water", "gray-shallow-water", "water",
     { 177, 177},							-- 100
     { 178, 178},							-- 110
     { 179, 180, 181},							-- 120
@@ -91,7 +91,7 @@ DefineTileset("name", "Dungeon",
     { 200, 200},							-- 1D0
     {},									-- 1E0
     {}},								-- 1F0
-  "mixed", { "shallow-water", "dirt", "coast",
+  "mixed", { "gray-shallow-water", "dirt", "coast",
     { 201, 202},							-- 200
     { 203, 204},							-- 210
     { 205, 206, 207},							-- 220

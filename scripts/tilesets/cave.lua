@@ -43,7 +43,7 @@ DefineTileset("name", "Cave",
 			"removed-rock", 16, },
 			"solid", { "unused",
 			{}},								-- 000
-		"solid", { "shallow-water", "water",
+		"solid", { "gray-shallow-water", "water",
 			{ 400, 401, 402, 400 }},						-- 010
 		"solid", { "unused",
 			{}},								-- 020
@@ -73,7 +73,7 @@ DefineTileset("name", "Cave",
 			{}},								-- 0E0
 		"solid", { "unused",
 			{}},								-- 0F0
-		"mixed", { "deep-water", "shallow-water", "water",
+		"mixed", { "deep-water", "gray-shallow-water", "water",
 			{ 201, 202},							-- 100
 			{ 203, 204},							-- 110
 			{ 205, 206, 207},							-- 120
@@ -90,7 +90,7 @@ DefineTileset("name", "Cave",
 			{ 229, 230},							-- 1D0
 			{},									-- 1E0
 			{}},								-- 1F0
-		"mixed", { "shallow-water", "rockbound-cave-floor", "coast",
+		"mixed", { "gray-shallow-water", "rockbound-cave-floor", "coast",
 			{ 240, 241, 240},							-- 200
 			{ 242, 243, 242},							-- 210
 			{ 244, 245, 246},							-- 220
