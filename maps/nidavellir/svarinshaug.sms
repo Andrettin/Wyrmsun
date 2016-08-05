@@ -1,17 +1,32 @@
 LoadTileModels("scripts/tilesets/swamp.lua")
 
 if (LoadedGame == false) then
-	GenerateRandomMap({
-		RockQuantity = "high",
-		TreeQuantity = "low",
-		WaterQuantity = "low",
-		RoughLandQuantity = "medium",
-		NoPredators = true,
-		NoFlyingCreeps = true,
-		NoMightyCreeps = true,
-		WorkerQuantity = 3,
-		NoDeposits = true
-	})
+	if (GetCurrentQuest() == "a-rocky-home") then
+		GenerateRandomMap({
+			RockQuantity = "high",
+			TreeQuantity = "low",
+			WaterQuantity = "low",
+			RoughLandQuantity = "medium",
+			NoPredators = true,
+			NoFlyingCreeps = true,
+			NoMightyCreeps = true,
+			WorkerQuantity = 3,
+			NoDeposits = true,
+			PlayerCivilizations = {"dwarf"}
+		})
+	else
+		GenerateRandomMap({
+			RockQuantity = "high",
+			TreeQuantity = "low",
+			WaterQuantity = "low",
+			RoughLandQuantity = "medium",
+			NoPredators = true,
+			NoFlyingCreeps = true,
+			NoMightyCreeps = true,
+			WorkerQuantity = 3,
+			NoDeposits = true
+		})
+	end
 end
 
 CreateCreeps(15, "unit-yale", 12 - GetPlayerData(15, "UnitTypesCount", "unit-yale"), 0, Map.Info.MapWidth - 1, 0, Map.Info.MapHeight - 1)
