@@ -48,7 +48,7 @@ DefineTileset("name", "Conifer Forest (Autumn)",
 		},
 		"solid", { "unused",
 			{}},								-- 000
-		"solid", { "shallow-water", "image", "tilesets/forest/terrain/water.png", "animation-frames", 5, "water",
+		"solid", { "shallow-water", "image", "tilesets/forest/terrain/water.png", "water",
 			{ 1, 1, 1, 1}},								-- 010
 		"solid", { "unused",
 			{}},								-- 020
