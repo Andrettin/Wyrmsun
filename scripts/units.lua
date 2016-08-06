@@ -3509,9 +3509,11 @@ DefineUnitType("unit-mercenary-camp", { Name = _("Mercenary Camp"),
 } )
 
 
-DefineUnitType("unit-human-wall", { Name = _("Wall"),
+DefineUnitType("unit-dungeon-wall", {
+	Name = _("Dungeon Wall"),
+	TerrainType = "dungeon-wall",
 	Image = {"file", "neutral/buildings/glyph.png", "size", {32, 32}},
-	Animations = "animations-building", --Icon = "icon-teuton-lumber-mill",
+	Animations = "animations-building", Icon = "icon-teuton-lumber-mill",
 	Costs = {"time", 30, "gold", 20, "lumber", 30},
 	Construction = "construction-wall",
 	Speed = 0,
@@ -3525,13 +3527,8 @@ DefineUnitType("unit-human-wall", { Name = _("Wall"),
 --	Corpse = "unit-destroyed-1x1-place",
 	ExplodeWhenKilled = "missile-explosion",
 	Type = "land",
-	Building = true, VisibleUnderFog = true,
+	Indestructible = true, Building = true, VisibleUnderFog = true, Wall = true,
 	Sounds = {
---		"selected", "human-wall-selected",
---		"acknowledge", "human-wall-acknowledge",
---		"ready", "human-wall-ready",
---		"help", "basic human voices help 2",
-		"dead", "building-destroyed"} } )
-
--- Hardcoded unit-types, moved from Stratagus to games
-UnitTypeHumanWall = UnitTypeByIdent("unit-human-wall");
+		"dead", "building-destroyed"
+	}
+} )

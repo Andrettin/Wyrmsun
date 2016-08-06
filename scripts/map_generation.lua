@@ -1472,7 +1472,7 @@ function CreateDecorationObjects(unit_type, unit_number, base_tile, mixed_tile, 
 		while (Count > 0 and WhileCount < unit_number * 100) do
 			RandomX = SyncRand(max_x - min_x - (GetUnitTypeData(unit_type, "TileWidth") - 1) + 1) + min_x
 			RandomY = SyncRand(max_y - min_y - (GetUnitTypeData(unit_type, "TileHeight") - 1) + 1) + min_y
-			if (GetTileTerrainName(RandomX, RandomY) == base_tile and (GetTileTerrainMixedName(RandomX, RandomY) == mixed_tile or mixed_tile == "any")) then
+			if (GetTileTerrainName(RandomX, RandomY) == base_tile) then
 				local unit_quantity = GetNumUnitsAt(-1, "any", {RandomX, RandomY}, {RandomX + (GetUnitTypeData(unit_type, "TileWidth") - 1), RandomY + (GetUnitTypeData(unit_type, "TileHeight") - 1)})
 
 				if (unit_quantity < 1) then -- tile should be empty
@@ -1553,7 +1553,7 @@ function CreateDecorations()
 					if (GetCurrentTileset() ~= "dungeon" and GetCurrentTileset() ~= "cave") then
 						unit = CreateUnit("unit-twigs", 15, {RandomX, RandomY})
 						Count = Count - 1
-					elseif (GetCurrentTileset() == "dungeon" and GetTileTerrainName(RandomX, RandomY) == "floor" and GetTileTerrainMixedName(RandomX, RandomY) == "") then
+					elseif (GetCurrentTileset() == "dungeon" and GetTileTerrainName(RandomX, RandomY) == "floor") then
 						unit = CreateUnit("unit-floor-decoration", 15, {RandomX, RandomY})
 						Count = Count - 1
 					end
@@ -5936,7 +5936,7 @@ function FindNearestTerrainTile(terrain, starting_x, starting_y)
 	while (search_range < Map.Info.MapWidth and search_range < Map.Info.MapHeight) do
 		for x=(starting_x - search_range), (starting_x + search_range) do
 			for y=(starting_y - search_range), (starting_y + search_range) do
-				if (GetTileTerrainName(x, y) == terrain or GetTileTerrainMixedName(x, y) == terrain) then
+				if (GetTileTerrainName(x, y) == terrain) then
 					return {x, y}
 				end
 			end
