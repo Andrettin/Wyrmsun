@@ -61,6 +61,7 @@ DefineTerrainType("mud", {
 DefineTerrainType("rockbound-cave-floor", {
 	Name = "Rockbound Cave Floor",
 	Flags = {"land", "no-building", "gravel"},
+	InnerBorderTerrains = {"dirt"},
 	Graphics = "terrain/rockbound_cave_floor.png",
 	SolidTiles = {0, 1, 2}
 })
@@ -69,6 +70,7 @@ DefineTerrainType("cave-floor", {
 	Name = "Cave Floor",
 	Buildable = true,
 	Flags = {"land", "stone-floor"},
+	InnerBorderTerrains = {"dirt"},
 	OuterBorderTerrains = {"rockbound-cave-floor"},
 	Graphics = "terrain/cave_floor.png",
 	SolidTiles = {17, 20, 23},
@@ -112,6 +114,7 @@ DefineTerrainType("dry-mud", {
 	Name = "Dry Mud",
 	Buildable = true,
 	Flags = {"land", "mud"},
+	InnerBorderTerrains = {"dirt"},
 	OuterBorderTerrains = {"mud"},
 	Graphics = "terrain/dry_mud.png",
 	SolidTiles = {17, 20, 23},
