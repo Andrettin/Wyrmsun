@@ -263,7 +263,7 @@ function EventTriggers()
 		)
 	end
 	
-	if (GetCurrentTileset() == "dungeon") then
+	if (GetNumUnitsAt(-1, "unit-long-swordsman", {0, 0}, {256, 256}) >= 1) then
 		-- Soldier offers training
 		AddTrigger(
 			function()

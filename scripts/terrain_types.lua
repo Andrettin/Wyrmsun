@@ -452,7 +452,7 @@ DefineTerrainType("gold-pile", {
 DefineTerrainType("dungeon-wall", {
 	Name = "Dungeon Wall",
 	Buildable = true,
-	BaseTerrains = {"floor"},
+	BaseTerrains = {"floor", "cave-floor"},
 	Overlay = true,
 	Flags = {"land", "wall", "unpassable", "air-unpassable"},
 	AllowSingle = true,
