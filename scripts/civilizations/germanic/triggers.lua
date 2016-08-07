@@ -27,7 +27,7 @@
 
 AddTrigger("the-curved-swords", -- Source: http://natmus.dk/en/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-roerby-swords/
 	function()
-		if (SyncRand(10000) ~= 0) then -- 0.01% this will trigger every time it is checked
+		if (SyncRand(10000) ~= 0) then -- 0.01% chance this will trigger every time it is checked
 			return false
 		end
 		for i=0,14 do
@@ -60,7 +60,7 @@ AddTrigger("the-curved-swords", -- Source: http://natmus.dk/en/historical-knowle
 
 AddTrigger("the-sun-chariot", -- Source: http://natmus.dk/en/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-sun-chariot/
 	function()
-		if (SyncRand(10000) ~= 0) then -- 0.01% this will trigger every time it is checked
+		if (SyncRand(10000) ~= 0) then -- 0.01% chance this will trigger every time it is checked
 			return false
 		end
 		for i=0,14 do
@@ -93,7 +93,7 @@ AddTrigger("the-sun-chariot", -- Source: http://natmus.dk/en/historical-knowledg
 
 AddTrigger("the-sun-shields", -- Source: http://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-bronze-age-shields/
 	function()
-		if (SyncRand(10000) ~= 0) then -- 0.01% this will trigger every time it is checked
+		if (SyncRand(10000) ~= 0) then -- 0.01% chance this will trigger every time it is checked
 			return false
 		end
 		for i=0,14 do
