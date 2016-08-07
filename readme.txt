@@ -111,7 +111,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Triggers
 - Fixed issue which caused deactivated triggers to sometimes refire after loading a saved game.
-- Added "The Curved Swords" flavor trigger for the Germanics in single-player custom games.
+- Added "The Curved Swords", "The Sun Chariot" and "The Sun Shields" flavor triggers for the Germanics in single-player custom games.
 
 * Units
 - Added Goblin Barbarian (upgrade of the Swordsman) (icon by Jesse Crider, modified from b_o's and Leo's Goblin Swordsman icon).

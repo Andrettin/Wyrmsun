@@ -25,14 +25,14 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-AddTrigger("the-curved-swords",
+AddTrigger("the-curved-swords", -- Source: http://natmus.dk/en/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-roerby-swords/
 	function()
 		if (SyncRand(10000) ~= 0) then -- 0.01% this will trigger every time it is checked
 			return false
 		end
 		for i=0,14 do
 			if (GetPlayerData(i, "RaceName") == "germanic" and GetPlayerData(i, "UnitTypesCount", "unit-germanic-smithy") >= 1) then
-				player = i
+				trigger_player = i
 				return true
 			end
 		end
@@ -42,10 +42,76 @@ AddTrigger("the-curved-swords",
 		Event(
 			"The Curved Swords",
 			"One of our artisans has crafted two curved bronze swords, one of which he engraved with the image of a ship. Although they aren't very practical for combat, these swords serve to embellish ceremonies and bring prestige to their bearer.",
-			player,
+			trigger_player,
 			{"~!Marvelous!"},
 			{function(s)
-				SetPlayerData(player, "Resources", "gold", GetPlayerData(player, "Resources", "gold") + 100)
+				SetPlayerData(trigger_player, "Resources", "gold", GetPlayerData(trigger_player, "Resources", "gold") + 100)
+			end},
+			nil,
+			nil,
+			false,
+			{
+				OptionTooltips = {"+100 Gold"}
+			}
+		)
+		return false
+	end
+)
+
+AddTrigger("the-sun-chariot", -- Source: http://natmus.dk/en/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-sun-chariot/
+	function()
+		if (SyncRand(10000) ~= 0) then -- 0.01% this will trigger every time it is checked
+			return false
+		end
+		for i=0,14 do
+			if (GetPlayerData(i, "RaceName") == "germanic" and GetPlayerData(i, "UnitTypesCount", "unit-germanic-smithy") >= 1) then
+				trigger_player = i
+				return true
+			end
+		end
+		return false
+	end,
+	function() 
+		Event(
+			"The Sun Chariot",
+			"One of our artisans has made a delicate bronze figure of a sun chariot, representing the divine horse that carries the sun on its eternal journey across the sky.",
+			trigger_player,
+			{"~!Inspiring!"},
+			{function(s)
+				SetPlayerData(trigger_player, "Resources", "gold", GetPlayerData(trigger_player, "Resources", "gold") + 100)
+			end},
+			nil,
+			nil,
+			false,
+			{
+				OptionTooltips = {"+100 Gold"}
+			}
+		)
+		return false
+	end
+)
+
+AddTrigger("the-sun-shields", -- Source: http://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-bronze-age-shields/
+	function()
+		if (SyncRand(10000) ~= 0) then -- 0.01% this will trigger every time it is checked
+			return false
+		end
+		for i=0,14 do
+			if (GetPlayerData(i, "RaceName") == "germanic" and GetPlayerData(i, "UnitTypesCount", "unit-germanic-smithy") >= 1 and GetPlayerData(i, "Allow", "upgrade-germanic-bronze-shield")) then
+				trigger_player = i
+				return true
+			end
+		end
+		return false
+	end,
+	function() 
+		Event(
+			"The Sun Shields",
+			"Our artisans have produced a series of circular bronze shields, often made to symbolize the sun and the cycle of the seasons.",
+			trigger_player,
+			{"~!Marvelous!"},
+			{function(s)
+				SetPlayerData(trigger_player, "Resources", "gold", GetPlayerData(trigger_player, "Resources", "gold") + 100)
 			end},
 			nil,
 			nil,
