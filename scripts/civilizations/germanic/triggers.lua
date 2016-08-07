@@ -43,10 +43,16 @@ AddTrigger("the-curved-swords",
 			"The Curved Swords",
 			"One of our artisans has crafted two curved bronze swords, one of which he engraved with the image of a ship. Although they aren't very practical for combat, these swords serve to embellish ceremonies and bring prestige to their bearer.",
 			player,
-			{"~!Marvelous! (+100 Gold)"},
+			{"~!Marvelous!"},
 			{function(s)
 				SetPlayerData(player, "Resources", "gold", GetPlayerData(player, "Resources", "gold") + 100)
-			end}
+			end},
+			nil,
+			nil,
+			false,
+			{
+				OptionTooltips = {"+100 Gold"}
+			}
 		)
 		return false
 	end

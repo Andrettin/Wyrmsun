@@ -530,7 +530,11 @@ function FlavorDialogueTriggers()
 	--]]
 end
 
-function Event(speaker, event_description, player, options, option_effects, event_icon, event_image, continue_automatically, option_tooltips)
+function Event(speaker, event_description, player, options, option_effects, event_icon, event_image, continue_automatically, arg)
+	if not (arg) then
+		arg = {}
+	end
+
 	if (
 		(
 			(GrandStrategy and not GameRunning and GameResult == GameNoResult and player == GetPlayerFactionName())
@@ -615,6 +619,10 @@ function Event(speaker, event_description, player, options, option_effects, even
 					option_effects[i]()
 				end
 			)
+			
+			if (arg.OptionTooltips ~= nil) then
+				option_b:setTooltip(_(arg.OptionTooltips[i]))
+			end
 		end
 		
 		if (table.getn(options) == 1) then -- for events with just one option, allow enter to be used as a way to close the event dialogue
